@@ -1,0 +1,70 @@
+{
+	"version": 8,
+	"name": "Geoclick base",
+	"metadata": {
+		"geoclick:note": "Shared style for all admin-1 demo maps. The 'targets' source url is a placeholder (pmtiles://./tiles.pmtiles) — the map viewer composes the final style per map by replacing it with that map's own tiles.pmtiles URL. Layer id/source-layer names match tippecanoe's --layer=targets convention from data/scripts/build-map.ts."
+	},
+	"glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf",
+	"sources": {
+		"targets": {
+			"type": "vector",
+			"url": "pmtiles://./tiles.pmtiles"
+		}
+	},
+	"layers": [
+		{
+			"id": "background",
+			"type": "background",
+			"paint": {
+				"background-color": "#eef3f6"
+			}
+		},
+		{
+			"id": "targets-fill",
+			"type": "fill",
+			"source": "targets",
+			"source-layer": "targets",
+			"paint": {
+				"fill-color": "#8fb8a8",
+				"fill-opacity": 0.85
+			}
+		},
+		{
+			"id": "targets-outline",
+			"type": "line",
+			"source": "targets",
+			"source-layer": "targets",
+			"paint": {
+				"line-color": "#3f5d52",
+				"line-width": 0.75
+			}
+		},
+		{
+			"id": "targets-highlight",
+			"type": "fill",
+			"source": "targets",
+			"source-layer": "targets",
+			"filter": ["==", ["feature-state", "highlighted"], true],
+			"paint": {
+				"fill-color": "#f2a341",
+				"fill-opacity": 0.9
+			}
+		},
+		{
+			"id": "targets-label",
+			"type": "symbol",
+			"source": "targets",
+			"source-layer": "targets",
+			"layout": {
+				"text-field": ["get", "name"],
+				"text-font": ["Noto Sans Regular"],
+				"text-size": 12
+			},
+			"paint": {
+				"text-color": "#22312c",
+				"text-halo-color": "#eef3f6",
+				"text-halo-width": 1.2
+			}
+		}
+	]
+}

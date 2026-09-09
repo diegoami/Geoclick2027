@@ -1,0 +1,375 @@
+{
+	"id": "italy-regions",
+	"name": "Italy — Regions",
+	"country": "Italy",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "trentino-alto-adige",
+			"name": "Trentino-Alto Adige",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.4194,
+				46.392399999999995
+			],
+			"bbox": [
+				10.3692,
+				45.6996,
+				12.4696,
+				47.0852
+			]
+		},
+		{
+			"id": "friuli-venezia-giulia",
+			"name": "Friuli-Venezia Giulia",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.09715,
+				46.129
+			],
+			"bbox": [
+				12.3359,
+				45.617,
+				13.8584,
+				46.641
+			]
+		},
+		{
+			"id": "veneto",
+			"name": "Veneto",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.8699,
+				45.73465
+			],
+			"bbox": [
+				10.6442,
+				44.7935,
+				13.0956,
+				46.6758
+			]
+		},
+		{
+			"id": "valle-d-aosta",
+			"name": "Valle d'Aosta",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.3561,
+				45.7252
+			],
+			"bbox": [
+				6.7959,
+				45.4663,
+				7.9163,
+				45.9841
+			]
+		},
+		{
+			"id": "lombardia",
+			"name": "Lombardia",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.96705,
+				45.65445
+			],
+			"bbox": [
+				8.5126,
+				44.6821,
+				11.4215,
+				46.6268
+			]
+		},
+		{
+			"id": "piemonte",
+			"name": "Piemonte",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.902899999999999,
+				45.26285
+			],
+			"bbox": [
+				6.6027,
+				44.0908,
+				9.2031,
+				46.4349
+			]
+		},
+		{
+			"id": "emilia-romagna",
+			"name": "Emilia-Romagna",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.977599999999999,
+				44.44655
+			],
+			"bbox": [
+				9.2014,
+				43.759,
+				12.7538,
+				45.1341
+			]
+		},
+		{
+			"id": "liguria",
+			"name": "Liguria",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.7674,
+				44.236900000000006
+			],
+			"bbox": [
+				7.4779,
+				43.7912,
+				10.0569,
+				44.6826
+			]
+		},
+		{
+			"id": "toscana",
+			"name": "Toscana",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.0237,
+				43.42535
+			],
+			"bbox": [
+				9.6898,
+				42.3744,
+				12.3576,
+				44.4763
+			]
+		},
+		{
+			"id": "marche",
+			"name": "Marche",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.050650000000001,
+				43.33005
+			],
+			"bbox": [
+				12.1958,
+				42.6877,
+				13.9055,
+				43.9724
+			]
+		},
+		{
+			"id": "umbria",
+			"name": "Umbria",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.568950000000001,
+				42.99315
+			],
+			"bbox": [
+				11.889,
+				42.3695,
+				13.2489,
+				43.6168
+			]
+		},
+		{
+			"id": "abruzzo",
+			"name": "Abruzzo",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.895900000000001,
+				42.2949
+			],
+			"bbox": [
+				13.0284,
+				41.6882,
+				14.7634,
+				42.9016
+			]
+		},
+		{
+			"id": "lazio",
+			"name": "Lazio",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.730799999999999,
+				42.03895
+			],
+			"bbox": [
+				11.4515,
+				41.2275,
+				14.0101,
+				42.8504
+			]
+		},
+		{
+			"id": "molise",
+			"name": "Molise",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.544599999999999,
+				41.7255
+			],
+			"bbox": [
+				13.9457,
+				41.3731,
+				15.1435,
+				42.0779
+			]
+		},
+		{
+			"id": "apulia",
+			"name": "Puglia",
+			"type": "region",
+			"tier": 1,
+			"aliases": [
+				"Apulia"
+			],
+			"centroid": [
+				16.725649999999998,
+				40.879
+			],
+			"bbox": [
+				14.9339,
+				39.8139,
+				18.5174,
+				41.9441
+			]
+		},
+		{
+			"id": "campania",
+			"name": "Campania",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.76455,
+				40.74485
+			],
+			"bbox": [
+				13.7437,
+				39.994,
+				15.7854,
+				41.4957
+			]
+		},
+		{
+			"id": "basilicata",
+			"name": "Basilicata",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.1038,
+				40.52175
+			],
+			"bbox": [
+				15.3443,
+				39.9067,
+				16.8633,
+				41.1368
+			]
+		},
+		{
+			"id": "sardegna",
+			"name": "Sardegna",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.980250000000002,
+				40.071600000000004
+			],
+			"bbox": [
+				8.1338,
+				38.8806,
+				9.8267,
+				41.2626
+			]
+		},
+		{
+			"id": "calabria",
+			"name": "Calabria",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.39995,
+				39.027249999999995
+			],
+			"bbox": [
+				15.6275,
+				37.9252,
+				17.1724,
+				40.1293
+			]
+		},
+		{
+			"id": "sicily",
+			"name": "Sicilia",
+			"type": "region",
+			"tier": 1,
+			"aliases": [
+				"Sicily"
+			],
+			"centroid": [
+				14.0054,
+				37.478350000000006
+			],
+			"bbox": [
+				12.427,
+				36.6591,
+				15.5838,
+				38.2976
+			]
+		}
+	],
+	"tourOrder": [
+		"trentino-alto-adige",
+		"friuli-venezia-giulia",
+		"veneto",
+		"valle-d-aosta",
+		"lombardia",
+		"piemonte",
+		"emilia-romagna",
+		"liguria",
+		"toscana",
+		"marche",
+		"umbria",
+		"abruzzo",
+		"lazio",
+		"molise",
+		"apulia",
+		"campania",
+		"basilicata",
+		"sardegna",
+		"calabria",
+		"sicily"
+	]
+}

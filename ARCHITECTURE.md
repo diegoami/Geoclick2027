@@ -156,15 +156,29 @@ also means the same pipeline and the same base map style serve all three.
 5. Commit `map.json` + `tiles.pmtiles` (or regenerate tiles at build time and
    commit only `map.json`, if repo size becomes a concern).
 
-### Known snags to expect
+### Known snags (found while building the demo maps)
 
-- **USA**: Natural Earth's admin-1 set includes all 50 states + DC; Alaska
-  and Hawaii's real positions leave a lot of dead map space — a cartographic
-  choice (accept it, or add an inset) needed before that demo looks good.
-- **Germany**: 16 Bundesländer, straightforward, no odd cases.
-- **Italy**: 20 regioni, straightforward; Natural Earth's `name`/`name_en`
-  fields should be checked for Italian-language completeness during
-  curation.
+- **Italy**: Natural Earth's admin-1 layer for Italy is actually at
+  **province** granularity (110 features), not regions — the 20 regioni
+  only exist as a `region` attribute on those province features.
+  `build-map.ts` supports a `--dissolve=<field>` option to merge same-value
+  features (here, by `region`) into the level we actually want, before
+  deriving targets. Germany and USA were checked too: Germany's admin-1
+  is already the 16 Bundesländer and USA's is already the 50 states + DC,
+  so neither needs dissolving. Also, two of Natural Earth's Italian region
+  names came through in English ("Apulia", "Sicily") rather than Italian —
+  corrected to "Puglia"/"Sicilia" with the English kept as an alias.
+- **USA — antimeridian bug**: Alaska's Aleutian Islands cross 180°
+  longitude, which broke naive min/max centroid math (`(minLon+maxLon)/2`
+  landed around 0°E — the wrong hemisphere entirely). `build-map.ts` now
+  detects longitude spans over 180° and shifts the smaller side by 360°
+  before averaging, unwrapping the result back into [-180, 180]. Fixed;
+  worth remembering if a future map ever includes Russia, Fiji, or another
+  dateline-crossing territory.
+- **USA — Alaska/Hawaii framing**: their real geographic positions leave a
+  lot of dead map space around the contiguous 48. Decision: accept it, no
+  inset, for now — revisit only if it actually looks bad once rendered in
+  Iteration 2.
 
 ## Hosting / deployment (deferred)
 

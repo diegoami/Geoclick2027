@@ -1,0 +1,299 @@
+{
+	"id": "germany-states",
+	"name": "Germany — States",
+	"country": "Germany",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "schleswig-holstein",
+			"name": "Schleswig-Holstein",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.801400000000001,
+				54.16
+			],
+			"bbox": [
+				8.2886,
+				53.3718,
+				11.3142,
+				54.9482
+			]
+		},
+		{
+			"id": "mecklenburg-vorpommern",
+			"name": "Mecklenburg-Vorpommern",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.49625,
+				53.8982
+			],
+			"bbox": [
+				10.6012,
+				53.1082,
+				14.3913,
+				54.6882
+			]
+		},
+		{
+			"id": "hamburg",
+			"name": "Hamburg",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.0344,
+				53.55885
+			],
+			"bbox": [
+				9.7408,
+				53.4044,
+				10.328,
+				53.7133
+			]
+		},
+		{
+			"id": "bremen",
+			"name": "Bremen",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.75145,
+				53.32085
+			],
+			"bbox": [
+				8.513,
+				53.0246,
+				8.9899,
+				53.6171
+			]
+		},
+		{
+			"id": "niedersachsen",
+			"name": "Niedersachsen",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.138200000000001,
+				52.601749999999996
+			],
+			"bbox": [
+				6.6951,
+				51.315,
+				11.5813,
+				53.8885
+			]
+		},
+		{
+			"id": "berlin",
+			"name": "Berlin",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.4215,
+				52.51965
+			],
+			"bbox": [
+				13.0921,
+				52.376,
+				13.7509,
+				52.6633
+			]
+		},
+		{
+			"id": "brandenburg",
+			"name": "Brandenburg",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.01775,
+				52.428
+			],
+			"bbox": [
+				11.2741,
+				51.348,
+				14.7614,
+				53.508
+			]
+		},
+		{
+			"id": "sachsen-anhalt",
+			"name": "Sachsen-Anhalt",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.9085,
+				51.9854
+			],
+			"bbox": [
+				10.5802,
+				50.9279,
+				13.2368,
+				53.0429
+			]
+		},
+		{
+			"id": "nordrhein-westfalen",
+			"name": "Nordrhein-Westfalen",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.66775,
+				51.4235
+			],
+			"bbox": [
+				5.8746,
+				50.3231,
+				9.4609,
+				52.5239
+			]
+		},
+		{
+			"id": "thuringen",
+			"name": "Thüringen",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.2802,
+				50.9309
+			],
+			"bbox": [
+				9.9132,
+				50.2244,
+				12.6472,
+				51.6374
+			]
+		},
+		{
+			"id": "sachsen",
+			"name": "Sachsen",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.4624,
+				50.90605
+			],
+			"bbox": [
+				11.9053,
+				50.1622,
+				15.0195,
+				51.6499
+			]
+		},
+		{
+			"id": "hessen",
+			"name": "Hessen",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.00085,
+				50.5256
+			],
+			"bbox": [
+				7.7714,
+				49.4022,
+				10.2303,
+				51.649
+			]
+		},
+		{
+			"id": "rheinland-pfalz",
+			"name": "Rheinland-Pfalz",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.29515,
+				49.934799999999996
+			],
+			"bbox": [
+				6.0964,
+				48.9583,
+				8.4939,
+				50.9113
+			]
+		},
+		{
+			"id": "saarland",
+			"name": "Saarland",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.867,
+				49.3664
+			],
+			"bbox": [
+				6.3488,
+				49.1056,
+				7.3852,
+				49.6272
+			]
+		},
+		{
+			"id": "bayern",
+			"name": "Bayern",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.413,
+				48.9166
+			],
+			"bbox": [
+				9.0103,
+				47.2777,
+				13.8157,
+				50.5555
+			]
+		},
+		{
+			"id": "baden-wurttemberg",
+			"name": "Baden-Württemberg",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.9946,
+				48.664
+			],
+			"bbox": [
+				7.5218,
+				47.5327,
+				10.4674,
+				49.7953
+			]
+		}
+	],
+	"tourOrder": [
+		"schleswig-holstein",
+		"mecklenburg-vorpommern",
+		"hamburg",
+		"bremen",
+		"niedersachsen",
+		"berlin",
+		"brandenburg",
+		"sachsen-anhalt",
+		"nordrhein-westfalen",
+		"thuringen",
+		"sachsen",
+		"hessen",
+		"rheinland-pfalz",
+		"saarland",
+		"bayern",
+		"baden-wurttemberg"
+	]
+}

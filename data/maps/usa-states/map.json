@@ -1,0 +1,929 @@
+{
+	"id": "usa-states",
+	"name": "USA — States",
+	"country": "United States of America",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "alaska",
+			"name": "Alaska",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-158.6744,
+				61.3724
+			],
+			"bbox": [
+				172.6404,
+				51.3911,
+				-129.9892,
+				71.3537
+			]
+		},
+		{
+			"id": "north-dakota",
+			"name": "North Dakota",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-100.30195,
+				47.46725
+			],
+			"bbox": [
+				-104.0476,
+				45.9418,
+				-96.5563,
+				48.9927
+			]
+		},
+		{
+			"id": "washington",
+			"name": "Washington",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-120.8067,
+				47.279399999999995
+			],
+			"bbox": [
+				-124.7346,
+				45.5663,
+				-116.8788,
+				48.9925
+			]
+		},
+		{
+			"id": "montana",
+			"name": "Montana",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-110.0441,
+				46.7064
+			],
+			"bbox": [
+				-116.0489,
+				44.4202,
+				-104.0393,
+				48.9926
+			]
+		},
+		{
+			"id": "minnesota",
+			"name": "Minnesota",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-93.36410000000001,
+				46.4348
+			],
+			"bbox": [
+				-97.2292,
+				43.5001,
+				-89.499,
+				49.3695
+			]
+		},
+		{
+			"id": "idaho",
+			"name": "Idaho",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-114.12700000000001,
+				45.495999999999995
+			],
+			"bbox": [
+				-117.2038,
+				41.9995,
+				-111.0502,
+				48.9925
+			]
+		},
+		{
+			"id": "maine",
+			"name": "Maine",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-69.03115,
+				45.27175
+			],
+			"bbox": [
+				-71.085,
+				43.0838,
+				-66.9773,
+				47.4597
+			]
+		},
+		{
+			"id": "michigan",
+			"name": "Michigan",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-86.28004999999999,
+				45.00045
+			],
+			"bbox": [
+				-90.4125,
+				41.6968,
+				-82.1476,
+				48.3041
+			]
+		},
+		{
+			"id": "wisconsin",
+			"name": "Wisconsin",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-89.5669,
+				44.899950000000004
+			],
+			"bbox": [
+				-92.8832,
+				42.4918,
+				-86.2506,
+				47.3081
+			]
+		},
+		{
+			"id": "south-dakota",
+			"name": "South Dakota",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-100.25515,
+				44.23015
+			],
+			"bbox": [
+				-104.0567,
+				42.5183,
+				-96.4536,
+				45.942
+			]
+		},
+		{
+			"id": "oregon",
+			"name": "Oregon",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-120.50534999999999,
+				44.1174
+			],
+			"bbox": [
+				-124.5477,
+				41.9995,
+				-116.463,
+				46.2353
+			]
+		},
+		{
+			"id": "new-hampshire",
+			"name": "New Hampshire",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-71.64195,
+				44.0026
+			],
+			"bbox": [
+				-72.5555,
+				42.7009,
+				-70.7284,
+				45.3043
+			]
+		},
+		{
+			"id": "vermont",
+			"name": "Vermont",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-72.47215,
+				43.8715
+			],
+			"bbox": [
+				-73.4385,
+				42.7293,
+				-71.5058,
+				45.0137
+			]
+		},
+		{
+			"id": "wyoming",
+			"name": "Wyoming",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-107.5519,
+				42.99995
+			],
+			"bbox": [
+				-111.0514,
+				40.9998,
+				-104.0524,
+				45.0001
+			]
+		},
+		{
+			"id": "new-york",
+			"name": "New York",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-75.84094999999999,
+				42.7608
+			],
+			"bbox": [
+				-79.763,
+				40.5115,
+				-71.9189,
+				45.0101
+			]
+		},
+		{
+			"id": "massachusetts",
+			"name": "Massachusetts",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-71.72305,
+				42.0629
+			],
+			"bbox": [
+				-73.5072,
+				41.2393,
+				-69.9389,
+				42.8865
+			]
+		},
+		{
+			"id": "iowa",
+			"name": "Iowa",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-93.38915,
+				41.94025
+			],
+			"bbox": [
+				-96.638,
+				40.3795,
+				-90.1403,
+				43.501
+			]
+		},
+		{
+			"id": "rhode-island",
+			"name": "Rhode Island",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-71.49115,
+				41.66815
+			],
+			"bbox": [
+				-71.8604,
+				41.3205,
+				-71.1219,
+				42.0158
+			]
+		},
+		{
+			"id": "connecticut",
+			"name": "Connecticut",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-72.75935,
+				41.5278
+			],
+			"bbox": [
+				-73.723,
+				41.0011,
+				-71.7957,
+				42.0545
+			]
+		},
+		{
+			"id": "nebraska",
+			"name": "Nebraska",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-99.6855,
+				41.50025
+			],
+			"bbox": [
+				-104.0537,
+				40.0001,
+				-95.3173,
+				43.0004
+			]
+		},
+		{
+			"id": "pennsylvania",
+			"name": "Pennsylvania",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-77.6096,
+				41.1295
+			],
+			"bbox": [
+				-80.5202,
+				39.7213,
+				-74.699,
+				42.5377
+			]
+		},
+		{
+			"id": "ohio",
+			"name": "Ohio",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-82.67185,
+				40.36645
+			],
+			"bbox": [
+				-84.8235,
+				38.4091,
+				-80.5202,
+				42.3238
+			]
+		},
+		{
+			"id": "new-jersey",
+			"name": "New Jersey",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-74.73225,
+				40.14605
+			],
+			"bbox": [
+				-75.5574,
+				38.9358,
+				-73.9071,
+				41.3563
+			]
+		},
+		{
+			"id": "indiana",
+			"name": "Indiana",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-86.41470000000001,
+				39.774150000000006
+			],
+			"bbox": [
+				-88.0454,
+				37.7886,
+				-84.784,
+				41.7597
+			]
+		},
+		{
+			"id": "illinois",
+			"name": "Illinois",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-89.26885,
+				39.74505
+			],
+			"bbox": [
+				-91.5189,
+				36.9783,
+				-87.0188,
+				42.5118
+			]
+		},
+		{
+			"id": "utah",
+			"name": "Utah",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-111.5444,
+				39.49995
+			],
+			"bbox": [
+				-114.0425,
+				36.9998,
+				-109.0463,
+				42.0001
+			]
+		},
+		{
+			"id": "delaware",
+			"name": "Delaware",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-75.4163,
+				39.1456
+			],
+			"bbox": [
+				-75.7886,
+				38.4534,
+				-75.044,
+				39.8378
+			]
+		},
+		{
+			"id": "colorado",
+			"name": "Colorado",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-105.5431,
+				38.9998
+			],
+			"bbox": [
+				-109.0466,
+				36.9998,
+				-102.0396,
+				40.9998
+			]
+		},
+		{
+			"id": "west-virginia",
+			"name": "West Virginia",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-80.18295,
+				38.9281
+			],
+			"bbox": [
+				-82.6312,
+				37.2094,
+				-77.7347,
+				40.6468
+			]
+		},
+		{
+			"id": "district-of-columbia",
+			"name": "District of Columbia",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-77.01455,
+				38.89945
+			],
+			"bbox": [
+				-77.1198,
+				38.8028,
+				-76.9093,
+				38.9961
+			]
+		},
+		{
+			"id": "maryland",
+			"name": "Maryland",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-77.2859,
+				38.84375
+			],
+			"bbox": [
+				-79.4879,
+				37.9657,
+				-75.0839,
+				39.7218
+			]
+		},
+		{
+			"id": "nevada",
+			"name": "Nevada",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-117.0205,
+				38.501850000000005
+			],
+			"bbox": [
+				-120.0008,
+				35.0036,
+				-114.0402,
+				42.0001
+			]
+		},
+		{
+			"id": "kansas",
+			"name": "Kansas",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-98.33449999999999,
+				38.49995
+			],
+			"bbox": [
+				-102.0513,
+				36.9998,
+				-94.6177,
+				40.0001
+			]
+		},
+		{
+			"id": "missouri",
+			"name": "Missouri",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-92.44595,
+				38.302499999999995
+			],
+			"bbox": [
+				-95.7682,
+				35.9862,
+				-89.1237,
+				40.6188
+			]
+		},
+		{
+			"id": "virginia",
+			"name": "Virginia",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-79.52244999999999,
+				37.9953
+			],
+			"bbox": [
+				-83.6675,
+				36.5398,
+				-75.3774,
+				39.4508
+			]
+		},
+		{
+			"id": "kentucky",
+			"name": "Kentucky",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-85.69485,
+				37.8207
+			],
+			"bbox": [
+				-89.4245,
+				36.4986,
+				-81.9652,
+				39.1428
+			]
+		},
+		{
+			"id": "california",
+			"name": "California",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-119.26715,
+				37.2656
+			],
+			"bbox": [
+				-124.4092,
+				32.5317,
+				-114.1251,
+				41.9995
+			]
+		},
+		{
+			"id": "tennessee",
+			"name": "Tennessee",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-85.98155,
+				35.837450000000004
+			],
+			"bbox": [
+				-90.3042,
+				34.9852,
+				-81.6589,
+				36.6897
+			]
+		},
+		{
+			"id": "oklahoma",
+			"name": "Oklahoma",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-98.71995,
+				35.3236
+			],
+			"bbox": [
+				-103.0008,
+				33.6474,
+				-94.4391,
+				36.9998
+			]
+		},
+		{
+			"id": "north-carolina",
+			"name": "North Carolina",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-80.0232,
+				35.24605
+			],
+			"bbox": [
+				-84.3246,
+				33.8826,
+				-75.7218,
+				36.6095
+			]
+		},
+		{
+			"id": "arkansas",
+			"name": "Arkansas",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-92.1428,
+				34.75535
+			],
+			"bbox": [
+				-94.6183,
+				33.0109,
+				-89.6673,
+				36.4998
+			]
+		},
+		{
+			"id": "arizona",
+			"name": "Arizona",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-111.93435,
+				34.165150000000004
+			],
+			"bbox": [
+				-114.8221,
+				31.3272,
+				-109.0466,
+				37.0031
+			]
+		},
+		{
+			"id": "new-mexico",
+			"name": "New Mexico",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-106.0238,
+				34.1636
+			],
+			"bbox": [
+				-109.0474,
+				31.3274,
+				-103.0002,
+				36.9998
+			]
+		},
+		{
+			"id": "south-carolina",
+			"name": "South Carolina",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-80.96435,
+				33.619299999999996
+			],
+			"bbox": [
+				-83.3555,
+				32.0327,
+				-78.5732,
+				35.2059
+			]
+		},
+		{
+			"id": "georgia",
+			"name": "Georgia",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-83.2207,
+				32.6825
+			],
+			"bbox": [
+				-85.6057,
+				30.3646,
+				-80.8357,
+				35.0004
+			]
+		},
+		{
+			"id": "alabama",
+			"name": "Alabama",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-86.69345,
+				32.62325
+			],
+			"bbox": [
+				-88.4862,
+				30.2368,
+				-84.9007,
+				35.0097
+			]
+		},
+		{
+			"id": "mississippi",
+			"name": "Mississippi",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-89.87335,
+				32.594950000000004
+			],
+			"bbox": [
+				-91.6573,
+				30.1898,
+				-88.0894,
+				35.0001
+			]
+		},
+		{
+			"id": "texas",
+			"name": "Texas",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-100.0885,
+				31.1762
+			],
+			"bbox": [
+				-106.6622,
+				25.8522,
+				-93.5148,
+				36.5002
+			]
+		},
+		{
+			"id": "louisiana",
+			"name": "Louisiana",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-91.5332,
+				30.9809
+			],
+			"bbox": [
+				-94.0432,
+				28.9475,
+				-89.0232,
+				33.0143
+			]
+		},
+		{
+			"id": "florida",
+			"name": "Florida",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-83.82965,
+				28.06075
+			],
+			"bbox": [
+				-87.6269,
+				25.1214,
+				-80.0324,
+				31.0001
+			]
+		},
+		{
+			"id": "hawaii",
+			"name": "Hawaii",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-157.5258,
+				20.5842
+			],
+			"bbox": [
+				-160.2344,
+				18.9329,
+				-154.8172,
+				22.2355
+			]
+		}
+	],
+	"tourOrder": [
+		"alaska",
+		"north-dakota",
+		"washington",
+		"montana",
+		"minnesota",
+		"idaho",
+		"maine",
+		"michigan",
+		"wisconsin",
+		"south-dakota",
+		"oregon",
+		"new-hampshire",
+		"vermont",
+		"wyoming",
+		"new-york",
+		"massachusetts",
+		"iowa",
+		"rhode-island",
+		"connecticut",
+		"nebraska",
+		"pennsylvania",
+		"ohio",
+		"new-jersey",
+		"indiana",
+		"illinois",
+		"utah",
+		"delaware",
+		"colorado",
+		"west-virginia",
+		"district-of-columbia",
+		"maryland",
+		"nevada",
+		"kansas",
+		"missouri",
+		"virginia",
+		"kentucky",
+		"california",
+		"tennessee",
+		"oklahoma",
+		"north-carolina",
+		"arkansas",
+		"arizona",
+		"new-mexico",
+		"south-carolina",
+		"georgia",
+		"alabama",
+		"mississippi",
+		"texas",
+		"louisiana",
+		"florida",
+		"hawaii"
+	]
+}

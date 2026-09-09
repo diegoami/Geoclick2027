@@ -8,9 +8,9 @@ Check items off as they land; update "Status" as iterations complete.
 ## Status
 
 - **Done**: architecture proposal (`ARCHITECTURE.md`); Iteration 0 (repo &
-  tooling scaffolding).
+  tooling scaffolding); Iteration 1 (demo map data pipeline).
 - **Not started**: everything else below.
-- **Next up**: Iteration 1 (demo map data pipeline).
+- **Next up**: Iteration 2 (core map viewer).
 
 ---
 
@@ -34,17 +34,34 @@ states, USA states — each a self-contained tileset plus a curated target
 list, loadable by any future UI. Reviewable by inspecting the raw
 `map.json`/`tiles.pmtiles` output; no app needed yet.
 
-- [ ] `data/scripts/fetch-natural-earth.sh` — download + cache
+- [x] `data/scripts/fetch-natural-earth.sh` — download + cache
       `ne_10m_admin_1_states_provinces`
-- [ ] `data/scripts/build-map.ts` — filter by country (ogr2ogr/mapshaper),
+- [x] `data/scripts/build-map.ts` — filter by country (ogr2ogr/mapshaper),
       simplify geometry
-- [ ] `tippecanoe` integration producing `tiles.pmtiles` per map
-- [ ] Derive draft `Target[]` JSON from filtered GeoJSON (id/name/type/
+- [x] `tippecanoe` integration producing `tiles.pmtiles` per map
+- [x] Derive draft `Target[]` JSON from filtered GeoJSON (id/name/type/
       geometry) + default tour order sorted by centroid
-- [ ] Shared `data/styles/base.json` MapLibre style
-- [ ] Run the pipeline for `italy-regions`, `germany-states`, `usa-states`
-- [ ] Manually curate each `map.json`: aliases, tiers, tour order; resolve
-      the Alaska/Hawaii framing decision for `usa-states`
+- [x] Shared `data/styles/base.json` MapLibre style
+- [x] Run the pipeline for `italy-regions`, `germany-states`, `usa-states`
+- [x] Manually curate each `map.json`: fixed Italy's two English region
+      names (Apulia → Puglia, Sicily → Sicilia, English kept as alias).
+      Tour order left as the default north-to-south sweep — already a
+      sensible narrative order. Deeper alias/tier curation deferred to
+      Iteration 4, once the quiz engine exists to actually consume it.
+- [x] Alaska/Hawaii framing decision for `usa-states`: keep real geographic
+      position, no inset — revisit only if it looks bad once rendered in
+      Iteration 2. Also fixed an antimeridian-wraparound bug in
+      `build-map.ts` that gave Alaska a nonsense centroid (~0°E) before
+      this — its bbox now correctly signals wraparound (west 172.64° >
+      east -129.99°).
+
+**Setup notes:** Node.js wasn't installed on this machine — installed via
+nvm (LTS, v24). GDAL (`ogr2ogr`) and `tippecanoe` installed via apt. The
+`pmtiles` CLI (mbtiles → PMTiles conversion) isn't packaged for apt —
+installed the prebuilt Linux binary from
+[protomaps/go-pmtiles](https://github.com/protomaps/go-pmtiles) releases
+into `~/.local/bin`. None of this is repo-tracked; a fresh machine will
+need the same one-time setup.
 
 ## Iteration 2 — Core map viewer
 
