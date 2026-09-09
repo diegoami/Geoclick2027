@@ -6,6 +6,7 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
+		"postbuild": "node scripts/copy-maplibre-worker.mjs",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -35,6 +36,7 @@
 		"vitest": "^4.1.8"
 	},
 	"dependencies": {
+		"@sveltejs/adapter-static": "^3.0.10",
 		"maplibre-gl": "^6.9.0",
 		"pmtiles": "^4.5.0"
 	}

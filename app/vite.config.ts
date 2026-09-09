@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitest/config';
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-static';
 import { sveltekit } from '@sveltejs/kit/vite';
 
 export default defineConfig({
@@ -18,10 +18,22 @@ export default defineConfig({
 					filename.split(/[/\\]/).includes('node_modules') ? undefined : true
 			},
 
-			// adapter-auto only supports some environments, see https://svelte.dev/docs/kit/adapter-auto for a list.
-			// If your environment is not supported, or you settled on a specific environment, switch out the adapter.
-			// See https://svelte.dev/docs/kit/adapters for more information about adapters.
-			adapter: adapter()
+			// Fully static build (see ARCHITECTURE.md's Hosting section - the
+			// app is local-first with no backend). /map/[mapId] and its /tour
+			// route are ssr=false and not prerendered (we don't enumerate map
+			// ids at build time), so they're served via the SPA fallback -
+			// 200.html is the filename Cloudflare Pages (and Netlify) look for
+			// to serve unmatched routes with a 200 instead of a 404.
+			adapter: adapter({ fallback: '200.html' }),
+
+			// Prerendered/fallback HTML must use absolute asset paths, not
+			// relative ones - the fallback (200.html) gets served for whatever
+			// nested URL the user actually requested (e.g. /map/italy-regions),
+			// and the browser resolves relative paths against that URL, not
+			// against the site root. Confirmed by testing the built output
+			// directly: relative paths broke with "expected a JS module but
+			// got text/html" once served two levels deep.
+			paths: { relative: false }
 		})
 	],
 	test: {

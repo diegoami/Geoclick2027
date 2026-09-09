@@ -185,11 +185,47 @@ Not part of the linear build order — pick this up whenever there's
 something worth showing off, no earlier than Iteration 3. See
 ARCHITECTURE.md's "Hosting / deployment" section for the reasoning.
 
-- [ ] Swap `adapter-auto` for `@sveltejs/adapter-static` in `app/`,
-      confirm all routes prerender cleanly
+- [x] Swap `adapter-auto` for `@sveltejs/adapter-static` in `app/`, with a
+      `200.html` SPA fallback (the filename Cloudflare Pages/Netlify look
+      for) for the two dynamic `/map/[mapId]` routes, since map ids aren't
+      enumerated at build time. Home page prerenders normally
+      (`+layout.ts`: `prerender = true` by default, opted out per-route).
 - [ ] Connect the repo to Cloudflare Pages, confirm PMTiles serve correctly
       over Range requests
 - [ ] (Optional, later) list a build on itch.io once it's polished enough
+
+**Two real bugs found by testing the actual built output, not just
+`vite build` succeeding:**
+
+- **Relative asset paths broke the SPA fallback.** The default SvelteKit
+  build emits asset links like `./_app/...`, correct only when the HTML is
+  served at the path it was built for. When `200.html` gets served for an
+  arbitrary nested URL (e.g. `/map/italy-regions`), the browser resolves
+  `./_app/...` against *that* URL, not the site root — producing a broken
+  `/map/_app/...` and a hard "expected a JS module, got text/html" failure.
+  Fixed with `paths: { relative: false }` in `vite.config.ts`, forcing
+  absolute (`/_app/...`) paths everywhere.
+- **maplibre-gl's worker never made it into the production build.**
+  maplibre-gl computes its worker's URL at runtime as
+  `` new URL(`./${t}`, import.meta.url) `` (a template literal, picking
+  dev vs. prod filename) - Vite's static asset analysis can't follow a
+  dynamic path like that, so `maplibre-gl-worker.mjs` (and the
+  `maplibre-gl-shared.mjs` it itself imports) never got emitted anywhere in
+  `vite build`'s output. Silent failure: the main page fetched tiles fine
+  (206 Partial Content) and threw no errors anywhere a page-level listener
+  could see, because the failure happened *inside the worker's own
+  context* when it tried to import a file that didn't exist. Fixed with a
+  `postbuild` npm script (`app/scripts/copy-maplibre-worker.mjs`) that
+  copies both files from `node_modules/maplibre-gl/dist/` into
+  `build/_app/immutable/chunks/` - the one directory every chunk in the
+  build lives in, so the relative import resolves regardless of which
+  specific chunk maplibre-gl's code ends up bundled into.
+
+Neither bug showed up in `npm run dev` (confirmed unaffected by any of
+this - still works exactly as before) or in `vite build`'s own output/exit
+code. Both only surfaced by actually serving the built `build/` directory
+and hard-loading a deep-linked route in a real browser - `curl` checks and
+a successful build were not enough.
       to show
 
 ## Iteration 4 — Quiz engine (`packages/quiz-engine`)

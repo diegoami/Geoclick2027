@@ -192,14 +192,38 @@ also means the same pipeline and the same base map style serve all three.
   contiguous 48 + DC fill the frame far better without two distant outliers
   stretching the bounds.
 
-## Hosting / deployment (deferred)
+## Hosting / deployment
 
 The browser leg needs a public host. Because the app is **local-first with
-no backend** (see Storage, above), the browser build can ship as a fully
-static site — `@sveltejs/adapter-static` instead of `adapter-auto`, all
-routes prerendered, no server process required. That constrains the
-decision usefully: any static host works, chosen on cost/convenience, not
-runtime capability.
+no backend** (see Storage, above), the browser build ships as a fully
+static site — `@sveltejs/adapter-static` instead of `adapter-auto`. Not
+every route prerenders, though: `/map/[mapId]` and its `/tour` route are
+`ssr=false` (MapLibre needs the DOM) and not enumerated at build time
+(we don't hardcode the list of map ids into the build), so they're served
+via adapter-static's SPA fallback (`200.html` — the filename Cloudflare
+Pages and Netlify both recognize) instead of a prerendered file per map.
+That constrains the hosting decision usefully: any static host with SPA
+fallback support works, chosen on cost/convenience, not runtime
+capability.
+
+**Two adapter-static + SPA-fallback gotchas hit while actually testing the
+built output** (not just a successful `vite build` — see ROADMAP.md's
+Iteration 3.5 for the full story):
+
+- Default relative asset paths (`./_app/...`) break once `200.html` is
+  served for a nested URL — the browser resolves them against the
+  requested path, not the site root. Fixed with `paths: { relative: false
+  }` in `vite.config.ts`.
+- maplibre-gl's worker file is invisible to Vite's static-asset analysis
+  (its URL is built from a runtime template literal), so it never makes it
+  into `vite build`'s output at all — a *different* failure from the dev-
+  server worker issue in Iteration 2, hit again on the production build
+  path specifically. Fixed with a `postbuild` script that copies it (and
+  its own dependency, `maplibre-gl-shared.mjs`) into the build output by
+  hand. Both bugs were silent: no error in `vite build`, no error in the
+  browser console — tiles fetched fine, the map just never rendered.
+  Caught only by serving the actual `build/` output and hard-loading a
+  deep-linked route in a real browser.
 
 **Recommendation: Cloudflare Pages** — generous free tier, connects
 directly to the (private) GitHub repo and auto-deploys on push, global CDN
@@ -227,5 +251,7 @@ Alternatives considered:
   the static build. Worth listing there *in addition to* a proper host,
   once there's a polished build worth showing off.
 
-**Deferred**: no hosting is set up yet. Revisit once a demo map has a tour
-and quiz worth sharing (around Iteration 3–4) — see ROADMAP.md.
+**Status**: the static build itself is ready and verified (all three demo
+maps, tour mode included, tested against the actual `build/` output).
+Connecting Cloudflare Pages to the repo for continuous deployment is the
+remaining step — see ROADMAP.md's Iteration 3.5.
