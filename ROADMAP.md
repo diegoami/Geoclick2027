@@ -7,9 +7,10 @@ Check items off as they land; update "Status" as iterations complete.
 
 ## Status
 
-- **Done**: architecture proposal (`ARCHITECTURE.md`).
-- **Not started**: everything below.
-- **Next up**: Iteration 0.
+- **Done**: architecture proposal (`ARCHITECTURE.md`); Iteration 0 (repo &
+  tooling scaffolding).
+- **Not started**: everything else below.
+- **Next up**: Iteration 1 (demo map data pipeline).
 
 ---
 
@@ -19,12 +20,12 @@ Check items off as they land; update "Status" as iterations complete.
 locally. Proves the toolchain (monorepo, TypeScript, lint) is sound before
 any game logic exists. Nothing user-facing yet — internal milestone only.
 
-- [ ] Init SvelteKit app in `/app`
-- [ ] TypeScript + ESLint/Prettier baseline
-- [ ] Set up npm/pnpm workspaces across `/app`, `/packages/quiz-engine`,
+- [x] Init SvelteKit app in `/app`
+- [x] TypeScript + ESLint/Prettier baseline
+- [x] Set up npm/pnpm workspaces across `/app`, `/packages/quiz-engine`,
       `/packages/srs`
-- [ ] Local build/test scripts wired up (`build`, `test`, `dev`)
-- [ ] `.gitignore` covering `node_modules`, `/data/source`, build output
+- [x] Local build/test scripts wired up (`build`, `test`, `dev`)
+- [x] `.gitignore` covering `node_modules`, `/data/source`, build output
 
 ## Iteration 1 — Demo map data pipeline
 

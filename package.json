@@ -1,0 +1,15 @@
+{
+	"name": "geoclick",
+	"private": true,
+	"version": "0.0.1",
+	"type": "module",
+	"workspaces": ["app", "packages/*"],
+	"scripts": {
+		"dev": "npm run dev --workspace=app",
+		"build": "npm run build --workspaces --if-present",
+		"test": "npm run test --workspaces --if-present",
+		"check": "npm run check --workspaces --if-present",
+		"lint": "npm run lint --workspace=app",
+		"format": "npm run format --workspace=app"
+	}
+}
