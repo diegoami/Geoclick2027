@@ -211,11 +211,24 @@ wrangler deploy` (the generic Workers command, and what a
 flatly refuses to run from an npm-workspaces root at all — a real
 constraint, not a guess. `npx wrangler pages deploy app/build
 --project-name=...` (the Pages-specific command, used above) has no such
-problem: run from repo root, it got all the way to Cloudflare's own
-"set CLOUDFLARE_API_TOKEN" error, meaning the command and paths are
-correct — auth is the only piece that requires an actual deploy to
-verify, and Cloudflare's own CI supplies that automatically for the
-Git-integrated flow.
+problem: run from repo root, it got all the way to Cloudflare's own auth
+check, meaning the command and paths are correct.
+
+Two account-side snags hit getting an actual deploy to succeed, both fixed
+in the Cloudflare dashboard rather than in this repo:
+
+- The token Cloudflare auto-injects as `CLOUDFLARE_API_TOKEN` for this
+  build flow defaults to Workers-only scope, not Cloudflare Pages — so
+  `wrangler pages deploy` (a Pages API call) got a permissions error even
+  though the account itself is Super Administrator. Fixed by creating a
+  custom API token with **Account → Cloudflare Pages → Edit** permission
+  and setting it as a `CLOUDFLARE_API_TOKEN` build variable on the
+  project, overriding the auto-injected one.
+- Separately, the token that authenticates the *build step itself*
+  (cloning/initializing, distinct from the deploy-step token above) had
+  belonged to an org member who'd since left — Cloudflare's own error
+  named the fix: Settings → Builds → API token → select or create a new
+  one.
 
 **Two real bugs found by testing the actual built output, not just
 `vite build` succeeding:**
