@@ -129,6 +129,7 @@ function main() {
 	const mbtilesPath = path.join(absOutDir, '.tmp-tiles.mbtiles');
 	const pmtilesPath = path.join(absOutDir, 'tiles.pmtiles');
 	const mapJsonPath = path.join(absOutDir, 'map.json');
+	const tourJsonPath = path.join(absOutDir, 'tour.json');
 
 	console.log(`[1/5] Filtering "${country}" from Natural Earth admin-1 dataset...`);
 	const whereClause =
@@ -199,6 +200,19 @@ function main() {
 	};
 	writeFileSync(mapJsonPath, JSON.stringify(mapDefinition, null, '\t') + '\n');
 
+	// Draft guided-tour script: default dwell per step, in map.json's
+	// already-curated tourOrder (a north-to-south sweep, see Iteration 1).
+	// Narration text is left for manual curation later, same as aliases/tiers.
+	const DEFAULT_DWELL_MS = 3000;
+	const tour = {
+		mapId: mapDefinition.id,
+		steps: mapDefinition.tourOrder.map((targetId: string) => ({
+			targetId,
+			dwellMs: DEFAULT_DWELL_MS
+		}))
+	};
+	writeFileSync(tourJsonPath, JSON.stringify(tour, null, '\t') + '\n');
+
 	// A separate point layer, one feature per target at its precomputed
 	// centroid, so labels render once per feature. Relying on MapLibre's
 	// default polygon-label placement instead causes a duplicate label
@@ -241,6 +255,7 @@ function main() {
 	rmSync(mbtilesPath);
 
 	console.log(`Done: ${targets.length} targets -> ${mapJsonPath}`);
+	console.log(`Tour -> ${tourJsonPath}`);
 	console.log(`Tiles -> ${pmtilesPath}`);
 }
 

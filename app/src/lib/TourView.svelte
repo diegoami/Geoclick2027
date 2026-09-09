@@ -1,0 +1,232 @@
+<script lang="ts">
+	import { onMount, onDestroy } from 'svelte';
+	import * as maplibregl from 'maplibre-gl';
+	import 'maplibre-gl/dist/maplibre-gl.css';
+	import { resolve } from '$app/paths';
+	import { fetchMapDefAndStyle, createMap } from './geoclickMap';
+	import { fetchTour, type Tour } from './tour';
+	import type { MapDefinition, Target } from './mapDefinition';
+
+	let { mapId }: { mapId: string } = $props();
+
+	let container: HTMLDivElement;
+	let map: maplibregl.Map | undefined;
+	let popup: maplibregl.Popup | undefined;
+	let advanceTimer: ReturnType<typeof setTimeout> | undefined;
+
+	let mapDef = $state<MapDefinition | undefined>(undefined);
+	let tour = $state<Tour | undefined>(undefined);
+	let error = $state<string | undefined>(undefined);
+	let stepIndex = $state(0);
+	let playing = $state(false);
+	let finished = $state(false);
+
+	let currentTarget = $derived.by((): Target | undefined => {
+		if (!mapDef || !tour) return undefined;
+		const step = tour.steps[stepIndex];
+		return step ? mapDef.targets.find((t) => t.id === step.targetId) : undefined;
+	});
+
+	function clearHighlight(name: string | undefined) {
+		if (!map || !name) return;
+		map.setFeatureState(
+			{ source: 'targets', sourceLayer: 'targets', id: name },
+			{ highlighted: false }
+		);
+	}
+
+	function showStep(index: number) {
+		if (!map || !mapDef || !tour) return;
+		const step = tour.steps[index];
+		if (!step) return;
+		const target = mapDef.targets.find((t) => t.id === step.targetId);
+		if (!target) return;
+
+		clearHighlight(currentTarget?.name);
+		stepIndex = index;
+		finished = false;
+
+		map.setFeatureState(
+			{ source: 'targets', sourceLayer: 'targets', id: target.name },
+			{ highlighted: true }
+		);
+		map.fitBounds(target.bbox, { padding: 80, duration: 1200 });
+
+		popup ??= new maplibregl.Popup({
+			closeButton: false,
+			closeOnClick: false,
+			className: 'geoclick-popup'
+		});
+		const [lon, lat] = target.centroid;
+		popup.setLngLat([lon, lat]).setHTML(`<strong>${target.name}</strong>`).addTo(map);
+
+		if (advanceTimer) clearTimeout(advanceTimer);
+		if (playing) {
+			advanceTimer = setTimeout(() => advance(), step.dwellMs);
+		}
+	}
+
+	function advance() {
+		if (!tour) return;
+		if (stepIndex + 1 >= tour.steps.length) {
+			finished = true;
+			playing = false;
+			return;
+		}
+		showStep(stepIndex + 1);
+	}
+
+	function back() {
+		if (stepIndex > 0) showStep(stepIndex - 1);
+	}
+
+	function togglePlay() {
+		if (finished) {
+			playing = true;
+			showStep(0);
+			return;
+		}
+		playing = !playing;
+		if (playing) showStep(stepIndex);
+		else if (advanceTimer) clearTimeout(advanceTimer);
+	}
+
+	onMount(() => {
+		let cancelled = false;
+
+		(async () => {
+			const [{ mapDef: loadedMapDef, style }, loadedTour] = await Promise.all([
+				fetchMapDefAndStyle(mapId),
+				fetchTour(mapId)
+			]);
+			if (cancelled) return;
+			mapDef = loadedMapDef;
+			tour = loadedTour;
+
+			map = createMap(container, loadedMapDef, style);
+			map.once('load', () => {
+				if (cancelled) return;
+				playing = true;
+				showStep(0);
+			});
+		})().catch((e) => {
+			error = e instanceof Error ? e.message : String(e);
+		});
+
+		return () => {
+			cancelled = true;
+		};
+	});
+
+	onDestroy(() => {
+		if (advanceTimer) clearTimeout(advanceTimer);
+		popup?.remove();
+		map?.remove();
+	});
+</script>
+
+<div class="tour-view">
+	{#if error}
+		<p class="error">{error}</p>
+	{:else}
+		<div class="info">
+			<a class="back" href={mapId ? resolve('/map/[mapId]', { mapId }) : resolve('/')}>← Map</a>
+			<strong>{mapDef ? mapDef.name : 'Loading…'} — Tour</strong>
+		</div>
+
+		{#if tour}
+			<div class="controls">
+				<button onclick={back} disabled={stepIndex === 0}>‹ Prev</button>
+				<button onclick={togglePlay}>
+					{#if finished}Replay{:else if playing}Pause{:else}▶ Play{/if}
+				</button>
+				<button onclick={advance} disabled={finished}>Next ›</button>
+				<span class="progress">{stepIndex + 1} / {tour.steps.length}</span>
+			</div>
+		{/if}
+	{/if}
+	<div class="container" bind:this={container}></div>
+</div>
+
+<style>
+	.tour-view {
+		position: relative;
+		width: 100%;
+		height: 100vh;
+	}
+	.container {
+		width: 100%;
+		height: 100%;
+	}
+	.info {
+		position: absolute;
+		top: 0.75rem;
+		left: 0.75rem;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.35rem;
+		background: rgba(255, 255, 255, 0.9);
+		padding: 0.5rem 0.75rem;
+		border-radius: 0.5rem;
+		font-family: system-ui, sans-serif;
+		font-size: 0.9rem;
+	}
+	.back {
+		font-size: 0.8rem;
+		text-decoration: none;
+		color: inherit;
+		opacity: 0.7;
+	}
+	.back:hover {
+		opacity: 1;
+	}
+	.controls {
+		position: absolute;
+		bottom: 1.5rem;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 1;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		background: rgba(255, 255, 255, 0.9);
+		padding: 0.5rem 0.9rem;
+		border-radius: 2rem;
+		font-family: system-ui, sans-serif;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+	}
+	.controls button {
+		border: none;
+		background: none;
+		font-size: 1.1rem;
+		cursor: pointer;
+		padding: 0.25rem 0.5rem;
+		border-radius: 0.5rem;
+	}
+	.controls button:disabled {
+		opacity: 0.35;
+		cursor: default;
+	}
+	.controls button:not(:disabled):hover {
+		background: rgba(0, 0, 0, 0.06);
+	}
+	.progress {
+		font-size: 0.85rem;
+		opacity: 0.7;
+		min-width: 3.5rem;
+		text-align: center;
+	}
+	.error {
+		padding: 1rem;
+		font-family: system-ui, sans-serif;
+		color: #a33;
+	}
+	:global(.geoclick-popup .maplibregl-popup-content) {
+		font-family: system-ui, sans-serif;
+		font-size: 1.15rem;
+		padding: 0.5rem 0.9rem;
+		border-radius: 0.5rem;
+	}
+</style>

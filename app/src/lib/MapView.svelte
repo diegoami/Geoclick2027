@@ -2,9 +2,9 @@
 	import { onMount, onDestroy } from 'svelte';
 	import * as maplibregl from 'maplibre-gl';
 	import 'maplibre-gl/dist/maplibre-gl.css';
-	import { Protocol } from 'pmtiles';
 	import { resolve } from '$app/paths';
-	import { overallBounds, type MapDefinition } from './mapDefinition';
+	import { fetchMapDefAndStyle, createMap } from './geoclickMap';
+	import type { MapDefinition } from './mapDefinition';
 
 	let { mapId }: { mapId: string } = $props();
 
@@ -16,46 +16,14 @@
 	let selectedFeatureId: number | string | undefined;
 
 	onMount(() => {
-		// Idempotent: re-registering on remount just replaces the same handler.
-		const protocol = new Protocol();
-		maplibregl.addProtocol('pmtiles', protocol.tile);
-
 		let cancelled = false;
 
 		(async () => {
-			const [mapDefRes, baseStyleRes] = await Promise.all([
-				fetch(`/maps/${mapId}/map.json`),
-				fetch(`/styles/base.json`)
-			]);
-			if (!mapDefRes.ok || !baseStyleRes.ok) {
-				error = `Could not load map "${mapId}".`;
-				return;
-			}
-			const loadedMapDef: MapDefinition = await mapDefRes.json();
-			const baseStyle = await baseStyleRes.json();
+			const { mapDef: loadedMapDef, style } = await fetchMapDefAndStyle(mapId);
 			if (cancelled) return;
 			mapDef = loadedMapDef;
 
-			const style = {
-				...baseStyle,
-				sources: {
-					...baseStyle.sources,
-					targets: {
-						...baseStyle.sources.targets,
-						url: `pmtiles://${location.origin}/maps/${mapId}/tiles.pmtiles`
-					}
-				}
-			};
-
-			const bounds = overallBounds(loadedMapDef);
-
-			map = new maplibregl.Map({
-				container,
-				style,
-				bounds,
-				fitBoundsOptions: { padding: 40 }
-			});
-			map.addControl(new maplibregl.NavigationControl(), 'top-right');
+			map = createMap(container, loadedMapDef, style);
 
 			map.on('click', 'targets-fill', (e: maplibregl.MapLayerMouseEvent) => {
 				const feature = e.features?.[0];
@@ -110,6 +78,9 @@
 		<div class="info">
 			<a class="back" href={resolve('/')}>← Maps</a>
 			<strong>{mapDef ? mapDef.name : 'Loading…'}</strong>
+			{#if mapId}
+				<a class="tour-link" href={resolve('/map/[mapId]/tour', { mapId })}>▶ Start tour</a>
+			{/if}
 		</div>
 	{/if}
 	<div class="container" bind:this={container}></div>
@@ -148,6 +119,15 @@
 	}
 	.back:hover {
 		opacity: 1;
+	}
+	.tour-link {
+		font-size: 0.85rem;
+		font-weight: 600;
+		text-decoration: none;
+		color: #b5691f;
+	}
+	.tour-link:hover {
+		text-decoration: underline;
 	}
 	.error {
 		padding: 1rem;
