@@ -19,6 +19,13 @@ const SOURCE_SHP = path.join(
 );
 const FIELDS = 'name,name_alt,name_local,iso_3166_2,type,type_en,admin,region';
 
+// Natural Earth sometimes gives an English name where the country's own
+// language is expected (e.g. Italy's regions). Fixed at the source so
+// map.json, the polygon layer, and the label layer all agree.
+const NAME_FIXUPS: Record<string, Record<string, string>> = {
+	Italy: { Apulia: 'Puglia', Sicily: 'Sicilia' }
+};
+
 function parseArgs(argv: string[]) {
 	const out: Record<string, string> = {};
 	for (const arg of argv) {
@@ -111,11 +118,12 @@ function main() {
 
 	const filteredPath = path.join(absOutDir, '.tmp-filtered.geojson');
 	const simplifiedPath = path.join(absOutDir, '.tmp-simplified.geojson');
+	const labelsPath = path.join(absOutDir, '.tmp-labels.geojson');
 	const mbtilesPath = path.join(absOutDir, '.tmp-tiles.mbtiles');
 	const pmtilesPath = path.join(absOutDir, 'tiles.pmtiles');
 	const mapJsonPath = path.join(absOutDir, 'map.json');
 
-	console.log(`[1/4] Filtering "${country}" from Natural Earth admin-1 dataset...`);
+	console.log(`[1/5] Filtering "${country}" from Natural Earth admin-1 dataset...`);
 	execFileSync('ogr2ogr', [
 		'-f',
 		'GeoJSON',
@@ -129,10 +137,10 @@ function main() {
 
 	const mapshaperArgs = [filteredPath];
 	if (dissolveField) {
-		console.log(`[2/4] Dissolving by "${dissolveField}" and simplifying geometry (mapshaper)...`);
+		console.log(`[2/5] Dissolving by "${dissolveField}" and simplifying geometry (mapshaper)...`);
 		mapshaperArgs.push('-dissolve', dissolveField, '-rename-fields', `name=${dissolveField}`);
 	} else {
-		console.log('[2/4] Simplifying geometry (mapshaper)...');
+		console.log('[2/5] Simplifying geometry (mapshaper)...');
 	}
 	mapshaperArgs.push(
 		'-simplify',
@@ -146,27 +154,15 @@ function main() {
 	);
 	execFileSync('npx', ['mapshaper', ...mapshaperArgs], { stdio: 'inherit' });
 
-	console.log('[3/4] Building vector tiles (tippecanoe + pmtiles convert)...');
-	execFileSync('tippecanoe', [
-		'--output',
-		mbtilesPath,
-		'--force',
-		'--minimum-zoom=0',
-		'--maximum-zoom=8',
-		'--layer=targets',
-		`--name=${mapName}`,
-		'--attribution=Natural Earth (public domain)',
-		'--generate-ids',
-		simplifiedPath
-	]);
-	execFileSync(path.join(process.env.HOME ?? '', '.local/bin/pmtiles'), [
-		'convert',
-		mbtilesPath,
-		pmtilesPath
-	]);
-
-	console.log('[4/4] Deriving draft map.json...');
+	console.log('[3/5] Fixing up names and deriving draft map.json...');
 	const geojson = JSON.parse(readFileSync(simplifiedPath, 'utf-8'));
+	const fixups = NAME_FIXUPS[country] ?? {};
+	for (const feature of geojson.features) {
+		const fixed = fixups[feature.properties.name];
+		if (fixed) feature.properties.name = fixed;
+	}
+	writeFileSync(simplifiedPath, JSON.stringify(geojson));
+
 	const targets = geojson.features.map((feature: any) => {
 		const p = feature.properties;
 		const { bbox, center } = boundsOf(feature.geometry);
@@ -193,8 +189,45 @@ function main() {
 	};
 	writeFileSync(mapJsonPath, JSON.stringify(mapDefinition, null, '\t') + '\n');
 
+	// A separate point layer, one feature per target at its precomputed
+	// centroid, so labels render once per feature. Relying on MapLibre's
+	// default polygon-label placement instead causes a duplicate label
+	// wherever a region's polygon is split across tile boundaries.
+	const labelsGeojson = {
+		type: 'FeatureCollection',
+		features: targets.map((t: any) => ({
+			type: 'Feature',
+			properties: { name: t.name, id: t.id },
+			geometry: { type: 'Point', coordinates: t.centroid }
+		}))
+	};
+	writeFileSync(labelsPath, JSON.stringify(labelsGeojson));
+
+	console.log('[4/5] Building vector tiles (tippecanoe + pmtiles convert)...');
+	execFileSync('tippecanoe', [
+		'--output',
+		mbtilesPath,
+		'--force',
+		'--minimum-zoom=0',
+		'--maximum-zoom=8',
+		`--name=${mapName}`,
+		'--attribution=Natural Earth (public domain)',
+		'--generate-ids',
+		'-L',
+		`targets:${simplifiedPath}`,
+		'-L',
+		`labels:${labelsPath}`
+	]);
+	execFileSync(path.join(process.env.HOME ?? '', '.local/bin/pmtiles'), [
+		'convert',
+		mbtilesPath,
+		pmtilesPath
+	]);
+
+	console.log('[5/5] Cleaning up...');
 	rmSync(filteredPath);
 	rmSync(simplifiedPath);
+	rmSync(labelsPath);
 	rmSync(mbtilesPath);
 
 	console.log(`Done: ${targets.length} targets -> ${mapJsonPath}`);

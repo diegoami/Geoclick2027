@@ -8,9 +8,10 @@ Check items off as they land; update "Status" as iterations complete.
 ## Status
 
 - **Done**: architecture proposal (`ARCHITECTURE.md`); Iteration 0 (repo &
-  tooling scaffolding); Iteration 1 (demo map data pipeline).
+  tooling scaffolding); Iteration 1 (demo map data pipeline); Iteration 2
+  (core map viewer).
 - **Not started**: everything else below.
-- **Next up**: Iteration 2 (core map viewer).
+- **Next up**: Iteration 3 (tour mode).
 
 ---
 
@@ -69,12 +70,47 @@ need the same one-time setup.
 beautifully — pan, zoom, and click a region to see it highlight. The first
 moment the project "looks like the product" rather than a tech spike.
 
-- [ ] SvelteKit route loading a Map Definition + PMTiles via MapLibre
-- [ ] Render base style + target layer (points/lines/polygons), styled
-      distinctly per type
-- [ ] Click/tap hit-testing per geometry type
-- [ ] Zoom/pan controls, fit-to-bounds on load
-- [ ] Manual smoke test against all three demo maps
+- [x] SvelteKit route loading a Map Definition + PMTiles via MapLibre
+      (`/map/[mapId]`, `MapView.svelte`)
+- [x] Render base style + target layer, styled distinctly. Scoped to
+      polygons only — all three demo maps are region/state polygons, no
+      point/line target exists yet to justify styling for those geometry
+      types; add when a map actually needs them (e.g. rivers, capitals).
+- [x] Click hit-testing (`queryRenderedFeatures` + `setFeatureState`,
+      orange highlight on click). Tap wasn't separately tested — no
+      touch-device testing available in this environment; MapLibre treats
+      tap as click by default, so likely fine, but genuinely unverified.
+- [x] Zoom/pan controls (`NavigationControl`), fit-to-bounds on load (from
+      target centroids — see `overallBounds` in `mapDefinition.ts`)
+- [x] Manual smoke test against all three demo maps (Playwright,
+      screenshots + console/network assertions, not just eyeballing)
+
+**Two real bugs found via the smoke test, not just polish:**
+- MapLibre's tile-parsing worker (`maplibre-gl-worker.mjs`) silently failed
+  to load under Vite's dev pre-bundling — tiles fetched fine (206 partial
+  responses) but nothing rendered, no error surfaced in the UI. Fixed with
+  `optimizeDeps.exclude: ['maplibre-gl']` in `vite.config.ts`.
+- `base.json`'s click-highlight layer used `feature-state` inside a layer
+  `filter`, which MapLibre doesn't support (feature-state only works in
+  paint/layout expressions) — threw at style load. Fixed by folding the
+  highlight into `targets-fill`'s `fill-color` as a `case` expression
+  instead of a separate filtered layer.
+
+**One data-pipeline bug found while actually looking at the render:**
+default polygon-label placement duplicated labels wherever a region's
+polygon crossed a tile boundary (visible on Italy at low zoom — Toscana,
+Sardegna, etc. each labeled 2-3 times). Fixed in `build-map.ts` by
+generating a separate `labels` point layer (one point per target, at its
+precomputed centroid) instead of relying on MapLibre's per-tile polygon
+label placement. Also moved the Apulia/Sicily → Puglia/Sicilia name fix
+(originally patched directly into `map.json` in Iteration 1) upstream into
+`build-map.ts` itself, so `map.json` and the tiles agree by construction
+instead of by a manual patch that only touched one of the two.
+
+**Setup notes:** the smoke test used Playwright + Chromium headless (not
+just HTTP status checks) to actually catch the two rendering bugs above —
+`npx playwright install chromium` plus one more apt package
+(`libasound2t64`) were needed on this machine, not repo-tracked.
 
 ## Iteration 3 — Tour mode
 

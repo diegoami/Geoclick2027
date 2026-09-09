@@ -3,6 +3,13 @@ import adapter from '@sveltejs/adapter-auto';
 import { sveltekit } from '@sveltejs/kit/vite';
 
 export default defineConfig({
+	// maplibre-gl spawns its tile-parsing worker from a sibling file
+	// (maplibre-gl-worker.mjs) resolved relative to its own module URL. Vite's
+	// dependency pre-bundling relocates the main module without that sibling,
+	// breaking the worker at runtime (tiles fetch fine, nothing renders).
+	// Excluding it from pre-bundling serves it straight from node_modules,
+	// where the relative path still resolves.
+	optimizeDeps: { exclude: ['maplibre-gl'] },
 	plugins: [
 		sveltekit({
 			compilerOptions: {
