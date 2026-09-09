@@ -236,12 +236,28 @@ in the Cloudflare dashboard rather than in this repo:
 
 **Pivoted to GitHub Actions instead of Cloudflare's Git integration**
 (`.github/workflows/deploy.yml`) once the build-token bug above didn't
-resolve — same build + deploy commands verified locally, just triggered
-by GitHub's CI instead of Cloudflare's own, which sidesteps their
-Workers-Builds token-management bug entirely. Needs two GitHub Actions
-repository secrets (Settings → Secrets and variables → Actions):
+resolve — triggered by GitHub's CI instead of Cloudflare's own, sidestepping
+their Workers-Builds token-management bug entirely. Needs two GitHub
+Actions repository secrets (Settings → Secrets and variables → Actions):
 `CLOUDFLARE_API_TOKEN` (the Pages:Edit-scoped token from above) and
 `CLOUDFLARE_ACCOUNT_ID`.
+
+**First real Actions run surfaced one more thing**: `wrangler pages deploy`
+failed with `The Pages project "geoclick2027" does not exist` — the
+dashboard had actually created "geoclick2027" as a **Worker** (Cloudflare's
+newer unified Workers+Pages model), not a classic Pages project, despite
+every setting screen along the way looking Pages-shaped. Switched to
+`wrangler deploy` with static assets instead (`app/wrangler.jsonc`,
+`assets.directory: "./build"`), which matches what the dashboard actually
+created. Run from `app/`, not repo root — plain `wrangler deploy` (unlike
+`wrangler pages deploy`) refuses to run at all from an npm-workspaces root.
+SPA fallback for the two dynamic routes now goes through an `app/static/
+_redirects` file (`/* /200.html 200`) rather than `not_found_handling:
+"single-page-application"`, since that mode serves plain `index.html` —
+built for the home route specifically, with the wrong embedded hydration
+data — for every unmatched path instead of our `200.html` fallback.
+Verified `_redirects`-file support for Workers static assets against
+Cloudflare's own docs before relying on it, rather than assuming.
 
 **Two real bugs found by testing the actual built output, not just
 `vite build` succeeding:**

@@ -12,7 +12,7 @@
 		"lint": "npm run lint --workspace=app",
 		"format": "npm run format --workspace=app",
 		"build-map": "tsx data/scripts/build-map.ts",
-		"deploy": "npm run build --workspace=app && wrangler pages deploy app/build --project-name=geoclick2027"
+		"deploy": "npm run build --workspace=app && cd app && wrangler deploy"
 	},
 	"devDependencies": {
 		"mapshaper": "^0.6.115",
