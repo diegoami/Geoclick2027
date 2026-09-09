@@ -71,6 +71,23 @@ tour" pitch is demonstrable end-to-end for the first time.
 - [ ] Play / pause / skip controls, narration text display
 - [ ] Manual test: watch a full tour end-to-end for each demo map
 
+## Iteration 3.5 — Public deploy (optional, deferred)
+
+**Deliverable:** a shareable URL anyone can open in a browser — no clone,
+no install — showing whatever the app can do at the time (tour mode at
+minimum, quiz mode once Iteration 4 lands).
+
+Not part of the linear build order — pick this up whenever there's
+something worth showing off, no earlier than Iteration 3. See
+ARCHITECTURE.md's "Hosting / deployment" section for the reasoning.
+
+- [ ] Swap `adapter-auto` for `@sveltejs/adapter-static` in `app/`,
+      confirm all routes prerender cleanly
+- [ ] Connect the repo to Cloudflare Pages, confirm PMTiles serve correctly
+      over Range requests
+- [ ] (Optional, later) list a build on itch.io once it's polished enough
+      to show
+
 ## Iteration 4 — Quiz engine (`packages/quiz-engine`)
 
 **Deliverable:** After watching a tour, you can quiz yourself on it —

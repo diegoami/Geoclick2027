@@ -165,3 +165,41 @@ also means the same pipeline and the same base map style serve all three.
 - **Italy**: 20 regioni, straightforward; Natural Earth's `name`/`name_en`
   fields should be checked for Italian-language completeness during
   curation.
+
+## Hosting / deployment (deferred)
+
+The browser leg needs a public host. Because the app is **local-first with
+no backend** (see Storage, above), the browser build can ship as a fully
+static site — `@sveltejs/adapter-static` instead of `adapter-auto`, all
+routes prerendered, no server process required. That constrains the
+decision usefully: any static host works, chosen on cost/convenience, not
+runtime capability.
+
+**Recommendation: Cloudflare Pages** — generous free tier, connects
+directly to the (private) GitHub repo and auto-deploys on push, global CDN
+with solid HTTP Range-request support (important for streaming PMTiles
+efficiently — the PMTiles/Protomaps ecosystem itself is commonly paired
+with Cloudflare).
+
+Alternatives considered:
+
+- **Netlify** — essentially equivalent to Cloudflare Pages: git-integrated,
+  free tier, private repos supported.
+- **Vercel** — works fine with the static adapter, but more oriented
+  toward Next.js; no clear edge here over Cloudflare/Netlify.
+- **GitHub Pages** — free and zero extra service since the repo is already
+  on GitHub, but on GitHub Free, Pages only works with **public** repos.
+  This repo is private, so it'd require making it public or upgrading to
+  GitHub Pro.
+- **Replit** (Static Deployment) — also a good fit for the same reasons as
+  Cloudflare Pages, and worth reconsidering if/when the optional sync
+  backend from Iteration 8+ materializes, since Replit could then host a
+  Node API + Postgres alongside the static frontend without switching
+  platforms.
+- **itch.io** — different category: not a CI/CD host, but the place people
+  actually go looking for indie/portfolio browser games. Upload a zip of
+  the static build. Worth listing there *in addition to* a proper host,
+  once there's a polished build worth showing off.
+
+**Deferred**: no hosting is set up yet. Revisit once a demo map has a tour
+and quiz worth sharing (around Iteration 3–4) — see ROADMAP.md.
