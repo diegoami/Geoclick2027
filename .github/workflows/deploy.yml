@@ -1,0 +1,33 @@
+name: Deploy
+
+# Deploys straight via wrangler, bypassing Cloudflare's own Git integration
+# (Workers Builds) - that flow hit an unresolved account-side bug ("build
+# token belongs to a user who has left your organization") that persisted
+# across regenerating the token. See ROADMAP.md's Iteration 3.5 notes.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+
+      - run: npm ci
+
+      - run: npm run build --workspace=app
+
+      - name: Deploy to Cloudflare Pages
+        run: npx wrangler pages deploy app/build --project-name=geoclick2027
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

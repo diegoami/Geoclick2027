@@ -11,10 +11,12 @@
 		"check": "npm run check --workspaces --if-present",
 		"lint": "npm run lint --workspace=app",
 		"format": "npm run format --workspace=app",
-		"build-map": "tsx data/scripts/build-map.ts"
+		"build-map": "tsx data/scripts/build-map.ts",
+		"deploy": "npm run build --workspace=app && wrangler pages deploy app/build --project-name=geoclick2027"
 	},
 	"devDependencies": {
 		"mapshaper": "^0.6.115",
-		"tsx": "^4.20.6"
+		"tsx": "^4.20.6",
+		"wrangler": "^4.130.0"
 	}
 }

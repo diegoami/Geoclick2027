@@ -228,7 +228,20 @@ in the Cloudflare dashboard rather than in this repo:
   (cloning/initializing, distinct from the deploy-step token above) had
   belonged to an org member who'd since left — Cloudflare's own error
   named the fix: Settings → Builds → API token → select or create a new
-  one.
+  one. This one didn't actually resolve on retry even after regenerating
+  the token, and turned out to be a known, acknowledged bug in Cloudflare's
+  Workers Builds product (matching community reports of the exact same
+  error persisting across token regeneration) rather than anything
+  specific to this repo.
+
+**Pivoted to GitHub Actions instead of Cloudflare's Git integration**
+(`.github/workflows/deploy.yml`) once the build-token bug above didn't
+resolve — same build + deploy commands verified locally, just triggered
+by GitHub's CI instead of Cloudflare's own, which sidesteps their
+Workers-Builds token-management bug entirely. Needs two GitHub Actions
+repository secrets (Settings → Secrets and variables → Actions):
+`CLOUDFLARE_API_TOKEN` (the Pages:Edit-scoped token from above) and
+`CLOUDFLARE_ACCOUNT_ID`.
 
 **Two real bugs found by testing the actual built output, not just
 `vite build` succeeding:**
