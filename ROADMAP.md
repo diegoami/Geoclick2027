@@ -194,6 +194,29 @@ ARCHITECTURE.md's "Hosting / deployment" section for the reasoning.
       over Range requests
 - [ ] (Optional, later) list a build on itch.io once it's polished enough
 
+**Cloudflare dashboard settings** (their newer unified Workers-and-Pages
+Git integration asks for a *Deploy command*, not a build-output-directory
+field — different from the classic Pages onboarding flow):
+
+- Framework preset: **None** (don't let it auto-detect SvelteKit — that
+  assumes Cloudflare's own adapter, not `adapter-static`)
+- Root directory: `/` (repo root — not `app/`; `npm install` needs to run
+  at the root for the npm workspace to link `app` + `packages/*` correctly)
+- Build command: `npm run build --workspace=app`
+- Deploy command: `npx wrangler pages deploy app/build --project-name=<name>`
+
+Verified locally as far as possible without real credentials: `npx
+wrangler deploy` (the generic Workers command, and what a
+`pages_build_output_dir` key in `wrangler.jsonc` is meant to pair with)
+flatly refuses to run from an npm-workspaces root at all — a real
+constraint, not a guess. `npx wrangler pages deploy app/build
+--project-name=...` (the Pages-specific command, used above) has no such
+problem: run from repo root, it got all the way to Cloudflare's own
+"set CLOUDFLARE_API_TOKEN" error, meaning the command and paths are
+correct — auth is the only piece that requires an actual deploy to
+verify, and Cloudflare's own CI supplies that automatically for the
+Git-integrated flow.
+
 **Two real bugs found by testing the actual built output, not just
 `vite build` succeeding:**
 
