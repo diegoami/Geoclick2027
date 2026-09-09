@@ -152,9 +152,17 @@ tour" pitch is demonstrable end-to-end for the first time.
 - [x] Play / pause / prev / next controls, step progress ("i / N"),
       replay on completion. No narration text display yet since none is
       authored (see above) — the UI supports it trivially once it exists.
+- [x] Speed control (0.5×/1×/1.5×/2×/3×, requested after first trying the
+      tour) — scales both the dwell timer and the camera flight duration,
+      so a faster tour also *feels* faster rather than just cutting the
+      pause short. Changing speed mid-step restarts that step's countdown
+      at the new speed rather than preserving exact elapsed progress —
+      simple, and the only visible effect is timing (no re-flying or
+      re-popup).
 - [x] Manual test: full tour watched end-to-end for all three demo maps
       (Playwright: autoplay, dwell-based auto-advance, pause actually
-      halting the timer, manual prev/next, zero console errors)
+      halting the timer, manual prev/next, speed control actually changing
+      advance timing, zero console errors)
 
 **Refactor along the way:** extracted the map-bootstrapping logic shared
 between free-explore (`MapView.svelte`) and tour (`TourView.svelte`) into

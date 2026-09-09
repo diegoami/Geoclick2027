@@ -20,6 +20,10 @@
 	let stepIndex = $state(0);
 	let playing = $state(false);
 	let finished = $state(false);
+	let speed = $state(1);
+
+	const SPEEDS = [0.5, 1, 1.5, 2, 3];
+	const BASE_FLIGHT_MS = 1200;
 
 	let currentTarget = $derived.by((): Target | undefined => {
 		if (!mapDef || !tour) return undefined;
@@ -50,7 +54,7 @@
 			{ source: 'targets', sourceLayer: 'targets', id: target.name },
 			{ highlighted: true }
 		);
-		map.fitBounds(target.bbox, { padding: 80, duration: 1200 });
+		map.fitBounds(target.bbox, { padding: 80, duration: Math.max(150, BASE_FLIGHT_MS / speed) });
 
 		popup ??= new maplibregl.Popup({
 			closeButton: false,
@@ -60,9 +64,24 @@
 		const [lon, lat] = target.centroid;
 		popup.setLngLat([lon, lat]).setHTML(`<strong>${target.name}</strong>`).addTo(map);
 
+		scheduleAdvance(step.dwellMs);
+	}
+
+	function scheduleAdvance(dwellMs: number) {
 		if (advanceTimer) clearTimeout(advanceTimer);
 		if (playing) {
-			advanceTimer = setTimeout(() => advance(), step.dwellMs);
+			advanceTimer = setTimeout(() => advance(), dwellMs / speed);
+		}
+	}
+
+	function setSpeed(newSpeed: number) {
+		speed = newSpeed;
+		// Restarts the current step's countdown at the new speed, rather than
+		// trying to preserve exact elapsed progress - simple, and the only
+		// visible effect is the timing (no re-flying or re-popup).
+		if (tour) {
+			const step = tour.steps[stepIndex];
+			if (step) scheduleAdvance(step.dwellMs);
 		}
 	}
 
@@ -142,6 +161,15 @@
 				</button>
 				<button onclick={advance} disabled={finished}>Next ›</button>
 				<span class="progress">{stepIndex + 1} / {tour.steps.length}</span>
+				<select
+					class="speed"
+					value={speed}
+					onchange={(e) => setSpeed(Number(e.currentTarget.value))}
+				>
+					{#each SPEEDS as s (s)}
+						<option value={s}>{s}×</option>
+					{/each}
+				</select>
 			</div>
 		{/if}
 	{/if}
@@ -217,6 +245,15 @@
 		opacity: 0.7;
 		min-width: 3.5rem;
 		text-align: center;
+	}
+	.speed {
+		font-family: inherit;
+		font-size: 0.85rem;
+		border: none;
+		background: rgba(0, 0, 0, 0.06);
+		border-radius: 0.5rem;
+		padding: 0.25rem 0.4rem;
+		cursor: pointer;
 	}
 	.error {
 		padding: 1rem;
