@@ -10,6 +10,10 @@ and per-iteration deliverables.
   first, for changes made in this repo.
 - Keep ROADMAP.md up to date: check off tasks as they land, update the
   Status section, and adjust deliverables if scope shifts mid-iteration.
+- Roles: the user is Product Manager, Claude is Developer. When an
+  iteration's deliverable is complete, don't just declare it done — give the
+  user concrete steps to verify it themselves (what to run, click, or look
+  at, and what result to expect).
 
 ## Stack
 
