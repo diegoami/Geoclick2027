@@ -38,6 +38,14 @@ pairs well with a canvas/map-heavy UI.
   domain) via `tippecanoe`. OpenStreetMap extracts are the natural next step
   for finer landmarks, but note OSM is **ODbL** (attribution + share-alike
   required) — not public domain.
+- **No always-on name labels**: `data/styles/base.json` deliberately has no
+  layer rendering target names on the map. Geoclick is a place-recognition
+  game — labeling every region by default would give away the answer
+  before the user even guesses. Names appear only on demand: a popup at
+  the clicked location right now (Iteration 2), and during a guided tour's
+  scripted reveal later (Iteration 3). The underlying `labels` source-layer
+  (one point per target, at its centroid) still exists in the tiles for
+  that on-demand use — it's just not wired into the default style.
 
 ## Domain model
 
@@ -172,13 +180,17 @@ also means the same pipeline and the same base map style serve all three.
   longitude, which broke naive min/max centroid math (`(minLon+maxLon)/2`
   landed around 0°E — the wrong hemisphere entirely). `build-map.ts` now
   detects longitude spans over 180° and shifts the smaller side by 360°
-  before averaging, unwrapping the result back into [-180, 180]. Fixed;
-  worth remembering if a future map ever includes Russia, Fiji, or another
+  before averaging, unwrapping the result back into [-180, 180]. The `usa-states`
+  demo map no longer has any target that exercises this (Alaska is
+  excluded — see below), but the fix stays: it's still correct, general
+  logic worth having if a future map includes Russia, Fiji, or another
   dateline-crossing territory.
-- **USA — Alaska/Hawaii framing**: their real geographic positions leave a
-  lot of dead map space around the contiguous 48. Decision: accept it, no
-  inset, for now — revisit only if it actually looks bad once rendered in
-  Iteration 2.
+- **USA — Alaska/Hawaii**: superseded the original "accept the dead space,
+  no inset" call — excluded entirely instead (`build-map.ts --exclude`
+  drops named features from the admin-1 filter before anything downstream
+  sees them). Decided once actually looking at the rendered map: the
+  contiguous 48 + DC fill the frame far better without two distant outliers
+  stretching the bounds.
 
 ## Hosting / deployment (deferred)
 

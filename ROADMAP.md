@@ -112,6 +112,24 @@ just HTTP status checks) to actually catch the two rendering bugs above —
 `npx playwright install chromium` plus one more apt package
 (`libasound2t64`) were needed on this machine, not repo-tracked.
 
+**Follow-up round, from using the actual viewer:**
+
+- [x] Removed the always-on region-name label layer from `base.json` — a
+      place-recognition game shouldn't show the answer on the map by
+      default. Names now appear on demand: a popup at the clicked location.
+- [x] Excluded Alaska/Hawaii from `usa-states` entirely (new
+      `build-map.ts --exclude` option), rather than including them and
+      accepting the dead space — decided once actually looking at the
+      rendered map. 49 targets now (48 contiguous states + DC).
+- [x] Fixed the zoom controls (top-right) overlapping the back button —
+      consolidated back-link + map-name into one MapView-owned corner
+      cluster (top-left), leaving top-right to MapLibre's own
+      `NavigationControl` exclusively.
+- [x] Replaced the small corner "selected: X" text with a `maplibregl.Popup`
+      anchored at the click location, larger text, closer to the region —
+      directly requested, and also a more natural fit now that permanent
+      labels are gone.
+
 ## Iteration 3 — Tour mode
 
 **Deliverable:** Press play on a demo map and watch a guided flythrough of

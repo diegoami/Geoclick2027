@@ -99,10 +99,17 @@ function main() {
 	// available as an attribute). --dissolve=<field> merges same-attribute
 	// features into one shape per value before deriving targets.
 	const dissolveField = args.dissolve;
+	// --exclude=Alaska,Hawaii drops named features by their `name` field
+	// (pre-dissolve) — e.g. USA's far-flung Alaska/Hawaii, which are more
+	// trouble (antimeridian wraparound, huge dead map space) than they're
+	// worth for a demo map.
+	const exclude = args.exclude
+		? args.exclude.split(',').map((s) => s.trim())
+		: [];
 
 	if (!country || !outDir) {
 		console.error(
-			'Usage: build-map.ts --country="Italy" --out=data/maps/italy-regions [--type=region|state] [--name="Italy — Regions"] [--dissolve=region]'
+			'Usage: build-map.ts --country="Italy" --out=data/maps/italy-regions [--type=region|state] [--name="Italy — Regions"] [--dissolve=region] [--exclude=Alaska,Hawaii]'
 		);
 		process.exit(1);
 	}
@@ -124,11 +131,14 @@ function main() {
 	const mapJsonPath = path.join(absOutDir, 'map.json');
 
 	console.log(`[1/5] Filtering "${country}" from Natural Earth admin-1 dataset...`);
+	const whereClause =
+		`admin='${country}'` +
+		(exclude.length ? ` AND name NOT IN (${exclude.map((n) => `'${n}'`).join(',')})` : '');
 	execFileSync('ogr2ogr', [
 		'-f',
 		'GeoJSON',
 		'-where',
-		`admin='${country}'`,
+		whereClause,
 		'-select',
 		FIELDS,
 		filteredPath,

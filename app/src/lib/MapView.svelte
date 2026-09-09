@@ -3,14 +3,15 @@
 	import * as maplibregl from 'maplibre-gl';
 	import 'maplibre-gl/dist/maplibre-gl.css';
 	import { Protocol } from 'pmtiles';
+	import { resolve } from '$app/paths';
 	import { overallBounds, type MapDefinition } from './mapDefinition';
 
 	let { mapId }: { mapId: string } = $props();
 
 	let container: HTMLDivElement;
 	let map: maplibregl.Map | undefined;
+	let popup: maplibregl.Popup | undefined;
 	let mapDef = $state<MapDefinition | undefined>(undefined);
-	let selectedName = $state<string | undefined>(undefined);
 	let error = $state<string | undefined>(undefined);
 	let selectedFeatureId: number | string | undefined;
 
@@ -71,7 +72,14 @@
 					{ source: 'targets', sourceLayer: 'targets', id: feature.id! },
 					{ highlighted: true }
 				);
-				selectedName = feature.properties?.name as string;
+
+				const name = feature.properties?.name as string;
+				popup ??= new maplibregl.Popup({
+					closeButton: false,
+					closeOnClick: false,
+					className: 'geoclick-popup'
+				});
+				popup.setLngLat(e.lngLat).setHTML(`<strong>${name}</strong>`).addTo(map!);
 			});
 
 			map.on('mouseenter', 'targets-fill', () => {
@@ -90,6 +98,7 @@
 	});
 
 	onDestroy(() => {
+		popup?.remove();
 		map?.remove();
 	});
 </script>
@@ -99,12 +108,8 @@
 		<p class="error">{error}</p>
 	{:else}
 		<div class="info">
-			{#if mapDef}
-				<strong>{mapDef.name}</strong>
-				{#if selectedName}<span> — selected: {selectedName}</span>{/if}
-			{:else}
-				Loading…
-			{/if}
+			<a class="back" href={resolve('/')}>← Maps</a>
+			<strong>{mapDef ? mapDef.name : 'Loading…'}</strong>
 		</div>
 	{/if}
 	<div class="container" bind:this={container}></div>
@@ -125,15 +130,34 @@
 		top: 0.75rem;
 		left: 0.75rem;
 		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.35rem;
 		background: rgba(255, 255, 255, 0.9);
 		padding: 0.5rem 0.75rem;
 		border-radius: 0.5rem;
 		font-family: system-ui, sans-serif;
 		font-size: 0.9rem;
 	}
+	.back {
+		font-size: 0.8rem;
+		text-decoration: none;
+		color: inherit;
+		opacity: 0.7;
+	}
+	.back:hover {
+		opacity: 1;
+	}
 	.error {
 		padding: 1rem;
 		font-family: system-ui, sans-serif;
 		color: #a33;
+	}
+	:global(.geoclick-popup .maplibregl-popup-content) {
+		font-family: system-ui, sans-serif;
+		font-size: 1.15rem;
+		padding: 0.5rem 0.9rem;
+		border-radius: 0.5rem;
 	}
 </style>
