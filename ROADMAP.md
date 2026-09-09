@@ -259,6 +259,21 @@ data — for every unmatched path instead of our `200.html` fallback.
 Verified `_redirects`-file support for Workers static assets against
 Cloudflare's own docs before relying on it, rather than assuming.
 
+**Live incident right after the first successful deploy: infinite redirect
+loop on every route** (`/` included). `assets.html_handling` defaults to
+`"auto-trailing-slash"`, which redirects `/200.html` → `/200` (stripping
+the extension). `/200` isn't a real file, so that fell through to the
+`_redirects` catch-all again, which points straight back at `/200.html` —
+looping forever. Not caught locally beforehand (my `serve`-based
+simulation doesn't replicate Workers' own html-handling layer at all).
+Fixed with `html_handling: "none"` in `wrangler.jsonc`, plus an explicit
+`/ → /index.html` rule in `_redirects` (ahead of the catch-all) so the
+home page doesn't depend on implicit index-file resolution either, which
+"none" mode's docs left ambiguous. Re-verified with `wrangler dev` this
+time instead of the `serve` simulation — it runs the actual Workers
+assets/redirects engine locally, and would have caught this before the
+first deploy had I used it from the start.
+
 **Two real bugs found by testing the actual built output, not just
 `vite build` succeeding:**
 

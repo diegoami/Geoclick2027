@@ -15,6 +15,13 @@
 		// single-page-application mode, since that would serve plain
 		// index.html (built for the home route specifically, with the wrong
 		// embedded hydration data) for every route instead.
-		"not_found_handling": "none"
+		"not_found_handling": "none",
+		// html_handling defaults to "auto-trailing-slash", which redirects
+		// /200.html -> /200 (stripping the extension). Since /200 isn't a
+		// real file, that fell through to the _redirects rule above, which
+		// points back at /200.html - an infinite redirect loop, caught only
+		// by actually hitting the deployed site. "none" serves .html files
+		// at their literal path, breaking the loop.
+		"html_handling": "none"
 	}
 }
