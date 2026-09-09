@@ -274,6 +274,24 @@ time instead of the `serve` simulation — it runs the actual Workers
 assets/redirects engine locally, and would have caught this before the
 first deploy had I used it from the start.
 
+**Second live incident, same deploy fixing the first one: `_redirects`
+swallowed every real static asset**, not just the dynamic routes. Tiles,
+`map.json`, everything under `/maps/` and `/styles/` came back as the
+`200.html` shell (`content-type: text/html`) instead of themselves.
+Cloudflare's own docs, once actually checked: for Workers static assets,
+"redirects are always followed, regardless of whether an asset matches
+the incoming request" — the opposite of what I'd assumed from classic
+Pages' documented behavior (existing files take priority, `_redirects`
+only applies to unmatched paths). My catch-all `/* → /200.html` rule was
+intercepting literally everything. Fixed by scoping it to `/map/*`
+instead of `/*` — matches only the two dynamic SvelteKit routes, and
+never collides with `/maps/...` (plural, our static data directory)
+since they're different path prefixes. This time checked `Content-Type`
+and actual body content with `wrangler dev` for every critical path
+(`/`, `/map/[id]`, `/maps/[id]/map.json`, `/maps/[id]/tiles.pmtiles`,
+`/styles/base.json`) before redeploying, not just HTTP status codes —
+status 200 was what hid this bug the first time around.
+
 **Two real bugs found by testing the actual built output, not just
 `vite build` succeeding:**
 
