@@ -16,6 +16,7 @@
 	let { mapId }: { mapId: string } = $props();
 
 	let container: HTMLDivElement;
+	let trayEl: HTMLDivElement;
 	let map: maplibregl.Map | undefined;
 
 	let mapDef = $state<MapDefinition | undefined>(undefined);
@@ -62,6 +63,17 @@
 		const x = clientX - rect.left;
 		const y = clientY - rect.top;
 		return x >= 0 && y >= 0 && x <= rect.width && y <= rect.height;
+	}
+
+	// The tray sits absolutely-positioned over the bottom of the map
+	// container, so "is the drop point over the map" alone doesn't catch
+	// the most natural cancel gesture: dragging a slip back down onto the
+	// tray it came from.
+	function isOverTray(clientX: number, clientY: number): boolean {
+		const rect = trayEl.getBoundingClientRect();
+		return (
+			clientX >= rect.left && clientX <= rect.right && clientY >= rect.top && clientY <= rect.bottom
+		);
 	}
 
 	function regionsNear(clientX: number, clientY: number, radius: number): string[] {
@@ -131,9 +143,10 @@
 
 	function onSlipPointerUp(e: PointerEvent) {
 		if (!dragging || !map || !session || !mapDef) return;
-		if (!isOverMap(e.clientX, e.clientY)) {
-			// Dropped outside the map - treat as "changed my mind", not a
-			// wrong attempt: no error recorded, slip just returns to the tray.
+		if (!isOverMap(e.clientX, e.clientY) || isOverTray(e.clientX, e.clientY)) {
+			// Dropped outside the map, or back over the tray - treat as
+			// "changed my mind", not a wrong attempt: no error recorded, slip
+			// just returns to the tray.
 			setHover(undefined);
 			dragging = undefined;
 			return;
@@ -256,7 +269,7 @@
 	<div class="container" bind:this={container}></div>
 
 	{#if session}
-		<div class="tray">
+		<div class="tray" bind:this={trayEl}>
 			{#each session.items.filter((i) => i.status === 'pending') as item (item.target.id)}
 				{@const isDragging = dragging?.targetId === item.target.id}
 				<button
