@@ -94,6 +94,15 @@ dependency) plus `QuizView.svelte` (the drag interaction: Pointer Events,
 not HTML5 drag-and-drop, both for touch support later and so the drag can
 continuously hit-test the map for the hover highlight).
 
+An item's status is `'pending' | 'correct' | 'revealed'`, not just a
+correct/incorrect boolean — after `MAX_ATTEMPTS_BEFORE_REVEAL` wrong drops
+on the same slip, it auto-resolves as `'revealed'`: the name is shown and
+the slip leaves the tray like a correct answer, but scored and colored
+differently (excluded from `scoreSession`'s `perfect` count, a muted color
+on the map rather than the real-success green) so a session can end
+without every target having been genuinely solved, not stuck on one slip
+forever.
+
 The two-direction flashcard idea isn't gone, just deferred — nothing about
 the drag-to-match mechanic blocks adding it later as a second quiz mode.
 Each target's per-session error count (already tracked by `scoreSession`)

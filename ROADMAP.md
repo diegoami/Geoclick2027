@@ -473,7 +473,49 @@ here blocks adding it later as a second quiz mode.
       16-target run on the Germany map ending with the score panel
       showing the right numbers.
 
-## Iteration 5 — Spaced repetition (`packages/srs`)
+### UX refinements found by actually playing it
+
+Four friction points reported after real play, not caught by automated
+testing (drag-and-drop mechanics pass/fail correctness, they don't
+surface "this feels annoying"). Registered here before implementing, per
+the user's request — design decisions, not just a task list:
+
+- [ ] **Slips shuffle randomly; alphabetical is easier to scan.**
+      `createQuizSession` sorts by name instead of shuffling. Simple,
+      no design tradeoff worth debating.
+- [ ] **Small regions are hard or impossible to drop onto.** The drop
+      hit-test currently requires the exact pixel to land inside the
+      polygon — fine for Texas, unreasonable for Bremen. Fix: keep
+      *hover* exact (precision while exploring where you are), but give
+      the final *drop* a small tolerance — if the exact point misses but
+      the correct region is within ~14px, count it as a hit anyway. Only
+      applied in favor of the *correct* target, not as general slop for
+      wrong ones, so it doesn't make mis-drops more likely to accidentally
+      succeed.
+- [ ] **Wrong-drop feedback is weak, and finding the slip again is
+      annoying.** Two changes: (1) stronger, longer shake on the slip
+      itself, plus a brief red flash on whichever region was actually
+      (wrongly) dropped on, so the mistake reads clearly; (2) the slip is
+      never disabled while this plays out — the "small pause" is purely
+      visual pacing (450ms → 700ms), not a retry lockout. Explicitly not
+      implementing "pin the slip somewhere easy to find" — alphabetical
+      ordering (above) already gives it a fixed, predictable position, and
+      that's simpler than adding a second UI concept for the same problem.
+- [ ] **No way out of a slip you keep failing.** New quiz-engine concept:
+      a third item status, `'revealed'` (alongside `'pending'`/`'correct'`),
+      reached after `MAX_ATTEMPTS_BEFORE_REVEAL` (3) wrong drops on the
+      same slip. It auto-solves — name shown, region colored, slip
+      removed from the tray — but in a visually distinct muted color from
+      a real correct answer, and `scoreSession`'s `perfect` count
+      correctly excludes it (already implied by "perfect" meaning
+      zero errors, no scoring-logic change needed beyond the new status
+      existing). `isSessionComplete` treats `'revealed'` the same as
+      `'correct'` for completion purposes — a session can finish with
+      some targets given up on, not just perfectly solved ones.
+
+Threshold values (3 attempts, 14px tolerance, 700ms pause) are first
+guesses, not measured — expect to retune after trying it, not treated as
+final.
 
 **Deliverable:** Quiz sessions now prioritize what you're about to forget
 instead of a random shuffle — mistakes resurface sooner, correct answers
