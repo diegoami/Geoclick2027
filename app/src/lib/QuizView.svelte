@@ -16,6 +16,7 @@
 	let { mapId }: { mapId: string } = $props();
 
 	let container: HTMLDivElement;
+	let trayEl: HTMLDivElement;
 	let map: maplibregl.Map | undefined;
 
 	let mapDef = $state<MapDefinition | undefined>(undefined);
@@ -62,6 +63,17 @@
 		const x = clientX - rect.left;
 		const y = clientY - rect.top;
 		return x >= 0 && y >= 0 && x <= rect.width && y <= rect.height;
+	}
+
+	// The tray sits absolutely-positioned over the bottom of the map
+	// container, so "is the drop point over the map" alone doesn't catch
+	// the most natural cancel gesture: dragging a slip back down onto the
+	// tray it came from.
+	function isOverTray(clientX: number, clientY: number): boolean {
+		const rect = trayEl.getBoundingClientRect();
+		return (
+			clientX >= rect.left && clientX <= rect.right && clientY >= rect.top && clientY <= rect.bottom
+		);
 	}
 
 	function regionsNear(clientX: number, clientY: number, radius: number): string[] {
@@ -131,9 +143,10 @@
 
 	function onSlipPointerUp(e: PointerEvent) {
 		if (!dragging || !map || !session || !mapDef) return;
-		if (!isOverMap(e.clientX, e.clientY)) {
-			// Dropped outside the map - treat as "changed my mind", not a
-			// wrong attempt: no error recorded, slip just returns to the tray.
+		if (!isOverMap(e.clientX, e.clientY) || isOverTray(e.clientX, e.clientY)) {
+			// Dropped outside the map, or back over the tray - treat as
+			// "changed my mind", not a wrong attempt: no error recorded, slip
+			// just returns to the tray.
 			setHover(undefined);
 			dragging = undefined;
 			return;
@@ -143,6 +156,12 @@
 		const nearbyNames = regionsNear(e.clientX, e.clientY, DROP_TOLERANCE_PX);
 		setHover(undefined);
 		dragging = undefined;
+
+		// A drop only counts as an attempt if it landed on or near some
+		// region at all - sea, gaps between regions, or empty map padding
+		// isn't a plausible guess, so it shouldn't be scored as wrong any
+		// more than dropping back on the tray is.
+		if (!exactName && nearbyNames.length === 0) return;
 
 		// Correct if the exact point or a small tolerance radius around it
 		// hit the right region - the tolerance only ever helps a *correct*
@@ -256,7 +275,7 @@
 	<div class="container" bind:this={container}></div>
 
 	{#if session}
-		<div class="tray">
+		<div class="tray" bind:this={trayEl}>
 			{#each session.items.filter((i) => i.status === 'pending') as item (item.target.id)}
 				{@const isDragging = dragging?.targetId === item.target.id}
 				<button

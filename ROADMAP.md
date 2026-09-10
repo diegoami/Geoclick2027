@@ -521,15 +521,36 @@ round of hands-on testing, not rigorous tuning — still expect to revisit
 if they feel off in practice.
 
 **Follow-up fix (found after the above shipped):** dropping a slip outside
-the map (e.g. releasing it back over the tray after changing your mind
-mid-drag) was being scored as a wrong attempt, since the hit-test simply
+the map was being scored as a wrong attempt, since the hit-test simply
 found no region under the pointer and treated "no region" the same as
-"wrong region." Fixed by checking whether the drop point is over the map
-container at all before running `attemptMatch` — outside the map, the
-drag just cancels: no error recorded, no wrong-flash, slip returns to the
-tray untouched. Verified via Playwright: releasing a dragged slip well
-outside the map container leaves it back in the tray with the placed
-count unchanged.
+"wrong region." First fix: skip `attemptMatch` entirely when the drop
+point is outside the map container — no error, no wrong-flash, slip
+returns to the tray untouched.
+
+That first fix missed the actual common case, though: the tray is
+`position: absolute; bottom: 0`, sitting *on top of* the bottom strip of
+the map container, not below it — so dragging a slip back down onto the
+tray (the natural "changed my mind" gesture) still counted as a drop
+*inside* the map, and still scored as wrong. Second fix: also treat a
+drop point over the tray's own bounding rect as a cancel, checked
+separately from the map-container check. Verified via Playwright with a
+drag that goes up into the map and back down onto the tray (not just off
+the page): slip returns to the tray, no error, no wrong-flash.
+
+Third fix, same underlying issue in a different spot: dropping anywhere
+*inside* the map that isn't on or near a region — open sea, gaps between
+regions, map padding — was still scored as wrong, because the drop
+handler called `attemptMatch` whenever the exact/tolerance hit-test
+didn't find the *correct* region, without checking whether it found *any*
+region. Now a drop only counts as an attempt at all if the hit-test finds
+some region (exact point or within `DROP_TOLERANCE_PX`) — otherwise it's
+treated the same as the tray/outside-map cancel case: no error, slip back
+to the tray. A drop that actually lands on a different (wrong) region
+still counts, unchanged. Verified via Playwright: a drop confirmed via
+`queryRenderedFeatures` to have no region within tolerance leaves the
+placed count and tray untouched; the existing reveal-after-3-wrong-drops
+test (which drops on an actual wrong region) still passes, confirming
+genuine wrong guesses still count.
 
 **Verified:** quiz-engine's 14 unit tests (including the new `'revealed'`
 transition and its interaction with `scoreSession`/`isSessionComplete`),
