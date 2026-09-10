@@ -1,0 +1,7 @@
+[build]
+  # Runs from the repo root (Netlify's default base directory) so `npm
+  # install` resolves the npm workspace (app + packages/*) correctly -
+  # same reasoning as the abandoned Cloudflare setup, see ROADMAP.md's
+  # Iteration 3.5. Node version comes from the repo's .nvmrc automatically.
+  command = "npm run build --workspace=app"
+  publish = "app/build"
