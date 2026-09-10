@@ -157,6 +157,12 @@
 		setHover(undefined);
 		dragging = undefined;
 
+		// A drop only counts as an attempt if it landed on or near some
+		// region at all - sea, gaps between regions, or empty map padding
+		// isn't a plausible guess, so it shouldn't be scored as wrong any
+		// more than dropping back on the tray is.
+		if (!exactName && nearbyNames.length === 0) return;
+
 		// Correct if the exact point or a small tolerance radius around it
 		// hit the right region - the tolerance only ever helps a *correct*
 		// drop land, it never reattributes which region a wrong drop hit.
