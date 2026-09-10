@@ -29,6 +29,16 @@
 	// Not reactive state - just bookkeeping for which feature currently has
 	// quizHover set, so it can be cleared when the pointer moves off it.
 	let hoveredName: string | undefined;
+	// Persistent per-target popups revealing the name of each solved region.
+	// A MapLibre symbol layer driven by feature-state opacity was tried
+	// first and dropped: even with text-allow-overlap/text-ignore-placement
+	// set, MapLibre's collision/placement system unpredictably hid some
+	// labels regardless of opacity. Plain DOM popups (same mechanism
+	// MapView/TourView already use) have no such collision system. Plain
+	// Map, not SvelteMap: never read in the template, purely an imperative
+	// side-table for cleanup on restart/destroy.
+	// eslint-disable-next-line svelte/prefer-svelte-reactivity
+	const solvedPopups = new Map<string, maplibregl.Popup>();
 
 	let complete = $derived(session ? isSessionComplete(session) : false);
 	let score = $derived(session ? scoreSession(session) : undefined);
@@ -72,25 +82,39 @@
 		setHover(regionAtPoint(e.clientX, e.clientY));
 	}
 
+	function markSolved(targetId: string, name: string, centroid: [number, number]) {
+		if (!map) return;
+		map.setFeatureState(
+			{ source: 'targets', sourceLayer: 'targets', id: name },
+			{ quizCorrect: true }
+		);
+		const popup = new maplibregl.Popup({
+			closeButton: false,
+			closeOnClick: false,
+			className: 'geoclick-solved-popup'
+		})
+			.setLngLat(centroid)
+			.setHTML(name)
+			.addTo(map);
+		solvedPopups.set(targetId, popup);
+	}
+
 	function onSlipPointerUp(e: PointerEvent) {
-		if (!dragging || !map || !session) return;
+		if (!dragging || !map || !session || !mapDef) return;
 		const { targetId, name } = dragging;
 		const droppedOnName = regionAtPoint(e.clientX, e.clientY);
 		setHover(undefined);
 		dragging = undefined;
 
 		const droppedOnId = droppedOnName
-			? mapDef?.targets.find((t) => t.name === droppedOnName)?.id
+			? mapDef.targets.find((t) => t.name === droppedOnName)?.id
 			: undefined;
 
+		session = attemptMatch(session, targetId, droppedOnId);
 		if (droppedOnId === targetId) {
-			session = attemptMatch(session, targetId, droppedOnId);
-			map.setFeatureState(
-				{ source: 'targets', sourceLayer: 'targets', id: name },
-				{ quizCorrect: true }
-			);
+			const target = mapDef.targets.find((t) => t.id === targetId)!;
+			markSolved(targetId, name, target.centroid);
 		} else {
-			session = attemptMatch(session, targetId, droppedOnId);
 			wrongFlashId = targetId;
 			setTimeout(() => {
 				if (wrongFlashId === targetId) wrongFlashId = undefined;
@@ -106,6 +130,8 @@
 				{ quizCorrect: false, quizHover: false }
 			);
 		}
+		for (const popup of solvedPopups.values()) popup.remove();
+		solvedPopups.clear();
 		session = createQuizSession(mapDef.targets.map((t) => ({ id: t.id, name: t.name })));
 	}
 
@@ -313,5 +339,16 @@
 		padding: 1rem;
 		font-family: system-ui, sans-serif;
 		color: #a33;
+	}
+	:global(.geoclick-solved-popup .maplibregl-popup-content) {
+		font-family: system-ui, sans-serif;
+		font-size: 0.75rem;
+		font-weight: 600;
+		padding: 0.15rem 0.5rem;
+		border-radius: 0.35rem;
+		color: #1f3d2a;
+	}
+	:global(.geoclick-solved-popup .maplibregl-popup-tip) {
+		display: none;
 	}
 </style>

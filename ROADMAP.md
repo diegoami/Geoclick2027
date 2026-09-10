@@ -518,5 +518,27 @@ loop actually feels good. Candidates below, in rough priority order.
 
 - [ ] Map editor UI (author maps/tours without hand-editing JSON)
 - [ ] Mobile packaging via Capacitor
-- [ ] Plain-browser deployment (static hosting)
-- [ ] Optional backend for sync/sharing
+- [x] ~~Plain-browser deployment (static hosting)~~ — done in Iteration 3.5,
+      live on Netlify
+- [ ] **Sign-in (Google + other OAuth providers)**, as the prerequisite for
+      recording scores per user per map. This is the point where "local-
+      first, no backend" (see ARCHITECTURE.md's Storage section) actually
+      gets a backend — auth needs somewhere to verify tokens and mint
+      sessions, even if score storage itself stays minimal. Candidates:
+      - A managed auth provider (Auth0, Clerk, Supabase Auth) — fastest to
+        stand up, handles the OAuth dance and Google/other-provider config
+        for you; adds a third-party dependency and (usually) a paid tier
+        past some usage threshold.
+      - Roll it via Netlify Identity or a small serverless function
+        handling the OAuth callback directly — more control, more to
+        build and maintain, but keeps everything inside the stack already
+        in use (Netlify's already hosting this).
+      Needs a decision before building, not just picking one silently —
+      revisit when this iteration actually starts.
+- [ ] **Score recording**, built on top of sign-in: per (user, map)
+      results from quiz sessions (`scoreSession`'s `{ total, perfect,
+      totalErrors }` already has the shape this needs), persisted
+      somewhere durable rather than local-only. Which store depends on
+      what the auth choice above already provides (several bundle a
+      database) — another decision for when this iteration starts, not
+      now.

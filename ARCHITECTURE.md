@@ -109,7 +109,10 @@ plugin on desktop, Capacitor SQLite plugin on mobile, `sql.js`/IndexedDB in
 plain browser), behind one repository interface so the rest of the app never
 touches platform-specific storage code. A sync backend (accounts, shared
 maps) is a clean later addition precisely because it's local-first now —
-same shape as Anki's own architecture.
+same shape as Anki's own architecture. First concrete trigger for that
+addition: recording quiz scores per user, which needs sign-in first
+(Google + other OAuth providers) — planned in ROADMAP.md's Iteration 8+,
+not started.
 
 ## Repo layout
 
