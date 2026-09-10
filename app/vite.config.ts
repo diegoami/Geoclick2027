@@ -33,7 +33,21 @@ export default defineConfig({
 			// against the site root. Confirmed by testing the built output
 			// directly: relative paths broke with "expected a JS module but
 			// got text/html" once served two levels deep.
-			paths: { relative: false }
+			//
+			// GitHub Pages-only wrinkle: a project repo is served from a
+			// subpath (https://user.github.io/repo/), not the domain root, so
+			// every absolute path needs that prefix too - both the ones
+			// SvelteKit generates itself (handled by `base` below) and the
+			// ones this app's own code builds by hand for fetching map data
+			// (app/src/lib/geoclickMap.ts, tour.ts - both import `base` from
+			// $app/paths and prefix their fetch URLs with it). BASE_PATH is
+			// set by .github/workflows/deploy-pages.yml; empty everywhere
+			// else (local dev, every other hosting candidate), so this is a
+			// no-op off of this branch.
+			paths: {
+				relative: false,
+				base: (process.env.BASE_PATH ?? '') as '' | `/${string}`
+			}
 		})
 	],
 	test: {

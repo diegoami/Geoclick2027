@@ -1,0 +1,55 @@
+name: Deploy to GitHub Pages
+
+# Trial deploy for the "deploy/github-pages" branch of ROADMAP.md's
+# Iteration 3.5 "Testing alternatives" plan. Requires the repo to be
+# public (GitHub Free doesn't serve Pages from private repos) and Pages
+# enabled with source "GitHub Actions" in repo Settings -> Pages - both
+# manual, one-time steps outside this file.
+
+on:
+  push:
+    branches: [deploy/github-pages]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+
+      - run: npm ci
+
+      - run: npm run build --workspace=app
+        env:
+          # Project repos serve from https://user.github.io/repo-name/, not
+          # the domain root - see the BASE_PATH note in app/vite.config.ts.
+          BASE_PATH: /${{ github.event.repository.name }}
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: app/build
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment

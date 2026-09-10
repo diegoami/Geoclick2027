@@ -4,6 +4,7 @@
 import * as maplibregl from 'maplibre-gl';
 import type { StyleSpecification } from 'maplibre-gl';
 import { Protocol } from 'pmtiles';
+import { base } from '$app/paths';
 import { overallBounds, type MapDefinition } from './mapDefinition';
 
 let protocolRegistered = false;
@@ -19,8 +20,8 @@ export async function fetchMapDefAndStyle(
 	mapId: string
 ): Promise<{ mapDef: MapDefinition; style: StyleSpecification }> {
 	const [mapDefRes, baseStyleRes] = await Promise.all([
-		fetch(`/maps/${mapId}/map.json`),
-		fetch(`/styles/base.json`)
+		fetch(`${base}/maps/${mapId}/map.json`),
+		fetch(`${base}/styles/base.json`)
 	]);
 	if (!mapDefRes.ok || !baseStyleRes.ok) {
 		throw new Error(`Could not load map "${mapId}".`);
@@ -34,7 +35,7 @@ export async function fetchMapDefAndStyle(
 			...baseStyle.sources,
 			targets: {
 				...baseStyle.sources.targets,
-				url: `pmtiles://${location.origin}/maps/${mapId}/tiles.pmtiles`
+				url: `pmtiles://${location.origin}${base}/maps/${mapId}/tiles.pmtiles`
 			}
 		}
 	};
