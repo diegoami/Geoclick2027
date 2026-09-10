@@ -520,6 +520,17 @@ Threshold values (3 attempts, 24px tolerance, 700ms pause) came from one
 round of hands-on testing, not rigorous tuning — still expect to revisit
 if they feel off in practice.
 
+**Follow-up fix (found after the above shipped):** dropping a slip outside
+the map (e.g. releasing it back over the tray after changing your mind
+mid-drag) was being scored as a wrong attempt, since the hit-test simply
+found no region under the pointer and treated "no region" the same as
+"wrong region." Fixed by checking whether the drop point is over the map
+container at all before running `attemptMatch` — outside the map, the
+drag just cancels: no error recorded, no wrong-flash, slip returns to the
+tray untouched. Verified via Playwright: releasing a dragged slip well
+outside the map container leaves it back in the tray with the placed
+count unchanged.
+
 **Verified:** quiz-engine's 14 unit tests (including the new `'revealed'`
 transition and its interaction with `scoreSession`/`isSessionComplete`),
 plus Playwright against the actual drag interaction: alphabetical order

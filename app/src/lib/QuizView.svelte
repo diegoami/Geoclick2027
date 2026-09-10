@@ -57,12 +57,18 @@
 		return names[0];
 	}
 
-	function regionsNear(clientX: number, clientY: number, radius: number): string[] {
-		if (!map) return [];
+	function isOverMap(clientX: number, clientY: number): boolean {
 		const rect = container.getBoundingClientRect();
 		const x = clientX - rect.left;
 		const y = clientY - rect.top;
-		if (x < 0 || y < 0 || x > rect.width || y > rect.height) return [];
+		return x >= 0 && y >= 0 && x <= rect.width && y <= rect.height;
+	}
+
+	function regionsNear(clientX: number, clientY: number, radius: number): string[] {
+		if (!map || !isOverMap(clientX, clientY)) return [];
+		const rect = container.getBoundingClientRect();
+		const x = clientX - rect.left;
+		const y = clientY - rect.top;
 		const box: [[number, number], [number, number]] = [
 			[x - radius, y - radius],
 			[x + radius, y + radius]
@@ -125,6 +131,13 @@
 
 	function onSlipPointerUp(e: PointerEvent) {
 		if (!dragging || !map || !session || !mapDef) return;
+		if (!isOverMap(e.clientX, e.clientY)) {
+			// Dropped outside the map - treat as "changed my mind", not a
+			// wrong attempt: no error recorded, slip just returns to the tray.
+			setHover(undefined);
+			dragging = undefined;
+			return;
+		}
 		const { targetId, name } = dragging;
 		const exactName = regionAtPoint(e.clientX, e.clientY);
 		const nearbyNames = regionsNear(e.clientX, e.clientY, DROP_TOLERANCE_PX);

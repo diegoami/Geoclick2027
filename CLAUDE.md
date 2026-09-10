@@ -28,6 +28,16 @@ and per-iteration deliverables.
   branch setting — conflating the two wasted real time chasing a "why
   doesn't the feature work" question that was actually "why hasn't this
   deployed."
+- Don't go down debugging rabbit holes (digging through webhook configs,
+  CLI internals, package source, etc.) when the issue can just be fixed
+  manually by the user in a couple of clicks — e.g. a dashboard setting,
+  a manual "trigger deploy" button. Try the direct/available tool once or
+  twice; if that doesn't resolve it cleanly, say so and hand it back to
+  the user rather than escalating into deeper investigation on my own.
+  Reason: spent real time digging into Netlify's zip/symlink internals
+  and GitHub webhook delivery logs to diagnose a stuck deploy, when the
+  user could (and did) just click "Trigger deploy" in the dashboard and
+  it worked immediately.
 
 ## Stack
 
