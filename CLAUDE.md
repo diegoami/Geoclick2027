@@ -38,6 +38,14 @@ and per-iteration deliverables.
   and GitHub webhook delivery logs to diagnose a stuck deploy, when the
   user could (and did) just click "Trigger deploy" in the dashboard and
   it worked immediately.
+- Netlify builds cost credits on the plan in use — don't trigger deploys
+  (via the MCP `deploy-site` tool or otherwise) just to check something or
+  as a debugging step. Push to `main` and let the normal git-triggered
+  build handle it; only prod-check the live site once, after you're
+  already confident the local build is correct. If a deploy needs
+  triggering manually (e.g. auto-deploy seems stuck), that's the user's
+  call to make from the dashboard, not something to do repeatedly on your
+  own initiative.
 
 ## Stack
 
