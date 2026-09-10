@@ -186,13 +186,20 @@ something worth showing off, no earlier than Iteration 3. See
 ARCHITECTURE.md's "Hosting / deployment" section for the reasoning.
 
 - [x] Swap `adapter-auto` for `@sveltejs/adapter-static` in `app/`, with a
-      `200.html` SPA fallback (the filename Cloudflare Pages/Netlify look
-      for) for the two dynamic `/map/[mapId]` routes, since map ids aren't
+      `200.html` SPA fallback (the filename several static hosts look for)
+      for the two dynamic `/map/[mapId]` routes, since map ids aren't
       enumerated at build time. Home page prerenders normally
       (`+layout.ts`: `prerender = true` by default, opted out per-route).
-- [ ] Connect the repo to Cloudflare Pages, confirm PMTiles serve correctly
-      over Range requests
+- [x] ~~Connect the repo to Cloudflare Pages~~ — tried, abandoned after
+      two live incidents and an unresolvable account-side bug. See
+      "Cloudflare Pages (abandoned)" below for the full story, and
+      "Testing alternatives" for what's next.
+- [ ] Get one of Netlify / Vercel / GitHub Pages actually serving the app,
+      tested in its own branch (see "Testing alternatives" below)
 - [ ] (Optional, later) list a build on itch.io once it's polished enough
+      to show
+
+### Cloudflare Pages (abandoned)
 
 **Cloudflare dashboard settings** (their newer unified Workers-and-Pages
 Git integration asks for a *Deploy command*, not a build-output-directory
@@ -324,7 +331,40 @@ this - still works exactly as before) or in `vite build`'s own output/exit
 code. Both only surfaced by actually serving the built `build/` directory
 and hard-loading a deep-linked route in a real browser - `curl` checks and
 a successful build were not enough.
-      to show
+
+### Testing alternatives
+
+**Plan:** one branch per candidate, each with just the config that
+candidate needs on top of the working static build (`app/build`), pushed
+so the platform's own dashboard can connect to it directly. Whichever
+actually serves the app correctly with the least fighting wins; the
+others get deleted.
+
+- `deploy/netlify` — add `netlify.toml` at repo root: build command
+  `npm run build --workspace=app`, publish directory `app/build`. No
+  adapter change needed. Netlify's `_redirects` handling matches what was
+  originally assumed for Cloudflare (existing files win, redirects only
+  apply to unmatched paths) — so the existing `app/static/_redirects`
+  should work as-is, no `/map/*` scoping workaround required, though
+  leaving it scoped costs nothing either.
+- `deploy/vercel` — try zero-config first (Vercel detects SvelteKit +
+  `adapter-static` output automatically in most cases); add `vercel.json`
+  only if that doesn't work cleanly, pointing at `app/build`.
+- `deploy/github-pages` — needs a GitHub Actions workflow using the
+  official `actions/deploy-pages` action (not a `gh-pages` branch push),
+  and the repo made **public** first — GitHub Free doesn't serve Pages
+  from private repos. Pre-approved by the user specifically to unblock
+  this option, but only flip visibility once this branch is confirmed as
+  the one being kept, not before.
+- Replit and itch.io stay out of the branch trial for now — no confirmed
+  Replit account, and itch.io isn't a comparable git-integrated CD target
+  anyway (see ARCHITECTURE.md).
+
+Each branch only needs platform-specific config committed and pushed;
+connecting the repo to that platform's dashboard is still a manual,
+credentials-gated step same as it was for Cloudflare — I can prepare
+everything up to that point but not click through a third-party login on
+anyone's behalf.
 
 ## Iteration 4 — Quiz engine (`packages/quiz-engine`)
 

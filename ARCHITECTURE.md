@@ -225,33 +225,58 @@ Iteration 3.5 for the full story):
   Caught only by serving the actual `build/` output and hard-loading a
   deep-linked route in a real browser.
 
-**Recommendation: Cloudflare Pages** — generous free tier, connects
-directly to the (private) GitHub repo and auto-deploys on push, global CDN
-with solid HTTP Range-request support (important for streaming PMTiles
-efficiently — the PMTiles/Protomaps ecosystem itself is commonly paired
-with Cloudflare).
+**Cloudflare Pages — tried, abandoned.** Was the original recommendation
+(generous free tier, git-integrated, global CDN). In practice, getting an
+actual deploy working surfaced one account-side bug and three platform
+behavior surprises in a row: an unresolvable "build token belongs to a
+user who left your organization" error in their Git-integration product;
+the dashboard silently creating the project as a **Worker**, not a classic
+**Pages** project, despite every settings screen looking Pages-shaped
+(`wrangler pages deploy` errors with "project does not exist" against a
+project that's right there); `_redirects` being applied *before* checking
+for an existing static file at all, the opposite of their own classic
+Pages documentation, which broke every real asset (tiles, `map.json`)
+until scoped narrowly; and murky, seemingly non-working HTTP Range-request
+support on Workers static assets specifically (their own tracking issue is
+closed as "completed," but our live deploy still returned the whole
+40 KB `.pmtiles` file with `200` instead of a partial `206`) — a hard
+blocker, since `pmtiles-js` refuses to run at all without real byte-range
+serving. None of this was guessable from their docs; each was found by
+actually deploying and testing the live result. Full blow-by-blow in
+ROADMAP.md's Iteration 3.5. Decision: stop spending further effort on
+Cloudflare specifically and evaluate the alternatives below in parallel,
+each in its own branch, to see which one actually works with the least
+fighting.
 
-Alternatives considered:
+Alternatives, in the order being tried:
 
-- **Netlify** — essentially equivalent to Cloudflare Pages: git-integrated,
-  free tier, private repos supported.
-- **Vercel** — works fine with the static adapter, but more oriented
-  toward Next.js; no clear edge here over Cloudflare/Netlify.
-- **GitHub Pages** — free and zero extra service since the repo is already
+- **Netlify** — git-integrated, free tier, private repos supported, and
+  critically: the *original, canonical* implementation of the
+  `_redirects` file format Cloudflare's docs borrowed from — existing
+  files take priority over redirect rules there, matching what was
+  originally assumed and documented above. Long-established Range-request
+  support (used for byte-range media streaming for years). Likely
+  candidate for "just works."
+- **Vercel** — works fine with the static adapter, more oriented toward
+  Next.js but that's not disqualifying for a plain static site.
+- **GitHub Pages** — free and zero extra service since the repo's already
   on GitHub, but on GitHub Free, Pages only works with **public** repos.
-  This repo is private, so it'd require making it public or upgrading to
-  GitHub Pro.
-- **Replit** (Static Deployment) — also a good fit for the same reasons as
-  Cloudflare Pages, and worth reconsidering if/when the optional sync
-  backend from Iteration 8+ materializes, since Replit could then host a
-  Node API + Postgres alongside the static frontend without switching
-  platforms.
+  If this ends up being the easiest path, the repo can be made public —
+  the user has pre-approved that trade specifically to unblock this
+  option, to be executed only once this branch is confirmed as the winner
+  worth keeping, not before.
+- **Replit** (Static Deployment) — good fit for the same reasons as
+  Cloudflare Pages, and worth reconsidering later if the optional sync
+  backend from Iteration 8+ materializes (Replit could host a Node API +
+  Postgres alongside the static frontend without switching platforms). No
+  confirmed Replit account yet, so lower priority for the branch trial.
 - **itch.io** — different category: not a CI/CD host, but the place people
   actually go looking for indie/portfolio browser games. Upload a zip of
-  the static build. Worth listing there *in addition to* a proper host,
-  once there's a polished build worth showing off.
+  the static build once there's a polished build worth showing off —
+  worth doing *in addition to* whichever proper host wins, not instead.
 
 **Status**: the static build itself is ready and verified (all three demo
-maps, tour mode included, tested against the actual `build/` output).
-Connecting Cloudflare Pages to the repo for continuous deployment is the
-remaining step — see ROADMAP.md's Iteration 3.5.
+maps, tour mode included, tested against real deployed output — twice,
+after two live Cloudflare incidents). Testing Netlify, Vercel, and GitHub
+Pages in parallel branches is the current step — see ROADMAP.md's
+Iteration 3.5.
