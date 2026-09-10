@@ -340,31 +340,40 @@ so the platform's own dashboard can connect to it directly. Whichever
 actually serves the app correctly with the least fighting wins; the
 others get deleted.
 
-- `deploy/netlify` — add `netlify.toml` at repo root: build command
+- [x] `deploy/netlify` — `netlify.toml` at repo root: build command
   `npm run build --workspace=app`, publish directory `app/build`. No
   adapter change needed. Netlify's `_redirects` handling matches what was
   originally assumed for Cloudflare (existing files win, redirects only
   apply to unmatched paths) — so the existing `app/static/_redirects`
-  should work as-is, no `/map/*` scoping workaround required, though
-  leaving it scoped costs nothing either.
-- `deploy/vercel` — try zero-config first (Vercel detects SvelteKit +
-  `adapter-static` output automatically in most cases); add `vercel.json`
-  only if that doesn't work cleanly, pointing at `app/build`.
-- `deploy/github-pages` — needs a GitHub Actions workflow using the
-  official `actions/deploy-pages` action (not a `gh-pages` branch push),
-  and the repo made **public** first — GitHub Free doesn't serve Pages
-  from private repos. Pre-approved by the user specifically to unblock
-  this option, but only flip visibility once this branch is confirmed as
-  the one being kept, not before.
+  works as-is, no `/map/*`-scoping workaround required there (left scoped
+  anyway — costs nothing, works under either semantics).
+- [x] `deploy/vercel` — `vercel.json` with explicit `buildCommand` +
+  `outputDirectory`, `framework: null` (skips Vercel's SvelteKit
+  auto-detection, which assumes `adapter-vercel`). Vercel doesn't read a
+  `_redirects` file, so the `/map/*` SPA fallback is a `rewrites` entry in
+  `vercel.json` instead.
+- [x] `deploy/github-pages` — `.github/workflows/deploy-pages.yml` (the
+  official `actions/deploy-pages` flow, not a `gh-pages` branch push).
+  One wrinkle none of the other candidates have: project repos serve from
+  a **subpath** (`user.github.io/repo-name/`), not the domain root — added
+  a `BASE_PATH`-driven `paths.base` in `vite.config.ts` (empty everywhere
+  else, so it's a no-op off this branch) and fixed two places
+  (`geoclickMap.ts`, `tour.ts`) where the app built absolute fetch URLs by
+  hand without going through `$app/paths`, which would've silently 404'd
+  under a subpath deploy. Still needs, before this branch can actually be
+  tested: the repo made **public** (pre-approved by the user, but only
+  once this branch is confirmed as the one being kept — not before) and
+  Pages enabled with source "GitHub Actions" in repo settings.
 - Replit and itch.io stay out of the branch trial for now — no confirmed
   Replit account, and itch.io isn't a comparable git-integrated CD target
   anyway (see ARCHITECTURE.md).
 
-Each branch only needs platform-specific config committed and pushed;
-connecting the repo to that platform's dashboard is still a manual,
-credentials-gated step same as it was for Cloudflare — I can prepare
-everything up to that point but not click through a third-party login on
-anyone's behalf.
+All three branches build and pass a full local verification (type-check,
+lint, and a real browser pass — click-to-highlight popup, tour controls,
+zero console errors) before being pushed. What's left on all three is the
+same manual, credentials-gated step that blocked Cloudflare too:
+connecting the repo to that platform's dashboard — not something doable
+without the account holder's own login.
 
 ## Iteration 4 — Quiz engine (`packages/quiz-engine`)
 
