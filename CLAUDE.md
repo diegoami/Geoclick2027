@@ -18,6 +18,16 @@ and per-iteration deliverables.
   iteration's deliverable is complete, don't just declare it done — give the
   user concrete steps to verify it themselves (what to run, click, or look
   at, and what result to expect).
+- Treat "test locally" and "test the deployment" as two separate,
+  explicitly labeled steps whenever both apply — never let a deploy
+  problem read as a feature problem or vice versa. Verify locally first
+  (dev server, or a production build served locally) and say so
+  explicitly; only then check the live site, and say that explicitly too.
+  Reason: the Iteration 4 quiz shipped correctly and passed every local
+  check, while Netlify kept serving a stale build from a stuck production
+  branch setting — conflating the two wasted real time chasing a "why
+  doesn't the feature work" question that was actually "why hasn't this
+  deployed."
 
 ## Stack
 
