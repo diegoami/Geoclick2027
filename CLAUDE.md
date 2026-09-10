@@ -6,8 +6,14 @@ and per-iteration deliverables.
 
 ## Workflow
 
-- Always commit and push to `origin/main` without asking for confirmation
-  first, for changes made in this repo.
+- New features/fixes: work on a branch, not directly on `main`. Commit and
+  push the branch without asking first. Test locally and report concrete
+  verification steps so the user can test it themselves too. Only merge
+  to `main` after the user explicitly OKs it — `main` pushes trigger a
+  real Netlify build (which costs credits), so nothing lands there
+  without the user having tried it first. Small doc-only changes
+  (ROADMAP.md/ARCHITECTURE.md/CLAUDE.md edits with no app code) can still
+  go straight to `main`.
 - Keep ROADMAP.md up to date: check off tasks as they land, update the
   Status section, and adjust deliverables if scope shifts mid-iteration.
 - Update ARCHITECTURE.md as part of finishing each iteration — not just
