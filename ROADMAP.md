@@ -179,7 +179,8 @@ from script data, not a click event).
 
 **Deliverable:** a shareable URL anyone can open in a browser — no clone,
 no install — showing whatever the app can do at the time (tour mode at
-minimum, quiz mode once Iteration 4 lands).
+minimum, quiz mode once Iteration 4 lands). **Done:**
+[zesty-centaur-40e7c5.netlify.app](https://zesty-centaur-40e7c5.netlify.app/).
 
 Not part of the linear build order — pick this up whenever there's
 something worth showing off, no earlier than Iteration 3. See
@@ -194,8 +195,9 @@ ARCHITECTURE.md's "Hosting / deployment" section for the reasoning.
       two live incidents and an unresolvable account-side bug. See
       "Cloudflare Pages (abandoned)" below for the full story, and
       "Testing alternatives" for what's next.
-- [ ] Get one of Netlify / Vercel / GitHub Pages actually serving the app,
-      tested in its own branch (see "Testing alternatives" below)
+- [x] Get one of Netlify / Vercel / GitHub Pages actually serving the app,
+      tested in its own branch (see "Testing alternatives" below) —
+      **Netlify won**, live and verified (see "Netlify — chosen" below)
 - [ ] (Optional, later) list a build on itch.io once it's polished enough
       to show
 
@@ -370,10 +372,41 @@ others get deleted.
 
 All three branches build and pass a full local verification (type-check,
 lint, and a real browser pass — click-to-highlight popup, tour controls,
-zero console errors) before being pushed. What's left on all three is the
-same manual, credentials-gated step that blocked Cloudflare too:
-connecting the repo to that platform's dashboard — not something doable
-without the account holder's own login.
+zero console errors) before being pushed.
+
+### Netlify — chosen
+
+Live: **[zesty-centaur-40e7c5.netlify.app](https://zesty-centaur-40e7c5.netlify.app/)**.
+`netlify.toml` merged from `deploy/netlify` into `main`; `deploy/vercel`
+and `deploy/github-pages` left as-is (their prep work stays valid if
+ever needed later, e.g. if Netlify's free tier stops fitting).
+
+Two setup snags, both ordinary dashboard configuration, not platform bugs
+like Cloudflare's:
+
+- **Every request 401'd**, redirecting to a Netlify login page. Not a
+  password on the site — a team-wide "private by default" **visitor
+  access** setting (`requiresSSOTeamLogin`) applied to all projects on
+  the team. Once the user connected Claude to Netlify directly (their own
+  MCP integration), found and fixed in one call:
+  `netlify-project-services-updater` → `update-visitor-access-controls`
+  with `requireSSOTeamLogin: false`. Far faster than hunting through
+  dashboard settings by screenshot, the way the Cloudflare fixes had to
+  happen.
+- **After that, everything 404'd** — the site's production branch was
+  `main` (no `netlify.toml` there), not `deploy/netlify`. Build
+  command/publish directory showed as "Not set" in Site configuration →
+  Build & deploy, confirming `netlify.toml` was never being read. Fixed
+  by setting Production branch to `deploy/netlify` directly (more
+  reliable than depending on auto-discovery from the right branch).
+
+After both fixes: build log showed `netlify.toml` correctly detected,
+`npm run build --workspace=app` and the `postbuild` worker-copy script
+both ran, "Site is live". Verified against the live URL, not just the
+build log: all three demo maps render, click-to-highlight and tour mode
+both work with zero console errors, and — the thing that actually broke
+Cloudflare — `.pmtiles` requests return real `206 Partial Content` with a
+correct `Content-Range` header.
 
 ## Iteration 4 — Quiz engine (`packages/quiz-engine`)
 

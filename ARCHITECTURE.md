@@ -248,35 +248,47 @@ Cloudflare specifically and evaluate the alternatives below in parallel,
 each in its own branch, to see which one actually works with the least
 fighting.
 
-Alternatives, in the order being tried:
+**Netlify — chosen.** Live at
+[zesty-centaur-40e7c5.netlify.app](https://zesty-centaur-40e7c5.netlify.app/).
+Confirmed to have exactly the properties Cloudflare didn't: `_redirects`
+only applies to genuinely unmatched paths (existing files win), and real
+HTTP Range-request support — the live deploy returns `206 Partial
+Content` with a correct `Content-Range` header for `.pmtiles` requests,
+which is the one thing Cloudflare could never get right. `netlify.toml`
+at the repo root is the entire hosting-specific config: a build command
+and a publish directory, no adapter changes, no redirect-scoping
+workarounds needed. The friction that did show up was ordinary
+dashboard-configuration stuff, not platform bugs: a team-wide "private by
+default" visitor-access setting gating every request behind an SSO login
+wall (found and fixed directly through Netlify's own MCP integration,
+once the user connected it — `update-visitor-access-controls`), and the
+production branch defaulting to `main` instead of `deploy/netlify` (no
+`netlify.toml` on `main`, so build command/publish directory showed as
+"Not set" until the branch was corrected in Site configuration → Build &
+deploy).
 
-- **Netlify** — git-integrated, free tier, private repos supported, and
-  critically: the *original, canonical* implementation of the
-  `_redirects` file format Cloudflare's docs borrowed from — existing
-  files take priority over redirect rules there, matching what was
-  originally assumed and documented above. Long-established Range-request
-  support (used for byte-range media streaming for years). Likely
-  candidate for "just works."
-- **Vercel** — works fine with the static adapter, more oriented toward
-  Next.js but that's not disqualifying for a plain static site.
-- **GitHub Pages** — free and zero extra service since the repo's already
-  on GitHub, but on GitHub Free, Pages only works with **public** repos.
-  If this ends up being the easiest path, the repo can be made public —
-  the user has pre-approved that trade specifically to unblock this
-  option, to be executed only once this branch is confirmed as the winner
-  worth keeping, not before.
-- **Replit** (Static Deployment) — good fit for the same reasons as
-  Cloudflare Pages, and worth reconsidering later if the optional sync
-  backend from Iteration 8+ materializes (Replit could host a Node API +
-  Postgres alongside the static frontend without switching platforms). No
-  confirmed Replit account yet, so lower priority for the branch trial.
-- **itch.io** — different category: not a CI/CD host, but the place people
-  actually go looking for indie/portfolio browser games. Upload a zip of
-  the static build once there's a polished build worth showing off —
-  worth doing *in addition to* whichever proper host wins, not instead.
+Other candidates considered, not pursued further once Netlify worked:
 
-**Status**: the static build itself is ready and verified (all three demo
-maps, tour mode included, tested against real deployed output — twice,
-after two live Cloudflare incidents). Testing Netlify, Vercel, and GitHub
-Pages in parallel branches is the current step — see ROADMAP.md's
-Iteration 3.5.
+- **Vercel** — prepared (`vercel.json`, `deploy/vercel` branch) but never
+  connected, since Netlify already worked. Would work fine with the
+  static adapter; more oriented toward Next.js but not disqualifying for
+  a plain static site.
+- **GitHub Pages** — prepared (`deploy/github-pages` branch: Actions
+  workflow + a `BASE_PATH`-driven subpath fix, since project repos serve
+  from `user.github.io/repo-name/` rather than the domain root) but never
+  connected — would've required making the repo public first (GitHub
+  Free doesn't serve Pages from private repos), and Netlify made that
+  trade-off unnecessary.
+- **Replit** (Static Deployment) — no confirmed account, not tried. Worth
+  reconsidering later if the optional sync backend from Iteration 8+
+  materializes (Replit could host a Node API + Postgres alongside the
+  static frontend without switching platforms).
+- **itch.io** — different category: not a CI/CD host, but the place
+  people actually go looking for indie/portfolio browser games. Worth
+  doing *in addition to* Netlify once there's a polished build to show
+  off, not instead of it.
+
+**Status**: deployed and verified — all three demo maps, click-to-highlight,
+and tour mode all confirmed working against the live Netlify URL (not
+just a successful build). See ROADMAP.md's Iteration 3.5 for the full
+story, Cloudflare included.
