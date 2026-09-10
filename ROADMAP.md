@@ -10,9 +10,9 @@ Check items off as they land; update "Status" as iterations complete.
 - **Done**: architecture proposal (`ARCHITECTURE.md`); Iteration 0 (repo &
   tooling scaffolding); Iteration 1 (demo map data pipeline); Iteration 2
   (core map viewer); Iteration 3 (tour mode); Iteration 3.5 (public
-  deploy — live on Netlify).
+  deploy — live on Netlify); Iteration 4 (quiz engine — drag-to-match).
 - **Not started**: everything else below.
-- **Next up**: Iteration 4 (quiz engine).
+- **Next up**: Iteration 5 (spaced repetition).
 
 ## Process notes (not tied to a specific iteration)
 
@@ -429,17 +429,49 @@ correct `Content-Range` header.
 
 ## Iteration 4 — Quiz engine (`packages/quiz-engine`)
 
-**Deliverable:** After watching a tour, you can quiz yourself on it —
-click-the-location and name-the-location questions both work, with
-reasonable tolerance for typos/accents. The "learning" loop exists, even
-without any memory of past performance yet.
+**Deliverable:** After watching a tour, you can quiz yourself on it — drag
+each region's name from a tray onto the region itself; it highlights while
+the slip is over it, sticks (turns green) on a correct drop, and bounces
+back with a shake if wrong (an error gets recorded, try again). Once every
+slip is placed, a score panel shows how many were placed correctly on the
+first try and the total mistake count.
 
-- [ ] Card model: `(target, direction: recognition|recall)`
-- [ ] Recognition flow: highlight target → multiple-choice / typed name
-- [ ] Recall flow: show name → click location, with hit-testing + decoys
-- [ ] Fuzzy string matching for typed answers (diacritics, Levenshtein
-      tolerance)
-- [ ] Session composer + unit tests (pure TS, no UI dependency)
+Redesigned from the original flashcard-style plan (recognition:
+highlight → guess name; recall: show name → click location) into a single
+drag-to-match game instead — reuses the same click/highlight
+infrastructure from Iterations 2-3, just triggered by drag-hover instead
+of click, and reads as more of an actual *game* than a quiz form. The
+original two-direction flashcard idea isn't gone, just deferred — nothing
+here blocks adding it later as a second quiz mode.
+
+- [x] `packages/quiz-engine`: pure session/scoring logic, no UI or map
+      dependency — `createQuizSession`, `attemptMatch` (records a drag
+      attempt: correct match, wrong drop, or dropped outside any region —
+      all three recorded as an error except the match), `isSessionComplete`,
+      `scoreSession` (`{ total, perfect, totalErrors }`, where "perfect"
+      means placed with zero prior errors). 10 unit tests.
+- [x] `QuizView.svelte` + `/map/[mapId]/quiz` route: Pointer Events (not
+      HTML5 drag-and-drop — better touch support later, and lets the drag
+      continuously hit-test the map via `queryRenderedFeatures` for the
+      hover highlight) drive the whole interaction. Pointer capture is set
+      on the slip element at `pointerdown` and never released mid-drag —
+      the slip stays the *same* DOM node throughout (repositioned via CSS
+      `position: fixed`, not swapped for a separate floating element),
+      since removing/replacing the captured element mid-drag silently
+      drops pointer capture.
+- [x] Two new map feature-states in `base.json`, alongside the existing
+      `highlighted` (explore/tour): `quizHover` (neutral blue — the region
+      currently under a dragged slip; deliberately not colored by
+      correct/incorrect, so hovering doesn't leak the answer) and
+      `quizCorrect` (green, permanent once solved — takes priority over
+      the other two).
+- [x] "Start quiz" link from `MapView.svelte`, alongside "Start tour".
+- [x] Manual test: full drag-and-drop flow verified with Playwright
+      (`page.mouse` down/move/up sequences, not just clicks) — a correct
+      drag placing a target and updating the counter, a wrong drag leaving
+      the count unchanged and returning the slip to the tray, and a full
+      16-target run on the Germany map ending with the score panel
+      showing the right numbers.
 
 ## Iteration 5 — Spaced repetition (`packages/srs`)
 

@@ -77,16 +77,30 @@ A generic Tour Player walks the array, driving MapLibre's `flyTo`/`easeTo`
 and animating in a marker/label per step. Authoring a tour is just authoring
 more JSON — same editor as maps.
 
-**Quiz card** — each target yields two independent SRS cards:
+**Quiz** — a drag-to-match game, not a flashcard form: every target in the
+map appears as a name "slip" in a tray; drag one onto the region it names.
+The region highlights while the slip is over it (neutral color — not
+colored by correctness, so hovering doesn't leak the answer), sticks
+(green, permanent) on a correct drop, and bounces back with a shake on a
+wrong one. An earlier flashcard-style design (recognition: highlight a
+point → guess the name; recall: show the name → click the location) was
+the original plan but got replaced before building anything — the drag
+mechanic reuses the same click/highlight infrastructure the explore and
+tour views already have, just triggered by drag-hover instead of click,
+and it reads as an actual *game* rather than a quiz form. Implemented as
+`packages/quiz-engine` (pure session/scoring logic: `createQuizSession`,
+`attemptMatch`, `isSessionComplete`, `scoreSession` — no UI or map
+dependency) plus `QuizView.svelte` (the drag interaction: Pointer Events,
+not HTML5 drag-and-drop, both for touch support later and so the drag can
+continuously hit-test the map for the hover highlight).
 
-- *Recognition*: highlight a point on the map → user recalls/types/picks the
-  name.
-- *Recall*: show the name → user clicks the correct location (optionally
-  with decoys).
-
-Each `(user, target, direction)` triple has its own ease factor, interval,
-and due date. Start with **SM-2**; FSRS is a drop-in upgrade later since the
-scheduler interface (`rate(cardId, grade) -> nextDueDate`) doesn't change.
+The two-direction flashcard idea isn't gone, just deferred — nothing about
+the drag-to-match mechanic blocks adding it later as a second quiz mode.
+Each target's per-session error count (already tracked by `scoreSession`)
+is the natural input to spaced repetition once Iteration 5 adds it: targets
+missed more often get scheduled sooner. Start with **SM-2**; FSRS is a
+drop-in upgrade later since the scheduler interface (`rate(cardId, grade)
+-> nextDueDate`) doesn't change.
 
 ## Storage — local-first
 

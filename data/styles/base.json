@@ -2,7 +2,7 @@
 	"version": 8,
 	"name": "Geoclick base",
 	"metadata": {
-		"geoclick:note": "Shared style for all admin-1 demo maps. The 'targets' source url is a placeholder (pmtiles://./tiles.pmtiles) — the map viewer composes the final style per map by replacing it with that map's own tiles.pmtiles URL. Each tileset has two source-layers (see data/scripts/build-map.ts): 'targets' (polygons, for fill/outline/hit-testing) and 'labels' (one point per feature at its precomputed centroid). This style deliberately does not render a name label layer: Geoclick is a place-recognition game, so showing region names on the map by default would give away the answer. The 'labels' source-layer still exists in the tiles for the app to use on demand (e.g. a per-click popup, or during a guided tour), just not as an always-on style layer. promoteId 'name' lets the app call setFeatureState by target name directly (map.json's Target.name), without needing to query the source for a feature first — safe because target names are unique within a single map."
+		"geoclick:note": "Shared style for all admin-1 demo maps. The 'targets' source url is a placeholder (pmtiles://./tiles.pmtiles) — the map viewer composes the final style per map by replacing it with that map's own tiles.pmtiles URL. Each tileset has two source-layers (see data/scripts/build-map.ts): 'targets' (polygons, for fill/outline/hit-testing) and 'labels' (one point per feature at its precomputed centroid). This style deliberately does not render a name label layer: Geoclick is a place-recognition game, so showing region names on the map by default would give away the answer. The 'labels' source-layer still exists in the tiles for the app to use on demand (e.g. a per-click popup, or during a guided tour), just not as an always-on style layer. promoteId 'name' lets the app call setFeatureState by target name directly (map.json's Target.name), without needing to query the source for a feature first — safe because target names are unique within a single map. Feature-states used across views: 'highlighted' (explore click, tour reveal), 'quizHover' (drag-to-match, region under the dragged slip), 'quizCorrect' (drag-to-match, region solved — takes priority over the other two)."
 	},
 	"glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf",
 	"sources": {
@@ -28,6 +28,10 @@
 			"paint": {
 				"fill-color": [
 					"case",
+					["boolean", ["feature-state", "quizCorrect"], false],
+					"#5a9c6f",
+					["boolean", ["feature-state", "quizHover"], false],
+					"#6fa8dc",
 					["boolean", ["feature-state", "highlighted"], false],
 					"#f2a341",
 					"#8fb8a8"

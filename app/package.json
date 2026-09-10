@@ -36,6 +36,7 @@
 		"vitest": "^4.1.8"
 	},
 	"dependencies": {
+		"@geoclick/quiz-engine": "*",
 		"@sveltejs/adapter-static": "^3.0.10",
 		"maplibre-gl": "^6.9.0",
 		"pmtiles": "^4.5.0"

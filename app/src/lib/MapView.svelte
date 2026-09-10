@@ -80,6 +80,7 @@
 			<strong>{mapDef ? mapDef.name : 'Loading…'}</strong>
 			{#if mapId}
 				<a class="tour-link" href={resolve('/map/[mapId]/tour', { mapId })}>▶ Start tour</a>
+				<a class="tour-link" href={resolve('/map/[mapId]/quiz', { mapId })}>✎ Start quiz</a>
 			{/if}
 		</div>
 	{/if}
