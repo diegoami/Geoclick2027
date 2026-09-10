@@ -1,0 +1,6 @@
+{
+	"buildCommand": "npm run build --workspace=app",
+	"outputDirectory": "app/build",
+	"framework": null,
+	"rewrites": [{ "source": "/map/:path*", "destination": "/200.html" }]
+}
