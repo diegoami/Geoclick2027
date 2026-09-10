@@ -43,15 +43,34 @@
 	let complete = $derived(session ? isSessionComplete(session) : false);
 	let score = $derived(session ? scoreSession(session) : undefined);
 
+	// Small regions (Bremen, Saarland...) can be a couple of screen pixels
+	// wide at a normal zoom level - an exact-pixel drop test makes them
+	// nearly impossible to hit. Hover stays exact (precision while
+	// exploring), but the final drop gets a tolerance: if the exact point
+	// misses, a small radius around it is searched for the *correct*
+	// target specifically, not as general slop for any region.
+	const DROP_TOLERANCE_PX = 24;
+	const WRONG_PAUSE_MS = 700;
+
 	function regionAtPoint(clientX: number, clientY: number): string | undefined {
-		if (!map) return undefined;
+		const names = regionsNear(clientX, clientY, 0);
+		return names[0];
+	}
+
+	function regionsNear(clientX: number, clientY: number, radius: number): string[] {
+		if (!map) return [];
 		const rect = container.getBoundingClientRect();
-		const point: [number, number] = [clientX - rect.left, clientY - rect.top];
-		if (point[0] < 0 || point[1] < 0 || point[0] > rect.width || point[1] > rect.height) {
-			return undefined;
-		}
-		const features = map.queryRenderedFeatures(point, { layers: ['targets-fill'] });
-		return features[0]?.properties?.name as string | undefined;
+		const x = clientX - rect.left;
+		const y = clientY - rect.top;
+		if (x < 0 || y < 0 || x > rect.width || y > rect.height) return [];
+		const box: [[number, number], [number, number]] = [
+			[x - radius, y - radius],
+			[x + radius, y + radius]
+		];
+		const features = map.queryRenderedFeatures(radius ? box : [x, y], {
+			layers: ['targets-fill']
+		});
+		return features.map((f) => f.properties?.name as string).filter((n): n is string => !!n);
 	}
 
 	function setHover(name: string | undefined) {
@@ -82,16 +101,21 @@
 		setHover(regionAtPoint(e.clientX, e.clientY));
 	}
 
-	function markSolved(targetId: string, name: string, centroid: [number, number]) {
+	function markSolved(
+		targetId: string,
+		name: string,
+		centroid: [number, number],
+		revealed: boolean
+	) {
 		if (!map) return;
 		map.setFeatureState(
 			{ source: 'targets', sourceLayer: 'targets', id: name },
-			{ quizCorrect: true }
+			revealed ? { quizRevealed: true } : { quizCorrect: true }
 		);
 		const popup = new maplibregl.Popup({
 			closeButton: false,
 			closeOnClick: false,
-			className: 'geoclick-solved-popup'
+			className: revealed ? 'geoclick-solved-popup revealed' : 'geoclick-solved-popup'
 		})
 			.setLngLat(centroid)
 			.setHTML(name)
@@ -102,23 +126,41 @@
 	function onSlipPointerUp(e: PointerEvent) {
 		if (!dragging || !map || !session || !mapDef) return;
 		const { targetId, name } = dragging;
-		const droppedOnName = regionAtPoint(e.clientX, e.clientY);
+		const exactName = regionAtPoint(e.clientX, e.clientY);
+		const nearbyNames = regionsNear(e.clientX, e.clientY, DROP_TOLERANCE_PX);
 		setHover(undefined);
 		dragging = undefined;
 
-		const droppedOnId = droppedOnName
-			? mapDef.targets.find((t) => t.name === droppedOnName)?.id
-			: undefined;
+		// Correct if the exact point or a small tolerance radius around it
+		// hit the right region - the tolerance only ever helps a *correct*
+		// drop land, it never reattributes which region a wrong drop hit.
+		const isCorrect = exactName === name || nearbyNames.includes(name);
 
-		session = attemptMatch(session, targetId, droppedOnId);
-		if (droppedOnId === targetId) {
-			const target = mapDef.targets.find((t) => t.id === targetId)!;
-			markSolved(targetId, name, target.centroid);
+		session = attemptMatch(session, targetId, isCorrect ? targetId : undefined);
+		const item = session.items.find((i) => i.target.id === targetId)!;
+		const target = mapDef.targets.find((t) => t.id === targetId)!;
+
+		if (item.status === 'correct') {
+			markSolved(targetId, name, target.centroid, false);
+		} else if (item.status === 'revealed') {
+			markSolved(targetId, name, target.centroid, true);
 		} else {
 			wrongFlashId = targetId;
+			if (exactName) {
+				map.setFeatureState(
+					{ source: 'targets', sourceLayer: 'targets', id: exactName },
+					{ quizWrong: true }
+				);
+			}
 			setTimeout(() => {
 				if (wrongFlashId === targetId) wrongFlashId = undefined;
-			}, 450);
+				if (exactName && map) {
+					map.setFeatureState(
+						{ source: 'targets', sourceLayer: 'targets', id: exactName },
+						{ quizWrong: false }
+					);
+				}
+			}, WRONG_PAUSE_MS);
 		}
 	}
 
@@ -127,7 +169,7 @@
 		for (const target of mapDef.targets) {
 			map.setFeatureState(
 				{ source: 'targets', sourceLayer: 'targets', id: target.name },
-				{ quizCorrect: false, quizHover: false }
+				{ quizCorrect: false, quizRevealed: false, quizHover: false, quizWrong: false }
 			);
 		}
 		for (const popup of solvedPopups.values()) popup.remove();
@@ -174,19 +216,25 @@
 			<strong>{mapDef ? mapDef.name : 'Loading…'} — Quiz</strong>
 			{#if session}
 				<span class="subtitle"
-					>Drag each name onto its region — {session.items.filter((i) => i.status === 'correct')
+					>Drag each name onto its region — {session.items.filter((i) => i.status !== 'pending')
 						.length} / {session.items.length} placed</span
 				>
 			{/if}
 		</div>
 
-		{#if complete && score}
+		{#if complete && score && session}
+			{@const revealedCount = session.items.filter((i) => i.status === 'revealed').length}
 			<div class="score-panel">
 				<h2>Done!</h2>
 				<p>
 					<strong>{score.perfect}</strong> / {score.total} placed correctly on the first try.
 				</p>
 				<p>{score.totalErrors} total mistake{score.totalErrors === 1 ? '' : 's'}.</p>
+				{#if revealedCount > 0}
+					<p class="revealed-note">
+						{revealedCount} revealed after too many misses.
+					</p>
+				{/if}
 				<button onclick={restart}>Play again</button>
 			</div>
 		{/if}
@@ -282,9 +330,11 @@
 		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 	}
 	.slip.wrong {
-		animation: shake 0.45s;
+		animation: shake 0.7s;
+		background: #f6d7d3;
 		border-color: #c0392b;
-		color: #c0392b;
+		border-width: 2px;
+		color: #a3271b;
 	}
 	.slip-dragging {
 		position: fixed;
@@ -298,13 +348,20 @@
 		100% {
 			transform: translateX(0);
 		}
-		20%,
-		60% {
-			transform: translateX(-6px);
+		10%,
+		30%,
+		50%,
+		70% {
+			transform: translateX(-9px);
 		}
+		20%,
 		40%,
+		60%,
 		80% {
-			transform: translateX(6px);
+			transform: translateX(9px);
+		}
+		90% {
+			transform: translateX(-4px);
 		}
 	}
 	.score-panel {
@@ -322,6 +379,10 @@
 	}
 	.score-panel h2 {
 		margin: 0 0 0.75rem;
+	}
+	.revealed-note {
+		font-size: 0.85rem;
+		color: #8a6d3b;
 	}
 	.score-panel button {
 		margin-top: 0.75rem;
@@ -350,5 +411,8 @@
 	}
 	:global(.geoclick-solved-popup .maplibregl-popup-tip) {
 		display: none;
+	}
+	:global(.geoclick-solved-popup.revealed .maplibregl-popup-content) {
+		color: #5a4626;
 	}
 </style>

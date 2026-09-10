@@ -8,9 +8,11 @@ export interface QuizTarget {
 	name: string;
 }
 
+export type QuizItemStatus = 'pending' | 'correct' | 'revealed';
+
 export interface QuizItemState {
 	target: QuizTarget;
-	status: 'pending' | 'correct';
+	status: QuizItemStatus;
 	errors: number;
 }
 
@@ -18,25 +20,24 @@ export interface QuizSession {
 	items: QuizItemState[];
 }
 
-function shuffled<T>(items: T[]): T[] {
-	const result = [...items];
-	for (let i = result.length - 1; i > 0; i--) {
-		const j = Math.floor(Math.random() * (i + 1));
-		[result[i], result[j]] = [result[j], result[i]];
-	}
-	return result;
-}
+/** Wrong drops allowed on one slip before it auto-resolves as 'revealed'
+ * (name shown, but not counted as solved) rather than staying stuck
+ * forever. First guess, not measured - expect to retune. */
+export const MAX_ATTEMPTS_BEFORE_REVEAL = 3;
 
 export function createQuizSession(targets: QuizTarget[]): QuizSession {
+	const sorted = [...targets].sort((a, b) => a.name.localeCompare(b.name));
 	return {
-		items: shuffled(targets).map((target) => ({ target, status: 'pending' as const, errors: 0 }))
+		items: sorted.map((target) => ({ target, status: 'pending' as const, errors: 0 }))
 	};
 }
 
 /** Records one drag-and-drop attempt: `targetId` is the slip being dragged,
  * `droppedOnId` is the region it was dropped on (undefined/empty if
- * dropped outside any region). Correct on match; otherwise the item stays
- * pending with an incremented error count, ready to try again. */
+ * dropped outside any region, or if it missed the correct one). Correct on
+ * match; otherwise the item stays pending with an incremented error count,
+ * ready to try again - until MAX_ATTEMPTS_BEFORE_REVEAL is reached, at
+ * which point it auto-resolves as 'revealed' instead. */
 export function attemptMatch(
 	session: QuizSession,
 	targetId: string,
@@ -44,20 +45,25 @@ export function attemptMatch(
 ): QuizSession {
 	return {
 		items: session.items.map((item) => {
-			if (item.target.id !== targetId || item.status === 'correct') return item;
+			if (item.target.id !== targetId || item.status !== 'pending') return item;
 			if (droppedOnId === targetId) return { ...item, status: 'correct' as const };
-			return { ...item, errors: item.errors + 1 };
+			const errors = item.errors + 1;
+			if (errors >= MAX_ATTEMPTS_BEFORE_REVEAL) {
+				return { ...item, status: 'revealed' as const, errors };
+			}
+			return { ...item, errors };
 		})
 	};
 }
 
 export function isSessionComplete(session: QuizSession): boolean {
-	return session.items.every((item) => item.status === 'correct');
+	return session.items.every((item) => item.status !== 'pending');
 }
 
 export interface QuizScore {
 	total: number;
-	/** Placed correctly with no wrong attempts along the way. */
+	/** Placed correctly with no wrong attempts along the way - excludes
+	 * 'revealed' items, which always have errors > 0 by construction. */
 	perfect: number;
 	totalErrors: number;
 }
@@ -65,7 +71,8 @@ export interface QuizScore {
 export function scoreSession(session: QuizSession): QuizScore {
 	return {
 		total: session.items.length,
-		perfect: session.items.filter((item) => item.errors === 0).length,
+		perfect: session.items.filter((item) => item.status === 'correct' && item.errors === 0)
+			.length,
 		totalErrors: session.items.reduce((sum, item) => sum + item.errors, 0)
 	};
 }

@@ -480,42 +480,53 @@ testing (drag-and-drop mechanics pass/fail correctness, they don't
 surface "this feels annoying"). Registered here before implementing, per
 the user's request — design decisions, not just a task list:
 
-- [ ] **Slips shuffle randomly; alphabetical is easier to scan.**
-      `createQuizSession` sorts by name instead of shuffling. Simple,
-      no design tradeoff worth debating.
-- [ ] **Small regions are hard or impossible to drop onto.** The drop
+- [x] **Slips shuffle randomly; alphabetical is easier to scan.**
+      `createQuizSession` sorts by name instead of shuffling. Verified:
+      first three slips on the Italy map are Abruzzo, Basilicata, Calabria.
+- [x] **Small regions are hard or impossible to drop onto.** The drop
       hit-test currently requires the exact pixel to land inside the
       polygon — fine for Texas, unreasonable for Bremen. Fix: keep
       *hover* exact (precision while exploring where you are), but give
       the final *drop* a small tolerance — if the exact point misses but
-      the correct region is within ~14px, count it as a hit anyway. Only
-      applied in favor of the *correct* target, not as general slop for
-      wrong ones, so it doesn't make mis-drops more likely to accidentally
-      succeed.
-- [ ] **Wrong-drop feedback is weak, and finding the slip again is
+      the correct region is within `DROP_TOLERANCE_PX` of it, count it as
+      a hit anyway. Only applied in favor of the *correct* target, not as
+      general slop for wrong ones. The 14px first guess turned out too
+      tight — Bremen's own precomputed centroid (the same point used as
+      the label anchor) is ~15-20px from its own simplified polygon at
+      this zoom, confirmed directly via `queryRenderedFeatures` at
+      increasing radii. Retuned to 24px, which covers it with margin.
+- [x] **Wrong-drop feedback is weak, and finding the slip again is
       annoying.** Two changes: (1) stronger, longer shake on the slip
-      itself, plus a brief red flash on whichever region was actually
-      (wrongly) dropped on, so the mistake reads clearly; (2) the slip is
-      never disabled while this plays out — the "small pause" is purely
-      visual pacing (450ms → 700ms), not a retry lockout. Explicitly not
-      implementing "pin the slip somewhere easy to find" — alphabetical
+      itself (bigger amplitude, 450ms → 700ms, filled red background not
+      just a border), plus a brief red flash on whichever region was
+      actually (wrongly) dropped on, so the mistake reads clearly in two
+      places at once; (2) the slip is never disabled while this plays out
+      — the pause is purely visual pacing, not a retry lockout. Explicitly
+      not implementing "pin the slip somewhere easy to find" — alphabetical
       ordering (above) already gives it a fixed, predictable position, and
       that's simpler than adding a second UI concept for the same problem.
-- [ ] **No way out of a slip you keep failing.** New quiz-engine concept:
+- [x] **No way out of a slip you keep failing.** New quiz-engine concept:
       a third item status, `'revealed'` (alongside `'pending'`/`'correct'`),
       reached after `MAX_ATTEMPTS_BEFORE_REVEAL` (3) wrong drops on the
-      same slip. It auto-solves — name shown, region colored, slip
-      removed from the tray — but in a visually distinct muted color from
-      a real correct answer, and `scoreSession`'s `perfect` count
-      correctly excludes it (already implied by "perfect" meaning
-      zero errors, no scoring-logic change needed beyond the new status
-      existing). `isSessionComplete` treats `'revealed'` the same as
-      `'correct'` for completion purposes — a session can finish with
-      some targets given up on, not just perfectly solved ones.
+      same slip. It auto-solves — name shown, region colored a distinct
+      muted gold rather than success-green, slip removed from the tray —
+      and `scoreSession`'s `perfect` count correctly excludes it.
+      `isSessionComplete` treats `'revealed'` the same as `'correct'` for
+      completion purposes — a session can finish with some targets given
+      up on, not just perfectly solved ones. The score panel names the
+      count of revealed targets when there are any.
 
-Threshold values (3 attempts, 14px tolerance, 700ms pause) are first
-guesses, not measured — expect to retune after trying it, not treated as
-final.
+Threshold values (3 attempts, 24px tolerance, 700ms pause) came from one
+round of hands-on testing, not rigorous tuning — still expect to revisit
+if they feel off in practice.
+
+**Verified:** quiz-engine's 14 unit tests (including the new `'revealed'`
+transition and its interaction with `scoreSession`/`isSessionComplete`),
+plus Playwright against the actual drag interaction: alphabetical order
+confirmed on the Italy map, Bremen's own centroid now lands successfully
+(previously missed pre-fix — the exact regression this was meant to fix),
+and 3 wrong drops on the same slip auto-reveal it with the muted styling
+and correct tray/counter bookkeeping.
 
 **Deliverable:** Quiz sessions now prioritize what you're about to forget
 instead of a random shuffle — mistakes resurface sooner, correct answers
