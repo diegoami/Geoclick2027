@@ -9,10 +9,29 @@ Check items off as they land; update "Status" as iterations complete.
 
 - **Done**: architecture proposal (`ARCHITECTURE.md`); Iteration 0 (repo &
   tooling scaffolding); Iteration 1 (demo map data pipeline); Iteration 2
-  (core map viewer); Iteration 3 (tour mode).
+  (core map viewer); Iteration 3 (tour mode); Iteration 3.5 (public
+  deploy — live on Netlify).
 - **Not started**: everything else below.
-- **Next up**: Iteration 3.5 (optional, deferred) or Iteration 4 (quiz
-  engine).
+- **Next up**: Iteration 4 (quiz engine).
+
+## Process notes (not tied to a specific iteration)
+
+- [ ] **Dependabot** — `.github/dependabot.yml` watching the npm
+      ecosystem at the repo root (covers `app/` + `packages/*` through
+      the one workspace lockfile). Weekly schedule, version + security
+      updates. Review each PR (lint/check/test/build + the Playwright
+      smoke pass for anything UI-facing) rather than auto-merging —
+      precedent for this: a MapLibre version bump previously changed
+      behavior in a way that needed investigation, not a rubber stamp.
+- [ ] **Periodic `/code-review`** — run it as a checkpoint at the end of
+      each iteration rather than only on request, so drift gets caught
+      close to when it's introduced. No new subagent/role needed for
+      this, it's an existing skill.
+- [ ] **Keep `ARCHITECTURE.md` current as a real map of the code**, not
+      just the original design doc it started as — the practical way the
+      user (who isn't reading the code directly) keeps a grasp of how
+      it's organized as it grows. Update it as part of finishing each
+      iteration, alongside the existing ROADMAP.md deliverable notes.
 
 ---
 
