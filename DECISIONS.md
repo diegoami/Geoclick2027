@@ -127,6 +127,24 @@ or amend an entry here as part of that change, not as an afterthought.
   ARCHITECTURE.md's original pitch: a reveal-first, tour-style
   introduction to a map before testing on it, differentiating from
   Seterra's quiz-only approach.
+- **Lakes are rendered as a purely contextual layer, selected by bounding-
+  box intersection rather than tagged to a country.** Found by actually
+  looking at the USA map: Michigan's two peninsulas visually merged into
+  neighboring states with no indication of the Great Lakes between them —
+  the state polygons themselves were correct, nothing was wrong with the
+  geometry, there was just no water rendered in the gap. Lakes aren't
+  attributed to an admin boundary the way states are (Lake Superior spans
+  into Canada, for instance), so they're selected by whether they
+  intersect the map's overall bounding box, not by an `admin` field
+  match — and a lake extending past that box is fine to keep, not
+  something to clip away.
+- **An "Overview" view (all regions pre-labeled "discovered", no
+  interaction beyond pan/zoom) sits above Tour and Quiz on the map
+  landing page.** Requested directly: seeing the whole answer key at a
+  glance is the most basic thing to offer before asking someone to learn
+  or be tested on a map, so it leads the list rather than being an
+  afterthought. Deliberately reuses the same visual language as a solved
+  quiz target (green fill, name popup) rather than inventing a new one.
 
 ## Hosting & infra
 

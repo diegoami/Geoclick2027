@@ -224,14 +224,25 @@ also means the same pipeline and the same base map style serve all three.
   sees them). Decided once actually looking at the rendered map: the
   contiguous 48 + DC fill the frame far better without two distant outliers
   stretching the bounds.
+- **USA — Michigan/Great Lakes**: without any water layer, a state whose
+  border runs along a lake reads as an unexplained gap next to its
+  neighbors rather than a coastline — worst on Michigan, whose two
+  peninsulas visually merged into Wisconsin/Ohio with nothing indicating
+  the Great Lakes between them. Not a geometry bug (each state's polygon
+  already correctly excludes the lake surface) — fixed by adding a third
+  `lakes` source-layer (Natural Earth `ne_10m_lakes`, selected per map by
+  bounding-box intersection rather than an `admin` match, since lakes
+  aren't tagged to a country the way states are) and a purely contextual
+  `lakes-fill` style layer. Applied to all three demo maps, not just USA.
 
 ## Hosting / deployment
 
 The browser leg needs a public host. Because the app is **local-first with
 no backend** (see Storage, above), the browser build ships as a fully
 static site — `@sveltejs/adapter-static` instead of `adapter-auto`. Not
-every route prerenders, though: `/map/[mapId]` and its `/tour` route are
-`ssr=false` (MapLibre needs the DOM) and not enumerated at build time
+every route prerenders, though: `/map/[mapId]` and its `/tour`, `/quiz`,
+and `/overview` routes are `ssr=false` (MapLibre needs the DOM) and not
+enumerated at build time
 (we don't hardcode the list of map ids into the build), so they're served
 via adapter-static's SPA fallback (`200.html` — the filename Cloudflare
 Pages and Netlify both recognize) instead of a prerendered file per map.

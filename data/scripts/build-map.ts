@@ -17,6 +17,7 @@ const SOURCE_SHP = path.join(
 	REPO_ROOT,
 	'data/source/ne_10m_admin_1_states_provinces/ne_10m_admin_1_states_provinces.shp'
 );
+const LAKES_SHP = path.join(REPO_ROOT, 'data/source/ne_10m_lakes/ne_10m_lakes.shp');
 const FIELDS = 'name,name_alt,name_local,iso_3166_2,type,type_en,admin,region';
 
 // Natural Earth sometimes gives an English name where the country's own
@@ -113,9 +114,9 @@ function main() {
 		);
 		process.exit(1);
 	}
-	if (!existsSync(SOURCE_SHP)) {
+	if (!existsSync(SOURCE_SHP) || !existsSync(LAKES_SHP)) {
 		console.error(
-			`Source shapefile not found at ${SOURCE_SHP}. Run data/scripts/fetch-natural-earth.sh first.`
+			`Source shapefile not found (${SOURCE_SHP} / ${LAKES_SHP}). Run data/scripts/fetch-natural-earth.sh first.`
 		);
 		process.exit(1);
 	}
@@ -126,12 +127,13 @@ function main() {
 	const filteredPath = path.join(absOutDir, '.tmp-filtered.geojson');
 	const simplifiedPath = path.join(absOutDir, '.tmp-simplified.geojson');
 	const labelsPath = path.join(absOutDir, '.tmp-labels.geojson');
+	const lakesPath = path.join(absOutDir, '.tmp-lakes.geojson');
 	const mbtilesPath = path.join(absOutDir, '.tmp-tiles.mbtiles');
 	const pmtilesPath = path.join(absOutDir, 'tiles.pmtiles');
 	const mapJsonPath = path.join(absOutDir, 'map.json');
 	const tourJsonPath = path.join(absOutDir, 'tour.json');
 
-	console.log(`[1/5] Filtering "${country}" from Natural Earth admin-1 dataset...`);
+	console.log(`[1/6] Filtering "${country}" from Natural Earth admin-1 dataset...`);
 	const whereClause =
 		`admin='${country}'` +
 		(exclude.length ? ` AND name NOT IN (${exclude.map((n) => `'${n}'`).join(',')})` : '');
@@ -148,10 +150,10 @@ function main() {
 
 	const mapshaperArgs = [filteredPath];
 	if (dissolveField) {
-		console.log(`[2/5] Dissolving by "${dissolveField}" and simplifying geometry (mapshaper)...`);
+		console.log(`[2/6] Dissolving by "${dissolveField}" and simplifying geometry (mapshaper)...`);
 		mapshaperArgs.push('-dissolve', dissolveField, '-rename-fields', `name=${dissolveField}`);
 	} else {
-		console.log('[2/5] Simplifying geometry (mapshaper)...');
+		console.log('[2/6] Simplifying geometry (mapshaper)...');
 	}
 	mapshaperArgs.push(
 		'-simplify',
@@ -165,7 +167,7 @@ function main() {
 	);
 	execFileSync('npx', ['mapshaper', ...mapshaperArgs], { stdio: 'inherit' });
 
-	console.log('[3/5] Fixing up names and deriving draft map.json...');
+	console.log('[3/6] Fixing up names and deriving draft map.json...');
 	const geojson = JSON.parse(readFileSync(simplifiedPath, 'utf-8'));
 	const fixups = NAME_FIXUPS[country] ?? {};
 	for (const feature of geojson.features) {
@@ -227,7 +229,37 @@ function main() {
 	};
 	writeFileSync(labelsPath, JSON.stringify(labelsGeojson));
 
-	console.log('[4/5] Building vector tiles (tippecanoe + pmtiles convert)...');
+	// Water context: without lakes rendered, a state whose border runs
+	// along one (Michigan on the Great Lakes is the worst case - two
+	// peninsulas with no visual indication there's a lake, not just a gap
+	// in the data, between them and their neighbors) reads as a confusing
+	// blob rather than a recognizable coastline. Select by bounding-box
+	// intersection with this map's overall extent (`-spat`, a feature
+	// filter, not a geometry clip) rather than by country - lakes aren't
+	// tagged by admin boundary the way states are, and a lake is still
+	// worth rendering even if it pokes slightly outside the map's bounds.
+	console.log('[4/6] Selecting nearby lakes for context...');
+	const overallBbox = targets.reduce(
+		(acc: [number, number, number, number], t: any) => [
+			Math.min(acc[0], t.bbox[0]),
+			Math.min(acc[1], t.bbox[1]),
+			Math.max(acc[2], t.bbox[2]),
+			Math.max(acc[3], t.bbox[3])
+		],
+		[Infinity, Infinity, -Infinity, -Infinity]
+	);
+	execFileSync('ogr2ogr', [
+		'-f',
+		'GeoJSON',
+		'-spat',
+		...overallBbox.map(String),
+		'-select',
+		'name',
+		lakesPath,
+		LAKES_SHP
+	]);
+
+	console.log('[5/6] Building vector tiles (tippecanoe + pmtiles convert)...');
 	execFileSync('tippecanoe', [
 		'--output',
 		mbtilesPath,
@@ -240,7 +272,9 @@ function main() {
 		'-L',
 		`targets:${simplifiedPath}`,
 		'-L',
-		`labels:${labelsPath}`
+		`labels:${labelsPath}`,
+		'-L',
+		`lakes:${lakesPath}`
 	]);
 	execFileSync(path.join(process.env.HOME ?? '', '.local/bin/pmtiles'), [
 		'convert',
@@ -248,10 +282,11 @@ function main() {
 		pmtilesPath
 	]);
 
-	console.log('[5/5] Cleaning up...');
+	console.log('[6/6] Cleaning up...');
 	rmSync(filteredPath);
 	rmSync(simplifiedPath);
 	rmSync(labelsPath);
+	rmSync(lakesPath);
 	rmSync(mbtilesPath);
 
 	console.log(`Done: ${targets.length} targets -> ${mapJsonPath}`);

@@ -1,24 +1,37 @@
 #!/usr/bin/env bash
-# Downloads and caches the Natural Earth admin-1 states/provinces dataset
-# (public domain, 1:10m resolution) used to build all admin-1-level demo
-# maps (Italy regions, Germany states, USA states, ...).
+# Downloads and caches the Natural Earth datasets (public domain, 1:10m
+# resolution) used to build the demo maps: admin-1 states/provinces (the
+# target polygons) and lakes (context/water fill - without it, a state
+# whose border runs along a lake, e.g. Michigan on the Great Lakes,
+# renders as an unexplained gap next to its neighbors rather than a
+# recognizable coastline).
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-DATA_DIR="$SCRIPT_DIR/../source/ne_10m_admin_1_states_provinces"
-URL="https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_1_states_provinces.zip"
-SHP="$DATA_DIR/ne_10m_admin_1_states_provinces.shp"
+SOURCE_DIR="$SCRIPT_DIR/../source"
 
-if [ -f "$SHP" ]; then
-	echo "Already downloaded: $SHP"
-	exit 0
-fi
+fetch() {
+	local name="$1" url="$2"
+	local data_dir="$SOURCE_DIR/$name"
+	local shp="$data_dir/$name.shp"
 
-mkdir -p "$DATA_DIR"
-TMP_ZIP="$(mktemp --suffix=.zip)"
-trap 'rm -f "$TMP_ZIP"' EXIT
+	if [ -f "$shp" ]; then
+		echo "Already downloaded: $shp"
+		return 0
+	fi
 
-echo "Downloading $URL"
-curl -sL -o "$TMP_ZIP" "$URL"
-unzip -o -q "$TMP_ZIP" -d "$DATA_DIR"
-echo "Extracted to $DATA_DIR"
+	mkdir -p "$data_dir"
+	local tmp_zip
+	tmp_zip="$(mktemp --suffix=.zip)"
+	trap 'rm -f "$tmp_zip"' RETURN
+
+	echo "Downloading $url"
+	curl -sL -o "$tmp_zip" "$url"
+	unzip -o -q "$tmp_zip" -d "$data_dir"
+	echo "Extracted to $data_dir"
+}
+
+fetch ne_10m_admin_1_states_provinces \
+	"https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_1_states_provinces.zip"
+fetch ne_10m_lakes \
+	"https://naturalearth.s3.amazonaws.com/10m_physical/ne_10m_lakes.zip"

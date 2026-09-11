@@ -10,10 +10,13 @@
 
 	let container: HTMLDivElement;
 	let map: maplibregl.Map | undefined;
-	let popup: maplibregl.Popup | undefined;
 	let mapDef = $state<MapDefinition | undefined>(undefined);
 	let error = $state<string | undefined>(undefined);
-	let selectedFeatureId: number | string | undefined;
+	// Not reactive state - popups are imperative MapLibre objects, only
+	// created once on load and torn down on destroy. Same reasoning as
+	// QuizView's solvedPopups.
+	// eslint-disable-next-line svelte/prefer-svelte-reactivity
+	const popups = new Map<string, maplibregl.Popup>();
 
 	onMount(() => {
 		let cancelled = false;
@@ -25,36 +28,26 @@
 
 			map = createMap(container, loadedMapDef, style);
 
-			map.on('click', 'targets-fill', (e: maplibregl.MapLayerMouseEvent) => {
-				const feature = e.features?.[0];
-				if (!feature) return;
-
-				if (selectedFeatureId !== undefined) {
-					map!.setFeatureState(
-						{ source: 'targets', sourceLayer: 'targets', id: selectedFeatureId },
-						{ highlighted: false }
+			// setFeatureState throws until the style has finished loading -
+			// defer to the map's 'load' event (see QuizView.svelte for the
+			// same fix, found the same way).
+			map.once('load', () => {
+				if (cancelled || !map) return;
+				for (const target of loadedMapDef.targets) {
+					map.setFeatureState(
+						{ source: 'targets', sourceLayer: 'targets', id: target.name },
+						{ quizCorrect: true }
 					);
+					const popup = new maplibregl.Popup({
+						closeButton: false,
+						closeOnClick: false,
+						className: 'geoclick-solved-popup'
+					})
+						.setLngLat(target.centroid)
+						.setHTML(target.name)
+						.addTo(map);
+					popups.set(target.id, popup);
 				}
-				selectedFeatureId = feature.id;
-				map!.setFeatureState(
-					{ source: 'targets', sourceLayer: 'targets', id: feature.id! },
-					{ highlighted: true }
-				);
-
-				const name = feature.properties?.name as string;
-				popup ??= new maplibregl.Popup({
-					closeButton: false,
-					closeOnClick: false,
-					className: 'geoclick-popup'
-				});
-				popup.setLngLat(e.lngLat).setHTML(`<strong>${name}</strong>`).addTo(map!);
-			});
-
-			map.on('mouseenter', 'targets-fill', () => {
-				map!.getCanvas().style.cursor = 'pointer';
-			});
-			map.on('mouseleave', 'targets-fill', () => {
-				map!.getCanvas().style.cursor = '';
 			});
 		})().catch((e) => {
 			error = e instanceof Error ? e.message : String(e);
@@ -66,30 +59,25 @@
 	});
 
 	onDestroy(() => {
-		popup?.remove();
+		for (const popup of popups.values()) popup.remove();
 		map?.remove();
 	});
 </script>
 
-<div class="map-view">
+<div class="overview-view">
 	{#if error}
 		<p class="error">{error}</p>
 	{:else}
 		<div class="info">
-			<a class="back" href={resolve('/')}>← Maps</a>
-			<strong>{mapDef ? mapDef.name : 'Loading…'}</strong>
-			{#if mapId}
-				<a class="tour-link" href={resolve('/map/[mapId]/overview', { mapId })}>✓ Show overview</a>
-				<a class="tour-link" href={resolve('/map/[mapId]/tour', { mapId })}>▶ Start tour</a>
-				<a class="tour-link" href={resolve('/map/[mapId]/quiz', { mapId })}>✎ Start quiz</a>
-			{/if}
+			<a class="back" href={mapId ? resolve('/map/[mapId]', { mapId }) : resolve('/')}>← Map</a>
+			<strong>{mapDef ? mapDef.name : 'Loading…'} — Overview</strong>
 		</div>
 	{/if}
 	<div class="container" bind:this={container}></div>
 </div>
 
 <style>
-	.map-view {
+	.overview-view {
 		position: relative;
 		width: 100%;
 		height: 100vh;
@@ -122,24 +110,20 @@
 	.back:hover {
 		opacity: 1;
 	}
-	.tour-link {
-		font-size: 0.85rem;
-		font-weight: 600;
-		text-decoration: none;
-		color: #b5691f;
-	}
-	.tour-link:hover {
-		text-decoration: underline;
-	}
 	.error {
 		padding: 1rem;
 		font-family: system-ui, sans-serif;
 		color: #a33;
 	}
-	:global(.geoclick-popup .maplibregl-popup-content) {
+	:global(.geoclick-solved-popup .maplibregl-popup-content) {
 		font-family: system-ui, sans-serif;
-		font-size: 1.15rem;
-		padding: 0.5rem 0.9rem;
-		border-radius: 0.5rem;
+		font-size: 0.75rem;
+		font-weight: 600;
+		padding: 0.15rem 0.5rem;
+		border-radius: 0.35rem;
+		color: #1f3d2a;
+	}
+	:global(.geoclick-solved-popup .maplibregl-popup-tip) {
+		display: none;
 	}
 </style>

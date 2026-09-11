@@ -2,7 +2,7 @@
 	"version": 8,
 	"name": "Geoclick base",
 	"metadata": {
-		"geoclick:note": "Shared style for all admin-1 demo maps. The 'targets' source url is a placeholder (pmtiles://./tiles.pmtiles) — the map viewer composes the final style per map by replacing it with that map's own tiles.pmtiles URL. Each tileset has two source-layers (see data/scripts/build-map.ts): 'targets' (polygons, for fill/outline/hit-testing) and 'labels' (one point per feature at its precomputed centroid). This style deliberately does not render a name label layer: Geoclick is a place-recognition game, so showing region names on the map by default would give away the answer. The 'labels' source-layer still exists in the tiles for the app to use on demand (e.g. a per-click popup, a guided tour reveal, or a solved quiz target), just not as an always-on style layer or even a MapLibre symbol layer — a DOM-based maplibregl.Popup per solved/revealed target turned out more reliable than driving a symbol layer's opacity from feature-state, which hit MapLibre's collision/placement system hiding labels unpredictably even with text-allow-overlap+text-ignore-placement set (see QuizView.svelte). promoteId 'name' lets the app call setFeatureState by target name directly (map.json's Target.name), without needing to query the source for a feature first — safe because target names are unique within a single map. Feature-states used across views: 'highlighted' (explore click, tour reveal), 'quizHover' (drag-to-match, region under the dragged slip), 'quizCorrect' (drag-to-match, region solved), 'quizRevealed' (drag-to-match, auto-solved after too many wrong attempts — distinct muted color, doesn't count as a real success), 'quizWrong' (drag-to-match, brief flash on whichever region was actually — wrongly — dropped on; takes priority over every other state since it's a transient overlay that can land on an already-solved region if a different slip gets dropped there by mistake)."
+		"geoclick:note": "Shared style for all admin-1 demo maps. The 'targets' source url is a placeholder (pmtiles://./tiles.pmtiles) — the map viewer composes the final style per map by replacing it with that map's own tiles.pmtiles URL. Each tileset has three source-layers (see data/scripts/build-map.ts): 'targets' (polygons, for fill/outline/hit-testing), 'labels' (one point per feature at its precomputed centroid), and 'lakes' (Natural Earth lake polygons within the map's overall bounding box, purely contextual — no hit-testing, no feature-state, just a lighter fill so a state whose border runs along a lake, e.g. Michigan on the Great Lakes, reads as a coastline rather than an unexplained gap next to its neighbors). This style deliberately does not render a name label layer: Geoclick is a place-recognition game, so showing region names on the map by default would give away the answer. The 'labels' source-layer still exists in the tiles for the app to use on demand (e.g. a per-click popup, a guided tour reveal, or a solved quiz target), just not as an always-on style layer or even a MapLibre symbol layer — a DOM-based maplibregl.Popup per solved/revealed target turned out more reliable than driving a symbol layer's opacity from feature-state, which hit MapLibre's collision/placement system hiding labels unpredictably even with text-allow-overlap+text-ignore-placement set (see QuizView.svelte). promoteId 'name' lets the app call setFeatureState by target name directly (map.json's Target.name), without needing to query the source for a feature first — safe because target names are unique within a single map. Feature-states used across views: 'highlighted' (explore click, tour reveal), 'quizHover' (drag-to-match, region under the dragged slip), 'quizCorrect' (drag-to-match, region solved), 'quizRevealed' (drag-to-match, auto-solved after too many wrong attempts — distinct muted color, doesn't count as a real success), 'quizWrong' (drag-to-match, brief flash on whichever region was actually — wrongly — dropped on; takes priority over every other state since it's a transient overlay that can land on an already-solved region if a different slip gets dropped there by mistake)."
 	},
 	"glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf",
 	"sources": {
@@ -18,6 +18,16 @@
 			"type": "background",
 			"paint": {
 				"background-color": "#eef3f6"
+			}
+		},
+		{
+			"id": "lakes-fill",
+			"type": "fill",
+			"source": "targets",
+			"source-layer": "lakes",
+			"paint": {
+				"fill-color": "#bcdcea",
+				"fill-opacity": 0.9
 			}
 		},
 		{
