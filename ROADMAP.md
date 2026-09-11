@@ -897,6 +897,47 @@ order, Bremen's drop tolerance, drop-outside-map/tray/sea not counting as
 errors) to confirm none of this regressed the base drag-and-drop
 mechanics.
 
+**Follow-up, found by actually finishing a map:** the "Done!" score panel
+always showed "Play again", even when finishing the session had just
+graduated the whole map — clicking it immediately bounced to the
+"Up to date!" screen, which reads as broken rather than as the intended
+behavior. The panel now checks, right when the session completes,
+whether anything is still due:
+
+- **Something's still due** (typically a revealed target, which stays
+  due the same day by design) — panel reads "Done!", "Play again" stays
+  accurate, and clicking it rebuilds a due session with just what's
+  still outstanding. Verified: revealed one target on purpose, confirmed
+  the panel did *not* claim "All caught up", and that clicking
+  "Play again" offered exactly that one target, not the whole map again.
+- **Nothing's left due** — panel reads "All caught up!" with a real
+  "Next review in N days" (computed from the soonest `dueDate` across
+  the map's targets — `packages/srs`'s new `daysUntil` helper), and
+  "Play again" is replaced with "Back to maps" (primary) and
+  "Practice all regions" (secondary) — no button that implies replaying
+  the same thing, since there's nothing left to replay. Verified:
+  finished a map with only clean solves, confirmed "All caught up!" plus
+  "Next review in 1 day." (correct for a first-ever review), and that no
+  "Play again" button was rendered at all.
+- Same underlying issue existed for practice mode's "Play again", one
+  level removed: since practice never changes due-state, clicking it
+  used to re-run the due check and land back on the "Up to date!"
+  screen instead of another practice round — technically correct, but
+  an unnecessary extra click for something that obviously wasn't going
+  to have changed. "Play again" after a practice session now starts
+  another practice round directly. Verified: finished a practice
+  session, clicked "Play again", confirmed it went straight into a
+  fresh full practice session rather than back to "Up to date!".
+
+Caught one dev-environment red herring worth recording so it doesn't get
+mistaken for a real bug again: a very long-lived Vite dev server (many
+edits across this session) served a stale HMR-patched version of
+`createQuizSession`'s pre-marking logic for a while, making a correct
+`notDueIds` set produce a session with everything still pending. A
+clean dev server restart (and clearing `node_modules/.vite`) fixed it
+immediately — the underlying code was correct throughout, confirmed via
+temporary debug logging before concluding this, not just assumed.
+
 ## Iteration 7 — Desktop POC packaging (milestone)
 
 **Deliverable:** A double-click-to-install desktop app containing all three

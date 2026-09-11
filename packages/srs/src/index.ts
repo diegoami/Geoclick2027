@@ -40,6 +40,22 @@ export function isDue(card: CardState | undefined, today: string): boolean {
 	return card.dueDate <= today;
 }
 
+/** Whole days between two local-calendar-date strings (`dueDate - today`).
+ * Positive when `dueDate` is in the future. Used for "come back in N days"
+ * messaging once a due session finds nothing left to review - never
+ * called on a due date, only a future one, so this doesn't need to handle
+ * negative results meaningfully. */
+export function daysUntil(dueDate: string, today: string): number {
+	const [ty, tm, td] = today.split('-').map(Number);
+	const [dy, dm, dd] = dueDate.split('-').map(Number);
+	const todayMs = new Date(ty, tm - 1, td).getTime();
+	const dueMs = new Date(dy, dm - 1, dd).getTime();
+	// Round, not floor/truncate - avoids an off-by-one on the rare day a
+	// DST transition makes the raw millisecond difference not an exact
+	// multiple of 24h.
+	return Math.round((dueMs - todayMs) / 86_400_000);
+}
+
 /** `previous` is undefined for a target's first-ever review. `today` drives
  * both `lastReviewedAt` and the new `dueDate` (via `interval`).
  *

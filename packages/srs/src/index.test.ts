@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { DEFAULT_EASE_FACTOR, MIN_EASE_FACTOR, isDue, rate, type CardState } from './index.js';
+import { DEFAULT_EASE_FACTOR, MIN_EASE_FACTOR, daysUntil, isDue, rate, type CardState } from './index.js';
 
 const TODAY = '2026-09-12';
 const TOMORROW = '2026-09-13';
@@ -41,6 +41,24 @@ describe('isDue', () => {
 			lastReviewedAt: TODAY
 		};
 		expect(isDue(card, TODAY)).toBe(false);
+	});
+});
+
+describe('daysUntil', () => {
+	it('is 1 for tomorrow', () => {
+		expect(daysUntil(TOMORROW, TODAY)).toBe(1);
+	});
+
+	it('is 0 for today', () => {
+		expect(daysUntil(TODAY, TODAY)).toBe(0);
+	});
+
+	it('counts multi-day gaps correctly', () => {
+		expect(daysUntil('2026-09-27', TODAY)).toBe(15);
+	});
+
+	it('is negative for a date in the past', () => {
+		expect(daysUntil(YESTERDAY, TODAY)).toBe(-1);
 	});
 });
 

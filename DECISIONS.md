@@ -114,6 +114,19 @@ or amend an entry here as part of that change, not as an afterthought.
   session silently perturbing the real review schedule, and without
   implying you already "know" everything by pre-marking it discovered
   before you've actually re-tried it this round.
+- **The score panel's "Play again" only shows when it's actually
+  accurate — when a due session finishes and something's still due, not
+  automatically.** Found by actually finishing a map: since a revealed
+  target stays due the same day by design, "Play again" after a finished
+  session sometimes led nowhere (an immediate bounce to "Up to date!"),
+  which reads as broken. The panel now checks whether anything's still
+  due right when the session completes: if so, "Play again" stays and
+  is accurate; if the whole map just graduated, it's replaced with
+  "All caught up! Next review in N days" plus "Back to maps"/"Practice
+  all regions" — no button implying there's something left to replay.
+  The same fix applies to practice mode's own "Play again": since
+  practice never changes due-state, it now starts another practice round
+  directly instead of re-running a due-check that can't have changed.
 
 ## Data & maps
 

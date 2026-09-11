@@ -13,7 +13,13 @@
 	} from '@geoclick/quiz-engine';
 	import type { MapDefinition } from './mapDefinition';
 	import { createLocalStorageProgressRepository, todayLocalDate } from './progressRepository';
-	import { isDue, rate, type CardState as SchedulerState, type Grade } from '@geoclick/srs';
+	import {
+		isDue,
+		rate,
+		daysUntil,
+		type CardState as SchedulerState,
+		type Grade
+	} from '@geoclick/srs';
 
 	let { mapId }: { mapId: string } = $props();
 
@@ -66,8 +72,17 @@
 
 	// Not reactive state - just a guard so a completed session's score is
 	// persisted exactly once, not on every reactive re-run while `complete`
-	// stays true. Reset on restart so the next completion saves again.
+	// stays true. Reset whenever a new session starts so the next
+	// completion saves/computes again.
 	let summarySaved = false;
+
+	// Whether finishing a *due* session actually cleared the map for today,
+	// vs. something (typically a revealed target, which stays due same-day)
+	// is still outstanding - drives which message/button the score panel
+	// shows, so "Play again" doesn't lie about there being more to play.
+	// Only meaningful when mode === 'due'; undefined until computed.
+	let allCaughtUp = $state<boolean | undefined>(undefined);
+	let daysUntilNextReview = $state<number | undefined>(undefined);
 
 	$effect(() => {
 		if (complete && score && !summarySaved) {
@@ -75,6 +90,18 @@
 			progressRepository
 				.saveLastSessionSummary(mapId, { ...score, completedAt: new Date().toISOString() })
 				.catch((e) => console.error('Failed to save quiz progress:', e));
+
+			if (mode === 'due' && mapDef) {
+				const today = todayLocalDate();
+				const stillDue = mapDef.targets.some((t) => isDue(cardStatesByTargetId.get(t.id), today));
+				allCaughtUp = !stillDue;
+				if (!stillDue) {
+					const nextDueDate = mapDef.targets
+						.map((t) => cardStatesByTargetId.get(t.id)!.dueDate)
+						.reduce((soonest, due) => (due < soonest ? due : soonest));
+					daysUntilNextReview = daysUntil(nextDueDate, today);
+				}
+			}
 		}
 	});
 
@@ -285,6 +312,8 @@
 	// zero-slip session - that's what offers the "practice all" fallback.
 	async function startDueSession() {
 		if (!mapDef || !map) return;
+		allCaughtUp = undefined;
+		daysUntilNextReview = undefined;
 		const notDueIds = await computeNotDueIds(mapDef.targets);
 		if (notDueIds.size === mapDef.targets.length) {
 			phase = 'upToDate';
@@ -306,12 +335,23 @@
 	// why this isn't a general-purpose always-available control.
 	function startPractice() {
 		if (!mapDef || !map) return;
+		clearAllVisuals();
+		summarySaved = false;
 		mode = 'practice';
 		phase = 'quiz';
 		session = createQuizSession(mapDef.targets.map((t) => ({ id: t.id, name: t.name })));
 	}
 
+	// After a *due* session: re-checks due state, since something (a
+	// revealed target) may still be due right now. After a *practice*
+	// session: goes straight into another practice round rather than
+	// re-checking - nothing about due-state changed while practicing, so
+	// there'd be nothing new to find.
 	function playAgain() {
+		if (mode === 'practice') {
+			startPractice();
+			return;
+		}
 		clearAllVisuals();
 		summarySaved = false;
 		startDueSession();
@@ -398,7 +438,7 @@
 		{#if complete && score && session}
 			{@const revealedCount = session.items.filter((i) => i.status === 'revealed').length}
 			<div class="score-panel">
-				<h2>Done!</h2>
+				<h2>{mode === 'due' && allCaughtUp ? 'All caught up!' : 'Done!'}</h2>
 				<p>
 					<strong>{score.perfect}</strong> / {score.total} placed correctly on the first try.
 				</p>
@@ -408,10 +448,20 @@
 						{revealedCount} revealed after too many misses.
 					</p>
 				{/if}
-				{#if mode === 'practice'}
-					<p class="practice-note">Practice results don't affect your review schedule.</p>
+				{#if mode === 'due' && allCaughtUp}
+					<p class="next-review-note">
+						Next review in {daysUntilNextReview} day{daysUntilNextReview === 1 ? '' : 's'}.
+					</p>
+					<div class="score-panel-actions">
+						<a class="score-panel-button" href={resolve('/')}>Back to maps</a>
+						<button class="secondary" onclick={startPractice}>Practice all regions</button>
+					</div>
+				{:else}
+					{#if mode === 'practice'}
+						<p class="practice-note">Practice results don't affect your review schedule.</p>
+					{/if}
+					<button onclick={playAgain}>Play again</button>
 				{/if}
-				<button onclick={playAgain}>Play again</button>
 			</div>
 		{/if}
 	{/if}
@@ -564,8 +614,19 @@
 		font-size: 0.85rem;
 		opacity: 0.7;
 	}
-	.score-panel button {
+	.next-review-note {
+		font-size: 0.9rem;
+		font-weight: 600;
+		color: #2f6b45;
+	}
+	.score-panel-actions {
+		display: flex;
+		justify-content: center;
+		gap: 0.5rem;
 		margin-top: 0.75rem;
+	}
+	.score-panel button,
+	.score-panel-button {
 		font-family: inherit;
 		font-size: 0.9rem;
 		font-weight: 600;
@@ -574,7 +635,16 @@
 		border: none;
 		background: #5a9c6f;
 		color: white;
+		text-decoration: none;
 		cursor: pointer;
+	}
+	.score-panel > button {
+		margin-top: 0.75rem;
+	}
+	.score-panel button.secondary {
+		background: transparent;
+		color: #5a9c6f;
+		border: 1px solid #5a9c6f;
 	}
 	.error {
 		padding: 1rem;
