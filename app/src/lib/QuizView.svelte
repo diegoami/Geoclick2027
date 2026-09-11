@@ -12,8 +12,11 @@
 		type QuizSession
 	} from '@geoclick/quiz-engine';
 	import type { MapDefinition } from './mapDefinition';
+	import { createLocalStorageProgressRepository } from './progressRepository';
 
 	let { mapId }: { mapId: string } = $props();
+
+	const progressRepository = createLocalStorageProgressRepository();
 
 	let container: HTMLDivElement;
 	let trayEl: HTMLDivElement;
@@ -43,6 +46,20 @@
 
 	let complete = $derived(session ? isSessionComplete(session) : false);
 	let score = $derived(session ? scoreSession(session) : undefined);
+
+	// Not reactive state - just a guard so a completed session's score is
+	// persisted exactly once, not on every reactive re-run while `complete`
+	// stays true. Reset on restart so the next completion saves again.
+	let summarySaved = false;
+
+	$effect(() => {
+		if (complete && score && !summarySaved) {
+			summarySaved = true;
+			progressRepository
+				.saveLastSessionSummary(mapId, { ...score, completedAt: new Date().toISOString() })
+				.catch((e) => console.error('Failed to save quiz progress:', e));
+		}
+	});
 
 	// Small regions (Bremen, Saarland...) can be a couple of screen pixels
 	// wide at a normal zoom level - an exact-pixel drop test makes them
@@ -174,8 +191,22 @@
 
 		if (item.status === 'correct') {
 			markSolved(targetId, name, target.centroid, false);
+			// Only a clean, error-free match counts as "settled for today" -
+			// a region you fumbled on (even if you got it right eventually)
+			// is exactly the one you need more practice on, so it should
+			// come back as a slip if you reopen this map later today rather
+			// than being excused from the tray.
+			if (item.errors === 0) {
+				progressRepository
+					.markTargetSolvedToday(mapId, targetId)
+					.catch((e) => console.error('Failed to save quiz progress:', e));
+			}
 		} else if (item.status === 'revealed') {
 			markSolved(targetId, name, target.centroid, true);
+			// Revealed always has errors > 0 by construction (see
+			// packages/quiz-engine), so it's never persisted as solved-today
+			// either - reopening the map later gives you a fresh 3 attempts,
+			// same as a target you never touched.
 		} else {
 			wrongFlashId = targetId;
 			if (exactName) {
@@ -206,6 +237,7 @@
 		}
 		for (const popup of solvedPopups.values()) popup.remove();
 		solvedPopups.clear();
+		summarySaved = false;
 		session = createQuizSession(mapDef.targets.map((t) => ({ id: t.id, name: t.name })));
 	}
 
@@ -216,7 +248,17 @@
 			const { mapDef: loadedMapDef, style } = await fetchMapDefAndStyle(mapId);
 			if (cancelled) return;
 			mapDef = loadedMapDef;
-			session = createQuizSession(loadedMapDef.targets.map((t) => ({ id: t.id, name: t.name })));
+
+			// Targets already solved today (in this or an earlier session)
+			// start pre-resolved rather than pending, so reopening a map
+			// you're partway through today doesn't ask you to re-solve what
+			// you already got right.
+			const solvedToday = await progressRepository.getTargetsSolvedToday(mapId);
+			if (cancelled) return;
+			session = createQuizSession(
+				loadedMapDef.targets.map((t) => ({ id: t.id, name: t.name })),
+				solvedToday
+			);
 
 			map = createMap(container, loadedMapDef, style);
 			if (typeof window !== 'undefined') {
@@ -225,6 +267,18 @@
 				// screen coordinates for a drag target.
 				(window as unknown as { __map?: maplibregl.Map }).__map = map;
 			}
+
+			// setFeatureState throws until the style has finished loading -
+			// defer the pre-marking loop to the map's 'load' event rather
+			// than running it immediately after construction.
+			map.once('load', () => {
+				if (cancelled || !session) return;
+				for (const item of session.items) {
+					if (item.status !== 'correct') continue;
+					const target = loadedMapDef.targets.find((t) => t.id === item.target.id)!;
+					markSolved(item.target.id, item.target.name, target.centroid, false);
+				}
+			});
 		})().catch((e) => {
 			error = e instanceof Error ? e.message : String(e);
 		});

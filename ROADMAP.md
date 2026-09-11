@@ -10,9 +10,12 @@ Check items off as they land; update "Status" as iterations complete.
 - **Done**: architecture proposal (`ARCHITECTURE.md`); Iteration 0 (repo &
   tooling scaffolding); Iteration 1 (demo map data pipeline); Iteration 2
   (core map viewer); Iteration 3 (tour mode); Iteration 3.5 (public
-  deploy — live on Netlify); Iteration 4 (quiz engine — drag-to-match).
+  deploy — live on Netlify); Iteration 4 (quiz engine — drag-to-match);
+  Iteration 5 (local persistence — repository interface + `localStorage`
+  backend, quiz results persisted and shown on the home page). SQLite
+  backend deferred to Iteration 7 as planned.
 - **Not started**: everything else below.
-- **Next up**: Iteration 5 (local persistence).
+- **Next up**: Iteration 6 (spaced repetition).
 - **Reordered**: local persistence and spaced repetition swapped places
   from the original numbering. Spaced repetition is pointless without
   somewhere to remember what's due across sessions — user accounts
@@ -591,33 +594,123 @@ persist into otherwise.
 — deliberately minimal, scoped to what Iteration 6 actually needs rather
 than a general-purpose stats system:
 
-- [ ] **Per-`(mapId, targetId)` SRS card state** — the load-bearing piece:
+- [x] **Per-`(mapId, targetId)` SRS card state** — the load-bearing piece:
       `easeFactor`, `interval` (days), `repetitions`, `dueDate`,
       `lastReviewedAt`. This is what Iteration 6 reads to decide which
-      regions are due and writes to after each attempt.
-- [ ] **Per-map `lastSessionSummary`** — the `{ total, perfect,
+      regions are due and writes to after each attempt. Storage and
+      retrieval exist and are unit-tested now; nothing writes real values
+      yet since there's no scheduler until Iteration 6.
+- [x] **Per-map `lastSessionSummary`** — the `{ total, perfect,
       totalErrors }` shape `scoreSession` already produces, so a map's
       picker/detail view can show "last time: 14/20" cheaply, reusing an
       existing type rather than inventing a new one.
-- [ ] Explicitly **not** in scope: full session history/trend charts
+- [x] Explicitly **not** in scope: full session history/trend charts
       (no immediate consumer — SRS only needs current card state, not a
       log), and custom-map storage (no map editor exists yet to produce
       one — Iteration 8+).
 
 **Implementation:**
 
-- [ ] Repository interface (`getCardState`/`saveCardState`/
-      `getLastSessionSummary`/... ) decoupled from the storage backend, so
+- [x] Repository interface (`app/src/lib/progressRepository.ts`):
+      `getCardStates`/`saveCardState`/`getLastSessionSummary`/
+      `saveLastSessionSummary`, decoupled from the storage backend so
       swapping backends later doesn't touch call sites
-- [ ] Browser implementation first (IndexedDB or `localStorage`, whichever
-      is simpler for this shape of data) — this is what's actually
+- [x] `localStorage`-backed implementation
+      (`createLocalStorageProgressRepository`) — this is what's actually
       deployed and testable today, unlike Tauri/SQLite which needs
-      Iteration 7's desktop packaging to even run
+      Iteration 7's desktop packaging to even run. Guards every read/write
+      behind `typeof localStorage === 'undefined'` since the home page is
+      prerendered (no `localStorage` at build time) — confirmed the
+      production build still completes cleanly with this in place.
 - [ ] SQLite implementation deferred to Iteration 7, behind the same
       repository interface — the interface is the thing that has to be
       right now, not which database backs it
-- [ ] Wire `QuizView`'s session completion (`scoreSession`'s result) to
-      write back through the repository
+- [x] Wired `QuizView`'s session completion to write back through the
+      repository (`$effect` on `complete`/`score`, guarded by a
+      `summarySaved` flag so it fires exactly once per completion, reset
+      on restart so a replay's result overwrites rather than being
+      ignored)
+- [x] Home page (`app/src/routes/+page.svelte`) reads each map's
+      `lastSessionSummary` on mount and shows "Last: 14/20 (2 mistakes)"
+      under its link — the concrete, visible proof the data round-trips,
+      not just an invisible write
+
+**Verified:** 9 new unit tests on the repository (save/retrieve/update
+card state and session summaries, per-map isolation, corrupt-data
+handling) plus `svelte-check`/lint/production build all clean. End-to-end
+via Playwright: completed a 16-target quiz, confirmed the exact JSON
+landed in `localStorage` under the map's key, then navigated to the home
+page and confirmed it rendered "Last: 16/16". A second run with one
+deliberate wrong drop showed "Last: 15/16 (1 mistake)" (correct singular
+wording); replaying a third time and finishing perfectly overwrote the
+stored summary rather than accumulating history, confirming the
+restart-resets-the-guard behavior.
+
+**Follow-up, found by asking "what if I don't finish the map?":** the
+above only persists a *completed* session. Abandon a quiz partway through
+and nothing is saved — reopening it later the same day made you re-solve
+everything from scratch, including regions you'd already gotten right
+minutes earlier. Decided this should count as progress for the day: a
+correctly-placed (or revealed) slip is now persisted immediately, not
+batched until the whole map is done, and reopening the same map later the
+same local calendar day shows those regions already "discovered" instead
+of asking again. This deliberately stops at "today" - it's not spaced
+repetition (no multi-day interval, no SM-2 grading), just a same-day
+stopgap so partial progress isn't thrown away; real due-date persistence
+across days is still Iteration 6's job.
+
+- [x] New repository methods: `getTargetsSolvedToday`/
+      `markTargetSolvedToday`, storing target ids under a
+      `{ date, targetIds }` record per map, compared against the local
+      calendar day (`getFullYear`/`getMonth`/`getDate`, not
+      `toISOString()`'s UTC date - a UTC-day check would flip near
+      midnight at the wrong moment for the user's actual day). A stale
+      (different-day) record reads back as empty, so the tray fully
+      resets the next day rather than silently carrying state forward
+      with no real due-date logic behind it.
+- [x] `packages/quiz-engine`'s `createQuizSession` takes an optional
+      `alreadySolvedIds` set and seeds matching targets as `'correct'`
+      instead of `'pending'` — the same shape Iteration 6 will reuse, just
+      fed by "solved today" for now instead of real due-date logic.
+      Backward compatible: omitting the argument behaves exactly as
+      before.
+- [x] `QuizView` reads `getTargetsSolvedToday` on load and passes it into
+      `createQuizSession`; pre-solved targets get the same popup/
+      feature-state treatment as a live correct drop, deferred to the
+      map's `load` event (`setFeatureState` throws `"Style is not done
+      loading"` if called immediately after `createMap` - caught directly
+      via a failing Playwright run, not guessed at).
+- [x] **Only a clean, error-free match persists as "settled for today"** —
+      corrected after asking "what about regions where I made a mistake?"
+      A region you fumbled on (wrong drop before eventually getting it
+      right, or revealed after 3 misses) is exactly the one you need more
+      practice on; letting it coast as "discovered" for the rest of the
+      day would undermine the whole point. `markTargetSolvedToday` is now
+      only called when `item.errors === 0`, and revealed never calls it at
+      all (it always has `errors > 0` by construction). Reopening the map
+      later the same day gives a fumbled or revealed target a completely
+      fresh slip - 3 full attempts again, same as a target you never
+      touched - while a clean first-try match stays discovered. As a
+      side effect this also removes what was previously a disclosed
+      simplification (a pre-solved target's `errors` inflating that day's
+      `scoreSession`) — a persisted target genuinely always had 0 errors
+      now, so there's nothing left to approximate.
+
+**Verified:** 6 more unit tests (mark/retrieve, no duplicate entries,
+per-map isolation, resets on a new day, local-not-UTC day boundary) plus
+1 more in quiz-engine for the `alreadySolvedIds` seeding. Playwright:
+solved 3 of 16 targets on a map, left without finishing, navigated away
+and back to the same quiz - the 3 stayed shown as discovered (correct
+feature-state, popup rendered, subtitle read "3 / 16 placed", none of the
+3 reappeared in the tray), and a record from a different date is ignored
+(region returns to the tray, not stuck "solved" forever). A dedicated
+test then solved one target cleanly, one with a wrong attempt before
+getting it right, and one revealed after 3 misses, reopened the map, and
+confirmed only the clean one stayed discovered - the fumbled and
+revealed ones were both back in the tray with a fresh slip. Re-ran the
+full existing quiz-behavior regression suite (alphabetical order,
+Bremen's drop tolerance, drop-outside-map/tray/sea not counting as
+errors) to confirm none of this regressed the normal case.
 
 ## Iteration 6 — Spaced repetition (`packages/srs`)
 
