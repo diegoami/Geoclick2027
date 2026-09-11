@@ -785,6 +785,58 @@ persist card state across sessions.
 - [ ] FSRS noted as a possible later upgrade (ARCHITECTURE.md already
       designs the scheduler interface to allow this) — not scoped now
 
+**Consistency review against Iteration 5's actual shipped behavior**,
+done before starting implementation (per the user's request to check for
+contradictions/ambiguity, not just design in isolation):
+
+- **Iteration 5's `solvedToday` mechanism is retired by this iteration,
+  not kept running alongside it.** Once real `CardState`/`dueDate`
+  exists, it's the single source of truth for "is this target already
+  handled" — `getTargetsSolvedToday`/`markTargetSolvedToday` and their
+  `QuizView` wiring get deleted as part of this iteration's work, not
+  left as a second parallel mechanism. A clean win produces a
+  `CardState` whose `dueDate` is tomorrow-or-later, which is a strict
+  generalization of "stays discovered until the calendar day rolls
+  over" — same user-visible effect, now backed by the real scheduler
+  instead of a same-day-only stand-in.
+- **A failed/revealed grade's resulting `dueDate` must still land
+  same-day (`<= now`), not get pushed to tomorrow by a naive
+  "minimum interval = 1 day" implementation.** This is the one place a
+  literal SM-2 port could silently regress behavior the user explicitly
+  asked for and that's already shipped and tested: a fumbled or revealed
+  target has to keep resurfacing as a due slip if you reopen the map
+  later the same day, exactly like it does today. Whatever the SM-2
+  implementation does for an "again" grade, verify the resulting
+  due-comparison (`dueDate <= now`) actually holds true within the same
+  day for a fresh failure, not just "the next calendar day" — test this
+  explicitly, don't assume the algorithm gets it right by default.
+- **Every attempt writes real `CardState` now, including fumbled and
+  revealed ones** — a change from Iteration 5, where a mistake wrote
+  nothing at all. That wasn't a permanent principle, just a stopgap for
+  the gap between "have a session-seeding mechanism" and "have a real
+  scheduler to feed" — there was nothing meaningful to persist for a
+  failure without SM-2 math to produce a real interval. Iteration 6 is
+  exactly that scheduler, so failures should persist real state, same as
+  successes.
+- **Concrete grade mapping**, since "grade derived from correct-on-
+  first-try vs. wrong attempts vs. revealed" was left vague: `errors ===
+  0` on a correct match → a "good" grade; correct but `errors > 0` →
+  "hard"; `revealed` → "again" (SM-2's fail grade — resets `repetitions`,
+  short interval). Pick the actual SM-2 grade constants during
+  implementation, but the three-way mapping itself shouldn't be
+  reinvented then.
+- **The home page's due-state indicator and Iteration 5's
+  `lastSessionSummary` display are complementary, not a replacement.**
+  One answers "what's outstanding right now," the other "how did the
+  last sitting go" — both stay visible.
+- **Invariant carried forward from Iteration 5, still holds**: anything
+  pre-marked `'correct'` when a session is created only ever comes from
+  a target that was genuinely graded well (not-due only happens after a
+  "good"/"hard" grade, never after "again") — so the pre-solved bucket
+  never silently inflates a session's perfect count with something that
+  wasn't actually solved cleanly, same guarantee Iteration 5 already
+  established for same-day persistence.
+
 ## Iteration 7 — Desktop POC packaging (milestone)
 
 **Deliverable:** A double-click-to-install desktop app containing all three

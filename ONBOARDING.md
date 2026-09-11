@@ -22,6 +22,12 @@ leaving it stale for the next person.
 4. [CLAUDE.md](CLAUDE.md) — working conventions. Written for an AI
    assistant collaborating on this repo, but every rule in it applies to
    any contributor, human or not.
+5. [DECISIONS.md](DECISIONS.md) — *why* the product works the way it
+   does, as a scannable list rather than scattered through iteration
+   write-ups. Worth a skim before changing behavior that looks like it
+   might have been a deliberate choice rather than an oversight — several
+   entries exist specifically because something non-obvious got built,
+   reconsidered, and corrected once already.
 
 ## What this project is
 
