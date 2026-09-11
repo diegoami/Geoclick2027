@@ -108,7 +108,7 @@ or amend an entry here as part of that change, not as an afterthought.
   the latter. "Hard" still builds a weaker interval and lower ease
   factor than "good" would, so it resurfaces sooner than a region
   nailed first try — just not literally later the same day.
-- **Practice mode (planned, Iteration 6) never writes back to SRS
+- **Practice mode (Iteration 6) never writes back to SRS
   state, and starts from a blank map.** It exists so replaying a
   mastered map is still possible once nothing's due, without that
   session silently perturbing the real review schedule, and without

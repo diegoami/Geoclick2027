@@ -4,17 +4,13 @@
 // later SQLite/Tauri implementation (Iteration 7) can replace the
 // localStorage one below without touching call sites.
 
-// Per-(mapId, targetId) spaced-repetition card state. Nothing writes this
-// yet - Iteration 6 (packages/srs) is what actually produces these values
-// via an SM-2 scheduler. The repository just needs to be able to store
-// and retrieve them once it does.
-export interface CardState {
+import type { CardState as SchedulerState } from '@geoclick/srs';
+
+// A packages/srs scheduler state plus the target it belongs to - the
+// scheduler itself doesn't know about targets, only the repository layer
+// needs to associate one with the other for storage.
+export interface CardState extends SchedulerState {
 	targetId: string;
-	easeFactor: number;
-	interval: number; // days
-	repetitions: number;
-	dueDate: string; // ISO date
-	lastReviewedAt: string; // ISO date
 }
 
 // Mirrors packages/quiz-engine's QuizScore shape plus a timestamp - reuses
@@ -31,14 +27,6 @@ export interface ProgressRepository {
 	saveCardState(mapId: string, state: CardState): Promise<void>;
 	getLastSessionSummary(mapId: string): Promise<SessionSummary | undefined>;
 	saveLastSessionSummary(mapId: string, summary: SessionSummary): Promise<void>;
-	/** Target ids correctly placed (or revealed) *today* (local calendar
-	 * day), on this map, in any session - not just the current one. Lets a
-	 * quiz reopened later the same day pick up where you left off instead
-	 * of re-asking what you already got right. Resets naturally the next
-	 * day since there's no real due-date model yet - that's Iteration 6;
-	 * this is a same-day-only stopgap, not spaced repetition. */
-	getTargetsSolvedToday(mapId: string): Promise<Set<string>>;
-	markTargetSolvedToday(mapId: string, targetId: string): Promise<void>;
 }
 
 const STORAGE_PREFIX = 'geoclick:progress:v1';
@@ -51,19 +39,13 @@ function lastSessionKey(mapId: string): string {
 	return `${STORAGE_PREFIX}:${mapId}:lastSession`;
 }
 
-function solvedTodayKey(mapId: string): string {
-	return `${STORAGE_PREFIX}:${mapId}:solvedToday`;
-}
-
-interface SolvedTodayRecord {
-	date: string; // local YYYY-MM-DD, not UTC - see todayLocalDate()
-	targetIds: string[];
-}
-
 // Local calendar date, not `toISOString().slice(0, 10)` - that's UTC, which
 // would flip to "tomorrow" up to many hours before local midnight
-// depending on timezone. "Today" here means the user's own day.
-function todayLocalDate(): string {
+// depending on timezone. "Today" here means the user's own day. Exported
+// so callers (QuizView, the home page) compute "today" the same way the
+// repository and packages/srs do - all three need to agree on what day it
+// is for due-date comparisons to make sense.
+export function todayLocalDate(): string {
 	const d = new Date();
 	const pad = (n: number) => String(n).padStart(2, '0');
 	return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
@@ -107,20 +89,6 @@ export function createLocalStorageProgressRepository(): ProgressRepository {
 
 		async saveLastSessionSummary(mapId, summary) {
 			writeJson(lastSessionKey(mapId), summary);
-		},
-
-		async getTargetsSolvedToday(mapId) {
-			const record = readJson<SolvedTodayRecord>(solvedTodayKey(mapId));
-			if (!record || record.date !== todayLocalDate()) return new Set();
-			return new Set(record.targetIds);
-		},
-
-		async markTargetSolvedToday(mapId, targetId) {
-			const today = todayLocalDate();
-			const record = readJson<SolvedTodayRecord>(solvedTodayKey(mapId));
-			const targetIds = record && record.date === today ? record.targetIds : [];
-			if (!targetIds.includes(targetId)) targetIds.push(targetId);
-			writeJson(solvedTodayKey(mapId), { date: today, targetIds });
 		}
 	};
 }

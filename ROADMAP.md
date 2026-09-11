@@ -12,10 +12,12 @@ Check items off as they land; update "Status" as iterations complete.
   (core map viewer); Iteration 3 (tour mode); Iteration 3.5 (public
   deploy — live on Netlify); Iteration 4 (quiz engine — drag-to-match);
   Iteration 5 (local persistence — repository interface + `localStorage`
-  backend, quiz results persisted and shown on the home page). SQLite
-  backend deferred to Iteration 7 as planned.
+  backend, quiz results persisted and shown on the home page); Iteration
+  6 (spaced repetition — SM-2 scheduler in `packages/srs`, due/not-due
+  quiz sessions, "practice all regions", home page due-state display).
+  SQLite backend deferred to Iteration 7 as planned.
 - **Not started**: everything else below.
-- **Next up**: Iteration 6 (spaced repetition).
+- **Next up**: Iteration 7 (desktop POC packaging).
 - **Reordered**: local persistence and spaced repetition swapped places
   from the original numbering. Spaced repetition is pointless without
   somewhere to remember what's due across sessions — user accounts
@@ -765,23 +767,34 @@ persist card state across sessions.
 
 **Implementation:**
 
-- [ ] SM-2 scheduler in `packages/srs`, replacing the current
-      `placeholder = true` stub — pure TS, unit-tested like
-      `packages/quiz-engine`, no DOM/Svelte dependency
-- [ ] Session-building logic (due/not-due split, "practice all" override)
-      — likely belongs in `packages/quiz-engine` alongside
-      `createQuizSession`, since it's still pure session-state logic, not
-      UI. Needs a way to distinguish a "due" session from a "practice"
-      session so the caller knows whether to skip the `rate()` write-back.
-- [ ] `QuizView` changes: pre-mark not-due targets as discovered on
-      session start for a due session (never for a practice session);
-      "practice all" control shown when the due queue is empty
-- [ ] Home page (`app/src/routes/+page.svelte`, currently a hardcoded
-      list with no per-map state at all) reads each map's due state from
-      Iteration 5's repository and shows "no reviews needed" vs. "N due"
-      vs. "not started yet"
-- [ ] Wire attempt results to `rate()` and persist via Iteration 5's
-      repository — skipped entirely for practice-mode sessions
+- [x] SM-2 scheduler in `packages/srs` (`rate`/`isDue`), replacing the
+      `placeholder = true` stub — pure TS, unit-tested, no DOM/Svelte
+      dependency. Dates are local-calendar-day strings (`YYYY-MM-DD`),
+      not timestamps — matches the granularity actually needed and lets
+      due-comparison stay a plain string compare.
+- [x] Session-building logic turned out to need **no changes at all** to
+      `packages/quiz-engine` — `createQuizSession`'s `alreadySolvedIds`
+      parameter (added in Iteration 5 for the now-retired same-day
+      mechanism) already does exactly what a due/not-due split needs;
+      it's just fed by real due-state now instead of "solved today".
+      "Due" vs. "practice" mode distinction lives as plain component
+      state in `QuizView` (`mode: 'due' | 'practice'`), not a shared
+      package API — nothing outside the component needs to know which
+      mode a session is in.
+- [x] `QuizView` changes: a `phase: 'loading' | 'upToDate' | 'quiz'`
+      state machine — pre-marks not-due targets as discovered on session
+      start for a due session (never for practice); "Practice all
+      regions" control shown only in the `upToDate` phase, per the design
+      (not a general always-available button)
+- [x] Home page reads each map's due state (fetching each map's
+      `map.json` for its target ids, alongside `getCardStates`) and shows
+      "No reviews needed" / "N to review" / nothing (not-started maps get
+      no due-status label at all, distinct from a genuinely up-to-date
+      one) — alongside the existing `lastSessionSummary` display, per the
+      "complementary, not a replacement" resolution
+- [x] Wired attempt results to `rate()` and `saveCardState` — skipped
+      entirely for practice-mode sessions (checked via `mode === 'due'`
+      at the one call site)
 - [ ] FSRS noted as a possible later upgrade (ARCHITECTURE.md already
       designs the scheduler interface to allow this) — not scoped now
 
@@ -846,6 +859,43 @@ contradictions/ambiguity, not just design in isolation):
   never silently inflates a session's perfect count with something that
   wasn't actually solved cleanly, same guarantee Iteration 5 already
   established for same-day persistence.
+
+**Verified:** 12 unit tests on `packages/srs` (due-comparison at each
+boundary; first-review scheduling for all three grades; a run of "good"
+reviews growing the interval; "hard" producing a shorter interval and
+lower ease factor than "good" at the same point; "again" resetting
+repetitions and clamping the ease factor floor even after repeated
+failures). `svelte-check`/lint/production build all clean — the build
+matters specifically because the home page now fetches each map's
+`map.json` to compute due counts, on top of the existing prerender/
+`localStorage` guard concern from Iteration 5.
+
+Playwright, end to end: a brand-new map behaves exactly like before this
+iteration (full quiz, nothing pre-marked) — the "never reviewed = due"
+default makes this fall out naturally, not a special case. Solved one
+region cleanly and one only after a wrong drop ("hard"), then confirmed
+both graduated to a real `CardState` with a future `dueDate` and both
+showed pre-marked discovered on reopening the same day — a genuine
+behavior change from Iteration 5, where "hard" used to persist nothing
+and would've reappeared as a slip; now a recovered mistake counts as a
+pass, matching the "hard graduates normally" decision. Separately
+confirmed a revealed target's `dueDate` lands on `today` and it's still
+offered as a slip on reopening, per the same-day-repeat requirement.
+Solved every target on a map (mixing clean and fumbled attempts) and
+confirmed reopening it the same day showed the "Up to date!" panel with
+zero slips — the whole map having graduated in one pass, not a bug.
+Clicked "Practice all regions" from that state and confirmed: every
+target starts as a blank slip (no pre-marked regions, unlike a due
+session), the header reads "(practice)", and solving a target inside
+practice mode left every stored `CardState` byte-for-byte unchanged —
+confirms the "practice never touches SRS state" rule holds in practice,
+not just on paper. Home page: seeded one map never-played, one fully
+graduated, and one half-due, and confirmed the three read as no
+due-status label, "No reviews needed", and "N to review" respectively.
+Re-ran the full pre-existing quiz-behavior regression suite (alphabetical
+order, Bremen's drop tolerance, drop-outside-map/tray/sea not counting as
+errors) to confirm none of this regressed the base drag-and-drop
+mechanics.
 
 ## Iteration 7 — Desktop POC packaging (milestone)
 

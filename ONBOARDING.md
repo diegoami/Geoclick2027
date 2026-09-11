@@ -66,8 +66,9 @@ packages/
   quiz-engine/            pure quiz session logic (no DOM/Svelte) - the
                            part most worth reading to understand the quiz
                            domain model without wading through UI code
-  srs/                    placeholder only - spaced-repetition logic,
-                           not implemented yet (Iteration 6)
+  srs/                    pure SM-2 scheduler (rate/isDue) - no DOM,
+                           storage, or quiz-UI dependency, same style as
+                           quiz-engine
 
 data/
   maps/<map-id>/          generated per-map assets: map.json, tiles.pmtiles,
