@@ -95,6 +95,56 @@ installed the prebuilt Linux binary from
 into `~/.local/bin`. None of this is repo-tracked; a fresh machine will
 need the same one-time setup.
 
+**Follow-up, found by actually looking at the USA map:** Michigan reads
+as confusing/broken — its two peninsulas visually merge into Wisconsin
+and Ohio with no indication there's open water (the Great Lakes) between
+them, just an unexplained gap in the fill. Root cause confirmed before
+assuming a fix: a state's polygon correctly excludes the lake surface
+(the geometry itself is fine), but nothing was rendered *in* that gap, so
+it read as missing data rather than water.
+
+Fixed by adding a `lakes` source-layer to the pipeline, not by touching
+Michigan's geometry:
+
+- [x] `fetch-natural-earth.sh` also downloads `ne_10m_lakes` (public
+      domain, same Natural Earth family already in use)
+- [x] `build-map.ts` selects lakes by bounding-box intersection with the
+      map's overall extent (`ogr2ogr -spat`, a feature filter, not a
+      geometry clip) rather than by country — lakes aren't tagged by
+      admin boundary the way states are, and a lake worth rendering can
+      extend past the map's bounds (Lake Superior into Canada, for
+      instance) without that being a problem
+- [x] New `lakes-fill` layer in `data/styles/base.json` (light blue,
+      purely contextual — no hit-testing, no feature-state), documented
+      in the style's metadata note alongside `targets`/`labels`
+- [x] Re-ran the pipeline for all three demo maps, not just USA, for
+      consistency — confirmed via `git diff` that `map.json`/`tour.json`
+      came out byte-identical to before (only the binary `.pmtiles`
+      changed), so no hand-curated data was at risk of being clobbered
+
+**Verified:** screenshotted Michigan before and after at both a close
+zoom and the full-USA overview zoom — before, Wisconsin/Michigan/Ohio
+read as one undifferentiated blob; after, Lake Superior/Michigan/Huron
+clearly separate them, matching a real coastline. Re-ran the full
+existing quiz-behavior regression suite (hit-testing explicitly queries
+only the `targets-fill` layer, so the new `lakes-fill` layer was never
+expected to interfere, but verified rather than assumed) — no
+regressions.
+
+**Follow-up, found immediately after shipping the above:** the lakes
+were there but barely readable — the land fill (`targets-fill`, `#8fb8a8`
+at 85% opacity) and the lake fill (`#bcdcea` at 90%) were both pale,
+similarly-toned colors, easy to mistake for the same background at a
+glance. First instinct was to make the lake color more saturated, but
+the user's actual suggestion worked better: lower the *land* fill's
+opacity instead (`0.85` → `0.6`), so the lake blue reads clearly against
+lighter, less saturated land rather than trying to out-saturate it.
+Checked this didn't wash out the quiz's own feature-state colors
+(correct/wrong/revealed/hover, all more saturated than the base green to
+begin with) by screenshotting a solved region mid-quiz — still reads
+clearly distinct from unsolved territory. Re-ran the regression suite
+again after the change; still clean.
+
 ## Iteration 2 — Core map viewer
 
 **Deliverable:** Opening the app shows one of the three demo maps rendered
@@ -160,6 +210,26 @@ just HTTP status checks) to actually catch the two rendering bugs above —
       anchored at the click location, larger text, closer to the region —
       directly requested, and also a more natural fit now that permanent
       labels are gone.
+- [x] **New "Overview" view** (`/map/[mapId]/overview`, `OverviewView.svelte`)
+      — the map with every region already shown "discovered" (same green
+      fill + name popup as a solved quiz target), no interaction beyond
+      pan/zoom. Requested directly, positioned as the first link on the
+      map landing page — above "Start tour" and "Start quiz" — since
+      seeing the whole answer key at a glance is the most basic thing to
+      offer before asking someone to learn or be tested on a map. Reuses
+      `createMap`/`fetchMapDefAndStyle` like every other view; no changes
+      needed to `packages/quiz-engine` or the shared style beyond what
+      already existed for the "solved" visual treatment. Known limitation
+      carried over from the quiz's own end state, not introduced here:
+      DOM popups don't collision-avoid each other, so a cluster of small,
+      geographically-dense targets (the New England states, DC/Maryland/
+      Virginia) can overlap at a default zoom — a pre-existing tradeoff
+      from choosing DOM popups over a MapLibre symbol layer (see the
+      Quiz mechanic section of `DECISIONS.md`), not a new regression.
+      Verified: all 20/16/49 targets show a popup on the three demo maps,
+      "✓ Show overview" appears first among the three links, no console
+      errors on any of the three maps including the larger 49-target USA
+      one.
 
 ## Iteration 3 — Tour mode
 
