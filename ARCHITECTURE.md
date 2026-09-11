@@ -105,14 +105,17 @@ forever.
 
 The two-direction flashcard idea isn't gone, just deferred — nothing about
 the drag-to-match mechanic blocks adding it later as a second quiz mode.
-Each target's per-attempt result is the natural input to spaced repetition
-once Iteration 6 adds it: targets missed more often get scheduled sooner.
-Start with **SM-2**; FSRS is a drop-in upgrade later since the scheduler
-interface (`rate(cardId, grade) -> nextDueDate`) doesn't change. Iteration 6
-also changes what a quiz session *is*: only due (or never-seen) targets
-become slips, the rest show pre-solved as already "discovered" — see
-ROADMAP.md's Iteration 6 section for the full design, including the
-empty-queue/"practice all" fallback once a map has nothing due.
+Each target's per-attempt result feeds spaced repetition (`packages/srs`,
+Iteration 6): targets missed more often get scheduled sooner. **SM-2** for
+now; FSRS is a drop-in upgrade later since the scheduler interface
+(`rate(previous, grade, today) -> CardState`) doesn't change. A quiz
+session is no longer "every target, every time" — only due (or
+never-seen) targets become slips, the rest show pre-solved as already
+"discovered". See ROADMAP.md's Iteration 6 section for the full design,
+including the empty-queue/"practice all" fallback once a map has nothing
+due, and why a "hard" grade (correct, but only after a mistake) still
+graduates normally rather than forcing a same-day repeat like a genuine
+fail does.
 
 ## Storage — local-first
 

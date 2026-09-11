@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import {
 	createLocalStorageProgressRepository,
+	todayLocalDate,
 	type CardState,
 	type SessionSummary
 } from './progressRepository';
@@ -102,61 +103,19 @@ describe('localStorage progress repository', () => {
 	});
 });
 
-describe('same-day solved targets', () => {
+describe('todayLocalDate', () => {
 	afterEach(() => {
 		vi.useRealTimers();
 	});
 
-	it('has nothing solved for a map with no marks yet', async () => {
-		const repo = createLocalStorageProgressRepository();
-		expect(await repo.getTargetsSolvedToday('italy-regions')).toEqual(new Set());
-	});
-
-	it('remembers a target marked solved today', async () => {
+	it('formats as YYYY-MM-DD using the local calendar day, not UTC', () => {
 		vi.useFakeTimers();
-		vi.setSystemTime(new Date('2026-09-11T10:00:00'));
-		const repo = createLocalStorageProgressRepository();
-		await repo.markTargetSolvedToday('italy-regions', 'Abruzzo');
-		await repo.markTargetSolvedToday('italy-regions', 'Basilicata');
-		expect(await repo.getTargetsSolvedToday('italy-regions')).toEqual(
-			new Set(['Abruzzo', 'Basilicata'])
-		);
-	});
-
-	it('does not duplicate a target marked solved twice in the same day', async () => {
-		vi.useFakeTimers();
-		vi.setSystemTime(new Date('2026-09-11T10:00:00'));
-		const repo = createLocalStorageProgressRepository();
-		await repo.markTargetSolvedToday('italy-regions', 'Abruzzo');
-		await repo.markTargetSolvedToday('italy-regions', 'Abruzzo');
-		expect(await repo.getTargetsSolvedToday('italy-regions')).toEqual(new Set(['Abruzzo']));
-	});
-
-	it('keeps solved-today state separate per map', async () => {
-		vi.useFakeTimers();
-		vi.setSystemTime(new Date('2026-09-11T10:00:00'));
-		const repo = createLocalStorageProgressRepository();
-		await repo.markTargetSolvedToday('italy-regions', 'Abruzzo');
-		expect(await repo.getTargetsSolvedToday('germany-states')).toEqual(new Set());
-	});
-
-	it('forgets targets marked solved on a previous day', async () => {
-		const repo = createLocalStorageProgressRepository();
-		vi.useFakeTimers();
-		vi.setSystemTime(new Date('2026-09-11T22:00:00'));
-		await repo.markTargetSolvedToday('italy-regions', 'Abruzzo');
-		vi.setSystemTime(new Date('2026-09-12T08:00:00'));
-		expect(await repo.getTargetsSolvedToday('italy-regions')).toEqual(new Set());
-	});
-
-	it('uses the local calendar day, not UTC, for "today"', async () => {
-		const repo = createLocalStorageProgressRepository();
-		vi.useFakeTimers();
-		// Local 11pm on the 11th - a UTC-based check could already read as
-		// the 12th depending on timezone offset, which would be wrong here.
-		vi.setSystemTime(new Date(2026, 8, 11, 23, 0, 0));
-		await repo.markTargetSolvedToday('italy-regions', 'Abruzzo');
+		// Late local evening - a UTC-based read could already say "tomorrow"
+		// depending on timezone offset, which would be wrong here. Iteration
+		// 6's due-date comparisons (packages/srs) all rely on this being the
+		// user's actual day, same reasoning as Iteration 5's retired
+		// same-day mechanism this replaces.
 		vi.setSystemTime(new Date(2026, 8, 11, 23, 30, 0));
-		expect(await repo.getTargetsSolvedToday('italy-regions')).toEqual(new Set(['Abruzzo']));
+		expect(todayLocalDate()).toBe('2026-09-11');
 	});
 });

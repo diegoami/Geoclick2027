@@ -12,7 +12,14 @@
 		type QuizSession
 	} from '@geoclick/quiz-engine';
 	import type { MapDefinition } from './mapDefinition';
-	import { createLocalStorageProgressRepository } from './progressRepository';
+	import { createLocalStorageProgressRepository, todayLocalDate } from './progressRepository';
+	import {
+		isDue,
+		rate,
+		daysUntil,
+		type CardState as SchedulerState,
+		type Grade
+	} from '@geoclick/srs';
 
 	let { mapId }: { mapId: string } = $props();
 
@@ -29,6 +36,22 @@
 		undefined
 	);
 	let wrongFlashId = $state<string | undefined>(undefined);
+
+	// 'loading' until the map/due-state check resolves; 'upToDate' when
+	// every target is not-due (nothing to review); 'quiz' while a session
+	// (due or practice) is actually being played.
+	let phase = $state<'loading' | 'upToDate' | 'quiz'>('loading');
+	// 'due': a normal spaced-repetition session - attempts feed the
+	// scheduler. 'practice': the "practice all regions" override once
+	// nothing's due - full blank re-test, results never touch SRS state.
+	let mode = $state<'due' | 'practice'>('due');
+
+	// Not reactive state - a plain cache of each target's current scheduler
+	// state, refreshed whenever a session is (re)built. `rate()` needs the
+	// *previous* state to compute the next one. Never read in the template,
+	// same reasoning as solvedPopups below.
+	// eslint-disable-next-line svelte/prefer-svelte-reactivity
+	let cardStatesByTargetId = new Map<string, SchedulerState>();
 
 	// Not reactive state - just bookkeeping for which feature currently has
 	// quizHover set, so it can be cleared when the pointer moves off it.
@@ -49,8 +72,17 @@
 
 	// Not reactive state - just a guard so a completed session's score is
 	// persisted exactly once, not on every reactive re-run while `complete`
-	// stays true. Reset on restart so the next completion saves again.
+	// stays true. Reset whenever a new session starts so the next
+	// completion saves/computes again.
 	let summarySaved = false;
+
+	// Whether finishing a *due* session actually cleared the map for today,
+	// vs. something (typically a revealed target, which stays due same-day)
+	// is still outstanding - drives which message/button the score panel
+	// shows, so "Play again" doesn't lie about there being more to play.
+	// Only meaningful when mode === 'due'; undefined until computed.
+	let allCaughtUp = $state<boolean | undefined>(undefined);
+	let daysUntilNextReview = $state<number | undefined>(undefined);
 
 	$effect(() => {
 		if (complete && score && !summarySaved) {
@@ -58,6 +90,18 @@
 			progressRepository
 				.saveLastSessionSummary(mapId, { ...score, completedAt: new Date().toISOString() })
 				.catch((e) => console.error('Failed to save quiz progress:', e));
+
+			if (mode === 'due' && mapDef) {
+				const today = todayLocalDate();
+				const stillDue = mapDef.targets.some((t) => isDue(cardStatesByTargetId.get(t.id), today));
+				allCaughtUp = !stillDue;
+				if (!stillDue) {
+					const nextDueDate = mapDef.targets
+						.map((t) => cardStatesByTargetId.get(t.id)!.dueDate)
+						.reduce((soonest, due) => (due < soonest ? due : soonest));
+					daysUntilNextReview = daysUntil(nextDueDate, today);
+				}
+			}
 		}
 	});
 
@@ -189,24 +233,25 @@
 		const item = session.items.find((i) => i.target.id === targetId)!;
 		const target = mapDef.targets.find((t) => t.id === targetId)!;
 
-		if (item.status === 'correct') {
-			markSolved(targetId, name, target.centroid, false);
-			// Only a clean, error-free match counts as "settled for today" -
-			// a region you fumbled on (even if you got it right eventually)
-			// is exactly the one you need more practice on, so it should
-			// come back as a slip if you reopen this map later today rather
-			// than being excused from the tray.
-			if (item.errors === 0) {
+		if (item.status === 'correct' || item.status === 'revealed') {
+			const revealed = item.status === 'revealed';
+			markSolved(targetId, name, target.centroid, revealed);
+			// Practice-mode results never touch SRS state - see
+			// ROADMAP.md's Iteration 6 design. A due-mode attempt grades the
+			// review: clean (no wrong drops) is "good", eventually correct
+			// but only after a mistake is "hard" (still a pass, but a
+			// weaker one - see the "hard graduates normally" decision),
+			// and revealed/gave-up is "again" (forces a same-day repeat).
+			if (mode === 'due') {
+				const grade: Grade = revealed ? 'again' : item.errors === 0 ? 'good' : 'hard';
+				const today = todayLocalDate();
+				const previous = cardStatesByTargetId.get(targetId);
+				const next = rate(previous, grade, today);
+				cardStatesByTargetId.set(targetId, next);
 				progressRepository
-					.markTargetSolvedToday(mapId, targetId)
+					.saveCardState(mapId, { targetId, ...next })
 					.catch((e) => console.error('Failed to save quiz progress:', e));
 			}
-		} else if (item.status === 'revealed') {
-			markSolved(targetId, name, target.centroid, true);
-			// Revealed always has errors > 0 by construction (see
-			// packages/quiz-engine), so it's never persisted as solved-today
-			// either - reopening the map later gives you a fresh 3 attempts,
-			// same as a target you never touched.
 		} else {
 			wrongFlashId = targetId;
 			if (exactName) {
@@ -227,7 +272,20 @@
 		}
 	}
 
-	function restart() {
+	// Reads each target's current card state and returns the ids that are
+	// NOT due yet - refreshes `cardStatesByTargetId` as a side effect, since
+	// `rate()` needs each target's previous state and this is the one place
+	// that state gets (re)loaded from the repository.
+	async function computeNotDueIds(targets: { id: string }[]): Promise<Set<string>> {
+		const cardStates = await progressRepository.getCardStates(mapId);
+		cardStatesByTargetId = new Map(cardStates.map((c) => [c.targetId, c]));
+		const today = todayLocalDate();
+		return new Set(
+			targets.filter((t) => !isDue(cardStatesByTargetId.get(t.id), today)).map((t) => t.id)
+		);
+	}
+
+	function clearAllVisuals() {
 		if (!mapDef || !map) return;
 		for (const target of mapDef.targets) {
 			map.setFeatureState(
@@ -237,8 +295,66 @@
 		}
 		for (const popup of solvedPopups.values()) popup.remove();
 		solvedPopups.clear();
+	}
+
+	// Pre-marks not-due targets as discovered - same visual treatment as a
+	// live correct drop. Only ever called once the map has actually
+	// finished loading (setFeatureState throws before then).
+	function applyPreSolvedVisuals(notDueIds: Set<string>, def: MapDefinition) {
+		for (const target of def.targets) {
+			if (!notDueIds.has(target.id)) continue;
+			markSolved(target.id, target.name, target.centroid, false);
+		}
+	}
+
+	// Builds (or rebuilds) a due-mode session from current card state. If
+	// nothing's due, drops into the 'upToDate' phase instead of a
+	// zero-slip session - that's what offers the "practice all" fallback.
+	async function startDueSession() {
+		if (!mapDef || !map) return;
+		allCaughtUp = undefined;
+		daysUntilNextReview = undefined;
+		const notDueIds = await computeNotDueIds(mapDef.targets);
+		if (notDueIds.size === mapDef.targets.length) {
+			phase = 'upToDate';
+			session = undefined;
+			return;
+		}
+		mode = 'due';
+		phase = 'quiz';
+		session = createQuizSession(
+			mapDef.targets.map((t) => ({ id: t.id, name: t.name })),
+			notDueIds
+		);
+		applyPreSolvedVisuals(notDueIds, mapDef);
+	}
+
+	// "Practice all regions": ignores due dates entirely, full blank
+	// re-test, no SRS write-back (see onSlipPointerUp). Only reachable
+	// from the 'upToDate' phase - see ROADMAP.md's Iteration 6 design for
+	// why this isn't a general-purpose always-available control.
+	function startPractice() {
+		if (!mapDef || !map) return;
+		clearAllVisuals();
 		summarySaved = false;
+		mode = 'practice';
+		phase = 'quiz';
 		session = createQuizSession(mapDef.targets.map((t) => ({ id: t.id, name: t.name })));
+	}
+
+	// After a *due* session: re-checks due state, since something (a
+	// revealed target) may still be due right now. After a *practice*
+	// session: goes straight into another practice round rather than
+	// re-checking - nothing about due-state changed while practicing, so
+	// there'd be nothing new to find.
+	function playAgain() {
+		if (mode === 'practice') {
+			startPractice();
+			return;
+		}
+		clearAllVisuals();
+		summarySaved = false;
+		startDueSession();
 	}
 
 	onMount(() => {
@@ -249,16 +365,8 @@
 			if (cancelled) return;
 			mapDef = loadedMapDef;
 
-			// Targets already solved today (in this or an earlier session)
-			// start pre-resolved rather than pending, so reopening a map
-			// you're partway through today doesn't ask you to re-solve what
-			// you already got right.
-			const solvedToday = await progressRepository.getTargetsSolvedToday(mapId);
+			const notDueIds = await computeNotDueIds(loadedMapDef.targets);
 			if (cancelled) return;
-			session = createQuizSession(
-				loadedMapDef.targets.map((t) => ({ id: t.id, name: t.name })),
-				solvedToday
-			);
 
 			map = createMap(container, loadedMapDef, style);
 			if (typeof window !== 'undefined') {
@@ -268,16 +376,23 @@
 				(window as unknown as { __map?: maplibregl.Map }).__map = map;
 			}
 
+			if (notDueIds.size === loadedMapDef.targets.length) {
+				phase = 'upToDate';
+			} else {
+				mode = 'due';
+				phase = 'quiz';
+				session = createQuizSession(
+					loadedMapDef.targets.map((t) => ({ id: t.id, name: t.name })),
+					notDueIds
+				);
+			}
+
 			// setFeatureState throws until the style has finished loading -
 			// defer the pre-marking loop to the map's 'load' event rather
 			// than running it immediately after construction.
 			map.once('load', () => {
-				if (cancelled || !session) return;
-				for (const item of session.items) {
-					if (item.status !== 'correct') continue;
-					const target = loadedMapDef.targets.find((t) => t.id === item.target.id)!;
-					markSolved(item.target.id, item.target.name, target.centroid, false);
-				}
+				if (cancelled || phase !== 'quiz') return;
+				applyPreSolvedVisuals(notDueIds, loadedMapDef);
 			});
 		})().catch((e) => {
 			error = e instanceof Error ? e.message : String(e);
@@ -299,7 +414,11 @@
 	{:else}
 		<div class="info">
 			<a class="back" href={mapId ? resolve('/map/[mapId]', { mapId }) : resolve('/')}>← Map</a>
-			<strong>{mapDef ? mapDef.name : 'Loading…'} — Quiz</strong>
+			<strong
+				>{mapDef ? mapDef.name : 'Loading…'} — Quiz{mode === 'practice'
+					? ' (practice)'
+					: ''}</strong
+			>
 			{#if session}
 				<span class="subtitle"
 					>Drag each name onto its region — {session.items.filter((i) => i.status !== 'pending')
@@ -308,10 +427,18 @@
 			{/if}
 		</div>
 
+		{#if phase === 'upToDate'}
+			<div class="score-panel">
+				<h2>Up to date!</h2>
+				<p>No reviews needed on this map right now.</p>
+				<button onclick={startPractice}>Practice all regions</button>
+			</div>
+		{/if}
+
 		{#if complete && score && session}
 			{@const revealedCount = session.items.filter((i) => i.status === 'revealed').length}
 			<div class="score-panel">
-				<h2>Done!</h2>
+				<h2>{mode === 'due' && allCaughtUp ? 'All caught up!' : 'Done!'}</h2>
 				<p>
 					<strong>{score.perfect}</strong> / {score.total} placed correctly on the first try.
 				</p>
@@ -321,7 +448,20 @@
 						{revealedCount} revealed after too many misses.
 					</p>
 				{/if}
-				<button onclick={restart}>Play again</button>
+				{#if mode === 'due' && allCaughtUp}
+					<p class="next-review-note">
+						Next review in {daysUntilNextReview} day{daysUntilNextReview === 1 ? '' : 's'}.
+					</p>
+					<div class="score-panel-actions">
+						<a class="score-panel-button" href={resolve('/')}>Back to maps</a>
+						<button class="secondary" onclick={startPractice}>Practice all regions</button>
+					</div>
+				{:else}
+					{#if mode === 'practice'}
+						<p class="practice-note">Practice results don't affect your review schedule.</p>
+					{/if}
+					<button onclick={playAgain}>Play again</button>
+				{/if}
 			</div>
 		{/if}
 	{/if}
@@ -470,8 +610,23 @@
 		font-size: 0.85rem;
 		color: #8a6d3b;
 	}
-	.score-panel button {
+	.practice-note {
+		font-size: 0.85rem;
+		opacity: 0.7;
+	}
+	.next-review-note {
+		font-size: 0.9rem;
+		font-weight: 600;
+		color: #2f6b45;
+	}
+	.score-panel-actions {
+		display: flex;
+		justify-content: center;
+		gap: 0.5rem;
 		margin-top: 0.75rem;
+	}
+	.score-panel button,
+	.score-panel-button {
 		font-family: inherit;
 		font-size: 0.9rem;
 		font-weight: 600;
@@ -480,7 +635,16 @@
 		border: none;
 		background: #5a9c6f;
 		color: white;
+		text-decoration: none;
 		cursor: pointer;
+	}
+	.score-panel > button {
+		margin-top: 0.75rem;
+	}
+	.score-panel button.secondary {
+		background: transparent;
+		color: #5a9c6f;
+		border: 1px solid #5a9c6f;
 	}
 	.error {
 		padding: 1rem;
