@@ -191,19 +191,22 @@
 
 		if (item.status === 'correct') {
 			markSolved(targetId, name, target.centroid, false);
-			progressRepository
-				.markTargetSolvedToday(mapId, targetId)
-				.catch((e) => console.error('Failed to save quiz progress:', e));
+			// Only a clean, error-free match counts as "settled for today" -
+			// a region you fumbled on (even if you got it right eventually)
+			// is exactly the one you need more practice on, so it should
+			// come back as a slip if you reopen this map later today rather
+			// than being excused from the tray.
+			if (item.errors === 0) {
+				progressRepository
+					.markTargetSolvedToday(mapId, targetId)
+					.catch((e) => console.error('Failed to save quiz progress:', e));
+			}
 		} else if (item.status === 'revealed') {
 			markSolved(targetId, name, target.centroid, true);
-			// Revealed counts as "settled for today" too - no reason to make
-			// you fail the same slip 3 more times if you reopen this map
-			// later today. The distinction from a genuinely correct answer
-			// isn't preserved across a reload (see progressRepository.ts);
-			// accepted simplification for this iteration.
-			progressRepository
-				.markTargetSolvedToday(mapId, targetId)
-				.catch((e) => console.error('Failed to save quiz progress:', e));
+			// Revealed always has errors > 0 by construction (see
+			// packages/quiz-engine), so it's never persisted as solved-today
+			// either - reopening the map later gives you a fresh 3 attempts,
+			// same as a target you never touched.
 		} else {
 			wrongFlashId = targetId;
 			if (exactName) {
