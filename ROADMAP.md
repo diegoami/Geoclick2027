@@ -17,7 +17,14 @@ Check items off as they land; update "Status" as iterations complete.
   quiz sessions, "practice all regions", home page due-state display).
   SQLite backend deferred to Iteration 7 as planned.
 - **Not started**: everything else below.
-- **Next up**: Iteration 7 (desktop POC packaging).
+- **Next up**: map expansion (see [MAPS.md](MAPS.md) — `italy-provinces`
+  first, no blockers; the two towns maps once the point-target design
+  question is resolved), then evaluating GUI/UX approaches (Iteration
+  8+'s "Evaluate GUI/UX approaches to make the interface more
+  captivating" item). **Iteration 7 (desktop POC packaging) is
+  deliberately deferred**, out of numeric order — explicit user
+  preference, not a scoping problem with Iteration 7 itself. Revisit
+  once maps + GUI work feels done, not on a fixed schedule.
 - **Reordered**: local persistence and spaced repetition swapped places
   from the original numbering. Spaced repetition is pointless without
   somewhere to remember what's due across sessions — user accounts
