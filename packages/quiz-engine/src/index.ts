@@ -25,10 +25,21 @@ export interface QuizSession {
  * forever. First guess, not measured - expect to retune. */
 export const MAX_ATTEMPTS_BEFORE_REVEAL = 3;
 
-export function createQuizSession(targets: QuizTarget[]): QuizSession {
+/** `alreadySolvedIds` seeds a session with targets pre-resolved as
+ * 'correct' (0 errors) rather than 'pending' - used to carry forward
+ * same-day progress (Iteration 5) so reopening a map you were partway
+ * through doesn't make you re-solve what you already got right. */
+export function createQuizSession(
+	targets: QuizTarget[],
+	alreadySolvedIds: ReadonlySet<string> = new Set()
+): QuizSession {
 	const sorted = [...targets].sort((a, b) => a.name.localeCompare(b.name));
 	return {
-		items: sorted.map((target) => ({ target, status: 'pending' as const, errors: 0 }))
+		items: sorted.map((target) => ({
+			target,
+			status: alreadySolvedIds.has(target.id) ? ('correct' as const) : ('pending' as const),
+			errors: 0
+		}))
 	};
 }
 

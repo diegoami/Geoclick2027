@@ -191,8 +191,19 @@
 
 		if (item.status === 'correct') {
 			markSolved(targetId, name, target.centroid, false);
+			progressRepository
+				.markTargetSolvedToday(mapId, targetId)
+				.catch((e) => console.error('Failed to save quiz progress:', e));
 		} else if (item.status === 'revealed') {
 			markSolved(targetId, name, target.centroid, true);
+			// Revealed counts as "settled for today" too - no reason to make
+			// you fail the same slip 3 more times if you reopen this map
+			// later today. The distinction from a genuinely correct answer
+			// isn't preserved across a reload (see progressRepository.ts);
+			// accepted simplification for this iteration.
+			progressRepository
+				.markTargetSolvedToday(mapId, targetId)
+				.catch((e) => console.error('Failed to save quiz progress:', e));
 		} else {
 			wrongFlashId = targetId;
 			if (exactName) {
@@ -234,7 +245,17 @@
 			const { mapDef: loadedMapDef, style } = await fetchMapDefAndStyle(mapId);
 			if (cancelled) return;
 			mapDef = loadedMapDef;
-			session = createQuizSession(loadedMapDef.targets.map((t) => ({ id: t.id, name: t.name })));
+
+			// Targets already solved today (in this or an earlier session)
+			// start pre-resolved rather than pending, so reopening a map
+			// you're partway through today doesn't ask you to re-solve what
+			// you already got right.
+			const solvedToday = await progressRepository.getTargetsSolvedToday(mapId);
+			if (cancelled) return;
+			session = createQuizSession(
+				loadedMapDef.targets.map((t) => ({ id: t.id, name: t.name })),
+				solvedToday
+			);
 
 			map = createMap(container, loadedMapDef, style);
 			if (typeof window !== 'undefined') {
@@ -243,6 +264,18 @@
 				// screen coordinates for a drag target.
 				(window as unknown as { __map?: maplibregl.Map }).__map = map;
 			}
+
+			// setFeatureState throws until the style has finished loading -
+			// defer the pre-marking loop to the map's 'load' event rather
+			// than running it immediately after construction.
+			map.once('load', () => {
+				if (cancelled || !session) return;
+				for (const item of session.items) {
+					if (item.status !== 'correct') continue;
+					const target = loadedMapDef.targets.find((t) => t.id === item.target.id)!;
+					markSolved(item.target.id, item.target.name, target.centroid, false);
+				}
+			});
 		})().catch((e) => {
 			error = e instanceof Error ? e.message : String(e);
 		});

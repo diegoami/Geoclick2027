@@ -646,6 +646,69 @@ wording); replaying a third time and finishing perfectly overwrote the
 stored summary rather than accumulating history, confirming the
 restart-resets-the-guard behavior.
 
+**Follow-up, found by asking "what if I don't finish the map?":** the
+above only persists a *completed* session. Abandon a quiz partway through
+and nothing is saved — reopening it later the same day made you re-solve
+everything from scratch, including regions you'd already gotten right
+minutes earlier. Decided this should count as progress for the day: a
+correctly-placed (or revealed) slip is now persisted immediately, not
+batched until the whole map is done, and reopening the same map later the
+same local calendar day shows those regions already "discovered" instead
+of asking again. This deliberately stops at "today" - it's not spaced
+repetition (no multi-day interval, no SM-2 grading), just a same-day
+stopgap so partial progress isn't thrown away; real due-date persistence
+across days is still Iteration 6's job.
+
+- [x] New repository methods: `getTargetsSolvedToday`/
+      `markTargetSolvedToday`, storing target ids under a
+      `{ date, targetIds }` record per map, compared against the local
+      calendar day (`getFullYear`/`getMonth`/`getDate`, not
+      `toISOString()`'s UTC date - a UTC-day check would flip near
+      midnight at the wrong moment for the user's actual day). A stale
+      (different-day) record reads back as empty, so the tray fully
+      resets the next day rather than silently carrying state forward
+      with no real due-date logic behind it.
+- [x] `packages/quiz-engine`'s `createQuizSession` takes an optional
+      `alreadySolvedIds` set and seeds matching targets as `'correct'`
+      instead of `'pending'` — the same shape Iteration 6 will reuse, just
+      fed by "solved today" for now instead of real due-date logic.
+      Backward compatible: omitting the argument behaves exactly as
+      before.
+- [x] `QuizView` reads `getTargetsSolvedToday` on load and passes it into
+      `createQuizSession`; pre-solved targets get the same popup/
+      feature-state treatment as a live correct drop, deferred to the
+      map's `load` event (`setFeatureState` throws `"Style is not done
+      loading"` if called immediately after `createMap` - caught directly
+      via a failing Playwright run, not guessed at). Both a correct
+      *and* a revealed drop now call `markTargetSolvedToday` — revealed
+      counts as "settled for today" too, so you're not forced to fail the
+      same slip 3 more times if you reopen the map later. The distinction
+      between "genuinely correct" and "revealed" isn't preserved across a
+      reload (both come back as plain "correct") — accepted simplification
+      for this pass, not a decision to revisit now.
+- [x] Known, disclosed simplification: a pre-solved target always
+      contributes `errors: 0` to that day's later `scoreSession`, even if
+      it took a few wrong attempts to originally solve — exact per-target
+      error counts aren't persisted, only the boolean "solved today". In
+      practice this makes the home page's "Last: X/Y" read as "current
+      state of the whole map" rather than strictly "how this one sitting
+      went," which was judged an acceptable, even reasonable, side effect
+      rather than a bug worth more storage to fix right now.
+
+**Verified:** 6 more unit tests (mark/retrieve, no duplicate entries,
+per-map isolation, resets on a new day, local-not-UTC day boundary) plus
+1 more in quiz-engine for the `alreadySolvedIds` seeding. Playwright:
+solved 3 of 16 targets on a map, left without finishing, navigated away
+and back to the same quiz - the 3 stayed shown as discovered (correct
+feature-state, popup rendered, subtitle read "3 / 16 placed", none of the
+3 reappeared in the tray). Confirmed separately that a *revealed* target
+(3 wrong drops) also stays settled across a reopen, and that a record
+from a different date is ignored (region returns to the tray, not stuck
+"solved" forever). Re-ran the full existing quiz-behavior regression
+suite (alphabetical order, Bremen's drop tolerance, drop-outside-map/
+tray/sea not counting as errors) to confirm none of this regressed the
+normal (nothing pre-solved) case.
+
 ## Iteration 6 — Spaced repetition (`packages/srs`)
 
 **Deliverable:** Replaying a map you already know well is a short session

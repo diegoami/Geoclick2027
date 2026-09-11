@@ -25,6 +25,15 @@ describe('createQuizSession', () => {
 		const session = createQuizSession(targets);
 		expect(session.items.map((i) => i.target.name)).toEqual(['Alpha', 'Beta', 'Gamma']);
 	});
+
+	it('pre-resolves targets in alreadySolvedIds as correct with no errors', () => {
+		const session = createQuizSession(targets, new Set(['a', 'c']));
+		const byId = (id: string) => session.items.find((i) => i.target.id === id)!;
+		expect(byId('a').status).toBe('correct');
+		expect(byId('a').errors).toBe(0);
+		expect(byId('c').status).toBe('correct');
+		expect(byId('b').status).toBe('pending');
+	});
 });
 
 describe('attemptMatch', () => {
