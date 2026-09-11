@@ -1,8 +1,9 @@
 # Geoclick — working notes for Claude
 
 Geography learning game. See [ARCHITECTURE.md](ARCHITECTURE.md) for system
-design and [ROADMAP.md](ROADMAP.md) for the iteration plan, current status,
-and per-iteration deliverables.
+design, [ROADMAP.md](ROADMAP.md) for the iteration plan, current status,
+and per-iteration deliverables, and [ONBOARDING.md](ONBOARDING.md) for a
+running guide aimed at a new/junior contributor picking up small tasks.
 
 ## Workflow
 
@@ -20,6 +21,10 @@ and per-iteration deliverables.
   the original design doc, keep it a real map of how the code is
   organized as it grows. This is how the user (who isn't reading the code
   directly) keeps a grasp of it.
+- Keep ONBOARDING.md current too: if a change adds a new gotcha, moves
+  where something important lives, or changes the day-to-day workflow,
+  reflect it there — it's written for a hypothetical junior dev and goes
+  stale the same way ROADMAP.md/ARCHITECTURE.md would if left alone.
 - Roles: the user is Product Manager, Claude is Developer. When an
   iteration's deliverable is complete, don't just declare it done — give the
   user concrete steps to verify it themselves (what to run, click, or look

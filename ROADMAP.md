@@ -627,3 +627,22 @@ loop actually feels good. Candidates below, in rough priority order.
       what the auth choice above already provides (several bundle a
       database) — another decision for when this iteration starts, not
       now.
+- [ ] **Evaluate GUI/UX approaches to make the interface more captivating.**
+      Right now the app is functional but plain (system-font UI chrome,
+      flat map, no motion beyond the wrong-drop shake) — differentiating
+      from Seterra was an original goal (see ARCHITECTURE.md's intro) and
+      visual polish is part of that, not just the tour/quiz mechanics.
+      Needs research before picking a direction, not a straight
+      implementation task:
+      - A component/design library (or a curated custom design system) for
+        consistent, less "default browser" chrome.
+      - Motion/feedback design beyond the current shake-on-wrong: reveal
+        animations, progress/streak indicators, sound (optional/mutable),
+        possibly a lightweight game-feel pass (juiciness) on correct drops.
+      - Map styling itself — base.json is currently a flat functional
+        palette; a more distinctive cartographic style (custom fills,
+        terrain/hillshade, dark mode) could be a differentiator on its own.
+      - Whatever's chosen needs to survive Tauri/Capacitor packaging later
+        (Iteration 7/8+) and not fight MapLibre's rendering model.
+      Revisit once the core loop (tour → quiz → score) is validated —
+      polish before the mechanics are proven risks wasted work.
