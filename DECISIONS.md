@@ -98,6 +98,16 @@ or amend an entry here as part of that change, not as an afterthought.
   otherwise the already-shipped, already-tested "mistakes resurface the
   same day" behavior regresses. See ROADMAP.md's Iteration 6 section,
   "Consistency review."
+- **Only a full fail ("again"/revealed) is forced to repeat the same
+  day — a recovered mistake ("hard": correct, but only after a wrong
+  drop) graduates normally to "due tomorrow-or-later," not a same-day
+  repeat.** A real fork, asked explicitly rather than assumed: strict
+  "any mistake means more practice today" (matching Iteration 5's
+  same-day rule to the letter) vs. standard spaced-repetition semantics,
+  where eventually getting it right still counts as a pass. Decided on
+  the latter. "Hard" still builds a weaker interval and lower ease
+  factor than "good" would, so it resurfaces sooner than a region
+  nailed first try — just not literally later the same day.
 - **Practice mode (planned, Iteration 6) never writes back to SRS
   state, and starts from a blank map.** It exists so replaying a
   mastered map is still possible once nothing's due, without that

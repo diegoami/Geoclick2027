@@ -825,6 +825,16 @@ contradictions/ambiguity, not just design in isolation):
   short interval). Pick the actual SM-2 grade constants during
   implementation, but the three-way mapping itself shouldn't be
   reinvented then.
+- **Resolved: "hard" graduates normally (due tomorrow-or-later), it does
+  not stay a same-day repeat like "again."** Asked explicitly rather than
+  assumed, since it's a real fork: strict "any mistake means more
+  practice today" (matching Iteration 5's same-day rule to the letter)
+  vs. standard spaced-repetition semantics, where eventually getting it
+  right still counts as a pass. Decided on the latter — "hard" still
+  advances past the "learning" phase, it just builds a weaker interval
+  and lower ease factor than "good" would, so it comes back sooner than
+  a region you nailed first try, but not literally later the same day.
+  Only "again"/revealed is the same-day-forced exception.
 - **The home page's due-state indicator and Iteration 5's
   `lastSessionSummary` display are complementary, not a replacement.**
   One answers "what's outstanding right now," the other "how did the
