@@ -1052,15 +1052,21 @@ loop actually feels good. Candidates below, in rough priority order.
       hypothetical junior dev from ONBOARDING.md) generating a usable new
       map solo, without going through Claude each time.
       - **Point-geometry targets (towns/cities)**, not just finer
-        polygons, is the real open design question here — see
-        [MAPS.md](MAPS.md)'s "Planned: next three maps" section for the
-        concrete version of this (Italian/German towns above a
-        population threshold): confirmed data source, confirmed target
-        counts, and the actual list of things that assume polygon
-        geometry today (hit-testing, camera framing, the shared style's
-        fill/outline layers) and would need real design work, not just a
-        new `--type` flag. Solve it once there, this item benefits too —
-        same blocker, not a separate one.
+        polygons, was the real open design question here — now designed
+        (not yet built) in [MAPS.md](MAPS.md)'s "Point-target design"
+        section, worked out against the actual current code (every
+        place that assumes polygon geometry — hit-testing, click/hover
+        binding, camera framing, the shared style — checked directly,
+        not assumed): a new `targets-circle` style layer alongside the
+        existing fill/outline ones, a separate `build-points-map.ts`
+        script rather than branching the existing polygon-oriented one,
+        and `Target.type` alone (no new map-level field) distinguishing
+        point maps from polygon ones. A few things deliberately left
+        open for when it's actually built (point-specific drop
+        tolerance, tour zoom level, whether hover tolerance should also
+        change for points) — see that section for what and why. Solve
+        it once there, this item benefits too — same blocker, not a
+        separate one.
       - **Remove the manual-curation dependency on Claude**, or at least
         shrink it: replace the hardcoded `NAME_FIXUPS` table with
         something data-driven (a per-country config file, not a code

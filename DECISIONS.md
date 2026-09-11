@@ -144,6 +144,21 @@ or amend an entry here as part of that change, not as an afterthought.
   outside conversation history. `MAPS.md` is the fix: every shipping
   map's command, plus planned ones, in one place — reproducing or
   auditing a map shouldn't depend on asking what was run.
+- **Point targets (towns/cities) get a new style layer and a new
+  pipeline script, not branches added to the existing polygon ones.**
+  Worked out against the actual code, not reasoned abstractly: checked
+  every place that currently assumes polygon geometry (hit-testing,
+  click/hover binding, camera framing, the `labels` source-layer — which
+  turned out to be unused by any app code at all, every popup anchors at
+  `Target.centroid` directly instead). A `targets-circle` style layer
+  reuses the exact same feature-state color scheme as `targets-fill` so
+  a point map plays like the same game with round markers, not a second
+  visual language. `Target.type` alone distinguishes a point map from a
+  polygon one — no new map-level "geometry kind" field, since a map is
+  always homogeneous. See `MAPS.md`'s "Point-target design" section for
+  the full breakdown, including what's deliberately left open (point
+  drop tolerance, tour zoom level) until it's actually built and can be
+  tuned against something real.
 - **Guided tour mode comes before the quiz**, pedagogically — represents
   ARCHITECTURE.md's original pitch: a reveal-first, tour-style
   introduction to a map before testing on it, differentiating from

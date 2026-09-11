@@ -122,38 +122,133 @@ Confirmed counts at a 100k threshold: **Italy ~15** (Rome down to
 Venice), **Germany ~46** (Berlin down to Gera) — both a reasonable quiz
 size, in the same range as the existing state/region maps.
 
-**This is the genuinely hard part of the plan — a real open design
-question, not an implementation detail to fill in later:**
+**Population data quality caveat**, found while confirming the counts
+above: Natural Earth's `POP_MAX` often reads as an urban-agglomeration
+estimate, not strict city-limits population — e.g. the pulled figures
+for Stuttgart (2.9M) and Mannheim (2.36M) are far above those cities'
+actual populations. The resulting ">100k" list may not match what
+someone intuitively expects as "German cities over 100k." Decide
+explicitly before building: accept it, switch fields (Natural Earth has
+more than one population column, not all checked yet), or set the
+threshold empirically instead of by a round number.
 
-- **Point geometry, not polygon.** Every part of the pipeline and the
-  app currently assumes polygon targets: `build-map.ts`'s simplify/tile
-  steps, `mapDefinition.ts`'s `Target` shape, MapLibre's `fill`/`line`
-  layers, `queryRenderedFeatures`-based hit-testing in `QuizView`,
-  polygon-bounds camera framing in `TourView`. A town is a point with no
-  natural "area" to fill, hover, or fit a camera to — this needs actual
-  design work across the map viewer, tour player, and quiz, not just a
-  new `--type` flag.
-- **Hit-testing changes shape.** The quiz's existing `DROP_TOLERANCE_PX`
-  tolerance-radius trick (added for small polygons like Bremen) is a
-  reasonable starting point for "how close counts as a hit" on a point
-  target, but it was built as an *assist* on top of polygon hit-testing,
-  not as the primary mechanism — needs to actually become the primary
-  mechanism for towns, not just reused as-is.
-- **Population data quality caveat**, found while confirming the counts
-  above: Natural Earth's `POP_MAX` often reads as an urban-agglomeration
-  estimate, not strict city-limits population — e.g. the pulled figures
-  for Stuttgart (2.9M) and Mannheim (2.36M) are far above those cities'
-  actual populations. The resulting ">100k" list may not match what
-  someone intuitively expects as "German cities over 100k." Worth an
-  explicit decision once this is actually being built: accept it,
-  switch fields (Natural Earth has more than one population column, not
-  all checked yet), or set the threshold empirically instead of by a
-  round number.
-- **Same open question as ROADMAP.md's "self-serve map-authoring
-  pipeline" backlog item** (Iteration 8+) — this isn't a second, separate
-  problem, it's the same one. Solve it once, both plans benefit.
+**Same open question as ROADMAP.md's "self-serve map-authoring
+pipeline" backlog item** (Iteration 8+) — this isn't a second, separate
+problem, it's the same one. Designed (not yet built) below; both plans
+benefit once it is.
 
-**Sequencing:** `italy-provinces` needs no new capability and could ship
-independently, soon. The two towns maps are blocked on the point-target
-design question above — don't start either until that's actually
-resolved, not just deferred again.
+## Point-target design
+
+The real blocker on the two towns maps, worked through end to end
+against the actual current code rather than reasoned about in the
+abstract — every file/layer named below was checked directly, not
+assumed. Design only, nothing here is built yet.
+
+**Why it's not just a new `--type` flag:** a town is a point with no
+natural area to fill, hover, or fit a camera to, and every part of the
+pipeline and app today assumes polygon targets:
+
+| Concern | Current polygon behavior | Confirmed by |
+|---|---|---|
+| Domain model | `Target.bbox` — used for tour camera framing | `TourView.svelte:57`, `map.fitBounds(target.bbox, ...)` — the *only* place `bbox` is read anywhere in `app/` |
+| Hit-testing | `queryRenderedFeatures` against the `targets-fill` layer only | `QuizView.svelte`'s `regionsNear` |
+| Click/hover | Bound to the `targets-fill` layer only | `MapView.svelte`'s `map.on('click'/'mouseenter'/'mouseleave', 'targets-fill', ...)` |
+| Style | `targets-fill` (fill) + `targets-outline` (line) | `data/styles/base.json` |
+| Labels | A separate `labels` point source-layer, one point per target | `build-map.ts` — but confirmed **unused**: nothing in `app/` actually queries it; every popup (`QuizView`, `OverviewView`, `TourView`) anchors at `target.centroid` from `map.json` directly, not a tile query |
+
+That last row matters: for a point target, the target's own geometry
+*is* already what the unused `labels` layer exists to provide. No need
+to carry that redundancy forward into point maps.
+
+**Proposed design:**
+
+1. **No new `MapDefinition`-level field for geometry kind.** A map is
+   homogeneous — every target is a polygon or every target is a point,
+   never mixed — so branching on `Target.type` (`'city'` alongside the
+   existing `'region' | 'state' | 'province'`) is enough; nothing needs
+   a separate "is this a point map" flag duplicating that information.
+2. **`Target.bbox` becomes degenerate for a point target** (the centroid
+   repeated as both corners) rather than a nullable field — keeps the
+   type simple, and `overallBounds()` (initial camera fit) already only
+   reads `centroid`, never `bbox`, so it needs no change at all.
+3. **New pipeline script, not new branches in `build-map.ts`.** The
+   existing script's dissolve/mapshaper-simplify/labels-layer steps are
+   all polygon-specific and don't apply to points — bolting point
+   support on with `if (isPointMap)` branches throughout would make an
+   already-nontrivial script harder to read for exactly the audience
+   (a PM, or ONBOARDING.md's hypothetical junior dev) the self-serve
+   goal is for. A second, smaller script (e.g.
+   `build-points-map.ts`, sharing the small reusable bits — slugify,
+   the lakes bounding-box selection, the pmtiles convert step — with
+   `build-map.ts`) reads as more self-serve, not less: two scripts each
+   doing one clear thing beats one script branching on geometry kind
+   throughout. Its job: filter `ne_10m_populated_places` by
+   `ADM0NAME`/`POP_MAX`, no dissolve, no polygon simplification, no
+   `labels` layer (redundant per above), still select nearby lakes the
+   same way (still useful context for a coastal or lake-adjacent city).
+4. **Style: add a `targets-circle` layer, don't replace anything.**
+   Same source-layer (`targets`), same feature-state-driven color
+   `case` expression already used by `targets-fill` (`quizWrong` →
+   `quizCorrect` → `quizRevealed` → `quizHover` → `highlighted` →
+   default) so a point map *looks* like the same game, just with round
+   markers instead of filled shapes — not a second visual language to
+   learn. `targets-fill`/`targets-outline` and the new `targets-circle`
+   coexist harmlessly in the one shared `base.json`: a polygon map's
+   tileset has no point features for `targets-circle` to draw, and vice
+   versa. Worth adding an explicit `['==', ['geometry-type'], 'Polygon']`
+   / `'Point'` filter to each pair while doing this — cheap correctness
+   insurance against a future map ever accidentally mixing geometry
+   kinds, not needed today but a small thing to get right while already
+   in this code.
+5. **Every hit-test/click/hover binding needs the second layer added
+   alongside the first, not swapped in.** `QuizView`'s `regionsNear`
+   queries `layers: ['targets-fill']` today; becomes `['targets-fill',
+   'targets-circle']`. Same pattern for `MapView`'s click/hover
+   bindings. Harmless for the same reason as point 4 — one of the two
+   layers is always empty for a given map.
+6. **`TourView`'s camera framing needs an actual branch, not just a
+   wider query.** `map.fitBounds(target.bbox, ...)` degenerates to
+   fitting a zero-size box for a point target — needs
+   `map.flyTo({ center: target.centroid, zoom: <N> })` instead when
+   `target.type` is a point type. **Open, needs real tuning once
+   built**: what zoom level reads as "looking at one city" — too far
+   out and the city is an insignificant dot with no sense of arrival,
+   too close and there's no surrounding context. Pick empirically
+   against the actual rendered map, the same way `DROP_TOLERANCE_PX`
+   was tuned against Bremen, not guessed once and left.
+
+**Open questions, deliberately not decided here:**
+
+- **Drop tolerance for points likely needs to be its own, larger
+  constant**, not reuse `DROP_TOLERANCE_PX` (24px, tuned for *small
+  polygons* like Bremen, which still have some inherent area). A point
+  has zero inherent area — the tolerance radius *is* the entire target.
+  Needs its own empirical pass once real point maps exist to test
+  against, the same way Bremen's number came from measuring an actual
+  miss, not a guess.
+- **Should hover tolerance also become nonzero for point maps?** Today,
+  hover is deliberately exact-pixel (0px) for every map, precision while
+  exploring, with tolerance only assisting the final drop. Exact-pixel
+  hovering over a small rendered circle marker may be meaningfully
+  harder than over even a small polygon — worth deciding once it can
+  actually be tried, not assumed either way.
+- **Label/marker crowding risk, worse than the existing known
+  limitation.** `ROADMAP.md`'s Iteration 2 follow-up already notes DOM
+  popups don't collision-avoid each other, spotted on a cluster of small
+  *polygons* (New England). A towns map has more targets *and* some are
+  genuinely close together (e.g. the Ruhr area's Essen/Duisburg/Dortmund/
+  Bochum) — likely a worse case of the same limitation, not a new one,
+  but worth checking against the real data once built rather than
+  assuming it's fine because the polygon case was tolerable.
+- **`'city'` vs `'town'` as the `TargetType` value** — minor, but pick
+  one deliberately; `MAPS.md`/`ROADMAP.md` currently say "towns" in
+  prose while `city` reads as the more standard term for a labeled
+  populated place regardless of exact size. Not worth much deliberation,
+  just worth not leaving inconsistent.
+
+**Sequencing:** `italy-provinces` needs none of the above and could ship
+independently, soon. The two towns maps depend on this design actually
+being implemented (not just agreed on) first — `build-points-map.ts`,
+the `targets-circle` style layer, and the hit-testing/camera-framing
+changes above are real work, not a footnote to add while building the
+first towns map.
