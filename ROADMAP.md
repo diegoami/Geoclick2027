@@ -17,13 +17,19 @@ Check items off as they land; update "Status" as iterations complete.
   quiz sessions, "practice all regions", home page due-state display).
   SQLite backend deferred to Iteration 7 as planned.
 - **Not started**: everything else below.
-- **Next up**: map expansion (see [MAPS.md](MAPS.md) — `italy-provinces`
-  first, no blockers; the two towns maps once the point-target design
-  question is resolved), then evaluating GUI/UX approaches (Iteration
-  8+'s "Evaluate GUI/UX approaches to make the interface more
-  captivating" item). **Iteration 7 (desktop POC packaging) is
-  deliberately deferred**, out of numeric order — explicit user
-  preference, not a scoping problem with Iteration 7 itself. Revisit
+- **Next up**: map expansion (see [MAPS.md](MAPS.md)), all of it —
+  `italy-provinces` (no blockers) *and* the two towns maps
+  (`italy-towns-100k`/`germany-towns-100k`) — before GUI/UX work, not
+  just provinces. Explicit user preference: wants cities/towns actually
+  playable before evaluating how the interface looks. That means the
+  point-target design question in MAPS.md (point geometry isn't
+  supported anywhere in the pipeline/app today) is a real near-term
+  prerequisite now, not a someday item — it has to get resolved for the
+  towns maps to happen at all. GUI/UX evaluation (Iteration 8+'s
+  "Evaluate GUI/UX approaches to make the interface more captivating"
+  item) comes after all three maps. **Iteration 7 (desktop POC
+  packaging) is deliberately deferred**, out of numeric order — explicit
+  user preference, not a scoping problem with Iteration 7 itself. Revisit
   once maps + GUI work feels done, not on a fixed schedule.
 - **Reordered**: local persistence and spaced repetition swapped places
   from the original numbering. Spaced repetition is pointless without
