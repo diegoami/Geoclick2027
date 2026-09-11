@@ -150,90 +150,27 @@ country, so a single Natural Earth dataset —
 `ne_10m_admin_1_states_provinces` — covers all of them consistently. That
 also means the same pipeline and the same base map style serve all three.
 
-### Pipeline
-
 ```
 /data
   /source                     raw downloaded Natural Earth files (gitignored)
   /scripts
-    fetch-natural-earth.sh    downloads + caches the admin-1 dataset
+    fetch-natural-earth.sh    downloads + caches source datasets
     build-map.ts              filter → simplify → tile → derive targets
   /maps
-    italy-regions/
-      map.json                Map Definition (metadata + curated targets)
-      tiles.pmtiles
-    germany-states/
-      map.json
-      tiles.pmtiles
-    usa-states/
-      map.json
-      tiles.pmtiles
+    <map-id>/map.json         Map Definition (metadata + curated targets)
+    <map-id>/tiles.pmtiles
   /styles
-    base.json                 shared MapLibre style (coastlines, context)
+    base.json                 shared MapLibre style
 ```
 
-**Steps to add a new admin-1 map:**
-
-1. `fetch-natural-earth.sh` — downloads `ne_10m_admin_1_states_provinces`
-   into `/data/source` if not already cached.
-2. `build-map.ts --country="Italy" --out=data/maps/italy-regions`:
-   - filters the source dataset to the target country (`ogr2ogr`/`mapshaper`
-     by the `admin` attribute),
-   - simplifies geometry for smaller tiles (`mapshaper -simplify`),
-   - runs `tippecanoe` to produce `tiles.pmtiles`,
-   - derives a draft `Target[]` list from the filtered GeoJSON (`id`, `name`
-     from `name`/`name_en`, `type: region|state`, polygon geometry), and a
-     default tour order sorted by centroid latitude/longitude as a starting
-     point.
-3. **Manual curation of `map.json`** — this step is intentionally not
-   automated:
-   - aliases for quiz matching (diacritics, alternate spellings, e.g.
-     "Baden-Württemberg" / "Baden-Wurttemberg"),
-   - difficulty tier,
-   - final tour order (a sensible narrative sweep, not just a lat/lon sort),
-   - optional hint text/image per target.
-4. Preview the map in the app's map viewer/editor to sanity-check hit-testing
-   and label placement at each zoom level.
-5. Commit `map.json` + `tiles.pmtiles` (or regenerate tiles at build time and
-   commit only `map.json`, if repo size becomes a concern).
-
-### Known snags (found while building the demo maps)
-
-- **Italy**: Natural Earth's admin-1 layer for Italy is actually at
-  **province** granularity (110 features), not regions — the 20 regioni
-  only exist as a `region` attribute on those province features.
-  `build-map.ts` supports a `--dissolve=<field>` option to merge same-value
-  features (here, by `region`) into the level we actually want, before
-  deriving targets. Germany and USA were checked too: Germany's admin-1
-  is already the 16 Bundesländer and USA's is already the 50 states + DC,
-  so neither needs dissolving. Also, two of Natural Earth's Italian region
-  names came through in English ("Apulia", "Sicily") rather than Italian —
-  corrected to "Puglia"/"Sicilia" with the English kept as an alias.
-- **USA — antimeridian bug**: Alaska's Aleutian Islands cross 180°
-  longitude, which broke naive min/max centroid math (`(minLon+maxLon)/2`
-  landed around 0°E — the wrong hemisphere entirely). `build-map.ts` now
-  detects longitude spans over 180° and shifts the smaller side by 360°
-  before averaging, unwrapping the result back into [-180, 180]. The `usa-states`
-  demo map no longer has any target that exercises this (Alaska is
-  excluded — see below), but the fix stays: it's still correct, general
-  logic worth having if a future map includes Russia, Fiji, or another
-  dateline-crossing territory.
-- **USA — Alaska/Hawaii**: superseded the original "accept the dead space,
-  no inset" call — excluded entirely instead (`build-map.ts --exclude`
-  drops named features from the admin-1 filter before anything downstream
-  sees them). Decided once actually looking at the rendered map: the
-  contiguous 48 + DC fill the frame far better without two distant outliers
-  stretching the bounds.
-- **USA — Michigan/Great Lakes**: without any water layer, a state whose
-  border runs along a lake reads as an unexplained gap next to its
-  neighbors rather than a coastline — worst on Michigan, whose two
-  peninsulas visually merged into Wisconsin/Ohio with nothing indicating
-  the Great Lakes between them. Not a geometry bug (each state's polygon
-  already correctly excludes the lake surface) — fixed by adding a third
-  `lakes` source-layer (Natural Earth `ne_10m_lakes`, selected per map by
-  bounding-box intersection rather than an `admin` match, since lakes
-  aren't tagged to a country the way states are) and a purely contextual
-  `lakes-fill` style layer. Applied to all three demo maps, not just USA.
+The scripts are committed to the repo on purpose, not run once and
+discarded — reproducing or auditing any map shouldn't depend on asking
+how it was made. **See [MAPS.md](MAPS.md)** for the actual process
+(step by step), the exact build command behind every map currently
+shipping, known snags found while building them, and what's planned
+next (Italian provinces; Italian/German towns above a population
+threshold — the latter genuinely blocked on a real design question, not
+just an unstarted task, see that file).
 
 ## Hosting / deployment
 

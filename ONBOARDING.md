@@ -28,6 +28,9 @@ leaving it stale for the next person.
    might have been a deliberate choice rather than an oversight — several
    entries exist specifically because something non-obvious got built,
    reconsidered, and corrected once already.
+6. [MAPS.md](MAPS.md) — only if you're touching map data. The exact
+   command behind every map currently shipping (so you can regenerate
+   one, not just guess), and what's planned next.
 
 ## What this project is
 
@@ -81,7 +84,9 @@ If you're fixing a UI bug in the quiz, you'll spend most of your time in
 `app/src/lib/QuizView.svelte` and possibly `packages/quiz-engine/src/index.ts`
 (the pure session state machine it calls into). If you're adding a new
 demo map, you'll spend it in `data/scripts/build-map.ts` and
-`data/maps/`. ARCHITECTURE.md has a per-area breakdown if you need more.
+`data/maps/` — read [MAPS.md](MAPS.md) first, it has the exact commands
+and the known snags already found. ARCHITECTURE.md has a per-area
+breakdown if you need more.
 
 ## Getting it running locally
 

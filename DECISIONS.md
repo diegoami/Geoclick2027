@@ -123,6 +123,14 @@ or amend an entry here as part of that change, not as an afterthought.
   map-authoring backlog item, which would need a different source (e.g.
   GADM) for finer administrative levels: don't adopt a new source
   without confirming it's actually redistributable the same way.
+- **Map-building scripts live in the repository, not run once from
+  outside it.** Stated explicitly at the user's request, though it was
+  already true in practice — `data/scripts/` is committed like any other
+  code. The gap this closes isn't the scripts existing, it's that no map
+  currently shipping had its exact build command recorded anywhere
+  outside conversation history. `MAPS.md` is the fix: every shipping
+  map's command, plus planned ones, in one place — reproducing or
+  auditing a map shouldn't depend on asking what was run.
 - **Guided tour mode comes before the quiz**, pedagogically — represents
   ARCHITECTURE.md's original pitch: a reveal-first, tour-style
   introduction to a map before testing on it, differentiating from

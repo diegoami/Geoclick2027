@@ -4,9 +4,11 @@ Geography learning game. See [ARCHITECTURE.md](ARCHITECTURE.md) for system
 design, [ROADMAP.md](ROADMAP.md) for the iteration plan, current status,
 and per-iteration deliverables, [ONBOARDING.md](ONBOARDING.md) for a
 running guide aimed at a new/junior contributor picking up small tasks,
-and [DECISIONS.md](DECISIONS.md) for a scannable log of *why* things work
+[DECISIONS.md](DECISIONS.md) for a scannable log of *why* things work
 the way they do — product/design decisions and the reasoning behind them,
-separate from this file's workflow rules.
+separate from this file's workflow rules — and [MAPS.md](MAPS.md) for the
+map-creation process: the exact build command behind every map currently
+shipping, and what's planned next.
 
 ## Workflow
 
@@ -33,6 +35,11 @@ separate from this file's workflow rules.
   form that's quick to scan later without digging through iteration
   prose. When a later decision corrects or supersedes an earlier one,
   update that entry rather than leaving a stale one to be found first.
+- Keep MAPS.md current whenever a map gets built or the pipeline
+  changes: record the exact command that produced a new map (not just
+  that it exists), and keep the "planned" section honest — move an
+  entry out once it's actually shipped rather than leaving it listed as
+  upcoming.
 - Roles: the user is Product Manager, Claude is Developer. When an
   iteration's deliverable is complete, don't just declare it done — give the
   user concrete steps to verify it themselves (what to run, click, or look

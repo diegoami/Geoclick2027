@@ -939,37 +939,32 @@ loop actually feels good. Candidates below, in rough priority order.
 
 - [ ] **Self-serve map-authoring pipeline** — right now, adding a new map
       means running `data/scripts/build-map.ts` by hand and knowing its
-      quirks: it only pulls Natural Earth's admin-1 dataset (states/
-      regions/provinces), per-country name fixes are a hardcoded table in
-      the script (`NAME_FIXUPS`) that needs a code edit for each new
-      country's quirks, the `pmtiles` binary is invoked from a hardcoded
-      local path, and the output always needs manual curation afterward
-      (tour order, aliases). None of that is reasonable to ask of someone
-      who isn't already deep in this codebase — the goal is a PM (or the
+      quirks: per-country name fixes are a hardcoded table in the script
+      (`NAME_FIXUPS`) that needs a code edit for each new country's
+      quirks, the `pmtiles` binary is invoked from a hardcoded local
+      path, and the output always needs manual curation afterward (tour
+      order, aliases). None of that is reasonable to ask of someone who
+      isn't already deep in this codebase — the goal is a PM (or the
       hypothetical junior dev from ONBOARDING.md) generating a usable new
-      map solo, without going through Claude each time. Candidate scope:
-      - **More administrative levels.** Admin-1 (current) plus finer
-        subdivisions (provinces/counties/comuni-equivalent — "admin-2").
-        Natural Earth's own admin-2 coverage is thin and US-centric, so a
-        finer level likely means a different source (e.g. GADM) — which
-        needs a licensing check first, since this project has stuck to
-        public-domain data on purpose (see ARCHITECTURE.md). Don't adopt
-        a new source without confirming it's actually redistributable the
-        same way.
-      - **Towns above a population threshold**, as its own target type,
-        not just finer polygons. Natural Earth's `ne_10m_populated_places`
-        has population figures and would work as the source. This is
-        point geometry, not polygons — the quiz's hit-testing was built
-        for small polygons (Bremen's `DROP_TOLERANCE_PX` fix, Iteration
-        4) and needs a look before assuming it generalizes cleanly to
-        points/markers.
+      map solo, without going through Claude each time.
+      - **Point-geometry targets (towns/cities)**, not just finer
+        polygons, is the real open design question here — see
+        [MAPS.md](MAPS.md)'s "Planned: next three maps" section for the
+        concrete version of this (Italian/German towns above a
+        population threshold): confirmed data source, confirmed target
+        counts, and the actual list of things that assume polygon
+        geometry today (hit-testing, camera framing, the shared style's
+        fill/outline layers) and would need real design work, not just a
+        new `--type` flag. Solve it once there, this item benefits too —
+        same blocker, not a separate one.
       - **Remove the manual-curation dependency on Claude**, or at least
         shrink it: replace the hardcoded `NAME_FIXUPS` table with
         something data-driven (a per-country config file, not a code
-        edit), make the `pmtiles` binary path configurable/discoverable
-        instead of hardcoded, and get the default tour order/aliases
-        output to a state that's usable as-is rather than expected to be
-        hand-tuned afterward.
+        edit — MAPS.md's provinces plan already found a second case that
+        needs this, Italian province names), make the `pmtiles` binary
+        path configurable/discoverable instead of hardcoded, and get the
+        default tour order/aliases output to a state that's usable as-is
+        rather than expected to be hand-tuned afterward.
       Sequencing note: this is a natural prerequisite to "Map editor UI"
       below, not a replacement for it — this produces the raw map
       package, the editor is for curating/tweaking one afterward.
