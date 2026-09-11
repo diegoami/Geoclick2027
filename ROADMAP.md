@@ -641,13 +641,30 @@ persist card state across sessions.
   - `isSessionComplete`/`scoreSession` only ever look at the due subset —
     a session's score reflects what was actually tested, not the whole
     map.
+- **Home page surfaces due state per map**: a map whose entire target set
+  is not-due shows something like "no reviews needed" instead of a plain
+  link — reachable without opening the map, since it's just reading each
+  map's persisted card state and checking the max `dueDate`. A map with
+  no SRS history at all (never played) is a distinct state from "fully
+  reviewed, none due" — don't conflate "never touched" with "mastered."
 - **Empty-queue handling**: once every target on a map is not-due, the
   due-quiz has nothing to show. Rather than leaving that as a dead end,
   add an explicit **"practice all regions"** control that ignores due
-  dates and runs a full quiz regardless (results still update SRS state
-  normally). This replaces "Play again" as the fallback once the due
-  queue is empty, rather than being a separate third mode.
-- After each attempt, feed the result into the scheduler:
+  dates and runs a full quiz regardless. This replaces "Play again" as
+  the fallback once the due queue is empty, rather than being a separate
+  third mode.
+  - Practice mode starts from a **blank map**, same as a first-ever play
+    — it does *not* inherit the due-session's "pre-mark not-due targets
+    as discovered" behavior, since the whole point is re-testing
+    everything, not showing what you already don't need to review.
+  - Practice mode's results **do not write back to SRS state** — no
+    `rate()` calls, no `dueDate` changes — at least for this first cut.
+    It's there so replaying a mastered map is still possible and still
+    gives you a score for that session, without that score silently
+    perturbing your review schedule. (Worth reconsidering later whether
+    practice performance should ever feed back in some lesser way, but
+    starting with "it doesn't" is the simpler, safer default.)
+- After each (non-practice) attempt, feed the result into the scheduler:
   `rate(targetId, grade) -> { easeFactor, interval, repetitions, dueDate }`
   using SM-2 (grade derived from correct-on-first-try vs. number of wrong
   attempts vs. revealed), and persist the result via Iteration 5's
@@ -661,12 +678,17 @@ persist card state across sessions.
 - [ ] Session-building logic (due/not-due split, "practice all" override)
       — likely belongs in `packages/quiz-engine` alongside
       `createQuizSession`, since it's still pure session-state logic, not
-      UI
+      UI. Needs a way to distinguish a "due" session from a "practice"
+      session so the caller knows whether to skip the `rate()` write-back.
 - [ ] `QuizView` changes: pre-mark not-due targets as discovered on
-      session start; "practice all" control shown when the due queue is
-      empty
+      session start for a due session (never for a practice session);
+      "practice all" control shown when the due queue is empty
+- [ ] Home page (`app/src/routes/+page.svelte`, currently a hardcoded
+      list with no per-map state at all) reads each map's due state from
+      Iteration 5's repository and shows "no reviews needed" vs. "N due"
+      vs. "not started yet"
 - [ ] Wire attempt results to `rate()` and persist via Iteration 5's
-      repository
+      repository — skipped entirely for practice-mode sessions
 - [ ] FSRS noted as a possible later upgrade (ARCHITECTURE.md already
       designs the scheduler interface to allow this) — not scoped now
 
