@@ -10,9 +10,12 @@ Check items off as they land; update "Status" as iterations complete.
 - **Done**: architecture proposal (`ARCHITECTURE.md`); Iteration 0 (repo &
   tooling scaffolding); Iteration 1 (demo map data pipeline); Iteration 2
   (core map viewer); Iteration 3 (tour mode); Iteration 3.5 (public
-  deploy — live on Netlify); Iteration 4 (quiz engine — drag-to-match).
+  deploy — live on Netlify); Iteration 4 (quiz engine — drag-to-match);
+  Iteration 5 (local persistence — repository interface + `localStorage`
+  backend, quiz results persisted and shown on the home page). SQLite
+  backend deferred to Iteration 7 as planned.
 - **Not started**: everything else below.
-- **Next up**: Iteration 5 (local persistence).
+- **Next up**: Iteration 6 (spaced repetition).
 - **Reordered**: local persistence and spaced repetition swapped places
   from the original numbering. Spaced repetition is pointless without
   somewhere to remember what's due across sessions — user accounts
@@ -591,33 +594,57 @@ persist into otherwise.
 — deliberately minimal, scoped to what Iteration 6 actually needs rather
 than a general-purpose stats system:
 
-- [ ] **Per-`(mapId, targetId)` SRS card state** — the load-bearing piece:
+- [x] **Per-`(mapId, targetId)` SRS card state** — the load-bearing piece:
       `easeFactor`, `interval` (days), `repetitions`, `dueDate`,
       `lastReviewedAt`. This is what Iteration 6 reads to decide which
-      regions are due and writes to after each attempt.
-- [ ] **Per-map `lastSessionSummary`** — the `{ total, perfect,
+      regions are due and writes to after each attempt. Storage and
+      retrieval exist and are unit-tested now; nothing writes real values
+      yet since there's no scheduler until Iteration 6.
+- [x] **Per-map `lastSessionSummary`** — the `{ total, perfect,
       totalErrors }` shape `scoreSession` already produces, so a map's
       picker/detail view can show "last time: 14/20" cheaply, reusing an
       existing type rather than inventing a new one.
-- [ ] Explicitly **not** in scope: full session history/trend charts
+- [x] Explicitly **not** in scope: full session history/trend charts
       (no immediate consumer — SRS only needs current card state, not a
       log), and custom-map storage (no map editor exists yet to produce
       one — Iteration 8+).
 
 **Implementation:**
 
-- [ ] Repository interface (`getCardState`/`saveCardState`/
-      `getLastSessionSummary`/... ) decoupled from the storage backend, so
+- [x] Repository interface (`app/src/lib/progressRepository.ts`):
+      `getCardStates`/`saveCardState`/`getLastSessionSummary`/
+      `saveLastSessionSummary`, decoupled from the storage backend so
       swapping backends later doesn't touch call sites
-- [ ] Browser implementation first (IndexedDB or `localStorage`, whichever
-      is simpler for this shape of data) — this is what's actually
+- [x] `localStorage`-backed implementation
+      (`createLocalStorageProgressRepository`) — this is what's actually
       deployed and testable today, unlike Tauri/SQLite which needs
-      Iteration 7's desktop packaging to even run
+      Iteration 7's desktop packaging to even run. Guards every read/write
+      behind `typeof localStorage === 'undefined'` since the home page is
+      prerendered (no `localStorage` at build time) — confirmed the
+      production build still completes cleanly with this in place.
 - [ ] SQLite implementation deferred to Iteration 7, behind the same
       repository interface — the interface is the thing that has to be
       right now, not which database backs it
-- [ ] Wire `QuizView`'s session completion (`scoreSession`'s result) to
-      write back through the repository
+- [x] Wired `QuizView`'s session completion to write back through the
+      repository (`$effect` on `complete`/`score`, guarded by a
+      `summarySaved` flag so it fires exactly once per completion, reset
+      on restart so a replay's result overwrites rather than being
+      ignored)
+- [x] Home page (`app/src/routes/+page.svelte`) reads each map's
+      `lastSessionSummary` on mount and shows "Last: 14/20 (2 mistakes)"
+      under its link — the concrete, visible proof the data round-trips,
+      not just an invisible write
+
+**Verified:** 9 new unit tests on the repository (save/retrieve/update
+card state and session summaries, per-map isolation, corrupt-data
+handling) plus `svelte-check`/lint/production build all clean. End-to-end
+via Playwright: completed a 16-target quiz, confirmed the exact JSON
+landed in `localStorage` under the map's key, then navigated to the home
+page and confirmed it rendered "Last: 16/16". A second run with one
+deliberate wrong drop showed "Last: 15/16 (1 mistake)" (correct singular
+wording); replaying a third time and finishing perfectly overwrote the
+stored summary rather than accumulating history, confirming the
+restart-resets-the-guard behavior.
 
 ## Iteration 6 — Spaced repetition (`packages/srs`)
 

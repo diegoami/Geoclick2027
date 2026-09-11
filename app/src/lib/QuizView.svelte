@@ -12,8 +12,11 @@
 		type QuizSession
 	} from '@geoclick/quiz-engine';
 	import type { MapDefinition } from './mapDefinition';
+	import { createLocalStorageProgressRepository } from './progressRepository';
 
 	let { mapId }: { mapId: string } = $props();
+
+	const progressRepository = createLocalStorageProgressRepository();
 
 	let container: HTMLDivElement;
 	let trayEl: HTMLDivElement;
@@ -43,6 +46,20 @@
 
 	let complete = $derived(session ? isSessionComplete(session) : false);
 	let score = $derived(session ? scoreSession(session) : undefined);
+
+	// Not reactive state - just a guard so a completed session's score is
+	// persisted exactly once, not on every reactive re-run while `complete`
+	// stays true. Reset on restart so the next completion saves again.
+	let summarySaved = false;
+
+	$effect(() => {
+		if (complete && score && !summarySaved) {
+			summarySaved = true;
+			progressRepository
+				.saveLastSessionSummary(mapId, { ...score, completedAt: new Date().toISOString() })
+				.catch((e) => console.error('Failed to save quiz progress:', e));
+		}
+	});
 
 	// Small regions (Bremen, Saarland...) can be a couple of screen pixels
 	// wide at a normal zoom level - an exact-pixel drop test makes them
@@ -206,6 +223,7 @@
 		}
 		for (const popup of solvedPopups.values()) popup.remove();
 		solvedPopups.clear();
+		summarySaved = false;
 		session = createQuizSession(mapDef.targets.map((t) => ({ id: t.id, name: t.name })));
 	}
 
