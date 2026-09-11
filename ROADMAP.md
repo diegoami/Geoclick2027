@@ -12,7 +12,15 @@ Check items off as they land; update "Status" as iterations complete.
   (core map viewer); Iteration 3 (tour mode); Iteration 3.5 (public
   deploy — live on Netlify); Iteration 4 (quiz engine — drag-to-match).
 - **Not started**: everything else below.
-- **Next up**: Iteration 5 (spaced repetition).
+- **Next up**: Iteration 5 (local persistence).
+- **Reordered**: local persistence and spaced repetition swapped places
+  from the original numbering. Spaced repetition is pointless without
+  somewhere to remember what's due across sessions — user accounts
+  aren't the missing piece (this stays local-first, no login, see
+  ARCHITECTURE.md's Storage section), local storage is. Iteration 5 is
+  now local persistence; Iteration 6 is spaced repetition, built on top
+  of it. Iteration 6's design also changed shape in the process — see
+  its section below.
 
 ## Process notes (not tied to a specific iteration)
 
@@ -569,17 +577,98 @@ from a one-off quiz.
 - [ ] `rate(cardId, grade) -> nextDueDate` interface
 - [ ] Session composer upgrade: mix due cards + new cards (Anki-style)
 
-## Iteration 6 — Local persistence
+## Iteration 5 — Local persistence
 
-**Deliverable:** Close the app and reopen it — progress, due cards, and
-stats are still there. Turns the demo into something you'd plausibly use
-across multiple sessions, not a one-shot toy.
+**Deliverable:** Close the browser tab and come back later — a map you've
+played before shows its last result, and (once Iteration 6 lands) which
+regions are already "discovered." No accounts, no login: everything is
+keyed to the device/browser, not a user. Still the same conclusion as
+ARCHITECTURE.md's Storage section reached originally, just built before
+spaced repetition instead of after, since spaced repetition has nothing to
+persist into otherwise.
 
-- [ ] Repository interface (maps, progress, card state), decoupled from
-      platform
-- [ ] SQLite implementation for Tauri; `sql.js`/IndexedDB fallback for
-      plain-browser dev
-- [ ] Wire quiz/SRS state through the repository; persists across restarts
+**What gets saved**, per the design discussion before writing this section
+— deliberately minimal, scoped to what Iteration 6 actually needs rather
+than a general-purpose stats system:
+
+- [ ] **Per-`(mapId, targetId)` SRS card state** — the load-bearing piece:
+      `easeFactor`, `interval` (days), `repetitions`, `dueDate`,
+      `lastReviewedAt`. This is what Iteration 6 reads to decide which
+      regions are due and writes to after each attempt.
+- [ ] **Per-map `lastSessionSummary`** — the `{ total, perfect,
+      totalErrors }` shape `scoreSession` already produces, so a map's
+      picker/detail view can show "last time: 14/20" cheaply, reusing an
+      existing type rather than inventing a new one.
+- [ ] Explicitly **not** in scope: full session history/trend charts
+      (no immediate consumer — SRS only needs current card state, not a
+      log), and custom-map storage (no map editor exists yet to produce
+      one — Iteration 8+).
+
+**Implementation:**
+
+- [ ] Repository interface (`getCardState`/`saveCardState`/
+      `getLastSessionSummary`/... ) decoupled from the storage backend, so
+      swapping backends later doesn't touch call sites
+- [ ] Browser implementation first (IndexedDB or `localStorage`, whichever
+      is simpler for this shape of data) — this is what's actually
+      deployed and testable today, unlike Tauri/SQLite which needs
+      Iteration 7's desktop packaging to even run
+- [ ] SQLite implementation deferred to Iteration 7, behind the same
+      repository interface — the interface is the thing that has to be
+      right now, not which database backs it
+- [ ] Wire `QuizView`'s session completion (`scoreSession`'s result) to
+      write back through the repository
+
+## Iteration 6 — Spaced repetition (`packages/srs`)
+
+**Deliverable:** Replaying a map you already know well is a short session
+covering only what you're actually forgetting, not the whole map again —
+the Anki-style hook that was the original differentiator from Seterra
+(see ARCHITECTURE.md's intro). Depends on Iteration 5 for somewhere to
+persist card state across sessions.
+
+**Design, decided before implementation:**
+
+- A quiz session is no longer "every target on the map, every time."
+  Targets split into two groups using the SRS state Iteration 5 persists:
+  - **Due or never reviewed** → real slips in the tray, played like today.
+  - **Not due yet** → pre-marked as solved on the map (same visual/popup
+    treatment as a slip you just correctly matched — "discovered"), no
+    slip in the tray. On a brand-new map with no SRS history, everything
+    is "never reviewed," so this is a full quiz, same as the current
+    behavior — the new behavior only kicks in once you've played a map
+    before.
+  - `isSessionComplete`/`scoreSession` only ever look at the due subset —
+    a session's score reflects what was actually tested, not the whole
+    map.
+- **Empty-queue handling**: once every target on a map is not-due, the
+  due-quiz has nothing to show. Rather than leaving that as a dead end,
+  add an explicit **"practice all regions"** control that ignores due
+  dates and runs a full quiz regardless (results still update SRS state
+  normally). This replaces "Play again" as the fallback once the due
+  queue is empty, rather than being a separate third mode.
+- After each attempt, feed the result into the scheduler:
+  `rate(targetId, grade) -> { easeFactor, interval, repetitions, dueDate }`
+  using SM-2 (grade derived from correct-on-first-try vs. number of wrong
+  attempts vs. revealed), and persist the result via Iteration 5's
+  repository.
+
+**Implementation:**
+
+- [ ] SM-2 scheduler in `packages/srs`, replacing the current
+      `placeholder = true` stub — pure TS, unit-tested like
+      `packages/quiz-engine`, no DOM/Svelte dependency
+- [ ] Session-building logic (due/not-due split, "practice all" override)
+      — likely belongs in `packages/quiz-engine` alongside
+      `createQuizSession`, since it's still pure session-state logic, not
+      UI
+- [ ] `QuizView` changes: pre-mark not-due targets as discovered on
+      session start; "practice all" control shown when the due queue is
+      empty
+- [ ] Wire attempt results to `rate()` and persist via Iteration 5's
+      repository
+- [ ] FSRS noted as a possible later upgrade (ARCHITECTURE.md already
+      designs the scheduler interface to allow this) — not scoped now
 
 ## Iteration 7 — Desktop POC packaging (milestone)
 

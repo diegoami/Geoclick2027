@@ -105,23 +105,30 @@ forever.
 
 The two-direction flashcard idea isn't gone, just deferred — nothing about
 the drag-to-match mechanic blocks adding it later as a second quiz mode.
-Each target's per-session error count (already tracked by `scoreSession`)
-is the natural input to spaced repetition once Iteration 5 adds it: targets
-missed more often get scheduled sooner. Start with **SM-2**; FSRS is a
-drop-in upgrade later since the scheduler interface (`rate(cardId, grade)
--> nextDueDate`) doesn't change.
+Each target's per-attempt result is the natural input to spaced repetition
+once Iteration 6 adds it: targets missed more often get scheduled sooner.
+Start with **SM-2**; FSRS is a drop-in upgrade later since the scheduler
+interface (`rate(cardId, grade) -> nextDueDate`) doesn't change. Iteration 6
+also changes what a quiz session *is*: only due (or never-seen) targets
+become slips, the rest show pre-solved as already "discovered" — see
+ROADMAP.md's Iteration 6 section for the full design, including the
+empty-queue/"practice all" fallback once a map has nothing due.
 
 ## Storage — local-first
 
-No backend for the POC. Progress and custom maps live in SQLite (Tauri
-plugin on desktop, Capacitor SQLite plugin on mobile, `sql.js`/IndexedDB in
-plain browser), behind one repository interface so the rest of the app never
-touches platform-specific storage code. A sync backend (accounts, shared
-maps) is a clean later addition precisely because it's local-first now —
-same shape as Anki's own architecture. First concrete trigger for that
-addition: recording quiz scores per user, which needs sign-in first
-(Google + other OAuth providers) — planned in ROADMAP.md's Iteration 8+,
-not started.
+No backend for the POC. Progress (per-target SRS card state, last quiz
+result per map) and, later, custom maps live in SQLite (Tauri plugin on
+desktop, Capacitor SQLite plugin on mobile, `sql.js`/IndexedDB in plain
+browser), behind one repository interface so the rest of the app never
+touches platform-specific storage code — see ROADMAP.md's Iteration 5 for
+the concrete data shape. Deliberately no user accounts for this: spaced
+repetition only needs somewhere to remember state across sessions on one
+device, not a login. A sync backend (accounts, shared maps, cross-device
+progress) is a clean later addition precisely because it's local-first
+now — same shape as Anki's own architecture. First concrete trigger for
+that addition: recording quiz scores per user across devices, which needs
+sign-in first (Google + other OAuth providers) — planned in ROADMAP.md's
+Iteration 8+, not started.
 
 ## Repo layout
 
