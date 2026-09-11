@@ -131,6 +131,20 @@ only the `targets-fill` layer, so the new `lakes-fill` layer was never
 expected to interfere, but verified rather than assumed) — no
 regressions.
 
+**Follow-up, found immediately after shipping the above:** the lakes
+were there but barely readable — the land fill (`targets-fill`, `#8fb8a8`
+at 85% opacity) and the lake fill (`#bcdcea` at 90%) were both pale,
+similarly-toned colors, easy to mistake for the same background at a
+glance. First instinct was to make the lake color more saturated, but
+the user's actual suggestion worked better: lower the *land* fill's
+opacity instead (`0.85` → `0.6`), so the lake blue reads clearly against
+lighter, less saturated land rather than trying to out-saturate it.
+Checked this didn't wash out the quiz's own feature-state colors
+(correct/wrong/revealed/hover, all more saturated than the base green to
+begin with) by screenshotting a solved region mid-quiz — still reads
+clearly distinct from unsolved territory. Re-ran the regression suite
+again after the change; still clean.
+
 ## Iteration 2 — Core map viewer
 
 **Deliverable:** Opening the app shows one of the three demo maps rendered

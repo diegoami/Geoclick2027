@@ -137,7 +137,11 @@ or amend an entry here as part of that change, not as an afterthought.
   into Canada, for instance), so they're selected by whether they
   intersect the map's overall bounding box, not by an `admin` field
   match — and a lake extending past that box is fine to keep, not
-  something to clip away.
+  something to clip away. First cut still read as barely visible — fixed
+  not by making the lake color more saturated (the first instinct) but by
+  lowering the *land* fill's opacity instead (`targets-fill` 0.85 → 0.6),
+  on the user's suggestion. Lighter land contrasts against the lake blue
+  better than a more saturated lake did against the land.
 - **An "Overview" view (all regions pre-labeled "discovered", no
   interaction beyond pan/zoom) sits above Tour and Quiz on the map
   landing page.** Requested directly: seeing the whole answer key at a
