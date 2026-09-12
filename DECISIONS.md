@@ -398,3 +398,57 @@ or amend an entry here as part of that change, not as an afterthought.
   Also lowered the default (30vh → 22vh) and minimum (15vh → 9vh) now
   that shrinking actually works - the old bounds were partly compensating
   for the bug by never asking for a height small enough to expose it.
+
+## Internationalization (i18n)
+
+- **Hand-rolled dictionary + `t()`/`tPlural()` helper (`app/src/lib/
+  i18n.svelte.ts`), not a library (`sveltekit-i18n`, `typesafe-i18n`,
+  inlang/Paraglide).** Requested directly by the user (2026-09-12),
+  alongside map-list reorganization and optional SSO. Scoped to the app's
+  own UI chrome only — nav labels, home page text, quiz/tour status and
+  button copy — around 35 distinct strings across five components. That's
+  well under the scale where a library's build-step/plugin machinery,
+  message-extraction tooling, or generated-types pipeline pays for
+  itself; CLAUDE.md's own guidance ("three similar lines is better than a
+  premature abstraction") points the same direction. A plain
+  `Record<TranslationKey, string>` per language, with `TranslationKey` a
+  union type (not `Record<string,string>`) so TypeScript itself catches a
+  missing translation as a compile error, gets the one property worth
+  having from a real i18n library — completeness checking — without any
+  of the tooling overhead.
+- **State lives in a module-scope Svelte 5 rune (`.svelte.ts`), not a
+  classic `writable` store.** `$state` at module scope is the documented
+  Svelte 5 pattern for state shared across components; every call site
+  reading `t()`/`getLanguage()` inside a template or `$derived` picks up
+  changes the same way reading any other `$state` value does, no store
+  subscription boilerplate needed.
+- **Persisted to `localStorage` under `geoclick:language:v1`, guarded the
+  same way `progressRepository.ts`'s `createLocalStorageProgressRepository`
+  is** (`typeof localStorage === 'undefined'` checks) — the home page and
+  other routes prerender at build time, when `localStorage` doesn't
+  exist. Defaults to English when nothing is stored or the value isn't a
+  recognized language.
+- **Map/target names are explicitly out of scope, on purpose.** Region
+  and city names (Toscana, Bayern, Kyiv, ...) are real geographic proper
+  nouns already localized per-country through `data/scripts/
+  build-map.ts`/`build-points-map.ts`'s `NAME_FIXUPS` tables and
+  `--name-field` — a separate, already-solved mechanism (see MAPS.md).
+  Routing those through the UI dictionary would conflict with decisions
+  already made per-country for reasons that have nothing to do with the
+  viewer's own display language.
+- **Pluralization is a hand-picked `.one`/`.other` key pair per counted
+  string (`tPlural()`), not a CLDR plural-rules library.** English,
+  German, and Italian all only distinguish singular (count === 1) from
+  everything else for the specific counts this app displays (mistakes,
+  days until next review) - matches how these strings were already
+  worded before i18n existed (`mistake`/`mistakes`, `day`/`days`).
+  Good enough for three languages and a handful of counted strings; would
+  need revisiting (a real plural-rules table) if a language with richer
+  plural categories (e.g. Polish, Russian) were ever added.
+- **Switcher is three small text pills (EN/DE/IT), not flags or a
+  dropdown.** Matches the existing muted, small-pill visual language from
+  GUI/UX round 1 (see above) rather than introducing a new control style.
+  Shown in two places: `MapNav.svelte` (present on every map-scoped view)
+  and the home page header (which doesn't render `MapNav`) - both reuse
+  the same `LanguageSwitcher.svelte` component rather than duplicating
+  the markup.

@@ -7,6 +7,8 @@
 		type SessionSummary
 	} from '$lib/progressRepository';
 	import { isDue } from '@geoclick/srs';
+	import { t, tPlural } from '$lib/i18n.svelte';
+	import LanguageSwitcher from '$lib/LanguageSwitcher.svelte';
 
 	const demoMaps = [
 		{ id: 'italy-regions', name: 'Italy — Regions' },
@@ -84,8 +86,11 @@
 </script>
 
 <main>
-	<h1>Geoclick</h1>
-	<p>Pick a demo map to explore.</p>
+	<div class="header-row">
+		<h1>Geoclick</h1>
+		<LanguageSwitcher />
+	</div>
+	<p>{t('home.subtitle')}</p>
 	<ul>
 		{#each demoMaps as map (map.id)}
 			{@const summary = lastSessions[map.id]}
@@ -95,14 +100,16 @@
 					<span class="map-name">{map.name}</span>
 					{#if due && due.kind !== 'notStarted'}
 						<span class="due-status" class:up-to-date={due.kind === 'upToDate'}>
-							{due.kind === 'upToDate' ? 'No reviews needed' : `${due.count} to review`}
+							{due.kind === 'upToDate'
+								? t('home.due.upToDate')
+								: t('home.due.toReview', { count: due.count })}
 						</span>
 					{/if}
 					{#if summary}
 						<span class="last-result">
-							Last: {summary.perfect}/{summary.total}
+							{t('home.lastResult', { perfect: summary.perfect, total: summary.total })}
 							{#if summary.totalErrors > 0}
-								({summary.totalErrors} mistake{summary.totalErrors === 1 ? '' : 's'})
+								{tPlural('home.mistakeCount', summary.totalErrors, { count: summary.totalErrors })}
 							{/if}
 						</span>
 					{/if}
@@ -118,6 +125,16 @@
 		margin: 4rem auto;
 		font-family: system-ui, sans-serif;
 		text-align: center;
+	}
+	.header-row {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.75rem;
+		flex-wrap: wrap;
+	}
+	.header-row h1 {
+		margin: 0;
 	}
 	ul {
 		list-style: none;

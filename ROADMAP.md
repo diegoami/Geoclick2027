@@ -63,11 +63,13 @@ Check items off as they land; update "Status" as iterations complete.
   design-system pass remain open on the GUI/UX item — revisit whenever
   it feels worth another round, not on a fixed schedule. Three more items
   requested 2026-09-12, tracked in the Iteration 8+ backlog below:
-  reorganizing the home page's map list, German/Italian UI languages
-  (both picked up as parallel background work, each in its own worktree/
-  branch), and optional cross-device score sync via sign-in (paused on a
-  provider/backend decision only the user can make, not started as
-  background work for that reason).
+  reorganizing the home page's map list (picked up as parallel background
+  work in its own worktree/branch), German/Italian UI languages (done —
+  see this section's Iteration 8+ entry and DECISIONS.md's
+  "Internationalization (i18n)" entry; built on `feature/i18n-de-it`, not
+  yet merged to `main`), and optional cross-device score sync via sign-in
+  (paused on a provider/backend decision only the user can make, not
+  started as background work for that reason).
 - **Reordered**: local persistence and spaced repetition swapped places
   from the original numbering. Spaced repetition is pointless without
   somewhere to remember what's due across sessions — user accounts
@@ -1410,7 +1412,7 @@ loop actually feels good. Candidates below, in rough priority order.
       existing per-map due-status/last-result display. Picked up as
       parallel background work in its own worktree/branch — see
       DECISIONS.md if a specific organization scheme was chosen there.
-- [ ] **Add German and Italian as UI languages** (at least) — requested
+- [x] **Add German and Italian as UI languages** (at least) — requested
       directly by the user (2026-09-12), alongside map-list reorganization
       and optional SSO above. Scoped to the app's own UI chrome (nav
       labels, buttons, status text) via a language switcher — explicitly
@@ -1418,8 +1420,22 @@ loop actually feels good. Candidates below, in rough priority order.
       geographic proper nouns already localized per-country through
       `NAME_FIXUPS`/`--name-field`, a different and already-solved
       problem, see MAPS.md). Picked up as parallel background work in its
-      own worktree/branch — see DECISIONS.md for which i18n approach was
-      chosen and why.
+      own worktree/branch (`feature/i18n-de-it`) — see DECISIONS.md's
+      "Internationalization (i18n)" entry for which approach was chosen
+      and why. Built as a small hand-rolled dictionary + `t()`/`tPlural()`
+      helper (`app/src/lib/i18n.svelte.ts`, a module-scope Svelte 5 rune),
+      not a library — around 35 UI strings across `MapNav.svelte`,
+      `+page.svelte`, `QuizView.svelte`, and `TourView.svelte`, translated
+      into natural English/German/Italian. A `LanguageSwitcher.svelte`
+      (three small EN/DE/IT pills, matching GUI/UX round 1's visual
+      language) is shown on every map-scoped view via `MapNav` and on the
+      home page header. Chosen language persists via `localStorage`
+      (guarded the same way `progressRepository.ts` is, for prerendering).
+      Verified in a real browser: switching language updates nav labels,
+      home page text, and quiz/tour status text live; the choice survives
+      a reload; a full quiz playthrough on `sweden-towns-100k` in Italian
+      and German showed correctly translated tray subtitle, score panel,
+      and "up to date"/practice-mode text throughout.
 - [x] **Evaluate GUI/UX approaches to make the interface more captivating —
       first round, merged to `main` 2026-09-12** (from
       `feature/gui-ux-nav-labels-colors`).
