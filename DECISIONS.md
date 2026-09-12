@@ -245,3 +245,13 @@ or amend an entry here as part of that change, not as an afterthought.
   alone. iOS stays a separate, later item regardless of this reordering:
   it hard-requires a Mac with Xcode, hardware this project doesn't have,
   so it can't be pulled forward the same way Android can.
+- **Capacitor's SQLite schema is hand-mirrored from Tauri's, not shared
+  code.** Same `card_states`/`last_session_summaries` tables, column for
+  column, in `capacitorProgressRepository.ts` — but typed out again
+  rather than extracted into one shared schema module, since Capacitor
+  has no equivalent of Tauri's single `migrations()` function to hang a
+  shared definition off of, and inventing a cross-platform migration
+  abstraction for two backends isn't worth it before a third ever
+  materializes. Accepted risk: the two schemas can drift if one is
+  changed without the other — flagged in ONBOARDING.md so it isn't
+  missed later.

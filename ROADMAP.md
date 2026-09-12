@@ -1254,12 +1254,31 @@ loop actually feels good. Candidates below, in rough priority order.
       below, not a replacement for it — this produces the raw map
       package, the editor is for curating/tweaking one afterward.
 - [ ] Map editor UI (author maps/tours without hand-editing JSON)
-- [ ] **Android packaging via Capacitor (POC), next up after the desktop
-      Tauri build.** Same "wrap the shared web core" strategy as
-      Iteration 7: `@capacitor/core`/`@capacitor/cli`, `npx cap add
-      android`, a third `ProgressRepository` implementation via
-      `@capacitor-community/sqlite` alongside the existing localStorage/
-      Tauri-SQLite ones. Distribution, roughly in order: a sideloaded
+- [~] **Android packaging via Capacitor (POC), in progress on
+      `feature/capacitor-android`.** Same "wrap the shared web core"
+      strategy as Iteration 7. Scaffolded so far: new `mobile/` npm
+      workspace (`mobile/capacitor.config.ts`, `webDir: '../app/build'`,
+      mirroring `desktop/src-tauri/tauri.conf.json`'s `frontendDist`),
+      native project generated via `npx cap add android`
+      (`mobile/android/`, committed like `desktop/src-tauri/` is — not
+      regenerated like `node_modules`), and a third `ProgressRepository`
+      implementation (`app/src/lib/capacitorProgressRepository.ts`) via
+      `@capacitor-community/sqlite`, same `card_states`/
+      `last_session_summaries` schema as the Tauri one, picked by
+      `createProgressRepository()` via `Capacitor.isNativePlatform()`.
+      Verified so far: full type-check/test/build suite stays clean, and
+      `npm run sync` (from `mobile/`) correctly copies all six maps'
+      real `.pmtiles`/`map.json` data (not broken symlinks) into
+      `android/app/src/main/assets/public` — confirmed directly on this
+      Windows machine, so the same symlink/`.gitattributes` fixes from
+      Iteration 7 already cover this path too. Also added `*.jar binary`
+      to `.gitattributes` pre-emptively, since `gradle-wrapper.jar` is
+      the same class of binary-corruption risk `.pmtiles` already hit
+      once. **Not yet verified**: actually running in an emulator or on
+      a device — blocked on the user installing Android Studio (which
+      bundles the JDK Gradle needs) and setting up an AVD, since neither
+      existed on this machine at all (no `java`, `adb`, or Android SDK
+      found). Distribution, roughly in order: a sideloaded
       signed APK first (free, immediate, good enough for portfolio
       demoing); a Google Play Console account ($25 one-time) with the
       **Internal Testing** track if a shareable "real install" link is

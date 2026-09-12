@@ -123,13 +123,15 @@ No backend for the POC. Progress (per-target SRS card state, last quiz
 result per map) lives behind one `ProgressRepository` interface
 (`app/src/lib/progressRepository.ts`) so the rest of the app never
 touches platform-specific storage code — see ROADMAP.md's Iteration 5 for
-the concrete data shape. Two implementations exist behind it today:
-`localStorage` in the plain browser, and SQLite via `tauri-plugin-sql` on
+the concrete data shape. Three implementations exist behind it today,
+picked automatically at runtime by `createProgressRepository()`:
+`localStorage` in the plain browser; SQLite via `tauri-plugin-sql` on
 desktop (Iteration 7, `desktop/src-tauri/src/lib.rs`'s `migrations()` is
-the schema), picked automatically at runtime by `createProgressRepository()`
-checking `isTauri()`. A Capacitor SQLite plugin implementation for mobile
-is the natural next one when mobile packaging happens (Iteration 8+, not
-started) — same interface, same pattern. Deliberately no user accounts for
+the schema), picked when `isTauri()`; and SQLite via
+`@capacitor-community/sqlite` on Android (Iteration 8+,
+`app/src/lib/capacitorProgressRepository.ts`, same schema hand-mirrored
+since Capacitor has no separate migrations file of its own), picked when
+`Capacitor.isNativePlatform()`. Deliberately no user accounts for
 this: spaced
 repetition only needs somewhere to remember state across sessions on one
 device, not a login. A sync backend (accounts, shared maps, cross-device

@@ -70,15 +70,22 @@ function writeJson(key: string, value: unknown): void {
 }
 
 // Picks the SQLite-backed repository (desktop/src-tauri/src/lib.rs's
-// migrations()) when running inside the Tauri shell, localStorage
-// otherwise - the one place that decides, so call sites (QuizView, the
-// home page) stay backend-agnostic as designed. Dynamic import so a
-// plain-browser build never pulls in @tauri-apps/plugin-sql at all.
+// migrations(), or capacitorProgressRepository.ts's identical schema on
+// Android) when running inside the Tauri shell or a native Capacitor
+// platform, localStorage otherwise - the one place that decides, so call
+// sites (QuizView, the home page) stay backend-agnostic as designed.
+// Dynamic imports so a plain-browser build never pulls in
+// @tauri-apps/plugin-sql or @capacitor-community/sqlite at all.
 export async function createProgressRepository(): Promise<ProgressRepository> {
 	const { isTauri } = await import('@tauri-apps/api/core');
 	if (isTauri()) {
 		const { createSqliteProgressRepository } = await import('./sqliteProgressRepository');
 		return createSqliteProgressRepository();
+	}
+	const { Capacitor } = await import('@capacitor/core');
+	if (Capacitor.isNativePlatform()) {
+		const { createCapacitorProgressRepository } = await import('./capacitorProgressRepository');
+		return createCapacitorProgressRepository();
 	}
 	return createLocalStorageProgressRepository();
 }

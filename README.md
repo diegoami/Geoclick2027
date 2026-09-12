@@ -42,6 +42,25 @@ npm run build
 Installers land under `desktop/src-tauri/target/release/bundle/`
 (`.msi`/`.exe` on Windows, `.deb`/`.rpm`/`.AppImage` on Linux).
 
+## Quick start (Android)
+
+Needs [Android Studio](https://developer.android.com/studio) (bundles the
+JDK Gradle needs) with an emulator (AVD) set up, or a real device with USB
+debugging enabled. Once that's in place:
+
+```bash
+npm install                    # from the repo root, once
+npm run build --workspace=app  # builds app/build, the web assets the app wraps
+cd mobile
+npm run sync                   # copies app/build + native plugins into android/
+npm run open                   # opens the project in Android Studio
+```
+
+From Android Studio, press Run to build and launch on the selected
+emulator/device. There's no `dev`-mode live-reload script yet (unlike
+desktop) — re-run `npm run sync` after any app change and re-launch from
+Android Studio to see it.
+
 ## More docs
 
 - [ARCHITECTURE.md](ARCHITECTURE.md) — system design and stack choices

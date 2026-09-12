@@ -14,3 +14,7 @@
 *.woff binary
 *.woff2 binary
 *.ttf binary
+# mobile/android/gradle/wrapper/gradle-wrapper.jar (Iteration 8+, Android
+# POC) is the same class of risk - a binary format that must never go
+# through autocrlf, added preemptively rather than waiting to hit it.
+*.jar binary
