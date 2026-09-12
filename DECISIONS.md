@@ -238,3 +238,10 @@ or amend an entry here as part of that change, not as an afterthought.
   backend-agnostic (see Iteration 5's design) specifically so this swap
   wouldn't need one — confirmed by writing the SQLite implementation
   with zero changes to the interface itself.
+- **Android packaging (Capacitor) reprioritized ahead of the GUI/UX
+  evaluation too**, same reasoning as Tauri above — explicit user
+  request to have both real packaged shells (desktop *and* mobile) in
+  hand before spending time on interface redesign, not just desktop
+  alone. iOS stays a separate, later item regardless of this reordering:
+  it hard-requires a Mac with Xcode, hardware this project doesn't have,
+  so it can't be pulled forward the same way Android can.

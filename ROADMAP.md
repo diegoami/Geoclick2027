@@ -26,11 +26,13 @@ Check items off as they land; update "Status" as iterations complete.
   detail including one gap honestly flagged: a live quiz-answer write
   wasn't click-tested end to end in this dev sandbox).
 - **Not started**: everything else below.
-- **Next up**: GUI/UX evaluation (Iteration 8+'s "Evaluate GUI/UX
-  approaches to make the interface more captivating" item), once the user
-  has tried the desktop build themselves and approved merging it.
-  GUI/UX evaluation (Iteration 8+'s "Evaluate GUI/UX approaches to make the
-  interface more captivating" item) now comes after.
+- **Next up**: Android packaging via Capacitor (Iteration 8+'s "Android
+  packaging via Capacitor (POC)" item) — reprioritized ahead of the
+  GUI/UX evaluation on 2026-09-12, same reasoning as Tauri jumping the
+  queue earlier: get both real packaged shells (desktop + mobile) in
+  hand before spending time on interface redesign, once the user has
+  tried the desktop build themselves and approved merging it. GUI/UX
+  evaluation comes after Android, not before.
   Revisit once GUI work feels done, not on a fixed schedule.
 - **Reordered**: local persistence and spaced repetition swapped places
   from the original numbering. Spaced repetition is pointless without
@@ -1230,7 +1232,23 @@ loop actually feels good. Candidates below, in rough priority order.
       below, not a replacement for it — this produces the raw map
       package, the editor is for curating/tweaking one afterward.
 - [ ] Map editor UI (author maps/tours without hand-editing JSON)
-- [ ] Mobile packaging via Capacitor
+- [ ] **Android packaging via Capacitor (POC), next up after the desktop
+      Tauri build.** Same "wrap the shared web core" strategy as
+      Iteration 7: `@capacitor/core`/`@capacitor/cli`, `npx cap add
+      android`, a third `ProgressRepository` implementation via
+      `@capacitor-community/sqlite` alongside the existing localStorage/
+      Tauri-SQLite ones. Distribution, roughly in order: a sideloaded
+      signed APK first (free, immediate, good enough for portfolio
+      demoing); a Google Play Console account ($25 one-time) with the
+      **Internal Testing** track if a shareable "real install" link is
+      wanted without public review; full public Play Store listing only
+      if actual discoverability matters, which brings an ongoing
+      maintenance cost (Google periodically bumps the minimum
+      `targetSdkVersion` apps must meet to stay installable). iOS is a
+      separate, later item — it hard-requires a Mac with Xcode (an Apple
+      platform restriction, not a tooling choice) plus a $99/year
+      developer account for anything beyond your own device, so it's
+      blocked on hardware/account setup this project doesn't have yet.
 - [x] ~~Plain-browser deployment (static hosting)~~ — done in Iteration 3.5,
       live on Netlify
 - [ ] **Sign-in (Google + other OAuth providers)**, as the prerequisite for
@@ -1270,7 +1288,12 @@ loop actually feels good. Candidates below, in rough priority order.
       - Map styling itself — base.json is currently a flat functional
         palette; a more distinctive cartographic style (custom fills,
         terrain/hillshade, dark mode) could be a differentiator on its own.
-      - Whatever's chosen needs to survive Tauri/Capacitor packaging later
-        (Iteration 7/8+) and not fight MapLibre's rendering model.
-      Revisit once the core loop (tour → quiz → score) is validated —
-      polish before the mechanics are proven risks wasted work.
+      - Whatever's chosen needs to keep working inside the Tauri desktop
+        shell (Iteration 7) and the upcoming Android/Capacitor one, not
+        fight MapLibre's rendering model in either.
+      **Explicitly sequenced after the Android POC above**, not just
+      "once the core loop is validated" — reprioritized at the user's
+      request once both desktop (Tauri) and mobile (Android/Capacitor)
+      packaging are in hand, so the visual-polish pass has both real
+      shells to actually survive in, not just the browser. Polish before
+      the mechanics/packaging are proven risks wasted work either way.
