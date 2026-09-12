@@ -131,15 +131,29 @@ the schema), picked when `isTauri()`; and SQLite via
 `@capacitor-community/sqlite` on Android (Iteration 8+,
 `app/src/lib/capacitorProgressRepository.ts`, same schema hand-mirrored
 since Capacitor has no separate migrations file of its own), picked when
-`Capacitor.isNativePlatform()`. Deliberately no user accounts for
-this: spaced
-repetition only needs somewhere to remember state across sessions on one
-device, not a login. A sync backend (accounts, shared maps, cross-device
-progress) is a clean later addition precisely because it's local-first
-now — same shape as Anki's own architecture. First concrete trigger for
-that addition: recording quiz scores per user across devices, which needs
-sign-in first (Google + other OAuth providers) — planned in ROADMAP.md's
-Iteration 8+, not started.
+`Capacitor.isNativePlatform()`. Deliberately no user accounts required to
+play: spaced repetition only needs somewhere to remember state across
+sessions on one device, not a login.
+
+A fourth, **optional** backend now exists on top of this (Iteration 8+,
+not merged to `main` yet - see ROADMAP.md): `supabaseProgressRepository.ts`,
+a multi-user `ProgressRepository` implementation backed by Supabase
+(Postgres + Google OAuth), for anyone who wants their progress to follow
+them across devices. Nothing above changes for the default, signed-out
+case - `createProgressRepository()`'s platform detection is untouched.
+Call sites instead go through a new `createActiveProgressRepository()`
+(`app/src/lib/progressSync.ts`), which is a pure pass-through to the local
+repository above unless someone is actually signed in via Supabase, in
+which case it reconciles that device's local progress with the remote
+tables once and then prefers remote as the source of truth - see
+DECISIONS.md's "Cross-device sync (Supabase)" entry for the exact
+reconciliation strategy and RLS approach, and ONBOARDING.md's "Enabling
+cross-device sync (Supabase)" for the manual setup this needs before it
+works (creating a real Supabase project is the user's own action, never
+automated). Confirms the original prediction below: sign-in turned out to
+be exactly the trigger for a sync backend, and this stays a strict
+addition on top of local-first, not a replacement for it - same shape as
+Anki's own architecture (local by default, an optional account for sync).
 
 ## Repo layout
 

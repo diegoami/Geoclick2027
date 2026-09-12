@@ -60,10 +60,20 @@ app/                    SvelteKit app (the actual game UI)
     QuizView.svelte      drag-and-drop quiz mode (the most complex view)
     geoclickMap.ts        shared map-loading helpers used by all three views
     mapDefinition.ts, tour.ts   data-shape types + tour logic
+    progressRepository.ts, sqliteProgressRepository.ts,
+    capacitorProgressRepository.ts   local-first storage backends (see
+                                       ARCHITECTURE.md's Storage section)
+    supabaseClient.ts, supabaseProgressRepository.ts, authStore.svelte.ts,
+    progressSync.ts, AccountStatus.svelte   optional cross-device sync
+                                              (Iteration 8+) - see this
+                                              file's "Enabling cross-device
+                                              sync (Supabase)" section
   src/routes/            SvelteKit file-based routing
   static/maps -> ../../data/maps       symlink, see "Gotchas" below
   static/styles -> ../../data/styles   symlink, same gotcha
   scripts/copy-maplibre-worker.mjs     postbuild step, see "Gotchas"
+  .env.example            the two optional PUBLIC_SUPABASE_* vars - copy to
+                            .env locally to turn sign-in on, see below
 
 packages/
   quiz-engine/            pure quiz session logic (no DOM/Svelte) - the
@@ -79,6 +89,10 @@ data/
   styles/base.json         shared MapLibre style, used by all maps
   source/                  raw Natural Earth downloads
   scripts/build-map.ts     the pipeline that turns source data into a map/
+  supabase/schema.sql      optional cross-device sync DB schema + RLS
+                            policies (Iteration 8+) - run once in a real
+                            Supabase project's SQL Editor, see this file's
+                            "Enabling cross-device sync (Supabase)" section
 
 desktop/                  Tauri wrapper (Iteration 7) - wraps app/build
                            unmodified in a native window, no separate UI code
@@ -195,6 +209,72 @@ change one schema, change the other.
 
 There's no `dev`-mode live-reload yet - re-run `npm run sync` and
 relaunch from Android Studio after any app change.
+
+## Enabling cross-device sync (Supabase) (Iteration 8+, added 2026-09-12)
+
+Sign-in and cross-device score sync are **optional** — the app plays
+exactly as before with no setup at all, for every existing user. This
+section is only for turning the feature *on*, which nobody but the
+project owner can do (Claude cannot create third-party accounts on
+anyone's behalf — see DECISIONS.md's "Cross-device sync (Supabase)"
+entry). Everything below is a one-time setup a human does in a browser.
+
+1. **Create a Supabase project.** [supabase.com](https://supabase.com) →
+   New project. Any name/region/plan works for this; the free tier is
+   enough for a portfolio project's traffic.
+2. **Run the schema.** In the project's dashboard: **SQL Editor → New
+   query**, paste the entire contents of `data/supabase/schema.sql`, and
+   run it. Creates `card_states`/`session_summaries` (mirroring the Tauri/
+   Capacitor SQLite schemas plus a `user_id` column) with row-level
+   security policies already applied — nothing else to configure on the
+   database side. Safe to re-run if needed (every statement is
+   idempotent).
+3. **Enable the Google OAuth provider.** Dashboard → **Authentication →
+   Providers → Google** → toggle it on. This needs a Google OAuth Client
+   ID/Secret from the [Google Cloud
+   Console](https://console.cloud.google.com/apis/credentials) (OAuth
+   consent screen + an "OAuth client ID" of type "Web application") —
+   Supabase's own provider setup page links directly to the right Google
+   Cloud screens and shows the exact redirect URI Google needs, which is
+   generated per-project (`https://<your-project-ref>.supabase.co/auth/v1/callback`).
+   Paste that into Google Cloud's "Authorized redirect URIs", then paste
+   the Client ID/Secret Google gives back into Supabase's Google provider
+   settings.
+4. **Set the auth redirect URL(s).** Dashboard → **Authentication → URL
+   Configuration → Redirect URLs**. Add both:
+   - `http://localhost:5173/**` (or whatever port `npm run dev` actually
+     prints) for local testing
+   - your production Netlify URL, e.g. `https://<your-site>.netlify.app/**`
+     for the live deploy
+   The app itself passes `redirectTo: window.location.origin` when
+   starting the OAuth flow (`app/src/lib/authStore.svelte.ts`), so it
+   always redirects back to wherever it was opened from — these two
+   entries just need to be on Supabase's allow-list.
+5. **Get the two values the app needs.** Dashboard → **Project Settings →
+   Data API** → the **Project URL** and the **anon / public** API key
+   (not the `service_role` key — that one must never end up in client-side
+   code or an env var this app reads).
+6. **Set the env vars, in both places:**
+   - **Locally**: copy `app/.env.example` to `app/.env` and fill in
+     `PUBLIC_SUPABASE_URL`/`PUBLIC_SUPABASE_ANON_KEY` with the values from
+     step 5, then restart `npm run dev --workspace=app`.
+   - **Netlify**: Site configuration → **Environment variables** → add the
+     same two keys/values, then trigger a new deploy (env var changes
+     don't apply to already-built output) — per CLAUDE.md, let a normal
+     git-triggered build pick this up rather than manually triggering one
+     just to check.
+7. **Test it.** With the env vars set locally, `npm run dev --workspace=app`
+   and open the home page — the "Cross-device sync isn't set up" line
+   should be replaced by a "Sign in with Google" button. Sign in, play a
+   map, check the Supabase dashboard's **Table Editor** for a row in
+   `card_states`/`session_summaries` under your account, then open the app
+   on a second device/browser and sign in with the same Google account to
+   confirm the progress follows you.
+
+Until these steps are done, `PUBLIC_SUPABASE_URL`/`PUBLIC_SUPABASE_ANON_KEY`
+stay unset and the app behaves exactly as it always has — no error, no
+broken button, just the local-only experience every existing user already
+has.
 
 ## Building a new map, on Windows (added when France/Spain/GB/Poland/
 Ukraine/Sweden were added, 2026-09-12)

@@ -13,11 +13,8 @@
 		type QuizSession
 	} from '@geoclick/quiz-engine';
 	import type { MapDefinition } from './mapDefinition';
-	import {
-		createProgressRepository,
-		todayLocalDate,
-		type ProgressRepository
-	} from './progressRepository';
+	import { todayLocalDate, type ProgressRepository } from './progressRepository';
+	import { createActiveProgressRepository } from './progressSync';
 	import {
 		isDue,
 		rate,
@@ -536,7 +533,7 @@
 		let cancelled = false;
 
 		(async () => {
-			progressRepository = await createProgressRepository();
+			progressRepository = await createActiveProgressRepository();
 			const { mapDef: loadedMapDef, style } = await fetchMapDefAndStyle(mapId);
 			if (cancelled) return;
 			mapDef = loadedMapDef;

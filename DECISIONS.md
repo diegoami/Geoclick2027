@@ -128,6 +128,74 @@ or amend an entry here as part of that change, not as an afterthought.
   practice never changes due-state, it now starts another practice round
   directly instead of re-running a due-check that can't have changed.
 
+## Cross-device sync (Supabase)
+
+- **Supabase chosen for the optional sign-in/sync backend, over Auth0/
+  Clerk or a hand-rolled OAuth flow.** User's own decision, not Claude's —
+  recorded here per the process this file exists for. Reasoning as given:
+  it bundles Google OAuth *and* a Postgres database in one service, so the
+  score-sync piece (which needs somewhere durable to live anyway) doesn't
+  need a second vendor decision on top of the auth one. See ROADMAP.md's
+  Iteration 8+ entry for what was actually built on top of that choice.
+- **Claude never creates the real Supabase project, account, or any other
+  third-party account — a hard rule, not a project convention.** The
+  entire integration (`app/src/lib/supabaseClient.ts`,
+  `supabaseProgressRepository.ts`, `data/supabase/schema.sql`) is built and
+  verified against environment-variable placeholders
+  (`PUBLIC_SUPABASE_URL`/`PUBLIC_SUPABASE_ANON_KEY`) that are absent in
+  every environment this was developed in. `getSupabaseClient()` returns
+  `undefined` when either is unset, and every call site is required to
+  treat that as "feature not configured" rather than erroring — verified
+  by running the full check/test/build suite and the dev server with no
+  env vars set. Manual project creation, running `schema.sql`, enabling
+  the Google provider, and setting the real env vars are the user's own
+  steps — see ONBOARDING.md's "Enabling cross-device sync (Supabase)".
+- **`$env/dynamic/public`, not `$env/static/public`, for reading the two
+  Supabase env vars.** A static named import of an unset `PUBLIC_*` var
+  from `$env/static/public` is a `svelte-check`/build-time error (missing
+  export) — exactly backwards for a feature that has to build cleanly with
+  nothing configured, which is the normal state for every contributor who
+  hasn't run the Supabase setup steps. `$env/dynamic/public` is just an
+  object whose keys may be `undefined`, so "not configured" is an ordinary
+  runtime branch instead of a build failure.
+- **Sync strategy: push local up once on first sign-in per map, then
+  remote wins.** While signed out, nothing changes — the existing local
+  repository (`localStorage`/SQLite/Capacitor SQLite, picked by
+  `createProgressRepository()`, untouched by this feature) is exactly what
+  runs. `createActiveProgressRepository()` (`app/src/lib/progressSync.ts`)
+  is the only thing call sites (the home page, `QuizView.svelte`) had to
+  start calling instead: signed out, it's a pure pass-through to the local
+  repository; signed in, for each map it checks whether Supabase has any
+  rows for that `(user, map)` yet — if not, it pushes that device's local
+  card states/summary up once, so an existing player's progress isn't
+  silently discarded the moment they sign in; if Supabase already has
+  rows (from a previous sign-in, possibly on another device), those are
+  treated as the source of truth and read/written directly from then on.
+  Explicitly not a general offline-merge system: while signed in, writes
+  go to Supabase only — local storage on that device is left as whatever
+  it was at sign-in time until a future sign-in reconciles it again. Fine
+  for a portfolio-project nice-to-have; revisit only if real multi-device
+  concurrent-play conflicts turn out to matter in practice.
+- **Conflict resolution: last-write-wins per row, via Postgres
+  `ON CONFLICT ... DO UPDATE` upsert.** Same simplification the local
+  backends already made (`sqliteProgressRepository.ts`'s and
+  `capacitorProgressRepository.ts`'s own `ON CONFLICT` clauses;
+  `localStorage`'s plain overwrite) — this is one person's own progress
+  synced across their own devices, not a document multiple people edit
+  concurrently, so there's no real scenario where a more careful merge
+  would change the outcome. Not worth building for a spaced-repetition
+  scheduler where the "wrong" resolution just means re-reviewing a target
+  slightly earlier or later than optimal, not losing data.
+- **Row-level security is a hard requirement here, not optional polish.**
+  `data/supabase/schema.sql` enables RLS on both tables with
+  `auth.uid() = user_id` policies for every operation (select/insert/
+  update/delete). The Supabase anon key that ships in the client bundle is
+  public by design — without RLS, any signed-in user's browser could read
+  or overwrite any other user's rows directly through Supabase's own
+  client library, not just through this app's UI. This is the first table
+  in the project with more than one tenant, so it's the first place this
+  actually matters.
+
 ## Data & maps
 
 - **Ukraine's map includes Crimea and Sevastopol, merged in from outside

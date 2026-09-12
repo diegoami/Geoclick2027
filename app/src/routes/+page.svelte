@@ -1,11 +1,10 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { resolve } from '$app/paths';
-	import {
-		createProgressRepository,
-		todayLocalDate,
-		type SessionSummary
-	} from '$lib/progressRepository';
+	import { todayLocalDate, type SessionSummary } from '$lib/progressRepository';
+	import { createActiveProgressRepository } from '$lib/progressSync';
+	import { authState, initAuth } from '$lib/authStore.svelte';
+	import AccountStatus from '$lib/AccountStatus.svelte';
 	import { isDue } from '@geoclick/srs';
 
 	const demoMaps = [
@@ -51,41 +50,63 @@
 	type DueStatus = { kind: 'notStarted' } | { kind: 'upToDate' } | { kind: 'due'; count: number };
 	let dueStatuses = $state<Record<string, DueStatus | undefined>>({});
 
-	onMount(() => {
-		(async () => {
-			const repository = await createProgressRepository();
-			const summaryEntries = await Promise.all(
-				demoMaps.map(
-					async (map) => [map.id, await repository.getLastSessionSummary(map.id)] as const
-				)
-			);
-			lastSessions = Object.fromEntries(summaryEntries);
+	async function loadProgress() {
+		// createActiveProgressRepository (Iteration 8+) transparently prefers
+		// Supabase once someone's signed in, and reconciles a device's
+		// existing local progress up on first sign-in - see progressSync.ts.
+		// Signed out (the default, unchanged from before this existed), it's
+		// a pure pass-through to the same local repository as always.
+		const repository = await createActiveProgressRepository();
+		const summaryEntries = await Promise.all(
+			demoMaps.map(
+				async (map) => [map.id, await repository.getLastSessionSummary(map.id)] as const
+			)
+		);
+		lastSessions = Object.fromEntries(summaryEntries);
 
-			const today = todayLocalDate();
-			const dueEntries = await Promise.all(
-				demoMaps.map(async (map) => {
-					const [mapDef, cardStates] = await Promise.all([
-						fetch(`/maps/${map.id}/map.json`).then((r) => r.json()),
-						repository.getCardStates(map.id)
-					]);
-					if (cardStates.length === 0)
-						return [map.id, { kind: 'notStarted' } as DueStatus] as const;
-					const byId = new Map(cardStates.map((c) => [c.targetId, c]));
-					const targetIds: string[] = mapDef.targets.map((t: { id: string }) => t.id);
-					const dueCount = targetIds.filter((id) => isDue(byId.get(id), today)).length;
-					const status: DueStatus =
-						dueCount === 0 ? { kind: 'upToDate' } : { kind: 'due', count: dueCount };
-					return [map.id, status] as const;
-				})
-			);
-			dueStatuses = Object.fromEntries(dueEntries);
-		})();
+		const today = todayLocalDate();
+		const dueEntries = await Promise.all(
+			demoMaps.map(async (map) => {
+				const [mapDef, cardStates] = await Promise.all([
+					fetch(`/maps/${map.id}/map.json`).then((r) => r.json()),
+					repository.getCardStates(map.id)
+				]);
+				if (cardStates.length === 0)
+					return [map.id, { kind: 'notStarted' } as DueStatus] as const;
+				const byId = new Map(cardStates.map((c) => [c.targetId, c]));
+				const targetIds: string[] = mapDef.targets.map((t: { id: string }) => t.id);
+				const dueCount = targetIds.filter((id) => isDue(byId.get(id), today)).length;
+				const status: DueStatus =
+					dueCount === 0 ? { kind: 'upToDate' } : { kind: 'due', count: dueCount };
+				return [map.id, status] as const;
+			})
+		);
+		dueStatuses = Object.fromEntries(dueEntries);
+	}
+
+	onMount(() => {
+		initAuth();
+	});
+
+	// Loads (and re-loads) progress whenever sign-in state changes: once the
+	// initial session check resolves, and again on every later sign-in/
+	// sign-out, so the due/last-result display picks up Supabase's data live
+	// without requiring a full page reload. Reading both `initialized` and
+	// `session` here is what makes $effect re-run on each of those - not
+	// just an initial-mount effect. Before `initialized` flips true this is
+	// a no-op, so there's exactly one load on a plain signed-out visit (same
+	// as before this feature existed), not two.
+	$effect(() => {
+		if (!authState.initialized) return;
+		void authState.session;
+		loadProgress();
 	});
 </script>
 
 <main>
 	<h1>Geoclick</h1>
 	<p>Pick a demo map to explore.</p>
+	<AccountStatus />
 	<ul>
 		{#each demoMaps as map (map.id)}
 			{@const summary = lastSessions[map.id]}

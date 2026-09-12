@@ -65,9 +65,16 @@ Check items off as they land; update "Status" as iterations complete.
   requested 2026-09-12, tracked in the Iteration 8+ backlog below:
   reorganizing the home page's map list, German/Italian UI languages
   (both picked up as parallel background work, each in its own worktree/
-  branch), and optional cross-device score sync via sign-in (paused on a
-  provider/backend decision only the user can make, not started as
-  background work for that reason).
+  branch), and optional cross-device score sync via sign-in — **built** on
+  `feature/supabase-sso-sync` (Supabase, the user's own choice of
+  provider): client setup, DB schema + RLS, a third `ProgressRepository`
+  backend, Google sign-in UI, and a simple sync-on-sign-in strategy, all
+  verified as far as possible without a real Supabase project (type-check/
+  test/build clean with no env vars set, local-first flow unaffected when
+  signed out). **Not merged to `main`** — needs the user's own Supabase
+  project and manual setup (ONBOARDING.md has the exact steps) before it
+  can be tested end to end, per CLAUDE.md's workflow rule for a first
+  backend/auth surface.
 - **Reordered**: local persistence and spaced repetition swapped places
   from the original numbering. Spaced repetition is pointless without
   somewhere to remember what's due across sessions — user accounts
@@ -1365,40 +1372,59 @@ loop actually feels good. Candidates below, in rough priority order.
       blocked on hardware/account setup this project doesn't have yet.
 - [x] ~~Plain-browser deployment (static hosting)~~ — done in Iteration 3.5,
       live on Netlify
-- [ ] **Optional sign-in (SSO) so scores sync across devices** — requested
+- [x] **Optional sign-in (SSO) so scores sync across devices** — requested
       directly by the user (2026-09-12), as the third of three roadmap
-      items alongside the map-list reorganization and i18n below. This is
-      the point where "local-first, no backend" (see ARCHITECTURE.md's
-      Storage section) actually gets a backend — auth needs somewhere to
-      verify tokens and mint sessions, even if score storage itself stays
-      minimal. Explicitly **optional**: the existing local-only
-      (`localStorage`/SQLite) experience must keep working with no sign-in
-      at all — this adds a second, opt-in path, it doesn't replace the
-      first one or make an account a requirement to play.
-      - Candidates for the auth/backend piece:
-        - A managed auth provider (Auth0, Clerk, Supabase Auth) — fastest
-          to stand up, handles the OAuth dance and Google/other-provider
-          config for you; adds a third-party dependency and (usually) a
-          paid tier past some usage threshold. Supabase/Firebase also
-          bundle a database, which the score-sync piece below needs
-          somewhere to live anyway.
-        - Roll it via Netlify Identity or a small serverless function
-          handling the OAuth callback directly — more control, more to
-          build and maintain, but keeps everything inside the stack
-          already in use (Netlify's already hosting this).
-      - **Needs a decision before building, not just picking one
-        silently** — which provider, and therefore which database/hosting
-        it brings with it, has real cost/vendor-lock-in implications the
-        user should choose, not Claude. Not started as autonomous
-        background work for this reason, unlike the other two items in
-        this batch.
-- [ ] **Score recording/sync**, built on top of sign-in above: per (user,
+      items alongside the map-list reorganization and i18n below. Provider
+      decision made by the user: **Supabase** (bundles Google OAuth + a
+      Postgres database in one service), over Auth0/Clerk or a hand-rolled
+      solution. Built on `feature/supabase-sso-sync`:
+      - `app/src/lib/supabaseClient.ts` — creates a client from
+        `PUBLIC_SUPABASE_URL`/`PUBLIC_SUPABASE_ANON_KEY`, or returns
+        `undefined` if either is unset (`$env/dynamic/public`, not
+        `$env/static/public`, specifically so an unconfigured build never
+        fails `svelte-check`/`vite build` — see the module's own comment).
+      - `data/supabase/schema.sql` — `card_states`/`session_summaries`
+        tables mirroring the Tauri/Capacitor SQLite schemas plus a
+        `user_id` column, with row-level security policies
+        (`auth.uid() = user_id`) so a signed-in user can only ever read/
+        write their own rows.
+      - `app/src/lib/supabaseProgressRepository.ts` — a third
+        `ProgressRepository` implementation, this one multi-user, backed
+        by Supabase's Postgres tables via upsert (last-write-wins per row,
+        same as every local backend already does).
+      - `app/src/lib/AccountStatus.svelte` + `app/src/lib/authStore.svelte.ts`
+        — a small "Sign in with Google"/"Signed in as …"/"Sign out"
+        control on the home page (above the map list, not touching its
+        ordering), backed by a shared reactive session store.
+      - `app/src/lib/progressSync.ts` — `createActiveProgressRepository()`,
+        which call sites (the home page, `QuizView.svelte`) now use in
+        place of `createProgressRepository()` directly. Signed out (the
+        default, every existing user), it's byte-for-byte the same local
+        repository as before this feature existed. See "Score recording/
+        sync" below and DECISIONS.md for the sync/reconciliation strategy.
+      - **Explicitly optional, verified**: with no env vars set, `npm run
+        check`/`npm test`/`npm run build` (all `--workspace=app`) stay
+        clean, and the dev server's home page shows no sign-in errors —
+        just an unobtrusive "Cross-device sync isn't set up on this
+        deployment yet" line — with the rest of the app (map list, a full
+        quiz load) working exactly as before. Screenshotted in this state.
+      - **Not testable end-to-end here**: no real Supabase project exists
+        yet (creating one is the user's own action, never Claude's - see
+        DECISIONS.md). Manual setup steps the user needs to complete before
+        sign-in actually works are in ONBOARDING.md's "Enabling
+        cross-device sync (Supabase)" section. **Not merged to `main`** -
+        this is the project's first backend/auth surface, and needs the
+        user's own testing against a real project before merge, per
+        CLAUDE.md's workflow rule.
+- [x] **Score recording/sync**, built on top of sign-in above: per (user,
       map) results from quiz sessions (`scoreSession`'s `{ total, perfect,
-      totalErrors }` already has the shape this needs), persisted
-      somewhere durable and synced across a signed-in user's devices,
-      rather than local-only. Which store depends on what the auth choice
-      above already provides (several bundle a database) — another
-      decision for when sign-in itself is scoped, not before.
+      totalErrors }` shape, unchanged) now persist to Supabase's
+      `session_summaries`/`card_states` tables instead of only
+      `localStorage`/SQLite whenever someone's signed in - see
+      `progressSync.ts` above for the reconciliation strategy (push local
+      up on first sign-in if a map has no remote rows yet; remote wins
+      after that) and DECISIONS.md for why last-write-wins conflict
+      resolution is enough here.
 - [ ] **Reorganize the home page's map list** — requested directly by the
       user (2026-09-12), alongside i18n and optional SSO above. 22 maps
       across 11 countries in one flat, unsorted `<ul>`
