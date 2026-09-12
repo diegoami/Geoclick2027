@@ -35,6 +35,8 @@
 
 	let container: HTMLDivElement;
 	let trayEl: HTMLDivElement;
+	let trayHandleRowEl: HTMLDivElement;
+	let traySlipsEl: HTMLDivElement;
 	let map: maplibregl.Map | undefined;
 
 	let mapDef = $state<MapDefinition | undefined>(undefined);
@@ -45,15 +47,63 @@
 	);
 	let wrongFlashId = $state<string | undefined>(undefined);
 
-	// Tray height, in vh - user-resizable via the drag handle (onTrayHandle*
+	// Tray height, in px - user-resizable via the drag handle (onTrayHandle*
 	// below). Not persisted across sessions; resets to the default each time
 	// the view mounts, same as every other view's transient UI state.
-	let trayHeight = $state(22);
-	const TRAY_MIN_VH = 9;
-	const TRAY_MAX_VH = 70;
+	//
+	// Deliberately px, not vh: a slip row's height comes from font
+	// size/padding (fixed, not viewport-relative), so a fixed vh minimum
+	// only matches "exactly one row" by coincidence at one particular
+	// viewport height - everywhere else it either leaves dead space below
+	// the row (tray "starts too big") or is a few px short, clipping the
+	// *next* row's buttons instead of cleanly hiding them (can't actually
+	// get down to one clean row). Measured from the real DOM instead, see
+	// measureTraySizing below.
+	let trayHeightPx = $state<number | undefined>(undefined);
+	let trayMinPx = $state(60); // replaced by a real measurement before first paint
+	let trayMaxPx = $state(500); // replaced once window is available (see onMount)
+	const TRAY_MAX_FRACTION = 0.7; // drag ceiling, as a fraction of the viewport
+	// Caps the auto-sized default (which otherwise fits every row with no
+	// scrolling) so a map with hundreds of targets - e.g. italy-provinces -
+	// doesn't default to covering most of the map.
+	const TRAY_DEFAULT_CAP_FRACTION = 0.3;
 	// Not reactive - just bookkeeping for the drag gesture itself, same
 	// reasoning as hoveredName below.
 	let trayResizeStart: { clientY: number; height: number } | undefined;
+
+	// Measures the real rendered size of one slip row (handle row + one row
+	// of slips + the slips container's own bottom padding) so the tray's
+	// minimum and default height are derived from actual content, not a
+	// guessed constant. Sets the default (auto-fit every row, capped) only
+	// once; later calls (e.g. on window resize) just refresh the min/max
+	// and clamp whatever height the user has already chosen.
+	function measureTraySizing() {
+		if (!trayHandleRowEl || !traySlipsEl || typeof window === 'undefined') return;
+		const handleRowPx = trayHandleRowEl.getBoundingClientRect().height;
+		const firstSlip = traySlipsEl.querySelector<HTMLElement>('.slip');
+		const rowPx = firstSlip?.getBoundingClientRect().height ?? 0;
+		const paddingBottomPx = parseFloat(getComputedStyle(traySlipsEl).paddingBottom) || 0;
+		trayMinPx = handleRowPx + rowPx + paddingBottomPx;
+		trayMaxPx = window.innerHeight * TRAY_MAX_FRACTION;
+
+		if (trayHeightPx === undefined) {
+			const naturalPx = handleRowPx + traySlipsEl.scrollHeight;
+			const defaultCapPx = window.innerHeight * TRAY_DEFAULT_CAP_FRACTION;
+			trayHeightPx = Math.min(Math.max(naturalPx, trayMinPx), Math.min(defaultCapPx, trayMaxPx));
+		} else {
+			trayHeightPx = Math.min(Math.max(trayHeightPx, trayMinPx), trayMaxPx);
+		}
+	}
+
+	// Runs once the tray/slips actually exist in the DOM (session starts
+	// undefined; the tray only renders once it's set - see the template).
+	// requestAnimationFrame waits for that render to be committed/laid out
+	// before measuring.
+	$effect(() => {
+		if (session && trayEl) {
+			requestAnimationFrame(measureTraySizing);
+		}
+	});
 
 	// 'loading' until the map/due-state check resolves; 'upToDate' when
 	// every target is not-due (nothing to review); 'quiz' while a session
@@ -365,28 +415,27 @@
 	// the two.
 	function onTrayHandlePointerDown(e: PointerEvent) {
 		(e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
-		trayResizeStart = { clientY: e.clientY, height: trayHeight };
+		trayResizeStart = { clientY: e.clientY, height: trayHeightPx ?? trayMinPx };
 	}
 
 	function onTrayHandlePointerMove(e: PointerEvent) {
 		if (!trayResizeStart) return;
 		const deltaPx = trayResizeStart.clientY - e.clientY;
-		const deltaVh = (deltaPx / window.innerHeight) * 100;
-		trayHeight = Math.min(TRAY_MAX_VH, Math.max(TRAY_MIN_VH, trayResizeStart.height + deltaVh));
+		trayHeightPx = Math.min(trayMaxPx, Math.max(trayMinPx, trayResizeStart.height + deltaPx));
 	}
 
 	function onTrayHandlePointerUp() {
 		trayResizeStart = undefined;
 	}
 
-	const TRAY_KEY_STEP_VH = 5;
+	const TRAY_KEY_STEP_PX = 32;
 
 	function onTrayHandleKeydown(e: KeyboardEvent) {
 		if (e.key === 'ArrowUp' || e.key === 'ArrowRight') {
-			trayHeight = Math.min(TRAY_MAX_VH, trayHeight + TRAY_KEY_STEP_VH);
+			trayHeightPx = Math.min(trayMaxPx, (trayHeightPx ?? trayMinPx) + TRAY_KEY_STEP_PX);
 			e.preventDefault();
 		} else if (e.key === 'ArrowDown' || e.key === 'ArrowLeft') {
-			trayHeight = Math.max(TRAY_MIN_VH, trayHeight - TRAY_KEY_STEP_VH);
+			trayHeightPx = Math.max(trayMinPx, (trayHeightPx ?? trayMinPx) - TRAY_KEY_STEP_PX);
 			e.preventDefault();
 		}
 	}
@@ -523,6 +572,15 @@
 		};
 	});
 
+	onMount(() => {
+		// Re-measure on resize/rotation: trayMinPx and trayMaxPx are derived
+		// from the current viewport/layout, so they go stale otherwise (a
+		// user's chosen trayHeightPx is clamped to the fresh bounds, not
+		// reset - see measureTraySizing).
+		window.addEventListener('resize', measureTraySizing);
+		return () => window.removeEventListener('resize', measureTraySizing);
+	});
+
 	onDestroy(() => {
 		map?.remove();
 	});
@@ -586,23 +644,23 @@
 	<div class="container" bind:this={container}></div>
 
 	{#if session}
-		<div class="tray" bind:this={trayEl} style="height: {trayHeight}vh">
-			<div class="tray-handle-row">
+		<div class="tray" bind:this={trayEl} style="height: {trayHeightPx ?? trayMinPx}px">
+			<div class="tray-handle-row" bind:this={trayHandleRowEl}>
 				<div
 					class="tray-handle"
 					role="slider"
 					tabindex="0"
 					aria-label="Resize name tray"
-					aria-valuemin={TRAY_MIN_VH}
-					aria-valuemax={TRAY_MAX_VH}
-					aria-valuenow={Math.round(trayHeight)}
+					aria-valuemin={Math.round(trayMinPx)}
+					aria-valuemax={Math.round(trayMaxPx)}
+					aria-valuenow={Math.round(trayHeightPx ?? trayMinPx)}
 					onpointerdown={onTrayHandlePointerDown}
 					onpointermove={onTrayHandlePointerMove}
 					onpointerup={onTrayHandlePointerUp}
 					onkeydown={onTrayHandleKeydown}
 				></div>
 			</div>
-			<div class="tray-slips">
+			<div class="tray-slips" bind:this={traySlipsEl}>
 				{#each session.items.filter((i) => i.status === 'pending') as item (item.target.id)}
 					{@const isDragging = dragging?.targetId === item.target.id}
 					<button
