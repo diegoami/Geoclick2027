@@ -117,11 +117,13 @@
 	}
 	:global(.geoclick-solved-popup .maplibregl-popup-content) {
 		font-family: system-ui, sans-serif;
-		font-size: 0.75rem;
+		font-size: 11px;
 		font-weight: 600;
-		padding: 0.15rem 0.5rem;
-		border-radius: 0.35rem;
-		color: #1f3d2a;
+		padding: 1px 6px;
+		border-radius: 5px;
+		background: rgba(31, 61, 42, 0.65);
+		color: #ffffff;
+		box-shadow: none;
 	}
 	:global(.geoclick-solved-popup .maplibregl-popup-tip) {
 		display: none;

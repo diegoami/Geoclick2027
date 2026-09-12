@@ -277,8 +277,15 @@
 	}
 	:global(.geoclick-popup .maplibregl-popup-content) {
 		font-family: system-ui, sans-serif;
-		font-size: 1.15rem;
-		padding: 0.5rem 0.9rem;
-		border-radius: 0.5rem;
+		font-size: 11px;
+		font-weight: 600;
+		padding: 1px 6px;
+		border-radius: 5px;
+		background: rgba(31, 61, 42, 0.65);
+		color: #ffffff;
+		box-shadow: none;
+	}
+	:global(.geoclick-popup .maplibregl-popup-tip) {
+		display: none;
 	}
 </style>

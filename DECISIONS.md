@@ -277,3 +277,44 @@ or amend an entry here as part of that change, not as an afterthought.
   work correctly via real range requests and don't need to change. This
   approach stops making sense if a much larger map (multi-MB+) is ever
   added for Android specifically; revisit then, not now.
+
+## GUI/UX round 1 (2026-09-12)
+
+- **Explored with the `design` skill before writing any implementation
+  code.** Four directions (top nav, on-map labels, quiz tray, map colors)
+  were mocked up — the color options as *real live renders* of the actual
+  app with paint properties swapped at runtime via `setPaintProperty`, not
+  drawn approximations — and approved one at a time in a published canvas
+  before any Svelte/style code changed. Caught a real problem this way
+  that a mockup-only process wouldn't have: the approved on-map label
+  style was only checked for contrast against a single green fill: once
+  the categorical palette was picked, the pill needed a measured opacity
+  bump (55%→65%) to keep 4.5:1 contrast against the palette's lightest
+  color. Checked with actual WCAG math, not eyeballed.
+- **Map fill color is a hash on the region's own name, not a curated
+  per-map list.** `["%", ["length", ["get","name"]], 8]` picks one of 8
+  muted palette colors per feature. The alternative — a `match` expression
+  enumerating every region name per map — would need maintaining by hand
+  for all six current maps (and every future one), defeating the point of
+  a shared `base.json`. Tradeoff accepted: this is a length-based hash,
+  not true adjacency-aware graph coloring, so two neighboring regions can
+  occasionally land on the same color. That reads as a minor cosmetic
+  imperfection for a decorative palette, not a bug worth a real map-
+  coloring algorithm — revisit only if a specific map's collision is
+  actually distracting in practice.
+- **Click-to-explore, tour-reveal, and quiz-solved/overview labels now
+  share one visual treatment**, not three. They used to be two different
+  styles (`.geoclick-popup` at a larger size for the single-interaction
+  case, `.geoclick-solved-popup` smaller for the many-at-once case) —
+  unified because the user's own framing of the complaint ("the label
+  that shows a region's name, on click, during tour, or when solved")
+  treated them as one thing, and after the redesign there was no good
+  reason left to keep two.
+- **Quiz tray height is a resize handle, not a bigger fixed default.**
+  The problem wasn't that 30vh was too small for every map — it's exactly
+  right for a 20-target map like `italy-regions` and cramped for a
+  110-target one like `italy-provinces`. A single new fixed height can't
+  be right for both; a user-adjustable one (15-70vh, drag or arrow keys,
+  `role="slider"`) can. Not persisted across sessions — in-scope was
+  giving the user control in the moment, not remembering a preference;
+  that's a small, separate addition if it turns out to matter.

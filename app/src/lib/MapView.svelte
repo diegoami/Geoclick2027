@@ -82,14 +82,66 @@
 	{#if error}
 		<p class="error">{error}</p>
 	{:else}
-		<div class="info">
-			<a class="back" href={resolve('/')}>← Maps</a>
-			<strong>{mapDef ? mapDef.name : 'Loading…'}</strong>
-			{#if mapId}
-				<a class="tour-link" href={resolve('/map/[mapId]/overview', { mapId })}>✓ Show overview</a>
-				<a class="tour-link" href={resolve('/map/[mapId]/tour', { mapId })}>▶ Start tour</a>
-				<a class="tour-link" href={resolve('/map/[mapId]/quiz', { mapId })}>✎ Start quiz</a>
-			{/if}
+		<div class="nav-overlay">
+			<div class="nav-row">
+				<a class="nav-btn nav-btn--back" href={resolve('/')}>
+					<svg
+						class="nav-icon"
+						width="22"
+						height="22"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="1.8"
+						stroke-linecap="round"
+						stroke-linejoin="round"><path d="M15 6l-6 6 6 6" /></svg
+					>
+					<span class="nav-label">Maps</span>
+				</a>
+				{#if mapId}
+					<a class="nav-btn nav-btn--action" href={resolve('/map/[mapId]/overview', { mapId })}>
+						<svg
+							class="nav-icon"
+							width="22"
+							height="22"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="1.8"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z" /><circle
+								cx="12"
+								cy="12"
+								r="3"
+							/></svg
+						>
+						<span class="nav-label">Overview</span>
+					</a>
+					<a class="nav-btn nav-btn--action" href={resolve('/map/[mapId]/quiz', { mapId })}>
+						<svg
+							class="nav-icon"
+							width="22"
+							height="22"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="1.8"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							><circle cx="12" cy="12" r="9" /><path d="M8 12.5l2.5 2.5 5.5-6" /></svg
+						>
+						<span class="nav-label">Quiz</span>
+					</a>
+					<a class="nav-btn nav-btn--action" href={resolve('/map/[mapId]/tour', { mapId })}>
+						<svg class="nav-icon" width="22" height="22" viewBox="0 0 24 24"
+							><path d="M8 5l11 7-11 7z" fill="currentColor" /></svg
+						>
+						<span class="nav-label">Tour</span>
+					</a>
+				{/if}
+			</div>
+			<span class="map-label">{mapDef ? mapDef.name : 'Loading…'}</span>
 		</div>
 	{/if}
 	<div class="container" bind:this={container}></div>
@@ -105,38 +157,78 @@
 		width: 100%;
 		height: 100%;
 	}
-	.info {
+	.nav-overlay {
 		position: absolute;
 		top: 0.75rem;
 		left: 0.75rem;
+		right: 0.75rem;
 		z-index: 1;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		gap: 0.35rem;
-		background: rgba(255, 255, 255, 0.9);
-		padding: 0.5rem 0.75rem;
-		border-radius: 0.5rem;
+		gap: 0.4rem;
+	}
+	.nav-row {
+		display: flex;
+		gap: 0.5rem;
+		width: 100%;
+	}
+	.nav-btn {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 0.25rem;
+		min-height: 2.75rem;
+		box-sizing: border-box;
+		padding: 0.65rem 0.25rem 0.6rem;
+		background: rgba(255, 255, 255, 0.96);
+		border: 1px solid rgba(17, 24, 21, 0.08);
+		border-radius: 0.625rem;
+		box-shadow: 0 1px 3px rgba(17, 24, 21, 0.12);
+		text-decoration: none;
 		font-family: system-ui, sans-serif;
-		font-size: 0.9rem;
 	}
-	.back {
-		font-size: 0.8rem;
-		text-decoration: none;
-		color: inherit;
-		opacity: 0.7;
+	.nav-icon {
+		display: block;
 	}
-	.back:hover {
-		opacity: 1;
-	}
-	.tour-link {
-		font-size: 0.85rem;
+	.nav-label {
+		font-size: 0.75rem;
 		font-weight: 600;
-		text-decoration: none;
+		line-height: 1;
+		white-space: nowrap;
+	}
+	.nav-btn--back {
+		color: #4a5650;
+	}
+	.nav-btn--action {
 		color: #b5691f;
 	}
-	.tour-link:hover {
-		text-decoration: underline;
+	.map-label {
+		font-size: 0.75rem;
+		color: rgba(30, 40, 36, 0.6);
+		background: rgba(255, 255, 255, 0.75);
+		padding: 0.2rem 0.55rem;
+		border-radius: 0.4rem;
+		font-family: system-ui, sans-serif;
+	}
+	@media (min-width: 640px) {
+		.nav-overlay {
+			right: auto;
+		}
+		.nav-row {
+			width: auto;
+		}
+		.nav-btn {
+			flex: none;
+			flex-direction: row;
+			gap: 0.5rem;
+			padding: 0.6rem 1.1rem;
+		}
+		.nav-label {
+			font-size: 0.875rem;
+		}
 	}
 	.error {
 		padding: 1rem;
@@ -145,8 +237,15 @@
 	}
 	:global(.geoclick-popup .maplibregl-popup-content) {
 		font-family: system-ui, sans-serif;
-		font-size: 1.15rem;
-		padding: 0.5rem 0.9rem;
-		border-radius: 0.5rem;
+		font-size: 11px;
+		font-weight: 600;
+		padding: 1px 6px;
+		border-radius: 5px;
+		background: rgba(31, 61, 42, 0.65);
+		color: #ffffff;
+		box-shadow: none;
+	}
+	:global(.geoclick-popup .maplibregl-popup-tip) {
+		display: none;
 	}
 </style>

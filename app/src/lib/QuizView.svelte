@@ -44,6 +44,16 @@
 	);
 	let wrongFlashId = $state<string | undefined>(undefined);
 
+	// Tray height, in vh - user-resizable via the drag handle (onTrayHandle*
+	// below). Not persisted across sessions; resets to the default each time
+	// the view mounts, same as every other view's transient UI state.
+	let trayHeight = $state(30);
+	const TRAY_MIN_VH = 15;
+	const TRAY_MAX_VH = 70;
+	// Not reactive - just bookkeeping for the drag gesture itself, same
+	// reasoning as hoveredName below.
+	let trayResizeStart: { clientY: number; height: number } | undefined;
+
 	// 'loading' until the map/due-state check resolves; 'upToDate' when
 	// every target is not-due (nothing to review); 'quiz' while a session
 	// (due or practice) is actually being played.
@@ -347,6 +357,39 @@
 		}
 	}
 
+	// Drag the handle up to grow the tray (see more slips at once, e.g. on a
+	// 100+-target map), down to shrink it (see more map). Deliberately a
+	// separate pointer-capture gesture from the slip drag above - the handle
+	// and the slips are different elements, so there's no conflict between
+	// the two.
+	function onTrayHandlePointerDown(e: PointerEvent) {
+		(e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+		trayResizeStart = { clientY: e.clientY, height: trayHeight };
+	}
+
+	function onTrayHandlePointerMove(e: PointerEvent) {
+		if (!trayResizeStart) return;
+		const deltaPx = trayResizeStart.clientY - e.clientY;
+		const deltaVh = (deltaPx / window.innerHeight) * 100;
+		trayHeight = Math.min(TRAY_MAX_VH, Math.max(TRAY_MIN_VH, trayResizeStart.height + deltaVh));
+	}
+
+	function onTrayHandlePointerUp() {
+		trayResizeStart = undefined;
+	}
+
+	const TRAY_KEY_STEP_VH = 5;
+
+	function onTrayHandleKeydown(e: KeyboardEvent) {
+		if (e.key === 'ArrowUp' || e.key === 'ArrowRight') {
+			trayHeight = Math.min(TRAY_MAX_VH, trayHeight + TRAY_KEY_STEP_VH);
+			e.preventDefault();
+		} else if (e.key === 'ArrowDown' || e.key === 'ArrowLeft') {
+			trayHeight = Math.max(TRAY_MIN_VH, trayHeight - TRAY_KEY_STEP_VH);
+			e.preventDefault();
+		}
+	}
+
 	// Reads each target's current card state and returns the ids that are
 	// NOT due yet - refreshes `cardStatesByTargetId` as a side effect, since
 	// `rate()` needs each target's previous state and this is the one place
@@ -545,21 +588,38 @@
 	<div class="container" bind:this={container}></div>
 
 	{#if session}
-		<div class="tray" bind:this={trayEl}>
-			{#each session.items.filter((i) => i.status === 'pending') as item (item.target.id)}
-				{@const isDragging = dragging?.targetId === item.target.id}
-				<button
-					class="slip"
-					class:slip-dragging={isDragging}
-					class:wrong={wrongFlashId === item.target.id}
-					style={isDragging && dragging ? `left: ${dragging.x}px; top: ${dragging.y}px;` : ''}
-					onpointerdown={(e) => onSlipPointerDown(e, item.target.id, item.target.name)}
-					onpointermove={onSlipPointerMove}
-					onpointerup={onSlipPointerUp}
-				>
-					{item.target.name}
-				</button>
-			{/each}
+		<div class="tray" bind:this={trayEl} style="height: {trayHeight}vh">
+			<div class="tray-handle-row">
+				<div
+					class="tray-handle"
+					role="slider"
+					tabindex="0"
+					aria-label="Resize name tray"
+					aria-valuemin={TRAY_MIN_VH}
+					aria-valuemax={TRAY_MAX_VH}
+					aria-valuenow={Math.round(trayHeight)}
+					onpointerdown={onTrayHandlePointerDown}
+					onpointermove={onTrayHandlePointerMove}
+					onpointerup={onTrayHandlePointerUp}
+					onkeydown={onTrayHandleKeydown}
+				></div>
+			</div>
+			<div class="tray-slips">
+				{#each session.items.filter((i) => i.status === 'pending') as item (item.target.id)}
+					{@const isDragging = dragging?.targetId === item.target.id}
+					<button
+						class="slip"
+						class:slip-dragging={isDragging}
+						class:wrong={wrongFlashId === item.target.id}
+						style={isDragging && dragging ? `left: ${dragging.x}px; top: ${dragging.y}px;` : ''}
+						onpointerdown={(e) => onSlipPointerDown(e, item.target.id, item.target.name)}
+						onpointermove={onSlipPointerMove}
+						onpointerup={onSlipPointerUp}
+					>
+						{item.target.name}
+					</button>
+				{/each}
+			</div>
 		</div>
 	{/if}
 </div>
@@ -611,13 +671,36 @@
 		right: 0;
 		z-index: 1;
 		display: flex;
-		flex-wrap: wrap;
-		gap: 0.5rem;
-		padding: 0.75rem;
-		max-height: 30vh;
-		overflow-y: auto;
+		flex-direction: column;
+		box-sizing: border-box;
 		background: rgba(255, 255, 255, 0.92);
 		border-top: 1px solid rgba(0, 0, 0, 0.1);
+	}
+	.tray-handle-row {
+		display: flex;
+		justify-content: center;
+		flex: none;
+		padding: 0.3rem 0;
+	}
+	.tray-handle {
+		width: 2.5rem;
+		height: 4px;
+		border-radius: 2px;
+		background: rgba(0, 0, 0, 0.22);
+		cursor: ns-resize;
+		touch-action: none;
+	}
+	.tray-handle-row:hover .tray-handle {
+		background: rgba(0, 0, 0, 0.35);
+	}
+	.tray-slips {
+		flex: 1;
+		display: flex;
+		flex-wrap: wrap;
+		align-content: flex-start;
+		gap: 0.5rem;
+		padding: 0 0.75rem 0.75rem;
+		overflow-y: auto;
 	}
 	.slip {
 		font-family: system-ui, sans-serif;
@@ -729,16 +812,18 @@
 	}
 	:global(.geoclick-solved-popup .maplibregl-popup-content) {
 		font-family: system-ui, sans-serif;
-		font-size: 0.75rem;
+		font-size: 11px;
 		font-weight: 600;
-		padding: 0.15rem 0.5rem;
-		border-radius: 0.35rem;
-		color: #1f3d2a;
+		padding: 1px 6px;
+		border-radius: 5px;
+		background: rgba(31, 61, 42, 0.65);
+		color: #ffffff;
+		box-shadow: none;
 	}
 	:global(.geoclick-solved-popup .maplibregl-popup-tip) {
 		display: none;
 	}
 	:global(.geoclick-solved-popup.revealed .maplibregl-popup-content) {
-		color: #5a4626;
+		background: rgba(95, 65, 27, 0.65);
 	}
 </style>
