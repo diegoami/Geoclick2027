@@ -61,7 +61,13 @@ Check items off as they land; update "Status" as iterations complete.
 - **Next up**: motion/feedback design (reveal animations, streak
   indicators, sound, correct-drop juiciness) and a broader component/
   design-system pass remain open on the GUI/UX item — revisit whenever
-  it feels worth another round, not on a fixed schedule.
+  it feels worth another round, not on a fixed schedule. Three more items
+  requested 2026-09-12, tracked in the Iteration 8+ backlog below:
+  reorganizing the home page's map list, German/Italian UI languages
+  (both picked up as parallel background work, each in its own worktree/
+  branch), and optional cross-device score sync via sign-in (paused on a
+  provider/backend decision only the user can make, not started as
+  background work for that reason).
 - **Reordered**: local persistence and spaced repetition swapped places
   from the original numbering. Spaced repetition is pointless without
   somewhere to remember what's due across sessions — user accounts
@@ -1359,28 +1365,61 @@ loop actually feels good. Candidates below, in rough priority order.
       blocked on hardware/account setup this project doesn't have yet.
 - [x] ~~Plain-browser deployment (static hosting)~~ — done in Iteration 3.5,
       live on Netlify
-- [ ] **Sign-in (Google + other OAuth providers)**, as the prerequisite for
-      recording scores per user per map. This is the point where "local-
-      first, no backend" (see ARCHITECTURE.md's Storage section) actually
-      gets a backend — auth needs somewhere to verify tokens and mint
-      sessions, even if score storage itself stays minimal. Candidates:
-      - A managed auth provider (Auth0, Clerk, Supabase Auth) — fastest to
-        stand up, handles the OAuth dance and Google/other-provider config
-        for you; adds a third-party dependency and (usually) a paid tier
-        past some usage threshold.
-      - Roll it via Netlify Identity or a small serverless function
-        handling the OAuth callback directly — more control, more to
-        build and maintain, but keeps everything inside the stack already
-        in use (Netlify's already hosting this).
-      Needs a decision before building, not just picking one silently —
-      revisit when this iteration actually starts.
-- [ ] **Score recording**, built on top of sign-in: per (user, map)
-      results from quiz sessions (`scoreSession`'s `{ total, perfect,
+- [ ] **Optional sign-in (SSO) so scores sync across devices** — requested
+      directly by the user (2026-09-12), as the third of three roadmap
+      items alongside the map-list reorganization and i18n below. This is
+      the point where "local-first, no backend" (see ARCHITECTURE.md's
+      Storage section) actually gets a backend — auth needs somewhere to
+      verify tokens and mint sessions, even if score storage itself stays
+      minimal. Explicitly **optional**: the existing local-only
+      (`localStorage`/SQLite) experience must keep working with no sign-in
+      at all — this adds a second, opt-in path, it doesn't replace the
+      first one or make an account a requirement to play.
+      - Candidates for the auth/backend piece:
+        - A managed auth provider (Auth0, Clerk, Supabase Auth) — fastest
+          to stand up, handles the OAuth dance and Google/other-provider
+          config for you; adds a third-party dependency and (usually) a
+          paid tier past some usage threshold. Supabase/Firebase also
+          bundle a database, which the score-sync piece below needs
+          somewhere to live anyway.
+        - Roll it via Netlify Identity or a small serverless function
+          handling the OAuth callback directly — more control, more to
+          build and maintain, but keeps everything inside the stack
+          already in use (Netlify's already hosting this).
+      - **Needs a decision before building, not just picking one
+        silently** — which provider, and therefore which database/hosting
+        it brings with it, has real cost/vendor-lock-in implications the
+        user should choose, not Claude. Not started as autonomous
+        background work for this reason, unlike the other two items in
+        this batch.
+- [ ] **Score recording/sync**, built on top of sign-in above: per (user,
+      map) results from quiz sessions (`scoreSession`'s `{ total, perfect,
       totalErrors }` already has the shape this needs), persisted
-      somewhere durable rather than local-only. Which store depends on
-      what the auth choice above already provides (several bundle a
-      database) — another decision for when this iteration starts, not
-      now.
+      somewhere durable and synced across a signed-in user's devices,
+      rather than local-only. Which store depends on what the auth choice
+      above already provides (several bundle a database) — another
+      decision for when sign-in itself is scoped, not before.
+- [ ] **Reorganize the home page's map list** — requested directly by the
+      user (2026-09-12), alongside i18n and optional SSO above. 22 maps
+      across 11 countries in one flat, unsorted `<ul>`
+      (`app/src/routes/+page.svelte`'s `demoMaps` array, in the order each
+      country was added) is already hard to scan and will only get worse
+      as more countries are added. At minimum, sort alphabetically;
+      grouping by country (each already ships as a regions+towns pair)
+      is worth considering too, so long as it doesn't regress the
+      existing per-map due-status/last-result display. Picked up as
+      parallel background work in its own worktree/branch — see
+      DECISIONS.md if a specific organization scheme was chosen there.
+- [ ] **Add German and Italian as UI languages** (at least) — requested
+      directly by the user (2026-09-12), alongside map-list reorganization
+      and optional SSO above. Scoped to the app's own UI chrome (nav
+      labels, buttons, status text) via a language switcher — explicitly
+      **not** translating map/target names themselves (those are real
+      geographic proper nouns already localized per-country through
+      `NAME_FIXUPS`/`--name-field`, a different and already-solved
+      problem, see MAPS.md). Picked up as parallel background work in its
+      own worktree/branch — see DECISIONS.md for which i18n approach was
+      chosen and why.
 - [x] **Evaluate GUI/UX approaches to make the interface more captivating —
       first round, merged to `main` 2026-09-12** (from
       `feature/gui-ux-nav-labels-colors`).
