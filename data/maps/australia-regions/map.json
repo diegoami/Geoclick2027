@@ -1,0 +1,155 @@
+{
+	"id": "australia-regions",
+	"name": "Australia — States",
+	"country": "Australia",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "northern-territory",
+			"name": "Northern Territory",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				133.50015000000002,
+				-18.51615
+			],
+			"bbox": [
+				129.0001,
+				-25.9999,
+				138.0002,
+				-11.0324
+			]
+		},
+		{
+			"id": "queensland",
+			"name": "Queensland",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				145.75335,
+				-19.646749999999997
+			],
+			"bbox": [
+				138.0002,
+				-29.1546,
+				153.5065,
+				-10.1389
+			]
+		},
+		{
+			"id": "western-australia",
+			"name": "Western Australia",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.95975,
+				-24.407899999999998
+			],
+			"bbox": [
+				112.9194,
+				-35.0922,
+				129.0001,
+				-13.7236
+			]
+		},
+		{
+			"id": "south-australia",
+			"name": "South Australia",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				135.0001,
+				-32.03525
+			],
+			"bbox": [
+				129.0001,
+				-38.0706,
+				141.0001,
+				-25.9999
+			]
+		},
+		{
+			"id": "new-south-wales",
+			"name": "New South Wales",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				147.31535,
+				-32.8298
+			],
+			"bbox": [
+				141.0001,
+				-37.5103,
+				153.6306,
+				-28.1493
+			]
+		},
+		{
+			"id": "australian-capital-territory",
+			"name": "Australian Capital Territory",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				149.0602,
+				-35.5304
+			],
+			"bbox": [
+				148.7705,
+				-35.9149,
+				149.3499,
+				-35.1459
+			]
+		},
+		{
+			"id": "victoria",
+			"name": "Victoria",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				145.4696,
+				-36.537800000000004
+			],
+			"bbox": [
+				140.9671,
+				-39.0891,
+				149.9721,
+				-33.9865
+			]
+		},
+		{
+			"id": "tasmania",
+			"name": "Tasmania",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				146.13400000000001,
+				-41.6276
+			],
+			"bbox": [
+				143.8381,
+				-43.629,
+				148.4299,
+				-39.6262
+			]
+		}
+	],
+	"tourOrder": [
+		"northern-territory",
+		"queensland",
+		"western-australia",
+		"south-australia",
+		"new-south-wales",
+		"australian-capital-territory",
+		"victoria",
+		"tasmania"
+	]
+}

@@ -26,7 +26,17 @@
 		{ id: 'ukraine-regions', name: 'Ukraine — Regions' },
 		{ id: 'ukraine-towns-100k', name: 'Ukraine — Towns' },
 		{ id: 'sweden-regions', name: 'Sweden — Regions' },
-		{ id: 'sweden-towns-100k', name: 'Sweden — Towns' }
+		{ id: 'sweden-towns-100k', name: 'Sweden — Towns' },
+		{ id: 'japan-regions', name: 'Japan — Prefectures' },
+		{ id: 'japan-towns-100k', name: 'Japan — Towns' },
+		{ id: 'canada-regions', name: 'Canada — Provinces' },
+		{ id: 'canada-towns-100k', name: 'Canada — Towns' },
+		{ id: 'australia-regions', name: 'Australia — States' },
+		{ id: 'australia-towns-100k', name: 'Australia — Towns' },
+		{ id: 'portugal-regions', name: 'Portugal — Districts' },
+		{ id: 'portugal-towns-100k', name: 'Portugal — Towns' },
+		{ id: 'netherlands-regions', name: 'Netherlands — Provinces' },
+		{ id: 'netherlands-towns-100k', name: 'Netherlands — Towns' }
 	];
 
 	// Last-session summaries and due state live in localStorage (Iteration

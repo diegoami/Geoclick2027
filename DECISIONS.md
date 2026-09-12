@@ -164,6 +164,27 @@ or amend an entry here as part of that change, not as an afterthought.
   going forward to any country whose full territory includes far-flung
   overseas possessions — check for this before building a new country's
   maps, not just for France/Spain specifically.
+- **Which 5 countries to add next (Japan, Canada, Australia, Portugal,
+  Netherlands) was Claude's call, not user-specified.** The user asked
+  for "10 more maps you think are interesting for people" and explicitly
+  delegated the selection. Picked for geographic/cultural spread beyond
+  the Europe-and-USA set built so far, not by any other criteria (e.g.
+  population, land area) — flagged here since it's a product judgment
+  call made without the user, unlike every other country added earlier
+  (all user-named).
+- **Australia's regions map excludes Jervis Bay Territory, Macquarie
+  Island, and Lord Howe Island — a "not part of the canonical 8"
+  judgment call, distinct from the overseas-territory rule above.**
+  Natural Earth's raw admin-1 rows for Australia include these 3 in
+  addition to the 6 states + NT + ACT that Australian schools actually
+  teach as "the states and territories." Jervis Bay Territory isn't
+  overseas at all (a tiny federal enclave inside NSW); Macquarie
+  Island and Lord Howe Island are remote but are usually treated as
+  belonging to Tasmania/NSW respectively, not as separate first-order
+  entities. Excluded via the same `--exclude` mechanism as the overseas
+  cases, but the underlying reasoning is "not a real state/territory,"
+  not "too far from the mainland" — worth distinguishing if a future
+  country raises the same "which of these rows actually count" question.
 - **Public-domain data sources only (Natural Earth), on purpose.** A
   constraint carried through the whole project, not just an initial
   default — flagged again explicitly when scoping the self-serve

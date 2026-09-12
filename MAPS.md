@@ -270,6 +270,88 @@ the resulting `data/maps/<id>/` directory afterward) pointing at the
 Windows checkout. See ONBOARDING.md's Gotchas section for the shell-
 script CRLF issue this also surfaced.
 
+### Japan, Canada, Australia, Portugal, Netherlands (built 2026-09-12)
+
+Five more countries, same regions+towns pattern, picked by Claude (not
+user-specified) when asked to add "10 more maps that make sense for
+people" — chosen for genuine geographic/cultural spread rather than
+more Europe: Japan (first non-Western country in the set), Canada and
+Australia (pair naturally with the existing USA map), Portugal and
+Netherlands (small, well-known, round out Western Europe). Notably
+clean batch: every country's raw admin-1 `name` field was already
+correct as-is (no `NAME_FIXUPS` entries needed anywhere), and every CLI
+option needed (`--exclude`, `--name-field`) already existed from the
+previous batch — no script changes this time.
+
+- **`japan-regions`** (47 targets, prefectures — already the correct
+  level, no dissolve). `name` is already properly Hepburn-romanized
+  with macrons (Ōita, Kyōto, Hokkaidō, ...), audited against all 47
+  rows, not spot-checked — no fixups needed. Okinawa kept in (unlike
+  France/Spain's overseas exclusions): it's a populous, well-known,
+  inhabited prefecture ~640km from mainland Kyushu, not a remote
+  territory thousands of km away — a fundamentally different case from
+  Guadeloupe or the Canary Islands, not just "an island":
+  ```
+  npx tsx data/scripts/build-map.ts --country="Japan" --out=data/maps/japan-regions --type=province --name="Japan — Prefectures"
+  ```
+- **`canada-regions`** (13 targets, provinces/territories — already the
+  correct level, no dissolve). `name` already gives correct French
+  forms for Québec cities/regions (Québec, not Quebec) — no fixups:
+  ```
+  npx tsx data/scripts/build-map.ts --country="Canada" --out=data/maps/canada-regions --type=province --name="Canada — Provinces"
+  ```
+- **`australia-regions`** (8 targets: the 6 states + Northern Territory
+  + Australian Capital Territory — the canonical set taught in
+  Australian schools). Raw admin-1 rows for Australia include 3 more
+  entries that aren't part of that canonical 8: Jervis Bay Territory (a
+  6.7km² federal enclave inside NSW, effectively unpopulated), Macquarie
+  Island (a remote sub-Antarctic island ~1,500km from Tasmania) and Lord
+  Howe Island (~600km off the NSW coast) — excluded via `--exclude`,
+  same mechanism as USA's Alaska/Hawaii and France/Spain's overseas
+  territories, though the reasoning here is "not a real state/territory"
+  as much as "far away":
+  ```
+  npx tsx data/scripts/build-map.ts --country="Australia" --out=data/maps/australia-regions --type=state --name="Australia — States" --exclude="Jervis Bay Territory,Macquarie Island,Lord Howe Island"
+  ```
+- **`portugal-regions`** (18 targets, districts — already the correct
+  level, no dissolve). Raw admin-1 rows include Madeira and Azores
+  (overseas autonomous regions) alongside the 18 mainland districts —
+  excluded via `--exclude`, same reasoning as France/Spain's overseas
+  territories (see DECISIONS.md):
+  ```
+  npx tsx data/scripts/build-map.ts --country="Portugal" --out=data/maps/portugal-regions --type=province --name="Portugal — Districts" --exclude="Madeira,Azores"
+  ```
+- **`netherlands-regions`** (12 targets, provinces — already the
+  correct level, no dissolve). Raw admin-1 rows include Saba and St.
+  Eustatius (Caribbean special municipalities, part of the Netherlands
+  proper rather than a separate constituent country like Aruba/Curaçao/
+  Sint Maarten) alongside the 12 European provinces — excluded via
+  `--exclude`, same overseas-territory reasoning:
+  ```
+  npx tsx data/scripts/build-map.ts --country="Netherlands" --out=data/maps/netherlands-regions --type=province --name="Netherlands — Provinces" --exclude="St. Eustatius,Saba"
+  ```
+- **`japan-towns-100k`** (66 targets), **`canada-towns-100k`** (26),
+  **`australia-towns-100k`** (14), **`portugal-towns-100k`** (5),
+  **`netherlands-towns-100k`** (12):
+  ```
+  npx tsx data/scripts/build-points-map.ts --country="Japan" --out=data/maps/japan-towns-100k --min-population=100000 --name="Japan — Towns"
+  npx tsx data/scripts/build-points-map.ts --country="Canada" --out=data/maps/canada-towns-100k --min-population=100000 --name="Canada — Towns"
+  npx tsx data/scripts/build-points-map.ts --country="Australia" --out=data/maps/australia-towns-100k --min-population=100000 --name="Australia — Towns"
+  npx tsx data/scripts/build-points-map.ts --country="Portugal" --out=data/maps/portugal-towns-100k --name-field=NAME_PT --min-population=100000 --name="Portugal — Towns" --exclude="Funchal"
+  npx tsx data/scripts/build-points-map.ts --country="Netherlands" --out=data/maps/netherlands-towns-100k --name-field=NAME_NL --min-population=100000 --name="Netherlands — Towns"
+  ```
+  Japan and Canada needed no `--name-field` override — the plain `NAME`
+  field already gives correctly romanized/accented forms (Kōriyama,
+  Hachiōji, Trois-Rivières, Montréal, St. John's). Portugal's plain
+  `NAME` uses the English exonym for the capital ("Lisbon"); `NAME_PT`
+  gives "Lisboa", matching the district name and every other country's
+  convention of local-language display names. Same for the
+  Netherlands' `NAME_NL`, which fixes "The Hague" → "Den Haag". Funchal
+  (Madeira's capital, population >100k) excluded from Portugal's towns
+  for the same overseas-territory reason as the regions map — no
+  Azorean town clears the 100k threshold, so no equivalent exclusion
+  was needed there.
+
 ## Beyond Natural Earth's admin-1 data
 
 Everything above (and the two towns plans below) stays within data

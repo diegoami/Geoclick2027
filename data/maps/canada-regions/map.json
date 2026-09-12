@@ -1,0 +1,245 @@
+{
+	"id": "canada-regions",
+	"name": "Canada — Provinces",
+	"country": "Canada",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "northwest-territories",
+			"name": "Northwest Territories",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-119.222,
+				69.3832
+			],
+			"bbox": [
+				-136.4449,
+				60.0001,
+				-101.9991,
+				78.7663
+			]
+		},
+		{
+			"id": "nunavut",
+			"name": "Nunavut",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-90.88315,
+				67.5274
+			],
+			"bbox": [
+				-120.6808,
+				51.9383,
+				-61.0855,
+				83.1165
+			]
+		},
+		{
+			"id": "yukon",
+			"name": "Yukon",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-132.41235,
+				64.82715
+			],
+			"bbox": [
+				-141.0056,
+				60.0001,
+				-123.8191,
+				69.6542
+			]
+		},
+		{
+			"id": "manitoba",
+			"name": "Manitoba",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-95.4743,
+				54.4964
+			],
+			"bbox": [
+				-102.0016,
+				48.9927,
+				-88.947,
+				60.0001
+			]
+		},
+		{
+			"id": "saskatchewan",
+			"name": "Saskatchewan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-105.68215000000001,
+				54.49635000000001
+			],
+			"bbox": [
+				-110,
+				48.9926,
+				-101.3643,
+				60.0001
+			]
+		},
+		{
+			"id": "alberta",
+			"name": "Alberta",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-115.00015,
+				54.496300000000005
+			],
+			"bbox": [
+				-120.001,
+				48.9925,
+				-109.9993,
+				60.0001
+			]
+		},
+		{
+			"id": "british-columbia",
+			"name": "British Columbia",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-126.55425,
+				54.1572
+			],
+			"bbox": [
+				-139.0602,
+				48.3143,
+				-114.0483,
+				60.0001
+			]
+		},
+		{
+			"id": "quebec",
+			"name": "Québec",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-68.3883,
+				53.7938
+			],
+			"bbox": [
+				-79.6763,
+				44.9993,
+				-57.1003,
+				62.5883
+			]
+		},
+		{
+			"id": "newfoundland-and-labrador",
+			"name": "Newfoundland and Labrador",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-60.21845,
+				53.46115
+			],
+			"bbox": [
+				-67.8081,
+				46.6184,
+				-52.6288,
+				60.3039
+			]
+		},
+		{
+			"id": "ontario",
+			"name": "Ontario",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-84.7534,
+				49.265
+			],
+			"bbox": [
+				-95.1606,
+				41.6768,
+				-74.3462,
+				56.8532
+			]
+		},
+		{
+			"id": "prince-edward-island",
+			"name": "Prince Edward Island",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-63.21039999999999,
+				46.492900000000006
+			],
+			"bbox": [
+				-64.4168,
+				45.9643,
+				-62.004,
+				47.0215
+			]
+		},
+		{
+			"id": "new-brunswick",
+			"name": "New Brunswick",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-66.4277,
+				46.36275
+			],
+			"bbox": [
+				-69.0636,
+				44.6504,
+				-63.7918,
+				48.0751
+			]
+		},
+		{
+			"id": "nova-scotia",
+			"name": "Nova Scotia",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-63.0212,
+				45.266850000000005
+			],
+			"bbox": [
+				-66.2103,
+				43.5001,
+				-59.8321,
+				47.0336
+			]
+		}
+	],
+	"tourOrder": [
+		"northwest-territories",
+		"nunavut",
+		"yukon",
+		"manitoba",
+		"saskatchewan",
+		"alberta",
+		"british-columbia",
+		"quebec",
+		"newfoundland-and-labrador",
+		"ontario",
+		"prince-edward-island",
+		"new-brunswick",
+		"nova-scotia"
+	]
+}

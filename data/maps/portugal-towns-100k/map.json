@@ -1,0 +1,101 @@
+{
+	"id": "portugal-towns-100k",
+	"name": "Portugal — Towns",
+	"country": "Portugal",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "braga",
+			"name": "Braga",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-8.4213312,
+				41.5549945
+			],
+			"bbox": [
+				-8.4213312,
+				41.5549945,
+				-8.4213312,
+				41.5549945
+			]
+		},
+		{
+			"id": "porto",
+			"name": "Porto",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-8.6219471,
+				41.1519522
+			],
+			"bbox": [
+				-8.6219471,
+				41.1519522,
+				-8.6219471,
+				41.1519522
+			]
+		},
+		{
+			"id": "coimbra",
+			"name": "Coimbra",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-8.4166803,
+				40.2003744
+			],
+			"bbox": [
+				-8.4166803,
+				40.2003744,
+				-8.4166803,
+				40.2003744
+			]
+		},
+		{
+			"id": "lisboa",
+			"name": "Lisboa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-9.1468122,
+				38.7246687
+			],
+			"bbox": [
+				-9.1468122,
+				38.7246687,
+				-9.1468122,
+				38.7246687
+			]
+		},
+		{
+			"id": "setubal",
+			"name": "Setúbal",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-8.90001,
+				38.5299595
+			],
+			"bbox": [
+				-8.90001,
+				38.5299595,
+				-8.90001,
+				38.5299595
+			]
+		}
+	],
+	"tourOrder": [
+		"braga",
+		"porto",
+		"coimbra",
+		"lisboa",
+		"setubal"
+	]
+}

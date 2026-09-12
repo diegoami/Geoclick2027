@@ -46,7 +46,17 @@ Check items off as they land; update "Status" as iterations complete.
   and three script enhancements — `--name-field`/`--exclude-field`/
   `--extra-where` on `build-map.ts`, `--exclude` plus a `NAME_FIXUPS`
   table on `build-points-map.ts` — each added because one of these six
-  countries actually needed it, not speculatively).
+  countries actually needed it, not speculatively); quiz UX fixes — the
+  bottom name tray now sizes itself from the real rendered content
+  instead of a guessed viewport-percentage constant (fixes both an
+  oversized default and a floor that used to clip a partial extra row),
+  and the end-of-quiz score panel can be dismissed (or exited via "Back
+  to maps") without being forced into another round (see DECISIONS.md);
+  five more countries, ten more maps — Japan, Canada, Australia,
+  Portugal, Netherlands, same regions-plus-towns pattern, this batch
+  picked by Claude rather than user-specified (see MAPS.md's dated
+  section and DECISIONS.md for the reasoning, including Australia's
+  non-canonical-entity exclusions).
 - **Not started**: everything else below.
 - **Next up**: motion/feedback design (reveal animations, streak
   indicators, sound, correct-drop juiciness) and a broader component/

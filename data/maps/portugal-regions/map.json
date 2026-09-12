@@ -1,0 +1,335 @@
+{
+	"id": "portugal-regions",
+	"name": "Portugal — Districts",
+	"country": "Portugal",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "viana-do-castelo",
+			"name": "Viana do Castelo",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-8.494150000000001,
+				41.8857
+			],
+			"bbox": [
+				-8.8803,
+				41.6178,
+				-8.108,
+				42.1536
+			]
+		},
+		{
+			"id": "braga",
+			"name": "Braga",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-8.316650000000001,
+				41.5705
+			],
+			"bbox": [
+				-8.8198,
+				41.325,
+				-7.8135,
+				41.816
+			]
+		},
+		{
+			"id": "vila-real",
+			"name": "Vila Real",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-7.633900000000001,
+				41.5292
+			],
+			"bbox": [
+				-8.0951,
+				41.1591,
+				-7.1727,
+				41.8993
+			]
+		},
+		{
+			"id": "braganca",
+			"name": "Bragança",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-6.8191,
+				41.517799999999994
+			],
+			"bbox": [
+				-7.4323,
+				41.0481,
+				-6.2059,
+				41.9875
+			]
+		},
+		{
+			"id": "porto",
+			"name": "Porto",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-8.329649999999999,
+				41.242149999999995
+			],
+			"bbox": [
+				-8.7838,
+				41.0167,
+				-7.8755,
+				41.4676
+			]
+		},
+		{
+			"id": "viseu",
+			"name": "Viseu",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-7.82545,
+				40.768299999999996
+			],
+			"bbox": [
+				-8.3502,
+				40.3206,
+				-7.3007,
+				41.216
+			]
+		},
+		{
+			"id": "guarda",
+			"name": "Guarda",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-7.3095,
+				40.69815
+			],
+			"bbox": [
+				-7.8246,
+				40.232,
+				-6.7944,
+				41.1643
+			]
+		},
+		{
+			"id": "aveiro",
+			"name": "Aveiro",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-8.44885,
+				40.68455
+			],
+			"bbox": [
+				-8.7879,
+				40.2857,
+				-8.1098,
+				41.0834
+			]
+		},
+		{
+			"id": "coimbra",
+			"name": "Coimbra",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-8.32425,
+				40.2221
+			],
+			"bbox": [
+				-8.9084,
+				39.9212,
+				-7.7401,
+				40.523
+			]
+		},
+		{
+			"id": "castelo-branco",
+			"name": "Castelo Branco",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-7.5794,
+				39.98525
+			],
+			"bbox": [
+				-8.2791,
+				39.5571,
+				-6.8797,
+				40.4134
+			]
+		},
+		{
+			"id": "leiria",
+			"name": "Leiria",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-8.730450000000001,
+				39.65375
+			],
+			"bbox": [
+				-9.3529,
+				39.2212,
+				-8.108,
+				40.0863
+			]
+		},
+		{
+			"id": "santarem",
+			"name": "Santarém",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-8.4017,
+				39.28575
+			],
+			"bbox": [
+				-8.9987,
+				38.7342,
+				-7.8047,
+				39.8373
+			]
+		},
+		{
+			"id": "portalegre",
+			"name": "Portalegre",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-7.65345,
+				39.22165
+			],
+			"bbox": [
+				-8.3336,
+				38.7661,
+				-6.9733,
+				39.6772
+			]
+		},
+		{
+			"id": "lisboa",
+			"name": "Lisboa",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-9.14115,
+				38.99365
+			],
+			"bbox": [
+				-9.4919,
+				38.6703,
+				-8.7904,
+				39.317
+			]
+		},
+		{
+			"id": "evora",
+			"name": "Évora",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-7.8843499999999995,
+				38.602850000000004
+			],
+			"bbox": [
+				-8.6516,
+				38.1836,
+				-7.1171,
+				39.0221
+			]
+		},
+		{
+			"id": "setubal",
+			"name": "Setúbal",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-8.6939,
+				38.295950000000005
+			],
+			"bbox": [
+				-9.2527,
+				37.7575,
+				-8.1351,
+				38.8344
+			]
+		},
+		{
+			"id": "beja",
+			"name": "Beja",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-7.887,
+				37.82875
+			],
+			"bbox": [
+				-8.8265,
+				37.3267,
+				-6.9475,
+				38.3308
+			]
+		},
+		{
+			"id": "faro",
+			"name": "Faro",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-8.2,
+				37.265
+			],
+			"bbox": [
+				-8.9856,
+				37.0017,
+				-7.4144,
+				37.5283
+			]
+		}
+	],
+	"tourOrder": [
+		"viana-do-castelo",
+		"braga",
+		"vila-real",
+		"braganca",
+		"porto",
+		"viseu",
+		"guarda",
+		"aveiro",
+		"coimbra",
+		"castelo-branco",
+		"leiria",
+		"santarem",
+		"portalegre",
+		"lisboa",
+		"evora",
+		"setubal",
+		"beja",
+		"faro"
+	]
+}
