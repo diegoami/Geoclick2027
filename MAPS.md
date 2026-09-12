@@ -105,28 +105,42 @@ value below was checked directly against the actual source data before
 picking a build command, the same discipline as `italy-provinces`'s full
 name audit, not assumed from a couple of spot-checked rows.
 
-- **`france-regions`** (18 targets: 13 metropolitan régions + 5 overseas —
-  Guadeloupe, Martinique, Guyane française, Mayotte, Réunion). France's
+- **`france-regions`** (13 targets, metropolitan régions only). France's
   raw admin-1 rows are départements (101 of them, one level finer), same
   situation as Italy's provinces/regions — dissolved to the `region`
-  field, audited for blanks/duplicates first (none found):
+  field, audited for blanks/duplicates first (none found). Initially
+  shipped at 18 targets (13 metropolitan + Guadeloupe, Martinique,
+  Guyane française, Mayotte, Réunion) but corrected same-day: the 5
+  overseas départements sit thousands of km from mainland France and
+  each other, so including them blew out the map's bounding box far past
+  the useful metropolitan extent — same failure mode `usa-states`'s
+  Alaska/Hawaii `--exclude` already exists to solve. Excluded by their
+  pre-dissolve département name (each overseas région is exactly one
+  département, so this drops the whole région):
   ```
-  npx tsx data/scripts/build-map.ts --country="France" --out=data/maps/france-regions --type=region --name="France — Regions" --dissolve=region
+  npx tsx data/scripts/build-map.ts --country="France" --out=data/maps/france-regions --type=region --name="France — Regions" --dissolve=region --exclude="Guyane française,Martinique,Guadeloupe,La Réunion,Mayotte"
   ```
-- **`spain-regions`** (19 targets: 17 comunidades autónomas + Ceuta +
-  Melilla). Same situation as France — raw rows are the 52 provincias,
-  dissolved to `region`:
+- **`spain-regions`** (16 targets, mainland/Balearics comunidades
+  autónomas only). Same situation as France — raw rows are the 52
+  provincias, dissolved to `region`. Initially shipped at 19 targets (17
+  comunidades autónomas + Ceuta + Melilla) but corrected same-day
+  alongside France: the Canary Islands (~1,000km from mainland Spain,
+  off the African coast) plus the Ceuta/Melilla exclaves on the Moroccan
+  coast all skew the map the same way France's overseas départements
+  did, so excluded on the same reasoning (by pre-dissolve provincia
+  name):
   ```
-  npx tsx data/scripts/build-map.ts --country="Spain" --out=data/maps/spain-regions --type=region --name="Spain — Regions" --dissolve=region
+  npx tsx data/scripts/build-map.ts --country="Spain" --out=data/maps/spain-regions --type=region --name="Spain — Regions" --dissolve=region --exclude="Ceuta,Melilla,Santa Cruz de Tenerife,Las Palmas"
   ```
-  Three `NAME_FIXUPS['Spain']` entries needed, checked against the full
-  19-value list, not just the two that looked obviously wrong: `Canary
-  Is.` → `Canarias` (an English abbreviation slipped into the Spanish
-  data), `Foral de Navarra` → `Navarra`, and `Valenciana` → `Comunidad
+  Two `NAME_FIXUPS['Spain']` entries needed, checked against the full
+  value list, not just the ones that looked obviously wrong:
+  `Foral de Navarra` → `Navarra`, and `Valenciana` → `Comunidad
   Valenciana` (kept the full form, unlike Navarra — the Valencian
   Community contains a same-named *province*, so the bare name would
   collide with a possible future finer-level map the way it wouldn't for
-  single-province Navarra).
+  single-province Navarra). A third entry, `Canary Is.` → `Canarias`,
+  was removed once the Canary Islands were excluded outright — the
+  region name it fixed up no longer reaches this table.
 - **`great-britain-regions`** (15 targets — England's 9 official regions,
   Scotland's 4 historic registration-county groupings, Wales's 2 NUTS1
   halves; Northern Ireland excluded, see below). The UK's raw admin-1
@@ -185,7 +199,7 @@ name audit, not assumed from a couple of spot-checked rows.
   One `NAME_FIXUPS['Sweden']` entry: `Orebro` → `Örebro` — a missing
   diacritic in the plain field, confirmed against `name_sv` ("Örebro
   län"), not guessed.
-- **`france-towns-100k`** (40 targets), **`spain-towns-100k`** (41),
+- **`france-towns-100k`** (37 targets), **`spain-towns-100k`** (38),
   **`great-britain-towns-100k`** (38 — 39 minus Belfast, excluded via a
   new `--exclude` option on `build-points-map.ts` for the same
   Great-Britain-not-UK reason as the regions map above),
@@ -194,16 +208,17 @@ name audit, not assumed from a couple of spot-checked rows.
   small and lightly urbanized, only Stockholm/Göteborg/Malmö/Uppsala/
   Västerås clear 100k):
   ```
-  npx tsx data/scripts/build-points-map.ts --country="France" --out=data/maps/france-towns-100k --name-field=NAME_FR --min-population=100000 --name="France — Towns"
-  npx tsx data/scripts/build-points-map.ts --country="Spain" --out=data/maps/spain-towns-100k --name-field=NAME_ES --min-population=100000 --name="Spain — Towns"
+  npx tsx data/scripts/build-points-map.ts --country="France" --out=data/maps/france-towns-100k --name-field=NAME_FR --min-population=100000 --name="France — Towns" --exclude="Fort-de-France,Pointe-à-Pitre,St.-Denis"
+  npx tsx data/scripts/build-points-map.ts --country="Spain" --out=data/maps/spain-towns-100k --name-field=NAME_ES --min-population=100000 --name="Spain — Towns" --exclude="Melilla,Santa Cruz de Tenerife,Las Palmas"
   npx tsx data/scripts/build-points-map.ts --country="United Kingdom" --out=data/maps/great-britain-towns-100k --name-field=NAME_EN --min-population=100000 --name="Great Britain — Towns" --exclude=Belfast
   npx tsx data/scripts/build-points-map.ts --country="Poland" --out=data/maps/poland-towns-100k --name-field=NAME_PL --min-population=100000 --name="Poland — Towns"
   npx tsx data/scripts/build-points-map.ts --country="Ukraine" --out=data/maps/ukraine-towns-100k --name-field=NAME_EN --min-population=100000 --name="Ukraine — Towns"
   npx tsx data/scripts/build-points-map.ts --country="Sweden" --out=data/maps/sweden-towns-100k --min-population=100000 --name="Sweden — Towns"
   ```
   Every `--name-field` choice here was checked by diffing it against the
-  plain `NAME` field across every qualifying row first (`NAME_FR` fixes
-  `St.-Denis` → `Saint-Denis`; `NAME_ES` fixes several including
+  plain `NAME` field across every qualifying row first (`NAME_FR` fixed
+  `St.-Denis` → `Saint-Denis`, moot now that Réunion's Saint-Denis is
+  excluded as an overseas town; `NAME_ES` fixes several including
   `Seville` → `Sevilla` and a stray invisible character in `Granada`;
   `NAME_PL` fixes `Warsaw` → `Warszawa`; Sweden's `NAME`/`NAME_SV` were
   already identical, so no field override needed there at all). Two
@@ -230,7 +245,7 @@ spec'd in advance):
   before dissolve. Added for Ukraine (Crimea/Sevastopol).
 - `build-points-map.ts --exclude=<names>`: drops named features by
   `NAME`, mirroring `build-map.ts`'s existing option. Added for Great
-  Britain (Belfast).
+  Britain (Belfast); reused same-day for France/Spain's overseas towns.
 - `build-points-map.ts` gained its own small `NAME_FIXUPS` table,
   mirroring `build-map.ts`'s — for the rare row where even the chosen
   `--name-field` is wrong (Ukraine's Odessa, Spain's Orense).

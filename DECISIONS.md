@@ -150,6 +150,20 @@ or amend an entry here as part of that change, not as an afterthought.
   this literally rather than defaulting to the more common "UK" framing.
   Noted in MAPS.md as a scope call the user can correct if "United
   Kingdom" (including Northern Ireland) was actually meant.
+- **Overseas territories are excluded from a country's regions/towns
+  map by default — same reasoning as `usa-states`'s Alaska/Hawaii
+  exclusion, generalized.** France's and Spain's regions/towns maps
+  initially shipped including their overseas départements (Guadeloupe,
+  Martinique, Guyane française, Mayotte, Réunion) and, for Spain, the
+  Canary Islands and the Ceuta/Melilla exclaves — all geographically
+  distant from (or disconnected from) the mainland, which blows out the
+  map's bounding box far past the useful extent for a demo map, exactly
+  like Alaska/Hawaii would for the USA. Corrected same-day, user-flagged:
+  drop them via `--exclude` (regions map, matched against the pre-dissolve
+  département/provincia name) and `--exclude` on the towns map. Applies
+  going forward to any country whose full territory includes far-flung
+  overseas possessions — check for this before building a new country's
+  maps, not just for France/Spain specifically.
 - **Public-domain data sources only (Natural Earth), on purpose.** A
   constraint carried through the whole project, not just an initial
   default — flagged again explicitly when scoping the self-serve

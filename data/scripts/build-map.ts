@@ -42,10 +42,10 @@ const NAME_FIXUPS: Record<string, Record<string, string>> = {
 		Oristrano: 'Oristano'
 	},
 	// Spain's post-dissolve `region` values are mostly clean Spanish already
-	// (Cataluña, Andalucía, ...) except three: an English abbreviation and
-	// two names missing the noun their adjective describes.
+	// (Cataluña, Andalucía, ...) except two names missing the noun their
+	// adjective describes (Canary Is./Ceuta/Melilla are excluded outright,
+	// not fixed up - see --exclude in MAPS.md).
 	Spain: {
-		'Canary Is.': 'Canarias',
 		'Foral de Navarra': 'Navarra',
 		// Kept as the full "Comunidad Valenciana", not just "Valencia" -
 		// unlike Navarra (a single-province region, no ambiguity), the

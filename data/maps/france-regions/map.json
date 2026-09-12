@@ -225,91 +225,6 @@
 				9.5596,
 				43.0174
 			]
-		},
-		{
-			"id": "guadeloupe",
-			"name": "Guadeloupe",
-			"type": "region",
-			"tier": 1,
-			"aliases": [],
-			"centroid": [
-				-61.492900000000006,
-				16.1968
-			],
-			"bbox": [
-				-61.7974,
-				15.8818,
-				-61.1884,
-				16.5118
-			]
-		},
-		{
-			"id": "martinique",
-			"name": "Martinique",
-			"type": "region",
-			"tier": 1,
-			"aliases": [],
-			"centroid": [
-				-61.0196,
-				14.6692
-			],
-			"bbox": [
-				-61.2288,
-				14.462,
-				-60.8104,
-				14.8764
-			]
-		},
-		{
-			"id": "guyane-francaise",
-			"name": "Guyane française",
-			"type": "region",
-			"tier": 1,
-			"aliases": [],
-			"centroid": [
-				-53.11945,
-				3.92765
-			],
-			"bbox": [
-				-54.5882,
-				2.1107,
-				-51.6507,
-				5.7446
-			]
-		},
-		{
-			"id": "mayotte",
-			"name": "Mayotte",
-			"type": "region",
-			"tier": 1,
-			"aliases": [],
-			"centroid": [
-				45.15015,
-				-12.85605
-			],
-			"bbox": [
-				45.0872,
-				-12.9892,
-				45.2131,
-				-12.7229
-			]
-		},
-		{
-			"id": "reunion",
-			"name": "Réunion",
-			"type": "region",
-			"tier": 1,
-			"aliases": [],
-			"centroid": [
-				55.539950000000005,
-				-21.115299999999998
-			],
-			"bbox": [
-				55.2254,
-				-21.3674,
-				55.8545,
-				-20.8632
-			]
 		}
 	],
 	"tourOrder": [
@@ -325,11 +240,6 @@
 		"nouvelle-aquitaine",
 		"provence-alpes-cote-d-azur",
 		"occitanie",
-		"corse",
-		"guadeloupe",
-		"martinique",
-		"guyane-francaise",
-		"mayotte",
-		"reunion"
+		"corse"
 	]
 }
