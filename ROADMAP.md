@@ -14,23 +14,22 @@ Check items off as they land; update "Status" as iterations complete.
   Iteration 5 (local persistence — repository interface + `localStorage`
   backend, quiz results persisted and shown on the home page); Iteration
   6 (spaced repetition — SM-2 scheduler in `packages/srs`, due/not-due
-  quiz sessions, "practice all regions", home page due-state display).
-  SQLite backend deferred to Iteration 7 as planned.
+  quiz sessions, "practice all regions", home page due-state display);
+  `italy-provinces` map (110 targets, see MAPS.md and this section's
+  follow-up above). SQLite backend deferred to Iteration 7 as planned.
 - **Not started**: everything else below.
-- **Next up**: map expansion (see [MAPS.md](MAPS.md)), all of it —
-  `italy-provinces` (no blockers) *and* the two towns maps
-  (`italy-towns-100k`/`germany-towns-100k`) — before GUI/UX work, not
-  just provinces. Explicit user preference: wants cities/towns actually
-  playable before evaluating how the interface looks. That means the
-  point-target design question in MAPS.md (point geometry isn't
-  supported anywhere in the pipeline/app today) is a real near-term
-  prerequisite now, not a someday item — it has to get resolved for the
-  towns maps to happen at all. GUI/UX evaluation (Iteration 8+'s
-  "Evaluate GUI/UX approaches to make the interface more captivating"
-  item) comes after all three maps. **Iteration 7 (desktop POC
-  packaging) is deliberately deferred**, out of numeric order — explicit
-  user preference, not a scoping problem with Iteration 7 itself. Revisit
-  once maps + GUI work feels done, not on a fixed schedule.
+- **Next up**: the two towns maps (`italy-towns-100k`/
+  `germany-towns-100k`, see [MAPS.md](MAPS.md)) before GUI/UX work —
+  explicit user preference: wants cities/towns actually playable before
+  evaluating how the interface looks. Blocked on actually implementing
+  the point-target design in MAPS.md (point geometry isn't supported
+  anywhere in the pipeline/app today) — designed already, not yet built.
+  GUI/UX evaluation (Iteration 8+'s "Evaluate GUI/UX approaches to make
+  the interface more captivating" item) comes after both towns maps.
+  **Iteration 7 (desktop POC packaging) is deliberately deferred**, out
+  of numeric order — explicit user preference, not a scoping problem
+  with Iteration 7 itself. Revisit once maps + GUI work feels done, not
+  on a fixed schedule.
 - **Reordered**: local persistence and spaced repetition swapped places
   from the original numbering. Spaced repetition is pointless without
   somewhere to remember what's due across sessions — user accounts
@@ -159,6 +158,35 @@ Checked this didn't wash out the quiz's own feature-state colors
 begin with) by screenshotting a solved region mid-quiz — still reads
 clearly distinct from unsolved territory. Re-ran the regression suite
 again after the change; still clean.
+
+**Follow-up, a fourth map (`italy-provinces`, 110 targets):** shipped per
+the plan in `MAPS.md` — no new data source needed, Italy's admin-1 data
+in Natural Earth is already province-level, `italy-regions` only shows
+20 because of its `--dissolve=region` flag. Skipping that flag and
+adding a `'province'` `TargetType` (confirmed nothing else in `app/`
+branches on `TargetType` at all — it's carried as metadata only, a safe
+additive change) was enough to build it.
+
+- [x] Audited all 110 raw province names directly, not spot-checked —
+      found 3 non-Italian names (Aoste→Aosta, Bozen→Bolzano,
+      Turin→Torino) and 2 apparent Natural Earth data typos, not
+      translation issues (Crotene→Crotone, Oristrano→Oristano). All five
+      added to `NAME_FIXUPS['Italy']` alongside the existing region-level
+      fixups.
+- [x] Confirmed the shared `NAME_FIXUPS['Italy']` table doesn't
+      cross-contaminate between the two Italy maps: regenerated
+      `italy-regions` after the change and confirmed via `git diff` it
+      produced byte-identical `map.json`/`tour.json`/`tiles.pmtiles`.
+- [x] Added to the home page's map list.
+
+**Verified:** Playwright against the live app, not just the generated
+files — home page lists it, `/overview` shows all 110 with the corrected
+names visible (Aosta/Bolzano/Torino, not Aoste/Bozen/Turin), quiz tray
+has 110 slips in alphabetical order and a drag-drop solve works, tour
+loads with no errors. Full existing unit test suite (41 tests across
+app/quiz-engine/srs) and a production build both still clean — this
+change touches no shared quiz-mechanics code, only adds a map and a
+`TargetType` value.
 
 ## Iteration 2 — Core map viewer
 

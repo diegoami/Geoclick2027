@@ -10,6 +10,7 @@
 
 	const demoMaps = [
 		{ id: 'italy-regions', name: 'Italy — Regions' },
+		{ id: 'italy-provinces', name: 'Italy — Provinces' },
 		{ id: 'germany-states', name: 'Germany — States' },
 		{ id: 'usa-states', name: 'USA — States' }
 	];

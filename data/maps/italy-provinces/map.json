@@ -1,0 +1,1991 @@
+{
+	"id": "italy-provinces",
+	"name": "Italy — Provinces",
+	"country": "Italy",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "bolzano",
+			"name": "Bolzano",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.4194,
+				46.6582
+			],
+			"bbox": [
+				10.3692,
+				46.2312,
+				12.4696,
+				47.0852
+			]
+		},
+		{
+			"id": "sondrio",
+			"name": "Sondrio",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.92475,
+				46.319100000000006
+			],
+			"bbox": [
+				9.2248,
+				46.0114,
+				10.6247,
+				46.6268
+			]
+		},
+		{
+			"id": "belluno",
+			"name": "Belluno",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.220949999999998,
+				46.2782
+			],
+			"bbox": [
+				11.6848,
+				45.8806,
+				12.7571,
+				46.6758
+			]
+		},
+		{
+			"id": "udine",
+			"name": "Udine",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.0852,
+				46.146649999999994
+			],
+			"bbox": [
+				12.5001,
+				45.6523,
+				13.6703,
+				46.641
+			]
+		},
+		{
+			"id": "trento",
+			"name": "Trento",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.2149,
+				46.1076
+			],
+			"bbox": [
+				10.4604,
+				45.6996,
+				11.9694,
+				46.5156
+			]
+		},
+		{
+			"id": "verbano-cusio-ossola",
+			"name": "Verbano-Cusio-Ossola",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.289299999999999,
+				46.10365
+			],
+			"bbox": [
+				7.8496,
+				45.7724,
+				8.729,
+				46.4349
+			]
+		},
+		{
+			"id": "pordenone",
+			"name": "Pordenone",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.65695,
+				46.10315
+			],
+			"bbox": [
+				12.3359,
+				45.8021,
+				12.978,
+				46.4042
+			]
+		},
+		{
+			"id": "como",
+			"name": "Como",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.17485,
+				45.9412
+			],
+			"bbox": [
+				8.9089,
+				45.6512,
+				9.4408,
+				46.2312
+			]
+		},
+		{
+			"id": "lecco",
+			"name": "Lecco",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.393650000000001,
+				45.913
+			],
+			"bbox": [
+				9.2472,
+				45.666,
+				9.5401,
+				46.16
+			]
+		},
+		{
+			"id": "gorizia",
+			"name": "Gorizia",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.513200000000001,
+				45.8604
+			],
+			"bbox": [
+				13.4036,
+				45.7144,
+				13.6228,
+				46.0064
+			]
+		},
+		{
+			"id": "varese",
+			"name": "Varese",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.81205,
+				45.832499999999996
+			],
+			"bbox": [
+				8.5654,
+				45.5568,
+				9.0587,
+				46.1082
+			]
+		},
+		{
+			"id": "treviso",
+			"name": "Treviso",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.207650000000001,
+				45.80945
+			],
+			"bbox": [
+				11.7425,
+				45.5367,
+				12.6728,
+				46.0822
+			]
+		},
+		{
+			"id": "brescia",
+			"name": "Brescia",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.3508,
+				45.7764
+			],
+			"bbox": [
+				9.8567,
+				45.2047,
+				10.8449,
+				46.3481
+			]
+		},
+		{
+			"id": "bergamo",
+			"name": "Bergamo",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.8262,
+				45.757949999999994
+			],
+			"bbox": [
+				9.4478,
+				45.425,
+				10.2046,
+				46.0909
+			]
+		},
+		{
+			"id": "aosta",
+			"name": "Aosta",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.3561,
+				45.7252
+			],
+			"bbox": [
+				6.7959,
+				45.4663,
+				7.9163,
+				45.9841
+			]
+		},
+		{
+			"id": "trieste",
+			"name": "Trieste",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.720849999999999,
+				45.711749999999995
+			],
+			"bbox": [
+				13.5833,
+				45.617,
+				13.8584,
+				45.8065
+			]
+		},
+		{
+			"id": "monza-e-brianza",
+			"name": "Monza e Brianza",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.2747,
+				45.6409
+			],
+			"bbox": [
+				9.053,
+				45.5392,
+				9.4964,
+				45.7426
+			]
+		},
+		{
+			"id": "vicenza",
+			"name": "Vicenza",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.48075,
+				45.62815
+			],
+			"bbox": [
+				11.1307,
+				45.2439,
+				11.8308,
+				46.0124
+			]
+		},
+		{
+			"id": "novara",
+			"name": "Novara",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.57125,
+				45.59115
+			],
+			"bbox": [
+				8.3105,
+				45.3134,
+				8.832,
+				45.8689
+			]
+		},
+		{
+			"id": "biella",
+			"name": "Biella",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.080300000000001,
+				45.560050000000004
+			],
+			"bbox": [
+				7.8802,
+				45.3782,
+				8.2804,
+				45.7419
+			]
+		},
+		{
+			"id": "vercelli",
+			"name": "Vercelli",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.20625,
+				45.55625
+			],
+			"bbox": [
+				7.8559,
+				45.1648,
+				8.5566,
+				45.9477
+			]
+		},
+		{
+			"id": "verona",
+			"name": "Verona",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.0657,
+				45.4618
+			],
+			"bbox": [
+				10.6442,
+				45.0895,
+				11.4872,
+				45.8341
+			]
+		},
+		{
+			"id": "venezia",
+			"name": "Venezia",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.528749999999999,
+				45.4572
+			],
+			"bbox": [
+				11.9619,
+				45.0582,
+				13.0956,
+				45.8562
+			]
+		},
+		{
+			"id": "milano",
+			"name": "Milano",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.11955,
+				45.45515
+			],
+			"bbox": [
+				8.7052,
+				45.265,
+				9.5339,
+				45.6453
+			]
+		},
+		{
+			"id": "padova",
+			"name": "Padova",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.802700000000002,
+				45.3929
+			],
+			"bbox": [
+				11.406,
+				45.0987,
+				12.1994,
+				45.6871
+			]
+		},
+		{
+			"id": "lodi",
+			"name": "Lodi",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.5992,
+				45.26325
+			],
+			"bbox": [
+				9.3155,
+				45.0753,
+				9.8829,
+				45.4512
+			]
+		},
+		{
+			"id": "cremona",
+			"name": "Cremona",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.00355,
+				45.2157
+			],
+			"bbox": [
+				9.4683,
+				44.9194,
+				10.5388,
+				45.512
+			]
+		},
+		{
+			"id": "mantova",
+			"name": "Mantova",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.86965,
+				45.1665
+			],
+			"bbox": [
+				10.3178,
+				44.914,
+				11.4215,
+				45.419
+			]
+		},
+		{
+			"id": "torino",
+			"name": "Torino",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.3773,
+				45.157399999999996
+			],
+			"bbox": [
+				6.6027,
+				44.7121,
+				8.1519,
+				45.6027
+			]
+		},
+		{
+			"id": "pavia",
+			"name": "Pavia",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.0293,
+				45.04515
+			],
+			"bbox": [
+				8.5126,
+				44.6821,
+				9.546,
+				45.4082
+			]
+		},
+		{
+			"id": "rovigo",
+			"name": "Rovigo",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.86135,
+				44.979150000000004
+			],
+			"bbox": [
+				11.1957,
+				44.7935,
+				12.527,
+				45.1648
+			]
+		},
+		{
+			"id": "alessandria",
+			"name": "Alessandria",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.666049999999998,
+				44.85565
+			],
+			"bbox": [
+				8.129,
+				44.5068,
+				9.2031,
+				45.2045
+			]
+		},
+		{
+			"id": "piacenza",
+			"name": "Piacenza",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.63665,
+				44.84255
+			],
+			"bbox": [
+				9.2014,
+				44.551,
+				10.0719,
+				45.1341
+			]
+		},
+		{
+			"id": "asti",
+			"name": "Asti",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.1948,
+				44.827200000000005
+			],
+			"bbox": [
+				7.8907,
+				44.5217,
+				8.4989,
+				45.1327
+			]
+		},
+		{
+			"id": "ferrara",
+			"name": "Ferrara",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.825199999999999,
+				44.7675
+			],
+			"bbox": [
+				11.257,
+				44.5511,
+				12.3934,
+				44.9839
+			]
+		},
+		{
+			"id": "parma",
+			"name": "Parma",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.97625,
+				44.694199999999995
+			],
+			"bbox": [
+				9.451,
+				44.3418,
+				10.5015,
+				45.0466
+			]
+		},
+		{
+			"id": "reggio-emilia",
+			"name": "Reggio Emilia",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.51175,
+				44.605850000000004
+			],
+			"bbox": [
+				10.1357,
+				44.2246,
+				10.8878,
+				44.9871
+			]
+		},
+		{
+			"id": "modena",
+			"name": "Modena",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.9037,
+				44.5377
+			],
+			"bbox": [
+				10.4712,
+				44.1135,
+				11.3362,
+				44.9619
+			]
+		},
+		{
+			"id": "cuneo",
+			"name": "Cuneo",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.552149999999999,
+				44.46855
+			],
+			"bbox": [
+				6.8388,
+				44.0908,
+				8.2655,
+				44.8463
+			]
+		},
+		{
+			"id": "genova",
+			"name": "Genova",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.06325,
+				44.4489
+			],
+			"bbox": [
+				8.5642,
+				44.2152,
+				9.5623,
+				44.6826
+			]
+		},
+		{
+			"id": "bologna",
+			"name": "Bologna",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.3181,
+				44.43535
+			],
+			"bbox": [
+				10.8159,
+				44.068,
+				11.8203,
+				44.8027
+			]
+		},
+		{
+			"id": "ravenna",
+			"name": "Ravenna",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.955950000000001,
+				44.37435
+			],
+			"bbox": [
+				11.5263,
+				44.1189,
+				12.3856,
+				44.6298
+			]
+		},
+		{
+			"id": "savona",
+			"name": "Savona",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.3215,
+				44.237449999999995
+			],
+			"bbox": [
+				7.9922,
+				43.9403,
+				8.6508,
+				44.5346
+			]
+		},
+		{
+			"id": "la-spezia",
+			"name": "La Spezia",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.76665,
+				44.23595
+			],
+			"bbox": [
+				9.4764,
+				44.0447,
+				10.0569,
+				44.4272
+			]
+		},
+		{
+			"id": "massa-carrara",
+			"name": "Massa-Carrara",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.97185,
+				44.2257
+			],
+			"bbox": [
+				9.6898,
+				43.9751,
+				10.2539,
+				44.4763
+			]
+		},
+		{
+			"id": "forli-cesena",
+			"name": "Forlì-Cesena",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.05435,
+				44.044650000000004
+			],
+			"bbox": [
+				11.6507,
+				43.759,
+				12.458,
+				44.3303
+			]
+		},
+		{
+			"id": "lucca",
+			"name": "Lucca",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.4396,
+				44.01525
+			],
+			"bbox": [
+				10.1433,
+				43.7556,
+				10.7359,
+				44.2749
+			]
+		},
+		{
+			"id": "pistoia",
+			"name": "Pistoia",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.8294,
+				43.979
+			],
+			"bbox": [
+				10.6105,
+				43.796,
+				11.0483,
+				44.162
+			]
+		},
+		{
+			"id": "rimini",
+			"name": "Rimini",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.428,
+				43.9627
+			],
+			"bbox": [
+				12.1022,
+				43.759,
+				12.7538,
+				44.1664
+			]
+		},
+		{
+			"id": "imperia",
+			"name": "Imperia",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.80405,
+				43.962450000000004
+			],
+			"bbox": [
+				7.4779,
+				43.7912,
+				8.1302,
+				44.1337
+			]
+		},
+		{
+			"id": "prato",
+			"name": "Prato",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.0821,
+				43.9581
+			],
+			"bbox": [
+				10.9641,
+				43.8115,
+				11.2001,
+				44.1047
+			]
+		},
+		{
+			"id": "firenze",
+			"name": "Firenze",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.21565,
+				43.842299999999994
+			],
+			"bbox": [
+				10.7111,
+				43.4522,
+				11.7202,
+				44.2324
+			]
+		},
+		{
+			"id": "pesaro-e-urbino",
+			"name": "Pesaro e Urbino",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.686499999999999,
+				43.701350000000005
+			],
+			"bbox": [
+				12.1958,
+				43.4303,
+				13.1772,
+				43.9724
+			]
+		},
+		{
+			"id": "arezzo",
+			"name": "Arezzo",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.87755,
+				43.5197
+			],
+			"bbox": [
+				11.3975,
+				43.1603,
+				12.3576,
+				43.8791
+			]
+		},
+		{
+			"id": "ancona",
+			"name": "Ancona",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.19675,
+				43.4788
+			],
+			"bbox": [
+				12.7465,
+				43.2061,
+				13.647,
+				43.7515
+			]
+		},
+		{
+			"id": "pisa",
+			"name": "Pisa",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.633299999999998,
+				43.4666
+			],
+			"bbox": [
+				10.2618,
+				43.1085,
+				11.0048,
+				43.8247
+			]
+		},
+		{
+			"id": "livorno",
+			"name": "Livorno",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.4497,
+				43.1868
+			],
+			"bbox": [
+				10.1117,
+				42.7373,
+				10.7877,
+				43.6363
+			]
+		},
+		{
+			"id": "siena",
+			"name": "Siena",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.444749999999999,
+				43.17335
+			],
+			"bbox": [
+				10.9117,
+				42.7985,
+				11.9778,
+				43.5482
+			]
+		},
+		{
+			"id": "macerata",
+			"name": "Macerata",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.2912,
+				43.1499
+			],
+			"bbox": [
+				12.8374,
+				42.8245,
+				13.745,
+				43.4753
+			]
+		},
+		{
+			"id": "perugia",
+			"name": "Perugia",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.58335,
+				43.1095
+			],
+			"bbox": [
+				11.9178,
+				42.6022,
+				13.2489,
+				43.6168
+			]
+		},
+		{
+			"id": "fermo",
+			"name": "Fermo",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.53555,
+				43.0921
+			],
+			"bbox": [
+				13.2176,
+				42.892,
+				13.8535,
+				43.2922
+			]
+		},
+		{
+			"id": "ascoli-piceno",
+			"name": "Ascoli Piceno",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.55,
+				42.8821
+			],
+			"bbox": [
+				13.1945,
+				42.6877,
+				13.9055,
+				43.0765
+			]
+		},
+		{
+			"id": "grosseto",
+			"name": "Grosseto",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.256499999999999,
+				42.77545
+			],
+			"bbox": [
+				10.7051,
+				42.3744,
+				11.8079,
+				43.1765
+			]
+		},
+		{
+			"id": "teramo",
+			"name": "Teramo",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.74445,
+				42.660849999999996
+			],
+			"bbox": [
+				13.3376,
+				42.4201,
+				14.1513,
+				42.9016
+			]
+		},
+		{
+			"id": "terni",
+			"name": "Terni",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.395499999999998,
+				42.653999999999996
+			],
+			"bbox": [
+				11.889,
+				42.3695,
+				12.902,
+				42.9385
+			]
+		},
+		{
+			"id": "viterbo",
+			"name": "Viterbo",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.985949999999999,
+				42.5006
+			],
+			"bbox": [
+				11.4515,
+				42.1508,
+				12.5204,
+				42.8504
+			]
+		},
+		{
+			"id": "rieti",
+			"name": "Rieti",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.9205,
+				42.42555
+			],
+			"bbox": [
+				12.4651,
+				42.1065,
+				13.3759,
+				42.7446
+			]
+		},
+		{
+			"id": "pescara",
+			"name": "Pescara",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.011299999999999,
+				42.3078
+			],
+			"bbox": [
+				13.7654,
+				42.0751,
+				14.2572,
+				42.5405
+			]
+		},
+		{
+			"id": "l-aquila",
+			"name": "L'Aquila",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.6289,
+				42.146
+			],
+			"bbox": [
+				13.0284,
+				41.6882,
+				14.2294,
+				42.6038
+			]
+		},
+		{
+			"id": "chieti",
+			"name": "Chieti",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.418500000000002,
+				42.1111
+			],
+			"bbox": [
+				14.0736,
+				41.7761,
+				14.7634,
+				42.4461
+			]
+		},
+		{
+			"id": "roma",
+			"name": "Roma",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.51885,
+				41.85835
+			],
+			"bbox": [
+				11.7398,
+				41.4209,
+				13.2979,
+				42.2958
+			]
+		},
+		{
+			"id": "campobasso",
+			"name": "Campobasso",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.7631,
+				41.7255
+			],
+			"bbox": [
+				14.3827,
+				41.3731,
+				15.1435,
+				42.0779
+			]
+		},
+		{
+			"id": "isernia",
+			"name": "Isernia",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.2271,
+				41.6504
+			],
+			"bbox": [
+				13.9457,
+				41.3946,
+				14.5085,
+				41.9062
+			]
+		},
+		{
+			"id": "frosinone",
+			"name": "Frosinone",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.5088,
+				41.6298
+			],
+			"bbox": [
+				13.0075,
+				41.3126,
+				14.0101,
+				41.947
+			]
+		},
+		{
+			"id": "foggia",
+			"name": "Foggia",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.563400000000001,
+				41.4996
+			],
+			"bbox": [
+				14.9339,
+				41.0551,
+				16.1929,
+				41.9441
+			]
+		},
+		{
+			"id": "latina",
+			"name": "Latina",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.2377,
+				41.46855
+			],
+			"bbox": [
+				12.6028,
+				41.2275,
+				13.8726,
+				41.7096
+			]
+		},
+		{
+			"id": "benevento",
+			"name": "Benevento",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.78195,
+				41.2458
+			],
+			"bbox": [
+				14.4204,
+				41.0095,
+				15.1435,
+				41.4821
+			]
+		},
+		{
+			"id": "caserta",
+			"name": "Caserta",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.1375,
+				41.21625
+			],
+			"bbox": [
+				13.7437,
+				40.9368,
+				14.5313,
+				41.4957
+			]
+		},
+		{
+			"id": "barletta-andria-trani",
+			"name": "Barletta-Andria Trani",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.20125,
+				41.179050000000004
+			],
+			"bbox": [
+				15.8583,
+				40.9042,
+				16.5442,
+				41.4539
+			]
+		},
+		{
+			"id": "avellino",
+			"name": "Avellino",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.0653,
+				40.99905
+			],
+			"bbox": [
+				14.572,
+				40.7235,
+				15.5586,
+				41.2746
+			]
+		},
+		{
+			"id": "bari",
+			"name": "Bari",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.794449999999998,
+				40.96805
+			],
+			"bbox": [
+				16.1966,
+				40.7009,
+				17.3923,
+				41.2352
+			]
+		},
+		{
+			"id": "olbia-tempio",
+			"name": "Olbia-Tempio",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.28,
+				40.899699999999996
+			],
+			"bbox": [
+				8.8112,
+				40.5368,
+				9.7488,
+				41.2626
+			]
+		},
+		{
+			"id": "napoli",
+			"name": "Napoli",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.3078,
+				40.81905
+			],
+			"bbox": [
+				14.0101,
+				40.6247,
+				14.6055,
+				41.0134
+			]
+		},
+		{
+			"id": "brindisi",
+			"name": "Brindisi",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.7084,
+				40.63665
+			],
+			"bbox": [
+				17.3179,
+				40.3796,
+				18.0989,
+				40.8937
+			]
+		},
+		{
+			"id": "sassari",
+			"name": "Sassari",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.696100000000001,
+				40.6349
+			],
+			"bbox": [
+				8.1338,
+				40.317,
+				9.2584,
+				40.9528
+			]
+		},
+		{
+			"id": "taranto",
+			"name": "Taranto",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.2549,
+				40.52915
+			],
+			"bbox": [
+				16.7113,
+				40.2934,
+				17.7985,
+				40.7649
+			]
+		},
+		{
+			"id": "potenza",
+			"name": "Potenza",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.871550000000001,
+				40.52175
+			],
+			"bbox": [
+				15.3443,
+				39.9067,
+				16.3988,
+				41.1368
+			]
+		},
+		{
+			"id": "matera",
+			"name": "Matera",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.45975,
+				40.4465
+			],
+			"bbox": [
+				16.0562,
+				40.0555,
+				16.8633,
+				40.8375
+			]
+		},
+		{
+			"id": "salerno",
+			"name": "Salerno",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.1284,
+				40.42145
+			],
+			"bbox": [
+				14.4714,
+				39.994,
+				15.7854,
+				40.8489
+			]
+		},
+		{
+			"id": "nuoro",
+			"name": "Nuoro",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.223500000000001,
+				40.259699999999995
+			],
+			"bbox": [
+				8.6203,
+				39.8296,
+				9.8267,
+				40.6898
+			]
+		},
+		{
+			"id": "lecce",
+			"name": "Lecce",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.1407,
+				40.16589999999999
+			],
+			"bbox": [
+				17.764,
+				39.8139,
+				18.5174,
+				40.5179
+			]
+		},
+		{
+			"id": "oristano",
+			"name": "Oristano",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.772649999999999,
+				40.02315
+			],
+			"bbox": [
+				8.386,
+				39.634,
+				9.1593,
+				40.4123
+			]
+		},
+		{
+			"id": "ogliastra",
+			"name": "Ogliastra",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.50265,
+				39.8868
+			],
+			"bbox": [
+				9.273,
+				39.5491,
+				9.7323,
+				40.2245
+			]
+		},
+		{
+			"id": "cosenza",
+			"name": "Cosenza",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.3825,
+				39.58985
+			],
+			"bbox": [
+				15.7458,
+				39.0504,
+				17.0192,
+				40.1293
+			]
+		},
+		{
+			"id": "medio-campidano",
+			"name": "Medio Campidano",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.72795,
+				39.57695
+			],
+			"bbox": [
+				8.3981,
+				39.3749,
+				9.0578,
+				39.779
+			]
+		},
+		{
+			"id": "cagliari",
+			"name": "Cagliari",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.1283,
+				39.39895
+			],
+			"bbox": [
+				8.6103,
+				38.8806,
+				9.6463,
+				39.9173
+			]
+		},
+		{
+			"id": "carbonia-iglesias",
+			"name": "Carbonia-Iglesias",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.59915,
+				39.217150000000004
+			],
+			"bbox": [
+				8.3493,
+				38.9549,
+				8.849,
+				39.4794
+			]
+		},
+		{
+			"id": "crotone",
+			"name": "Crotone",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.8928,
+				39.1926
+			],
+			"bbox": [
+				16.6132,
+				38.906,
+				17.1724,
+				39.4792
+			]
+		},
+		{
+			"id": "catanzaro",
+			"name": "Catanzaro",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.49455,
+				38.830799999999996
+			],
+			"bbox": [
+				16.0969,
+				38.4673,
+				16.8922,
+				39.1943
+			]
+		},
+		{
+			"id": "vibo-valentia",
+			"name": "Vibo Valentia",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.132199999999997,
+				38.63145
+			],
+			"bbox": [
+				15.8445,
+				38.4412,
+				16.4199,
+				38.8217
+			]
+		},
+		{
+			"id": "reggio-calabria",
+			"name": "Reggio Calabria",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.1005,
+				38.23994999999999
+			],
+			"bbox": [
+				15.6275,
+				37.9252,
+				16.5735,
+				38.5547
+			]
+		},
+		{
+			"id": "messina",
+			"name": "Messina",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.8817,
+				38.051
+			],
+			"bbox": [
+				14.1796,
+				37.8044,
+				15.5838,
+				38.2976
+			]
+		},
+		{
+			"id": "palermo",
+			"name": "Palermo",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.6131,
+				37.901349999999994
+			],
+			"bbox": [
+				12.9463,
+				37.5832,
+				14.2799,
+				38.2195
+			]
+		},
+		{
+			"id": "trapani",
+			"name": "Trapani",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.75775,
+				37.844300000000004
+			],
+			"bbox": [
+				12.427,
+				37.5627,
+				13.0885,
+				38.1259
+			]
+		},
+		{
+			"id": "enna",
+			"name": "Enna",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.456299999999999,
+				37.5877
+			],
+			"bbox": [
+				14.077,
+				37.306,
+				14.8356,
+				37.8694
+			]
+		},
+		{
+			"id": "catania",
+			"name": "Catania",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.8062,
+				37.50805
+			],
+			"bbox": [
+				14.3525,
+				37.0529,
+				15.2599,
+				37.9632
+			]
+		},
+		{
+			"id": "agrigento",
+			"name": "Agrigento",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.4666,
+				37.42075
+			],
+			"bbox": [
+				12.8939,
+				37.1008,
+				14.0393,
+				37.7407
+			]
+		},
+		{
+			"id": "caltanissetta",
+			"name": "Caltanissetta",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.07885,
+				37.363749999999996
+			],
+			"bbox": [
+				13.6854,
+				37.0006,
+				14.4723,
+				37.7269
+			]
+		},
+		{
+			"id": "siracusa",
+			"name": "Siracusa",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.0574,
+				37.0347
+			],
+			"bbox": [
+				14.7854,
+				36.6591,
+				15.3294,
+				37.4103
+			]
+		},
+		{
+			"id": "ragusa",
+			"name": "Ragusa",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.667449999999999,
+				36.9157
+			],
+			"bbox": [
+				14.3346,
+				36.6994,
+				15.0003,
+				37.132
+			]
+		}
+	],
+	"tourOrder": [
+		"bolzano",
+		"sondrio",
+		"belluno",
+		"udine",
+		"trento",
+		"verbano-cusio-ossola",
+		"pordenone",
+		"como",
+		"lecco",
+		"gorizia",
+		"varese",
+		"treviso",
+		"brescia",
+		"bergamo",
+		"aosta",
+		"trieste",
+		"monza-e-brianza",
+		"vicenza",
+		"novara",
+		"biella",
+		"vercelli",
+		"verona",
+		"venezia",
+		"milano",
+		"padova",
+		"lodi",
+		"cremona",
+		"mantova",
+		"torino",
+		"pavia",
+		"rovigo",
+		"alessandria",
+		"piacenza",
+		"asti",
+		"ferrara",
+		"parma",
+		"reggio-emilia",
+		"modena",
+		"cuneo",
+		"genova",
+		"bologna",
+		"ravenna",
+		"savona",
+		"la-spezia",
+		"massa-carrara",
+		"forli-cesena",
+		"lucca",
+		"pistoia",
+		"rimini",
+		"imperia",
+		"prato",
+		"firenze",
+		"pesaro-e-urbino",
+		"arezzo",
+		"ancona",
+		"pisa",
+		"livorno",
+		"siena",
+		"macerata",
+		"perugia",
+		"fermo",
+		"ascoli-piceno",
+		"grosseto",
+		"teramo",
+		"terni",
+		"viterbo",
+		"rieti",
+		"pescara",
+		"l-aquila",
+		"chieti",
+		"roma",
+		"campobasso",
+		"isernia",
+		"frosinone",
+		"foggia",
+		"latina",
+		"benevento",
+		"caserta",
+		"barletta-andria-trani",
+		"avellino",
+		"bari",
+		"olbia-tempio",
+		"napoli",
+		"brindisi",
+		"sassari",
+		"taranto",
+		"potenza",
+		"matera",
+		"salerno",
+		"nuoro",
+		"lecce",
+		"oristano",
+		"ogliastra",
+		"cosenza",
+		"medio-campidano",
+		"cagliari",
+		"carbonia-iglesias",
+		"crotone",
+		"catanzaro",
+		"vibo-valentia",
+		"reggio-calabria",
+		"messina",
+		"palermo",
+		"trapani",
+		"enna",
+		"catania",
+		"agrigento",
+		"caltanissetta",
+		"siracusa",
+		"ragusa"
+	]
+}
