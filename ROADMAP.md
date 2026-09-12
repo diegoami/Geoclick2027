@@ -33,16 +33,18 @@ Check items off as they land; update "Status" as iterations complete.
   rendering failed on Android due to a Capacitor WebView limitation
   around HTTP range requests, see the Iteration 8+ Android entry's
   "Emulator run" follow-up for detail. Merged to `main` 2026-09-12);
-  GUI/UX evaluation, first round (built on
-  `feature/gui-ux-nav-labels-colors`, not yet merged — big top-nav
-  buttons, an 8-color categorical map palette, unified/higher-contrast
-  on-map labels, and a resizable quiz tray; see that Iteration 8+ entry
-  for the full list and DECISIONS.md's "GUI/UX round 1" for the reasoning).
+  GUI/UX evaluation, first round (big top-nav buttons via a shared
+  `MapNav.svelte` tab bar on every map-scoped view, not just the landing
+  page; an 8-color categorical map palette; unified/higher-contrast
+  on-map labels; a resizable quiz tray, with a real flexbox min-height
+  bug fixed along the way — see DECISIONS.md's "GUI/UX round 1" for the
+  reasoning behind each. User-tested and approved. Merged to `main`
+  2026-09-12).
 - **Not started**: everything else below.
-- **Next up**: user testing of the GUI/UX round-1 branch, then merge once
-  approved. After that, motion/feedback design and a broader design-system
-  pass remain open on the same GUI/UX item, revisited whenever it feels
-  worth another round rather than on a fixed schedule.
+- **Next up**: motion/feedback design (reveal animations, streak
+  indicators, sound, correct-drop juiciness) and a broader component/
+  design-system pass remain open on the same GUI/UX item — revisit
+  whenever it feels worth another round, not on a fixed schedule.
 - **Reordered**: local persistence and spaced repetition swapped places
   from the original numbering. Spaced repetition is pointless without
   somewhere to remember what's due across sessions — user accounts
@@ -1363,7 +1365,8 @@ loop actually feels good. Candidates below, in rough priority order.
       database) — another decision for when this iteration starts, not
       now.
 - [x] **Evaluate GUI/UX approaches to make the interface more captivating —
-      first round shipped 2026-09-12** (branch `feature/gui-ux-nav-labels-colors`).
+      first round, merged to `main` 2026-09-12** (from
+      `feature/gui-ux-nav-labels-colors`).
       Sequenced after the Android POC as planned, and directly triggered by
       the user's own feedback testing Android on a real device (widget
       sizing) plus a follow-up ("everything is green"). Explored with the
@@ -1397,9 +1400,13 @@ loop actually feels good. Candidates below, in rough priority order.
         65% pill opacity was needed to clear 4.5:1 on every color instead of
         the mockup's original 55%.
       - [x] **Quiz name-tray resize**: added a drag handle (pointer +
-        keyboard, `role="slider"`) so the tray's height (15-70vh) is now
-        under the user's control instead of a fixed 30vh that scrolled on
-        anything past ~20 targets.
+        keyboard, `role="slider"`) so the tray's height (9-70vh, default
+        22vh) is now under the user's control instead of a fixed 30vh that
+        scrolled on anything past ~20 targets. Follow-up after the user
+        found it couldn't actually shrink much: a classic flexbox
+        `min-height: auto` gotcha on the wrapping slip container was
+        silently overriding the handle's own height changes — fixed with
+        an explicit `min-height: 0`, see DECISIONS.md.
       - [ ] Motion/feedback design (reveal animations, streak indicators,
         sound, correct-drop juiciness) and a broader component/design-system
         pass are still open — this round was scoped to what the user's
