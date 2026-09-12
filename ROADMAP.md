@@ -16,20 +16,19 @@ Check items off as they land; update "Status" as iterations complete.
   6 (spaced repetition — SM-2 scheduler in `packages/srs`, due/not-due
   quiz sessions, "practice all regions", home page due-state display);
   `italy-provinces` map (110 targets, see MAPS.md and this section's
-  follow-up above). SQLite backend deferred to Iteration 7 as planned.
+  follow-up above); point-target support (`build-points-map.ts`, the
+  `targets-circle` style layer) plus `italy-towns-100k`/
+  `germany-towns-100k` (40/49 targets, see MAPS.md's "Point-target
+  implementation" and this section's follow-up below). SQLite backend
+  deferred to Iteration 7 as planned.
 - **Not started**: everything else below.
-- **Next up**: the two towns maps (`italy-towns-100k`/
-  `germany-towns-100k`, see [MAPS.md](MAPS.md)) before GUI/UX work —
-  explicit user preference: wants cities/towns actually playable before
-  evaluating how the interface looks. Blocked on actually implementing
-  the point-target design in MAPS.md (point geometry isn't supported
-  anywhere in the pipeline/app today) — designed already, not yet built.
-  GUI/UX evaluation (Iteration 8+'s "Evaluate GUI/UX approaches to make
-  the interface more captivating" item) comes after both towns maps.
-  **Iteration 7 (desktop POC packaging) is deliberately deferred**, out
-  of numeric order — explicit user preference, not a scoping problem
-  with Iteration 7 itself. Revisit once maps + GUI work feels done, not
-  on a fixed schedule.
+- **Next up**: GUI/UX evaluation (Iteration 8+'s "Evaluate GUI/UX
+  approaches to make the interface more captivating" item) — all three
+  planned maps have now shipped, per the user's explicit preference to
+  get maps (including towns) playable first. **Iteration 7 (desktop POC
+  packaging) is deliberately deferred**, out of numeric order — explicit
+  user preference, not a scoping problem with Iteration 7 itself.
+  Revisit once GUI work feels done, not on a fixed schedule.
 - **Reordered**: local persistence and spaced repetition swapped places
   from the original numbering. Spaced repetition is pointless without
   somewhere to remember what's due across sessions — user accounts
@@ -187,6 +186,77 @@ loads with no errors. Full existing unit test suite (41 tests across
 app/quiz-engine/srs) and a production build both still clean — this
 change touches no shared quiz-mechanics code, only adds a map and a
 `TargetType` value.
+
+**Follow-up, point-target support + the two towns maps
+(`italy-towns-100k`, 40 targets; `germany-towns-100k`, 49 targets):**
+implements the design already registered in MAPS.md's "Point-target
+design" section — see that file's "Point-target implementation" section
+for the full detail, since it's genuinely a pipeline/app change, not
+just new map data. In short: a new `build-points-map.ts` script (shares
+small helpers with `build-map.ts` via a new `mapBuildUtils.ts`, extracted
+rather than duplicated), a new `targets-circle` style layer reusing
+`targets-fill`'s exact feature-state color scheme, and hit-testing/
+click-hover/camera-framing changes across `QuizView`/`MapView`/
+`TourView` so a point map plays like the same game with round markers.
+
+Two real bugs found only by testing the actual built maps, neither
+anticipated in the original design:
+
+- Tippecanoe drops point density at low zoom by default (a reasonable
+  general-basemap assumption, wrong for a small curated gameplay-
+  critical set) — only 4 of `italy-towns-100k`'s 40 markers actually
+  rendered at the initial zoom, confirmed via `queryRenderedFeatures`
+  against the live tileset. Fixed with `--drop-rate=1`.
+- The polygon tolerance mechanism's core assumption ("is the dragged
+  target's name present in the tolerance box") breaks down for dense
+  point clusters, where two cities can sit closer together than the
+  tolerance radius itself (Essen/Duisburg: ~22px apart on screen,
+  inside a 30px tolerance). Confirmed directly: dropping a **Duisburg**
+  slip squarely on **Essen**'s marker still registered as Duisburg
+  solved. Fixed with a point-maps-only `closestNameAmong()` check —
+  tolerance-based correctness now requires the dragged target to be the
+  *closest* candidate to the drop point, not merely present nearby.
+  Polygon maps don't exercise this path at all; re-verified unaffected.
+
+Also resolved by building and measuring against the real maps rather
+than guessed: point drop tolerance (30px), tour zoom for "looking at one
+city" (7, after comparing 6/7/8/9/10 against Trento directly — zoom 10
+left the marker floating with nothing else in frame, since this style
+has no base map layer to provide context on its own), and hover
+tolerance for points (none needed — a marker's own ~9px rendered radius
+already gives hover a comfortable natural hit zone, confirmed by
+measuring the actual falloff point).
+
+**Follow-up, missing country/region contours:** raised by the user after
+looking at a finished towns map — floating city markers with nothing
+showing the country's outline or internal admin-1 borders, unlike a
+polygon map where the target polygons themselves, filled edge to edge,
+already show the whole country. Fixed the same way as the earlier lakes
+fix: a new `context` source-layer (`selectCountryContext()` in
+`mapBuildUtils.ts`, same `ne_10m_admin_1_states_provinces` dataset
+`build-map.ts` already uses, filtered to the map's own country), rendered
+by new `context-fill`/`context-outline` style layers under
+`lakes-fill`/the targets layers — purely visual, no hit-testing, no
+feature-state. A polygon map's tileset has no `context` source-layer, so
+these two layers are a harmless no-op for it, same pattern as
+`targets-circle` being a no-op for a polygon map. Both towns maps
+rebuilt; verified via screenshot that the full country outline and
+internal admin-1 borders now render behind the markers, and that
+`germany-states` (a polygon map) still renders unchanged with no console
+errors. Full 41-test suite and a production build both stay clean. See
+MAPS.md's "Point-target implementation" section for the detail.
+
+**Verified:** home page lists both towns maps; `/overview` shows all
+40/49 markers with correctly localized names (Roma/Milano/Torino,
+München/Köln, not the English forms); quiz hit-testing confirmed at
+exact centroids (5/5 landed) and realistic ~15px-imprecise drops;
+Ruhr-area and Milan-area dense-cluster cases specifically re-tested
+after the closest-candidate fix, both the legitimate solve and the
+should-fail wrong-city-but-nearby case; tour camera framing confirmed
+visually at the chosen zoom. Full pre-existing polygon-map regression
+suite (alphabetical order, Bremen's own tolerance, wrong-drop error
+recording) re-run and confirmed unaffected. Full unit test suite and a
+production build both clean.
 
 ## Iteration 2 — Core map viewer
 
@@ -1080,21 +1150,19 @@ loop actually feels good. Candidates below, in rough priority order.
       hypothetical junior dev from ONBOARDING.md) generating a usable new
       map solo, without going through Claude each time.
       - **Point-geometry targets (towns/cities)**, not just finer
-        polygons, was the real open design question here — now designed
-        (not yet built) in [MAPS.md](MAPS.md)'s "Point-target design"
-        section, worked out against the actual current code (every
-        place that assumes polygon geometry — hit-testing, click/hover
-        binding, camera framing, the shared style — checked directly,
-        not assumed): a new `targets-circle` style layer alongside the
-        existing fill/outline ones, a separate `build-points-map.ts`
-        script rather than branching the existing polygon-oriented one,
-        and `Target.type` alone (no new map-level field) distinguishing
-        point maps from polygon ones. A few things deliberately left
-        open for when it's actually built (point-specific drop
-        tolerance, tour zoom level, whether hover tolerance should also
-        change for points) — see that section for what and why. Solve
-        it once there, this item benefits too — same blocker, not a
-        separate one.
+        polygons, was the real open design question here — **built**,
+        not just designed: `italy-towns-100k`/`germany-towns-100k`
+        ship with a new `targets-circle` style layer, a separate
+        `build-points-map.ts` script, and `Target.type` alone (no new
+        map-level field) distinguishing point maps from polygon ones.
+        See [MAPS.md](MAPS.md)'s "Point-target implementation" section
+        for the full detail, including two real bugs found only by
+        testing the actual built maps (tippecanoe silently drops most
+        points at low zoom by default; the polygon tolerance
+        mechanism's "is the name present nearby" check breaks down for
+        city clusters closer together than the tolerance radius
+        itself) that weren't anticipated at design time. This item's
+        blocker is resolved, not just this specific pair of maps.
       - **Remove the manual-curation dependency on Claude**, or at least
         shrink it: replace the hardcoded `NAME_FIXUPS` table with
         something data-driven (a per-country config file, not a code

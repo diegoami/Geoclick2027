@@ -24,6 +24,16 @@
 
 	const SPEEDS = [0.5, 1, 1.5, 2, 3];
 	const BASE_FLIGHT_MS = 1200;
+	// A point target's bbox is degenerate (see mapDefinition.ts) - fitting
+	// to it would zoom to the map's max zoom with no sense of "looking at
+	// one city". flyTo to a fixed zoom instead. Tuned against italy-towns-
+	// 100k's actual Trento, not guessed and left: zoom 10 left a marker
+	// floating alone with nothing else visible (there's no base map layer,
+	// so "context" only ever comes from other targets/lakes being in
+	// frame) - zoom 7 keeps several neighboring cities and a nearby lake
+	// shape in view, giving an actual sense of place. See MAPS.md's
+	// "Point-target implementation" section.
+	const POINT_TOUR_ZOOM = 7;
 
 	let currentTarget = $derived.by((): Target | undefined => {
 		if (!mapDef || !tour) return undefined;
@@ -54,7 +64,12 @@
 			{ source: 'targets', sourceLayer: 'targets', id: target.name },
 			{ highlighted: true }
 		);
-		map.fitBounds(target.bbox, { padding: 80, duration: Math.max(150, BASE_FLIGHT_MS / speed) });
+		const flightDuration = Math.max(150, BASE_FLIGHT_MS / speed);
+		if (target.type === 'city') {
+			map.flyTo({ center: target.centroid, zoom: POINT_TOUR_ZOOM, duration: flightDuration });
+		} else {
+			map.fitBounds(target.bbox, { padding: 80, duration: flightDuration });
+		}
 
 		popup ??= new maplibregl.Popup({
 			closeButton: false,

@@ -1,6 +1,6 @@
 // Mirrors the map.json shape produced by data/scripts/build-map.ts.
 
-export type TargetType = 'region' | 'state' | 'province';
+export type TargetType = 'region' | 'state' | 'province' | 'city';
 
 export interface Target {
 	id: string;
@@ -9,6 +9,12 @@ export interface Target {
 	tier: number;
 	aliases: string[];
 	centroid: [number, number];
+	// For a point target (type: 'city'), degenerate - the centroid repeated
+	// as both corners - rather than a separate nullable field, since a
+	// point genuinely has no area. The one place bbox is read (TourView's
+	// camera framing) already branches on target type instead of assuming
+	// bbox always describes a real extent - see MAPS.md's "Point-target
+	// design" section.
 	bbox: [number, number, number, number];
 }
 

@@ -1,0 +1,731 @@
+{
+	"id": "italy-towns-100k",
+	"name": "Italy — Towns",
+	"country": "Italy",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "trento",
+			"name": "Trento",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.1199825,
+				46.0804289
+			],
+			"bbox": [
+				11.1199825,
+				46.0804289,
+				11.1199825,
+				46.0804289
+			]
+		},
+		{
+			"id": "udine",
+			"name": "Udine",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.2400081,
+				46.0700161
+			],
+			"bbox": [
+				13.2400081,
+				46.0700161,
+				13.2400081,
+				46.0700161
+			]
+		},
+		{
+			"id": "como",
+			"name": "Como",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.0800036,
+				45.8100061
+			],
+			"bbox": [
+				9.0800036,
+				45.8100061,
+				9.0800036,
+				45.8100061
+			]
+		},
+		{
+			"id": "bergamo",
+			"name": "Bergamo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.6699934,
+				45.7004004
+			],
+			"bbox": [
+				9.6699934,
+				45.7004004,
+				9.6699934,
+				45.7004004
+			]
+		},
+		{
+			"id": "treviso",
+			"name": "Treviso",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.2400175,
+				45.6700147
+			],
+			"bbox": [
+				12.2400175,
+				45.6700147,
+				12.2400175,
+				45.6700147
+			]
+		},
+		{
+			"id": "trieste",
+			"name": "Trieste",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.8000256,
+				45.6503776
+			],
+			"bbox": [
+				13.8000256,
+				45.6503776,
+				13.8000256,
+				45.6503776
+			]
+		},
+		{
+			"id": "milano",
+			"name": "Milano",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.2030631,
+				45.4719211
+			],
+			"bbox": [
+				9.2030631,
+				45.4719211,
+				9.2030631,
+				45.4719211
+			]
+		},
+		{
+			"id": "novara",
+			"name": "Novara",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.61998,
+				45.4500023
+			],
+			"bbox": [
+				8.61998,
+				45.4500023,
+				8.61998,
+				45.4500023
+			]
+		},
+		{
+			"id": "verona",
+			"name": "Verona",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.9900162,
+				45.4403904
+			],
+			"bbox": [
+				10.9900162,
+				45.4403904,
+				10.9900162,
+				45.4403904
+			]
+		},
+		{
+			"id": "venezia",
+			"name": "Venezia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.3349987,
+				45.4386593
+			],
+			"bbox": [
+				12.3349987,
+				45.4386593,
+				12.3349987,
+				45.4386593
+			]
+		},
+		{
+			"id": "torino",
+			"name": "Torino",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.6680146,
+				45.072333
+			],
+			"bbox": [
+				7.6680146,
+				45.072333,
+				7.6680146,
+				45.072333
+			]
+		},
+		{
+			"id": "ferrara",
+			"name": "Ferrara",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.6099267,
+				44.8504265
+			],
+			"bbox": [
+				11.6099267,
+				44.8504265,
+				11.6099267,
+				44.8504265
+			]
+		},
+		{
+			"id": "parma",
+			"name": "Parma",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.3200313,
+				44.8104289
+			],
+			"bbox": [
+				10.3200313,
+				44.8104289,
+				10.3200313,
+				44.8104289
+			]
+		},
+		{
+			"id": "modena",
+			"name": "Modena",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.9199947,
+				44.6500252
+			],
+			"bbox": [
+				10.9199947,
+				44.6500252,
+				10.9199947,
+				44.6500252
+			]
+		},
+		{
+			"id": "bologna",
+			"name": "Bologna",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.3400207,
+				44.500422
+			],
+			"bbox": [
+				11.3400207,
+				44.500422,
+				11.3400207,
+				44.500422
+			]
+		},
+		{
+			"id": "ravenna",
+			"name": "Ravenna",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.2200187,
+				44.4203752
+			],
+			"bbox": [
+				12.2200187,
+				44.4203752,
+				12.2200187,
+				44.4203752
+			]
+		},
+		{
+			"id": "genova",
+			"name": "Genova",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.9300386,
+				44.4099882
+			],
+			"bbox": [
+				8.9300386,
+				44.4099882,
+				8.9300386,
+				44.4099882
+			]
+		},
+		{
+			"id": "firenze",
+			"name": "Firenze",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.2500004,
+				43.7800008
+			],
+			"bbox": [
+				11.2500004,
+				43.7800008,
+				11.2500004,
+				43.7800008
+			]
+		},
+		{
+			"id": "pisa",
+			"name": "Pisa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.4000264,
+				43.7204696
+			],
+			"bbox": [
+				10.4000264,
+				43.7204696,
+				10.4000264,
+				43.7204696
+			]
+		},
+		{
+			"id": "ancona",
+			"name": "Ancona",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.4999406,
+				43.6003736
+			],
+			"bbox": [
+				13.4999406,
+				43.6003736,
+				13.4999406,
+				43.6003736
+			]
+		},
+		{
+			"id": "livorno",
+			"name": "Livorno",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.3022747,
+				43.5511337
+			],
+			"bbox": [
+				10.3022747,
+				43.5511337,
+				10.3022747,
+				43.5511337
+			]
+		},
+		{
+			"id": "perugia",
+			"name": "Perugia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.3899825,
+				43.1103776
+			],
+			"bbox": [
+				12.3899825,
+				43.1103776,
+				12.3899825,
+				43.1103776
+			]
+		},
+		{
+			"id": "pescara",
+			"name": "Pescara",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.2186564,
+				42.4554305
+			],
+			"bbox": [
+				14.2186564,
+				42.4554305,
+				14.2186564,
+				42.4554305
+			]
+		},
+		{
+			"id": "roma",
+			"name": "Roma",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.4813126,
+				41.8979015
+			],
+			"bbox": [
+				12.4813126,
+				41.8979015,
+				12.4813126,
+				41.8979015
+			]
+		},
+		{
+			"id": "foggia",
+			"name": "Foggia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.5599698,
+				41.4604783
+			],
+			"bbox": [
+				15.5599698,
+				41.4604783,
+				15.5599698,
+				41.4604783
+			]
+		},
+		{
+			"id": "barletta",
+			"name": "Barletta",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.270004,
+				41.319996
+			],
+			"bbox": [
+				16.270004,
+				41.319996,
+				16.270004,
+				41.319996
+			]
+		},
+		{
+			"id": "bari",
+			"name": "Bari",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.8727579,
+				41.1142204
+			],
+			"bbox": [
+				16.8727579,
+				41.1142204,
+				16.8727579,
+				41.1142204
+			]
+		},
+		{
+			"id": "caserta",
+			"name": "Caserta",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.3373571,
+				41.0599601
+			],
+			"bbox": [
+				14.3373571,
+				41.0599601,
+				14.3373571,
+				41.0599601
+			]
+		},
+		{
+			"id": "napoli",
+			"name": "Napoli",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.2430655,
+				40.8419711
+			],
+			"bbox": [
+				14.2430655,
+				40.8419711,
+				14.2430655,
+				40.8419711
+			]
+		},
+		{
+			"id": "sassari",
+			"name": "Sassari",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.5700089,
+				40.7300061
+			],
+			"bbox": [
+				8.5700089,
+				40.7300061,
+				8.5700089,
+				40.7300061
+			]
+		},
+		{
+			"id": "salerno",
+			"name": "Salerno",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.7699406,
+				40.6803967
+			],
+			"bbox": [
+				14.7699406,
+				40.6803967,
+				14.7699406,
+				40.6803967
+			]
+		},
+		{
+			"id": "brindisi",
+			"name": "Brindisi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.9300061,
+				40.6403475
+			],
+			"bbox": [
+				17.9300061,
+				40.6403475,
+				17.9300061,
+				40.6403475
+			]
+		},
+		{
+			"id": "taranto",
+			"name": "Taranto",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.2299971,
+				40.5083917
+			],
+			"bbox": [
+				17.2299971,
+				40.5083917,
+				17.2299971,
+				40.5083917
+			]
+		},
+		{
+			"id": "lecce",
+			"name": "Lecce",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.1499926,
+				40.3603904
+			],
+			"bbox": [
+				18.1499926,
+				40.3603904,
+				18.1499926,
+				40.3603904
+			]
+		},
+		{
+			"id": "cagliari",
+			"name": "Cagliari",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.1039815,
+				39.2223979
+			],
+			"bbox": [
+				9.1039815,
+				39.2223979,
+				9.1039815,
+				39.2223979
+			]
+		},
+		{
+			"id": "messina",
+			"name": "Messina",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.5499963,
+				38.2004706
+			],
+			"bbox": [
+				15.5499963,
+				38.2004706,
+				15.5499963,
+				38.2004706
+			]
+		},
+		{
+			"id": "palermo",
+			"name": "Palermo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.3480814,
+				38.1269689
+			],
+			"bbox": [
+				13.3480814,
+				38.1269689,
+				13.3480814,
+				38.1269689
+			]
+		},
+		{
+			"id": "reggio-calabria",
+			"name": "Reggio Calabria",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.6413602,
+				38.1149978
+			],
+			"bbox": [
+				15.6413602,
+				38.1149978,
+				15.6413602,
+				38.1149978
+			]
+		},
+		{
+			"id": "catania",
+			"name": "Catania",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.0799991,
+				37.4999707
+			],
+			"bbox": [
+				15.0799991,
+				37.4999707,
+				15.0799991,
+				37.4999707
+			]
+		},
+		{
+			"id": "siracusa",
+			"name": "Siracusa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.2899605,
+				37.0703587
+			],
+			"bbox": [
+				15.2899605,
+				37.0703587,
+				15.2899605,
+				37.0703587
+			]
+		}
+	],
+	"tourOrder": [
+		"trento",
+		"udine",
+		"como",
+		"bergamo",
+		"treviso",
+		"trieste",
+		"milano",
+		"novara",
+		"verona",
+		"venezia",
+		"torino",
+		"ferrara",
+		"parma",
+		"modena",
+		"bologna",
+		"ravenna",
+		"genova",
+		"firenze",
+		"pisa",
+		"ancona",
+		"livorno",
+		"perugia",
+		"pescara",
+		"roma",
+		"foggia",
+		"barletta",
+		"bari",
+		"caserta",
+		"napoli",
+		"sassari",
+		"salerno",
+		"brindisi",
+		"taranto",
+		"lecce",
+		"cagliari",
+		"messina",
+		"palermo",
+		"reggio-calabria",
+		"catania",
+		"siracusa"
+	]
+}
