@@ -5,6 +5,7 @@
 	import { fetchMapDefAndStyle, createMap } from './geoclickMap';
 	import MapNav from './MapNav.svelte';
 	import { t } from './i18n.svelte';
+	import { mapDisplayName } from './mapCatalog';
 	import { fetchTour, type Tour } from './tour';
 	import type { MapDefinition, Target } from './mapDefinition';
 
@@ -164,7 +165,7 @@
 	{#if error}
 		<p class="error">{error}</p>
 	{:else}
-		<MapNav {mapId} mapName={mapDef?.name} active="tour" />
+		<MapNav {mapId} mapName={mapDisplayName(mapId) ?? mapDef?.name} active="tour" />
 
 		{#if tour}
 			<div class="controls">

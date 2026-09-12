@@ -6,6 +6,7 @@
 	import { fetchMapDefAndStyle, createMap } from './geoclickMap';
 	import MapNav from './MapNav.svelte';
 	import { t, tPlural } from './i18n.svelte';
+	import { mapDisplayName } from './mapCatalog';
 	import {
 		createQuizSession,
 		attemptMatch,
@@ -598,7 +599,7 @@
 	{#if error}
 		<p class="error">{error}</p>
 	{:else}
-		<MapNav {mapId} mapName={mapDef?.name} active="quiz">
+		<MapNav {mapId} mapName={mapDisplayName(mapId) ?? mapDef?.name} active="quiz">
 			{#snippet subtitle()}
 				{#if mode === 'practice'}
 					{t('quiz.practiceModePrefix')}

@@ -35,6 +35,12 @@ export type TranslationKey =
 	| 'home.lastResult'
 	| 'home.mistakeCount.one'
 	| 'home.mistakeCount.other'
+	| 'mapType.regions'
+	| 'mapType.towns'
+	| 'mapType.states'
+	| 'mapType.provinces'
+	| 'mapType.prefectures'
+	| 'mapType.districts'
 	| 'quiz.practiceModePrefix'
 	| 'quiz.subtitle'
 	| 'quiz.upToDate.title'
@@ -74,6 +80,13 @@ const en: Dictionary = {
 	'home.lastResult': 'Last: {perfect}/{total}',
 	'home.mistakeCount.one': '({count} mistake)',
 	'home.mistakeCount.other': '({count} mistakes)',
+
+	'mapType.regions': 'Regions',
+	'mapType.towns': 'Towns',
+	'mapType.states': 'States',
+	'mapType.provinces': 'Provinces',
+	'mapType.prefectures': 'Prefectures',
+	'mapType.districts': 'Districts',
 
 	'quiz.practiceModePrefix': 'Practice mode —',
 	'quiz.subtitle': 'Drag each name onto its region — {placed} / {total} placed',
@@ -115,6 +128,13 @@ const de: Dictionary = {
 	'home.mistakeCount.one': '({count} Fehler)',
 	'home.mistakeCount.other': '({count} Fehler)',
 
+	'mapType.regions': 'Regionen',
+	'mapType.towns': 'Städte',
+	'mapType.states': 'Staaten',
+	'mapType.provinces': 'Provinzen',
+	'mapType.prefectures': 'Präfekturen',
+	'mapType.districts': 'Bezirke',
+
 	'quiz.practiceModePrefix': 'Übungsmodus —',
 	'quiz.subtitle': 'Ziehe jeden Namen auf seine Region — {placed} / {total} platziert',
 	'quiz.upToDate.title': 'Alles aktuell!',
@@ -154,6 +174,13 @@ const it: Dictionary = {
 	'home.lastResult': 'Ultimo: {perfect}/{total}',
 	'home.mistakeCount.one': '({count} errore)',
 	'home.mistakeCount.other': '({count} errori)',
+
+	'mapType.regions': 'Regioni',
+	'mapType.towns': 'Città',
+	'mapType.states': 'Stati',
+	'mapType.provinces': 'Province',
+	'mapType.prefectures': 'Prefetture',
+	'mapType.districts': 'Distretti',
 
 	'quiz.practiceModePrefix': 'Modalità allenamento —',
 	'quiz.subtitle': 'Trascina ogni nome sulla sua regione — {placed} / {total} posizionati',
