@@ -63,13 +63,19 @@ Check items off as they land; update "Status" as iterations complete.
   design-system pass remain open on the GUI/UX item — revisit whenever
   it feels worth another round, not on a fixed schedule. Three more items
   requested 2026-09-12, tracked in the Iteration 8+ backlog below:
-  reorganizing the home page's map list (picked up as parallel background
-  work in its own worktree/branch), German/Italian UI languages (done —
-  see this section's Iteration 8+ entry and DECISIONS.md's
-  "Internationalization (i18n)" entry; built on `feature/i18n-de-it`, not
-  yet merged to `main`), and optional cross-device score sync via sign-in
-  (paused on a provider/backend decision only the user can make, not
-  started as background work for that reason).
+  reorganizing the home page's map list (**done, merged to `main`**);
+  German/Italian UI languages (**done**, on `feature/i18n-de-it`, awaiting
+  the user's local try-out before merging — see DECISIONS.md's
+  "Internationalization (i18n)" entry); and optional cross-device score
+  sync via sign-in (paused on a provider/backend decision only the user
+  can make, not started as background work for that reason — built so far
+  on `feature/supabase-sso-sync`, also awaiting a real Supabase project
+  before it can be tried out). All three were originally attempted as
+  parallel background work, each in its own git worktree — abandoned
+  after the first two finished, since a worktree's `node_modules` isn't
+  populated by default, which blocked real `npm run dev` browser
+  verification (see this file's "Process notes" section). Reconciled and
+  finished one at a time in the normal checkout instead.
 - **Reordered**: local persistence and spaced repetition swapped places
   from the original numbering. Spaced repetition is pointless without
   somewhere to remember what's due across sessions — user accounts
@@ -1401,17 +1407,24 @@ loop actually feels good. Candidates below, in rough priority order.
       rather than local-only. Which store depends on what the auth choice
       above already provides (several bundle a database) — another
       decision for when sign-in itself is scoped, not before.
-- [ ] **Reorganize the home page's map list** — requested directly by the
-      user (2026-09-12), alongside i18n and optional SSO above. 22 maps
-      across 11 countries in one flat, unsorted `<ul>`
+- [x] **Reorganize the home page's map list** — requested directly by the
+      user (2026-09-12), alongside i18n and optional SSO above. 28 maps
+      across 14 countries in one flat, unsorted `<ul>`
       (`app/src/routes/+page.svelte`'s `demoMaps` array, in the order each
-      country was added) is already hard to scan and will only get worse
-      as more countries are added. At minimum, sort alphabetically;
-      grouping by country (each already ships as a regions+towns pair)
-      is worth considering too, so long as it doesn't regress the
-      existing per-map due-status/last-result display. Picked up as
-      parallel background work in its own worktree/branch — see
-      DECISIONS.md if a specific organization scheme was chosen there.
+      country was added) was already hard to scan and would only get worse
+      as more countries are added. Built as a `mapGroups` array — one
+      entry per country, alphabetical by country name, each country's own
+      maps (regions/provinces/towns, a trio for Italy) alphabetical by
+      label — rendered as a heading per country followed by that
+      country's map links, 2 columns on wider screens via CSS grid (single
+      column below the existing 640px breakpoint used elsewhere, e.g.
+      `MapNav.svelte`), collapsing to one column at phone width. Per-map
+      due-status/last-result badges untouched — same `dueStatuses`/
+      `lastSessions` state and `onMount` data-loading loop as before, just
+      fed by a flattened view of `mapGroups`
+      (`mapGroups.flatMap((g) => g.maps)`) instead of a hand-written id
+      list. See DECISIONS.md for why grouping was chosen over a flat
+      alphabetical list. Merged to `main`.
 - [x] **Add German and Italian as UI languages** (at least) — requested
       directly by the user (2026-09-12), alongside map-list reorganization
       and optional SSO above. Scoped to the app's own UI chrome (nav
