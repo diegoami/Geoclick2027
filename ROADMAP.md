@@ -61,21 +61,22 @@ Check items off as they land; update "Status" as iterations complete.
 - **Next up**: motion/feedback design (reveal animations, streak
   indicators, sound, correct-drop juiciness) and a broader component/
   design-system pass remain open on the GUI/UX item — revisit whenever
-  it feels worth another round, not on a fixed schedule. Three more items
-  requested 2026-09-12, tracked in the Iteration 8+ backlog below:
-  reorganizing the home page's map list (**done, merged to `main`**);
-  German/Italian UI languages (**done**, on `feature/i18n-de-it`, awaiting
-  the user's local try-out before merging — see DECISIONS.md's
-  "Internationalization (i18n)" entry); and optional cross-device score
-  sync via sign-in (paused on a provider/backend decision only the user
-  can make, not started as background work for that reason — built so far
-  on `feature/supabase-sso-sync`, also awaiting a real Supabase project
-  before it can be tried out). All three were originally attempted as
-  parallel background work, each in its own git worktree — abandoned
-  after the first two finished, since a worktree's `node_modules` isn't
-  populated by default, which blocked real `npm run dev` browser
-  verification (see this file's "Process notes" section). Reconciled and
-  finished one at a time in the normal checkout instead.
+  it feels worth another round, not on a fixed schedule. Three items
+  requested 2026-09-12 (map-list reorganization, German/Italian UI
+  languages, optional cross-device score sync via sign-in — see the
+  Iteration 8+ backlog below) are **done or in progress**: the first two
+  are merged to `main`; sign-in is scaffolded on
+  `feature/supabase-sso-sync` (Supabase, user-confirmed) but explicitly
+  not finished — see that backlog entry. Four more items requested
+  2026-09-13, all tracked in the Iteration 8+ backlog below and none
+  started yet: a background-color/visual refresh; eight more countries
+  (China, Brazil, Mexico, Finland, Russia, India, Indonesia, Argentina);
+  reworking the towns maps' fixed `>100k` population threshold into
+  something that scales per-country (a minimum city count for
+  sparse countries, a higher bar or different selection strategy for
+  dense ones like China); and finalizing/finishing the SSO work above.
+  A full desktop+mobile retest is planned once all of the above lands —
+  see that backlog entry for why.
 - **Reordered**: local persistence and spaced repetition swapped places
   from the original numbering. Spaced repetition is pointless without
   somewhere to remember what's due across sessions — user accounts
@@ -87,6 +88,22 @@ Check items off as they land; update "Status" as iterations complete.
 
 ## Process notes (not tied to a specific iteration)
 
+- **Git worktrees don't work for parallel background feature work on this
+  project, at least not as attempted 2026-09-12** — a `git worktree`
+  checkout doesn't get its own `node_modules` (npm workspaces hoists it to
+  the main checkout), so `npm run dev` inside a worktree can't actually
+  render a map (Vite's `fs.allow` blocks the maplibre-gl worker script
+  outside the worktree root) and browser verification has to fall back to
+  a production build instead — a real gap versus this project's normal
+  "test locally in a real browser" habit (see CLAUDE.md). Three
+  branches were attempted this way in parallel (map-list reorg, i18n,
+  Supabase SSO); reconciled and finished one at a time in the normal
+  checkout afterward instead, per the user's own call once this became
+  clear. Don't reach for worktree-isolated parallel agents on this repo
+  again without first solving the `node_modules` problem (e.g. `npm
+  install` inside each worktree, or a shared/symlinked store) — otherwise
+  it's a false economy: real work still has to happen serially in the
+  normal checkout anyway.
 - [ ] **Dependabot** — `.github/dependabot.yml` watching the npm
       ecosystem at the repo root (covers `app/` + `packages/*` through
       the one workspace lockfile). Weekly schedule, version + security
@@ -1373,40 +1390,78 @@ loop actually feels good. Candidates below, in rough priority order.
       blocked on hardware/account setup this project doesn't have yet.
 - [x] ~~Plain-browser deployment (static hosting)~~ — done in Iteration 3.5,
       live on Netlify
-- [ ] **Optional sign-in (SSO) so scores sync across devices** — requested
-      directly by the user (2026-09-12), as the third of three roadmap
-      items alongside the map-list reorganization and i18n below. This is
-      the point where "local-first, no backend" (see ARCHITECTURE.md's
-      Storage section) actually gets a backend — auth needs somewhere to
-      verify tokens and mint sessions, even if score storage itself stays
-      minimal. Explicitly **optional**: the existing local-only
-      (`localStorage`/SQLite) experience must keep working with no sign-in
-      at all — this adds a second, opt-in path, it doesn't replace the
-      first one or make an account a requirement to play.
-      - Candidates for the auth/backend piece:
-        - A managed auth provider (Auth0, Clerk, Supabase Auth) — fastest
-          to stand up, handles the OAuth dance and Google/other-provider
-          config for you; adds a third-party dependency and (usually) a
-          paid tier past some usage threshold. Supabase/Firebase also
-          bundle a database, which the score-sync piece below needs
-          somewhere to live anyway.
-        - Roll it via Netlify Identity or a small serverless function
-          handling the OAuth callback directly — more control, more to
-          build and maintain, but keeps everything inside the stack
-          already in use (Netlify's already hosting this).
-      - **Needs a decision before building, not just picking one
-        silently** — which provider, and therefore which database/hosting
-        it brings with it, has real cost/vendor-lock-in implications the
-        user should choose, not Claude. Not started as autonomous
-        background work for this reason, unlike the other two items in
-        this batch.
+- [ ] **Optional sign-in (SSO) so scores sync across devices — provider
+      decided (Supabase), scaffolded on `feature/supabase-sso-sync`, not
+      yet finalized/merged.** Requested directly by the user (2026-09-12),
+      as the third of three roadmap items alongside the map-list
+      reorganization and i18n below; the user confirmed Supabase as the
+      auth/backend choice the same day. This is the point where
+      "local-first, no backend" (see ARCHITECTURE.md's Storage section)
+      actually gets a backend — auth needs somewhere to verify tokens and
+      mint sessions, even if score storage itself stays minimal.
+      Explicitly **optional**: the existing local-only (`localStorage`/
+      SQLite) experience must keep working with no sign-in at all — this
+      adds a second, opt-in path, it doesn't replace the first one or make
+      an account a requirement to play. Built so far: a Supabase client
+      (graceful no-op when unconfigured), a multi-user Postgres schema
+      with row-level security, a `supabaseProgressRepository.ts`, a Google
+      sign-in control, and a sync layer (push local progress up on first
+      sign-in, prefer remote thereafter) — see DECISIONS.md's
+      "Cross-device sync (Supabase)" entry. **Explicitly not finished** —
+      requested again 2026-09-13 ("we need to finalize optional SSO"):
+      still needs a real Supabase project created and wired up (see
+      ONBOARDING.md's "Enabling cross-device sync" steps), real
+      end-to-end testing of the OAuth flow and sync reconciliation on at
+      least two devices/browsers, and a merge decision once that's
+      verified — none of which could happen without the user's own
+      Supabase project.
 - [ ] **Score recording/sync**, built on top of sign-in above: per (user,
       map) results from quiz sessions (`scoreSession`'s `{ total, perfect,
       totalErrors }` already has the shape this needs), persisted
       somewhere durable and synced across a signed-in user's devices,
-      rather than local-only. Which store depends on what the auth choice
-      above already provides (several bundle a database) — another
-      decision for when sign-in itself is scoped, not before.
+      rather than local-only. Scaffolded together with sign-in above on
+      the same branch — see that entry.
+- [ ] **Visual refresh: background color** — requested directly by the
+      user (2026-09-13): "the background color is kind of meh, maybe
+      something more captivating." Not scoped yet — revisit alongside the
+      still-open motion/feedback design and broader component/
+      design-system pass noted in the Status section above. Consider using
+      the `design` skill first (mockups + live style edits), the same
+      approach that worked for GUI/UX round 1, rather than guessing at
+      colors directly in code.
+- [ ] **More countries: China, Brazil, Mexico, Finland, Russia, India,
+      Indonesia, Argentina** — requested directly by the user (2026-09-13),
+      queued for a future map-building batch following the same
+      regions+towns pattern and rigor as every prior batch (full attribute
+      audits, overseas-territory exclusions checked proactively, see
+      DECISIONS.md/MAPS.md). Not started yet.
+      - **Design question raised alongside this request, not yet
+        resolved**: the towns maps' fixed `>100k population` threshold
+        (`build-points-map.ts --min-population`) doesn't scale to this
+        batch's range. Small/sparse countries (e.g. Sweden, already
+        shipped: only 5 towns clear 100k) would benefit from a *minimum
+        city count* instead of a fixed threshold, so a country isn't left
+        with an unhelpfully tiny towns map; large/dense countries (China
+        especially, likely also India/Indonesia/Brazil) would clear 100k
+        with hundreds or thousands of towns, unusable for this app's
+        curated-quiz format, and need a *higher* threshold (or a different
+        selection strategy — e.g. top-N by population — entirely). Needs
+        actual per-country data audits (like every prior population
+        decision in MAPS.md, e.g. the `POP_MAX` vs `POP_MIN` choice) before
+        picking numbers, not a guessed one-size-fits-all fix. Likely
+        outcome: `--min-population` gains a sibling flag (`--top-n`, or a
+        `--min-population` *and* a `--max-targets` used together) rather
+        than replacing the existing flag — revisit when this batch
+        actually starts.
+- [ ] **Retest on desktop and mobile after the above iterations land** —
+      requested directly by the user (2026-09-13), to run once the new-
+      countries batch, the population-threshold rework, and SSO are all
+      finished: re-verify the desktop (Tauri) and Android (Capacitor)
+      builds still work end to end (not just the web app), per the
+      existing "test locally vs. test the deployment, as two separate
+      steps" habit (see CLAUDE.md) — a bigger map catalog and a new sync
+      backend are exactly the kind of change that could regress a
+      platform-specific build without showing up in the web dev server.
 - [x] **Reorganize the home page's map list** — requested directly by the
       user (2026-09-12), alongside i18n and optional SSO above. 28 maps
       across 14 countries in one flat, unsorted `<ul>`
