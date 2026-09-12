@@ -151,6 +151,11 @@
 	// Only meaningful when mode === 'due'; undefined until computed.
 	let allCaughtUp = $state<boolean | undefined>(undefined);
 	let daysUntilNextReview = $state<number | undefined>(undefined);
+	// Lets the score panel be dismissed to see the finished map underneath
+	// (it's a centered overlay with no other way to look past it) without
+	// forcing a replay. Reset whenever a new session starts, so the next
+	// completion shows the panel again.
+	let scorePanelDismissed = $state(false);
 
 	$effect(() => {
 		if (complete && score && !summarySaved) {
@@ -482,6 +487,7 @@
 		if (!mapDef || !map) return;
 		allCaughtUp = undefined;
 		daysUntilNextReview = undefined;
+		scorePanelDismissed = false;
 		const notDueIds = await computeNotDueIds(mapDef.targets);
 		if (notDueIds.size === mapDef.targets.length) {
 			phase = 'upToDate';
@@ -505,6 +511,7 @@
 		if (!mapDef || !map) return;
 		clearAllVisuals();
 		summarySaved = false;
+		scorePanelDismissed = false;
 		mode = 'practice';
 		phase = 'quiz';
 		session = createQuizSession(mapDef.targets.map((t) => ({ id: t.id, name: t.name })));
@@ -610,9 +617,16 @@
 			</div>
 		{/if}
 
-		{#if complete && score && session}
+		{#if complete && score && session && !scorePanelDismissed}
 			{@const revealedCount = session.items.filter((i) => i.status === 'revealed').length}
 			<div class="score-panel">
+				<button
+					class="score-panel-close"
+					aria-label="Close and view the map"
+					onclick={() => (scorePanelDismissed = true)}
+				>
+					&times;
+				</button>
 				<h2>{mode === 'due' && allCaughtUp ? 'All caught up!' : 'Done!'}</h2>
 				<p>
 					<strong>{score.perfect}</strong> / {score.total} placed correctly on the first try.
@@ -635,7 +649,10 @@
 					{#if mode === 'practice'}
 						<p class="practice-note">Practice results don't affect your review schedule.</p>
 					{/if}
-					<button onclick={playAgain}>Play again</button>
+					<div class="score-panel-actions">
+						<a class="score-panel-button secondary" href={resolve('/')}>Back to maps</a>
+						<button onclick={playAgain}>Play again</button>
+					</div>
 				{/if}
 			</div>
 		{/if}
@@ -797,6 +814,24 @@
 		font-family: system-ui, sans-serif;
 		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 	}
+	.score-panel button.score-panel-close {
+		position: absolute;
+		top: 0.4rem;
+		right: 0.4rem;
+		width: 1.75rem;
+		height: 1.75rem;
+		padding: 0;
+		border-radius: 50%;
+		background: transparent;
+		color: rgba(0, 0, 0, 0.45);
+		font-size: 1.3rem;
+		line-height: 1;
+		margin: 0;
+	}
+	.score-panel button.score-panel-close:hover {
+		background: rgba(0, 0, 0, 0.06);
+		color: rgba(0, 0, 0, 0.75);
+	}
 	.score-panel h2 {
 		margin: 0 0 0.75rem;
 	}
@@ -835,7 +870,8 @@
 	.score-panel > button {
 		margin-top: 0.75rem;
 	}
-	.score-panel button.secondary {
+	.score-panel button.secondary,
+	.score-panel-button.secondary {
 		background: transparent;
 		color: #5a9c6f;
 		border: 1px solid #5a9c6f;
