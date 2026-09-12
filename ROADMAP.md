@@ -21,18 +21,19 @@ Check items off as they land; update "Status" as iterations complete.
   `germany-towns-100k` (40/49 targets, see MAPS.md's "Point-target
   implementation" and this section's follow-up below); Iteration 7
   (desktop POC packaging — Tauri wrapping `app/build`, SQLite persistence
-  via `tauri-plugin-sql`, `.deb`/`.rpm`/`.AppImage` installers all built
-  successfully, see that section's "Follow-up" for the full verification
-  detail including one gap honestly flagged: a live quiz-answer write
-  wasn't click-tested end to end in this dev sandbox).
+  via `tauri-plugin-sql`, `.deb`/`.rpm`/`.AppImage`/`.msi`/`.exe`
+  installers all built successfully, verified end to end on both Linux
+  and native Windows including a real click-tested quiz-answer SQLite
+  write, two Windows-specific bugs found and fixed along the way — see
+  that section's "Follow-up" entries for detail. Merged to `main`
+  2026-09-12).
 - **Not started**: everything else below.
 - **Next up**: Android packaging via Capacitor (Iteration 8+'s "Android
   packaging via Capacitor (POC)" item) — reprioritized ahead of the
   GUI/UX evaluation on 2026-09-12, same reasoning as Tauri jumping the
   queue earlier: get both real packaged shells (desktop + mobile) in
-  hand before spending time on interface redesign, once the user has
-  tried the desktop build themselves and approved merging it. GUI/UX
-  evaluation comes after Android, not before.
+  hand before spending time on interface redesign. Desktop is now done
+  and merged; GUI/UX evaluation comes after Android, not before.
   Revisit once GUI work feels done, not on a fixed schedule.
 - **Reordered**: local persistence and spaced repetition swapped places
   from the original numbering. Spaced repetition is pointless without
@@ -1143,29 +1144,23 @@ thing you hand someone to try. **The POC milestone.**
 - [x] Build a local installer — `.deb`, `.rpm`, and `.AppImage` all built
       successfully via `tauri build`
 - [x] End-to-end run: tour → quiz → close app → reopen → progress
-      persisted — **partially verified, honestly reported.** Confirmed
-      directly: the release binary boots, renders all six maps with
-      working WebGL (MapLibre), and a guided tour autoplays correctly
-      through real data (110 provinces). Confirmed the SQLite side
-      independently: opening the app for the first time creates
-      `geoclick.db` and applies the migration (real schema, matching the
-      `ProgressRepository` interface exactly), and the exact upsert SQL
-      `sqliteProgressRepository.ts` sends round-trips correctly against
-      that schema (tested directly against the file). **Not verified**:
-      an actual quiz answer's click/drag triggering a live write, end to
-      end through the UI — this session's Playwright-style verification
-      couldn't reach the native window's input in this sandbox (WSLg
-      doesn't route synthetic X11 clicks to the real Wayland surface;
-      screenshots work, injected clicks don't). The write path itself
-      (`saveCardState`/`saveLastSessionSummary`) is the same call already
-      exercised for months by the localStorage backend — only the
-      repository implementation underneath changed — so risk here is low,
-      but this is the one box a real click-through on the user's own
-      machine should tick.
-- [x] **This is the POC deliverable** — demo-able artifact, see
-      "Follow-up" below for the full build/verification narrative and the
-      WSLg-specific gotchas (documented in ONBOARDING.md so they don't
-      cost time again).
+      persisted — **now fully verified**, closing the one gap left open
+      from the Linux dev sandbox (see "Follow-up, native Windows
+      verification" below). Confirmed directly in that sandbox: the
+      release binary boots, renders all six maps with working WebGL
+      (MapLibre), and a guided tour autoplays correctly through real data
+      (110 provinces); `geoclick.db` is created and migrated on first
+      launch, and the exact upsert SQL `sqliteProgressRepository.ts` sends
+      round-trips correctly against that schema. The one thing that
+      sandbox couldn't reach — an actual quiz answer's click/drag
+      triggering a live write, through the real UI, confirmed by closing
+      and reopening the app — was click-tested on the user's own Windows
+      machine and confirmed working.
+- [x] **This is the POC deliverable** — demo-able artifact, approved by
+      the user for merge after native Windows testing. See "Follow-up"
+      below for the Linux build/verification narrative and the WSLg
+      gotchas, and "Follow-up, native Windows verification" for the two
+      Windows-specific bugs found and fixed.
 
 **Follow-up, build/verification narrative:** installed the Rust toolchain
 and Tauri's Linux system dependencies (webkit2gtk, GTK, appindicator) from
@@ -1188,6 +1183,33 @@ desktop. Full test/check/build/lint suite (41 tests) stayed clean
 throughout — this was pure addition (a new workspace, a new repository
 implementation behind an already-generic interface), no changes to
 existing app code paths for the browser build.
+
+**Follow-up, native Windows verification:** built and installed the
+`.msi`/`.exe` on real Windows hardware for the first time — two
+Windows-specific bugs found and fixed, both now in ONBOARDING.md's
+"Gotchas" section:
+
+- **`app/static/maps`/`app/static/styles` symlinks don't survive a
+  default Git-for-Windows checkout** — they became tiny text files
+  containing the literal target path instead of real directories,
+  breaking every map. Fixed via Windows Developer Mode + `git config
+  --global core.symlinks true` + a fresh clone (an existing checkout
+  doesn't self-heal).
+- **`.pmtiles`/icon binaries had no `.gitattributes`, so a Windows
+  checkout with `core.autocrlf=true` silently corrupted them** — region
+  name labels (from `map.json`, via DOM popups) rendered fine, but no
+  polygon fills, outlines, or lake water showed at all, since those come
+  from the tiles. Fixed with a `.gitattributes` (`*.pmtiles binary`, plus
+  icon formats); confirmed after adding it that the already-checked-out
+  files matched their git-stored bytes exactly (`git add --renormalize
+  .` + a forced `git checkout HEAD --` on the affected paths changed
+  nothing further), and that map rendering was restored end-to-end in
+  both the Tauri dev window and the plain browser build.
+
+With both fixed, the user completed the one verification step the Linux
+sandbox couldn't reach: played part of a quiz in the installed desktop
+app, closed it, and reopened it, confirming progress actually persisted
+via a real SQLite write. Approved for merge to `main`.
 
 ---
 
