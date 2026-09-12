@@ -167,6 +167,17 @@ JDK Gradle needs) with an AVD set up, or a real device with USB debugging
 on. Nothing here runs without it - there's no CLI-only path, unlike
 `desktop`'s `tauri dev`.
 
+**Gradle JDK gotcha:** a fresh Android Studio install's bundled JDK can be
+newer than this project's Gradle wrapper (8.14.3) supports - hit directly
+as `BUG! ... Unsupported class file major version 69` (JDK 25; Gradle
+8.14.3 only supports up to 24, and 9.1+ would be needed for 25, which
+would also force an Android Gradle Plugin bump not worth chasing for this
+POC). Fix: in Android Studio, `Settings → Build, Execution, Deployment →
+Build Tools → Gradle → Gradle JDK`, pick a JDK ≤ 24 from the dropdown (a
+"Download JDK..." option is usually there if none is already listed) -
+Android Studio manages this separately from whatever JDK it uses to run
+itself.
+
 ```bash
 npm run build --workspace=app   # build app/build first, the web assets the app wraps
 cd mobile
@@ -269,6 +280,31 @@ that same discipline into any task you pick up:
   8+) - added `*.jar binary` to `.gitattributes` when that file was first
   committed, before it ever hit a Windows checkout, rather than waiting to
   reproduce the bug a second time.
+- **A map opening on Android with labels but no polygon fills/outlines/
+  lakes looks identical to the Windows `.gitattributes` bug above, but on
+  a real device it's a completely different cause** (Iteration 8+): the
+  Capacitor Android WebView's local asset server doesn't support HTTP
+  `206 Partial Content` responses for arbitrary file extensions - a known
+  upstream limitation, [ionic-team/capacitor#7664](https://github.com/ionic-team/capacitor/issues/7664)
+  - so pmtiles' range-request-based `FetchSource` never gets real tile
+  bytes back, even though the identical bundled `.pmtiles` file works
+  fine in the browser/Tauri builds. Confirmed via `adb logcat --pid
+  <pid>`, not assumed - repeating console errors landed in lockstep with
+  every `tiles.pmtiles` request. Fixed in `app/src/lib/geoclickMap.ts`:
+  since demo maps are all under 1MB, fetch the whole archive once as an
+  ordinary full `GET` and serve pmtiles' byte-range reads out of an
+  in-memory buffer instead, only on native Capacitor - see DECISIONS.md's
+  "PMTiles on Android" entry for the full reasoning. If you add a much
+  larger map later and Android quiz/tour on it feels slow or memory-heavy,
+  this is why, and it may need revisiting.
+- **When a Capacitor Android console error is unhelpful ("[object
+  Object]"), don't trust it - go straight to `adb logcat --pid <pid>`
+  filtered to your app's own process.** Capacitor's WebView console
+  bridge doesn't serialize `Error`/object values meaningfully, but the
+  surrounding log lines (`D Capacitor: Handling local request: ...`, plus
+  the timing/repetition pattern of the errors) are usually enough to
+  pinpoint the failing request without needing `chrome://inspect`'s
+  separate devtools window at all.
 - **MapLibre needs a worker script that Vite can't statically discover**
   (its URL is built at runtime inside the library). `app/scripts/
   copy-maplibre-worker.mjs` runs as a `postbuild` step to copy it into

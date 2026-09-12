@@ -1274,11 +1274,45 @@ loop actually feels good. Candidates below, in rough priority order.
       Iteration 7 already cover this path too. Also added `*.jar binary`
       to `.gitattributes` pre-emptively, since `gradle-wrapper.jar` is
       the same class of binary-corruption risk `.pmtiles` already hit
-      once. **Not yet verified**: actually running in an emulator or on
-      a device — blocked on the user installing Android Studio (which
-      bundles the JDK Gradle needs) and setting up an AVD, since neither
-      existed on this machine at all (no `java`, `adb`, or Android SDK
-      found). Distribution, roughly in order: a sideloaded
+      once.
+
+      **Emulator run, first real bug found and fixed:** installed Android
+      Studio (bundled JDK was 25, too new for this project's Gradle
+      8.14.3 — Gradle 9.1+ is needed for Java 25, which would also force
+      an Android Gradle Plugin bump not worth chasing right now; fixed by
+      picking the other, already-available JDK 21 in Android Studio's own
+      Gradle JDK setting, no separate install needed), created an AVD,
+      and ran the app — maps opened showing region name labels but no
+      polygon fills/outlines/lake water, the *exact same symptom* as
+      Iteration 7's Windows `.gitattributes` bug but a genuinely different
+      cause this time (confirmed via `adb logcat`, not assumed): Android's
+      Capacitor WebView local asset server doesn't support HTTP
+      `206 Partial Content` responses for arbitrary file extensions — a
+      known, still-open upstream limitation
+      ([ionic-team/capacitor#7664](https://github.com/ionic-team/capacitor/issues/7664))
+      — so pmtiles' normal range-request-based `FetchSource` never gets
+      real tile bytes back, even though the identical bundled file
+      renders fine in the browser/Tauri builds. Fixed in
+      `app/src/lib/geoclickMap.ts`: since these demo maps are all under
+      1MB, fetch each `.pmtiles` archive once as a plain full `GET`
+      (which Capacitor serves correctly) and register a custom in-memory
+      `pmtiles.Source` (`ArrayBufferSource`, pre-registered on the shared
+      `Protocol` via its documented `.add()`/`.get()` API) that serves
+      pmtiles' byte-range reads out of that buffer instead of over HTTP —
+      only on native Capacitor (`Capacitor.isNativePlatform()`), so the
+      already-verified browser/Tauri range-request path is untouched.
+      Verified: full type-check/test/build suite stays clean; screenshot
+      of `italy-regions` on the emulator after the fix shows correct
+      polygon fills/outlines/coastline (matching desktop/browser); `adb
+      logcat` confirms the earlier repeating error tied to every
+      `tiles.pmtiles` request is gone, with only benign info-level
+      SQLite-plugin debug logging remaining.
+
+      **Not yet verified**: a full click-through (tour, quiz, an actual
+      quiz-answer SQLite write surviving an app restart) — home-page
+      navigation and one map's rendering were confirmed via `adb`
+      screenshot/logcat in this session, but the deeper interaction flow
+      still needs the same hands-on pass desktop already got. Distribution, roughly in order: a sideloaded
       signed APK first (free, immediate, good enough for portfolio
       demoing); a Google Play Console account ($25 one-time) with the
       **Internal Testing** track if a shareable "real install" link is

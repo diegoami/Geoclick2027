@@ -255,3 +255,25 @@ or amend an entry here as part of that change, not as an afterthought.
   materializes. Accepted risk: the two schemas can drift if one is
   changed without the other — flagged in ONBOARDING.md so it isn't
   missed later.
+- **PMTiles on Android: buffer the whole archive in memory rather than
+  work around Capacitor's missing Range-request support.** Capacitor's
+  Android WebView local asset server can't return real `206 Partial
+  Content` responses for arbitrary file types — a known, open upstream
+  issue (ionic-team/capacitor#7664) — so pmtiles' normal range-request
+  `FetchSource` silently never gets real tile data on Android, even
+  though the identical file renders correctly in the browser/Tauri
+  builds. Considered and rejected: patching/forking Capacitor's asset
+  handler (real upstream fix, but out of scope to maintain a fork for);
+  serving map tiles from the live Netlify deploy instead of bundling them
+  (would make map data require network access, undermining the "download
+  once, play offline" pitch these demo maps were always built around).
+  Chosen instead: since every demo map is well under 1MB, fetch each
+  `.pmtiles` file once as an ordinary full `GET` (which Capacitor serves
+  fine — only *partial*-content responses are broken) and hand pmtiles a
+  custom in-memory `Source` that serves its byte-range reads out of that
+  buffer, via the library's own documented `Protocol.add()`/`.get()`
+  pre-registration API. Scoped to native Capacitor only
+  (`Capacitor.isNativePlatform()`) — the browser and Tauri builds already
+  work correctly via real range requests and don't need to change. This
+  approach stops making sense if a much larger map (multi-MB+) is ever
+  added for Android specifically; revisit then, not now.

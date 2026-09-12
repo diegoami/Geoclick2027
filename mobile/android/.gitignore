@@ -40,6 +40,10 @@ captures/
 
 # IntelliJ
 *.iml
+# Whole folder ignored rather than the template's selective list below -
+# pure per-machine IDE state for this solo/POC project, no team config
+# worth tracking in it.
+.idea/
 .idea/workspace.xml
 .idea/tasks.xml
 .idea/gradle.xml
