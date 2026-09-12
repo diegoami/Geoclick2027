@@ -1,0 +1,16 @@
+# Without this, Git falls back to content-sniffing heuristics to decide
+# whether a file is text or binary - unreliable for a custom binary
+# container format like PMTiles, and on a Windows checkout with
+# core.autocrlf=true (Git for Windows' common default), a misdetected
+# file gets its line-ending bytes silently rewritten, corrupting the
+# archive. Explicit `binary` here overrides autocrlf for these paths
+# regardless of any user/global git config. Found via a real Windows
+# test: map polygons/lakes never rendered (map.json-driven DOM popups
+# still worked, since those don't touch these files) - see ONBOARDING.md.
+*.pmtiles binary
+*.png binary
+*.ico binary
+*.icns binary
+*.woff binary
+*.woff2 binary
+*.ttf binary

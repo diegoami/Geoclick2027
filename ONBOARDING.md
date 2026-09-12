@@ -210,7 +210,27 @@ that same discipline into any task you pick up:
   instead of doing a git clone (e.g. a manual "upload source and build
   remotely" flow) can silently drop symlinks, producing a build that's
   missing all map data. If map assets 404 on a deploy but work locally,
-  check this first.
+  check this first. **Git for Windows hits the same failure mode a
+  different way**: it doesn't create real symlinks by default, so a
+  fresh Windows clone can turn these into tiny text files containing the
+  literal target path instead of real directories - confirmed directly
+  (a packaged Windows build 404'd on every map's `map.json`). Fix:
+  enable Windows Developer Mode, `git config --global core.symlinks
+  true`, then re-clone (an existing checkout won't self-heal).
+- **`.pmtiles`/icon binary files need `.gitattributes`, or a Windows
+  checkout can silently corrupt them.** Without an explicit `binary`
+  declaration, Git falls back to content-sniffing to decide text vs.
+  binary - unreliable for a custom format like PMTiles - and Git for
+  Windows' common `core.autocrlf=true` default then rewrites line-ending
+  bytes inside a misdetected file, corrupting the tile archive. Found
+  directly on real Windows hardware: the app loaded and `map.json`-driven
+  content (DOM popups, which don't touch the tiles) rendered fine, but
+  every polygon fill/outline/lake layer was silently blank - MapLibre's
+  WebGL context itself worked (the flat `background` layer, which needs
+  no tile source, rendered correctly), only the PMTiles-sourced layers
+  didn't. Fixed by adding `.gitattributes` (`*.pmtiles binary`, plus the
+  Tauri icon formats) - existing checkouts still need a fresh clone or
+  `git add --renormalize .` to actually pick it up.
 - **MapLibre needs a worker script that Vite can't statically discover**
   (its URL is built at runtime inside the library). `app/scripts/
   copy-maplibre-worker.mjs` runs as a `postbuild` step to copy it into
