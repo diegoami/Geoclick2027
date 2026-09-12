@@ -21,7 +21,8 @@ import {
 	parseArgs,
 	slugify,
 	overallBboxOf,
-	selectNearbyLakes
+	selectNearbyLakes,
+	selectCountryContext
 } from './mapBuildUtils.js';
 
 const SOURCE_SHP = path.join(
@@ -60,6 +61,7 @@ function main() {
 	const filteredPath = path.join(absOutDir, '.tmp-filtered.geojson');
 	const targetsPath = path.join(absOutDir, '.tmp-targets.geojson');
 	const lakesPath = path.join(absOutDir, '.tmp-lakes.geojson');
+	const contextPath = path.join(absOutDir, '.tmp-context.geojson');
 	const mbtilesPath = path.join(absOutDir, '.tmp-tiles.mbtiles');
 	const pmtilesPath = path.join(absOutDir, 'tiles.pmtiles');
 	const mapJsonPath = path.join(absOutDir, 'map.json');
@@ -145,8 +147,15 @@ function main() {
 	};
 	writeFileSync(targetsPath, JSON.stringify(targetsGeojson));
 
-	console.log('[3/5] Selecting nearby lakes for context...');
+	console.log('[3/5] Selecting nearby lakes and country/region context...');
 	selectNearbyLakes(overallBboxOf(targets), lakesPath);
+	// A point map's markers otherwise float with nothing showing the
+	// country's outline or internal admin-1 borders - a polygon map doesn't
+	// have this problem (the targets themselves, filled edge to edge,
+	// already show the whole country). Same admin-1 dataset build-map.ts
+	// uses for actual polygon targets, purely for visual context here. See
+	// MAPS.md's "Point-target implementation" section.
+	selectCountryContext(country, contextPath);
 
 	console.log('[4/5] Building vector tiles (tippecanoe + pmtiles convert)...');
 	// --drop-rate=1: tippecanoe's default behavior thins out point features
@@ -170,7 +179,9 @@ function main() {
 		'-L',
 		`targets:${targetsPath}`,
 		'-L',
-		`lakes:${lakesPath}`
+		`lakes:${lakesPath}`,
+		'-L',
+		`context:${contextPath}`
 	]);
 	execFileSync(path.join(process.env.HOME ?? '', '.local/bin/pmtiles'), [
 		'convert',
@@ -182,6 +193,7 @@ function main() {
 	rmSync(filteredPath);
 	rmSync(targetsPath);
 	rmSync(lakesPath);
+	rmSync(contextPath);
 	rmSync(mbtilesPath);
 
 	console.log(`Done: ${targets.length} targets -> ${mapJsonPath}`);

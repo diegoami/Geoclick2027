@@ -227,6 +227,25 @@ tolerance for points (none needed — a marker's own ~9px rendered radius
 already gives hover a comfortable natural hit zone, confirmed by
 measuring the actual falloff point).
 
+**Follow-up, missing country/region contours:** raised by the user after
+looking at a finished towns map — floating city markers with nothing
+showing the country's outline or internal admin-1 borders, unlike a
+polygon map where the target polygons themselves, filled edge to edge,
+already show the whole country. Fixed the same way as the earlier lakes
+fix: a new `context` source-layer (`selectCountryContext()` in
+`mapBuildUtils.ts`, same `ne_10m_admin_1_states_provinces` dataset
+`build-map.ts` already uses, filtered to the map's own country), rendered
+by new `context-fill`/`context-outline` style layers under
+`lakes-fill`/the targets layers — purely visual, no hit-testing, no
+feature-state. A polygon map's tileset has no `context` source-layer, so
+these two layers are a harmless no-op for it, same pattern as
+`targets-circle` being a no-op for a polygon map. Both towns maps
+rebuilt; verified via screenshot that the full country outline and
+internal admin-1 borders now render behind the markers, and that
+`germany-states` (a polygon map) still renders unchanged with no console
+errors. Full 41-test suite and a production build both stay clean. See
+MAPS.md's "Point-target implementation" section for the detail.
+
 **Verified:** home page lists both towns maps; `/overview` shows all
 40/49 markers with correctly localized names (Roma/Milano/Torino,
 München/Köln, not the English forms); quiz hit-testing confirmed at

@@ -11,6 +11,10 @@ import { fileURLToPath } from 'node:url';
 export const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
 export const REPO_ROOT = path.resolve(SCRIPT_DIR, '..', '..');
 export const LAKES_SHP = path.join(REPO_ROOT, 'data/source/ne_10m_lakes/ne_10m_lakes.shp');
+export const ADMIN1_SHP = path.join(
+	REPO_ROOT,
+	'data/source/ne_10m_admin_1_states_provinces/ne_10m_admin_1_states_provinces.shp'
+);
 
 export function parseArgs(argv: string[]): Record<string, string> {
 	const out: Record<string, string> = {};
@@ -65,5 +69,26 @@ export function selectNearbyLakes(
 		'name',
 		outPath,
 		LAKES_SHP
+	]);
+}
+
+// Land context for a point map: without any shape at all behind the
+// markers, a towns map has no sense of the country's outline or its
+// internal region/state borders - a polygon map doesn't have this problem
+// (the targets themselves, filled edge to edge, already show the whole
+// country), but a point map has nothing filling that role. Reuses the
+// same admin-1 dataset build-map.ts already uses for the actual polygon
+// maps, purely for visual context here - not hit-tested, no feature-state,
+// same treatment as the lakes layer.
+export function selectCountryContext(country: string, outPath: string): void {
+	execFileSync('ogr2ogr', [
+		'-f',
+		'GeoJSON',
+		'-where',
+		`admin='${country}'`,
+		'-select',
+		'name',
+		outPath,
+		ADMIN1_SHP
 	]);
 }

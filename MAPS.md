@@ -276,6 +276,25 @@ open questions:**
   areas like Lombardy/the Ruhr do show overlapping popups at the default
   zoom) — not a new failure mode, the same accepted limitation from
   `ROADMAP.md`'s Iteration 2 follow-up.
+- **Missing country/region contours — found by the user actually looking
+  at a finished towns map, not anticipated in the design pass.** A point
+  map's markers floated over plain background with no visible country
+  outline or internal admin-1 borders — a polygon map never has this gap
+  because the target polygons themselves, filled edge to edge, already
+  show the whole country. Fixed the same way as the lakes context layer:
+  a new `context` source-layer (`selectCountryContext()` in
+  `mapBuildUtils.ts`, reusing the same `ne_10m_admin_1_states_provinces`
+  dataset `build-map.ts` uses for actual polygon targets, filtered by
+  `admin='{country}'`), rendered by new `context-fill`/`context-outline`
+  style layers positioned beneath `lakes-fill`/the targets layers in
+  `base.json` — purely visual, no hit-testing, no feature-state, same
+  treatment as `lakes-fill`. A polygon map's tileset has no `context`
+  source-layer, so the two new style layers are a harmless no-op for it,
+  same pattern as `targets-circle` being a no-op for a polygon map.
+  Verified via screenshot: both `italy-towns-100k` and
+  `germany-towns-100k` now show the country's full outline and internal
+  admin-1 borders behind the markers, and `germany-states` (a polygon
+  map) renders unchanged with no console errors.
 
 **Sequencing:** `italy-provinces` needed none of the above and shipped
 first. `italy-towns-100k`/`germany-towns-100k` needed all of it —
