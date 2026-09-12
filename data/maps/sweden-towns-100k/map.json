@@ -1,0 +1,101 @@
+{
+	"id": "sweden-towns-100k",
+	"name": "Sweden — Towns",
+	"country": "Sweden",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "uppsala",
+			"name": "Uppsala",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.6399979,
+				59.8600529
+			],
+			"bbox": [
+				17.6399979,
+				59.8600529,
+				17.6399979,
+				59.8600529
+			]
+		},
+		{
+			"id": "vasteras",
+			"name": "Västerås",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.5576798129634,
+				59.60908375716462
+			],
+			"bbox": [
+				16.5576798129634,
+				59.60908375716462,
+				16.5576798129634,
+				59.60908375716462
+			]
+		},
+		{
+			"id": "stockholm",
+			"name": "Stockholm",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.066300168534497,
+				59.324127204007475
+			],
+			"bbox": [
+				18.066300168534497,
+				59.324127204007475,
+				18.066300168534497,
+				59.324127204007475
+			]
+		},
+		{
+			"id": "goteborg",
+			"name": "Göteborg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.978630208072927,
+				57.709146768849784
+			],
+			"bbox": [
+				11.978630208072927,
+				57.709146768849784,
+				11.978630208072927,
+				57.709146768849784
+			]
+		},
+		{
+			"id": "malmo",
+			"name": "Malmö",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.023059685006762,
+				55.59942395416559
+			],
+			"bbox": [
+				13.023059685006762,
+				55.59942395416559,
+				13.023059685006762,
+				55.59942395416559
+			]
+		}
+	],
+	"tourOrder": [
+		"uppsala",
+		"vasteras",
+		"stockholm",
+		"goteborg",
+		"malmo"
+	]
+}

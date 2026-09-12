@@ -1,0 +1,353 @@
+{
+	"id": "spain-regions",
+	"name": "Spain — Regions",
+	"country": "Spain",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "asturias",
+			"name": "Asturias",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-5.84035,
+				43.28885
+			],
+			"bbox": [
+				-7.1669,
+				42.9148,
+				-4.5138,
+				43.6629
+			]
+		},
+		{
+			"id": "cantabria",
+			"name": "Cantabria",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-3.99125,
+				43.139700000000005
+			],
+			"bbox": [
+				-4.8319,
+				42.7625,
+				-3.1506,
+				43.5169
+			]
+		},
+		{
+			"id": "pais-vasco",
+			"name": "País Vasco",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-2.5903,
+				42.9737
+			],
+			"bbox": [
+				-3.4309,
+				42.4971,
+				-1.7497,
+				43.4503
+			]
+		},
+		{
+			"id": "galicia",
+			"name": "Galicia",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-8.0032,
+				42.77115
+			],
+			"bbox": [
+				-9.251,
+				41.8107,
+				-6.7554,
+				43.7316
+			]
+		},
+		{
+			"id": "navarra",
+			"name": "Navarra",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.57685,
+				42.60185
+			],
+			"bbox": [
+				-2.4087,
+				41.9089,
+				-0.745,
+				43.2948
+			]
+		},
+		{
+			"id": "la-rioja",
+			"name": "La Rioja",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-2.4031000000000002,
+				42.2849
+			],
+			"bbox": [
+				-3.1204,
+				41.9257,
+				-1.6858,
+				42.6441
+			]
+		},
+		{
+			"id": "cataluna",
+			"name": "Cataluña",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				1.74535,
+				41.6823
+			],
+			"bbox": [
+				0.173,
+				40.5262,
+				3.3177,
+				42.8384
+			]
+		},
+		{
+			"id": "castilla-y-leon",
+			"name": "Castilla y León",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-4.43915,
+				41.66605
+			],
+			"bbox": [
+				-7.071,
+				40.0948,
+				-1.8073,
+				43.2373
+			]
+		},
+		{
+			"id": "aragon",
+			"name": "Aragón",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.70235,
+				41.3981
+			],
+			"bbox": [
+				-2.1662,
+				39.8775,
+				0.7615,
+				42.9187
+			]
+		},
+		{
+			"id": "madrid",
+			"name": "Madrid",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-3.82235,
+				40.576750000000004
+			],
+			"bbox": [
+				-4.5719,
+				39.9917,
+				-3.0728,
+				41.1618
+			]
+		},
+		{
+			"id": "castilla-la-mancha",
+			"name": "Castilla-La Mancha",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-3.14725,
+				39.66385
+			],
+			"bbox": [
+				-5.391,
+				38.0265,
+				-0.9035,
+				41.3012
+			]
+		},
+		{
+			"id": "islas-baleares",
+			"name": "Islas Baleares",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				2.75755,
+				39.465
+			],
+			"bbox": [
+				1.2122,
+				38.8624,
+				4.3029,
+				40.0676
+			]
+		},
+		{
+			"id": "comunidad-valenciana",
+			"name": "Comunidad Valenciana",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.4885999999999999,
+				39.3129
+			],
+			"bbox": [
+				-1.501,
+				37.8459,
+				0.5238,
+				40.7799
+			]
+		},
+		{
+			"id": "extremadura",
+			"name": "Extremadura",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-6.125,
+				39.2083
+			],
+			"bbox": [
+				-7.5573,
+				37.939,
+				-4.6927,
+				40.4776
+			]
+		},
+		{
+			"id": "murcia",
+			"name": "Murcia",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.5219,
+				38.06755
+			],
+			"bbox": [
+				-2.3385,
+				37.381,
+				-0.7053,
+				38.7541
+			]
+		},
+		{
+			"id": "andalucia",
+			"name": "Andalucía",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-4.58565,
+				37.367450000000005
+			],
+			"bbox": [
+				-7.5297,
+				36.0065,
+				-1.6416,
+				38.7284
+			]
+		},
+		{
+			"id": "ceuta",
+			"name": "Ceuta",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-5.3351500000000005,
+				35.8861
+			],
+			"bbox": [
+				-5.3784,
+				35.8474,
+				-5.2919,
+				35.9248
+			]
+		},
+		{
+			"id": "melilla",
+			"name": "Melilla",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-2.9398999999999997,
+				35.29885
+			],
+			"bbox": [
+				-2.9669,
+				35.2679,
+				-2.9129,
+				35.3298
+			]
+		},
+		{
+			"id": "canarias",
+			"name": "Canarias",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-15.759599999999999,
+				28.441049999999997
+			],
+			"bbox": [
+				-18.0568,
+				27.6422,
+				-13.4624,
+				29.2399
+			]
+		}
+	],
+	"tourOrder": [
+		"asturias",
+		"cantabria",
+		"pais-vasco",
+		"galicia",
+		"navarra",
+		"la-rioja",
+		"cataluna",
+		"castilla-y-leon",
+		"aragon",
+		"madrid",
+		"castilla-la-mancha",
+		"islas-baleares",
+		"comunidad-valenciana",
+		"extremadura",
+		"murcia",
+		"andalucia",
+		"ceuta",
+		"melilla",
+		"canarias"
+	]
+}

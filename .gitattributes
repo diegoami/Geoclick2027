@@ -18,3 +18,15 @@
 # POC) is the same class of risk - a binary format that must never go
 # through autocrlf, added preemptively rather than waiting to hit it.
 *.jar binary
+# Same class of bug again, a third variant: shell scripts checked out
+# with CRLF (Git for Windows' common autocrlf=true default) break when
+# actually run, even though they're plain text - found running
+# data/scripts/fetch-natural-earth.sh from WSL against this same Windows
+# checkout: `set -euo pipefail` failed with "pipefail: invalid option
+# name" because the trailing \r attached itself to the option name.
+# `text eol=lf` forces LF on checkout regardless of platform/autocrlf,
+# for every shell script including gradlew (POSIX shell despite no .sh
+# extension) which has hit the identical CRLF corruption already, just
+# not yet exercised by a Linux/WSL-side gradle invocation.
+*.sh text eol=lf
+gradlew text eol=lf

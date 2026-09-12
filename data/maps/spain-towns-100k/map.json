@@ -1,0 +1,749 @@
+{
+	"id": "spain-towns-100k",
+	"name": "Spain — Towns",
+	"country": "Spain",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "gijon",
+			"name": "Gijón",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-5.6700004,
+				43.5300161
+			],
+			"bbox": [
+				-5.6700004,
+				43.5300161,
+				-5.6700004,
+				43.5300161
+			]
+		},
+		{
+			"id": "santander",
+			"name": "Santander",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-3.7999854,
+				43.3804645
+			],
+			"bbox": [
+				-3.7999854,
+				43.3804645,
+				-3.7999854,
+				43.3804645
+			]
+		},
+		{
+			"id": "oviedo",
+			"name": "Oviedo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-5.8299907,
+				43.3504922
+			],
+			"bbox": [
+				-5.8299907,
+				43.3504922,
+				-5.8299907,
+				43.3504922
+			]
+		},
+		{
+			"id": "la-coruna",
+			"name": "La Coruña",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-8.4199876,
+				43.3299766
+			],
+			"bbox": [
+				-8.4199876,
+				43.3299766,
+				-8.4199876,
+				43.3299766
+			]
+		},
+		{
+			"id": "san-sebastian",
+			"name": "San Sebastián",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.9799931,
+				43.3203906
+			],
+			"bbox": [
+				-1.9799931,
+				43.3203906,
+				-1.9799931,
+				43.3203906
+			]
+		},
+		{
+			"id": "bilbao",
+			"name": "Bilbao",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-2.9299868,
+				43.2499815
+			],
+			"bbox": [
+				-2.9299868,
+				43.2499815,
+				-2.9299868,
+				43.2499815
+			]
+		},
+		{
+			"id": "vitoria",
+			"name": "Vitoria",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-2.6699768,
+				42.8499801
+			],
+			"bbox": [
+				-2.6699768,
+				42.8499801,
+				-2.6699768,
+				42.8499801
+			]
+		},
+		{
+			"id": "pamplona",
+			"name": "Pamplona",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.6499874,
+				42.8200078
+			],
+			"bbox": [
+				-1.6499874,
+				42.8200078,
+				-1.6499874,
+				42.8200078
+			]
+		},
+		{
+			"id": "leon",
+			"name": "León",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-5.5700066,
+				42.5799707
+			],
+			"bbox": [
+				-5.5700066,
+				42.5799707,
+				-5.5700066,
+				42.5799707
+			]
+		},
+		{
+			"id": "logrono",
+			"name": "Logroño",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-2.4299915,
+				42.470365
+			],
+			"bbox": [
+				-2.4299915,
+				42.470365,
+				-2.4299915,
+				42.470365
+			]
+		},
+		{
+			"id": "burgos",
+			"name": "Burgos",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-3.6799669,
+				42.3503982
+			],
+			"bbox": [
+				-3.6799669,
+				42.3503982,
+				-3.6799669,
+				42.3503982
+			]
+		},
+		{
+			"id": "ourense",
+			"name": "Ourense",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-7.8699954,
+				42.3299601
+			],
+			"bbox": [
+				-7.8699954,
+				42.3299601,
+				-7.8699954,
+				42.3299601
+			]
+		},
+		{
+			"id": "vigo",
+			"name": "Vigo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-8.7299945,
+				42.2200185
+			],
+			"bbox": [
+				-8.7299945,
+				42.2200185,
+				-8.7299945,
+				42.2200185
+			]
+		},
+		{
+			"id": "valladolid",
+			"name": "Valladolid",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-4.7500308,
+				41.6500016
+			],
+			"bbox": [
+				-4.7500308,
+				41.6500016,
+				-4.7500308,
+				41.6500016
+			]
+		},
+		{
+			"id": "zaragoza",
+			"name": "Zaragoza",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.8899821,
+				41.6500016
+			],
+			"bbox": [
+				-0.8899821,
+				41.6500016,
+				-0.8899821,
+				41.6500016
+			]
+		},
+		{
+			"id": "mataro",
+			"name": "Mataró",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				2.4500207,
+				41.5399567
+			],
+			"bbox": [
+				2.4500207,
+				41.5399567,
+				2.4500207,
+				41.5399567
+			]
+		},
+		{
+			"id": "barcelona",
+			"name": "Barcelona",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				2.1814245,
+				41.3852454
+			],
+			"bbox": [
+				2.1814245,
+				41.3852454,
+				2.1814245,
+				41.3852454
+			]
+		},
+		{
+			"id": "tarragona",
+			"name": "Tarragona",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				1.2499906,
+				41.1203699
+			],
+			"bbox": [
+				1.2499906,
+				41.1203699,
+				1.2499906,
+				41.1203699
+			]
+		},
+		{
+			"id": "salamanca",
+			"name": "Salamanca",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-5.6700004,
+				40.9704049
+			],
+			"bbox": [
+				-5.6700004,
+				40.9704049,
+				-5.6700004,
+				40.9704049
+			]
+		},
+		{
+			"id": "madrid",
+			"name": "Madrid",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-3.6852975,
+				40.4019721
+			],
+			"bbox": [
+				-3.6852975,
+				40.4019721,
+				-3.6852975,
+				40.4019721
+			]
+		},
+		{
+			"id": "castellon-de-la-plana",
+			"name": "Castellón de la Plana",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.0500076,
+				39.9704142
+			],
+			"bbox": [
+				-0.0500076,
+				39.9704142,
+				-0.0500076,
+				39.9704142
+			]
+		},
+		{
+			"id": "palma-de-mallorca",
+			"name": "Palma de Mallorca",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				2.654246,
+				39.5742627
+			],
+			"bbox": [
+				2.654246,
+				39.5742627,
+				2.654246,
+				39.5742627
+			]
+		},
+		{
+			"id": "valencia",
+			"name": "Valencia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.4019579,
+				39.4869634
+			],
+			"bbox": [
+				-0.4019579,
+				39.4869634,
+				-0.4019579,
+				39.4869634
+			]
+		},
+		{
+			"id": "albacete",
+			"name": "Albacete",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.8699998,
+				39.0003443
+			],
+			"bbox": [
+				-1.8699998,
+				39.0003443,
+				-1.8699998,
+				39.0003443
+			]
+		},
+		{
+			"id": "badajoz",
+			"name": "Badajoz",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-6.9699728,
+				38.8804291
+			],
+			"bbox": [
+				-6.9699728,
+				38.8804291,
+				-6.9699728,
+				38.8804291
+			]
+		},
+		{
+			"id": "alicante",
+			"name": "Alicante",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.4836407,
+				38.3512199
+			],
+			"bbox": [
+				-0.4836407,
+				38.3512199,
+				-0.4836407,
+				38.3512199
+			]
+		},
+		{
+			"id": "murcia",
+			"name": "Murcia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.1299675,
+				37.9799931
+			],
+			"bbox": [
+				-1.1299675,
+				37.9799931,
+				-1.1299675,
+				37.9799931
+			]
+		},
+		{
+			"id": "cordoba",
+			"name": "Córdoba",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-4.7700037,
+				37.8799992
+			],
+			"bbox": [
+				-4.7700037,
+				37.8799992,
+				-4.7700037,
+				37.8799992
+			]
+		},
+		{
+			"id": "jaen",
+			"name": "Jaén",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-3.7999854,
+				37.7703935
+			],
+			"bbox": [
+				-3.7999854,
+				37.7703935,
+				-3.7999854,
+				37.7703935
+			]
+		},
+		{
+			"id": "cartagena",
+			"name": "Cartagena",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.9800283,
+				37.6004297
+			],
+			"bbox": [
+				-0.9800283,
+				37.6004297,
+				-0.9800283,
+				37.6004297
+			]
+		},
+		{
+			"id": "sevilla",
+			"name": "Sevilla",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-5.9800074,
+				37.4050153
+			],
+			"bbox": [
+				-5.9800074,
+				37.4050153,
+				-5.9800074,
+				37.4050153
+			]
+		},
+		{
+			"id": "huelva",
+			"name": "Huelva",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-6.9299494,
+				37.2503736
+			],
+			"bbox": [
+				-6.9299494,
+				37.2503736,
+				-6.9299494,
+				37.2503736
+			]
+		},
+		{
+			"id": "granada",
+			"name": "Granada",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-3.5850114,
+				37.1649783
+			],
+			"bbox": [
+				-3.5850114,
+				37.1649783,
+				-3.5850114,
+				37.1649783
+			]
+		},
+		{
+			"id": "almeria",
+			"name": "Almería",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-2.4299915,
+				36.8303475
+			],
+			"bbox": [
+				-2.4299915,
+				36.8303475,
+				-2.4299915,
+				36.8303475
+			]
+		},
+		{
+			"id": "malaga",
+			"name": "Málaga",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-4.4199992,
+				36.7204059
+			],
+			"bbox": [
+				-4.4199992,
+				36.7204059,
+				-4.4199992,
+				36.7204059
+			]
+		},
+		{
+			"id": "cadiz",
+			"name": "Cádiz",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-6.2861410092129,
+				36.52482926254671
+			],
+			"bbox": [
+				-6.2861410092129,
+				36.52482926254671,
+				-6.2861410092129,
+				36.52482926254671
+			]
+		},
+		{
+			"id": "marbella",
+			"name": "Marbella",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-4.8833301,
+				36.5166199
+			],
+			"bbox": [
+				-4.8833301,
+				36.5166199,
+				-4.8833301,
+				36.5166199
+			]
+		},
+		{
+			"id": "algeciras",
+			"name": "Algeciras",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-5.452659839737986,
+				36.131881591291716
+			],
+			"bbox": [
+				-5.452659839737986,
+				36.131881591291716,
+				-5.452659839737986,
+				36.131881591291716
+			]
+		},
+		{
+			"id": "melilla",
+			"name": "Melilla",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-2.9500114,
+				35.3000016
+			],
+			"bbox": [
+				-2.9500114,
+				35.3000016,
+				-2.9500114,
+				35.3000016
+			]
+		},
+		{
+			"id": "santa-cruz-de-tenerife",
+			"name": "Santa Cruz de Tenerife",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-16.2500007,
+				28.4699793
+			],
+			"bbox": [
+				-16.2500007,
+				28.4699793,
+				-16.2500007,
+				28.4699793
+			]
+		},
+		{
+			"id": "las-palmas-de-gran-canaria",
+			"name": "Las Palmas de Gran Canaria",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-15.429999,
+				28.099976
+			],
+			"bbox": [
+				-15.429999,
+				28.099976,
+				-15.429999,
+				28.099976
+			]
+		}
+	],
+	"tourOrder": [
+		"gijon",
+		"santander",
+		"oviedo",
+		"la-coruna",
+		"san-sebastian",
+		"bilbao",
+		"vitoria",
+		"pamplona",
+		"leon",
+		"logrono",
+		"burgos",
+		"ourense",
+		"vigo",
+		"valladolid",
+		"zaragoza",
+		"mataro",
+		"barcelona",
+		"tarragona",
+		"salamanca",
+		"madrid",
+		"castellon-de-la-plana",
+		"palma-de-mallorca",
+		"valencia",
+		"albacete",
+		"badajoz",
+		"alicante",
+		"murcia",
+		"cordoba",
+		"jaen",
+		"cartagena",
+		"sevilla",
+		"huelva",
+		"granada",
+		"almeria",
+		"malaga",
+		"cadiz",
+		"marbella",
+		"algeciras",
+		"melilla",
+		"santa-cruz-de-tenerife",
+		"las-palmas-de-gran-canaria"
+	]
+}

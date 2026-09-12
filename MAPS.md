@@ -97,6 +97,164 @@ script would produce today." `italy-provinces` and the two towns maps
 were built after that change, so they already include lakes from their
 first build.
 
+### France, Spain, Great Britain, Poland, Ukraine, Sweden (built 2026-09-12)
+
+Six more countries, each an admin-1-equivalent regions map plus a
+`>100k`-population towns map — twelve maps in one batch. Every attribute
+value below was checked directly against the actual source data before
+picking a build command, the same discipline as `italy-provinces`'s full
+name audit, not assumed from a couple of spot-checked rows.
+
+- **`france-regions`** (18 targets: 13 metropolitan régions + 5 overseas —
+  Guadeloupe, Martinique, Guyane française, Mayotte, Réunion). France's
+  raw admin-1 rows are départements (101 of them, one level finer), same
+  situation as Italy's provinces/regions — dissolved to the `region`
+  field, audited for blanks/duplicates first (none found):
+  ```
+  npx tsx data/scripts/build-map.ts --country="France" --out=data/maps/france-regions --type=region --name="France — Regions" --dissolve=region
+  ```
+- **`spain-regions`** (19 targets: 17 comunidades autónomas + Ceuta +
+  Melilla). Same situation as France — raw rows are the 52 provincias,
+  dissolved to `region`:
+  ```
+  npx tsx data/scripts/build-map.ts --country="Spain" --out=data/maps/spain-regions --type=region --name="Spain — Regions" --dissolve=region
+  ```
+  Three `NAME_FIXUPS['Spain']` entries needed, checked against the full
+  19-value list, not just the two that looked obviously wrong: `Canary
+  Is.` → `Canarias` (an English abbreviation slipped into the Spanish
+  data), `Foral de Navarra` → `Navarra`, and `Valenciana` → `Comunidad
+  Valenciana` (kept the full form, unlike Navarra — the Valencian
+  Community contains a same-named *province*, so the bare name would
+  collide with a possible future finer-level map the way it wouldn't for
+  single-province Navarra).
+- **`great-britain-regions`** (15 targets — England's 9 official regions,
+  Scotland's 4 historic registration-county groupings, Wales's 2 NUTS1
+  halves; Northern Ireland excluded, see below). The UK's raw admin-1
+  rows (232 of them — districts/unitary authorities/boroughs) have a
+  `region` field that looked inconsistent at first glance ("East" next to
+  "Eastern", "North East" next to "North Eastern") — audited in full
+  before assuming a data bug, and it wasn't one: England and Scotland
+  just use different naming for their own groupings, no blanks, no
+  actual duplicates, dissolves cleanly to 16 real regions (15 after
+  excluding Northern Ireland, next). "Great Britain" was asked for
+  specifically, not "United Kingdom" — Great Britain excludes Northern
+  Ireland by definition, so its districts are dropped via a new
+  `--exclude-field` option (see below) matching the `geonunit` field
+  rather than needing every one of NI's 26 districts named individually:
+  ```
+  npx tsx data/scripts/build-map.ts --country="United Kingdom" --out=data/maps/great-britain-regions --type=region --name="Great Britain — Regions" --dissolve=region --exclude-field=geonunit --exclude="Northern Ireland"
+  ```
+- **`poland-regions`** (16 targets, voivodeships — already the correct
+  level, no dissolve needed). Poland's plain `name` field is
+  English-translated ("Silesian", "Lesser Poland") — a new `--name-field`
+  option (see below) picks `name_pl` instead, which gives the full
+  official form (`województwo śląskie`); `NAME_FIXUPS['Poland']` (16
+  entries, one per voivodeship) trims the `województwo ` prefix and
+  capitalizes, matching how they're actually referred to outside
+  formal/legal Polish text — the same "Toscana", not "Regione Toscana"
+  convention Italy's regions already use:
+  ```
+  npx tsx data/scripts/build-map.ts --country="Poland" --out=data/maps/poland-regions --type=province --name="Poland — Regions" --name-field=name_pl
+  ```
+- **`ukraine-regions`** (27 targets: 24 oblasts + Kyiv city + Crimea +
+  Sevastopol). Natural Earth tags Crimea and Sevastopol under
+  `admin='Russia'`, not Ukraine — reflecting de facto control, not
+  international recognition (most of the world, including the UN,
+  considers them Ukrainian territory under occupation). Decided with the
+  user rather than assumed: merge them in explicitly rather than silently
+  ship a map missing two of Ukraine's own first-level regions. A new
+  `--extra-where` option (see below) runs an independent, country-
+  unconstrained query and merges its results in before dissolve:
+  ```
+  npx tsx data/scripts/build-map.ts --country="Ukraine" --out=data/maps/ukraine-regions --type=province --name="Ukraine — Regions" --extra-where="name IN ('Crimea','Sevastopol')"
+  ```
+  `NAME_FIXUPS['Ukraine']` (11 entries) moves every name to the modern
+  standard transliteration — the same "KyivNotKiev" convention
+  international style guides adopted after 2018/19 (`Kiev` → `Kyiv
+  Oblast`, `Kiev City` → `Kyiv`, disambiguating the oblast from the
+  separately-administered capital city it surrounds) and drops the
+  soft-sign apostrophes Natural Earth's plain `name` field uses
+  (`Donets'k` → `Donetsk`, `L'viv` → `Lviv`, ...). Crimea/Sevastopol need
+  no fixup — their plain names are already correct.
+- **`sweden-regions`** (21 targets, län/counties — already the correct
+  level, no dissolve, no `--name-field` needed; Sweden's plain `name`
+  field is already correct Swedish):
+  ```
+  npx tsx data/scripts/build-map.ts --country="Sweden" --out=data/maps/sweden-regions --type=county --name="Sweden — Regions"
+  ```
+  One `NAME_FIXUPS['Sweden']` entry: `Orebro` → `Örebro` — a missing
+  diacritic in the plain field, confirmed against `name_sv` ("Örebro
+  län"), not guessed.
+- **`france-towns-100k`** (40 targets), **`spain-towns-100k`** (41),
+  **`great-britain-towns-100k`** (38 — 39 minus Belfast, excluded via a
+  new `--exclude` option on `build-points-map.ts` for the same
+  Great-Britain-not-UK reason as the regions map above),
+  **`poland-towns-100k`** (22), **`ukraine-towns-100k`** (39),
+  **`sweden-towns-100k`** (5 — genuinely correct, not a bug: Sweden is
+  small and lightly urbanized, only Stockholm/Göteborg/Malmö/Uppsala/
+  Västerås clear 100k):
+  ```
+  npx tsx data/scripts/build-points-map.ts --country="France" --out=data/maps/france-towns-100k --name-field=NAME_FR --min-population=100000 --name="France — Towns"
+  npx tsx data/scripts/build-points-map.ts --country="Spain" --out=data/maps/spain-towns-100k --name-field=NAME_ES --min-population=100000 --name="Spain — Towns"
+  npx tsx data/scripts/build-points-map.ts --country="United Kingdom" --out=data/maps/great-britain-towns-100k --name-field=NAME_EN --min-population=100000 --name="Great Britain — Towns" --exclude=Belfast
+  npx tsx data/scripts/build-points-map.ts --country="Poland" --out=data/maps/poland-towns-100k --name-field=NAME_PL --min-population=100000 --name="Poland — Towns"
+  npx tsx data/scripts/build-points-map.ts --country="Ukraine" --out=data/maps/ukraine-towns-100k --name-field=NAME_EN --min-population=100000 --name="Ukraine — Towns"
+  npx tsx data/scripts/build-points-map.ts --country="Sweden" --out=data/maps/sweden-towns-100k --min-population=100000 --name="Sweden — Towns"
+  ```
+  Every `--name-field` choice here was checked by diffing it against the
+  plain `NAME` field across every qualifying row first (`NAME_FR` fixes
+  `St.-Denis` → `Saint-Denis`; `NAME_ES` fixes several including
+  `Seville` → `Sevilla` and a stray invisible character in `Granada`;
+  `NAME_PL` fixes `Warsaw` → `Warszawa`; Sweden's `NAME`/`NAME_SV` were
+  already identical, so no field override needed there at all). Two
+  small `NAME_FIXUPS` entries (a mechanism now added to
+  `build-points-map.ts` too, mirroring `build-map.ts`'s) catch the rows
+  where even the checked field was wrong: Ukraine's `NAME_EN` still says
+  `Odessa` (inconsistent with every other Ukrainian city already using
+  the modern form) → `Odesa`; Spain's `NAME_ES` gives `Orense`, the
+  historic Castilian exonym, when `Ourense` has been this city's sole
+  official name since 1998 → `Ourense`.
+
+**Script changes made to support this batch** (all in `data/scripts/`,
+each justified by an actual data need hit while building these maps, not
+spec'd in advance):
+
+- `build-map.ts --name-field=<field>` (default `name`): which field
+  holds the display name pre-dissolve. Added for Poland.
+- `build-map.ts --exclude-field=<field>` (default `name`): which field
+  `--exclude`'s values match against. Added for Great Britain
+  (`geonunit`, to drop every Northern Ireland district by country-
+  within-the-UK rather than naming all 26 individually).
+- `build-map.ts --extra-where=<clause>`: an independent, country-
+  unconstrained ogr2ogr query whose matching features are merged in
+  before dissolve. Added for Ukraine (Crimea/Sevastopol).
+- `build-points-map.ts --exclude=<names>`: drops named features by
+  `NAME`, mirroring `build-map.ts`'s existing option. Added for Great
+  Britain (Belfast).
+- `build-points-map.ts` gained its own small `NAME_FIXUPS` table,
+  mirroring `build-map.ts`'s — for the rare row where even the chosen
+  `--name-field` is wrong (Ukraine's Odessa, Spain's Orense).
+
+**Environment note, found while starting this batch:** this session runs
+on a Windows machine (see ONBOARDING.md for the desktop/Android work),
+and none of `ogr2ogr`/`tippecanoe`/the `pmtiles` CLI have Windows-native
+builds usable here — `tippecanoe` in particular has no Windows build at
+all. Building maps from Windows needs WSL2 (already set up on this
+machine from earlier work) with these tools installed exactly as
+ONBOARDING.md's original Linux setup notes describe. Do **not** run
+`npm install` from WSL directly against the same `node_modules` the
+Windows-side app/dev-server uses — native binaries (esbuild, rolldown,
+...) are platform-specific, and npm's optional-dependency resolution
+will silently swap out the Windows ones for Linux ones, breaking the
+Windows toolchain (`Cannot find module '@rolldown/binding-win32-x64-msvc'`)
+until `npm install` is re-run from Windows. Use a separate checkout for
+the Linux-side `node_modules` (this session used a pre-existing WSL-
+native clone at `~/projects/Geoclick2027`, kept up to date with `git
+pull`), and run the build scripts from there with `--out` (or just copy
+the resulting `data/maps/<id>/` directory afterward) pointing at the
+Windows checkout. See ONBOARDING.md's Gotchas section for the shell-
+script CRLF issue this also surfaced.
+
 ## Beyond Natural Earth's admin-1 data
 
 Everything above (and the two towns plans below) stays within data

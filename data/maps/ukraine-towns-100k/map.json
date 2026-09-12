@@ -1,0 +1,713 @@
+{
+	"id": "ukraine-towns-100k",
+	"name": "Ukraine — Towns",
+	"country": "Ukraine",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "chernihiv",
+			"name": "Chernihiv",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				31.3015413,
+				51.5049298
+			],
+			"bbox": [
+				31.3015413,
+				51.5049298,
+				31.3015413,
+				51.5049298
+			]
+		},
+		{
+			"id": "konotop",
+			"name": "Konotop",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				33.2090218,
+				51.2423877
+			],
+			"bbox": [
+				33.2090218,
+				51.2423877,
+				33.2090218,
+				51.2423877
+			]
+		},
+		{
+			"id": "nizhyn",
+			"name": "Nizhyn",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				31.8902909,
+				51.0540788
+			],
+			"bbox": [
+				31.8902909,
+				51.0540788,
+				31.8902909,
+				51.0540788
+			]
+		},
+		{
+			"id": "sumy",
+			"name": "Sumy",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.7808638,
+				50.9242934
+			],
+			"bbox": [
+				34.7808638,
+				50.9242934,
+				34.7808638,
+				50.9242934
+			]
+		},
+		{
+			"id": "lutsk",
+			"name": "Lutsk",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				25.3333785,
+				50.7471983
+			],
+			"bbox": [
+				25.3333785,
+				50.7471983,
+				25.3333785,
+				50.7471983
+			]
+		},
+		{
+			"id": "rivne",
+			"name": "Rivne",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				26.2528055,
+				50.6165861
+			],
+			"bbox": [
+				26.2528055,
+				50.6165861,
+				26.2528055,
+				50.6165861
+			]
+		},
+		{
+			"id": "kyiv",
+			"name": "Kyiv",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				30.5146821,
+				50.4353132
+			],
+			"bbox": [
+				30.5146821,
+				50.4353132,
+				30.5146821,
+				50.4353132
+			]
+		},
+		{
+			"id": "zhytomyr",
+			"name": "Zhytomyr",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				28.6621675,
+				50.2455752
+			],
+			"bbox": [
+				28.6621675,
+				50.2455752,
+				28.6621675,
+				50.2455752
+			]
+		},
+		{
+			"id": "kharkiv",
+			"name": "Kharkiv",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				36.2480789,
+				50.0019288
+			],
+			"bbox": [
+				36.2480789,
+				50.0019288,
+				36.2480789,
+				50.0019288
+			]
+		},
+		{
+			"id": "lviv",
+			"name": "Lviv",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				24.0299955,
+				49.8349801
+			],
+			"bbox": [
+				24.0299955,
+				49.8349801,
+				24.0299955,
+				49.8349801
+			]
+		},
+		{
+			"id": "bila-tserkva",
+			"name": "Bila Tserkva",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				30.1309151,
+				49.7743119
+			],
+			"bbox": [
+				30.1309151,
+				49.7743119,
+				30.1309151,
+				49.7743119
+			]
+		},
+		{
+			"id": "poltava",
+			"name": "Poltava",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.5702823,
+				49.5740399
+			],
+			"bbox": [
+				34.5702823,
+				49.5740399,
+				34.5702823,
+				49.5740399
+			]
+		},
+		{
+			"id": "ternopil",
+			"name": "Ternopil",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				25.5821488,
+				49.5359802
+			],
+			"bbox": [
+				25.5821488,
+				49.5359802,
+				25.5821488,
+				49.5359802
+			]
+		},
+		{
+			"id": "cherkasy",
+			"name": "Cherkasy",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				32.0709,
+				49.4347203
+			],
+			"bbox": [
+				32.0709,
+				49.4347203,
+				32.0709,
+				49.4347203
+			]
+		},
+		{
+			"id": "khmelnytskyi",
+			"name": "Khmelnytskyi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				27.0015454,
+				49.4249276
+			],
+			"bbox": [
+				27.0015454,
+				49.4249276,
+				27.0015454,
+				49.4249276
+			]
+		},
+		{
+			"id": "drohobych",
+			"name": "Drohobych",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				23.4993819,
+				49.344364
+			],
+			"bbox": [
+				23.4993819,
+				49.344364,
+				23.4993819,
+				49.344364
+			]
+		},
+		{
+			"id": "vinnytsia",
+			"name": "Vinnytsia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				28.4815584,
+				49.225379
+			],
+			"bbox": [
+				28.4815584,
+				49.225379,
+				28.4815584,
+				49.225379
+			]
+		},
+		{
+			"id": "kremenchuk",
+			"name": "Kremenchuk",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				33.4296285,
+				49.0835272
+			],
+			"bbox": [
+				33.4296285,
+				49.0835272,
+				33.4296285,
+				49.0835272
+			]
+		},
+		{
+			"id": "ivano-frankivsk",
+			"name": "Ivano-Frankivsk",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				24.7093855,
+				48.9347508
+			],
+			"bbox": [
+				24.7093855,
+				48.9347508,
+				24.7093855,
+				48.9347508
+			]
+		},
+		{
+			"id": "lysychansk",
+			"name": "Lysychansk",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				38.4273596,
+				48.9204106
+			],
+			"bbox": [
+				38.4273596,
+				48.9204106,
+				38.4273596,
+				48.9204106
+			]
+		},
+		{
+			"id": "kramatorsk",
+			"name": "Kramatorsk",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				37.5343908,
+				48.7193634
+			],
+			"bbox": [
+				37.5343908,
+				48.7193634,
+				37.5343908,
+				48.7193634
+			]
+		},
+		{
+			"id": "kamianets-podilskyi",
+			"name": "Kamianets-Podilskyi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				26.5808992,
+				48.684301
+			],
+			"bbox": [
+				26.5808992,
+				48.684301,
+				26.5808992,
+				48.684301
+			]
+		},
+		{
+			"id": "uzhhorod",
+			"name": "Uzhhorod",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				22.2500008,
+				48.629989
+			],
+			"bbox": [
+				22.2500008,
+				48.629989,
+				22.2500008,
+				48.629989
+			]
+		},
+		{
+			"id": "luhansk",
+			"name": "Luhansk",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				39.3343843,
+				48.5697602
+			],
+			"bbox": [
+				39.3343843,
+				48.5697602,
+				39.3343843,
+				48.5697602
+			]
+		},
+		{
+			"id": "kropyvnytskyi",
+			"name": "Kropyvnytskyi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				32.2602941,
+				48.5040536
+			],
+			"bbox": [
+				32.2602941,
+				48.5040536,
+				32.2602941,
+				48.5040536
+			]
+		},
+		{
+			"id": "dnipro",
+			"name": "Dnipro",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.9980777,
+				48.4819182
+			],
+			"bbox": [
+				34.9980777,
+				48.4819182,
+				34.9980777,
+				48.4819182
+			]
+		},
+		{
+			"id": "chernivtsi",
+			"name": "Chernivtsi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				25.9215596,
+				48.305306
+			],
+			"bbox": [
+				25.9215596,
+				48.305306,
+				25.9215596,
+				48.305306
+			]
+		},
+		{
+			"id": "horlivka",
+			"name": "Horlivka",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				38.0546691,
+				48.2996474
+			],
+			"bbox": [
+				38.0546691,
+				48.2996474,
+				38.0546691,
+				48.2996474
+			]
+		},
+		{
+			"id": "makiivka",
+			"name": "Makiivka",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				37.9746224,
+				48.0296639
+			],
+			"bbox": [
+				37.9746224,
+				48.0296639,
+				37.9746224,
+				48.0296639
+			]
+		},
+		{
+			"id": "donetsk",
+			"name": "Donetsk",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				37.8280342,
+				48.0019475
+			],
+			"bbox": [
+				37.8280342,
+				48.0019475,
+				37.8280342,
+				48.0019475
+			]
+		},
+		{
+			"id": "kryvyi-rih",
+			"name": "Kryvyi Rih",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				33.3449825,
+				47.9283264
+			],
+			"bbox": [
+				33.3449825,
+				47.9283264,
+				33.3449825,
+				47.9283264
+			]
+		},
+		{
+			"id": "zaporizhzhia",
+			"name": "Zaporizhzhia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				35.1748628,
+				47.859243
+			],
+			"bbox": [
+				35.1748628,
+				47.859243,
+				35.1748628,
+				47.859243
+			]
+		},
+		{
+			"id": "nikopol",
+			"name": "Nikopol",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.4062097,
+				47.5665914
+			],
+			"bbox": [
+				34.4062097,
+				47.5665914,
+				34.4062097,
+				47.5665914
+			]
+		},
+		{
+			"id": "mariupol",
+			"name": "Mariupol",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				37.5561983,
+				47.0961808
+			],
+			"bbox": [
+				37.5561983,
+				47.0961808,
+				37.5561983,
+				47.0961808
+			]
+		},
+		{
+			"id": "mykolaiv",
+			"name": "Mykolaiv",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				31.984342,
+				46.9677391
+			],
+			"bbox": [
+				31.984342,
+				46.9677391,
+				31.984342,
+				46.9677391
+			]
+		},
+		{
+			"id": "melitopol",
+			"name": "Melitopol",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				35.3774682,
+				46.8378245
+			],
+			"bbox": [
+				35.3774682,
+				46.8378245,
+				35.3774682,
+				46.8378245
+			]
+		},
+		{
+			"id": "berdiansk",
+			"name": "Berdiansk",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				36.7868396,
+				46.7568217
+			],
+			"bbox": [
+				36.7868396,
+				46.7568217,
+				36.7868396,
+				46.7568217
+			]
+		},
+		{
+			"id": "kherson",
+			"name": "Kherson",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				32.6006649,
+				46.6325372
+			],
+			"bbox": [
+				32.6006649,
+				46.6325372,
+				32.6006649,
+				46.6325372
+			]
+		},
+		{
+			"id": "odesa",
+			"name": "Odesa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				30.7080553,
+				46.4919622
+			],
+			"bbox": [
+				30.7080553,
+				46.4919622,
+				30.7080553,
+				46.4919622
+			]
+		}
+	],
+	"tourOrder": [
+		"chernihiv",
+		"konotop",
+		"nizhyn",
+		"sumy",
+		"lutsk",
+		"rivne",
+		"kyiv",
+		"zhytomyr",
+		"kharkiv",
+		"lviv",
+		"bila-tserkva",
+		"poltava",
+		"ternopil",
+		"cherkasy",
+		"khmelnytskyi",
+		"drohobych",
+		"vinnytsia",
+		"kremenchuk",
+		"ivano-frankivsk",
+		"lysychansk",
+		"kramatorsk",
+		"kamianets-podilskyi",
+		"uzhhorod",
+		"luhansk",
+		"kropyvnytskyi",
+		"dnipro",
+		"chernivtsi",
+		"horlivka",
+		"makiivka",
+		"donetsk",
+		"kryvyi-rih",
+		"zaporizhzhia",
+		"nikopol",
+		"mariupol",
+		"mykolaiv",
+		"melitopol",
+		"berdiansk",
+		"kherson",
+		"odesa"
+	]
+}

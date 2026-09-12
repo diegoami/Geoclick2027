@@ -39,12 +39,19 @@ Check items off as they land; update "Status" as iterations complete.
   on-map labels; a resizable quiz tray, with a real flexbox min-height
   bug fixed along the way — see DECISIONS.md's "GUI/UX round 1" for the
   reasoning behind each. User-tested and approved. Merged to `main`
-  2026-09-12).
+  2026-09-12); six new countries, twelve new maps — France, Spain, Great
+  Britain, Poland, Ukraine, Sweden, each an admin-1-equivalent regions
+  map plus a `>100k`-population towns map (see MAPS.md's dated section
+  for exact commands, every localized-name/dissolve-field/fixup decision,
+  and three script enhancements — `--name-field`/`--exclude-field`/
+  `--extra-where` on `build-map.ts`, `--exclude` plus a `NAME_FIXUPS`
+  table on `build-points-map.ts` — each added because one of these six
+  countries actually needed it, not speculatively).
 - **Not started**: everything else below.
 - **Next up**: motion/feedback design (reveal animations, streak
   indicators, sound, correct-drop juiciness) and a broader component/
-  design-system pass remain open on the same GUI/UX item — revisit
-  whenever it feels worth another round, not on a fixed schedule.
+  design-system pass remain open on the GUI/UX item — revisit whenever
+  it feels worth another round, not on a fixed schedule.
 - **Reordered**: local persistence and spaced repetition swapped places
   from the original numbering. Spaced repetition is pointless without
   somewhere to remember what's due across sessions — user accounts

@@ -1,0 +1,695 @@
+{
+	"id": "great-britain-towns-100k",
+	"name": "Great Britain — Towns",
+	"country": "United Kingdom",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "aberdeen",
+			"name": "Aberdeen",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-2.105049991692299,
+				57.145133499698055
+			],
+			"bbox": [
+				-2.105049991692299,
+				57.145133499698055,
+				-2.105049991692299,
+				57.145133499698055
+			]
+		},
+		{
+			"id": "dundee",
+			"name": "Dundee",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-3.0000084,
+				56.470389
+			],
+			"bbox": [
+				-3.0000084,
+				56.470389,
+				-3.0000084,
+				56.470389
+			]
+		},
+		{
+			"id": "edinburgh",
+			"name": "Edinburgh",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-3.2190906,
+				55.9483279
+			],
+			"bbox": [
+				-3.2190906,
+				55.9483279,
+				-3.2190906,
+				55.9483279
+			]
+		},
+		{
+			"id": "glasgow",
+			"name": "Glasgow",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-4.239100528802634,
+				55.86226975799262
+			],
+			"bbox": [
+				-4.239100528802634,
+				55.86226975799262,
+				-4.239100528802634,
+				55.86226975799262
+			]
+		},
+		{
+			"id": "newcastle-upon-tyne",
+			"name": "Newcastle upon Tyne",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.61162548933458,
+				54.98974205316957
+			],
+			"bbox": [
+				-1.61162548933458,
+				54.98974205316957,
+				-1.61162548933458,
+				54.98974205316957
+			]
+		},
+		{
+			"id": "sunderland",
+			"name": "Sunderland",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.379881564518565,
+				54.903407084625925
+			],
+			"bbox": [
+				-1.379881564518565,
+				54.903407084625925,
+				-1.379881564518565,
+				54.903407084625925
+			]
+		},
+		{
+			"id": "middlesbrough",
+			"name": "Middlesbrough",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.2300131,
+				54.5803752
+			],
+			"bbox": [
+				-1.2300131,
+				54.5803752,
+				-1.2300131,
+				54.5803752
+			]
+		},
+		{
+			"id": "york",
+			"name": "York",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.072104058604134,
+				53.9511680622694
+			],
+			"bbox": [
+				-1.072104058604134,
+				53.9511680622694,
+				-1.072104058604134,
+				53.9511680622694
+			]
+		},
+		{
+			"id": "blackpool",
+			"name": "Blackpool",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-3.0500053,
+				53.8303951
+			],
+			"bbox": [
+				-3.0500053,
+				53.8303951,
+				-3.0500053,
+				53.8303951
+			]
+		},
+		{
+			"id": "bradford",
+			"name": "Bradford",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.754464650200906,
+				53.79167546080204
+			],
+			"bbox": [
+				-1.754464650200906,
+				53.79167546080204,
+				-1.754464650200906,
+				53.79167546080204
+			]
+		},
+		{
+			"id": "leeds",
+			"name": "Leeds",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.551347711412841,
+				53.790016637752316
+			],
+			"bbox": [
+				-1.551347711412841,
+				53.790016637752316,
+				-1.551347711412841,
+				53.790016637752316
+			]
+		},
+		{
+			"id": "kingston-upon-hull",
+			"name": "Kingston upon Hull",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.3299905,
+				53.7504258
+			],
+			"bbox": [
+				-0.3299905,
+				53.7504258,
+				-0.3299905,
+				53.7504258
+			]
+		},
+		{
+			"id": "manchester",
+			"name": "Manchester",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-2.248684667159885,
+				53.47531992472453
+			],
+			"bbox": [
+				-2.248684667159885,
+				53.47531992472453,
+				-2.248684667159885,
+				53.47531992472453
+			]
+		},
+		{
+			"id": "liverpool",
+			"name": "Liverpool",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-2.961934009816594,
+				53.405068298036525
+			],
+			"bbox": [
+				-2.961934009816594,
+				53.405068298036525,
+				-2.961934009816594,
+				53.405068298036525
+			]
+		},
+		{
+			"id": "sheffield",
+			"name": "Sheffield",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.4999966,
+				53.3666767
+			],
+			"bbox": [
+				-1.4999966,
+				53.3666767,
+				-1.4999966,
+				53.3666767
+			]
+		},
+		{
+			"id": "stoke-on-trent",
+			"name": "Stoke-on-Trent",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-2.1800068,
+				53.0003683
+			],
+			"bbox": [
+				-2.1800068,
+				53.0003683,
+				-2.1800068,
+				53.0003683
+			]
+		},
+		{
+			"id": "nottingham",
+			"name": "Nottingham",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.165706334543335,
+				52.941084202004
+			],
+			"bbox": [
+				-1.165706334543335,
+				52.941084202004,
+				-1.165706334543335,
+				52.941084202004
+			]
+		},
+		{
+			"id": "norwich",
+			"name": "Norwich",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				1.3000134,
+				52.630365
+			],
+			"bbox": [
+				1.3000134,
+				52.630365,
+				1.3000134,
+				52.630365
+			]
+		},
+		{
+			"id": "leicester",
+			"name": "Leicester",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.1332489,
+				52.6299774
+			],
+			"bbox": [
+				-1.1332489,
+				52.6299774,
+				-1.1332489,
+				52.6299774
+			]
+		},
+		{
+			"id": "peterborough",
+			"name": "Peterborough",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.248404030339169,
+				52.567187150649296
+			],
+			"bbox": [
+				-0.248404030339169,
+				52.567187150649296,
+				-0.248404030339169,
+				52.567187150649296
+			]
+		},
+		{
+			"id": "birmingham",
+			"name": "Birmingham",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.9219426,
+				52.4769198
+			],
+			"bbox": [
+				-1.9219426,
+				52.4769198,
+				-1.9219426,
+				52.4769198
+			]
+		},
+		{
+			"id": "coventry",
+			"name": "Coventry",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.502674527924457,
+				52.40074087605872
+			],
+			"bbox": [
+				-1.502674527924457,
+				52.40074087605872,
+				-1.502674527924457,
+				52.40074087605872
+			]
+		},
+		{
+			"id": "cambridge",
+			"name": "Cambridge",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				0.1166231,
+				52.2003913
+			],
+			"bbox": [
+				0.1166231,
+				52.2003913,
+				0.1166231,
+				52.2003913
+			]
+		},
+		{
+			"id": "ipswich",
+			"name": "Ipswich",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				1.1699955,
+				52.0703475
+			],
+			"bbox": [
+				1.1699955,
+				52.0703475,
+				1.1699955,
+				52.0703475
+			]
+		},
+		{
+			"id": "luton",
+			"name": "Luton",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.4200108,
+				51.8803591
+			],
+			"bbox": [
+				-0.4200108,
+				51.8803591,
+				-0.4200108,
+				51.8803591
+			]
+		},
+		{
+			"id": "oxford",
+			"name": "Oxford",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.248076337369831,
+				51.751827978066444
+			],
+			"bbox": [
+				-1.248076337369831,
+				51.751827978066444,
+				-1.248076337369831,
+				51.751827978066444
+			]
+		},
+		{
+			"id": "swansea",
+			"name": "Swansea",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-3.9500021,
+				51.6299868
+			],
+			"bbox": [
+				-3.9500021,
+				51.6299868,
+				-3.9500021,
+				51.6299868
+			]
+		},
+		{
+			"id": "southend-on-sea",
+			"name": "Southend-on-Sea",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				0.7199971,
+				51.5500175
+			],
+			"bbox": [
+				0.7199971,
+				51.5500175,
+				0.7199971,
+				51.5500175
+			]
+		},
+		{
+			"id": "london",
+			"name": "London",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.1186677,
+				51.5019406
+			],
+			"bbox": [
+				-0.1186677,
+				51.5019406,
+				-0.1186677,
+				51.5019406
+			]
+		},
+		{
+			"id": "cardiff",
+			"name": "Cardiff",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-3.167598195527729,
+				51.48261904913091
+			],
+			"bbox": [
+				-3.167598195527729,
+				51.48261904913091,
+				-3.167598195527729,
+				51.48261904913091
+			]
+		},
+		{
+			"id": "reading",
+			"name": "Reading",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.9800283,
+				51.4699707
+			],
+			"bbox": [
+				-0.9800283,
+				51.4699707,
+				-0.9800283,
+				51.4699707
+			]
+		},
+		{
+			"id": "bristol",
+			"name": "Bristol",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-2.5833155,
+				51.4499978
+			],
+			"bbox": [
+				-2.5833155,
+				51.4499978,
+				-2.5833155,
+				51.4499978
+			]
+		},
+		{
+			"id": "southampton",
+			"name": "Southampton",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.3999768,
+				50.9000314
+			],
+			"bbox": [
+				-1.3999768,
+				50.9000314,
+				-1.3999768,
+				50.9000314
+			]
+		},
+		{
+			"id": "brighton",
+			"name": "Brighton",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.1699744,
+				50.8303457
+			],
+			"bbox": [
+				-0.1699744,
+				50.8303457,
+				-0.1699744,
+				50.8303457
+			]
+		},
+		{
+			"id": "portsmouth",
+			"name": "Portsmouth",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.0800222,
+				50.8003475
+			],
+			"bbox": [
+				-1.0800222,
+				50.8003475,
+				-1.0800222,
+				50.8003475
+			]
+		},
+		{
+			"id": "bournemouth",
+			"name": "Bournemouth",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.9000497,
+				50.7299901
+			],
+			"bbox": [
+				-1.9000497,
+				50.7299901,
+				-1.9000497,
+				50.7299901
+			]
+		},
+		{
+			"id": "exeter",
+			"name": "Exeter",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-3.5299502,
+				50.7004053
+			],
+			"bbox": [
+				-3.5299502,
+				50.7004053,
+				-3.5299502,
+				50.7004053
+			]
+		},
+		{
+			"id": "plymouth",
+			"name": "Plymouth",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-4.1599893,
+				50.3853858
+			],
+			"bbox": [
+				-4.1599893,
+				50.3853858,
+				-4.1599893,
+				50.3853858
+			]
+		}
+	],
+	"tourOrder": [
+		"aberdeen",
+		"dundee",
+		"edinburgh",
+		"glasgow",
+		"newcastle-upon-tyne",
+		"sunderland",
+		"middlesbrough",
+		"york",
+		"blackpool",
+		"bradford",
+		"leeds",
+		"kingston-upon-hull",
+		"manchester",
+		"liverpool",
+		"sheffield",
+		"stoke-on-trent",
+		"nottingham",
+		"norwich",
+		"leicester",
+		"peterborough",
+		"birmingham",
+		"coventry",
+		"cambridge",
+		"ipswich",
+		"luton",
+		"oxford",
+		"swansea",
+		"southend-on-sea",
+		"london",
+		"cardiff",
+		"reading",
+		"bristol",
+		"southampton",
+		"brighton",
+		"portsmouth",
+		"bournemouth",
+		"exeter",
+		"plymouth"
+	]
+}

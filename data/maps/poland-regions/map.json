@@ -1,0 +1,299 @@
+{
+	"id": "poland-regions",
+	"name": "Poland — Regions",
+	"country": "Poland",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "pomorskie",
+			"name": "Pomorskie",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.271749999999997,
+				54.13605
+			],
+			"bbox": [
+				16.7852,
+				53.4338,
+				19.7583,
+				54.8383
+			]
+		},
+		{
+			"id": "warminsko-mazurskie",
+			"name": "Warmińsko-Mazurskie",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.9698,
+				53.7637
+			],
+			"bbox": [
+				19.1283,
+				53.0931,
+				22.8113,
+				54.4343
+			]
+		},
+		{
+			"id": "zachodniopomorskie",
+			"name": "Zachodniopomorskie",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.57315,
+				53.586600000000004
+			],
+			"bbox": [
+				14.1445,
+				52.5965,
+				17.0018,
+				54.5767
+			]
+		},
+		{
+			"id": "podlaskie",
+			"name": "Podlaskie",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				22.722749999999998,
+				53.33885
+			],
+			"bbox": [
+				21.523,
+				52.2851,
+				23.9225,
+				54.3926
+			]
+		},
+		{
+			"id": "kujawsko-pomorskie",
+			"name": "Kujawsko-Pomorskie",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.5227,
+				52.986999999999995
+			],
+			"bbox": [
+				17.2975,
+				52.2784,
+				19.7479,
+				53.6956
+			]
+		},
+		{
+			"id": "wielkopolskie",
+			"name": "Wielkopolskie",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.43565,
+				52.327
+			],
+			"bbox": [
+				15.8311,
+				51.0658,
+				19.0402,
+				53.5882
+			]
+		},
+		{
+			"id": "lubuskie",
+			"name": "Lubuskie",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.455449999999999,
+				52.2509
+			],
+			"bbox": [
+				14.5398,
+				51.3965,
+				16.3711,
+				53.1053
+			]
+		},
+		{
+			"id": "mazowieckie",
+			"name": "Mazowieckie",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				21.19145,
+				52.22835
+			],
+			"bbox": [
+				19.2959,
+				51.0132,
+				23.087,
+				53.4435
+			]
+		},
+		{
+			"id": "odzkie",
+			"name": "Łódzkie",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				19.356450000000002,
+				51.56925
+			],
+			"bbox": [
+				18.0548,
+				50.8043,
+				20.6581,
+				52.3342
+			]
+		},
+		{
+			"id": "lubelskie",
+			"name": "Lubelskie",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				22.950899999999997,
+				51.3047
+			],
+			"bbox": [
+				21.7716,
+				50.3171,
+				24.1302,
+				52.2923
+			]
+		},
+		{
+			"id": "dolnoslaskie",
+			"name": "Dolnośląskie",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.3326,
+				50.9324
+			],
+			"bbox": [
+				14.9506,
+				50.0949,
+				17.7146,
+				51.7699
+			]
+		},
+		{
+			"id": "swietokrzyskie",
+			"name": "Świętokrzyskie",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.797449999999998,
+				50.732150000000004
+			],
+			"bbox": [
+				19.7506,
+				50.1744,
+				21.8443,
+				51.2899
+			]
+		},
+		{
+			"id": "opolskie",
+			"name": "Opolskie",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.799799999999998,
+				50.561899999999994
+			],
+			"bbox": [
+				16.944,
+				49.9736,
+				18.6556,
+				51.1502
+			]
+		},
+		{
+			"id": "slaskie",
+			"name": "Śląskie",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.9877,
+				50.21315
+			],
+			"bbox": [
+				18.0191,
+				49.3892,
+				19.9563,
+				51.0371
+			]
+		},
+		{
+			"id": "podkarpackie",
+			"name": "Podkarpackie",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				22.43745,
+				49.93765
+			],
+			"bbox": [
+				21.2162,
+				49.0455,
+				23.6587,
+				50.8298
+			]
+		},
+		{
+			"id": "ma-opolskie",
+			"name": "Małopolskie",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.3134,
+				49.8338
+			],
+			"bbox": [
+				19.1124,
+				49.1831,
+				21.5144,
+				50.4845
+			]
+		}
+	],
+	"tourOrder": [
+		"pomorskie",
+		"warminsko-mazurskie",
+		"zachodniopomorskie",
+		"podlaskie",
+		"kujawsko-pomorskie",
+		"wielkopolskie",
+		"lubuskie",
+		"mazowieckie",
+		"odzkie",
+		"lubelskie",
+		"dolnoslaskie",
+		"swietokrzyskie",
+		"opolskie",
+		"slaskie",
+		"podkarpackie",
+		"ma-opolskie"
+	]
+}

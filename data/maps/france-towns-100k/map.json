@@ -1,0 +1,731 @@
+{
+	"id": "france-towns-100k",
+	"name": "France — Towns",
+	"country": "France",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "lille",
+			"name": "Lille",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				3.0780622,
+				50.651915
+			],
+			"bbox": [
+				3.0780622,
+				50.651915,
+				3.0780622,
+				50.651915
+			]
+		},
+		{
+			"id": "amiens",
+			"name": "Amiens",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				2.300004,
+				49.9003766
+			],
+			"bbox": [
+				2.300004,
+				49.9003766,
+				2.300004,
+				49.9003766
+			]
+		},
+		{
+			"id": "le-havre",
+			"name": "Le Havre",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				0.1049701,
+				49.5049744
+			],
+			"bbox": [
+				0.1049701,
+				49.5049744,
+				0.1049701,
+				49.5049744
+			]
+		},
+		{
+			"id": "rouen",
+			"name": "Rouen",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				1.0799751,
+				49.4304053
+			],
+			"bbox": [
+				1.0799751,
+				49.4304053,
+				1.0799751,
+				49.4304053
+			]
+		},
+		{
+			"id": "reims",
+			"name": "Reims",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.029976,
+				49.2503904
+			],
+			"bbox": [
+				4.029976,
+				49.2503904,
+				4.029976,
+				49.2503904
+			]
+		},
+		{
+			"id": "caen",
+			"name": "Caen",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.3499893,
+				49.1837537
+			],
+			"bbox": [
+				-0.3499893,
+				49.1837537,
+				-0.3499893,
+				49.1837537
+			]
+		},
+		{
+			"id": "metz",
+			"name": "Metz",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.1800256,
+				49.1203467
+			],
+			"bbox": [
+				6.1800256,
+				49.1203467,
+				6.1800256,
+				49.1203467
+			]
+		},
+		{
+			"id": "paris",
+			"name": "Paris",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				2.352992461539213,
+				48.85809231626911
+			],
+			"bbox": [
+				2.352992461539213,
+				48.85809231626911,
+				2.352992461539213,
+				48.85809231626911
+			]
+		},
+		{
+			"id": "nancy",
+			"name": "Nancy",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.2000244,
+				48.6836808
+			],
+			"bbox": [
+				6.2000244,
+				48.6836808,
+				6.2000244,
+				48.6836808
+			]
+		},
+		{
+			"id": "strasbourg",
+			"name": "Strasbourg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.7500073,
+				48.5799662
+			],
+			"bbox": [
+				7.7500073,
+				48.5799662,
+				7.7500073,
+				48.5799662
+			]
+		},
+		{
+			"id": "melun",
+			"name": "Melun",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				2.6666483,
+				48.5333024
+			],
+			"bbox": [
+				2.6666483,
+				48.5333024,
+				2.6666483,
+				48.5333024
+			]
+		},
+		{
+			"id": "brest",
+			"name": "Brest",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-4.4950076,
+				48.3904429
+			],
+			"bbox": [
+				-4.4950076,
+				48.3904429,
+				-4.4950076,
+				48.3904429
+			]
+		},
+		{
+			"id": "rennes",
+			"name": "Rennes",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.670012,
+				48.1000214
+			],
+			"bbox": [
+				-1.670012,
+				48.1000214,
+				-1.670012,
+				48.1000214
+			]
+		},
+		{
+			"id": "le-mans",
+			"name": "Le Mans",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				0.202581510662092,
+				48.00439087635541
+			],
+			"bbox": [
+				0.202581510662092,
+				48.00439087635541,
+				0.202581510662092,
+				48.00439087635541
+			]
+		},
+		{
+			"id": "orleans",
+			"name": "Orléans",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				1.9000284,
+				47.9004212
+			],
+			"bbox": [
+				1.9000284,
+				47.9004212,
+				1.9000284,
+				47.9004212
+			]
+		},
+		{
+			"id": "mulhouse",
+			"name": "Mulhouse",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.34998,
+				47.7504045
+			],
+			"bbox": [
+				7.34998,
+				47.7504045,
+				7.34998,
+				47.7504045
+			]
+		},
+		{
+			"id": "angers",
+			"name": "Angers",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.5300299,
+				47.4800075
+			],
+			"bbox": [
+				-0.5300299,
+				47.4800075,
+				-0.5300299,
+				47.4800075
+			]
+		},
+		{
+			"id": "tours",
+			"name": "Tours",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				0.6999467,
+				47.3803754
+			],
+			"bbox": [
+				0.6999467,
+				47.3803754,
+				0.6999467,
+				47.3803754
+			]
+		},
+		{
+			"id": "dijon",
+			"name": "Dijon",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.0300183,
+				47.3304043
+			],
+			"bbox": [
+				5.0300183,
+				47.3304043,
+				5.0300183,
+				47.3304043
+			]
+		},
+		{
+			"id": "besancon",
+			"name": "Besançon",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.0300089,
+				47.229997
+			],
+			"bbox": [
+				6.0300089,
+				47.229997,
+				6.0300089,
+				47.229997
+			]
+		},
+		{
+			"id": "nantes",
+			"name": "Nantes",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.5900169,
+				47.2103858
+			],
+			"bbox": [
+				-1.5900169,
+				47.2103858,
+				-1.5900169,
+				47.2103858
+			]
+		},
+		{
+			"id": "annecy",
+			"name": "Annecy",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.1166703,
+				45.8999748
+			],
+			"bbox": [
+				6.1166703,
+				45.8999748,
+				6.1166703,
+				45.8999748
+			]
+		},
+		{
+			"id": "limoges",
+			"name": "Limoges",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				1.2499906,
+				45.8299791
+			],
+			"bbox": [
+				1.2499906,
+				45.8299791,
+				1.2499906,
+				45.8299791
+			]
+		},
+		{
+			"id": "clermont-ferrand",
+			"name": "Clermont-Ferrand",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				3.0800081,
+				45.7799821
+			],
+			"bbox": [
+				3.0800081,
+				45.7799821,
+				3.0800081,
+				45.7799821
+			]
+		},
+		{
+			"id": "lyon",
+			"name": "Lyon",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.8280846,
+				45.7719544
+			],
+			"bbox": [
+				4.8280846,
+				45.7719544,
+				4.8280846,
+				45.7719544
+			]
+		},
+		{
+			"id": "saint-etienne",
+			"name": "Saint-Étienne",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.3800321,
+				45.4303911
+			],
+			"bbox": [
+				4.3800321,
+				45.4303911,
+				4.3800321,
+				45.4303911
+			]
+		},
+		{
+			"id": "grenoble",
+			"name": "Grenoble",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.720002,
+				45.1803805
+			],
+			"bbox": [
+				5.720002,
+				45.1803805,
+				5.720002,
+				45.1803805
+			]
+		},
+		{
+			"id": "bordeaux",
+			"name": "Bordeaux",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.5969589,
+				44.8519589
+			],
+			"bbox": [
+				-0.5969589,
+				44.8519589,
+				-0.5969589,
+				44.8519589
+			]
+		},
+		{
+			"id": "nimes",
+			"name": "Nîmes",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.3500081,
+				43.8303854
+			],
+			"bbox": [
+				4.3500081,
+				43.8303854,
+				4.3500081,
+				43.8303854
+			]
+		},
+		{
+			"id": "nice",
+			"name": "Nice",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.2630781,
+				43.7169636
+			],
+			"bbox": [
+				7.2630781,
+				43.7169636,
+				7.2630781,
+				43.7169636
+			]
+		},
+		{
+			"id": "toulouse",
+			"name": "Toulouse",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				1.4479809,
+				43.6219048
+			],
+			"bbox": [
+				1.4479809,
+				43.6219048,
+				1.4479809,
+				43.6219048
+			]
+		},
+		{
+			"id": "montpellier",
+			"name": "Montpellier",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				3.8699857,
+				43.6103988
+			],
+			"bbox": [
+				3.8699857,
+				43.6103988,
+				3.8699857,
+				43.6103988
+			]
+		},
+		{
+			"id": "aix-en-provence",
+			"name": "Aix-en-Provence",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.4499926,
+				43.5199909
+			],
+			"bbox": [
+				5.4499926,
+				43.5199909,
+				5.4499926,
+				43.5199909
+			]
+		},
+		{
+			"id": "biarritz",
+			"name": "Biarritz",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.5615949,
+				43.4732754
+			],
+			"bbox": [
+				-1.5615949,
+				43.4732754,
+				-1.5615949,
+				43.4732754
+			]
+		},
+		{
+			"id": "marseille",
+			"name": "Marseille",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.3730643,
+				43.2919249
+			],
+			"bbox": [
+				5.3730643,
+				43.2919249,
+				5.3730643,
+				43.2919249
+			]
+		},
+		{
+			"id": "toulon",
+			"name": "Toulon",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.9188216,
+				43.1341865
+			],
+			"bbox": [
+				5.9188216,
+				43.1341865,
+				5.9188216,
+				43.1341865
+			]
+		},
+		{
+			"id": "perpignan",
+			"name": "Perpignan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				2.8999674,
+				42.6999892
+			],
+			"bbox": [
+				2.8999674,
+				42.6999892,
+				2.8999674,
+				42.6999892
+			]
+		},
+		{
+			"id": "pointe-a-pitre",
+			"name": "Pointe-à-Pitre",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-61.5329989,
+				16.241475
+			],
+			"bbox": [
+				-61.5329989,
+				16.241475,
+				-61.5329989,
+				16.241475
+			]
+		},
+		{
+			"id": "fort-de-france",
+			"name": "Fort-de-France",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-61.0800291,
+				14.6104118
+			],
+			"bbox": [
+				-61.0800291,
+				14.6104118,
+				-61.0800291,
+				14.6104118
+			]
+		},
+		{
+			"id": "saint-denis",
+			"name": "Saint-Denis",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				55.4480778,
+				-20.8788948
+			],
+			"bbox": [
+				55.4480778,
+				-20.8788948,
+				55.4480778,
+				-20.8788948
+			]
+		}
+	],
+	"tourOrder": [
+		"lille",
+		"amiens",
+		"le-havre",
+		"rouen",
+		"reims",
+		"caen",
+		"metz",
+		"paris",
+		"nancy",
+		"strasbourg",
+		"melun",
+		"brest",
+		"rennes",
+		"le-mans",
+		"orleans",
+		"mulhouse",
+		"angers",
+		"tours",
+		"dijon",
+		"besancon",
+		"nantes",
+		"annecy",
+		"limoges",
+		"clermont-ferrand",
+		"lyon",
+		"saint-etienne",
+		"grenoble",
+		"bordeaux",
+		"nimes",
+		"nice",
+		"toulouse",
+		"montpellier",
+		"aix-en-provence",
+		"biarritz",
+		"marseille",
+		"toulon",
+		"perpignan",
+		"pointe-a-pitre",
+		"fort-de-france",
+		"saint-denis"
+	]
+}

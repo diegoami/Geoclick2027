@@ -1,0 +1,497 @@
+{
+	"id": "ukraine-regions",
+	"name": "Ukraine — Regions",
+	"country": "Ukraine",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "chernihiv",
+			"name": "Chernihiv",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				31.9809,
+				51.356049999999996
+			],
+			"bbox": [
+				30.5123,
+				50.3432,
+				33.4495,
+				52.3689
+			]
+		},
+		{
+			"id": "sumy",
+			"name": "Sumy",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.318349999999995,
+				51.2353
+			],
+			"bbox": [
+				32.9445,
+				50.1148,
+				35.6922,
+				52.3558
+			]
+		},
+		{
+			"id": "volyn",
+			"name": "Volyn",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				24.842100000000002,
+				51.1223
+			],
+			"bbox": [
+				23.5944,
+				50.2948,
+				26.0898,
+				51.9498
+			]
+		},
+		{
+			"id": "rivne",
+			"name": "Rivne",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				26.38435,
+				50.9708
+			],
+			"bbox": [
+				25.0635,
+				50.0131,
+				27.7052,
+				51.9285
+			]
+		},
+		{
+			"id": "zhytomyr",
+			"name": "Zhytomyr",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				28.462899999999998,
+				50.6191
+			],
+			"bbox": [
+				27.1923,
+				49.5862,
+				29.7335,
+				51.652
+			]
+		},
+		{
+			"id": "kyiv",
+			"name": "Kyiv",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				30.5317,
+				50.3412
+			],
+			"bbox": [
+				30.2174,
+				50.0142,
+				30.846,
+				50.6682
+			]
+		},
+		{
+			"id": "kyiv-oblast",
+			"name": "Kyiv Oblast",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				30.70485,
+				50.3281
+			],
+			"bbox": [
+				29.2705,
+				49.1706,
+				32.1392,
+				51.4856
+			]
+		},
+		{
+			"id": "lviv",
+			"name": "Lviv",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				24.0345,
+				49.68195
+			],
+			"bbox": [
+				22.6409,
+				48.7237,
+				25.4281,
+				50.6402
+			]
+		},
+		{
+			"id": "poltava",
+			"name": "Poltava",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				33.7723,
+				49.64615
+			],
+			"bbox": [
+				32.0695,
+				48.7463,
+				35.4751,
+				50.546
+			]
+		},
+		{
+			"id": "khmelnytskyi",
+			"name": "Khmelnytskyi",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				27.0187,
+				49.5197
+			],
+			"bbox": [
+				26.1484,
+				48.4574,
+				27.889,
+				50.582
+			]
+		},
+		{
+			"id": "kharkiv",
+			"name": "Kharkiv",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				36.453100000000006,
+				49.47815
+			],
+			"bbox": [
+				34.8415,
+				48.5314,
+				38.0647,
+				50.4249
+			]
+		},
+		{
+			"id": "ternopil",
+			"name": "Ternopil",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				25.5438,
+				49.3908
+			],
+			"bbox": [
+				24.7071,
+				48.5171,
+				26.3805,
+				50.2645
+			]
+		},
+		{
+			"id": "cherkasy",
+			"name": "Cherkasy",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				31.220950000000002,
+				49.346900000000005
+			],
+			"bbox": [
+				29.597,
+				48.4551,
+				32.8449,
+				50.2387
+			]
+		},
+		{
+			"id": "vinnytsya",
+			"name": "Vinnytsya",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				28.72325,
+				48.94095
+			],
+			"bbox": [
+				27.3704,
+				48.0005,
+				30.0761,
+				49.8814
+			]
+		},
+		{
+			"id": "luhansk",
+			"name": "Luhansk",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				39.0034,
+				48.936
+			],
+			"bbox": [
+				37.8473,
+				47.8115,
+				40.1595,
+				50.0605
+			]
+		},
+		{
+			"id": "ivano-frankivsk",
+			"name": "Ivano-Frankivsk",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				24.58455,
+				48.6193
+			],
+			"bbox": [
+				23.5329,
+				47.7139,
+				25.6362,
+				49.5247
+			]
+		},
+		{
+			"id": "kirovohrad",
+			"name": "Kirovohrad",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				31.82885,
+				48.50465
+			],
+			"bbox": [
+				29.7382,
+				47.7475,
+				33.9195,
+				49.2618
+			]
+		},
+		{
+			"id": "zakarpattia",
+			"name": "Zakarpattia",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				23.386049999999997,
+				48.4846
+			],
+			"bbox": [
+				22.1328,
+				47.897,
+				24.6393,
+				49.0722
+			]
+		},
+		{
+			"id": "dnipropetrovsk",
+			"name": "Dnipropetrovsk",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.9555,
+				48.32955
+			],
+			"bbox": [
+				32.9838,
+				47.4784,
+				36.9272,
+				49.1807
+			]
+		},
+		{
+			"id": "chernivtsi",
+			"name": "Chernivtsi",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				26.21635,
+				48.196
+			],
+			"bbox": [
+				24.9289,
+				47.7139,
+				27.5038,
+				48.6781
+			]
+		},
+		{
+			"id": "donetsk",
+			"name": "Donetsk",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				37.79495,
+				48.054199999999994
+			],
+			"bbox": [
+				36.5344,
+				46.8767,
+				39.0555,
+				49.2317
+			]
+		},
+		{
+			"id": "mykolayiv",
+			"name": "Mykolayiv",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				31.67545,
+				47.34665
+			],
+			"bbox": [
+				30.216,
+				46.4821,
+				33.1349,
+				48.2112
+			]
+		},
+		{
+			"id": "zaporizhzhya",
+			"name": "Zaporizhzhya",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				35.7123,
+				47.19265
+			],
+			"bbox": [
+				34.2037,
+				46.2551,
+				37.2209,
+				48.1302
+			]
+		},
+		{
+			"id": "odesa",
+			"name": "Odesa",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				29.74705,
+				46.717299999999994
+			],
+			"bbox": [
+				28.1995,
+				45.2136,
+				31.2946,
+				48.221
+			]
+		},
+		{
+			"id": "kherson",
+			"name": "Kherson",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				33.4607,
+				46.65245
+			],
+			"bbox": [
+				31.8163,
+				45.722,
+				35.1051,
+				47.5829
+			]
+		},
+		{
+			"id": "crimea",
+			"name": "Crimea",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.56,
+				45.28935
+			],
+			"bbox": [
+				32.4816,
+				44.383,
+				36.6384,
+				46.1957
+			]
+		},
+		{
+			"id": "sevastopol",
+			"name": "Sevastopol",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				33.61585,
+				44.62525
+			],
+			"bbox": [
+				33.3796,
+				44.398,
+				33.8521,
+				44.8525
+			]
+		}
+	],
+	"tourOrder": [
+		"chernihiv",
+		"sumy",
+		"volyn",
+		"rivne",
+		"zhytomyr",
+		"kyiv",
+		"kyiv-oblast",
+		"lviv",
+		"poltava",
+		"khmelnytskyi",
+		"kharkiv",
+		"ternopil",
+		"cherkasy",
+		"vinnytsya",
+		"luhansk",
+		"ivano-frankivsk",
+		"kirovohrad",
+		"zakarpattia",
+		"dnipropetrovsk",
+		"chernivtsi",
+		"donetsk",
+		"mykolayiv",
+		"zaporizhzhya",
+		"odesa",
+		"kherson",
+		"crimea",
+		"sevastopol"
+	]
+}

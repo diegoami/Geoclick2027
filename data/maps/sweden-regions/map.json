@@ -1,0 +1,389 @@
+{
+	"id": "sweden-regions",
+	"name": "Sweden — Regions",
+	"country": "Sweden",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "norrbotten",
+			"name": "Norrbotten",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				19.79485,
+				67.05205000000001
+			],
+			"bbox": [
+				15.4263,
+				65.0677,
+				24.1634,
+				69.0364
+			]
+		},
+		{
+			"id": "vasterbotten",
+			"name": "Västerbotten",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.96965,
+				64.9063
+			],
+			"bbox": [
+				14.3328,
+				63.4577,
+				21.6065,
+				66.3549
+			]
+		},
+		{
+			"id": "jamtland",
+			"name": "Jämtland",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.48075,
+				63.35325
+			],
+			"bbox": [
+				11.9924,
+				61.5915,
+				16.9691,
+				65.115
+			]
+		},
+		{
+			"id": "vasternorrland",
+			"name": "Västernorrland",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.0702,
+				63.08255
+			],
+			"bbox": [
+				14.8248,
+				62.1476,
+				19.3156,
+				64.0175
+			]
+		},
+		{
+			"id": "gavleborg",
+			"name": "Gävleborg",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.99005,
+				61.282799999999995
+			],
+			"bbox": [
+				14.4816,
+				60.2106,
+				17.4985,
+				62.355
+			]
+		},
+		{
+			"id": "dalarna",
+			"name": "Dalarna",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.43955,
+				61.0775
+			],
+			"bbox": [
+				12.1617,
+				59.8832,
+				16.7174,
+				62.2718
+			]
+		},
+		{
+			"id": "uppsala",
+			"name": "Uppsala",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.67565,
+				60.0166
+			],
+			"bbox": [
+				16.7968,
+				59.3853,
+				18.5545,
+				60.6479
+			]
+		},
+		{
+			"id": "varmland",
+			"name": "Värmland",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.0731,
+				59.8996
+			],
+			"bbox": [
+				11.6774,
+				58.7422,
+				14.4688,
+				61.057
+			]
+		},
+		{
+			"id": "vastmanland",
+			"name": "Västmanland",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.4202,
+				59.75790000000001
+			],
+			"bbox": [
+				15.4547,
+				59.2062,
+				17.3857,
+				60.3096
+			]
+		},
+		{
+			"id": "stockholm",
+			"name": "Stockholm",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.18525,
+				59.5292
+			],
+			"bbox": [
+				17.2853,
+				58.9101,
+				19.0852,
+				60.1483
+			]
+		},
+		{
+			"id": "orebro",
+			"name": "Örebro",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.058399999999999,
+				59.372
+			],
+			"bbox": [
+				14.3126,
+				58.6455,
+				15.8042,
+				60.0985
+			]
+		},
+		{
+			"id": "sodermanland",
+			"name": "Södermanland",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.6333,
+				59.07875
+			],
+			"bbox": [
+				15.6399,
+				58.6254,
+				17.6267,
+				59.5321
+			]
+		},
+		{
+			"id": "ostergotland",
+			"name": "Östergötland",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.64725,
+				58.360749999999996
+			],
+			"bbox": [
+				14.4286,
+				57.7116,
+				16.8659,
+				59.0099
+			]
+		},
+		{
+			"id": "vastra-gotaland",
+			"name": "Västra Götaland",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.95985,
+				58.20595
+			],
+			"bbox": [
+				11.1082,
+				57.157,
+				14.8115,
+				59.2549
+			]
+		},
+		{
+			"id": "jonkoping",
+			"name": "Jönköping",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.38985,
+				57.55875
+			],
+			"bbox": [
+				13.1166,
+				56.8931,
+				15.6631,
+				58.2244
+			]
+		},
+		{
+			"id": "gotland",
+			"name": "Gotland",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.5698,
+				57.408500000000004
+			],
+			"bbox": [
+				18.0994,
+				56.9152,
+				19.0402,
+				57.9018
+			]
+		},
+		{
+			"id": "kalmar",
+			"name": "Kalmar",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.24375,
+				57.177350000000004
+			],
+			"bbox": [
+				15.363,
+				56.2293,
+				17.1245,
+				58.1254
+			]
+		},
+		{
+			"id": "halland",
+			"name": "Halland",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.80325,
+				56.9796
+			],
+			"bbox": [
+				11.9128,
+				56.3428,
+				13.6937,
+				57.6164
+			]
+		},
+		{
+			"id": "kronoberg",
+			"name": "Kronoberg",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.5773,
+				56.80885
+			],
+			"bbox": [
+				13.3082,
+				56.3819,
+				15.8464,
+				57.2358
+			]
+		},
+		{
+			"id": "blekinge",
+			"name": "Blekinge",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.23985,
+				56.2564
+			],
+			"bbox": [
+				14.4135,
+				56.0111,
+				16.0662,
+				56.5017
+			]
+		},
+		{
+			"id": "skane",
+			"name": "Skåne",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.5458,
+				55.9433
+			],
+			"bbox": [
+				12.5046,
+				55.3454,
+				14.587,
+				56.5412
+			]
+		}
+	],
+	"tourOrder": [
+		"norrbotten",
+		"vasterbotten",
+		"jamtland",
+		"vasternorrland",
+		"gavleborg",
+		"dalarna",
+		"uppsala",
+		"varmland",
+		"vastmanland",
+		"stockholm",
+		"orebro",
+		"sodermanland",
+		"ostergotland",
+		"vastra-gotaland",
+		"jonkoping",
+		"gotland",
+		"kalmar",
+		"halland",
+		"kronoberg",
+		"blekinge",
+		"skane"
+	]
+}

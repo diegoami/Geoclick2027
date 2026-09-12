@@ -130,6 +130,26 @@ or amend an entry here as part of that change, not as an afterthought.
 
 ## Data & maps
 
+- **Ukraine's map includes Crimea and Sevastopol, merged in from outside
+  Natural Earth's own `admin='Ukraine'` filter.** The dataset tags both
+  under `admin='Russia'` instead, reflecting de facto control rather
+  than international recognition — most of the world, including the UN,
+  considers them Ukrainian territory under occupation. Put to the user
+  rather than decided unilaterally, since it's a genuine judgment call
+  outside "just fix bad source data": asked whether to ship what the
+  source provides (25 targets, documented omission) or merge the two
+  features in by hand. Chosen: merge them in, via a new `--extra-where`
+  option that runs an independent, country-unconstrained query — see
+  MAPS.md for the exact mechanism.
+- **"Great Britain" was asked for, not "United Kingdom" — taken
+  literally, not as loose synonyms.** Great Britain excludes Northern
+  Ireland by definition; the UK doesn't. Both the regions map (dissolved
+  from the UK's admin-1 districts, Northern Ireland's 26 dropped via a
+  new `--exclude-field=geonunit` option) and the towns map (Belfast
+  dropped via a new `--exclude` option on `build-points-map.ts`) honor
+  this literally rather than defaulting to the more common "UK" framing.
+  Noted in MAPS.md as a scope call the user can correct if "United
+  Kingdom" (including Northern Ireland) was actually meant.
 - **Public-domain data sources only (Natural Earth), on purpose.** A
   constraint carried through the whole project, not just an initial
   default — flagged again explicitly when scoping the self-serve
