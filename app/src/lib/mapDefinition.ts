@@ -1,6 +1,6 @@
 // Mirrors the map.json shape produced by data/scripts/build-map.ts.
 
-export type TargetType = 'region' | 'state';
+export type TargetType = 'region' | 'state' | 'province';
 
 export interface Target {
 	id: string;

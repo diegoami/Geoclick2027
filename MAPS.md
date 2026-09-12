@@ -58,17 +58,34 @@ Exact commands, so any of these can be regenerated identically:
   ```
   npx tsx data/scripts/build-map.ts --country="United States of America" --out=data/maps/usa-states --type=state --name="USA — States" --exclude=Alaska,Hawaii
   ```
+- **`italy-provinces`** (110 targets, provinces — no `--dissolve` flag,
+  unlike `italy-regions`):
+  ```
+  npx tsx data/scripts/build-map.ts --country="Italy" --out=data/maps/italy-provinces --type=province --name="Italy — Provinces"
+  ```
+  Needed a `'province'` `TargetType` added to `mapDefinition.ts` (a
+  three-way union already, low-risk — confirmed nothing else in `app/`
+  branches on `TargetType` at all, it's carried as metadata only) and a
+  full audit of all 110 raw province names, not just the two spot-checked
+  while planning this: found 3 non-Italian names (Aoste→Aosta,
+  Bozen→Bolzano, Turin→Torino) and 2 apparent source-data typos, not
+  translation issues (Crotene→Crotone, Oristrano→Oristano) — all five
+  added to `NAME_FIXUPS['Italy']` alongside the existing region-level
+  fixups (Apulia/Sicily). Confirmed the shared fixups table doesn't
+  cross-contaminate: regenerating `italy-regions` after this change
+  produced a byte-identical `map.json`/`tour.json`/`tiles.pmtiles`.
 
-All three were regenerated (not just built once and hand-edited) when
-the lakes layer was added, confirmed via `git diff` to produce
+The first three were regenerated (not just built once and hand-edited)
+when the lakes layer was added, confirmed via `git diff` to produce
 byte-identical `map.json`/`tour.json` — the pipeline is genuinely
 reproducible, not "ran once, then diverged from what the script would
-produce today."
+produce today." `italy-provinces` was built after that change, so it
+already includes lakes from its first build.
 
 ## Beyond Natural Earth's admin-1 data
 
-Everything above (and the two `italy-provinces`/towns plans below) stays
-within data Natural Earth already provides. That won't always be true:
+Everything above (and the two towns plans below) stays within data
+Natural Earth already provides. That won't always be true:
 Natural Earth's own finer-than-admin-1 coverage (admin-2 — counties,
 finer than a province) is thin and heavily US-centric, so a genuinely
 finer administrative level for most other countries would likely need a
@@ -78,36 +95,11 @@ first — this project has stuck to public-domain data on purpose (see
 Not needed for anything currently planned; flagged here so it isn't
 assumed to be a drop-in swap when it eventually comes up.
 
-## Planned: next three maps
+## Planned: next two maps
 
 Registered here before building, per the project's working convention —
-design first, implement after. None of this is built yet.
-
-### `italy-provinces`
-
-**No new data source needed.** Checked directly against the already-
-downloaded `ne_10m_admin_1_states_provinces` shapefile: Italy's raw
-admin-1 records *are* province-level (110 features, `type=Province`) —
-`italy-regions` only shows 20 because `--dissolve=region` merges them.
-Skip that flag and the provinces are already there:
-
-```
-npx tsx data/scripts/build-map.ts --country="Italy" --out=data/maps/italy-provinces --type=province --name="Italy — Provinces"
-```
-
-(`--type=province` doesn't exist as a `TargetType` yet — `mapDefinition.ts`
-currently has `'region' | 'state'`; needs a third value added, a small,
-low-risk change.)
-
-**Known snag to handle before shipping, not just spot-check:** some
-province names come through in non-Italian form the same way Apulia/
-Sicily did for regions — confirmed at least "Aoste" (should be "Aosta")
-and "Bozen" (should be "Bolzano") by querying the raw data directly. All
-110 need a real audit, not a guess based on the two found so far — the
-existing `NAME_FIXUPS` table pattern works but doesn't scale well to a
-much longer list; worth reconsidering as a data-driven per-country file
-instead (already flagged as a "remove the manual-curation dependency"
-candidate below, applies here too).
+design first, implement after. `italy-provinces` (previously planned
+here) has shipped — see "Maps currently shipping" above.
 
 ### `italy-towns-100k` and `germany-towns-100k`
 
@@ -246,8 +238,8 @@ to carry that redundancy forward into point maps.
   populated place regardless of exact size. Not worth much deliberation,
   just worth not leaving inconsistent.
 
-**Sequencing:** `italy-provinces` needs none of the above and could ship
-independently, soon. The two towns maps depend on this design actually
+**Sequencing:** `italy-provinces` needed none of the above and has
+already shipped. The two towns maps depend on this design actually
 being implemented (not just agreed on) first — `build-points-map.ts`,
 the `targets-circle` style layer, and the hit-testing/camera-framing
 changes above are real work, not a footnote to add while building the

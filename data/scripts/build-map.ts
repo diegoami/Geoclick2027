@@ -20,11 +20,23 @@ const SOURCE_SHP = path.join(
 const LAKES_SHP = path.join(REPO_ROOT, 'data/source/ne_10m_lakes/ne_10m_lakes.shp');
 const FIELDS = 'name,name_alt,name_local,iso_3166_2,type,type_en,admin,region';
 
-// Natural Earth sometimes gives an English name where the country's own
-// language is expected (e.g. Italy's regions). Fixed at the source so
-// map.json, the polygon layer, and the label layer all agree.
+// Natural Earth sometimes gives an English/French/German name where the
+// country's own language is expected (regions: Apulia/Sicily; provinces:
+// Aoste/Bozen/Turin), and sometimes just has a typo (Crotene/Oristrano
+// aren't real Italian province names) - both fixed here so map.json, the
+// polygon layer, and the label layer all agree. Audited against every one
+// of the 110 raw province records directly, not spot-checked, when the
+// italy-provinces map was added (see MAPS.md).
 const NAME_FIXUPS: Record<string, Record<string, string>> = {
-	Italy: { Apulia: 'Puglia', Sicily: 'Sicilia' }
+	Italy: {
+		Apulia: 'Puglia',
+		Sicily: 'Sicilia',
+		Aoste: 'Aosta',
+		Bozen: 'Bolzano',
+		Turin: 'Torino',
+		Crotene: 'Crotone',
+		Oristrano: 'Oristano'
+	}
 };
 
 function parseArgs(argv: string[]) {
