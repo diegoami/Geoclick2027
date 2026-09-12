@@ -196,6 +196,30 @@ change one schema, change the other.
 There's no `dev`-mode live-reload yet - re-run `npm run sync` and
 relaunch from Android Studio after any app change.
 
+## Building a new map, on Windows (added when France/Spain/GB/Poland/
+Ukraine/Sweden were added, 2026-09-12)
+
+`data/scripts/build-map.ts`/`build-points-map.ts` need `ogr2ogr`
+(GDAL), `tippecanoe`, and the `pmtiles` CLI - none of which have a
+Windows-native build (`tippecanoe` has no Windows build at all). On a
+Windows machine, run the map-build step from WSL2 with these installed
+the same way ONBOARDING originally set them up on Linux (`apt install
+gdal-bin tippecanoe`, the `pmtiles` CLI's Linux binary release into
+`~/.local/bin`) - see MAPS.md's "Environment note" for the full detail
+and why this session used a *separate* WSL-native clone rather than
+running WSL against the same checkout Windows uses.
+
+**Do not run `npm install` from WSL against the Windows checkout's
+`node_modules`.** Native binaries (esbuild, rolldown, better-sqlite3,
+...) are platform-specific, and npm's optional-dependency resolution
+will swap the Windows ones out for Linux ones - breaking the Windows
+app/dev-server toolchain (`Cannot find module
+'@rolldown/binding-win32-x64-msvc'`) until `npm install` is re-run from
+Windows to restore it. Keep a separate, Linux-native clone (or
+`node_modules`) for WSL-side work instead - copy or `--out` the
+resulting `data/maps/<id>/` directory into the Windows checkout once
+built.
+
 ## How work is expected to flow here
 
 This project is run with a PM/Developer split (see CLAUDE.md) — whoever's
@@ -280,6 +304,20 @@ that same discipline into any task you pick up:
   8+) - added `*.jar binary` to `.gitattributes` when that file was first
   committed, before it ever hit a Windows checkout, rather than waiting to
   reproduce the bug a second time.
+- **A fourth variant of the same class of bug: shell scripts checked out
+  with CRLF actually break when run**, not just look wrong. Found running
+  `data/scripts/fetch-natural-earth.sh` from WSL against this same
+  Windows checkout: `set -euo pipefail` failed with `pipefail: invalid
+  option name` because the trailing `\r` attached itself to the option
+  name. `mobile/android/gradlew` had the identical corruption (a POSIX
+  shell script despite no `.sh` extension), just not yet exercised by a
+  Linux/WSL-side Gradle invocation. Fixed the same way: `.gitattributes`
+  (`*.sh text eol=lf`, `gradlew text eol=lf`). Same renormalize gotcha as
+  the `.pmtiles` case, with one extra wrinkle found here: `git checkout
+  HEAD -- <path>` alone did **not** rewrite the already-corrupted working
+  copy (git's mtime/size shortcut skipped it as "unchanged") - deleting
+  the file first, then checking out, forced git to actually rematerialize
+  it under the new attribute.
 - **A map opening on Android with labels but no polygon fills/outlines/
   lakes looks identical to the Windows `.gitattributes` bug above, but on
   a real device it's a completely different cause** (Iteration 8+): the

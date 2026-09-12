@@ -1,0 +1,245 @@
+{
+	"id": "france-regions",
+	"name": "France — Regions",
+	"country": "France",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "hauts-de-france",
+			"name": "Hauts-de-France",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				2.8104999999999998,
+				49.9688
+			],
+			"bbox": [
+				1.3731,
+				48.8501,
+				4.2479,
+				51.0875
+			]
+		},
+		{
+			"id": "normandie",
+			"name": "Normandie",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.06510000000000005,
+				49.12585
+			],
+			"bbox": [
+				-1.8847,
+				48.186,
+				1.7545,
+				50.0657
+			]
+		},
+		{
+			"id": "grand-est",
+			"name": "Grand Est",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.7891,
+				48.78555
+			],
+			"bbox": [
+				3.3895,
+				47.4177,
+				8.1887,
+				50.1534
+			]
+		},
+		{
+			"id": "ile-de-france",
+			"name": "Île-de-France",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				2.4959,
+				48.676249999999996
+			],
+			"bbox": [
+				1.454,
+				48.1218,
+				3.5378,
+				49.2307
+			]
+		},
+		{
+			"id": "bretagne",
+			"name": "Bretagne",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-2.912,
+				48.16195
+			],
+			"bbox": [
+				-4.7834,
+				47.4526,
+				-1.0406,
+				48.8713
+			]
+		},
+		{
+			"id": "centre-val-de-loire",
+			"name": "Centre-Val de Loire",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				1.58955,
+				47.6452
+			],
+			"bbox": [
+				0.0668,
+				46.3509,
+				3.1123,
+				48.9395
+			]
+		},
+		{
+			"id": "pays-de-la-loire",
+			"name": "Pays de la Loire",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.8219000000000001,
+				47.414649999999995
+			],
+			"bbox": [
+				-2.5564,
+				46.2842,
+				0.9126,
+				48.5451
+			]
+		},
+		{
+			"id": "bourgogne-franche-comte",
+			"name": "Bourgogne-Franche-Comté",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.9918,
+				47.29175
+			],
+			"bbox": [
+				2.8349,
+				46.1718,
+				7.1487,
+				48.4117
+			]
+		},
+		{
+			"id": "auvergne-rhone-alpes",
+			"name": "Auvergne-Rhône-Alpes",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.6097,
+				45.45635
+			],
+			"bbox": [
+				2.0587,
+				44.1218,
+				7.1607,
+				46.7909
+			]
+		},
+		{
+			"id": "nouvelle-aquitaine",
+			"name": "Nouvelle-Aquitaine",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				0.3992,
+				44.96505
+			],
+			"bbox": [
+				-1.7969,
+				42.7735,
+				2.5953,
+				47.1566
+			]
+		},
+		{
+			"id": "provence-alpes-cote-d-azur",
+			"name": "Provence-Alpes-Côte-d'Azur",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.9489,
+				44.1015
+			],
+			"bbox": [
+				4.2059,
+				43.0782,
+				7.6919,
+				45.1248
+			]
+		},
+		{
+			"id": "occitanie",
+			"name": "Occitanie",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				2.27235,
+				43.68485
+			],
+			"bbox": [
+				-0.3051,
+				42.3406,
+				4.8498,
+				45.0291
+			]
+		},
+		{
+			"id": "corse",
+			"name": "Corse",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.0627,
+				42.229150000000004
+			],
+			"bbox": [
+				8.5658,
+				41.4409,
+				9.5596,
+				43.0174
+			]
+		}
+	],
+	"tourOrder": [
+		"hauts-de-france",
+		"normandie",
+		"grand-est",
+		"ile-de-france",
+		"bretagne",
+		"centre-val-de-loire",
+		"pays-de-la-loire",
+		"bourgogne-franche-comte",
+		"auvergne-rhone-alpes",
+		"nouvelle-aquitaine",
+		"provence-alpes-cote-d-azur",
+		"occitanie",
+		"corse"
+	]
+}

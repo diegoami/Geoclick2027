@@ -30,6 +30,20 @@ const SOURCE_SHP = path.join(
 	'data/source/ne_10m_populated_places/ne_10m_populated_places.shp'
 );
 
+// Same mechanism and reasoning as build-map.ts's NAME_FIXUPS: for the rare
+// row where even the chosen --name-field is wrong or dated, not a whole new
+// per-country table until there's more than one or two exceptions.
+const NAME_FIXUPS: Record<string, Record<string, string>> = {
+	// NAME_EN gives "Odessa" (dated) even though the same dataset's NAME_UK
+	// (Одеса) and every other Ukrainian city's NAME_EN already use the
+	// modern standard transliteration - matches the regions map's fixup.
+	Ukraine: { Odessa: 'Odesa' },
+	// NAME_ES gives "Orense", the historic Castilian exonym - Ourense has
+	// been this city's sole official name (Spanish and Galician alike)
+	// since 1998. The plain NAME field already has this one right.
+	Spain: { Orense: 'Ourense' }
+};
+
 function main() {
 	const args = parseArgs(process.argv.slice(2));
 	const country = args.country; // matches the dataset's ADM0NAME field
@@ -41,10 +55,14 @@ function main() {
 	// using a field the dataset already provides instead of a manual table.
 	const nameField = args['name-field'] ?? 'NAME';
 	const mapName = args.name ?? `${country} — Towns`;
+	// --exclude=Belfast drops named features by their NAME field - e.g. a
+	// "Great Britain" towns map excluding Northern Ireland (part of the UK,
+	// not Great Britain), same reasoning as build-map.ts's --exclude.
+	const exclude = args.exclude ? args.exclude.split(',').map((s) => s.trim()) : [];
 
 	if (!country || !outDir) {
 		console.error(
-			'Usage: build-points-map.ts --country="Italy" --out=data/maps/italy-towns-100k [--name-field=NAME_IT] [--min-population=100000] [--name="Italy — Towns"]'
+			'Usage: build-points-map.ts --country="Italy" --out=data/maps/italy-towns-100k [--name-field=NAME_IT] [--min-population=100000] [--name="Italy — Towns"] [--exclude=Belfast]'
 		);
 		process.exit(1);
 	}
@@ -79,11 +97,14 @@ function main() {
 	// Stuttgart/Mannheim, well past their real city population) - but it
 	// never wrongly *excludes* a real major city, which is the safer
 	// failure mode for a threshold filter. Disclosed in MAPS.md.
+	const whereClause =
+		`ADM0NAME='${country}' AND POP_MAX > ${minPopulation}` +
+		(exclude.length ? ` AND NAME NOT IN (${exclude.map((n) => `'${n}'`).join(',')})` : '');
 	execFileSync('ogr2ogr', [
 		'-f',
 		'GeoJSON',
 		'-where',
-		`ADM0NAME='${country}' AND POP_MAX > ${minPopulation}`,
+		whereClause,
 		'-select',
 		`${nameField},NAME,POP_MAX`,
 		filteredPath,
@@ -92,9 +113,11 @@ function main() {
 
 	console.log('[2/5] Deriving draft map.json...');
 	const geojson = JSON.parse(readFileSync(filteredPath, 'utf-8'));
+	const fixups = NAME_FIXUPS[country] ?? {};
 	const targets = geojson.features.map((feature: any) => {
 		const p = feature.properties;
-		const name: string = p[nameField] || p.NAME;
+		const rawName: string = p[nameField] || p.NAME;
+		const name: string = fixups[rawName] ?? rawName;
 		const centroid = feature.geometry.coordinates as [number, number];
 		return {
 			id: slugify(name),

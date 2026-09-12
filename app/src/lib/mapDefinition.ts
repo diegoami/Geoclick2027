@@ -1,6 +1,8 @@
 // Mirrors the map.json shape produced by data/scripts/build-map.ts.
 
-export type TargetType = 'region' | 'state' | 'province' | 'city';
+// 'county' added for Sweden's län - carried as metadata only, like every
+// other value here (confirmed nothing in app/ branches on TargetType).
+export type TargetType = 'region' | 'state' | 'province' | 'city' | 'county';
 
 export interface Target {
 	id: string;

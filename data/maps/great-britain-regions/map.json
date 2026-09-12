@@ -1,0 +1,281 @@
+{
+	"id": "great-britain-regions",
+	"name": "Great Britain — Regions",
+	"country": "United Kingdom",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "highlands-and-islands",
+			"name": "Highlands and Islands",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-4.1583000000000006,
+				58.06945
+			],
+			"bbox": [
+				-7.5448,
+				55.3013,
+				-0.7718,
+				60.8376
+			]
+		},
+		{
+			"id": "north-eastern",
+			"name": "North Eastern",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-2.77785,
+				57.2227
+			],
+			"bbox": [
+				-3.7964,
+				56.7404,
+				-1.7593,
+				57.705
+			]
+		},
+		{
+			"id": "eastern",
+			"name": "Eastern",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-3.428,
+				56.04795
+			],
+			"bbox": [
+				-4.8331,
+				55.1113,
+				-2.0229,
+				56.9846
+			]
+		},
+		{
+			"id": "south-western",
+			"name": "South Western",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-4.0129,
+				55.37995
+			],
+			"bbox": [
+				-5.1755,
+				54.6821,
+				-2.8503,
+				56.0778
+			]
+		},
+		{
+			"id": "north-east",
+			"name": "North East",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.7319,
+				55.12995
+			],
+			"bbox": [
+				-2.685,
+				54.4544,
+				-0.7788,
+				55.8055
+			]
+		},
+		{
+			"id": "north-west",
+			"name": "North West",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-2.7657,
+				54.069
+			],
+			"bbox": [
+				-3.6342,
+				52.9472,
+				-1.8972,
+				55.1908
+			]
+		},
+		{
+			"id": "yorkshire-and-the-humber",
+			"name": "Yorkshire and the Humber",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.20705,
+				53.923550000000006
+			],
+			"bbox": [
+				-2.5476,
+				53.2897,
+				0.1335,
+				54.5574
+			]
+		},
+		{
+			"id": "east-midlands",
+			"name": "East Midlands",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.8301,
+				52.793
+			],
+			"bbox": [
+				-2.0168,
+				51.9797,
+				0.3566,
+				53.6063
+			]
+		},
+		{
+			"id": "west-midlands",
+			"name": "West Midlands",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-2.19295,
+				52.51434999999999
+			],
+			"bbox": [
+				-3.1993,
+				51.8214,
+				-1.1866,
+				53.2073
+			]
+		},
+		{
+			"id": "east-wales",
+			"name": "East Wales",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-4.1251,
+				52.42355
+			],
+			"bbox": [
+				-5.2889,
+				51.4204,
+				-2.9613,
+				53.4267
+			]
+		},
+		{
+			"id": "west-wales-and-the-valleys",
+			"name": "West Wales and the Valleys",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-3.2880000000000003,
+				52.367999999999995
+			],
+			"bbox": [
+				-3.9275,
+				51.3842,
+				-2.6485,
+				53.3518
+			]
+		},
+		{
+			"id": "east",
+			"name": "East",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				0.54155,
+				52.213750000000005
+			],
+			"bbox": [
+				-0.6881,
+				51.4531,
+				1.7712,
+				52.9744
+			]
+		},
+		{
+			"id": "greater-london",
+			"name": "Greater London",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.08864999999999998,
+				51.483149999999995
+			],
+			"bbox": [
+				-0.4972,
+				51.2891,
+				0.3199,
+				51.6772
+			]
+		},
+		{
+			"id": "south-east",
+			"name": "South East",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.26315,
+				51.39085
+			],
+			"bbox": [
+				-1.9501,
+				50.5892,
+				1.4238,
+				52.1925
+			]
+		},
+		{
+			"id": "south-west",
+			"name": "South West",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-3.59605,
+				51.03625
+			],
+			"bbox": [
+				-5.7051,
+				49.9667,
+				-1.487,
+				52.1058
+			]
+		}
+	],
+	"tourOrder": [
+		"highlands-and-islands",
+		"north-eastern",
+		"eastern",
+		"south-western",
+		"north-east",
+		"north-west",
+		"yorkshire-and-the-humber",
+		"east-midlands",
+		"west-midlands",
+		"east-wales",
+		"west-wales-and-the-valleys",
+		"east",
+		"greater-london",
+		"south-east",
+		"south-west"
+	]
+}

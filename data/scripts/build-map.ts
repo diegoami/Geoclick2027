@@ -22,7 +22,7 @@ const SOURCE_SHP = path.join(
 	REPO_ROOT,
 	'data/source/ne_10m_admin_1_states_provinces/ne_10m_admin_1_states_provinces.shp'
 );
-const FIELDS = 'name,name_alt,name_local,iso_3166_2,type,type_en,admin,region';
+const BASE_FIELDS = ['name', 'name_alt', 'name_local', 'iso_3166_2', 'type', 'type_en', 'admin', 'region', 'geonunit'];
 
 // Natural Earth sometimes gives an English/French/German name where the
 // country's own language is expected (regions: Apulia/Sicily; provinces:
@@ -40,6 +40,69 @@ const NAME_FIXUPS: Record<string, Record<string, string>> = {
 		Turin: 'Torino',
 		Crotene: 'Crotone',
 		Oristrano: 'Oristano'
+	},
+	// Spain's post-dissolve `region` values are mostly clean Spanish already
+	// (Cataluña, Andalucía, ...) except two names missing the noun their
+	// adjective describes (Canary Is./Ceuta/Melilla are excluded outright,
+	// not fixed up - see --exclude in MAPS.md).
+	Spain: {
+		'Foral de Navarra': 'Navarra',
+		// Kept as the full "Comunidad Valenciana", not just "Valencia" -
+		// unlike Navarra (a single-province region, no ambiguity), the
+		// Valencian Community contains a same-named Valencia *province*, so
+		// dropping the qualifier would collide with a possible future
+		// finer-level map the way it wouldn't for Navarra.
+		Valenciana: 'Comunidad Valenciana'
+	},
+	// Poland's plain `name` field is English-translated ("Silesian", "Lesser
+	// Poland" - see --name-field=name_pl below), and `name_pl` itself is the
+	// full official form ("województwo śląskie"). Trimmed to the adjective
+	// alone, capitalized - how voivodeships are actually referred to in
+	// Polish outside formal/legal text (same convention Italy's regions
+	// already use: "Toscana", not "Regione Toscana").
+	Poland: {
+		'województwo śląskie': 'Śląskie',
+		'województwo małopolskie': 'Małopolskie',
+		'województwo podkarpackie': 'Podkarpackie',
+		'województwo dolnośląskie': 'Dolnośląskie',
+		'województwo opolskie': 'Opolskie',
+		'województwo podlaskie': 'Podlaskie',
+		'województwo warmińsko-mazurskie': 'Warmińsko-Mazurskie',
+		'województwo lubuskie': 'Lubuskie',
+		'województwo zachodniopomorskie': 'Zachodniopomorskie',
+		'województwo lubelskie': 'Lubelskie',
+		'województwo pomorskie': 'Pomorskie',
+		'województwo mazowieckie': 'Mazowieckie',
+		'województwo łódzkie': 'Łódzkie',
+		'województwo kujawsko-pomorskie': 'Kujawsko-Pomorskie',
+		'województwo wielkopolskie': 'Wielkopolskie',
+		'województwo świętokrzyskie': 'Świętokrzyskie'
+	},
+	// Ukraine's plain `name` field mixes real transliterations with dated or
+	// English-descriptive forms - fixed to the modern standard Ukrainian-
+	// derived transliteration (the same "KyivNotKiev" convention interna-
+	// tional style guides adopted after 2018/19), and the soft-sign
+	// apostrophes (Donets'k, L'viv, ...) dropped for the common English
+	// spelling. Crimea/Sevastopol (merged in via --extra-where, see above)
+	// need no fixup - their plain names are already correct.
+	Ukraine: {
+		Kiev: 'Kyiv Oblast',
+		'Kiev City': 'Kyiv',
+		"L'viv": 'Lviv',
+		"Luhans'k": 'Luhansk',
+		"Donets'k": 'Donetsk',
+		"Khmel'nyts'kyy": 'Khmelnytskyi',
+		"Ternopil'": 'Ternopil',
+		"Dnipropetrovs'k": 'Dnipropetrovsk',
+		"Ivano-Frankivs'k": 'Ivano-Frankivsk',
+		Odessa: 'Odesa',
+		Transcarpathia: 'Zakarpattia'
+	},
+	// Sweden's `name` field is already correct Swedish (Norrbotten,
+	// Västerbotten, ...) except one row missing its diacritic entirely -
+	// confirmed against `name_sv` ("Örebro län"), not guessed.
+	Sweden: {
+		Orebro: 'Örebro'
 	}
 };
 
@@ -101,14 +164,30 @@ function main() {
 	// --exclude=Alaska,Hawaii drops named features by their `name` field
 	// (pre-dissolve) — e.g. USA's far-flung Alaska/Hawaii, which are more
 	// trouble (antimeridian wraparound, huge dead map space) than they're
-	// worth for a demo map.
+	// worth for a demo map. --exclude-field picks a different field to match
+	// against (e.g. `geonunit`, to drop every Northern Ireland district by
+	// country-within-the-UK rather than needing each district's own name).
 	const exclude = args.exclude
 		? args.exclude.split(',').map((s) => s.trim())
 		: [];
+	const excludeField = args['exclude-field'] ?? 'name';
+	// Which field holds the display name (default the plain `name` field,
+	// correct as-is for every map built so far). Poland's `name` field is
+	// English-translated ("Silesian", "Lesser Poland") - `name_pl` gives the
+	// correct Polish, same reasoning as build-points-map.ts's --name-field.
+	const nameField = args['name-field'] ?? 'name';
+	// An independent extra ogr2ogr filter (no country constraint), merged in
+	// alongside the main country filter before dissolve - for features a
+	// plain `admin='<country>'` filter can't reach. Added for Ukraine:
+	// Natural Earth tags Crimea/Sevastopol under admin='Russia' (reflecting
+	// de facto control, not international recognition - most of the world,
+	// including the UN, considers them Ukrainian territory under occupation)
+	// so they'd otherwise be silently missing from the map. See MAPS.md.
+	const extraWhere = args['extra-where'];
 
 	if (!country || !outDir) {
 		console.error(
-			'Usage: build-map.ts --country="Italy" --out=data/maps/italy-regions [--type=region|state] [--name="Italy — Regions"] [--dissolve=region] [--exclude=Alaska,Hawaii]'
+			'Usage: build-map.ts --country="Italy" --out=data/maps/italy-regions [--type=region|state] [--name="Italy — Regions"] [--dissolve=region] [--exclude=Alaska,Hawaii] [--exclude-field=name] [--name-field=name] [--extra-where="name IN (\'Crimea\')"]'
 		);
 		process.exit(1);
 	}
@@ -131,20 +210,46 @@ function main() {
 	const mapJsonPath = path.join(absOutDir, 'map.json');
 	const tourJsonPath = path.join(absOutDir, 'tour.json');
 
+	// Select every base field plus whichever extra ones this run actually
+	// needs (name-field/exclude-field default to 'name', already included).
+	const fields = Array.from(new Set([...BASE_FIELDS, nameField, excludeField]));
+
 	console.log(`[1/6] Filtering "${country}" from Natural Earth admin-1 dataset...`);
 	const whereClause =
 		`admin='${country}'` +
-		(exclude.length ? ` AND name NOT IN (${exclude.map((n) => `'${n}'`).join(',')})` : '');
+		(exclude.length
+			? ` AND ${excludeField} NOT IN (${exclude.map((n) => `'${n}'`).join(',')})`
+			: '');
 	execFileSync('ogr2ogr', [
 		'-f',
 		'GeoJSON',
 		'-where',
 		whereClause,
 		'-select',
-		FIELDS,
+		fields.join(','),
 		filteredPath,
 		SOURCE_SHP
 	]);
+
+	if (extraWhere) {
+		console.log(`[1b/6] Merging in extra features ("${extraWhere}")...`);
+		const extraPath = path.join(absOutDir, '.tmp-extra.geojson');
+		execFileSync('ogr2ogr', [
+			'-f',
+			'GeoJSON',
+			'-where',
+			extraWhere,
+			'-select',
+			fields.join(','),
+			extraPath,
+			SOURCE_SHP
+		]);
+		const primaryFC = JSON.parse(readFileSync(filteredPath, 'utf-8'));
+		const extraFC = JSON.parse(readFileSync(extraPath, 'utf-8'));
+		primaryFC.features.push(...extraFC.features);
+		writeFileSync(filteredPath, JSON.stringify(primaryFC));
+		rmSync(extraPath);
+	}
 
 	const mapshaperArgs = [filteredPath];
 	if (dissolveField) {
@@ -169,6 +274,12 @@ function main() {
 	const geojson = JSON.parse(readFileSync(simplifiedPath, 'utf-8'));
 	const fixups = NAME_FIXUPS[country] ?? {};
 	for (const feature of geojson.features) {
+		// --name-field only matters pre-dissolve: dissolving already renames
+		// the grouping field to `name` (see mapshaperArgs above), so by this
+		// point `name` is already correct for a dissolved map.
+		if (nameField !== 'name' && !dissolveField) {
+			feature.properties.name = feature.properties[nameField] || feature.properties.name;
+		}
 		const fixed = fixups[feature.properties.name];
 		if (fixed) feature.properties.name = fixed;
 	}

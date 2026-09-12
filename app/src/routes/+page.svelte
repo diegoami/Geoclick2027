@@ -14,7 +14,19 @@
 		{ id: 'italy-towns-100k', name: 'Italy — Towns' },
 		{ id: 'germany-states', name: 'Germany — States' },
 		{ id: 'germany-towns-100k', name: 'Germany — Towns' },
-		{ id: 'usa-states', name: 'USA — States' }
+		{ id: 'usa-states', name: 'USA — States' },
+		{ id: 'france-regions', name: 'France — Regions' },
+		{ id: 'france-towns-100k', name: 'France — Towns' },
+		{ id: 'spain-regions', name: 'Spain — Regions' },
+		{ id: 'spain-towns-100k', name: 'Spain — Towns' },
+		{ id: 'great-britain-regions', name: 'Great Britain — Regions' },
+		{ id: 'great-britain-towns-100k', name: 'Great Britain — Towns' },
+		{ id: 'poland-regions', name: 'Poland — Regions' },
+		{ id: 'poland-towns-100k', name: 'Poland — Towns' },
+		{ id: 'ukraine-regions', name: 'Ukraine — Regions' },
+		{ id: 'ukraine-towns-100k', name: 'Ukraine — Towns' },
+		{ id: 'sweden-regions', name: 'Sweden — Regions' },
+		{ id: 'sweden-towns-100k', name: 'Sweden — Towns' }
 	];
 
 	// Last-session summaries and due state live in localStorage (Iteration
