@@ -327,7 +327,19 @@ or amend an entry here as part of that change, not as an afterthought.
   The problem wasn't that 30vh was too small for every map — it's exactly
   right for a 20-target map like `italy-regions` and cramped for a
   110-target one like `italy-provinces`. A single new fixed height can't
-  be right for both; a user-adjustable one (15-70vh, drag or arrow keys,
+  be right for both; a user-adjustable one (drag or arrow keys,
   `role="slider"`) can. Not persisted across sessions — in-scope was
   giving the user control in the moment, not remembering a preference;
   that's a small, separate addition if it turns out to matter.
+  **Follow-up, found by the user actually trying to shrink it:** the
+  handle couldn't make the tray small - a classic flexbox gotcha, not a
+  logic bug. `.tray-slips` (the wrapping slip container) is a `flex: 1`
+  child; flex items default to `min-height: auto`, which for a wrapping
+  container resolves to "tall enough to fit every row" - that silently
+  overrode the smaller height the handle was setting on its parent, no
+  matter how far you dragged. Fixed with an explicit `min-height: 0` on
+  `.tray-slips` (lets it actually defer to its own `overflow-y: auto`)
+  plus `overflow: hidden` on `.tray` itself as a belt-and-braces backstop.
+  Also lowered the default (30vh → 22vh) and minimum (15vh → 9vh) now
+  that shrinking actually works - the old bounds were partly compensating
+  for the bug by never asking for a height small enough to expose it.

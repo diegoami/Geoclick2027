@@ -48,8 +48,8 @@
 	// Tray height, in vh - user-resizable via the drag handle (onTrayHandle*
 	// below). Not persisted across sessions; resets to the default each time
 	// the view mounts, same as every other view's transient UI state.
-	let trayHeight = $state(30);
-	const TRAY_MIN_VH = 15;
+	let trayHeight = $state(22);
+	const TRAY_MIN_VH = 9;
 	const TRAY_MAX_VH = 70;
 	// Not reactive - just bookkeeping for the drag gesture itself, same
 	// reasoning as hoveredName below.
@@ -642,6 +642,7 @@
 		display: flex;
 		flex-direction: column;
 		box-sizing: border-box;
+		overflow: hidden;
 		background: rgba(255, 255, 255, 0.92);
 		border-top: 1px solid rgba(0, 0, 0, 0.1);
 	}
@@ -664,6 +665,13 @@
 	}
 	.tray-slips {
 		flex: 1;
+		/* Flex items default to min-height: auto, which for a wrapping flex
+		   container resolves to the height needed to fit every row - that
+		   silently overrides the explicit, smaller height the resize handle
+		   sets on the tray, so shrinking below "fits everything" did
+		   nothing. min-height: 0 is what actually lets it shrink and defer
+		   to overflow-y: auto instead. */
+		min-height: 0;
 		display: flex;
 		flex-wrap: wrap;
 		align-content: flex-start;
