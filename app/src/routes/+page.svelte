@@ -193,7 +193,9 @@
 									<span class="last-result">
 										{t('home.lastResult', { perfect: summary.perfect, total: summary.total })}
 										{#if summary.totalErrors > 0}
-											{tPlural('home.mistakeCount', summary.totalErrors, { count: summary.totalErrors })}
+											{tPlural('home.mistakeCount', summary.totalErrors, {
+												count: summary.totalErrors
+											})}
 										{/if}
 									</span>
 								{/if}
