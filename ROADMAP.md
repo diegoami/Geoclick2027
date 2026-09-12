@@ -1371,11 +1371,17 @@ loop actually feels good. Candidates below, in rough priority order.
       not guessed) before writing any implementation code — see the
       published canvas linked from this session, and DECISIONS.md's "GUI/UX
       round 1" entries for the reasoning behind each choice below.
-      - [x] **Map landing page nav**: replaced the small "← Maps / [name] /
-        links" text overlay with 4 big equal buttons (Maps / Overview /
-        Quiz / Tour), icon + label, stacked on phone width and side-by-side
-        past 640px via one CSS media query. Map name demoted to a small
-        muted tag below the buttons — you already know which map you're on.
+      - [x] **Top nav, on every map-scoped view**: replaced the small
+        "← Maps / [name] / links" text overlay with 4 big equal buttons
+        (Maps / Overview / Quiz / Tour), icon + label, stacked on phone
+        width and side-by-side past 640px via one CSS media query. Map name
+        demoted to a small muted tag below the buttons — you already know
+        which map you're on. Originally landing-page-only; extended to
+        Overview/Quiz/Tour too (same shared `MapNav.svelte` component, not
+        copy-pasted) after the user asked for consistent tabs everywhere —
+        each view now highlights its own tab as the active one, so you can
+        jump directly between modes without going back to the landing page
+        first.
       - [x] **Map fill colors**: `data/styles/base.json`'s flat single-green
         fill replaced with an 8-color muted categorical palette, picked per
         feature via `["%", ["length", ["get","name"]], 8]` — a hash on the

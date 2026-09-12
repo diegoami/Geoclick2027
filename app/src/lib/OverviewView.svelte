@@ -2,8 +2,8 @@
 	import { onMount, onDestroy } from 'svelte';
 	import * as maplibregl from 'maplibre-gl';
 	import 'maplibre-gl/dist/maplibre-gl.css';
-	import { resolve } from '$app/paths';
 	import { fetchMapDefAndStyle, createMap } from './geoclickMap';
+	import MapNav from './MapNav.svelte';
 	import type { MapDefinition } from './mapDefinition';
 
 	let { mapId }: { mapId: string } = $props();
@@ -68,10 +68,7 @@
 	{#if error}
 		<p class="error">{error}</p>
 	{:else}
-		<div class="info">
-			<a class="back" href={mapId ? resolve('/map/[mapId]', { mapId }) : resolve('/')}>← Map</a>
-			<strong>{mapDef ? mapDef.name : 'Loading…'} — Overview</strong>
-		</div>
+		<MapNav {mapId} mapName={mapDef?.name} active="overview" />
 	{/if}
 	<div class="container" bind:this={container}></div>
 </div>
@@ -85,30 +82,6 @@
 	.container {
 		width: 100%;
 		height: 100%;
-	}
-	.info {
-		position: absolute;
-		top: 0.75rem;
-		left: 0.75rem;
-		z-index: 1;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		gap: 0.35rem;
-		background: rgba(255, 255, 255, 0.9);
-		padding: 0.5rem 0.75rem;
-		border-radius: 0.5rem;
-		font-family: system-ui, sans-serif;
-		font-size: 0.9rem;
-	}
-	.back {
-		font-size: 0.8rem;
-		text-decoration: none;
-		color: inherit;
-		opacity: 0.7;
-	}
-	.back:hover {
-		opacity: 1;
 	}
 	.error {
 		padding: 1rem;

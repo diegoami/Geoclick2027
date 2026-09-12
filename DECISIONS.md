@@ -310,6 +310,19 @@ or amend an entry here as part of that change, not as an afterthought.
   that shows a region's name, on click, during tour, or when solved")
   treated them as one thing, and after the redesign there was no good
   reason left to keep two.
+- **The top nav bar is one shared `MapNav.svelte` component, not four
+  copies.** Extracted after the first round shipped: the user asked for
+  "the same or similar tabs" on the Overview/Quiz/Tour views too, at which
+  point four near-identical copies of the same markup/CSS would have been
+  clearly wrong, unlike the Tauri/Capacitor SQLite-schema case (there,
+  duplication was chosen because there's no shared runtime to put a
+  common definition in — here, all four call sites are Svelte components
+  in the same app, exactly what a shared component is for. Added an
+  `active` prop so each view highlights its own tab (solid accent
+  background) rather than showing four generic buttons with no sense of
+  "you are here", and a `subtitle` snippet so QuizView's progress count
+  stacks naturally under the nav instead of a second hand-positioned
+  overlay guessing where the first one ends.
 - **Quiz tray height is a resize handle, not a bigger fixed default.**
   The problem wasn't that 30vh was too small for every map — it's exactly
   right for a 20-target map like `italy-regions` and cramped for a
