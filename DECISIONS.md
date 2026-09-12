@@ -398,3 +398,33 @@ or amend an entry here as part of that change, not as an afterthought.
   Also lowered the default (30vh → 22vh) and minimum (15vh → 9vh) now
   that shrinking actually works - the old bounds were partly compensating
   for the bug by never asking for a height small enough to expose it.
+
+## Home page map list (2026-09-12)
+
+- **Grouped by country, not just a flat alphabetical list.** The user's
+  own framing ("organize it better, at least alphabetically") set
+  alphabetical as the floor, not the ceiling. With 28 maps across 14
+  countries and every country already shipping its maps as a natural
+  regions/towns pair (a trio for Italy, which also has a provinces map),
+  a flat 28-row alphabetical list would still read as a wall of similar
+  entries ("France — Regions", "France — Towns" sorted apart from each
+  other alphabetically by their full name isn't even guaranteed). A
+  heading per country groups the pair visually and lets the link text
+  drop the now-redundant country prefix (just "Regions"/"Towns" under an
+  "France" heading, not "France — Regions"). Countries are ordered
+  alphabetically by name, and each country's own maps alphabetically by
+  label - both levels meet the stated minimum, the grouping is the part
+  beyond it.
+- **A 2-column CSS grid above the existing 640px breakpoint, one column
+  below it.** Reuses the breakpoint `MapNav.svelte` already established
+  rather than inventing a new one. With 14 country groups, a single
+  column at desktop width would push later countries far down the page
+  for no reason - two columns is a small CSS change (`display: grid`
+  behind the media query, `display: flex; flex-direction: column` below
+  it), not a new dependency or a bigger redesign.
+- **No search/filter UI.** Considered and rejected as disproportionate to
+  the actual complaint: grouping plus alphabetical order already gets any
+  country to a glance/scroll away, and a search box adds a second way to
+  find something that mostly duplicates what the grouped layout already
+  does at this list size (14 countries). Revisit only if the list grows
+  enough that scrolling itself becomes the complaint, not scanning.
