@@ -26,15 +26,21 @@ Check items off as they land; update "Status" as iterations complete.
   and native Windows including a real click-tested quiz-answer SQLite
   write, two Windows-specific bugs found and fixed along the way — see
   that section's "Follow-up" entries for detail. Merged to `main`
-  2026-09-12).
+  2026-09-12); Android packaging via Capacitor (POC — `mobile/` workspace,
+  `@capacitor-community/sqlite` progress persistence, real device
+  verification including a click-tested quiz-answer SQLite write on the
+  user's own phone. One real bug found and fixed along the way: pmtiles
+  rendering failed on Android due to a Capacitor WebView limitation
+  around HTTP range requests, see the Iteration 8+ Android entry's
+  "Emulator run" follow-up for detail. Merged to `main` 2026-09-12).
 - **Not started**: everything else below.
-- **Next up**: Android packaging via Capacitor (Iteration 8+'s "Android
-  packaging via Capacitor (POC)" item) — reprioritized ahead of the
-  GUI/UX evaluation on 2026-09-12, same reasoning as Tauri jumping the
-  queue earlier: get both real packaged shells (desktop + mobile) in
-  hand before spending time on interface redesign. Desktop is now done
-  and merged; GUI/UX evaluation comes after Android, not before.
-  Revisit once GUI work feels done, not on a fixed schedule.
+- **Next up**: GUI/UX evaluation (Iteration 8+'s item of the same name) —
+  now that both real packaged shells (desktop + Android) are in hand,
+  this is next per the sequencing decided when Android was reprioritized.
+  Direct trigger: the user's own feedback after testing Android on a real
+  device that widget sizing needs work, on top of the general "looks
+  plain" flatness already tracked. Revisit once GUI work feels done, not
+  on a fixed schedule.
 - **Reordered**: local persistence and spaced repetition swapped places
   from the original numbering. Spaced repetition is pointless without
   somewhere to remember what's due across sessions — user accounts
@@ -1254,8 +1260,8 @@ loop actually feels good. Candidates below, in rough priority order.
       below, not a replacement for it — this produces the raw map
       package, the editor is for curating/tweaking one afterward.
 - [ ] Map editor UI (author maps/tours without hand-editing JSON)
-- [~] **Android packaging via Capacitor (POC), in progress on
-      `feature/capacitor-android`.** Same "wrap the shared web core"
+- [x] **Android packaging via Capacitor (POC), built on
+      `feature/capacitor-android`, merged to `main` 2026-09-12.** Same "wrap the shared web core"
       strategy as Iteration 7. Scaffolded so far: new `mobile/` npm
       workspace (`mobile/capacitor.config.ts`, `webDir: '../app/build'`,
       mirroring `desktop/src-tauri/tauri.conf.json`'s `frontendDist`),
@@ -1308,11 +1314,17 @@ loop actually feels good. Candidates below, in rough priority order.
       `tiles.pmtiles` request is gone, with only benign info-level
       SQLite-plugin debug logging remaining.
 
-      **Not yet verified**: a full click-through (tour, quiz, an actual
-      quiz-answer SQLite write surviving an app restart) — home-page
-      navigation and one map's rendering were confirmed via `adb`
-      screenshot/logcat in this session, but the deeper interaction flow
-      still needs the same hands-on pass desktop already got. Distribution, roughly in order: a sideloaded
+      **Real-device verification:** sent a debug APK build directly to
+      the user (rather than requiring USB debugging/adb) for a true
+      hands-on test on their own Android phone, matching the desktop
+      approval flow. Confirmed working: map rendering, and — the one
+      thing this dev sandbox could never reach — an actual quiz answer's
+      SQLite write surviving a real app close/reopen. Feedback from that
+      pass: the UI's widget sizing needs work, correctly deferred to the
+      already-planned GUI/UX evaluation iteration rather than fixed here.
+      Approved for merge to `main`.
+
+      Distribution, roughly in order: a sideloaded
       signed APK first (free, immediate, good enough for portfolio
       demoing); a Google Play Console account ($25 one-time) with the
       **Internal Testing** track if a shareable "real install" link is
