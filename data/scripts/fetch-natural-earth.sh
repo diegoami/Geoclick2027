@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 # Downloads and caches the Natural Earth datasets (public domain, 1:10m
 # resolution) used to build the demo maps: admin-1 states/provinces (the
-# target polygons) and lakes (context/water fill - without it, a state
+# polygon target maps), lakes (context/water fill - without it, a state
 # whose border runs along a lake, e.g. Michigan on the Great Lakes,
 # renders as an unexplained gap next to its neighbors rather than a
-# recognizable coastline).
+# recognizable coastline), and populated places (the point target maps -
+# towns/cities, see build-points-map.ts and MAPS.md's "Point-target
+# design" section).
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -35,3 +37,5 @@ fetch ne_10m_admin_1_states_provinces \
 	"https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_1_states_provinces.zip"
 fetch ne_10m_lakes \
 	"https://naturalearth.s3.amazonaws.com/10m_physical/ne_10m_lakes.zip"
+fetch ne_10m_populated_places \
+	"https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_populated_places.zip"

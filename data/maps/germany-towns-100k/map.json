@@ -1,0 +1,893 @@
+{
+	"id": "germany-towns-100k",
+	"name": "Germany — Towns",
+	"country": "Germany",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "kiel",
+			"name": "Kiel",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.130017,
+				54.3303904
+			],
+			"bbox": [
+				10.130017,
+				54.3303904,
+				10.130017,
+				54.3303904
+			]
+		},
+		{
+			"id": "rostock",
+			"name": "Rostock",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.1499971,
+				54.0703805
+			],
+			"bbox": [
+				12.1499971,
+				54.0703805,
+				12.1499971,
+				54.0703805
+			]
+		},
+		{
+			"id": "lubeck",
+			"name": "Lübeck",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.6699841,
+				53.8703927
+			],
+			"bbox": [
+				10.6699841,
+				53.8703927,
+				10.6699841,
+				53.8703927
+			]
+		},
+		{
+			"id": "hamburg",
+			"name": "Hamburg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.9980533,
+				53.5519705
+			],
+			"bbox": [
+				9.9980533,
+				53.5519705,
+				9.9980533,
+				53.5519705
+			]
+		},
+		{
+			"id": "bremerhaven",
+			"name": "Bremerhaven",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.5799825,
+				53.550438
+			],
+			"bbox": [
+				8.5799825,
+				53.550438,
+				8.5799825,
+				53.550438
+			]
+		},
+		{
+			"id": "oldenburg",
+			"name": "Oldenburg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.2200044,
+				53.1299986
+			],
+			"bbox": [
+				8.2200044,
+				53.1299986,
+				8.2200044,
+				53.1299986
+			]
+		},
+		{
+			"id": "bremen",
+			"name": "Bremen",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.8000207,
+				53.0800016
+			],
+			"bbox": [
+				8.8000207,
+				53.0800016,
+				8.8000207,
+				53.0800016
+			]
+		},
+		{
+			"id": "berlin",
+			"name": "Berlin",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.3996028,
+				52.5237645
+			],
+			"bbox": [
+				13.3996028,
+				52.5237645,
+				13.3996028,
+				52.5237645
+			]
+		},
+		{
+			"id": "potsdam",
+			"name": "Potsdam",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.0699926,
+				52.4004049
+			],
+			"bbox": [
+				13.0699926,
+				52.4004049,
+				13.0699926,
+				52.4004049
+			]
+		},
+		{
+			"id": "hannover",
+			"name": "Hannover",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.7166573,
+				52.3669702
+			],
+			"bbox": [
+				9.7166573,
+				52.3669702,
+				9.7166573,
+				52.3669702
+			]
+		},
+		{
+			"id": "osnabruck",
+			"name": "Osnabrück",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.049989,
+				52.280438
+			],
+			"bbox": [
+				8.049989,
+				52.280438,
+				8.049989,
+				52.280438
+			]
+		},
+		{
+			"id": "braunschweig",
+			"name": "Braunschweig",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.5000203,
+				52.2499748
+			],
+			"bbox": [
+				10.5000203,
+				52.2499748,
+				10.5000203,
+				52.2499748
+			]
+		},
+		{
+			"id": "magdeburg",
+			"name": "Magdeburg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.6200036,
+				52.1304214
+			],
+			"bbox": [
+				11.6200036,
+				52.1304214,
+				11.6200036,
+				52.1304214
+			]
+		},
+		{
+			"id": "bielefeld",
+			"name": "Bielefeld",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.5300114,
+				52.0299882
+			],
+			"bbox": [
+				8.5300114,
+				52.0299882,
+				8.5300114,
+				52.0299882
+			]
+		},
+		{
+			"id": "munster",
+			"name": "Münster",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.6200411,
+				51.9704053
+			],
+			"bbox": [
+				7.6200411,
+				51.9704053,
+				7.6200411,
+				51.9704053
+			]
+		},
+		{
+			"id": "cottbus",
+			"name": "Cottbus",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.3299674,
+				51.7704175
+			],
+			"bbox": [
+				14.3299674,
+				51.7704175,
+				14.3299674,
+				51.7704175
+			]
+		},
+		{
+			"id": "dortmund",
+			"name": "Dortmund",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.4500256,
+				51.5299671
+			],
+			"bbox": [
+				7.4500256,
+				51.5299671,
+				7.4500256,
+				51.5299671
+			]
+		},
+		{
+			"id": "gottingen",
+			"name": "Göttingen",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.920004,
+				51.5204328
+			],
+			"bbox": [
+				9.920004,
+				51.5204328,
+				9.920004,
+				51.5204328
+			]
+		},
+		{
+			"id": "essen",
+			"name": "Essen",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.0166154,
+				51.4499978
+			],
+			"bbox": [
+				7.0166154,
+				51.4499978,
+				7.0166154,
+				51.4499978
+			]
+		},
+		{
+			"id": "duisburg",
+			"name": "Duisburg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.7500166,
+				51.4299732
+			],
+			"bbox": [
+				6.7500166,
+				51.4299732,
+				6.7500166,
+				51.4299732
+			]
+		},
+		{
+			"id": "leipzig",
+			"name": "Leipzig",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.4099812,
+				51.3354053
+			],
+			"bbox": [
+				12.4099812,
+				51.3354053,
+				12.4099812,
+				51.3354053
+			]
+		},
+		{
+			"id": "kassel",
+			"name": "Kassel",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.5000297,
+				51.3000069
+			],
+			"bbox": [
+				9.5000297,
+				51.3000069,
+				9.5000297,
+				51.3000069
+			]
+		},
+		{
+			"id": "wuppertal",
+			"name": "Wuppertal",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.169991,
+				51.25001
+			],
+			"bbox": [
+				7.169991,
+				51.25001,
+				7.169991,
+				51.25001
+			]
+		},
+		{
+			"id": "dusseldorf",
+			"name": "Düsseldorf",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.779989,
+				51.2203736
+			],
+			"bbox": [
+				6.779989,
+				51.2203736,
+				6.779989,
+				51.2203736
+			]
+		},
+		{
+			"id": "dresden",
+			"name": "Dresden",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.7500028,
+				51.0499705
+			],
+			"bbox": [
+				13.7500028,
+				51.0499705,
+				13.7500028,
+				51.0499705
+			]
+		},
+		{
+			"id": "erfurt",
+			"name": "Erfurt",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.0299621,
+				50.9700529
+			],
+			"bbox": [
+				11.0299621,
+				50.9700529,
+				11.0299621,
+				50.9700529
+			]
+		},
+		{
+			"id": "koln",
+			"name": "Köln",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.9480586,
+				50.9319495
+			],
+			"bbox": [
+				6.9480586,
+				50.9319495,
+				6.9480586,
+				50.9319495
+			]
+		},
+		{
+			"id": "jena",
+			"name": "Jena",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.5800061,
+				50.9304429
+			],
+			"bbox": [
+				11.5800061,
+				50.9304429,
+				11.5800061,
+				50.9304429
+			]
+		},
+		{
+			"id": "gera",
+			"name": "Gera",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.070002,
+				50.8703691
+			],
+			"bbox": [
+				12.070002,
+				50.8703691,
+				12.070002,
+				50.8703691
+			]
+		},
+		{
+			"id": "chemnitz",
+			"name": "Chemnitz",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.919976,
+				50.8299839
+			],
+			"bbox": [
+				12.919976,
+				50.8299839,
+				12.919976,
+				50.8299839
+			]
+		},
+		{
+			"id": "bonn",
+			"name": "Bonn",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.0800223,
+				50.7204557
+			],
+			"bbox": [
+				7.0800223,
+				50.7204557,
+				7.0800223,
+				50.7204557
+			]
+		},
+		{
+			"id": "koblenz",
+			"name": "Koblenz",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.5999906,
+				50.3504783
+			],
+			"bbox": [
+				7.5999906,
+				50.3504783,
+				7.5999906,
+				50.3504783
+			]
+		},
+		{
+			"id": "frankfurt",
+			"name": "Frankfurt",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.6750154,
+				50.0999768
+			],
+			"bbox": [
+				8.6750154,
+				50.0999768,
+				8.6750154,
+				50.0999768
+			]
+		},
+		{
+			"id": "wiesbaden",
+			"name": "Wiesbaden",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.2500284,
+				50.0803915
+			],
+			"bbox": [
+				8.2500284,
+				50.0803915,
+				8.2500284,
+				50.0803915
+			]
+		},
+		{
+			"id": "mainz",
+			"name": "Mainz",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.2732192,
+				49.9824725
+			],
+			"bbox": [
+				8.2732192,
+				49.9824725,
+				8.2732192,
+				49.9824725
+			]
+		},
+		{
+			"id": "wurzburg",
+			"name": "Würzburg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.950028,
+				49.8004344
+			],
+			"bbox": [
+				9.950028,
+				49.8004344,
+				9.950028,
+				49.8004344
+			]
+		},
+		{
+			"id": "mannheim",
+			"name": "Mannheim",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.470015,
+				49.5003752
+			],
+			"bbox": [
+				8.470015,
+				49.5003752,
+				8.470015,
+				49.5003752
+			]
+		},
+		{
+			"id": "furth",
+			"name": "Fürth",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.9999898,
+				49.4700153
+			],
+			"bbox": [
+				10.9999898,
+				49.4700153,
+				10.9999898,
+				49.4700153
+			]
+		},
+		{
+			"id": "nurnberg",
+			"name": "Nürnberg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.0799849,
+				49.4499907
+			],
+			"bbox": [
+				11.0799849,
+				49.4499907,
+				11.0799849,
+				49.4499907
+			]
+		},
+		{
+			"id": "heidelberg",
+			"name": "Heidelberg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.6999751,
+				49.4199925
+			],
+			"bbox": [
+				8.6999751,
+				49.4199925,
+				8.6999751,
+				49.4199925
+			]
+		},
+		{
+			"id": "saarbrucken",
+			"name": "Saarbrücken",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.9700032,
+				49.2503904
+			],
+			"bbox": [
+				6.9700032,
+				49.2503904,
+				6.9700032,
+				49.2503904
+			]
+		},
+		{
+			"id": "regensburg",
+			"name": "Regensburg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.1200248,
+				49.0204045
+			],
+			"bbox": [
+				12.1200248,
+				49.0204045,
+				12.1200248,
+				49.0204045
+			]
+		},
+		{
+			"id": "karlsruhe",
+			"name": "Karlsruhe",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.3999934,
+				48.9999923
+			],
+			"bbox": [
+				8.3999934,
+				48.9999923,
+				8.3999934,
+				48.9999923
+			]
+		},
+		{
+			"id": "stuttgart",
+			"name": "Stuttgart",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.1999963,
+				48.7799799
+			],
+			"bbox": [
+				9.1999963,
+				48.7799799,
+				9.1999963,
+				48.7799799
+			]
+		},
+		{
+			"id": "ingolstadt",
+			"name": "Ingolstadt",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.4499882,
+				48.7704197
+			],
+			"bbox": [
+				11.4499882,
+				48.7704197,
+				11.4499882,
+				48.7704197
+			]
+		},
+		{
+			"id": "ulm",
+			"name": "Ulm",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.9999991,
+				48.4003906
+			],
+			"bbox": [
+				9.9999991,
+				48.4003906,
+				9.9999991,
+				48.4003906
+			]
+		},
+		{
+			"id": "augsburg",
+			"name": "Augsburg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.8999959,
+				48.3500061
+			],
+			"bbox": [
+				10.8999959,
+				48.3500061,
+				10.8999959,
+				48.3500061
+			]
+		},
+		{
+			"id": "munchen",
+			"name": "München",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.5730476,
+				48.1318879
+			],
+			"bbox": [
+				11.5730476,
+				48.1318879,
+				11.5730476,
+				48.1318879
+			]
+		},
+		{
+			"id": "freiburg-im-breisgau",
+			"name": "Freiburg im Breisgau",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.8699483,
+				48.0004151
+			],
+			"bbox": [
+				7.8699483,
+				48.0004151,
+				7.8699483,
+				48.0004151
+			]
+		}
+	],
+	"tourOrder": [
+		"kiel",
+		"rostock",
+		"lubeck",
+		"hamburg",
+		"bremerhaven",
+		"oldenburg",
+		"bremen",
+		"berlin",
+		"potsdam",
+		"hannover",
+		"osnabruck",
+		"braunschweig",
+		"magdeburg",
+		"bielefeld",
+		"munster",
+		"cottbus",
+		"dortmund",
+		"gottingen",
+		"essen",
+		"duisburg",
+		"leipzig",
+		"kassel",
+		"wuppertal",
+		"dusseldorf",
+		"dresden",
+		"erfurt",
+		"koln",
+		"jena",
+		"gera",
+		"chemnitz",
+		"bonn",
+		"koblenz",
+		"frankfurt",
+		"wiesbaden",
+		"mainz",
+		"wurzburg",
+		"mannheim",
+		"furth",
+		"nurnberg",
+		"heidelberg",
+		"saarbrucken",
+		"regensburg",
+		"karlsruhe",
+		"stuttgart",
+		"ingolstadt",
+		"ulm",
+		"augsburg",
+		"munchen",
+		"freiburg-im-breisgau"
+	]
+}

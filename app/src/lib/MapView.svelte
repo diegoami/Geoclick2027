@@ -25,37 +25,44 @@
 
 			map = createMap(container, loadedMapDef, style);
 
-			map.on('click', 'targets-fill', (e: maplibregl.MapLayerMouseEvent) => {
-				const feature = e.features?.[0];
-				if (!feature) return;
+			// Bound to both the polygon (targets-fill) and point
+			// (targets-circle) layers - a given map's tileset only ever has
+			// features for one of the two, so binding both is a harmless
+			// no-op for whichever doesn't apply. See MAPS.md's "Point-target
+			// design" section.
+			for (const layerId of ['targets-fill', 'targets-circle']) {
+				map.on('click', layerId, (e: maplibregl.MapLayerMouseEvent) => {
+					const feature = e.features?.[0];
+					if (!feature) return;
 
-				if (selectedFeatureId !== undefined) {
+					if (selectedFeatureId !== undefined) {
+						map!.setFeatureState(
+							{ source: 'targets', sourceLayer: 'targets', id: selectedFeatureId },
+							{ highlighted: false }
+						);
+					}
+					selectedFeatureId = feature.id;
 					map!.setFeatureState(
-						{ source: 'targets', sourceLayer: 'targets', id: selectedFeatureId },
-						{ highlighted: false }
+						{ source: 'targets', sourceLayer: 'targets', id: feature.id! },
+						{ highlighted: true }
 					);
-				}
-				selectedFeatureId = feature.id;
-				map!.setFeatureState(
-					{ source: 'targets', sourceLayer: 'targets', id: feature.id! },
-					{ highlighted: true }
-				);
 
-				const name = feature.properties?.name as string;
-				popup ??= new maplibregl.Popup({
-					closeButton: false,
-					closeOnClick: false,
-					className: 'geoclick-popup'
+					const name = feature.properties?.name as string;
+					popup ??= new maplibregl.Popup({
+						closeButton: false,
+						closeOnClick: false,
+						className: 'geoclick-popup'
+					});
+					popup.setLngLat(e.lngLat).setHTML(`<strong>${name}</strong>`).addTo(map!);
 				});
-				popup.setLngLat(e.lngLat).setHTML(`<strong>${name}</strong>`).addTo(map!);
-			});
 
-			map.on('mouseenter', 'targets-fill', () => {
-				map!.getCanvas().style.cursor = 'pointer';
-			});
-			map.on('mouseleave', 'targets-fill', () => {
-				map!.getCanvas().style.cursor = '';
-			});
+				map.on('mouseenter', layerId, () => {
+					map!.getCanvas().style.cursor = 'pointer';
+				});
+				map.on('mouseleave', layerId, () => {
+					map!.getCanvas().style.cursor = '';
+				});
+			}
 		})().catch((e) => {
 			error = e instanceof Error ? e.message : String(e);
 		});

@@ -112,6 +112,13 @@
 	// misses, a small radius around it is searched for the *correct*
 	// target specifically, not as general slop for any region.
 	const DROP_TOLERANCE_PX = 24;
+	// A point target (city marker, circle-radius 9px in the shared style)
+	// has zero inherent area - the tolerance radius *is* the entire target,
+	// unlike a polygon where it's just an assist. Starts larger than the
+	// polygon tolerance for exactly that reason; tuned against the actual
+	// rendered map the same way DROP_TOLERANCE_PX was tuned against Bremen,
+	// not guessed once and left - see MAPS.md's "Point-target implementation".
+	const POINT_DROP_TOLERANCE_PX = 30;
 	const WRONG_PAUSE_MS = 700;
 
 	function regionAtPoint(clientX: number, clientY: number): string | undefined {
@@ -146,10 +153,56 @@
 			[x - radius, y - radius],
 			[x + radius, y + radius]
 		];
+		// Both layers queried unconditionally - a given map's tileset only
+		// ever has features for one of the two (polygon or point), so this
+		// is a harmless no-op for whichever doesn't apply.
 		const features = map.queryRenderedFeatures(radius ? box : [x, y], {
-			layers: ['targets-fill']
+			layers: ['targets-fill', 'targets-circle']
 		});
 		return features.map((f) => f.properties?.name as string).filter((n): n is string => !!n);
+	}
+
+	// For point maps specifically: which of `candidateNames` is actually
+	// nearest to the drop point, in screen space. Needed because two city
+	// markers can sit closer together than the tolerance radius itself
+	// (e.g. Essen/Duisburg, ~22px apart on-screen at the default zoom, well
+	// inside a 30px tolerance) - without this, tolerance-based correctness
+	// checked only "is the dragged target's name present somewhere in the
+	// tolerance box", which let a drop land squarely on the WRONG city and
+	// still count as correct for whichever OTHER slip you happened to be
+	// holding, as long as that other city was also nearby. Caught directly
+	// by testing the actual Ruhr-area cluster, not assumed. Polygon maps
+	// don't get this treatment - the existing membership check has shipped
+	// and been tested for months, no reason to risk it for a problem that's
+	// specific to dense point clusters.
+	function closestNameAmong(
+		candidateNames: string[],
+		clientX: number,
+		clientY: number
+	): string | undefined {
+		if (!map || !mapDef) return undefined;
+		// map.project() returns container-relative pixels (the same space
+		// queryRenderedFeatures uses) - clientX/clientY are viewport
+		// coordinates from the PointerEvent, so convert the same way
+		// regionsNear does before comparing.
+		const rect = container.getBoundingClientRect();
+		const x = clientX - rect.left;
+		const y = clientY - rect.top;
+		let closestName: string | undefined;
+		let closestDistSq = Infinity;
+		for (const candidateName of candidateNames) {
+			const target = mapDef.targets.find((t) => t.name === candidateName);
+			if (!target) continue;
+			const screenPoint = map.project(target.centroid);
+			const dx = screenPoint.x - x;
+			const dy = screenPoint.y - y;
+			const distSq = dx * dx + dy * dy;
+			if (distSq < closestDistSq) {
+				closestDistSq = distSq;
+				closestName = candidateName;
+			}
+		}
+		return closestName;
 	}
 
 	function setHover(name: string | undefined) {
@@ -213,8 +266,10 @@
 			return;
 		}
 		const { targetId, name } = dragging;
+		const isPointMap = mapDef?.targets[0]?.type === 'city';
 		const exactName = regionAtPoint(e.clientX, e.clientY);
-		const nearbyNames = regionsNear(e.clientX, e.clientY, DROP_TOLERANCE_PX);
+		const tolerance = isPointMap ? POINT_DROP_TOLERANCE_PX : DROP_TOLERANCE_PX;
+		const nearbyNames = regionsNear(e.clientX, e.clientY, tolerance);
 		setHover(undefined);
 		dragging = undefined;
 
@@ -227,7 +282,20 @@
 		// Correct if the exact point or a small tolerance radius around it
 		// hit the right region - the tolerance only ever helps a *correct*
 		// drop land, it never reattributes which region a wrong drop hit.
-		const isCorrect = exactName === name || nearbyNames.includes(name);
+		// Point maps need an extra check: two city markers can sit closer
+		// together than the tolerance radius (Essen/Duisburg, ~22px apart
+		// at the default zoom, inside a 30px tolerance) - "is the dragged
+		// target's name present somewhere nearby" isn't enough there, or a
+		// drop squarely on the WRONG city can still count as correct for a
+		// different, merely-nearby one. Requiring it to be the *closest*
+		// candidate fixes that; not applied to polygon maps, which don't
+		// have this failure mode and have shipped with the simpler check
+		// for months.
+		const isCorrect =
+			exactName === name ||
+			(isPointMap
+				? closestNameAmong(nearbyNames, e.clientX, e.clientY) === name
+				: nearbyNames.includes(name));
 
 		session = attemptMatch(session, targetId, isCorrect ? targetId : undefined);
 		const item = session.items.find((i) => i.target.id === targetId)!;

@@ -155,10 +155,25 @@ or amend an entry here as part of that change, not as an afterthought.
   a point map plays like the same game with round markers, not a second
   visual language. `Target.type` alone distinguishes a point map from a
   polygon one — no new map-level "geometry kind" field, since a map is
-  always homogeneous. See `MAPS.md`'s "Point-target design" section for
-  the full breakdown, including what's deliberately left open (point
-  drop tolerance, tour zoom level) until it's actually built and can be
-  tuned against something real.
+  always homogeneous. Built as `italy-towns-100k`/`germany-towns-100k` —
+  see `MAPS.md`'s "Point-target implementation" section for the full
+  breakdown, including two real bugs found only by testing the actual
+  built maps (tippecanoe silently drops most points at low zoom by
+  default; the polygon tolerance mechanism's "is the name present
+  nearby" check breaks down for city clusters closer together than the
+  tolerance radius itself) that weren't anticipated in the original
+  design pass.
+- **A point map's drop tolerance requires the dragged target to be the
+  *closest* candidate to the drop point, not merely present within the
+  tolerance radius — polygon maps keep the simpler check.** Found by
+  testing the Ruhr area directly: Essen and Duisburg render only ~22px
+  apart on screen at the default zoom, inside the 30px point tolerance,
+  so dropping a "Duisburg" slip squarely on Essen's own marker still
+  registered as Duisburg solved correctly. Polygons don't get this
+  fix — the simpler membership check has shipped and been tested for
+  months, and two candidates rarely sit that close together for
+  polygon-sized targets, so there was no reason to risk changing
+  behavior that already works.
 - **Guided tour mode comes before the quiz**, pedagogically — represents
   ARCHITECTURE.md's original pitch: a reveal-first, tour-style
   introduction to a map before testing on it, differentiating from

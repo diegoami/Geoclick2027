@@ -9,15 +9,19 @@
 import { execFileSync } from 'node:child_process';
 import { mkdirSync, readFileSync, writeFileSync, rmSync, existsSync } from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import {
+	REPO_ROOT,
+	LAKES_SHP,
+	parseArgs,
+	slugify,
+	overallBboxOf,
+	selectNearbyLakes
+} from './mapBuildUtils.js';
 
-const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
-const REPO_ROOT = path.resolve(SCRIPT_DIR, '..', '..');
 const SOURCE_SHP = path.join(
 	REPO_ROOT,
 	'data/source/ne_10m_admin_1_states_provinces/ne_10m_admin_1_states_provinces.shp'
 );
-const LAKES_SHP = path.join(REPO_ROOT, 'data/source/ne_10m_lakes/ne_10m_lakes.shp');
 const FIELDS = 'name,name_alt,name_local,iso_3166_2,type,type_en,admin,region';
 
 // Natural Earth sometimes gives an English/French/German name where the
@@ -38,24 +42,6 @@ const NAME_FIXUPS: Record<string, Record<string, string>> = {
 		Oristrano: 'Oristano'
 	}
 };
-
-function parseArgs(argv: string[]) {
-	const out: Record<string, string> = {};
-	for (const arg of argv) {
-		const match = /^--([^=]+)=(.*)$/.exec(arg);
-		if (match) out[match[1]] = match[2];
-	}
-	return out;
-}
-
-function slugify(name: string): string {
-	return name
-		.normalize('NFD')
-		.replace(/[̀-ͯ]/g, '')
-		.toLowerCase()
-		.replace(/[^a-z0-9]+/g, '-')
-		.replace(/^-+|-+$/g, '');
-}
 
 type Geometry = { type: string; coordinates: unknown };
 
@@ -241,35 +227,8 @@ function main() {
 	};
 	writeFileSync(labelsPath, JSON.stringify(labelsGeojson));
 
-	// Water context: without lakes rendered, a state whose border runs
-	// along one (Michigan on the Great Lakes is the worst case - two
-	// peninsulas with no visual indication there's a lake, not just a gap
-	// in the data, between them and their neighbors) reads as a confusing
-	// blob rather than a recognizable coastline. Select by bounding-box
-	// intersection with this map's overall extent (`-spat`, a feature
-	// filter, not a geometry clip) rather than by country - lakes aren't
-	// tagged by admin boundary the way states are, and a lake is still
-	// worth rendering even if it pokes slightly outside the map's bounds.
 	console.log('[4/6] Selecting nearby lakes for context...');
-	const overallBbox = targets.reduce(
-		(acc: [number, number, number, number], t: any) => [
-			Math.min(acc[0], t.bbox[0]),
-			Math.min(acc[1], t.bbox[1]),
-			Math.max(acc[2], t.bbox[2]),
-			Math.max(acc[3], t.bbox[3])
-		],
-		[Infinity, Infinity, -Infinity, -Infinity]
-	);
-	execFileSync('ogr2ogr', [
-		'-f',
-		'GeoJSON',
-		'-spat',
-		...overallBbox.map(String),
-		'-select',
-		'name',
-		lakesPath,
-		LAKES_SHP
-	]);
+	selectNearbyLakes(overallBboxOf(targets), lakesPath);
 
 	console.log('[5/6] Building vector tiles (tippecanoe + pmtiles convert)...');
 	execFileSync('tippecanoe', [
