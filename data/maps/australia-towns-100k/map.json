@@ -1,0 +1,263 @@
+{
+	"id": "australia-towns-100k",
+	"name": "Australia — Towns",
+	"country": "Australia",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "cairns",
+			"name": "Cairns",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				145.7633309,
+				-16.8878399
+			],
+			"bbox": [
+				145.7633309,
+				-16.8878399,
+				145.7633309,
+				-16.8878399
+			]
+		},
+		{
+			"id": "townsville",
+			"name": "Townsville",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				146.7699971,
+				-19.2499503
+			],
+			"bbox": [
+				146.7699971,
+				-19.2499503,
+				146.7699971,
+				-19.2499503
+			]
+		},
+		{
+			"id": "brisbane",
+			"name": "Brisbane",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				153.0331469,
+				-27.453085
+			],
+			"bbox": [
+				153.0331469,
+				-27.453085,
+				153.0331469,
+				-27.453085
+			]
+		},
+		{
+			"id": "gold-coast",
+			"name": "Gold Coast",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				153.4482458,
+				-28.0815043
+			],
+			"bbox": [
+				153.4482458,
+				-28.0815043,
+				153.4482458,
+				-28.0815043
+			]
+		},
+		{
+			"id": "perth",
+			"name": "Perth",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				115.8380529,
+				-31.9530688
+			],
+			"bbox": [
+				115.8380529,
+				-31.9530688,
+				115.8380529,
+				-31.9530688
+			]
+		},
+		{
+			"id": "newcastle",
+			"name": "Newcastle",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				151.77024927411264,
+				-32.929507722655686
+			],
+			"bbox": [
+				151.77024927411264,
+				-32.929507722655686,
+				151.77024927411264,
+				-32.929507722655686
+			]
+		},
+		{
+			"id": "sydney",
+			"name": "Sydney",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				151.2125477744749,
+				-33.87137339218338
+			],
+			"bbox": [
+				151.2125477744749,
+				-33.87137339218338,
+				151.2125477744749,
+				-33.87137339218338
+			]
+		},
+		{
+			"id": "wollongong",
+			"name": "Wollongong",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				150.890004,
+				-34.4153812
+			],
+			"bbox": [
+				150.890004,
+				-34.4153812,
+				150.890004,
+				-34.4153812
+			]
+		},
+		{
+			"id": "adelaide",
+			"name": "Adelaide",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				138.598059,
+				-34.9330419
+			],
+			"bbox": [
+				138.598059,
+				-34.9330419,
+				138.598059,
+				-34.9330419
+			]
+		},
+		{
+			"id": "canberra",
+			"name": "Canberra",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				149.1290262,
+				-35.2830285
+			],
+			"bbox": [
+				149.1290262,
+				-35.2830285,
+				149.1290262,
+				-35.2830285
+			]
+		},
+		{
+			"id": "albury",
+			"name": "Albury",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				146.9200138,
+				-36.0600354
+			],
+			"bbox": [
+				146.9200138,
+				-36.0600354,
+				146.9200138,
+				-36.0600354
+			]
+		},
+		{
+			"id": "melbourne",
+			"name": "Melbourne",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				144.9730704,
+				-37.8180855
+			],
+			"bbox": [
+				144.9730704,
+				-37.8180855,
+				144.9730704,
+				-37.8180855
+			]
+		},
+		{
+			"id": "cranbourne",
+			"name": "Cranbourne",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				145.2833695,
+				-38.0996008
+			],
+			"bbox": [
+				145.2833695,
+				-38.0996008,
+				145.2833695,
+				-38.0996008
+			]
+		},
+		{
+			"id": "geelong",
+			"name": "Geelong",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				144.3956335,
+				-38.167495
+			],
+			"bbox": [
+				144.3956335,
+				-38.167495,
+				144.3956335,
+				-38.167495
+			]
+		}
+	],
+	"tourOrder": [
+		"cairns",
+		"townsville",
+		"brisbane",
+		"gold-coast",
+		"perth",
+		"newcastle",
+		"sydney",
+		"wollongong",
+		"adelaide",
+		"canberra",
+		"albury",
+		"melbourne",
+		"cranbourne",
+		"geelong"
+	]
+}

@@ -1,0 +1,1199 @@
+{
+	"id": "japan-towns-100k",
+	"name": "Japan — Towns",
+	"country": "Japan",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "kitami",
+			"name": "Kitami",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				143.8999914,
+				43.8503583
+			],
+			"bbox": [
+				143.8999914,
+				43.8503583,
+				143.8999914,
+				43.8503583
+			]
+		},
+		{
+			"id": "asahikawa",
+			"name": "Asahikawa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				142.3799808,
+				43.7550153
+			],
+			"bbox": [
+				142.3799808,
+				43.7550153,
+				142.3799808,
+				43.7550153
+			]
+		},
+		{
+			"id": "otaru",
+			"name": "Otaru",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				140.9783093,
+				43.1887191
+			],
+			"bbox": [
+				140.9783093,
+				43.1887191,
+				140.9783093,
+				43.1887191
+			]
+		},
+		{
+			"id": "sapporo",
+			"name": "Sapporo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				141.3380985,
+				43.0769251
+			],
+			"bbox": [
+				141.3380985,
+				43.0769251,
+				141.3380985,
+				43.0769251
+			]
+		},
+		{
+			"id": "kushiro",
+			"name": "Kushiro",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				144.3746911,
+				42.9749595
+			],
+			"bbox": [
+				144.3746911,
+				42.9749595,
+				144.3746911,
+				42.9749595
+			]
+		},
+		{
+			"id": "obihiro",
+			"name": "Obihiro",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				143.1700101,
+				42.9304144
+			],
+			"bbox": [
+				143.1700101,
+				42.9304144,
+				143.1700101,
+				42.9304144
+			]
+		},
+		{
+			"id": "tomakomai",
+			"name": "Tomakomai",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				141.5500057,
+				42.6504057
+			],
+			"bbox": [
+				141.5500057,
+				42.6504057,
+				141.5500057,
+				42.6504057
+			]
+		},
+		{
+			"id": "muroran",
+			"name": "Muroran",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				140.9800146,
+				42.3499589
+			],
+			"bbox": [
+				140.9800146,
+				42.3499589,
+				140.9800146,
+				42.3499589
+			]
+		},
+		{
+			"id": "hakodate",
+			"name": "Hakodate",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				140.7399776,
+				41.7949799
+			],
+			"bbox": [
+				140.7399776,
+				41.7949799,
+				140.7399776,
+				41.7949799
+			]
+		},
+		{
+			"id": "aomori",
+			"name": "Aomori",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				140.7100052,
+				40.8250391
+			],
+			"bbox": [
+				140.7100052,
+				40.8250391,
+				140.7100052,
+				40.8250391
+			]
+		},
+		{
+			"id": "hirosaki",
+			"name": "Hirosaki",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				140.4700199,
+				40.5699901
+			],
+			"bbox": [
+				140.4700199,
+				40.5699901,
+				140.4700199,
+				40.5699901
+			]
+		},
+		{
+			"id": "hachinohe",
+			"name": "Hachinohe",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				141.5400321,
+				40.5099937
+			],
+			"bbox": [
+				141.5400321,
+				40.5099937,
+				141.5400321,
+				40.5099937
+			]
+		},
+		{
+			"id": "morioka",
+			"name": "Morioka",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				141.1300313,
+				39.7200161
+			],
+			"bbox": [
+				141.1300313,
+				39.7200161,
+				141.1300313,
+				39.7200161
+			]
+		},
+		{
+			"id": "akita",
+			"name": "Akita",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				140.0899914,
+				39.7099909
+			],
+			"bbox": [
+				140.0899914,
+				39.7099909,
+				140.0899914,
+				39.7099909
+			]
+		},
+		{
+			"id": "sakata",
+			"name": "Sakata",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				139.8500577,
+				38.9200391
+			],
+			"bbox": [
+				139.8500577,
+				38.9200391,
+				139.8500577,
+				38.9200391
+			]
+		},
+		{
+			"id": "yamagata",
+			"name": "Yamagata",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				140.3200032,
+				38.2704922
+			],
+			"bbox": [
+				140.3200032,
+				38.2704922,
+				140.3200032,
+				38.2704922
+			]
+		},
+		{
+			"id": "sendai",
+			"name": "Sendai",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				140.86966685536837,
+				38.2684409197744
+			],
+			"bbox": [
+				140.86966685536837,
+				38.2684409197744,
+				140.86966685536837,
+				38.2684409197744
+			]
+		},
+		{
+			"id": "niigata",
+			"name": "Niigata",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				139.0400297,
+				37.9199968
+			],
+			"bbox": [
+				139.0400297,
+				37.9199968,
+				139.0400297,
+				37.9199968
+			]
+		},
+		{
+			"id": "fukushima",
+			"name": "Fukushima",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				140.4700199,
+				37.7400078
+			],
+			"bbox": [
+				140.4700199,
+				37.7400078,
+				140.4700199,
+				37.7400078
+			]
+		},
+		{
+			"id": "nagaoka",
+			"name": "Nagaoka",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				138.8600406,
+				37.450413
+			],
+			"bbox": [
+				138.8600406,
+				37.450413,
+				138.8600406,
+				37.450413
+			]
+		},
+		{
+			"id": "koriyama",
+			"name": "Kōriyama",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				140.3799996,
+				37.4099762
+			],
+			"bbox": [
+				140.3799996,
+				37.4099762,
+				140.3799996,
+				37.4099762
+			]
+		},
+		{
+			"id": "iwaki",
+			"name": "Iwaki",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				140.8900459,
+				37.0553467
+			],
+			"bbox": [
+				140.8900459,
+				37.0553467,
+				140.8900459,
+				37.0553467
+			]
+		},
+		{
+			"id": "toyama",
+			"name": "Toyama",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				137.2300109,
+				36.6999937
+			],
+			"bbox": [
+				137.2300109,
+				36.6999937,
+				137.2300109,
+				36.6999937
+			]
+		},
+		{
+			"id": "takaoka",
+			"name": "Takaoka",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				136.9999991,
+				36.6700214
+			],
+			"bbox": [
+				136.9999991,
+				36.6700214,
+				136.9999991,
+				36.6700214
+			]
+		},
+		{
+			"id": "nagano",
+			"name": "Nagano",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				138.1700052,
+				36.6499968
+			],
+			"bbox": [
+				138.1700052,
+				36.6499968,
+				138.1700052,
+				36.6499968
+			]
+		},
+		{
+			"id": "kanazawa",
+			"name": "Kanazawa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				136.6400211,
+				36.5600023
+			],
+			"bbox": [
+				136.6400211,
+				36.5600023,
+				136.6400211,
+				36.5600023
+			]
+		},
+		{
+			"id": "utsunomiya",
+			"name": "Utsunomiya",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				139.8700048,
+				36.549977
+			],
+			"bbox": [
+				139.8700048,
+				36.549977,
+				139.8700048,
+				36.549977
+			]
+		},
+		{
+			"id": "maebashi",
+			"name": "Maebashi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				139.0726892,
+				36.3926998
+			],
+			"bbox": [
+				139.0726892,
+				36.3926998,
+				139.0726892,
+				36.3926998
+			]
+		},
+		{
+			"id": "mito",
+			"name": "Mito",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				140.4800451,
+				36.3704273
+			],
+			"bbox": [
+				140.4800451,
+				36.3704273,
+				140.4800451,
+				36.3704273
+			]
+		},
+		{
+			"id": "matsumoto",
+			"name": "Matsumoto",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				137.9700175,
+				36.2404352
+			],
+			"bbox": [
+				137.9700175,
+				36.2404352,
+				137.9700175,
+				36.2404352
+			]
+		},
+		{
+			"id": "fukui",
+			"name": "Fukui",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				136.2200468,
+				36.0704197
+			],
+			"bbox": [
+				136.2200468,
+				36.0704197,
+				136.2200468,
+				36.0704197
+			]
+		},
+		{
+			"id": "kawagoe",
+			"name": "Kawagoe",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				139.4910616,
+				35.91769
+			],
+			"bbox": [
+				139.4910616,
+				35.91769,
+				139.4910616,
+				35.91769
+			]
+		},
+		{
+			"id": "tokyo",
+			"name": "Tokyo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				139.7494616,
+				35.6869628
+			],
+			"bbox": [
+				139.7494616,
+				35.6869628,
+				139.7494616,
+				35.6869628
+			]
+		},
+		{
+			"id": "hachioji",
+			"name": "Hachiōji",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				139.3260587,
+				35.6577059
+			],
+			"bbox": [
+				139.3260587,
+				35.6577059,
+				139.3260587,
+				35.6577059
+			]
+		},
+		{
+			"id": "kofu",
+			"name": "Kōfu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				138.5833134,
+				35.6503937
+			],
+			"bbox": [
+				138.5833134,
+				35.6503937,
+				138.5833134,
+				35.6503937
+			]
+		},
+		{
+			"id": "kawasaki",
+			"name": "Kawasaki",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				139.705002,
+				35.5299876
+			],
+			"bbox": [
+				139.705002,
+				35.5299876,
+				139.705002,
+				35.5299876
+			]
+		},
+		{
+			"id": "tottori",
+			"name": "Tottori",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				134.2332946,
+				35.500377
+			],
+			"bbox": [
+				134.2332946,
+				35.500377,
+				134.2332946,
+				35.500377
+			]
+		},
+		{
+			"id": "matsue",
+			"name": "Matsue",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				133.0666475,
+				35.466994
+			],
+			"bbox": [
+				133.0666475,
+				35.466994,
+				133.0666475,
+				35.466994
+			]
+		},
+		{
+			"id": "yokohama",
+			"name": "Yokohama",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				139.602021,
+				35.4306562
+			],
+			"bbox": [
+				139.602021,
+				35.4306562,
+				139.602021,
+				35.4306562
+			]
+		},
+		{
+			"id": "gifu",
+			"name": "Gifu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				136.7627526,
+				35.4230949
+			],
+			"bbox": [
+				136.7627526,
+				35.4230949,
+				136.7627526,
+				35.4230949
+			]
+		},
+		{
+			"id": "nagoya",
+			"name": "Nagoya",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				136.9130456,
+				35.1569434
+			],
+			"bbox": [
+				136.9130456,
+				35.1569434,
+				136.9130456,
+				35.1569434
+			]
+		},
+		{
+			"id": "kyoto",
+			"name": "Kyoto",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				135.7480521,
+				35.0319381
+			],
+			"bbox": [
+				135.7480521,
+				35.0319381,
+				135.7480521,
+				35.0319381
+			]
+		},
+		{
+			"id": "otsu",
+			"name": "Ōtsu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				135.8674068,
+				35.006402
+			],
+			"bbox": [
+				135.8674068,
+				35.006402,
+				135.8674068,
+				35.006402
+			]
+		},
+		{
+			"id": "shizuoka",
+			"name": "Shizuoka",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				138.3853926,
+				34.9858348
+			],
+			"bbox": [
+				138.3853926,
+				34.9858348,
+				138.3853926,
+				34.9858348
+			]
+		},
+		{
+			"id": "hamamatsu",
+			"name": "Hamamatsu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				137.7327193,
+				34.7180733
+			],
+			"bbox": [
+				137.7327193,
+				34.7180733,
+				137.7327193,
+				34.7180733
+			]
+		},
+		{
+			"id": "tsu",
+			"name": "Tsu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				136.5166695,
+				34.7170657
+			],
+			"bbox": [
+				136.5166695,
+				34.7170657,
+				136.5166695,
+				34.7170657
+			]
+		},
+		{
+			"id": "osaka",
+			"name": "Ōsaka",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				135.50375419006232,
+				34.691095244477914
+			],
+			"bbox": [
+				135.50375419006232,
+				34.691095244477914,
+				135.50375419006232,
+				34.691095244477914
+			]
+		},
+		{
+			"id": "kobe",
+			"name": "Kōbe",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				135.1699816,
+				34.6799878
+			],
+			"bbox": [
+				135.1699816,
+				34.6799878,
+				135.1699816,
+				34.6799878
+			]
+		},
+		{
+			"id": "okayama",
+			"name": "Okayama",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				133.9170865,
+				34.6720296
+			],
+			"bbox": [
+				133.9170865,
+				34.6720296,
+				133.9170865,
+				34.6720296
+			]
+		},
+		{
+			"id": "hiroshima",
+			"name": "Hiroshima",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				132.4409671,
+				34.389781
+			],
+			"bbox": [
+				132.4409671,
+				34.389781,
+				132.4409671,
+				34.389781
+			]
+		},
+		{
+			"id": "takamatsu",
+			"name": "Takamatsu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				134.044779,
+				34.344737
+			],
+			"bbox": [
+				134.044779,
+				34.344737,
+				134.044779,
+				34.344737
+			]
+		},
+		{
+			"id": "kure",
+			"name": "Kure",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				132.5655928,
+				34.2509701
+			],
+			"bbox": [
+				132.5655928,
+				34.2509701,
+				132.5655928,
+				34.2509701
+			]
+		},
+		{
+			"id": "wakayama",
+			"name": "Wakayama",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				135.1677079,
+				34.2231165
+			],
+			"bbox": [
+				135.1677079,
+				34.2231165,
+				135.1677079,
+				34.2231165
+			]
+		},
+		{
+			"id": "tokushima",
+			"name": "Tokushima",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				134.5525,
+				34.0673895
+			],
+			"bbox": [
+				134.5525,
+				34.0673895,
+				134.5525,
+				34.0673895
+			]
+		},
+		{
+			"id": "shimonoseki",
+			"name": "Shimonoseki",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				130.9454333,
+				33.9654319
+			],
+			"bbox": [
+				130.9454333,
+				33.9654319,
+				130.9454333,
+				33.9654319
+			]
+		},
+		{
+			"id": "kitakyushu",
+			"name": "Kitakyūshū",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				130.8200146,
+				33.870399
+			],
+			"bbox": [
+				130.8200146,
+				33.870399,
+				130.8200146,
+				33.870399
+			]
+		},
+		{
+			"id": "matsuyama",
+			"name": "Matsuyama",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				132.765839,
+				33.8455426
+			],
+			"bbox": [
+				132.765839,
+				33.8455426,
+				132.765839,
+				33.8455426
+			]
+		},
+		{
+			"id": "fukuoka",
+			"name": "Fukuoka",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				130.4080679,
+				33.5969611
+			],
+			"bbox": [
+				130.4080679,
+				33.5969611,
+				130.4080679,
+				33.5969611
+			]
+		},
+		{
+			"id": "kochi",
+			"name": "Kōchi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				133.5375232,
+				33.5624333
+			],
+			"bbox": [
+				133.5375232,
+				33.5624333,
+				133.5375232,
+				33.5624333
+			]
+		},
+		{
+			"id": "oita",
+			"name": "Ōita",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				131.5978999,
+				33.243228
+			],
+			"bbox": [
+				131.5978999,
+				33.243228,
+				131.5978999,
+				33.243228
+			]
+		},
+		{
+			"id": "sasebo",
+			"name": "Sasebo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				129.7177046,
+				33.1631295
+			],
+			"bbox": [
+				129.7177046,
+				33.1631295,
+				129.7177046,
+				33.1631295
+			]
+		},
+		{
+			"id": "kumamoto",
+			"name": "Kumamoto",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				130.700642,
+				32.8009294
+			],
+			"bbox": [
+				130.700642,
+				32.8009294,
+				130.700642,
+				32.8009294
+			]
+		},
+		{
+			"id": "nagasaki",
+			"name": "Nagasaki",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				129.8850329,
+				32.7649884
+			],
+			"bbox": [
+				129.8850329,
+				32.7649884,
+				129.8850329,
+				32.7649884
+			]
+		},
+		{
+			"id": "miyazaki",
+			"name": "Miyazaki",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				131.418376,
+				31.9182442
+			],
+			"bbox": [
+				131.418376,
+				31.9182442,
+				131.418376,
+				31.9182442
+			]
+		},
+		{
+			"id": "kagoshima",
+			"name": "Kagoshima",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				130.561064,
+				31.5859648
+			],
+			"bbox": [
+				130.561064,
+				31.5859648,
+				130.561064,
+				31.5859648
+			]
+		},
+		{
+			"id": "naha",
+			"name": "Naha",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				127.6729716,
+				26.2071717
+			],
+			"bbox": [
+				127.6729716,
+				26.2071717,
+				127.6729716,
+				26.2071717
+			]
+		}
+	],
+	"tourOrder": [
+		"kitami",
+		"asahikawa",
+		"otaru",
+		"sapporo",
+		"kushiro",
+		"obihiro",
+		"tomakomai",
+		"muroran",
+		"hakodate",
+		"aomori",
+		"hirosaki",
+		"hachinohe",
+		"morioka",
+		"akita",
+		"sakata",
+		"yamagata",
+		"sendai",
+		"niigata",
+		"fukushima",
+		"nagaoka",
+		"koriyama",
+		"iwaki",
+		"toyama",
+		"takaoka",
+		"nagano",
+		"kanazawa",
+		"utsunomiya",
+		"maebashi",
+		"mito",
+		"matsumoto",
+		"fukui",
+		"kawagoe",
+		"tokyo",
+		"hachioji",
+		"kofu",
+		"kawasaki",
+		"tottori",
+		"matsue",
+		"yokohama",
+		"gifu",
+		"nagoya",
+		"kyoto",
+		"otsu",
+		"shizuoka",
+		"hamamatsu",
+		"tsu",
+		"osaka",
+		"kobe",
+		"okayama",
+		"hiroshima",
+		"takamatsu",
+		"kure",
+		"wakayama",
+		"tokushima",
+		"shimonoseki",
+		"kitakyushu",
+		"matsuyama",
+		"fukuoka",
+		"kochi",
+		"oita",
+		"sasebo",
+		"kumamoto",
+		"nagasaki",
+		"miyazaki",
+		"kagoshima",
+		"naha"
+	]
+}

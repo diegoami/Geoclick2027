@@ -1,0 +1,227 @@
+{
+	"id": "netherlands-towns-100k",
+	"name": "Netherlands — Towns",
+	"country": "Netherlands",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "leeuwarden",
+			"name": "Leeuwarden",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.7833573,
+				53.2503788
+			],
+			"bbox": [
+				5.7833573,
+				53.2503788,
+				5.7833573,
+				53.2503788
+			]
+		},
+		{
+			"id": "groningen",
+			"name": "Groningen",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.5800012,
+				53.2204065
+			],
+			"bbox": [
+				6.5800012,
+				53.2204065,
+				6.5800012,
+				53.2204065
+			]
+		},
+		{
+			"id": "zwolle",
+			"name": "Zwolle",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.0969965,
+				52.5240001
+			],
+			"bbox": [
+				6.0969965,
+				52.5240001,
+				6.0969965,
+				52.5240001
+			]
+		},
+		{
+			"id": "haarlem",
+			"name": "Haarlem",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.629991,
+				52.3804319
+			],
+			"bbox": [
+				4.629991,
+				52.3804319,
+				4.629991,
+				52.3804319
+			]
+		},
+		{
+			"id": "amsterdam",
+			"name": "Amsterdam",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.9146943,
+				52.3519145
+			],
+			"bbox": [
+				4.9146943,
+				52.3519145,
+				4.9146943,
+				52.3519145
+			]
+		},
+		{
+			"id": "utrecht",
+			"name": "Utrecht",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.1200386,
+				52.1003457
+			],
+			"bbox": [
+				5.1200386,
+				52.1003457,
+				5.1200386,
+				52.1003457
+			]
+		},
+		{
+			"id": "den-haag",
+			"name": "Den Haag",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.2699613,
+				52.0800368
+			],
+			"bbox": [
+				4.2699613,
+				52.0800368,
+				4.2699613,
+				52.0800368
+			]
+		},
+		{
+			"id": "arnhem",
+			"name": "Arnhem",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.9229996,
+				51.987996
+			],
+			"bbox": [
+				5.9229996,
+				51.987996,
+				5.9229996,
+				51.987996
+			]
+		},
+		{
+			"id": "rotterdam",
+			"name": "Rotterdam",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.4780285,
+				51.921915
+			],
+			"bbox": [
+				4.4780285,
+				51.921915,
+				4.4780285,
+				51.921915
+			]
+		},
+		{
+			"id": "s-hertogenbosch",
+			"name": "'s-Hertogenbosch",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.3166605,
+				51.6833371
+			],
+			"bbox": [
+				5.3166605,
+				51.6833371,
+				5.3166605,
+				51.6833371
+			]
+		},
+		{
+			"id": "eindhoven",
+			"name": "Eindhoven",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.5000154,
+				51.4299732
+			],
+			"bbox": [
+				5.5000154,
+				51.4299732,
+				5.5000154,
+				51.4299732
+			]
+		},
+		{
+			"id": "maastricht",
+			"name": "Maastricht",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.6770025,
+				50.8529971
+			],
+			"bbox": [
+				5.6770025,
+				50.8529971,
+				5.6770025,
+				50.8529971
+			]
+		}
+	],
+	"tourOrder": [
+		"leeuwarden",
+		"groningen",
+		"zwolle",
+		"haarlem",
+		"amsterdam",
+		"utrecht",
+		"den-haag",
+		"arnhem",
+		"rotterdam",
+		"s-hertogenbosch",
+		"eindhoven",
+		"maastricht"
+	]
+}

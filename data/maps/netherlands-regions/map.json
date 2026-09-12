@@ -1,0 +1,227 @@
+{
+	"id": "netherlands-regions",
+	"name": "Netherlands — Provinces",
+	"country": "Netherlands",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "groningen",
+			"name": "Groningen",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.681850000000001,
+				53.150949999999995
+			],
+			"bbox": [
+				6.1691,
+				52.8413,
+				7.1946,
+				53.4606
+			]
+		},
+		{
+			"id": "friesland",
+			"name": "Friesland",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.8042,
+				53.11035
+			],
+			"bbox": [
+				5.1789,
+				52.7903,
+				6.4295,
+				53.4304
+			]
+		},
+		{
+			"id": "drenthe",
+			"name": "Drenthe",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.600849999999999,
+				52.91205
+			],
+			"bbox": [
+				6.1295,
+				52.6196,
+				7.0722,
+				53.2045
+			]
+		},
+		{
+			"id": "noord-holland",
+			"name": "Noord-Holland",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.9392,
+				52.6779
+			],
+			"bbox": [
+				4.5081,
+				52.1681,
+				5.3703,
+				53.1877
+			]
+		},
+		{
+			"id": "flevoland",
+			"name": "Flevoland",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.51085,
+				52.553200000000004
+			],
+			"bbox": [
+				5.0952,
+				52.2677,
+				5.9265,
+				52.8387
+			]
+		},
+		{
+			"id": "overijssel",
+			"name": "Overijssel",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.4167,
+				52.4811
+			],
+			"bbox": [
+				5.7852,
+				52.1088,
+				7.0482,
+				52.8534
+			]
+		},
+		{
+			"id": "gelderland",
+			"name": "Gelderland",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.90665,
+				52.128299999999996
+			],
+			"bbox": [
+				5.0093,
+				51.7348,
+				6.804,
+				52.5218
+			]
+		},
+		{
+			"id": "utrecht",
+			"name": "Utrecht",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.1663499999999996,
+				52.1122
+			],
+			"bbox": [
+				4.7679,
+				51.9412,
+				5.5648,
+				52.2832
+			]
+		},
+		{
+			"id": "zuid-holland",
+			"name": "Zuid-Holland",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.596299999999999,
+				51.98715
+			],
+			"bbox": [
+				4.01,
+				51.6379,
+				5.1826,
+				52.3364
+			]
+		},
+		{
+			"id": "noord-brabant",
+			"name": "Noord-Brabant",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.117699999999999,
+				51.521
+			],
+			"bbox": [
+				4.1861,
+				51.2168,
+				6.0493,
+				51.8252
+			]
+		},
+		{
+			"id": "zeeland",
+			"name": "Zeeland",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				3.8152500000000003,
+				51.473749999999995
+			],
+			"bbox": [
+				3.3494,
+				51.2063,
+				4.2811,
+				51.7412
+			]
+		},
+		{
+			"id": "limburg",
+			"name": "Limburg",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.87235,
+				51.25345
+			],
+			"bbox": [
+				5.5514,
+				50.7475,
+				6.1933,
+				51.7594
+			]
+		}
+	],
+	"tourOrder": [
+		"groningen",
+		"friesland",
+		"drenthe",
+		"noord-holland",
+		"flevoland",
+		"overijssel",
+		"gelderland",
+		"utrecht",
+		"zuid-holland",
+		"noord-brabant",
+		"zeeland",
+		"limburg"
+	]
+}

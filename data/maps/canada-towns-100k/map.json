@@ -1,0 +1,479 @@
+{
+	"id": "canada-towns-100k",
+	"name": "Canada — Towns",
+	"country": "Canada",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "edmonton",
+			"name": "Edmonton",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-113.5019278,
+				53.5519705
+			],
+			"bbox": [
+				-113.5019278,
+				53.5519705,
+				-113.5019278,
+				53.5519705
+			]
+		},
+		{
+			"id": "saskatoon",
+			"name": "Saskatoon",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-106.6699854,
+				52.1700314
+			],
+			"bbox": [
+				-106.6699854,
+				52.1700314,
+				-106.6699854,
+				52.1700314
+			]
+		},
+		{
+			"id": "calgary",
+			"name": "Calgary",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-114.0819441,
+				51.0849376
+			],
+			"bbox": [
+				-114.0819441,
+				51.0849376,
+				-114.0819441,
+				51.0849376
+			]
+		},
+		{
+			"id": "regina",
+			"name": "Regina",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-104.6170099,
+				50.450033
+			],
+			"bbox": [
+				-104.6170099,
+				50.450033,
+				-104.6170099,
+				50.450033
+			]
+		},
+		{
+			"id": "kelowna",
+			"name": "Kelowna",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-119.4833118,
+				49.899989
+			],
+			"bbox": [
+				-119.4833118,
+				49.899989,
+				-119.4833118,
+				49.899989
+			]
+		},
+		{
+			"id": "winnipeg",
+			"name": "Winnipeg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-97.1659919,
+				49.8829875
+			],
+			"bbox": [
+				-97.1659919,
+				49.8829875,
+				-97.1659919,
+				49.8829875
+			]
+		},
+		{
+			"id": "vancouver",
+			"name": "Vancouver",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-123.1235901,
+				49.2753624
+			],
+			"bbox": [
+				-123.1235901,
+				49.2753624,
+				-123.1235901,
+				49.2753624
+			]
+		},
+		{
+			"id": "abbotsford",
+			"name": "Abbotsford",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-122.2999874,
+				49.0503768
+			],
+			"bbox": [
+				-122.2999874,
+				49.0503768,
+				-122.2999874,
+				49.0503768
+			]
+		},
+		{
+			"id": "victoria",
+			"name": "Victoria",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-123.3500009,
+				48.4332827
+			],
+			"bbox": [
+				-123.3500009,
+				48.4332827,
+				-123.3500009,
+				48.4332827
+			]
+		},
+		{
+			"id": "st-john-s",
+			"name": "St. John's",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-52.6810069,
+				47.5849882
+			],
+			"bbox": [
+				-52.6810069,
+				47.5849882,
+				-52.6810069,
+				47.5849882
+			]
+		},
+		{
+			"id": "quebec",
+			"name": "Québec",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-71.2456102,
+				46.8399691
+			],
+			"bbox": [
+				-71.2456102,
+				46.8399691,
+				-71.2456102,
+				46.8399691
+			]
+		},
+		{
+			"id": "sudbury",
+			"name": "Sudbury",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-80.9666447,
+				46.4999898
+			],
+			"bbox": [
+				-80.9666447,
+				46.4999898,
+				-80.9666447,
+				46.4999898
+			]
+		},
+		{
+			"id": "trois-rivieres",
+			"name": "Trois-Rivières",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-72.5499492,
+				46.3499732
+			],
+			"bbox": [
+				-72.5499492,
+				46.3499732,
+				-72.5499492,
+				46.3499732
+			]
+		},
+		{
+			"id": "montreal",
+			"name": "Montréal",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-73.5852428,
+				45.5019451
+			],
+			"bbox": [
+				-73.5852428,
+				45.5019451,
+				-73.5852428,
+				45.5019451
+			]
+		},
+		{
+			"id": "ottawa",
+			"name": "Ottawa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-75.7019612,
+				45.4186427
+			],
+			"bbox": [
+				-75.7019612,
+				45.4186427,
+				-75.7019612,
+				45.4186427
+			]
+		},
+		{
+			"id": "sherbrooke",
+			"name": "Sherbrooke",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-71.8999889,
+				45.4000053
+			],
+			"bbox": [
+				-71.8999889,
+				45.4000053,
+				-71.8999889,
+				45.4000053
+			]
+		},
+		{
+			"id": "halifax",
+			"name": "Halifax",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-63.6000045,
+				44.6500252
+			],
+			"bbox": [
+				-63.6000045,
+				44.6500252,
+				-63.6000045,
+				44.6500252
+			]
+		},
+		{
+			"id": "barrie",
+			"name": "Barrie",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-79.7000037,
+				44.3837624
+			],
+			"bbox": [
+				-79.7000037,
+				44.3837624,
+				-79.7000037,
+				44.3837624
+			]
+		},
+		{
+			"id": "kingston",
+			"name": "Kingston",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-76.4833008,
+				44.2337199
+			],
+			"bbox": [
+				-76.4833008,
+				44.2337199,
+				-76.4833008,
+				44.2337199
+			]
+		},
+		{
+			"id": "oshawa",
+			"name": "Oshawa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-78.8499781,
+				43.8799947
+			],
+			"bbox": [
+				-78.8499781,
+				43.8799947,
+				-78.8499781,
+				43.8799947
+			]
+		},
+		{
+			"id": "toronto",
+			"name": "Toronto",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-79.38945855491194,
+				43.66464454743429
+			],
+			"bbox": [
+				-79.38945855491194,
+				43.66464454743429,
+				-79.38945855491194,
+				43.66464454743429
+			]
+		},
+		{
+			"id": "kitchener",
+			"name": "Kitchener",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-80.5000066,
+				43.4499951
+			],
+			"bbox": [
+				-80.5000066,
+				43.4499951,
+				-80.5000066,
+				43.4499951
+			]
+		},
+		{
+			"id": "hamilton",
+			"name": "Hamilton",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-79.8299958,
+				43.2499815
+			],
+			"bbox": [
+				-79.8299958,
+				43.2499815,
+				-79.8299958,
+				43.2499815
+			]
+		},
+		{
+			"id": "london",
+			"name": "London",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-81.2499866,
+				42.9699986
+			],
+			"bbox": [
+				-81.2499866,
+				42.9699986,
+				-81.2499866,
+				42.9699986
+			]
+		},
+		{
+			"id": "sarnia",
+			"name": "Sarnia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-82.3999681,
+				42.9666396
+			],
+			"bbox": [
+				-82.3999681,
+				42.9666396,
+				-82.3999681,
+				42.9666396
+			]
+		},
+		{
+			"id": "windsor",
+			"name": "Windsor",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-83.0368525,
+				42.315457
+			],
+			"bbox": [
+				-83.0368525,
+				42.315457,
+				-83.0368525,
+				42.315457
+			]
+		}
+	],
+	"tourOrder": [
+		"edmonton",
+		"saskatoon",
+		"calgary",
+		"regina",
+		"kelowna",
+		"winnipeg",
+		"vancouver",
+		"abbotsford",
+		"victoria",
+		"st-john-s",
+		"quebec",
+		"sudbury",
+		"trois-rivieres",
+		"montreal",
+		"ottawa",
+		"sherbrooke",
+		"halifax",
+		"barrie",
+		"kingston",
+		"oshawa",
+		"toronto",
+		"kitchener",
+		"hamilton",
+		"london",
+		"sarnia",
+		"windsor"
+	]
+}

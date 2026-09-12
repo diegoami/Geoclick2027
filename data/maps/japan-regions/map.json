@@ -1,0 +1,857 @@
+{
+	"id": "japan-regions",
+	"name": "Japan — Prefectures",
+	"country": "Japan",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "hokkaido",
+			"name": "Hokkaidō",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				142.59085,
+				43.45565
+			],
+			"bbox": [
+				139.4143,
+				41.4011,
+				145.7674,
+				45.5102
+			]
+		},
+		{
+			"id": "aomori",
+			"name": "Aomori",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				140.7707,
+				40.856049999999996
+			],
+			"bbox": [
+				139.8604,
+				40.2113,
+				141.681,
+				41.5008
+			]
+		},
+		{
+			"id": "akita",
+			"name": "Akita",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				140.3302,
+				39.6906
+			],
+			"bbox": [
+				139.6977,
+				38.8817,
+				140.9627,
+				40.4995
+			]
+		},
+		{
+			"id": "iwate",
+			"name": "Iwate",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				141.3637,
+				39.6024
+			],
+			"bbox": [
+				140.6581,
+				38.7538,
+				142.0693,
+				40.451
+			]
+		},
+		{
+			"id": "yamagata",
+			"name": "Yamagata",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				140.08235000000002,
+				38.4189
+			],
+			"bbox": [
+				139.5487,
+				37.7227,
+				140.616,
+				39.1151
+			]
+		},
+		{
+			"id": "miyagi",
+			"name": "Miyagi",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				140.95495,
+				38.382999999999996
+			],
+			"bbox": [
+				140.2696,
+				37.7985,
+				141.6403,
+				38.9675
+			]
+		},
+		{
+			"id": "niigata",
+			"name": "Niigata",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				138.7384,
+				37.63785
+			],
+			"bbox": [
+				137.6146,
+				36.7307,
+				139.8622,
+				38.545
+			]
+		},
+		{
+			"id": "fukushima",
+			"name": "Fukushima",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				140.10095,
+				37.38065
+			],
+			"bbox": [
+				139.1601,
+				36.7971,
+				141.0418,
+				37.9642
+			]
+		},
+		{
+			"id": "ishikawa",
+			"name": "Ishikawa",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				136.78895,
+				36.803
+			],
+			"bbox": [
+				136.2267,
+				36.0745,
+				137.3512,
+				37.5315
+			]
+		},
+		{
+			"id": "tochigi",
+			"name": "Tochigi",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				139.7894,
+				36.67125
+			],
+			"bbox": [
+				139.312,
+				36.2031,
+				140.2668,
+				37.1394
+			]
+		},
+		{
+			"id": "toyama",
+			"name": "Toyama",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				137.24515,
+				36.6242
+			],
+			"bbox": [
+				136.7576,
+				36.2733,
+				137.7327,
+				36.9751
+			]
+		},
+		{
+			"id": "gunma",
+			"name": "Gunma",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				139.0254,
+				36.50255
+			],
+			"bbox": [
+				138.3768,
+				35.9695,
+				139.674,
+				37.0356
+			]
+		},
+		{
+			"id": "ibaraki",
+			"name": "Ibaraki",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				140.2566,
+				36.3301
+			],
+			"bbox": [
+				139.6537,
+				35.7354,
+				140.8595,
+				36.9248
+			]
+		},
+		{
+			"id": "nagano",
+			"name": "Nagano",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				138.01945,
+				36.0944
+			],
+			"bbox": [
+				137.3232,
+				35.1882,
+				138.7157,
+				37.0006
+			]
+		},
+		{
+			"id": "saitama",
+			"name": "Saitama",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				139.28785,
+				36.011250000000004
+			],
+			"bbox": [
+				138.7009,
+				35.7516,
+				139.8748,
+				36.2709
+			]
+		},
+		{
+			"id": "fukui",
+			"name": "Fukui",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				136.11605,
+				35.8116
+			],
+			"bbox": [
+				135.4531,
+				35.3376,
+				136.779,
+				36.2856
+			]
+		},
+		{
+			"id": "gifu",
+			"name": "Gifu",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				136.9409,
+				35.7948
+			],
+			"bbox": [
+				136.2573,
+				35.1388,
+				137.6245,
+				36.4508
+			]
+		},
+		{
+			"id": "tokyo",
+			"name": "Tokyo",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				139.39350000000002,
+				35.6944
+			],
+			"bbox": [
+				138.9228,
+				35.5115,
+				139.8642,
+				35.8773
+			]
+		},
+		{
+			"id": "yamanashi",
+			"name": "Yamanashi",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				138.64515,
+				35.57405
+			],
+			"bbox": [
+				138.1685,
+				35.1903,
+				139.1218,
+				35.9578
+			]
+		},
+		{
+			"id": "chiba",
+			"name": "Chiba",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				140.30615,
+				35.4898
+			],
+			"bbox": [
+				139.7528,
+				34.9,
+				140.8595,
+				36.0796
+			]
+		},
+		{
+			"id": "kanagawa",
+			"name": "Kanagawa",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				139.34345,
+				35.38575
+			],
+			"bbox": [
+				138.9003,
+				35.1175,
+				139.7866,
+				35.654
+			]
+		},
+		{
+			"id": "tottori",
+			"name": "Tottori",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				133.81635,
+				35.3253
+			],
+			"bbox": [
+				133.1279,
+				35.0506,
+				134.5048,
+				35.6
+			]
+		},
+		{
+			"id": "shimane",
+			"name": "Shimane",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				132.51704999999998,
+				35.32425
+			],
+			"bbox": [
+				131.6671,
+				34.306,
+				133.367,
+				36.3425
+			]
+		},
+		{
+			"id": "kyoto",
+			"name": "Kyōto",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				135.44985,
+				35.2357
+			],
+			"bbox": [
+				134.8632,
+				34.6991,
+				136.0365,
+				35.7723
+			]
+		},
+		{
+			"id": "shiga",
+			"name": "Shiga",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				136.09305,
+				35.22435
+			],
+			"bbox": [
+				135.7429,
+				34.7737,
+				136.4432,
+				35.675
+			]
+		},
+		{
+			"id": "shizuoka",
+			"name": "Shizuoka",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				138.3044,
+				35.1119
+			],
+			"bbox": [
+				137.4679,
+				34.5959,
+				139.1409,
+				35.6279
+			]
+		},
+		{
+			"id": "aichi",
+			"name": "Aichi",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				137.2395,
+				34.9867
+			],
+			"bbox": [
+				136.6734,
+				34.5893,
+				137.8056,
+				35.3841
+			]
+		},
+		{
+			"id": "hyogo",
+			"name": "Hyōgo",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				134.85410000000002,
+				34.93155
+			],
+			"bbox": [
+				134.2597,
+				34.1909,
+				135.4485,
+				35.6722
+			]
+		},
+		{
+			"id": "okayama",
+			"name": "Okayama",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				133.82999999999998,
+				34.8853
+			],
+			"bbox": [
+				133.2643,
+				34.4512,
+				134.3957,
+				35.3194
+			]
+		},
+		{
+			"id": "osaka",
+			"name": "Ōsaka",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				135.3958,
+				34.6359
+			],
+			"bbox": [
+				135.0853,
+				34.2743,
+				135.7063,
+				34.9975
+			]
+		},
+		{
+			"id": "hiroshima",
+			"name": "Hiroshima",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				132.7467,
+				34.628550000000004
+			],
+			"bbox": [
+				132.0504,
+				34.1898,
+				133.443,
+				35.0673
+			]
+		},
+		{
+			"id": "mie",
+			"name": "Mie",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				136.38185,
+				34.45910000000001
+			],
+			"bbox": [
+				135.8477,
+				33.6863,
+				136.916,
+				35.2319
+			]
+		},
+		{
+			"id": "nara",
+			"name": "Nara",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				135.87689999999998,
+				34.2988
+			],
+			"bbox": [
+				135.5511,
+				33.8381,
+				136.2027,
+				34.7595
+			]
+		},
+		{
+			"id": "yamaguchi",
+			"name": "Yamaguchi",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				131.551,
+				34.28365
+			],
+			"bbox": [
+				130.8616,
+				33.8952,
+				132.2404,
+				34.6721
+			]
+		},
+		{
+			"id": "kagawa",
+			"name": "Kagawa",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				134.01715000000002,
+				34.2761
+			],
+			"bbox": [
+				133.5919,
+				33.9979,
+				134.4424,
+				34.5543
+			]
+		},
+		{
+			"id": "wakayama",
+			"name": "Wakayama",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				135.5296,
+				33.926649999999995
+			],
+			"bbox": [
+				135.0655,
+				33.4815,
+				135.9937,
+				34.3718
+			]
+		},
+		{
+			"id": "tokushima",
+			"name": "Tokushima",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				134.1901,
+				33.8812
+			],
+			"bbox": [
+				133.6479,
+				33.5303,
+				134.7323,
+				34.2321
+			]
+		},
+		{
+			"id": "nagasaki",
+			"name": "Nagasaki",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				129.5088,
+				33.638850000000005
+			],
+			"bbox": [
+				128.6418,
+				32.5923,
+				130.3758,
+				34.6854
+			]
+		},
+		{
+			"id": "ehime",
+			"name": "Ehime",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				133.02085,
+				33.5251
+			],
+			"bbox": [
+				132.3811,
+				32.9089,
+				133.6606,
+				34.1413
+			]
+		},
+		{
+			"id": "fukuoka",
+			"name": "Fukuoka",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				130.61860000000001,
+				33.460049999999995
+			],
+			"bbox": [
+				130.0363,
+				32.9805,
+				131.2009,
+				33.9396
+			]
+		},
+		{
+			"id": "kochi",
+			"name": "Kōchi",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				133.45955,
+				33.298
+			],
+			"bbox": [
+				132.6234,
+				32.7403,
+				134.2957,
+				33.8557
+			]
+		},
+		{
+			"id": "saga",
+			"name": "Saga",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				130.14505,
+				33.245400000000004
+			],
+			"bbox": [
+				129.7582,
+				32.9436,
+				130.5319,
+				33.5472
+			]
+		},
+		{
+			"id": "oita",
+			"name": "Ōita",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				131.40845000000002,
+				33.204
+			],
+			"bbox": [
+				130.8347,
+				32.7316,
+				131.9822,
+				33.6764
+			]
+		},
+		{
+			"id": "kumamoto",
+			"name": "Kumamoto",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				130.64960000000002,
+				32.6258
+			],
+			"bbox": [
+				129.9753,
+				32.0909,
+				131.3239,
+				33.1607
+			]
+		},
+		{
+			"id": "miyazaki",
+			"name": "Miyazaki",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				131.29235,
+				32.101749999999996
+			],
+			"bbox": [
+				130.7124,
+				31.3812,
+				131.8723,
+				32.8223
+			]
+		},
+		{
+			"id": "kagoshima",
+			"name": "Kagoshima",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				130.6816,
+				31.1997
+			],
+			"bbox": [
+				130.1714,
+				30.2359,
+				131.1918,
+				32.1635
+			]
+		},
+		{
+			"id": "okinawa",
+			"name": "Okinawa",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				126.69545000000001,
+				26.3836
+			],
+			"bbox": [
+				123.6834,
+				24.2582,
+				129.7075,
+				28.509
+			]
+		}
+	],
+	"tourOrder": [
+		"hokkaido",
+		"aomori",
+		"akita",
+		"iwate",
+		"yamagata",
+		"miyagi",
+		"niigata",
+		"fukushima",
+		"ishikawa",
+		"tochigi",
+		"toyama",
+		"gunma",
+		"ibaraki",
+		"nagano",
+		"saitama",
+		"fukui",
+		"gifu",
+		"tokyo",
+		"yamanashi",
+		"chiba",
+		"kanagawa",
+		"tottori",
+		"shimane",
+		"kyoto",
+		"shiga",
+		"shizuoka",
+		"aichi",
+		"hyogo",
+		"okayama",
+		"osaka",
+		"hiroshima",
+		"mie",
+		"nara",
+		"yamaguchi",
+		"kagawa",
+		"wakayama",
+		"tokushima",
+		"nagasaki",
+		"ehime",
+		"fukuoka",
+		"kochi",
+		"saga",
+		"oita",
+		"kumamoto",
+		"miyazaki",
+		"kagoshima",
+		"okinawa"
+	]
+}
