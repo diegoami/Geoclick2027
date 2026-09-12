@@ -3,7 +3,7 @@
 	"private": true,
 	"version": "0.0.1",
 	"type": "module",
-	"workspaces": ["app", "packages/*"],
+	"workspaces": ["app", "packages/*", "desktop"],
 	"scripts": {
 		"dev": "npm run dev --workspace=app",
 		"build": "npm run build --workspaces --if-present",

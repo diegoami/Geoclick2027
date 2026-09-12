@@ -79,6 +79,13 @@ data/
   styles/base.json         shared MapLibre style, used by all maps
   source/                  raw Natural Earth downloads
   scripts/build-map.ts     the pipeline that turns source data into a map/
+
+desktop/                  Tauri wrapper (Iteration 7) - wraps app/build
+                           unmodified in a native window, no separate UI code
+  src-tauri/tauri.conf.json   window config, dev/build commands
+  src-tauri/src/lib.rs         registers the SQLite plugin + its migrations
+                                (the schema's single source of truth)
+  src-tauri/target/            gitignored, Cargo build output
 ```
 
 If you're fixing a UI bug in the quiz, you'll spend most of your time in
@@ -111,6 +118,38 @@ npm test         # run unit tests (quiz-engine, srs, app)
 npm run check    # svelte-check / type-check
 npm run lint      # prettier + eslint on the app
 ```
+
+## Running the desktop build (Iteration 7)
+
+```bash
+npm run dev --workspace=app    # start the Vite dev server first (port 5173)
+cd desktop && npm run dev      # in a second terminal: opens the app in a native window
+```
+
+`cd desktop && npm run build` produces real installers (`.deb`/`.rpm`/
+`.AppImage` on Linux) under `desktop/src-tauri/target/release/bundle/` -
+the actual double-click-to-install artifact. `app/build` is bundled in as-is
+via `beforeBuildCommand`, so there's no separate desktop-only frontend to
+maintain.
+
+Persistence swaps automatically: `app/src/lib/progressRepository.ts`'s
+`createProgressRepository()` detects Tauri (`isTauri()` from
+`@tauri-apps/api/core`) and picks the SQLite-backed repository
+(`sqliteProgressRepository.ts`) instead of the browser's `localStorage`
+one - same `ProgressRepository` interface either way, so nothing in
+`QuizView.svelte`/the home page needs to know which backend is active.
+
+**WSL2/WSLg gotcha, cost real time to track down:** the built binary
+exits immediately with no error unless `WEBKIT_DISABLE_DMABUF_RENDERER=1`
+is set - webkit2gtk's DMA-BUF renderer doesn't work under WSLg's GPU
+passthrough. Do **not** also set `LIBGL_ALWAYS_SOFTWARE=1` to "fix"
+rendering further - that disables WSLg's real `d3d12` Mesa driver
+(confirmed present at `/usr/lib/x86_64-linux-gnu/dri/d3d12_dri.so`) and
+produces a window that opens but never paints anything (MapLibre's
+WebGL context silently gets nothing to render into). The working
+combination, confirmed by actually launching the built binary:
+`GDK_BACKEND=x11 WEBKIT_DISABLE_DMABUF_RENDERER=1 ./target/release/app`.
+Real hardware (or a non-WSL Linux desktop) shouldn't need any of this.
 
 ## How work is expected to flow here
 

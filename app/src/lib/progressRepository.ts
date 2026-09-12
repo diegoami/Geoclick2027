@@ -69,6 +69,20 @@ function writeJson(key: string, value: unknown): void {
 	localStorage.setItem(key, JSON.stringify(value));
 }
 
+// Picks the SQLite-backed repository (desktop/src-tauri/src/lib.rs's
+// migrations()) when running inside the Tauri shell, localStorage
+// otherwise - the one place that decides, so call sites (QuizView, the
+// home page) stay backend-agnostic as designed. Dynamic import so a
+// plain-browser build never pulls in @tauri-apps/plugin-sql at all.
+export async function createProgressRepository(): Promise<ProgressRepository> {
+	const { isTauri } = await import('@tauri-apps/api/core');
+	if (isTauri()) {
+		const { createSqliteProgressRepository } = await import('./sqliteProgressRepository');
+		return createSqliteProgressRepository();
+	}
+	return createLocalStorageProgressRepository();
+}
+
 export function createLocalStorageProgressRepository(): ProgressRepository {
 	return {
 		async getCardStates(mapId) {

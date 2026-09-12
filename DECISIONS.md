@@ -217,3 +217,24 @@ or amend an entry here as part of that change, not as an afterthought.
 - **New features/fixes: branch first, merge to `main` only after the
   user has tested it locally and approved it.** `main` auto-deploys.
   Doc-only changes are the exception and go straight to `main`.
+- **Iteration 7 (desktop packaging) reprioritized ahead of the GUI/UX
+  evaluation**, on explicit user request after seeing all five demo maps
+  working — wanted a working desktop build to look at before spending
+  time on interface redesign, rather than following the numeric iteration
+  order.
+- **Tauri wraps `app/build` completely unmodified — no separate
+  desktop-only frontend code.** `desktop/src-tauri/tauri.conf.json`'s
+  `beforeBuildCommand` just runs the existing `npm run build
+  --workspace=app`; the only new code is the Rust plugin registration
+  (`desktop/src-tauri/src/lib.rs`) and one new `ProgressRepository`
+  implementation (`app/src/lib/sqliteProgressRepository.ts`) picked at
+  runtime by `createProgressRepository()`'s `isTauri()` check. Confirms
+  the "one shared web core, three shells" strategy from ARCHITECTURE.md
+  actually holds up in practice, not just on paper.
+- **SQLite schema is a direct column-for-column mirror of the
+  `ProgressRepository` interface** (`card_states`/
+  `last_session_summaries` tables in `lib.rs`'s `migrations()`), not a
+  redesigned data model. The interface was already deliberately
+  backend-agnostic (see Iteration 5's design) specifically so this swap
+  wouldn't need one — confirmed by writing the SQLite implementation
+  with zero changes to the interface itself.

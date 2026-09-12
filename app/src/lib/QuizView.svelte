@@ -12,7 +12,11 @@
 		type QuizSession
 	} from '@geoclick/quiz-engine';
 	import type { MapDefinition } from './mapDefinition';
-	import { createLocalStorageProgressRepository, todayLocalDate } from './progressRepository';
+	import {
+		createProgressRepository,
+		todayLocalDate,
+		type ProgressRepository
+	} from './progressRepository';
 	import {
 		isDue,
 		rate,
@@ -23,7 +27,10 @@
 
 	let { mapId }: { mapId: string } = $props();
 
-	const progressRepository = createLocalStorageProgressRepository();
+	// Assigned at the top of onMount's async init, before anything below
+	// (computeNotDueIds, the completion $effect, onSlipPointerUp) can run -
+	// a plain module-scope variable, not $state, same as cardStatesByTargetId.
+	let progressRepository: ProgressRepository;
 
 	let container: HTMLDivElement;
 	let trayEl: HTMLDivElement;
@@ -429,6 +436,7 @@
 		let cancelled = false;
 
 		(async () => {
+			progressRepository = await createProgressRepository();
 			const { mapDef: loadedMapDef, style } = await fetchMapDefAndStyle(mapId);
 			if (cancelled) return;
 			mapDef = loadedMapDef;

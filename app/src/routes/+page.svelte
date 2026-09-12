@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import { resolve } from '$app/paths';
 	import {
-		createLocalStorageProgressRepository,
+		createProgressRepository,
 		todayLocalDate,
 		type SessionSummary
 	} from '$lib/progressRepository';
@@ -30,8 +30,8 @@
 	let dueStatuses = $state<Record<string, DueStatus | undefined>>({});
 
 	onMount(() => {
-		const repository = createLocalStorageProgressRepository();
 		(async () => {
+			const repository = await createProgressRepository();
 			const summaryEntries = await Promise.all(
 				demoMaps.map(
 					async (map) => [map.id, await repository.getLastSessionSummary(map.id)] as const

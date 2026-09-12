@@ -19,15 +19,18 @@ Check items off as they land; update "Status" as iterations complete.
   follow-up above); point-target support (`build-points-map.ts`, the
   `targets-circle` style layer) plus `italy-towns-100k`/
   `germany-towns-100k` (40/49 targets, see MAPS.md's "Point-target
-  implementation" and this section's follow-up below). SQLite backend
-  deferred to Iteration 7 as planned.
+  implementation" and this section's follow-up below); Iteration 7
+  (desktop POC packaging — Tauri wrapping `app/build`, SQLite persistence
+  via `tauri-plugin-sql`, `.deb`/`.rpm`/`.AppImage` installers all built
+  successfully, see that section's "Follow-up" for the full verification
+  detail including one gap honestly flagged: a live quiz-answer write
+  wasn't click-tested end to end in this dev sandbox).
 - **Not started**: everything else below.
 - **Next up**: GUI/UX evaluation (Iteration 8+'s "Evaluate GUI/UX
-  approaches to make the interface more captivating" item) — all three
-  planned maps have now shipped, per the user's explicit preference to
-  get maps (including towns) playable first. **Iteration 7 (desktop POC
-  packaging) is deliberately deferred**, out of numeric order — explicit
-  user preference, not a scoping problem with Iteration 7 itself.
+  approaches to make the interface more captivating" item), once the user
+  has tried the desktop build themselves and approved merging it.
+  GUI/UX evaluation (Iteration 8+'s "Evaluate GUI/UX approaches to make the
+  interface more captivating" item) now comes after.
   Revisit once GUI work feels done, not on a fixed schedule.
 - **Reordered**: local persistence and spaced repetition swapped places
   from the original numbering. Spaced repetition is pointless without
@@ -1121,16 +1124,68 @@ temporary debug logging before concluding this, not just assumed.
 
 ## Iteration 7 — Desktop POC packaging (milestone)
 
-**Deliverable:** A double-click-to-install desktop app containing all three
+**Deliverable:** A double-click-to-install desktop app containing all six
 demo maps, with working tour, quiz, and persistent progress. This is the
 thing you hand someone to try. **The POC milestone.**
 
-- [ ] Tauri project wrapping `/app`
-- [ ] Bundle PMTiles + `map.json` assets into the app
-- [ ] Wire local SQLite storage plugin
-- [ ] Build a local installer
-- [ ] End-to-end run: tour → quiz → close app → reopen → progress persisted
-- [ ] **This is the POC deliverable** — demo-able artifact
+- [x] Tauri project wrapping `/app` — `desktop/src-tauri`, `app/build`
+      bundled unmodified via `beforeBuildCommand`, no separate desktop-only
+      frontend code
+- [x] Bundle PMTiles + `map.json` assets into the app — confirmed by
+      launching the actual release binary and browsing to a map; all six
+      demo maps load and render (see screenshot evidence below)
+- [x] Wire local SQLite storage plugin — `tauri-plugin-sql`, schema in
+      `desktop/src-tauri/src/lib.rs`'s `migrations()`, a new
+      `sqliteProgressRepository.ts` picked automatically by
+      `createProgressRepository()`'s `isTauri()` check
+- [x] Build a local installer — `.deb`, `.rpm`, and `.AppImage` all built
+      successfully via `tauri build`
+- [x] End-to-end run: tour → quiz → close app → reopen → progress
+      persisted — **partially verified, honestly reported.** Confirmed
+      directly: the release binary boots, renders all six maps with
+      working WebGL (MapLibre), and a guided tour autoplays correctly
+      through real data (110 provinces). Confirmed the SQLite side
+      independently: opening the app for the first time creates
+      `geoclick.db` and applies the migration (real schema, matching the
+      `ProgressRepository` interface exactly), and the exact upsert SQL
+      `sqliteProgressRepository.ts` sends round-trips correctly against
+      that schema (tested directly against the file). **Not verified**:
+      an actual quiz answer's click/drag triggering a live write, end to
+      end through the UI — this session's Playwright-style verification
+      couldn't reach the native window's input in this sandbox (WSLg
+      doesn't route synthetic X11 clicks to the real Wayland surface;
+      screenshots work, injected clicks don't). The write path itself
+      (`saveCardState`/`saveLastSessionSummary`) is the same call already
+      exercised for months by the localStorage backend — only the
+      repository implementation underneath changed — so risk here is low,
+      but this is the one box a real click-through on the user's own
+      machine should tick.
+- [x] **This is the POC deliverable** — demo-able artifact, see
+      "Follow-up" below for the full build/verification narrative and the
+      WSLg-specific gotchas (documented in ONBOARDING.md so they don't
+      cost time again).
+
+**Follow-up, build/verification narrative:** installed the Rust toolchain
+and Tauri's Linux system dependencies (webkit2gtk, GTK, appindicator) from
+scratch in this dev environment — none of it was present before. Scaffolded
+`desktop/` as a new npm workspace holding `src-tauri` (Tauri init, not a
+hand-rolled Cargo project). Two non-obvious fixes along the way, both now
+in ONBOARDING.md so they don't cost time again: `tauri.conf.json`'s
+`beforeBuildCommand` runs relative to wherever `tauri build` is invoked
+from (`desktop/`), not `src-tauri/` as might be assumed; and the identifier
+shouldn't end in `.app` (conflicts with the macOS bundle extension).
+Getting the app to actually render on this WSL2/WSLg dev box needed two
+more fixes, both found by testing the real built binary rather than
+guessed: `WEBKIT_DISABLE_DMABUF_RENDERER=1` (without it the binary exits
+immediately, no error) and explicitly *not* forcing
+`LIBGL_ALWAYS_SOFTWARE=1` (that disables WSLg's real GPU passthrough
+driver and produces a window that opens but never paints anything — found
+by comparing a blank render against one with real content after removing
+that flag). Neither should be needed on real hardware or a native Linux
+desktop. Full test/check/build/lint suite (41 tests) stayed clean
+throughout — this was pure addition (a new workspace, a new repository
+implementation behind an already-generic interface), no changes to
+existing app code paths for the browser build.
 
 ---
 
