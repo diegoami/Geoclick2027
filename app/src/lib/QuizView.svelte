@@ -5,6 +5,8 @@
 	import { resolve } from '$app/paths';
 	import { fetchMapDefAndStyle, createMap } from './geoclickMap';
 	import MapNav from './MapNav.svelte';
+	import { t, tPlural } from './i18n.svelte';
+	import { mapDisplayName } from './mapCatalog';
 	import {
 		createQuizSession,
 		attemptMatch,
@@ -597,23 +599,25 @@
 	{#if error}
 		<p class="error">{error}</p>
 	{:else}
-		<MapNav {mapId} mapName={mapDef?.name} active="quiz">
+		<MapNav {mapId} mapName={mapDisplayName(mapId) ?? mapDef?.name} active="quiz">
 			{#snippet subtitle()}
 				{#if mode === 'practice'}
-					Practice mode —
+					{t('quiz.practiceModePrefix')}
 				{/if}
 				{#if session}
-					Drag each name onto its region — {session.items.filter((i) => i.status !== 'pending')
-						.length} / {session.items.length} placed
+					{t('quiz.subtitle', {
+						placed: session.items.filter((i) => i.status !== 'pending').length,
+						total: session.items.length
+					})}
 				{/if}
 			{/snippet}
 		</MapNav>
 
 		{#if phase === 'upToDate'}
 			<div class="score-panel">
-				<h2>Up to date!</h2>
-				<p>No reviews needed on this map right now.</p>
-				<button onclick={startPractice}>Practice all regions</button>
+				<h2>{t('quiz.upToDate.title')}</h2>
+				<p>{t('quiz.upToDate.body')}</p>
+				<button onclick={startPractice}>{t('quiz.practiceAllRegions')}</button>
 			</div>
 		{/if}
 
@@ -622,36 +626,41 @@
 			<div class="score-panel">
 				<button
 					class="score-panel-close"
-					aria-label="Close and view the map"
+					aria-label={t('quiz.closeAriaLabel')}
 					onclick={() => (scorePanelDismissed = true)}
 				>
 					&times;
 				</button>
-				<h2>{mode === 'due' && allCaughtUp ? 'All caught up!' : 'Done!'}</h2>
+				<h2>{mode === 'due' && allCaughtUp ? t('quiz.allCaughtUp') : t('quiz.done')}</h2>
 				<p>
-					<strong>{score.perfect}</strong> / {score.total} placed correctly on the first try.
+					<strong>{score.perfect}</strong>
+					{t('quiz.scoreLineRest', { total: score.total })}
 				</p>
-				<p>{score.totalErrors} total mistake{score.totalErrors === 1 ? '' : 's'}.</p>
+				<p>{tPlural('quiz.totalMistakes', score.totalErrors, { count: score.totalErrors })}</p>
 				{#if revealedCount > 0}
 					<p class="revealed-note">
-						{revealedCount} revealed after too many misses.
+						{t('quiz.revealedNote', { count: revealedCount })}
 					</p>
 				{/if}
 				{#if mode === 'due' && allCaughtUp}
 					<p class="next-review-note">
-						Next review in {daysUntilNextReview} day{daysUntilNextReview === 1 ? '' : 's'}.
+						{tPlural('quiz.nextReview', daysUntilNextReview ?? 0, {
+							count: daysUntilNextReview ?? 0
+						})}
 					</p>
 					<div class="score-panel-actions">
-						<a class="score-panel-button" href={resolve('/')}>Back to maps</a>
-						<button class="secondary" onclick={startPractice}>Practice all regions</button>
+						<a class="score-panel-button" href={resolve('/')}>{t('quiz.backToMaps')}</a>
+						<button class="secondary" onclick={startPractice}
+							>{t('quiz.practiceAllRegions')}</button
+						>
 					</div>
 				{:else}
 					{#if mode === 'practice'}
-						<p class="practice-note">Practice results don't affect your review schedule.</p>
+						<p class="practice-note">{t('quiz.practiceNote')}</p>
 					{/if}
 					<div class="score-panel-actions">
-						<a class="score-panel-button secondary" href={resolve('/')}>Back to maps</a>
-						<button onclick={playAgain}>Play again</button>
+						<a class="score-panel-button secondary" href={resolve('/')}>{t('quiz.backToMaps')}</a>
+						<button onclick={playAgain}>{t('quiz.playAgain')}</button>
 					</div>
 				{/if}
 			</div>
@@ -667,7 +676,7 @@
 					class="tray-handle"
 					role="slider"
 					tabindex="0"
-					aria-label="Resize name tray"
+					aria-label={t('quiz.resizeTrayAriaLabel')}
 					aria-valuemin={Math.round(trayMinPx)}
 					aria-valuemax={Math.round(trayMaxPx)}
 					aria-valuenow={Math.round(trayHeightPx ?? trayMinPx)}

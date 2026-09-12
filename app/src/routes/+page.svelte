@@ -7,112 +7,9 @@
 		type SessionSummary
 	} from '$lib/progressRepository';
 	import { isDue } from '@geoclick/srs';
-
-	// Grouped by country (authored alphabetically below), and each
-	// country's own maps sorted alphabetically by label - every country
-	// already ships as a regions/provinces/towns-style pair (a trio for
-	// Italy, which also has a provinces map), so grouping keeps that
-	// pairing visible instead of flattening 28 maps across 14 countries
-	// into one unsorted, chronological list. See DECISIONS.md for why
-	// grouping was chosen over a flat alphabetical list.
-	const mapGroups = [
-		{
-			country: 'Australia',
-			maps: [
-				{ id: 'australia-regions', label: 'States' },
-				{ id: 'australia-towns-100k', label: 'Towns' }
-			]
-		},
-		{
-			country: 'Canada',
-			maps: [
-				{ id: 'canada-regions', label: 'Provinces' },
-				{ id: 'canada-towns-100k', label: 'Towns' }
-			]
-		},
-		{
-			country: 'France',
-			maps: [
-				{ id: 'france-regions', label: 'Regions' },
-				{ id: 'france-towns-100k', label: 'Towns' }
-			]
-		},
-		{
-			country: 'Germany',
-			maps: [
-				{ id: 'germany-states', label: 'States' },
-				{ id: 'germany-towns-100k', label: 'Towns' }
-			]
-		},
-		{
-			country: 'Great Britain',
-			maps: [
-				{ id: 'great-britain-regions', label: 'Regions' },
-				{ id: 'great-britain-towns-100k', label: 'Towns' }
-			]
-		},
-		{
-			country: 'Italy',
-			maps: [
-				{ id: 'italy-provinces', label: 'Provinces' },
-				{ id: 'italy-regions', label: 'Regions' },
-				{ id: 'italy-towns-100k', label: 'Towns' }
-			]
-		},
-		{
-			country: 'Japan',
-			maps: [
-				{ id: 'japan-regions', label: 'Prefectures' },
-				{ id: 'japan-towns-100k', label: 'Towns' }
-			]
-		},
-		{
-			country: 'Netherlands',
-			maps: [
-				{ id: 'netherlands-regions', label: 'Provinces' },
-				{ id: 'netherlands-towns-100k', label: 'Towns' }
-			]
-		},
-		{
-			country: 'Poland',
-			maps: [
-				{ id: 'poland-regions', label: 'Regions' },
-				{ id: 'poland-towns-100k', label: 'Towns' }
-			]
-		},
-		{
-			country: 'Portugal',
-			maps: [
-				{ id: 'portugal-regions', label: 'Districts' },
-				{ id: 'portugal-towns-100k', label: 'Towns' }
-			]
-		},
-		{
-			country: 'Spain',
-			maps: [
-				{ id: 'spain-regions', label: 'Regions' },
-				{ id: 'spain-towns-100k', label: 'Towns' }
-			]
-		},
-		{
-			country: 'Sweden',
-			maps: [
-				{ id: 'sweden-regions', label: 'Regions' },
-				{ id: 'sweden-towns-100k', label: 'Towns' }
-			]
-		},
-		{
-			country: 'Ukraine',
-			maps: [
-				{ id: 'ukraine-regions', label: 'Regions' },
-				{ id: 'ukraine-towns-100k', label: 'Towns' }
-			]
-		},
-		{
-			country: 'USA',
-			maps: [{ id: 'usa-states', label: 'States' }]
-		}
-	];
+	import { t, tPlural } from '$lib/i18n.svelte';
+	import LanguageSwitcher from '$lib/LanguageSwitcher.svelte';
+	import { mapGroups } from '$lib/mapCatalog';
 
 	// Flat view of every map - onMount's data-loading loop below doesn't
 	// care about grouping, only about (id) -> per-map progress data, so it
@@ -164,8 +61,11 @@
 </script>
 
 <main>
-	<h1>Geoclick</h1>
-	<p>Pick a demo map to explore.</p>
+	<div class="header-row">
+		<h1>Geoclick</h1>
+		<LanguageSwitcher />
+	</div>
+	<p>{t('home.subtitle')}</p>
 	<div class="groups">
 		{#each mapGroups as group (group.country)}
 			<section class="country-group">
@@ -176,17 +76,21 @@
 						{@const due = dueStatuses[map.id]}
 						<li>
 							<a href={resolve('/map/[mapId]', { mapId: map.id })}>
-								<span class="map-name">{map.label}</span>
+								<span class="map-name">{t(map.labelKey)}</span>
 								{#if due && due.kind !== 'notStarted'}
 									<span class="due-status" class:up-to-date={due.kind === 'upToDate'}>
-										{due.kind === 'upToDate' ? 'No reviews needed' : `${due.count} to review`}
+										{due.kind === 'upToDate'
+											? t('home.due.upToDate')
+											: t('home.due.toReview', { count: due.count })}
 									</span>
 								{/if}
 								{#if summary}
 									<span class="last-result">
-										Last: {summary.perfect}/{summary.total}
+										{t('home.lastResult', { perfect: summary.perfect, total: summary.total })}
 										{#if summary.totalErrors > 0}
-											({summary.totalErrors} mistake{summary.totalErrors === 1 ? '' : 's'})
+											{tPlural('home.mistakeCount', summary.totalErrors, {
+												count: summary.totalErrors
+											})}
 										{/if}
 									</span>
 								{/if}
@@ -205,6 +109,16 @@
 		margin: 4rem auto;
 		font-family: system-ui, sans-serif;
 		text-align: center;
+	}
+	.header-row {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.75rem;
+		flex-wrap: wrap;
+	}
+	.header-row h1 {
+		margin: 0;
 	}
 	.groups {
 		display: flex;

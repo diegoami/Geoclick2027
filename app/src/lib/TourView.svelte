@@ -4,6 +4,8 @@
 	import 'maplibre-gl/dist/maplibre-gl.css';
 	import { fetchMapDefAndStyle, createMap } from './geoclickMap';
 	import MapNav from './MapNav.svelte';
+	import { t } from './i18n.svelte';
+	import { mapDisplayName } from './mapCatalog';
 	import { fetchTour, type Tour } from './tour';
 	import type { MapDefinition, Target } from './mapDefinition';
 
@@ -163,15 +165,17 @@
 	{#if error}
 		<p class="error">{error}</p>
 	{:else}
-		<MapNav {mapId} mapName={mapDef?.name} active="tour" />
+		<MapNav {mapId} mapName={mapDisplayName(mapId) ?? mapDef?.name} active="tour" />
 
 		{#if tour}
 			<div class="controls">
-				<button onclick={back} disabled={stepIndex === 0}>‹ Prev</button>
+				<button onclick={back} disabled={stepIndex === 0}>{t('tour.prev')}</button>
 				<button onclick={togglePlay}>
-					{#if finished}Replay{:else if playing}Pause{:else}▶ Play{/if}
+					{#if finished}{t('tour.replay')}{:else if playing}{t('tour.pause')}{:else}{t(
+							'tour.play'
+						)}{/if}
 				</button>
-				<button onclick={advance} disabled={finished}>Next ›</button>
+				<button onclick={advance} disabled={finished}>{t('tour.next')}</button>
 				<span class="progress">{stepIndex + 1} / {tour.steps.length}</span>
 				<select
 					class="speed"

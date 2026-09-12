@@ -62,14 +62,20 @@ Check items off as they land; update "Status" as iterations complete.
   indicators, sound, correct-drop juiciness) and a broader component/
   design-system pass remain open on the GUI/UX item — revisit whenever
   it feels worth another round, not on a fixed schedule. Three more items
-  requested 2026-09-12, tracked in the Iteration 8+ backlog below: the
-  home page's map list is reorganized (`feature/reorganize-maps-list`,
-  built as parallel background work in its own worktree, awaiting the
-  user's local try-out before merging to `main` per CLAUDE.md); German/
-  Italian UI languages, also picked up as parallel background work in its
-  own worktree/branch, still in progress; and optional cross-device score
+  requested 2026-09-12, tracked in the Iteration 8+ backlog below:
+  reorganizing the home page's map list (**done, merged to `main`**);
+  German/Italian UI languages (**done**, on `feature/i18n-de-it`, awaiting
+  the user's local try-out before merging — see DECISIONS.md's
+  "Internationalization (i18n)" entry); and optional cross-device score
   sync via sign-in (paused on a provider/backend decision only the user
-  can make, not started as background work for that reason).
+  can make, not started as background work for that reason — built so far
+  on `feature/supabase-sso-sync`, also awaiting a real Supabase project
+  before it can be tried out). All three were originally attempted as
+  parallel background work, each in its own git worktree — abandoned
+  after the first two finished, since a worktree's `node_modules` isn't
+  populated by default, which blocked real `npm run dev` browser
+  verification (see this file's "Process notes" section). Reconciled and
+  finished one at a time in the normal checkout instead.
 - **Reordered**: local persistence and spaced repetition swapped places
   from the original numbering. Spaced repetition is pointless without
   somewhere to remember what's due across sessions — user accounts
@@ -1406,21 +1412,20 @@ loop actually feels good. Candidates below, in rough priority order.
       across 14 countries in one flat, unsorted `<ul>`
       (`app/src/routes/+page.svelte`'s `demoMaps` array, in the order each
       country was added) was already hard to scan and would only get worse
-      as more countries are added. Picked up as parallel background work in
-      its own worktree/branch (`feature/reorganize-maps-list`). Built as
-      a `mapGroups` array — one entry per country, alphabetical by country
-      name, each country's own maps (regions/provinces/towns, a trio for
-      Italy) alphabetical by label — rendered as a heading per country
-      followed by that country's map links, 2 columns on wider screens via
-      CSS grid (single column below the existing 640px breakpoint used
-      elsewhere, e.g. `MapNav.svelte`), collapsing to one column at phone
-      width. Per-map due-status/last-result badges untouched — same
-      `dueStatuses`/`lastSessions` state and `onMount` data-loading loop as
-      before, just fed by a flattened view of `mapGroups`
+      as more countries are added. Built as a `mapGroups` array — one
+      entry per country, alphabetical by country name, each country's own
+      maps (regions/provinces/towns, a trio for Italy) alphabetical by
+      label — rendered as a heading per country followed by that
+      country's map links, 2 columns on wider screens via CSS grid (single
+      column below the existing 640px breakpoint used elsewhere, e.g.
+      `MapNav.svelte`), collapsing to one column at phone width. Per-map
+      due-status/last-result badges untouched — same `dueStatuses`/
+      `lastSessions` state and `onMount` data-loading loop as before, just
+      fed by a flattened view of `mapGroups`
       (`mapGroups.flatMap((g) => g.maps)`) instead of a hand-written id
       list. See DECISIONS.md for why grouping was chosen over a flat
-      alphabetical list.
-- [ ] **Add German and Italian as UI languages** (at least) — requested
+      alphabetical list. Merged to `main`.
+- [x] **Add German and Italian as UI languages** (at least) — requested
       directly by the user (2026-09-12), alongside map-list reorganization
       and optional SSO above. Scoped to the app's own UI chrome (nav
       labels, buttons, status text) via a language switcher — explicitly
@@ -1428,8 +1433,22 @@ loop actually feels good. Candidates below, in rough priority order.
       geographic proper nouns already localized per-country through
       `NAME_FIXUPS`/`--name-field`, a different and already-solved
       problem, see MAPS.md). Picked up as parallel background work in its
-      own worktree/branch — see DECISIONS.md for which i18n approach was
-      chosen and why.
+      own worktree/branch (`feature/i18n-de-it`) — see DECISIONS.md's
+      "Internationalization (i18n)" entry for which approach was chosen
+      and why. Built as a small hand-rolled dictionary + `t()`/`tPlural()`
+      helper (`app/src/lib/i18n.svelte.ts`, a module-scope Svelte 5 rune),
+      not a library — around 35 UI strings across `MapNav.svelte`,
+      `+page.svelte`, `QuizView.svelte`, and `TourView.svelte`, translated
+      into natural English/German/Italian. A `LanguageSwitcher.svelte`
+      (three small EN/DE/IT pills, matching GUI/UX round 1's visual
+      language) is shown on every map-scoped view via `MapNav` and on the
+      home page header. Chosen language persists via `localStorage`
+      (guarded the same way `progressRepository.ts` is, for prerendering).
+      Verified in a real browser: switching language updates nav labels,
+      home page text, and quiz/tour status text live; the choice survives
+      a reload; a full quiz playthrough on `sweden-towns-100k` in Italian
+      and German showed correctly translated tray subtitle, score panel,
+      and "up to date"/practice-mode text throughout.
 - [x] **Evaluate GUI/UX approaches to make the interface more captivating —
       first round, merged to `main` 2026-09-12** (from
       `feature/gui-ux-nav-labels-colors`).
