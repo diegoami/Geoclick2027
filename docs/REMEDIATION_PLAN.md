@@ -276,7 +276,7 @@ ORCHESTRATION.md § Automerge).
 | GC-002 | **merged** | `02164f7` | v0.1.1 | `npm run setup-hooks`; pure-delete pushes skip gates; `doctor` still lists 10 pre-programme `feature/*` branches as "your call", not zombies |
 | GC-003 | **merged** | `598da64` | v0.1.1 | real Chromium via Playwright, not jsdom; needs `npx playwright install chromium` once per machine |
 | GC-010 | **merged** | `7fa06f0` | v0.1.1 | cap 365 d (bites at 7th clean review); ease +0.1 to 2.5; no migration needed (overlong intervals need 393 d of history). Noted: `packages/*` is outside Prettier's config and the lint gate |
-| GC-020 | todo | — | v0.1.1 | |
+| GC-020 | **merged** | `1748edb` | v0.1.1 | both crashes reproduced on main first; button gated (not just `clearAllVisuals` - that alone races the load handler); timers in a Set, not one handle |
 | GC-030 | todo | — | v0.1.1 | |
 | GC-040 | todo | — | v0.1.1 | untestable without an Android device |
 | GC-050 | todo | — | v0.1.1 | |
