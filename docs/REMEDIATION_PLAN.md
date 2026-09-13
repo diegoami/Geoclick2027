@@ -280,7 +280,7 @@ ORCHESTRATION.md § Automerge).
 | GC-030 | **merged** | `25a788f` | v0.1.1 | 44 maps / 1410 targets clean; negative fixtures committed so "can fail" stays tested; `index.json` ships as `/maps/index.json` (GC-071 can use its `targetCount`) |
 | GC-040 | **merged** | `063d602` | v0.1.1 | migrator tested against real SQLite (`node:sqlite`) + cross-checked vs lib.rs; native bridge still device-only - manual plan in the merge commit (`git show 063d602^2`) |
 | GC-050 | **merged** | `1d0593e` | v0.1.1 | set at hydration; static home-page HTML paints `en` for an instant first (inline script would close it - not worth the duplicated key) |
-| GC-060 | todo | — | v0.1.1 | |
+| GC-060 | **merged** | `1deb05d` | v0.1.1 | "no search UI" re-affirmed at 22 countries (re-open at ~40 or a real complaint) - the loop's call, overrulable |
 | GC-070 | todo | — | v0.1.1 | |
 | GC-021 | todo | — | v0.1.2 | |
 | GC-031 | todo | — | v0.1.2 | |
