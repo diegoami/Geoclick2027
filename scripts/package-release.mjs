@@ -26,8 +26,15 @@ const fail = (msg) => {
 	console.error(`\npackage-release: ${msg}`);
 	process.exit(1);
 };
+// Only npm and .bat files need a shell on Windows. Everything else runs
+// without one, because cmd.exe would eat the ^ in `git rev-parse v1.2.3^{commit}`.
 const run = (cmd, args, opts = {}) =>
-	spawnSync(cmd, args, { cwd: ROOT, encoding: 'utf8', shell: WIN, ...opts });
+	spawnSync(cmd, args, {
+		cwd: ROOT,
+		encoding: 'utf8',
+		shell: WIN && (cmd === 'npm' || /\.(bat|cmd)$/i.test(cmd)),
+		...opts
+	});
 const step = (label, cmd, args, opts = {}) => {
 	console.log(`\n=== ${label} ===`);
 	const res = run(cmd, args, { stdio: 'inherit', ...opts });
