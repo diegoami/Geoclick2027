@@ -105,14 +105,20 @@ Check items off as they land; update "Status" as iterations complete.
   real constraint — see CLAUDE.md), "nice-to-have" tier dropped from
   scope, and the agent roster cut from four engines (haiku/sonnet/opus/
   fable) to two (sonnet implements, opus reviews/merges/orchestrates).
-  **The revision landed (2026-09-13, second draft):** 15 tasks (the
-  nice-to-have tier `#20`–`#30` and the already-proven worktree spike are
-  out), 4 waves, 3 local tags — `v0.1.1` and `v0.1.2` as fix batches, then
-  `v0.2.0` as the closing milestone ("known issues from the Sept 13 review
-  resolved"; `1.0.0` stays reserved for the real public launch). Task state
-  is one gitignored JSON file per task under `.orchestrator/state/`, driven
-  by `scripts/task.mjs`; the review handoff is a branch plus a diff;
-  `scripts/seed-forge.mjs` is deleted. Not started.
+  **Final shape (2026-09-13, third draft):** **one Opus agent working one
+  task at a time in a loop** — no multi-agent split, no subagents, no
+  worktrees, no leases, no ports to allocate. 19 tasks / 5 waves, because
+  the nice-to-have tier `#20`–`#30` was restored on an effort test ("do
+  those, if they are low effort"), so all 30 review findings are now
+  assigned; only the already-proven worktree spike stays dropped. 3 local
+  tags: `v0.1.1` and `v0.1.2` as fix batches, `v0.2.0` as the closing
+  milestone the product owner ships ("known issues from the Sept 13 review
+  resolved"; `1.0.0` stays reserved for the real public launch). Progress is
+  trackable in the **committed ledger table** in `docs/REMEDIATION_PLAN.md`
+  (the `.orchestrator/state/*.json` files are gitignored machine state).
+  Zombie hygiene is an explicit requirement: `node scripts/task.mjs doctor`
+  runs every iteration and before every release. `scripts/seed-forge.mjs` is
+  deleted. Not started.
 - **Git worktrees failed for parallel background feature work on this
   project as attempted 2026-09-12 — RESOLVED 2026-09-13.** Root cause was
   exactly as suspected: a `git worktree` checkout doesn't get its own
