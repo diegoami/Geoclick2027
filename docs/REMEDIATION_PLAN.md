@@ -290,7 +290,7 @@ ORCHESTRATION.md § Automerge).
 | GC-004 | **merged** | `eac332e` | v0.2.0 | data/tsconfig.json strict + root check/lint cover data/scripts; 13 `any` → narrow GeoJSON interfaces; esbuild diff proves types-only (plus `cause` on one error) |
 | GC-022 | **merged** | `d1f6909` | v0.2.0 | setText in all 4 views; popup CSS once in app/src/app.css - computed styles + widths identical before/after in explore, tour, overview, quiz (incl. revealed) |
 | GC-032 | **merged** | `9667bfb` | v0.2.0 | colorIndex 0-5 per target from tile adjacency (all 44 maps, 0 same-colour neighbours, asserted in mapColors.test.ts); unsolved opacity 0.55; hover recoloured (ΔE 16→38 vs palette) - verified on italy-provinces + germany-towns quizzes |
-| GC-033 | todo | — | v0.2.0 | last task; v0.2.0 is cut after it |
+| GC-033 | **merged** | `1b5b022` | v0.2.0 | default tour speed from tour length (3-min budget): italy-provinces 2× (5:30 → 2:45), russia-regions + japan-towns-100k 1.5×, other 41 maps unchanged; menu still overrides |
 | GC-080 | **merged** | `a53c541` | v0.2.0 | decision: stay in plain git (pack 15.6 MiB, 14.2 MB of it tileset history); revisit at 100 MB / 25 MB tileset / 60 countries |
 
 | Release | Status | Tag | Date |
