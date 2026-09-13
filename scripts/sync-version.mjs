@@ -32,7 +32,18 @@ if (!/^\d+\.\d+\.\d+$/.test(version)) {
 	process.exit(1);
 }
 
+// Android installs a new APK over an old one only if its versionCode is
+// higher, so it tracks the version: major*10000 + minor*100 + patch
+// (0.3.0 -> 300, 1.2.3 -> 10203). FT-07; it was stuck at 1 before.
+const [major, minor, patch] = version.split('.').map(Number);
+if (minor > 99 || patch > 99) {
+	console.error(`Version ${version}: minor and patch must stay under 100 for Android's versionCode.`);
+	process.exit(1);
+}
+const versionCode = String(major * 10000 + minor * 100 + patch);
+
 // Each target: how to read the current value, and how to write a new one.
+// `expected` overrides the value a target should hold (default: the version).
 const targets = [
 	{
 		label: 'package.json',
@@ -77,6 +88,13 @@ const targets = [
 		read: (s) => s.match(/versionName\s+"([^"]+)"/)?.[1],
 		write: (s, v) => s.replace(/(versionName\s+)"[^"]+"/, `$1"${v}"`)
 	},
+	{
+		label: 'android build.gradle (versionCode)',
+		file: path.join(REPO_ROOT, 'mobile', 'android', 'app', 'build.gradle'),
+		expected: versionCode,
+		read: (s) => s.match(/versionCode\s+(\d+)/)?.[1],
+		write: (s, v) => s.replace(/(versionCode\s+)\d+/, `$1${v}`)
+	},
 	// Lockfiles record the workspace's own versions too; left stale, the next
 	// `cargo build` rewrites Cargo.lock (dirty tree) and `npm ci` can refuse a
 	// package-lock.json that disagrees with package.json.
@@ -111,16 +129,17 @@ for (const t of targets) {
 	} catch {
 		current = undefined;
 	}
-	if (current === version) {
+	const want = t.expected ?? version;
+	if (current === want) {
 		actions.push(['ok', t.label, current]);
 		continue;
 	}
 	drift = true;
-	actions.push([CHECK ? 'DRIFT' : 'update', t.label, `${current ?? '?'} -> ${version}`]);
+	actions.push([CHECK ? 'DRIFT' : 'update', t.label, `${current ?? '?'} -> ${want}`]);
 	if (!CHECK && t.write === null) {
 		lockfileStale = true; // npm rewrites it once, after the manifests
 	} else if (!CHECK) {
-		const next = t.write(src, version);
+		const next = t.write(src, want);
 		if (next === src) {
 			console.error(`Could not rewrite version in ${t.file} - pattern did not match.`);
 			process.exit(1);

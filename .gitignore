@@ -33,3 +33,6 @@ Thumbs.db
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Packaged release installers (scripts/package-release.mjs) - published, never committed
+/dist-release
