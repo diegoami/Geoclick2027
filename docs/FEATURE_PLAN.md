@@ -484,5 +484,5 @@ Update this table as tasks merge. Commit hashes are the merge commits.
 
 | Release | State | Tag | Date |
 |---|---|---|---|
-| `v0.3.0` | **cut** | `v0.3.0` → `abafcbb` | 2026-09-13 |
+| `v0.3.0` | **cut** | `v0.3.0` → `abafcbb` | 2026-09-13 — installers published to diegoami/geoclick-releases (APK signed with the release key) |
 | `v0.4.0` | not cut | — | — |
