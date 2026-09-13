@@ -164,7 +164,12 @@ below). Expect ~15-20s per push.
   it `npm test` fails, and so does the pre-push hook. Real browser rather
   than jsdom on purpose: the app is MapLibre + WebGL + pointer events,
   none of which jsdom implements, so jsdom would cap out at trivial
-  components. `LanguageSwitcher.svelte.test.ts` is the canary.
+  components. `LanguageSwitcher.svelte.test.ts` is the canary. A plain-TS
+  test that needs a real DOM but isn't a component is named
+  `*.browser.test.ts` and runs here too (e.g. `labelMagnify.browser.test.ts`).
+  Gotcha when faking touch from a script or test: `setPointerCapture` throws
+  for a synthetic touch pointer that isn't really down, so a quiz slip drag
+  can only be scripted with mouse-type events (pointerId 1).
 
 Before GC-003 the `client` project had been deleted from the config, so a
 `.svelte.test.ts` file silently never ran. If you add one and it doesn't
@@ -351,6 +356,11 @@ that same discipline into any task you pick up:
     scoped `<style>` can't reach them, because MapLibre mounts popups
     outside the component. Reuse `geoclick-popup` or
     `geoclick-solved-popup` rather than adding another copy.
+  - Labels magnify on demand (FT-02/FT-03). A mouse hover grows one to
+    20px (`:hover`, only under `@media (hover: hover)`). On touch, a tap
+    toggles `.is-magnified`, which `labelMagnify.ts` sets from one
+    listener that `createMap` installs. Both share one look in `app.css`,
+    so change them together.
 - **Commit messages end with** `Co-Authored-By: Claude Sonnet 5
   <noreply@anthropic.com>` when Claude made the change — see CLAUDE.md.
 

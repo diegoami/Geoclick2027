@@ -5,6 +5,7 @@ import * as maplibregl from 'maplibre-gl';
 import type { StyleSpecification } from 'maplibre-gl';
 import { PMTiles, Protocol, type RangeResponse, type Source } from 'pmtiles';
 import { asset } from '$app/paths';
+import { enableTapToMagnify } from './labelMagnify';
 import { overallBounds, type MapDefinition } from './mapDefinition';
 
 let protocol: Protocol | undefined;
@@ -119,5 +120,9 @@ export function createMap(
 	};
 	map.on('style.load', applyColorIndex);
 	if (map.isStyleLoaded()) applyColorIndex();
+
+	// Tap a name label to magnify it on touch screens (FT-03); hover does the
+	// same for a mouse, in app.css.
+	map.once('remove', enableTapToMagnify(container));
 	return map;
 }
