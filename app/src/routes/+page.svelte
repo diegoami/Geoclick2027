@@ -104,6 +104,17 @@
 </main>
 
 <style>
+	/* A flat white page read as "meh" (direct user feedback) - a soft,
+	   low-saturation gradient drawn from the same muted-earthy family as
+	   the map's own categorical target palette (base.json), just barely
+	   tinted so body text/borders keep their existing contrast. Fixed
+	   (not scrolling with content) so it reads as the page's backdrop
+	   rather than a decoration that scrolls away. */
+	:global(body) {
+		min-height: 100vh;
+		background: linear-gradient(160deg, #e3f0e6 0%, #dce6f2 45%, #f7ecd9 100%)
+			fixed;
+	}
 	main {
 		max-width: 32rem;
 		margin: 4rem auto;

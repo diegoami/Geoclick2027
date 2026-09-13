@@ -70,10 +70,11 @@ Check items off as they land; update "Status" as iterations complete.
   requested 2026-09-13, tracked in the Iteration 8+ backlog below: eight
   more countries and the adaptive per-country town-count threshold are
   both **done**, built together on
-  `feature/add-eight-countries-adaptive-threshold`; a background-color/
-  visual refresh and finalizing the SSO work above are still not
-  started. A full desktop+mobile retest is planned once all of this
-  lands — see that backlog entry for why.
+  `feature/add-eight-countries-adaptive-threshold`; the background-color
+  visual refresh is also **done**, built on `feature/better-background`.
+  Finalizing the SSO work above is the only one of these seven items
+  still not started. A full desktop+mobile retest is planned once that
+  lands too — see that backlog entry for why.
 - **Reordered**: local persistence and spaced repetition swapped places
   from the original numbering. Spaced repetition is pointless without
   somewhere to remember what's due across sessions — user accounts
@@ -1418,14 +1419,18 @@ loop actually feels good. Candidates below, in rough priority order.
       somewhere durable and synced across a signed-in user's devices,
       rather than local-only. Scaffolded together with sign-in above on
       the same branch — see that entry.
-- [ ] **Visual refresh: background color** — requested directly by the
+- [x] **Visual refresh: background color** — requested directly by the
       user (2026-09-13): "the background color is kind of meh, maybe
-      something more captivating." Not scoped yet — revisit alongside the
-      still-open motion/feedback design and broader component/
-      design-system pass noted in the Status section above. Consider using
-      the `design` skill first (mockups + live style edits), the same
-      approach that worked for GUI/UX round 1, rather than guessing at
-      colors directly in code.
+      something more captivating." Built on `feature/better-background`:
+      the map's ocean/empty-space fill moved from flat gray (`#eef3f6`)
+      to a warm parchment tone (`#f0ead9`), and the home page moved from
+      plain white to a soft three-stop sage/blue/cream gradient. A richer
+      blue was tried for the map background first and rejected after
+      actually looking at it — it nearly erased the lakes layer's own
+      blue accent, undoing GUI/UX round 1's lake-contrast fix. See
+      DECISIONS.md's "Visual refresh: background" entry for the full
+      before/after reasoning, including verification against the full
+      8-color categorical palette and a towns map's `context` layer.
 - [x] **More countries: China, Brazil, Mexico, Finland, Russia, India,
       Indonesia, Argentina** — requested directly by the user
       (2026-09-13), built on `feature/add-eight-countries-adaptive-threshold`
