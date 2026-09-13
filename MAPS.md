@@ -36,6 +36,19 @@ data/scripts/build-map.ts             filter → simplify → tile → derive ma
    quiz matching, tour order, difficulty tier.
 4. Preview in the app (`/map/<id>`, `/map/<id>/overview` is the fastest
    sanity check — every target labeled at once) before committing.
+5. **Register it** (GC-030) — add the map to `app/src/lib/mapCatalog.ts`
+   (country + map-type label), then `npm run build-map-index` to
+   regenerate `data/maps/index.json` (id, country, target count, target
+   type per map; served as `/maps/index.json`). This step needs only
+   node, not the WSL2 toolchain — it reads the committed `map.json`
+   files. Skip either and `npm test` fails:
+   `app/src/lib/mapData.test.ts` checks that the map directories and the
+   catalog list exactly the same ids, that the index is in sync, and, for
+   every map, that target names and ids are unique (names are the
+   feature-state key — `promoteId: "name"` in `base.json`), every
+   centroid/bbox is finite, and `tourOrder` is a permutation of the
+   target ids. Before this, a map missing from the catalog was silently
+   invisible on the home page.
 
 See `DECISIONS.md`'s Data & maps section for the *why* behind choices
 like public-domain-only sourcing; this file is the *what was actually
