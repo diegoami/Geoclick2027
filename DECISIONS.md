@@ -643,3 +643,34 @@ or amend an entry here as part of that change, not as an afterthought.
   a domain purchase, public launch, or app-store submission is actually
   being planned. See ROADMAP.md's Iteration 8+ backlog for the
   corresponding status update.
+
+## Remediation programme structure (2026-09-13)
+
+- **Feature branches merge into a `release/*` branch, not into `main`.**
+  CLAUDE.md's rule that a `main` push triggers a paid Netlify build makes
+  `main` unusable as an integration branch: 20 task branches would mean 20
+  paid builds for 20 fixes. Release branches are free to merge into and free
+  to rebase, and ship to `main` once per release. Result: 20 tasks, 3 paid
+  builds. See [docs/RELEASES.md](docs/RELEASES.md).
+- **Three agent roles, and the human is the merge authority.** Orchestrator
+  (schedules, leases, integrates), Implementer (one per task, own worktree),
+  Reviewer (cold context, never a fork of the implementer — a fork inherits
+  the assumptions review exists to catch). Deliberately *no* separate
+  integrator agent: integration here is a rebase plus a merge into the
+  release branch, and the one judgement call ("ship this to `main`?") is
+  already reserved for the product owner by the Netlify-cost rule. A fourth
+  role would add a handoff without adding a decision.
+- **Two review rounds, then escalate to the human.** Two competent agents
+  disagreeing twice about a task whose definition of done is written down is
+  evidence the *spec* is wrong, not the implementation. A third round burns
+  tokens re-litigating an underspecified task. See
+  [docs/ORCHESTRATION.md](docs/ORCHESTRATION.md).
+- **Task state lives on GitHub (issue `state:*` labels), never in a local
+  file.** Makes the orchestrator restartable and leaves the door open to a
+  second machine without changing anything but the checkout. The local
+  `.orchestrator/leases/` mirror is a cache; deleting it must be harmless.
+- **Root `package.json` is the single source of truth for the version.** The
+  repo had drifted to three different versions across seven files (`0.0.1`
+  workspace, `0.1.0` Tauri/Cargo, `1.0` Android `versionName`);
+  `scripts/sync-version.mjs` propagates and `--check`s it. The Android shell
+  claiming `1.0` was the worst of the three — it is POC quality.

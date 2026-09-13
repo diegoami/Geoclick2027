@@ -87,8 +87,16 @@ Check items off as they land; update "Status" as iterations complete.
 
 ## Process notes (not tied to a specific iteration)
 
+- **Remediation programme (2026-09-13)** — an independent code/design review
+  produced 30 findings, now planned as 20 tasks across 3 releases in
+  [docs/REMEDIATION_PLAN.md](docs/REMEDIATION_PLAN.md), executed per
+  [docs/ORCHESTRATION.md](docs/ORCHESTRATION.md) and released per
+  [docs/RELEASES.md](docs/RELEASES.md). Not started.
 - **Git worktrees don't work for parallel background feature work on this
-  project, at least not as attempted 2026-09-12** — a `git worktree`
+  project, at least not as attempted 2026-09-12** — *(revisited: task GC-000
+  of the remediation programme re-tests this with a per-worktree `npm ci`,
+  which is this note's own suggested fix; it will amend this entry with the
+  result either way)* — a `git worktree`
   checkout doesn't get its own `node_modules` (npm workspaces hoists it to
   the main checkout), so `npm run dev` inside a worktree can't actually
   render a map (Vite's `fs.allow` blocks the maplibre-gl worker script

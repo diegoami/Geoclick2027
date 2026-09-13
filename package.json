@@ -3,7 +3,12 @@
 	"private": true,
 	"version": "0.0.1",
 	"type": "module",
-	"workspaces": ["app", "packages/*", "desktop", "mobile"],
+	"workspaces": [
+		"app",
+		"packages/*",
+		"desktop",
+		"mobile"
+	],
 	"scripts": {
 		"dev": "npm run dev --workspace=app",
 		"build": "npm run build --workspaces --if-present",
@@ -15,6 +20,7 @@
 	},
 	"devDependencies": {
 		"mapshaper": "^0.6.115",
-		"tsx": "^4.20.6"
+		"tsx": "^4.20.6",
+		"yaml": "^2.9.1"
 	}
 }
