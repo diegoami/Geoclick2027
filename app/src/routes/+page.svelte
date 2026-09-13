@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { asset, resolve } from '$app/paths';
+	import { resolve } from '$app/paths';
+	import mapIndex from '../../../data/maps/index.json';
 	import {
 		createProgressRepository,
 		todayLocalDate,
@@ -15,6 +16,11 @@
 	// care about grouping, only about (id) -> per-map progress data, so it
 	// works off this instead of duplicating the id list a second time.
 	const demoMaps = mapGroups.flatMap((group) => group.maps);
+
+	// Every map's target ids, bundled at build time from data/maps/index.json
+	// (npm run build-map-index). Replaces 44 runtime fetches of whole map.json
+	// files (~484 KB) that the due counts below only needed the ids from.
+	const targetIdsByMap = new Map(mapIndex.map((entry) => [entry.id, entry.targetIds]));
 
 	// Last-session summaries and due state live in localStorage (Iteration
 	// 5/6), which isn't available during the prerendered build - read them
@@ -41,14 +47,14 @@
 			const today = todayLocalDate();
 			const dueEntries = await Promise.all(
 				demoMaps.map(async (map) => {
-					const [mapDef, cardStates] = await Promise.all([
-						fetch(asset(`/maps/${map.id}/map.json`)).then((r) => r.json()),
-						repository.getCardStates(map.id)
-					]);
+					const cardStates = await repository.getCardStates(map.id);
 					if (cardStates.length === 0)
 						return [map.id, { kind: 'notStarted' } as DueStatus] as const;
 					const byId = new Map(cardStates.map((c) => [c.targetId, c]));
-					const targetIds: string[] = mapDef.targets.map((t: { id: string }) => t.id);
+					// Over the map's CURRENT target ids: unseen targets count as due
+					// (isDue(undefined) is true) and progress for a since-renamed or
+					// removed target is ignored - same semantics as before GC-071.
+					const targetIds = targetIdsByMap.get(map.id) ?? [];
 					const dueCount = targetIds.filter((id) => isDue(byId.get(id), today)).length;
 					const status: DueStatus =
 						dueCount === 0 ? { kind: 'upToDate' } : { kind: 'due', count: dueCount };
