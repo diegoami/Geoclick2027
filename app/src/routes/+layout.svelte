@@ -1,4 +1,5 @@
 <script lang="ts">
+	import '../app.css';
 	import favicon from '$lib/assets/favicon.svg';
 	import VersionBadge from '$lib/VersionBadge.svelte';
 	import { getLanguage } from '$lib/i18n.svelte';

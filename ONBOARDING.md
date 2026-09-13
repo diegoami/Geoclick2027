@@ -344,7 +344,13 @@ that same discipline into any task you pick up:
   ARCHITECTURE.md and ROADMAP.md's Iteration 4 section for why (MapLibre's
   collision/placement system unpredictably hid labels even with overlap
   disabled). Follow the popup pattern already in `QuizView.svelte` for
-  anything similar.
+  anything similar. Two rules (GC-022):
+  - Fill a popup with `setText(name)`, never `setHTML`. Names are data,
+    and a future user-made or OSM map could put markup in one.
+  - Popup styles live once, globally, in `app/src/app.css`. A component's
+    scoped `<style>` can't reach them, because MapLibre mounts popups
+    outside the component. Reuse `geoclick-popup` or
+    `geoclick-solved-popup` rather than adding another copy.
 - **Commit messages end with** `Co-Authored-By: Claude Sonnet 5
   <noreply@anthropic.com>` when Claude made the change — see CLAUDE.md.
 
