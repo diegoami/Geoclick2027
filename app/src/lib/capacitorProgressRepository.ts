@@ -130,6 +130,24 @@ export function createCapacitorProgressRepository(): ProgressRepository {
 				   completed_at = excluded.completed_at`,
 				[mapId, summary.total, summary.perfect, summary.totalErrors, summary.completedAt]
 			);
+		},
+
+		// executeSet with transaction=true: both DELETEs commit together or roll
+		// back together (the plugin wraps the whole set in one transaction).
+		async clearMap(mapId) {
+			const db = await getDb();
+			await db.executeSet(
+				[
+					{ statement: 'DELETE FROM card_states WHERE map_id = ?', values: [mapId] },
+					{ statement: 'DELETE FROM last_session_summaries WHERE map_id = ?', values: [mapId] }
+				],
+				true
+			);
+		},
+
+		async clearAll() {
+			const db = await getDb();
+			await db.execute('DELETE FROM card_states;\nDELETE FROM last_session_summaries;', true);
 		}
 	};
 }

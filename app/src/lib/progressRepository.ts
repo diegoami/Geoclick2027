@@ -27,6 +27,11 @@ export interface ProgressRepository {
 	saveCardState(mapId: string, state: CardState): Promise<void>;
 	getLastSessionSummary(mapId: string): Promise<SessionSummary | undefined>;
 	saveLastSessionSummary(mapId: string, summary: SessionSummary): Promise<void>;
+	/** Forget one map's card states and last-session summary. Other maps untouched. */
+	clearMap(mapId: string): Promise<void>;
+	/** Forget ALL quiz progress on this device/backend. Progress only - UI
+	 * preferences such as the chosen language are not progress and survive. */
+	clearAll(): Promise<void>;
 }
 
 const STORAGE_PREFIX = 'geoclick:progress:v1';
@@ -64,9 +69,22 @@ function readJson<T>(key: string): T | undefined {
 	}
 }
 
+let writeFailureLogged = false;
+
 function writeJson(key: string, value: unknown): void {
 	if (typeof localStorage === 'undefined') return;
-	localStorage.setItem(key, JSON.stringify(value));
+	try {
+		localStorage.setItem(key, JSON.stringify(value));
+	} catch (e) {
+		// setItem throws QuotaExceededError when storage is full, and in some
+		// private-browsing modes always. Losing one save is better than the
+		// quiz throwing mid-drag - same spirit as readJson's corrupt-data
+		// guard. Logged once per page load, not once per drop.
+		if (!writeFailureLogged) {
+			writeFailureLogged = true;
+			console.warn('Could not save quiz progress to localStorage; continuing without it.', e);
+		}
+	}
 }
 
 // Picks the SQLite-backed repository (desktop/src-tauri/src/lib.rs's
@@ -110,6 +128,27 @@ export function createLocalStorageProgressRepository(): ProgressRepository {
 
 		async saveLastSessionSummary(mapId, summary) {
 			writeJson(lastSessionKey(mapId), summary);
+		},
+
+		async clearMap(mapId) {
+			if (typeof localStorage === 'undefined') return;
+			// Exact keys, not a prefix match: clearing "italy-regions" must never
+			// touch a map whose id merely starts with that.
+			localStorage.removeItem(cardsKey(mapId));
+			localStorage.removeItem(lastSessionKey(mapId));
+		},
+
+		async clearAll() {
+			if (typeof localStorage === 'undefined') return;
+			// Only our progress namespace - the UI language (geoclick:language:v1)
+			// and anything else sharing the origin stays. Collect first: removing
+			// while indexing by key(i) would skip entries.
+			const ours: string[] = [];
+			for (let i = 0; i < localStorage.length; i++) {
+				const key = localStorage.key(i);
+				if (key?.startsWith(`${STORAGE_PREFIX}:`)) ours.push(key);
+			}
+			for (const key of ours) localStorage.removeItem(key);
 		}
 	};
 }
