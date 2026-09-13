@@ -287,7 +287,7 @@ ORCHESTRATION.md § Automerge).
 | GC-031 | **released** | `1030bf0` | v0.1.2 | verified via tsx (no WSL toolchain here); found 5 mangled Polish ids (`wroc-aw`...) - documented, not changed (ids key saved progress) |
 | GC-041 | **released** | `f303d18` | v0.1.2 | Capacitor clearMap is transactional; Tauri's is two statements (plugin has no transaction API); no reset UI (owner's call) |
 | GC-071 | **released** | `d47e519` | v0.1.2 | 44 → 0 data requests; index carries `targetIds` (not just counts) so stale cards stay ignored - verified identical badges on 3 seeded maps |
-| GC-004 | todo | — | v0.2.0 | |
+| GC-004 | **merged** | `eac332e` | v0.2.0 | data/tsconfig.json strict + root check/lint cover data/scripts; 13 `any` → narrow GeoJSON interfaces; esbuild diff proves types-only (plus `cause` on one error) |
 | GC-022 | todo | — | v0.2.0 | |
 | GC-032 | **merged** | `9667bfb` | v0.2.0 | colorIndex 0-5 per target from tile adjacency (all 44 maps, 0 same-colour neighbours, asserted in mapColors.test.ts); unsolved opacity 0.55; hover recoloured (ΔE 16→38 vs palette) - verified on italy-provinces + germany-towns quizzes |
 | GC-033 | todo | — | v0.2.0 | last task; v0.2.0 is cut after it |
