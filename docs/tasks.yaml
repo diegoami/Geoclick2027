@@ -1,0 +1,1048 @@
+# Geoclick remediation programme — machine-readable task seed.
+# Consumed by scripts/seed-forge.mjs (creates labels/milestones/issues) and by
+# the orchestrator (scheduling). Human-readable roadmap: REMEDIATION_PLAN.md.
+#
+# Schema
+#   id          GC-NNN, stable forever. Appears in branch name, issue title, commits.
+#   title       Issue title suffix.
+#   engine      haiku | sonnet | opus | fable  (Agent tool `model` value)
+#   effort      Low | Medium | High | Ultrahigh
+#   deps        task ids that must be MERGED into the release branch first
+#   release     milestone / target release
+#   branch      exact branch name the implementer must use
+#   labels      GitHub labels (created by seed-forge.mjs)
+#   needs       machine capabilities required; empty = any machine with node+npm+gh
+#   files       primary files touched — the scheduler uses this for conflict detection
+#   review_refs findings from the 2026-09-13 review this closes
+#   description handed verbatim to the implementer agent
+#   dod         definition of done; ALL items must be true before requesting review
+
+meta:
+  programme: geoclick-remediation
+  source_review: 2026-09-13 independent code/design review
+  base_commit: c5c786e
+  gates:
+    - npm run check
+    - npm run test
+    - npm run lint
+    - npm run build --workspace=app
+  gates_baseline: "check/test/build pass at c5c786e; lint FAILS until GC-001 merges"
+  concurrency_max: 3
+  attribution_trailer: |
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_01GyndPhxF3L1E9nBCg8Jvcs
+
+releases:
+  - version: v0.2.0
+    theme: Correctness & gates
+    branch: release/0.2.0
+    tasks: [GC-000, GC-001, GC-002, GC-003, GC-010, GC-020, GC-021, GC-030, GC-050, GC-060]
+  - version: v0.3.0
+    theme: Storage & platform
+    branch: release/0.3.0
+    tasks: [GC-004, GC-022, GC-031, GC-040, GC-041, GC-070, GC-071]
+  - version: v0.4.0
+    theme: Map palette & pipeline
+    branch: release/0.4.0
+    tasks: [GC-032, GC-033, GC-080]
+
+tasks:
+
+  - id: GC-000
+    title: "Spike: prove the worktree parallelism model actually works here"
+    engine: sonnet
+    effort: Low
+    deps: []
+    release: v0.2.0
+    branch: chore/gc-000-worktree-spike
+    labels: [type:chore, area:tooling, wave:0, priority:must-fix]
+    needs: []
+    files: [ROADMAP.md, docs/ORCHESTRATION.md]
+    review_refs: []
+    description: |
+      BLOCKING PREREQUISITE. Do this before any other task is leased.
+
+      ROADMAP.md's "Process notes" already records a failed attempt at exactly
+      the model this programme depends on, dated 2026-09-12:
+
+        "Git worktrees don't work for parallel background feature work on this
+         project ... a `git worktree` checkout doesn't get its own
+         `node_modules` (npm workspaces hoists it to the main checkout), so
+         `npm run dev` inside a worktree can't actually render a map (Vite's
+         `fs.allow` blocks the maplibre-gl worker script outside the worktree
+         root) ... Don't reach for worktree-isolated parallel agents on this
+         repo again without first solving the `node_modules` problem."
+
+      The orchestration design answers that with a per-worktree `npm ci`,
+      which should fix both symptoms (once node_modules is inside the worktree
+      root, `fs.allow` is satisfied as a consequence). That is a hypothesis.
+      Three agents have already been burned by it once. Prove it before
+      spending the programme on it.
+
+      Do, concretely:
+      - `node scripts/task.mjs lease GC-000` to get a worktree.
+      - `npm ci` inside the worktree. Time it; record the wall-clock and the
+        disk footprint of the resulting node_modules.
+      - `npm run dev --workspace=app -- --port <leased port>` inside it.
+      - Open the leased port in a real browser. Load a polygon map's quiz and
+        a towns map's tour. Confirm tiles actually RENDER — not that the page
+        loads. The 2026-09-12 failure mode was a blank map with no console
+        error, so "no errors" is not evidence.
+      - Repeat with a SECOND worktree running at the same time on its own port,
+        to confirm two dev servers coexist.
+      - Run all four gates inside a worktree.
+
+      Then update ROADMAP.md's process note in place: either it is solved (say
+      how, with the measured `npm ci` cost) or it is not (say what failed).
+      Do not delete the note — amend it, per CLAUDE.md's rule on superseding
+      earlier findings.
+
+      If it does NOT work: stop the programme and escalate. The fallback is
+      serial execution in the main checkout, which changes the orchestration
+      model fundamentally (concurrency 1, no leases, no ports) and is the
+      product owner's call, not an agent's. Write up what you found and what
+      you tried; do not improvise a different isolation scheme.
+    dod:
+      - "two worktrees run `npm run dev` concurrently on different ports"
+      - "a map's tiles visibly RENDER in a real browser from a worktree dev server — screenshot in the PR"
+      - "all four gates run inside a worktree"
+      - "measured `npm ci` wall-clock and node_modules disk size are recorded in the PR and in ORCHESTRATION.md"
+      - "ROADMAP.md's 2026-09-12 worktree process note is amended in place with the outcome"
+      - "if it failed: the programme is escalated, not worked around"
+
+  - id: GC-001
+    title: "Repair the lint gate (.gitattributes, renormalize, format)"
+    engine: sonnet
+    effort: Medium
+    deps: [GC-000]
+    release: v0.2.0
+    branch: fix/gc-001-lint-gate
+    labels: [type:chore, area:tooling, wave:0, priority:must-fix]
+    needs: []
+    files: [.gitattributes, "**/*.ts", "**/*.svelte", "**/*.json", "**/*.md"]
+    review_refs: [S1]
+    description: |
+      `npm run lint` exits 1 and has done so through at least three merged
+      feature branches. Two independent causes:
+
+      1. `core.autocrlf=true` on the dev machine, and `.gitattributes` only
+         declares `*.sh`, `gradlew` and binary formats. Every `.ts`/`.svelte`
+         file is therefore CRLF on disk, and Prettier's default
+         `endOfLine: "lf"` flags all 39 files. Because the script is
+         `prettier --check . && eslint .`, the `&&` short-circuits and
+         **ESLint never runs at all**.
+      2. Independently of line endings, three files are genuinely unformatted
+         and were committed that way:
+         `app/src/lib/capacitorProgressRepository.ts`,
+         `app/src/lib/QuizView.svelte`, `app/src/routes/+page.svelte`.
+
+      Symptom to confirm you have fixed it: `git status` currently reports
+      `desktop/src-tauri/Cargo.toml`, `mobile/android/app/capacitor.build.gradle`
+      and `mobile/android/capacitor.settings.gradle` as modified while
+      `git diff` shows no content change. That is pending renormalization.
+
+      Do:
+      - Add `* text=auto eol=lf` to `.gitattributes`, keeping every existing
+        `binary` declaration above it so binaries are still excluded. Verify
+        `.pmtiles`, `.jar`, `.png`, `.ico`, `.icns`, `.woff*`, `.ttf` remain
+        binary — a regression here silently corrupts the tilesets and the
+        repo has already been burned by exactly that.
+      - Run `git add --renormalize .` and commit the result as its own commit,
+        separate from the formatting commit, so the diff is reviewable.
+      - Run `npm run format` and commit the three genuinely-unformatted files.
+      - Confirm `npx eslint .` runs and is clean (it is, at c5c786e — you are
+        restoring a gate, not fixing lint errors).
+
+      Do NOT change any Prettier or ESLint rule to make the check pass.
+      This must land alone: it touches every text file in the tree and will
+      conflict with every other branch.
+    dod:
+      - "`npm run lint` exits 0 from a clean checkout"
+      - "`npx eslint .` demonstrably executes (paste its output in the PR)"
+      - "`git status` is clean immediately after checkout — no phantom-dirty files"
+      - "`.gitattributes` still declares every pre-existing binary pattern as binary"
+      - "`npm run check`, `npm run test`, `npm run build --workspace=app` still pass"
+      - "renormalization and formatting are separate commits"
+      - "ONBOARDING.md gotchas section gains a short entry: this is the 5th CRLF variant"
+
+  - id: GC-002
+    title: "Gate runner script and pre-push hook"
+    engine: sonnet
+    effort: Low
+    deps: [GC-001]
+    release: v0.2.0
+    branch: chore/gc-002-gate-hook
+    labels: [type:chore, area:tooling, wave:1]
+    needs: []
+    files: [scripts/task.mjs, package.json, .husky/pre-push, ONBOARDING.md]
+    review_refs: [D7]
+    description: |
+      The project's only quality gate is the human plus a paid Netlify build.
+      There is no CI and adding a hosted one is out of scope (cost). A local
+      pre-push hook costs nothing and would have caught GC-001 immediately.
+
+      Do:
+      - Harden `scripts/task.mjs`'s existing `gates` subcommand: run the four
+        gate commands in order, stream output, stop at the first failure, exit
+        non-zero, and support `--json` for the orchestrator.
+      - Add a `pre-push` git hook that runs `node scripts/task.mjs gates`.
+        Use a committed hook plus `git config core.hooksPath`, or husky —
+        your call, but it must survive a fresh clone with one documented
+        command, and that command goes in ONBOARDING.md and README.md.
+      - Add an escape hatch (`--no-verify` is fine) and document it.
+      - Housekeeping: delete the stale local branches `worktree-agent-*`,
+        which are leftovers from earlier agent runs.
+
+      Do NOT add GitHub Actions or any hosted CI. Do NOT make the hook run the
+      Tauri or Android build.
+    dod:
+      - "`node scripts/task.mjs gates` runs all four gates and exits non-zero on first failure"
+      - "`node scripts/task.mjs gates --json` emits a machine-readable verdict"
+      - "a push with a deliberately-broken format is rejected by the hook"
+      - "`--no-verify` still allows the push, and that is documented"
+      - "hook installation is one documented command in ONBOARDING.md and README.md"
+      - "stale `worktree-agent-*` branches deleted"
+      - "all four gates pass"
+
+  - id: GC-003
+    title: "Test harness: drop the scaffold, restore the browser Vitest project"
+    engine: sonnet
+    effort: Medium
+    deps: [GC-001]
+    release: v0.2.0
+    branch: chore/gc-003-test-harness
+    labels: [type:chore, area:testing, wave:1]
+    needs: []
+    files: [app/vite.config.ts, app/src/lib/vitest-examples/, app/package.json]
+    review_refs: [D1, "#20"]
+    description: |
+      `app/vite.config.ts` defines exactly one Vitest project (`server`,
+      `environment: node`) whose `exclude` is
+      `['src/**/*.svelte.{test,spec}.{js,ts}']`. The SvelteKit template's
+      `client` (browser) project was removed. Consequence: a `.svelte.test.ts`
+      written today silently does not run. Component testing is not merely
+      unwritten — it is structurally foreclosed. Four of the review's six
+      must-fix findings live in code no test can currently reach.
+
+      Do:
+      - Delete `app/src/lib/vitest-examples/` (`greet.ts` + `greet.spec.ts`).
+        It is leftover scaffolding and is one of the "41 tests".
+      - Restore a second Vitest project for component tests. Prefer
+        `vitest-browser-svelte` with Playwright as the provider if it installs
+        cleanly on Windows; fall back to jsdom if it does not. Either is
+        acceptable — say which you chose and why in the PR.
+      - Prove it works with ONE smoke test: mount `LanguageSwitcher.svelte`,
+        assert three buttons render, click DE, assert `aria-pressed` moves.
+        That component has no MapLibre dependency, so it is the right canary.
+      - Do NOT write component tests for the map views in this task; that is
+        deliberately deferred so this task stays reviewable.
+
+      Note for the reviewer: after this task the test count drops by 1 (the
+      scaffold) and rises by 1 (the smoke test). That is expected.
+    dod:
+      - "`app/src/lib/vitest-examples/` no longer exists"
+      - "a second Vitest project exists and `*.svelte.test.ts` files actually execute"
+      - "the LanguageSwitcher smoke test passes and fails if the component is broken"
+      - "`npm run test` runs both projects and reports both"
+      - "the chosen provider (browser vs jsdom) is justified in the PR body"
+      - "all four gates pass"
+
+  - id: GC-004
+    title: "Typecheck and lint data/scripts"
+    engine: sonnet
+    effort: Low
+    deps: [GC-001, GC-031]
+    release: v0.3.0
+    branch: chore/gc-004-scripts-typecheck
+    labels: [type:chore, area:tooling, wave:3]
+    needs: []
+    files: [data/tsconfig.json, app/eslint.config.js, package.json]
+    review_refs: ["#25"]
+    description: |
+      `data/scripts/*.ts` is neither typechecked nor linted. There is no
+      tsconfig under `data/`, and the root `lint` script is
+      `npm run lint --workspace=app`. These files use `any` liberally
+      (build-map.ts:341/354/363, build-points-map.ts:187/206) and are the
+      least-tested, most-consequential code in the repo — they generate the
+      committed map data.
+
+      Do:
+      - Add `data/tsconfig.json` covering `data/scripts/**` with `strict: true`
+        and node types, and wire it into the root `check` script.
+      - Extend ESLint's scope to `data/scripts`.
+      - Fix whatever the two tools report. Prefer real types over `any`; where
+        a Natural Earth GeoJSON property bag genuinely is unknown, declare a
+        narrow interface rather than widening to `any`.
+      - Do NOT change any script's behaviour. This task must produce byte-
+        identical map output. Prove it: rebuild is not required, but state in
+        the PR that no logic changed and point at the diff.
+    dod:
+      - "`npm run check` typechecks data/scripts and passes"
+      - "`npm run lint` covers data/scripts and passes"
+      - "no `any` remains in data/scripts, or each survivor has a justifying comment"
+      - "no behavioural change — diff is types and annotations only"
+      - "all four gates pass"
+
+  - id: GC-010
+    title: "SRS scheduler: cap the interval, let the ease factor recover"
+    engine: opus
+    effort: Medium
+    deps: [GC-001]
+    release: v0.2.0
+    branch: fix/gc-010-srs-scheduler
+    labels: [type:fix, area:srs, wave:1, priority:must-fix]
+    needs: []
+    files: [packages/srs/src/index.ts, packages/srs/src/index.test.ts, ARCHITECTURE.md, DECISIONS.md]
+    review_refs: [C1, C2, C3, S3]
+    description: |
+      Two defects in `packages/srs/src/index.ts`, both verified by running the
+      real `rate()`:
+
+      (a) UNBOUNDED INTERVAL — line 96, `interval = Math.round(prevInterval *
+      easeFactor)`, with no cap. `addDaysLocal` (lines 28-34) then overflows
+      the JS `Date` range. Measured progression from a clean start:
+
+          rep  8 -> interval 1488      dueDate 2032-10-12
+          rep 12 -> interval 58125     dueDate 2291-03-24
+          rep 19 -> interval 35476875  dueDate 163913-04-19
+          rep 20 -> interval 88692188  dueDate "NaN-NaN-NaN"
+
+      `"NaN-NaN-NaN"` string-compares greater than any real date, so
+      `isDue()` returns false permanently — the card silently leaves the
+      review pool forever. The value is persisted verbatim by all three
+      backends (`due_date TEXT NOT NULL` accepts it) and poisons the home
+      page's due count. Well before the NaN, rep 8 means the score panel
+      prints "Next review in 2265 days", which is a product bug on its own.
+
+      (b) EASE FACTOR NEVER INCREASES — line 91,
+      `Math.max(MIN_EASE_FACTOR, prevEase - (grade === 'hard' ? 0.15 : 0))`.
+      `'good'` subtracts zero; nothing ever adds. Measured: one `'hard'`
+      followed by 20 flawless `'good'` reviews leaves ease at 2.35, never
+      recovering. Alternating hard/good 12x reaches 1.60 and keeps falling.
+      Every card monotonically decays toward the 1.3 floor. Real SM-2 raises
+      EF on a high-quality answer — and both `ARCHITECTURE.md` and this
+      module's own header comment (line 70) call this "classic SM-2", so the
+      docs are wrong too.
+
+      Do:
+      - Add `MAX_INTERVAL_DAYS` and clamp `interval` before computing
+        `dueDate`. Recommended value 365; this is a geography quiz, not a
+        medical-school deck. Justify whatever you pick in DECISIONS.md.
+      - Add `MAX_EASE_FACTOR` (recommend 2.5, the default) and make `'good'`
+        do `Math.min(MAX_EASE_FACTOR, prevEase + 0.1)`.
+      - Correct the "classic SM-2" claim in the module header comment AND in
+        ARCHITECTURE.md's Domain model section, so code and docs agree on what
+        this scheduler actually is.
+      - Add a DECISIONS.md entry recording both choices and why.
+
+      Do NOT change the `'again'` same-day behaviour — DECISIONS.md's
+      "Iteration 6 retires the same-day mechanism" entry depends on it, and
+      there is a passing test for it.
+      Do NOT migrate existing persisted card states in this task; any card
+      already holding a NaN dueDate is a separate concern — note it on the
+      issue if you think it needs one.
+    dod:
+      - "`rate()` after 30 consecutive 'good' grades still yields a parseable YYYY-MM-DD"
+      - "a test asserts exactly that, and fails without the cap"
+      - "a test asserts ease recovers after 'hard' then several 'good' grades"
+      - "a test asserts ease never exceeds MAX_EASE_FACTOR"
+      - "the existing 16 srs tests still pass unmodified, including the 'again' same-day test"
+      - "module header comment and ARCHITECTURE.md no longer claim 'classic SM-2' inaccurately"
+      - "DECISIONS.md records the interval cap and ease ceiling with reasoning"
+      - "all four gates pass"
+
+  - id: GC-020
+    title: "QuizView lifecycle safety and practice-mode persistence"
+    engine: opus
+    effort: Medium
+    deps: [GC-001]
+    release: v0.2.0
+    branch: fix/gc-020-quizview-lifecycle
+    labels: [type:fix, area:quiz, wave:1, priority:must-fix]
+    needs: []
+    files: [app/src/lib/QuizView.svelte, DECISIONS.md]
+    review_refs: [C4, C5, "#23", "#24", C6]
+    description: |
+      Four defects plus one doc/code contradiction, all in
+      `app/src/lib/QuizView.svelte`.
+
+      (a) setFeatureState BEFORE STYLE LOAD (line 557). `phase = 'upToDate'`
+      is set synchronously right after `createMap()`, before the
+      `map.once('load')` handler at line 571. The "Practice all regions"
+      button renders immediately (lines 616-621). Clicking it calls
+      `startPractice()` (512) -> `clearAllVisuals()` (463-473) ->
+      `map.setFeatureState(...)`, which MapLibre throws on until the style's
+      sources exist. Every other call site in this file defers to `'load'`
+      with a comment saying why; this path was missed. Reachable on a slow
+      tile fetch or a fast click.
+      Fix: a `styleLoaded` flag set in the `map.once('load')` handler; gate
+      the upToDate panel's render (or `clearAllVisuals`) on it.
+
+      (b) TIMER SURVIVES UNMOUNT (lines 406-414). The wrong-answer flash
+      schedules a 700ms `setTimeout` calling `map.setFeatureState`. `onDestroy`
+      (593-595) calls `map.remove()` but never clears the timer, and the guard
+      `if (exactName && map)` still passes because `map` is a truthy reference
+      to a removed map. Navigating away within 700ms throws.
+      Fix: keep the handle, `clearTimeout` in `onDestroy`. `TourView.svelte`'s
+      `advanceTimer` (line 158) already does this correctly — copy that shape.
+
+      (c) NON-REACTIVE BINDINGS (lines 39-41). `trayEl`, `trayHandleRowEl`,
+      `traySlipsEl` are `bind:this` targets read inside `measureTraySizing`,
+      which is called from an `$effect`. svelte-check emits three
+      `non_reactive_update` warnings. Declare them `$state`.
+
+      (d) DEBUG HOOK IN PRODUCTION (lines 550-555). `window.__map` ships to
+      every user. Guard with `import.meta.env.DEV`.
+
+      (e) PRACTICE MODE WRITES TO THE REPOSITORY (lines 162-168). DECISIONS.md
+      states "Practice mode never writes back to SRS state." The completion
+      `$effect` calls `saveLastSessionSummary` unconditionally, including in
+      practice mode. It is not SRS state, but it IS persisted state that
+      overwrites the home page's "Last: 18/20" — so a casual practice round
+      rewrites the record of a real graded session.
+      Resolve it: either add `&& mode === 'due'`, or amend the DECISIONS.md
+      entry to say summaries are deliberately included. Pick one, implement
+      it, and record the choice in DECISIONS.md. Do not leave them
+      contradicting each other.
+
+      Keep this task to these five items. `resolveDrop` extraction is GC-021
+      and popup styling is GC-022 — both queue behind this branch, so do not
+      pre-empt them.
+    dod:
+      - "clicking 'Practice all regions' before tiles load does not throw (test by throttling the network in devtools, or by asserting the guard)"
+      - "navigating away within 700ms of a wrong drop does not throw"
+      - "svelte-check reports 0 warnings for QuizView.svelte (was 3)"
+      - "`window.__map` is absent from a production build"
+      - "practice-mode summary behaviour and DECISIONS.md agree, and the choice is recorded"
+      - "no change to drop hit-testing logic — that is GC-021's scope"
+      - "all four gates pass"
+
+  - id: GC-021
+    title: "Extract and unit-test resolveDrop"
+    engine: opus
+    effort: High
+    deps: [GC-020, GC-003]
+    release: v0.2.0
+    branch: refactor/gc-021-resolve-drop
+    labels: [type:refactor, area:quiz, area:testing, wave:2]
+    needs: []
+    files: [app/src/lib/quizDrop.ts, app/src/lib/quizDrop.test.ts, app/src/lib/QuizView.svelte]
+    review_refs: [D8, "#10"]
+    description: |
+      `QuizView.svelte` is 909 lines and holds essentially all of the app's
+      genuinely tricky logic. The tested code (`packages/quiz-engine`,
+      `packages/srs`) is the code least likely to break. The single highest-
+      value extraction is the drop-correctness decision at
+      `QuizView.svelte:344-373`, which currently exists only as inline code
+      plus a long comment describing a bug that was found by hand.
+
+      Extract a pure function into `app/src/lib/quizDrop.ts`:
+
+          resolveDrop(args: {
+            exactName: string | undefined;
+            nearbyNames: string[];
+            draggedName: string;
+            isPointMap: boolean;
+            closestName: string | undefined;  // precomputed by the caller
+          }): { scored: boolean; correct: boolean }
+
+      `scored: false` means "not a plausible guess — do not record an attempt"
+      (the current `if (!exactName && nearbyNames.length === 0) return`).
+      Keep `closestNameAmong` in the component: it needs `map.project()` and
+      is therefore not pure. Pass its result in.
+
+      Preserve the existing semantics exactly — the comments at 354-368
+      document three separate bugs found by real play, and this refactor must
+      not regress any of them:
+      - polygon maps use `nearbyNames.includes(draggedName)`;
+      - point maps additionally require the dragged target to be the CLOSEST
+        candidate, because two city markers can sit inside the tolerance
+        radius of each other;
+      - the tolerance only ever rescues a CORRECT drop, it never reattributes
+        which region a wrong drop hit.
+
+      Tests to write in `quizDrop.test.ts`, at minimum:
+      - exact hit on the correct polygon -> scored, correct
+      - exact miss, correct name within tolerance -> scored, correct
+      - exact hit on a DIFFERENT polygon, correct name also within tolerance
+        -> scored, INCORRECT (tolerance must not rescue a wrong drop)
+      - drop on empty sea, nothing nearby -> not scored
+      - point map, two candidates in radius, dragged target is the farther one
+        -> scored, INCORRECT. This is the Essen/Duisburg case (~22px apart at
+        default zoom, inside the 30px tolerance) that currently exists only as
+        a prose comment.
+      - point map, dragged target is the closest candidate -> scored, correct
+
+      Do NOT change tolerance constants. Do NOT touch the pointer-event
+      handlers beyond replacing the inline decision with the call.
+    dod:
+      - "`app/src/lib/quizDrop.ts` exports a pure `resolveDrop` with no map/DOM import"
+      - "QuizView calls it; the inline decision block is gone"
+      - "at least the six listed cases are tested and pass"
+      - "the Essen/Duisburg case is an actual test, not a comment"
+      - "manual check: play one polygon quiz and one towns quiz in the dev server; correct/wrong/reveal all still behave"
+      - "all four gates pass"
+
+  - id: GC-022
+    title: "Popup setText and shared popup CSS"
+    engine: sonnet
+    effort: Medium
+    deps: [GC-021]
+    release: v0.3.0
+    branch: fix/gc-022-popup-text-css
+    labels: [type:fix, area:ui, wave:3]
+    needs: []
+    files:
+      - app/src/lib/TourView.svelte
+      - app/src/lib/MapView.svelte
+      - app/src/lib/QuizView.svelte
+      - app/src/lib/OverviewView.svelte
+      - app/src/app.css
+    review_refs: [C8, "#21"]
+    description: |
+      Two related cleanups across the same four components.
+
+      (a) RAW HTML INJECTION. Target names are interpolated into popup HTML:
+      `TourView.svelte:82` (`setHTML(\`<strong>${target.name}</strong>\`)`),
+      `MapView.svelte:57`, `QuizView.svelte:327`, `OverviewView.svelte:48`.
+      Names come from Natural Earth today so this is not exploitable now, but
+      ROADMAP.md's user-authored/OSM map direction would make it so, and
+      `desktop/src-tauri/tauri.conf.json` sets `"csp": null`, so there is no
+      second line of defence. Switch all four to `setText()`. Where the markup
+      carried styling (TourView's `<strong>`), move that to CSS.
+
+      (b) DUPLICATED CSS. `:global(.geoclick-popup .maplibregl-popup-content)`
+      is byte-identical in `MapView.svelte:106-118` and
+      `TourView.svelte:255-267`. `:global(.geoclick-solved-popup ...)` is
+      duplicated in `QuizView.svelte:893-908` and `OverviewView.svelte:92-104`.
+      A styling change is currently a four-file edit with no compiler help.
+      Move both blocks to `app/src/app.css` (create it and import it from
+      `+layout.svelte` if it does not exist) and delete the four copies.
+
+      Verify visually — popup appearance must not change in any of the four
+      views, including the `.revealed` variant in the quiz.
+    dod:
+      - "no `setHTML` remains in app/src"
+      - "popup CSS exists in exactly one place"
+      - "TourView's bold target name still renders bold"
+      - "screenshots or a written confirmation that all four views' popups look unchanged, including quiz 'revealed'"
+      - "all four gates pass"
+
+  - id: GC-030
+    title: "Map-data integrity test and generated map index"
+    engine: sonnet
+    effort: Medium
+    deps: [GC-001]
+    release: v0.2.0
+    branch: feat/gc-030-map-data-integrity
+    labels: [type:feat, area:data, area:testing, wave:1, priority:must-fix]
+    needs: []
+    files:
+      - data/scripts/build-map-index.ts
+      - data/maps/index.json
+      - app/src/lib/mapCatalog.ts
+      - app/src/lib/mapData.test.ts
+      - package.json
+    review_refs: [C7, C11]
+    description: |
+      Two unenforced invariants, one test file, one generated artefact.
+
+      (a) NAME UNIQUENESS IS LOAD-BEARING AND UNCHECKED. `data/styles/base.json`
+      sets `promoteId: "name"`, so every feature-state write in the app keys on
+      the target NAME (QuizView 287/294/319/467, TourView 49/66, OverviewView
+      39) and quiz correctness is decided by name comparison. Two same-named
+      targets in one map would collide silently. `build-points-map.ts:232-237`
+      dedupes by slug; `build-map.ts` has NO equivalent check. Verified: all 44
+      maps / 1410 targets are currently clean, so this is latent, not live.
+
+      (b) CATALOG DRIFT. `app/src/lib/mapCatalog.ts:32-185` is a 150-line
+      hand-written literal mirroring `ls data/maps`. A map directory with no
+      catalog entry is invisible on the home page; a catalog entry with no
+      directory 404s at runtime. Nothing detects either.
+
+      Do:
+      - Write `data/scripts/build-map-index.ts` that scans `data/maps/*/map.json`
+        and emits `data/maps/index.json`: for each map, its id, country, target
+        count, and target type. Add an npm script for it. This runs from
+        committed map.json files only — it does NOT need the WSL2 toolchain.
+      - Add `app/src/lib/mapData.test.ts` asserting, for every map:
+          * target names unique (the promoteId invariant)
+          * target ids unique
+          * every centroid and bbox is finite
+          * tourOrder is a permutation of the target id set
+          * the set of map directories equals the set of ids in mapCatalog
+          * index.json is in sync with the map.json files (regenerate and compare)
+        This is a node-environment test; it reads the repo's own data files.
+      - Leave `mapCatalog.ts`'s country/label data hand-written for now —
+        replacing it wholesale is GC-071's concern. Here, just make drift fail
+        the test suite.
+
+      Expected result today: all assertions pass. The value is that they will
+      fail the moment a 45th map is added inconsistently.
+    dod:
+      - "`data/maps/index.json` is generated, committed, and regenerable by one npm script"
+      - "`mapData.test.ts` covers all six assertions above for all 44 maps"
+      - "deliberately duplicating a name in a scratch fixture makes the test fail (state that you checked)"
+      - "deleting a mapCatalog entry makes the test fail (state that you checked)"
+      - "no change to any map.json"
+      - "all four gates pass"
+
+  - id: GC-031
+    title: "Build-script hygiene: PMTILES_BIN, slugify escape, bbox assertion"
+    engine: haiku
+    effort: Low
+    deps: [GC-030]
+    release: v0.3.0
+    branch: chore/gc-031-build-script-hygiene
+    labels: [type:chore, area:data, wave:2]
+    needs: []
+    files: [data/scripts/build-map.ts, data/scripts/build-points-map.ts, data/scripts/mapBuildUtils.ts, MAPS.md]
+    review_refs: ["#22", "#27", "#28"]
+    description: |
+      Three small, independent fixes in the map build scripts. None changes
+      generated output.
+
+      (a) HARDCODED BINARY PATH. `build-map.ts:414` and
+      `build-points-map.ts:312` both call
+      `path.join(process.env.HOME ?? '', '.local/bin/pmtiles')`. That pins one
+      user's install location for a tool that is on PATH, and fails with an
+      opaque ENOENT for anyone else. Replace with
+      `process.env.PMTILES_BIN ?? 'pmtiles'` and document the env var in
+      MAPS.md.
+
+      (b) SLUGIFY REGEX. `mapBuildUtils.ts:31` writes the combining-diacritic
+      range as raw literal characters (`/[<U+0300>-<U+036F>]/`). It works but
+      is invisible in most editors. Replace with `/[̀-ͯ]/g`.
+      Also note in a comment that `slugify` has no non-Latin fallback — a
+      future `--name-field=NAME_ZH` or `NAME_RU` would yield empty ids for
+      every target. Do not fix that here; just document it.
+
+      (c) BBOX ASSERTION. `build-map.ts:196-203`'s antimeridian wrap can emit
+      a bbox where west > east. `russia-regions`' Chukotka has exactly that:
+      `[157.692, 61.8148, -169.7009, 71.6]`. This was checked in a browser and
+      does NOT break the app — MapLibre's `cameraForBounds` calls
+      `adjustAntiMeridian()` (maplibre-gl-dev.mjs:22968) and the tour frames
+      Chukotka correctly. But it silently mis-clips `overallBboxOf` in
+      mapBuildUtils.ts:37-49 for the lake `-spat` filter, and any non-MapLibre
+      consumer would get it wrong.
+      Do NOT "fix" the bbox. Emit an explicit `crossesAntimeridian: true` flag
+      on such targets and log a warning at build time, so the condition is
+      documented rather than rediscovered. Note it in MAPS.md.
+
+      This task must not alter any committed map.json or tileset.
+    dod:
+      - "`PMTILES_BIN` env var honoured, defaults to `pmtiles` on PATH, documented in MAPS.md"
+      - "slugify uses `\\u0300-\\u036f`; the non-Latin limitation is commented"
+      - "a target whose bbox wraps the antimeridian is flagged and warned about at build time"
+      - "no committed map.json or .pmtiles file changes"
+      - "all four gates pass"
+
+  - id: GC-032
+    title: "Adjacency-aware map palette and unsolved-opacity revisit"
+    engine: fable
+    effort: High
+    deps: [GC-031, GC-030]
+    release: v0.4.0
+    branch: feat/gc-032-map-palette
+    labels: [type:feat, area:data, area:ui, wave:3]
+    needs: []
+    files:
+      - data/styles/base.json
+      - data/scripts/build-map.ts
+      - data/scripts/build-points-map.ts
+      - data/maps/*/map.json
+      - app/src/lib/geoclickMap.ts
+      - DECISIONS.md
+    review_refs: [D4]
+    description: |
+      The 8-colour categorical palette is a name-length hash —
+      `["%", ["length", ["get","name"]], 8]` in `data/styles/base.json:74` and
+      `:134`. Two compounding problems, both measured.
+
+      (a) THE HASH IS MUCH WORSE THAN RANDOM. Place names cluster at 5-8
+      characters, so the global bucket distribution across all 1410 targets
+      runs from 5.0% (bucket 3) to 20.8% (bucket 7), not 12.5% each.
+      Same-colour adjacent pairs (bbox-overlap proxy for adjacency):
+
+          italy-provinces        297 adjacent pairs, 61 same colour (20.5%)
+          usa-states             122 /  26 (21.3%)
+          japan-regions          109 /  24 (22.0%)
+          china-regions           80 /  16 (20.0%)
+          great-britain-regions   32 /  10 (31.3%)
+
+      Random 8-colouring gives ~12.5%. Worse, collisions CLUSTER spatially:
+      Bolzano/Sondrio/Belluno/Brescia/Bergamo are all 7 letters, so a
+      contiguous swath of northern Italy renders in one identical olive.
+      North Dakota / South Dakota (both 12) are adjacent and identical.
+
+      (b) THE OPACITY FIX MASKED IT. The 2026-09-13 solved-contrast change
+      dropped unsolved `fill-opacity` from 0.6 to 0.3 (base.json:85-98) over
+      the `#f0ead9` parchment background from the same day's background
+      refresh. Confirmed by loading italy-provinces in a browser: the palette
+      collapses into a near-uniform pastel wash — the colours are barely
+      distinguishable even where they DO differ. Fixing the hash without
+      revisiting the opacity would accomplish nothing visible.
+
+      Do:
+      - Compute a `colorIndex` per target at BUILD time via greedy graph
+        colouring over shared borders, and write it into `map.json`. Use
+        mapshaper for real adjacency if practical; a bbox-touch plus
+        centroid-distance proxy is acceptable if you justify it. For point
+        maps, use k-nearest-neighbour adjacency in screen-ish space.
+      - Apply it at runtime WITHOUT retiling: set `colorIndex` as a
+        feature-state on map load (geoclickMap.ts / the views), and change
+        base.json to `["match", ["feature-state","colorIndex"], ...]` with a
+        sane fallback for unset. Retiling all 44 maps would need the WSL2
+        toolchain and would commit ~14MB of regenerated binaries; this
+        approach avoids both. If you conclude retiling is unavoidable, STOP
+        and escalate rather than doing it — that is an Ultrahigh change and
+        needs the product owner's sign-off.
+      - Revisit the unsolved opacity as part of the same change. The
+        constraint is fixed by DECISIONS.md's "Quiz solved-state contrast"
+        entry: solved must remain unambiguously distinguishable from unsolved
+        at a glance, and that must hold for BOTH geometry types. Within that
+        constraint, make the categorical palette actually legible again. You
+        may raise unsolved opacity, change the palette's value range, adjust
+        the outline, or argue the palette should be dropped entirely for two
+        neutral tones — but you must verify the solved/unsolved distinction
+        still holds and say how you checked.
+      - Write the DECISIONS.md "Map colors" entry. Note that
+        `data/styles/base.json:5` already CITES a "Map colors" entry that has
+        never existed; this task creates it, and GC-060 is coordinated to
+        leave it alone.
+
+      Verify on at least: italy-provinces (worst collisions), usa-states
+      (North/South Dakota), great-britain-regions (highest collision rate),
+      and one towns map.
+    dod:
+      - "zero adjacent same-colour pairs on italy-provinces, usa-states, japan-regions, china-regions, great-britain-regions — assert it in a test"
+      - "colorIndex is generated at build time and committed in map.json"
+      - "no .pmtiles file is regenerated"
+      - "base.json reads colorIndex, with a defined fallback when feature-state is unset"
+      - "solved vs unsolved remains unambiguous on both a polygon map and a towns map — say how you verified"
+      - "screenshots of before/after for italy-provinces in the PR"
+      - "DECISIONS.md gains the 'Map colors' entry that base.json already cites"
+      - "all four gates pass"
+
+  - id: GC-033
+    title: "Tour dwell tuning for large maps"
+    engine: sonnet
+    effort: Low
+    deps: [GC-031, GC-022]
+    release: v0.4.0
+    branch: feat/gc-033-tour-dwell
+    labels: [type:feat, area:ui, wave:4]
+    needs: []
+    files: [data/scripts/build-map.ts, data/scripts/build-points-map.ts, app/src/lib/TourView.svelte, DECISIONS.md]
+    review_refs: ["#30"]
+    description: |
+      `DEFAULT_DWELL_MS = 3000` is applied uniformly
+      (build-map.ts:370, build-points-map.ts:251). For `italy-provinces` that
+      is 110 steps x 3s = 5.5 minutes at 1x, and `russia-regions` is 83 steps.
+      Nobody watches that.
+
+      Decide and implement one of:
+      - scale dwell down as target count rises (e.g. 3000ms under 30 targets,
+        tapering to ~1200ms over 80), regenerating tour.json for affected maps;
+      - or leave the data alone and give TourView a target-count-aware default
+        speed so the existing speed control starts higher on big maps.
+
+      The second option touches no committed data and is probably right, but
+      make the call yourself and justify it. Record it in DECISIONS.md.
+      Low value — this is explicitly the last task in the programme.
+    dod:
+      - "a 100+ target tour completes in a defensible time; state the number"
+      - "small maps are unchanged, or changed deliberately with a stated reason"
+      - "the manual speed control still works and still overrides the default"
+      - "DECISIONS.md records the approach"
+      - "all four gates pass"
+
+  - id: GC-040
+    title: "Capacitor SQLite schema migrations"
+    engine: opus
+    effort: Medium
+    deps: [GC-001]
+    release: v0.3.0
+    branch: fix/gc-040-capacitor-migrations
+    labels: [type:fix, area:storage, wave:1]
+    needs: []
+    files: [app/src/lib/capacitorProgressRepository.ts, ONBOARDING.md, DECISIONS.md]
+    review_refs: [D2]
+    description: |
+      The two SQLite backends are described in ONBOARDING.md as hand-mirrored
+      copies of one schema. They are not equivalent implementations:
+
+      - `desktop/src-tauri/src/lib.rs:7-32` uses tauri-plugin-sql's VERSIONED
+        `Migration` list.
+      - `app/src/lib/capacitorProgressRepository.ts:15-33` uses
+        `CREATE TABLE IF NOT EXISTS` with NO version tracking at all, and
+        passes `version: 1` to `createConnection` with no corresponding
+        upgrade-statement set.
+
+      So the real risk is not "you might forget to edit the second file" — it
+      is that the Capacitor side HAS NO MIGRATION MECHANISM TO EDIT. The first
+      schema change on Android is either data loss or a hand-written ALTER with
+      no record of which devices applied it.
+
+      Do:
+      - Add `PRAGMA user_version`-based migration to `getDb()`: a
+        `MIGRATIONS: string[]` array indexed by version, applied in order for
+        any version gap, each inside a transaction, with `user_version` bumped
+        on success.
+      - Make migration 0 exactly reproduce the current schema, so an existing
+        Android install with the tables already present converges to
+        `user_version = 1` without data loss. Think carefully about the device
+        that already has the tables but `user_version = 0` — that is the real
+        upgrade path and the one that can destroy a user's progress.
+      - Update ONBOARDING.md's "Capacitor has no equivalent of Tauri's
+        migrations()" claim, which becomes false.
+      - Record in DECISIONS.md why the two backends stay duplicated rather
+        than sharing a generated schema (or, if you conclude sharing is worth
+        it, propose it there — but do not implement a shared-schema build step
+        in this task).
+
+      NOTE: neither SQLite backend has a single test today, and nothing in
+      this task can be exercised without an Android device. Be conservative.
+      Describe your manual test plan in the PR even though you cannot run it.
+    dod:
+      - "`PRAGMA user_version` drives migration; migration 0 reproduces today's schema exactly"
+      - "the existing-tables-but-version-0 upgrade path is handled and explained in a comment"
+      - "column names still match sqliteProgressRepository.ts and lib.rs exactly"
+      - "ONBOARDING.md's stale 'no equivalent of migrations()' claim is corrected"
+      - "DECISIONS.md records the duplication decision"
+      - "a written manual test plan for a real device is in the PR body"
+      - "all four gates pass"
+
+  - id: GC-041
+    title: "ProgressRepository clearMap/clearAll and localStorage write guard"
+    engine: sonnet
+    effort: Medium
+    deps: [GC-040]
+    release: v0.3.0
+    branch: feat/gc-041-repository-clear
+    labels: [type:feat, area:storage, wave:2]
+    needs: []
+    files:
+      - app/src/lib/progressRepository.ts
+      - app/src/lib/sqliteProgressRepository.ts
+      - app/src/lib/capacitorProgressRepository.ts
+      - app/src/lib/progressRepository.test.ts
+    review_refs: [D10, "#26"]
+    description: |
+      (a) NO DELETE PATH. `ProgressRepository`
+      (`app/src/lib/progressRepository.ts:25-30`) has four methods, all
+      read-or-upsert. There is no way for a user to reset a map's progress or
+      clear all data, and no way for a test to tear down. The paused
+      `feature/supabase-sso-sync` work will need deletes for reconciliation.
+      Add `clearMap(mapId): Promise<void>` and `clearAll(): Promise<void>` to
+      the interface and to all three implementations.
+
+      (b) ASYMMETRIC ERROR HANDLING. `readJson` (lines 54-65) has a try/catch
+      with a good comment about corrupt data. `writeJson` (67-70) has none —
+      `localStorage.setItem` throws `QuotaExceededError` in Safari private
+      mode and when storage is full. Wrap it; on failure, log once and
+      continue rather than breaking the quiz mid-session.
+
+      Do NOT add UI for reset in this task — interface and implementations
+      only. A "reset this map" button is a product decision the owner has not
+      made.
+
+      Extend `progressRepository.test.ts` (the localStorage backend is the one
+      that is actually testable) to cover both new methods and the quota path.
+    dod:
+      - "`clearMap` and `clearAll` exist on the interface and all three implementations"
+      - "localStorage tests cover: clearMap removes only that map; clearAll removes everything; a throwing setItem does not propagate"
+      - "SQLite implementations use parameterised DELETE, matching the existing query style"
+      - "no UI change"
+      - "all four gates pass"
+
+  - id: GC-050
+    title: "Sync <html lang> to the selected language"
+    engine: haiku
+    effort: Low
+    deps: [GC-001]
+    release: v0.2.0
+    branch: fix/gc-050-html-lang
+    labels: [type:fix, area:i18n, area:a11y, wave:1]
+    needs: []
+    files: [app/src/routes/+layout.svelte, app/src/app.html]
+    review_refs: [C13]
+    description: |
+      `app/src/app.html:2` hardcodes `<html lang="en">` and nothing ever
+      updates it. Switching to DE or IT changes every visible string but not
+      the document language, so screen readers keep reading German UI with
+      English phonemes and `:lang()` / hyphenation are wrong.
+
+      Add a `$effect` in `app/src/routes/+layout.svelte` that sets
+      `document.documentElement.lang = getLanguage()`. Guard for SSR/prerender
+      (`typeof document === 'undefined'`) the same way
+      `app/src/lib/i18n.svelte.ts` guards `localStorage` at lines 220-224.
+
+      Keep `lang="en"` in app.html as the prerender default.
+      This is deliberately a small, self-contained task.
+    dod:
+      - "switching language in the browser updates `document.documentElement.lang` immediately"
+      - "prerendered HTML still ships `lang=\"en\"` and the build does not break"
+      - "reload with a stored non-English language sets the attribute on first paint"
+      - "all four gates pass"
+
+  - id: GC-060
+    title: "Reconcile stale doc counts and dangling references"
+    engine: haiku
+    effort: Low
+    deps: [GC-001]
+    release: v0.2.0
+    branch: docs/gc-060-count-reconciliation
+    labels: [type:docs, wave:1]
+    needs: []
+    files: [DECISIONS.md, ARCHITECTURE.md, ROADMAP.md]
+    review_refs: [S2, S4]
+    description: |
+      Documented facts that no longer match the repo. Verified counts: 44 map
+      directories, 22 countries, 1410 targets total.
+
+      (a) `DECISIONS.md`'s "Home page map list (2026-09-12)" entry says
+      "28 maps across 14 countries" and "With 14 country groups", and reasons
+      about rejecting a search/filter UI from that number ("Revisit only if the
+      list grows"). The list has since grown 57%. Per CLAUDE.md's rule about
+      amending superseded decisions, update the entry in place with the real
+      numbers and either re-affirm or re-open the search-UI conclusion
+      explicitly — do not leave the stale reasoning standing.
+
+      (b) `data/styles/base.json:5` cites "DECISIONS.md's 'Map colors' entry".
+      No such entry exists. GC-032 writes the real one as part of its own
+      scope. Here: do NOT write it. Just confirm the citation and leave a
+      one-line TODO in DECISIONS.md pointing at GC-032, so the dangling
+      reference is tracked rather than silently duplicated.
+
+      (c) `ARCHITECTURE.md`'s "classic SM-2" claim is GC-010's to fix. Do not
+      touch it here. If GC-010 has already merged into the release branch when
+      you start, verify it is correct and say so.
+
+      Keep this to counts and references. Do not restructure or trim any doc.
+    dod:
+      - "no doc claims a map or country count that contradicts `data/maps`"
+      - "the home-page-list decision entry is amended, not left stale, and its search-UI conclusion is explicitly re-affirmed or re-opened"
+      - "the dangling 'Map colors' citation is tracked with a pointer to GC-032, not duplicated"
+      - "no ARCHITECTURE.md SM-2 edits (GC-010 owns those)"
+      - "all four gates pass"
+
+  - id: GC-070
+    title: "Route asset fetches through SvelteKit base"
+    engine: sonnet
+    effort: Low
+    deps: [GC-001]
+    release: v0.3.0
+    branch: fix/gc-070-base-path-fetches
+    labels: [type:fix, area:app, wave:1]
+    needs: []
+    files: [app/src/lib/geoclickMap.ts, app/src/lib/tour.ts, app/src/routes/+page.svelte]
+    review_refs: [C12]
+    description: |
+      Five fetches hardcode a root-absolute path while every link in the app
+      correctly uses `resolve()` from `$app/paths`:
+
+        geoclickMap.ts:57  fetch(`/maps/${mapId}/map.json`)
+        geoclickMap.ts:58  fetch(`/styles/base.json`)
+        geoclickMap.ts:66  `${location.origin}/maps/${mapId}/tiles.pmtiles`
+        tour.ts:15         fetch(`/maps/${mapId}/tour.json`)
+        +page.svelte:45    fetch(`/maps/${map.id}/map.json`)
+
+      ARCHITECTURE.md documents a prepared `deploy/github-pages` branch with a
+      `BASE_PATH` subpath fix. That branch cannot work as written: under a
+      subpath every one of these 404s.
+
+      Import `base` from `$app/paths` and prefix all five. For the tiles URL,
+      keep the absolute-origin form pmtiles requires but insert `base`.
+
+      Verify both ways: normal build still works (base is ''), and a build with
+      a non-empty base still loads map.json, base.json, tour.json and tiles.
+      You can set a base via `kit.paths.base` temporarily to test; revert it
+      before committing.
+    dod:
+      - "no root-absolute asset fetch remains in app/src"
+      - "default build (empty base) still loads maps, styles, tours and tiles — verified by serving app/build"
+      - "a temporary non-empty base also loads all four — state that you tested it and that you reverted the config"
+      - "all four gates pass"
+
+  - id: GC-071
+    title: "Home page: stop fetching all 44 map.json files"
+    engine: sonnet
+    effort: Medium
+    deps: [GC-070, GC-030]
+    release: v0.3.0
+    branch: perf/gc-071-home-due-counts
+    labels: [type:perf, area:app, wave:2]
+    needs: []
+    files: [app/src/routes/+page.svelte, app/src/lib/mapCatalog.ts]
+    review_refs: [C9]
+    description: |
+      `app/src/routes/+page.svelte:42-57` issues 44 parallel fetches totalling
+      ~484 KB of JSON on every home-page mount, purely to compute due counts.
+      The only thing the map definitions supply is each map's target id list.
+
+      GC-030 has already generated `data/maps/index.json` with per-map target
+      counts. Use it:
+      - Replace the 44 fetches with one fetch of the index (or import it at
+        build time, which is better — it is static data and the home page
+        prerenders).
+      - Recompute the three due states from stored card state plus the index's
+        target count: `notStarted` when no card states exist; `upToDate` when
+        no stored card is due AND the stored card count equals the target
+        count; `due` otherwise, counting unseen targets as due — which is what
+        `isDue(undefined, today) === true` already means in packages/srs.
+      - Be careful: the current code derives `notStarted` from
+        `cardStates.length === 0` and counts due over the map's full target
+        list. Preserve that exact semantics; a map partially played must still
+        report its unseen targets as due.
+
+      Consider also generating mapCatalog's id/country data from the index to
+      close the drift gap properly, but only if it does not balloon the task —
+      GC-030's test already fails on drift, so this is optional here.
+    dod:
+      - "the home page issues at most 1 data fetch (or 0 if imported at build time)"
+      - "due counts are identical to the pre-change behaviour for: an unplayed map, a partly-played map, and a fully up-to-date map — verify all three by hand and say so"
+      - "network panel evidence in the PR (before: 44 requests, after: <=1)"
+      - "all four gates pass"
+
+  - id: GC-080
+    title: "ADR: pmtiles storage strategy"
+    engine: opus
+    effort: Low
+    deps: [GC-001]
+    release: v0.4.0
+    branch: docs/gc-080-pmtiles-storage-adr
+    labels: [type:docs, area:data, wave:1]
+    needs: []
+    files: [DECISIONS.md]
+    review_refs: [D12, "#29"]
+    description: |
+      `data/maps` holds ~14 MB of binary `.pmtiles` tracked in git across 44
+      files, and every map rebuild writes a fresh blob for each. At 22
+      countries this is fine; history is already permanent, and each future
+      country batch adds roughly 0.3-1 MB per map forever.
+
+      Write a DECISIONS.md entry that actually decides. Cover:
+      - measured current cost (repo size, per-map size, growth per country batch)
+      - the options: status quo; Git LFS; fetch-at-build from a GitHub Release
+        artefact; generate-at-build (rejected — needs WSL2 on Netlify)
+      - the cost of each, INCLUDING that Git LFS on a private repo has a quota
+        and that migrating existing history means a rewrite every clone must
+        re-pull
+      - how each interacts with the three shells: the Netlify build, Tauri's
+        `frontendDist`, and Capacitor's `cap sync` — all three currently just
+        read the files off disk
+      - a recommendation and a trigger condition ("revisit at N countries or
+        M MB")
+
+      DO NOT execute any migration. A history rewrite is an Ultrahigh,
+      irreversible change requiring the product owner's explicit approval; if
+      the ADR recommends one, it gets filed as a separate task for a later
+      release, not done here.
+    dod:
+      - "DECISIONS.md gains a dated entry with measured numbers, not estimates"
+      - "all four options are costed, including the history-rewrite cost of LFS"
+      - "interaction with all three shells is addressed"
+      - "a clear recommendation and a numeric revisit trigger are stated"
+      - "no .gitattributes change, no history rewrite, no file moved"
+      - "all four gates pass"
