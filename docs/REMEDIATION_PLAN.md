@@ -289,7 +289,7 @@ ORCHESTRATION.md § Automerge).
 | GC-071 | **released** | `d47e519` | v0.1.2 | 44 → 0 data requests; index carries `targetIds` (not just counts) so stale cards stay ignored - verified identical badges on 3 seeded maps |
 | GC-004 | todo | — | v0.2.0 | |
 | GC-022 | todo | — | v0.2.0 | |
-| GC-032 | todo | — | v0.2.0 | the one real design task |
+| GC-032 | **merged** | `9667bfb` | v0.2.0 | colorIndex 0-5 per target from tile adjacency (all 44 maps, 0 same-colour neighbours, asserted in mapColors.test.ts); unsolved opacity 0.55; hover recoloured (ΔE 16→38 vs palette) - verified on italy-provinces + germany-towns quizzes |
 | GC-033 | todo | — | v0.2.0 | last task; v0.2.0 is cut after it |
 | GC-080 | **merged** | `a53c541` | v0.2.0 | decision: stay in plain git (pack 15.6 MiB, 14.2 MB of it tileset history); revisit at 100 MB / 25 MB tileset / 60 countries |
 
