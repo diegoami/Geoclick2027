@@ -6,6 +6,7 @@ import type { StyleSpecification } from 'maplibre-gl';
 import { PMTiles, Protocol, type RangeResponse, type Source } from 'pmtiles';
 import { asset } from '$app/paths';
 import { enableTapToMagnify } from './labelMagnify';
+import { isNativeShell } from './platform';
 import { overallBounds, type MapDefinition } from './mapDefinition';
 
 let protocol: Protocol | undefined;
@@ -18,18 +19,20 @@ function ensurePmtilesProtocol(): Protocol {
 	return protocol;
 }
 
-// Capacitor's Android WebView local asset server doesn't support HTTP
-// Range/206 responses for arbitrary file extensions (a known upstream
-// limitation, ionic-team/capacitor#7664) - pmtiles' normal FetchSource
-// (which relies on range requests) silently never gets real tile data
-// back, even though the identical bundled file works fine in the
-// browser/Tauri builds. Demo maps are small (under 1MB each), so the fix
-// is to fetch the whole archive once as a normal full GET - which
-// Capacitor serves correctly - and serve pmtiles' byte-range reads out of
-// that in-memory buffer instead of over HTTP. Only applied on native
-// Capacitor (see fetchMapDefAndStyle's isNativePlatform check) - browser
-// and Tauri already work correctly via real range requests, no reason to
-// change already-verified behavior there.
+// Neither app shell serves HTTP Range requests for bundled files, and
+// pmtiles' normal FetchSource depends on them:
+// - Capacitor's Android WebView asset server ignores them for arbitrary
+//   file extensions (ionic-team/capacitor#7664), so no tile data arrives.
+// - Tauri's desktop protocol (http://tauri.localhost) answers a Range request
+//   with a plain 200 and no Content-Length, and pmtiles aborts with "Server
+//   returned no content-length header". Found in the published v0.3.0 desktop
+//   app (empty map), caught via WebView2 remote debugging - see ONBOARDING.md.
+//   The old comment here claimed desktop worked; it did not.
+// The fix for both is to fetch the whole archive once, as a normal full GET
+// the shells serve correctly, and answer pmtiles' byte-range reads from that
+// in-memory buffer. Map archives are small (russia-regions, the largest, is
+// about 2 MB). The web build keeps real range requests; Netlify and dev
+// servers support them.
 class ArrayBufferSource implements Source {
 	constructor(
 		private key: string,
@@ -70,8 +73,7 @@ export async function fetchMapDefAndStyle(
 	// pmtiles needs an absolute URL; new URL() keeps it absolute while honouring
 	// the base path (and stays correct if asset() ever returns a full CDN URL).
 	const tilesUrl = new URL(asset(`/maps/${mapId}/tiles.pmtiles`), location.origin).href;
-	const { Capacitor } = await import('@capacitor/core');
-	if (Capacitor.isNativePlatform()) {
+	if (await isNativeShell()) {
 		await registerBufferedPmtiles(mapProtocol, tilesUrl);
 	}
 

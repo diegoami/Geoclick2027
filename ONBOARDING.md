@@ -207,6 +207,26 @@ combination, confirmed by actually launching the built binary:
 `GDK_BACKEND=x11 WEBKIT_DISABLE_DMABUF_RENDERER=1 ./target/release/app`.
 Real hardware (or a non-WSL Linux desktop) shouldn't need any of this.
 
+**Debugging the built Windows app (v0.3.1).** A release build has no
+devtools, and `tauri dev` serves the app from Vite, so bugs in the
+bundled app can't be seen that way. Instead, launch the built exe with
+WebView2's remote debugging on, and attach Chrome or Playwright:
+
+```powershell
+$env:WEBVIEW2_ADDITIONAL_BROWSER_ARGUMENTS = "--remote-debugging-port=9333"
+& desktop\src-tauri\target\release\app.exe
+# then open http://127.0.0.1:9333/json/list, or
+# chromium.connectOverCDP('http://127.0.0.1:9333') from a Playwright script
+```
+
+That's how v0.3.0's empty desktop maps were found: the console showed
+pmtiles failing. **The gotcha:** Tauri's `http://tauri.localhost`
+protocol ignores HTTP Range requests. It answers with a plain 200 and no
+Content-Length, so pmtiles' range reads fail. `geoclickMap.ts` loads each
+map's tile archive whole in both native shells (`isNativeShell()`) for
+exactly that reason. Don't "simplify" that back to range requests without
+re-testing the built desktop app this way.
+
 ## App icons and splash screens (FT-05)
 
 Every icon comes from one file, `design/logo/geoclick-logo.svg`. Don't
