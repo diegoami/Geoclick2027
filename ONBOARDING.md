@@ -185,6 +185,28 @@ npm run sync                    # copies app/build + native plugins into android
 npm run open                    # opens the project in Android Studio - press Run from there
 ```
 
+**Headless debug-APK build, no Android Studio GUI needed** (useful when
+you just want an installable APK, e.g. to `adb install` onto a device):
+the same JDK gotcha above applies to a direct `gradlew` invocation too,
+and the system `java`/`JAVA_HOME` may not even be set - but Android
+Studio itself ships a compatible JDK 21 under IntelliJ's own JDK cache,
+not just its bundled (often JDK 25) `jbr`:
+
+```bash
+cd mobile/android
+JAVA_HOME="C:/Users/<you>/.jdks/jbr-21.0.11" ./gradlew assembleDebug
+# output: mobile/android/app/build/outputs/apk/debug/app-debug.apk
+```
+
+Find the exact `.jdks/jbr-*` directory name on your machine first (`ls
+~/.jdks`) rather than assuming this version. Install with `adb install
+-r app-debug.apk` once a device is connected (`adb devices` to confirm) —
+needs a real device with USB debugging on, or a running emulator.
+Confirmed working end-to-end 2026-09-13, rebuilding after the
+eight-country/i18n/visual-refresh batch (44 map folders synced
+correctly, real-sized `.pmtiles`, not the corrupted-symlink failure mode
+from the Gotchas section below).
+
 Same persistence pattern as desktop: `createProgressRepository()` picks
 `capacitorProgressRepository.ts` (via `@capacitor-community/sqlite`) when
 `Capacitor.isNativePlatform()` is true, same `ProgressRepository`

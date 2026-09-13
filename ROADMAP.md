@@ -1463,14 +1463,36 @@ loop actually feels good. Candidates below, in rough priority order.
         town selection" section for the exact mechanism and which
         countries needed which flag.
 - [ ] **Retest on desktop and mobile after the above iterations land** —
-      requested directly by the user (2026-09-13), to run once the new-
-      countries batch, the population-threshold rework, and SSO are all
-      finished: re-verify the desktop (Tauri) and Android (Capacitor)
-      builds still work end to end (not just the web app), per the
-      existing "test locally vs. test the deployment, as two separate
-      steps" habit (see CLAUDE.md) — a bigger map catalog and a new sync
-      backend are exactly the kind of change that could regress a
-      platform-specific build without showing up in the web dev server.
+      requested directly by the user (2026-09-13), originally scoped to
+      run once the new-countries batch, the population-threshold rework,
+      and SSO were all finished; picked up right after SSO was deferred
+      (above) rather than waiting on it, since SSO isn't part of either
+      native build's dependency surface. Re-verify the desktop (Tauri)
+      and Android (Capacitor) builds still work end to end (not just the
+      web app), per the existing "test locally vs. test the deployment,
+      as two separate steps" habit (see CLAUDE.md) — a bigger map catalog
+      (44 map folders now, up from 6 at Iteration 7/8's original build)
+      is exactly the kind of change that could regress a platform-specific
+      build without showing up in the web dev server.
+      **Rebuild done and smoke-tested 2026-09-13**: `npm run build
+      --workspace=app` picked up the full current `main` (background/
+      quiz-contrast visual refresh, i18n, map-list reorg, all 14
+      countries); `desktop`'s `tauri build` compiled clean and produced
+      both `Geoclick_0.1.0_x64_en-US.msi` and `Geoclick_0.1.0_x64-setup.exe`,
+      and the built `app.exe` launches and stays running (checked via
+      `tasklist`, not just a clean exit code). `mobile`'s `cap sync`
+      copied all 44 map folders into `android/app/src/main/assets/public`
+      with real-sized `.pmtiles` (not the corrupted-symlink/CRLF failure
+      modes from ONBOARDING.md's Gotchas section), and a debug APK built
+      successfully via a direct `gradlew assembleDebug` — see
+      ONBOARDING.md's new "Headless debug-APK build" note for the JDK
+      workaround this needed (Android Studio's bundled JBR is JDK 25,
+      too new for this project's Gradle wrapper; its own JDK 21 cache
+      under `~/.jdks` works). **Still needed, and only doable by the
+      user**: actually clicking through both installed apps — no
+      real-device/emulator was connected this session to `adb install`
+      the APK, and a native window's UI can't be driven the way the
+      Chrome/Playwright checks used elsewhere in this project can.
 - [x] **Reorganize the home page's map list** — requested directly by the
       user (2026-09-12), alongside i18n and optional SSO above. 28 maps
       across 14 countries in one flat, unsorted `<ul>`
