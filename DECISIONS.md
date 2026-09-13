@@ -1021,6 +1021,10 @@ answers:
   about 60 MB a time. That would pass GC-080's 100 MB "revisit storage"
   threshold within two releases. A releases repo keeps the binaries out of
   git entirely. Making the source public stays tied to the 1.0 launch.
+  The repo is `diegoami/geoclick-releases` (FT-08). Its front page comes
+  from `docs/releases-repo/README.md`, and `scripts/publish-release.mjs`
+  uploads each release there, only with `--confirm` and the product
+  owner's OK.
 - **Installers are built manually**, on the local machine with a
   checklist and script. No CI for now.
 - **Claude drafts 2-3 logo candidates**, and the product owner picks one.

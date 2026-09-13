@@ -11,6 +11,7 @@
 	import { t, tPlural } from '$lib/i18n.svelte';
 	import LanguageSwitcher from '$lib/LanguageSwitcher.svelte';
 	import { mapGroups } from '$lib/mapCatalog';
+	import { RELEASES_URL, isNativeShell } from '$lib/platform';
 
 	// Flat view of every map - onMount's data-loading loop below doesn't
 	// care about grouping, only about (id) -> per-map progress data, so it
@@ -34,7 +35,12 @@
 	type DueStatus = { kind: 'notStarted' } | { kind: 'upToDate' } | { kind: 'due'; count: number };
 	let dueStatuses = $state<Record<string, DueStatus | undefined>>({});
 
+	// The download link is for web visitors only - pointless inside the desktop
+	// or Android app itself. Off until checked, so the apps never flash it.
+	let showDownload = $state(false);
+
 	onMount(() => {
+		isNativeShell().then((native) => (showDownload = !native));
 		(async () => {
 			const repository = await createProgressRepository();
 			const summaryEntries = await Promise.all(
@@ -72,6 +78,12 @@
 		<LanguageSwitcher />
 	</div>
 	<p>{t('home.subtitle')}</p>
+	{#if showDownload}
+		<p class="download">
+			{t('home.download.lead')}
+			<a href={RELEASES_URL} target="_blank" rel="external noopener">{t('home.download.link')}</a>
+		</p>
+	{/if}
 	<div class="groups">
 		{#each mapGroups as group (group.country)}
 			<section class="country-group">
@@ -135,6 +147,24 @@
 	}
 	.header-row h1 {
 		margin: 0;
+	}
+	.download {
+		margin-top: -0.5rem;
+		font-size: 0.9rem;
+		color: #4a5650;
+	}
+	/* Overrides the page's map-card link style below. */
+	.download a {
+		display: inline;
+		padding: 0;
+		border: none;
+		color: #b5691f;
+		text-decoration: underline;
+		text-underline-offset: 2px;
+	}
+	.download a:hover {
+		background: none;
+		text-decoration-thickness: 2px;
 	}
 	.groups {
 		display: flex;

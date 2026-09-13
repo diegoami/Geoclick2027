@@ -202,8 +202,16 @@ There is no CI (FEATURE_PLAN.md, decision 2).
    Windows, and launch both. The Windows installers aren't code-signed, so
    SmartScreen shows "unknown publisher". That's expected.
 3. **Publish: product owner's OK first, every time.** Publishing is public
-   and outward-facing. FT-08 sets up the public releases repo and the
-   publish step.
+   and outward-facing. `node scripts/publish-release.mjs` is a dry run:
+   - it checks the files against `SHA256SUMS.txt`;
+   - it builds the release notes from the player-facing part of the
+     version's `CHANGELOG.md` entry;
+   - it shows exactly what it would upload to
+     [`diegoami/geoclick-releases`](https://github.com/diegoami/geoclick-releases).
+
+   Only `--confirm` creates the GitHub Release. The public repo's front
+   page is kept in `docs/releases-repo/README.md`. When that file changes,
+   copy it over to the releases repo.
 4. **Say what shipped** in the release's `CHANGELOG.md` entry: which
    installers, and any shell that was not rebuilt.
 
