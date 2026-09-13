@@ -4,6 +4,7 @@
 	import 'maplibre-gl/dist/maplibre-gl.css';
 	import { resolve } from '$app/paths';
 	import { fetchMapDefAndStyle, createMap } from './geoclickMap';
+	import { resolveDrop } from './quizDrop';
 	import MapNav from './MapNav.svelte';
 	import { t, tPlural } from './i18n.svelte';
 	import { mapDisplayName } from './mapCatalog';
@@ -367,29 +368,16 @@
 		setHover(undefined);
 		dragging = undefined;
 
-		// A drop only counts as an attempt if it landed on or near some
-		// region at all - sea, gaps between regions, or empty map padding
-		// isn't a plausible guess, so it shouldn't be scored as wrong any
-		// more than dropping back on the tray is.
-		if (!exactName && nearbyNames.length === 0) return;
-
-		// Correct if the exact point or a small tolerance radius around it
-		// hit the right region - the tolerance only ever helps a *correct*
-		// drop land, it never reattributes which region a wrong drop hit.
-		// Point maps need an extra check: two city markers can sit closer
-		// together than the tolerance radius (Essen/Duisburg, ~22px apart
-		// at the default zoom, inside a 30px tolerance) - "is the dragged
-		// target's name present somewhere nearby" isn't enough there, or a
-		// drop squarely on the WRONG city can still count as correct for a
-		// different, merely-nearby one. Requiring it to be the *closest*
-		// candidate fixes that; not applied to polygon maps, which don't
-		// have this failure mode and have shipped with the simpler check
-		// for months.
-		const isCorrect =
-			exactName === name ||
-			(isPointMap
-				? closestNameAmong(nearbyNames, e.clientX, e.clientY) === name
-				: nearbyNames.includes(name));
+		// The decision itself lives in quizDrop.ts (pure, unit-tested); this
+		// component only does the hit-testing it needs.
+		const { scored, correct: isCorrect } = resolveDrop({
+			exactName,
+			nearbyNames,
+			draggedName: name,
+			isPointMap,
+			closestName: isPointMap ? closestNameAmong(nearbyNames, e.clientX, e.clientY) : undefined
+		});
+		if (!scored) return;
 
 		session = attemptMatch(session, targetId, isCorrect ? targetId : undefined);
 		const item = session.items.find((i) => i.target.id === targetId)!;
