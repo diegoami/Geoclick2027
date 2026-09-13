@@ -281,7 +281,7 @@ ORCHESTRATION.md § Automerge).
 | GC-040 | **merged** | `063d602` | v0.1.1 | migrator tested against real SQLite (`node:sqlite`) + cross-checked vs lib.rs; native bridge still device-only - manual plan in the merge commit (`git show 063d602^2`) |
 | GC-050 | **merged** | `1d0593e` | v0.1.1 | set at hydration; static home-page HTML paints `en` for an instant first (inline script would close it - not worth the duplicated key) |
 | GC-060 | **merged** | `1deb05d` | v0.1.1 | "no search UI" re-affirmed at 22 countries (re-open at ~40 or a real complaint) - the loop's call, overrulable |
-| GC-070 | todo | — | v0.1.1 | |
+| GC-070 | **merged** | `f7e0963` | v0.1.1 | `asset()` not the deprecated `base` (same effect); verified under a real `/geoclick` subpath |
 | GC-021 | todo | — | v0.1.2 | |
 | GC-031 | todo | — | v0.1.2 | |
 | GC-041 | todo | — | v0.1.2 | |
