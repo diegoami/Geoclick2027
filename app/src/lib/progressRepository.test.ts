@@ -103,6 +103,71 @@ describe('localStorage progress repository', () => {
 	});
 });
 
+describe('localStorage progress repository - clearing (GC-041)', () => {
+	async function seed(repo: ReturnType<typeof createLocalStorageProgressRepository>) {
+		for (const mapId of ['italy-regions', 'italy-regions-2', 'germany-states']) {
+			await repo.saveCardState(mapId, sampleCard);
+			await repo.saveLastSessionSummary(mapId, sampleSummary);
+		}
+	}
+
+	it('clearMap removes that map only - including a map whose id merely starts with it', async () => {
+		const repo = createLocalStorageProgressRepository();
+		await seed(repo);
+		await repo.clearMap('italy-regions');
+		expect(await repo.getCardStates('italy-regions')).toEqual([]);
+		expect(await repo.getLastSessionSummary('italy-regions')).toBeUndefined();
+		for (const survivor of ['italy-regions-2', 'germany-states']) {
+			expect(await repo.getCardStates(survivor)).toEqual([sampleCard]);
+			expect(await repo.getLastSessionSummary(survivor)).toEqual(sampleSummary);
+		}
+	});
+
+	it('clearMap on a map with nothing saved is a no-op', async () => {
+		const repo = createLocalStorageProgressRepository();
+		await seed(repo);
+		await repo.clearMap('usa-states');
+		expect(await repo.getCardStates('germany-states')).toEqual([sampleCard]);
+	});
+
+	it('clearAll removes every map but keeps non-progress keys (e.g. the UI language)', async () => {
+		const repo = createLocalStorageProgressRepository();
+		await seed(repo);
+		localStorage.setItem('geoclick:language:v1', 'de');
+		localStorage.setItem('someone-else:key', 'x');
+		await repo.clearAll();
+		for (const mapId of ['italy-regions', 'italy-regions-2', 'germany-states']) {
+			expect(await repo.getCardStates(mapId)).toEqual([]);
+			expect(await repo.getLastSessionSummary(mapId)).toBeUndefined();
+		}
+		expect(localStorage.getItem('geoclick:language:v1')).toBe('de');
+		expect(localStorage.getItem('someone-else:key')).toBe('x');
+		expect(localStorage.length).toBe(2);
+	});
+});
+
+describe('localStorage progress repository - failed writes (GC-041)', () => {
+	afterEach(() => {
+		vi.restoreAllMocks();
+	});
+
+	it('a throwing setItem (quota / private mode) does not propagate, and is logged exactly once', async () => {
+		const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+		localStorage.setItem = () => {
+			throw new DOMException('The quota has been exceeded.', 'QuotaExceededError');
+		};
+		const repo = createLocalStorageProgressRepository();
+		await expect(repo.saveCardState('italy-regions', sampleCard)).resolves.toBeUndefined();
+		await expect(
+			repo.saveLastSessionSummary('italy-regions', sampleSummary)
+		).resolves.toBeUndefined();
+		await expect(repo.saveCardState('germany-states', sampleCard)).resolves.toBeUndefined();
+		expect(warn).toHaveBeenCalledTimes(1);
+		// Nothing was stored - the failure is swallowed, not faked as success.
+		expect(await repo.getCardStates('italy-regions')).toEqual([]);
+	});
+});
+
 describe('todayLocalDate', () => {
 	afterEach(() => {
 		vi.useRealTimers();

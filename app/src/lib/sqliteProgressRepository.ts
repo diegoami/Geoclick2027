@@ -101,6 +101,23 @@ export function createSqliteProgressRepository(): ProgressRepository {
 				   completed_at = excluded.completed_at`,
 				[mapId, summary.total, summary.perfect, summary.totalErrors, summary.completedAt]
 			);
+		},
+
+		// Two statements, not one transaction: tauri-plugin-sql exposes no
+		// transaction API, and a hand-sent BEGIN can land on a different pooled
+		// connection than the DELETEs. Worst case on a mid-way failure is a map
+		// with its cards cleared but its summary kept - harmless, and a retry
+		// finishes the job.
+		async clearMap(mapId) {
+			const db = await getDb();
+			await db.execute('DELETE FROM card_states WHERE map_id = $1', [mapId]);
+			await db.execute('DELETE FROM last_session_summaries WHERE map_id = $1', [mapId]);
+		},
+
+		async clearAll() {
+			const db = await getDb();
+			await db.execute('DELETE FROM card_states');
+			await db.execute('DELETE FROM last_session_summaries');
 		}
 	};
 }
