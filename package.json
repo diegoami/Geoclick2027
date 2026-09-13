@@ -18,11 +18,14 @@
 		"format": "npm run format --workspace=app",
 		"build-map": "tsx data/scripts/build-map.ts",
 		"build-map-index": "tsx data/scripts/build-map-index.ts",
+		"build-map-colors": "tsx data/scripts/build-map-colors.ts",
 		"gates": "node scripts/task.mjs gates",
 		"setup-hooks": "git config core.hooksPath .githooks"
 	},
 	"devDependencies": {
+		"@mapbox/vector-tile": "^3.0.0",
 		"mapshaper": "^0.6.115",
+		"pbf": "^5.1.2",
 		"tsx": "^4.20.6",
 		"yaml": "^2.9.1"
 	}

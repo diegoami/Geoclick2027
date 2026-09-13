@@ -100,5 +100,24 @@ export function createMap(
 		fitBoundsOptions: { padding: 40 }
 	});
 	map.addControl(new maplibregl.NavigationControl(), 'top-right');
+
+	// Each target's adjacency-aware colour slot (GC-032) is read by base.json
+	// through feature-state, so recolouring never means rebuilding tiles.
+	// 'style.load' is the earliest moment setFeatureState is legal (the source
+	// exists) and it comes before the first tile paints - so there is no flash of
+	// the fallback colour, unlike waiting for 'load'. Other feature-state keys
+	// (quizCorrect, highlighted...) are merged, not replaced, so views that set
+	// those later don't disturb it.
+	const applyColorIndex = () => {
+		for (const target of mapDef.targets) {
+			if (target.colorIndex === undefined) continue;
+			map.setFeatureState(
+				{ source: 'targets', sourceLayer: 'targets', id: target.name },
+				{ colorIndex: target.colorIndex }
+			);
+		}
+	};
+	map.on('style.load', applyColorIndex);
+	if (map.isStyleLoaded()) applyColorIndex();
 	return map;
 }
