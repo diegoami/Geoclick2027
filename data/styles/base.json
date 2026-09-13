@@ -2,7 +2,7 @@
 	"version": 8,
 	"name": "Geoclick base",
 	"metadata": {
-		"geoclick:note": "Shared style for every demo map, polygon (regions/states/provinces, built by build-map.ts) or point (towns/cities, built by build-points-map.ts) alike — one style serves both, see MAPS.md's 'Point-target design' section. The 'targets' source url is a placeholder (pmtiles://./tiles.pmtiles) — the map viewer composes the final style per map by replacing it with that map's own tiles.pmtiles URL. A polygon map's 'targets' source-layer has polygon features rendered by 'targets-fill'/'targets-outline'; a point map's has point features rendered by 'targets-circle' instead — each of the three is filtered by geometry-type, so only the matching pair ever renders anything for a given map's tileset (harmless no-op for the other). Polygon tilesets also have a 'labels' source-layer (one point per feature at its precomputed centroid) - not present for point maps, since a point target's own geometry already is its label anchor. Every tileset also has a 'lakes' source-layer (Natural Earth lake polygons within the map's overall bounding box, purely contextual — no hit-testing, no feature-state, just a lighter fill so a target whose border runs along a lake, e.g. Michigan on the Great Lakes, reads as a coastline rather than an unexplained gap next to its neighbors). A point map's tileset also has a 'context' source-layer (that country's admin-1 polygons from the same Natural Earth dataset build-map.ts uses for actual polygon targets, rendered by 'context-fill'/'context-outline' beneath the lakes/targets layers) — purely visual, no hit-testing, no feature-state: without it, a towns map's markers float with nothing showing the country's outline or internal admin-1 borders, unlike a polygon map where the targets themselves, filled edge to edge, already show the whole country. A polygon map's tileset has no 'context' source-layer, so these two layers are a harmless no-op for it, same pattern as 'targets-circle' being a no-op for a polygon map's tileset. This style deliberately does not render a name label layer: Geoclick is a place-recognition game, so showing region names on the map by default would give away the answer. The 'labels' source-layer still exists in the tiles for the app to use on demand (e.g. a per-click popup, a guided tour reveal, or a solved quiz target), just not as an always-on style layer or even a MapLibre symbol layer — a DOM-based maplibregl.Popup per solved/revealed target turned out more reliable than driving a symbol layer's opacity from feature-state, which hit MapLibre's collision/placement system hiding labels unpredictably even with text-allow-overlap+text-ignore-placement set (see QuizView.svelte). promoteId 'name' lets the app call setFeatureState by target name directly (map.json's Target.name), without needing to query the source for a feature first — safe because target names are unique within a single map. Feature-states used across views: 'highlighted' (explore click, tour reveal), 'quizHover' (drag-to-match, region under the dragged slip), 'quizCorrect' (drag-to-match, region solved), 'quizRevealed' (drag-to-match, auto-solved after too many wrong attempts — distinct muted color, doesn't count as a real success), 'quizWrong' (drag-to-match, brief flash on whichever region was actually — wrongly — dropped on; takes priority over every other state since it's a transient overlay that can land on an already-solved region if a different slip gets dropped there by mistake). Base (non-interactive) fill/circle color is a categorical `match` on `[\"%\", [\"length\", [\"get\",\"name\"]], 8]` cycling through an 8-color muted palette — a per-region hash derived purely from the name string already on every feature, not a per-map curated list, so it works unmodified for any map's target set. This is a name-length hash, not true adjacency-aware graph coloring: two neighboring regions can occasionally land on the same color. Accepted as a decorative-palette tradeoff — see DECISIONS.md's 'Map colors' entry — revisit only if a specific map's collision is actually distracting."
+		"geoclick:note": "Shared style for every demo map, polygon (regions/states/provinces, built by build-map.ts) or point (towns/cities, built by build-points-map.ts) alike — one style serves both, see MAPS.md's 'Point-target design' section. The 'targets' source url is a placeholder (pmtiles://./tiles.pmtiles) — the map viewer composes the final style per map by replacing it with that map's own tiles.pmtiles URL. A polygon map's 'targets' source-layer has polygon features rendered by 'targets-fill'/'targets-outline'; a point map's has point features rendered by 'targets-circle' instead — each of the three is filtered by geometry-type, so only the matching pair ever renders anything for a given map's tileset (harmless no-op for the other). Polygon tilesets also have a 'labels' source-layer (one point per feature at its precomputed centroid) - not present for point maps, since a point target's own geometry already is its label anchor. Every tileset also has a 'lakes' source-layer (Natural Earth lake polygons within the map's overall bounding box, purely contextual — no hit-testing, no feature-state, just a lighter fill so a target whose border runs along a lake, e.g. Michigan on the Great Lakes, reads as a coastline rather than an unexplained gap next to its neighbors). A point map's tileset also has a 'context' source-layer (that country's admin-1 polygons from the same Natural Earth dataset build-map.ts uses for actual polygon targets, rendered by 'context-fill'/'context-outline' beneath the lakes/targets layers) — purely visual, no hit-testing, no feature-state: without it, a towns map's markers float with nothing showing the country's outline or internal admin-1 borders, unlike a polygon map where the targets themselves, filled edge to edge, already show the whole country. A polygon map's tileset has no 'context' source-layer, so these two layers are a harmless no-op for it, same pattern as 'targets-circle' being a no-op for a polygon map's tileset. This style deliberately does not render a name label layer: Geoclick is a place-recognition game, so showing region names on the map by default would give away the answer. The 'labels' source-layer still exists in the tiles for the app to use on demand (e.g. a per-click popup, a guided tour reveal, or a solved quiz target), just not as an always-on style layer or even a MapLibre symbol layer — a DOM-based maplibregl.Popup per solved/revealed target turned out more reliable than driving a symbol layer's opacity from feature-state, which hit MapLibre's collision/placement system hiding labels unpredictably even with text-allow-overlap+text-ignore-placement set (see QuizView.svelte). promoteId 'name' lets the app call setFeatureState by target name directly (map.json's Target.name), without needing to query the source for a feature first — safe because target names are unique within a single map. Feature-states used across views: 'highlighted' (explore click, tour reveal), 'quizHover' (drag-to-match, region under the dragged slip), 'quizCorrect' (drag-to-match, region solved), 'quizRevealed' (drag-to-match, auto-solved after too many wrong attempts — distinct muted color, doesn't count as a real success), 'quizWrong' (drag-to-match, brief flash on whichever region was actually — wrongly — dropped on; takes priority over every other state since it's a transient overlay that can land on an already-solved region if a different slip gets dropped there by mistake). Base (non-interactive) fill/circle color is a categorical `match` on `[\"%\", [\"length\", [\"get\",\"name\"]], 8]` cycling through an 8-color muted palette — a per-region hash derived purely from the name string already on every feature, not a per-map curated list, so it works unmodified for any map's target set. This is a name-length hash, not true adjacency-aware graph coloring: two neighboring regions can occasionally land on the same color. Accepted as a decorative-palette tradeoff — see DECISIONS.md's 'Map colors' entry — revisit only if a specific map's collision is actually distracting. fill-opacity/circle-opacity are also a `case` on the same feature-states, not a flat value: any named state (solved, hovered, wrong, revealed, explore-highlighted) renders at high opacity (0.8 fill / fully opaque circle), the unsolved default at low opacity (0.3 fill / 0.65 circle) — added because the base categorical palette includes a muted teal-green ('#8fb8a8') close enough to quizCorrect's green ('#5a9c6f') that an unsolved region could read as already-solved at a glance when both were the same flat opacity. See DECISIONS.md's 'Quiz solved-state contrast' entry."
 	},
 	"glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf",
 	"sources": {
@@ -82,7 +82,20 @@
 						"#a3b57a"
 					]
 				],
-				"fill-opacity": 0.6
+				"fill-opacity": [
+					"case",
+					["boolean", ["feature-state", "quizWrong"], false],
+					0.8,
+					["boolean", ["feature-state", "quizCorrect"], false],
+					0.8,
+					["boolean", ["feature-state", "quizRevealed"], false],
+					0.8,
+					["boolean", ["feature-state", "quizHover"], false],
+					0.8,
+					["boolean", ["feature-state", "highlighted"], false],
+					0.8,
+					0.3
+				]
 			}
 		},
 		{
@@ -129,7 +142,20 @@
 						"#a3b57a"
 					]
 				],
-				"circle-opacity": 0.9,
+				"circle-opacity": [
+					"case",
+					["boolean", ["feature-state", "quizWrong"], false],
+					1,
+					["boolean", ["feature-state", "quizCorrect"], false],
+					1,
+					["boolean", ["feature-state", "quizRevealed"], false],
+					1,
+					["boolean", ["feature-state", "quizHover"], false],
+					1,
+					["boolean", ["feature-state", "highlighted"], false],
+					1,
+					0.65
+				],
 				"circle-stroke-width": 1.5,
 				"circle-stroke-color": "#3f5d52"
 			}

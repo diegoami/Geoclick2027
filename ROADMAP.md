@@ -1431,6 +1431,16 @@ loop actually feels good. Candidates below, in rough priority order.
       DECISIONS.md's "Visual refresh: background" entry for the full
       before/after reasoning, including verification against the full
       8-color categorical palette and a towns map's `context` layer.
+      **Follow-up found immediately after** ("looking at the quiz the
+      color scheme is confusing, I do not know which regions have been
+      recognized or not"): the background's own lower opacity made an
+      existing latent issue visible - one of the 8 categorical colors is
+      a muted teal-green close to the solved-state green. Fixed on
+      `feature/quiz-solved-contrast` by making `fill-opacity`/
+      `circle-opacity` state-dependent (low for unsolved, high for any
+      solved/interacted state) so saturation itself signals progress,
+      not just hue - see DECISIONS.md's "Quiz solved-state contrast"
+      entry.
 - [x] **More countries: China, Brazil, Mexico, Finland, Russia, India,
       Indonesia, Argentina** — requested directly by the user
       (2026-09-13), built on `feature/add-eight-countries-adaptive-threshold`
