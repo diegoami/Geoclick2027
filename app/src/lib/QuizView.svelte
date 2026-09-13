@@ -36,10 +36,23 @@
 	let progressRepository: ProgressRepository;
 
 	let container: HTMLDivElement;
-	let trayEl: HTMLDivElement;
-	let trayHandleRowEl: HTMLDivElement;
-	let traySlipsEl: HTMLDivElement;
+	// $state because the tray-measuring $effect below reads them: as plain
+	// variables, a tray that bound after the effect first ran was never
+	// measured, and svelte-check flagged all three (non_reactive_update).
+	let trayEl = $state<HTMLDivElement>();
+	let trayHandleRowEl = $state<HTMLDivElement>();
+	let traySlipsEl = $state<HTMLDivElement>();
 	let map: maplibregl.Map | undefined;
+	// MapLibre throws on setFeatureState until the style's sources exist.
+	// Set in the map's 'load' handler; gates everything that touches
+	// feature state from outside that handler (see the upToDate panel).
+	let styleLoaded = $state(false);
+	// Pending wrong-drop flash resets. A Set, not one handle: two wrong
+	// drops inside WRONG_PAUSE_MS each need their own reset, and clearing
+	// the first would leave that region stuck red. Cleared on destroy.
+	// Set, not SvelteSet: never read in the template, pure bookkeeping.
+	// eslint-disable-next-line svelte/prefer-svelte-reactivity
+	const flashTimers = new Set<ReturnType<typeof setTimeout>>();
 
 	let mapDef = $state<MapDefinition | undefined>(undefined);
 	let session = $state<QuizSession | undefined>(undefined);
@@ -162,9 +175,14 @@
 	$effect(() => {
 		if (complete && score && !summarySaved) {
 			summarySaved = true;
-			progressRepository
-				.saveLastSessionSummary(mapId, { ...score, completedAt: new Date().toISOString() })
-				.catch((e) => console.error('Failed to save quiz progress:', e));
+			// Practice rounds persist nothing - not SRS state, and not the
+			// home page's "Last: 18/20" either, which is the record of the last
+			// *graded* session. See DECISIONS.md's practice-mode entry.
+			if (mode === 'due') {
+				progressRepository
+					.saveLastSessionSummary(mapId, { ...score, completedAt: new Date().toISOString() })
+					.catch((e) => console.error('Failed to save quiz progress:', e));
+			}
 
 			if (mode === 'due' && mapDef) {
 				const today = todayLocalDate();
@@ -213,6 +231,7 @@
 	// the most natural cancel gesture: dragging a slip back down onto the
 	// tray it came from.
 	function isOverTray(clientX: number, clientY: number): boolean {
+		if (!trayEl) return false;
 		const rect = trayEl.getBoundingClientRect();
 		return (
 			clientX >= rect.left && clientX <= rect.right && clientY >= rect.top && clientY <= rect.bottom
@@ -403,7 +422,8 @@
 					{ quizWrong: true }
 				);
 			}
-			setTimeout(() => {
+			const timer = setTimeout(() => {
+				flashTimers.delete(timer);
 				if (wrongFlashId === targetId) wrongFlashId = undefined;
 				if (exactName && map) {
 					map.setFeatureState(
@@ -412,6 +432,7 @@
 					);
 				}
 			}, WRONG_PAUSE_MS);
+			flashTimers.add(timer);
 		}
 	}
 
@@ -461,7 +482,10 @@
 	}
 
 	function clearAllVisuals() {
-		if (!mapDef || !map) return;
+		// Before 'load' there are no visuals to clear, and setFeatureState
+		// would throw. The upToDate panel's button is also disabled until
+		// then; this is the backstop for any other path.
+		if (!mapDef || !map || !styleLoaded) return;
 		for (const target of mapDef.targets) {
 			map.setFeatureState(
 				{ source: 'targets', sourceLayer: 'targets', id: target.name },
@@ -547,10 +571,11 @@
 			if (cancelled) return;
 
 			map = createMap(container, loadedMapDef, style);
-			if (typeof window !== 'undefined') {
+			if (import.meta.env.DEV && typeof window !== 'undefined') {
 				// Debug/test aid: lets integration tests (and manual debugging)
 				// drive the real map instance, e.g. map.project(lngLat) to find
-				// screen coordinates for a drag target.
+				// screen coordinates for a drag target. Dev server only - it
+				// used to ship to every user of the production build.
 				(window as unknown as { __map?: maplibregl.Map }).__map = map;
 			}
 
@@ -569,7 +594,11 @@
 			// defer the pre-marking loop to the map's 'load' event rather
 			// than running it immediately after construction.
 			map.once('load', () => {
-				if (cancelled || phase !== 'quiz') return;
+				if (cancelled) return;
+				styleLoaded = true;
+				// Only the initial *due* session gets pre-solved visuals - never a
+				// practice round, which starts from a blank map by design.
+				if (phase !== 'quiz' || mode !== 'due') return;
 				applyPreSolvedVisuals(notDueIds, loadedMapDef);
 			});
 		})().catch((e) => {
@@ -591,7 +620,13 @@
 	});
 
 	onDestroy(() => {
+		// Clear pending flash resets before removing the map: a removed map is
+		// still a truthy reference, so their `if (map)` guard would pass and
+		// setFeatureState would throw on it.
+		for (const timer of flashTimers) clearTimeout(timer);
+		flashTimers.clear();
 		map?.remove();
+		map = undefined;
 	});
 </script>
 
@@ -617,7 +652,11 @@
 			<div class="score-panel">
 				<h2>{t('quiz.upToDate.title')}</h2>
 				<p>{t('quiz.upToDate.body')}</p>
-				<button onclick={startPractice}>{t('quiz.practiceAllRegions')}</button>
+				<!-- Disabled until the map style loads: startPractice touches feature
+				     state, which MapLibre throws on before then (GC-020). -->
+				<button onclick={startPractice} disabled={!styleLoaded} aria-busy={!styleLoaded}
+					>{t('quiz.practiceAllRegions')}</button
+				>
 			</div>
 		{/if}
 
