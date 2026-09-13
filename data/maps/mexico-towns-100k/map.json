@@ -1,0 +1,893 @@
+{
+	"id": "mexico-towns-100k",
+	"name": "Mexico — Towns",
+	"country": "Mexico",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "mexicali",
+			"name": "Mexicali",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-115.481962,
+				32.6519284
+			],
+			"bbox": [
+				-115.481962,
+				32.6519284,
+				-115.481962,
+				32.6519284
+			]
+		},
+		{
+			"id": "tijuana",
+			"name": "Tijuana",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-117.0819418,
+				32.5019634
+			],
+			"bbox": [
+				-117.0819418,
+				32.5019634,
+				-117.0819418,
+				32.5019634
+			]
+		},
+		{
+			"id": "ensenada",
+			"name": "Ensenada",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-116.6199982,
+				31.8699785
+			],
+			"bbox": [
+				-116.6199982,
+				31.8699785,
+				-116.6199982,
+				31.8699785
+			]
+		},
+		{
+			"id": "ciudad-juarez",
+			"name": "Ciudad Juárez",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-106.4919939,
+				31.6923229
+			],
+			"bbox": [
+				-106.4919939,
+				31.6923229,
+				-106.4919939,
+				31.6923229
+			]
+		},
+		{
+			"id": "hermosillo",
+			"name": "Hermosillo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-110.954065,
+				29.0988814
+			],
+			"bbox": [
+				-110.954065,
+				29.0988814,
+				-110.954065,
+				29.0988814
+			]
+		},
+		{
+			"id": "mazatlan",
+			"name": "Mazatlán",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-110.1333399,
+				29.0171035
+			],
+			"bbox": [
+				-110.1333399,
+				29.0171035,
+				-110.1333399,
+				29.0171035
+			]
+		},
+		{
+			"id": "chihuahua",
+			"name": "Chihuahua",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-106.0869282,
+				28.6469274
+			],
+			"bbox": [
+				-106.0869282,
+				28.6469274,
+				-106.0869282,
+				28.6469274
+			]
+		},
+		{
+			"id": "nuevo-laredo",
+			"name": "Nuevo Laredo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-99.5500066,
+				27.4999868
+			],
+			"bbox": [
+				-99.5500066,
+				27.4999868,
+				-99.5500066,
+				27.4999868
+			]
+		},
+		{
+			"id": "ciudad-obregon",
+			"name": "Ciudad Obregón",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-109.9249805,
+				27.4666038
+			],
+			"bbox": [
+				-109.9249805,
+				27.4666038,
+				-109.9249805,
+				27.4666038
+			]
+		},
+		{
+			"id": "reynosa",
+			"name": "Reynosa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-98.3000312,
+				26.079996
+			],
+			"bbox": [
+				-98.3000312,
+				26.079996,
+				-98.3000312,
+				26.079996
+			]
+		},
+		{
+			"id": "matamoros",
+			"name": "Matamoros",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-97.5000025,
+				25.8799823
+			],
+			"bbox": [
+				-97.5000025,
+				25.8799823,
+				-97.5000025,
+				25.8799823
+			]
+		},
+		{
+			"id": "los-mochis",
+			"name": "Los Mochis",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-108.9999982,
+				25.7899878
+			],
+			"bbox": [
+				-108.9999982,
+				25.7899878,
+				-108.9999982,
+				25.7899878
+			]
+		},
+		{
+			"id": "monterrey",
+			"name": "Monterrey",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-100.3319306,
+				25.671941
+			],
+			"bbox": [
+				-100.3319306,
+				25.671941,
+				-100.3319306,
+				25.671941
+			]
+		},
+		{
+			"id": "torreon",
+			"name": "Torreón",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-103.4219487,
+				25.5719988
+			],
+			"bbox": [
+				-103.4219487,
+				25.5719988,
+				-103.4219487,
+				25.5719988
+			]
+		},
+		{
+			"id": "gomez-palacio",
+			"name": "Gómez Palacio",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-103.5000238,
+				25.5700529
+			],
+			"bbox": [
+				-103.5000238,
+				25.5700529,
+				-103.5000238,
+				25.5700529
+			]
+		},
+		{
+			"id": "saltillo",
+			"name": "Saltillo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-101.0069282,
+				25.4219046
+			],
+			"bbox": [
+				-101.0069282,
+				25.4219046,
+				-101.0069282,
+				25.4219046
+			]
+		},
+		{
+			"id": "culiacan",
+			"name": "Culiacán",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-107.3819138,
+				24.8319406
+			],
+			"bbox": [
+				-107.3819138,
+				24.8319406,
+				-107.3819138,
+				24.8319406
+			]
+		},
+		{
+			"id": "durango",
+			"name": "Durango",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-104.6700299,
+				24.0311029
+			],
+			"bbox": [
+				-104.6700299,
+				24.0311029,
+				-104.6700299,
+				24.0311029
+			]
+		},
+		{
+			"id": "ciudad-victoria",
+			"name": "Ciudad Victoria",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-99.1299805,
+				23.7199591
+			],
+			"bbox": [
+				-99.1299805,
+				23.7199591,
+				-99.1299805,
+				23.7199591
+			]
+		},
+		{
+			"id": "tampico",
+			"name": "Tampico",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-97.8700057,
+				22.30002
+			],
+			"bbox": [
+				-97.8700057,
+				22.30002,
+				-97.8700057,
+				22.30002
+			]
+		},
+		{
+			"id": "san-luis-potosi",
+			"name": "San Luis Potosí",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-101.0019414,
+				22.1719221
+			],
+			"bbox": [
+				-101.0019414,
+				22.1719221,
+				-101.0019414,
+				22.1719221
+			]
+		},
+		{
+			"id": "aguascalientes",
+			"name": "Aguascalientes",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-102.2923593,
+				21.8814058
+			],
+			"bbox": [
+				-102.2923593,
+				21.8814058,
+				-102.2923593,
+				21.8814058
+			]
+		},
+		{
+			"id": "tepic",
+			"name": "Tepic",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-104.8799913,
+				21.5053915
+			],
+			"bbox": [
+				-104.8799913,
+				21.5053915,
+				-104.8799913,
+				21.5053915
+			]
+		},
+		{
+			"id": "cancun",
+			"name": "Cancún",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-86.8300078,
+				21.1699597
+			],
+			"bbox": [
+				-86.8300078,
+				21.1699597,
+				-86.8300078,
+				21.1699597
+			]
+		},
+		{
+			"id": "leon",
+			"name": "León",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-101.7019762,
+				21.1519327
+			],
+			"bbox": [
+				-101.7019762,
+				21.1519327,
+				-101.7019762,
+				21.1519327
+			]
+		},
+		{
+			"id": "merida",
+			"name": "Mérida",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-89.6185794,
+				20.9685847
+			],
+			"bbox": [
+				-89.6185794,
+				20.9685847,
+				-89.6185794,
+				20.9685847
+			]
+		},
+		{
+			"id": "irapuato",
+			"name": "Irapuato",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-101.35087694576201,
+				20.67604155916101
+			],
+			"bbox": [
+				-101.35087694576201,
+				20.67604155916101,
+				-101.35087694576201,
+				20.67604155916101
+			]
+		},
+		{
+			"id": "guadalajara",
+			"name": "Guadalajara",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-103.3319801,
+				20.671962
+			],
+			"bbox": [
+				-103.3319801,
+				20.671962,
+				-103.3319801,
+				20.671962
+			]
+		},
+		{
+			"id": "queretaro",
+			"name": "Querétaro",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-100.38666708699424,
+				20.577704021966365
+			],
+			"bbox": [
+				-100.38666708699424,
+				20.577704021966365,
+				-100.38666708699424,
+				20.577704021966365
+			]
+		},
+		{
+			"id": "celaya",
+			"name": "Celaya",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-100.8000078,
+				20.5300246
+			],
+			"bbox": [
+				-100.8000078,
+				20.5300246,
+				-100.8000078,
+				20.5300246
+			]
+		},
+		{
+			"id": "poza-rica-de-hidalgo",
+			"name": "Poza Rica de Hidalgo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-97.44394909450384,
+				20.525714761967706
+			],
+			"bbox": [
+				-97.44394909450384,
+				20.525714761967706,
+				-97.44394909450384,
+				20.525714761967706
+			]
+		},
+		{
+			"id": "pachuca",
+			"name": "Pachuca",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-98.73558896806964,
+				20.106423601457994
+			],
+			"bbox": [
+				-98.73558896806964,
+				20.106423601457994,
+				-98.73558896806964,
+				20.106423601457994
+			]
+		},
+		{
+			"id": "zumpango",
+			"name": "Zumpango",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-99.1099817,
+				19.8104045
+			],
+			"bbox": [
+				-99.1099817,
+				19.8104045,
+				-99.1099817,
+				19.8104045
+			]
+		},
+		{
+			"id": "morelia",
+			"name": "Morelia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-101.189493,
+				19.7333808
+			],
+			"bbox": [
+				-101.189493,
+				19.7333808,
+				-101.189493,
+				19.7333808
+			]
+		},
+		{
+			"id": "xalapa",
+			"name": "Xalapa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-96.9199862,
+				19.5299823
+			],
+			"bbox": [
+				-96.9199862,
+				19.5299823,
+				-96.9199862,
+				19.5299823
+			]
+		},
+		{
+			"id": "ciudad-de-mexico",
+			"name": "Ciudad de México",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-99.1329341,
+				19.4443883
+			],
+			"bbox": [
+				-99.1329341,
+				19.4443883,
+				-99.1329341,
+				19.4443883
+			]
+		},
+		{
+			"id": "uruapan",
+			"name": "Uruapan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-102.0700078,
+				19.4203766
+			],
+			"bbox": [
+				-102.0700078,
+				19.4203766,
+				-102.0700078,
+				19.4203766
+			]
+		},
+		{
+			"id": "nezahualcoyotl",
+			"name": "Nezahualcóyotl",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-99.0299866,
+				19.4100155
+			],
+			"bbox": [
+				-99.0299866,
+				19.4100155,
+				-99.0299866,
+				19.4100155
+			]
+		},
+		{
+			"id": "tlaxcala",
+			"name": "Tlaxcala",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-98.2300096,
+				19.3199951
+			],
+			"bbox": [
+				-98.2300096,
+				19.3199951,
+				-98.2300096,
+				19.3199951
+			]
+		},
+		{
+			"id": "toluca",
+			"name": "Toluca",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-99.65317928548968,
+				19.28930795148478
+			],
+			"bbox": [
+				-99.65317928548968,
+				19.28930795148478,
+				-99.65317928548968,
+				19.28930795148478
+			]
+		},
+		{
+			"id": "veracruz",
+			"name": "Veracruz",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-96.1599809,
+				19.1773423
+			],
+			"bbox": [
+				-96.1599809,
+				19.1773423,
+				-96.1599809,
+				19.1773423
+			]
+		},
+		{
+			"id": "puebla",
+			"name": "Puebla",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-98.20373725542488,
+				19.032593839016364
+			],
+			"bbox": [
+				-98.20373725542488,
+				19.032593839016364,
+				-98.20373725542488,
+				19.032593839016364
+			]
+		},
+		{
+			"id": "cuernavaca",
+			"name": "Cuernavaca",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-99.2399996,
+				18.9211048
+			],
+			"bbox": [
+				-99.2399996,
+				18.9211048,
+				-99.2399996,
+				18.9211048
+			]
+		},
+		{
+			"id": "orizaba",
+			"name": "Orizaba",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-97.1299992,
+				18.8500238
+			],
+			"bbox": [
+				-97.1299992,
+				18.8500238,
+				-97.1299992,
+				18.8500238
+			]
+		},
+		{
+			"id": "coatzacoalcos",
+			"name": "Coatzacoalcos",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-94.4200096,
+				18.1204043
+			],
+			"bbox": [
+				-94.4200096,
+				18.1204043,
+				-94.4200096,
+				18.1204043
+			]
+		},
+		{
+			"id": "villahermosa",
+			"name": "Villahermosa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-92.8999732,
+				17.9999724
+			],
+			"bbox": [
+				-92.8999732,
+				17.9999724,
+				-92.8999732,
+				17.9999724
+			]
+		},
+		{
+			"id": "oaxaca",
+			"name": "Oaxaca",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-96.6699498,
+				17.0826898
+			],
+			"bbox": [
+				-96.6699498,
+				17.0826898,
+				-96.6699498,
+				17.0826898
+			]
+		},
+		{
+			"id": "acapulco",
+			"name": "Acapulco",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-99.915979,
+				16.8499909
+			],
+			"bbox": [
+				-99.915979,
+				16.8499909,
+				-99.915979,
+				16.8499909
+			]
+		},
+		{
+			"id": "tuxtla-gutierrez",
+			"name": "Tuxtla Gutiérrez",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-93.1500096,
+				16.749997
+			],
+			"bbox": [
+				-93.1500096,
+				16.749997,
+				-93.1500096,
+				16.749997
+			]
+		}
+	],
+	"tourOrder": [
+		"mexicali",
+		"tijuana",
+		"ensenada",
+		"ciudad-juarez",
+		"hermosillo",
+		"mazatlan",
+		"chihuahua",
+		"nuevo-laredo",
+		"ciudad-obregon",
+		"reynosa",
+		"matamoros",
+		"los-mochis",
+		"monterrey",
+		"torreon",
+		"gomez-palacio",
+		"saltillo",
+		"culiacan",
+		"durango",
+		"ciudad-victoria",
+		"tampico",
+		"san-luis-potosi",
+		"aguascalientes",
+		"tepic",
+		"cancun",
+		"leon",
+		"merida",
+		"irapuato",
+		"guadalajara",
+		"queretaro",
+		"celaya",
+		"poza-rica-de-hidalgo",
+		"pachuca",
+		"zumpango",
+		"morelia",
+		"xalapa",
+		"ciudad-de-mexico",
+		"uruapan",
+		"nezahualcoyotl",
+		"tlaxcala",
+		"toluca",
+		"veracruz",
+		"puebla",
+		"cuernavaca",
+		"orizaba",
+		"coatzacoalcos",
+		"villahermosa",
+		"oaxaca",
+		"acapulco",
+		"tuxtla-gutierrez"
+	]
+}

@@ -1,0 +1,551 @@
+{
+	"id": "argentina-towns-100k",
+	"name": "Argentina — Towns",
+	"country": "Argentina",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "san-salvador-de-jujuy",
+			"name": "San Salvador de Jujuy",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-65.3000299,
+				-24.1833443
+			],
+			"bbox": [
+				-65.3000299,
+				-24.1833443,
+				-65.3000299,
+				-24.1833443
+			]
+		},
+		{
+			"id": "salta",
+			"name": "Salta",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-65.4166378,
+				-24.7833594
+			],
+			"bbox": [
+				-65.4166378,
+				-24.7833594,
+				-65.4166378,
+				-24.7833594
+			]
+		},
+		{
+			"id": "formosa",
+			"name": "Formosa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-58.1828158,
+				-26.1728353
+			],
+			"bbox": [
+				-58.1828158,
+				-26.1728353,
+				-58.1828158,
+				-26.1728353
+			]
+		},
+		{
+			"id": "tucuman",
+			"name": "Tucumán",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-65.21857,
+				-26.8140543
+			],
+			"bbox": [
+				-65.21857,
+				-26.8140543,
+				-65.21857,
+				-26.8140543
+			]
+		},
+		{
+			"id": "posadas",
+			"name": "Posadas",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-55.8851073,
+				-27.3578321
+			],
+			"bbox": [
+				-55.8851073,
+				-27.3578321,
+				-55.8851073,
+				-27.3578321
+			]
+		},
+		{
+			"id": "resistencia",
+			"name": "Resistencia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-58.9900275,
+				-27.4599918
+			],
+			"bbox": [
+				-58.9900275,
+				-27.4599918,
+				-58.9900275,
+				-27.4599918
+			]
+		},
+		{
+			"id": "corrientes",
+			"name": "Corrientes",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-58.8099868,
+				-27.4899642
+			],
+			"bbox": [
+				-58.8099868,
+				-27.4899642,
+				-58.8099868,
+				-27.4899642
+			]
+		},
+		{
+			"id": "santiago-del-estero",
+			"name": "Santiago del Estero",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-64.2666563,
+				-27.7833313
+			],
+			"bbox": [
+				-64.2666563,
+				-27.7833313,
+				-64.2666563,
+				-27.7833313
+			]
+		},
+		{
+			"id": "catamarca",
+			"name": "Catamarca",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-65.7800007,
+				-28.4700077
+			],
+			"bbox": [
+				-65.7800007,
+				-28.4700077,
+				-65.7800007,
+				-28.4700077
+			]
+		},
+		{
+			"id": "la-rioja",
+			"name": "La Rioja",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-66.8499612,
+				-29.4099503
+			],
+			"bbox": [
+				-66.8499612,
+				-29.4099503,
+				-66.8499612,
+				-29.4099503
+			]
+		},
+		{
+			"id": "concordia",
+			"name": "Concordia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-58.0299827,
+				-31.3895711
+			],
+			"bbox": [
+				-58.0299827,
+				-31.3895711,
+				-58.0299827,
+				-31.3895711
+			]
+		},
+		{
+			"id": "cordoba",
+			"name": "Córdoba",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-64.1842404,
+				-31.3980122
+			],
+			"bbox": [
+				-64.1842404,
+				-31.3980122,
+				-64.1842404,
+				-31.3980122
+			]
+		},
+		{
+			"id": "san-juan",
+			"name": "San Juan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-68.5199884,
+				-31.5500264
+			],
+			"bbox": [
+				-68.5199884,
+				-31.5500264,
+				-68.5199884,
+				-31.5500264
+			]
+		},
+		{
+			"id": "santa-fe",
+			"name": "Santa Fe",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-60.6900013,
+				-31.6238721
+			],
+			"bbox": [
+				-60.6900013,
+				-31.6238721,
+				-60.6900013,
+				-31.6238721
+			]
+		},
+		{
+			"id": "parana",
+			"name": "Paraná",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-60.5333442,
+				-31.7333227
+			],
+			"bbox": [
+				-60.5333442,
+				-31.7333227,
+				-60.5333442,
+				-31.7333227
+			]
+		},
+		{
+			"id": "mendoza",
+			"name": "Mendoza",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-68.818557,
+				-32.8813842
+			],
+			"bbox": [
+				-68.818557,
+				-32.8813842,
+				-68.818557,
+				-32.8813842
+			]
+		},
+		{
+			"id": "rosario",
+			"name": "Rosario",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-60.6682535,
+				-32.9491837
+			],
+			"bbox": [
+				-60.6682535,
+				-32.9491837,
+				-60.6682535,
+				-32.9491837
+			]
+		},
+		{
+			"id": "san-martin",
+			"name": "San Martín",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-68.4900161,
+				-33.0699853
+			],
+			"bbox": [
+				-68.4900161,
+				-33.0699853,
+				-68.4900161,
+				-33.0699853
+			]
+		},
+		{
+			"id": "rio-cuarto",
+			"name": "Río Cuarto",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-64.3499846,
+				-33.1300333
+			],
+			"bbox": [
+				-64.3499846,
+				-33.1300333,
+				-64.3499846,
+				-33.1300333
+			]
+		},
+		{
+			"id": "san-luis",
+			"name": "San Luis",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-66.3500175,
+				-33.2999971
+			],
+			"bbox": [
+				-66.3500175,
+				-33.2999971,
+				-66.3500175,
+				-33.2999971
+			]
+		},
+		{
+			"id": "san-nicolas",
+			"name": "San Nicolás",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-60.2400029,
+				-33.3300211
+			],
+			"bbox": [
+				-60.2400029,
+				-33.3300211,
+				-60.2400029,
+				-33.3300211
+			]
+		},
+		{
+			"id": "san-rafael",
+			"name": "San Rafael",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-68.3333332,
+				-34.6000211
+			],
+			"bbox": [
+				-68.3333332,
+				-34.6000211,
+				-68.3333332,
+				-34.6000211
+			]
+		},
+		{
+			"id": "buenos-aires",
+			"name": "Buenos Aires",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-58.43251268766426,
+				-34.61071459139255
+			],
+			"bbox": [
+				-58.43251268766426,
+				-34.61071459139255,
+				-58.43251268766426,
+				-34.61071459139255
+			]
+		},
+		{
+			"id": "la-plata",
+			"name": "La Plata",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-57.95443598989702,
+				-34.9233210985585
+			],
+			"bbox": [
+				-57.95443598989702,
+				-34.9233210985585,
+				-57.95443598989702,
+				-34.9233210985585
+			]
+		},
+		{
+			"id": "santa-rosa",
+			"name": "Santa Rosa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-64.2999876,
+				-36.6200012
+			],
+			"bbox": [
+				-64.2999876,
+				-36.6200012,
+				-64.2999876,
+				-36.6200012
+			]
+		},
+		{
+			"id": "tandil",
+			"name": "Tandil",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-59.1500436,
+				-37.3200102
+			],
+			"bbox": [
+				-59.1500436,
+				-37.3200102,
+				-59.1500436,
+				-37.3200102
+			]
+		},
+		{
+			"id": "mar-del-plata",
+			"name": "Mar del Plata",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-57.5799844,
+				-38.0000203
+			],
+			"bbox": [
+				-57.5799844,
+				-38.0000203,
+				-57.5799844,
+				-38.0000203
+			]
+		},
+		{
+			"id": "bahia-blanca",
+			"name": "Bahía Blanca",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-62.2650214,
+				-38.7400268
+			],
+			"bbox": [
+				-62.2650214,
+				-38.7400268,
+				-62.2650214,
+				-38.7400268
+			]
+		},
+		{
+			"id": "neuquen",
+			"name": "Neuquén",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-68.0599907,
+				-38.9500399
+			],
+			"bbox": [
+				-68.0599907,
+				-38.9500399,
+				-68.0599907,
+				-38.9500399
+			]
+		},
+		{
+			"id": "comodoro-rivadavia",
+			"name": "Comodoro Rivadavia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-67.499999,
+				-45.8700309
+			],
+			"bbox": [
+				-67.499999,
+				-45.8700309,
+				-67.499999,
+				-45.8700309
+			]
+		}
+	],
+	"tourOrder": [
+		"san-salvador-de-jujuy",
+		"salta",
+		"formosa",
+		"tucuman",
+		"posadas",
+		"resistencia",
+		"corrientes",
+		"santiago-del-estero",
+		"catamarca",
+		"la-rioja",
+		"concordia",
+		"cordoba",
+		"san-juan",
+		"santa-fe",
+		"parana",
+		"mendoza",
+		"rosario",
+		"san-martin",
+		"rio-cuarto",
+		"san-luis",
+		"san-nicolas",
+		"san-rafael",
+		"buenos-aires",
+		"la-plata",
+		"santa-rosa",
+		"tandil",
+		"mar-del-plata",
+		"bahia-blanca",
+		"neuquen",
+		"comodoro-rivadavia"
+	]
+}

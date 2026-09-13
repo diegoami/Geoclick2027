@@ -61,20 +61,21 @@ Check items off as they land; update "Status" as iterations complete.
 - **Next up**: motion/feedback design (reveal animations, streak
   indicators, sound, correct-drop juiciness) and a broader component/
   design-system pass remain open on the GUI/UX item — revisit whenever
-  it feels worth another round, not on a fixed schedule. Three more items
-  requested 2026-09-12, tracked in the Iteration 8+ backlog below:
-  reorganizing the home page's map list, German/Italian UI languages
-  (both picked up as parallel background work, each in its own worktree/
-  branch), and optional cross-device score sync via sign-in — **built** on
-  `feature/supabase-sso-sync` (Supabase, the user's own choice of
-  provider): client setup, DB schema + RLS, a third `ProgressRepository`
-  backend, Google sign-in UI, and a simple sync-on-sign-in strategy, all
-  verified as far as possible without a real Supabase project (type-check/
-  test/build clean with no env vars set, local-first flow unaffected when
-  signed out). **Not merged to `main`** — needs the user's own Supabase
-  project and manual setup (ONBOARDING.md has the exact steps) before it
-  can be tested end to end, per CLAUDE.md's workflow rule for a first
-  backend/auth surface.
+  it feels worth another round, not on a fixed schedule. Three items
+  requested 2026-09-12 (map-list reorganization, German/Italian UI
+  languages, optional cross-device score sync via sign-in — see the
+  Iteration 8+ backlog below): the first two are merged to `main`; sign-in
+  is scaffolded on `feature/supabase-sso-sync` (Supabase, user-confirmed),
+  being finalized now — reconciled with everything else merged since it
+  was built, and awaiting the user's own Supabase project before it can
+  be tested end to end. Four more items requested 2026-09-13, tracked in
+  the Iteration 8+ backlog below: eight more countries and the adaptive
+  per-country town-count threshold are both **done**, built together on
+  `feature/add-eight-countries-adaptive-threshold`; the background-color
+  visual refresh is also **done**, built on `feature/better-background`,
+  with a same-day follow-up (`feature/quiz-solved-contrast`) also merged.
+  A full desktop+mobile retest is planned once sign-in lands too — see
+  that backlog entry for why.
 - **Reordered**: local persistence and spaced repetition swapped places
   from the original numbering. Spaced repetition is pointless without
   somewhere to remember what's due across sessions — user accounts
@@ -86,6 +87,22 @@ Check items off as they land; update "Status" as iterations complete.
 
 ## Process notes (not tied to a specific iteration)
 
+- **Git worktrees don't work for parallel background feature work on this
+  project, at least not as attempted 2026-09-12** — a `git worktree`
+  checkout doesn't get its own `node_modules` (npm workspaces hoists it to
+  the main checkout), so `npm run dev` inside a worktree can't actually
+  render a map (Vite's `fs.allow` blocks the maplibre-gl worker script
+  outside the worktree root) and browser verification has to fall back to
+  a production build instead — a real gap versus this project's normal
+  "test locally in a real browser" habit (see CLAUDE.md). Three
+  branches were attempted this way in parallel (map-list reorg, i18n,
+  Supabase SSO); reconciled and finished one at a time in the normal
+  checkout afterward instead, per the user's own call once this became
+  clear. Don't reach for worktree-isolated parallel agents on this repo
+  again without first solving the `node_modules` problem (e.g. `npm
+  install` inside each worktree, or a shared/symlinked store) — otherwise
+  it's a false economy: real work still has to happen serially in the
+  normal checkout anyway.
 - [ ] **Dependabot** — `.github/dependabot.yml` watching the npm
       ecosystem at the repo root (covers `app/` + `packages/*` through
       the one workspace lockfile). Weekly schedule, version + security
@@ -1372,17 +1389,25 @@ loop actually feels good. Candidates below, in rough priority order.
       blocked on hardware/account setup this project doesn't have yet.
 - [x] ~~Plain-browser deployment (static hosting)~~ — done in Iteration 3.5,
       live on Netlify
-- [x] **Optional sign-in (SSO) so scores sync across devices** — requested
-      directly by the user (2026-09-12), as the third of three roadmap
-      items alongside the map-list reorganization and i18n below. Provider
-      decision made by the user: **Supabase** (bundles Google OAuth + a
-      Postgres database in one service), over Auth0/Clerk or a hand-rolled
-      solution. Built on `feature/supabase-sso-sync`:
+- [ ] **Optional sign-in (SSO) so scores sync across devices — provider
+      decided (Supabase), scaffolded on `feature/supabase-sso-sync`, being
+      finalized now.** Requested directly by the user (2026-09-12), as the
+      third of three roadmap items alongside the map-list reorganization
+      and i18n below; the user confirmed Supabase (bundles Google OAuth +
+      a Postgres database in one service, over Auth0/Clerk or a
+      hand-rolled solution) the same day. This is the point where
+      "local-first, no backend" (see ARCHITECTURE.md's Storage section)
+      actually gets a backend — auth needs somewhere to verify tokens and
+      mint sessions, even if score storage itself stays minimal.
+      Explicitly **optional**: the existing local-only (`localStorage`/
+      SQLite) experience must keep working with no sign-in at all — this
+      adds a second, opt-in path, it doesn't replace the first one or make
+      an account a requirement to play. Built:
       - `app/src/lib/supabaseClient.ts` — creates a client from
         `PUBLIC_SUPABASE_URL`/`PUBLIC_SUPABASE_ANON_KEY`, or returns
         `undefined` if either is unset (`$env/dynamic/public`, not
         `$env/static/public`, specifically so an unconfigured build never
-        fails `svelte-check`/`vite build` — see the module's own comment).
+        fails `svelte-check`/`vite build`).
       - `data/supabase/schema.sql` — `card_states`/`session_summaries`
         tables mirroring the Tauri/Capacitor SQLite schemas plus a
         `user_id` column, with row-level security policies
@@ -1394,29 +1419,29 @@ loop actually feels good. Candidates below, in rough priority order.
         same as every local backend already does).
       - `app/src/lib/AccountStatus.svelte` + `app/src/lib/authStore.svelte.ts`
         — a small "Sign in with Google"/"Signed in as …"/"Sign out"
-        control on the home page (above the map list, not touching its
-        ordering), backed by a shared reactive session store.
+        control on the home page, backed by a shared reactive session
+        store.
       - `app/src/lib/progressSync.ts` — `createActiveProgressRepository()`,
-        which call sites (the home page, `QuizView.svelte`) now use in
-        place of `createProgressRepository()` directly. Signed out (the
+        which call sites (the home page, `QuizView.svelte`) use in place
+        of `createProgressRepository()` directly. Signed out (the
         default, every existing user), it's byte-for-byte the same local
-        repository as before this feature existed. See "Score recording/
-        sync" below and DECISIONS.md for the sync/reconciliation strategy.
+        repository as before this feature existed.
       - **Explicitly optional, verified**: with no env vars set, `npm run
         check`/`npm test`/`npm run build` (all `--workspace=app`) stay
         clean, and the dev server's home page shows no sign-in errors —
         just an unobtrusive "Cross-device sync isn't set up on this
-        deployment yet" line — with the rest of the app (map list, a full
-        quiz load) working exactly as before. Screenshotted in this state.
-      - **Not testable end-to-end here**: no real Supabase project exists
-        yet (creating one is the user's own action, never Claude's - see
-        DECISIONS.md). Manual setup steps the user needs to complete before
-        sign-in actually works are in ONBOARDING.md's "Enabling
-        cross-device sync (Supabase)" section. **Not merged to `main`** -
-        this is the project's first backend/auth surface, and needs the
-        user's own testing against a real project before merge, per
-        CLAUDE.md's workflow rule.
-- [x] **Score recording/sync**, built on top of sign-in above: per (user,
+        deployment yet" line.
+      - **Explicitly not finished** — requested again 2026-09-13 ("we
+        need to finalize optional SSO"): still needs a real Supabase
+        project created and wired up (see ONBOARDING.md's "Enabling
+        cross-device sync" steps), real end-to-end testing of the OAuth
+        flow and sync reconciliation on at least two devices/browsers,
+        and a merge decision once that's verified — none of which could
+        happen without the user's own Supabase project. Reconciled with
+        everything else merged to `main` since this branch was built
+        (map-list reorg, i18n, 8 more countries, background refresh, quiz
+        contrast fix) as part of picking this back up.
+- [ ] **Score recording/sync**, built on top of sign-in above: per (user,
       map) results from quiz sessions (`scoreSession`'s `{ total, perfect,
       totalErrors }` shape, unchanged) now persist to Supabase's
       `session_summaries`/`card_states` tables instead of only
@@ -1425,18 +1450,78 @@ loop actually feels good. Candidates below, in rough priority order.
       up on first sign-in if a map has no remote rows yet; remote wins
       after that) and DECISIONS.md for why last-write-wins conflict
       resolution is enough here.
-- [ ] **Reorganize the home page's map list** — requested directly by the
-      user (2026-09-12), alongside i18n and optional SSO above. 22 maps
-      across 11 countries in one flat, unsorted `<ul>`
+- [x] **Visual refresh: background color** — requested directly by the
+      user (2026-09-13): "the background color is kind of meh, maybe
+      something more captivating." Built on `feature/better-background`:
+      the map's ocean/empty-space fill moved from flat gray (`#eef3f6`)
+      to a warm parchment tone (`#f0ead9`), and the home page moved from
+      plain white to a soft three-stop sage/blue/cream gradient. A richer
+      blue was tried for the map background first and rejected after
+      actually looking at it — it nearly erased the lakes layer's own
+      blue accent, undoing GUI/UX round 1's lake-contrast fix. See
+      DECISIONS.md's "Visual refresh: background" entry for the full
+      before/after reasoning, including verification against the full
+      8-color categorical palette and a towns map's `context` layer.
+      **Follow-up found immediately after** ("looking at the quiz the
+      color scheme is confusing, I do not know which regions have been
+      recognized or not"): the background's own lower opacity made an
+      existing latent issue visible - one of the 8 categorical colors is
+      a muted teal-green close to the solved-state green. Fixed on
+      `feature/quiz-solved-contrast` by making `fill-opacity`/
+      `circle-opacity` state-dependent (low for unsolved, high for any
+      solved/interacted state) so saturation itself signals progress,
+      not just hue - see DECISIONS.md's "Quiz solved-state contrast"
+      entry.
+- [x] **More countries: China, Brazil, Mexico, Finland, Russia, India,
+      Indonesia, Argentina** — requested directly by the user
+      (2026-09-13), built on `feature/add-eight-countries-adaptive-threshold`
+      following the same regions+towns pattern and rigor as every prior
+      batch (full attribute audits — all 86 raw Russian regions, the
+      top-50-by-population towns per large country, not spot-checked).
+      The most name-fixup-heavy batch yet, and it surfaced a real
+      Natural Earth data bug (exact-duplicate populated-place rows,
+      fixed with a general dedup step) — see MAPS.md's dated section and
+      DECISIONS.md for every specific fixup/exclusion and the reasoning
+      behind each, including how Russia's Crimea/Sevastopol exclusion
+      and India's Kashmir/Ladakh inclusion were each decided for
+      consistency with (respectively, contrast with) the earlier Ukraine
+      decision.
+      - **Design question raised alongside this request — resolved**:
+        the towns maps' fixed `>100k population` threshold didn't scale
+        to this batch's range (Finland: 4 towns clear it; China: 317).
+        `build-points-map.ts` gained `--min-count`/`--max-count` flags
+        (both no-ops at their defaults, so every existing towns map is
+        unaffected unless explicitly rebuilt) — see MAPS.md's "Adaptive
+        town selection" section for the exact mechanism and which
+        countries needed which flag.
+- [ ] **Retest on desktop and mobile after the above iterations land** —
+      requested directly by the user (2026-09-13), to run once the new-
+      countries batch, the population-threshold rework, and SSO are all
+      finished: re-verify the desktop (Tauri) and Android (Capacitor)
+      builds still work end to end (not just the web app), per the
+      existing "test locally vs. test the deployment, as two separate
+      steps" habit (see CLAUDE.md) — a bigger map catalog and a new sync
+      backend are exactly the kind of change that could regress a
+      platform-specific build without showing up in the web dev server.
+- [x] **Reorganize the home page's map list** — requested directly by the
+      user (2026-09-12), alongside i18n and optional SSO above. 28 maps
+      across 14 countries in one flat, unsorted `<ul>`
       (`app/src/routes/+page.svelte`'s `demoMaps` array, in the order each
-      country was added) is already hard to scan and will only get worse
-      as more countries are added. At minimum, sort alphabetically;
-      grouping by country (each already ships as a regions+towns pair)
-      is worth considering too, so long as it doesn't regress the
-      existing per-map due-status/last-result display. Picked up as
-      parallel background work in its own worktree/branch — see
-      DECISIONS.md if a specific organization scheme was chosen there.
-- [ ] **Add German and Italian as UI languages** (at least) — requested
+      country was added) was already hard to scan and would only get worse
+      as more countries are added. Built as a `mapGroups` array — one
+      entry per country, alphabetical by country name, each country's own
+      maps (regions/provinces/towns, a trio for Italy) alphabetical by
+      label — rendered as a heading per country followed by that
+      country's map links, 2 columns on wider screens via CSS grid (single
+      column below the existing 640px breakpoint used elsewhere, e.g.
+      `MapNav.svelte`), collapsing to one column at phone width. Per-map
+      due-status/last-result badges untouched — same `dueStatuses`/
+      `lastSessions` state and `onMount` data-loading loop as before, just
+      fed by a flattened view of `mapGroups`
+      (`mapGroups.flatMap((g) => g.maps)`) instead of a hand-written id
+      list. See DECISIONS.md for why grouping was chosen over a flat
+      alphabetical list. Merged to `main`.
+- [x] **Add German and Italian as UI languages** (at least) — requested
       directly by the user (2026-09-12), alongside map-list reorganization
       and optional SSO above. Scoped to the app's own UI chrome (nav
       labels, buttons, status text) via a language switcher — explicitly
@@ -1444,8 +1529,22 @@ loop actually feels good. Candidates below, in rough priority order.
       geographic proper nouns already localized per-country through
       `NAME_FIXUPS`/`--name-field`, a different and already-solved
       problem, see MAPS.md). Picked up as parallel background work in its
-      own worktree/branch — see DECISIONS.md for which i18n approach was
-      chosen and why.
+      own worktree/branch (`feature/i18n-de-it`) — see DECISIONS.md's
+      "Internationalization (i18n)" entry for which approach was chosen
+      and why. Built as a small hand-rolled dictionary + `t()`/`tPlural()`
+      helper (`app/src/lib/i18n.svelte.ts`, a module-scope Svelte 5 rune),
+      not a library — around 35 UI strings across `MapNav.svelte`,
+      `+page.svelte`, `QuizView.svelte`, and `TourView.svelte`, translated
+      into natural English/German/Italian. A `LanguageSwitcher.svelte`
+      (three small EN/DE/IT pills, matching GUI/UX round 1's visual
+      language) is shown on every map-scoped view via `MapNav` and on the
+      home page header. Chosen language persists via `localStorage`
+      (guarded the same way `progressRepository.ts` is, for prerendering).
+      Verified in a real browser: switching language updates nav labels,
+      home page text, and quiz/tour status text live; the choice survives
+      a reload; a full quiz playthrough on `sweden-towns-100k` in Italian
+      and German showed correctly translated tray subtitle, score panel,
+      and "up to date"/practice-mode text throughout.
 - [x] **Evaluate GUI/UX approaches to make the interface more captivating —
       first round, merged to `main` 2026-09-12** (from
       `feature/gui-ux-nav-labels-colors`).

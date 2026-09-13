@@ -1,0 +1,605 @@
+{
+	"id": "indonesia-regions",
+	"name": "Indonesia — Provinces",
+	"country": "Indonesia",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "aceh",
+			"name": "Aceh",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				96.73644999999999,
+				3.9191000000000003
+			],
+			"bbox": [
+				95.1973,
+				2.1886,
+				98.2756,
+				5.6496
+			]
+		},
+		{
+			"id": "sulawesi-utara",
+			"name": "Sulawesi Utara",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				125.00965,
+				2.4065
+			],
+			"bbox": [
+				123.0972,
+				0.2665,
+				126.9221,
+				4.5465
+			]
+		},
+		{
+			"id": "sumatera-utara",
+			"name": "Sumatera Utara",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				98.76065,
+				1.8554
+			],
+			"bbox": [
+				97.0804,
+				-0.5771,
+				100.4409,
+				4.2879
+			]
+		},
+		{
+			"id": "kepulauan-riau",
+			"name": "Kepulauan Riau",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.8709,
+				1.7914
+			],
+			"bbox": [
+				103.3456,
+				-0.5966,
+				108.3962,
+				4.1794
+			]
+		},
+		{
+			"id": "kalimantan-timur",
+			"name": "Kalimantan Timur",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				116.39095,
+				1.0102
+			],
+			"bbox": [
+				113.7764,
+				-2.363,
+				119.0055,
+				4.3834
+			]
+		},
+		{
+			"id": "riau",
+			"name": "Riau",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				101.93125,
+				0.7348500000000001
+			],
+			"bbox": [
+				100.071,
+				-1.0849,
+				103.7915,
+				2.5546
+			]
+		},
+		{
+			"id": "gorontalo",
+			"name": "Gorontalo",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				122.33009999999999,
+				0.6697
+			],
+			"bbox": [
+				121.1604,
+				0.3117,
+				123.4998,
+				1.0277
+			]
+		},
+		{
+			"id": "maluku-utara",
+			"name": "Maluku Utara",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				126.5963,
+				0.10325000000000006
+			],
+			"bbox": [
+				124.3314,
+				-2.4021,
+				128.8612,
+				2.6086
+			]
+		},
+		{
+			"id": "kalimantan-barat",
+			"name": "Kalimantan Barat",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				111.50725,
+				-0.5451000000000001
+			],
+			"bbox": [
+				108.8071,
+				-3.0807,
+				114.2074,
+				1.9905
+			]
+		},
+		{
+			"id": "sulawesi-tengah",
+			"name": "Sulawesi Tengah",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.54755,
+				-0.9457
+			],
+			"bbox": [
+				119.4945,
+				-3.2376,
+				123.6006,
+				1.3462
+			]
+		},
+		{
+			"id": "sumatera-barat",
+			"name": "Sumatera Barat",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				100.19415000000001,
+				-1.15765
+			],
+			"bbox": [
+				98.5938,
+				-3.1835,
+				101.7945,
+				0.8682
+			]
+		},
+		{
+			"id": "kalimantan-tengah",
+			"name": "Kalimantan Tengah",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				113.2803,
+				-1.4184
+			],
+			"bbox": [
+				110.7555,
+				-3.572,
+				115.8051,
+				0.7352
+			]
+		},
+		{
+			"id": "jambi",
+			"name": "Jambi",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				102.82275,
+				-1.7643
+			],
+			"bbox": [
+				101.1139,
+				-2.7824,
+				104.5316,
+				-0.7462
+			]
+		},
+		{
+			"id": "papua-barat",
+			"name": "Papua Barat",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				132.50445,
+				-2.1292
+			],
+			"bbox": [
+				129.7438,
+				-4.2546,
+				135.2651,
+				-0.0038
+			]
+		},
+		{
+			"id": "sulawesi-barat",
+			"name": "Sulawesi Barat",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				119.31540000000001,
+				-2.1999
+			],
+			"bbox": [
+				118.7573,
+				-3.5661,
+				119.8735,
+				-0.8337
+			]
+		},
+		{
+			"id": "bangka-belitung",
+			"name": "Bangka-Belitung",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.72059999999999,
+				-2.35905
+			],
+			"bbox": [
+				105.1475,
+				-3.2289,
+				108.2937,
+				-1.4892
+			]
+		},
+		{
+			"id": "kalimantan-selatan",
+			"name": "Kalimantan Selatan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				115.4418,
+				-2.76585
+			],
+			"bbox": [
+				114.3107,
+				-4.1708,
+				116.5729,
+				-1.3609
+			]
+		},
+		{
+			"id": "sumatera-selatan",
+			"name": "Sumatera Selatan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				104.065,
+				-3.3202499999999997
+			],
+			"bbox": [
+				102.0668,
+				-4.9467,
+				106.0632,
+				-1.6938
+			]
+		},
+		{
+			"id": "bengkulu",
+			"name": "Bengkulu",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				102.39595,
+				-3.8545000000000003
+			],
+			"bbox": [
+				101.0266,
+				-5.4728,
+				103.7653,
+				-2.2362
+			]
+		},
+		{
+			"id": "sulawesi-selatan",
+			"name": "Sulawesi Selatan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.5701,
+				-4.00115
+			],
+			"bbox": [
+				119.3528,
+				-6.1408,
+				121.7874,
+				-1.8615
+			]
+		},
+		{
+			"id": "sulawesi-tenggara",
+			"name": "Sulawesi Tenggara",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				122.06184999999999,
+				-4.27755
+			],
+			"bbox": [
+				120.8703,
+				-5.6762,
+				123.2534,
+				-2.8789
+			]
+		},
+		{
+			"id": "lampung",
+			"name": "Lampung",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				104.75895,
+				-4.843
+			],
+			"bbox": [
+				103.6082,
+				-5.9304,
+				105.9097,
+				-3.7556
+			]
+		},
+		{
+			"id": "papua",
+			"name": "Papua",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				137.6159,
+				-4.8797999999999995
+			],
+			"bbox": [
+				134.2546,
+				-9.1061,
+				140.9772,
+				-0.6535
+			]
+		},
+		{
+			"id": "maluku",
+			"name": "Maluku",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				130.28665,
+				-5.5184
+			],
+			"bbox": [
+				125.8084,
+				-8.2519,
+				134.7649,
+				-2.7849
+			]
+		},
+		{
+			"id": "jakarta-raya",
+			"name": "Jakarta Raya",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.84514999999999,
+				-6.2202
+			],
+			"bbox": [
+				106.702,
+				-6.3815,
+				106.9883,
+				-6.0589
+			]
+		},
+		{
+			"id": "banten",
+			"name": "Banten",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.03685,
+				-6.43615
+			],
+			"bbox": [
+				105.3108,
+				-6.9913,
+				106.7629,
+				-5.881
+			]
+		},
+		{
+			"id": "jawa-barat",
+			"name": "Jawa Barat",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				107.63525,
+				-6.8664000000000005
+			],
+			"bbox": [
+				106.3754,
+				-7.8185,
+				108.8951,
+				-5.9143
+			]
+		},
+		{
+			"id": "jawa-tengah",
+			"name": "Jawa Tengah",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				110.1098,
+				-7.315049999999999
+			],
+			"bbox": [
+				108.5469,
+				-8.2264,
+				111.6727,
+				-6.4037
+			]
+		},
+		{
+			"id": "jawa-timur",
+			"name": "Jawa Timur",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				113.2575,
+				-7.75465
+			],
+			"bbox": [
+				110.9444,
+				-8.7756,
+				115.5706,
+				-6.7337
+			]
+		},
+		{
+			"id": "yogyakarta",
+			"name": "Yogyakarta",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				110.44315,
+				-7.88485
+			],
+			"bbox": [
+				110.0427,
+				-8.2008,
+				110.8436,
+				-7.5689
+			]
+		},
+		{
+			"id": "bali",
+			"name": "Bali",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				115.08105,
+				-8.38705
+			],
+			"bbox": [
+				114.4479,
+				-8.7146,
+				115.7142,
+				-8.0595
+			]
+		},
+		{
+			"id": "nusa-tenggara-barat",
+			"name": "Nusa Tenggara Barat",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				117.5161,
+				-8.59865
+			],
+			"bbox": [
+				115.8286,
+				-9.1073,
+				119.2036,
+				-8.09
+			]
+		},
+		{
+			"id": "nusa-tenggara-timur",
+			"name": "Nusa Tenggara Timur",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				122.05199999999999,
+				-9.49545
+			],
+			"bbox": [
+				118.9416,
+				-10.9211,
+				125.1624,
+				-8.0698
+			]
+		}
+	],
+	"tourOrder": [
+		"aceh",
+		"sulawesi-utara",
+		"sumatera-utara",
+		"kepulauan-riau",
+		"kalimantan-timur",
+		"riau",
+		"gorontalo",
+		"maluku-utara",
+		"kalimantan-barat",
+		"sulawesi-tengah",
+		"sumatera-barat",
+		"kalimantan-tengah",
+		"jambi",
+		"papua-barat",
+		"sulawesi-barat",
+		"bangka-belitung",
+		"kalimantan-selatan",
+		"sumatera-selatan",
+		"bengkulu",
+		"sulawesi-selatan",
+		"sulawesi-tenggara",
+		"lampung",
+		"papua",
+		"maluku",
+		"jakarta-raya",
+		"banten",
+		"jawa-barat",
+		"jawa-tengah",
+		"jawa-timur",
+		"yogyakarta",
+		"bali",
+		"nusa-tenggara-barat",
+		"nusa-tenggara-timur"
+	]
+}

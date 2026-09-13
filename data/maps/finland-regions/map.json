@@ -1,0 +1,335 @@
+{
+	"id": "finland-regions",
+	"name": "Finland — Regions",
+	"country": "Finland",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "lappi",
+			"name": "Lappi",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				25.3163,
+				67.83359999999999
+			],
+			"bbox": [
+				20.6232,
+				65.5919,
+				30.0094,
+				70.0753
+			]
+		},
+		{
+			"id": "pohjois-pohjanmaa",
+			"name": "Pohjois-Pohjanmaa",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				26.9091,
+				64.96145
+			],
+			"bbox": [
+				23.7065,
+				63.4385,
+				30.1117,
+				66.4844
+			]
+		},
+		{
+			"id": "kainuu",
+			"name": "Kainuu",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				28.441200000000002,
+				64.60455
+			],
+			"bbox": [
+				26.296,
+				63.685,
+				30.5864,
+				65.5241
+			]
+		},
+		{
+			"id": "keski-pohjanmaa",
+			"name": "Keski-Pohjanmaa",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				24.009700000000002,
+				63.643649999999994
+			],
+			"bbox": [
+				22.9907,
+				63.1192,
+				25.0287,
+				64.1681
+			]
+		},
+		{
+			"id": "pohjois-savo",
+			"name": "Pohjois-Savo",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				27.572699999999998,
+				63.1562
+			],
+			"bbox": [
+				26.0639,
+				62.279,
+				29.0815,
+				64.0334
+			]
+		},
+		{
+			"id": "pohjanmaa",
+			"name": "Pohjanmaa",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				22.3933,
+				62.8634
+			],
+			"bbox": [
+				21.0679,
+				61.9392,
+				23.7187,
+				63.7876
+			]
+		},
+		{
+			"id": "pohjois-karjala",
+			"name": "Pohjois-Karjala",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				29.96395,
+				62.80375
+			],
+			"bbox": [
+				28.3584,
+				61.7241,
+				31.5695,
+				63.8834
+			]
+		},
+		{
+			"id": "etela-pohjanmaa",
+			"name": "Etelä-Pohjanmaa",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				23.05175,
+				62.73665
+			],
+			"bbox": [
+				21.5324,
+				61.9853,
+				24.5711,
+				63.488
+			]
+		},
+		{
+			"id": "keski-suomi",
+			"name": "Keski-Suomi",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				25.36605,
+				62.528400000000005
+			],
+			"bbox": [
+				24.0203,
+				61.4559,
+				26.7118,
+				63.6009
+			]
+		},
+		{
+			"id": "etela-savo",
+			"name": "Etelä-Savo",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				27.97065,
+				61.90755
+			],
+			"bbox": [
+				26.2475,
+				61.1618,
+				29.6938,
+				62.6533
+			]
+		},
+		{
+			"id": "pirkanmaa",
+			"name": "Pirkanmaa",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				23.78725,
+				61.7196
+			],
+			"bbox": [
+				22.5805,
+				60.9695,
+				24.994,
+				62.4697
+			]
+		},
+		{
+			"id": "satakunta",
+			"name": "Satakunta",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				22.153550000000003,
+				61.59375
+			],
+			"bbox": [
+				21.3167,
+				60.8857,
+				22.9904,
+				62.3018
+			]
+		},
+		{
+			"id": "etela-karjala",
+			"name": "Etelä-Karjala",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				28.6443,
+				61.25735
+			],
+			"bbox": [
+				27.143,
+				60.6642,
+				30.1456,
+				61.8505
+			]
+		},
+		{
+			"id": "paijat-hame",
+			"name": "Päijät-Häme",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				25.7167,
+				61.2432
+			],
+			"bbox": [
+				24.9183,
+				60.6884,
+				26.5151,
+				61.798
+			]
+		},
+		{
+			"id": "kanta-hame",
+			"name": "Kanta-Häme",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				24.22455,
+				60.9404
+			],
+			"bbox": [
+				23.1624,
+				60.5585,
+				25.2867,
+				61.3223
+			]
+		},
+		{
+			"id": "kymenlaakso",
+			"name": "Kymenlaakso",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				27.0233,
+				60.85075
+			],
+			"bbox": [
+				26.0428,
+				60.4182,
+				28.0038,
+				61.2833
+			]
+		},
+		{
+			"id": "varsinais-suomi",
+			"name": "Varsinais-Suomi",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				22.6113,
+				60.5443
+			],
+			"bbox": [
+				21.3259,
+				59.9975,
+				23.8967,
+				61.0911
+			]
+		},
+		{
+			"id": "uusimaa",
+			"name": "Uusimaa",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				24.787300000000002,
+				60.364050000000006
+			],
+			"bbox": [
+				23.0213,
+				59.898,
+				26.5533,
+				60.8301
+			]
+		}
+	],
+	"tourOrder": [
+		"lappi",
+		"pohjois-pohjanmaa",
+		"kainuu",
+		"keski-pohjanmaa",
+		"pohjois-savo",
+		"pohjanmaa",
+		"pohjois-karjala",
+		"etela-pohjanmaa",
+		"keski-suomi",
+		"etela-savo",
+		"pirkanmaa",
+		"satakunta",
+		"etela-karjala",
+		"paijat-hame",
+		"kanta-hame",
+		"kymenlaakso",
+		"varsinais-suomi",
+		"uusimaa"
+	]
+}

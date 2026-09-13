@@ -253,6 +253,73 @@ or amend an entry here as part of that change, not as an afterthought.
   cases, but the underlying reasoning is "not a real state/territory,"
   not "too far from the mainland" — worth distinguishing if a future
   country raises the same "which of these rows actually count" question.
+- **Russia's regions map excludes Crimea and Sevastopol, for direct
+  consistency with the earlier Ukraine decision — not a new political
+  judgment call, a mechanical application of one already made.** Natural
+  Earth tags both under `admin='Russia'` (reflecting de facto control),
+  the same as it does for `ukraine-regions`' source rows before that
+  map's `--extra-where` merge — but it keeps their `iso_3166_2` codes
+  under the Ukrainian `UA-` prefix even there. Showing them as Russian
+  territory on `russia-regions` while already showing them as Ukrainian
+  on `ukraine-regions` would contradict the project's own stated
+  reasoning (UN-level international consensus) for the earlier
+  decision, not present a second even-handed option. Applied to both
+  the regions and towns maps.
+- **India's regions map keeps Jammu & Kashmir and Ladakh as India
+  depicts them, unlike Crimea — a deliberate distinction, not an
+  oversight.** Crimea has near-universal international consensus (the
+  UN included) against the controlling country's own claim, which is
+  what justified overriding Natural Earth's `admin` tag there. Kashmir
+  is a genuine three-way dispute (India/Pakistan/China) with no
+  equivalent clean resolution to defer to — there's no "the world
+  agrees, override the data" move available the way there was for
+  Crimea. Default: show it as Natural Earth's own India-administered
+  data depicts it, the same treatment every other non-Ukraine country
+  in this project gets, rather than picking a side where the world
+  hasn't. Revisit only if a comparably clean international consensus
+  ever emerges, the same bar Crimea had to clear.
+- **India's towns map excludes Amaravati despite it clearing the
+  population threshold by a wide margin — a data-quality call, not a
+  political one.** Its `POP_MAX` (5.8M) would rank it #7 nationally,
+  ahead of Ahmedabad/Pune/Surat, but Amaravati is Andhra Pradesh's
+  still-under-construction planned capital with an actual population of
+  a few thousand people. `POP_MAX` is already known to sometimes read
+  as a broader urban-agglomeration estimate (see the `POP_MAX` section
+  below) - this is the same failure mode taken to an extreme past the
+  point of being a reasonable tradeoff, actively misleading rather than
+  "using a bigger boundary than expected." Excluded outright rather than
+  accepted as another instance of the disclosed `POP_MAX` limitation.
+- **Natural Earth has real exact-duplicate rows for the same city
+  (Brazil's Vila Velha/Natal, Mexico's Mazatlán, Indonesia's Bandar
+  Lampung, each appearing twice) — fixed with a general dedup step in
+  `build-points-map.ts`, not a per-country workaround.** Found only once
+  this project started building large towns maps (50+ candidates), where
+  duplicates became likely enough to actually hit — smaller towns maps
+  (5-40 targets) apparently never happened to include one. Left
+  unhandled, two features sharing a name would produce two targets with
+  the same `slugify()`-derived id: duplicate map pins, duplicate/
+  colliding quiz slips. Dedupes by id after name fixups, keeping
+  whichever duplicate has the higher `POP_MAX` — applies to every
+  country's towns map going forward, not just this batch's.
+- **Adaptive town selection (`--min-count`/`--max-count` on
+  `build-points-map.ts`), replacing a one-size-fits-all `>100k`
+  threshold.** Requested directly by the user (2026-09-13): "For
+  countries like Sweden it makes sense to have a minimum of cities to
+  show and change the 100k limit, while if there are too many cities
+  like in China we have to think of increasing it." Both flags are
+  no-ops at their defaults, verified by rebuilding `sweden-towns-100k`
+  with the updated script and confirming byte-identical output against
+  the already-shipped version - existing maps are unaffected unless
+  explicitly rebuilt with the new flags. `--max-count=50` applied to
+  every large country in the 2026-09-13 batch (China/Brazil/Mexico/
+  Russia/India/Indonesia) - picked to stay under the largest
+  already-shipped towns map (`japan-towns-100k`, 66) rather than an
+  arbitrary round number. `--min-count=8` applied to Finland (only 4
+  towns clear 100k) - not retroactively applied to the already-shipped
+  `sweden-towns-100k` (5 towns), since that wasn't part of what was
+  asked; revisit Sweden specifically if the user wants it bumped up
+  too. See MAPS.md's "Adaptive town selection" section for the
+  mechanism.
 - **Public-domain data sources only (Natural Earth), on purpose.** A
   constraint carried through the whole project, not just an initial
   default — flagged again explicitly when scoping the self-serve
@@ -466,3 +533,155 @@ or amend an entry here as part of that change, not as an afterthought.
   Also lowered the default (30vh → 22vh) and minimum (15vh → 9vh) now
   that shrinking actually works - the old bounds were partly compensating
   for the bug by never asking for a height small enough to expose it.
+
+## Home page map list (2026-09-12)
+
+- **Grouped by country, not just a flat alphabetical list.** The user's
+  own framing ("organize it better, at least alphabetically") set
+  alphabetical as the floor, not the ceiling. With 28 maps across 14
+  countries and every country already shipping its maps as a natural
+  regions/towns pair (a trio for Italy, which also has a provinces map),
+  a flat 28-row alphabetical list would still read as a wall of similar
+  entries ("France — Regions", "France — Towns" sorted apart from each
+  other alphabetically by their full name isn't even guaranteed). A
+  heading per country groups the pair visually and lets the link text
+  drop the now-redundant country prefix (just "Regions"/"Towns" under an
+  "France" heading, not "France — Regions"). Countries are ordered
+  alphabetically by name, and each country's own maps alphabetically by
+  label - both levels meet the stated minimum, the grouping is the part
+  beyond it.
+- **A 2-column CSS grid above the existing 640px breakpoint, one column
+  below it.** Reuses the breakpoint `MapNav.svelte` already established
+  rather than inventing a new one. With 14 country groups, a single
+  column at desktop width would push later countries far down the page
+  for no reason - two columns is a small CSS change (`display: grid`
+  behind the media query, `display: flex; flex-direction: column` below
+  it), not a new dependency or a bigger redesign.
+- **No search/filter UI.** Considered and rejected as disproportionate to
+  the actual complaint: grouping plus alphabetical order already gets any
+  country to a glance/scroll away, and a search box adds a second way to
+  find something that mostly duplicates what the grouped layout already
+  does at this list size (14 countries). Revisit only if the list grows
+  enough that scrolling itself becomes the complaint, not scanning.
+
+## Internationalization (i18n)
+
+- **Hand-rolled dictionary + `t()`/`tPlural()` helper (`app/src/lib/
+  i18n.svelte.ts`), not a library (`sveltekit-i18n`, `typesafe-i18n`,
+  inlang/Paraglide).** Requested directly by the user (2026-09-12),
+  alongside map-list reorganization and optional SSO. Scoped to the app's
+  own UI chrome only — nav labels, home page text, quiz/tour status and
+  button copy — around 35 distinct strings across five components. That's
+  well under the scale where a library's build-step/plugin machinery,
+  message-extraction tooling, or generated-types pipeline pays for
+  itself; CLAUDE.md's own guidance ("three similar lines is better than a
+  premature abstraction") points the same direction. A plain
+  `Record<TranslationKey, string>` per language, with `TranslationKey` a
+  union type (not `Record<string,string>`) so TypeScript itself catches a
+  missing translation as a compile error, gets the one property worth
+  having from a real i18n library — completeness checking — without any
+  of the tooling overhead.
+- **State lives in a module-scope Svelte 5 rune (`.svelte.ts`), not a
+  classic `writable` store.** `$state` at module scope is the documented
+  Svelte 5 pattern for state shared across components; every call site
+  reading `t()`/`getLanguage()` inside a template or `$derived` picks up
+  changes the same way reading any other `$state` value does, no store
+  subscription boilerplate needed.
+- **Persisted to `localStorage` under `geoclick:language:v1`, guarded the
+  same way `progressRepository.ts`'s `createLocalStorageProgressRepository`
+  is** (`typeof localStorage === 'undefined'` checks) — the home page and
+  other routes prerender at build time, when `localStorage` doesn't
+  exist. Defaults to English when nothing is stored or the value isn't a
+  recognized language.
+- **Map/target names are explicitly out of scope, on purpose.** Region
+  and city names (Toscana, Bayern, Kyiv, ...) are real geographic proper
+  nouns already localized per-country through `data/scripts/
+  build-map.ts`/`build-points-map.ts`'s `NAME_FIXUPS` tables and
+  `--name-field` — a separate, already-solved mechanism (see MAPS.md).
+  Routing those through the UI dictionary would conflict with decisions
+  already made per-country for reasons that have nothing to do with the
+  viewer's own display language.
+- **Pluralization is a hand-picked `.one`/`.other` key pair per counted
+  string (`tPlural()`), not a CLDR plural-rules library.** English,
+  German, and Italian all only distinguish singular (count === 1) from
+  everything else for the specific counts this app displays (mistakes,
+  days until next review) - matches how these strings were already
+  worded before i18n existed (`mistake`/`mistakes`, `day`/`days`).
+  Good enough for three languages and a handful of counted strings; would
+  need revisiting (a real plural-rules table) if a language with richer
+  plural categories (e.g. Polish, Russian) were ever added.
+- **Switcher is three small text pills (EN/DE/IT), not flags or a
+  dropdown.** Matches the existing muted, small-pill visual language from
+  GUI/UX round 1 (see above) rather than introducing a new control style.
+  Shown in two places: `MapNav.svelte` (present on every map-scoped view)
+  and the home page header (which doesn't render `MapNav`) - both reuse
+  the same `LanguageSwitcher.svelte` component rather than duplicating
+  the markup.
+
+## Visual refresh: background (2026-09-13)
+
+- **The map's "ocean/empty space" background moved from flat gray
+  (`#eef3f6`) to a warm parchment tone (`#f0ead9`), not a richer blue.**
+  Requested directly: "the background color is kind of meh, maybe
+  something more captivating." A richer blue was tried first (`#a9cfdf`)
+  since water conventionally reads as blue on maps, and rejected after
+  actually looking at it: it reads too close to the lakes layer's own
+  blue (`#bcdcea`, DECISIONS.md's earlier "Lakes are rendered as a
+  purely contextual layer" entry), undoing the contrast that entry
+  already tuned once — the Great Lakes nearly vanished into the
+  surrounding "ocean" background on `usa-states`. A warm neutral instead
+  of a cool one keeps the original design's actual intent (a plain
+  backdrop, not a literal ocean) while looking more intentional than
+  flat gray, and — checked directly, not assumed — makes the lakes
+  layer's blue read *more* clearly against a warm background than it
+  did against the old cool gray-blue one, not less. Also re-verified
+  against `italy-provinces`' full 8-color categorical palette (every
+  hash-derived land color, not just green) and a towns map's `context`
+  layer (`japan-towns-100k`) before settling on the value — neither
+  regressed.
+- **The home page background moved from plain white to a soft
+  three-stop gradient** (`#e3f0e6` sage → `#dce6f2` blue → `#f7ecd9`
+  cream, `160deg`, fixed so it doesn't scroll with content) drawn from
+  the same muted-earthy family as the map's own categorical palette,
+  for the same "meh" complaint. A first, much subtler version (near-
+  white with barely-there tinting) was tried and rejected as still too
+  timid to actually read as a change — the shipped version is
+  deliberately more visible while staying low-saturation enough not to
+  fight with body text or the map-card borders.
+
+## Quiz solved-state contrast (2026-09-13)
+
+- **Unsolved and solved regions/cities now differ by opacity
+  (saturation), not just hue.** Reported directly after the background
+  refresh above made it more noticeable: "looking at the quiz the color
+  scheme is confusing, I do not know which regions have been recognized
+  or not." Root cause, found by checking the actual palette rather than
+  guessing: the 8-color categorical palette (unsolved default) includes
+  a muted teal-green (`#8fb8a8`) close enough to `quizCorrect`'s green
+  (`#5a9c6f`) that at the same flat 0.6 opacity, an unsolved region
+  could plausibly read as already-solved at a glance — the hue
+  difference alone wasn't a strong enough signal.
+- **Fix: `fill-opacity`/`circle-opacity` became `case` expressions
+  matching the same feature-states `fill-color`/`circle-color` already
+  branch on**, not a new mechanism. Any named state (solved, wrong,
+  revealed, hovered, explore-highlighted) renders at high opacity (0.8
+  fill / fully opaque circle); the unsolved default drops to low
+  opacity (0.3 fill / 0.65 circle). Saturation itself is now the
+  primary "is this done yet" signal, independent of which of the 8
+  hash-derived colors an unsolved region happens to have - directly
+  matching the user's own suggested fix ("different level of
+  saturation"). Circles kept a higher unsolved-state floor than fills
+  (0.65 vs 0.3) since a point marker's *only* visual footprint is its
+  fill - dropping it as low as a polygon's would risk making an
+  unsolved city hard to see/aim for, unlike a polygon target, which
+  stays fully legible via its always-visible outline regardless of
+  fill opacity.
+- **Applies uniformly across every view sharing this style** (MapView's
+  click-explore, TourView's reveal, QuizView's solve/wrong/reveal,
+  OverviewView's "everything already discovered"), not something scoped
+  to the quiz specifically - `base.json` has one shared paint
+  expression per layer, not a per-view variant. Checked directly, not
+  assumed: `italy-regions` (polygon quiz, two real solves) and
+  `sweden-towns-100k` (point quiz) both verified live before shipping -
+  solved targets read unambiguously against every unsolved one in both
+  geometry types.

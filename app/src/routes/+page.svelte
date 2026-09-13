@@ -6,37 +6,14 @@
 	import { authState, initAuth } from '$lib/authStore.svelte';
 	import AccountStatus from '$lib/AccountStatus.svelte';
 	import { isDue } from '@geoclick/srs';
+	import { t, tPlural } from '$lib/i18n.svelte';
+	import LanguageSwitcher from '$lib/LanguageSwitcher.svelte';
+	import { mapGroups } from '$lib/mapCatalog';
 
-	const demoMaps = [
-		{ id: 'italy-regions', name: 'Italy — Regions' },
-		{ id: 'italy-provinces', name: 'Italy — Provinces' },
-		{ id: 'italy-towns-100k', name: 'Italy — Towns' },
-		{ id: 'germany-states', name: 'Germany — States' },
-		{ id: 'germany-towns-100k', name: 'Germany — Towns' },
-		{ id: 'usa-states', name: 'USA — States' },
-		{ id: 'france-regions', name: 'France — Regions' },
-		{ id: 'france-towns-100k', name: 'France — Towns' },
-		{ id: 'spain-regions', name: 'Spain — Regions' },
-		{ id: 'spain-towns-100k', name: 'Spain — Towns' },
-		{ id: 'great-britain-regions', name: 'Great Britain — Regions' },
-		{ id: 'great-britain-towns-100k', name: 'Great Britain — Towns' },
-		{ id: 'poland-regions', name: 'Poland — Regions' },
-		{ id: 'poland-towns-100k', name: 'Poland — Towns' },
-		{ id: 'ukraine-regions', name: 'Ukraine — Regions' },
-		{ id: 'ukraine-towns-100k', name: 'Ukraine — Towns' },
-		{ id: 'sweden-regions', name: 'Sweden — Regions' },
-		{ id: 'sweden-towns-100k', name: 'Sweden — Towns' },
-		{ id: 'japan-regions', name: 'Japan — Prefectures' },
-		{ id: 'japan-towns-100k', name: 'Japan — Towns' },
-		{ id: 'canada-regions', name: 'Canada — Provinces' },
-		{ id: 'canada-towns-100k', name: 'Canada — Towns' },
-		{ id: 'australia-regions', name: 'Australia — States' },
-		{ id: 'australia-towns-100k', name: 'Australia — Towns' },
-		{ id: 'portugal-regions', name: 'Portugal — Districts' },
-		{ id: 'portugal-towns-100k', name: 'Portugal — Towns' },
-		{ id: 'netherlands-regions', name: 'Netherlands — Provinces' },
-		{ id: 'netherlands-towns-100k', name: 'Netherlands — Towns' }
-	];
+	// Flat view of every map - onMount's data-loading loop below doesn't
+	// care about grouping, only about (id) -> per-map progress data, so it
+	// works off this instead of duplicating the id list a second time.
+	const demoMaps = mapGroups.flatMap((group) => group.maps);
 
 	// Last-session summaries and due state live in localStorage (Iteration
 	// 5/6), which isn't available during the prerendered build - read them
@@ -104,54 +81,104 @@
 </script>
 
 <main>
-	<h1>Geoclick</h1>
-	<p>Pick a demo map to explore.</p>
+	<div class="header-row">
+		<h1>Geoclick</h1>
+		<LanguageSwitcher />
+	</div>
+	<p>{t('home.subtitle')}</p>
 	<AccountStatus />
-	<ul>
-		{#each demoMaps as map (map.id)}
-			{@const summary = lastSessions[map.id]}
-			{@const due = dueStatuses[map.id]}
-			<li>
-				<a href={resolve('/map/[mapId]', { mapId: map.id })}>
-					<span class="map-name">{map.name}</span>
-					{#if due && due.kind !== 'notStarted'}
-						<span class="due-status" class:up-to-date={due.kind === 'upToDate'}>
-							{due.kind === 'upToDate' ? 'No reviews needed' : `${due.count} to review`}
-						</span>
-					{/if}
-					{#if summary}
-						<span class="last-result">
-							Last: {summary.perfect}/{summary.total}
-							{#if summary.totalErrors > 0}
-								({summary.totalErrors} mistake{summary.totalErrors === 1 ? '' : 's'})
-							{/if}
-						</span>
-					{/if}
-				</a>
-			</li>
+	<div class="groups">
+		{#each mapGroups as group (group.country)}
+			<section class="country-group">
+				<h2>{group.country}</h2>
+				<ul>
+					{#each group.maps as map (map.id)}
+						{@const summary = lastSessions[map.id]}
+						{@const due = dueStatuses[map.id]}
+						<li>
+							<a href={resolve('/map/[mapId]', { mapId: map.id })}>
+								<span class="map-name">{t(map.labelKey)}</span>
+								{#if due && due.kind !== 'notStarted'}
+									<span class="due-status" class:up-to-date={due.kind === 'upToDate'}>
+										{due.kind === 'upToDate'
+											? t('home.due.upToDate')
+											: t('home.due.toReview', { count: due.count })}
+									</span>
+								{/if}
+								{#if summary}
+									<span class="last-result">
+										{t('home.lastResult', { perfect: summary.perfect, total: summary.total })}
+										{#if summary.totalErrors > 0}
+											{tPlural('home.mistakeCount', summary.totalErrors, {
+												count: summary.totalErrors
+											})}
+										{/if}
+									</span>
+								{/if}
+							</a>
+						</li>
+					{/each}
+				</ul>
+			</section>
 		{/each}
-	</ul>
+	</div>
 </main>
 
 <style>
+	/* A flat white page read as "meh" (direct user feedback) - a soft,
+	   low-saturation gradient drawn from the same muted-earthy family as
+	   the map's own categorical target palette (base.json), just barely
+	   tinted so body text/borders keep their existing contrast. Fixed
+	   (not scrolling with content) so it reads as the page's backdrop
+	   rather than a decoration that scrolls away. */
+	:global(body) {
+		min-height: 100vh;
+		background: linear-gradient(160deg, #e3f0e6 0%, #dce6f2 45%, #f7ecd9 100%)
+			fixed;
+	}
 	main {
 		max-width: 32rem;
 		margin: 4rem auto;
 		font-family: system-ui, sans-serif;
 		text-align: center;
 	}
+	.header-row {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.75rem;
+		flex-wrap: wrap;
+	}
+	.header-row h1 {
+		margin: 0;
+	}
+	.groups {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+		text-align: left;
+	}
+	.country-group h2 {
+		margin: 0 0 0.5rem;
+		font-size: 1rem;
+		font-weight: 700;
+		color: #2c3a33;
+		border-bottom: 1px solid #e0e0e0;
+		padding-bottom: 0.25rem;
+	}
 	ul {
 		list-style: none;
+		margin: 0;
 		padding: 0;
 		display: flex;
 		flex-direction: column;
-		gap: 0.75rem;
+		gap: 0.5rem;
 	}
 	a {
 		display: flex;
 		flex-direction: column;
 		gap: 0.2rem;
-		padding: 0.75rem 1rem;
+		padding: 0.6rem 1rem;
 		border: 1px solid #ccc;
 		border-radius: 0.5rem;
 		text-decoration: none;
@@ -171,5 +198,17 @@
 	.last-result {
 		font-size: 0.8rem;
 		opacity: 0.7;
+	}
+	@media (min-width: 640px) {
+		main {
+			max-width: 46rem;
+		}
+		.groups {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			column-gap: 2rem;
+			row-gap: 1.5rem;
+			align-items: start;
+		}
 	}
 </style>

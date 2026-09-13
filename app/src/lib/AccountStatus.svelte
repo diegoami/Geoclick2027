@@ -10,6 +10,7 @@
 	import { onMount } from 'svelte';
 	import { isSupabaseConfigured } from './supabaseClient';
 	import { authState, initAuth, signInWithGoogle, signOut } from './authStore.svelte';
+	import { t } from './i18n.svelte';
 
 	onMount(() => {
 		initAuth();
@@ -21,21 +22,23 @@
 {#if configured}
 	<div class="account-status">
 		{#if !authState.initialized}
-			<span class="muted">Checking sign-in…</span>
+			<span class="muted">{t('auth.checkingSignIn')}</span>
 		{:else if authState.session}
 			<span class="signed-in">
-				Signed in as {authState.session.user.email ?? 'Google account'}
+				{t('auth.signedInAs', {
+					email: authState.session.user.email ?? t('auth.signedInFallback')
+				})}
 			</span>
-			<button type="button" onclick={signOut}>Sign out</button>
+			<button type="button" onclick={signOut}>{t('auth.signOut')}</button>
 		{:else}
 			<button type="button" class="sign-in-btn" onclick={signInWithGoogle}>
-				Sign in with Google to sync progress across devices
+				{t('auth.signInWithGoogle')}
 			</button>
 		{/if}
 	</div>
 {:else}
 	<p class="muted not-configured">
-		Cross-device sync isn't set up on this deployment yet - progress stays on this device.
+		{t('auth.notConfigured')}
 	</p>
 {/if}
 

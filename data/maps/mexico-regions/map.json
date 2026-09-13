@@ -1,0 +1,587 @@
+{
+	"id": "mexico-regions",
+	"name": "Mexico — States",
+	"country": "Mexico",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "baja-california",
+			"name": "Baja California",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-115.55955,
+				30.3561
+			],
+			"bbox": [
+				-118.3555,
+				27.9994,
+				-112.7636,
+				32.7128
+			]
+		},
+		{
+			"id": "sonora",
+			"name": "Sonora",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-111.75309999999999,
+				29.4156
+			],
+			"bbox": [
+				-115.0397,
+				26.3318,
+				-108.4665,
+				32.4994
+			]
+		},
+		{
+			"id": "chihuahua",
+			"name": "Chihuahua",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-106.22855,
+				28.7055
+			],
+			"bbox": [
+				-109.1456,
+				25.6332,
+				-103.3115,
+				31.7778
+			]
+		},
+		{
+			"id": "coahuila",
+			"name": "Coahuila",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-101.88525,
+				27.2272
+			],
+			"bbox": [
+				-103.9635,
+				24.565,
+				-99.807,
+				29.8894
+			]
+		},
+		{
+			"id": "nuevo-leon",
+			"name": "Nuevo León",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-99.83070000000001,
+				25.51125
+			],
+			"bbox": [
+				-101.2157,
+				23.229,
+				-98.4457,
+				27.7935
+			]
+		},
+		{
+			"id": "baja-california-sur",
+			"name": "Baja California Sur",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-112.23925,
+				25.436349999999997
+			],
+			"bbox": [
+				-115.0529,
+				22.8722,
+				-109.4256,
+				28.0005
+			]
+		},
+		{
+			"id": "tamaulipas",
+			"name": "Tamaulipas",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-98.5983,
+				24.94495
+			],
+			"bbox": [
+				-100.0573,
+				22.2198,
+				-97.1393,
+				27.6701
+			]
+		},
+		{
+			"id": "sinaloa",
+			"name": "Sinaloa",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-107.41454999999999,
+				24.78615
+			],
+			"bbox": [
+				-109.4405,
+				22.4949,
+				-105.3886,
+				27.0774
+			]
+		},
+		{
+			"id": "durango",
+			"name": "Durango",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-104.8083,
+				24.57885
+			],
+			"bbox": [
+				-107.1263,
+				22.3191,
+				-102.4903,
+				26.8386
+			]
+		},
+		{
+			"id": "zacatecas",
+			"name": "Zacatecas",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-102.57910000000001,
+				23.1185
+			],
+			"bbox": [
+				-104.3298,
+				21.074,
+				-100.8284,
+				25.163
+			]
+		},
+		{
+			"id": "san-luis-potosi",
+			"name": "San Luis Potosí",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-100.30715000000001,
+				22.87095
+			],
+			"bbox": [
+				-102.253,
+				21.1769,
+				-98.3613,
+				24.565
+			]
+		},
+		{
+			"id": "aguascalientes",
+			"name": "Aguascalientes",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-102.3509,
+				22.07125
+			],
+			"bbox": [
+				-102.8564,
+				21.6777,
+				-101.8454,
+				22.4648
+			]
+		},
+		{
+			"id": "nayarit",
+			"name": "Nayarit",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-104.8344,
+				21.85925
+			],
+			"bbox": [
+				-105.7241,
+				20.6852,
+				-103.9447,
+				23.0333
+			]
+		},
+		{
+			"id": "guanajuato",
+			"name": "Guanajuato",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-100.9126,
+				20.899050000000003
+			],
+			"bbox": [
+				-102.0997,
+				19.9252,
+				-99.7255,
+				21.8729
+			]
+		},
+		{
+			"id": "jalisco",
+			"name": "Jalisco",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-103.6096,
+				20.869
+			],
+			"bbox": [
+				-105.6987,
+				18.9664,
+				-101.5205,
+				22.7716
+			]
+		},
+		{
+			"id": "queretaro",
+			"name": "Querétaro",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-99.80375000000001,
+				20.780549999999998
+			],
+			"bbox": [
+				-100.5652,
+				19.938,
+				-99.0423,
+				21.6231
+			]
+		},
+		{
+			"id": "yucatan",
+			"name": "Yucatán",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-88.95855,
+				20.633499999999998
+			],
+			"bbox": [
+				-90.392,
+				19.651,
+				-87.5251,
+				21.616
+			]
+		},
+		{
+			"id": "hidalgo",
+			"name": "Hidalgo",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-98.92215,
+				20.492150000000002
+			],
+			"bbox": [
+				-99.8441,
+				19.5855,
+				-98.0002,
+				21.3988
+			]
+		},
+		{
+			"id": "veracruz",
+			"name": "Veracruz",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-96.11590000000001,
+				19.815350000000002
+			],
+			"bbox": [
+				-98.6423,
+				17.1502,
+				-93.5895,
+				22.4805
+			]
+		},
+		{
+			"id": "quintana-roo",
+			"name": "Quintana Roo",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-88.0785,
+				19.753999999999998
+			],
+			"bbox": [
+				-89.4154,
+				17.8885,
+				-86.7416,
+				21.6195
+			]
+		},
+		{
+			"id": "tlaxcala",
+			"name": "Tlaxcala",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-98.15035,
+				19.4105
+			],
+			"bbox": [
+				-98.6595,
+				19.1065,
+				-97.6412,
+				19.7145
+			]
+		},
+		{
+			"id": "puebla",
+			"name": "Puebla",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-97.8889,
+				19.353
+			],
+			"bbox": [
+				-99.0497,
+				17.8922,
+				-96.7281,
+				20.8138
+			]
+		},
+		{
+			"id": "mexico",
+			"name": "México",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-99.61435,
+				19.350450000000002
+			],
+			"bbox": [
+				-100.6236,
+				18.392,
+				-98.6051,
+				20.3089
+			]
+		},
+		{
+			"id": "distrito-federal",
+			"name": "Distrito Federal",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-99.1458,
+				19.31445
+			],
+			"bbox": [
+				-99.3329,
+				19.0578,
+				-98.9587,
+				19.5711
+			]
+		},
+		{
+			"id": "campeche",
+			"name": "Campeche",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-90.7498,
+				19.313000000000002
+			],
+			"bbox": [
+				-92.4861,
+				17.802,
+				-89.0135,
+				20.824
+			]
+		},
+		{
+			"id": "michoacan",
+			"name": "Michoacán",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-101.9324,
+				19.154
+			],
+			"bbox": [
+				-103.742,
+				17.9212,
+				-100.1228,
+				20.3868
+			]
+		},
+		{
+			"id": "colima",
+			"name": "Colima",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-107.27255,
+				19.0888
+			],
+			"bbox": [
+				-111.0673,
+				18.6904,
+				-103.4778,
+				19.4872
+			]
+		},
+		{
+			"id": "morelos",
+			"name": "Morelos",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-99.07095000000001,
+				18.74615
+			],
+			"bbox": [
+				-99.4955,
+				18.3499,
+				-98.6464,
+				19.1424
+			]
+		},
+		{
+			"id": "tabasco",
+			"name": "Tabasco",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-92.564,
+				17.9502
+			],
+			"bbox": [
+				-94.1371,
+				17.2519,
+				-90.9909,
+				18.6485
+			]
+		},
+		{
+			"id": "guerrero",
+			"name": "Guerrero",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-100.08595,
+				17.594450000000002
+			],
+			"bbox": [
+				-102.1689,
+				16.3183,
+				-98.003,
+				18.8706
+			]
+		},
+		{
+			"id": "oaxaca",
+			"name": "Oaxaca",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-96.2113,
+				17.1357
+			],
+			"bbox": [
+				-98.5545,
+				15.659,
+				-93.8681,
+				18.6124
+			]
+		},
+		{
+			"id": "chiapas",
+			"name": "Chiapas",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-92.26195,
+				16.274749999999997
+			],
+			"bbox": [
+				-94.1251,
+				14.5705,
+				-90.3988,
+				17.979
+			]
+		}
+	],
+	"tourOrder": [
+		"baja-california",
+		"sonora",
+		"chihuahua",
+		"coahuila",
+		"nuevo-leon",
+		"baja-california-sur",
+		"tamaulipas",
+		"sinaloa",
+		"durango",
+		"zacatecas",
+		"san-luis-potosi",
+		"aguascalientes",
+		"nayarit",
+		"guanajuato",
+		"jalisco",
+		"queretaro",
+		"yucatan",
+		"hidalgo",
+		"veracruz",
+		"quintana-roo",
+		"tlaxcala",
+		"puebla",
+		"mexico",
+		"distrito-federal",
+		"campeche",
+		"michoacan",
+		"colima",
+		"morelos",
+		"tabasco",
+		"guerrero",
+		"oaxaca",
+		"chiapas"
+	]
+}

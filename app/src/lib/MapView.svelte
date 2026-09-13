@@ -5,6 +5,7 @@
 	import { fetchMapDefAndStyle, createMap } from './geoclickMap';
 	import MapNav from './MapNav.svelte';
 	import type { MapDefinition } from './mapDefinition';
+	import { mapDisplayName } from './mapCatalog';
 
 	let { mapId }: { mapId: string } = $props();
 
@@ -82,7 +83,7 @@
 	{#if error}
 		<p class="error">{error}</p>
 	{:else}
-		<MapNav {mapId} mapName={mapDef?.name} />
+		<MapNav {mapId} mapName={mapDisplayName(mapId) ?? mapDef?.name} />
 	{/if}
 	<div class="container" bind:this={container}></div>
 </div>

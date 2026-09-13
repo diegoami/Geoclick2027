@@ -1,0 +1,911 @@
+{
+	"id": "china-towns-100k",
+	"name": "China — Towns",
+	"country": "China",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "harbin",
+			"name": "Harbin",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				126.648039,
+				45.7519298
+			],
+			"bbox": [
+				126.648039,
+				45.7519298,
+				126.648039,
+				45.7519298
+			]
+		},
+		{
+			"id": "changchun",
+			"name": "Changchun",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				125.3380415,
+				43.8669544
+			],
+			"bbox": [
+				125.3380415,
+				43.8669544,
+				125.3380415,
+				43.8669544
+			]
+		},
+		{
+			"id": "jilin",
+			"name": "Jilin",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				126.5480968,
+				43.8519166
+			],
+			"bbox": [
+				126.5480968,
+				43.8519166,
+				126.5480968,
+				43.8519166
+			]
+		},
+		{
+			"id": "urumqi",
+			"name": "Ürümqi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				87.5730598,
+				43.8069581
+			],
+			"bbox": [
+				87.5730598,
+				43.8069581,
+				87.5730598,
+				43.8069581
+			]
+		},
+		{
+			"id": "shenyang",
+			"name": "Shenyang",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				123.4480277,
+				41.8069251
+			],
+			"bbox": [
+				123.4480277,
+				41.8069251,
+				123.4480277,
+				41.8069251
+			]
+		},
+		{
+			"id": "jinxi",
+			"name": "Jinxi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.8280325,
+				40.7522867
+			],
+			"bbox": [
+				120.8280325,
+				40.7522867,
+				120.8280325,
+				40.7522867
+			]
+		},
+		{
+			"id": "baotou",
+			"name": "Baotou",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				109.820074,
+				40.6541531
+			],
+			"bbox": [
+				109.820074,
+				40.6541531,
+				109.820074,
+				40.6541531
+			]
+		},
+		{
+			"id": "datong",
+			"name": "Datong",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				113.2980529,
+				40.0819658
+			],
+			"bbox": [
+				113.2980529,
+				40.0819658,
+				113.2980529,
+				40.0819658
+			]
+		},
+		{
+			"id": "beijing",
+			"name": "Beijing",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				116.39420089260611,
+				39.901720309862675
+			],
+			"bbox": [
+				116.39420089260611,
+				39.901720309862675,
+				116.39420089260611,
+				39.901720309862675
+			]
+		},
+		{
+			"id": "tangshan",
+			"name": "Tangshan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				118.1924311,
+				39.626283
+			],
+			"bbox": [
+				118.1924311,
+				39.626283,
+				118.1924311,
+				39.626283
+			]
+		},
+		{
+			"id": "tianjin",
+			"name": "Tianjin",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				117.19660728208831,
+				39.08277176197969
+			],
+			"bbox": [
+				117.19660728208831,
+				39.08277176197969,
+				117.19660728208831,
+				39.08277176197969
+			]
+		},
+		{
+			"id": "dalian",
+			"name": "Dalian",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.627885,
+				38.9247843
+			],
+			"bbox": [
+				121.627885,
+				38.9247843,
+				121.627885,
+				38.9247843
+			]
+		},
+		{
+			"id": "shijiazhuang",
+			"name": "Shijiazhuang",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				114.4780325,
+				38.0519605
+			],
+			"bbox": [
+				114.4780325,
+				38.0519605,
+				114.4780325,
+				38.0519605
+			]
+		},
+		{
+			"id": "taiyuan",
+			"name": "Taiyuan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				112.5431119,
+				37.8769583
+			],
+			"bbox": [
+				112.5431119,
+				37.8769583,
+				112.5431119,
+				37.8769583
+			]
+		},
+		{
+			"id": "yantai",
+			"name": "Yantai",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.3980753,
+				37.532354
+			],
+			"bbox": [
+				121.3980753,
+				37.532354,
+				121.3980753,
+				37.532354
+			]
+		},
+		{
+			"id": "zibo",
+			"name": "Zibo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				117.9964595757144,
+				36.82136457648037
+			],
+			"bbox": [
+				117.9964595757144,
+				36.82136457648037,
+				117.9964595757144,
+				36.82136457648037
+			]
+		},
+		{
+			"id": "jinan",
+			"name": "Jinan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				116.9930728,
+				36.6769282
+			],
+			"bbox": [
+				116.9930728,
+				36.6769282,
+				116.9930728,
+				36.6769282
+			]
+		},
+		{
+			"id": "qingdao",
+			"name": "Qingdao",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.3280631,
+				36.0919251
+			],
+			"bbox": [
+				120.3280631,
+				36.0919251,
+				120.3280631,
+				36.0919251
+			]
+		},
+		{
+			"id": "lanzhou",
+			"name": "Lanzhou",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.7900544,
+				36.0579737
+			],
+			"bbox": [
+				103.7900544,
+				36.0579737,
+				103.7900544,
+				36.0579737
+			]
+		},
+		{
+			"id": "linyi",
+			"name": "Linyi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				118.3280301,
+				35.0819351
+			],
+			"bbox": [
+				118.3280301,
+				35.0819351,
+				118.3280301,
+				35.0819351
+			]
+		},
+		{
+			"id": "zaozhuang",
+			"name": "Zaozhuang",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				117.5680765,
+				34.8819473
+			],
+			"bbox": [
+				117.5680765,
+				34.8819473,
+				117.5680765,
+				34.8819473
+			]
+		},
+		{
+			"id": "zhengzhou",
+			"name": "Zhengzhou",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				113.6631469,
+				34.756942
+			],
+			"bbox": [
+				113.6631469,
+				34.756942,
+				113.6631469,
+				34.756942
+			]
+		},
+		{
+			"id": "xuzhou",
+			"name": "Xuzhou",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				117.1780744,
+				34.2819581
+			],
+			"bbox": [
+				117.1780744,
+				34.2819581,
+				117.1780744,
+				34.2819581
+			]
+		},
+		{
+			"id": "xi-an",
+			"name": "Xi'an",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				108.8930504,
+				34.2769713
+			],
+			"bbox": [
+				108.8930504,
+				34.2769713,
+				108.8930504,
+				34.2769713
+			]
+		},
+		{
+			"id": "suzhou",
+			"name": "Suzhou",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				116.976943,
+				33.638057
+			],
+			"bbox": [
+				116.976943,
+				33.638057,
+				116.976943,
+				33.638057
+			]
+		},
+		{
+			"id": "nanyang",
+			"name": "Nanyang",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				112.528074,
+				33.0023463
+			],
+			"bbox": [
+				112.528074,
+				33.0023463,
+				112.528074,
+				33.0023463
+			]
+		},
+		{
+			"id": "nanjing",
+			"name": "Nanjing",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				118.7780285,
+				32.051965
+			],
+			"bbox": [
+				118.7780285,
+				32.051965,
+				118.7780285,
+				32.051965
+			]
+		},
+		{
+			"id": "hefei",
+			"name": "Hefei",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				117.2780683,
+				31.8519772
+			],
+			"bbox": [
+				117.2780683,
+				31.8519772,
+				117.2780683,
+				31.8519772
+			]
+		},
+		{
+			"id": "shanghai",
+			"name": "Shanghai",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.4345588,
+				31.2183983
+			],
+			"bbox": [
+				121.4345588,
+				31.2183983,
+				121.4345588,
+				31.2183983
+			]
+		},
+		{
+			"id": "nanchong",
+			"name": "Nanchong",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.1280513,
+				30.7823784
+			],
+			"bbox": [
+				106.1280513,
+				30.7823784,
+				106.1280513,
+				30.7823784
+			]
+		},
+		{
+			"id": "chengdu",
+			"name": "Chengdu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				104.0680736,
+				30.6719459
+			],
+			"bbox": [
+				104.0680736,
+				30.6719459,
+				104.0680736,
+				30.6719459
+			]
+		},
+		{
+			"id": "wuhan",
+			"name": "Wuhan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				114.2680712,
+				30.5819772
+			],
+			"bbox": [
+				114.2680712,
+				30.5819772,
+				114.2680712,
+				30.5819772
+			]
+		},
+		{
+			"id": "hangzhou",
+			"name": "Hangzhou",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.1680728,
+				30.2519198
+			],
+			"bbox": [
+				120.1680728,
+				30.2519198,
+				120.1680728,
+				30.2519198
+			]
+		},
+		{
+			"id": "ningbo",
+			"name": "Ningbo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.5480919,
+				29.8819166
+			],
+			"bbox": [
+				121.5480919,
+				29.8819166,
+				121.5480919,
+				29.8819166
+			]
+		},
+		{
+			"id": "chongqing",
+			"name": "Chongqing",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.5930358,
+				29.5669229
+			],
+			"bbox": [
+				106.5930358,
+				29.5669229,
+				106.5930358,
+				29.5669229
+			]
+		},
+		{
+			"id": "nanchang",
+			"name": "Nanchang",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				115.8780504,
+				28.6819381
+			],
+			"bbox": [
+				115.8780504,
+				28.6819381,
+				115.8780504,
+				28.6819381
+			]
+		},
+		{
+			"id": "changsha",
+			"name": "Changsha",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				112.9680472,
+				28.2019158
+			],
+			"bbox": [
+				112.9680472,
+				28.2019158,
+				112.9680472,
+				28.2019158
+			]
+		},
+		{
+			"id": "wenzhou",
+			"name": "Wenzhou",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.6481469,
+				28.0219268
+			],
+			"bbox": [
+				120.6481469,
+				28.0219268,
+				120.6481469,
+				28.0219268
+			]
+		},
+		{
+			"id": "xiangtan",
+			"name": "Xiangtan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				112.9000232,
+				27.8504305
+			],
+			"bbox": [
+				112.9000232,
+				27.8504305,
+				112.9000232,
+				27.8504305
+			]
+		},
+		{
+			"id": "guiyang",
+			"name": "Guiyang",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.7180928,
+				26.5819888
+			],
+			"bbox": [
+				106.7180928,
+				26.5819888,
+				106.7180928,
+				26.5819888
+			]
+		},
+		{
+			"id": "fuzhou",
+			"name": "Fuzhou",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				119.2981001,
+				26.0819418
+			],
+			"bbox": [
+				119.2981001,
+				26.0819418,
+				119.2981001,
+				26.0819418
+			]
+		},
+		{
+			"id": "kunming",
+			"name": "Kunming",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				102.69743977228744,
+				25.042859073104868
+			],
+			"bbox": [
+				102.69743977228744,
+				25.042859073104868,
+				102.69743977228744,
+				25.042859073104868
+			]
+		},
+		{
+			"id": "hechi",
+			"name": "Hechi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				108.08299950401414,
+				24.695252134251945
+			],
+			"bbox": [
+				108.08299950401414,
+				24.695252134251945,
+				108.08299950401414,
+				24.695252134251945
+			]
+		},
+		{
+			"id": "zhangzhou",
+			"name": "Zhangzhou",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				117.6700162,
+				24.5203754
+			],
+			"bbox": [
+				117.6700162,
+				24.5203754,
+				117.6700162,
+				24.5203754
+			]
+		},
+		{
+			"id": "xiamen",
+			"name": "Xiamen",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				118.0780712,
+				24.4519379
+			],
+			"bbox": [
+				118.0780712,
+				24.4519379,
+				118.0780712,
+				24.4519379
+			]
+		},
+		{
+			"id": "guangzhou",
+			"name": "Guangzhou",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				113.26178516712943,
+				23.12472343296695
+			],
+			"bbox": [
+				113.26178516712943,
+				23.12472343296695,
+				113.26178516712943,
+				23.12472343296695
+			]
+		},
+		{
+			"id": "dongguan",
+			"name": "Dongguan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				113.75047406547746,
+				23.02153738850798
+			],
+			"bbox": [
+				113.75047406547746,
+				23.02153738850798,
+				113.75047406547746,
+				23.02153738850798
+			]
+		},
+		{
+			"id": "nanning",
+			"name": "Nanning",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				108.3180985,
+				22.8219341
+			],
+			"bbox": [
+				108.3180985,
+				22.8219341,
+				108.3180985,
+				22.8219341
+			]
+		},
+		{
+			"id": "shenzhen",
+			"name": "Shenzhen",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				114.06115351896277,
+				22.54809707412332
+			],
+			"bbox": [
+				114.06115351896277,
+				22.54809707412332,
+				114.06115351896277,
+				22.54809707412332
+			]
+		},
+		{
+			"id": "haikou",
+			"name": "Haikou",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				110.3200256,
+				20.0500023
+			],
+			"bbox": [
+				110.3200256,
+				20.0500023,
+				110.3200256,
+				20.0500023
+			]
+		}
+	],
+	"tourOrder": [
+		"harbin",
+		"changchun",
+		"jilin",
+		"urumqi",
+		"shenyang",
+		"jinxi",
+		"baotou",
+		"datong",
+		"beijing",
+		"tangshan",
+		"tianjin",
+		"dalian",
+		"shijiazhuang",
+		"taiyuan",
+		"yantai",
+		"zibo",
+		"jinan",
+		"qingdao",
+		"lanzhou",
+		"linyi",
+		"zaozhuang",
+		"zhengzhou",
+		"xuzhou",
+		"xi-an",
+		"suzhou",
+		"nanyang",
+		"nanjing",
+		"hefei",
+		"shanghai",
+		"nanchong",
+		"chengdu",
+		"wuhan",
+		"hangzhou",
+		"ningbo",
+		"chongqing",
+		"nanchang",
+		"changsha",
+		"wenzhou",
+		"xiangtan",
+		"guiyang",
+		"fuzhou",
+		"kunming",
+		"hechi",
+		"zhangzhou",
+		"xiamen",
+		"guangzhou",
+		"dongguan",
+		"nanning",
+		"shenzhen",
+		"haikou"
+	]
+}

@@ -438,6 +438,32 @@ that same discipline into any task you pick up:
 - **Netlify builds cost credits.** Don't trigger manual deploys to check
   something; push to a branch, test locally, and let the user/reviewer
   decide when something actually merges to `main` (which auto-deploys).
+- **`npm run dev` can fail to render any map when run from a worktree
+  nested under the main repo** (e.g. `.claude/worktrees/<name>/app`,
+  Claude Code's own background-work layout) **if that worktree has no
+  `node_modules` of its own.** Node's resolution then walks up to the
+  outer repo's `node_modules`, which sits outside Vite dev's default
+  `server.fs.allow` root — `maplibre-gl-worker.mjs` silently never loads
+  (logged as "outside of Vite serving allow list" in the dev server's own
+  output, easy to miss), so tiles fetch fine but nothing ever renders,
+  same symptom as the pre-existing "worker not pre-bundled" issue above
+  but a different cause. Confirmed directly (Iteration 8+, i18n work):
+  `npm install` inside the worktree so it has a local `node_modules`
+  fixes it; failing that, a production build served locally (see next
+  point) sidesteps the dev server entirely.
+- **`vite preview` doesn't serve files added by the `postbuild` script**
+  (`copy-maplibre-worker.mjs`'s copy into `build/_app/immutable/chunks/`
+  happens after `vite build`'s own asset manifest is generated, so `vite
+  preview` 404s on `maplibre-gl-worker.mjs` even though the file is
+  physically present in `build/`) — confirmed directly by diffing a
+  `curl` against the file path, not assumed. A plain static file server
+  (`npx serve build`, what Netlify itself effectively does) serves it
+  correctly. If you need to smoke-test a production build's map
+  rendering locally, use `serve`, not `vite preview` — and since `serve`
+  doesn't know this app's SPA fallback convention, add a `build/
+  serve.json` with a `{"rewrites":[{"source":"/map/**","destination":
+  "/200.html"}]}` rule (gitignored along with the rest of `build/`, so
+  it's a disposable local-testing file, not something to commit).
 
 ## If you're stuck
 

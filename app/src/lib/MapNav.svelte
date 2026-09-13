@@ -10,6 +10,8 @@
 	// right tool for it.
 	import { resolve } from '$app/paths';
 	import type { Snippet } from 'svelte';
+	import { t } from './i18n.svelte';
+	import LanguageSwitcher from './LanguageSwitcher.svelte';
 
 	let {
 		mapId,
@@ -42,7 +44,7 @@
 				stroke-linecap="round"
 				stroke-linejoin="round"><path d="M15 6l-6 6 6 6" /></svg
 			>
-			<span class="nav-label">Maps</span>
+			<span class="nav-label">{t('nav.maps')}</span>
 		</a>
 		<a
 			class="nav-btn nav-btn--action"
@@ -65,7 +67,7 @@
 					r="3"
 				/></svg
 			>
-			<span class="nav-label">Overview</span>
+			<span class="nav-label">{t('nav.overview')}</span>
 		</a>
 		<a
 			class="nav-btn nav-btn--action"
@@ -84,7 +86,7 @@
 				stroke-linejoin="round"
 				><circle cx="12" cy="12" r="9" /><path d="M8 12.5l2.5 2.5 5.5-6" /></svg
 			>
-			<span class="nav-label">Quiz</span>
+			<span class="nav-label">{t('nav.quiz')}</span>
 		</a>
 		<a
 			class="nav-btn nav-btn--action"
@@ -94,13 +96,14 @@
 			<svg class="nav-icon" width="22" height="22" viewBox="0 0 24 24"
 				><path d="M8 5l11 7-11 7z" fill="currentColor" /></svg
 			>
-			<span class="nav-label">Tour</span>
+			<span class="nav-label">{t('nav.tour')}</span>
 		</a>
 	</div>
-	<span class="map-label">{mapName ?? 'Loading…'}</span>
+	<span class="map-label">{mapName ?? t('nav.loading')}</span>
 	{#if subtitle}
 		<span class="subtitle">{@render subtitle()}</span>
 	{/if}
+	<LanguageSwitcher />
 </div>
 
 <style>
