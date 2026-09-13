@@ -5,6 +5,61 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
+## v0.3.0 — 2026-09-13 — Readable and installable
+
+**Map names you can read, a real logo, and apps anyone can download.**
+The first half of the feature programme in `docs/FEATURE_PLAN.md`: eight
+tasks, FT-01 to FT-08.
+
+For players:
+
+- **Place names on the map are bigger, and they follow your browser's
+  text-size setting.** They were a fixed 11 pixels; now they start at 13
+  and grow if you've told your browser to use larger text.
+- **Point at a name to magnify it.** With a mouse, hovering over any name
+  on the map enlarges it and brings it in front of its neighbours. So a
+  crowded label, like Reggio Emilia between Parma and Modena, is readable
+  without zooming. On a phone or tablet, tap the name, and tap again (or
+  anywhere else) to shrink it.
+- **Geoclick has its own icon**: a cream map pin on dark green. It shows in
+  the browser tab, on the desktop app and its installer, and on the
+  Android home screen. The Android app also opens on a green launch screen
+  with the pin, instead of a white one.
+- **The desktop and Android apps can be downloaded by anyone.** The home
+  page links to the public
+  [releases page](https://github.com/diegoami/geoclick-releases/releases/latest):
+  a Windows installer (`-setup.exe` or `.msi`) and an Android `.apk`.
+
+Under the hood:
+
+- One script, `design/logo/generate-icons.mjs`, generates every icon from
+  `design/logo/geoclick-logo.svg`: desktop, Android launcher and splash,
+  and favicon (FT-04, FT-05).
+- Android release signing reads a gitignored key file or environment
+  variables. The key and passwords never touch git (FT-06).
+- `scripts/package-release.mjs` builds the installers from a release tag
+  into `dist-release/`, with checksums. Android's version code now rises
+  with every release, so phones see updates as updates (FT-07).
+- `scripts/publish-release.mjs` uploads them to
+  `diegoami/geoclick-releases`, a public repo holding only a README and
+  the releases. It is a dry run unless given `--confirm` (FT-08).
+- The README links to the live web app (FT-01).
+- `*.browser.test.ts` runs plain-TypeScript tests that need a real DOM in
+  Chromium.
+
+Not covered, stated plainly:
+
+- **The Windows installers aren't code-signed**, so Windows shows "unknown
+  publisher" when installing (More info → Run anyway). A certificate
+  costs money every year; that's revisited at the 1.0 launch.
+- Tap-to-magnify was tested with simulated touch in a desktop browser and
+  on the Android emulator's launcher, but not on a physical phone.
+- The local test of the built app placed a slip by real mouse drag on the
+  Italian provinces quiz. The towns quiz only loaded; it wasn't replayed.
+- The desktop app's Start menu and taskbar icons weren't seen installed.
+  They come from the same icon file as the app and installer, which were
+  checked.
+
 ## v0.2.0 — 2026-09-13 — Known issues from the 2026-09-13 review resolved
 
 **The milestone that closes out the 2026-09-13 code review: every one of
