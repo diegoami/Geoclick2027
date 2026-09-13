@@ -168,6 +168,45 @@ Do **not** trigger a manual deploy at any point. If the git-triggered build look
 stuck, that is the human's dashboard button, not an agent's problem (CLAUDE.md's
 debugging-rabbit-holes rule).
 
+## Build and publish the installers (from v0.3.0, FT-07/FT-08)
+
+The web app ships itself when `main` is pushed. The Windows and Android
+installers are built locally and published by hand, after the tag exists.
+There is no CI (FEATURE_PLAN.md, decision 2).
+
+1. **Package from the tag.**
+
+   ```bash
+   git checkout vX.Y.Z
+   node scripts/package-release.mjs
+   ```
+
+   Before building, the script refuses to run unless all of these hold:
+   - the working tree is clean and HEAD is the tag;
+   - `sync-version --check` passes (which also keeps Android's `versionCode`
+     rising, so phones accept the new APK as an update);
+   - Rust, the Android SDK and a JDK 17–24 are present;
+   - an Android signing key is configured (ONBOARDING.md, "Release (signed)
+     APK").
+
+   It builds the desktop installers and a release APK. It refuses an APK
+   whose signature doesn't verify. The output goes to `dist-release/vX.Y.Z/`
+   (gitignored):
+   - `Geoclick-X.Y.Z-windows-x64.msi`
+   - `Geoclick-X.Y.Z-windows-x64-setup.exe`
+   - `Geoclick-X.Y.Z-android.apk`
+   - `SHA256SUMS.txt`
+
+   `--allow-untagged` does a dry run on any clean commit.
+2. **Try them.** Install the APK on a phone and the setup `.exe` on
+   Windows, and launch both. The Windows installers aren't code-signed, so
+   SmartScreen shows "unknown publisher". That's expected.
+3. **Publish: product owner's OK first, every time.** Publishing is public
+   and outward-facing. FT-08 sets up the public releases repo and the
+   publish step.
+4. **Say what shipped** in the release's `CHANGELOG.md` entry: which
+   installers, and any shell that was not rebuilt.
+
 ## Release notes
 
 There is no `gh release create` and no `--generate-notes`. The notes **are** the
