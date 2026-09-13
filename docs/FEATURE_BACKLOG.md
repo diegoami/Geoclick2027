@@ -1,6 +1,6 @@
 # Geoclick — Feature backlog (raised 2026-09-13)
 
-Three feature requests captured for a **future planning pass**, separate
+Four feature requests captured for a **future planning pass**, separate
 from and after the [remediation programme](REMEDIATION_PLAN.md) (which is
 about fixing what the 2026-09-13 review found, not adding anything new).
 This document is written for whoever runs that next planning session — the
@@ -193,6 +193,73 @@ would be a visible regression against that.
 This is the item most likely to need its own short design/discussion pass
 before a task breakdown makes sense, rather than going straight from this
 paragraph to `tasks.yaml`-style specs the way the other two can.
+
+---
+
+## 4. Accessibility: region/town names are too small to read, no size control exists
+
+**Ask:** worried that region and town names are sometimes too small to
+read comfortably; wants an option to increase name/label size.
+
+**Current state, checked directly, not estimated:**
+
+- Every place a name appears **on the map itself** — the click-to-reveal
+  popup in explore mode and the tour (`.geoclick-popup`), and the
+  permanent "discovered" label in the quiz and the overview
+  (`.geoclick-solved-popup`) — is a **fixed `11px`**, declared in exactly
+  one place since GC-022 consolidated it: `app/src/app.css`. Bold weight
+  (900/600) helps legibility somewhat, but 11px is small regardless,
+  especially against the map's own busy background.
+- It's `px`, not `rem`/`em` — **it does not scale with the browser's own
+  zoom or OS-level text-size settings**, unlike most of the rest of the
+  app's type, which uses relative units. A user who already knows to
+  zoom their browser to compensate for small text elsewhere gets no
+  relief on the map specifically.
+- The quiz name-tray slips (`app/src/lib/QuizView.svelte`'s `.slip` class)
+  are somewhat better at `0.9rem` (≈14.4px) and *do* use a relative unit
+  — so the map labels are the actual outlier, not the whole app.
+- **No text-size control exists anywhere in the UI today.** The only
+  comparable existing control is the `LanguageSwitcher` (three small
+  pills, top of every map-scoped view and the home page) — a plausible
+  visual/placement precedent for whatever this becomes.
+
+### Two separable fixes, worth scoping as such rather than one task
+
+1. **Cheap, unconditional correctness fix**: switch the map-popup
+   font-size from a hardcoded `11px` to a relative unit (`rem`/`em`) and
+   bump the base size somewhat (e.g. to something closer to the tray's
+   `0.9rem`). This alone makes the map labels respect a user's existing
+   browser zoom / OS text-size preference, which they don't today — pure
+   upside, no new UI, and low effort given the CSS already lives in one
+   file.
+2. **The actual requested feature**: an explicit, in-app, persistent
+   text-size control — e.g. an "A / A+" pair or a small 2-3-step
+   selector, next to or styled like the existing `LanguageSwitcher`,
+   scaling map-label and tray-slip font-size together via one CSS custom
+   property (`--geoclick-text-scale` or similar) multiplied into both
+   places' `font-size` rules, persisted the same way the language choice
+   is (`localStorage`, same guard pattern as `i18n.svelte.ts` for
+   prerendering).
+
+### Open questions for the next planning pass
+
+- **Scope of what scales**: just the two map-label classes and the quiz
+  tray, or general UI chrome (nav buttons, home page map list) too? The
+  ask was specifically about region/town *names*, which argues for
+  scoping tightly to the two `app.css` classes plus `.slip` rather than
+  a whole-app font-scale system — cheaper and directly answers the
+  concern raised, but worth confirming rather than assuming either way.
+- **How many steps/how large**: two levels (normal/large) is simplest to
+  build and test; three (normal/large/largest) is more flexible but is
+  three states to verify across three languages' worth of label text
+  length (German names in particular tend to run longer than English/
+  Italian ones — a jump to "largest" is exactly where a long German
+  place name could start clipping inside a small region's polygon, an
+  interaction worth checking once this is real, not assumed away).
+- Item 1 above (relative units) is small enough that it could reasonably
+  be pulled into the *remediation* programme instead of waiting for this
+  backlog's own planning pass, if the product owner wants the cheap
+  partial fix sooner — flagging that option here rather than deciding it.
 
 ---
 
