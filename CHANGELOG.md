@@ -5,6 +5,47 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
+## v0.1.2 — 2026-09-13
+
+**The second remediation batch: a faster home page, safer saving, and the
+quiz's trickiest logic finally under test.** Wave 2 of the plan — four tasks.
+
+For players:
+
+- **The home page loads without downloading every map.** It used to fetch
+  all 44 map files (~484 KB) on every visit just to count what's due; that
+  information now ships with the page itself — 0 extra requests. Due counts
+  are exactly the same as before. (GC-071)
+- **A full or blocked browser storage no longer breaks a quiz.** Saving
+  progress in Safari's private mode, or with storage full, used to throw
+  mid-drag; now the save is skipped quietly and the quiz carries on.
+  (GC-041)
+
+Under the hood:
+
+- The drop-scoring decision — including the Bremen tolerance rescue and the
+  Essen/Duisburg "closest city" rule, both bugs found by real play — is now
+  a pure, unit-tested function instead of inline component code, checked on
+  the real maps before and after (GC-021).
+- Progress can be cleared per map or entirely, on all three storage
+  backends — groundwork only, no reset button yet (GC-041).
+- Map build scripts find the `pmtiles` CLI via `PATH` / `PMTILES_BIN`
+  instead of one machine's hardcoded path, and flag targets that cross the
+  date line (today: Chukotka) (GC-031).
+- The loop's `doctor` no longer force-removes other git worktrees — it
+  would have deleted a parallel planning session's live work.
+
+Review findings closed: C9, D8, D10, and punch-list #10, #13, #16, #22, #26,
+#27, #28.
+
+Known, documented, not changed: five shipped Polish map ids are mangled by
+the id generator (`wroc-aw` for Wrocław, and similar) — players only ever
+see the correct names, and changing ids would wipe saved progress (see
+MAPS.md). At a large window's zoom, Bremen's edge sits beyond the 24px drop
+tolerance from its centre — noted in GC-021's ledger row. GC-080's pmtiles
+storage decision is already on `main` but belongs to the v0.2.0 milestone
+notes.
+
 ## v0.1.1 — 2026-09-13
 
 **The first remediation batch: the review's correctness bugs fixed, and the
