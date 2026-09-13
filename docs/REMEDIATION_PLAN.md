@@ -249,9 +249,9 @@ A batch is a completed wave; full reasoning in [RELEASES.md](RELEASES.md).
 
 | Release | Batch | Tasks | Why that number |
 |---|---|---|---|
-| `v0.1.1` | waves 0 + 1 | 001, 002, 003, 010, 020, 030, 040, 050, 060, 070, 080 | Repairs and developer tooling against shipped behaviour ⇒ PATCH. |
+| `v0.1.1` | waves 0 + 1 | 001, 002, 003, 010, 020, 030, 040, 050, 060, 070 | Repairs and developer tooling against shipped behaviour ⇒ PATCH. |
 | `v0.1.2` | wave 2 | 021, 031, 041, 071 | Internal extraction, build hygiene, new repository methods, a perf fix ⇒ PATCH. |
-| `v0.2.0` | waves 3 + 4 + close | 004, 022, 032, 033 | **Milestone.** The visible half (palette legibility, watchable tours, popup safety) plus the programme's close-out ⇒ MINOR. |
+| `v0.2.0` | waves 3 + 4 + close | 004, 022, 032, 033, 080 | **Milestone.** The visible half (palette legibility, watchable tours, popup safety) plus the programme's close-out ⇒ MINOR. |
 
 `v0.2.0` is the closing milestone and the release the product owner ships. It is
 deliberately *not* `1.0.0`: DECISIONS.md's SSO-deferral entry reserves that for
@@ -272,16 +272,16 @@ ORCHESTRATION.md § Automerge).
 
 | ID | Status | Merged (commit) | Released in | Notes |
 |---|---|---|---|---|
-| GC-001 | **merged** | `e619571` | v0.1.1 | lint passes for the first time; catch-all placed first in `.gitattributes` (spec said below binaries - would have overridden them) |
-| GC-002 | **merged** | `02164f7` | v0.1.1 | `npm run setup-hooks`; pure-delete pushes skip gates; `doctor` still lists 10 pre-programme `feature/*` branches as "your call", not zombies |
-| GC-003 | **merged** | `598da64` | v0.1.1 | real Chromium via Playwright, not jsdom; needs `npx playwright install chromium` once per machine |
-| GC-010 | **merged** | `7fa06f0` | v0.1.1 | cap 365 d (bites at 7th clean review); ease +0.1 to 2.5; no migration needed (overlong intervals need 393 d of history). Noted: `packages/*` is outside Prettier's config and the lint gate |
-| GC-020 | **merged** | `1748edb` | v0.1.1 | both crashes reproduced on main first; button gated (not just `clearAllVisuals` - that alone races the load handler); timers in a Set, not one handle |
-| GC-030 | **merged** | `25a788f` | v0.1.1 | 44 maps / 1410 targets clean; negative fixtures committed so "can fail" stays tested; `index.json` ships as `/maps/index.json` (GC-071 can use its `targetCount`) |
-| GC-040 | **merged** | `063d602` | v0.1.1 | migrator tested against real SQLite (`node:sqlite`) + cross-checked vs lib.rs; native bridge still device-only - manual plan in the merge commit (`git show 063d602^2`) |
-| GC-050 | **merged** | `1d0593e` | v0.1.1 | set at hydration; static home-page HTML paints `en` for an instant first (inline script would close it - not worth the duplicated key) |
-| GC-060 | **merged** | `1deb05d` | v0.1.1 | "no search UI" re-affirmed at 22 countries (re-open at ~40 or a real complaint) - the loop's call, overrulable |
-| GC-070 | **merged** | `f7e0963` | v0.1.1 | `asset()` not the deprecated `base` (same effect); verified under a real `/geoclick` subpath |
+| GC-001 | **released** | `e619571` | v0.1.1 | lint passes for the first time; catch-all placed first in `.gitattributes` (spec said below binaries - would have overridden them) |
+| GC-002 | **released** | `02164f7` | v0.1.1 | `npm run setup-hooks`; pure-delete pushes skip gates; `doctor` still lists 10 pre-programme `feature/*` branches as "your call", not zombies |
+| GC-003 | **released** | `598da64` | v0.1.1 | real Chromium via Playwright, not jsdom; needs `npx playwright install chromium` once per machine |
+| GC-010 | **released** | `7fa06f0` | v0.1.1 | cap 365 d (bites at 7th clean review); ease +0.1 to 2.5; no migration needed (overlong intervals need 393 d of history). Noted: `packages/*` is outside Prettier's config and the lint gate |
+| GC-020 | **released** | `1748edb` | v0.1.1 | both crashes reproduced on main first; button gated (not just `clearAllVisuals` - that alone races the load handler); timers in a Set, not one handle |
+| GC-030 | **released** | `25a788f` | v0.1.1 | 44 maps / 1410 targets clean; negative fixtures committed so "can fail" stays tested; `index.json` ships as `/maps/index.json` (GC-071 can use its `targetCount`) |
+| GC-040 | **released** | `063d602` | v0.1.1 | migrator tested against real SQLite (`node:sqlite`) + cross-checked vs lib.rs; native bridge still device-only - manual plan in the merge commit (`git show 063d602^2`) |
+| GC-050 | **released** | `1d0593e` | v0.1.1 | set at hydration; static home-page HTML paints `en` for an instant first (inline script would close it - not worth the duplicated key) |
+| GC-060 | **released** | `1deb05d` | v0.1.1 | "no search UI" re-affirmed at 22 countries (re-open at ~40 or a real complaint) - the loop's call, overrulable |
+| GC-070 | **released** | `f7e0963` | v0.1.1 | `asset()` not the deprecated `base` (same effect); verified under a real `/geoclick` subpath |
 | GC-021 | todo | — | v0.1.2 | |
 | GC-031 | todo | — | v0.1.2 | |
 | GC-041 | todo | — | v0.1.2 | |
@@ -294,7 +294,7 @@ ORCHESTRATION.md § Automerge).
 
 | Release | Status | Tag | Date |
 |---|---|---|---|
-| `v0.1.1` | not cut | — | — |
+| `v0.1.1` | **cut** | `v0.1.1` → `47b69d5` | 2026-09-13 |
 | `v0.1.2` | not cut | — | — |
 | `v0.2.0` | not cut | — | — |
 

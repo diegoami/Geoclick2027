@@ -273,10 +273,15 @@ function cmdStatus(doc, asJson) {
 	for (const r of doc.releases) {
 		const done = r.tasks.filter((id) => DONE.has(rows.find((x) => x.id === id)?.state));
 		const complete = done.length === r.tasks.length;
-		console.log(
-			`  ${r.version}: ${done.length}/${r.tasks.length}` +
-				(complete ? '  <- BATCH COMPLETE: cut the release (docs/RELEASES.md)' : '')
-		);
+		// A pushed tag means the release is already cut - don't tell a restarted
+		// session to cut it again.
+		const tagged = gitTry(['rev-parse', '--verify', '--quiet', `refs/tags/${r.version}`]) !== null;
+		const note = tagged
+			? '  released (tagged)'
+			: complete
+				? '  <- BATCH COMPLETE: cut the release (docs/RELEASES.md)'
+				: '';
+		console.log(`  ${r.version}: ${done.length}/${r.tasks.length}${note}`);
 	}
 
 	const active = rows.filter((r) => ACTIVE.has(r.state));
