@@ -18,5 +18,11 @@
 
     <style name="AppTheme.NoActionBarLaunch" parent="Theme.SplashScreen">
         <item name="android:background">@drawable/splash</item>
+        <!-- Android 12+ draws its own launch screen from the adaptive icon; give
+             it the logo's green instead of the default white (FT-05). -->
+        <item name="windowSplashScreenBackground">@color/ic_launcher_background</item>
+        <!-- Just the pin: the full adaptive icon's map texture reads as stray
+             fragments once the splash crops it to a circle. -->
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher_foreground</item>
     </style>
 </resources>
