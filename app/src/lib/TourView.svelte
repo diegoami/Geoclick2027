@@ -7,6 +7,7 @@
 	import { t } from './i18n.svelte';
 	import { mapDisplayName } from './mapCatalog';
 	import { fetchTour, type Tour } from './tour';
+	import { TOUR_SPEEDS, defaultTourSpeed } from './tourSpeed';
 	import type { MapDefinition, Target } from './mapDefinition';
 
 	let { mapId }: { mapId: string } = $props();
@@ -24,7 +25,6 @@
 	let finished = $state(false);
 	let speed = $state(1);
 
-	const SPEEDS = [0.5, 1, 1.5, 2, 3];
 	const BASE_FLIGHT_MS = 1200;
 	// A point target's bbox is degenerate (see mapDefinition.ts) - fitting
 	// to it would zoom to the map's max zoom with no sense of "looking at
@@ -138,6 +138,9 @@
 			if (cancelled) return;
 			mapDef = loadedMapDef;
 			tour = loadedTour;
+			// Big maps start faster so the tour fits ~3 minutes (GC-033); the speed
+			// menu below still overrides it.
+			speed = defaultTourSpeed(loadedTour.steps);
 
 			map = createMap(container, loadedMapDef, style);
 			map.once('load', () => {
@@ -182,7 +185,7 @@
 					value={speed}
 					onchange={(e) => setSpeed(Number(e.currentTarget.value))}
 				>
-					{#each SPEEDS as s (s)}
+					{#each TOUR_SPEEDS as s (s)}
 						<option value={s}>{s}×</option>
 					{/each}
 				</select>

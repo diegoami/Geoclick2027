@@ -745,6 +745,28 @@ or amend an entry here as part of that change, not as an afterthought.
   same-coloured neighbours. It also fails if the style's number of palette
   colours drifts from `PALETTE_SIZE`.
 
+## Tour length on big maps (2026-09-13, GC-033)
+
+- **Big maps start the tour faster. The committed tour data is
+  unchanged.** Every tour step dwells 3 s at 1x, so italy-provinces
+  (110 steps) took 5:30 and russia-regions (83) took 4:09. TourView now
+  starts at 1x when the whole tour fits in **3 minutes**. Otherwise it
+  starts at the slowest menu speed that brings it under 3 minutes.
+  italy-provinces starts at 2× (**2:45**, 1.5 s a province), and
+  russia-regions and japan-towns-100k start at 1.5× (2:46 / 2:12). The
+  other 41 maps are exactly as before: 1x, 3 s a step. The speed menu
+  still overrides the default at any point.
+- **Why not shorter dwells in tour.json:** that would touch 3 committed
+  files plus the build scripts, and the player couldn't get the slower
+  pace back. Changing the default speed is one function
+  (`app/src/lib/tourSpeed.ts`), and anyone who wants 3 s a province picks
+  1×. The rule uses each tour's actual dwell total, not its step count,
+  so a hand-tuned tour.json with shorter steps stays at 1×.
+- **Why 3 minutes:** that's 60 steps at 1x, so every map with 60 targets
+  or fewer (41 of 44) keeps its current pace. Only the outliers speed up.
+  1.5 s a province is still long enough to read each name.
+  `tourSpeed.test.ts` pins the rule against every committed tour.
+
 ## SSO/cross-device sync deferred (2026-09-13)
 
 - **The Supabase SSO/cross-device-sync work is deliberately paused, not
