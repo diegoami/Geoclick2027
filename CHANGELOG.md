@@ -5,6 +5,35 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
+## v0.3.1 — 2026-09-13 — Desktop maps fixed
+
+**The Windows app shows its maps again.** A hotfix for v0.3.0, whose
+desktop installers opened every map empty.
+
+For players:
+
+- **Maps appear in the Windows app.** In v0.3.0 the desktop app showed a
+  map's background but no regions, borders or towns, so the quiz, tour and
+  overview couldn't be used. Now every map loads as it does in the browser
+  and on Android. If you installed v0.3.0 on Windows, install this version
+  over it; your progress is kept.
+
+Under the hood:
+
+- The desktop app's built-in file server doesn't answer "send me part of
+  this file" requests, which the map loader relies on. The desktop app now
+  loads each map's tile file in one piece, as the Android app already did
+  for the same reason. It's found and verified by debugging the built app
+  through WebView2 (ONBOARDING.md explains how). The web version is
+  unchanged.
+- The Android app and website aren't affected. The Android APK is rebuilt
+  only so that all downloads carry the same version.
+
+Not covered: this was caught by the product owner trying the published
+desktop app, not before release. v0.3.0's checks had tested the Android
+app and the website, but not the Windows installers, and RELEASES.md's
+"try them" step is where it would have shown.
+
 ## v0.3.0 — 2026-09-13 — Readable and installable
 
 **Map names you can read, a real logo, and apps anyone can download.**
