@@ -7,7 +7,7 @@ programme](REMEDIATION_PLAN.md), which closed with `v0.2.0`: that one
 fixed what a code review found, while this one adds things players will
 notice.
 
-**Status: planned, not started.** Nothing below is implemented yet.
+**Status: in progress** — see the ledger at the bottom.
 
 ---
 
@@ -431,7 +431,7 @@ Update this table as tasks merge. Commit hashes are the merge commits.
 
 | Task | State | Merge | Release | Notes |
 |---|---|---|---|---|
-| FT-01 | todo | — | v0.3.0 | |
+| FT-01 | **merged** | `6e05495` | v0.3.0 | README 'Play it' link under the intro |
 | FT-02 | todo | — | v0.3.0 | |
 | FT-03 | todo | — | v0.3.0 | |
 | FT-04 | todo | — | v0.3.0 | 🧑 logo pick |
