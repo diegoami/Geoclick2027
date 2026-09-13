@@ -198,9 +198,13 @@ There is no CI (FEATURE_PLAN.md, decision 2).
    - `SHA256SUMS.txt`
 
    `--allow-untagged` does a dry run on any clean commit.
-2. **Try them.** Install the APK on a phone and the setup `.exe` on
-   Windows, and launch both. The Windows installers aren't code-signed, so
-   SmartScreen shows "unknown publisher". That's expected.
+2. **Try them.** Install the APK on a phone or emulator, and the setup
+   `.exe` on Windows. In each, **open a map and check that its regions
+   draw**; launching isn't enough. v0.3.0's desktop installers opened
+   every map empty, and only the APK had been tried. To see errors inside
+   the Windows app, use ONBOARDING.md's WebView2 remote-debugging recipe.
+   The Windows installers aren't code-signed, so SmartScreen shows
+   "unknown publisher". That's expected.
 3. **Publish: product owner's OK first, every time.** Publishing is public
    and outward-facing. `node scripts/publish-release.mjs` is a dry run:
    - it checks the files against `SHA256SUMS.txt`;
