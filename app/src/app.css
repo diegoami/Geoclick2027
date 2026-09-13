@@ -14,7 +14,9 @@
 .geoclick-popup .maplibregl-popup-content,
 .geoclick-solved-popup .maplibregl-popup-content {
 	font-family: system-ui, sans-serif;
-	font-size: 11px;
+	/* rem, not px (FT-02): follows the browser's own font-size setting, like
+	 * the rest of the app's text. 13px at the default 16px; was a fixed 11px. */
+	font-size: 0.8125rem;
 	font-weight: 600;
 	padding: 1px 6px;
 	border-radius: 5px;

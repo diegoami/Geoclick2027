@@ -98,8 +98,10 @@ Effort: **Low** is under an hour or so, **Medium** is a focused session,
 ### FT-02 — Map labels in relative units · Low · deps: none
 
 - **Why:** FEATURE_BACKLOG.md §4, fix 1. Both popup classes in
-  `app/src/app.css` are a fixed `11px`, so they ignore browser zoom and OS
-  text-size settings. Every other piece of text in the app scales.
+  `app/src/app.css` are a fixed `11px`, so they ignore the browser's
+  font-size setting, which the rest of the app's text follows. (Corrected
+  while doing FT-02: page zoom, Ctrl +, scales `px` too, so zoom was never
+  the gap; FEATURE_BACKLOG.md §4 said otherwise.)
 - **Do:** switch `font-size` in `app.css`'s shared popup rule to a relative
   unit, bumped from 11px. Aim for about `0.8125rem` (13px at default
   settings), and tune it by looking. Keep one rule for both classes (the
@@ -107,11 +109,11 @@ Effort: **Low** is under an hour or so, **Medium** is a focused session,
   solved).
 - **Verify:** check overview crowding on `italy-provinces` (110 labels),
   `germany-states` (long German names) and a towns map. Also check that
-  browser zoom 150% now enlarges the labels; before this change it
-  doesn't.
+  a larger root font size (the browser's font-size setting) now enlarges
+  the labels; before this change it doesn't.
 - **DoD:**
   - no `px` font size remains on the popups;
-  - labels scale with browser zoom;
+  - labels follow the browser's font-size setting;
   - before/after screenshots of the three maps;
   - DECISIONS.md's "Map colors" / popup notes updated if they quote 11px;
   - gates green.
