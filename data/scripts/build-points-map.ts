@@ -22,7 +22,8 @@ import {
 	slugify,
 	overallBboxOf,
 	selectNearbyLakes,
-	selectCountryContext
+	selectCountryContext,
+	pmtilesConvert
 } from './mapBuildUtils.js';
 
 const SOURCE_SHP = path.join(
@@ -309,11 +310,7 @@ function main() {
 		'-L',
 		`context:${contextPath}`
 	]);
-	execFileSync(path.join(process.env.HOME ?? '', '.local/bin/pmtiles'), [
-		'convert',
-		mbtilesPath,
-		pmtilesPath
-	]);
+	pmtilesConvert(mbtilesPath, pmtilesPath);
 
 	console.log('[5/5] Cleaning up...');
 	rmSync(filteredPath);

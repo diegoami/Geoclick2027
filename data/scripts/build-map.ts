@@ -15,7 +15,9 @@ import {
 	parseArgs,
 	slugify,
 	overallBboxOf,
-	selectNearbyLakes
+	selectNearbyLakes,
+	pmtilesConvert,
+	crossesAntimeridian
 } from './mapBuildUtils.js';
 
 const SOURCE_SHP = path.join(
@@ -341,6 +343,14 @@ function main() {
 	const targets = geojson.features.map((feature: any) => {
 		const p = feature.properties;
 		const { bbox, center } = boundsOf(feature.geometry);
+		// Only emitted when true, so maps with no such target come out
+		// byte-identical to before this flag existed.
+		const wraps = crossesAntimeridian(bbox);
+		if (wraps) {
+			console.warn(
+				`  WARNING: "${p.name}" crosses the antimeridian - bbox west > east ${JSON.stringify(bbox)}; flagged crossesAntimeridian (see MAPS.md)`
+			);
+		}
 		return {
 			id: slugify(p.name),
 			name: p.name as string,
@@ -348,7 +358,8 @@ function main() {
 			tier: 1,
 			aliases: [] as string[],
 			centroid: center,
-			bbox
+			bbox,
+			...(wraps ? { crossesAntimeridian: true } : {})
 		};
 	});
 	targets.sort((a: any, b: any) => b.centroid[1] - a.centroid[1]); // north to south, default
@@ -411,11 +422,7 @@ function main() {
 		'-L',
 		`lakes:${lakesPath}`
 	]);
-	execFileSync(path.join(process.env.HOME ?? '', '.local/bin/pmtiles'), [
-		'convert',
-		mbtilesPath,
-		pmtilesPath
-	]);
+	pmtilesConvert(mbtilesPath, pmtilesPath);
 
 	console.log('[6/6] Cleaning up...');
 	rmSync(filteredPath);

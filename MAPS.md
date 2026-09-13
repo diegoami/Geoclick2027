@@ -50,6 +50,31 @@ data/scripts/build-map.ts             filter → simplify → tile → derive ma
    target ids. Before this, a map missing from the catalog was silently
    invisible on the home page.
 
+### Build-script settings and known quirks (GC-031)
+
+- **`PMTILES_BIN`** — `build-map.ts` and `build-points-map.ts` run the
+  `pmtiles` CLI from `PATH` by default. If it lives elsewhere, e.g. the
+  `~/.local/bin` install ONBOARDING.md describes and that directory isn't
+  on `PATH`, set `PMTILES_BIN=$HOME/.local/bin/pmtiles`. A missing CLI now
+  fails with a message naming the variable instead of a bare `ENOENT`.
+  (Both scripts used to hardcode `$HOME/.local/bin/pmtiles`.)
+- **`crossesAntimeridian: true`** — a polygon spanning ±180° (today:
+  `russia-regions`' Chukotka) gets a bbox with west > east,
+  `[157.692, 61.8148, -169.7009, 71.6]`. That is deliberate and MapLibre
+  frames it correctly; naive min/max code doesn't (`overallBboxOf` mis-clips
+  the lake `-spat` filter for Russia). `build-map.ts` now logs a WARNING
+  for such a target and writes `crossesAntimeridian: true` on it — only on
+  it, so other maps' output is byte-identical. Not backfilled: the
+  committed `russia-regions/map.json` gains the flag on its next rebuild.
+- **Target ids from `slugify`** — accents are stripped (`München` →
+  `munchen`), but Latin letters with no Unicode decomposition (Ł, Ø, ß,
+  Đ…) are dropped, and non-Latin scripts slug to an empty string.
+  Shipped ids already show it: `ma-opolskie`, `wroc-aw`, `bia-ystok`,
+  `odz`, `odzkie`. They're internal only (players see the correct
+  names), but **ids key every player's saved progress, so don't change
+  `slugify` in place** — that would orphan it. A `--name-field` in a
+  non-Latin script needs a transliteration decision first.
+
 See `DECISIONS.md`'s Data & maps section for the *why* behind choices
 like public-domain-only sourcing; this file is the *what was actually
 run*.

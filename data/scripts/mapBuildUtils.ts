@@ -25,13 +25,57 @@ export function parseArgs(argv: string[]): Record<string, string> {
 	return out;
 }
 
+// The pmtiles CLI, from PATH by default. Set PMTILES_BIN to point elsewhere
+// (e.g. PMTILES_BIN=$HOME/.local/bin/pmtiles if ~/.local/bin is not on PATH).
+// Replaced a hardcoded $HOME/.local/bin path that only worked on one machine.
+export const PMTILES_BIN = process.env.PMTILES_BIN ?? 'pmtiles';
+
+export function pmtilesConvert(mbtilesPath: string, pmtilesPath: string): void {
+	try {
+		execFileSync(PMTILES_BIN, ['convert', mbtilesPath, pmtilesPath]);
+	} catch (e) {
+		if ((e as NodeJS.ErrnoException).code === 'ENOENT') {
+			throw new Error(
+				`pmtiles CLI not found ("${PMTILES_BIN}"). Put it on PATH, or set PMTILES_BIN to its full path - see MAPS.md.`
+			);
+		}
+		throw e;
+	}
+}
+
+// Strips combining diacritics after NFD (U+0300-U+036F: "München" -> "munchen").
+// LIMITATIONS, documented rather than fixed (GC-031):
+// - No non-Latin fallback. Every character outside a-z/0-9 becomes "-", so a
+//   name in Cyrillic, CJK, Devanagari etc. slugs to "" - a future
+//   --name-field=NAME_RU or NAME_ZH would give every target the id "".
+//   GC-030's mapData.test.ts would catch the duplicate ids; pick a
+//   transliteration (or keep the English name for the id) first.
+// - Latin letters with no NFD decomposition (Ł, Ø, ß, Đ, Æ...) are dropped, not
+//   transliterated. Shipped ids already carry this: "ma-opolskie", "wroc-aw",
+//   "bia-ystok", "odz", "odzkie" (Poland). Do NOT "fix" slugify in place:
+//   target ids key every player's saved progress (card_states), so changing
+//   them silently orphans it. A fix needs a transliteration applied to NEW maps
+//   only, or an id migration in the progress stores.
 export function slugify(name: string): string {
 	return name
 		.normalize('NFD')
-		.replace(/[̀-ͯ]/g, '')
+		.replace(/[\u0300-\u036f]/g, '')
 		.toLowerCase()
 		.replace(/[^a-z0-9]+/g, '-')
 		.replace(/^-+|-+$/g, '');
+}
+
+/**
+ * True when a bbox wraps the antimeridian: build-map.ts's boundsOf unwraps a
+ * shape spanning +/-180deg (Chukotka, the Aleutians) and emits west > east,
+ * e.g. [157.692, 61.8148, -169.7009, 71.6]. MapLibre handles that
+ * (cameraForBounds adjusts for it), but naive min/max consumers do not -
+ * overallBboxOf below is one (it mis-clips the lake -spat filter for Russia).
+ * The bbox is deliberately NOT "fixed"; targets like this get an explicit
+ * `crossesAntimeridian: true` so the condition is documented, not rediscovered.
+ */
+export function crossesAntimeridian(bbox: [number, number, number, number]): boolean {
+	return bbox[0] > bbox[2];
 }
 
 export function overallBboxOf(
