@@ -1042,3 +1042,18 @@ answers:
   owner wants to try each branch first. Tasks that need the product owner
   (the logo pick, the Android signing key, creating the public repo,
   publishing) also stop at that step.
+
+## App logo (2026-09-13, FT-04)
+
+- **Geoclick's icon is a cream map pin with an amber centre on the app's
+  deep green** (`design/logo/geoclick-logo.svg`). Until now every shell
+  shipped someone else's art: Tauri's and Capacitor's scaffold icons on
+  desktop and Android, and the Svelte framework logo as the web favicon.
+- **Picked from three drafts**, each reviewed at real sizes (16–128 px),
+  in a browser tab, on light and dark desktops, and in Android's circle,
+  squircle and square launcher shapes. The other two were a four-region
+  "patchwork" with a solved tick, and a pointer clicking a country. The
+  pin won as the clearest mark at 16 px.
+- **The web favicon switches to it too**, so all three shells match
+  (product owner, same day). The switch and the platform icon sets are
+  FT-05.
