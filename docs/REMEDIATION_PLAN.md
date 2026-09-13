@@ -284,7 +284,7 @@ ORCHESTRATION.md § Automerge).
 | GC-070 | **released** | `f7e0963` | v0.1.1 | `asset()` not the deprecated `base` (same effect); verified under a real `/geoclick` subpath |
 | GC-021 | **merged** | `7d536be` | v0.1.2 | spec deviation: kept Bremen tolerance rescue (spec's case 3 would have regressed it); `/code-review` clean. Observed: at large-window zoom Bremen's edge is 30px from its centroid, > 24px tolerance |
 | GC-031 | **merged** | `1030bf0` | v0.1.2 | verified via tsx (no WSL toolchain here); found 5 mangled Polish ids (`wroc-aw`...) - documented, not changed (ids key saved progress) |
-| GC-041 | todo | — | v0.1.2 | |
+| GC-041 | **merged** | `f303d18` | v0.1.2 | Capacitor clearMap is transactional; Tauri's is two statements (plugin has no transaction API); no reset UI (owner's call) |
 | GC-071 | todo | — | v0.1.2 | |
 | GC-004 | todo | — | v0.2.0 | |
 | GC-022 | todo | — | v0.2.0 | |
