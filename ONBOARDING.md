@@ -340,6 +340,23 @@ that same discipline into any task you pick up:
   copy (git's mtime/size shortcut skipped it as "unchanged") - deleting
   the file first, then checking out, forced git to actually rematerialize
   it under the new attribute.
+- **The fifth variant, and the one that finally got generalized: every
+  `.ts`/`.svelte`/`.json` file was CRLF on disk, so `npm run lint` had
+  been silently failing for weeks** (GC-001, 2026-09-13). Prettier's
+  default `endOfLine: "lf"` flagged all 39 files, and because the script
+  is `prettier --check . && eslint .`, the `&&` meant **ESLint never ran
+  at all** - three genuinely unformatted files reached `main` unnoticed
+  behind it. Fixed with a catch-all `* text=auto eol=lf` at the **top**
+  of `.gitattributes` instead of adding a sixth narrow per-extension
+  rule. Two things worth knowing: (1) **order matters** - the last
+  matching `.gitattributes` line wins, so the catch-all must come before
+  the `binary` lines or it overrides them and re-opens the `.pmtiles`
+  corruption bug above; verify with `git check-attr text -- <file>`
+  (binaries must say `unset`). (2) `git add --renormalize .` changed no
+  blobs - autocrlf had already stored everything as LF; only the
+  working tree was wrong, and the delete-then-checkout trick above is
+  what actually fixes an existing checkout. If Prettier ever flags
+  every file at once again, check line endings before anything else.
 - **A map opening on Android with labels but no polygon fills/outlines/
   lakes looks identical to the Windows `.gitattributes` bug above, but on
   a real device it's a completely different cause** (Iteration 8+): the

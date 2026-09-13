@@ -112,8 +112,7 @@
 	   rather than a decoration that scrolls away. */
 	:global(body) {
 		min-height: 100vh;
-		background: linear-gradient(160deg, #e3f0e6 0%, #dce6f2 45%, #f7ecd9 100%)
-			fixed;
+		background: linear-gradient(160deg, #e3f0e6 0%, #dce6f2 45%, #f7ecd9 100%) fixed;
 	}
 	main {
 		max-width: 32rem;

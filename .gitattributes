@@ -1,3 +1,13 @@
+# Catch-all FIRST: every text file is LF in the repo and on checkout,
+# regardless of core.autocrlf. Without it, a Windows checkout with
+# autocrlf=true puts CRLF on disk and Prettier (endOfLine: "lf") fails
+# every file, which short-circuits `prettier --check . && eslint .` so
+# ESLint never runs - the fifth CRLF variant, see ONBOARDING.md.
+# Order matters: in .gitattributes the LAST matching line wins, so the
+# specific `binary`/`eol` rules below must come AFTER this line or the
+# catch-all would override them (text=auto on a .pmtiles file).
+* text=auto eol=lf
+
 # Without this, Git falls back to content-sniffing heuristics to decide
 # whether a file is text or binary - unreliable for a custom binary
 # container format like PMTiles, and on a Windows checkout with
@@ -30,3 +40,7 @@
 # not yet exercised by a Linux/WSL-side gradle invocation.
 *.sh text eol=lf
 gradlew text eol=lf
+# Windows batch files (mobile/android/gradlew.bat) stay CRLF - cmd.exe
+# has known label/goto parsing bugs on LF-only batch files.
+*.bat text eol=crlf
+*.cmd text eol=crlf

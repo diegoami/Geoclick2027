@@ -7,7 +7,11 @@
 // (see createProgressRepository in progressRepository.ts) - a plain-browser
 // or Tauri build never touches this module.
 
-import { CapacitorSQLite, SQLiteConnection, type SQLiteDBConnection } from '@capacitor-community/sqlite';
+import {
+	CapacitorSQLite,
+	SQLiteConnection,
+	type SQLiteDBConnection
+} from '@capacitor-community/sqlite';
 import type { CardState, ProgressRepository, SessionSummary } from './progressRepository';
 
 const DB_NAME = 'geoclick';
@@ -77,7 +81,7 @@ export function createCapacitorProgressRepository(): ProgressRepository {
 				'SELECT target_id, ease_factor, interval, repetitions, due_date, last_reviewed_at FROM card_states WHERE map_id = ?',
 				[mapId]
 			);
-			return (result.values as CardStateRow[] | undefined ?? []).map((row) => ({
+			return ((result.values as CardStateRow[] | undefined) ?? []).map((row) => ({
 				targetId: row.target_id,
 				easeFactor: row.ease_factor,
 				interval: row.interval,
@@ -98,7 +102,15 @@ export function createCapacitorProgressRepository(): ProgressRepository {
 				   repetitions = excluded.repetitions,
 				   due_date = excluded.due_date,
 				   last_reviewed_at = excluded.last_reviewed_at`,
-				[mapId, state.targetId, state.easeFactor, state.interval, state.repetitions, state.dueDate, state.lastReviewedAt]
+				[
+					mapId,
+					state.targetId,
+					state.easeFactor,
+					state.interval,
+					state.repetitions,
+					state.dueDate,
+					state.lastReviewedAt
+				]
 			);
 		},
 
