@@ -111,7 +111,8 @@ breakdown if you need more.
 git clone git@github.com:diegoami/Geoclick2027.git
 cd Geoclick2027
 npm install
-npm run setup-hooks   # once per clone - see "The pre-push hook" below
+npm run setup-hooks            # once per clone - see "The pre-push hook" below
+npx playwright install chromium  # once per machine - component tests run in it
 npm run dev
 ```
 
@@ -149,6 +150,24 @@ below). Expect ~15-20s per push.
   multi-minute pre-push is one that gets bypassed every time.
 - `node scripts/task.mjs gates --json` gives the same verdict as JSON
   (per-gate pass/fail, exit code, timing, tail of output on failure).
+
+### Two kinds of test
+
+`app/vite.config.ts` defines two Vitest projects, and `npm test` runs both
+(the app's output tags every test `|server|` or `|client (chromium)|`):
+
+- **`server`** — plain `*.test.ts`, Node, no DOM. Pure logic.
+- **`client`** — `*.svelte.test.ts`, mounted with `vitest-browser-svelte`
+  in a real headless Chromium driven by Playwright. Component tests go
+  here. Needs `npx playwright install chromium` once per machine; without
+  it `npm test` fails, and so does the pre-push hook. Real browser rather
+  than jsdom on purpose: the app is MapLibre + WebGL + pointer events,
+  none of which jsdom implements, so jsdom would cap out at trivial
+  components. `LanguageSwitcher.svelte.test.ts` is the canary.
+
+Before GC-003 the `client` project had been deleted from the config, so a
+`.svelte.test.ts` file silently never ran. If you add one and it doesn't
+show up in the output as `|client (chromium)|`, check the config first.
 
 ## Running the desktop build (Iteration 7)
 

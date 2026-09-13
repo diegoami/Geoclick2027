@@ -2,6 +2,7 @@ import { execSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vitest/config';
+import { playwright } from '@vitest/browser-playwright';
 import adapter from '@sveltejs/adapter-static';
 import { sveltekit } from '@sveltejs/kit/vite';
 
@@ -64,6 +65,22 @@ export default defineConfig({
 	test: {
 		expect: { requireAssertions: true },
 		projects: [
+			{
+				// Component tests (`*.svelte.test.ts`) in a real headless Chromium
+				// via Playwright - the SvelteKit template's `client` project, which
+				// had been removed, leaving those files silently unrun. One-time
+				// per machine: `npx playwright install chromium`.
+				extends: './vite.config.ts',
+				test: {
+					name: 'client',
+					browser: {
+						enabled: true,
+						provider: playwright(),
+						instances: [{ browser: 'chromium', headless: true }]
+					},
+					include: ['src/**/*.svelte.{test,spec}.{js,ts}']
+				}
+			},
 			{
 				extends: './vite.config.ts',
 				test: {
