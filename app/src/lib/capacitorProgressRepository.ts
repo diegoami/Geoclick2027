@@ -1,40 +1,22 @@
 // Iteration 8+ (Android POC): SQLite-backed ProgressRepository for the
 // Capacitor native shell, via @capacitor-community/sqlite. Same schema as
 // desktop/src-tauri/src/lib.rs's migrations() (card_states/
-// last_session_summaries, identical columns) so the row-mapping logic
-// mirrors sqliteProgressRepository.ts - keep both in sync if the schema
-// changes. Only ever imported when running on a native Capacitor platform
-// (see createProgressRepository in progressRepository.ts) - a plain-browser
-// or Tauri build never touches this module.
+// last_session_summaries, identical columns - enforced by
+// capacitorMigrations.test.ts) so the row-mapping logic mirrors
+// sqliteProgressRepository.ts. The schema itself and its versioning live in
+// capacitorMigrations.ts. Only ever imported when running on a native
+// Capacitor platform (see createProgressRepository in progressRepository.ts) -
+// a plain-browser or Tauri build never touches this module.
 
 import {
 	CapacitorSQLite,
 	SQLiteConnection,
 	type SQLiteDBConnection
 } from '@capacitor-community/sqlite';
+import { migrate } from './capacitorMigrations';
 import type { CardState, ProgressRepository, SessionSummary } from './progressRepository';
 
 const DB_NAME = 'geoclick';
-
-const CREATE_TABLES_SQL = `
-	CREATE TABLE IF NOT EXISTS card_states (
-		map_id TEXT NOT NULL,
-		target_id TEXT NOT NULL,
-		ease_factor REAL NOT NULL,
-		interval INTEGER NOT NULL,
-		repetitions INTEGER NOT NULL,
-		due_date TEXT NOT NULL,
-		last_reviewed_at TEXT NOT NULL,
-		PRIMARY KEY (map_id, target_id)
-	);
-	CREATE TABLE IF NOT EXISTS last_session_summaries (
-		map_id TEXT PRIMARY KEY,
-		total INTEGER NOT NULL,
-		perfect INTEGER NOT NULL,
-		total_errors INTEGER NOT NULL,
-		completed_at TEXT NOT NULL
-	);
-`;
 
 interface CardStateRow {
 	target_id: string;
@@ -62,12 +44,18 @@ function getDb(): Promise<SQLiteDBConnection> {
 		const sqlite = new SQLiteConnection(CapacitorSQLite);
 		const isConsistent = (await sqlite.checkConnectionsConsistency()).result;
 		const alreadyOpen = (await sqlite.isConnection(DB_NAME, false)).result;
+		// The `1` is the plugin's own version argument. Its native open() only
+		// acts on it when upgrade statements were registered via
+		// addUpgradeStatement (Database.java, @capacitor-community/sqlite 8.1.1),
+		// and none are - so the plugin never touches user_version, and
+		// migrate() below owns it outright. Do not start using
+		// addUpgradeStatement alongside it: two owners of one version number.
 		const db =
 			isConsistent && alreadyOpen
 				? await sqlite.retrieveConnection(DB_NAME, false)
 				: await sqlite.createConnection(DB_NAME, false, 'no-encryption', 1, false);
 		await db.open();
-		await db.execute(CREATE_TABLES_SQL);
+		await migrate(db);
 		return db;
 	})();
 	return dbPromise;
