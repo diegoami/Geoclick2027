@@ -352,6 +352,222 @@ previous batch — no script changes this time.
   Azorean town clears the 100k threshold, so no equivalent exclusion
   was needed there.
 
+### Argentina, Brazil, China, Finland, India, Indonesia, Mexico, Russia (built 2026-09-13)
+
+Eight more countries, user-specified this time, requested alongside two
+script changes this batch actually needed: an adaptive population
+selection for the towns maps (see "Adaptive town selection" below,
+`build-points-map.ts --min-count`/`--max-count`) and a general dedup
+fix (Natural Earth has a handful of exact-duplicate populated-place
+rows, found here for the first time only because this batch's scale
+made them likely to surface). The most name-fixup-heavy batch yet —
+audited every raw candidate name directly (all 86 Russian regions, the
+top 50-by-population towns per large country), not spot-checked,
+consistent with `italy-provinces`' original precedent.
+
+- **`china-regions`** (31 targets: 22 provinces + 5 autonomous regions +
+  4 municipalities — the standard province-level count, Hong Kong/
+  Macau/Taiwan already excluded by Natural Earth's own model, tagged
+  under their own separate `admin` values rather than `admin='China'`,
+  so no special-casing needed here). One junk row excluded: "Paracel
+  Islands" (`type_en` null) — a disputed, unpopulated South China Sea
+  feature, not a real administrative division, same "not a real
+  entity" reasoning as Australia's Jervis Bay/Macquarie/Lord Howe
+  exclusions, and incidentally avoids taking a side in an active
+  territorial dispute:
+  ```
+  npx tsx data/scripts/build-map.ts --country="China" --out=data/maps/china-regions --type=province --name="China — Provinces" --exclude="Paracel Islands"
+  ```
+- **`brazil-regions`** (27 targets: 26 states + Distrito Federal —
+  already the correct level, no dissolve, no exclusions, `name` field
+  already correctly accented throughout):
+  ```
+  npx tsx data/scripts/build-map.ts --country="Brazil" --out=data/maps/brazil-regions --type=state --name="Brazil — States"
+  ```
+- **`mexico-regions`** (32 targets: 31 states + Distrito Federal).
+  Raw admin-1 rows include one nameless junk row (`note`: "MEX-99
+  (Mexico minor island)", `iso_3166_2`: `MX-X01~`) — a Natural Earth
+  data artifact, not a real state, excluded by `iso_3166_2` since it
+  has no name to match against:
+  ```
+  npx tsx data/scripts/build-map.ts --country="Mexico" --out=data/maps/mexico-regions --type=state --name="Mexico — States" --exclude-field=iso_3166_2 --exclude="MX-X01~"
+  ```
+- **`finland-regions`** (18 targets, regions — already the correct
+  level, no dissolve; Åland not present under `admin='Finland'` at all
+  in this dataset, same "not this project's call, matches Natural
+  Earth's own model" reasoning as Taiwan/Hong Kong/Macau above).
+  `name` is inconsistent, not uniformly English or uniformly Finnish —
+  12 of 18 rows needed fixing up to native Finnish (matching every
+  other country's local-name convention), using the Finnish half of
+  `name_alt` (Finland is officially bilingual Finnish/Swedish, so
+  `name_alt` is a pipe-separated Finnish|Swedish list) rather than
+  guessing:
+  ```
+  npx tsx data/scripts/build-map.ts --country="Finland" --out=data/maps/finland-regions --type=region --name="Finland — Regions"
+  ```
+- **`russia-regions`** (83 targets: 83 pre-2014 federal subjects).
+  Raw admin-1 rows are 86 — excluded 3 via `--exclude-field=iso_3166_2`:
+  Crimea (`UA-43`) and Sevastopol (`UA-40`), for the same reason
+  they're included in `ukraine-regions` instead (see this file's
+  Ukraine section and DECISIONS.md — Natural Earth tags both under
+  `admin='Russia'`, reflecting de facto control, but keeps their
+  `iso_3166_2` codes under the `UA-` Ukrainian prefix even there,
+  matching the international-consensus view; showing them as Russian
+  here would directly contradict the already-made Ukraine decision),
+  plus one nameless junk row (`RU-X01~`, `note`: "RUS-99 (Russia minor
+  island)", the same class of artifact as Mexico's). Chukotka
+  (Russia's Far East) genuinely crosses the antimeridian — confirmed
+  via its raw coordinate range (exactly -180 to 180) before assuming
+  the existing antimeridian-unwrapping logic in `boundsOf()` (added
+  originally for Alaska) would just handle it; verified after building
+  that it renders correctly at the map's eastern edge, no wraparound.
+  Also fixed up: one real data-corruption row (`name` literally
+  "Maga Buryatdan", confirmed via `iso_3166_2` `RU-MAG` and
+  `name_local` "Магаданская область" that this is actually Magadan),
+  one long official title replaced with the same short common name
+  every similarly-sized region already uses ("Chukchi Autonomous
+  Okrug" → "Chukotka"), and the same soft-sign-apostrophe
+  transliteration cleanup already applied to Ukraine's fixups, applied
+  here for the same reason (Astrakhan/Ryazan/Yaroslavl/Tver/Perm/
+  Primorye/Tyumen/Ulyanovsk/Stavropol/Arkhangelsk, not the apostrophed
+  forms). Deliberately did **not** rename every republic to its
+  "-ia"-suffixed common form (Chuvashia, Udmurtia, Kalmykia, Buryatia,
+  ...) — those adjectival forms already in the source aren't wrong,
+  just less common, a different class of issue from an actual data
+  error or a stray apostrophe:
+  ```
+  npx tsx data/scripts/build-map.ts --country="Russia" --out=data/maps/russia-regions --type=province --name="Russia — Regions" --exclude-field=iso_3166_2 --exclude="UA-43,UA-40,RU-X01~"
+  ```
+- **`india-regions`** (36 targets: 28 states + 8 union territories —
+  already the correct level, no dissolve, no exclusions, `name` field
+  already uses current official names throughout, e.g. Odisha not
+  Orissa, Puducherry not Pondicherry). Includes Jammu and Kashmir and
+  Ladakh as India-administers them — deliberately treated differently
+  from Crimea: Crimea has near-universal international consensus
+  (UN included) against the de facto controller's claim, Kashmir is a
+  genuine multi-party dispute (India/Pakistan/China) with no equivalent
+  clean resolution, so this map just reflects Natural Earth's own
+  India-administered depiction like every other non-Ukraine case,
+  rather than picking a side where the world hasn't:
+  ```
+  npx tsx data/scripts/build-map.ts --country="India" --out=data/maps/india-regions --type=state --name="India — States"
+  ```
+- **`indonesia-regions`** (33 targets, provinces — already the correct
+  level, no dissolve, no exclusions; this Natural Earth vintage
+  predates Indonesia's 2022-2023 Papua province splits, so 33 rather
+  than the current real-world 38 — a dataset-vintage gap, not a build
+  mistake, disclosed rather than silently shipped):
+  ```
+  npx tsx data/scripts/build-map.ts --country="Indonesia" --out=data/maps/indonesia-regions --type=province --name="Indonesia — Provinces"
+  ```
+- **`argentina-regions`** (24 targets: 23 provinces + the autonomous
+  city of Buenos Aires — already the correct level, no dissolve, no
+  exclusions). Specifically checked Tierra del Fuego province's actual
+  polygon extent before shipping it as-is: its full official name
+  claims Antarctica and the Falkland Islands, but the raw geometry's
+  bbox (lon -68.65 to -63.81, lat -55.05 to -52.64) confirms Natural
+  Earth's polygon covers only the real, actually-administered Isla
+  Grande archipelago — not a political question this map needed to
+  make a call on, since the data itself doesn't raise it:
+  ```
+  npx tsx data/scripts/build-map.ts --country="Argentina" --out=data/maps/argentina-regions --type=province --name="Argentina — Regions"
+  ```
+- **`china-towns-100k`** (50, capped), **`brazil-towns-100k`** (48),
+  **`mexico-towns-100k`** (49), **`finland-towns-100k`** (8, floored),
+  **`russia-towns-100k`** (50, capped), **`india-towns-100k`** (50,
+  capped), **`indonesia-towns-100k`** (49), **`argentina-towns-100k`**
+  (30, neither floored nor capped):
+  ```
+  npx tsx data/scripts/build-points-map.ts --country="China" --out=data/maps/china-towns-100k --min-population=100000 --max-count=50 --name="China — Towns"
+  npx tsx data/scripts/build-points-map.ts --country="Brazil" --out=data/maps/brazil-towns-100k --min-population=100000 --max-count=50 --name="Brazil — Towns"
+  npx tsx data/scripts/build-points-map.ts --country="Mexico" --out=data/maps/mexico-towns-100k --min-population=100000 --max-count=50 --name="Mexico — Towns"
+  npx tsx data/scripts/build-points-map.ts --country="Finland" --out=data/maps/finland-towns-100k --min-population=100000 --min-count=8 --name="Finland — Towns"
+  npx tsx data/scripts/build-points-map.ts --country="Russia" --out=data/maps/russia-towns-100k --min-population=100000 --max-count=50 --exclude="Simferopol,Sevastopol" --name="Russia — Towns"
+  npx tsx data/scripts/build-points-map.ts --country="India" --out=data/maps/india-towns-100k --min-population=100000 --max-count=50 --exclude="Amaravati" --name="India — Towns"
+  npx tsx data/scripts/build-points-map.ts --country="Indonesia" --out=data/maps/indonesia-towns-100k --min-population=100000 --max-count=50 --name="Indonesia — Towns"
+  npx tsx data/scripts/build-points-map.ts --country="Argentina" --out=data/maps/argentina-towns-100k --min-population=100000 --name="Argentina — Towns"
+  ```
+  Russia's towns exclude Simferopol and Sevastopol (both clear 100k,
+  both tagged `ADM0NAME='Russia'` in the populated-places dataset too,
+  `ADM1NAME='Crimea'`) — same consistency reasoning as the regions map.
+  Neither city is added to `ukraine-towns-100k` to compensate: that map
+  was never built with a Crimea-merging step the way `ukraine-regions`
+  was (it just filters `ADM0NAME='Ukraine'`, and Crimean places aren't
+  tagged that way), so this is a known, disclosed gap rather than a
+  new one — revisit only if `ukraine-towns-100k` itself gets a
+  `--extra-where`-style merge in a future pass.
+  India's towns exclude "Amaravati" specifically: its `POP_MAX`
+  (5,800,000) would rank it #7, ahead of Ahmedabad/Pune/Surat, but
+  Amaravati is Andhra Pradesh's still-under-construction planned new
+  capital with an actual population of a few thousand — the source
+  figure appears to conflate it with a surrounding urban region's
+  population, well past the usual "occasionally an urban-agglomeration
+  estimate" tolerance already disclosed for `POP_MAX` above, into
+  actively misleading. `NAME_FIXUPS` for the towns maps got noticeably
+  bigger this batch: two real typos (China's "Shenyeng" → "Shenyang",
+  "Xian" → "Xi'an" — the missing apostrophe reads as a different,
+  ambiguous romanization), several NAME_EN-vs-modernized-spelling gaps
+  in India matching the Odessa/Ukraine pattern (Haora → Howrah,
+  Sholapur → Solapur, Nasik → Nashik, Vishakhapatnam → Visakhapatnam),
+  one genuine 2018 official rename India's dataset hasn't caught up to
+  either (Allahabad → Prayagraj, same "use the current official name"
+  principle as Kyiv/Odesa), a colonial-era Dutch spelling and a plain
+  typo in Indonesia (Bandjarmasin → Banjarmasin, Pakalongan →
+  Pekalongan), an English exonym for Mexico's capital plus two missing
+  diacritics (Mexico City → Ciudad de México, Nezahualcoyotl →
+  Nezahualcóyotl, Ciudad Obregon → Ciudad Obregón), a missing diacritic
+  in Argentina (San Nicolas → San Nicolás), one missing diacritic in
+  Brazil (Jaboatao → Jaboatão), and one literal double-space typo in
+  Russia's only multi-word city name (St.  Petersburg → Saint
+  Petersburg, matching `NAME_EN`).
+
+**Real Natural Earth data bug found and fixed generally, not per-country:**
+building this batch's larger town lists surfaced exact-duplicate rows
+for the same city - "Vila Velha" and "Natal" each appearing twice in
+Brazil, "Mazatlán" twice in Mexico, "Bandar Lampung" twice in
+Indonesia (confirmed as real duplicate source rows, not a fixup
+collision). Left unhandled, two GeoJSON features sharing a `name`
+produce two targets with the identical `slugify()`-derived `id` -
+duplicate map pins and duplicate/colliding quiz slips. `build-
+points-map.ts` now deduplicates by `id` after name fixups, keeping
+whichever duplicate has the higher `POP_MAX` (the candidate list is
+still population-sorted at that point) - a general fix, not scoped to
+this batch, so it silently protects every future country too.
+
+### Adaptive town selection: `--min-count` / `--max-count`
+
+Requested directly by the user (2026-09-13), prompted by this batch's
+range: the fixed `>100k` threshold alone doesn't scale from Finland (4
+towns clear it) to China (317). Two new `build-points-map.ts` flags,
+both no-ops at their defaults so every map built before they existed
+regenerates identically (verified: rebuilt `sweden-towns-100k` with
+the updated script and confirmed byte-identical `map.json`/`tour.json`
+against the already-shipped version):
+
+- `--min-count=N`: if fewer than N places clear `--min-population`,
+  reach below the threshold and take the N most populous places in the
+  country instead - used for Finland (`--min-count=8`, bringing Oulu/
+  Lahti/Jyväskylä/Kuopio/Pori into a map that would otherwise be just
+  Helsinki/Tampere/Turku/Oulu).
+- `--max-count=N`: truncate to the N most populous places that cleared
+  `--min-population` - used for China/Brazil/Mexico/Russia/India/
+  Indonesia (`--max-count=50`), capping every one of this batch's
+  large countries at the same ceiling rather than letting six of them
+  run into the hundreds. 50 was picked to stay under the largest
+  already-shipped towns map (`japan-towns-100k`, 66 targets) rather
+  than matching it exactly - a deliberate, if not perfectly precise,
+  choice to keep every towns map in a comparable "curated quiz" size
+  range. Argentina (30) and Indonesia/Mexico's post-dedup counts (49
+  each) didn't need it or landed under the cap naturally.
+
+Implementation: `ogr2ogr`'s `-where` clause now only filters
+`POP_MAX > 0` (dropping missing-data rows) plus any `--exclude` names,
+not the population threshold itself - every real candidate is fetched,
+sorted by `POP_MAX` descending in JS, and the threshold/min-count/
+max-count logic runs there instead, since min-count/max-count both
+need visibility into the full candidate pool to decide whether to
+reach below the threshold or truncate above it.
+
 ## Beyond Natural Earth's admin-1 data
 
 Everything above (and the two towns plans below) stays within data

@@ -185,6 +185,73 @@ or amend an entry here as part of that change, not as an afterthought.
   cases, but the underlying reasoning is "not a real state/territory,"
   not "too far from the mainland" — worth distinguishing if a future
   country raises the same "which of these rows actually count" question.
+- **Russia's regions map excludes Crimea and Sevastopol, for direct
+  consistency with the earlier Ukraine decision — not a new political
+  judgment call, a mechanical application of one already made.** Natural
+  Earth tags both under `admin='Russia'` (reflecting de facto control),
+  the same as it does for `ukraine-regions`' source rows before that
+  map's `--extra-where` merge — but it keeps their `iso_3166_2` codes
+  under the Ukrainian `UA-` prefix even there. Showing them as Russian
+  territory on `russia-regions` while already showing them as Ukrainian
+  on `ukraine-regions` would contradict the project's own stated
+  reasoning (UN-level international consensus) for the earlier
+  decision, not present a second even-handed option. Applied to both
+  the regions and towns maps.
+- **India's regions map keeps Jammu & Kashmir and Ladakh as India
+  depicts them, unlike Crimea — a deliberate distinction, not an
+  oversight.** Crimea has near-universal international consensus (the
+  UN included) against the controlling country's own claim, which is
+  what justified overriding Natural Earth's `admin` tag there. Kashmir
+  is a genuine three-way dispute (India/Pakistan/China) with no
+  equivalent clean resolution to defer to — there's no "the world
+  agrees, override the data" move available the way there was for
+  Crimea. Default: show it as Natural Earth's own India-administered
+  data depicts it, the same treatment every other non-Ukraine country
+  in this project gets, rather than picking a side where the world
+  hasn't. Revisit only if a comparably clean international consensus
+  ever emerges, the same bar Crimea had to clear.
+- **India's towns map excludes Amaravati despite it clearing the
+  population threshold by a wide margin — a data-quality call, not a
+  political one.** Its `POP_MAX` (5.8M) would rank it #7 nationally,
+  ahead of Ahmedabad/Pune/Surat, but Amaravati is Andhra Pradesh's
+  still-under-construction planned capital with an actual population of
+  a few thousand people. `POP_MAX` is already known to sometimes read
+  as a broader urban-agglomeration estimate (see the `POP_MAX` section
+  below) - this is the same failure mode taken to an extreme past the
+  point of being a reasonable tradeoff, actively misleading rather than
+  "using a bigger boundary than expected." Excluded outright rather than
+  accepted as another instance of the disclosed `POP_MAX` limitation.
+- **Natural Earth has real exact-duplicate rows for the same city
+  (Brazil's Vila Velha/Natal, Mexico's Mazatlán, Indonesia's Bandar
+  Lampung, each appearing twice) — fixed with a general dedup step in
+  `build-points-map.ts`, not a per-country workaround.** Found only once
+  this project started building large towns maps (50+ candidates), where
+  duplicates became likely enough to actually hit — smaller towns maps
+  (5-40 targets) apparently never happened to include one. Left
+  unhandled, two features sharing a name would produce two targets with
+  the same `slugify()`-derived id: duplicate map pins, duplicate/
+  colliding quiz slips. Dedupes by id after name fixups, keeping
+  whichever duplicate has the higher `POP_MAX` — applies to every
+  country's towns map going forward, not just this batch's.
+- **Adaptive town selection (`--min-count`/`--max-count` on
+  `build-points-map.ts`), replacing a one-size-fits-all `>100k`
+  threshold.** Requested directly by the user (2026-09-13): "For
+  countries like Sweden it makes sense to have a minimum of cities to
+  show and change the 100k limit, while if there are too many cities
+  like in China we have to think of increasing it." Both flags are
+  no-ops at their defaults, verified by rebuilding `sweden-towns-100k`
+  with the updated script and confirming byte-identical output against
+  the already-shipped version - existing maps are unaffected unless
+  explicitly rebuilt with the new flags. `--max-count=50` applied to
+  every large country in the 2026-09-13 batch (China/Brazil/Mexico/
+  Russia/India/Indonesia) - picked to stay under the largest
+  already-shipped towns map (`japan-towns-100k`, 66) rather than an
+  arbitrary round number. `--min-count=8` applied to Finland (only 4
+  towns clear 100k) - not retroactively applied to the already-shipped
+  `sweden-towns-100k` (5 towns), since that wasn't part of what was
+  asked; revisit Sweden specifically if the user wants it bumped up
+  too. See MAPS.md's "Adaptive town selection" section for the
+  mechanism.
 - **Public-domain data sources only (Natural Earth), on purpose.** A
   constraint carried through the whole project, not just an initial
   default — flagged again explicitly when scoping the self-serve

@@ -31,6 +31,13 @@ interface CountryGroup {
 // the breadcrumb.
 export const mapGroups: CountryGroup[] = [
 	{
+		country: 'Argentina',
+		maps: [
+			{ id: 'argentina-regions', labelKey: 'mapType.regions' },
+			{ id: 'argentina-towns-100k', labelKey: 'mapType.towns' }
+		]
+	},
+	{
 		country: 'Australia',
 		maps: [
 			{ id: 'australia-regions', labelKey: 'mapType.states' },
@@ -38,10 +45,31 @@ export const mapGroups: CountryGroup[] = [
 		]
 	},
 	{
+		country: 'Brazil',
+		maps: [
+			{ id: 'brazil-regions', labelKey: 'mapType.states' },
+			{ id: 'brazil-towns-100k', labelKey: 'mapType.towns' }
+		]
+	},
+	{
 		country: 'Canada',
 		maps: [
 			{ id: 'canada-regions', labelKey: 'mapType.provinces' },
 			{ id: 'canada-towns-100k', labelKey: 'mapType.towns' }
+		]
+	},
+	{
+		country: 'China',
+		maps: [
+			{ id: 'china-regions', labelKey: 'mapType.provinces' },
+			{ id: 'china-towns-100k', labelKey: 'mapType.towns' }
+		]
+	},
+	{
+		country: 'Finland',
+		maps: [
+			{ id: 'finland-regions', labelKey: 'mapType.regions' },
+			{ id: 'finland-towns-100k', labelKey: 'mapType.towns' }
 		]
 	},
 	{
@@ -66,6 +94,20 @@ export const mapGroups: CountryGroup[] = [
 		]
 	},
 	{
+		country: 'India',
+		maps: [
+			{ id: 'india-regions', labelKey: 'mapType.states' },
+			{ id: 'india-towns-100k', labelKey: 'mapType.towns' }
+		]
+	},
+	{
+		country: 'Indonesia',
+		maps: [
+			{ id: 'indonesia-regions', labelKey: 'mapType.provinces' },
+			{ id: 'indonesia-towns-100k', labelKey: 'mapType.towns' }
+		]
+	},
+	{
 		country: 'Italy',
 		maps: [
 			{ id: 'italy-provinces', labelKey: 'mapType.provinces' },
@@ -78,6 +120,13 @@ export const mapGroups: CountryGroup[] = [
 		maps: [
 			{ id: 'japan-regions', labelKey: 'mapType.prefectures' },
 			{ id: 'japan-towns-100k', labelKey: 'mapType.towns' }
+		]
+	},
+	{
+		country: 'Mexico',
+		maps: [
+			{ id: 'mexico-regions', labelKey: 'mapType.states' },
+			{ id: 'mexico-towns-100k', labelKey: 'mapType.towns' }
 		]
 	},
 	{
@@ -99,6 +148,13 @@ export const mapGroups: CountryGroup[] = [
 		maps: [
 			{ id: 'portugal-regions', labelKey: 'mapType.districts' },
 			{ id: 'portugal-towns-100k', labelKey: 'mapType.towns' }
+		]
+	},
+	{
+		country: 'Russia',
+		maps: [
+			{ id: 'russia-regions', labelKey: 'mapType.regions' },
+			{ id: 'russia-towns-100k', labelKey: 'mapType.towns' }
 		]
 	},
 	{

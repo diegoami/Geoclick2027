@@ -64,19 +64,16 @@ Check items off as they land; update "Status" as iterations complete.
   it feels worth another round, not on a fixed schedule. Three items
   requested 2026-09-12 (map-list reorganization, German/Italian UI
   languages, optional cross-device score sync via sign-in — see the
-  Iteration 8+ backlog below) are **done or in progress**: the first two
-  are merged to `main`; sign-in is scaffolded on
-  `feature/supabase-sso-sync` (Supabase, user-confirmed) but explicitly
-  not finished — see that backlog entry. Four more items requested
-  2026-09-13, all tracked in the Iteration 8+ backlog below and none
-  started yet: a background-color/visual refresh; eight more countries
-  (China, Brazil, Mexico, Finland, Russia, India, Indonesia, Argentina);
-  reworking the towns maps' fixed `>100k` population threshold into
-  something that scales per-country (a minimum city count for
-  sparse countries, a higher bar or different selection strategy for
-  dense ones like China); and finalizing/finishing the SSO work above.
-  A full desktop+mobile retest is planned once all of the above lands —
-  see that backlog entry for why.
+  Iteration 8+ backlog below): the first two are merged to `main`; sign-in
+  is scaffolded on `feature/supabase-sso-sync` (Supabase, user-confirmed)
+  but explicitly not finished — see that backlog entry. Four more items
+  requested 2026-09-13, tracked in the Iteration 8+ backlog below: eight
+  more countries and the adaptive per-country town-count threshold are
+  both **done**, built together on
+  `feature/add-eight-countries-adaptive-threshold`; a background-color/
+  visual refresh and finalizing the SSO work above are still not
+  started. A full desktop+mobile retest is planned once all of this
+  lands — see that backlog entry for why.
 - **Reordered**: local persistence and spaced repetition swapped places
   from the original numbering. Spaced repetition is pointless without
   somewhere to remember what's due across sessions — user accounts
@@ -1429,30 +1426,28 @@ loop actually feels good. Candidates below, in rough priority order.
       the `design` skill first (mockups + live style edits), the same
       approach that worked for GUI/UX round 1, rather than guessing at
       colors directly in code.
-- [ ] **More countries: China, Brazil, Mexico, Finland, Russia, India,
-      Indonesia, Argentina** — requested directly by the user (2026-09-13),
-      queued for a future map-building batch following the same
-      regions+towns pattern and rigor as every prior batch (full attribute
-      audits, overseas-territory exclusions checked proactively, see
-      DECISIONS.md/MAPS.md). Not started yet.
-      - **Design question raised alongside this request, not yet
-        resolved**: the towns maps' fixed `>100k population` threshold
-        (`build-points-map.ts --min-population`) doesn't scale to this
-        batch's range. Small/sparse countries (e.g. Sweden, already
-        shipped: only 5 towns clear 100k) would benefit from a *minimum
-        city count* instead of a fixed threshold, so a country isn't left
-        with an unhelpfully tiny towns map; large/dense countries (China
-        especially, likely also India/Indonesia/Brazil) would clear 100k
-        with hundreds or thousands of towns, unusable for this app's
-        curated-quiz format, and need a *higher* threshold (or a different
-        selection strategy — e.g. top-N by population — entirely). Needs
-        actual per-country data audits (like every prior population
-        decision in MAPS.md, e.g. the `POP_MAX` vs `POP_MIN` choice) before
-        picking numbers, not a guessed one-size-fits-all fix. Likely
-        outcome: `--min-population` gains a sibling flag (`--top-n`, or a
-        `--min-population` *and* a `--max-targets` used together) rather
-        than replacing the existing flag — revisit when this batch
-        actually starts.
+- [x] **More countries: China, Brazil, Mexico, Finland, Russia, India,
+      Indonesia, Argentina** — requested directly by the user
+      (2026-09-13), built on `feature/add-eight-countries-adaptive-threshold`
+      following the same regions+towns pattern and rigor as every prior
+      batch (full attribute audits — all 86 raw Russian regions, the
+      top-50-by-population towns per large country, not spot-checked).
+      The most name-fixup-heavy batch yet, and it surfaced a real
+      Natural Earth data bug (exact-duplicate populated-place rows,
+      fixed with a general dedup step) — see MAPS.md's dated section and
+      DECISIONS.md for every specific fixup/exclusion and the reasoning
+      behind each, including how Russia's Crimea/Sevastopol exclusion
+      and India's Kashmir/Ladakh inclusion were each decided for
+      consistency with (respectively, contrast with) the earlier Ukraine
+      decision.
+      - **Design question raised alongside this request — resolved**:
+        the towns maps' fixed `>100k population` threshold didn't scale
+        to this batch's range (Finland: 4 towns clear it; China: 317).
+        `build-points-map.ts` gained `--min-count`/`--max-count` flags
+        (both no-ops at their defaults, so every existing towns map is
+        unaffected unless explicitly rebuilt) — see MAPS.md's "Adaptive
+        town selection" section for the exact mechanism and which
+        countries needed which flag.
 - [ ] **Retest on desktop and mobile after the above iterations land** —
       requested directly by the user (2026-09-13), to run once the new-
       countries batch, the population-threshold rework, and SSO are all

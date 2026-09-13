@@ -1,0 +1,893 @@
+{
+	"id": "indonesia-towns-100k",
+	"name": "Indonesia — Towns",
+	"country": "Indonesia",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "banda-aceh",
+			"name": "Banda Aceh",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				95.3200109,
+				5.5499829
+			],
+			"bbox": [
+				95.3200109,
+				5.5499829,
+				95.3200109,
+				5.5499829
+			]
+		},
+		{
+			"id": "binjai",
+			"name": "Binjai",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				98.5000752,
+				3.6203591
+			],
+			"bbox": [
+				98.5000752,
+				3.6203591,
+				98.5000752,
+				3.6203591
+			]
+		},
+		{
+			"id": "medan",
+			"name": "Medan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				98.6480944,
+				3.5819198
+			],
+			"bbox": [
+				98.6480944,
+				3.5819198,
+				98.6480944,
+				3.5819198
+			]
+		},
+		{
+			"id": "tebingtinggi",
+			"name": "Tebingtinggi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				99.1300109,
+				3.3303768
+			],
+			"bbox": [
+				99.1300109,
+				3.3303768,
+				99.1300109,
+				3.3303768
+			]
+		},
+		{
+			"id": "pematangsiantar",
+			"name": "Pematangsiantar",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				99.061488,
+				2.9614329
+			],
+			"bbox": [
+				99.061488,
+				2.9614329,
+				99.061488,
+				2.9614329
+			]
+		},
+		{
+			"id": "sibolga",
+			"name": "Sibolga",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				98.8000052,
+				1.7499823
+			],
+			"bbox": [
+				98.8000052,
+				1.7499823,
+				98.8000052,
+				1.7499823
+			]
+		},
+		{
+			"id": "manado",
+			"name": "Manado",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				124.8499914,
+				1.4800246
+			],
+			"bbox": [
+				124.8499914,
+				1.4800246,
+				124.8499914,
+				1.4800246
+			]
+		},
+		{
+			"id": "padangsidempuan",
+			"name": "Padangsidempuan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				99.2733614,
+				1.3887382
+			],
+			"bbox": [
+				99.2733614,
+				1.3887382,
+				99.2733614,
+				1.3887382
+			]
+		},
+		{
+			"id": "tanjungpinang",
+			"name": "Tanjungpinang",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				104.471442,
+				0.916829
+			],
+			"bbox": [
+				104.471442,
+				0.916829,
+				104.471442,
+				0.916829
+			]
+		},
+		{
+			"id": "singkawang",
+			"name": "Singkawang",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				108.9654697,
+				0.9119809
+			],
+			"bbox": [
+				108.9654697,
+				0.9119809,
+				108.9654697,
+				0.9119809
+			]
+		},
+		{
+			"id": "pekanbaru",
+			"name": "Pekanbaru",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				101.4230671,
+				0.5669101
+			],
+			"bbox": [
+				101.4230671,
+				0.5669101,
+				101.4230671,
+				0.5669101
+			]
+		},
+		{
+			"id": "gorontalo",
+			"name": "Gorontalo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				123.0700484,
+				0.549978
+			],
+			"bbox": [
+				123.0700484,
+				0.549978,
+				123.0700484,
+				0.549978
+			]
+		},
+		{
+			"id": "pontianak",
+			"name": "Pontianak",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				109.3199833,
+				-0.0299866
+			],
+			"bbox": [
+				109.3199833,
+				-0.0299866,
+				109.3199833,
+				-0.0299866
+			]
+		},
+		{
+			"id": "bukittinggi",
+			"name": "Bukittinggi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				100.3614603,
+				-0.3031482
+			],
+			"bbox": [
+				100.3614603,
+				-0.3031482,
+				100.3614603,
+				-0.3031482
+			]
+		},
+		{
+			"id": "samarinda",
+			"name": "Samarinda",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				117.1499963,
+				-0.5000354
+			],
+			"bbox": [
+				117.1499963,
+				-0.5000354,
+				117.1499963,
+				-0.5000354
+			]
+		},
+		{
+			"id": "palu",
+			"name": "Palu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				119.8330367,
+				-0.907039
+			],
+			"bbox": [
+				119.8330367,
+				-0.907039,
+				119.8330367,
+				-0.907039
+			]
+		},
+		{
+			"id": "padang",
+			"name": "Padang",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				100.3580675,
+				-0.9580614
+			],
+			"bbox": [
+				100.3580675,
+				-0.9580614,
+				100.3580675,
+				-0.9580614
+			]
+		},
+		{
+			"id": "balikpapan",
+			"name": "Balikpapan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				116.8300158,
+				-1.2500154
+			],
+			"bbox": [
+				116.8300158,
+				-1.2500154,
+				116.8300158,
+				-1.2500154
+			]
+		},
+		{
+			"id": "jambi",
+			"name": "Jambi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.6100476,
+				-1.5899947
+			],
+			"bbox": [
+				103.6100476,
+				-1.5899947,
+				103.6100476,
+				-1.5899947
+			]
+		},
+		{
+			"id": "palembang",
+			"name": "Palembang",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				104.7480838,
+				-2.9780932
+			],
+			"bbox": [
+				104.7480838,
+				-2.9780932,
+				104.7480838,
+				-2.9780932
+			]
+		},
+		{
+			"id": "banjarmasin",
+			"name": "Banjarmasin",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				114.5800756,
+				-3.3299918
+			],
+			"bbox": [
+				114.5800756,
+				-3.3299918,
+				114.5800756,
+				-3.3299918
+			]
+		},
+		{
+			"id": "martapura",
+			"name": "Martapura",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				114.8364941,
+				-3.413501
+			],
+			"bbox": [
+				114.8364941,
+				-3.413501,
+				114.8364941,
+				-3.413501
+			]
+		},
+		{
+			"id": "majene",
+			"name": "Majene",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				118.9660095,
+				-3.533597
+			],
+			"bbox": [
+				118.9660095,
+				-3.533597,
+				118.9660095,
+				-3.533597
+			]
+		},
+		{
+			"id": "ambon",
+			"name": "Ambon",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				128.2000195,
+				-3.7166866
+			],
+			"bbox": [
+				128.2000195,
+				-3.7166866,
+				128.2000195,
+				-3.7166866
+			]
+		},
+		{
+			"id": "bengkulu",
+			"name": "Bengkulu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				102.2699743,
+				-3.8000407
+			],
+			"bbox": [
+				102.2699743,
+				-3.8000407,
+				102.2699743,
+				-3.8000407
+			]
+		},
+		{
+			"id": "makassar",
+			"name": "Makassar",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				119.4300817,
+				-5.138013
+			],
+			"bbox": [
+				119.4300817,
+				-5.138013,
+				119.4300817,
+				-5.138013
+			]
+		},
+		{
+			"id": "bandar-lampung",
+			"name": "Bandar Lampung",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.3000219,
+				-5.4496041
+			],
+			"bbox": [
+				105.3000219,
+				-5.4496041,
+				105.3000219,
+				-5.4496041
+			]
+		},
+		{
+			"id": "jakarta",
+			"name": "Jakarta",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.8274918,
+				-6.1724718
+			],
+			"bbox": [
+				106.8274918,
+				-6.1724718,
+				106.8274918,
+				-6.1724718
+			]
+		},
+		{
+			"id": "bekasi",
+			"name": "Bekasi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.972323,
+				-6.2172575
+			],
+			"bbox": [
+				106.972323,
+				-6.2172575,
+				106.972323,
+				-6.2172575
+			]
+		},
+		{
+			"id": "bogor",
+			"name": "Bogor",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.7480651,
+				-6.5680549
+			],
+			"bbox": [
+				106.7480651,
+				-6.5680549,
+				106.7480651,
+				-6.5680549
+			]
+		},
+		{
+			"id": "cirebon",
+			"name": "Cirebon",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				108.5666442,
+				-6.7332983
+			],
+			"bbox": [
+				108.5666442,
+				-6.7332983,
+				108.5666442,
+				-6.7332983
+			]
+		},
+		{
+			"id": "tegal",
+			"name": "Tegal",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				109.1199955,
+				-6.8695691
+			],
+			"bbox": [
+				109.1199955,
+				-6.8695691,
+				109.1199955,
+				-6.8695691
+			]
+		},
+		{
+			"id": "pekalongan",
+			"name": "Pekalongan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				109.6700394,
+				-6.8795943
+			],
+			"bbox": [
+				109.6700394,
+				-6.8795943,
+				109.6700394,
+				-6.8795943
+			]
+		},
+		{
+			"id": "sukabumi",
+			"name": "Sukabumi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.899976,
+				-6.9096183
+			],
+			"bbox": [
+				106.899976,
+				-6.9096183,
+				106.899976,
+				-6.9096183
+			]
+		},
+		{
+			"id": "bandung",
+			"name": "Bandung",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				107.5680667,
+				-6.9480834
+			],
+			"bbox": [
+				107.5680667,
+				-6.9480834,
+				107.5680667,
+				-6.9480834
+			]
+		},
+		{
+			"id": "semarang",
+			"name": "Semarang",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				110.4180736,
+				-6.9646716
+			],
+			"bbox": [
+				110.4180736,
+				-6.9646716,
+				110.4180736,
+				-6.9646716
+			]
+		},
+		{
+			"id": "surabaya",
+			"name": "Surabaya",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				112.7488874,
+				-7.24729
+			],
+			"bbox": [
+				112.7488874,
+				-7.24729,
+				112.7488874,
+				-7.24729
+			]
+		},
+		{
+			"id": "tasikmalaya",
+			"name": "Tasikmalaya",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				108.2146761,
+				-7.3254069
+			],
+			"bbox": [
+				108.2146761,
+				-7.3254069,
+				108.2146761,
+				-7.3254069
+			]
+		},
+		{
+			"id": "surakarta",
+			"name": "Surakarta",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				110.8250077,
+				-7.5649788
+			],
+			"bbox": [
+				110.8250077,
+				-7.5649788,
+				110.8250077,
+				-7.5649788
+			]
+		},
+		{
+			"id": "pasuruan",
+			"name": "Pasuruan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				112.9000232,
+				-7.6295744
+			],
+			"bbox": [
+				112.9000232,
+				-7.6295744,
+				112.9000232,
+				-7.6295744
+			]
+		},
+		{
+			"id": "cilacap",
+			"name": "Cilacap",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				109.0154024,
+				-7.7188196
+			],
+			"bbox": [
+				109.0154024,
+				-7.7188196,
+				109.0154024,
+				-7.7188196
+			]
+		},
+		{
+			"id": "yogyakarta",
+			"name": "Yogyakarta",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				110.3750093,
+				-7.7799528
+			],
+			"bbox": [
+				110.3750093,
+				-7.7799528,
+				110.3750093,
+				-7.7799528
+			]
+		},
+		{
+			"id": "kediri",
+			"name": "Kediri",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				112.0000264,
+				-7.7896163
+			],
+			"bbox": [
+				112.0000264,
+				-7.7896163,
+				112.0000264,
+				-7.7896163
+			]
+		},
+		{
+			"id": "malang",
+			"name": "Malang",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				112.6080692,
+				-7.9780464
+			],
+			"bbox": [
+				112.6080692,
+				-7.9780464,
+				112.6080692,
+				-7.9780464
+			]
+		},
+		{
+			"id": "singaraja",
+			"name": "Singaraja",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				115.094398,
+				-8.1151993
+			],
+			"bbox": [
+				115.094398,
+				-8.1151993,
+				115.094398,
+				-8.1151993
+			]
+		},
+		{
+			"id": "jember",
+			"name": "Jember",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				113.6873136,
+				-8.1726937
+			],
+			"bbox": [
+				113.6873136,
+				-8.1726937,
+				113.6873136,
+				-8.1726937
+			]
+		},
+		{
+			"id": "mataram",
+			"name": "Mataram",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				116.1350195,
+				-8.5795422
+			],
+			"bbox": [
+				116.1350195,
+				-8.5795422,
+				116.1350195,
+				-8.5795422
+			]
+		},
+		{
+			"id": "denpasar",
+			"name": "Denpasar",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				115.2199849,
+				-8.6500289
+			],
+			"bbox": [
+				115.2199849,
+				-8.6500289,
+				115.2199849,
+				-8.6500289
+			]
+		},
+		{
+			"id": "kupang",
+			"name": "Kupang",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				123.5829886,
+				-10.1786694
+			],
+			"bbox": [
+				123.5829886,
+				-10.1786694,
+				123.5829886,
+				-10.1786694
+			]
+		}
+	],
+	"tourOrder": [
+		"banda-aceh",
+		"binjai",
+		"medan",
+		"tebingtinggi",
+		"pematangsiantar",
+		"sibolga",
+		"manado",
+		"padangsidempuan",
+		"tanjungpinang",
+		"singkawang",
+		"pekanbaru",
+		"gorontalo",
+		"pontianak",
+		"bukittinggi",
+		"samarinda",
+		"palu",
+		"padang",
+		"balikpapan",
+		"jambi",
+		"palembang",
+		"banjarmasin",
+		"martapura",
+		"majene",
+		"ambon",
+		"bengkulu",
+		"makassar",
+		"bandar-lampung",
+		"jakarta",
+		"bekasi",
+		"bogor",
+		"cirebon",
+		"tegal",
+		"pekalongan",
+		"sukabumi",
+		"bandung",
+		"semarang",
+		"surabaya",
+		"tasikmalaya",
+		"surakarta",
+		"pasuruan",
+		"cilacap",
+		"yogyakarta",
+		"kediri",
+		"malang",
+		"singaraja",
+		"jember",
+		"mataram",
+		"denpasar",
+		"kupang"
+	]
+}

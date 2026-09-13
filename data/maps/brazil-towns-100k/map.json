@@ -1,0 +1,875 @@
+{
+	"id": "brazil-towns-100k",
+	"name": "Brazil — Towns",
+	"country": "Brazil",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "vila-velha",
+			"name": "Vila Velha",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-51.2166519,
+				3.2166628
+			],
+			"bbox": [
+				-51.2166519,
+				3.2166628,
+				-51.2166519,
+				3.2166628
+			]
+		},
+		{
+			"id": "macapa",
+			"name": "Macapá",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-51.0500212,
+				0.033007
+			],
+			"bbox": [
+				-51.0500212,
+				0.033007,
+				-51.0500212,
+				0.033007
+			]
+		},
+		{
+			"id": "belem",
+			"name": "Belém",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-48.4819689,
+				-1.4480574
+			],
+			"bbox": [
+				-48.4819689,
+				-1.4480574,
+				-48.4819689,
+				-1.4480574
+			]
+		},
+		{
+			"id": "sao-luis",
+			"name": "São Luís",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-44.2679367,
+				-2.5140388
+			],
+			"bbox": [
+				-44.2679367,
+				-2.5140388,
+				-44.2679367,
+				-2.5140388
+			]
+		},
+		{
+			"id": "manaus",
+			"name": "Manaus",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-60.0019634,
+				-3.0980859
+			],
+			"bbox": [
+				-60.0019634,
+				-3.0980859,
+				-60.0019634,
+				-3.0980859
+			]
+		},
+		{
+			"id": "fortaleza",
+			"name": "Fortaleza",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-38.5819272,
+				-3.748072
+			],
+			"bbox": [
+				-38.5819272,
+				-3.748072,
+				-38.5819272,
+				-3.748072
+			]
+		},
+		{
+			"id": "teresina",
+			"name": "Teresina",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-42.7819551,
+				-5.0930545
+			],
+			"bbox": [
+				-42.7819551,
+				-5.0930545,
+				-42.7819551,
+				-5.0930545
+			]
+		},
+		{
+			"id": "natal",
+			"name": "Natal",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-35.2419502,
+				-5.7780773
+			],
+			"bbox": [
+				-35.2419502,
+				-5.7780773,
+				-35.2419502,
+				-5.7780773
+			]
+		},
+		{
+			"id": "joao-pessoa",
+			"name": "João Pessoa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-34.878017,
+				-7.0991893
+			],
+			"bbox": [
+				-34.878017,
+				-7.0991893,
+				-34.878017,
+				-7.0991893
+			]
+		},
+		{
+			"id": "campina-grande",
+			"name": "Campina Grande",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-35.8800169,
+				-7.2300122
+			],
+			"bbox": [
+				-35.8800169,
+				-7.2300122,
+				-35.8800169,
+				-7.2300122
+			]
+		},
+		{
+			"id": "olinda",
+			"name": "Olinda",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-34.8499506,
+				-7.999991
+			],
+			"bbox": [
+				-34.8499506,
+				-7.999991,
+				-34.8499506,
+				-7.999991
+			]
+		},
+		{
+			"id": "recife",
+			"name": "Recife",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-34.908765500024515,
+				-8.06053182704913
+			],
+			"bbox": [
+				-34.908765500024515,
+				-8.06053182704913,
+				-34.908765500024515,
+				-8.06053182704913
+			]
+		},
+		{
+			"id": "jaboatao",
+			"name": "Jaboatão",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-35.0200436,
+				-8.1100102
+			],
+			"bbox": [
+				-35.0200436,
+				-8.1100102,
+				-35.0200436,
+				-8.1100102
+			]
+		},
+		{
+			"id": "maceio",
+			"name": "Maceió",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-35.7319203,
+				-9.6180496
+			],
+			"bbox": [
+				-35.7319203,
+				-9.6180496,
+				-35.7319203,
+				-9.6180496
+			]
+		},
+		{
+			"id": "aracaju",
+			"name": "Aracaju",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-37.1199671,
+				-10.9000207
+			],
+			"bbox": [
+				-37.1199671,
+				-10.9000207,
+				-37.1199671,
+				-10.9000207
+			]
+		},
+		{
+			"id": "feira-de-santana",
+			"name": "Feira de Santana",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-38.9700092,
+				-12.2500158
+			],
+			"bbox": [
+				-38.9700092,
+				-12.2500158,
+				-38.9700092,
+				-12.2500158
+			]
+		},
+		{
+			"id": "salvador",
+			"name": "Salvador",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-38.4819333,
+				-12.968026
+			],
+			"bbox": [
+				-38.4819333,
+				-12.968026,
+				-38.4819333,
+				-12.968026
+			]
+		},
+		{
+			"id": "cuiaba",
+			"name": "Cuiabá",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-56.086931,
+				-15.5676606
+			],
+			"bbox": [
+				-56.086931,
+				-15.5676606,
+				-56.086931,
+				-15.5676606
+			]
+		},
+		{
+			"id": "brasilia",
+			"name": "Brasília",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-47.9179981,
+				-15.7813944
+			],
+			"bbox": [
+				-47.9179981,
+				-15.7813944,
+				-47.9179981,
+				-15.7813944
+			]
+		},
+		{
+			"id": "goiania",
+			"name": "Goiânia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-49.3019705,
+				-16.7180814
+			],
+			"bbox": [
+				-49.3019705,
+				-16.7180814,
+				-49.3019705,
+				-16.7180814
+			]
+		},
+		{
+			"id": "uberlandia",
+			"name": "Uberlândia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-48.2799836,
+				-18.8999975
+			],
+			"bbox": [
+				-48.2799836,
+				-18.8999975,
+				-48.2799836,
+				-18.8999975
+			]
+		},
+		{
+			"id": "belo-horizonte",
+			"name": "Belo Horizonte",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-43.9169504,
+				-19.9130802
+			],
+			"bbox": [
+				-43.9169504,
+				-19.9130802,
+				-43.9169504,
+				-19.9130802
+			]
+		},
+		{
+			"id": "vitoria",
+			"name": "Vitória",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-40.35394335476039,
+				-20.332042290924733
+			],
+			"bbox": [
+				-40.35394335476039,
+				-20.332042290924733,
+				-40.35394335476039,
+				-20.332042290924733
+			]
+		},
+		{
+			"id": "campo-grande",
+			"name": "Campo Grande",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-54.6185711,
+				-20.4480863
+			],
+			"bbox": [
+				-54.6185711,
+				-20.4480863,
+				-54.6185711,
+				-20.4480863
+			]
+		},
+		{
+			"id": "ribeirao-preto",
+			"name": "Ribeirão Preto",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-47.8299852,
+				-21.1700399
+			],
+			"bbox": [
+				-47.8299852,
+				-21.1700399,
+				-47.8299852,
+				-21.1700399
+			]
+		},
+		{
+			"id": "juiz-de-fora",
+			"name": "Juiz de Fora",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-43.3749858,
+				-21.7700032
+			],
+			"bbox": [
+				-43.3749858,
+				-21.7700032,
+				-43.3749858,
+				-21.7700032
+			]
+		},
+		{
+			"id": "volta-redonda",
+			"name": "Volta Redonda",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-44.0949677,
+				-22.5195699
+			],
+			"bbox": [
+				-44.0949677,
+				-22.5195699,
+				-44.0949677,
+				-22.5195699
+			]
+		},
+		{
+			"id": "americana",
+			"name": "Americana",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-47.3299899,
+				-22.7499434
+			],
+			"bbox": [
+				-47.3299899,
+				-22.7499434,
+				-47.3299899,
+				-22.7499434
+			]
+		},
+		{
+			"id": "nova-iguacu",
+			"name": "Nova Iguaçu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-43.44518951988282,
+				-22.755051717816965
+			],
+			"bbox": [
+				-43.44518951988282,
+				-22.755051717816965,
+				-43.44518951988282,
+				-22.755051717816965
+			]
+		},
+		{
+			"id": "duque-de-caxias",
+			"name": "Duque de Caxias",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-43.30560241118898,
+				-22.796378408911043
+			],
+			"bbox": [
+				-43.30560241118898,
+				-22.796378408911043,
+				-43.30560241118898,
+				-22.796378408911043
+			]
+		},
+		{
+			"id": "niteroi",
+			"name": "Niterói",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-43.10582636571889,
+				-22.88253375568974
+			],
+			"bbox": [
+				-43.10582636571889,
+				-22.88253375568974,
+				-43.10582636571889,
+				-22.88253375568974
+			]
+		},
+		{
+			"id": "rio-de-janeiro",
+			"name": "Rio de Janeiro",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-43.212117466834385,
+				-22.907308056882364
+			],
+			"bbox": [
+				-43.212117466834385,
+				-22.907308056882364,
+				-43.212117466834385,
+				-22.907308056882364
+			]
+		},
+		{
+			"id": "campinas",
+			"name": "Campinas",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-47.05588541861934,
+				-22.90789786605005
+			],
+			"bbox": [
+				-47.05588541861934,
+				-22.90789786605005,
+				-47.05588541861934,
+				-22.90789786605005
+			]
+		},
+		{
+			"id": "sao-jose-dos-campos",
+			"name": "São José dos Campos",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-45.8799492,
+				-23.1999935
+			],
+			"bbox": [
+				-45.8799492,
+				-23.1999935,
+				-45.8799492,
+				-23.1999935
+			]
+		},
+		{
+			"id": "jundiai",
+			"name": "Jundiaí",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-46.8799915,
+				-23.1999935
+			],
+			"bbox": [
+				-46.8799915,
+				-23.1999935,
+				-46.8799915,
+				-23.1999935
+			]
+		},
+		{
+			"id": "londrina",
+			"name": "Londrina",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-51.1799874,
+				-23.300039
+			],
+			"bbox": [
+				-51.1799874,
+				-23.300039,
+				-51.1799874,
+				-23.300039
+			]
+		},
+		{
+			"id": "sorocaba",
+			"name": "Sorocaba",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-47.4699813,
+				-23.4900016
+			],
+			"bbox": [
+				-47.4699813,
+				-23.4900016,
+				-47.4699813,
+				-23.4900016
+			]
+		},
+		{
+			"id": "sao-paulo",
+			"name": "São Paulo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-46.6269658,
+				-23.5567337
+			],
+			"bbox": [
+				-46.6269658,
+				-23.5567337,
+				-46.6269658,
+				-23.5567337
+			]
+		},
+		{
+			"id": "santo-andre",
+			"name": "Santo André",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-46.5278166,
+				-23.652834
+			],
+			"bbox": [
+				-46.5278166,
+				-23.652834,
+				-46.5278166,
+				-23.652834
+			]
+		},
+		{
+			"id": "santos",
+			"name": "Santos",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-46.32849571460007,
+				-23.961835598193826
+			],
+			"bbox": [
+				-46.32849571460007,
+				-23.961835598193826,
+				-46.32849571460007,
+				-23.961835598193826
+			]
+		},
+		{
+			"id": "curitiba",
+			"name": "Curitiba",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-49.3219435,
+				-25.4180671
+			],
+			"bbox": [
+				-49.3219435,
+				-25.4180671,
+				-49.3219435,
+				-25.4180671
+			]
+		},
+		{
+			"id": "foz-do-iguacu",
+			"name": "Foz do Iguaçu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-54.5299897,
+				-25.5234692
+			],
+			"bbox": [
+				-54.5299897,
+				-25.5234692,
+				-54.5299897,
+				-25.5234692
+			]
+		},
+		{
+			"id": "sao-jose-dos-pinhais",
+			"name": "São José dos Pinhais",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-49.1800061,
+				-25.5700297
+			],
+			"bbox": [
+				-49.1800061,
+				-25.5700297,
+				-49.1800061,
+				-25.5700297
+			]
+		},
+		{
+			"id": "joinville",
+			"name": "Joinville",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-48.8418952,
+				-26.3180122
+			],
+			"bbox": [
+				-48.8418952,
+				-26.3180122,
+				-48.8418952,
+				-26.3180122
+			]
+		},
+		{
+			"id": "florianopolis",
+			"name": "Florianópolis",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-48.5219664,
+				-27.5780387
+			],
+			"bbox": [
+				-48.5219664,
+				-27.5780387,
+				-48.5219664,
+				-27.5780387
+			]
+		},
+		{
+			"id": "novo-hamburgo",
+			"name": "Novo Hamburgo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-51.1399899,
+				-29.709622
+			],
+			"bbox": [
+				-51.1399899,
+				-29.709622,
+				-51.1399899,
+				-29.709622
+			]
+		},
+		{
+			"id": "canoas",
+			"name": "Canoas",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-51.1799874,
+				-29.9199967
+			],
+			"bbox": [
+				-51.1799874,
+				-29.9199967,
+				-51.1799874,
+				-29.9199967
+			]
+		},
+		{
+			"id": "porto-alegre",
+			"name": "Porto Alegre",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-51.2019579,
+				-30.0480688
+			],
+			"bbox": [
+				-51.2019579,
+				-30.0480688,
+				-51.2019579,
+				-30.0480688
+			]
+		}
+	],
+	"tourOrder": [
+		"vila-velha",
+		"macapa",
+		"belem",
+		"sao-luis",
+		"manaus",
+		"fortaleza",
+		"teresina",
+		"natal",
+		"joao-pessoa",
+		"campina-grande",
+		"olinda",
+		"recife",
+		"jaboatao",
+		"maceio",
+		"aracaju",
+		"feira-de-santana",
+		"salvador",
+		"cuiaba",
+		"brasilia",
+		"goiania",
+		"uberlandia",
+		"belo-horizonte",
+		"vitoria",
+		"campo-grande",
+		"ribeirao-preto",
+		"juiz-de-fora",
+		"volta-redonda",
+		"americana",
+		"nova-iguacu",
+		"duque-de-caxias",
+		"niteroi",
+		"rio-de-janeiro",
+		"campinas",
+		"sao-jose-dos-campos",
+		"jundiai",
+		"londrina",
+		"sorocaba",
+		"sao-paulo",
+		"santo-andre",
+		"santos",
+		"curitiba",
+		"foz-do-iguacu",
+		"sao-jose-dos-pinhais",
+		"joinville",
+		"florianopolis",
+		"novo-hamburgo",
+		"canoas",
+		"porto-alegre"
+	]
+}

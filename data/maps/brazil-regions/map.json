@@ -1,0 +1,497 @@
+{
+	"id": "brazil-regions",
+	"name": "Brazil — States",
+	"country": "Brazil",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "roraima",
+			"name": "Roraima",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-61.835899999999995,
+				1.93385
+			],
+			"bbox": [
+				-64.8013,
+				-1.3995,
+				-58.8705,
+				5.2672
+			]
+		},
+		{
+			"id": "amapa",
+			"name": "Amapá",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-52.3302,
+				1.6322499999999998
+			],
+			"bbox": [
+				-54.7874,
+				-1.1766,
+				-49.873,
+				4.4411
+			]
+		},
+		{
+			"id": "para",
+			"name": "Pará",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-52.5283,
+				-3.6266999999999996
+			],
+			"bbox": [
+				-58.972,
+				-9.844,
+				-46.0846,
+				2.5906
+			]
+		},
+		{
+			"id": "amazonas",
+			"name": "Amazonas",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-65.09825,
+				-3.8010499999999996
+			],
+			"bbox": [
+				-73.8068,
+				-9.838,
+				-56.3897,
+				2.2359
+			]
+		},
+		{
+			"id": "ceara",
+			"name": "Ceará",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-39.3429,
+				-5.32015
+			],
+			"bbox": [
+				-41.4494,
+				-7.854,
+				-37.2364,
+				-2.7863
+			]
+		},
+		{
+			"id": "maranhao",
+			"name": "Maranhão",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-45.27395,
+				-5.73915
+			],
+			"bbox": [
+				-48.7326,
+				-10.3177,
+				-41.8153,
+				-1.1606
+			]
+		},
+		{
+			"id": "rio-grande-do-norte",
+			"name": "Rio Grande do Norte",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-36.77515,
+				-5.902950000000001
+			],
+			"bbox": [
+				-38.587,
+				-6.976,
+				-34.9633,
+				-4.8299
+			]
+		},
+		{
+			"id": "piaui",
+			"name": "Piauí",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-43.19885,
+				-6.83075
+			],
+			"bbox": [
+				-45.9814,
+				-10.8962,
+				-40.4163,
+				-2.7653
+			]
+		},
+		{
+			"id": "paraiba",
+			"name": "Paraíba",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-36.76245,
+				-7.15415
+			],
+			"bbox": [
+				-38.7275,
+				-8.2835,
+				-34.7974,
+				-6.0248
+			]
+		},
+		{
+			"id": "pernambuco",
+			"name": "Pernambuco",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-38.08805,
+				-8.37805
+			],
+			"bbox": [
+				-41.3708,
+				-9.4863,
+				-34.8053,
+				-7.2698
+			]
+		},
+		{
+			"id": "acre",
+			"name": "Acre",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-70.31415,
+				-9.12195
+			],
+			"bbox": [
+				-73.9794,
+				-11.126,
+				-66.6489,
+				-7.1179
+			]
+		},
+		{
+			"id": "tocantins",
+			"name": "Tocantins",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-48.2502,
+				-9.259
+			],
+			"bbox": [
+				-50.7427,
+				-13.3542,
+				-45.7577,
+				-5.1638
+			]
+		},
+		{
+			"id": "alagoas",
+			"name": "Alagoas",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-36.69175,
+				-9.668099999999999
+			],
+			"bbox": [
+				-38.2352,
+				-10.5021,
+				-35.1483,
+				-8.8341
+			]
+		},
+		{
+			"id": "sergipe",
+			"name": "Sergipe",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-37.3206,
+				-10.542950000000001
+			],
+			"bbox": [
+				-38.2331,
+				-11.5591,
+				-36.4081,
+				-9.5268
+			]
+		},
+		{
+			"id": "rondonia",
+			"name": "Rondônia",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-63.3273,
+				-10.83165
+			],
+			"bbox": [
+				-66.8305,
+				-13.6628,
+				-59.8241,
+				-8.0005
+			]
+		},
+		{
+			"id": "mato-grosso",
+			"name": "Mato Grosso",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-55.923500000000004,
+				-12.68535
+			],
+			"bbox": [
+				-61.6113,
+				-18.0316,
+				-50.2357,
+				-7.3391
+			]
+		},
+		{
+			"id": "bahia",
+			"name": "Bahia",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-42.002700000000004,
+				-13.428650000000001
+			],
+			"bbox": [
+				-46.5707,
+				-18.3232,
+				-37.4347,
+				-8.5341
+			]
+		},
+		{
+			"id": "distrito-federal",
+			"name": "Distrito Federal",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-47.7902,
+				-15.765
+			],
+			"bbox": [
+				-48.2779,
+				-16.0401,
+				-47.3025,
+				-15.4899
+			]
+		},
+		{
+			"id": "goias",
+			"name": "Goiás",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-49.5779,
+				-15.936700000000002
+			],
+			"bbox": [
+				-53.2433,
+				-19.4735,
+				-45.9125,
+				-12.3999
+			]
+		},
+		{
+			"id": "minas-gerais",
+			"name": "Minas Gerais",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-45.446600000000004,
+				-18.5693
+			],
+			"bbox": [
+				-51.0276,
+				-22.8929,
+				-39.8656,
+				-14.2457
+			]
+		},
+		{
+			"id": "espirito-santo",
+			"name": "Espírito Santo",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-40.7685,
+				-19.58395
+			],
+			"bbox": [
+				-41.8644,
+				-21.274,
+				-39.6726,
+				-17.8939
+			]
+		},
+		{
+			"id": "mato-grosso-do-sul",
+			"name": "Mato Grosso do Sul",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-54.56,
+				-20.6189
+			],
+			"bbox": [
+				-58.1588,
+				-24.0504,
+				-50.9612,
+				-17.1874
+			]
+		},
+		{
+			"id": "rio-de-janeiro",
+			"name": "Rio de Janeiro",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-42.912850000000006,
+				-22.06505
+			],
+			"bbox": [
+				-44.8622,
+				-23.3532,
+				-40.9635,
+				-20.7769
+			]
+		},
+		{
+			"id": "sao-paulo",
+			"name": "São Paulo",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-48.66715,
+				-22.549599999999998
+			],
+			"bbox": [
+				-53.168,
+				-25.3073,
+				-44.1663,
+				-19.7919
+			]
+		},
+		{
+			"id": "parana",
+			"name": "Paraná",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-51.34595,
+				-24.6011
+			],
+			"bbox": [
+				-54.6098,
+				-26.6805,
+				-48.0821,
+				-22.5217
+			]
+		},
+		{
+			"id": "santa-catarina",
+			"name": "Santa Catarina",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-51.10965,
+				-27.6515
+			],
+			"bbox": [
+				-53.842,
+				-29.3245,
+				-48.3773,
+				-25.9785
+			]
+		},
+		{
+			"id": "rio-grande-do-sul",
+			"name": "Rio Grande do Sul",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-53.65015,
+				-30.406349999999996
+			],
+			"bbox": [
+				-57.5868,
+				-33.7407,
+				-49.7135,
+				-27.072
+			]
+		}
+	],
+	"tourOrder": [
+		"roraima",
+		"amapa",
+		"para",
+		"amazonas",
+		"ceara",
+		"maranhao",
+		"rio-grande-do-norte",
+		"piaui",
+		"paraiba",
+		"pernambuco",
+		"acre",
+		"tocantins",
+		"alagoas",
+		"sergipe",
+		"rondonia",
+		"mato-grosso",
+		"bahia",
+		"distrito-federal",
+		"goias",
+		"minas-gerais",
+		"espirito-santo",
+		"mato-grosso-do-sul",
+		"rio-de-janeiro",
+		"sao-paulo",
+		"parana",
+		"santa-catarina",
+		"rio-grande-do-sul"
+	]
+}

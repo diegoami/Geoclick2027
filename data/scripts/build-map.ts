@@ -103,6 +103,59 @@ const NAME_FIXUPS: Record<string, Record<string, string>> = {
 	// confirmed against `name_sv` ("Örebro län"), not guessed.
 	Sweden: {
 		Orebro: 'Örebro'
+	},
+	// Finland's `name` field is inconsistent, not uniformly English or
+	// uniformly Finnish - 6 of 18 rows (Kainuu, Kymenlaakso, Uusimaa,
+	// Satakunta, Pirkanmaa, Päijät-Häme) are already the correct native
+	// Finnish name, the other 12 are English translations. Fixed up to
+	// native Finnish throughout (matching every other country's
+	// local-name convention, e.g. Sweden/Poland/Ukraine above), using the
+	// Finnish segment of `name_alt` (a pipe-separated Finnish|Swedish
+	// list, Finland being officially bilingual) rather than a guess - and
+	// the modern short form where `name_alt` lists an older formal one
+	// first (Lapland's alt list starts "Lapin lääni" but also lists the
+	// actual modern name "Lappi").
+	Finland: {
+		Lapland: 'Lappi',
+		'Northern Ostrobothnia': 'Pohjois-Pohjanmaa',
+		'North Karelia': 'Pohjois-Karjala',
+		'South Karelia': 'Etelä-Karjala',
+		'Finland Proper': 'Varsinais-Suomi',
+		Ostrobothnia: 'Pohjanmaa',
+		'Central Ostrobothnia': 'Keski-Pohjanmaa',
+		'Northern Savonia': 'Pohjois-Savo',
+		'Southern Savonia': 'Etelä-Savo',
+		'Central Finland': 'Keski-Suomi',
+		'Southern Ostrobothnia': 'Etelä-Pohjanmaa',
+		'Tavastia Proper': 'Kanta-Häme'
+	},
+	// Russia's raw `name` field mixes three unrelated issues, found by
+	// auditing all 86 rows (not spot-checked): one real data corruption
+	// ("Maga Buryatdan" - confirmed via iso_3166_2 RU-MAG and name_local
+	// "Магаданская область" that this is actually Magadan), one long
+	// official title where every other similarly-sized region already
+	// uses its short common name (Chukotka, not "Chukchi Autonomous
+	// Okrug"), and the same soft-sign-apostrophe transliteration already
+	// dropped for Ukraine's fixups above, applied here for the same
+	// reason (Astrakhan/Ryazan/Yaroslavl/Tver/Perm/Primorye/Tyumen/
+	// Ulyanovsk/Stavropol, not the apostrophed forms). Deliberately not a
+	// full pass renaming every republic to its "-ia"-suffixed common
+	// form (Chuvashia, Udmurtia, Kalmykia, ...) - those shorter adjectival
+	// forms in the source aren't wrong, just less common, a different
+	// class of issue from an actual data error or a stray apostrophe.
+	Russia: {
+		'Maga Buryatdan': 'Magadan',
+		'Chukchi Autonomous Okrug': 'Chukotka',
+		"Arkhangel'sk": 'Arkhangelsk',
+		"Astrakhan'": 'Astrakhan',
+		"Ryazan'": 'Ryazan',
+		"Yaroslavl'": 'Yaroslavl',
+		"Tver'": 'Tver',
+		"Perm'": 'Perm',
+		"Primor'ye": 'Primorye',
+		"Tyumen'": 'Tyumen',
+		"Ul'yanovsk": 'Ulyanovsk',
+		"Stavropol'": 'Stavropol'
 	}
 };
 

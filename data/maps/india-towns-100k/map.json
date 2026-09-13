@@ -1,0 +1,911 @@
+{
+	"id": "india-towns-100k",
+	"name": "India — Towns",
+	"country": "India",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "srinagar",
+			"name": "Srinagar",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				74.82830910981222,
+				34.069473874645354
+			],
+			"bbox": [
+				74.82830910981222,
+				34.069473874645354,
+				74.82830910981222,
+				34.069473874645354
+			]
+		},
+		{
+			"id": "amritsar",
+			"name": "Amritsar",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				74.8680472,
+				31.6419384
+			],
+			"bbox": [
+				74.8680472,
+				31.6419384,
+				74.8680472,
+				31.6419384
+			]
+		},
+		{
+			"id": "ludhiana",
+			"name": "Ludhiana",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				75.8703116,
+				30.9297079
+			],
+			"bbox": [
+				75.8703116,
+				30.9297079,
+				75.8703116,
+				30.9297079
+			]
+		},
+		{
+			"id": "chandigarh",
+			"name": "Chandigarh",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				76.7780598,
+				30.7219428
+			],
+			"bbox": [
+				76.7780598,
+				30.7219428,
+				76.7780598,
+				30.7219428
+			]
+		},
+		{
+			"id": "meerut",
+			"name": "Meerut",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				77.6980553,
+				29.0023579
+			],
+			"bbox": [
+				77.6980553,
+				29.0023579,
+				77.6980553,
+				29.0023579
+			]
+		},
+		{
+			"id": "delhi",
+			"name": "Delhi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				77.2280582,
+				28.6719388
+			],
+			"bbox": [
+				77.2280582,
+				28.6719388,
+				77.2280582,
+				28.6719388
+			]
+		},
+		{
+			"id": "ghaziabad",
+			"name": "Ghaziabad",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				77.4064452,
+				28.6623269
+			],
+			"bbox": [
+				77.4064452,
+				28.6623269,
+				77.4064452,
+				28.6623269
+			]
+		},
+		{
+			"id": "faridabad",
+			"name": "Faridabad",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				77.3147208,
+				28.4352792
+			],
+			"bbox": [
+				77.3147208,
+				28.4352792,
+				77.3147208,
+				28.4352792
+			]
+		},
+		{
+			"id": "agra",
+			"name": "Agra",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				78.0130749,
+				27.1723662
+			],
+			"bbox": [
+				78.0130749,
+				27.1723662,
+				78.0130749,
+				27.1723662
+			]
+		},
+		{
+			"id": "jaipur",
+			"name": "Jaipur",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				75.8080415,
+				26.9230791
+			],
+			"bbox": [
+				75.8080415,
+				26.9230791,
+				75.8080415,
+				26.9230791
+			]
+		},
+		{
+			"id": "lucknow",
+			"name": "Lucknow",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				80.9130529,
+				26.8569849
+			],
+			"bbox": [
+				80.9130529,
+				26.8569849,
+				80.9130529,
+				26.8569849
+			]
+		},
+		{
+			"id": "kanpur",
+			"name": "Kanpur",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				80.3180504,
+				26.4619445
+			],
+			"bbox": [
+				80.3180504,
+				26.4619445,
+				80.3180504,
+				26.4619445
+			]
+		},
+		{
+			"id": "jodhpur",
+			"name": "Jodhpur",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				73.014827,
+				26.2937118
+			],
+			"bbox": [
+				73.014827,
+				26.2937118,
+				73.014827,
+				26.2937118
+			]
+		},
+		{
+			"id": "gwalior",
+			"name": "Gwalior",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				78.16919652961643,
+				26.20003488730391
+			],
+			"bbox": [
+				78.16919652961643,
+				26.20003488730391,
+				78.16919652961643,
+				26.20003488730391
+			]
+		},
+		{
+			"id": "guwahati",
+			"name": "Guwahati",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				91.7680492,
+				26.1619628
+			],
+			"bbox": [
+				91.7680492,
+				26.1619628,
+				91.7680492,
+				26.1619628
+			]
+		},
+		{
+			"id": "patna",
+			"name": "Patna",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				85.1280928,
+				25.626905
+			],
+			"bbox": [
+				85.1280928,
+				25.626905,
+				85.1280928,
+				25.626905
+			]
+		},
+		{
+			"id": "prayagraj",
+			"name": "Prayagraj",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				81.838061,
+				25.4569412
+			],
+			"bbox": [
+				81.838061,
+				25.4569412,
+				81.838061,
+				25.4569412
+			]
+		},
+		{
+			"id": "varanasi",
+			"name": "Varanasi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				82.9980936,
+				25.3319359
+			],
+			"bbox": [
+				82.9980936,
+				25.3319359,
+				82.9980936,
+				25.3319359
+			]
+		},
+		{
+			"id": "dhanbad",
+			"name": "Dhanbad",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				86.4180399,
+				23.8023394
+			],
+			"bbox": [
+				86.4180399,
+				23.8023394,
+				86.4180399,
+				23.8023394
+			]
+		},
+		{
+			"id": "asansol",
+			"name": "Asansol",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				86.9813874,
+				23.6852792
+			],
+			"bbox": [
+				86.9813874,
+				23.6852792,
+				86.9813874,
+				23.6852792
+			]
+		},
+		{
+			"id": "ranchi",
+			"name": "Ranchi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				85.3280805,
+				23.3719522
+			],
+			"bbox": [
+				85.3280805,
+				23.3719522,
+				85.3280805,
+				23.3719522
+			]
+		},
+		{
+			"id": "bhopal",
+			"name": "Bhopal",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				77.4080472,
+				23.2519337
+			],
+			"bbox": [
+				77.4080472,
+				23.2519337,
+				77.4080472,
+				23.2519337
+			]
+		},
+		{
+			"id": "jabalpur",
+			"name": "Jabalpur",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				79.9531115,
+				23.1770028
+			],
+			"bbox": [
+				79.9531115,
+				23.1770028,
+				79.9531115,
+				23.1770028
+			]
+		},
+		{
+			"id": "ahmedabad",
+			"name": "Ahmedabad",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				72.5780578,
+				23.0319988
+			],
+			"bbox": [
+				72.5780578,
+				23.0319988,
+				72.5780578,
+				23.0319988
+			]
+		},
+		{
+			"id": "jamshedpur",
+			"name": "Jamshedpur",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				86.1955728,
+				22.7894813
+			],
+			"bbox": [
+				86.1955728,
+				22.7894813,
+				86.1955728,
+				22.7894813
+			]
+		},
+		{
+			"id": "indore",
+			"name": "Indore",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				75.8630769,
+				22.7170051
+			],
+			"bbox": [
+				75.8630769,
+				22.7170051,
+				75.8630769,
+				22.7170051
+			]
+		},
+		{
+			"id": "howrah",
+			"name": "Howrah",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				88.31851641697797,
+				22.584697601843814
+			],
+			"bbox": [
+				88.31851641697797,
+				22.584697601843814,
+				88.31851641697797,
+				22.584697601843814
+			]
+		},
+		{
+			"id": "kolkata",
+			"name": "Kolkata",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				88.36912550443886,
+				22.569578883795778
+			],
+			"bbox": [
+				88.36912550443886,
+				22.569578883795778,
+				88.36912550443886,
+				22.569578883795778
+			]
+		},
+		{
+			"id": "vadodara",
+			"name": "Vadodara",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				73.1780728,
+				22.3119652
+			],
+			"bbox": [
+				73.1780728,
+				22.3119652,
+				73.1780728,
+				22.3119652
+			]
+		},
+		{
+			"id": "rajkot",
+			"name": "Rajkot",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				70.7980631,
+				22.3119652
+			],
+			"bbox": [
+				70.7980631,
+				22.3119652,
+				70.7980631,
+				22.3119652
+			]
+		},
+		{
+			"id": "bhilai",
+			"name": "Bhilai",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				81.3722129528492,
+				21.21126196187745
+			],
+			"bbox": [
+				81.3722129528492,
+				21.21126196187745,
+				81.3722129528492,
+				21.21126196187745
+			]
+		},
+		{
+			"id": "surat",
+			"name": "Surat",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				72.8380936,
+				21.2019296
+			],
+			"bbox": [
+				72.8380936,
+				21.2019296,
+				72.8380936,
+				21.2019296
+			]
+		},
+		{
+			"id": "nagpur",
+			"name": "Nagpur",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				79.088048,
+				21.1719056
+			],
+			"bbox": [
+				79.088048,
+				21.1719056,
+				79.088048,
+				21.1719056
+			]
+		},
+		{
+			"id": "nashik",
+			"name": "Nashik",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				73.7780362,
+				20.0023646
+			],
+			"bbox": [
+				73.7780362,
+				20.0023646,
+				73.7780362,
+				20.0023646
+			]
+		},
+		{
+			"id": "aurangabad",
+			"name": "Aurangabad",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				75.32894831924871,
+				19.861686210186296
+			],
+			"bbox": [
+				75.32894831924871,
+				19.861686210186296,
+				75.32894831924871,
+				19.861686210186296
+			]
+		},
+		{
+			"id": "kalyan",
+			"name": "Kalyan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				73.1601749,
+				19.250232
+			],
+			"bbox": [
+				73.1601749,
+				19.250232,
+				73.1601749,
+				19.250232
+			]
+		},
+		{
+			"id": "mumbai",
+			"name": "Mumbai",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				72.8758393972653,
+				19.06840847529168
+			],
+			"bbox": [
+				72.8758393972653,
+				19.06840847529168,
+				72.8758393972653,
+				19.06840847529168
+			]
+		},
+		{
+			"id": "pune",
+			"name": "Pune",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				73.85189174674915,
+				18.516394229926586
+			],
+			"bbox": [
+				73.85189174674915,
+				18.516394229926586,
+				73.85189174674915,
+				18.516394229926586
+			]
+		},
+		{
+			"id": "warangal",
+			"name": "Warangal",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				79.5799898,
+				18.0099976
+			],
+			"bbox": [
+				79.5799898,
+				18.0099976,
+				79.5799898,
+				18.0099976
+			]
+		},
+		{
+			"id": "visakhapatnam",
+			"name": "Visakhapatnam",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				83.21984846162533,
+				17.68290316150216
+			],
+			"bbox": [
+				83.21984846162533,
+				17.68290316150216,
+				83.21984846162533,
+				17.68290316150216
+			]
+		},
+		{
+			"id": "solapur",
+			"name": "Solapur",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				75.8980618,
+				17.6723518
+			],
+			"bbox": [
+				75.8980618,
+				17.6723518,
+				75.8980618,
+				17.6723518
+			]
+		},
+		{
+			"id": "hyderabad",
+			"name": "Hyderabad",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				78.4780077,
+				17.401929
+			],
+			"bbox": [
+				78.4780077,
+				17.401929,
+				78.4780077,
+				17.401929
+			]
+		},
+		{
+			"id": "vijayawada",
+			"name": "Vijayawada",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				80.6280574,
+				16.5219052
+			],
+			"bbox": [
+				80.6280574,
+				16.5219052,
+				80.6280574,
+				16.5219052
+			]
+		},
+		{
+			"id": "chennai",
+			"name": "Chennai",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				80.2780529,
+				13.0919337
+			],
+			"bbox": [
+				80.2780529,
+				13.0919337,
+				80.2780529,
+				13.0919337
+			]
+		},
+		{
+			"id": "bengaluru",
+			"name": "Bengaluru",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				77.5580639,
+				12.971941
+			],
+			"bbox": [
+				77.5580639,
+				12.971941,
+				77.5580639,
+				12.971941
+			]
+		},
+		{
+			"id": "kozhikode",
+			"name": "Kozhikode",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				75.7680439,
+				11.2523819
+			],
+			"bbox": [
+				75.7680439,
+				11.2523819,
+				75.7680439,
+				11.2523819
+			]
+		},
+		{
+			"id": "coimbatore",
+			"name": "Coimbatore",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				76.9480753,
+				11.0019062
+			],
+			"bbox": [
+				76.9480753,
+				11.0019062,
+				76.9480753,
+				11.0019062
+			]
+		},
+		{
+			"id": "kochi",
+			"name": "Kochi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				76.2219697,
+				10.0169534
+			],
+			"bbox": [
+				76.2219697,
+				10.0169534,
+				76.2219697,
+				10.0169534
+			]
+		},
+		{
+			"id": "madurai",
+			"name": "Madurai",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				78.1180814,
+				9.9219721
+			],
+			"bbox": [
+				78.1180814,
+				9.9219721,
+				78.1180814,
+				9.9219721
+			]
+		},
+		{
+			"id": "thiruvananthapuram",
+			"name": "Thiruvananthapuram",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				76.92519070332577,
+				8.515520591980557
+			],
+			"bbox": [
+				76.92519070332577,
+				8.515520591980557,
+				76.92519070332577,
+				8.515520591980557
+			]
+		}
+	],
+	"tourOrder": [
+		"srinagar",
+		"amritsar",
+		"ludhiana",
+		"chandigarh",
+		"meerut",
+		"delhi",
+		"ghaziabad",
+		"faridabad",
+		"agra",
+		"jaipur",
+		"lucknow",
+		"kanpur",
+		"jodhpur",
+		"gwalior",
+		"guwahati",
+		"patna",
+		"prayagraj",
+		"varanasi",
+		"dhanbad",
+		"asansol",
+		"ranchi",
+		"bhopal",
+		"jabalpur",
+		"ahmedabad",
+		"jamshedpur",
+		"indore",
+		"howrah",
+		"kolkata",
+		"vadodara",
+		"rajkot",
+		"bhilai",
+		"surat",
+		"nagpur",
+		"nashik",
+		"aurangabad",
+		"kalyan",
+		"mumbai",
+		"pune",
+		"warangal",
+		"visakhapatnam",
+		"solapur",
+		"hyderabad",
+		"vijayawada",
+		"chennai",
+		"bengaluru",
+		"kozhikode",
+		"coimbatore",
+		"kochi",
+		"madurai",
+		"thiruvananthapuram"
+	]
+}
