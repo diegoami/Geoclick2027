@@ -1,0 +1,333 @@
+<title>Geoclick Icon Shortlist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+	:root {
+		--ground: #f4eedf;
+		--surface: #fffdf8;
+		--ink: #2c3a33;
+		--muted: #5f6b63;
+		--rule: #ddd3bd;
+		--accent: #b5691f;
+		--tab-bar: #e4ddcc;
+		--tab-active: #fffdf8;
+		color-scheme: light;
+	}
+	@media (prefers-color-scheme: dark) {
+		:root:not([data-theme='light']) {
+			--ground: #1b2420;
+			--surface: #232e29;
+			--ink: #ece6d6;
+			--muted: #a7ae9f;
+			--rule: #36433c;
+			--accent: #e0914a;
+			--tab-bar: #151c19;
+			--tab-active: #2b3731;
+			color-scheme: dark;
+		}
+	}
+	:root[data-theme='dark'] {
+		--ground: #1b2420;
+		--surface: #232e29;
+		--ink: #ece6d6;
+		--muted: #a7ae9f;
+		--rule: #36433c;
+		--accent: #e0914a;
+		--tab-bar: #151c19;
+		--tab-active: #2b3731;
+		color-scheme: dark;
+	}
+
+	* { box-sizing: border-box; }
+	body {
+		background: var(--ground);
+		color: var(--ink);
+		font: 400 1rem/1.55 'Atkinson Hyperlegible', system-ui, sans-serif;
+		padding-inline: clamp(16px, 4vw, 48px);
+		padding-block: 40px 64px;
+		margin: 0;
+	}
+	main { max-width: 1120px; margin-inline: auto; display: grid; gap: 28px; }
+	h1, h2 { font-family: 'Bricolage Grotesque', system-ui, sans-serif; text-wrap: balance; margin: 0; }
+	h1 { font-size: clamp(1.9rem, 4vw, 2.6rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
+	h2 { font-size: 1.5rem; font-weight: 600; }
+	p { margin: 0; }
+
+	.intro { display: grid; gap: 14px; max-width: 68ch; }
+	.eyebrow { font: 500 0.75rem/1 'IBM Plex Mono', ui-monospace, monospace; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+	.intro p { color: var(--muted); }
+	.intro strong { color: var(--ink); }
+
+	.decide {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+		gap: 12px;
+	}
+	.decide div { border-left: 3px solid var(--accent); padding: 4px 0 4px 14px; }
+	.decide b { display: block; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 600; font-size: 1.05rem; }
+	.decide span { color: var(--muted); font-size: 0.95rem; }
+
+	.band {
+		background: var(--surface);
+		border: 1px solid var(--rule);
+		border-radius: 14px;
+		padding: 24px;
+		display: grid;
+		gap: 20px;
+	}
+	.band.baseline { background: transparent; border-style: dashed; }
+	.band-head { display: flex; gap: 18px; align-items: start; }
+	.letter {
+		font: 800 2.4rem/1 'Bricolage Grotesque', system-ui, sans-serif;
+		color: var(--accent);
+		min-width: 1.4ch;
+	}
+	.idea { color: var(--muted); max-width: 62ch; margin-top: 4px; }
+
+	.panels {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 14px;
+	}
+	.panel { margin: 0; display: grid; gap: 10px; align-content: start; }
+	.panel.sizes { grid-column: 1 / -1; }
+	figcaption { font: 500 0.72rem/1 'IBM Plex Mono', ui-monospace, monospace; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+
+	.mark { display: block; }
+	.tile { border-radius: var(--r); overflow: hidden; line-height: 0; }
+	.size-row { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 22px; }
+	.size { display: grid; justify-items: center; gap: 8px; }
+	.px { font: 500 0.75rem/1 'IBM Plex Mono', ui-monospace, monospace; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+	.tab-strip { display: flex; gap: 2px; background: var(--tab-bar); padding: 8px 8px 0; border-radius: 10px 10px 0 0; }
+	.tab { display: flex; align-items: center; gap: 8px; padding: 8px 14px; font: 400 0.8rem/1 system-ui, sans-serif; color: var(--muted); border-radius: 8px 8px 0 0; min-width: 0; white-space: nowrap; }
+	.tab.active { background: var(--tab-active); color: var(--ink); }
+	.favicon { width: 16px; height: 16px; flex: none; line-height: 0; border-radius: 3px; overflow: hidden; }
+	.favicon.blank { background: var(--rule); }
+
+	.desktops { grid-template-columns: 1fr 1fr; }
+	.desktops figcaption { grid-column: 1 / -1; }
+	.desk { display: grid; justify-items: center; gap: 6px; padding: 14px 8px; border-radius: 8px; font: 400 0.72rem/1.2 system-ui, sans-serif; }
+	.desk.light { background: #e9eef2; color: #1f2328; }
+	.desk.dark { background: #1f2024; color: #e8e8ea; }
+
+	.shape-row { display: flex; flex-wrap: wrap; gap: 10px; }
+	.shape { width: 72px; height: 72px; overflow: hidden; line-height: 0; position: relative; }
+	.shape.circle { border-radius: 50%; }
+	.shape.squircle { border-radius: 34%; }
+	.shape.rounded { border-radius: 16%; }
+	.shape.safe { border-radius: 16%; }
+	.shape.safe::after {
+		content: '';
+		position: absolute;
+		inset: 17%;
+		border-radius: 50%;
+		border: 1.5px dashed rgba(255, 255, 255, 0.85);
+		box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+	}
+
+	.baseline .band-head .letter { color: var(--muted); }
+	.baseline-row { display: flex; flex-wrap: wrap; align-items: center; gap: 22px; }
+	.footnote { color: var(--muted); font-size: 0.9rem; max-width: 72ch; }
+	.footnote code { font: 500 0.85em 'IBM Plex Mono', ui-monospace, monospace; }
+
+	@media (max-width: 480px) {
+		.band { padding: 18px; }
+		.band-head { gap: 12px; }
+		.letter { font-size: 1.9rem; }
+		.tab:not(.active) { display: none; }
+	}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="icon-a" viewBox="0 0 512 512">
+	
+	<rect width="512" height="512" fill="#2f4a3f"/>
+	<path d="M0 300 120 280 190 330 160 512H0Z M512 180 400 210 370 300 512 330Z" fill="#37574a"/>
+	<ellipse cx="256" cy="410" rx="64" ry="14" fill="#233a30"/>
+	<path d="M256 108c-63 0-113 49-113 110 0 83 113 190 113 190s113-107 113-190c0-61-50-110-113-110z" fill="#f4ecd8"/>
+	<circle cx="256" cy="218" r="42" fill="#d0792a"/>
+</symbol>
+<symbol id="icon-b" viewBox="0 0 512 512">
+	
+	<defs>
+		<clipPath id="b-globe"><circle cx="256" cy="256" r="168"/></clipPath>
+	</defs>
+	<rect width="512" height="512" fill="#2f4a3f"/>
+	<g clip-path="url(#b-globe)">
+		<path d="M262 250 240 190 268 130 250 0H0V262L140 246 200 270Z" fill="#5b9fc8"/>
+		<path d="M262 250 240 190 268 130 250 0H512V248L380 262 330 236Z" fill="#8b86d4"/>
+		<path d="M262 250 282 318 250 372 270 512H0V262L140 246 200 270Z" fill="#e58a73"/>
+		<path d="M262 250 330 236 380 262 512 248V512H270L250 372 282 318Z" fill="#6fb183"/>
+		<path d="M250 0 268 130 240 190 262 250 330 236 380 262 512 248 M262 250 282 318 250 372 270 512 M262 250 200 270 140 246 0 262" fill="none" stroke="#2f4a3f" stroke-width="12" stroke-linejoin="round"/>
+	</g>
+	<path d="M318 346 344 372 392 318" fill="none" stroke="#ffffff" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+<symbol id="icon-c" viewBox="0 0 512 512">
+	
+	<rect width="512" height="512" fill="#c06f24"/>
+	<path d="M150 190C170 130 250 110 300 140 350 120 400 160 380 220 410 270 370 330 320 330 290 380 210 380 190 330 140 320 120 250 150 190Z" fill="#f4ecd8"/>
+	<path d="M236 204 214 182 M268 196V166 M228 236H198" fill="none" stroke="#2c3a33" stroke-width="14" stroke-linecap="round"/>
+	<path d="M268 236V363L302 333 326 386 350 375 326 323H368Z" fill="#2c3a33" stroke="#f4ecd8" stroke-width="10" stroke-linejoin="round"/>
+</symbol>
+<symbol id="icon-current" viewBox="0 0 107 128"><path d="M94.157 22.819c-10.4-14.885-30.94-19.297-45.792-9.835L22.282 29.608A29.92 29.92 0 0 0 8.764 49.65a31.5 31.5 0 0 0 3.108 20.231 30 30 0 0 0-4.477 11.183 31.9 31.9 0 0 0 5.448 24.116c10.402 14.887 30.942 19.297 45.791 9.835l26.083-16.624A29.92 29.92 0 0 0 98.235 78.35a31.53 31.53 0 0 0-3.105-20.232 30 30 0 0 0 4.474-11.182 31.88 31.88 0 0 0-5.447-24.116" style="fill:#ff3e00"/><path d="M45.817 106.582a20.72 20.72 0 0 1-22.237-8.243 19.17 19.17 0 0 1-3.277-14.503 18 18 0 0 1 .624-2.435l.49-1.498 1.337.981a33.6 33.6 0 0 0 10.203 5.098l.97.294-.09.968a5.85 5.85 0 0 0 1.052 3.878 6.24 6.24 0 0 0 6.695 2.485 5.8 5.8 0 0 0 1.603-.704L69.27 76.28a5.43 5.43 0 0 0 2.45-3.631 5.8 5.8 0 0 0-.987-4.371 6.24 6.24 0 0 0-6.698-2.487 5.7 5.7 0 0 0-1.6.704l-9.953 6.345a19 19 0 0 1-5.296 2.326 20.72 20.72 0 0 1-22.237-8.243 19.17 19.17 0 0 1-3.277-14.502 17.99 17.99 0 0 1 8.13-12.052l26.081-16.623a19 19 0 0 1 5.3-2.329 20.72 20.72 0 0 1 22.237 8.243 19.17 19.17 0 0 1 3.277 14.503 18 18 0 0 1-.624 2.435l-.49 1.498-1.337-.98a33.6 33.6 0 0 0-10.203-5.1l-.97-.294.09-.968a5.86 5.86 0 0 0-1.052-3.878 6.24 6.24 0 0 0-6.696-2.485 5.8 5.8 0 0 0-1.602.704L37.73 51.72a5.42 5.42 0 0 0-2.449 3.63 5.79 5.79 0 0 0 .986 4.372 6.24 6.24 0 0 0 6.698 2.486 5.8 5.8 0 0 0 1.602-.704l9.952-6.342a19 19 0 0 1 5.295-2.328 20.72 20.72 0 0 1 22.237 8.242 19.17 19.17 0 0 1 3.277 14.503 18 18 0 0 1-8.13 12.053l-26.081 16.622a19 19 0 0 1-5.3 2.328" style="fill:#fff"/></symbol>
+</defs></svg>
+
+<main>
+	<header class="intro">
+		<p class="eyebrow">Geoclick · FT-04 · icon review</p>
+		<h1>Three candidate icons for the desktop and Android apps</h1>
+		<p>Each band shows one mark the way players would actually meet it: at real pixel sizes, in a browser tab, on a desktop and inside Android’s launcher shapes. <strong>Right now the app ships Tauri’s and Capacitor’s scaffold icons, and the web favicon is the Svelte framework logo.</strong></p>
+	</header>
+
+	<div class="decide">
+		<div><b>Pick one</b><span>A, B or C, or say what to change for another round.</span></div>
+		<div><b>Favicon</b><span>By default the web favicon switches to the chosen icon so all three shells match. Say if it shouldn’t.</span></div>
+	</div>
+
+	<section class="band baseline" aria-labelledby="h-current">
+		<header class="band-head">
+			<p class="letter">–</p>
+			<div>
+				<h2 id="h-current">Today’s favicon</h2>
+				<p class="idea">The Svelte framework logo, left over from the project template. It’s what the browser tab shows today.</p>
+			</div>
+		</header>
+		<div class="baseline-row">
+			<div class="size"><svg class="mark " width="16" height="16" aria-hidden="true"><use href="#icon-current"/></svg><span class="px">16</span></div><div class="size"><svg class="mark " width="32" height="32" aria-hidden="true"><use href="#icon-current"/></svg><span class="px">32</span></div><div class="size"><svg class="mark " width="48" height="48" aria-hidden="true"><use href="#icon-current"/></svg><span class="px">48</span></div>
+		</div>
+	</section>
+
+	
+<section class="band" aria-labelledby="h-a">
+	<header class="band-head">
+		<p class="letter">A</p>
+		<div>
+			<h2 id="h-a">Pin</h2>
+			<p class="idea">A cream map pin on the app’s deep green, with an amber centre. The most literal “geo” mark, and the easiest to read at 16 px.</p>
+		</div>
+	</header>
+
+	<div class="panels">
+		<figure class="panel sizes">
+			<figcaption>Actual pixel sizes</figcaption>
+			<div class="size-row">
+				<div class="size"><div class="tile" style="--r:3px"><svg class="mark " width="16" height="16" aria-hidden="true"><use href="#icon-a"/></svg></div><span class="px">16</span></div><div class="size"><div class="tile" style="--r:3px"><svg class="mark " width="24" height="24" aria-hidden="true"><use href="#icon-a"/></svg></div><span class="px">24</span></div><div class="size"><div class="tile" style="--r:7px"><svg class="mark " width="32" height="32" aria-hidden="true"><use href="#icon-a"/></svg></div><span class="px">32</span></div><div class="size"><div class="tile" style="--r:11px"><svg class="mark " width="48" height="48" aria-hidden="true"><use href="#icon-a"/></svg></div><span class="px">48</span></div><div class="size"><div class="tile" style="--r:14px"><svg class="mark " width="64" height="64" aria-hidden="true"><use href="#icon-a"/></svg></div><span class="px">64</span></div><div class="size"><div class="tile" style="--r:28px"><svg class="mark " width="128" height="128" aria-hidden="true"><use href="#icon-a"/></svg></div><span class="px">128</span></div>
+			</div>
+		</figure>
+
+		<figure class="panel tabs">
+			<figcaption>Browser tab, 16 px</figcaption>
+			<div class="tab-strip">
+				<div class="tab active"><span class="favicon"><svg class="mark " width="16" height="16" aria-hidden="true"><use href="#icon-a"/></svg></span>Geoclick</div>
+				<div class="tab"><span class="favicon blank"></span>Inbox (3)</div>
+			</div>
+		</figure>
+
+		<figure class="panel desktops">
+			<figcaption>Desktop, light and dark, 32 px</figcaption>
+			<div class="desk light"><div class="tile" style="--r:7px"><svg class="mark " width="32" height="32" aria-hidden="true"><use href="#icon-a"/></svg></div><span>Geoclick</span></div>
+			<div class="desk dark"><div class="tile" style="--r:7px"><svg class="mark " width="32" height="32" aria-hidden="true"><use href="#icon-a"/></svg></div><span>Geoclick</span></div>
+		</figure>
+
+		<figure class="panel launcher">
+			<figcaption>Android launcher shapes, 72 px</figcaption>
+			<div class="shape-row">
+				<div class="shape circle"><svg class="mark " width="72" height="72" aria-hidden="true"><use href="#icon-a"/></svg></div>
+				<div class="shape squircle"><svg class="mark " width="72" height="72" aria-hidden="true"><use href="#icon-a"/></svg></div>
+				<div class="shape rounded"><svg class="mark " width="72" height="72" aria-hidden="true"><use href="#icon-a"/></svg></div>
+				<div class="shape safe" title="Dashed circle: the 66% zone every launcher keeps"><svg class="mark " width="72" height="72" aria-hidden="true"><use href="#icon-a"/></svg></div>
+			</div>
+		</figure>
+	</div>
+</section>
+
+<section class="band" aria-labelledby="h-b">
+	<header class="band-head">
+		<p class="letter">B</p>
+		<div>
+			<h2 id="h-b">Patchwork</h2>
+			<p class="idea">Four regions in the map’s own palette, and the green one is solved. It says what you do in the game: learn a map region by region.</p>
+		</div>
+	</header>
+
+	<div class="panels">
+		<figure class="panel sizes">
+			<figcaption>Actual pixel sizes</figcaption>
+			<div class="size-row">
+				<div class="size"><div class="tile" style="--r:3px"><svg class="mark " width="16" height="16" aria-hidden="true"><use href="#icon-b"/></svg></div><span class="px">16</span></div><div class="size"><div class="tile" style="--r:3px"><svg class="mark " width="24" height="24" aria-hidden="true"><use href="#icon-b"/></svg></div><span class="px">24</span></div><div class="size"><div class="tile" style="--r:7px"><svg class="mark " width="32" height="32" aria-hidden="true"><use href="#icon-b"/></svg></div><span class="px">32</span></div><div class="size"><div class="tile" style="--r:11px"><svg class="mark " width="48" height="48" aria-hidden="true"><use href="#icon-b"/></svg></div><span class="px">48</span></div><div class="size"><div class="tile" style="--r:14px"><svg class="mark " width="64" height="64" aria-hidden="true"><use href="#icon-b"/></svg></div><span class="px">64</span></div><div class="size"><div class="tile" style="--r:28px"><svg class="mark " width="128" height="128" aria-hidden="true"><use href="#icon-b"/></svg></div><span class="px">128</span></div>
+			</div>
+		</figure>
+
+		<figure class="panel tabs">
+			<figcaption>Browser tab, 16 px</figcaption>
+			<div class="tab-strip">
+				<div class="tab active"><span class="favicon"><svg class="mark " width="16" height="16" aria-hidden="true"><use href="#icon-b"/></svg></span>Geoclick</div>
+				<div class="tab"><span class="favicon blank"></span>Inbox (3)</div>
+			</div>
+		</figure>
+
+		<figure class="panel desktops">
+			<figcaption>Desktop, light and dark, 32 px</figcaption>
+			<div class="desk light"><div class="tile" style="--r:7px"><svg class="mark " width="32" height="32" aria-hidden="true"><use href="#icon-b"/></svg></div><span>Geoclick</span></div>
+			<div class="desk dark"><div class="tile" style="--r:7px"><svg class="mark " width="32" height="32" aria-hidden="true"><use href="#icon-b"/></svg></div><span>Geoclick</span></div>
+		</figure>
+
+		<figure class="panel launcher">
+			<figcaption>Android launcher shapes, 72 px</figcaption>
+			<div class="shape-row">
+				<div class="shape circle"><svg class="mark " width="72" height="72" aria-hidden="true"><use href="#icon-b"/></svg></div>
+				<div class="shape squircle"><svg class="mark " width="72" height="72" aria-hidden="true"><use href="#icon-b"/></svg></div>
+				<div class="shape rounded"><svg class="mark " width="72" height="72" aria-hidden="true"><use href="#icon-b"/></svg></div>
+				<div class="shape safe" title="Dashed circle: the 66% zone every launcher keeps"><svg class="mark " width="72" height="72" aria-hidden="true"><use href="#icon-b"/></svg></div>
+			</div>
+		</figure>
+	</div>
+</section>
+
+<section class="band" aria-labelledby="h-c">
+	<header class="band-head">
+		<p class="letter">C</p>
+		<div>
+			<h2 id="h-c">Click</h2>
+			<p class="idea">A pointer clicking a country, on the amber of the app’s active buttons. The “click” in Geoclick; the warmest of the three.</p>
+		</div>
+	</header>
+
+	<div class="panels">
+		<figure class="panel sizes">
+			<figcaption>Actual pixel sizes</figcaption>
+			<div class="size-row">
+				<div class="size"><div class="tile" style="--r:3px"><svg class="mark " width="16" height="16" aria-hidden="true"><use href="#icon-c"/></svg></div><span class="px">16</span></div><div class="size"><div class="tile" style="--r:3px"><svg class="mark " width="24" height="24" aria-hidden="true"><use href="#icon-c"/></svg></div><span class="px">24</span></div><div class="size"><div class="tile" style="--r:7px"><svg class="mark " width="32" height="32" aria-hidden="true"><use href="#icon-c"/></svg></div><span class="px">32</span></div><div class="size"><div class="tile" style="--r:11px"><svg class="mark " width="48" height="48" aria-hidden="true"><use href="#icon-c"/></svg></div><span class="px">48</span></div><div class="size"><div class="tile" style="--r:14px"><svg class="mark " width="64" height="64" aria-hidden="true"><use href="#icon-c"/></svg></div><span class="px">64</span></div><div class="size"><div class="tile" style="--r:28px"><svg class="mark " width="128" height="128" aria-hidden="true"><use href="#icon-c"/></svg></div><span class="px">128</span></div>
+			</div>
+		</figure>
+
+		<figure class="panel tabs">
+			<figcaption>Browser tab, 16 px</figcaption>
+			<div class="tab-strip">
+				<div class="tab active"><span class="favicon"><svg class="mark " width="16" height="16" aria-hidden="true"><use href="#icon-c"/></svg></span>Geoclick</div>
+				<div class="tab"><span class="favicon blank"></span>Inbox (3)</div>
+			</div>
+		</figure>
+
+		<figure class="panel desktops">
+			<figcaption>Desktop, light and dark, 32 px</figcaption>
+			<div class="desk light"><div class="tile" style="--r:7px"><svg class="mark " width="32" height="32" aria-hidden="true"><use href="#icon-c"/></svg></div><span>Geoclick</span></div>
+			<div class="desk dark"><div class="tile" style="--r:7px"><svg class="mark " width="32" height="32" aria-hidden="true"><use href="#icon-c"/></svg></div><span>Geoclick</span></div>
+		</figure>
+
+		<figure class="panel launcher">
+			<figcaption>Android launcher shapes, 72 px</figcaption>
+			<div class="shape-row">
+				<div class="shape circle"><svg class="mark " width="72" height="72" aria-hidden="true"><use href="#icon-c"/></svg></div>
+				<div class="shape squircle"><svg class="mark " width="72" height="72" aria-hidden="true"><use href="#icon-c"/></svg></div>
+				<div class="shape rounded"><svg class="mark " width="72" height="72" aria-hidden="true"><use href="#icon-c"/></svg></div>
+				<div class="shape safe" title="Dashed circle: the 66% zone every launcher keeps"><svg class="mark " width="72" height="72" aria-hidden="true"><use href="#icon-c"/></svg></div>
+			</div>
+		</figure>
+	</div>
+</section>
+
+	<p class="footnote">The dashed circle in the last launcher shape is Android’s safe zone. Launchers can crop anything outside it, so each mark keeps its motif inside. Sources: <code>design/logo/candidate-*.svg</code>. The chosen one becomes <code>geoclick-logo.svg</code>, and FT-05 generates every platform size from it.</p>
+</main>
