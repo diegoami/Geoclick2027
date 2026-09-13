@@ -283,10 +283,10 @@ ORCHESTRATION.md § Automerge).
 | GC-050 | **released** | `1d0593e` | v0.1.1 | set at hydration; static home-page HTML paints `en` for an instant first (inline script would close it - not worth the duplicated key) |
 | GC-060 | **released** | `1deb05d` | v0.1.1 | "no search UI" re-affirmed at 22 countries (re-open at ~40 or a real complaint) - the loop's call, overrulable |
 | GC-070 | **released** | `f7e0963` | v0.1.1 | `asset()` not the deprecated `base` (same effect); verified under a real `/geoclick` subpath |
-| GC-021 | **merged** | `7d536be` | v0.1.2 | spec deviation: kept Bremen tolerance rescue (spec's case 3 would have regressed it); `/code-review` clean. Observed: at large-window zoom Bremen's edge is 30px from its centroid, > 24px tolerance |
-| GC-031 | **merged** | `1030bf0` | v0.1.2 | verified via tsx (no WSL toolchain here); found 5 mangled Polish ids (`wroc-aw`...) - documented, not changed (ids key saved progress) |
-| GC-041 | **merged** | `f303d18` | v0.1.2 | Capacitor clearMap is transactional; Tauri's is two statements (plugin has no transaction API); no reset UI (owner's call) |
-| GC-071 | **merged** | `d47e519` | v0.1.2 | 44 → 0 data requests; index carries `targetIds` (not just counts) so stale cards stay ignored - verified identical badges on 3 seeded maps |
+| GC-021 | **released** | `7d536be` | v0.1.2 | spec deviation: kept Bremen tolerance rescue (spec's case 3 would have regressed it); `/code-review` clean. Observed: at large-window zoom Bremen's edge is 30px from its centroid, > 24px tolerance |
+| GC-031 | **released** | `1030bf0` | v0.1.2 | verified via tsx (no WSL toolchain here); found 5 mangled Polish ids (`wroc-aw`...) - documented, not changed (ids key saved progress) |
+| GC-041 | **released** | `f303d18` | v0.1.2 | Capacitor clearMap is transactional; Tauri's is two statements (plugin has no transaction API); no reset UI (owner's call) |
+| GC-071 | **released** | `d47e519` | v0.1.2 | 44 → 0 data requests; index carries `targetIds` (not just counts) so stale cards stay ignored - verified identical badges on 3 seeded maps |
 | GC-004 | todo | — | v0.2.0 | |
 | GC-022 | todo | — | v0.2.0 | |
 | GC-032 | todo | — | v0.2.0 | the one real design task |
@@ -296,7 +296,7 @@ ORCHESTRATION.md § Automerge).
 | Release | Status | Tag | Date |
 |---|---|---|---|
 | `v0.1.1` | **cut** | `v0.1.1` → `47b69d5` | 2026-09-13 |
-| `v0.1.2` | not cut | — | — |
+| `v0.1.2` | **cut** | `v0.1.2` → `34dd3a2` | 2026-09-13 |
 | `v0.2.0` | not cut | — | — |
 
 ## Out of scope
