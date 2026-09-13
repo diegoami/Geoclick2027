@@ -98,20 +98,30 @@ Effort: **Low** is under an hour or so, **Medium** is a focused session,
 ### FT-02 — Map labels in relative units · Low · deps: none
 
 - **Why:** FEATURE_BACKLOG.md §4, fix 1. Both popup classes in
-  `app/src/app.css` are a fixed `11px`, so they ignore browser zoom and OS
-  text-size settings. Every other piece of text in the app scales.
+  `app/src/app.css` are a fixed `11px`, so they ignore the browser's
+  font-size setting, which the rest of the app's text follows. (Corrected
+  while doing FT-02: page zoom, Ctrl +, scales `px` too, so zoom was never
+  the gap; FEATURE_BACKLOG.md §4 said otherwise.)
 - **Do:** switch `font-size` in `app.css`'s shared popup rule to a relative
   unit, bumped from 11px. Aim for about `0.8125rem` (13px at default
   settings), and tune it by looking. Keep one rule for both classes (the
   GC-022 consolidation), and keep the weights (900 explore/tour, 600
   solved).
+- **Added by the product owner at review (2026-09-13): hover to magnify.**
+  A 13px base alone was "still not satisfying". Now a label under the
+  mouse grows to 20px (`1.25rem`), goes nearly opaque, and rises above
+  its neighbours, so crowded or small names are readable without zooming
+  the map. This is CSS only, in `app.css`: `font-size` rather than
+  `transform`, so the text stays crisp and pinned to its point.
+  `prefers-reduced-motion` turns the transition off. Touch screens have
+  no hover; that is FT-03's question.
 - **Verify:** check overview crowding on `italy-provinces` (110 labels),
   `germany-states` (long German names) and a towns map. Also check that
-  browser zoom 150% now enlarges the labels; before this change it
-  doesn't.
+  a larger root font size (the browser's font-size setting) now enlarges
+  the labels; before this change it doesn't.
 - **DoD:**
   - no `px` font size remains on the popups;
-  - labels scale with browser zoom;
+  - labels follow the browser's font-size setting;
   - before/after screenshots of the three maps;
   - DECISIONS.md's "Map colors" / popup notes updated if they quote 11px;
   - gates green.

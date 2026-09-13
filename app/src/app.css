@@ -14,7 +14,9 @@
 .geoclick-popup .maplibregl-popup-content,
 .geoclick-solved-popup .maplibregl-popup-content {
 	font-family: system-ui, sans-serif;
-	font-size: 11px;
+	/* rem, not px (FT-02): follows the browser's own font-size setting, like
+	 * the rest of the app's text. 13px at the default 16px; was a fixed 11px. */
+	font-size: 0.8125rem;
 	font-weight: 600;
 	padding: 1px 6px;
 	border-radius: 5px;
@@ -34,4 +36,35 @@
 }
 .geoclick-solved-popup.revealed .maplibregl-popup-content {
 	background: rgba(95, 65, 27, 0.65);
+}
+
+/* Hover to magnify (FT-02). A name you point at grows to 20px, goes nearly
+ * opaque, and rises above its neighbours - so a crowded or small label can be
+ * read without zooming the map. font-size rather than transform: scale keeps
+ * the text crisp, and the label stays pinned to its point because MapLibre
+ * positions it by its anchor, not its size. Quiz drags hold pointer capture on
+ * the slip, so labels don't balloon under a slip being dragged. */
+.geoclick-popup .maplibregl-popup-content,
+.geoclick-solved-popup .maplibregl-popup-content {
+	transition:
+		font-size 120ms ease-out,
+		padding 120ms ease-out;
+}
+.geoclick-popup .maplibregl-popup-content:hover,
+.geoclick-solved-popup .maplibregl-popup-content:hover {
+	font-size: 1.25rem;
+	padding: 2px 9px;
+	background: rgba(31, 61, 42, 0.92);
+}
+.geoclick-solved-popup.revealed .maplibregl-popup-content:hover {
+	background: rgba(95, 65, 27, 0.92);
+}
+.maplibregl-popup:has(> .maplibregl-popup-content:hover) {
+	z-index: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+	.geoclick-popup .maplibregl-popup-content,
+	.geoclick-solved-popup .maplibregl-popup-content {
+		transition: none;
+	}
 }
