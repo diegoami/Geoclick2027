@@ -111,6 +111,7 @@ breakdown if you need more.
 git clone git@github.com:diegoami/Geoclick2027.git
 cd Geoclick2027
 npm install
+npm run setup-hooks   # once per clone - see "The pre-push hook" below
 npm run dev
 ```
 
@@ -126,7 +127,28 @@ npm run build    # production build (all workspaces)
 npm test         # run unit tests (quiz-engine, srs, app)
 npm run check    # svelte-check / type-check
 npm run lint      # prettier + eslint on the app
+npm run gates    # all four quality gates in order, stops at the first failure
 ```
+
+### The pre-push hook
+
+`npm run setup-hooks` (once per clone) sets `core.hooksPath` to the
+committed `.githooks/` directory. Its `pre-push` runs `npm run gates` —
+`check`, `test`, `lint`, `build`, in that order — and **rejects the push
+if any gate fails**. This is the project's only automated gate: there is
+no hosted CI, and before this hook existed `npm run lint` failed silently
+through several merges (GC-001, see "The fifth variant" in the gotchas
+below). Expect ~15-20s per push.
+
+- Pushes that only delete branches (`git push origin --delete <branch>`)
+  skip the gates — they carry no code.
+- To bypass it for one push, `git push --no-verify`. Use that for a
+  genuine emergency or a WIP branch you are parking, not to dodge a red
+  gate on work you are about to merge.
+- It deliberately does **not** run the Tauri or Android builds — a
+  multi-minute pre-push is one that gets bypassed every time.
+- `node scripts/task.mjs gates --json` gives the same verdict as JSON
+  (per-gate pass/fail, exit code, timing, tail of output on failure).
 
 ## Running the desktop build (Iteration 7)
 
