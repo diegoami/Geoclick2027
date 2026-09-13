@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 // Single source of truth for the project version: the root package.json.
-// Propagates it to the workspace, the Tauri shell and the Android shell.
+// Propagates it to the workspace, the Tauri shell and the Android shell, and to
+// the two committed lockfiles that also record it (Cargo.lock's app crate,
+// package-lock.json's workspace entries - added cutting v0.1.1, when both
+// turned out to be silently left behind).
 //
 //   node scripts/sync-version.mjs --check    # exit 1 if any file disagrees
 //   node scripts/sync-version.mjs            # propagate the root version
@@ -10,6 +13,7 @@
 // said 0.0.1 while tauri.conf.json and Cargo.toml said 0.1.0. See
 // docs/RELEASES.md.
 
+import { spawnSync } from 'node:child_process';
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -72,10 +76,27 @@ const targets = [
 		file: path.join(REPO_ROOT, 'mobile', 'android', 'app', 'build.gradle'),
 		read: (s) => s.match(/versionName\s+"([^"]+)"/)?.[1],
 		write: (s, v) => s.replace(/(versionName\s+)"[^"]+"/, `$1"${v}"`)
-	}
+	},
+	// Lockfiles record the workspace's own versions too; left stale, the next
+	// `cargo build` rewrites Cargo.lock (dirty tree) and `npm ci` can refuse a
+	// package-lock.json that disagrees with package.json.
+	{
+		label: 'Cargo.lock (app crate)',
+		file: path.join(REPO_ROOT, 'desktop', 'src-tauri', 'Cargo.lock'),
+		read: (s) => s.match(/^name = "app"\r?\nversion = "([^"]+)"/m)?.[1],
+		write: (s, v) => s.replace(/^(name = "app"\r?\nversion = )"[^"]+"/m, `$1"${v}"`)
+	},
+	...['', 'app', 'desktop', 'mobile'].map((ws) => ({
+		label: `package-lock.json (${ws || 'root'})`,
+		file: path.join(REPO_ROOT, 'package-lock.json'),
+		read: (s) => JSON.parse(s).packages?.[ws]?.version,
+		// Rewritten by npm itself below, so its formatting is preserved.
+		write: null
+	}))
 ];
 
 let drift = false;
+let lockfileStale = false;
 const actions = [];
 
 for (const t of targets) {
@@ -96,13 +117,29 @@ for (const t of targets) {
 	}
 	drift = true;
 	actions.push([CHECK ? 'DRIFT' : 'update', t.label, `${current ?? '?'} -> ${version}`]);
-	if (!CHECK) {
+	if (!CHECK && t.write === null) {
+		lockfileStale = true; // npm rewrites it once, after the manifests
+	} else if (!CHECK) {
 		const next = t.write(src, version);
 		if (next === src) {
 			console.error(`Could not rewrite version in ${t.file} - pattern did not match.`);
 			process.exit(1);
 		}
 		writeFileSync(t.file, next);
+	}
+}
+
+if (lockfileStale) {
+	// Let npm rewrite package-lock.json from the updated manifests: it keeps the
+	// file's own formatting and touches only the workspace version fields.
+	const res = spawnSync('npm', ['install', '--package-lock-only', '--ignore-scripts'], {
+		cwd: REPO_ROOT,
+		stdio: 'inherit',
+		shell: process.platform === 'win32'
+	});
+	if (res.status !== 0) {
+		console.error('npm install --package-lock-only failed; package-lock.json is stale.');
+		process.exit(1);
 	}
 }
 
