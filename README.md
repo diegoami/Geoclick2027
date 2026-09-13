@@ -10,10 +10,16 @@ project — see [ARCHITECTURE.md](ARCHITECTURE.md) for the full pitch.
 git clone git@github.com:diegoami/Geoclick2027.git
 cd Geoclick2027
 npm install
+npm run setup-hooks   # once per clone: pre-push runs the quality gates
 npm run dev
 ```
 
 Open the URL Vite prints (typically `http://localhost:5173`).
+
+`npm run setup-hooks` points git at the committed `.githooks/`, whose
+`pre-push` runs the four quality gates (`check`, `test`, `lint`, `build`)
+and rejects the push if one fails. Run them by hand with `npm run gates`;
+skip the hook for a single push with `git push --no-verify`.
 
 ## Quick start (desktop app)
 
