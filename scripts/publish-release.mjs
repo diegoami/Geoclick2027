@@ -50,12 +50,13 @@ const start = changelog.indexOf(`## ${tag} `);
 if (start < 0) fail(`CHANGELOG.md has no "## ${tag}" entry yet - write it first.`);
 const next = changelog.indexOf('\n## v', start + 1);
 const entry = changelog.slice(start, next < 0 ? undefined : next);
-const playerPart = entry
-	.split('\n')
-	.slice(1) // the heading becomes the release title
-	.join('\n')
-	.split(/\nUnder the hood:/)[0]
-	.trim();
+// Public readers get the bold lead sentence and the "For players:" bullets -
+// not the rest of the lead paragraph or "Under the hood:", which name internal
+// docs and task ids from this (private) repo.
+const lead = /\*\*[^*]+\*\*/.exec(entry)?.[0] ?? '';
+const forPlayers = /\nFor players:\n([\s\S]*?)(?=\n(?:Under the hood|Not covered)[^\n]*:\n|$)/.exec(entry)?.[1];
+if (!forPlayers) fail(`the ${tag} CHANGELOG entry has no "For players:" section to publish.`);
+const playerPart = `${lead}\n\n${forPlayers.trim()}`;
 const notes =
 	`${playerPart}\n\n---\n\n` +
 	`**Play in the browser:** https://zesty-centaur-40e7c5.netlify.app/\n\n` +
