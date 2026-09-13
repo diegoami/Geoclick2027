@@ -18,6 +18,12 @@ export interface Target {
 	// bbox always describes a real extent - see MAPS.md's "Point-target
 	// design" section.
 	bbox: [number, number, number, number];
+	// Categorical colour slot 0-5, chosen at build time so no two adjacent
+	// targets share one (data/scripts/mapColors.ts). Applied as feature-state
+	// by createMap; optional so an older map.json still renders (fallback colour).
+	colorIndex?: number;
+	// Set only on a target whose bbox wraps the antimeridian (west > east).
+	crossesAntimeridian?: true;
 }
 
 export interface MapDefinition {

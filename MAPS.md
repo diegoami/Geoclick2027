@@ -28,7 +28,11 @@ data/scripts/build-map.ts             filter → simplify → tile → derive ma
    simplifies geometry, selects nearby lakes by bounding-box
    intersection, builds a PMTiles tileset (`tippecanoe` + `pmtiles`),
    and derives a draft `map.json` (target list + a north-to-south
-   default tour order).
+   default tour order). As its last step it writes each target's
+   `colorIndex` (GC-032): a colour slot 0-5 chosen so that no two
+   adjacent targets share one, computed from the tiles it just built
+   (see DECISIONS.md's "Map colors"). `build-points-map.ts` does the same
+   for towns, using each town's nearest neighbours.
 3. **Manual curation** — not automated on purpose, reviewed by hand
    after each build: non-English/non-local names corrected
    (`NAME_FIXUPS` in `build-map.ts`, or a real data-driven per-country
@@ -49,6 +53,12 @@ data/scripts/build-map.ts             filter → simplify → tile → derive ma
    centroid/bbox is finite, and `tourOrder` is a permutation of the
    target ids. Before this, a map missing from the catalog was silently
    invisible on the home page.
+6. **Colours** — if you rename targets by hand in `map.json` after
+   the build, or edit the tiles, run `npm run build-map-colors --
+   --map=<id>` (omit `--map` to redo every map). It only rewrites
+   `colorIndex`, needs only node, and never rebuilds tiles.
+   `app/src/lib/mapColors.test.ts` recomputes adjacency from every
+   map's tiles and fails if two neighbours share a colour.
 
 ### Build-script settings and known quirks (GC-031)
 

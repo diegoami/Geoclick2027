@@ -172,6 +172,9 @@ also means the same pipeline and the same base map style serve all three.
   /scripts
     fetch-natural-earth.sh    downloads + caches source datasets
     build-map.ts              filter → simplify → tile → derive targets
+    build-points-map.ts       the same for towns/cities (point targets)
+    mapColors.ts              adjacency from the tiles → per-target colorIndex
+    build-map-colors.ts       recolour committed maps (npm run build-map-colors)
   /maps
     <map-id>/map.json         Map Definition (metadata + curated targets)
     <map-id>/tiles.pmtiles

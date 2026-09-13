@@ -658,7 +658,15 @@ or amend an entry here as part of that change, not as an afterthought.
   deliberately more visible while staying low-saturation enough not to
   fight with body text or the map-card borders.
 
-## Quiz solved-state contrast (2026-09-13)
+## Quiz solved-state contrast (2026-09-13, opacities amended by GC-032)
+
+> **Amended by GC-032 (2026-09-13).** The opacity split below is still the
+> mechanism, but the numbers moved with the new palette (see "Map colors"):
+> named states 0.85 fill / opaque circle, unsolved 0.55 fill / 0.85 circle.
+> 0.3 had washed every unsolved region into near-identical beige. The palette
+> no longer has a green, so opacity no longer has to carry the whole signal.
+> Measured, not eyeballed: the smallest solved-vs-unsolved colour distance
+> went from ΔE 29 to 34. The bullets below keep the original numbers.
 
 - **Unsolved and solved regions/cities now differ by opacity
   (saturation), not just hue.** Reported directly after the background
@@ -695,13 +703,47 @@ or amend an entry here as part of that change, not as an afterthought.
   solved targets read unambiguously against every unsolved one in both
   geometry types.
 
-## Map colors
+## Map colors (2026-09-13, GC-032)
 
-- **TODO (GC-032):** `data/styles/base.json`'s metadata cites "DECISIONS.md's
-  'Map colors' entry", which was never written — the palette's rationale lives
-  only in that JSON string. GC-032 (adjacency-aware palette + opacity revisit)
-  writes the real entry here as part of its own scope; this placeholder exists
-  so the citation resolves to something tracked instead of nothing (GC-060).
+- **Neighbouring targets never share a colour.** The old base colour was
+  `name.length % 8`, a hash, not a colouring. Adjacent regions matched
+  often enough to notice. On `italy-provinces`, Bolzano, Sondrio, Belluno,
+  Brescia and Bergamo (all seven letters) formed one olive swath with no
+  visible borders between them. Each target now carries a `colorIndex`
+  (0-5) in its `map.json`, chosen by graph colouring. The style reads the
+  slot back through feature-state, which `createMap` sets on
+  `'style.load'`, before the first paint.
+- **Adjacency comes from the committed tiles, not the Natural Earth
+  source.** The tiles are the geometry players actually see. Rebuilding
+  adjacency from source would mean reproducing every map's dissolves and
+  name fixups in a second pipeline. `data/scripts/mapColors.ts` draws the
+  polygons onto a 2048-cell grid and counts two targets as adjacent if their
+  cells come within 2 cells of each other. That margin also closes the
+  hairline gaps left where tippecanoe simplified a shared border twice.
+  Points (towns) have no borders, so each town is linked to its 3 nearest
+  neighbours instead. On screen, "adjacent" for markers means "close".
+- **Six colours, not four.** Any polygon map can be coloured with 6 using
+  the simple ordering used here (smallest-last). Six also gives more variety
+  than four. The colouring picks the least-used free colour each time, so
+  all six appear about equally. 42 of the 44 maps use all six; the other
+  two need only five. It's deterministic, so rebuilds don't reshuffle
+  colours.
+- **The palette stays away from the state colours.** It is blue, lavender,
+  orchid, pink, salmon and slate: no green (solved), gold (revealed) or red
+  (wrong). The drag-hover colour moved from a light blue (`#6fa8dc`) to a
+  deep blue (`#2a64c4`), because the new palette's own blue made hover
+  nearly invisible on 1 in 6 regions. Colour distance to the nearest
+  palette colour went from ΔE 16 to 38, beating the old style's 28.
+  Solved-vs-unsolved rose from ΔE 29 to 34. Revealed-vs-salmon is the
+  tightest remaining pair (ΔE 21, the old style's worst was 23). It was
+  accepted because a revealed target also gets its name label.
+- **Kept in sync by the tooling, not by memory.** `build-map.ts` and
+  `build-points-map.ts` colour a map as their last step. `npm run
+  build-map-colors` recolours every committed map (or one, with
+  `-- --map=<id>`) without touching the tiles. `app/src/lib/mapColors.test.ts`
+  recomputes adjacency for all 44 maps from their tiles and fails on any
+  same-coloured neighbours. It also fails if the style's number of palette
+  colours drifts from `PALETTE_SIZE`.
 
 ## SSO/cross-device sync deferred (2026-09-13)
 

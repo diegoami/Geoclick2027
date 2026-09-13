@@ -19,6 +19,7 @@ import {
 	pmtilesConvert,
 	crossesAntimeridian
 } from './mapBuildUtils.js';
+import { colorizeMapDir } from './mapColors.js';
 
 const SOURCE_SHP = path.join(
 	REPO_ROOT,
@@ -205,7 +206,7 @@ function boundsOf(geometry: Geometry): {
 	};
 }
 
-function main() {
+async function main() {
 	const args = parseArgs(process.argv.slice(2));
 	const country = args.country;
 	const outDir = args.out;
@@ -434,6 +435,11 @@ function main() {
 	console.log(`Done: ${targets.length} targets -> ${mapJsonPath}`);
 	console.log(`Tour -> ${tourJsonPath}`);
 	console.log(`Tiles -> ${pmtilesPath}`);
+
+	// Adjacency-aware colour slots (GC-032), computed from the tiles just built -
+	// rerun `npm run build-map-colors -- --map=<id>` after hand-editing map.json.
+	const { colours } = await colorizeMapDir(absOutDir);
+	console.log(`Colours -> ${colours} colorIndex slots in map.json`);
 }
 
-main();
+await main();
