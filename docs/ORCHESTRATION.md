@@ -100,6 +100,78 @@ The reasoning is unchanged: a task with a written DoD that fails twice is
 evidence the **DoD is wrong**, not that the work is. The product owner
 adjudicates by editing the task in `tasks.yaml` and setting it back to `ready`.
 
+## Stopping and resuming
+
+**There is no harness process to stop.** `scripts/task.mjs` runs one command and
+exits; the only long-lived thing is the Claude Code session running the loop, and
+possibly a dev server it started. So stopping is always about the session plus
+the one task in flight.
+
+### Stopping cleanly (preferred)
+
+Between iterations — after a `finish`, before the next `start` — the programme
+is already at rest. Nothing is in flight, the tree is on `main`, the ledger is
+current. Just stop the session. To pick a natural stopping point, tell the loop
+*"finish the current task, then stop"* rather than interrupting it.
+
+### Stopping mid-task
+
+Say so, or interrupt with Ctrl+C. Then park the task so the board does not claim
+work is happening that is not:
+
+```bash
+node scripts/task.mjs state GC-0NN ready --note "parked <date>: <why>"
+node scripts/task.mjs doctor              # is a dev server still up? a branch half-done?
+```
+
+Before walking away, deal with the work in progress — it lives on the task
+branch, so nothing is lost either way:
+
+```bash
+git status                                # what is uncommitted
+git commit -am "WIP: GC-0NN <what is done so far>"   # keep it on the branch
+git push -u origin <branch>               # optional, survives the machine
+```
+
+Leave the branch in place. The next `start GC-0NN` checks it out again rather
+than creating it, so a parked task resumes exactly where it stopped. What you
+must **not** leave behind is an uncommitted working tree plus a `ready` state:
+the next `start` refuses a dirty tree (deliberately), and you will not remember
+which task those edits belonged to.
+
+If the dev server is still running, stop it. That is the one true zombie an
+abrupt stop creates, and `doctor` will report the port and PID.
+
+### The one task where stopping mid-way is genuinely awkward
+
+**GC-001.** It renormalizes line endings across every text file in the tree, so
+a half-applied state looks like "everything is modified" and is hard to read. If
+you have to stop during GC-001, prefer `git stash` or a full reset back to
+`main` and redo it — it is a mechanical task that takes minutes, and redoing it
+is cheaper than untangling a partial renormalization.
+
+### Resuming
+
+```bash
+node scripts/task.mjs doctor     # clean up whatever the stop left behind
+node scripts/task.mjs status     # where the programme actually stands
+node scripts/task.mjs next       # what to do now (or `start GC-0NN` to resume a parked one)
+```
+
+Then start a fresh session with the same prompt as the first one. The loop is
+stateless across restarts by design: everything it needs is in `tasks.yaml`, the
+state files, the ledger, and git itself. A new session does not need to be told
+what happened — `status` tells it.
+
+### Stopping the programme for good, or changing direction
+
+The state files are disposable: `rm -rf .orchestrator` and the live board is
+gone, while every merged task stays merged and every tag stays pushed. `init`
+re-seeds from scratch. What you should keep current in that case is the
+**ledger** in REMEDIATION_PLAN.md, since that is the record of what actually
+shipped — and if the programme stops part-way, say so in that table rather than
+leaving rows reading `todo` forever.
+
 ## Task state
 
 Two places, on purpose.
