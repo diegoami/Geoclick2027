@@ -158,9 +158,11 @@ is the **only routine human gate left in the programme** — three times in tota
    is not.
 7. On approval: push `main`, then
    `git tag -a v0.1.1 -m "v0.1.1 — <theme>"` and push the tag.
-8. Once Netlify's own git-triggered build reports green, prod-check the live site
-   **once** — the **"test the deployment"** half, explicitly labelled as such,
-   and once only.
+8. **Do not watch or check the deploy.** The product owner tracks Netlify deploy
+   status themselves (confirmed again when cutting v0.1.1). The **"test the
+   deployment"** half of CLAUDE.md's two-step rule is theirs; the loop's report
+   says plainly that the deploy was pushed and not checked. Only check the live
+   site if the product owner asks for it for a specific release.
 
 Do **not** trigger a manual deploy at any point. If the git-triggered build looks
 stuck, that is the human's dashboard button, not an agent's problem (CLAUDE.md's
