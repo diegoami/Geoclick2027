@@ -465,7 +465,7 @@ Update this table as tasks merge. Commit hashes are the merge commits.
 |---|---|---|---|---|
 | FT-01 | **merged** | `6e05495` | v0.3.0 | README 'Play it' link under the intro |
 | FT-02 | **merged** | `fe3a809` | v0.3.0 | labels 11px → 0.8125rem (13px, follows browser font-size setting) + hover to magnify (20px, above neighbours); plan corrected: page zoom already scaled px |
-| FT-03 | todo | — | v0.3.0 | redefined at FT-02 review: tap to magnify on touch (was Normal/Large switch) |
+| FT-03 | **merged** | `2f7e7b0` | v0.3.0 | tap to magnify on touch (redefined at FT-02 review; was a Normal/Large switch); verified with simulated touch, not yet on a physical device |
 | FT-04 | todo | — | v0.3.0 | 🧑 logo pick |
 | FT-05 | todo | — | v0.3.0 | |
 | FT-06 | todo | — | v0.3.0 | 🧑 keystore |
