@@ -274,7 +274,7 @@ ORCHESTRATION.md § Automerge).
 |---|---|---|---|---|
 | GC-001 | **merged** | `e619571` | v0.1.1 | lint passes for the first time; catch-all placed first in `.gitattributes` (spec said below binaries - would have overridden them) |
 | GC-002 | **merged** | `02164f7` | v0.1.1 | `npm run setup-hooks`; pure-delete pushes skip gates; `doctor` still lists 10 pre-programme `feature/*` branches as "your call", not zombies |
-| GC-003 | todo | — | v0.1.1 | |
+| GC-003 | **merged** | `598da64` | v0.1.1 | real Chromium via Playwright, not jsdom; needs `npx playwright install chromium` once per machine |
 | GC-010 | todo | — | v0.1.1 | |
 | GC-020 | todo | — | v0.1.1 | |
 | GC-030 | todo | — | v0.1.1 | |
