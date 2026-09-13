@@ -15,11 +15,13 @@ shipping, and what's planned next.
 - New features/fixes: work on a branch, not directly on `main`. Commit and
   push the branch without asking first. Test locally and report concrete
   verification steps so the user can test it themselves too. Only merge
-  to `main` after the user explicitly OKs it — `main` pushes trigger a
-  real Netlify build (which costs credits), so nothing lands there
-  without the user having tried it first. Small doc-only changes
-  (ROADMAP.md/ARCHITECTURE.md/CLAUDE.md edits with no app code) can still
-  go straight to `main`.
+  to `main` after the user explicitly OKs it — this is a testing/review
+  gate, not a cost-avoidance one (see below): nothing lands there without
+  the user having had a chance to try it first. `main` is the normal
+  integration branch — merge task/feature branches straight into it once
+  approved, no release-branch buffering needed in between. Small doc-only
+  changes (ROADMAP.md/ARCHITECTURE.md/CLAUDE.md edits with no app code)
+  can still go straight to `main` without that check-in.
 - Keep ROADMAP.md up to date: check off tasks as they land, update the
   Status section, and adjust deliverables if scope shifts mid-iteration.
 - Update ARCHITECTURE.md as part of finishing each iteration — not just
@@ -40,6 +42,10 @@ shipping, and what's planned next.
   that it exists), and keep the "planned" section honest — move an
   entry out once it's actually shipped rather than leaving it listed as
   upcoming.
+- Tag a real release (`vX.Y.Z` on `main`) with release notes in
+  `CHANGELOG.md` whenever a meaningful batch of work lands — not every
+  merge, but not left informal either. See `CHANGELOG.md` for the log
+  and `docs/RELEASES.md` for the versioning scheme once it exists.
 - Roles: the user is Product Manager, Claude is Developer. When an
   iteration's deliverable is complete, don't just declare it done — give the
   user concrete steps to verify it themselves (what to run, click, or look
@@ -64,14 +70,18 @@ shipping, and what's planned next.
   and GitHub webhook delivery logs to diagnose a stuck deploy, when the
   user could (and did) just click "Trigger deploy" in the dashboard and
   it worked immediately.
-- Netlify builds cost credits on the plan in use — don't trigger deploys
-  (via the MCP `deploy-site` tool or otherwise) just to check something or
-  as a debugging step. Push to `main` and let the normal git-triggered
-  build handle it; only prod-check the live site once, after you're
-  already confident the local build is correct. If a deploy needs
-  triggering manually (e.g. auto-deploy seems stuck), that's the user's
-  call to make from the dashboard, not something to do repeatedly on your
-  own initiative.
+- Netlify build cost is **no longer a constraint** (2026-09-13, confirmed
+  by the user directly) — a `main` push is not something to ration or
+  route around with release-branch indirection. Still don't trigger a
+  manual deploy (via the MCP `deploy-site` tool or otherwise) just to
+  check something as a debugging step — push to `main` and let the normal
+  git-triggered build handle it, and prod-check the live site once
+  you're already confident the local build is correct. That's about
+  keeping "test locally" and "test the deployment" as separate, legible
+  steps (see below), not about cost. If a deploy needs triggering
+  manually (e.g. auto-deploy seems stuck), that's the user's call to make
+  from the dashboard, not something to do repeatedly on your own
+  initiative.
 
 ## Stack
 

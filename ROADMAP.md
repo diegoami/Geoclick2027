@@ -87,30 +87,46 @@ Check items off as they land; update "Status" as iterations complete.
 
 ## Process notes (not tied to a specific iteration)
 
+- **v0.1.0 tagged as the first tracked release (2026-09-13)**, covering
+  everything shipped through the point above — before any remediation
+  fixes begin. See [CHANGELOG.md](CHANGELOG.md). The version and a short
+  build/commit identifier are now shown on every screen (bottom-right
+  corner) via `app/src/lib/VersionBadge.svelte`, injected at build time
+  from the root `package.json` (kept in sync across all three shells by
+  `scripts/sync-version.mjs`).
 - **Remediation programme (2026-09-13)** — an independent code/design review
-  produced 30 findings, now planned as 20 tasks across 3 releases in
-  [docs/REMEDIATION_PLAN.md](docs/REMEDIATION_PLAN.md), executed per
-  [docs/ORCHESTRATION.md](docs/ORCHESTRATION.md) and released per
-  [docs/RELEASES.md](docs/RELEASES.md). Not started.
-- **Git worktrees don't work for parallel background feature work on this
-  project, at least not as attempted 2026-09-12** — *(revisited: task GC-000
-  of the remediation programme re-tests this with a per-worktree `npm ci`,
-  which is this note's own suggested fix; it will amend this entry with the
-  result either way)* — a `git worktree`
-  checkout doesn't get its own `node_modules` (npm workspaces hoists it to
-  the main checkout), so `npm run dev` inside a worktree can't actually
-  render a map (Vite's `fs.allow` blocks the maplibre-gl worker script
-  outside the worktree root) and browser verification has to fall back to
-  a production build instead — a real gap versus this project's normal
-  "test locally in a real browser" habit (see CLAUDE.md). Three
-  branches were attempted this way in parallel (map-list reorg, i18n,
-  Supabase SSO); reconciled and finished one at a time in the normal
-  checkout afterward instead, per the user's own call once this became
-  clear. Don't reach for worktree-isolated parallel agents on this repo
-  again without first solving the `node_modules` problem (e.g. `npm
-  install` inside each worktree, or a shared/symlinked store) — otherwise
-  it's a false economy: real work still has to happen serially in the
-  normal checkout anyway.
+  produced 30 findings, first planned as a 20-task, 3-release, GitHub-issue-
+  driven multi-agent programme in
+  [docs/REMEDIATION_PLAN.md](docs/REMEDIATION_PLAN.md)/
+  [docs/ORCHESTRATION.md](docs/ORCHESTRATION.md)/
+  [docs/RELEASES.md](docs/RELEASES.md). **Immediately scaled down** by the
+  product owner before any task started: no GitHub (local branches/tags
+  only), release-branch buffering dropped (Netlify build cost isn't a
+  real constraint — see CLAUDE.md), "nice-to-have" tier dropped from
+  scope, and the agent roster cut from four engines (haiku/sonnet/opus/
+  fable) to two (sonnet implements, opus reviews/merges/orchestrates). A
+  fresh Opus session is revising the three planning docs to match: this
+  entry will be updated once that lands. Not started.
+- **Git worktrees failed for parallel background feature work on this
+  project as attempted 2026-09-12 — RESOLVED 2026-09-13.** Root cause was
+  exactly as suspected: a `git worktree` checkout doesn't get its own
+  `node_modules` (npm workspaces hoists it to the main checkout), so
+  `npm run dev` inside one couldn't render a map. Verified directly (not
+  assumed) by creating a real worktree, running `npm install` inside it
+  (own `node_modules`, ~16s), starting its dev server, and comparing
+  network requests against the main checkout side by side: both got
+  identical `206 Partial Content` tile responses through the maplibre-gl
+  worker — the worker/`fs.allow` failure is gone once `node_modules` is
+  local to the worktree. (A blank first screenshot briefly looked like
+  the old bug recurring; it was actually `document.hidden === true` on a
+  backgrounded automation tab, confirmed by seeing the identical artifact
+  on the main checkout's own dev server too — unrelated to worktrees,
+  worth remembering as a testing gotcha on its own.) **Parallel
+  worktree-based agent work on this repo is viable again, as long as each
+  worktree runs its own `npm install` first** — this was GC-000 in the
+  remediation programme's first draft; superseded by whatever task
+  numbering the simplified local-harness revision uses, but the finding
+  stands regardless of which programme references it.
 - [ ] **Dependabot** — `.github/dependabot.yml` watching the npm
       ecosystem at the repo root (covers `app/` + `packages/*` through
       the one workspace lockfile). Weekly schedule, version + security
