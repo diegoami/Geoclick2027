@@ -474,7 +474,7 @@ Update this table as tasks merge. Commit hashes are the merge commits.
 | FT-03 | **merged** | `2f7e7b0` | v0.3.0 | tap to magnify on touch (redefined at FT-02 review; was a Normal/Large switch); verified with simulated touch, not yet on a physical device |
 | FT-04 | **merged** | `2d3205e` | v0.3.0 | 🧑 picked A (pin) from 3 drafts; favicon switches too (FT-05) |
 | FT-05 | **merged** | `bf49643` | v0.3.0 | one generator script for all icons; checked in built exe + installer, emulator (drawer, launch screen) and favicon; Start menu/taskbar not seen (same .ico) |
-| FT-06 | todo | — | v0.3.0 | 🧑 keystore |
+| FT-06 | **merged** | `6de2d98` | v0.3.0 | signing setup verified with throwaway keys (unsigned without, signed via env or properties); 🧑 real keystore pending, needed before FT-07's dry run |
 | FT-07 | todo | — | v0.3.0 | |
 | FT-08 | todo | — | v0.3.0 | 🧑 public repo, publish |
 | FT-09 | todo | — | v0.4.0 | 🧑 copy review |
