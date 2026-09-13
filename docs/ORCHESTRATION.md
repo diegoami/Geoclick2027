@@ -38,6 +38,27 @@ claude --model opus
 That is the whole setup. Nothing to authenticate to, no issues to create, no
 release branches, no second agent to brief.
 
+### Run it as its own interactive session, not as a background agent
+
+**The loop is a session the product owner can see and type into.** Start it in
+its own terminal and talk to it directly — that is where "finish this task then
+stop", "yes, merge it" and Ctrl+C go.
+
+Do **not** run the loop as a background subagent of another session. It has to
+stop and ask for approval **19 times**, once per merge; that is its normal
+operating mode, not an exception. Relayed through a parent session, every one of
+those approvals becomes a round trip with the agent's progress invisible in
+between. An interactive session makes the thing it does most often — ask — the
+cheapest thing it does.
+
+The corollary: a **different** session is the right place to change the plan.
+The loop treats `tasks.yaml` and these docs as read-only spec (hard rule 6), so
+re-scoping a task, re-batching a release or rewriting a DoD after an escalation
+happens in a separate session, in a commit, while the loop is stopped or parked.
+And to know where things stand, nobody needs to ask an agent at all: read the
+ledger in [REMEDIATION_PLAN.md](REMEDIATION_PLAN.md) or run
+`node scripts/task.mjs status`.
+
 ## The loop
 
 One iteration, start to finish. The agent repeats it until `next` says the
