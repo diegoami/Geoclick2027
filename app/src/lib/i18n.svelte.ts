@@ -30,6 +30,8 @@ export type TranslationKey =
 	| 'nav.tour'
 	| 'nav.loading'
 	| 'home.subtitle'
+	| 'home.download.lead'
+	| 'home.download.link'
 	| 'home.due.upToDate'
 	| 'home.due.toReview'
 	| 'home.lastResult'
@@ -75,6 +77,8 @@ const en: Dictionary = {
 	'nav.loading': 'Loading…',
 
 	'home.subtitle': 'Pick a demo map to explore.',
+	'home.download.lead': 'Prefer an app?',
+	'home.download.link': 'Download for Windows or Android',
 	'home.due.upToDate': 'No reviews needed',
 	'home.due.toReview': '{count} to review',
 	'home.lastResult': 'Last: {perfect}/{total}',
@@ -122,6 +126,8 @@ const de: Dictionary = {
 	'nav.loading': 'Lädt…',
 
 	'home.subtitle': 'Wähle eine Demokarte zum Erkunden.',
+	'home.download.lead': 'Lieber als App?',
+	'home.download.link': 'Für Windows oder Android herunterladen',
 	'home.due.upToDate': 'Keine Wiederholung nötig',
 	'home.due.toReview': '{count} zu wiederholen',
 	'home.lastResult': 'Zuletzt: {perfect}/{total}',
@@ -169,6 +175,8 @@ const it: Dictionary = {
 	'nav.loading': 'Caricamento…',
 
 	'home.subtitle': 'Scegli una mappa demo da esplorare.',
+	'home.download.lead': "Preferisci un'app?",
+	'home.download.link': 'Scarica per Windows o Android',
 	'home.due.upToDate': 'Nessuna ripetizione necessaria',
 	'home.due.toReview': '{count} da ripassare',
 	'home.lastResult': 'Ultimo: {perfect}/{total}',

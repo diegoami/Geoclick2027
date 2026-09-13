@@ -8,6 +8,11 @@ project — see [ARCHITECTURE.md](ARCHITECTURE.md) for the full pitch.
 app, built from `main`. No install or account needed; progress is kept
 in your browser.
 
+**Windows or Android app:** installers are on the public
+[releases page](https://github.com/diegoami/geoclick-releases/releases/latest)
+(this source repository is private). How they're built and published:
+[docs/RELEASES.md](docs/RELEASES.md).
+
 ## Quick start (browser)
 
 ```bash
