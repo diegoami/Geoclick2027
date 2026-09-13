@@ -853,3 +853,90 @@ or amend an entry here as part of that change, not as an afterthought.
   milestone (domain, app-store submission) per the SSO-deferral entry
   above; `0.1.0` is deliberately a low number for "first tracked release,"
   not a claim of feature-completeness.
+
+## PMTiles storage: stay in plain git for now (ADR, 2026-09-13)
+
+GC-080 (review D12, #29). A decision record only — nothing was migrated,
+no `.gitattributes` change, no file moved.
+
+- **Measured, not estimated (2026-09-13, commit `2003d62`).** 44 tilesets
+  in `data/maps`, **13.88 MB** in the working tree (smallest
+  `netherlands-regions` 23 KB, largest `russia-regions` 2.0 MB; mean
+  323 KB). `map.json` + `tour.json` together add only 0.43 MB. The git
+  pack is **15.60 MiB**, of which **14.22 MB is tileset history** — 57
+  distinct `.pmtiles` blobs, because rebuilds keep the old blob forever
+  (`usa-states` has 4 versions, `italy-regions`/`germany-states` 3 each).
+  `.git` on disk: 19 MB. The repo is four days old (first commit
+  2026-09-09).
+- **Growth per country batch is rising, because the countries are
+  getting bigger:** Italy/Germany/USA 0.34 MB per country; the 6-country
+  batch 0.25; the 5-country batch 0.73; the 8-country batch **0.97 MB
+  per country (7.73 MB in one batch)**. Plan on ~1 MB per country from
+  here, plus any rebuild of an existing map costing its full size again.
+  A style/data change that forced retiling all 44 maps would add ~14 MB
+  in a single commit — which is exactly why GC-032 (the palette task) is
+  forbidden from retiling.
+- **Options, costed:**
+  1. **Status quo** (plain git). Costs: the pack grows ~1 MB per new
+     country and never shrinks; every clone downloads all history. At
+     15.6 MiB that is a non-issue. GitHub only starts warning on single
+     files at 50 MB and rejects at 100 MB; the largest tileset is 2 MB.
+     All three shells keep working unchanged: the Netlify build, Tauri's
+     `frontendDist` and Capacitor's `cap sync` all read the files straight
+     off disk through the `app/static/maps` symlink.
+  2. **Git LFS.** Two very different variants. *LFS for new/rebuilt
+     tilesets only* rewrites nothing — but also saves nothing on the
+     14.22 MB already in history, only on growth. *Migrating history*
+     (`git lfs migrate import --everything`) rewrites every commit:
+     every hash changes, `main` must be force-pushed, tags `v0.1.0` and
+     `v0.1.1` move, every clone (and the parked
+     `feature/supabase-sso-sync`) must re-clone or be rebased, and every
+     commit hash cited in this repo's own docs — the remediation ledger,
+     CHANGELOG, these entries — goes dead. That is an irreversible,
+     Ultrahigh change. Either variant also brings: GitHub's LFS storage
+     and monthly bandwidth quota, which is small on the free tier and
+     paid beyond it, and which every Netlify build and every fresh clone
+     draws on; `git lfs` installed on every machine (Git for Windows
+     bundles it; WSL and the Android build box need it too); and
+     `.gitattributes` changing `*.pmtiles binary` to
+     `*.pmtiles filter=lfs diff=lfs merge=lfs -text`, still *after*
+     GC-001's catch-all. **The failure mode is nasty and familiar:** a
+     checkout without LFS support gets ~130-byte text pointer files in
+     place of the tilesets, and the app then shows labels but no
+     polygons — the identical symptom to the two `.gitattributes`
+     corruption bugs in ONBOARDING.md's gotchas. For the three shells:
+     Netlify must fetch LFS objects during its build — verify on a
+     branch deploy before relying on it (its old "Large Media" LFS
+     service has been retired); Tauri and Capacitor are fine only if the
+     machine that builds them has LFS.
+  3. **Fetch-at-build from a release artefact** (tilesets zipped and
+     attached to a release, downloaded and checksum-verified by a
+     prebuild script into `data/maps`). Costs: tilesets stop being
+     versioned in the same commit as the code that reads them (needs a
+     hash manifest in-repo); every build of every shell gains a network
+     dependency and a new failure point; building a map gains an upload
+     step; and it puts GitHub Releases in the loop, which this project
+     otherwise keeps out of its workflow. Buys: a small, fast clone.
+  4. **Generate-at-build — rejected.** Needs `ogr2ogr`, `tippecanoe`
+     and `pmtiles` plus the Natural Earth sources, a WSL2/Linux
+     toolchain that Netlify's build image doesn't have and the Windows
+     build box only has via WSL. It would also make every build depend on
+     the map pipeline being reproducible, which today relies on manual
+     curation steps (MAPS.md).
+- **Decision: stay on plain git (option 1).** At 15.6 MiB the problem
+  the review raised is real but years away, and every alternative adds
+  per-build cost or failure modes today to save megabytes nobody is
+  paying for. History is never rewritten for this without the product
+  owner's explicit approval as its own task.
+- **Revisit trigger** — whichever comes first: the git pack passes
+  **100 MB** (`git count-objects -vH`, `size-pack`); any single tileset
+  passes **25 MB** (half GitHub's warning threshold); or the catalog
+  passes **60 countries** (~38 MB more at ~1 MB/country). When
+  triggered, the preferred first step is **LFS for new and rebuilt
+  tilesets only, no history rewrite**, after proving a Netlify branch
+  deploy serves real tiles rather than pointer files (`curl` a
+  `.pmtiles` and check it starts with the `PMTiles` magic bytes).
+  Fetch-at-build is the fallback if Netlify can't fetch LFS. Whichever
+  is chosen, extend `app/src/lib/mapData.test.ts` to assert every
+  `.pmtiles` starts with those magic bytes, so a pointer-file checkout
+  fails the gates instead of shipping blank maps.
