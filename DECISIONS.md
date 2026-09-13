@@ -143,12 +143,20 @@ or amend an entry here as part of that change, not as an afterthought.
   rule and three grades instead of SM-2's six, this makes the scheduler
   SM-2-*derived*, not "classic SM-2" as the docs used to claim — fixed in
   `packages/srs/src/index.ts` and ARCHITECTURE.md.
-- **Practice mode (Iteration 6) never writes back to SRS
-  state, and starts from a blank map.** It exists so replaying a
+- **Practice mode (Iteration 6) persists nothing — no SRS state and no
+  last-session summary — and starts from a blank map.** It exists so replaying a
   mastered map is still possible once nothing's due, without that
   session silently perturbing the real review schedule, and without
   implying you already "know" everything by pre-marking it discovered
-  before you've actually re-tried it this round.
+  before you've actually re-tried it this round. *Amended by GC-020
+  (2026-09-13):* the code used to save the last-session summary for
+  practice rounds too, contradicting "never writes back" — so a casual
+  practice round silently replaced the home page's "Last: 18/20" record
+  of the last real graded session. Resolved toward the rule rather than
+  toward the code: the home page line describes where you stand on your
+  review schedule, and a practice score doesn't. Practice results are
+  still shown on the score panel at the end of the round; they just
+  aren't kept.
 - **The score panel's "Play again" only shows when it's actually
   accurate — when a due session finishes and something's still due, not
   automatically.** Found by actually finishing a map: since a revealed
