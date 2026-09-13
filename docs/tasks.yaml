@@ -64,8 +64,7 @@ releases:
         GC-040,
         GC-050,
         GC-060,
-        GC-070,
-        GC-080
+        GC-070
       ]
   - version: v0.1.2
     theme: Extraction, hygiene, storage, performance
@@ -74,7 +73,10 @@ releases:
   - version: v0.2.0
     theme: "Milestone — known issues from the 2026-09-13 review resolved"
     batch: waves 3 + 4 + programme close
-    tasks: [GC-004, GC-022, GC-032, GC-033]
+    # GC-080 is wave 1 (DAG-ready alongside the rest of v0.1.1) but the product
+    # owner asked to hold it for the closing milestone instead - an explicit
+    # per-RELEASES.md override, not a dependency requirement.
+    tasks: [GC-004, GC-022, GC-032, GC-033, GC-080]
 
 # Dropped from the first draft. The nice-to-have tier is NO LONGER dropped: the
 # product owner restored it on the condition that each item is low effort, which
@@ -1085,7 +1087,10 @@ tasks:
     effort: Low
     wave: 1
     deps: [GC-001]
-    release: v0.1.1
+    # DAG-ready in wave 1, same as the rest of v0.1.1 - but the product owner
+    # asked to hold this one for the closing milestone instead (it decides a
+    # question, fixes no defect), so it ships in v0.2.0. See RELEASES.md.
+    release: v0.2.0
     branch: docs/gc-080-pmtiles-storage-adr
     type: docs
     areas: [data, docs]

@@ -75,7 +75,9 @@ WAVE 1  ┌─────┘
         ├─ GC-050  <html lang> sync
         ├─ GC-060  doc count reconciliation
         ├─ GC-070  base-path asset fetches
-        └─ GC-080  pmtiles storage ADR
+        └─ GC-080  pmtiles storage ADR            (ships in v0.2.0, not v0.1.1 -
+                                                     product-owner override, see
+                                                     RELEASES.md; DAG-ready here)
                                           │
 WAVE 2  ┌─────────────────────────────────┘
         ├─ GC-021  extract resolveDrop            (needs 020, 003)
@@ -187,7 +189,7 @@ that is what the loop reads. This table is the index.
 | GC-060 | Reconcile stale doc counts and dangling references | Low | 1 | 001 | v0.1.1 | worth-doing | S2, S4, #18 |
 | GC-070 | Route asset fetches through SvelteKit `base` | Low | 1 | 001 | v0.1.1 | worth-doing | C12, #14 |
 | GC-071 | Home page: stop fetching all 44 `map.json` | Medium | 2 | 070, 030 | v0.1.2 | worth-doing | C9, #13 |
-| GC-080 | ADR: pmtiles storage strategy (Git LFS or not) | Low | 1 | 001 | v0.1.1 | nice-to-have | D12, #29 |
+| GC-080 | ADR: pmtiles storage strategy (Git LFS or not) | Low | 1 | 001 | v0.2.0 | nice-to-have | D12, #29 |
 
 **Distribution** — effort: Low 9, Medium 8, High 2, Ultrahigh 0.
 Tier: must-fix 5, worth-doing 9, nice-to-have 5. Engine: opus, all 19.
@@ -224,11 +226,15 @@ rather than a task.
 | #29 | Git LFS decision for `*.pmtiles` (ADR only) | GC-080 |
 | #30 | Target-count-aware tour dwell | GC-033 |
 
-Two are worth a second look before you approve them: **#24** closes a real
-production leak (`window.__map` currently ships to every user), and **#29** is a
+Two were worth a second look before approval, and both are now resolved:
+**#24** closes a real production leak (`window.__map` currently ships to every
+user) and stays in GC-020/`v0.1.1` as originally scoped. **#29** (GC-080) is a
 decision document rather than a fix — it is Low effort because it executes
 nothing, but it is the one item whose value is "the question stops being open"
-rather than "a defect is gone".
+rather than "a defect is gone" — and the product owner asked to hold it for
+the closing milestone instead of shipping it with the real fixes in `v0.1.1`.
+It stays DAG-ready at wave 1 (nothing blocks it, nothing depends on it) but
+now ships in `v0.2.0`. See [RELEASES.md](RELEASES.md).
 
 **Still dropped: GC-000** (the worktree spike — already proven, and moot now
 that the loop uses no worktrees). Nothing else.
@@ -272,7 +278,6 @@ the task.
 | GC-050 | todo | — | v0.1.1 | |
 | GC-060 | todo | — | v0.1.1 | |
 | GC-070 | todo | — | v0.1.1 | |
-| GC-080 | todo | — | v0.1.1 | ADR only, executes nothing |
 | GC-021 | todo | — | v0.1.2 | |
 | GC-031 | todo | — | v0.1.2 | |
 | GC-041 | todo | — | v0.1.2 | |
@@ -281,6 +286,7 @@ the task.
 | GC-022 | todo | — | v0.2.0 | |
 | GC-032 | todo | — | v0.2.0 | the one real design task |
 | GC-033 | todo | — | v0.2.0 | last task; v0.2.0 is cut after it |
+| GC-080 | todo | — | v0.2.0 | ADR only, executes nothing; wave-1 DAG-ready but held for the milestone (product-owner override) |
 
 | Release | Status | Tag | Date |
 |---|---|---|---|
