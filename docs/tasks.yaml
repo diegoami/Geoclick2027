@@ -76,15 +76,15 @@ dropped:
   - id: GC-080
     reason: "nice-to-have tier (D12, #29)"
   - item: "#20"
-    reason: "nice-to-have; was folded into GC-003 (delete app/src/lib/vitest-examples/)"
+    reason: "nice-to-have; the first draft paired it with GC-003 (delete app/src/lib/vitest-examples/) — GC-003's scope note explicitly excludes it, leave the scaffold alone"
   - item: "#21"
-    reason: "nice-to-have; was folded into GC-022 (dedup popup CSS into app.css)"
+    reason: "nice-to-have; the first draft paired it with GC-022 (dedup popup CSS into app.css) — GC-022's scope note explicitly excludes it, do not create app.css"
   - item: "#23"
-    reason: "nice-to-have; was folded into GC-020 ($state on the three tray bindings)"
+    reason: "nice-to-have; the first draft paired it with GC-020 ($state on the three tray bindings) — GC-020's scope note explicitly excludes it, leave the bindings as-is"
   - item: "#24"
-    reason: "nice-to-have; was folded into GC-020 (import.meta.env.DEV guard on window.__map)"
+    reason: "nice-to-have; the first draft paired it with GC-020 (import.meta.env.DEV guard on window.__map) — GC-020's scope note explicitly excludes it, leave window.__map unguarded"
   - item: "#26"
-    reason: "nice-to-have; was folded into GC-041 (try/catch around localStorage.setItem)"
+    reason: "nice-to-have; the first draft paired it with GC-041 (try/catch around localStorage.setItem) — GC-041's scope note explicitly excludes it, leave writeJson as-is"
 
 tasks:
 
