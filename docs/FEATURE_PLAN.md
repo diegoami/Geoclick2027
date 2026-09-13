@@ -301,15 +301,31 @@ section. The publish step is 🧑.
 - **Why:** FEATURE_BACKLOG.md §3 says this item needs a design pass
   before building. Decisions 5–8 settled the big questions; what's left
   is the exact script.
-- **Do:** write `docs/TUTORIAL.md` with a table of steps: intro, the nine
-  requested steps, then an outro. For each step, record:
+- **Do:** write `docs/TUTORIAL.md` with a table of steps: intro, the ten
+  steps below, then an outro. For each step, record:
   - the route it happens on;
   - the real element it highlights, by the `data-tutorial="…"` anchor
     it will add;
   - what advances it: a real action (route change, correct drop, wrong
-    drop, clicking Tour), or "Next" for the explanation-only steps
-    (step 8, spaced repetition);
+    drop, clicking Tour, a zoom/pan gesture for the new step below), or
+    "Next" for the explanation-only steps (step 9, spaced repetition);
   - the English copy.
+
+  **Added 2026-09-13, after the original nine-step request:** a new step
+  teaching map navigation — zoom and pan — since players may not
+  realize the map supports either, and it's needed before the rest of
+  the tutorial makes sense on a dense map. Insert it right after "select
+  a map" and before "switch to Overview," so the player can navigate
+  before being shown around. Renumbers the original steps 2–9 to 3–10;
+  nothing else about them changes. Cover, on `italy-regions`:
+  - scroll-wheel / trackpad-pinch zoom, and the `+`/`−`
+    `NavigationControl` buttons (top-right on every map view);
+  - click-and-drag pan;
+  - touch pinch-to-zoom and drag-to-pan on Android (the map already
+    supports both — this step only needs to point them out);
+  - advance the step on any real zoom or pan action (a MapLibre `zoom`
+    or `move` event), not just a button click, so a player who
+    discovers the gesture on their own still progresses.
 
   It also covers:
   - Skip, Back and Replay behaviour;
@@ -317,13 +333,14 @@ section. The publish step is 🧑.
     pause and offer "Resume tutorial" or "End";
   - phone-width layout, and touch on Android, where dragging is
     pointer-based already;
-  - what the sandbox means for step 7. Returning to the quiz shows the
-    regions solved during the tutorial, from the in-memory store (FT-10),
-    not the player's real progress.
+  - what the sandbox means for step 8 (was step 7). Returning to the
+    quiz shows the regions solved during the tutorial, from the
+    in-memory store (FT-10), not the player's real progress.
 - 🧑 **Product owner:** reviews the copy and flow at the merge request.
   It's product text, so the product owner has the final word.
-- **DoD:** TUTORIAL.md merged; the German and Italian copy is drafted in
-  it for FT-11 to paste in.
+- **DoD:** TUTORIAL.md merged, with ten steps including the new
+  zoom/pan one; the German and Italian copy is drafted in it for FT-11
+  to paste in.
 
 ### FT-10 — Sandboxed progress store for the tutorial · Medium · deps: FT-09
 
@@ -335,8 +352,9 @@ section. The publish step is 🧑.
     factory every view calls, returns one shared in-memory instance. That
     covers localStorage, Tauri SQLite and Capacitor alike.
   - The instance survives client-side navigation between the map, the
-    overview and the quiz, which is what step 7 needs. It is discarded
-    when the tutorial ends or is skipped.
+    overview and the quiz, which is what step 8 (was step 7 before the
+    zoom/pan step was added, see FT-09) needs. It is discarded when the
+    tutorial ends or is skipped.
   - QuizView's same-day carry-forward (`alreadySolvedIds`) then shows the
     solved regions with no extra code.
 - **Tests:**
@@ -360,13 +378,17 @@ section. The publish step is 🧑.
   - **Anchors:** `data-tutorial` attributes on the real elements:
     - the Italy — Regions card on the home page;
     - MapNav's Overview, Quiz and Tour buttons;
-    - the quiz tray and the map canvas.
+    - the quiz tray, the map canvas, and the `NavigationControl` `+`/`−`
+      buttons (for the zoom/pan step).
   - **Advancing:** on real events. Route changes come through SvelteKit's
     `afterNavigate`. Correct and wrong drops come from a small hook
     QuizView calls on each resolved drop; it does nothing when no
-    tutorial is running. For the steps that demonstrate a drop, pick
-    target regions that are large in `italy-regions`, such as Sicilia or
-    Sardegna, so the drop lands reliably.
+    tutorial is running. The zoom/pan step advances on the map's own
+    `zoom` or `move` event (a control click, scroll/pinch, or a drag all
+    fire one of these — no need to distinguish which). For the steps
+    that demonstrate a drop, pick target regions that are large in
+    `italy-regions`, such as Sicilia or Sardegna, so the drop lands
+    reliably.
   - **Tutorial button:** "near the top of the app" means the home page
     header and `MapNav`. All copy in EN/DE/IT from TUTORIAL.md; the
     `TranslationKey` union makes a missing string a compile error.
@@ -375,8 +397,9 @@ section. The publish step is 🧑.
 - **Verify:** a full real run in the browser, in English, with
   screenshots of every step.
 - **DoD:**
-  - all 9 requested steps work on `italy-regions` through real clicks and
-    drags;
+  - all 10 steps (the nine originally requested, plus the zoom/pan step
+    added 2026-09-13) work on `italy-regions` through real clicks, drags,
+    scroll/pinch and pan;
   - no real progress is written (FT-10's test, plus a manual check of
     localStorage);
   - skip and replay work;
@@ -394,8 +417,8 @@ section. The publish step is 🧑.
     fixing overflow and wrapping. German copy runs longest.
   - Walk it at phone width and at Large text size (FT-03).
 - **DoD:**
-  - screenshots of every step in all three languages (step 4 and step 7
-    at minimum at phone width);
+  - screenshots of every step in all three languages (step 2 [zoom/pan],
+    step 5 [drag] and step 8 [return to quiz] at minimum at phone width);
   - ONBOARDING.md explains how to add or edit a tutorial step;
   - ARCHITECTURE.md mentions the overlay and the sandbox;
   - gates green.
