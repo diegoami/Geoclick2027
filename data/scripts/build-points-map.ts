@@ -41,7 +41,53 @@ const NAME_FIXUPS: Record<string, Record<string, string>> = {
 	// NAME_ES gives "Orense", the historic Castilian exonym - Ourense has
 	// been this city's sole official name (Spanish and Galician alike)
 	// since 1998. The plain NAME field already has this one right.
-	Spain: { Orense: 'Ourense' }
+	Spain: { Orense: 'Ourense' },
+	// Two real typos in the plain NAME field, found by auditing the full
+	// top-50 list rather than spot-checking: "Shenyeng" isn't a real
+	// Chinese city name (Shenyang is); "Xian" without the apostrophe reads
+	// as a different, ambiguous romanization from the correct "Xi'an".
+	China: { Shenyeng: 'Shenyang', Xian: "Xi'an" },
+	// "Jaboatao" is missing its final diacritic - the real city (in the
+	// Recife metro area) is "Jaboatão", confirmed against NAME_PT.
+	Brazil: { Jaboatao: 'Jaboatão' },
+	Mexico: {
+		// The plain NAME field is the English exonym for the capital, unlike
+		// every other Mexican city already in its correct Spanish form -
+		// same reasoning as Lisbon->Lisboa (Portugal) and The Hague->Den
+		// Haag (Netherlands). NAME_ES gives full official forms elsewhere
+		// ("Puebla de Zaragoza", "León de Los Aldama") that are more formal
+		// than how these cities are actually referred to day-to-day, so
+		// this is a targeted fixup, not a wholesale --name-field switch.
+		'Mexico City': 'Ciudad de México',
+		// Two more missing diacritics, confirmed against NAME_ES.
+		Nezahualcoyotl: 'Nezahualcóyotl',
+		'Ciudad Obregon': 'Ciudad Obregón'
+	},
+	// Plain NAME has a literal double-space typo for the one Russian city
+	// whose name contains a space - confirmed against NAME_EN's correctly
+	// spaced "Saint Petersburg".
+	Russia: { 'St.  Petersburg': 'Saint Petersburg' },
+	India: {
+		// NAME_EN already gives the modern standard English spelling for
+		// four of these (Howrah, Solapur, Nashik, Visakhapatnam) - the same
+		// kind of gap already seen for Odessa/Ukraine. Allahabad is
+		// different: NAME_EN hasn't caught up either, since this one is a
+		// genuine 2018 official rename (Allahabad -> Prayagraj by the Uttar
+		// Pradesh government), not a transliteration-convention update -
+		// same "use the current official name" principle as Kyiv/Odesa.
+		Haora: 'Howrah',
+		Sholapur: 'Solapur',
+		Nasik: 'Nashik',
+		Vishakhapatnam: 'Visakhapatnam',
+		Allahabad: 'Prayagraj'
+	},
+	// Colonial-era Dutch spelling ("Bandjarmasin") and a plain typo
+	// ("Pakalongan", missing its second syllable's real vowel) - the
+	// correct modern Indonesian forms are Banjarmasin and Pekalongan.
+	Indonesia: { Bandjarmasin: 'Banjarmasin', Pakalongan: 'Pekalongan' },
+	// Missing diacritic, confirmed against NAME_ES ("San Nicolás de los
+	// Arroyos" - kept short, same reasoning as Mexico's Puebla/León above).
+	Argentina: { 'San Nicolas': 'San Nicolás' }
 };
 
 function main() {
@@ -49,6 +95,21 @@ function main() {
 	const country = args.country; // matches the dataset's ADM0NAME field
 	const outDir = args.out;
 	const minPopulation = Number(args['min-population'] ?? 100000);
+	// Adaptive selection, added when the >100k-population threshold alone
+	// stopped scaling across a much wider range of countries (Sweden: 5
+	// towns clear 100k, an unhelpfully tiny map even though it's the
+	// correct threshold answer; China/India-scale countries: hundreds to
+	// thousands would clear it, unusable for a curated quiz). Both are
+	// no-ops at their defaults, so every map built before these existed
+	// regenerates identically:
+	// --min-count guarantees at least N towns even if that means dipping
+	// below --min-population - the N most populous places in the country,
+	// not just whatever happens to clear the threshold.
+	const minCount = Number(args['min-count'] ?? 0);
+	// --max-count caps the result at the N most populous places that
+	// cleared --min-population, for a country where the threshold alone
+	// would select far more than a curated quiz can reasonably use.
+	const maxCount = args['max-count'] ? Number(args['max-count']) : Infinity;
 	// Which localized name field to prefer (e.g. NAME_IT, NAME_DE) - falls
 	// back to the plain NAME field (usually English) for any row where the
 	// localized one is empty, same spirit as build-map.ts's NAME_FIXUPS but
@@ -62,7 +123,7 @@ function main() {
 
 	if (!country || !outDir) {
 		console.error(
-			'Usage: build-points-map.ts --country="Italy" --out=data/maps/italy-towns-100k [--name-field=NAME_IT] [--min-population=100000] [--name="Italy — Towns"] [--exclude=Belfast]'
+			'Usage: build-points-map.ts --country="Italy" --out=data/maps/italy-towns-100k [--name-field=NAME_IT] [--min-population=100000] [--min-count=5] [--max-count=50] [--name="Italy — Towns"] [--exclude=Belfast]'
 		);
 		process.exit(1);
 	}
@@ -85,7 +146,7 @@ function main() {
 	const mapJsonPath = path.join(absOutDir, 'map.json');
 	const tourJsonPath = path.join(absOutDir, 'tour.json');
 
-	console.log(`[1/5] Filtering "${country}" (population > ${minPopulation}) from Natural Earth...`);
+	console.log(`[1/5] Filtering "${country}" from Natural Earth...`);
 	// POP_MAX, deliberately, not POP_MIN or the POPxxxx yearly fields -
 	// checked all three against known-tricky rows before choosing: POP_MIN
 	// reads as flatly wrong for some capitals (Rome: 35,452 - a real bug in
@@ -97,8 +158,15 @@ function main() {
 	// Stuttgart/Mannheim, well past their real city population) - but it
 	// never wrongly *excludes* a real major city, which is the safer
 	// failure mode for a threshold filter. Disclosed in MAPS.md.
+	//
+	// The population threshold itself is applied in JS below, not here -
+	// --min-count/--max-count need to see every candidate (not just the
+	// ones already above --min-population) to decide whether to reach
+	// below the threshold or truncate above it. `POP_MAX > 0` just drops
+	// rows with missing/zero population data, which are meaningless for
+	// any of the three selection modes.
 	const whereClause =
-		`ADM0NAME='${country}' AND POP_MAX > ${minPopulation}` +
+		`ADM0NAME='${country}' AND POP_MAX > 0` +
 		(exclude.length ? ` AND NAME NOT IN (${exclude.map((n) => `'${n}'`).join(',')})` : '');
 	execFileSync('ogr2ogr', [
 		'-f',
@@ -111,10 +179,31 @@ function main() {
 		SOURCE_SHP
 	]);
 
-	console.log('[2/5] Deriving draft map.json...');
+	console.log(
+		`[2/5] Selecting towns (population > ${minPopulation}, min ${minCount}, max ${maxCount === Infinity ? 'none' : maxCount}) and deriving draft map.json...`
+	);
 	const geojson = JSON.parse(readFileSync(filteredPath, 'utf-8'));
+	const byPopulationDesc = [...geojson.features].sort(
+		(a: any, b: any) => b.properties.POP_MAX - a.properties.POP_MAX
+	);
+	let selectedFeatures = byPopulationDesc.filter(
+		(feature: any) => feature.properties.POP_MAX > minPopulation
+	);
+	// Reach below the threshold, most-populous-first, rather than leaving a
+	// sparse country (e.g. Sweden: only 5 places clear 100k) with an
+	// unhelpfully tiny map.
+	if (selectedFeatures.length < minCount) {
+		selectedFeatures = byPopulationDesc.slice(0, minCount);
+	}
+	// Truncate to the most populous places, for a country where the
+	// threshold alone would select far more than a curated quiz can
+	// reasonably use (e.g. China).
+	if (selectedFeatures.length > maxCount) {
+		selectedFeatures = selectedFeatures.slice(0, maxCount);
+	}
+
 	const fixups = NAME_FIXUPS[country] ?? {};
-	const targets = geojson.features.map((feature: any) => {
+	const withNames = selectedFeatures.map((feature: any) => {
 		const p = feature.properties;
 		const rawName: string = p[nameField] || p.NAME;
 		const name: string = fixups[rawName] ?? rawName;
@@ -131,6 +220,20 @@ function main() {
 			// camera framing; see mapDefinition.ts and MAPS.md.
 			bbox: [...centroid, ...centroid] as [number, number, number, number]
 		};
+	});
+	// Natural Earth has a handful of exact-duplicate rows for the same city
+	// (found while adding Brazil/Mexico/Indonesia: Vila Velha and Natal
+	// twice each in Brazil, Mazatlán twice in Mexico, Bandar Lampung twice
+	// in Indonesia) - a real data bug, not a naming issue, and left
+	// unhandled it would silently ship two identically-named/identically-ID
+	// slips for the same target. `withNames` is still in population-
+	// descending order at this point, so keeping the first occurrence of
+	// each id keeps whichever duplicate row had the higher POP_MAX.
+	const seenIds = new Set<string>();
+	const targets = withNames.filter((target) => {
+		if (seenIds.has(target.id)) return false;
+		seenIds.add(target.id);
+		return true;
 	});
 	targets.sort((a: any, b: any) => b.centroid[1] - a.centroid[1]); // north to south, same convention as build-map.ts
 

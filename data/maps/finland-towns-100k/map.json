@@ -1,0 +1,155 @@
+{
+	"id": "finland-towns-100k",
+	"name": "Finland — Towns",
+	"country": "Finland",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "oulu",
+			"name": "Oulu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				25.4700109,
+				64.9999976
+			],
+			"bbox": [
+				25.4700109,
+				64.9999976,
+				25.4700109,
+				64.9999976
+			]
+		},
+		{
+			"id": "kuopio",
+			"name": "Kuopio",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				27.6949397,
+				62.8942863
+			],
+			"bbox": [
+				27.6949397,
+				62.8942863,
+				27.6949397,
+				62.8942863
+			]
+		},
+		{
+			"id": "jyvaskyla",
+			"name": "Jyväskylä",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				25.7499939,
+				62.2603457
+			],
+			"bbox": [
+				25.7499939,
+				62.2603457,
+				25.7499939,
+				62.2603457
+			]
+		},
+		{
+			"id": "tampere",
+			"name": "Tampere",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				23.7500126,
+				61.5000045
+			],
+			"bbox": [
+				23.7500126,
+				61.5000045,
+				23.7500126,
+				61.5000045
+			]
+		},
+		{
+			"id": "pori",
+			"name": "Pori",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				21.7749393,
+				61.4788947
+			],
+			"bbox": [
+				21.7749393,
+				61.4788947,
+				21.7749393,
+				61.4788947
+			]
+		},
+		{
+			"id": "lahti",
+			"name": "Lahti",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				25.6649344,
+				60.9938597
+			],
+			"bbox": [
+				25.6649344,
+				60.9938597,
+				25.6649344,
+				60.9938597
+			]
+		},
+		{
+			"id": "turku",
+			"name": "Turku",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				22.2549617,
+				60.4538668
+			],
+			"bbox": [
+				22.2549617,
+				60.4538668,
+				22.2549617,
+				60.4538668
+			]
+		},
+		{
+			"id": "helsinki",
+			"name": "Helsinki",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				24.932456915043964,
+				60.16380384948568
+			],
+			"bbox": [
+				24.932456915043964,
+				60.16380384948568,
+				24.932456915043964,
+				60.16380384948568
+			]
+		}
+	],
+	"tourOrder": [
+		"oulu",
+		"kuopio",
+		"jyvaskyla",
+		"tampere",
+		"pori",
+		"lahti",
+		"turku",
+		"helsinki"
+	]
+}

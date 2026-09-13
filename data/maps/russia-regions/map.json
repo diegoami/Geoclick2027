@@ -1,0 +1,1505 @@
+{
+	"id": "russia-regions",
+	"name": "Russia — Regions",
+	"country": "Russia",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "arkhangelsk",
+			"name": "Arkhangelsk",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				52.4065,
+				71.2542
+			],
+			"bbox": [
+				35.8823,
+				60.6497,
+				68.9307,
+				81.8587
+			]
+		},
+		{
+			"id": "nenets",
+			"name": "Nenets",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				54.49,
+				68.14394999999999
+			],
+			"bbox": [
+				43.3257,
+				65.8081,
+				65.6543,
+				70.4798
+			]
+		},
+		{
+			"id": "murmansk",
+			"name": "Murmansk",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.9037,
+				68.0094
+			],
+			"bbox": [
+				28.4474,
+				66.055,
+				41.36,
+				69.9638
+			]
+		},
+		{
+			"id": "yamal-nenets",
+			"name": "Yamal-Nenets",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				74.0233,
+				67.8657
+			],
+			"bbox": [
+				62.0185,
+				62.178,
+				86.0281,
+				73.5534
+			]
+		},
+		{
+			"id": "chukotka",
+			"name": "Chukotka",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				173.99555,
+				66.70739999999999
+			],
+			"bbox": [
+				157.692,
+				61.8148,
+				-169.7009,
+				71.6
+			]
+		},
+		{
+			"id": "krasnoyarsk",
+			"name": "Krasnoyarsk",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				95.0322,
+				66.5351
+			],
+			"bbox": [
+				76.1743,
+				51.7814,
+				113.8901,
+				81.2888
+			]
+		},
+		{
+			"id": "sakha-yakutia",
+			"name": "Sakha (Yakutia)",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				134.19355000000002,
+				66.10225
+			],
+			"bbox": [
+				105.5402,
+				55.4663,
+				162.8469,
+				76.7382
+			]
+		},
+		{
+			"id": "komi",
+			"name": "Komi",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				55.82405,
+				63.83175
+			],
+			"bbox": [
+				45.4422,
+				59.2331,
+				66.2059,
+				68.4304
+			]
+		},
+		{
+			"id": "karelia",
+			"name": "Karelia",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				33.60185,
+				63.6649
+			],
+			"bbox": [
+				29.2771,
+				60.6457,
+				37.9266,
+				66.6841
+			]
+		},
+		{
+			"id": "magadan",
+			"name": "Magadan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				154.0897,
+				62.60419999999999
+			],
+			"bbox": [
+				144.7451,
+				58.849,
+				163.4343,
+				66.3594
+			]
+		},
+		{
+			"id": "khanty-mansiy",
+			"name": "Khanty-Mansiy",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				72.59394999999999,
+				62.1531
+			],
+			"bbox": [
+				59.2317,
+				58.5891,
+				85.9562,
+				65.7171
+			]
+		},
+		{
+			"id": "vologda",
+			"name": "Vologda",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				40.9217,
+				60.0423
+			],
+			"bbox": [
+				34.7299,
+				58.4902,
+				47.1135,
+				61.5944
+			]
+		},
+		{
+			"id": "city-of-st-petersburg",
+			"name": "City of St. Petersburg",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				30.087049999999998,
+				59.93795
+			],
+			"bbox": [
+				29.4179,
+				59.6099,
+				30.7562,
+				60.266
+			]
+		},
+		{
+			"id": "leningrad",
+			"name": "Leningrad",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				31.69095,
+				59.88015
+			],
+			"bbox": [
+				27.6959,
+				58.4403,
+				35.686,
+				61.32
+			]
+		},
+		{
+			"id": "sverdlovsk",
+			"name": "Sverdlovsk",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				61.70765,
+				59.02805
+			],
+			"bbox": [
+				57.2187,
+				56.0628,
+				66.1966,
+				61.9933
+			]
+		},
+		{
+			"id": "perm",
+			"name": "Perm",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				55.62095,
+				58.89515
+			],
+			"bbox": [
+				51.7742,
+				56.1081,
+				59.4677,
+				61.6822
+			]
+		},
+		{
+			"id": "kirov",
+			"name": "Kirov",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				50.13164999999999,
+				58.579499999999996
+			],
+			"bbox": [
+				46.3413,
+				56.0999,
+				53.922,
+				61.0591
+			]
+		},
+		{
+			"id": "kostroma",
+			"name": "Kostroma",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				43.993700000000004,
+				58.4544
+			],
+			"bbox": [
+				40.3852,
+				57.2763,
+				47.6022,
+				59.6325
+			]
+		},
+		{
+			"id": "tomsk",
+			"name": "Tomsk",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				82.23535000000001,
+				58.36995
+			],
+			"bbox": [
+				75.0801,
+				55.6927,
+				89.3906,
+				61.0472
+			]
+		},
+		{
+			"id": "novgorod",
+			"name": "Novgorod",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				32.9159,
+				58.1764
+			],
+			"bbox": [
+				29.6585,
+				56.931,
+				36.1733,
+				59.4218
+			]
+		},
+		{
+			"id": "kamchatka",
+			"name": "Kamchatka",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				165.00985,
+				57.90895
+			],
+			"bbox": [
+				155.5512,
+				50.8865,
+				174.4685,
+				64.9314
+			]
+		},
+		{
+			"id": "yaroslavl",
+			"name": "Yaroslavl",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				39.2568,
+				57.74605
+			],
+			"bbox": [
+				37.3497,
+				56.5383,
+				41.1639,
+				58.9538
+			]
+		},
+		{
+			"id": "irkutsk",
+			"name": "Irkutsk",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				107.40530000000001,
+				57.7068
+			],
+			"bbox": [
+				95.6782,
+				51.1319,
+				119.1324,
+				64.2817
+			]
+		},
+		{
+			"id": "tyumen",
+			"name": "Tyumen",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				69.9994,
+				57.56135
+			],
+			"bbox": [
+				64.8393,
+				55.1335,
+				75.1595,
+				59.9892
+			]
+		},
+		{
+			"id": "pskov",
+			"name": "Pskov",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				29.4252,
+				57.2961
+			],
+			"bbox": [
+				27.3529,
+				55.5778,
+				31.4975,
+				59.0144
+			]
+		},
+		{
+			"id": "tver",
+			"name": "Tver",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.5616,
+				57.2489
+			],
+			"bbox": [
+				30.8168,
+				55.6318,
+				38.3064,
+				58.866
+			]
+		},
+		{
+			"id": "udmurt",
+			"name": "Udmurt",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				52.73645,
+				57.1977
+			],
+			"bbox": [
+				51.1204,
+				55.8583,
+				54.3525,
+				58.5371
+			]
+		},
+		{
+			"id": "ivanovo",
+			"name": "Ivanovo",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				41.557100000000005,
+				57.05915
+			],
+			"bbox": [
+				39.3868,
+				56.3684,
+				43.7274,
+				57.7499
+			]
+		},
+		{
+			"id": "mariy-el",
+			"name": "Mariy-El",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				47.91545000000001,
+				56.56045
+			],
+			"bbox": [
+				45.651,
+				55.8294,
+				50.1799,
+				57.2915
+			]
+		},
+		{
+			"id": "nizhegorod",
+			"name": "Nizhegorod",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				44.77275,
+				56.278
+			],
+			"bbox": [
+				41.7832,
+				54.4762,
+				47.7623,
+				58.0798
+			]
+		},
+		{
+			"id": "omsk",
+			"name": "Omsk",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				73.36965000000001,
+				56.0068
+			],
+			"bbox": [
+				70.4298,
+				53.4326,
+				76.3095,
+				58.581
+			]
+		},
+		{
+			"id": "vladimir",
+			"name": "Vladimir",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				40.61775,
+				55.96535
+			],
+			"bbox": [
+				38.3296,
+				55.1089,
+				42.9059,
+				56.8218
+			]
+		},
+		{
+			"id": "moskovskaya",
+			"name": "Moskovskaya",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				37.6903,
+				55.5941
+			],
+			"bbox": [
+				35.1741,
+				54.2447,
+				40.2065,
+				56.9435
+			]
+		},
+		{
+			"id": "kurgan",
+			"name": "Kurgan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				65.35705,
+				55.5021
+			],
+			"bbox": [
+				61.9799,
+				54.1631,
+				68.7342,
+				56.8411
+			]
+		},
+		{
+			"id": "chuvash",
+			"name": "Chuvash",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				47.16625,
+				55.480900000000005
+			],
+			"bbox": [
+				45.9201,
+				54.6317,
+				48.4124,
+				56.3301
+			]
+		},
+		{
+			"id": "moskva",
+			"name": "Moskva",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				37.373599999999996,
+				55.44725
+			],
+			"bbox": [
+				36.9043,
+				54.9908,
+				37.8429,
+				55.9037
+			]
+		},
+		{
+			"id": "tatarstan",
+			"name": "Tatarstan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				50.70935,
+				55.32165
+			],
+			"bbox": [
+				47.2419,
+				53.9738,
+				54.1768,
+				56.6695
+			]
+		},
+		{
+			"id": "novosibirsk",
+			"name": "Novosibirsk",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				80.08845,
+				55.28885
+			],
+			"bbox": [
+				75.0975,
+				53.3274,
+				85.0794,
+				57.2503
+			]
+		},
+		{
+			"id": "kaliningrad",
+			"name": "Kaliningrad",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				21.22965,
+				54.81645
+			],
+			"bbox": [
+				19.6265,
+				54.3429,
+				22.8328,
+				55.29
+			]
+		},
+		{
+			"id": "smolensk",
+			"name": "Smolensk",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				33.08385,
+				54.7528
+			],
+			"bbox": [
+				30.7706,
+				53.4311,
+				35.3971,
+				56.0745
+			]
+		},
+		{
+			"id": "khabarovsk",
+			"name": "Khabarovsk",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				138.80255,
+				54.605199999999996
+			],
+			"bbox": [
+				130.4465,
+				46.6377,
+				147.1586,
+				62.5727
+			]
+		},
+		{
+			"id": "kemerovo",
+			"name": "Kemerovo",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				86.92689999999999,
+				54.5005
+			],
+			"bbox": [
+				84.4104,
+				52.168,
+				89.4434,
+				56.833
+			]
+		},
+		{
+			"id": "mordovia",
+			"name": "Mordovia",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				44.47,
+				54.42055
+			],
+			"bbox": [
+				42.2063,
+				53.6643,
+				46.7337,
+				55.1768
+			]
+		},
+		{
+			"id": "ryazan",
+			"name": "Ryazan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				40.687200000000004,
+				54.3411
+			],
+			"bbox": [
+				38.6751,
+				53.3422,
+				42.6993,
+				55.34
+			]
+		},
+		{
+			"id": "kaluga",
+			"name": "Kaluga",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				35.3801,
+				54.2954
+			],
+			"bbox": [
+				33.5012,
+				53.2721,
+				37.259,
+				55.3187
+			]
+		},
+		{
+			"id": "chelyabinsk",
+			"name": "Chelyabinsk",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				60.232749999999996,
+				54.1798
+			],
+			"bbox": [
+				57.1369,
+				51.9926,
+				63.3286,
+				56.367
+			]
+		},
+		{
+			"id": "bashkortostan",
+			"name": "Bashkortostan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				56.55785,
+				54.045
+			],
+			"bbox": [
+				53.1411,
+				51.5751,
+				59.9746,
+				56.5149
+			]
+		},
+		{
+			"id": "tula",
+			"name": "Tula",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				37.4204,
+				53.90495
+			],
+			"bbox": [
+				35.9315,
+				52.9741,
+				38.9093,
+				54.8358
+			]
+		},
+		{
+			"id": "chita",
+			"name": "Chita",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				114.936,
+				53.76785
+			],
+			"bbox": [
+				107.7446,
+				49.1377,
+				122.1274,
+				58.398
+			]
+		},
+		{
+			"id": "ulyanovsk",
+			"name": "Ulyanovsk",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				48.0239,
+				53.7268
+			],
+			"bbox": [
+				45.7916,
+				52.5698,
+				50.2562,
+				54.8838
+			]
+		},
+		{
+			"id": "buryat",
+			"name": "Buryat",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				107.78094999999999,
+				53.60375
+			],
+			"bbox": [
+				98.6344,
+				49.9674,
+				116.9275,
+				57.2401
+			]
+		},
+		{
+			"id": "khakass",
+			"name": "Khakass",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				89.84275,
+				53.381
+			],
+			"bbox": [
+				87.8391,
+				51.3164,
+				91.8464,
+				55.4456
+			]
+		},
+		{
+			"id": "samara",
+			"name": "Samara",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				50.2435,
+				53.199349999999995
+			],
+			"bbox": [
+				47.9485,
+				51.7594,
+				52.5385,
+				54.6393
+			]
+		},
+		{
+			"id": "penza",
+			"name": "Penza",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				44.53855,
+				53.165350000000004
+			],
+			"bbox": [
+				42.0939,
+				52.3161,
+				46.9832,
+				54.0146
+			]
+		},
+		{
+			"id": "amur",
+			"name": "Amur",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				127.31295,
+				52.944
+			],
+			"bbox": [
+				119.6695,
+				48.8559,
+				134.9564,
+				57.0321
+			]
+		},
+		{
+			"id": "bryansk",
+			"name": "Bryansk",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				33.280499999999996,
+				52.9266
+			],
+			"bbox": [
+				31.2471,
+				51.8268,
+				35.3139,
+				54.0264
+			]
+		},
+		{
+			"id": "orel",
+			"name": "Orel",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				36.42165,
+				52.790099999999995
+			],
+			"bbox": [
+				34.8049,
+				51.9362,
+				38.0384,
+				53.644
+			]
+		},
+		{
+			"id": "lipetsk",
+			"name": "Lipetsk",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				39.212,
+				52.73365
+			],
+			"bbox": [
+				37.7271,
+				51.879,
+				40.6969,
+				53.5883
+			]
+		},
+		{
+			"id": "tambov",
+			"name": "Tambov",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				41.59485,
+				52.71195
+			],
+			"bbox": [
+				39.9531,
+				51.6004,
+				43.2366,
+				53.8235
+			]
+		},
+		{
+			"id": "altay",
+			"name": "Altay",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				82.4799,
+				52.560900000000004
+			],
+			"bbox": [
+				77.7847,
+				50.6346,
+				87.1751,
+				54.4872
+			]
+		},
+		{
+			"id": "orenburg",
+			"name": "Orenburg",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				56.1801,
+				52.4259
+			],
+			"bbox": [
+				50.767,
+				50.4746,
+				61.5932,
+				54.3772
+			]
+		},
+		{
+			"id": "tuva",
+			"name": "Tuva",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				93.99275,
+				51.7273
+			],
+			"bbox": [
+				88.7357,
+				49.7255,
+				99.2498,
+				53.7291
+			]
+		},
+		{
+			"id": "kursk",
+			"name": "Kursk",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				36.2689,
+				51.659850000000006
+			],
+			"bbox": [
+				34.128,
+				50.9057,
+				38.4098,
+				52.414
+			]
+		},
+		{
+			"id": "saratov",
+			"name": "Saratov",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				46.63995,
+				51.310900000000004
+			],
+			"bbox": [
+				42.4892,
+				49.8117,
+				50.7907,
+				52.8101
+			]
+		},
+		{
+			"id": "gorno-altay",
+			"name": "Gorno-Altay",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				86.9418,
+				50.8694
+			],
+			"bbox": [
+				84.0144,
+				49.071,
+				89.8692,
+				52.6678
+			]
+		},
+		{
+			"id": "voronezh",
+			"name": "Voronezh",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				40.540099999999995,
+				50.8202
+			],
+			"bbox": [
+				38.2073,
+				49.5422,
+				42.8729,
+				52.0982
+			]
+		},
+		{
+			"id": "belgorod",
+			"name": "Belgorod",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				37.25790000000001,
+				50.611999999999995
+			],
+			"bbox": [
+				35.2822,
+				49.8035,
+				39.2336,
+				51.4205
+			]
+		},
+		{
+			"id": "volgograd",
+			"name": "Volgograd",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				44.301,
+				49.344800000000006
+			],
+			"bbox": [
+				41.1675,
+				47.4502,
+				47.4345,
+				51.2394
+			]
+		},
+		{
+			"id": "sakhalin",
+			"name": "Sakhalin",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				149.078,
+				49.06705
+			],
+			"bbox": [
+				141.645,
+				43.7126,
+				156.511,
+				54.4215
+			]
+		},
+		{
+			"id": "yevrey",
+			"name": "Yevrey",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				132.75995,
+				48.57705
+			],
+			"bbox": [
+				130.5333,
+				47.6686,
+				134.9866,
+				49.4855
+			]
+		},
+		{
+			"id": "rostov",
+			"name": "Rostov",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				41.2675,
+				48.08655
+			],
+			"bbox": [
+				38.201,
+				45.9468,
+				44.334,
+				50.2263
+			]
+		},
+		{
+			"id": "astrakhan",
+			"name": "Astrakhan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				47.10725,
+				47.2171
+			],
+			"bbox": [
+				44.9874,
+				45.5653,
+				49.2271,
+				48.8689
+			]
+		},
+		{
+			"id": "kalmyk",
+			"name": "Kalmyk",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				44.596149999999994,
+				46.5035
+			],
+			"bbox": [
+				41.6558,
+				44.7519,
+				47.5365,
+				48.2551
+			]
+		},
+		{
+			"id": "primorye",
+			"name": "Primorye",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				134.71679999999998,
+				45.3911
+			],
+			"bbox": [
+				130.4072,
+				42.3376,
+				139.0264,
+				48.4446
+			]
+		},
+		{
+			"id": "krasnodar",
+			"name": "Krasnodar",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				39.161249999999995,
+				45.126000000000005
+			],
+			"bbox": [
+				36.5931,
+				43.389,
+				41.7294,
+				46.863
+			]
+		},
+		{
+			"id": "stavropol",
+			"name": "Stavropol",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				43.27635,
+				44.9507
+			],
+			"bbox": [
+				40.8408,
+				43.6611,
+				45.7119,
+				46.2403
+			]
+		},
+		{
+			"id": "adygey",
+			"name": "Adygey",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				39.67635,
+				44.4721
+			],
+			"bbox": [
+				38.7282,
+				43.7512,
+				40.6245,
+				45.193
+			]
+		},
+		{
+			"id": "karachay-cherkess",
+			"name": "Karachay-Cherkess",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				41.6866,
+				43.84005
+			],
+			"bbox": [
+				40.69,
+				43.1853,
+				42.6832,
+				44.4948
+			]
+		},
+		{
+			"id": "kabardin-balkar",
+			"name": "Kabardin-Balkar",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				43.397850000000005,
+				43.44055
+			],
+			"bbox": [
+				42.3626,
+				42.8869,
+				44.4331,
+				43.9942
+			]
+		},
+		{
+			"id": "chechnya",
+			"name": "Chechnya",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				45.7122,
+				43.2429
+			],
+			"bbox": [
+				44.8385,
+				42.4706,
+				46.5859,
+				44.0152
+			]
+		},
+		{
+			"id": "north-ossetia",
+			"name": "North Ossetia",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				44.1614,
+				43.191050000000004
+			],
+			"bbox": [
+				43.3862,
+				42.5522,
+				44.9366,
+				43.8299
+			]
+		},
+		{
+			"id": "ingush",
+			"name": "Ingush",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				44.83525,
+				43.1487
+			],
+			"bbox": [
+				44.4987,
+				42.6776,
+				45.1718,
+				43.6198
+			]
+		},
+		{
+			"id": "dagestan",
+			"name": "Dagestan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				46.8515,
+				43.0966
+			],
+			"bbox": [
+				45.1241,
+				41.1927,
+				48.5789,
+				45.0005
+			]
+		}
+	],
+	"tourOrder": [
+		"arkhangelsk",
+		"nenets",
+		"murmansk",
+		"yamal-nenets",
+		"chukotka",
+		"krasnoyarsk",
+		"sakha-yakutia",
+		"komi",
+		"karelia",
+		"magadan",
+		"khanty-mansiy",
+		"vologda",
+		"city-of-st-petersburg",
+		"leningrad",
+		"sverdlovsk",
+		"perm",
+		"kirov",
+		"kostroma",
+		"tomsk",
+		"novgorod",
+		"kamchatka",
+		"yaroslavl",
+		"irkutsk",
+		"tyumen",
+		"pskov",
+		"tver",
+		"udmurt",
+		"ivanovo",
+		"mariy-el",
+		"nizhegorod",
+		"omsk",
+		"vladimir",
+		"moskovskaya",
+		"kurgan",
+		"chuvash",
+		"moskva",
+		"tatarstan",
+		"novosibirsk",
+		"kaliningrad",
+		"smolensk",
+		"khabarovsk",
+		"kemerovo",
+		"mordovia",
+		"ryazan",
+		"kaluga",
+		"chelyabinsk",
+		"bashkortostan",
+		"tula",
+		"chita",
+		"ulyanovsk",
+		"buryat",
+		"khakass",
+		"samara",
+		"penza",
+		"amur",
+		"bryansk",
+		"orel",
+		"lipetsk",
+		"tambov",
+		"altay",
+		"orenburg",
+		"tuva",
+		"kursk",
+		"saratov",
+		"gorno-altay",
+		"voronezh",
+		"belgorod",
+		"volgograd",
+		"sakhalin",
+		"yevrey",
+		"rostov",
+		"astrakhan",
+		"kalmyk",
+		"primorye",
+		"krasnodar",
+		"stavropol",
+		"adygey",
+		"karachay-cherkess",
+		"kabardin-balkar",
+		"chechnya",
+		"north-ossetia",
+		"ingush",
+		"dagestan"
+	]
+}

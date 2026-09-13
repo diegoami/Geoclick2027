@@ -1,0 +1,569 @@
+{
+	"id": "china-regions",
+	"name": "China — Provinces",
+	"country": "China",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "heilongjiang",
+			"name": "Heilongjiang",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				127.97325000000001,
+				48.50195
+			],
+			"bbox": [
+				121.1739,
+				43.4361,
+				134.7726,
+				53.5678
+			]
+		},
+		{
+			"id": "inner-mongol",
+			"name": "Inner Mongol",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				111.6235,
+				45.35380000000001
+			],
+			"bbox": [
+				97.1907,
+				37.3903,
+				126.0563,
+				53.3173
+			]
+		},
+		{
+			"id": "jilin",
+			"name": "Jilin",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				126.47364999999999,
+				43.56575
+			],
+			"bbox": [
+				121.6664,
+				40.8592,
+				131.2809,
+				46.2723
+			]
+		},
+		{
+			"id": "xinjiang",
+			"name": "Xinjiang",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				84.98429999999999,
+				41.7529
+			],
+			"bbox": [
+				73.6023,
+				34.34,
+				96.3663,
+				49.1658
+			]
+		},
+		{
+			"id": "liaoning",
+			"name": "Liaoning",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				122.31055,
+				41.090900000000005
+			],
+			"bbox": [
+				118.8547,
+				38.7276,
+				125.7664,
+				43.4542
+			]
+		},
+		{
+			"id": "beijing",
+			"name": "Beijing",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				116.42779999999999,
+				40.23655
+			],
+			"bbox": [
+				115.4271,
+				39.4421,
+				117.4285,
+				41.031
+			]
+		},
+		{
+			"id": "tianjin",
+			"name": "Tianjin",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				117.3602,
+				39.4081
+			],
+			"bbox": [
+				116.7108,
+				38.5592,
+				118.0096,
+				40.257
+			]
+		},
+		{
+			"id": "hebei",
+			"name": "Hebei",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				116.65205,
+				39.325500000000005
+			],
+			"bbox": [
+				113.4539,
+				36.0822,
+				119.8502,
+				42.5688
+			]
+		},
+		{
+			"id": "gansu",
+			"name": "Gansu",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				100.73805,
+				37.6977
+			],
+			"bbox": [
+				92.7724,
+				32.6083,
+				108.7037,
+				42.7871
+			]
+		},
+		{
+			"id": "shanxi",
+			"name": "Shanxi",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				112.3966,
+				37.66315
+			],
+			"bbox": [
+				110.2523,
+				34.5837,
+				114.5409,
+				40.7426
+			]
+		},
+		{
+			"id": "ningxia",
+			"name": "Ningxia",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.00805,
+				37.3173
+			],
+			"bbox": [
+				104.3585,
+				35.2736,
+				107.6576,
+				39.361
+			]
+		},
+		{
+			"id": "shandong",
+			"name": "Shandong",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				118.74515,
+				36.335049999999995
+			],
+			"bbox": [
+				114.8342,
+				34.3992,
+				122.6561,
+				38.2709
+			]
+		},
+		{
+			"id": "shaanxi",
+			"name": "Shaanxi",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				108.36175,
+				35.63505
+			],
+			"bbox": [
+				105.4986,
+				31.7052,
+				111.2249,
+				39.5649
+			]
+		},
+		{
+			"id": "qinghai",
+			"name": "Qinghai",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				96.23775,
+				35.5112
+			],
+			"bbox": [
+				89.4351,
+				31.7005,
+				103.0404,
+				39.3219
+			]
+		},
+		{
+			"id": "henan",
+			"name": "Henan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				113.48445,
+				33.88825
+			],
+			"bbox": [
+				110.3277,
+				31.4175,
+				116.6412,
+				36.359
+			]
+		},
+		{
+			"id": "jiangsu",
+			"name": "Jiangsu",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				119.14965000000001,
+				32.934799999999996
+			],
+			"bbox": [
+				116.3772,
+				30.7637,
+				121.9221,
+				35.1059
+			]
+		},
+		{
+			"id": "anhui",
+			"name": "Anhui",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				117.2582,
+				32.0238
+			],
+			"bbox": [
+				114.8866,
+				29.4079,
+				119.6298,
+				34.6397
+			]
+		},
+		{
+			"id": "xizang",
+			"name": "Xizang",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				88.7449,
+				31.8822
+			],
+			"bbox": [
+				78.381,
+				27.3155,
+				99.1088,
+				36.4489
+			]
+		},
+		{
+			"id": "shanghai",
+			"name": "Shanghai",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.43154999999999,
+				31.26615
+			],
+			"bbox": [
+				120.883,
+				30.6912,
+				121.9801,
+				31.8411
+			]
+		},
+		{
+			"id": "hubei",
+			"name": "Hubei",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				112.26395,
+				31.1664
+			],
+			"bbox": [
+				108.3806,
+				29.0663,
+				116.1473,
+				33.2665
+			]
+		},
+		{
+			"id": "chongqing",
+			"name": "Chongqing",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				107.733,
+				30.19875
+			],
+			"bbox": [
+				105.2911,
+				28.1999,
+				110.1749,
+				32.1976
+			]
+		},
+		{
+			"id": "sichuan",
+			"name": "Sichuan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				102.9397,
+				30.1652
+			],
+			"bbox": [
+				97.361,
+				26.0348,
+				108.5184,
+				34.2956
+			]
+		},
+		{
+			"id": "zhejiang",
+			"name": "Zhejiang",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.16415,
+				29.18905
+			],
+			"bbox": [
+				118.0008,
+				27.2016,
+				122.3275,
+				31.1765
+			]
+		},
+		{
+			"id": "hunan",
+			"name": "Hunan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				111.5091,
+				27.36945
+			],
+			"bbox": [
+				108.7913,
+				24.6427,
+				114.2269,
+				30.0962
+			]
+		},
+		{
+			"id": "jiangxi",
+			"name": "Jiangxi",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				116.0192,
+				27.27515
+			],
+			"bbox": [
+				113.5621,
+				24.4996,
+				118.4763,
+				30.0507
+			]
+		},
+		{
+			"id": "guizhou",
+			"name": "Guizhou",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.60125,
+				26.909100000000002
+			],
+			"bbox": [
+				103.6954,
+				24.6314,
+				109.5071,
+				29.1868
+			]
+		},
+		{
+			"id": "fujian",
+			"name": "Fujian",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				118.13225,
+				25.97115
+			],
+			"bbox": [
+				115.8428,
+				23.6163,
+				120.4217,
+				28.326
+			]
+		},
+		{
+			"id": "yunnan",
+			"name": "Yunnan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				101.85515,
+				25.18355
+			],
+			"bbox": [
+				97.5165,
+				21.1433,
+				106.1938,
+				29.2238
+			]
+		},
+		{
+			"id": "guangxi",
+			"name": "Guangxi",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				108.27095,
+				23.89995
+			],
+			"bbox": [
+				104.4946,
+				21.4174,
+				112.0473,
+				26.3825
+			]
+		},
+		{
+			"id": "guangdong",
+			"name": "Guangdong",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				113.4179,
+				22.876800000000003
+			],
+			"bbox": [
+				109.6612,
+				20.248,
+				117.1746,
+				25.5056
+			]
+		},
+		{
+			"id": "hainan",
+			"name": "Hainan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				109.81285,
+				19.150750000000002
+			],
+			"bbox": [
+				108.6152,
+				18.1932,
+				111.0105,
+				20.1083
+			]
+		}
+	],
+	"tourOrder": [
+		"heilongjiang",
+		"inner-mongol",
+		"jilin",
+		"xinjiang",
+		"liaoning",
+		"beijing",
+		"tianjin",
+		"hebei",
+		"gansu",
+		"shanxi",
+		"ningxia",
+		"shandong",
+		"shaanxi",
+		"qinghai",
+		"henan",
+		"jiangsu",
+		"anhui",
+		"xizang",
+		"shanghai",
+		"hubei",
+		"chongqing",
+		"sichuan",
+		"zhejiang",
+		"hunan",
+		"jiangxi",
+		"guizhou",
+		"fujian",
+		"yunnan",
+		"guangxi",
+		"guangdong",
+		"hainan"
+	]
+}

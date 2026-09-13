@@ -1,0 +1,443 @@
+{
+	"id": "argentina-regions",
+	"name": "Argentina — Regions",
+	"country": "Argentina",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "jujuy",
+			"name": "Jujuy",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-65.70505,
+				-23.2028
+			],
+			"bbox": [
+				-67.2513,
+				-24.6132,
+				-64.1588,
+				-21.7924
+			]
+		},
+		{
+			"id": "salta",
+			"name": "Salta",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-65.4534,
+				-24.1871
+			],
+			"bbox": [
+				-68.5724,
+				-26.3767,
+				-62.3344,
+				-21.9975
+			]
+		},
+		{
+			"id": "formosa",
+			"name": "Formosa",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-59.94915,
+				-24.67905
+			],
+			"bbox": [
+				-62.3414,
+				-26.8858,
+				-57.5569,
+				-22.4723
+			]
+		},
+		{
+			"id": "chaco",
+			"name": "Chaco",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-60.87495,
+				-26.060499999999998
+			],
+			"bbox": [
+				-63.3986,
+				-28.0004,
+				-58.3513,
+				-24.1206
+			]
+		},
+		{
+			"id": "misiones",
+			"name": "Misiones",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-54.842,
+				-26.83795
+			],
+			"bbox": [
+				-56.0173,
+				-28.1444,
+				-53.6667,
+				-25.5315
+			]
+		},
+		{
+			"id": "tucuman",
+			"name": "Tucumán",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-65.3387,
+				-27.0625
+			],
+			"bbox": [
+				-66.1911,
+				-28.0502,
+				-64.4863,
+				-26.0748
+			]
+		},
+		{
+			"id": "catamarca",
+			"name": "Catamarca",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-67.00829999999999,
+				-27.650100000000002
+			],
+			"bbox": [
+				-69.1341,
+				-30.1402,
+				-64.8825,
+				-25.16
+			]
+		},
+		{
+			"id": "santiago-del-estero",
+			"name": "Santiago del Estero",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-63.444700000000005,
+				-27.88015
+			],
+			"bbox": [
+				-65.18,
+				-30.1566,
+				-61.7094,
+				-25.6037
+			]
+		},
+		{
+			"id": "corrientes",
+			"name": "Corrientes",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-57.6439,
+				-29.003549999999997
+			],
+			"bbox": [
+				-59.6648,
+				-30.7473,
+				-55.623,
+				-27.2598
+			]
+		},
+		{
+			"id": "la-rioja",
+			"name": "La Rioja",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-67.52795,
+				-29.836
+			],
+			"bbox": [
+				-69.654,
+				-31.9254,
+				-65.4019,
+				-27.7466
+			]
+		},
+		{
+			"id": "san-juan",
+			"name": "San Juan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-68.66095,
+				-30.368049999999997
+			],
+			"bbox": [
+				-70.5914,
+				-32.3351,
+				-66.7305,
+				-28.401
+			]
+		},
+		{
+			"id": "santa-fe",
+			"name": "Santa Fe",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-60.85925,
+				-31.1907
+			],
+			"bbox": [
+				-62.8538,
+				-34.3821,
+				-58.8647,
+				-27.9993
+			]
+		},
+		{
+			"id": "entre-rios",
+			"name": "Entre Ríos",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-59.28645,
+				-32.09175
+			],
+			"bbox": [
+				-60.7657,
+				-34.0312,
+				-57.8072,
+				-30.1523
+			]
+		},
+		{
+			"id": "cordoba",
+			"name": "Córdoba",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-63.750150000000005,
+				-32.2136
+			],
+			"bbox": [
+				-65.7673,
+				-35.0021,
+				-61.733,
+				-29.4251
+			]
+		},
+		{
+			"id": "san-luis",
+			"name": "San Luis",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-66.13415,
+				-33.92335
+			],
+			"bbox": [
+				-67.393,
+				-35.9999,
+				-64.8753,
+				-31.8468
+			]
+		},
+		{
+			"id": "ciudad-de-buenos-aires",
+			"name": "Ciudad de Buenos Aires",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-58.4283,
+				-34.648250000000004
+			],
+			"bbox": [
+				-58.5416,
+				-34.7749,
+				-58.315,
+				-34.5216
+			]
+		},
+		{
+			"id": "mendoza",
+			"name": "Mendoza",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-68.52475000000001,
+				-34.75945
+			],
+			"bbox": [
+				-70.5429,
+				-37.557,
+				-66.5066,
+				-31.9619
+			]
+		},
+		{
+			"id": "buenos-aires",
+			"name": "Buenos Aires",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-60.02685,
+				-37.14915
+			],
+			"bbox": [
+				-63.3888,
+				-41.0417,
+				-56.6649,
+				-33.2566
+			]
+		},
+		{
+			"id": "la-pampa",
+			"name": "La Pampa",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-65.83865,
+				-37.1638
+			],
+			"bbox": [
+				-68.2932,
+				-39.3258,
+				-63.3841,
+				-35.0018
+			]
+		},
+		{
+			"id": "neuquen",
+			"name": "Neuquén",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-69.9936,
+				-38.60955
+			],
+			"bbox": [
+				-71.9556,
+				-41.0897,
+				-68.0316,
+				-36.1294
+			]
+		},
+		{
+			"id": "rio-negro",
+			"name": "Río Negro",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-67.3638,
+				-39.78385
+			],
+			"bbox": [
+				-71.926,
+				-42.0107,
+				-62.8016,
+				-37.557
+			]
+		},
+		{
+			"id": "chubut",
+			"name": "Chubut",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-67.8639,
+				-43.9995
+			],
+			"bbox": [
+				-72.1485,
+				-46,
+				-63.5793,
+				-41.999
+			]
+		},
+		{
+			"id": "santa-cruz",
+			"name": "Santa Cruz",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-69.6542,
+				-49.1528
+			],
+			"bbox": [
+				-73.5727,
+				-52.3062,
+				-65.7357,
+				-45.9994
+			]
+		},
+		{
+			"id": "tierra-del-fuego",
+			"name": "Tierra del Fuego",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-66.26515,
+				-53.8453
+			],
+			"bbox": [
+				-68.6419,
+				-55.051,
+				-63.8884,
+				-52.6396
+			]
+		}
+	],
+	"tourOrder": [
+		"jujuy",
+		"salta",
+		"formosa",
+		"chaco",
+		"misiones",
+		"tucuman",
+		"catamarca",
+		"santiago-del-estero",
+		"corrientes",
+		"la-rioja",
+		"san-juan",
+		"santa-fe",
+		"entre-rios",
+		"cordoba",
+		"san-luis",
+		"ciudad-de-buenos-aires",
+		"mendoza",
+		"buenos-aires",
+		"la-pampa",
+		"neuquen",
+		"rio-negro",
+		"chubut",
+		"santa-cruz",
+		"tierra-del-fuego"
+	]
+}

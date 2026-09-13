@@ -1,0 +1,659 @@
+{
+	"id": "india-regions",
+	"name": "India — States",
+	"country": "India",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "ladakh",
+			"name": "Ladakh",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				77.4844,
+				33.9209
+			],
+			"bbox": [
+				75.3481,
+				32.3464,
+				79.6207,
+				35.4954
+			]
+		},
+		{
+			"id": "jammu-and-kashmir",
+			"name": "Jammu and Kashmir",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				75.25735,
+				33.53475
+			],
+			"bbox": [
+				73.7749,
+				32.3006,
+				76.7398,
+				34.7689
+			]
+		},
+		{
+			"id": "himachal-pradesh",
+			"name": "Himachal Pradesh",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				77.3081,
+				31.807199999999998
+			],
+			"bbox": [
+				75.6229,
+				30.3829,
+				78.9933,
+				33.2315
+			]
+		},
+		{
+			"id": "punjab",
+			"name": "Punjab",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				75.37835,
+				31.039250000000003
+			],
+			"bbox": [
+				73.8518,
+				29.5618,
+				76.9049,
+				32.5167
+			]
+		},
+		{
+			"id": "chandigarh",
+			"name": "Chandigarh",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				76.76554999999999,
+				30.733249999999998
+			],
+			"bbox": [
+				76.7038,
+				30.6774,
+				76.8273,
+				30.7891
+			]
+		},
+		{
+			"id": "uttarakhand",
+			"name": "Uttarakhand",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				79.28055,
+				30.09935
+			],
+			"bbox": [
+				77.5851,
+				28.7373,
+				80.976,
+				31.4614
+			]
+		},
+		{
+			"id": "haryana",
+			"name": "Haryana",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				76.0258,
+				29.29345
+			],
+			"bbox": [
+				74.4665,
+				27.6793,
+				77.5851,
+				30.9076
+			]
+		},
+		{
+			"id": "delhi",
+			"name": "Delhi",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				77.08215,
+				28.65735
+			],
+			"bbox": [
+				76.8369,
+				28.4326,
+				77.3274,
+				28.8821
+			]
+		},
+		{
+			"id": "arunachal-pradesh",
+			"name": "Arunachal Pradesh",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				94.4675,
+				28.0087
+			],
+			"bbox": [
+				91.5799,
+				26.6489,
+				97.3551,
+				29.3685
+			]
+		},
+		{
+			"id": "sikkim",
+			"name": "Sikkim",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				88.4485,
+				27.59545
+			],
+			"bbox": [
+				88.0047,
+				27.0851,
+				88.8923,
+				28.1058
+			]
+		},
+		{
+			"id": "uttar-pradesh",
+			"name": "Uttar Pradesh",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				80.8327,
+				27.154400000000003
+			],
+			"bbox": [
+				77.0647,
+				23.9139,
+				84.6007,
+				30.3949
+			]
+		},
+		{
+			"id": "rajasthan",
+			"name": "Rajasthan",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				73.8441,
+				26.6201
+			],
+			"bbox": [
+				69.4651,
+				23.0361,
+				78.2231,
+				30.2041
+			]
+		},
+		{
+			"id": "nagaland",
+			"name": "Nagaland",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				94.2914,
+				26.119500000000002
+			],
+			"bbox": [
+				93.3359,
+				25.2058,
+				95.2469,
+				27.0332
+			]
+		},
+		{
+			"id": "assam",
+			"name": "Assam",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				92.8325,
+				26.0629
+			],
+			"bbox": [
+				89.6578,
+				24.1325,
+				96.0072,
+				27.9933
+			]
+		},
+		{
+			"id": "bihar",
+			"name": "Bihar",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				85.81575000000001,
+				25.908450000000002
+			],
+			"bbox": [
+				83.3343,
+				24.3074,
+				88.2972,
+				27.5095
+			]
+		},
+		{
+			"id": "meghalaya",
+			"name": "Meghalaya",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				91.30705,
+				25.54705
+			],
+			"bbox": [
+				89.8086,
+				25.0048,
+				92.8055,
+				26.0893
+			]
+		},
+		{
+			"id": "manipur",
+			"name": "Manipur",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				93.85205,
+				24.7634
+			],
+			"bbox": [
+				92.9955,
+				23.8426,
+				94.7086,
+				25.6842
+			]
+		},
+		{
+			"id": "west-bengal",
+			"name": "West Bengal",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				87.8587,
+				24.402549999999998
+			],
+			"bbox": [
+				85.8289,
+				21.5559,
+				89.8885,
+				27.2492
+			]
+		},
+		{
+			"id": "madhya-pradesh",
+			"name": "Madhya Pradesh",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				78.41329999999999,
+				23.962899999999998
+			],
+			"bbox": [
+				74.0257,
+				21.0748,
+				82.8009,
+				26.851
+			]
+		},
+		{
+			"id": "tripura",
+			"name": "Tripura",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				91.73310000000001,
+				23.762050000000002
+			],
+			"bbox": [
+				91.1408,
+				22.9819,
+				92.3254,
+				24.5422
+			]
+		},
+		{
+			"id": "jharkhand",
+			"name": "Jharkhand",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				85.61625000000001,
+				23.66785
+			],
+			"bbox": [
+				83.3371,
+				22.0119,
+				87.8954,
+				25.3238
+			]
+		},
+		{
+			"id": "mizoram",
+			"name": "Mizoram",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				92.8426,
+				23.22435
+			],
+			"bbox": [
+				92.2528,
+				21.9776,
+				93.4324,
+				24.4711
+			]
+		},
+		{
+			"id": "gujarat",
+			"name": "Gujarat",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				71.3109,
+				22.390500000000003
+			],
+			"bbox": [
+				68.1637,
+				20.0726,
+				74.4581,
+				24.7084
+			]
+		},
+		{
+			"id": "chhattisgarh",
+			"name": "Chhattisgarh",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				82.31129999999999,
+				20.95815
+			],
+			"bbox": [
+				80.2704,
+				17.7761,
+				84.3522,
+				24.1402
+			]
+		},
+		{
+			"id": "dadra-and-nagar-haveli-and-daman-and-diu",
+			"name": "Dadra and Nagar Haveli and Daman and Diu",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				73.0315,
+				20.18505
+			],
+			"bbox": [
+				72.8967,
+				20.0398,
+				73.1663,
+				20.3303
+			]
+		},
+		{
+			"id": "odisha",
+			"name": "Odisha",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				84.4357,
+				20.17685
+			],
+			"bbox": [
+				81.394,
+				17.797,
+				87.4774,
+				22.5567
+			]
+		},
+		{
+			"id": "maharashtra",
+			"name": "Maharashtra",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				76.77199999999999,
+				18.82775
+			],
+			"bbox": [
+				72.6501,
+				15.6325,
+				80.8939,
+				22.023
+			]
+		},
+		{
+			"id": "telangana",
+			"name": "Telangana",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				79.51660000000001,
+				17.84815
+			],
+			"bbox": [
+				77.2574,
+				15.833,
+				81.7758,
+				19.8633
+			]
+		},
+		{
+			"id": "andhra-pradesh",
+			"name": "Andhra Pradesh",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				80.74865,
+				15.8966
+			],
+			"bbox": [
+				76.7195,
+				12.6326,
+				84.7778,
+				19.1606
+			]
+		},
+		{
+			"id": "goa",
+			"name": "Goa",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				74.00104999999999,
+				15.32975
+			],
+			"bbox": [
+				73.6979,
+				14.8876,
+				74.3042,
+				15.7719
+			]
+		},
+		{
+			"id": "karnataka",
+			"name": "Karnataka",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				76.3298,
+				14.98855
+			],
+			"bbox": [
+				74.0912,
+				11.6256,
+				78.5684,
+				18.3515
+			]
+		},
+		{
+			"id": "puducherry",
+			"name": "Puducherry",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				77.53475,
+				11.455300000000001
+			],
+			"bbox": [
+				75.2222,
+				10.8096,
+				79.8473,
+				12.101
+			]
+		},
+		{
+			"id": "tamil-nadu",
+			"name": "Tamil Nadu",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				78.29429999999999,
+				10.77225
+			],
+			"bbox": [
+				76.2408,
+				8.076,
+				80.3478,
+				13.4685
+			]
+		},
+		{
+			"id": "kerala",
+			"name": "Kerala",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				76.12645,
+				10.52525
+			],
+			"bbox": [
+				74.8543,
+				8.2852,
+				77.3986,
+				12.7653
+			]
+		},
+		{
+			"id": "andaman-and-nicobar",
+			"name": "Andaman and Nicobar",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				93.148,
+				10.1861
+			],
+			"bbox": [
+				92.3757,
+				6.801,
+				93.9203,
+				13.5712
+			]
+		},
+		{
+			"id": "lakshadweep",
+			"name": "Lakshadweep",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				73.05665,
+				8.282399999999999
+			],
+			"bbox": [
+				73.0293,
+				8.2495,
+				73.084,
+				8.3153
+			]
+		}
+	],
+	"tourOrder": [
+		"ladakh",
+		"jammu-and-kashmir",
+		"himachal-pradesh",
+		"punjab",
+		"chandigarh",
+		"uttarakhand",
+		"haryana",
+		"delhi",
+		"arunachal-pradesh",
+		"sikkim",
+		"uttar-pradesh",
+		"rajasthan",
+		"nagaland",
+		"assam",
+		"bihar",
+		"meghalaya",
+		"manipur",
+		"west-bengal",
+		"madhya-pradesh",
+		"tripura",
+		"jharkhand",
+		"mizoram",
+		"gujarat",
+		"chhattisgarh",
+		"dadra-and-nagar-haveli-and-daman-and-diu",
+		"odisha",
+		"maharashtra",
+		"telangana",
+		"andhra-pradesh",
+		"goa",
+		"karnataka",
+		"puducherry",
+		"tamil-nadu",
+		"kerala",
+		"andaman-and-nicobar",
+		"lakshadweep"
+	]
+}
