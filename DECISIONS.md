@@ -580,3 +580,40 @@ or amend an entry here as part of that change, not as an afterthought.
   timid to actually read as a change — the shipped version is
   deliberately more visible while staying low-saturation enough not to
   fight with body text or the map-card borders.
+
+## Quiz solved-state contrast (2026-09-13)
+
+- **Unsolved and solved regions/cities now differ by opacity
+  (saturation), not just hue.** Reported directly after the background
+  refresh above made it more noticeable: "looking at the quiz the color
+  scheme is confusing, I do not know which regions have been recognized
+  or not." Root cause, found by checking the actual palette rather than
+  guessing: the 8-color categorical palette (unsolved default) includes
+  a muted teal-green (`#8fb8a8`) close enough to `quizCorrect`'s green
+  (`#5a9c6f`) that at the same flat 0.6 opacity, an unsolved region
+  could plausibly read as already-solved at a glance — the hue
+  difference alone wasn't a strong enough signal.
+- **Fix: `fill-opacity`/`circle-opacity` became `case` expressions
+  matching the same feature-states `fill-color`/`circle-color` already
+  branch on**, not a new mechanism. Any named state (solved, wrong,
+  revealed, hovered, explore-highlighted) renders at high opacity (0.8
+  fill / fully opaque circle); the unsolved default drops to low
+  opacity (0.3 fill / 0.65 circle). Saturation itself is now the
+  primary "is this done yet" signal, independent of which of the 8
+  hash-derived colors an unsolved region happens to have - directly
+  matching the user's own suggested fix ("different level of
+  saturation"). Circles kept a higher unsolved-state floor than fills
+  (0.65 vs 0.3) since a point marker's *only* visual footprint is its
+  fill - dropping it as low as a polygon's would risk making an
+  unsolved city hard to see/aim for, unlike a polygon target, which
+  stays fully legible via its always-visible outline regardless of
+  fill opacity.
+- **Applies uniformly across every view sharing this style** (MapView's
+  click-explore, TourView's reveal, QuizView's solve/wrong/reveal,
+  OverviewView's "everything already discovered"), not something scoped
+  to the quiz specifically - `base.json` has one shared paint
+  expression per layer, not a per-view variant. Checked directly, not
+  assumed: `italy-regions` (polygon quiz, two real solves) and
+  `sweden-towns-100k` (point quiz) both verified live before shipping -
+  solved targets read unambiguously against every unsolved one in both
+  geometry types.
