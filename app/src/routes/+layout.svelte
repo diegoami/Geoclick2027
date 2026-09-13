@@ -1,5 +1,6 @@
 <script lang="ts">
 	import favicon from '$lib/assets/favicon.svg';
+	import VersionBadge from '$lib/VersionBadge.svelte';
 
 	let { children } = $props();
 </script>
@@ -9,3 +10,4 @@
 </svelte:head>
 
 {@render children()}
+<VersionBadge />

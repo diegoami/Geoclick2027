@@ -1,8 +1,33 @@
+import { execSync } from 'node:child_process';
+import { readFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vitest/config';
 import adapter from '@sveltejs/adapter-static';
 import { sveltekit } from '@sveltejs/kit/vite';
 
+const pkg = JSON.parse(
+	readFileSync(fileURLToPath(new URL('./package.json', import.meta.url)), 'utf8')
+);
+
+// Best-effort short commit SHA for the version badge (VersionBadge.svelte) -
+// falls back to "unknown" rather than failing the build on a checkout with
+// no git history (a zip export, a shallow clone missing HEAD, etc.).
+let buildSha = 'unknown';
+try {
+	buildSha = execSync('git rev-parse --short HEAD', {
+		cwd: fileURLToPath(new URL('.', import.meta.url))
+	})
+		.toString()
+		.trim();
+} catch {
+	// leave as 'unknown'
+}
+
 export default defineConfig({
+	define: {
+		__APP_VERSION__: JSON.stringify(pkg.version),
+		__BUILD_SHA__: JSON.stringify(buildSha)
+	},
 	// maplibre-gl spawns its tile-parsing worker from a sibling file
 	// (maplibre-gl-worker.mjs) resolved relative to its own module URL. Vite's
 	// dependency pre-bundling relocates the main module without that sibling,

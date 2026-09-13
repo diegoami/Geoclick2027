@@ -644,33 +644,52 @@ or amend an entry here as part of that change, not as an afterthought.
   being planned. See ROADMAP.md's Iteration 8+ backlog for the
   corresponding status update.
 
-## Remediation programme structure (2026-09-13)
+## Remediation programme structure (2026-09-13, first draft — since scaled down)
 
-- **Feature branches merge into a `release/*` branch, not into `main`.**
-  CLAUDE.md's rule that a `main` push triggers a paid Netlify build makes
-  `main` unusable as an integration branch: 20 task branches would mean 20
-  paid builds for 20 fixes. Release branches are free to merge into and free
-  to rebase, and ship to `main` once per release. Result: 20 tasks, 3 paid
-  builds. See [docs/RELEASES.md](docs/RELEASES.md).
-- **Three agent roles, and the human is the merge authority.** Orchestrator
-  (schedules, leases, integrates), Implementer (one per task, own worktree),
-  Reviewer (cold context, never a fork of the implementer — a fork inherits
-  the assumptions review exists to catch). Deliberately *no* separate
-  integrator agent: integration here is a rebase plus a merge into the
-  release branch, and the one judgement call ("ship this to `main`?") is
-  already reserved for the product owner by the Netlify-cost rule. A fourth
-  role would add a handoff without adding a decision.
-- **Two review rounds, then escalate to the human.** Two competent agents
-  disagreeing twice about a task whose definition of done is written down is
-  evidence the *spec* is wrong, not the implementation. A third round burns
-  tokens re-litigating an underspecified task. See
-  [docs/ORCHESTRATION.md](docs/ORCHESTRATION.md).
-- **Task state lives on GitHub (issue `state:*` labels), never in a local
-  file.** Makes the orchestrator restartable and leaves the door open to a
-  second machine without changing anything but the checkout. The local
-  `.orchestrator/leases/` mirror is a cache; deleting it must be harmless.
+- **SUPERSEDED same day: `main` is a normal integration branch again, no
+  release-branch buffering.** The plan below built its whole release-branch
+  structure around avoiding paid Netlify builds. The product owner then
+  confirmed directly that build cost is not actually a constraint — see
+  CLAUDE.md's Workflow section, updated the same day. Task/feature branches
+  now merge straight into `main` once approved, same as every other feature
+  in this project's history; `docs/RELEASES.md`'s release-branch mechanism
+  is being revised accordingly rather than removed outright, since tags and
+  release notes are still wanted (see the entry below).
+- **SUPERSEDED same day: four engines (haiku/sonnet/opus/fable) cut to two
+  (sonnet implements, opus reviews/merges/orchestrates).** The product
+  owner's call, made explicitly to push back on cost: "we still need an
+  orchestrator and subagents, but we need to scale it down." A revision is
+  in progress to reflect this plus "no GitHub, local harness only" and "drop
+  the nice-to-have tier" — see ROADMAP.md's "Remediation programme" entry
+  for status.
+- **Still holds**: cold-context review (never a fork of the implementer —
+  a fork inherits the assumptions review exists to catch), two review
+  rounds then escalate to the human (two competent agents disagreeing twice
+  about a written DoD means the spec is wrong, not the implementation), and
+  the human as sole merge authority to `main`. See
+  [docs/ORCHESTRATION.md](docs/ORCHESTRATION.md) (being revised).
 - **Root `package.json` is the single source of truth for the version.** The
   repo had drifted to three different versions across seven files (`0.0.1`
   workspace, `0.1.0` Tauri/Cargo, `1.0` Android `versionName`);
   `scripts/sync-version.mjs` propagates and `--check`s it. The Android shell
-  claiming `1.0` was the worst of the three — it is POC quality.
+  claiming `1.0` was the worst of the three — it is POC quality. Still
+  holds; unaffected by the two supersessions above.
+
+## First tracked release, v0.1.0 (2026-09-13)
+
+- **The current state of `main` — everything shipped before any
+  remediation fix lands — is tagged `v0.1.0` and treated as the project's
+  first real release**, not just an informal snapshot. Product owner's
+  call: reaching the point of having an independent review, a remediation
+  plan, and a release process all in place is itself a milestone worth
+  marking, distinct from whenever the remediation work itself finishes.
+  See [CHANGELOG.md](CHANGELOG.md) for the release notes.
+- **The version and a short build/commit identifier are shown on every
+  screen** (`app/src/lib/VersionBadge.svelte`, bottom-right corner,
+  injected at build time from `package.json` and `git rev-parse
+  --short HEAD`) — requested directly ("release number and build should
+  be prominent in the application"), not left as something only visible
+  by reading a file. `1.0.0` stays reserved for the real public-launch
+  milestone (domain, app-store submission) per the SSO-deferral entry
+  above; `0.1.0` is deliberately a low number for "first tracked release,"
+  not a claim of feature-completeness.
