@@ -61,7 +61,9 @@ once and abandoned. Suggested reading depth in parentheses:
 
 ## Current state on `main` (what you're reviewing)
 
-Live and shipped: 14 countries, 44 maps (regions/states/provinces plus a
+Live and shipped: 22 countries, 44 maps (corrected by GC-060 — this
+handover originally said "14 countries", an error the review itself caught
+as S2) (regions/states/provinces plus a
 population-thresholded towns map per country), tour mode, the quiz
 engine with SM-2 spaced repetition, local persistence, a visual refresh
 (background color, opacity-based solved/unsolved contrast on the map),

@@ -526,12 +526,20 @@ or amend an entry here as part of that change, not as an afterthought.
   that shrinking actually works - the old bounds were partly compensating
   for the bug by never asking for a height small enough to expose it.
 
-## Home page map list (2026-09-12)
+## Home page map list (2026-09-12, counts amended 2026-09-13)
+
+> **Amended by GC-060 (2026-09-13).** This entry was reasoned from 28 maps
+> across 14 countries. The list has since grown to **44 maps across 22
+> countries** (1410 targets; `data/maps/index.json` is the live count). The
+> bullets below keep the original reasoning with the original numbers, so it
+> reads honestly as the decision it was; the search/filter conclusion is
+> re-checked against today's numbers in its own bullet.
 
 - **Grouped by country, not just a flat alphabetical list.** The user's
   own framing ("organize it better, at least alphabetically") set
   alphabetical as the floor, not the ceiling. With 28 maps across 14
-  countries and every country already shipping its maps as a natural
+  countries (at the time — 44 across 22 now, which only strengthens the
+  case for grouping) and every country already shipping its maps as a natural
   regions/towns pair (a trio for Italy, which also has a provinces map),
   a flat 28-row alphabetical list would still read as a wall of similar
   entries ("France — Regions", "France — Towns" sorted apart from each
@@ -544,7 +552,7 @@ or amend an entry here as part of that change, not as an afterthought.
   beyond it.
 - **A 2-column CSS grid above the existing 640px breakpoint, one column
   below it.** Reuses the breakpoint `MapNav.svelte` already established
-  rather than inventing a new one. With 14 country groups, a single
+  rather than inventing a new one. With 14 country groups (22 now), a single
   column at desktop width would push later countries far down the page
   for no reason - two columns is a small CSS change (`display: grid`
   behind the media query, `display: flex; flex-direction: column` below
@@ -555,6 +563,15 @@ or amend an entry here as part of that change, not as an afterthought.
   find something that mostly duplicates what the grouped layout already
   does at this list size (14 countries). Revisit only if the list grows
   enough that scrolling itself becomes the complaint, not scanning.
+  **Re-affirmed at 22 countries / 44 maps (GC-060, 2026-09-13).** The
+  trigger above — scrolling, not scanning, becoming the complaint — has
+  not been met: nobody has raised it, and in the two-column desktop
+  layout the 22 alphabetical country headings fit in roughly one and a
+  half screens, still a scan rather than a hunt. Re-open when either a
+  user actually reports hunting for a country, or the list passes about
+  40 countries (~3 desktop screens), whichever comes first. This
+  re-affirmation was made by the remediation loop against the entry's
+  own stated trigger; the product owner can overrule it.
 
 ## Internationalization (i18n)
 
@@ -677,6 +694,14 @@ or amend an entry here as part of that change, not as an afterthought.
   `sweden-towns-100k` (point quiz) both verified live before shipping -
   solved targets read unambiguously against every unsolved one in both
   geometry types.
+
+## Map colors
+
+- **TODO (GC-032):** `data/styles/base.json`'s metadata cites "DECISIONS.md's
+  'Map colors' entry", which was never written — the palette's rationale lives
+  only in that JSON string. GC-032 (adjacency-aware palette + opacity revisit)
+  writes the real entry here as part of its own scope; this placeholder exists
+  so the citation resolves to something tracked instead of nothing (GC-060).
 
 ## SSO/cross-device sync deferred (2026-09-13)
 
