@@ -251,10 +251,23 @@ from the Gotchas section below).
 Same persistence pattern as desktop: `createProgressRepository()` picks
 `capacitorProgressRepository.ts` (via `@capacitor-community/sqlite`) when
 `Capacitor.isNativePlatform()` is true, same `ProgressRepository`
-interface and the same table schema as the Tauri implementation - hand-
-mirrored, not shared code, since Capacitor has no equivalent of Tauri's
-single `migrations()` function to keep both in sync automatically. If you
-change one schema, change the other.
+interface and the same table schema as the Tauri implementation.
+
+**Schema changes go in two places, and a test holds you to it.** Both
+SQLite backends now have a versioned migration list: desktop's
+`migrations()` in `desktop/src-tauri/src/lib.rs` (tauri-plugin-sql), and
+Android's `MIGRATIONS` array in `app/src/lib/capacitorMigrations.ts`
+(driven by SQLite's `PRAGMA user_version`, GC-040 — before that Android
+just ran `CREATE TABLE IF NOT EXISTS` on every open with no version at
+all). To change the schema, append a migration to **both**: Tauri's
+version N is Android's `MIGRATIONS[N-1]`. Never edit or reorder a
+migration that has shipped. `capacitorMigrations.test.ts` runs both
+against a real SQLite (Node's built-in `node:sqlite`) and fails if the
+resulting schemas differ or the two lists have different lengths — it
+also covers the tricky upgrade path (a device from before GC-040 has the
+tables but `user_version = 0`, which is why migration 0 alone must stay
+`IF NOT EXISTS`). What no test here can reach is the plugin's native
+bridge; anything touching that still needs a real device.
 
 There's no `dev`-mode live-reload yet - re-run `npm run sync` and
 relaunch from Android Studio after any app change.

@@ -411,15 +411,32 @@ or amend an entry here as part of that change, not as an afterthought.
   it hard-requires a Mac with Xcode, hardware this project doesn't have,
   so it can't be pulled forward the same way Android can.
 - **Capacitor's SQLite schema is hand-mirrored from Tauri's, not shared
-  code.** Same `card_states`/`last_session_summaries` tables, column for
-  column, in `capacitorProgressRepository.ts` — but typed out again
-  rather than extracted into one shared schema module, since Capacitor
-  has no equivalent of Tauri's single `migrations()` function to hang a
-  shared definition off of, and inventing a cross-platform migration
-  abstraction for two backends isn't worth it before a third ever
-  materializes. Accepted risk: the two schemas can drift if one is
-  changed without the other — flagged in ONBOARDING.md so it isn't
-  missed later.
+  code — and since GC-040 (2026-09-13) the mirroring is enforced by a
+  test instead of a comment.** Same `card_states`/`last_session_summaries`
+  tables, column for column. The original reason for not sharing
+  ("Capacitor has no equivalent of Tauri's `migrations()`") stopped being
+  true in GC-040: Android now has a real versioned migration list
+  (`MIGRATIONS` in `capacitorMigrations.ts`, driven by `PRAGMA
+  user_version`). Before that it ran `CREATE TABLE IF NOT EXISTS` on every
+  open with no version at all — so the real risk the review found was
+  never "two copies might drift", it was that the first schema change on
+  Android had no mechanism to run exactly once per device.
+  **Why still two copies rather than one generated schema:** sharing would
+  mean a build step — one `.sql` file pulled into Rust via `include_str!`
+  and into TypeScript via a raw import — across two very different
+  runners (tauri-plugin-sql's compile-time `Migration` list vs. a runtime
+  JS loop), for a schema of two tables and twelve columns. The failure
+  that sharing prevents is drift, and
+  `capacitorMigrations.test.ts` now catches drift directly: it runs every
+  lib.rs migration and every Android migration against a real SQLite
+  (`node:sqlite`) and fails if the schemas differ or the lists have
+  different lengths. Same protection, no build machinery. Revisit if a
+  third backend appears or migrations start carrying data transforms that
+  would be painful to write twice. **Why migration 0 is `IF NOT EXISTS`
+  while every later one is a plain ALTER:** every Android install from
+  before GC-040 already has the tables but reports `user_version = 0`;
+  migration 0 has to be a no-op over them (keeping every row) and just
+  stamp version 1. Tested against a fixture of the old on-open SQL.
 - **PMTiles on Android: buffer the whole archive in memory rather than
   work around Capacitor's missing Range-request support.** Capacitor's
   Android WebView local asset server can't return real `206 Partial
