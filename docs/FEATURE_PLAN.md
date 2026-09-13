@@ -469,14 +469,14 @@ Update this table as tasks merge. Commit hashes are the merge commits.
 
 | Task | State | Merge | Release | Notes |
 |---|---|---|---|---|
-| FT-01 | **merged** | `6e05495` | v0.3.0 | README 'Play it' link under the intro |
-| FT-02 | **merged** | `fe3a809` | v0.3.0 | labels 11px → 0.8125rem (13px, follows browser font-size setting) + hover to magnify (20px, above neighbours); plan corrected: page zoom already scaled px |
-| FT-03 | **merged** | `2f7e7b0` | v0.3.0 | tap to magnify on touch (redefined at FT-02 review; was a Normal/Large switch); verified with simulated touch, not yet on a physical device |
-| FT-04 | **merged** | `2d3205e` | v0.3.0 | 🧑 picked A (pin) from 3 drafts; favicon switches too (FT-05) |
-| FT-05 | **merged** | `bf49643` | v0.3.0 | one generator script for all icons; checked in built exe + installer, emulator (drawer, launch screen) and favicon; Start menu/taskbar not seen (same .ico) |
-| FT-06 | **merged** | `6de2d98` | v0.3.0 | signing setup verified with throwaway keys (unsigned without, signed via env or properties); 🧑 real keystore pending, needed before FT-07's dry run |
-| FT-07 | **merged** | `8e6120e` | v0.3.0 | package-release.mjs dry run: .msi 17.0 MB, -setup.exe 15.8 MB, APK 24.5 MB + SHA256SUMS (throwaway key, output deleted); Android versionCode now tracks the version (1 → 200) |
-| FT-08 | **merged** | `e5aa02d` | v0.3.0 | 🧑 public repo created (diegoami/geoclick-releases, README only); web-only download link EN/DE/IT; publish script dry-runs unless --confirm; first publish = v0.3.0 |
+| FT-01 | **released** | `6e05495` | v0.3.0 | README 'Play it' link under the intro |
+| FT-02 | **released** | `fe3a809` | v0.3.0 | labels 11px → 0.8125rem (13px, follows browser font-size setting) + hover to magnify (20px, above neighbours); plan corrected: page zoom already scaled px |
+| FT-03 | **released** | `2f7e7b0` | v0.3.0 | tap to magnify on touch (redefined at FT-02 review; was a Normal/Large switch); verified with simulated touch, not yet on a physical device |
+| FT-04 | **released** | `2d3205e` | v0.3.0 | 🧑 picked A (pin) from 3 drafts; favicon switches too (FT-05) |
+| FT-05 | **released** | `bf49643` | v0.3.0 | one generator script for all icons; checked in built exe + installer, emulator (drawer, launch screen) and favicon; Start menu/taskbar not seen (same .ico) |
+| FT-06 | **released** | `6de2d98` | v0.3.0 | signing setup verified with throwaway keys (unsigned without, signed via env or properties); 🧑 real keystore pending, needed before FT-07's dry run |
+| FT-07 | **released** | `8e6120e` | v0.3.0 | package-release.mjs dry run: .msi 17.0 MB, -setup.exe 15.8 MB, APK 24.5 MB + SHA256SUMS (throwaway key, output deleted); Android versionCode now tracks the version (1 → 200) |
+| FT-08 | **released** | `e5aa02d` | v0.3.0 | 🧑 public repo created (diegoami/geoclick-releases, README only); web-only download link EN/DE/IT; publish script dry-runs unless --confirm; first publish = v0.3.0 |
 | FT-09 | todo | — | v0.4.0 | 🧑 copy review |
 | FT-10 | todo | — | v0.4.0 | |
 | FT-11 | todo | — | v0.4.0 | |
@@ -484,5 +484,5 @@ Update this table as tasks merge. Commit hashes are the merge commits.
 
 | Release | State | Tag | Date |
 |---|---|---|---|
-| `v0.3.0` | not cut | — | — |
+| `v0.3.0` | **cut** | `v0.3.0` → `abafcbb` | 2026-09-13 |
 | `v0.4.0` | not cut | — | — |
