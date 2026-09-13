@@ -106,8 +106,13 @@ forever.
 The two-direction flashcard idea isn't gone, just deferred — nothing about
 the drag-to-match mechanic blocks adding it later as a second quiz mode.
 Each target's per-attempt result feeds spaced repetition (`packages/srs`,
-Iteration 6): targets missed more often get scheduled sooner. **SM-2** for
-now; FSRS is a drop-in upgrade later since the scheduler interface
+Iteration 6): targets missed more often get scheduled sooner. An
+**SM-2-derived** scheduler, not classic SM-2: three grades (`again`/`hard`/
+`good`) instead of SM-2's 0-5, `again` due the same day rather than
+tomorrow, ease capped at 2.5 (`MAX_EASE_FACTOR`, recovering +0.1 per clean
+review), and every interval capped at 365 days (`MAX_INTERVAL_DAYS`) —
+uncapped, it overflowed `Date` by the 20th clean review (GC-010, see
+DECISIONS.md). FSRS is a drop-in upgrade later since the scheduler interface
 (`rate(previous, grade, today) -> CardState`) doesn't change. A quiz
 session is no longer "every target, every time" — only due (or
 never-seen) targets become slips, the rest show pre-solved as already
@@ -147,7 +152,7 @@ Iteration 8+, not started.
 /app                          shared web core: map viewer, tour player,
                                quiz UI, editor
 /packages/quiz-engine          pure TS, framework-agnostic, unit-testable
-/packages/srs                  pure TS scheduler (SM-2 now, FSRS later)
+/packages/srs                  pure TS scheduler (SM-2-derived now, FSRS later)
 /data                          map definitions + build pipeline (see below)
 /desktop                       Tauri wrapper
 /mobile                        Capacitor wrapper

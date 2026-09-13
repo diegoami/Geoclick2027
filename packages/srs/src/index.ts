@@ -24,6 +24,15 @@ export interface CardState {
 
 export const DEFAULT_EASE_FACTOR = 2.5;
 export const MIN_EASE_FACTOR = 1.3;
+// A clean review raises ease back toward this, never past it - so a card that
+// was once fumbled can recover, but a long clean streak cannot compound ease
+// without bound. Equal to the default: new cards start at the ceiling.
+export const MAX_EASE_FACTOR = 2.5;
+// Uncapped, `interval * easeFactor` reached 1488 days by the 8th clean review
+// and overflowed Date into a "NaN-NaN-NaN" dueDate by the 20th, retiring the
+// card forever. A year means even a fully mastered region comes back once a
+// year - see DECISIONS.md.
+export const MAX_INTERVAL_DAYS = 365;
 
 function addDaysLocal(date: string, days: number): string {
 	const [y, m, d] = date.split('-').map(Number);
@@ -60,8 +69,12 @@ export function daysUntil(dueDate: string, today: string): number {
  * both `lastReviewedAt` and the new `dueDate` (via `interval`).
  *
  * Grades: 'good' (correct, no wrong attempts) advances normally, 1 day on
- * the first review, 6 on the second, then `round(interval * easeFactor)`
- * - classic SM-2. 'hard' (correct, but only after a wrong attempt) also
+ * the first review, 6 on the second, then `round(interval * easeFactor)`,
+ * and raises the ease factor by 0.1 up to MAX_EASE_FACTOR. That much is
+ * SM-2; the rest is this project's own variant, not classic SM-2: three
+ * grades instead of six, an ease ceiling, every interval capped at
+ * MAX_INTERVAL_DAYS, and 'again' due the same day (below). 'hard'
+ * (correct, but only after a wrong attempt) also
  * advances - eventually getting it right still counts as a pass - but
  * with a lower ease factor and a dampened interval, so it resurfaces
  * sooner than a clean win rather than literally the same day. 'again'
@@ -88,7 +101,10 @@ export function rate(previous: CardState | undefined, grade: Grade, today: strin
 	const prevRepetitions = previous?.repetitions ?? 0;
 	const prevInterval = previous?.interval ?? 0;
 	const repetitions = prevRepetitions + 1;
-	const easeFactor = Math.max(MIN_EASE_FACTOR, prevEase - (grade === 'hard' ? 0.15 : 0));
+	const easeFactor =
+		grade === 'hard'
+			? Math.max(MIN_EASE_FACTOR, prevEase - 0.15)
+			: Math.min(MAX_EASE_FACTOR, prevEase + 0.1);
 
 	let interval: number;
 	if (repetitions === 1) interval = 1;
@@ -96,6 +112,7 @@ export function rate(previous: CardState | undefined, grade: Grade, today: strin
 	else interval = Math.round(prevInterval * easeFactor);
 
 	if (grade === 'hard') interval = Math.max(1, Math.round(interval * 0.8));
+	interval = Math.min(MAX_INTERVAL_DAYS, interval);
 
 	return {
 		easeFactor,
