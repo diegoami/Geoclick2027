@@ -1,61 +1,49 @@
 #!/usr/bin/env node
-// Task-execution helper for the remediation programme (docs/REMEDIATION_PLAN.md).
-// Owns the mechanical parts of docs/ORCHESTRATION.md: local task state,
-// worktrees, ports, leases, the review handoff packet, and the four gates.
+// Harness for the remediation programme (docs/REMEDIATION_PLAN.md).
+// ONE agent, ONE task at a time, in the main checkout. No worktrees, no ports
+// to allocate, no leases, no second agent to hand off to. See
+// docs/ORCHESTRATION.md -> "The loop".
 //
-//   node scripts/task.mjs list                      # every task + wave/deps/release
-//   node scripts/task.mjs show GC-010               # full spec for one task
-//   node scripts/task.mjs init [--dry-run]          # seed state for every task
-//   node scripts/task.mjs status [--json]           # the board
-//   node scripts/task.mjs next                      # tasks whose deps are integrated
-//   node scripts/task.mjs state GC-010 in-review --note "gates green"
-//   node scripts/task.mjs lease GC-010 --agent impl-gc-010 [--renew] [--force]
-//   node scripts/task.mjs release GC-010            # tear the worktree down
-//   node scripts/task.mjs handoff GC-010 [--no-gates]   # the review packet
-//   node scripts/task.mjs gates [--json]            # the four quality gates
+//   node scripts/task.mjs list                 # every task + wave/deps/release
+//   node scripts/task.mjs show GC-010          # full spec for one task
+//   node scripts/task.mjs init [--dry-run]     # seed state for every task
+//   node scripts/task.mjs status [--json]      # the board
+//   node scripts/task.mjs next                 # the next task the DAG allows
+//   node scripts/task.mjs start GC-010         # branch + state -> in-progress
+//   node scripts/task.mjs log GC-010           # worklog for the approval request
+//   node scripts/task.mjs state GC-010 awaiting-approval --note "gates green"
+//   node scripts/task.mjs finish GC-010        # after the merge: clean up + integrated
+//   node scripts/task.mjs doctor [--fix]       # zombie sweep: worktrees, branches, ports
+//   node scripts/task.mjs gates [--json]       # the four quality gates
 //
-// There is NO GitHub in this programme. Authoritative task state is one JSON
-// file per task under <main checkout>/.orchestrator/state/ (gitignored), written
-// only through this script: single writer per file, temp-file + rename, and a
-// transition table so a confused agent gets an error instead of a plausible
-// wrong board. See docs/ORCHESTRATION.md -> "Task state, without a forge".
+// Live state is one JSON file per task under <repo>/.orchestrator/state/
+// (gitignored), written only through this script: temp-file + rename, and a
+// transition table so a wrong move is refused instead of silently recorded.
+// The state the PRODUCT OWNER reads is the ledger table in
+// docs/REMEDIATION_PLAN.md, ticked as each task merges.
 
 import { execFileSync, spawnSync } from 'node:child_process';
-import { existsSync, mkdirSync, readFileSync, renameSync, writeFileSync } from 'node:fs';
+import {
+	existsSync,
+	mkdirSync,
+	readFileSync,
+	readdirSync,
+	renameSync,
+	rmSync,
+	writeFileSync
+} from 'node:fs';
 import { hostname } from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parse } from 'yaml';
 
-const SCRIPT_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-
-// State must live in the MAIN checkout, not in whichever worktree is calling us
-// - otherwise every worktree gets its own private board and the orchestrator
-// sees nothing. `git rev-parse --git-common-dir` points at the main repo's git
-// dir from inside any linked worktree.
-function mainCheckout() {
-	try {
-		const common = execFileSync('git', ['rev-parse', '--git-common-dir'], {
-			cwd: SCRIPT_ROOT,
-			encoding: 'utf8'
-		}).trim();
-		const abs = path.resolve(SCRIPT_ROOT, common);
-		// .../Geoclick2027/.git -> .../Geoclick2027
-		return path.basename(abs) === '.git' ? path.dirname(abs) : abs;
-	} catch {
-		return SCRIPT_ROOT;
-	}
-}
-
-const MAIN_ROOT = mainCheckout();
-const TASKS_FILE = existsSync(path.join(MAIN_ROOT, 'docs', 'tasks.yaml'))
-	? path.join(MAIN_ROOT, 'docs', 'tasks.yaml')
-	: path.join(SCRIPT_ROOT, 'docs', 'tasks.yaml');
-const STATE_DIR = path.join(MAIN_ROOT, '.orchestrator', 'state');
-const HANDOFF_DIR = path.join(MAIN_ROOT, '.orchestrator', 'handoff');
-const WORKTREE_ROOT = path.resolve(MAIN_ROOT, '..', 'geoclick-wt');
-const PORT_BASE = 5173; // 5173 stays free for the human; tasks get 5174+
+const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const TASKS_FILE = path.join(REPO_ROOT, 'docs', 'tasks.yaml');
+const STATE_DIR = path.join(REPO_ROOT, '.orchestrator', 'state');
+const LOG_DIR = path.join(REPO_ROOT, '.orchestrator', 'log');
 const INTEGRATION_BRANCH = 'main';
+const DEV_PORT = 5174; // 5173 stays free for the product owner
+const PORT_SWEEP = [5173, 5199]; // doctor looks for strays in here
 
 const GATES = [
 	{ name: 'check', argv: ['run', 'check'] },
@@ -64,38 +52,30 @@ const GATES = [
 	{ name: 'build', argv: ['run', 'build', '--workspace=app'] }
 ];
 
-// ORCHESTRATION.md's state machine. Anything not listed is refused.
+// docs/ORCHESTRATION.md's state machine. One agent, so there is no `leased`
+// state and no reviewer states - `awaiting-approval` is the product owner's gate.
 const TRANSITIONS = {
 	backlog: ['ready', 'blocked'],
-	ready: ['leased', 'backlog', 'blocked'],
-	leased: ['in-progress', 'ready', 'blocked'],
-	'in-progress': ['in-review', 'ready', 'blocked'],
-	'in-review': ['approved', 'changes-requested', 'escalated', 'blocked'],
-	'changes-requested': ['in-progress', 'escalated', 'blocked'],
-	approved: ['integrated', 'changes-requested', 'blocked'],
+	ready: ['in-progress', 'backlog', 'blocked'],
+	'in-progress': ['awaiting-approval', 'ready', 'blocked', 'escalated'],
+	'awaiting-approval': ['integrated', 'changes-requested', 'blocked', 'escalated'],
+	'changes-requested': ['in-progress', 'blocked', 'escalated'],
 	integrated: ['released', 'blocked'],
 	released: [],
 	blocked: ['backlog', 'ready', 'in-progress', 'escalated'],
 	escalated: ['ready', 'in-progress', 'blocked']
 };
 const DONE = new Set(['integrated', 'released']);
+const ACTIVE = new Set(['in-progress', 'awaiting-approval', 'changes-requested']);
 
 function loadTasks() {
 	const doc = parse(readFileSync(TASKS_FILE, 'utf8'));
-	// meta shape is tolerated in both spellings so a schema tweak in tasks.yaml
-	// does not break the harness.
 	const m = doc.meta ?? {};
-	doc.roles = {
-		implementer: m.implementer_engine ?? m.roles?.implementer ?? 'sonnet',
-		reviewer: m.reviewer_engine ?? m.roles?.reviewer ?? 'opus',
-		orchestrator: m.orchestrator_engine ?? m.roles?.orchestrator ?? 'opus'
-	};
-	doc.leaseTtlMinutes = m.lease_ttl_minutes ?? 90;
-	doc.concurrency = m.concurrency_max ?? 3;
+	doc.engine = m.engine ?? 'opus';
+	doc.concurrency = m.concurrency_max ?? 1;
+	doc.devPort = m.dev_port ?? DEV_PORT;
 	doc.tasks.forEach((t, i) => {
 		t.ordinal = i + 1;
-		t.port = PORT_BASE + t.ordinal;
-		t.worktree = path.join(WORKTREE_ROOT, t.id);
 	});
 	return doc;
 }
@@ -109,13 +89,16 @@ function findTask(doc, id) {
 	return task;
 }
 
-function git(args, opts = {}) {
-	return execFileSync('git', args, { cwd: MAIN_ROOT, encoding: 'utf8', ...opts }).trim();
+function git(args) {
+	return execFileSync('git', args, { cwd: REPO_ROOT, encoding: 'utf8' }).trim();
 }
 
-function gitOk(args, opts = {}) {
-	return spawnSync('git', args, { cwd: MAIN_ROOT, ...opts }).status === 0;
+function gitTry(args) {
+	const res = spawnSync('git', args, { cwd: REPO_ROOT, encoding: 'utf8', stdio: 'pipe' });
+	return res.status === 0 ? res.stdout.trim() : null;
 }
+
+const branchExists = (b) => gitTry(['rev-parse', '--verify', '--quiet', b]) !== null;
 
 // ------------------------------------------------------------------- state I/O
 
@@ -124,7 +107,12 @@ const statePath = (id) => path.join(STATE_DIR, `${id}.json`);
 function readState(id) {
 	const p = statePath(id);
 	if (!existsSync(p)) return null;
-	return JSON.parse(readFileSync(p, 'utf8'));
+	try {
+		return JSON.parse(readFileSync(p, 'utf8'));
+	} catch {
+		console.error(`State file for ${id} is not valid JSON: ${p}`);
+		process.exit(1);
+	}
 }
 
 // Temp file + rename: a reader never sees a partial write, and a crash mid-write
@@ -153,28 +141,28 @@ function pushHistory(rec, state, note) {
 	rec.history.push({ at: new Date().toISOString(), state, ...(note ? { note } : {}) });
 }
 
+const stateOf = (id) => readState(id)?.state ?? 'uninitialised';
+
 // ---------------------------------------------------------------- list / show
 
 function cmdList(doc) {
-	console.log(['ID', 'ENGINE', 'EFFORT', 'WAVE', 'REL', 'PORT', 'DEPS', 'TITLE'].join('\t'));
+	console.log(['ID', 'EFFORT', 'WAVE', 'REL', 'PRIORITY', 'DEPS', 'TITLE'].join('\t'));
 	for (const t of doc.tasks) {
 		console.log(
 			[
 				t.id,
-				t.engine,
 				t.effort,
 				t.wave,
 				t.release,
-				t.port,
+				t.priority ?? '-',
 				(t.deps ?? []).join('+') || '-',
 				t.title
 			].join('\t')
 		);
 	}
 	console.log(
-		`\n${doc.tasks.length} tasks across ${doc.releases.length} releases. ` +
-			`Concurrency cap ${doc.concurrency}. ` +
-			`Implementer ${doc.roles.implementer}, reviewer/orchestrator ${doc.roles.reviewer}.`
+		`\n${doc.tasks.length} tasks, ${doc.releases.length} releases, engine ${doc.engine} for all of them.` +
+			`\nOne task at a time (concurrency ${doc.concurrency}); dev server on port ${doc.devPort}.`
 	);
 }
 
@@ -183,174 +171,170 @@ function cmdShow(doc, id) {
 	const rec = readState(t.id);
 	console.log(`${t.id}  ${t.title}`);
 	console.log(`engine=${t.engine} effort=${t.effort} wave=${t.wave} release=${t.release}`);
+	console.log(`priority=${t.priority ?? '-'} type=${t.type ?? '-'}`);
 	console.log(`branch=${t.branch}`);
-	console.log(`worktree=${t.worktree}`);
-	console.log(`port=${t.port}`);
 	console.log(`deps=${(t.deps ?? []).join(', ') || 'none'}`);
-	console.log(`state=${rec ? rec.state : '(uninitialised)'}${rec?.round ? ` round=${rec.round}` : ''}`);
+	console.log(`state=${rec ? rec.state : '(uninitialised)'}${rec?.attempts ? ` attempts=${rec.attempts}` : ''}`);
 	console.log(`files=${(t.files ?? []).join(', ')}`);
 	console.log(`closes review findings: ${(t.review_refs ?? []).join(', ')}`);
 	console.log(`\n--- DESCRIPTION ---\n${t.description}`);
-	console.log(`--- DEFINITION OF DONE ---`);
+	console.log('--- DEFINITION OF DONE ---');
 	for (const d of t.dod) console.log(`  [ ] ${d}`);
-	console.log(`\n--- GATES ---`);
+	console.log('\n--- GATES ---');
 	for (const g of GATES) console.log(`  npm ${g.argv.join(' ')}`);
 }
 
 // --------------------------------------------------------------------- init
 
 function cmdInit(doc, dryRun) {
-	const plan = [];
 	for (const t of doc.tasks) {
 		const existing = readState(t.id);
 		if (existing) {
-			plan.push([t.id, `keep (${existing.state})`]);
+			console.log(`  ${t.id.padEnd(8)} keep (${existing.state})`);
 			continue;
 		}
 		const state = (t.deps ?? []).length === 0 ? 'ready' : 'backlog';
-		plan.push([t.id, `create -> ${state}`]);
-		if (!dryRun) {
-			const rec = {
-				task: t.id,
-				state,
-				round: 0,
-				engine: t.engine,
-				branch: t.branch,
-				worktree: t.worktree,
-				port: t.port,
-				release: t.release,
-				wave: t.wave,
-				agent: null,
-				host: null,
-				leasedAt: null,
-				ttlMinutes: doc.leaseTtlMinutes,
-				note: 'seeded by task.mjs init',
-				history: []
-			};
-			pushHistory(rec, state, 'seeded');
-			writeState(rec);
-		}
+		console.log(`  ${t.id.padEnd(8)} create -> ${state}`);
+		if (dryRun) continue;
+		const rec = {
+			task: t.id,
+			state,
+			attempts: 0,
+			engine: t.engine,
+			branch: t.branch,
+			release: t.release,
+			wave: t.wave,
+			host: hostname(),
+			mergedAt: null,
+			note: 'seeded by task.mjs init',
+			history: []
+		};
+		pushHistory(rec, state, 'seeded');
+		writeState(rec);
 	}
-	for (const [id, what] of plan) console.log(`  ${id.padEnd(8)} ${what}`);
 	console.log(
 		dryRun
-			? `\n--dry-run: nothing written. State dir would be ${STATE_DIR}`
-			: `\nState dir: ${STATE_DIR}\ninit is idempotent - existing files are never overwritten.`
+			? `\n--dry-run: nothing written. State would live in ${STATE_DIR}`
+			: `\nState: ${STATE_DIR}\ninit is idempotent - it never overwrites an existing file.` +
+					'\nThe ledger the product owner reads is the table in docs/REMEDIATION_PLAN.md.'
 	);
 }
 
 // ------------------------------------------------------------------- status
 
-function leaseAge(rec) {
-	if (!rec.leasedAt) return null;
-	const mins = (Date.now() - Date.parse(rec.leasedAt)) / 60000;
-	return { mins, expired: mins > (rec.ttlMinutes ?? 90) };
-}
-
 function cmdStatus(doc, asJson) {
 	const rows = doc.tasks.map((t) => {
 		const rec = readState(t.id);
-		const age = rec ? leaseAge(rec) : null;
 		return {
 			id: t.id,
 			wave: t.wave,
 			release: t.release,
+			priority: t.priority ?? null,
 			state: rec?.state ?? 'uninitialised',
-			round: rec?.round ?? 0,
-			agent: rec?.agent ?? null,
-			port: t.port,
-			leaseMinutes: age ? Math.round(age.mins) : null,
-			leaseExpired: age ? age.expired : null,
+			attempts: rec?.attempts ?? 0,
+			branch: t.branch,
+			branchExists: branchExists(t.branch),
 			note: rec?.note ?? null
 		};
 	});
 
 	if (asJson) {
-		const byRelease = doc.releases.map((r) => ({
-			version: r.version,
-			tasks: r.tasks,
-			complete: r.tasks.every((id) => DONE.has(rows.find((x) => x.id === id)?.state))
-		}));
-		console.log(JSON.stringify({ tasks: rows, releases: byRelease }, null, 2));
+		console.log(
+			JSON.stringify(
+				{
+					tasks: rows,
+					releases: doc.releases.map((r) => ({
+						version: r.version,
+						tasks: r.tasks,
+						done: r.tasks.filter((id) => DONE.has(rows.find((x) => x.id === id)?.state)).length,
+						complete: r.tasks.every((id) => DONE.has(rows.find((x) => x.id === id)?.state))
+					}))
+				},
+				null,
+				2
+			)
+		);
 		return;
 	}
 
-	console.log(['ID', 'WAVE', 'REL', 'STATE', 'RND', 'AGENT', 'LEASE'].join('\t'));
+	console.log(['ID', 'WAVE', 'REL', 'STATE', 'TRY', 'BRANCH?'].join('\t'));
 	for (const r of rows) {
-		const lease =
-			r.leaseMinutes === null ? '-' : `${r.leaseMinutes}m${r.leaseExpired ? ' EXPIRED' : ''}`;
-		console.log([r.id, r.wave, r.release, r.state, r.round, r.agent ?? '-', lease].join('\t'));
+		console.log(
+			[r.id, r.wave, r.release, r.state, r.attempts, r.branchExists ? 'yes' : '-'].join('\t')
+		);
 	}
 
 	const counts = {};
 	for (const r of rows) counts[r.state] = (counts[r.state] ?? 0) + 1;
-	console.log(
-		'\n' +
-			Object.entries(counts)
-				.map(([k, v]) => `${k}:${v}`)
-				.join('  ')
-	);
+	console.log('\n' + Object.entries(counts).map(([k, v]) => `${k}:${v}`).join('  '));
 
-	// Wave completion is the release batching unit - see docs/RELEASES.md.
-	const waves = [...new Set(doc.tasks.map((t) => t.wave))].sort();
-	for (const w of waves) {
-		const ids = doc.tasks.filter((t) => t.wave === w).map((t) => t.id);
-		const done = ids.filter((id) => DONE.has(rows.find((r) => r.id === id).state));
-		console.log(`  wave ${w}: ${done.length}/${ids.length} integrated`);
-	}
 	for (const r of doc.releases) {
 		const done = r.tasks.filter((id) => DONE.has(rows.find((x) => x.id === id)?.state));
-		const ready = done.length === r.tasks.length;
+		const complete = done.length === r.tasks.length;
 		console.log(
-			`  ${r.version}: ${done.length}/${r.tasks.length}${ready ? '  <- BATCH COMPLETE, cut the release (docs/RELEASES.md)' : ''}`
+			`  ${r.version}: ${done.length}/${r.tasks.length}` +
+				(complete ? '  <- BATCH COMPLETE: cut the release (docs/RELEASES.md)' : '')
 		);
 	}
-	const expired = rows.filter((r) => r.leaseExpired);
-	if (expired.length) {
-		console.log(`\nEXPIRED LEASES: ${expired.map((r) => r.id).join(', ')}`);
-		console.log('Reclaim with: node scripts/task.mjs release <id> && node scripts/task.mjs state <id> ready --note "lease expired"');
+
+	const active = rows.filter((r) => ACTIVE.has(r.state));
+	if (active.length > doc.concurrency) {
+		console.log(
+			`\nWARNING: ${active.length} tasks are active (${active.map((r) => r.id).join(', ')}) ` +
+				`but concurrency is ${doc.concurrency}. One of them is a zombie - run \`doctor\`.`
+		);
+	}
+	const stuck = rows.filter((r) => r.state === 'escalated' || r.state === 'blocked');
+	if (stuck.length) {
+		console.log(`\nNEEDS THE PRODUCT OWNER: ${stuck.map((r) => `${r.id} (${r.state})`).join(', ')}`);
 	}
 }
 
 // --------------------------------------------------------------------- next
 
 function cmdNext(doc) {
-	const stateOf = (id) => readState(id)?.state ?? 'uninitialised';
-	const ready = doc.tasks.filter((t) => {
-		const s = stateOf(t.id);
-		if (s !== 'ready' && s !== 'backlog') return false;
-		return (t.deps ?? []).every((d) => DONE.has(stateOf(d)));
-	});
-	const active = doc.tasks.filter((t) =>
-		['leased', 'in-progress', 'in-review', 'changes-requested'].includes(stateOf(t.id))
-	);
-
-	console.log(`In flight: ${active.length}/${doc.concurrency}` +
-		(active.length ? ` (${active.map((t) => t.id).join(', ')})` : ''));
-	if (!ready.length) {
-		console.log('Nothing dependency-ready. Either everything is done or deps are unmet.');
+	const active = doc.tasks.filter((t) => ACTIVE.has(stateOf(t.id)));
+	if (active.length) {
+		console.log(`Finish what is open first: ${active.map((t) => `${t.id} (${stateOf(t.id)})`).join(', ')}`);
+		console.log('One task at a time is the whole point of the loop.');
 		return;
 	}
-	console.log(`\nDependency-ready (${ready.length}):`);
-	for (const t of ready) {
+	const ready = doc.tasks.filter((t) => {
 		const s = stateOf(t.id);
+		return (s === 'ready' || s === 'backlog') && (t.deps ?? []).every((d) => DONE.has(stateOf(d)));
+	});
+	if (!ready.length) {
+		const left = doc.tasks.filter((t) => !DONE.has(stateOf(t.id)));
+		if (left.some((t) => stateOf(t.id) === 'uninitialised')) {
+			console.log('No state yet. Seed it first:  node scripts/task.mjs init');
+			return;
+		}
 		console.log(
-			`  ${t.id}  wave ${t.wave}  ${t.engine}/${t.effort}  ${t.title}` +
-				(s === 'backlog' ? '   [state still backlog - transition to ready first]' : '')
+			left.length
+				? `Nothing startable. Blocked on: ${left.map((t) => `${t.id} (${stateOf(t.id)})`).join(', ')}`
+				: 'Every task is integrated. Cut the final release - docs/RELEASES.md.'
 		);
+		return;
 	}
-	const slots = doc.concurrency - active.length;
-	console.log(`\nFree concurrency slots: ${slots > 0 ? slots : 0}. Each worktree needs its own \`npm install\`.`);
+	// Lowest wave first, then declaration order: that is the plan's own sequence.
+	ready.sort((a, b) => a.wave - b.wave || a.ordinal - b.ordinal);
+	const pick = ready[0];
+	console.log(`NEXT: ${pick.id}  wave ${pick.wave}  ${pick.effort}  ${pick.title}`);
+	console.log(`  node scripts/task.mjs show ${pick.id}`);
+	console.log(`  node scripts/task.mjs start ${pick.id}`);
+	if (ready.length > 1) {
+		console.log(`\nAlso startable (do them after): ${ready.slice(1).map((t) => t.id).join(', ')}`);
+	}
 }
 
 // -------------------------------------------------------------------- state
 
-function cmdState(doc, id, to, { note, round }) {
+function cmdState(doc, id, to, { note }) {
 	const t = findTask(doc, id);
 	const rec = requireState(t.id);
 	if (!to) {
 		console.error(`Usage: node scripts/task.mjs state ${t.id} <state> [--note "..."]`);
-		console.error(`Current: ${rec.state}. Allowed next: ${TRANSITIONS[rec.state].join(', ') || '(terminal)'}`);
+		console.error(`Current: ${rec.state}. Allowed: ${TRANSITIONS[rec.state].join(', ') || '(terminal)'}`);
 		process.exit(1);
 	}
 	if (!Object.prototype.hasOwnProperty.call(TRANSITIONS, to)) {
@@ -368,156 +352,173 @@ function cmdState(doc, id, to, { note, round }) {
 		process.exit(1);
 	}
 
-	// A second changes-requested is the escalation trigger (two rounds, then stop).
-	if (to === 'changes-requested') rec.round = (rec.round ?? 0) + 1;
-	if (round !== undefined) rec.round = Number(round);
-
+	if (to === 'changes-requested') rec.attempts = (rec.attempts ?? 0) + 1;
 	const from = rec.state;
 	rec.state = to;
 	rec.note = note ?? null;
-	if (to === 'ready' || to === 'backlog') {
-		rec.agent = null;
-		rec.host = null;
-		rec.leasedAt = null;
-	}
 	pushHistory(rec, to, note);
 	writeState(rec);
-
 	console.log(`${t.id}: ${from} -> ${to}${note ? `  (${note})` : ''}`);
-	if (to === 'changes-requested' && rec.round >= 2) {
-		console.log('\nThis is round 2. Per ORCHESTRATION.md: do NOT start a third round.');
-		console.log('Escalate to the human: node scripts/task.mjs state ' + t.id + ' escalated --note "..."');
+
+	if (to === 'awaiting-approval') {
+		console.log('\nNow ASK THE PRODUCT OWNER to review and approve the merge.');
+		console.log(`Hand them: the branch \`${t.branch}\`, \`git diff ${INTEGRATION_BRANCH}...${t.branch}\`,`);
+		console.log(`and .orchestrator/log/${t.id}.md. Do not merge until they say yes.`);
 	}
-	if (to === 'approved') {
-		console.log('\nNext: rebase onto main, re-run gates, then ASK THE HUMAN before merging.');
+	if (to === 'changes-requested' && rec.attempts >= 2) {
+		console.log('\nThis is the second round of changes on this task.');
+		console.log('Per ORCHESTRATION.md: stop and escalate rather than starting a third.');
+		console.log(`  node scripts/task.mjs state ${t.id} escalated --note "..."`);
+	}
+	if (to === 'escalated') {
+		console.log('\nStop working this task. Move to the next one and let the product owner adjudicate.');
 	}
 }
 
-// ------------------------------------------------------------ lease / release
+// -------------------------------------------------------------- start / finish
 
-function cmdLease(doc, id, { agent, renew, force }) {
+function cmdStart(doc, id, force) {
 	const t = findTask(doc, id);
 	const rec = requireState(t.id);
 
-	if (renew) {
-		if (rec.state !== 'leased' && rec.state !== 'in-progress') {
-			console.error(`Cannot renew ${t.id}: state is "${rec.state}", not leased/in-progress.`);
-			process.exit(1);
-		}
-		rec.leasedAt = new Date().toISOString();
-		pushHistory(rec, rec.state, 'lease renewed');
-		writeState(rec);
-		console.log(`Renewed lease on ${t.id} for ${rec.ttlMinutes} more minutes.`);
-		return;
-	}
-
-	if (rec.state !== 'ready') {
-		console.error(`Cannot lease ${t.id}: state is "${rec.state}", not "ready".`);
-		console.error('That is the double-lease guard. Reclaim an expired lease with `release` first.');
+	const active = doc.tasks.filter((x) => x.id !== t.id && ACTIVE.has(stateOf(x.id)));
+	if (active.length && !force) {
+		console.error(`Refused: ${active.map((x) => `${x.id} (${stateOf(x.id)})`).join(', ')} still open.`);
+		console.error('One task at a time. Finish or park that one first (--force overrides).');
 		process.exit(1);
 	}
-
-	const unmet = (t.deps ?? []).filter((d) => !DONE.has(readState(d)?.state));
+	if (!['ready', 'changes-requested', 'escalated'].includes(rec.state)) {
+		console.error(`Refused: ${t.id} is "${rec.state}"; start expects ready/changes-requested/escalated.`);
+		process.exit(1);
+	}
+	const unmet = (t.deps ?? []).filter((d) => !DONE.has(stateOf(d)));
 	if (unmet.length && !force) {
-		console.error(`Cannot lease ${t.id}: deps not integrated into ${INTEGRATION_BRANCH}: ${unmet.join(', ')}`);
-		console.error('This is a DAG violation, not a hiccup. Use --force only if you know why.');
+		console.error(`Refused: deps not merged into ${INTEGRATION_BRANCH}: ${unmet.join(', ')}`);
+		console.error('That is a DAG violation. --force only if you know exactly why.');
+		process.exit(1);
+	}
+	const dirty = git(['status', '--porcelain']);
+	if (dirty && !force) {
+		console.error('Refused: the working tree is dirty. Commit, stash or clean it first:');
+		console.error(dirty.split('\n').slice(0, 10).join('\n'));
 		process.exit(1);
 	}
 
-	if (existsSync(t.worktree)) {
-		console.error(`Worktree already exists: ${t.worktree}`);
-		console.error(`To reclaim: node scripts/task.mjs release ${t.id}`);
-		process.exit(1);
-	}
-
-	mkdirSync(WORKTREE_ROOT, { recursive: true });
-	const branchExists = gitOk(['rev-parse', '--verify', '--quiet', t.branch]);
-	git(
-		branchExists
-			? ['worktree', 'add', t.worktree, t.branch]
-			: ['worktree', 'add', '-b', t.branch, t.worktree, INTEGRATION_BRANCH]
-	);
-
-	rec.state = 'leased';
-	rec.agent = agent ?? 'unassigned';
-	rec.host = hostname();
-	rec.branch = t.branch;
-	rec.worktree = t.worktree;
-	rec.port = t.port;
-	rec.leasedAt = new Date().toISOString();
-	rec.note = `worktree created from ${INTEGRATION_BRANCH}`;
-	pushHistory(rec, 'leased', `agent=${rec.agent} port=${t.port}`);
-	writeState(rec);
-
-	console.log(`Leased ${t.id} to ${rec.agent}`);
-	console.log(`  worktree : ${t.worktree}`);
-	console.log(`  branch   : ${t.branch}  (from ${INTEGRATION_BRANCH})`);
-	console.log(`  port     : ${t.port}`);
-	console.log(`  state    : ${statePath(t.id)}`);
-	console.log('');
-	console.log('In the worktree, FIRST (never skip - see ORCHESTRATION.md):');
-	console.log(`  cd ${t.worktree}`);
-	console.log('  npm install');
-	console.log(`  npm run dev --workspace=app -- --port ${t.port}`);
-	console.log('');
-	console.log(`Then: node scripts/task.mjs state ${t.id} in-progress`);
-}
-
-function cmdRelease(doc, id) {
-	const t = findTask(doc, id);
-	if (existsSync(t.worktree)) {
-		git(['worktree', 'remove', '--force', t.worktree]);
-		console.log(`Removed worktree ${t.worktree}`);
+	if (branchExists(t.branch)) {
+		git(['checkout', t.branch]);
+		console.log(`Resumed existing branch ${t.branch}`);
 	} else {
-		console.log(`No worktree at ${t.worktree}`);
+		git(['checkout', INTEGRATION_BRANCH]);
+		git(['checkout', '-b', t.branch]);
+		console.log(`Created ${t.branch} from ${INTEGRATION_BRANCH}`);
 	}
-	git(['worktree', 'prune']);
-	const rec = readState(t.id);
-	if (rec) {
-		rec.agent = null;
-		rec.host = null;
-		rec.leasedAt = null;
-		pushHistory(rec, rec.state, 'worktree released');
+
+	if (rec.state !== 'in-progress') {
+		const from = rec.state;
+		rec.state = 'in-progress';
+		rec.note = `started on ${t.branch}`;
+		pushHistory(rec, 'in-progress', `from ${from}`);
 		writeState(rec);
 	}
-	console.log(`Released ${t.id}. The branch is kept; delete it after it merges.`);
-	console.log(`State is still "${rec?.state ?? 'uninitialised'}" - change it explicitly if that is wrong.`);
+
+	console.log(`\n${t.id}  ${t.title}`);
+	console.log(`  spec     : node scripts/task.mjs show ${t.id}`);
+	console.log(`  dev      : npm run dev --workspace=app -- --port ${doc.devPort}`);
+	console.log(`  gates    : node scripts/task.mjs gates`);
+	console.log(`  worklog  : node scripts/task.mjs log ${t.id}`);
+	console.log('\nWhen the DoD is met and the gates are green:');
+	console.log(`  node scripts/task.mjs state ${t.id} awaiting-approval --note "..."`);
+	console.log('Then ask the product owner to approve the merge. Never merge unasked.');
+	console.log('\nStop the dev server before you finish. No orphan processes.');
 }
 
-// ------------------------------------------------------------------ handoff
+function cmdFinish(doc, id, force) {
+	const t = findTask(doc, id);
+	const rec = requireState(t.id);
 
-// The review packet. This is what replaces the first draft's draft PR: a branch
-// name, a diff, the DoD, and the gate result. Nothing more is invented.
-function cmdHandoff(doc, id, runGates) {
+	const merged = (gitTry(['branch', '--merged', INTEGRATION_BRANCH]) ?? '')
+		.split('\n')
+		.map((l) => l.replace('*', '').trim())
+		.includes(t.branch);
+
+	if (!merged && !force) {
+		console.error(`Refused: ${t.branch} is not merged into ${INTEGRATION_BRANCH}.`);
+		console.error('`finish` is the post-merge cleanup step. Get the OK, merge, then run it.');
+		process.exit(1);
+	}
+
+	const current = gitTry(['rev-parse', '--abbrev-ref', 'HEAD']);
+	if (current === t.branch) git(['checkout', INTEGRATION_BRANCH]);
+	if (branchExists(t.branch)) {
+		git(['branch', '-d', t.branch]);
+		console.log(`Deleted merged branch ${t.branch}`);
+	}
+	const remoteRef = gitTry(['rev-parse', '--verify', '--quiet', `refs/remotes/origin/${t.branch}`]);
+	if (remoteRef) {
+		console.log(`Remote branch still exists. Delete it too:  git push origin --delete ${t.branch}`);
+	}
+
+	if (rec.state === 'awaiting-approval') {
+		rec.state = 'integrated';
+		rec.mergedAt = new Date().toISOString();
+		rec.note = `merged into ${INTEGRATION_BRANCH}`;
+		pushHistory(rec, 'integrated', 'merged');
+		writeState(rec);
+		console.log(`${t.id}: awaiting-approval -> integrated`);
+	}
+
+	// Unblock whatever this just made startable.
+	const unblocked = [];
+	for (const other of doc.tasks) {
+		if (stateOf(other.id) !== 'backlog') continue;
+		if ((other.deps ?? []).every((d) => DONE.has(stateOf(d)))) {
+			const r = requireState(other.id);
+			r.state = 'ready';
+			r.note = `deps satisfied by ${t.id}`;
+			pushHistory(r, 'ready', `unblocked by ${t.id}`);
+			writeState(r);
+			unblocked.push(other.id);
+		}
+	}
+	if (unblocked.length) console.log(`Now ready: ${unblocked.join(', ')}`);
+
+	console.log('\nTICK THE LEDGER: mark ' + t.id + ' done in docs/REMEDIATION_PLAN.md\'s progress table.');
+	console.log('That table is what the product owner reads; the state files are not committed.');
+	console.log('\nThen: node scripts/task.mjs doctor && node scripts/task.mjs next');
+}
+
+// -------------------------------------------------------------------- log
+
+// The worklog. With one agent there is no handoff to a reviewer - this exists so
+// the PRODUCT OWNER can see what they are approving, and so a restarted session
+// can pick up where it left off.
+function cmdLog(doc, id, runGates) {
 	const t = findTask(doc, id);
 	const rec = requireState(t.id);
 	const range = `${INTEGRATION_BRANCH}...${t.branch}`;
-
-	// Quiet: an absent branch is a normal "you have not pushed yet" case, not a
-	// crash, and git's own fatal: line on stderr only confuses the reader.
-	const gitTry = (args) => {
-		const res = spawnSync('git', args, { cwd: MAIN_ROOT, encoding: 'utf8', stdio: 'pipe' });
-		return res.status === 0 ? res.stdout.trim() : null;
-	};
-	const missing = `(branch "${t.branch}" not found - commit and push it first)`;
+	const missing = `(branch "${t.branch}" not found - commit it first)`;
 	const stat = gitTry(['diff', '--stat', range]) ?? missing;
 	const commits = gitTry(['log', '--oneline', `${INTEGRATION_BRANCH}..${t.branch}`]) ?? missing;
 
-	let gatesBlock = '_not run by this packet_';
+	let gatesBlock = '_not run by this log - run `node scripts/task.mjs gates` and paste_';
 	if (runGates) {
 		const res = runGateSet(true);
-		gatesBlock = '```json\n' + JSON.stringify(res, null, 2) + '\n```';
+		gatesBlock =
+			(res.ok ? 'ALL FOUR GATES PASS.' : `FAILED at "${res.failedGate}".`) +
+			'\n\n```json\n' +
+			JSON.stringify(res, null, 2) +
+			'\n```';
 	}
 
 	const md = [
-		`# Handoff: ${t.id} — ${t.title}`,
+		`# ${t.id} — ${t.title}`,
 		'',
-		`- branch: \`${t.branch}\`  (base: \`${INTEGRATION_BRANCH}\`)`,
-		`- engine: ${t.engine} (implementer) — review runs on ${doc.roles.reviewer}, cold context`,
-		`- round: ${rec.round ?? 0}`,
-		`- review findings closed: ${(t.review_refs ?? []).join(', ') || '—'}`,
+		`- branch: \`${t.branch}\` (off \`${INTEGRATION_BRANCH}\`)`,
+		`- release: ${t.release} · wave ${t.wave} · ${t.effort} · ${t.priority ?? '-'}`,
+		`- state: ${rec.state}${rec.attempts ? ` (attempt ${rec.attempts + 1})` : ''}`,
+		`- closes: ${(t.review_refs ?? []).join(', ') || '—'}`,
 		'',
-		'## Read the diff',
+		'## What to look at',
 		'',
 		'```',
 		`git diff ${range}`,
@@ -543,19 +544,169 @@ function cmdHandoff(doc, id, runGates) {
 		'',
 		gatesBlock,
 		'',
-		'## Implementer notes',
+		'## Notes for the product owner',
 		'',
-		'_What you deliberately did NOT do, and anything the reviewer should not mistake',
-		'for an omission. Out-of-scope items spotted along the way go here, not in the diff._',
+		'_What was verified by hand and how; anything deliberately left alone;',
+		'anything spotted but out of scope (report it, do not fix it)._',
 		''
 	].join('\n');
 
-	mkdirSync(HANDOFF_DIR, { recursive: true });
-	const out = path.join(HANDOFF_DIR, `${t.id}.md`);
+	mkdirSync(LOG_DIR, { recursive: true });
+	const out = path.join(LOG_DIR, `${t.id}.md`);
 	writeFileSync(out, md);
 	console.log(md);
 	console.log(`\nWritten to ${out}`);
-	console.log(`Then: node scripts/task.mjs state ${t.id} in-review --note "round ${rec.round ?? 0} ready"`);
+}
+
+// ------------------------------------------------------------------- doctor
+
+// "Let us make sure that we have no zombies." Orphan worktrees, stray branches,
+// dev servers nobody stopped, state files for tasks that no longer exist.
+function cmdDoctor(doc, fix) {
+	const problems = [];
+	const note = (msg, cmd) => problems.push({ msg, cmd });
+
+	// 1. worktrees: this design uses none, so anything but the main checkout is a leftover
+	const wtList = gitTry(['worktree', 'list', '--porcelain']) ?? '';
+	const worktrees = wtList
+		.split('\n')
+		.filter((l) => l.startsWith('worktree '))
+		.map((l) => l.slice('worktree '.length).trim())
+		.filter((p) => path.resolve(p) !== path.resolve(REPO_ROOT));
+	for (const w of worktrees) {
+		note(`orphan git worktree: ${w}`, `git worktree remove --force "${w}"`);
+		if (fix) {
+			spawnSync('git', ['worktree', 'remove', '--force', w], { cwd: REPO_ROOT });
+			console.log(`  removed worktree ${w}`);
+		}
+	}
+	if (fix) spawnSync('git', ['worktree', 'prune'], { cwd: REPO_ROOT });
+
+	const wtRoot = path.resolve(REPO_ROOT, '..', 'geoclick-wt');
+	if (existsSync(wtRoot)) {
+		note(
+			`leftover worktree directory from the old parallel design: ${wtRoot}`,
+			`remove it once \`git worktree list\` shows only the main checkout`
+		);
+	}
+
+	// 2. stale agent branches from earlier runs
+	const allBranches = (gitTry(['for-each-ref', '--format=%(refname:short)', 'refs/heads']) ?? '')
+		.split('\n')
+		.filter(Boolean);
+	for (const b of allBranches.filter((b) => b.startsWith('worktree-agent-'))) {
+		note(`stale agent branch: ${b}`, `git branch -D ${b}`);
+		if (fix) {
+			spawnSync('git', ['branch', '-D', b], { cwd: REPO_ROOT });
+			console.log(`  deleted ${b}`);
+		}
+	}
+
+	// 3. task branches already merged but never cleaned up
+	const currentBranch = gitTry(['rev-parse', '--abbrev-ref', 'HEAD']);
+	const mergedBranches = (gitTry(['branch', '--merged', INTEGRATION_BRANCH]) ?? '')
+		.split('\n')
+		.map((l) => l.replace('*', '').trim())
+		// Never suggest deleting main, or the branch you are standing on.
+		.filter((b) => b && b !== INTEGRATION_BRANCH && b !== currentBranch);
+	const taskBranches = new Set(doc.tasks.map((t) => t.branch));
+	for (const b of mergedBranches.filter((b) => taskBranches.has(b))) {
+		note(`merged task branch not deleted: ${b}`, `git branch -d ${b}`);
+		if (fix) {
+			spawnSync('git', ['branch', '-d', b], { cwd: REPO_ROOT });
+			console.log(`  deleted merged ${b}`);
+		}
+	}
+
+	// 3b. old merged feature branches. Reported, never auto-deleted: some are
+	// history the product owner may still want (deploy/*, the parked SSO branch).
+	const otherMerged = mergedBranches.filter(
+		(b) => !taskBranches.has(b) && !b.startsWith('worktree-agent-')
+	);
+	if (otherMerged.length) {
+		note(
+			`${otherMerged.length} old branch(es) already merged into ${INTEGRATION_BRANCH}: ${otherMerged.join(', ')}`,
+			`git branch -d ${otherMerged.join(' ')}   (your call - these are history, not zombies of this programme)`
+		);
+	}
+
+	// 4. state/branch disagreement
+	for (const t of doc.tasks) {
+		const s = stateOf(t.id);
+		if (ACTIVE.has(s) && !branchExists(t.branch)) {
+			note(`${t.id} is "${s}" but ${t.branch} does not exist`, `node scripts/task.mjs state ${t.id} ready --note "branch lost"`);
+		}
+		if (DONE.has(s) && branchExists(t.branch)) {
+			note(`${t.id} is "${s}" but ${t.branch} still exists`, `node scripts/task.mjs finish ${t.id}`);
+		}
+	}
+
+	// 5. more than one task in flight
+	const active = doc.tasks.filter((t) => ACTIVE.has(stateOf(t.id)));
+	if (active.length > doc.concurrency) {
+		note(
+			`${active.length} tasks active (${active.map((t) => t.id).join(', ')}), concurrency is ${doc.concurrency}`,
+			'park all but one: node scripts/task.mjs state <id> ready --note "parked"'
+		);
+	}
+
+	// 6. junk in the state dir
+	if (existsSync(STATE_DIR)) {
+		const known = new Set(doc.tasks.map((t) => `${t.id}.json`));
+		for (const f of readdirSync(STATE_DIR)) {
+			if (f.endsWith('.tmp')) {
+				note(`interrupted state write: ${f}`, 'safe to delete');
+				if (fix) rmSync(path.join(STATE_DIR, f));
+			} else if (!known.has(f)) {
+				note(`state file for an unknown task: ${f}`, 'safe to delete');
+				if (fix) rmSync(path.join(STATE_DIR, f));
+			}
+		}
+	}
+
+	// 7. dev servers nobody stopped. Reported, never killed automatically -
+	// the product owner's own server may be one of them.
+	const strays = listeningPorts();
+	for (const { port, pid } of strays) {
+		note(
+			`something is listening on port ${port} (pid ${pid})` +
+				(port === 5173 ? ' - probably the product owner\'s own dev server, leave it' : ''),
+			port === 5173 ? 'leave it alone' : `taskkill /PID ${pid} /F   (check it is yours first)`
+		);
+	}
+
+	if (!problems.length) {
+		console.log('No zombies. Worktrees clean, branches clean, state consistent, no stray servers.');
+		return;
+	}
+	console.log(`${problems.length} thing(s) to look at:\n`);
+	for (const p of problems) {
+		console.log(`  - ${p.msg}`);
+		if (p.cmd) console.log(`      ${p.cmd}`);
+	}
+	if (!fix) console.log('\nRe-run with --fix to clean up worktrees, stale branches and state junk.');
+	else console.log('\n--fix does not kill processes; do that yourself after checking what they are.');
+}
+
+function listeningPorts() {
+	const out = [];
+	const res =
+		process.platform === 'win32'
+			? spawnSync('netstat', ['-ano'], { encoding: 'utf8' })
+			: spawnSync('lsof', ['-nP', '-iTCP', '-sTCP:LISTEN'], { encoding: 'utf8' });
+	if (res.status !== 0 || !res.stdout) return out;
+	for (const line of res.stdout.split('\n')) {
+		const m =
+			process.platform === 'win32'
+				? line.match(/\s\S*?:(\d+)\s+\S+\s+LISTENING\s+(\d+)/)
+				: line.match(/:(\d+)\s+\(LISTEN\)/);
+		if (!m) continue;
+		const port = Number(m[1]);
+		if (port < PORT_SWEEP[0] || port > PORT_SWEEP[1]) continue;
+		const pid = process.platform === 'win32' ? m[2] : (line.split(/\s+/)[1] ?? '?');
+		if (!out.some((o) => o.port === port)) out.push({ port, pid });
+	}
+	return out;
 }
 
 // ------------------------------------------------------------------- gates
@@ -618,9 +769,7 @@ function flag(rest, name) {
 
 const [, , cmd, ...rest] = process.argv;
 
-if (cmd === 'gates') {
-	cmdGates(rest.includes('--json')); // does not need tasks.yaml
-}
+if (cmd === 'gates') cmdGates(rest.includes('--json')); // needs no tasks.yaml
 
 const doc = cmd ? loadTasks() : null;
 
@@ -641,20 +790,19 @@ switch (cmd) {
 		cmdNext(doc);
 		break;
 	case 'state':
-		cmdState(doc, rest[0], rest[1], { note: flag(rest, '--note'), round: flag(rest, '--round') });
+		cmdState(doc, rest[0], rest[1], { note: flag(rest, '--note') });
 		break;
-	case 'lease':
-		cmdLease(doc, rest[0], {
-			agent: flag(rest, '--agent'),
-			renew: rest.includes('--renew'),
-			force: rest.includes('--force')
-		});
+	case 'start':
+		cmdStart(doc, rest[0], rest.includes('--force'));
 		break;
-	case 'release':
-		cmdRelease(doc, rest[0]);
+	case 'finish':
+		cmdFinish(doc, rest[0], rest.includes('--force'));
 		break;
-	case 'handoff':
-		cmdHandoff(doc, rest[0], !rest.includes('--no-gates'));
+	case 'log':
+		cmdLog(doc, rest[0], !rest.includes('--no-gates'));
+		break;
+	case 'doctor':
+		cmdDoctor(doc, rest.includes('--fix'));
 		break;
 	default:
 		console.log(

@@ -5,12 +5,14 @@ shells. Roadmap: [`REMEDIATION_PLAN.md`](REMEDIATION_PLAN.md).
 Execution: [`ORCHESTRATION.md`](ORCHESTRATION.md).
 The log itself: [`CHANGELOG.md`](../CHANGELOG.md).
 
-> **Second draft (2026-09-13).** The first draft built this whole document
-> around one constraint — a push to `main` costs a paid Netlify build — and
-> invented `release/*` branches to ration them. **That constraint is gone**
-> (CLAUDE.md, confirmed by the product owner 2026-09-13). Release *tracking* is
-> still wanted, so it stays; it is now local (git tag + `CHANGELOG.md`) instead
-> of GitHub Releases and milestones, and there are no release branches.
+> **Third draft (2026-09-13).** Draft 1 built this whole document around one
+> constraint — a push to `main` costs a paid Netlify build — and invented
+> `release/*` branches to ration them. **That constraint is gone** (CLAUDE.md,
+> confirmed by the product owner). Release *tracking* is still wanted, so it
+> stays, now local: an annotated git tag plus a `CHANGELOG.md` entry, no GitHub
+> Releases, no milestones, no release branches. Draft 3 changes only who does it
+> — one Opus agent in a loop rather than an orchestrator directing others — and
+> what each batch contains, since the nice-to-have tier came back in.
 
 ## The shape of it
 
@@ -19,7 +21,7 @@ The log itself: [`CHANGELOG.md`](../CHANGELOG.md).
 ```
 
 `main` is the integration branch. Task branches merge into it one at a time, as
-each is approved — see ORCHESTRATION.md's Integrator mode. A release is not a
+each is approved — see ORCHESTRATION.md's loop, steps 8-10. A release is not a
 separate branch or a separate merge; it is a **tag on a commit of `main` that is
 already there**, plus the `CHANGELOG.md` entry that explains it.
 
@@ -33,14 +35,13 @@ merge, but not left informal either." For this programme:
 Why a wave, rather than "every N tasks" or "whenever the product owner says so":
 
 - A wave boundary is already defined, in `tasks.yaml`, by the dependency DAG. It
-  needs no fresh judgement call and no negotiation — the orchestrator can see it
-  arrive. "Every N tasks" would cut the tree at an arbitrary point, possibly
+  needs no fresh judgement call and no negotiation — the loop can see it arrive. "Every N tasks" would cut the tree at an arbitrary point, possibly
   mid-dependency.
 - At a wave boundary the tree is **quiescent**: every branch of that wave is
   merged, and nothing of the next wave has started. That is exactly the state
   you want to tag and to smoke-test, because `main` is not half-way through a
   dependent pair.
-- It gives three releases over fifteen tasks. One tag per merge would be noise;
+- It gives three releases over nineteen tasks. One tag per merge would be noise;
   one tag at the end would lose the traceability the product owner asked for.
 
 Two adjustments, both because a wave is a DAG artefact and not automatically a
@@ -49,8 +50,8 @@ shippable unit:
 - **Wave 0 ships with wave 1.** Wave 0 is one task (GC-001, the lint-gate
   repair) that lands alone for conflict reasons, not release reasons. A tag of
   its own would describe a line-ending renormalization.
-- **Wave 3 ships with the closing milestone.** Wave 3 is also one task
-  (GC-022), and it is the last one; tagging it separately and then immediately
+- **Waves 3 and 4 ship together as the closing milestone.** Wave 4 is one task
+  (GC-033), and it is the last one; tagging it separately and then immediately
   tagging the milestone would mean two tags on adjacent commits.
 
 The product owner can ask for a tag at any other point, and that override needs
@@ -79,11 +80,18 @@ is the smallest number that satisfies all three: the minor bump says "this is a
 milestone, not another fix batch", and staying at `0.x` says "still pre-launch".
 
 Its `CHANGELOG.md` entry is titled **"Known issues from the 2026-09-13 review
-resolved"** and must list, explicitly, the findings that were *not* fixed — the
-nice-to-have tier dropped per the product owner's direction (see
-REMEDIATION_PLAN.md's "What was dropped"). A milestone that implies the review
-is fully discharged when eleven items were deliberately skipped would be a worse
-record than no milestone at all.
+resolved"** — and as of draft 3 that claim is literally true: all 30 punch-list
+items are assigned, including the nice-to-have tier the product owner restored.
+The entry must still be explicit about the two things it does *not* cover: the
+review's own meta-observation about converting prose invariants into assertions
+is only partly discharged (GC-030 and GC-021 do it; nothing forces it to
+continue), and `feature/supabase-sso-sync` remains parked. A milestone that
+implies more than it delivers is a worse record than no milestone.
+
+**This is the release the product owner ships**, so its checklist is the strict
+one: gates green on `main`, a local smoke test of the built app, `doctor` clean,
+version synced across all seven manifests, changelog written, tag pushed, and
+one prod-check of the live site afterwards.
 
 ### Keeping the version in sync across the shells
 
@@ -121,21 +129,25 @@ a release whose desktop/Android binaries were not rebuilt says so in its
 
 | Release | Batch | Tasks | Delivers |
 |---|---|---|---|
-| `v0.1.1` | waves 0 + 1 | GC-001, 002, 003, 010, 020, 030, 040, 050, 060, 070 | The lint/ESLint gate actually runs, and a pre-push hook keeps it running; the SRS scheduler stops silently retiring cards and lets ease recover; QuizView stops throwing on two real races; map-data invariants are enforced by a test; Android gets a migration path; `<html lang>` follows the UI language; asset fetches survive a base path; docs match the repo. |
-| `v0.1.2` | wave 2 | GC-021, 032, 041, 071 | The drop-correctness decision becomes a tested pure function; adjacent regions stop sharing a colour and the palette becomes legible again; progress can be cleared; the home page stops pulling 484 KB on every mount. |
-| `v0.2.0` | wave 3 + close | GC-022 | Popup text stops going through `setHTML`. **Milestone: the 2026-09-13 review is closed out** — with the deliberately-skipped items listed. |
+| `v0.1.1` | waves 0 + 1 | GC-001, 002, 003, 010, 020, 030, 040, 050, 060, 070, 080 | The lint/ESLint gate actually runs, and a pre-push hook keeps it running; component tests are possible at all again; the SRS scheduler stops silently retiring cards and lets ease recover; QuizView stops throwing on two real races and stops shipping a debug handle to users; map-data invariants are enforced by a test; Android gets a migration path; `<html lang>` follows the UI language; asset fetches survive a base path; docs match the repo; the pmtiles storage question gets a decided answer. |
+| `v0.1.2` | wave 2 | GC-021, 031, 041, 071 | The drop-correctness decision becomes a tested pure function (Essen/Duisburg included); the build scripts stop hardcoding one user's `$HOME` and flag Chukotka's inverted bbox; progress can be cleared and a full localStorage no longer breaks a session; the home page stops pulling 484 KB on every mount. |
+| `v0.2.0` | waves 3 + 4 + close | GC-004, 022, 032, 033 | Adjacent regions stop sharing a colour and the palette is legible again; tours on 100+ target maps become watchable; popup text stops going through `setHTML` and the popup CSS lives in one place; `data/scripts` is typechecked and linted. **Milestone: the 2026-09-13 review is closed out.** |
 
 ## Cutting a release
 
-Run by the **orchestrator in Release Manager mode**. Steps 1–5 and 7–8 are
-mechanical; step 6 is the human's.
+Run by the loop agent once a wave closes. Steps 1-5 and 7-8 are mechanical;
+step 6 is the product owner's, and it is the one that cannot be skipped.
 
 1. Confirm every task in the batch is `integrated`
-   (`node scripts/task.mjs status`). If any is `escalated` or `blocked`, either
-   resolve it or move it to the next batch — do not ship a half-wave silently,
-   and say in the entry that it moved.
+   (`node scripts/task.mjs status`) and that the ledger table in
+   REMEDIATION_PLAN.md agrees with it. If any task is `escalated` or `blocked`,
+   either resolve it or move it to the next batch — do not ship a half-wave
+   silently, and say in the entry that it moved.
+1b. `node scripts/task.mjs doctor` — clean. No stray branches, no orphan
+   worktrees, no dev server still running. A release is the wrong moment to
+   discover a zombie.
 2. `node scripts/sync-version.mjs 0.1.1` on `main`; commit.
-3. Run all four gates on `main` from a clean worktree.
+3. Run all four gates on `main` from a clean checkout.
 4. Serve `app/build` locally and smoke-test: home page loads; one polygon map's
    quiz, tour and overview; one towns map's quiz. This is the **"test locally"**
    half of CLAUDE.md's two-step rule, and it is labelled as such in the report.
@@ -181,15 +193,17 @@ still does, which is what step 4 above is for.
 ## Doc maintenance at release time
 
 Per CLAUDE.md, docs are updated as part of the work, not afterwards — each task
-already writes its own `DECISIONS.md` entry in its DoD. At release time the
-orchestrator only:
+already writes its own `DECISIONS.md` entry in its DoD. At release time the loop
+only:
 
 - checks off the batch's tasks in `ROADMAP.md` and updates its Status section,
 - confirms `ARCHITECTURE.md` still describes the code (GC-010, GC-021, GC-030,
   GC-032 and GC-040 all change things it documents),
 - confirms `ONBOARDING.md`'s gotchas are current (GC-001, GC-002, GC-003 and
   GC-040 all change what a new contributor needs to know),
-- writes the `CHANGELOG.md` entry.
+- writes the `CHANGELOG.md` entry,
+- confirms the progress ledger in `REMEDIATION_PLAN.md` matches what actually
+  merged, and fills in the release row (tag + date).
 
-If a task skipped its doc obligation, that is a review miss — report it, do not
-paper over it in the release commit.
+If a task skipped its doc obligation, say so rather than papering over it in the
+release commit — with no separate reviewer, an unreported gap is one nobody sees.

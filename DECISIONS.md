@@ -655,15 +655,40 @@ or amend an entry here as part of that change, not as an afterthought.
   in this project's history; `docs/RELEASES.md` was rewritten accordingly
   rather than deleted, since tags and release notes are still wanted (see
   the entry below).
-- **SUPERSEDED same day: four engines (haiku/sonnet/opus/fable) cut to two
-  (sonnet implements, opus reviews/merges/orchestrates).** The product
-  owner's call, made explicitly to push back on cost: "we still need an
-  orchestrator and subagents, but we need to scale it down." Implemented in
-  the plan's second draft (2026-09-13): `engine: sonnet` on all 15 tasks,
-  opus as orchestrator + cold-context reviewer only. Re-running a single
-  task on opus is available to the human *after* an escalation, not as a
-  scheduled cost — and `fable` was cut outright, not downgraded to "opus at
-  effort max".
+- **SUPERSEDED TWICE, same day — final: ONE engine (opus), ONE agent, no
+  multi-agent anything.** Draft 1 had four engines
+  (haiku/sonnet/opus/fable); draft 2 cut that to two (sonnet implements,
+  opus reviews/orchestrates) to push back on cost; draft 3 is the product
+  owner's final call: "for complex tasks let us Opus do them, or maybe let
+  us just Opus do the change alone, no two steps required, no multi agent,
+  just loop." So: `engine: opus` on all 19 tasks, and the same single agent
+  works them sequentially in a loop. What replaced the cold-context
+  reviewer, deliberately and with the loss acknowledged: the four scripted
+  gates are the mechanical review, and the product owner is the judgement
+  review at merge time. `/code-review` is available on a branch without
+  spawning anything, and is worth running on the two High-effort tasks
+  (GC-021, GC-032). The rule that survived intact is "two failed attempts
+  and stop" — a task with a written DoD that fails twice means the DoD is
+  wrong, not the work.
+- **The nice-to-have tier is back in, on an effort test.** Draft 2 dropped
+  review items #20-#30 entirely ("no nice to have things"); the product
+  owner then reversed it — "Ok the nice to have, do those, if they are low
+  effort." All eleven pass that test (every one was Low in draft 1's own
+  estimate, five are one-liners inside a file another task already opens),
+  so all 30 punch-list items are now assigned: 19 tasks instead of 15, with
+  GC-004/GC-031/GC-033/GC-080 restored as tasks and #20/#21/#23/#24/#26
+  folded into GC-003/GC-022/GC-020/GC-041. #24 is the one with a real
+  production footprint (`window.__map` currently ships to every user).
+- **No zombies, as an explicit requirement.** The product owner asked for
+  it directly, and the parallel design was what created them: worktrees,
+  one `node_modules` each, a dev server each, a branch each. Draft 3's
+  answer is mostly structural — one checkout, one branch at a time, one
+  fixed dev port (5174, leaving 5173 for the owner) — plus
+  `node scripts/task.mjs doctor [--fix]`, run every loop iteration and
+  before every release: it finds orphan worktrees, `worktree-agent-*` and
+  merged-but-undeleted branches, state/branch disagreement, interrupted
+  state writes, and stray listeners on 5173-5199. It reports processes and
+  never kills them — one of them is usually the owner's own dev server.
 - **No GitHub for the remediation programme; task state is one local file
   per task.** The product owner: "not using Github, but just using local
   harnesses." A `status:` field in `docs/tasks.yaml` was rejected because
@@ -671,36 +696,41 @@ or amend an entry here as part of that change, not as an afterthought.
   YAML file is a silent lost-update race — so state is
   `.orchestrator/state/GC-0NN.json`, one file per task (single writer by
   construction, temp-file + rename, transition table enforced by
-  `scripts/task.mjs`), anchored to the main checkout via
-  `git rev-parse --git-common-dir` so every worktree sees one board.
-  `tasks.yaml` is immutable spec; the review handoff is a branch name plus
-  `git diff main...<branch>`, not a draft PR. Consequence accepted: the
-  programme is single-machine, because local state cannot be shared without
-  a forge.
+  `scripts/task.mjs`). With draft 3's single agent the race it was designed
+  around cannot happen at all, so the state files are simply the loop's
+  memory across restarts — kept because a transition table that refuses an
+  illegal move is cheap insurance against a confused session. `tasks.yaml`
+  is immutable spec. **Because those files are gitignored, the trackable
+  record is a committed progress ledger** — the table in
+  `docs/REMEDIATION_PLAN.md`, ticked as part of each merge; the product
+  owner should never have to run a command to see where the programme
+  stands. The review handoff is a branch plus `git diff main...<branch>`
+  plus a worklog (`task.mjs log`), not a draft PR. Consequence accepted and
+  confirmed by the owner: the programme is single-machine.
 - **A release "batch" is a completed wave; the programme closes at
   `v0.2.0`.** Release tracking stays (git tag + `CHANGELOG.md` entry) but
   goes local. A wave boundary is the batching unit because it is already
   defined by the DAG, needs no fresh judgement, and is the point where the
   tree is quiescent — "every N tasks" would cut mid-dependency, and
   "whenever someone remembers" is how the project went eight iterations
-  without a tag. Waves 0+1 → `v0.1.1`, wave 2 → `v0.1.2`, wave 3 + close →
-  `v0.2.0`. `1.0.0` stays reserved for the real public launch (see the
+  without a tag. Waves 0+1 → `v0.1.1`, wave 2 → `v0.1.2`, waves 3+4 +
+  programme close → `v0.2.0` (the shape shifted in draft 3 when the restored
+  nice-to-haves added waves 3 and 4). `1.0.0` stays reserved for the real public launch (see the
   SSO-deferral entry), so the closing milestone is a MINOR bump under that
   ceiling: "known issues from the Sept 13 review resolved".
-- **The review's "nice-to-have / low value" tier (`#20`–`#30`) is out of
-  scope.** "Let us focus on the necessary things, no nice to have things."
-  Must-fix (`#1`–`#7`) and worth-doing (`#8`–`#19`) are in. Five whole tasks
-  went (GC-004, GC-031, GC-033, GC-080, plus GC-000 which was already
-  proven) and five sub-items were cut out of surviving tasks; no kept task
-  lost a dependency it needed. Recorded task-by-task in
-  `docs/REMEDIATION_PLAN.md` and in `tasks.yaml`'s `dropped:` list so they
-  are not silently re-derived as new work later.
-- **Still holds**: cold-context review (never a fork of the implementer —
-  a fork inherits the assumptions review exists to catch), two review
-  rounds then escalate to the human (two competent agents disagreeing twice
-  about a written DoD means the spec is wrong, not the implementation), and
-  the human as sole merge authority to `main`. All carried over unchanged
-  into the second draft — see
+- **REVERSED same day: the "nice-to-have / low value" tier (`#20`–`#30`) is
+  back in.** Draft 2 dropped it ("let us focus on the necessary things, no
+  nice to have things"); the owner then restored it conditionally — see the
+  effort-test entry above. GC-000 is the only thing still dropped. The
+  `dropped:` list in `tasks.yaml` and the restored-items table in
+  `docs/REMEDIATION_PLAN.md` are the record either way, so nothing gets
+  silently re-derived as new work later.
+- **Still holds**: the human as sole merge authority to `main`; two failed
+  attempts then stop and escalate rather than grinding a third (a written
+  DoD that fails twice means the spec is wrong, not the work); gates before
+  approval, always. What did NOT survive draft 3: cold-context review by a
+  separate agent, because there is no separate agent — the gates and the
+  product owner carry it instead. See
   [docs/ORCHESTRATION.md](docs/ORCHESTRATION.md).
 - **Root `package.json` is the single source of truth for the version.** The
   repo had drifted to three different versions across seven files (`0.0.1`

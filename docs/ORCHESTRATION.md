@@ -1,407 +1,349 @@
 # Geoclick — Orchestration
 
-How the 15 tasks in [`tasks.yaml`](tasks.yaml) actually get executed, on one
-machine, with no forge. Roadmap: [`REMEDIATION_PLAN.md`](REMEDIATION_PLAN.md).
-Release policy: [`RELEASES.md`](RELEASES.md).
+How the 19 tasks in [`tasks.yaml`](tasks.yaml) get executed: **one Opus agent,
+one task at a time, in a loop, in the main checkout.** Roadmap:
+[`REMEDIATION_PLAN.md`](REMEDIATION_PLAN.md). Release policy:
+[`RELEASES.md`](RELEASES.md).
 
-> **Second draft (2026-09-13).** The first draft ran on GitHub issues, labels
-> and milestones, with four engines and `release/*` branches. Per the product
-> owner's direction this is now **local harnesses only, two engines, straight to
-> `main`**. The parts that were never GitHub-shaped — the worktree/port/lease
-> protocol, cold-context review, no-fork-for-review, two-rounds-then-escalate,
-> the human as sole merge authority — carry over unchanged. Everything that
-> depended on the forge as shared state is replaced below.
+> **Third draft (2026-09-13).** Draft 1 was GitHub-driven, four engines,
+> release-branch buffered. Draft 2 cut that to a local harness with two engines
+> (sonnet implements, opus reviews). The product owner then cut it once more:
+> *"for complex tasks let us Opus do them, or maybe let us just Opus do the
+> change alone, no two steps required, no multi agent, just loop."* So there is
+> no implementer/reviewer split, no subagents, no worktrees, no leases, no
+> ports to allocate. One agent works the DAG in order and stops at each merge
+> for the product owner's OK. Everything that is gone was removed because it
+> was machinery, not because the discipline behind it was wrong — the gates,
+> the DoD-before-approval rule, and "stop after two failed attempts" all stay.
 
 ## Who runs this
 
-**The product owner (the human) starts one orchestrator session and leaves it
-running.** Everything else is spawned by that session. The human's recurring
-duties are: approving each merge to `main`, and adjudicating escalations.
-
 ```bash
-# 0. see what would be created — creates nothing
+# 0. see what would be created — writes nothing
 node scripts/task.mjs init --dry-run
 
-# 1. seed local task state (.orchestrator/state/GC-0NN.json, one per task)
+# 1. seed local task state (one JSON file per task, gitignored)
 node scripts/task.mjs init
 
-# 2. start the orchestrator
+# 2. confirm the machine is clean before starting
+node scripts/task.mjs doctor
+
+# 3. start the loop
 claude --model opus
-> Read docs/ORCHESTRATION.md and docs/tasks.yaml. You are the Orchestrator.
-> Start with GC-001; it must land alone. Then work wave 1.
-> Stop and ask me before every merge to main.
+> Read docs/ORCHESTRATION.md, docs/REMEDIATION_PLAN.md and docs/tasks.yaml.
+> You are running the remediation loop. Work one task at a time, starting with
+> `node scripts/task.mjs next`. Stop and ask me before every merge to main.
 ```
 
-There is no step that creates issues, labels, milestones or release branches.
-There is nothing to authenticate to.
+That is the whole setup. Nothing to authenticate to, no issues to create, no
+release branches, no second agent to brief.
 
-The orchestrator is **stateless across restarts by design**: all authoritative
-state lives in `.orchestrator/state/`, never in the session's head. Kill the
-session, start a new one with the same prompt, and `node scripts/task.mjs
-status` tells it exactly where the programme stands.
+### Run it as its own interactive session, not as a background agent
 
-## Roles
+**The loop is a session the product owner can see and type into.** Start it in
+its own terminal and talk to it directly — that is where "finish this task then
+stop", "yes, merge it" and Ctrl+C go.
 
-Four roles. Three are agents; the fourth is the human. No role exists for
-symmetry — each is here because something would otherwise go wrong.
+Do **not** run the loop as a background subagent of another session. It has to
+stop and ask for approval **19 times**, once per merge; that is its normal
+operating mode, not an exception. Relayed through a parent session, every one of
+those approvals becomes a round trip with the agent's progress invisible in
+between. An interactive session makes the thing it does most often — ask — the
+cheapest thing it does.
 
-| Role | Who | Engine | Why it exists |
-|---|---|---|---|
-| **Orchestrator** | long-lived Claude Code session | `opus` | Schedules, leases, spawns, integrates, cuts releases. Long-horizon agentic work over a 15-task DAG. Writes no product code. |
-| **Implementer** | one agent per task, in its own worktree | `sonnet` | Does the work. Every task in this programme is well-specified implementation with tests. |
-| **Reviewer** | one agent per review round, **cold context** | `opus` | Catches what the implementer cannot see. Must not be a fork of the implementer — a fork inherits the implementer's assumptions, which is exactly what review is for. |
-| **Merge authority** | the human | — | CLAUDE.md reserves `main` merges for the user's explicit OK. It is a testing/review gate, not a cost gate — build cost stopped being a constraint on 2026-09-13 — and it stands either way. |
+The corollary: a **different** session is the right place to change the plan.
+The loop treats `tasks.yaml` and these docs as read-only spec (hard rule 6), so
+re-scoping a task, re-batching a release or rewriting a DoD after an escalation
+happens in a separate session, in a commit, while the loop is stopped or parked.
+And to know where things stand, nobody needs to ask an agent at all: read the
+ledger in [REMEDIATION_PLAN.md](REMEDIATION_PLAN.md) or run
+`node scripts/task.mjs status`.
 
-There is **no fable role** and nothing substitutes for one. The first draft gave
-fable the orchestrator seat and one design task (GC-032); the orchestrator seat
-is opus now, and GC-032 implements on sonnet under opus review like every other
-task. See REMEDIATION_PLAN.md's engine rubric for the escalation valve.
+## The loop
 
-### Why there is no separate Integrator agent
-
-Integration here is two mechanical steps — rebase a task branch onto `main`, and
-merge it — plus one judgement call, "may this go to `main`", which CLAUDE.md
-already reserves for the human. A dedicated agent would add a handoff without
-adding a decision. **The orchestrator performs integration itself**, in an
-explicit Integrator mode described below. A merge conflict it cannot resolve
-mechanically is escalated, not guessed at.
-
-### Why there is no separate QA agent
-
-The gates are scripted (`node scripts/task.mjs gates`). The implementer runs
-them before requesting review; the reviewer re-runs them in a clean worktree. A
-third party running the same script adds latency and nothing else.
-
-## Task state, without a forge
-
-This is the biggest structural change from the first draft, so it gets the most
-detail.
-
-### The problem
-
-The first draft put task state on GitHub issue labels specifically to avoid a
-race: several agents running concurrently, all needing to read and update shared
-scheduling state. The obvious local replacement — a `status:` field per task in
-`tasks.yaml` — reintroduces exactly that race. Three agents doing
-read-modify-write on one YAML file will lose updates, and the failure is silent:
-a clobbered `status` looks like a task that simply never progressed.
-
-A lockfile would work but adds a thing that can be held by a dead process.
-
-### The answer: one file per task, single-writer by construction
+One iteration, start to finish. The agent repeats it until `next` says the
+programme is done.
 
 ```
-.orchestrator/                 (gitignored; lives in the MAIN checkout)
-  state/
-    GC-001.json                <- authoritative state for GC-001, and only GC-001
-    GC-010.json
-    ...
-  handoff/
-    GC-010.md                  <- the review packet (see "The review loop")
+   ┌─► 1. next            node scripts/task.mjs next
+   │   2. read the spec   node scripts/task.mjs show GC-0NN
+   │   3. start           node scripts/task.mjs start GC-0NN     (branch + in-progress)
+   │   4. do the work     smallest commits that still make sense
+   │   5. gates           node scripts/task.mjs gates            (all four, green)
+   │   6. self-check      re-read the DoD line by line; verify by hand what the
+   │                      DoD says to verify by hand
+   │   7. worklog         node scripts/task.mjs log GC-0NN
+   │   8. push + ask      git push -u origin <branch>
+   │                      node scripts/task.mjs state GC-0NN awaiting-approval
+   │                      → ASK THE PRODUCT OWNER. WAIT.
+   │   9. merge on OK     git checkout main && git merge --no-ff <branch> && git push
+   │  10. finish          node scripts/task.mjs finish GC-0NN    (cleanup + integrated)
+   │  11. tick the ledger the progress table in REMEDIATION_PLAN.md
+   │  12. doctor          node scripts/task.mjs doctor           (no zombies)
+   └───  13. batch done?  if the wave just closed → cut the release (RELEASES.md)
 ```
 
-**No two agents ever write the same path.** The task id is in the filename, and
-an agent only ever owns one task, so the concurrent-write race does not need to
-be solved — it does not exist. Writes go through `scripts/task.mjs`, which
-writes a sibling temp file and renames it over the target (atomic on NTFS), so
-even a crash mid-write cannot leave a half-parsed state file.
+Steps 8 and 9 are the only places the loop blocks on a human, and it must.
+Everything else the agent does on its own.
 
-`tasks.yaml` becomes **immutable spec**. It holds what a task *is*; the state
-directory holds where that task *is up to*. They are never both edited by the
-same actor for the same reason, which is the whole point of splitting them. The
-only time `tasks.yaml` changes during the programme is when the human rewrites
-an underspecified task after an escalation — a deliberate, single-writer,
-human-initiated edit.
+### Why there is no reviewer
 
-A state file looks like this:
+There were two arguments for a separate cold-context reviewer: a fresh pair of
+eyes catches what the author cannot see, and the author is a poor judge of its
+own DoD. Both are real. Neither survives the product owner's decision to run one
+Opus agent, and the replacement is not "nothing":
 
-```json
-{
-  "task": "GC-010",
-  "state": "in-review",
-  "round": 1,
-  "agent": "impl-gc-010",
-  "host": "DIEGO-PC",
-  "branch": "fix/gc-010-srs-scheduler",
-  "worktree": "C:/Users/diego/projects/geoclick-wt/GC-010",
-  "port": 5177,
-  "leasedAt": "2026-09-13T10:04:11.201Z",
-  "ttlMinutes": 90,
-  "updatedAt": "2026-09-13T11:22:40.880Z",
-  "history": [
-    { "at": "2026-09-13T10:04:11.201Z", "state": "leased", "note": "worktree created" },
-    { "at": "2026-09-13T11:22:40.880Z", "state": "in-review", "note": "gates green, round 1" }
-  ]
-}
-```
+- **The gates are the mechanical reviewer.** Four commands, scripted, run before
+  every approval request. They catch what a second agent would mostly have
+  caught: type errors, broken tests, formatting, a build that does not build.
+- **The product owner is the judgement reviewer**, at step 8, with the branch,
+  the diff and the worklog in front of them. That gate already existed; it now
+  carries the whole weight rather than sharing it.
+- **`/code-review` is available without spawning anything.** It is an existing
+  skill, not a subagent in this design's sense. For a High-effort task (GC-021,
+  GC-032) running it on the branch before step 8 is cheap and sensible.
 
-`history` is append-only and is what a restarted orchestrator reads to
-understand *how* a task got where it is — it replaces the issue comment thread.
+What is genuinely lost: an independent agent that never saw the author's
+reasoning. Accept it knowingly — the honest mitigation is that every task has a
+written DoD, and the product owner reads the diff.
 
-### It must live in the main checkout, not the worktree
+### Attempts, and when to stop
 
-Implementers run inside `../geoclick-wt/GC-0NN/`, which has its own copy of
-`scripts/`. If state were resolved relative to the script, each worktree would
-get its own private `.orchestrator/` and the orchestrator would see nothing.
-`scripts/task.mjs` therefore resolves the **main checkout** via
-`git rev-parse --git-common-dir` (a worktree's `.git` file points back at the
-main repo's git dir) and anchors `.orchestrator/` there. One state directory,
-visible from every worktree. This is a real trap and the reason it is written
-down.
+Draft 2's "two review rounds then escalate" becomes **two attempts then stop**:
 
-### Commands
+- If the product owner asks for changes, the task goes back to `in-progress`
+  (`changes-requested` bumps the attempt count).
+- If they ask for changes a **second** time on the same task, do not start a
+  third round. Set `escalated`, say plainly what you tried and where you and the
+  spec disagree, and move to the next task.
+
+The reasoning is unchanged: a task with a written DoD that fails twice is
+evidence the **DoD is wrong**, not that the work is. The product owner
+adjudicates by editing the task in `tasks.yaml` and setting it back to `ready`.
+
+## Stopping and resuming
+
+**There is no harness process to stop.** `scripts/task.mjs` runs one command and
+exits; the only long-lived thing is the Claude Code session running the loop, and
+possibly a dev server it started. So stopping is always about the session plus
+the one task in flight.
+
+### Stopping cleanly (preferred)
+
+Between iterations — after a `finish`, before the next `start` — the programme
+is already at rest. Nothing is in flight, the tree is on `main`, the ledger is
+current. Just stop the session. To pick a natural stopping point, tell the loop
+*"finish the current task, then stop"* rather than interrupting it.
+
+### Stopping mid-task
+
+Say so, or interrupt with Ctrl+C. Then park the task so the board does not claim
+work is happening that is not:
 
 ```bash
-node scripts/task.mjs init [--dry-run]     # seed state for every task in tasks.yaml
-node scripts/task.mjs status [--json]      # the board: every task, its state, its lease
-node scripts/task.mjs next                 # tasks whose deps are integrated and which are unleased
-node scripts/task.mjs state GC-010 in-review --note "gates green"
-node scripts/task.mjs lease GC-010 --agent impl-gc-010
-node scripts/task.mjs release GC-010       # tear the worktree down
-node scripts/task.mjs handoff GC-010       # print/write the review packet
-node scripts/task.mjs gates [--json]       # the four quality gates
+node scripts/task.mjs state GC-0NN ready --note "parked <date>: <why>"
+node scripts/task.mjs doctor              # is a dev server still up? a branch half-done?
 ```
 
-`init` is idempotent and never overwrites an existing state file — re-running it
-after adding a task to `tasks.yaml` seeds only the new one. It replaces
-`scripts/seed-forge.mjs`, which is deleted.
+Before walking away, deal with the work in progress — it lives on the task
+branch, so nothing is lost either way:
 
-### The state machine
-
-```
-  backlog ──► ready ──► leased ──► in-progress ──► in-review ──┬──► approved ──► integrated ──► released
-     ▲                    │             ▲                       │
-     │                    │             └── changes-requested ◄─┘
-     │                    │                      │
-     └──── blocked ◄──────┘                      └─(2nd round)─► escalated ──► (human) ──► ready | in-progress
+```bash
+git status                                # what is uncommitted
+git commit -am "WIP: GC-0NN <what is done so far>"   # keep it on the branch
+git push -u origin <branch>               # optional, survives the machine
 ```
 
-| State | Set by | Means |
+Leave the branch in place. The next `start GC-0NN` checks it out again rather
+than creating it, so a parked task resumes exactly where it stopped. What you
+must **not** leave behind is an uncommitted working tree plus a `ready` state:
+the next `start` refuses a dirty tree (deliberately), and you will not remember
+which task those edits belonged to.
+
+If the dev server is still running, stop it. That is the one true zombie an
+abrupt stop creates, and `doctor` will report the port and PID.
+
+### The one task where stopping mid-way is genuinely awkward
+
+**GC-001.** It renormalizes line endings across every text file in the tree, so
+a half-applied state looks like "everything is modified" and is hard to read. If
+you have to stop during GC-001, prefer `git stash` or a full reset back to
+`main` and redo it — it is a mechanical task that takes minutes, and redoing it
+is cheaper than untangling a partial renormalization.
+
+### Resuming
+
+```bash
+node scripts/task.mjs doctor     # clean up whatever the stop left behind
+node scripts/task.mjs status     # where the programme actually stands
+node scripts/task.mjs next       # what to do now (or `start GC-0NN` to resume a parked one)
+```
+
+Then start a fresh session with the same prompt as the first one. The loop is
+stateless across restarts by design: everything it needs is in `tasks.yaml`, the
+state files, the ledger, and git itself. A new session does not need to be told
+what happened — `status` tells it.
+
+### Stopping the programme for good, or changing direction
+
+The state files are disposable: `rm -rf .orchestrator` and the live board is
+gone, while every merged task stays merged and every tag stays pushed. `init`
+re-seeds from scratch. What you should keep current in that case is the
+**ledger** in REMEDIATION_PLAN.md, since that is the record of what actually
+shipped — and if the programme stops part-way, say so in that table rather than
+leaving rows reading `todo` forever.
+
+## Task state
+
+Two places, on purpose.
+
+| | `docs/tasks.yaml` + the ledger in `REMEDIATION_PLAN.md` | `.orchestrator/state/GC-0NN.json` |
 |---|---|---|
-| `backlog` | `task.mjs init` | Exists, dependencies unmet. |
-| `ready` | orchestrator | All deps `integrated` into `main`; may be leased. |
-| `leased` | orchestrator | Worktree + branch + port allocated; agent starting. |
-| `in-progress` | implementer | Working. |
-| `in-review` | implementer | Branch pushed, gates pass, handoff packet written. |
-| `changes-requested` | reviewer | Specific `file:line` changes asked for. `round` increments. |
-| `approved` | reviewer | Ready to integrate. |
-| `integrated` | orchestrator | Merged into `main` **after the human's OK**. |
-| `released` | orchestrator | Included in a pushed tag (see RELEASES.md). |
-| `blocked` | anyone | Cannot proceed; reason in the `note`. |
-| `escalated` | orchestrator | Implementer and reviewer disagreed twice. Human owns it. |
+| Holds | the plan, and the progress the **product owner** reads | the live state the **loop** reads |
+| Written by | humans, and the agent ticking a box at merge time | `scripts/task.mjs` only |
+| Committed | yes | no (gitignored) |
+| Lifetime | forever | one programme run |
 
-`task.mjs state` refuses a transition the machine above does not allow, so a
-confused agent gets an error rather than a plausible-looking wrong board.
+With one agent there is no concurrent-write race to design around, so the state
+files are simply the loop's memory across restarts. They are still one file per
+task, written temp-file-then-rename, with a transition table that refuses an
+illegal move — cheap insurance against a confused session recording a state that
+never happened.
 
-## Exclusive machine access
+**The committed ledger is what makes the programme trackable.** State files are
+gitignored and machine-local; the product owner should never have to run a
+command to know where things stand. Step 11 of the loop is not optional.
 
-Parallel agents cannot share one working tree. Every leased task gets its own
-git worktree, its own branch, and its own dev-server port. None of this changed
-— it was never GitHub-shaped.
+If `.orchestrator/` is lost, nothing real is lost: `init` re-seeds it, and git is
+the ground truth for what actually happened (which branches exist, what is
+merged into `main`, which tags are pushed).
 
-### Worktree layout
-
-Worktrees live **outside the repo** so they can never be committed into it:
+### States
 
 ```
-C:/Users/diego/projects/Geoclick2027          <- the main checkout; orchestrator only
-C:/Users/diego/projects/geoclick-wt/GC-010/   <- implementer worktree
-C:/Users/diego/projects/geoclick-wt/GC-020/
-C:/Users/diego/projects/geoclick-wt/GC-030/
+  backlog ──► ready ──► in-progress ──► awaiting-approval ──► integrated ──► released
+     ▲                     ▲                    │
+     │                     └── changes-requested ┘
+     │                              │
+     └──── blocked                  └─(2nd time)─► escalated ──► (owner) ──► ready
 ```
 
-`node scripts/task.mjs lease GC-010` creates the worktree, branches from `main`
-using the branch name in `tasks.yaml`, allocates the port, and writes the lease
-into that task's state file. `node scripts/task.mjs release GC-010` tears the
-worktree down.
+| State | Means |
+|---|---|
+| `backlog` | Exists; dependencies not merged yet. |
+| `ready` | Dependencies are in `main`; startable. |
+| `in-progress` | The loop is working it, on its branch. |
+| `awaiting-approval` | Gates green, DoD met, branch pushed. **The product owner's turn.** |
+| `changes-requested` | The owner asked for changes. Attempt count goes up. |
+| `integrated` | Merged into `main` with the owner's OK. |
+| `released` | Included in a pushed tag (RELEASES.md). |
+| `blocked` | Cannot proceed; reason in the note. |
+| `escalated` | Two failed attempts, or a spec problem. The owner owns it. |
 
-Claude Code's Agent tool also accepts `isolation: "worktree"`, which does the
-same thing automatically. **Use the script, not the flag**, for task work: the
-script pins the branch name from `tasks.yaml` (so the branch matches the plan),
-allocates the port, and records the lease. The flag gives you a random
-`worktree-agent-*` branch — this repo already has three such orphans from
-earlier runs, which GC-002 deletes.
+`node scripts/task.mjs state <id> <state> --note "..."` is the only way to move
+between them.
 
-### Ports
+## Working in the main checkout
 
-Deterministic from the task's ordinal in `tasks.yaml`, so two agents never
-collide and the assignment survives a restart:
+Draft 2 gave every task its own git worktree, its own branch and its own port,
+because three agents cannot share one working tree. One agent can. So:
 
+- **One branch at a time**, named in `tasks.yaml`, created off `main` by
+  `task.mjs start`, deleted by `task.mjs finish` after the merge.
+- **`start` refuses a dirty tree.** Commit, stash or clean first. This is what
+  stops one task's leftovers from riding along in the next task's diff.
+- **`start` refuses if another task is still open**, and refuses if a dependency
+  is not yet merged. Both are `--force`-able, and both should make you stop and
+  think rather than reach for the flag.
+- **One dev-server port: 5174.** Fixed, not allocated. Port 5173 stays free for
+  the product owner's own server, so the two never collide.
+- **No worktrees.** `git worktree` is not part of this design; `doctor` treats
+  any worktree other than the main checkout as a leftover to remove. The
+  2026-09-12/13 worktree investigation (ROADMAP.md's process notes) is settled
+  history now, not something this programme depends on either way.
+
+`node_modules` needs no special handling any more — one checkout, one install.
+That entire class of problem disappeared with the worktrees.
+
+## No zombies
+
+The product owner asked for this explicitly, and the old design was the thing
+that created them: nine worktrees, nine `node_modules`, nine dev servers, and a
+branch per task. Draft 3's answer is mostly structural — there is only ever one
+branch, one checkout and one server — plus a sweeper for what still slips
+through.
+
+```bash
+node scripts/task.mjs doctor         # report
+node scripts/task.mjs doctor --fix   # clean up the safe ones
 ```
-port = 5173 + ordinal      # GC-001 -> 5174, GC-002 -> 5175, ...
-```
 
-Reserved range 5174–5199. `task.mjs lease` prints the port and records it in the
-state file; the implementer runs
-`npm run dev --workspace=app -- --port <port>`. Port 5173 stays free for the
-human.
+`doctor` checks, and `--fix` repairs where it is safe to do so:
 
-### Build artefacts and `node_modules`
-
-`app/build`, `.svelte-kit` and `desktop/src-tauri/target` are gitignored and
-live inside each worktree, so they isolate naturally. `node_modules` does not:
-worktrees do not share it. **Each worktree runs its own `npm install` before
-anything else.**
-
-> This is the thing that broke on 2026-09-12 — and it is **solved**. A worktree
-> with no `node_modules` of its own cannot render a map, because npm workspaces
-> hoists the install to the main checkout and Vite's `fs.allow` then blocks the
-> maplibre-gl worker. Running `npm install` inside the worktree fixes it:
-> verified 2026-09-13 by starting a worktree dev server and comparing its
-> network requests against the main checkout side by side — identical
-> `206 Partial Content` tile responses through the worker. See `ROADMAP.md`'s
-> "Process notes". **Do not re-verify this and do not budget a task for it.**
-> Just never skip the install.
-
-Do not junction or symlink a shared `node_modules` on Windows — npm workspaces
-plus junctions is a known source of phantom resolution failures, and this repo
-already has enough Windows-specific pain.
-
-That install cost is the real limit on parallelism. **Concurrency cap: 3**
-(`meta.concurrency_max` in `tasks.yaml`). Raise it only if disk and CPU allow.
-
-### Lease protocol
-
-A lease is a field group inside the task's own state file — the same
-single-writer file described above, so there is no separate lease store to keep
-consistent:
-
-1. Orchestrator runs `task.mjs lease GC-010 --agent impl-gc-010`, which creates
-   the worktree, allocates the port, sets `state: "leased"`, and stamps
-   `leasedAt` + `ttlMinutes`.
-2. The implementer sets `state: "in-progress"` when it starts.
-3. TTL 90 minutes. On expiry the orchestrator reclaims: `task.mjs release
-   GC-010`, set the state back to `ready` with a `note` saying why.
-4. A long High-effort task **renews** by re-stamping the lease
-   (`task.mjs lease GC-010 --renew`) before the TTL elapses. An expired lease is
-   not a failure, but an unnoticed one costs a worktree.
-
-## The review loop
-
-### Handoff — what replaces the draft PR
-
-**A branch name and a diff. That is all a review needs, and no new machinery is
-invented for it.** Concretely, the implementer:
-
-1. pushes its branch (`git push -u origin <branch>`),
-2. runs `node scripts/task.mjs handoff GC-010`, which writes
-   `.orchestrator/handoff/GC-010.md` containing: the task id and title, the
-   branch, its base, `git diff --stat main...<branch>`, the commit list, the DoD
-   from `tasks.yaml` as a checklist, and the JSON output of the gate run,
-3. sets `state: "in-review"`.
-
-The orchestrator then spawns a Reviewer with a **cold context** — a fresh agent,
-never `subagent_type: "fork"`. It is handed exactly:
-
-- the task's full `description` + `dod` from `tasks.yaml`,
-- the branch name, and the instruction to read `git diff main...<branch>` itself
-  (the packet's `--stat` is an index, not a substitute),
-- the specific `review_refs` findings the task closes,
-- nothing about how the implementer reasoned.
-
-The handoff file is a convenience for the human and a restart-survivable record.
-The branch is the artefact under review.
-
-### Verdicts
-
-| Verdict | Meaning | Next |
+| Zombie | Detected | `--fix` |
 |---|---|---|
-| `approve` | Every DoD item is met; gates pass on a clean checkout. | Orchestrator asks the human to merge. |
-| `changes-requested` | Specific, actionable `file:line` asks. | Back to the implementer. |
-| `reject-scope` | The branch does something the task did not ask for, or omits something it did. | Straight to the human — this is a spec problem. |
+| A git worktree other than the main checkout | `git worktree list` | removes it, then prunes |
+| The old `../geoclick-wt/` directory | filesystem | reported (delete by hand) |
+| `worktree-agent-*` branches from earlier runs | `for-each-ref` | deletes them |
+| A task branch already merged but never deleted | `branch --merged main` | deletes it |
+| Other long-merged branches (`feature/*`) | `branch --merged main` | reported only — some are history the owner wants |
+| A task marked active whose branch does not exist | state vs git | reported with the fix command |
+| A task marked integrated whose branch still exists | state vs git | reported (`finish` it) |
+| More than one task in flight | state files | reported — park all but one |
+| Interrupted state writes (`*.json.tmp`) | state dir | deletes them |
+| State files for tasks that no longer exist | state dir | deletes them |
+| Something listening on 5173–5199 | `netstat` / `lsof` | **reported only, with the PID** |
 
-The reviewer records its verdict with `task.mjs state <id> approved|changes-requested`
-and a `--note`, and **re-runs the gates itself in a clean worktree** rather than
-trusting the pasted output. Detailed `file:line` asks go into
-`.orchestrator/handoff/GC-0NN-round<N>-review.md` — a plain file, because there
-is no PR to comment on.
+**`doctor` never kills a process.** Port 5173 is very likely the product owner's
+own dev server, and a harness that kills windows out from under its user is
+worse than a stray node process. It prints the PID and the command; the decision
+is a human's.
 
-### On `changes-requested`
+Run `doctor` at step 12 of every loop iteration, and before cutting a release.
+"No zombies" is a per-iteration habit, not an end-of-programme cleanup.
 
-**Resume the original implementer** via `SendMessage` with its agent id. It
-still holds the context; a fresh agent would re-derive the whole task and is
-both slower and likelier to undo something deliberate.
+The loop's own hygiene rules, which are what actually prevent most of it:
 
-### Escalation
+1. **Stop the dev server before finishing a task.** Never leave one running
+   across iterations; the next task starts on a different branch and a stale
+   server serves a stale build.
+2. **Never background a long-running command and walk away from it.** If you
+   start something, you own stopping it.
+3. **Delete the branch at `finish`**, local and remote. A pile of merged
+   branches is how this repo got eleven of them.
+4. **One task's work, one task's branch.** Spotting something unrelated means
+   writing it in the worklog, not fixing it here.
 
-**Two rounds, then stop.** If the reviewer requests changes a second time on the
-same task, the orchestrator:
+## One machine
 
-1. sets `state: "escalated"`,
-2. writes one summary into the task's state `note` and the handoff directory:
-   what the implementer did, what the reviewer asked for twice, and where they
-   disagree,
-3. drops the task and moves on to the next ready one.
+Local state means single-machine, by construction, and the product owner has
+confirmed that is fine. There is no lease to transfer, no forge to share, and
+nothing in `tasks.yaml` requires a capability beyond node + npm — GC-032 is
+explicitly scoped to avoid retiling so that stays true (retiling would need the
+WSL2 toolchain).
 
-Rationale: two competent agents disagreeing twice about a task whose DoD is
-written down is evidence the **DoD is wrong**, not that the implementer is.
-Iterating a third time burns tokens re-litigating an underspecified spec. The
-human adjudicates by editing the task in `tasks.yaml` and setting the state back
-to `ready` or `in-progress` — and this is the one place where re-running that
-single task on `opus` instead of `sonnet` is a legitimate, human-authorised
-choice.
+If a second machine is ever wanted, the honest answers are a shared checkout or
+a forge. Do not invent a sync protocol for a 19-task programme on one laptop.
 
-`reject-scope` skips straight to escalation — no second round.
+## Hard rules
 
-## Integrator mode
-
-The orchestrator runs this after each `approve`:
-
-1. `git fetch`, rebase the task branch onto `main`.
-2. If the rebase conflicts: **do not resolve it by guessing.** Set `blocked`
-   with the conflicting paths in the note, and check whether the conflict
-   reveals a missing edge in the DAG — if so, add it to `tasks.yaml` and say so.
-3. Re-run gates on the rebased branch.
-4. **Ask the human.** Show the task id, the diffstat, the gate summary, and what
-   the reviewer said. Wait for an explicit OK. This is CLAUDE.md's rule and it
-   does not bend.
-5. On OK: `git merge --no-ff <branch>` into `main`, push, delete the branch.
-   Set `state: "integrated"`.
-6. `task.mjs release <id>` to drop the worktree.
-7. Re-evaluate the DAG: any task whose deps are now all `integrated` moves
-   `backlog → ready`.
-
-Step 4 happens 15 times over the programme. If the product owner would rather
-grant a standing OK for a whole wave at once, that is their call to make
-explicitly — the orchestrator must never assume it.
-
-**`main` is the integration branch.** There are no `release/*` branches in this
-draft; the first draft only had them to ration paid Netlify builds, and that
-constraint is gone (CLAUDE.md, 2026-09-13). What is *not* gone is the approval
-gate in step 4 — those were two separate rules that happened to share a
-justification, and only one of them was retired.
-
-## One machine, by design
-
-The first draft's multi-machine story ran entirely on GitHub: leases, states and
-verdicts were forge objects, so a second box needed only `gh auth login`. With
-state in a local directory, **this programme is single-machine**. That is a
-deliberate consequence of "local harnesses only", not an oversight.
-
-If a second machine is ever wanted, the honest options are a shared filesystem
-for `.orchestrator/`, or going back to a forge. Do not invent a sync protocol
-for a 15-task programme that runs on one laptop.
-
-The `needs:` (machine-capability) field is gone from `tasks.yaml` for the same
-reason: every task in this programme runs on plain node + npm. The one candidate
-for a WSL2 requirement was regenerating all 44 tilesets, and GC-032 is
-explicitly scoped to avoid retiling.
-
-## Hard rules for every agent
-
-1. **Never merge to `main` without the human's explicit OK.** Not the
-   orchestrator, not an implementer, not a reviewer. `main` is the integration
-   branch, and it is still gated.
+1. **Never merge to `main` without the product owner's explicit OK.** `main` is
+   the integration branch, and the gate in front of it is a person. Ask, show
+   the diff and the worklog, and wait.
 2. **Never trigger a Netlify deploy** — not via the MCP `deploy-site` tool, not
-   manually, not "just to check". Push, and let the git-triggered build happen.
-3. **Never push to a branch you do not own.** One branch, one task, one agent.
-4. **Never write another task's state file.** One writer per file is the entire
-   concurrency design.
-5. Every commit ends with the attribution trailer in `tasks.yaml`'s
+   manually, not "just to check". Push and let the git-triggered build run.
+   Prod-check the live site once, after the push, and do not monitor deploys.
+3. **Gates before approval. Always.** No "it's a docs-only change".
+4. **One task at a time.** If `start` refuses because something is open, finish
+   or park it — do not `--force` past it.
+5. **Never hand-edit `.orchestrator/`.** Go through `scripts/task.mjs` so the
+   transition table and the history apply. Reading it is fine.
+6. **Never edit `docs/tasks.yaml`** during a run. It is the spec; only the
+   product owner changes it, in a commit, after an escalation.
+7. Every commit ends with the attribution trailer in `tasks.yaml`'s
    `meta.attribution_trailer`.
-6. Gates before review. Always. No "it's a docs-only change".
-7. Stay in scope. Spotting an unrelated problem means reporting it, not fixing
-   it. `reject-scope` exists to enforce this.
-8. If a task's description turns out to be wrong, **stop and say so** rather
+8. **Stay in scope.** An unrelated problem goes in the worklog, not in the diff.
+9. If a task's description turns out to be wrong, **stop and say so** rather
    than improvising a different task.
-9. **Run `npm install` in your worktree first.** Every time. See above.
+10. **Leave no zombies.** Server stopped, branch deleted, `doctor` clean, before
+    you call a task done.
