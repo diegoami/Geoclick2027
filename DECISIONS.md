@@ -1024,9 +1024,14 @@ answers:
 - **Installers are built manually**, on the local machine with a
   checklist and script. No CI for now.
 - **Claude drafts 2-3 logo candidates**, and the product owner picks one.
-- **Text size: names only, two sizes.** Only map labels and quiz slips
-  get the setting, Normal or Large. A whole-app font scale was
-  explicitly not wanted.
+- **Text size: names on the map, magnified on demand.** Revised at FT-02's
+  review. The first answer was a Normal/Large switch for map labels and
+  quiz slips. Once labels moved to 13px `rem` and grew to 20px on hover,
+  the product owner found hover-to-magnify better than the base size alone
+  ("still not satisfying"). They replaced the switch with the same
+  magnify-on-tap for touch screens (FT-03). One behaviour on every
+  device, no new setting. A whole-app font scale was explicitly not
+  wanted.
 - **The tutorial is sandboxed.** It runs a real quiz, but its progress is
   in memory only and never becomes real review data. It is started by a
   button plus a dismissible first-visit nudge, and never auto-starts. It

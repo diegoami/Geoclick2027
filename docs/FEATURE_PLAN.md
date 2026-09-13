@@ -22,7 +22,7 @@ DECISIONS.md's "Feature programme decisions" entry, so no task has to guess.
 | 1 | Where do public desktop/Android downloads live, given the source repo is private? | **A separate public "releases-only" GitHub repo.** Installers are attached to its Releases, so anyone can download without logging in, the source stays private, and nothing is committed to git. The main repo stays private; going public stays tied to the 1.0 launch. |
 | 2 | How are the installers built? | **Manually on the local machine, following a checklist.** No CI for now. |
 | 3 | Who designs the logo? | **Claude drafts 2-3 candidates** and the product owner picks or redirects. Generating the platform icon sets from the chosen one is a normal task. |
-| 4 | Text size: what scales, and how many sizes? | **Names only: map labels and quiz slips. Two sizes, Normal and Large.** |
+| 4 | Text size: what scales, and how many sizes? | **Names on the map: magnify on demand.** Hover on desktop (FT-02), tap on touch screens (FT-03), with no persistent size setting. *Revised at FT-02's review; the original answer was a Normal/Large switch for map labels and quiz slips.* |
 | 5 | Does the tutorial save real progress? | **No, it's sandboxed.** A real quiz runs, but progress lives in memory for the tutorial only, so real review data is never written. |
 | 6 | How does the tutorial start? | **From a Tutorial button, plus a dismissible first-visit nudge** on the home page. It never starts by itself. |
 | 7 | Which map does the tutorial use? | **Always Italy — Regions.** |
@@ -76,7 +76,7 @@ version. `1.0.0` stays reserved for the public launch.
 
 | Release | Tasks | Theme |
 |---|---|---|
-| `v0.3.0` | FT-01 to FT-08 | **Readable and installable.** Map names scale, the apps get a real logo, and anyone can download the Windows and Android installers. |
+| `v0.3.0` | FT-01 to FT-08 | **Readable and installable.** Map names magnify on hover or tap, the apps get a real logo, and anyone can download the Windows and Android installers. |
 | `v0.4.0` | FT-09 to FT-12 | **Tutorial.** An interactive walkthrough in English, German and Italian. |
 
 ---
@@ -114,7 +114,7 @@ Effort: **Low** is under an hour or so, **Medium** is a focused session,
   the map. This is CSS only, in `app.css`: `font-size` rather than
   `transform`, so the text stays crisp and pinned to its point.
   `prefers-reduced-motion` turns the transition off. Touch screens have
-  no hover; that is FT-03's question.
+  no hover; FT-03 adds tap-to-magnify for them.
 - **Verify:** check overview crowding on `italy-provinces` (110 labels),
   `germany-states` (long German names) and a towns map. Also check that
   a larger root font size (the browser's font-size setting) now enlarges
@@ -126,44 +126,43 @@ Effort: **Low** is under an hour or so, **Medium** is a focused session,
   - DECISIONS.md's "Map colors" / popup notes updated if they quote 11px;
   - gates green.
 
-### FT-03 — Text-size control: Normal / Large · Medium · deps: FT-02
+### FT-03 — Tap to magnify a label on touch screens · Low–Medium · deps: FT-02
 
-- **Why:** FEATURE_BACKLOG.md §4, fix 2 (decision 4: names only, two
-  sizes).
+- **Why:** FT-02's hover-to-magnify doesn't exist on touch screens (the
+  Android app, tablets, phones). The product owner chose this over the
+  planned Normal/Large switch at FT-02's review (decision 4, revised): one
+  behaviour on every device, and no new setting or UI.
 - **Do:**
-  - Add one custom property on `:root`, `--geoclick-text-scale`: `1` for
-    Normal, `1.25` for Large. Tune Large by looking.
-  - Multiply it into the popup `font-size` in `app.css` and into
-    QuizView's `.slip` `font-size` (currently `0.9rem`). Nothing else
-    scales.
-  - Put the setting in a small `textSize.svelte.ts`, modelled on
-    `i18n.svelte.ts`: `$state`, key `geoclick:text-size:v1` in
-    localStorage, with the same prerender/`typeof localStorage` guard.
-  - Apply the setting from `+layout.svelte`, the same way `<html lang>` is
-    applied.
-  - UI: a two-pill `A` / `A+` switch styled like `LanguageSwitcher` and
-    placed next to it, on the home page and in `MapNav`. Pill labels and
-    aria-labels live in `i18n.svelte.ts` in all three languages; the
-    union type makes a missing one a compile error.
-  - **Gotcha:** QuizView caches the tray's measured slip height
-    (`measureTraySizing` stores `trayHeightPx`). Switching size mid-quiz
-    must re-measure, or the tray clips or leaves gaps.
-- **Test:** a browser component test for the switch, like
-  `LanguageSwitcher.svelte.test.ts`: it toggles, persists, and sets the
-  property.
+  - Add an explicit `.is-magnified` state, styled by the same rule as
+    `:hover` in `app.css`.
+  - Limit the `:hover` half to real pointers, `@media (hover: hover)`.
+    Mobile browsers fake a sticky `:hover` on tap, and it behaves
+    inconsistently; the explicit state replaces it.
+  - One delegated `pointerdown` listener on the map container. Add it
+    in `createMap` (`geoclickMap.ts`) so all four views get it. A
+    non-mouse pointer on a `.maplibregl-popup-content` toggles
+    `.is-magnified` on that label and clears any other. A touch anywhere
+    else on the map clears it. At most one label is magnified at a time.
+  - It must not change what a tap does today. In explore mode, a tap on a
+    region still selects it. In the quiz, a slip drag keeps pointer
+    capture on the slip, and drop hit-testing stays coordinate-based.
+- **Test:** a browser component test on a fixture container. A touch
+  `pointerdown` on a label magnifies it. A second label moves the
+  magnification to it. A touch on empty map clears it. A mouse
+  `pointerdown` does nothing, because mouse users have hover.
 - **Verify:**
-  - at Large, long German labels on `germany-states` and dense
-    `italy-provinces` in DE/EN/IT;
-  - the quiz tray at both sizes, switched mid-quiz;
-  - a point map;
-  - at phone width (about 400 px).
+  - Chrome DevTools touch emulation on the `italy-provinces` overview
+    (tap Reggio Emilia) and in the quiz on solved and revealed labels;
+  - one quiz drag at phone width (about 400 px);
+  - the Android app on the emulator or a device, if available; say which.
 - **DoD:**
-  - the two sizes persist across reloads;
-  - only labels and slips change;
-  - the tray re-measures;
-  - screenshots at both sizes;
-  - DECISIONS.md entry "Text size";
-  - ONBOARDING.md mentions the property;
+  - tap magnifies, a second tap or a tap elsewhere shrinks it back;
+  - mouse hover still works;
+  - no change to region taps or quiz drops;
+  - screenshots;
+  - DECISIONS.md "Feature programme decisions" updated for decision 4
+    (done at the FT-02 merge);
+  - ONBOARDING.md mentions the magnify behaviour;
   - gates green.
 
 ### FT-04 — Logo candidates → product owner picks · Medium · deps: none
@@ -425,7 +424,7 @@ section. The publish step is 🧑.
     (decision 6).
   - Walk the whole tutorial in **German and Italian** as well as English,
     fixing overflow and wrapping. German copy runs longest.
-  - Walk it at phone width and at Large text size (FT-03).
+  - Walk it at phone width, including magnifying a label by tap (FT-03).
 - **DoD:**
   - screenshots of every step in all three languages (step 2 [zoom/pan],
     step 5 [drag] and step 8 [return to quiz] at minimum at phone width);
@@ -465,8 +464,8 @@ Update this table as tasks merge. Commit hashes are the merge commits.
 | Task | State | Merge | Release | Notes |
 |---|---|---|---|---|
 | FT-01 | **merged** | `6e05495` | v0.3.0 | README 'Play it' link under the intro |
-| FT-02 | todo | — | v0.3.0 | |
-| FT-03 | todo | — | v0.3.0 | |
+| FT-02 | **merged** | `fe3a809` | v0.3.0 | labels 11px → 0.8125rem (13px, follows browser font-size setting) + hover to magnify (20px, above neighbours); plan corrected: page zoom already scaled px |
+| FT-03 | todo | — | v0.3.0 | redefined at FT-02 review: tap to magnify on touch (was Normal/Large switch) |
 | FT-04 | todo | — | v0.3.0 | 🧑 logo pick |
 | FT-05 | todo | — | v0.3.0 | |
 | FT-06 | todo | — | v0.3.0 | 🧑 keystore |
