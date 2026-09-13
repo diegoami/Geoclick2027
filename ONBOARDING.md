@@ -279,6 +279,37 @@ eight-country/i18n/visual-refresh batch (44 map folders synced
 correctly, real-sized `.pmtiles`, not the corrupted-symlink failure mode
 from the Gotchas section below).
 
+**Release (signed) APK (FT-06).** Anything handed to players must be a
+release APK signed with Geoclick's own key, not the per-machine debug key.
+Android only accepts an update signed by the same key as the installed
+app, so **if this key is lost, nobody's installed copy can ever be
+updated.** Keep the keystore and its passwords backed up outside the
+repo. Create the key once, with the JDK's `keytool`. It asks for the
+passwords and a name:
+
+```bash
+"C:/Users/<you>/.jdks/jbr-21.0.11/bin/keytool.exe" -genkeypair -v \
+  -keystore C:/Users/<you>/projects/geoclick-release.jks \
+  -alias geoclick -keyalg RSA -keysize 4096 -validity 10000
+```
+
+Then copy `mobile/android/keystore.properties.example` to
+`keystore.properties` in the same folder and fill it in. The real file
+and any `*.jks` are gitignored, so never force-add them. A machine without
+that file can set `GEOCLICK_KEYSTORE_FILE`, `GEOCLICK_KEYSTORE_PASSWORD`,
+`GEOCLICK_KEY_ALIAS` and `GEOCLICK_KEY_PASSWORD` instead. Build and check:
+
+```bash
+cd mobile/android
+JAVA_HOME="C:/Users/<you>/.jdks/jbr-21.0.11" ./gradlew assembleRelease
+# signed: app/build/outputs/apk/release/app-release.apk
+"$LOCALAPPDATA/Android/Sdk/build-tools/<version>/apksigner.bat" verify --print-certs app/build/outputs/apk/release/app-release.apk
+```
+
+Without any key configured, `assembleRelease` still succeeds but produces
+`app-release-unsigned.apk`, which no phone will install. That's the sign
+the key setup is missing.
+
 Same persistence pattern as desktop: `createProgressRepository()` picks
 `capacitorProgressRepository.ts` (via `@capacitor-community/sqlite`) when
 `Capacitor.isNativePlatform()` is true, same `ProgressRepository`

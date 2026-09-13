@@ -246,6 +246,12 @@ Effort: **Low** is under an hour or so, **Medium** is a focused session,
     - the desktop app (`tauri build`, which gives both `.msi` and NSIS
       `-setup.exe`),
     - the Android app (`assembleRelease`).
+  - **Android `versionCode` must go up every release** (found in FT-06:
+    `mobile/android/app/build.gradle` has `versionCode 1` fixed, and
+    `scripts/sync-version.mjs` only sets `versionName`). Derive it from the
+    version, for example `major*10000 + minor*100 + patch` (0.3.0 gives
+    300), in `sync-version.mjs`, so installed copies see each release as
+    an update.
   - It collects the output into a gitignored `dist-release/vX.Y.Z/` with
     clear names: `Geoclick-X.Y.Z-windows-x64.msi`,
     `Geoclick-X.Y.Z-windows-x64-setup.exe` and `Geoclick-X.Y.Z-android.apk`.
