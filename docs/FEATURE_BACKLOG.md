@@ -163,6 +163,13 @@ click the real buttons and perform the real actions, in this order:
    the due/not-due behavior on the home page
 9. Showcase Tour mode
 
+> **Added 2026-09-13:** a tenth step, teaching zoom and pan, inserted
+> right after step 1 — players may not realize the map supports either,
+> and it's needed before the rest of the walkthrough makes sense on a
+> dense map. See `FEATURE_PLAN.md`'s FT-09 for the full spec (which
+> renumbers steps 2–9 above to 3–10); that file is authoritative, this
+> list stays as the original request record.
+
 **Must work in all three shipped UI languages** (English/German/Italian)
 — i18n is already a core, tested part of this product
 (`app/src/lib/i18n.svelte.ts`), and a tutorial that only exists in English
