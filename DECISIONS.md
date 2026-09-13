@@ -652,22 +652,56 @@ or amend an entry here as part of that change, not as an afterthought.
   confirmed directly that build cost is not actually a constraint — see
   CLAUDE.md's Workflow section, updated the same day. Task/feature branches
   now merge straight into `main` once approved, same as every other feature
-  in this project's history; `docs/RELEASES.md`'s release-branch mechanism
-  is being revised accordingly rather than removed outright, since tags and
-  release notes are still wanted (see the entry below).
+  in this project's history; `docs/RELEASES.md` was rewritten accordingly
+  rather than deleted, since tags and release notes are still wanted (see
+  the entry below).
 - **SUPERSEDED same day: four engines (haiku/sonnet/opus/fable) cut to two
   (sonnet implements, opus reviews/merges/orchestrates).** The product
   owner's call, made explicitly to push back on cost: "we still need an
-  orchestrator and subagents, but we need to scale it down." A revision is
-  in progress to reflect this plus "no GitHub, local harness only" and "drop
-  the nice-to-have tier" — see ROADMAP.md's "Remediation programme" entry
-  for status.
+  orchestrator and subagents, but we need to scale it down." Implemented in
+  the plan's second draft (2026-09-13): `engine: sonnet` on all 15 tasks,
+  opus as orchestrator + cold-context reviewer only. Re-running a single
+  task on opus is available to the human *after* an escalation, not as a
+  scheduled cost — and `fable` was cut outright, not downgraded to "opus at
+  effort max".
+- **No GitHub for the remediation programme; task state is one local file
+  per task.** The product owner: "not using Github, but just using local
+  harnesses." A `status:` field in `docs/tasks.yaml` was rejected because
+  three implementers plus an orchestrator doing read-modify-write on one
+  YAML file is a silent lost-update race — so state is
+  `.orchestrator/state/GC-0NN.json`, one file per task (single writer by
+  construction, temp-file + rename, transition table enforced by
+  `scripts/task.mjs`), anchored to the main checkout via
+  `git rev-parse --git-common-dir` so every worktree sees one board.
+  `tasks.yaml` is immutable spec; the review handoff is a branch name plus
+  `git diff main...<branch>`, not a draft PR. Consequence accepted: the
+  programme is single-machine, because local state cannot be shared without
+  a forge.
+- **A release "batch" is a completed wave; the programme closes at
+  `v0.2.0`.** Release tracking stays (git tag + `CHANGELOG.md` entry) but
+  goes local. A wave boundary is the batching unit because it is already
+  defined by the DAG, needs no fresh judgement, and is the point where the
+  tree is quiescent — "every N tasks" would cut mid-dependency, and
+  "whenever someone remembers" is how the project went eight iterations
+  without a tag. Waves 0+1 → `v0.1.1`, wave 2 → `v0.1.2`, wave 3 + close →
+  `v0.2.0`. `1.0.0` stays reserved for the real public launch (see the
+  SSO-deferral entry), so the closing milestone is a MINOR bump under that
+  ceiling: "known issues from the Sept 13 review resolved".
+- **The review's "nice-to-have / low value" tier (`#20`–`#30`) is out of
+  scope.** "Let us focus on the necessary things, no nice to have things."
+  Must-fix (`#1`–`#7`) and worth-doing (`#8`–`#19`) are in. Five whole tasks
+  went (GC-004, GC-031, GC-033, GC-080, plus GC-000 which was already
+  proven) and five sub-items were cut out of surviving tasks; no kept task
+  lost a dependency it needed. Recorded task-by-task in
+  `docs/REMEDIATION_PLAN.md` and in `tasks.yaml`'s `dropped:` list so they
+  are not silently re-derived as new work later.
 - **Still holds**: cold-context review (never a fork of the implementer —
   a fork inherits the assumptions review exists to catch), two review
   rounds then escalate to the human (two competent agents disagreeing twice
   about a written DoD means the spec is wrong, not the implementation), and
-  the human as sole merge authority to `main`. See
-  [docs/ORCHESTRATION.md](docs/ORCHESTRATION.md) (being revised).
+  the human as sole merge authority to `main`. All carried over unchanged
+  into the second draft — see
+  [docs/ORCHESTRATION.md](docs/ORCHESTRATION.md).
 - **Root `package.json` is the single source of truth for the version.** The
   repo had drifted to three different versions across seven files (`0.0.1`
   workspace, `0.1.0` Tauri/Cargo, `1.0` Android `versionName`);
