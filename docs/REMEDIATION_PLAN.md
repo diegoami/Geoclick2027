@@ -290,7 +290,7 @@ ORCHESTRATION.md § Automerge).
 | GC-022 | todo | — | v0.2.0 | |
 | GC-032 | todo | — | v0.2.0 | the one real design task |
 | GC-033 | todo | — | v0.2.0 | last task; v0.2.0 is cut after it |
-| GC-080 | todo | — | v0.2.0 | ADR only, executes nothing; wave-1 DAG-ready but held for the milestone (product-owner override) |
+| GC-080 | **merged** | `a53c541` | v0.2.0 | decision: stay in plain git (pack 15.6 MiB, 14.2 MB of it tileset history); revisit at 100 MB / 25 MB tileset / 60 countries |
 
 | Release | Status | Tag | Date |
 |---|---|---|---|
