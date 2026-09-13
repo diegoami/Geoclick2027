@@ -110,7 +110,8 @@ maplibre-gl worker identically to the main checkout.
 
 Draft 3 does not use worktrees at all — one agent needs one checkout — so the
 finding is now history rather than a dependency. GC-000 stays deleted, and
-`task.mjs doctor` treats any stray worktree as a zombie to clear.
+`task.mjs doctor` reports any other worktree but never removes it — another
+session (e.g. the product owner's planning session) may be working in it.
 
 ### Why each serialization exists (file-level conflicts)
 

@@ -580,21 +580,31 @@ function cmdDoctor(doc, fix) {
 	const problems = [];
 	const note = (msg, cmd) => problems.push({ msg, cmd });
 
-	// 1. worktrees: this design uses none, so anything but the main checkout is a leftover
+	// 1. worktrees: the loop itself uses none - but another session may (the
+	// product owner runs a separate planning session in its own worktree). So a
+	// worktree is REPORTED, never removed, even with --fix: `git worktree remove
+	// --force` would destroy someone's uncommitted work. Only prune the
+	// bookkeeping of worktrees whose directory is already gone.
 	const wtList = gitTry(['worktree', 'list', '--porcelain']) ?? '';
-	const worktrees = wtList
-		.split('\n')
-		.filter((l) => l.startsWith('worktree '))
-		.map((l) => l.slice('worktree '.length).trim())
-		.filter((p) => path.resolve(p) !== path.resolve(REPO_ROOT));
-	for (const w of worktrees) {
-		note(`orphan git worktree: ${w}`, `git worktree remove --force "${w}"`);
-		if (fix) {
-			spawnSync('git', ['worktree', 'remove', '--force', w], { cwd: REPO_ROOT });
-			console.log(`  removed worktree ${w}`);
-		}
+	const worktrees = [];
+	for (const block of wtList.split(/\r?\n\r?\n/)) {
+		const wtPath = /^worktree (.+)$/m.exec(block)?.[1]?.trim();
+		if (!wtPath || path.resolve(wtPath) === path.resolve(REPO_ROOT)) continue;
+		const branch = /^branch refs\/heads\/(.+)$/m.exec(block)?.[1]?.trim() ?? '(detached)';
+		worktrees.push({ wtPath, branch });
 	}
-	if (fix) spawnSync('git', ['worktree', 'prune'], { cwd: REPO_ROOT });
+	for (const { wtPath, branch } of worktrees) {
+		const exists = existsSync(wtPath);
+		const dirty = exists
+			? (spawnSync('git', ['status', '--porcelain'], { cwd: wtPath, encoding: 'utf8' }).stdout ??
+					'').trim() !== ''
+			: false;
+		note(
+			`git worktree ${wtPath} on ${branch}${exists ? (dirty ? ' - HAS UNCOMMITTED CHANGES' : '') : ' - directory missing'} (not removed: may be another session's live work)`,
+			exists ? `only if you are sure it is abandoned: git worktree remove "${wtPath}"` : 'git worktree prune'
+		);
+	}
+	if (fix) spawnSync('git', ['worktree', 'prune'], { cwd: REPO_ROOT }); // missing directories only
 
 	const wtRoot = path.resolve(REPO_ROOT, '..', 'geoclick-wt');
 	if (existsSync(wtRoot)) {

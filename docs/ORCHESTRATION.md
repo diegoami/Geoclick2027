@@ -284,10 +284,14 @@ because three agents cannot share one working tree. One agent can. So:
   think rather than reach for the flag.
 - **One dev-server port: 5174.** Fixed, not allocated. Port 5173 stays free for
   the product owner's own server, so the two never collide.
-- **No worktrees.** `git worktree` is not part of this design; `doctor` treats
-  any worktree other than the main checkout as a leftover to remove. The
-  2026-09-12/13 worktree investigation (ROADMAP.md's process notes) is settled
-  history now, not something this programme depends on either way.
+- **No worktrees — for the loop.** The loop never creates one. Other
+  sessions may: the product owner runs a separate planning session in its own
+  worktree (`geoclick-wt-docs`), precisely so it stops sharing this checkout's
+  index with the loop. So `doctor` **reports** any extra worktree (branch,
+  uncommitted changes) and never removes it, not even with `--fix` — changed
+  2026-09-13 after it turned out `--fix` would `git worktree remove --force`
+  that session's live work. The 2026-09-12/13 worktree investigation
+  (ROADMAP.md's process notes) is settled history.
 
 `node_modules` needs no special handling any more — one checkout, one install.
 That entire class of problem disappeared with the worktrees.
@@ -309,7 +313,7 @@ node scripts/task.mjs doctor --fix   # clean up the safe ones
 
 | Zombie | Detected | `--fix` |
 |---|---|---|
-| A git worktree other than the main checkout | `git worktree list` | removes it, then prunes |
+| A git worktree other than the main checkout | `git worktree list` | **reported only** (with branch and dirty state) — may be another session's live work; prunes only entries whose directory is gone |
 | The old `../geoclick-wt/` directory | filesystem | reported (delete by hand) |
 | `worktree-agent-*` branches from earlier runs | `for-each-ref` | deletes them |
 | A task branch already merged but never deleted | `branch --merged main` | deletes it |
