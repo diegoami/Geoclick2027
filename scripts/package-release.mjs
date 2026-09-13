@@ -93,8 +93,9 @@ const apkDir = path.join(ROOT, 'mobile', 'android', 'app', 'build', 'outputs', '
 rmSync(apkDir, { recursive: true, force: true });
 step('desktop (tauri build: web app + .msi + -setup.exe)', 'npm', ['run', 'build', '--workspace=desktop']);
 step('android: copy the web build in (cap sync)', 'npm', ['run', 'sync'], { cwd: path.join(ROOT, 'mobile') });
-step('android: release APK', WIN ? 'gradlew.bat' : './gradlew', ['assembleRelease'], {
-	cwd: path.join(ROOT, 'mobile', 'android'),
+const androidDir = path.join(ROOT, 'mobile', 'android');
+step('android: release APK', path.join(androidDir, WIN ? 'gradlew.bat' : 'gradlew'), ['assembleRelease'], {
+	cwd: androidDir,
 	env: { ...process.env, JAVA_HOME: javaHome }
 });
 
