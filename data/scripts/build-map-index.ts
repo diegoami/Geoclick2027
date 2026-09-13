@@ -20,12 +20,16 @@ export interface MapIndexEntry {
 	country: string;
 	targetCount: number;
 	targetType: string;
+	/** Current target ids, in map.json order. The home page's due counts need
+	 * the ids, not just the count: stored progress for a target that has since
+	 * been renamed or removed must not count toward the map (GC-071). */
+	targetIds: string[];
 }
 
 interface MapJson {
 	id: string;
 	country: string;
-	targets: { type: string }[];
+	targets: { id: string; type: string }[];
 }
 
 export const DEFAULT_MAPS_DIR = path.resolve(
@@ -59,7 +63,8 @@ export function buildMapIndex(mapsDir: string = DEFAULT_MAPS_DIR): MapIndexEntry
 			id: map.id,
 			country: map.country,
 			targetCount: map.targets.length,
-			targetType: types[0]
+			targetType: types[0],
+			targetIds: map.targets.map((t) => t.id)
 		};
 	});
 }
