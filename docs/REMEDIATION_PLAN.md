@@ -287,17 +287,17 @@ ORCHESTRATION.md § Automerge).
 | GC-031 | **released** | `1030bf0` | v0.1.2 | verified via tsx (no WSL toolchain here); found 5 mangled Polish ids (`wroc-aw`...) - documented, not changed (ids key saved progress) |
 | GC-041 | **released** | `f303d18` | v0.1.2 | Capacitor clearMap is transactional; Tauri's is two statements (plugin has no transaction API); no reset UI (owner's call) |
 | GC-071 | **released** | `d47e519` | v0.1.2 | 44 → 0 data requests; index carries `targetIds` (not just counts) so stale cards stay ignored - verified identical badges on 3 seeded maps |
-| GC-004 | **merged** | `eac332e` | v0.2.0 | data/tsconfig.json strict + root check/lint cover data/scripts; 13 `any` → narrow GeoJSON interfaces; esbuild diff proves types-only (plus `cause` on one error) |
-| GC-022 | **merged** | `d1f6909` | v0.2.0 | setText in all 4 views; popup CSS once in app/src/app.css - computed styles + widths identical before/after in explore, tour, overview, quiz (incl. revealed) |
-| GC-032 | **merged** | `9667bfb` | v0.2.0 | colorIndex 0-5 per target from tile adjacency (all 44 maps, 0 same-colour neighbours, asserted in mapColors.test.ts); unsolved opacity 0.55; hover recoloured (ΔE 16→38 vs palette) - verified on italy-provinces + germany-towns quizzes |
-| GC-033 | **merged** | `1b5b022` | v0.2.0 | default tour speed from tour length (3-min budget): italy-provinces 2× (5:30 → 2:45), russia-regions + japan-towns-100k 1.5×, other 41 maps unchanged; menu still overrides |
-| GC-080 | **merged** | `a53c541` | v0.2.0 | decision: stay in plain git (pack 15.6 MiB, 14.2 MB of it tileset history); revisit at 100 MB / 25 MB tileset / 60 countries |
+| GC-004 | **released** | `eac332e` | v0.2.0 | data/tsconfig.json strict + root check/lint cover data/scripts; 13 `any` → narrow GeoJSON interfaces; esbuild diff proves types-only (plus `cause` on one error) |
+| GC-022 | **released** | `d1f6909` | v0.2.0 | setText in all 4 views; popup CSS once in app/src/app.css - computed styles + widths identical before/after in explore, tour, overview, quiz (incl. revealed) |
+| GC-032 | **released** | `9667bfb` | v0.2.0 | colorIndex 0-5 per target from tile adjacency (all 44 maps, 0 same-colour neighbours, asserted in mapColors.test.ts); unsolved opacity 0.55; hover recoloured (ΔE 16→38 vs palette) - verified on italy-provinces + germany-towns quizzes |
+| GC-033 | **released** | `1b5b022` | v0.2.0 | default tour speed from tour length (3-min budget): italy-provinces 2× (5:30 → 2:45), russia-regions + japan-towns-100k 1.5×, other 41 maps unchanged; menu still overrides |
+| GC-080 | **released** | `a53c541` | v0.2.0 | decision: stay in plain git (pack 15.6 MiB, 14.2 MB of it tileset history); revisit at 100 MB / 25 MB tileset / 60 countries |
 
 | Release | Status | Tag | Date |
 |---|---|---|---|
 | `v0.1.1` | **cut** | `v0.1.1` → `47b69d5` | 2026-09-13 |
 | `v0.1.2` | **cut** | `v0.1.2` → `34dd3a2` | 2026-09-13 |
-| `v0.2.0` | not cut | — | — |
+| `v0.2.0` | **cut** | `v0.2.0` → `6d08ec8` | 2026-09-13 |
 
 ## Out of scope
 
