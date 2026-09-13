@@ -36,7 +36,8 @@ export function pmtilesConvert(mbtilesPath: string, pmtilesPath: string): void {
 	} catch (e) {
 		if ((e as NodeJS.ErrnoException).code === 'ENOENT') {
 			throw new Error(
-				`pmtiles CLI not found ("${PMTILES_BIN}"). Put it on PATH, or set PMTILES_BIN to its full path - see MAPS.md.`
+				`pmtiles CLI not found ("${PMTILES_BIN}"). Put it on PATH, or set PMTILES_BIN to its full path - see MAPS.md.`,
+				{ cause: e }
 			);
 		}
 		throw e;
@@ -100,10 +101,7 @@ export function overallBboxOf(
 // aren't tagged to an admin boundary the way states/provinces are, and a
 // lake is still worth rendering even if it pokes slightly outside the
 // map's bounds.
-export function selectNearbyLakes(
-	bbox: [number, number, number, number],
-	outPath: string
-): void {
+export function selectNearbyLakes(bbox: [number, number, number, number], outPath: string): void {
 	execFileSync('ogr2ogr', [
 		'-f',
 		'GeoJSON',

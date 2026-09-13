@@ -92,6 +92,23 @@ const NAME_FIXUPS: Record<string, Record<string, string>> = {
 	Argentina: { 'San Nicolas': 'San Nicolás' }
 };
 
+// The slice of the populated-places export this script reads - ogr2ogr's
+// -select below asks for exactly `<name-field>,NAME,POP_MAX`. The localized
+// name field varies per run (NAME_IT, NAME_DE...), hence the index signature.
+interface PlaceFeature {
+	type: 'Feature';
+	properties: {
+		NAME: string;
+		POP_MAX: number;
+		[field: string]: string | number | null | undefined;
+	};
+	geometry: { type: 'Point'; coordinates: [number, number] };
+}
+interface PlaceCollection {
+	type: 'FeatureCollection';
+	features: PlaceFeature[];
+}
+
 async function main() {
 	const args = parseArgs(process.argv.slice(2));
 	const country = args.country; // matches the dataset's ADM0NAME field
@@ -184,12 +201,12 @@ async function main() {
 	console.log(
 		`[2/5] Selecting towns (population > ${minPopulation}, min ${minCount}, max ${maxCount === Infinity ? 'none' : maxCount}) and deriving draft map.json...`
 	);
-	const geojson = JSON.parse(readFileSync(filteredPath, 'utf-8'));
+	const geojson: PlaceCollection = JSON.parse(readFileSync(filteredPath, 'utf-8'));
 	const byPopulationDesc = [...geojson.features].sort(
-		(a: any, b: any) => b.properties.POP_MAX - a.properties.POP_MAX
+		(a, b) => b.properties.POP_MAX - a.properties.POP_MAX
 	);
 	let selectedFeatures = byPopulationDesc.filter(
-		(feature: any) => feature.properties.POP_MAX > minPopulation
+		(feature) => feature.properties.POP_MAX > minPopulation
 	);
 	// Reach below the threshold, most-populous-first, rather than leaving a
 	// sparse country (e.g. Sweden: only 5 places clear 100k) with an
@@ -205,9 +222,9 @@ async function main() {
 	}
 
 	const fixups = NAME_FIXUPS[country] ?? {};
-	const withNames = selectedFeatures.map((feature: any) => {
+	const withNames = selectedFeatures.map((feature) => {
 		const p = feature.properties;
-		const rawName: string = p[nameField] || p.NAME;
+		const rawName: string = (p[nameField] as string | null | undefined) || p.NAME;
 		const name: string = fixups[rawName] ?? rawName;
 		const centroid = feature.geometry.coordinates as [number, number];
 		return {
@@ -237,7 +254,7 @@ async function main() {
 		seenIds.add(target.id);
 		return true;
 	});
-	targets.sort((a: any, b: any) => b.centroid[1] - a.centroid[1]); // north to south, same convention as build-map.ts
+	targets.sort((a, b) => b.centroid[1] - a.centroid[1]); // north to south, same convention as build-map.ts
 
 	const mapDefinition = {
 		id: path.basename(outDir),
@@ -246,7 +263,7 @@ async function main() {
 		attribution: 'Natural Earth (public domain), https://www.naturalearthdata.com',
 		tiles: 'tiles.pmtiles',
 		targets,
-		tourOrder: targets.map((t: any) => t.id)
+		tourOrder: targets.map((t) => t.id)
 	};
 	writeFileSync(mapJsonPath, JSON.stringify(mapDefinition, null, '\t') + '\n');
 
@@ -267,7 +284,7 @@ async function main() {
 	// a point's own geometry already is its label anchor.
 	const targetsGeojson = {
 		type: 'FeatureCollection',
-		features: targets.map((t: any) => ({
+		features: targets.map((t) => ({
 			type: 'Feature',
 			properties: { name: t.name, id: t.id },
 			geometry: { type: 'Point', coordinates: t.centroid }
