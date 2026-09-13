@@ -726,11 +726,15 @@ function runGateSet(quiet) {
 	for (const gate of GATES) {
 		if (!quiet) console.log(`\n=== gate: ${gate.name} (npm ${gate.argv.join(' ')}) ===`);
 		const started = Date.now();
+		// Always the repo root, never process.cwd(): run from app/, `npm run test`
+		// would only test the app workspace and silently skip packages/*.
 		const res = spawnSync('npm', gate.argv, {
-			cwd: process.cwd(),
+			cwd: REPO_ROOT,
 			stdio: quiet ? 'pipe' : 'inherit',
 			shell: process.platform === 'win32',
-			encoding: 'utf8'
+			encoding: 'utf8',
+			// --json captures output in memory; the build gate is chatty.
+			maxBuffer: 64 * 1024 * 1024
 		});
 		const ok = res.status === 0;
 		results.push({
@@ -738,6 +742,8 @@ function runGateSet(quiet) {
 			command: `npm ${gate.argv.join(' ')}`,
 			ok,
 			exitCode: res.status,
+			...(res.signal ? { signal: res.signal } : {}),
+			...(res.error ? { error: res.error.message } : {}),
 			ms: Date.now() - started,
 			...(quiet && !ok ? { output: `${res.stdout ?? ''}${res.stderr ?? ''}`.slice(-4000) } : {})
 		});
@@ -746,7 +752,7 @@ function runGateSet(quiet) {
 			break; // stop at the first failure
 		}
 	}
-	return { ok: !failed, failedGate: failed, cwd: process.cwd(), results };
+	return { ok: !failed, failedGate: failed, cwd: REPO_ROOT, results };
 }
 
 function cmdGates(asJson) {
@@ -757,10 +763,12 @@ function cmdGates(asJson) {
 		console.log('\n--- summary ---');
 		for (const r of verdict.results) console.log(`  ${r.ok ? 'PASS' : 'FAIL'}  ${r.gate}  (${r.ms}ms)`);
 		if (verdict.failedGate) {
+			const failed = verdict.results.at(-1);
+			if (failed?.error) console.log(`\n${failed.gate}: could not run - ${failed.error}`);
 			console.log(`\nGATES FAILED at "${verdict.failedGate}". Later gates were not run.`);
 			if (verdict.failedGate === 'lint') {
-				console.log('If GC-001 has not merged yet, a lint failure here is EXPECTED.');
-				console.log('See docs/REMEDIATION_PLAN.md -> Quality gate.');
+				console.log('Formatting? `npm run format` fixes Prettier failures. Every file at once?');
+				console.log('Check line endings first - see ONBOARDING.md, "The fifth variant".');
 			}
 		} else {
 			console.log('\nALL GATES PASS.');

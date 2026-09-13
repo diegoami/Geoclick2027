@@ -16,7 +16,9 @@
 		"check": "npm run check --workspaces --if-present",
 		"lint": "npm run lint --workspace=app",
 		"format": "npm run format --workspace=app",
-		"build-map": "tsx data/scripts/build-map.ts"
+		"build-map": "tsx data/scripts/build-map.ts",
+		"gates": "node scripts/task.mjs gates",
+		"setup-hooks": "git config core.hooksPath .githooks"
 	},
 	"devDependencies": {
 		"mapshaper": "^0.6.115",

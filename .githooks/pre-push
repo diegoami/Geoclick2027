@@ -1,0 +1,28 @@
+#!/bin/sh
+# Runs the four quality gates (check, test, lint, build) before a push, so a
+# broken gate never reaches the remote again - `npm run lint` failed silently
+# through several merges before GC-001 because nothing ran it.
+#
+# Install once per clone:   npm run setup-hooks
+# Bypass for one push:      git push --no-verify
+#
+# Deliberately NOT the Tauri or Android builds: a multi-minute pre-push is a
+# pre-push that gets --no-verify'd every time.
+
+# stdin: one "<local ref> <local sha> <remote ref> <remote sha>" line per ref.
+# A pure deletion (e.g. `git push origin --delete <branch>`, which
+# `task.mjs finish` does) has an all-zero local sha and pushes no code, so
+# skip the gates when every ref being pushed is a deletion.
+pushes_code=0
+while read -r local_ref local_sha remote_ref remote_sha; do
+	case "$local_sha" in
+		*[!0]*) pushes_code=1 ;;
+	esac
+done
+
+if [ "$pushes_code" = 0 ]; then
+	exit 0
+fi
+
+echo "pre-push: running quality gates (bypass with git push --no-verify)"
+exec node scripts/task.mjs gates
