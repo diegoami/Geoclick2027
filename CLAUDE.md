@@ -21,7 +21,12 @@ shipping, and what's planned next.
   integration branch — merge task/feature branches straight into it once
   approved, no release-branch buffering needed in between. Small doc-only
   changes (ROADMAP.md/ARCHITECTURE.md/CLAUDE.md edits with no app code)
-  can still go straight to `main` without that check-in.
+  can still go straight to `main` without that check-in. **Exception: the
+  remediation loop** (`docs/ORCHESTRATION.md`) automerges each task itself
+  once its gates are green and its DoD is verified — the product owner's
+  call, 2026-09-13 — and only stops for release tags and the cases listed
+  in that doc's "Automerge" section. Everything outside the loop still
+  follows the ask-first rule above.
 - Keep ROADMAP.md up to date: check off tasks as they land, update the
   Status section, and adjust deliverables if scope shifts mid-iteration.
 - Update ARCHITECTURE.md as part of finishing each iteration — not just

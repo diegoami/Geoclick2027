@@ -32,7 +32,9 @@ meta:
   base_commit: 14383d5
   integration_branch: main
   # One engine, one agent, one task at a time. There is no implementer/reviewer
-  # split: the product owner is the review gate, at merge time.
+  # split. Since 2026-09-13 (product owner, after GC-001) the loop AUTOMERGES a
+  # task once gates are green and the DoD is verified; the product owner gates
+  # release tags only. Rules: ORCHESTRATION.md "Automerge".
   engine: opus
   concurrency_max: 1
   state_dir: .orchestrator/state

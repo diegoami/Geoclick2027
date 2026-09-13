@@ -136,7 +136,9 @@ a release whose desktop/Android binaries were not rebuilt says so in its
 ## Cutting a release
 
 Run by the loop agent once a wave closes. Steps 1-5 and 7-8 are mechanical;
-step 6 is the product owner's, and it is the one that cannot be skipped.
+step 6 is the product owner's, and it is the one that cannot be skipped. Since
+the automerge change (2026-09-13) task merges no longer wait for anyone, so this
+is the **only routine human gate left in the programme** — three times in total.
 
 1. Confirm every task in the batch is `integrated`
    (`node scripts/task.mjs status`) and that the ledger table in

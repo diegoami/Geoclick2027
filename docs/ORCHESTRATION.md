@@ -11,10 +11,17 @@ one task at a time, in a loop, in the main checkout.** Roadmap:
 > *"for complex tasks let us Opus do them, or maybe let us just Opus do the
 > change alone, no two steps required, no multi agent, just loop."* So there is
 > no implementer/reviewer split, no subagents, no worktrees, no leases, no
-> ports to allocate. One agent works the DAG in order and stops at each merge
-> for the product owner's OK. Everything that is gone was removed because it
-> was machinery, not because the discipline behind it was wrong — the gates,
-> the DoD-before-approval rule, and "stop after two failed attempts" all stay.
+> ports to allocate. One agent works the DAG in order. Everything that is gone
+> was removed because it was machinery, not because the discipline behind it
+> was wrong — the gates, the DoD-before-merge rule, and "stop after two failed
+> attempts" all stay.
+>
+> **Automerge (2026-09-13, after GC-001).** The product owner: *"I think we
+> need to change the behaviour to automerge."* The loop no longer stops for an
+> OK before each merge — it merges itself once the gates are green and every
+> DoD item is verified, reports the merge in one short summary, and moves on.
+> It still stops for the three release tags and for the cases in
+> [Automerge](#automerge) below.
 
 ## Who runs this
 
@@ -32,7 +39,8 @@ node scripts/task.mjs doctor
 claude --model opus
 > Read docs/ORCHESTRATION.md, docs/REMEDIATION_PLAN.md and docs/tasks.yaml.
 > You are running the remediation loop. Work one task at a time, starting with
-> `node scripts/task.mjs next`. Stop and ask me before every merge to main.
+> `node scripts/task.mjs next`. Automerge each task once its gates are green
+> and its DoD is verified; stop and ask me before each release tag.
 ```
 
 That is the whole setup. Nothing to authenticate to, no issues to create, no
@@ -42,14 +50,13 @@ release branches, no second agent to brief.
 
 **The loop is a session the product owner can see and type into.** Start it in
 its own terminal and talk to it directly — that is where "finish this task then
-stop", "yes, merge it" and Ctrl+C go.
+stop", "revert that one" and Ctrl+C go.
 
-Do **not** run the loop as a background subagent of another session. It has to
-stop and ask for approval **19 times**, once per merge; that is its normal
-operating mode, not an exception. Relayed through a parent session, every one of
-those approvals becomes a round trip with the agent's progress invisible in
-between. An interactive session makes the thing it does most often — ask — the
-cheapest thing it does.
+Do **not** run the loop as a background subagent of another session. Automerge
+removed the 19 per-merge approvals, but the loop still stops for release tags
+and escalations, and — more importantly now that nobody approves each diff —
+the product owner needs to *see* each merge summary as it happens and be able to
+interrupt. Relayed through a parent session, all of that becomes invisible.
 
 The corollary: a **different** session is the right place to change the plan.
 The loop treats `tasks.yaml` and these docs as read-only spec (hard rule 6), so
@@ -73,53 +80,73 @@ programme is done.
    │   6. self-check      re-read the DoD line by line; verify by hand what the
    │                      DoD says to verify by hand
    │   7. worklog         node scripts/task.mjs log GC-0NN
-   │   8. push + ask      git push -u origin <branch>
+   │   8. push            git push -u origin <branch>
    │                      node scripts/task.mjs state GC-0NN awaiting-approval
-   │                      → ASK THE PRODUCT OWNER. WAIT.
-   │   9. merge on OK     git checkout main && git merge --no-ff <branch> && git push
-   │  10. finish          node scripts/task.mjs finish GC-0NN    (cleanup + integrated)
+   │   9. automerge       git checkout main && git merge --no-ff <branch> && git push
+   │  10. finish          node scripts/task.mjs finish GC-0NN    (cleanup + integrated,
+   │                                                              local + remote branch)
    │  11. tick the ledger the progress table in REMEDIATION_PLAN.md
-   │  12. doctor          node scripts/task.mjs doctor           (no zombies)
-   └───  13. batch done?  if the wave just closed → cut the release (RELEASES.md)
+   │  12. report          one short merge summary to the product owner - no waiting
+   │  13. doctor          node scripts/task.mjs doctor           (no zombies)
+   └───  14. batch done?  if the wave just closed → cut the release (RELEASES.md)
+                          → ASK THE PRODUCT OWNER before the tag. WAIT.
 ```
 
-Steps 8 and 9 are the only places the loop blocks on a human, and it must.
-Everything else the agent does on its own.
+Step 14's release tag is the one routine place the loop blocks on a human.
+Everything else it does on its own, subject to the stops below.
 
-### Why there is no reviewer
+## Automerge
 
-There were two arguments for a separate cold-context reviewer: a fresh pair of
-eyes catches what the author cannot see, and the author is a poor judge of its
-own DoD. Both are real. Neither survives the product owner's decision to run one
-Opus agent, and the replacement is not "nothing":
+The state name `awaiting-approval` survives from the pre-automerge design so
+existing state files stay valid; it now means "gates green, DoD verified — merge
+it", and nobody is waited on.
 
-- **The gates are the mechanical reviewer.** Four commands, scripted, run before
-  every approval request. They catch what a second agent would mostly have
-  caught: type errors, broken tests, formatting, a build that does not build.
-- **The product owner is the judgement reviewer**, at step 8, with the branch,
-  the diff and the worklog in front of them. That gate already existed; it now
-  carries the whole weight rather than sharing it.
-- **`/code-review` is available without spawning anything.** It is an existing
-  skill, not a subagent in this design's sense. For a High-effort task (GC-021,
-  GC-032) running it on the branch before step 8 is cheap and sensible.
+### When the loop merges on its own
 
-What is genuinely lost: an independent agent that never saw the author's
-reasoning. Accept it knowingly — the honest mitigation is that every task has a
-written DoD, and the product owner reads the diff.
+All of these, every time — automerge is not a weaker bar, it is the same bar
+without a person checking it was met:
 
-### Attempts, and when to stop
+- all four gates green on the task branch (`node scripts/task.mjs gates`);
+- every DoD item verified, including the ones that say "verify by hand" — if
+  the DoD says to exercise something in a browser, do it before merging;
+- for a **High**-effort task (GC-021, GC-032), `/code-review` run on the branch
+  and its findings fixed or explicitly answered in the merge summary. With no
+  human reading each diff first, this is the substitute for a second pair of
+  eyes, and it is cheap;
+- any deviation from the task's written spec — like GC-001 putting the
+  `.gitattributes` catch-all first instead of below the binaries — stated in
+  the commit message **and** the merge summary, never silently.
 
-Draft 2's "two review rounds then escalate" becomes **two attempts then stop**:
+### When the loop stops instead of merging
 
-- If the product owner asks for changes, the task goes back to `in-progress`
-  (`changes-requested` bumps the attempt count).
-- If they ask for changes a **second** time on the same task, do not start a
-  third round. Set `escalated`, say plainly what you tried and where you and the
-  spec disagree, and move to the next task.
+- **A release tag** (RELEASES.md step 6). Three times in the whole programme.
+- **Two failed attempts** at the same task — gates it cannot get green, or a
+  DoD item it cannot satisfy. Set `escalated`, say what was tried and where the
+  spec seems wrong, and **move on to the next ready task** rather than blocking
+  the loop. The product owner adjudicates when they next look.
+- **A DoD item it genuinely cannot verify** on this machine (GC-040's Android
+  device check is the known one). Do not merge on "probably fine": mark the
+  task `blocked` with the unverifiable item named, and move on.
+- **A spec that is wrong in a way that would change the task** — not a detail
+  of how, but what. Hard rule 9: stop and say so rather than improvising.
+- **Anything irreversible** — history rewrites, force-pushes, regenerating
+  committed binaries. None are in scope; if one looks necessary, stop.
 
-The reasoning is unchanged: a task with a written DoD that fails twice is
-evidence the **DoD is wrong**, not that the work is. The product owner
-adjudicates by editing the task in `tasks.yaml` and setting it back to `ready`.
+### After a merge
+
+The product owner can still say "revert that" or "change X" at any time. A
+merged task is `integrated`, so feedback on it is a **follow-up fix** — a new
+commit on a new short branch through the same gates — not a reopened task. If
+the feedback shows the DoD itself was wrong, record that in the worklog and the
+ledger's notes column.
+
+### What was traded away
+
+Before automerge, the product owner read every diff before it reached `main`.
+Now the gates, the written DoD, `/code-review` on the two hard tasks, and the
+merge summaries carry that weight, and `main` — which deploys — gets each task
+without a human look first. Accepted knowingly: every task has a written DoD,
+the gates run on every merge, and each merge is one `git revert -m 1` away.
 
 ## Stopping and resuming
 
@@ -233,9 +260,9 @@ merged into `main`, which tags are pushed).
 | `backlog` | Exists; dependencies not merged yet. |
 | `ready` | Dependencies are in `main`; startable. |
 | `in-progress` | The loop is working it, on its branch. |
-| `awaiting-approval` | Gates green, DoD met, branch pushed. **The product owner's turn.** |
-| `changes-requested` | The owner asked for changes. Attempt count goes up. |
-| `integrated` | Merged into `main` with the owner's OK. |
+| `awaiting-approval` | Gates green, DoD verified, branch pushed — merge it now (automerge; name kept for compatibility). |
+| `changes-requested` | A failed attempt before merge (a gate or DoD item that would not go green). Attempt count goes up. |
+| `integrated` | Merged into `main`. Post-merge feedback is a follow-up fix, not a reopen. |
 | `released` | Included in a pushed tag (RELEASES.md). |
 | `blocked` | Cannot proceed; reason in the note. |
 | `escalated` | Two failed attempts, or a spec problem. The owner owns it. |
@@ -299,7 +326,7 @@ own dev server, and a harness that kills windows out from under its user is
 worse than a stray node process. It prints the PID and the command; the decision
 is a human's.
 
-Run `doctor` at step 12 of every loop iteration, and before cutting a release.
+Run `doctor` at step 13 of every loop iteration, and before cutting a release.
 "No zombies" is a per-iteration habit, not an end-of-programme cleanup.
 
 The loop's own hygiene rules, which are what actually prevent most of it:
@@ -327,9 +354,10 @@ a forge. Do not invent a sync protocol for a 19-task programme on one laptop.
 
 ## Hard rules
 
-1. **Never merge to `main` without the product owner's explicit OK.** `main` is
-   the integration branch, and the gate in front of it is a person. Ask, show
-   the diff and the worklog, and wait.
+1. **Automerge only on a green, fully verified task** (see [Automerge](#automerge)).
+   Never merge with a red gate, an unverified DoD item, or an unreported
+   deviation from the spec. Never push a release tag without the product
+   owner's explicit OK.
 2. **Never trigger a Netlify deploy** — not via the MCP `deploy-site` tool, not
    manually, not "just to check". Push and let the git-triggered build run.
    Prod-check the live site once, after the push, and do not monitor deploys.

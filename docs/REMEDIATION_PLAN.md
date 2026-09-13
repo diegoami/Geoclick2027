@@ -21,8 +21,10 @@ harness reads.** If they disagree, `tasks.yaml` wins and this file is stale.
 
 - One branch per task, merged **straight into `main`**. No `release/*` branches:
   Netlify build cost was confirmed not to be a real constraint (2026-09-13).
-- **Never merge to `main` without the product owner's explicit OK.** That is a
-  review/testing gate, not a cost gate — it stands regardless of build cost.
+- **Automerge** (product owner, 2026-09-13, after GC-001): the loop merges each
+  task itself once all four gates are green and every DoD item is verified,
+  and reports the merge. Release tags still wait for the product owner's OK.
+  Full rules: [ORCHESTRATION.md § Automerge](ORCHESTRATION.md#automerge).
 - One agent, one task at a time, in the main checkout. No subagents.
 - Every commit ends with the attribution trailer
   (`meta.attribution_trailer` in `tasks.yaml`).
@@ -42,8 +44,9 @@ npm run build --workspace=app  # production build + postbuild worker copy
 ```
 
 `node scripts/task.mjs gates` runs all four in order and stops at the first
-failure. With no separate reviewer (see ORCHESTRATION.md), **these four are the
-mechanical review** and the product owner is the judgement review.
+failure. With no separate reviewer and, since the automerge change, no
+per-merge human review (see ORCHESTRATION.md), **these four plus the written DoD
+are the review** — with `/code-review` added on the two High-effort tasks.
 
 **Honest baseline as of `c5c786e` / `v0.1.0`:** `check`, `test` and `build`
 pass. **`lint` fails** (exit 1) — `core.autocrlf=true` plus a `.gitattributes`
@@ -262,13 +265,14 @@ of every iteration, in the same commit series as the merge; the
 `.orchestrator/state/*.json` files are gitignored and machine-local, so this is
 the only place progress is durable and readable without running anything.
 
-Status values: `todo` → `in progress` → `awaiting approval` → **`merged`** →
-`released`. Also `escalated` when two attempts failed and the product owner owns
-the task.
+Status values: `todo` → `in progress` → **`merged`** → `released`. Also
+`escalated` when two attempts failed and the product owner owns the task, and
+`blocked` when a DoD item cannot be verified on this machine (see
+ORCHESTRATION.md § Automerge).
 
 | ID | Status | Merged (commit) | Released in | Notes |
 |---|---|---|---|---|
-| GC-001 | todo | — | v0.1.1 | wave 0, lands alone |
+| GC-001 | **merged** | `e619571` | v0.1.1 | lint passes for the first time; catch-all placed first in `.gitattributes` (spec said below binaries - would have overridden them) |
 | GC-002 | todo | — | v0.1.1 | |
 | GC-003 | todo | — | v0.1.1 | |
 | GC-010 | todo | — | v0.1.1 | |

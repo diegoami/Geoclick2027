@@ -725,13 +725,24 @@ or amend an entry here as part of that change, not as an afterthought.
   `dropped:` list in `tasks.yaml` and the restored-items table in
   `docs/REMEDIATION_PLAN.md` are the record either way, so nothing gets
   silently re-derived as new work later.
-- **Still holds**: the human as sole merge authority to `main`; two failed
-  attempts then stop and escalate rather than grinding a third (a written
-  DoD that fails twice means the spec is wrong, not the work); gates before
-  approval, always. What did NOT survive draft 3: cold-context review by a
-  separate agent, because there is no separate agent — the gates and the
-  product owner carry it instead. See
-  [docs/ORCHESTRATION.md](docs/ORCHESTRATION.md).
+- **Still holds**: two failed attempts then stop and escalate rather than
+  grinding a third (a written DoD that fails twice means the spec is wrong,
+  not the work); gates before merge, always. What did NOT survive draft 3:
+  cold-context review by a separate agent, because there is no separate
+  agent. See [docs/ORCHESTRATION.md](docs/ORCHESTRATION.md).
+- **SUPERSEDED after GC-001: the human is no longer the per-task merge
+  authority — the loop automerges.** Product owner, 2026-09-13, after
+  approving the first task: *"I think we need to change the behaviour to
+  automerge."* The loop now merges a task itself once all four gates are
+  green and every DoD item is verified, and reports each merge in a short
+  summary. It still stops for the three release tags (the product owner's
+  only routine gate), for two failed attempts, for a DoD item it cannot
+  verify on this machine, and for a spec that is wrong in substance. The
+  cost, accepted knowingly: `main` (which deploys) now gets each task
+  without a human reading the diff first. The compensations are the gates,
+  the written DoD, `/code-review` on the two High-effort tasks, and every
+  merge being one `git revert` away. Scoped to the remediation loop only —
+  CLAUDE.md's ask-before-merge rule still governs all other work.
 - **Root `package.json` is the single source of truth for the version.** The
   repo had drifted to three different versions across seven files (`0.0.1`
   workspace, `0.1.0` Tauri/Cargo, `1.0` Android `versionName`);

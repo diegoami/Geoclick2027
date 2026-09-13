@@ -53,7 +53,9 @@ const GATES = [
 ];
 
 // docs/ORCHESTRATION.md's state machine. One agent, so there is no `leased`
-// state and no reviewer states - `awaiting-approval` is the product owner's gate.
+// state and no reviewer states. Since the automerge change (2026-09-13)
+// `awaiting-approval` means "gates green, DoD verified, merge it" - the name is
+// kept so existing state files stay valid; the product owner no longer gates it.
 const TRANSITIONS = {
 	backlog: ['ready', 'blocked'],
 	ready: ['in-progress', 'backlog', 'blocked'],
@@ -361,9 +363,10 @@ function cmdState(doc, id, to, { note }) {
 	console.log(`${t.id}: ${from} -> ${to}${note ? `  (${note})` : ''}`);
 
 	if (to === 'awaiting-approval') {
-		console.log('\nNow ASK THE PRODUCT OWNER to review and approve the merge.');
-		console.log(`Hand them: the branch \`${t.branch}\`, \`git diff ${INTEGRATION_BRANCH}...${t.branch}\`,`);
-		console.log(`and .orchestrator/log/${t.id}.md. Do not merge until they say yes.`);
+		console.log('\nGates green and DoD verified: automerge (ORCHESTRATION.md, 2026-09-13).');
+		console.log(`  git checkout ${INTEGRATION_BRANCH} && git merge --no-ff ${t.branch} && git push`);
+		console.log(`  node scripts/task.mjs finish ${t.id}`);
+		console.log('Then report the merge to the product owner in one short summary. Do not wait for a reply.');
 	}
 	if (to === 'changes-requested' && rec.attempts >= 2) {
 		console.log('\nThis is the second round of changes on this task.');
@@ -428,7 +431,7 @@ function cmdStart(doc, id, force) {
 	console.log(`  worklog  : node scripts/task.mjs log ${t.id}`);
 	console.log('\nWhen the DoD is met and the gates are green:');
 	console.log(`  node scripts/task.mjs state ${t.id} awaiting-approval --note "..."`);
-	console.log('Then ask the product owner to approve the merge. Never merge unasked.');
+	console.log('Then merge it yourself (automerge) - never with a red gate or an unverified DoD item.');
 	console.log('\nStop the dev server before you finish. No orphan processes.');
 }
 
@@ -443,7 +446,7 @@ function cmdFinish(doc, id, force) {
 
 	if (!merged && !force) {
 		console.error(`Refused: ${t.branch} is not merged into ${INTEGRATION_BRANCH}.`);
-		console.error('`finish` is the post-merge cleanup step. Get the OK, merge, then run it.');
+		console.error('`finish` is the post-merge cleanup step. Merge first, then run it.');
 		process.exit(1);
 	}
 
@@ -455,7 +458,13 @@ function cmdFinish(doc, id, force) {
 	}
 	const remoteRef = gitTry(['rev-parse', '--verify', '--quiet', `refs/remotes/origin/${t.branch}`]);
 	if (remoteRef) {
-		console.log(`Remote branch still exists. Delete it too:  git push origin --delete ${t.branch}`);
+		// Under automerge nobody reads a printed reminder, so do it: a merged
+		// remote branch left behind is exactly the zombie `doctor` hunts for.
+		if (gitTry(['push', 'origin', '--delete', t.branch]) !== null) {
+			console.log(`Deleted merged remote branch origin/${t.branch}`);
+		} else {
+			console.log(`Could not delete origin/${t.branch} - do it by hand:  git push origin --delete ${t.branch}`);
+		}
 	}
 
 	if (rec.state === 'awaiting-approval') {
