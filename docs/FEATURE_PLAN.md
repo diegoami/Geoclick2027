@@ -485,4 +485,5 @@ Update this table as tasks merge. Commit hashes are the merge commits.
 | Release | State | Tag | Date |
 |---|---|---|---|
 | `v0.3.0` | **cut** | `v0.3.0` → `abafcbb` | 2026-09-13 — installers published to diegoami/geoclick-releases (APK signed with the release key) |
+| `v0.3.1` | **cut** (hotfix) | `v0.3.1` → `fd04733` | 2026-09-13 — desktop app opened maps empty in v0.3.0 (Tauri ignores Range requests; tiles now loaded whole). Installers published; v0.3.0 notes carry a warning |
 | `v0.4.0` | not cut | — | — |
