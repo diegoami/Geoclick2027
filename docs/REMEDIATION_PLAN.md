@@ -278,7 +278,7 @@ ORCHESTRATION.md § Automerge).
 | GC-010 | **merged** | `7fa06f0` | v0.1.1 | cap 365 d (bites at 7th clean review); ease +0.1 to 2.5; no migration needed (overlong intervals need 393 d of history). Noted: `packages/*` is outside Prettier's config and the lint gate |
 | GC-020 | **merged** | `1748edb` | v0.1.1 | both crashes reproduced on main first; button gated (not just `clearAllVisuals` - that alone races the load handler); timers in a Set, not one handle |
 | GC-030 | **merged** | `25a788f` | v0.1.1 | 44 maps / 1410 targets clean; negative fixtures committed so "can fail" stays tested; `index.json` ships as `/maps/index.json` (GC-071 can use its `targetCount`) |
-| GC-040 | todo | — | v0.1.1 | untestable without an Android device |
+| GC-040 | **merged** | `063d602` | v0.1.1 | migrator tested against real SQLite (`node:sqlite`) + cross-checked vs lib.rs; native bridge still device-only - manual plan in the merge commit (`git show 063d602^2`) |
 | GC-050 | todo | — | v0.1.1 | |
 | GC-060 | todo | — | v0.1.1 | |
 | GC-070 | todo | — | v0.1.1 | |
