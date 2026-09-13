@@ -549,3 +549,34 @@ or amend an entry here as part of that change, not as an afterthought.
   and the home page header (which doesn't render `MapNav`) - both reuse
   the same `LanguageSwitcher.svelte` component rather than duplicating
   the markup.
+
+## Visual refresh: background (2026-09-13)
+
+- **The map's "ocean/empty space" background moved from flat gray
+  (`#eef3f6`) to a warm parchment tone (`#f0ead9`), not a richer blue.**
+  Requested directly: "the background color is kind of meh, maybe
+  something more captivating." A richer blue was tried first (`#a9cfdf`)
+  since water conventionally reads as blue on maps, and rejected after
+  actually looking at it: it reads too close to the lakes layer's own
+  blue (`#bcdcea`, DECISIONS.md's earlier "Lakes are rendered as a
+  purely contextual layer" entry), undoing the contrast that entry
+  already tuned once — the Great Lakes nearly vanished into the
+  surrounding "ocean" background on `usa-states`. A warm neutral instead
+  of a cool one keeps the original design's actual intent (a plain
+  backdrop, not a literal ocean) while looking more intentional than
+  flat gray, and — checked directly, not assumed — makes the lakes
+  layer's blue read *more* clearly against a warm background than it
+  did against the old cool gray-blue one, not less. Also re-verified
+  against `italy-provinces`' full 8-color categorical palette (every
+  hash-derived land color, not just green) and a towns map's `context`
+  layer (`japan-towns-100k`) before settling on the value — neither
+  regressed.
+- **The home page background moved from plain white to a soft
+  three-stop gradient** (`#e3f0e6` sage → `#dce6f2` blue → `#f7ecd9`
+  cream, `160deg`, fixed so it doesn't scroll with content) drawn from
+  the same muted-earthy family as the map's own categorical palette,
+  for the same "meh" complaint. A first, much subtler version (near-
+  white with barely-there tinting) was tried and rejected as still too
+  timid to actually read as a change — the shipped version is
+  deliberately more visible while staying low-saturation enough not to
+  fight with body text or the map-card borders.
