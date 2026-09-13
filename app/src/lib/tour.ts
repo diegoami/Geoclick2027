@@ -1,5 +1,7 @@
 // Mirrors the tour.json shape produced by data/scripts/build-map.ts.
 
+import { asset } from '$app/paths';
+
 export interface TourStep {
 	targetId: string;
 	dwellMs: number;
@@ -12,7 +14,7 @@ export interface Tour {
 }
 
 export async function fetchTour(mapId: string): Promise<Tour> {
-	const res = await fetch(`/maps/${mapId}/tour.json`);
+	const res = await fetch(asset(`/maps/${mapId}/tour.json`));
 	if (!res.ok) throw new Error(`Could not load tour for "${mapId}".`);
 	return res.json();
 }

@@ -4,6 +4,7 @@
 import * as maplibregl from 'maplibre-gl';
 import type { StyleSpecification } from 'maplibre-gl';
 import { PMTiles, Protocol, type RangeResponse, type Source } from 'pmtiles';
+import { asset } from '$app/paths';
 import { overallBounds, type MapDefinition } from './mapDefinition';
 
 let protocol: Protocol | undefined;
@@ -53,9 +54,11 @@ export async function fetchMapDefAndStyle(
 	mapId: string
 ): Promise<{ mapDef: MapDefinition; style: StyleSpecification }> {
 	const mapProtocol = ensurePmtilesProtocol();
+	// asset() prefixes kit.paths.base (or paths.assets) - a bare "/maps/..."
+	// 404s as soon as the app is served under a subpath (e.g. GitHub Pages).
 	const [mapDefRes, baseStyleRes] = await Promise.all([
-		fetch(`/maps/${mapId}/map.json`),
-		fetch(`/styles/base.json`)
+		fetch(asset(`/maps/${mapId}/map.json`)),
+		fetch(asset('/styles/base.json'))
 	]);
 	if (!mapDefRes.ok || !baseStyleRes.ok) {
 		throw new Error(`Could not load map "${mapId}".`);
@@ -63,7 +66,9 @@ export async function fetchMapDefAndStyle(
 	const mapDef: MapDefinition = await mapDefRes.json();
 	const baseStyle = await baseStyleRes.json();
 
-	const tilesUrl = `${location.origin}/maps/${mapId}/tiles.pmtiles`;
+	// pmtiles needs an absolute URL; new URL() keeps it absolute while honouring
+	// the base path (and stays correct if asset() ever returns a full CDN URL).
+	const tilesUrl = new URL(asset(`/maps/${mapId}/tiles.pmtiles`), location.origin).href;
 	const { Capacitor } = await import('@capacitor/core');
 	if (Capacitor.isNativePlatform()) {
 		await registerBufferedPmtiles(mapProtocol, tilesUrl);

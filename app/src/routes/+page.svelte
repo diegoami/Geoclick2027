@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { resolve } from '$app/paths';
+	import { asset, resolve } from '$app/paths';
 	import {
 		createProgressRepository,
 		todayLocalDate,
@@ -42,7 +42,7 @@
 			const dueEntries = await Promise.all(
 				demoMaps.map(async (map) => {
 					const [mapDef, cardStates] = await Promise.all([
-						fetch(`/maps/${map.id}/map.json`).then((r) => r.json()),
+						fetch(asset(`/maps/${map.id}/map.json`)).then((r) => r.json()),
 						repository.getCardStates(map.id)
 					]);
 					if (cardStates.length === 0)
