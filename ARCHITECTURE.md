@@ -285,7 +285,8 @@ Other candidates considered, not pursued further once Netlify worked:
   doing *in addition to* Netlify once there's a polished build to show
   off, not instead of it.
 
-**Status**: deployed and verified — all three demo maps, click-to-highlight,
+**Status**: deployed and verified — all three demo maps (as of Iteration 3.5;
+44 maps across 22 countries ship today, see MAPS.md), click-to-highlight,
 and tour mode all confirmed working against the live Netlify URL (not
 just a successful build). See ROADMAP.md's Iteration 3.5 for the full
 story, Cloudflare included.
