@@ -13,9 +13,9 @@
 		"dev": "npm run dev --workspace=app",
 		"build": "npm run build --workspaces --if-present",
 		"test": "npm run test --workspaces --if-present",
-		"check": "npm run check --workspaces --if-present",
-		"lint": "npm run lint --workspace=app",
-		"format": "npm run format --workspace=app",
+		"check": "npm run check --workspaces --if-present && tsc -p data/tsconfig.json",
+		"lint": "npm run lint --workspace=app && prettier --config app/prettier.config.js --check data/scripts && eslint --config app/eslint.config.js data/scripts",
+		"format": "npm run format --workspace=app && prettier --config app/prettier.config.js --write data/scripts",
 		"build-map": "tsx data/scripts/build-map.ts",
 		"build-map-index": "tsx data/scripts/build-map-index.ts",
 		"build-map-colors": "tsx data/scripts/build-map-colors.ts",
@@ -24,10 +24,14 @@
 	},
 	"devDependencies": {
 		"@mapbox/vector-tile": "^3.0.0",
+		"@types/node": "^24",
+		"eslint": "^10.4.1",
 		"mapshaper": "^0.6.115",
 		"pbf": "^5.1.2",
 		"pmtiles": "^4.5.0",
+		"prettier": "^3.8.3",
 		"tsx": "^4.20.6",
+		"typescript": "^6.0.3",
 		"yaml": "^2.9.1"
 	}
 }

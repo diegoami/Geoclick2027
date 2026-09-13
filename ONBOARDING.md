@@ -126,8 +126,9 @@ the npm workspace):
 npm run dev      # start the app locally
 npm run build    # production build (all workspaces)
 npm test         # run unit tests (quiz-engine, srs, app)
-npm run check    # svelte-check / type-check
-npm run lint      # prettier + eslint on the app
+npm run check    # svelte-check / type-check, plus tsc on data/scripts (data/tsconfig.json)
+npm run lint     # prettier + eslint on the app and on data/scripts
+npm run format   # prettier --write on both
 npm run gates    # all four quality gates in order, stops at the first failure
 ```
 

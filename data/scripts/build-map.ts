@@ -25,7 +25,17 @@ const SOURCE_SHP = path.join(
 	REPO_ROOT,
 	'data/source/ne_10m_admin_1_states_provinces/ne_10m_admin_1_states_provinces.shp'
 );
-const BASE_FIELDS = ['name', 'name_alt', 'name_local', 'iso_3166_2', 'type', 'type_en', 'admin', 'region', 'geonunit'];
+const BASE_FIELDS = [
+	'name',
+	'name_alt',
+	'name_local',
+	'iso_3166_2',
+	'type',
+	'type_en',
+	'admin',
+	'region',
+	'geonunit'
+];
 
 // Natural Earth sometimes gives an English/French/German name where the
 // country's own language is expected (regions: Apulia/Sicily; provinces:
@@ -164,6 +174,21 @@ const NAME_FIXUPS: Record<string, Record<string, string>> = {
 
 type Geometry = { type: string; coordinates: unknown };
 
+// The slice of an ogr2ogr/mapshaper GeoJSON export this script reads. Natural
+// Earth's property bag is wide, and which fields it carries depends on the run
+// (--name-field, --exclude-field), so fields are looked up by name. Every field
+// selected (BASE_FIELDS plus those two) is a string or missing, and `name`
+// is always present.
+interface AdminFeature {
+	type: 'Feature';
+	properties: { name: string; [field: string]: string | null | undefined };
+	geometry: Geometry;
+}
+interface AdminCollection {
+	type: 'FeatureCollection';
+	features: AdminFeature[];
+}
+
 function boundsOf(geometry: Geometry): {
 	bbox: [number, number, number, number];
 	center: [number, number];
@@ -223,9 +248,7 @@ async function main() {
 	// worth for a demo map. --exclude-field picks a different field to match
 	// against (e.g. `geonunit`, to drop every Northern Ireland district by
 	// country-within-the-UK rather than needing each district's own name).
-	const exclude = args.exclude
-		? args.exclude.split(',').map((s) => s.trim())
-		: [];
+	const exclude = args.exclude ? args.exclude.split(',').map((s) => s.trim()) : [];
 	const excludeField = args['exclude-field'] ?? 'name';
 	// Which field holds the display name (default the plain `name` field,
 	// correct as-is for every map built so far). Poland's `name` field is
@@ -300,8 +323,8 @@ async function main() {
 			extraPath,
 			SOURCE_SHP
 		]);
-		const primaryFC = JSON.parse(readFileSync(filteredPath, 'utf-8'));
-		const extraFC = JSON.parse(readFileSync(extraPath, 'utf-8'));
+		const primaryFC: AdminCollection = JSON.parse(readFileSync(filteredPath, 'utf-8'));
+		const extraFC: AdminCollection = JSON.parse(readFileSync(extraPath, 'utf-8'));
 		primaryFC.features.push(...extraFC.features);
 		writeFileSync(filteredPath, JSON.stringify(primaryFC));
 		rmSync(extraPath);
@@ -327,7 +350,7 @@ async function main() {
 	execFileSync('npx', ['mapshaper', ...mapshaperArgs], { stdio: 'inherit' });
 
 	console.log('[3/6] Fixing up names and deriving draft map.json...');
-	const geojson = JSON.parse(readFileSync(simplifiedPath, 'utf-8'));
+	const geojson: AdminCollection = JSON.parse(readFileSync(simplifiedPath, 'utf-8'));
 	const fixups = NAME_FIXUPS[country] ?? {};
 	for (const feature of geojson.features) {
 		// --name-field only matters pre-dissolve: dissolving already renames
@@ -341,7 +364,7 @@ async function main() {
 	}
 	writeFileSync(simplifiedPath, JSON.stringify(geojson));
 
-	const targets = geojson.features.map((feature: any) => {
+	const targets = geojson.features.map((feature) => {
 		const p = feature.properties;
 		const { bbox, center } = boundsOf(feature.geometry);
 		// Only emitted when true, so maps with no such target come out
@@ -363,7 +386,7 @@ async function main() {
 			...(wraps ? { crossesAntimeridian: true } : {})
 		};
 	});
-	targets.sort((a: any, b: any) => b.centroid[1] - a.centroid[1]); // north to south, default
+	targets.sort((a, b) => b.centroid[1] - a.centroid[1]); // north to south, default
 
 	const mapDefinition = {
 		id: path.basename(outDir),
@@ -372,7 +395,7 @@ async function main() {
 		attribution: 'Natural Earth (public domain), https://www.naturalearthdata.com',
 		tiles: 'tiles.pmtiles',
 		targets,
-		tourOrder: targets.map((t: any) => t.id)
+		tourOrder: targets.map((t) => t.id)
 	};
 	writeFileSync(mapJsonPath, JSON.stringify(mapDefinition, null, '\t') + '\n');
 
@@ -395,7 +418,7 @@ async function main() {
 	// wherever a region's polygon is split across tile boundaries.
 	const labelsGeojson = {
 		type: 'FeatureCollection',
-		features: targets.map((t: any) => ({
+		features: targets.map((t) => ({
 			type: 'Feature',
 			properties: { name: t.name, id: t.id },
 			geometry: { type: 'Point', coordinates: t.centroid }
