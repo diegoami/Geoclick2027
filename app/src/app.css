@@ -50,16 +50,33 @@
 		font-size 120ms ease-out,
 		padding 120ms ease-out;
 }
-.geoclick-popup .maplibregl-popup-content:hover,
-.geoclick-solved-popup .maplibregl-popup-content:hover {
+/* Magnified: under a real mouse pointer (:hover, only where the device can
+ * hover - mobile browsers' emulated sticky hover is left out), or tapped on a
+ * touch screen (.is-magnified, set by labelMagnify.ts, FT-03). Same look. */
+@media (hover: hover) {
+	.geoclick-popup .maplibregl-popup-content:hover,
+	.geoclick-solved-popup .maplibregl-popup-content:hover {
+		font-size: 1.25rem;
+		padding: 2px 9px;
+		background: rgba(31, 61, 42, 0.92);
+	}
+	.geoclick-solved-popup.revealed .maplibregl-popup-content:hover {
+		background: rgba(95, 65, 27, 0.92);
+	}
+	.maplibregl-popup:has(> .maplibregl-popup-content:hover) {
+		z-index: 1;
+	}
+}
+.geoclick-popup .maplibregl-popup-content.is-magnified,
+.geoclick-solved-popup .maplibregl-popup-content.is-magnified {
 	font-size: 1.25rem;
 	padding: 2px 9px;
 	background: rgba(31, 61, 42, 0.92);
 }
-.geoclick-solved-popup.revealed .maplibregl-popup-content:hover {
+.geoclick-solved-popup.revealed .maplibregl-popup-content.is-magnified {
 	background: rgba(95, 65, 27, 0.92);
 }
-.maplibregl-popup:has(> .maplibregl-popup-content:hover) {
+.maplibregl-popup:has(> .maplibregl-popup-content.is-magnified) {
 	z-index: 1;
 }
 @media (prefers-reduced-motion: reduce) {
