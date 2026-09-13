@@ -282,7 +282,7 @@ ORCHESTRATION.md § Automerge).
 | GC-050 | **released** | `1d0593e` | v0.1.1 | set at hydration; static home-page HTML paints `en` for an instant first (inline script would close it - not worth the duplicated key) |
 | GC-060 | **released** | `1deb05d` | v0.1.1 | "no search UI" re-affirmed at 22 countries (re-open at ~40 or a real complaint) - the loop's call, overrulable |
 | GC-070 | **released** | `f7e0963` | v0.1.1 | `asset()` not the deprecated `base` (same effect); verified under a real `/geoclick` subpath |
-| GC-021 | todo | — | v0.1.2 | |
+| GC-021 | **merged** | `7d536be` | v0.1.2 | spec deviation: kept Bremen tolerance rescue (spec's case 3 would have regressed it); `/code-review` clean. Observed: at large-window zoom Bremen's edge is 30px from its centroid, > 24px tolerance |
 | GC-031 | todo | — | v0.1.2 | |
 | GC-041 | todo | — | v0.1.2 | |
 | GC-071 | todo | — | v0.1.2 | |
