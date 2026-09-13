@@ -1,5 +1,14 @@
 # Geoclick — Feature backlog (raised 2026-09-13)
 
+> **Planned (2026-09-13):** all four items below are now tasks in
+> [FEATURE_PLAN.md](FEATURE_PLAN.md), FT-01 to FT-12, shipping as
+> `v0.3.0` and `v0.4.0`. The open questions this file flags were answered
+> by the product owner and are recorded there and in DECISIONS.md
+> ("Feature programme decisions"). One answer differs from this file's own
+> recommendation. Downloads go to a public releases-only repo, not static
+> files on Netlify, because the installers would otherwise be committed
+> to git each release. This file stays as the investigation record.
+
 Four feature requests captured for a **future planning pass**, separate
 from and after the [remediation programme](REMEDIATION_PLAN.md) (which is
 about fixing what the 2026-09-13 review found, not adding anything new).

@@ -124,6 +124,14 @@ Check items off as they land; update "Status" as iterations complete.
   ask before each release tag. Shipped as `v0.1.1`, `v0.1.2` and the
   `v0.2.0` milestone. Per-task notes are in the ledger; release notes are
   in CHANGELOG.md.
+- **Feature programme (planned 2026-09-13, not started)** — four new
+  requests, each already investigated in
+  [docs/FEATURE_BACKLOG.md](docs/FEATURE_BACKLOG.md): public downloads,
+  app logos, an interactive three-language tutorial, and a names text-size
+  setting. They are planned as twelve tasks in
+  [docs/FEATURE_PLAN.md](docs/FEATURE_PLAN.md) and ship as `v0.3.0`
+  (readable and installable) and `v0.4.0` (tutorial). Unlike the
+  remediation loop, every merge waits for the product owner's OK.
 - **Git worktrees failed for parallel background feature work on this
   project as attempted 2026-09-12 — RESOLVED 2026-09-13.** Root cause was
   exactly as suspected: a `git worktree` checkout doesn't get its own

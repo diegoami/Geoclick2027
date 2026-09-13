@@ -1004,3 +1004,36 @@ no `.gitattributes` change, no file moved.
   is chosen, extend `app/src/lib/mapData.test.ts` to assert every
   `.pmtiles` starts with those magic bytes, so a pointer-file checkout
   fails the gates instead of shipping blank maps.
+
+## Feature programme decisions (2026-09-13)
+
+The four requests in `docs/FEATURE_BACKLOG.md` became a separate
+twelve-task programme, `docs/FEATURE_PLAN.md`. Before planning, every
+product question the backlog flagged was put to the product owner. The
+answers:
+
+- **Downloads live in a separate public "releases-only" GitHub repo**, and
+  the source repo stays private. GitHub release files on a private repo
+  need a login with repo access, so a public release needs a public repo.
+  The backlog had suggested static files on the Netlify site, but that was
+  rejected on size. The current installers (18 MB `.msi`, 17 MB
+  `-setup.exe`, 27 MB `.apk`) would be committed to git on every release,
+  about 60 MB a time. That would pass GC-080's 100 MB "revisit storage"
+  threshold within two releases. A releases repo keeps the binaries out of
+  git entirely. Making the source public stays tied to the 1.0 launch.
+- **Installers are built manually**, on the local machine with a
+  checklist and script. No CI for now.
+- **Claude drafts 2-3 logo candidates**, and the product owner picks one.
+- **Text size: names only, two sizes.** Only map labels and quiz slips
+  get the setting, Normal or Large. A whole-app font scale was
+  explicitly not wanted.
+- **The tutorial is sandboxed.** It runs a real quiz, but its progress is
+  in memory only and never becomes real review data. It is started by a
+  button plus a dismissible first-visit nudge, and never auto-starts. It
+  always uses Italy — Regions. The request's "preview" means the existing
+  Overview.
+- **Ask before every merge.** The remediation loop's automerge was
+  approved for that loop only; for user-visible features the product
+  owner wants to try each branch first. Tasks that need the product owner
+  (the logo pick, the Android signing key, creating the public repo,
+  publishing) also stop at that step.
