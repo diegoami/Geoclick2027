@@ -5,6 +5,64 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
+## v0.2.0 — 2026-09-13 — Known issues from the 2026-09-13 review resolved
+
+**The milestone that closes out the 2026-09-13 code review: every one of
+its 30 punch-list items has now shipped in v0.1.1, v0.1.2 or this
+release.** Waves 3 and 4 plus GC-080 — five tasks.
+
+For players:
+
+- **Neighbouring regions never share a colour any more.** Map colours used
+  to come from the length of each region's name, so neighbours often
+  matched and borders vanished. On Italy's provinces, Bolzano, Sondrio,
+  Belluno, Brescia and Bergamo were one olive blob. Every map now uses a
+  six-colour palette, assigned so that no two neighbours match. A test
+  checks all 44 maps. Unsolved regions are also more saturated, so
+  the palette reads at a glance, and solved regions (green) still stand
+  out clearly. (GC-032)
+- **Dragging a slip over a region is easier to see.** The hover highlight
+  is now a deep blue, because the new palette's light blue made it nearly
+  invisible on one region in six. (GC-032)
+- **Tours on big maps are watchable.** The Italian provinces tour used to
+  take 5½ minutes at normal speed. Big maps now start the tour faster:
+  italy-provinces at 2× (2:45), russia-regions and japan-towns-100k at
+  1.5×. Every other map is unchanged, and the speed menu still lets you
+  pick any speed. (GC-033)
+
+Under the hood:
+
+- Map labels are inserted as plain text instead of HTML, so a place name
+  can never inject markup. That matters once maps come from users or
+  OpenStreetMap. The popup styling that was copied into four
+  views now lives once in `app/src/app.css`. It was checked in all four
+  views and looks identical: same computed styles and widths as before.
+  (GC-022)
+- The map-build scripts are now typechecked (strict) and linted as part of
+  the regular gates. All their `any`s are gone, and the resulting code is
+  otherwise identical, so every map would build the same. (GC-004)
+- Decided (not migrated): the map tiles stay in plain git rather than Git
+  LFS. The repo pack is 15.6 MiB; the decision gets revisited at
+  100 MB, a 25 MB tileset or about 60 countries. (GC-080, see DECISIONS.md)
+- `npm run build-map-colors` recolours committed maps without rebuilding
+  tiles, and the build scripts now colour new maps automatically.
+
+Review findings closed: C8, D4, D12, and punch-list #8, #17, #21 (the
+popup CSS, folded into GC-022), #25, #29, #30. With v0.1.1 and v0.1.2, that
+is all 30 punch-list items.
+
+What this milestone does not claim:
+
+- **The review's broader point is only partly addressed.** It said the
+  code's rules live in comments and prose rather than in checks.
+  GC-021 (drop scoring), GC-030 (map data) and now GC-032 (colours) turned
+  their rules into tests, but nothing makes future work keep doing so.
+- **`feature/supabase-sso-sync` stays parked**, as DECISIONS.md records.
+  Cross-device sync is not part of this release.
+- **Desktop and Android builds were not rebuilt for this tag.** The web app
+  is the verified artefact. The GC-040 Android check on a real device is
+  still outstanding.
+
 ## v0.1.2 — 2026-09-13
 
 **The second remediation batch: a faster home page, safer saving, and the

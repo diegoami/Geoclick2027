@@ -118,7 +118,12 @@ Check items off as they land; update "Status" as iterations complete.
   (the `.orchestrator/state/*.json` files are gitignored machine state).
   Zombie hygiene is an explicit requirement: `node scripts/task.mjs doctor`
   runs every iteration and before every release. `scripts/seed-forge.mjs` is
-  deleted. Not started.
+  deleted. **Done (2026-09-13):** all 19 tasks merged. From the first
+  batch on, the loop merged each task itself once gates and definition of
+  done were green (the product owner's automerge call), and stopped only to
+  ask before each release tag. Shipped as `v0.1.1`, `v0.1.2` and the
+  `v0.2.0` milestone. Per-task notes are in the ledger; release notes are
+  in CHANGELOG.md.
 - **Git worktrees failed for parallel background feature work on this
   project as attempted 2026-09-12 — RESOLVED 2026-09-13.** Root cause was
   exactly as suspected: a `git worktree` checkout doesn't get its own
