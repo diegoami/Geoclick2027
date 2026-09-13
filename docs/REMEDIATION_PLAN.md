@@ -273,7 +273,7 @@ ORCHESTRATION.md § Automerge).
 | ID | Status | Merged (commit) | Released in | Notes |
 |---|---|---|---|---|
 | GC-001 | **merged** | `e619571` | v0.1.1 | lint passes for the first time; catch-all placed first in `.gitattributes` (spec said below binaries - would have overridden them) |
-| GC-002 | todo | — | v0.1.1 | |
+| GC-002 | **merged** | `02164f7` | v0.1.1 | `npm run setup-hooks`; pure-delete pushes skip gates; `doctor` still lists 10 pre-programme `feature/*` branches as "your call", not zombies |
 | GC-003 | todo | — | v0.1.1 | |
 | GC-010 | todo | — | v0.1.1 | |
 | GC-020 | todo | — | v0.1.1 | |
