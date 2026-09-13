@@ -207,6 +207,31 @@ combination, confirmed by actually launching the built binary:
 `GDK_BACKEND=x11 WEBKIT_DISABLE_DMABUF_RENDERER=1 ./target/release/app`.
 Real hardware (or a non-WSL Linux desktop) shouldn't need any of this.
 
+## App icons and splash screens (FT-05)
+
+Every icon comes from one file, `design/logo/geoclick-logo.svg`. Don't
+edit the generated PNGs by hand. After changing the SVG, run:
+
+```bash
+node design/logo/generate-icons.mjs
+```
+
+It regenerates:
+- the desktop set in `desktop/src-tauri/icons/`, via `tauri icon`;
+- Android's launcher icons: the adaptive foreground and background layers,
+  plus legacy square and round icons, at every density;
+- Android's splash screens, and the web favicon.
+
+It renders with the Playwright Chromium the tests already use, so there's
+no image tool to install. Two details are easy to undo by accident:
+- **The Android adaptive icon is two layers:** just the pin in the
+  foreground, the green with the faint map shapes in the background.
+  Launchers animate into the icon's outer edge, so a texture in the
+  foreground would show where it stops.
+- **Android 12+ ignores the splash PNGs** and draws its own launch screen
+  from the theme. `values/styles.xml` points it at the logo green and the
+  pin-only foreground.
+
 ## Running the Android build (Iteration 8+, in progress)
 
 Needs [Android Studio](https://developer.android.com/studio) (bundles the
