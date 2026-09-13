@@ -650,8 +650,7 @@
 					</p>
 					<div class="score-panel-actions">
 						<a class="score-panel-button" href={resolve('/')}>{t('quiz.backToMaps')}</a>
-						<button class="secondary" onclick={startPractice}
-							>{t('quiz.practiceAllRegions')}</button
+						<button class="secondary" onclick={startPractice}>{t('quiz.practiceAllRegions')}</button
 						>
 					</div>
 				{:else}
