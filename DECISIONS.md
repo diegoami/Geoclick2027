@@ -108,6 +108,41 @@ or amend an entry here as part of that change, not as an afterthought.
   the latter. "Hard" still builds a weaker interval and lower ease
   factor than "good" would, so it resurfaces sooner than a region
   nailed first try — just not literally later the same day.
+- **Every review interval is capped at 365 days (`MAX_INTERVAL_DAYS`)**
+  (GC-010, 2026-09-13). Uncapped, `round(interval * easeFactor)` grew
+  1 → 6 → 15 → 38 → 95 → 238 → 595 → 1488 days by the 8th clean review
+  (the score panel would say "Next review in 2265 days"), and by the 20th
+  it overflowed `Date` into a `"NaN-NaN-NaN"` due date — which
+  string-compares after every real date, so `isDue` returned false
+  forever and the card silently left the review pool, with nothing
+  logged. Why a year rather than the review's alternative of 180 days:
+  this is a geography game with a few dozen targets per map, not a
+  thousands-of-cards exam deck, so reviewing a *mastered* region once a
+  year costs the player almost nothing, and a year is the natural
+  "do I still know this" horizon for place knowledge. The cap first
+  bites at the 7th consecutive clean review (238 × 2.5 = 595 → 365), so
+  it only ever affects regions a player demonstrably knows. It also
+  makes the Date overflow structurally impossible rather than just
+  unlikely. No migration was needed for already-stored cards: a review
+  only happens when a card is due, so an interval over 365 days first
+  becomes possible at that 7th review, after 1+6+15+38+95+238 = 393 days
+  of history — and this app is weeks old, so no stored card can hold an
+  overlong interval or a NaN date yet.
+- **Ease factor now recovers: a clean ("good") review adds 0.1, up to a
+  ceiling of 2.5 (`MAX_EASE_FACTOR`)** (GC-010). Before, "good" left ease
+  unchanged and nothing ever raised it, so every "hard" (-0.15) was
+  permanent: one fumble followed by 20 perfect reviews still sat at 2.35,
+  and a card fumbled every other time slid to the 1.3 floor. +0.1 is
+  SM-2's own adjustment for a perfect answer. The ceiling is the default
+  on purpose — new cards start at the maximum, and ease exists to slow
+  down cards you *struggle* with, not to let a long clean streak compound
+  intervals faster than the default rate (the interval cap above bounds
+  those anyway). Net effect on a card fumbled every other review: it
+  still loses ease, but at -0.05 per hard/good pair instead of -0.15,
+  and a clean run brings it back. Together with the same-day "again"
+  rule and three grades instead of SM-2's six, this makes the scheduler
+  SM-2-*derived*, not "classic SM-2" as the docs used to claim — fixed in
+  `packages/srs/src/index.ts` and ARCHITECTURE.md.
 - **Practice mode (Iteration 6) never writes back to SRS
   state, and starts from a blank map.** It exists so replaying a
   mastered map is still possible once nothing's due, without that
