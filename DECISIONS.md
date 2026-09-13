@@ -617,3 +617,29 @@ or amend an entry here as part of that change, not as an afterthought.
   `sweden-towns-100k` (point quiz) both verified live before shipping -
   solved targets read unambiguously against every unsolved one in both
   geometry types.
+
+## SSO/cross-device sync deferred (2026-09-13)
+
+- **The Supabase SSO/cross-device-sync work is deliberately paused, not
+  abandoned.** The user asked to resume it ("let us pickit up") after it
+  had sat unfinished since 2026-09-12, and it was reconciled with four
+  intervening merges to `main` (map-list reorg, i18n, eight-countries
+  batch, background + quiz-contrast) — branch brought up to date,
+  `svelte-check` clean, and a real gap fixed along the way
+  (`AccountStatus.svelte` had hardcoded English from predating the i18n
+  merge, now routed through `t()`). Immediately after seeing that state,
+  the user changed their mind: "it does not make sense to add that
+  before planning to buy a domain, go public, set it up in a store."
+- **Reasoning: cross-device sync only pays for itself once there's a
+  public, persistent identity for someone to return to** — a domain, a
+  live public deployment, app-store presence. Building auth/sync
+  infrastructure ahead of that is premature; the feature would have
+  no real audience to serve yet.
+- **The branch (`feature/supabase-sso-sync`, at commit `f8fa986`) is
+  being kept, not deleted or merged** — the work (Supabase client,
+  Postgres schema with row-level security, `supabaseProgressRepository`,
+  Google sign-in UI, sync layer, see the "Cross-device sync (Supabase)"
+  entry above) stays parked exactly as reconciled, ready to pick up once
+  a domain purchase, public launch, or app-store submission is actually
+  being planned. See ROADMAP.md's Iteration 8+ backlog for the
+  corresponding status update.

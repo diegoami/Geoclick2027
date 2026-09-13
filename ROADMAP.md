@@ -65,16 +65,17 @@ Check items off as they land; update "Status" as iterations complete.
   requested 2026-09-12 (map-list reorganization, German/Italian UI
   languages, optional cross-device score sync via sign-in — see the
   Iteration 8+ backlog below): the first two are merged to `main`; sign-in
-  is scaffolded on `feature/supabase-sso-sync` (Supabase, user-confirmed)
-  but explicitly not finished — see that backlog entry. Four more items
+  is scaffolded and reconciled with `main` on `feature/supabase-sso-sync`
+  (Supabase, user-confirmed) but explicitly **paused/deferred** as of
+  2026-09-13 — see that backlog entry and DECISIONS.md. Four more items
   requested 2026-09-13, tracked in the Iteration 8+ backlog below: eight
   more countries and the adaptive per-country town-count threshold are
   both **done**, built together on
   `feature/add-eight-countries-adaptive-threshold`; the background-color
-  visual refresh is also **done**, built on `feature/better-background`.
-  Finalizing the SSO work above is the only one of these seven items
-  still not started. A full desktop+mobile retest is planned once that
-  lands too — see that backlog entry for why.
+  visual refresh and the quiz solved-state contrast fix are also **done**,
+  merged to `main`. Finalizing the SSO work above is on hold, not
+  scheduled — the full desktop+mobile retest that was waiting on it is
+  also on hold until SSO is picked back up.
 - **Reordered**: local persistence and spaced repetition swapped places
   from the original numbering. Spaced repetition is pointless without
   somewhere to remember what's due across sessions — user accounts
@@ -1389,36 +1390,34 @@ loop actually feels good. Candidates below, in rough priority order.
 - [x] ~~Plain-browser deployment (static hosting)~~ — done in Iteration 3.5,
       live on Netlify
 - [ ] **Optional sign-in (SSO) so scores sync across devices — provider
-      decided (Supabase), scaffolded on `feature/supabase-sso-sync`, not
-      yet finalized/merged.** Requested directly by the user (2026-09-12),
+      decided (Supabase), scaffolded and reconciled with `main` on
+      `feature/supabase-sso-sync`, but explicitly PAUSED, not being
+      pursued right now.** Requested directly by the user (2026-09-12),
       as the third of three roadmap items alongside the map-list
       reorganization and i18n below; the user confirmed Supabase as the
-      auth/backend choice the same day. This is the point where
-      "local-first, no backend" (see ARCHITECTURE.md's Storage section)
-      actually gets a backend — auth needs somewhere to verify tokens and
-      mint sessions, even if score storage itself stays minimal.
-      Explicitly **optional**: the existing local-only (`localStorage`/
-      SQLite) experience must keep working with no sign-in at all — this
-      adds a second, opt-in path, it doesn't replace the first one or make
-      an account a requirement to play. Built so far: a Supabase client
-      (graceful no-op when unconfigured), a multi-user Postgres schema
-      with row-level security, a `supabaseProgressRepository.ts`, a Google
-      sign-in control, and a sync layer (push local progress up on first
+      auth/backend choice the same day, and asked to resume it again on
+      2026-09-13. Built so far: a Supabase client (graceful no-op when
+      unconfigured), a multi-user Postgres schema with row-level
+      security, a `supabaseProgressRepository.ts`, a Google sign-in
+      control, and a sync layer (push local progress up on first
       sign-in, prefer remote thereafter) — see DECISIONS.md's
-      "Cross-device sync (Supabase)" entry. **Explicitly not finished** —
-      requested again 2026-09-13 ("we need to finalize optional SSO"):
-      still needs a real Supabase project created and wired up (see
-      ONBOARDING.md's "Enabling cross-device sync" steps), real
-      end-to-end testing of the OAuth flow and sync reconciliation on at
-      least two devices/browsers, and a merge decision once that's
-      verified — none of which could happen without the user's own
-      Supabase project.
+      "Cross-device sync (Supabase)" entry. The branch was brought fully
+      up to date with `main` (four intervening merges) and verified
+      clean (`svelte-check`, i18n gap in `AccountStatus.svelte` fixed) as
+      of commit `f8fa986`. **Deferred 2026-09-13** — the user decided it
+      doesn't make sense to finish this before there's a concrete plan
+      to buy a domain, go public, and publish to an app store; see
+      DECISIONS.md's "SSO/cross-device sync deferred" entry for the full
+      reasoning. The branch is being kept (not deleted, not merged) so
+      this work isn't lost — pick it up once those business milestones
+      are actually being planned. Until then this item is off the
+      active roadmap.
 - [ ] **Score recording/sync**, built on top of sign-in above: per (user,
       map) results from quiz sessions (`scoreSession`'s `{ total, perfect,
       totalErrors }` already has the shape this needs), persisted
       somewhere durable and synced across a signed-in user's devices,
       rather than local-only. Scaffolded together with sign-in above on
-      the same branch — see that entry.
+      the same branch — see that entry. **Paused for the same reason.**
 - [x] **Visual refresh: background color** — requested directly by the
       user (2026-09-13): "the background color is kind of meh, maybe
       something more captivating." Built on `feature/better-background`:
