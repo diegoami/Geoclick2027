@@ -54,7 +54,7 @@
 						closeOnClick: false,
 						className: 'geoclick-popup'
 					});
-					popup.setLngLat(e.lngLat).setHTML(`<strong>${name}</strong>`).addTo(map!);
+					popup.setLngLat(e.lngLat).setText(name).addTo(map!);
 				});
 
 				map.on('mouseenter', layerId, () => {
@@ -102,18 +102,5 @@
 		padding: 1rem;
 		font-family: system-ui, sans-serif;
 		color: #a33;
-	}
-	:global(.geoclick-popup .maplibregl-popup-content) {
-		font-family: system-ui, sans-serif;
-		font-size: 11px;
-		font-weight: 600;
-		padding: 1px 6px;
-		border-radius: 5px;
-		background: rgba(31, 61, 42, 0.65);
-		color: #ffffff;
-		box-shadow: none;
-	}
-	:global(.geoclick-popup .maplibregl-popup-tip) {
-		display: none;
 	}
 </style>
