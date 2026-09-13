@@ -1316,6 +1316,19 @@ via a real SQLite write. Approved for merge to `main`.
 **Deliverable:** to be scoped once the POC validates that the tour → quiz
 loop actually feels good. Candidates below, in rough priority order.
 
+- [ ] **Four new feature requests, raised 2026-09-13, not yet scoped into
+      tasks** — see [docs/FEATURE_BACKLOG.md](docs/FEATURE_BACKLOG.md) for
+      the full writeup of each: (1) public distribution of the desktop
+      installer and Android APK, including the private-repo/GitHub-Releases
+      access problem and the options for it; (2) real app logos for the
+      desktop and mobile shells (currently default scaffold icons); (3) an
+      interactive, multi-language, click-through in-app tutorial; (4) an
+      accessibility fix/feature for region and town names being too small to
+      read on the map, with no size control today. Deliberately kept separate
+      from the remediation programme above (that one fixes the Sept 13
+      review's findings; this is new product work) — a future planning pass
+      turns this backlog into its own task list the same way the review
+      became `docs/tasks.yaml`.
 - [ ] **Self-serve map-authoring pipeline** — right now, adding a new map
       means running `data/scripts/build-map.ts` by hand and knowing its
       quirks: per-country name fixes are a hardcoded table in the script
