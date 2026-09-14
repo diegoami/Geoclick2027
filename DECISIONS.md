@@ -1063,6 +1063,17 @@ answers:
   - The tutorial's practice run doesn't count as a visit.
   - Both lists are stored on the device, like the language setting (FT-15,
     FT-16).
+- **Added 2026-09-14, at FT-09's review of the tutorial script**
+  (`docs/TUTORIAL.md`):
+  - Explore gets a step of its own, so the tutorial has eleven steps.
+  - **Only Italy — Regions is sandboxed**, narrowing the entry above.
+    Every other map reads and writes real progress during the tutorial.
+    With everything in memory, the tutorial's first screen would show
+    every map card as due, as if progress had been wiped. A player who
+    paused the tutorial to play another map would also lose that session
+    without being told.
+  - The favourite star is a tip in the outro, not a step. Finish leaves
+    the player on the tour, which keeps playing.
 
 ## Recent and favourite maps (2026-09-14, FT-15/FT-16)
 
