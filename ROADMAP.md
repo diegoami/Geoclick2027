@@ -124,7 +124,7 @@ Check items off as they land; update "Status" as iterations complete.
   ask before each release tag. Shipped as `v0.1.1`, `v0.1.2` and the
   `v0.2.0` milestone. Per-task notes are in the ledger; release notes are
   in CHANGELOG.md.
-- **Feature programme (2026-09-13, v0.3.1 done, v0.4.0 navigation next)** — four new
+- **Feature programme (2026-09-13; v0.4.0 done 2026-09-14, tutorial v0.5.0 next)** — four new
   requests, each already investigated in
   [docs/FEATURE_BACKLOG.md](docs/FEATURE_BACKLOG.md): public downloads,
   app logos, an interactive three-language tutorial, and a names text-size
