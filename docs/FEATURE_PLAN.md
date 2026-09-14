@@ -1,7 +1,7 @@
 # Geoclick — Feature programme (planned 2026-09-13)
 
 This programme turns the four requests in
-[FEATURE_BACKLOG.md](FEATURE_BACKLOG.md) into twelve ordered tasks and two
+[FEATURE_BACKLOG.md](FEATURE_BACKLOG.md) into fourteen tasks and three
 releases. It is separate from the [remediation
 programme](REMEDIATION_PLAN.md), which closed with `v0.2.0`: that one
 fixed what a code review found, while this one adds things players will
@@ -28,6 +28,9 @@ DECISIONS.md's "Feature programme decisions" entry, so no task has to guess.
 | 7 | Which map does the tutorial use? | **Always Italy — Regions.** |
 | 8 | "Preview" in the tutorial request means? | **The existing Overview view.** |
 | 9 | Merging | **Ask before every merge.** The remediation loop's automerge was approved for that loop only, and CLAUDE.md's default applies here. The product owner tries each branch before it lands. |
+| 10 | Opening a map (added 2026-09-14) | **Maps open on their overview**, with every name shown, instead of the blank explore view. The explore view (click a region to see its name) **stays, as its own "Explore" tab** in the map bar. |
+| 11 | Android back button (added 2026-09-14) | **Back goes up one level, not back through history:** quiz, tour and explore go to that map's overview; the overview goes to the map list; on the map list, back closes the app as usual. Browser and desktop back buttons are unchanged. |
+| 12 | Release order (added 2026-09-14) | **These two ship first, as `v0.4.0`**, so they can be tried on a phone before the tutorial work starts. The tutorial moves to `v0.5.0`. |
 
 Why decision 1 beat FEATURE_BACKLOG.md's own suggestion (static files on
 the Netlify site): the current builds are 18 MB (`.msi`), 17 MB
@@ -77,7 +80,8 @@ version. `1.0.0` stays reserved for the public launch.
 | Release | Tasks | Theme |
 |---|---|---|
 | `v0.3.0` | FT-01 to FT-08 | **Readable and installable.** Map names magnify on hover or tap, the apps get a real logo, and anyone can download the Windows and Android installers. |
-| `v0.4.0` | FT-09 to FT-12 | **Tutorial.** An interactive walkthrough in English, German and Italian. |
+| `v0.4.0` | FT-13, FT-14 | **Navigation.** Maps open on their overview, explore gets its own tab, and Android's back button goes up a level. |
+| `v0.5.0` | FT-09 to FT-12 | **Tutorial.** An interactive walkthrough in English, German and Italian. |
 
 ---
 
@@ -311,7 +315,82 @@ Effort: **Low** is under an hour or so, **Medium** is a focused session,
 Follow RELEASES.md's release checklist, then its new build-and-publish
 section. The publish step is 🧑.
 
-### FT-09 — Tutorial script and interaction spec · Low · deps: none (start after v0.3.0)
+### FT-13 — Maps open on the overview; Explore becomes a tab · Low–Medium · deps: none
+
+- **Why:** decision 10. Opening a map today lands on the explore view, a
+  blank map where you click a region to see its name. The product owner
+  wants the overview, where every name is shown, as the first screen, and
+  explore kept as a tab.
+- **Do:**
+  - Home page map cards link to `/map/<id>/overview` instead of
+    `/map/<id>` (`app/src/routes/+page.svelte`). Look for any other link
+    to the bare map route and point it at the overview too, unless it
+    means explore specifically.
+  - `MapNav.svelte`: add an **Explore** tab linking to `/map/<id>`, in the
+    order Maps · Overview · Explore · Quiz · Tour. `active` gains
+    `'explore'`, and `MapView.svelte` passes it. The label goes in
+    `i18n.svelte.ts` in all three languages (for example Explore /
+    Erkunden / Esplora), with an icon in the same style as the others.
+  - **Watch the phone width:** a fifth tab has to fit the map bar at about
+    400 px in all three languages. German labels run longest. If it
+    doesn't fit, shrink or wrap the labels; don't drop the icons.
+  - The `/map/<id>` URL keeps working, so bookmarks and the tutorial's
+    later anchors are unaffected.
+- **Test:** a browser component test of `MapNav` showing all five tabs,
+  with the right one active in each view, if the existing test setup makes
+  that cheap. Otherwise verify in the browser.
+- **Verify:**
+  - home → a map lands on the overview, on a polygon map and a towns map;
+  - the Explore tab opens the click-to-reveal view;
+  - all five tabs fit at phone width in EN/DE/IT;
+  - the desktop app and the Android emulator.
+- **DoD:**
+  - maps open on the overview;
+  - Explore is reachable from every map view;
+  - no clipped nav at 400 px;
+  - ONBOARDING.md and ARCHITECTURE.md describe the new default;
+  - gates green.
+
+### FT-14 — Android back button goes up a level · Medium · deps: FT-13
+
+- **Why:** decision 11. Android's back button follows browsing history
+  today, so after quiz → tour → back you land in the quiz, not the
+  overview. The product owner wants it to go up the app's hierarchy.
+- **Do:**
+  - Add `@capacitor/app` to `app` and `mobile` at the Capacitor version
+    already in use, and run `cap sync`. Commit the Gradle and plugin files
+    that sync regenerates.
+  - Write a pure function `parentRoute(pathname)`:
+    - `/map/<id>/quiz`, `/map/<id>/tour` and `/map/<id>` (explore) go to
+      `/map/<id>/overview`;
+    - the overview goes to `/`;
+    - `/` returns "exit".
+
+    It must honour the app's base path (`resolve` from `$app/paths`).
+  - Register one `App.addListener('backButton', …)` from `+layout.svelte`,
+    only when `Capacitor.isNativePlatform()`. It navigates to
+    `parentRoute` with `goto(…, { replaceState: true })`, so history
+    doesn't grow, or calls `App.exitApp()` on the map list. Remove the
+    listener on destroy.
+  - Leave web and desktop back behaviour alone. Browser and Tauri history
+    keep working as today.
+- **Test:** unit-test `parentRoute` for every route, including a base
+  path and trailing slashes.
+- **Verify on the emulator:** `adb shell input keyevent KEYCODE_BACK` from
+  the quiz, tour, explore and overview goes to the expected screen each
+  time, and on the map list the app closes. Screenshots of each step.
+  **Try the release APK, not just a debug build** (RELEASES.md, step 2).
+- **DoD:**
+  - the back button follows decision 11 on Android;
+  - `parentRoute` is unit-tested;
+  - web and desktop back are unchanged;
+  - ONBOARDING.md notes the plugin and the listener;
+  - gates green.
+
+**→ Release `v0.4.0`.** Web plus freshly built installers, per
+RELEASES.md (open a map in each installer before publishing).
+
+### FT-09 — Tutorial script and interaction spec · Low · deps: FT-13, FT-14 (start after v0.4.0)
 
 - **Why:** FEATURE_BACKLOG.md §3 says this item needs a design pass
   before building. Decisions 5–8 settled the big questions; what's left
@@ -341,6 +420,14 @@ section. The publish step is 🧑.
   - advance the step on any real zoom or pan action (a MapLibre `zoom`
     or `move` event), not just a button click, so a player who
     discovers the gesture on their own still progresses.
+
+  **Adjust for v0.4.0 (added 2026-09-14):** after FT-13, selecting a map
+  already lands on the overview, so the "switch to Overview" step becomes
+  "here's the overview you land on", or merges into step 1. Explore now
+  has its own tab, so decide whether the tour of the app shows it. On
+  Android, the back button goes up a level (FT-14), which the "return to
+  Quiz" / "back to Overview" steps can use. Settle this with the product
+  owner in the copy review.
 
   It also covers:
   - Skip, Back and Replay behaviour;
@@ -438,7 +525,7 @@ section. The publish step is 🧑.
   - ARCHITECTURE.md mentions the overlay and the sandbox;
   - gates green.
 
-**→ Release `v0.4.0`.** Web plus freshly built installers, per
+**→ Release `v0.5.0`.** Web plus freshly built installers, per
 RELEASES.md.
 
 ---
@@ -477,13 +564,16 @@ Update this table as tasks merge. Commit hashes are the merge commits.
 | FT-06 | **released** | `6de2d98` | v0.3.0 | signing setup verified with throwaway keys (unsigned without, signed via env or properties); 🧑 real keystore pending, needed before FT-07's dry run |
 | FT-07 | **released** | `8e6120e` | v0.3.0 | package-release.mjs dry run: .msi 17.0 MB, -setup.exe 15.8 MB, APK 24.5 MB + SHA256SUMS (throwaway key, output deleted); Android versionCode now tracks the version (1 → 200) |
 | FT-08 | **released** | `e5aa02d` | v0.3.0 | 🧑 public repo created (diegoami/geoclick-releases, README only); web-only download link EN/DE/IT; publish script dry-runs unless --confirm; first publish = v0.3.0 |
-| FT-09 | todo | — | v0.4.0 | 🧑 copy review |
-| FT-10 | todo | — | v0.4.0 | |
-| FT-11 | todo | — | v0.4.0 | |
-| FT-12 | todo | — | v0.4.0 | |
+| FT-13 | todo | — | v0.4.0 | overview as default + Explore tab |
+| FT-14 | todo | — | v0.4.0 | Android back button goes up a level |
+| FT-09 | todo | — | v0.5.0 | 🧑 copy review |
+| FT-10 | todo | — | v0.5.0 | |
+| FT-11 | todo | — | v0.5.0 | |
+| FT-12 | todo | — | v0.5.0 | |
 
 | Release | State | Tag | Date |
 |---|---|---|---|
 | `v0.3.0` | **cut** | `v0.3.0` → `abafcbb` | 2026-09-13 — installers published to diegoami/geoclick-releases (APK signed with the release key) |
 | `v0.3.1` | **cut** (hotfix) | `v0.3.1` → `fd04733` | 2026-09-13 — desktop app opened maps empty in v0.3.0 (Tauri ignores Range requests; tiles now loaded whole). Installers published; v0.3.0 notes carry a warning |
 | `v0.4.0` | not cut | — | — |
+| `v0.5.0` | not cut | — | — |

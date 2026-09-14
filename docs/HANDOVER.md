@@ -13,7 +13,7 @@ and [DECISIONS.md](../DECISIONS.md).
 | `main` | clean, in sync with GitHub; last commit is this handover |
 | Latest release | **v0.3.1** (tag at `fd04733`). The web app deploys from `main`; installers are on the public [releases page](https://github.com/diegoami/geoclick-releases/releases/latest) |
 | Remediation programme | Closed with v0.2.0 ([REMEDIATION_PLAN.md](REMEDIATION_PLAN.md)) |
-| Feature programme | v0.3.0 shipped (FT-01 to FT-08), plus hotfix v0.3.1. **v0.4.0 is next: the tutorial, FT-09 to FT-12** |
+| Feature programme | v0.3.0 shipped (FT-01 to FT-08), plus hotfix v0.3.1. **Next is v0.4.0, navigation:** FT-13 (maps open on the overview, plus an Explore tab) and FT-14 (Android back goes up a level). The tutorial (FT-09 to FT-12) follows as **v0.5.0** |
 
 Shipped in v0.3.x:
 - map labels at 13px `rem`, magnified on hover and on tap;
@@ -29,7 +29,7 @@ Shipped in v0.3.x:
 Suggested first message for the next session:
 
 > Read docs/HANDOVER.md and docs/FEATURE_PLAN.md. Continue the feature
-> programme with FT-09, one task at a time, asking me before every merge.
+> programme with FT-13, one task at a time, asking me before every merge.
 
 The programme's rules are in FEATURE_PLAN.md, "How this programme runs":
 - one branch per task, `feat/ft-NN-…`;
@@ -42,7 +42,10 @@ The programme's rules are in FEATURE_PLAN.md, "How this programme runs":
 🧑 steps always stop and wait: product copy review in FT-09, anything
 public, and anything involving secrets.
 
-**FT-09** writes `docs/TUTORIAL.md`, the step script and interaction spec.
+**FT-13 and FT-14 come first** (added 2026-09-14, decisions 10–12 in
+FEATURE_PLAN.md). FT-14 needs the `@capacitor/app` plugin, and its check is
+`adb shell input keyevent KEYCODE_BACK` on the emulator, using the release
+APK. Then **FT-09** writes `docs/TUTORIAL.md`, the step script and interaction spec.
 Another session added a zoom/pan step to FT-09's spec, so read the current
 text. The product owner reviews the copy at the merge request. FT-10 (the
 sandboxed in-memory progress store), FT-11 (engine and overlay) and FT-12

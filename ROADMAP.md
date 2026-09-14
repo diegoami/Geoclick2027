@@ -124,7 +124,7 @@ Check items off as they land; update "Status" as iterations complete.
   ask before each release tag. Shipped as `v0.1.1`, `v0.1.2` and the
   `v0.2.0` milestone. Per-task notes are in the ledger; release notes are
   in CHANGELOG.md.
-- **Feature programme (2026-09-13, v0.3.0 done, v0.4.0 next)** — four new
+- **Feature programme (2026-09-13, v0.3.1 done, v0.4.0 navigation next)** — four new
   requests, each already investigated in
   [docs/FEATURE_BACKLOG.md](docs/FEATURE_BACKLOG.md): public downloads,
   app logos, an interactive three-language tutorial, and a names text-size
@@ -135,8 +135,10 @@ Check items off as they land; update "Status" as iterations complete.
   **v0.3.0 (FT-01 to FT-08):** label size and magnify-on-hover/tap (the
   planned Normal/Large switch was replaced at review), the pin logo on
   every shell, Android release signing, and a packaging script. Installers
-  are published to the public `diegoami/geoclick-releases` repo. Next:
-  the tutorial, FT-09 to FT-12.
+  are published to the public `diegoami/geoclick-releases` repo. v0.3.1
+  fixed empty maps in the desktop app. **Next, v0.4.0 (added 2026-09-14):**
+  maps open on their overview, with an Explore tab, and Android back goes up
+  a level (FT-13, FT-14). Then the tutorial, as v0.5.0 (FT-09 to FT-12).
 - **Git worktrees failed for parallel background feature work on this
   project as attempted 2026-09-12 — RESOLVED 2026-09-13.** Root cause was
   exactly as suspected: a `git worktree` checkout doesn't get its own
