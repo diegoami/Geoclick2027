@@ -93,7 +93,7 @@ version. `1.0.0` stays reserved for the public launch.
 |---|---|---|
 | `v0.3.0` | FT-01 to FT-08 | **Readable and installable.** Map names magnify on hover or tap, the apps get a real logo, and anyone can download the Windows and Android installers. |
 | `v0.4.0` | FT-13, FT-14 | **Navigation.** Maps open on their overview, explore gets its own tab, and Android's back button goes up a level. |
-| `v0.5.0` | FT-15, FT-16, FT-09 to FT-12 | **Tutorial, favourites and recent maps.** Mark maps as favourites, find recently played maps at the top of the home page, and an interactive walkthrough in English, German and Italian. |
+| `v0.5.0` | FT-15, FT-16, FT-17, FT-09 to FT-12 | **Tutorial, favourites and recent maps.** Mark maps as favourites, find recently played maps at the top of the home page, and an interactive walkthrough in English, German and Italian. |
 
 ---
 
@@ -468,6 +468,18 @@ RELEASES.md (open a map in each installer before publishing).
   - ONBOARDING.md mentions `mapPrefs`;
   - gates green.
 
+### FT-17 — Set Favourites and Recent apart on the home page · Low · deps: FT-16
+
+- **Why (product owner, 2026-09-14, while trying FT-11):** Favourites and
+  Recent "look too much like the rest of the maps"; they read as two more
+  country groups.
+- **Do:** put both in one panel with its own background and border, give
+  their headings an icon and the accent colour, make their cards white,
+  and start the country list with an "All maps" heading (EN/DE/IT). The
+  panel and that heading show only when there's a favourite or a recent
+  map. Countries become `h3` under "All maps".
+- **DoD:** checked at 1280px and 400px, EN and DE; gates green.
+
 ### FT-09 — Tutorial script and interaction spec · Low · deps: FT-13, FT-14, FT-16
 
 - **Why:** FEATURE_BACKLOG.md §3 says this item needs a design pass
@@ -662,6 +674,7 @@ Update this table as tasks merge. Commit hashes are the merge commits.
 | FT-14 | **released** | `88f7950` | v0.4.0 | back goes up a level (emulator: quiz/tour/explore → overview → list → exit); tried by the product owner on their phone via v0.4.0-alpha.1 |
 | FT-15 | **merged** | `608937a` | v0.5.0 | Recent section (5 newest, any map view counts, device-local); browser-checked at 1280/400px; desktop (CDP) + Android (emulator) checked in v0.5.0-alpha.1 |
 | FT-16 | **merged** | `a006833` | v0.5.0 | star on home cards + map bar, Favourites section first; browser-checked incl. 400px DE/IT; desktop (CDP) + Android (emulator) checked in v0.5.0-alpha.1. To check with TalkBack on a phone: the emulator's uiautomator dump showed the star with no name or pressed state (the language pills lose their state the same way, so likely the dump) |
+| FT-17 | in review | — | v0.5.0 | Favourites + Recent in one panel, "All maps" heading before the countries |
 | FT-09 | **merged** | `cd47cc6` | v0.5.0 | docs/TUTORIAL.md: 11 steps + intro/outro, EN/DE/IT copy; 🧑 copy approved 2026-09-14 (decisions 17-19: Explore step, italy-regions-only sandbox, star tip, Finish stays on tour) |
 | FT-10 | **merged** | `1741112` | v0.5.0 | italy-regions in memory during the tutorial, other maps live (decision 18); no localStorage writes in a tutorial quiz (tested); normal play smoke-checked in the browser |
 | FT-11 | todo | — | v0.5.0 | |

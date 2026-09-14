@@ -47,6 +47,7 @@
 	// can't see. Showing it only after mount keeps the first client render equal
 	// to that HTML (no hydration mismatch).
 	let mounted = $state(false);
+	const hasShortcuts = $derived(mounted && (favouriteMaps().length > 0 || recentMaps().length > 0));
 
 	onMount(() => {
 		mounted = true;
@@ -138,32 +139,66 @@
 		</li>
 	{/snippet}
 
-	{#if mounted && favouriteMaps().length > 0}
-		<section class="country-group shortcut-group">
-			<h2>{t('home.favourites')}</h2>
-			<ul>
-				{#each favouriteMaps() as mapId (mapId)}
-					{@render mapCard(mapId, mapDisplayName(mapId) ?? mapId)}
-				{/each}
-			</ul>
-		</section>
-	{/if}
+	<!-- Favourites and Recent share one panel, set apart from the full list by
+	     its background and the "All maps" heading below (FT-17): as plain
+	     sections they read like two more countries. -->
+	{#if hasShortcuts}
+		<div class="shortcuts">
+			{#if favouriteMaps().length > 0}
+				<section class="shortcut-group">
+					<h2>
+						<svg viewBox="0 0 24 24" aria-hidden="true"
+							><path
+								d="M12 3.6l2.55 5.2 5.75.84-4.16 4.05.98 5.72L12 16.72l-5.12 2.69.98-5.72L3.7 9.64l5.75-.84z"
+								fill="currentColor"
+							/></svg
+						>
+						{t('home.favourites')}
+					</h2>
+					<ul>
+						{#each favouriteMaps() as mapId (mapId)}
+							{@render mapCard(mapId, mapDisplayName(mapId) ?? mapId)}
+						{/each}
+					</ul>
+				</section>
+			{/if}
 
-	{#if mounted && recentMaps().length > 0}
-		<section class="country-group shortcut-group">
-			<h2>{t('home.recent')}</h2>
-			<ul>
-				{#each recentMaps() as mapId (mapId)}
-					{@render mapCard(mapId, mapDisplayName(mapId) ?? mapId)}
-				{/each}
-			</ul>
-		</section>
+			{#if recentMaps().length > 0}
+				<section class="shortcut-group">
+					<h2>
+						<svg viewBox="0 0 24 24" aria-hidden="true"
+							><circle
+								cx="12"
+								cy="12"
+								r="8.5"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+							/><path
+								d="M12 7.5V12l3 2"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+							/></svg
+						>
+						{t('home.recent')}
+					</h2>
+					<ul>
+						{#each recentMaps() as mapId (mapId)}
+							{@render mapCard(mapId, mapDisplayName(mapId) ?? mapId)}
+						{/each}
+					</ul>
+				</section>
+			{/if}
+		</div>
+		<h2 class="all-maps">{t('home.allMaps')}</h2>
 	{/if}
 
 	<div class="groups">
 		{#each mapGroups as group (group.country)}
 			<section class="country-group">
-				<h2>{group.country}</h2>
+				<h3>{group.country}</h3>
 				<ul>
 					{#each group.maps as map (map.id)}
 						<!-- The tutorial's first step points at this card, not at a copy of it in
@@ -239,9 +274,47 @@
 		top: 0.3rem;
 		right: 0.35rem;
 	}
-	.shortcut-group {
+	.shortcuts {
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+		margin-bottom: 2rem;
+		padding: 1rem 1rem 1.1rem;
 		text-align: left;
-		margin-bottom: 1.5rem;
+		background: rgba(255, 255, 255, 0.6);
+		border: 1px solid rgba(181, 105, 31, 0.28);
+		border-radius: 1rem;
+		box-shadow: 0 2px 10px rgba(17, 24, 21, 0.06);
+	}
+	.shortcut-group h2 {
+		display: flex;
+		align-items: center;
+		gap: 0.4rem;
+		margin: 0 0 0.6rem;
+		font-size: 1rem;
+		font-weight: 700;
+		color: #b5691f;
+	}
+	.shortcut-group h2 svg {
+		width: 1.1rem;
+		height: 1.1rem;
+	}
+	/* Opaque on the panel's lighter ground, so these cards stand out from the
+	   list's. */
+	.shortcut-group .map-card a {
+		background: #ffffff;
+	}
+	.shortcut-group .map-card a:hover {
+		background: #fbf4ec;
+	}
+	.all-maps {
+		margin: 0 0 1rem;
+		padding-bottom: 0.4rem;
+		border-bottom: 2px solid rgba(44, 58, 51, 0.25);
+		font-size: 1.15rem;
+		font-weight: 700;
+		color: #2c3a33;
+		text-align: left;
 	}
 	.groups {
 		display: flex;
@@ -249,7 +322,7 @@
 		gap: 1.5rem;
 		text-align: left;
 	}
-	.country-group h2 {
+	.country-group h3 {
 		margin: 0 0 0.5rem;
 		font-size: 1rem;
 		font-weight: 700;

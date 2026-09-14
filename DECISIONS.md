@@ -1134,6 +1134,12 @@ answers:
     the state twice with `aria-pressed`, so the standard toggle-button
     pattern won.
   - Favourites keep the order they were starred.
+- **Favourites and Recent share one panel, set apart from the full list**
+  (FT-17). As plain sections with the same headings and cards as the
+  country groups, they read like two more countries (product owner). The
+  panel has its own background and border, the headings an icon and the
+  accent colour, and an "All maps" heading starts the country list. The
+  panel and heading appear only when there is something in them.
 
 ## Pre-release channel: alpha and beta (2026-09-14)
 
