@@ -34,6 +34,9 @@ export type TranslationKey =
 	| 'home.recent'
 	| 'home.favourites'
 	| 'home.allMaps'
+	| 'home.nudge.text'
+	| 'home.nudge.start'
+	| 'home.nudge.dismiss'
 	| 'fav.label'
 	| 'fav.add'
 	| 'fav.remove'
@@ -117,6 +120,9 @@ const en: Dictionary = {
 	'home.recent': 'Recent',
 	'home.favourites': 'Favourites',
 	'home.allMaps': 'All maps',
+	'home.nudge.text': 'New here? A three-minute tutorial shows you around.',
+	'home.nudge.start': 'Start the tutorial',
+	'home.nudge.dismiss': 'No thanks',
 	'fav.label': 'Favourite: {name}',
 	'fav.add': 'Add to favourites',
 	'fav.remove': 'Remove from favourites',
@@ -197,7 +203,7 @@ const en: Dictionary = {
 	'tutorial.step8': 'Not sure where a region is? Look it up in the **overview**.',
 	'tutorial.step9': 'Found Sardegna? Go back to the **Quiz**.',
 	'tutorial.step10':
-		'The regions you placed are still marked: what you solve stays solved. Each one comes back for review later, sooner if it gave you trouble, and less often each time you get it right. The map list shows how many are due on each map.',
+		'The regions you placed are still marked. Each comes back for review later: sooner if it gave you trouble, less often once you know it.',
 	'tutorial.step11':
 		'Last one: the **Tour** flies you to each region in turn and shows its name. Open it.'
 };
@@ -214,6 +220,9 @@ const de: Dictionary = {
 	'home.recent': 'Zuletzt geöffnet',
 	'home.favourites': 'Favoriten',
 	'home.allMaps': 'Alle Karten',
+	'home.nudge.text': 'Neu hier? Ein Tutorial von drei Minuten zeigt dir alles.',
+	'home.nudge.start': 'Tutorial starten',
+	'home.nudge.dismiss': 'Nein, danke',
 	'fav.label': 'Favorit: {name}',
 	'fav.add': 'Zu Favoriten hinzufügen',
 	'fav.remove': 'Aus Favoriten entfernen',
@@ -294,7 +303,7 @@ const de: Dictionary = {
 	'tutorial.step8': 'Nicht sicher, wo eine Region liegt? Schau in der **Übersicht** nach.',
 	'tutorial.step9': 'Sardegna gefunden? Dann zurück zum **Quiz**.',
 	'tutorial.step10':
-		'Die Regionen, die du platziert hast, sind noch markiert: Was du löst, bleibt gelöst. Jede kommt später zur Wiederholung zurück, früher, wenn sie dir schwerfiel, und seltener, je öfter du sie richtig hast. Die Kartenliste zeigt, wie viele auf jeder Karte fällig sind.',
+		'Deine platzierten Regionen sind noch markiert. Jede kommt später zur Wiederholung zurück: früher, wenn sie dir schwerfiel, seltener, wenn du sie kannst.',
 	'tutorial.step11':
 		'Zum Schluss die **Tour**: Sie fliegt dich nacheinander zu jeder Region und zeigt ihren Namen. Öffne sie.'
 };
@@ -311,6 +320,9 @@ const it: Dictionary = {
 	'home.recent': 'Recenti',
 	'home.favourites': 'Preferiti',
 	'home.allMaps': 'Tutte le mappe',
+	'home.nudge.text': 'Prima volta qui? Un tutorial di tre minuti ti mostra come funziona.',
+	'home.nudge.start': 'Inizia il tutorial',
+	'home.nudge.dismiss': 'No, grazie',
 	'fav.label': 'Preferito: {name}',
 	'fav.add': 'Aggiungi ai preferiti',
 	'fav.remove': 'Rimuovi dai preferiti',
@@ -391,7 +403,7 @@ const it: Dictionary = {
 	'tutorial.step8': "Non sai dov'è una regione? Controlla nella **panoramica**.",
 	'tutorial.step9': 'Trovata la Sardegna? Torna al **Quiz**.',
 	'tutorial.step10':
-		"Le regioni che hai posizionato sono ancora segnate: quello che risolvi resta risolto. Ognuna torna più avanti per un ripasso, prima se ti ha dato problemi e sempre più di rado ogni volta che la indovini. L'elenco delle mappe mostra quante sono da ripassare su ogni mappa.",
+		'Le regioni che hai posizionato restano segnate. Ognuna torna più avanti per un ripasso: prima se ti ha messo in difficoltà, più di rado quando la conosci.',
 	'tutorial.step11':
 		"Per finire, il **Tour**: ti porta da una regione all'altra e ne mostra il nome. Aprilo."
 };

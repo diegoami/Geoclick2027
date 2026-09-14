@@ -200,10 +200,8 @@ Touch:
 
 ### 10. Spaced repetition — quiz
 
-> The regions you placed are still marked: what you solve stays solved.
-> Each one comes back for review later, sooner if it gave you trouble, and
-> less often each time you get it right. The map list shows how many are
-> due on each map.
+> The regions you placed are still marked. Each comes back for review
+> later: sooner if it gave you trouble, less often once you know it.
 
 - **Highlight:** the progress line under the map name ("2 / 20 placed").
 - **Moves on:** Next.
@@ -211,8 +209,11 @@ Touch:
   comes back after 1 day, then 6, then about 15, and so on; a placement
   after a mistake grades "hard" and comes back sooner; a region revealed
   after three misses stays due the same day (DECISIONS.md, "Persistence &
-  retention"). "What you solve stays solved" means for today, which is what
-  the player has just seen. The line on the map list reads "N to review".
+  retention").
+- **Shortened at FT-12:** the first draft (approved at FT-09) also said
+  "what you solve stays solved" and "the map list shows how many are due
+  on each map". At 360px it ran to 7 lines in German (5 in English, 6 in
+  Italian), so both went; the rest says the same in 4 lines or fewer.
 
 ### 11. The tour — quiz
 
@@ -363,8 +364,9 @@ this at FT-09's review, 2026-09-14.
   whichever doesn't cover the highlighted element. On the quiz and the
   tour it's always the top, just below the map bar, because the tray and
   the tour's controls are at the bottom (at every width).
-- **Length:** every card fits in four lines at 360px wide in German, the
-  longest language. FT-12 measures this and shortens copy where needed.
+- **Length:** every numbered step's text fits in four lines at 360px wide
+  in German, the longest language (measured at FT-12). The intro and
+  outro may take five: they stand alone, with nothing to do behind them.
 - **Touch:** dragging a slip already works by touch (pointer events). The
   card never sits on the tray or on the region the step asks for.
 - **Missing element:** if a step's element isn't on screen (still loading,
@@ -444,7 +446,7 @@ mark that up in the strings.
 | `tutorial.step7` | Now get one wrong on purpose: drop **Sardegna** anywhere on the mainland. The region flashes red and the name goes back to the tray. | Jetzt ein Fehler mit Absicht: Lege **Sardegna** irgendwo auf dem Festland ab. Die Region blinkt rot, und der Name geht zurück in die Ablage. | Ora sbaglia apposta: lascia **Sardegna** in un punto qualsiasi della penisola. La regione lampeggia in rosso e il nome torna nel vassoio. |
 | `tutorial.step8` | Not sure where a region is? Look it up in the **overview**. | Nicht sicher, wo eine Region liegt? Schau in der **Übersicht** nach. | Non sai dov'è una regione? Controlla nella **panoramica**. |
 | `tutorial.step9` | Found Sardegna? Go back to the **Quiz**. | Sardegna gefunden? Dann zurück zum **Quiz**. | Trovata la Sardegna? Torna al **Quiz**. |
-| `tutorial.step10` | The regions you placed are still marked: what you solve stays solved. Each one comes back for review later, sooner if it gave you trouble, and less often each time you get it right. The map list shows how many are due on each map. | Die Regionen, die du platziert hast, sind noch markiert: Was du löst, bleibt gelöst. Jede kommt später zur Wiederholung zurück, früher, wenn sie dir schwerfiel, und seltener, je öfter du sie richtig hast. Die Kartenliste zeigt, wie viele auf jeder Karte fällig sind. | Le regioni che hai posizionato sono ancora segnate: quello che risolvi resta risolto. Ognuna torna più avanti per un ripasso, prima se ti ha dato problemi e sempre più di rado ogni volta che la indovini. L'elenco delle mappe mostra quante sono da ripassare su ogni mappa. |
+| `tutorial.step10` | The regions you placed are still marked. Each comes back for review later: sooner if it gave you trouble, less often once you know it. | Deine platzierten Regionen sind noch markiert. Jede kommt später zur Wiederholung zurück: früher, wenn sie dir schwerfiel, seltener, wenn du sie kannst. | Le regioni che hai posizionato restano segnate. Ognuna torna più avanti per un ripasso: prima se ti ha messo in difficoltà, più di rado quando la conosci. |
 | `tutorial.step11` | Last one: the **Tour** flies you to each region in turn and shows its name. Open it. | Zum Schluss die **Tour**: Sie fliegt dich nacheinander zu jeder Region und zeigt ihren Namen. Öffne sie. | Per finire, il **Tour**: ti porta da una regione all'altra e ne mostra il nome. Aprilo. |
 
 Notes on the copy:
@@ -458,9 +460,7 @@ Notes on the copy:
   i18n), hence "unter Italy" and "sotto Italy".
 - Italian avoids gendered forms: "Ti diamo il benvenuto" rather than
   "Benvenuto", "in prima persona" rather than "tu stesso".
-- Step 10 has the longest copy, and at phone width in German it probably
-  won't fit four lines. FT-12 checks, and if it doesn't fit the last
-  sentence goes.
+- Step 10 was shortened at FT-12 to fit four lines (see step 10 above).
 
 ---
 

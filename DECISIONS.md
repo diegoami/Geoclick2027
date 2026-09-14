@@ -1104,6 +1104,19 @@ answers:
   (`startTutorialSandbox` / `endTutorialSandbox`); only the tutorial
   engine calls it. It also keeps the tutorial's map out of Recent.
 
+## Tutorial nudge and copy length (2026-09-14, FT-12)
+
+- **The "New here?" nudge goes away for good** once the tutorial has
+  been started (from anywhere) or the player chooses "No thanks". Its
+  buttons say what they do, rather than a bare ×. The choice is stored on
+  the device like the language (`geoclick:tutorial-seen:v1`). It only
+  offers; the tutorial never starts by itself (decision 6).
+- **Each numbered step fits in four lines at 360px in German.** Cards sit
+  over the screen the player is working on, so a long one hides what the
+  step is about. Measured in FT-12's browser runs; step 10 (spaced
+  repetition) was the only one over, at 7 lines, and lost two clauses. The
+  intro and outro may take five, since there's nothing to do behind them.
+
 ## Recent and favourite maps (2026-09-14, FT-15/FT-16)
 
 - **They're stored on the device, not in the progress store.**

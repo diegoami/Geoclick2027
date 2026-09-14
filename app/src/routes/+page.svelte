@@ -15,7 +15,10 @@
 	import FavouriteStar from '$lib/FavouriteStar.svelte';
 	import { RELEASES_URL, isNativeShell } from '$lib/platform';
 	import TutorialButton from '$lib/TutorialButton.svelte';
+	import TutorialNudge from '$lib/TutorialNudge.svelte';
+	import { showTutorialNudge } from '$lib/tutorialSeen.svelte';
 	import { TUTORIAL_MAP_ID, isTutorialSandboxActive } from '$lib/tutorialSandbox.svelte';
+	import { tutorialState } from '$lib/tutorial.svelte';
 
 	// Flat view of every map - onMount's data-loading loop below doesn't
 	// care about grouping, only about (id) -> per-map progress data, so it
@@ -109,6 +112,12 @@
 			<a href={RELEASES_URL} target="_blank" rel="external noopener">{t('home.download.link')}</a>
 		</p>
 	{/if}
+	<!-- First visit only, and never while a tutorial is running; after mount,
+	     since only the device knows (FT-12). -->
+	{#if mounted && showTutorialNudge() && tutorialState().status === 'idle'}
+		<TutorialNudge />
+	{/if}
+
 	{#snippet mapCard(mapId: string, label: string, anchor?: string)}
 		{@const summary = lastSessions[mapId]}
 		{@const due = dueStatuses[mapId]}
