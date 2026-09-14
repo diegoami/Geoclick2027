@@ -1,7 +1,7 @@
 # Geoclick — Feature programme (planned 2026-09-13)
 
 This programme turns the four requests in
-[FEATURE_BACKLOG.md](FEATURE_BACKLOG.md) into fourteen tasks and three
+[FEATURE_BACKLOG.md](FEATURE_BACKLOG.md) into sixteen tasks and three
 releases. It is separate from the [remediation
 programme](REMEDIATION_PLAN.md), which closed with `v0.2.0`: that one
 fixed what a code review found, while this one adds things players will
@@ -31,6 +31,10 @@ DECISIONS.md's "Feature programme decisions" entry, so no task has to guess.
 | 10 | Opening a map (added 2026-09-14) | **Maps open on their overview**, with every name shown, instead of the blank explore view. The explore view (click a region to see its name) **stays, as its own "Explore" tab** in the map bar. |
 | 11 | Android back button (added 2026-09-14) | **Back goes up one level, not back through history:** quiz, tour and explore go to that map's overview; the overview goes to the map list; on the map list, back closes the app as usual. Browser and desktop back buttons are unchanged. |
 | 12 | Release order (added 2026-09-14) | **These two ship first, as `v0.4.0`**, so they can be tried on a phone before the tutorial work starts. The tutorial moves to `v0.5.0`. |
+| 13 | Recent maps (added 2026-09-14) | **Any map you open counts:** overview, explore, quiz or tour. The home page shows the **5 most recent**, newest first, and reopening one moves it to the top. |
+| 14 | Favourite maps (added 2026-09-14) | **A star on every home page map card and in the map bar**; both toggle the same favourite. |
+| 15 | Home page order (added 2026-09-14) | **Favourites, then Recent, then all maps by country.** A section shows only when it has something in it. Both lists live on the device, like the language setting. |
+| 16 | Tutorial and Recent (added 2026-09-14) | **The tutorial's practice run doesn't count as a visit.** It stays out of Recent, the same way it saves no real progress (decision 5). |
 
 Why decision 1 beat FEATURE_BACKLOG.md's own suggestion (static files on
 the Netlify site): the current builds are 18 MB (`.msi`), 17 MB
@@ -86,7 +90,7 @@ version. `1.0.0` stays reserved for the public launch.
 |---|---|---|
 | `v0.3.0` | FT-01 to FT-08 | **Readable and installable.** Map names magnify on hover or tap, the apps get a real logo, and anyone can download the Windows and Android installers. |
 | `v0.4.0` | FT-13, FT-14 | **Navigation.** Maps open on their overview, explore gets its own tab, and Android's back button goes up a level. |
-| `v0.5.0` | FT-09 to FT-12 | **Tutorial.** An interactive walkthrough in English, German and Italian. |
+| `v0.5.0` | FT-15, FT-16, FT-09 to FT-12 | **Tutorial, favourites and recent maps.** Mark maps as favourites, find recently played maps at the top of the home page, and an interactive walkthrough in English, German and Italian. |
 
 ---
 
@@ -395,7 +399,73 @@ section. The publish step is 🧑.
 **→ Release `v0.4.0`.** Web plus freshly built installers, per
 RELEASES.md (open a map in each installer before publishing).
 
-### FT-09 — Tutorial script and interaction spec · Low · deps: FT-13, FT-14 (start after v0.4.0)
+### FT-15 — Recent maps on the home page · Low–Medium · deps: none (start after v0.4.0)
+
+- **Why:** decisions 13, 15 and 16. Players come back to the same few
+  maps, and today they have to find them in a 44-map country list every
+  time.
+- **Do:**
+  - Add a small store, `app/src/lib/mapPrefs.svelte.ts`. It's shared with
+    FT-16 and modelled on `i18n.svelte.ts`: `$state` plus localStorage, with
+    the same `typeof localStorage` guard for prerendering and a try/catch
+    for private-mode storage.
+    - Key `geoclick:recent-maps:v1`.
+    - `recordVisit(mapId)` moves the map to the front, drops duplicates,
+      and keeps 5.
+    - `recentMaps()` returns the list, ignoring ids no longer in the
+      catalog (a removed map).
+  - Record a visit whenever a map view opens. `MapNav` is on all four
+    views, so its mount is the natural place. **No visit is recorded while
+    the tutorial is running** (decision 16): FT-10's tutorial flag makes
+    `recordVisit` a no-op.
+  - **Home page:** a "Recent" section above the country list, shown only
+    when non-empty. Its cards use the same style as the list, labelled
+    with the full map name ("Italy — Regions", from `mapDisplayName`),
+    and link to the map's overview. The heading goes in the i18n files in
+    all three languages.
+- **Test:** unit tests for the store: order, dedupe, cap at 5, unknown
+  ids dropped, and broken or blocked storage tolerated.
+- **Verify:** open three maps; the home page lists them newest first;
+  reopen the oldest and it moves to the top; reload the page and the list
+  persists. Check at phone width, in the desktop app and on the emulator.
+- **DoD:**
+  - Recent works as above on web, desktop and Android;
+  - tests pass;
+  - DECISIONS.md entry "Recent and favourite maps" (shared with FT-16);
+  - gates green.
+
+### FT-16 — Favourite maps · Medium · deps: FT-15
+
+- **Why:** decisions 14 and 15.
+- **Do:**
+  - Extend `mapPrefs.svelte.ts`: key `geoclick:favourite-maps:v1`, with
+    `toggleFavourite(mapId)`, `isFavourite(mapId)` and `favouriteMaps()`
+    (in the order they were starred, unknown ids dropped).
+  - **Home page:** a star button on every map card, in all three sections.
+    Make it a sibling of the card link, not nested inside it, so
+    keyboard and screen readers see two separate controls. Add a
+    "Favourites" section at the very top, shown only when non-empty. The
+    order is Favourites, then Recent, then all maps (decision 15).
+  - **Map bar:** a star next to the map-name chip under the tabs, not a
+    sixth tab, because the tab row is full at phone width (FT-13).
+  - The star's accessible name says what it does ("Add to favourites" /
+    "Remove from favourites"), with `aria-pressed`, in all three
+    languages. It needs a clear filled or empty state and a visible focus
+    ring.
+- **Test:** store unit tests (toggle, order, unknown ids), and a
+  browser component test for the star button (toggles, persists, and its
+  label changes).
+- **Verify:** star a map on the home page and it appears under
+  Favourites; unstar it from the map bar and it disappears; reload the
+  page and the state persists. Check at phone width in DE/IT, in the
+  desktop app and on the emulator.
+- **DoD:**
+  - favourites work from both places on web, desktop and Android;
+  - tests pass;
+  - ONBOARDING.md mentions `mapPrefs`;
+  - gates green.
+
+### FT-09 — Tutorial script and interaction spec · Low · deps: FT-13, FT-14, FT-16
 
 - **Why:** FEATURE_BACKLOG.md §3 says this item needs a design pass
   before building. Decisions 5–8 settled the big questions; what's left
@@ -434,6 +504,10 @@ RELEASES.md (open a map in each installer before publishing).
   Quiz" / "back to Overview" steps can use. Settle this with the product
   owner in the copy review.
 
+  **Also since 2026-09-14:** the home page now has Favourites and Recent
+  sections (FT-15, FT-16). Decide in the copy review whether the tour of
+  the app points out the star.
+
   It also covers:
   - Skip, Back and Replay behaviour;
   - what happens if the player goes off-script (navigates elsewhere):
@@ -464,8 +538,12 @@ RELEASES.md (open a map in each installer before publishing).
     tutorial ends or is skipped.
   - QuizView's same-day carry-forward (`alreadySolvedIds`) then shows the
     solved regions with no extra code.
+  - The same tutorial flag makes `recordVisit` in `mapPrefs.svelte.ts` a
+    no-op (FT-15, decision 16), so the tutorial's map never lands in
+    Recent.
 - **Tests:**
-  - a full tutorial-mode quiz session leaves `localStorage` byte-identical
+  - a full tutorial-mode quiz session leaves `localStorage` byte-identical,
+    including the Recent list,
     (a snapshot of every key before and after);
   - solved ids carry across a QuizView remount while tutorial mode is on;
   - ending the tutorial restores the real repository.
@@ -571,6 +649,8 @@ Update this table as tasks merge. Commit hashes are the merge commits.
 | FT-08 | **released** | `e5aa02d` | v0.3.0 | 🧑 public repo created (diegoami/geoclick-releases, README only); web-only download link EN/DE/IT; publish script dry-runs unless --confirm; first publish = v0.3.0 |
 | FT-13 | **released** | `d74ebb4` | v0.4.0 | maps open on the overview; Explore tab; tab row clear of the zoom control (360-1024px, EN/DE/IT); native shells checked with FT-14 |
 | FT-14 | **released** | `88f7950` | v0.4.0 | back goes up a level (emulator: quiz/tour/explore → overview → list → exit); tried by the product owner on their phone via v0.4.0-alpha.1 |
+| FT-15 | todo | — | v0.5.0 | Recent maps on the home page |
+| FT-16 | todo | — | v0.5.0 | Favourite maps (home cards + map bar) |
 | FT-09 | todo | — | v0.5.0 | 🧑 copy review |
 | FT-10 | todo | — | v0.5.0 | |
 | FT-11 | todo | — | v0.5.0 | |

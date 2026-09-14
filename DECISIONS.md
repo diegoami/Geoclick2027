@@ -1054,6 +1054,15 @@ answers:
     map list, and the list closes the app.
   - Both ship first, as `v0.4.0` (FT-13, FT-14), so they can be tried on
     a phone. The tutorial moves to `v0.5.0`.
+- **Added 2026-09-14, for v0.5.0:**
+  - A home page **Recent** section shows the 5 maps opened most recently,
+    counting any view of a map.
+  - **Favourites** are toggled by a star on every home page card and in
+    the map bar.
+  - The home page order is Favourites, then Recent, then all maps.
+  - The tutorial's practice run doesn't count as a visit.
+  - Both lists are stored on the device, like the language setting (FT-15,
+    FT-16).
 
 ## Pre-release channel: alpha and beta (2026-09-14)
 
