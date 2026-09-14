@@ -453,6 +453,15 @@ that same discipline into any task you pick up:
     language setting. Anything that reads it on the prerendered home page
     must wait until after mount, or the first render won't match the
     prerendered HTML.
+  - The tutorial's sandbox (FT-10, `tutorialSandbox.svelte.ts`) keeps
+    Italy — Regions' progress in memory while the tutorial runs. Views
+    get it through `createProgressRepository()` as usual, so a new view
+    that reads progress is sandboxed for free, as long as it calls that
+    factory rather than building a repository itself.
+  - "Failed to fetch dynamically imported module …/deps/…" in a browser
+    test, right after adding an import: Vite found a dependency its cache
+    didn't know and re-bundled mid-run. Run the tests again; a fresh
+    clone never hits it.
   - Labels magnify on demand (FT-02/FT-03). A mouse hover grows one to
     20px (`:hover`, only under `@media (hover: hover)`). On touch, a tap
     toggles `.is-magnified`, which `labelMagnify.ts` sets from one

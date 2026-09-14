@@ -140,7 +140,10 @@ the schema), picked when `isTauri()`; and SQLite via
 `@capacitor-community/sqlite` on Android (Iteration 8+,
 `app/src/lib/capacitorProgressRepository.ts`, same schema hand-mirrored
 since Capacitor has no separate migrations file of its own), picked when
-`Capacitor.isNativePlatform()`. Deliberately no user accounts for
+`Capacitor.isNativePlatform()`. While the tutorial runs, the chosen store
+comes wrapped in its sandbox (`tutorialSandbox.svelte.ts`, FT-10):
+Italy — Regions is kept in memory and thrown away afterwards, every other
+map goes to the real store. Deliberately no user accounts for
 this: spaced
 repetition only needs somewhere to remember state across sessions on one
 device, not a login. A sync backend (accounts, shared maps, cross-device
