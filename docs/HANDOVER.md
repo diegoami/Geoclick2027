@@ -61,7 +61,9 @@ sandboxed in-memory progress store), FT-11 (engine and overlay) and FT-12
   building (`assembleRelease` plus `apksigner`) or by testing which fields
   are filled, without printing values.
 - **Publishing** (`publish-release.mjs --confirm`) and **creating anything
-  public** need an explicit OK each time.
+  public** need an explicit OK each time. That includes alpha and beta
+  pre-releases: since 2026-09-14 every preview build is published as one
+  (RELEASES.md, "Pre-releases").
 
 ## Not verified, or still open
 

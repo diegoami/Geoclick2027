@@ -4,7 +4,7 @@
 //   node scripts/package-release.mjs                  # HEAD must be at vX.Y.Z
 //   node scripts/package-release.mjs --allow-untagged # dry run on any clean commit
 //
-// Produces Geoclick-X.Y.Z-windows-x64.msi, -windows-x64-setup.exe and
+// Produces Geoclick-X.Y.Z-windows-x64.msi (stable releases only), -windows-x64-setup.exe and
 // -android.apk (release-signed), plus SHA256SUMS.txt. Publishing them is a
 // separate, deliberate step - see docs/RELEASES.md.
 
@@ -20,6 +20,7 @@ const ALLOW_UNTAGGED = process.argv.includes('--allow-untagged');
 const WIN = process.platform === 'win32';
 const version = JSON.parse(readFileSync(path.join(ROOT, 'package.json'), 'utf8')).version;
 const tag = `v${version}`;
+const PRERELEASE = /-(alpha|beta)\.\d+$/.test(version); // docs/RELEASES.md, "Pre-releases"
 const outDir = path.join(ROOT, 'dist-release', tag);
 
 const fail = (msg) => {
@@ -91,7 +92,13 @@ const bundle = path.join(ROOT, 'desktop', 'src-tauri', 'target', 'release', 'bun
 const apkDir = path.join(ROOT, 'mobile', 'android', 'app', 'build', 'outputs', 'apk', 'release');
 // A signed APK left over from an earlier build must never be mistaken for this one.
 rmSync(apkDir, { recursive: true, force: true });
-step('desktop (tauri build: web app + .msi + -setup.exe)', 'npm', ['run', 'build', '--workspace=desktop']);
+// A pre-release (X.Y.Z-alpha.N / -beta.N) ships the -setup.exe only: the MSI
+// format's version field is purely numeric, so WiX can't take "alpha".
+step(
+	PRERELEASE ? 'desktop (tauri build: web app + -setup.exe; pre-release, no .msi)' : 'desktop (tauri build: web app + .msi + -setup.exe)',
+	'npm',
+	['run', 'build', '--workspace=desktop', ...(PRERELEASE ? ['--', '--bundles', 'nsis'] : [])]
+);
 step('android: copy the web build in (cap sync)', 'npm', ['run', 'sync'], { cwd: path.join(ROOT, 'mobile') });
 const androidDir = path.join(ROOT, 'mobile', 'android');
 step('android: release APK', path.join(androidDir, WIN ? 'gradlew.bat' : 'gradlew'), ['assembleRelease'], {
@@ -102,10 +109,13 @@ step('android: release APK', path.join(androidDir, WIN ? 'gradlew.bat' : 'gradle
 // --- collect ---
 if (existsSync(path.join(apkDir, 'app-release-unsigned.apk')))
 	fail('Gradle produced an unsigned APK - check keystore.properties / the GEOCLICK_* variables.');
+const apkOut = path.join(apkDir, 'app-release.apk');
 const artefacts = [
-	[path.join(bundle, 'msi', `Geoclick_${version}_x64_en-US.msi`), `Geoclick-${version}-windows-x64.msi`],
+	...(PRERELEASE
+		? []
+		: [[path.join(bundle, 'msi', `Geoclick_${version}_x64_en-US.msi`), `Geoclick-${version}-windows-x64.msi`]]),
 	[path.join(bundle, 'nsis', `Geoclick_${version}_x64-setup.exe`), `Geoclick-${version}-windows-x64-setup.exe`],
-	[path.join(apkDir, 'app-release.apk'), `Geoclick-${version}-android.apk`]
+	[apkOut, `Geoclick-${version}-android.apk`]
 ];
 for (const [from] of artefacts) if (!existsSync(from)) fail(`expected build output missing: ${from}`);
 
@@ -120,7 +130,7 @@ const apksigner = existsSync(buildTools)
 	: undefined;
 let signer = '(not checked: apksigner not found)';
 if (apksigner) {
-	const res = run(apksigner, ['verify', '--print-certs', artefacts[2][0]], { env: { ...process.env, JAVA_HOME: javaHome } });
+	const res = run(apksigner, ['verify', '--print-certs', apkOut], { env: { ...process.env, JAVA_HOME: javaHome } });
 	if (res.status !== 0) fail(`the APK does not verify:\n${res.stdout}${res.stderr}`);
 	signer = /certificate DN: (.*)/.exec(res.stdout)?.[1] ?? 'verified';
 }

@@ -51,6 +51,13 @@ shipping, and what's planned next.
   `CHANGELOG.md` whenever a meaningful batch of work lands — not every
   merge, but not left informal either. See `CHANGELOG.md` for the log
   and `docs/RELEASES.md` for the versioning scheme once it exists.
+- Previews count as releases too (product owner's rule, 2026-09-14). Any
+  build handed to players or testers before it's final, whether desktop
+  or Android, is published on the public releases page as an **alpha**
+  (unmerged work, tested only by the developer) or a **beta** (merged,
+  waiting for the product owner's test). Each is a GitHub pre-release,
+  never "latest", with a warning in its notes. Don't hand out
+  untracked local builds instead. See `docs/RELEASES.md`, "Pre-releases".
 - Roles: the user is Product Manager, Claude is Developer. When an
   iteration's deliverable is complete, don't just declare it done — give the
   user concrete steps to verify it themselves (what to run, click, or look

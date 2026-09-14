@@ -1055,6 +1055,28 @@ answers:
   - Both ship first, as `v0.4.0` (FT-13, FT-14), so they can be tried on
     a phone. The tutorial moves to `v0.5.0`.
 
+## Pre-release channel: alpha and beta (2026-09-14)
+
+- **Previews are published, not handed around.** The product owner asked
+  for any build given to testers, desktop or Android, to appear on the
+  public releases page marked alpha or beta if it isn't fully tested. The
+  trigger was a preview APK of FT-13/FT-14 about to be sent directly for
+  a phone test.
+- **alpha** means unmerged work tested only by the developer. **beta**
+  means everything for the release is merged and waiting for the product
+  owner's test. Both are GitHub pre-releases: never "latest", with a
+  warning banner, and "(alpha)" or "(beta)" in the title. The website's
+  download link keeps pointing at the last stable release.
+- **Android's versionCode scheme changed to
+  `(major·10000 + minor·100 + patch)·100 + stage`** (alpha N, beta 50+N,
+  stable 99). The old `major·10000 + minor·100 + patch` had no room
+  between versions, so an alpha → beta → stable sequence couldn't install
+  as updates. v0.3.1 shipped 301; every new code is higher.
+- **Pre-releases skip the `.msi`.** The Windows Installer format's
+  version is numeric only, and WiX rejects "alpha". The NSIS
+  `-setup.exe` has no such limit. Rules and steps are in
+  docs/RELEASES.md, "Pre-releases".
+
 ## App logo (2026-09-13, FT-04)
 
 - **Geoclick's icon is a cream map pin with an amber centre on the app's
