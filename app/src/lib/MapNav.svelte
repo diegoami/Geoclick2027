@@ -1,8 +1,9 @@
 <script lang="ts">
-	// Shared top nav bar for every map-scoped view (explore, overview, quiz,
-	// tour) - same 4 buttons everywhere (Maps/Overview/Quiz/Tour) so you can
-	// jump directly between modes without going back to the map landing page
-	// first, with the current view shown as the active tab. Originally only
+	// Shared top nav bar for every map-scoped view - the same buttons everywhere
+	// (Maps/Overview/Explore/Quiz/Tour) so you can jump directly between modes,
+	// with the current view shown as the active tab. A map opens on its
+	// Overview (FT-13); Explore (click a region to see its name) is the bare
+	// /map/<id> route, reached from here. Originally only
 	// on MapView.svelte; pulled out into its own component once the same
 	// markup/CSS needed to be identical across four views - unlike the
 	// Tauri/Capacitor SQLite schemas (see DECISIONS.md), there's no reason to
@@ -21,7 +22,7 @@
 	}: {
 		mapId: string;
 		mapName: string | undefined;
-		active?: 'overview' | 'quiz' | 'tour';
+		active?: 'overview' | 'explore' | 'quiz' | 'tour';
 		// Optional view-specific line under the map-name tag (e.g. QuizView's
 		// "drag each name..." progress count) - a snippet rather than a
 		// second absolutely-positioned overlay, so it stacks naturally under
@@ -71,6 +72,25 @@
 		</a>
 		<a
 			class="nav-btn nav-btn--action"
+			class:nav-btn--active={active === 'explore'}
+			href={resolve('/map/[mapId]', { mapId })}
+		>
+			<svg
+				class="nav-icon"
+				width="22"
+				height="22"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="1.8"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				><circle cx="12" cy="12" r="9" /><path d="M15.5 8.5l-2 5-5 2 2-5z" /></svg
+			>
+			<span class="nav-label">{t('nav.explore')}</span>
+		</a>
+		<a
+			class="nav-btn nav-btn--action"
 			class:nav-btn--active={active === 'quiz'}
 			href={resolve('/map/[mapId]/quiz', { mapId })}
 		>
@@ -111,7 +131,9 @@
 		position: absolute;
 		top: 0.75rem;
 		left: 0.75rem;
-		right: 0.75rem;
+		/* Stop short of MapLibre's zoom control (top-right, ~40px wide): the
+		   row used to run under it on phones, hiding half of the last tab. */
+		right: 3.5rem;
 		z-index: 1;
 		display: flex;
 		flex-direction: column;
@@ -177,7 +199,9 @@
 		font-family: system-ui, sans-serif;
 		max-width: 20rem;
 	}
-	@media (min-width: 640px) {
+	/* 720px, not the app's usual 640: five wide tabs (FT-13) in German or
+	   Italian need ~610px and must end before the zoom control. */
+	@media (min-width: 720px) {
 		.nav-overlay {
 			right: auto;
 		}

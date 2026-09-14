@@ -83,7 +83,7 @@
 	{#if error}
 		<p class="error">{error}</p>
 	{:else}
-		<MapNav {mapId} mapName={mapDisplayName(mapId) ?? mapDef?.name} />
+		<MapNav {mapId} mapName={mapDisplayName(mapId) ?? mapDef?.name} active="explore" />
 	{/if}
 	<div class="container" bind:this={container}></div>
 </div>

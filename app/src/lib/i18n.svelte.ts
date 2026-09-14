@@ -26,6 +26,7 @@ const STORAGE_KEY = 'geoclick:language:v1';
 export type TranslationKey =
 	| 'nav.maps'
 	| 'nav.overview'
+	| 'nav.explore'
 	| 'nav.quiz'
 	| 'nav.tour'
 	| 'nav.loading'
@@ -72,6 +73,7 @@ type Dictionary = Record<TranslationKey, string>;
 const en: Dictionary = {
 	'nav.maps': 'Maps',
 	'nav.overview': 'Overview',
+	'nav.explore': 'Explore',
 	'nav.quiz': 'Quiz',
 	'nav.tour': 'Tour',
 	'nav.loading': 'Loading…',
@@ -121,6 +123,7 @@ const en: Dictionary = {
 const de: Dictionary = {
 	'nav.maps': 'Karten',
 	'nav.overview': 'Übersicht',
+	'nav.explore': 'Erkunden',
 	'nav.quiz': 'Quiz',
 	'nav.tour': 'Tour',
 	'nav.loading': 'Lädt…',
@@ -170,6 +173,7 @@ const de: Dictionary = {
 const it: Dictionary = {
 	'nav.maps': 'Mappe',
 	'nav.overview': 'Panoramica',
+	'nav.explore': 'Esplora',
 	'nav.quiz': 'Quiz',
 	'nav.tour': 'Tour',
 	'nav.loading': 'Caricamento…',
