@@ -23,6 +23,12 @@
 	background: rgba(31, 61, 42, 0.65);
 	color: #ffffff;
 	box-shadow: none;
+	/* Labels never take pointer input (FT-18): a drag or pinch that starts on
+	 * a name moves the map, and a click or tap reaches the region under it.
+	 * MapLibre ignores gestures that begin on a popup, so on a phone, where
+	 * names cover much of the map, panning often did nothing. Hover and tap
+	 * magnify are worked out by position instead (labelMagnify.ts). */
+	pointer-events: none;
 }
 .geoclick-popup .maplibregl-popup-tip,
 .geoclick-solved-popup .maplibregl-popup-tip {
@@ -50,33 +56,20 @@
 		font-size 120ms ease-out,
 		padding 120ms ease-out;
 }
-/* Magnified: under a real mouse pointer (:hover, only where the device can
- * hover - mobile browsers' emulated sticky hover is left out), or tapped on a
- * touch screen (.is-magnified, set by labelMagnify.ts, FT-03). Same look. */
-@media (hover: hover) {
-	.geoclick-popup .maplibregl-popup-content:hover,
-	.geoclick-solved-popup .maplibregl-popup-content:hover {
-		font-size: 1.25rem;
-		padding: 2px 9px;
-		background: rgba(31, 61, 42, 0.92);
-	}
-	.geoclick-solved-popup.revealed .maplibregl-popup-content:hover {
-		background: rgba(95, 65, 27, 0.92);
-	}
-	.maplibregl-popup:has(> .maplibregl-popup-content:hover) {
-		z-index: 1;
-	}
-}
-.geoclick-popup .maplibregl-popup-content.is-magnified,
-.geoclick-solved-popup .maplibregl-popup-content.is-magnified {
+/* Magnified: under the mouse pointer (.is-hovered, FT-02), or tapped on a
+ * touch screen (.is-magnified, FT-03). labelMagnify.ts sets both, from the
+ * pointer's position: a :hover rule can't fire on a label that takes no
+ * pointer input (FT-18). Same look. */
+.geoclick-popup .maplibregl-popup-content:is(.is-hovered, .is-magnified),
+.geoclick-solved-popup .maplibregl-popup-content:is(.is-hovered, .is-magnified) {
 	font-size: 1.25rem;
 	padding: 2px 9px;
 	background: rgba(31, 61, 42, 0.92);
 }
-.geoclick-solved-popup.revealed .maplibregl-popup-content.is-magnified {
+.geoclick-solved-popup.revealed .maplibregl-popup-content:is(.is-hovered, .is-magnified) {
 	background: rgba(95, 65, 27, 0.92);
 }
-.maplibregl-popup:has(> .maplibregl-popup-content.is-magnified) {
+.maplibregl-popup:has(> .maplibregl-popup-content:is(.is-hovered, .is-magnified)) {
 	z-index: 1;
 }
 @media (prefers-reduced-motion: reduce) {

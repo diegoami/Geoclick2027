@@ -5,7 +5,7 @@ import * as maplibregl from 'maplibre-gl';
 import type { StyleSpecification } from 'maplibre-gl';
 import { PMTiles, Protocol, type RangeResponse, type Source } from 'pmtiles';
 import { asset } from '$app/paths';
-import { enableTapToMagnify } from './labelMagnify';
+import { enableLabelMagnify } from './labelMagnify';
 import { isNativeShell } from './platform';
 import { overallBounds, type MapDefinition } from './mapDefinition';
 
@@ -127,8 +127,8 @@ export function createMap(
 	map.on('style.load', applyColorIndex);
 	if (map.isStyleLoaded()) applyColorIndex();
 
-	// Tap a name label to magnify it on touch screens (FT-03); hover does the
-	// same for a mouse, in app.css.
-	map.once('remove', enableTapToMagnify(container));
+	// Magnify a name label under the mouse (FT-02) or on a tap (FT-03). Labels
+	// take no pointer input, so drags on them move the map (FT-18).
+	map.once('remove', enableLabelMagnify(container));
 	return map;
 }

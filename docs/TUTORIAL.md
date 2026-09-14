@@ -331,8 +331,9 @@ this at FT-09's review, 2026-09-14.
   screen of the tutorial. And a player who pauses and plays another map
   would lose that session without being told.
 - Italy's own card on the home page shows the sandbox while the tutorial is
-  active ("20 to review" at step 1, fewer after the quiz). That's accurate
-  for the tutorial, and it goes back to the real count when it ends.
+  active: no review line at step 1 (an empty sandbox counts as never
+  played), a count after the quiz. It goes back to the real line when the
+  tutorial ends.
 - **Recent:** visits to `italy-regions` aren't recorded while the tutorial
   is active (decision 16). Other maps opened while paused are recorded as
   usual (`setUnrecordedMap` in `mapPrefs.svelte.ts`).
