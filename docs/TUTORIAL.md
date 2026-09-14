@@ -5,8 +5,10 @@ FT-10 (sandbox), FT-11 (engine, overlay, steps) and FT-12 (first-visit
 nudge, three-language walkthrough) build exactly what's here; if one of
 them needs to change the script, change this file first.
 
-**Status: draft for the product owner's copy review.** The questions still
-open are at the end.
+**Status: in the product owner's copy review.** The flow questions were
+answered on 2026-09-14 (Explore gets its own step; the sandbox covers
+Italy — Regions only; the star is an outro tip; Finish stays on the tour).
+The copy questions still open are at the end.
 
 Settled elsewhere, not reopened here (FEATURE_PLAN.md, product decisions):
 
@@ -22,30 +24,32 @@ Settled elsewhere, not reopened here (FEATURE_PLAN.md, product decisions):
 
 ## The flow at a glance
 
-An intro card, ten steps, and an outro card. The player does the real
+An intro card, eleven steps, and an outro card. The player does the real
 thing at every action step; the tutorial waits for it and moves on by
-itself. Only the explanation steps (3 and 9) have a Next button.
+itself. Only the explanation steps (3 and 10) have a Next button.
 
 | # | Where | Highlights (`data-tutorial`) | Moves on when | What the player learns |
 |---|---|---|---|---|
 | Intro | home page | nothing (centred card) | Start | what's about to happen, and that nothing is saved |
 | 1 | home page | `home-map-card` (Italy's "Regions" card in the country list) | the route becomes `/map/italy-regions/overview` | choosing a map |
 | 2 | overview | `map` (the map), `zoom-control` (the `+`/`−` buttons) | the player zooms or pans the map | zoom and pan, with mouse, touch or buttons |
-| 3 | overview | `nav-overview`, with `nav-explore` ringed too | Next | names are on the overview; magnify by hover or tap; Explore hides them |
-| 4 | overview | `nav-quiz` | the route becomes `/map/italy-regions/quiz` | where the quiz is |
-| 5 | quiz | `slip-sicilia` (a name slip in the tray) | a correct drop, of any slip | drag a name onto its region |
-| 6 | quiz | `slip-sardegna` | a wrong drop, of any slip | what a mistake looks like |
-| 7 | quiz | `nav-overview` | the route becomes `/map/italy-regions/overview` | checking a region you're unsure of |
-| 8 | overview | `nav-quiz` | the route becomes `/map/italy-regions/quiz` | going back to the quiz |
-| 9 | quiz | `quiz-progress` (the "1 / 20 placed" line) | Next | solved regions stay solved; spaced repetition |
-| 10 | quiz | `nav-tour` | the route becomes `/map/italy-regions/tour` | Tour mode |
+| 3 | overview | `nav-overview` | Next | names are on the overview; magnify by hover or tap |
+| 4 | overview, then explore | `nav-explore`, then `map` | the player clicks a region in Explore and its name shows | Explore: names hidden, click to find out |
+| 5 | explore | `nav-quiz` | the route becomes `/map/italy-regions/quiz` | where the quiz is |
+| 6 | quiz | `slip-sicilia` (a name slip in the tray) | a correct drop, of any slip | drag a name onto its region |
+| 7 | quiz | `slip-sardegna` | a wrong drop, of any slip | what a mistake looks like |
+| 8 | quiz | `nav-overview` | the route becomes `/map/italy-regions/overview` | checking a region you're unsure of |
+| 9 | overview | `nav-quiz` | the route becomes `/map/italy-regions/quiz` | going back to the quiz |
+| 10 | quiz | `quiz-progress` (the "1 / 20 placed" line) | Next | solved regions stay solved; spaced repetition |
+| 11 | quiz | `nav-tour` | the route becomes `/map/italy-regions/tour` | Tour mode |
 | Outro | tour | nothing (centred card) | Finish, or Replay | the star, and how to replay the tutorial |
 
 How this maps onto the original request (FEATURE_BACKLOG.md §3): 1 select
 a map · 2 zoom and pan (added 2026-09-13) · 3 the overview (was "switch to
-the overview", which FT-13 made automatic) · 4 switch to Quiz · 5 drag a
-name slip onto its region · 6 make a deliberate mistake · 7 check a region
-in the overview · 8 return to the quiz · 9 spaced repetition · 10 Tour.
+the overview", which FT-13 made automatic) · 4 Explore (added at FT-09's
+review, 2026-09-14) · 5 switch to Quiz · 6 drag a name slip onto its region
+· 7 make a deliberate mistake · 8 check a region in the overview · 9 return
+to the quiz · 10 spaced repetition · 11 Tour.
 
 ---
 
@@ -106,30 +110,46 @@ Touch screens:
 Mouse:
 
 > This is the **overview**, where every region shows its name. Hover over a
-> name to enlarge it. **Explore**, next to it, hides the names: click a
-> region to see which one it is.
+> name to enlarge it.
 
 Touch:
 
 > This is the **overview**, where every region shows its name. Tap a name to
-> enlarge it. **Explore**, next to it, hides the names: tap a region to see
-> which one it is.
+> enlarge it.
 
-- **Highlight:** the Overview tab (already selected), with a lighter ring
-  on the Explore tab.
-- **Moves on:** Next. Explore gets one sentence, not a step of its own
-  (see open question 2).
-- **Off-script:** opening Explore pauses the tutorial. Resume comes back
-  here.
+- **Highlight:** the Overview tab (already selected).
+- **Moves on:** Next.
+- **Off-script:** opening Explore now skips ahead to step 4's second half
+  rather than pausing: it's where the tutorial is going next anyway.
 
-### 4. Open the quiz — overview
+### 4. Explore — overview, then explore
 
-> Ready to test yourself? Open the **Quiz**.
+Mouse:
+
+> **Explore** hides the names, so you can test yourself. Open it and click
+> any region to see which one it is.
+
+Touch:
+
+> **Explore** hides the names, so you can test yourself. Open it and tap
+> any region to see which one it is.
+
+- **Highlight:** the Explore tab while on the overview; once the route is
+  `/map/italy-regions` (Explore), the map instead. Same card, same copy:
+  it's one step across two screens.
+- **Moves on:** when the player clicks or taps a region in Explore and its
+  name pops up, about a second later so the name can be read. MapView
+  calls the tutorial hook from its existing region-click handler.
+- **Back** from here returns to step 3 on the overview.
+
+### 5. Open the quiz — explore
+
+> Ready to test yourself for real? Open the **Quiz**.
 
 - **Highlight:** the Quiz tab.
 - **Moves on:** the route becomes `/map/italy-regions/quiz`.
 
-### 5. Place a name — quiz
+### 6. Place a name — quiz
 
 > Drag a name from the tray onto its region. Try **Sicilia**: the big
 > island off the toe of the boot.
@@ -142,7 +162,7 @@ Touch:
 - **Card position:** at the top, below the map bar, so it never covers the
   tray or Sicily (see [Layout](#layout)).
 
-### 6. Make a mistake — quiz
+### 7. Make a mistake — quiz
 
 > Now get one wrong on purpose: drop **Sardegna** anywhere on the
 > mainland. The region flashes red and the name goes back to the tray.
@@ -155,7 +175,7 @@ Touch:
 - **Why Sardegna on the mainland:** it's far from anything else, so the
   24px drop tolerance can't turn the drop into a correct one by accident.
 
-### 7. Check in the overview — quiz
+### 8. Check in the overview — quiz
 
 > Not sure where a region is? Look it up in the **overview**.
 
@@ -163,18 +183,18 @@ Touch:
 - **Moves on:** the route becomes `/map/italy-regions/overview`. On
   Android, the back button goes there too (FT-14), and that counts.
 
-### 8. Back to the quiz — overview
+### 9. Back to the quiz — overview
 
 > Found Sardegna? Go back to the **Quiz**.
 
 - **Highlight:** the Quiz tab.
 - **Moves on:** the route becomes `/map/italy-regions/quiz`.
 - **What the player sees:** the quiz rebuilds from the sandbox (FT-10). The
-  regions placed in steps 5 and 6 come back already solved. It's the
+  regions placed in steps 6 and 7 come back already solved. It's the
   quiz's normal same-day carry-over: a region placed correctly isn't due
   again until tomorrow.
 
-### 9. Spaced repetition — quiz
+### 10. Spaced repetition — quiz
 
 > The regions you placed are still marked: what you solve stays solved.
 > Each one comes back for review later, sooner if it gave you trouble, and
@@ -190,7 +210,7 @@ Touch:
   retention"). "What you solve stays solved" means for today, which is what
   the player has just seen. The line on the map list reads "N to review".
 
-### 10. The tour — quiz
+### 11. The tour — quiz
 
 > Last one: the **Tour** flies you to each region in turn and shows its
 > name. Open it.
@@ -208,10 +228,11 @@ Touch:
 > [Replay] [Finish]
 
 - A centred card, lower on the screen so the tour stays visible behind it.
-- **Finish** ends the tutorial and leaves the player on the tour (see open
-  question 4).
+- **Finish** ends the tutorial and leaves the player on the tour, which
+  keeps playing (product owner, 2026-09-14).
 - **Replay** starts again from the intro, with a fresh sandbox.
-- The star gets a sentence here rather than a step (open question 3).
+- The star gets a sentence here rather than a step (product owner,
+  2026-09-14).
 
 ---
 
@@ -230,16 +251,16 @@ Touch:
 
 ### On every card
 
-- **Step counter:** "Step 3 of 10" on the numbered steps.
+- **Step counter:** "Step 3 of 11" on the numbered steps.
 - **Skip** (every card, and Esc on a keyboard) ends the tutorial straight
   away, with no confirmation: it's cheap to restart, and a confirmation
   would get in the way of a player who knows the app.
-- **Back** (steps 2 to 10) shows the previous step, and goes to its screen
+- **Back** (steps 2 to 11) shows the previous step, and goes to its screen
   if that's a different one. A step whose action is already done when it's
   shown (you're already on the quiz; a correct drop has already happened)
   shows **Next** instead of waiting. The tutorial remembers which actions
   happened: zoomed or panned, dropped correctly, dropped wrongly.
-- **Next** only on steps 3 and 9, and on any step whose action is already
+- **Next** only on steps 3 and 10, and on any step whose action is already
   done (above).
 - **Focus:** each new card takes keyboard focus. Its buttons are reachable
   with Tab, and the card is announced as a dialog without trapping focus
@@ -248,8 +269,8 @@ Touch:
 ### Going off-script
 
 Any route change that isn't the step's own screen or its target pauses
-the tutorial. Examples: opening another map, the Explore tab, the map
-list, or Tour before step 10.
+the tutorial. Examples: opening another map, the map list, Explore
+outside steps 3 to 5, or Tour before step 11.
 
 - The card is replaced by a small bar at the bottom of the screen:
   **"Tutorial paused"**, with **Resume** and **End tutorial**.
@@ -275,7 +296,7 @@ Skip, End tutorial and Finish all:
 ### Android back button
 
 FT-14's behaviour is unchanged: back goes up a level. Inside the tutorial
-that's just a route change, handled like any other: in step 7 it's the
+that's just a route change, handled like any other: in step 8 it's the
 expected move, elsewhere it pauses. On the map list, back closes the app
 as usual, and the tutorial is gone with it.
 
@@ -288,8 +309,9 @@ it. The sandbox goes with it and real progress is untouched.
 
 ## The sandbox
 
-What FT-10 builds, refined here with one change to its spec in
-FEATURE_PLAN.md, which is flagged for the product owner (open question 5).
+What FT-10 builds. This narrows FT-10's original spec ("one shared
+in-memory instance" for everything) to one map; the product owner chose
+this at FT-09's review, 2026-09-14.
 
 - **Only Italy — Regions is sandboxed.** While the tutorial is active, the
   progress repository keeps `italy-regions` in memory, starting empty, so
@@ -360,9 +382,12 @@ FEATURE_PLAN.md, which is flagged for the product owner (open question 5).
 | `slip-<targetId>` | each quiz slip | e.g. `slip-sicilia`, `slip-sardegna` |
 | `quiz-progress` | the "N / M placed" line | |
 
-The drop steps need one more thing from QuizView: a hook called on every
-**scored** drop with `{ correct }`. It does nothing when no tutorial is
-running.
+Two steps need a hook from a view, and both hooks do nothing when no
+tutorial is running:
+
+- QuizView calls one on every **scored** drop, with `{ correct }` (steps 6
+  and 7);
+- MapView (Explore) calls one when a region click shows its name (step 4).
 
 ---
 
@@ -406,15 +431,17 @@ mark that up in the strings.
 | `tutorial.step1` | Let's start with a map. Open **Regions**, under Italy. | Fangen wir mit einer Karte an. Öffne **Regionen** unter Italy. | Iniziamo con una mappa. Apri **Regioni**, sotto Italy. |
 | `tutorial.step2` | Zoom with the mouse wheel or the **+** and **−** buttons, and drag the map to move around. Try it now. | Zoome mit dem Mausrad oder den Tasten **+** und **−**, und ziehe die Karte, um dich zu bewegen. Probier es aus. | Usa la rotellina del mouse o i pulsanti **+** e **−** per lo zoom, e trascina la mappa per spostarti. Prova ora. |
 | `tutorial.step2.touch` | Pinch to zoom, or use the **+** and **−** buttons, and drag with one finger to move around. Try it now. | Zoome mit zwei Fingern oder den Tasten **+** und **−**, und verschiebe die Karte mit einem Finger. Probier es aus. | Usa due dita o i pulsanti **+** e **−** per lo zoom, e trascina la mappa con un dito per spostarti. Prova ora. |
-| `tutorial.step3` | This is the **overview**, where every region shows its name. Hover over a name to enlarge it. **Explore**, next to it, hides the names: click a region to see which one it is. | Das ist die **Übersicht**: Hier steht jede Region mit ihrem Namen. Fahre mit der Maus über einen Namen, um ihn zu vergrößern. **Erkunden** daneben blendet die Namen aus: Klicke auf eine Region, um zu sehen, welche es ist. | Questa è la **panoramica**, dove ogni regione mostra il suo nome. Passa il mouse su un nome per ingrandirlo. **Esplora**, lì accanto, nasconde i nomi: clicca una regione per scoprire qual è. |
-| `tutorial.step3.touch` | This is the **overview**, where every region shows its name. Tap a name to enlarge it. **Explore**, next to it, hides the names: tap a region to see which one it is. | Das ist die **Übersicht**: Hier steht jede Region mit ihrem Namen. Tippe auf einen Namen, um ihn zu vergrößern. **Erkunden** daneben blendet die Namen aus: Tippe auf eine Region, um zu sehen, welche es ist. | Questa è la **panoramica**, dove ogni regione mostra il suo nome. Tocca un nome per ingrandirlo. **Esplora**, lì accanto, nasconde i nomi: tocca una regione per scoprire qual è. |
-| `tutorial.step4` | Ready to test yourself? Open the **Quiz**. | Bereit für den Test? Öffne das **Quiz**. | Vuoi metterti alla prova? Apri il **Quiz**. |
-| `tutorial.step5` | Drag a name from the tray onto its region. Try **Sicilia**: the big island off the toe of the boot. | Ziehe einen Namen aus der Ablage auf seine Region. Versuch es mit **Sicilia**, der großen Insel vor der Stiefelspitze. | Trascina un nome dal vassoio sulla sua regione. Prova con **Sicilia**, l'isola grande davanti alla punta dello stivale. |
-| `tutorial.step6` | Now get one wrong on purpose: drop **Sardegna** anywhere on the mainland. The region flashes red and the name goes back to the tray. | Jetzt ein Fehler mit Absicht: Lege **Sardegna** irgendwo auf dem Festland ab. Die Region blinkt rot, und der Name geht zurück in die Ablage. | Ora sbaglia apposta: lascia **Sardegna** in un punto qualsiasi della penisola. La regione lampeggia in rosso e il nome torna nel vassoio. |
-| `tutorial.step7` | Not sure where a region is? Look it up in the **overview**. | Nicht sicher, wo eine Region liegt? Schau in der **Übersicht** nach. | Non sai dov'è una regione? Controlla nella **panoramica**. |
-| `tutorial.step8` | Found Sardegna? Go back to the **Quiz**. | Sardegna gefunden? Dann zurück zum **Quiz**. | Trovata la Sardegna? Torna al **Quiz**. |
-| `tutorial.step9` | The regions you placed are still marked: what you solve stays solved. Each one comes back for review later, sooner if it gave you trouble, and less often each time you get it right. The map list shows how many are due on each map. | Die Regionen, die du platziert hast, sind noch markiert: Was du löst, bleibt gelöst. Jede kommt später zur Wiederholung zurück, früher, wenn sie dir schwerfiel, und seltener, je öfter du sie richtig hast. Die Kartenliste zeigt, wie viele auf jeder Karte fällig sind. | Le regioni che hai posizionato sono ancora segnate: quello che risolvi resta risolto. Ognuna torna più avanti per un ripasso, prima se ti ha dato problemi e sempre più di rado ogni volta che la indovini. L'elenco delle mappe mostra quante sono da ripassare su ogni mappa. |
-| `tutorial.step10` | Last one: the **Tour** flies you to each region in turn and shows its name. Open it. | Zum Schluss die **Tour**: Sie fliegt dich nacheinander zu jeder Region und zeigt ihren Namen. Öffne sie. | Per finire, il **Tour**: ti porta da una regione all'altra e ne mostra il nome. Aprilo. |
+| `tutorial.step3` | This is the **overview**, where every region shows its name. Hover over a name to enlarge it. | Das ist die **Übersicht**: Hier steht jede Region mit ihrem Namen. Fahre mit der Maus über einen Namen, um ihn zu vergrößern. | Questa è la **panoramica**, dove ogni regione mostra il suo nome. Passa il mouse su un nome per ingrandirlo. |
+| `tutorial.step3.touch` | This is the **overview**, where every region shows its name. Tap a name to enlarge it. | Das ist die **Übersicht**: Hier steht jede Region mit ihrem Namen. Tippe auf einen Namen, um ihn zu vergrößern. | Questa è la **panoramica**, dove ogni regione mostra il suo nome. Tocca un nome per ingrandirlo. |
+| `tutorial.step4` | **Explore** hides the names, so you can test yourself. Open it and click any region to see which one it is. | **Erkunden** blendet die Namen aus, damit du dich selbst testen kannst. Öffne es und klicke auf eine Region, um zu sehen, welche es ist. | **Esplora** nasconde i nomi, così puoi metterti alla prova. Aprilo e clicca una regione per scoprire qual è. |
+| `tutorial.step4.touch` | **Explore** hides the names, so you can test yourself. Open it and tap any region to see which one it is. | **Erkunden** blendet die Namen aus, damit du dich selbst testen kannst. Öffne es und tippe auf eine Region, um zu sehen, welche es ist. | **Esplora** nasconde i nomi, così puoi metterti alla prova. Aprilo e tocca una regione per scoprire qual è. |
+| `tutorial.step5` | Ready to test yourself for real? Open the **Quiz**. | Bereit für den echten Test? Öffne das **Quiz**. | Ora la prova vera: apri il **Quiz**. |
+| `tutorial.step6` | Drag a name from the tray onto its region. Try **Sicilia**: the big island off the toe of the boot. | Ziehe einen Namen aus der Ablage auf seine Region. Versuch es mit **Sicilia**, der großen Insel vor der Stiefelspitze. | Trascina un nome dal vassoio sulla sua regione. Prova con **Sicilia**, l'isola grande davanti alla punta dello stivale. |
+| `tutorial.step7` | Now get one wrong on purpose: drop **Sardegna** anywhere on the mainland. The region flashes red and the name goes back to the tray. | Jetzt ein Fehler mit Absicht: Lege **Sardegna** irgendwo auf dem Festland ab. Die Region blinkt rot, und der Name geht zurück in die Ablage. | Ora sbaglia apposta: lascia **Sardegna** in un punto qualsiasi della penisola. La regione lampeggia in rosso e il nome torna nel vassoio. |
+| `tutorial.step8` | Not sure where a region is? Look it up in the **overview**. | Nicht sicher, wo eine Region liegt? Schau in der **Übersicht** nach. | Non sai dov'è una regione? Controlla nella **panoramica**. |
+| `tutorial.step9` | Found Sardegna? Go back to the **Quiz**. | Sardegna gefunden? Dann zurück zum **Quiz**. | Trovata la Sardegna? Torna al **Quiz**. |
+| `tutorial.step10` | The regions you placed are still marked: what you solve stays solved. Each one comes back for review later, sooner if it gave you trouble, and less often each time you get it right. The map list shows how many are due on each map. | Die Regionen, die du platziert hast, sind noch markiert: Was du löst, bleibt gelöst. Jede kommt später zur Wiederholung zurück, früher, wenn sie dir schwerfiel, und seltener, je öfter du sie richtig hast. Die Kartenliste zeigt, wie viele auf jeder Karte fällig sind. | Le regioni che hai posizionato sono ancora segnate: quello che risolvi resta risolto. Ognuna torna più avanti per un ripasso, prima se ti ha dato problemi e sempre più di rado ogni volta che la indovini. L'elenco delle mappe mostra quante sono da ripassare su ogni mappa. |
+| `tutorial.step11` | Last one: the **Tour** flies you to each region in turn and shows its name. Open it. | Zum Schluss die **Tour**: Sie fliegt dich nacheinander zu jeder Region und zeigt ihren Namen. Öffne sie. | Per finire, il **Tour**: ti porta da una regione all'altra e ne mostra il nome. Aprilo. |
 
 Notes on the copy:
 
@@ -426,27 +453,27 @@ Notes on the copy:
   "Italy". Country names stay in English in every language (DECISIONS.md,
   i18n), hence "unter Italy" and "sotto Italy".
 - Italian: "Benvenuto" and "tu stesso" are masculine forms, as Italian
-  apps usually write; open question 6 asks whether you'd rather avoid them.
-- Step 9 has the longest copy, and at phone width in German it probably
+  apps usually write; open question 2 asks whether you'd rather avoid them.
+- Step 10 has the longest copy, and at phone width in German it probably
   won't fit four lines. FT-12 checks, and if it doesn't fit the last
   sentence goes.
 
 ---
 
-## Open questions for the copy review
+## Decided at the review (2026-09-14)
+
+- **Explore gets a step of its own** (step 4), rather than a sentence in
+  step 3. The tutorial is eleven steps.
+- **The sandbox covers Italy — Regions only**; every other map's progress
+  stays live ([The sandbox](#the-sandbox)).
+- **The star is a tip in the outro**, not a step.
+- **Finish leaves the player on the tour.**
+
+## Still open for the copy review
 
 1. **Is the copy right?** It's product text, so it's your call: tone,
    length, and each language.
-2. **Explore:** one sentence in step 3 (as drafted), a step of its own, or
-   not mentioned at all?
-3. **The star:** a tip in the outro (as drafted), a step on the home page,
-   or not mentioned?
-4. **Finish:** leave the player on the tour (as drafted), or take them to
-   the map list?
-5. **Sandbox scope:** sandbox only Italy — Regions and leave every other
-   map's progress live (as drafted, changing FT-10's spec), or FT-10's
-   original "everything in memory" during the tutorial?
-6. **Italian forms:** keep "Benvenuto" / "tu stesso", or use neutral
+2. **Italian forms:** keep "Benvenuto" / "tu stesso", or use neutral
    wording ("Ti diamo il benvenuto", "proverai in prima persona")?
-7. **The button label:** "Tutorial" in all three languages (as drafted;
+3. **The button label:** "Tutorial" in all three languages (as drafted;
    common in German and Italian), or "Einführung" / "Guida"?

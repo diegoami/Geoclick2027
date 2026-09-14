@@ -35,6 +35,9 @@ DECISIONS.md's "Feature programme decisions" entry, so no task has to guess.
 | 14 | Favourite maps (added 2026-09-14) | **A star on every home page map card and in the map bar**; both toggle the same favourite. |
 | 15 | Home page order (added 2026-09-14) | **Favourites, then Recent, then all maps by country.** A section shows only when it has something in it. Both lists live on the device, like the language setting. |
 | 16 | Tutorial and Recent (added 2026-09-14) | **The tutorial's practice run doesn't count as a visit.** It stays out of Recent, the same way it saves no real progress (decision 5). |
+| 17 | Explore in the tutorial (FT-09 review, 2026-09-14) | **A step of its own:** open Explore and click a region to see its name. The tutorial has eleven steps. |
+| 18 | Tutorial sandbox scope (FT-09 review, 2026-09-14) | **Only Italy — Regions is sandboxed.** Every other map reads and writes real progress during the tutorial, so the home page looks normal and a map played while the tutorial is paused is saved. |
+| 19 | Tutorial ending (FT-09 review, 2026-09-14) | **The star is a tip in the outro**, not a step, and **Finish leaves the player on the tour.** |
 
 Why decision 1 beat FEATURE_BACKLOG.md's own suggestion (static files on
 the Netlify site): the current builds are 18 MB (`.msi`), 17 MB
@@ -514,45 +517,44 @@ RELEASES.md (open a map in each installer before publishing).
     pause and offer "Resume tutorial" or "End";
   - phone-width layout, and touch on Android, where dragging is
     pointer-based already;
-  - what the sandbox means for step 8 (was step 7). Returning to the
+  - what the sandbox means for step 9 (was step 7). Returning to the
     quiz shows the regions solved during the tutorial, from the
     in-memory store (FT-10), not the player's real progress.
 - 🧑 **Product owner:** reviews the copy and flow at the merge request.
   It's product text, so the product owner has the final word.
-- **DoD:** TUTORIAL.md merged, with ten steps including the new
-  zoom/pan one; the German and Italian copy is drafted in it for FT-11
+- **DoD:** TUTORIAL.md merged, with eleven steps including the new
+  zoom/pan one and the Explore step (decision 17); the German and Italian copy is drafted in it for FT-11
   to paste in.
 
 ### FT-10 — Sandboxed progress store for the tutorial · Medium · deps: FT-09
 
-> **Proposed at FT-09 (2026-09-14):** [TUTORIAL.md](TUTORIAL.md), "The
-> sandbox", narrows the sandbox to `italy-regions` only, with every other
-> map reading and writing the real store. Otherwise the home page would
-> show every map as due during the tutorial, and a map played while the
-> tutorial is paused would silently not be saved. It's open question 5 in
-> TUTORIAL.md; the product owner's answer at FT-09's review decides which
-> version this task builds.
+> **Narrowed at FT-09's review (decision 18):** only `italy-regions` is
+> sandboxed; every other map reads and writes the real store. The details
+> are in [TUTORIAL.md](TUTORIAL.md), "The sandbox".
 
 - **Do:**
   - Add `createInMemoryProgressRepository()`, implementing the full
     `ProgressRepository` interface (`progressRepository.ts`), including
     `clearMap` / `clearAll`.
   - While a tutorial is active, `createProgressRepository()`, the single
-    factory every view calls, returns one shared in-memory instance. That
-    covers localStorage, Tauri SQLite and Capacitor alike.
+    factory every view calls, returns a repository that keeps
+    `italy-regions` in one shared in-memory instance and passes every other
+    map through to the real one. That covers localStorage, Tauri SQLite and
+    Capacitor alike.
   - The instance survives client-side navigation between the map, the
-    overview and the quiz, which is what step 8 (was step 7 before the
-    zoom/pan step was added, see FT-09) needs. It is discarded when the
+    overview and the quiz, which is what step 9 (step 7 in the original
+    request, see TUTORIAL.md) needs. It is discarded when the
     tutorial ends or is skipped.
   - QuizView's same-day carry-forward (`alreadySolvedIds`) then shows the
     solved regions with no extra code.
   - The same tutorial flag makes `recordVisit` in `mapPrefs.svelte.ts` a
-    no-op (FT-15, decision 16), so the tutorial's map never lands in
-    Recent.
+    no-op for `italy-regions` (FT-15, decision 16), so the tutorial's map
+    never lands in Recent. Other maps are still recorded.
 - **Tests:**
-  - a full tutorial-mode quiz session leaves `localStorage` byte-identical,
-    including the Recent list,
-    (a snapshot of every key before and after);
+  - a full tutorial-mode quiz session on `italy-regions` leaves
+    `localStorage` byte-identical, including the Recent list (a snapshot
+    of every key before and after);
+  - a quiz on another map during the tutorial saves normally;
   - solved ids carry across a QuizView remount while tutorial mode is on;
   - ending the tutorial restores the real repository.
 - **DoD:** tests as above; DECISIONS.md entry "Tutorial sandbox" (the
@@ -570,13 +572,14 @@ RELEASES.md (open a map in each installer before publishing).
     handles keyboard (Esc skips, focus moves to the card).
   - **Anchors:** `data-tutorial` attributes on the real elements:
     - the Italy — Regions card on the home page;
-    - MapNav's Overview, Quiz and Tour buttons;
+    - MapNav's Overview, Explore, Quiz and Tour buttons;
     - the quiz tray, the map canvas, and the `NavigationControl` `+`/`−`
       buttons (for the zoom/pan step).
   - **Advancing:** on real events. Route changes come through SvelteKit's
     `afterNavigate`. Correct and wrong drops come from a small hook
     QuizView calls on each resolved drop; it does nothing when no
-    tutorial is running. The zoom/pan step advances on the map's own
+    tutorial is running. The Explore step advances on a similar hook
+    from MapView's region click (TUTORIAL.md, step 4). The zoom/pan step advances on the map's own
     `zoom` or `move` event (a control click, scroll/pinch, or a drag all
     fire one of these — no need to distinguish which). For the steps
     that demonstrate a drop, pick target regions that are large in
@@ -590,8 +593,8 @@ RELEASES.md (open a map in each installer before publishing).
 - **Verify:** a full real run in the browser, in English, with
   screenshots of every step.
 - **DoD:**
-  - all 10 steps (the nine originally requested, plus the zoom/pan step
-    added 2026-09-13) work on `italy-regions` through real clicks, drags,
+  - all 11 steps (the nine originally requested, plus the zoom/pan step
+    added 2026-09-13 and the Explore step added at FT-09's review) work on `italy-regions` through real clicks, drags,
     scroll/pinch and pan;
   - no real progress is written (FT-10's test, plus a manual check of
     localStorage);
@@ -611,7 +614,7 @@ RELEASES.md (open a map in each installer before publishing).
   - Walk it at phone width, including magnifying a label by tap (FT-03).
 - **DoD:**
   - screenshots of every step in all three languages (step 2 [zoom/pan],
-    step 5 [drag] and step 8 [return to quiz] at minimum at phone width);
+    step 6 [drag] and step 9 [return to quiz] at minimum at phone width);
   - ONBOARDING.md explains how to add or edit a tutorial step;
   - ARCHITECTURE.md mentions the overlay and the sandbox;
   - gates green.
