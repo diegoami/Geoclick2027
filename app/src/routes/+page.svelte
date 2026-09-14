@@ -93,7 +93,7 @@
 						{@const summary = lastSessions[map.id]}
 						{@const due = dueStatuses[map.id]}
 						<li>
-							<a href={resolve('/map/[mapId]', { mapId: map.id })}>
+							<a href={resolve('/map/[mapId]/overview', { mapId: map.id })}>
 								<span class="map-name">{t(map.labelKey)}</span>
 								{#if due && due.kind !== 'notStarted'}
 									<span class="due-status" class:up-to-date={due.kind === 'upToDate'}>

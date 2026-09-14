@@ -46,6 +46,10 @@ pairs well with a canvas/map-heavy UI.
   scripted reveal later (Iteration 3). The underlying `labels` source-layer
   (one point per target, at its centroid) still exists in the tiles for
   that on-demand use — it's just not wired into the default style.
+  Since v0.4.0 (FT-13) a map *opens* on its Overview, which labels every
+  target with DOM popups. That's a deliberate product call: see the map
+  with names first, then test yourself. The style itself still has no label
+  layer, and Explore, Quiz and Tour still reveal names only on demand.
 
 ## Domain model
 
@@ -157,6 +161,22 @@ Iteration 8+, not started.
 /desktop                       Tauri wrapper
 /mobile                        Capacitor wrapper
 ```
+
+## Screens and navigation
+
+The home page (`/`) lists every map. A map card opens that map's
+**Overview** (`/map/<id>/overview`), where every name is shown. The map bar
+(`MapNav.svelte`) then switches between that map's modes:
+
+| Tab | Route | View |
+|---|---|---|
+| Overview | `/map/<id>/overview` | `OverviewView`: every name labelled |
+| Explore | `/map/<id>` | `MapView`: click a region to see its name |
+| Quiz | `/map/<id>/quiz` | `QuizView`: drag the names onto the map |
+| Tour | `/map/<id>/tour` | `TourView`: a guided tour |
+
+Until v0.4.0 a map opened on Explore. FT-13 made Overview the first
+screen (DECISIONS.md, "Feature programme decisions").
 
 ## Demo maps & map-creation process
 

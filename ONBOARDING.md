@@ -55,7 +55,9 @@ site. No backend yet — everything is local-first. Full detail and the
 ```
 app/                    SvelteKit app (the actual game UI)
   src/lib/
-    MapView.svelte       plain map viewer
+    MapView.svelte       Explore tab: click a region to see its name (/map/<id>)
+    OverviewView.svelte  Overview tab: every name labelled; a map opens here
+    MapNav.svelte        the map bar shared by all four map views
     TourView.svelte      guided tour mode
     QuizView.svelte      drag-and-drop quiz mode (the most complex view)
     geoclickMap.ts        shared map-loading helpers used by all three views
