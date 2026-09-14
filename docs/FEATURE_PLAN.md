@@ -564,7 +564,7 @@ Update this table as tasks merge. Commit hashes are the merge commits.
 | FT-06 | **released** | `6de2d98` | v0.3.0 | signing setup verified with throwaway keys (unsigned without, signed via env or properties); 🧑 real keystore pending, needed before FT-07's dry run |
 | FT-07 | **released** | `8e6120e` | v0.3.0 | package-release.mjs dry run: .msi 17.0 MB, -setup.exe 15.8 MB, APK 24.5 MB + SHA256SUMS (throwaway key, output deleted); Android versionCode now tracks the version (1 → 200) |
 | FT-08 | **released** | `e5aa02d` | v0.3.0 | 🧑 public repo created (diegoami/geoclick-releases, README only); web-only download link EN/DE/IT; publish script dry-runs unless --confirm; first publish = v0.3.0 |
-| FT-13 | todo | — | v0.4.0 | overview as default + Explore tab |
+| FT-13 | **merged** | `d74ebb4` | v0.4.0 | maps open on the overview; Explore tab; tab row clear of the zoom control (360-1024px, EN/DE/IT); native shells checked with FT-14 |
 | FT-14 | todo | — | v0.4.0 | Android back button goes up a level |
 | FT-09 | todo | — | v0.5.0 | 🧑 copy review |
 | FT-10 | todo | — | v0.5.0 | |
