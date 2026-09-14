@@ -9,10 +9,12 @@
 	// Tauri/Capacitor SQLite schemas (see DECISIONS.md), there's no reason to
 	// hand-duplicate Svelte markup when a shared component is exactly the
 	// right tool for it.
+	import { onMount } from 'svelte';
 	import { resolve } from '$app/paths';
 	import type { Snippet } from 'svelte';
 	import { t } from './i18n.svelte';
 	import LanguageSwitcher from './LanguageSwitcher.svelte';
+	import { recordVisit } from './mapPrefs.svelte';
 
 	let {
 		mapId,
@@ -29,6 +31,13 @@
 		// the nav row instead of needing a guessed pixel offset to clear it.
 		subtitle?: Snippet;
 	} = $props();
+
+	// Every map view shows this bar, so opening any of them counts as a visit
+	// for the home page's Recent list (FT-15). The views are keyed by map id,
+	// so each map gets a fresh mount. onMount rather than $effect, because
+	// recordVisit reads the list it writes, and an effect would re-run on its
+	// own write.
+	onMount(() => recordVisit(mapId));
 </script>
 
 <div class="nav-overlay">
