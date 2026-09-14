@@ -87,14 +87,36 @@ function writeJson(key: string, value: unknown): void {
 	}
 }
 
+// The tutorial's sandbox (FT-10, docs/TUTORIAL.md "The sandbox"): while it's
+// set, createProgressRepository keeps this one map's progress in `memory` and
+// every other map goes to the real store. Set and cleared only through
+// tutorialSandbox.svelte.ts.
+let sandbox: { mapId: string; memory: ProgressRepository } | undefined;
+
+export function setProgressSandbox(
+	next: { mapId: string; memory: ProgressRepository } | undefined
+): void {
+	sandbox = next;
+}
+
 // Picks the SQLite-backed repository (desktop/src-tauri/src/lib.rs's
 // migrations(), or capacitorProgressRepository.ts's identical schema on
 // Android) when running inside the Tauri shell or a native Capacitor
 // platform, localStorage otherwise - the one place that decides, so call
 // sites (QuizView, the home page) stay backend-agnostic as designed.
+// During the tutorial that real store comes wrapped in the sandbox.
+export async function createProgressRepository(): Promise<ProgressRepository> {
+	const real = await createRealProgressRepository();
+	// The sandbox is read once, here: a repository handed out during the
+	// tutorial keeps writing to that tutorial's memory even after it ends, so a
+	// view still open at the end can never write sandbox results into real
+	// progress. Views remount when the tutorial ends to pick up the real store.
+	return sandbox ? createSandboxedProgressRepository(real, sandbox.memory, sandbox.mapId) : real;
+}
+
 // Dynamic imports so a plain-browser build never pulls in
 // @tauri-apps/plugin-sql or @capacitor-community/sqlite at all.
-export async function createProgressRepository(): Promise<ProgressRepository> {
+async function createRealProgressRepository(): Promise<ProgressRepository> {
 	const { isTauri } = await import('@tauri-apps/api/core');
 	if (isTauri()) {
 		const { createSqliteProgressRepository } = await import('./sqliteProgressRepository');
@@ -149,6 +171,72 @@ export function createLocalStorageProgressRepository(): ProgressRepository {
 				if (key?.startsWith(`${STORAGE_PREFIX}:`)) ours.push(key);
 			}
 			for (const key of ours) localStorage.removeItem(key);
+		}
+	};
+}
+
+// Progress held in memory only, gone when the page is (FT-10). The tutorial's
+// sandbox uses it for its map. Values are copied in and out, so a caller that
+// mutates what it read or saved can't change what's stored - the same as
+// the JSON round trip in the localStorage repository.
+export function createInMemoryProgressRepository(): ProgressRepository {
+	const cards = new Map<string, CardState[]>();
+	const summaries = new Map<string, SessionSummary>();
+	return {
+		async getCardStates(mapId) {
+			return (cards.get(mapId) ?? []).map((s) => ({ ...s }));
+		},
+
+		async saveCardState(mapId, state) {
+			const states = cards.get(mapId) ?? [];
+			const index = states.findIndex((s) => s.targetId === state.targetId);
+			if (index === -1) states.push({ ...state });
+			else states[index] = { ...state };
+			cards.set(mapId, states);
+		},
+
+		async getLastSessionSummary(mapId) {
+			const summary = summaries.get(mapId);
+			return summary && { ...summary };
+		},
+
+		async saveLastSessionSummary(mapId, summary) {
+			summaries.set(mapId, { ...summary });
+		},
+
+		async clearMap(mapId) {
+			cards.delete(mapId);
+			summaries.delete(mapId);
+		},
+
+		async clearAll() {
+			cards.clear();
+			summaries.clear();
+		}
+	};
+}
+
+// The tutorial's view of progress: `sandboxedMapId` lives in `memory`, every
+// other map in `real`. Only Italy - Regions is sandboxed (FEATURE_PLAN.md,
+// decision 18), so the home page keeps showing real progress for the other
+// maps and a map played while the tutorial is paused is saved as usual.
+export function createSandboxedProgressRepository(
+	real: ProgressRepository,
+	memory: ProgressRepository,
+	sandboxedMapId: string
+): ProgressRepository {
+	const pick = (mapId: string) => (mapId === sandboxedMapId ? memory : real);
+	return {
+		getCardStates: (mapId) => pick(mapId).getCardStates(mapId),
+		saveCardState: (mapId, state) => pick(mapId).saveCardState(mapId, state),
+		getLastSessionSummary: (mapId) => pick(mapId).getLastSessionSummary(mapId),
+		saveLastSessionSummary: (mapId, summary) => pick(mapId).saveLastSessionSummary(mapId, summary),
+		clearMap: (mapId) => pick(mapId).clearMap(mapId),
+		// "Forget all progress" is a real request, so it reaches the real store
+		// too; nothing calls it during the tutorial today.
+		clearAll: async () => {
+			await memory.clearAll();
+			await real.clearAll();
 		}
 	};
 }

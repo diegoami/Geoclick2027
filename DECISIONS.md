@@ -1075,6 +1075,28 @@ answers:
   - The favourite star is a tip in the outro, not a step. Finish leaves
     the player on the tour, which keeps playing.
 
+## Tutorial sandbox (2026-09-14, FT-10)
+
+- **The tutorial's quiz never becomes real progress**, the same rule as
+  Practice mode ("persists nothing"). While the tutorial runs,
+  `createProgressRepository()` wraps the real store:
+  Italy — Regions lives in an in-memory repository that starts empty, so
+  the quiz starts fresh whatever the player's real progress is, and it's
+  thrown away when the tutorial ends.
+- **Only the tutorial's map is sandboxed** (FEATURE_PLAN.md, decision 18).
+  Every other map reads and writes the real store. Sandboxing everything
+  would show every home page card as due during the tutorial, and a map
+  played while the tutorial is paused would lose its session without a
+  word.
+- **A repository handed out during the tutorial stays sandboxed after it
+  ends.** The sandbox is read when the repository is created, not on
+  every call, so a quiz still open when the tutorial ends can't write its
+  tutorial results into real progress. Views remount at the end to pick
+  up the real store (FT-11 keys them on `isTutorialSandboxActive()`).
+- The switch is `app/src/lib/tutorialSandbox.svelte.ts`
+  (`startTutorialSandbox` / `endTutorialSandbox`); only the tutorial
+  engine calls it. It also keeps the tutorial's map out of Recent.
+
 ## Recent and favourite maps (2026-09-14, FT-15/FT-16)
 
 - **They're stored on the device, not in the progress store.**
@@ -1085,8 +1107,9 @@ answers:
 - **Recent (FT-15):** opening any map view counts (MapNav records it
   on mount). The home page shows 5, newest first; up to 10 are stored,
   so a map later removed from the catalog doesn't shorten the list.
-  The tutorial switches recording off (`setVisitRecording`), so its
-  practice run doesn't count.
+  During the tutorial, visits to its map aren't recorded
+  (`setUnrecordedMap`, FT-10), so its practice run doesn't count; other
+  maps opened while it's paused still are.
 - **The section renders only after mount.** The home page is
   prerendered without access to device storage, and rendering the list
   during hydration would mismatch the prerendered HTML. The same goes for

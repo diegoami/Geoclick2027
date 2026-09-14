@@ -328,8 +328,7 @@ this at FT-09's review, 2026-09-14.
   for the tutorial, and it goes back to the real count when it ends.
 - **Recent:** visits to `italy-regions` aren't recorded while the tutorial
   is active (decision 16). Other maps opened while paused are recorded as
-  usual. Today `setVisitRecording(on)` switches recording off for every
-  map, so FT-10 narrows it to the tutorial map.
+  usual (`setUnrecordedMap` in `mapPrefs.svelte.ts`).
 - **Favourites** aren't touched by the sandbox: starring is a real choice
   the player makes, in or out of the tutorial.
 - **Last session summary** ("Last: 18/20" on the home page): written to

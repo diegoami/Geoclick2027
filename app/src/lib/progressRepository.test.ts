@@ -1,6 +1,8 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import {
+	createInMemoryProgressRepository,
 	createLocalStorageProgressRepository,
+	createSandboxedProgressRepository,
 	todayLocalDate,
 	type CardState,
 	type SessionSummary
@@ -182,5 +184,84 @@ describe('todayLocalDate', () => {
 		// same-day mechanism this replaces.
 		vi.setSystemTime(new Date(2026, 8, 11, 23, 30, 0));
 		expect(todayLocalDate()).toBe('2026-09-11');
+	});
+});
+
+describe('in-memory progress repository (FT-10)', () => {
+	it('saves, updates by targetId, and keeps maps apart, like the stored ones', async () => {
+		const repo = createInMemoryProgressRepository();
+		expect(await repo.getCardStates('italy-regions')).toEqual([]);
+		await repo.saveCardState('italy-regions', sampleCard);
+		await repo.saveCardState('italy-regions', { ...sampleCard, repetitions: 2 });
+		expect(await repo.getCardStates('italy-regions')).toEqual([{ ...sampleCard, repetitions: 2 }]);
+		expect(await repo.getCardStates('usa-states')).toEqual([]);
+
+		await repo.saveLastSessionSummary('italy-regions', sampleSummary);
+		expect(await repo.getLastSessionSummary('italy-regions')).toEqual(sampleSummary);
+		expect(await repo.getLastSessionSummary('usa-states')).toBeUndefined();
+	});
+
+	it('clearMap forgets one map; clearAll forgets everything', async () => {
+		const repo = createInMemoryProgressRepository();
+		await repo.saveCardState('italy-regions', sampleCard);
+		await repo.saveLastSessionSummary('italy-regions', sampleSummary);
+		await repo.saveCardState('usa-states', sampleCard);
+
+		await repo.clearMap('italy-regions');
+		expect(await repo.getCardStates('italy-regions')).toEqual([]);
+		expect(await repo.getLastSessionSummary('italy-regions')).toBeUndefined();
+		expect(await repo.getCardStates('usa-states')).toEqual([sampleCard]);
+
+		await repo.clearAll();
+		expect(await repo.getCardStates('usa-states')).toEqual([]);
+	});
+
+	it('hands out copies, so changing what was read or saved changes nothing stored', async () => {
+		const repo = createInMemoryProgressRepository();
+		const saved = { ...sampleCard };
+		await repo.saveCardState('italy-regions', saved);
+		saved.interval = 99;
+		(await repo.getCardStates('italy-regions'))[0].interval = 42;
+		expect((await repo.getCardStates('italy-regions'))[0].interval).toBe(sampleCard.interval);
+	});
+
+	it('writes nothing to localStorage', async () => {
+		const repo = createInMemoryProgressRepository();
+		await repo.saveCardState('italy-regions', sampleCard);
+		await repo.saveLastSessionSummary('italy-regions', sampleSummary);
+		expect(localStorage.length).toBe(0);
+	});
+});
+
+describe('sandboxed progress repository (FT-10)', () => {
+	it('keeps the sandboxed map in memory and every other map in the real store', async () => {
+		const real = createLocalStorageProgressRepository();
+		await real.saveCardState('italy-regions', sampleCard);
+		const memory = createInMemoryProgressRepository();
+		const repo = createSandboxedProgressRepository(real, memory, 'italy-regions');
+
+		expect(await repo.getCardStates('italy-regions')).toEqual([]);
+		const tutorialCard: CardState = { ...sampleCard, targetId: 'Sicilia' };
+		await repo.saveCardState('italy-regions', tutorialCard);
+		await repo.saveLastSessionSummary('italy-regions', sampleSummary);
+		expect(await memory.getCardStates('italy-regions')).toEqual([tutorialCard]);
+		expect(await real.getCardStates('italy-regions')).toEqual([sampleCard]);
+		expect(await real.getLastSessionSummary('italy-regions')).toBeUndefined();
+
+		await repo.saveCardState('usa-states', sampleCard);
+		expect(await real.getCardStates('usa-states')).toEqual([sampleCard]);
+		expect(await memory.getCardStates('usa-states')).toEqual([]);
+	});
+
+	it('clearMap on the sandboxed map leaves real progress alone', async () => {
+		const real = createLocalStorageProgressRepository();
+		await real.saveCardState('italy-regions', sampleCard);
+		const repo = createSandboxedProgressRepository(
+			real,
+			createInMemoryProgressRepository(),
+			'italy-regions'
+		);
+		await repo.clearMap('italy-regions');
+		expect(await real.getCardStates('italy-regions')).toEqual([sampleCard]);
 	});
 });

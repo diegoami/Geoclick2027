@@ -54,16 +54,17 @@ function writeIds(key: string, ids: string[]): void {
 
 let recent = $state<string[]>(readIds(RECENT_KEY));
 
-// The tutorial switches this off (FT-10), so its practice run on
-// italy-regions doesn't show up in Recent (decision 16).
-let recordingVisits = true;
-export function setVisitRecording(on: boolean): void {
-	recordingVisits = on;
+// The tutorial sets this to its map (FT-10), so its practice run on
+// italy-regions doesn't show up in Recent (decision 16). Other maps opened
+// while the tutorial is paused are still recorded.
+let unrecordedMap: string | undefined;
+export function setUnrecordedMap(mapId: string | undefined): void {
+	unrecordedMap = mapId;
 }
 
 /** Called when a map view opens (MapNav). Unknown ids are ignored. */
 export function recordVisit(mapId: string): void {
-	if (!recordingVisits || !isCatalogMap(mapId)) return;
+	if (mapId === unrecordedMap || !isCatalogMap(mapId)) return;
 	recent = withVisit(recent, mapId);
 	writeIds(RECENT_KEY, recent);
 }
