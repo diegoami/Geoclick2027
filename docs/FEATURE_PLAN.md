@@ -93,7 +93,7 @@ version. `1.0.0` stays reserved for the public launch.
 |---|---|---|
 | `v0.3.0` | FT-01 to FT-08 | **Readable and installable.** Map names magnify on hover or tap, the apps get a real logo, and anyone can download the Windows and Android installers. |
 | `v0.4.0` | FT-13, FT-14 | **Navigation.** Maps open on their overview, explore gets its own tab, and Android's back button goes up a level. |
-| `v0.5.0` | FT-15, FT-16, FT-17, FT-09 to FT-12 | **Tutorial, favourites and recent maps.** Mark maps as favourites, find recently played maps at the top of the home page, and an interactive walkthrough in English, German and Italian. |
+| `v0.5.0` | FT-15, FT-16, FT-17, FT-09 to FT-12, FT-18 | **Tutorial, favourites and recent maps.** Mark maps as favourites, find recently played maps at the top of the home page, and an interactive walkthrough in English, German and Italian. |
 
 ---
 
@@ -480,6 +480,25 @@ RELEASES.md (open a map in each installer before publishing).
   map. Countries become `h3` under "All maps".
 - **DoD:** checked at 1280px and 400px, EN and DE; gates green.
 
+### FT-18 — Drags that start on a name label move the map · Low · deps: FT-12
+
+- **Why (found testing v0.5.0-beta.1 on the Android emulator,
+  2026-09-14):** a drag that starts on a label doesn't pan the map, and
+  magnifies the label instead. MapLibre ignores gestures that begin on a
+  popup, and FT-03's listener toggled on touch-down. On a phone the
+  overview's names cover much of the map, so the tutorial's step 2 ("drag
+  with one finger") often seemed to do nothing. The same happened with a
+  mouse drag on desktop.
+- **Do:** labels take no pointer input (`pointer-events: none`), so every
+  gesture reaches the map. `labelMagnify.ts` finds the label under the
+  pointer by position: mouse hover sets `.is-hovered` (replacing the
+  `:hover` rule, which can't fire any more), and a touch or pen tap (down
+  and up within 10px) toggles `.is-magnified`. A drag never magnifies.
+- **DoD:** tests for tap, drag, hover, one-at-a-time and pointer-events;
+  a drag from a label pans the map with mouse and touch in a real
+  browser; tutorial walk still green; checked on the emulator in the
+  beta; gates green.
+
 ### FT-09 — Tutorial script and interaction spec · Low · deps: FT-13, FT-14, FT-16
 
 - **Why:** FEATURE_BACKLOG.md §3 says this item needs a design pass
@@ -675,6 +694,7 @@ Update this table as tasks merge. Commit hashes are the merge commits.
 | FT-15 | **merged** | `608937a` | v0.5.0 | Recent section (5 newest, any map view counts, device-local); browser-checked at 1280/400px; desktop (CDP) + Android (emulator) checked in v0.5.0-alpha.1 |
 | FT-16 | **merged** | `a006833` | v0.5.0 | star on home cards + map bar, Favourites section first; browser-checked incl. 400px DE/IT; desktop (CDP) + Android (emulator) checked in v0.5.0-alpha.1. To check with TalkBack on a phone: the emulator's uiautomator dump showed the star with no name or pressed state (the language pills lose their state the same way, so likely the dump) |
 | FT-17 | **merged** | `6429331` | v0.5.0 | Favourites + Recent in one panel, "All maps" heading before the countries; asked for by the product owner while trying FT-11; checked 1280/400px EN/DE |
+| FT-18 | in review | — | v0.5.0 | labels take no pointer input; magnify by position (hover, real tap); drag from a label pans with mouse (163px) and touch (131px) |
 | FT-09 | **merged** | `cd47cc6` | v0.5.0 | docs/TUTORIAL.md: 11 steps + intro/outro, EN/DE/IT copy; 🧑 copy approved 2026-09-14 (decisions 17-19: Explore step, italy-regions-only sandbox, star tip, Finish stays on tour) |
 | FT-10 | **merged** | `1741112` | v0.5.0 | italy-regions in memory during the tutorial, other maps live (decision 18); no localStorage writes in a tutorial quiz (tested); normal play smoke-checked in the browser |
 | FT-11 | **merged** | `fa00091` | v0.5.0 | Tutorial button, overlay, 11 steps on real actions; pause/resume, Back, Skip/Esc, Replay; full browser runs 1280 EN, 400 EN/DE; tried by the product owner in the browser. Also: quiz fits the map above the tray (Sicily was hidden) |
@@ -687,4 +707,5 @@ Update this table as tasks merge. Commit hashes are the merge commits.
 | `v0.4.0-alpha.1` | **pre-release** (alpha) | `v0.4.0-alpha.1` → `a8b1d49` (FT-14 + main, never merged) | 2026-09-14 — setup.exe + APK on geoclick-releases as a GitHub pre-release; for the product owner's phone test of FT-13/FT-14 |
 | `v0.4.0` | **cut** | `v0.4.0` → `441f57b` | 2026-09-14 — stable, latest on geoclick-releases (setup.exe, .msi, APK); same app code as alpha.1, which the product owner tried on Windows and Android |
 | `v0.5.0-alpha.1` | **pre-release** (alpha) | `v0.5.0-alpha.1` → `b9793c0` (version bump on main `ea84ab5`, never merged) | 2026-09-14 — setup.exe + APK on geoclick-releases as a GitHub pre-release; FT-15 + FT-16 for the product owner to try. Checked: desktop over CDP, APK updating 0.4.0 on the emulator (40099 → 50001) |
+| `v0.5.0-beta.1` | **built, not published** | `v0.5.0-beta.1` → `e703d2a` | 2026-09-14 — setup.exe + APK built and tested (desktop over CDP, emulator update 50001 → 50051, whole tutorial by touch); held back because a drag starting on a name label didn't pan the map (FT-18). Superseded by beta.2 |
 | `v0.5.0` | not cut | — | — |

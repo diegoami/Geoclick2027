@@ -495,11 +495,13 @@ that same discipline into any task you pick up:
     test, right after adding an import: Vite found a dependency its cache
     didn't know and re-bundled mid-run. Run the tests again; a fresh
     clone never hits it.
-  - Labels magnify on demand (FT-02/FT-03). A mouse hover grows one to
-    20px (`:hover`, only under `@media (hover: hover)`). On touch, a tap
-    toggles `.is-magnified`, which `labelMagnify.ts` sets from one
-    listener that `createMap` installs. Both share one look in `app.css`,
-    so change them together.
+  - Labels magnify on demand (FT-02/FT-03), and take **no pointer
+    input** (`pointer-events: none`, FT-18): drags, pinches and clicks that
+    start on a name go to the map. So `labelMagnify.ts`, one listener that
+    `createMap` installs, finds the label under the pointer by position:
+    the mouse over it sets `.is-hovered`, a tap (down and up within 10px)
+    toggles `.is-magnified`. A `:hover` rule on a label would never fire.
+    Both classes share one look in `app.css`, so change them together.
 - **Commit messages end with** `Co-Authored-By: Claude Sonnet 5
   <noreply@anthropic.com>` when Claude made the change — see CLAUDE.md.
 

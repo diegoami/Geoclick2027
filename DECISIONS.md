@@ -1043,6 +1043,14 @@ answers:
   magnify-on-tap for touch screens (FT-03). One behaviour on every
   device, no new setting. A whole-app font scale was explicitly not
   wanted.
+  - **Labels take no pointer input** (FT-18, 2026-09-14): a drag or pinch
+    that starts on a name moves the map. Found testing v0.5.0-beta.1 on
+    Android: MapLibre ignores gestures that begin on a popup, and the
+    magnify listener fired on touch-down, so on a phone, where names
+    cover much of the overview, a pan often just magnified a label and
+    the map barely moved (the tutorial's step 2 asks for exactly that
+    drag). Magnify is now worked out from the pointer's position:
+    hovering with a mouse, or a tap that doesn't move, never a drag.
 - **The tutorial is sandboxed.** It runs a real quiz, but its progress is
   in memory only and never becomes real review data. It is started by a
   button plus a dismissible first-visit nudge, and never auto-starts. It

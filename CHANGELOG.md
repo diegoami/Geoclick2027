@@ -20,6 +20,9 @@ For players:
   are offered it on the home page, once.
 - **Sicily no longer starts hidden under the name tray** in the quiz: the
   map now fits into the space above the tray, on every map.
+- **Dragging the map works everywhere,** even when the drag starts on a
+  region's name. Before, on a phone, it often just enlarged the name. A
+  name still grows when you point at it with a mouse or tap it.
 - **Star the maps you like.** Every map on the home page has a star, and
   so does the map bar while you're on a map. Starred maps appear in a
   "Favourites" section at the very top of the home page. It's kept on
@@ -45,6 +48,8 @@ Under the hood:
   overlay, button and hooks; the quiz fits the map above its tray.
 - FT-12: first-visit nudge, walked in all three languages at 360px and
   1280px; step 10 shortened to fit.
+- FT-18: map labels take no pointer input; hover and tap magnify are
+  worked out from the pointer's position.
 
 ## v0.4.0 — 2026-09-14 — Navigation
 
