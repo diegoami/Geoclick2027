@@ -108,6 +108,56 @@ The three-way drift the review found (`0.0.1` / `0.1.0` / `1.0` across seven
 files) was **resolved at `v0.1.0`**; `--check` is now a release-checklist step
 that keeps it resolved. Individual task branches must not touch version numbers.
 
+Android's `versionCode` is derived from the version too, and it must rise
+with every build a phone might install:
+`(major·10000 + minor·100 + patch)·100 + stage`. The stage is N for
+`alpha.N`, 50+N for `beta.N`, and 99 for stable. For example
+`0.4.0-alpha.1` → 40001, `0.4.0-beta.2` → 40052, `0.4.0` → 40099.
+(Until 2026-09-14 it was `major·10000 + minor·100 + patch`, so v0.3.1
+shipped 301. Every code in the new scheme is higher, so updates keep
+working.)
+
+## Pre-releases: alpha and beta (from v0.4.0)
+
+**Project rule (product owner, 2026-09-14): anything a player might try
+before it's final is published on the public releases page as an alpha
+or beta pre-release, and clearly marked so.**
+
+| Stage | When | Version and tag | Tested by |
+|---|---|---|---|
+| **alpha** | a preview of work that isn't merged yet, for example to try a feature on a phone | `X.Y.Z-alpha.N` | the developer only |
+| **beta** | everything for the release is merged to `main` and the gates pass; waiting for the product owner's test | `X.Y.Z-beta.N` | the developer; product owner testing |
+| **stable** | the product owner has tried it (the "Cutting a release" checklist below) | `X.Y.Z` | both |
+
+- **Published as GitHub pre-releases** on
+  [`diegoami/geoclick-releases`](https://github.com/diegoami/geoclick-releases):
+  - `publish-release.mjs` adds `--prerelease`, puts "(alpha)" or "(beta)"
+    in the title, and opens the notes with a warning banner;
+  - GitHub never marks a pre-release as "latest", so the website's
+    download link and the README keep pointing at the last stable
+    release;
+  - the in-app version badge shows the stage, for example
+    `v0.4.0-alpha.1 · 1a2b3c4`.
+- **Desktop and Android both ship:** the Windows `-setup.exe` and the APK.
+  Pre-releases skip the `.msi`, because the MSI format only takes numeric
+  versions and WiX rejects "alpha".
+- **Notes** come from a `## Unreleased` section at the top of
+  CHANGELOG.md. Each task adds its player-facing bullet there under
+  "For players:" as it merges. At the stable release that section is
+  renamed to the version.
+- **Where an alpha is built from:** a *throwaway commit* on top of the
+  task branch, carrying only the version bump. It's tagged
+  `vX.Y.Z-alpha.N` and never merged; the tag keeps it. The task branch
+  stays free of version numbers.
+- **Where a beta is built from:** a "Release vX.Y.Z-beta.N" bump commit
+  on `main`, tagged. The stable release bumps `main` again, to `X.Y.Z`.
+- **Same checks as stable.** Package from the tag with
+  `package-release.mjs`, then try both installers by opening a map in
+  each (step 2 below). Show the product owner the `publish-release.mjs`
+  dry run, and publish only on their OK. Alphas and betas are public too.
+- **Numbering:** start at `.1`, and bump N for each new build of the same
+  stage: alpha up to 49, beta up to 48.
+
 ## What a release is
 
 One source tree, three artefacts, one tag.

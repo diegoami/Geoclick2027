@@ -47,6 +47,20 @@ Each release includes `SHA256SUMS.txt`. Run
 `certutil -hashfile <file> SHA256` on Windows or `sha256sum <file>`
 elsewhere, and compare the result with the line for that file.
 
+## Pre-releases (alpha and beta)
+
+Some releases are marked **Pre-release**, with *alpha* or *beta* in the
+name. They let people try what's coming before it's final:
+
+- **alpha:** a preview of unfinished work. It may be rough.
+- **beta:** a release candidate, being tested before it becomes stable.
+
+For everyday use, take the release marked **Latest**. That's what the
+download link above opens, and it's never a pre-release. If you try a
+pre-release, installing the next stable version over it keeps your
+progress. Pre-releases include the Windows `-setup.exe` and the Android
+`.apk`, but no `.msi`.
+
 ## Updates
 
 The apps don't update themselves. New versions appear on the
