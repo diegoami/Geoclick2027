@@ -525,6 +525,14 @@ RELEASES.md (open a map in each installer before publishing).
 
 ### FT-10 — Sandboxed progress store for the tutorial · Medium · deps: FT-09
 
+> **Proposed at FT-09 (2026-09-14):** [TUTORIAL.md](TUTORIAL.md), "The
+> sandbox", narrows the sandbox to `italy-regions` only, with every other
+> map reading and writing the real store. Otherwise the home page would
+> show every map as due during the tutorial, and a map played while the
+> tutorial is paused would silently not be saved. It's open question 5 in
+> TUTORIAL.md; the product owner's answer at FT-09's review decides which
+> version this task builds.
+
 - **Do:**
   - Add `createInMemoryProgressRepository()`, implementing the full
     `ProgressRepository` interface (`progressRepository.ts`), including
