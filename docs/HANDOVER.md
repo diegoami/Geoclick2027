@@ -11,9 +11,9 @@ and [DECISIONS.md](../DECISIONS.md).
 | | |
 |---|---|
 | `main` | clean, in sync with GitHub; last commit is this handover |
-| Latest release | **v0.4.0** (tag at `441f57b`, 2026-09-14). The web app deploys from `main`; installers are on the public [releases page](https://github.com/diegoami/geoclick-releases/releases/latest). v0.4.0-alpha.1 was the first pre-release under the new alpha/beta rule; **v0.5.0-alpha.1** (2026-09-14, Recent + Favourites) is the current preview |
+| Latest release | **v0.4.0** (tag at `441f57b`, 2026-09-14). The web app deploys from `main`; installers are on the public [releases page](https://github.com/diegoami/geoclick-releases/releases/latest). v0.4.0-alpha.1 was the first pre-release under the new alpha/beta rule; **v0.5.0-beta.2** (2026-09-14: tutorial, favourites, recent maps, drags on names move the map) is the current preview, waiting for the product owner's test |
 | Remediation programme | Closed with v0.2.0 ([REMEDIATION_PLAN.md](REMEDIATION_PLAN.md)) |
-| Feature programme | v0.3.x shipped (FT-01 to FT-08, hotfix v0.3.1). v0.4.0 shipped (FT-13: maps open on the overview, plus an Explore tab; FT-14: Android back goes up a level). **v0.5.0 in progress:** FT-15 (Recent maps) and FT-16 (favourite maps) merged and previewed in v0.5.0-alpha.1; next the tutorial, FT-09 to FT-12 |
+| Feature programme | v0.3.x shipped (FT-01 to FT-08, hotfix v0.3.1). v0.4.0 shipped (FT-13: maps open on the overview, plus an Explore tab; FT-14: Android back goes up a level). **v0.5.0 complete, in beta:** FT-09 to FT-12 (tutorial), FT-15 to FT-17 (favourites, recent, home panel) and FT-18 (drags on names move the map) merged; v0.5.0-beta.2 published; stable v0.5.0 after the product owner's test |
 
 Shipped in v0.3.x:
 - map labels at 13px `rem`, magnified on hover and on tap;

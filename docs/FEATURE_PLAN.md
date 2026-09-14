@@ -7,7 +7,7 @@ programme](REMEDIATION_PLAN.md), which closed with `v0.2.0`: that one
 fixed what a code review found, while this one adds things players will
 notice.
 
-**Status: in progress** — see the ledger at the bottom. v0.4.0 (FT-13, FT-14) is out. v0.5.0 is in progress: all tasks (FT-09 to FT-12, FT-15 to FT-17) are merged; v0.5.0-beta.1 was held back for FT-18 (merged); v0.5.0-beta.2 next, then v0.5.0.
+**Status: in progress** — see the ledger at the bottom. v0.4.0 (FT-13, FT-14) is out. v0.5.0 is in progress: all tasks (FT-09 to FT-12, FT-15 to FT-17) are merged; v0.5.0-beta.2 is published for the product owner's test (beta.1 was held back for FT-18); stable v0.5.0 follows.
 
 ---
 
@@ -708,4 +708,5 @@ Update this table as tasks merge. Commit hashes are the merge commits.
 | `v0.4.0` | **cut** | `v0.4.0` → `441f57b` | 2026-09-14 — stable, latest on geoclick-releases (setup.exe, .msi, APK); same app code as alpha.1, which the product owner tried on Windows and Android |
 | `v0.5.0-alpha.1` | **pre-release** (alpha) | `v0.5.0-alpha.1` → `b9793c0` (version bump on main `ea84ab5`, never merged) | 2026-09-14 — setup.exe + APK on geoclick-releases as a GitHub pre-release; FT-15 + FT-16 for the product owner to try. Checked: desktop over CDP, APK updating 0.4.0 on the emulator (40099 → 50001) |
 | `v0.5.0-beta.1` | **built, not published** | `v0.5.0-beta.1` → `e703d2a` | 2026-09-14 — setup.exe + APK built and tested (desktop over CDP, emulator update 50001 → 50051, whole tutorial by touch); held back because a drag starting on a name label didn't pan the map (FT-18). Superseded by beta.2 |
+| `v0.5.0-beta.2` | **pre-release** (beta) | `v0.5.0-beta.2` → `fe9fc29` | 2026-09-14 — setup.exe + APK on geoclick-releases as a GitHub pre-release: everything for v0.5.0 incl. FT-18. Checked: fresh-clone gates, served build, desktop over CDP (drag from a label pans, hover magnifies), emulator update 50051 → 50052 (finger-drag from a label pans, tap magnifies). Waiting for the product owner's test |
 | `v0.5.0` | not cut | — | — |
