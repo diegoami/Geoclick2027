@@ -7,7 +7,7 @@ programme](REMEDIATION_PLAN.md), which closed with `v0.2.0`: that one
 fixed what a code review found, while this one adds things players will
 notice.
 
-**Status: in progress** — see the ledger at the bottom. v0.4.0 (FT-13, FT-14) is out. v0.5.0 is in progress: all tasks (FT-09 to FT-12, FT-15 to FT-17) are merged; v0.5.0-beta.1 next, then v0.5.0.
+**Status: in progress** — see the ledger at the bottom. v0.4.0 (FT-13, FT-14) is out. v0.5.0 is in progress: all tasks (FT-09 to FT-12, FT-15 to FT-17) are merged; v0.5.0-beta.1 was held back for FT-18 (merged); v0.5.0-beta.2 next, then v0.5.0.
 
 ---
 
@@ -694,7 +694,7 @@ Update this table as tasks merge. Commit hashes are the merge commits.
 | FT-15 | **merged** | `608937a` | v0.5.0 | Recent section (5 newest, any map view counts, device-local); browser-checked at 1280/400px; desktop (CDP) + Android (emulator) checked in v0.5.0-alpha.1 |
 | FT-16 | **merged** | `a006833` | v0.5.0 | star on home cards + map bar, Favourites section first; browser-checked incl. 400px DE/IT; desktop (CDP) + Android (emulator) checked in v0.5.0-alpha.1. To check with TalkBack on a phone: the emulator's uiautomator dump showed the star with no name or pressed state (the language pills lose their state the same way, so likely the dump) |
 | FT-17 | **merged** | `6429331` | v0.5.0 | Favourites + Recent in one panel, "All maps" heading before the countries; asked for by the product owner while trying FT-11; checked 1280/400px EN/DE |
-| FT-18 | in review | — | v0.5.0 | labels take no pointer input; magnify by position (hover, real tap); drag from a label pans with mouse (163px) and touch (131px) |
+| FT-18 | **merged** | `a2eae05` | v0.5.0 | labels take no pointer input; magnify by position (hover, real tap); drag from a label pans with mouse (163px) and touch (131px) |
 | FT-09 | **merged** | `cd47cc6` | v0.5.0 | docs/TUTORIAL.md: 11 steps + intro/outro, EN/DE/IT copy; 🧑 copy approved 2026-09-14 (decisions 17-19: Explore step, italy-regions-only sandbox, star tip, Finish stays on tour) |
 | FT-10 | **merged** | `1741112` | v0.5.0 | italy-regions in memory during the tutorial, other maps live (decision 18); no localStorage writes in a tutorial quiz (tested); normal play smoke-checked in the browser |
 | FT-11 | **merged** | `fa00091` | v0.5.0 | Tutorial button, overlay, 11 steps on real actions; pause/resume, Back, Skip/Esc, Replay; full browser runs 1280 EN, 400 EN/DE; tried by the product owner in the browser. Also: quiz fits the map above the tray (Sicily was hidden) |
