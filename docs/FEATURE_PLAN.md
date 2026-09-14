@@ -7,7 +7,7 @@ programme](REMEDIATION_PLAN.md), which closed with `v0.2.0`: that one
 fixed what a code review found, while this one adds things players will
 notice.
 
-**Status: in progress** — see the ledger at the bottom.
+**Status: in progress** — see the ledger at the bottom. v0.4.0 (FT-13, FT-14) is out; the tutorial (FT-09 to FT-12) is next, as v0.5.0.
 
 ---
 

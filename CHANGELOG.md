@@ -5,11 +5,12 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
-## Unreleased
+## v0.4.0 — 2026-09-14 — Navigation
 
 **Maps open where the names are, and Android's back button goes where you'd expect.**
-Becomes the v0.4.0 entry ("Navigation") when it ships; alpha and beta
-pre-releases publish its "For players" part (docs/RELEASES.md).
+Two tasks added ahead of the tutorial, FT-13 and FT-14. It's also the first
+release to go through the new alpha pre-release: the product owner tried
+v0.4.0-alpha.1 on Windows and on their phone before this was cut.
 
 For players:
 
@@ -26,8 +27,20 @@ For players:
 
 Under the hood:
 
-- FT-13 (overview-first, Explore tab, map bar layout); FT-14
-  (`@capacitor/app`, `parentRoute()` in `backNavigation.ts`, unit-tested).
+- FT-13: maps open on the overview, the Explore tab, and the map bar
+  layout (measured at 360 to 1024 px in EN, DE and IT).
+- FT-14: `@capacitor/app` handles the back button, and `parentRoute()` in
+  `backNavigation.ts` decides where it goes (unit-tested).
+- New release rule: previews are published as **alpha** or **beta**
+  GitHub pre-releases, never "latest" (docs/RELEASES.md, "Pre-releases").
+  Android's version number is now `(M·10000 + m·100 + p)·100 + stage`,
+  so alpha → beta → stable install as updates. This release is 40099.
+
+Not covered:
+
+- On a phone, names at the top of the overview can still peek through the
+  small gaps between the map bar's tabs. A follow-up could start the map
+  a little lower. Not scheduled.
 
 ## v0.3.1 — 2026-09-13 — Desktop maps fixed
 
