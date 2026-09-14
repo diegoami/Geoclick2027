@@ -1,0 +1,336 @@
+// The tutorial's steps and the rules for moving between them (FT-11). Pure:
+// no Svelte, no DOM, no navigation, so every transition is unit-tested
+// (tutorialMachine.test.ts). tutorial.svelte.ts holds the live state and
+// carries out the effects returned here. The script itself, and why each
+// step works the way it does, is docs/TUTORIAL.md.
+
+import type { TranslationKey } from './i18n.svelte';
+
+/** The screens the tutorial knows about, all on its own map. */
+export type Screen = 'home' | 'overview' | 'explore' | 'quiz' | 'tour';
+/** Where the player is: one of the tutorial's screens, or anywhere else. */
+export type Place = Screen | 'elsewhere';
+
+/** What moves a step on. */
+export type Advance =
+	| { kind: 'start' } // the intro's Start button
+	| { kind: 'next' } // an explanation step's Next button
+	| { kind: 'route'; to: Screen }
+	| { kind: 'gesture' } // the player zoomed or panned the map
+	| { kind: 'reveal' } // a region's name shown in Explore
+	| { kind: 'drop'; correct: boolean }
+	| { kind: 'finish' }; // the outro
+
+/** What a step highlights on one screen: a spotlight, optionally with rings. */
+export interface Highlight {
+	spot?: string; // a data-tutorial anchor
+	rings?: string[];
+	/** Dim the rest of the page. Off where the spotlight is the whole map. */
+	dim: boolean;
+}
+
+export interface Step {
+	id: string;
+	/** Numbered 1-11 in the card's counter; the intro and outro aren't. */
+	numbered: boolean;
+	/** The screens this step belongs on; the first is where Resume and Back go. */
+	screens: Screen[];
+	advance: Advance;
+	copy: TranslationKey;
+	/** Touch-screen wording, where the mouse wording says hover or click. */
+	touchCopy?: TranslationKey;
+	title?: TranslationKey;
+	highlight: Partial<Record<Screen, Highlight>>;
+}
+
+const centred: Highlight = { dim: true };
+
+export const STEPS: Step[] = [
+	{
+		id: 'intro',
+		numbered: false,
+		screens: ['home'],
+		advance: { kind: 'start' },
+		title: 'tutorial.intro.title',
+		copy: 'tutorial.intro.body',
+		highlight: { home: centred }
+	},
+	{
+		id: 'choose-map',
+		numbered: true,
+		screens: ['home'],
+		advance: { kind: 'route', to: 'overview' },
+		copy: 'tutorial.step1',
+		highlight: { home: { spot: 'home-map-card', dim: true } }
+	},
+	{
+		id: 'zoom-pan',
+		numbered: true,
+		screens: ['overview'],
+		advance: { kind: 'gesture' },
+		copy: 'tutorial.step2',
+		touchCopy: 'tutorial.step2.touch',
+		highlight: { overview: { rings: ['zoom-control'], dim: false } }
+	},
+	{
+		id: 'overview',
+		numbered: true,
+		screens: ['overview'],
+		advance: { kind: 'next' },
+		copy: 'tutorial.step3',
+		touchCopy: 'tutorial.step3.touch',
+		highlight: { overview: { spot: 'nav-overview', dim: true } }
+	},
+	{
+		id: 'explore',
+		numbered: true,
+		screens: ['overview', 'explore'],
+		advance: { kind: 'reveal' },
+		copy: 'tutorial.step4',
+		touchCopy: 'tutorial.step4.touch',
+		highlight: {
+			overview: { spot: 'nav-explore', dim: true },
+			explore: { dim: false }
+		}
+	},
+	{
+		id: 'open-quiz',
+		numbered: true,
+		screens: ['explore'],
+		advance: { kind: 'route', to: 'quiz' },
+		copy: 'tutorial.step5',
+		highlight: { explore: { spot: 'nav-quiz', dim: true } }
+	},
+	{
+		id: 'correct-drop',
+		numbered: true,
+		screens: ['quiz'],
+		advance: { kind: 'drop', correct: true },
+		copy: 'tutorial.step6',
+		highlight: { quiz: { spot: 'slip-sicilia', dim: true } }
+	},
+	{
+		id: 'wrong-drop',
+		numbered: true,
+		screens: ['quiz'],
+		advance: { kind: 'drop', correct: false },
+		copy: 'tutorial.step7',
+		highlight: { quiz: { spot: 'slip-sardegna', dim: true } }
+	},
+	{
+		id: 'check-overview',
+		numbered: true,
+		screens: ['quiz'],
+		advance: { kind: 'route', to: 'overview' },
+		copy: 'tutorial.step8',
+		highlight: { quiz: { spot: 'nav-overview', dim: true } }
+	},
+	{
+		id: 'back-to-quiz',
+		numbered: true,
+		screens: ['overview'],
+		advance: { kind: 'route', to: 'quiz' },
+		copy: 'tutorial.step9',
+		highlight: { overview: { spot: 'nav-quiz', dim: true } }
+	},
+	{
+		id: 'spaced-repetition',
+		numbered: true,
+		screens: ['quiz'],
+		advance: { kind: 'next' },
+		copy: 'tutorial.step10',
+		highlight: { quiz: { spot: 'quiz-progress', dim: true } }
+	},
+	{
+		id: 'tour',
+		numbered: true,
+		screens: ['quiz'],
+		advance: { kind: 'route', to: 'tour' },
+		copy: 'tutorial.step11',
+		highlight: { quiz: { spot: 'nav-tour', dim: true } }
+	},
+	{
+		id: 'outro',
+		numbered: false,
+		screens: ['tour'],
+		advance: { kind: 'finish' },
+		title: 'tutorial.outro.title',
+		copy: 'tutorial.outro.body',
+		highlight: { tour: { dim: false } }
+	}
+];
+
+export const NUMBERED_STEPS = STEPS.filter((s) => s.numbered).length;
+const EXPLORE_STEP = STEPS.findIndex((s) => s.id === 'explore');
+const OVERVIEW_STEP = STEPS.findIndex((s) => s.id === 'overview');
+
+/** Actions the player has done at least once in this run. */
+export interface Done {
+	gesture: boolean;
+	reveal: boolean;
+	correctDrop: boolean;
+	wrongDrop: boolean;
+}
+
+export interface TutorialState {
+	status: 'idle' | 'running' | 'paused';
+	step: number; // index into STEPS
+	place: Place;
+	done: Done;
+}
+
+export type TutorialEvent =
+	| { type: 'start' } // the Tutorial button
+	| { type: 'next' } // Start, Next, Finish
+	| { type: 'back' }
+	| { type: 'skip' } // Skip, End tutorial, Esc
+	| { type: 'replay' }
+	| { type: 'resume' }
+	| { type: 'route'; place: Place }
+	| { type: 'gesture' }
+	| { type: 'reveal' }
+	| { type: 'drop'; correct: boolean };
+
+export type Effect =
+	{ type: 'navigate'; screen: Screen } | { type: 'startSandbox' } | { type: 'endSandbox' };
+
+const noneDone: Done = { gesture: false, reveal: false, correctDrop: false, wrongDrop: false };
+
+export const initialState: TutorialState = {
+	status: 'idle',
+	step: 0,
+	place: 'elsewhere',
+	done: noneDone
+};
+
+/** Whether a step's action has already happened, so its card offers Next. */
+export function isStepDone(state: TutorialState, index = state.step): boolean {
+	const advance = STEPS[index].advance;
+	switch (advance.kind) {
+		case 'route':
+			return state.place === advance.to;
+		case 'gesture':
+			return state.done.gesture;
+		case 'reveal':
+			return state.done.reveal;
+		case 'drop':
+			return advance.correct ? state.done.correctDrop : state.done.wrongDrop;
+		default:
+			return false;
+	}
+}
+
+/** Whether the card shows a Next button: explanation steps, and steps already done. */
+export function showsNext(state: TutorialState): boolean {
+	return STEPS[state.step].advance.kind === 'next' || isStepDone(state);
+}
+
+/** The card's position in the counter, 1-11, or undefined for the intro and outro. */
+export function stepNumber(index: number): number | undefined {
+	if (!STEPS[index].numbered) return undefined;
+	return STEPS.slice(0, index + 1).filter((s) => s.numbered).length;
+}
+
+// Going to a step: navigate to its first screen unless the player is already
+// on one of its screens.
+function goTo(state: TutorialState, step: number): { state: TutorialState; effects: Effect[] } {
+	const screens = STEPS[step].screens;
+	const onScreen = (screens as Place[]).includes(state.place);
+	return {
+		state: { ...state, status: 'running', step },
+		effects: onScreen ? [] : [{ type: 'navigate', screen: screens[0] }]
+	};
+}
+
+const ended = (state: TutorialState): { state: TutorialState; effects: Effect[] } => ({
+	state: { ...initialState, place: state.place },
+	effects: [{ type: 'endSandbox' }]
+});
+
+// A fresh run from the intro, with a fresh sandbox. Navigating first means a
+// quiz open when the button is pressed isn't remounted on the sandbox for
+// nothing on its way out.
+function fresh(place: Place): { state: TutorialState; effects: Effect[] } {
+	const started = goTo({ ...initialState, place }, 0);
+	return { ...started, effects: [...started.effects, { type: 'startSandbox' }] };
+}
+
+export function transition(
+	state: TutorialState,
+	event: TutorialEvent
+): { state: TutorialState; effects: Effect[] } {
+	const same = { state, effects: [] as Effect[] };
+	const step = STEPS[state.step];
+
+	if (event.type === 'route') {
+		const moved = { ...state, place: event.place };
+		if (state.status !== 'running') return { state: moved, effects: [] };
+		// The step's own target: move on.
+		if (step.advance.kind === 'route' && event.place === step.advance.to)
+			return { state: { ...moved, step: state.step + 1 }, effects: [] };
+		// Opening Explore during step 3 is where the tutorial goes next anyway.
+		if (state.step === OVERVIEW_STEP && event.place === 'explore')
+			return { state: { ...moved, step: EXPLORE_STEP }, effects: [] };
+		// Anywhere the step doesn't belong: pause until the player chooses.
+		if (!(step.screens as Place[]).includes(event.place))
+			return { state: { ...moved, status: 'paused' }, effects: [] };
+		return { state: moved, effects: [] };
+	}
+
+	switch (event.type) {
+		case 'start':
+			if (state.status === 'idle') return fresh(state.place);
+			if (state.status === 'paused') return goTo(state, state.step);
+			return same;
+
+		case 'replay':
+			return fresh(state.place);
+
+		case 'skip':
+			return state.status === 'idle' ? same : ended(state);
+
+		case 'resume':
+			return state.status === 'paused' ? goTo(state, state.step) : same;
+
+		case 'next':
+			if (state.status !== 'running') return same;
+			if (step.advance.kind === 'finish') return ended(state);
+			if (step.advance.kind === 'start' || showsNext(state)) return goTo(state, state.step + 1);
+			return same;
+
+		case 'back':
+			if (state.status !== 'running' || !step.numbered || state.step <= 1) return same;
+			return goTo(state, state.step - 1);
+
+		case 'gesture':
+		case 'reveal':
+		case 'drop': {
+			if (state.status === 'idle') return same;
+			const done =
+				event.type === 'drop'
+					? { ...state.done, [event.correct ? 'correctDrop' : 'wrongDrop']: true }
+					: { ...state.done, [event.type]: true };
+			const next = { ...state, done };
+			const matches =
+				event.type === 'drop'
+					? step.advance.kind === 'drop' && step.advance.correct === event.correct
+					: step.advance.kind === event.type;
+			const onScreen = (step.screens as Place[]).includes(state.place);
+			if (state.status === 'running' && matches && onScreen)
+				return { state: { ...next, step: state.step + 1 }, effects: [] };
+			return { state: next, effects: [] };
+		}
+	}
+}
+
+/** Which tutorial screen a path is, given the app's base path. */
+export function placeOf(pathname: string, base: string, mapId: string): Place {
+	const path = pathname.startsWith(base) ? pathname.slice(base.length) : pathname;
+	const parts = path.split('/').filter(Boolean);
+	if (parts.length === 0) return 'home';
+	if (parts[0] !== 'map' || parts[1] !== mapId) return 'elsewhere';
+	if (parts.length === 2) return 'explore';
+	if (parts.length === 3 && ['overview', 'quiz', 'tour'].includes(parts[2]))
+		return parts[2] as Screen;
+	return 'elsewhere';
+}

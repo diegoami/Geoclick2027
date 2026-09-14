@@ -14,6 +14,8 @@
 	import { favouriteMaps, recentMaps } from '$lib/mapPrefs.svelte';
 	import FavouriteStar from '$lib/FavouriteStar.svelte';
 	import { RELEASES_URL, isNativeShell } from '$lib/platform';
+	import TutorialButton from '$lib/TutorialButton.svelte';
+	import { TUTORIAL_MAP_ID, isTutorialSandboxActive } from '$lib/tutorialSandbox.svelte';
 
 	// Flat view of every map - onMount's data-loading loop below doesn't
 	// care about grouping, only about (id) -> per-map progress data, so it
@@ -49,6 +51,14 @@
 	onMount(() => {
 		mounted = true;
 		isNativeShell().then((native) => (showDownload = !native));
+	});
+
+	// Runs after mount, and again whenever the tutorial's sandbox starts or ends
+	// (FT-10): Italy - Regions' line shows the sandbox during the tutorial and
+	// real progress again afterwards.
+	$effect(() => {
+		void isTutorialSandboxActive();
+		let stale = false;
 		(async () => {
 			const repository = await createProgressRepository();
 			const summaryEntries = await Promise.all(
@@ -56,6 +66,7 @@
 					async (map) => [map.id, await repository.getLastSessionSummary(map.id)] as const
 				)
 			);
+			if (stale) return;
 			lastSessions = Object.fromEntries(summaryEntries);
 
 			const today = todayLocalDate();
@@ -75,8 +86,12 @@
 					return [map.id, status] as const;
 				})
 			);
+			if (stale) return;
 			dueStatuses = Object.fromEntries(dueEntries);
 		})();
+		return () => {
+			stale = true;
+		};
 	});
 </script>
 
@@ -84,6 +99,7 @@
 	<div class="header-row">
 		<h1>Geoclick</h1>
 		<LanguageSwitcher />
+		<TutorialButton />
 	</div>
 	<p>{t('home.subtitle')}</p>
 	{#if showDownload}
@@ -92,10 +108,10 @@
 			<a href={RELEASES_URL} target="_blank" rel="external noopener">{t('home.download.link')}</a>
 		</p>
 	{/if}
-	{#snippet mapCard(mapId: string, label: string)}
+	{#snippet mapCard(mapId: string, label: string, anchor?: string)}
 		{@const summary = lastSessions[mapId]}
 		{@const due = dueStatuses[mapId]}
-		<li class="map-card">
+		<li class="map-card" data-tutorial={anchor}>
 			<a href={resolve('/map/[mapId]/overview', { mapId })}>
 				<span class="map-name">{label}</span>
 				{#if due && due.kind !== 'notStarted'}
@@ -150,7 +166,13 @@
 				<h2>{group.country}</h2>
 				<ul>
 					{#each group.maps as map (map.id)}
-						{@render mapCard(map.id, t(map.labelKey))}
+						<!-- The tutorial's first step points at this card, not at a copy of it in
+						     Favourites or Recent, which not everyone has (docs/TUTORIAL.md). -->
+						{@render mapCard(
+							map.id,
+							t(map.labelKey),
+							map.id === TUTORIAL_MAP_ID ? 'home-map-card' : undefined
+						)}
 					{/each}
 				</ul>
 			</section>

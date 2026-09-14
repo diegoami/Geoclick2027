@@ -6,6 +6,7 @@
 	import MapNav from './MapNav.svelte';
 	import type { MapDefinition } from './mapDefinition';
 	import { mapDisplayName } from './mapCatalog';
+	import { tutorialExploreReveal } from './tutorial.svelte';
 
 	let { mapId }: { mapId: string } = $props();
 
@@ -55,6 +56,8 @@
 						className: 'geoclick-popup'
 					});
 					popup.setLngLat(e.lngLat).setText(name).addTo(map!);
+					// The tutorial's Explore step (FT-11) moves on once a name shows.
+					tutorialExploreReveal();
 				});
 
 				map.on('mouseenter', layerId, () => {

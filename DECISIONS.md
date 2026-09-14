@@ -56,6 +56,13 @@ or amend an entry here as part of that change, not as an afterthought.
   This took three passes to get right (outside-the-page, then the tray-
   overlap case, then empty-space-inside-the-map) — each found by the
   user actually playing the quiz, not anticipated in advance.
+- **The quiz fits the map into the space above the name tray** (FT-11,
+  2026-09-14). It used to fit to the whole screen, and the tray covers
+  the bottom of it, so the southernmost targets started out hidden:
+  Sicily on Italy — Regions, at 1280×800 and on phones. Found when the
+  tutorial's "try Sicilia" step couldn't be done without panning first.
+  The fit happens once, when the tray's default height is first measured;
+  resizing the tray afterwards leaves the map where the player put it.
 
 ## Persistence & retention
 

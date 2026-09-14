@@ -1,14 +1,20 @@
 <script lang="ts">
 	import '../app.css';
 	import { onMount } from 'svelte';
-	import { goto } from '$app/navigation';
+	import { afterNavigate, goto } from '$app/navigation';
 	import { resolve } from '$app/paths';
 	import favicon from '$lib/assets/favicon.svg';
 	import VersionBadge from '$lib/VersionBadge.svelte';
+	import TutorialOverlay from '$lib/TutorialOverlay.svelte';
+	import { tutorialRouteChanged } from '$lib/tutorial.svelte';
 	import { getLanguage } from '$lib/i18n.svelte';
 	import { parentRoute } from '$lib/backNavigation';
 
 	let { children } = $props();
+
+	// The tutorial follows every navigation: its steps move on, or pause, on
+	// route changes (FT-11).
+	afterNavigate(({ to }) => tutorialRouteChanged(to?.url.pathname ?? location.pathname));
 
 	// Android's hardware back button goes up the app's hierarchy, not back
 	// through history (FT-14, backNavigation.ts). Registering a listener
@@ -56,3 +62,4 @@
 
 {@render children()}
 <VersionBadge />
+<TutorialOverlay />

@@ -94,13 +94,14 @@ Touch screens:
 
 - **Highlight:** the map, without dimming it (it's the whole screen), and
   a ring round the `+`/`−` buttons.
-- **Moves on:** at the end of any zoom or pan **the player** made:
-  MapLibre's `zoomend` or `moveend` with an `originalEvent`. That covers
-  the wheel, a trackpad pinch, a touch pinch, a drag, and the `+`/`−`
-  buttons (MapLibre's NavigationControl passes the click as the
-  `originalEvent`). The map's own opening fit has no `originalEvent`, so
-  it doesn't count. Moves on about half a second after the gesture ends,
-  so the player sees that it worked.
+- **Moves on:** at the `moveend` of any zoom or pan **the player** made,
+  about half a second later so the player sees that it worked. Which
+  events carry the player's input differs, so OverviewView watches
+  several: the `+`/`−` buttons pass it on every move event, a wheel or
+  trackpad zoom only on MapLibre's own `wheel` event (its moves come from
+  an easing animation, found in FT-11's browser run), and a drag or touch
+  gesture starts with `dragstart` / `touchstart`. The map's own opening
+  fit has none of these, so it doesn't count.
 - **Which copy:** touch copy when `matchMedia('(hover: none)')` matches,
   which is phones and tablets. Otherwise the mouse copy.
 
@@ -160,6 +161,10 @@ Touch:
   something else first has still learnt the step.
 - **Card position:** at the top, below the map bar, so it never covers the
   tray or Sicily (see [Layout](#layout)).
+- **Sicily has to be visible:** the quiz used to fit the map to the whole
+  screen, so Sicily started under the tray at 1280×800 and on phones.
+  Since FT-11 the quiz fits the map into the space above the tray, for
+  every map, not only in the tutorial.
 
 ### 7. Make a mistake — quiz
 
@@ -226,7 +231,8 @@ Touch:
 >
 > [Replay] [Finish]
 
-- A centred card, lower on the screen so the tour stays visible behind it.
+- A card at the top, below the map bar, clear of the tour's own controls
+  at the bottom, so the tour stays visible and usable behind it.
 - **Finish** ends the tutorial and leaves the player on the tour, which
   keeps playing (product owner, 2026-09-14).
 - **Replay** starts again from the intro, with a fresh sandbox.
@@ -354,8 +360,9 @@ this at FT-09's review, 2026-09-14.
   whichever side has room, with a small pointer towards it.
 - **Card position, phone width (under 720px, the map bar's own
   breakpoint):** a full-width card docked to the top or the bottom edge,
-  whichever doesn't cover the highlighted element. On the quiz it's always
-  the top, just below the map bar, because the tray is at the bottom.
+  whichever doesn't cover the highlighted element. On the quiz and the
+  tour it's always the top, just below the map bar, because the tray and
+  the tour's controls are at the bottom (at every width).
 - **Length:** every card fits in four lines at 360px wide in German, the
   longest language. FT-12 measures this and shortens copy where needed.
 - **Touch:** dragging a slip already works by touch (pointer events). The
@@ -374,8 +381,7 @@ this at FT-09's review, 2026-09-14.
 |---|---|---|
 | `tutorial-button` | the Tutorial button | home header and MapNav |
 | `home-map-card` | the `italy-regions` card in the country list | not the Favourites/Recent copies |
-| `map` | the map container | every map view |
-| `zoom-control` | MapLibre's `+`/`−` group | third-party DOM: set the attribute after `addControl` in `createMap` |
+| `zoom-control` | MapLibre's `+`/`−` group | third-party DOM: `createMap` sets the attribute after `addControl` |
 | `nav-overview`, `nav-explore`, `nav-quiz`, `nav-tour` | MapNav's tabs | |
 | `slip-<targetId>` | each quiz slip | e.g. `slip-sicilia`, `slip-sardegna` |
 | `quiz-progress` | the "N / M placed" line | |
