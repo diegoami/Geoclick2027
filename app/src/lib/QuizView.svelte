@@ -8,6 +8,7 @@
 	import MapNav from './MapNav.svelte';
 	import { t, tPlural } from './i18n.svelte';
 	import { mapDisplayName } from './mapCatalog';
+	import { tutorialDrop } from './tutorial.svelte';
 	import {
 		createQuizSession,
 		attemptMatch,
@@ -15,7 +16,7 @@
 		scoreSession,
 		type QuizSession
 	} from '@geoclick/quiz-engine';
-	import type { MapDefinition } from './mapDefinition';
+	import { overallBounds, type MapDefinition } from './mapDefinition';
 	import {
 		createProgressRepository,
 		todayLocalDate,
@@ -106,6 +107,15 @@
 			const naturalPx = handleRowPx + traySlipsEl.scrollHeight;
 			const defaultCapPx = window.innerHeight * TRAY_DEFAULT_CAP_FRACTION;
 			trayHeightPx = Math.min(Math.max(naturalPx, trayMinPx), Math.min(defaultCapPx, trayMaxPx));
+			// Fit the map into the space above the tray, once its height is known.
+			// Fitted to the whole view, the southernmost targets started out under
+			// the tray (Sicily on Italy - Regions, at 1280x800 and on phones),
+			// which the tutorial's "try Sicilia" step ran straight into (FT-11).
+			if (map && mapDef)
+				map.fitBounds(overallBounds(mapDef), {
+					padding: { top: 40, right: 40, left: 40, bottom: trayHeightPx + 40 },
+					duration: 0
+				});
 		} else {
 			trayHeightPx = Math.min(Math.max(trayHeightPx, trayMinPx), trayMaxPx);
 		}
@@ -378,6 +388,9 @@
 			closestName: isPointMap ? closestNameAmong(nearbyNames, e.clientX, e.clientY) : undefined
 		});
 		if (!scored) return;
+		// The tutorial's drop steps (FT-11) wait for a scored drop; does nothing
+		// when no tutorial is running.
+		tutorialDrop(isCorrect);
 
 		session = attemptMatch(session, targetId, isCorrect ? targetId : undefined);
 		const item = session.items.find((i) => i.target.id === targetId)!;
@@ -628,10 +641,12 @@
 					{t('quiz.practiceModePrefix')}
 				{/if}
 				{#if session}
-					{t('quiz.subtitle', {
-						placed: session.items.filter((i) => i.status !== 'pending').length,
-						total: session.items.length
-					})}
+					<span data-tutorial="quiz-progress"
+						>{t('quiz.subtitle', {
+							placed: session.items.filter((i) => i.status !== 'pending').length,
+							total: session.items.length
+						})}</span
+					>
 				{/if}
 			{/snippet}
 		</MapNav>
@@ -717,6 +732,7 @@
 					{@const isDragging = dragging?.targetId === item.target.id}
 					<button
 						class="slip"
+						data-tutorial="slip-{item.target.id}"
 						class:slip-dragging={isDragging}
 						class:wrong={wrongFlashId === item.target.id}
 						style={isDragging && dragging ? `left: ${dragging.x}px; top: ${dragging.y}px;` : ''}

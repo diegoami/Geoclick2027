@@ -184,6 +184,20 @@ card and the map bar has a star (`FavouriteStar.svelte`). A map card opens that 
 Until v0.4.0 a map opened on Explore. FT-13 made Overview the first
 screen (DECISIONS.md, "Feature programme decisions").
 
+**The tutorial** (FT-11, script in `docs/TUTORIAL.md`) runs over these
+same screens rather than copies of them. A Tutorial button sits on the
+home page header and in the map bar. `TutorialOverlay.svelte`, mounted
+once in `+layout.svelte`, draws the spotlight, the step card and the
+"paused" bar. The steps and every rule for moving between them are pure
+data and a pure function in `tutorialMachine.ts`; `tutorial.svelte.ts`
+holds the live state and carries out what the rules ask for (navigate,
+switch the progress sandbox on or off). The real elements are marked
+with `data-tutorial="…"` attributes, and three views report the
+player's actions through small hooks that do nothing outside the
+tutorial: OverviewView (zoom or pan), MapView (a name shown in Explore)
+and QuizView (a scored drop). Its progress runs in the sandbox described
+under Storage.
+
 ## Demo maps & map-creation process
 
 First three demo maps: **Italy (regioni)**, **Germany (Bundesländer)**,

@@ -103,6 +103,10 @@ export function createMap(
 		fitBoundsOptions: { padding: 40 }
 	});
 	map.addControl(new maplibregl.NavigationControl(), 'top-right');
+	// The tutorial rings the +/- buttons in its zoom-and-pan step (FT-11).
+	container
+		.querySelector('.maplibregl-ctrl-top-right .maplibregl-ctrl-group')
+		?.setAttribute('data-tutorial', 'zoom-control');
 
 	// Each target's adjacency-aware colour slot (GC-032) is read by base.json
 	// through feature-state, so recolouring never means rebuilding tiles.

@@ -16,6 +16,7 @@
 	import LanguageSwitcher from './LanguageSwitcher.svelte';
 	import { recordVisit } from './mapPrefs.svelte';
 	import FavouriteStar from './FavouriteStar.svelte';
+	import TutorialButton from './TutorialButton.svelte';
 
 	let {
 		mapId,
@@ -60,6 +61,7 @@
 		<a
 			class="nav-btn nav-btn--action"
 			class:nav-btn--active={active === 'overview'}
+			data-tutorial="nav-overview"
 			href={resolve('/map/[mapId]/overview', { mapId })}
 		>
 			<svg
@@ -83,6 +85,7 @@
 		<a
 			class="nav-btn nav-btn--action"
 			class:nav-btn--active={active === 'explore'}
+			data-tutorial="nav-explore"
 			href={resolve('/map/[mapId]', { mapId })}
 		>
 			<svg
@@ -102,6 +105,7 @@
 		<a
 			class="nav-btn nav-btn--action"
 			class:nav-btn--active={active === 'quiz'}
+			data-tutorial="nav-quiz"
 			href={resolve('/map/[mapId]/quiz', { mapId })}
 		>
 			<svg
@@ -121,6 +125,7 @@
 		<a
 			class="nav-btn nav-btn--action"
 			class:nav-btn--active={active === 'tour'}
+			data-tutorial="nav-tour"
 			href={resolve('/map/[mapId]/tour', { mapId })}
 		>
 			<svg class="nav-icon" width="22" height="22" viewBox="0 0 24 24"
@@ -138,7 +143,10 @@
 	{#if subtitle}
 		<span class="subtitle">{@render subtitle()}</span>
 	{/if}
-	<LanguageSwitcher />
+	<div class="prefs-row">
+		<LanguageSwitcher />
+		<TutorialButton />
+	</div>
 </div>
 
 <style>
@@ -198,6 +206,11 @@
 		background: #b5691f;
 		border-color: #b5691f;
 		color: #ffffff;
+	}
+	.prefs-row {
+		display: flex;
+		align-items: center;
+		gap: 0.4rem;
 	}
 	.map-title {
 		display: flex;

@@ -71,7 +71,36 @@ export type TranslationKey =
 	| 'tour.replay'
 	| 'tour.pause'
 	| 'tour.play'
-	| 'tour.next';
+	| 'tour.next'
+	| 'tutorial.button'
+	| 'tutorial.start'
+	| 'tutorial.skip'
+	| 'tutorial.back'
+	| 'tutorial.next'
+	| 'tutorial.finish'
+	| 'tutorial.replay'
+	| 'tutorial.stepCounter'
+	| 'tutorial.paused'
+	| 'tutorial.resume'
+	| 'tutorial.end'
+	| 'tutorial.intro.title'
+	| 'tutorial.intro.body'
+	| 'tutorial.outro.title'
+	| 'tutorial.outro.body'
+	| 'tutorial.step1'
+	| 'tutorial.step2'
+	| 'tutorial.step2.touch'
+	| 'tutorial.step3'
+	| 'tutorial.step3.touch'
+	| 'tutorial.step4'
+	| 'tutorial.step4.touch'
+	| 'tutorial.step5'
+	| 'tutorial.step6'
+	| 'tutorial.step7'
+	| 'tutorial.step8'
+	| 'tutorial.step9'
+	| 'tutorial.step10'
+	| 'tutorial.step11';
 
 type Dictionary = Record<TranslationKey, string>;
 
@@ -127,7 +156,48 @@ const en: Dictionary = {
 	'tour.replay': 'Replay',
 	'tour.pause': 'Pause',
 	'tour.play': '▶ Play',
-	'tour.next': 'Next ›'
+	'tour.next': 'Next ›',
+	'tutorial.button': 'Tutorial',
+	'tutorial.start': 'Start',
+	'tutorial.skip': 'Skip',
+	'tutorial.back': 'Back',
+	'tutorial.next': 'Next',
+	'tutorial.finish': 'Finish',
+	'tutorial.replay': 'Replay',
+	'tutorial.stepCounter': 'Step {n} of {total}',
+	'tutorial.paused': 'Tutorial paused',
+	'tutorial.resume': 'Resume',
+	'tutorial.end': 'End tutorial',
+	'tutorial.intro.title': 'Welcome to Geoclick',
+	'tutorial.intro.body':
+		"Learn the map by playing with it. This short tutorial takes about three minutes and you'll try every part of the app yourself. Nothing you do in it counts towards your progress.",
+	'tutorial.outro.title': "You're all set",
+	'tutorial.outro.body':
+		'Pick any map and play. Tip: the star on a map keeps it at the top of your list. You can replay this tutorial any time with the Tutorial button.',
+	'tutorial.step1': "Let's start with a map. Open **Regions**, under Italy.",
+	'tutorial.step2':
+		'Zoom with the mouse wheel or the **+** and **−** buttons, and drag the map to move around. Try it now.',
+	'tutorial.step2.touch':
+		'Pinch to zoom, or use the **+** and **−** buttons, and drag with one finger to move around. Try it now.',
+	'tutorial.step3':
+		'This is the **overview**, where every region shows its name. Hover over a name to enlarge it.',
+	'tutorial.step3.touch':
+		'This is the **overview**, where every region shows its name. Tap a name to enlarge it.',
+	'tutorial.step4':
+		'**Explore** hides the names, so you can test yourself. Open it and click any region to see which one it is.',
+	'tutorial.step4.touch':
+		'**Explore** hides the names, so you can test yourself. Open it and tap any region to see which one it is.',
+	'tutorial.step5': 'Ready to test yourself for real? Open the **Quiz**.',
+	'tutorial.step6':
+		'Drag a name from the tray onto its region. Try **Sicilia**: the big island off the toe of the boot.',
+	'tutorial.step7':
+		'Now get one wrong on purpose: drop **Sardegna** anywhere on the mainland. The region flashes red and the name goes back to the tray.',
+	'tutorial.step8': 'Not sure where a region is? Look it up in the **overview**.',
+	'tutorial.step9': 'Found Sardegna? Go back to the **Quiz**.',
+	'tutorial.step10':
+		'The regions you placed are still marked: what you solve stays solved. Each one comes back for review later, sooner if it gave you trouble, and less often each time you get it right. The map list shows how many are due on each map.',
+	'tutorial.step11':
+		'Last one: the **Tour** flies you to each region in turn and shows its name. Open it.'
 };
 
 const de: Dictionary = {
@@ -182,7 +252,48 @@ const de: Dictionary = {
 	'tour.replay': 'Nochmal',
 	'tour.pause': 'Pause',
 	'tour.play': '▶ Abspielen',
-	'tour.next': 'Weiter ›'
+	'tour.next': 'Weiter ›',
+	'tutorial.button': 'Tutorial',
+	'tutorial.start': "Los geht's",
+	'tutorial.skip': 'Überspringen',
+	'tutorial.back': 'Zurück',
+	'tutorial.next': 'Weiter',
+	'tutorial.finish': 'Fertig',
+	'tutorial.replay': 'Nochmal',
+	'tutorial.stepCounter': 'Schritt {n} von {total}',
+	'tutorial.paused': 'Tutorial pausiert',
+	'tutorial.resume': 'Fortsetzen',
+	'tutorial.end': 'Tutorial beenden',
+	'tutorial.intro.title': 'Willkommen bei Geoclick',
+	'tutorial.intro.body':
+		'Lerne die Karte, indem du mit ihr spielst. Dieses kurze Tutorial dauert etwa drei Minuten, und du probierst jeden Teil der App selbst aus. Was du dabei machst, zählt nicht für deinen Fortschritt.',
+	'tutorial.outro.title': 'Alles bereit',
+	'tutorial.outro.body':
+		'Wähle eine beliebige Karte und leg los. Tipp: Mit dem Stern bleibt eine Karte oben in deiner Liste. Du kannst dieses Tutorial jederzeit über die Schaltfläche „Tutorial“ wiederholen.',
+	'tutorial.step1': 'Fangen wir mit einer Karte an. Öffne **Regionen** unter Italy.',
+	'tutorial.step2':
+		'Zoome mit dem Mausrad oder den Tasten **+** und **−**, und ziehe die Karte, um dich zu bewegen. Probier es aus.',
+	'tutorial.step2.touch':
+		'Zoome mit zwei Fingern oder den Tasten **+** und **−**, und verschiebe die Karte mit einem Finger. Probier es aus.',
+	'tutorial.step3':
+		'Das ist die **Übersicht**: Hier steht jede Region mit ihrem Namen. Fahre mit der Maus über einen Namen, um ihn zu vergrößern.',
+	'tutorial.step3.touch':
+		'Das ist die **Übersicht**: Hier steht jede Region mit ihrem Namen. Tippe auf einen Namen, um ihn zu vergrößern.',
+	'tutorial.step4':
+		'**Erkunden** blendet die Namen aus, damit du dich selbst testen kannst. Öffne es und klicke auf eine Region, um zu sehen, welche es ist.',
+	'tutorial.step4.touch':
+		'**Erkunden** blendet die Namen aus, damit du dich selbst testen kannst. Öffne es und tippe auf eine Region, um zu sehen, welche es ist.',
+	'tutorial.step5': 'Bereit für den echten Test? Öffne das **Quiz**.',
+	'tutorial.step6':
+		'Ziehe einen Namen aus der Ablage auf seine Region. Versuch es mit **Sicilia**, der großen Insel vor der Stiefelspitze.',
+	'tutorial.step7':
+		'Jetzt ein Fehler mit Absicht: Lege **Sardegna** irgendwo auf dem Festland ab. Die Region blinkt rot, und der Name geht zurück in die Ablage.',
+	'tutorial.step8': 'Nicht sicher, wo eine Region liegt? Schau in der **Übersicht** nach.',
+	'tutorial.step9': 'Sardegna gefunden? Dann zurück zum **Quiz**.',
+	'tutorial.step10':
+		'Die Regionen, die du platziert hast, sind noch markiert: Was du löst, bleibt gelöst. Jede kommt später zur Wiederholung zurück, früher, wenn sie dir schwerfiel, und seltener, je öfter du sie richtig hast. Die Kartenliste zeigt, wie viele auf jeder Karte fällig sind.',
+	'tutorial.step11':
+		'Zum Schluss die **Tour**: Sie fliegt dich nacheinander zu jeder Region und zeigt ihren Namen. Öffne sie.'
 };
 
 const it: Dictionary = {
@@ -237,7 +348,48 @@ const it: Dictionary = {
 	'tour.replay': 'Riguarda',
 	'tour.pause': 'Pausa',
 	'tour.play': '▶ Riproduci',
-	'tour.next': 'Avanti ›'
+	'tour.next': 'Avanti ›',
+	'tutorial.button': 'Tutorial',
+	'tutorial.start': 'Inizia',
+	'tutorial.skip': 'Salta',
+	'tutorial.back': 'Indietro',
+	'tutorial.next': 'Avanti',
+	'tutorial.finish': 'Fine',
+	'tutorial.replay': 'Ricomincia',
+	'tutorial.stepCounter': 'Passo {n} di {total}',
+	'tutorial.paused': 'Tutorial in pausa',
+	'tutorial.resume': 'Riprendi',
+	'tutorial.end': 'Termina il tutorial',
+	'tutorial.intro.title': 'Ti diamo il benvenuto in Geoclick',
+	'tutorial.intro.body':
+		"Impara la mappa giocandoci. Questo breve tutorial dura circa tre minuti e proverai in prima persona ogni parte dell'app. Quello che fai qui non conta per i tuoi progressi.",
+	'tutorial.outro.title': 'Tutto pronto',
+	'tutorial.outro.body':
+		"Scegli una mappa qualsiasi e gioca. Suggerimento: con la stella una mappa resta in cima all'elenco. Puoi rifare questo tutorial quando vuoi con il pulsante Tutorial.",
+	'tutorial.step1': 'Iniziamo con una mappa. Apri **Regioni**, sotto Italy.',
+	'tutorial.step2':
+		'Usa la rotellina del mouse o i pulsanti **+** e **−** per lo zoom, e trascina la mappa per spostarti. Prova ora.',
+	'tutorial.step2.touch':
+		'Usa due dita o i pulsanti **+** e **−** per lo zoom, e trascina la mappa con un dito per spostarti. Prova ora.',
+	'tutorial.step3':
+		'Questa è la **panoramica**, dove ogni regione mostra il suo nome. Passa il mouse su un nome per ingrandirlo.',
+	'tutorial.step3.touch':
+		'Questa è la **panoramica**, dove ogni regione mostra il suo nome. Tocca un nome per ingrandirlo.',
+	'tutorial.step4':
+		'**Esplora** nasconde i nomi, così puoi metterti alla prova. Aprilo e clicca una regione per scoprire qual è.',
+	'tutorial.step4.touch':
+		'**Esplora** nasconde i nomi, così puoi metterti alla prova. Aprilo e tocca una regione per scoprire qual è.',
+	'tutorial.step5': 'Ora la prova vera: apri il **Quiz**.',
+	'tutorial.step6':
+		"Trascina un nome dal vassoio sulla sua regione. Prova con **Sicilia**, l'isola grande davanti alla punta dello stivale.",
+	'tutorial.step7':
+		'Ora sbaglia apposta: lascia **Sardegna** in un punto qualsiasi della penisola. La regione lampeggia in rosso e il nome torna nel vassoio.',
+	'tutorial.step8': "Non sai dov'è una regione? Controlla nella **panoramica**.",
+	'tutorial.step9': 'Trovata la Sardegna? Torna al **Quiz**.',
+	'tutorial.step10':
+		"Le regioni che hai posizionato sono ancora segnate: quello che risolvi resta risolto. Ognuna torna più avanti per un ripasso, prima se ti ha dato problemi e sempre più di rado ogni volta che la indovini. L'elenco delle mappe mostra quante sono da ripassare su ogni mappa.",
+	'tutorial.step11':
+		"Per finire, il **Tour**: ti porta da una regione all'altra e ne mostra il nome. Aprilo."
 };
 
 const dictionaries: Record<Language, Dictionary> = { en, de, it };
