@@ -7,7 +7,7 @@ programme](REMEDIATION_PLAN.md), which closed with `v0.2.0`: that one
 fixed what a code review found, while this one adds things players will
 notice.
 
-**Status: in progress** — see the ledger at the bottom. v0.4.0 (FT-13, FT-14) is out. v0.5.0 is in progress: all tasks (FT-09 to FT-12, FT-15 to FT-17) are merged; v0.5.0-beta.2 is published for the product owner's test (beta.1 was held back for FT-18); stable v0.5.0 follows.
+**Status: complete** (2026-09-14) — all three releases are out: v0.3.x (FT-01 to FT-08), v0.4.0 (FT-13, FT-14) and v0.5.0 (FT-09 to FT-12, FT-15 to FT-18). See the ledger at the bottom.
 
 ---
 
@@ -691,14 +691,14 @@ Update this table as tasks merge. Commit hashes are the merge commits.
 | FT-08 | **released** | `e5aa02d` | v0.3.0 | 🧑 public repo created (diegoami/geoclick-releases, README only); web-only download link EN/DE/IT; publish script dry-runs unless --confirm; first publish = v0.3.0 |
 | FT-13 | **released** | `d74ebb4` | v0.4.0 | maps open on the overview; Explore tab; tab row clear of the zoom control (360-1024px, EN/DE/IT); native shells checked with FT-14 |
 | FT-14 | **released** | `88f7950` | v0.4.0 | back goes up a level (emulator: quiz/tour/explore → overview → list → exit); tried by the product owner on their phone via v0.4.0-alpha.1 |
-| FT-15 | **merged** | `608937a` | v0.5.0 | Recent section (5 newest, any map view counts, device-local); browser-checked at 1280/400px; desktop (CDP) + Android (emulator) checked in v0.5.0-alpha.1 |
-| FT-16 | **merged** | `a006833` | v0.5.0 | star on home cards + map bar, Favourites section first; browser-checked incl. 400px DE/IT; desktop (CDP) + Android (emulator) checked in v0.5.0-alpha.1. To check with TalkBack on a phone: the emulator's uiautomator dump showed the star with no name or pressed state (the language pills lose their state the same way, so likely the dump) |
-| FT-17 | **merged** | `6429331` | v0.5.0 | Favourites + Recent in one panel, "All maps" heading before the countries; asked for by the product owner while trying FT-11; checked 1280/400px EN/DE |
-| FT-18 | **merged** | `a2eae05` | v0.5.0 | labels take no pointer input; magnify by position (hover, real tap); drag from a label pans with mouse (163px) and touch (131px) |
-| FT-09 | **merged** | `cd47cc6` | v0.5.0 | docs/TUTORIAL.md: 11 steps + intro/outro, EN/DE/IT copy; 🧑 copy approved 2026-09-14 (decisions 17-19: Explore step, italy-regions-only sandbox, star tip, Finish stays on tour) |
-| FT-10 | **merged** | `1741112` | v0.5.0 | italy-regions in memory during the tutorial, other maps live (decision 18); no localStorage writes in a tutorial quiz (tested); normal play smoke-checked in the browser |
-| FT-11 | **merged** | `fa00091` | v0.5.0 | Tutorial button, overlay, 11 steps on real actions; pause/resume, Back, Skip/Esc, Replay; full browser runs 1280 EN, 400 EN/DE; tried by the product owner in the browser. Also: quiz fits the map above the tray (Sicily was hidden) |
-| FT-12 | **merged** | `89fb987` | v0.5.0 | "New here?" nudge (EN/DE/IT); full walks EN/DE/IT at 360 + 1280px, tap-to-magnify on phones; step 10 shortened to 4 lines; ONBOARDING step guide |
+| FT-15 | **released** | `608937a` | v0.5.0 | Recent section (5 newest, any map view counts, device-local); browser-checked at 1280/400px; desktop (CDP) + Android (emulator) checked in v0.5.0-alpha.1 |
+| FT-16 | **released** | `a006833` | v0.5.0 | star on home cards + map bar, Favourites section first; browser-checked incl. 400px DE/IT; desktop (CDP) + Android (emulator) checked in v0.5.0-alpha.1. To check with TalkBack on a phone: the emulator's uiautomator dump showed the star with no name or pressed state (the language pills lose their state the same way, so likely the dump) |
+| FT-17 | **released** | `6429331` | v0.5.0 | Favourites + Recent in one panel, "All maps" heading before the countries; asked for by the product owner while trying FT-11; checked 1280/400px EN/DE |
+| FT-18 | **released** | `a2eae05` | v0.5.0 | labels take no pointer input; magnify by position (hover, real tap); drag from a label pans with mouse (163px) and touch (131px) |
+| FT-09 | **released** | `cd47cc6` | v0.5.0 | docs/TUTORIAL.md: 11 steps + intro/outro, EN/DE/IT copy; 🧑 copy approved 2026-09-14 (decisions 17-19: Explore step, italy-regions-only sandbox, star tip, Finish stays on tour) |
+| FT-10 | **released** | `1741112` | v0.5.0 | italy-regions in memory during the tutorial, other maps live (decision 18); no localStorage writes in a tutorial quiz (tested); normal play smoke-checked in the browser |
+| FT-11 | **released** | `fa00091` | v0.5.0 | Tutorial button, overlay, 11 steps on real actions; pause/resume, Back, Skip/Esc, Replay; full browser runs 1280 EN, 400 EN/DE; tried by the product owner in the browser. Also: quiz fits the map above the tray (Sicily was hidden) |
+| FT-12 | **released** | `89fb987` | v0.5.0 | "New here?" nudge (EN/DE/IT); full walks EN/DE/IT at 360 + 1280px, tap-to-magnify on phones; step 10 shortened to 4 lines; ONBOARDING step guide |
 
 | Release | State | Tag | Date |
 |---|---|---|---|
@@ -709,4 +709,4 @@ Update this table as tasks merge. Commit hashes are the merge commits.
 | `v0.5.0-alpha.1` | **pre-release** (alpha) | `v0.5.0-alpha.1` → `b9793c0` (version bump on main `ea84ab5`, never merged) | 2026-09-14 — setup.exe + APK on geoclick-releases as a GitHub pre-release; FT-15 + FT-16 for the product owner to try. Checked: desktop over CDP, APK updating 0.4.0 on the emulator (40099 → 50001) |
 | `v0.5.0-beta.1` | **built, not published** | `v0.5.0-beta.1` → `e703d2a` | 2026-09-14 — setup.exe + APK built and tested (desktop over CDP, emulator update 50001 → 50051, whole tutorial by touch); held back because a drag starting on a name label didn't pan the map (FT-18). Superseded by beta.2 |
 | `v0.5.0-beta.2` | **pre-release** (beta) | `v0.5.0-beta.2` → `fe9fc29` | 2026-09-14 — setup.exe + APK on geoclick-releases as a GitHub pre-release: everything for v0.5.0 incl. FT-18. Checked: fresh-clone gates, served build, desktop over CDP (drag from a label pans, hover magnifies), emulator update 50051 → 50052 (finger-drag from a label pans, tap magnifies). Waiting for the product owner's test |
-| `v0.5.0` | not cut | — | — |
+| `v0.5.0` | **cut** | `v0.5.0` → `c0b3c2e` | 2026-09-14 — stable, latest on geoclick-releases (.msi, setup.exe, APK 50099); tried by the product owner as beta.2 on their phone. Checked: fresh-clone gates, served build, desktop map draws, APK updates over beta.2 |

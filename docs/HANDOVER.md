@@ -1,4 +1,4 @@
-# Handover — end of 2026-09-13
+# Handover — 2026-09-14, after v0.5.0
 
 For whoever picks Geoclick up next, whether a human or a fresh Claude
 session. It records where things stand, what's next, and what's easy to
@@ -11,9 +11,9 @@ and [DECISIONS.md](../DECISIONS.md).
 | | |
 |---|---|
 | `main` | clean, in sync with GitHub; last commit is this handover |
-| Latest release | **v0.4.0** (tag at `441f57b`, 2026-09-14). The web app deploys from `main`; installers are on the public [releases page](https://github.com/diegoami/geoclick-releases/releases/latest). v0.4.0-alpha.1 was the first pre-release under the new alpha/beta rule; **v0.5.0-beta.2** (2026-09-14: tutorial, favourites, recent maps, drags on names move the map) is the current preview, waiting for the product owner's test |
+| Latest release | **v0.5.0** (tag at `c0b3c2e`, 2026-09-14): the tutorial, favourite and recent maps, drags on names move the map. The web app deploys from `main`; installers are on the public [releases page](https://github.com/diegoami/geoclick-releases/releases/latest). Previews go out as alpha/beta pre-releases first (RELEASES.md, "Pre-releases") |
 | Remediation programme | Closed with v0.2.0 ([REMEDIATION_PLAN.md](REMEDIATION_PLAN.md)) |
-| Feature programme | v0.3.x shipped (FT-01 to FT-08, hotfix v0.3.1). v0.4.0 shipped (FT-13: maps open on the overview, plus an Explore tab; FT-14: Android back goes up a level). **v0.5.0 complete, in beta:** FT-09 to FT-12 (tutorial), FT-15 to FT-17 (favourites, recent, home panel) and FT-18 (drags on names move the map) merged; v0.5.0-beta.2 published; stable v0.5.0 after the product owner's test |
+| Feature programme | **Complete.** v0.3.x (FT-01 to FT-08, hotfix v0.3.1), v0.4.0 (FT-13, FT-14) and v0.5.0 (FT-09 to FT-12 tutorial, FT-15 to FT-17 favourites/recent/home panel, FT-18 drags on names) are all shipped. Nothing further is planned in it |
 
 Shipped in v0.3.x:
 - map labels at 13px `rem`, magnified on hover and on tap;
@@ -24,31 +24,33 @@ Shipped in v0.3.x:
   a README and the releases;
 - v0.3.1 fixes empty maps in the Windows app.
 
+Shipped in v0.4.0 and v0.5.0:
+- maps open on the overview, with an Explore tab; Android back goes up a
+  level;
+- favourite and recent maps, in one panel above the full list;
+- the tutorial: a Tutorial button, eleven steps on the real screens in
+  EN/DE/IT, a sandbox so it never touches real progress, and a
+  first-visit nudge (script in `docs/TUTORIAL.md`);
+- the quiz fits the map above its tray; drags that start on a name move
+  the map.
+
 ## How to resume
 
+The feature programme is complete, and nothing further is planned yet.
 Suggested first message for the next session:
 
-> Read docs/HANDOVER.md and docs/FEATURE_PLAN.md. Continue the feature
-> programme with the next task in the v0.5.0 ledger, one at a time, asking me before every merge.
+> Read docs/HANDOVER.md. The feature programme is done (v0.5.0). Look at
+> "Not verified, or still open" and propose what to do next; ask me before
+> starting anything.
 
-The programme's rules are in FEATURE_PLAN.md, "How this programme runs":
-- one branch per task, `feat/ft-NN-…`;
+Whatever comes next, the working rules stay (CLAUDE.md; FEATURE_PLAN.md,
+"How this programme runs"):
+- one branch per task, pushed without asking;
 - `npm run gates` before pushing (the pre-push hook runs them anyway);
-- verify in a real browser, with screenshots in `.orchestrator/log/`;
-- **ask the product owner before every merge**; there is no automerge in
-  this programme;
-- tick the ledger after each merge.
-
-🧑 steps always stop and wait: product copy review in FT-09, anything
-public, and anything involving secrets.
-
-FT-13 and FT-14 shipped in v0.4.0, so FT-09's opening steps need
-adjusting: maps now open on the overview (see the note in its spec).
-**FT-09** writes `docs/TUTORIAL.md`, the step script and interaction spec.
-Another session added a zoom/pan step to FT-09's spec, so read the current
-text. The product owner reviews the copy at the merge request. FT-10 (the
-sandboxed in-memory progress store), FT-11 (engine and overlay) and FT-12
-(first-visit nudge and a three-language walkthrough) follow.
+- verify in a real browser, with screenshots in `.orchestrator/log/`, and
+  try both installers before any release;
+- **ask the product owner before every merge, tag and publish**;
+- previews go out as alpha or beta pre-releases (RELEASES.md).
 
 ## Things only the product owner has
 
