@@ -70,7 +70,12 @@ programme, and a twelve-row table doesn't need a state machine.
    - secrets the agent must never hold (the Android signing key),
    - public, outward-facing actions (creating the public repo, publishing
      binaries).
-7. **Releases:** follow [RELEASES.md](RELEASES.md)'s checklist, including
+7. **Previews are pre-releases** (rule added 2026-09-14). A build handed
+   out for testing before it's final, such as trying a task on a phone
+   before its merge, is published as an **alpha** or **beta** GitHub
+   pre-release, per [RELEASES.md](RELEASES.md), "Pre-releases". It's not
+   sent around as a loose file.
+8. **Releases:** follow [RELEASES.md](RELEASES.md)'s checklist, including
    asking before tagging and not watching the deploy. FT-07 adds a "build
    and publish the installers" section to it, used from `v0.3.0` onwards.
 

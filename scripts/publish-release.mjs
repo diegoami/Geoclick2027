@@ -21,10 +21,14 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CONFIRM = process.argv.includes('--confirm');
 const version = JSON.parse(readFileSync(path.join(ROOT, 'package.json'), 'utf8')).version;
 const tag = `v${version}`;
+// alpha / beta: published as a GitHub pre-release, never "latest", so the
+// website's download link keeps pointing at the last stable release
+// (docs/RELEASES.md, "Pre-releases"). No .msi for pre-releases.
+const stage = /-(alpha|beta)\.\d+$/.exec(version)?.[1];
 const dir = path.join(ROOT, 'dist-release', tag);
 const files = [
 	`Geoclick-${version}-windows-x64-setup.exe`,
-	`Geoclick-${version}-windows-x64.msi`,
+	...(stage ? [] : [`Geoclick-${version}-windows-x64.msi`]),
 	`Geoclick-${version}-android.apk`,
 	'SHA256SUMS.txt'
 ];
@@ -45,19 +49,28 @@ for (const line of readFileSync(path.join(dir, 'SHA256SUMS.txt'), 'utf8').trim()
 }
 
 // --- notes: the player-facing part of this version's CHANGELOG entry ---
+// A pre-release has no entry of its own yet: it uses "## Unreleased", which
+// becomes the stable version's entry when it ships.
 const changelog = readFileSync(path.join(ROOT, 'CHANGELOG.md'), 'utf8');
-const start = changelog.indexOf(`## ${tag} `);
-if (start < 0) fail(`CHANGELOG.md has no "## ${tag}" entry yet - write it first.`);
-const next = changelog.indexOf('\n## v', start + 1);
+const heading = stage ? '## Unreleased' : `## ${tag} `;
+const start = changelog.indexOf(heading);
+if (start < 0) fail(`CHANGELOG.md has no "${heading.trim()}" entry yet - write it first.`);
+const next = changelog.indexOf('\n## ', start + 1);
 const entry = changelog.slice(start, next < 0 ? undefined : next);
 // Public readers get the bold lead sentence and the "For players:" bullets -
 // not the rest of the lead paragraph or "Under the hood:", which name internal
 // docs and task ids from this (private) repo.
 const lead = /\*\*[^*]+\*\*/.exec(entry)?.[0] ?? '';
 const forPlayers = /\nFor players:\n([\s\S]*?)(?=\n(?:Under the hood|Not covered)[^\n]*:\n|$)/.exec(entry)?.[1];
-if (!forPlayers) fail(`the ${tag} CHANGELOG entry has no "For players:" section to publish.`);
+if (!forPlayers) fail(`the "${heading.trim()}" CHANGELOG entry has no "For players:" section to publish.`);
 const playerPart = `${lead}\n\n${forPlayers.trim()}`;
+const banner = {
+	alpha:
+		'> ⚠️ **Alpha pre-release: a preview for testing.** It contains work that is not finished yet and has only had the developer\'s checks. Things may break. For everyday use, take the [latest stable release](https://github.com/diegoami/geoclick-releases/releases/latest). Your progress is kept when you later install a stable version over it.\n\n',
+	beta: '> ⚠️ **Beta pre-release: a release candidate.** Everything for this version is in and has passed the developer\'s checks, but it is still being tested before it becomes the stable release. For everyday use, take the [latest stable release](https://github.com/diegoami/geoclick-releases/releases/latest). Your progress is kept when you later install the stable version over it.\n\n'
+};
 const notes =
+	(stage ? banner[stage] : '') +
 	`${playerPart}\n\n---\n\n` +
 	`**Play in the browser:** https://zesty-centaur-40e7c5.netlify.app/\n\n` +
 	`Windows: run the \`-setup.exe\` (SmartScreen warns about an unknown publisher: *More info → Run anyway*). ` +
@@ -69,8 +82,9 @@ writeFileSync(notesFile, notes);
 const args = [
 	'release', 'create', tag,
 	'--repo', RELEASES_REPO,
-	'--title', `Geoclick ${version}`,
+	'--title', stage ? `Geoclick ${version} (${stage})` : `Geoclick ${version}`,
 	'--notes-file', notesFile,
+	...(stage ? ['--prerelease'] : ['--latest']),
 	...files.map((f) => path.join(dir, f))
 ];
 
