@@ -13,6 +13,10 @@ in your browser.
 (this source repository is private). How they're built and published:
 [docs/RELEASES.md](docs/RELEASES.md).
 
+**How it works, screen by screen:** the [user manual](docs/USER_MANUAL.md)
+explains every screen and button with screenshots, for readers who won't
+run it.
+
 ## Quick start (browser)
 
 ```bash
@@ -79,6 +83,7 @@ Android Studio to see it.
 
 ## More docs
 
+- [docs/USER_MANUAL.md](docs/USER_MANUAL.md) — the player's manual, with screenshots
 - [ARCHITECTURE.md](ARCHITECTURE.md) — system design and stack choices
 - [ROADMAP.md](ROADMAP.md) — what's built, what's next
 - [ONBOARDING.md](ONBOARDING.md) — day-to-day workflow, repo layout, gotchas
