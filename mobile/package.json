@@ -9,9 +9,10 @@
 		"open": "cap open android"
 	},
 	"dependencies": {
+		"@capacitor-community/sqlite": "^8.1.1",
 		"@capacitor/android": "^8.5.2",
-		"@capacitor/core": "^8.5.2",
-		"@capacitor-community/sqlite": "^8.1.1"
+		"@capacitor/app": "^8.1.1",
+		"@capacitor/core": "^8.5.2"
 	},
 	"devDependencies": {
 		"@capacitor/cli": "^8.5.2"

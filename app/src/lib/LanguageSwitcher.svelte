@@ -41,7 +41,7 @@
 		padding: 0.2rem 0.5rem;
 		border-radius: 999px;
 		border: 1px solid rgba(30, 40, 36, 0.2);
-		background: rgba(255, 255, 255, 0.85);
+		background: #ffffff; /* opaque over map labels, like the map bar (FT-14) */
 		color: rgba(30, 40, 36, 0.65);
 		cursor: pointer;
 	}
