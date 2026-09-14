@@ -649,8 +649,8 @@ Update this table as tasks merge. Commit hashes are the merge commits.
 | FT-08 | **released** | `e5aa02d` | v0.3.0 | 🧑 public repo created (diegoami/geoclick-releases, README only); web-only download link EN/DE/IT; publish script dry-runs unless --confirm; first publish = v0.3.0 |
 | FT-13 | **released** | `d74ebb4` | v0.4.0 | maps open on the overview; Explore tab; tab row clear of the zoom control (360-1024px, EN/DE/IT); native shells checked with FT-14 |
 | FT-14 | **released** | `88f7950` | v0.4.0 | back goes up a level (emulator: quiz/tour/explore → overview → list → exit); tried by the product owner on their phone via v0.4.0-alpha.1 |
-| FT-15 | **merged** | `608937a` | v0.5.0 | Recent section (5 newest, any map view counts, device-local); browser-checked at 1280/400px; desktop + Android checked with the v0.5.0 pre-release |
-| FT-16 | **merged** | `a006833` | v0.5.0 | star on home cards + map bar, Favourites section first; browser-checked incl. 400px DE/IT; desktop + Android via v0.5.0-alpha.1 |
+| FT-15 | **merged** | `608937a` | v0.5.0 | Recent section (5 newest, any map view counts, device-local); browser-checked at 1280/400px; desktop (CDP) + Android (emulator) checked in v0.5.0-alpha.1 |
+| FT-16 | **merged** | `a006833` | v0.5.0 | star on home cards + map bar, Favourites section first; browser-checked incl. 400px DE/IT; desktop (CDP) + Android (emulator) checked in v0.5.0-alpha.1. To check with TalkBack on a phone: the emulator's uiautomator dump showed the star with no name or pressed state (the language pills lose their state the same way, so likely the dump) |
 | FT-09 | todo | — | v0.5.0 | 🧑 copy review |
 | FT-10 | todo | — | v0.5.0 | |
 | FT-11 | todo | — | v0.5.0 | |
@@ -662,4 +662,5 @@ Update this table as tasks merge. Commit hashes are the merge commits.
 | `v0.3.1` | **cut** (hotfix) | `v0.3.1` → `fd04733` | 2026-09-13 — desktop app opened maps empty in v0.3.0 (Tauri ignores Range requests; tiles now loaded whole). Installers published; v0.3.0 notes carry a warning |
 | `v0.4.0-alpha.1` | **pre-release** (alpha) | `v0.4.0-alpha.1` → `a8b1d49` (FT-14 + main, never merged) | 2026-09-14 — setup.exe + APK on geoclick-releases as a GitHub pre-release; for the product owner's phone test of FT-13/FT-14 |
 | `v0.4.0` | **cut** | `v0.4.0` → `441f57b` | 2026-09-14 — stable, latest on geoclick-releases (setup.exe, .msi, APK); same app code as alpha.1, which the product owner tried on Windows and Android |
+| `v0.5.0-alpha.1` | **pre-release** (alpha) | `v0.5.0-alpha.1` → `b9793c0` (version bump on main `ea84ab5`, never merged) | 2026-09-14 — setup.exe + APK on geoclick-releases as a GitHub pre-release; FT-15 + FT-16 for the product owner to try. Checked: desktop over CDP, APK updating 0.4.0 on the emulator (40099 → 50001) |
 | `v0.5.0` | not cut | — | — |
