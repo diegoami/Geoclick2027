@@ -650,7 +650,7 @@ Update this table as tasks merge. Commit hashes are the merge commits.
 | FT-13 | **released** | `d74ebb4` | v0.4.0 | maps open on the overview; Explore tab; tab row clear of the zoom control (360-1024px, EN/DE/IT); native shells checked with FT-14 |
 | FT-14 | **released** | `88f7950` | v0.4.0 | back goes up a level (emulator: quiz/tour/explore → overview → list → exit); tried by the product owner on their phone via v0.4.0-alpha.1 |
 | FT-15 | **merged** | `608937a` | v0.5.0 | Recent section (5 newest, any map view counts, device-local); browser-checked at 1280/400px; desktop + Android checked with the v0.5.0 pre-release |
-| FT-16 | todo | — | v0.5.0 | Favourite maps (home cards + map bar) |
+| FT-16 | **merged** | `a006833` | v0.5.0 | star on home cards + map bar, Favourites section first; browser-checked incl. 400px DE/IT; desktop + Android via v0.5.0-alpha.1 |
 | FT-09 | todo | — | v0.5.0 | 🧑 copy review |
 | FT-10 | todo | — | v0.5.0 | |
 | FT-11 | todo | — | v0.5.0 | |
