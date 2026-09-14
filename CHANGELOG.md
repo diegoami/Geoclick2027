@@ -7,10 +7,14 @@ one entry per tagged version on `main`.
 
 ## Unreleased
 
-**Your recent maps, one tap away.**
+**Your favourite and recent maps, one tap away.**
 
 For players:
 
+- **Star the maps you like.** Every map on the home page has a star, and
+  so does the map bar while you're on a map. Starred maps appear in a
+  "Favourites" section at the very top of the home page. It's kept on
+  your device only.
 - **A "Recent" section at the top of the home page** lists the last five
   maps you opened, newest first, so you don't have to find them in the
   country list again. It's kept on your device only.
@@ -19,6 +23,8 @@ Under the hood:
 
 - FT-15: `mapPrefs.svelte.ts` (a device-local list, like the language
   setting), recorded whenever a map view opens.
+- FT-16: favourites in the same store, and a `FavouriteStar` button.
+  Home order: Favourites, Recent, all maps.
 
 ## v0.4.0 — 2026-09-14 — Navigation
 

@@ -448,6 +448,11 @@ that same discipline into any task you pick up:
     scoped `<style>` can't reach them, because MapLibre mounts popups
     outside the component. Reuse `geoclick-popup` or
     `geoclick-solved-popup` rather than adding another copy.
+  - Recent and favourite maps (FT-15/FT-16) live in
+    `app/src/lib/mapPrefs.svelte.ts`: localStorage, device-only, like the
+    language setting. Anything that reads it on the prerendered home page
+    must wait until after mount, or the first render won't match the
+    prerendered HTML.
   - Labels magnify on demand (FT-02/FT-03). A mouse hover grows one to
     20px (`:hover`, only under `@media (hover: hover)`). On touch, a tap
     toggles `.is-magnified`, which `labelMagnify.ts` sets from one

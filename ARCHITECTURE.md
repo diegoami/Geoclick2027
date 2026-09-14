@@ -164,9 +164,10 @@ Iteration 8+, not started.
 
 ## Screens and navigation
 
-The home page (`/`) lists every map by country. Above that list is a
-**Recent** section with the last 5 maps opened (FT-15), stored on the
-device by `mapPrefs.svelte.ts`. A map card opens that map's
+The home page (`/`) lists every map by country. Above that list come
+**Favourites** (starred maps, FT-16) and **Recent** (the last 5 maps
+opened, FT-15), both stored on the device by `mapPrefs.svelte.ts`. Every
+card and the map bar has a star (`FavouriteStar.svelte`). A map card opens that map's
 **Overview** (`/map/<id>/overview`), where every name is shown. The map bar
 (`MapNav.svelte`) then switches between that map's modes:
 

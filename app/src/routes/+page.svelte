@@ -11,7 +11,8 @@
 	import { t, tPlural } from '$lib/i18n.svelte';
 	import LanguageSwitcher from '$lib/LanguageSwitcher.svelte';
 	import { mapDisplayName, mapGroups } from '$lib/mapCatalog';
-	import { recentMaps } from '$lib/mapPrefs.svelte';
+	import { favouriteMaps, recentMaps } from '$lib/mapPrefs.svelte';
+	import FavouriteStar from '$lib/FavouriteStar.svelte';
 	import { RELEASES_URL, isNativeShell } from '$lib/platform';
 
 	// Flat view of every map - onMount's data-loading loop below doesn't
@@ -94,7 +95,7 @@
 	{#snippet mapCard(mapId: string, label: string)}
 		{@const summary = lastSessions[mapId]}
 		{@const due = dueStatuses[mapId]}
-		<li>
+		<li class="map-card">
 			<a href={resolve('/map/[mapId]/overview', { mapId })}>
 				<span class="map-name">{label}</span>
 				{#if due && due.kind !== 'notStarted'}
@@ -115,8 +116,22 @@
 					</span>
 				{/if}
 			</a>
+			<!-- A sibling of the link, not inside it: two separate controls for
+			     keyboard and screen readers (FT-16). -->
+			<span class="card-star"><FavouriteStar {mapId} /></span>
 		</li>
 	{/snippet}
+
+	{#if mounted && favouriteMaps().length > 0}
+		<section class="country-group shortcut-group">
+			<h2>{t('home.favourites')}</h2>
+			<ul>
+				{#each favouriteMaps() as mapId (mapId)}
+					{@render mapCard(mapId, mapDisplayName(mapId) ?? mapId)}
+				{/each}
+			</ul>
+		</section>
+	{/if}
 
 	{#if mounted && recentMaps().length > 0}
 		<section class="country-group shortcut-group">
@@ -188,8 +203,20 @@
 		background: none;
 		text-decoration-thickness: 2px;
 	}
-	/* Recent (FT-15), and Favourites next (FT-16): full-width sections above
-	   the country list, cards labelled with the full map name. */
+	/* Favourites (FT-16) and Recent (FT-15): full-width sections above the
+	   country list, cards labelled with the full map name. */
+	.map-card {
+		position: relative;
+	}
+	/* Room on the right of every card for its favourite star. */
+	.map-card a {
+		padding-right: 3rem;
+	}
+	.card-star {
+		position: absolute;
+		top: 0.3rem;
+		right: 0.35rem;
+	}
 	.shortcut-group {
 		text-align: left;
 		margin-bottom: 1.5rem;

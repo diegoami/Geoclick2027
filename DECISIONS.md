@@ -1078,7 +1078,21 @@ answers:
   practice run doesn't count.
 - **The section renders only after mount.** The home page is
   prerendered without access to device storage, and rendering the list
-  during hydration would mismatch the prerendered HTML.
+  during hydration would mismatch the prerendered HTML. The same goes for
+  each star's filled state.
+- **Favourites (FT-16):** one `FavouriteStar` button, used on every home
+  card and in the map bar, and kept in sync through the shared store.
+  - On a card, the star is a sibling of the card link, not inside it:
+    nesting a button inside a link would give keyboard and screen-reader
+    users one muddled control.
+  - In the map bar it sits next to the map name, not as a sixth tab,
+    because the tab row is full at phone width.
+  - Its accessible name stays "Favourite: <map>", with `aria-pressed`
+    for the state; the tooltip says what a click will do. The plan said
+    the name should flip between "Add…" and "Remove…", but that announces
+    the state twice with `aria-pressed`, so the standard toggle-button
+    pattern won.
+  - Favourites keep the order they were starred.
 
 ## Pre-release channel: alpha and beta (2026-09-14)
 
