@@ -32,6 +32,10 @@ export type TranslationKey =
 	| 'nav.loading'
 	| 'home.subtitle'
 	| 'home.recent'
+	| 'home.favourites'
+	| 'fav.label'
+	| 'fav.add'
+	| 'fav.remove'
 	| 'home.download.lead'
 	| 'home.download.link'
 	| 'home.due.upToDate'
@@ -81,6 +85,10 @@ const en: Dictionary = {
 
 	'home.subtitle': 'Pick a demo map to explore.',
 	'home.recent': 'Recent',
+	'home.favourites': 'Favourites',
+	'fav.label': 'Favourite: {name}',
+	'fav.add': 'Add to favourites',
+	'fav.remove': 'Remove from favourites',
 	'home.download.lead': 'Prefer an app?',
 	'home.download.link': 'Download for Windows or Android',
 	'home.due.upToDate': 'No reviews needed',
@@ -132,6 +140,10 @@ const de: Dictionary = {
 
 	'home.subtitle': 'Wähle eine Demokarte zum Erkunden.',
 	'home.recent': 'Zuletzt geöffnet',
+	'home.favourites': 'Favoriten',
+	'fav.label': 'Favorit: {name}',
+	'fav.add': 'Zu Favoriten hinzufügen',
+	'fav.remove': 'Aus Favoriten entfernen',
 	'home.download.lead': 'Lieber als App?',
 	'home.download.link': 'Für Windows oder Android herunterladen',
 	'home.due.upToDate': 'Keine Wiederholung nötig',
@@ -183,6 +195,10 @@ const it: Dictionary = {
 
 	'home.subtitle': 'Scegli una mappa demo da esplorare.',
 	'home.recent': 'Recenti',
+	'home.favourites': 'Preferiti',
+	'fav.label': 'Preferito: {name}',
+	'fav.add': 'Aggiungi ai preferiti',
+	'fav.remove': 'Rimuovi dai preferiti',
 	'home.download.lead': "Preferisci un'app?",
 	'home.download.link': 'Scarica per Windows o Android',
 	'home.due.upToDate': 'Nessuna ripetizione necessaria',

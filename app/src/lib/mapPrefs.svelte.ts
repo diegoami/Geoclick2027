@@ -1,5 +1,5 @@
-// Per-device map preferences: the maps opened most recently (FT-15) and, next,
-// the player's favourites (FT-16). Kept in localStorage like the UI language
+// Per-device map preferences: the maps opened most recently (FT-15) and the
+// player's favourites (FT-16). Kept in localStorage like the UI language
 // (i18n.svelte.ts). It's a convenience of this device, not progress, so it's
 // not in the ProgressRepository / SQLite, and it isn't synced anywhere. The
 // lists are $state, so the home page updates as soon as they change.
@@ -71,4 +71,31 @@ export function recordVisit(mapId: string): void {
 /** Most recent first, at most RECENT_SHOWN, maps no longer in the catalog left out. */
 export function recentMaps(): string[] {
 	return recent.filter(isCatalogMap).slice(0, RECENT_SHOWN);
+}
+
+// --- favourites (FT-16) ---
+
+const FAVOURITES_KEY = 'geoclick:favourite-maps:v1';
+
+/** `mapId` added at the end if missing, removed if present. */
+export function withToggled(list: readonly string[], mapId: string): string[] {
+	return list.includes(mapId) ? list.filter((id) => id !== mapId) : [...list, mapId];
+}
+
+let favourites = $state<string[]>(readIds(FAVOURITES_KEY));
+
+/** Star / unstar a map (home page cards and the map bar). Unknown ids are ignored. */
+export function toggleFavourite(mapId: string): void {
+	if (!isCatalogMap(mapId)) return;
+	favourites = withToggled(favourites, mapId);
+	writeIds(FAVOURITES_KEY, favourites);
+}
+
+export function isFavourite(mapId: string): boolean {
+	return favourites.includes(mapId);
+}
+
+/** In the order they were starred, maps no longer in the catalog left out. */
+export function favouriteMaps(): string[] {
+	return favourites.filter(isCatalogMap);
 }

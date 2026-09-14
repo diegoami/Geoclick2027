@@ -15,6 +15,7 @@
 	import { t } from './i18n.svelte';
 	import LanguageSwitcher from './LanguageSwitcher.svelte';
 	import { recordVisit } from './mapPrefs.svelte';
+	import FavouriteStar from './FavouriteStar.svelte';
 
 	let {
 		mapId,
@@ -128,7 +129,12 @@
 			<span class="nav-label">{t('nav.tour')}</span>
 		</a>
 	</div>
-	<span class="map-label">{mapName ?? t('nav.loading')}</span>
+	<!-- The favourite star sits by the map's name, not in the tab row, which is
+	     already full at phone width (FT-13, FT-16). -->
+	<div class="map-title">
+		<span class="map-label">{mapName ?? t('nav.loading')}</span>
+		<FavouriteStar {mapId} size="bar" />
+	</div>
 	{#if subtitle}
 		<span class="subtitle">{@render subtitle()}</span>
 	{/if}
@@ -192,6 +198,11 @@
 		background: #b5691f;
 		border-color: #b5691f;
 		color: #ffffff;
+	}
+	.map-title {
+		display: flex;
+		align-items: center;
+		gap: 0.4rem;
 	}
 	.map-label {
 		font-size: 0.75rem;
