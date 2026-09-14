@@ -33,6 +33,7 @@ export type TranslationKey =
 	| 'home.subtitle'
 	| 'home.recent'
 	| 'home.favourites'
+	| 'home.allMaps'
 	| 'fav.label'
 	| 'fav.add'
 	| 'fav.remove'
@@ -115,6 +116,7 @@ const en: Dictionary = {
 	'home.subtitle': 'Pick a demo map to explore.',
 	'home.recent': 'Recent',
 	'home.favourites': 'Favourites',
+	'home.allMaps': 'All maps',
 	'fav.label': 'Favourite: {name}',
 	'fav.add': 'Add to favourites',
 	'fav.remove': 'Remove from favourites',
@@ -211,6 +213,7 @@ const de: Dictionary = {
 	'home.subtitle': 'Wähle eine Demokarte zum Erkunden.',
 	'home.recent': 'Zuletzt geöffnet',
 	'home.favourites': 'Favoriten',
+	'home.allMaps': 'Alle Karten',
 	'fav.label': 'Favorit: {name}',
 	'fav.add': 'Zu Favoriten hinzufügen',
 	'fav.remove': 'Aus Favoriten entfernen',
@@ -307,6 +310,7 @@ const it: Dictionary = {
 	'home.subtitle': 'Scegli una mappa demo da esplorare.',
 	'home.recent': 'Recenti',
 	'home.favourites': 'Preferiti',
+	'home.allMaps': 'Tutte le mappe',
 	'fav.label': 'Preferito: {name}',
 	'fav.add': 'Aggiungi ai preferiti',
 	'fav.remove': 'Rimuovi dai preferiti',
