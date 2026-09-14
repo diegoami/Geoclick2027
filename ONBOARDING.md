@@ -370,6 +370,39 @@ bridge; anything touching that still needs a real device.
 There's no `dev`-mode live-reload yet - re-run `npm run sync` and
 relaunch from Android Studio after any app change.
 
+## Adding or editing a tutorial step (FT-11/FT-12)
+
+The tutorial walks a new player through Italy — Regions on the real
+screens. Its script is `docs/TUTORIAL.md`; change that first, since the
+product owner reviews tutorial copy there. Then:
+
+1. **The step itself** lives in `STEPS` in
+   `app/src/lib/tutorialMachine.ts`: which screens it belongs on (the
+   first is where Back and Resume go), what moves it on (`advance`:
+   Start, Next, a route change, a map gesture, a name shown in Explore, a
+   right or wrong drop, Finish), its copy keys, and what it highlights on
+   each screen.
+2. **The copy** goes in `app/src/lib/i18n.svelte.ts`, in English, German
+   and Italian; the `TranslationKey` union makes a missing language a
+   type error. Keep TUTORIAL.md's copy table and the app in step: FT-11
+   generated the strings from that table. Bold is `**word**`.
+3. **The highlighted element** needs a `data-tutorial="..."` attribute
+   (see TUTORIAL.md, "Anchors"). A missing one isn't an error: the card
+   then shows without a spotlight.
+4. **A new kind of action** needs a hook in the view where it happens,
+   like `tutorialDrop` in QuizView, plus an `Advance` kind and a case in
+   `transition()`. Hooks must do nothing when no tutorial is running.
+5. **Tests:** `tutorialMachine.test.ts` walks the whole script, so a new
+   step shows up there first. Then walk it in a real browser at 360px in
+   German, the longest language: each numbered step's text must fit in
+   four lines (TUTORIAL.md, "Layout").
+
+Progress during the tutorial goes to the sandbox (`tutorialSandbox.svelte.ts`),
+so a step can use the real quiz freely. The home page's "New here?" nudge
+(`TutorialNudge.svelte`) stops showing once the tutorial has been started
+or dismissed; to see it again, delete `geoclick:tutorial-seen:v1` from
+localStorage.
+
 ## Building a new map, on Windows (added when France/Spain/GB/Poland/
 Ukraine/Sweden were added, 2026-09-12)
 

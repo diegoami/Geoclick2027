@@ -20,6 +20,7 @@ import {
 	endTutorialSandbox,
 	startTutorialSandbox
 } from './tutorialSandbox.svelte';
+import { markTutorialSeen } from './tutorialSeen.svelte';
 
 // Replaced whole on every transition, never mutated, so $state.raw.
 let state = $state.raw<TutorialState>(initialState);
@@ -36,6 +37,8 @@ export function dispatch(event: TutorialEvent): void {
 	const freshRun = event.type === 'replay' || (event.type === 'start' && state.status === 'idle');
 	const endedRun = result.state.status === 'idle' && state.status !== 'idle';
 	if (freshRun || endedRun) run++;
+	// Started once, from anywhere: the home page stops offering it (FT-12).
+	if (freshRun) markTutorialSeen();
 	state = result.state;
 	void carryOut(result.effects);
 }

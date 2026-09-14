@@ -198,7 +198,9 @@ with `data-tutorial="…"` attributes, and three views report the
 player's actions through small hooks that do nothing outside the
 tutorial: OverviewView (zoom or pan), MapView (a name shown in Explore)
 and QuizView (a scored drop). Its progress runs in the sandbox described
-under Storage.
+under Storage. On a first visit the home page also offers it with a "New
+here?" nudge (`TutorialNudge.svelte`, FT-12), until it has been started
+once or dismissed; nothing ever starts it by itself.
 
 ## Demo maps & map-creation process
 

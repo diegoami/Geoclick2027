@@ -7,10 +7,19 @@ one entry per tagged version on `main`.
 
 ## Unreleased
 
-**Your favourite and recent maps, one tap away.**
+**A tutorial that shows you around, and your favourite and recent maps one tap away.**
 
 For players:
 
+- **A hands-on tutorial.** Press "Tutorial" at the top of the home page or
+  any map, and it walks you through Italy — Regions for real: open the
+  map, zoom and pan, the overview, Explore, dragging names in the quiz
+  (including getting one wrong on purpose), spaced repetition and the
+  tour. It waits for you to do each thing, in English, German or Italian,
+  and nothing you do in it touches your real progress. First-time visitors
+  are offered it on the home page, once.
+- **Sicily no longer starts hidden under the name tray** in the quiz: the
+  map now fits into the space above the tray, on every map.
 - **Star the maps you like.** Every map on the home page has a star, and
   so does the map bar while you're on a map. Starred maps appear in a
   "Favourites" section at the very top of the home page. It's kept on
@@ -18,6 +27,9 @@ For players:
 - **A "Recent" section at the top of the home page** lists the last five
   maps you opened, newest first, so you don't have to find them in the
   country list again. It's kept on your device only.
+- Favourites and Recent share their own panel at the top of the home page,
+  with an "All maps" heading below it, so they stand out from the full
+  list.
 
 Under the hood:
 
@@ -25,6 +37,14 @@ Under the hood:
   setting), recorded whenever a map view opens.
 - FT-16: favourites in the same store, and a `FavouriteStar` button.
   Home order: Favourites, Recent, all maps.
+- FT-17: Favourites and Recent in one panel, "All maps" heading.
+- FT-09: the tutorial's script and interaction spec (`docs/TUTORIAL.md`).
+- FT-10: progress sandbox for the tutorial (Italy — Regions in memory,
+  every other map live).
+- FT-11: tutorial engine (`tutorialMachine.ts`, pure and unit-tested),
+  overlay, button and hooks; the quiz fits the map above its tray.
+- FT-12: first-visit nudge, walked in all three languages at 360px and
+  1280px; step 10 shortened to fit.
 
 ## v0.4.0 — 2026-09-14 — Navigation
 
