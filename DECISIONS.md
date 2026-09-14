@@ -1064,6 +1064,22 @@ answers:
   - Both lists are stored on the device, like the language setting (FT-15,
     FT-16).
 
+## Recent and favourite maps (2026-09-14, FT-15/FT-16)
+
+- **They're stored on the device, not in the progress store.**
+  `app/src/lib/mapPrefs.svelte.ts` keeps them in localStorage, like the
+  UI language. They are conveniences of this device rather than learning
+  progress, so they don't need the SQLite schema, migrations or a future
+  sync story. localStorage works in all three shells.
+- **Recent (FT-15):** opening any map view counts (MapNav records it
+  on mount). The home page shows 5, newest first; up to 10 are stored,
+  so a map later removed from the catalog doesn't shorten the list.
+  The tutorial switches recording off (`setVisitRecording`), so its
+  practice run doesn't count.
+- **The section renders only after mount.** The home page is
+  prerendered without access to device storage, and rendering the list
+  during hydration would mismatch the prerendered HTML.
+
 ## Pre-release channel: alpha and beta (2026-09-14)
 
 - **Previews are published, not handed around.** The product owner asked

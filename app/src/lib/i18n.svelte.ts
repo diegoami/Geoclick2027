@@ -31,6 +31,7 @@ export type TranslationKey =
 	| 'nav.tour'
 	| 'nav.loading'
 	| 'home.subtitle'
+	| 'home.recent'
 	| 'home.download.lead'
 	| 'home.download.link'
 	| 'home.due.upToDate'
@@ -79,6 +80,7 @@ const en: Dictionary = {
 	'nav.loading': 'Loading…',
 
 	'home.subtitle': 'Pick a demo map to explore.',
+	'home.recent': 'Recent',
 	'home.download.lead': 'Prefer an app?',
 	'home.download.link': 'Download for Windows or Android',
 	'home.due.upToDate': 'No reviews needed',
@@ -129,6 +131,7 @@ const de: Dictionary = {
 	'nav.loading': 'Lädt…',
 
 	'home.subtitle': 'Wähle eine Demokarte zum Erkunden.',
+	'home.recent': 'Zuletzt geöffnet',
 	'home.download.lead': 'Lieber als App?',
 	'home.download.link': 'Für Windows oder Android herunterladen',
 	'home.due.upToDate': 'Keine Wiederholung nötig',
@@ -179,6 +182,7 @@ const it: Dictionary = {
 	'nav.loading': 'Caricamento…',
 
 	'home.subtitle': 'Scegli una mappa demo da esplorare.',
+	'home.recent': 'Recenti',
 	'home.download.lead': "Preferisci un'app?",
 	'home.download.link': 'Scarica per Windows o Android',
 	'home.due.upToDate': 'Nessuna ripetizione necessaria',

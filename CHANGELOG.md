@@ -5,6 +5,21 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
+## Unreleased
+
+**Your recent maps, one tap away.**
+
+For players:
+
+- **A "Recent" section at the top of the home page** lists the last five
+  maps you opened, newest first, so you don't have to find them in the
+  country list again. It's kept on your device only.
+
+Under the hood:
+
+- FT-15: `mapPrefs.svelte.ts` (a device-local list, like the language
+  setting), recorded whenever a map view opens.
+
 ## v0.4.0 — 2026-09-14 — Navigation
 
 **Maps open where the names are, and Android's back button goes where you'd expect.**

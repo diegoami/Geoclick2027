@@ -197,6 +197,12 @@ for (const group of mapGroups) {
 // than crash). Reactive to the current language the same way any other
 // `t()` call in a template is, since it's a plain function call made
 // during render, not a value computed once and cached.
+/** Whether a map id is in the catalog - lists stored on the device (recent,
+ * favourites) use it to drop maps that have since been removed. */
+export function isCatalogMap(mapId: string): boolean {
+	return mapIndex.has(mapId);
+}
+
 export function mapDisplayName(mapId: string): string | undefined {
 	const meta = mapIndex.get(mapId);
 	if (!meta) return undefined;

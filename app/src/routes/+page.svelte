@@ -10,7 +10,8 @@
 	import { isDue } from '@geoclick/srs';
 	import { t, tPlural } from '$lib/i18n.svelte';
 	import LanguageSwitcher from '$lib/LanguageSwitcher.svelte';
-	import { mapGroups } from '$lib/mapCatalog';
+	import { mapDisplayName, mapGroups } from '$lib/mapCatalog';
+	import { recentMaps } from '$lib/mapPrefs.svelte';
 	import { RELEASES_URL, isNativeShell } from '$lib/platform';
 
 	// Flat view of every map - onMount's data-loading loop below doesn't
@@ -39,7 +40,13 @@
 	// or Android app itself. Off until checked, so the apps never flash it.
 	let showDownload = $state(false);
 
+	// The Recent list lives in this device's storage, which the prerendered HTML
+	// can't see. Showing it only after mount keeps the first client render equal
+	// to that HTML (no hydration mismatch).
+	let mounted = $state(false);
+
 	onMount(() => {
+		mounted = true;
 		isNativeShell().then((native) => (showDownload = !native));
 		(async () => {
 			const repository = await createProgressRepository();
@@ -84,36 +91,51 @@
 			<a href={RELEASES_URL} target="_blank" rel="external noopener">{t('home.download.link')}</a>
 		</p>
 	{/if}
+	{#snippet mapCard(mapId: string, label: string)}
+		{@const summary = lastSessions[mapId]}
+		{@const due = dueStatuses[mapId]}
+		<li>
+			<a href={resolve('/map/[mapId]/overview', { mapId })}>
+				<span class="map-name">{label}</span>
+				{#if due && due.kind !== 'notStarted'}
+					<span class="due-status" class:up-to-date={due.kind === 'upToDate'}>
+						{due.kind === 'upToDate'
+							? t('home.due.upToDate')
+							: t('home.due.toReview', { count: due.count })}
+					</span>
+				{/if}
+				{#if summary}
+					<span class="last-result">
+						{t('home.lastResult', { perfect: summary.perfect, total: summary.total })}
+						{#if summary.totalErrors > 0}
+							{tPlural('home.mistakeCount', summary.totalErrors, {
+								count: summary.totalErrors
+							})}
+						{/if}
+					</span>
+				{/if}
+			</a>
+		</li>
+	{/snippet}
+
+	{#if mounted && recentMaps().length > 0}
+		<section class="country-group shortcut-group">
+			<h2>{t('home.recent')}</h2>
+			<ul>
+				{#each recentMaps() as mapId (mapId)}
+					{@render mapCard(mapId, mapDisplayName(mapId) ?? mapId)}
+				{/each}
+			</ul>
+		</section>
+	{/if}
+
 	<div class="groups">
 		{#each mapGroups as group (group.country)}
 			<section class="country-group">
 				<h2>{group.country}</h2>
 				<ul>
 					{#each group.maps as map (map.id)}
-						{@const summary = lastSessions[map.id]}
-						{@const due = dueStatuses[map.id]}
-						<li>
-							<a href={resolve('/map/[mapId]/overview', { mapId: map.id })}>
-								<span class="map-name">{t(map.labelKey)}</span>
-								{#if due && due.kind !== 'notStarted'}
-									<span class="due-status" class:up-to-date={due.kind === 'upToDate'}>
-										{due.kind === 'upToDate'
-											? t('home.due.upToDate')
-											: t('home.due.toReview', { count: due.count })}
-									</span>
-								{/if}
-								{#if summary}
-									<span class="last-result">
-										{t('home.lastResult', { perfect: summary.perfect, total: summary.total })}
-										{#if summary.totalErrors > 0}
-											{tPlural('home.mistakeCount', summary.totalErrors, {
-												count: summary.totalErrors
-											})}
-										{/if}
-									</span>
-								{/if}
-							</a>
-						</li>
+						{@render mapCard(map.id, t(map.labelKey))}
 					{/each}
 				</ul>
 			</section>
@@ -166,6 +188,12 @@
 		background: none;
 		text-decoration-thickness: 2px;
 	}
+	/* Recent (FT-15), and Favourites next (FT-16): full-width sections above
+	   the country list, cards labelled with the full map name. */
+	.shortcut-group {
+		text-align: left;
+		margin-bottom: 1.5rem;
+	}
 	.groups {
 		display: flex;
 		flex-direction: column;
@@ -216,6 +244,11 @@
 	@media (min-width: 640px) {
 		main {
 			max-width: 46rem;
+		}
+		.shortcut-group ul {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			column-gap: 2rem;
 		}
 		.groups {
 			display: grid;
