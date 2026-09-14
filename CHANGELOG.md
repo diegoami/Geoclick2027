@@ -5,9 +5,13 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
-## Unreleased
+## v0.5.0 — 2026-09-14 — Tutorial, favourites and recent maps
 
 **A tutorial that shows you around, and your favourite and recent maps one tap away.**
+Eight tasks: the tutorial (FT-09 to FT-12), favourite and recent maps
+(FT-15 to FT-17), and FT-18, found while testing the beta. The product
+owner tried v0.5.0-alpha.1 and v0.5.0-beta.2 before this was cut;
+beta.1 was built but held back for FT-18.
 
 For players:
 
@@ -50,6 +54,16 @@ Under the hood:
   1280px; step 10 shortened to fit.
 - FT-18: map labels take no pointer input; hover and tap magnify are
   worked out from the pointer's position.
+- Android versionCode 50099. Installers: Windows `.msi` and `-setup.exe`,
+  and the Android APK, all rebuilt for this release.
+
+Not covered:
+
+- The emulator's accessibility tree showed the favourite star without its
+  name and pressed state (the language pills lose their state the same
+  way, so probably the tool). Worth a TalkBack check on a phone.
+- Country names stay in English inside map names ("Italy — Regionen"), as
+  decided for i18n; unchanged here.
 
 ## v0.4.0 — 2026-09-14 — Navigation
 
