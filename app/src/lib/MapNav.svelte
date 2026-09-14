@@ -155,7 +155,9 @@
 		min-height: 2.75rem;
 		box-sizing: border-box;
 		padding: 0.65rem 0.25rem 0.6rem;
-		background: rgba(255, 255, 255, 0.96);
+		/* Opaque: maps now open on the labelled overview (FT-13), and names near
+		   the top edge used to show through a 96%-white tab. */
+		background: #ffffff;
 		border: 1px solid rgba(17, 24, 21, 0.08);
 		border-radius: 0.625rem;
 		box-shadow: 0 1px 3px rgba(17, 24, 21, 0.12);

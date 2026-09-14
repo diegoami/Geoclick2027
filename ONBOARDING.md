@@ -301,6 +301,20 @@ eight-country/i18n/visual-refresh batch (44 map folders synced
 correctly, real-sized `.pmtiles`, not the corrupted-symlink failure mode
 from the Gotchas section below).
 
+**The hardware back button (FT-14)** goes up the app's hierarchy: map
+screens go to the overview, the overview goes to the map list, and the
+list exits the app. It uses `@capacitor/app`, and one
+`App.addListener('backButton')` in `app/src/routes/+layout.svelte`
+registers only inside the Android app. `parentRoute()` in
+`app/src/lib/backNavigation.ts` decides the destination and is
+unit-tested. Registering the listener switches off Capacitor's default
+(history back, then exit), so add any new screen to `parentRoute`. To
+check it on the emulator, run `adb shell input keyevent KEYCODE_BACK`.
+`adb shell uiautomator dump /sdcard/ui.xml` lists the WebView's visible
+texts with their screen bounds, which is enough to tap tabs by name. In
+Git Bash, set `MSYS_NO_PATHCONV=1` first, or `/sdcard` gets rewritten
+into a Windows path.
+
 **Release (signed) APK (FT-06).** Anything handed to players must be a
 release APK signed with Geoclick's own key, not the per-machine debug key.
 Android only accepts an update signed by the same key as the installed
