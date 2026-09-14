@@ -5,10 +5,9 @@ FT-10 (sandbox), FT-11 (engine, overlay, steps) and FT-12 (first-visit
 nudge, three-language walkthrough) build exactly what's here; if one of
 them needs to change the script, change this file first.
 
-**Status: in the product owner's copy review.** The flow questions were
-answered on 2026-09-14 (Explore gets its own step; the sandbox covers
-Italy — Regions only; the star is an outro tip; Finish stays on the tour).
-The copy questions still open are at the end.
+**Status: approved by the product owner, 2026-09-14.** The answers from
+the review are listed at the end. The wording can still be tuned once
+FT-11 shows it on screen and FT-12 checks it at phone width.
 
 Settled elsewhere, not reopened here (FEATURE_PLAN.md, product decisions):
 
@@ -419,8 +418,8 @@ mark that up in the strings.
 
 | Key | English | Deutsch | Italiano |
 |---|---|---|---|
-| `tutorial.intro.title` | Welcome to Geoclick | Willkommen bei Geoclick | Benvenuto in Geoclick |
-| `tutorial.intro.body` | Learn the map by playing with it. This short tutorial takes about three minutes and you'll try every part of the app yourself. Nothing you do in it counts towards your progress. | Lerne die Karte, indem du mit ihr spielst. Dieses kurze Tutorial dauert etwa drei Minuten, und du probierst jeden Teil der App selbst aus. Was du dabei machst, zählt nicht für deinen Fortschritt. | Impara la mappa giocandoci. Questo breve tutorial dura circa tre minuti e proverai tu stesso ogni parte dell'app. Quello che fai qui non conta per i tuoi progressi. |
+| `tutorial.intro.title` | Welcome to Geoclick | Willkommen bei Geoclick | Ti diamo il benvenuto in Geoclick |
+| `tutorial.intro.body` | Learn the map by playing with it. This short tutorial takes about three minutes and you'll try every part of the app yourself. Nothing you do in it counts towards your progress. | Lerne die Karte, indem du mit ihr spielst. Dieses kurze Tutorial dauert etwa drei Minuten, und du probierst jeden Teil der App selbst aus. Was du dabei machst, zählt nicht für deinen Fortschritt. | Impara la mappa giocandoci. Questo breve tutorial dura circa tre minuti e proverai in prima persona ogni parte dell'app. Quello che fai qui non conta per i tuoi progressi. |
 | `tutorial.outro.title` | You're all set | Alles bereit | Tutto pronto |
 | `tutorial.outro.body` | Pick any map and play. Tip: the star on a map keeps it at the top of your list. You can replay this tutorial any time with the Tutorial button. | Wähle eine beliebige Karte und leg los. Tipp: Mit dem Stern bleibt eine Karte oben in deiner Liste. Du kannst dieses Tutorial jederzeit über die Schaltfläche „Tutorial“ wiederholen. | Scegli una mappa qualsiasi e gioca. Suggerimento: con la stella una mappa resta in cima all'elenco. Puoi rifare questo tutorial quando vuoi con il pulsante Tutorial. |
 
@@ -452,8 +451,8 @@ Notes on the copy:
   in the country list the card is labelled "Regions" under the heading
   "Italy". Country names stay in English in every language (DECISIONS.md,
   i18n), hence "unter Italy" and "sotto Italy".
-- Italian: "Benvenuto" and "tu stesso" are masculine forms, as Italian
-  apps usually write; open question 2 asks whether you'd rather avoid them.
+- Italian avoids gendered forms: "Ti diamo il benvenuto" rather than
+  "Benvenuto", "in prima persona" rather than "tu stesso".
 - Step 10 has the longest copy, and at phone width in German it probably
   won't fit four lines. FT-12 checks, and if it doesn't fit the last
   sentence goes.
@@ -468,12 +467,6 @@ Notes on the copy:
   stays live ([The sandbox](#the-sandbox)).
 - **The star is a tip in the outro**, not a step.
 - **Finish leaves the player on the tour.**
-
-## Still open for the copy review
-
-1. **Is the copy right?** It's product text, so it's your call: tone,
-   length, and each language.
-2. **Italian forms:** keep "Benvenuto" / "tu stesso", or use neutral
-   wording ("Ti diamo il benvenuto", "proverai in prima persona")?
-3. **The button label:** "Tutorial" in all three languages (as drafted;
-   common in German and Italian), or "Einführung" / "Guida"?
+- **The copy is approved as drafted.** Italian uses neutral forms instead
+  of the masculine "Benvenuto" / "tu stesso".
+- **The button says "Tutorial"** in all three languages.
