@@ -5,6 +5,30 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
+## Unreleased
+
+**Maps open where the names are, and Android's back button goes where you'd expect.**
+Becomes the v0.4.0 entry ("Navigation") when it ships; alpha and beta
+pre-releases publish its "For players" part (docs/RELEASES.md).
+
+For players:
+
+- **A map now opens on its overview**, with every region or town named, so
+  you see the whole map before testing yourself. The old click-a-region
+  view is still there, as the new **Explore** tab next to Overview, Quiz
+  and Tour.
+- **Android's back button goes up a level.** From a quiz, tour or explore
+  it returns to that map's overview. From the overview it returns to the
+  map list, and from the list it closes the app. Before, it retraced every
+  screen you'd visited.
+- On phones, the map bar no longer slides under the + / − zoom buttons,
+  and map names no longer show through the tabs.
+
+Under the hood:
+
+- FT-13 (overview-first, Explore tab, map bar layout); FT-14
+  (`@capacitor/app`, `parentRoute()` in `backNavigation.ts`, unit-tested).
+
 ## v0.3.1 — 2026-09-13 — Desktop maps fixed
 
 **The Windows app shows its maps again.** A hotfix for v0.3.0, whose
