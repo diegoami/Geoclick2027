@@ -7,7 +7,7 @@ programme](REMEDIATION_PLAN.md), which closed with `v0.2.0`: that one
 fixed what a code review found, while this one adds things players will
 notice.
 
-**Status: in progress** — see the ledger at the bottom. v0.4.0 (FT-13, FT-14) is out. v0.5.0 is in progress: FT-15, FT-16, FT-17 and FT-09 to FT-11 are merged; FT-12 is next.
+**Status: in progress** — see the ledger at the bottom. v0.4.0 (FT-13, FT-14) is out. v0.5.0 is in progress: all tasks (FT-09 to FT-12, FT-15 to FT-17) are merged; v0.5.0-beta.1 next, then v0.5.0.
 
 ---
 
@@ -678,7 +678,7 @@ Update this table as tasks merge. Commit hashes are the merge commits.
 | FT-09 | **merged** | `cd47cc6` | v0.5.0 | docs/TUTORIAL.md: 11 steps + intro/outro, EN/DE/IT copy; 🧑 copy approved 2026-09-14 (decisions 17-19: Explore step, italy-regions-only sandbox, star tip, Finish stays on tour) |
 | FT-10 | **merged** | `1741112` | v0.5.0 | italy-regions in memory during the tutorial, other maps live (decision 18); no localStorage writes in a tutorial quiz (tested); normal play smoke-checked in the browser |
 | FT-11 | **merged** | `fa00091` | v0.5.0 | Tutorial button, overlay, 11 steps on real actions; pause/resume, Back, Skip/Esc, Replay; full browser runs 1280 EN, 400 EN/DE; tried by the product owner in the browser. Also: quiz fits the map above the tray (Sicily was hidden) |
-| FT-12 | todo | — | v0.5.0 | |
+| FT-12 | **merged** | `89fb987` | v0.5.0 | "New here?" nudge (EN/DE/IT); full walks EN/DE/IT at 360 + 1280px, tap-to-magnify on phones; step 10 shortened to 4 lines; ONBOARDING step guide |
 
 | Release | State | Tag | Date |
 |---|---|---|---|
