@@ -217,7 +217,7 @@ reuses the first's layer.
 | FT-19 | **merged** | `8109965` | clean streak in packages/srs + all three stores; migrations keep existing rows; checked in a browser |
 | FT-20 | **merged** | `12172ec` | one miss reveals in place; copy + tutorial + manual screenshots updated |
 | FT-21 | **merged** | `d889451` | hand of 6/3/1 by mastery, refilled per drop; note by the progress line; 🧑 thresholds and wording still open to retuning |
-| FT-22 | todo | — | 🧑 tab name |
+| FT-22 | **merged** | `9b26996` | three label strengths by clean streak, legend, click still names a region; tab called Progress — 🧑 name still open |
 | FT-23 | todo | — | |
 | FT-24 | todo | — | |
 | FT-25 | todo | — | |
