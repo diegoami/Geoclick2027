@@ -27,6 +27,9 @@ export type TranslationKey =
 	| 'nav.maps'
 	| 'nav.overview'
 	| 'nav.explore'
+	| 'retention.known'
+	| 'retention.nearly'
+	| 'retention.seen'
 	| 'nav.quiz'
 	| 'nav.tour'
 	| 'nav.loading'
@@ -113,7 +116,10 @@ type Dictionary = Record<TranslationKey, string>;
 const en: Dictionary = {
 	'nav.maps': 'Maps',
 	'nav.overview': 'Overview',
-	'nav.explore': 'Explore',
+	'nav.explore': 'Progress',
+	'retention.known': 'Known',
+	'retention.nearly': 'Nearly',
+	'retention.seen': 'Seen once',
 	'nav.quiz': 'Quiz',
 	'nav.tour': 'Tour',
 	'nav.loading': 'Loading…',
@@ -196,9 +202,9 @@ const en: Dictionary = {
 	'tutorial.step3.touch':
 		'This is the **overview**, where every region shows its name. Tap a name to enlarge it.',
 	'tutorial.step4':
-		'**Explore** hides the names, so you can test yourself. Open it and click any region to see which one it is.',
+		'**Progress** shows how well you know this map: the names you have placed right, as strongly as you know them. Open it and click any region to see which one it is.',
 	'tutorial.step4.touch':
-		'**Explore** hides the names, so you can test yourself. Open it and tap any region to see which one it is.',
+		'**Progress** shows how well you know this map: the names you have placed right, as strongly as you know them. Open it and tap any region to see which one it is.',
 	'tutorial.step5': 'Ready to test yourself for real? Open the **Quiz**.',
 	'tutorial.step6':
 		'Drag a name from the tray onto its region. Try **Sicilia**: the big island off the toe of the boot.',
@@ -215,7 +221,10 @@ const en: Dictionary = {
 const de: Dictionary = {
 	'nav.maps': 'Karten',
 	'nav.overview': 'Übersicht',
-	'nav.explore': 'Erkunden',
+	'nav.explore': 'Fortschritt',
+	'retention.known': 'Gewusst',
+	'retention.nearly': 'Fast',
+	'retention.seen': 'Einmal',
 	'nav.quiz': 'Quiz',
 	'nav.tour': 'Tour',
 	'nav.loading': 'Lädt…',
@@ -298,9 +307,9 @@ const de: Dictionary = {
 	'tutorial.step3.touch':
 		'Das ist die **Übersicht**: Hier steht jede Region mit ihrem Namen. Tippe auf einen Namen, um ihn zu vergrößern.',
 	'tutorial.step4':
-		'**Erkunden** blendet die Namen aus, damit du dich selbst testen kannst. Öffne es und klicke auf eine Region, um zu sehen, welche es ist.',
+		'**Fortschritt** zeigt, wie gut du diese Karte kennst: die Namen, die du richtig platziert hast, so deutlich, wie du sie kennst. Öffne es und klicke auf eine Region, um zu sehen, welche es ist.',
 	'tutorial.step4.touch':
-		'**Erkunden** blendet die Namen aus, damit du dich selbst testen kannst. Öffne es und tippe auf eine Region, um zu sehen, welche es ist.',
+		'**Fortschritt** zeigt, wie gut du diese Karte kennst: die Namen, die du richtig platziert hast, so deutlich, wie du sie kennst. Öffne es und tippe auf eine Region, um zu sehen, welche es ist.',
 	'tutorial.step5': 'Bereit für den echten Test? Öffne das **Quiz**.',
 	'tutorial.step6':
 		'Ziehe einen Namen aus der Ablage auf seine Region. Versuch es mit **Sicilia**, der großen Insel vor der Stiefelspitze.',
@@ -317,7 +326,10 @@ const de: Dictionary = {
 const it: Dictionary = {
 	'nav.maps': 'Mappe',
 	'nav.overview': 'Panoramica',
-	'nav.explore': 'Esplora',
+	'nav.explore': 'Progressi',
+	'retention.known': 'Sai',
+	'retention.nearly': 'Quasi',
+	'retention.seen': 'Una volta',
 	'nav.quiz': 'Quiz',
 	'nav.tour': 'Tour',
 	'nav.loading': 'Caricamento…',
@@ -400,9 +412,9 @@ const it: Dictionary = {
 	'tutorial.step3.touch':
 		'Questa è la **panoramica**, dove ogni regione mostra il suo nome. Tocca un nome per ingrandirlo.',
 	'tutorial.step4':
-		'**Esplora** nasconde i nomi, così puoi metterti alla prova. Aprilo e clicca una regione per scoprire qual è.',
+		'**Progressi** mostra quanto conosci questa mappa: i nomi che hai posizionato bene, con la forza con cui li sai. Aprilo e clicca una regione per scoprire qual è.',
 	'tutorial.step4.touch':
-		'**Esplora** nasconde i nomi, così puoi metterti alla prova. Aprilo e tocca una regione per scoprire qual è.',
+		'**Progressi** mostra quanto conosci questa mappa: i nomi che hai posizionato bene, con la forza con cui li sai. Aprilo e tocca una regione per scoprire qual è.',
 	'tutorial.step5': 'Ora la prova vera: apri il **Quiz**.',
 	'tutorial.step6':
 		"Trascina un nome dal vassoio sulla sua regione. Prova con **Sicilia**, l'isola grande davanti alla punta dello stivale.",

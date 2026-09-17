@@ -1098,6 +1098,28 @@ answers:
   - The favourite star is a tip in the outro, not a step. Finish leaves
     the player on the tour, which keeps playing.
 
+## The retention map replaces Explore (2026-09-18, FT-22)
+
+- **The second tab now shows what you know.** Every name placed right at
+  least once is written on the map, at one of three strengths: solid at a
+  clean streak of 3 or more, lighter at 2, faint at 1. A name never placed
+  cleanly - or one missed since - isn't drawn at all, so the map is an
+  honest picture of knowledge rather than of visits.
+- **Why here:** with the due counts retired (decision 1 of v0.6.0), the
+  player needs somewhere to see progress, and a map says it better than a
+  number. Explore's own job - "what is this region?" - is kept: clicking
+  still names any region, known or not, so nothing was lost by reusing the
+  tab rather than adding a sixth one to a bar that is already full on
+  phones.
+- **On a map never played it is exactly the old Explore:** a blank map to
+  test yourself against.
+- **The tab is called "Progress"** (DE *Fortschritt*, IT *Progressi*),
+  with a three-swatch legend in the corner. The name is the product
+  owner's call at review; "Known" / "Gewusst" / "Conoscenza" was the
+  alternative.
+- Pointing at or tapping a faint name brings it to full strength, so a
+  half-learned name can still be read (reuses FT-02/FT-03's magnify).
+
 ## The tray offers fewer names as a map is learned (2026-09-18, FT-21)
 
 - **The quiz deals a *hand*, not the whole deck.** How many names the tray

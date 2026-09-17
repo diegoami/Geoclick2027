@@ -78,3 +78,22 @@
 		transition: none;
 	}
 }
+
+/* The retention map's labels (FT-22, MapView.svelte): every name the player
+ * has placed cleanly at least once, drawn as strongly as they know it. Three
+ * steps of the same label, so the map reads at a glance: solid for a name
+ * placed right three times in a row, lighter for twice, faint for once.
+ * Names never placed cleanly aren't drawn at all. */
+.geoclick-retention.retention-nearly .maplibregl-popup-content {
+	font-size: 0.75rem;
+	opacity: 0.72;
+}
+.geoclick-retention.retention-seen .maplibregl-popup-content {
+	font-size: 0.7rem;
+	opacity: 0.45;
+}
+/* Pointing at or tapping a faint name brings it fully forward (FT-02/FT-03),
+ * so a half-learned name can still be read. */
+.geoclick-retention .maplibregl-popup-content:is(.is-hovered, .is-magnified) {
+	opacity: 1;
+}
