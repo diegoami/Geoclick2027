@@ -23,6 +23,7 @@ interface CardStateRow {
 	ease_factor: number;
 	interval: number;
 	repetitions: number;
+	clean_streak: number;
 	due_date: string;
 	last_reviewed_at: string;
 }
@@ -66,7 +67,7 @@ export function createCapacitorProgressRepository(): ProgressRepository {
 		async getCardStates(mapId) {
 			const db = await getDb();
 			const result = await db.query(
-				'SELECT target_id, ease_factor, interval, repetitions, due_date, last_reviewed_at FROM card_states WHERE map_id = ?',
+				'SELECT target_id, ease_factor, interval, repetitions, clean_streak, due_date, last_reviewed_at FROM card_states WHERE map_id = ?',
 				[mapId]
 			);
 			return ((result.values as CardStateRow[] | undefined) ?? []).map((row) => ({
@@ -74,6 +75,7 @@ export function createCapacitorProgressRepository(): ProgressRepository {
 				easeFactor: row.ease_factor,
 				interval: row.interval,
 				repetitions: row.repetitions,
+				cleanStreak: row.clean_streak,
 				dueDate: row.due_date,
 				lastReviewedAt: row.last_reviewed_at
 			}));
@@ -82,12 +84,13 @@ export function createCapacitorProgressRepository(): ProgressRepository {
 		async saveCardState(mapId, state: CardState) {
 			const db = await getDb();
 			await db.run(
-				`INSERT INTO card_states (map_id, target_id, ease_factor, interval, repetitions, due_date, last_reviewed_at)
-				 VALUES (?, ?, ?, ?, ?, ?, ?)
+				`INSERT INTO card_states (map_id, target_id, ease_factor, interval, repetitions, clean_streak, due_date, last_reviewed_at)
+				 VALUES (?, ?, ?, ?, ?, ?, ?, ?)
 				 ON CONFLICT (map_id, target_id) DO UPDATE SET
 				   ease_factor = excluded.ease_factor,
 				   interval = excluded.interval,
 				   repetitions = excluded.repetitions,
+				   clean_streak = excluded.clean_streak,
 				   due_date = excluded.due_date,
 				   last_reviewed_at = excluded.last_reviewed_at`,
 				[
@@ -96,6 +99,7 @@ export function createCapacitorProgressRepository(): ProgressRepository {
 					state.easeFactor,
 					state.interval,
 					state.repetitions,
+					state.cleanStreak,
 					state.dueDate,
 					state.lastReviewedAt
 				]

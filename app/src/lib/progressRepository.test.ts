@@ -42,6 +42,7 @@ const sampleCard: CardState = {
 	easeFactor: 2.5,
 	interval: 1,
 	repetitions: 1,
+	cleanStreak: 0,
 	dueDate: '2026-09-12',
 	lastReviewedAt: '2026-09-11'
 };

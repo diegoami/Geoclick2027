@@ -59,6 +59,7 @@ describe('interval cap (GC-010)', () => {
 			easeFactor: DEFAULT_EASE_FACTOR,
 			interval: 88_692_188,
 			repetitions: 20,
+			cleanStreak: 0,
 			dueDate: TODAY,
 			lastReviewedAt: '2026-01-01'
 		};

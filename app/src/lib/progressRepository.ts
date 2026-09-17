@@ -130,10 +130,19 @@ async function createRealProgressRepository(): Promise<ProgressRepository> {
 	return createLocalStorageProgressRepository();
 }
 
+// Cards saved before v0.6.0 have no cleanStreak. Rather than migrate the
+// stored JSON, every read fills it in as 0: "not known yet", which is what an
+// unknown history should mean. The next clean answer starts a real streak.
+function withCleanStreak(states: CardState[]): CardState[] {
+	return states.map((state) =>
+		state.cleanStreak === undefined ? { ...state, cleanStreak: 0 } : state
+	);
+}
+
 export function createLocalStorageProgressRepository(): ProgressRepository {
 	return {
 		async getCardStates(mapId) {
-			return readJson<CardState[]>(cardsKey(mapId)) ?? [];
+			return withCleanStreak(readJson<CardState[]>(cardsKey(mapId)) ?? []);
 		},
 
 		async saveCardState(mapId, state) {

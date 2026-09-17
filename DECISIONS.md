@@ -1090,6 +1090,27 @@ answers:
   - The favourite star is a tip in the outro, not a step. Finish leaves
     the player on the tour, which keeps playing.
 
+## A clean streak per name (2026-09-18, FT-19)
+
+- **Each target now also stores how often in a row it was placed right with
+  no mistake** (`cleanStreak` in `packages/srs`). v0.6.0 needs a plain
+  answer to "how well is this name known" for two things: how prominently
+  the retention map draws it, and how many names the quiz offers at once
+  (docs/PLAN_V0.6.md). Three in a row means known.
+- **Why not reuse `repetitions`:** it counts passes, including ones that
+  needed a second try, and only a total fail resets it. A name fumbled every
+  other round would look as good as one never missed.
+- **Any mistake resets it to 0**, including a `hard` grade (right, but only
+  after a wrong drop) which still passes for scheduling. Getting it right
+  eventually is a pass; it is not evidence of knowing it.
+- **Cards saved before v0.6.0 start at 0.** The browser store fills the field
+  in on read, and both SQLite backends get a migration that adds the column
+  with a default. Guessing a streak from the existing review history would be
+  wrong more often than right, so a returning player rebuilds one over the
+  next few rounds - said plainly in the release notes.
+- The scheduler itself is unchanged: dates, intervals and ease behave as
+  before, and the streak rides along beside them.
+
 ## Tutorial sandbox (2026-09-14, FT-10)
 
 - **The tutorial's quiz never becomes real progress**, the same rule as

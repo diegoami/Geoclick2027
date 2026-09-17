@@ -78,13 +78,14 @@ function tauriMigrationSql(): string[] {
 }
 
 describe('Capacitor SQLite migrations (GC-040)', () => {
-	it('a fresh install ends at user_version 1 with both tables', async () => {
+	it('a fresh install ends at the latest user_version with both tables', async () => {
 		const db = new DatabaseSync(':memory:');
 		expect(await getUserVersion(adapter(db))).toBe(0);
-		expect(await migrate(adapter(db))).toEqual({ from: 0, to: 1 });
-		expect(await getUserVersion(adapter(db))).toBe(1);
+		expect(await migrate(adapter(db))).toEqual({ from: 0, to: MIGRATIONS.length });
+		expect(await getUserVersion(adapter(db))).toBe(MIGRATIONS.length);
 		expect(Object.keys(schemaOf(db))).toEqual([...TABLES]);
-		expect(schemaOf(db).card_states).toHaveLength(7);
+		// 7 from the first migration, plus clean_streak (v0.6.0).
+		expect(schemaOf(db).card_states).toHaveLength(8);
 	});
 
 	it('an existing pre-GC-040 install (tables present, user_version 0) keeps every row', async () => {
@@ -106,13 +107,18 @@ describe('Capacitor SQLite migrations (GC-040)', () => {
 			3,
 			'2026-09-14T10:00:00.000Z'
 		);
-		const schemaBefore = schemaOf(db);
+		const columnsBefore = (schemaOf(db).card_states as { name: string }[]).map((c) => c.name);
 		expect(await getUserVersion(adapter(db))).toBe(0);
 
-		expect(await migrate(adapter(db))).toEqual({ from: 0, to: 1 });
+		expect(await migrate(adapter(db))).toEqual({ from: 0, to: MIGRATIONS.length });
 
-		expect(await getUserVersion(adapter(db))).toBe(1);
-		expect(schemaOf(db)).toEqual(schemaBefore);
+		expect(await getUserVersion(adapter(db))).toBe(MIGRATIONS.length);
+		// The schedule columns are untouched; v0.6.0 only adds clean_streak, and
+		// the row that predates it reads as "not known yet".
+		expect((schemaOf(db).card_states as { name: string }[]).map((c) => c.name)).toEqual([
+			...columnsBefore,
+			'clean_streak'
+		]);
 		expect(db.prepare('SELECT * FROM card_states').all()).toEqual([
 			{
 				map_id: 'germany-states',
@@ -121,7 +127,8 @@ describe('Capacitor SQLite migrations (GC-040)', () => {
 				interval: 6,
 				repetitions: 2,
 				due_date: '2026-09-20',
-				last_reviewed_at: '2026-09-14'
+				last_reviewed_at: '2026-09-14',
+				clean_streak: 0
 			}
 		]);
 		expect(
@@ -136,16 +143,20 @@ describe('Capacitor SQLite migrations (GC-040)', () => {
 	it('is a no-op on every open after the first', async () => {
 		const db = new DatabaseSync(':memory:');
 		await migrate(adapter(db));
-		db.prepare('INSERT INTO card_states VALUES (?, ?, ?, ?, ?, ?, ?)').run(
+		db.prepare('INSERT INTO card_states VALUES (?, ?, ?, ?, ?, ?, ?, ?)').run(
 			'm',
 			't',
 			2.5,
 			1,
 			1,
 			'd',
-			'd'
+			'd',
+			2
 		);
-		expect(await migrate(adapter(db))).toEqual({ from: 1, to: 1 });
+		expect(await migrate(adapter(db))).toEqual({
+			from: MIGRATIONS.length,
+			to: MIGRATIONS.length
+		});
 		expect(db.prepare('SELECT COUNT(*) AS n FROM card_states').get()).toEqual({ n: 1 });
 	});
 
@@ -169,7 +180,7 @@ describe('Capacitor SQLite migrations (GC-040)', () => {
 			'ALTER TABLE card_states ADD COLUMN streak INTEGER NOT NULL DEFAULT 0;\nSELECT * FROM no_such_table;'
 		];
 		await expect(migrate(adapter(db), broken)).rejects.toThrow();
-		expect(await getUserVersion(adapter(db))).toBe(1);
+		expect(await getUserVersion(adapter(db))).toBe(MIGRATIONS.length);
 		const columns = (db.prepare('PRAGMA table_info(card_states)').all() as { name: string }[]).map(
 			(c) => c.name
 		);
@@ -178,15 +189,16 @@ describe('Capacitor SQLite migrations (GC-040)', () => {
 
 	it('applies a later migration exactly once, and leaves a newer database alone', async () => {
 		const db = new DatabaseSync(':memory:');
-		const withV2 = [
+		const next = MIGRATIONS.length + 1;
+		const withNext = [
 			...MIGRATIONS,
 			'ALTER TABLE card_states ADD COLUMN streak INTEGER NOT NULL DEFAULT 0;'
 		];
-		expect(await migrate(adapter(db), withV2)).toEqual({ from: 0, to: 2 });
-		expect(await migrate(adapter(db), withV2)).toEqual({ from: 2, to: 2 });
-		// An older build (knows only migration 0) opening this v2 database must
-		// not touch it - no guessed down-migration.
-		expect(await migrate(adapter(db), MIGRATIONS)).toEqual({ from: 2, to: 2 });
-		expect(await getUserVersion(adapter(db))).toBe(2);
+		expect(await migrate(adapter(db), withNext)).toEqual({ from: 0, to: next });
+		expect(await migrate(adapter(db), withNext)).toEqual({ from: next, to: next });
+		// An older build (which knows one migration fewer) opening this newer
+		// database must not touch it - no guessed down-migration.
+		expect(await migrate(adapter(db), MIGRATIONS)).toEqual({ from: next, to: next });
+		expect(await getUserVersion(adapter(db))).toBe(next);
 	});
 });
