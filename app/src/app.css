@@ -79,6 +79,14 @@
 	}
 }
 
+/* Names never overlap (FT-23, labelCollision.ts). A name with no room left
+ * keeps its place in the DOM - that is how the next pass measures it again -
+ * but is not drawn. visibility, not display: a label with no box could never
+ * be measured, so it would flicker back on the very next frame. */
+.maplibregl-popup.is-crowded {
+	visibility: hidden;
+}
+
 /* The retention map's labels (FT-22, MapView.svelte): every name the player
  * has placed cleanly at least once, drawn as strongly as they know it. Three
  * steps of the same label, so the map reads at a glance: solid for a name

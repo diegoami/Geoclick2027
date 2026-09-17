@@ -6,6 +6,7 @@ import type { StyleSpecification } from 'maplibre-gl';
 import { PMTiles, Protocol, type RangeResponse, type Source } from 'pmtiles';
 import { asset } from '$app/paths';
 import { enableLabelMagnify } from './labelMagnify';
+import { enableLabelCollision } from './labelCollision';
 import { isNativeShell } from './platform';
 import { overallBounds, type MapDefinition } from './mapDefinition';
 
@@ -130,5 +131,8 @@ export function createMap(
 	// Magnify a name label under the mouse (FT-02) or on a tap (FT-03). Labels
 	// take no pointer input, so drags on them move the map (FT-18).
 	map.once('remove', enableLabelMagnify(container));
+	// Names never overlap (FT-23): whatever names a view draws, the ones that
+	// don't fit are hidden until the player zooms in far enough for them.
+	map.once('remove', enableLabelCollision(map, container));
 	return map;
 }

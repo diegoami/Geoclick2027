@@ -48,8 +48,9 @@ states or provinces are, and where its main towns and cities are.
   country) and its larger towns. Italy also has its 110 provinces. See
   [The maps](#18-the-maps) for the full list.
 - **Four ways to use each map:**
-  - **Overview:** the whole map with every name written on it, to look at
-    and learn from;
+  - **Overview:** the whole map with the names written on it, to look at
+    and learn from — as many as fit without overlapping, the rest a zoom
+    away;
   - **Progress:** how well you know the map — every name you have placed
     right, drawn as strongly as you know it; click a region to find out
     what it is;
@@ -253,16 +254,30 @@ map. Names never get in the way of moving the map.
 On Progress, Quiz and Tour, regions are painted in soft pinks, blues,
 purples, oranges and greys, chosen so that neighbouring regions never
 share a colour. On the Overview every region is the same green, because
-every name is shown. In the quiz, green means *placed*.
+none of them is hidden from you there. In the quiz, green means *placed*.
 
 ## 6. Overview: see every name
 
-Opening a map always lands here. Every region (or town) has its name
+Opening a map always lands here. Each region (or town) has its name
 written on it, in white on a dark green label:
 
 ![Overview: every region named](manual/overview.jpg)
 
 This is the screen to study from. Nothing is scored here.
+
+**Names never overlap.** On a crowded map there is no room for all of
+them at once, and rather than print them on top of each other, Geoclick
+leaves some out — the way an atlas does. Here is Italy — Provinces, which
+has 110 of them, as it opens: about fifty names, each of them legible:
+
+![Italy — Provinces: the names that fit](manual/overview-crowded.jpg)
+
+When two names want the same spot, the larger region keeps its name.
+Nothing is lost: zoom in and the names that were left out appear as room
+is made for them. The same map after three clicks on **+**, now naming
+Viterbo, Rieti, Frosinone and Latina, which were not written before:
+
+![The same map zoomed in, with more names](manual/overview-crowded-zoomed.jpg)
 
 **Enlarging a name:** names are small so that they fit, but any one of
 them can be enlarged. With a mouse, point at it; on a touch screen, tap
@@ -272,8 +287,8 @@ neighbours:
 
 ![Overview: pointing at "Umbria" enlarges it](manual/overview-magnified.jpg)
 
-**Zooming in** spreads crowded names apart. Here the same map after two
-clicks on **+**:
+**Zooming in** spreads the names apart, and brings in any that were left
+out. Here Italy — Regions after two clicks on **+**:
 
 ![Overview zoomed in on central Italy](manual/overview-zoomed.jpg)
 
@@ -532,7 +547,8 @@ roughly 100,000 inhabitants or more (on the largest countries, a selection
 of the biggest). Each town is a **dot**, and the country's regions are
 drawn faintly underneath for reference.
 
-The Overview names every town:
+The Overview names the towns, as many as fit (the dots without a name
+are named once you zoom in):
 
 ![Italy — Towns, Overview](manual/towns-overview.jpg)
 
@@ -864,7 +880,7 @@ code-signed; choose *More info*, then *Run anyway*.
 |---|---|
 | **Map** | One country's set of places to learn, for example Italy — Regions. |
 | **Place** / **target** | One region, state, province or town on a map. |
-| **Overview** | The map with every name shown. |
+| **Overview** | The map with its names shown — as many as fit without overlapping; zoom in for the rest. |
 | **Progress** | How well you know the map: each name drawn as strongly as you know it. Clicking a region still names it (this tab was called Explore until v0.5.0). |
 | **Quiz** | The game: drag each name from the tray onto the map. |
 | **Tour** | The automatic flight from place to place. |

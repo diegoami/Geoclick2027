@@ -473,8 +473,10 @@ that same discipline into any task you pick up:
   symbol layers.** A symbol-layer approach was tried and abandoned — see
   ARCHITECTURE.md and ROADMAP.md's Iteration 4 section for why (MapLibre's
   collision/placement system unpredictably hid labels even with overlap
-  disabled). Follow the popup pattern already in `QuizView.svelte` for
-  anything similar. Two rules (GC-022):
+  disabled), and DECISIONS.md's "Names never overlap" for why a symbol
+  layer stayed rejected in v0.6.0 (it would need glyph fonts shipped in
+  the app, and could not magnify a single label). Follow the popup pattern
+  already in `QuizView.svelte` for anything similar. Two rules (GC-022):
   - Fill a popup with `setText(name)`, never `setHTML`. Names are data,
     and a future user-made or OSM map could put markup in one.
   - Popup styles live once, globally, in `app/src/app.css`. A component's
@@ -502,6 +504,14 @@ that same discipline into any task you pick up:
     the mouse over it sets `.is-hovered`, a tap (down and up within 10px)
     toggles `.is-magnified`. A `:hover` rule on a label would never fire.
     Both classes share one look in `app.css`, so change them together.
+  - Names never overlap (FT-23, `labelCollision.ts`, installed by
+    `createMap` as well): after every map move it measures each label and
+    hides the ones a more important name already covers, with
+    `.is-crowded` (`visibility: hidden`, so the label keeps a size the
+    next pass can measure). A new view only decides *importance*: call
+    `setLabelPriority(popup, n)` after `addTo(map)` - bigger wins, and
+    `areaShares()` gives the usual "the bigger region keeps its name"
+    ranking. Forget it and the label still works, it just ranks 0.
 - **Commit messages end with** `Co-Authored-By: Claude Sonnet 5
   <noreply@anthropic.com>` when Claude made the change — see CLAUDE.md.
 

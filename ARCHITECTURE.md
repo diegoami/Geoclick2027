@@ -51,6 +51,10 @@ pairs well with a canvas/map-heavy UI.
   with names first, then test yourself. The style itself still has no label
   layer, and the progress map, Quiz and Tour reveal names only from what
   the player has earned or asked for.
+  Since v0.6.0 (FT-23) those popups never overlap: `labelCollision.ts`,
+  installed by `createMap` for every view, measures them after each map
+  move and hides any name a more important one already covers, until a
+  zoom makes room. See DECISIONS.md, "Names never overlap".
 
 ## Domain model
 

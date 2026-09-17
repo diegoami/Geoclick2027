@@ -139,22 +139,28 @@ stops for the product owner.
 
 - **Why:** the product owner's requirement, and the honest way to label a
   crowded map. Today every label is a DOM popup that ignores its neighbours.
-- **Do:**
-  - draw target names with a MapLibre **symbol layer** over the `labels`
-    source-layer already in every tileset, with collision on
-    (`text-allow-overlap: false`), so a name that doesn't fit is dropped until
-    you zoom in;
-  - which names show differs per view (all on the Overview, by streak on the
-    retention map, only solved ones in the quiz), so the layer reads from a
-    GeoJSON source the view updates — not from feature-state, because MapLibre
-    reserves collision space even for labels it is told not to paint;
-  - keep the hover and tap magnify (FT-02/FT-03) by drawing the magnified name
-    as a single DOM label on top of the symbol layer;
+- **Do** *(revised while building it, 2026-09-18: no symbol layer after all —
+  it renders text from glyph PBFs fetched from a font server, and the app has
+  to work offline, so it would mean shipping a font stack in every build; and
+  it could not magnify one label on its own. The names stay DOM popups and get
+  a collision pass of their own instead. DECISIONS.md, "Names never overlap",
+  has the full reasoning.)*:
+  - `labelCollision.ts`, installed by `createMap` for every view: after each
+    map move it measures every label once and hides the ones a more important
+    name already covers, so a name that doesn't fit is dropped until you zoom
+    in;
+  - which names show still differs per view, and so does which one gives way:
+    the bigger region on the Overview (`areaShares()`), the better-known name
+    on the retention map, the name just placed in the quiz. A view says so
+    with `setLabelPriority(popup, n)` and needs nothing else;
+  - the hover and tap magnify (FT-02/FT-03) is untouched, and a magnified name
+    always keeps its place — its neighbours give way while it is grown;
   - DECISIONS.md's "labels are DOM popups, not a symbol layer" entry is
-    superseded: rewrite it, including why the old reason to avoid symbol
-    layers (labels disappearing unpredictably) is now the wanted behaviour.
-- **Tests:** a browser check that a dense map (Italy — Provinces) hides names
-  and reveals them on zoom, at 1280 px and 390 px.
+    amended rather than superseded: the mechanism stands, and the collision
+    system it never had is exactly what FT-23 adds.
+- **Tests:** unit tests for the pass and the area ranking, browser tests for
+  the DOM side, and a browser check that a dense map (Italy — Provinces) hides
+  names and reveals them on zoom, at 1280 px and 390 px.
 - **DoD:** the Overview and the retention map use the new layer; magnify still
   works; gates green.
 
@@ -162,11 +168,17 @@ stops for the product owner.
 
 - **Do:**
   - town names sit beside their dot, taking the first free side (right, left,
-    above, below) through MapLibre's variable anchors, never on top of it;
-  - the quiz's solved and shown names, and the tour's current name, come from
-    the same layer, so they can't overlap either;
+    above, below) — with the labels being DOM popups (see FT-23), that means
+    the collision pass tries a popup's anchors in turn rather than MapLibre's
+    variable anchors — never on top of the dot;
+  - the quiz's shown names and the tour's current name are ranked like the
+    rest, so the name the player is being shown is never the one dropped;
   - check that the quiz's drag still hit-tests dots correctly once labels sit
-    beside them.
+    beside them;
+  - the same "first free side" step is worth giving region names too: after
+    FT-23 a name that loses its centroid spot is simply dropped, which on a
+    phone costs Italy — Regions names as prominent as Lombardia. Letting a
+    label step aside before giving up would bring most of them back.
 - **Tests:** browser runs of a towns quiz and a tour; the existing quiz tests
   keep passing.
 - **DoD:** no overlapping names anywhere; gates green.
@@ -243,7 +255,11 @@ reuses the first's layer.
   mechanism every view uses to show names, it was tried once before and
   abandoned, and "hidden until you zoom in" changes how the Overview feels. It
   can be shipped on its own and reverted without touching the rest of the
-  release.
+  release. *Smaller than feared in the end (FT-23, 2026-09-18): no view had
+  to change how it draws a name, only how strongly it ranks one, so the
+  revert is one line in `createMap`. What is left of the risk is the product
+  question — a dense Overview now shows about 50 of 107 province names on a
+  laptop and 17 on a phone, and the rest need a zoom.*
 - **Everyone's streaks start at zero** (FT-19), so on the first play after the
   update every map looks unknown on the retention map and plays at level 0.
   The alternative, guessing a streak from the existing review history, would

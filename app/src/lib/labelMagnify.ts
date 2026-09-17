@@ -12,13 +12,25 @@ const LABEL = '.maplibregl-popup-content';
 export const MAGNIFIED_CLASS = 'is-magnified';
 /** A label grown because the mouse is over it; follows the pointer. */
 export const HOVERED_CLASS = 'is-hovered';
+/**
+ * A label the collision pass (labelCollision.ts) decided not to draw, because
+ * a more important name is in its place (FT-23). Set on the popup element,
+ * not on the content. It keeps its position and size - that is how the next
+ * pass knows where it wants to go - so hit-testing has to skip it explicitly.
+ * Lives here, with the other label classes, to keep the dependency one-way:
+ * labelCollision.ts knows about magnifying, magnifying doesn't import it.
+ */
+export const CROWDED_CLASS = 'is-crowded';
 // How far a finger may move between down and up and still count as a tap,
 // not a drag. About the size of a finger's own wobble.
 const TAP_SLOP_PX = 10;
 
-/** The label at a point, topmost first: a grown label covers its neighbours. */
+/** The label at a point, topmost first: a grown label covers its neighbours.
+ * Names hidden as crowded (FT-23) are skipped - nothing is drawn there. */
 export function labelAt(container: HTMLElement, x: number, y: number): HTMLElement | undefined {
-	const labels = [...container.querySelectorAll<HTMLElement>(LABEL)];
+	const labels = [...container.querySelectorAll<HTMLElement>(LABEL)].filter(
+		(l) => !l.closest(`.${CROWDED_CLASS}`)
+	);
 	const grown = labels.filter(
 		(l) => l.classList.contains(MAGNIFIED_CLASS) || l.classList.contains(HOVERED_CLASS)
 	);

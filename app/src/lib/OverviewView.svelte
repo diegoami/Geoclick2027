@@ -7,6 +7,7 @@
 	import type { MapDefinition } from './mapDefinition';
 	import { mapDisplayName } from './mapCatalog';
 	import { tutorialMapGesture } from './tutorial.svelte';
+	import { areaShares, setLabelPriority } from './labelCollision';
 
 	let { mapId }: { mapId: string } = $props();
 
@@ -54,6 +55,10 @@
 			// same fix, found the same way).
 			map.once('load', () => {
 				if (cancelled || !map) return;
+				// Which name gives way when two don't fit (FT-23): the smaller
+				// region's, so the overview still reads at a glance and the rest
+				// come back as you zoom in.
+				const shares = areaShares(loadedMapDef.targets);
 				for (const target of loadedMapDef.targets) {
 					map.setFeatureState(
 						{ source: 'targets', sourceLayer: 'targets', id: target.name },
@@ -67,6 +72,7 @@
 						.setLngLat(target.centroid)
 						.setText(target.name)
 						.addTo(map);
+					setLabelPriority(popup, shares.get(target.id) ?? 0);
 					popups.set(target.id, popup);
 				}
 			});
