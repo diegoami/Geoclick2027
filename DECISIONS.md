@@ -45,7 +45,11 @@ or amend an entry here as part of that change, not as an afterthought.
   unpredictably hid some labels regardless of opacity — confirmed
   directly via `queryRenderedFeatures` showing a label feature simply
   wasn't in the render results for one region while five others were
-  fine. DOM popups have no such collision system.
+  fine.
+  *Amended 2026-09-18 (v0.6.0, FT-23): DOM popups had no collision
+  system at all, which is why a crowded map was unreadable. They now get
+  one of their own, in JS — see "Names never overlap" below for what it
+  does and why it is still not a symbol layer.*
 - **Drop hit-testing: exact-pixel for hover, a tolerance radius
   (`DROP_TOLERANCE_PX`, 24px) for the drop itself — and the tolerance
   only ever helps the *correct* target land, never reattributes which
@@ -1097,6 +1101,41 @@ answers:
     without being told.
   - The favourite star is a tip in the outro, not a step. Finish leaves
     the player on the tour, which keeps playing.
+
+## Names never overlap (2026-09-18, FT-23)
+
+- **A name is either legible or it isn't drawn.** The product owner's
+  requirement for v0.6.0: "on maps names do not overlap". Italy's 110
+  provinces used to pile their labels on top of one another until the
+  overview was a wall of text. Now every label is measured after each map
+  move, and a name is dropped when a more important one already holds
+  that spot. Zoom in and the same pass finds room for it again, which is
+  also the answer to "what happens to the names that are hidden" — the
+  product owner's choice over shrinking or stacking them.
+- **Which name gives way**: the smaller region's. Area (from each
+  target's bbox, corrected for latitude) decides between two names that
+  want the same place, the way an atlas keeps the big name and lets the
+  small one wait for the zoom. On the retention map (FT-22) the strength
+  ranks first — a name you know beats one you have only half learned —
+  and area breaks ties within a strength. In the quiz, the name just
+  placed wins: it is the answer to what the player did a second ago. A
+  name the player is pointing at or has tapped (FT-02/FT-03) always wins,
+  and its neighbours give way while it is grown.
+- **Collision is computed in JS over the DOM labels, not by a MapLibre
+  symbol layer** — which does collision natively, and was the obvious
+  candidate. Two reasons decided it:
+  - symbol layers draw text from glyph PBFs, and the style's `glyphs`
+    entry points at a public font server. Nothing in the app fetches it
+    today, and Geoclick has to work fully offline, so a symbol layer
+    would mean vendoring and shipping a font stack in every build;
+  - everything a label does today lives in CSS: the magnify on hover and
+    tap, the three retention strengths, the "shown" colour for a name
+    given away, `rem` sizing that follows the browser's font-size
+    setting. A symbol layer would have to reimplement all of it in
+    expressions, and could not magnify a single label at all.
+  The pass itself is small: read every label's rectangle once per frame,
+  keep them in order of importance, hide the rest. See
+  `app/src/lib/labelCollision.ts`.
 
 ## The retention map replaces Explore (2026-09-18, FT-22)
 

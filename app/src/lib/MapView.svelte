@@ -10,6 +10,7 @@
 	import { createProgressRepository } from './progressRepository';
 	import { KNOWN_CLEAN_STREAK } from './difficulty';
 	import { tutorialExploreReveal } from './tutorial.svelte';
+	import { areaShares, setLabelPriority } from './labelCollision';
 
 	let { mapId }: { mapId: string } = $props();
 
@@ -32,6 +33,13 @@
 	// legend has anything to explain.
 	let hasRetention = $state(false);
 
+	// How the three strengths rank when two names want the same spot (FT-23):
+	// a name you know beats one you half know, and between equals the bigger
+	// region wins (its area share is below 1, so it only breaks ties).
+	const TIER_RANK = { known: 2, nearly: 1, seen: 0 } as const;
+	// The name you asked for by clicking a region always wins its place.
+	const CLICKED_PRIORITY = 10;
+
 	/** Which strength a name is drawn at, or undefined for "don't draw it". */
 	function tierOf(cleanStreak: number): 'known' | 'nearly' | 'seen' | undefined {
 		if (cleanStreak >= KNOWN_CLEAN_STREAK) return 'known';
@@ -47,6 +55,7 @@
 			(await repository.getCardStates(mapId)).map((c) => [c.targetId, c.cleanStreak])
 		);
 		if (!map) return;
+		const shares = areaShares(def.targets);
 		for (const target of def.targets) {
 			const tier = tierOf(streaks.get(target.id) ?? 0);
 			if (!tier) continue;
@@ -58,6 +67,7 @@
 				.setLngLat(target.centroid)
 				.setText(target.name)
 				.addTo(map);
+			setLabelPriority(popup, TIER_RANK[tier] + (shares.get(target.id) ?? 0));
 			retentionPopups.set(target.id, popup);
 			hasRetention = true;
 		}
@@ -105,6 +115,7 @@
 						className: 'geoclick-popup'
 					});
 					popup.setLngLat(e.lngLat).setText(name).addTo(map!);
+					setLabelPriority(popup, CLICKED_PRIORITY);
 					// The tutorial's Explore step (FT-11) moves on once a name shows.
 					tutorialExploreReveal();
 				});

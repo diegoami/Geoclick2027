@@ -9,6 +9,7 @@
 	import { t, tPlural } from './i18n.svelte';
 	import { mapDisplayName } from './mapCatalog';
 	import { tutorialDrop } from './tutorial.svelte';
+	import { setLabelPriority } from './labelCollision';
 	import {
 		createQuizSession,
 		attemptMatch,
@@ -178,11 +179,15 @@
 	// first and dropped: even with text-allow-overlap/text-ignore-placement
 	// set, MapLibre's collision/placement system unpredictably hid some
 	// labels regardless of opacity. Plain DOM popups (same mechanism
-	// MapView/TourView already use) have no such collision system. Plain
-	// Map, not SvelteMap: never read in the template, purely an imperative
-	// side-table for cleanup on restart/destroy.
+	// MapView/TourView already use) are placed by labelCollision.ts instead,
+	// which drops a name only when a more important one is already there
+	// (FT-23). Plain Map, not SvelteMap: never read in the template, purely an
+	// imperative side-table for cleanup on restart/destroy.
 	// eslint-disable-next-line svelte/prefer-svelte-reactivity
 	const solvedPopups = new Map<string, maplibregl.Popup>();
+	// Counts up with every name placed, so the newest label outranks the ones
+	// already on the map when they fight for the same spot.
+	let labelPriority = 0;
 
 	let complete = $derived(session ? isSessionComplete(session) : false);
 	let score = $derived(session ? scoreSession(session) : undefined);
@@ -380,6 +385,10 @@
 			.setLngLat(centroid)
 			.setText(name)
 			.addTo(map);
+		// When two names don't fit (FT-23), the one just placed wins: it is the
+		// answer to what the player did a moment ago. Older names give way and
+		// come back on a zoom.
+		setLabelPriority(popup, ++labelPriority);
 		solvedPopups.set(targetId, popup);
 	}
 
