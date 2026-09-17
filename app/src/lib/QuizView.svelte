@@ -398,13 +398,18 @@
 
 		if (item.status === 'correct' || item.status === 'revealed') {
 			const revealed = item.status === 'revealed';
+			// Since v0.6.0 one miss ends that name's turn: the region that was
+			// hit still flashes red, and then the name is shown where it really
+			// belongs, so a mistake teaches the answer instead of buying two
+			// more guesses (FT-20).
+			if (revealed) flashWrongRegion(targetId, exactName);
 			markSolved(targetId, name, target.centroid, revealed);
 			// Practice-mode results never touch SRS state - see
 			// ROADMAP.md's Iteration 6 design. A due-mode attempt grades the
-			// review: clean (no wrong drops) is "good", eventually correct
-			// but only after a mistake is "hard" (still a pass, but a
-			// weaker one - see the "hard graduates normally" decision),
-			// and revealed/gave-up is "again" (forces a same-day repeat).
+			// review: clean is "good", a name that had to be shown is "again"
+			// (same-day repeat). "hard" (right, but only after a wrong drop)
+			// can no longer happen in the quiz since one miss reveals, but the
+			// scheduler still understands it.
 			if (mode === 'due') {
 				const grade: Grade = revealed ? 'again' : item.errors === 0 ? 'good' : 'hard';
 				const today = todayLocalDate();
@@ -416,25 +421,31 @@
 					.catch((e) => console.error('Failed to save quiz progress:', e));
 			}
 		} else {
-			wrongFlashId = targetId;
-			if (exactName) {
+			flashWrongRegion(targetId, exactName);
+		}
+	}
+
+	// The red flash on the region a wrong drop landed on, plus the slip's own
+	// shake while it is still in the tray.
+	function flashWrongRegion(targetId: string, exactName: string | undefined) {
+		wrongFlashId = targetId;
+		if (exactName && map) {
+			map.setFeatureState(
+				{ source: 'targets', sourceLayer: 'targets', id: exactName },
+				{ quizWrong: true }
+			);
+		}
+		const timer = setTimeout(() => {
+			flashTimers.delete(timer);
+			if (wrongFlashId === targetId) wrongFlashId = undefined;
+			if (exactName && map) {
 				map.setFeatureState(
 					{ source: 'targets', sourceLayer: 'targets', id: exactName },
-					{ quizWrong: true }
+					{ quizWrong: false }
 				);
 			}
-			const timer = setTimeout(() => {
-				flashTimers.delete(timer);
-				if (wrongFlashId === targetId) wrongFlashId = undefined;
-				if (exactName && map) {
-					map.setFeatureState(
-						{ source: 'targets', sourceLayer: 'targets', id: exactName },
-						{ quizWrong: false }
-					);
-				}
-			}, WRONG_PAUSE_MS);
-			flashTimers.add(timer);
-		}
+		}, WRONG_PAUSE_MS);
+		flashTimers.add(timer);
 	}
 
 	// Drag the handle up to grow the tray (see more slips at once, e.g. on a

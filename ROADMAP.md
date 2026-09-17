@@ -820,8 +820,8 @@ the user's request — design decisions, not just a task list:
       that's simpler than adding a second UI concept for the same problem.
 - [x] **No way out of a slip you keep failing.** New quiz-engine concept:
       a third item status, `'revealed'` (alongside `'pending'`/`'correct'`),
-      reached after `MAX_ATTEMPTS_BEFORE_REVEAL` (3) wrong drops on the
-      same slip. It auto-solves — name shown, region colored a distinct
+      reached after `MISSES_BEFORE_REVEAL` wrong drops on the
+      same slip (3 then; one since v0.6.0, FT-20). It auto-solves — name shown, region colored a distinct
       muted gold rather than success-green, slip removed from the tray —
       and `scoreSession`'s `perfect` count correctly excludes it.
       `isSessionComplete` treats `'revealed'` the same as `'correct'` for

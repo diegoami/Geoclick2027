@@ -20,10 +20,12 @@ export interface QuizSession {
 	items: QuizItemState[];
 }
 
-/** Wrong drops allowed on one slip before it auto-resolves as 'revealed'
- * (name shown, but not counted as solved) rather than staying stuck
- * forever. First guess, not measured - expect to retune. */
-export const MAX_ATTEMPTS_BEFORE_REVEAL = 3;
+/** Wrong drops on one slip before it auto-resolves as 'revealed' (name
+ * shown, but not counted as solved). One: a mistake ends that name's turn
+ * and the answer is shown at once, so the miss teaches something instead of
+ * inviting two more guesses (product owner, 2026-09-18, docs/PLAN_V0.6.md).
+ * It was 3 until v0.6.0. */
+export const MISSES_BEFORE_REVEAL = 1;
 
 /** `alreadySolvedIds` seeds a session with targets pre-resolved as
  * 'correct' (0 errors) rather than 'pending' - used to carry forward
@@ -46,9 +48,9 @@ export function createQuizSession(
 /** Records one drag-and-drop attempt: `targetId` is the slip being dragged,
  * `droppedOnId` is the region it was dropped on (undefined/empty if
  * dropped outside any region, or if it missed the correct one). Correct on
- * match; otherwise the item stays pending with an incremented error count,
- * ready to try again - until MAX_ATTEMPTS_BEFORE_REVEAL is reached, at
- * which point it auto-resolves as 'revealed' instead. */
+ * match; otherwise the error count goes up, and once it reaches
+ * MISSES_BEFORE_REVEAL (one, since v0.6.0) the item resolves as 'revealed'
+ * instead of staying pending. */
 export function attemptMatch(
 	session: QuizSession,
 	targetId: string,
@@ -59,7 +61,7 @@ export function attemptMatch(
 			if (item.target.id !== targetId || item.status !== 'pending') return item;
 			if (droppedOnId === targetId) return { ...item, status: 'correct' as const };
 			const errors = item.errors + 1;
-			if (errors >= MAX_ATTEMPTS_BEFORE_REVEAL) {
+			if (errors >= MISSES_BEFORE_REVEAL) {
 				return { ...item, status: 'revealed' as const, errors };
 			}
 			return { ...item, errors };

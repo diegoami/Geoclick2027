@@ -3,7 +3,7 @@ import {
 	attemptMatch,
 	createQuizSession,
 	isSessionComplete,
-	MAX_ATTEMPTS_BEFORE_REVEAL,
+	MISSES_BEFORE_REVEAL,
 	scoreSession,
 	type QuizTarget
 } from './index.js';
@@ -45,11 +45,11 @@ describe('attemptMatch', () => {
 		expect(item.errors).toBe(0);
 	});
 
-	it('records an error and leaves the item pending on a wrong drop', () => {
+	it('records an error and ends the item on a wrong drop (v0.6.0: one miss)', () => {
 		const session = createQuizSession(targets);
 		const next = attemptMatch(session, 'a', 'b');
 		const item = next.items.find((i) => i.target.id === 'a')!;
-		expect(item.status).toBe('pending');
+		expect(item.status).toBe('revealed');
 		expect(item.errors).toBe(1);
 	});
 
@@ -57,16 +57,16 @@ describe('attemptMatch', () => {
 		const session = createQuizSession(targets);
 		const next = attemptMatch(session, 'a', undefined);
 		const item = next.items.find((i) => i.target.id === 'a')!;
-		expect(item.status).toBe('pending');
+		expect(item.status).toBe('revealed');
 		expect(item.errors).toBe(1);
 	});
 
-	it('can be retried and succeed after a prior wrong attempt', () => {
+	it('gives no second chance: a later correct drop cannot rescue a missed item', () => {
 		let session = createQuizSession(targets);
 		session = attemptMatch(session, 'a', 'c');
 		session = attemptMatch(session, 'a', 'a');
 		const item = session.items.find((i) => i.target.id === 'a')!;
-		expect(item.status).toBe('correct');
+		expect(item.status).toBe('revealed');
 		expect(item.errors).toBe(1);
 	});
 
@@ -87,24 +87,24 @@ describe('attemptMatch', () => {
 		expect(item.errors).toBe(0);
 	});
 
-	it('auto-resolves as revealed after MAX_ATTEMPTS_BEFORE_REVEAL wrong drops', () => {
+	it('auto-resolves as revealed after MISSES_BEFORE_REVEAL wrong drops', () => {
 		let session = createQuizSession(targets);
-		for (let i = 0; i < MAX_ATTEMPTS_BEFORE_REVEAL; i++) {
+		for (let i = 0; i < MISSES_BEFORE_REVEAL; i++) {
 			session = attemptMatch(session, 'a', 'b');
 		}
 		const item = session.items.find((i) => i.target.id === 'a')!;
 		expect(item.status).toBe('revealed');
-		expect(item.errors).toBe(MAX_ATTEMPTS_BEFORE_REVEAL);
+		expect(item.errors).toBe(MISSES_BEFORE_REVEAL);
 	});
 
 	it('is a no-op once an item is revealed - does not overflow past the threshold', () => {
 		let session = createQuizSession(targets);
-		for (let i = 0; i < MAX_ATTEMPTS_BEFORE_REVEAL + 2; i++) {
+		for (let i = 0; i < MISSES_BEFORE_REVEAL + 2; i++) {
 			session = attemptMatch(session, 'a', 'b');
 		}
 		const item = session.items.find((i) => i.target.id === 'a')!;
 		expect(item.status).toBe('revealed');
-		expect(item.errors).toBe(MAX_ATTEMPTS_BEFORE_REVEAL);
+		expect(item.errors).toBe(MISSES_BEFORE_REVEAL);
 	});
 });
 
@@ -123,7 +123,7 @@ describe('isSessionComplete', () => {
 		let session = createQuizSession(targets);
 		session = attemptMatch(session, 'a', 'a');
 		session = attemptMatch(session, 'b', 'b');
-		for (let i = 0; i < MAX_ATTEMPTS_BEFORE_REVEAL; i++) {
+		for (let i = 0; i < MISSES_BEFORE_REVEAL; i++) {
 			session = attemptMatch(session, 'c', 'a');
 		}
 		expect(session.items.find((i) => i.target.id === 'c')!.status).toBe('revealed');
@@ -145,10 +145,32 @@ describe('scoreSession', () => {
 	it('excludes revealed items from perfect, still counts their errors', () => {
 		let session = createQuizSession(targets);
 		session = attemptMatch(session, 'a', 'a'); // perfect
-		for (let i = 0; i < MAX_ATTEMPTS_BEFORE_REVEAL; i++) {
-			session = attemptMatch(session, 'b', 'a'); // wrong x3 -> revealed
+		for (let i = 0; i < MISSES_BEFORE_REVEAL; i++) {
+			session = attemptMatch(session, 'b', 'a'); // a miss -> revealed
 		}
 		const score = scoreSession(session);
-		expect(score).toEqual({ total: 3, perfect: 1, totalErrors: MAX_ATTEMPTS_BEFORE_REVEAL });
+		expect(score).toEqual({ total: 3, perfect: 1, totalErrors: MISSES_BEFORE_REVEAL });
+	});
+});
+
+describe('one miss is enough (v0.6.0)', () => {
+	const targets = [
+		{ id: 'a', name: 'A' },
+		{ id: 'b', name: 'B' }
+	];
+
+	it('a single wrong drop resolves the item as revealed, not pending', () => {
+		const session = attemptMatch(createQuizSession(targets), 'a', 'b');
+		const item = session.items.find((i) => i.target.id === 'a')!;
+		expect(item.status).toBe('revealed');
+		expect(item.errors).toBe(1);
+	});
+
+	it('a drop that scores nothing (outside every region) is not a miss', () => {
+		const session = attemptMatch(createQuizSession(targets), 'a', undefined);
+		const item = session.items.find((i) => i.target.id === 'a')!;
+		// Dropping on the sea still counts as an attempt in the engine; only
+		// QuizView decides what reaches it (see its isOverMap/isOverTray guards).
+		expect(item.status).toBe('revealed');
 	});
 });

@@ -24,11 +24,19 @@ or amend an entry here as part of that change, not as an afterthought.
   about drag-to-match blocks adding it later as a second quiz mode. See
   ROADMAP.md's Iteration 4.
 - **A third item status, `'revealed'`, not just correct/incorrect.**
-  After `MAX_ATTEMPTS_BEFORE_REVEAL` (3) wrong drops on the same slip, it
+  After `MISSES_BEFORE_REVEAL` wrong drops on the same slip, it
   auto-resolves: name shown, slip leaves the tray, but scored and colored
   differently from a real success (excluded from `scoreSession`'s
   `perfect` count, muted color rather than success-green). Reason: a
   slip you keep failing needs a way out, not an infinite retry loop.
+  *Amended 2026-09-18 (v0.6.0, FT-20): the threshold is **one** miss.*
+  Three tries made a mistake cheap, and nothing warned you before the
+  third one gave the answer away (v0.5.0 product review, F9). Now a wrong
+  drop ends that name's turn: the region that was hit flashes red, the
+  name is placed where it belongs in the "shown" colour, and the
+  scheduler grades it `again`, so it returns in the same round and its
+  clean streak resets. A `hard` grade (right, but only after a mistake)
+  can no longer arise in the quiz; the scheduler still understands it.
 - **Solved regions stay permanently labeled ("discovered"), via DOM
   `maplibregl.Popup`s, not a MapLibre symbol layer.** A feature-state-
   driven symbol layer was tried first (matching the pattern already used
