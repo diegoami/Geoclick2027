@@ -230,7 +230,7 @@ reuses the first's layer.
 | FT-20 | **merged** | `12172ec` | one miss reveals in place; copy + tutorial + manual screenshots updated |
 | FT-21 | **merged** | `d889451` | hand of 6/3/1 by mastery, refilled per drop; note by the progress line; 🧑 thresholds and wording still open to retuning |
 | FT-22 | **merged** | `9b26996` | three label strengths by clean streak, legend, click still names a region; tab called Progress — 🧑 name still open |
-| FT-23 | todo | — | |
+| FT-23 | **merged** | `417bc12` | collision over the DOM labels, not a symbol layer (offline: no glyph fonts) — priorities per view; no overlapping pair at 1280 or 390 px |
 | FT-24 | todo | — | |
 | FT-25 | todo | — | |
 | FT-26 | todo | — | 🧑 wording |
