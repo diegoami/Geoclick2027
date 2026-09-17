@@ -216,7 +216,7 @@ reuses the first's layer.
 |---|---|---|---|
 | FT-19 | **merged** | `8109965` | clean streak in packages/srs + all three stores; migrations keep existing rows; checked in a browser |
 | FT-20 | **merged** | `12172ec` | one miss reveals in place; copy + tutorial + manual screenshots updated |
-| FT-21 | todo | — | 🧑 wording and thresholds |
+| FT-21 | **merged** | `d889451` | hand of 6/3/1 by mastery, refilled per drop; note by the progress line; 🧑 thresholds and wording still open to retuning |
 | FT-22 | todo | — | 🧑 tab name |
 | FT-23 | todo | — | |
 | FT-24 | todo | — | |
