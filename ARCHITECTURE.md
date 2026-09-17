@@ -49,7 +49,8 @@ pairs well with a canvas/map-heavy UI.
   Since v0.4.0 (FT-13) a map *opens* on its Overview, which labels every
   target with DOM popups. That's a deliberate product call: see the map
   with names first, then test yourself. The style itself still has no label
-  layer, and Explore, Quiz and Tour still reveal names only on demand.
+  layer, and the progress map, Quiz and Tour reveal names only from what
+  the player has earned or asked for.
 
 ## Domain model
 
@@ -182,7 +183,7 @@ card and the map bar has a star (`FavouriteStar.svelte`). A map card opens that 
 | Tab | Route | View |
 |---|---|---|
 | Overview | `/map/<id>/overview` | `OverviewView`: every name labelled |
-| Explore | `/map/<id>` | `MapView`: click a region to see its name |
+| Progress | `/map/<id>` | `MapView`: every name you know, drawn as strongly as you know it (FT-22); clicking a region still names it |
 | Quiz | `/map/<id>/quiz` | `QuizView`: drag the names onto the map |
 | Tour | `/map/<id>/tour` | `TourView`: a guided tour |
 
@@ -199,7 +200,7 @@ holds the live state and carries out what the rules ask for (navigate,
 switch the progress sandbox on or off). The real elements are marked
 with `data-tutorial="…"` attributes, and three views report the
 player's actions through small hooks that do nothing outside the
-tutorial: OverviewView (zoom or pan), MapView (a name shown in Explore)
+tutorial: OverviewView (zoom or pan), MapView (a name shown on the progress map)
 and QuizView (a scored drop). Its progress runs in the sandbox described
 under Storage. On a first visit the home page also offers it with a "New
 here?" nudge (`TutorialNudge.svelte`, FT-12), until it has been started

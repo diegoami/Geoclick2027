@@ -33,7 +33,7 @@ itself. Only the explanation steps (3 and 10) have a Next button.
 | 1 | home page | `home-map-card` (Italy's "Regions" card in the country list) | the route becomes `/map/italy-regions/overview` | choosing a map |
 | 2 | overview | `map` (the map), `zoom-control` (the `+`/`−` buttons) | the player zooms or pans the map | zoom and pan, with mouse, touch or buttons |
 | 3 | overview | `nav-overview` | Next | names are on the overview; magnify by hover or tap |
-| 4 | overview, then explore | `nav-explore`, then `map` | the player clicks a region in Explore and its name shows | Explore: names hidden, click to find out |
+| 4 | overview, then progress map | `nav-explore`, then `map` | the player clicks a region on the progress map and its name shows | the progress map: how well each name is known, click to find out |
 | 5 | explore | `nav-quiz` | the route becomes `/map/italy-regions/quiz` | where the quiz is |
 | 6 | quiz | `slip-sicilia` (a name slip in the tray) | a correct drop, of any slip | drag a name onto its region |
 | 7 | quiz | `slip-sardegna` | a wrong drop, of any slip | what a mistake looks like |
@@ -45,7 +45,8 @@ itself. Only the explanation steps (3 and 10) have a Next button.
 
 How this maps onto the original request (FEATURE_BACKLOG.md §3): 1 select
 a map · 2 zoom and pan (added 2026-09-13) · 3 the overview (was "switch to
-the overview", which FT-13 made automatic) · 4 Explore (added at FT-09's
+the overview", which FT-13 made automatic) · 4 the progress map, which
+replaced Explore in v0.6.0 (added at FT-09's
 review, 2026-09-14) · 5 switch to Quiz · 6 drag a name slip onto its region
 · 7 make a deliberate mistake · 8 check a region in the overview · 9 return
 to the quiz · 10 spaced repetition · 11 Tour.
@@ -119,25 +120,27 @@ Touch:
 
 - **Highlight:** the Overview tab (already selected).
 - **Moves on:** Next.
-- **Off-script:** opening Explore now skips ahead to step 4's second half
+- **Off-script:** opening the progress map now skips ahead to step 4's second half
   rather than pausing: it's where the tutorial is going next anyway.
 
-### 4. Explore — overview, then explore
+### 4. The progress map — overview, then progress map
 
 Mouse:
 
-> **Explore** hides the names, so you can test yourself. Open it and click
-> any region to see which one it is.
+> **Progress** shows how well you know this map: the names you have placed
+> right, as strongly as you know them. Open it and click any region to see
+> which one it is.
 
 Touch:
 
-> **Explore** hides the names, so you can test yourself. Open it and tap
-> any region to see which one it is.
+> **Progress** shows how well you know this map: the names you have placed
+> right, as strongly as you know them. Open it and tap any region to see
+> which one it is.
 
-- **Highlight:** the Explore tab while on the overview; once the route is
-  `/map/italy-regions` (Explore), the map instead. Same card, same copy:
+- **Highlight:** the Progress tab while on the overview; once the route is
+  `/map/italy-regions` (the progress map), the map instead. Same card, same copy:
   it's one step across two screens.
-- **Moves on:** when the player clicks or taps a region in Explore and its
+- **Moves on:** when the player clicks or taps a region on the progress map and its
   name pops up, about a second later so the name can be read. MapView
   calls the tutorial hook from its existing region-click handler.
 - **Back** from here returns to step 3 on the overview.
@@ -278,7 +281,7 @@ Touch:
 ### Going off-script
 
 Any route change that isn't the step's own screen or its target pauses
-the tutorial. Examples: opening another map, the map list, Explore
+the tutorial. Examples: opening another map, the map list, the progress map
 outside steps 3 to 5, or Tour before step 11.
 
 - The card is replaced by a small bar at the bottom of the screen:
@@ -397,7 +400,7 @@ tutorial is running:
 
 - QuizView calls one on every **scored** drop, with `{ correct }` (steps 6
   and 7);
-- MapView (Explore) calls one when a region click shows its name (step 4).
+- MapView (the progress map) calls one when a region click shows its name (step 4).
 
 ---
 
@@ -443,7 +446,7 @@ mark that up in the strings.
 | `tutorial.step2.touch` | Pinch to zoom, or use the **+** and **−** buttons, and drag with one finger to move around. Try it now. | Zoome mit zwei Fingern oder den Tasten **+** und **−**, und verschiebe die Karte mit einem Finger. Probier es aus. | Usa due dita o i pulsanti **+** e **−** per lo zoom, e trascina la mappa con un dito per spostarti. Prova ora. |
 | `tutorial.step3` | This is the **overview**, where every region shows its name. Hover over a name to enlarge it. | Das ist die **Übersicht**: Hier steht jede Region mit ihrem Namen. Fahre mit der Maus über einen Namen, um ihn zu vergrößern. | Questa è la **panoramica**, dove ogni regione mostra il suo nome. Passa il mouse su un nome per ingrandirlo. |
 | `tutorial.step3.touch` | This is the **overview**, where every region shows its name. Tap a name to enlarge it. | Das ist die **Übersicht**: Hier steht jede Region mit ihrem Namen. Tippe auf einen Namen, um ihn zu vergrößern. | Questa è la **panoramica**, dove ogni regione mostra il suo nome. Tocca un nome per ingrandirlo. |
-| `tutorial.step4` | **Explore** hides the names, so you can test yourself. Open it and click any region to see which one it is. | **Erkunden** blendet die Namen aus, damit du dich selbst testen kannst. Öffne es und klicke auf eine Region, um zu sehen, welche es ist. | **Esplora** nasconde i nomi, così puoi metterti alla prova. Aprilo e clicca una regione per scoprire qual è. |
+| `tutorial.step4` | **Progress** shows how well you know this map: the names you have placed right, as strongly as you know them. Open it and click any region to see which one it is. | **Fortschritt** zeigt, wie gut du diese Karte kennst: die Namen, die du richtig platziert hast, so deutlich, wie du sie kennst. Öffne es und klicke auf eine Region, um zu sehen, welche es ist. | **Progressi** mostra quanto conosci questa mappa: i nomi che hai posizionato bene, con la forza con cui li sai. Aprilo e clicca una regione per scoprire qual è. |
 | `tutorial.step4.touch` | **Explore** hides the names, so you can test yourself. Open it and tap any region to see which one it is. | **Erkunden** blendet die Namen aus, damit du dich selbst testen kannst. Öffne es und tippe auf eine Region, um zu sehen, welche es ist. | **Esplora** nasconde i nomi, così puoi metterti alla prova. Aprilo e tocca una regione per scoprire qual è. |
 | `tutorial.step5` | Ready to test yourself for real? Open the **Quiz**. | Bereit für den echten Test? Öffne das **Quiz**. | Ora la prova vera: apri il **Quiz**. |
 | `tutorial.step6` | Drag a name from the tray onto its region. Try **Sicilia**: the big island off the toe of the boot. | Ziehe einen Namen aus der Ablage auf seine Region. Versuch es mit **Sicilia**, der großen Insel vor der Stiefelspitze. | Trascina un nome dal vassoio sulla sua regione. Prova con **Sicilia**, l'isola grande davanti alla punta dello stivale. |

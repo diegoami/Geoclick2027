@@ -21,7 +21,7 @@ on) is realistic example data.
 4. [The home page](#4-the-home-page)
 5. [Map screens: what they have in common](#5-map-screens-what-they-have-in-common)
 6. [Overview: see every name](#6-overview-see-every-name)
-7. [Explore: find out what a region is](#7-explore-find-out-what-a-region-is)
+7. [Progress: what you know so far](#7-progress-what-you-know-so-far)
 8. [Quiz: drag the names onto the map](#8-quiz-drag-the-names-onto-the-map)
 9. [How reviews are scheduled](#9-how-reviews-are-scheduled)
 10. [Tour: a guided flight over the map](#10-tour-a-guided-flight-over-the-map)
@@ -50,8 +50,9 @@ states or provinces are, and where its main towns and cities are.
 - **Four ways to use each map:**
   - **Overview:** the whole map with every name written on it, to look at
     and learn from;
-  - **Explore:** the map without names; click a region to find out what it
-    is;
+  - **Progress:** how well you know the map — every name you have placed
+    right, drawn as strongly as you know it; click a region to find out
+    what it is;
   - **Quiz:** the game itself. Drag each name from a tray onto the map;
   - **Tour:** the map flies from place to place on its own, showing each
     name in turn.
@@ -99,7 +100,7 @@ The Android app fills the phone screen, under the phone's own status bar:
 ```mermaid
 flowchart LR
     H[Home page<br/>list of maps] -->|click a map| O[Overview]
-    O <--> E[Explore]
+    O <--> E[Progress]
     O <--> Q[Quiz]
     O <--> T[Tour]
     E <--> Q
@@ -111,7 +112,7 @@ flowchart LR
 - The **home page** lists every map.
 - Clicking a map opens it on its **Overview**.
 - On every map screen, a row of buttons at the top (the *map bar*)
-  switches between **Overview**, **Explore**, **Quiz** and **Tour** for
+  switches between **Overview**, **Progress**, **Quiz** and **Tour** for
   that map, or goes back to the list (**Maps**).
 - The **Tutorial** can be started from the home page or from any map
   screen, and it takes you through all of these screens in turn.
@@ -200,7 +201,7 @@ starts by itself.
 
 ## 5. Map screens: what they have in common
 
-Every map screen (Overview, Explore, Quiz and Tour) has the same frame
+Every map screen (Overview, Progress, Quiz and Tour) has the same frame
 around the map. Here it is on the Overview of Italy — Regions:
 
 ![A map screen: the map bar, the map name, the zoom buttons](manual/overview.jpg)
@@ -208,7 +209,7 @@ around the map. Here it is on the Overview of Italy — Regions:
 **Top-left, the map bar:**
 
 - **‹ Maps**: back to the home page.
-- **Overview**, **Explore**, **Quiz**, **Tour**: the four modes of this
+- **Overview**, **Progress**, **Quiz**, **Tour**: the four modes of this
   map, each with a small icon (an eye, a compass, a tick in a circle, a
   play triangle). The current one is filled orange with white text; the
   others are white with orange text.
@@ -249,7 +250,7 @@ map. Names never get in the way of moving the map.
 
 ### Colours
 
-On Explore, Quiz and Tour, regions are painted in soft pinks, blues,
+On Progress, Quiz and Tour, regions are painted in soft pinks, blues,
 purples, oranges and greys, chosen so that neighbouring regions never
 share a colour. On the Overview every region is the same green, because
 every name is shown. In the quiz, green means *placed*.
@@ -279,20 +280,38 @@ clicks on **+**:
 Names stay the same size on screen at every zoom level; they're pinned to
 the middle of their region.
 
-## 7. Explore: find out what a region is
+## 7. Progress: what you know so far
 
-Explore shows the map in colour, **without any names**:
+This tab shows how well you know the map. Every name you have placed
+right in a quiz is written on it, as strongly as you know it; names you
+have never placed cleanly are left blank:
 
-![Explore: the map without names](manual/explore.jpg)
+![The progress map: some names solid, some lighter, some faint](manual/progress-map.jpg)
 
-Click (or tap) a region, and it turns orange and shows its name where you
-clicked:
+| How the name looks | What it means |
+|---|---|
+| solid | you have placed it right **three times in a row**, with no mistake |
+| lighter | twice in a row |
+| faint | once |
+| not written at all | never placed right, or you have made a mistake on it since |
 
-![Explore after clicking Lazio](manual/explore-clicked.jpg)
+A small legend in the bottom-left corner says the same. Point at a faint
+name (or tap it) to read it at full strength.
+
+Because a mistake sets a name back to nothing, this map is an honest
+picture of what you actually know, not of what you have visited.
+
+**It is also the old Explore.** Click (or tap) any region and it turns
+orange and gives its name where you clicked, whether or not you know it:
+
+![The progress map after clicking Lazio](manual/progress-clicked.jpg)
 
 Clicking another region moves the highlight and the name there. Nothing
-is scored or saved: Explore is for testing yourself at your own pace. On
-a towns map, click a town's dot.
+here is scored or saved. On a towns map, click a town's dot.
+
+Until v0.5.0 this tab was called **Explore** and showed a blank map to
+test yourself against. It still does that on a map you have never played,
+since nothing is known yet.
 
 ## 8. Quiz: drag the names onto the map
 
@@ -592,8 +611,8 @@ only there to draw the eye.
 | 1 | home page | "Let's start with a map. Open **Regions**, under Italy." | you open Italy — Regions |
 | 2 | Overview | "Zoom with the mouse wheel or the **+** and **−** buttons, and drag the map to move around. Try it now." | you zoom or move the map |
 | 3 | Overview | "This is the **overview**, where every region shows its name. Hover over a name to enlarge it." | you press **Next** |
-| 4 | Overview, then Explore | "**Explore** hides the names, so you can test yourself. Open it and click any region to see which one it is." | you click a region in Explore |
-| 5 | Explore | "Ready to test yourself for real? Open the **Quiz**." | you open the Quiz |
+| 4 | Overview, then Progress | "**Progress** shows how well you know this map: the names you have placed right, as strongly as you know them. Open it and click any region to see which one it is." | you click a region on the progress map |
+| 5 | Progress | "Ready to test yourself for real? Open the **Quiz**." | you open the Quiz |
 | 6 | Quiz | "Drag a name from the tray onto its region. Try **Sicilia**: the big island off the toe of the boot." | you place any name correctly |
 | 7 | Quiz | "Now get one wrong on purpose: drop **Sardegna** anywhere on the mainland. The region flashes red and the name goes back to the tray." | you make a wrong drop |
 | 8 | Quiz | "Not sure where a region is? Look it up in the **overview**." | you open the Overview |
@@ -612,9 +631,9 @@ Step 3 points at the Overview button:
 
 ![Step 3: the overview](manual/tutorial-step3.jpg)
 
-Step 4 points at Explore:
+Step 4 points at Progress:
 
-![Step 4: Explore](manual/tutorial-step4.jpg)
+![Step 4: the progress map](manual/tutorial-step4.jpg)
 
 In the quiz steps the card sits at the top, so it never covers the tray
 or the island you're asked to find. Step 6 outlines the Sicilia name in
@@ -728,7 +747,7 @@ screen, whichever doesn't cover what the step is about:
 In the Android app, the phone's back button goes **up one level** rather
 than back through every screen you've visited:
 
-- from a map's Quiz, Explore or Tour, back to that map's Overview;
+- from a map's Quiz, Progress or Tour, back to that map's Overview;
 - from an Overview, back to the list of maps;
 - from the list of maps, it closes the app.
 
@@ -846,13 +865,13 @@ code-signed; choose *More info*, then *Run anyway*.
 | **Map** | One country's set of places to learn, for example Italy — Regions. |
 | **Place** / **target** | One region, state, province or town on a map. |
 | **Overview** | The map with every name shown. |
-| **Explore** | The map without names; click a region to see its name. |
+| **Progress** | How well you know the map: each name drawn as strongly as you know it. Clicking a region still names it (this tab was called Explore until v0.5.0). |
 | **Quiz** | The game: drag each name from the tray onto the map. |
 | **Tour** | The automatic flight from place to place. |
 | **Tray** | The strip of names at the bottom of the quiz. |
 | **Slip** | One name in the tray. |
 | **Placed** | Dropped on the right place (green). |
-| **Revealed** | Placed for you after three wrong drops (gold-brown); counts as not known. |
+| **Shown** | Placed for you after a mistake (gold-brown); counts as not known. |
 | **Due** | A place whose review date has arrived; it will be asked in the next quiz. |
 | **To review** | The number of due places on a map, shown on its home page card. |
 | **Up to date / All caught up** | Nothing on the map is due. |
