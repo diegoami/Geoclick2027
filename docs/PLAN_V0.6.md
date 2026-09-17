@@ -215,7 +215,7 @@ reuses the first's layer.
 | Task | State | Merge | Notes |
 |---|---|---|---|
 | FT-19 | **merged** | `8109965` | clean streak in packages/srs + all three stores; migrations keep existing rows; checked in a browser |
-| FT-20 | todo | — | |
+| FT-20 | **merged** | `12172ec` | one miss reveals in place; copy + tutorial + manual screenshots updated |
 | FT-21 | todo | — | 🧑 wording and thresholds |
 | FT-22 | todo | — | 🧑 tab name |
 | FT-23 | todo | — | |
