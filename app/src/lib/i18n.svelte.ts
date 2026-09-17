@@ -65,6 +65,8 @@ export type TranslationKey =
 	| 'quiz.totalMistakes.one'
 	| 'quiz.totalMistakes.other'
 	| 'quiz.revealedNote'
+	| 'quiz.namesAtATime.one'
+	| 'quiz.namesAtATime.other'
 	| 'quiz.nextReview.one'
 	| 'quiz.nextReview.other'
 	| 'quiz.backToMaps'
@@ -153,6 +155,8 @@ const en: Dictionary = {
 	'quiz.totalMistakes.one': '{count} total mistake.',
 	'quiz.totalMistakes.other': '{count} total mistakes.',
 	'quiz.revealedNote': '{count} shown after a mistake.',
+	'quiz.namesAtATime.one': 'one name at a time',
+	'quiz.namesAtATime.other': '{count} names at a time',
 	'quiz.nextReview.one': 'Next review in {count} day.',
 	'quiz.nextReview.other': 'Next review in {count} days.',
 	'quiz.backToMaps': 'Back to maps',
@@ -253,6 +257,8 @@ const de: Dictionary = {
 	'quiz.totalMistakes.one': '{count} Fehler insgesamt.',
 	'quiz.totalMistakes.other': '{count} Fehler insgesamt.',
 	'quiz.revealedNote': '{count} nach einem Fehler gezeigt.',
+	'quiz.namesAtATime.one': 'ein Name auf einmal',
+	'quiz.namesAtATime.other': '{count} Namen auf einmal',
 	'quiz.nextReview.one': 'Nächste Wiederholung in {count} Tag.',
 	'quiz.nextReview.other': 'Nächste Wiederholung in {count} Tagen.',
 	'quiz.backToMaps': 'Zurück zu den Karten',
@@ -353,6 +359,8 @@ const it: Dictionary = {
 	'quiz.totalMistakes.one': '{count} errore in totale.',
 	'quiz.totalMistakes.other': '{count} errori in totale.',
 	'quiz.revealedNote': '{count} mostrati dopo un errore.',
+	'quiz.namesAtATime.one': 'un nome alla volta',
+	'quiz.namesAtATime.other': '{count} nomi alla volta',
 	'quiz.nextReview.one': 'Prossima ripetizione tra {count} giorno.',
 	'quiz.nextReview.other': 'Prossima ripetizione tra {count} giorni.',
 	'quiz.backToMaps': 'Torna alle mappe',
@@ -461,7 +469,7 @@ export function t(key: TranslationKey, params?: Record<string, string | number>)
 // which would be overkill for three languages and a handful of counted
 // strings.
 export function tPlural(
-	base: 'home.mistakeCount' | 'quiz.totalMistakes' | 'quiz.nextReview',
+	base: 'home.mistakeCount' | 'quiz.totalMistakes' | 'quiz.nextReview' | 'quiz.namesAtATime',
 	count: number,
 	params: Record<string, string | number>
 ): string {

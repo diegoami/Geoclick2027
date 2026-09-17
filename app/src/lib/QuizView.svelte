@@ -17,6 +17,7 @@
 		type QuizSession
 	} from '@geoclick/quiz-engine';
 	import { overallBounds, type MapDefinition } from './mapDefinition';
+	import { handSize, mapLevel, refillHand, type Level } from './difficulty';
 	import {
 		createProgressRepository,
 		todayLocalDate,
@@ -63,6 +64,28 @@
 		undefined
 	);
 	let wrongFlashId = $state<string | undefined>(undefined);
+
+	// How hard this map plays, and which names the tray is offering right now
+	// (FT-21, difficulty.ts). The better the map is known, the fewer names are
+	// on offer, so the last drops of a round can't be worked out by
+	// elimination. The session still holds every name; the hand is only what
+	// the tray shows.
+	let level = $state<Level>(0);
+	let hand = $state<string[]>([]);
+	const pendingIds = () =>
+		session ? session.items.filter((i) => i.status === 'pending').map((i) => i.target.id) : [];
+
+	/** Draw or top up the names on offer. Called when a session starts and
+	 * after every resolved drop. */
+	function dealHand() {
+		hand = refillHand(pendingIds(), hand, handSize(level));
+	}
+
+	/** The map's level from the clean streaks of its targets; a target with no
+	 * card state has never been placed right, so it counts as 0. */
+	function refreshLevel(def: MapDefinition) {
+		level = mapLevel(def.targets.map((t) => cardStatesByTargetId.get(t.id)?.cleanStreak ?? 0));
+	}
 
 	// Tray height, in px - user-resizable via the drag handle (onTrayHandle*
 	// below). Not persisted across sessions; resets to the default each time
@@ -395,6 +418,9 @@
 		session = attemptMatch(session, targetId, isCorrect ? targetId : undefined);
 		const item = session.items.find((i) => i.target.id === targetId)!;
 		const target = mapDef.targets.find((t) => t.id === targetId)!;
+		// This name is resolved either way now (one miss reveals, FT-20), so
+		// the tray draws a replacement for it.
+		dealHand();
 
 		if (item.status === 'correct' || item.status === 'revealed') {
 			const revealed = item.status === 'revealed';
@@ -538,6 +564,9 @@
 			mapDef.targets.map((t) => ({ id: t.id, name: t.name })),
 			notDueIds
 		);
+		refreshLevel(mapDef);
+		hand = [];
+		dealHand();
 		applyPreSolvedVisuals(notDueIds, mapDef);
 	}
 
@@ -553,6 +582,9 @@
 		mode = 'practice';
 		phase = 'quiz';
 		session = createQuizSession(mapDef.targets.map((t) => ({ id: t.id, name: t.name })));
+		refreshLevel(mapDef);
+		hand = [];
+		dealHand();
 	}
 
 	// After a *due* session: re-checks due state, since something (a
@@ -600,6 +632,8 @@
 					loadedMapDef.targets.map((t) => ({ id: t.id, name: t.name })),
 					notDueIds
 				);
+				refreshLevel(loadedMapDef);
+				dealHand();
 			}
 
 			// setFeatureState throws until the style has finished loading -
@@ -658,6 +692,14 @@
 							total: session.items.length
 						})}</span
 					>
+					<!-- Only once the map is known well enough for the tray to hold
+					     back names (FT-21); at level 0 every name is on offer and
+					     there is nothing to explain. -->
+					{#if level > 0}
+						<span class="level"
+							>· {tPlural('quiz.namesAtATime', handSize(level), { count: handSize(level) })}</span
+						>
+					{/if}
 				{/if}
 			{/snippet}
 		</MapNav>
@@ -739,7 +781,7 @@
 				></div>
 			</div>
 			<div class="tray-slips" bind:this={traySlipsEl}>
-				{#each session.items.filter((i) => i.status === 'pending') as item (item.target.id)}
+				{#each session.items.filter((i) => i.status === 'pending' && hand.includes(i.target.id)) as item (item.target.id)}
 					{@const isDragging = dragging?.targetId === item.target.id}
 					<button
 						class="slip"
@@ -815,6 +857,12 @@
 		gap: 0.5rem;
 		padding: 0 0.75rem 0.75rem;
 		overflow-y: auto;
+	}
+	/* The difficulty note beside the progress line (FT-21). Quieter than the
+	   count itself: it explains the tray, it isn't a score. */
+	.level {
+		margin-left: 0.3rem;
+		color: rgba(30, 40, 36, 0.55);
 	}
 	.slip {
 		font-family: system-ui, sans-serif;
