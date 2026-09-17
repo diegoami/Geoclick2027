@@ -28,6 +28,15 @@ fn migrations() -> Vec<Migration> {
       );
     ",
     kind: MigrationKind::Up,
+  },
+  Migration {
+    version: 2,
+    description: "add_clean_streak",
+    // v0.6.0: how often in a row a target was placed right with no mistake
+    // (packages/srs, KNOWN_CLEAN_STREAK). Existing rows keep their schedule
+    // and start at 0, which reads as "not known yet".
+    sql: "ALTER TABLE card_states ADD COLUMN clean_streak INTEGER NOT NULL DEFAULT 0;",
+    kind: MigrationKind::Up,
   }]
 }
 

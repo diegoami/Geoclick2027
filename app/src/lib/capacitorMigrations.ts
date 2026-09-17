@@ -50,7 +50,11 @@ export const MIGRATIONS: readonly string[] = [
 		perfect INTEGER NOT NULL,
 		total_errors INTEGER NOT NULL,
 		completed_at TEXT NOT NULL
-	);`
+	);`,
+	// v0.6.0: how often in a row a target was placed right with no mistake
+	// (packages/srs, KNOWN_CLEAN_STREAK). Existing rows keep their schedule and
+	// start at 0, which reads as "not known yet".
+	`ALTER TABLE card_states ADD COLUMN clean_streak INTEGER NOT NULL DEFAULT 0;`
 ];
 
 export async function getUserVersion(db: MigratableDb): Promise<number> {

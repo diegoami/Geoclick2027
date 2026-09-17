@@ -21,6 +21,7 @@ interface CardStateRow {
 	ease_factor: number;
 	interval: number;
 	repetitions: number;
+	clean_streak: number;
 	due_date: string;
 	last_reviewed_at: string;
 }
@@ -37,7 +38,7 @@ export function createSqliteProgressRepository(): ProgressRepository {
 		async getCardStates(mapId) {
 			const db = await getDb();
 			const rows = await db.select<CardStateRow[]>(
-				'SELECT target_id, ease_factor, interval, repetitions, due_date, last_reviewed_at FROM card_states WHERE map_id = $1',
+				'SELECT target_id, ease_factor, interval, repetitions, clean_streak, due_date, last_reviewed_at FROM card_states WHERE map_id = $1',
 				[mapId]
 			);
 			return rows.map((row) => ({
@@ -45,6 +46,7 @@ export function createSqliteProgressRepository(): ProgressRepository {
 				easeFactor: row.ease_factor,
 				interval: row.interval,
 				repetitions: row.repetitions,
+				cleanStreak: row.clean_streak,
 				dueDate: row.due_date,
 				lastReviewedAt: row.last_reviewed_at
 			}));
@@ -53,12 +55,13 @@ export function createSqliteProgressRepository(): ProgressRepository {
 		async saveCardState(mapId, state: CardState) {
 			const db = await getDb();
 			await db.execute(
-				`INSERT INTO card_states (map_id, target_id, ease_factor, interval, repetitions, due_date, last_reviewed_at)
-				 VALUES ($1, $2, $3, $4, $5, $6, $7)
+				`INSERT INTO card_states (map_id, target_id, ease_factor, interval, repetitions, clean_streak, due_date, last_reviewed_at)
+				 VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
 				 ON CONFLICT (map_id, target_id) DO UPDATE SET
 				   ease_factor = excluded.ease_factor,
 				   interval = excluded.interval,
 				   repetitions = excluded.repetitions,
+				   clean_streak = excluded.clean_streak,
 				   due_date = excluded.due_date,
 				   last_reviewed_at = excluded.last_reviewed_at`,
 				[
@@ -67,6 +70,7 @@ export function createSqliteProgressRepository(): ProgressRepository {
 					state.easeFactor,
 					state.interval,
 					state.repetitions,
+					state.cleanStreak,
 					state.dueDate,
 					state.lastReviewedAt
 				]

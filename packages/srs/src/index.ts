@@ -18,9 +18,21 @@ export interface CardState {
 	easeFactor: number;
 	interval: number; // days
 	repetitions: number;
+	/** Consecutive clean reviews: how often in a row this target was placed
+	 * right with no mistake ('good'). Any mistake ('hard') or fail ('again')
+	 * puts it back to 0. `repetitions` can't answer this - it counts passes,
+	 * including ones that needed a second try. v0.6.0 uses it for how
+	 * prominently a name is drawn on the retention map, and for how many names
+	 * a quiz offers at once (docs/PLAN_V0.6.md). Cards saved before v0.6.0
+	 * have no streak; they read as 0 and rebuild one over the next rounds. */
+	cleanStreak: number;
 	dueDate: string; // local calendar date, YYYY-MM-DD
 	lastReviewedAt: string; // local calendar date, YYYY-MM-DD
 }
+
+/** A name counts as known once it has been placed right this many times in a
+ * row with no mistake (docs/PLAN_V0.6.md). */
+export const KNOWN_CLEAN_STREAK = 3;
 
 export const DEFAULT_EASE_FACTOR = 2.5;
 export const MIN_EASE_FACTOR = 1.3;
@@ -93,6 +105,7 @@ export function rate(previous: CardState | undefined, grade: Grade, today: strin
 			easeFactor: Math.max(MIN_EASE_FACTOR, prevEase - 0.2),
 			interval: 0,
 			repetitions: 0,
+			cleanStreak: 0,
 			dueDate: today,
 			lastReviewedAt: today
 		};
@@ -118,6 +131,9 @@ export function rate(previous: CardState | undefined, grade: Grade, today: strin
 		easeFactor,
 		interval,
 		repetitions,
+		// Only a clean answer builds the streak; an eventual success after a
+		// wrong drop ('hard') starts it over, the same way it costs ease.
+		cleanStreak: grade === 'good' ? (previous?.cleanStreak ?? 0) + 1 : 0,
 		dueDate: addDaysLocal(today, interval),
 		lastReviewedAt: today
 	};

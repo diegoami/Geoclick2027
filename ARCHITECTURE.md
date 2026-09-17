@@ -131,7 +131,9 @@ fail does.
 No backend for the POC. Progress (per-target SRS card state, last quiz
 result per map) lives behind one `ProgressRepository` interface
 (`app/src/lib/progressRepository.ts`) so the rest of the app never
-touches platform-specific storage code — see ROADMAP.md's Iteration 5 for
+touches platform-specific storage code. Besides the scheduler state, each
+card carries a clean streak: how often in a row that target was placed right
+with no mistake (FT-19, DECISIONS.md) — see ROADMAP.md's Iteration 5 for
 the concrete data shape. Three implementations exist behind it today,
 picked automatically at runtime by `createProgressRepository()`:
 `localStorage` in the plain browser; SQLite via `tauri-plugin-sql` on

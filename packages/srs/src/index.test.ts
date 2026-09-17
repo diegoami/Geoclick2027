@@ -1,5 +1,13 @@
 import { describe, expect, it } from 'vitest';
-import { DEFAULT_EASE_FACTOR, MIN_EASE_FACTOR, daysUntil, isDue, rate, type CardState } from './index.js';
+import {
+	DEFAULT_EASE_FACTOR,
+	KNOWN_CLEAN_STREAK,
+	MIN_EASE_FACTOR,
+	daysUntil,
+	isDue,
+	rate,
+	type CardState
+} from './index.js';
 
 const TODAY = '2026-09-12';
 const TOMORROW = '2026-09-13';
@@ -15,6 +23,7 @@ describe('isDue', () => {
 			easeFactor: DEFAULT_EASE_FACTOR,
 			interval: 1,
 			repetitions: 1,
+			cleanStreak: 0,
 			dueDate: TODAY,
 			lastReviewedAt: YESTERDAY
 		};
@@ -26,6 +35,7 @@ describe('isDue', () => {
 			easeFactor: DEFAULT_EASE_FACTOR,
 			interval: 1,
 			repetitions: 1,
+			cleanStreak: 0,
 			dueDate: YESTERDAY,
 			lastReviewedAt: YESTERDAY
 		};
@@ -37,6 +47,7 @@ describe('isDue', () => {
 			easeFactor: DEFAULT_EASE_FACTOR,
 			interval: 1,
 			repetitions: 1,
+			cleanStreak: 0,
 			dueDate: TOMORROW,
 			lastReviewedAt: TODAY
 		};
@@ -138,5 +149,45 @@ describe('rate - repeated reviews', () => {
 			card = rate(card, 'again', TODAY);
 		}
 		expect(card!.easeFactor).toBeGreaterThanOrEqual(MIN_EASE_FACTOR);
+	});
+});
+
+describe('rate - clean streak (v0.6.0)', () => {
+	const TODAY = '2026-09-18';
+
+	it('counts consecutive clean reviews, and a name is known at three', () => {
+		let card = rate(undefined, 'good', TODAY);
+		expect(card.cleanStreak).toBe(1);
+		card = rate(card, 'good', TODAY);
+		expect(card.cleanStreak).toBe(2);
+		card = rate(card, 'good', TODAY);
+		expect(card.cleanStreak).toBe(KNOWN_CLEAN_STREAK);
+	});
+
+	it('starts over after a mistake, even though "hard" still passes', () => {
+		let card = rate(rate(undefined, 'good', TODAY), 'good', TODAY);
+		expect(card.cleanStreak).toBe(2);
+		card = rate(card, 'hard', TODAY);
+		expect(card.cleanStreak).toBe(0);
+		// The pass itself still counts as a repetition, so only the streak resets.
+		expect(card.repetitions).toBe(3);
+		expect(rate(card, 'good', TODAY).cleanStreak).toBe(1);
+	});
+
+	it('starts over after a fail', () => {
+		const known = rate(rate(rate(undefined, 'good', TODAY), 'good', TODAY), 'good', TODAY);
+		expect(rate(known, 'again', TODAY).cleanStreak).toBe(0);
+	});
+
+	it('treats a card saved before v0.6.0 (no streak) as zero', () => {
+		// Deliberately without cleanStreak: this is the shape v0.5.0 stored.
+		const legacy = {
+			easeFactor: 2.5,
+			interval: 6,
+			repetitions: 2,
+			dueDate: '2026-09-24',
+			lastReviewedAt: TODAY
+		} as CardState;
+		expect(rate(legacy, 'good', TODAY).cleanStreak).toBe(1);
 	});
 });
