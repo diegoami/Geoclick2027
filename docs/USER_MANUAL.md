@@ -296,9 +296,11 @@ a towns map, click a town's dot.
 
 ## 8. Quiz: drag the names onto the map
 
-The quiz is the game. The map is shown in colour without names, and all
-the names to place are in a **tray** along the bottom of the screen, in
-alphabetical order:
+The quiz is the game. The map is shown in colour without names, and the
+names to place are in a **tray** along the bottom of the screen, in
+alphabetical order. On a map you haven't learned yet, every name is there
+at once; once you know it well the tray holds back most of them (see
+[Fewer names as you improve](#fewer-names-as-you-improve)):
 
 ![The quiz at the start: 20 names in the tray](manual/quiz-start.jpg)
 
@@ -352,6 +354,30 @@ back for review today (see
 Until v0.5.0 a name could be tried three times before it was given away.
 Since v0.6.0 one mistake is enough, so a round asks you to know a name,
 not to narrow it down.
+
+### Fewer names as you improve
+
+A map gets harder as you learn it. Geoclick counts how many of its names
+you know — a name counts once you've placed it right three times in a row
+with no mistake — and offers fewer names at a time as that share grows:
+
+| Names of the map you know | The tray offers | Note beside the progress line |
+|---|---|---|
+| under a quarter | every name | *(none)* |
+| a quarter or more | 6 at a time | "6 names at a time" |
+| 60 % or more | 3 at a time | "3 names at a time" |
+| 85 % or more | 1 at a time | "one name at a time" |
+
+The tray refills as you place names, so there is always something to drag
+until the round is done; the names you haven't placed yet simply wait
+their turn.
+
+![A quiz offering three names at a time](manual/quiz-hand.jpg)
+
+Why it gets harder: with every name in front of you, the last few drops of
+a round can be worked out by elimination, and a map you know plays exactly
+like the first time. With one name at a time, you have to know where it
+goes.
 
 ### Resizing the tray
 

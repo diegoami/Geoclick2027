@@ -1098,6 +1098,28 @@ answers:
   - The favourite star is a tip in the outro, not a step. Finish leaves
     the player on the tour, which keeps playing.
 
+## The tray offers fewer names as a map is learned (2026-09-18, FT-21)
+
+- **The quiz deals a *hand*, not the whole deck.** How many names the tray
+  offers depends on how much of the map is known (names at a clean streak
+  of 3 or more): under 25 % every name, from 25 % six, from 60 % three,
+  from 85 % one. `app/src/lib/difficulty.ts` holds the thresholds and the
+  drawing, pure and unit-tested; QuizView deals at the start of a round and
+  tops the hand up after every resolved drop.
+- **Why:** with every remaining name in front of the player, the end of a
+  round is a process of elimination rather than knowledge — the v0.5.0
+  product review called this out (F3) — and a map you already know plays
+  exactly like the first time. The same map now asks more of you as you
+  improve, which is the release's theme.
+- **The hand keeps its survivors.** A refill only replaces the name just
+  placed, so a name the player is still thinking about doesn't vanish and
+  reappear elsewhere.
+- **The level is shown, not hidden:** a quiet note beside the progress
+  line, "3 names at a time". Nothing is shown at level 0, where there is
+  nothing to explain.
+- The thresholds and the hand sizes are a first guess, not measured; they
+  live in one place so they can be retuned.
+
 ## A clean streak per name (2026-09-18, FT-19)
 
 - **Each target now also stores how often in a row it was placed right with

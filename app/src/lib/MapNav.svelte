@@ -232,7 +232,8 @@
 		padding: 0.2rem 0.55rem;
 		border-radius: 0.4rem;
 		font-family: system-ui, sans-serif;
-		max-width: 20rem;
+		/* Wide enough for the progress count plus the difficulty note (FT-21). */
+		max-width: 28rem;
 	}
 	/* 720px, not the app's usual 640: five wide tabs (FT-13) in German or
 	   Italian need ~610px and must end before the zoom control. */
