@@ -152,7 +152,7 @@ const en: Dictionary = {
 	'quiz.scoreLineRest': '/ {total} placed correctly on the first try.',
 	'quiz.totalMistakes.one': '{count} total mistake.',
 	'quiz.totalMistakes.other': '{count} total mistakes.',
-	'quiz.revealedNote': '{count} revealed after too many misses.',
+	'quiz.revealedNote': '{count} shown after a mistake.',
 	'quiz.nextReview.one': 'Next review in {count} day.',
 	'quiz.nextReview.other': 'Next review in {count} days.',
 	'quiz.backToMaps': 'Back to maps',
@@ -199,7 +199,7 @@ const en: Dictionary = {
 	'tutorial.step6':
 		'Drag a name from the tray onto its region. Try **Sicilia**: the big island off the toe of the boot.',
 	'tutorial.step7':
-		'Now get one wrong on purpose: drop **Sardegna** anywhere on the mainland. The region flashes red and the name goes back to the tray.',
+		'Now get one wrong on purpose: drop **Sardegna** anywhere on the mainland. The region you hit flashes red, and Sardegna is shown where it really is.',
 	'tutorial.step8': 'Not sure where a region is? Look it up in the **overview**.',
 	'tutorial.step9': 'Found Sardegna? Go back to the **Quiz**.',
 	'tutorial.step10':
@@ -252,7 +252,7 @@ const de: Dictionary = {
 	'quiz.scoreLineRest': 'von {total} beim ersten Versuch richtig platziert.',
 	'quiz.totalMistakes.one': '{count} Fehler insgesamt.',
 	'quiz.totalMistakes.other': '{count} Fehler insgesamt.',
-	'quiz.revealedNote': '{count} nach zu vielen Fehlversuchen aufgedeckt.',
+	'quiz.revealedNote': '{count} nach einem Fehler gezeigt.',
 	'quiz.nextReview.one': 'Nächste Wiederholung in {count} Tag.',
 	'quiz.nextReview.other': 'Nächste Wiederholung in {count} Tagen.',
 	'quiz.backToMaps': 'Zurück zu den Karten',
@@ -299,7 +299,7 @@ const de: Dictionary = {
 	'tutorial.step6':
 		'Ziehe einen Namen aus der Ablage auf seine Region. Versuch es mit **Sicilia**, der großen Insel vor der Stiefelspitze.',
 	'tutorial.step7':
-		'Jetzt ein Fehler mit Absicht: Lege **Sardegna** irgendwo auf dem Festland ab. Die Region blinkt rot, und der Name geht zurück in die Ablage.',
+		'Jetzt ein Fehler mit Absicht: Lege **Sardegna** irgendwo auf dem Festland ab. Die getroffene Region blinkt rot, und Sardegna wird dort gezeigt, wo sie wirklich liegt.',
 	'tutorial.step8': 'Nicht sicher, wo eine Region liegt? Schau in der **Übersicht** nach.',
 	'tutorial.step9': 'Sardegna gefunden? Dann zurück zum **Quiz**.',
 	'tutorial.step10':
@@ -352,7 +352,7 @@ const it: Dictionary = {
 	'quiz.scoreLineRest': 'su {total} posizionati correttamente al primo tentativo.',
 	'quiz.totalMistakes.one': '{count} errore in totale.',
 	'quiz.totalMistakes.other': '{count} errori in totale.',
-	'quiz.revealedNote': '{count} svelati dopo troppi tentativi sbagliati.',
+	'quiz.revealedNote': '{count} mostrati dopo un errore.',
 	'quiz.nextReview.one': 'Prossima ripetizione tra {count} giorno.',
 	'quiz.nextReview.other': 'Prossima ripetizione tra {count} giorni.',
 	'quiz.backToMaps': 'Torna alle mappe',
@@ -399,7 +399,7 @@ const it: Dictionary = {
 	'tutorial.step6':
 		"Trascina un nome dal vassoio sulla sua regione. Prova con **Sicilia**, l'isola grande davanti alla punta dello stivale.",
 	'tutorial.step7':
-		'Ora sbaglia apposta: lascia **Sardegna** in un punto qualsiasi della penisola. La regione lampeggia in rosso e il nome torna nel vassoio.',
+		'Ora sbaglia apposta: lascia **Sardegna** in un punto qualsiasi della penisola. La regione che hai toccato lampeggia in rosso e Sardegna viene mostrata dove si trova davvero.',
 	'tutorial.step8': "Non sai dov'è una regione? Controlla nella **panoramica**.",
 	'tutorial.step9': 'Trovata la Sardegna? Torna al **Quiz**.',
 	'tutorial.step10':

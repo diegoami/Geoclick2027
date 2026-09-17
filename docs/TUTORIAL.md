@@ -169,13 +169,16 @@ Touch:
 ### 7. Make a mistake — quiz
 
 > Now get one wrong on purpose: drop **Sardegna** anywhere on the
-> mainland. The region flashes red and the name goes back to the tray.
+> mainland. The region you hit flashes red, and Sardegna is shown where it
+> really is.
 
 - **Highlight:** the Sardegna slip.
 - **Moves on:** a wrong drop of any slip (one the quiz scores as wrong).
   A drop on the sea or back on the tray isn't scored, so the step keeps
   waiting, and so does a drop that turns out correct: it waits for a real
   mistake.
+- **Since v0.6.0 (FT-20):** one mistake ends that name's turn. The name is
+  placed where it belongs, in the "shown" colour, and counts as not known.
 - **Why Sardegna on the mainland:** it's far from anything else, so the
   24px drop tolerance can't turn the drop into a correct one by accident.
 
@@ -444,7 +447,7 @@ mark that up in the strings.
 | `tutorial.step4.touch` | **Explore** hides the names, so you can test yourself. Open it and tap any region to see which one it is. | **Erkunden** blendet die Namen aus, damit du dich selbst testen kannst. Öffne es und tippe auf eine Region, um zu sehen, welche es ist. | **Esplora** nasconde i nomi, così puoi metterti alla prova. Aprilo e tocca una regione per scoprire qual è. |
 | `tutorial.step5` | Ready to test yourself for real? Open the **Quiz**. | Bereit für den echten Test? Öffne das **Quiz**. | Ora la prova vera: apri il **Quiz**. |
 | `tutorial.step6` | Drag a name from the tray onto its region. Try **Sicilia**: the big island off the toe of the boot. | Ziehe einen Namen aus der Ablage auf seine Region. Versuch es mit **Sicilia**, der großen Insel vor der Stiefelspitze. | Trascina un nome dal vassoio sulla sua regione. Prova con **Sicilia**, l'isola grande davanti alla punta dello stivale. |
-| `tutorial.step7` | Now get one wrong on purpose: drop **Sardegna** anywhere on the mainland. The region flashes red and the name goes back to the tray. | Jetzt ein Fehler mit Absicht: Lege **Sardegna** irgendwo auf dem Festland ab. Die Region blinkt rot, und der Name geht zurück in die Ablage. | Ora sbaglia apposta: lascia **Sardegna** in un punto qualsiasi della penisola. La regione lampeggia in rosso e il nome torna nel vassoio. |
+| `tutorial.step7` | Now get one wrong on purpose: drop **Sardegna** anywhere on the mainland. The region you hit flashes red, and Sardegna is shown where it really is. | Jetzt ein Fehler mit Absicht: Lege **Sardegna** irgendwo auf dem Festland ab. Die getroffene Region blinkt rot, und Sardegna wird dort gezeigt, wo sie wirklich liegt. | Ora sbaglia apposta: lascia **Sardegna** in un punto qualsiasi della penisola. La regione che hai toccato lampeggia in rosso e Sardegna viene mostrata dove si trova davvero. |
 | `tutorial.step8` | Not sure where a region is? Look it up in the **overview**. | Nicht sicher, wo eine Region liegt? Schau in der **Übersicht** nach. | Non sai dov'è una regione? Controlla nella **panoramica**. |
 | `tutorial.step9` | Found Sardegna? Go back to the **Quiz**. | Sardegna gefunden? Dann zurück zum **Quiz**. | Trovata la Sardegna? Torna al **Quiz**. |
 | `tutorial.step10` | The regions you placed are still marked. Each comes back for review later: sooner if it gave you trouble, less often once you know it. | Deine platzierten Regionen sind noch markiert. Jede kommt später zur Wiederholung zurück: früher, wenn sie dir schwerfiel, seltener, wenn du sie kannst. | Le regioni che hai posizionato restano segnate. Ognuna torna più avanti per un ripasso: prima se ti ha messo in difficoltà, più di rado quando la conosci. |

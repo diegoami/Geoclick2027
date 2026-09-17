@@ -333,24 +333,25 @@ the tray. The counter goes up:
 
 ![Five regions placed](manual/quiz-progress.jpg)
 
-### Wrong
+### Wrong: one mistake ends that name's turn
 
-The region you dropped on flashes red for a moment, the name shakes and
-turns red in the tray, and it stays there to try again:
+There are no second tries. The region you dropped on flashes red for a
+moment, and at the same time the name is placed where it really belongs,
+so the mistake shows you the answer:
 
-![A wrong drop: "Umbria" dropped on Campania](manual/quiz-wrong.jpg)
+![A wrong drop: "Umbria" dropped on Campania, and Umbria shown in its own place](manual/quiz-wrong.jpg)
 
-Each wrong drop counts as a mistake in your score.
+The name is marked differently from one you placed yourself: its region
+turns a muted gold-brown instead of green, and its label is brown. It
+counts as a mistake in your score, it counts as not known, and it comes
+back for review today (see
+[How reviews are scheduled](#9-how-reviews-are-scheduled)):
 
-### Three misses: the name is shown for you
+![Umbria, shown after the mistake, in gold-brown among green regions](manual/quiz-revealed.jpg)
 
-After the **third wrong drop of the same name**, Geoclick places it for
-you, so you're never stuck. It's marked differently from a real success:
-the region turns a muted gold-brown instead of green, and its label is
-brown. It counts as not known, and it will come back for review today
-(see [How reviews are scheduled](#9-how-reviews-are-scheduled)):
-
-![Molise, given away after three misses, in gold-brown](manual/quiz-revealed.jpg)
+Until v0.5.0 a name could be tried three times before it was given away.
+Since v0.6.0 one mistake is enough, so a round asks you to know a name,
+not to narrow it down.
 
 ### Resizing the tray
 
@@ -373,12 +374,10 @@ score:
 - **"18 / 20 placed correctly on the first try."** A name counts only if
   it was right on the very first drop.
 - **"4 total mistakes."** All wrong drops together.
-- **"1 revealed after too many misses."** Only when some names were given
-  away.
+- **"1 shown after a mistake."** Only when some names had to be shown.
 - **Back to maps** returns to the home page.
 - **Play again** starts another round with whatever is still due (here,
-  Molise, which was given away). It only appears when something is still
-  due.
+  the name that was shown). It only appears when something is still due.
 - **×**, top-right, closes the panel so you can look at the finished map:
 
 ![The finished map, with the panel closed](manual/quiz-finished-map.jpg)
