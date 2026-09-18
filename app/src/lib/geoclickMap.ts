@@ -8,7 +8,8 @@ import { asset } from '$app/paths';
 import { enableLabelMagnify } from './labelMagnify';
 import { enableLabelCollision } from './labelCollision';
 import { isNativeShell } from './platform';
-import { overallBounds, type MapDefinition } from './mapDefinition';
+import { overallExtent, type MapDefinition } from './mapDefinition';
+import { mapFitPadding } from './mapFit';
 
 let protocol: Protocol | undefined;
 
@@ -100,8 +101,10 @@ export function createMap(
 	const map = new maplibregl.Map({
 		container,
 		style,
-		bounds: overallBounds(mapDef),
-		fitBoundsOptions: { padding: 40 }
+		bounds: overallExtent(mapDef),
+		// The map bar is already on screen, so the opening fit can keep the
+		// whole map clear of it (FT-25).
+		fitBoundsOptions: { padding: mapFitPadding(container) }
 	});
 	map.addControl(new maplibregl.NavigationControl(), 'top-right');
 	// The tutorial rings the +/- buttons in its zoom-and-pan step (FT-11).
@@ -134,5 +137,13 @@ export function createMap(
 	// Names never overlap (FT-23): whatever names a view draws, the ones that
 	// don't fit are hidden until the player zooms in far enough for them.
 	map.once('remove', enableLabelCollision(map, container));
+
+	if (import.meta.env.DEV && typeof window !== 'undefined') {
+		// Debug/test aid, on the dev server only (it used to ship to every user
+		// of the production build): lets a browser check, or a person in the
+		// console, drive the real map of whichever view is open - e.g.
+		// map.project(lngLat) for the screen position of a place.
+		(window as unknown as { __map?: maplibregl.Map }).__map = map;
+	}
 	return map;
 }

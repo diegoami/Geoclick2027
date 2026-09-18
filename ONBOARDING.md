@@ -519,6 +519,16 @@ that same discipline into any task you pick up:
     `'city'`), so the name sits beside the dot instead of on it; leave it
     out for a region. Forget the call and the label still works - it just
     ranks 0 and never moves.
+  - A view's own furniture marks itself with `data-map-overlay="top"` or
+    `"bottom"` (FT-25). `mapFit.ts` measures those elements and the
+    opening fit keeps the whole map clear of them, so a new overlay - a
+    banner, a second bar - only has to say where it is. The quiz passes
+    its tray's height in as well, because it sets that height and fits in
+    the same tick, before the DOM has it.
+  - `window.__map` is the real MapLibre map of whichever map view is
+    open, on the dev server only (`createMap`). Browser checks use it for
+    `map.project(lngLat)` - the screen position of a place - which is how
+    the label and framing checks in v0.6.0 were written.
 - **Commit messages end with** `Co-Authored-By: Claude Sonnet 5
   <noreply@anthropic.com>` when Claude made the change — see CLAUDE.md.
 

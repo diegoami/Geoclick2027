@@ -3,6 +3,7 @@
 	import * as maplibregl from 'maplibre-gl';
 	import 'maplibre-gl/dist/maplibre-gl.css';
 	import { fetchMapDefAndStyle, createMap } from './geoclickMap';
+	import { mapFitPadding } from './mapFit';
 	import MapNav from './MapNav.svelte';
 	import { t } from './i18n.svelte';
 	import { mapDisplayName } from './mapCatalog';
@@ -27,6 +28,9 @@
 	let speed = $state(1);
 
 	const BASE_FLIGHT_MS = 1200;
+	// Air around the place a stop is looking at, on top of whatever the view
+	// furniture already takes (mapFitPadding adds its own margin).
+	const STOP_MARGIN_PX = 40;
 	// Above every other label: the tour is showing this one name on purpose.
 	const TOUR_NAME_PRIORITY = 1000;
 	// A point target's bbox is degenerate (see mapDefinition.ts) - fitting
@@ -70,10 +74,19 @@
 			{ highlighted: true }
 		);
 		const flightDuration = Math.max(150, BASE_FLIGHT_MS / speed);
+		// Frame the stop in the space the map bar and the controls leave, not
+		// in the whole canvas (FT-25) - otherwise a northern target flies to
+		// a spot half-covered by the bar.
+		const padding = mapFitPadding(container, { top: STOP_MARGIN_PX, bottom: STOP_MARGIN_PX });
 		if (target.type === 'city') {
-			map.flyTo({ center: target.centroid, zoom: POINT_TOUR_ZOOM, duration: flightDuration });
+			map.flyTo({
+				center: target.centroid,
+				zoom: POINT_TOUR_ZOOM,
+				padding,
+				duration: flightDuration
+			});
 		} else {
-			map.fitBounds(target.bbox, { padding: 80, duration: flightDuration });
+			map.fitBounds(target.bbox, { padding, duration: flightDuration });
 		}
 
 		popup ??= new maplibregl.Popup({
@@ -182,7 +195,7 @@
 		<MapNav {mapId} mapName={mapDisplayName(mapId) ?? mapDef?.name} active="tour" />
 
 		{#if tour}
-			<div class="controls">
+			<div class="controls" data-map-overlay="bottom">
 				<button onclick={back} disabled={stepIndex === 0}>{t('tour.prev')}</button>
 				<button onclick={togglePlay}>
 					{#if finished}{t('tour.replay')}{:else if playing}{t('tour.pause')}{:else}{t(

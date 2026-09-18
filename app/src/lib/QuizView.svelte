@@ -4,6 +4,7 @@
 	import 'maplibre-gl/dist/maplibre-gl.css';
 	import { resolve } from '$app/paths';
 	import { fetchMapDefAndStyle, createMap } from './geoclickMap';
+	import { mapFitPadding } from './mapFit';
 	import { resolveDrop } from './quizDrop';
 	import MapNav from './MapNav.svelte';
 	import { t, tPlural } from './i18n.svelte';
@@ -17,7 +18,7 @@
 		scoreSession,
 		type QuizSession
 	} from '@geoclick/quiz-engine';
-	import { overallBounds, type MapDefinition } from './mapDefinition';
+	import { overallExtent, type MapDefinition } from './mapDefinition';
 	import { handSize, mapLevel, refillHand, type Level } from './difficulty';
 	import {
 		createProgressRepository,
@@ -131,13 +132,16 @@
 			const naturalPx = handleRowPx + traySlipsEl.scrollHeight;
 			const defaultCapPx = window.innerHeight * TRAY_DEFAULT_CAP_FRACTION;
 			trayHeightPx = Math.min(Math.max(naturalPx, trayMinPx), Math.min(defaultCapPx, trayMaxPx));
-			// Fit the map into the space above the tray, once its height is known.
-			// Fitted to the whole view, the southernmost targets started out under
-			// the tray (Sicily on Italy - Regions, at 1280x800 and on phones),
-			// which the tutorial's "try Sicilia" step ran straight into (FT-11).
-			if (map && mapDef)
-				map.fitBounds(overallBounds(mapDef), {
-					padding: { top: 40, right: 40, left: 40, bottom: trayHeightPx + 40 },
+			// Fit the map into the space the tray and the map bar leave it, once
+			// the tray's height is known. Fitted to the whole view, the
+			// southernmost targets started out under the tray (Sicily on Italy -
+			// Regions, at 1280x800 and on phones), which the tutorial's "try
+			// Sicilia" step ran straight into (FT-11), and the northernmost ones
+			// under the map bar (FT-25). The tray's new height is not on screen
+			// yet, so it is passed in rather than measured.
+			if (map && mapDef && container)
+				map.fitBounds(overallExtent(mapDef), {
+					padding: mapFitPadding(container, { bottom: trayHeightPx }),
 					duration: 0
 				});
 		} else {
@@ -634,13 +638,6 @@
 			if (cancelled) return;
 
 			map = createMap(container, loadedMapDef, style);
-			if (import.meta.env.DEV && typeof window !== 'undefined') {
-				// Debug/test aid: lets integration tests (and manual debugging)
-				// drive the real map instance, e.g. map.project(lngLat) to find
-				// screen coordinates for a drag target. Dev server only - it
-				// used to ship to every user of the production build.
-				(window as unknown as { __map?: maplibregl.Map }).__map = map;
-			}
 
 			if (notDueIds.size === loadedMapDef.targets.length) {
 				phase = 'upToDate';
@@ -783,7 +780,12 @@
 	<div class="container" bind:this={container}></div>
 
 	{#if session}
-		<div class="tray" bind:this={trayEl} style="height: {trayHeightPx ?? trayMinPx}px">
+		<div
+			class="tray"
+			data-map-overlay="bottom"
+			bind:this={trayEl}
+			style="height: {trayHeightPx ?? trayMinPx}px"
+		>
 			<div class="tray-handle-row" bind:this={trayHandleRowEl}>
 				<div
 					class="tray-handle"
