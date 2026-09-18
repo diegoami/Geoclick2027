@@ -231,7 +231,7 @@ reuses the first's layer.
 | FT-21 | **merged** | `d889451` | hand of 6/3/1 by mastery, refilled per drop; note by the progress line; 🧑 thresholds and wording still open to retuning |
 | FT-22 | **merged** | `9b26996` | three label strengths by clean streak, legend, click still names a region; tab called Progress — 🧑 name still open |
 | FT-23 | **merged** | `417bc12` | collision over the DOM labels, not a symbol layer (offline: no glyph fonts) — priorities per view; no overlapping pair at 1280 or 390 px |
-| FT-24 | todo | — | |
+| FT-24 | **merged** | `d2cdd0c` | a label tries other spots before giving up: towns beside their dot, regions a line off centre; Italy — Towns names all 40 |
 | FT-25 | todo | — | |
 | FT-26 | todo | — | 🧑 wording |
 
