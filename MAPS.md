@@ -125,6 +125,36 @@ Exact commands, so any of these can be regenerated identically:
   fixups (Apulia/Sicily). Confirmed the shared fixups table doesn't
   cross-contaminate: regenerating `italy-regions` after this change
   produced a byte-identical `map.json`/`tour.json`/`tiles.pmtiles`.
+- **`italy-provinces-north`** (52), **`italy-provinces-center`** (24),
+  **`italy-provinces-south`** (34) — the same 110 provinces in three, split
+  at 43.8° N and 41.3° N (FT-29):
+  ```
+  npx tsx data/scripts/build-map.ts --country="Italy" --out=data/maps/italy-provinces-north --type=province --lat-min=43.8 --name="Italy — Provinces — North"
+  npx tsx data/scripts/build-map.ts --country="Italy" --out=data/maps/italy-provinces-center --type=province --lat-min=41.3 --lat-max=43.8 --name="Italy — Provinces — Center"
+  npx tsx data/scripts/build-map.ts --country="Italy" --out=data/maps/italy-provinces-south --type=province --lat-max=41.3 --name="Italy — Provinces — South"
+  ```
+  The slice flags are the ones `build-points-map.ts` already had (see
+  "Slicing a country"), now on the polygon builder too, and applied to each
+  region's own middle. The point of the split is readability: the full map
+  writes 55 of its 110 names at the zoom it opens at, the three slices 49 of
+  52, 24 of 24 and 34 of 34. Rebuilding `italy-provinces` with the updated
+  script produced a byte-identical `map.json`, so the flags are a no-op at
+  their defaults.
+- **`italy-provinces-north`** (52), **`italy-provinces-center`** (24),
+  **`italy-provinces-south`** (34) — the same 110 provinces in three, split
+  at 43.8° N and 41.3° N (FT-29):
+  ```
+  npx tsx data/scripts/build-map.ts --country="Italy" --out=data/maps/italy-provinces-north --type=province --lat-min=43.8 --name="Italy — Provinces — North"
+  npx tsx data/scripts/build-map.ts --country="Italy" --out=data/maps/italy-provinces-center --type=province --lat-min=41.3 --lat-max=43.8 --name="Italy — Provinces — Center"
+  npx tsx data/scripts/build-map.ts --country="Italy" --out=data/maps/italy-provinces-south --type=province --lat-max=41.3 --name="Italy — Provinces — South"
+  ```
+  The slice flags are the ones `build-points-map.ts` already had (see
+  "Slicing a country"), now on the polygon builder too, and applied to each
+  region's own middle. The point of the split is readability: the full map
+  writes 55 of its 110 names at the zoom it opens at, the three slices 49 of
+  52, 24 of 24 and 34 of 34. Rebuilding `italy-provinces` with the updated
+  script produced a byte-identical `map.json`, so the flags are a no-op at
+  their defaults.
 - **`italy-towns-100k`** (40 targets, point geometry — see "Point-target
   implementation" below):
   ```

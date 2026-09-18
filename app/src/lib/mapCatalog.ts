@@ -125,6 +125,11 @@ export const mapGroups: CountryGroup[] = [
 		country: 'Italy',
 		maps: [
 			{ id: 'italy-provinces', labelKey: 'mapType.provinces' },
+			// 110 provinces is the densest map there is; in thirds each one is
+			// readable at the zoom it opens at (FT-29).
+			{ id: 'italy-provinces-north', labelKey: 'mapType.provincesNorth' },
+			{ id: 'italy-provinces-center', labelKey: 'mapType.provincesCenter' },
+			{ id: 'italy-provinces-south', labelKey: 'mapType.provincesSouth' },
 			{ id: 'italy-regions', labelKey: 'mapType.regions' },
 			{ id: 'italy-towns-100k', labelKey: 'mapType.towns' }
 		]
