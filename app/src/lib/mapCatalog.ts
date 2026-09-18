@@ -59,17 +59,17 @@ export const mapGroups: CountryGroup[] = [
 		]
 	},
 	{
-		country: 'Colombia',
-		maps: [
-			{ id: 'colombia-regions', labelKey: 'mapType.regions' },
-			{ id: 'colombia-towns-100k', labelKey: 'mapType.towns' }
-		]
-	},
-	{
 		country: 'China',
 		maps: [
 			{ id: 'china-regions', labelKey: 'mapType.provinces' },
 			{ id: 'china-towns-100k', labelKey: 'mapType.towns' }
+		]
+	},
+	{
+		country: 'Colombia',
+		maps: [
+			{ id: 'colombia-regions', labelKey: 'mapType.regions' },
+			{ id: 'colombia-towns-100k', labelKey: 'mapType.towns' }
 		]
 	},
 	{
@@ -214,13 +214,6 @@ export const mapGroups: CountryGroup[] = [
 		]
 	},
 	{
-		country: 'Vietnam',
-		maps: [
-			{ id: 'vietnam-regions', labelKey: 'mapType.provinces' },
-			{ id: 'vietnam-towns-100k', labelKey: 'mapType.towns' }
-		]
-	},
-	{
 		country: 'USA',
 		maps: [
 			{ id: 'usa-states', labelKey: 'mapType.states' },
@@ -231,6 +224,13 @@ export const mapGroups: CountryGroup[] = [
 			{ id: 'usa-cities-east', labelKey: 'mapType.citiesEast' },
 			{ id: 'usa-cities-center', labelKey: 'mapType.citiesCenter' },
 			{ id: 'usa-cities-west', labelKey: 'mapType.citiesWest' }
+		]
+	},
+	{
+		country: 'Vietnam',
+		maps: [
+			{ id: 'vietnam-regions', labelKey: 'mapType.provinces' },
+			{ id: 'vietnam-towns-100k', labelKey: 'mapType.towns' }
 		]
 	}
 ];

@@ -4,6 +4,7 @@
 	import mapIndex from '../../../data/maps/index.json';
 	import { createProgressRepository, type SessionSummary } from '$lib/progressRepository';
 	import { handSize, knownCount, mapLevel, type Level } from '$lib/difficulty';
+	import { countMaps, filterGroups } from '$lib/mapSearch';
 	import { t, tPlural } from '$lib/i18n.svelte';
 	import LanguageSwitcher from '$lib/LanguageSwitcher.svelte';
 	import { mapDisplayName, mapGroups } from '$lib/mapCatalog';
@@ -38,6 +39,21 @@
 	// is a map to start, not a map at 0.
 	type Mastery = { known: number; total: number; level: Level };
 	let masteries = $state<Record<string, Mastery | undefined>>({});
+
+	// What the player has typed into the search box (FT-31). Sixty maps in
+	// twenty-eight countries is too long a list to scroll through for one of
+	// them. Not persisted: a search is about this moment, not a setting.
+	let query = $state('');
+	const shownGroups = $derived(
+		filterGroups(
+			mapGroups.map((group) => ({
+				...group,
+				maps: group.maps.map((map) => ({ ...map, label: t(map.labelKey) }))
+			})),
+			query
+		)
+	);
+	const shownCount = $derived(countMaps(shownGroups));
 
 	// The download link is for web visitors only - pointless inside the desktop
 	// or Android app itself. Off until checked, so the apps never flash it.
@@ -208,8 +224,34 @@
 		<h2 class="all-maps">{t('home.allMaps')}</h2>
 	{/if}
 
+	<!-- Searching is about the full list; Favourites and Recent are short by
+	     definition and stay where they are (FT-31). -->
+	<div class="search">
+		<label class="visually-hidden" for="map-search">{t('home.search')}</label>
+		<input
+			id="map-search"
+			type="search"
+			autocomplete="off"
+			placeholder={t('home.search')}
+			bind:value={query}
+			onkeydown={(e) => {
+				if (e.key === 'Escape') query = '';
+			}}
+		/>
+		{#if query}
+			<button class="clear" onclick={() => (query = '')}>{t('home.searchClear')}</button>
+		{/if}
+	</div>
+	{#if query}
+		<p class="search-count" aria-live="polite">
+			{shownCount === 1
+				? t('home.searchOneResult')
+				: t('home.searchResults', { count: shownCount })}
+		</p>
+	{/if}
+
 	<div class="groups">
-		{#each mapGroups as group (group.country)}
+		{#each shownGroups as group (group.country)}
 			<section class="country-group">
 				<h3>{group.country}</h3>
 				<ul>
@@ -218,7 +260,7 @@
 						     Favourites or Recent, which not everyone has (docs/TUTORIAL.md). -->
 						{@render mapCard(
 							map.id,
-							t(map.labelKey),
+							map.label,
 							map.id === TUTORIAL_MAP_ID ? 'home-map-card' : undefined
 						)}
 					{/each}
@@ -286,6 +328,55 @@
 		position: absolute;
 		top: 0.3rem;
 		right: 0.35rem;
+	}
+	/* The search box (FT-31): full width on a phone, comfortable to tap, and
+	   visually part of the "All maps" list rather than the page header. */
+	.search {
+		display: flex;
+		gap: 0.5rem;
+		align-items: center;
+		margin: 0 0 0.75rem;
+	}
+	.search input {
+		flex: 1;
+		min-width: 0;
+		padding: 0.6rem 0.8rem;
+		font: inherit;
+		font-size: 1rem;
+		color: #1c2b22;
+		background: rgba(255, 255, 255, 0.9);
+		border: 1px solid rgba(17, 24, 21, 0.18);
+		border-radius: 0.6rem;
+	}
+	.search input:focus-visible {
+		outline: 2px solid #5a9c6f;
+		outline-offset: 1px;
+	}
+	.search .clear {
+		padding: 0.6rem 0.8rem;
+		font: inherit;
+		color: #2f6b45;
+		background: transparent;
+		border: 1px solid rgba(17, 24, 21, 0.18);
+		border-radius: 0.6rem;
+		cursor: pointer;
+	}
+	.search-count {
+		margin: -0.4rem 0 0.75rem;
+		font-size: 0.85rem;
+		opacity: 0.75;
+	}
+	/* Present for screen readers, invisible on screen - the box's own
+	   placeholder is what a sighted player reads. */
+	.visually-hidden {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		padding: 0;
+		overflow: hidden;
+		clip-path: inset(50%);
+		white-space: nowrap;
 	}
 	.shortcuts {
 		display: flex;
