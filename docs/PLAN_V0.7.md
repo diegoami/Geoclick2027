@@ -195,7 +195,7 @@ the product owner's test on the phone first, then the stable release.
 | Task  | State      | Merge     | Notes                                                                                                                                         |
 | ----- | ---------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | FT-27 | **merged** | `434d703` | slice flags + same-name disambiguation, both pure and unit-tested; the italy-towns rebuild came out byte-identical; three US name typos fixed |
-| FT-28 | todo       | —         |                                                                                                                                               |
+| FT-28 | **merged** | `2d59d4c` | four maps: 50 over a million, then East 82 / Center 48 / West 44; four source name errors fixed; crowding measured against japan-towns        |
 | FT-29 | todo       | —         |                                                                                                                                               |
 | FT-30 | todo       | —         |                                                                                                                                               |
 | FT-31 | todo       | —         |                                                                                                                                               |
