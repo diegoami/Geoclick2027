@@ -1,0 +1,1573 @@
+{
+	"id": "usa-cities-east",
+	"name": "USA — Cities — East",
+	"country": "United States of America",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "rochester",
+			"name": "Rochester",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-77.6218956,
+				43.1723715
+			],
+			"bbox": [
+				-77.6218956,
+				43.1723715,
+				-77.6218956,
+				43.1723715
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "syracuse",
+			"name": "Syracuse",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-76.1500137,
+				43.0499937
+			],
+			"bbox": [
+				-76.1500137,
+				43.0499937,
+				-76.1500137,
+				43.0499937
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "flint",
+			"name": "Flint",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-83.6875381,
+				43.0128642
+			],
+			"bbox": [
+				-83.6875381,
+				43.0128642,
+				-83.6875381,
+				43.0128642
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "grand-rapids",
+			"name": "Grand Rapids",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-85.6699494,
+				42.9637199
+			],
+			"bbox": [
+				-85.6699494,
+				42.9637199,
+				-85.6699494,
+				42.9637199
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "buffalo",
+			"name": "Buffalo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-78.8819479,
+				42.8819241
+			],
+			"bbox": [
+				-78.8819479,
+				42.8819241,
+				-78.8819479,
+				42.8819241
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "lansing",
+			"name": "Lansing",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-84.5467363,
+				42.7335272
+			],
+			"bbox": [
+				-84.5467363,
+				42.7335272,
+				-84.5467363,
+				42.7335272
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "albany",
+			"name": "Albany",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-73.75755317778979,
+				42.653743922035616
+			],
+			"bbox": [
+				-73.75755317778979,
+				42.653743922035616,
+				-73.75755317778979,
+				42.653743922035616
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "lowell",
+			"name": "Lowell",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-71.3166911,
+				42.6336884
+			],
+			"bbox": [
+				-71.3166911,
+				42.6336884,
+				-71.3166911,
+				42.6336884
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "salem",
+			"name": "Salem",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-70.8830917,
+				42.5224989
+			],
+			"bbox": [
+				-70.8830917,
+				42.5224989,
+				-70.8830917,
+				42.5224989
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "detroit",
+			"name": "Detroit",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-83.05133408216001,
+				42.33355800559568
+			],
+			"bbox": [
+				-83.05133408216001,
+				42.33355800559568,
+				-83.05133408216001,
+				42.33355800559568
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "boston",
+			"name": "Boston",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-71.0719595,
+				42.331906
+			],
+			"bbox": [
+				-71.0719595,
+				42.331906,
+				-71.0719595,
+				42.331906
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "ann-arbor",
+			"name": "Ann Arbor",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-83.7199909,
+				42.3003754
+			],
+			"bbox": [
+				-83.7199909,
+				42.3003754,
+				-83.7199909,
+				42.3003754
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "worcester",
+			"name": "Worcester",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-71.8000208,
+				42.2704289
+			],
+			"bbox": [
+				-71.8000208,
+				42.2704289,
+				-71.8000208,
+				42.2704289
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "springfield",
+			"name": "Springfield",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-72.579999,
+				42.1200246
+			],
+			"bbox": [
+				-72.579999,
+				42.1200246,
+				-72.579999,
+				42.1200246
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "providence",
+			"name": "Providence",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-71.4169256,
+				41.8230482
+			],
+			"bbox": [
+				-71.4169256,
+				41.8230482,
+				-71.4169256,
+				41.8230482
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "hartford",
+			"name": "Hartford",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-72.6819129,
+				41.771966
+			],
+			"bbox": [
+				-72.6819129,
+				41.771966,
+				-72.6819129,
+				41.771966
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "south-bend",
+			"name": "South Bend",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-86.2500173,
+				41.6833071
+			],
+			"bbox": [
+				-86.2500173,
+				41.6833071,
+				-86.2500173,
+				41.6833071
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "toledo",
+			"name": "Toledo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-83.55297592935672,
+				41.639787520595725
+			],
+			"bbox": [
+				-83.55297592935672,
+				41.639787520595725,
+				-83.55297592935672,
+				41.639787520595725
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "cleveland",
+			"name": "Cleveland",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-81.6969441,
+				41.4719327
+			],
+			"bbox": [
+				-81.6969441,
+				41.4719327,
+				-81.6969441,
+				41.4719327
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "new-haven",
+			"name": "New Haven",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-72.9000053,
+				41.3303829
+			],
+			"bbox": [
+				-72.9000053,
+				41.3303829,
+				-72.9000053,
+				41.3303829
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "bridgeport",
+			"name": "Bridgeport",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-73.201907,
+				41.1819245
+			],
+			"bbox": [
+				-73.201907,
+				41.1819245,
+				-73.201907,
+				41.1819245
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "youngstown",
+			"name": "Youngstown",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-80.649739,
+				41.0996993
+			],
+			"bbox": [
+				-80.649739,
+				41.0996993,
+				-80.649739,
+				41.0996993
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "fort-wayne",
+			"name": "Fort Wayne",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-85.1299823,
+				41.0803982
+			],
+			"bbox": [
+				-85.1299823,
+				41.0803982,
+				-85.1299823,
+				41.0803982
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "akron",
+			"name": "Akron",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-81.519996,
+				41.0703988
+			],
+			"bbox": [
+				-81.519996,
+				41.0703988,
+				-81.519996,
+				41.0703988
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "stamford",
+			"name": "Stamford",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-73.5391911,
+				41.0533456
+			],
+			"bbox": [
+				-73.5391911,
+				41.0533456,
+				-73.5391911,
+				41.0533456
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "canton",
+			"name": "Canton",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-81.3786351,
+				40.798865
+			],
+			"bbox": [
+				-81.3786351,
+				40.798865,
+				-81.3786351,
+				40.798865
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "new-york",
+			"name": "New York",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-73.99571754361698,
+				40.72156174972766
+			],
+			"bbox": [
+				-73.99571754361698,
+				40.72156174972766,
+				-73.99571754361698,
+				40.72156174972766
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "newark",
+			"name": "Newark",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-74.1700053,
+				40.7004214
+			],
+			"bbox": [
+				-74.1700053,
+				40.7004214,
+				-74.1700053,
+				40.7004214
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "allentown",
+			"name": "Allentown",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-75.5000275,
+				40.5999882
+			],
+			"bbox": [
+				-75.5000275,
+				40.5999882,
+				-75.5000275,
+				40.5999882
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "pittsburgh",
+			"name": "Pittsburgh",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-80.0019313,
+				40.4319445
+			],
+			"bbox": [
+				-80.0019313,
+				40.4319445,
+				-80.0019313,
+				40.4319445
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "harrisburg",
+			"name": "Harrisburg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-76.8847492,
+				40.2735999
+			],
+			"bbox": [
+				-76.8847492,
+				40.2735999,
+				-76.8847492,
+				40.2735999
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "trenton",
+			"name": "Trenton",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-74.7433553,
+				40.2169625
+			],
+			"bbox": [
+				-74.7433553,
+				40.2169625,
+				-74.7433553,
+				40.2169625
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "lancaster",
+			"name": "Lancaster",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-76.3057664,
+				40.0377745
+			],
+			"bbox": [
+				-76.3057664,
+				40.0377745,
+				-76.3057664,
+				40.0377745
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "columbus-ohio",
+			"name": "Columbus, Ohio",
+			"type": "city",
+			"tier": 1,
+			"aliases": [
+				"Columbus"
+			],
+			"centroid": [
+				-82.9919555,
+				39.9819202
+			],
+			"bbox": [
+				-82.9919555,
+				39.9819202,
+				-82.9919555,
+				39.9819202
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "york",
+			"name": "York",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-76.7280404,
+				39.9629212
+			],
+			"bbox": [
+				-76.7280404,
+				39.9629212,
+				-76.7280404,
+				39.9629212
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "philadelphia",
+			"name": "Philadelphia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-75.1798412402816,
+				39.94594243742075
+			],
+			"bbox": [
+				-75.1798412402816,
+				39.94594243742075,
+				-75.1798412402816,
+				39.94594243742075
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "dayton",
+			"name": "Dayton",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-84.2019333,
+				39.7523219
+			],
+			"bbox": [
+				-84.2019333,
+				39.7523219,
+				-84.2019333,
+				39.7523219
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "indianapolis",
+			"name": "Indianapolis",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-86.1719939,
+				39.7519343
+			],
+			"bbox": [
+				-86.1719939,
+				39.7519343,
+				-86.1719939,
+				39.7519343
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "baltimore",
+			"name": "Baltimore",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-76.6145820807727,
+				39.28151578641361
+			],
+			"bbox": [
+				-76.6145820807727,
+				39.28151578641361,
+				-76.6145820807727,
+				39.28151578641361
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "cincinnati",
+			"name": "Cincinnati",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-84.4588685,
+				39.1638306
+			],
+			"bbox": [
+				-84.4588685,
+				39.1638306,
+				-84.4588685,
+				39.1638306
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "covington",
+			"name": "Covington",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-84.5085991,
+				39.0840084
+			],
+			"bbox": [
+				-84.5085991,
+				39.0840084,
+				-84.5085991,
+				39.0840084
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "washington-d-c",
+			"name": "Washington, D.C.",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-77.0113644,
+				38.9014952
+			],
+			"bbox": [
+				-77.0113644,
+				38.9014952,
+				-77.0113644,
+				38.9014952
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "louisville",
+			"name": "Louisville",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-85.7506501,
+				38.2269628
+			],
+			"bbox": [
+				-85.7506501,
+				38.2269628,
+				-85.7506501,
+				38.2269628
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "lexington",
+			"name": "Lexington",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-84.5000208,
+				38.0500147
+			],
+			"bbox": [
+				-84.5000208,
+				38.0500147,
+				-84.5000208,
+				38.0500147
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "richmond",
+			"name": "Richmond",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-77.4519319,
+				37.5519652
+			],
+			"bbox": [
+				-77.4519319,
+				37.5519652,
+				-77.4519319,
+				37.5519652
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "hampton",
+			"name": "Hampton",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-76.3499498,
+				37.0300252
+			],
+			"bbox": [
+				-76.3499498,
+				37.0300252,
+				-76.3499498,
+				37.0300252
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "virginia-beach",
+			"name": "Virginia Beach",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-75.9802646,
+				36.8551602
+			],
+			"bbox": [
+				-75.9802646,
+				36.8551602,
+				-75.9802646,
+				36.8551602
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "norfolk",
+			"name": "Norfolk",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-76.2800057,
+				36.8499587
+			],
+			"bbox": [
+				-76.2800057,
+				36.8499587,
+				-76.2800057,
+				36.8499587
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "nashville",
+			"name": "Nashville",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-86.7819308,
+				36.1719202
+			],
+			"bbox": [
+				-86.7819308,
+				36.1719202,
+				-86.7819308,
+				36.1719202
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "winston-salem",
+			"name": "Winston-Salem",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-80.2599954,
+				36.1054305
+			],
+			"bbox": [
+				-80.2599954,
+				36.1054305,
+				-80.2599954,
+				36.1054305
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "greensboro",
+			"name": "Greensboro",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-79.8000234,
+				36.0700063
+			],
+			"bbox": [
+				-79.8000234,
+				36.0700063,
+				-79.8000234,
+				36.0700063
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "durham",
+			"name": "Durham",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-78.9199996,
+				35.9999589
+			],
+			"bbox": [
+				-78.9199996,
+				35.9999589,
+				-78.9199996,
+				35.9999589
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "knoxville",
+			"name": "Knoxville",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-83.9200304,
+				35.9700124
+			],
+			"bbox": [
+				-83.9200304,
+				35.9700124,
+				-83.9200304,
+				35.9700124
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "raleigh",
+			"name": "Raleigh",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-78.64703463664539,
+				35.77269601271186
+			],
+			"bbox": [
+				-78.64703463664539,
+				35.77269601271186,
+				-78.64703463664539,
+				35.77269601271186
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "charlotte",
+			"name": "Charlotte",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-80.8319839,
+				35.2069404
+			],
+			"bbox": [
+				-80.8319839,
+				35.2069404,
+				-80.8319839,
+				35.2069404
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "chattanooga",
+			"name": "Chattanooga",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-85.2500009,
+				35.0699898
+			],
+			"bbox": [
+				-85.2500009,
+				35.0699898,
+				-85.2500009,
+				35.0699898
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "fayetteville",
+			"name": "Fayetteville",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-78.88699850074843,
+				35.05111113699372
+			],
+			"bbox": [
+				-78.88699850074843,
+				35.05111113699372,
+				-78.88699850074843,
+				35.05111113699372
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "greenville",
+			"name": "Greenville",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-82.3941545,
+				34.852923
+			],
+			"bbox": [
+				-82.3941545,
+				34.852923,
+				-82.3941545,
+				34.852923
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "huntsville",
+			"name": "Huntsville",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-86.6099954,
+				34.7199595
+			],
+			"bbox": [
+				-86.6099954,
+				34.7199595,
+				-86.6099954,
+				34.7199595
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "columbia",
+			"name": "Columbia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-81.03126182715303,
+				33.996860925141384
+			],
+			"bbox": [
+				-81.03126182715303,
+				33.996860925141384,
+				-81.03126182715303,
+				33.996860925141384
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "atlanta",
+			"name": "Atlanta",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-84.36764186571386,
+				33.73945728378348
+			],
+			"bbox": [
+				-84.36764186571386,
+				33.73945728378348,
+				-84.36764186571386,
+				33.73945728378348
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "birmingham",
+			"name": "Birmingham",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-86.8249952,
+				33.5300063
+			],
+			"bbox": [
+				-86.8249952,
+				33.5300063,
+				-86.8249952,
+				33.5300063
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "augusta",
+			"name": "Augusta",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-81.9849805,
+				33.4608116
+			],
+			"bbox": [
+				-81.9849805,
+				33.4608116,
+				-81.9849805,
+				33.4608116
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "charleston",
+			"name": "Charleston",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-79.9921047,
+				32.7923769
+			],
+			"bbox": [
+				-79.9921047,
+				32.7923769,
+				-79.9921047,
+				32.7923769
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "columbus-georgia",
+			"name": "Columbus, Georgia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [
+				"Columbus"
+			],
+			"centroid": [
+				-84.9800173,
+				32.4704328
+			],
+			"bbox": [
+				-84.9800173,
+				32.4704328,
+				-84.9800173,
+				32.4704328
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "tallahassee",
+			"name": "Tallahassee",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-84.2800342,
+				30.4499876
+			],
+			"bbox": [
+				-84.2800342,
+				30.4499876,
+				-84.2800342,
+				30.4499876
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "jacksonville",
+			"name": "Jacksonville",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-81.6719327,
+				30.3319666
+			],
+			"bbox": [
+				-81.6719327,
+				30.3319666,
+				-81.6719327,
+				30.3319666
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "daytona-beach",
+			"name": "Daytona Beach",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-81.0230754,
+				29.2105542
+			],
+			"bbox": [
+				-81.0230754,
+				29.2105542,
+				-81.0230754,
+				29.2105542
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "sanford",
+			"name": "Sanford",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-81.2799848,
+				28.7899597
+			],
+			"bbox": [
+				-81.2799848,
+				28.7899597,
+				-81.2799848,
+				28.7899597
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "orlando",
+			"name": "Orlando",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-81.3819762,
+				28.5119227
+			],
+			"bbox": [
+				-81.3819762,
+				28.5119227,
+				-81.3819762,
+				28.5119227
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "kissimmee",
+			"name": "Kissimmee",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-81.4077806,
+				28.2920573
+			],
+			"bbox": [
+				-81.4077806,
+				28.2920573,
+				-81.4077806,
+				28.2920573
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "melbourne",
+			"name": "Melbourne",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-80.6083204,
+				28.0833104
+			],
+			"bbox": [
+				-80.6083204,
+				28.0833104,
+				-80.6083204,
+				28.0833104
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "tampa",
+			"name": "Tampa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-82.4605667,
+				27.9489338
+			],
+			"bbox": [
+				-82.4605667,
+				27.9489338,
+				-82.4605667,
+				27.9489338
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "st-petersburg",
+			"name": "St. Petersburg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-82.6793826,
+				27.7705388
+			],
+			"bbox": [
+				-82.6793826,
+				27.7705388,
+				-82.6793826,
+				27.7705388
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "fort-pierce",
+			"name": "Fort Pierce",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-80.3258053,
+				27.4467859
+			],
+			"bbox": [
+				-80.3258053,
+				27.4467859,
+				-80.3258053,
+				27.4467859
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "sarasota",
+			"name": "Sarasota",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-82.530787,
+				27.3361208
+			],
+			"bbox": [
+				-82.530787,
+				27.3361208,
+				-82.530787,
+				27.3361208
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "west-palm-beach",
+			"name": "West Palm Beach",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-80.1236213,
+				26.74502
+			],
+			"bbox": [
+				-80.1236213,
+				26.74502,
+				-80.1236213,
+				26.74502
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "coral-springs",
+			"name": "Coral Springs",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-80.2708216,
+				26.270837
+			],
+			"bbox": [
+				-80.2708216,
+				26.270837,
+				-80.2708216,
+				26.270837
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "naples",
+			"name": "Naples",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-81.7949921,
+				26.1420593
+			],
+			"bbox": [
+				-81.7949921,
+				26.1420593,
+				-81.7949921,
+				26.1420593
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "fort-lauderdale",
+			"name": "Fort Lauderdale",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-80.1417855,
+				26.1360649
+			],
+			"bbox": [
+				-80.1417855,
+				26.1360649,
+				-80.1417855,
+				26.1360649
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "miami-beach",
+			"name": "Miami Beach",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-80.1317811,
+				25.8099195
+			],
+			"bbox": [
+				-80.1317811,
+				25.8099195,
+				-80.1317811,
+				25.8099195
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "miami",
+			"name": "Miami",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-80.2260519,
+				25.7895566
+			],
+			"bbox": [
+				-80.2260519,
+				25.7895566,
+				-80.2260519,
+				25.7895566
+			],
+			"colorIndex": 5
+		}
+	],
+	"tourOrder": [
+		"rochester",
+		"syracuse",
+		"flint",
+		"grand-rapids",
+		"buffalo",
+		"lansing",
+		"albany",
+		"lowell",
+		"salem",
+		"detroit",
+		"boston",
+		"ann-arbor",
+		"worcester",
+		"springfield",
+		"providence",
+		"hartford",
+		"south-bend",
+		"toledo",
+		"cleveland",
+		"new-haven",
+		"bridgeport",
+		"youngstown",
+		"fort-wayne",
+		"akron",
+		"stamford",
+		"canton",
+		"new-york",
+		"newark",
+		"allentown",
+		"pittsburgh",
+		"harrisburg",
+		"trenton",
+		"lancaster",
+		"columbus-ohio",
+		"york",
+		"philadelphia",
+		"dayton",
+		"indianapolis",
+		"baltimore",
+		"cincinnati",
+		"covington",
+		"washington-d-c",
+		"louisville",
+		"lexington",
+		"richmond",
+		"hampton",
+		"virginia-beach",
+		"norfolk",
+		"nashville",
+		"winston-salem",
+		"greensboro",
+		"durham",
+		"knoxville",
+		"raleigh",
+		"charlotte",
+		"chattanooga",
+		"fayetteville",
+		"greenville",
+		"huntsville",
+		"columbia",
+		"atlanta",
+		"birmingham",
+		"augusta",
+		"charleston",
+		"columbus-georgia",
+		"tallahassee",
+		"jacksonville",
+		"daytona-beach",
+		"sanford",
+		"orlando",
+		"kissimmee",
+		"melbourne",
+		"tampa",
+		"st-petersburg",
+		"fort-pierce",
+		"sarasota",
+		"west-palm-beach",
+		"coral-springs",
+		"naples",
+		"fort-lauderdale",
+		"miami-beach",
+		"miami"
+	]
+}

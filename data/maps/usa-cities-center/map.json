@@ -1,0 +1,927 @@
+{
+	"id": "usa-cities-center",
+	"name": "USA — Cities — Center",
+	"country": "United States of America",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "minneapolis",
+			"name": "Minneapolis",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-93.2537322,
+				44.9819251
+			],
+			"bbox": [
+				-93.2537322,
+				44.9819251,
+				-93.2537322,
+				44.9819251
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "st-paul",
+			"name": "St. Paul",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-93.0849748,
+				44.9439866
+			],
+			"bbox": [
+				-93.0849748,
+				44.9439866,
+				-93.0849748,
+				44.9439866
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "lakeville",
+			"name": "Lakeville",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-93.2425104,
+				44.6501028
+			],
+			"bbox": [
+				-93.2425104,
+				44.6501028,
+				-93.2425104,
+				44.6501028
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "appleton",
+			"name": "Appleton",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-88.4005062,
+				44.268679
+			],
+			"bbox": [
+				-88.4005062,
+				44.268679,
+				-88.4005062,
+				44.268679
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "madison",
+			"name": "Madison",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-89.401117,
+				43.0730156
+			],
+			"bbox": [
+				-89.401117,
+				43.0730156,
+				-89.401117,
+				43.0730156
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "milwaukee",
+			"name": "Milwaukee",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-87.91667321462553,
+				43.029608354300805
+			],
+			"bbox": [
+				-87.91667321462553,
+				43.029608354300805,
+				-87.91667321462553,
+				43.029608354300805
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "waukesha",
+			"name": "Waukesha",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-88.2313693,
+				43.0116498
+			],
+			"bbox": [
+				-88.2313693,
+				43.0116498,
+				-88.2313693,
+				43.0116498
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "rockford",
+			"name": "Rockford",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-89.0696902,
+				42.2697054
+			],
+			"bbox": [
+				-89.0696902,
+				42.2697054,
+				-89.0696902,
+				42.2697054
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "evanston",
+			"name": "Evanston",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-87.6999547,
+				42.0483494
+			],
+			"bbox": [
+				-87.6999547,
+				42.0483494,
+				-87.6999547,
+				42.0483494
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "elgin",
+			"name": "Elgin",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-88.2899187,
+				42.0394611
+			],
+			"bbox": [
+				-88.2899187,
+				42.0394611,
+				-88.2899187,
+				42.0394611
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "chicago",
+			"name": "Chicago",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-87.63523655322338,
+				41.847961283364114
+			],
+			"bbox": [
+				-87.63523655322338,
+				41.847961283364114,
+				-87.63523655322338,
+				41.847961283364114
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "aurora",
+			"name": "Aurora",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-88.2999956,
+				41.7653951
+			],
+			"bbox": [
+				-88.2999956,
+				41.7653951,
+				-88.2999956,
+				41.7653951
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "gary",
+			"name": "Gary",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-87.3300031,
+				41.5803935
+			],
+			"bbox": [
+				-87.3300031,
+				41.5803935,
+				-87.3300031,
+				41.5803935
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "des-moines",
+			"name": "Des Moines",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-93.6199809,
+				41.5799801
+			],
+			"bbox": [
+				-93.6199809,
+				41.5799801,
+				-93.6199809,
+				41.5799801
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "davenport",
+			"name": "Davenport",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-90.5875304,
+				41.5539868
+			],
+			"bbox": [
+				-90.5875304,
+				41.5539868,
+				-90.5875304,
+				41.5539868
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "joliet",
+			"name": "Joliet",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-88.106674,
+				41.5299831
+			],
+			"bbox": [
+				-88.106674,
+				41.5299831,
+				-88.106674,
+				41.5299831
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "omaha",
+			"name": "Omaha",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-96.0099901,
+				41.2400008
+			],
+			"bbox": [
+				-96.0099901,
+				41.2400008,
+				-96.0099901,
+				41.2400008
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "lincoln",
+			"name": "Lincoln",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-96.6800009,
+				40.8199748
+			],
+			"bbox": [
+				-96.6800009,
+				40.8199748,
+				-96.6800009,
+				40.8199748
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "kansas-city-kansas",
+			"name": "Kansas City, Kansas",
+			"type": "city",
+			"tier": 1,
+			"aliases": [
+				"Kansas City"
+			],
+			"centroid": [
+				-94.6301464,
+				39.1135805
+			],
+			"bbox": [
+				-94.6301464,
+				39.1135805,
+				-94.6301464,
+				39.1135805
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "kansas-city-missouri",
+			"name": "Kansas City, Missouri",
+			"type": "city",
+			"tier": 1,
+			"aliases": [
+				"Kansas City"
+			],
+			"centroid": [
+				-94.6060401,
+				39.1090344
+			],
+			"bbox": [
+				-94.6060401,
+				39.1090344,
+				-94.6060401,
+				39.1090344
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "columbia",
+			"name": "Columbia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-92.3339095,
+				38.9520785
+			],
+			"bbox": [
+				-92.3339095,
+				38.9520785,
+				-92.3339095,
+				38.9520785
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "st-charles",
+			"name": "St. Charles",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-90.5061658,
+				38.7842851
+			],
+			"bbox": [
+				-90.5061658,
+				38.7842851,
+				-90.5061658,
+				38.7842851
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "st-louis",
+			"name": "St. Louis",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-90.2419264,
+				38.6369636
+			],
+			"bbox": [
+				-90.2419264,
+				38.6369636,
+				-90.2419264,
+				38.6369636
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "wichita",
+			"name": "Wichita",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-97.32765748963789,
+				37.6763377062201
+			],
+			"bbox": [
+				-97.32765748963789,
+				37.6763377062201,
+				-97.32765748963789,
+				37.6763377062201
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "springfield",
+			"name": "Springfield",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-93.3199992,
+				37.1800161
+			],
+			"bbox": [
+				-93.3199992,
+				37.1800161,
+				-93.3199992,
+				37.1800161
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "tulsa",
+			"name": "Tulsa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-95.9300208,
+				36.1200033
+			],
+			"bbox": [
+				-95.9300208,
+				36.1200033,
+				-95.9300208,
+				36.1200033
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "oklahoma-city",
+			"name": "Oklahoma City",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-97.5206294,
+				35.4719888
+			],
+			"bbox": [
+				-97.5206294,
+				35.4719888,
+				-97.5206294,
+				35.4719888
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "bartlett",
+			"name": "Bartlett",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-89.8410901,
+				35.2229004
+			],
+			"bbox": [
+				-89.8410901,
+				35.2229004,
+				-89.8410901,
+				35.2229004
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "memphis",
+			"name": "Memphis",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-90.02877702278532,
+				35.14470115515157
+			],
+			"bbox": [
+				-90.02877702278532,
+				35.14470115515157,
+				-90.02877702278532,
+				35.14470115515157
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "little-rock",
+			"name": "Little Rock",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-92.3310932,
+				34.7360826
+			],
+			"bbox": [
+				-92.3310932,
+				34.7360826,
+				-92.3310932,
+				34.7360826
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "lubbock",
+			"name": "Lubbock",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-101.8799677,
+				33.5800033
+			],
+			"bbox": [
+				-101.8799677,
+				33.5800033,
+				-101.8799677,
+				33.5800033
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "dallas",
+			"name": "Dallas",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-96.79468722529398,
+				32.771958135439206
+			],
+			"bbox": [
+				-96.79468722529398,
+				32.771958135439206,
+				-96.79468722529398,
+				32.771958135439206
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "fort-worth",
+			"name": "Fort Worth",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-97.3400381,
+				32.739977
+			],
+			"bbox": [
+				-97.3400381,
+				32.739977,
+				-97.3400381,
+				32.739977
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "arlington",
+			"name": "Arlington",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-97.0202385,
+				32.6847608
+			],
+			"bbox": [
+				-97.0202385,
+				32.6847608,
+				-97.0202385,
+				32.6847608
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "shreveport",
+			"name": "Shreveport",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-93.7700234,
+				32.5000175
+			],
+			"bbox": [
+				-93.7700234,
+				32.5000175,
+				-93.7700234,
+				32.5000175
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "jackson",
+			"name": "Jackson",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-90.1849968,
+				32.2988153
+			],
+			"bbox": [
+				-90.1849968,
+				32.2988153,
+				-90.1849968,
+				32.2988153
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "mobile",
+			"name": "Mobile",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-88.049985,
+				30.6800252
+			],
+			"bbox": [
+				-88.049985,
+				30.6800252,
+				-88.049985,
+				30.6800252
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "baton-rouge",
+			"name": "Baton Rouge",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-91.1401581,
+				30.4579458
+			],
+			"bbox": [
+				-91.1401581,
+				30.4579458,
+				-91.1401581,
+				30.4579458
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "pensacola",
+			"name": "Pensacola",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-87.2169351,
+				30.4211263
+			],
+			"bbox": [
+				-87.2169351,
+				30.4211263,
+				-87.2169351,
+				30.4211263
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "austin",
+			"name": "Austin",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-97.7447242,
+				30.2688955
+			],
+			"bbox": [
+				-97.7447242,
+				30.2688955,
+				-97.7447242,
+				30.2688955
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "metairie",
+			"name": "Metairie",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-90.1527765,
+				29.9838662
+			],
+			"bbox": [
+				-90.1527765,
+				29.9838662,
+				-90.1527765,
+				29.9838662
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "new-orleans",
+			"name": "New Orleans",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-90.08836791917577,
+				29.968907521885654
+			],
+			"bbox": [
+				-90.08836791917577,
+				29.968907521885654,
+				-90.08836791917577,
+				29.968907521885654
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "houston",
+			"name": "Houston",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-95.34843625672217,
+				29.741272831862542
+			],
+			"bbox": [
+				-95.34843625672217,
+				29.741272831862542,
+				-95.34843625672217,
+				29.741272831862542
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "pasadena",
+			"name": "Pasadena",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-95.147743,
+				29.6608626
+			],
+			"bbox": [
+				-95.147743,
+				29.6608626,
+				-95.147743,
+				29.6608626
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "san-antonio",
+			"name": "San Antonio",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-98.4926929920987,
+				29.419848478603353
+			],
+			"bbox": [
+				-98.4926929920987,
+				29.419848478603353,
+				-98.4926929920987,
+				29.419848478603353
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "corpus-christi",
+			"name": "Corpus Christi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-97.4018948,
+				27.7428144
+			],
+			"bbox": [
+				-97.4018948,
+				27.7428144,
+				-97.4018948,
+				27.7428144
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "laredo",
+			"name": "Laredo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-99.5072185,
+				27.5061363
+			],
+			"bbox": [
+				-99.5072185,
+				27.5061363,
+				-99.5072185,
+				27.5061363
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "mcallen",
+			"name": "McAllen",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-98.2297254,
+				26.2030375
+			],
+			"bbox": [
+				-98.2297254,
+				26.2030375,
+				-98.2297254,
+				26.2030375
+			],
+			"colorIndex": 4
+		}
+	],
+	"tourOrder": [
+		"minneapolis",
+		"st-paul",
+		"lakeville",
+		"appleton",
+		"madison",
+		"milwaukee",
+		"waukesha",
+		"rockford",
+		"evanston",
+		"elgin",
+		"chicago",
+		"aurora",
+		"gary",
+		"des-moines",
+		"davenport",
+		"joliet",
+		"omaha",
+		"lincoln",
+		"kansas-city-kansas",
+		"kansas-city-missouri",
+		"columbia",
+		"st-charles",
+		"st-louis",
+		"wichita",
+		"springfield",
+		"tulsa",
+		"oklahoma-city",
+		"bartlett",
+		"memphis",
+		"little-rock",
+		"lubbock",
+		"dallas",
+		"fort-worth",
+		"arlington",
+		"shreveport",
+		"jackson",
+		"mobile",
+		"baton-rouge",
+		"pensacola",
+		"austin",
+		"metairie",
+		"new-orleans",
+		"houston",
+		"pasadena",
+		"san-antonio",
+		"corpus-christi",
+		"laredo",
+		"mcallen"
+	]
+}

@@ -73,8 +73,16 @@ const NAME_FIXUPS: Record<string, Record<string, string>> = {
 	// than a city.
 	'United States of America': {
 		'Washington,  D.C.': 'Washington, D.C.',
-		'St.  Paul': 'Saint Paul',
-		'Ft.  Worth': 'Fort Worth'
+		// Only the double space goes: 'St.' is how these cities write
+		// themselves, and the source already has St. Louis, St. Petersburg and
+		// St. Charles that way.
+		'St.  Paul': 'St. Paul',
+		// 'Ft.' is not - the same source writes Fort Wayne, Fort Collins, Fort
+		// Lauderdale and Fort Pierce in full, so this one row is the odd one.
+		'Ft.  Worth': 'Fort Worth',
+		// A real typo, not a variant: the city east of Memphis is Bartlett,
+		// Tennessee (found auditing the >200k list for FT-28).
+		Barlett: 'Bartlett'
 	},
 	// Plain NAME has a literal double-space typo for the one Russian city
 	// whose name contains a space - confirmed against NAME_EN's correctly

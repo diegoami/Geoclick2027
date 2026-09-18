@@ -43,7 +43,7 @@ favourites and so on) is realistic example data.
 Geoclick is a game for learning geography: where a country's regions,
 states or provinces are, and where its main towns and cities are.
 
-- **44 maps of 22 countries.** Most countries have two maps: its regions
+- **48 maps of 22 countries.** Most countries have two maps: its regions
   (called states, provinces, prefectures or districts, depending on the
   country) and its larger towns. Italy also has its 110 provinces. See
   [The maps](#18-the-maps) for the full list.
@@ -182,7 +182,7 @@ the map bar.
 
 The full home page, scrolled from top to bottom:
 
-![The whole home page, with all 44 maps](manual/home-full.jpg)
+![The whole home page, with all 48 maps](manual/home-full.jpg)
 
 On a wide screen the countries sit in two columns; on a phone, in one.
 
@@ -535,6 +535,12 @@ below — so the dot you are looking for is always visible:
 
 ![Italy — Towns, Overview](manual/towns-overview.jpg)
 
+The United States is the one country whose cities come as four maps: the
+50 over a million, and three slices at 200 000 — East, Center and West.
+Here is the East slice, which reaches from the Great Lakes to Florida:
+
+![USA — Cities — East](manual/usa-cities-east.jpg)
+
 Everything else works as on a regions map. In the quiz, drop each name
 onto its town's dot:
 
@@ -789,7 +795,7 @@ The apps are the same game as the website, packaged to install:
 
 ## 18. The maps
 
-22 countries, 44 maps. The number in brackets is how many places the map
+22 countries, 48 maps. The number in brackets is how many places the map
 asks for.
 
 | Country | Maps |
@@ -815,10 +821,15 @@ asks for.
 | Spain | Regions (16) · Towns (38) |
 | Sweden | Regions (21) · Towns (5) |
 | Ukraine | Regions (27) · Towns (39) |
-| USA | States (49) |
+| USA | States (49) · Cities (50) · Cities — East (82) · Cities — Center (48) · Cities — West (44) |
 
 - Maps show the country's main territory; far-away overseas territories
   are left out.
+- The United States has more big cities than one map can sensibly ask for,
+  so besides **Cities** (the 50 over a million) there are three slices at
+  200 000 — **East**, **Center** and **West**, split at the Mississippi and
+  the Rockies. A city that two maps both cover, such as Chicago, counts on
+  each of them separately.
 - The map data comes from Natural Earth, a free public-domain world map.
 
 ## 19. Questions and answers

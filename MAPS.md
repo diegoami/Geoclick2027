@@ -140,6 +140,33 @@ Exact commands, so any of these can be regenerated identically:
   another manual `NAME_FIXUPS` entry — cleaner, since the source already
   provides it.
 
+- **`usa-cities`** (50 targets — every US city over a million, which is
+  exactly 50; no Alaska or Hawaii reaches it):
+  ```
+  npx tsx data/scripts/build-points-map.ts --country="United States of America" --out=data/maps/usa-cities --min-population=1000000 --name="USA — Cities"
+  ```
+- **`usa-cities-east`** (82), **`usa-cities-center`** (48),
+  **`usa-cities-west`** (44) — the country in three slices at 200 000, split
+  at longitude −87 (roughly the Mississippi) and −104 (roughly the Rockies):
+  ```
+  npx tsx data/scripts/build-points-map.ts --country="United States of America" --out=data/maps/usa-cities-east --min-population=200000 --lon-min=-87 --name="USA — Cities — East"
+  npx tsx data/scripts/build-points-map.ts --country="United States of America" --out=data/maps/usa-cities-center --min-population=200000 --lon-min=-104 --lon-max=-87 --name="USA — Cities — Center"
+  npx tsx data/scripts/build-points-map.ts --country="United States of America" --out=data/maps/usa-cities-west --min-population=200000 --lon-min=-125 --lon-max=-104 --name="USA — Cities — West"
+  ```
+  The West slice's `--lon-min=-125` is what keeps Honolulu (−157.9) and
+  Anchorage (−149.9) out: a slice stretching to Hawaii would be mostly ocean,
+  and `usa-states` already excludes both for the same reason. Nothing in the
+  contiguous United States lies west of −124.8.
+
+  Curation found, and `NAME_FIXUPS` now fixes, four things in the US names:
+  `Washington,  D.C.`, `St.  Paul` and `Ft.  Worth` each had a double space,
+  and `Barlett` is a plain typo for Bartlett, Tennessee. Only the double
+  space was taken out of `St. Paul` — that is how the city writes itself, and
+  the same source has St. Louis, St. Petersburg and St. Charles — while
+  `Ft.` was expanded, since the same source writes Fort Wayne, Fort Collins,
+  Fort Lauderdale and Fort Pierce in full. The two Kansas Cities are told
+  apart automatically (see "Two cities of the same name").
+
 The first three (polygon maps) were regenerated (not just built once and
 hand-edited) when the lakes layer was added, confirmed via `git diff` to
 produce byte-identical `map.json`/`tour.json` — the pipeline is
