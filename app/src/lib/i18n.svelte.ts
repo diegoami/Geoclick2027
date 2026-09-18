@@ -55,6 +55,10 @@ export type TranslationKey =
 	| 'mapType.provinces'
 	| 'mapType.prefectures'
 	| 'mapType.districts'
+	| 'mapType.cities'
+	| 'mapType.citiesEast'
+	| 'mapType.citiesCenter'
+	| 'mapType.citiesWest'
 	| 'quiz.subtitle'
 	| 'quiz.closeAriaLabel'
 	| 'quiz.known'
@@ -139,6 +143,10 @@ const en: Dictionary = {
 	'mapType.provinces': 'Provinces',
 	'mapType.prefectures': 'Prefectures',
 	'mapType.districts': 'Districts',
+	'mapType.cities': 'Cities',
+	'mapType.citiesEast': 'Cities — East',
+	'mapType.citiesCenter': 'Cities — Center',
+	'mapType.citiesWest': 'Cities — West',
 
 	'quiz.subtitle': 'Drag each name onto its region — {placed} / {total} placed',
 	'quiz.closeAriaLabel': 'Close and view the map',
@@ -236,6 +244,10 @@ const de: Dictionary = {
 	'mapType.provinces': 'Provinzen',
 	'mapType.prefectures': 'Präfekturen',
 	'mapType.districts': 'Bezirke',
+	'mapType.cities': 'Städte',
+	'mapType.citiesEast': 'Städte — Osten',
+	'mapType.citiesCenter': 'Städte — Mitte',
+	'mapType.citiesWest': 'Städte — Westen',
 
 	'quiz.subtitle': 'Ziehe jeden Namen auf seine Region — {placed} / {total} platziert',
 	'quiz.closeAriaLabel': 'Schließen und Karte ansehen',
@@ -333,6 +345,10 @@ const it: Dictionary = {
 	'mapType.provinces': 'Province',
 	'mapType.prefectures': 'Prefetture',
 	'mapType.districts': 'Distretti',
+	'mapType.cities': 'Città',
+	'mapType.citiesEast': 'Città — Est',
+	'mapType.citiesCenter': 'Città — Centro',
+	'mapType.citiesWest': 'Città — Ovest',
 
 	'quiz.subtitle': 'Trascina ogni nome sulla sua regione — {placed} / {total} posizionati',
 	'quiz.closeAriaLabel': 'Chiudi e guarda la mappa',

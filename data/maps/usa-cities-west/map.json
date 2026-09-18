@@ -1,0 +1,847 @@
+{
+	"id": "usa-cities-west",
+	"name": "USA — Cities — West",
+	"country": "United States of America",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "everett",
+			"name": "Everett",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-122.1999677,
+				47.9604175
+			],
+			"bbox": [
+				-122.1999677,
+				47.9604175,
+				-122.1999677,
+				47.9604175
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "spokane",
+			"name": "Spokane",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-117.4199494,
+				47.669996
+			],
+			"bbox": [
+				-117.4199494,
+				47.669996,
+				-117.4199494,
+				47.669996
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "seattle",
+			"name": "Seattle",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-122.31532231603904,
+				47.600423319460475
+			],
+			"bbox": [
+				-122.31532231603904,
+				47.600423319460475,
+				-122.31532231603904,
+				47.600423319460475
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "tacoma",
+			"name": "Tacoma",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-122.44682411312154,
+				47.24056773446696
+			],
+			"bbox": [
+				-122.44682411312154,
+				47.24056773446696,
+				-122.44682411312154,
+				47.24056773446696
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "vancouver",
+			"name": "Vancouver",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-122.6399925,
+				45.6303013
+			],
+			"bbox": [
+				-122.6399925,
+				45.6303013,
+				-122.6399925,
+				45.6303013
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "portland",
+			"name": "Portland",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-122.6819359,
+				45.5219697
+			],
+			"bbox": [
+				-122.6819359,
+				45.5219697,
+				-122.6819359,
+				45.5219697
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "salem",
+			"name": "Salem",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-123.0238967,
+				44.9280703
+			],
+			"bbox": [
+				-123.0238967,
+				44.9280703,
+				-123.0238967,
+				44.9280703
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "eugene",
+			"name": "Eugene",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-123.1000161,
+				44.0500102
+			],
+			"bbox": [
+				-123.1000161,
+				44.0500102,
+				-123.1000161,
+				44.0500102
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "boise",
+			"name": "Boise",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-116.2274899,
+				43.6085901
+			],
+			"bbox": [
+				-116.2274899,
+				43.6085901,
+				-116.2274899,
+				43.6085901
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "ogden",
+			"name": "Ogden",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-111.9680341,
+				41.2323786
+			],
+			"bbox": [
+				-111.9680341,
+				41.2323786,
+				-111.9680341,
+				41.2323786
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "salt-lake-city",
+			"name": "Salt Lake City",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-111.9319978,
+				40.7769622
+			],
+			"bbox": [
+				-111.9319978,
+				40.7769622,
+				-111.9319978,
+				40.7769622
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "fort-collins",
+			"name": "Fort Collins",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-105.0588693,
+				40.5606883
+			],
+			"bbox": [
+				-105.0588693,
+				40.5606883,
+				-105.0588693,
+				40.5606883
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "provo",
+			"name": "Provo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-111.63777,
+				40.2488985
+			],
+			"bbox": [
+				-111.63777,
+				40.2488985,
+				-111.63777,
+				40.2488985
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "denver",
+			"name": "Denver",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-104.9859618,
+				39.7411339
+			],
+			"bbox": [
+				-104.9859618,
+				39.7411339,
+				-104.9859618,
+				39.7411339
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "aurora",
+			"name": "Aurora",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-104.808497,
+				39.6958574
+			],
+			"bbox": [
+				-104.808497,
+				39.6958574,
+				-104.808497,
+				39.6958574
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "reno",
+			"name": "Reno",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-119.8200096,
+				39.529976
+			],
+			"bbox": [
+				-119.8200096,
+				39.529976,
+				-119.8200096,
+				39.529976
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "colorado-springs",
+			"name": "Colorado Springs",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-104.7919863,
+				38.8629625
+			],
+			"bbox": [
+				-104.7919863,
+				38.8629625,
+				-104.7919863,
+				38.8629625
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "sacramento",
+			"name": "Sacramento",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-121.4719839,
+				38.5769672
+			],
+			"bbox": [
+				-121.4719839,
+				38.5769672,
+				-121.4719839,
+				38.5769672
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "santa-rosa",
+			"name": "Santa Rosa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-122.6999889,
+				38.4504037
+			],
+			"bbox": [
+				-122.6999889,
+				38.4504037,
+				-122.6999889,
+				38.4504037
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "stockton",
+			"name": "Stockton",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-121.289739,
+				37.958134
+			],
+			"bbox": [
+				-121.289739,
+				37.958134,
+				-121.289739,
+				37.958134
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "berkeley",
+			"name": "Berkeley",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-122.271152,
+				37.8739014
+			],
+			"bbox": [
+				-122.271152,
+				37.8739014,
+				-122.271152,
+				37.8739014
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "oakland",
+			"name": "Oakland",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-122.27803818707952,
+				37.80472502788702
+			],
+			"bbox": [
+				-122.27803818707952,
+				37.80472502788702,
+				-122.27803818707952,
+				37.80472502788702
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "san-francisco",
+			"name": "San Francisco",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-122.39959956304557,
+				37.784262651527904
+			],
+			"bbox": [
+				-122.39959956304557,
+				37.784262651527904,
+				-122.39959956304557,
+				37.784262651527904
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "modesto",
+			"name": "Modesto",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-120.9899899,
+				37.6554134
+			],
+			"bbox": [
+				-120.9899899,
+				37.6554134,
+				-120.9899899,
+				37.6554134
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "san-mateo",
+			"name": "San Mateo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-122.30321361997188,
+				37.54055384225283
+			],
+			"bbox": [
+				-122.30321361997188,
+				37.54055384225283,
+				-122.30321361997188,
+				37.54055384225283
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "san-jose",
+			"name": "San Jose",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-121.88817862628899,
+				37.33094269973713
+			],
+			"bbox": [
+				-121.88817862628899,
+				37.33094269973713,
+				-121.88817862628899,
+				37.33094269973713
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "fresno",
+			"name": "Fresno",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-119.7729841,
+				36.7477169
+			],
+			"bbox": [
+				-119.7729841,
+				36.7477169,
+				-119.7729841,
+				36.7477169
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "las-vegas",
+			"name": "Las Vegas",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-115.15136155601854,
+				36.16476322583196
+			],
+			"bbox": [
+				-115.15136155601854,
+				36.16476322583196,
+				-115.15136155601854,
+				36.16476322583196
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "bakersfield",
+			"name": "Bakersfield",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-119.0199809,
+				35.3699715
+			],
+			"bbox": [
+				-119.0199809,
+				35.3699715,
+				-119.0199809,
+				35.3699715
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "albuquerque",
+			"name": "Albuquerque",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-106.6413308,
+				35.1049748
+			],
+			"bbox": [
+				-106.6413308,
+				35.1049748,
+				-106.6413308,
+				35.1049748
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "lancaster",
+			"name": "Lancaster",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-118.135823,
+				34.6980487
+			],
+			"bbox": [
+				-118.135823,
+				34.6980487,
+				-118.135823,
+				34.6980487
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "san-bernardino",
+			"name": "San Bernardino",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-117.3019801,
+				34.1223296
+			],
+			"bbox": [
+				-117.3019801,
+				34.1223296,
+				-117.3019801,
+				34.1223296
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "los-angeles",
+			"name": "Los Angeles",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-118.23198647223317,
+				34.049219260337075
+			],
+			"bbox": [
+				-118.23198647223317,
+				34.049219260337075,
+				-118.23198647223317,
+				34.049219260337075
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "riverside",
+			"name": "Riverside",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-117.3980386,
+				33.941945
+			],
+			"bbox": [
+				-117.3980386,
+				33.941945,
+				-117.3980386,
+				33.941945
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "palm-springs",
+			"name": "Palm Springs",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-116.5330526,
+				33.7773556
+			],
+			"bbox": [
+				-116.5330526,
+				33.7773556,
+				-116.5330526,
+				33.7773556
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "long-beach",
+			"name": "Long Beach",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-118.20033735659706,
+				33.77701767314316
+			],
+			"bbox": [
+				-118.20033735659706,
+				33.77701767314316,
+				-118.20033735659706,
+				33.77701767314316
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "irvine",
+			"name": "Irvine",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-117.8299502,
+				33.6804106
+			],
+			"bbox": [
+				-117.8299502,
+				33.6804106,
+				-117.8299502,
+				33.6804106
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "glendale",
+			"name": "Glendale",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-112.17449497904157,
+				33.53543115135483
+			],
+			"bbox": [
+				-112.17449497904157,
+				33.53543115135483,
+				-112.17449497904157,
+				33.53543115135483
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "phoenix",
+			"name": "Phoenix",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-112.06736527766587,
+				33.44832240381263
+			],
+			"bbox": [
+				-112.06736527766587,
+				33.44832240381263,
+				-112.06736527766587,
+				33.44832240381263
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "mesa",
+			"name": "Mesa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-111.82096696450179,
+				33.414795714987406
+			],
+			"bbox": [
+				-111.82096696450179,
+				33.414795714987406,
+				-111.82096696450179,
+				33.414795714987406
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "oceanside",
+			"name": "Oceanside",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-117.34581123442152,
+				33.191499041848665
+			],
+			"bbox": [
+				-117.34581123442152,
+				33.191499041848665,
+				-117.34581123442152,
+				33.191499041848665
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "san-diego",
+			"name": "San Diego",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-117.15088145402623,
+				32.71891385421138
+			],
+			"bbox": [
+				-117.15088145402623,
+				32.71891385421138,
+				-117.15088145402623,
+				32.71891385421138
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "tucson",
+			"name": "Tucson",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-110.8919321,
+				32.2069426
+			],
+			"bbox": [
+				-110.8919321,
+				32.2069426,
+				-110.8919321,
+				32.2069426
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "el-paso",
+			"name": "El Paso",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-106.511941,
+				31.7819298
+			],
+			"bbox": [
+				-106.511941,
+				31.7819298,
+				-106.511941,
+				31.7819298
+			],
+			"colorIndex": 1
+		}
+	],
+	"tourOrder": [
+		"everett",
+		"spokane",
+		"seattle",
+		"tacoma",
+		"vancouver",
+		"portland",
+		"salem",
+		"eugene",
+		"boise",
+		"ogden",
+		"salt-lake-city",
+		"fort-collins",
+		"provo",
+		"denver",
+		"aurora",
+		"reno",
+		"colorado-springs",
+		"sacramento",
+		"santa-rosa",
+		"stockton",
+		"berkeley",
+		"oakland",
+		"san-francisco",
+		"modesto",
+		"san-mateo",
+		"san-jose",
+		"fresno",
+		"las-vegas",
+		"bakersfield",
+		"albuquerque",
+		"lancaster",
+		"san-bernardino",
+		"los-angeles",
+		"riverside",
+		"palm-springs",
+		"long-beach",
+		"irvine",
+		"glendale",
+		"phoenix",
+		"mesa",
+		"oceanside",
+		"san-diego",
+		"tucson",
+		"el-paso"
+	]
+}

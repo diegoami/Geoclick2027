@@ -180,7 +180,16 @@ export const mapGroups: CountryGroup[] = [
 	},
 	{
 		country: 'USA',
-		maps: [{ id: 'usa-states', labelKey: 'mapType.states' }]
+		maps: [
+			{ id: 'usa-states', labelKey: 'mapType.states' },
+			// "Cities", not "Towns": every entry is over 200 000 people, and the
+			// slices are there because one map of 281 cities would be both too
+			// long and, around New York, too crowded to play (FT-28).
+			{ id: 'usa-cities', labelKey: 'mapType.cities' },
+			{ id: 'usa-cities-east', labelKey: 'mapType.citiesEast' },
+			{ id: 'usa-cities-center', labelKey: 'mapType.citiesCenter' },
+			{ id: 'usa-cities-west', labelKey: 'mapType.citiesWest' }
+		]
 	}
 ];
 
