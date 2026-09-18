@@ -26,6 +26,7 @@ import {
 	pmtilesConvert
 } from './mapBuildUtils.js';
 import { colorizeMapDir } from './mapColors.js';
+import { disambiguate, isUnbounded, parseBounds, withinBounds } from './placeSelection.js';
 
 const SOURCE_SHP = path.join(
 	REPO_ROOT,
@@ -64,6 +65,16 @@ const NAME_FIXUPS: Record<string, Record<string, string>> = {
 		// Two more missing diacritics, confirmed against NAME_ES.
 		Nezahualcoyotl: 'Nezahualcóyotl',
 		'Ciudad Obregon': 'Ciudad Obregón'
+	},
+	// Three double-space typos in the US list, found by auditing every name
+	// above 200k for FT-27 - the same class as the Russian one below. The two
+	// abbreviations are expanded while they are being fixed: a quiz slip that
+	// says 'Ft. Worth' asks the player to recognise an abbreviation rather
+	// than a city.
+	'United States of America': {
+		'Washington,  D.C.': 'Washington, D.C.',
+		'St.  Paul': 'Saint Paul',
+		'Ft.  Worth': 'Fort Worth'
 	},
 	// Plain NAME has a literal double-space typo for the one Russian city
 	// whose name contains a space - confirmed against NAME_EN's correctly
@@ -139,10 +150,15 @@ async function main() {
 	// "Great Britain" towns map excluding Northern Ireland (part of the UK,
 	// not Great Britain), same reasoning as build-map.ts's --exclude.
 	const exclude = args.exclude ? args.exclude.split(',').map((s) => s.trim()) : [];
+	// --lon-min/--lon-max/--lat-min/--lat-max cut a country into slices, for a
+	// country with far more cities than one map can hold (FT-27,
+	// docs/PLAN_V0.7.md). Unbounded by default, so every map built before
+	// these existed rebuilds identically.
+	const bounds = parseBounds(args);
 
 	if (!country || !outDir) {
 		console.error(
-			'Usage: build-points-map.ts --country="Italy" --out=data/maps/italy-towns-100k [--name-field=NAME_IT] [--min-population=100000] [--min-count=5] [--max-count=50] [--name="Italy — Towns"] [--exclude=Belfast]'
+			'Usage: build-points-map.ts --country="Italy" --out=data/maps/italy-towns-100k [--name-field=NAME_IT] [--min-population=100000] [--min-count=5] [--max-count=50] [--name="Italy — Towns"] [--exclude=Belfast] [--lon-min=-104 --lon-max=-87] [--lat-min=41.3 --lat-max=43.8]'
 		);
 		process.exit(1);
 	}
@@ -193,7 +209,9 @@ async function main() {
 		'-where',
 		whereClause,
 		'-select',
-		`${nameField},NAME,POP_MAX`,
+		// ADM1NAME rides along so two places of the same name can be told
+		// apart by the region they are in (FT-27).
+		`${nameField},NAME,ADM1NAME,POP_MAX`,
 		filteredPath,
 		SOURCE_SHP
 	]);
@@ -202,9 +220,21 @@ async function main() {
 		`[2/5] Selecting towns (population > ${minPopulation}, min ${minCount}, max ${maxCount === Infinity ? 'none' : maxCount}) and deriving draft map.json...`
 	);
 	const geojson: PlaceCollection = JSON.parse(readFileSync(filteredPath, 'utf-8'));
-	const byPopulationDesc = [...geojson.features].sort(
-		(a, b) => b.properties.POP_MAX - a.properties.POP_MAX
-	);
+	// The slice is applied first: "the 50 biggest" then means the 50 biggest
+	// of this part of the country, not of the whole of it.
+	const inSlice = withinBounds(
+		geojson.features.map((feature) => ({
+			feature,
+			lon: feature.geometry.coordinates[0],
+			lat: feature.geometry.coordinates[1]
+		})),
+		bounds
+	).map((entry) => entry.feature);
+	if (!isUnbounded(bounds))
+		console.log(
+			`      slice keeps ${inSlice.length} of ${geojson.features.length} places in the country`
+		);
+	const byPopulationDesc = [...inSlice].sort((a, b) => b.properties.POP_MAX - a.properties.POP_MAX);
 	let selectedFeatures = byPopulationDesc.filter(
 		(feature) => feature.properties.POP_MAX > minPopulation
 	);
@@ -222,17 +252,29 @@ async function main() {
 	}
 
 	const fixups = NAME_FIXUPS[country] ?? {};
-	const withNames = selectedFeatures.map((feature) => {
-		const p = feature.properties;
-		const rawName: string = (p[nameField] as string | null | undefined) || p.NAME;
-		const name: string = fixups[rawName] ?? rawName;
+	// Two places of the same name would collide on the map's feature-state key
+	// (promoteId: 'name'), so each gets its region added and keeps the plain
+	// name as an alias - "Kansas City, Missouri" and "Kansas City, Kansas"
+	// (FT-27). A name that is already unique is untouched.
+	const named = disambiguate(
+		selectedFeatures.map((feature) => {
+			const p = feature.properties;
+			const rawName: string = (p[nameField] as string | null | undefined) || p.NAME;
+			return {
+				feature,
+				name: fixups[rawName] ?? rawName,
+				region: (p.ADM1NAME as string | null | undefined) || undefined
+			};
+		})
+	);
+	const withNames = named.map(({ feature, name, aliases }) => {
 		const centroid = feature.geometry.coordinates as [number, number];
 		return {
 			id: slugify(name),
 			name,
 			type: 'city',
 			tier: 1,
-			aliases: [] as string[],
+			aliases,
 			centroid,
 			// Degenerate, not a real extent - a point target has no area.
 			// TourView branches on target.type before reading bbox for

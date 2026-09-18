@@ -585,6 +585,47 @@ whichever duplicate has the higher `POP_MAX` (the candidate list is
 still population-sorted at that point) - a general fix, not scoped to
 this batch, so it silently protects every future country too.
 
+### Slicing a country: `--lon-min` / `--lon-max` / `--lat-min` / `--lat-max` (FT-27)
+
+Added for the United States, which has 281 cities over 100 000 and 177
+over 200 000 — far more than one map can ask a player to place, and, worse,
+unplayable as one map at all: at a country-wide zoom Newark and New York are
+16.8 km apart, about two pixels against a 24 px drop tolerance. A slice is
+both shorter and zoomed in enough to be fair.
+
+```
+--lon-min=-104 --lon-max=-87      # the middle of the United States
+--lat-min=43.8                   # northern Italy
+```
+
+- Any side left out is unbounded, so the flags are a no-op at their
+  defaults: rebuilding `italy-towns-100k` with the updated script produced a
+  byte-identical `map.json` and `tour.json` (2026-09-18).
+- The slice is applied **before** the population threshold and before
+  `--min-count`/`--max-count`, so "the 50 most populous" means the 50 most
+  populous *of the slice*.
+- A place exactly on a boundary is kept by both neighbours' filters, so
+  adjacent slices overlap by a hair rather than dropping a city between
+  them. Pick boundaries in open water or empty country where you can.
+- The selection logic itself lives in `data/scripts/placeSelection.ts`
+  (pure, unit-tested from `app/src/lib/placeSelection.test.ts` the way
+  `mapColors.ts` is) rather than inside the build script.
+
+### Two cities of the same name (FT-27)
+
+A map's target names must be unique — `data/styles/base.json` keys every
+feature by its name (`promoteId: "name"`), and `mapData.test.ts` enforces
+it. The United States has fifteen repeated city names above 100 000
+(Springfield, Columbus, Portland, Charleston, Kansas City…).
+
+When two selected places share a name, the builder now adds each one's
+admin-1 region — "Kansas City, Missouri" and "Kansas City, Kansas" — and
+keeps the plain name as an `alias`, so the quiz's own matching still accepts
+what a player would call it. A name that is already unique is untouched,
+which is why every map built before this rebuilds identically. If the source
+has no region for a repeated name, both are left alone and `mapData.test.ts`
+fails loudly rather than the builder inventing a name.
+
 ### Adaptive town selection: `--min-count` / `--max-count`
 
 Requested directly by the user (2026-09-13), prompted by this batch's
@@ -618,6 +659,21 @@ sorted by `POP_MAX` descending in JS, and the threshold/min-count/
 max-count logic runs there instead, since min-count/max-count both
 need visibility into the full candidate pool to decide whether to
 reach below the threshold or truncate above it.
+
+## What reproduces, and what doesn't
+
+`map.json` and `tour.json` are reproducible: rebuilding a shipped map with
+the current scripts produces byte-identical files, which is how each new
+flag has been shown to be a no-op at its defaults (`--min-count`/
+`--max-count` in 2026-09-13, the slice flags in 2026-09-18).
+
+`tiles.pmtiles` is **not** byte-stable across toolchain versions. Rebuilding
+`italy-towns-100k` on tippecanoe v2.49.0 in 2026-09-18 produced a tileset
+five bytes shorter and differing from byte 32 on, from identical input (the
+`map.json` was unchanged). Nothing is wrong with either file; tile packing
+is simply not promised to be deterministic between versions. So: **don't
+commit a rebuilt tileset unless the map itself changed** — it is a 200 KB
+diff that says nothing.
 
 ## Beyond Natural Earth's admin-1 data
 
