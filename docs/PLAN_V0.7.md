@@ -198,7 +198,7 @@ the product owner's test on the phone first, then the stable release.
 | FT-28 | **merged** | `2d59d4c` | four maps: 50 over a million, then East 82 / Center 48 / West 44; four source name errors fixed; crowding measured against japan-towns                           |
 | FT-29 | todo       | —         |                                                                                                                                                                  |
 | FT-30 | **merged** | `f18435e` | twelve maps, 60 maps in 28 countries now; three Vietnamese provinces renamed from their macro-regions, Colombia placeholder excluded, Turkey duplicate collapsed |
-| FT-31 | todo       | —         |                                                                                                                                                                  |
+| FT-31 | **merged** | `2993b65` | a search box over country and map label, language-aware; catalog sorted alphabetically                                                                           |
 | FT-32 | todo       | —         | 🧑 two decisions                                                                                                                                                 |
 
 ## Out of scope
