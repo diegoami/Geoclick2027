@@ -14,7 +14,10 @@ Check items off as they land; update "Status" as iterations complete.
   Iteration 5 (local persistence — repository interface + `localStorage`
   backend, quiz results persisted and shown on the home page); Iteration
   6 (spaced repetition — SM-2 scheduler in `packages/srs`, due/not-due
-  quiz sessions, "practice all regions", home page due-state display);
+  quiz sessions, "practice all regions", home page due-state display —
+  the scheduler still runs, but v0.6.0/FT-26 took all three out of the
+  interface: rounds cover the whole map and the home page speaks mastery,
+  see docs/PLAN_V0.6.md);
   `italy-provinces` map (110 targets, see MAPS.md and this section's
   follow-up above); point-target support (`build-points-map.ts`, the
   `targets-circle` style layer) plus `italy-towns-100k`/

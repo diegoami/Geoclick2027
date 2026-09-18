@@ -2,12 +2,8 @@
 	import { onMount } from 'svelte';
 	import { resolve } from '$app/paths';
 	import mapIndex from '../../../data/maps/index.json';
-	import {
-		createProgressRepository,
-		todayLocalDate,
-		type SessionSummary
-	} from '$lib/progressRepository';
-	import { isDue } from '@geoclick/srs';
+	import { createProgressRepository, type SessionSummary } from '$lib/progressRepository';
+	import { handSize, knownCount, mapLevel, type Level } from '$lib/difficulty';
 	import { t, tPlural } from '$lib/i18n.svelte';
 	import LanguageSwitcher from '$lib/LanguageSwitcher.svelte';
 	import { mapDisplayName, mapGroups } from '$lib/mapCatalog';
@@ -36,11 +32,12 @@
 	// fetching.
 	let lastSessions = $state<Record<string, SessionSummary | undefined>>({});
 
-	// "Not started" (no card state at all - map never played) is a distinct
-	// state from "up to date" (played, but everything's graduated past
-	// today) - don't conflate the two, see ROADMAP.md's Iteration 6 design.
-	type DueStatus = { kind: 'notStarted' } | { kind: 'upToDate' } | { kind: 'due'; count: number };
-	let dueStatuses = $state<Record<string, DueStatus | undefined>>({});
+	// How well each map is known (FT-26): the names placed right three times
+	// in a row, out of the map's names, plus how many names its quiz offers at
+	// a time. A map never played has no mastery at all and says nothing - it
+	// is a map to start, not a map at 0.
+	type Mastery = { known: number; total: number; level: Level };
+	let masteries = $state<Record<string, Mastery | undefined>>({});
 
 	// The download link is for web visitors only - pointless inside the desktop
 	// or Android app itself. Off until checked, so the apps never flash it.
@@ -73,25 +70,26 @@
 			if (stale) return;
 			lastSessions = Object.fromEntries(summaryEntries);
 
-			const today = todayLocalDate();
-			const dueEntries = await Promise.all(
+			const masteryEntries = await Promise.all(
 				demoMaps.map(async (map) => {
 					const cardStates = await repository.getCardStates(map.id);
-					if (cardStates.length === 0)
-						return [map.id, { kind: 'notStarted' } as DueStatus] as const;
+					if (cardStates.length === 0) return [map.id, undefined] as const;
 					const byId = new Map(cardStates.map((c) => [c.targetId, c]));
-					// Over the map's CURRENT target ids: unseen targets count as due
-					// (isDue(undefined) is true) and progress for a since-renamed or
-					// removed target is ignored - same semantics as before GC-071.
+					// Over the map's CURRENT target ids: a name with no card state
+					// counts as unknown, and progress for a since-renamed or removed
+					// target is ignored - same semantics as the due counts had.
 					const targetIds = targetIdsByMap.get(map.id) ?? [];
-					const dueCount = targetIds.filter((id) => isDue(byId.get(id), today)).length;
-					const status: DueStatus =
-						dueCount === 0 ? { kind: 'upToDate' } : { kind: 'due', count: dueCount };
-					return [map.id, status] as const;
+					const streaks = targetIds.map((id) => byId.get(id)?.cleanStreak ?? 0);
+					const mastery: Mastery = {
+						known: knownCount(streaks),
+						total: targetIds.length,
+						level: mapLevel(streaks)
+					};
+					return [map.id, mastery] as const;
 				})
 			);
 			if (stale) return;
-			dueStatuses = Object.fromEntries(dueEntries);
+			masteries = Object.fromEntries(masteryEntries);
 		})();
 		return () => {
 			stale = true;
@@ -120,15 +118,21 @@
 
 	{#snippet mapCard(mapId: string, label: string, anchor?: string)}
 		{@const summary = lastSessions[mapId]}
-		{@const due = dueStatuses[mapId]}
+		{@const mastery = masteries[mapId]}
 		<li class="map-card" data-tutorial={anchor}>
 			<a href={resolve('/map/[mapId]/overview', { mapId })}>
 				<span class="map-name">{label}</span>
-				{#if due && due.kind !== 'notStarted'}
-					<span class="due-status" class:up-to-date={due.kind === 'upToDate'}>
-						{due.kind === 'upToDate'
-							? t('home.due.upToDate')
-							: t('home.due.toReview', { count: due.count })}
+				{#if mastery}
+					<span class="mastery" class:all-known={mastery.known === mastery.total}>
+						{t('home.known', { known: mastery.known, total: mastery.total })}
+						<!-- The ladder, but only once it has started holding names back
+						     (FT-21): at level 0 every name is on offer and there is
+						     nothing to explain. -->
+						{#if mastery.level > 0}
+							· {tPlural('quiz.namesAtATime', handSize(mastery.level), {
+								count: handSize(mastery.level)
+							})}
+						{/if}
 					</span>
 				{/if}
 				{#if summary}
@@ -360,12 +364,13 @@
 	a:hover {
 		background: #f4f4f4;
 	}
-	.due-status {
+	.mastery {
 		font-size: 0.8rem;
 		font-weight: 600;
 		color: #b06a2f;
 	}
-	.due-status.up-to-date {
+	/* A map with nothing left to learn reads as done, not as work to do. */
+	.mastery.all-known {
 		color: #4a7c5c;
 	}
 	.last-result {

@@ -45,8 +45,7 @@ export type TranslationKey =
 	| 'fav.remove'
 	| 'home.download.lead'
 	| 'home.download.link'
-	| 'home.due.upToDate'
-	| 'home.due.toReview'
+	| 'home.known'
 	| 'home.lastResult'
 	| 'home.mistakeCount.one'
 	| 'home.mistakeCount.other'
@@ -56,13 +55,9 @@ export type TranslationKey =
 	| 'mapType.provinces'
 	| 'mapType.prefectures'
 	| 'mapType.districts'
-	| 'quiz.practiceModePrefix'
 	| 'quiz.subtitle'
-	| 'quiz.upToDate.title'
-	| 'quiz.upToDate.body'
-	| 'quiz.practiceAllRegions'
 	| 'quiz.closeAriaLabel'
-	| 'quiz.allCaughtUp'
+	| 'quiz.known'
 	| 'quiz.done'
 	| 'quiz.scoreLineRest'
 	| 'quiz.totalMistakes.one'
@@ -70,10 +65,7 @@ export type TranslationKey =
 	| 'quiz.revealedNote'
 	| 'quiz.namesAtATime.one'
 	| 'quiz.namesAtATime.other'
-	| 'quiz.nextReview.one'
-	| 'quiz.nextReview.other'
 	| 'quiz.backToMaps'
-	| 'quiz.practiceNote'
 	| 'quiz.playAgain'
 	| 'quiz.resizeTrayAriaLabel'
 	| 'tour.prev'
@@ -136,8 +128,7 @@ const en: Dictionary = {
 	'fav.remove': 'Remove from favourites',
 	'home.download.lead': 'Prefer an app?',
 	'home.download.link': 'Download for Windows or Android',
-	'home.due.upToDate': 'No reviews needed',
-	'home.due.toReview': '{count} to review',
+	'home.known': '{known} / {total} known',
 	'home.lastResult': 'Last: {perfect}/{total}',
 	'home.mistakeCount.one': '({count} mistake)',
 	'home.mistakeCount.other': '({count} mistakes)',
@@ -149,13 +140,9 @@ const en: Dictionary = {
 	'mapType.prefectures': 'Prefectures',
 	'mapType.districts': 'Districts',
 
-	'quiz.practiceModePrefix': 'Practice mode —',
 	'quiz.subtitle': 'Drag each name onto its region — {placed} / {total} placed',
-	'quiz.upToDate.title': 'Up to date!',
-	'quiz.upToDate.body': 'No reviews needed on this map right now.',
-	'quiz.practiceAllRegions': 'Practice all regions',
 	'quiz.closeAriaLabel': 'Close and view the map',
-	'quiz.allCaughtUp': 'All caught up!',
+	'quiz.known': '{known} / {total} known',
 	'quiz.done': 'Done!',
 	'quiz.scoreLineRest': '/ {total} placed correctly on the first try.',
 	'quiz.totalMistakes.one': '{count} total mistake.',
@@ -163,10 +150,7 @@ const en: Dictionary = {
 	'quiz.revealedNote': '{count} shown after a mistake.',
 	'quiz.namesAtATime.one': 'one name at a time',
 	'quiz.namesAtATime.other': '{count} names at a time',
-	'quiz.nextReview.one': 'Next review in {count} day.',
-	'quiz.nextReview.other': 'Next review in {count} days.',
 	'quiz.backToMaps': 'Back to maps',
-	'quiz.practiceNote': "Practice results don't affect your review schedule.",
 	'quiz.playAgain': 'Play again',
 	'quiz.resizeTrayAriaLabel': 'Resize name tray',
 
@@ -213,7 +197,7 @@ const en: Dictionary = {
 	'tutorial.step8': 'Not sure where a region is? Look it up in the **overview**.',
 	'tutorial.step9': 'Found Sardegna? Go back to the **Quiz**.',
 	'tutorial.step10':
-		'The regions you placed are still marked. Each comes back for review later: sooner if it gave you trouble, less often once you know it.',
+		'The regions you placed are still marked. Place a name right three times in a row and it counts as known — **Progress** shows how far you have got.',
 	'tutorial.step11':
 		'Last one: the **Tour** flies you to each region in turn and shows its name. Open it.'
 };
@@ -241,8 +225,7 @@ const de: Dictionary = {
 	'fav.remove': 'Aus Favoriten entfernen',
 	'home.download.lead': 'Lieber als App?',
 	'home.download.link': 'Für Windows oder Android herunterladen',
-	'home.due.upToDate': 'Keine Wiederholung nötig',
-	'home.due.toReview': '{count} zu wiederholen',
+	'home.known': '{known} / {total} gewusst',
 	'home.lastResult': 'Zuletzt: {perfect}/{total}',
 	'home.mistakeCount.one': '({count} Fehler)',
 	'home.mistakeCount.other': '({count} Fehler)',
@@ -254,13 +237,9 @@ const de: Dictionary = {
 	'mapType.prefectures': 'Präfekturen',
 	'mapType.districts': 'Bezirke',
 
-	'quiz.practiceModePrefix': 'Übungsmodus —',
 	'quiz.subtitle': 'Ziehe jeden Namen auf seine Region — {placed} / {total} platziert',
-	'quiz.upToDate.title': 'Alles aktuell!',
-	'quiz.upToDate.body': 'Für diese Karte ist gerade keine Wiederholung nötig.',
-	'quiz.practiceAllRegions': 'Alle Regionen üben',
 	'quiz.closeAriaLabel': 'Schließen und Karte ansehen',
-	'quiz.allCaughtUp': 'Alles nachgeholt!',
+	'quiz.known': '{known} / {total} gewusst',
 	'quiz.done': 'Fertig!',
 	'quiz.scoreLineRest': 'von {total} beim ersten Versuch richtig platziert.',
 	'quiz.totalMistakes.one': '{count} Fehler insgesamt.',
@@ -268,10 +247,7 @@ const de: Dictionary = {
 	'quiz.revealedNote': '{count} nach einem Fehler gezeigt.',
 	'quiz.namesAtATime.one': 'ein Name auf einmal',
 	'quiz.namesAtATime.other': '{count} Namen auf einmal',
-	'quiz.nextReview.one': 'Nächste Wiederholung in {count} Tag.',
-	'quiz.nextReview.other': 'Nächste Wiederholung in {count} Tagen.',
 	'quiz.backToMaps': 'Zurück zu den Karten',
-	'quiz.practiceNote': 'Übungsergebnisse wirken sich nicht auf deinen Wiederholungsplan aus.',
 	'quiz.playAgain': 'Nochmal spielen',
 	'quiz.resizeTrayAriaLabel': 'Größe der Namensablage anpassen',
 
@@ -318,7 +294,7 @@ const de: Dictionary = {
 	'tutorial.step8': 'Nicht sicher, wo eine Region liegt? Schau in der **Übersicht** nach.',
 	'tutorial.step9': 'Sardegna gefunden? Dann zurück zum **Quiz**.',
 	'tutorial.step10':
-		'Deine platzierten Regionen sind noch markiert. Jede kommt später zur Wiederholung zurück: früher, wenn sie dir schwerfiel, seltener, wenn du sie kannst.',
+		'Deine platzierten Regionen sind noch markiert. Dreimal hintereinander richtig, und ein Name gilt als gewusst — **Fortschritt** zeigt, wie weit du bist.',
 	'tutorial.step11':
 		'Zum Schluss die **Tour**: Sie fliegt dich nacheinander zu jeder Region und zeigt ihren Namen. Öffne sie.'
 };
@@ -346,8 +322,7 @@ const it: Dictionary = {
 	'fav.remove': 'Rimuovi dai preferiti',
 	'home.download.lead': "Preferisci un'app?",
 	'home.download.link': 'Scarica per Windows o Android',
-	'home.due.upToDate': 'Nessuna ripetizione necessaria',
-	'home.due.toReview': '{count} da ripassare',
+	'home.known': 'Sai {known} / {total}',
 	'home.lastResult': 'Ultimo: {perfect}/{total}',
 	'home.mistakeCount.one': '({count} errore)',
 	'home.mistakeCount.other': '({count} errori)',
@@ -359,13 +334,9 @@ const it: Dictionary = {
 	'mapType.prefectures': 'Prefetture',
 	'mapType.districts': 'Distretti',
 
-	'quiz.practiceModePrefix': 'Modalità allenamento —',
 	'quiz.subtitle': 'Trascina ogni nome sulla sua regione — {placed} / {total} posizionati',
-	'quiz.upToDate.title': 'Tutto aggiornato!',
-	'quiz.upToDate.body': 'Al momento non ci sono ripetizioni da fare su questa mappa.',
-	'quiz.practiceAllRegions': 'Allenati su tutte le regioni',
 	'quiz.closeAriaLabel': 'Chiudi e guarda la mappa',
-	'quiz.allCaughtUp': 'Tutto recuperato!',
+	'quiz.known': 'Sai {known} / {total}',
 	'quiz.done': 'Fatto!',
 	'quiz.scoreLineRest': 'su {total} posizionati correttamente al primo tentativo.',
 	'quiz.totalMistakes.one': '{count} errore in totale.',
@@ -373,10 +344,7 @@ const it: Dictionary = {
 	'quiz.revealedNote': '{count} mostrati dopo un errore.',
 	'quiz.namesAtATime.one': 'un nome alla volta',
 	'quiz.namesAtATime.other': '{count} nomi alla volta',
-	'quiz.nextReview.one': 'Prossima ripetizione tra {count} giorno.',
-	'quiz.nextReview.other': 'Prossima ripetizione tra {count} giorni.',
 	'quiz.backToMaps': 'Torna alle mappe',
-	'quiz.practiceNote': "I risultati dell'allenamento non influiscono sul piano di ripasso.",
 	'quiz.playAgain': 'Gioca ancora',
 	'quiz.resizeTrayAriaLabel': 'Ridimensiona il vassoio dei nomi',
 
@@ -423,7 +391,7 @@ const it: Dictionary = {
 	'tutorial.step8': "Non sai dov'è una regione? Controlla nella **panoramica**.",
 	'tutorial.step9': 'Trovata la Sardegna? Torna al **Quiz**.',
 	'tutorial.step10':
-		'Le regioni che hai posizionato restano segnate. Ognuna torna più avanti per un ripasso: prima se ti ha messo in difficoltà, più di rado quando la conosci.',
+		'Le regioni che hai posizionato restano segnate. Tre volte di fila giuste e un nome conta come imparato — **Progressi** mostra a che punto sei.',
 	'tutorial.step11':
 		"Per finire, il **Tour**: ti porta da una regione all'altra e ne mostra il nome. Aprilo."
 };

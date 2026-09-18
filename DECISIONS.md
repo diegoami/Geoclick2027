@@ -176,6 +176,11 @@ or amend an entry here as part of that change, not as an afterthought.
   review schedule, and a practice score doesn't. Practice results are
   still shown on the score panel at the end of the round; they just
   aren't kept.
+  *Superseded 2026-09-18 (v0.6.0, FT-26): there is no practice mode any
+  more.* It existed because a due-only round could come up empty; rounds
+  now always cover the whole map, so replaying a mastered map is simply
+  playing it, and every round is graded. See "The scheduler keeps running,
+  out of sight" below.
 - **The score panel's "Play again" only shows when it's actually
   accurate — when a due session finishes and something's still due, not
   automatically.** Found by actually finishing a map: since a revealed
@@ -189,6 +194,11 @@ or amend an entry here as part of that change, not as an afterthought.
   The same fix applies to practice mode's own "Play again": since
   practice never changes due-state, it now starts another practice round
   directly instead of re-running a due-check that can't have changed.
+  *Superseded 2026-09-18 (v0.6.0, FT-26): "Play again" is always accurate
+  now, because there is always the whole map to play again.* With it went
+  "All caught up!", "Next review in N days" and the "Up to date!" screen -
+  and with that screen, the empty-chip glitch the v0.5.0 review found
+  (F13).
 
 ## Data & maps
 
@@ -1101,6 +1111,30 @@ answers:
     without being told.
   - The favourite star is a tip in the outro, not a step. Finish leaves
     the player on the tour, which keeps playing.
+
+## The scheduler keeps running, out of sight (2026-09-18, FT-26)
+
+- **A round is always the whole map.** Due-only rounds were the reason
+  the app had a practice mode, an "Up to date!" screen and a home page
+  full of dates - three pieces of interface explaining a schedule the
+  player never asked for. The product owner's call for v0.6.0 (decision 1
+  in docs/PLAN_V0.6.md): keep the scheduler, hide it. Every answer is
+  still graded and every review date still written, so nothing learned is
+  thrown away and scheduling can come back later - as a suggestion of
+  what to play, not as a gate on what may be played.
+- **The map list says how well you know a map, not when it is due.**
+  "14 / 20 known", plus what the ladder is doing ("3 names at a time")
+  once it has started holding names back. A map never played says
+  nothing at all: it is a map to start, not a map at 0. The score panel
+  ends on the same line, so finishing a round and going back to the list
+  tell the same story. Wording chosen by the product owner, 2026-09-18.
+- **A round you are in the middle of survives a trip to the Overview**
+  (quizRound.ts). Looking a name up in the Overview and coming back is
+  something both the tutorial and the manual tell players to do; with
+  whole-map rounds and nothing "not due" to pre-solve, that trip would
+  otherwise have wiped the round. The round is kept in memory only, per
+  map: a sitting, not a save. A reload or a new day starts fresh, and the
+  tutorial's sandbox throws its round away with the rest of itself.
 
 ## A map opens fully visible (2026-09-18, FT-25)
 
