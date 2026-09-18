@@ -186,6 +186,23 @@ The full home page, scrolled from top to bottom:
 
 On a wide screen the countries sit in two columns; on a phone, in one.
 
+### Finding one map among sixty
+
+Above the list is a **search box**. Type a few letters and the list narrows
+to what matches, with a count underneath:
+
+![Searching for "cities"](manual/home-search.jpg)
+
+- It matches the **country** ("korea" finds South Korea, with both of its
+  maps) and the **kind of map** ("towns" finds every towns map there is).
+- Accents and capitals do not matter, and two words narrow rather than
+  widen: "usa cities" finds only the four US city maps.
+- It searches what you can see, so it follows the language you are in:
+  in German, "Städte" finds the towns maps and "Gouvernements" finds Egypt.
+- **Clear**, or the Escape key, puts the whole list back.
+- Favourites and Recent stay where they are while you search — they are
+  short lists already.
+
 ### The first visit
 
 On a device that has never used Geoclick, the panel isn't there yet, and
