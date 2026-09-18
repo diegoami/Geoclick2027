@@ -30,10 +30,13 @@
 <style>
 	.lang-switcher {
 		display: flex;
-		gap: 0.25rem;
+		/* Wide enough that each pill's touch area (below) stops where its
+		   neighbour's begins, rather than overlapping it. */
+		gap: 0.5rem;
 		font-family: system-ui, sans-serif;
 	}
 	.lang-btn {
+		position: relative;
 		font-family: inherit;
 		font-size: 0.7rem;
 		font-weight: 600;
@@ -44,6 +47,20 @@
 		background: #ffffff; /* opaque over map labels, like the map bar (FT-14) */
 		color: rgba(30, 40, 36, 0.65);
 		cursor: pointer;
+	}
+	/* The pill stays small; what a finger has to hit does not (review F8:
+	   these were 32x22). An invisible area centred on the pill, 44px tall and
+	   half the gap wider on each side, so neighbours touch but never overlap
+	   - an overlap would mean the pill on top silently stealing the edge of
+	   the one beside it. */
+	.lang-btn::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: calc(100% + 0.5rem);
+		height: max(100%, 44px);
+		transform: translate(-50%, -50%);
 	}
 	.lang-btn:hover {
 		background: rgba(255, 255, 255, 1);

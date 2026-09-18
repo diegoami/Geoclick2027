@@ -79,6 +79,21 @@
 	}
 }
 
+/* MapLibre's zoom and compass buttons are 29x29, under the 44px a finger
+ * wants (review F8, FT-32). The buttons grow; their icons are background
+ * images at a fixed size, so the glyphs stay as they were. They sit in a
+ * stack with no gaps, so growing the box is the only honest way to do it -
+ * an invisible overlay would have to overlap its neighbours. */
+/* Named by their own classes, not just "a button in the group": MapLibre
+ * styles them with that exact selector and its stylesheet loads after this
+ * one, so an equally specific rule here would lose. */
+.maplibregl-ctrl-group button.maplibregl-ctrl-zoom-in,
+.maplibregl-ctrl-group button.maplibregl-ctrl-zoom-out,
+.maplibregl-ctrl-group button.maplibregl-ctrl-compass {
+	width: 40px;
+	height: 40px;
+}
+
 /* Names never overlap (FT-23, labelCollision.ts). A name with no room left
  * keeps its place in the DOM - that is how the next pass measures it again -
  * but is not drawn. visibility, not display: a label with no box could never

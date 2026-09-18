@@ -33,7 +33,7 @@ itself. Only the explanation steps (3 and 10) have a Next button.
 | 1 | home page | `home-map-card` (Italy's "Regions" card in the country list) | the route becomes `/map/italy-regions/overview` | choosing a map |
 | 2 | overview | `map` (the map), `zoom-control` (the `+`/`−` buttons) | the player zooms or pans the map | zoom and pan, with mouse, touch or buttons |
 | 3 | overview | `nav-overview` | Next | names are on the overview; magnify by hover or tap |
-| 4 | overview, then progress map | `nav-explore`, then `map` | the player clicks a region on the progress map and its name shows | the progress map: how well each name is known, click to find out |
+| 4 | overview, then the Known map | `nav-explore`, then `map` | the player clicks a region on the Known map and its name shows | the Known map: how well each name is known, click to find out |
 | 5 | explore | `nav-quiz` | the route becomes `/map/italy-regions/quiz` | where the quiz is |
 | 6 | quiz | `slip-sicilia` (a name slip in the tray) | a correct drop, of any slip | drag a name onto its region |
 | 7 | quiz | `slip-sardegna` | a wrong drop, of any slip | what a mistake looks like |
@@ -123,21 +123,21 @@ Touch:
 - **Off-script:** opening the progress map now skips ahead to step 4's second half
   rather than pausing: it's where the tutorial is going next anyway.
 
-### 4. The progress map — overview, then progress map
+### 4. The Known map — overview, then the Known map
 
 Mouse:
 
-> **Progress** shows how well you know this map: the names you have placed
+> **Known** shows how well you know this map: the names you have placed
 > right, as strongly as you know them. Open it and click any region to see
 > which one it is.
 
 Touch:
 
-> **Progress** shows how well you know this map: the names you have placed
+> **Known** shows how well you know this map: the names you have placed
 > right, as strongly as you know them. Open it and tap any region to see
 > which one it is.
 
-- **Highlight:** the Progress tab while on the overview; once the route is
+- **Highlight:** the Known tab while on the overview; once the route is
   `/map/italy-regions` (the progress map), the map instead. Same card, same copy:
   it's one step across two screens.
 - **Moves on:** when the player clicks or taps a region on the progress map and its

@@ -778,11 +778,16 @@
 		background: rgba(255, 255, 255, 0.92);
 		border-top: 1px solid rgba(0, 0, 0, 0.1);
 	}
+	/* The grab strip is 4px of paint; the row around it is what a finger
+	   actually hits, so it is padded to about 22px (review F8, FT-32). Not
+	   the full 44: the tray's own names start right below it and the map is
+	   right above, so a taller invisible strip would take taps meant for
+	   either. */
 	.tray-handle-row {
 		display: flex;
 		justify-content: center;
 		flex: none;
-		padding: 0.3rem 0;
+		padding: 0.55rem 0;
 	}
 	.tray-handle {
 		width: 2.5rem;

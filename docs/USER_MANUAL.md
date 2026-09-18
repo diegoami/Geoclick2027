@@ -7,6 +7,11 @@ looks like, what it does, and what the player sees in return.
 
 It describes **Geoclick v0.5.0** (14 September 2026).
 
+Two screenshots — the Windows and Android app windows in section 16 —
+show an earlier version, since they are pictures of installed apps rather
+than of the web build; everything they illustrate (the window, the
+installer, the badge) is unchanged.
+
 The screenshots come from the web version, on a laptop-sized window
 (1280 × 800) and on a phone-sized screen. The Windows and Android apps
 show exactly the same screens (see [Getting Geoclick](#2-getting-geoclick)).
@@ -21,7 +26,7 @@ favourites and so on) is realistic example data.
 4. [The home page](#4-the-home-page)
 5. [Map screens: what they have in common](#5-map-screens-what-they-have-in-common)
 6. [Overview: see every name](#6-overview-see-every-name)
-7. [Progress: what you know so far](#7-progress-what-you-know-so-far)
+7. [Known: what you know so far](#7-known-what-you-know-so-far)
 8. [Quiz: drag the names onto the map](#8-quiz-drag-the-names-onto-the-map)
 9. [What counts as known](#9-what-counts-as-known)
 10. [Tour: a guided flight over the map](#10-tour-a-guided-flight-over-the-map)
@@ -51,7 +56,7 @@ states or provinces are, and where its main towns and cities are.
   - **Overview:** the whole map with the names written on it, to look at
     and learn from — as many as fit without overlapping, the rest a zoom
     away;
-  - **Progress:** how well you know the map — every name you have placed
+  - **Known:** how well you know the map — every name you have placed
     right, drawn as strongly as you know it; click a region to find out
     what it is;
   - **Quiz:** the game itself. Drag each name from a tray onto the map;
@@ -101,7 +106,7 @@ The Android app fills the phone screen, under the phone's own status bar:
 ```mermaid
 flowchart LR
     H[Home page<br/>list of maps] -->|click a map| O[Overview]
-    O <--> E[Progress]
+    O <--> E[Known]
     O <--> Q[Quiz]
     O <--> T[Tour]
     E <--> Q
@@ -113,7 +118,7 @@ flowchart LR
 - The **home page** lists every map.
 - Clicking a map opens it on its **Overview**.
 - On every map screen, a row of buttons at the top (the *map bar*)
-  switches between **Overview**, **Progress**, **Quiz** and **Tour** for
+  switches between **Overview**, **Known**, **Quiz** and **Tour** for
   that map, or goes back to the list (**Maps**).
 - The **Tutorial** can be started from the home page or from any map
   screen, and it takes you through all of these screens in turn.
@@ -220,7 +225,7 @@ starts by itself.
 
 ## 5. Map screens: what they have in common
 
-Every map screen (Overview, Progress, Quiz and Tour) has the same frame
+Every map screen (Overview, Known, Quiz and Tour) has the same frame
 around the map. Here it is on the Overview of Italy — Regions:
 
 ![A map screen: the map bar, the map name, the zoom buttons](manual/overview.jpg)
@@ -228,7 +233,7 @@ around the map. Here it is on the Overview of Italy — Regions:
 **Top-left, the map bar:**
 
 - **‹ Maps**: back to the home page.
-- **Overview**, **Progress**, **Quiz**, **Tour**: the four modes of this
+- **Overview**, **Known**, **Quiz**, **Tour**: the four modes of this
   map, each with a small icon (an eye, a compass, a tick in a circle, a
   play triangle). The current one is filled orange with white text; the
   others are white with orange text.
@@ -269,7 +274,7 @@ map. Names never get in the way of moving the map.
 
 ### Colours
 
-On Progress, Quiz and Tour, regions are painted in soft pinks, blues,
+On Known, Quiz and Tour, regions are painted in soft pinks, blues,
 purples, oranges and greys, chosen so that neighbouring regions never
 share a colour. On the Overview every region is the same green, because
 none of them is hidden from you there. In the quiz, green means *placed*.
@@ -314,7 +319,7 @@ out. Here Italy — Regions after two clicks on **+**:
 Names stay the same size on screen at every zoom level; they're pinned to
 the middle of their region.
 
-## 7. Progress: what you know so far
+## 7. Known: what you know so far
 
 This tab shows how well you know the map. Every name you have placed
 right in a quiz is written on it, as strongly as you know it; names you
@@ -633,13 +638,13 @@ only there to draw the eye.
 | 1 | home page | "Let's start with a map. Open **Regions**, under Italy." | you open Italy — Regions |
 | 2 | Overview | "Zoom with the mouse wheel or the **+** and **−** buttons, and drag the map to move around. Try it now." | you zoom or move the map |
 | 3 | Overview | "This is the **overview**, where every region shows its name. Hover over a name to enlarge it." | you press **Next** |
-| 4 | Overview, then Progress | "**Progress** shows how well you know this map: the names you have placed right, as strongly as you know them. Open it and click any region to see which one it is." | you click a region on the progress map |
-| 5 | Progress | "Ready to test yourself for real? Open the **Quiz**." | you open the Quiz |
+| 4 | Overview, then Known | "**Known** shows how well you know this map: the names you have placed right, as strongly as you know them. Open it and click any region to see which one it is." | you click a region on the Known map |
+| 5 | Known | "Ready to test yourself for real? Open the **Quiz**." | you open the Quiz |
 | 6 | Quiz | "Drag a name from the tray onto its region. Try **Sicilia**: the big island off the toe of the boot." | you place any name correctly |
 | 7 | Quiz | "Now get one wrong on purpose: drop **Sardegna** anywhere on the mainland. The region you hit flashes red, and Sardegna is shown where it really is." | you make a wrong drop |
 | 8 | Quiz | "Not sure where a region is? Look it up in the **overview**." | you open the Overview |
 | 9 | Overview | "Found Sardegna? Go back to the **Quiz**." | you open the Quiz |
-| 10 | Quiz | "The regions you placed are still marked. Place a name right three times in a row and it counts as known — **Progress** shows how far you have got." | you press **Next** |
+| 10 | Quiz | "The regions you placed are still marked. Place a name right three times in a row and it counts as known — **Known** shows how far you have got." | you press **Next** |
 | 11 | Quiz | "Last one: the **Tour** flies you to each region in turn and shows its name. Open it." | you open the Tour |
 
 On touch screens, steps 2, 3 and 4 say "pinch", "tap" and "drag with one
@@ -653,9 +658,9 @@ Step 3 points at the Overview button:
 
 ![Step 3: the overview](manual/tutorial-step3.jpg)
 
-Step 4 points at Progress:
+Step 4 points at Known:
 
-![Step 4: the progress map](manual/tutorial-step4.jpg)
+![Step 4: the Known map](manual/tutorial-step4.jpg)
 
 In the quiz steps the card sits at the top, so it never covers the tray
 or the island you're asked to find. Step 6 outlines the Sicilia name in
@@ -769,7 +774,7 @@ screen, whichever doesn't cover what the step is about:
 In the Android app, the phone's back button goes **up one level** rather
 than back through every screen you've visited:
 
-- from a map's Quiz, Progress or Tour, back to that map's Overview;
+- from a map's Quiz, Known or Tour, back to that map's Overview;
 - from an Overview, back to the list of maps;
 - from the list of maps, it closes the app.
 
@@ -900,7 +905,7 @@ code-signed; choose *More info*, then *Run anyway*.
 | **Map** | One country's set of places to learn, for example Italy — Regions. |
 | **Place** / **target** | One region, state, province or town on a map. |
 | **Overview** | The map with its names shown — as many as fit without overlapping (a town’s name sits beside its dot); zoom in for the rest. |
-| **Progress** | How well you know the map: each name drawn as strongly as you know it. Clicking a region still names it (this tab was called Explore until v0.5.0). |
+| **Known** | How well you know the map: each name drawn as strongly as you know it. Clicking a region still names it (this tab was Explore until v0.5.0 and Progress until v0.7.0). |
 | **Quiz** | The game: drag each name from the tray onto the map. |
 | **Tour** | The automatic flight from place to place. |
 | **Tray** | The strip of names at the bottom of the quiz. |
