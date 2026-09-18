@@ -42,7 +42,7 @@
 	onMount(() => recordVisit(mapId));
 </script>
 
-<div class="nav-overlay">
+<div class="nav-overlay" data-map-overlay="top">
 	<div class="nav-row">
 		<a class="nav-btn nav-btn--back" href={resolve('/')}>
 			<svg

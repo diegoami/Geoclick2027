@@ -36,6 +36,32 @@ export interface MapDefinition {
 	tourOrder: string[];
 }
 
+/**
+ * Bounds that cover every target's whole extent, for the opening camera fit
+ * (FT-25). Fitting to centroids alone (overallBounds below) left the outer
+ * targets half off the screen on a phone - Puglia's heel on Italy, the west
+ * of Nordrhein-Westfalen on Germany - and the first thing a player had to do
+ * was pan, which is what the v0.5.0 review called out (F1).
+ *
+ * A target whose bbox wraps the antimeridian contributes its centroid only:
+ * merging a wrapping box with non-wrapping ones is ambiguous (see
+ * build-map.ts), and its extent is what would otherwise pull the camera out
+ * to the whole hemisphere - Alaska's Aleutian tip being the reason the fit
+ * was built from centroids in the first place.
+ */
+export function overallExtent(map: MapDefinition): [number, number, number, number] {
+	let [minLon, minLat, maxLon, maxLat] = overallBounds(map);
+	for (const target of map.targets) {
+		if (target.crossesAntimeridian) continue;
+		const [west, south, east, north] = target.bbox;
+		minLon = Math.min(minLon, west);
+		maxLon = Math.max(maxLon, east);
+		minLat = Math.min(minLat, south);
+		maxLat = Math.max(maxLat, north);
+	}
+	return [minLon, minLat, maxLon, maxLat];
+}
+
 /** Overall bounds across every target, for the initial camera fit. Built
  * from centroids rather than per-target bboxes: a target's bbox can wrap
  * the antimeridian (see build-map.ts), and merging wrapping and

@@ -1102,6 +1102,33 @@ answers:
   - The favourite star is a tip in the outro, not a step. Finish leaves
     the player on the tour, which keeps playing.
 
+## A map opens fully visible (2026-09-18, FT-25)
+
+- **The opening fit leaves room for the view's own furniture.** The map
+  bar sits over the top of every map screen and the quiz tray over the
+  bottom, but the camera was fitted to the whole canvas, so on a phone
+  the northernmost regions started behind the bar and the first thing a
+  player had to do was pan - which the v0.5.0 product review called a
+  blocker (F1). Each overlay now says where it is
+  (`data-map-overlay="top"`/`"bottom"`) and the fit measures them, so
+  anything added later is accounted for by saying so in its markup.
+  A side that is covered gets a smaller margin than a bare edge (12 px
+  against 40): the furniture is already a visible boundary, and on a
+  phone every pixel given back is map.
+- **The fit covers each target's whole extent, not just its centroid.**
+  Fitting to centroids (the v0.5.0 behaviour) left the outer targets
+  half off the screen on a phone - Puglia's heel, the west of
+  Nordrhein-Westfalen - which is the same "you have to pan before you
+  can play" problem. A target whose bbox wraps the antimeridian still
+  contributes only its centroid: merging a wrapping box with the others
+  is ambiguous, and Alaska's Aleutian tip would pull the camera out to
+  the whole hemisphere.
+- **What this cannot fix:** a map that reaches far north on a tall narrow
+  screen (Russia at 390 px) hits MapLibre's own limit - the world would
+  be shorter than the viewport - so the camera is clamped and the far
+  north still sits partly behind the bar. Every region's centre is on
+  screen; the alternative would be a map that stops being Mercator.
+
 ## Names never overlap (2026-09-18, FT-23/FT-24)
 
 - **A name is either legible or it isn't drawn.** The product owner's

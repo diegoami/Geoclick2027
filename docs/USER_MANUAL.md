@@ -286,7 +286,7 @@ it (tap it again, or tap anywhere else, to shrink it back). The name grows
 to about one and a half times its size, darkens, and sits on top of its
 neighbours:
 
-![Overview: pointing at "Umbria" enlarges it](manual/overview-magnified.jpg)
+![Overview: pointing at "Toscana" enlarges it](manual/overview-magnified.jpg)
 
 **Zooming in** spreads the names apart, and brings in any that were left
 out. Here Italy — Regions after two clicks on **+**:
