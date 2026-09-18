@@ -5,6 +5,70 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
+## Unreleased
+
+**Harder as you get better: the game now tracks how well you know each name, and the map stops giving the answer away.**
+Eight tasks (FT-19 to FT-26), the programme in
+[`docs/PLAN_V0.6.md`](docs/PLAN_V0.6.md).
+
+For players:
+
+- **Every name you place is remembered as a streak.** Place a name right
+  three times in a row with no mistake and it counts as _known_; one
+  mistake and that name starts again from zero.
+- **The better you know a map, the fewer names you get to choose from.**
+  The tray starts with every name, then offers 6 at a time, then 3, then
+  one — so the last few drops of a round can't be worked out by
+  elimination any more, and a map you know keeps being worth playing.
+- **One mistake and the name is shown.** A wrong drop flashes the region
+  you hit red, then puts the name where it really belongs, in gold-brown.
+  Before, you had three tries and the third one gave it away with no
+  warning.
+- **A progress map replaces Explore.** The tab (now called **Progress**)
+  shows every name you have placed right, written as strongly as you know
+  it: full strength for a name you know, lighter for two right in a row,
+  faint for one. Clicking a region still tells you its name, as Explore
+  did.
+- **Names never overlap.** On any map, a name that has nowhere legible to
+  go tries a line above or below its place and is otherwise left out
+  until you zoom in — the way an atlas does it. A town's name now sits
+  _beside_ its dot, never on top of it, so Italy — Towns shows all 40
+  names instead of 26.
+- **A map opens fully visible on a phone.** The opening view leaves room
+  for the map bar and the quiz tray, and covers each region's whole
+  shape, so you no longer have to pan before you can play.
+- **The home page says how well you know each map** — "14 / 20 known",
+  with "3 names at a time" once the map gets harder — instead of how many
+  places are due for review. The quiz always plays the whole map now, so
+  "Up to date!", practice mode and review counts are gone. Geoclick still
+  keeps a schedule underneath; it just doesn't ask you to think about it.
+- **A round survives a trip to the Overview.** Look a name up and come
+  back: the round is exactly as you left it.
+- The tutorial and the user manual follow all of this, in English, German
+  and Italian.
+
+Everyone playing already starts from a clean streak of zero on every
+name, so the first round after updating will show maps as unknown and
+offer every name; the streaks rebuild over the next few rounds.
+
+Under the hood:
+
+- FT-19: `cleanStreak` in `packages/srs`, persisted in all three stores
+  (localStorage, Tauri SQLite migration 2, Capacitor SQLite).
+- FT-20: `MISSES_BEFORE_REVEAL = 1`; a wrong drop resolves the name.
+- FT-21: `difficulty.ts` — the map's level from its streaks, and the
+  tray's hand of names.
+- FT-22: the retention map in `MapView`, three label strengths and a
+  legend.
+- FT-23/FT-24: `labelCollision.ts` — labels are measured after every map
+  move and placed in the best free spot they have; a symbol layer was
+  reconsidered and rejected again (it would need glyph fonts shipped in
+  the app, and could not magnify one label).
+- FT-25: `mapFit.ts` — overlays declare where they are and the opening
+  fit clears them; the fit covers target extents, not centroids.
+- FT-26: whole-map rounds, mastery copy in three languages,
+  `quizRound.ts` for a round in progress.
+
 ## v0.5.0 — 2026-09-14 — Tutorial, favourites and recent maps
 
 **A tutorial that shows you around, and your favourite and recent maps one tap away.**
@@ -324,7 +388,7 @@ Under the hood:
 - Asset loading works under a subpath, e.g. GitHub Pages (GC-070); the
   `window.__map` debug handle no longer ships to users (GC-020); docs now
   state the real 44 maps / 22 countries (GC-060).
-- The version is kept in step across all three shells *and* both lockfiles
+- The version is kept in step across all three shells _and_ both lockfiles
   by `scripts/sync-version.mjs`, which had been missing `Cargo.lock` and
   `package-lock.json`.
 
