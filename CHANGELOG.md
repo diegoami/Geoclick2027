@@ -5,11 +5,12 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
-## Unreleased
+## v0.6.0 — 2026-09-18 — Harder as you get better
 
 **Harder as you get better: the game now tracks how well you know each name, and the map stops giving the answer away.**
 Eight tasks (FT-19 to FT-26), the programme in
-[`docs/PLAN_V0.6.md`](docs/PLAN_V0.6.md).
+[`docs/PLAN_V0.6.md`](docs/PLAN_V0.6.md). The product owner tried
+v0.6.0-beta.1 before this was cut.
 
 For players:
 
@@ -68,6 +69,22 @@ Under the hood:
   fit clears them; the fit covers target extents, not centroids.
 - FT-26: whole-map rounds, mastery copy in three languages,
   `quizRound.ts` for a round in progress.
+- Android versionCode 60099. Installers: Windows `.msi` and
+  `-setup.exe`, and the Android APK, all rebuilt for this release.
+
+Not covered:
+
+- **Russia on a narrow phone screen** still shows its Arctic coast partly
+  behind the map bar. That far north, the Mercator world is shorter than
+  the viewport, so MapLibre clamps the camera and no amount of padding
+  helps; every region's centre is on screen, and it is no worse than
+  v0.5.0 (DECISIONS.md, "A map opens fully visible").
+- **A name that has nowhere to go is left out**, by design — on Italy —
+  Provinces about half the names show at the opening zoom, the rest
+  appear as you zoom in. This was the product owner's choice over
+  shrinking or stacking names.
+- **Review dates are still kept but never shown.** Scheduling as a
+  suggestion of what to play next is a later release, not this one.
 
 ## v0.5.0 — 2026-09-14 — Tutorial, favourites and recent maps
 
