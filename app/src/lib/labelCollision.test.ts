@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { areaShares, chooseVisible } from './labelCollision';
+import { areaShares, chooseVisible, choosePlacements } from './labelCollision';
 import type { Target } from './mapDefinition';
 
 const rect = (left: number, top: number, width = 60, height = 18) => ({
@@ -115,5 +115,50 @@ describe('areaShares', () => {
 	it('gives point targets, which have no extent, the same score', () => {
 		const shares = areaShares([target('a', [9, 45, 9, 45]), target('b', [12, 41, 12, 41])]);
 		expect([...shares.values()]).toEqual([0, 0]);
+	});
+});
+
+describe('choosePlacements', () => {
+	const at = (x: number, y: number, width = 60, height = 18) => ({
+		offset: [x, y] as [number, number],
+		rect: { left: x, top: y, right: x + width, bottom: y + height }
+	});
+
+	it('gives each label its first free spot', () => {
+		const placements = choosePlacements([
+			{ priority: 1, candidates: [at(0, 0), at(100, 0)] },
+			{ priority: 0, candidates: [at(10, 4), at(200, 0)] }
+		]);
+		expect(placements[0]).toEqual({ visible: true, offset: [0, 0] });
+		// Its first spot was taken, so it took the next one instead of going.
+		expect(placements[1]).toEqual({ visible: true, offset: [200, 0] });
+	});
+
+	it('drops a label only once every spot it has is taken', () => {
+		const placements = choosePlacements([
+			{ priority: 2, candidates: [at(0, 0)] },
+			{ priority: 1, candidates: [at(100, 0)] },
+			{ priority: 0, candidates: [at(5, 2), at(105, 2)] }
+		]);
+		expect(placements[2].visible).toBe(false);
+		// Kept its first choice, so it lands sensibly when the map makes room.
+		expect(placements[2].offset).toEqual([5, 2]);
+	});
+
+	it('leaves the spot a dropped label wanted free for someone else', () => {
+		const placements = choosePlacements([
+			{ priority: 2, candidates: [at(0, 0, 200)] },
+			{ priority: 1, candidates: [at(100, 0)] },
+			{ priority: 0, candidates: [at(210, 0)] }
+		]);
+		expect(placements.map((p) => p.visible)).toEqual([true, false, true]);
+	});
+
+	it('keeps a label that has no size yet, wherever it wanted to be', () => {
+		const placements = choosePlacements([
+			{ priority: 1, candidates: [at(0, 0)] },
+			{ priority: 0, candidates: [at(0, 0, 0, 0)] }
+		]);
+		expect(placements.map((p) => p.visible)).toEqual([true, true]);
 	});
 });

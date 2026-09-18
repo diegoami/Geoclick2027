@@ -7,7 +7,7 @@
 	import type { MapDefinition } from './mapDefinition';
 	import { mapDisplayName } from './mapCatalog';
 	import { tutorialMapGesture } from './tutorial.svelte';
-	import { areaShares, setLabelPriority } from './labelCollision';
+	import { DOT_CLEARANCE_PX, areaShares, registerLabel } from './labelCollision';
 
 	let { mapId }: { mapId: string } = $props();
 
@@ -67,12 +67,19 @@
 					const popup = new maplibregl.Popup({
 						closeButton: false,
 						closeOnClick: false,
+						// On the place itself: the collision pass moves it from there
+						// if it has to (FT-24).
+						anchor: 'center',
 						className: 'geoclick-solved-popup'
 					})
 						.setLngLat(target.centroid)
 						.setText(target.name)
 						.addTo(map);
-					setLabelPriority(popup, shares.get(target.id) ?? 0);
+					registerLabel(popup, {
+						priority: shares.get(target.id) ?? 0,
+						// A town's name sits beside its dot, never on it.
+						beside: target.type === 'city' ? DOT_CLEARANCE_PX : undefined
+					});
 					popups.set(target.id, popup);
 				}
 			});

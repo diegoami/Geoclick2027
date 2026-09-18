@@ -10,7 +10,7 @@
 	import { createProgressRepository } from './progressRepository';
 	import { KNOWN_CLEAN_STREAK } from './difficulty';
 	import { tutorialExploreReveal } from './tutorial.svelte';
-	import { areaShares, setLabelPriority } from './labelCollision';
+	import { DOT_CLEARANCE_PX, areaShares, registerLabel } from './labelCollision';
 
 	let { mapId }: { mapId: string } = $props();
 
@@ -62,12 +62,16 @@
 			const popup = new maplibregl.Popup({
 				closeButton: false,
 				closeOnClick: false,
+				anchor: 'center',
 				className: `geoclick-solved-popup geoclick-retention retention-${tier}`
 			})
 				.setLngLat(target.centroid)
 				.setText(target.name)
 				.addTo(map);
-			setLabelPriority(popup, TIER_RANK[tier] + (shares.get(target.id) ?? 0));
+			registerLabel(popup, {
+				priority: TIER_RANK[tier] + (shares.get(target.id) ?? 0),
+				beside: target.type === 'city' ? DOT_CLEARANCE_PX : undefined
+			});
 			retentionPopups.set(target.id, popup);
 			hasRetention = true;
 		}
@@ -112,10 +116,13 @@
 					popup ??= new maplibregl.Popup({
 						closeButton: false,
 						closeOnClick: false,
+						anchor: 'center',
 						className: 'geoclick-popup'
 					});
 					popup.setLngLat(e.lngLat).setText(name).addTo(map!);
-					setLabelPriority(popup, CLICKED_PRIORITY);
+					// The name you asked for by clicking: it is pinned to the click
+					// itself, so it never needs moving off a dot.
+					registerLabel(popup, { priority: CLICKED_PRIORITY });
 					// The tutorial's Explore step (FT-11) moves on once a name shows.
 					tutorialExploreReveal();
 				});

@@ -504,14 +504,21 @@ that same discipline into any task you pick up:
     the mouse over it sets `.is-hovered`, a tap (down and up within 10px)
     toggles `.is-magnified`. A `:hover` rule on a label would never fire.
     Both classes share one look in `app.css`, so change them together.
-  - Names never overlap (FT-23, `labelCollision.ts`, installed by
-    `createMap` as well): after every map move it measures each label and
-    hides the ones a more important name already covers, with
-    `.is-crowded` (`visibility: hidden`, so the label keeps a size the
-    next pass can measure). A new view only decides *importance*: call
-    `setLabelPriority(popup, n)` after `addTo(map)` - bigger wins, and
+  - Names never overlap (FT-23/FT-24, `labelCollision.ts`, installed by
+    `createMap` as well): after every map move it measures each label,
+    puts each one in the best free spot it has, and hides the ones with
+    nowhere left to go, using `.is-crowded` (`visibility: hidden`, so the
+    label keeps a size the next pass can measure). A view that draws a
+    name does two things: create the popup with `anchor: 'center'` (the
+    pass moves labels with `setOffset`, which only means "this far from
+    the place" if the popup is centred on it), then call
+    `registerLabel(popup, { priority, beside })` right after
+    `addTo(map)`. `priority`: bigger wins a contested spot, and
     `areaShares()` gives the usual "the bigger region keeps its name"
-    ranking. Forget it and the label still works, it just ranks 0.
+    ranking. `beside`: `DOT_CLEARANCE_PX` for a point target (type
+    `'city'`), so the name sits beside the dot instead of on it; leave it
+    out for a region. Forget the call and the label still works - it just
+    ranks 0 and never moves.
 - **Commit messages end with** `Co-Authored-By: Claude Sonnet 5
   <noreply@anthropic.com>` when Claude made the change — see CLAUDE.md.
 
