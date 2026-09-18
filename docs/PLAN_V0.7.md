@@ -192,14 +192,14 @@ the product owner's test on the phone first, then the stable release.
 
 ## Progress ledger
 
-| Task  | State | Merge | Notes            |
-| ----- | ----- | ----- | ---------------- |
-| FT-27 | todo  | —     |                  |
-| FT-28 | todo  | —     |                  |
-| FT-29 | todo  | —     |                  |
-| FT-30 | todo  | —     |                  |
-| FT-31 | todo  | —     |                  |
-| FT-32 | todo  | —     | 🧑 two decisions |
+| Task  | State      | Merge     | Notes                                                                                                                                         |
+| ----- | ---------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| FT-27 | **merged** | `434d703` | slice flags + same-name disambiguation, both pure and unit-tested; the italy-towns rebuild came out byte-identical; three US name typos fixed |
+| FT-28 | todo       | —         |                                                                                                                                               |
+| FT-29 | todo       | —         |                                                                                                                                               |
+| FT-30 | todo       | —         |                                                                                                                                               |
+| FT-31 | todo       | —         |                                                                                                                                               |
+| FT-32 | todo       | —         | 🧑 two decisions                                                                                                                              |
 
 ## Out of scope
 
