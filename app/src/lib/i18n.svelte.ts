@@ -117,7 +117,7 @@ type Dictionary = Record<TranslationKey, string>;
 const en: Dictionary = {
 	'nav.maps': 'Maps',
 	'nav.overview': 'Overview',
-	'nav.explore': 'Progress',
+	'nav.explore': 'Known',
 	'retention.known': 'Known',
 	'retention.nearly': 'Nearly',
 	'retention.seen': 'Seen once',
@@ -204,9 +204,9 @@ const en: Dictionary = {
 	'tutorial.step3.touch':
 		'This is the **overview**, where every region shows its name. Tap a name to enlarge it.',
 	'tutorial.step4':
-		'**Progress** shows how well you know this map: the names you have placed right, as strongly as you know them. Open it and click any region to see which one it is.',
+		'**Known** shows how well you know this map: the names you have placed right, as strongly as you know them. Open it and click any region to see which one it is.',
 	'tutorial.step4.touch':
-		'**Progress** shows how well you know this map: the names you have placed right, as strongly as you know them. Open it and tap any region to see which one it is.',
+		'**Known** shows how well you know this map: the names you have placed right, as strongly as you know them. Open it and tap any region to see which one it is.',
 	'tutorial.step5': 'Ready to test yourself for real? Open the **Quiz**.',
 	'tutorial.step6':
 		'Drag a name from the tray onto its region. Try **Sicilia**: the big island off the toe of the boot.',
@@ -215,7 +215,7 @@ const en: Dictionary = {
 	'tutorial.step8': 'Not sure where a region is? Look it up in the **overview**.',
 	'tutorial.step9': 'Found Sardegna? Go back to the **Quiz**.',
 	'tutorial.step10':
-		'The regions you placed are still marked. Place a name right three times in a row and it counts as known — **Progress** shows how far you have got.',
+		'The regions you placed are still marked. Place a name right three times in a row and it counts as known — **Known** shows how far you have got.',
 	'tutorial.step11':
 		'Last one: the **Tour** flies you to each region in turn and shows its name. Open it.'
 };
@@ -223,7 +223,7 @@ const en: Dictionary = {
 const de: Dictionary = {
 	'nav.maps': 'Karten',
 	'nav.overview': 'Übersicht',
-	'nav.explore': 'Fortschritt',
+	'nav.explore': 'Gewusst',
 	'retention.known': 'Gewusst',
 	'retention.nearly': 'Fast',
 	'retention.seen': 'Einmal',
@@ -310,9 +310,9 @@ const de: Dictionary = {
 	'tutorial.step3.touch':
 		'Das ist die **Übersicht**: Hier steht jede Region mit ihrem Namen. Tippe auf einen Namen, um ihn zu vergrößern.',
 	'tutorial.step4':
-		'**Fortschritt** zeigt, wie gut du diese Karte kennst: die Namen, die du richtig platziert hast, so deutlich, wie du sie kennst. Öffne es und klicke auf eine Region, um zu sehen, welche es ist.',
+		'**Gewusst** zeigt, wie gut du diese Karte kennst: die Namen, die du richtig platziert hast, so deutlich, wie du sie kennst. Öffne es und klicke auf eine Region, um zu sehen, welche es ist.',
 	'tutorial.step4.touch':
-		'**Fortschritt** zeigt, wie gut du diese Karte kennst: die Namen, die du richtig platziert hast, so deutlich, wie du sie kennst. Öffne es und tippe auf eine Region, um zu sehen, welche es ist.',
+		'**Gewusst** zeigt, wie gut du diese Karte kennst: die Namen, die du richtig platziert hast, so deutlich, wie du sie kennst. Öffne es und tippe auf eine Region, um zu sehen, welche es ist.',
 	'tutorial.step5': 'Bereit für den echten Test? Öffne das **Quiz**.',
 	'tutorial.step6':
 		'Ziehe einen Namen aus der Ablage auf seine Region. Versuch es mit **Sicilia**, der großen Insel vor der Stiefelspitze.',
@@ -321,7 +321,7 @@ const de: Dictionary = {
 	'tutorial.step8': 'Nicht sicher, wo eine Region liegt? Schau in der **Übersicht** nach.',
 	'tutorial.step9': 'Sardegna gefunden? Dann zurück zum **Quiz**.',
 	'tutorial.step10':
-		'Deine platzierten Regionen sind noch markiert. Dreimal hintereinander richtig, und ein Name gilt als gewusst — **Fortschritt** zeigt, wie weit du bist.',
+		'Deine platzierten Regionen sind noch markiert. Dreimal hintereinander richtig, und ein Name gilt als gewusst — **Gewusst** zeigt, wie weit du bist.',
 	'tutorial.step11':
 		'Zum Schluss die **Tour**: Sie fliegt dich nacheinander zu jeder Region und zeigt ihren Namen. Öffne sie.'
 };
@@ -329,7 +329,7 @@ const de: Dictionary = {
 const it: Dictionary = {
 	'nav.maps': 'Mappe',
 	'nav.overview': 'Panoramica',
-	'nav.explore': 'Progressi',
+	'nav.explore': 'Conoscenza',
 	'retention.known': 'Sai',
 	'retention.nearly': 'Quasi',
 	'retention.seen': 'Una volta',
@@ -416,9 +416,9 @@ const it: Dictionary = {
 	'tutorial.step3.touch':
 		'Questa è la **panoramica**, dove ogni regione mostra il suo nome. Tocca un nome per ingrandirlo.',
 	'tutorial.step4':
-		'**Progressi** mostra quanto conosci questa mappa: i nomi che hai posizionato bene, con la forza con cui li sai. Aprilo e clicca una regione per scoprire qual è.',
+		'**Conoscenza** mostra quanto conosci questa mappa: i nomi che hai posizionato bene, con la forza con cui li sai. Aprilo e clicca una regione per scoprire qual è.',
 	'tutorial.step4.touch':
-		'**Progressi** mostra quanto conosci questa mappa: i nomi che hai posizionato bene, con la forza con cui li sai. Aprilo e tocca una regione per scoprire qual è.',
+		'**Conoscenza** mostra quanto conosci questa mappa: i nomi che hai posizionato bene, con la forza con cui li sai. Aprilo e tocca una regione per scoprire qual è.',
 	'tutorial.step5': 'Ora la prova vera: apri il **Quiz**.',
 	'tutorial.step6':
 		"Trascina un nome dal vassoio sulla sua regione. Prova con **Sicilia**, l'isola grande davanti alla punta dello stivale.",
@@ -427,7 +427,7 @@ const it: Dictionary = {
 	'tutorial.step8': "Non sai dov'è una regione? Controlla nella **panoramica**.",
 	'tutorial.step9': 'Trovata la Sardegna? Torna al **Quiz**.',
 	'tutorial.step10':
-		'Le regioni che hai posizionato restano segnate. Tre volte di fila giuste e un nome conta come imparato — **Progressi** mostra a che punto sei.',
+		'Le regioni che hai posizionato restano segnate. Tre volte di fila giuste e un nome conta come imparato — **Conoscenza** mostra a che punto sei.',
 	'tutorial.step11':
 		"Per finire, il **Tour**: ti porta da una regione all'altra e ne mostra il nome. Aprilo."
 };

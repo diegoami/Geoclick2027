@@ -1112,6 +1112,39 @@ answers:
   - The favourite star is a tip in the outro, not a step. Finish leaves
     the player on the tour, which keeps playing.
 
+## The tab is called Known, and a finger can hit things (2026-09-18, FT-32)
+
+- **The retention tab is "Known"** (Gewusst, Conoscenza), not Progress.
+  The product owner's call, after playing v0.6.0: the screen shows the
+  names you know, drawn as strongly as you know them, and "Known" says
+  that, where "Progress" describes a journey the app does not otherwise
+  talk about. It also matches the word the map's own legend already uses
+  for a name at full strength. This closes the 🧑 item FT-22 left open.
+- **The difficulty ladder keeps its thresholds** — a quarter of a map
+  known before the tray narrows to six names, 60 % before three, 85 %
+  before one — and the wording "3 names at a time" stands. Also the
+  product owner's call, after playing them. This closes FT-21's 🧑 item.
+- **Touch targets grew without the controls growing** (review F8). The
+  language pills are still 32 × 22 on screen and the favourite star still
+  36 px, but each now carries an invisible area centred on it: 44 px tall
+  for the pills, 44 × 44 for the star. The pills' areas stop exactly where
+  their neighbour's begins — the gap between them was widened to make
+  room — because an overlap would mean one pill silently taking taps
+  meant for the next. MapLibre's zoom buttons had no such room: they sit
+  in a stack with no gaps, so those grew for real, 29 px to 40 px, with
+  their glyphs unchanged.
+- **The quiz tray's handle stops at about 22 px**, not 44. The map is
+  directly above it and the first row of names directly below, so a
+  44 px invisible strip would take taps meant for one or the other. The
+  visible grip is what it was; the row around it is padded as far as it
+  can go without stealing.
+- **The accessibility tree was checked, not assumed.** v0.5.0's notes
+  suspected the star and the language pills of losing their name and
+  pressed state; reading the real tree shows `button "EN" [pressed]` and
+  `button "Favourite: Argentina — Regions"`, so that was the emulator's
+  own tooling, not the app. A TalkBack pass on a real phone is still
+  worth doing, and is the product owner's to run.
+
 ## The scheduler keeps running, out of sight (2026-09-18, FT-26)
 
 - **A round is always the whole map.** Due-only rounds were the reason

@@ -40,6 +40,7 @@
 
 <style>
 	.star {
+		position: relative;
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
@@ -53,6 +54,20 @@
 	.star svg {
 		width: 62%;
 		height: 62%;
+	}
+	/* 36px on a card and 28px in the map bar, both under the 44px a finger
+	   wants (review F8). The star keeps its size; the area around it counts
+	   as the star. On a card that area reaches a few px into the card's own
+	   link, which is the right way round: a tap that close to the star meant
+	   the star. */
+	.star::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: max(100%, 44px);
+		height: max(100%, 44px);
+		transform: translate(-50%, -50%);
 	}
 	.star:hover {
 		color: #b5691f;
