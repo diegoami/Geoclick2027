@@ -1,0 +1,638 @@
+{
+	"id": "colombia-regions",
+	"name": "Colombia — Regions",
+	"country": "Colombia",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "san-andres-y-providencia",
+			"name": "San Andrés y Providencia",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-81.7031,
+				12.5516
+			],
+			"bbox": [
+				-81.7198,
+				12.5229,
+				-81.6864,
+				12.5803
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "la-guajira",
+			"name": "La Guajira",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-72.3818,
+				11.432749999999999
+			],
+			"bbox": [
+				-73.6497,
+				10.4002,
+				-71.1139,
+				12.4653
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "atlantico",
+			"name": "Atlántico",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-74.99555000000001,
+				10.67755
+			],
+			"bbox": [
+				-75.2664,
+				10.2674,
+				-74.7247,
+				11.0877
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "magdalena",
+			"name": "Magdalena",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-74.25455,
+				10.121500000000001
+			],
+			"bbox": [
+				-74.9435,
+				8.8877,
+				-73.5656,
+				11.3553
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "cesar",
+			"name": "Cesar",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-73.52615,
+				9.27225
+			],
+			"bbox": [
+				-74.1371,
+				7.6782,
+				-72.9152,
+				10.8663
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "sucre",
+			"name": "Sucre",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-75.1206,
+				9.18595
+			],
+			"bbox": [
+				-75.6991,
+				8.2799,
+				-74.5421,
+				10.092
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "bolivar",
+			"name": "Bolívar",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-74.6719,
+				8.8527
+			],
+			"bbox": [
+				-75.5816,
+				6.9961,
+				-73.7622,
+				10.7093
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "cordoba",
+			"name": "Córdoba",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-75.65505,
+				8.3962
+			],
+			"bbox": [
+				-76.5051,
+				7.3642,
+				-74.805,
+				9.4282
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "norte-de-santander",
+			"name": "Norte de Santander",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-72.80959999999999,
+				8.1043
+			],
+			"bbox": [
+				-73.6254,
+				6.9132,
+				-71.9938,
+				9.2954
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "antioquia",
+			"name": "Antioquia",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-75.50710000000001,
+				7.17965
+			],
+			"bbox": [
+				-77.1264,
+				5.4894,
+				-73.8878,
+				8.8699
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "santander",
+			"name": "Santander",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-73.4987,
+				6.9421
+			],
+			"bbox": [
+				-74.5194,
+				5.7227,
+				-72.478,
+				8.1615
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "arauca",
+			"name": "Arauca",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-70.8887,
+				6.5631
+			],
+			"bbox": [
+				-72.3454,
+				6.0263,
+				-69.432,
+				7.0999
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "choco",
+			"name": "Chocó",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-76.96915,
+				6.32475
+			],
+			"bbox": [
+				-77.8958,
+				3.9986,
+				-76.0425,
+				8.6509
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "boyaca",
+			"name": "Boyacá",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-73.31325,
+				5.85885
+			],
+			"bbox": [
+				-74.6625,
+				4.6776,
+				-71.964,
+				7.0401
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "casanare",
+			"name": "Casanare",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-71.45439999999999,
+				5.330500000000001
+			],
+			"bbox": [
+				-73.053,
+				4.3097,
+				-69.8558,
+				6.3513
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "caldas",
+			"name": "Caldas",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-75.28645,
+				5.286
+			],
+			"bbox": [
+				-75.9268,
+				4.8001,
+				-74.6461,
+				5.7719
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "risaralda",
+			"name": "Risaralda",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-75.77895000000001,
+				5.1451
+			],
+			"bbox": [
+				-76.1799,
+				4.7129,
+				-75.378,
+				5.5773
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "cundinamarca",
+			"name": "Cundinamarca",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-73.97014999999999,
+				4.7473
+			],
+			"bbox": [
+				-74.8873,
+				3.704,
+				-73.053,
+				5.7906
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "vichada",
+			"name": "Vichada",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-69.24615,
+				4.546
+			],
+			"bbox": [
+				-71.0637,
+				2.7845,
+				-67.4286,
+				6.3075
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "quindio",
+			"name": "Quindío",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-75.6336,
+				4.3976500000000005
+			],
+			"bbox": [
+				-75.8768,
+				4.0785,
+				-75.3904,
+				4.7168
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "bogota",
+			"name": "Bogotá",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-74.24430000000001,
+				4.25445
+			],
+			"bbox": [
+				-74.4936,
+				3.6796,
+				-73.995,
+				4.8293
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "tolima",
+			"name": "Tolima",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-75.30045,
+				4.0924
+			],
+			"bbox": [
+				-76.1128,
+				2.8909,
+				-74.4881,
+				5.2939
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "valle-del-cauca",
+			"name": "Valle del Cauca",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-76.58945,
+				4.0653500000000005
+			],
+			"bbox": [
+				-77.4649,
+				3.095,
+				-75.714,
+				5.0357
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "meta",
+			"name": "Meta",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-72.9789,
+				3.2719500000000004
+			],
+			"bbox": [
+				-74.8975,
+				1.6245,
+				-71.0603,
+				4.9194
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "huila",
+			"name": "Huila",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-75.54685,
+				2.67255
+			],
+			"bbox": [
+				-76.6001,
+				1.573,
+				-74.4936,
+				3.7721
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "guainia",
+			"name": "Guainía",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-68.8854,
+				2.6063
+			],
+			"bbox": [
+				-70.8957,
+				1.1727,
+				-66.8751,
+				4.0399
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "cauca",
+			"name": "Cauca",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-76.92745,
+				2.145
+			],
+			"bbox": [
+				-78.0739,
+				0.9721,
+				-75.781,
+				3.3179
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "guaviare",
+			"name": "Guaviare",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-71.8375,
+				1.7724
+			],
+			"bbox": [
+				-73.6751,
+				0.664,
+				-69.9999,
+				2.8808
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "narino",
+			"name": "Nariño",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-77.9214,
+				1.4906
+			],
+			"bbox": [
+				-78.998,
+				0.3342,
+				-76.8448,
+				2.647
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "caqueta",
+			"name": "Caquetá",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-73.80965,
+				1.1337
+			],
+			"bbox": [
+				-76.297,
+				-0.6833,
+				-71.3223,
+				2.9507
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "putumayo",
+			"name": "Putumayo",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-75.55135,
+				0.43495
+			],
+			"bbox": [
+				-77.2386,
+				-0.5638,
+				-73.8641,
+				1.4337
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "vaupes",
+			"name": "Vaupés",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-70.58664999999999,
+				0.43094999999999994
+			],
+			"bbox": [
+				-72.0358,
+				-1.2393,
+				-69.1375,
+				2.1012
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "amazonas",
+			"name": "Amazonas",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-71.9179,
+				-2.03395
+			],
+			"bbox": [
+				-74.4147,
+				-4.2011,
+				-69.4211,
+				0.1332
+			],
+			"colorIndex": 2
+		}
+	],
+	"tourOrder": [
+		"san-andres-y-providencia",
+		"la-guajira",
+		"atlantico",
+		"magdalena",
+		"cesar",
+		"sucre",
+		"bolivar",
+		"cordoba",
+		"norte-de-santander",
+		"antioquia",
+		"santander",
+		"arauca",
+		"choco",
+		"boyaca",
+		"casanare",
+		"caldas",
+		"risaralda",
+		"cundinamarca",
+		"vichada",
+		"quindio",
+		"bogota",
+		"tolima",
+		"valle-del-cauca",
+		"meta",
+		"huila",
+		"guainia",
+		"cauca",
+		"guaviare",
+		"narino",
+		"caqueta",
+		"putumayo",
+		"vaupes",
+		"amazonas"
+	]
+}

@@ -102,11 +102,21 @@ export function withinBounds<T extends { lon: number; lat: number }>(
 export function disambiguate<T extends { name: string; region?: string }>(
 	places: T[]
 ): (T & { name: string; aliases: string[] })[] {
-	const counts = new Map<string, number>();
-	for (const place of places) counts.set(place.name, (counts.get(place.name) ?? 0) + 1);
+	// Two rows with the same name AND the same region are the same place twice
+	// - Natural Earth has a few (Turkey has both "Sakarya" and "Adapazarı" for
+	// the same city, 3 km apart, and both are Adapazarı in Turkish). Renaming
+	// those would hide a duplicate behind two different names instead of
+	// letting the builder collapse them, so a name is only split apart when
+	// the places really are in different regions.
+	const regionsByName = new Map<string, Set<string>>();
+	for (const place of places) {
+		const regions = regionsByName.get(place.name) ?? new Set<string>();
+		regions.add(place.region ?? '');
+		regionsByName.set(place.name, regions);
+	}
 
 	return places.map((place) => {
-		const shared = (counts.get(place.name) ?? 0) > 1;
+		const shared = (regionsByName.get(place.name)?.size ?? 0) > 1;
 		if (!shared || !place.region) return { ...place, aliases: [] };
 		return {
 			...place,

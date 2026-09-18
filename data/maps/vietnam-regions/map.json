@@ -1,0 +1,1208 @@
+{
+	"id": "vietnam-regions",
+	"name": "Vietnam — Provinces",
+	"country": "Vietnam",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "ha-giang",
+			"name": "Hà Giang",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				104.96475000000001,
+				22.744100000000003
+			],
+			"bbox": [
+				104.3619,
+				22.1702,
+				105.5676,
+				23.318
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "cao-bang",
+			"name": "Cao Bằng",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.01915,
+				22.74375
+			],
+			"bbox": [
+				105.3028,
+				22.3885,
+				106.7355,
+				23.099
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "lai-chau",
+			"name": "Lai Châu",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.04814999999999,
+				22.337400000000002
+			],
+			"bbox": [
+				102.3246,
+				21.8869,
+				103.7717,
+				22.7879
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "lao-cai",
+			"name": "Lào Cai",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				104.09764999999999,
+				22.272399999999998
+			],
+			"bbox": [
+				103.5499,
+				21.7198,
+				104.6454,
+				22.825
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "bac-kan",
+			"name": "Bắc Kạn",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.8743,
+				22.2559
+			],
+			"bbox": [
+				105.4886,
+				21.7877,
+				106.26,
+				22.7241
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "tuyen-quang",
+			"name": "Tuyên Quang",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.2288,
+				22.072499999999998
+			],
+			"bbox": [
+				104.8483,
+				21.4972,
+				105.6093,
+				22.6478
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "lang-son",
+			"name": "Lạng Sơn",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.72380000000001,
+				21.9007
+			],
+			"bbox": [
+				106.114,
+				21.3605,
+				107.3336,
+				22.4409
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "yen-bai",
+			"name": "Yên Bái",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				104.51255,
+				21.796999999999997
+			],
+			"bbox": [
+				103.9133,
+				21.3296,
+				105.1118,
+				22.2644
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "ien-bien",
+			"name": "Điện Biên",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				102.84015,
+				21.6966
+			],
+			"bbox": [
+				102.1187,
+				20.8264,
+				103.5616,
+				22.5668
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "thai-nguyen",
+			"name": "Thái Nguyên",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.8878,
+				21.6792
+			],
+			"bbox": [
+				105.5223,
+				21.3281,
+				106.2533,
+				22.0303
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "bac-giang",
+			"name": "Bắc Giang",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.49305,
+				21.371850000000002
+			],
+			"bbox": [
+				105.9208,
+				21.1341,
+				107.0653,
+				21.6096
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "vinh-phuc",
+			"name": "Vĩnh Phúc",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.54865000000001,
+				21.35565
+			],
+			"bbox": [
+				105.3174,
+				21.1675,
+				105.7799,
+				21.5438
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "phu-tho",
+			"name": "Phú Thọ",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.14005,
+				21.31135
+			],
+			"bbox": [
+				104.8285,
+				20.9188,
+				105.4516,
+				21.7039
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "son-la",
+			"name": "Sơn La",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				104.15145000000001,
+				21.304299999999998
+			],
+			"bbox": [
+				103.2258,
+				20.575,
+				105.0771,
+				22.0336
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "quang-ninh",
+			"name": "Quảng Ninh",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				107.1632,
+				21.19485
+			],
+			"bbox": [
+				106.4445,
+				20.7322,
+				107.8819,
+				21.6575
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "bac-ninh",
+			"name": "Bắc Ninh",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.11789999999999,
+				21.1194
+			],
+			"bbox": [
+				105.929,
+				20.9913,
+				106.3068,
+				21.2475
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "ha-noi",
+			"name": "Hà Nội",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.64605,
+				20.965400000000002
+			],
+			"bbox": [
+				105.2849,
+				20.5683,
+				106.0072,
+				21.3625
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "hai-duong",
+			"name": "Hải Dương",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.37185,
+				20.95935
+			],
+			"bbox": [
+				106.1384,
+				20.6959,
+				106.6053,
+				21.2228
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "hung-yen",
+			"name": "Hưng Yên",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.0849,
+				20.814700000000002
+			],
+			"bbox": [
+				105.9124,
+				20.6316,
+				106.2574,
+				20.9978
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "hai-phong",
+			"name": "Hải Phòng",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.603,
+				20.81305
+			],
+			"bbox": [
+				106.4172,
+				20.6007,
+				106.7888,
+				21.0254
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "hoa-binh",
+			"name": "Hòa Bình",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.3421,
+				20.71835
+			],
+			"bbox": [
+				104.8429,
+				20.3353,
+				105.8413,
+				21.1014
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "ha-nam",
+			"name": "Hà Nam",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.98515,
+				20.525
+			],
+			"bbox": [
+				105.7858,
+				20.3368,
+				106.1845,
+				20.7132
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "thai-binh",
+			"name": "Thái Bình",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.353,
+				20.5033
+			],
+			"bbox": [
+				106.1124,
+				20.2873,
+				106.5936,
+				20.7193
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "nam-inh",
+			"name": "Nam Định",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.2604,
+				20.2375
+			],
+			"bbox": [
+				105.9512,
+				19.9841,
+				106.5696,
+				20.4909
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "ninh-binh",
+			"name": "Ninh Bình",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.84885,
+				20.2076
+			],
+			"bbox": [
+				105.5426,
+				19.9957,
+				106.1551,
+				20.4195
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "thanh-hoa",
+			"name": "Thanh Hóa",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.197,
+				19.95845
+			],
+			"bbox": [
+				104.3598,
+				19.2743,
+				106.0342,
+				20.6426
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "nghe-an",
+			"name": "Nghệ An",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				104.83145,
+				19.2813
+			],
+			"bbox": [
+				103.8567,
+				18.5702,
+				105.8062,
+				19.9924
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "ha-tinh",
+			"name": "Hà Tĩnh",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.7993,
+				18.2879
+			],
+			"bbox": [
+				105.08,
+				17.913,
+				106.5186,
+				18.6628
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "quang-binh",
+			"name": "Quảng Bình",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.30085,
+				17.50725
+			],
+			"bbox": [
+				105.5942,
+				16.9506,
+				107.0075,
+				18.0639
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "quang-tri",
+			"name": "Quảng Trị",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.9726,
+				16.7265
+			],
+			"bbox": [
+				106.5336,
+				16.2908,
+				107.4116,
+				17.1622
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "thua-thien-hue",
+			"name": "Thừa Thiên Huế",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				107.63135,
+				16.38345
+			],
+			"bbox": [
+				107.0626,
+				16.0169,
+				108.2001,
+				16.75
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "a-nang",
+			"name": "Đà Nẵng",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				108.06925000000001,
+				16.097
+			],
+			"bbox": [
+				107.8562,
+				15.9781,
+				108.2823,
+				16.2159
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "quang-nam",
+			"name": "Quảng Nam",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				107.96095,
+				15.52395
+			],
+			"bbox": [
+				107.1603,
+				14.9565,
+				108.7616,
+				16.0914
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "quang-ngai",
+			"name": "Quảng Ngãi",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				108.67675,
+				14.9963
+			],
+			"bbox": [
+				108.2762,
+				14.596,
+				109.0773,
+				15.3966
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "kon-tum",
+			"name": "Kon Tum",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				107.96905000000001,
+				14.66235
+			],
+			"bbox": [
+				107.3199,
+				13.9216,
+				108.6182,
+				15.4031
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "binh-inh",
+			"name": "Bình Định",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				108.97104999999999,
+				14.11105
+			],
+			"bbox": [
+				108.6347,
+				13.5426,
+				109.3074,
+				14.6795
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "gia-lai",
+			"name": "Gia Lai",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				108.15899999999999,
+				13.8184
+			],
+			"bbox": [
+				107.4432,
+				12.9962,
+				108.8748,
+				14.6406
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "phu-yen",
+			"name": "Phú Yên",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				109.0629,
+				13.225650000000002
+			],
+			"bbox": [
+				108.6608,
+				12.7527,
+				109.465,
+				13.6986
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "ak-lak",
+			"name": "Đắk Lắk",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				108.24885,
+				12.768049999999999
+			],
+			"bbox": [
+				107.4604,
+				12.1519,
+				109.0373,
+				13.3842
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "khanh-hoa",
+			"name": "Khánh Hòa",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				109.03059999999999,
+				12.31775
+			],
+			"bbox": [
+				108.6766,
+				11.7887,
+				109.3846,
+				12.8468
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "ak-nong",
+			"name": "Đắk Nông",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				107.67824999999999,
+				12.23625
+			],
+			"bbox": [
+				107.2278,
+				11.7518,
+				108.1287,
+				12.7207
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "binh-phuoc",
+			"name": "Bình Phước",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.8922,
+				11.7971
+			],
+			"bbox": [
+				106.394,
+				11.2836,
+				107.3904,
+				12.3106
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "lam-ong",
+			"name": "Lâm Đồng",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				108.0018,
+				11.760850000000001
+			],
+			"bbox": [
+				107.2844,
+				11.2187,
+				108.7192,
+				12.303
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "ninh-thuan",
+			"name": "Ninh Thuận",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				108.9265,
+				11.75225
+			],
+			"bbox": [
+				108.6101,
+				11.3234,
+				109.2429,
+				12.1811
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "tay-ninh",
+			"name": "Tây Ninh",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.1346,
+				11.37055
+			],
+			"bbox": [
+				105.8049,
+				10.9706,
+				106.4643,
+				11.7705
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "binh-duong",
+			"name": "Bình Dương",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.65575,
+				11.21715
+			],
+			"bbox": [
+				106.3467,
+				10.881,
+				106.9648,
+				11.5533
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "binh-thuan",
+			"name": "Bình Thuận",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				108.16845,
+				11.06875
+			],
+			"bbox": [
+				107.4309,
+				10.5735,
+				108.906,
+				11.564
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "ong-nai",
+			"name": "Đồng Nai",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				107.1985,
+				11.06655
+			],
+			"bbox": [
+				106.7875,
+				10.5669,
+				107.6095,
+				11.5662
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "thanh-pho-ho-chi-minh",
+			"name": "Thành phố Hồ Chí Minh",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.6739,
+				10.7981
+			],
+			"bbox": [
+				106.3637,
+				10.4604,
+				106.9841,
+				11.1358
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "long-an",
+			"name": "Long An",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.13385,
+				10.716
+			],
+			"bbox": [
+				105.5236,
+				10.4164,
+				106.7441,
+				11.0156
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "ong-thap",
+			"name": "Đồng Tháp",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.58590000000001,
+				10.6322
+			],
+			"bbox": [
+				105.2091,
+				10.3014,
+				105.9627,
+				10.963
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "ba-ria-vung-tau",
+			"name": "Bà Rịa - Vũng Tàu",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				107.30335,
+				10.59
+			],
+			"bbox": [
+				107.0202,
+				10.3785,
+				107.5865,
+				10.8015
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "an-giang",
+			"name": "An Giang",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.1537,
+				10.55685
+			],
+			"bbox": [
+				104.7244,
+				10.1996,
+				105.583,
+				10.9141
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "tien-giang",
+			"name": "Tiền Giang",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.3137,
+				10.43385
+			],
+			"bbox": [
+				105.8393,
+				10.2754,
+				106.7881,
+				10.5923
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "can-tho",
+			"name": "Cần Thơ",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.57634999999999,
+				10.245049999999999
+			],
+			"bbox": [
+				105.2415,
+				10.0436,
+				105.9112,
+				10.4465
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "vinh-long",
+			"name": "Vĩnh Long",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.9693,
+				10.094999999999999
+			],
+			"bbox": [
+				105.6922,
+				9.8886,
+				106.2464,
+				10.3014
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "ben-tre",
+			"name": "Bến Tre",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.3731,
+				10.077200000000001
+			],
+			"bbox": [
+				105.9549,
+				9.817,
+				106.7913,
+				10.3374
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "kien-giang",
+			"name": "Kiên Giang",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				104.68815000000001,
+				9.96355
+			],
+			"bbox": [
+				103.8574,
+				9.4058,
+				105.5189,
+				10.5213
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "hau-giang",
+			"name": "Hậu Giang",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.63185,
+				9.855
+			],
+			"bbox": [
+				105.3616,
+				9.5868,
+				105.9021,
+				10.1232
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "tra-vinh",
+			"name": "Trà Vinh",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.28605,
+				9.8098
+			],
+			"bbox": [
+				105.9966,
+				9.5421,
+				106.5755,
+				10.0775
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "soc-trang",
+			"name": "Sóc Trăng",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.88315,
+				9.5857
+			],
+			"bbox": [
+				105.5693,
+				9.2547,
+				106.197,
+				9.9167
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "bac-lieu",
+			"name": "Bạc Liêu",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.5741,
+				9.3092
+			],
+			"bbox": [
+				105.2799,
+				9.008,
+				105.8683,
+				9.6104
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "ca-mau",
+			"name": "Cà Mau",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.1003,
+				9.05
+			],
+			"bbox": [
+				104.7746,
+				8.5656,
+				105.426,
+				9.5344
+			],
+			"colorIndex": 1
+		}
+	],
+	"tourOrder": [
+		"ha-giang",
+		"cao-bang",
+		"lai-chau",
+		"lao-cai",
+		"bac-kan",
+		"tuyen-quang",
+		"lang-son",
+		"yen-bai",
+		"ien-bien",
+		"thai-nguyen",
+		"bac-giang",
+		"vinh-phuc",
+		"phu-tho",
+		"son-la",
+		"quang-ninh",
+		"bac-ninh",
+		"ha-noi",
+		"hai-duong",
+		"hung-yen",
+		"hai-phong",
+		"hoa-binh",
+		"ha-nam",
+		"thai-binh",
+		"nam-inh",
+		"ninh-binh",
+		"thanh-hoa",
+		"nghe-an",
+		"ha-tinh",
+		"quang-binh",
+		"quang-tri",
+		"thua-thien-hue",
+		"a-nang",
+		"quang-nam",
+		"quang-ngai",
+		"kon-tum",
+		"binh-inh",
+		"gia-lai",
+		"phu-yen",
+		"ak-lak",
+		"khanh-hoa",
+		"ak-nong",
+		"binh-phuoc",
+		"lam-ong",
+		"ninh-thuan",
+		"tay-ninh",
+		"binh-duong",
+		"binh-thuan",
+		"ong-nai",
+		"thanh-pho-ho-chi-minh",
+		"long-an",
+		"ong-thap",
+		"ba-ria-vung-tau",
+		"an-giang",
+		"tien-giang",
+		"can-tho",
+		"vinh-long",
+		"ben-tre",
+		"kien-giang",
+		"hau-giang",
+		"tra-vinh",
+		"soc-trang",
+		"bac-lieu",
+		"ca-mau"
+	]
+}

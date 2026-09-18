@@ -45,17 +45,20 @@ describe('committed tours at their default speed', () => {
 		expect(tourDurationMs(s, defaultTourSpeed(s))).toBe(165_000);
 	});
 
-	it('only the four longest tours change speed; every other map stays at 1x', () => {
+	it('only the longest tours change speed; every other map stays at 1x', () => {
 		const changed = listMapIds()
 			.filter((id) => defaultTourSpeed(loadSteps(id)) !== 1)
 			.map((id) => `${id}@${defaultTourSpeed(loadSteps(id))}x`)
 			.sort();
-		// usa-cities-east joined them at FT-28: 82 cities is 4:06 at 1x.
+		// Every tour over the 3:00 budget: usa-cities-east joined at FT-28,
+		// turkey-regions (81 provinces) and vietnam-regions (63) at FT-30.
 		expect(changed).toEqual([
 			'italy-provinces@2x',
 			'japan-towns-100k@1.5x',
 			'russia-regions@1.5x',
-			'usa-cities-east@1.5x'
+			'turkey-regions@1.5x',
+			'usa-cities-east@1.5x',
+			'vietnam-regions@1.5x'
 		]);
 	});
 });

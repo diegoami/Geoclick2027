@@ -43,7 +43,7 @@ favourites and so on) is realistic example data.
 Geoclick is a game for learning geography: where a country's regions,
 states or provinces are, and where its main towns and cities are.
 
-- **48 maps of 22 countries.** Most countries have two maps: its regions
+- **60 maps of 28 countries.** Most countries have two maps: its regions
   (called states, provinces, prefectures or districts, depending on the
   country) and its larger towns. Italy also has its 110 provinces. See
   [The maps](#18-the-maps) for the full list.
@@ -182,7 +182,7 @@ the map bar.
 
 The full home page, scrolled from top to bottom:
 
-![The whole home page, with all 48 maps](manual/home-full.jpg)
+![The whole home page, with all 60 maps](manual/home-full.jpg)
 
 On a wide screen the countries sit in two columns; on a phone, in one.
 
@@ -795,7 +795,7 @@ The apps are the same game as the website, packaged to install:
 
 ## 18. The maps
 
-22 countries, 48 maps. The number in brackets is how many places the map
+28 countries, 60 maps. The number in brackets is how many places the map
 asks for.
 
 | Country | Maps |
@@ -805,6 +805,8 @@ asks for.
 | Brazil | States (27) · Towns (48) |
 | Canada | Provinces (13) · Towns (26) |
 | China | Provinces (31) · Towns (50) |
+| Colombia | Regions (33) · Towns (34) |
+| Egypt | Governorates (27) · Towns (30) |
 | Finland | Regions (18) · Towns (8) |
 | France | Regions (13) · Towns (37) |
 | Germany | States (16) · Towns (49) |
@@ -815,13 +817,17 @@ asks for.
 | Japan | Prefectures (47) · Towns (66) |
 | Mexico | States (32) · Towns (49) |
 | Netherlands | Provinces (12) · Towns (12) |
+| Nigeria | States (37) · Towns (50) |
 | Poland | Regions (16) · Towns (22) |
 | Portugal | Districts (18) · Towns (5) |
 | Russia | Regions (83) · Towns (50) |
+| South Korea | Regions (17) · Towns (26) |
 | Spain | Regions (16) · Towns (38) |
 | Sweden | Regions (21) · Towns (5) |
+| Turkey | Provinces (81) · Towns (49) |
 | Ukraine | Regions (27) · Towns (39) |
 | USA | States (49) · Cities (50) · Cities — East (82) · Cities — Center (48) · Cities — West (44) |
+| Vietnam | Provinces (63) · Towns (44) |
 
 - Maps show the country's main territory; far-away overseas territories
   are left out.

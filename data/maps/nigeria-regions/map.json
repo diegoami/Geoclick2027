@@ -1,0 +1,714 @@
+{
+	"id": "nigeria-regions",
+	"name": "Nigeria — States",
+	"country": "Nigeria",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "sokoto",
+			"name": "Sokoto",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.4371,
+				12.70585
+			],
+			"bbox": [
+				4.1203,
+				11.5383,
+				6.7539,
+				13.8734
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "katsina",
+			"name": "Katsina",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.92985,
+				12.21965
+			],
+			"bbox": [
+				6.8818,
+				11.1122,
+				8.9779,
+				13.3271
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "zamfara",
+			"name": "Zamfara",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.12275,
+				12.018799999999999
+			],
+			"bbox": [
+				5.0235,
+				10.8627,
+				7.222,
+				13.1749
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "yobe",
+			"name": "Yobe",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.06335,
+				11.98465
+			],
+			"bbox": [
+				9.6477,
+				10.5942,
+				12.479,
+				13.3751
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "jigawa",
+			"name": "Jigawa",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.36335,
+				11.97465
+			],
+			"bbox": [
+				8.1172,
+				10.9654,
+				10.6095,
+				12.9839
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "borno",
+			"name": "Borno",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.1795,
+				11.8752
+			],
+			"bbox": [
+				11.6891,
+				10.036,
+				14.6699,
+				13.7144
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "kebbi",
+			"name": "Kebbi",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.7469,
+				11.7146
+			],
+			"bbox": [
+				3.4667,
+				10.2011,
+				6.0271,
+				13.2281
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "kano",
+			"name": "Kano",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.54405,
+				11.5593
+			],
+			"bbox": [
+				7.7465,
+				10.549,
+				9.3416,
+				12.5696
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "bauchi",
+			"name": "Bauchi",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.901299999999999,
+				10.99955
+			],
+			"bbox": [
+				8.734,
+				9.4967,
+				11.0686,
+				12.5024
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "gombe",
+			"name": "Gombe",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.2421,
+				10.4586
+			],
+			"bbox": [
+				10.5386,
+				9.5864,
+				11.9456,
+				11.3308
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "kaduna",
+			"name": "Kaduna",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.43905,
+				10.24735
+			],
+			"bbox": [
+				6.0931,
+				8.9992,
+				8.785,
+				11.4955
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "niger",
+			"name": "Niger",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.4552499999999995,
+				9.78005
+			],
+			"bbox": [
+				3.5724,
+				8.2135,
+				7.3381,
+				11.3466
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "plateau",
+			"name": "Plateau",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.60265,
+				9.343399999999999
+			],
+			"bbox": [
+				8.5593,
+				8.3512,
+				10.646,
+				10.3356
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "adamawa",
+			"name": "Adamawa",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.57705,
+				9.198
+			],
+			"bbox": [
+				11.4043,
+				7.4536,
+				13.7498,
+				10.9424
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "kwara",
+			"name": "Kwara",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.4694,
+				9.0515
+			],
+			"bbox": [
+				2.7229,
+				7.9743,
+				6.2159,
+				10.1287
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "federal-capital-territory",
+			"name": "Federal Capital Territory",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.1876999999999995,
+				8.85875
+			],
+			"bbox": [
+				6.7496,
+				8.4068,
+				7.6258,
+				9.3107
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "nasarawa",
+			"name": "Nasarawa",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.293000000000001,
+				8.5862
+			],
+			"bbox": [
+				6.9705,
+				7.8265,
+				9.6155,
+				9.3459
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "oyo",
+			"name": "Oyo",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				3.61365,
+				8.1
+			],
+			"bbox": [
+				2.6717,
+				7.0597,
+				4.5556,
+				9.1403
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "taraba",
+			"name": "Taraba",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.570450000000001,
+				8.01995
+			],
+			"bbox": [
+				9.1694,
+				6.4373,
+				11.9715,
+				9.6026
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "ekiti",
+			"name": "Ekiti",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.3619,
+				7.719049999999999
+			],
+			"bbox": [
+				4.9124,
+				7.3685,
+				5.8114,
+				8.0696
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "kogi",
+			"name": "Kogi",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.5712,
+				7.63255
+			],
+			"bbox": [
+				5.3569,
+				6.5351,
+				7.7855,
+				8.73
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "osun",
+			"name": "Osun",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.549099999999999,
+				7.53045
+			],
+			"bbox": [
+				4.0341,
+				6.9805,
+				5.0641,
+				8.0804
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "benue",
+			"name": "Benue",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.68515,
+				7.2758
+			],
+			"bbox": [
+				7.4937,
+				6.4182,
+				9.8766,
+				8.1334
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "ogun",
+			"name": "Ogun",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				3.63335,
+				7.1376
+			],
+			"bbox": [
+				2.6717,
+				6.3205,
+				4.595,
+				7.9547
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "ondo",
+			"name": "Ondo",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.19165,
+				6.80545
+			],
+			"bbox": [
+				4.3549,
+				5.8548,
+				6.0284,
+				7.7561
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "edo",
+			"name": "Edo",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.84935,
+				6.66765
+			],
+			"bbox": [
+				4.9793,
+				5.7619,
+				6.7194,
+				7.5734
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "lagos",
+			"name": "Lagos",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				3.5229,
+				6.5305
+			],
+			"bbox": [
+				2.7038,
+				6.3684,
+				4.342,
+				6.6926
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "enugu",
+			"name": "Enugu",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.37855,
+				6.524850000000001
+			],
+			"bbox": [
+				6.906,
+				5.9419,
+				7.8511,
+				7.1078
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "anambra",
+			"name": "Anambra",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.9847,
+				6.2352
+			],
+			"bbox": [
+				6.6057,
+				5.6943,
+				7.3637,
+				6.7761
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "ebonyi",
+			"name": "Ebonyi",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.96655,
+				6.2318999999999996
+			],
+			"bbox": [
+				7.5335,
+				5.6903,
+				8.3996,
+				6.7735
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "cross-river",
+			"name": "Cross River",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.6832,
+				5.79785
+			],
+			"bbox": [
+				7.8778,
+				4.704,
+				9.4886,
+				6.8917
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "delta",
+			"name": "Delta",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.88195,
+				5.781750000000001
+			],
+			"bbox": [
+				5.003,
+				5.0284,
+				6.7609,
+				6.5351
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "imo",
+			"name": "Imo",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.0156,
+				5.5605
+			],
+			"bbox": [
+				6.6262,
+				5.1947,
+				7.405,
+				5.9263
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "abia",
+			"name": "Abia",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.5302,
+				5.4190000000000005
+			],
+			"bbox": [
+				7.1633,
+				4.8174,
+				7.8971,
+				6.0206
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "rivers",
+			"name": "Rivers",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.95965,
+				5.03895
+			],
+			"bbox": [
+				6.3858,
+				4.3547,
+				7.5335,
+				5.7232
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "akwa-ibom",
+			"name": "Akwa Ibom",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.89775,
+				5.024699999999999
+			],
+			"bbox": [
+				7.4963,
+				4.5253,
+				8.2992,
+				5.5241
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "bayelsa",
+			"name": "Bayelsa",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.0914,
+				4.83555
+			],
+			"bbox": [
+				5.4602,
+				4.2781,
+				6.7226,
+				5.393
+			],
+			"colorIndex": 5
+		}
+	],
+	"tourOrder": [
+		"sokoto",
+		"katsina",
+		"zamfara",
+		"yobe",
+		"jigawa",
+		"borno",
+		"kebbi",
+		"kano",
+		"bauchi",
+		"gombe",
+		"kaduna",
+		"niger",
+		"plateau",
+		"adamawa",
+		"kwara",
+		"federal-capital-territory",
+		"nasarawa",
+		"oyo",
+		"taraba",
+		"ekiti",
+		"kogi",
+		"osun",
+		"benue",
+		"ogun",
+		"ondo",
+		"edo",
+		"lagos",
+		"enugu",
+		"anambra",
+		"ebonyi",
+		"cross-river",
+		"delta",
+		"imo",
+		"abia",
+		"rivers",
+		"akwa-ibom",
+		"bayelsa"
+	]
+}

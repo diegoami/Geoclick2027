@@ -1,0 +1,524 @@
+{
+	"id": "egypt-regions",
+	"name": "Egypt — Governorates",
+	"country": "Egypt",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "damietta",
+			"name": "Damietta",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				31.79775,
+				31.4063
+			],
+			"bbox": [
+				31.5017,
+				31.2777,
+				32.0938,
+				31.5349
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "kafr-el-sheikh",
+			"name": "Kafr el-Sheikh",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				30.87405,
+				31.295749999999998
+			],
+			"bbox": [
+				30.3982,
+				30.9836,
+				31.3499,
+				31.6079
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "port-said",
+			"name": "Port Said",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				32.4293,
+				31.13125
+			],
+			"bbox": [
+				32.2565,
+				30.9737,
+				32.6021,
+				31.2888
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "dakahlia",
+			"name": "Dakahlia",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				31.6416,
+				31.05175
+			],
+			"bbox": [
+				31.2309,
+				30.5738,
+				32.0523,
+				31.5297
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "gharbia",
+			"name": "Gharbia",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				31.024749999999997,
+				30.84315
+			],
+			"bbox": [
+				30.7532,
+				30.5651,
+				31.2963,
+				31.1212
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "alexandria",
+			"name": "Alexandria",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				29.848300000000002,
+				30.8288
+			],
+			"bbox": [
+				29.5981,
+				30.3371,
+				30.0985,
+				31.3205
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "al-sharqia",
+			"name": "Al Sharqia",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				31.78125,
+				30.680300000000003
+			],
+			"bbox": [
+				31.2725,
+				30.1904,
+				32.29,
+				31.1702
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "beheira",
+			"name": "Beheira",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				30.23805,
+				30.6709
+			],
+			"bbox": [
+				29.6249,
+				29.8982,
+				30.8512,
+				31.4436
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "ismailia",
+			"name": "Ismailia",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				32.2995,
+				30.6593
+			],
+			"bbox": [
+				31.8004,
+				30.2048,
+				32.7986,
+				31.1138
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "monufia",
+			"name": "Monufia",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				31.02365,
+				30.44605
+			],
+			"bbox": [
+				30.7961,
+				30.1754,
+				31.2512,
+				30.7167
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "north-sinai",
+			"name": "North Sinai",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				33.742599999999996,
+				30.401899999999998
+			],
+			"bbox": [
+				32.5997,
+				29.4895,
+				34.8855,
+				31.3143
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "qalyubia",
+			"name": "Qalyubia",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				31.3489,
+				30.351599999999998
+			],
+			"bbox": [
+				31.1039,
+				30.1148,
+				31.5939,
+				30.5884
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "cairo",
+			"name": "Cairo",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				31.5788,
+				30.04945
+			],
+			"bbox": [
+				31.2212,
+				29.7599,
+				31.9364,
+				30.339
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "matrouh",
+			"name": "Matrouh",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				27.508450000000003,
+				29.6577
+			],
+			"bbox": [
+				24.6883,
+				27.6665,
+				30.3286,
+				31.6489
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "suez",
+			"name": "Suez",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				32.36195,
+				29.6169
+			],
+			"bbox": [
+				31.8691,
+				28.9682,
+				32.8548,
+				30.2656
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "faiyum",
+			"name": "Faiyum",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				30.4584,
+				29.35845
+			],
+			"bbox": [
+				29.8149,
+				28.9798,
+				31.1019,
+				29.7371
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "beni-suef",
+			"name": "Beni Suef",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				30.502249999999997,
+				29.057899999999997
+			],
+			"bbox": [
+				29.7492,
+				28.7157,
+				31.2553,
+				29.4001
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "giza",
+			"name": "Giza",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				29.62875,
+				29.00205
+			],
+			"bbox": [
+				27.3248,
+				27.6679,
+				31.9327,
+				30.3362
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "south-sinai",
+			"name": "South Sinai",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				33.76865,
+				28.859650000000002
+			],
+			"bbox": [
+				32.6518,
+				27.7941,
+				34.8855,
+				29.9252
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "minya",
+			"name": "Minya",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				29.806199999999997,
+				28.20055
+			],
+			"bbox": [
+				28.6532,
+				27.6201,
+				30.9592,
+				28.781
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "asyut",
+			"name": "Asyut",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				31.1451,
+				27.233600000000003
+			],
+			"bbox": [
+				30.6712,
+				26.8332,
+				31.619,
+				27.634
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "sohag",
+			"name": "Sohag",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				31.80375,
+				26.5335
+			],
+			"bbox": [
+				31.3,
+				26.1317,
+				32.3075,
+				26.9353
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "luxor",
+			"name": "Luxor",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				32.647149999999996,
+				25.7065
+			],
+			"bbox": [
+				32.6249,
+				25.6831,
+				32.6694,
+				25.7299
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "qena",
+			"name": "Qena",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				32.4417,
+				25.698700000000002
+			],
+			"bbox": [
+				31.9523,
+				25.1457,
+				32.9311,
+				26.2517
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "red-sea",
+			"name": "Red Sea",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				33.8554,
+				25.647100000000002
+			],
+			"bbox": [
+				30.8154,
+				21.9954,
+				36.8954,
+				29.2988
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "new-valley",
+			"name": "New Valley",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				28.955750000000002,
+				24.83115
+			],
+			"bbox": [
+				24.9812,
+				21.9944,
+				32.9303,
+				27.6679
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "aswan",
+			"name": "Aswan",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				32.2783,
+				23.632649999999998
+			],
+			"bbox": [
+				31.2251,
+				21.9954,
+				33.3315,
+				25.2699
+			],
+			"colorIndex": 4
+		}
+	],
+	"tourOrder": [
+		"damietta",
+		"kafr-el-sheikh",
+		"port-said",
+		"dakahlia",
+		"gharbia",
+		"alexandria",
+		"al-sharqia",
+		"beheira",
+		"ismailia",
+		"monufia",
+		"north-sinai",
+		"qalyubia",
+		"cairo",
+		"matrouh",
+		"suez",
+		"faiyum",
+		"beni-suef",
+		"giza",
+		"south-sinai",
+		"minya",
+		"asyut",
+		"sohag",
+		"luxor",
+		"qena",
+		"red-sea",
+		"new-valley",
+		"aswan"
+	]
+}
