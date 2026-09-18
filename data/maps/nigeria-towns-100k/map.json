@@ -1,0 +1,961 @@
+{
+	"id": "nigeria-towns-100k",
+	"name": "Nigeria — Towns",
+	"country": "Nigeria",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "sokoto",
+			"name": "Sokoto",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.2400313,
+				13.0600155
+			],
+			"bbox": [
+				5.2400313,
+				13.0600155,
+				5.2400313,
+				13.0600155
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "katsina",
+			"name": "Katsina",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.5999906,
+				12.9904073
+			],
+			"bbox": [
+				7.5999906,
+				12.9904073,
+				7.5999906,
+				12.9904073
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "nguru",
+			"name": "Nguru",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.4499975,
+				12.8803882
+			],
+			"bbox": [
+				10.4499975,
+				12.8803882,
+				10.4499975,
+				12.8803882
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "gashua",
+			"name": "Gashua",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.0399873,
+				12.8704922
+			],
+			"bbox": [
+				11.0399873,
+				12.8704922,
+				11.0399873,
+				12.8704922
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "birnin-kebbi",
+			"name": "Birnin Kebbi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.1999397,
+				12.4504144
+			],
+			"bbox": [
+				4.1999397,
+				12.4504144,
+				4.1999397,
+				12.4504144
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "gusau",
+			"name": "Gusau",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.6599963,
+				12.1704057
+			],
+			"bbox": [
+				6.6599963,
+				12.1704057,
+				6.6599963,
+				12.1704057
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "kano",
+			"name": "Kano",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.5180919,
+				12.0019227
+			],
+			"bbox": [
+				8.5180919,
+				12.0019227,
+				8.5180919,
+				12.0019227
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "maiduguri",
+			"name": "Maiduguri",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.1580671,
+				11.851906
+			],
+			"bbox": [
+				13.1580671,
+				11.851906,
+				13.1580671,
+				11.851906
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "damaturu",
+			"name": "Damaturu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.9660046,
+				11.7489961
+			],
+			"bbox": [
+				11.9660046,
+				11.7489961,
+				11.9660046,
+				11.7489961
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "funtua",
+			"name": "Funtua",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.3200077,
+				11.5203937
+			],
+			"bbox": [
+				7.3200077,
+				11.5203937,
+				7.3200077,
+				11.5203937
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "bama",
+			"name": "Bama",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.6900065,
+				11.5203937
+			],
+			"bbox": [
+				13.6900065,
+				11.5203937,
+				13.6900065,
+				11.5203937
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "zaria",
+			"name": "Zaria",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.7080639,
+				11.0819272
+			],
+			"bbox": [
+				7.7080639,
+				11.0819272,
+				7.7080639,
+				11.0819272
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "kaduna",
+			"name": "Kaduna",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.4380545,
+				10.5219613
+			],
+			"bbox": [
+				7.4380545,
+				10.5219613,
+				7.4380545,
+				10.5219613
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "bauchi",
+			"name": "Bauchi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.8400089,
+				10.3103642
+			],
+			"bbox": [
+				9.8400089,
+				10.3103642,
+				9.8400089,
+				10.3103642
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "gombe",
+			"name": "Gombe",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.1699536,
+				10.2904429
+			],
+			"bbox": [
+				11.1699536,
+				10.2904429,
+				11.1699536,
+				10.2904429
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "mubi",
+			"name": "Mubi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.2700321,
+				10.2703408
+			],
+			"bbox": [
+				13.2700321,
+				10.2703408,
+				13.2700321,
+				10.2703408
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "jos",
+			"name": "Jos",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.8900411,
+				9.929974
+			],
+			"bbox": [
+				8.8900411,
+				9.929974,
+				8.8900411,
+				9.929974
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "minna",
+			"name": "Minna",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.5500288,
+				9.6199929
+			],
+			"bbox": [
+				6.5500288,
+				9.6199929,
+				6.5500288,
+				9.6199929
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "bida",
+			"name": "Bida",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.0100101,
+				9.0804134
+			],
+			"bbox": [
+				6.0100101,
+				9.0804134,
+				6.0100101,
+				9.0804134
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "abuja",
+			"name": "Abuja",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.489505042885861,
+				9.054620406360845
+			],
+			"bbox": [
+				7.489505042885861,
+				9.054620406360845,
+				7.489505042885861,
+				9.054620406360845
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "jalingo",
+			"name": "Jalingo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.3600195,
+				8.9003727
+			],
+			"bbox": [
+				11.3600195,
+				8.9003727,
+				11.3600195,
+				8.9003727
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "ilorin",
+			"name": "Ilorin",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.54805,
+				8.4919561
+			],
+			"bbox": [
+				4.54805,
+				8.4919561,
+				4.54805,
+				8.4919561
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "lafia",
+			"name": "Lafia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.5200378,
+				8.4904236
+			],
+			"bbox": [
+				8.5200378,
+				8.4904236,
+				8.5200378,
+				8.4904236
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "ogbomoso",
+			"name": "Ogbomoso",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.2380431,
+				8.1319522
+			],
+			"bbox": [
+				4.2380431,
+				8.1319522,
+				4.2380431,
+				8.1319522
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "oyo",
+			"name": "Oyo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				3.9299821,
+				7.8504368
+			],
+			"bbox": [
+				3.9299821,
+				7.8504368,
+				3.9299821,
+				7.8504368
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "osogbo",
+			"name": "Osogbo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.5600211,
+				7.7703642
+			],
+			"bbox": [
+				4.5600211,
+				7.7703642,
+				4.5600211,
+				7.7703642
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "makurdi",
+			"name": "Makurdi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.5300114,
+				7.7299791
+			],
+			"bbox": [
+				8.5300114,
+				7.7299791,
+				8.5300114,
+				7.7299791
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "ado-ekiti",
+			"name": "Ado Ekiti",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.2199808,
+				7.6303727
+			],
+			"bbox": [
+				5.2199808,
+				7.6303727,
+				5.2199808,
+				7.6303727
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "iwo",
+			"name": "Iwo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.1799926,
+				7.6299593
+			],
+			"bbox": [
+				4.1799926,
+				7.6299593,
+				4.1799926,
+				7.6299593
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "ikare",
+			"name": "Ikare",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.7599996,
+				7.5304305
+			],
+			"bbox": [
+				5.7599996,
+				7.5304305,
+				5.7599996,
+				7.5304305
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "ife",
+			"name": "Ife",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.5600211,
+				7.4804336
+			],
+			"bbox": [
+				4.5600211,
+				7.4804336,
+				4.5600211,
+				7.4804336
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "ibadan",
+			"name": "Ibadan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				3.9280362,
+				7.3819721
+			],
+			"bbox": [
+				3.9280362,
+				7.3819721,
+				3.9280362,
+				7.3819721
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "akure",
+			"name": "Akure",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.1999821,
+				7.2503959
+			],
+			"bbox": [
+				5.1999821,
+				7.2503959,
+				5.1999821,
+				7.2503959
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "owo",
+			"name": "Owo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.5899841,
+				7.200399
+			],
+			"bbox": [
+				5.5899841,
+				7.200399,
+				5.5899841,
+				7.200399
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "abeokuta",
+			"name": "Abeokuta",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				3.3500175,
+				7.1604273
+			],
+			"bbox": [
+				3.3500175,
+				7.1604273,
+				3.3500175,
+				7.1604273
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "ondo",
+			"name": "Ondo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.840004,
+				7.0904057
+			],
+			"bbox": [
+				4.840004,
+				7.0904057,
+				4.840004,
+				7.0904057
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "nsukka",
+			"name": "Nsukka",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.383363,
+				6.8670343
+			],
+			"bbox": [
+				7.383363,
+				6.8670343,
+				7.383363,
+				6.8670343
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "ijebu-ode",
+			"name": "Ijebu Ode",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				3.9200085,
+				6.820448
+			],
+			"bbox": [
+				3.9200085,
+				6.820448,
+				3.9200085,
+				6.820448
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "enugu",
+			"name": "Enugu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.4999967,
+				6.4500314
+			],
+			"bbox": [
+				7.4999967,
+				6.4500314,
+				7.4999967,
+				6.4500314
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "lagos",
+			"name": "Lagos",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				3.3895852,
+				6.4452075
+			],
+			"bbox": [
+				3.3895852,
+				6.4452075,
+				3.3895852,
+				6.4452075
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "benin-city",
+			"name": "Benin City",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.6180622,
+				6.3424232
+			],
+			"bbox": [
+				5.6180622,
+				6.3424232,
+				5.6180622,
+				6.3424232
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "awka",
+			"name": "Awka",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.0699971,
+				6.2104336
+			],
+			"bbox": [
+				7.0699971,
+				6.2104336,
+				7.0699971,
+				6.2104336
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "sapele",
+			"name": "Sapele",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.6800044,
+				5.8904273
+			],
+			"bbox": [
+				5.6800044,
+				5.8904273,
+				5.6800044,
+				5.8904273
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "umuahia",
+			"name": "Umuahia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.4860025,
+				5.532003
+			],
+			"bbox": [
+				7.4860025,
+				5.532003,
+				7.4860025,
+				5.532003
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "warri",
+			"name": "Warri",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.7599996,
+				5.5199589
+			],
+			"bbox": [
+				5.7599996,
+				5.5199589,
+				5.7599996,
+				5.5199589
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "owerri",
+			"name": "Owerri",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.0260036,
+				5.4929971
+			],
+			"bbox": [
+				7.0260036,
+				5.4929971,
+				7.0260036,
+				5.4929971
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "aba",
+			"name": "Aba",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.34998,
+				5.100398
+			],
+			"bbox": [
+				7.34998,
+				5.100398,
+				7.34998,
+				5.100398
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "uyo",
+			"name": "Uyo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.916152558612238,
+				5.036013508874578
+			],
+			"bbox": [
+				7.916152558612238,
+				5.036013508874578,
+				7.916152558612238,
+				5.036013508874578
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "calabar",
+			"name": "Calabar",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.3300236,
+				4.9604065
+			],
+			"bbox": [
+				8.3300236,
+				4.9604065,
+				8.3300236,
+				4.9604065
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "port-harcourt",
+			"name": "Port Harcourt",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.0080549,
+				4.8119481
+			],
+			"bbox": [
+				7.0080549,
+				4.8119481,
+				7.0080549,
+				4.8119481
+			],
+			"colorIndex": 5
+		}
+	],
+	"tourOrder": [
+		"sokoto",
+		"katsina",
+		"nguru",
+		"gashua",
+		"birnin-kebbi",
+		"gusau",
+		"kano",
+		"maiduguri",
+		"damaturu",
+		"funtua",
+		"bama",
+		"zaria",
+		"kaduna",
+		"bauchi",
+		"gombe",
+		"mubi",
+		"jos",
+		"minna",
+		"bida",
+		"abuja",
+		"jalingo",
+		"ilorin",
+		"lafia",
+		"ogbomoso",
+		"oyo",
+		"osogbo",
+		"makurdi",
+		"ado-ekiti",
+		"iwo",
+		"ikare",
+		"ife",
+		"ibadan",
+		"akure",
+		"owo",
+		"abeokuta",
+		"ondo",
+		"nsukka",
+		"ijebu-ode",
+		"enugu",
+		"lagos",
+		"benin-city",
+		"awka",
+		"sapele",
+		"umuahia",
+		"warri",
+		"owerri",
+		"aba",
+		"uyo",
+		"calabar",
+		"port-harcourt"
+	]
+}

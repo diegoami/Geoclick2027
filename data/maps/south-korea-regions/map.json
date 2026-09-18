@@ -1,0 +1,334 @@
+{
+	"id": "south-korea-regions",
+	"name": "South Korea — Regions",
+	"country": "South Korea",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "gangwon",
+			"name": "Gangwon",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				128.21865,
+				37.617999999999995
+			],
+			"bbox": [
+				126.9661,
+				36.6117,
+				129.4712,
+				38.6243
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "seoul",
+			"name": "Seoul",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				126.99289999999999,
+				37.55515
+			],
+			"bbox": [
+				126.7937,
+				37.4295,
+				127.1921,
+				37.6808
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "gyeonggi",
+			"name": "Gyeonggi",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				127.10015000000001,
+				37.545950000000005
+			],
+			"bbox": [
+				126.3692,
+				36.8789,
+				127.8311,
+				38.213
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "incheon",
+			"name": "Incheon",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				126.57565,
+				37.46455
+			],
+			"bbox": [
+				126.3555,
+				37.3771,
+				126.7958,
+				37.552
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "north-chungcheong",
+			"name": "North Chungcheong",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				127.93099999999998,
+				36.59675
+			],
+			"bbox": [
+				127.2117,
+				35.9752,
+				128.6503,
+				37.2183
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "sejong",
+			"name": "Sejong",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				127.22115,
+				36.5664
+			],
+			"bbox": [
+				127.0809,
+				36.4412,
+				127.3614,
+				36.6916
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "north-gyeongsang",
+			"name": "North Gyeongsang",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				129.3518,
+				36.538
+			],
+			"bbox": [
+				127.8,
+				35.5302,
+				130.9036,
+				37.5458
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "south-chungcheong",
+			"name": "South Chungcheong",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				126.875,
+				36.497749999999996
+			],
+			"bbox": [
+				126.131,
+				35.9871,
+				127.619,
+				37.0084
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "daejeon",
+			"name": "Daejeon",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				127.35065,
+				36.35615
+			],
+			"bbox": [
+				127.219,
+				36.2332,
+				127.4823,
+				36.4791
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "daegu",
+			"name": "Daegu",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				128.6218,
+				35.8888
+			],
+			"bbox": [
+				128.4813,
+				35.7683,
+				128.7623,
+				36.0093
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "north-jeolla",
+			"name": "North Jeolla",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				127.16835,
+				35.7046
+			],
+			"bbox": [
+				126.4182,
+				35.2766,
+				127.9185,
+				36.1326
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "ulsan",
+			"name": "Ulsan",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				129.23090000000002,
+				35.49895
+			],
+			"bbox": [
+				129.0027,
+				35.3157,
+				129.4591,
+				35.6822
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "south-gyeongsang",
+			"name": "South Gyeongsang",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				128.44315,
+				35.293499999999995
+			],
+			"bbox": [
+				127.6175,
+				34.6999,
+				129.2688,
+				35.8871
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "gwangju",
+			"name": "Gwangju",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				126.91435,
+				35.20235
+			],
+			"bbox": [
+				126.8229,
+				35.1501,
+				127.0058,
+				35.2546
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "busan",
+			"name": "Busan",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				129.08105,
+				35.173249999999996
+			],
+			"bbox": [
+				128.9628,
+				35.0757,
+				129.1993,
+				35.2708
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "south-jeolla",
+			"name": "South Jeolla",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				126.96035,
+				34.8757
+			],
+			"bbox": [
+				126.1157,
+				34.2894,
+				127.805,
+				35.462
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "jeju",
+			"name": "Jeju",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				126.55875,
+				33.3821
+			],
+			"bbox": [
+				126.1714,
+				33.2004,
+				126.9461,
+				33.5638
+			],
+			"colorIndex": 4
+		}
+	],
+	"tourOrder": [
+		"gangwon",
+		"seoul",
+		"gyeonggi",
+		"incheon",
+		"north-chungcheong",
+		"sejong",
+		"north-gyeongsang",
+		"south-chungcheong",
+		"daejeon",
+		"daegu",
+		"north-jeolla",
+		"ulsan",
+		"south-gyeongsang",
+		"gwangju",
+		"busan",
+		"south-jeolla",
+		"jeju"
+	]
+}

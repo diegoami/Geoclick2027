@@ -45,6 +45,29 @@ const BASE_FIELDS = [
 // of the 110 raw province records directly, not spot-checked, when the
 // italy-provinces map was added (see MAPS.md).
 const NAME_FIXUPS: Record<string, Record<string, string>> = {
+	// Three Vietnamese provinces carry the name of the macro-region they sit
+	// in instead of their own (FT-30). Each was identified from the polygon
+	// itself, not guessed: "Vùng Đông Bắc" (105.5-106.3 E, 21.8-22.7 N)
+	// contains the town of Bắc Kạn, which the populated-places file also files
+	// under ADM1NAME "Đông Bắc"; "Đông Nam Bộ" contains Biên Hòa, the capital
+	// of Đồng Nai; and "Đồng Bằng Sông Hồng" is the small polygon between
+	// them at 106.0 E, 20.8 N, which is Hưng Yên - the one province of the
+	// three with no city over 100 000, matching its absence from the towns
+	// map.
+	Vietnam: {
+		'Vùng Đông Bắc': 'Bắc Kạn',
+		'Đông Nam Bộ': 'Đồng Nai',
+		'Đồng Bằng Sông Hồng': 'Hưng Yên'
+	},
+	// Nigeria's state is spelled Nasarawa; the source doubles the s.
+	Nigeria: { Nassarawa: 'Nasarawa' },
+	// name_tr writes the circumflex that Turkish dropped from this one:
+	// the province is Elazığ (its own governorate spells it that way), while
+	// Hakkâri, also in this list, does keep its circumflex.
+	Turkey: { Elâzığ: 'Elazığ' },
+	// Every other Colombian department comes through with its accents; only
+	// the capital district loses one.
+	Colombia: { Bogota: 'Bogotá' },
 	Italy: {
 		Apulia: 'Puglia',
 		Sicily: 'Sicilia',

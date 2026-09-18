@@ -1,0 +1,505 @@
+{
+	"id": "south-korea-towns-100k",
+	"name": "South Korea — Towns",
+	"country": "South Korea",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "chuncheon",
+			"name": "Chuncheon",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				127.7341565,
+				37.8747024
+			],
+			"bbox": [
+				127.7341565,
+				37.8747024,
+				127.7341565,
+				37.8747024
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "gangneung",
+			"name": "Gangneung",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				128.8961527,
+				37.7558724
+			],
+			"bbox": [
+				128.8961527,
+				37.7558724,
+				128.8961527,
+				37.7558724
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "goyang",
+			"name": "Goyang",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				126.8353027,
+				37.6546817
+			],
+			"bbox": [
+				126.8353027,
+				37.6546817,
+				126.8353027,
+				37.6546817
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "seoul",
+			"name": "Seoul",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				126.9977851,
+				37.568295
+			],
+			"bbox": [
+				126.9977851,
+				37.568295,
+				126.9977851,
+				37.568295
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "bucheon",
+			"name": "Bucheon",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				126.7811097,
+				37.5008348
+			],
+			"bbox": [
+				126.7811097,
+				37.5008348,
+				126.7811097,
+				37.5008348
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "incheon",
+			"name": "Incheon",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				126.6402876,
+				37.4780937
+			],
+			"bbox": [
+				126.6402876,
+				37.4780937,
+				126.6402876,
+				37.4780937
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "seongnam",
+			"name": "Seongnam",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				127.1358319,
+				37.440557
+			],
+			"bbox": [
+				127.1358319,
+				37.440557,
+				127.1358319,
+				37.440557
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "wonju",
+			"name": "Wonju",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				127.9396219,
+				37.3551475
+			],
+			"bbox": [
+				127.9396219,
+				37.3551475,
+				127.9396219,
+				37.3551475
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "ansan",
+			"name": "Ansan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				126.8595328,
+				37.3480678
+			],
+			"bbox": [
+				126.8595328,
+				37.3480678,
+				126.8595328,
+				37.3480678
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "suwon",
+			"name": "Suwon",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				127.0089472,
+				37.259735
+			],
+			"bbox": [
+				127.0089472,
+				37.259735,
+				127.0089472,
+				37.259735
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "cheongju",
+			"name": "Cheongju",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				127.5011991,
+				36.6438989
+			],
+			"bbox": [
+				127.5011991,
+				36.6438989,
+				127.5011991,
+				36.6438989
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "andong",
+			"name": "Andong",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				128.7250004,
+				36.5659192
+			],
+			"bbox": [
+				128.7250004,
+				36.5659192,
+				128.7250004,
+				36.5659192
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "daejeon",
+			"name": "Daejeon",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				127.4230822,
+				36.3374915
+			],
+			"bbox": [
+				127.4230822,
+				36.3374915,
+				127.4230822,
+				36.3374915
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "pohang",
+			"name": "Pohang",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				129.3715242,
+				36.020862
+			],
+			"bbox": [
+				129.3715242,
+				36.020862,
+				129.3715242,
+				36.020862
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "gunsan",
+			"name": "Gunsan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				126.7160215,
+				35.9817657
+			],
+			"bbox": [
+				126.7160215,
+				35.9817657,
+				126.7160215,
+				35.9817657
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "iksan",
+			"name": "Iksan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				126.9454191,
+				35.9409703
+			],
+			"bbox": [
+				126.9454191,
+				35.9409703,
+				126.9454191,
+				35.9409703
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "daegu",
+			"name": "Daegu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				128.6050255,
+				35.8687346
+			],
+			"bbox": [
+				128.6050255,
+				35.8687346,
+				128.6050255,
+				35.8687346
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "gyeongju",
+			"name": "Gyeongju",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				129.211689,
+				35.8427592
+			],
+			"bbox": [
+				129.211689,
+				35.8427592,
+				129.211689,
+				35.8427592
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "jeonju",
+			"name": "Jeonju",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				127.1403942,
+				35.8314162
+			],
+			"bbox": [
+				127.1403942,
+				35.8314162,
+				127.1403942,
+				35.8314162
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "ulsan",
+			"name": "Ulsan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				129.315008,
+				35.5486766
+			],
+			"bbox": [
+				129.315008,
+				35.5486766,
+				129.315008,
+				35.5486766
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "changwon",
+			"name": "Changwon",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				128.583562,
+				35.2191022
+			],
+			"bbox": [
+				128.583562,
+				35.2191022,
+				128.583562,
+				35.2191022
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "gwangju",
+			"name": "Gwangju",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				126.9084883,
+				35.1729115
+			],
+			"bbox": [
+				126.9084883,
+				35.1729115,
+				126.9084883,
+				35.1729115
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "busan",
+			"name": "Busan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				129.0081017,
+				35.0969988
+			],
+			"bbox": [
+				129.0081017,
+				35.0969988,
+				129.0081017,
+				35.0969988
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "mokpo",
+			"name": "Mokpo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				126.3958402,
+				34.8068018
+			],
+			"bbox": [
+				126.3958402,
+				34.8068018,
+				126.3958402,
+				34.8068018
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "yeosu",
+			"name": "Yeosu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				127.7458353,
+				34.7367802
+			],
+			"bbox": [
+				127.7458353,
+				34.7367802,
+				127.7458353,
+				34.7367802
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "jeju",
+			"name": "Jeju",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				126.5219307,
+				33.5101367
+			],
+			"bbox": [
+				126.5219307,
+				33.5101367,
+				126.5219307,
+				33.5101367
+			],
+			"colorIndex": 2
+		}
+	],
+	"tourOrder": [
+		"chuncheon",
+		"gangneung",
+		"goyang",
+		"seoul",
+		"bucheon",
+		"incheon",
+		"seongnam",
+		"wonju",
+		"ansan",
+		"suwon",
+		"cheongju",
+		"andong",
+		"daejeon",
+		"pohang",
+		"gunsan",
+		"iksan",
+		"daegu",
+		"gyeongju",
+		"jeonju",
+		"ulsan",
+		"changwon",
+		"gwangju",
+		"busan",
+		"mokpo",
+		"yeosu",
+		"jeju"
+	]
+}

@@ -37,6 +37,25 @@ const SOURCE_SHP = path.join(
 // row where even the chosen --name-field is wrong or dated, not a whole new
 // per-country table until there's more than one or two exceptions.
 const NAME_FIXUPS: Record<string, Record<string, string>> = {
+	// Turkish dropped the circumflex from this city's name; its own
+	// municipality writes Elazığ. Hakkâri, also on this map, keeps its.
+	Turkey: { Elâzığ: 'Elazığ' },
+	// NAME_VI gives the full administrative form - "Thành phố X" is "X city".
+	// A quiz slip wants the name, not the designation.
+	Vietnam: {
+		'Thành phố Hồ Chí Minh': 'Hồ Chí Minh',
+		'Thành phố Tây Ninh': 'Tây Ninh'
+	},
+	// NAME_ES gives the formal names; both cities are universally called by
+	// the short one, and the map already has room for neither in full.
+	Colombia: {
+		'Cartagena de Indias': 'Cartagena',
+		'San Juan de Pasto': 'Pasto'
+	},
+	// The Revised Romanization South Korea has used officially since 2000.
+	'South Korea': { Songnam: 'Seongnam' },
+	// Both cities' own governments use the shorter modern spellings.
+	Nigeria: { Oshogbo: 'Osogbo', Ogbomosho: 'Ogbomoso' },
 	// NAME_EN gives "Odessa" (dated) even though the same dataset's NAME_UK
 	// (Одеса) and every other Ukrainian city's NAME_EN already use the
 	// modern standard transliteration - matches the regions map's fixup.

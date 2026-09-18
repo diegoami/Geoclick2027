@@ -1,0 +1,657 @@
+{
+	"id": "colombia-towns-100k",
+	"name": "Colombia — Towns",
+	"country": "Colombia",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "riohacha",
+			"name": "Riohacha",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-72.9099789,
+				11.5403408
+			],
+			"bbox": [
+				-72.9099789,
+				11.5403408,
+				-72.9099789,
+				11.5403408
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "santa-marta",
+			"name": "Santa Marta",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-74.2016571,
+				11.2472062
+			],
+			"bbox": [
+				-74.2016571,
+				11.2472062,
+				-74.2016571,
+				11.2472062
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "cienaga",
+			"name": "Ciénaga",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-74.2500004,
+				11.010399
+			],
+			"bbox": [
+				-74.2500004,
+				11.010399,
+				-74.2500004,
+				11.010399
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "barranquilla",
+			"name": "Barranquilla",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-74.8019127,
+				10.9619345
+			],
+			"bbox": [
+				-74.8019127,
+				10.9619345,
+				-74.8019127,
+				10.9619345
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "soledad",
+			"name": "Soledad",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-74.7699945,
+				10.9200169
+			],
+			"bbox": [
+				-74.7699945,
+				10.9200169,
+				-74.7699945,
+				10.9200169
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "valledupar",
+			"name": "Valledupar",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-73.2500098,
+				10.4799921
+			],
+			"bbox": [
+				-73.2500098,
+				10.4799921,
+				-73.2500098,
+				10.4799921
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "cartagena",
+			"name": "Cartagena",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-75.5163394,
+				10.4016844
+			],
+			"bbox": [
+				-75.5163394,
+				10.4016844,
+				-75.5163394,
+				10.4016844
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "sincelejo",
+			"name": "Sincelejo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-75.3799573,
+				9.2904265
+			],
+			"bbox": [
+				-75.3799573,
+				9.2904265,
+				-75.3799573,
+				9.2904265
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "magangue",
+			"name": "Magangué",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-74.7400222,
+				9.2299909
+			],
+			"bbox": [
+				-74.7400222,
+				9.2299909,
+				-74.7400222,
+				9.2299909
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "monteria",
+			"name": "Montería",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-75.8900037,
+				8.7575391
+			],
+			"bbox": [
+				-75.8900037,
+				8.7575391,
+				-75.8900037,
+				8.7575391
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "cucuta",
+			"name": "Cúcuta",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-72.5199768,
+				7.9200191
+			],
+			"bbox": [
+				-72.5199768,
+				7.9200191,
+				-72.5199768,
+				7.9200191
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "bucaramanga",
+			"name": "Bucaramanga",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-73.1278289,
+				7.1320391
+			],
+			"bbox": [
+				-73.1278289,
+				7.1320391,
+				-73.1278289,
+				7.1320391
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "barrancabermeja",
+			"name": "Barrancabermeja",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-73.849999,
+				7.0899923
+			],
+			"bbox": [
+				-73.849999,
+				7.0899923,
+				-73.849999,
+				7.0899923
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "bello",
+			"name": "Bello",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-75.5699974,
+				6.329987
+			],
+			"bbox": [
+				-75.5699974,
+				6.329987,
+				-75.5699974,
+				6.329987
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "medellin",
+			"name": "Medellín",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-75.5769559,
+				6.2769491
+			],
+			"bbox": [
+				-75.5769559,
+				6.2769491,
+				-75.5769559,
+				6.2769491
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "duitama",
+			"name": "Duitama",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-73.0200497,
+				5.8304568
+			],
+			"bbox": [
+				-73.0200497,
+				5.8304568,
+				-73.0200497,
+				5.8304568
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "sogamoso",
+			"name": "Sogamoso",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-72.9400029,
+				5.7199984
+			],
+			"bbox": [
+				-72.9400029,
+				5.7199984,
+				-72.9400029,
+				5.7199984
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "tunja",
+			"name": "Tunja",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-73.3700283,
+				5.550448
+			],
+			"bbox": [
+				-73.3700283,
+				5.550448,
+				-73.3700283,
+				5.550448
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "manizales",
+			"name": "Manizales",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-75.5200004,
+				5.059987
+			],
+			"bbox": [
+				-75.5200004,
+				5.059987,
+				-75.5200004,
+				5.059987
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "pereira",
+			"name": "Pereira",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-75.6799907,
+				4.8103898
+			],
+			"bbox": [
+				-75.6799907,
+				4.8103898,
+				-75.6799907,
+				4.8103898
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "cartago",
+			"name": "Cartago",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-75.9100283,
+				4.7499801
+			],
+			"bbox": [
+				-75.9100283,
+				4.7499801,
+				-75.9100283,
+				4.7499801
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "bogota",
+			"name": "Bogotá",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-74.0852898,
+				4.5983694
+			],
+			"bbox": [
+				-74.0852898,
+				4.5983694,
+				-74.0852898,
+				4.5983694
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "armenia",
+			"name": "Armenia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-75.6811276,
+				4.5342827
+			],
+			"bbox": [
+				-75.6811276,
+				4.5342827,
+				-75.6811276,
+				4.5342827
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "ibague",
+			"name": "Ibagué",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-75.2322144,
+				4.4389138
+			],
+			"bbox": [
+				-75.2322144,
+				4.4389138,
+				-75.2322144,
+				4.4389138
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "girardot",
+			"name": "Girardot",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-74.8099921,
+				4.3100069
+			],
+			"bbox": [
+				-74.8099921,
+				4.3100069,
+				-74.8099921,
+				4.3100069
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "villavicencio",
+			"name": "Villavicencio",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-73.6349992,
+				4.153324
+			],
+			"bbox": [
+				-73.6349992,
+				4.153324,
+				-73.6349992,
+				4.153324
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "tulua",
+			"name": "Tuluá",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-76.21001,
+				4.0903821
+			],
+			"bbox": [
+				-76.21001,
+				4.0903821,
+				-76.21001,
+				4.0903821
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "buenaventura",
+			"name": "Buenaventura",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-77.0504533,
+				3.8724024
+			],
+			"bbox": [
+				-77.0504533,
+				3.8724024,
+				-77.0504533,
+				3.8724024
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "cali",
+			"name": "Cali",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-76.5019123,
+				3.401905
+			],
+			"bbox": [
+				-76.5019123,
+				3.401905,
+				-76.5019123,
+				3.401905
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "neiva",
+			"name": "Neiva",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-75.3302446,
+				2.9310472
+			],
+			"bbox": [
+				-75.3302446,
+				2.9310472,
+				-75.3302446,
+				2.9310472
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "popayan",
+			"name": "Popayán",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-76.6100114,
+				2.4199931
+			],
+			"bbox": [
+				-76.6100114,
+				2.4199931,
+				-76.6100114,
+				2.4199931
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "florencia",
+			"name": "Florencia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-75.6199943,
+				1.6104043
+			],
+			"bbox": [
+				-75.6199943,
+				1.6104043,
+				-75.6199943,
+				1.6104043
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "pasto",
+			"name": "Pasto",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-77.2811074,
+				1.2136068
+			],
+			"bbox": [
+				-77.2811074,
+				1.2136068,
+				-77.2811074,
+				1.2136068
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "ipiales",
+			"name": "Ipiales",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-77.6499996,
+				0.8303744
+			],
+			"bbox": [
+				-77.6499996,
+				0.8303744,
+				-77.6499996,
+				0.8303744
+			],
+			"colorIndex": 0
+		}
+	],
+	"tourOrder": [
+		"riohacha",
+		"santa-marta",
+		"cienaga",
+		"barranquilla",
+		"soledad",
+		"valledupar",
+		"cartagena",
+		"sincelejo",
+		"magangue",
+		"monteria",
+		"cucuta",
+		"bucaramanga",
+		"barrancabermeja",
+		"bello",
+		"medellin",
+		"duitama",
+		"sogamoso",
+		"tunja",
+		"manizales",
+		"pereira",
+		"cartago",
+		"bogota",
+		"armenia",
+		"ibague",
+		"girardot",
+		"villavicencio",
+		"tulua",
+		"buenaventura",
+		"cali",
+		"neiva",
+		"popayan",
+		"florencia",
+		"pasto",
+		"ipiales"
+	]
+}

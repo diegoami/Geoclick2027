@@ -1,0 +1,847 @@
+{
+	"id": "vietnam-towns-100k",
+	"name": "Vietnam — Towns",
+	"country": "Vietnam",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "lang-son",
+			"name": "Lạng Sơn",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.7570016,
+				21.8459971
+			],
+			"bbox": [
+				106.7570016,
+				21.8459971,
+				106.7570016,
+				21.8459971
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "thai-nguyen",
+			"name": "Thái Nguyên",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.8300154,
+				21.5999593
+			],
+			"bbox": [
+				105.8300154,
+				21.5999593,
+				105.8300154,
+				21.5999593
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "viet-tri",
+			"name": "Việt Trì",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.4299882,
+				21.3304151
+			],
+			"bbox": [
+				105.4299882,
+				21.3304151,
+				105.4299882,
+				21.3304151
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "son-tay",
+			"name": "Sơn Tây",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.5050223,
+				21.1381787
+			],
+			"bbox": [
+				105.5050223,
+				21.1381787,
+				105.5050223,
+				21.1381787
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "cam-pha",
+			"name": "Cẩm Phả",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				107.320002,
+				21.0404328
+			],
+			"bbox": [
+				107.320002,
+				21.0404328,
+				107.320002,
+				21.0404328
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "ha-noi",
+			"name": "Hà Nội",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.8480683,
+				21.0352731
+			],
+			"bbox": [
+				105.8480683,
+				21.0352731,
+				105.8480683,
+				21.0352731
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "ha-long",
+			"name": "Hạ Long",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				107.1000154,
+				20.9604118
+			],
+			"bbox": [
+				107.1000154,
+				20.9604118,
+				107.1000154,
+				20.9604118
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "hai-phong",
+			"name": "Hải Phòng",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.6781469,
+				20.8319522
+			],
+			"bbox": [
+				106.6781469,
+				20.8319522,
+				106.6781469,
+				20.8319522
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "hoa-binh",
+			"name": "Hòa Bình",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.3383142,
+				20.8137024
+			],
+			"bbox": [
+				105.3383142,
+				20.8137024,
+				105.3383142,
+				20.8137024
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "thai-binh",
+			"name": "Thái Bình",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.3330296,
+				20.4503041
+			],
+			"bbox": [
+				106.3330296,
+				20.4503041,
+				106.3330296,
+				20.4503041
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "nam-inh",
+			"name": "Nam Định",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.2000187,
+				20.4200314
+			],
+			"bbox": [
+				106.2000187,
+				20.4200314,
+				106.2000187,
+				20.4200314
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "ninh-binh",
+			"name": "Ninh Bình",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.9750195,
+				20.254305
+			],
+			"bbox": [
+				105.9750195,
+				20.254305,
+				105.9750195,
+				20.254305
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "thanh-hoa",
+			"name": "Thanh Hóa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.7999914,
+				19.8200163
+			],
+			"bbox": [
+				105.7999914,
+				19.8200163,
+				105.7999914,
+				19.8200163
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "vinh",
+			"name": "Vinh",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.6799987,
+				18.6999813
+			],
+			"bbox": [
+				105.6799987,
+				18.6999813,
+				105.6799987,
+				18.6999813
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "ha-tinh",
+			"name": "Hà Tĩnh",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.900037,
+				18.3337763
+			],
+			"bbox": [
+				105.900037,
+				18.3337763,
+				105.900037,
+				18.3337763
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "ong-hoi",
+			"name": "Đồng Hới",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.6000459,
+				17.4833372
+			],
+			"bbox": [
+				106.6000459,
+				17.4833372,
+				106.6000459,
+				17.4833372
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "hue",
+			"name": "Huế",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				107.5800378,
+				16.4699882
+			],
+			"bbox": [
+				107.5800378,
+				16.4699882,
+				107.5800378,
+				16.4699882
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "a-nang",
+			"name": "Đà Nẵng",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				108.2499711,
+				16.0600391
+			],
+			"bbox": [
+				108.2499711,
+				16.0600391,
+				108.2499711,
+				16.0600391
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "quang-ngai",
+			"name": "Quảng Ngãi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				108.8299873,
+				15.1504305
+			],
+			"bbox": [
+				108.8299873,
+				15.1504305,
+				108.8299873,
+				15.1504305
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "kon-tum",
+			"name": "Kon Tum",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				107.9833207,
+				14.383759
+			],
+			"bbox": [
+				107.9833207,
+				14.383759,
+				107.9833207,
+				14.383759
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "pleiku",
+			"name": "Pleiku",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				108.0000122,
+				13.9832925
+			],
+			"bbox": [
+				108.0000122,
+				13.9832925,
+				108.0000122,
+				13.9832925
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "quy-nhon",
+			"name": "Quy Nhơn",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				109.1800435,
+				13.7799715
+			],
+			"bbox": [
+				109.1800435,
+				13.7799715,
+				109.1800435,
+				13.7799715
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "buon-ma-thuot",
+			"name": "Buôn Ma Thuột",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				108.0499833,
+				12.6670421
+			],
+			"bbox": [
+				108.0499833,
+				12.6670421,
+				108.0499833,
+				12.6670421
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "nha-trang",
+			"name": "Nha Trang",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				109.1700183,
+				12.2500391
+			],
+			"bbox": [
+				109.1700183,
+				12.2500391,
+				109.1700183,
+				12.2500391
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "a-lat",
+			"name": "Đà Lạt",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				108.4199865,
+				11.9304203
+			],
+			"bbox": [
+				108.4199865,
+				11.9304203,
+				108.4199865,
+				11.9304203
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "cam-ranh",
+			"name": "Cam Ranh",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				109.2206612,
+				11.9020241
+			],
+			"bbox": [
+				109.2206612,
+				11.9020241,
+				109.2206612,
+				11.9020241
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "phan-rang-thap-cham",
+			"name": "Phan Rang - Tháp Chàm",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				108.9833113,
+				11.5670317
+			],
+			"bbox": [
+				108.9833113,
+				11.5670317,
+				108.9833113,
+				11.5670317
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "tay-ninh",
+			"name": "Tây Ninh",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.1469997,
+				11.3229991
+			],
+			"bbox": [
+				106.1469997,
+				11.3229991,
+				106.1469997,
+				11.3229991
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "bien-hoa",
+			"name": "Biên Hòa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.8300577,
+				10.9700139
+			],
+			"bbox": [
+				106.8300577,
+				10.9700139,
+				106.8300577,
+				10.9700139
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "thu-dau-mot",
+			"name": "Thủ Dầu Một",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.6527455,
+				10.9690741
+			],
+			"bbox": [
+				106.6527455,
+				10.9690741,
+				106.6527455,
+				10.9690741
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "phan-thiet",
+			"name": "Phan Thiết",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				108.1000577,
+				10.933737
+			],
+			"bbox": [
+				108.1000577,
+				10.933737,
+				108.1000577,
+				10.933737
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "ho-chi-minh",
+			"name": "Hồ Chí Minh",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.70298470218748,
+				10.762124565177512
+			],
+			"bbox": [
+				106.70298470218748,
+				10.762124565177512,
+				106.70298470218748,
+				10.762124565177512
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "tan-an",
+			"name": "Tân An",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.416698,
+				10.5337356
+			],
+			"bbox": [
+				106.416698,
+				10.5337356,
+				106.416698,
+				10.5337356
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "cao-lanh",
+			"name": "Cao Lãnh",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.6359976,
+				10.4670001
+			],
+			"bbox": [
+				105.6359976,
+				10.4670001,
+				105.6359976,
+				10.4670001
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "long-xuyen",
+			"name": "Long Xuyên",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.4200146,
+				10.3803858
+			],
+			"bbox": [
+				105.4200146,
+				10.3803858,
+				105.4200146,
+				10.3803858
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "vung-tau",
+			"name": "Vũng Tàu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				107.0849776,
+				10.3553744
+			],
+			"bbox": [
+				107.0849776,
+				10.3553744,
+				107.0849776,
+				10.3553744
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "my-tho",
+			"name": "Mỹ Tho",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.3500354,
+				10.3504134
+			],
+			"bbox": [
+				106.3500354,
+				10.3504134,
+				106.3500354,
+				10.3504134
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "vinh-long",
+			"name": "Vĩnh Long",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.9640026,
+				10.256004
+			],
+			"bbox": [
+				105.9640026,
+				10.256004,
+				105.9640026,
+				10.256004
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "can-tho",
+			"name": "Cần Thơ",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.7700191,
+				10.0499925
+			],
+			"bbox": [
+				105.7700191,
+				10.0499925,
+				105.7700191,
+				10.0499925
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "rach-gia",
+			"name": "Rạch Giá",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.0913525,
+				10.0153951
+			],
+			"bbox": [
+				105.0913525,
+				10.0153951,
+				105.0913525,
+				10.0153951
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "tra-vinh",
+			"name": "Trà Vinh",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				106.3340017,
+				9.9340021
+			],
+			"bbox": [
+				106.3340017,
+				9.9340021,
+				106.3340017,
+				9.9340021
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "soc-trang",
+			"name": "Sóc Trăng",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.9800321,
+				9.6037407
+			],
+			"bbox": [
+				105.9800321,
+				9.6037407,
+				105.9800321,
+				9.6037407
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "bac-lieu",
+			"name": "Bạc Liêu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.7199963,
+				9.2803754
+			],
+			"bbox": [
+				105.7199963,
+				9.2803754,
+				105.7199963,
+				9.2803754
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "ca-mau",
+			"name": "Cà Mau",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.1500052,
+				9.1773584
+			],
+			"bbox": [
+				105.1500052,
+				9.1773584,
+				105.1500052,
+				9.1773584
+			],
+			"colorIndex": 2
+		}
+	],
+	"tourOrder": [
+		"lang-son",
+		"thai-nguyen",
+		"viet-tri",
+		"son-tay",
+		"cam-pha",
+		"ha-noi",
+		"ha-long",
+		"hai-phong",
+		"hoa-binh",
+		"thai-binh",
+		"nam-inh",
+		"ninh-binh",
+		"thanh-hoa",
+		"vinh",
+		"ha-tinh",
+		"ong-hoi",
+		"hue",
+		"a-nang",
+		"quang-ngai",
+		"kon-tum",
+		"pleiku",
+		"quy-nhon",
+		"buon-ma-thuot",
+		"nha-trang",
+		"a-lat",
+		"cam-ranh",
+		"phan-rang-thap-cham",
+		"tay-ninh",
+		"bien-hoa",
+		"thu-dau-mot",
+		"phan-thiet",
+		"ho-chi-minh",
+		"tan-an",
+		"cao-lanh",
+		"long-xuyen",
+		"vung-tau",
+		"my-tho",
+		"vinh-long",
+		"can-tho",
+		"rach-gia",
+		"tra-vinh",
+		"soc-trang",
+		"bac-lieu",
+		"ca-mau"
+	]
+}

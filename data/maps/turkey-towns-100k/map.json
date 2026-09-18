@@ -1,0 +1,942 @@
+{
+	"id": "turkey-towns-100k",
+	"name": "Turkey — Towns",
+	"country": "Turkey",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "edirne",
+			"name": "Edirne",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				26.5699955,
+				41.6704397
+			],
+			"bbox": [
+				26.5699955,
+				41.6704397,
+				26.5699955,
+				41.6704397
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "zonguldak",
+			"name": "Zonguldak",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				31.7800134,
+				41.4303768
+			],
+			"bbox": [
+				31.7800134,
+				41.4303768,
+				31.7800134,
+				41.4303768
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "samsun",
+			"name": "Samsun",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				36.3436625,
+				41.2799984
+			],
+			"bbox": [
+				36.3436625,
+				41.2799984,
+				36.3436625,
+				41.2799984
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "karabuk",
+			"name": "Karabük",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				32.600015,
+				41.2000033
+			],
+			"bbox": [
+				32.600015,
+				41.2000033,
+				32.600015,
+				41.2000033
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "rize",
+			"name": "Rize",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				40.5218571,
+				41.0208411
+			],
+			"bbox": [
+				40.5218571,
+				41.0208411,
+				40.5218571,
+				41.0208411
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "istanbul",
+			"name": "İstanbul",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				28.97427681675554,
+				41.01760173507249
+			],
+			"bbox": [
+				28.97427681675554,
+				41.01760173507249,
+				28.97427681675554,
+				41.01760173507249
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "ordu",
+			"name": "Ordu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				37.8699259,
+				41.0004289
+			],
+			"bbox": [
+				37.8699259,
+				41.0004289,
+				37.8699259,
+				41.0004289
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "tekirdag",
+			"name": "Tekirdağ",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				27.5099898,
+				40.9908688
+			],
+			"bbox": [
+				27.5099898,
+				40.9908688,
+				27.5099898,
+				40.9908688
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "trabzon",
+			"name": "Trabzon",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				39.7199939,
+				40.9799909
+			],
+			"bbox": [
+				39.7199939,
+				40.9799909,
+				39.7199939,
+				40.9799909
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "izmit",
+			"name": "İzmit",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				29.9306172,
+				40.776024
+			],
+			"bbox": [
+				29.9306172,
+				40.776024,
+				29.9306172,
+				40.776024
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "adapazar",
+			"name": "Adapazarı",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				30.4000025,
+				40.7666611
+			],
+			"bbox": [
+				30.4000025,
+				40.7666611,
+				30.4000025,
+				40.7666611
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "corum",
+			"name": "Çorum",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.9500008,
+				40.5199931
+			],
+			"bbox": [
+				34.9500008,
+				40.5199931,
+				34.9500008,
+				40.5199931
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "tokat",
+			"name": "Tokat",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				36.5630045,
+				40.3059962
+			],
+			"bbox": [
+				36.5630045,
+				40.3059962,
+				36.5630045,
+				40.3059962
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "bursa",
+			"name": "Bursa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				29.0680521,
+				40.2019327
+			],
+			"bbox": [
+				29.0680521,
+				40.2019327,
+				29.0680521,
+				40.2019327
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "ankara",
+			"name": "Ankara",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				32.8624458,
+				39.9291844
+			],
+			"bbox": [
+				32.8624458,
+				39.9291844,
+				32.8624458,
+				39.9291844
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "erzurum",
+			"name": "Erzurum",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				41.2900272,
+				39.9203915
+			],
+			"bbox": [
+				41.2900272,
+				39.9203915,
+				41.2900272,
+				39.9203915
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "k-r-kkale",
+			"name": "Kırıkkale",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				33.5299841,
+				39.8503699
+			],
+			"bbox": [
+				33.5299841,
+				39.8503699,
+				33.5299841,
+				39.8503699
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "eskisehir",
+			"name": "Eskişehir",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				30.5299605,
+				39.7949986
+			],
+			"bbox": [
+				30.5299605,
+				39.7949986,
+				30.5299605,
+				39.7949986
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "erzincan",
+			"name": "Erzincan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				39.4927726,
+				39.7526498
+			],
+			"bbox": [
+				39.4927726,
+				39.7526498,
+				39.4927726,
+				39.7526498
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "sivas",
+			"name": "Sivas",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				37.0349898,
+				39.7454151
+			],
+			"bbox": [
+				37.0349898,
+				39.7454151,
+				37.0349898,
+				39.7454151
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "bal-kesir",
+			"name": "Balıkesir",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				27.8900183,
+				39.6503821
+			],
+			"bbox": [
+				27.8900183,
+				39.6503821,
+				27.8900183,
+				39.6503821
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "kutahya",
+			"name": "Kütahya",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				29.9299971,
+				39.4200086
+			],
+			"bbox": [
+				29.9299971,
+				39.4200086,
+				29.9299971,
+				39.4200086
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "afyonkarahisar",
+			"name": "Afyonkarahisar",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				30.5500109,
+				38.7503854
+			],
+			"bbox": [
+				30.5500109,
+				38.7503854,
+				30.5500109,
+				38.7503854
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "kayseri",
+			"name": "Kayseri",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				35.4900195,
+				38.7349599
+			],
+			"bbox": [
+				35.4900195,
+				38.7349599,
+				35.4900195,
+				38.7349599
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "usak",
+			"name": "Uşak",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				29.4200024,
+				38.6803638
+			],
+			"bbox": [
+				29.4200024,
+				38.6803638,
+				29.4200024,
+				38.6803638
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "elaz-g",
+			"name": "Elazığ",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				39.2299979,
+				38.6799762
+			],
+			"bbox": [
+				39.2299979,
+				38.6799762,
+				39.2299979,
+				38.6799762
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "manisa",
+			"name": "Manisa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				27.4399682,
+				38.6303927
+			],
+			"bbox": [
+				27.4399682,
+				38.6303927,
+				27.4399682,
+				38.6303927
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "van",
+			"name": "Van",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				43.399976,
+				38.4954397
+			],
+			"bbox": [
+				43.399976,
+				38.4954397,
+				43.399976,
+				38.4954397
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "izmir",
+			"name": "İzmir",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				27.1498482,
+				38.4380955
+			],
+			"bbox": [
+				27.1498482,
+				38.4380955,
+				27.1498482,
+				38.4380955
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "malatya",
+			"name": "Malatya",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				38.3000288,
+				38.3704344
+			],
+			"bbox": [
+				38.3000288,
+				38.3704344,
+				38.3000288,
+				38.3704344
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "siirt",
+			"name": "Siirt",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				41.9329986,
+				37.9440001
+			],
+			"bbox": [
+				41.9329986,
+				37.9440001,
+				41.9329986,
+				37.9440001
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "diyarbak-r",
+			"name": "Diyarbakır",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				40.2300402,
+				37.920436
+			],
+			"bbox": [
+				40.2300402,
+				37.920436,
+				40.2300402,
+				37.920436
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "batman",
+			"name": "Batman",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				41.1400105,
+				37.890412
+			],
+			"bbox": [
+				41.1400105,
+				37.890412,
+				41.1400105,
+				37.890412
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "konya",
+			"name": "Konya",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				32.4730639,
+				37.8769583
+			],
+			"bbox": [
+				32.4730639,
+				37.8769583,
+				32.4730639,
+				37.8769583
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "ayd-n",
+			"name": "Aydın",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				27.8500207,
+				37.8499752
+			],
+			"bbox": [
+				27.8500207,
+				37.8499752,
+				27.8500207,
+				37.8499752
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "denizli",
+			"name": "Denizli",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				29.0800232,
+				37.7703935
+			],
+			"bbox": [
+				29.0800232,
+				37.7703935,
+				29.0800232,
+				37.7703935
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "ad-yaman",
+			"name": "Adıyaman",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				38.2799267,
+				37.7703935
+			],
+			"bbox": [
+				38.2799267,
+				37.7703935,
+				38.2799267,
+				37.7703935
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "isparta",
+			"name": "Isparta",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				30.5299605,
+				37.7699801
+			],
+			"bbox": [
+				30.5299605,
+				37.7699801,
+				30.5299605,
+				37.7699801
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "kahramanmaras",
+			"name": "Kahramanmaraş",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				36.9450211,
+				37.6099898
+			],
+			"bbox": [
+				36.9450211,
+				37.6099898,
+				36.9450211,
+				37.6099898
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "karaman",
+			"name": "Karaman",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				33.2150162,
+				37.1815405
+			],
+			"bbox": [
+				33.2150162,
+				37.1815405,
+				33.2150162,
+				37.1815405
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "sanl-urfa",
+			"name": "Şanlıurfa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				38.7949857,
+				37.1699909
+			],
+			"bbox": [
+				38.7949857,
+				37.1699909,
+				38.7949857,
+				37.1699909
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "gaziantep",
+			"name": "Gaziantep",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				37.3830484,
+				37.0769296
+			],
+			"bbox": [
+				37.3830484,
+				37.0769296,
+				37.3830484,
+				37.0769296
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "nusaybin",
+			"name": "Nusaybin",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				41.218352,
+				37.0749837
+			],
+			"bbox": [
+				41.218352,
+				37.0749837,
+				41.218352,
+				37.0749837
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "adana",
+			"name": "Adana",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				35.3180582,
+				36.9969345
+			],
+			"bbox": [
+				35.3180582,
+				36.9969345,
+				35.3180582,
+				36.9969345
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "tarsus",
+			"name": "Tarsus",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.8799792,
+				36.9203937
+			],
+			"bbox": [
+				34.8799792,
+				36.9203937,
+				34.8799792,
+				36.9203937
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "antalya",
+			"name": "Antalya",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				30.6980301,
+				36.891928
+			],
+			"bbox": [
+				30.6980301,
+				36.891928,
+				30.6980301,
+				36.891928
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "mersin",
+			"name": "Mersin",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.6199951,
+				36.7999876
+			],
+			"bbox": [
+				34.6199951,
+				36.7999876,
+				34.6199951,
+				36.7999876
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "iskenderun",
+			"name": "İskenderun",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				36.1700297,
+				36.5804144
+			],
+			"bbox": [
+				36.1700297,
+				36.5804144,
+				36.1700297,
+				36.5804144
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "antakya",
+			"name": "Antakya",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				36.1166766,
+				36.2333341
+			],
+			"bbox": [
+				36.1166766,
+				36.2333341,
+				36.1166766,
+				36.2333341
+			],
+			"colorIndex": 5
+		}
+	],
+	"tourOrder": [
+		"edirne",
+		"zonguldak",
+		"samsun",
+		"karabuk",
+		"rize",
+		"istanbul",
+		"ordu",
+		"tekirdag",
+		"trabzon",
+		"izmit",
+		"adapazar",
+		"corum",
+		"tokat",
+		"bursa",
+		"ankara",
+		"erzurum",
+		"k-r-kkale",
+		"eskisehir",
+		"erzincan",
+		"sivas",
+		"bal-kesir",
+		"kutahya",
+		"afyonkarahisar",
+		"kayseri",
+		"usak",
+		"elaz-g",
+		"manisa",
+		"van",
+		"izmir",
+		"malatya",
+		"siirt",
+		"diyarbak-r",
+		"batman",
+		"konya",
+		"ayd-n",
+		"denizli",
+		"ad-yaman",
+		"isparta",
+		"kahramanmaras",
+		"karaman",
+		"sanl-urfa",
+		"gaziantep",
+		"nusaybin",
+		"adana",
+		"tarsus",
+		"antalya",
+		"mersin",
+		"iskenderun",
+		"antakya"
+	]
+}

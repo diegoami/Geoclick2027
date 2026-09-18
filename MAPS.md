@@ -653,6 +653,80 @@ which is why every map built before this rebuilds identically. If the source
 has no region for a repeated name, both are left alone and `mapData.test.ts`
 fails loudly rather than the builder inventing a name.
 
+### Turkey, Nigeria, Vietnam, Colombia, Egypt, South Korea (built 2026-09-18)
+
+Six countries that had no map at all (FT-30, docs/PLAN_V0.7.md), twelve
+maps, 1.1 MB of tiles in total.
+
+```
+npx tsx data/scripts/build-map.ts --country="Turkey" --out=data/maps/turkey-regions --type=province --name-field=name_tr --name="Turkey — Provinces"
+npx tsx data/scripts/build-points-map.ts --country="Turkey" --out=data/maps/turkey-towns-100k --name-field=NAME_TR --min-population=100000 --max-count=50 --name="Turkey — Towns"
+npx tsx data/scripts/build-map.ts --country="Nigeria" --out=data/maps/nigeria-regions --type=state --name="Nigeria — States"
+npx tsx data/scripts/build-points-map.ts --country="Nigeria" --out=data/maps/nigeria-towns-100k --min-population=100000 --max-count=50 --name="Nigeria — Towns"
+npx tsx data/scripts/build-map.ts --country="Vietnam" --out=data/maps/vietnam-regions --type=province --name-field=name_vi --name="Vietnam — Provinces"
+npx tsx data/scripts/build-points-map.ts --country="Vietnam" --out=data/maps/vietnam-towns-100k --name-field=NAME_VI --min-population=100000 --name="Vietnam — Towns"
+npx tsx data/scripts/build-map.ts --country="Colombia" --out=data/maps/colombia-regions --type=region --exclude-field=adm1_code --exclude="COL+99?" --name="Colombia — Regions"
+npx tsx data/scripts/build-points-map.ts --country="Colombia" --out=data/maps/colombia-towns-100k --name-field=NAME_ES --min-population=100000 --name="Colombia — Towns"
+npx tsx data/scripts/build-map.ts --country="Egypt" --out=data/maps/egypt-regions --type=region --name-field=name_en --name="Egypt — Governorates"
+npx tsx data/scripts/build-points-map.ts --country="Egypt" --out=data/maps/egypt-towns-100k --min-population=100000 --name="Egypt — Towns"
+npx tsx data/scripts/build-map.ts --country="South Korea" --out=data/maps/south-korea-regions --type=region --name="South Korea — Regions"
+npx tsx data/scripts/build-points-map.ts --country="South Korea" --out=data/maps/south-korea-towns-100k --min-population=100000 --name="South Korea — Towns"
+```
+
+Targets: Turkey 81 / 49, Nigeria 37 / 50, Vietnam 63 / 44, Colombia 33 / 34,
+Egypt 27 / 30, South Korea 17 / 26.
+
+**Which name field each country uses**, and why — the choice matters more
+here than in any earlier batch, because the plain `name` column is weakest
+outside Europe and the Americas:
+
+- **Turkey** `name_tr` / `NAME_TR`: the plain column drops Turkish
+  diacritics wholesale (Sirnak, Iğdir, Agri, Kirklareli for Şırnak, Iğdır,
+  Ağrı, Kırklareli).
+- **Vietnam** `name_vi` / `NAME_VI`: same story with tone marks (Ðong Tháp
+  for Đồng Tháp, Ha Noi for Hà Nội).
+- **Colombia** `NAME_ES` for the towns (Bogota → Bogotá); the regions use
+  the plain column, which is already accented, plus one fixup for Bogotá.
+- **Egypt** `name_en` for the governorates: the plain column is
+  transliterated Arabic (Shamal Sina', Al Bahr al Ahmar, Al Wadi at Jadid)
+  where `name_en` gives North Sinai, Red Sea and New Valley. The towns keep
+  the plain column — `NAME_EN` is unreliable there, and gives "sharkia" as
+  the English name of El Mansura.
+- **Nigeria, South Korea**: the plain column, which is already the English
+  or romanized form both countries use themselves.
+
+**Curation, all verified against the source rather than assumed:**
+
+- **Three Vietnamese provinces carry their macro-region's name** in Natural
+  Earth: "Vùng Đông Bắc", "Đồng Bằng Sông Hồng" and "Đông Nam Bộ". Each
+  polygon is province-sized (0.13-0.82 square degrees against a median of
+  0.72), and each was identified from its own geometry: the first contains
+  the town of Bắc Kạn — which the populated-places file *also* files under
+  ADM1NAME "Đông Bắc" — the third contains Biên Hòa, capital of Đồng Nai,
+  and the second is the small polygon between them at 106.0 E, 20.8 N, which
+  is Hưng Yên, the one of the three with no city over 100 000. Renamed in
+  `NAME_FIXUPS`; the map now shows all 63 provinces with no holes.
+- **Colombia has an unnamed placeholder polygon** (`adm1_code` "COL+99?",
+  at 4.0 N 81.6 W — Malpelo) whose empty name crashed the builder on
+  `slugify`. Excluded by code, leaving 32 departments plus Bogotá.
+- **Turkey has the same city twice**: "Sakarya" (287k) and "Adapazarı"
+  (260k), 3 km apart, both Adapazarı in Turkish. FT-27's same-name rule
+  would have renamed them "Adapazarı, Sakarya" twice over and hidden the
+  duplicate, so that rule now only splits names apart when the places are in
+  *different* regions; two rows in one region fall through to the existing
+  duplicate-id dedup, which keeps the more populous. Turkey's towns map is
+  49, not 50, for this reason.
+- **Spellings fixed**: Nasarawa (the source doubles the s), Elazığ (the
+  circumflex Turkish dropped), Seongnam (South Korea's official
+  romanization since 2000), Osogbo and Ogbomoso (both cities' own modern
+  spellings), Cartagena and Pasto (NAME_ES gives the formal "Cartagena de
+  Indias" and "San Juan de Pasto"), and Hồ Chí Minh and Tây Ninh (NAME_VI
+  gives "Thành phố X", which is "X city").
+- **Left as the source has them**: Egypt's towns mix exonyms with
+  transliterations (Cairo and Alexandria next to Bur Said and Dumyat).
+  Correcting that would mean choosing English names for some and not
+  others; the source's inconsistency is at least reproducible.
+
 ### Adaptive town selection: `--min-count` / `--max-count`
 
 Requested directly by the user (2026-09-13), prompted by this batch's

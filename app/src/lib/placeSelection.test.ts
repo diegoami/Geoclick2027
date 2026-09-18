@@ -101,6 +101,17 @@ describe('disambiguate', () => {
 		expect(new Set(names).size).toBe(names.length);
 	});
 
+	it('leaves two rows for the same place alone, so the builder can collapse them', () => {
+		// Natural Earth has both 'Sakarya' and 'Adapazarı' for one Turkish city,
+		// 3km apart and both called Adapazarı in Turkish. Renaming them would
+		// hide the duplicate behind two names instead of dropping one.
+		const result = disambiguate([
+			place('Adapazarı', 30.4, 40.77, 'Sakarya'),
+			place('Adapazarı', 30.42, 40.8, 'Sakarya')
+		]);
+		expect(result.map((c) => c.name)).toEqual(['Adapazarı', 'Adapazarı']);
+	});
+
 	it('leaves a shared name alone when there is no region to add', () => {
 		// Better a duplicate the map test will catch than a name invented here.
 		const result = disambiguate([
