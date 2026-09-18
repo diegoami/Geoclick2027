@@ -199,23 +199,28 @@ Touch:
 
 - **Highlight:** the Quiz tab.
 - **Moves on:** the route becomes `/map/italy-regions/quiz`.
-- **What the player sees:** the quiz rebuilds from the sandbox (FT-10). The
-  regions placed in steps 6 and 7 come back already solved. It's the
-  quiz's normal same-day carry-over: a region placed correctly isn't due
-  again until tomorrow.
+- **What the player sees:** the round carries on where it was left (FT-26,
+  quizRound.ts). The regions placed in steps 6 and 7 are still marked, and
+  the names still in the tray are the ones still to place - going out to
+  the Overview and back does not restart the round.
 
-### 10. Spaced repetition — quiz
+### 10. What counts as known — quiz
 
-> The regions you placed are still marked. Each comes back for review
-> later: sooner if it gave you trouble, less often once you know it.
+> The regions you placed are still marked. Place a name right three times
+> in a row and it counts as known — **Progress** shows how far you have
+> got.
 
 - **Highlight:** the progress line under the map name ("2 / 20 placed").
 - **Moves on:** Next.
-- **Accuracy check of the copy:** a first-try placement grades "good" and
-  comes back after 1 day, then 6, then about 15, and so on; a placement
-  after a mistake grades "hard" and comes back sooner; a region revealed
-  after three misses stays due the same day (DECISIONS.md, "Persistence &
-  retention").
+- **Rewritten at FT-26 (v0.6.0):** it used to explain spaced repetition
+  ("each comes back for review later"). The scheduler still runs, but
+  nothing in the interface talks about review dates any more, so the step
+  explains the thing the player can actually see: the clean streak behind
+  the progress map (DECISIONS.md, "The scheduler keeps running, out of
+  sight").
+- **Accuracy check of the copy:** three clean placements in a row is
+  exactly KNOWN_CLEAN_STREAK (packages/srs); one mistake sends that name
+  back to zero (FT-20), and the progress map draws the three strengths.
 - **Shortened at FT-12:** the first draft (approved at FT-09) also said
   "what you solve stays solved" and "the map list shows how many are due
   on each map". At 360px it ran to 7 lines in German (5 in English, 6 in

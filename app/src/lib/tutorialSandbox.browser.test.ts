@@ -2,7 +2,7 @@
 // repository and the Recent list, both of which need a real localStorage.
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { createQuizSession } from '@geoclick/quiz-engine';
-import { isDue, rate } from '@geoclick/srs';
+import { rate } from '@geoclick/srs';
 import { recentMaps, recordVisit } from './mapPrefs.svelte';
 import {
 	createLocalStorageProgressRepository,
@@ -36,15 +36,15 @@ afterEach(() => {
 	vi.restoreAllMocks();
 });
 
-// What QuizView does on mount: ask for a repository, read the map's cards,
-// and treat every not-due target as already solved.
+// What QuizView does on mount: ask for a repository, read the map's cards
+// (they set the round's difficulty), and put the whole map in play - every
+// round covers all of it since v0.6.0 (FT-26).
 async function mountQuiz() {
 	const repository = await createProgressRepository();
 	const cards = new Map(
 		(await repository.getCardStates(TUTORIAL_MAP_ID)).map((c) => [c.targetId, c])
 	);
-	const notDue = new Set(targets.filter((t) => !isDue(cards.get(t.id), today)).map((t) => t.id));
-	return { repository, session: createQuizSession(targets, notDue) };
+	return { repository, cards, session: createQuizSession(targets) };
 }
 
 describe('tutorial sandbox', () => {
@@ -84,20 +84,18 @@ describe('tutorial sandbox', () => {
 		expect(await real.getLastSessionSummary(TUTORIAL_MAP_ID)).toBeUndefined();
 	});
 
-	it('keeps solved regions across a quiz remount while the tutorial runs', async () => {
+	it('keeps what was learned across a quiz remount while the tutorial runs', async () => {
 		startTutorialSandbox();
 		const first = await mountQuiz();
 		await first.repository.saveCardState(TUTORIAL_MAP_ID, goodCard('sicilia'));
 
 		// Overview and back: QuizView mounts again and asks for a new repository.
 		const second = await mountQuiz();
-		const status = Object.fromEntries(second.session.items.map((i) => [i.target.id, i.status]));
-		expect(status).toEqual({
-			abruzzo: 'pending',
-			lazio: 'pending',
-			sardegna: 'pending',
-			sicilia: 'correct'
-		});
+		// The round itself covers the whole map either way (FT-26); what has to
+		// survive the remount is the streak behind it.
+		expect(second.session.items.every((i) => i.status === 'pending')).toBe(true);
+		expect(second.cards.get('sicilia')?.cleanStreak).toBe(1);
+		expect(second.cards.has('abruzzo')).toBe(false);
 	});
 
 	it('saves other maps as usual during the tutorial', async () => {

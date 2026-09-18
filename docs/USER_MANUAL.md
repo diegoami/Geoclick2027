@@ -10,8 +10,8 @@ It describes **Geoclick v0.5.0** (14 September 2026).
 The screenshots come from the web version, on a laptop-sized window
 (1280 × 800) and on a phone-sized screen. The Windows and Android apps
 show exactly the same screens (see [Getting Geoclick](#2-getting-geoclick)).
-The progress shown in the screenshots (maps "to review", favourites and so
-on) is realistic example data.
+The progress shown in the screenshots (how much of each map is known,
+favourites and so on) is realistic example data.
 
 ## Contents
 
@@ -23,7 +23,7 @@ on) is realistic example data.
 6. [Overview: see every name](#6-overview-see-every-name)
 7. [Progress: what you know so far](#7-progress-what-you-know-so-far)
 8. [Quiz: drag the names onto the map](#8-quiz-drag-the-names-onto-the-map)
-9. [How reviews are scheduled](#9-how-reviews-are-scheduled)
+9. [What counts as known](#9-what-counts-as-known)
 10. [Tour: a guided flight over the map](#10-tour-a-guided-flight-over-the-map)
 11. [Towns maps](#11-towns-maps)
 12. [Favourites and Recent](#12-favourites-and-recent)
@@ -57,10 +57,10 @@ states or provinces are, and where its main towns and cities are.
   - **Quiz:** the game itself. Drag each name from a tray onto the map;
   - **Tour:** the map flies from place to place on its own, showing each
     name in turn.
-- **It remembers what you know.** The quiz uses *spaced repetition*: a
-  place you get right comes back for review after a day, then after longer
-  and longer gaps; a place you get wrong comes back sooner. The home page
-  shows, for each map, how many places are due for review.
+- **It remembers what you know.** Place a name right three times in a row
+  with no mistake and it counts as known; one mistake and that name starts
+  again. The home page shows how much of each map you know, and the better
+  you know a map, the fewer names its quiz offers at a time.
 - **Three languages:** English, German and Italian. Place names stay in the
   local language (Italian regions are called "Toscana", not "Tuscany").
 - **No account, no sign-up.** Everything is kept on the device you play on.
@@ -163,8 +163,9 @@ two extra lines:
 
 | Line | Colour | Meaning |
 |---|---|---|
-| **"8 to review"** | orange | 8 places on this map are due for review today (see [How reviews are scheduled](#9-how-reviews-are-scheduled)). |
-| **"No reviews needed"** | green | You've played this map and nothing is due today. |
+| **"14 / 20 known"** | orange | You know 14 of this map's 20 places — a place counts as known once you have placed it right three times in a row with no mistake (see [What counts as known](#9-what-counts-as-known)). |
+| **"20 / 20 known"** | green | You know the whole map. |
+| **"· 3 names at a time"** | | Added to that line once the map is known well enough for the quiz to hold names back (see [Fewer names as you improve](#fewer-names-as-you-improve)). |
 | *(no line)* | | You've never played this map's quiz. |
 | **"Last: 17/20 (3 mistakes)"** | grey | Your last finished quiz on this map: 17 of 20 places right on the first try, 3 wrong drops in total. It leaves out the mistakes part when there were none ("Last: 16/16"). |
 
@@ -380,9 +381,9 @@ so the mistake shows you the answer:
 
 The name is marked differently from one you placed yourself: its region
 turns a muted gold-brown instead of green, and its label is brown. It
-counts as a mistake in your score, it counts as not known, and it comes
-back for review today (see
-[How reviews are scheduled](#9-how-reviews-are-scheduled)):
+counts as a mistake in your score, and it sends that name's streak back to
+zero, so it has to be placed right three more rounds running to count as
+known again (see [What counts as known](#9-what-counts-as-known)):
 
 ![Umbria, shown after the mistake, in gold-brown among green regions](manual/quiz-revealed.jpg)
 
@@ -431,92 +432,72 @@ score:
 
 ![The score panel: "Done!"](manual/quiz-done.jpg)
 
-- **"Done!"**, or **"All caught up!"** (see below).
+- **"Done!"**
 - **"18 / 20 placed correctly on the first try."** A name counts only if
   it was right on the very first drop.
-- **"4 total mistakes."** All wrong drops together.
-- **"1 shown after a mistake."** Only when some names had to be shown.
+- **"2 total mistakes."** All wrong drops together.
+- **"2 shown after a mistake."** Only when some names had to be shown.
+- **"14 / 20 known · 3 names at a time"** — where the round leaves you,
+  the same line the map's card shows on the home page.
 - **Back to maps** returns to the home page.
-- **Play again** starts another round with whatever is still due (here,
-  the name that was shown). It only appears when something is still due.
+- **Play again** plays the map again, from blank.
 - **×**, top-right, closes the panel so you can look at the finished map:
 
 ![The finished map, with the panel closed](manual/quiz-finished-map.jpg)
 
-If every name was placed and nothing is due any more, the panel says so,
-and tells you when the map will next need you:
+### Every round is the whole map
 
-![The score panel: "All caught up!"](manual/quiz-all-caught-up.jpg)
+A quiz always asks for every name on the map. There is no shorter "review
+round" and no separate practice mode: you play the map, and Geoclick keeps
+track of how well you know each name as you go (see
+[What counts as known](#9-what-counts-as-known)).
 
-- **"All caught up!"** and **"Next review in 1 day."**
-- **Back to maps**, and **Practice all regions** (see
-  [Practice](#practice) below) instead of Play again.
+### Leaving in the middle
 
-### A review round: only what's due
-
-The quiz doesn't always ask for every name. Once you've played a map, it
-only asks for the places that are **due** today. The others are already
-shown as placed, in green with their names, and they count in the
-progress line. Here 8 regions of Italy are due, so the quiz starts at
-"12 / 20 placed" with 8 names in the tray:
-
-![A review round: 12 regions already placed, 8 to go](manual/quiz-due-session.jpg)
-
-The places you get right in a round stay placed if you leave and come
-back the same day. Each right answer is saved the moment you make it, so
-leaving halfway loses nothing.
-
-### Nothing due: "Up to date!"
-
-When nothing on a map is due, the quiz says so instead of starting:
-
-![The quiz when nothing is due: "Up to date!"](manual/quiz-up-to-date.jpg)
-
-- **"Up to date!"**, **"No reviews needed on this map right now."**
-- **Practice all regions** starts a practice round anyway.
-
-### Practice
-
-A practice round asks for every name, from a blank map, whatever is due.
-The progress line starts with **"Practice mode —"**:
-
-![A practice round on Germany — States](manual/quiz-practice.jpg)
-
-Practice is for fun or for extra training: **it changes nothing.** It
-doesn't move any review dates, and it doesn't replace the "Last: …"
-result on the home page. Its score panel says "Practice results don't
-affect your review schedule." and its Play again starts another practice
-round.
+You can step out of a round and come back to it. Looking a name up in the
+**Overview** and returning to the **Quiz** leaves the round exactly as it
+was: the names you placed are still marked, and the tray still holds the
+ones you haven't. Reloading the page, or coming back another day, starts a
+fresh round.
 
 ### What the quiz needs
 
 The quiz is played by dragging, so it needs a mouse, a trackpad, a finger
 or a pen. It can't be played with the keyboard alone.
 
-## 9. How reviews are scheduled
+## 9. What counts as known
 
-Geoclick decides when each place should come back, so that you practise
-what you're about to forget rather than what you already know. This is
-called *spaced repetition*, the method flashcard apps such as Anki use.
+Geoclick keeps one number for every place on every map: how many times in
+a row you have placed it right **with no mistake**. That is its *clean
+streak*.
 
-Every place on every map has its own schedule:
-
-| What happened in the quiz | When the place comes back |
+| What happened in the quiz | The place's streak |
 |---|---|
-| **Right on the first try** | the next day, then after 6 days, then after about two and a half times the previous gap each time (15 days, then 38, 95…), up to at most once a year |
-| **Right, but after one or more wrong drops** | still counts as known, but comes back sooner, with shorter gaps than a first-try answer |
-| **Given away after three misses** | stays due, and comes back in the very next round, the same day |
-| **Never played** | due |
+| **Right on the first try** | one higher |
+| **Shown after a mistake** | back to zero |
+| **Never played** | zero |
 
-- A place is **due** when its review date is today or earlier.
-- The home page's **"N to review"** is the number of due places on that
-  map. It goes down as you play, and up again as review dates arrive.
-- A map you've fully reviewed shows **"No reviews needed"**, and its quiz
-  opens on "Up to date!" until something is due again.
-- **Practice rounds don't count** towards any of this.
-- Days change at midnight on the device's own clock.
+A place counts as **known** at a streak of three. That one number drives
+everything you see:
 
-The schedule is kept per device: see [Your data and privacy](#17-your-data-and-privacy).
+- the map's card on the home page ("14 / 20 known");
+- the [progress map](#7-progress-what-you-know-so-far), where a known name
+  is written at full strength, a streak of two more lightly, and a streak
+  of one faintly;
+- how many names the quiz offers at a time (see
+  [Fewer names as you improve](#fewer-names-as-you-improve)).
+
+Because one mistake resets a streak, a name becomes known only by being
+placed right three rounds running — and stops being known if you later
+fumble it.
+
+Underneath, Geoclick also keeps a review date for each place (the *spaced
+repetition* idea that flashcard apps such as Anki use), so that a later
+version can suggest what to play next. Nothing in the app shows those
+dates, and nothing stops you playing any map at any time.
+
+What is kept is kept per device: see
+[Your data and privacy](#17-your-data-and-privacy).
 
 ## 10. Tour: a guided flight over the map
 
@@ -632,10 +613,10 @@ only there to draw the eye.
 | 4 | Overview, then Progress | "**Progress** shows how well you know this map: the names you have placed right, as strongly as you know them. Open it and click any region to see which one it is." | you click a region on the progress map |
 | 5 | Progress | "Ready to test yourself for real? Open the **Quiz**." | you open the Quiz |
 | 6 | Quiz | "Drag a name from the tray onto its region. Try **Sicilia**: the big island off the toe of the boot." | you place any name correctly |
-| 7 | Quiz | "Now get one wrong on purpose: drop **Sardegna** anywhere on the mainland. The region flashes red and the name goes back to the tray." | you make a wrong drop |
+| 7 | Quiz | "Now get one wrong on purpose: drop **Sardegna** anywhere on the mainland. The region you hit flashes red, and Sardegna is shown where it really is." | you make a wrong drop |
 | 8 | Quiz | "Not sure where a region is? Look it up in the **overview**." | you open the Overview |
 | 9 | Overview | "Found Sardegna? Go back to the **Quiz**." | you open the Quiz |
-| 10 | Quiz | "The regions you placed are still marked. Each comes back for review later: sooner if it gave you trouble, less often once you know it." | you press **Next** |
+| 10 | Quiz | "The regions you placed are still marked. Place a name right three times in a row and it counts as known — **Progress** shows how far you have got." | you press **Next** |
 | 11 | Quiz | "Last one: the **Tour** flies you to each region in turn and shows its name. Open it." | you open the Tour |
 
 On touch screens, steps 2, 3 and 4 say "pinch", "tap" and "drag with one
@@ -666,7 +647,7 @@ Step 7 outlines Sardegna; Sicily is already green:
 Step 10 outlines the progress line, after you've been to the Overview and
 back. Sicily is still placed:
 
-![Step 10: spaced repetition](manual/tutorial-step10.jpg)
+![Step 10: what counts as known](manual/tutorial-step10.jpg)
 
 The last card appears on the Tour, which keeps playing behind it:
 
@@ -739,8 +720,8 @@ Tap a name to enlarge it; tap it again, or anywhere else, to shrink it:
 
 ![Tapping "Lazio" enlarges it](manual/phone-tap-magnify.jpg)
 
-The quiz tray starts at up to about a third of the screen, and scrolls. Here a
-review round, with 12 regions already placed:
+The quiz tray starts at up to about a third of the screen, and scrolls.
+Here a round with 12 regions already placed:
 
 ![The quiz on a phone](manual/phone-quiz.jpg)
 
@@ -793,7 +774,7 @@ The apps are the same game as the website, packaged to install:
   is no Geoclick server holding it.
 - **Kept on the device, per browser or app.** Geoclick remembers, on the
   device where you play:
-  - each place's review schedule, and each map's last result;
+  - how well you know each place, and each map's last result;
   - your favourites and recent maps;
   - the language you chose;
   - whether you've seen or dismissed the tutorial offer.
@@ -843,17 +824,19 @@ asks for.
 ## 19. Questions and answers
 
 **Can I lose my progress?** Only by clearing the browser's data for the
-site, or uninstalling the Android app. There's no way to lose it by playing:
-practice rounds and the tutorial don't touch it.
+site, or uninstalling the Android app. There's no way to lose it by
+playing: the tutorial doesn't touch it, and a round you leave changes only
+the names you actually placed.
 
-**Why does a map say "8 to review" when I finished it yesterday?**
-Places come back on a schedule: after one day at first, then after longer
-gaps. Places you got wrong come back sooner. See
-[How reviews are scheduled](#9-how-reviews-are-scheduled).
+**Why did my "known" count go down?** A place stops counting as known the
+moment you get it wrong: its streak goes back to zero, and it takes three
+clean rounds to earn it again. See
+[What counts as known](#9-what-counts-as-known).
 
-**The quiz only asked me for a few names. Why?** It only asks for the
-places that are due. The rest are shown as already placed. Use
-**Practice all regions** (when nothing is due) for a full round.
+**The tray only offered me three names. Why?** Because you know most of
+that map. The better you know it, the fewer names the quiz puts in front
+of you, so the last few can't be worked out by elimination. See
+[Fewer names as you improve](#fewer-names-as-you-improve).
 
 **I dropped a name and nothing happened.** You let go on the sea, outside
 the map, or on the tray. That doesn't count; drag it again.
@@ -890,11 +873,9 @@ code-signed; choose *More info*, then *Run anyway*.
 | **Slip** | One name in the tray. |
 | **Placed** | Dropped on the right place (green). |
 | **Shown** | Placed for you after a mistake (gold-brown); counts as not known. |
-| **Due** | A place whose review date has arrived; it will be asked in the next quiz. |
-| **To review** | The number of due places on a map, shown on its home page card. |
-| **Up to date / All caught up** | Nothing on the map is due. |
-| **Practice** | A full quiz round that doesn't change any review dates or results. |
-| **Spaced repetition** | Reviewing each place at growing intervals, sooner when it's hard. |
+| **Clean streak** | How many times in a row you have placed a name right with no mistake. |
+| **Known** | A place with a clean streak of three or more. |
+| **Round** | One playing of a map's quiz: every name, from blank to done. |
 | **Favourites** | Maps you've starred. |
 | **Recent** | The last five maps you opened. |
 | **Map bar** | The row of buttons at the top of every map screen. |

@@ -11,6 +11,7 @@
 	import { mapDisplayName } from './mapCatalog';
 	import { tutorialDrop } from './tutorial.svelte';
 	import { DOT_CLEARANCE_PX, registerLabel } from './labelCollision';
+	import { forgetRound, rememberRound, roundInProgress } from './quizRound';
 	import {
 		createQuizSession,
 		attemptMatch,
@@ -19,24 +20,18 @@
 		type QuizSession
 	} from '@geoclick/quiz-engine';
 	import { overallExtent, type MapDefinition } from './mapDefinition';
-	import { handSize, mapLevel, refillHand, type Level } from './difficulty';
+	import { handSize, knownCount, mapLevel, refillHand, type Level } from './difficulty';
 	import {
 		createProgressRepository,
 		todayLocalDate,
 		type ProgressRepository
 	} from './progressRepository';
-	import {
-		isDue,
-		rate,
-		daysUntil,
-		type CardState as SchedulerState,
-		type Grade
-	} from '@geoclick/srs';
+	import { rate, type CardState as SchedulerState, type Grade } from '@geoclick/srs';
 
 	let { mapId }: { mapId: string } = $props();
 
 	// Assigned at the top of onMount's async init, before anything below
-	// (computeNotDueIds, the completion $effect, onSlipPointerUp) can run -
+	// (refreshCardStates, the completion $effect, onSlipPointerUp) can run -
 	// a plain module-scope variable, not $state, same as cardStatesByTargetId.
 	let progressRepository: ProgressRepository;
 
@@ -50,7 +45,7 @@
 	let map: maplibregl.Map | undefined;
 	// MapLibre throws on setFeatureState until the style's sources exist.
 	// Set in the map's 'load' handler; gates everything that touches
-	// feature state from outside that handler (see the upToDate panel).
+	// feature state from outside that handler.
 	let styleLoaded = $state(false);
 	// Pending wrong-drop flash resets. A Set, not one handle: two wrong
 	// drops inside WRONG_PAUSE_MS each need their own reset, and clearing
@@ -159,14 +154,11 @@
 		}
 	});
 
-	// 'loading' until the map/due-state check resolves; 'upToDate' when
-	// every target is not-due (nothing to review); 'quiz' while a session
-	// (due or practice) is actually being played.
-	let phase = $state<'loading' | 'upToDate' | 'quiz'>('loading');
-	// 'due': a normal spaced-repetition session - attempts feed the
-	// scheduler. 'practice': the "practice all regions" override once
-	// nothing's due - full blank re-test, results never touch SRS state.
-	let mode = $state<'due' | 'practice'>('due');
+	// There is one kind of round now, and it covers the whole map (v0.6.0,
+	// docs/PLAN_V0.6.md): no due-only round that can come up empty, so the
+	// "Up to date!" screen and the practice mode that existed to escape it are
+	// both gone, and with them the view's phases - the tray simply appears once
+	// there is a session. The scheduler still grades every answer underneath.
 
 	// Not reactive state - a plain cache of each target's current scheduler
 	// state, refreshed whenever a session is (re)built. `rate()` needs the
@@ -202,13 +194,10 @@
 	// completion saves/computes again.
 	let summarySaved = false;
 
-	// Whether finishing a *due* session actually cleared the map for today,
-	// vs. something (typically a revealed target, which stays due same-day)
-	// is still outstanding - drives which message/button the score panel
-	// shows, so "Play again" doesn't lie about there being more to play.
-	// Only meaningful when mode === 'due'; undefined until computed.
-	let allCaughtUp = $state<boolean | undefined>(undefined);
-	let daysUntilNextReview = $state<number | undefined>(undefined);
+	// How much of the map is known once the round is over (FT-26) - the same
+	// line the home page shows, so the score panel and the map list tell the
+	// same story. Undefined until a round ends.
+	let knownAfterRound = $state<number | undefined>(undefined);
 	// Lets the score panel be dismissed to see the finished map underneath
 	// (it's a centered overlay with no other way to look past it) without
 	// forcing a replay. Reset whenever a new session starts, so the next
@@ -218,25 +207,19 @@
 	$effect(() => {
 		if (complete && score && !summarySaved) {
 			summarySaved = true;
-			// Practice rounds persist nothing - not SRS state, and not the
-			// home page's "Last: 18/20" either, which is the record of the last
-			// *graded* session. See DECISIONS.md's practice-mode entry.
-			if (mode === 'due') {
-				progressRepository
-					.saveLastSessionSummary(mapId, { ...score, completedAt: new Date().toISOString() })
-					.catch((e) => console.error('Failed to save quiz progress:', e));
-			}
+			// Finished: there is nothing left to come back to.
+			forgetRound(mapId);
+			progressRepository
+				.saveLastSessionSummary(mapId, { ...score, completedAt: new Date().toISOString() })
+				.catch((e) => console.error('Failed to save quiz progress:', e));
 
-			if (mode === 'due' && mapDef) {
-				const today = todayLocalDate();
-				const stillDue = mapDef.targets.some((t) => isDue(cardStatesByTargetId.get(t.id), today));
-				allCaughtUp = !stillDue;
-				if (!stillDue) {
-					const nextDueDate = mapDef.targets
-						.map((t) => cardStatesByTargetId.get(t.id)!.dueDate)
-						.reduce((soonest, due) => (due < soonest ? due : soonest));
-					daysUntilNextReview = daysUntil(nextDueDate, today);
-				}
+			// What the round did to the map: how many names are known now, and
+			// whether that moved the tray to a smaller hand (FT-21).
+			if (mapDef) {
+				knownAfterRound = knownCount(
+					mapDef.targets.map((t) => cardStatesByTargetId.get(t.id)?.cleanStreak ?? 0)
+				);
+				refreshLevel(mapDef);
 			}
 		}
 	});
@@ -444,6 +427,9 @@
 		// This name is resolved either way now (one miss reveals, FT-20), so
 		// the tray draws a replacement for it.
 		dealHand();
+		// Keep the round in case the player steps out to the Overview and back
+		// (quizRound.ts); the completion effect throws it away at the end.
+		rememberRound(mapId, { session, hand });
 
 		if (item.status === 'correct' || item.status === 'revealed') {
 			const revealed = item.status === 'revealed';
@@ -453,22 +439,21 @@
 			// more guesses (FT-20).
 			if (revealed) flashWrongRegion(targetId, exactName);
 			markSolved(targetId, name, target.centroid, revealed);
-			// Practice-mode results never touch SRS state - see
-			// ROADMAP.md's Iteration 6 design. A due-mode attempt grades the
-			// review: clean is "good", a name that had to be shown is "again"
-			// (same-day repeat). "hard" (right, but only after a wrong drop)
-			// can no longer happen in the quiz since one miss reveals, but the
-			// scheduler still understands it.
-			if (mode === 'due') {
-				const grade: Grade = revealed ? 'again' : item.errors === 0 ? 'good' : 'hard';
-				const today = todayLocalDate();
-				const previous = cardStatesByTargetId.get(targetId);
-				const next = rate(previous, grade, today);
-				cardStatesByTargetId.set(targetId, next);
-				progressRepository
-					.saveCardState(mapId, { targetId, ...next })
-					.catch((e) => console.error('Failed to save quiz progress:', e));
-			}
+			// Every answer is graded, in every round (FT-26 - there are no
+			// ungraded practice rounds any more): clean is "good", a name that
+			// had to be shown is "again" (same-day repeat). "hard" (right, but
+			// only after a wrong drop) can no longer happen in the quiz since one
+			// miss reveals, but the scheduler still understands it. The review
+			// date it writes is kept, just not shown anywhere - see
+			// DECISIONS.md, "The scheduler keeps running, out of sight".
+			const grade: Grade = revealed ? 'again' : item.errors === 0 ? 'good' : 'hard';
+			const today = todayLocalDate();
+			const previous = cardStatesByTargetId.get(targetId);
+			const next = rate(previous, grade, today);
+			cardStatesByTargetId.set(targetId, next);
+			progressRepository
+				.saveCardState(mapId, { targetId, ...next })
+				.catch((e) => console.error('Failed to save quiz progress:', e));
 		} else {
 			flashWrongRegion(targetId, exactName);
 		}
@@ -533,19 +518,17 @@
 	// NOT due yet - refreshes `cardStatesByTargetId` as a side effect, since
 	// `rate()` needs each target's previous state and this is the one place
 	// that state gets (re)loaded from the repository.
-	async function computeNotDueIds(targets: { id: string }[]): Promise<Set<string>> {
+	/** Reads what the scheduler knows about this map, which the round needs
+	 * for its difficulty (FT-21) and for grading each answer. */
+	async function refreshCardStates(): Promise<void> {
 		const cardStates = await progressRepository.getCardStates(mapId);
 		cardStatesByTargetId = new Map(cardStates.map((c) => [c.targetId, c]));
-		const today = todayLocalDate();
-		return new Set(
-			targets.filter((t) => !isDue(cardStatesByTargetId.get(t.id), today)).map((t) => t.id)
-		);
 	}
 
 	function clearAllVisuals() {
 		// Before 'load' there are no visuals to clear, and setFeatureState
-		// would throw. The upToDate panel's button is also disabled until
-		// then; this is the backstop for any other path.
+		// would throw - and "Play again", the only way in, can't be reached
+		// before a round has been played on a loaded map anyway.
 		if (!mapDef || !map || !styleLoaded) return;
 		for (const target of mapDef.targets) {
 			map.setFeatureState(
@@ -557,72 +540,55 @@
 		solvedPopups.clear();
 	}
 
-	// Pre-marks not-due targets as discovered - same visual treatment as a
-	// live correct drop. Only ever called once the map has actually
-	// finished loading (setFeatureState throws before then).
-	function applyPreSolvedVisuals(notDueIds: Set<string>, def: MapDefinition) {
-		for (const target of def.targets) {
-			if (!notDueIds.has(target.id)) continue;
-			markSolved(target.id, target.name, target.centroid, false);
-		}
-	}
-
-	// Builds (or rebuilds) a due-mode session from current card state. If
-	// nothing's due, drops into the 'upToDate' phase instead of a
-	// zero-slip session - that's what offers the "practice all" fallback.
-	async function startDueSession() {
+	// Builds a round: the whole map, every time (FT-26). What changes from one
+	// round to the next is how much the tray gives away (FT-21), which is
+	// taken from the streaks the last round wrote.
+	function startRound() {
 		if (!mapDef || !map) return;
-		allCaughtUp = undefined;
-		daysUntilNextReview = undefined;
+		knownAfterRound = undefined;
 		scorePanelDismissed = false;
-		const notDueIds = await computeNotDueIds(mapDef.targets);
-		if (notDueIds.size === mapDef.targets.length) {
-			phase = 'upToDate';
-			session = undefined;
-			return;
-		}
-		mode = 'due';
-		phase = 'quiz';
-		session = createQuizSession(
-			mapDef.targets.map((t) => ({ id: t.id, name: t.name })),
-			notDueIds
-		);
-		refreshLevel(mapDef);
-		hand = [];
-		dealHand();
-		applyPreSolvedVisuals(notDueIds, mapDef);
-	}
-
-	// "Practice all regions": ignores due dates entirely, full blank
-	// re-test, no SRS write-back (see onSlipPointerUp). Only reachable
-	// from the 'upToDate' phase - see ROADMAP.md's Iteration 6 design for
-	// why this isn't a general-purpose always-available control.
-	function startPractice() {
-		if (!mapDef || !map) return;
-		clearAllVisuals();
 		summarySaved = false;
-		scorePanelDismissed = false;
-		mode = 'practice';
-		phase = 'quiz';
+		forgetRound(mapId);
 		session = createQuizSession(mapDef.targets.map((t) => ({ id: t.id, name: t.name })));
 		refreshLevel(mapDef);
 		hand = [];
 		dealHand();
 	}
 
-	// After a *due* session: re-checks due state, since something (a
-	// revealed target) may still be due right now. After a *practice*
-	// session: goes straight into another practice round rather than
-	// re-checking - nothing about due-state changed while practicing, so
-	// there'd be nothing new to find.
-	function playAgain() {
-		if (mode === 'practice') {
-			startPractice();
-			return;
-		}
-		clearAllVisuals();
+	/** Picks a round back up where it was left, if the player only stepped out
+	 * to the Overview and came back (quizRound.ts). Returns false if there was
+	 * nothing to resume. */
+	function resumeRound(): boolean {
+		if (!mapDef || !map) return false;
+		const round = roundInProgress(mapId);
+		if (!round || isSessionComplete(round.session)) return false;
+		knownAfterRound = undefined;
+		scorePanelDismissed = false;
 		summarySaved = false;
-		startDueSession();
+		session = round.session;
+		refreshLevel(mapDef);
+		hand = round.hand;
+		dealHand();
+		return true;
+	}
+
+	/** Paints the names already placed in a resumed round - the same marks a
+	 * live drop leaves. Runs after the style loads, since it sets feature
+	 * state. */
+	function repaintResolved(def: MapDefinition) {
+		if (!session) return;
+		for (const item of session.items) {
+			if (item.status === 'pending') continue;
+			const target = def.targets.find((t) => t.id === item.target.id);
+			if (!target) continue;
+			markSolved(target.id, target.name, target.centroid, item.status === 'revealed');
+		}
+	}
+
+	/** The score panel's "Play again": the same map again, from a blank slate. */
+	function playAgain() {
+		clearAllVisuals();
+		startRound();
 	}
 
 	onMount(() => {
@@ -634,34 +600,21 @@
 			if (cancelled) return;
 			mapDef = loadedMapDef;
 
-			const notDueIds = await computeNotDueIds(loadedMapDef.targets);
+			await refreshCardStates();
 			if (cancelled) return;
 
 			map = createMap(container, loadedMapDef, style);
+			// A round left half-played (the player went to look a name up in the
+			// Overview) carries on; otherwise a new one over the whole map.
+			const resumed = resumeRound();
+			if (!resumed) startRound();
 
-			if (notDueIds.size === loadedMapDef.targets.length) {
-				phase = 'upToDate';
-			} else {
-				mode = 'due';
-				phase = 'quiz';
-				session = createQuizSession(
-					loadedMapDef.targets.map((t) => ({ id: t.id, name: t.name })),
-					notDueIds
-				);
-				refreshLevel(loadedMapDef);
-				dealHand();
-			}
-
-			// setFeatureState throws until the style has finished loading -
-			// defer the pre-marking loop to the map's 'load' event rather
-			// than running it immediately after construction.
+			// setFeatureState throws until the style has finished loading, so
+			// anything that paints a region waits for the map's 'load' event.
 			map.once('load', () => {
 				if (cancelled) return;
 				styleLoaded = true;
-				// Only the initial *due* session gets pre-solved visuals - never a
-				// practice round, which starts from a blank map by design.
-				if (phase !== 'quiz' || mode !== 'due') return;
-				applyPreSolvedVisuals(notDueIds, loadedMapDef);
+				if (resumed) repaintResolved(loadedMapDef);
 			});
 		})().catch((e) => {
 			error = e instanceof Error ? e.message : String(e);
@@ -698,9 +651,6 @@
 	{:else}
 		<MapNav {mapId} mapName={mapDisplayName(mapId) ?? mapDef?.name} active="quiz">
 			{#snippet subtitle()}
-				{#if mode === 'practice'}
-					{t('quiz.practiceModePrefix')}
-				{/if}
 				{#if session}
 					<span data-tutorial="quiz-progress"
 						>{t('quiz.subtitle', {
@@ -720,18 +670,6 @@
 			{/snippet}
 		</MapNav>
 
-		{#if phase === 'upToDate'}
-			<div class="score-panel">
-				<h2>{t('quiz.upToDate.title')}</h2>
-				<p>{t('quiz.upToDate.body')}</p>
-				<!-- Disabled until the map style loads: startPractice touches feature
-				     state, which MapLibre throws on before then (GC-020). -->
-				<button onclick={startPractice} disabled={!styleLoaded} aria-busy={!styleLoaded}
-					>{t('quiz.practiceAllRegions')}</button
-				>
-			</div>
-		{/if}
-
 		{#if complete && score && session && !scorePanelDismissed}
 			{@const revealedCount = session.items.filter((i) => i.status === 'revealed').length}
 			<div class="score-panel">
@@ -742,7 +680,7 @@
 				>
 					&times;
 				</button>
-				<h2>{mode === 'due' && allCaughtUp ? t('quiz.allCaughtUp') : t('quiz.done')}</h2>
+				<h2>{t('quiz.done')}</h2>
 				<p>
 					<strong>{score.perfect}</strong>
 					{t('quiz.scoreLineRest', { total: score.total })}
@@ -753,26 +691,20 @@
 						{t('quiz.revealedNote', { count: revealedCount })}
 					</p>
 				{/if}
-				{#if mode === 'due' && allCaughtUp}
-					<p class="next-review-note">
-						{tPlural('quiz.nextReview', daysUntilNextReview ?? 0, {
-							count: daysUntilNextReview ?? 0
-						})}
+				<!-- What the round left behind: the same line the map list shows,
+				     so finishing here and going back tell the same story (FT-26). -->
+				{#if knownAfterRound !== undefined && mapDef}
+					<p class="known-note">
+						{t('quiz.known', { known: knownAfterRound, total: mapDef.targets.length })}
+						{#if level > 0}
+							· {tPlural('quiz.namesAtATime', handSize(level), { count: handSize(level) })}
+						{/if}
 					</p>
-					<div class="score-panel-actions">
-						<a class="score-panel-button" href={resolve('/')}>{t('quiz.backToMaps')}</a>
-						<button class="secondary" onclick={startPractice}>{t('quiz.practiceAllRegions')}</button
-						>
-					</div>
-				{:else}
-					{#if mode === 'practice'}
-						<p class="practice-note">{t('quiz.practiceNote')}</p>
-					{/if}
-					<div class="score-panel-actions">
-						<a class="score-panel-button secondary" href={resolve('/')}>{t('quiz.backToMaps')}</a>
-						<button onclick={playAgain}>{t('quiz.playAgain')}</button>
-					</div>
 				{/if}
+				<div class="score-panel-actions">
+					<a class="score-panel-button secondary" href={resolve('/')}>{t('quiz.backToMaps')}</a>
+					<button onclick={playAgain}>{t('quiz.playAgain')}</button>
+				</div>
 			</div>
 		{/if}
 	{/if}
@@ -970,14 +902,9 @@
 		font-size: 0.85rem;
 		color: #8a6d3b;
 	}
-	.practice-note {
+	.known-note {
 		font-size: 0.85rem;
 		opacity: 0.7;
-	}
-	.next-review-note {
-		font-size: 0.9rem;
-		font-weight: 600;
-		color: #2f6b45;
 	}
 	.score-panel-actions {
 		display: flex;
@@ -1001,7 +928,6 @@
 	.score-panel > button {
 		margin-top: 0.75rem;
 	}
-	.score-panel button.secondary,
 	.score-panel-button.secondary {
 		background: transparent;
 		color: #5a9c6f;

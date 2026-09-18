@@ -125,14 +125,18 @@ tomorrow, ease capped at 2.5 (`MAX_EASE_FACTOR`, recovering +0.1 per clean
 review), and every interval capped at 365 days (`MAX_INTERVAL_DAYS`) —
 uncapped, it overflowed `Date` by the 20th clean review (GC-010, see
 DECISIONS.md). FSRS is a drop-in upgrade later since the scheduler interface
-(`rate(previous, grade, today) -> CardState`) doesn't change. A quiz
-session is no longer "every target, every time" — only due (or
-never-seen) targets become slips, the rest show pre-solved as already
-"discovered". See ROADMAP.md's Iteration 6 section for the full design,
-including the empty-queue/"practice all" fallback once a map has nothing
-due, and why a "hard" grade (correct, but only after a mistake) still
-graduates normally rather than forcing a same-day repeat like a genuine
-fail does.
+(`rate(previous, grade, today) -> CardState`) doesn't change. Since v0.6.0 (FT-26) a round is
+"every target, every time" again, and the schedule it writes is not shown
+anywhere: the map list says how well each map is known instead, and the
+practice mode and "Up to date!" screen that due-only rounds needed are
+gone (DECISIONS.md, "The scheduler keeps running, out of sight"). What the
+player does see from the streaks is the difficulty ladder (FT-21) and the
+progress map (FT-22). A round left half-played is kept in memory by
+`quizRound.ts`, so looking a name up in the Overview and coming back does
+not restart it. Iteration 6's due-queue design in ROADMAP.md is history
+now, though its account of why a "hard" grade (correct, but only after a
+mistake) graduates normally rather than forcing a same-day repeat still
+holds.
 
 ## Storage — local-first
 
