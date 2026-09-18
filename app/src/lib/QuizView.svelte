@@ -9,7 +9,7 @@
 	import { t, tPlural } from './i18n.svelte';
 	import { mapDisplayName } from './mapCatalog';
 	import { tutorialDrop } from './tutorial.svelte';
-	import { setLabelPriority } from './labelCollision';
+	import { DOT_CLEARANCE_PX, registerLabel } from './labelCollision';
 	import {
 		createQuizSession,
 		attemptMatch,
@@ -380,15 +380,25 @@
 		const popup = new maplibregl.Popup({
 			closeButton: false,
 			closeOnClick: false,
+			anchor: 'center',
 			className: revealed ? 'geoclick-solved-popup revealed' : 'geoclick-solved-popup'
 		})
 			.setLngLat(centroid)
 			.setText(name)
 			.addTo(map);
 		// When two names don't fit (FT-23), the one just placed wins: it is the
-		// answer to what the player did a moment ago. Older names give way and
-		// come back on a zoom.
-		setLabelPriority(popup, ++labelPriority);
+		// answer to what the player did a moment ago - and a name shown after a
+		// mistake (FT-20) is exactly the one the player has to read. Older names
+		// give way and come back on a zoom.
+		registerLabel(popup, {
+			priority: ++labelPriority,
+			// On a towns map the name goes beside the dot, so the dot the next
+			// slip has to be dropped on stays visible (FT-24).
+			beside:
+				mapDef?.targets.find((t) => t.id === targetId)?.type === 'city'
+					? DOT_CLEARANCE_PX
+					: undefined
+		});
 		solvedPopups.set(targetId, popup);
 	}
 

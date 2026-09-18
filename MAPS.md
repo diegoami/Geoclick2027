@@ -39,7 +39,10 @@ data/scripts/build-map.ts             filter → simplify → tile → derive ma
    name field where the source provides one — see below), aliases for
    quiz matching, tour order, difficulty tier.
 4. Preview in the app (`/map/<id>`, `/map/<id>/overview` is the fastest
-   sanity check — every target labeled at once) before committing.
+   sanity check — every target labeled at once) before committing. Since
+   v0.6.0 the overview only writes the names that fit without overlapping
+   (FT-23/FT-24), so on a crowded map, zoom in to read them all, or check
+   the names in `map.json` directly.
 5. **Register it** (GC-030) — add the map to `app/src/lib/mapCatalog.ts`
    (country + map-type label), then `npm run build-map-index` to
    regenerate `data/maps/index.json` (id, country, target count, target

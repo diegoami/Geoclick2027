@@ -1102,7 +1102,7 @@ answers:
   - The favourite star is a tip in the outro, not a step. Finish leaves
     the player on the tour, which keeps playing.
 
-## Names never overlap (2026-09-18, FT-23)
+## Names never overlap (2026-09-18, FT-23/FT-24)
 
 - **A name is either legible or it isn't drawn.** The product owner's
   requirement for v0.6.0: "on maps names do not overlap". Italy's 110
@@ -1112,6 +1112,16 @@ answers:
   that spot. Zoom in and the same pass finds room for it again, which is
   also the answer to "what happens to the names that are hidden" — the
   product owner's choice over shrinking or stacking them.
+- **A name that doesn't fit tries somewhere else before giving up**
+  (FT-24). A region's name wants the middle of its region and will take a
+  line above or below it; further than that and it would start to look
+  like the neighbour's name. A town's name never sits on its dot - the
+  player has to see the dot they are aiming at, especially while dragging
+  a slip onto it - so it takes the first free side, right, left, above,
+  below, at a fixed clearance from the dot's middle. Both come out of the
+  same pass: a label offers the spots it would accept, best first, and
+  gets the first one that is free. On Italy - Towns this is the
+  difference between 26 names and all 40.
 - **Which name gives way**: the smaller region's. Area (from each
   target's bbox, corrected for latitude) decides between two names that
   want the same place, the way an atlas keeps the big name and lets the

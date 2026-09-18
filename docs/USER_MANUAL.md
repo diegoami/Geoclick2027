@@ -265,9 +265,10 @@ written on it, in white on a dark green label:
 
 This is the screen to study from. Nothing is scored here.
 
-**Names never overlap.** On a crowded map there is no room for all of
-them at once, and rather than print them on top of each other, Geoclick
-leaves some out — the way an atlas does. Here is Italy — Provinces, which
+**Names never overlap.** A name that has no room where it belongs first
+tries a line above or below its place. Only when nothing is free is it
+left out — the way an atlas does, rather than printing two names on top of
+each other. Here is Italy — Provinces, which
 has 110 of them, as it opens: about fifty names, each of them legible:
 
 ![Italy — Provinces: the names that fit](manual/overview-crowded.jpg)
@@ -524,7 +525,7 @@ north to south. At each stop it zooms in, lights the place up in orange,
 and shows its name, then moves on after a few seconds. It starts playing
 as soon as the screen opens:
 
-![The tour, stopped on Friuli-Venezia Giulia](manual/tour.jpg)
+![The tour, on its fourth stop: Valle d’Aosta](manual/tour.jpg)
 
 The controls, in a white bar at the bottom of the screen:
 
@@ -547,8 +548,9 @@ roughly 100,000 inhabitants or more (on the largest countries, a selection
 of the biggest). Each town is a **dot**, and the country's regions are
 drawn faintly underneath for reference.
 
-The Overview names the towns, as many as fit (the dots without a name
-are named once you zoom in):
+The Overview names every town. A town’s name sits **beside** its dot,
+never on top of it, taking the first free side — right, left, above or
+below — so the dot you are looking for is always visible:
 
 ![Italy — Towns, Overview](manual/towns-overview.jpg)
 
@@ -880,7 +882,7 @@ code-signed; choose *More info*, then *Run anyway*.
 |---|---|
 | **Map** | One country's set of places to learn, for example Italy — Regions. |
 | **Place** / **target** | One region, state, province or town on a map. |
-| **Overview** | The map with its names shown — as many as fit without overlapping; zoom in for the rest. |
+| **Overview** | The map with its names shown — as many as fit without overlapping (a town’s name sits beside its dot); zoom in for the rest. |
 | **Progress** | How well you know the map: each name drawn as strongly as you know it. Clicking a region still names it (this tab was called Explore until v0.5.0). |
 | **Quiz** | The game: drag each name from the tray onto the map. |
 | **Tour** | The automatic flight from place to place. |

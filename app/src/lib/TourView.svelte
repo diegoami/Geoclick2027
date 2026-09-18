@@ -8,6 +8,7 @@
 	import { mapDisplayName } from './mapCatalog';
 	import { fetchTour, type Tour } from './tour';
 	import { TOUR_SPEEDS, defaultTourSpeed } from './tourSpeed';
+	import { DOT_CLEARANCE_PX, registerLabel } from './labelCollision';
 	import type { MapDefinition, Target } from './mapDefinition';
 
 	let { mapId }: { mapId: string } = $props();
@@ -26,6 +27,8 @@
 	let speed = $state(1);
 
 	const BASE_FLIGHT_MS = 1200;
+	// Above every other label: the tour is showing this one name on purpose.
+	const TOUR_NAME_PRIORITY = 1000;
 	// A point target's bbox is degenerate (see mapDefinition.ts) - fitting
 	// to it would zoom to the map's max zoom with no sense of "looking at
 	// one city". flyTo to a fixed zoom instead. Tuned against italy-towns-
@@ -76,10 +79,18 @@
 		popup ??= new maplibregl.Popup({
 			closeButton: false,
 			closeOnClick: false,
+			anchor: 'center',
 			className: 'geoclick-popup'
 		});
 		const [lon, lat] = target.centroid;
 		popup.setLngLat([lon, lat]).setText(target.name).addTo(map);
+		// The tour shows one name at a time, and that name is the whole point of
+		// the step: it outranks anything else on the map, and on a towns map it
+		// sits beside the dot rather than on it (FT-24).
+		registerLabel(popup, {
+			priority: TOUR_NAME_PRIORITY,
+			beside: target.type === 'city' ? DOT_CLEARANCE_PX : undefined
+		});
 
 		scheduleAdvance(step.dwellMs);
 	}
