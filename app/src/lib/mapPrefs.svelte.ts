@@ -105,22 +105,39 @@ export function favouriteMaps(): string[] {
 //
 // One setting for every map, not one per map: a player who wants the sea
 // and the rivers wants them everywhere, and having to switch it on again
-// for each of 63 maps would be worse than no setting. Off by default -
-// the layer is there to help, and it should not change what a returning
-// player sees without being asked for.
+// for each of 63 maps would be worse than no setting.
+//
+// ON by default since v0.9.1 (product owner, 2026-09-19). It shipped off,
+// on the argument that a layer should not change what a returning player
+// sees unasked - but the effect of that was that nobody who did not press
+// the button ever saw the feature at all, which is the worse failure. See
+// DECISIONS.md, "The map can show what is under it".
 
 const TERRAIN_KEY = 'geoclick:terrain:v1';
 
-function readFlag(key: string): boolean {
-	if (typeof localStorage === 'undefined') return false;
+/**
+ * Read a stored flag that has a default.
+ *
+ * Three states, not two: '1' is on, '0' is off, and ABSENT means the player
+ * has never touched the button and gets `fallback`. That distinction is what
+ * lets the default flip without overriding anyone - a player who turned
+ * Terrain off wrote '0' and stays off.
+ */
+function readFlag(key: string, fallback: boolean): boolean {
+	if (typeof localStorage === 'undefined') return fallback;
 	try {
-		return localStorage.getItem(key) === '1';
+		const stored = localStorage.getItem(key);
+		if (stored === '1') return true;
+		if (stored === '0') return false;
+		return fallback;
 	} catch {
-		return false;
+		return fallback;
 	}
 }
 
-let terrain = $state<boolean>(readFlag(TERRAIN_KEY));
+const TERRAIN_DEFAULT = true;
+
+let terrain = $state<boolean>(readFlag(TERRAIN_KEY, TERRAIN_DEFAULT));
 
 export function terrainShown(): boolean {
 	return terrain;

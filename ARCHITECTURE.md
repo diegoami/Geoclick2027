@@ -61,7 +61,9 @@ pairs well with a canvas/map-heavy UI.
   Beside each map's `tiles.pmtiles` sits a `terrain.pmtiles` holding the
   sea, the rivers and Natural Earth's *named* physical features — ranges,
   deserts, basins, seas — built by `data/scripts/build-terrain.ts`. It is
-  off by default and lives behind the map bar's Terrain button
+  on by default since v0.9.1 (FT-43; it shipped off, and the result was
+  that nobody who did not press the button saw the feature) and lives
+  behind the map bar's Terrain button
   (`TerrainButton.svelte` → `mapPrefs.svelte.ts` → `refreshTerrain()`),
   and `terrainLayer.ts` adds the source and its three style layers to the
   live map the first time it is asked for, so nothing is fetched until
