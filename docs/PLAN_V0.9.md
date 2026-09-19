@@ -123,11 +123,13 @@ whether the computed line or the name-fact goes first.
     place), with the product owner reviewing each batch;
   - 🧑 he picks which countries come next.
 - **DoD:** the orphan lint still passes; each batch reviewed before merge.
-- **Done (2026-09-19):** seven countries — Italy, China, the United States,
-  Germany, Spain, Poland, Ukraine — 176 places, **531 sentences, three per
-  place everywhere**. Verified in a browser on six maps (Italy, Poland,
-  Ukraine, Germany and Spain by region, plus USA — Cities): three distinct
-  hooks over three taps, the fourth back to the first.
+- **Done (2026-09-19):** **every map, complete.** 28 country files, 1 814
+  authored places, **5 448 sentences**, covering all 2 235 targets on all 63
+  maps — three per place everywhere, nothing left at two. Verified in a
+  browser on ten maps across the batches (Italy regions and provinces,
+  Poland, Ukraine, Germany, Spain, Japan, Russia, Turkey, USA — Cities):
+  three distinct hooks over three taps, the fourth back to the first, no
+  page errors. The rebuild is byte-identical on a second run.
 
 ## Order
 
@@ -145,7 +147,7 @@ stable.
 | ----- | ----------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | FT-39 | **merged**  | `98fd98a` | a map opens on Known; a tap leaves a name until tapped again; one rule over what was earned and what was chosen, and the tap always does the visible thing                           |
 | FT-40 | **merged**  | `35ba262` | steps 3 and 4 swap jobs; copy rewritten in three languages; the zoom detection moved into createMap after the tutorial stuck on step 2 because the step moved and the wiring did not |
-| FT-41 | **merged**  | `dcb7582` | seven countries authored, 176 places, 531 sentences — three per place everywhere, so the rotation cycles rather than flips                                                           |
+| FT-41 | **merged**  | `dcb7582` | first seven countries. Extended since on `feat/ft-41-all-maps` to **every map**: 28 countries, 1 814 places, 5 448 sentences, all 2 235 targets — awaiting the product owner       |
 | FT-42 | not started | —         | the card on a small screen: one line at a time, rotating                                                                                                                             |
 
 ## Out of scope

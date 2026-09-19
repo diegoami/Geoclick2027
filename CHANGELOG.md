@@ -12,10 +12,13 @@ one entry per tagged version on `main`.
 
 For players:
 
-- **Seven countries now have name-facts**: Italy, China, the United States,
-  Germany, Spain, Poland and Ukraine — 176 places, 531 sentences. Every one
-  of them has at least three, so the rotation always has somewhere to go
-  before it comes back round.
+- **Every place on every map now says where its name comes from.** All 28
+  countries, all 63 maps, all 2 235 places — 5 448 sentences, at least three
+  for every place, so the card keeps saying something new. Hiroshima is
+  "wide island"; Giresun is where the word cherry comes from; Nîmes is where
+  denim comes from; Teramo and Terni are the same word, "between the
+  rivers"; and Chicago is the Miami-Illinois word for the wild garlic that
+  grew in its marshes.
 - **A second line saying why a place is called what it is**, on Italy's
   twenty regions to start with. Lombardia is named for the Longobards, the
   "long-beards" who took the north in 568; Piemonte is ai piedi dei monti,

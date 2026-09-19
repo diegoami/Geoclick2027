@@ -101,10 +101,16 @@ pairs well with a canvas/map-heavy UI.
   the card shows a different one on each encounter, counting per device in
   localStorage. `mapData.test.ts` fails on a fact whose id matches no
   target - otherwise the sentence is simply never shown and nobody notices.
-  Seven countries are authored (v0.9.0, FT-41): Italy, China, the United
-  States, Germany, Spain, Poland, Ukraine - 176 places, **three sentences
-  each**, which is the floor. Two is a flip between two things, not a
-  rotation.
+  **Every target on every map now has one** (v0.9.0, FT-41): 28 country
+  files, 1 814 authored places, 5 448 sentences, covering all 2 235 targets
+  across all 63 maps. **Three sentences each** is the floor everywhere -
+  two is a flip between two things, not a rotation.
+
+  One file per country, not per map, is what makes that affordable: Italy's
+  131 entries feed five maps, and the USA's 219 feed five more. Where one
+  id means two different places on two maps - `new-york` the state and the
+  city, `jilin` the province and the city - the entry splits into
+  `{region, city}` and `build-facts.ts` picks by the target's kind.
 
 - **The Known map is what a map opens on** (v0.9.0, FT-39), and a tap adds
   or removes a name, kept per map in `mapPrefs.svelte.ts`. `shownNames.ts`

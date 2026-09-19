@@ -5,7 +5,12 @@
 		"populationRank": 30,
 		"region": "Washington",
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"Named for the son of an investor, a boy who was eating Everett apples when the question came up.",
+			"Boeing’s factory here is the largest building in the world by volume.",
+			"It builds the 747, 767, 777 and 787, and has its own fire department and clinics."
+		]
 	},
 	"spokane": {
 		"kind": "city",
@@ -13,7 +18,12 @@
 		"populationRank": 35,
 		"region": "Washington",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"From the Spokane people, whose name means \"children of the sun\".",
+			"It hosted the 1974 World’s Fair, the smallest city ever to do so, and turned its railyards into a riverfront park.",
+			"Father’s Day was invented here in 1910 by a woman whose father raised six children alone."
+		]
 	},
 	"seattle": {
 		"kind": "city",
@@ -35,7 +45,12 @@
 		"populationRank": 20,
 		"region": "Washington",
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"From the Lushootseed name for Mount Rainier, Tahoma, meaning \"the mother of waters\".",
+			"Its 1940 suspension bridge, Galloping Gertie, twisted itself apart in the wind four months after opening.",
+			"The film of that collapse is shown in engineering courses worldwide."
+		]
 	},
 	"vancouver": {
 		"kind": "city",
@@ -43,7 +58,12 @@
 		"populationRank": 26,
 		"region": "Washington",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"Named for Captain George Vancouver — this is the Washington one, which is older than the Canadian city.",
+			"Fort Vancouver here was the headquarters of the Hudson’s Bay Company west of the Rockies.",
+			"It sits across the Columbia from Portland, and its residents shop there to avoid sales tax."
+		]
 	},
 	"portland": {
 		"kind": "city",
@@ -65,7 +85,12 @@
 		"populationRank": 42,
 		"region": "Oregon",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"From Hebrew shalom, peace — this is the Oregon capital, named by missionaries.",
+			"The Oregon Trail ended in its valley, which is why the state’s settlement began there.",
+			"Its capitol is topped not by a dome but by a gilded pioneer with an axe."
+		]
 	},
 	"eugene": {
 		"kind": "city",
@@ -73,7 +98,12 @@
 		"populationRank": 40,
 		"region": "Oregon",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"Named for Eugene Skinner, who claimed the land in 1846.",
+			"Nike began here when a track coach poured rubber into his wife’s waffle iron to make a sole.",
+			"It is called Track Town USA and has hosted the American Olympic trials repeatedly."
+		]
 	},
 	"boise": {
 		"kind": "city",
@@ -81,7 +111,12 @@
 		"populationRank": 36,
 		"region": "Idaho",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"From French les bois, \"the woods\" — trappers seeing trees after crossing the plain.",
+			"It has the largest Basque population in the United States, with a whole block devoted to Basque culture.",
+			"Its capitol is the only one in the country heated by geothermal water."
+		]
 	},
 	"ogden": {
 		"kind": "city",
@@ -89,7 +124,12 @@
 		"populationRank": 33,
 		"region": "Utah",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"Named for Peter Skene Ogden, a Hudson’s Bay trapper who never settled there.",
+			"The transcontinental railroads met at Promontory Summit nearby in 1869, and Ogden became the junction.",
+			"Its 25th Street was so rough that Al Capone reportedly called it too wild for him."
+		]
 	},
 	"salt-lake-city": {
 		"kind": "city",
@@ -98,7 +138,12 @@
 		"population1950": 230000,
 		"region": "Utah",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"Named for the Great Salt Lake, the largest lake west of the Mississippi and saltier than the ocean.",
+			"Brigham Young led settlers here in 1847 and is said to have declared \"this is the right place\".",
+			"Its streets were laid out wide enough to turn a wagon team around, which is why they are still unusually broad."
+		]
 	},
 	"fort-collins": {
 		"kind": "city",
@@ -106,7 +151,12 @@
 		"populationRank": 43,
 		"region": "Colorado",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"Named for a military fort established in 1864 and named for a colonel.",
+			"Its Old Town was the model for the Main Street at Disneyland, laid out by a designer who grew up there.",
+			"It has more craft breweries per head than almost any American city."
+		]
 	},
 	"provo": {
 		"kind": "city",
@@ -114,7 +164,12 @@
 		"populationRank": 34,
 		"region": "Utah",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"Named for Étienne Provost, a French-Canadian trapper.",
+			"Brigham Young University here is the largest religious university in the United States.",
+			"It sits between Utah Lake and a mountain wall that rises 2,200 m above the valley floor."
+		]
 	},
 	"denver": {
 		"kind": "city",
@@ -136,7 +191,12 @@
 		"populationRank": 25,
 		"region": "Colorado",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"Named for the Roman goddess of dawn.",
+			"It was the first American city to light its entire street system electrically, in 1881, and calls itself the City of Lights.",
+			"It is the second largest city in Illinois."
+		]
 	},
 	"reno": {
 		"kind": "city",
@@ -144,7 +204,12 @@
 		"populationRank": 37,
 		"region": "Nevada",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Named for Jesse Reno, a Union general killed in 1862.",
+			"It calls itself the Biggest Little City in the World, on an arch that has spanned Virginia Street since 1929.",
+			"Nevada’s quick divorces made it the divorce capital of America for decades before Las Vegas took the gambling."
+		]
 	},
 	"colorado-springs": {
 		"kind": "city",
@@ -152,7 +217,12 @@
 		"populationRank": 29,
 		"region": "Colorado",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"Named for the Colorado River and for springs in Manitou nearby — the city itself has no springs.",
+			"Pikes Peak above it inspired the words to \"America the Beautiful\" in 1893.",
+			"The Air Force Academy and NORAD, dug into Cheyenne Mountain, are both here."
+		]
 	},
 	"sacramento": {
 		"kind": "city",
@@ -174,7 +244,12 @@
 		"populationRank": 41,
 		"region": "California",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Named for St Rose of Lima, the first saint born in the Americas.",
+			"Luther Burbank bred over 800 plant varieties in his garden here, including the Russet Burbank potato.",
+			"Charles Schulz lived in the town, and a Peanuts museum stands near his old ice rink."
+		]
 	},
 	"stockton": {
 		"kind": "city",
@@ -182,7 +257,12 @@
 		"populationRank": 21,
 		"region": "California",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Named for Robert Stockton, a naval commodore in the Mexican-American War.",
+			"It was the supply port for the southern goldfields, reached by riverboat from San Francisco.",
+			"It became the largest American city ever to declare bankruptcy in 2012, a record since surpassed."
+		]
 	},
 	"berkeley": {
 		"kind": "city",
@@ -190,7 +270,12 @@
 		"populationRank": 28,
 		"region": "California",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Named for George Berkeley, the Irish philosopher, for a line of his about empire moving west.",
+			"The university here was the first campus of the University of California, opened in 1868.",
+			"The Free Speech Movement began on its steps in 1964, and sixteen chemical elements were discovered in its labs."
+		]
 	},
 	"oakland": {
 		"kind": "city",
@@ -225,7 +310,12 @@
 		"populationRank": 38,
 		"region": "California",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"\"Modest\" — the town was to be named for a banker who declined the honour, so they named it for his modesty.",
+			"George Lucas grew up here and based American Graffiti on its cruising culture.",
+			"It is the centre of one of the most productive farming counties in the world."
+		]
 	},
 	"san-mateo": {
 		"kind": "city",
@@ -233,7 +323,12 @@
 		"populationRank": 22,
 		"region": "California",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Named for St Matthew, from a Spanish expedition camp in 1776.",
+			"It sits in the middle of the San Francisco Peninsula, between the city and Silicon Valley.",
+			"Its Coyote Point had one of the first public aviation fields in California."
+		]
 	},
 	"san-jose": {
 		"kind": "city",
@@ -255,7 +350,12 @@
 		"populationRank": 23,
 		"region": "California",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Spanish for \"ash tree\", for the ash growing along the San Joaquin River.",
+			"Its county produces more agricultural value than any other in the United States.",
+			"It is the nearest large city to Yosemite, Kings Canyon and Sequoia national parks."
+		]
 	},
 	"las-vegas": {
 		"kind": "city",
@@ -277,7 +377,12 @@
 		"populationRank": 31,
 		"region": "California",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Named for Thomas Baker, who grew alfalfa in a field travellers stopped at.",
+			"The Bakersfield Sound, a harder-edged country music, was created here by Buck Owens and Merle Haggard.",
+			"It sits over one of the largest oilfields in the country, found in 1899."
+		]
 	},
 	"albuquerque": {
 		"kind": "city",
@@ -285,7 +390,12 @@
 		"populationRank": 17,
 		"region": "New Mexico",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"Named in 1706 for the Duke of Alburquerque, viceroy of New Spain — the first R was dropped later.",
+			"Its International Balloon Fiesta is the largest such event in the world, with hundreds of balloons.",
+			"A local wind pattern called the box lets balloons return to where they started, which is why it is held here."
+		]
 	},
 	"lancaster": {
 		"kind": "city",
@@ -293,7 +403,12 @@
 		"populationRank": 44,
 		"region": "California",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Named for Lancaster in England — this is the Pennsylvania one.",
+			"It was the capital of the United States for one day, 27 September 1777, as Congress fled Philadelphia.",
+			"The surrounding county has one of the largest Amish populations in the world."
+		]
 	},
 	"san-bernardino": {
 		"kind": "city",
@@ -329,7 +444,12 @@
 		"populationRank": 39,
 		"region": "California",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Named simply for its position beside the Santa Ana River.",
+			"The navel orange was introduced to America here in 1873 from two Brazilian trees.",
+			"One of those original trees is still alive and fenced in a city intersection."
+		]
 	},
 	"palm-springs": {
 		"kind": "city",
@@ -337,7 +457,12 @@
 		"populationRank": 32,
 		"region": "California",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Named for its palm groves and hot springs, which the Cahuilla people used long before it was a resort.",
+			"Hollywood stars settled here because studio contracts required them to stay within two hours of Los Angeles.",
+			"It has the largest collection of mid-century modern architecture in the world."
+		]
 	},
 	"long-beach": {
 		"kind": "city",
@@ -371,7 +496,12 @@
 		"populationRank": 27,
 		"region": "Arizona",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"A descriptive name — a glen and a dale, chosen by settlers in 1886; this is the Arizona one.",
+			"It sits in the Phoenix metropolitan area and hosts the Cardinals’ stadium.",
+			"Its downtown holds one of the largest Christmas light displays in the south-west."
+		]
 	},
 	"phoenix": {
 		"kind": "city",
@@ -406,7 +536,12 @@
 		"populationRank": 24,
 		"region": "California",
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Named for its position on the coast, straightforwardly.",
+			"Camp Pendleton beside it is one of the largest Marine Corps bases in the country.",
+			"Its wooden pier is one of the longest on the West Coast, at about 590 m."
+		]
 	},
 	"san-diego": {
 		"kind": "city",
@@ -429,7 +564,12 @@
 		"population1950": 77000,
 		"region": "Arizona",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"From the O’odham cuk ṣon, \"at the base of the black hill\" — the volcanic hill west of the city.",
+			"It has been continuously inhabited for about 4,000 years, among the longest of any American city.",
+			"It was the first UNESCO City of Gastronomy in the United States, for its desert food traditions."
+		]
 	},
 	"el-paso": {
 		"kind": "city",
@@ -438,6 +578,11 @@
 		"population1950": 139000,
 		"region": "Texas",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"\"The pass\" — El Paso del Norte, the gap between two mountain ranges that the Rio Grande runs through.",
+			"That pass was the main route between Mexico and New Mexico for three centuries.",
+			"It forms one binational area with Ciudad Juárez, among the largest on any border in the world."
+		]
 	}
 }

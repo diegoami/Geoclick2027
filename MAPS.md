@@ -926,6 +926,13 @@ npx tsx data/scripts/build-facts.ts --map=italy-regions
 npx tsx data/scripts/build-facts.ts --all
 ```
 
+Since FT-41 every one of the 2 235 targets also carries authored `hooks`,
+three sentences deep, from the 28 country files in `data/facts/`. That took
+the total from 503 KB to **1.4 MB over all 63 maps** — the largest single
+file is `italy-provinces` at 64 KB. `facts.json` is fetched lazily and per
+map, so what matters is that per-map figure, not the total; no map's file
+approaches the size of its tileset.
+
 **Coverage over the 2 235 targets** (measured 2026-09-19, 503 KB in total):
 
 | Field                    | Targets   |     | Field            | Targets   |

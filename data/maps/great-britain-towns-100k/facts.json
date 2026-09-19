@@ -4,21 +4,36 @@
 		"population": 189364,
 		"populationRank": 32,
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"\"Mouth of the Don\" — aber is a Brittonic word for a river mouth, the same element as in Aberystwyth and Abergavenny.",
+			"It is built almost entirely of granite quarried at Rubislaw, once the biggest man-made hole in Europe.",
+			"North Sea oil came ashore here from 1975 and turned a fishing port into Europe’s offshore capital."
+		]
 	},
 	"dundee": {
 		"kind": "city",
 		"population": 151592,
 		"populationRank": 34,
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"Probably from Gaelic dùn, a fort, plus a personal name or a word for fire.",
+			"It was built on jute, jam and journalism: the jute came from Bengal, the marmalade was invented here, and the Beano is still published in the town.",
+			"Scott’s Antarctic ship Discovery was built here and is moored on its waterfront."
+		]
 	},
 	"edinburgh": {
 		"kind": "city",
 		"population": 504966,
 		"populationRank": 13,
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"Probably from Brittonic Din Eidyn, \"the fort of Eidyn\", with the Old English burh replacing din.",
+			"Its old and new towns are together a UNESCO site, the new one laid out on a grid in 1767.",
+			"Its festival is the largest arts festival in the world, and the castle sits on a plug of extinct volcano."
+		]
 	},
 	"glasgow": {
 		"kind": "city",
@@ -26,7 +41,12 @@
 		"populationRank": 6,
 		"population1950": 1755000,
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"From Brittonic glas cau, \"green hollow\" — the green place by the Molendinar burn.",
+			"Its Clyde shipyards built a fifth of the world’s ships by 1900, including the Queen Mary.",
+			"Charles Rennie Mackintosh’s buildings made it a capital of art nouveau, and it was the second city of the empire."
+		]
 	},
 	"newcastle-upon-tyne": {
 		"kind": "city",
@@ -35,7 +55,12 @@
 		"population1950": 909000,
 		"region": "Tyne and Wear",
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"The castle was new in 1080, when William the Conqueror’s son built it — it has been called new ever since.",
+			"Hadrian’s Wall runs through the city, and the Romans had a bridge here first.",
+			"Its Tyne Bridge of 1928 was the model for the Sydney Harbour Bridge, built by the same firm."
+		]
 	},
 	"sunderland": {
 		"kind": "city",
@@ -43,7 +68,12 @@
 		"populationRank": 17,
 		"region": "Tyne and Wear",
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"From \"sundered land\" — land separated from an estate, or from the monastery across the river.",
+			"It was the largest shipbuilding town in the world in the 1800s, building a quarter of British tonnage.",
+			"The Venerable Bede wrote his history at Monkwearmouth-Jarrow here, and its glassmakers taught the craft to England."
+		]
 	},
 	"middlesbrough": {
 		"kind": "city",
@@ -51,14 +81,24 @@
 		"populationRank": 20,
 		"region": "Stockton-on-Tees",
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"\"The middle fortified place\" — probably a monastic site halfway between Durham and Whitby.",
+			"Its iron built the Sydney Harbour Bridge, and Captain Cook was born nearby.",
+			"Its Transporter Bridge carries a gondola across the Tees, one of very few still working anywhere."
+		]
 	},
 	"york": {
 		"kind": "city",
 		"population": 158947,
 		"populationRank": 33,
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"Norse Jórvík, from Roman Eboracum, probably \"place of the yews\".",
+			"It was the Viking capital of England for nearly a century, and its streets still end in -gate, Norse for a street.",
+			"Its Minster has the largest expanse of medieval stained glass in the world, and Constantine was proclaimed emperor here in 306."
+		]
 	},
 	"blackpool": {
 		"kind": "city",
@@ -66,7 +106,12 @@
 		"populationRank": 27,
 		"region": "Lancashire",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"From a black pool — a peaty drainage channel that ran into the sea.",
+			"Its tower, opened 1894, was modelled on the Eiffel Tower at half the height.",
+			"Britain’s first electric street lighting ran here in 1879, which grew into the autumn Illuminations."
+		]
 	},
 	"bradford": {
 		"kind": "city",
@@ -74,7 +119,12 @@
 		"populationRank": 15,
 		"region": "West Yorkshire",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"\"The broad ford\" over the Bradford Beck.",
+			"It was the wool capital of the world, and its Little Germany district was built by German-Jewish textile merchants.",
+			"It is a UNESCO City of Film, the first in the world, and holds the National Science and Media Museum."
+		]
 	},
 	"leeds": {
 		"kind": "city",
@@ -83,14 +133,24 @@
 		"population1950": 1692000,
 		"region": "West Yorkshire",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"From Loidis, the name of a Brittonic kingdom or district.",
+			"Its 1816 Leeds and Liverpool Canal and its mills made it a centre of ready-made clothing.",
+			"Louis Le Prince shot what is probably the world’s first moving film on Leeds Bridge in 1888, then vanished from a train."
+		]
 	},
 	"kingston-upon-hull": {
 		"kind": "city",
 		"population": 302296,
 		"populationRank": 25,
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"\"The king’s town on the Hull\" — Edward I bought it in 1293 and renamed it.",
+			"William Wilberforce, who led the campaign against the slave trade, was born and elected here.",
+			"Its telephone boxes are cream, not red, because it kept its own municipal phone company."
+		]
 	},
 	"manchester": {
 		"kind": "city",
@@ -98,7 +158,12 @@
 		"populationRank": 3,
 		"population1950": 2422000,
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"From Roman Mamucium, probably \"breast-shaped hill\", plus the -chester that marks a Roman camp.",
+			"The first industrial city in the world, built on cotton, and called Cottonopolis.",
+			"The atom was first split here by Rutherford, and the first stored-program computer ran in the university in 1948."
+		]
 	},
 	"liverpool": {
 		"kind": "city",
@@ -107,7 +172,12 @@
 		"population1950": 1382000,
 		"region": "Merseyside",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Probably from \"liver\", a thick or muddy pool — the bird on the city arms is a later invention to fit the name.",
+			"It handled about 40% of the world’s trade at its peak, including a large share of the transatlantic slave trade.",
+			"Its waterfront was a UNESCO site until 2021, and the Beatles formed in the city in 1960."
+		]
 	},
 	"sheffield": {
 		"kind": "city",
@@ -115,21 +185,36 @@
 		"populationRank": 5,
 		"region": "South Yorkshire",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"\"Open land by the river Sheaf\" — sheaf is from an Old English word meaning to divide.",
+			"Crucible steel and then stainless steel were both invented here, in 1740 and 1913.",
+			"It is the greenest large city in England, with over two million trees and a third of it inside the Peak District."
+		]
 	},
 	"stoke-on-trent": {
 		"kind": "city",
 		"population": 390801,
 		"populationRank": 21,
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"Stoke is Old English stoc, a place or dependent settlement — one of the commonest names in England.",
+			"It is six towns federated in 1910, which is why it has no single centre; Arnold Bennett called them the Five Towns.",
+			"Wedgwood, Spode and Minton all potted here, and bone china was invented in the town."
+		]
 	},
 	"nottingham": {
 		"kind": "city",
 		"population": 825600,
 		"populationRank": 9,
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"From Snotingaham, \"the homestead of Snot’s people\" — the Normans dropped the S because they found it hard to say.",
+			"The Robin Hood story is set in its sheriff’s county, and the castle stands on caves cut into sandstone.",
+			"There are over 800 of those caves under the city, the largest such network in Britain."
+		]
 	},
 	"norwich": {
 		"kind": "city",
@@ -137,21 +222,36 @@
 		"populationRank": 31,
 		"region": "Norfolk",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"The \"north wic\" — wic being a trading settlement, the same element as in Ipswich and Greenwich.",
+			"It was England’s second city for centuries and has more medieval churches than any city north of the Alps.",
+			"It is a UNESCO City of Literature and had Britain’s first provincial public library."
+		]
 	},
 	"leicester": {
 		"kind": "city",
 		"population": 457983,
 		"populationRank": 16,
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"From the Ligore people plus the Roman -cester — \"the Roman fort of the Ligore\".",
+			"Richard III was buried here after Bosworth and found under a car park in 2012.",
+			"It is one of the most diverse cities in Britain and holds the largest Diwali celebration outside India."
+		]
 	},
 	"peterborough": {
 		"kind": "city",
 		"population": 140141,
 		"populationRank": 36,
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"\"St Peter’s borough\", after the monastery dedicated to him.",
+			"Its cathedral holds the grave of Catherine of Aragon, and Mary Queen of Scots was buried there before being moved.",
+			"Flag Fen nearby is a Bronze Age wooden causeway preserved in the peat since about 1300 BC."
+		]
 	},
 	"birmingham": {
 		"kind": "city",
@@ -160,7 +260,12 @@
 		"population1950": 2229000,
 		"region": "West Midlands",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"\"The homestead of Beorma’s people\" — a personal name plus -ing and -ham.",
+			"It had more canal miles than Venice at its peak, built to move coal and iron.",
+			"The Lunar Society met here and included Boulton, Watt, Priestley and Darwin’s grandfather."
+		]
 	},
 	"coventry": {
 		"kind": "city",
@@ -168,7 +273,12 @@
 		"populationRank": 22,
 		"region": "West Midlands",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Probably \"Cofa’s tree\" — a personal name plus a tree marking a meeting place.",
+			"Lady Godiva is said to have ridden through it naked to protest her husband’s taxes.",
+			"Its cathedral was destroyed in 1940 and the ruins left beside the new one, which made the city a symbol of reconciliation."
+		]
 	},
 	"cambridge": {
 		"kind": "city",
@@ -176,7 +286,12 @@
 		"populationRank": 37,
 		"region": "Cambridgeshire",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"\"The bridge over the Granta\" — the river’s name later changed to the Cam to match the town, not the other way round.",
+			"Its university was founded in 1209 by scholars fleeing Oxford after a dispute with townspeople.",
+			"The structure of DNA was worked out here in 1953, and the university has produced more Nobel laureates than most countries."
+		]
 	},
 	"ipswich": {
 		"kind": "city",
@@ -184,14 +299,24 @@
 		"populationRank": 35,
 		"region": "Suffolk",
 		"coastal": true,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"\"Gipe’s wic\" — a trading settlement, and one of the oldest continuously occupied English towns, from about 600.",
+			"Thomas Wolsey, Henry VIII’s cardinal, was born here as a butcher’s son.",
+			"Constable painted the Suffolk countryside around it, and the area is still called Constable Country."
+		]
 	},
 	"luton": {
 		"kind": "city",
 		"population": 235958,
 		"populationRank": 29,
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"\"Farm on the river Lea\" — Lea plus tun, a settlement.",
+			"It made straw hats for two centuries, which is why its football club is nicknamed the Hatters.",
+			"Vauxhall built cars here from 1905, and its airport is one of London’s busiest."
+		]
 	},
 	"oxford": {
 		"kind": "city",
@@ -199,21 +324,36 @@
 		"populationRank": 30,
 		"region": "Oxfordshire",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"\"The ford for oxen\" over the Thames.",
+			"Its university is the oldest in the English-speaking world, teaching since at least 1096.",
+			"The Bodleian is entitled to a copy of every book published in Britain, and Tolkien and Lewis wrote in its pubs."
+		]
 	},
 	"swansea": {
 		"kind": "city",
 		"population": 294339,
 		"populationRank": 26,
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Probably Norse Sveinn’s ey, \"Sveinn’s island\"; in Welsh it is Abertawe, \"mouth of the Tawe\".",
+			"It smelted most of the world’s copper in the 1800s and was called Copperopolis.",
+			"Dylan Thomas was born here and called it an ugly, lovely town."
+		]
 	},
 	"southend-on-sea": {
 		"kind": "city",
 		"population": 618386,
 		"populationRank": 11,
 		"coastal": true,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"The \"south end\" of the village of Prittlewell, which it long ago outgrew.",
+			"Its pier is the longest pleasure pier in the world at 2.15 km, with its own railway.",
+			"It became a city in 2022, in tribute to its murdered MP."
+		]
 	},
 	"london": {
 		"kind": "city",
@@ -223,14 +363,24 @@
 		"region": "Westminster",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"Londinium is pre-Roman and unexplained; the best guess is a Brittonic name about the unfordable river.",
+			"It was the largest city in the world from about 1825 to 1925, and about 300 languages are spoken in it.",
+			"Its Underground, opened 1863, was the first in the world, and the 1666 fire destroyed 13,200 houses."
+		]
 	},
 	"cardiff": {
 		"kind": "city",
 		"population": 861400,
 		"populationRank": 8,
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Welsh Caerdydd, probably \"the fort on the Taff\" — caer is a fort, the same word as in Caernarfon.",
+			"It was the largest coal port in the world by 1913, shipping what the valleys dug.",
+			"Its Coal Exchange saw the world’s first recorded million-pound deal, in 1904."
+		]
 	},
 	"reading": {
 		"kind": "city",
@@ -238,21 +388,36 @@
 		"populationRank": 24,
 		"region": "Oxfordshire",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"\"The people of Reada\" — a personal name meaning the red one.",
+			"Oscar Wilde was imprisoned in its gaol and wrote The Ballad of Reading Gaol about it.",
+			"Its abbey holds the oldest known English song, Sumer Is Icumen In, written down there about 1250."
+		]
 	},
 	"bristol": {
 		"kind": "city",
 		"population": 553528,
 		"populationRank": 12,
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"From Brycgstow, \"the place at the bridge\" — the local accent added the final L.",
+			"Its merchants financed a large share of the transatlantic slave trade, which the city has been reckoning with publicly.",
+			"Brunel built the Clifton Suspension Bridge and the SS Great Britain here, and Cabot sailed from it in 1497."
+		]
 	},
 	"southampton": {
 		"kind": "city",
 		"population": 384417,
 		"populationRank": 23,
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"The \"south hamtun\", to distinguish it from Northampton — hamtun is a home farm or settlement.",
+			"The Titanic sailed from here in 1912, and about a third of those who died came from the town.",
+			"It was the main embarkation port for D-Day and still handles most British cruise traffic."
+		]
 	},
 	"brighton": {
 		"kind": "city",
@@ -260,21 +425,36 @@
 		"populationRank": 14,
 		"region": "Brighton and Hove",
 		"coastal": true,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"From Beorhthelm’s tun, a personal name plus a settlement — worn down to Brighthelmstone and then Brighton.",
+			"The Prince Regent built the Royal Pavilion here in Indian and Chinese style, finished in 1823.",
+			"The railway from London in 1841 made it the first mass seaside resort in the world."
+		]
 	},
 	"portsmouth": {
 		"kind": "city",
 		"population": 442252,
 		"populationRank": 18,
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"\"The mouth of the harbour\" — port plus mouth, straightforwardly.",
+			"HMS Victory sits in its dockyard, the oldest commissioned warship in the world, alongside the raised Mary Rose.",
+			"Dickens was born here, and it is the only island city in the United Kingdom."
+		]
 	},
 	"bournemouth": {
 		"kind": "city",
 		"population": 426945,
 		"populationRank": 19,
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"\"The mouth of the bourne\" — a bourne is a small stream.",
+			"It was empty heathland until 1810, when one man built a house there as a health resort.",
+			"Mary Shelley is buried in the town, with the heart of Percy Bysshe Shelley reportedly in the grave."
+		]
 	},
 	"exeter": {
 		"kind": "city",
@@ -282,13 +462,23 @@
 		"populationRank": 38,
 		"region": "Devon",
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"From the river Exe plus the Roman -cester — \"the fort on the Exe\".",
+			"Its underground medieval passages, built to carry fresh water, can still be walked.",
+			"Its cathedral has the longest uninterrupted medieval vaulted ceiling in the world, 96 m."
+		]
 	},
 	"plymouth": {
 		"kind": "city",
 		"population": 247297,
 		"populationRank": 28,
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"\"The mouth of the Plym.\"",
+			"The Mayflower sailed from here in 1620, and Drake played bowls on the Hoe as the Armada approached.",
+			"It was bombed flat in 1941 and rebuilt on a modernist plan by Patrick Abercrombie."
+		]
 	}
 }
