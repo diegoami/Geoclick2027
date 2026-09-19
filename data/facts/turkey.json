@@ -1,0 +1,430 @@
+{
+	"_note": [
+		"Name-facts for Turkey (FT-41, docs/PLAN_V0.9.md). See italy.json for the",
+		"rules.",
+		"",
+		"Turkey is the deepest stack of names on the whole map after Egypt.",
+		"Most provinces are an ancient city name worn down through Greek and",
+		"then Turkish - Ancyra to Ankara, Smyrna to Izmir, Caesarea to Kayseri,",
+		"Trapezus to Trabzon, Iconium to Konya. A second group is plainly",
+		"Turkish and says what it is:",
+		"",
+		"  şehir = city     kale = castle     hisar = fortress",
+		"  su = water       göl = lake        dağ = mountain",
+		"  kara = black     ak = white        kızıl / kırmızı = red",
+		"  yeni = new       eski = old        gümüş = silver",
+		"",
+		"So Nevşehir is 'new city', Eskişehir 'old city', Afyonkarahisar",
+		"'opium black castle', Gümüşhane 'silver house'.",
+		"",
+		"WATCH THE IDS. slugify drops Turkish dotless ı and the accented",
+		"letters, so Kırklareli is 'k-rklareli', Diyarbakır is 'diyarbak-r' and",
+		"Ağrı is 'agr'. This is the documented slugify limitation in",
+		"mapBuildUtils.ts; ids key saved progress, so they are not 'fixed'."
+	],
+	"k-rklareli": [
+		"\"Land of the forty\" — kırklar, the forty, for forty holy men or forty villages, plus eli, the land of.",
+		"Its Dupnisa cave system runs several kilometres under the Strandja mountains on the Bulgarian border.",
+		"Thrace's wine country: vineyards here are among the oldest continuously worked in Turkey."
+	],
+	"sinop": [
+		"From Greek Sinope, named for a nymph who tricked Zeus into granting her eternal virginity.",
+		"Diogenes the Cynic, who lived in a jar and carried a lamp looking for an honest man, was born here.",
+		"The northernmost point of Turkey, on a peninsula that gives it the country's most sheltered natural harbour."
+	],
+	"bart-n": [
+		"From the ancient river Parthenios, which the Greeks named for Artemis the maiden.",
+		"Amasra on its coast was a Genoese trading post, and its harbour is split in two by an island joined by a Roman bridge.",
+		"Safranbolu's saffron, which gives the neighbouring town its name, is still grown in these hills."
+	],
+	"kastamonu": [
+		"From Kastra Komnenon, \"the castle of the Komnenos\", the Byzantine dynasty that held it.",
+		"Atatürk announced the hat reform here in 1925, banning the fez — he chose a conservative town deliberately.",
+		"It is one of the most forested provinces, and its Ilgaz mountains are a winter sports area."
+	],
+	"zonguldak": [
+		"A recent name, probably from a local word for a marshy meadow — one of the few provinces without an ancient name.",
+		"Turkey's only hard coal basin, worked since 1848, and its mines run out under the Black Sea.",
+		"The coal here fuelled the Ottoman navy and then the republic's first industry."
+	],
+	"edirne": [
+		"From Hadrianopolis, founded by the emperor Hadrian — worn down through Greek to Edirne.",
+		"It was the Ottoman capital for almost a century before Constantinople fell, and the Selimiye mosque here is Sinan's masterpiece and a UNESCO site.",
+		"Its oil wrestling tournament at Kırkpınar has been held every year since 1346, the oldest continuously running sporting event in the world."
+	],
+	"samsun": [
+		"From Greek Amisos, with the Turkish prefix worn on from \"eis Amison\", \"to Amisos\".",
+		"Atatürk landed here on 19 May 1919 to begin the war of independence, which is why that date is a national holiday.",
+		"It sits on the delta of the Kızılırmak, Turkey's longest river, and grows most of the country's tobacco."
+	],
+	"istanbul": [
+		"From Greek eis tin polin, \"to the city\" — travellers said where they were going and the phrase became the name.",
+		"The only city on two continents, and it was the capital of the Roman, Byzantine and Ottoman empires in turn for 1,600 years.",
+		"Hagia Sophia's dome, finished in 537, was the largest in the world for nearly a thousand years."
+	],
+	"karabuk": [
+		"\"Black bend\" or \"black bush\" — kara, black, plus a word for a river bend.",
+		"Created around the steelworks built here in 1937, the republic's first heavy industry project.",
+		"Safranbolu in it has hundreds of preserved Ottoman merchant houses and is a UNESCO site."
+	],
+	"ardahan": [
+		"Of Armenian or Georgian origin, probably Artahan, from an old district name.",
+		"Russian from 1878 to 1921, which is why some of its buildings are nineteenth-century Russian.",
+		"The coldest part of Turkey: −40 °C has been recorded, and its Çıldır lake freezes solid enough for sleighs."
+	],
+	"artvin": [
+		"Of Georgian origin, probably from a word for a place on a slope.",
+		"The Çoruh river through it is among the fastest in the world for rafting, though dams have taken much of it.",
+		"Its Kaçkar mountains hold Turkey's only temperate rainforest, and its Hemşin and Laz communities speak their own languages."
+	],
+	"tekirdag": [
+		"\"Tekfur mountain\" — tekfur was the Turkish word for a Byzantine lord, so the name means the lord's mountain.",
+		"Its rakı is the most respected in Turkey, distilled from Thracian grapes and aniseed.",
+		"The Ganos ridge along its coast was known in antiquity for wine and is still terraced for it."
+	],
+	"rize": [
+		"From Greek Rhizaion, from rhiza, a root or a foothill.",
+		"It grows nearly all of Turkey's tea, planted from the 1920s after the loss of coffee-growing lands made an alternative urgent.",
+		"The wettest province in the country, over 2,200 mm a year, and its Ayder plateau is Alpine meadow above the cloud."
+	],
+	"duzce": [
+		"From düz, \"flat\" — the plain it sits on.",
+		"Made a province in 1999, right after an earthquake that year destroyed much of the town.",
+		"It sits on the North Anatolian Fault, which has produced a sequence of major earthquakes moving steadily westwards since 1939."
+	],
+	"kocaeli": [
+		"\"The land of Koca\" — Akça Koca, the Ottoman commander who took the region in the 1320s.",
+		"Its İzmit was ancient Nicomedia, capital of the eastern Roman empire under Diocletian before Constantinople existed.",
+		"The most industrialised province in Turkey, with refineries and car plants along the gulf."
+	],
+	"trabzon": [
+		"From Greek Trapezous, \"table\" — the flat-topped hill the city was built on.",
+		"It was the capital of a Greek empire of its own, Trebizond, which outlasted Constantinople by eight years until 1461.",
+		"The Sumela monastery near it clings to a cliff face 300 m up, founded in 386."
+	],
+	"sakarya": [
+		"From the Sangarios river of antiquity, a name that has kept its shape for three thousand years.",
+		"The 1921 battle of the Sakarya stopped the Greek advance on Ankara and turned the war of independence.",
+		"Its Sapanca lake is a freshwater lake a few kilometres from the sea, left by the same fault system."
+	],
+	"ordu": [
+		"Turkish for \"army\" — the name of a camp that became a town; the same word gives English \"horde\".",
+		"It produces a large share of Turkey's hazelnuts, and Turkey grows about 70% of the world's.",
+		"Boztepe above the town is reached by cable car and looks down the whole coast."
+	],
+	"cank-r": [
+		"From ancient Gangra, capital of Paphlagonia.",
+		"Its rock salt mine has been worked since Hittite times and is now also a respiratory clinic inside the workings.",
+		"The Ilgaz mountains along its border separate the Black Sea climate from the dry Anatolian plateau."
+	],
+	"amasya": [
+		"From Amaseia, founded by the Pontic kings; Strabo the geographer was born here and described it.",
+		"The Pontic kings' rock tombs are cut into the cliff above the town, lit at night.",
+		"Ottoman princes were sent here to be trained in government, so it was the empire's school for sultans."
+	],
+	"corum": [
+		"Of uncertain origin — possibly from Çorumlu, a tribal name, or from a word meaning a mixed place.",
+		"Hattusa here was the Hittite capital, and its archive of clay tablets gave the world its first known peace treaty, with Egypt.",
+		"It produces most of Turkey's leblebi, roasted chickpeas, and its clay is used for bricks nationwide."
+	],
+	"bolu": [
+		"From Greek Polis through Claudiopolis — the classical name simply shortened to \"the city\".",
+		"Turkish chefs traditionally come from here: Mengen in the province has supplied palace and state cooks for centuries.",
+		"Its Yedigöller, seven lakes formed by landslides, is the country's best-known autumn forest."
+	],
+	"yalova": [
+		"From Greek gialos, \"shore\", plus ova, a plain — the shore plain.",
+		"The smallest province in Turkey by area.",
+		"Atatürk had a house here moved sideways on rails rather than cut down a plane tree in its way; it still stands off-centre."
+	],
+	"giresun": [
+		"From Greek Kerasous — and the cherry is named after it: the Romans took the fruit from here and called it cerasum.",
+		"So every word for cherry in Europe, from cerise to Kirsche, traces back to this one province.",
+		"Giresun island off its coast is the only island in the Turkish Black Sea, and was said to be the Amazons' shrine."
+	],
+	"kars": [
+		"Possibly from the Karsak, a Turkic tribe, or from a Georgian word for a gate.",
+		"Russian from 1878 to 1918, which is why its centre is a grid of Baltic-style stone houses unlike anywhere else in Turkey.",
+		"Ani nearby was a medieval Armenian capital of 100,000 people and is a UNESCO site standing empty on the border."
+	],
+	"tokat": [
+		"Possibly from a word for a fortified place, or from Armenian or Greek origins that are now unclear.",
+		"Its printed cloth, yazma, is block-printed by hand using techniques unchanged for centuries.",
+		"The Roman bridge at Tokat and the Hittite site at Maşat Höyük both show how long this pass has been used."
+	],
+	"gumushane": [
+		"\"Silver house\" — gümüş silver, hane house: the silver mines that made it rich.",
+		"Those mines supplied Ottoman coinage, and the old town of Süleymaniye above the modern one is largely abandoned.",
+		"Its Karaca cave has some of the most elaborate formations in Turkey, and the province grows a prized dried mulberry."
+	],
+	"bayburt": [
+		"From Baberd, an Armenian name, itself probably from a word for a fort.",
+		"The least populated province in Turkey.",
+		"Its castle sits on a ridge over the Çoruh and was described by Marco Polo, who passed through on his way east."
+	],
+	"bursa": [
+		"From Prusa, named for Prusias, the king of Bithynia who founded it around 200 BC.",
+		"The first Ottoman capital, and its early mosques and tombs are a UNESCO site.",
+		"Turkish silk was woven here, the İskender kebab was invented here, and Uludağ above it is the country's best-known ski mountain."
+	],
+	"canakkale": [
+		"\"Pot castle\" — çanak is a bowl or pot, for the pottery made here, plus kale, castle.",
+		"The Gallipoli campaign of 1915 was fought on its peninsula; it made Atatürk's reputation and is a founding story for Australia and New Zealand too.",
+		"Troy is in this province, and Schliemann dug it in 1870 — nine cities stacked on one mound."
+	],
+	"bilecik": [
+		"From belecik, a diminutive of a word for a fortified place.",
+		"The Ottoman state began in this province: Osman took Bilecik in 1299, the conventional date for the empire's founding.",
+		"Its Söğüt is where Ertuğrul, Osman's father, is buried, and a ceremony is held there every year."
+	],
+	"erzurum": [
+		"From Arz-ı Rum, \"the land of the Romans\" — Rum meaning Byzantine, which is what the Turks called them.",
+		"The highest large city in Turkey at 1,900 m, and one of the coldest; it hosted the 2011 Winter Universiade.",
+		"Its Çifte Minareli Medrese from the 1200s is one of the finest Seljuk buildings anywhere."
+	],
+	"igd-r": [
+		"Named for an Oghuz Turkic tribe, one of the twenty-four that the Turkish tribal lists record.",
+		"Mount Ararat stands in it at 5,137 m, Turkey's highest peak, where Noah's ark is traditionally said to have landed.",
+		"Its low-lying plain is mild enough for cotton and apricots, unlike everything around it."
+	],
+	"k-r-kkale": [
+		"\"Forty castles\" — kırk forty, kale castle, though the name may really be from a village called Kırıkköy.",
+		"Founded around a state arms factory in 1925 and made a province in 1989, so it is one of the newest.",
+		"It has the country's largest oil refinery inland, at the junction of the main east–west pipelines."
+	],
+	"bal-kesir": [
+		"From Palaiokastron, Greek for \"old castle\", worn down through Turkish.",
+		"It has coast on both the Aegean and the Marmara, the only province on both.",
+		"Kaz Dağı in it is the ancient Mount Ida, where the judgement of Paris is set and from which the gods watched the Trojan War."
+	],
+	"ankara": [
+		"From Ancyra, Greek for \"anchor\" — the Galatians or the Phrygians are said to have found one here, far from any sea.",
+		"Atatürk made it the capital in 1923 over Istanbul, deliberately choosing a small Anatolian town of 30,000 people.",
+		"The Angora goat, cat and rabbit are all named after it, and its mohair was a protected Ottoman export."
+	],
+	"eskisehir": [
+		"\"Old city\" — the Turkish name for what had been Dorylaeum, a Byzantine town.",
+		"Meerschaum, the white stone smoking pipes are carved from, is mined almost nowhere else in the world.",
+		"It is Turkey's most student-heavy city and has a reputation as its most liveable."
+	],
+	"yozgat": [
+		"Possibly from Persian yazd, a sacred place, plus a Turkish ending.",
+		"Its Çamlık is said to be Turkey's first national park, declared in 1958.",
+		"Kerkenes on its plateau is a huge Iron Age city, seven kilometres of walls, burned and abandoned around 550 BC."
+	],
+	"sivas": [
+		"From Sebasteia, named for Augustus — sebastos is the Greek translation of the Latin augustus.",
+		"The 1919 congress held here set the terms of the independence movement, and the building is now a museum.",
+		"Its Divriği hospital and mosque, with carved portals unlike anything else in Islamic architecture, is a UNESCO site."
+	],
+	"erzincan": [
+		"From Erez, an old Armenian settlement name, with a Persian diminutive.",
+		"Destroyed by earthquakes repeatedly, most catastrophically in 1939 when about 33,000 people died — the deadliest in Turkish history.",
+		"The Kemaliye gorge road here was cut through cliffs by hand by villagers over 132 years."
+	],
+	"agr": [
+		"The Turkish name of Mount Ararat, from ağrı, \"pain\" — though the mountain's name is far older than that reading.",
+		"Ishak Pasha Palace at Doğubayazıt is an eighteenth-century Kurdish-Ottoman palace on a crag, with its own heating system.",
+		"A meteor crater near Doğubayazıt is the second-largest in the world confirmed by impact."
+	],
+	"k-rsehir": [
+		"\"Red city\" or \"steppe city\" — kır means both open country and grey-red.",
+		"Ahi Evran, who organised Anatolian craftsmen into guilds in the 1200s, is buried here.",
+		"It is the home of the abdal musicians, whose bağlama playing shaped Turkish folk music."
+	],
+	"kutahya": [
+		"From Cotyaeum, a Phrygian and then Roman town.",
+		"Its tiles and ceramics have been made since the 1400s and decorated mosques across the empire after Iznik's kilns declined.",
+		"Aizanoi in the province has the best-preserved temple of Zeus in Anatolia and the world's first known stock exchange building."
+	],
+	"tunceli": [
+		"\"Bronze land\" — a name given by the republic in 1935, replacing Dersim.",
+		"The least densely populated province, mountainous and heavily forested.",
+		"Its people are largely Alevi and Zaza-speaking, and the Munzur valley is one of Turkey's richest for endemic plants."
+	],
+	"bingol": [
+		"\"A thousand lakes\" — bin thousand, göl lake, for the glacial tarns on its plateau.",
+		"Its name replaced the older Çapakçur in 1945.",
+		"The Bingöl mountains are a summer grazing ground for herders who move up from the valleys each year."
+	],
+	"mus": [
+		"Possibly from Armenian Mush, or from a word for mist — the plain is fog-bound in winter.",
+		"The Muş plain is one of the largest flat expanses in eastern Turkey and is entirely given to grain.",
+		"Its Malazgirt is where the Seljuks beat the Byzantines in 1071, the battle that opened Anatolia to Turkish settlement."
+	],
+	"nevsehir": [
+		"\"New city\" — renamed in 1726 by a grand vizier who was born in the village and rebuilt it.",
+		"Cappadocia is here: volcanic tuff eroded into cones that people have carved houses and churches into since Roman times.",
+		"Derinkuyu beneath it is an underground city eighteen storeys deep that could shelter 20,000 people."
+	],
+	"elaz-g": [
+		"From El-Aziz, \"the glorious\", named for Sultan Abdülaziz in 1866 and later Turkified.",
+		"Harput above it is the old town, abandoned for the new one on the plain.",
+		"Its Keban dam created a lake that drowned the old town of Ağın and several archaeological sites."
+	],
+	"manisa": [
+		"From Magnesia ad Sipylum — and the same Magnesia gives us magnet, magnesium and manganese.",
+		"The Ottoman princes trained here as well as at Amasya, and its Mesir festival has distributed a spiced paste as medicine since 1527.",
+		"Mount Sipylus above it has a natural rock face the Greeks took for Niobe weeping, which Homer mentions."
+	],
+	"izmir": [
+		"From Smyrna, through Greek \"eis Smyrnen\" — the same \"to the city\" construction that produced Istanbul.",
+		"One of the candidates for Homer's birthplace, and continuously inhabited for about 8,500 years.",
+		"Ephesus in the province had the Temple of Artemis, one of the seven wonders, and its library facade is the image of Roman Asia."
+	],
+	"van": [
+		"From Biainili, the Urartians' own name for their kingdom — the name is nearly three thousand years old.",
+		"Lake Van is Turkey's largest and is soda water, seven times saltier than the sea, with only one fish species able to live in it.",
+		"The Van cat has one blue eye and one amber, and swims — unusual in a cat."
+	],
+	"kayseri": [
+		"From Caesarea, named for Caesar — Tiberius renamed the Cappadocian capital Mazaca after Augustus.",
+		"Mount Erciyes above it is an extinct volcano of 3,864 m whose ash created the Cappadocian landscape next door.",
+		"Its merchants are proverbial in Turkey for shrewdness, and the city has more industrial exporters than almost any other."
+	],
+	"usak": [
+		"Turkish for \"servant\" or \"young man\", though the name may predate that reading.",
+		"Its carpets were exported to Europe from the 1500s and appear in Holbein's and Lotto's paintings — which is why dealers call the patterns Holbein and Lotto carpets.",
+		"The Karun treasure, Lydian gold looted from here, was recovered from New York in 1993 after a long legal fight."
+	],
+	"bitlis": [
+		"From an Armenian or older name, possibly Baghesh.",
+		"Ahlat on Lake Van holds a Seljuk cemetery of thousands of carved headstones, some three metres tall.",
+		"Nemrut Dağı here — not the one with the statues — is a volcano with one of the largest crater lakes in the world."
+	],
+	"afyonkarahisar": [
+		"\"Opium black castle\" — afyon is opium, kara black, hisar fortress: the poppy fields and the black rock the citadel sits on.",
+		"Turkey is one of the few countries licensed to grow opium poppies for the world's legal medical morphine, and most of it is grown here.",
+		"Its thermal springs are the most used in Turkey, and its clotted cream and Turkish delight are national brands."
+	],
+	"malatya": [
+		"From Hittite Melid or Maldiya, meaning honey — a name over three thousand years old.",
+		"It grows about 80% of the world's dried apricots.",
+		"Aslantepe mound in it is a UNESCO site with one of the oldest known palaces and the earliest swords ever found."
+	],
+	"aksaray": [
+		"\"White palace\" — ak white, saray palace, for a Seljuk palace built here.",
+		"The Ihlara valley in it is a 14 km gorge with over a hundred rock-cut churches painted in the Byzantine period.",
+		"Hasan Dağı above it is a volcano that may be depicted in a 9,000-year-old wall painting at Çatalhöyük — possibly the oldest map in the world."
+	],
+	"diyarbak-r": [
+		"\"The land of the Bakr\" — diyar is land or abode, Bakr the Arab tribe that settled here in the 600s.",
+		"Its black basalt walls run 5.8 km, second in length only to the Great Wall by an old claim, and are a UNESCO site.",
+		"It is the largest Kurdish-majority city in Turkey, and its watermelons were once grown so large they were carried by camel."
+	],
+	"batman": [
+		"Nothing to do with the comic: it is from the Batman river, and batman was also an Ottoman unit of weight.",
+		"The city grew from a village of 3,000 to a city on oil found here in 1940.",
+		"Hasankeyf in the province, a 12,000-year-old town, was flooded by the Ilısu dam in 2020 after a long international campaign to save it."
+	],
+	"konya": [
+		"From Iconium, which the Greeks explained with a story about an eikon, an image, set up here.",
+		"Rumi lived, wrote and died here, and the whirling dervish ceremony his followers developed is a UNESCO heritage item.",
+		"The largest province in Turkey by area, and its plain grows most of the country's grain — it is called Turkey's breadbasket."
+	],
+	"kahramanmaras": [
+		"\"Heroic Maraş\" — the title was added in 1973 for the town's resistance to French occupation in 1920.",
+		"Its ice cream is made with salep and mastic, stretchy enough to be cut with a knife and eaten with a fork.",
+		"The February 2023 earthquake had its epicentre in this province and killed over 50,000 people across the region."
+	],
+	"isparta": [
+		"From Greek Sparta or from Baris — the derivation is contested; it has nothing to do with the Peloponnesian Sparta beyond the name.",
+		"It produces a large share of the world's rose oil, distilled from Rosa damascena picked before dawn in May.",
+		"It takes about 4,000 kg of petals to make one kilogram of oil, which is why the oil is priced like a precious metal."
+	],
+	"siirt": [
+		"From Aramaic or Arabic, possibly Se'ert, \"city\", or from an older Assyrian name.",
+		"Its pistachios are a distinct variety, and the province gives its name to the Siirt blanket, woven from mohair.",
+		"The Botan valley here is one of the deepest canyons in Turkey."
+	],
+	"nigde": [
+		"From Nakida or Nahita, an older Anatolian name.",
+		"Its Aladağlar range has the sharpest limestone peaks in Turkey and is the country's main alpine climbing area.",
+		"The Gümüşler monastery nearby is cut into rock and has a rare Byzantine painting of a smiling Virgin."
+	],
+	"ad-yaman": [
+		"\"The unfortunate man\" in Turkish by folk etymology; the older name was Hısn-ı Mansur, the fortress of Mansur.",
+		"Mount Nemrut here has the colossal heads of a first-century BC king's tomb sanctuary, and is a UNESCO site.",
+		"That king, Antiochus I of Commagene, had himself carved among Greek and Persian gods as their equal."
+	],
+	"ayd-n": [
+		"Named for the Aydınoğulları, a Turkish beylik that ruled the region after the Seljuks; aydın also means bright.",
+		"It grows more figs than anywhere in the world, and the Aegean fig is Turkey's oldest protected export.",
+		"Aphrodisias in it was a city of marble sculptors whose work reached across the Roman empire; it is a UNESCO site."
+	],
+	"denizli": [
+		"\"With sea\" — which is odd for an inland province; the name probably referred to abundant water rather than the sea.",
+		"Pamukkale here is a hillside of white travertine terraces filled with warm water, a UNESCO site.",
+		"Hierapolis on top of it was a Roman spa town, and its Plutonium emitted enough carbon dioxide to kill sacrificial animals, which the priests presented as a miracle."
+	],
+	"adana": [
+		"Possibly from Adanos, a figure in Hittite myth, or from a word related to the Danuna people.",
+		"Its kebab is a national institution, and the province is the centre of Turkish cotton.",
+		"The Taşköprü bridge over the Seyhan was built in the Roman period and carried traffic until 2007."
+	],
+	"hakkari": [
+		"Possibly from Akkari, an Arabic or Kurdish tribal name.",
+		"The most mountainous province in Turkey: Cilo reaches 4,135 m and carries the country's largest glacier.",
+		"It is the least accessible province, with the lowest population density after Tunceli."
+	],
+	"s-rnak": [
+		"From Şehr-i Nuh, \"the city of Noah\" — local tradition places the ark's landing on Cudi Dağı here rather than on Ararat.",
+		"Created as a province only in 1990, out of parts of three others.",
+		"Cizre on the Tigris here was a major medieval centre of learning, and al-Jazari, who designed programmable automata around 1200, worked there."
+	],
+	"burdur": [
+		"From Polydorion, a Byzantine name, through Turkish.",
+		"Sagalassos in the province is a Roman city high in the mountains, abandoned after an earthquake and unusually complete.",
+		"Its Salda lake has white magnesium shores and water so like Mars's Jezero crater that NASA studied it before the Perseverance landing."
+	],
+	"sanl-urfa": [
+		"\"Glorious Urfa\" — the title was added in 1984 for its resistance in 1920; Urfa is from Edessa, through Syriac Urhai.",
+		"Göbekli Tepe here is the oldest known monumental architecture in the world, about 11,500 years old — older than farming, pottery or writing.",
+		"Abraham is said by local tradition to have been born in a cave in the city, which makes it a pilgrimage site for three religions."
+	],
+	"mardin": [
+		"From Syriac merdo, \"fortress\", in the plural — the fortresses.",
+		"Its old town of honey-coloured stone steps down a hillside over the Mesopotamian plain and is a UNESCO tentative site.",
+		"Deyrulzafaran monastery nearby was the seat of the Syriac Orthodox patriarch for 640 years, and Aramaic is still used in its liturgy."
+	],
+	"osmaniye": [
+		"Named for Sultan Osman — the province was created in 1996, one of the newest.",
+		"Karatepe in it has Hittite and Phoenician bilingual inscriptions that helped decipher Luwian hieroglyphs.",
+		"It grows most of Turkey's peanuts."
+	],
+	"gaziantep": [
+		"\"Veteran Antep\" — gazi was added in 1921 for the town's siege resistance; Antep is probably from Aïntab, \"good spring\".",
+		"It is Turkey's gastronomic capital and a UNESCO City of Gastronomy; its baklava has protected status.",
+		"The Zeugma mosaic museum here holds mosaics rescued from a Roman city flooded by a dam, including the Gypsy Girl."
+	],
+	"karaman": [
+		"Named for the Karamanid beylik, the Seljuks' strongest successor, which held out against the Ottomans until 1487.",
+		"In 1277 the Karamanid ruler decreed that only Turkish would be used in government — the first such order, and marked in Turkey as Language Day.",
+		"Its Binbirkilise, \"a thousand and one churches\", is a field of ruined Byzantine chapels on a volcanic slope."
+	],
+	"mugla": [
+		"Of uncertain origin, possibly from Mobolla, an older Carian name.",
+		"Bodrum in it was Halicarnassus, whose Mausoleum was one of the seven wonders — the word mausoleum comes from its occupant, Mausolus.",
+		"Its coastline is the longest of any Turkish province, and Ölüdeniz and Dalyan are on it."
+	],
+	"kilis": [
+		"Of ancient origin, possibly from a Semitic word for a fortress or a church.",
+		"The smallest province by population, made a province in 1994.",
+		"It has taken in more Syrian refugees relative to its own population than anywhere else in Turkey — at one point more refugees than residents."
+	],
+	"antalya": [
+		"From Attaleia, founded by Attalus II of Pergamon in about 150 BC and named for himself.",
+		"It is one of the most visited cities in the world by international arrivals, and its Konyaaltı and Lara beaches run for kilometres.",
+		"The Lycian Way along its coast is a 540 km waymarked path past rock tombs cut into cliffs."
+	],
+	"mersin": [
+		"Possibly from the myrtle, mersin in Turkish, which grows along this coast.",
+		"Turkey's largest container port, and the terminus of the road to Syria and the Gulf.",
+		"Its Kızkalesi is a castle on an island 200 m offshore, with a matching one on the beach."
+	],
+	"hatay": [
+		"Coined in the 1930s from Hatti, the Hittites — a deliberate archaism used to argue the region was historically Turkish.",
+		"It was a separate republic for a year in 1938 before joining Turkey; Syria still disputes the transfer.",
+		"Antakya in it was Antioch, the third city of the Roman empire, where the followers of Jesus were first called Christians."
+	]
+}

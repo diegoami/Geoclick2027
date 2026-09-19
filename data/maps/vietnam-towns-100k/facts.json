@@ -5,14 +5,24 @@
 		"populationRank": 33,
 		"region": "L?ng Son",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"\"Mountain pass\" — lang a village or pass, son mountain.",
+			"The Friendship Pass here has been the main land gate to China for two thousand years, and armies have used it in both directions.",
+			"The 1979 Chinese invasion destroyed the town almost completely; it was rebuilt from nothing."
+		]
 	},
 	"thai-nguyen": {
 		"kind": "city",
 		"population": 500000,
 		"populationRank": 10,
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"\"Clear source\" or \"peaceful plain\" — thai meaning great or peaceful, nguyen a source or plain.",
+			"Its tan cuong tea is the most prized green tea in Vietnam.",
+			"It was the site of the country's first integrated steelworks, built with Chinese help in the 1960s."
+		]
 	},
 	"viet-tri": {
 		"kind": "city",
@@ -46,7 +56,12 @@
 		"region": "Thái Nguyên",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"\"Inside the rivers\" — ha river, noi inside: the city sits in the bend of the Red River.",
+			"It has been a capital on and off since 1010, when a king saw a dragon rise and named it Thang Long, ascending dragon.",
+			"Its Temple of Literature, founded in 1070, was Vietnam's first university, and the names of its doctoral graduates are carved on stone tortoises."
+		]
 	},
 	"ha-long": {
 		"kind": "city",
@@ -63,14 +78,24 @@
 		"population1950": 167000,
 		"region": "Qu?ng Ninh",
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"\"Coastal defence\" — hai sea, phong to guard.",
+			"The third largest city and the main port of the north.",
+			"Cat Ba island off it holds the golden-headed langur, of which about 70 remain — one of the rarest primates in the world."
+		]
 	},
 	"hoa-binh": {
 		"kind": "city",
 		"population": 105260,
 		"populationRank": 43,
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"\"Peace\" — hoa harmony, binh peace.",
+			"The Hoabinhian culture is named after this province: stone tools found here defined a whole prehistoric period across south-east Asia.",
+			"It is the heartland of the Muong people, whose language is the closest living relative of Vietnamese."
+		]
 	},
 	"thai-binh": {
 		"kind": "city",
@@ -78,7 +103,12 @@
 		"populationRank": 25,
 		"region": "ThMi Bmnh",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"\"Great peace\" — a name that has been used for the region since the eleventh century.",
+			"Entirely flat delta with no mountains and no forest, and among the most intensively farmed land in Asia.",
+			"It has the highest rice yield per hectare in Vietnam and sends migrant workers all over the country."
+		]
 	},
 	"nam-inh": {
 		"kind": "city",
@@ -86,7 +116,12 @@
 		"populationRank": 23,
 		"region": "Nam n?nh",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"\"Southern settlement\" — nam south, dinh a settled place.",
+			"It was the capital of the Tran dynasty, which beat three Mongol invasions in the 1200s, once by planting iron-tipped stakes in a riverbed.",
+			"Phat Diem cathedral nearby is built in Vietnamese temple style with curved roofs, and the province has the country's largest Catholic population."
+		]
 	},
 	"ninh-binh": {
 		"kind": "city",
@@ -94,7 +129,12 @@
 		"populationRank": 39,
 		"region": "Ninh Bmnh",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"\"Tranquil peace\".",
+			"Trang An here is a UNESCO site of limestone towers and river caves, and Hoa Lu was Vietnam's capital in the tenth century.",
+			"It is called Ha Long Bay on land, and the caves are rowed through by boatwomen using their feet on the oars."
+		]
 	},
 	"thanh-hoa": {
 		"kind": "city",
@@ -102,7 +142,12 @@
 		"populationRank": 26,
 		"region": "Thanh H",
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"\"Pure harmony\" — thanh clear or pure, hoa harmony.",
+			"The Dong Son culture, which made Vietnam's great bronze drums from about 600 BC, is named after a village in this province.",
+			"The Ho dynasty citadel here, built in 1397 from enormous stone blocks, is a UNESCO site."
+		]
 	},
 	"vinh": {
 		"kind": "city",
@@ -118,7 +163,12 @@
 		"populationRank": 31,
 		"region": "Ha Tinh",
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"\"Quiet river\" — ha river, tinh quiet.",
+			"Nguyen Du, who wrote the Tale of Kieu — the poem every Vietnamese can quote — was from here.",
+			"The Ke Go reserve holds several bird species found nowhere else, and the province was the site of a major 2016 industrial marine pollution disaster."
+		]
 	},
 	"ong-hoi": {
 		"kind": "city",
@@ -142,7 +192,12 @@
 		"populationRank": 5,
 		"region": "Ðà N?ng",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"Probably from Cham daknan, \"big river mouth\" — one of the Cham names that survive along this coast.",
+			"The Marble Mountains here are five limestone hills named for the five elements, honeycombed with caves and shrines.",
+			"The first American combat troops in Vietnam landed on its beach in 1965, and the city is now the country's most liveable by common consent."
+		]
 	},
 	"quang-ngai": {
 		"kind": "city",
@@ -150,7 +205,12 @@
 		"populationRank": 20,
 		"region": "Qu?ng Ngãi",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"\"Broad Ngai\" — quang broad again.",
+			"The My Lai massacre took place here in 1968, and the site is a memorial.",
+			"Ly Son island off its coast grows garlic in sand carried up from the beach, and was a base for the Hoang Sa flotilla that claimed the Paracels."
+		]
 	},
 	"kon-tum": {
 		"kind": "city",
@@ -158,7 +218,12 @@
 		"populationRank": 42,
 		"region": "Qu?ng Nam",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"From Bahnar: kon means village and tum a lake — \"the village by the lake\".",
+			"One of the most ethnically diverse provinces, with Bahnar, Sedang, Gia Rai and Gie Trieng communities.",
+			"Its wooden cathedral, built by the French in 1913 in local stilt-house style, is one of the most unusual churches in Asia."
+		]
 	},
 	"pleiku": {
 		"kind": "city",
@@ -221,7 +286,12 @@
 		"population": 126370,
 		"populationRank": 40,
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"\"Western tranquillity\" — tay west.",
+			"The Cao Dai religion was founded here in 1926 and its Great Temple canonises Victor Hugo, Sun Yat-sen and Joan of Arc among its saints.",
+			"Ba Den mountain rises 986 m straight out of the plain, the only relief for a hundred kilometres."
+		]
 	},
 	"bien-hoa": {
 		"kind": "city",
@@ -302,7 +372,12 @@
 		"populationRank": 44,
 		"region": "Vinh Long",
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"\"Eternal dragon\" — vinh eternal, long dragon.",
+			"It sits between the two main Mekong branches, so it is almost entirely orchard and rice.",
+			"Its brick kilns along the Co Chien river form a landscape of beehive chimneys, now disappearing."
+		]
 	},
 	"can-tho": {
 		"kind": "city",
@@ -310,7 +385,12 @@
 		"populationRank": 4,
 		"region": "d?ng b?ng sông C?u Long",
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Possibly from cam thi giang, \"river of poems\", or from a Khmer word — the derivation is contested.",
+			"The largest city in the Mekong delta and its administrative centre.",
+			"Cai Rang floating market here is the biggest in the region; boats advertise what they sell by hanging a sample from a pole."
+		]
 	},
 	"rach-gia": {
 		"kind": "city",
@@ -326,7 +406,12 @@
 		"populationRank": 38,
 		"region": "TrM Vinh",
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"From Khmer prha trapeang, \"sacred pond\" — one of the clearest Khmer survivals in the delta.",
+			"It has one of the largest Khmer Krom populations in Vietnam, and about 140 Khmer Theravada pagodas.",
+			"Its Ba Om pond and the ancient trees around it are a national monument."
+		]
 	},
 	"soc-trang": {
 		"kind": "city",
@@ -334,7 +419,12 @@
 		"populationRank": 18,
 		"region": "Sóc Trang",
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"From Khmer srok kh'leang, \"the region of the storehouse\".",
+			"The Doi pagoda here is home to thousands of flying foxes that roost in its trees and are protected by the monks.",
+			"Its Khmer ngo boat races draw crews of fifty paddlers and tens of thousands of spectators."
+		]
 	},
 	"bac-lieu": {
 		"kind": "city",
@@ -342,13 +432,23 @@
 		"populationRank": 24,
 		"region": "B?c Liêu",
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Probably from a Khmer or Chinese name for a place of salt flats.",
+			"The Bac Lieu prince, who famously burned banknotes to boil an egg for a bet, is the delta's standard story about colonial-era excess.",
+			"It has the largest wind farm in Vietnam, built out into the tidal flats."
+		]
 	},
 	"ca-mau": {
 		"kind": "city",
 		"population": 356636,
 		"populationRank": 12,
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"From Khmer tuk khmau, \"black water\" — the tannin-stained water of its mangrove swamps.",
+			"The southernmost province: Vietnam's mainland ends at its cape, which is still growing seaward as the Mekong deposits silt.",
+			"Its U Minh Ha forest is one of the last peat swamp forests in south-east Asia."
+		]
 	}
 }

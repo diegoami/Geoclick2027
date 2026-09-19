@@ -1,0 +1,340 @@
+{
+	"_note": [
+		"Name-facts for Vietnam (FT-41, docs/PLAN_V0.9.md). See italy.json for",
+		"the rules.",
+		"",
+		"Vietnamese province names are Sino-Vietnamese compounds, and the same",
+		"handful of characters build most of the sixty-three:",
+		"",
+		"  bac = north    nam = south    dong = east    tay = west",
+		"  thai/thanh = peaceful, clear   binh = peace   an = safe, peaceful",
+		"  ha = river     giang = river   hai = sea      son = mountain",
+		"  long = dragon  quang = broad   phu = rich     tho = longevity",
+		"  ninh = tranquil   hoa = harmony   lam = forest   dinh = settled",
+		"",
+		"So Hai Phong is 'coastal defence', Ha Noi 'inside the rivers', Quang",
+		"Ninh 'broad tranquillity', Ha Long 'descending dragon'. A minority",
+		"come from Tai, Cham or Khmer and are flagged where they do.",
+		"",
+		"WATCH THE IDS. slugify drops the Vietnamese diacritics and eats a",
+		"leading D-with-stroke, so Dien Bien is 'ien-bien', Da Nang is 'a-nang'",
+		"and Dong Nai is 'ong-nai'. That is the documented slugify limitation",
+		"in mapBuildUtils.ts, deliberately not 'fixed' because ids key saved",
+		"progress."
+	],
+	"ha-giang": [
+		"\"River Giang\" — ha and giang are both river words, one Sino-Vietnamese, one older.",
+		"The Dong Van karst plateau here is a UNESCO geopark of limestone spires, and the Ma Pi Leng pass is the most spectacular road in the country.",
+		"It is Vietnam's northernmost province and one of its most ethnically diverse, with Hmong, Tay, Dao and Lo Lo communities."
+	],
+	"cao-bang": [
+		"\"High plain\" — cao high, bang flat.",
+		"Ho Chi Minh returned from thirty years abroad to the Pac Bo cave here in 1941, and the revolution was organised from it.",
+		"Ban Gioc on its Chinese border is the largest waterfall in south-east Asia that sits on an international boundary."
+	],
+	"lai-chau": [
+		"From a Tai name; chau was an administrative district in the old highland system.",
+		"One of the poorest and least populated provinces, almost entirely mountain.",
+		"Its Fansipan foothills and the Tam Duong valley grow tea, and the White Thai and Hmong are the largest groups."
+	],
+	"lao-cai": [
+		"From Chinese lao jie, \"old market\" — the border trading post the town grew from.",
+		"Sapa here was built as a French hill station and is now the most visited highland town in Vietnam.",
+		"Fansipan, at 3,147 m the highest mountain in Indochina, is in this province and now has a cable car to the summit."
+	],
+	"bac-kan": [
+		"\"Northern Kan\" — bac is north, a prefix on a dozen Vietnamese names.",
+		"Ba Be lake in it is the largest natural lake in Vietnam, held in limestone and surrounded by forest.",
+		"The least populated province in the country."
+	],
+	"tuyen-quang": [
+		"\"Proclaimed brightness\" — quang is broad or bright, and tuyen to declare.",
+		"The Viet Minh's wartime capital was here at Tan Trao, where the August Revolution was launched in 1945.",
+		"Its Na Hang reserve holds one of the last populations of the Tonkin snub-nosed monkey, found only in Vietnam."
+	],
+	"lang-son": [
+		"\"Mountain pass\" — lang a village or pass, son mountain.",
+		"The Friendship Pass here has been the main land gate to China for two thousand years, and armies have used it in both directions.",
+		"The 1979 Chinese invasion destroyed the town almost completely; it was rebuilt from nothing."
+	],
+	"yen-bai": [
+		"\"Peaceful Bai\" — yen means peaceful or safe, one of the commonest elements in Vietnamese names.",
+		"The Mu Cang Chai rice terraces here are a national monument, cut by Hmong farmers into slopes too steep for machines.",
+		"The 1930 Yen Bai mutiny against the French was crushed and its leaders guillotined, which pushed the independence movement towards communism."
+	],
+	"ien-bien": [
+		"\"Border administration\" — the name of a garrison town on the Lao frontier.",
+		"Dien Bien Phu here is where the Viet Minh beat the French in 1954, ending colonial rule in Indochina.",
+		"The Vietnamese dragged artillery over mountains by hand to positions the French thought impossible, which decided the battle."
+	],
+	"thai-nguyen": [
+		"\"Clear source\" or \"peaceful plain\" — thai meaning great or peaceful, nguyen a source or plain.",
+		"Its tan cuong tea is the most prized green tea in Vietnam.",
+		"It was the site of the country's first integrated steelworks, built with Chinese help in the 1960s."
+	],
+	"bac-giang": [
+		"\"Northern river\" — north of the Cau river.",
+		"It grows more lychees than any other province, and the Luc Ngan harvest is a national event.",
+		"The Yen Tu range on its border holds the Truc Lam Buddhist sect's mountain monasteries, founded by a king who abdicated to become a monk."
+	],
+	"vinh-phuc": [
+		"\"Eternal happiness\" — vinh eternal, phuc happiness or blessing.",
+		"Tam Dao in it was another French hill station, at 900 m with a cool climate an hour from Hanoi.",
+		"It is one of the most industrialised northern provinces, with Honda and Toyota plants."
+	],
+	"phu-tho": [
+		"\"Rich and long-lived\" — phu rich, tho longevity.",
+		"The Hung kings, the legendary founders of Vietnam, are said to have ruled from here, and their temple hosts the national ancestral festival.",
+		"Xoan singing from this province is on the UNESCO intangible heritage list."
+	],
+	"son-la": [
+		"\"Mountain La\" — son mountain, La the river.",
+		"The Son La dam is the largest hydroelectric plant in south-east Asia.",
+		"The French prison here held Vietnamese political prisoners including several future leaders, and is now a museum."
+	],
+	"quang-ninh": [
+		"\"Broad tranquillity\" — quang broad, ninh peaceful.",
+		"Ha Long Bay is here — \"descending dragon\", from a legend of dragons spitting jewels that became the 1,600 limestone islands.",
+		"It holds most of Vietnam's coal, mined since the French period, and the province borders China."
+	],
+	"bac-ninh": [
+		"\"Northern tranquillity\".",
+		"The smallest province in Vietnam by area, and the most densely populated after the cities.",
+		"Quan ho, its call-and-response love duets sung between villages, is a UNESCO heritage item, and Samsung's largest phone factories are here."
+	],
+	"ha-noi": [
+		"\"Inside the rivers\" — ha river, noi inside: the city sits in the bend of the Red River.",
+		"It has been a capital on and off since 1010, when a king saw a dragon rise and named it Thang Long, ascending dragon.",
+		"Its Temple of Literature, founded in 1070, was Vietnam's first university, and the names of its doctoral graduates are carved on stone tortoises."
+	],
+	"hai-duong": [
+		"\"Sea ocean\" or \"eastern sea\" — hai sea, duong ocean.",
+		"Its green bean cake, banh dau xanh, is the standard gift brought back from the province.",
+		"Chu Dau pottery from here was exported across Asia in the 1400s, and a wreck off the coast recovered 240,000 pieces."
+	],
+	"hung-yen": [
+		"\"Flourishing peace\" — hung to flourish, yen peaceful.",
+		"Pho Hien here was a major international port in the 1600s, with Dutch, Japanese and Chinese quarters — the saying ran \"first Kinh Ky, second Pho Hien\".",
+		"The river silted up and the port died, which is why an inland farming province was once Vietnam's second city."
+	],
+	"hai-phong": [
+		"\"Coastal defence\" — hai sea, phong to guard.",
+		"The third largest city and the main port of the north.",
+		"Cat Ba island off it holds the golden-headed langur, of which about 70 remain — one of the rarest primates in the world."
+	],
+	"hoa-binh": [
+		"\"Peace\" — hoa harmony, binh peace.",
+		"The Hoabinhian culture is named after this province: stone tools found here defined a whole prehistoric period across south-east Asia.",
+		"It is the heartland of the Muong people, whose language is the closest living relative of Vietnamese."
+	],
+	"ha-nam": [
+		"\"South of the river\" — ha river, nam south.",
+		"Tam Chuc in it is one of the largest Buddhist complexes in the world by area.",
+		"It is a small delta province, almost entirely rice, an hour south of Hanoi."
+	],
+	"thai-binh": [
+		"\"Great peace\" — a name that has been used for the region since the eleventh century.",
+		"Entirely flat delta with no mountains and no forest, and among the most intensively farmed land in Asia.",
+		"It has the highest rice yield per hectare in Vietnam and sends migrant workers all over the country."
+	],
+	"nam-inh": [
+		"\"Southern settlement\" — nam south, dinh a settled place.",
+		"It was the capital of the Tran dynasty, which beat three Mongol invasions in the 1200s, once by planting iron-tipped stakes in a riverbed.",
+		"Phat Diem cathedral nearby is built in Vietnamese temple style with curved roofs, and the province has the country's largest Catholic population."
+	],
+	"ninh-binh": [
+		"\"Tranquil peace\".",
+		"Trang An here is a UNESCO site of limestone towers and river caves, and Hoa Lu was Vietnam's capital in the tenth century.",
+		"It is called Ha Long Bay on land, and the caves are rowed through by boatwomen using their feet on the oars."
+	],
+	"thanh-hoa": [
+		"\"Pure harmony\" — thanh clear or pure, hoa harmony.",
+		"The Dong Son culture, which made Vietnam's great bronze drums from about 600 BC, is named after a village in this province.",
+		"The Ho dynasty citadel here, built in 1397 from enormous stone blocks, is a UNESCO site."
+	],
+	"nghe-an": [
+		"\"Peaceful Nghe\" — an, peace, on an older regional name.",
+		"Ho Chi Minh was born here in 1890, in a village of thatched houses now preserved.",
+		"The largest province in Vietnam by area, running from the sea to the Lao border."
+	],
+	"ha-tinh": [
+		"\"Quiet river\" — ha river, tinh quiet.",
+		"Nguyen Du, who wrote the Tale of Kieu — the poem every Vietnamese can quote — was from here.",
+		"The Ke Go reserve holds several bird species found nowhere else, and the province was the site of a major 2016 industrial marine pollution disaster."
+	],
+	"quang-binh": [
+		"\"Broad peace\".",
+		"Son Doong in it is the largest cave passage in the world, big enough to hold a New York block, with its own jungle and clouds inside.",
+		"The province is only 50 km wide at Vietnam's narrowest point, and the Ho Chi Minh trail ran through its mountains."
+	],
+	"quang-tri": [
+		"\"Broad governance\".",
+		"The seventeenth parallel ran through it, so this province was the Demilitarised Zone dividing Vietnam from 1954 to 1975.",
+		"The Vinh Moc tunnels here sheltered a whole village underground for six years, with a maternity room where seventeen children were born."
+	],
+	"thua-thien-hue": [
+		"Hue is probably a worn-down form of Thuan Hoa, the old regional name; thua thien means \"receiving heaven\".",
+		"Hue was the imperial capital from 1802 to 1945, and its citadel and tombs are a UNESCO site.",
+		"Its court music, nha nhac, is another UNESCO heritage item, and the city's cuisine is the most refined in Vietnam."
+	],
+	"a-nang": [
+		"Probably from Cham daknan, \"big river mouth\" — one of the Cham names that survive along this coast.",
+		"The Marble Mountains here are five limestone hills named for the five elements, honeycombed with caves and shrines.",
+		"The first American combat troops in Vietnam landed on its beach in 1965, and the city is now the country's most liveable by common consent."
+	],
+	"quang-nam": [
+		"\"Broad south\" — the southern expansion of the Vietnamese state into Cham territory.",
+		"Hoi An in it was an international port from the 1500s and is preserved almost intact as a UNESCO site.",
+		"My Son nearby is a complex of Cham Hindu temples built between the 4th and 14th centuries, also UNESCO-listed."
+	],
+	"quang-ngai": [
+		"\"Broad Ngai\" — quang broad again.",
+		"The My Lai massacre took place here in 1968, and the site is a memorial.",
+		"Ly Son island off its coast grows garlic in sand carried up from the beach, and was a base for the Hoang Sa flotilla that claimed the Paracels."
+	],
+	"kon-tum": [
+		"From Bahnar: kon means village and tum a lake — \"the village by the lake\".",
+		"One of the most ethnically diverse provinces, with Bahnar, Sedang, Gia Rai and Gie Trieng communities.",
+		"Its wooden cathedral, built by the French in 1913 in local stilt-house style, is one of the most unusual churches in Asia."
+	],
+	"binh-inh": [
+		"\"Pacified and settled\" — binh peace, dinh settled: a name given after the region was taken from Champa.",
+		"The Tay Son brothers, who overthrew both ruling houses and briefly united Vietnam in the 1780s, came from here.",
+		"Its Cham towers at Banh It and Duong Long are among the best preserved anywhere."
+	],
+	"gia-lai": [
+		"From the Jarai people, whose name the Vietnamese wrote as Gia Rai.",
+		"Pleiku in it was a key base in the central highlands war, and the 1975 retreat from it began the collapse of South Vietnam.",
+		"Bien Ho, a crater lake, supplies the city's water, and the province grows coffee, pepper and rubber."
+	],
+	"phu-yen": [
+		"\"Rich and peaceful\" — phu rich, yen peaceful.",
+		"Its Ganh Da Dia is a field of interlocking basalt columns on the shore, like the Giant's Causeway.",
+		"It has the easternmost point of mainland Vietnam at Mui Dien, so it sees the sunrise first."
+	],
+	"ak-lak": [
+		"From Rade: dak means water and lak is a lake — \"the water of Lak\".",
+		"Buon Ma Thuot here is the coffee capital of Vietnam, and Vietnam is the world's largest producer of robusta.",
+		"The gong culture of the central highlands, centred on this province, is a UNESCO heritage item."
+	],
+	"khanh-hoa": [
+		"\"Celebration and harmony\" — khanh to celebrate.",
+		"Nha Trang in it has the best-known beach in Vietnam and a Cham tower complex, Po Nagar, still used for worship.",
+		"Its swiftlet nests, harvested from sea caves for bird's nest soup, were a royal monopoly and are still among the most expensive foods in the world."
+	],
+	"ak-nong": [
+		"From Mnong: dak water again, plus the M'Nong people's name.",
+		"Its volcanic cave system at Krong No is the longest lava tube system in south-east Asia, found only in 2007.",
+		"Split from Dak Lak in 2004, and it grows coffee, pepper and cashews on basalt soil."
+	],
+	"binh-phuoc": [
+		"\"Peaceful blessing\" — binh peace, phuoc blessing.",
+		"Its Bu Gia Map park is one of the last lowland forests in southern Vietnam.",
+		"It produces most of Vietnam's cashews, and Vietnam is the world's largest cashew exporter."
+	],
+	"lam-ong": [
+		"\"Forest of the Dong\" — lam forest, plus the Da Dong river.",
+		"Da Lat in it was built by the French as a hill station at 1,500 m and still grows Europe's vegetables and flowers for the whole country.",
+		"Its cool climate makes it Vietnam's honeymoon city, and the province produces almost all the country's artichokes and strawberries."
+	],
+	"ninh-thuan": [
+		"\"Tranquil and compliant\".",
+		"The driest province in Vietnam, with cactus, salt pans and vineyards — the only place in the country that grows table grapes commercially.",
+		"It has the largest remaining Cham population, who still keep their own Hindu and Bani Muslim traditions and their own new year, Kate."
+	],
+	"tay-ninh": [
+		"\"Western tranquillity\" — tay west.",
+		"The Cao Dai religion was founded here in 1926 and its Great Temple canonises Victor Hugo, Sun Yat-sen and Joan of Arc among its saints.",
+		"Ba Den mountain rises 986 m straight out of the plain, the only relief for a hundred kilometres."
+	],
+	"binh-duong": [
+		"\"Peaceful ocean\" — binh peace, duong ocean.",
+		"The most industrialised province in Vietnam, with the highest income per head of any province.",
+		"Its lacquerware and pottery villages supplied Saigon for two centuries before the factories arrived."
+	],
+	"binh-thuan": [
+		"\"Peaceful and compliant\".",
+		"Mui Ne here has red and white sand dunes, and the steady wind makes it a kitesurfing centre.",
+		"It grows nearly all of Vietnam's dragon fruit, grown on posts under lights that are switched on at night to force flowering."
+	],
+	"ong-nai": [
+		"\"Deer river\" — nai is a deer, and the Dong Nai is southern Vietnam's longest internal river.",
+		"Cat Tien park in it holds one of the last lowland tropical forests and was where Vietnam's last Javan rhino was killed in 2010.",
+		"It is one of the country's industrial heartlands, and its Bien Hoa was a major American airbase."
+	],
+	"thanh-pho-ho-chi-minh": [
+		"\"Ho Chi Minh City\" — renamed in 1976; the older name Saigon may be from Khmer prey nokor, \"forest city\", and is still what people say.",
+		"The largest city in Vietnam and its economic engine, producing about a fifth of national GDP.",
+		"The Cu Chi tunnels outside it run 250 km, with kitchens, hospitals and workshops, dug by hand and fought over for years."
+	],
+	"long-an": [
+		"\"Dragon peace\" — long dragon, an peace.",
+		"The gateway from Ho Chi Minh City into the Mekong delta.",
+		"Its Dong Thap Muoi, the Plain of Reeds, is acid sulphate wetland that took decades of engineering to farm."
+	],
+	"ong-thap": [
+		"\"Eastern tower\" or \"Thap's field\" — dong can be field or east, thap a tower.",
+		"Tram Chim park here protects the sarus crane, the tallest flying bird in the world, which winters on its wetlands.",
+		"Its Sa Dec flower village supplies the delta, and Marguerite Duras set The Lover in the town."
+	],
+	"ba-ria-vung-tau": [
+		"Vung Tau is \"anchorage bay\"; Ba Ria is said to be named for a woman who cleared the land in the 1700s.",
+		"Vietnam's offshore oil and gas comes ashore here, and the province has long had the highest GDP per head outside the cities.",
+		"The French called Vung Tau Cap Saint-Jacques, and it was Saigon's seaside resort."
+	],
+	"an-giang": [
+		"\"Peaceful river\" — an peace, giang river.",
+		"Oc Eo in it was the port of Funan, a kingdom of the first centuries AD, and Roman coins have been dug up there.",
+		"It has the largest Cham Muslim and Khmer populations in the delta, and the Sam mountain pilgrimage draws millions."
+	],
+	"tien-giang": [
+		"\"Front river\" — the northern branch of the Mekong, as opposed to the Hau, the rear river.",
+		"My Tho, its capital, was founded by Chinese refugees in the 1680s and is the oldest city in the delta.",
+		"Its floating markets and fruit orchards are the delta's standard day trip from Ho Chi Minh City."
+	],
+	"can-tho": [
+		"Possibly from cam thi giang, \"river of poems\", or from a Khmer word — the derivation is contested.",
+		"The largest city in the Mekong delta and its administrative centre.",
+		"Cai Rang floating market here is the biggest in the region; boats advertise what they sell by hanging a sample from a pole."
+	],
+	"vinh-long": [
+		"\"Eternal dragon\" — vinh eternal, long dragon.",
+		"It sits between the two main Mekong branches, so it is almost entirely orchard and rice.",
+		"Its brick kilns along the Co Chien river form a landscape of beehive chimneys, now disappearing."
+	],
+	"ben-tre": [
+		"From a Khmer name, possibly srok treay, \"fish region\", reinterpreted in Vietnamese as \"bamboo wharf\".",
+		"The coconut province: it has more coconut palms than anywhere in Vietnam, and makes candy, oil and fibre from them.",
+		"The 1960 Ben Tre uprising was the start of the armed insurgency in the south."
+	],
+	"kien-giang": [
+		"\"Establishing river\" — kien to build or establish.",
+		"Phu Quoc island belongs to it — Vietnam's largest island, closer to Cambodia than to the mainland, and the source of the country's best fish sauce.",
+		"Ha Tien on its coast was an autonomous Chinese-run port state in the 1700s."
+	],
+	"hau-giang": [
+		"\"Rear river\" — the southern branch of the Mekong, paired with Tien Giang.",
+		"Split from Can Tho in 2004, and almost entirely rice and fruit.",
+		"Its Lung Ngoc Hoang reserve is one of the last pieces of undrained delta swamp forest."
+	],
+	"tra-vinh": [
+		"From Khmer prha trapeang, \"sacred pond\" — one of the clearest Khmer survivals in the delta.",
+		"It has one of the largest Khmer Krom populations in Vietnam, and about 140 Khmer Theravada pagodas.",
+		"Its Ba Om pond and the ancient trees around it are a national monument."
+	],
+	"soc-trang": [
+		"From Khmer srok kh'leang, \"the region of the storehouse\".",
+		"The Doi pagoda here is home to thousands of flying foxes that roost in its trees and are protected by the monks.",
+		"Its Khmer ngo boat races draw crews of fifty paddlers and tens of thousands of spectators."
+	],
+	"bac-lieu": [
+		"Probably from a Khmer or Chinese name for a place of salt flats.",
+		"The Bac Lieu prince, who famously burned banknotes to boil an egg for a bet, is the delta's standard story about colonial-era excess.",
+		"It has the largest wind farm in Vietnam, built out into the tidal flats."
+	],
+	"ca-mau": [
+		"From Khmer tuk khmau, \"black water\" — the tannin-stained water of its mangrove swamps.",
+		"The southernmost province: Vietnam's mainland ends at its cape, which is still growing seaward as the Mekong deposits silt.",
+		"Its U Minh Ha forest is one of the last peat swamp forests in south-east Asia."
+	]
+}

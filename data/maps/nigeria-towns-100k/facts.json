@@ -4,14 +4,24 @@
 		"population": 732178,
 		"populationRank": 17,
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"From Arabic suq, a market — the Hausa rendering of the name of the caliphate's capital.",
+			"The Sokoto Caliphate, founded by Usman dan Fodio in 1804, was the largest state in Africa in the nineteenth century.",
+			"Its Sultan is still the most senior Muslim authority in Nigeria, and the state is the hottest part of the country."
+		]
 	},
 	"katsina": {
 		"kind": "city",
 		"population": 432149,
 		"populationRank": 25,
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"Named for the city, said to be after Katsina, the wife of a local ruler.",
+			"One of the seven original Hausa city-states, and a centre of Islamic learning that rivalled Timbuktu in the 1500s.",
+			"Its Gobarau minaret, built of mud in the fifteenth century, is one of the oldest surviving structures in West Africa."
+		]
 	},
 	"nguru": {
 		"kind": "city",
@@ -51,7 +61,12 @@
 		"populationRank": 2,
 		"population1950": 115000,
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"Named for the city, traditionally after Kano, a blacksmith who settled at the foot of Dala hill.",
+			"The greatest trans-Saharan trade city in Hausaland, walled since the eleventh century, and its dye pits at Kofar Mata have been worked since 1498.",
+			"It is the most populous state in northern Nigeria and the commercial capital of the north."
+		]
 	},
 	"maiduguri": {
 		"kind": "city",
@@ -101,21 +116,36 @@
 		"populationRank": 5,
 		"population1950": 33000,
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"From the Hausa kadduna, plural of kada, \"crocodile\" — the river was full of them.",
+			"The British made it the capital of the Northern Region in 1917, so it is a colonial creation rather than an old emirate.",
+			"It sits on the fault line between Muslim north and Christian south, which has made it the site of repeated communal violence."
+		]
 	},
 	"bauchi": {
 		"kind": "city",
 		"population": 316149,
 		"populationRank": 28,
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"Said to be named after a hunter called Baushe who founded the town.",
+			"Yankari here is Nigeria's best-known game reserve, with the country's largest surviving elephant population.",
+			"Sir Abubakar Tafawa Balewa, Nigeria's first prime minister, came from this state."
+		]
 	},
 	"gombe": {
 		"kind": "city",
 		"population": 270366,
 		"populationRank": 33,
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"Named for the town, founded by a Fulani leader in the jihad of the early 1800s.",
+			"Split from Bauchi in 1996, one of the last states created.",
+			"Its Tangale-Waja hills give it more relief than the plains around, and it sits on the edge of the Sahel."
+		]
 	},
 	"mubi": {
 		"kind": "city",
@@ -198,7 +228,12 @@
 		"population": 736072,
 		"populationRank": 16,
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Named for the Oyo Empire, the dominant Yoruba power from the 1600s to the 1830s, with a cavalry that controlled the savanna.",
+			"Ibadan, its capital, was the largest city in tropical Africa for much of the twentieth century, and has Nigeria's oldest university, from 1948.",
+			"The Old Oyo capital's fall in the 1830s scattered Yoruba people south and is the origin of many modern Yoruba towns."
+		]
 	},
 	"osogbo": {
 		"kind": "city",
@@ -286,7 +321,12 @@
 		"population": 257005,
 		"populationRank": 35,
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Named for the town of Ondo, whose own name is said to mean \"the settlers\".",
+			"Nigeria's largest cocoa producer, and cocoa was the country's main export before oil.",
+			"Idanre hills in it are a UNESCO tentative site, with an old town on top reached by 660 steps."
+		]
 	},
 	"nsukka": {
 		"kind": "city",
@@ -309,7 +349,12 @@
 		"population": 688862,
 		"populationRank": 18,
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"From Igbo enu ugwu, \"the top of the hill\".",
+			"Coal was found here in 1909 and the city grew around it — it is still called the coal city.",
+			"It was the capital of Biafra at the start of the 1967–70 war."
+		]
 	},
 	"lagos": {
 		"kind": "city",
@@ -317,7 +362,12 @@
 		"populationRank": 1,
 		"population1950": 305000,
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Portuguese for \"lakes\", after the lagoons — named by traders for the town of Lagos in Portugal.",
+			"The smallest state by area and the largest by population, and one of the fastest-growing cities in the world.",
+			"It was Nigeria's capital until 1991 and remains its commercial centre; Nollywood, the world's second-largest film industry by output, is based here."
+		]
 	},
 	"benin-city": {
 		"kind": "city",

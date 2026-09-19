@@ -21,7 +21,12 @@
 			"name": "Gora Sedova",
 			"elevation": 1549
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"\"Archangel\" — named for a monastery of the Archangel Michael at the mouth of the Northern Dvina.",
+			"It was Russia's only sea port for over a century, until Peter the Great built St Petersburg.",
+			"Allied Arctic convoys delivered supplies here in the Second World War, through ice and U-boats."
+		]
 	},
 	"nenets": {
 		"kind": "region",
@@ -39,7 +44,12 @@
 			"nameIt": "Nar'jan-Mar",
 			"population": 21658
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Named for the Nenets people, whose own name means simply \"man\" — as many indigenous names do.",
+			"They still herd reindeer across the tundra in the largest surviving nomadic pastoral system in the Arctic.",
+			"It has one of the smallest populations of any Russian region, about 42,000 people in an area the size of England and Scotland."
+		]
 	},
 	"murmansk": {
 		"kind": "region",
@@ -55,7 +65,12 @@
 			"nameIt": "Murmansk",
 			"population": 319263
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"From an old Russian name for the Norwegians, murman, a corruption of \"Norman\".",
+			"The largest city north of the Arctic Circle anywhere in the world, and its port never freezes because of the Gulf Stream.",
+			"The Kola superdeep borehole here reached 12,262 m, the deepest hole ever drilled, and found water where none was expected."
+		]
 	},
 	"yamal-nenets": {
 		"kind": "region",
@@ -74,7 +89,12 @@
 			"nameIt": "Nachodka",
 			"population": 159551
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"Yamal means \"the end of the earth\" in Nenets, and the peninsula is exactly that.",
+			"It produces most of Russia's natural gas — a large share of the world's proven reserves lies under it.",
+			"Thawing permafrost here has opened craters by explosive methane release and, in 2016, released anthrax from a thawed reindeer carcass."
+		]
 	},
 	"chukotka": {
 		"kind": "region",
@@ -84,7 +104,12 @@
 			"Sakha (Yakutia)"
 		],
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"Named for the Chukchi, whose name for themselves means \"rich in reindeer\".",
+			"Only 82 km from Alaska across the strait, and the two Diomede Islands in it are split by the date line — one is tomorrow.",
+			"The easternmost region, where Russia's day begins, and one of the coldest inhabited places on earth."
+		]
 	},
 	"krasnoyarsk": {
 		"kind": "region",
@@ -111,7 +136,12 @@
 			"name": "Grandiozny Peak",
 			"elevation": 2891
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"\"Red ravine\" — krasny red, yar a steep bank: the fort was built on a red clay bluff in 1628.",
+			"The second largest region in Russia, running 3,000 km from the Arctic to Mongolia.",
+			"Norilsk in it is one of the most polluted places in the world from nickel smelting, and one of the northernmost cities anywhere."
+		]
 	},
 	"sakha-yakutia": {
 		"kind": "region",
@@ -137,7 +167,12 @@
 			"name": "Gora Pobeda",
 			"elevation": 3003
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"Sakha is the people's own name; Yakut is what the Russians called them, borrowed from a neighbouring language.",
+			"The largest subnational entity in the world, about the size of India, with under a million people.",
+			"Oymyakon in it is the coldest permanently inhabited place on earth, at −67.7 °C, and it produces most of Russia's diamonds."
+		]
 	},
 	"komi": {
 		"kind": "region",
@@ -159,7 +194,12 @@
 			"nameIt": "Syktyvkar",
 			"population": 230910
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Named for the Komi people, whose language is Finno-Ugric and related to Finnish and Hungarian.",
+			"Its virgin Komi forests are the largest untouched boreal forest in Europe and a UNESCO site.",
+			"Vorkuta in it was one of the largest Gulag camps; the city was built by prisoners to mine coal in the Arctic."
+		]
 	},
 	"karelia": {
 		"kind": "region",
@@ -178,7 +218,12 @@
 			"nameIt": "Petrozavodsk",
 			"population": 265025
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Named for the Karelians, a Finnic people; the name may come from a word for a herd or for highland.",
+			"Most of it was Finnish until 1940, and about 400,000 Finns left rather than live under Soviet rule.",
+			"Kizhi on Lake Onega has a wooden church of twenty-two domes built in 1714 without a single nail, a UNESCO site."
+		]
 	},
 	"magadan": {
 		"kind": "region",
@@ -201,7 +246,12 @@
 			"name": "Pik Aborigen",
 			"elevation": 2586
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"Probably from Even monghodan, \"sea dwellings\", or a similar coastal word.",
+			"It was the gateway to the Kolyma Gulag: hundreds of thousands passed through its port to the gold mines, and many did not return.",
+			"The Road of Bones inland was built by and over prisoners, and is still the only land route."
+		]
 	},
 	"khanty-mansiy": {
 		"kind": "region",
@@ -226,7 +276,12 @@
 			"name": "Gora Narodnaya",
 			"elevation": 1895
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"Named for two related Finno-Ugric peoples, the Khanty and the Mansi.",
+			"It produces about half of Russia's oil, from the West Siberian basin.",
+			"Its indigenous peoples number only a few tens of thousands among 1.7 million incomers drawn by that oil."
+		]
 	},
 	"vologda": {
 		"kind": "region",
@@ -249,7 +304,12 @@
 			"nameIt": "Čerepovec",
 			"population": 311850
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"From a Finno-Ugric root meaning \"white\" or \"clear\", the name of the river.",
+			"Its butter, made with a distinctive nutty flavour from a nineteenth-century method, is a protected Russian name.",
+			"Ivan the Terrible considered making it his capital and built a kremlin there before changing his mind."
+		]
 	},
 	"city-of-st-petersburg": {
 		"kind": "region",
@@ -265,7 +325,12 @@
 			"nameIt": "San Pietroburgo",
 			"population": 4553000
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Named by Peter the Great for his patron saint, not for himself — and in Dutch-German form, Sankt Piterburkh, because he admired the Dutch.",
+			"Built on marsh from 1703 at enormous cost in lives, and the capital for two centuries.",
+			"It was besieged for 872 days in the Second World War as Leningrad; about a million civilians died, mostly of starvation."
+		]
 	},
 	"leningrad": {
 		"kind": "region",
@@ -285,7 +350,12 @@
 			"nameIt": "Vyborg",
 			"population": 117201
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"The oblast around St Petersburg, which kept the Soviet name when the city changed back in 1991.",
+			"Staraya Ladoga in it was possibly the first capital of Rus, founded by Scandinavians in the 750s.",
+			"The Road of Life across frozen Lake Ladoga here was the only supply route into the besieged city."
+		]
 	},
 	"sverdlovsk": {
 		"kind": "region",
@@ -311,7 +381,12 @@
 			"name": "Gora Konzhakovskiy Kamen",
 			"elevation": 1569
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Named for Yakov Sverdlov, a Bolshevik organiser; the city reverted to Yekaterinburg in 1991 but the oblast did not.",
+			"Yekaterinburg is where the last tsar and his family were shot in 1918, and a cathedral now stands on the site.",
+			"The Urals here are the traditional boundary between Europe and Asia, marked by an obelisk on the road out of the city."
+		]
 	},
 	"perm": {
 		"kind": "region",
@@ -331,7 +406,12 @@
 			"nameIt": "Perm'",
 			"population": 997000
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"From a Finno-Ugric phrase, probably perä maa, \"the far land\", which the Russians took as the region's name.",
+			"The Permian geological period is named after it — the last period before the dinosaurs, defined from rocks here in 1841.",
+			"Kungur ice cave in the region has grottoes that stay frozen year-round."
+		]
 	},
 	"kirov": {
 		"kind": "region",
@@ -355,7 +435,12 @@
 			"nameIt": "Kirov",
 			"population": 457437
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Named for Sergei Kirov, the party boss whose 1934 assassination Stalin used as the pretext for the Great Purge.",
+			"The city was Vyatka before that, after its river, and there is a long-running campaign to change it back.",
+			"Dymkovo toys, brightly painted clay figures made here since the 1400s, are a Russian folk-art standard."
+		]
 	},
 	"kostroma": {
 		"kind": "region",
@@ -375,7 +460,12 @@
 			"nameIt": "Kostroma",
 			"population": 277656
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Named for the river, itself possibly from a Slavic figure of the same name burned in effigy at midsummer.",
+			"The Romanov dynasty began here: the Ipatiev monastery is where Mikhail Romanov was offered the throne in 1613.",
+			"It is part of the Golden Ring of old Russian towns, and its centre was rebuilt on a fan-shaped plan after a fire."
+		]
 	},
 	"tomsk": {
 		"kind": "region",
@@ -396,7 +486,12 @@
 			"nameIt": "Tomsk",
 			"population": 535479
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"Named for the Tom river, from a Ket or Turkic word for a river.",
+			"The first university in Siberia opened here in 1888, and it is still the most student-dense city in Russia.",
+			"Its wooden lace architecture — carved window surrounds on timber houses — is the best preserved in the country."
+		]
 	},
 	"novgorod": {
 		"kind": "region",
@@ -415,7 +510,12 @@
 			"nameIt": "Velikij Novgorod",
 			"population": 218717
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"\"New town\" — and it is one of the oldest in Russia, first mentioned in 859.",
+			"Veliky Novgorod was a merchant republic for three centuries, with an assembly that hired and fired its princes, until Moscow crushed it in 1478.",
+			"Birchbark letters dug up here, over a thousand of them, show that ordinary townspeople — including women and children — could read and write."
+		]
 	},
 	"kamchatka": {
 		"kind": "region",
@@ -435,7 +535,12 @@
 			"name": "Klyuchevskaya Sopka",
 			"elevation": 4750
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"Probably from a river name, or from the Itelmen word for a local people.",
+			"It has about 300 volcanoes, 29 of them active, and they are a UNESCO site.",
+			"Closed to outsiders, even Soviet citizens, until 1990, and its Valley of the Geysers was only found in 1941."
+		]
 	},
 	"yaroslavl": {
 		"kind": "region",
@@ -456,7 +561,12 @@
 			"nameIt": "Jaroslavl'",
 			"population": 606730
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Named for Yaroslav the Wise, who founded it around 1010 — legend says on the spot where he killed a bear with an axe, which is on the city's arms.",
+			"Its centre is a UNESCO site, laid out on a radial plan by Catherine the Great.",
+			"Russia's first professional theatre opened here in 1750."
+		]
 	},
 	"irkutsk": {
 		"kind": "region",
@@ -480,7 +590,12 @@
 			"name": "Gora Korolenko",
 			"elevation": 1647
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"Named for the Irkut river, from a Buryat word.",
+			"Lake Baikal is here: the deepest lake in the world at 1,642 m, holding about a fifth of all unfrozen fresh water on earth.",
+			"Exiled Decembrist officers settled in the city after 1825 and turned a frontier town into \"the Paris of Siberia\"."
+		]
 	},
 	"tyumen": {
 		"kind": "region",
@@ -500,7 +615,12 @@
 			"nameIt": "Tjumen'",
 			"population": 519119
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Probably from a Turkic phrase meaning \"ten thousand\", the size of a Tatar military unit.",
+			"The first Russian town in Siberia, founded in 1586 on the site of a Tatar khanate capital.",
+			"The oil and gas of the West Siberian basin is administered from here, which makes it one of Russia's richest regions."
+		]
 	},
 	"pskov": {
 		"kind": "region",
@@ -519,7 +639,12 @@
 			"nameIt": "Pskov",
 			"population": 201990
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"From the river Pskova, probably from a Baltic or Finnic root meaning \"pitch\" or \"resin\".",
+			"Another medieval merchant republic, with its own law code, absorbed by Moscow in 1510.",
+			"Pushkin is buried at Svyatogorsky monastery here, near the estate where he was exiled and wrote much of Eugene Onegin."
+		]
 	},
 	"tver": {
 		"kind": "region",
@@ -541,7 +666,12 @@
 			"nameIt": "Tver'",
 			"population": 400212
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"From a Finnic river name, Tikhvera; it was Kalinin in Soviet times and changed back in 1990.",
+			"Tver was Moscow's main rival for leadership of the Russian lands in the 1300s and lost.",
+			"Afanasy Nikitin, a merchant from here, reached India in the 1460s — thirty years before Vasco da Gama — and wrote it up."
+		]
 	},
 	"udmurt": {
 		"kind": "region",
@@ -560,7 +690,12 @@
 			"nameIt": "Iževsk",
 			"population": 631038
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Named for the Udmurt people; the name may combine a word for meadow with murt, \"man\".",
+			"Izhevsk in it is where Kalashnikov designed and built the AK-47, and the factory still makes them.",
+			"Udmurt is a Finno-Ugric language, and the region has one of the highest shares of red-haired people in the world."
+		]
 	},
 	"ivanovo": {
 		"kind": "region",
@@ -579,7 +714,12 @@
 			"nameIt": "Ivanovo",
 			"population": 420839
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"From the personal name Ivan — the town grew from a village called Ivanovo.",
+			"It was the centre of Russian textiles and is still called the city of brides, because the mills employed mostly women.",
+			"The first workers' soviet in Russian history was formed here in 1905, two years before the better-known ones."
+		]
 	},
 	"mariy-el": {
 		"kind": "region",
@@ -598,7 +738,12 @@
 			"nameIt": "Joškar-Ola",
 			"population": 324406
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"\"Mari land\" — el means land in Mari, so the name is the people plus their country.",
+			"The Mari kept their own pagan religion later than almost anyone in Europe, and sacred groves are still used for ceremonies.",
+			"Mari is Finno-Ugric, and the republic is one of the most forested in European Russia."
+		]
 	},
 	"nizhegorod": {
 		"kind": "region",
@@ -621,7 +766,12 @@
 			"nameIt": "Nižnij Novgorod",
 			"population": 1278000
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"From Nizhny Novgorod, \"the lower new town\" — lower than Novgorod, and downstream.",
+			"It stands where the Oka meets the Volga, and its trade fair was the largest in the Russian Empire.",
+			"Closed to foreigners in Soviet times, which is why Sakharov was exiled here; it was called Gorky then."
+		]
 	},
 	"omsk": {
 		"kind": "region",
@@ -639,7 +789,12 @@
 			"nameIt": "Omsk",
 			"population": 1135000
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"Named for the Om river, from a Baraba Tatar word meaning \"quiet\".",
+			"It was the capital of White Russia under Admiral Kolchak in 1918–19, and the imperial gold reserve was held here.",
+			"Dostoevsky served four years at hard labour in its prison, which became The House of the Dead."
+		]
 	},
 	"vladimir": {
 		"kind": "region",
@@ -660,7 +815,12 @@
 			"nameIt": "Vladimir",
 			"population": 318648
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Named for Vladimir Monomakh or Vladimir the Great — the name itself means \"ruler of the world\" or \"famous for power\".",
+			"It was the capital of Rus before Moscow, and its white stone churches are a UNESCO site.",
+			"The Vladimirka road east from here was the route convicts walked to Siberia, and the name became a byword for exile."
+		]
 	},
 	"moskovskaya": {
 		"kind": "region",
@@ -683,7 +843,12 @@
 			"nameIt": "Noginsk",
 			"population": 229731
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"The oblast around Moscow, taking the city's name; the city itself is a separate region on this map.",
+			"Sergiev Posad in it holds the Trinity Lavra, the spiritual centre of the Russian Orthodox Church.",
+			"Star City here trained every Soviet and Russian cosmonaut, and still trains those who fly to the space station."
+		]
 	},
 	"kurgan": {
 		"kind": "region",
@@ -701,7 +866,12 @@
 			"nameIt": "Kurgan",
 			"population": 343129
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Russian for a burial mound — the Scythian and later kurgans scattered across its steppe.",
+			"Gavriil Ilizarov developed his bone-lengthening frame here in the 1950s, and patients came from around the world to a provincial Siberian town.",
+			"It is one of the main grain-growing regions of the trans-Ural steppe."
+		]
 	},
 	"chuvash": {
 		"kind": "region",
@@ -721,7 +891,12 @@
 			"nameIt": "Čeboksary",
 			"population": 446781
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Named for the Chuvash, whose language is the only surviving member of the Oghur branch of Turkic — quite unlike Tatar or Turkish.",
+			"They are probably descended from the Volga Bulgars, whose other branch ended up in the Balkans as Bulgarians.",
+			"It is the most densely populated republic in the Volga region and grows most of Russia's hops."
+		]
 	},
 	"moskva": {
 		"kind": "region",
@@ -742,7 +917,12 @@
 			"name": "Lenina",
 			"elevation": 150
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"The city itself, named for the river; the river's name is probably Finno-Ugric or Baltic, perhaps meaning wet or marshy.",
+			"It has been the capital since 1480, except for the two centuries when St Petersburg was.",
+			"Its metro stations were built as \"palaces for the people\", with chandeliers and mosaics, and some are 84 m underground."
+		]
 	},
 	"tatarstan": {
 		"kind": "region",
@@ -765,7 +945,12 @@
 			"nameIt": "Kazan’",
 			"population": 1115000
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Named for the Tatars, whose name the Mongols' European enemies confused with Tartarus, the classical hell — which is why old maps say Tartary.",
+			"Kazan, its capital, was the seat of a khanate until Ivan the Terrible took it in 1552; its kremlin is a UNESCO site.",
+			"About half the population is Muslim Tatar and half Orthodox Russian, and both languages are official."
+		]
 	},
 	"novosibirsk": {
 		"kind": "region",
@@ -784,7 +969,12 @@
 			"nameIt": "Novosibirsk",
 			"population": 1389000
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"\"New Siberian town\" — founded in 1893 where the Trans-Siberian Railway crossed the Ob.",
+			"It reached a million people faster than any city in history at the time, in under seventy years.",
+			"Akademgorodok outside it was built in 1957 as a science city in the forest, and still holds dozens of research institutes."
+		]
 	},
 	"kaliningrad": {
 		"kind": "region",
@@ -797,7 +987,12 @@
 			"nameIt": "Kaliningrad",
 			"population": 434954
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Named for Mikhail Kalinin, a Soviet figurehead — it was Königsberg, \"king's mountain\", founded by the Teutonic Knights in 1255.",
+			"An exclave: it borders Poland and Lithuania and has no land connection to the rest of Russia.",
+			"Kant was born, taught and died here and never left the city; his tomb is on the cathedral wall."
+		]
 	},
 	"smolensk": {
 		"kind": "region",
@@ -817,7 +1012,12 @@
 			"nameIt": "Smolensk",
 			"population": 320991
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Probably from smola, \"pitch\" or \"tar\", which was made here for caulking boats on the Dnieper route.",
+			"It has been the western gate to Moscow for a thousand years, and Napoleon and Hitler both fought major battles for it.",
+			"Its city wall of 1602, 6.5 km with 38 towers, was called the necklace of Russia."
+		]
 	},
 	"khabarovsk": {
 		"kind": "region",
@@ -842,7 +1042,12 @@
 			"name": "Gora Golets-Oblachnyy",
 			"elevation": 2482
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"Named for Yerofey Khabarov, a seventeenth-century explorer whose treatment of the Amur peoples was brutal enough that Moscow recalled him.",
+			"The city sits on the Amur, directly across from China, and the river freezes solid enough to drive on.",
+			"The region is the size of Germany and Poland together, with 1.3 million people."
+		]
 	},
 	"kemerovo": {
 		"kind": "region",
@@ -863,7 +1068,12 @@
 			"nameIt": "Novokuzneck",
 			"population": 539616
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"From a family name or from kemer, a Turkic word for a riverbank.",
+			"The Kuzbass coalfield here produces most of Russia's coal.",
+			"Tomskaya Pisanitsa in it has rock carvings up to 4,000 years old on cliffs above the Tom."
+		]
 	},
 	"mordovia": {
 		"kind": "region",
@@ -883,7 +1093,12 @@
 			"nameIt": "Saransk",
 			"population": 303394
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Named for the Mordvins, two Finno-Ugric peoples — the Erzya and the Moksha — whose languages are not mutually intelligible.",
+			"The republic hosted World Cup matches in 2018 in a stadium built for a city of 300,000.",
+			"It has long held a large share of Russia's prison camps, a legacy of the Gulag-era Dubravlag system."
+		]
 	},
 	"ryazan": {
 		"kind": "region",
@@ -906,7 +1121,12 @@
 			"nameIt": "Rjazan'",
 			"population": 520173
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Possibly from a word for a cut or a slope, or from the Erzya people.",
+			"Old Ryazan was destroyed by the Mongols in 1237 and never rebuilt; the modern city is a different town that took the name.",
+			"Yesenin, one of Russia's best-loved poets, was born in a village here."
+		]
 	},
 	"kaluga": {
 		"kind": "region",
@@ -927,7 +1147,12 @@
 			"nameIt": "Kaluga",
 			"population": 338978
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Probably from a word for a bog or a bend in the river.",
+			"Tsiolkovsky, the schoolteacher who worked out the mathematics of spaceflight in the 1890s, lived and taught here.",
+			"The 1480 stand on the Ugra river in this region ended Mongol overlordship of Russia without a battle being fought."
+		]
 	},
 	"chelyabinsk": {
 		"kind": "region",
@@ -946,7 +1171,12 @@
 			"nameIt": "Čeljabinsk",
 			"population": 1091000
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"From a Bashkir word, possibly selebe, a hollow or pit.",
+			"A meteor exploded over the city in 2013 with the force of 500 kilotons, injuring 1,500 people, mostly from flying glass.",
+			"Mayak nearby suffered a nuclear accident in 1957 that was kept secret for thirty years and was among the worst ever."
+		]
 	},
 	"bashkortostan": {
 		"kind": "region",
@@ -971,7 +1201,12 @@
 			"name": "Gora Yamantau",
 			"elevation": 1638
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"\"Land of the Bashkirs\" — the name may mean \"head wolf\" or \"chief tribe\" in Turkic.",
+			"It produces almost all of Russia's honey, including wild honey still cut from hollow trees by climbers using ropes.",
+			"Shulgan-Tash cave here has painted horses and mammoths about 16,000 years old, the only Palaeolithic cave art in eastern Europe."
+		]
 	},
 	"tula": {
 		"kind": "region",
@@ -991,7 +1226,12 @@
 			"nameIt": "Tula",
 			"population": 489486
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Possibly from a word for a hidden or sheltered place.",
+			"It has made Russian weapons since 1712 and its samovars since the 1770s — \"taking a samovar to Tula\" is the Russian coals to Newcastle.",
+			"Tolstoy's estate Yasnaya Polyana is here, where he wrote War and Peace and is buried under a mound with no headstone."
+		]
 	},
 	"chita": {
 		"kind": "region",
@@ -1014,7 +1254,12 @@
 			"name": "Pik BAM",
 			"elevation": 3072
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"The map's older name for Zabaykalsky Krai — \"beyond Baikal\"; Chita is its capital, from an Evenki word.",
+			"The exiled Decembrists were held here after 1826, and their wives followed them into Siberia.",
+			"It borders both Mongolia and China, and the Trans-Siberian and the old Chinese Eastern Railway split nearby."
+		]
 	},
 	"ulyanovsk": {
 		"kind": "region",
@@ -1035,7 +1280,12 @@
 			"nameIt": "Ul'janovsk",
 			"population": 640680
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Named for Lenin, whose real surname was Ulyanov and who was born here when it was Simbirsk.",
+			"Kerensky, the head of the Provisional Government Lenin overthrew, was born in the same town, and his father taught Lenin.",
+			"It sits on the Volga, and its bridge is among the longest in Europe at nearly 6 km."
+		]
 	},
 	"buryat": {
 		"kind": "region",
@@ -1057,7 +1307,12 @@
 			"name": "Gora Munku-Sardyk",
 			"elevation": 3491
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Named for the Buryats, the largest indigenous people of Siberia, who are Mongolian in language and traditionally Buddhist.",
+			"Ivolginsky datsan here is the centre of Russian Buddhism, and holds the body of a lama who died in 1927 and shows little decay.",
+			"The republic runs along the eastern shore of Lake Baikal."
+		]
 	},
 	"khakass": {
 		"kind": "region",
@@ -1076,7 +1331,12 @@
 			"nameIt": "Černogorsk",
 			"population": 71582
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Named for the Khakas people; the name was applied by Soviet ethnographers from a Chinese term for an earlier Yenisei Kyrgyz state.",
+			"Its steppe is covered in standing stones and kurgans from the Tagar culture, some 3,000 years old.",
+			"The Sayano-Shushenskaya dam here is Russia's largest power station; an accident in 2009 killed 75 people."
+		]
 	},
 	"samara": {
 		"kind": "region",
@@ -1095,7 +1355,12 @@
 			"nameIt": "Samara",
 			"population": 1137000
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"From the Samara river, possibly from a Turkic or Iranian word for steppe river.",
+			"It was Kuybyshev in Soviet times and was the reserve capital in 1941: a bunker was dug for Stalin 37 m down, and he never used it.",
+			"The Zhiguli hills force the Volga into a great loop here, and Soviet rockets including Gagarin's were built in the city."
+		]
 	},
 	"penza": {
 		"kind": "region",
@@ -1115,7 +1380,12 @@
 			"nameIt": "Penza",
 			"population": 512602
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"From the river, probably a Finno-Ugric name.",
+			"Meyerhold, the theatre director shot in 1940, was born here, and his house is a museum.",
+			"It sits on the forest-steppe border, and its black earth is some of the most fertile in Russia."
+		]
 	},
 	"amur": {
 		"kind": "region",
@@ -1134,7 +1404,12 @@
 			"nameIt": "Blagoveščensk",
 			"population": 221296
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"Named for the river; the name probably comes from a Tungusic word for water, or from Mongolian amar, meaning rest.",
+			"The Vostochny Cosmodrome here is Russia's new spaceport, built to reduce reliance on Baikonur in Kazakhstan.",
+			"Its soy fields produce a large share of Russia's crop, and the river is the border with China for 1,700 km."
+		]
 	},
 	"bryansk": {
 		"kind": "region",
@@ -1153,7 +1428,12 @@
 			"nameIt": "Brjansk",
 			"population": 427236
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"From debryansk, \"place of thickets\" — debri means dense forest.",
+			"Its forests sheltered the largest Soviet partisan movement of the war, tens of thousands of fighters behind German lines.",
+			"It was the most heavily contaminated Russian region after Chernobyl, which is over the border in Ukraine."
+		]
 	},
 	"orel": {
 		"kind": "region",
@@ -1173,7 +1453,12 @@
 			"nameIt": "Orël",
 			"population": 334552
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Russian for \"eagle\" — legend says one flew up when the founders felled a tree on the site in 1566.",
+			"Turgenev was born here and set A Sportsman's Sketches in its countryside.",
+			"The battle of Kursk in 1943 was fought partly in this region, in the largest tank engagement in history."
+		]
 	},
 	"lipetsk": {
 		"kind": "region",
@@ -1194,7 +1479,12 @@
 			"nameIt": "Lipeck",
 			"population": 515655
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"From lipa, the lime tree, which grew along its river.",
+			"Peter the Great built ironworks here to arm his new navy, and the town grew around them.",
+			"It has one of the largest steel plants in Russia and one of the country's oldest spa waters."
+		]
 	},
 	"tambov": {
 		"kind": "region",
@@ -1214,7 +1504,12 @@
 			"nameIt": "Tambov",
 			"population": 301482
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"From a Moksha word, probably tombakov, \"abyss\" or \"deep place\".",
+			"The Tambov rebellion of 1920–21, a peasant uprising against grain requisitioning, was crushed with poison gas and hostage-taking.",
+			"\"A Tambov wolf is your comrade\" is a Russian phrase for refusing unwanted familiarity."
+		]
 	},
 	"altay": {
 		"kind": "region",
@@ -1232,7 +1527,12 @@
 			"nameIt": "Barnaul",
 			"population": 599579
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"From a Mongolian or Turkic word, probably altan, \"golden\" — the golden mountains.",
+			"This is the krai, the lowland farming region; the mountainous republic next to it is separate.",
+			"It is one of Russia's main grain and buckwheat regions."
+		]
 	},
 	"orenburg": {
 		"kind": "region",
@@ -1252,7 +1552,12 @@
 			"nameIt": "Orenburg",
 			"population": 550204
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"\"Fortress on the Or\" — though the town was moved and now sits on the Ural, not the Or.",
+			"Its knitted goat-down shawls are so fine that a full-size one passes through a wedding ring.",
+			"It was the gateway to Central Asia for the Russian Empire, and the first Soviet space launches were tracked from here."
+		]
 	},
 	"tuva": {
 		"kind": "region",
@@ -1272,7 +1577,12 @@
 			"nameIt": "Kyzyl",
 			"population": 108240
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Named for the Tuvans, a Turkic people; the republic was an independent state from 1921 to 1944.",
+			"Tuvan throat singing, khoomei, produces two or three notes at once and is a UNESCO heritage item.",
+			"A monument in Kyzyl marks what Tuvans claim as the geographic centre of Asia."
+		]
 	},
 	"kursk": {
 		"kind": "region",
@@ -1292,7 +1602,12 @@
 			"nameIt": "Kursk",
 			"population": 409431
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"From the river Kur, itself probably from a word for a bird or a spring.",
+			"The 1943 battle here was the largest tank battle ever fought and ended German offensive capacity in the east.",
+			"The Kursk Magnetic Anomaly beneath it is the largest iron ore deposit in the world, and it deflects compass needles."
+		]
 	},
 	"saratov": {
 		"kind": "region",
@@ -1314,7 +1629,12 @@
 			"nameIt": "Saratov",
 			"population": 843000
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Probably from Turkic sary tau, \"yellow mountain\", for the hills above the Volga.",
+			"Gagarin landed in a field in this region in 1961 and was found by a farmer and her granddaughter, who thought he was an alien.",
+			"Chernyshevsky, whose novel What Is to Be Done? shaped a generation of revolutionaries, was born here."
+		]
 	},
 	"gorno-altay": {
 		"kind": "region",
@@ -1337,7 +1657,12 @@
 			"name": "Belukha",
 			"elevation": 4506
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"\"Mountain Altai\" — the republic, as against the lowland krai of the same name.",
+			"The Denisovans, a human species known mainly from DNA, were identified from a finger bone found in Denisova cave here.",
+			"Its Golden Mountains are a UNESCO site, and the Altai is where four countries and several language families meet."
+		]
 	},
 	"voronezh": {
 		"kind": "region",
@@ -1359,7 +1684,12 @@
 			"nameIt": "Voronež",
 			"population": 844000
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Of uncertain origin — possibly from a personal name or from voron, a raven.",
+			"Peter the Great built Russia's first navy here in 1695–96, on a river far from any sea, and sailed it down to the Don.",
+			"Its black earth is among the most fertile soil on earth; a cube of it was displayed at the 1900 Paris Exposition as a standard."
+		]
 	},
 	"belgorod": {
 		"kind": "region",
@@ -1376,7 +1706,12 @@
 			"nameIt": "Belgorod",
 			"population": 345289
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"\"White town\" — bely white, gorod town, for the chalk hills it stands on.",
+			"Those chalk cliffs hold cave monasteries cut by monks, some still in use.",
+			"It was the first place to fire a victory salute in the war, in 1943, starting a Soviet tradition."
+		]
 	},
 	"volgograd": {
 		"kind": "region",
@@ -1396,7 +1731,12 @@
 			"nameIt": "Volgograd",
 			"population": 984000
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"\"Volga town\" — it was Tsaritsyn, then Stalingrad, then renamed in 1961 during de-Stalinisation.",
+			"The battle here in 1942–43 was the bloodiest in history, with perhaps two million casualties, and turned the war.",
+			"The Motherland Calls statue on Mamayev Kurgan was the tallest in the world when built, at 85 m with the sword."
+		]
 	},
 	"sakhalin": {
 		"kind": "region",
@@ -1416,7 +1756,12 @@
 			"name": "Vulkan Alaid",
 			"elevation": 2339
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"From a Manchu name for the Amur, sahaliyan ula, \"black river\", which mapmakers accidentally attached to the island.",
+			"Japan held the southern half from 1905 to 1945, and the Kuril Islands are still disputed between the two countries.",
+			"Chekhov travelled here in 1890 to survey the penal colony and wrote a book that shamed the government into reform."
+		]
 	},
 	"yevrey": {
 		"kind": "region",
@@ -1433,7 +1778,12 @@
 			"nameIt": "Birobidžan",
 			"population": 76146
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"The Jewish Autonomous Oblast — yevrey means Jew; it was created in 1934 as a Soviet Jewish homeland in the Far East.",
+			"The plan largely failed: Jews never exceeded about a third of the population and are now well under 1%.",
+			"Yiddish is still co-official, and the street signs in Birobidzhan are bilingual."
+		]
 	},
 	"rostov": {
 		"kind": "region",
@@ -1453,7 +1803,12 @@
 			"nameIt": "Rostov sul Don",
 			"population": 1052000
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Rostov-on-Don, named to distinguish it from the older Rostov Veliky near Moscow; the name is from a personal name, Rost.",
+			"It is the capital of the Don Cossacks, whose self-governing host held the steppe frontier for the tsars.",
+			"Sholokhov's And Quiet Flows the Don, which won the Nobel Prize, is set in its villages."
+		]
 	},
 	"astrakhan": {
 		"kind": "region",
@@ -1470,7 +1825,12 @@
 			"nameIt": "Astrachan'",
 			"population": 502533
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Probably from Hajji Tarkhan, a title meaning a privileged man who had made the pilgrimage.",
+			"It sits on the Volga delta, the largest in Europe, where the river fans into 500 channels before the Caspian.",
+			"Most of the world's beluga caviar came from here before the sturgeon collapsed; it is now farmed."
+		]
 	},
 	"kalmyk": {
 		"kind": "region",
@@ -1490,7 +1850,12 @@
 			"nameIt": "Ėlista",
 			"population": 106971
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Named for the Kalmyks, who migrated from Dzungaria in the 1600s — the only Buddhist people in Europe.",
+			"Stalin deported the entire nation to Siberia in 1943; about half died before they were allowed back in 1957.",
+			"Elista, its capital, built a whole district for chess when a chess-obsessed president ran the republic in the 1990s."
+		]
 	},
 	"primorye": {
 		"kind": "region",
@@ -1506,7 +1871,12 @@
 			"nameIt": "Vladivostok",
 			"population": 587022
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"\"By the sea\" — primorsky, maritime, the standard Russian word for a coastal region.",
+			"Vladivostok, \"ruler of the east\", is the terminus of the Trans-Siberian, 9,289 km from Moscow.",
+			"The Amur tiger survives here, about 500 of them, the largest cat in the world."
+		]
 	},
 	"krasnodar": {
 		"kind": "region",
@@ -1525,7 +1895,12 @@
 			"nameIt": "Krasnodar",
 			"population": 649851
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"\"Gift of the reds\" — renamed in 1920 from Yekaterinodar, \"Catherine's gift\", for the land she gave the Cossacks.",
+			"Sochi in it hosted the 2014 Winter Olympics in a subtropical resort where palms grow.",
+			"It is Russia's main agricultural region, growing most of its rice, tea and wine."
+		]
 	},
 	"stavropol": {
 		"kind": "region",
@@ -1549,7 +1924,12 @@
 			"nameIt": "Stavropol'",
 			"population": 363064
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Greek for \"city of the cross\", from a cross found when the fortress was built in 1777.",
+			"Gorbachev was born and made his career here before Moscow.",
+			"Its mineral water spas — Kislovodsk, Pyatigorsk, Yessentuki — have drawn Russians since the 1800s, and Lermontov was killed in a duel at Pyatigorsk."
+		]
 	},
 	"adygey": {
 		"kind": "region",
@@ -1566,7 +1946,12 @@
 			"nameIt": "Majkop",
 			"population": 158451
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Named for the Adyghe, part of the Circassian peoples native to the north-west Caucasus.",
+			"Most Circassians were killed or expelled to the Ottoman Empire in the 1860s, and the diaspora today far outnumbers those at home.",
+			"Adyghe cheese from here is a protected name, and the republic is an enclave entirely inside Krasnodar Krai."
+		]
 	},
 	"karachay-cherkess": {
 		"kind": "region",
@@ -1589,7 +1974,12 @@
 			"name": "Dombai-Ulgen",
 			"elevation": 4038
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Two peoples in one name: the Karachay are Turkic, the Cherkess are Circassian, and they speak unrelated languages.",
+			"Mount Elbrus stands on its border at 5,642 m, the highest mountain in Europe.",
+			"The Arkhyz observatory here has the largest optical telescope in Russia, at 2,070 m."
+		]
 	},
 	"kabardin-balkar": {
 		"kind": "region",
@@ -1612,7 +2002,12 @@
 			"name": "Gora Elbrus",
 			"elevation": 5642
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Again two peoples: the Kabardians are Circassian, the Balkars Turkic, paired by Soviet administrative design.",
+			"The Balkars were deported wholesale in 1944 and returned in 1957, like the Kalmyks and Chechens.",
+			"Elbrus is shared with the neighbouring republic, and its glaciers feed the rivers of the whole north Caucasus."
+		]
 	},
 	"chechnya": {
 		"kind": "region",
@@ -1635,7 +2030,12 @@
 			"name": "Gora Tebulosmta",
 			"elevation": 4494
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"The Russians named it after a village, Chechen-Aul; the Chechens call themselves Nokhchi and their land Nokhchiyn.",
+			"They were deported en masse in 1944 and lost perhaps a quarter of their people; the return began in 1957.",
+			"Two wars in the 1990s and 2000s destroyed Grozny almost completely; it has since been rebuilt."
+		]
 	},
 	"north-ossetia": {
 		"kind": "region",
@@ -1654,7 +2054,12 @@
 			"nameIt": "Vladikavkaz",
 			"population": 364630
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"The Ossetians speak an Iranian language, descended from the Alans and ultimately the Scythians — the only such language in the Caucasus.",
+			"South Ossetia across the mountains broke from Georgia, which is why the \"north\" in the name matters.",
+			"The 2004 Beslan school siege here killed 334 people, 186 of them children."
+		]
 	},
 	"ingush": {
 		"kind": "region",
@@ -1673,7 +2078,12 @@
 			"nameIt": "Nazran'",
 			"population": 93357
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Named for the Ingush, who call themselves Ghalghai; the Russian name comes from the village of Angusht.",
+			"Their medieval stone tower villages in the mountains, built for defence and for the dead, are among the most striking structures in the Caucasus.",
+			"They were deported in 1944 alongside the Chechens, with whom they share a closely related language."
+		]
 	},
 	"dagestan": {
 		"kind": "region",
@@ -1695,6 +2105,11 @@
 			"name": "Bazar Dyuzi",
 			"elevation": 4466
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"\"Land of mountains\" — Turkic dag, mountain, plus Persian stan.",
+			"The most linguistically dense place in the world: over thirty languages from three unrelated families in one republic.",
+			"Derbent in it is one of the oldest continuously inhabited cities in Russia, with a Sasanian wall from the sixth century that is a UNESCO site."
+		]
 	}
 }
