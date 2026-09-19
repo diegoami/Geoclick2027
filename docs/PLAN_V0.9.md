@@ -145,7 +145,7 @@ stable.
 | ----- | ----------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | FT-39 | **merged**  | `98fd98a` | a map opens on Known; a tap leaves a name until tapped again; one rule over what was earned and what was chosen, and the tap always does the visible thing                           |
 | FT-40 | **merged**  | `35ba262` | steps 3 and 4 swap jobs; copy rewritten in three languages; the zoom detection moved into createMap after the tutorial stuck on step 2 because the step moved and the wiring did not |
-| FT-41 | **ready**   | —         | seven countries authored, 176 places, 531 sentences — three per place everywhere, so the rotation cycles rather than flips                                                           |
+| FT-41 | **merged**  | `dcb7582` | seven countries authored, 176 places, 531 sentences — three per place everywhere, so the rotation cycles rather than flips                                                           |
 | FT-42 | not started | —         | the card on a small screen: one line at a time, rotating                                                                                                                             |
 
 ## Out of scope
