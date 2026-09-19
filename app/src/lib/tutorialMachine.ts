@@ -59,47 +59,50 @@ export const STEPS: Step[] = [
 		id: 'choose-map',
 		numbered: true,
 		screens: ['home'],
-		advance: { kind: 'route', to: 'overview' },
+		// A map opens on its own screen now (FT-39), not on the Overview.
+		advance: { kind: 'route', to: 'explore' },
 		copy: 'tutorial.step1',
 		highlight: { home: { spot: 'home-map-card', dim: true } }
 	},
 	{
 		id: 'zoom-pan',
 		numbered: true,
-		screens: ['overview'],
+		screens: ['explore'],
 		advance: { kind: 'gesture' },
 		copy: 'tutorial.step2',
 		touchCopy: 'tutorial.step2.touch',
-		highlight: { overview: { rings: ['zoom-control'], dim: false } }
+		highlight: { explore: { rings: ['zoom-control'], dim: false } }
+	},
+	{
+		// The heart of it since FT-39: a tap puts a name on the map and
+		// leaves it there, so the player builds the set they want to study.
+		id: 'tap-names',
+		numbered: true,
+		screens: ['explore'],
+		advance: { kind: 'reveal' },
+		copy: 'tutorial.step3',
+		touchCopy: 'tutorial.step3.touch',
+		highlight: { explore: { dim: false } }
 	},
 	{
 		id: 'overview',
 		numbered: true,
-		screens: ['overview'],
-		advance: { kind: 'next' },
-		copy: 'tutorial.step3',
-		touchCopy: 'tutorial.step3.touch',
-		highlight: { overview: { spot: 'nav-overview', dim: true } }
-	},
-	{
-		id: 'explore',
-		numbered: true,
-		screens: ['overview', 'explore'],
-		advance: { kind: 'reveal' },
+		screens: ['explore', 'overview'],
+		advance: { kind: 'route', to: 'overview' },
 		copy: 'tutorial.step4',
 		touchCopy: 'tutorial.step4.touch',
 		highlight: {
-			overview: { spot: 'nav-explore', dim: true },
-			explore: { dim: false }
+			explore: { spot: 'nav-overview', dim: true },
+			overview: { dim: false }
 		}
 	},
 	{
 		id: 'open-quiz',
 		numbered: true,
-		screens: ['explore'],
+		screens: ['overview'],
 		advance: { kind: 'route', to: 'quiz' },
 		copy: 'tutorial.step5',
-		highlight: { explore: { spot: 'nav-quiz', dim: true } }
+		highlight: { overview: { spot: 'nav-quiz', dim: true } }
 	},
 	{
 		id: 'correct-drop',
@@ -161,8 +164,6 @@ export const STEPS: Step[] = [
 ];
 
 export const NUMBERED_STEPS = STEPS.filter((s) => s.numbered).length;
-const EXPLORE_STEP = STEPS.findIndex((s) => s.id === 'explore');
-const OVERVIEW_STEP = STEPS.findIndex((s) => s.id === 'overview');
 
 /** Actions the player has done at least once in this run. */
 export interface Done {
@@ -268,9 +269,6 @@ export function transition(
 		// The step's own target: move on.
 		if (step.advance.kind === 'route' && event.place === step.advance.to)
 			return { state: { ...moved, step: state.step + 1 }, effects: [] };
-		// Opening Explore during step 3 is where the tutorial goes next anyway.
-		if (state.step === OVERVIEW_STEP && event.place === 'explore')
-			return { state: { ...moved, step: EXPLORE_STEP }, effects: [] };
 		// Anywhere the step doesn't belong: pause until the player chooses.
 		if (!(step.screens as Place[]).includes(event.place))
 			return { state: { ...moved, status: 'paused' }, effects: [] };

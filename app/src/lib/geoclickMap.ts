@@ -10,6 +10,7 @@ import { isNativeShell } from './platform';
 import { overallExtent, type MapDefinition } from './mapDefinition';
 import { mapFitPadding } from './mapFit';
 import { TerrainLayer } from './terrainLayer';
+import { tutorialMapGesture } from './tutorial.svelte';
 import { ensurePmtilesProtocol, registerTilesArchive } from './pmtilesSource';
 
 export async function fetchMapDefAndStyle(
@@ -89,6 +90,31 @@ export function createMap(
 	};
 	map.on('style.load', applyColorIndex);
 	if (map.isStyleLoaded()) applyColorIndex();
+
+	// The tutorial's zoom-and-pan step (FT-11) waits for the player's own
+	// gesture, and a move counts once it ends. Which events carry the
+	// player's input differs: the +/- buttons pass it on every move event,
+	// but a wheel zoom only on MapLibre's own 'wheel' event (its moves come
+	// from an easing animation), so both are watched. A drag and a touch
+	// pinch or pan start with 'dragstart' / 'touchstart'. The map's opening
+	// fit has none of these.
+	//
+	// Here rather than in one view: the step moved from the Overview to the
+	// map's own screen in FT-40 and the wiring did not move with it, so the
+	// tutorial stuck on step 2 with nothing to say why. tutorialMapGesture()
+	// does nothing when no tutorial is running, so every view can report.
+	let playerMove = false;
+	const byPlayer = (e: { originalEvent?: unknown }) => {
+		if (e.originalEvent) playerMove = true;
+	};
+	map.on('wheel', byPlayer);
+	map.on('dragstart', byPlayer);
+	map.on('touchstart', byPlayer);
+	map.on('move', byPlayer);
+	map.on('moveend', () => {
+		if (playerMove) tutorialMapGesture();
+		playerMove = false;
+	});
 
 	// Sea, rivers and named terrain (FT-33). The layer is built here so every
 	// screen gets the same one, but WHEN it is shown is the view's business:

@@ -61,20 +61,24 @@ describe('TutorialOverlay', () => {
 		await render(TutorialOverlay);
 		dispatch({ type: 'start' });
 		dispatch({ type: 'next' });
-		dispatch({ type: 'route', place: 'overview' });
+		// A map opens on its own screen now (FT-39), not on the Overview.
+		dispatch({ type: 'route', place: 'explore' });
 		await expect.poll(counter).toBe('Step 2 of 11');
 		dispatch({ type: 'gesture' });
 		await expect.poll(counter).toBe('Step 3 of 11');
-		// An explanation step has Next, and Back.
+		// Step 3 waits for the player to tap a name onto the map, so there is
+		// no Next to press until they have.
 		const labels = [...dialog()!.querySelectorAll('button')].map((b) => b.textContent?.trim());
-		expect(labels).toEqual(['Back', 'Skip', 'Next']);
+		expect(labels).toEqual(['Back', 'Skip']);
+		dispatch({ type: 'reveal' });
+		await expect.poll(counter).toBe('Step 4 of 11');
 	});
 
 	it('Back returns to the previous step, which offers Next once done', async () => {
 		const screen = await render(TutorialOverlay);
 		dispatch({ type: 'start' });
 		dispatch({ type: 'next' });
-		dispatch({ type: 'route', place: 'overview' });
+		dispatch({ type: 'route', place: 'explore' });
 		dispatch({ type: 'gesture' });
 		await expect.poll(counter).toBe('Step 3 of 11');
 		await screen.getByRole('button', { name: 'Back' }).click();
