@@ -30,13 +30,15 @@ const route = (place: Place): TutorialEvent => ({ type: 'route', place });
 const atIntro = play([route('home'), { type: 'start' }]).state;
 
 describe('tutorial steps', () => {
-	it('has eleven numbered steps between the intro and the outro', () => {
-		expect(NUMBERED_STEPS).toBe(11);
+	it('has twelve numbered steps between the intro and the outro', () => {
+		// Twelve since FT-43 added the Terrain step. The counter the card
+		// shows is derived from NUMBERED_STEPS, so it follows on its own.
+		expect(NUMBERED_STEPS).toBe(12);
 		expect(STEPS[0].id).toBe('intro');
 		expect(STEPS.at(-1)!.id).toBe('outro');
 		expect(stepNumber(0)).toBeUndefined();
 		expect(stepNumber(1)).toBe(1);
-		expect(stepNumber(STEPS.length - 2)).toBe(11);
+		expect(stepNumber(STEPS.length - 2)).toBe(12);
 	});
 });
 
@@ -52,6 +54,7 @@ describe('tutorial machine', () => {
 		run(route('explore')); // opened Italy - Regions, which lands on Known
 		run({ type: 'gesture' });
 		run({ type: 'reveal' }); // tapped a region: its name is on the map
+		run({ type: 'terrain' }); // pressed Terrain, either direction
 		run(route('overview'));
 		run(route('quiz'));
 		run({ type: 'drop', correct: true });
@@ -64,6 +67,7 @@ describe('tutorial machine', () => {
 			'choose-map',
 			'zoom-pan',
 			'tap-names',
+			'terrain',
 			'overview',
 			'open-quiz',
 			'correct-drop',
@@ -128,6 +132,7 @@ describe('tutorial machine', () => {
 				route('explore'),
 				{ type: 'gesture' },
 				{ type: 'reveal' },
+				{ type: 'terrain' },
 				route('overview'),
 				route('quiz')
 			],
@@ -139,11 +144,16 @@ describe('tutorial machine', () => {
 		expect(STEPS[back.state.step].id).toBe('open-quiz');
 		expect(back.effects).toEqual([{ type: 'navigate', screen: 'overview' }]);
 
-		// Back twice more reaches the step that teaches tapping. The player
-		// has already tapped a name, so it offers Next rather than waiting.
+		// Back again reaches the step that teaches tapping - one more hop than
+		// before FT-43, because the Terrain step now sits between them. The
+		// player has already tapped a name, so it offers Next rather than
+		// waiting; so does Terrain, which they have already pressed.
 		const atOverviewStep = play([route('overview'), { type: 'back' }], back.state).state;
 		expect(STEPS[atOverviewStep.step].id).toBe('overview');
-		const backToTap = play([route('explore'), { type: 'back' }], atOverviewStep).state;
+		const backToTerrain = play([route('explore'), { type: 'back' }], atOverviewStep).state;
+		expect(STEPS[backToTerrain.step].id).toBe('terrain');
+		expect(showsNext(backToTerrain)).toBe(true);
+		const backToTap = play([{ type: 'back' }], backToTerrain).state;
 		expect(STEPS[backToTap.step].id).toBe('tap-names');
 		expect(showsNext(backToTap)).toBe(true);
 	});
@@ -160,6 +170,7 @@ describe('tutorial machine', () => {
 				route('explore'),
 				{ type: 'gesture' },
 				{ type: 'reveal' },
+				{ type: 'terrain' },
 				route('overview'),
 				route('quiz')
 			],

@@ -5,9 +5,11 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
-## Unreleased
+## v0.9.1 — 2026-09-19 — What the first look at v0.9.0 found
 
-**Three things the product owner asked for after trying v0.9.0.**
+**Three things the product owner asked for after trying v0.9.0**, one of
+them a fix for a mistake that release made. FT-43, the programme in
+[`docs/PLAN_V0.9.md`](docs/PLAN_V0.9.md).
 
 For players:
 
@@ -26,6 +28,46 @@ For players:
   its own language — so the map bar keeps its space no matter how many
   languages get added later. It works from the keyboard: arrow keys to move,
   Enter to choose, Escape to close.
+- **The tutorial explains Terrain**, in a new step of its own. It tells you
+  what the sea, rivers and mountains behind the map are, and that the
+  button switches them off and on. The tutorial is twelve steps now.
+
+Under the hood:
+
+- The Terrain preference now reads **three** states, not two: `'1'` on,
+  `'0'` off, and *absent* meaning never touched. Only the absent case takes
+  the new default, which is what lets it flip without overriding anyone who
+  turned Terrain off. A two-state flag cannot tell "off" from "unset".
+- The tour's default-speed floor moved from 1× to 0.75× in
+  `tourSpeed.ts`, rather than by regenerating 63 `tour.json` files — so the
+  pace stays the player's to override. The three-minute budget still
+  outranks the floor, and a test asserts no committed tour exceeds it at its
+  default, which is the check that matters when every tour is suddenly a
+  third longer.
+- `LanguageSwitcher.svelte` is a listbox, not a native `<select>`: a select
+  shows one string per option and this needs two, terse closed and readable
+  open. Full keyboard support, and the picker's own accessible name is now
+  translated (`lang.label`) — the three-pill version hardcoded it in English.
+- The tutorial machine gained a `terrain` advance, which follows the same
+  path as `gesture` and `reveal`; the card's counter is derived from the
+  step list, so it went from 11 to 12 on its own. The new step's copy key
+  is `tutorial.terrain` rather than a number, so inserting it did not mean
+  renumbering eight keys across three dictionaries.
+- **A bug the default flip introduced, and its fix.** With Terrain off by
+  default nothing asked for the layer until a player pressed the button,
+  long after the map had loaded. On by default, the view asks as it
+  mounts - which raced the style, and MapLibre threw "Style is not done
+  loading" while the layer silently never appeared. `TerrainLayer` now
+  waits for the style before adding its source. The local smoke test
+  caught it; it would have shipped as exactly the complaint the change
+  was meant to fix.
+- Android versionCode 90199.
+
+Not covered:
+
+- **FT-38, the Wikidata landmark pass**, is still deferred, as in v0.9.0.
+- **The name-facts are still English only**; the derived line above them
+  remains trilingual.
 
 ## v0.9.0 — 2026-09-19 — The map you build yourself
 

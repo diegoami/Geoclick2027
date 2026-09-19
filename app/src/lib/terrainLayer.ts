@@ -267,9 +267,38 @@ export class TerrainLayer {
 		}
 	}
 
+	/**
+	 * Resolves once the style will accept `addSource`.
+	 *
+	 * This did not use to matter: Terrain was off by default, so nothing
+	 * called `add()` until a player pressed the button, long after the map had
+	 * loaded. Since FT-43 it is on by default and the view asks for it as soon
+	 * as it mounts, which races the style - MapLibre throws "Style is not done
+	 * loading" and the layer silently never appears. That is the same
+	 * complaint the default flip was meant to fix, so it is worth getting
+	 * right rather than leaving to chance.
+	 */
+	private whenStyleReady(): Promise<void> {
+		if (this.map.isStyleLoaded()) return Promise.resolve();
+		return new Promise((resolve) => {
+			const check = () => {
+				if (!this.map.isStyleLoaded()) return;
+				this.map.off('styledata', check);
+				this.map.off('load', check);
+				resolve();
+			};
+			this.map.on('styledata', check);
+			// 'styledata' fires repeatedly while a style loads, but subscribe to
+			// 'load' too in case the last one slipped past between the check
+			// above and this line.
+			this.map.on('load', check);
+		});
+	}
+
 	private async add(): Promise<void> {
 		const url = new URL(asset(`/maps/${this.mapId}/terrain.pmtiles`), location.origin).href;
 		if (await isNativeShell()) await registerTilesArchive(url);
+		await this.whenStyleReady();
 		if (this.map.getSource(TERRAIN_SOURCE)) return;
 
 		this.map.addSource(TERRAIN_SOURCE, { type: 'vector', url: `pmtiles://${url}` });

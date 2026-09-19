@@ -97,6 +97,14 @@ export function tutorialExploreReveal(): void {
 	later({ type: 'reveal' }, 1000);
 }
 
+/** The player pressed the Terrain button. */
+export function tutorialTerrainToggled(): void {
+	// Longer than the others: the layer has to fetch and draw before the
+	// player can see what the button did, and the card should not move on
+	// before the thing it is describing has appeared.
+	later({ type: 'terrain' }, 1400);
+}
+
 /** The quiz scored a drop (steps 6 and 7). */
 export function tutorialDrop(correct: boolean): void {
 	later({ type: 'drop', correct }, 700);

@@ -128,6 +128,8 @@ export type TranslationKey =
 	| 'tutorial.step1'
 	| 'tutorial.step2'
 	| 'tutorial.step2.touch'
+	| 'tutorial.terrain'
+	| 'tutorial.terrain.touch'
 	| 'tutorial.step3'
 	| 'tutorial.step3.touch'
 	| 'tutorial.step4'
@@ -261,6 +263,10 @@ const en: Dictionary = {
 		'This is **Known**, the map you build. Click a region to put its name on the map — it stays there. Click it again to take it off, so you choose which names to study.',
 	'tutorial.step3.touch':
 		'This is **Known**, the map you build. Tap a region to put its name on the map — it stays there. Tap it again to take it off, so you choose which names to study.',
+	'tutorial.terrain':
+		'The sea, the rivers and the mountains behind the map are the **Terrain** layer — the Alps, the Apennines, the Adriatic. They are on so a region has something to sit against. Press **Terrain** to switch them off, and again to bring them back.',
+	'tutorial.terrain.touch':
+		'The sea, the rivers and the mountains behind the map are the **Terrain** layer — the Alps, the Apennines, the Adriatic. They are on so a region has something to sit against. Tap **Terrain** to switch them off, and again to bring them back.',
 	'tutorial.step4':
 		'Names you place right in the quiz appear here on their own, as strongly as you know them. New to a map? **Overview** shows every name at once — open it.',
 	'tutorial.step4.touch':
@@ -396,6 +402,10 @@ const de: Dictionary = {
 		'Das ist **Gewusst**, deine eigene Karte. Klicke auf eine Region, um ihren Namen daraufzusetzen — er bleibt dort stehen. Noch einmal klicken nimmt ihn wieder weg: So wählst du selbst, welche Namen du lernen willst.',
 	'tutorial.step3.touch':
 		'Das ist **Gewusst**, deine eigene Karte. Tippe auf eine Region, um ihren Namen daraufzusetzen — er bleibt dort stehen. Noch einmal tippen nimmt ihn wieder weg: So wählst du selbst, welche Namen du lernen willst.',
+	'tutorial.terrain':
+		'Das Meer, die Flüsse und die Berge hinter der Karte sind die Ebene **Gelände** — die Alpen, der Apennin, die Adria. Sie sind an, damit eine Region etwas hat, wogegen sie sich abhebt. Drücke **Gelände**, um sie auszuschalten, und noch einmal, um sie zurückzuholen.',
+	'tutorial.terrain.touch':
+		'Das Meer, die Flüsse und die Berge hinter der Karte sind die Ebene **Gelände** — die Alpen, der Apennin, die Adria. Sie sind an, damit eine Region etwas hat, wogegen sie sich abhebt. Tippe auf **Gelände**, um sie auszuschalten, und noch einmal, um sie zurückzuholen.',
 	'tutorial.step4':
 		'Namen, die du im Quiz richtig platzierst, erscheinen hier von selbst — so deutlich, wie du sie kennst. Neu auf einer Karte? Die **Übersicht** zeigt alle Namen auf einmal. Öffne sie.',
 	'tutorial.step4.touch':
@@ -531,6 +541,10 @@ const it: Dictionary = {
 		'Questa è **Conoscenza**, la mappa che costruisci tu. Clicca una regione per mettere il suo nome sulla mappa: resta lì. Cliccala di nuovo per toglierlo — scegli tu quali nomi studiare.',
 	'tutorial.step3.touch':
 		'Questa è **Conoscenza**, la mappa che costruisci tu. Tocca una regione per mettere il suo nome sulla mappa: resta lì. Toccala di nuovo per toglierlo — scegli tu quali nomi studiare.',
+	'tutorial.terrain':
+		"Il mare, i fiumi e le montagne dietro la mappa sono il livello **Rilievo** — le Alpi, gli Appennini, l'Adriatico. Sono attivi così una regione ha qualcosa su cui appoggiarsi. Premi **Rilievo** per spegnerli, e di nuovo per riaccenderli.",
+	'tutorial.terrain.touch':
+		"Il mare, i fiumi e le montagne dietro la mappa sono il livello **Rilievo** — le Alpi, gli Appennini, l'Adriatico. Sono attivi così una regione ha qualcosa su cui appoggiarsi. Tocca **Rilievo** per spegnerli, e di nuovo per riaccenderli.",
 	'tutorial.step4':
 		'I nomi che indovini nel quiz compaiono qui da soli, con la forza con cui li sai. Mappa nuova? La **Panoramica** mostra tutti i nomi insieme: aprila.',
 	'tutorial.step4.touch':

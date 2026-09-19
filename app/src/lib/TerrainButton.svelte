@@ -10,6 +10,7 @@
 	// preference and follows it.
 	import { t } from './i18n.svelte';
 	import { setTerrainShown, terrainShown } from './mapPrefs.svelte';
+	import { tutorialTerrainToggled } from './tutorial.svelte';
 
 	const shown = $derived(terrainShown());
 
@@ -18,6 +19,9 @@
 		// whatever map is open follows - no registry of live maps, which is
 		// what broke the first time (see pmtilesSource.ts).
 		setTerrainShown(!terrainShown());
+		// Either direction counts for the tutorial: the step is about the
+		// button doing something visible, not about ending up switched on.
+		tutorialTerrainToggled();
 	}
 </script>
 
@@ -26,6 +30,7 @@
 	class="terrain-btn"
 	class:terrain-btn--on={shown}
 	data-testid="terrain-toggle"
+	data-tutorial="terrain-toggle"
 	aria-pressed={shown}
 	onclick={toggle}
 >

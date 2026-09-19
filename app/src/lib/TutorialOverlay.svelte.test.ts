@@ -48,7 +48,7 @@ describe('TutorialOverlay', () => {
 			.toBeVisible();
 
 		await screen.getByRole('button', { name: 'Start' }).click();
-		await expect.poll(counter).toBe('Step 1 of 11');
+		await expect.poll(counter).toBe('Step 1 of 12');
 		expect(cardText()).toBe("Let's start with a map. Open Regions, under Italy.");
 		expect(dialog()!.querySelector('strong')?.textContent).toBe('Regions');
 		await expect.poll(spotlight).not.toBeNull();
@@ -63,15 +63,15 @@ describe('TutorialOverlay', () => {
 		dispatch({ type: 'next' });
 		// A map opens on its own screen now (FT-39), not on the Overview.
 		dispatch({ type: 'route', place: 'explore' });
-		await expect.poll(counter).toBe('Step 2 of 11');
+		await expect.poll(counter).toBe('Step 2 of 12');
 		dispatch({ type: 'gesture' });
-		await expect.poll(counter).toBe('Step 3 of 11');
+		await expect.poll(counter).toBe('Step 3 of 12');
 		// Step 3 waits for the player to tap a name onto the map, so there is
 		// no Next to press until they have.
 		const labels = [...dialog()!.querySelectorAll('button')].map((b) => b.textContent?.trim());
 		expect(labels).toEqual(['Back', 'Skip']);
 		dispatch({ type: 'reveal' });
-		await expect.poll(counter).toBe('Step 4 of 11');
+		await expect.poll(counter).toBe('Step 4 of 12');
 	});
 
 	it('Back returns to the previous step, which offers Next once done', async () => {
@@ -80,9 +80,9 @@ describe('TutorialOverlay', () => {
 		dispatch({ type: 'next' });
 		dispatch({ type: 'route', place: 'explore' });
 		dispatch({ type: 'gesture' });
-		await expect.poll(counter).toBe('Step 3 of 11');
+		await expect.poll(counter).toBe('Step 3 of 12');
 		await screen.getByRole('button', { name: 'Back' }).click();
-		await expect.poll(counter).toBe('Step 2 of 11');
+		await expect.poll(counter).toBe('Step 2 of 12');
 		await expect.element(screen.getByRole('button', { name: 'Next' })).toBeVisible();
 	});
 
@@ -90,7 +90,7 @@ describe('TutorialOverlay', () => {
 		await render(TutorialOverlay);
 		dispatch({ type: 'start' });
 		dispatch({ type: 'next' });
-		await expect.poll(counter).toBe('Step 1 of 11');
+		await expect.poll(counter).toBe('Step 1 of 12');
 		await expect.poll(() => dialog()?.style.visibility).toBe('visible');
 		expect(spotlight()).toBeNull();
 
@@ -109,7 +109,7 @@ describe('TutorialOverlay', () => {
 		// Back on the step's own screen first, so Resume needn't navigate.
 		dispatch({ type: 'route', place: 'home' });
 		await screen.getByRole('button', { name: 'Resume' }).click();
-		await expect.poll(counter).toBe('Step 1 of 11');
+		await expect.poll(counter).toBe('Step 1 of 12');
 	});
 
 	it('Skip and Esc end the tutorial and switch the sandbox off', async () => {

@@ -18,6 +18,7 @@ export type Advance =
 	| { kind: 'route'; to: Screen }
 	| { kind: 'gesture' } // the player zoomed or panned the map
 	| { kind: 'reveal' } // a region's name shown in Explore
+	| { kind: 'terrain' } // the player pressed the Terrain button
 	| { kind: 'drop'; correct: boolean }
 	| { kind: 'finish' }; // the outro
 
@@ -83,6 +84,25 @@ export const STEPS: Step[] = [
 		copy: 'tutorial.step3',
 		touchCopy: 'tutorial.step3.touch',
 		highlight: { explore: { dim: false } }
+	},
+	{
+		// Terrain is ON by default since FT-43, so this step is not "switch
+		// this on" but "this is what you are looking at, and here is how to
+		// turn it off". The layer shipped off and invisible; explaining it is
+		// the other half of fixing that.
+		//
+		// The copy key is 'tutorial.terrain', not a number: inserting a step
+		// here would otherwise mean renumbering eight keys across three
+		// dictionaries for no user-visible gain. The counter on the card is
+		// computed from POSITION (stepNumber), so the numbers a player sees
+		// stay correct - the key names are just historical ids.
+		id: 'terrain',
+		numbered: true,
+		screens: ['explore'],
+		advance: { kind: 'terrain' },
+		copy: 'tutorial.terrain',
+		touchCopy: 'tutorial.terrain.touch',
+		highlight: { explore: { spot: 'terrain-toggle', dim: true } }
 	},
 	{
 		id: 'overview',
@@ -169,6 +189,7 @@ export const NUMBERED_STEPS = STEPS.filter((s) => s.numbered).length;
 export interface Done {
 	gesture: boolean;
 	reveal: boolean;
+	terrain: boolean;
 	correctDrop: boolean;
 	wrongDrop: boolean;
 }
@@ -190,12 +211,19 @@ export type TutorialEvent =
 	| { type: 'route'; place: Place }
 	| { type: 'gesture' }
 	| { type: 'reveal' }
+	| { type: 'terrain' }
 	| { type: 'drop'; correct: boolean };
 
 export type Effect =
 	{ type: 'navigate'; screen: Screen } | { type: 'startSandbox' } | { type: 'endSandbox' };
 
-const noneDone: Done = { gesture: false, reveal: false, correctDrop: false, wrongDrop: false };
+const noneDone: Done = {
+	gesture: false,
+	reveal: false,
+	terrain: false,
+	correctDrop: false,
+	wrongDrop: false
+};
 
 export const initialState: TutorialState = {
 	status: 'idle',
@@ -214,6 +242,8 @@ export function isStepDone(state: TutorialState, index = state.step): boolean {
 			return state.done.gesture;
 		case 'reveal':
 			return state.done.reveal;
+		case 'terrain':
+			return state.done.terrain;
 		case 'drop':
 			return advance.correct ? state.done.correctDrop : state.done.wrongDrop;
 		default:
@@ -226,7 +256,7 @@ export function showsNext(state: TutorialState): boolean {
 	return STEPS[state.step].advance.kind === 'next' || isStepDone(state);
 }
 
-/** The card's position in the counter, 1-11, or undefined for the intro and outro. */
+/** The card's position in the counter, 1-12, or undefined for the intro and outro. */
 export function stepNumber(index: number): number | undefined {
 	if (!STEPS[index].numbered) return undefined;
 	return STEPS.slice(0, index + 1).filter((s) => s.numbered).length;
@@ -302,6 +332,7 @@ export function transition(
 
 		case 'gesture':
 		case 'reveal':
+		case 'terrain':
 		case 'drop': {
 			if (state.status === 'idle') return same;
 			const done =

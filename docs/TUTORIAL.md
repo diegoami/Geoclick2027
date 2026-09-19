@@ -23,9 +23,17 @@ Settled elsewhere, not reopened here (FEATURE_PLAN.md, product decisions):
 
 ## The flow at a glance
 
-An intro card, eleven steps, and an outro card. The player does the real
+> **Step 4, Terrain, was added in FT-43 (2026-09-19).** The layer shipped
+> switched off in v0.8.0 and the product owner - who had asked for it - later
+> opened the Known map and asked why the landmarks and reliefs were missing
+> and whether they had been merged. They had. Turning it on by default fixed
+> half of that; the other half is telling the player what they are looking
+> at and that the button turns it off, which is what this step does.
+
+
+An intro card, twelve steps, and an outro card. The player does the real
 thing at every action step; the tutorial waits for it and moves on by
-itself. Only the explanation step (10) has a Next button.
+itself. Only the explanation step (11) has a Next button.
 
 | # | Where | Highlights (`data-tutorial`) | Moves on when | What the player learns |
 |---|---|---|---|---|
@@ -33,14 +41,15 @@ itself. Only the explanation step (10) has a Next button.
 | 1 | home page | `home-map-card` (Italy's "Regions" card in the country list) | the route becomes `/map/italy-regions` | choosing a map |
 | 2 | the Known map | `map` (the map), `zoom-control` (the `+`/`−` buttons) | the player zooms or pans the map | zoom and pan, with mouse, touch or buttons |
 | 3 | the Known map | `map` | the player taps a region and its name lands on the map | **the map you build**: tap a name on, tap it off again |
-| 4 | the Known map, then overview | `nav-overview`, then `map` | the route becomes `/map/italy-regions/overview` | names you earn appear on their own; Overview shows every name at once |
-| 5 | overview | `nav-quiz` | the route becomes `/map/italy-regions/quiz` | where the quiz is |
-| 6 | quiz | `slip-sicilia` (a name slip in the tray) | a correct drop, of any slip | drag a name onto its region |
-| 7 | quiz | `slip-sardegna` | a wrong drop, of any slip | what a mistake looks like |
-| 8 | quiz | `nav-overview` | the route becomes `/map/italy-regions/overview` | checking a region you're unsure of |
-| 9 | overview | `nav-quiz` | the route becomes `/map/italy-regions/quiz` | going back to the quiz |
-| 10 | quiz | `quiz-progress` (the "1 / 20 placed" line) | Next | solved regions stay solved; spaced repetition |
-| 11 | quiz | `nav-tour` | the route becomes `/map/italy-regions/tour` | Tour mode |
+| 4 | the Known map | `terrain-toggle` (the Terrain button) | the player presses Terrain, either direction | **what is under the map**: sea, rivers and named ranges, on by default and switchable |
+| 5 | the Known map, then overview | `nav-overview`, then `map` | the route becomes `/map/italy-regions/overview` | names you earn appear on their own; Overview shows every name at once |
+| 6 | overview | `nav-quiz` | the route becomes `/map/italy-regions/quiz` | where the quiz is |
+| 7 | quiz | `slip-sicilia` (a name slip in the tray) | a correct drop, of any slip | drag a name onto its region |
+| 8 | quiz | `slip-sardegna` | a wrong drop, of any slip | what a mistake looks like |
+| 9 | quiz | `nav-overview` | the route becomes `/map/italy-regions/overview` | checking a region you're unsure of |
+| 10 | overview | `nav-quiz` | the route becomes `/map/italy-regions/quiz` | going back to the quiz |
+| 11 | quiz | `quiz-progress` (the "1 / 20 placed" line) | Next | solved regions stay solved; spaced repetition |
+| 12 | quiz | `nav-tour` | the route becomes `/map/italy-regions/tour` | Tour mode |
 | Outro | tour | nothing (centred card) | Finish, or Replay | the star, and how to replay the tutorial |
 
 How this maps onto the original request (FEATURE_BACKLOG.md §3): 1 select
@@ -481,8 +490,8 @@ Notes on the copy:
 
 ## Decided at the review (2026-09-14)
 
-- **Explore gets a step of its own** (step 4), rather than a sentence in
-  step 3. The tutorial is eleven steps.
+- **Explore gets a step of its own**, rather than a sentence in
+  step 3. The tutorial is twelve steps since FT-43 added Terrain.
 - **The sandbox covers Italy — Regions only**; every other map's progress
   stays live ([The sandbox](#the-sandbox)).
 - **The star is a tip in the outro**, not a step.
