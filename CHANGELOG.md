@@ -62,6 +62,20 @@ Under the hood:
   caught it; it would have shipped as exactly the complaint the change
   was meant to fix.
 - Android versionCode 90199.
+- **Installers:** all three rebuilt from the v0.9.1 tag — the Windows
+  `.msi` and `-setup.exe`, and the Android `.apk`, signed with the key
+  introduced on 2026-09-19.
+- **What was tried, and what was not.** The `-setup.exe` was installed on
+  Windows and driven over CDP on a cleared profile: 63 maps, Italy —
+  Regions opens on Known, 21 names drawn, 22 terrain features showing
+  with the button already on, and the language picker one button. The
+  **APK was built and installed as an update over v0.9.0** (versionCode
+  90199 accepted, versionName 0.9.1) and launched, **but a map was not
+  opened on it**: the emulator began returning black screenshots with the
+  app still focused, and did not come back after a restart. The web
+  bundle inside the APK is the one that passed every check above, but
+  that is an inference rather than a test, and RELEASES.md asks for this
+  to be said rather than implied.
 
 Not covered:
 
