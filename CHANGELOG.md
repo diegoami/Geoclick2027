@@ -5,13 +5,38 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
-## Unreleased
+## v0.9.3 — 2026-09-19 — The name origin, every time
+
+FT-47, plus the plan for the one thing in the app that is still English
+only ([docs/PLAN_V0.10.md](docs/PLAN_V0.10.md)).
+
+For players:
 
 - **The name origin is back on every card.** It was only ever showing one
   visit in three: the card rotated through all of a place’s facts, and only
   the first is about the name. Now that one is pinned and stays put, and the
   rotation moves the second line instead — so you always get "named for the
   Longobards", plus something different about Lombardia each time.
+
+Under the hood:
+
+- `placeFacts` pins `hooks[0]` as the origin and rotates `hooks[1..]` as the
+  extra. The card is up to three lines in descending order of worth: the
+  origin, one of the others, and the short derived clause.
+- **It was not FT-45 that lost the origin.** The card had rotated through
+  the whole list since FT-41 made it three deep in v0.9.0; the derived
+  paragraph was covering for it, and cutting the paragraph is what made it
+  visible. Putting the paragraph back would have hidden it again.
+- Android versionCode 90399.
+
+Not covered:
+
+- **The name-facts are still English only**, which now reads as a glitch
+  rather than a gap: open a map with the interface in Italian and the tabs,
+  the landmarks and the card’s bottom clause are all Italian while the
+  name-fact is English. Measured and planned as v0.10.0 — 5 448 sentences
+  per language, gated on translating one country first and reading it.
+- **FT-38, the Wikidata landmark pass**, is still deferred.
 
 ## v0.9.2 — 2026-09-19 — What the second look found
 
