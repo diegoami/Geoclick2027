@@ -8,6 +8,7 @@ import { execFileSync } from 'node:child_process';
 import { existsSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { coverageOf, interiorPoint, type AnyGeometry } from './factGeometry.js';
 
 export const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
 export const REPO_ROOT = path.resolve(SCRIPT_DIR, '..', '..');
@@ -413,6 +414,20 @@ export function boxCentre(geometry: { coordinates: unknown }): [number, number] 
  * Android builds have to work with no network at all. Same rule as every
  * other name in the app - see data/styles/base.json's note.
  */
+// Natural Earth's own translations, where they are wrong rather than merely
+// different. Same mechanism and the same reasoning as build-map.ts's
+// NAME_FIXUPS: a curated correction for the handful of rows that are
+// actually incorrect, not a heuristic over 581 features that are mostly
+// fine. Found by the product owner reading the map, which is the only way
+// these get found.
+const TERRAIN_NAME_FIXUPS: Record<string, { de?: string; it?: string }> = {
+	// The feature is the whole chain, the length of Italy. NE's German and
+	// Italian both name the LIGURIAN Apennines, one sub-range of it at the
+	// north-west end - so the label pointed at the wrong mountains and
+	// contradicted the English name on the same shape.
+	APPENNINI: { de: 'Apenninen', it: 'Appennini' }
+};
+
 export function labelPointsFrom(
 	collections: { features: NamedFeature[] }[],
 	labelBbox: [number, number, number, number]
@@ -422,24 +437,37 @@ export function labelPointsFrom(
 		for (const feature of collection.features) {
 			const name = feature.properties.name;
 			if (typeof name !== 'string' || name === '') continue;
-			// The polygons are clipped to a generously padded box so the sea
-			// reaches the screen edge, but a NAME that far out is noise, not a
-			// mnemonic: without this, Italy's map labels the Atlas Saharien and
-			// the Böhmerwald. Names stay within reach of the targets themselves.
-			const centre = boxCentre(feature.geometry);
-			const [lon, lat] = centre;
-			if (lon < labelBbox[0] || lon > labelBbox[2]) continue;
-			if (lat < labelBbox[1] || lat > labelBbox[3]) continue;
+
+			// Where the name goes: a point INSIDE the shape, computed from the
+			// shape's WHOLE geometry rather than from the part this map happens
+			// to clip. Both halves matter, and each fixed a label the product
+			// owner found in the sea: the middle of a box is outside anything
+			// long or curved (the Apennines follow the peninsula), and the
+			// middle of a clipped remnant is nowhere in particular (the Balkan
+			// Peninsula, cut to its western sliver, lands in the Adriatic).
+			const at = interiorPoint(feature.geometry);
+			const [lon, lat] = at;
+			const onThisMap =
+				lon >= labelBbox[0] && lon <= labelBbox[2] && lat >= labelBbox[1] && lat <= labelBbox[3];
+
+			// A feature whose own middle is elsewhere still belongs here if it
+			// covers this map: the Sahara's middle is in Algeria, and a map of
+			// Egypt should still say SAHARA. One that neither sits here nor
+			// covers it is about somewhere else, and its name helps nobody.
+			if (!onThisMap && coverageOf(feature.geometry, labelBbox) < MAP_SPANNING_COVERAGE) continue;
+			const placed = onThisMap ? at : interiorPoint(clipGeometryTo(feature.geometry, labelBbox));
+
+			const fixup = TERRAIN_NAME_FIXUPS[name];
 			points.push({
 				type: 'Feature',
 				properties: {
 					name,
-					name_de: feature.properties.name_de ?? null,
-					name_it: feature.properties.name_it ?? null,
+					name_de: fixup?.de ?? feature.properties.name_de ?? null,
+					name_it: fixup?.it ?? feature.properties.name_it ?? null,
 					kind: feature.properties.kind ?? null,
 					rank: feature.properties.rank ?? null
 				},
-				geometry: { type: 'Point', coordinates: centre }
+				geometry: { type: 'Point', coordinates: placed }
 			});
 		}
 	}
@@ -447,6 +475,32 @@ export function labelPointsFrom(
 	// the same reproducibility rule MAPS.md states for map.json/tour.json.
 	points.sort((a, b) => a.properties.name.localeCompare(b.properties.name, 'en'));
 	return points;
+}
+
+/** How much of a map a feature must cover to earn its name on it anyway. */
+const MAP_SPANNING_COVERAGE = 0.35;
+
+/**
+ * The shape with everything outside `box` dropped, ring by ring. Crude - it
+ * keeps whichever vertices are inside rather than intersecting properly -
+ * but it is only ever used to find somewhere sensible to put a name.
+ */
+function clipGeometryTo(geometry: AnyGeometry, box: [number, number, number, number]): AnyGeometry {
+	const inside = ([lon, lat]: [number, number]) =>
+		lon >= box[0] && lon <= box[2] && lat >= box[1] && lat <= box[3];
+	const rings: [number, number][][] = [];
+	const collect = (coords: unknown): void => {
+		if (!Array.isArray(coords) || coords.length === 0) return;
+		const first = coords[0];
+		if (Array.isArray(first) && typeof first[0] === 'number') {
+			const kept = (coords as [number, number][]).filter(inside);
+			if (kept.length >= 3) rings.push(kept);
+			return;
+		}
+		for (const part of coords) collect(part);
+	};
+	collect(geometry.coordinates);
+	return { coordinates: rings.length > 0 ? rings : geometry.coordinates };
 }
 
 // --- Peaks (FT-37) ---------------------------------------------------------
@@ -559,19 +613,38 @@ export function selectPhysical(
 		],
 		paths.terrain
 	);
-	const marinePath = `${paths.labels}.marine.tmp`;
-	clipToBbox(
-		MARINE_SHP,
-		bbox,
-		[
-			'-sql',
-			`SELECT name AS name, name_de AS name_de, name_it AS name_it, ` +
-				`featurecla AS kind, scalerank AS rank FROM ne_10m_geography_marine_polys`
-		],
-		marinePath
-	);
-	writeLabelPoints([paths.terrain, marinePath], paths.labels, labelBbox);
-	rmSync(marinePath);
+	// The label pass reads WHOLE features (`-spat`, a filter) rather than the
+	// clipped ones above (`-clipsrc`, a cut). Where a name goes depends on
+	// the shape the name belongs to, not on the part this map happens to
+	// show - see labelPointsFrom.
+	const wholeTerrain = `${paths.labels}.terrain.tmp`;
+	const wholeMarine = `${paths.labels}.marine.tmp`;
+	execFileSync('ogr2ogr', [
+		'-f',
+		'GeoJSON',
+		'-spat',
+		...bbox.map(String),
+		'-sql',
+		`SELECT name AS name, name_de AS name_de, name_it AS name_it, ` +
+			`featurecla AS kind, scalerank AS rank ` +
+			`FROM ne_10m_geography_regions_polys WHERE featurecla NOT IN (${quoted(TERRAIN_SKIP)})`,
+		wholeTerrain,
+		TERRAIN_SHP
+	]);
+	execFileSync('ogr2ogr', [
+		'-f',
+		'GeoJSON',
+		'-spat',
+		...bbox.map(String),
+		'-sql',
+		`SELECT name AS name, name_de AS name_de, name_it AS name_it, ` +
+			`featurecla AS kind, scalerank AS rank FROM ne_10m_geography_marine_polys`,
+		wholeMarine,
+		MARINE_SHP
+	]);
+	writeLabelPoints([wholeTerrain, wholeMarine], paths.labels, labelBbox);
+	rmSync(wholeTerrain);
+	rmSync(wholeMarine);
 
 	// Peaks (FT-37). Clipped to the label box, not the padded one, for the
 	// same reason the names are: a summit two countries away is not a hook.

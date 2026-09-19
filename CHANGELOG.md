@@ -22,6 +22,11 @@ For players:
   German, Alpi and Mar Adriatico in Italian.
 - A terrain name never covers a name you are learning — it gives way, and
   comes back when there is room.
+- Terrain names are placed inside the thing they name, and a name whose
+  feature is really somewhere else is left off: the Apennines now sit on the
+  ridge rather than out to sea, and a map of Italy no longer labels the
+  Balkan Peninsula. Natural Earth calls the Apennines "Appennino ligure" in
+  Italian, naming one sub-range for the whole chain; that is corrected.
 - **Peaks and the great circles**, in the same Terrain switch. Mont Blanc
   4 807 m above Valle d'Aosta, Monte Etna 3 322 m on Sicilia, Fuji on
   Honshu, the Qattara Depression at −133 m in Egypt's western desert — and
