@@ -26,8 +26,9 @@ data/scripts/build-terrain.ts         terrain.pmtiles for a map that exists
    physical datasets the Terrain layer needs (FT-33): `ne_10m_ocean`,
    `ne_10m_rivers_lake_centerlines`, `ne_10m_geography_regions_polys`
    (named ranges, deserts, plateaus, basins), `ne_10m_geography_marine_polys`
-   (named seas, gulfs, bays) and `ne_10m_geography_regions_elevation_points`
-   (named peaks, read by the fact builder, not drawn).
+   (named seas, gulfs, bays), `ne_10m_geography_regions_elevation_points`
+   (named peaks with their height) and `ne_10m_geographic_lines` (Equator,
+   Tropics, Polar Circles, Date Line).
 2. `build-map.ts --country=<name> --out=<dir> [options]` — filters the
    source to one country (`ogr2ogr`), optionally dissolves finer
    features into a coarser level (`--dissolve=<field>`, mapshaper),
@@ -808,16 +809,37 @@ by default, so a player who never presses the button never downloads it.
 `-spat`: the ocean is a single global polygon, so a bbox *filter* would hand
 every map the whole world's coastline):
 
-| Layer             | Source                           | What it is                                                |
-| ----------------- | -------------------------------- | --------------------------------------------------------- |
-| `sea`             | `ne_10m_ocean`                   | the water, so a coastline reads at all                     |
-| `rivers`          | `ne_10m_rivers_lake_centerlines` | rivers only — lake centerlines and canals are left out     |
-| `terrain`         | `ne_10m_geography_regions_polys` | named ranges, deserts, plateaus, basins, coasts            |
-| `physical_labels` | the two above + marine polys     | one point per named feature, with `name_de` and `name_it`  |
+| Layer             | Source                                      | What it is                                                |
+| ----------------- | ------------------------------------------- | --------------------------------------------------------- |
+| `sea`             | `ne_10m_ocean`                              | the water, so a coastline reads at all                     |
+| `rivers`          | `ne_10m_rivers_lake_centerlines`            | rivers only — lake centerlines and canals are left out     |
+| `terrain`         | `ne_10m_geography_regions_polys`            | named ranges, deserts, plateaus, basins, coasts            |
+| `physical_labels` | the two above + marine polys                | one point per named feature, with `name_de` and `name_it`  |
+| `peaks`           | `ne_10m_geography_regions_elevation_points` | named summits with their height (FT-37)                    |
+| `lines`           | `ne_10m_geographic_lines`                   | Equator, Tropics, Polar Circles, Date Line (FT-37)         |
 
 Islands, island groups, continents, NE's three "Lake" polygons and its
 `Dragons-be-here` joke entry are skipped: they either restate the coastline
 the sea layer already draws, or are too broad to be a mnemonic.
+
+**Peaks (FT-37) use two of the six elevation-point classes.** `mountain`
+(633 of the 711, and the famous volcanoes are here — Vesuvio, Monte Etna,
+Fuji, Nevado del Ruiz — even though Natural Earth does not flag a volcano
+as such) and `depression` (nine, but one of them is the Qattara Depression).
+The other four are unusable rather than merely uninteresting: every
+`spot elevation` row has a **null name**, and the `plateau` rows are
+Antarctic research stations — "Vostok Station (Rus.)", and **"Fuji Station
+(Japan)" at 3 810 m**, which outranks the real Fuji at 3 776 m and is why
+the class filter matters rather than just taking the tallest rows. Each map
+keeps its **12 tallest** (`PEAKS_PER_MAP`); China has 97 in its box and
+Russia 87, and a map that writes them all is a wall of text the collision
+pass then hides. Named depressions are kept whatever the cap.
+
+**A trap worth naming**, because it cost a build: the ogr2ogr select renames
+`featurecla` to `kind` for every layer here, so `selectPeaks` filters on
+`kind`. Reading `featurecla` instead silently matched nothing and tippecanoe
+dropped the empty layer without a word — `pmtiles show --metadata` listing
+the layers is what caught it, not a screenshot.
 
 **Two numbers are chosen per map, not fixed:**
 
@@ -850,8 +872,9 @@ npx tsx data/scripts/build-terrain.ts --all --force  # rebuilds every one
 ```
 
 The 63 maps shipping today were backfilled with `--all --force` on
-2026-09-19: **4.94 MB in total**, from 6.4 KB (portugal-towns-100k) to
-385 KB (russia-regions), averaging 80 KB. Their `tiles.pmtiles` were
+2026-09-19: **5.16 MB in total** (4.94 MB before FT-37 added peaks and
+lines), from 6.6 KB (portugal-towns-100k) to 394 KB (russia-regions),
+averaging 84 KB. Their `tiles.pmtiles` were
 deliberately **not** rebuilt — the Terrain layer is a separate archive, so
 the existing tilesets did not change, and rebuilding them anyway would have
 meant 63 binary files in one commit for no reason (see the next section).

@@ -8,7 +8,9 @@ import {
 	boxCentre,
 	labelPointsFrom,
 	padBbox,
+	selectPeaks,
 	terrainMaxZoom,
+	PEAKS_PER_MAP,
 	type NamedFeature
 } from '../../../data/scripts/mapBuildUtils';
 
@@ -167,5 +169,66 @@ describe('labelPointsFrom', () => {
 			(p) => p.properties.name
 		);
 		expect(names).toEqual(['Adriatic Sea', 'ALPS']);
+	});
+});
+
+describe('selectPeaks (FT-37)', () => {
+	const peak = (name: string | null, elevation: number, kind = 'mountain', lon = 10, lat = 45) => ({
+		properties: { name, elevation, kind },
+		geometry: { coordinates: [lon, lat] as [number, number] }
+	});
+	const box: [number, number, number, number] = [0, 40, 20, 50];
+	const names = (features: ReturnType<typeof peak>[], limit?: number) =>
+		selectPeaks(features, box, limit).map((f) => f.properties.name);
+
+	it('keeps named mountains inside the box', () => {
+		expect(names([peak('Mont Blanc', 4807), peak('Monte Rosa', 4634)])).toEqual([
+			'Mont Blanc',
+			'Monte Rosa'
+		]);
+	});
+
+	it('drops a peak outside the box', () => {
+		expect(names([peak('Kilimanjaro', 5895, 'mountain', 37, -3)])).toEqual([]);
+	});
+
+	it('drops the unnamed rows', () => {
+		// Every `spot elevation` row in the source has a null name - 61 of the
+		// 711 - and a nameless dot is not a memory hook.
+		expect(names([peak(null, 3315, 'spot elevation'), peak('', 900)])).toEqual([]);
+	});
+
+	it('drops the Antarctic research stations', () => {
+		// The `plateau` class is Vostok Station, Concordia Station and "Fuji
+		// Station (Japan)" - which is why Japan's real Fuji has to come from
+		// the mountain class rather than from whichever row is tallest.
+		expect(names([peak('Fuji Station (Japan)', 3810, 'plateau'), peak('Fuji', 3776)])).toEqual([
+			'Fuji'
+		]);
+	});
+
+	it('keeps the tallest when there are more than one map can show', () => {
+		const many = Array.from({ length: PEAKS_PER_MAP + 5 }, (_, i) => peak(`P${i}`, 1000 + i));
+		const kept = selectPeaks(many, box);
+		expect(kept).toHaveLength(PEAKS_PER_MAP);
+		// P4 is the shortest of the survivors; P0..P3 were the shortest overall.
+		expect(kept.map((f) => f.properties.name)).not.toContain('P0');
+		expect(kept.map((f) => f.properties.name)).toContain('P16');
+	});
+
+	it('keeps a named depression whatever the cap', () => {
+		// There are nine in the world and the Qattara Depression is a landmark;
+		// ranking it by height against mountains would always lose.
+		const many = Array.from({ length: PEAKS_PER_MAP + 5 }, (_, i) => peak(`P${i}`, 2000 + i));
+		const kept = names([peak('Qattara Depression', -133, 'depression'), ...many]);
+		expect(kept).toContain('Qattara Depression');
+		expect(kept).toHaveLength(PEAKS_PER_MAP + 1);
+	});
+
+	it('returns them in name order, so the file is stable between builds', () => {
+		expect(names([peak('Zugspitze', 2963), peak('Matterhorn', 4478)])).toEqual([
+			'Matterhorn',
+			'Zugspitze'
+		]);
 	});
 });
