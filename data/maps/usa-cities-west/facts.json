@@ -22,7 +22,11 @@
 		"population1950": 795000,
 		"region": "Washington",
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"Named for Chief Si'ahl of the Duwamish and Suquamish, who was friendly to the settlers; the city anglicised his name and he is buried across the sound from it.",
+			"Boeing, Microsoft, Amazon and Starbucks all started here."
+		]
 	},
 	"tacoma": {
 		"kind": "city",
@@ -47,7 +51,11 @@
 		"population1950": 516000,
 		"region": "Oregon",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"Decided by a coin toss in 1845: two founders wanted Boston and Portland after their home towns, and the Maine man won two throws out of three.",
+			"The losing penny survives and is on display in the city's historical society."
+		]
 	},
 	"salem": {
 		"kind": "city",
@@ -113,7 +121,11 @@
 		"population1950": 505000,
 		"region": "Colorado",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"For James Denver, governor of Kansas Territory — the founders were flattering a man who had already resigned without knowing it.",
+			"The Mile High City, exactly: one step on the Capitol's west stairs is 5,280 feet above sea level."
+		]
 	},
 	"aurora": {
 		"kind": "city",
@@ -146,7 +158,11 @@
 		"population1950": 216000,
 		"region": "California",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"For the Santísimo Sacramento — the Blessed Sacrament — the name a Spanish explorer gave the river in 1808.",
+			"The Gold Rush started 60 km away at Sutter's Mill, and the city grew as the place the miners bought their shovels."
+		]
 	},
 	"santa-rosa": {
 		"kind": "city",
@@ -178,7 +194,11 @@
 		"populationRank": 14,
 		"region": "California",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"For the coast live oaks that covered the hills when it was founded in 1852.",
+			"Gertrude Stein grew up here and wrote the line everyone quotes against it: \"there is no there there\" — she meant her childhood home was gone."
+		]
 	},
 	"san-francisco": {
 		"kind": "city",
@@ -187,7 +207,11 @@
 		"population1950": 1855000,
 		"region": "California",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"For St Francis of Assisi, via the Spanish mission founded in 1776.",
+			"It went from about 1,000 people to 25,000 in a year when gold was found in 1848, and ships were abandoned in the bay by crews who ran for the hills."
+		]
 	},
 	"modesto": {
 		"kind": "city",
@@ -212,7 +236,11 @@
 		"population1950": 182000,
 		"region": "California",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"For St Joseph — the first Spanish civil town in California, founded 1777, before either San Francisco or Los Angeles had a village.",
+			"Now the biggest city in the Bay Area and the capital of Silicon Valley, which has no official boundaries at all."
+		]
 	},
 	"fresno": {
 		"kind": "city",
@@ -229,7 +257,11 @@
 		"population1950": 35000,
 		"region": "Nevada",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Spanish for \"the meadows\" — there were springs and grass here, which is why a desert road stopped at this spot.",
+			"The springs ran dry in 1962; the city that grew on them now draws its water from the Colorado."
+		]
 	},
 	"bakersfield": {
 		"kind": "city",
@@ -262,7 +294,11 @@
 		"population1950": 139000,
 		"region": "California",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"For St Bernardino of Siena, named by Spanish missionaries who crossed the pass on his feast day in 1810.",
+			"Route 66's original end ran through it, and the first McDonald's opened here in 1940."
+		]
 	},
 	"los-angeles": {
 		"kind": "city",
@@ -271,7 +307,11 @@
 		"population1950": 4046000,
 		"region": "California",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Short for El Pueblo de Nuestra Señora la Reina de los Ángeles — the town of Our Lady the Queen of the Angels, founded 1781.",
+			"It annexed its way to size: the map is full of independent cities it grew around rather than swallowed."
+		]
 	},
 	"riverside": {
 		"kind": "city",
@@ -295,7 +335,11 @@
 		"populationRank": 8,
 		"region": "California",
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Named in 1888 for the obvious: a long, flat beach, which the developers were selling.",
+			"Its port and Los Angeles's share one harbour and together handle about a third of everything imported into the country."
+		]
 	},
 	"irvine": {
 		"kind": "city",
@@ -303,7 +347,11 @@
 		"populationRank": 5,
 		"region": "California",
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"For James Irvine, a Gold Rush merchant who bought a 400 km² ranch; the city was built on it in 1971 to a single plan.",
+			"One of the few large American cities that is entirely master-planned, village by village."
+		]
 	},
 	"glendale": {
 		"kind": "city",
@@ -320,7 +368,11 @@
 		"population1950": 221000,
 		"region": "Arizona",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Named by a settler who saw the canals of a vanished people and said a new city would rise from their ashes — the Hohokam had irrigated this valley for a thousand years and gone.",
+			"The modern canals follow the Hohokam lines, and the city is the hottest big one in the country."
+		]
 	},
 	"mesa": {
 		"kind": "city",
@@ -328,7 +380,11 @@
 		"populationRank": 15,
 		"region": "Arizona",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Spanish for \"table\" — the flat-topped plateau the town was laid out on in 1878.",
+			"Bigger than Atlanta, Miami or St Louis, and almost nobody outside Arizona has heard of it."
+		]
 	},
 	"oceanside": {
 		"kind": "city",
@@ -345,7 +401,11 @@
 		"population1950": 440000,
 		"region": "California",
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"For San Diego de Alcalá, named on his feast day in 1602 — and the site of the first Spanish mission in California, in 1769.",
+			"Its bay is the best natural harbour on the coast, which is why the Pacific Fleet lives there."
+		]
 	},
 	"tucson": {
 		"kind": "city",

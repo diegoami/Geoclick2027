@@ -39,7 +39,11 @@
 		"population1950": 899000,
 		"region": "New York",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"Probably a mangled French beau fleuve, \"beautiful river\" — there were never any buffalo here.",
+			"The Erie Canal ended at its harbour, which is why it grew, and the St Lawrence Seaway bypassing it is why it stopped."
+		]
 	},
 	"lansing": {
 		"kind": "city",
@@ -80,7 +84,11 @@
 		"population1950": 2769000,
 		"region": "Michigan",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"French détroit, \"the strait\" — the narrow water between Lake Erie and Lake St Clair that it guards.",
+			"Ford's moving assembly line started here in 1913 and cut the time to build a car from twelve hours to ninety minutes."
+		]
 	},
 	"boston": {
 		"kind": "city",
@@ -89,7 +97,11 @@
 		"population1950": 2551000,
 		"region": "Massachusetts",
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"Named for Boston in Lincolnshire, which is itself worn down from \"Botolph's stone\".",
+			"Its street plan follows cow paths and colonial shorelines, which is why it is the least grid-like big city in the country."
+		]
 	},
 	"ann-arbor": {
 		"kind": "city",
@@ -122,7 +134,11 @@
 		"population1950": 703000,
 		"region": "Rhode Island",
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"Roger Williams, thrown out of Massachusetts for arguing that church and state should be separate, named it for \"God's merciful providence\" in guiding him there.",
+			"The colony he founded was the first to guarantee freedom of religion."
+		]
 	},
 	"hartford": {
 		"kind": "city",
@@ -156,7 +172,11 @@
 		"population1950": 1392000,
 		"region": "Ohio",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"Named for Moses Cleaveland, who surveyed it in 1796; a newspaper is said to have dropped the first a to fit its masthead.",
+			"Its river caught fire in 1969 — oil slick and debris — and the outrage helped produce the Clean Water Act."
+		]
 	},
 	"new-haven": {
 		"kind": "city",
@@ -173,7 +193,11 @@
 		"population1950": 415000,
 		"region": "Connecticut",
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"Literally what it was: the port at the bridge over the Pequonnock.",
+			"P. T. Barnum was its mayor, and he built the circus's winter quarters here."
+		]
 	},
 	"youngstown": {
 		"kind": "city",
@@ -221,7 +245,11 @@
 		"populationRank": 1,
 		"population1950": 12338000,
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"New Amsterdam until the English took it in 1664 and renamed it for the Duke of York.",
+			"Dutch names survive all over it: Brooklyn was Breukelen, Harlem was Haarlem, and the Bronx was the farm of Jonas Bronck."
+		]
 	},
 	"newark": {
 		"kind": "city",
@@ -246,7 +274,11 @@
 		"population1950": 1539000,
 		"region": "Pennsylvania",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"For William Pitt, British prime minister, named by the general who took the fort in 1758.",
+			"It keeps the -h that most American -burgs lost, after a twenty-year fight with the federal board that had spelled it Pittsburg."
+		]
 	},
 	"harrisburg": {
 		"kind": "city",
@@ -296,7 +328,11 @@
 		"population1950": 3128000,
 		"region": "Pennsylvania",
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"Greek for \"brotherly love\" — philos and adelphos — the name William Penn gave his Quaker colony's capital.",
+			"Penn laid it out on a grid with five squares in 1682, a century before anyone else in America thought to plan a city."
+		]
 	},
 	"dayton": {
 		"kind": "city",
@@ -314,7 +350,11 @@
 		"population1950": 505000,
 		"region": "Indiana",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"\"Indiana\" plus the Greek polis, coined in 1821 for a capital that did not exist yet.",
+			"Built on a site chosen for being the middle of the state, with no river worth using — one of the few big American cities not founded on navigable water."
+		]
 	},
 	"baltimore": {
 		"kind": "city",
@@ -323,7 +363,11 @@
 		"population1950": 1168000,
 		"region": "Maryland",
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"For Lord Baltimore, the Irish title of the family that founded Maryland; Baltimore itself is baile an tí mhóir, \"town of the big house\".",
+			"The bombardment of its Fort McHenry in 1814 is what Francis Scott Key was watching when he wrote the national anthem."
+		]
 	},
 	"cincinnati": {
 		"kind": "city",
@@ -332,7 +376,11 @@
 		"population1950": 881000,
 		"region": "Ohio",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"For the Society of the Cincinnati, Revolutionary officers who named themselves after Cincinnatus, the Roman who left his plough to save Rome and then went back to it.",
+			"It was called Losantiville for two years first, a made-up word meaning \"town opposite the mouth of the Licking\"."
+		]
 	},
 	"covington": {
 		"kind": "city",
@@ -350,7 +398,11 @@
 		"region": "District of Columbia",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"George Washington chose the site but never called it after himself; Congress did that, and the District of Columbia is a Latin flourish for the same Columbus.",
+			"It is in no state on purpose: the founders did not want the capital beholden to one."
+		]
 	},
 	"louisville": {
 		"kind": "city",
@@ -393,7 +445,11 @@
 		"population1950": 391000,
 		"region": "Virginia",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"The plainest name on this map: the beach in Virginia, which is itself named for Elizabeth I, the virgin queen.",
+			"Its 56 km of seafront are in the record books as the longest pleasure beach in the world."
+		]
 	},
 	"norfolk": {
 		"kind": "city",
@@ -401,7 +457,11 @@
 		"populationRank": 22,
 		"region": "Virginia",
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"For Norfolk in England — the \"north folk\" of East Anglia, as Suffolk were the south.",
+			"It has the largest naval base on earth, and the deep harbour is why the city is there at all."
+		]
 	},
 	"nashville": {
 		"kind": "city",
@@ -450,7 +510,11 @@
 		"populationRank": 20,
 		"region": "North Carolina",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"For Sir Walter Raleigh, who sent the first English colonists to this coast in the 1580s and never set foot in America himself.",
+			"Like Indianapolis it was built to be a capital, chosen in 1792 for sitting near the middle of the state."
+		]
 	},
 	"charlotte": {
 		"kind": "city",
@@ -508,7 +572,11 @@
 		"population1950": 513000,
 		"region": "Georgia",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"A railway invention: the end of the Western and Atlantic line, feminised into Atlanta.",
+			"Sherman burned it in 1864, which is why almost nothing in the centre predates the Civil War."
+		]
 	},
 	"birmingham": {
 		"kind": "city",
@@ -516,7 +584,11 @@
 		"populationRank": 21,
 		"region": "Alabama",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"For Birmingham in England, because both were built on iron — the founders were declaring an ambition in 1871.",
+			"It is the only place in the world with coal, iron ore and limestone, the three things steel needs, all within a few kilometres."
+		]
 	},
 	"augusta": {
 		"kind": "city",
@@ -582,7 +654,11 @@
 		"population1950": 75000,
 		"region": "Florida",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Probably for a soldier named Orlando Reeves who died here in 1835, though the records are thin enough that the town may have invented him.",
+			"Disney bought 110 km² of swamp through shell companies in the 1960s so nobody would raise the price."
+		]
 	},
 	"kissimmee": {
 		"kind": "city",
@@ -607,7 +683,11 @@
 		"population1950": 300000,
 		"region": "Florida",
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"A Calusa word recorded by the Spanish, meaning something like \"sticks of fire\" — possibly for the lightning, which is the worst in the country here.",
+			"Cuban cigar makers built Ybor City here in the 1880s, and José Martí planned the Cuban revolution from its rolling floors."
+		]
 	},
 	"st-petersburg": {
 		"kind": "city",
@@ -639,7 +719,11 @@
 		"populationRank": 19,
 		"region": "Florida",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"West of Palm Beach, which is named for coconut palms that grew from a Spanish ship wrecked in 1878 with 20,000 coconuts aboard.",
+			"Henry Flagler built it as the place his hotel's staff lived, across the water from the guests."
+		]
 	},
 	"coral-springs": {
 		"kind": "city",
@@ -663,7 +747,11 @@
 		"populationRank": 10,
 		"region": "Florida",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Forts built in the Second Seminole War, named for Major William Lauderdale who commanded the men who built them.",
+			"It has 300 km of canals, which is why it is called the Venice of America."
+		]
 	},
 	"miami-beach": {
 		"kind": "city",
@@ -680,6 +768,10 @@
 		"population1950": 622000,
 		"region": "Florida",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"From Mayaimi, the name of a lake and the people beside it — a Native word, not a Spanish one, despite the city's Spanish present.",
+			"It was incorporated in 1896 by 344 voters, a third of them Black Bahamians, and it is the only major American city founded by a woman — Julia Tuttle."
+		]
 	}
 }

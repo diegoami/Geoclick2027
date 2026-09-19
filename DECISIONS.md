@@ -1200,6 +1200,15 @@ answers:
   map that contains the place — so Italy's regions and its provinces, or a
   country's cities and each of its regional slices, never hold four copies
   of a sentence that then drift apart.
+- **The file is named for the country as `map.json` spells it** —
+  `united-states-of-america.json`, not `usa.json` — so the lookup needs no
+  table of aliases. Getting this wrong fails silently: the facts build
+  cleanly and every card shows its derived line alone.
+- **An id can be two places.** A province and a city inside it sometimes
+  share one: China has five. Four are municipalities where the province IS
+  the city and one list serves both; Jilin the province and Jilin the river
+  town are different places, so that entry splits into `region` and `city`
+  and a province fact is never shown for a town.
 - **A fact written for an id no map has is a test failure.** It would be
   invisible otherwise: the card just shows its derived line, and nobody
   would ever see the sentence someone wrote.

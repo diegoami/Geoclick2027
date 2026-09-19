@@ -248,6 +248,31 @@ There is no CI (FEATURE_PLAN.md, decision 2).
    - `SHA256SUMS.txt`
 
    `--allow-untagged` does a dry run on any clean commit.
+
+   **The Android signing key changed on 2026-09-19.** Everything from
+   v0.3.0 to the first v0.7.0 upload was signed with a key whose SHA-256
+   fingerprint was `3c275b69…dc30d2d4`; everything from the v0.7.0 re-upload
+   onwards is signed with `6aa706e6…71710a84`
+   (`CN=Diego, OU=Amicabile, …`). Android only accepts an update signed by
+   the same key as the installed app, so **an install from any earlier
+   download cannot be updated in place** — it has to be uninstalled first,
+   which clears that device's saved progress. v0.7.0's APK was rebuilt from
+   its own tag and re-uploaded with the new key, and its notes say so;
+   earlier releases were deliberately left on the old key as historical
+   artifacts. If a future install mysteriously refuses with
+   `INSTALL_FAILED_UPDATE_INCOMPATIBLE` or "App not installed", this is why.
+
+   Two ways this can waste an afternoon, both hit on the day:
+   - `mobile/android/keystore.properties` **takes precedence over the
+     `GEOCLICK_*` environment variables** (`app/build.gradle`, the
+     `signingValue` helper falls back to the environment only when the
+     property is *absent*). A stale line in that file silently beats a
+     correct environment variable.
+   - A JKS keeps the **store** password and the **key** password
+     separately. A wrong store password fails with "keystore password was
+     incorrect"; a wrong key password gets past that and fails with "Get Key
+     failed: Given final block not properly padded", which does not sound
+     like a password problem at all.
 2. **Try them.** Install the APK on a phone or emulator, and the setup
    `.exe` on Windows. In each, **open a map and check that its regions
    draw**; launching isn't enough. v0.3.0's desktop installers opened

@@ -98,18 +98,47 @@ export interface DerivedFact {
  * nobody has written for yet: no hooks, and the card shows its derived
  * line alone.
  */
-function hooksForCountry(country: string | undefined): Record<string, string[]> {
+interface AuthoredHooks {
+	/** Applies whichever kind of target carries this id. */
+	any?: string[];
+	/** Only when the target is a region, or only when it is a city. */
+	region?: string[];
+	city?: string[];
+}
+
+function hooksForCountry(country: string | undefined): Record<string, AuthoredHooks> {
 	if (!country) return {};
+	// The filename is the country as map.json spells it: "United States of
+	// America" is united-states-of-america.json. Naming it for the country
+	// rather than for a convenient short form is what makes the lookup need
+	// no table.
 	const file = path.join(REPO_ROOT, 'data/facts', `${slugify(country)}.json`);
 	if (!existsSync(file)) return {};
 	const raw = JSON.parse(readFileSync(file, 'utf8')) as Record<string, unknown>;
-	const hooks: Record<string, string[]> = {};
+	const isSentences = (v: unknown): v is string[] =>
+		Array.isArray(v) && v.length > 0 && v.every((s) => typeof s === 'string' && s !== '');
+
+	const hooks: Record<string, AuthoredHooks> = {};
 	for (const [id, value] of Object.entries(raw)) {
 		// `_note` and any other commentary key: the authored files explain
 		// themselves at the top, and that is not a place.
 		if (id.startsWith('_')) continue;
-		if (Array.isArray(value) && value.every((v) => typeof v === 'string' && v !== '')) {
-			hooks[id] = value as string[];
+		if (isSentences(value)) {
+			hooks[id] = { any: value };
+			continue;
+		}
+		// The long form, for an id that is two different places. Target ids
+		// are shared across every map of a country, and a province can share
+		// one with a city inside it: China has five, four of them
+		// municipalities where the province IS the city and one - Jilin -
+		// where they are genuinely different and a province's facts would be
+		// false of the town.
+		if (value && typeof value === 'object' && !Array.isArray(value)) {
+			const byKind = value as Record<string, unknown>;
+			const entry: AuthoredHooks = {};
+			if (isSentences(byKind.region)) entry.region = byKind.region;
+			if (isSentences(byKind.city)) entry.city = byKind.city;
+			if (entry.region || entry.city) hooks[id] = entry;
 		}
 	}
 	return hooks;
@@ -408,7 +437,11 @@ async function buildOne(mapId: string): Promise<number> {
 	const ordered: Record<string, DerivedFact> = {};
 	for (const target of map.targets) {
 		const fact = facts[target.id];
-		ordered[target.id] = hooks[target.id] ? { ...fact, hooks: hooks[target.id] } : fact;
+		const authored = hooks[target.id];
+		// A kind-specific list wins over the catch-all, so a province's facts
+		// are never shown for a town that shares its id.
+		const sentences = (fact?.kind && authored?.[fact.kind]) || authored?.any;
+		ordered[target.id] = sentences ? { ...fact, hooks: sentences } : fact;
 	}
 	writeFileSync(path.join(absOutDir, 'facts.json'), `${JSON.stringify(ordered, null, '\t')}\n`);
 	return Object.keys(ordered).length;
