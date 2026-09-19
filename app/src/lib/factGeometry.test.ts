@@ -7,6 +7,8 @@ import {
 	bboxOf,
 	coastIndex,
 	compassPosition,
+	coverageOf,
+	interiorPoint,
 	nearCoast,
 	pointInPolygon,
 	touchesCoast,
@@ -159,5 +161,58 @@ describe('compassPosition', () => {
 
 	it('does not divide by zero on a degenerate extent', () => {
 		expect(compassPosition([5, 5], [5, 5, 5, 5])).toBe('centre');
+	});
+});
+
+describe('interiorPoint (FT-33 fix)', () => {
+	// The middle of a shape's box is not in the shape when the shape is long,
+	// curved, or bent round a coast - which put two real labels in the sea on
+	// the Italy map before this existed.
+	it('is the middle of the box when the middle is inside', () => {
+		expect(interiorPoint(ring([0, 0], [10, 0], [10, 10], [0, 10], [0, 0]))).toEqual([5, 5]);
+	});
+
+	it('finds a point inside a crescent, whose box centre is outside it', () => {
+		// A C-shape opening east: its box centre falls in the gap.
+		const crescent = ring(
+			[0, 0],
+			[10, 0],
+			[10, 3],
+			[3, 3],
+			[3, 7],
+			[10, 7],
+			[10, 10],
+			[0, 10],
+			[0, 0]
+		);
+		expect(pointInPolygon([5, 5], crescent)).toBe(false);
+		expect(pointInPolygon(interiorPoint(crescent), crescent)).toBe(true);
+	});
+
+	it('finds a point inside a long diagonal band, like a mountain chain', () => {
+		// The Apennines follow the peninsula; the centre of their box is off
+		// to one side of the ridge, in the sea.
+		const band = ring([0, 0], [2, 0], [12, 10], [10, 10], [0, 0]);
+		expect(pointInPolygon(interiorPoint(band), band)).toBe(true);
+	});
+});
+
+describe('coverageOf', () => {
+	// Answers "is this name about this map?" for a feature whose own middle
+	// lies elsewhere: the Sahara belongs on a map of Egypt, the Balkan
+	// Peninsula does not belong on a map of Italy.
+	const big = ring([-10, -10], [30, -10], [30, 30], [-10, 30], [-10, -10]);
+
+	it('is 1 for a shape that covers the whole box', () => {
+		expect(coverageOf(big, [0, 0, 10, 10])).toBe(1);
+	});
+
+	it('is 0 for a shape that misses the box entirely', () => {
+		expect(coverageOf(ring([50, 50], [60, 50], [60, 60], [50, 60]), [0, 0, 10, 10])).toBe(0);
+	});
+
+	it('is about a quarter for a shape over one corner', () => {
+		const corner = ring([0, 0], [5, 0], [5, 5], [0, 5], [0, 0]);
+		expect(coverageOf(corner, [0, 0, 10, 10])).toBeCloseTo(0.25, 1);
 	});
 });

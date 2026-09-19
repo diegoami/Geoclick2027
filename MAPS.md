@@ -841,6 +841,39 @@ pass then hides. Named depressions are kept whatever the cap.
 dropped the empty layer without a word — `pmtiles show --metadata` listing
 the layers is what caught it, not a screenshot.
 
+### Where a terrain name goes (fixed 2026-09-19)
+
+Two labels on the Italy map ended up in the sea, and the product owner found
+both by reading the map. The fix is one rule with two halves: **the label
+point is computed from the feature's WHOLE geometry, and it has to be inside
+the feature.**
+
+- **Inside, not the middle of the box.** The Apennines follow the peninsula,
+  so the centre of their bounding box is off the ridge and out to sea.
+  `interiorPoint` (`factGeometry.ts`) walks horizontal slices and takes the
+  middle of the widest run that is actually inside the shape.
+- **The whole feature, not the clipped remnant.** The Balkan Peninsula runs
+  to 29.7° E; clipped to Italy's box it keeps only its western sliver, whose
+  middle is in the Adriatic. So the label pass reads the sources with
+  `-spat` (a filter, whole shapes) while the fills still use `-clipsrc` (a
+  cut) — and a feature whose own interior point is off this map is **left
+  out entirely**, because its name is about somewhere else.
+- **Except when it covers the map.** The Sahara's interior point is in
+  Algeria, but a map of Egypt should still say SAHARA. A feature covering at
+  least 35 % of the map (`coverageOf`, sampled on a grid) keeps its name,
+  placed inside the part that shows.
+
+**`TERRAIN_NAME_FIXUPS`** corrects Natural Earth's own translations where
+they are wrong rather than merely different — the same mechanism and
+reasoning as `build-map.ts`'s `NAME_FIXUPS`. So far one entry: the feature
+named `APPENNINI` carries `name_it` "Appennino ligure" and `name_de`
+"Ligurischer Apennin", naming one sub-range at the north-west end of a
+chain that runs the length of Italy. A third of the 581 named land features
+have a localized name longer than the English one, and nearly all of those
+are ordinary translations ("Penisola di Taz", "Selva Boema"), so there is no
+heuristic here — only a list, added to when someone reads the map and finds
+one wrong.
+
 **Two numbers are chosen per map, not fixed:**
 
 - **The clip box** is the targets' extent padded by 25 % (`padBbox`), so the

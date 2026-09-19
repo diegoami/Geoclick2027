@@ -1192,6 +1192,32 @@ answers:
   uneven by design — every target has a position and a coast answer, 9 %
   have a named summit — and why a blank field is never a wrong field.
 
+## A landmark in the wrong place is worse than none (2026-09-19, FT-33 fix)
+
+- **The product owner read the map and found two names in the sea**: the
+  Apennines, and the Balkan Peninsula — _"those landmarks may hurt more than
+  help"_. He is right, and it is the sharper version of the whole feature's
+  premise: the layer exists to give a name somewhere to hang, so a label
+  pointing at the wrong place does the opposite of its job.
+- **Both had one cause**: the label went to the middle of the *clipped*
+  shape's *bounding box*. Neither half survives contact with real geography.
+  The middle of a box is outside anything long or curved, and the middle of
+  a clipped remnant is nowhere in particular. Labels are now placed at a
+  point genuinely inside the feature, computed from its whole geometry.
+- **A feature whose middle is off this map is dropped**, rather than moved
+  somewhere plausible. If the Balkan Peninsula's name cannot go where the
+  Balkan Peninsula is, a map of Italy is better off not mentioning it.
+  The exception is a feature that covers the map: the Sahara's middle is in
+  Algeria and a map of Egypt should still say SAHARA.
+- **Natural Earth's translations get a correction list, not a heuristic.**
+  Its Italian for the feature `APPENNINI` is "Appennino ligure" — one
+  sub-range at the north-west end of a chain running the length of the
+  country. A third of the 581 named land features have a longer localized
+  name and nearly all of those are ordinary translations, so there is
+  nothing to detect automatically. `TERRAIN_NAME_FIXUPS` is a list, added
+  to when a person reads the map and finds one wrong, exactly like the
+  place-name fixups that have caught a dozen source errors since v0.5.0.
+
 ## Peaks and the great circles (2026-09-19, FT-37)
 
 - **Two more landmark sets inside the same Terrain toggle**, not a second

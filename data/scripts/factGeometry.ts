@@ -129,6 +129,85 @@ export function bboxOf(geometry: AnyGeometry): Bbox {
 	return [minLon, minLat, maxLon, maxLat];
 }
 
+/**
+ * A point guaranteed to be INSIDE the shape, not merely in the middle of
+ * its box (FT-33 fix, 2026-09-19).
+ *
+ * The middle of the box is wrong for anything long, curved or bent round a
+ * coast, and it put two real labels in the sea on the Italy map: the
+ * Apennines, which follow the peninsula, and the Balkan Peninsula, whose
+ * box straddles the Adriatic. This walks the widest horizontal slice
+ * through the shape and takes the middle of the longest run that is inside
+ * it - the standard "representative point", and cheap enough at this scale.
+ */
+export function interiorPoint(geometry: AnyGeometry): Position {
+	const [minLon, minLat, maxLon, maxLat] = bboxOf(geometry);
+	const centre: Position = [(minLon + maxLon) / 2, (minLat + maxLat) / 2];
+	if (pointInPolygon(centre, geometry)) return centre;
+
+	// Scan a few heights rather than only the middle one: a crescent has no
+	// interior at its own mid-latitude.
+	const SLICES = 9;
+	let best: { point: Position; width: number } | undefined;
+	for (let i = 1; i < SLICES; i++) {
+		const lat = minLat + ((maxLat - minLat) * i) / SLICES;
+		const crossings: number[] = [];
+		for (const ring of ringsOf(geometry)) {
+			for (let a = 0, b = ring.length - 1; a < ring.length; b = a++) {
+				const [xa, ya] = ring[a];
+				const [xb, yb] = ring[b];
+				if (ya > lat !== yb > lat) crossings.push(((xb - xa) * (lat - ya)) / (yb - ya) + xa);
+			}
+		}
+		crossings.sort((p, q) => p - q);
+		// Crossings pair up into inside-spans: [0,1] is inside, [1,2] is not.
+		for (let k = 0; k + 1 < crossings.length; k += 2) {
+			const width = crossings[k + 1] - crossings[k];
+			if (!best || width > best.width) {
+				best = { point: [(crossings[k] + crossings[k + 1]) / 2, lat], width };
+			}
+		}
+	}
+	return best?.point ?? centre;
+}
+
+/** Every linear ring of a polygon or multipolygon. */
+function ringsOf(geometry: AnyGeometry): Position[][] {
+	const rings: Position[][] = [];
+	const collect = (coords: unknown): void => {
+		if (!Array.isArray(coords) || coords.length === 0) return;
+		const first = coords[0];
+		if (Array.isArray(first) && typeof first[0] === 'number') {
+			rings.push(coords as Position[]);
+			return;
+		}
+		for (const part of coords) collect(part);
+	};
+	collect(geometry.coordinates);
+	return rings;
+}
+
+/**
+ * Roughly how much of `box` this shape covers, by sampling a grid.
+ *
+ * Used to answer "is this name about this map?" for a feature whose own
+ * middle lies elsewhere. The Sahara's middle is in Algeria, but it covers
+ * most of a map of Egypt and belongs on it; the Balkan Peninsula's middle
+ * is in Serbia and it clips only the eastern edge of a map of Italy, where
+ * its name helps nobody.
+ */
+export function coverageOf(geometry: AnyGeometry, box: Bbox, steps = 12): number {
+	let inside = 0;
+	for (let i = 0; i < steps; i++) {
+		for (let j = 0; j < steps; j++) {
+			const lon = box[0] + ((box[2] - box[0]) * (i + 0.5)) / steps;
+			const lat = box[1] + ((box[3] - box[1]) * (j + 0.5)) / steps;
+			if (pointInPolygon([lon, lat], geometry)) inside++;
+		}
+	}
+	return inside / (steps * steps);
+}
+
 // --- Whereabouts in the country is it? -------------------------------------
 
 /**
