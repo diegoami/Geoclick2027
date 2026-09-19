@@ -123,6 +123,11 @@ whether the computed line or the name-fact goes first.
     place), with the product owner reviewing each batch;
   - 🧑 he picks which countries come next.
 - **DoD:** the orphan lint still passes; each batch reviewed before merge.
+- **Done (2026-09-19):** seven countries — Italy, China, the United States,
+  Germany, Spain, Poland, Ukraine — 176 places, **531 sentences, three per
+  place everywhere**. Verified in a browser on six maps (Italy, Poland,
+  Ukraine, Germany and Spain by region, plus USA — Cities): three distinct
+  hooks over three taps, the fourth back to the first.
 
 ## Order
 
@@ -140,7 +145,7 @@ stable.
 | ----- | ----------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | FT-39 | **merged**  | `98fd98a` | a map opens on Known; a tap leaves a name until tapped again; one rule over what was earned and what was chosen, and the tap always does the visible thing                           |
 | FT-40 | **merged**  | `35ba262` | steps 3 and 4 swap jobs; copy rewritten in three languages; the zoom detection moved into createMap after the tutorial stuck on step 2 because the step moved and the wiring did not |
-| FT-41 | not started | —         |                                                                                                                                                                                      |
+| FT-41 | **ready**   | —         | seven countries authored, 176 places, 531 sentences — three per place everywhere, so the rotation cycles rather than flips                                                           |
 | FT-42 | not started | —         | the card on a small screen: one line at a time, rotating                                                                                                                             |
 
 ## Out of scope

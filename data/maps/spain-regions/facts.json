@@ -14,7 +14,12 @@
 			"nameIt": "Gijón",
 			"population": 335972
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"Named for the Astures, a people Rome needed two hundred years to subdue; the name may come from a river, the Astura.",
+			"The only part of Iberia the Moors never held, which is why every later Spanish king's heir is called the Prince of Asturias.",
+			"Its cider is poured from above the head to aerate it, and the region makes most of Spain’s blue cheese, Cabrales."
+		]
 	},
 	"cantabria": {
 		"kind": "region",
@@ -31,7 +36,12 @@
 			"nameIt": "Santander",
 			"population": 208763
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"From the Cantabri, the other people who held out against Rome — Augustus came in person to finish the war, and it still took a decade.",
+			"The Altamira caves here hold paintings 36,000 years old; when they were found in 1880 nobody believed they were prehistoric.",
+			"Green and wet, unlike the Spain of the postcards: it gets more rain than London, which is why the north is called España Verde."
+		]
 	},
 	"pais-vasco": {
 		"kind": "region",
@@ -48,7 +58,12 @@
 			"nameIt": "Bilbao",
 			"population": 875552
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"\"Basque country\" — Vasco is from the Vascones, the Roman name for the people. They call it Euskadi, from their own word for their language.",
+			"Basque is unrelated to any other living language on earth, and was spoken here before Indo-European reached Europe.",
+			"Bilbao’s Guggenheim turned a dying steel port into a destination, and the word for the effect — the Bilbao effect — is now used worldwide."
+		]
 	},
 	"galicia": {
 		"kind": "region",
@@ -63,7 +78,12 @@
 			"nameIt": "Vigo",
 			"population": 378952
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"From the Callaeci or Gallaeci, the tribes Rome met in the north-west — the same root, distantly, as Gaul and Wales: a word outsiders used for Celts.",
+			"Santiago de Compostela is here, the end of the pilgrim road, and Galician is close enough to Portuguese that the two were one language until the 1300s.",
+			"Its coast is cut into rías, drowned river valleys, and it lands more seafood than any other region in Europe."
+		]
 	},
 	"navarra": {
 		"kind": "region",
@@ -80,7 +100,12 @@
 			"nameIt": "Pamplona",
 			"population": 274545
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"Probably Basque nava, a flat valley among hills, plus -erri, land.",
+			"An independent kingdom for seven centuries, straddling the Pyrenees; France kept the northern half until 1620.",
+			"The bulls run through Pamplona every July, a tradition Hemingway made famous in 1926."
+		]
 	},
 	"la-rioja": {
 		"kind": "region",
@@ -102,7 +127,12 @@
 			"name": "Mount San Lorenzo",
 			"elevation": 2271
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"The river Oja, or possibly rio oja from the Arabic — and the article stays: it is La Rioja, never just Rioja, for the region.",
+			"Spain's smallest mainland region, and the one whose name is on more bottles than any other.",
+			"Dinosaur footprints — more than 10,000 of them — are preserved in its rock, and Spanish was first written down at the San Millán monastery here."
+		]
 	},
 	"cataluna": {
 		"kind": "region",
@@ -117,7 +147,12 @@
 			"nameIt": "Barcellona",
 			"population": 4920000
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"Nobody is certain: most likely from the castlà, the castellans who held the frontier castles, or from Gothia plus Alania.",
+			"Barcelona was the Frankish empire's southern march against the Moors, which is why the region faces the Mediterranean and France more than Madrid.",
+			"Catalan is spoken by about 9 million people, and the Sagrada Família has been under construction since 1882."
+		]
 	},
 	"castilla-y-leon": {
 		"kind": "region",
@@ -143,7 +178,12 @@
 			"name": "Torre de Cerredo",
 			"elevation": 2648
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"Castilla is \"land of castles\", the frontier forts against the Moors; León is not the lion but Latin legio, the Seventh Legion's camp.",
+			"The lion on its arms is a pun the heralds could not resist — the city was a legion, not a cat.",
+			"The largest region in Spain, larger than Portugal, and it holds Salamanca’s university, founded in 1218."
+		]
 	},
 	"aragon": {
 		"kind": "region",
@@ -166,7 +206,12 @@
 			"name": "Pico de Aneto",
 			"elevation": 3404
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"Named for the river Aragón, which itself is probably pre-Roman and pre-Basque.",
+			"Its marriage to Castilla in 1469 made Spain, and its own empire had already taken Sicily, Sardinia and Naples.",
+			"The Pyrenees give it Spain’s highest peaks outside the Sierra Nevada, and its south is near-desert: the Monegros."
+		]
 	},
 	"madrid": {
 		"kind": "region",
@@ -182,7 +227,12 @@
 			"nameIt": "Madrid",
 			"population": 5567000
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"From Arabic al-Majrit, \"source of water\" — the Moorish fortress was named for its streams, and the Christians kept the name.",
+			"A provincial town until Philip II moved the court here in 1561, chosen largely for sitting in the middle of the country.",
+			"At 650 m it is the highest capital in Europe, and the Prado holds the finest collection of Spanish painting anywhere."
+		]
 	},
 	"castilla-la-mancha": {
 		"kind": "region",
@@ -202,7 +252,12 @@
 			"nameIt": "Albacete",
 			"population": 158094
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"Castilla again, plus La Mancha, from Arabic al-mansha, \"the dry land\" — and it is: a high, flat, hot plain.",
+			"Don Quixote rode here, and the windmills he charged still stand on the ridge at Consuegra.",
+			"Toledo here was a city of Christians, Muslims and Jews together, and its steel was the best in Europe for swords."
+		]
 	},
 	"islas-baleares": {
 		"kind": "region",
@@ -218,7 +273,12 @@
 			"name": "Puig Mayor",
 			"elevation": 1445
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"From Greek ballein, \"to throw\" — the islanders were slingers, and Carthage and Rome both hired them.",
+			"Mallorca and Menorca are simply the larger and the smaller, from Latin maior and minor.",
+			"Ibiza’s clubs and Menorca’s prehistoric stone towers, the talayots, are on the same small archipelago."
+		]
 	},
 	"comunidad-valenciana": {
 		"kind": "region",
@@ -235,7 +295,12 @@
 			"nameIt": "Valencia",
 			"population": 808000
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"Valencia is Latin valentia, \"strength\" or \"valour\" — a name Rome gave several towns, and this one kept.",
+			"Its Albufera lagoon is where paella comes from, cooked over orange wood with rabbit and beans rather than seafood.",
+			"Its Fallas festival burns enormous satirical figures every March, and the region grows most of Spain’s oranges."
+		]
 	},
 	"extremadura": {
 		"kind": "region",
@@ -251,7 +316,12 @@
 			"nameIt": "Badajoz",
 			"population": 140133
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Not \"extremely hard\": it is extrema durii, the land beyond the Duero — the outer edge of the reconquered frontier.",
+			"Cortés, Pizarro and Balboa all came from this one poor province, which is why so many places in the Americas carry Extremaduran names.",
+			"Its dehesa — open oak pasture — feeds the black pigs that become jamón ibérico de bellota."
+		]
 	},
 	"murcia": {
 		"kind": "region",
@@ -268,7 +338,12 @@
 			"nameIt": "Murcia",
 			"population": 406807
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Uncertain: possibly Latin myrtea, the myrtle, or murtia from the Arabic Mursiyah — the Moors founded the city in 825.",
+			"Its huerta is irrigated by canals the Moors dug eleven centuries ago, still running on the same gradients.",
+			"Called the orchard of Europe, it grows vegetables for half the continent from one of the driest places in it."
+		]
 	},
 	"andalucia": {
 		"kind": "region",
@@ -288,6 +363,11 @@
 			"name": "Mulhacén",
 			"elevation": 3479
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"From Arabic al-Andalus, the Moorish name for all of Iberia — which may itself come from the Vandals who passed through.",
+			"The Moors held it for nearly eight hundred years, until 1492: longer than the time since, and the Alhambra, the Mezquita and flamenco all carry it.",
+			"The most populous region in Spain, and the Sierra Nevada above Granada has the southernmost ski resort in Europe."
+		]
 	}
 }
