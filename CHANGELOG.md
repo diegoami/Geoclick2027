@@ -12,6 +12,13 @@ one entry per tagged version on `main`.
 
 For players:
 
+- **A second line saying why a place is called what it is**, on Italy's
+  twenty regions to start with. Lombardia is named for the Longobards, the
+  "long-beards" who took the north in 568; Piemonte is ai piedi dei monti,
+  at the foot of the mountains; Marche is plural because a march was a
+  frontier province and this coast held several; Lazio is Latium, the land
+  of the Latins, which is where Latin comes from. Each place has more than
+  one, and you get a different one each time you meet it.
 - **Every place now tells you something about itself.** Tap a region in the
   Overview, click one in Known, or resolve a name in the Quiz, and a line
   appears: where it is, whether it has a coast, what range it is in, its
@@ -46,6 +53,9 @@ Under the hood:
 
 - FT-37: two more Natural Earth datasets; 12 peaks per map, the tallest
   first, and named depressions always kept.
+- FT-36: name-facts authored per country in `data/facts/`, projected into
+  every map containing the place; a rotation counter per device; and a lint
+  that fails on a fact written for an id no map has.
 - FT-35: one card, four screens, declaring itself to `mapFit` and taking no
   pointer events so a drag that crosses it still reaches the map.
 - FT-34: a `facts.json` beside every `map.json` (503 KB over all 63 maps,

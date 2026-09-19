@@ -1172,6 +1172,38 @@ answers:
   Overview the background stays background, while in the quiz — where few
   names are on the map yet — the terrain shows.
 
+## The second line is about the name (2026-09-19, FT-36)
+
+- **The derived line was not a mnemonic and the product owner said so**
+  after using it: _"reads right, but still, it does not help with
+  mnemonics. For instance, Lombardia is called like that because of the
+  Longobards."_ He is right, and the distinction is exact. The derived line
+  says **where** a place is. What you are actually trying to remember is
+  its **name**, and an etymology is the hook that holds one: Lombardia from
+  the Longobards, Piemonte from _ai piedi dei monti_, Lazio from Latium,
+  which is where Latin itself comes from.
+- **So the card has two lines, not one longer one.** The first is computed
+  and trilingual; the second is authored, English for now, and about the
+  word rather than the place. Merging them would lose the distinction that
+  makes the second one worth reading.
+- **Each place gets a LIST, and the card rotates through it** — a different
+  one every time you meet the place. One fact shown forever is one fact
+  learned; several, met in turn across sessions, is what makes more than one
+  stick. Which one you are due is per device (localStorage, like the
+  language and the favourites), so it is a convenience, not progress.
+- **The name first, then the place.** Priority to anything that explains the
+  word — where it comes from, who it was named after, what it meant. A fact
+  merely about the place ("pandas in Sichuan") earns the second slot, not
+  the first, because it does not help with the name.
+- **Authored per country, projected per map.** `data/facts/<country>.json`
+  is keyed by target id, and `build-facts.ts` copies each entry into every
+  map that contains the place — so Italy's regions and its provinces, or a
+  country's cities and each of its regional slices, never hold four copies
+  of a sentence that then drift apart.
+- **A fact written for an id no map has is a test failure.** It would be
+  invisible otherwise: the card just shows its derived line, and nobody
+  would ever see the sentence someone wrote.
+
 ## The fact is data, not a sentence (2026-09-19, FT-34)
 
 - **`facts.json` holds fields, not prose.** A population, a list of

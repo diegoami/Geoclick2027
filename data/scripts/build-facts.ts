@@ -25,6 +25,7 @@ import {
 	TERRAIN_SHP,
 	PEAKS_SHP,
 	parseArgs,
+	slugify,
 	overallBboxOf,
 	crossesAntimeridian,
 	padBbox
@@ -79,6 +80,39 @@ export interface DerivedFact {
 	capitalOf?: 'country' | 'region';
 	/** What it had in 1950, when that says something about how it grew. */
 	population1950?: number;
+	/**
+	 * The authored name-facts for this place (FT-36), copied in from
+	 * data/facts/<country>.json. A list: the card shows a different one each
+	 * time you meet the place, and the first is always about the NAME.
+	 */
+	hooks?: string[];
+}
+
+/**
+ * The hand-written name-facts for a country, keyed by target id.
+ *
+ * Authored per COUNTRY and projected into every map that contains the
+ * place, so Italy's regions and its provinces - and, for a towns file, a
+ * country's cities and each of its regional slices - share one sentence
+ * rather than four copies drifting apart. Missing file, or a country
+ * nobody has written for yet: no hooks, and the card shows its derived
+ * line alone.
+ */
+function hooksForCountry(country: string | undefined): Record<string, string[]> {
+	if (!country) return {};
+	const file = path.join(REPO_ROOT, 'data/facts', `${slugify(country)}.json`);
+	if (!existsSync(file)) return {};
+	const raw = JSON.parse(readFileSync(file, 'utf8')) as Record<string, unknown>;
+	const hooks: Record<string, string[]> = {};
+	for (const [id, value] of Object.entries(raw)) {
+		// `_note` and any other commentary key: the authored files explain
+		// themselves at the top, and that is not a place.
+		if (id.startsWith('_')) continue;
+		if (Array.isArray(value) && value.every((v) => typeof v === 'string' && v !== '')) {
+			hooks[id] = value as string[];
+		}
+	}
+	return hooks;
 }
 
 interface Feature<G = AnyGeometry> {
@@ -354,6 +388,7 @@ function factsForCityMap(
 async function buildOne(mapId: string): Promise<number> {
 	const absOutDir = path.join(MAPS_DIR, mapId);
 	const map = JSON.parse(readFileSync(path.join(absOutDir, 'map.json'), 'utf8')) as {
+		country?: string;
 		targets: MapTarget[];
 	};
 	const usable = map.targets.filter((t) => !t.crossesAntimeridian && !crossesAntimeridian(t.bbox));
@@ -365,10 +400,16 @@ async function buildOne(mapId: string): Promise<number> {
 		? factsForCityMap(map.targets, sources, extent)
 		: factsForRegionMap(map.targets, sources, extent, await adjacencyForMapDir(absOutDir));
 
+	// The authored name-facts, where a person has written any (FT-36).
+	const hooks = hooksForCountry(map.country);
+
 	// Keys in the map's own target order, so a rebuild of an unchanged map
 	// produces an identical file - MAPS.md's reproducibility rule.
 	const ordered: Record<string, DerivedFact> = {};
-	for (const target of map.targets) ordered[target.id] = facts[target.id];
+	for (const target of map.targets) {
+		const fact = facts[target.id];
+		ordered[target.id] = hooks[target.id] ? { ...fact, hooks: hooks[target.id] } : fact;
+	}
 	writeFileSync(path.join(absOutDir, 'facts.json'), `${JSON.stringify(ordered, null, '\t')}\n`);
 	return Object.keys(ordered).length;
 }

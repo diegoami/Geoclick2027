@@ -12,7 +12,7 @@
 	import { tutorialExploreReveal } from './tutorial.svelte';
 	import { DOT_CLEARANCE_PX, areaShares, registerLabel } from './labelCollision';
 	import FactCard from './FactCard.svelte';
-	import { fetchFacts, type Facts } from './facts';
+	import { fetchFacts, rotateHook, type Facts } from './facts';
 
 	let { mapId }: { mapId: string } = $props();
 
@@ -24,7 +24,7 @@
 	let selectedFeatureId: number | string | undefined;
 	// The fact box (FT-35), on the click that already reveals the name.
 	let facts = $state<Facts>({});
-	let asked = $state<{ id: string; name: string } | undefined>(undefined);
+	let asked = $state<{ id: string; name: string; hook?: string } | undefined>(undefined);
 
 	// This view shows how well the map is known: every name the player has
 	// placed right at least once is written on it, as strongly as they know it
@@ -133,7 +133,13 @@
 					registerLabel(popup, { priority: CLICKED_PRIORITY });
 					// The same click says what the place is (FT-35).
 					const target = loadedMapDef.targets.find((t) => t.name === name);
-					asked = target ? { id: target.id, name: target.name } : undefined;
+					asked = target
+						? {
+								id: target.id,
+								name: target.name,
+								hook: rotateHook(mapId, target.id, facts[target.id])
+							}
+						: undefined;
 					// The tutorial's Explore step (FT-11) moves on once a name shows.
 					tutorialExploreReveal();
 				});
@@ -173,6 +179,7 @@
 		<FactCard
 			name={asked.name}
 			fact={facts[asked.id]}
+			hook={asked.hook}
 			bottom={hasRetention ? '3.5rem' : '0.75rem'}
 			onclose={() => (asked = undefined)}
 		/>

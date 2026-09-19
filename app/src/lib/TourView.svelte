@@ -12,7 +12,7 @@
 	import { DOT_CLEARANCE_PX, registerLabel } from './labelCollision';
 	import type { MapDefinition, Target } from './mapDefinition';
 	import FactCard from './FactCard.svelte';
-	import { fetchFacts, type Facts } from './facts';
+	import { fetchFacts, rotateHook, type Facts } from './facts';
 
 	let { mapId }: { mapId: string } = $props();
 
@@ -50,6 +50,10 @@
 	// `TourStep.narration` was declared for in iteration 6 and never filled:
 	// the narration is the place's own fact, so there is nothing to author.
 	let facts = $state<Facts>({});
+	// Picked once per step rather than derived from currentTarget: choosing a
+	// name-fact advances that place's rotation (FT-36), and a $derived would
+	// advance it again on every unrelated re-render.
+	let tourHook = $state<string | undefined>(undefined);
 
 	let currentTarget = $derived.by((): Target | undefined => {
 		if (!mapDef || !tour) return undefined;
@@ -75,6 +79,9 @@
 		clearHighlight(currentTarget?.name);
 		stepIndex = index;
 		finished = false;
+		// A new stop is a new encounter with the place, so its name-fact moves
+		// on: a second run of the tour tells you something different.
+		tourHook = rotateHook(mapId, target.id, facts[target.id]);
 
 		map.setFeatureState(
 			{ source: 'targets', sourceLayer: 'targets', id: target.name },
@@ -207,7 +214,13 @@
 		<!-- The step's own fact, above the controls (FT-35). No close button:
 		     the tour drives it, and it changes with every step. -->
 		{#if currentTarget}
-			<FactCard name={currentTarget.name} fact={facts[currentTarget.id]} max={2} bottom="4.25rem" />
+			<FactCard
+				name={currentTarget.name}
+				fact={facts[currentTarget.id]}
+				hook={tourHook}
+				max={2}
+				bottom="4.25rem"
+			/>
 		{/if}
 
 		{#if tour}

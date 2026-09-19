@@ -9,7 +9,7 @@
 	import { tutorialMapGesture } from './tutorial.svelte';
 	import { DOT_CLEARANCE_PX, areaShares, registerLabel } from './labelCollision';
 	import FactCard from './FactCard.svelte';
-	import { fetchFacts, type Facts } from './facts';
+	import { fetchFacts, rotateHook, type Facts } from './facts';
 
 	let { mapId }: { mapId: string } = $props();
 
@@ -22,7 +22,7 @@
 	// place is. Fetched lazily: a map whose facts.json is missing simply has
 	// no card, and opening a map is not made slower by it.
 	let facts = $state<Facts>({});
-	let asked = $state<{ id: string; name: string } | undefined>(undefined);
+	let asked = $state<{ id: string; name: string; hook?: string } | undefined>(undefined);
 	// Not reactive state - popups are imperative MapLibre objects, only
 	// created once on load and torn down on destroy. Same reasoning as
 	// QuizView's solvedPopups.
@@ -49,7 +49,13 @@
 				map.on('click', layerId, (e: maplibregl.MapLayerMouseEvent) => {
 					const name = e.features?.[0]?.properties?.name as string | undefined;
 					const target = loadedMapDef.targets.find((t) => t.name === name);
-					asked = target ? { id: target.id, name: target.name } : undefined;
+					asked = target
+						? {
+								id: target.id,
+								name: target.name,
+								hook: rotateHook(mapId, target.id, facts[target.id])
+							}
+						: undefined;
 				});
 				map.on('mouseenter', layerId, () => {
 					map!.getCanvas().style.cursor = 'pointer';
@@ -134,7 +140,12 @@
 	{/if}
 	<div class="container" bind:this={container}></div>
 	{#if asked}
-		<FactCard name={asked.name} fact={facts[asked.id]} onclose={() => (asked = undefined)} />
+		<FactCard
+			name={asked.name}
+			fact={facts[asked.id]}
+			hook={asked.hook}
+			onclose={() => (asked = undefined)}
+		/>
 	{/if}
 </div>
 

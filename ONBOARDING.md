@@ -85,6 +85,8 @@ data/
   scripts/build-terrain.ts  the Terrain layer's own tileset (FT-33), for a
                              map that already exists
   scripts/build-facts.ts    the fact box's derived data (FT-34)
+  facts/<country>.json      hand-written name-facts (FT-36) - the only
+                             authored content in the repo
 
 desktop/                  Tauri wrapper (Iteration 7) - wraps app/build
                            unmodified in a native window, no separate UI code
