@@ -1,9 +1,10 @@
 # Geoclick
 
 A geography game: pick a map, learn where each region or town is, and
-drag the names onto the map until you know them all. Spaced repetition
-brings back what you're about to forget. It works in English, German and
-Italian.
+drag the names onto the map until you know them all. A name counts as
+known once you have placed it right three times in a row, and the better
+you know a map, the fewer names it offers you at a time. 63 maps across
+28 countries, in English, German and Italian.
 
 **Play in your browser, nothing to install:**
 <https://geoclick.netlify.app/>

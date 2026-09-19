@@ -60,6 +60,16 @@ Check items off as they land; update "Status" as iterations complete.
   picked by Claude rather than user-specified (see MAPS.md's dated
   section and DECISIONS.md for the reasoning, including Australia's
   non-canonical-entity exclusions).
+- **Two feature programmes have run since this list was written**, each
+  with its own plan document and its own ledger:
+  [docs/PLAN_V0.6.md](docs/PLAN_V0.6.md) — v0.6.0, "harder as you get
+  better": a clean streak per name, a tray that offers fewer names as a
+  map is learned, one mistake showing the answer, the Known map, names
+  that never overlap, and a map that opens fully visible; and
+  [docs/PLAN_V0.7.md](docs/PLAN_V0.7.md) — v0.7.0, "more maps, and slices
+  of them": the United States' cities, six countries that had none,
+  Italy's provinces in thirds, and a search box over the map list. Both
+  are complete; **63 maps across 28 countries** ship today.
 - **Not started**: everything else below.
 - **Next up**: motion/feedback design (reveal animations, streak
   indicators, sound, correct-drop juiciness) and a broader component/

@@ -1,8 +1,11 @@
 # Geoclick
 
 A geography-learning game: pick a map, take a guided tour, then quiz
-yourself with drag-and-drop matching and spaced repetition. Portfolio
-project — see [ARCHITECTURE.md](ARCHITECTURE.md) for the full pitch.
+yourself by dragging each name onto the place it belongs. The better you
+know a map, the fewer names it offers you at a time — so a map you have
+learned keeps being worth playing. 63 maps across 28 countries, in
+English, German and Italian. Portfolio project — see
+[ARCHITECTURE.md](ARCHITECTURE.md) for the full pitch.
 
 **Play it:** <https://geoclick.netlify.app/> — the live web
 app, built from `main`. No install or account needed; progress is kept

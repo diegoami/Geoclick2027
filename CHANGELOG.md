@@ -5,12 +5,13 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
-## Unreleased
+## v0.7.0 — 2026-09-19 — More maps, and slices of them
 
 **Nineteen more maps, including the United States' cities — and a search box to find any of them.**
 Six tasks (FT-27 to FT-32), the programme in
 [`docs/PLAN_V0.7.md`](docs/PLAN_V0.7.md). Geoclick goes from 44 maps in 22
-countries to **63 in 28**.
+countries to **63 in 28**. The product owner tried v0.7.0-beta.1 before this
+was cut.
 
 For players:
 
@@ -58,6 +59,24 @@ Under the hood:
   the real accessibility tree (the star and pills do carry their names and
   pressed state — v0.5.0's note blamed the app for what was the emulator).
 - The map data grows by about 4 MB; 63 maps now.
+- Android versionCode 70099. Installers: Windows `.msi` and `-setup.exe`,
+  and the Android APK, all rebuilt for this release.
+
+Not covered:
+
+- **The site moved to <https://geoclick.netlify.app/>** during this release
+  (the generated address it had before now returns 404). Every published
+  release's notes and the downloads page were corrected, so nothing points
+  at the old one any more.
+- **A name that has nowhere to go is still left out** until you zoom in —
+  v0.6.0's bargain, and the reason Italy's provinces now come in thirds as
+  well as whole.
+- **Russia on a narrow phone screen** still shows its Arctic coast partly
+  behind the map bar; MapLibre clamps the camera that far north, as
+  DECISIONS.md records.
+- **The remaining countries with no map** — Iran, the Philippines,
+  Thailand, South Africa, Romania and the rest — are a batch for another
+  release.
 
 ## v0.6.0 — 2026-09-18 — Harder as you get better
 
