@@ -94,6 +94,24 @@ stops for the product owner.
 - **DoD:** gates green; the tutorial run end to end on a phone-sized
   viewport and on the emulator.
 
+### FT-42 — The card on a small screen · Medium · deps: FT-41
+
+Raised by the product owner on 2026-09-19, while FT-39 was being merged:
+
+> _"When it comes to phone and tablets we might have to make cuts, we might
+> want to show one line and then we rotate."_
+
+The card shows two lines — the computed one and the name-fact. On a phone
+held upright that is a real share of the map, and the map is the thing being
+learned. The idea is to show **one line at a time on a small screen** and
+rotate between them, rather than shrink both.
+
+Not started, and deliberately after FT-41: the rotation is worth designing
+once there are several facts per place to rotate through, otherwise it is a
+toggle between exactly two things. Open questions when it comes up — what
+counts as a small screen, whether it rotates on a timer or on a tap, and
+whether the computed line or the name-fact goes first.
+
 ### FT-41 — More facts, and more maps · Medium
 
 - **Why:** decision-by-use. The second line is the part the product owner
@@ -110,18 +128,20 @@ stops for the product owner.
 
 FT-39 → FT-40, since the tutorial can only be rewritten once the model it
 teaches exists. FT-41 runs alongside both — it touches only `data/facts/`
-and nothing FT-39 changes.
+and nothing FT-39 changes. FT-42 comes after FT-41, so the rotation is
+designed against real depth rather than against two lines.
 
 **→ Release `v0.9.0`** per [RELEASES.md](RELEASES.md), after v0.8.0 is
 stable.
 
 ## Progress ledger
 
-| Task  | State       | Merge | Notes |
-| ----- | ----------- | ----- | ----- |
-| FT-39 | not started | —     |       |
-| FT-40 | not started | —     |       |
-| FT-41 | not started | —     |       |
+| Task  | State       | Merge     | Notes                                                                                                                                                      |
+| ----- | ----------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| FT-39 | **merged**  | `98fd98a` | a map opens on Known; a tap leaves a name until tapped again; one rule over what was earned and what was chosen, and the tap always does the visible thing |
+| FT-40 | not started | —         |                                                                                                                                                            |
+| FT-41 | not started | —         |                                                                                                                                                            |
+| FT-42 | not started | —         | the card on a small screen: one line at a time, rotating                                                                                                   |
 
 ## Out of scope
 
