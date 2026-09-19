@@ -8,7 +8,6 @@
 	import MapNav from './MapNav.svelte';
 	import type { MapDefinition } from './mapDefinition';
 	import { mapDisplayName } from './mapCatalog';
-	import { tutorialMapGesture } from './tutorial.svelte';
 	import { DOT_CLEARANCE_PX, areaShares, registerLabel } from './labelCollision';
 	import FactCard from './FactCard.svelte';
 	import { fetchFacts, rotateHook, type Facts } from './facts';
@@ -81,26 +80,6 @@
 					map!.getCanvas().style.cursor = '';
 				});
 			}
-			// The tutorial's zoom-and-pan step (FT-11) waits for the player's own
-			// gesture, and a move counts once it ends. Which events carry the
-			// player's input differs: the +/- buttons pass it on every move event,
-			// but a wheel zoom only on MapLibre's own 'wheel' event (its moves come
-			// from an easing animation), so both are watched. A drag and a touch
-			// pinch or pan start with 'dragstart' / 'touchstart'. The map's opening
-			// fit has none of these.
-			let playerMove = false;
-			const byPlayer = (e: { originalEvent?: unknown }) => {
-				if (e.originalEvent) playerMove = true;
-			};
-			map.on('wheel', byPlayer);
-			map.on('dragstart', byPlayer);
-			map.on('touchstart', byPlayer);
-			map.on('move', byPlayer);
-			map.on('moveend', () => {
-				if (playerMove) tutorialMapGesture();
-				playerMove = false;
-			});
-
 			// setFeatureState throws until the style has finished loading -
 			// defer to the map's 'load' event (see QuizView.svelte for the
 			// same fix, found the same way).

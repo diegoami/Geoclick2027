@@ -49,11 +49,10 @@ describe('tutorial machine', () => {
 			steps.push(STEPS[state.step].id);
 		};
 		run({ type: 'next' }); // Start
-		run(route('overview')); // opened Italy - Regions
+		run(route('explore')); // opened Italy - Regions, which lands on Known
 		run({ type: 'gesture' });
-		run({ type: 'next' });
-		run(route('explore'));
-		run({ type: 'reveal' });
+		run({ type: 'reveal' }); // tapped a region: its name is on the map
+		run(route('overview'));
 		run(route('quiz'));
 		run({ type: 'drop', correct: true });
 		run({ type: 'drop', correct: false });
@@ -64,9 +63,8 @@ describe('tutorial machine', () => {
 		expect(steps).toEqual([
 			'choose-map',
 			'zoom-pan',
+			'tap-names',
 			'overview',
-			'explore',
-			'explore', // still step 4 in Explore, until a region is clicked
 			'open-quiz',
 			'correct-drop',
 			'wrong-drop',
@@ -93,30 +91,22 @@ describe('tutorial machine', () => {
 	});
 
 	it('waits on action steps: Next does nothing until the action happens', () => {
-		const atZoom = play([{ type: 'next' }, route('overview')], atIntro).state;
+		const atZoom = play([{ type: 'next' }, route('explore')], atIntro).state;
 		expect(STEPS[atZoom.step].id).toBe('zoom-pan');
 		expect(showsNext(atZoom)).toBe(false);
 		expect(play([{ type: 'next' }], atZoom).id).toBe('zoom-pan');
 	});
 
-	it('opening Explore during step 3 skips ahead to step 4', () => {
-		const { id } = play(
-			[{ type: 'next' }, route('overview'), { type: 'gesture' }, route('explore')],
-			atIntro
-		);
-		expect(id).toBe('explore');
-	});
-
 	it("pauses off-script, and Resume goes back to the step's screen", () => {
-		const paused = play([{ type: 'next' }, route('overview'), route('home')], atIntro).state;
+		const paused = play([{ type: 'next' }, route('explore'), route('home')], atIntro).state;
 		expect(paused.status).toBe('paused');
 		// Route changes while paused never resume by themselves.
-		expect(play([route('overview')], paused).state.status).toBe('paused');
+		expect(play([route('explore')], paused).state.status).toBe('paused');
 
 		const resumed = transition({ ...paused, place: 'home' }, { type: 'resume' });
 		expect(resumed.state.status).toBe('running');
 		expect(STEPS[resumed.state.step].id).toBe('zoom-pan');
-		expect(resumed.effects).toEqual([{ type: 'navigate', screen: 'overview' }]);
+		expect(resumed.effects).toEqual([{ type: 'navigate', screen: 'explore' }]);
 	});
 
 	it('pauses when another map is opened', () => {
@@ -125,7 +115,7 @@ describe('tutorial machine', () => {
 	});
 
 	it('the Tutorial button resumes a paused tutorial instead of restarting it', () => {
-		const paused = play([{ type: 'next' }, route('overview'), route('home')], atIntro).state;
+		const paused = play([{ type: 'next' }, route('explore'), route('home')], atIntro).state;
 		const { state, effects } = play([{ type: 'start' }], paused);
 		expect(STEPS[state.step].id).toBe('zoom-pan');
 		expect(effects).not.toContainEqual({ type: 'startSandbox' });
@@ -135,11 +125,10 @@ describe('tutorial machine', () => {
 		const atQuiz = play(
 			[
 				{ type: 'next' },
-				route('overview'),
-				{ type: 'gesture' },
-				{ type: 'next' },
 				route('explore'),
+				{ type: 'gesture' },
 				{ type: 'reveal' },
+				route('overview'),
 				route('quiz')
 			],
 			atIntro
@@ -148,13 +137,15 @@ describe('tutorial machine', () => {
 
 		const back = transition(atQuiz, { type: 'back' });
 		expect(STEPS[back.state.step].id).toBe('open-quiz');
-		expect(back.effects).toEqual([{ type: 'navigate', screen: 'explore' }]);
+		expect(back.effects).toEqual([{ type: 'navigate', screen: 'overview' }]);
 
-		// Back again, landing in Explore: the region was already clicked.
-		const backTwice = play([route('explore'), { type: 'back' }], back.state).state;
-		expect(STEPS[backTwice.step].id).toBe('explore');
-		expect(showsNext(backTwice)).toBe(true);
-		expect(play([{ type: 'next' }], backTwice).id).toBe('open-quiz');
+		// Back twice more reaches the step that teaches tapping. The player
+		// has already tapped a name, so it offers Next rather than waiting.
+		const atOverviewStep = play([route('overview'), { type: 'back' }], back.state).state;
+		expect(STEPS[atOverviewStep.step].id).toBe('overview');
+		const backToTap = play([route('explore'), { type: 'back' }], atOverviewStep).state;
+		expect(STEPS[backToTap.step].id).toBe('tap-names');
+		expect(showsNext(backToTap)).toBe(true);
 	});
 
 	it('has no Back on step 1', () => {
@@ -166,11 +157,10 @@ describe('tutorial machine', () => {
 		const atDrop = play(
 			[
 				{ type: 'next' },
-				route('overview'),
-				{ type: 'gesture' },
-				{ type: 'next' },
 				route('explore'),
+				{ type: 'gesture' },
 				{ type: 'reveal' },
+				route('overview'),
 				route('quiz')
 			],
 			atIntro
@@ -188,10 +178,10 @@ describe('tutorial machine', () => {
 
 	it('Skip ends the tutorial from any step and keeps the player where they are', () => {
 		const { state, effects } = play(
-			[{ type: 'next' }, route('overview'), { type: 'skip' }],
+			[{ type: 'next' }, route('explore'), { type: 'skip' }],
 			atIntro
 		);
-		expect(state).toEqual({ ...initialState, place: 'overview' });
+		expect(state).toEqual({ ...initialState, place: 'explore' });
 		expect(effects.at(-1)).toEqual({ type: 'endSandbox' });
 	});
 

@@ -25,16 +25,16 @@ Settled elsewhere, not reopened here (FEATURE_PLAN.md, product decisions):
 
 An intro card, eleven steps, and an outro card. The player does the real
 thing at every action step; the tutorial waits for it and moves on by
-itself. Only the explanation steps (3 and 10) have a Next button.
+itself. Only the explanation step (10) has a Next button.
 
 | # | Where | Highlights (`data-tutorial`) | Moves on when | What the player learns |
 |---|---|---|---|---|
 | Intro | home page | nothing (centred card) | Start | what's about to happen, and that nothing is saved |
-| 1 | home page | `home-map-card` (Italy's "Regions" card in the country list) | the route becomes `/map/italy-regions/overview` | choosing a map |
-| 2 | overview | `map` (the map), `zoom-control` (the `+`/`−` buttons) | the player zooms or pans the map | zoom and pan, with mouse, touch or buttons |
-| 3 | overview | `nav-overview` | Next | names are on the overview; magnify by hover or tap |
-| 4 | overview, then the Known map | `nav-explore`, then `map` | the player clicks a region on the Known map and its name shows | the Known map: how well each name is known, click to find out |
-| 5 | explore | `nav-quiz` | the route becomes `/map/italy-regions/quiz` | where the quiz is |
+| 1 | home page | `home-map-card` (Italy's "Regions" card in the country list) | the route becomes `/map/italy-regions` | choosing a map |
+| 2 | the Known map | `map` (the map), `zoom-control` (the `+`/`−` buttons) | the player zooms or pans the map | zoom and pan, with mouse, touch or buttons |
+| 3 | the Known map | `map` | the player taps a region and its name lands on the map | **the map you build**: tap a name on, tap it off again |
+| 4 | the Known map, then overview | `nav-overview`, then `map` | the route becomes `/map/italy-regions/overview` | names you earn appear on their own; Overview shows every name at once |
+| 5 | overview | `nav-quiz` | the route becomes `/map/italy-regions/quiz` | where the quiz is |
 | 6 | quiz | `slip-sicilia` (a name slip in the tray) | a correct drop, of any slip | drag a name onto its region |
 | 7 | quiz | `slip-sardegna` | a wrong drop, of any slip | what a mistake looks like |
 | 8 | quiz | `nav-overview` | the route becomes `/map/italy-regions/overview` | checking a region you're unsure of |
@@ -44,12 +44,13 @@ itself. Only the explanation steps (3 and 10) have a Next button.
 | Outro | tour | nothing (centred card) | Finish, or Replay | the star, and how to replay the tutorial |
 
 How this maps onto the original request (FEATURE_BACKLOG.md §3): 1 select
-a map · 2 zoom and pan (added 2026-09-13) · 3 the overview (was "switch to
-the overview", which FT-13 made automatic) · 4 the progress map, which
-replaced Explore in v0.6.0 (added at FT-09's
-review, 2026-09-14) · 5 switch to Quiz · 6 drag a name slip onto its region
-· 7 make a deliberate mistake · 8 check a region in the overview · 9 return
-to the quiz · 10 spaced repetition · 11 Tour.
+a map · 2 zoom and pan (added 2026-09-13) · 3 the map you build, which in
+v0.9.0 (FT-39/FT-40) took the place the overview used to hold here, since a
+map now opens on Known · 4 the overview, which moved after it and became
+something the player navigates to rather than arrives on · 5 switch to Quiz
+· 6 drag a name slip onto its region · 7 make a deliberate mistake · 8 check
+a region in the overview · 9 return to the quiz · 10 spaced repetition ·
+11 Tour.
 
 ---
 
@@ -106,46 +107,48 @@ Touch screens:
 - **Which copy:** touch copy when `matchMedia('(hover: none)')` matches,
   which is phones and tablets. Otherwise the mouse copy.
 
-### 3. The overview — overview
+### 3. The map you build — the Known map
 
 Mouse:
 
-> This is the **overview**, where every region shows its name. Hover over a
-> name to enlarge it.
+> This is **Known**, the map you build. Click a region to put its name on
+> the map — it stays there. Click it again to take it off, so you choose
+> which names to study.
 
 Touch:
 
-> This is the **overview**, where every region shows its name. Tap a name to
-> enlarge it.
+> This is **Known**, the map you build. Tap a region to put its name on the
+> map — it stays there. Tap it again to take it off, so you choose which
+> names to study.
 
-- **Highlight:** the Overview tab (already selected).
-- **Moves on:** Next.
-- **Off-script:** opening the progress map now skips ahead to step 4's second half
-  rather than pausing: it's where the tutorial is going next anyway.
+- **Highlight:** the map itself, undimmed. There is nothing to point at:
+  the lesson is the whole surface.
+- **Moves on:** when a tap puts a name on the map, about a second later so
+  the name can be read. `MapView` calls the hook from the same handler that
+  records the choice, and only when the tap REVEALED a name — hiding one
+  does not count as learning what the tutorial is teaching.
+- **This is the step that changed in v0.9.0** (FT-39/FT-40). It used to be
+  the overview, and it used to say "hover over a name to enlarge it"; a map
+  now opens here instead, and what the player needs to learn first is that
+  a tap leaves a name behind.
 
-### 4. The Known map — overview, then the Known map
+### 4. The overview — the Known map, then overview
 
-Mouse:
+> Names you place right in the quiz appear here on their own, as strongly as
+> you know them. New to a map? **Overview** shows every name at once — open
+> it.
 
-> **Known** shows how well you know this map: the names you have placed
-> right, as strongly as you know them. Open it and click any region to see
-> which one it is.
+- **Highlight:** the Overview tab while still on the Known map; once the
+  route is `/map/italy-regions/overview`, the map instead. Same card, same
+  copy: one step across two screens, as step 4 has always been — only the
+  two screens have swapped.
+- **Moves on:** when the route becomes the overview.
+- **Why it still exists:** a map that opens on Known opens nearly empty for
+  someone who has never played it, so the screen that names everything at
+  once is what a newcomer needs. Decision 1 in docs/PLAN_V0.9.md.
+- **Back** from here returns to step 3 on the Known map.
 
-Touch:
-
-> **Known** shows how well you know this map: the names you have placed
-> right, as strongly as you know them. Open it and tap any region to see
-> which one it is.
-
-- **Highlight:** the Known tab while on the overview; once the route is
-  `/map/italy-regions` (the progress map), the map instead. Same card, same copy:
-  it's one step across two screens.
-- **Moves on:** when the player clicks or taps a region on the progress map and its
-  name pops up, about a second later so the name can be read. MapView
-  calls the tutorial hook from its existing region-click handler.
-- **Back** from here returns to step 3 on the overview.
-
-### 5. Open the quiz — explore
+### 5. Open the quiz — overview
 
 > Ready to test yourself for real? Open the **Quiz**.
 

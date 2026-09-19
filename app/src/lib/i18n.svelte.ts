@@ -256,13 +256,13 @@ const en: Dictionary = {
 	'tutorial.step2.touch':
 		'Pinch to zoom, or use the **+** and **−** buttons, and drag with one finger to move around. Try it now.',
 	'tutorial.step3':
-		'This is the **overview**, where every region shows its name. Hover over a name to enlarge it.',
+		'This is **Known**, the map you build. Click a region to put its name on the map — it stays there. Click it again to take it off, so you choose which names to study.',
 	'tutorial.step3.touch':
-		'This is the **overview**, where every region shows its name. Tap a name to enlarge it.',
+		'This is **Known**, the map you build. Tap a region to put its name on the map — it stays there. Tap it again to take it off, so you choose which names to study.',
 	'tutorial.step4':
-		'**Known** shows how well you know this map: the names you have placed right, as strongly as you know them. Open it and click any region to see which one it is.',
+		'Names you place right in the quiz appear here on their own, as strongly as you know them. New to a map? **Overview** shows every name at once — open it.',
 	'tutorial.step4.touch':
-		'**Known** shows how well you know this map: the names you have placed right, as strongly as you know them. Open it and tap any region to see which one it is.',
+		'Names you place right in the quiz appear here on their own, as strongly as you know them. New to a map? **Overview** shows every name at once — open it.',
 	'tutorial.step5': 'Ready to test yourself for real? Open the **Quiz**.',
 	'tutorial.step6':
 		'Drag a name from the tray onto its region. Try **Sicilia**: the big island off the toe of the boot.',
@@ -390,13 +390,13 @@ const de: Dictionary = {
 	'tutorial.step2.touch':
 		'Zoome mit zwei Fingern oder den Tasten **+** und **−**, und verschiebe die Karte mit einem Finger. Probier es aus.',
 	'tutorial.step3':
-		'Das ist die **Übersicht**: Hier steht jede Region mit ihrem Namen. Fahre mit der Maus über einen Namen, um ihn zu vergrößern.',
+		'Das ist **Gewusst**, deine eigene Karte. Klicke auf eine Region, um ihren Namen daraufzusetzen — er bleibt dort stehen. Noch einmal klicken nimmt ihn wieder weg: So wählst du selbst, welche Namen du lernen willst.',
 	'tutorial.step3.touch':
-		'Das ist die **Übersicht**: Hier steht jede Region mit ihrem Namen. Tippe auf einen Namen, um ihn zu vergrößern.',
+		'Das ist **Gewusst**, deine eigene Karte. Tippe auf eine Region, um ihren Namen daraufzusetzen — er bleibt dort stehen. Noch einmal tippen nimmt ihn wieder weg: So wählst du selbst, welche Namen du lernen willst.',
 	'tutorial.step4':
-		'**Gewusst** zeigt, wie gut du diese Karte kennst: die Namen, die du richtig platziert hast, so deutlich, wie du sie kennst. Öffne es und klicke auf eine Region, um zu sehen, welche es ist.',
+		'Namen, die du im Quiz richtig platzierst, erscheinen hier von selbst — so deutlich, wie du sie kennst. Neu auf einer Karte? Die **Übersicht** zeigt alle Namen auf einmal. Öffne sie.',
 	'tutorial.step4.touch':
-		'**Gewusst** zeigt, wie gut du diese Karte kennst: die Namen, die du richtig platziert hast, so deutlich, wie du sie kennst. Öffne es und tippe auf eine Region, um zu sehen, welche es ist.',
+		'Namen, die du im Quiz richtig platzierst, erscheinen hier von selbst — so deutlich, wie du sie kennst. Neu auf einer Karte? Die **Übersicht** zeigt alle Namen auf einmal. Öffne sie.',
 	'tutorial.step5': 'Bereit für den echten Test? Öffne das **Quiz**.',
 	'tutorial.step6':
 		'Ziehe einen Namen aus der Ablage auf seine Region. Versuch es mit **Sicilia**, der großen Insel vor der Stiefelspitze.',
@@ -524,13 +524,13 @@ const it: Dictionary = {
 	'tutorial.step2.touch':
 		'Usa due dita o i pulsanti **+** e **−** per lo zoom, e trascina la mappa con un dito per spostarti. Prova ora.',
 	'tutorial.step3':
-		'Questa è la **panoramica**, dove ogni regione mostra il suo nome. Passa il mouse su un nome per ingrandirlo.',
+		'Questa è **Conoscenza**, la mappa che costruisci tu. Clicca una regione per mettere il suo nome sulla mappa: resta lì. Cliccala di nuovo per toglierlo — scegli tu quali nomi studiare.',
 	'tutorial.step3.touch':
-		'Questa è la **panoramica**, dove ogni regione mostra il suo nome. Tocca un nome per ingrandirlo.',
+		'Questa è **Conoscenza**, la mappa che costruisci tu. Tocca una regione per mettere il suo nome sulla mappa: resta lì. Toccala di nuovo per toglierlo — scegli tu quali nomi studiare.',
 	'tutorial.step4':
-		'**Conoscenza** mostra quanto conosci questa mappa: i nomi che hai posizionato bene, con la forza con cui li sai. Aprilo e clicca una regione per scoprire qual è.',
+		'I nomi che indovini nel quiz compaiono qui da soli, con la forza con cui li sai. Mappa nuova? La **Panoramica** mostra tutti i nomi insieme: aprila.',
 	'tutorial.step4.touch':
-		'**Conoscenza** mostra quanto conosci questa mappa: i nomi che hai posizionato bene, con la forza con cui li sai. Aprilo e tocca una regione per scoprire qual è.',
+		'I nomi che indovini nel quiz compaiono qui da soli, con la forza con cui li sai. Mappa nuova? La **Panoramica** mostra tutti i nomi insieme: aprila.',
 	'tutorial.step5': 'Ora la prova vera: apri il **Quiz**.',
 	'tutorial.step6':
 		"Trascina un nome dal vassoio sulla sua regione. Prova con **Sicilia**, l'isola grande davanti alla punta dello stivale.",
