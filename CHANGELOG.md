@@ -28,6 +28,18 @@ Under the hood:
   paragraph was covering for it, and cutting the paragraph is what made it
   visible. Putting the paragraph back would have hidden it again.
 - Android versionCode 90399.
+- **Installers:** all three rebuilt from the v0.9.3 tag — the Windows
+  `.msi` and `-setup.exe`, and the Android `.apk`, signed with the current
+  key.
+- **Both shells were tried.** The `-setup.exe` was installed and driven over
+  CDP on a cleared profile: 63 maps, Known on open, 21 names drawn, 22
+  terrain features already on, the language picker one button. The APK
+  installed as an update over v0.9.2 (versionCode 90399) and was driven on
+  the emulator, where a town card showed all three lines in order —
+  "Adelaide — Named for Queen Adelaide, wife of William IV." pinned on top,
+  "It is called the city of churches…" rotating under it, and "In South
+  Australia. No. 5 by population on this map." quiet at the bottom. That is
+  FT-47 confirmed on a touch device.
 
 Not covered:
 
