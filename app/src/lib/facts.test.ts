@@ -3,7 +3,7 @@
 // in which order, and that all three languages produce a real sentence
 // rather than a template with a hole in it.
 import { describe, expect, it } from 'vitest';
-import { factClauses, formatCount, type Fact } from './facts';
+import { factClauses, formatCount, pickHook, type Fact } from './facts';
 import { LANGUAGES, setLanguage } from './i18n.svelte';
 
 const piemonte: Fact = {
@@ -44,10 +44,12 @@ describe('factClauses', () => {
 		]);
 	});
 
-	it('leads with the authored hook when there is one', () => {
+	it('leaves the authored name-facts out of the derived line', () => {
+		// They are the SECOND line of the card, rotating (FT-36) - mixing them
+		// into the derived clauses would lose that distinction.
 		setLanguage('en');
-		const [first] = factClauses({ ...piemonte, hook: 'The first capital of united Italy.' });
-		expect(first).toBe('The first capital of united Italy.');
+		const clauses = factClauses({ ...piemonte, hooks: ['Named for the Longobards.'] });
+		expect(clauses.join(' ')).not.toContain('Longobards');
 	});
 
 	it('prefers how a city grew over what it merely is', () => {
@@ -105,5 +107,44 @@ describe('formatCount', () => {
 		expect(formatCount(1652000, 'en')).toBe('1,652,000');
 		expect(formatCount(1652000, 'de')).toBe('1.652.000');
 		expect(formatCount(1652000, 'it')).toBe('1.652.000');
+	});
+});
+
+describe('pickHook (FT-36)', () => {
+	const hooks = ['first', 'second', 'third'];
+
+	it('has nothing to show when nobody has written one', () => {
+		expect(pickHook(undefined, 0)).toBeUndefined();
+		expect(pickHook([], 0)).toBeUndefined();
+	});
+
+	it('shows a different one each time you meet the place', () => {
+		// The point of a list: seeing one, then another, then the first again
+		// across sessions is what makes more than one of them stick.
+		expect(pickHook(hooks, 0)!.hook).toBe('first');
+		expect(pickHook(hooks, 1)!.hook).toBe('second');
+		expect(pickHook(hooks, 2)!.hook).toBe('third');
+	});
+
+	it('comes back round rather than running out', () => {
+		expect(pickHook(hooks, 3)!.hook).toBe('first');
+		expect(pickHook(hooks, 7)!.hook).toBe('second');
+	});
+
+	it('survives a stored count that makes no sense', () => {
+		// localStorage is editable by anyone with a console, and a crash here
+		// would take the map down with it.
+		expect(pickHook(hooks, -1)!.hook).toBe('third');
+		expect(pickHook(hooks, Number.NaN)!.hook).toBe('first');
+	});
+
+	it('reports where the rotation should go next', () => {
+		expect(pickHook(hooks, 0)!.next).toBe(1);
+		expect(pickHook(hooks, 2)!.next).toBe(3);
+	});
+
+	it('is a no-op for a place with exactly one', () => {
+		expect(pickHook(['only'], 0)!.hook).toBe('only');
+		expect(pickHook(['only'], 5)!.hook).toBe('only');
 	});
 });

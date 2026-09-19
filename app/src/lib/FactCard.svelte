@@ -16,6 +16,7 @@
 	let {
 		name,
 		fact,
+		hook,
 		max = 3,
 		bottom = '0.75rem',
 		onclose
@@ -23,6 +24,13 @@
 		/** The place the card is about. */
 		name: string;
 		fact: Fact | undefined;
+		/**
+		 * The rotating name-fact (FT-36): why the place is called what it is.
+		 * The VIEW picks it rather than this component, because picking one
+		 * advances the rotation, and a component that re-renders - on a
+		 * language change, say - must not advance it again.
+		 */
+		hook?: string;
 		/** How many clauses this screen has room for. */
 		max?: number;
 		/**
@@ -39,11 +47,20 @@
 	const clauses = $derived(factClauses(fact).slice(0, max));
 </script>
 
-{#if clauses.length > 0}
+{#if clauses.length > 0 || hook}
 	<div class="fact-card" data-map-overlay="bottom" data-testid="fact-card" style="bottom: {bottom}">
 		<div class="fact-body">
-			<span class="fact-name">{name}</span>
-			<span class="fact-text">{clauses.join(' ')}</span>
+			<p class="fact-where">
+				<span class="fact-name">{name}</span>
+				<span class="fact-text">{clauses.join(' ')}</span>
+			</p>
+			<!-- Why it is called that (FT-36). A second line, not another
+			     clause: the derived line above says where the place is, and
+			     this says where its NAME comes from, which is the thing being
+			     learned. -->
+			{#if hook}
+				<p class="fact-hook" data-testid="fact-hook">{hook}</p>
+			{/if}
 		</div>
 		{#if onclose}
 			<button type="button" class="fact-close" aria-label={t('fact.close')} onclick={onclose}>
@@ -90,6 +107,18 @@
 		font-size: 0.8125rem;
 		line-height: 1.35;
 		color: #2b332e;
+	}
+	.fact-where,
+	.fact-hook {
+		margin: 0;
+	}
+	/* Set apart from the line above it, and in the accent the app uses for
+	   anything it is offering rather than stating. */
+	.fact-hook {
+		margin-top: 0.3rem;
+		padding-top: 0.3rem;
+		border-top: 1px solid rgba(17, 24, 21, 0.09);
+		color: #6b4a22;
 	}
 	.fact-name {
 		font-weight: 700;

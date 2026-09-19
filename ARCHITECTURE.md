@@ -94,6 +94,14 @@ pairs well with a canvas/map-heavy UI.
   reserves its space, and takes no pointer events, so a quiz drag that
   crosses it still lands on the map underneath.
 
+- **Name-facts, authored and rotating** (v0.8.0, FT-36). `data/facts/<country>.json`
+  is the only hand-written content in the project: a list of one-sentence
+  facts per place, the first about where the NAME comes from.
+  `build-facts.ts` projects each into every map containing that place, and
+  the card shows a different one on each encounter, counting per device in
+  localStorage. `mapData.test.ts` fails on a fact whose id matches no
+  target - otherwise the sentence is simply never shown and nobody notices.
+
 ## Domain model
 
 **Target** — the thing being learned. Not just points: a river or mountain

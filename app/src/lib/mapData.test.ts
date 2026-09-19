@@ -5,7 +5,7 @@
 // Deliberately asserts invariants, never an exact object shape - GC-032 adds a
 // `colorIndex` field to every target, and extra fields must stay legal.
 
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import {
@@ -115,6 +115,25 @@ describe('map data integrity - every committed map', () => {
 		const facts = JSON.parse(readFileSync(factsFile, 'utf8')) as Record<string, unknown>;
 		const targetIds = loadMap(id).targets.map((t) => t.id);
 		expect(Object.keys(facts).sort()).toEqual([...targetIds].sort());
+	});
+
+	// FT-36: an authored name-fact whose id matches no target is a sentence
+	// nobody will ever read, and the mistake is invisible - the card simply
+	// shows its derived line. Checked per country file, against every map of
+	// that country, because the ids are shared across them.
+	it('every authored name-fact belongs to a real place', () => {
+		const factsDir = path.join(DEFAULT_MAPS_DIR, '..', 'facts');
+		if (!existsSync(factsDir)) return;
+		const knownIds = new Set(mapIds.flatMap((id) => loadMap(id).targets.map((t) => t.id)));
+		const orphans: string[] = [];
+		for (const file of readdirSync(factsDir).filter((f) => f.endsWith('.json'))) {
+			const authored = JSON.parse(readFileSync(path.join(factsDir, file), 'utf8'));
+			for (const key of Object.keys(authored)) {
+				if (key.startsWith('_')) continue;
+				if (!knownIds.has(key)) orphans.push(`${file}: ${key}`);
+			}
+		}
+		expect(orphans).toEqual([]);
 	});
 
 	it('data/maps/index.json is in sync with the map.json files', () => {

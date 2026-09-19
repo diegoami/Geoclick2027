@@ -12,7 +12,11 @@
 			"nameIt": "Trento",
 			"population": 107808
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"Two places in one name: Trento the city, and the upper valley of the Adige, the river that runs the length of it.",
+			"The only Italian region where most people in half of it speak German — the Alto Adige was Austrian until 1919."
+		]
 	},
 	"friuli-venezia-giulia": {
 		"kind": "region",
@@ -26,7 +30,11 @@
 			"nameIt": "Trieste",
 			"population": 216035
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"Friuli is worn-down Latin Forum Iulii, \"Julius's forum\" — Julius Caesar's market town, now Cividale.",
+			"Venezia Giulia was coined in 1863 for the lands east of Venice, using Julius's name a second time in the same region."
+		]
 	},
 	"veneto": {
 		"kind": "region",
@@ -43,7 +51,11 @@
 			"nameIt": "Verona",
 			"population": 347459
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"Named for the Veneti, who were living here before Rome was — the same root as Venice itself.",
+			"The mainland that Venice ruled for four centuries; the city is the small part, the Veneto is the rest."
+		]
 	},
 	"valle-d-aosta": {
 		"kind": "region",
@@ -58,7 +70,11 @@
 			"nameIt": "Aosta",
 			"population": 34062
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"The valley of Aosta, and Aosta is worn-down Augusta Praetoria — the town the Emperor Augustus founded in 25 BC.",
+			"Italy's smallest region, and the only one that is a single valley: one river, one road, walls of rock either side."
+		]
 	},
 	"lombardia": {
 		"kind": "region",
@@ -75,7 +91,11 @@
 			"nameIt": "Milano",
 			"population": 2945000
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"Named for the Longobards, the \"long-beards\", a Germanic people who took northern Italy in 568 and ruled it for two centuries.",
+			"In the Middle Ages its bankers were so well known that a Lombard was a moneylender — London's Lombard Street is named after them."
+		]
 	},
 	"piemonte": {
 		"kind": "region",
@@ -96,7 +116,11 @@
 			"name": "Monte Rosa",
 			"elevation": 4634
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"Literally \"at the foot of the mountains\" — ai piedi dei monti, the Alps that wrap it on three sides.",
+			"The kingdom that annexed the rest of Italy rather than joining it: Turin was the first capital of the unified country, in 1861."
+		]
 	},
 	"emilia-romagna": {
 		"kind": "region",
@@ -115,7 +139,11 @@
 			"nameIt": "Bologna",
 			"population": 488172
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"Two halves, both named by Rome: the Via Aemilia, a road built in 187 BC and still the straight line through the region, and Romagna, the part that stayed Roman under Byzantium after the Longobards took the north.",
+			"The road is why almost every city here sits in a row: Piacenza, Parma, Reggio, Modena, Bologna, Rimini."
+		]
 	},
 	"liguria": {
 		"kind": "region",
@@ -131,7 +159,11 @@
 			"nameIt": "Genova",
 			"population": 647497
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"Named for the Ligures, who were here before the Romans and before the Celts — nobody is sure what language they spoke.",
+			"The Ligurian Sea is named after the region, not the other way round."
+		]
 	},
 	"toscana": {
 		"kind": "region",
@@ -149,7 +181,11 @@
 			"nameIt": "Firenze",
 			"population": 1500000
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"From the Tusci, the Roman name for the Etruscans, whose country this was before Rome had one.",
+			"Its dialect became the Italian language, because Dante, Petrarch and Boccaccio all wrote in it."
+		]
 	},
 	"marche": {
 		"kind": "region",
@@ -167,7 +203,11 @@
 			"nameIt": "Ancona",
 			"population": 100507
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"Plural because there were several: a march was a frontier province of the Holy Roman Empire, and this coast held more than one of them.",
+			"The same word as the English \"marches\" on the Welsh border, and as Denmark — the march of the Danes."
+		]
 	},
 	"umbria": {
 		"kind": "region",
@@ -183,7 +223,11 @@
 			"nameIt": "Perugia",
 			"population": 149125
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"Named for the Umbri, an Italic people the Romans found here; the name is older than Latin.",
+			"The only region on the mainland with no coast and no foreign border — it touches nothing but other Italian regions."
+		]
 	},
 	"abruzzo": {
 		"kind": "region",
@@ -203,7 +247,11 @@
 			"name": "Corno Grande",
 			"elevation": 2912
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"From Aprutium, the medieval name of Teramo, which itself may come from the Praetutii who lived there.",
+			"A third of it is national park — the highest and wildest stretch of the Apennines, and the last place in Italy with wild bears."
+		]
 	},
 	"lazio": {
 		"kind": "region",
@@ -222,7 +270,11 @@
 			"nameIt": "Roma",
 			"population": 3339000
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"Latium, the land of the Latins — the people whose village on the Tiber became Rome, and whose language became Latin.",
+			"Rome ruled an empire from here for a thousand years and the region is still named after the tribe, not the city."
+		]
 	},
 	"molise": {
 		"kind": "region",
@@ -239,7 +291,11 @@
 			"nameIt": "Campobasso",
 			"population": 50762
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"Named after a family, not a people: the Norman de Molisio counts held it in the twelfth century.",
+			"Italy's youngest region, split from Abruzzo in 1963, and its second smallest."
+		]
 	},
 	"puglia": {
 		"kind": "region",
@@ -255,7 +311,11 @@
 			"nameIt": "Bari",
 			"population": 500577
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"From Apulia, the Roman name for the land of the Apuli — and the heel of the boot.",
+			"Its trulli, the cone-roofed stone huts around Alberobello, were built dry-stone so they could be pulled down quickly when the tax inspector came."
+		]
 	},
 	"campania": {
 		"kind": "region",
@@ -276,7 +336,11 @@
 			"name": "Vesuvio",
 			"elevation": 1281
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"From Latin campus, \"open country\" — the Romans named it for its plain, the most fertile in Italy, and called it campania felix, the happy countryside.",
+			"The plain is fertile because Vesuvius keeps covering it in ash; the same volcano buried Pompeii in 79 AD."
+		]
 	},
 	"basilicata": {
 		"kind": "region",
@@ -292,7 +356,11 @@
 			"nameIt": "Potenza",
 			"population": 69060
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"From Greek basilikos, \"the emperor's man\" — the Byzantine governor who ran it from Constantinople.",
+			"Also called Lucania, after the Lucani who were here first; Italy has changed the region's official name back and forth twice."
+		]
 	},
 	"sardegna": {
 		"kind": "region",
@@ -307,7 +375,11 @@
 			"name": "Punta la Marmora",
 			"elevation": 1834
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Named for the Sardi, and they for Sardus, a legendary founder the Romans said came from Libya.",
+			"Its nuraghi — seven thousand dry-stone towers, some older than Rome — exist nowhere else on earth."
+		]
 	},
 	"calabria": {
 		"kind": "region",
@@ -321,7 +393,11 @@
 			"nameIt": "Reggio Calabria",
 			"population": 180353
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"The name first belonged to the heel, not the toe: Roman Calabria was the Salento, and the name slid across the gulf in the Byzantine centuries.",
+			"Greek was still spoken in its southern villages into modern times, a survival from the colonies of Magna Graecia."
+		]
 	},
 	"sicilia": {
 		"kind": "region",
@@ -336,6 +412,10 @@
 			"name": "Monte Etna",
 			"elevation": 3322
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Named for the Sicels, one of three peoples on the island when the Greeks arrived — the Sicani and the Elymians were the others.",
+			"Ruled in turn by Greeks, Carthaginians, Romans, Arabs, Normans and Spaniards, and the food and the buildings still show every one of them."
+		]
 	}
 }

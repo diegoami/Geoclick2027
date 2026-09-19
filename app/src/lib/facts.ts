@@ -42,8 +42,15 @@ export interface Fact {
 	region?: string;
 	capitalOf?: 'country' | 'region';
 	population1950?: number;
-	/** The authored sentence, where one has been written (FT-36). */
-	hook?: string;
+	/**
+	 * The authored name-facts, where any have been written (FT-36).
+	 *
+	 * A list, not one sentence, and the card shows a different one each time
+	 * you meet the place. The first is always about the NAME - where the word
+	 * comes from, who it is named after - because the name is what is being
+	 * learned, and the derived line above already says where the place is.
+	 */
+	hooks?: string[];
 }
 
 export type Facts = Record<string, Fact>;
@@ -113,7 +120,6 @@ export function factClauses(fact: Fact | undefined): string[] {
 	const add = (key: TranslationKey, params?: Record<string, string | number>) =>
 		clauses.push(t(key, params));
 
-	if (fact.hook) clauses.push(fact.hook);
 	if (fact.capitalOf === 'country') add('fact.capital');
 	if (fact.position) add(POSITION_KEYS[fact.position]);
 	if (fact.region) add('fact.cityIn', { region: fact.region });
@@ -151,4 +157,62 @@ export function factClauses(fact: Fact | undefined): string[] {
 	if (fact.borders?.length) add('fact.borders', { names: joinNames(fact.borders) });
 
 	return clauses;
+}
+
+// --- The rotating name-fact (FT-36) ----------------------------------------
+//
+// A place with several name-facts shows a different one each time you meet
+// it, rather than the same one forever: seeing one, then another, then the
+// first again across sessions is what makes more than one of them stick.
+//
+// Which one you are due is kept per device in localStorage, like the
+// language and the favourites (mapPrefs.svelte.ts) - it is a convenience of
+// this device, not progress, so it is not in the ProgressRepository. Every
+// access is guarded: a private window can throw, and a fact box that throws
+// would take the map down with it.
+
+const ROTATION_KEY = 'geoclick:fact-rotation:v1';
+
+function readRotation(): Record<string, number> {
+	if (typeof localStorage === 'undefined') return {};
+	try {
+		const raw = localStorage.getItem(ROTATION_KEY);
+		const value: unknown = raw ? JSON.parse(raw) : {};
+		return value && typeof value === 'object' ? (value as Record<string, number>) : {};
+	} catch {
+		return {};
+	}
+}
+
+/** Which of `hooks` to show now, and the index to remember for next time. */
+export function pickHook(
+	hooks: string[] | undefined,
+	seen: number
+): { hook: string; next: number } | undefined {
+	if (!hooks || hooks.length === 0) return undefined;
+	// localStorage is editable by anyone with a console, and NaN % n is NaN -
+	// which would index past the end and blank the line rather than throw.
+	const count = Number.isFinite(seen) ? Math.trunc(seen) : 0;
+	const index = ((count % hooks.length) + hooks.length) % hooks.length;
+	return { hook: hooks[index], next: index + 1 };
+}
+
+/**
+ * The next name-fact for a place, advancing its rotation. Returns undefined
+ * when nobody has written one - most places, for now.
+ */
+export function rotateHook(mapId: string, targetId: string, fact: Fact | undefined) {
+	const key = `${mapId}/${targetId}`;
+	const rotation = readRotation();
+	const picked = pickHook(fact?.hooks, rotation[key] ?? 0);
+	if (!picked) return undefined;
+	if (typeof localStorage !== 'undefined') {
+		try {
+			localStorage.setItem(ROTATION_KEY, JSON.stringify({ ...rotation, [key]: picked.next }));
+		} catch {
+			// Full or blocked storage: the rotation restarts next time, which
+			// is a worse experience than intended and not a broken one.
+		}
+	}
+	return picked.hook;
 }
