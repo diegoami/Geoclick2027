@@ -6,7 +6,12 @@
 		"population1950": 163000,
 		"region": "Alberta",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"Named for Edmonton, then a village near London, by a Hudson’s Bay clerk from there.",
+			"The northernmost large city in North America, and the gateway to the oil sands.",
+			"Its river valley park system is the largest stretch of urban parkland on the continent."
+		]
 	},
 	"saskatoon": {
 		"kind": "city",
@@ -14,7 +19,12 @@
 		"populationRank": 16,
 		"region": "Saskatchewan",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"From the Cree misâskwatômina, the saskatoon berry that grows along its river.",
+			"It has more bridges over its river than its size warrants and is called the city of bridges.",
+			"The Canadian Light Source synchrotron here is the country’s only one."
+		]
 	},
 	"calgary": {
 		"kind": "city",
@@ -23,7 +33,12 @@
 		"population1950": 132000,
 		"region": "Alberta",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"Named for Calgary on Mull in Scotland — from Gaelic for \"beach of the meadow\".",
+			"Its Stampede, running since 1912, calls itself the greatest outdoor show on earth.",
+			"It hosted the 1988 Winter Olympics and has the most head offices per head in Canada, from the oil industry."
+		]
 	},
 	"regina": {
 		"kind": "city",
@@ -31,7 +46,12 @@
 		"populationRank": 18,
 		"region": "Saskatchewan",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"Latin for \"queen\", named for Victoria in 1882 — it had been Pile of Bones, after the bison remains left there.",
+			"Every tree in the city was planted; the site was bare prairie.",
+			"The Royal Canadian Mounted Police have trained here since 1885."
+		]
 	},
 	"kelowna": {
 		"kind": "city",
@@ -39,7 +59,12 @@
 		"populationRank": 24,
 		"region": "British Columbia",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"From Okanagan kì?láwna?, \"grizzly bear\".",
+			"The centre of British Columbia’s wine and orchard country, in a valley with a semi-desert climate.",
+			"Its lake is said to hold Ogopogo, a monster in Syilx tradition long before settlers arrived."
+		]
 	},
 	"winnipeg": {
 		"kind": "city",
@@ -47,7 +72,12 @@
 		"populationRank": 8,
 		"region": "Manitoba",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"From Cree wînipêk, \"muddy water\", for the lake north of it.",
+			"The Forks, where the Red and Assiniboine meet, has been a meeting place for about 6,000 years.",
+			"The 1919 General Strike here shut the city for six weeks and shaped Canadian labour law."
+		]
 	},
 	"vancouver": {
 		"kind": "city",
@@ -56,7 +86,12 @@
 		"population1950": 556000,
 		"region": "British Columbia",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Named for Captain George Vancouver, who charted the coast in 1792.",
+			"Its Stanley Park is larger than Central Park and mostly still forest.",
+			"It is regularly rated among the most liveable cities in the world and among the least affordable."
+		]
 	},
 	"abbotsford": {
 		"kind": "city",
@@ -64,7 +99,12 @@
 		"populationRank": 20,
 		"region": "British Columbia",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Named after a local settler family, or after Walter Scott’s house in Scotland.",
+			"It produces more farm revenue per hectare than anywhere else in Canada, mostly berries and poultry.",
+			"It sits directly on the US border in the Fraser Valley."
+		]
 	},
 	"victoria": {
 		"kind": "city",
@@ -72,7 +112,12 @@
 		"populationRank": 15,
 		"region": "British Columbia",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Named for Queen Victoria; it is the capital of British Columbia, not Vancouver.",
+			"The mildest climate in Canada, so it grows palms and its gardens flower in February.",
+			"Butchart Gardens nearby was planted in an exhausted limestone quarry from 1904."
+		]
 	},
 	"st-john-s": {
 		"kind": "city",
@@ -80,14 +125,24 @@
 		"populationRank": 23,
 		"region": "Newfoundland and Labrador",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"Named for St John the Baptist, on whose feast Cabot is said to have arrived in 1497.",
+			"The oldest English-founded city in North America, and its harbour is entered through a narrow gap in the cliffs.",
+			"Marconi received the first transatlantic radio signal here in 1901, on Signal Hill."
+		]
 	},
 	"quebec": {
 		"kind": "city",
 		"population": 624177,
 		"populationRank": 9,
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"From Algonquin kébec, \"where the river narrows\" — the point at Quebec City where the St Lawrence closes in.",
+			"The only province where French is the sole official language, and about 85% of people speak it at home.",
+			"It is larger than any European country except Russia, and it generates almost all its electricity from water."
+		]
 	},
 	"sudbury": {
 		"kind": "city",
@@ -95,7 +150,12 @@
 		"populationRank": 19,
 		"region": "Ontario",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"Named for Sudbury in Suffolk, the wife’s birthplace of a railway official.",
+			"A meteorite impact about 1.85 billion years ago created its nickel deposits, among the world’s richest.",
+			"Apollo astronauts trained here because the landscape, stripped by smelting, resembled the Moon."
+		]
 	},
 	"trois-rivieres": {
 		"kind": "city",
@@ -103,7 +163,12 @@
 		"populationRank": 25,
 		"region": "Québec",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"\"Three rivers\" — though there is one river with two islands splitting its mouth into three channels.",
+			"Founded in 1634, the second oldest French city in Canada after Quebec.",
+			"Its paper mills once made it the largest newsprint producer in the world."
+		]
 	},
 	"montreal": {
 		"kind": "city",
@@ -112,7 +177,12 @@
 		"population1950": 1343000,
 		"region": "Québec",
 		"coastal": true,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"From Mont Royal, the hill Jacques Cartier named in 1535 for Francis I.",
+			"The largest French-speaking city in the Americas and the second largest in the world after Paris.",
+			"Its Underground City links 32 km of passages, built so the winter can be avoided entirely."
+		]
 	},
 	"ottawa": {
 		"kind": "city",
@@ -122,7 +192,12 @@
 		"region": "Ontario",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"From the Algonquin adawe, \"to trade\" — the Ottawa river was a trading route.",
+			"Queen Victoria chose it as capital in 1857, partly because it was far from the American border.",
+			"Its Rideau Canal freezes into the world’s largest skating rink, 7.8 km long, and is a UNESCO site."
+		]
 	},
 	"sherbrooke": {
 		"kind": "city",
@@ -130,7 +205,12 @@
 		"populationRank": 22,
 		"region": "Québec",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"Named for Sir John Coape Sherbrooke, a governor general.",
+			"The main city of the Eastern Townships, settled by Loyalists and now overwhelmingly francophone.",
+			"Its gorge in the middle of the town drops 50 m and once powered the mills."
+		]
 	},
 	"halifax": {
 		"kind": "city",
@@ -138,7 +218,12 @@
 		"populationRank": 12,
 		"region": "Nova Scotia",
 		"coastal": true,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"Named for the Earl of Halifax, who was president of the Board of Trade when it was founded in 1749.",
+			"The 1917 explosion of a munitions ship in its harbour was the largest man-made blast before the atomic bomb.",
+			"Titanic victims were brought here, and 150 are buried in its cemeteries."
+		]
 	},
 	"barrie": {
 		"kind": "city",
@@ -146,7 +231,12 @@
 		"populationRank": 17,
 		"region": "Ontario",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Named for Sir Robert Barrie, a naval commodore on the Great Lakes.",
+			"It sits on Kempenfelt Bay, an arm of Lake Simcoe, and is one of Canada’s fastest-growing cities.",
+			"Its snow, off Georgian Bay, regularly buries the region in lake-effect storms."
+		]
 	},
 	"kingston": {
 		"kind": "city",
@@ -154,7 +244,12 @@
 		"populationRank": 26,
 		"region": "Ontario",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Named for George III — it was Fort Frontenac under the French.",
+			"It was the first capital of the Province of Canada, from 1841 to 1844.",
+			"Its Rideau Canal and fortifications are a UNESCO site, built to defend against an American attack that never came."
+		]
 	},
 	"oshawa": {
 		"kind": "city",
@@ -162,7 +257,12 @@
 		"populationRank": 10,
 		"region": "Ontario",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"From an Ojibwe word meaning roughly \"where we must leave the canoes\".",
+			"General Motors of Canada has built cars here since 1918, on the site of a carriage works.",
+			"That works, McLaughlin, made it Canada’s motor city."
+		]
 	},
 	"toronto": {
 		"kind": "city",
@@ -171,7 +271,12 @@
 		"population1950": 1068000,
 		"region": "Ontario",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"From Mohawk tkaronto, \"where there are trees standing in the water\" — fishing weirs further north.",
+			"About half its residents were born outside Canada, one of the highest shares of any city in the world.",
+			"The CN Tower was the tallest free-standing structure in the world for 32 years."
+		]
 	},
 	"kitchener": {
 		"kind": "city",
@@ -179,7 +284,12 @@
 		"populationRank": 11,
 		"region": "Ontario",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"It was Berlin until 1916, when anti-German feeling forced a change; it was renamed for Lord Kitchener.",
+			"It still holds the largest Oktoberfest outside Germany.",
+			"It sits beside Waterloo, with which it forms one urban area, and has a large Old Order Mennonite community nearby."
+		]
 	},
 	"hamilton": {
 		"kind": "city",
@@ -187,7 +297,12 @@
 		"populationRank": 7,
 		"region": "Ontario",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Named for George Hamilton, who laid out the townsite in 1815.",
+			"Canada’s steel city, built on the Niagara Escarpment, which gives it over a hundred waterfalls inside the city limits.",
+			"That is more waterfalls per area than anywhere else in the world of comparable size."
+		]
 	},
 	"london": {
 		"kind": "city",
@@ -195,7 +310,12 @@
 		"populationRank": 13,
 		"region": "Ontario",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Named for London, England, in 1793 — and it sits on its own Thames, also named to match.",
+			"It has a Covent Garden Market and an Oxford Street, following the same theme.",
+			"Insulin was conceived here in 1920, when Frederick Banting woke at two in the morning with the idea."
+		]
 	},
 	"sarnia": {
 		"kind": "city",
@@ -203,7 +323,12 @@
 		"populationRank": 21,
 		"region": "Ontario",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Named for Sarnia, the Roman name for Guernsey — chosen by a governor who had been its lieutenant governor.",
+			"Its Chemical Valley holds about 40% of Canada’s petrochemical industry.",
+			"The Blue Water Bridge here crosses to Michigan at the foot of Lake Huron."
+		]
 	},
 	"windsor": {
 		"kind": "city",
@@ -211,6 +336,11 @@
 		"populationRank": 14,
 		"region": "Ontario",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Named for Windsor in England.",
+			"The southernmost city in Canada — it is actually south of Detroit, which lies across the river to the north.",
+			"It is Canada’s automotive capital, and during Prohibition most of the liquor smuggled into America crossed here."
+		]
 	}
 }

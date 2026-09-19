@@ -13,7 +13,12 @@
 			"nameIt": "Lilla",
 			"population": 1044000
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"Simply \"upper France\" — a name invented in 2016, chosen by the region's own residents from a shortlist after Nord-Pas-de-Calais-Picardie proved unusable.",
+			"Picardy underneath it is older and better named: from the picque, the pike its infantry carried.",
+			"The Somme runs through it, and its 1916 battlefields and cemeteries are the reason most visitors come."
+		]
 	},
 	"normandie": {
 		"kind": "region",
@@ -31,7 +36,12 @@
 			"nameIt": "Rouen",
 			"population": 532559
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"The land of the Northmen: Vikings under Rollo were granted it in 911, settled, and within a century spoke French and called themselves Normans.",
+			"Those Normans then took England in 1066, which is why perhaps a third of English vocabulary arrived from this one region.",
+			"The D-Day landings came ashore on its beaches in 1944, and Mont-Saint-Michel sits on its border with Brittany."
+		]
 	},
 	"grand-est": {
 		"kind": "region",
@@ -47,7 +57,12 @@
 			"nameIt": "Strasburgo",
 			"population": 439972
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"\"Great East\" — another 2016 coinage, over Alsace, Lorraine and Champagne, three names far older than the one on the map.",
+			"Alsace and Lorraine changed hands between France and Germany four times between 1871 and 1945, which is why Strasbourg was chosen for the European Parliament.",
+			"Champagne may only be called champagne if it comes from here, a rule France has defended in court worldwide for a century."
+		]
 	},
 	"ile-de-france": {
 		"kind": "region",
@@ -65,7 +80,12 @@
 			"nameIt": "Parigi",
 			"population": 9904000
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"The \"island of France\" — not an island but the land between the Seine, the Marne and the Oise, the royal domain the kingdom grew outwards from.",
+			"It is the smallest region by area but holds about a fifth of the whole country's population.",
+			"Versailles is here, and so is every one of France's high-speed lines, which all radiate from Paris."
+		]
 	},
 	"bretagne": {
 		"kind": "region",
@@ -80,7 +100,12 @@
 			"nameIt": "Rennes",
 			"population": 209375
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"Named for Britons who crossed from Cornwall and Wales in the fifth century — which is why Brittany and Britain share a name.",
+			"Breton is a Celtic language, closer to Welsh than to French, and about 200,000 people still speak it.",
+			"It has more coastline than any other French region, and its tides at Mont-Saint-Michel are among the largest in Europe."
+		]
 	},
 	"centre-val-de-loire": {
 		"kind": "region",
@@ -99,7 +124,12 @@
 			"nameIt": "Tours",
 			"population": 236096
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"The centre of France plus the valley of the Loire — a name that describes a location rather than remembers anything.",
+			"Its stretch of the Loire holds the great châteaux — Chambord, Chenonceau, Amboise — and is a UNESCO site for that reason.",
+			"The Loire is the longest river in France, 1,006 km, and the last big one in Europe with no dam on its lower course."
+		]
 	},
 	"pays-de-la-loire": {
 		"kind": "region",
@@ -116,7 +146,12 @@
 			"nameIt": "Nantes",
 			"population": 438537
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"\"Lands of the Loire\", and a slightly awkward name: the region was assembled in 1955 and the river only clips its southern half.",
+			"Nantes, its capital, was the historic capital of Brittany, which many Bretons still consider it to be.",
+			"The Le Mans 24-hour race has run here since 1923, on roads that are public for the rest of the year."
+		]
 	},
 	"bourgogne-franche-comte": {
 		"kind": "region",
@@ -133,7 +168,12 @@
 			"nameIt": "Digione",
 			"population": 169946
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"Burgundy is named for the Burgundians, a Germanic people who settled here around 450; Franche-Comté is the \"free county\", exempt from feudal dues.",
+			"The dukes of Burgundy were so rich in the 1400s that they were effectively a rival kingdom, ruling the Low Countries as well.",
+			"Its Côte d'Or produces the most expensive wine on earth by the hectare, from plots sometimes smaller than a tennis court."
+		]
 	},
 	"auvergne-rhone-alpes": {
 		"kind": "region",
@@ -155,7 +195,12 @@
 			"name": "Mont Blanc",
 			"elevation": 4807
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"The Arverni were the tribe whose chief Vercingetorix fought Caesar; the Rhône and the Alps supply the rest of the name.",
+			"The Auvergne is built on a chain of about eighty extinct volcanoes, the Chaîne des Puys, now a UNESCO site.",
+			"Mont Blanc stands on its border at 4,808 m, and Lyon, its capital, is the gastronomic capital of France by long consent."
+		]
 	},
 	"nouvelle-aquitaine": {
 		"kind": "region",
@@ -172,7 +217,12 @@
 			"nameIt": "Bordeaux",
 			"population": 803000
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"Aquitania is Latin for \"land of waters\" — its rivers and its Atlantic coast — with \"new\" added in 2016 when three regions merged.",
+			"Eleanor of Aquitaine brought it to the English crown by marriage in 1152, and it stayed English for three hundred years.",
+			"The largest region in France, larger than Austria, and Bordeaux at its centre is the most valuable wine region in the world."
+		]
 	},
 	"provence-alpes-cote-d-azur": {
 		"kind": "region",
@@ -187,7 +237,12 @@
 			"nameIt": "Marsiglia",
 			"population": 1400000
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"Provence is simply provincia — the Romans' first province outside Italy, so important they called it \"the Province\" and nothing else.",
+			"The Côte d'Azur was named in 1887 by a writer for the colour of the sea, and the name sold the coast to the world.",
+			"Its Roman remains are the best outside Italy: the Pont du Gard, the arena at Arles, the theatre at Orange."
+		]
 	},
 	"occitanie": {
 		"kind": "region",
@@ -203,7 +258,12 @@
 			"nameIt": "Tolosa",
 			"population": 847000
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Named in 2016 for the langue d'oc, the southern tongue where \"yes\" was oc rather than the northern oïl that became French.",
+			"Occitan was the language of the troubadours, and the first European poetry in a living language was written in it.",
+			"Carcassonne's double walls and the Canal du Midi, dug in the 1680s to link the Atlantic to the Mediterranean, are both here."
+		]
 	},
 	"corse": {
 		"kind": "region",
@@ -218,6 +278,11 @@
 			"name": "Monte Cinto",
 			"elevation": 2706
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"Corsica's name is pre-Roman and unexplained; the Greeks called it Kalliste, \"the most beautiful\".",
+			"Genoese until 1768, when Genoa sold it to France — a year before Napoleon was born in Ajaccio, which made him French by a margin of months.",
+			"Two thirds of it is mountain, and the GR20 across its spine is considered the hardest long-distance path in Europe."
+		]
 	}
 }

@@ -5,7 +5,12 @@
 		"populationRank": 65,
 		"region": "Hokkaido",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"\"Northern view\" — kita north, mi to see.",
+			"It produces most of Japan’s peppermint; at one point it supplied about 70% of the world’s.",
+			"It is one of the coldest cities in Japan, with a large temperature range between summer and winter."
+		]
 	},
 	"asahikawa": {
 		"kind": "city",
@@ -13,7 +18,12 @@
 		"populationRank": 33,
 		"region": "Hokkaido",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"\"Morning sun river\" — asahi is the rising sun.",
+			"Japan’s lowest recorded temperature, −41 °C, was measured here in 1902.",
+			"Its zoo redesigned its enclosures around how animals actually move and became the most visited in Japan."
+		]
 	},
 	"otaru": {
 		"kind": "city",
@@ -21,7 +31,12 @@
 		"populationRank": 64,
 		"region": "Hokkaido",
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"From Ainu ota-or-nay, \"river running through the sandy beach\" — one of many Ainu names in Hokkaidō.",
+			"Its canal district of stone warehouses is what remains of a herring boom that made it rich.",
+			"It is known for glassware, originally made as floats for fishing nets."
+		]
 	},
 	"sapporo": {
 		"kind": "city",
@@ -30,7 +45,12 @@
 		"population1950": 754000,
 		"region": "Hokkaido",
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"From Ainu sat-poro-pet, \"dry great river\".",
+			"Laid out on a grid in 1869 with American advice, which is why it looks unlike any other Japanese city.",
+			"Its snow festival carves buildings from two million tonnes of snow, and it hosted the 1972 Winter Olympics."
+		]
 	},
 	"kushiro": {
 		"kind": "city",
@@ -38,7 +58,12 @@
 		"populationRank": 53,
 		"region": "Hokkaido",
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"From an Ainu name, possibly kus-ru, \"a road to pass through\".",
+			"Its marsh is Japan’s largest wetland and the home of the red-crowned crane, saved from near-extinction there.",
+			"It is one of the foggiest places in Japan, with sea fog for much of the summer."
+		]
 	},
 	"obihiro": {
 		"kind": "city",
@@ -46,7 +71,12 @@
 		"populationRank": 59,
 		"region": "Hokkaido",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"From Ainu o-pere-perke-p, \"a river split at its mouth\".",
+			"Its ban'ei racing has draught horses pull heavy sledges up sand ramps — found nowhere else in the world.",
+			"The Tokachi plain around it is Japan’s largest farming region, growing beans, potatoes and sugar beet."
+		]
 	},
 	"tomakomai": {
 		"kind": "city",
@@ -54,7 +84,12 @@
 		"populationRank": 58,
 		"region": "Hokkaido",
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"From Ainu to-mak-oma-i, \"a river running in behind a swamp\".",
+			"It has one of Japan’s largest paper mills and a major ice hockey tradition.",
+			"Its port is Hokkaidō’s busiest, handling most of the island’s freight."
+		]
 	},
 	"muroran": {
 		"kind": "city",
@@ -62,7 +97,12 @@
 		"populationRank": 62,
 		"region": "Hokkaido",
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"From Ainu mo-ruerani, \"a small slope down\".",
+			"A steel town on a hooked peninsula, with one of Japan’s largest mills.",
+			"Its Hakuchō bridge is the longest suspension bridge in eastern Japan."
+		]
 	},
 	"hakodate": {
 		"kind": "city",
@@ -70,14 +110,24 @@
 		"populationRank": 43,
 		"region": "Hokkaido",
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"\"Box fort\" — hako box, date a fort, for a fortified residence built in 1454.",
+			"One of the first two ports opened to foreigners in 1854, which is why it has Russian and Western churches.",
+			"Its Goryōkaku is a star fort in Western style, the last stand of the shogunate’s forces in 1869."
+		]
 	},
 	"aomori": {
 		"kind": "city",
 		"population": 298394,
 		"populationRank": 44,
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"\"Blue forest\" — the dark wooded hill that sailors steered by when entering the bay.",
+			"The Sannai-Maruyama site here was a settled village 5,900 years ago, which upended the idea that the Jōmon were only wandering foragers.",
+			"It grows about half of all Japanese apples, and its Nebuta festival parades illuminated paper warriors the size of houses."
+		]
 	},
 	"hirosaki": {
 		"kind": "city",
@@ -85,7 +135,12 @@
 		"populationRank": 57,
 		"region": "Aomori",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"\"Wide cape\" — hiro wide, saki a cape.",
+			"Its castle grounds hold about 2,600 cherry trees, considered among the finest blossom in Japan.",
+			"It grows a large share of the apples that make Aomori the apple prefecture."
+		]
 	},
 	"hachinohe": {
 		"kind": "city",
@@ -93,7 +148,12 @@
 		"populationRank": 50,
 		"region": "Aomori",
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"\"Eighth door\" — the area was divided into numbered horse-breeding pastures, and this was the eighth.",
+			"Several nearby towns keep the same numbering: Sannohe is the third, Ichinohe the first.",
+			"Its Sansha Taisai festival parades enormous floats and is a UNESCO heritage item."
+		]
 	},
 	"morioka": {
 		"kind": "city",
@@ -101,14 +161,24 @@
 		"populationRank": 45,
 		"region": "Iwate",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"\"Abundant hill\" — mori abundance, oka hill.",
+			"Its wanko soba is served in small bowls refilled until the eater surrenders; the record is over 500.",
+			"Nambu ironware, its cast-iron kettles, has been made here since the 1600s."
+		]
 	},
 	"akita": {
 		"kind": "city",
 		"population": 320069,
 		"populationRank": 42,
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"\"Autumn field\", though the older written form suggests it may first have meant boggy or poor ground and been improved on paper.",
+			"The Akita dog comes from here — Hachikō, who waited nine years at Shibuya station, was one.",
+			"It has the highest rice yield per head in Japan and makes some of its most respected sake."
+		]
 	},
 	"sakata": {
 		"kind": "city",
@@ -116,14 +186,24 @@
 		"populationRank": 66,
 		"region": "Yamagata",
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"\"Slope rice field\" — saka a slope, ta a paddy.",
+			"It was the northern terminus of the kitamaebune shipping route that carried rice to Osaka.",
+			"The Sankyo rice warehouses from 1893, shaded by a row of zelkova trees, are still in use."
+		]
 	},
 	"yamagata": {
 		"kind": "city",
 		"population": 272209,
 		"populationRank": 47,
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"\"Mountain shape\", for the ring of peaks around its basin.",
+			"It grows about 70% of Japan's cherries, and its Yonezawa beef ranks with Kobe's.",
+			"The Dewa Sanzan here are three sacred mountains walked by yamabushi ascetics, and its Ginzan hot spring is the wooden-inn street everyone photographs in snow."
+		]
 	},
 	"sendai": {
 		"kind": "city",
@@ -132,21 +212,36 @@
 		"population1950": 538000,
 		"region": "Miyagi",
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"\"A thousand generations\" — though an older written form meant \"a thousand hermits\".",
+			"Date Masamune, the one-eyed warlord, built it in 1600 and it remains the largest city in northern Honshū.",
+			"Its Tanabata festival in August is the biggest in Japan, and its zelkova-lined avenues make it the city of trees."
+		]
 	},
 	"niigata": {
 		"kind": "city",
 		"population": 569797,
 		"populationRank": 21,
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"\"New lagoon\" — the harbour that formed where the Shinano river changed course.",
+			"Its Koshihikari rice is the standard by which Japanese rice is judged, and it has more sake breweries than any other prefecture.",
+			"The Shinano is Japan's longest river at 367 km, and the snow here reaches several metres in the mountains."
+		]
 	},
 	"fukushima": {
 		"kind": "city",
 		"population": 294237,
 		"populationRank": 46,
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"\"Fortune island\", for a castle on a rise in the marsh that stood out like an island.",
+			"The third largest prefecture, and its Aizu region held out for the shogun in 1868 — the story of the teenage Byakkotai is still taught.",
+			"The 2011 nuclear accident displaced 160,000 people; most of the prefecture was never evacuated and its peaches are again a national brand."
+		]
 	},
 	"nagaoka": {
 		"kind": "city",
@@ -154,7 +249,12 @@
 		"populationRank": 56,
 		"region": "Niigata",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"\"Long hill\" — naga long, oka hill.",
+			"Its firework festival on the Shinano river is one of Japan’s three greatest, begun to mourn the 1945 air raid.",
+			"Yamamoto Isoroku, who planned Pearl Harbor and opposed the war he was ordered to fight, was born here."
+		]
 	},
 	"koriyama": {
 		"kind": "city",
@@ -162,7 +262,12 @@
 		"populationRank": 36,
 		"region": "Fukushima",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"\"District mountain\" — kōri an old administrative district.",
+			"The Asaka canal, dug in 1882 to bring water over a watershed from Lake Inawashiro, made the dry plateau farmable.",
+			"It is a transport hub where several rail lines meet in central Fukushima."
+		]
 	},
 	"iwaki": {
 		"kind": "city",
@@ -170,14 +275,24 @@
 		"populationRank": 32,
 		"region": "Fukushima",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"\"Rock city\" — iwa rock, ki a castle or citadel.",
+			"It has one of the largest city areas in Japan, formed by merging fourteen towns in 1966.",
+			"Its Spa Resort Hawaiians was built by a dying coal company in 1966 and retrained miners’ daughters as hula dancers."
+		]
 	},
 	"toyama": {
 		"kind": "city",
 		"population": 332812,
 		"populationRank": 40,
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"\"Rich mountain\" — and the mountains are the point: the Tateyama range rises 3,000 m almost straight out of the bay.",
+			"Its snow corridor at Murodō is cut through drifts up to 20 m high every spring.",
+			"Toyama's travelling medicine sellers went door to door across Japan from the 1690s, leaving a box and charging only for what was used."
+		]
 	},
 	"takaoka": {
 		"kind": "city",
@@ -185,14 +300,24 @@
 		"populationRank": 60,
 		"region": "Toyama",
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"\"High hill\" — the name comes from a phrase in the Chinese Book of Songs about a phoenix.",
+			"It has cast bronze for 400 years and made most of Japan’s temple bells and Buddha statues.",
+			"Its Great Buddha is one of the three largest in Japan."
+		]
 	},
 	"nagano": {
 		"kind": "city",
 		"population": 594311,
 		"populationRank": 19,
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"\"Long field\", for the valley floor its capital sits on.",
+			"Zenkōji temple here is older than the split of Japanese Buddhism into sects, so every sect maintains it jointly.",
+			"It held the 1998 Winter Olympics, and its snow monkeys at Jigokudani bathe in hot springs."
+		]
 	},
 	"kanazawa": {
 		"kind": "city",
@@ -200,7 +325,12 @@
 		"populationRank": 23,
 		"region": "Ishikawa",
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"\"Golden marsh\" — from a legend of a peasant who washed gold dust in a spring.",
+			"Its Kenrokuen is one of the three great gardens of Japan.",
+			"It produces about 99% of Japan’s gold leaf, and was rich enough on rice that it was spared bombing."
+		]
 	},
 	"utsunomiya": {
 		"kind": "city",
@@ -208,7 +338,12 @@
 		"populationRank": 18,
 		"region": "Tochigi",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"\"Shrine of the second palace\" or \"the foremost shrine\" — the reading is disputed.",
+			"It is Japan’s gyoza capital, with the highest household spending on dumplings in the country.",
+			"Its Ōya stone, quarried nearby, was used by Frank Lloyd Wright in the Imperial Hotel in Tokyo."
+		]
 	},
 	"maebashi": {
 		"kind": "city",
@@ -216,7 +351,12 @@
 		"populationRank": 35,
 		"region": "Gunma",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"\"Front bridge\" — mae front, hashi a bridge.",
+			"It is the capital of Gunma and was a silk-reeling centre in the Meiji period.",
+			"Its winds off the Akagi mountain are strong enough to be a local byword."
+		]
 	},
 	"mito": {
 		"kind": "city",
@@ -224,7 +364,12 @@
 		"populationRank": 34,
 		"region": "Ibaraki",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"\"Water gate\" — mi water, to a gate or door.",
+			"It was a senior Tokugawa branch house, and its scholars developed the ideology that eventually toppled the shogunate.",
+			"Its Kairakuen is another of the three great gardens of Japan, planted with 3,000 plum trees."
+		]
 	},
 	"matsumoto": {
 		"kind": "city",
@@ -232,14 +377,24 @@
 		"populationRank": 52,
 		"region": "Nagano",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"\"Origin of the pines\" — matsu pine, moto origin.",
+			"Its castle is one of twelve with an original keep and one of five national treasures; it is called the crow castle for its black walls.",
+			"The Suzuki method of teaching the violin was developed here."
+		]
 	},
 	"fukui": {
 		"kind": "city",
 		"population": 248707,
 		"populationRank": 48,
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"\"Fortune well\", renamed from an earlier name meaning \"north village\" because the old one was thought unlucky.",
+			"More dinosaur fossils have been found here than anywhere else in Japan, and several species carry the name Fukui.",
+			"It repeatedly ranks first in Japan for happiness and for children's school results, and makes over 90% of the country's spectacle frames."
+		]
 	},
 	"kawagoe": {
 		"kind": "city",
@@ -247,7 +402,12 @@
 		"populationRank": 37,
 		"region": "Saitama",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"\"River crossing\" — kawa river, goe to cross.",
+			"It kept its Edo-period kurazukuri warehouse streets and is called Little Edo for them.",
+			"Its Toki no Kane bell tower has marked the hours since the 1600s and is rung four times a day."
+		]
 	},
 	"tokyo": {
 		"kind": "city",
@@ -256,7 +416,12 @@
 		"population1950": 11275000,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"\"Eastern capital\" — renamed from Edo in 1868 when the emperor moved here from Kyōto, the old capital in the west.",
+			"Greater Tokyo is the largest metropolitan area in the world, about 37 million people.",
+			"Edo was already the world's largest city by 1720, with over a million people, and its fire brigades were organised by neighbourhood."
+		]
 	},
 	"hachioji": {
 		"kind": "city",
@@ -264,7 +429,12 @@
 		"populationRank": 20,
 		"region": "Tokyo",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"\"Eight princes\" — named for a shrine to the eight children of a Shinto deity.",
+			"It was the silk road of Japan: raw silk from the mountains passed through here to Yokohama for export.",
+			"It has more universities than anywhere in Tokyo outside the centre."
+		]
 	},
 	"kofu": {
 		"kind": "city",
@@ -272,7 +442,12 @@
 		"populationRank": 54,
 		"region": "Yamanashi",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"\"Armour capital\" — from the fortress of the Takeda clan.",
+			"Takeda Shingen, the warlord who fought Oda Nobunaga, ruled from here and is the city’s emblem.",
+			"It is the centre of Japanese winemaking, using the koshu grape, and cuts most of the country’s jewellery."
+		]
 	},
 	"kawasaki": {
 		"kind": "city",
@@ -280,14 +455,24 @@
 		"populationRank": 11,
 		"region": "Kanagawa",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"\"River cape\" — kawa river, saki a cape.",
+			"A post town on the Tōkaidō road that became one of Japan’s densest industrial belts.",
+			"Its Kanamara festival, with a large pink portable shrine, began as a prayer for protection against disease."
+		]
 	},
 	"tottori": {
 		"kind": "city",
 		"population": 154098,
 		"populationRank": 63,
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"\"Bird taking\" — its people once caught waterfowl for the imperial court and paid their tax in birds.",
+			"The least populated prefecture, with about 540,000 people, and the only one with no McDonald's for a time, which it advertised.",
+			"Its sand dunes run 16 km along the coast and are the largest in Japan, with camels for the tourists."
+		]
 	},
 	"matsue": {
 		"kind": "city",
@@ -295,7 +480,12 @@
 		"populationRank": 61,
 		"region": "Shimane",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"\"Pine inlet\" — matsu pine, e an inlet.",
+			"Its castle is one of the twelve with an original keep and a national treasure.",
+			"Lafcadio Hearn lived here and wrote the books that introduced Japan to Western readers in the 1890s."
+		]
 	},
 	"yokohama": {
 		"kind": "city",
@@ -303,14 +493,24 @@
 		"populationRank": 3,
 		"region": "Kanagawa",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"\"Horizontal beach\" — yoko sideways, hama a beach.",
+			"A fishing village until 1859, when it became the first port opened to foreigners; it is now Japan’s second city.",
+			"Its Chinatown is the largest in Japan, and Japan’s first railway, daily newspaper and gas lamps all began here."
+		]
 	},
 	"gifu": {
 		"kind": "city",
 		"population": 412895,
 		"populationRank": 31,
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"Invented in 1567 by Oda Nobunaga, who took Qi (gi) from the Chinese mountain where the Zhou dynasty began and fu from Confucius's birthplace — a name announcing he meant to rule the country.",
+			"Its Shirakawa-gō farmhouses have steep thatched roofs built to shed metres of snow, and are a UNESCO site.",
+			"Cormorant fishing on the Nagara river here has been practised by the same families for 1,300 years."
+		]
 	},
 	"nagoya": {
 		"kind": "city",
@@ -319,7 +519,12 @@
 		"population1950": 992000,
 		"region": "Aichi",
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"Possibly from nagoyaka, \"peaceful\", or from an older place name.",
+			"Toyota, Brother and Noritake all come from this region, and it is Japan’s manufacturing heart.",
+			"Its castle’s golden shachihoko, dolphin-like roof ornaments, are the city’s emblem."
+		]
 	},
 	"kyoto": {
 		"kind": "city",
@@ -327,7 +532,12 @@
 		"populationRank": 9,
 		"population1950": 1002000,
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"\"Capital city\" — simply that, because it was, from 794 to 1868, for over a thousand years.",
+			"It was deliberately left off the atomic bomb target list for its cultural value, which is why its 1,600 temples survive.",
+			"Its Kiyomizu temple's stage is built without a single nail, and Nishijin has woven brocade in the same district since the 1400s."
+		]
 	},
 	"otsu": {
 		"kind": "city",
@@ -335,14 +545,24 @@
 		"populationRank": 24,
 		"region": "Shiga",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"\"Big port\" — ō great, tsu a port, on Lake Biwa.",
+			"It was briefly the imperial capital in the 660s.",
+			"The Ōtsu incident of 1891, when a policeman attacked the visiting Russian crown prince, nearly caused a diplomatic catastrophe."
+		]
 	},
 	"shizuoka": {
 		"kind": "city",
 		"population": 701561,
 		"populationRank": 17,
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"\"Quiet hill\", a name chosen in 1869 to replace the old Sunpu.",
+			"It grows about 40% of Japan's tea, on slopes with Fuji behind them.",
+			"Mount Fuji's southern half is here, at 3,776 m, and the prefecture also makes most of Japan's plastic models and musical instruments."
+		]
 	},
 	"hamamatsu": {
 		"kind": "city",
@@ -350,7 +570,12 @@
 		"populationRank": 13,
 		"region": "Shizuoka",
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"\"Beach pine\" — hama beach, matsu pine.",
+			"Yamaha, Kawai and Roland were all founded here, which makes it the musical instrument capital of the world.",
+			"Honda also began in the city, and its unagi eel from Lake Hamana is a national brand."
+		]
 	},
 	"tsu": {
 		"kind": "city",
@@ -358,7 +583,12 @@
 		"populationRank": 26,
 		"region": "Mie",
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"Japanese for \"port\" — and with one syllable and two letters in romaji, it is the shortest city name in the world.",
+			"It is the capital of Mie prefecture.",
+			"Its Tsu castle was built by a lord who also designed several others, and the town grew as a post station."
+		]
 	},
 	"osaka": {
 		"kind": "city",
@@ -367,7 +597,12 @@
 		"population1950": 4147000,
 		"region": "Osaka",
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"\"Great slope\", for the incline up to the old Ishiyama temple; the second character was changed in the 1800s because the old one could be read as \"samurai rebellion\".",
+			"It was the merchant capital of Japan, and the world's first futures exchange traded rice here from 1697.",
+			"Its people greet each other by asking whether business is good, and the city is Japan's kitchen — kuidaore means eating yourself bankrupt."
+		]
 	},
 	"kobe": {
 		"kind": "city",
@@ -375,14 +610,24 @@
 		"populationRank": 10,
 		"region": "Hyogo",
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"\"Shrine door\" — kanbe were households assigned to support a shrine, here the Ikuta shrine.",
+			"Kobe beef is from cattle raised in Hyōgo prefecture to a strict standard.",
+			"The 1995 earthquake killed over 6,400 people and led to a rebuilding that made the port safer than before."
+		]
 	},
 	"okayama": {
 		"kind": "city",
 		"population": 866092,
 		"populationRank": 15,
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"\"Hill mountain\", after the rise its castle was built on.",
+			"Kōrakuen here is the third of the three great gardens of Japan.",
+			"The Momotarō peach-boy story is claimed by the prefecture, and it does grow the white peaches and muscat grapes to back the claim."
+		]
 	},
 	"hiroshima": {
 		"kind": "city",
@@ -390,7 +635,12 @@
 		"populationRank": 8,
 		"population1950": 503000,
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"\"Wide island\" — the delta of the Ōta river, which the city is built across.",
+			"The first atomic bomb was dropped here on 6 August 1945; the Genbaku Dome was left standing as it was and is a UNESCO site.",
+			"Miyajima's torii gate offshore appears to float at high tide, and is another of the three classic views of Japan."
+		]
 	},
 	"takamatsu": {
 		"kind": "city",
@@ -398,7 +648,12 @@
 		"populationRank": 39,
 		"region": "Kagawa",
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"\"High pine\" — taka high, matsu pine.",
+			"Its Ritsurin garden is often ranked with the three great gardens and is larger than any of them.",
+			"It is the udon capital of Japan, and its castle’s moat is filled with seawater and stocked with sea bream."
+		]
 	},
 	"kure": {
 		"kind": "city",
@@ -406,21 +661,36 @@
 		"populationRank": 55,
 		"region": "Hiroshima",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Of uncertain origin, possibly from a word for a sheltered inlet.",
+			"The battleship Yamato, the largest ever built, was constructed here in secret and launched in 1940.",
+			"Its naval arsenal made it a main target in 1945; the Yamato Museum now tells the story."
+		]
 	},
 	"wakayama": {
 		"kind": "city",
 		"population": 440006,
 		"populationRank": 29,
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"\"Young mountain\", after a hill where a castle was built in 1585.",
+			"The Kumano Kodō pilgrimage routes cross it and are one of only two pilgrimage roads on the UNESCO list, with Santiago's.",
+			"It grows about 20% of Japan's mandarins and most of its umeboshi plums."
+		]
 	},
 	"tokushima": {
 		"kind": "city",
 		"population": 443760,
 		"populationRank": 28,
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"\"Virtue island\", named by a warlord in 1585 for the delta the castle stood on.",
+			"Its Awa Odori is Japan's largest dance festival, drawing over a million people every August.",
+			"The Naruto whirlpools in the strait off it are among the largest in the world, up to 20 m across."
+		]
 	},
 	"shimonoseki": {
 		"kind": "city",
@@ -428,7 +698,12 @@
 		"populationRank": 49,
 		"region": "Yamaguchi",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"\"Lower barrier\" — shimo lower, seki a barrier or checkpoint.",
+			"The 1185 sea battle of Dan-no-ura in its strait ended the Genpei War and the Taira clan.",
+			"It handles most of Japan’s pufferfish, fugu, and the 1895 treaty ending the war with China was signed here."
+		]
 	},
 	"kitakyushu": {
 		"kind": "city",
@@ -436,7 +711,12 @@
 		"populationRank": 12,
 		"region": "Fukuoka",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"\"North Kyūshū\" — formed in 1963 by merging five towns at the island’s northern tip.",
+			"Its Yawata steelworks, opened in 1901, started Japanese heavy industry and is a UNESCO site.",
+			"It was the primary target for the second atomic bomb on 9 August 1945; cloud over the city sent the aircraft to Nagasaki."
+		]
 	},
 	"matsuyama": {
 		"kind": "city",
@@ -444,7 +724,12 @@
 		"populationRank": 25,
 		"region": "Ehime",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"\"Pine mountain\" — matsu pine, yama mountain.",
+			"Dōgo Onsen here claims to be Japan’s oldest hot spring and inspired the bathhouse in Spirited Away.",
+			"Natsume Sōseki taught in the town and set Botchan, one of Japan’s most-read novels, in it."
+		]
 	},
 	"fukuoka": {
 		"kind": "city",
@@ -452,7 +737,12 @@
 		"populationRank": 5,
 		"population1950": 954000,
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"\"Fortune hill\" — the lord who built the castle in 1601 named it after his family's old home in Okayama.",
+			"Closer to Seoul than to Tokyo, and it has been Japan's gate to the continent since the Mongol invasions failed on its coast in 1274 and 1281.",
+			"Tonkotsu ramen was invented here, and its yatai food stalls are the largest such street-food scene in Japan."
+		]
 	},
 	"kochi": {
 		"kind": "city",
@@ -460,7 +750,12 @@
 		"populationRank": 38,
 		"region": "Kochi",
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"\"High knowledge\", chosen for a castle site whose earlier name meant a river between two rivers.",
+			"Sakamoto Ryōma, who brokered the alliance that ended the shogunate, was born here and is on every souvenir.",
+			"The wettest prefecture, and the Shimanto river in it is called Japan's last clear stream, with no dam on its main course."
+		]
 	},
 	"oita": {
 		"kind": "city",
@@ -468,7 +763,12 @@
 		"populationRank": 27,
 		"region": "Oita",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"\"Great field\" — the older written form meant many rice paddies.",
+			"It produces more hot spring water than any other prefecture, and Beppu alone has over 2,000 vents.",
+			"Usa shrine in it is the head of about 40,000 Hachiman shrines across Japan."
+		]
 	},
 	"sasebo": {
 		"kind": "city",
@@ -476,35 +776,60 @@
 		"populationRank": 51,
 		"region": "Nagasaki",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Of uncertain origin, possibly from an older local name.",
+			"A fishing village until the navy chose its deep sheltered harbour in 1889; it is still a major naval base.",
+			"Its Kujūku islands, actually 208 of them, fill the bay, and the Sasebo burger is a local institution from the American presence."
+		]
 	},
 	"kumamoto": {
 		"kind": "city",
 		"population": 718232,
 		"populationRank": 16,
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"\"Bear origin\" — though the first character was changed from an older one meaning a river bend, so the bear is a spelling accident.",
+			"Its castle, built in 1607 with curved walls designed to be unclimbable, withstood a 54-day siege in 1877 and was badly damaged by the 2016 earthquake.",
+			"Mount Aso in it has one of the largest volcanic calderas in the world, 25 km across, with towns and farms inside it."
+		]
 	},
 	"nagasaki": {
 		"kind": "city",
 		"population": 435455,
 		"populationRank": 30,
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"\"Long cape\", for the promontory the harbour curls around.",
+			"For over two hundred years the artificial island of Dejima here was the only place foreigners could trade in Japan, and Dutch books were the only window on the West.",
+			"The second atomic bomb fell here on 9 August 1945; it also has more islands than any other prefecture, about 970."
+		]
 	},
 	"miyazaki": {
 		"kind": "city",
 		"population": 324384,
 		"populationRank": 41,
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"\"Shrine cape\", for a promontory with a shrine on it.",
+			"Japanese myth places the descent of the first emperor's ancestors here, and Takachiho gorge is where the sun goddess is said to have hidden.",
+			"It has the most sunshine hours of any prefecture and grows mangoes marketed as taiyō no tamago, eggs of the sun."
+		]
 	},
 	"kagoshima": {
 		"kind": "city",
 		"population": 555352,
 		"populationRank": 22,
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"\"Deer child island\", most likely from an old word for the island in its bay rather than from actual deer.",
+			"Sakurajima in that bay is one of the world's most active volcanoes and dusts the city with ash most weeks.",
+			"Its Satsuma domain opened Japan to Western technology early, and the prefecture grows most of the country's sweet potatoes and sends up its rockets from Tanegashima."
+		]
 	},
 	"naha": {
 		"kind": "city",
@@ -512,6 +837,11 @@
 		"populationRank": 14,
 		"region": "Okinawa",
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Of Ryūkyūan origin, possibly \"fishing ground\" or \"a place of catch\".",
+			"It was the port of the Ryūkyū Kingdom, which traded with China and south-east Asia as an independent state.",
+			"Shuri castle above it burned in 2019, the fifth time in its history, and is being rebuilt again."
+		]
 	}
 }

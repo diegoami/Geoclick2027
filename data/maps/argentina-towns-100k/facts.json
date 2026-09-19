@@ -5,21 +5,36 @@
 		"populationRank": 16,
 		"region": "Jujuy",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"\"Holy Saviour of Jujuy\" — the saint plus the province name, which is of lost indigenous origin.",
+			"It was founded three times, the first two attempts destroyed by the Omaguaca people.",
+			"Belgrano ordered the whole population to evacuate and burn everything in 1812, the Jujuy Exodus, to deny the Spanish supplies."
+		]
 	},
 	"salta": {
 		"kind": "city",
 		"population": 512686,
 		"populationRank": 8,
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"Probably from Aymara sallta, \"beautiful\" — and the province's nickname is Salta la linda, Salta the beautiful.",
+			"The Tren a las Nubes climbs to 4,220 m on a viaduct across a gorge, one of the highest railways in the world.",
+			"Cafayate here grows torrontés, the white grape Argentina makes better than anyone, at 1,700 m."
+		]
 	},
 	"formosa": {
 		"kind": "city",
 		"population": 221383,
 		"populationRank": 20,
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"Portuguese and old Spanish for \"beautiful\" — the same word that named Taiwan, given to a bend in the Paraguay river.",
+			"The hottest province: over 45 °C is normal, and its western half is dry thorn scrub.",
+			"The Bañado La Estrella, a flooded plain of drowned trees, is one of the largest wetlands in South America."
+		]
 	},
 	"tucuman": {
 		"kind": "city",
@@ -27,7 +42,12 @@
 		"populationRank": 5,
 		"population1950": 224000,
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"Probably from a Quechua or local phrase meaning \"where the yuchán tree grows\", or the name of a chief.",
+			"The smallest province and the most densely populated, called the garden of the republic; it grows most of Argentina's lemons — and Argentina is the world's largest exporter.",
+			"Argentina's independence was declared in the city of San Miguel de Tucumán on 9 July 1816."
+		]
 	},
 	"posadas": {
 		"kind": "city",
@@ -35,7 +55,12 @@
 		"populationRank": 13,
 		"region": "Misiones",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"Named for Gervasio Antonio de Posadas, an early head of state of the United Provinces.",
+			"It faces Encarnación in Paraguay across the Paraná, joined by a bridge.",
+			"The Jesuit mission ruins of San Ignacio Miní, a UNESCO site, are in its province."
+		]
 	},
 	"resistencia": {
 		"kind": "city",
@@ -43,35 +68,60 @@
 		"populationRank": 12,
 		"region": "Chaco",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"Spanish for \"resistance\", named for settlers who held out against attacks while founding it in 1878.",
+			"It has over 600 sculptures in its streets and calls itself the city of statues.",
+			"It sits opposite Corrientes across the Paraná, joined by a suspension bridge."
+		]
 	},
 	"corrientes": {
 		"kind": "city",
 		"population": 340823,
 		"populationRank": 15,
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"From the currents — the city was founded in 1588 at a stretch of the Paraná called the seven currents.",
+			"The Iberá wetlands here are the second largest in South America after the Pantanal, and jaguars and giant anteaters have been reintroduced.",
+			"Chamamé, its accordion music, is on the UNESCO intangible heritage list, and Guaraní is co-official in the province."
+		]
 	},
 	"santiago-del-estero": {
 		"kind": "city",
 		"population": 354692,
 		"populationRank": 14,
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"\"Saint James of the lagoon\" — of the estero, the marsh, to tell it from every other Santiago in the Spanish empire.",
+			"The oldest continuously inhabited Spanish city in Argentina, founded 1553.",
+			"Quichua, the local form of Quechua, is still spoken here, cut off from the Andean varieties by hundreds of kilometres."
+		]
 	},
 	"catamarca": {
 		"kind": "city",
 		"population": 188812,
 		"populationRank": 21,
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"From Quechua, most likely \"fortress on the slope\" — cata, a slope, and marca, a settlement or fort.",
+			"Its Antofagasta de la Sierra is desert at 3,500 m, with volcanoes, salt flats and almost nobody.",
+			"It produces most of Argentina's lithium, alongside Salta and Jujuy, from brine under the salt pans."
+		]
 	},
 	"la-rioja": {
 		"kind": "city",
 		"population": 162620,
 		"populationRank": 22,
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"Named by a governor after his own home region in Spain — so Argentina's La Rioja is the Spanish one's namesake, not its rival.",
+			"Talampaya here is a canyon of red sandstone holding some of the world's oldest dinosaur fossils, from 230 million years ago.",
+			"It is dry enough that its vineyards depend entirely on Andean meltwater channelled down from the mountains."
+		]
 	},
 	"concordia": {
 		"kind": "city",
@@ -79,7 +129,12 @@
 		"populationRank": 24,
 		"region": "Entre Ríos",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"Latin for \"harmony\" — a hopeful name given at its founding in 1832.",
+			"It is the centre of Argentina’s citrus industry, especially mandarins and blood oranges.",
+			"The Salto Grande dam nearby is shared with Uruguay and drowned the falls the town was named after."
+		]
 	},
 	"cordoba": {
 		"kind": "city",
@@ -87,21 +142,36 @@
 		"populationRank": 2,
 		"population1950": 429000,
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"Named in 1573 after Córdoba in Spain, by a founder whose family came from there.",
+			"Its university, founded 1613, is the oldest in Argentina and the fourth oldest in the Americas.",
+			"The Jesuit block and estancias around it are a UNESCO site, and the sierras make it the country's inland holiday region."
+		]
 	},
 	"san-juan": {
 		"kind": "city",
 		"population": 447048,
 		"populationRank": 10,
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"For St John the Baptist, on whose feast the valley was claimed in 1562.",
+			"The Ischigualasto valley in it, called the Valley of the Moon, produced the first known dinosaurs, Eoraptor and Herrerasaurus.",
+			"It is the second wine province after Mendoza and gets about 300 days of sun a year."
+		]
 	},
 	"santa-fe": {
 		"kind": "city",
 		"population": 489505,
 		"populationRank": 9,
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"\"Holy faith\", named in 1573 after Santa Fe in Granada, the camp from which Spain took the last Moorish city.",
+			"Rosario in it is where the Argentine flag was first raised, and where both Che Guevara and Lionel Messi were born.",
+			"The Paraná running along it carries Argentina's grain exports; most of the country's soy leaves through its ports."
+		]
 	},
 	"parana": {
 		"kind": "city",
@@ -109,7 +179,12 @@
 		"populationRank": 18,
 		"region": "Entre Ríos",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"From Tupi pará-nã, \"like the sea\" — the river is wide enough to deserve it.",
+			"It was the capital of the Argentine Confederation from 1853 to 1861.",
+			"A tunnel under the river joins it to Santa Fe, one of the first underwater road tunnels in South America."
+		]
 	},
 	"mendoza": {
 		"kind": "city",
@@ -117,7 +192,12 @@
 		"populationRank": 4,
 		"population1950": 246000,
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"For García Hurtado de Mendoza, the governor of Chile who ordered the city founded in 1561.",
+			"It makes about 70% of Argentina's wine, and malbec — a minor grape in France — became its own here.",
+			"Aconcagua on its border is the highest mountain outside Asia at 6,961 m, and its whole irrigation system is Inca in origin."
+		]
 	},
 	"rosario": {
 		"kind": "city",
@@ -126,7 +206,12 @@
 		"population1950": 554000,
 		"region": "Santa Fe",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"For the Virgin of the Rosary — the city has no formal founding date or founder, unusually.",
+			"The Argentine flag was first raised here by Belgrano in 1812, and a vast monument marks the spot.",
+			"Che Guevara and Lionel Messi were both born in the city."
+		]
 	},
 	"san-martin": {
 		"kind": "city",
@@ -134,7 +219,12 @@
 		"populationRank": 27,
 		"region": "Mendoza",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Named for José de San Martín, who led the liberation of Argentina, Chile and Peru.",
+			"He crossed the Andes in 1817 with 5,000 men and their artillery, a feat compared to Hannibal’s.",
+			"General San Martín is part of Greater Buenos Aires and an industrial centre."
+		]
 	},
 	"rio-cuarto": {
 		"kind": "city",
@@ -142,14 +232,24 @@
 		"populationRank": 23,
 		"region": "Córdoba",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"\"Fourth river\" — Spanish surveyors numbered the rivers crossing the pampa rather than naming them.",
+			"It was a frontier fort against the Ranquel people and is now Córdoba province’s second city.",
+			"It sits at the centre of Argentina’s soy and peanut belt."
+		]
 	},
 	"san-luis": {
 		"kind": "city",
 		"population": 432310,
 		"populationRank": 11,
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"For St Louis, Louis IX of France, whose feast fell near the founding in 1594.",
+			"It passed a law giving every resident free wireless internet, unusually early, in 2007.",
+			"Its Sierra de las Quijadas is a red rock national park with dinosaur and pterosaur tracks."
+		]
 	},
 	"san-nicolas": {
 		"kind": "city",
@@ -157,7 +257,12 @@
 		"populationRank": 26,
 		"region": "Ciudad de Buenos Aires",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"For St Nicholas of Bari — San Nicolás de los Arroyos, \"of the streams\".",
+			"The San Nicolás Agreement of 1852 here set the terms for Argentina’s constitution.",
+			"Its steelworks was the country’s first integrated mill, opened in 1960."
+		]
 	},
 	"san-rafael": {
 		"kind": "city",
@@ -165,7 +270,12 @@
 		"populationRank": 29,
 		"region": "Mendoza",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"For the archangel Raphael.",
+			"It is the second city of Mendoza province and makes a large share of Argentina’s wine and preserved fruit.",
+			"The Atuel canyon nearby is a gorge of coloured rock used for rafting and climbing."
+		]
 	},
 	"buenos-aires": {
 		"kind": "city",
@@ -175,7 +285,12 @@
 		"region": "Ciudad de Buenos Aires",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"The province around the capital, sharing its name but administered separately — the city is a district of its own.",
+			"The pampas here are some of the most fertile grassland on earth, and the beef and grain from them made Argentina briefly one of the world's richest countries.",
+			"The gaucho tradition comes from this plain, and Martín Fierro, the national poem, is about one."
+		]
 	},
 	"la-plata": {
 		"kind": "city",
@@ -183,7 +298,12 @@
 		"populationRank": 6,
 		"region": "Ciudad de Buenos Aires",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"\"The silver\" — from the Río de la Plata, named by Spaniards hoping for silver they never found there.",
+			"Built from nothing in 1882 as a planned capital for Buenos Aires province, on a perfect square grid with diagonals.",
+			"Its cathedral is the largest neo-Gothic church in the Americas, finished in 1999 after 114 years."
+		]
 	},
 	"santa-rosa": {
 		"kind": "city",
@@ -191,7 +311,12 @@
 		"populationRank": 28,
 		"region": "La Pampa",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"For St Rose of Lima, the first saint born in the Americas.",
+			"The capital of La Pampa, founded in 1892 by a rancher on his own land.",
+			"The Parque Luro nearby preserves a patch of caldén forest, the pampas’ only native woodland."
+		]
 	},
 	"tandil": {
 		"kind": "city",
@@ -199,7 +324,12 @@
 		"populationRank": 30,
 		"region": "Ciudad de Buenos Aires",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"From a Mapudungun word, possibly \"falling stone\", for a balancing rock that stood above the town.",
+			"That rock, the Piedra Movediza, fell in 1912; a replica now stands in its place.",
+			"The town is known nationwide for its salami and cheese, and its hills are among the oldest rock in South America."
+		]
 	},
 	"mar-del-plata": {
 		"kind": "city",
@@ -207,7 +337,12 @@
 		"populationRank": 7,
 		"region": "Ciudad de Buenos Aires",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"\"Sea of the Plata\" — the seaside counterpart to the river name.",
+			"Argentina’s main beach resort, where Buenos Aires goes in January.",
+			"Its film festival is the only competitive one in Latin America recognised by the international federation."
+		]
 	},
 	"bahia-blanca": {
 		"kind": "city",
@@ -215,14 +350,24 @@
 		"populationRank": 17,
 		"region": "Ciudad de Buenos Aires",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"\"White bay\", for the salt flats around its harbour.",
+			"It is the main deep-water port of the southern pampas and ships much of Argentina’s grain.",
+			"Its naval base at Puerto Belgrano is the largest in the country."
+		]
 	},
 	"neuquen": {
 		"kind": "city",
 		"population": 242092,
 		"populationRank": 19,
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"From Mapudungun newenken, \"bold\" or \"forceful\", the name of the river.",
+			"Vaca Muerta under it is one of the largest shale oil and gas fields in the world.",
+			"Its Valle de los Dinosaurios yielded Argentinosaurus and Giganotosaurus — among the largest herbivore and carnivore ever found."
+		]
 	},
 	"comodoro-rivadavia": {
 		"kind": "city",
@@ -230,6 +375,11 @@
 		"populationRank": 25,
 		"region": "Chubut",
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Named for a naval commodore, Martín Rivadavia.",
+			"Argentine oil was discovered here by accident in 1907 by men drilling for water.",
+			"It is the windiest city in the country, and the wind is now farmed for electricity."
+		]
 	}
 }

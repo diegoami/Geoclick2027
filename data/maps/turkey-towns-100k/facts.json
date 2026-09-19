@@ -4,7 +4,12 @@
 		"population": 126470,
 		"populationRank": 46,
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"From Hadrianopolis, founded by the emperor Hadrian — worn down through Greek to Edirne.",
+			"It was the Ottoman capital for almost a century before Constantinople fell, and the Selimiye mosque here is Sinan's masterpiece and a UNESCO site.",
+			"Its oil wrestling tournament at Kırkpınar has been held every year since 1346, the oldest continuously running sporting event in the world."
+		]
 	},
 	"zonguldak": {
 		"kind": "city",
@@ -12,14 +17,24 @@
 		"populationRank": 38,
 		"region": "Zinguldak",
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"A recent name, probably from a local word for a marshy meadow — one of the few provinces without an ancient name.",
+			"Turkey's only hard coal basin, worked since 1848, and its mines run out under the Black Sea.",
+			"The coal here fuelled the Ottoman navy and then the republic's first industry."
+		]
 	},
 	"samsun": {
 		"kind": "city",
 		"population": 609339,
 		"populationRank": 13,
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"From Greek Amisos, with the Turkish prefix worn on from \"eis Amison\", \"to Amisos\".",
+			"Atatürk landed here on 19 May 1919 to begin the war of independence, which is why that date is a national holiday.",
+			"It sits on the delta of the Kızılırmak, Turkey's longest river, and grows most of the country's tobacco."
+		]
 	},
 	"karabuk": {
 		"kind": "city",
@@ -27,14 +42,24 @@
 		"populationRank": 45,
 		"region": "Zinguldak",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"\"Black bend\" or \"black bush\" — kara, black, plus a word for a river bend.",
+			"Created around the steelworks built here in 1937, the republic's first heavy industry project.",
+			"Safranbolu in it has hundreds of preserved Ottoman merchant houses and is a UNESCO site."
+		]
 	},
 	"rize": {
 		"kind": "city",
 		"population": 279450,
 		"populationRank": 26,
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"From Greek Rhizaion, from rhiza, a root or a foothill.",
+			"It grows nearly all of Turkey's tea, planted from the 1920s after the loss of coffee-growing lands made an alternative urgent.",
+			"The wettest province in the country, over 2,200 mm a year, and its Ayder plateau is Alpine meadow above the cloud."
+		]
 	},
 	"istanbul": {
 		"kind": "city",
@@ -43,14 +68,24 @@
 		"population1950": 967000,
 		"region": "Istanbul",
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"From Greek eis tin polin, \"to the city\" — travellers said where they were going and the phrase became the name.",
+			"The only city on two continents, and it was the capital of the Roman, Byzantine and Ottoman empires in turn for 1,600 years.",
+			"Hagia Sophia's dome, finished in 537, was the largest in the world for nearly a thousand years."
+		]
 	},
 	"ordu": {
 		"kind": "city",
 		"population": 155117,
 		"populationRank": 39,
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"Turkish for \"army\" — the name of a camp that became a town; the same word gives English \"horde\".",
+			"It produces a large share of Turkey's hazelnuts, and Turkey grows about 70% of the world's.",
+			"Boztepe above the town is reached by cable car and looks down the whole coast."
+		]
 	},
 	"tekirdag": {
 		"kind": "city",
@@ -58,14 +93,24 @@
 		"populationRank": 47,
 		"region": "Tekirdag",
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"\"Tekfur mountain\" — tekfur was the Turkish word for a Byzantine lord, so the name means the lord's mountain.",
+			"Its rakı is the most respected in Turkey, distilled from Thracian grapes and aniseed.",
+			"The Ganos ridge along its coast was known in antiquity for wine and is still terraced for it."
+		]
 	},
 	"trabzon": {
 		"kind": "city",
 		"population": 764714,
 		"populationRank": 10,
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"From Greek Trapezous, \"table\" — the flat-topped hill the city was built on.",
+			"It was the capital of a Greek empire of its own, Trebizond, which outlasted Constantinople by eight years until 1461.",
+			"The Sumela monastery near it clings to a cliff face 300 m up, founded in 386."
+		]
 	},
 	"izmit": {
 		"kind": "city",
@@ -73,7 +118,12 @@
 		"populationRank": 16,
 		"region": "Kocaeli",
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"From Nicomedia, through Greek \"eis Nikomedian\" — the same worn-down construction as Istanbul and Izmir.",
+			"It was the eastern capital of the Roman Empire under Diocletian, before Constantinople was built.",
+			"The 1999 earthquake here killed over 17,000 people and reshaped Turkish building regulation."
+		]
 	},
 	"adapazar": {
 		"kind": "city",
@@ -81,21 +131,36 @@
 		"populationRank": 25,
 		"region": "Sakarya",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"\"Island market\" — ada island, pazar market: a market on land ringed by river branches.",
+			"It is the capital of Sakarya province and the centre of Turkey’s railway rolling-stock industry.",
+			"The 1999 earthquake struck here too, and parts of the town sank into liquefied ground."
+		]
 	},
 	"corum": {
 		"kind": "city",
 		"population": 183418,
 		"populationRank": 35,
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"Of uncertain origin — possibly from Çorumlu, a tribal name, or from a word meaning a mixed place.",
+			"Hattusa here was the Hittite capital, and its archive of clay tablets gave the world its first known peace treaty, with Egypt.",
+			"It produces most of Turkey's leblebi, roasted chickpeas, and its clay is used for bricks nationwide."
+		]
 	},
 	"tokat": {
 		"kind": "city",
 		"population": 129702,
 		"populationRank": 43,
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"Possibly from a word for a fortified place, or from Armenian or Greek origins that are now unclear.",
+			"Its printed cloth, yazma, is block-printed by hand using techniques unchanged for centuries.",
+			"The Roman bridge at Tokat and the Hittite site at Maşat Höyük both show how long this pass has been used."
+		]
 	},
 	"bursa": {
 		"kind": "city",
@@ -103,7 +168,12 @@
 		"populationRank": 4,
 		"population1950": 148000,
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"From Prusa, named for Prusias, the king of Bithynia who founded it around 200 BC.",
+			"The first Ottoman capital, and its early mosques and tombs are a UNESCO site.",
+			"Turkish silk was woven here, the İskender kebab was invented here, and Uludağ above it is the country's best-known ski mountain."
+		]
 	},
 	"ankara": {
 		"kind": "city",
@@ -112,14 +182,24 @@
 		"population1950": 281000,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"From Ancyra, Greek for \"anchor\" — the Galatians or the Phrygians are said to have found one here, far from any sea.",
+			"Atatürk made it the capital in 1923 over Istanbul, deliberately choosing a small Anatolian town of 30,000 people.",
+			"The Angora goat, cat and rabbit are all named after it, and its mohair was a protected Ottoman export."
+		]
 	},
 	"erzurum": {
 		"kind": "city",
 		"population": 420691,
 		"populationRank": 19,
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"From Arz-ı Rum, \"the land of the Romans\" — Rum meaning Byzantine, which is what the Turks called them.",
+			"The highest large city in Turkey at 1,900 m, and one of the coldest; it hosted the 2011 Winter Universiade.",
+			"Its Çifte Minareli Medrese from the 1200s is one of the finest Seljuk buildings anywhere."
+		]
 	},
 	"k-r-kkale": {
 		"kind": "city",
@@ -127,7 +207,12 @@
 		"populationRank": 32,
 		"region": "Kinkkale",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"\"Forty castles\" — kırk forty, kale castle, though the name may really be from a village called Kırıkköy.",
+			"Founded around a state arms factory in 1925 and made a province in 1989, so it is one of the newest.",
+			"It has the country's largest oil refinery inland, at the junction of the main east–west pipelines."
+		]
 	},
 	"eskisehir": {
 		"kind": "city",
@@ -135,21 +220,36 @@
 		"populationRank": 15,
 		"region": "Eskisehir",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"\"Old city\" — the Turkish name for what had been Dorylaeum, a Byzantine town.",
+			"Meerschaum, the white stone smoking pipes are carved from, is mined almost nowhere else in the world.",
+			"It is Turkey's most student-heavy city and has a reputation as its most liveable."
+		]
 	},
 	"erzincan": {
 		"kind": "city",
 		"population": 129407,
 		"populationRank": 44,
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"From Erez, an old Armenian settlement name, with a Persian diminutive.",
+			"Destroyed by earthquakes repeatedly, most catastrophically in 1939 when about 33,000 people died — the deadliest in Turkish history.",
+			"The Kemaliye gorge road here was cut through cliffs by hand by villagers over 132 years."
+		]
 	},
 	"sivas": {
 		"kind": "city",
 		"population": 264022,
 		"populationRank": 28,
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"From Sebasteia, named for Augustus — sebastos is the Greek translation of the Latin augustus.",
+			"The 1919 congress held here set the terms of the independence movement, and the building is now a museum.",
+			"Its Divriği hospital and mosque, with carved portals unlike anything else in Islamic architecture, is a UNESCO site."
+		]
 	},
 	"bal-kesir": {
 		"kind": "city",
@@ -157,14 +257,24 @@
 		"populationRank": 29,
 		"region": "Balikesir",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"From Palaiokastron, Greek for \"old castle\", worn down through Turkish.",
+			"It has coast on both the Aegean and the Marmara, the only province on both.",
+			"Kaz Dağı in it is the ancient Mount Ida, where the judgement of Paris is set and from which the gods watched the Trojan War."
+		]
 	},
 	"kutahya": {
 		"kind": "city",
 		"population": 185008,
 		"populationRank": 34,
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"From Cotyaeum, a Phrygian and then Roman town.",
+			"Its tiles and ceramics have been made since the 1400s and decorated mosques across the empire after Iznik's kilns declined.",
+			"Aizanoi in the province has the best-preserved temple of Zeus in Anatolia and the world's first known stock exchange building."
+		]
 	},
 	"afyonkarahisar": {
 		"kind": "city",
@@ -172,14 +282,24 @@
 		"populationRank": 37,
 		"region": "Afyon",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"\"Opium black castle\" — afyon is opium, kara black, hisar fortress: the poppy fields and the black rock the citadel sits on.",
+			"Turkey is one of the few countries licensed to grow opium poppies for the world's legal medical morphine, and most of it is grown here.",
+			"Its thermal springs are the most used in Turkey, and its clotted cream and Turkish delight are national brands."
+		]
 	},
 	"kayseri": {
 		"kind": "city",
 		"population": 592840,
 		"populationRank": 14,
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"From Caesarea, named for Caesar — Tiberius renamed the Cappadocian capital Mazaca after Augustus.",
+			"Mount Erciyes above it is an extinct volcano of 3,864 m whose ash created the Cappadocian landscape next door.",
+			"Its merchants are proverbial in Turkey for shrewdness, and the city has more industrial exporters than almost any other."
+		]
 	},
 	"usak": {
 		"kind": "city",
@@ -187,7 +307,12 @@
 		"populationRank": 41,
 		"region": "Usak",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Turkish for \"servant\" or \"young man\", though the name may predate that reading.",
+			"Its carpets were exported to Europe from the 1500s and appear in Holbein's and Lotto's paintings — which is why dealers call the patterns Holbein and Lotto carpets.",
+			"The Karun treasure, Lydian gold looted from here, was recovered from New York in 1993 after a long legal fight."
+		]
 	},
 	"elaz-g": {
 		"kind": "city",
@@ -195,21 +320,36 @@
 		"populationRank": 27,
 		"region": "Elazig",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"From El-Aziz, \"the glorious\", named for Sultan Abdülaziz in 1866 and later Turkified.",
+			"Harput above it is the old town, abandoned for the new one on the plain.",
+			"Its Keban dam created a lake that drowned the old town of Ağın and several archaeological sites."
+		]
 	},
 	"manisa": {
 		"kind": "city",
 		"population": 243971,
 		"populationRank": 30,
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"From Magnesia ad Sipylum — and the same Magnesia gives us magnet, magnesium and manganese.",
+			"The Ottoman princes trained here as well as at Amasya, and its Mesir festival has distributed a spiced paste as medicine since 1527.",
+			"Mount Sipylus above it has a natural rock face the Greeks took for Niobe weeping, which Homer mentions."
+		]
 	},
 	"van": {
 		"kind": "city",
 		"population": 371713,
 		"populationRank": 22,
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"From Biainili, the Urartians' own name for their kingdom — the name is nearly three thousand years old.",
+			"Lake Van is Turkey's largest and is soda water, seven times saltier than the sea, with only one fish species able to live in it.",
+			"The Van cat has one blue eye and one amber, and swims — unusual in a cat."
+		]
 	},
 	"izmir": {
 		"kind": "city",
@@ -218,21 +358,36 @@
 		"population1950": 224000,
 		"region": "Izmir",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"From Smyrna, through Greek \"eis Smyrnen\" — the same \"to the city\" construction that produced Istanbul.",
+			"One of the candidates for Homer's birthplace, and continuously inhabited for about 8,500 years.",
+			"Ephesus in the province had the Temple of Artemis, one of the seven wonders, and its library facade is the image of Roman Asia."
+		]
 	},
 	"malatya": {
 		"kind": "city",
 		"population": 461574,
 		"populationRank": 17,
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"From Hittite Melid or Maldiya, meaning honey — a name over three thousand years old.",
+			"It grows about 80% of the world's dried apricots.",
+			"Aslantepe mound in it is a UNESCO site with one of the oldest known palaces and the earliest swords ever found."
+		]
 	},
 	"siirt": {
 		"kind": "city",
 		"population": 114034,
 		"populationRank": 49,
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"From Aramaic or Arabic, possibly Se'ert, \"city\", or from an older Assyrian name.",
+			"Its pistachios are a distinct variety, and the province gives its name to the Siirt blanket, woven from mohair.",
+			"The Botan valley here is one of the deepest canyons in Turkey."
+		]
 	},
 	"diyarbak-r": {
 		"kind": "city",
@@ -240,14 +395,24 @@
 		"populationRank": 11,
 		"region": "Diyarbakir",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"\"The land of the Bakr\" — diyar is land or abode, Bakr the Arab tribe that settled here in the 600s.",
+			"Its black basalt walls run 5.8 km, second in length only to the Great Wall by an old claim, and are a UNESCO site.",
+			"It is the largest Kurdish-majority city in Turkey, and its watermelons were once grown so large they were carried by camel."
+		]
 	},
 	"batman": {
 		"kind": "city",
 		"population": 302074,
 		"populationRank": 23,
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"Nothing to do with the comic: it is from the Batman river, and batman was also an Ottoman unit of weight.",
+			"The city grew from a village of 3,000 to a city on oil found here in 1940.",
+			"Hasankeyf in the province, a 12,000-year-old town, was flooded by the Ilısu dam in 2020 after a long international campaign to save it."
+		]
 	},
 	"konya": {
 		"kind": "city",
@@ -255,7 +420,12 @@
 		"populationRank": 7,
 		"population1950": 97000,
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"From Iconium, which the Greeks explained with a story about an eikon, an image, set up here.",
+			"Rumi lived, wrote and died here, and the whirling dervish ceremony his followers developed is a UNESCO heritage item.",
+			"The largest province in Turkey by area, and its plain grows most of the country's grain — it is called Turkey's breadbasket."
+		]
 	},
 	"ayd-n": {
 		"kind": "city",
@@ -263,14 +433,24 @@
 		"populationRank": 33,
 		"region": "Aydin",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Named for the Aydınoğulları, a Turkish beylik that ruled the region after the Seljuks; aydın also means bright.",
+			"It grows more figs than anywhere in the world, and the Aegean fig is Turkey's oldest protected export.",
+			"Aphrodisias in it was a city of marble sculptors whose work reached across the Roman empire; it is a UNESCO site."
+		]
 	},
 	"denizli": {
 		"kind": "city",
 		"population": 372344,
 		"populationRank": 21,
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"\"With sea\" — which is odd for an inland province; the name probably referred to abundant water rather than the sea.",
+			"Pamukkale here is a hillside of white travertine terraces filled with warm water, a UNESCO site.",
+			"Hierapolis on top of it was a Roman spa town, and its Plutonium emitted enough carbon dioxide to kill sacrificial animals, which the priests presented as a miracle."
+		]
 	},
 	"ad-yaman": {
 		"kind": "city",
@@ -278,14 +458,24 @@
 		"populationRank": 31,
 		"region": "Adiyaman",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"\"The unfortunate man\" in Turkish by folk etymology; the older name was Hısn-ı Mansur, the fortress of Mansur.",
+			"Mount Nemrut here has the colossal heads of a first-century BC king's tomb sanctuary, and is a UNESCO site.",
+			"That king, Antiochus I of Commagene, had himself carved among Greek and Persian gods as their equal."
+		]
 	},
 	"isparta": {
 		"kind": "city",
 		"population": 172334,
 		"populationRank": 36,
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"From Greek Sparta or from Baris — the derivation is contested; it has nothing to do with the Peloponnesian Sparta beyond the name.",
+			"It produces a large share of the world's rose oil, distilled from Rosa damascena picked before dawn in May.",
+			"It takes about 4,000 kg of petals to make one kilogram of oil, which is why the oil is priced like a precious metal."
+		]
 	},
 	"kahramanmaras": {
 		"kind": "city",
@@ -293,14 +483,24 @@
 		"populationRank": 20,
 		"region": "K. Maras",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"\"Heroic Maraş\" — the title was added in 1973 for the town's resistance to French occupation in 1920.",
+			"Its ice cream is made with salep and mastic, stretchy enough to be cut with a knife and eaten with a fork.",
+			"The February 2023 earthquake had its epicentre in this province and killed over 50,000 people across the region."
+		]
 	},
 	"karaman": {
 		"kind": "city",
 		"population": 120399,
 		"populationRank": 48,
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Named for the Karamanid beylik, the Seljuks' strongest successor, which held out against the Ottomans until 1487.",
+			"In 1277 the Karamanid ruler decreed that only Turkish would be used in government — the first such order, and marked in Turkey as Language Day.",
+			"Its Binbirkilise, \"a thousand and one churches\", is a field of ruined Byzantine chapels on a volcanic slope."
+		]
 	},
 	"sanl-urfa": {
 		"kind": "city",
@@ -308,7 +508,12 @@
 		"populationRank": 18,
 		"region": "Sanliurfa",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"\"Glorious Urfa\" — the title was added in 1984 for its resistance in 1920; Urfa is from Edessa, through Syriac Urhai.",
+			"Göbekli Tepe here is the oldest known monumental architecture in the world, about 11,500 years old — older than farming, pottery or writing.",
+			"Abraham is said by local tradition to have been born in a cave in the city, which makes it a pilgrimage site for three religions."
+		]
 	},
 	"gaziantep": {
 		"kind": "city",
@@ -316,7 +521,12 @@
 		"populationRank": 6,
 		"population1950": 104000,
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"\"Veteran Antep\" — gazi was added in 1921 for the town's siege resistance; Antep is probably from Aïntab, \"good spring\".",
+			"It is Turkey's gastronomic capital and a UNESCO City of Gastronomy; its baklava has protected status.",
+			"The Zeugma mosaic museum here holds mosaics rescued from a Roman city flooded by a dam, including the Gypsy Girl."
+		]
 	},
 	"nusaybin": {
 		"kind": "city",
@@ -324,7 +534,12 @@
 		"populationRank": 42,
 		"region": "Mardin",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"From ancient Nisibis, a Mesopotamian city on the Roman-Persian frontier.",
+			"Its School of Nisibis was a major centre of Syriac learning from the fourth century, sometimes called an early university.",
+			"The Syrian border runs along the edge of the town, dividing it from Qamishli on the other side."
+		]
 	},
 	"adana": {
 		"kind": "city",
@@ -332,7 +547,12 @@
 		"populationRank": 5,
 		"population1950": 138000,
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Possibly from Adanos, a figure in Hittite myth, or from a word related to the Danuna people.",
+			"Its kebab is a national institution, and the province is the centre of Turkish cotton.",
+			"The Taşköprü bridge over the Seyhan was built in the Roman period and carried traffic until 2007."
+		]
 	},
 	"tarsus": {
 		"kind": "city",
@@ -340,7 +560,12 @@
 		"populationRank": 8,
 		"region": "Mersin",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"An ancient name of unclear origin, recorded by the Hittites as Tarsa.",
+			"St Paul was born here, and Cleopatra sailed up its river to meet Mark Antony in 41 BC.",
+			"The Cilician Gates above it are the pass through the Taurus that every army crossing Anatolia has used."
+		]
 	},
 	"antalya": {
 		"kind": "city",
@@ -348,14 +573,24 @@
 		"populationRank": 9,
 		"population1950": 27000,
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"From Attaleia, founded by Attalus II of Pergamon in about 150 BC and named for himself.",
+			"It is one of the most visited cities in the world by international arrivals, and its Konyaaltı and Lara beaches run for kilometres.",
+			"The Lycian Way along its coast is a 540 km waymarked path past rock tombs cut into cliffs."
+		]
 	},
 	"mersin": {
 		"kind": "city",
 		"population": 616990,
 		"populationRank": 12,
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Possibly from the myrtle, mersin in Turkish, which grows along this coast.",
+			"Turkey's largest container port, and the terminus of the road to Syria and the Gulf.",
+			"Its Kızkalesi is a castle on an island 200 m offshore, with a matching one on the beach."
+		]
 	},
 	"iskenderun": {
 		"kind": "city",
@@ -363,7 +598,12 @@
 		"populationRank": 24,
 		"region": "Hatay",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"\"Little Alexander\" — Alexandretta, founded by Alexander the Great after his victory at Issus nearby in 333 BC.",
+			"It was the Mediterranean outlet for Aleppo for centuries, and its hinterland is Arabic-speaking.",
+			"Turkey’s main naval base on the eastern Mediterranean is here."
+		]
 	},
 	"antakya": {
 		"kind": "city",
@@ -371,6 +611,11 @@
 		"populationRank": 40,
 		"region": "Hatay",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"From Antioch, founded around 300 BC by Seleucus and named for his father Antiochus.",
+			"It was the third city of the Roman Empire, and the followers of Jesus were first called Christians here.",
+			"Its mosaic museum holds one of the largest collections in the world; the 2023 earthquake destroyed much of the old town."
+		]
 	}
 }

@@ -4,14 +4,24 @@
 		"population": 732178,
 		"populationRank": 17,
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"From Arabic suq, a market — the Hausa rendering of the name of the caliphate's capital.",
+			"The Sokoto Caliphate, founded by Usman dan Fodio in 1804, was the largest state in Africa in the nineteenth century.",
+			"Its Sultan is still the most senior Muslim authority in Nigeria, and the state is the hottest part of the country."
+		]
 	},
 	"katsina": {
 		"kind": "city",
 		"population": 432149,
 		"populationRank": 25,
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"Named for the city, said to be after Katsina, the wife of a local ruler.",
+			"One of the seven original Hausa city-states, and a centre of Islamic learning that rivalled Timbuktu in the 1500s.",
+			"Its Gobarau minaret, built of mud in the fifteenth century, is one of the oldest surviving structures in West Africa."
+		]
 	},
 	"nguru": {
 		"kind": "city",
@@ -19,7 +29,12 @@
 		"populationRank": 49,
 		"region": "Yobe",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"Of Kanuri origin; the town was a trading post of the Bornu empire.",
+			"Its wetlands, where the Hadejia and Jama’are rivers meet, are a vital stop for birds crossing the Sahara.",
+			"It was the northern terminus of the colonial railway branch built to carry groundnuts."
+		]
 	},
 	"gashua": {
 		"kind": "city",
@@ -27,7 +42,12 @@
 		"populationRank": 45,
 		"region": "Yobe",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"Of Kanuri or Bade origin.",
+			"It sits on the Yobe river, which forms part of the border with Niger.",
+			"It is a market town for the Bade and Kanuri, in the Sahel scrub."
+		]
 	},
 	"birnin-kebbi": {
 		"kind": "city",
@@ -35,7 +55,12 @@
 		"populationRank": 50,
 		"region": "Kebbi",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"\"The walled city of Kebbi\" — birnin is a Hausa word for a walled town.",
+			"It was the capital of the Kebbi kingdom, which held out against the Songhai empire.",
+			"Argungu nearby holds a fishing festival where thousands enter the river at once with hand nets."
+		]
 	},
 	"gusau": {
 		"kind": "city",
@@ -43,7 +68,12 @@
 		"populationRank": 38,
 		"region": "Zamfara",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"Named for a founder or a local family.",
+			"It grew as a cotton and groundnut trading centre after the railway reached it in 1929.",
+			"It is the capital of Zamfara, the first Nigerian state to adopt sharia criminal law."
+		]
 	},
 	"kano": {
 		"kind": "city",
@@ -51,7 +81,12 @@
 		"populationRank": 2,
 		"population1950": 115000,
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"Named for the city, traditionally after Kano, a blacksmith who settled at the foot of Dala hill.",
+			"The greatest trans-Saharan trade city in Hausaland, walled since the eleventh century, and its dye pits at Kofar Mata have been worked since 1498.",
+			"It is the most populous state in northern Nigeria and the commercial capital of the north."
+		]
 	},
 	"maiduguri": {
 		"kind": "city",
@@ -60,7 +95,12 @@
 		"population1950": 47000,
 		"region": "Borno",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"From a Kanuri phrase, possibly \"the place where one learns\" or a founder’s name.",
+			"It was founded in 1907 as the British headquarters for Bornu, replacing the older capital at Kukawa.",
+			"It became the centre of the Boko Haram insurgency from 2009 and has absorbed hundreds of thousands of displaced people."
+		]
 	},
 	"damaturu": {
 		"kind": "city",
@@ -68,7 +108,12 @@
 		"populationRank": 36,
 		"region": "Yobe",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"Of Kanuri origin.",
+			"The capital of Yobe, made a state capital only in 1991.",
+			"It sits on the road between Maiduguri and Kano, the main route across the north-east."
+		]
 	},
 	"funtua": {
 		"kind": "city",
@@ -76,7 +121,12 @@
 		"populationRank": 42,
 		"region": "Katsina",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"Of Hausa origin.",
+			"It is one of the main cotton and groundnut markets of the north-west.",
+			"It has a textile mill and lies on the railway from Lagos to Kano."
+		]
 	},
 	"bama": {
 		"kind": "city",
@@ -84,7 +134,12 @@
 		"populationRank": 46,
 		"region": "Borno",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"Of Kanuri origin; the town was a district capital of the Bornu empire.",
+			"It was one of the towns worst affected by the insurgency and was largely destroyed.",
+			"It sits on the road towards Cameroon, near the Sambisa forest."
+		]
 	},
 	"zaria": {
 		"kind": "city",
@@ -93,7 +148,12 @@
 		"population1950": 47000,
 		"region": "Kaduna",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"Named for Zaria, a daughter of a queen of Zazzau — the older name of the city-state.",
+			"Queen Amina, her sister, is credited with the walls that surround many Hausa towns.",
+			"Ahmadu Bello University here is one of the largest in Africa."
+		]
 	},
 	"kaduna": {
 		"kind": "city",
@@ -101,21 +161,36 @@
 		"populationRank": 5,
 		"population1950": 33000,
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"From the Hausa kadduna, plural of kada, \"crocodile\" — the river was full of them.",
+			"The British made it the capital of the Northern Region in 1917, so it is a colonial creation rather than an old emirate.",
+			"It sits on the fault line between Muslim north and Christian south, which has made it the site of repeated communal violence."
+		]
 	},
 	"bauchi": {
 		"kind": "city",
 		"population": 316149,
 		"populationRank": 28,
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"Said to be named after a hunter called Baushe who founded the town.",
+			"Yankari here is Nigeria's best-known game reserve, with the country's largest surviving elephant population.",
+			"Sir Abubakar Tafawa Balewa, Nigeria's first prime minister, came from this state."
+		]
 	},
 	"gombe": {
 		"kind": "city",
 		"population": 270366,
 		"populationRank": 33,
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"Named for the town, founded by a Fulani leader in the jihad of the early 1800s.",
+			"Split from Bauchi in 1996, one of the last states created.",
+			"Its Tangale-Waja hills give it more relief than the plains around, and it sits on the edge of the Sahel."
+		]
 	},
 	"mubi": {
 		"kind": "city",
@@ -123,7 +198,12 @@
 		"populationRank": 39,
 		"region": "Adamawa",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"Of local origin, in the Adamawa hills.",
+			"It is a major cattle market on the Cameroon border.",
+			"The Mandara mountains beside it hold communities that resisted both the Fulani jihad and colonial rule."
+		]
 	},
 	"jos": {
 		"kind": "city",
@@ -131,7 +211,12 @@
 		"populationRank": 14,
 		"region": "Plateau",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"Possibly a corruption of Gwosh, a local village name, misheard by the British.",
+			"It sits at about 1,200 m, cool enough that the British built a hill station there.",
+			"The Nok culture nearby produced terracotta sculpture from about 500 BC, the oldest figurative art in West Africa."
+		]
 	},
 	"minna": {
 		"kind": "city",
@@ -139,7 +224,12 @@
 		"populationRank": 31,
 		"region": "Niger",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Of Gwari origin.",
+			"Two Nigerian heads of state, Babangida and Abubakar, came from this town.",
+			"It is a rail junction and the capital of Niger state, Nigeria’s largest by area."
+		]
 	},
 	"bida": {
 		"kind": "city",
@@ -147,7 +237,12 @@
 		"populationRank": 43,
 		"region": "Niger",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Of Nupe origin; it was the capital of the Nupe kingdom.",
+			"Its glassmakers and brass workers use techniques passed down through families for centuries.",
+			"Nupe glass beads made here were traded across West Africa."
+		]
 	},
 	"abuja": {
 		"kind": "city",
@@ -157,7 +252,12 @@
 		"region": "Federal Capital Territory",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"Named for an older town, now called Suleja, whose emir was called Abuja.",
+			"Built from nothing after 1976 as a neutral capital, and the government moved in 1991.",
+			"Aso Rock, a 400 m monolith, stands behind the presidential complex and gives it its name."
+		]
 	},
 	"jalingo": {
 		"kind": "city",
@@ -165,7 +265,12 @@
 		"populationRank": 47,
 		"region": "Taraba",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"Of Fulani origin.",
+			"The capital of Taraba, one of Nigeria’s most ethnically diverse states.",
+			"The Mambilla Plateau in its state is the highest land in Nigeria, with tea plantations at 1,800 m."
+		]
 	},
 	"ilorin": {
 		"kind": "city",
@@ -174,7 +279,12 @@
 		"population1950": 107000,
 		"region": "Kwara",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"From a Yoruba phrase about sharpening iron on stone — ilu erin, or a variant.",
+			"It is a Yoruba town that was taken into the Sokoto Caliphate, which is why it is Muslim-majority and Yoruba-speaking at once.",
+			"Its pottery and aso oke weaving are both long-established crafts."
+		]
 	},
 	"lafia": {
 		"kind": "city",
@@ -182,7 +292,12 @@
 		"populationRank": 44,
 		"region": "Nassarawa",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"From Arabic or Hausa, \"health\" or \"well-being\".",
+			"The capital of Nasarawa, created in 1996.",
+			"The state holds a large share of Nigeria’s barite and lithium deposits."
+		]
 	},
 	"ogbomoso": {
 		"kind": "city",
@@ -191,14 +306,24 @@
 		"population1950": 124000,
 		"region": "Oyo",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Named for Ogunlola, a hunter who killed a marauder called Elemoso — \"Ogun ta Elemoso\".",
+			"It has one of the largest Nigerian diasporas in the United States relative to its size.",
+			"It is a major yam and cassava market in Oyo state."
+		]
 	},
 	"oyo": {
 		"kind": "city",
 		"population": 736072,
 		"populationRank": 16,
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Named for the Oyo Empire, the dominant Yoruba power from the 1600s to the 1830s, with a cavalry that controlled the savanna.",
+			"Ibadan, its capital, was the largest city in tropical Africa for much of the twentieth century, and has Nigeria's oldest university, from 1948.",
+			"The Old Oyo capital's fall in the 1830s scattered Yoruba people south and is the origin of many modern Yoruba towns."
+		]
 	},
 	"osogbo": {
 		"kind": "city",
@@ -206,7 +331,12 @@
 		"populationRank": 27,
 		"region": "Osun",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"From a phrase about the goddess Osun — \"oso igbo\", the wizard of the forest.",
+			"Its sacred grove is a UNESCO site, one of the last intact forest shrines of the Yoruba religion.",
+			"An Austrian artist, Susanne Wenger, settled there and spent decades restoring its shrines."
+		]
 	},
 	"makurdi": {
 		"kind": "city",
@@ -214,7 +344,12 @@
 		"populationRank": 30,
 		"region": "Benue",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"Of Tiv or Hausa origin.",
+			"It sits on the Benue, and its bridge is one of the few crossings of that river.",
+			"It is the capital of Benue, called the food basket of the nation for its yams."
+		]
 	},
 	"ado-ekiti": {
 		"kind": "city",
@@ -222,7 +357,12 @@
 		"populationRank": 24,
 		"region": "Ekiti",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"\"The camp of Ekiti\" — ado means a camp or settlement, Ekiti the land of hills.",
+			"It is the capital of Ekiti, a state that has produced an unusual number of professors for its size.",
+			"Its Ewi is one of the senior traditional rulers of Yorubaland."
+		]
 	},
 	"iwo": {
 		"kind": "city",
@@ -230,7 +370,12 @@
 		"populationRank": 37,
 		"region": "Osun",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Of Yoruba origin.",
+			"Its Oluwo is a traditional ruler whose title dates from the sixteenth century.",
+			"It is a farming town in Osun state, growing cocoa and kola nut."
+		]
 	},
 	"ikare": {
 		"kind": "city",
@@ -238,7 +383,12 @@
 		"populationRank": 7,
 		"region": "Ondo",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Of Yoruba origin, in the Akoko district.",
+			"It sits among granite inselbergs on the border between Ondo and Kogi.",
+			"It is a market town at the meeting point of Yoruba, Edo and Ebira territory."
+		]
 	},
 	"ife": {
 		"kind": "city",
@@ -246,7 +396,12 @@
 		"populationRank": 22,
 		"region": "Osun",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Ile-Ife means \"the house of expansion\" — Yoruba tradition places the creation of the world here.",
+			"Its bronze and terracotta heads from about 1300 are among the finest naturalistic sculpture ever made in Africa.",
+			"When Europeans first saw them they refused to believe Africans had made them, and invented theories about Greeks."
+		]
 	},
 	"ibadan": {
 		"kind": "city",
@@ -255,7 +410,12 @@
 		"population1950": 422000,
 		"region": "Oyo",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"From eba odan, \"by the edge of the savanna\" — where forest meets grassland.",
+			"It was the largest city in tropical Africa for much of the twentieth century.",
+			"Nigeria’s oldest university opened here in 1948, and Wole Soyinka and Chinua Achebe both studied there."
+		]
 	},
 	"akure": {
 		"kind": "city",
@@ -263,7 +423,12 @@
 		"populationRank": 26,
 		"region": "Ondo",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Of Yoruba origin, possibly from a phrase about a king’s beads breaking.",
+			"The capital of Ondo, Nigeria’s largest cocoa-producing state.",
+			"The Idanre hills nearby hold an old town on top, reached by 660 steps."
+		]
 	},
 	"owo": {
 		"kind": "city",
@@ -271,7 +436,12 @@
 		"populationRank": 32,
 		"region": "Ondo",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Of Yoruba origin.",
+			"Its museum holds terracotta sculpture that links the art of Ife and Benin.",
+			"Its palace was said to be the largest in Africa, with over a hundred courtyards."
+		]
 	},
 	"abeokuta": {
 		"kind": "city",
@@ -279,14 +449,24 @@
 		"populationRank": 19,
 		"region": "Ogun",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"\"Under the rock\" — abe under, okuta a rock, for the Olumo rock that sheltered refugees.",
+			"That refuge was from the nineteenth-century Yoruba wars, and the rock is still climbed.",
+			"Fela Kuti was born here, and it has produced more Nigerian heads of state than any other town."
+		]
 	},
 	"ondo": {
 		"kind": "city",
 		"population": 257005,
 		"populationRank": 35,
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Named for the town of Ondo, whose own name is said to mean \"the settlers\".",
+			"Nigeria's largest cocoa producer, and cocoa was the country's main export before oil.",
+			"Idanre hills in it are a UNESCO tentative site, with an old town on top reached by 660 steps."
+		]
 	},
 	"nsukka": {
 		"kind": "city",
@@ -294,7 +474,12 @@
 		"populationRank": 48,
 		"region": "Enugu",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Of Igbo origin.",
+			"The University of Nigeria here, opened 1960, was the country’s first fully indigenous university.",
+			"Chinua Achebe taught there, and it was overrun early in the Biafran war."
+		]
 	},
 	"ijebu-ode": {
 		"kind": "city",
@@ -302,14 +487,24 @@
 		"populationRank": 41,
 		"region": "Ogun",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"\"Ijebu of the outer part\" — the capital of the Ijebu kingdom.",
+			"That kingdom controlled the trade routes to Lagos and resisted the British until 1892.",
+			"Its Ojude Oba festival, three days after Eid, parades age-grade groups on horseback."
+		]
 	},
 	"enugu": {
 		"kind": "city",
 		"population": 688862,
 		"populationRank": 18,
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"From Igbo enu ugwu, \"the top of the hill\".",
+			"Coal was found here in 1909 and the city grew around it — it is still called the coal city.",
+			"It was the capital of Biafra at the start of the 1967–70 war."
+		]
 	},
 	"lagos": {
 		"kind": "city",
@@ -317,7 +512,12 @@
 		"populationRank": 1,
 		"population1950": 305000,
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Portuguese for \"lakes\", after the lagoons — named by traders for the town of Lagos in Portugal.",
+			"The smallest state by area and the largest by population, and one of the fastest-growing cities in the world.",
+			"It was Nigeria's capital until 1991 and remains its commercial centre; Nollywood, the world's second-largest film industry by output, is based here."
+		]
 	},
 	"benin-city": {
 		"kind": "city",
@@ -326,7 +526,12 @@
 		"population1950": 46000,
 		"region": "Edo",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"From the kingdom of Benin — unconnected to the modern Republic of Benin next door, which borrowed the name in 1975.",
+			"The Benin Bronzes were looted from its royal palace by a British expedition in 1897.",
+			"Its Walls of Benin were once among the longest earthworks in the world, several times the length of the Great Wall by some estimates."
+		]
 	},
 	"awka": {
 		"kind": "city",
@@ -334,7 +539,12 @@
 		"populationRank": 21,
 		"region": "Anambra",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Of Igbo origin, linked to blacksmithing — its smiths travelled across Igboland.",
+			"It is the capital of Anambra.",
+			"Igbo-Ukwu nearby produced bronze castings from the ninth century, centuries before Benin or Ife."
+		]
 	},
 	"sapele": {
 		"kind": "city",
@@ -342,7 +552,12 @@
 		"populationRank": 29,
 		"region": "Delta",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"From the name of a local tree, which gives its name to sapele mahogany.",
+			"That timber has been exported to Europe for furniture and veneer for over a century.",
+			"It was a major Niger Delta river port for rubber and palm oil."
+		]
 	},
 	"umuahia": {
 		"kind": "city",
@@ -350,7 +565,12 @@
 		"populationRank": 34,
 		"region": "Abia",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"\"The children of Ahia\" — umu is a common Igbo prefix meaning the children or people of.",
+			"It was the capital of Biafra after Enugu fell in 1967.",
+			"The Ojukwu bunker and the war museum there preserve that period."
+		]
 	},
 	"warri": {
 		"kind": "city",
@@ -358,7 +578,12 @@
 		"populationRank": 13,
 		"region": "Delta",
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"From Iwere, the name of the Itsekiri kingdom.",
+			"The Portuguese traded here from the 1480s, and an Itsekiri prince was educated in Portugal in the 1600s.",
+			"It is a centre of the oil industry and one of the most ethnically mixed delta towns."
+		]
 	},
 	"owerri": {
 		"kind": "city",
@@ -366,7 +591,12 @@
 		"populationRank": 40,
 		"region": "Imo",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Of Igbo origin.",
+			"It is called the entertainment capital of eastern Nigeria for its hotels and nightlife.",
+			"It was the last capital of Biafra before the war ended in January 1970."
+		]
 	},
 	"aba": {
 		"kind": "city",
@@ -374,7 +604,12 @@
 		"populationRank": 10,
 		"region": "Abia",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Of Igbo origin.",
+			"Its workshops make shoes and clothing exported across West Africa, which is why it is called Nigeria’s Japan.",
+			"The Aba Women’s War of 1929 started here — thousands of women protested colonial taxation and forced a policy change."
+		]
 	},
 	"uyo": {
 		"kind": "city",
@@ -382,7 +617,12 @@
 		"populationRank": 20,
 		"region": "Akwa Ibom",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Of Ibibio origin.",
+			"The capital of Akwa Ibom, one of Nigeria’s main oil-producing states.",
+			"Its stadium, built in 2014, is one of the best-regarded in the country."
+		]
 	},
 	"calabar": {
 		"kind": "city",
@@ -390,7 +630,12 @@
 		"populationRank": 23,
 		"region": "Cross River",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Possibly from the Portuguese calabar, or from an Efik phrase; the river was the Calabar.",
+			"It was a major slave-trade port and later the first capital of the Niger Coast Protectorate.",
+			"Its month-long December carnival is the largest street party in Africa."
+		]
 	},
 	"port-harcourt": {
 		"kind": "city",
@@ -399,6 +644,11 @@
 		"population1950": 56000,
 		"region": "Rivers",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Named in 1913 for Lewis Harcourt, the British colonial secretary, who did not want the honour.",
+			"It was built to ship coal from Enugu and became the centre of Nigeria’s oil industry.",
+			"Ken Saro-Wiwa, executed in 1995 for leading Ogoni protests against oil pollution, was tried here."
+		]
 	}
 }

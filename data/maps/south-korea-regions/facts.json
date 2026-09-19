@@ -19,7 +19,12 @@
 			"name": "Sorak-san",
 			"elevation": 1708
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"Gangneung plus Wonju — the two big towns of the east, their first syllables joined, as with most Korean provinces.",
+			"The most mountainous province and the least populated; the DMZ runs along its northern edge, cutting the historic province in half.",
+			"Pyeongchang here held the 2018 Winter Olympics."
+		]
 	},
 	"seoul": {
 		"kind": "region",
@@ -35,7 +40,12 @@
 			"nameIt": "Seul",
 			"population": 9796000
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"Unusual among Korean place names in being pure native Korean rather than Sino-Korean: seoul simply means \"capital\", so the city is called Capital.",
+			"It has been the capital since 1394, and about half of all South Koreans live in it or its surrounding region.",
+			"Its subway is one of the busiest and longest in the world, and the city was almost entirely rebuilt after the Korean War flattened it."
+		]
 	},
 	"gyeonggi": {
 		"kind": "region",
@@ -55,7 +65,12 @@
 			"nameIt": "Suwon",
 			"population": 1078000
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"\"The area around the capital\" — gyeong is capital, gi the surrounding district; the name only makes sense with Seoul in the middle of it.",
+			"The most populous province, and it wraps completely around Seoul and Incheon.",
+			"Suwon's Hwaseong fortress in it was built in the 1790s using a crane its designer invented, and is a UNESCO site."
+		]
 	},
 	"incheon": {
 		"kind": "region",
@@ -71,7 +86,12 @@
 			"nameIt": "Incheon",
 			"population": 2550000
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"\"Kind river\" in Sino-Korean, though the older name was Michuhol; the modern name dates from 1413.",
+			"MacArthur's 1950 landing here turned the Korean War, and the tides that made it risky are among the largest in Asia.",
+			"Its airport is regularly rated the best in the world and is built on land reclaimed between two islands."
+		]
 	},
 	"north-chungcheong": {
 		"kind": "region",
@@ -93,7 +113,12 @@
 			"nameIt": "Cheongju",
 			"population": 775096
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"Chungju plus Cheongju, north half — the portmanteau rule again.",
+			"The only landlocked province in the country.",
+			"Its Beopjusa temple holds a 33 m gilt-bronze Buddha, and the Cheongju Early Printing Museum marks the Jikji of 1377, printed with movable metal type 78 years before Gutenberg."
+		]
 	},
 	"sejong": {
 		"kind": "region",
@@ -105,7 +130,12 @@
 			"South Chungcheong"
 		],
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Named for King Sejong, who invented the Korean alphabet in 1443 — the only province-level unit named after a person.",
+			"Created in 2012 as a planned administrative capital, to move ministries out of Seoul.",
+			"Hangul, Sejong's alphabet, was designed so the letter shapes show how the mouth makes the sound, and is often called the most scientific writing system in use."
+		]
 	},
 	"north-gyeongsang": {
 		"kind": "region",
@@ -126,7 +156,12 @@
 			"nameIt": "Pohang",
 			"population": 435266
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"Gyeongju plus Sangju, north half.",
+			"Gyeongju was the capital of the Silla kingdom for a thousand years and is called a museum without walls.",
+			"Andong in it keeps Korea's Confucian traditions most strongly, and its mask dance and village are UNESCO-listed."
+		]
 	},
 	"south-chungcheong": {
 		"kind": "region",
@@ -140,7 +175,12 @@
 			"Sejong"
 		],
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"The southern half of Chungju-plus-Cheongju.",
+			"Baekje, the kingdom that carried Buddhism and writing to Japan, had its capitals here at Gongju and Buyeo.",
+			"Its west coast mudflats are a major stop for migratory shorebirds on the East Asian flyway."
+		]
 	},
 	"daejeon": {
 		"kind": "region",
@@ -158,7 +198,12 @@
 			"nameIt": "Daejeon",
 			"population": 1468000
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"\"Big field\" — daejeon is the Sino-Korean reading of an older native name, Hanbat, meaning exactly the same thing.",
+			"It was a village until the railway arrived in 1905 and is now the country's science city, with dozens of government research institutes.",
+			"Its Daedeok cluster developed much of Korea's semiconductor and telecoms research."
+		]
 	},
 	"daegu": {
 		"kind": "region",
@@ -174,7 +219,12 @@
 			"nameIt": "Taegu",
 			"population": 2460000
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"\"Big hill\", from the Sino-Korean characters for large and hill.",
+			"It sits in a basin and is the hottest city in Korea, regularly the summer record-holder.",
+			"Korea's textile industry grew here, and its medicinal herb market has traded since 1658."
+		]
 	},
 	"north-jeolla": {
 		"kind": "region",
@@ -194,7 +244,12 @@
 			"nameIt": "Jeonju",
 			"population": 711424
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Jeonju plus Naju, north half.",
+			"Jeonju is the ancestral seat of the Joseon royal house and the home of bibimbap; its hanok village has some 700 traditional houses.",
+			"The province grows the rice of the Honam plain, historically the country's granary."
+		]
 	},
 	"ulsan": {
 		"kind": "region",
@@ -211,7 +266,12 @@
 			"nameIt": "Ulsan",
 			"population": 1061000
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"\"Mountain of Ul\", after an older local name.",
+			"It has the highest income per head in Korea: Hyundai's shipyard here is the largest in the world, and its car plant among the largest.",
+			"The Bangudae petroglyphs nearby show whale hunting carved about 7,000 years ago — some of the earliest evidence of whaling anywhere."
+		]
 	},
 	"south-gyeongsang": {
 		"kind": "region",
@@ -235,7 +295,12 @@
 			"name": "Chiri-san",
 			"elevation": 1915
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"The southern half of Gyeongju-plus-Sangju.",
+			"Admiral Yi Sun-sin beat the Japanese fleet repeatedly in these waters in the 1590s, at odds of ten to one and more.",
+			"Its Haeinsa temple holds the Tripitaka Koreana, 81,000 woodblocks carved in the 1200s and still uncracked in a hall designed to keep them dry."
+		]
 	},
 	"gwangju": {
 		"kind": "region",
@@ -251,7 +316,12 @@
 			"nameIt": "Gwangju",
 			"population": 1440000
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"\"Bright district\" — gwang is light, ju a district.",
+			"The 1980 uprising here against military rule was crushed with hundreds killed, and is now the founding story of South Korean democracy.",
+			"The city holds Asia's oldest contemporary art biennale, started in 1995 in memory of those events."
+		]
 	},
 	"busan": {
 		"kind": "region",
@@ -267,7 +337,12 @@
 			"nameIt": "Pusan",
 			"population": 3480000
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"\"Cauldron mountain\", for a peak behind the city said to look like an upturned pot.",
+			"The second city and the country's great port, and the only major city the North never took — it held the Pusan Perimeter in 1950.",
+			"Its Jagalchi fish market is Korea's largest, and its film festival is the most important in Asia."
+		]
 	},
 	"south-jeolla": {
 		"kind": "region",
@@ -285,7 +360,12 @@
 			"nameIt": "Yeosu",
 			"population": 341994
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"The southern half of Jeonju-plus-Naju.",
+			"It has over 2,000 islands, more than half of all the islands in South Korea.",
+			"Boseong's tea terraces and the Suncheon Bay wetlands are both here, and the province produces most of the country's seaweed."
+		]
 	},
 	"jeju": {
 		"kind": "region",
@@ -302,6 +382,11 @@
 			"name": "Halla-san",
 			"elevation": 1950
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"\"The district across\" — je is to cross over, ju a district: the island over the water.",
+			"A shield volcano: Hallasan at 1,947 m is South Korea's highest point, and the island's lava tubes are a UNESCO site.",
+			"Its haenyeo, women who free-dive for shellfish into their seventies without breathing apparatus, are on the UNESCO intangible heritage list."
+		]
 	}
 }

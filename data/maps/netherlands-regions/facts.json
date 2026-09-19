@@ -13,7 +13,12 @@
 			"nameIt": "Groninga",
 			"population": 216688
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"Probably from Groni, a personal name, plus -ingen, \"the people of\" — a common Germanic pattern all over the north.",
+			"Europe's largest gas field was found under it in 1959; the extraction caused earthquakes and is now being shut down.",
+			"Its university, founded 1614, took Europe's first female student in 1871 and its students still outnumber almost every other Dutch city's per head."
+		]
 	},
 	"friesland": {
 		"kind": "region",
@@ -32,7 +37,12 @@
 			"nameIt": "Leeuwarden",
 			"population": 125778
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"The land of the Frisians, a people Rome already knew by name — and Frisian is still an official language, closer to English than Dutch is.",
+			"Its eleven-city skating tour, the Elfstedentocht, is 200 km on natural ice and has only been possible fifteen times since 1909.",
+			"The black-and-white Holstein-Friesian is the world's most common dairy cow, and it comes from here."
+		]
 	},
 	"drenthe": {
 		"kind": "region",
@@ -49,7 +59,12 @@
 			"nameIt": "Assen",
 			"population": 62237
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"An old word probably meaning \"three lands\", from an early division into three districts.",
+			"Its hunebedden are 54 megalithic tombs built about 5,000 years ago from boulders the ice age left behind — the oldest structures in the country.",
+			"The emptiest province: no city of any size, and it was moorland and peat bog until the nineteenth century."
+		]
 	},
 	"noord-holland": {
 		"kind": "region",
@@ -67,7 +82,12 @@
 			"nameIt": "Amsterdam",
 			"population": 1031000
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"Holland is most likely holtland, \"wooded land\", not \"hollow land\" — and it is only two of the twelve provinces, though foreigners use it for the whole country.",
+			"Amsterdam is here, built on millions of wooden piles driven into the marsh, with 165 canals.",
+			"Its Beemster polder, drained in 1612, is a UNESCO site for being the first large piece of land the Dutch took from a lake on purpose."
+		]
 	},
 	"flevoland": {
 		"kind": "region",
@@ -80,7 +100,12 @@
 			"Utrecht"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"Named for Lacus Flevo, the lake Roman writers recorded here — a name resurrected for land that did not exist until the 1950s.",
+			"The newest province, created in 1986, and the largest artificial island in the world: it was the bottom of the Zuiderzee.",
+			"Almere on it grew from nothing in 1976 to 220,000 people, the fastest-growing town in the country."
+		]
 	},
 	"overijssel": {
 		"kind": "region",
@@ -98,7 +123,12 @@
 			"nameIt": "Zwolle",
 			"population": 111805
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"\"Over the IJssel\" — the land on the far side of the river, seen from the bishops of Utrecht who ruled it.",
+			"Giethoorn in it has canals instead of streets and, in its old centre, no roads at all.",
+			"The Twente half was a textile region, and its mills wove for the Dutch East Indies until the trade collapsed in the 1960s."
+		]
 	},
 	"gelderland": {
 		"kind": "region",
@@ -118,7 +148,12 @@
 			"nameIt": "Arnhem",
 			"population": 141674
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"Named for Geldern, a town that is now in Germany — the duchy's old capital ended up on the wrong side of the border.",
+			"The largest province, and the Veluwe in it is the biggest continuous nature reserve in the country, with wild boar and red deer.",
+			"Arnhem here was the bridge too far of 1944, and the Kröller-Müller museum on the Veluwe holds the second-largest Van Gogh collection."
+		]
 	},
 	"utrecht": {
 		"kind": "region",
@@ -136,7 +171,12 @@
 			"nameIt": "Utrecht",
 			"population": 640000
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"From Latin ultra traiectum, \"beyond the ford\" — the Roman crossing of the Rhine, which became Trecht and then Utrecht.",
+			"The smallest province, and the most central: nearly every Dutch railway line passes through its station.",
+			"Its cathedral tower is the tallest in the country at 112 m, and the nave that once joined it blew down in a tornado in 1674 and was never rebuilt."
+		]
 	},
 	"zuid-holland": {
 		"kind": "region",
@@ -155,7 +195,12 @@
 			"nameIt": "L'Aia",
 			"population": 1406000
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"The southern half of the old county of Holland, split in two in 1840.",
+			"The most densely populated province in the country, and Rotterdam in it is Europe's largest port.",
+			"The Kinderdijk windmills here, nineteen of them from 1740, are the best-known image of the Dutch fight with water."
+		]
 	},
 	"noord-brabant": {
 		"kind": "region",
@@ -173,7 +218,12 @@
 			"nameIt": "Eindhoven",
 			"population": 398053
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Brabant is probably bracha plus bant, \"newly broken land in a district\" — and this is the northern remnant, the rest being in Belgium.",
+			"Philips was founded in Eindhoven here in 1891, and the region around it is still the country's technology cluster.",
+			"Bosch was born in 's-Hertogenbosch, its capital, and Vincent van Gogh in Zundert a little to the west."
+		]
 	},
 	"zeeland": {
 		"kind": "region",
@@ -189,7 +239,12 @@
 			"nameIt": "Middelburg",
 			"population": 46485
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"\"Sea land\", and it is: a scatter of islands and peninsulas in a delta. New Zealand is named after it.",
+			"The 1953 flood killed 1,836 people here, which led to the Delta Works — the largest flood barriers on earth.",
+			"Its mussels and oysters are farmed in the same tidal waters those barriers can now close off."
+		]
 	},
 	"limburg": {
 		"kind": "region",
@@ -204,6 +259,11 @@
 			"nameIt": "Maastricht",
 			"population": 122378
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Named for Limbourg, a castle town that is today in Belgium — the duchy was split, and this is the Dutch tail of it.",
+			"The only hilly part of the country: its highest point, the Vaalserberg, is 322 m, where three borders meet.",
+			"Maastricht, its capital, gave the European Union its name treaty in 1992, and its caves were quarried for marl for two thousand years."
+		]
 	}
 }
