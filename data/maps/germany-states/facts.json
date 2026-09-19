@@ -14,7 +14,11 @@
 			"nameIt": "Kiel",
 			"population": 269427
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"Two old duchies in one hyphen: Schleswig is the Schlei inlet plus -wik, a trading bay, and Holstein is from Holseten, \"dwellers in the woods\".",
+			"Denmark ruled it, Prussia took it in 1864, and the border only settled by plebiscite in 1920 — which is why there are still Danish schools in the north."
+		]
 	},
 	"mecklenburg-vorpommern": {
 		"kind": "region",
@@ -31,7 +35,11 @@
 			"nameIt": "Rostock",
 			"population": 203080
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"Mecklenburg is \"the great castle\" in Low German, and Pommern is Slavic po more, \"by the sea\" — Vor- means the near half, the far half being in Poland.",
+			"The emptiest state in Germany: more lakes than anywhere else, and fewer people per square kilometre than anywhere except the far north."
+		]
 	},
 	"hamburg": {
 		"kind": "region",
@@ -47,7 +55,11 @@
 			"nameIt": "Amburgo",
 			"population": 1757000
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"From Hammaburg, a castle Charlemagne built around 825 — hamma is a bend in a river, and the Elbe bends here.",
+			"Officially the Free and Hanseatic City: the Hanse's habits of independence are still in its name and in its number plates, HH."
+		]
 	},
 	"bremen": {
 		"kind": "region",
@@ -62,7 +74,11 @@
 			"nameIt": "Brema",
 			"population": 724909
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"From bremo, Old Saxon for \"edge\" — the town sat on the bank of the Weser where the ground rose above the marsh.",
+			"The smallest state, and a strange shape: it is two cities, Bremen and Bremerhaven, 60 km apart with Niedersachsen in between."
+		]
 	},
 	"niedersachsen": {
 		"kind": "region",
@@ -85,7 +101,11 @@
 			"nameIt": "Hannover",
 			"population": 722490
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"\"Lower Saxony\" — lower meaning downstream, towards the sea, not southern. The Saxons are the same people who gave Sachsen its name, but they started here.",
+			"So the two Saxonies are not neighbours: the name travelled south-east with a duke's title in the twelfth century, while the people stayed put."
+		]
 	},
 	"berlin": {
 		"kind": "region",
@@ -100,7 +120,11 @@
 			"nameIt": "Berlino",
 			"population": 3406000
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"Not the bear: it is most likely Slavic berl-, a swamp — the bear on the coat of arms is a pun that came later and stuck.",
+			"An island in Brandenburg, and its own state; the two have voted twice on merging and said no both times."
+		]
 	},
 	"brandenburg": {
 		"kind": "region",
@@ -119,7 +143,11 @@
 			"nameIt": "Potsdam",
 			"population": 218095
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"From Brennaburg, a Slavic stronghold the Germans took in 928 — the Havel marshes around it are why it was worth holding.",
+			"The core of Prussia: the Margrave of Brandenburg became the King in Prussia, and everything from there to Königsberg followed."
+		]
 	},
 	"sachsen-anhalt": {
 		"kind": "region",
@@ -141,7 +169,11 @@
 			"name": "Brocken",
 			"elevation": 1141
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"A 1945 invention joining Prussian Saxony to the old principality of Anhalt, whose name is simply a castle called Anhalt — \"hold on\".",
+			"Luther nailed his theses in Wittenberg here, and Bach was born in Eisenach just over the Thuringian border."
+		]
 	},
 	"nordrhein-westfalen": {
 		"kind": "region",
@@ -162,7 +194,11 @@
 			"name": "Vaalserberg",
 			"elevation": 321
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"The northern Rhineland plus Westfalen, \"the western plain\" — falen is an old word for flat open land, and there were Ostfalen to match.",
+			"The most populous state, by a distance: one German in five lives here, most of them in the Ruhr."
+		]
 	},
 	"thuringen": {
 		"kind": "region",
@@ -181,7 +217,11 @@
 			"nameIt": "Erfurt",
 			"population": 203254
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"Named for the Thuringii, a people Rome knew by the fourth century; nobody is sure where their own name came from.",
+			"Called the green heart of Germany, and it is the geographic centre of the country as well as the wooded one."
+		]
 	},
 	"sachsen": {
 		"kind": "region",
@@ -199,7 +239,11 @@
 			"nameIt": "Dresda",
 			"population": 617515
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"The Saxons again — but they never lived here. The name came with the Ascanian dukes in 1423, six hundred kilometres from where the Saxons actually were.",
+			"Meissen porcelain was invented here in 1708, the first true porcelain made outside China."
+		]
 	},
 	"hessen": {
 		"kind": "region",
@@ -219,7 +263,11 @@
 			"nameIt": "Francoforte",
 			"population": 2895000
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"From the Chatti, a tribe Tacitus wrote about; Chatti became Hessi became Hessen.",
+			"Its landgraves rented soldiers to Britain in the 1770s, which is why American schoolchildren learn the word Hessians."
+		]
 	},
 	"rheinland-pfalz": {
 		"kind": "region",
@@ -241,7 +289,11 @@
 			"name": "Hohe Acht",
 			"elevation": 747
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"The Rhineland plus the Pfalz, which is Latin palatium, a palace — the Count Palatine was the emperor's deputy, and his lands kept the title.",
+			"Two thirds of German wine comes from here, and the Mosel's vineyards are among the steepest anywhere."
+		]
 	},
 	"saarland": {
 		"kind": "region",
@@ -256,7 +308,11 @@
 			"nameIt": "Saarbrücken",
 			"population": 770001
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Simply the land on the Saar, the river that runs through it.",
+			"It voted twice on its own future: in 1935 to rejoin Germany, and in 1955 against becoming independent — so it joined West Germany in 1957, the last piece to arrive."
+		]
 	},
 	"bayern": {
 		"kind": "region",
@@ -278,7 +334,11 @@
 			"name": "Zugspitze",
 			"elevation": 2963
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"From the Baiuvarii, \"the men from Baia\" — most likely Bohemia, which they left around the sixth century.",
+			"The oldest state in the list: a duchy from 555, a kingdom from 1806, and it joined the German Empire in 1871 keeping its own army and postal service."
+		]
 	},
 	"baden-wurttemberg": {
 		"kind": "region",
@@ -299,6 +359,10 @@
 			"name": "Feldberg",
 			"elevation": 1493
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Two names welded together in 1952: Baden is Old High German for baths, the Roman springs at Baden-Baden, and Württemberg is a castle hill whose own name nobody has explained.",
+			"The Black Forest is here, and so is the source of the Danube — which then runs 2,850 km east to the Black Sea."
+		]
 	}
 }

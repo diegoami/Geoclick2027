@@ -1,0 +1,129 @@
+{
+	"_note": [
+		"Name-facts for Ukraine (FT-41, docs/PLAN_V0.9.md). See italy.json for the",
+		"rules.",
+		"",
+		"Almost every Ukrainian oblast is named for its capital city, so the hook",
+		"is usually the city's own name - and those are mostly rivers, founders or",
+		"Cossack history. Two words open a lot of them:",
+		"",
+		"  -iv / -ev  = 'of' a person (Kyiv = Kyi's, Lviv = Lev's)",
+		"  horod / hrad = a fortified town",
+		"",
+		"The map has both Kyiv the city and Kyiv Oblast around it, with separate",
+		"ids, so each gets its own entry. Crimea and Sevastopol are on the map",
+		"because Natural Earth files them under Ukraine; DECISIONS.md records that",
+		"choice and its reasoning.",
+		"",
+		"Ids drop the diacritics and apostrophes, e.g. Khmelnytskyi is",
+		"'khmelnytskyi'."
+	],
+	"chernihiv": [
+		"Probably from chornyi, \"black\" — the dark soil or the dark woods around it.",
+		"One of the oldest cities in the country, and its Saviour Cathedral was begun before 1036, older than anything standing in Kyiv."
+	],
+	"sumy": [
+		"From sumka, a bag or pouch: legend says three hunting bags were found at the founding, and the city's arms show three of them.",
+		"Founded in 1655 by Cossacks moving east away from Polish rule."
+	],
+	"volyn": [
+		"Named for a vanished town, Volyn, and the Volhynians who lived around it — a name recorded in the eleventh century.",
+		"Lutsk's castle here has stood since the 1340s, and is on the 200-hryvnia note."
+	],
+	"rivne": [
+		"From rivnyi, \"flat\" or \"even\" — the ground around the town.",
+		"It was Polish between the wars and had one of the largest Jewish communities in Volhynia before 1941."
+	],
+	"zhytomyr": [
+		"Most likely from a founder's name, Zhytomyr — zhyto also means rye, so the folk reading is \"rye and peace\".",
+		"Korolev, who built the rockets that launched Sputnik and Gagarin, was born here."
+	],
+	"kyiv": [
+		"Named for Kyi, the eldest of three brothers who legend says founded the city with their sister Lybid.",
+		"The Kyivan Rus state here was the origin of both Ukraine and Russia, which is why the name carries the weight it does."
+	],
+	"kyiv-oblast": [
+		"The region around the capital, named for it — the city itself is administered separately and appears on this map on its own.",
+		"Chornobyl is in this oblast, and the exclusion zone around it has become, unintentionally, one of Europe's largest wildlife refuges."
+	],
+	"lviv": [
+		"\"Lev's city\" — King Danylo of Galicia founded it around 1250 and named it for his son Lev.",
+		"Austrian until 1918 and Polish until 1939, it is the most central-European city in Ukraine, down to the coffee houses."
+	],
+	"poltava": [
+		"From the river Ltava, with the prefix po-, \"along\" — the settlement by the Ltava.",
+		"Peter the Great beat the Swedes here in 1709, ending Sweden's time as a great power."
+	],
+	"khmelnytskyi": [
+		"Renamed in 1954 for Bohdan Khmelnytskyi, the Cossack hetman; before that it was Proskuriv.",
+		"His 1648 uprising against Poland created a Cossack state and is the founding story of modern Ukraine."
+	],
+	"kharkiv": [
+		"Named for the river Kharkiv, which may itself come from a semi-legendary Cossack founder called Kharko.",
+		"It was the capital of Soviet Ukraine until 1934, which is why it has the constructivist Derzhprom, one of the first skyscrapers in Europe."
+	],
+	"ternopil": [
+		"Ternovyi pil, \"thorn field\" — the blackthorn scrub the town was built on.",
+		"Its lake is artificial and four centuries old, dug as part of the town's defences."
+	],
+	"cherkasy": [
+		"From the Cherkasy, an old name for the Cossacks — possibly linked to the Circassians of the Caucasus.",
+		"The Dnipro widens into the Kremenchuk Reservoir here, 250 km long and the largest body of water in the country."
+	],
+	"vinnytsya": [
+		"Probably from vino, an old Slavic word for a dowry or tribute paid in land.",
+		"Hitler's Werwolf headquarters was built in the forest outside the city, and he spent months of 1942 and 1943 there."
+	],
+	"luhansk": [
+		"From the river Luhan, itself from luh, a water meadow.",
+		"Founded in 1795 around a British-built cannon foundry, to arm the Black Sea fleet."
+	],
+	"ivano-frankivsk": [
+		"Renamed in 1962 for the poet Ivan Franko; for three centuries before that it was Stanislaviv, after the founder's son.",
+		"The gateway to the Carpathians and the Hutsul highlands, whose music and woodwork are unlike anything else in the country."
+	],
+	"kirovohrad": [
+		"The map's name is the Soviet one, for Sergei Kirov; since 2016 it has been Kropyvnytskyi, after a playwright.",
+		"It was founded as Fort St Elizabeth in 1754, and has been renamed five times."
+	],
+	"zakarpattia": [
+		"\"Beyond the Carpathians\" — za is beyond, and it is the only Ukrainian region on the far side of the mountains.",
+		"Hungarian for a thousand years, then Czechoslovak, then Soviet; it still has Hungarian, Romanian and Rusyn villages."
+	],
+	"dnipropetrovsk": [
+		"The Dnipro plus Grigory Petrovsky, a Soviet official; the city dropped the second half in 2016 and is now simply Dnipro.",
+		"It was Katerynoslav first, \"Catherine's glory\", founded by Potemkin for Catherine the Great."
+	],
+	"chernivtsi": [
+		"From chornyi, \"black\", and a fortress of black wood or black earth on the Prut.",
+		"Austrian until 1918, and so mixed that its university was German, its theatre Romanian and its poets — Paul Celan among them — wrote in German."
+	],
+	"donetsk": [
+		"From the Siverskyi Donets river; donets is a little Don.",
+		"Founded in 1869 by a Welsh ironmaster, John Hughes, and called Yuzivka — a Russian rendering of his name — for fifty years."
+	],
+	"mykolayiv": [
+		"For St Nicholas, patron of sailors: the shipyard was founded on his feast day in 1789.",
+		"Most of the Soviet Union's aircraft carriers were built here, on a river 100 km from the sea."
+	],
+	"zaporizhzhya": [
+		"Za porohamy, \"beyond the rapids\" — the Dnipro cataracts that the Cossack Sich sat below.",
+		"The rapids themselves are gone, drowned by the 1932 dam that made the reservoir."
+	],
+	"odesa": [
+		"Named in 1795 after Odessos, a Greek colony thought to have stood nearby — it did not, but the name stayed.",
+		"A free port for its first sixty years, which is why it filled with Greeks, Italians, Jews and Frenchmen and sounds unlike anywhere else in Ukraine."
+	],
+	"kherson": [
+		"For Chersonesos, the Greek city in Crimea — Catherine the Great liked classical names and used them across the south.",
+		"The first Black Sea shipyard was here, before Mykolayiv and before Sevastopol."
+	],
+	"crimea": [
+		"From Qirim, the Crimean Tatar name of the old capital; the Greeks had called the peninsula Tauris.",
+		"Greeks, Scythians, Goths, Genoese, Tatars, Ottomans and Russians have all held it, and the Tatars were deported wholesale in 1944."
+	],
+	"sevastopol": [
+		"Greek again, coined in 1783: sebastos, \"venerable\", plus polis — one of Catherine's classical inventions.",
+		"Besieged for eleven months in the Crimean War and eight in the Second World War."
+	]
+}

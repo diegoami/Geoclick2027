@@ -14,7 +14,11 @@
 			"nameIt": "Černihiv",
 			"population": 307684
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"Probably from chornyi, \"black\" — the dark soil or the dark woods around it.",
+			"One of the oldest cities in the country, and its Saviour Cathedral was begun before 1036, older than anything standing in Kyiv."
+		]
 	},
 	"sumy": {
 		"kind": "region",
@@ -31,7 +35,11 @@
 			"nameIt": "Sumy",
 			"population": 294456
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"From sumka, a bag or pouch: legend says three hunting bags were found at the founding, and the city's arms show three of them.",
+			"Founded in 1655 by Cossacks moving east away from Polish rule."
+		]
 	},
 	"volyn": {
 		"kind": "region",
@@ -47,7 +55,11 @@
 			"nameIt": "Luc'k",
 			"population": 213661
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"Named for a vanished town, Volyn, and the Volhynians who lived around it — a name recorded in the eleventh century.",
+			"Lutsk's castle here has stood since the 1340s, and is on the 200-hryvnia note."
+		]
 	},
 	"rivne": {
 		"kind": "region",
@@ -66,7 +78,11 @@
 			"nameIt": "Rivne",
 			"population": 255106
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"From rivnyi, \"flat\" or \"even\" — the ground around the town.",
+			"It was Polish between the wars and had one of the largest Jewish communities in Volhynia before 1941."
+		]
 	},
 	"zhytomyr": {
 		"kind": "region",
@@ -84,7 +100,11 @@
 			"nameIt": "Žytomyr",
 			"population": 282192
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"Most likely from a founder's name, Zhytomyr — zhyto also means rye, so the folk reading is \"rye and peace\".",
+			"Korolev, who built the rockets that launched Sputnik and Gagarin, was born here."
+		]
 	},
 	"kyiv": {
 		"kind": "region",
@@ -100,7 +120,11 @@
 			"nameIt": "Kiev",
 			"population": 2709000
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"Named for Kyi, the eldest of three brothers who legend says founded the city with their sister Lybid.",
+			"The Kyivan Rus state here was the origin of both Ukraine and Russia, which is why the name carries the weight it does."
+		]
 	},
 	"kyiv-oblast": {
 		"kind": "region",
@@ -120,7 +144,11 @@
 			"nameIt": "Bila Cerkva",
 			"population": 199163
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"The region around the capital, named for it — the city itself is administered separately and appears on this map on its own.",
+			"Chornobyl is in this oblast, and the exclusion zone around it has become, unintentionally, one of Europe's largest wildlife refuges."
+		]
 	},
 	"lviv": {
 		"kind": "region",
@@ -139,7 +167,11 @@
 			"nameIt": "Leopoli",
 			"population": 803880
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"\"Lev's city\" — King Danylo of Galicia founded it around 1250 and named it for his son Lev.",
+			"Austrian until 1918 and Polish until 1939, it is the most central-European city in Ukraine, down to the coffee houses."
+		]
 	},
 	"poltava": {
 		"kind": "region",
@@ -160,7 +192,11 @@
 			"nameIt": "Poltava",
 			"population": 317847
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"From the river Ltava, with the prefix po-, \"along\" — the settlement by the Ltava.",
+			"Peter the Great beat the Swedes here in 1709, ending Sweden's time as a great power."
+		]
 	},
 	"khmelnytskyi": {
 		"kind": "region",
@@ -179,7 +215,11 @@
 			"nameIt": "Chmel'nyc'kyj",
 			"population": 398346
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Renamed in 1954 for Bohdan Khmelnytskyi, the Cossack hetman; before that it was Proskuriv.",
+			"His 1648 uprising against Poland created a Cossack state and is the founding story of modern Ukraine."
+		]
 	},
 	"kharkiv": {
 		"kind": "region",
@@ -198,7 +238,11 @@
 			"nameIt": "Charkiv",
 			"population": 1461000
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"Named for the river Kharkiv, which may itself come from a semi-legendary Cossack founder called Kharko.",
+			"It was the capital of Soviet Ukraine until 1934, which is why it has the constructivist Derzhprom, one of the first skyscrapers in Europe."
+		]
 	},
 	"ternopil": {
 		"kind": "region",
@@ -217,7 +261,11 @@
 			"nameIt": "Ternopil'",
 			"population": 244768
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Ternovyi pil, \"thorn field\" — the blackthorn scrub the town was built on.",
+			"Its lake is artificial and four centuries old, dug as part of the town's defences."
+		]
 	},
 	"cherkasy": {
 		"kind": "region",
@@ -235,7 +283,11 @@
 			"nameIt": "Čerkasy",
 			"population": 297568
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"From the Cherkasy, an old name for the Cossacks — possibly linked to the Circassians of the Caucasus.",
+			"The Dnipro widens into the Kremenchuk Reservoir here, 250 km long and the largest body of water in the country."
+		]
 	},
 	"vinnytsya": {
 		"kind": "region",
@@ -256,7 +308,11 @@
 			"nameIt": "Vinnycja",
 			"population": 352115
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"Probably from vino, an old Slavic word for a dowry or tribute paid in land.",
+			"Hitler's Werwolf headquarters was built in the forest outside the city, and he spent months of 1942 and 1943 there."
+		]
 	},
 	"luhansk": {
 		"kind": "region",
@@ -272,7 +328,11 @@
 			"nameIt": "Luhans'k",
 			"population": 452000
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"From the river Luhan, itself from luh, a water meadow.",
+			"Founded in 1795 around a British-built cannon foundry, to arm the Black Sea fleet."
+		]
 	},
 	"ivano-frankivsk": {
 		"kind": "region",
@@ -290,7 +350,11 @@
 			"nameIt": "Ivano-Frankivs'k",
 			"population": 241239
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Renamed in 1962 for the poet Ivan Franko; for three centuries before that it was Stanislaviv, after the founder's son.",
+			"The gateway to the Carpathians and the Hutsul highlands, whose music and woodwork are unlike anything else in the country."
+		]
 	},
 	"kirovohrad": {
 		"kind": "region",
@@ -310,7 +374,11 @@
 			"nameIt": "Kropyvnyc'kyj",
 			"population": 249454
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"The map's name is the Soviet one, for Sergei Kirov; since 2016 it has been Kropyvnytskyi, after a playwright.",
+			"It was founded as Fort St Elizabeth in 1754, and has been renamed five times."
+		]
 	},
 	"zakarpattia": {
 		"kind": "region",
@@ -330,7 +398,11 @@
 			"name": "Gora Goverla",
 			"elevation": 2058
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"\"Beyond the Carpathians\" — za is beyond, and it is the only Ukrainian region on the far side of the mountains.",
+			"Hungarian for a thousand years, then Czechoslovak, then Soviet; it still has Hungarian, Romanian and Rusyn villages."
+		]
 	},
 	"dnipropetrovsk": {
 		"kind": "region",
@@ -351,7 +423,11 @@
 			"nameIt": "Dnipro",
 			"population": 1050000
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"The Dnipro plus Grigory Petrovsky, a Soviet official; the city dropped the second half in 2016 and is now simply Dnipro.",
+			"It was Katerynoslav first, \"Catherine's glory\", founded by Potemkin for Catherine the Great."
+		]
 	},
 	"chernivtsi": {
 		"kind": "region",
@@ -369,7 +445,11 @@
 			"nameIt": "Černivci",
 			"population": 298251
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"From chornyi, \"black\", and a fortress of black wood or black earth on the Prut.",
+			"Austrian until 1918, and so mixed that its university was German, its theatre Romanian and its poets — Paul Celan among them — wrote in German."
+		]
 	},
 	"donetsk": {
 		"kind": "region",
@@ -387,7 +467,11 @@
 			"nameIt": "Donec'k",
 			"population": 988000
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"From the Siverskyi Donets river; donets is a little Don.",
+			"Founded in 1869 by a Welsh ironmaster, John Hughes, and called Yuzivka — a Russian rendering of his name — for fifty years."
+		]
 	},
 	"mykolayiv": {
 		"kind": "region",
@@ -405,7 +489,11 @@
 			"nameIt": "Mykolaïv",
 			"population": 510840
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"For St Nicholas, patron of sailors: the shipyard was founded on his feast day in 1789.",
+			"Most of the Soviet Union's aircraft carriers were built here, on a river 100 km from the sea."
+		]
 	},
 	"zaporizhzhya": {
 		"kind": "region",
@@ -422,7 +510,11 @@
 			"nameIt": "Zaporižžja",
 			"population": 788000
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"Za porohamy, \"beyond the rapids\" — the Dnipro cataracts that the Cossack Sich sat below.",
+			"The rapids themselves are gone, drowned by the 1932 dam that made the reservoir."
+		]
 	},
 	"odesa": {
 		"kind": "region",
@@ -439,7 +531,11 @@
 			"nameIt": "Odessa",
 			"population": 991000
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Named in 1795 after Odessos, a Greek colony thought to have stood nearby — it did not, but the name stayed.",
+			"A free port for its first sixty years, which is why it filled with Greeks, Italians, Jews and Frenchmen and sounds unlike anywhere else in Ukraine."
+		]
 	},
 	"kherson": {
 		"kind": "region",
@@ -456,7 +552,11 @@
 			"nameIt": "Cherson",
 			"population": 320477
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"For Chersonesos, the Greek city in Crimea — Catherine the Great liked classical names and used them across the south.",
+			"The first Black Sea shipyard was here, before Mykolayiv and before Sevastopol."
+		]
 	},
 	"crimea": {
 		"kind": "region",
@@ -476,7 +576,11 @@
 			"name": "Roman-Kosh",
 			"elevation": 1545
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"From Qirim, the Crimean Tatar name of the old capital; the Greeks had called the peninsula Tauris.",
+			"Greeks, Scythians, Goths, Genoese, Tatars, Ottomans and Russians have all held it, and the Tatars were deported wholesale in 1944."
+		]
 	},
 	"sevastopol": {
 		"kind": "region",
@@ -491,6 +595,10 @@
 			"nameIt": "Sebastopoli",
 			"population": 379200
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Greek again, coined in 1783: sebastos, \"venerable\", plus polis — one of Catherine's classical inventions.",
+			"Besieged for eleven months in the Crimean War and eight in the Second World War."
+		]
 	}
 }

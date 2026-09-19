@@ -12,6 +12,9 @@ one entry per tagged version on `main`.
 
 For players:
 
+- **Seven countries now have name-facts**: Italy, China, the United States,
+  Germany, Spain, Poland and Ukraine — 176 places, 374 sentences. Italy's
+  regions have three each, so the rotation has somewhere to go.
 - **A second line saying why a place is called what it is**, on Italy's
   twenty regions to start with. Lombardia is named for the Longobards, the
   "long-beards" who took the north in 568; Piemonte is ai piedi dei monti,
