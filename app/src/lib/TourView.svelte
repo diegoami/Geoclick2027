@@ -3,6 +3,8 @@
 	import * as maplibregl from 'maplibre-gl';
 	import 'maplibre-gl/dist/maplibre-gl.css';
 	import { fetchMapDefAndStyle, createMap } from './geoclickMap';
+	import type { TerrainLayer } from './terrainLayer';
+	import { terrainShown } from './mapPrefs.svelte';
 	import { mapFitPadding } from './mapFit';
 	import MapNav from './MapNav.svelte';
 	import { t } from './i18n.svelte';
@@ -18,6 +20,9 @@
 
 	let container: HTMLDivElement;
 	let map: maplibregl.Map | undefined;
+	// Sea, rivers and named terrain (FT-33). The $effect below follows the
+	// map bar's Terrain button, which only writes the preference.
+	let terrain = $state<TerrainLayer | undefined>(undefined);
 	let popup: maplibregl.Popup | undefined;
 	let advanceTimer: ReturnType<typeof setTimeout> | undefined;
 
@@ -165,6 +170,18 @@
 		else if (advanceTimer) clearTimeout(advanceTimer);
 	}
 
+	// Show or hide the Terrain layer as the preference changes (FT-33). An
+	// $effect rather than a call from the button: the button has no idea
+	// which map is open, and the preference is $state, so this is the
+	// ordinary Svelte way to follow it.
+	$effect(() => {
+		const shown = terrainShown();
+		terrain?.setVisible(shown).catch((e) => {
+			// A missing or unreadable terrain.pmtiles must never break the map
+			// the player came for.
+			console.error('Could not show the terrain layer:', e);
+		});
+	});
 	onMount(() => {
 		let cancelled = false;
 
@@ -183,7 +200,7 @@
 			// menu below still overrides it.
 			speed = defaultTourSpeed(loadedTour.steps);
 
-			map = createMap(container, loadedMapDef, style);
+			({ map, terrain } = createMap(container, loadedMapDef, style));
 			map.once('load', () => {
 				if (cancelled) return;
 				playing = true;

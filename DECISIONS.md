@@ -1112,6 +1112,29 @@ answers:
   - The favourite star is a tip in the outro, not a step. Finish leaves
     the player on the tour, which keeps playing.
 
+## A module cycle made the Terrain button do nothing (2026-09-19, FT-33 fix)
+
+- **Found by testing the button rather than the stored preference.** Every
+  earlier check had set `geoclick:terrain:v1` before the page loaded, which
+  exercises the path through `createMap`. Pressing the button is a
+  different path, and it was broken: the preference flipped, the button
+  showed pressed, and nothing was fetched or drawn.
+- **The cause was two live copies of one module.** `geoclickMap.ts` kept a
+  registry of open maps and `refreshTerrain()` walked it; `terrainLayer.ts`
+  imported `registerTilesArchive` back out of `geoclickMap.ts`. That cycle
+  gave the dev server two instances: `createMap` registered its map in one,
+  the button read the other, which was empty. The instrumented run showed
+  it plainly - registry size 1 on create, 0 on click, with no map removed
+  in between.
+- **Both halves are now gone rather than patched.** The PMTiles plumbing
+  moved to `pmtilesSource.ts`, which imports nothing from the app and so
+  cannot be in a cycle; and the registry was replaced by an `$effect` in
+  each view watching the preference. The button now only writes the
+  preference, which is what a button should do - the views follow it
+  because it is `$state`, the ordinary Svelte way.
+- **The lesson worth keeping:** a feature with two entry points needs both
+  tested. The persisted path had passed every time.
+
 ## The map can show what is under it (2026-09-19, FT-33)
 
 - **The sea is blue now, behind a button.** Until v0.8.0 every map was

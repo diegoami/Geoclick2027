@@ -4,6 +4,8 @@
 	import 'maplibre-gl/dist/maplibre-gl.css';
 	import { resolve } from '$app/paths';
 	import { fetchMapDefAndStyle, createMap } from './geoclickMap';
+	import type { TerrainLayer } from './terrainLayer';
+	import { terrainShown } from './mapPrefs.svelte';
 	import { mapFitPadding } from './mapFit';
 	import { resolveDrop } from './quizDrop';
 	import MapNav from './MapNav.svelte';
@@ -45,6 +47,9 @@
 	let trayHandleRowEl = $state<HTMLDivElement>();
 	let traySlipsEl = $state<HTMLDivElement>();
 	let map: maplibregl.Map | undefined;
+	// Sea, rivers and named terrain (FT-33). The $effect below follows the
+	// map bar's Terrain button, which only writes the preference.
+	let terrain = $state<TerrainLayer | undefined>(undefined);
 	// MapLibre throws on setFeatureState until the style's sources exist.
 	// Set in the map's 'load' handler; gates everything that touches
 	// feature state from outside that handler.
@@ -621,6 +626,18 @@
 		startRound();
 	}
 
+	// Show or hide the Terrain layer as the preference changes (FT-33). An
+	// $effect rather than a call from the button: the button has no idea
+	// which map is open, and the preference is $state, so this is the
+	// ordinary Svelte way to follow it.
+	$effect(() => {
+		const shown = terrainShown();
+		terrain?.setVisible(shown).catch((e) => {
+			// A missing or unreadable terrain.pmtiles must never break the map
+			// the player came for.
+			console.error('Could not show the terrain layer:', e);
+		});
+	});
 	onMount(() => {
 		let cancelled = false;
 
@@ -633,7 +650,7 @@
 			await refreshCardStates();
 			if (cancelled) return;
 
-			map = createMap(container, loadedMapDef, style);
+			({ map, terrain } = createMap(container, loadedMapDef, style));
 			fetchFacts(mapId).then((loaded) => {
 				if (!cancelled) facts = loaded;
 			});

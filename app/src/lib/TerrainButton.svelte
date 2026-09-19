@@ -6,17 +6,18 @@
 	// setting, not a place to go.
 	//
 	// The preference is one flag for all 63 maps (mapPrefs.svelte.ts), so
-	// pressing this once is enough; refreshTerrain() applies it to whatever
-	// map is currently open.
+	// pressing this once is enough; every open map view watches the
+	// preference and follows it.
 	import { t } from './i18n.svelte';
 	import { setTerrainShown, terrainShown } from './mapPrefs.svelte';
-	import { refreshTerrain } from './geoclickMap';
 
 	const shown = $derived(terrainShown());
 
 	function toggle() {
+		// Just the preference. Each map view watches it with an $effect, so
+		// whatever map is open follows - no registry of live maps, which is
+		// what broke the first time (see pmtilesSource.ts).
 		setTerrainShown(!terrainShown());
-		refreshTerrain();
 	}
 </script>
 

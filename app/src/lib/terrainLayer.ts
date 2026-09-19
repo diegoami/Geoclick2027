@@ -28,7 +28,7 @@
 import * as maplibregl from 'maplibre-gl';
 import type { LayerSpecification } from 'maplibre-gl';
 import { asset } from '$app/paths';
-import { registerTilesArchive } from './geoclickMap';
+import { registerTilesArchive } from './pmtilesSource';
 import { registerLabel } from './labelCollision';
 import { isNativeShell } from './platform';
 import { getLanguage } from './i18n.svelte';

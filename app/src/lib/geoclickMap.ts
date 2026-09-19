@@ -3,7 +3,6 @@
 
 import * as maplibregl from 'maplibre-gl';
 import type { StyleSpecification } from 'maplibre-gl';
-import { PMTiles, Protocol, type RangeResponse, type Source } from 'pmtiles';
 import { asset } from '$app/paths';
 import { enableLabelMagnify } from './labelMagnify';
 import { enableLabelCollision } from './labelCollision';
@@ -11,86 +10,15 @@ import { isNativeShell } from './platform';
 import { overallExtent, type MapDefinition } from './mapDefinition';
 import { mapFitPadding } from './mapFit';
 import { TerrainLayer } from './terrainLayer';
-import { terrainShown } from './mapPrefs.svelte';
-
-let protocol: Protocol | undefined;
-
-// Every live map's Terrain layer, so the map bar's button can reach it
-// without each view having to pass the map object around. In practice there
-// is exactly one map on screen at a time; a Map keyed by the map itself
-// means a view that forgets to clean up cannot leak a stale entry, since
-// createMap removes it on 'remove'.
-const terrainLayers = new Map<maplibregl.Map, TerrainLayer>();
-
-/**
- * Shows or hides the Terrain layer on whatever map is open, to match the
- * stored preference. Called by the map bar's Terrain button (MapNav).
- */
-export function refreshTerrain(): void {
-	for (const layer of terrainLayers.values()) {
-		layer.setVisible(terrainShown()).catch((e) => {
-			console.error('Could not show the terrain layer:', e);
-		});
-	}
-}
-
-function ensurePmtilesProtocol(): Protocol {
-	if (!protocol) {
-		protocol = new Protocol();
-		maplibregl.addProtocol('pmtiles', protocol.tile);
-	}
-	return protocol;
-}
-
-// Neither app shell serves HTTP Range requests for bundled files, and
-// pmtiles' normal FetchSource depends on them:
-// - Capacitor's Android WebView asset server ignores them for arbitrary
-//   file extensions (ionic-team/capacitor#7664), so no tile data arrives.
-// - Tauri's desktop protocol (http://tauri.localhost) answers a Range request
-//   with a plain 200 and no Content-Length, and pmtiles aborts with "Server
-//   returned no content-length header". Found in the published v0.3.0 desktop
-//   app (empty map), caught via WebView2 remote debugging - see ONBOARDING.md.
-//   The old comment here claimed desktop worked; it did not.
-// The fix for both is to fetch the whole archive once, as a normal full GET
-// the shells serve correctly, and answer pmtiles' byte-range reads from that
-// in-memory buffer. Map archives are small (russia-regions, the largest, is
-// about 2 MB). The web build keeps real range requests; Netlify and dev
-// servers support them.
-class ArrayBufferSource implements Source {
-	constructor(
-		private key: string,
-		private buffer: ArrayBuffer
-	) {}
-	getKey(): string {
-		return this.key;
-	}
-	async getBytes(offset: number, length: number): Promise<RangeResponse> {
-		return { data: this.buffer.slice(offset, offset + length) };
-	}
-}
-
-/**
- * Buffers one archive for the native shells, protocol and all. The Terrain
- * layer (terrainLayer.ts) loads its own tileset on demand and needs the
- * same treatment as the map's - hence a named entry point rather than the
- * module-private helper below.
- */
-export async function registerTilesArchive(url: string): Promise<void> {
-	await registerBufferedPmtiles(ensurePmtilesProtocol(), url);
-}
-
-async function registerBufferedPmtiles(mapProtocol: Protocol, url: string): Promise<void> {
-	if (mapProtocol.get(url)) return;
-	const res = await fetch(url);
-	if (!res.ok) throw new Error(`Could not load tiles "${url}".`);
-	const buffer = await res.arrayBuffer();
-	mapProtocol.add(new PMTiles(new ArrayBufferSource(url, buffer)));
-}
+import { ensurePmtilesProtocol, registerTilesArchive } from './pmtilesSource';
 
 export async function fetchMapDefAndStyle(
 	mapId: string
 ): Promise<{ mapDef: MapDefinition; style: StyleSpecification }> {
-	const mapProtocol = ensurePmtilesProtocol();
+	// Registers the pmtiles:// protocol before any style referencing it is
+	// handed to MapLibre. registerTilesArchive below calls this too, but only
+	// on the native shells.
+	ensurePmtilesProtocol();
 	// asset() prefixes kit.paths.base (or paths.assets) - a bare "/maps/..."
 	// 404s as soon as the app is served under a subpath (e.g. GitHub Pages).
 	const [mapDefRes, baseStyleRes] = await Promise.all([
@@ -107,7 +35,7 @@ export async function fetchMapDefAndStyle(
 	// the base path (and stays correct if asset() ever returns a full CDN URL).
 	const tilesUrl = new URL(asset(`/maps/${mapId}/tiles.pmtiles`), location.origin).href;
 	if (await isNativeShell()) {
-		await registerBufferedPmtiles(mapProtocol, tilesUrl);
+		await registerTilesArchive(tilesUrl);
 	}
 
 	const style: StyleSpecification = {
@@ -127,7 +55,7 @@ export function createMap(
 	container: HTMLDivElement,
 	mapDef: MapDefinition,
 	style: StyleSpecification
-): maplibregl.Map {
+): { map: maplibregl.Map; terrain: TerrainLayer } {
 	ensurePmtilesProtocol();
 	const map = new maplibregl.Map({
 		container,
@@ -162,22 +90,15 @@ export function createMap(
 	map.on('style.load', applyColorIndex);
 	if (map.isStyleLoaded()) applyColorIndex();
 
-	// Sea, rivers and named terrain (FT-33), if the player has them on. Wired
-	// here rather than in each view so every screen - Overview, Known, Quiz,
-	// Tour - gets the same background from the same switch.
+	// Sea, rivers and named terrain (FT-33). The layer is built here so every
+	// screen gets the same one, but WHEN it is shown is the view's business:
+	// each one runs an $effect on the stored preference, so pressing Terrain
+	// in the map bar updates whatever map is open. This used to be a registry
+	// of live maps in this module with a refreshTerrain() the button called,
+	// which broke as soon as terrainLayer.ts imported back into this file -
+	// see pmtilesSource.ts for what that cycle did.
 	const terrain = new TerrainLayer(map, mapDef.id);
-	const applyTerrain = () => {
-		terrain.setVisible(terrainShown()).catch((e) => {
-			// A missing or unreadable terrain.pmtiles must never break the map
-			// the player came for.
-			console.error('Could not show the terrain layer:', e);
-		});
-	};
-	map.on('style.load', applyTerrain);
-	if (map.isStyleLoaded()) applyTerrain();
 	map.once('remove', () => terrain.destroy());
-	terrainLayers.set(map, terrain);
-	map.once('remove', () => terrainLayers.delete(map));
 
 	// Magnify a name label under the mouse (FT-02) or on a tap (FT-03). Labels
 	// take no pointer input, so drags on them move the map (FT-18).
@@ -193,5 +114,5 @@ export function createMap(
 		// map.project(lngLat) for the screen position of a place.
 		(window as unknown as { __map?: maplibregl.Map }).__map = map;
 	}
-	return map;
+	return { map, terrain };
 }
