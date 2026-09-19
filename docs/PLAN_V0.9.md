@@ -147,7 +147,7 @@ stable.
 | ----- | ----------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | FT-39 | **merged**  | `98fd98a` | a map opens on Known; a tap leaves a name until tapped again; one rule over what was earned and what was chosen, and the tap always does the visible thing                           |
 | FT-40 | **merged**  | `35ba262` | steps 3 and 4 swap jobs; copy rewritten in three languages; the zoom detection moved into createMap after the tutorial stuck on step 2 because the step moved and the wiring did not |
-| FT-41 | **merged**  | `dcb7582` | first seven countries. Extended since on `feat/ft-41-all-maps` to **every map**: 28 countries, 1 814 places, 5 448 sentences, all 2 235 targets — awaiting the product owner       |
+| FT-41 | **merged**  | `8156342` | every map: 28 countries, 1 814 places, 5 448 sentences, all 2 235 targets, three per place. Merged in two parts — `dcb7582` (first seven countries) then `8156342` (the rest)     |
 | FT-42 | not started | —         | the card on a small screen: one line at a time, rotating                                                                                                                             |
 
 ## Out of scope
