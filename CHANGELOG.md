@@ -12,6 +12,13 @@ one entry per tagged version on `main`.
 
 For players:
 
+- **Every place now tells you something about itself.** Tap a region in the
+  Overview, click one in Known, or resolve a name in the Quiz, and a line
+  appears: where it is, whether it has a coast, what range it is in, its
+  biggest city, its highest point, who it borders. The Tour narrates each
+  stop the same way. In the Quiz it can only ever appear *after* an answer
+  is resolved, so it never gives one away — and after a mistake it stays up
+  until your next drop, because that is the moment worth reading it.
 - **A Terrain button in the map bar** (Gelände, Rilievo). Press it and the
   sea turns blue, the rivers appear, and the ranges, deserts and seas around
   the map get their names — the Alps behind Trentino, the Adriatic beside
@@ -39,6 +46,8 @@ Under the hood:
 
 - FT-37: two more Natural Earth datasets; 12 peaks per map, the tallest
   first, and named depressions always kept.
+- FT-35: one card, four screens, declaring itself to `mapFit` and taking no
+  pointer events so a drag that crosses it still reaches the map.
 - FT-34: a `facts.json` beside every `map.json` (503 KB over all 63 maps,
   fetched lazily) holding structured fields rather than prose, so the
   derived half of the fact box is trilingual with nothing translated by

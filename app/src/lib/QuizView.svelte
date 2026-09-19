@@ -12,6 +12,8 @@
 	import { tutorialDrop } from './tutorial.svelte';
 	import { DOT_CLEARANCE_PX, registerLabel } from './labelCollision';
 	import { forgetRound, rememberRound, roundInProgress } from './quizRound';
+	import FactCard from './FactCard.svelte';
+	import { fetchFacts, type Facts } from './facts';
 	import {
 		createQuizSession,
 		attemptMatch,
@@ -61,6 +63,17 @@
 		undefined
 	);
 	let wrongFlashId = $state<string | undefined>(undefined);
+
+	// The fact box (FT-35). It can only ever appear AFTER a name is resolved,
+	// because it is set in markSolved - so it cannot give an answer away. The
+	// next drop replaces it, which means a missed name's card stays up for
+	// exactly as long as the player is still looking at that mistake.
+	let facts = $state<Facts>({});
+	let told = $state<{ id: string; name: string } | undefined>(undefined);
+	let toldTimer: ReturnType<typeof setTimeout> | undefined;
+	/** How long a correctly placed name's card stays before it gets out of
+	 *  the way. A missed one is not on a timer at all. */
+	const TOLD_PAUSE_MS = 4000;
 
 	// How hard this map plays, and which names the tray is offering right now
 	// (FT-21, difficulty.ts). The better the map is known, the fewer names are
@@ -387,6 +400,22 @@
 					: undefined
 		});
 		solvedPopups.set(targetId, popup);
+
+		// Now that the name is on the map, say what the place is (FT-35). A
+		// name that had to be REVEALED holds its card until the next drop -
+		// that is the moment the player has to be told something, and taking
+		// it away on a timer would take it away mid-sentence. A name placed
+		// correctly gets the same card briefly and then hands the map back:
+		// the card sits over the bottom of the map, and on a tall country
+		// that is somewhere the next slip may have to go.
+		told = { id: targetId, name };
+		if (toldTimer) clearTimeout(toldTimer);
+		if (!revealed) {
+			toldTimer = setTimeout(() => {
+				if (told?.id === targetId) told = undefined;
+			}, TOLD_PAUSE_MS);
+			flashTimers.add(toldTimer);
+		}
 	}
 
 	function onSlipPointerUp(e: PointerEvent) {
@@ -538,6 +567,7 @@
 		}
 		for (const popup of solvedPopups.values()) popup.remove();
 		solvedPopups.clear();
+		told = undefined;
 	}
 
 	// Builds a round: the whole map, every time (FT-26). What changes from one
@@ -604,6 +634,9 @@
 			if (cancelled) return;
 
 			map = createMap(container, loadedMapDef, style);
+			fetchFacts(mapId).then((loaded) => {
+				if (!cancelled) facts = loaded;
+			});
 			// A round left half-played (the player went to look a name up in the
 			// Overview) carries on; otherwise a new one over the whole map.
 			const resumed = resumeRound();
@@ -710,6 +743,19 @@
 	{/if}
 
 	<div class="container" bind:this={container}></div>
+
+	<!-- Above the tray, whose height the player can drag (FT-35). Two clauses
+	     rather than three: the map is already sharing this screen with a tray
+	     full of names, and a paragraph here would be read by nobody. -->
+	{#if told && !complete}
+		<FactCard
+			name={told.name}
+			fact={facts[told.id]}
+			max={2}
+			bottom="calc({trayHeightPx ?? trayMinPx}px + 0.5rem)"
+			onclose={() => (told = undefined)}
+		/>
+	{/if}
 
 	{#if session}
 		<div

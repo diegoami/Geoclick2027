@@ -11,6 +11,8 @@
 	import { TOUR_SPEEDS, defaultTourSpeed } from './tourSpeed';
 	import { DOT_CLEARANCE_PX, registerLabel } from './labelCollision';
 	import type { MapDefinition, Target } from './mapDefinition';
+	import FactCard from './FactCard.svelte';
+	import { fetchFacts, type Facts } from './facts';
 
 	let { mapId }: { mapId: string } = $props();
 
@@ -43,6 +45,11 @@
 	// shape in view, giving an actual sense of place. See MAPS.md's
 	// "Point-target implementation" section.
 	const POINT_TOUR_ZOOM = 7;
+
+	// The fact box (FT-35), following the tour a step at a time. This is what
+	// `TourStep.narration` was declared for in iteration 6 and never filled:
+	// the narration is the place's own fact, so there is nothing to author.
+	let facts = $state<Facts>({});
 
 	let currentTarget = $derived.by((): Target | undefined => {
 		if (!mapDef || !tour) return undefined;
@@ -162,6 +169,9 @@
 			if (cancelled) return;
 			mapDef = loadedMapDef;
 			tour = loadedTour;
+			fetchFacts(mapId).then((loaded) => {
+				if (!cancelled) facts = loaded;
+			});
 			// Big maps start faster so the tour fits ~3 minutes (GC-033); the speed
 			// menu below still overrides it.
 			speed = defaultTourSpeed(loadedTour.steps);
@@ -193,6 +203,12 @@
 		<p class="error">{error}</p>
 	{:else}
 		<MapNav {mapId} mapName={mapDisplayName(mapId) ?? mapDef?.name} active="tour" />
+
+		<!-- The step's own fact, above the controls (FT-35). No close button:
+		     the tour drives it, and it changes with every step. -->
+		{#if currentTarget}
+			<FactCard name={currentTarget.name} fact={facts[currentTarget.id]} max={2} bottom="4.25rem" />
+		{/if}
 
 		{#if tour}
 			<div class="controls" data-map-overlay="bottom">

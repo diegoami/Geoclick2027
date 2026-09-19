@@ -11,6 +11,8 @@
 	import { KNOWN_CLEAN_STREAK } from './difficulty';
 	import { tutorialExploreReveal } from './tutorial.svelte';
 	import { DOT_CLEARANCE_PX, areaShares, registerLabel } from './labelCollision';
+	import FactCard from './FactCard.svelte';
+	import { fetchFacts, type Facts } from './facts';
 
 	let { mapId }: { mapId: string } = $props();
 
@@ -20,6 +22,9 @@
 	let mapDef = $state<MapDefinition | undefined>(undefined);
 	let error = $state<string | undefined>(undefined);
 	let selectedFeatureId: number | string | undefined;
+	// The fact box (FT-35), on the click that already reveals the name.
+	let facts = $state<Facts>({});
+	let asked = $state<{ id: string; name: string } | undefined>(undefined);
 
 	// This view shows how well the map is known: every name the player has
 	// placed right at least once is written on it, as strongly as they know it
@@ -89,6 +94,9 @@
 			showRetention(loadedMapDef).catch((e) =>
 				console.error('Failed to read progress for the retention map:', e)
 			);
+			fetchFacts(mapId).then((loaded) => {
+				if (!cancelled) facts = loaded;
+			});
 
 			// Bound to both the polygon (targets-fill) and point
 			// (targets-circle) layers - a given map's tileset only ever has
@@ -123,6 +131,9 @@
 					// The name you asked for by clicking: it is pinned to the click
 					// itself, so it never needs moving off a dot.
 					registerLabel(popup, { priority: CLICKED_PRIORITY });
+					// The same click says what the place is (FT-35).
+					const target = loadedMapDef.targets.find((t) => t.name === name);
+					asked = target ? { id: target.id, name: target.name } : undefined;
 					// The tutorial's Explore step (FT-11) moves on once a name shows.
 					tutorialExploreReveal();
 				});
@@ -158,6 +169,14 @@
 		<MapNav {mapId} mapName={mapDisplayName(mapId) ?? mapDef?.name} active="explore" />
 	{/if}
 	<div class="container" bind:this={container}></div>
+	{#if asked}
+		<FactCard
+			name={asked.name}
+			fact={facts[asked.id]}
+			bottom={hasRetention ? '3.5rem' : '0.75rem'}
+			onclose={() => (asked = undefined)}
+		/>
+	{/if}
 	{#if hasRetention}
 		<div class="legend">
 			<span class="swatch retention-known">{t('retention.known')}</span>

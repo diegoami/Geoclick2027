@@ -54,6 +54,7 @@ export type TranslationKey =
 	| 'fact.grew'
 	| 'fact.borders'
 	| 'fact.and'
+	| 'fact.close'
 	| 'nav.loading'
 	| 'home.subtitle'
 	| 'home.recent'
@@ -170,6 +171,7 @@ const en: Dictionary = {
 	'fact.grew': '{before} people in 1950, {after} today.',
 	'fact.borders': 'Borders {names}.',
 	'fact.and': 'and',
+	'fact.close': 'Close',
 	'nav.loading': 'Loading…',
 
 	'home.subtitle': 'Pick a demo map to explore.',
@@ -301,6 +303,7 @@ const de: Dictionary = {
 	'fact.grew': '{before} Einwohner 1950, heute {after}.',
 	'fact.borders': 'Grenzt an {names}.',
 	'fact.and': 'und',
+	'fact.close': 'Schließen',
 	'nav.loading': 'Lädt…',
 
 	'home.subtitle': 'Wähle eine Demokarte zum Erkunden.',
@@ -432,6 +435,7 @@ const it: Dictionary = {
 	'fact.grew': '{before} abitanti nel 1950, oggi {after}.',
 	'fact.borders': 'Confina con {names}.',
 	'fact.and': 'e',
+	'fact.close': 'Chiudi',
 	'nav.loading': 'Caricamento…',
 
 	'home.subtitle': 'Scegli una mappa demo da esplorare.',
