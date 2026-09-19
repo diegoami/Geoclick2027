@@ -1,0 +1,657 @@
+{
+	"id": "italy-provinces-south",
+	"name": "Italy — Provinces — South",
+	"country": "Italy",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "benevento",
+			"name": "Benevento",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.78195,
+				41.2458
+			],
+			"bbox": [
+				14.4204,
+				41.0095,
+				15.1435,
+				41.4821
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "caserta",
+			"name": "Caserta",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.1375,
+				41.21625
+			],
+			"bbox": [
+				13.7437,
+				40.9368,
+				14.5313,
+				41.4957
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "barletta-andria-trani",
+			"name": "Barletta-Andria Trani",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.20125,
+				41.179050000000004
+			],
+			"bbox": [
+				15.8583,
+				40.9042,
+				16.5442,
+				41.4539
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "avellino",
+			"name": "Avellino",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.0653,
+				40.99905
+			],
+			"bbox": [
+				14.572,
+				40.7235,
+				15.5586,
+				41.2746
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "bari",
+			"name": "Bari",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.794449999999998,
+				40.96805
+			],
+			"bbox": [
+				16.1966,
+				40.7009,
+				17.3923,
+				41.2352
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "olbia-tempio",
+			"name": "Olbia-Tempio",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.28,
+				40.899699999999996
+			],
+			"bbox": [
+				8.8112,
+				40.5368,
+				9.7488,
+				41.2626
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "napoli",
+			"name": "Napoli",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.3078,
+				40.81905
+			],
+			"bbox": [
+				14.0101,
+				40.6247,
+				14.6055,
+				41.0134
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "brindisi",
+			"name": "Brindisi",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.7084,
+				40.63665
+			],
+			"bbox": [
+				17.3179,
+				40.3796,
+				18.0989,
+				40.8937
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "sassari",
+			"name": "Sassari",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.696100000000001,
+				40.6349
+			],
+			"bbox": [
+				8.1338,
+				40.317,
+				9.2584,
+				40.9528
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "taranto",
+			"name": "Taranto",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.2549,
+				40.52915
+			],
+			"bbox": [
+				16.7113,
+				40.2934,
+				17.7985,
+				40.7649
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "potenza",
+			"name": "Potenza",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.871550000000001,
+				40.52175
+			],
+			"bbox": [
+				15.3443,
+				39.9067,
+				16.3988,
+				41.1368
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "matera",
+			"name": "Matera",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.45975,
+				40.4465
+			],
+			"bbox": [
+				16.0562,
+				40.0555,
+				16.8633,
+				40.8375
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "salerno",
+			"name": "Salerno",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.1284,
+				40.42145
+			],
+			"bbox": [
+				14.4714,
+				39.994,
+				15.7854,
+				40.8489
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "nuoro",
+			"name": "Nuoro",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.223500000000001,
+				40.259699999999995
+			],
+			"bbox": [
+				8.6203,
+				39.8296,
+				9.8267,
+				40.6898
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "lecce",
+			"name": "Lecce",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.1407,
+				40.16589999999999
+			],
+			"bbox": [
+				17.764,
+				39.8139,
+				18.5174,
+				40.5179
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "oristano",
+			"name": "Oristano",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.772649999999999,
+				40.02315
+			],
+			"bbox": [
+				8.386,
+				39.634,
+				9.1593,
+				40.4123
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "ogliastra",
+			"name": "Ogliastra",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.50265,
+				39.8868
+			],
+			"bbox": [
+				9.273,
+				39.5491,
+				9.7323,
+				40.2245
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "cosenza",
+			"name": "Cosenza",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.3825,
+				39.58985
+			],
+			"bbox": [
+				15.7458,
+				39.0504,
+				17.0192,
+				40.1293
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "medio-campidano",
+			"name": "Medio Campidano",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.72795,
+				39.57695
+			],
+			"bbox": [
+				8.3981,
+				39.3749,
+				9.0578,
+				39.779
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "cagliari",
+			"name": "Cagliari",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.1283,
+				39.39895
+			],
+			"bbox": [
+				8.6103,
+				38.8806,
+				9.6463,
+				39.9173
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "carbonia-iglesias",
+			"name": "Carbonia-Iglesias",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.59915,
+				39.217150000000004
+			],
+			"bbox": [
+				8.3493,
+				38.9549,
+				8.849,
+				39.4794
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "crotone",
+			"name": "Crotone",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.8928,
+				39.1926
+			],
+			"bbox": [
+				16.6132,
+				38.906,
+				17.1724,
+				39.4792
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "catanzaro",
+			"name": "Catanzaro",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.49455,
+				38.830799999999996
+			],
+			"bbox": [
+				16.0969,
+				38.4673,
+				16.8922,
+				39.1943
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "vibo-valentia",
+			"name": "Vibo Valentia",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.132199999999997,
+				38.63145
+			],
+			"bbox": [
+				15.8445,
+				38.4412,
+				16.4199,
+				38.8217
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "reggio-calabria",
+			"name": "Reggio Calabria",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.1005,
+				38.23994999999999
+			],
+			"bbox": [
+				15.6275,
+				37.9252,
+				16.5735,
+				38.5547
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "messina",
+			"name": "Messina",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.8817,
+				38.051
+			],
+			"bbox": [
+				14.1796,
+				37.8044,
+				15.5838,
+				38.2976
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "palermo",
+			"name": "Palermo",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.6131,
+				37.901349999999994
+			],
+			"bbox": [
+				12.9463,
+				37.5832,
+				14.2799,
+				38.2195
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "trapani",
+			"name": "Trapani",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.75775,
+				37.844300000000004
+			],
+			"bbox": [
+				12.427,
+				37.5627,
+				13.0885,
+				38.1259
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "enna",
+			"name": "Enna",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.456299999999999,
+				37.5877
+			],
+			"bbox": [
+				14.077,
+				37.306,
+				14.8356,
+				37.8694
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "catania",
+			"name": "Catania",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.8062,
+				37.50805
+			],
+			"bbox": [
+				14.3525,
+				37.0529,
+				15.2599,
+				37.9632
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "agrigento",
+			"name": "Agrigento",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.4666,
+				37.42075
+			],
+			"bbox": [
+				12.8939,
+				37.1008,
+				14.0393,
+				37.7407
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "caltanissetta",
+			"name": "Caltanissetta",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.07885,
+				37.363749999999996
+			],
+			"bbox": [
+				13.6854,
+				37.0006,
+				14.4723,
+				37.7269
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "siracusa",
+			"name": "Siracusa",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.0574,
+				37.0347
+			],
+			"bbox": [
+				14.7854,
+				36.6591,
+				15.3294,
+				37.4103
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "ragusa",
+			"name": "Ragusa",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.667449999999999,
+				36.9157
+			],
+			"bbox": [
+				14.3346,
+				36.6994,
+				15.0003,
+				37.132
+			],
+			"colorIndex": 0
+		}
+	],
+	"tourOrder": [
+		"benevento",
+		"caserta",
+		"barletta-andria-trani",
+		"avellino",
+		"bari",
+		"olbia-tempio",
+		"napoli",
+		"brindisi",
+		"sassari",
+		"taranto",
+		"potenza",
+		"matera",
+		"salerno",
+		"nuoro",
+		"lecce",
+		"oristano",
+		"ogliastra",
+		"cosenza",
+		"medio-campidano",
+		"cagliari",
+		"carbonia-iglesias",
+		"crotone",
+		"catanzaro",
+		"vibo-valentia",
+		"reggio-calabria",
+		"messina",
+		"palermo",
+		"trapani",
+		"enna",
+		"catania",
+		"agrigento",
+		"caltanissetta",
+		"siracusa",
+		"ragusa"
+	]
+}

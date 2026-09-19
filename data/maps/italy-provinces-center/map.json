@@ -1,0 +1,467 @@
+{
+	"id": "italy-provinces-center",
+	"name": "Italy — Provinces — Center",
+	"country": "Italy",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "pesaro-e-urbino",
+			"name": "Pesaro e Urbino",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.686499999999999,
+				43.701350000000005
+			],
+			"bbox": [
+				12.1958,
+				43.4303,
+				13.1772,
+				43.9724
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "arezzo",
+			"name": "Arezzo",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.87755,
+				43.5197
+			],
+			"bbox": [
+				11.3975,
+				43.1603,
+				12.3576,
+				43.8791
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "ancona",
+			"name": "Ancona",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.19675,
+				43.4788
+			],
+			"bbox": [
+				12.7465,
+				43.2061,
+				13.647,
+				43.7515
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "pisa",
+			"name": "Pisa",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.633299999999998,
+				43.4666
+			],
+			"bbox": [
+				10.2618,
+				43.1085,
+				11.0048,
+				43.8247
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "livorno",
+			"name": "Livorno",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.4497,
+				43.1868
+			],
+			"bbox": [
+				10.1117,
+				42.7373,
+				10.7877,
+				43.6363
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "siena",
+			"name": "Siena",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.444749999999999,
+				43.17335
+			],
+			"bbox": [
+				10.9117,
+				42.7985,
+				11.9778,
+				43.5482
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "macerata",
+			"name": "Macerata",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.2912,
+				43.1499
+			],
+			"bbox": [
+				12.8374,
+				42.8245,
+				13.745,
+				43.4753
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "perugia",
+			"name": "Perugia",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.58335,
+				43.1095
+			],
+			"bbox": [
+				11.9178,
+				42.6022,
+				13.2489,
+				43.6168
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "fermo",
+			"name": "Fermo",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.53555,
+				43.0921
+			],
+			"bbox": [
+				13.2176,
+				42.892,
+				13.8535,
+				43.2922
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "ascoli-piceno",
+			"name": "Ascoli Piceno",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.55,
+				42.8821
+			],
+			"bbox": [
+				13.1945,
+				42.6877,
+				13.9055,
+				43.0765
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "grosseto",
+			"name": "Grosseto",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.256499999999999,
+				42.77545
+			],
+			"bbox": [
+				10.7051,
+				42.3744,
+				11.8079,
+				43.1765
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "teramo",
+			"name": "Teramo",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.74445,
+				42.660849999999996
+			],
+			"bbox": [
+				13.3376,
+				42.4201,
+				14.1513,
+				42.9016
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "terni",
+			"name": "Terni",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.395499999999998,
+				42.653999999999996
+			],
+			"bbox": [
+				11.889,
+				42.3695,
+				12.902,
+				42.9385
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "viterbo",
+			"name": "Viterbo",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.985949999999999,
+				42.5006
+			],
+			"bbox": [
+				11.4515,
+				42.1508,
+				12.5204,
+				42.8504
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "rieti",
+			"name": "Rieti",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.9205,
+				42.42555
+			],
+			"bbox": [
+				12.4651,
+				42.1065,
+				13.3759,
+				42.7446
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "pescara",
+			"name": "Pescara",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.011299999999999,
+				42.3078
+			],
+			"bbox": [
+				13.7654,
+				42.0751,
+				14.2572,
+				42.5405
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "l-aquila",
+			"name": "L'Aquila",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.6289,
+				42.146
+			],
+			"bbox": [
+				13.0284,
+				41.6882,
+				14.2294,
+				42.6038
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "chieti",
+			"name": "Chieti",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.418500000000002,
+				42.1111
+			],
+			"bbox": [
+				14.0736,
+				41.7761,
+				14.7634,
+				42.4461
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "roma",
+			"name": "Roma",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.51885,
+				41.85835
+			],
+			"bbox": [
+				11.7398,
+				41.4209,
+				13.2979,
+				42.2958
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "campobasso",
+			"name": "Campobasso",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.7631,
+				41.7255
+			],
+			"bbox": [
+				14.3827,
+				41.3731,
+				15.1435,
+				42.0779
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "isernia",
+			"name": "Isernia",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.2271,
+				41.6504
+			],
+			"bbox": [
+				13.9457,
+				41.3946,
+				14.5085,
+				41.9062
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "frosinone",
+			"name": "Frosinone",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.5088,
+				41.6298
+			],
+			"bbox": [
+				13.0075,
+				41.3126,
+				14.0101,
+				41.947
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "foggia",
+			"name": "Foggia",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.563400000000001,
+				41.4996
+			],
+			"bbox": [
+				14.9339,
+				41.0551,
+				16.1929,
+				41.9441
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "latina",
+			"name": "Latina",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.2377,
+				41.46855
+			],
+			"bbox": [
+				12.6028,
+				41.2275,
+				13.8726,
+				41.7096
+			],
+			"colorIndex": 2
+		}
+	],
+	"tourOrder": [
+		"pesaro-e-urbino",
+		"arezzo",
+		"ancona",
+		"pisa",
+		"livorno",
+		"siena",
+		"macerata",
+		"perugia",
+		"fermo",
+		"ascoli-piceno",
+		"grosseto",
+		"teramo",
+		"terni",
+		"viterbo",
+		"rieti",
+		"pescara",
+		"l-aquila",
+		"chieti",
+		"roma",
+		"campobasso",
+		"isernia",
+		"frosinone",
+		"foggia",
+		"latina"
+	]
+}

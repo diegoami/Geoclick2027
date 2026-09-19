@@ -48,7 +48,7 @@ favourites and so on) is realistic example data.
 Geoclick is a game for learning geography: where a country's regions,
 states or provinces are, and where its main towns and cities are.
 
-- **60 maps of 28 countries.** Most countries have two maps: its regions
+- **63 maps of 28 countries.** Most countries have two maps: its regions
   (called states, provinces, prefectures or districts, depending on the
   country) and its larger towns. Italy also has its 110 provinces. See
   [The maps](#18-the-maps) for the full list.
@@ -187,7 +187,7 @@ the map bar.
 
 The full home page, scrolled from top to bottom:
 
-![The whole home page, with all 60 maps](manual/home-full.jpg)
+![The whole home page, with all 63 maps](manual/home-full.jpg)
 
 On a wide screen the countries sit in two columns; on a phone, in one.
 
@@ -817,7 +817,7 @@ The apps are the same game as the website, packaged to install:
 
 ## 18. The maps
 
-28 countries, 60 maps. The number in brackets is how many places the map
+28 countries, 63 maps. The number in brackets is how many places the map
 asks for.
 
 | Country | Maps |
@@ -835,7 +835,7 @@ asks for.
 | Great Britain | Regions (15) · Towns (38) |
 | India | States (36) · Towns (50) |
 | Indonesia | Provinces (33) · Towns (49) |
-| Italy | Provinces (110) · Regions (20) · Towns (40) |
+| Italy | Provinces (110) · Provinces — North (52) · Provinces — Center (24) · Provinces — South (34) · Regions (20) · Towns (40) |
 | Japan | Prefectures (47) · Towns (66) |
 | Mexico | States (32) · Towns (49) |
 | Netherlands | Provinces (12) · Towns (12) |
@@ -853,6 +853,10 @@ asks for.
 
 - Maps show the country's main territory; far-away overseas territories
   are left out.
+- Italy's 110 provinces also come as three smaller maps — **North**,
+  **Center** and **South** — for the same reason: on the full map only
+  about half the names fit at the zoom it opens at, while each third shows
+  nearly all of its own.
 - The United States has more big cities than one map can sensibly ask for,
   so besides **Cities** (the 50 over a million) there are three slices at
   200 000 — **East**, **Center** and **West**, split at the Mississippi and

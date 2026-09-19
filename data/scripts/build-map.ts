@@ -20,6 +20,7 @@ import {
 	crossesAntimeridian
 } from './mapBuildUtils.js';
 import { colorizeMapDir } from './mapColors.js';
+import { isUnbounded, parseBounds, withinBounds } from './placeSelection.js';
 
 const SOURCE_SHP = path.join(
 	REPO_ROOT,
@@ -286,10 +287,16 @@ async function main() {
 	// including the UN, considers them Ukrainian territory under occupation)
 	// so they'd otherwise be silently missing from the map. See MAPS.md.
 	const extraWhere = args['extra-where'];
+	// The same slice flags the city builder has (FT-27), for a country with
+	// more regions than one map should ask for: --lon-min/--lon-max and
+	// --lat-min/--lat-max keep the targets whose middle is inside the box.
+	// Unbounded by default, so every map built before these existed rebuilds
+	// identically.
+	const bounds = parseBounds(args);
 
 	if (!country || !outDir) {
 		console.error(
-			'Usage: build-map.ts --country="Italy" --out=data/maps/italy-regions [--type=region|state] [--name="Italy — Regions"] [--dissolve=region] [--exclude=Alaska,Hawaii] [--exclude-field=name] [--name-field=name] [--extra-where="name IN (\'Crimea\')"]'
+			'Usage: build-map.ts --country="Italy" --out=data/maps/italy-regions [--type=region|state] [--name="Italy — Regions"] [--dissolve=region] [--exclude=Alaska,Hawaii] [--exclude-field=name] [--name-field=name] [--extra-where="name IN (\'Crimea\')"] [--lat-min=43.8] [--lon-min=-104 --lon-max=-87]'
 		);
 		process.exit(1);
 	}
@@ -384,6 +391,22 @@ async function main() {
 		}
 		const fixed = fixups[feature.properties.name];
 		if (fixed) feature.properties.name = fixed;
+	}
+	// A slice keeps the regions whose middle is inside the box (FT-29). Done
+	// here, before the tiles are written, so the tileset, the lakes and the
+	// country context that follow all describe the slice rather than the
+	// whole country.
+	if (!isUnbounded(bounds)) {
+		const all = geojson.features.length;
+		geojson.features = geojson.features.filter((feature) => {
+			const { center } = boundsOf(feature.geometry);
+			return withinBounds([{ lon: center[0], lat: center[1] }], bounds).length === 1;
+		});
+		console.log(`      slice keeps ${geojson.features.length} of ${all} regions`);
+		if (geojson.features.length === 0) {
+			console.error('The slice is empty - check --lon-min/--lon-max/--lat-min/--lat-max.');
+			process.exit(1);
+		}
 	}
 	writeFileSync(simplifiedPath, JSON.stringify(geojson));
 
