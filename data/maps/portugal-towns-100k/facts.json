@@ -4,7 +4,12 @@
 		"population": 826833,
 		"populationRank": 3,
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"From the Bracari, a Celtic people; Rome made it Bracara Augusta and it became the religious capital of the country.",
+			"Its archbishops outranked Lisbon's for centuries, and the saying goes that Braga prays while Porto works.",
+			"Bom Jesus do Monte above the town climbs a baroque staircase of nearly six hundred steps, and a water-counterweight funicular from 1882 still hauls those who decline."
+		]
 	},
 	"porto": {
 		"kind": "city",
@@ -12,14 +17,24 @@
 		"populationRank": 2,
 		"population1950": 730000,
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"From Portus Cale, the Roman harbour at the Douro mouth — the name of the town became the name of the country.",
+			"Port wine is named for it, though the wine is grown 100 km upriver and only aged in Vila Nova de Gaia across the water.",
+			"Its Luís I bridge was built in 1886 by a partner of Gustave Eiffel, and the Lello bookshop below it is claimed as an inspiration for Hogwarts."
+		]
 	},
 	"coimbra": {
 		"kind": "city",
 		"population": 106582,
 		"populationRank": 5,
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"From Conimbriga, a Celtic hill fort nearby; briga means a fortified place, the same element as in many Iberian names.",
+			"Its university, founded in 1290, is one of the oldest in continuous operation anywhere, and its baroque library is kept free of insects by a colony of bats.",
+			"The capital of Portugal for over a century in the Middle Ages, before Lisbon took over."
+		]
 	},
 	"lisboa": {
 		"kind": "city",
@@ -28,7 +43,12 @@
 		"population1950": 1304000,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"The oldest layer of all: probably Phoenician Alis Ubbo, \"safe harbour\", though the Romans preferred a legend about Ulysses founding it.",
+			"The 1755 earthquake, fire and tsunami killed tens of thousands and led to the first scientific study of an earthquake anywhere.",
+			"Its Belém tower and Jerónimos monastery were paid for with a 5% tax on the spices coming back from India."
+		]
 	},
 	"setubal": {
 		"kind": "city",
@@ -36,6 +56,11 @@
 		"populationRank": 4,
 		"region": "Lisboa",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Uncertain: possibly from Cetobriga, a Roman fish-salting town, with briga again the fortified place.",
+			"Its estuary holds a resident pod of bottlenose dolphins, one of very few in Europe.",
+			"The Arrábida hills beside it drop straight into the sea, and the moscatel grown on them is fortified like port."
+		]
 	}
 }

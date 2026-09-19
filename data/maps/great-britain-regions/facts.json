@@ -17,7 +17,12 @@
 			"name": "Ben Nevis",
 			"elevation": 1343
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"The Highland line is a real geological boundary, the Highland Boundary Fault, and the name marks a cultural border as much as a physical one.",
+			"Gaelic survives here more than anywhere: in the Western Isles about half the population still speaks it.",
+			"Ben Nevis at 1,345 m is Britain's highest point, and the Highland Clearances emptied these glens of people for sheep between 1750 and 1860."
+		]
 	},
 	"north-eastern": {
 		"kind": "region",
@@ -27,7 +32,12 @@
 			"Highlands and Islands"
 		],
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"Eurostat's name for Scotland's north-east — the land the old earldom of Mar and the city of Aberdeen sit in.",
+			"Aberdeen is the granite city, built almost entirely from stone quarried at Rubislaw, once the biggest man-made hole in Europe.",
+			"North Sea oil came ashore here from 1975 and turned a fishing port into Europe's offshore capital."
+		]
 	},
 	"eastern": {
 		"kind": "region",
@@ -45,7 +55,12 @@
 			"nameIt": "Edimburgo",
 			"population": 504966
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"Scotland's eastern belt, holding Edinburgh and the old kingdom of Fife — Fife is one of the oldest place names in Scotland, from a Pictish district.",
+			"Edinburgh's old and new towns are together a UNESCO site, the new one laid out in 1767 on a grid while the old climbs the volcanic ridge.",
+			"The Forth Bridge of 1890 was the first big steel structure in Britain, and painting it became a proverb for a job never finished."
+		]
 	},
 	"south-western": {
 		"kind": "region",
@@ -61,7 +76,12 @@
 			"nameIt": "Glasgow",
 			"population": 1160000
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"Scotland's south-west and industrial middle, centred on Glasgow — whose name is Brittonic glas cau, \"green hollow\".",
+			"Clyde shipyards built a fifth of the world's ships by 1900, including the Queen Mary and the QE2.",
+			"Burns was born at Alloway in Ayrshire here, and his birthday is marked with a supper worldwide."
+		]
 	},
 	"north-east": {
 		"kind": "region",
@@ -77,7 +97,12 @@
 			"nameIt": "Newcastle upon Tyne",
 			"population": 882000
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"This was Northumbria, the \"land north of the Humber\" — a kingdom that once reached from the Humber to Edinburgh.",
+			"Hadrian's Wall crosses it, 117 km built from AD 122, and Newcastle's name is from a castle of 1080 that was new then.",
+			"Lindisfarne off its coast produced the Lindisfarne Gospels around 700 and was the first place the Vikings raided in 793."
+		]
 	},
 	"north-west": {
 		"kind": "region",
@@ -97,7 +122,12 @@
 			"nameIt": "Manchester",
 			"population": 2230000
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"Lancashire and Cumbria — Cumbria is from the same root as Cymru, the Welsh name for Wales, because Brittonic was spoken here longest.",
+			"Manchester was the first industrial city in the world, and cotton made it; Liverpool shipped the cotton and, earlier, the slaves who grew it.",
+			"The Lake District in it is England's largest national park, and Wordsworth and Beatrix Potter both made it famous."
+		]
 	},
 	"yorkshire-and-the-humber": {
 		"kind": "region",
@@ -113,7 +143,12 @@
 			"nameIt": "Leeds",
 			"population": 1529000
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"York is Norse Jórvík, itself from Roman Eboracum, probably \"place of the yews\"; the Humber is an older, pre-English river name nobody has explained.",
+			"Yorkshire was the largest English county and was split in Ridings — from Norse thriðjungr, a third, which is why there were three and no South Riding.",
+			"York was the Viking capital of England for nearly a century, and its street names still end in -gate, Norse for a street."
+		]
 	},
 	"east-midlands": {
 		"kind": "region",
@@ -131,7 +166,12 @@
 			"nameIt": "Nottingham",
 			"population": 825600
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"The Midlands is simply the middle land of England, and this half was the core of Mercia, the kingdom that dominated the 700s.",
+			"The Danelaw's Five Boroughs — Derby, Leicester, Lincoln, Nottingham and Stamford — were all here, which is why the dialect is full of Norse words.",
+			"Sherwood Forest and the Robin Hood story belong to it, and so does Melton Mowbray's pork pie, which has protected status."
+		]
 	},
 	"west-midlands": {
 		"kind": "region",
@@ -149,7 +189,12 @@
 			"nameIt": "Birmingham",
 			"population": 2285000
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"The other half of Mercia, and the Black Country in it was named for the soot and the thirty-foot coal seam beneath it.",
+			"Birmingham had more canal miles than Venice at its peak, built to move coal and iron.",
+			"Shakespeare was born at Stratford-upon-Avon here, and the Industrial Revolution's first iron bridge was cast just over its edge at Coalbrookdale."
+		]
 	},
 	"east-wales": {
 		"kind": "region",
@@ -167,7 +212,12 @@
 			"name": "Snowdon",
 			"elevation": 1085
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"The English called them Wealas, \"foreigners\"; the Welsh call the country Cymru, \"fellow countrymen\" — two names for the same people from opposite sides.",
+			"Cardiff was the world's largest coal port by 1913, shipping what the valleys dug.",
+			"Offa's Dyke, an earthwork 8th-century Mercia built along this border, is still walkable for 285 km."
+		]
 	},
 	"west-wales-and-the-valleys": {
 		"kind": "region",
@@ -184,7 +234,12 @@
 			"nameIt": "Cardiff",
 			"population": 861400
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"The Valleys are the narrow coal valleys of the south; west Wales is where Welsh is strongest, over half the population in Gwynedd and Anglesey.",
+			"Wales had over 600 working pits in 1913 and none by 1995; the last, Tower Colliery, was bought and run by its own miners.",
+			"Snowdonia is here, and the slate landscape of north-west Wales — which roofed the nineteenth-century world — is a UNESCO site."
+		]
 	},
 	"east": {
 		"kind": "region",
@@ -200,7 +255,12 @@
 			"nameIt": "Southend-on-Sea",
 			"population": 618386
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"East Anglia, the land of the East Angles, one of the Anglo-Saxon kingdoms — the Angles are also where England got its name.",
+			"The Fens were drained by Dutch engineers from the 1630s and are the flattest, most fertile land in Britain, some of it below sea level.",
+			"Sutton Hoo in Suffolk held a ship burial of about 625, probably a king's, with a helmet that is now the emblem of the period."
+		]
 	},
 	"greater-london": {
 		"kind": "region",
@@ -215,7 +275,12 @@
 			"nameIt": "Londra",
 			"population": 8567000
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"Londinium is pre-Roman and unexplained — the best guess is a Brittonic name meaning something like the place at the unfordable river.",
+			"It was the largest city in the world from about 1825 to 1925, and about 300 languages are spoken in it today.",
+			"The 1666 fire destroyed 13,200 houses and 87 churches, and Wren rebuilt 51 of them plus St Paul's."
+		]
 	},
 	"south-east": {
 		"kind": "region",
@@ -233,7 +298,12 @@
 			"nameIt": "Brighton",
 			"population": 503008
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"Kent is the oldest recorded place name in Britain, written by Pytheas around 325 BC; Sussex and Essex are the South and East Saxons.",
+			"The Channel is 33 km wide at Dover, and the tunnel under it, opened in 1994, has the longest undersea section of any rail tunnel.",
+			"Canterbury has been the seat of English Christianity since 597, and Chaucer's pilgrims were walking there."
+		]
 	},
 	"south-west": {
 		"kind": "region",
@@ -249,6 +319,11 @@
 			"nameIt": "Bristol",
 			"population": 553528
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Cornwall is Kernow plus the same wealas, \"foreigners\" — literally the foreigners of Kernow; Devon is from the Dumnonii tribe.",
+			"Cornish died out as an everyday language around 1800 and has been revived since; the county was tin country for 4,000 years.",
+			"Stonehenge and Bath are both here: the stones were raised around 2500 BC, and Bath's spring has poured 46 °C water since long before Rome plumbed it."
+		]
 	}
 }
