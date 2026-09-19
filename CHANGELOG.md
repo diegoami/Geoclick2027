@@ -51,6 +51,20 @@ Under the hood:
   painted pixels, so a transparent layer still answers clicks, and it is a
   style layer over a source that already exists: no tileset changed.
 - Android versionCode 90299.
+- **Installers:** all three rebuilt from the v0.9.2 tag — the Windows
+  `.msi` and `-setup.exe`, and the Android `.apk`, signed with the key
+  introduced on 2026-09-19.
+- **Both shells were tried, not just built.** The `-setup.exe` was
+  installed and driven over CDP on a cleared profile: 63 maps, Known on
+  open, 21 names drawn, 22 terrain features already on. The APK installed
+  as an update over v0.9.1 (versionCode 90299) and was driven on the
+  emulator: Australia — Towns opened, and a tap **40 device pixels beside**
+  a town dot — outside the 9 px dot, inside the new 22 px hit circle —
+  selected Adelaide and opened its card, reading "Named for Queen
+  Adelaide, wife of William IV." over "In South Australia. No. 5 by
+  population on this map." That is FT-45 and FT-46 confirmed together on
+  a touch device. v0.9.1 could not close this gate because the emulator
+  would not render; a full `adb kill-server` and restart fixed it.
 
 ## v0.9.1 — 2026-09-19 — What the first look at v0.9.0 found
 
