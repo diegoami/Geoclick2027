@@ -10,7 +10,13 @@
 	import { mapDisplayName } from './mapCatalog';
 	import { t } from './i18n.svelte';
 	import { createProgressRepository } from './progressRepository';
-	import { KNOWN_CLEAN_STREAK } from './difficulty';
+	import { tapOverride, visibleTier } from './shownNames';
+	import {
+		clearNameOverrides,
+		hasNameOverrides,
+		nameOverride,
+		setNameOverride
+	} from './mapPrefs.svelte';
 	import { tutorialExploreReveal } from './tutorial.svelte';
 	import { DOT_CLEARANCE_PX, areaShares, registerLabel } from './labelCollision';
 	import FactCard from './FactCard.svelte';
@@ -23,7 +29,6 @@
 	// Sea, rivers and named terrain (FT-33). The $effect below follows the
 	// map bar's Terrain button, which only writes the preference.
 	let terrain = $state<TerrainLayer | undefined>(undefined);
-	let popup: maplibregl.Popup | undefined;
 	let mapDef = $state<MapDefinition | undefined>(undefined);
 	let error = $state<string | undefined>(undefined);
 	let selectedFeatureId: number | string | undefined;
@@ -31,60 +36,89 @@
 	let facts = $state<Facts>({});
 	let asked = $state<{ id: string; name: string; hook?: string } | undefined>(undefined);
 
-	// This view shows how well the map is known: every name the player has
-	// placed right at least once is written on it, as strongly as they know it
-	// (FT-22, docs/PLAN_V0.6.md). Names never placed cleanly stay blank, so the
-	// view is also still the old Explore - click a region to find out what it
-	// is. Plain Map, not SvelteMap: imperative bookkeeping for popup cleanup,
+	// This is the map the player builds (FT-39, docs/PLAN_V0.9.md), and the
+	// screen a map now opens on. Two things put a name on it: the clean
+	// streak the quiz keeps (FT-22 - a name placed right at least once, drawn
+	// as strongly as it is known), and a tap, which overrides that either way
+	// and sticks until it is tapped again. shownNames.ts holds the whole
+	// rule; this component only draws what it is told.
+	//
+	// Plain Map, not SvelteMap: imperative bookkeeping for popup cleanup,
 	// never read in the template (same reasoning as QuizView's solvedPopups).
 	// eslint-disable-next-line svelte/prefer-svelte-reactivity
-	const retentionPopups = new Map<string, maplibregl.Popup>();
-	// Whether any name is known well enough to be drawn, i.e. whether the
-	// legend has anything to explain.
-	let hasRetention = $state(false);
+	const shownPopups = new Map<string, maplibregl.Popup>();
+	/** Clean streak per target, read once when the view opens. */
+	let streaks = $state<Record<string, number>>({});
+	/** Whether anything is drawn, i.e. whether the legend has work to do. */
+	let anyShown = $state(false);
 
-	// How the three strengths rank when two names want the same spot (FT-23):
-	// a name you know beats one you half know, and between equals the bigger
-	// region wins (its area share is below 1, so it only breaks ties).
-	const TIER_RANK = { known: 2, nearly: 1, seen: 0 } as const;
-	// The name you asked for by clicking a region always wins its place.
-	const CLICKED_PRIORITY = 10;
+	// How the strengths rank when two names want the same spot (FT-23): a
+	// name you know beats one you half know, and one you asked for outright
+	// beats both - you asked for it. Between equals the bigger region wins
+	// (its area share is below 1, so it only breaks ties).
+	const TIER_RANK = { asked: 3, known: 2, nearly: 1, seen: 0 } as const;
 
-	/** Which strength a name is drawn at, or undefined for "don't draw it". */
-	function tierOf(cleanStreak: number): 'known' | 'nearly' | 'seen' | undefined {
-		if (cleanStreak >= KNOWN_CLEAN_STREAK) return 'known';
-		if (cleanStreak === 2) return 'nearly';
-		if (cleanStreak === 1) return 'seen';
-		return undefined;
-	}
-
-	/** Draws one label per target the player has placed cleanly at least once. */
-	async function showRetention(def: MapDefinition) {
-		const repository = await createProgressRepository();
-		const streaks = new Map(
-			(await repository.getCardStates(mapId)).map((c) => [c.targetId, c.cleanStreak])
-		);
+	/** Draws every name that should be on the map, and removes the rest. */
+	function redrawNames(def: MapDefinition) {
 		if (!map) return;
 		const shares = areaShares(def.targets);
+		let drawn = false;
 		for (const target of def.targets) {
-			const tier = tierOf(streaks.get(target.id) ?? 0);
-			if (!tier) continue;
-			const popup = new maplibregl.Popup({
-				closeButton: false,
-				closeOnClick: false,
-				anchor: 'center',
-				className: `geoclick-solved-popup geoclick-retention retention-${tier}`
-			})
-				.setLngLat(target.centroid)
-				.setText(target.name)
-				.addTo(map);
+			const tier = visibleTier(streaks[target.id] ?? 0, nameOverride(mapId, target.id));
+			const existing = shownPopups.get(target.id);
+			if (!tier) {
+				existing?.remove();
+				shownPopups.delete(target.id);
+				continue;
+			}
+			drawn = true;
+			// Reuse the popup if it is already there: removing and recreating
+			// it on every redraw would make the collision pass re-measure the
+			// whole map for one tap.
+			const popup =
+				existing ??
+				new maplibregl.Popup({
+					closeButton: false,
+					closeOnClick: false,
+					anchor: 'center'
+				})
+					.setLngLat(target.centroid)
+					.setText(target.name)
+					.addTo(map);
+			popup.addClassName('geoclick-solved-popup');
+			popup.addClassName('geoclick-retention');
+			for (const t of ['known', 'nearly', 'seen', 'asked']) {
+				if (t === tier) popup.addClassName(`retention-${t}`);
+				else popup.removeClassName(`retention-${t}`);
+			}
 			registerLabel(popup, {
 				priority: TIER_RANK[tier] + (shares.get(target.id) ?? 0),
 				beside: target.type === 'city' ? DOT_CLEARANCE_PX : undefined
 			});
-			retentionPopups.set(target.id, popup);
-			hasRetention = true;
+			shownPopups.set(target.id, popup);
 		}
+		anyShown = drawn;
+	}
+
+	/**
+	 * Whether this map has any choice worth undoing. Read reactively so the
+	 * button appears on the first tap and goes again when it is used.
+	 */
+	const showsClear = $derived(hasNameOverrides(mapId));
+
+	/** Back to plain: the map shows what is known and nothing else. */
+	function clearChosen() {
+		clearNameOverrides(mapId);
+		if (mapDef) redrawNames(mapDef);
+		asked = undefined;
+	}
+
+	/** Reads what the player has earned, then draws the map. */
+	async function loadStreaks(def: MapDefinition) {
+		const repository = await createProgressRepository();
+		const states = await repository.getCardStates(mapId);
+		streaks = Object.fromEntries(states.map((c) => [c.targetId, c.cleanStreak]));
+		redrawNames(def);
 	}
 
 	// Show or hide the Terrain layer as the preference changes (FT-33). An
@@ -108,8 +142,8 @@
 			mapDef = loadedMapDef;
 
 			({ map, terrain } = createMap(container, loadedMapDef, style));
-			showRetention(loadedMapDef).catch((e) =>
-				console.error('Failed to read progress for the retention map:', e)
+			loadStreaks(loadedMapDef).catch((e) =>
+				console.error('Failed to read progress for the Known map:', e)
 			);
 			fetchFacts(mapId).then((loaded) => {
 				if (!cancelled) facts = loaded;
@@ -121,44 +155,50 @@
 			// no-op for whichever doesn't apply. See MAPS.md's "Point-target
 			// design" section.
 			for (const layerId of ['targets-fill', 'targets-circle']) {
+				// A tap turns a name on, or off if it is already there (FT-39).
+				// The name stays until it is tapped again, so what is on the
+				// map is the set the player has chosen to study.
 				map.on('click', layerId, (e: maplibregl.MapLayerMouseEvent) => {
 					const feature = e.features?.[0];
 					if (!feature) return;
+					const name = feature.properties?.name as string;
+					const target = loadedMapDef.targets.find((t) => t.name === name);
+					if (!target) return;
 
+					const streak = streaks[target.id] ?? 0;
+					const next = tapOverride(streak, nameOverride(mapId, target.id));
+					setNameOverride(mapId, target.id, next);
+					redrawNames(loadedMapDef);
+
+					// Which place the map is pointing at, so a tap has an answer
+					// even when it hid the name.
 					if (selectedFeatureId !== undefined) {
 						map!.setFeatureState(
 							{ source: 'targets', sourceLayer: 'targets', id: selectedFeatureId },
 							{ highlighted: false }
 						);
 					}
-					selectedFeatureId = feature.id;
-					map!.setFeatureState(
-						{ source: 'targets', sourceLayer: 'targets', id: feature.id! },
-						{ highlighted: true }
-					);
+					selectedFeatureId = next === 'shown' ? feature.id : undefined;
+					if (selectedFeatureId !== undefined) {
+						map!.setFeatureState(
+							{ source: 'targets', sourceLayer: 'targets', id: feature.id! },
+							{ highlighted: true }
+						);
+					}
 
-					const name = feature.properties?.name as string;
-					popup ??= new maplibregl.Popup({
-						closeButton: false,
-						closeOnClick: false,
-						anchor: 'center',
-						className: 'geoclick-popup'
-					});
-					popup.setLngLat(e.lngLat).setText(name).addTo(map!);
-					// The name you asked for by clicking: it is pinned to the click
-					// itself, so it never needs moving off a dot.
-					registerLabel(popup, { priority: CLICKED_PRIORITY });
-					// The same click says what the place is (FT-35).
-					const target = loadedMapDef.targets.find((t) => t.name === name);
-					asked = target
-						? {
-								id: target.id,
-								name: target.name,
-								hook: rotateHook(mapId, target.id, facts[target.id])
-							}
-						: undefined;
-					// The tutorial's Explore step (FT-11) moves on once a name shows.
-					tutorialExploreReveal();
+					// The fact card opens when a tap REVEALS a name and not when
+					// it puts one away (decision 4): you are not asking about a
+					// place you are hiding.
+					asked =
+						next === 'shown'
+							? {
+									id: target.id,
+									name: target.name,
+									hook: rotateHook(mapId, target.id, facts[target.id])
+								}
+							: undefined;
+					// The tutorial's step (FT-11) moves on once a name shows.
+					if (next === 'shown') tutorialExploreReveal();
 				});
 
 				map.on('mouseenter', layerId, () => {
@@ -178,9 +218,8 @@
 	});
 
 	onDestroy(() => {
-		popup?.remove();
-		for (const p of retentionPopups.values()) p.remove();
-		retentionPopups.clear();
+		for (const p of shownPopups.values()) p.remove();
+		shownPopups.clear();
 		map?.remove();
 	});
 </script>
@@ -197,15 +236,25 @@
 			name={asked.name}
 			fact={facts[asked.id]}
 			hook={asked.hook}
-			bottom={hasRetention ? '3.5rem' : '0.75rem'}
+			bottom={anyShown ? '3.5rem' : '0.75rem'}
 			onclose={() => (asked = undefined)}
 		/>
 	{/if}
-	{#if hasRetention}
+	<!-- What the strengths mean, and a way back to plain (FT-39). The Clear
+	     button only appears once there is something to clear. -->
+	{#if anyShown || showsClear}
 		<div class="legend">
-			<span class="swatch retention-known">{t('retention.known')}</span>
-			<span class="swatch retention-nearly">{t('retention.nearly')}</span>
-			<span class="swatch retention-seen">{t('retention.seen')}</span>
+			{#if anyShown}
+				<span class="swatch retention-asked">{t('known.chosen')}</span>
+				<span class="swatch retention-known">{t('retention.known')}</span>
+				<span class="swatch retention-nearly">{t('retention.nearly')}</span>
+				<span class="swatch retention-seen">{t('retention.seen')}</span>
+			{/if}
+			{#if showsClear}
+				<button type="button" class="clear-btn" data-testid="clear-names" onclick={clearChosen}>
+					{t('known.clear')}
+				</button>
+			{/if}
 		</div>
 	{/if}
 </div>
@@ -252,9 +301,34 @@
 		white-space: nowrap;
 	}
 	/* The same steps the labels themselves use, in app.css. */
+	.swatch.retention-asked {
+		background: rgba(181, 105, 31, 0.9);
+	}
 	.swatch.retention-nearly {
 		font-size: 0.75rem;
 		opacity: 0.72;
+	}
+	/* Back to plain (FT-39). Sits in the legend because that is where the
+	   map explains itself, and it only renders when there is something to
+	   undo. */
+	.clear-btn {
+		padding: 1px 8px;
+		border: 1px solid rgba(181, 105, 31, 0.45);
+		border-radius: 5px;
+		background: #ffffff;
+		color: #b5691f;
+		font-family: inherit;
+		font-size: 0.75rem;
+		font-weight: 600;
+		white-space: nowrap;
+		cursor: pointer;
+	}
+	.clear-btn:hover {
+		background: #fbf4ec;
+	}
+	.clear-btn:focus-visible {
+		outline: 2px solid #b5691f;
+		outline-offset: 1px;
 	}
 	.swatch.retention-seen {
 		font-size: 0.7rem;

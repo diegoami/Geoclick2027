@@ -51,7 +51,7 @@ function navigateTo(screen: Screen): Promise<void> {
 		case 'explore':
 			return goto(resolve('/map/[mapId]', { mapId }));
 		case 'overview':
-			return goto(resolve('/map/[mapId]/overview', { mapId }));
+			return goto(resolve('/map/[mapId]', { mapId }));
 		case 'quiz':
 			return goto(resolve('/map/[mapId]/quiz', { mapId }));
 		case 'tour':

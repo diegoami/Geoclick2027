@@ -1112,6 +1112,36 @@ answers:
   - The favourite star is a tip in the outro, not a step. Finish leaves
     the player on the tour, which keeps playing.
 
+## The map is something you build (2026-09-19, FT-39)
+
+- **A map now opens on Known, and a tap leaves a name there.** The product
+  owner, after using v0.8.0-beta.1: _"if you tap a second region the
+  previous region name stays, and to make it disappear you have to tap it
+  again. So you can decide what names you want to show on the map for
+  helping you memorize them."_ The screen stops being a readout of progress
+  and becomes a worksheet.
+- **One rule, two inputs.** What the player earned (the clean streak, FT-22)
+  and what they chose (a tap). No override means the earned answer; an
+  override means always or never. A tap writes whichever override
+  contradicts what is on the screen, so it always does the visible thing -
+  the player never has to know there are two inputs at all.
+- **Tapping a name you know hides it** (decision 3). One rule for everything
+  on the map, which also lets you clear away what you are sure of and work
+  on the rest. **Clear** in the legend puts a map back to plain.
+- **A name you asked for is drawn in the accent colour**, not as a fourth
+  strength of knowing. The three earned strengths keep meaning exactly what
+  they meant; "I put this here" and "I learned this" are different claims
+  and the map should not blur them.
+- **The choices live in localStorage, not in the progress store.** They are a
+  view of a map on this device, not a record of what the player knows -
+  same class of thing as favourites and recents. Storing them as progress
+  would have meant a schema migration in both native backends, which a test
+  holds to parity, to record something that is not progress.
+- **Overview stays** (decision 1). A map that opens on Known opens nearly
+  empty for a newcomer, and Overview - every name at once - is what that
+  player needs. Dropping it would have made the first meeting with a map a
+  wall of blank shapes.
+
 ## A module cycle made the Terrain button do nothing (2026-09-19, FT-33 fix)
 
 - **Found by testing the button rather than the stored preference.** Every

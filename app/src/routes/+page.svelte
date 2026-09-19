@@ -136,7 +136,9 @@
 		{@const summary = lastSessions[mapId]}
 		{@const mastery = masteries[mapId]}
 		<li class="map-card" data-tutorial={anchor}>
-			<a href={resolve('/map/[mapId]/overview', { mapId })}>
+			<!-- A map opens on Known (FT-39): the map you build by tapping names
+		     onto it. Overview, which labels everything at once, is a tab away. -->
+			<a href={resolve('/map/[mapId]', { mapId })}>
 				<span class="map-name">{label}</span>
 				{#if mastery}
 					<span class="mastery" class:all-known={mastery.known === mastery.total}>

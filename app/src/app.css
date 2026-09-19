@@ -164,3 +164,11 @@
 	letter-spacing: 0.14em;
 	text-transform: uppercase;
 }
+
+/* A name the player asked for by tapping it, rather than one they have
+ * earned (FT-39). Full strength like a known name - they asked for it - but
+ * outlined in the app's accent so the map still distinguishes "I put this
+ * here" from "I learned this". */
+.geoclick-retention.retention-asked .maplibregl-popup-content {
+	background: rgba(181, 105, 31, 0.9);
+}
