@@ -106,11 +106,21 @@ held upright that is a real share of the map, and the map is the thing being
 learned. The idea is to show **one line at a time on a small screen** and
 rotate between them, rather than shrink both.
 
-Not started, and deliberately after FT-41: the rotation is worth designing
-once there are several facts per place to rotate through, otherwise it is a
-toggle between exactly two things. Open questions when it comes up — what
-counts as a small screen, whether it rotates on a timer or on a tap, and
-whether the computed line or the name-fact goes first.
+**Decided and built (2026-09-19).** The three open questions were put to
+the product owner once FT-41 had made the rotation worth designing:
+
+| Question | Decision |
+| --- | --- |
+| What counts as small? | **Either dimension ≤ 700 px** — a phone held sideways is wide but short, and short is what costs the map its space |
+| How does it move? | **Auto-rotate, every 5 s** — no gesture, so it competes with neither the map pan nor the quiz drag |
+| Which line first? | **The name-fact** — the half worth having if a player reads only one |
+
+Built as `cardLines.ts` (the whole rule, pure and unit-tested) plus the
+timing and drawing inside `FactCard.svelte`; no caller changed.
+`prefers-reduced-motion` turns the rotation off and shows both lines
+instead. Measured saving: 29 px upright, 22 px sideways — real but
+smaller than the phrase suggests, because a name-fact wraps to two or
+three visual lines at 400 px. See DECISIONS.md.
 
 ### FT-41 — More facts, and more maps · Medium
 
@@ -148,7 +158,7 @@ stable.
 | FT-39 | **merged**  | `98fd98a` | a map opens on Known; a tap leaves a name until tapped again; one rule over what was earned and what was chosen, and the tap always does the visible thing                           |
 | FT-40 | **merged**  | `35ba262` | steps 3 and 4 swap jobs; copy rewritten in three languages; the zoom detection moved into createMap after the tutorial stuck on step 2 because the step moved and the wiring did not |
 | FT-41 | **merged**  | `8156342` | every map: 28 countries, 1 814 places, 5 448 sentences, all 2 235 targets, three per place. Merged in two parts — `dcb7582` (first seven countries) then `8156342` (the rest)     |
-| FT-42 | not started | —         | the card on a small screen: one line at a time, rotating                                                                                                                             |
+| FT-42 | **ready**   | —         | one line at a time on a phone, rotating every 5 s, name-fact first; reduced motion shows both. Saves 29 px upright, 22 px sideways                                                   |
 
 ## Out of scope
 
