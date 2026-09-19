@@ -105,6 +105,16 @@ Under the hood:
   switched on) built by `data/scripts/build-terrain.ts`; its maximum zoom
   follows each map's extent.
 - Android versionCode 90099.
+- **Installers:** all three shells were rebuilt from the v0.9.0 tag — the
+  Windows `.msi` and `-setup.exe`, and the Android `.apk`. The APK is
+  signed with the key introduced on 2026-09-19. Each was tried before
+  publishing, not just built: the APK was installed on an emulator and a
+  map opened and tapped (Queensland — the card rotated from its name-fact
+  to its derived line and back), and the `-setup.exe` was installed on
+  Windows and driven over CDP (63 maps listed, Italy — Regions opened on
+  Known, a click pinned Emilia-Romagna and opened its card, the quiz dealt
+  20 slips). RELEASES.md requires this because v0.3.0 shipped desktop
+  installers that opened every map empty.
 
 Not covered:
 

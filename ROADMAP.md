@@ -70,14 +70,22 @@ Check items off as they land; update "Status" as iterations complete.
   of them": the United States' cities, six countries that had none,
   Italy's provinces in thirds, and a search box over the map list. Both
   are complete; **63 maps across 28 countries** ship today. A third is
-  planned: [docs/PLAN_V0.8.md](docs/PLAN_V0.8.md) — v0.8.0, "something to
-  hang a name on": a fact box on every place, and a map with sea, rivers
-  and named terrain behind a toggle.
-- **v0.9.0 is planned**: [docs/PLAN_V0.9.md](docs/PLAN_V0.9.md) — "the map
-  you build yourself". The Known map becomes what a map opens on, and a tap
+  complete too: [docs/PLAN_V0.8.md](docs/PLAN_V0.8.md) — "something to hang
+  a name on": a fact box on every place, and a map with sea, rivers and
+  named terrain behind a toggle. FT-33 to FT-37 merged; **FT-38, the
+  Wikidata landmark pass, is still deferred** on an unreliable SPARQL
+  endpoint, and is the one outstanding task of that programme.
+- **v0.9.0 shipped 2026-09-19** (tag `v0.9.0`):
+  [docs/PLAN_V0.9.md](docs/PLAN_V0.9.md) — "the map you build yourself".
+  All four tasks merged. The Known map is what a map opens on, and a tap
   puts a name on it and leaves it there, so the player chooses which names
-  to study; the tutorial follows; and the name-facts get more depth and
-  more countries.
+  to study (FT-39); the tutorial follows (FT-40); every place on every map
+  has a name-fact, three deep — 28 countries, 1 814 authored places, 5 448
+  sentences, all 2 235 targets (FT-41); and on a phone the fact card shows
+  one line at a time and rotates (FT-42).
+  **There is no stable v0.8.0**: that programme only ever shipped as
+  `v0.8.0-beta.1`, and v0.9.0 carries all of it, so it supersedes that
+  beta rather than following it.
 - **Not started**: everything else below.
 - **Next up**: motion/feedback design (reveal animations, streak
   indicators, sound, correct-drop juiciness) and a broader component/
