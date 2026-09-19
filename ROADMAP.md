@@ -73,6 +73,11 @@ Check items off as they land; update "Status" as iterations complete.
   planned: [docs/PLAN_V0.8.md](docs/PLAN_V0.8.md) — v0.8.0, "something to
   hang a name on": a fact box on every place, and a map with sea, rivers
   and named terrain behind a toggle.
+- **v0.9.0 is planned**: [docs/PLAN_V0.9.md](docs/PLAN_V0.9.md) — "the map
+  you build yourself". The Known map becomes what a map opens on, and a tap
+  puts a name on it and leaves it there, so the player chooses which names
+  to study; the tutorial follows; and the name-facts get more depth and
+  more countries.
 - **Not started**: everything else below.
 - **Next up**: motion/feedback design (reveal animations, streak
   indicators, sound, correct-drop juiciness) and a broader component/
