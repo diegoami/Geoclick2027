@@ -8,9 +8,10 @@ where it is — and a name with nothing attached to it is a name you
 re-learn every session, which is exactly what the ladder and the scheduler
 are fighting against.
 
-**Status: in progress.** FT-33 merged 2026-09-19; FT-37 was added the same
-day, after the product owner saw it working. The ledger near the bottom is
-the current state.
+**Status: FT-33, FT-37, FT-34, FT-35 and FT-36 are merged** (2026-09-19).
+Only FT-38, the Wikidata landmark pass, is outstanding, and it was split out
+of FT-34 rather than dropped. The ledger near the bottom is the current
+state.
 
 Input: the product owner's request — _"When I am on a new map I have no
 clue how to start learning regions and cities. I start clicking around, the
@@ -402,7 +403,7 @@ the product owner's test on the phone first, then the stable release.
 | FT-37 | **merged**  | `3094295` | 711 named peaks capped at 12 per map, plus the great circles; parks/airports/glaciers rejected with the numbers that ruled them out; a silently empty layer caught by checking the tileset's layer list, not the screen                                                                                                          |
 | FT-34 | **merged**  | `63520c1` | 2 235 facts, 503 KB, structured not prose so the derived half is trilingual for free; coastal by shared vertices, source rows matched by extent not name, POP1950 is in thousands. **The Wikidata landmark pass became FT-38** — the query service ran the same query in 1 s, 29 s and 24 s and refused the broad one with a 502 |
 | FT-35 | **merged**  | `ac9284c` | one card, four screens; in the Quiz it is set inside `markSolved` so it cannot precede an answer, and it takes no pointer events so a drag across it still reaches the map                                                                                                                                                       |
-| FT-36 | not started | —         |                                                                                                                                                                                                                                                                                                                                  |
+| FT-36 | **merged**  | `7f6192a` | 101 places authored across Italy, China and the USA, 155 placements; a list per place rotating on each encounter; the file must be named for the country as map.json spells it, and an id that is two places splits by kind                                                                                                      |
 | FT-38 | not started | —         | the Wikidata landmark pass, split out of FT-34                                                                                                                                                                                                                                                                                   |
 
 ## Out of scope
