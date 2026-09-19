@@ -359,9 +359,32 @@ of scope" with the numbers that ruled them out.
 - **DoD:** gates green; review done; DECISIONS.md records the voice the
   hooks are written in, so a later batch matches this one.
 
+### FT-38 — The Wikidata landmark pass · Medium · deps: FT-34
+
+Split out of FT-34 on 2026-09-19, once the probe showed it was a task
+rather than a coda. The measurements are under FT-34; the shape that
+follows from them:
+
+- **Query once, commit the answers.** A rebuild must never depend on the
+  query service, which returned the same six-item query in 1 s, 29 s and
+  24 s and refused a broader one with a 502. A cached response file in
+  `data/facts/`, committed like everything else built from a source that
+  might move, with retry and backoff around the fetch.
+- **Only the reverse lookups are worth the trouble** — what is _inside_ a
+  region: volcanoes, national parks, UNESCO World Heritage sites. The
+  forward properties Wikidata's fast Action API can give are mostly things
+  `build-facts.ts` already computes geometrically from Natural Earth.
+- **CC0**, so no attribution obligation — the reason this and not
+  OpenStreetMap (ODbL, share-alike) or the Smithsonian volcano catalogue.
+- 🧑 **The product choices come first**: which landmark kinds earn a clause,
+  how many per place, how each is phrased. They determine the query, so
+  they are worth settling before any of it is built.
+- **Prove it on one country** before promising the other 27.
+
 ## Order
 
-FT-33 → FT-37 → FT-34 → FT-35 → FT-36, strictly: the terrain data is what
+FT-33 → FT-37 → FT-34 → FT-35 → FT-36, strictly, with FT-38 after FT-35 or
+in a later release: the terrain data is what
 FT-34's `terrain` field reads, FT-34's output is what FT-35 renders, and
 there is no point reviewing hooks before they can be seen in place. FT-37
 comes second rather than last despite its number — it extends the tileset
@@ -373,13 +396,14 @@ the product owner's test on the phone first, then the stable release.
 
 ## Progress ledger
 
-| Task  | State                                    | Merge     | Notes                                                                                                                                                                                                                                                                                                                                                                       |
-| ----- | ---------------------------------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| FT-33 | **merged**                               | `5a00902` | terrain in its own archive per map, not inside `tiles.pmtiles` — so no existing tileset changed; 4.94 MB over 63 maps, off by default; labels trilingual from the source; `--drop-rate=1` was load-bearing; the fills above it dim while it is on, after the product owner found it unreadable                                                                              |
-| FT-37 | **merged**                               | `3094295` | 711 named peaks capped at 12 per map, plus the great circles; parks/airports/glaciers rejected with the numbers that ruled them out; a silently empty layer caught by checking the tileset's layer list, not the screen                                                                                                                                                     |
-| FT-34 | **derived half done, awaiting approval** | —         | 2 235 facts, 503 KB, structured not prose so the derived half is trilingual for free; coastal by shared vertices, source rows matched by extent not name, POP1950 is in thousands. **The Wikidata landmark pass is not done** — the query service ran the same query in 1 s, 29 s and 24 s and refused the broad one with a 502; it needs its own task with retry-and-cache |
-| FT-35 | not started                              | —         |                                                                                                                                                                                                                                                                                                                                                                             |
-| FT-36 | not started                              | —         |                                                                                                                                                                                                                                                                                                                                                                             |
+| Task  | State       | Merge     | Notes                                                                                                                                                                                                                                                                                                                            |
+| ----- | ----------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| FT-33 | **merged**  | `5a00902` | terrain in its own archive per map, not inside `tiles.pmtiles` — so no existing tileset changed; 4.94 MB over 63 maps, off by default; labels trilingual from the source; `--drop-rate=1` was load-bearing; the fills above it dim while it is on, after the product owner found it unreadable                                   |
+| FT-37 | **merged**  | `3094295` | 711 named peaks capped at 12 per map, plus the great circles; parks/airports/glaciers rejected with the numbers that ruled them out; a silently empty layer caught by checking the tileset's layer list, not the screen                                                                                                          |
+| FT-34 | **merged**  | `63520c1` | 2 235 facts, 503 KB, structured not prose so the derived half is trilingual for free; coastal by shared vertices, source rows matched by extent not name, POP1950 is in thousands. **The Wikidata landmark pass became FT-38** — the query service ran the same query in 1 s, 29 s and 24 s and refused the broad one with a 502 |
+| FT-35 | not started | —         |                                                                                                                                                                                                                                                                                                                                  |
+| FT-36 | not started | —         |                                                                                                                                                                                                                                                                                                                                  |
+| FT-38 | not started | —         | the Wikidata landmark pass, split out of FT-34                                                                                                                                                                                                                                                                                   |
 
 ## Out of scope
 
