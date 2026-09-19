@@ -136,12 +136,12 @@ stable.
 
 ## Progress ledger
 
-| Task  | State       | Merge     | Notes                                                                                                                                                      |
-| ----- | ----------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| FT-39 | **merged**  | `98fd98a` | a map opens on Known; a tap leaves a name until tapped again; one rule over what was earned and what was chosen, and the tap always does the visible thing |
-| FT-40 | not started | —         |                                                                                                                                                            |
-| FT-41 | not started | —         |                                                                                                                                                            |
-| FT-42 | not started | —         | the card on a small screen: one line at a time, rotating                                                                                                   |
+| Task  | State       | Merge     | Notes                                                                                                                                                                                |
+| ----- | ----------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| FT-39 | **merged**  | `98fd98a` | a map opens on Known; a tap leaves a name until tapped again; one rule over what was earned and what was chosen, and the tap always does the visible thing                           |
+| FT-40 | **merged**  | `35ba262` | steps 3 and 4 swap jobs; copy rewritten in three languages; the zoom detection moved into createMap after the tutorial stuck on step 2 because the step moved and the wiring did not |
+| FT-41 | not started | —         |                                                                                                                                                                                      |
+| FT-42 | not started | —         | the card on a small screen: one line at a time, rotating                                                                                                                             |
 
 ## Out of scope
 
