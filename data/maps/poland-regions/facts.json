@@ -1,0 +1,298 @@
+{
+	"pomorskie": {
+		"kind": "region",
+		"type": "Voivodeship|Province",
+		"borders": [
+			"Kujawsko-Pomorskie",
+			"Warmińsko-Mazurskie",
+			"Wielkopolskie",
+			"Zachodniopomorskie"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Gdańsk",
+			"nameDe": "Danzig",
+			"nameIt": "Danzica",
+			"population": 740000
+		},
+		"position": "north"
+	},
+	"warminsko-mazurskie": {
+		"kind": "region",
+		"type": "Voivodeship|Province",
+		"borders": [
+			"Kujawsko-Pomorskie",
+			"Mazowieckie",
+			"Podlaskie",
+			"Pomorskie"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Olsztyn",
+			"nameDe": "Olsztyn",
+			"nameIt": "Olsztyn",
+			"population": 186670
+		},
+		"position": "north-east"
+	},
+	"zachodniopomorskie": {
+		"kind": "region",
+		"type": "Voivodeship|Province",
+		"borders": [
+			"Lubuskie",
+			"Pomorskie",
+			"Wielkopolskie"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Szczecin",
+			"nameDe": "Stettin",
+			"nameIt": "Stettino",
+			"population": 407811
+		},
+		"position": "north-west"
+	},
+	"podlaskie": {
+		"kind": "region",
+		"type": "Voivodeship|Province",
+		"borders": [
+			"Lubelskie",
+			"Mazowieckie",
+			"Warmińsko-Mazurskie"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Białystok",
+			"nameDe": "Białystok",
+			"nameIt": "Białystok",
+			"population": 291855
+		},
+		"position": "north-east"
+	},
+	"kujawsko-pomorskie": {
+		"kind": "region",
+		"type": "Voivodeship|Province",
+		"borders": [
+			"Łódzkie",
+			"Mazowieckie",
+			"Pomorskie",
+			"Warmińsko-Mazurskie",
+			"Wielkopolskie"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bydgoszcz",
+			"nameDe": "Bydgoszcz",
+			"nameIt": "Bydgoszcz",
+			"population": 366452
+		},
+		"position": "north"
+	},
+	"wielkopolskie": {
+		"kind": "region",
+		"type": "Voivodeship|Province",
+		"borders": [
+			"Dolnośląskie",
+			"Kujawsko-Pomorskie",
+			"Łódzkie",
+			"Lubuskie",
+			"Opolskie",
+			"Pomorskie",
+			"Zachodniopomorskie"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Poznań",
+			"nameDe": "Posen",
+			"nameIt": "Poznań",
+			"population": 623997
+		},
+		"position": "west"
+	},
+	"lubuskie": {
+		"kind": "region",
+		"type": "Voivodeship|Province",
+		"borders": [
+			"Dolnośląskie",
+			"Wielkopolskie",
+			"Zachodniopomorskie"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Zielona Góra",
+			"nameDe": "Zielona Góra",
+			"nameIt": "Zielona Góra",
+			"population": 118433
+		},
+		"position": "west"
+	},
+	"mazowieckie": {
+		"kind": "region",
+		"type": "Voivodeship|Province",
+		"borders": [
+			"Kujawsko-Pomorskie",
+			"Łódzkie",
+			"Lubelskie",
+			"Podlaskie",
+			"Świętokrzyskie",
+			"Warmińsko-Mazurskie"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Warsaw",
+			"nameDe": "Warschau",
+			"nameIt": "Varsavia",
+			"population": 1707000
+		},
+		"position": "east"
+	},
+	"odzkie": {
+		"kind": "region",
+		"type": "Voivodeship|Province",
+		"borders": [
+			"Kujawsko-Pomorskie",
+			"Mazowieckie",
+			"Opolskie",
+			"Śląskie",
+			"Świętokrzyskie",
+			"Wielkopolskie"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Łódź",
+			"nameDe": "Łódź",
+			"nameIt": "Łódź",
+			"population": 758000
+		},
+		"position": "centre"
+	},
+	"lubelskie": {
+		"kind": "region",
+		"type": "Voivodeship|Province",
+		"borders": [
+			"Mazowieckie",
+			"Podkarpackie",
+			"Podlaskie",
+			"Świętokrzyskie"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Lublin",
+			"nameDe": "Lublin",
+			"nameIt": "Lublino",
+			"population": 360044
+		},
+		"position": "east"
+	},
+	"dolnoslaskie": {
+		"kind": "region",
+		"type": "Voivodeship|Province",
+		"borders": [
+			"Lubuskie",
+			"Opolskie",
+			"Wielkopolskie"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Wrocław",
+			"nameDe": "Breslau",
+			"nameIt": "Breslavia",
+			"population": 634893
+		},
+		"peak": {
+			"name": "Sněžka",
+			"elevation": 1603
+		},
+		"position": "south-west"
+	},
+	"swietokrzyskie": {
+		"kind": "region",
+		"type": "Voivodeship|Province",
+		"borders": [
+			"Łódzkie",
+			"Lubelskie",
+			"Małopolskie",
+			"Mazowieckie",
+			"Podkarpackie",
+			"Śląskie"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kielce",
+			"nameDe": "Kielce",
+			"nameIt": "Kielce",
+			"population": 215733
+		},
+		"position": "south"
+	},
+	"opolskie": {
+		"kind": "region",
+		"type": "Voivodeship|Province",
+		"borders": [
+			"Dolnośląskie",
+			"Łódzkie",
+			"Śląskie",
+			"Wielkopolskie"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Opole",
+			"nameDe": "Oppeln",
+			"nameIt": "Opole",
+			"population": 131412
+		},
+		"position": "south"
+	},
+	"slaskie": {
+		"kind": "region",
+		"type": "Voivodeship|Province",
+		"borders": [
+			"Łódzkie",
+			"Małopolskie",
+			"Opolskie",
+			"Świętokrzyskie"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Katowice",
+			"nameDe": "Katowice",
+			"nameIt": "Katowice",
+			"population": 2746000
+		},
+		"position": "south"
+	},
+	"podkarpackie": {
+		"kind": "region",
+		"type": "Voivodeship|Province",
+		"borders": [
+			"Lubelskie",
+			"Małopolskie",
+			"Świętokrzyskie"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Rzeszów",
+			"nameDe": "Rzeszów",
+			"nameIt": "Rzeszów",
+			"population": 245686
+		},
+		"position": "south-east"
+	},
+	"ma-opolskie": {
+		"kind": "region",
+		"type": "Voivodeship|Province",
+		"borders": [
+			"Podkarpackie",
+			"Śląskie",
+			"Świętokrzyskie"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kraków",
+			"nameDe": "Krakau",
+			"nameIt": "Cracovia",
+			"population": 756000
+		},
+		"position": "south"
+	}
+}

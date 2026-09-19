@@ -1,0 +1,685 @@
+{
+	"rochester": {
+		"kind": "city",
+		"population": 755000,
+		"populationRank": 35,
+		"population1950": 411000,
+		"region": "New York",
+		"coastal": false,
+		"position": "north"
+	},
+	"syracuse": {
+		"kind": "city",
+		"population": 662577,
+		"populationRank": 39,
+		"region": "New York",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"flint": {
+		"kind": "city",
+		"population": 295212,
+		"populationRank": 60,
+		"region": "Michigan",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"grand-rapids": {
+		"kind": "city",
+		"population": 535829,
+		"populationRank": 43,
+		"region": "Michigan",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"buffalo": {
+		"kind": "city",
+		"population": 1016000,
+		"populationRank": 24,
+		"population1950": 899000,
+		"region": "New York",
+		"coastal": false,
+		"position": "north"
+	},
+	"lansing": {
+		"kind": "city",
+		"population": 279952,
+		"populationRank": 64,
+		"region": "Michigan",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"albany": {
+		"kind": "city",
+		"population": 870716,
+		"populationRank": 31,
+		"region": "New York",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"lowell": {
+		"kind": "city",
+		"population": 723629,
+		"populationRank": 37,
+		"region": "Massachusetts",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"salem": {
+		"kind": "city",
+		"population": 335509,
+		"populationRank": 55,
+		"region": "Massachusetts",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"detroit": {
+		"kind": "city",
+		"population": 4101000,
+		"populationRank": 7,
+		"population1950": 2769000,
+		"region": "Michigan",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"boston": {
+		"kind": "city",
+		"population": 4467000,
+		"populationRank": 5,
+		"population1950": 2551000,
+		"region": "Massachusetts",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"ann-arbor": {
+		"kind": "city",
+		"population": 265976,
+		"populationRank": 65,
+		"region": "Michigan",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"worcester": {
+		"kind": "city",
+		"population": 287365,
+		"populationRank": 61,
+		"region": "Massachusetts",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"springfield": {
+		"kind": "city",
+		"population": 421780,
+		"populationRank": 47,
+		"region": "Massachusetts",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"providence": {
+		"kind": "city",
+		"population": 1277000,
+		"populationRank": 17,
+		"population1950": 703000,
+		"region": "Rhode Island",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"hartford": {
+		"kind": "city",
+		"population": 913000,
+		"populationRank": 28,
+		"population1950": 425000,
+		"region": "Connecticut",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"south-bend": {
+		"kind": "city",
+		"population": 239822,
+		"populationRank": 74,
+		"region": "Indiana",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"toledo": {
+		"kind": "city",
+		"population": 469924,
+		"populationRank": 46,
+		"region": "Ohio",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"cleveland": {
+		"kind": "city",
+		"population": 1890000,
+		"populationRank": 11,
+		"population1950": 1392000,
+		"region": "Ohio",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"new-haven": {
+		"kind": "city",
+		"population": 846766,
+		"populationRank": 32,
+		"region": "Connecticut",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"bridgeport": {
+		"kind": "city",
+		"population": 1018000,
+		"populationRank": 23,
+		"population1950": 415000,
+		"region": "Connecticut",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"youngstown": {
+		"kind": "city",
+		"population": 311990,
+		"populationRank": 57,
+		"region": "Ohio",
+		"coastal": false,
+		"position": "north"
+	},
+	"fort-wayne": {
+		"kind": "city",
+		"population": 299871,
+		"populationRank": 59,
+		"region": "Indiana",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"akron": {
+		"kind": "city",
+		"population": 703200,
+		"populationRank": 38,
+		"region": "Ohio",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"stamford": {
+		"kind": "city",
+		"population": 746920,
+		"populationRank": 36,
+		"region": "Connecticut",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"canton": {
+		"kind": "city",
+		"population": 258660,
+		"populationRank": 70,
+		"region": "Ohio",
+		"coastal": false,
+		"position": "north"
+	},
+	"new-york": {
+		"kind": "city",
+		"population": 19040000,
+		"populationRank": 1,
+		"population1950": 12338000,
+		"coastal": true,
+		"position": "north-east"
+	},
+	"newark": {
+		"kind": "city",
+		"population": 280123,
+		"populationRank": 63,
+		"region": "New Jersey",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"allentown": {
+		"kind": "city",
+		"population": 496442,
+		"populationRank": 45,
+		"region": "Pennsylvania",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"pittsburgh": {
+		"kind": "city",
+		"population": 1838000,
+		"populationRank": 12,
+		"population1950": 1539000,
+		"region": "Pennsylvania",
+		"coastal": false,
+		"position": "north"
+	},
+	"harrisburg": {
+		"kind": "city",
+		"population": 528892,
+		"populationRank": 44,
+		"region": "Pennsylvania",
+		"coastal": false,
+		"position": "north"
+	},
+	"trenton": {
+		"kind": "city",
+		"population": 366513,
+		"populationRank": 53,
+		"region": "New Jersey",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"lancaster": {
+		"kind": "city",
+		"population": 209489,
+		"populationRank": 82,
+		"region": "Pennsylvania",
+		"coastal": false,
+		"position": "north"
+	},
+	"columbus-ohio": {
+		"kind": "city",
+		"population": 1270000,
+		"populationRank": 18,
+		"population1950": 441000,
+		"region": "Ohio",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"york": {
+		"kind": "city",
+		"population": 218010,
+		"populationRank": 78,
+		"region": "Pennsylvania",
+		"coastal": false,
+		"position": "north"
+	},
+	"philadelphia": {
+		"kind": "city",
+		"population": 5492000,
+		"populationRank": 3,
+		"population1950": 3128000,
+		"region": "Pennsylvania",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"dayton": {
+		"kind": "city",
+		"population": 773000,
+		"populationRank": 34,
+		"population1950": 350000,
+		"region": "Ohio",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"indianapolis": {
+		"kind": "city",
+		"population": 1436000,
+		"populationRank": 15,
+		"population1950": 505000,
+		"region": "Indiana",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"baltimore": {
+		"kind": "city",
+		"population": 2255000,
+		"populationRank": 9,
+		"population1950": 1168000,
+		"region": "Maryland",
+		"coastal": true,
+		"position": "north"
+	},
+	"cincinnati": {
+		"kind": "city",
+		"population": 1636000,
+		"populationRank": 13,
+		"population1950": 881000,
+		"region": "Ohio",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"covington": {
+		"kind": "city",
+		"population": 585489,
+		"populationRank": 42,
+		"region": "Kentucky",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"washington-d-c": {
+		"kind": "city",
+		"population": 4338000,
+		"populationRank": 6,
+		"population1950": 1298000,
+		"region": "District of Columbia",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "north"
+	},
+	"louisville": {
+		"kind": "city",
+		"population": 948000,
+		"populationRank": 27,
+		"population1950": 476000,
+		"region": "Kentucky",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"lexington": {
+		"kind": "city",
+		"population": 264578,
+		"populationRank": 67,
+		"region": "Kentucky",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"richmond": {
+		"kind": "city",
+		"population": 912000,
+		"populationRank": 29,
+		"population1950": 260000,
+		"region": "Virginia",
+		"coastal": false,
+		"position": "north"
+	},
+	"hampton": {
+		"kind": "city",
+		"population": 366766,
+		"populationRank": 52,
+		"region": "Virginia",
+		"coastal": true,
+		"position": "centre"
+	},
+	"virginia-beach": {
+		"kind": "city",
+		"population": 1491000,
+		"populationRank": 14,
+		"population1950": 391000,
+		"region": "Virginia",
+		"coastal": true,
+		"position": "east"
+	},
+	"norfolk": {
+		"kind": "city",
+		"population": 1047869,
+		"populationRank": 22,
+		"region": "Virginia",
+		"coastal": true,
+		"position": "centre"
+	},
+	"nashville": {
+		"kind": "city",
+		"population": 877000,
+		"populationRank": 30,
+		"population1950": 261000,
+		"region": "Tennessee",
+		"coastal": false,
+		"position": "west"
+	},
+	"winston-salem": {
+		"kind": "city",
+		"population": 281683,
+		"populationRank": 62,
+		"region": "North Carolina",
+		"coastal": false,
+		"position": "centre"
+	},
+	"greensboro": {
+		"kind": "city",
+		"population": 388887,
+		"populationRank": 51,
+		"region": "North Carolina",
+		"coastal": false,
+		"position": "centre"
+	},
+	"durham": {
+		"kind": "city",
+		"population": 309495,
+		"populationRank": 58,
+		"region": "North Carolina",
+		"coastal": false,
+		"position": "centre"
+	},
+	"knoxville": {
+		"kind": "city",
+		"population": 655400,
+		"populationRank": 40,
+		"region": "Tennessee",
+		"coastal": false,
+		"position": "west"
+	},
+	"raleigh": {
+		"kind": "city",
+		"population": 1163515,
+		"populationRank": 20,
+		"region": "North Carolina",
+		"coastal": false,
+		"position": "centre"
+	},
+	"charlotte": {
+		"kind": "city",
+		"population": 995000,
+		"populationRank": 25,
+		"population1950": 142000,
+		"region": "North Carolina",
+		"coastal": false,
+		"position": "centre"
+	},
+	"chattanooga": {
+		"kind": "city",
+		"population": 257589,
+		"populationRank": 71,
+		"region": "Tennessee",
+		"coastal": false,
+		"position": "west"
+	},
+	"fayetteville": {
+		"kind": "city",
+		"population": 243306,
+		"populationRank": 73,
+		"region": "North Carolina",
+		"coastal": false,
+		"position": "centre"
+	},
+	"greenville": {
+		"kind": "city",
+		"population": 350954,
+		"populationRank": 54,
+		"region": "South Carolina",
+		"coastal": false,
+		"position": "west"
+	},
+	"huntsville": {
+		"kind": "city",
+		"population": 212733,
+		"populationRank": 81,
+		"region": "Alabama",
+		"coastal": false,
+		"position": "west"
+	},
+	"columbia": {
+		"kind": "city",
+		"population": 398093,
+		"populationRank": 50,
+		"region": "South Carolina",
+		"coastal": false,
+		"position": "centre"
+	},
+	"atlanta": {
+		"kind": "city",
+		"population": 4506000,
+		"populationRank": 4,
+		"population1950": 513000,
+		"region": "Georgia",
+		"coastal": false,
+		"position": "west"
+	},
+	"birmingham": {
+		"kind": "city",
+		"population": 1128047,
+		"populationRank": 21,
+		"region": "Alabama",
+		"coastal": false,
+		"position": "west"
+	},
+	"augusta": {
+		"kind": "city",
+		"population": 262332,
+		"populationRank": 68,
+		"region": "Georgia",
+		"coastal": false,
+		"position": "west"
+	},
+	"charleston": {
+		"kind": "city",
+		"population": 411940,
+		"populationRank": 48,
+		"region": "South Carolina",
+		"coastal": true,
+		"position": "centre"
+	},
+	"columbus-georgia": {
+		"kind": "city",
+		"population": 217980,
+		"populationRank": 79,
+		"region": "Georgia",
+		"coastal": false,
+		"position": "west"
+	},
+	"tallahassee": {
+		"kind": "city",
+		"population": 221222,
+		"populationRank": 77,
+		"region": "Florida",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"jacksonville": {
+		"kind": "city",
+		"population": 988000,
+		"populationRank": 26,
+		"population1950": 246000,
+		"region": "Florida",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"daytona-beach": {
+		"kind": "city",
+		"population": 216890,
+		"populationRank": 80,
+		"region": "Florida",
+		"coastal": true,
+		"position": "south"
+	},
+	"sanford": {
+		"kind": "city",
+		"population": 333460,
+		"populationRank": 56,
+		"region": "Florida",
+		"coastal": false,
+		"position": "south"
+	},
+	"orlando": {
+		"kind": "city",
+		"population": 1350000,
+		"populationRank": 16,
+		"population1950": 75000,
+		"region": "Florida",
+		"coastal": false,
+		"position": "south"
+	},
+	"kissimmee": {
+		"kind": "city",
+		"population": 225494,
+		"populationRank": 76,
+		"region": "Florida",
+		"coastal": false,
+		"position": "south"
+	},
+	"melbourne": {
+		"kind": "city",
+		"population": 265414,
+		"populationRank": 66,
+		"region": "Florida",
+		"coastal": true,
+		"position": "south"
+	},
+	"tampa": {
+		"kind": "city",
+		"population": 2314000,
+		"populationRank": 8,
+		"population1950": 300000,
+		"region": "Florida",
+		"coastal": true,
+		"position": "south-west"
+	},
+	"st-petersburg": {
+		"kind": "city",
+		"population": 800313,
+		"populationRank": 33,
+		"region": "Florida",
+		"coastal": true,
+		"position": "south-west"
+	},
+	"fort-pierce": {
+		"kind": "city",
+		"population": 228245,
+		"populationRank": 75,
+		"region": "Florida",
+		"coastal": true,
+		"position": "south"
+	},
+	"sarasota": {
+		"kind": "city",
+		"population": 589959,
+		"populationRank": 41,
+		"region": "Florida",
+		"coastal": true,
+		"position": "south-west"
+	},
+	"west-palm-beach": {
+		"kind": "city",
+		"population": 1250000,
+		"populationRank": 19,
+		"region": "Florida",
+		"coastal": true,
+		"position": "south"
+	},
+	"coral-springs": {
+		"kind": "city",
+		"population": 250000,
+		"populationRank": 72,
+		"region": "Florida",
+		"coastal": false,
+		"position": "south"
+	},
+	"naples": {
+		"kind": "city",
+		"population": 262306,
+		"populationRank": 69,
+		"region": "Florida",
+		"coastal": true,
+		"position": "south-west"
+	},
+	"fort-lauderdale": {
+		"kind": "city",
+		"population": 2042042,
+		"populationRank": 10,
+		"region": "Florida",
+		"coastal": true,
+		"position": "south"
+	},
+	"miami-beach": {
+		"kind": "city",
+		"population": 407750,
+		"populationRank": 49,
+		"region": "Florida",
+		"coastal": true,
+		"position": "south"
+	},
+	"miami": {
+		"kind": "city",
+		"population": 5585000,
+		"populationRank": 2,
+		"population1950": 622000,
+		"region": "Florida",
+		"coastal": true,
+		"position": "south"
+	}
+}

@@ -285,6 +285,27 @@ of scope" with the numbers that ruled them out.
   Heritage sites, and each region's own highest point. **Proved on one
   country first**, before anything is promised for the other 27 — if the
   answers come back thin or wrong, the task still ships on its derived half.
+
+  **Not done, and why (measured 2026-09-19).** The derived half shipped; the
+  Wikidata half did not. What the probe found:
+
+  - **The query service is up but wildly uneven.** The same six-item query
+    for "highest point", run three times in a row, took **1 s, 29 s and
+    24 s**. A broader one — volcanoes, parks and heritage sites located in a
+    region — was refused outright with a **502** after timing out.
+  - **The reverse lookup is the whole point, and only SPARQL can do it.**
+    "Which volcanoes are in this region" is a query _into_ Wikidata;
+    Wikidata's Action API, which answered in **0.65 s** and never failed,
+    can only fetch forward properties of an item it is given. Those are
+    mostly things the derived half already computes geometrically.
+
+  So the pass needs retry-and-cache machinery — query once, commit the
+  answers, never let a rebuild depend on the service — and that is a task,
+  not a coda to this one. It also carries real product choices (which
+  landmarks, how each is phrased) that are worth deciding on their own.
+  Everything needed to start is in place: the Wikidata ids are in the
+  source, and `facts.json` already has somewhere to put the answers.
+
 - **Reuse, do not rebuild:** adjacency is already computed by
   `data/scripts/mapColors.ts` for graph colouring — that is the `borders`
   list, for free. `overallBboxOf` gives "north-west of the country".
@@ -352,13 +373,13 @@ the product owner's test on the phone first, then the stable release.
 
 ## Progress ledger
 
-| Task  | State       | Merge     | Notes                                                                                                                                                                                                                                                                                          |
-| ----- | ----------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| FT-33 | **merged**  | `5a00902` | terrain in its own archive per map, not inside `tiles.pmtiles` — so no existing tileset changed; 4.94 MB over 63 maps, off by default; labels trilingual from the source; `--drop-rate=1` was load-bearing; the fills above it dim while it is on, after the product owner found it unreadable |
-| FT-37 | **merged**  | `3094295` | 711 named peaks capped at 12 per map, plus the great circles; parks/airports/glaciers rejected with the numbers that ruled them out; a silently empty layer caught by checking the tileset's layer list, not the screen                                                                        |
-| FT-34 | not started | —         |                                                                                                                                                                                                                                                                                                |
-| FT-35 | not started | —         |                                                                                                                                                                                                                                                                                                |
-| FT-36 | not started | —         |                                                                                                                                                                                                                                                                                                |
+| Task  | State                                    | Merge     | Notes                                                                                                                                                                                                                                                                                                                                                                       |
+| ----- | ---------------------------------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| FT-33 | **merged**                               | `5a00902` | terrain in its own archive per map, not inside `tiles.pmtiles` — so no existing tileset changed; 4.94 MB over 63 maps, off by default; labels trilingual from the source; `--drop-rate=1` was load-bearing; the fills above it dim while it is on, after the product owner found it unreadable                                                                              |
+| FT-37 | **merged**                               | `3094295` | 711 named peaks capped at 12 per map, plus the great circles; parks/airports/glaciers rejected with the numbers that ruled them out; a silently empty layer caught by checking the tileset's layer list, not the screen                                                                                                                                                     |
+| FT-34 | **derived half done, awaiting approval** | —         | 2 235 facts, 503 KB, structured not prose so the derived half is trilingual for free; coastal by shared vertices, source rows matched by extent not name, POP1950 is in thousands. **The Wikidata landmark pass is not done** — the query service ran the same query in 1 s, 29 s and 24 s and refused the broad one with a 502; it needs its own task with retry-and-cache |
+| FT-35 | not started                              | —         |                                                                                                                                                                                                                                                                                                                                                                             |
+| FT-36 | not started                              | —         |                                                                                                                                                                                                                                                                                                                                                                             |
 
 ## Out of scope
 

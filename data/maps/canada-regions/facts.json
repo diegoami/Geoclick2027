@@ -1,0 +1,256 @@
+{
+	"northwest-territories": {
+		"kind": "region",
+		"type": "Territory",
+		"borders": [
+			"Alberta",
+			"British Columbia",
+			"Manitoba",
+			"Nunavut",
+			"Saskatchewan",
+			"Yukon"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Yellowknife",
+			"nameDe": "Yellowknife",
+			"nameIt": "Yellowknife",
+			"population": 19234
+		},
+		"peak": {
+			"name": "Mount Nirvana",
+			"elevation": 2773
+		},
+		"position": "north-west"
+	},
+	"nunavut": {
+		"kind": "region",
+		"type": "Territory",
+		"borders": [
+			"Manitoba",
+			"Newfoundland and Labrador",
+			"Northwest Territories",
+			"Québec",
+			"Saskatchewan"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Iqaluit",
+			"nameDe": "Iqaluit",
+			"nameIt": "Iqaluit",
+			"population": 6124
+		},
+		"peak": {
+			"name": "Barbeau Peak",
+			"elevation": 2616
+		},
+		"position": "centre"
+	},
+	"yukon": {
+		"kind": "region",
+		"type": "Territory",
+		"borders": [
+			"British Columbia",
+			"Northwest Territories"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Whitehorse",
+			"nameDe": "Whitehorse",
+			"nameIt": "Whitehorse",
+			"population": 23276
+		},
+		"peak": {
+			"name": "Mount Logan",
+			"elevation": 5959
+		},
+		"position": "west"
+	},
+	"manitoba": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Northwest Territories",
+			"Nunavut",
+			"Ontario",
+			"Saskatchewan"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Winnipeg",
+			"nameDe": "Winnipeg",
+			"nameIt": "Winnipeg",
+			"population": 632063
+		},
+		"peak": {
+			"name": "Baldy Mountain",
+			"elevation": 831
+		},
+		"position": "south"
+	},
+	"saskatchewan": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Alberta",
+			"Manitoba",
+			"Northwest Territories",
+			"Nunavut"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Saskatoon",
+			"nameDe": "Saskatoon",
+			"nameIt": "Saskatoon",
+			"population": 198958
+		},
+		"position": "south"
+	},
+	"alberta": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"British Columbia",
+			"Northwest Territories",
+			"Saskatchewan"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Calgary",
+			"nameDe": "Calgary",
+			"nameIt": "Calgary",
+			"population": 1110000
+		},
+		"position": "south-west"
+	},
+	"british-columbia": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Alberta",
+			"Northwest Territories",
+			"Yukon"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Vancouver",
+			"nameDe": "Vancouver",
+			"nameIt": "Vancouver",
+			"population": 2313328
+		},
+		"peak": {
+			"name": "Mount Waddington",
+			"elevation": 4019
+		},
+		"position": "south-west"
+	},
+	"quebec": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"New Brunswick",
+			"Newfoundland and Labrador",
+			"Nunavut",
+			"Ontario"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Montréal",
+			"nameDe": "Montreal",
+			"nameIt": "Montréal",
+			"population": 3678000
+		},
+		"peak": {
+			"name": "Mont Jacques-Cartier",
+			"elevation": 1268
+		},
+		"position": "south-east"
+	},
+	"newfoundland-and-labrador": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Nunavut",
+			"Québec"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "St. John's",
+			"nameDe": "St. John’s",
+			"nameIt": "Saint John's",
+			"population": 131469
+		},
+		"peak": {
+			"name": "Mount Caubvick",
+			"elevation": 1652
+		},
+		"position": "south-east"
+	},
+	"ontario": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Manitoba",
+			"Québec"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Toronto",
+			"nameDe": "Toronto",
+			"nameIt": "Toronto",
+			"population": 5213000
+		},
+		"peak": {
+			"name": "Ishpatina Ridge",
+			"elevation": 693
+		},
+		"position": "south"
+	},
+	"prince-edward-island": {
+		"kind": "region",
+		"type": "Province",
+		"coastal": true,
+		"largestCity": {
+			"name": "Charlottetown",
+			"nameDe": "Charlottetown",
+			"nameIt": "Charlottetown",
+			"population": 42402
+		},
+		"position": "south-east"
+	},
+	"new-brunswick": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Nova Scotia",
+			"Québec"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Moncton",
+			"nameDe": "Moncton",
+			"nameIt": "Moncton",
+			"population": 90635
+		},
+		"position": "south-east"
+	},
+	"nova-scotia": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"New Brunswick"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Halifax",
+			"nameDe": "Halifax",
+			"nameIt": "Halifax",
+			"population": 359111
+		},
+		"peak": {
+			"name": "White Hill",
+			"elevation": 535
+		},
+		"position": "south-east"
+	}
+}

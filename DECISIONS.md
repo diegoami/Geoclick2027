@@ -1172,6 +1172,26 @@ answers:
   Overview the background stays background, while in the quiz — where few
   names are on the map yet — the terrain shows.
 
+## The fact is data, not a sentence (2026-09-19, FT-34)
+
+- **`facts.json` holds fields, not prose.** A population, a list of
+  neighbours, a compass position — and the sentence is assembled at run time
+  from the i18n dictionary. The alternative, writing the sentence at build
+  time, would mean writing it three times and watching two of them go stale.
+  This way the derived half of the fact box was trilingual the day it
+  existed, and only the authored hook (FT-36) needs a translator.
+- **Order is the argument.** The clauses come back best-first — where it is,
+  then what it is against, then the numbers, with the neighbours last
+  because that list is long and dull. What fixes a place in the mind is
+  rarely its population.
+- **Growth beats a bare count.** "795 000 people in 1950, 3 074 000 today"
+  says something about a place; "3 074 000" says something about a number.
+  The count is the fallback, used when the city did not really grow.
+- **Nothing is guessed.** A fact that cannot be computed is left out of the
+  file, and the app renders only what it is given. That is why coverage is
+  uneven by design — every target has a position and a coast answer, 9 %
+  have a named summit — and why a blank field is never a wrong field.
+
 ## Peaks and the great circles (2026-09-19, FT-37)
 
 - **Two more landmark sets inside the same Terrain toggle**, not a second

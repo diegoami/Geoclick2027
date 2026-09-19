@@ -1,0 +1,998 @@
+{
+	"north-dakota": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Minnesota",
+			"Montana",
+			"South Dakota"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Fargo",
+			"nameDe": "Fargo",
+			"nameIt": "Fargo",
+			"population": 162842
+		},
+		"position": "north"
+	},
+	"washington": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Idaho",
+			"Oregon"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Seattle",
+			"nameDe": "Seattle",
+			"nameIt": "Seattle",
+			"population": 3074000
+		},
+		"peak": {
+			"name": "Mount Rainier",
+			"elevation": 4392
+		},
+		"position": "north-west"
+	},
+	"montana": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Idaho",
+			"North Dakota",
+			"South Dakota",
+			"Wyoming"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Billings",
+			"nameDe": "Billings",
+			"nameIt": "Billings",
+			"population": 104552
+		},
+		"peak": {
+			"name": "Crazy Peak",
+			"elevation": 3417
+		},
+		"position": "north-west"
+	},
+	"minnesota": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Iowa",
+			"Michigan",
+			"North Dakota",
+			"South Dakota",
+			"Wisconsin"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Minneapolis",
+			"nameDe": "Minneapolis",
+			"nameIt": "Minneapolis",
+			"population": 2616000
+		},
+		"peak": {
+			"name": "Eagle Mountain",
+			"elevation": 701
+		},
+		"position": "north"
+	},
+	"idaho": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Montana",
+			"Nevada",
+			"Oregon",
+			"Utah",
+			"Washington",
+			"Wyoming"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Boise",
+			"nameDe": "Boise",
+			"nameIt": "Boise",
+			"population": 338071
+		},
+		"peak": {
+			"name": "Borah Peak",
+			"elevation": 3859
+		},
+		"position": "north-west"
+	},
+	"maine": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"New Hampshire"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Portland",
+			"nameDe": "Portland",
+			"nameIt": "Portland",
+			"population": 135866
+		},
+		"peak": {
+			"name": "Mount Katahdin",
+			"elevation": 1606
+		},
+		"position": "north-east"
+	},
+	"michigan": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Illinois",
+			"Indiana",
+			"Minnesota",
+			"Ohio",
+			"Wisconsin"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Detroit",
+			"nameDe": "Detroit",
+			"nameIt": "Detroit",
+			"population": 4101000
+		},
+		"position": "north"
+	},
+	"wisconsin": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Illinois",
+			"Iowa",
+			"Michigan",
+			"Minnesota"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Milwaukee",
+			"nameDe": "Milwaukee",
+			"nameIt": "Milwaukee",
+			"population": 1388000
+		},
+		"position": "north"
+	},
+	"south-dakota": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Iowa",
+			"Minnesota",
+			"Montana",
+			"Nebraska",
+			"North Dakota",
+			"Wyoming"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Sioux Falls",
+			"nameDe": "Sioux Falls",
+			"nameIt": "Sioux Falls",
+			"population": 155724
+		},
+		"peak": {
+			"name": "Black Elk Peak",
+			"elevation": 2207
+		},
+		"position": "north"
+	},
+	"oregon": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"California",
+			"Idaho",
+			"Nevada",
+			"Washington"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Portland",
+			"nameDe": "Portland",
+			"nameIt": "Portland",
+			"population": 1875000
+		},
+		"peak": {
+			"name": "Mount Hood",
+			"elevation": 3426
+		},
+		"position": "north-west"
+	},
+	"new-hampshire": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Maine",
+			"Massachusetts",
+			"Vermont"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Manchester",
+			"nameDe": "Manchester",
+			"nameIt": "Manchester",
+			"population": 196566
+		},
+		"peak": {
+			"name": "Mount Washington",
+			"elevation": 1917
+		},
+		"position": "north-east"
+	},
+	"vermont": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Massachusetts",
+			"New Hampshire",
+			"New York"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Burlington",
+			"nameDe": "Burlington",
+			"nameIt": "Burlington",
+			"population": 93807
+		},
+		"position": "north-east"
+	},
+	"wyoming": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Colorado",
+			"Idaho",
+			"Montana",
+			"Nebraska",
+			"South Dakota",
+			"Utah"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Cheyenne",
+			"nameDe": "Cheyenne",
+			"nameIt": "Cheyenne",
+			"population": 72927
+		},
+		"peak": {
+			"name": "Gannett Peak",
+			"elevation": 4207
+		},
+		"position": "north-west"
+	},
+	"new-york": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Connecticut",
+			"Massachusetts",
+			"New Jersey",
+			"Pennsylvania",
+			"Vermont"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "New York",
+			"nameDe": "New York City",
+			"nameIt": "New York",
+			"population": 19040000
+		},
+		"peak": {
+			"name": "Slide Mountain",
+			"elevation": 1274
+		},
+		"position": "north-east"
+	},
+	"massachusetts": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Connecticut",
+			"New Hampshire",
+			"New York",
+			"Rhode Island",
+			"Vermont"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Boston",
+			"nameDe": "Boston",
+			"nameIt": "Boston",
+			"population": 4467000
+		},
+		"position": "north-east"
+	},
+	"iowa": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Illinois",
+			"Minnesota",
+			"Missouri",
+			"Nebraska",
+			"South Dakota",
+			"Wisconsin"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Des Moines",
+			"nameDe": "Des Moines",
+			"nameIt": "Des Moines",
+			"population": 380655
+		},
+		"position": "north"
+	},
+	"rhode-island": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Connecticut",
+			"Massachusetts"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Providence",
+			"nameDe": "Providence",
+			"nameIt": "Providence",
+			"population": 1277000
+		},
+		"position": "north-east"
+	},
+	"connecticut": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Massachusetts",
+			"New York",
+			"Rhode Island"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Bridgeport",
+			"nameDe": "Bridgeport",
+			"nameIt": "Bridgeport",
+			"population": 1018000
+		},
+		"position": "north-east"
+	},
+	"nebraska": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Colorado",
+			"Iowa",
+			"Kansas",
+			"Missouri",
+			"South Dakota",
+			"Wyoming"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Omaha",
+			"nameDe": "Omaha",
+			"nameIt": "Omaha",
+			"population": 877110
+		},
+		"position": "north"
+	},
+	"pennsylvania": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Delaware",
+			"Maryland",
+			"New Jersey",
+			"New York",
+			"Ohio",
+			"West Virginia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Philadelphia",
+			"nameDe": "Philadelphia",
+			"nameIt": "Filadelfia",
+			"population": 5492000
+		},
+		"position": "east"
+	},
+	"ohio": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Indiana",
+			"Kentucky",
+			"Michigan",
+			"Pennsylvania",
+			"West Virginia"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Cleveland",
+			"nameDe": "Cleveland",
+			"nameIt": "Cleveland",
+			"population": 1890000
+		},
+		"position": "east"
+	},
+	"new-jersey": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Delaware",
+			"New York",
+			"Pennsylvania"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Trenton",
+			"nameDe": "Trenton",
+			"nameIt": "Trenton",
+			"population": 366513
+		},
+		"position": "east"
+	},
+	"indiana": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Illinois",
+			"Kentucky",
+			"Michigan",
+			"Ohio"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Indianapolis",
+			"nameDe": "Indianapolis",
+			"nameIt": "Indianapolis",
+			"population": 1436000
+		},
+		"position": "centre"
+	},
+	"illinois": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Indiana",
+			"Iowa",
+			"Kentucky",
+			"Michigan",
+			"Missouri",
+			"Wisconsin"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Chicago",
+			"nameDe": "Chicago",
+			"nameIt": "Chicago",
+			"population": 8990000
+		},
+		"position": "centre"
+	},
+	"utah": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Arizona",
+			"Colorado",
+			"Idaho",
+			"Nevada",
+			"New Mexico",
+			"Wyoming"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Salt Lake City",
+			"nameDe": "Salt Lake City",
+			"nameIt": "Salt Lake City",
+			"population": 966000
+		},
+		"peak": {
+			"name": "King's Peak",
+			"elevation": 4123
+		},
+		"position": "west"
+	},
+	"delaware": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Maryland",
+			"New Jersey",
+			"Pennsylvania"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Wilmington",
+			"nameDe": "Wilmington",
+			"nameIt": "Wilmington",
+			"population": 161560
+		},
+		"position": "east"
+	},
+	"colorado": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Arizona",
+			"Kansas",
+			"Nebraska",
+			"New Mexico",
+			"Oklahoma",
+			"Utah",
+			"Wyoming"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Denver",
+			"nameDe": "Denver",
+			"nameIt": "Denver",
+			"population": 2313000
+		},
+		"peak": {
+			"name": "Mount Elbert",
+			"elevation": 4402
+		},
+		"position": "west"
+	},
+	"west-virginia": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Kentucky",
+			"Maryland",
+			"Ohio",
+			"Pennsylvania",
+			"Virginia"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Charleston",
+			"nameDe": "Charleston",
+			"nameIt": "Charleston",
+			"population": 123799
+		},
+		"peak": {
+			"name": "Spruce Knob",
+			"elevation": 1482
+		},
+		"position": "east"
+	},
+	"district-of-columbia": {
+		"kind": "region",
+		"type": "Federal District",
+		"borders": [
+			"Maryland",
+			"Virginia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Washington,  D.C.",
+			"nameDe": "Washington",
+			"nameIt": "Washington",
+			"population": 4338000
+		},
+		"position": "east"
+	},
+	"maryland": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Delaware",
+			"District of Columbia",
+			"Pennsylvania",
+			"Virginia",
+			"West Virginia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Baltimore",
+			"nameDe": "Baltimore",
+			"nameIt": "Baltimora",
+			"population": 2255000
+		},
+		"position": "east"
+	},
+	"nevada": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Arizona",
+			"California",
+			"Idaho",
+			"Oregon",
+			"Utah"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Las Vegas",
+			"nameDe": "Las Vegas",
+			"nameIt": "Las Vegas",
+			"population": 1823000
+		},
+		"peak": {
+			"name": "Wheeler Peak",
+			"elevation": 3982
+		},
+		"position": "west"
+	},
+	"kansas": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Colorado",
+			"Missouri",
+			"Nebraska",
+			"Oklahoma"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kansas City",
+			"nameDe": "Kansas City",
+			"nameIt": "Kansas City",
+			"population": 501577
+		},
+		"position": "centre"
+	},
+	"missouri": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Arkansas",
+			"Illinois",
+			"Iowa",
+			"Kansas",
+			"Kentucky",
+			"Nebraska",
+			"Oklahoma",
+			"Tennessee"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "St. Louis",
+			"nameDe": "St. Louis",
+			"nameIt": "Saint Louis",
+			"population": 2199000
+		},
+		"position": "centre"
+	},
+	"virginia": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"District of Columbia",
+			"Kentucky",
+			"Maryland",
+			"North Carolina",
+			"Tennessee",
+			"West Virginia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Virginia Beach",
+			"nameDe": "Virginia Beach",
+			"nameIt": "Virginia Beach",
+			"population": 1491000
+		},
+		"peak": {
+			"name": "Mount Rogers",
+			"elevation": 1746
+		},
+		"position": "east"
+	},
+	"kentucky": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Illinois",
+			"Indiana",
+			"Missouri",
+			"Ohio",
+			"Tennessee",
+			"Virginia",
+			"West Virginia"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Louisville",
+			"nameDe": "Louisville",
+			"nameIt": "Louisville",
+			"population": 948000
+		},
+		"position": "east"
+	},
+	"california": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Arizona",
+			"Nevada",
+			"Oregon"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Los Angeles",
+			"nameDe": "Los Angeles",
+			"nameIt": "Los Angeles",
+			"population": 12500000
+		},
+		"peak": {
+			"name": "Mount Whitney",
+			"elevation": 4421
+		},
+		"position": "west"
+	},
+	"tennessee": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Alabama",
+			"Arkansas",
+			"Georgia",
+			"Kentucky",
+			"Mississippi",
+			"Missouri",
+			"North Carolina",
+			"Virginia"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Memphis",
+			"nameDe": "Memphis",
+			"nameIt": "Memphis",
+			"population": 1081000
+		},
+		"peak": {
+			"name": "Clingmans Dome",
+			"elevation": 2025
+		},
+		"position": "east"
+	},
+	"oklahoma": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Arkansas",
+			"Colorado",
+			"Kansas",
+			"Missouri",
+			"New Mexico",
+			"Texas"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tulsa",
+			"nameDe": "Tulsa",
+			"nameIt": "Tulsa",
+			"population": 946962
+		},
+		"position": "centre"
+	},
+	"north-carolina": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Georgia",
+			"South Carolina",
+			"Tennessee",
+			"Virginia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Raleigh",
+			"nameDe": "Raleigh",
+			"nameIt": "Raleigh",
+			"population": 1163515
+		},
+		"peak": {
+			"name": "Mount Mitchell",
+			"elevation": 2037
+		},
+		"position": "east"
+	},
+	"arkansas": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Louisiana",
+			"Mississippi",
+			"Missouri",
+			"Oklahoma",
+			"Tennessee",
+			"Texas"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Little Rock",
+			"nameDe": "Little Rock",
+			"nameIt": "Little Rock",
+			"population": 270893
+		},
+		"peak": {
+			"name": "Magazine Mountain",
+			"elevation": 839
+		},
+		"position": "centre"
+	},
+	"arizona": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"California",
+			"Colorado",
+			"Nevada",
+			"New Mexico",
+			"Utah"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Phoenix",
+			"nameDe": "Phoenix",
+			"nameIt": "Phoenix",
+			"population": 3551000
+		},
+		"peak": {
+			"name": "Humphreys Peak",
+			"elevation": 3851
+		},
+		"position": "west"
+	},
+	"new-mexico": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Arizona",
+			"Colorado",
+			"Oklahoma",
+			"Texas",
+			"Utah"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Albuquerque",
+			"nameDe": "Albuquerque",
+			"nameIt": "Albuquerque",
+			"population": 898642
+		},
+		"peak": {
+			"name": "Truchas Peak",
+			"elevation": 3993
+		},
+		"position": "west"
+	},
+	"south-carolina": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Georgia",
+			"North Carolina"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Charleston",
+			"nameDe": "Charleston",
+			"nameIt": "Charleston",
+			"population": 411940
+		},
+		"position": "east"
+	},
+	"georgia": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Alabama",
+			"Florida",
+			"North Carolina",
+			"South Carolina",
+			"Tennessee"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Atlanta",
+			"nameDe": "Atlanta",
+			"nameIt": "Atlanta",
+			"population": 4506000
+		},
+		"position": "south-east"
+	},
+	"alabama": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Florida",
+			"Georgia",
+			"Mississippi",
+			"Tennessee"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Birmingham",
+			"nameDe": "Birmingham",
+			"nameIt": "Birmingham",
+			"population": 1128047
+		},
+		"position": "south"
+	},
+	"mississippi": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Alabama",
+			"Arkansas",
+			"Louisiana",
+			"Tennessee"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Jackson",
+			"nameDe": "Jackson",
+			"nameIt": "Jackson",
+			"population": 250902
+		},
+		"position": "south"
+	},
+	"texas": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Arkansas",
+			"Louisiana",
+			"New Mexico",
+			"Oklahoma"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Dallas",
+			"nameDe": "Dallas",
+			"nameIt": "Dallas",
+			"population": 4798000
+		},
+		"peak": {
+			"name": "Guadalupe Peak",
+			"elevation": 2667
+		},
+		"position": "south"
+	},
+	"louisiana": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Arkansas",
+			"Mississippi",
+			"Texas"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "New Orleans",
+			"nameDe": "New Orleans",
+			"nameIt": "New Orleans",
+			"population": 785000
+		},
+		"position": "south"
+	},
+	"florida": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Alabama",
+			"Georgia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Miami",
+			"nameDe": "Miami",
+			"nameIt": "Miami",
+			"population": 5585000
+		},
+		"position": "south-east"
+	}
+}

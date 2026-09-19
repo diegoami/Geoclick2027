@@ -1,0 +1,624 @@
+{
+	"baja-california": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Baja California Sur",
+			"Sonora"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tijuana",
+			"nameDe": "Tijuana",
+			"nameIt": "Tijuana",
+			"population": 1553000
+		},
+		"peak": {
+			"name": "Picacho del Diablo",
+			"elevation": 3069
+		},
+		"position": "north-west"
+	},
+	"sonora": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Baja California",
+			"Chihuahua",
+			"Sinaloa"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Hermosillo",
+			"nameDe": "Hermosillo",
+			"nameIt": "Hermosillo",
+			"population": 595811
+		},
+		"position": "north-west"
+	},
+	"chihuahua": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Coahuila",
+			"Durango",
+			"Sinaloa",
+			"Sonora"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ciudad Juárez",
+			"nameDe": "Ciudad Juárez",
+			"nameIt": "Ciudad Juárez",
+			"population": 1343000
+		},
+		"peak": {
+			"name": "Cerro Mohinora",
+			"elevation": 3348
+		},
+		"position": "north"
+	},
+	"coahuila": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Chihuahua",
+			"Durango",
+			"Nuevo León",
+			"San Luis Potosí",
+			"Zacatecas"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Torreón",
+			"nameDe": "Torreón",
+			"nameIt": "Torreón",
+			"population": 1144000
+		},
+		"peak": {
+			"name": "Cerro San Rafael",
+			"elevation": 3710
+		},
+		"position": "north"
+	},
+	"nuevo-leon": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Coahuila",
+			"San Luis Potosí",
+			"Tamaulipas",
+			"Zacatecas"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Monterrey",
+			"nameDe": "Monterrey",
+			"nameIt": "Monterrey",
+			"population": 3712000
+		},
+		"peak": {
+			"name": "Sierra El Viejo",
+			"elevation": 3500
+		},
+		"position": "centre"
+	},
+	"baja-california-sur": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Baja California"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "La Paz",
+			"nameDe": "La Paz",
+			"nameIt": "La Paz",
+			"population": 189767
+		},
+		"peak": {
+			"name": "Cerro Picacho la Laguna",
+			"elevation": 1980
+		},
+		"position": "west"
+	},
+	"tamaulipas": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Nuevo León",
+			"San Luis Potosí",
+			"Veracruz"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tampico",
+			"nameDe": "Tampico",
+			"nameIt": "Tampico",
+			"population": 859419
+		},
+		"position": "centre"
+	},
+	"sinaloa": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Chihuahua",
+			"Durango",
+			"Nayarit",
+			"Sonora"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Culiacán",
+			"nameDe": "Culiacán",
+			"nameIt": "Culiacán",
+			"population": 809000
+		},
+		"position": "centre"
+	},
+	"durango": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Chihuahua",
+			"Coahuila",
+			"Nayarit",
+			"Sinaloa",
+			"Zacatecas"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Durango",
+			"nameDe": "Victoria de Durango",
+			"nameIt": "Victoria de Durango",
+			"population": 457140
+		},
+		"peak": {
+			"name": "Cerro Gordo",
+			"elevation": 3340
+		},
+		"position": "centre"
+	},
+	"zacatecas": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Aguascalientes",
+			"Coahuila",
+			"Durango",
+			"Guanajuato",
+			"Jalisco",
+			"Nayarit",
+			"Nuevo León",
+			"San Luis Potosí"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Zacatecas",
+			"nameDe": "Zacatecas",
+			"nameIt": "Zacatecas",
+			"population": 234481
+		},
+		"position": "centre"
+	},
+	"san-luis-potosi": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Coahuila",
+			"Guanajuato",
+			"Hidalgo",
+			"Jalisco",
+			"Nuevo León",
+			"Querétaro",
+			"Tamaulipas",
+			"Veracruz",
+			"Zacatecas"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "San Luis Potosí",
+			"nameDe": "San Luis Potosí",
+			"nameIt": "San Luis Potosí",
+			"population": 992000
+		},
+		"position": "centre"
+	},
+	"aguascalientes": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Jalisco",
+			"Zacatecas"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Aguascalientes",
+			"nameDe": "Aguascalientes",
+			"nameIt": "Aguascalientes",
+			"population": 869000
+		},
+		"position": "centre"
+	},
+	"nayarit": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Durango",
+			"Jalisco",
+			"Sinaloa",
+			"Zacatecas"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tepic",
+			"nameDe": "Tepic",
+			"nameIt": "Tepic",
+			"population": 318781
+		},
+		"position": "centre"
+	},
+	"guanajuato": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Jalisco",
+			"Michoacán",
+			"Querétaro",
+			"San Luis Potosí",
+			"Zacatecas"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "León",
+			"nameDe": "León",
+			"nameIt": "León",
+			"population": 1488000
+		},
+		"position": "centre"
+	},
+	"jalisco": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Aguascalientes",
+			"Colima",
+			"Guanajuato",
+			"Michoacán",
+			"Nayarit",
+			"San Luis Potosí",
+			"Zacatecas"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Guadalajara",
+			"nameDe": "Guadalajara",
+			"nameIt": "Guadalajara",
+			"population": 4198000
+		},
+		"peak": {
+			"name": "Volcán de Colima",
+			"elevation": 4330
+		},
+		"position": "centre"
+	},
+	"queretaro": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Guanajuato",
+			"Hidalgo",
+			"México",
+			"Michoacán",
+			"San Luis Potosí"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Querétaro",
+			"nameDe": "Santiago de Querétaro",
+			"nameIt": "Santiago de Querétaro",
+			"population": 961000
+		},
+		"position": "centre"
+	},
+	"yucatan": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Campeche",
+			"Quintana Roo"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Mérida",
+			"nameDe": "Mérida",
+			"nameIt": "Mérida",
+			"population": 965000
+		},
+		"position": "east"
+	},
+	"hidalgo": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"México",
+			"Puebla",
+			"Querétaro",
+			"San Luis Potosí",
+			"Tlaxcala",
+			"Veracruz"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Pachuca",
+			"nameDe": "Pachuca de Soto",
+			"nameIt": "Pachuca",
+			"population": 319581
+		},
+		"position": "south"
+	},
+	"veracruz": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Chiapas",
+			"Hidalgo",
+			"Oaxaca",
+			"Puebla",
+			"San Luis Potosí",
+			"Tabasco",
+			"Tamaulipas"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Veracruz",
+			"nameDe": "Veracruz",
+			"nameIt": "Veracruz",
+			"population": 578963
+		},
+		"position": "south-east"
+	},
+	"quintana-roo": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Campeche",
+			"Yucatán"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Cancún",
+			"nameDe": "Cancún",
+			"nameIt": "Cancún",
+			"population": 542043
+		},
+		"position": "south-east"
+	},
+	"tlaxcala": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Hidalgo",
+			"México",
+			"Puebla"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tlaxcala",
+			"nameDe": "Tlaxcala",
+			"nameIt": "Tlaxcala",
+			"population": 503878
+		},
+		"position": "south"
+	},
+	"puebla": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Guerrero",
+			"Hidalgo",
+			"México",
+			"Morelos",
+			"Oaxaca",
+			"Tlaxcala",
+			"Veracruz"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Puebla",
+			"nameDe": "Puebla",
+			"nameIt": "Puebla de Zaragoza",
+			"population": 2195000
+		},
+		"peak": {
+			"name": "Pico de Orizaba",
+			"elevation": 5636
+		},
+		"position": "south"
+	},
+	"mexico": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Distrito Federal",
+			"Guerrero",
+			"Hidalgo",
+			"Michoacán",
+			"Morelos",
+			"Puebla",
+			"Querétaro",
+			"Tlaxcala"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Toluca",
+			"nameDe": "Toluca",
+			"nameIt": "Toluca",
+			"population": 1531000
+		},
+		"position": "south"
+	},
+	"distrito-federal": {
+		"kind": "region",
+		"type": "Federal District",
+		"borders": [
+			"México",
+			"Morelos"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Mexico City",
+			"nameDe": "Mexiko-Stadt",
+			"nameIt": "Città del Messico",
+			"population": 19028000
+		},
+		"position": "south"
+	},
+	"campeche": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Quintana Roo",
+			"Tabasco",
+			"Yucatán"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Campeche",
+			"nameDe": "Campeche",
+			"nameIt": "San Francisco de Campeche",
+			"population": 205212
+		},
+		"position": "south-east"
+	},
+	"michoacan": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Colima",
+			"Guanajuato",
+			"Guerrero",
+			"Jalisco",
+			"México",
+			"Querétaro"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Morelia",
+			"nameDe": "Morelia",
+			"nameIt": "Morelia",
+			"population": 644306
+		},
+		"position": "south"
+	},
+	"colima": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Jalisco",
+			"Michoacán"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Colima",
+			"nameDe": "Colima",
+			"nameIt": "Colima",
+			"population": 223287
+		},
+		"position": "south"
+	},
+	"morelos": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Distrito Federal",
+			"Guerrero",
+			"México",
+			"Puebla"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Cuernavaca",
+			"nameDe": "Cuernavaca",
+			"nameIt": "Cuernavaca",
+			"population": 834001
+		},
+		"position": "south"
+	},
+	"tabasco": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Campeche",
+			"Chiapas",
+			"Veracruz"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Villahermosa",
+			"nameDe": "Villahermosa",
+			"nameIt": "Villahermosa",
+			"population": 428564
+		},
+		"position": "south-east"
+	},
+	"guerrero": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"México",
+			"Michoacán",
+			"Morelos",
+			"Oaxaca",
+			"Puebla"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Acapulco",
+			"nameDe": "Acapulco",
+			"nameIt": "Acapulco",
+			"population": 715584
+		},
+		"position": "south"
+	},
+	"oaxaca": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Chiapas",
+			"Guerrero",
+			"Puebla",
+			"Veracruz"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Oaxaca",
+			"nameDe": "Oaxaca de Juárez",
+			"nameIt": "Oaxaca de Juárez",
+			"population": 530728
+		},
+		"peak": {
+			"name": "Cerro Nube Flan",
+			"elevation": 3750
+		},
+		"position": "south-east"
+	},
+	"chiapas": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Oaxaca",
+			"Tabasco",
+			"Veracruz"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tuxtla Gutiérrez",
+			"nameDe": "Tuxtla Gutiérrez",
+			"nameIt": "Tuxtla Gutiérrez",
+			"population": 481128
+		},
+		"position": "south-east"
+	}
+}

@@ -1,0 +1,517 @@
+{
+	"kitami": {
+		"kind": "city",
+		"population": 113137,
+		"populationRank": 65,
+		"region": "Hokkaido",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"asahikawa": {
+		"kind": "city",
+		"population": 356612,
+		"populationRank": 33,
+		"region": "Hokkaido",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"otaru": {
+		"kind": "city",
+		"population": 143792,
+		"populationRank": 64,
+		"region": "Hokkaido",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"sapporo": {
+		"kind": "city",
+		"population": 2544000,
+		"populationRank": 6,
+		"population1950": 754000,
+		"region": "Hokkaido",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"kushiro": {
+		"kind": "city",
+		"population": 198566,
+		"populationRank": 53,
+		"region": "Hokkaido",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"obihiro": {
+		"kind": "city",
+		"population": 173890,
+		"populationRank": 59,
+		"region": "Hokkaido",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"tomakomai": {
+		"kind": "city",
+		"population": 174806,
+		"populationRank": 58,
+		"region": "Hokkaido",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"muroran": {
+		"kind": "city",
+		"population": 155676,
+		"populationRank": 62,
+		"region": "Hokkaido",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"hakodate": {
+		"kind": "city",
+		"population": 302984,
+		"populationRank": 43,
+		"region": "Hokkaido",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"aomori": {
+		"kind": "city",
+		"population": 298394,
+		"populationRank": 44,
+		"coastal": true,
+		"position": "north-east"
+	},
+	"hirosaki": {
+		"kind": "city",
+		"population": 174972,
+		"populationRank": 57,
+		"region": "Aomori",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"hachinohe": {
+		"kind": "city",
+		"population": 239046,
+		"populationRank": 50,
+		"region": "Aomori",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"morioka": {
+		"kind": "city",
+		"population": 295172,
+		"populationRank": 45,
+		"region": "Iwate",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"akita": {
+		"kind": "city",
+		"population": 320069,
+		"populationRank": 42,
+		"coastal": true,
+		"position": "north-east"
+	},
+	"sakata": {
+		"kind": "city",
+		"population": 100446,
+		"populationRank": 66,
+		"region": "Yamagata",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"yamagata": {
+		"kind": "city",
+		"population": 272209,
+		"populationRank": 47,
+		"coastal": false,
+		"position": "north-east"
+	},
+	"sendai": {
+		"kind": "city",
+		"population": 2250000,
+		"populationRank": 7,
+		"population1950": 538000,
+		"region": "Miyagi",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"niigata": {
+		"kind": "city",
+		"population": 569797,
+		"populationRank": 21,
+		"coastal": true,
+		"position": "east"
+	},
+	"fukushima": {
+		"kind": "city",
+		"population": 294237,
+		"populationRank": 46,
+		"coastal": false,
+		"position": "east"
+	},
+	"nagaoka": {
+		"kind": "city",
+		"population": 195318,
+		"populationRank": 56,
+		"region": "Niigata",
+		"coastal": true,
+		"position": "east"
+	},
+	"koriyama": {
+		"kind": "city",
+		"population": 340560,
+		"populationRank": 36,
+		"region": "Fukushima",
+		"coastal": false,
+		"position": "east"
+	},
+	"iwaki": {
+		"kind": "city",
+		"population": 357309,
+		"populationRank": 32,
+		"region": "Fukushima",
+		"coastal": true,
+		"position": "east"
+	},
+	"toyama": {
+		"kind": "city",
+		"population": 332812,
+		"populationRank": 40,
+		"coastal": true,
+		"position": "centre"
+	},
+	"takaoka": {
+		"kind": "city",
+		"population": 170077,
+		"populationRank": 60,
+		"region": "Toyama",
+		"coastal": true,
+		"position": "centre"
+	},
+	"nagano": {
+		"kind": "city",
+		"population": 594311,
+		"populationRank": 19,
+		"coastal": false,
+		"position": "centre"
+	},
+	"kanazawa": {
+		"kind": "city",
+		"population": 551249,
+		"populationRank": 23,
+		"region": "Ishikawa",
+		"coastal": true,
+		"position": "centre"
+	},
+	"utsunomiya": {
+		"kind": "city",
+		"population": 667752,
+		"populationRank": 18,
+		"region": "Tochigi",
+		"coastal": false,
+		"position": "east"
+	},
+	"maebashi": {
+		"kind": "city",
+		"population": 344871,
+		"populationRank": 35,
+		"region": "Gunma",
+		"coastal": false,
+		"position": "east"
+	},
+	"mito": {
+		"kind": "city",
+		"population": 353892,
+		"populationRank": 34,
+		"region": "Ibaraki",
+		"coastal": true,
+		"position": "east"
+	},
+	"matsumoto": {
+		"kind": "city",
+		"population": 224926,
+		"populationRank": 52,
+		"region": "Nagano",
+		"coastal": false,
+		"position": "centre"
+	},
+	"fukui": {
+		"kind": "city",
+		"population": 248707,
+		"populationRank": 48,
+		"coastal": true,
+		"position": "centre"
+	},
+	"kawagoe": {
+		"kind": "city",
+		"population": 337931,
+		"populationRank": 37,
+		"region": "Saitama",
+		"coastal": false,
+		"position": "east"
+	},
+	"tokyo": {
+		"kind": "city",
+		"population": 35676000,
+		"populationRank": 1,
+		"population1950": 11275000,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "east"
+	},
+	"hachioji": {
+		"kind": "city",
+		"population": 579399,
+		"populationRank": 20,
+		"region": "Tokyo",
+		"coastal": false,
+		"position": "east"
+	},
+	"kofu": {
+		"kind": "city",
+		"population": 197540,
+		"populationRank": 54,
+		"region": "Yamanashi",
+		"coastal": false,
+		"position": "centre"
+	},
+	"kawasaki": {
+		"kind": "city",
+		"population": 1437266,
+		"populationRank": 11,
+		"region": "Kanagawa",
+		"coastal": true,
+		"position": "east"
+	},
+	"tottori": {
+		"kind": "city",
+		"population": 154098,
+		"populationRank": 63,
+		"coastal": true,
+		"position": "centre"
+	},
+	"matsue": {
+		"kind": "city",
+		"population": 156811,
+		"populationRank": 61,
+		"region": "Shimane",
+		"coastal": true,
+		"position": "west"
+	},
+	"yokohama": {
+		"kind": "city",
+		"population": 3697894,
+		"populationRank": 3,
+		"region": "Kanagawa",
+		"coastal": true,
+		"position": "east"
+	},
+	"gifu": {
+		"kind": "city",
+		"population": 412895,
+		"populationRank": 31,
+		"coastal": false,
+		"position": "centre"
+	},
+	"nagoya": {
+		"kind": "city",
+		"population": 3230000,
+		"populationRank": 4,
+		"population1950": 992000,
+		"region": "Aichi",
+		"coastal": true,
+		"position": "centre"
+	},
+	"kyoto": {
+		"kind": "city",
+		"population": 1805000,
+		"populationRank": 9,
+		"population1950": 1002000,
+		"coastal": false,
+		"position": "centre"
+	},
+	"otsu": {
+		"kind": "city",
+		"population": 536976,
+		"populationRank": 24,
+		"region": "Shiga",
+		"coastal": false,
+		"position": "centre"
+	},
+	"shizuoka": {
+		"kind": "city",
+		"population": 701561,
+		"populationRank": 17,
+		"coastal": true,
+		"position": "centre"
+	},
+	"hamamatsu": {
+		"kind": "city",
+		"population": 977023,
+		"populationRank": 13,
+		"region": "Shizuoka",
+		"coastal": true,
+		"position": "centre"
+	},
+	"tsu": {
+		"kind": "city",
+		"population": 500000,
+		"populationRank": 26,
+		"region": "Mie",
+		"coastal": true,
+		"position": "centre"
+	},
+	"osaka": {
+		"kind": "city",
+		"population": 11294000,
+		"populationRank": 2,
+		"population1950": 4147000,
+		"region": "Osaka",
+		"coastal": true,
+		"position": "centre"
+	},
+	"kobe": {
+		"kind": "city",
+		"population": 1528478,
+		"populationRank": 10,
+		"region": "Hyogo",
+		"coastal": true,
+		"position": "centre"
+	},
+	"okayama": {
+		"kind": "city",
+		"population": 866092,
+		"populationRank": 15,
+		"coastal": true,
+		"position": "centre"
+	},
+	"hiroshima": {
+		"kind": "city",
+		"population": 2045000,
+		"populationRank": 8,
+		"population1950": 503000,
+		"coastal": true,
+		"position": "west"
+	},
+	"takamatsu": {
+		"kind": "city",
+		"population": 334223,
+		"populationRank": 39,
+		"region": "Kagawa",
+		"coastal": true,
+		"position": "centre"
+	},
+	"kure": {
+		"kind": "city",
+		"population": 196991,
+		"populationRank": 55,
+		"region": "Hiroshima",
+		"coastal": true,
+		"position": "west"
+	},
+	"wakayama": {
+		"kind": "city",
+		"population": 440006,
+		"populationRank": 29,
+		"coastal": true,
+		"position": "centre"
+	},
+	"tokushima": {
+		"kind": "city",
+		"population": 443760,
+		"populationRank": 28,
+		"coastal": true,
+		"position": "centre"
+	},
+	"shimonoseki": {
+		"kind": "city",
+		"population": 245786,
+		"populationRank": 49,
+		"region": "Yamaguchi",
+		"coastal": true,
+		"position": "west"
+	},
+	"kitakyushu": {
+		"kind": "city",
+		"population": 997536,
+		"populationRank": 12,
+		"region": "Fukuoka",
+		"coastal": true,
+		"position": "west"
+	},
+	"matsuyama": {
+		"kind": "city",
+		"population": 533541,
+		"populationRank": 25,
+		"region": "Ehime",
+		"coastal": true,
+		"position": "west"
+	},
+	"fukuoka": {
+		"kind": "city",
+		"population": 2792000,
+		"populationRank": 5,
+		"population1950": 954000,
+		"coastal": true,
+		"position": "west"
+	},
+	"kochi": {
+		"kind": "city",
+		"population": 335570,
+		"populationRank": 38,
+		"region": "Kochi",
+		"coastal": true,
+		"position": "centre"
+	},
+	"oita": {
+		"kind": "city",
+		"population": 448907,
+		"populationRank": 27,
+		"region": "Oita",
+		"coastal": true,
+		"position": "west"
+	},
+	"sasebo": {
+		"kind": "city",
+		"population": 237444,
+		"populationRank": 51,
+		"region": "Nagasaki",
+		"coastal": true,
+		"position": "west"
+	},
+	"kumamoto": {
+		"kind": "city",
+		"population": 718232,
+		"populationRank": 16,
+		"coastal": true,
+		"position": "west"
+	},
+	"nagasaki": {
+		"kind": "city",
+		"population": 435455,
+		"populationRank": 30,
+		"coastal": true,
+		"position": "west"
+	},
+	"miyazaki": {
+		"kind": "city",
+		"population": 324384,
+		"populationRank": 41,
+		"coastal": true,
+		"position": "south-west"
+	},
+	"kagoshima": {
+		"kind": "city",
+		"population": 555352,
+		"populationRank": 22,
+		"coastal": true,
+		"position": "south-west"
+	},
+	"naha": {
+		"kind": "city",
+		"population": 905238,
+		"populationRank": 14,
+		"region": "Okinawa",
+		"coastal": true,
+		"position": "south-west"
+	}
+}

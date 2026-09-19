@@ -1,0 +1,396 @@
+{
+	"kiel": {
+		"kind": "city",
+		"population": 269427,
+		"populationRank": 29,
+		"region": "Schleswig-Holstein",
+		"coastal": true,
+		"position": "north"
+	},
+	"rostock": {
+		"kind": "city",
+		"population": 203080,
+		"populationRank": 38,
+		"region": "Mecklenburg-Vorpommern",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"lubeck": {
+		"kind": "city",
+		"population": 235390,
+		"populationRank": 33,
+		"region": "Schleswig-Holstein",
+		"coastal": true,
+		"position": "north"
+	},
+	"hamburg": {
+		"kind": "city",
+		"population": 1757000,
+		"populationRank": 5,
+		"population1950": 1608000,
+		"coastal": false,
+		"position": "north"
+	},
+	"bremerhaven": {
+		"kind": "city",
+		"population": 137751,
+		"populationRank": 46,
+		"region": "Bremen",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"oldenburg": {
+		"kind": "city",
+		"population": 167458,
+		"populationRank": 42,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"bremen": {
+		"kind": "city",
+		"population": 724909,
+		"populationRank": 14,
+		"coastal": false,
+		"position": "north-west"
+	},
+	"berlin": {
+		"kind": "city",
+		"population": 3406000,
+		"populationRank": 1,
+		"population1950": 3352000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"potsdam": {
+		"kind": "city",
+		"population": 218095,
+		"populationRank": 36,
+		"region": "Brandenburg",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"hannover": {
+		"kind": "city",
+		"population": 722490,
+		"populationRank": 15,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "north"
+	},
+	"osnabruck": {
+		"kind": "city",
+		"population": 231268,
+		"populationRank": 34,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"braunschweig": {
+		"kind": "city",
+		"population": 244715,
+		"populationRank": 31,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "north"
+	},
+	"magdeburg": {
+		"kind": "city",
+		"population": 229826,
+		"populationRank": 35,
+		"region": "Sachsen-Anhalt",
+		"coastal": false,
+		"position": "centre"
+	},
+	"bielefeld": {
+		"kind": "city",
+		"population": 331906,
+		"populationRank": 24,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "west"
+	},
+	"munster": {
+		"kind": "city",
+		"population": 270184,
+		"populationRank": 28,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "west"
+	},
+	"cottbus": {
+		"kind": "city",
+		"population": 105067,
+		"populationRank": 47,
+		"region": "Brandenburg",
+		"coastal": false,
+		"position": "east"
+	},
+	"dortmund": {
+		"kind": "city",
+		"population": 588462,
+		"populationRank": 19,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "west"
+	},
+	"gottingen": {
+		"kind": "city",
+		"population": 139419,
+		"populationRank": 45,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "centre"
+	},
+	"essen": {
+		"kind": "city",
+		"population": 1742135,
+		"populationRank": 6,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "west"
+	},
+	"duisburg": {
+		"kind": "city",
+		"population": 1276757,
+		"populationRank": 7,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "west"
+	},
+	"leipzig": {
+		"kind": "city",
+		"population": 542529,
+		"populationRank": 20,
+		"region": "Sachsen",
+		"coastal": false,
+		"position": "east"
+	},
+	"kassel": {
+		"kind": "city",
+		"population": 289924,
+		"populationRank": 27,
+		"region": "Hessen",
+		"coastal": false,
+		"position": "centre"
+	},
+	"wuppertal": {
+		"kind": "city",
+		"population": 776525,
+		"populationRank": 11,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "west"
+	},
+	"dusseldorf": {
+		"kind": "city",
+		"population": 1220000,
+		"populationRank": 9,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "west"
+	},
+	"dresden": {
+		"kind": "city",
+		"population": 617515,
+		"populationRank": 17,
+		"region": "Sachsen",
+		"coastal": false,
+		"position": "east"
+	},
+	"erfurt": {
+		"kind": "city",
+		"population": 203254,
+		"populationRank": 37,
+		"region": "Thüringen",
+		"coastal": false,
+		"position": "centre"
+	},
+	"koln": {
+		"kind": "city",
+		"population": 1004000,
+		"populationRank": 10,
+		"population1950": 598000,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "west"
+	},
+	"jena": {
+		"kind": "city",
+		"population": 104712,
+		"populationRank": 48,
+		"region": "Thüringen",
+		"coastal": false,
+		"position": "centre"
+	},
+	"gera": {
+		"kind": "city",
+		"population": 104659,
+		"populationRank": 49,
+		"region": "Thüringen",
+		"coastal": false,
+		"position": "east"
+	},
+	"chemnitz": {
+		"kind": "city",
+		"population": 302643,
+		"populationRank": 26,
+		"region": "Sachsen",
+		"coastal": false,
+		"position": "east"
+	},
+	"bonn": {
+		"kind": "city",
+		"population": 680543,
+		"populationRank": 16,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "west"
+	},
+	"koblenz": {
+		"kind": "city",
+		"population": 312633,
+		"populationRank": 25,
+		"region": "Rheinland-Pfalz",
+		"coastal": false,
+		"position": "west"
+	},
+	"frankfurt": {
+		"kind": "city",
+		"population": 2895000,
+		"populationRank": 3,
+		"region": "Hessen",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"wiesbaden": {
+		"kind": "city",
+		"population": 617126,
+		"populationRank": 18,
+		"region": "Hessen",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"mainz": {
+		"kind": "city",
+		"population": 184997,
+		"populationRank": 39,
+		"region": "Rheinland-Pfalz",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"wurzburg": {
+		"kind": "city",
+		"population": 168561,
+		"populationRank": 41,
+		"region": "Bayern",
+		"coastal": false,
+		"position": "south"
+	},
+	"mannheim": {
+		"kind": "city",
+		"population": 2362000,
+		"populationRank": 4,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"furth": {
+		"kind": "city",
+		"population": 237844,
+		"populationRank": 32,
+		"region": "Bayern",
+		"coastal": false,
+		"position": "south"
+	},
+	"nurnberg": {
+		"kind": "city",
+		"population": 737304,
+		"populationRank": 13,
+		"region": "Bayern",
+		"coastal": false,
+		"position": "south"
+	},
+	"heidelberg": {
+		"kind": "city",
+		"population": 426590,
+		"populationRank": 21,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"saarbrucken": {
+		"kind": "city",
+		"population": 770001,
+		"populationRank": 12,
+		"region": "Saarland",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"regensburg": {
+		"kind": "city",
+		"population": 164359,
+		"populationRank": 43,
+		"region": "Bayern",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"karlsruhe": {
+		"kind": "city",
+		"population": 377487,
+		"populationRank": 22,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"stuttgart": {
+		"kind": "city",
+		"population": 2944700,
+		"populationRank": 2,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"ingolstadt": {
+		"kind": "city",
+		"population": 163325,
+		"populationRank": 44,
+		"region": "Bayern",
+		"coastal": false,
+		"position": "south"
+	},
+	"ulm": {
+		"kind": "city",
+		"population": 172955,
+		"populationRank": 40,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south"
+	},
+	"augsburg": {
+		"kind": "city",
+		"population": 358989,
+		"populationRank": 23,
+		"region": "Bayern",
+		"coastal": false,
+		"position": "south"
+	},
+	"munchen": {
+		"kind": "city",
+		"population": 1275000,
+		"populationRank": 8,
+		"population1950": 831000,
+		"region": "Bayern",
+		"coastal": false,
+		"position": "south"
+	},
+	"freiburg-im-breisgau": {
+		"kind": "city",
+		"population": 254889,
+		"populationRank": 30,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south-west"
+	}
+}

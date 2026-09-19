@@ -33,6 +33,27 @@ export type TranslationKey =
 	| 'nav.quiz'
 	| 'nav.tour'
 	| 'nav.terrain'
+	| 'fact.position.north'
+	| 'fact.position.south'
+	| 'fact.position.east'
+	| 'fact.position.west'
+	| 'fact.position.northEast'
+	| 'fact.position.northWest'
+	| 'fact.position.southEast'
+	| 'fact.position.southWest'
+	| 'fact.position.centre'
+	| 'fact.coastal'
+	| 'fact.landlocked'
+	| 'fact.terrain'
+	| 'fact.peak'
+	| 'fact.largestCity'
+	| 'fact.cityIn'
+	| 'fact.capital'
+	| 'fact.cityRank'
+	| 'fact.population'
+	| 'fact.grew'
+	| 'fact.borders'
+	| 'fact.and'
 	| 'nav.loading'
 	| 'home.subtitle'
 	| 'home.recent'
@@ -128,6 +149,27 @@ const en: Dictionary = {
 	'nav.quiz': 'Quiz',
 	'nav.tour': 'Tour',
 	'nav.terrain': 'Terrain',
+	'fact.position.north': 'In the north of the country.',
+	'fact.position.south': 'In the south of the country.',
+	'fact.position.east': 'On the east side of the country.',
+	'fact.position.west': 'On the west side of the country.',
+	'fact.position.northEast': 'In the north-east of the country.',
+	'fact.position.northWest': 'In the north-west of the country.',
+	'fact.position.southEast': 'In the south-east of the country.',
+	'fact.position.southWest': 'In the south-west of the country.',
+	'fact.position.centre': 'In the middle of the country.',
+	'fact.coastal': 'On the sea.',
+	'fact.landlocked': 'No coast of its own.',
+	'fact.terrain': 'Lies in the {name}.',
+	'fact.peak': 'Highest point: {name}, {elevation} m.',
+	'fact.largestCity': 'Biggest city: {name} ({population}).',
+	'fact.cityIn': 'In {region}.',
+	'fact.capital': "The country's capital.",
+	'fact.cityRank': 'No. {rank} by population on this map.',
+	'fact.population': 'About {population} people.',
+	'fact.grew': '{before} people in 1950, {after} today.',
+	'fact.borders': 'Borders {names}.',
+	'fact.and': 'and',
 	'nav.loading': 'Loading…',
 
 	'home.subtitle': 'Pick a demo map to explore.',
@@ -238,6 +280,27 @@ const de: Dictionary = {
 	'nav.quiz': 'Quiz',
 	'nav.tour': 'Tour',
 	'nav.terrain': 'Gelände',
+	'fact.position.north': 'Im Norden des Landes.',
+	'fact.position.south': 'Im Süden des Landes.',
+	'fact.position.east': 'Im Osten des Landes.',
+	'fact.position.west': 'Im Westen des Landes.',
+	'fact.position.northEast': 'Im Nordosten des Landes.',
+	'fact.position.northWest': 'Im Nordwesten des Landes.',
+	'fact.position.southEast': 'Im Südosten des Landes.',
+	'fact.position.southWest': 'Im Südwesten des Landes.',
+	'fact.position.centre': 'In der Mitte des Landes.',
+	'fact.coastal': 'Am Meer.',
+	'fact.landlocked': 'Ohne eigene Küste.',
+	'fact.terrain': 'Liegt in {name}.',
+	'fact.peak': 'Höchster Punkt: {name}, {elevation} m.',
+	'fact.largestCity': 'Größte Stadt: {name} ({population}).',
+	'fact.cityIn': 'In {region}.',
+	'fact.capital': 'Hauptstadt des Landes.',
+	'fact.cityRank': 'Nr. {rank} nach Einwohnern auf dieser Karte.',
+	'fact.population': 'Etwa {population} Einwohner.',
+	'fact.grew': '{before} Einwohner 1950, heute {after}.',
+	'fact.borders': 'Grenzt an {names}.',
+	'fact.and': 'und',
 	'nav.loading': 'Lädt…',
 
 	'home.subtitle': 'Wähle eine Demokarte zum Erkunden.',
@@ -348,6 +411,27 @@ const it: Dictionary = {
 	'nav.quiz': 'Quiz',
 	'nav.tour': 'Tour',
 	'nav.terrain': 'Rilievo',
+	'fact.position.north': 'Nel nord del paese.',
+	'fact.position.south': 'Nel sud del paese.',
+	'fact.position.east': 'Nella parte est del paese.',
+	'fact.position.west': 'Nella parte ovest del paese.',
+	'fact.position.northEast': 'Nel nord-est del paese.',
+	'fact.position.northWest': 'Nel nord-ovest del paese.',
+	'fact.position.southEast': 'Nel sud-est del paese.',
+	'fact.position.southWest': 'Nel sud-ovest del paese.',
+	'fact.position.centre': 'Al centro del paese.',
+	'fact.coastal': 'Sul mare.',
+	'fact.landlocked': 'Senza sbocco sul mare.',
+	'fact.terrain': 'Si trova in {name}.',
+	'fact.peak': 'Punto più alto: {name}, {elevation} m.',
+	'fact.largestCity': 'Città più grande: {name} ({population}).',
+	'fact.cityIn': 'In {region}.',
+	'fact.capital': 'Capitale del paese.',
+	'fact.cityRank': 'N. {rank} per abitanti su questa mappa.',
+	'fact.population': 'Circa {population} abitanti.',
+	'fact.grew': '{before} abitanti nel 1950, oggi {after}.',
+	'fact.borders': 'Confina con {names}.',
+	'fact.and': 'e',
 	'nav.loading': 'Caricamento…',
 
 	'home.subtitle': 'Scegli una mappa demo da esplorare.',

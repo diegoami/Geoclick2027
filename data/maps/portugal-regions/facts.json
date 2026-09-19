@@ -1,0 +1,314 @@
+{
+	"viana-do-castelo": {
+		"kind": "region",
+		"type": "District",
+		"borders": [
+			"Braga"
+		],
+		"coastal": true,
+		"position": "north-west"
+	},
+	"braga": {
+		"kind": "region",
+		"type": "District",
+		"borders": [
+			"Porto",
+			"Viana do Castelo",
+			"Vila Real"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Braga",
+			"nameDe": "Braga",
+			"nameIt": "Braga",
+			"population": 826833
+		},
+		"position": "north"
+	},
+	"vila-real": {
+		"kind": "region",
+		"type": "District",
+		"borders": [
+			"Braga",
+			"Bragança",
+			"Porto",
+			"Viseu"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Vila Real",
+			"nameDe": "Vila Real",
+			"nameIt": "Vila Real",
+			"population": 17001
+		},
+		"position": "north"
+	},
+	"braganca": {
+		"kind": "region",
+		"type": "District",
+		"borders": [
+			"Guarda",
+			"Vila Real",
+			"Viseu"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bragança",
+			"nameDe": "Bragança",
+			"nameIt": "Braganza",
+			"population": 34375
+		},
+		"position": "north-east"
+	},
+	"porto": {
+		"kind": "region",
+		"type": "District",
+		"borders": [
+			"Aveiro",
+			"Braga",
+			"Vila Real",
+			"Viseu"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Porto",
+			"nameDe": "Porto",
+			"nameIt": "Porto",
+			"population": 1337000
+		},
+		"position": "north"
+	},
+	"viseu": {
+		"kind": "region",
+		"type": "District",
+		"borders": [
+			"Aveiro",
+			"Bragança",
+			"Coimbra",
+			"Guarda",
+			"Porto",
+			"Vila Real"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Viseu",
+			"nameDe": "Viseu",
+			"nameIt": "Viseu",
+			"population": 26364
+		},
+		"position": "north"
+	},
+	"guarda": {
+		"kind": "region",
+		"type": "District",
+		"borders": [
+			"Bragança",
+			"Castelo Branco",
+			"Coimbra",
+			"Viseu"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Guarda",
+			"nameDe": "Guarda",
+			"nameIt": "Guarda",
+			"population": 32111
+		},
+		"position": "north"
+	},
+	"aveiro": {
+		"kind": "region",
+		"type": "District",
+		"borders": [
+			"Coimbra",
+			"Porto",
+			"Viseu"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Aveiro",
+			"nameDe": "Aveiro",
+			"nameIt": "Aveiro",
+			"population": 54162
+		},
+		"position": "north-west"
+	},
+	"coimbra": {
+		"kind": "region",
+		"type": "District",
+		"borders": [
+			"Aveiro",
+			"Castelo Branco",
+			"Guarda",
+			"Leiria",
+			"Viseu"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Coimbra",
+			"nameDe": "Coimbra",
+			"nameIt": "Coimbra",
+			"population": 106582
+		},
+		"position": "centre"
+	},
+	"castelo-branco": {
+		"kind": "region",
+		"type": "District",
+		"borders": [
+			"Coimbra",
+			"Guarda",
+			"Leiria",
+			"Portalegre",
+			"Santarém"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Castelo Branco",
+			"nameDe": "Castelo Branco",
+			"nameIt": "Castelo Branco",
+			"population": 33479
+		},
+		"position": "centre"
+	},
+	"leiria": {
+		"kind": "region",
+		"type": "District",
+		"borders": [
+			"Castelo Branco",
+			"Coimbra",
+			"Lisboa",
+			"Santarém"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Leiria",
+			"nameDe": "Leiria",
+			"nameIt": "Leiria",
+			"population": 45112
+		},
+		"position": "west"
+	},
+	"santarem": {
+		"kind": "region",
+		"type": "District",
+		"borders": [
+			"Castelo Branco",
+			"Évora",
+			"Leiria",
+			"Lisboa",
+			"Portalegre",
+			"Setúbal"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Santarém",
+			"nameDe": "Santarém",
+			"nameIt": "Santarém",
+			"population": 29385
+		},
+		"position": "west"
+	},
+	"portalegre": {
+		"kind": "region",
+		"type": "District",
+		"borders": [
+			"Castelo Branco",
+			"Évora",
+			"Santarém"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Portalegre",
+			"nameDe": "Portalegre",
+			"nameIt": "Portalegre",
+			"population": 15581
+		},
+		"position": "centre"
+	},
+	"lisboa": {
+		"kind": "region",
+		"type": "District",
+		"borders": [
+			"Leiria",
+			"Santarém",
+			"Setúbal"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Lisbon",
+			"nameDe": "Lissabon",
+			"nameIt": "Lisbona",
+			"population": 2812000
+		},
+		"position": "west"
+	},
+	"evora": {
+		"kind": "region",
+		"type": "District",
+		"borders": [
+			"Beja",
+			"Portalegre",
+			"Santarém",
+			"Setúbal"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Évora",
+			"nameDe": "Évora",
+			"nameIt": "Évora",
+			"population": 55620
+		},
+		"position": "south"
+	},
+	"setubal": {
+		"kind": "region",
+		"type": "District",
+		"borders": [
+			"Beja",
+			"Évora",
+			"Lisboa",
+			"Santarém"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Setúbal",
+			"nameDe": "Setúbal",
+			"nameIt": "Setúbal",
+			"population": 117974
+		},
+		"position": "south-west"
+	},
+	"beja": {
+		"kind": "region",
+		"type": "District",
+		"borders": [
+			"Évora",
+			"Faro",
+			"Setúbal"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Beja",
+			"nameDe": "Beja",
+			"nameIt": "Beja",
+			"population": 35854
+		},
+		"position": "south"
+	},
+	"faro": {
+		"kind": "region",
+		"type": "District",
+		"borders": [
+			"Beja"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Portimão",
+			"nameDe": "Portimão",
+			"nameIt": "Portimão",
+			"population": 61226
+		},
+		"position": "south"
+	}
+}

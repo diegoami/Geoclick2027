@@ -1,0 +1,496 @@
+{
+	"chernihiv": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Kyiv Oblast",
+			"Poltava",
+			"Sumy"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Chernihiv",
+			"nameDe": "Tschernihiw",
+			"nameIt": "Černihiv",
+			"population": 307684
+		},
+		"position": "north"
+	},
+	"sumy": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Chernihiv",
+			"Kharkiv",
+			"Poltava"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Sumy",
+			"nameDe": "Sumy",
+			"nameIt": "Sumy",
+			"population": 294456
+		},
+		"position": "north-east"
+	},
+	"volyn": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Lviv",
+			"Rivne"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Lutsk",
+			"nameDe": "Luzk",
+			"nameIt": "Luc'k",
+			"population": 213661
+		},
+		"position": "north-west"
+	},
+	"rivne": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Khmelnytskyi",
+			"Lviv",
+			"Ternopil",
+			"Volyn",
+			"Zhytomyr"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Rivne",
+			"nameDe": "Riwne",
+			"nameIt": "Rivne",
+			"population": 255106
+		},
+		"position": "north-west"
+	},
+	"zhytomyr": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Khmelnytskyi",
+			"Kyiv Oblast",
+			"Rivne",
+			"Vinnytsya"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Zhytomyr",
+			"nameDe": "Schytomyr",
+			"nameIt": "Žytomyr",
+			"population": 282192
+		},
+		"position": "north"
+	},
+	"kyiv": {
+		"kind": "region",
+		"type": "Municipality",
+		"localName": "Kyïvs'ka mis'ka rada",
+		"borders": [
+			"Kyiv Oblast"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kyiv",
+			"nameDe": "Kiew",
+			"nameIt": "Kiev",
+			"population": 2709000
+		},
+		"position": "north"
+	},
+	"kyiv-oblast": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Cherkasy",
+			"Chernihiv",
+			"Kyiv",
+			"Poltava",
+			"Vinnytsya",
+			"Zhytomyr"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bila Tserkva",
+			"nameDe": "Bila Zerkwa",
+			"nameIt": "Bila Cerkva",
+			"population": 199163
+		},
+		"position": "north"
+	},
+	"lviv": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Ivano-Frankivsk",
+			"Rivne",
+			"Ternopil",
+			"Volyn",
+			"Zakarpattia"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Lviv",
+			"nameDe": "Lwiw",
+			"nameIt": "Leopoli",
+			"population": 803880
+		},
+		"position": "west"
+	},
+	"poltava": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Cherkasy",
+			"Chernihiv",
+			"Dnipropetrovsk",
+			"Kharkiv",
+			"Kirovohrad",
+			"Kyiv Oblast",
+			"Sumy"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Poltava",
+			"nameDe": "Poltawa",
+			"nameIt": "Poltava",
+			"population": 317847
+		},
+		"position": "centre"
+	},
+	"khmelnytskyi": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Chernivtsi",
+			"Rivne",
+			"Ternopil",
+			"Vinnytsya",
+			"Zhytomyr"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Khmelnytskyy",
+			"nameDe": "Chmelnyzkyj",
+			"nameIt": "Chmel'nyc'kyj",
+			"population": 398346
+		},
+		"position": "west"
+	},
+	"kharkiv": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Dnipropetrovsk",
+			"Donetsk",
+			"Luhansk",
+			"Poltava",
+			"Sumy"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kharkiv",
+			"nameDe": "Charkiw",
+			"nameIt": "Charkiv",
+			"population": 1461000
+		},
+		"position": "east"
+	},
+	"ternopil": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Chernivtsi",
+			"Ivano-Frankivsk",
+			"Khmelnytskyi",
+			"Lviv",
+			"Rivne"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ternopil",
+			"nameDe": "Ternopil",
+			"nameIt": "Ternopil'",
+			"population": 244768
+		},
+		"position": "west"
+	},
+	"cherkasy": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Kirovohrad",
+			"Kyiv Oblast",
+			"Poltava",
+			"Vinnytsya"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Cherkasy",
+			"nameDe": "Tscherkassy",
+			"nameIt": "Čerkasy",
+			"population": 297568
+		},
+		"position": "centre"
+	},
+	"vinnytsya": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Cherkasy",
+			"Chernivtsi",
+			"Khmelnytskyi",
+			"Kirovohrad",
+			"Kyiv Oblast",
+			"Odesa",
+			"Zhytomyr"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Vinnytsya",
+			"nameDe": "Winnyzja",
+			"nameIt": "Vinnycja",
+			"population": 352115
+		},
+		"position": "centre"
+	},
+	"luhansk": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Donetsk",
+			"Kharkiv"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Luhansk",
+			"nameDe": "Luhansk",
+			"nameIt": "Luhans'k",
+			"population": 452000
+		},
+		"position": "east"
+	},
+	"ivano-frankivsk": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Chernivtsi",
+			"Lviv",
+			"Ternopil",
+			"Zakarpattia"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ivano-Frankivsk",
+			"nameDe": "Iwano-Frankiwsk",
+			"nameIt": "Ivano-Frankivs'k",
+			"population": 241239
+		},
+		"position": "west"
+	},
+	"kirovohrad": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Cherkasy",
+			"Dnipropetrovsk",
+			"Mykolayiv",
+			"Odesa",
+			"Poltava",
+			"Vinnytsya"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kirovohrad",
+			"nameDe": "Kropywnyzkyj",
+			"nameIt": "Kropyvnyc'kyj",
+			"population": 249454
+		},
+		"position": "centre"
+	},
+	"zakarpattia": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Ivano-Frankivsk",
+			"Lviv"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Uzhgorod",
+			"nameDe": "Uschhorod",
+			"nameIt": "Užhorod",
+			"population": 150832
+		},
+		"peak": {
+			"name": "Gora Goverla",
+			"elevation": 2058
+		},
+		"position": "west"
+	},
+	"dnipropetrovsk": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Donetsk",
+			"Kharkiv",
+			"Kherson",
+			"Kirovohrad",
+			"Mykolayiv",
+			"Poltava",
+			"Zaporizhzhya"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Dnipro",
+			"nameDe": "Dnipro",
+			"nameIt": "Dnipro",
+			"population": 1050000
+		},
+		"position": "east"
+	},
+	"chernivtsi": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Ivano-Frankivsk",
+			"Khmelnytskyi",
+			"Ternopil",
+			"Vinnytsya"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Chernivtsi",
+			"nameDe": "Czernowitz",
+			"nameIt": "Černivci",
+			"population": 298251
+		},
+		"position": "west"
+	},
+	"donetsk": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Dnipropetrovsk",
+			"Kharkiv",
+			"Luhansk",
+			"Zaporizhzhya"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Donetsk",
+			"nameDe": "Donezk",
+			"nameIt": "Donec'k",
+			"population": 988000
+		},
+		"position": "east"
+	},
+	"mykolayiv": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Dnipropetrovsk",
+			"Kherson",
+			"Kirovohrad",
+			"Odesa"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Mykolayiv",
+			"nameDe": "Mykolajiw",
+			"nameIt": "Mykolaïv",
+			"population": 510840
+		},
+		"position": "centre"
+	},
+	"zaporizhzhya": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Dnipropetrovsk",
+			"Donetsk",
+			"Kherson"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Zaporizhzhya",
+			"nameDe": "Saporischschja",
+			"nameIt": "Zaporižžja",
+			"population": 788000
+		},
+		"position": "east"
+	},
+	"odesa": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Kirovohrad",
+			"Mykolayiv",
+			"Vinnytsya"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Odessa",
+			"nameDe": "Odessa",
+			"nameIt": "Odessa",
+			"population": 991000
+		},
+		"position": "south"
+	},
+	"kherson": {
+		"kind": "region",
+		"borders": [
+			"Crimea",
+			"Dnipropetrovsk",
+			"Mykolayiv",
+			"Zaporizhzhya"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Kherson",
+			"nameDe": "Cherson",
+			"nameIt": "Cherson",
+			"population": 320477
+		},
+		"position": "south"
+	},
+	"crimea": {
+		"kind": "region",
+		"type": "Autonomous Republic",
+		"borders": [
+			"Kherson",
+			"Sevastopol"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Simferopol",
+			"nameDe": "Simferopol",
+			"nameIt": "Sinferopoli",
+			"population": 358108
+		},
+		"peak": {
+			"name": "Roman-Kosh",
+			"elevation": 1545
+		},
+		"position": "south-east"
+	},
+	"sevastopol": {
+		"kind": "region",
+		"type": "Federal City",
+		"borders": [
+			"Crimea"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Sevastopol",
+			"nameDe": "Sewastopol",
+			"nameIt": "Sebastopoli",
+			"population": 379200
+		},
+		"position": "south"
+	}
+}

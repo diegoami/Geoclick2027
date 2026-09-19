@@ -1,0 +1,42 @@
+{
+	"uppsala": {
+		"kind": "city",
+		"population": 133117,
+		"populationRank": 4,
+		"coastal": false,
+		"position": "north-east"
+	},
+	"vasteras": {
+		"kind": "city",
+		"population": 107194,
+		"populationRank": 5,
+		"region": "Västmanland",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"stockholm": {
+		"kind": "city",
+		"population": 1264000,
+		"populationRank": 1,
+		"population1950": 741000,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"goteborg": {
+		"kind": "city",
+		"population": 537797,
+		"populationRank": 2,
+		"region": "Västra Götaland",
+		"coastal": true,
+		"position": "west"
+	},
+	"malmo": {
+		"kind": "city",
+		"population": 269349,
+		"populationRank": 3,
+		"region": "Skåne",
+		"coastal": true,
+		"position": "south-west"
+	}
+}

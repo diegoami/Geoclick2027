@@ -1,0 +1,294 @@
+{
+	"aberdeen": {
+		"kind": "city",
+		"population": 189364,
+		"populationRank": 32,
+		"coastal": true,
+		"position": "north"
+	},
+	"dundee": {
+		"kind": "city",
+		"population": 151592,
+		"populationRank": 34,
+		"coastal": true,
+		"position": "north-west"
+	},
+	"edinburgh": {
+		"kind": "city",
+		"population": 504966,
+		"populationRank": 13,
+		"coastal": true,
+		"position": "north-west"
+	},
+	"glasgow": {
+		"kind": "city",
+		"population": 1160000,
+		"populationRank": 6,
+		"population1950": 1755000,
+		"coastal": false,
+		"position": "north-west"
+	},
+	"newcastle-upon-tyne": {
+		"kind": "city",
+		"population": 882000,
+		"populationRank": 7,
+		"population1950": 909000,
+		"region": "Tyne and Wear",
+		"coastal": true,
+		"position": "north"
+	},
+	"sunderland": {
+		"kind": "city",
+		"population": 452934,
+		"populationRank": 17,
+		"region": "Tyne and Wear",
+		"coastal": true,
+		"position": "north"
+	},
+	"middlesbrough": {
+		"kind": "city",
+		"population": 416042,
+		"populationRank": 20,
+		"region": "Stockton-on-Tees",
+		"coastal": true,
+		"position": "centre"
+	},
+	"york": {
+		"kind": "city",
+		"population": 158947,
+		"populationRank": 33,
+		"coastal": false,
+		"position": "centre"
+	},
+	"blackpool": {
+		"kind": "city",
+		"population": 272792,
+		"populationRank": 27,
+		"region": "Lancashire",
+		"coastal": true,
+		"position": "west"
+	},
+	"bradford": {
+		"kind": "city",
+		"population": 501700,
+		"populationRank": 15,
+		"region": "West Yorkshire",
+		"coastal": false,
+		"position": "centre"
+	},
+	"leeds": {
+		"kind": "city",
+		"population": 1529000,
+		"populationRank": 4,
+		"population1950": 1692000,
+		"region": "West Yorkshire",
+		"coastal": false,
+		"position": "centre"
+	},
+	"kingston-upon-hull": {
+		"kind": "city",
+		"population": 302296,
+		"populationRank": 25,
+		"coastal": true,
+		"position": "east"
+	},
+	"manchester": {
+		"kind": "city",
+		"population": 2230000,
+		"populationRank": 3,
+		"population1950": 2422000,
+		"coastal": false,
+		"position": "centre"
+	},
+	"liverpool": {
+		"kind": "city",
+		"population": 811000,
+		"populationRank": 10,
+		"population1950": 1382000,
+		"region": "Merseyside",
+		"coastal": true,
+		"position": "west"
+	},
+	"sheffield": {
+		"kind": "city",
+		"population": 1292900,
+		"populationRank": 5,
+		"region": "South Yorkshire",
+		"coastal": false,
+		"position": "centre"
+	},
+	"stoke-on-trent": {
+		"kind": "city",
+		"population": 390801,
+		"populationRank": 21,
+		"coastal": false,
+		"position": "centre"
+	},
+	"nottingham": {
+		"kind": "city",
+		"population": 825600,
+		"populationRank": 9,
+		"coastal": false,
+		"position": "centre"
+	},
+	"norwich": {
+		"kind": "city",
+		"population": 190756,
+		"populationRank": 31,
+		"region": "Norfolk",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"leicester": {
+		"kind": "city",
+		"population": 457983,
+		"populationRank": 16,
+		"coastal": false,
+		"position": "south"
+	},
+	"peterborough": {
+		"kind": "city",
+		"population": 140141,
+		"populationRank": 36,
+		"coastal": false,
+		"position": "south-east"
+	},
+	"birmingham": {
+		"kind": "city",
+		"population": 2285000,
+		"populationRank": 2,
+		"population1950": 2229000,
+		"region": "West Midlands",
+		"coastal": false,
+		"position": "south"
+	},
+	"coventry": {
+		"kind": "city",
+		"population": 388271,
+		"populationRank": 22,
+		"region": "West Midlands",
+		"coastal": false,
+		"position": "south"
+	},
+	"cambridge": {
+		"kind": "city",
+		"population": 128488,
+		"populationRank": 37,
+		"region": "Cambridgeshire",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"ipswich": {
+		"kind": "city",
+		"population": 143767,
+		"populationRank": 35,
+		"region": "Suffolk",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"luton": {
+		"kind": "city",
+		"population": 235958,
+		"populationRank": 29,
+		"coastal": false,
+		"position": "south-east"
+	},
+	"oxford": {
+		"kind": "city",
+		"population": 192796,
+		"populationRank": 30,
+		"region": "Oxfordshire",
+		"coastal": false,
+		"position": "south"
+	},
+	"swansea": {
+		"kind": "city",
+		"population": 294339,
+		"populationRank": 26,
+		"coastal": true,
+		"position": "south-west"
+	},
+	"southend-on-sea": {
+		"kind": "city",
+		"population": 618386,
+		"populationRank": 11,
+		"coastal": true,
+		"position": "south-east"
+	},
+	"london": {
+		"kind": "city",
+		"population": 8567000,
+		"populationRank": 1,
+		"population1950": 8361000,
+		"region": "Westminster",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"cardiff": {
+		"kind": "city",
+		"population": 861400,
+		"populationRank": 8,
+		"coastal": true,
+		"position": "south-west"
+	},
+	"reading": {
+		"kind": "city",
+		"population": 369804,
+		"populationRank": 24,
+		"region": "Oxfordshire",
+		"coastal": false,
+		"position": "south"
+	},
+	"bristol": {
+		"kind": "city",
+		"population": 553528,
+		"populationRank": 12,
+		"coastal": true,
+		"position": "south-west"
+	},
+	"southampton": {
+		"kind": "city",
+		"population": 384417,
+		"populationRank": 23,
+		"coastal": true,
+		"position": "south"
+	},
+	"brighton": {
+		"kind": "city",
+		"population": 503008,
+		"populationRank": 14,
+		"region": "Brighton and Hove",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"portsmouth": {
+		"kind": "city",
+		"population": 442252,
+		"populationRank": 18,
+		"coastal": true,
+		"position": "south"
+	},
+	"bournemouth": {
+		"kind": "city",
+		"population": 426945,
+		"populationRank": 19,
+		"coastal": true,
+		"position": "south"
+	},
+	"exeter": {
+		"kind": "city",
+		"population": 113118,
+		"populationRank": 38,
+		"region": "Devon",
+		"coastal": true,
+		"position": "south-west"
+	},
+	"plymouth": {
+		"kind": "city",
+		"population": 247297,
+		"populationRank": 28,
+		"coastal": true,
+		"position": "south-west"
+	}
+}

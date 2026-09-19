@@ -1,0 +1,442 @@
+{
+	"seattle": {
+		"kind": "city",
+		"population": 3074000,
+		"populationRank": 14,
+		"population1950": 795000,
+		"region": "Washington",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"portland": {
+		"kind": "city",
+		"population": 1875000,
+		"populationRank": 25,
+		"population1950": 516000,
+		"region": "Oregon",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"minneapolis": {
+		"kind": "city",
+		"population": 2616000,
+		"populationRank": 17,
+		"population1950": 996000,
+		"region": "Minnesota",
+		"coastal": false,
+		"position": "north"
+	},
+	"milwaukee": {
+		"kind": "city",
+		"population": 1388000,
+		"populationRank": 38,
+		"population1950": 836000,
+		"region": "Wisconsin",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"buffalo": {
+		"kind": "city",
+		"population": 1016000,
+		"populationRank": 50,
+		"population1950": 899000,
+		"region": "New York",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"detroit": {
+		"kind": "city",
+		"population": 4101000,
+		"populationRank": 11,
+		"population1950": 2769000,
+		"region": "Michigan",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"boston": {
+		"kind": "city",
+		"population": 4467000,
+		"populationRank": 8,
+		"population1950": 2551000,
+		"region": "Massachusetts",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"chicago": {
+		"kind": "city",
+		"population": 8990000,
+		"populationRank": 3,
+		"population1950": 4999000,
+		"region": "Illinois",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"providence": {
+		"kind": "city",
+		"population": 1277000,
+		"populationRank": 40,
+		"population1950": 703000,
+		"region": "Rhode Island",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"cleveland": {
+		"kind": "city",
+		"population": 1890000,
+		"populationRank": 24,
+		"population1950": 1392000,
+		"region": "Ohio",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"bridgeport": {
+		"kind": "city",
+		"population": 1018000,
+		"populationRank": 49,
+		"population1950": 415000,
+		"region": "Connecticut",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"new-york": {
+		"kind": "city",
+		"population": 19040000,
+		"populationRank": 1,
+		"population1950": 12338000,
+		"coastal": true,
+		"position": "north-east"
+	},
+	"pittsburgh": {
+		"kind": "city",
+		"population": 1838000,
+		"populationRank": 26,
+		"population1950": 1539000,
+		"region": "Pennsylvania",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"columbus": {
+		"kind": "city",
+		"population": 1270000,
+		"populationRank": 41,
+		"population1950": 441000,
+		"region": "Ohio",
+		"coastal": false,
+		"position": "east"
+	},
+	"philadelphia": {
+		"kind": "city",
+		"population": 5492000,
+		"populationRank": 5,
+		"population1950": 3128000,
+		"region": "Pennsylvania",
+		"coastal": true,
+		"position": "east"
+	},
+	"indianapolis": {
+		"kind": "city",
+		"population": 1436000,
+		"populationRank": 37,
+		"population1950": 505000,
+		"region": "Indiana",
+		"coastal": false,
+		"position": "east"
+	},
+	"denver": {
+		"kind": "city",
+		"population": 2313000,
+		"populationRank": 19,
+		"population1950": 505000,
+		"region": "Colorado",
+		"coastal": false,
+		"position": "centre"
+	},
+	"baltimore": {
+		"kind": "city",
+		"population": 2255000,
+		"populationRank": 20,
+		"population1950": 1168000,
+		"region": "Maryland",
+		"coastal": true,
+		"position": "east"
+	},
+	"cincinnati": {
+		"kind": "city",
+		"population": 1636000,
+		"populationRank": 30,
+		"population1950": 881000,
+		"region": "Ohio",
+		"coastal": false,
+		"position": "east"
+	},
+	"kansas-city": {
+		"kind": "city",
+		"population": 1469000,
+		"populationRank": 35,
+		"population1950": 703000,
+		"region": "Missouri",
+		"coastal": false,
+		"position": "centre"
+	},
+	"washington-d-c": {
+		"kind": "city",
+		"population": 4338000,
+		"populationRank": 10,
+		"population1950": 1298000,
+		"region": "District of Columbia",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "east"
+	},
+	"st-louis": {
+		"kind": "city",
+		"population": 2199000,
+		"populationRank": 21,
+		"population1950": 1407000,
+		"region": "Missouri",
+		"coastal": false,
+		"position": "centre"
+	},
+	"sacramento": {
+		"kind": "city",
+		"population": 1604000,
+		"populationRank": 31,
+		"population1950": 216000,
+		"region": "California",
+		"coastal": false,
+		"position": "west"
+	},
+	"oakland": {
+		"kind": "city",
+		"population": 1510271,
+		"populationRank": 32,
+		"region": "California",
+		"coastal": true,
+		"position": "west"
+	},
+	"san-francisco": {
+		"kind": "city",
+		"population": 3450000,
+		"populationRank": 13,
+		"population1950": 1855000,
+		"region": "California",
+		"coastal": true,
+		"position": "west"
+	},
+	"san-jose": {
+		"kind": "city",
+		"population": 1668000,
+		"populationRank": 29,
+		"population1950": 182000,
+		"region": "California",
+		"coastal": true,
+		"position": "west"
+	},
+	"virginia-beach": {
+		"kind": "city",
+		"population": 1491000,
+		"populationRank": 33,
+		"population1950": 391000,
+		"region": "Virginia",
+		"coastal": true,
+		"position": "east"
+	},
+	"norfolk": {
+		"kind": "city",
+		"population": 1047869,
+		"populationRank": 48,
+		"region": "Virginia",
+		"coastal": true,
+		"position": "east"
+	},
+	"las-vegas": {
+		"kind": "city",
+		"population": 1823000,
+		"populationRank": 27,
+		"population1950": 35000,
+		"region": "Nevada",
+		"coastal": false,
+		"position": "west"
+	},
+	"raleigh": {
+		"kind": "city",
+		"population": 1163515,
+		"populationRank": 43,
+		"region": "North Carolina",
+		"coastal": false,
+		"position": "east"
+	},
+	"memphis": {
+		"kind": "city",
+		"population": 1081000,
+		"populationRank": 47,
+		"population1950": 409000,
+		"region": "Tennessee",
+		"coastal": false,
+		"position": "centre"
+	},
+	"san-bernardino": {
+		"kind": "city",
+		"population": 1745000,
+		"populationRank": 28,
+		"population1950": 139000,
+		"region": "California",
+		"coastal": false,
+		"position": "west"
+	},
+	"los-angeles": {
+		"kind": "city",
+		"population": 12500000,
+		"populationRank": 2,
+		"population1950": 4046000,
+		"region": "California",
+		"coastal": false,
+		"position": "west"
+	},
+	"long-beach": {
+		"kind": "city",
+		"population": 2036134,
+		"populationRank": 23,
+		"region": "California",
+		"coastal": true,
+		"position": "west"
+	},
+	"atlanta": {
+		"kind": "city",
+		"population": 4506000,
+		"populationRank": 7,
+		"population1950": 513000,
+		"region": "Georgia",
+		"coastal": false,
+		"position": "east"
+	},
+	"irvine": {
+		"kind": "city",
+		"population": 3010232,
+		"populationRank": 15,
+		"region": "California",
+		"coastal": true,
+		"position": "west"
+	},
+	"birmingham": {
+		"kind": "city",
+		"population": 1128047,
+		"populationRank": 45,
+		"region": "Alabama",
+		"coastal": false,
+		"position": "east"
+	},
+	"phoenix": {
+		"kind": "city",
+		"population": 3551000,
+		"populationRank": 12,
+		"population1950": 221000,
+		"region": "Arizona",
+		"coastal": false,
+		"position": "west"
+	},
+	"mesa": {
+		"kind": "city",
+		"population": 1085394,
+		"populationRank": 46,
+		"region": "Arizona",
+		"coastal": false,
+		"position": "west"
+	},
+	"dallas": {
+		"kind": "city",
+		"population": 4798000,
+		"populationRank": 6,
+		"population1950": 866000,
+		"region": "Texas",
+		"coastal": false,
+		"position": "south"
+	},
+	"fort-worth": {
+		"kind": "city",
+		"population": 1440454,
+		"populationRank": 36,
+		"region": "Texas",
+		"coastal": false,
+		"position": "south"
+	},
+	"san-diego": {
+		"kind": "city",
+		"population": 2916000,
+		"populationRank": 16,
+		"population1950": 440000,
+		"region": "California",
+		"coastal": true,
+		"position": "south-west"
+	},
+	"austin": {
+		"kind": "city",
+		"population": 1161000,
+		"populationRank": 44,
+		"population1950": 137000,
+		"region": "Texas",
+		"coastal": false,
+		"position": "south"
+	},
+	"houston": {
+		"kind": "city",
+		"population": 4459000,
+		"populationRank": 9,
+		"population1950": 709000,
+		"region": "Texas",
+		"coastal": false,
+		"position": "south"
+	},
+	"san-antonio": {
+		"kind": "city",
+		"population": 1473000,
+		"populationRank": 34,
+		"population1950": 454000,
+		"region": "Texas",
+		"coastal": false,
+		"position": "south"
+	},
+	"orlando": {
+		"kind": "city",
+		"population": 1350000,
+		"populationRank": 39,
+		"population1950": 75000,
+		"region": "Florida",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"tampa": {
+		"kind": "city",
+		"population": 2314000,
+		"populationRank": 18,
+		"population1950": 300000,
+		"region": "Florida",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"west-palm-beach": {
+		"kind": "city",
+		"population": 1250000,
+		"populationRank": 42,
+		"region": "Florida",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"fort-lauderdale": {
+		"kind": "city",
+		"population": 2042042,
+		"populationRank": 22,
+		"region": "Florida",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"miami": {
+		"kind": "city",
+		"population": 5585000,
+		"populationRank": 4,
+		"population1950": 622000,
+		"region": "Florida",
+		"coastal": true,
+		"position": "south-east"
+	}
+}

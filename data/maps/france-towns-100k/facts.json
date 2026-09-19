@@ -1,0 +1,306 @@
+{
+	"lille": {
+		"kind": "city",
+		"population": 1044000,
+		"populationRank": 4,
+		"population1950": 751000,
+		"region": "Nord-Pas-de-Calais",
+		"coastal": false,
+		"position": "north"
+	},
+	"amiens": {
+		"kind": "city",
+		"population": 143086,
+		"populationRank": 35,
+		"region": "Picardie",
+		"coastal": false,
+		"position": "north"
+	},
+	"le-havre": {
+		"kind": "city",
+		"population": 242124,
+		"populationRank": 18,
+		"region": "Haute-Normandie",
+		"coastal": true,
+		"position": "north"
+	},
+	"rouen": {
+		"kind": "city",
+		"population": 532559,
+		"populationRank": 8,
+		"region": "Haute-Normandie",
+		"coastal": false,
+		"position": "north"
+	},
+	"reims": {
+		"kind": "city",
+		"population": 196565,
+		"populationRank": 24,
+		"region": "Champagne-Ardenne",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"caen": {
+		"kind": "city",
+		"population": 190099,
+		"populationRank": 25,
+		"region": "Basse-Normandie",
+		"coastal": true,
+		"position": "north"
+	},
+	"metz": {
+		"kind": "city",
+		"population": 409186,
+		"populationRank": 11,
+		"region": "Lorraine",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"paris": {
+		"kind": "city",
+		"population": 9904000,
+		"populationRank": 1,
+		"population1950": 6522000,
+		"region": "Île-de-France",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north"
+	},
+	"nancy": {
+		"kind": "city",
+		"population": 268976,
+		"populationRank": 15,
+		"region": "Lorraine",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"strasbourg": {
+		"kind": "city",
+		"population": 439972,
+		"populationRank": 9,
+		"region": "Alsace",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"melun": {
+		"kind": "city",
+		"population": 249432,
+		"populationRank": 17,
+		"region": "Île-de-France",
+		"coastal": false,
+		"position": "north"
+	},
+	"brest": {
+		"kind": "city",
+		"population": 144899,
+		"populationRank": 33,
+		"region": "Bretagne",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"rennes": {
+		"kind": "city",
+		"population": 209375,
+		"populationRank": 23,
+		"region": "Bretagne",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"le-mans": {
+		"kind": "city",
+		"population": 144515,
+		"populationRank": 34,
+		"region": "Pays de la Loire",
+		"coastal": false,
+		"position": "north"
+	},
+	"orleans": {
+		"kind": "city",
+		"population": 217301,
+		"populationRank": 21,
+		"region": "Centre",
+		"coastal": false,
+		"position": "centre"
+	},
+	"mulhouse": {
+		"kind": "city",
+		"population": 215454,
+		"populationRank": 22,
+		"region": "Alsace",
+		"coastal": false,
+		"position": "east"
+	},
+	"angers": {
+		"kind": "city",
+		"population": 188380,
+		"populationRank": 26,
+		"region": "Pays de la Loire",
+		"coastal": false,
+		"position": "west"
+	},
+	"tours": {
+		"kind": "city",
+		"population": 236096,
+		"populationRank": 19,
+		"region": "Centre",
+		"coastal": false,
+		"position": "centre"
+	},
+	"dijon": {
+		"kind": "city",
+		"population": 169946,
+		"populationRank": 27,
+		"region": "Bourgogne",
+		"coastal": false,
+		"position": "east"
+	},
+	"besancon": {
+		"kind": "city",
+		"population": 128426,
+		"populationRank": 36,
+		"region": "Franche-Comté",
+		"coastal": false,
+		"position": "east"
+	},
+	"nantes": {
+		"kind": "city",
+		"population": 438537,
+		"populationRank": 10,
+		"region": "Pays de la Loire",
+		"coastal": true,
+		"position": "west"
+	},
+	"annecy": {
+		"kind": "city",
+		"population": 105749,
+		"populationRank": 37,
+		"region": "Rhône-Alpes",
+		"coastal": false,
+		"position": "east"
+	},
+	"limoges": {
+		"kind": "city",
+		"population": 152199,
+		"populationRank": 29,
+		"region": "Limousin",
+		"coastal": false,
+		"position": "centre"
+	},
+	"clermont-ferrand": {
+		"kind": "city",
+		"population": 233050,
+		"populationRank": 20,
+		"region": "Auvergne",
+		"coastal": false,
+		"position": "centre"
+	},
+	"lyon": {
+		"kind": "city",
+		"population": 1423000,
+		"populationRank": 2,
+		"population1950": 731000,
+		"region": "Rhône-Alpes",
+		"coastal": false,
+		"position": "east"
+	},
+	"saint-etienne": {
+		"kind": "city",
+		"population": 265684,
+		"populationRank": 16,
+		"region": "Rhône-Alpes",
+		"coastal": false,
+		"position": "east"
+	},
+	"grenoble": {
+		"kind": "city",
+		"population": 388574,
+		"populationRank": 12,
+		"region": "Rhône-Alpes",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"bordeaux": {
+		"kind": "city",
+		"population": 803000,
+		"populationRank": 7,
+		"population1950": 430000,
+		"region": "Aquitaine",
+		"coastal": true,
+		"position": "south-west"
+	},
+	"nimes": {
+		"kind": "city",
+		"population": 169547,
+		"populationRank": 28,
+		"region": "Languedoc-Roussillon",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"nice": {
+		"kind": "city",
+		"population": 927000,
+		"populationRank": 5,
+		"population1950": 400000,
+		"region": "Provence-Alpes-Côte-d'Azur",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"toulouse": {
+		"kind": "city",
+		"population": 847000,
+		"populationRank": 6,
+		"population1950": 269000,
+		"region": "Midi-Pyrénées",
+		"coastal": false,
+		"position": "south"
+	},
+	"montpellier": {
+		"kind": "city",
+		"population": 327254,
+		"populationRank": 14,
+		"region": "Languedoc-Roussillon",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"aix-en-provence": {
+		"kind": "city",
+		"population": 146821,
+		"populationRank": 30,
+		"region": "Provence-Alpes-Côte-d'Azur",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"biarritz": {
+		"kind": "city",
+		"population": 145348,
+		"populationRank": 32,
+		"region": "Aquitaine",
+		"coastal": true,
+		"position": "south-west"
+	},
+	"marseille": {
+		"kind": "city",
+		"population": 1400000,
+		"populationRank": 3,
+		"population1950": 756000,
+		"region": "Provence-Alpes-Côte-d'Azur",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"toulon": {
+		"kind": "city",
+		"population": 357693,
+		"populationRank": 13,
+		"region": "Provence-Alpes-Côte-d'Azur",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"perpignan": {
+		"kind": "city",
+		"population": 146620,
+		"populationRank": 31,
+		"region": "Languedoc-Roussillon",
+		"coastal": true,
+		"position": "south"
+	}
+}

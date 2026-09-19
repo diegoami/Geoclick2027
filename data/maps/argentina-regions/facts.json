@@ -1,0 +1,451 @@
+{
+	"jujuy": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Salta"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "San Salvador de Jujuy",
+			"nameDe": "San Salvador de Jujuy",
+			"nameIt": "San Salvador de Jujuy",
+			"population": 305891
+		},
+		"position": "north"
+	},
+	"salta": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Catamarca",
+			"Chaco",
+			"Formosa",
+			"Jujuy",
+			"Santiago del Estero",
+			"Tucumán"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Salta",
+			"nameDe": "Salta",
+			"nameIt": "Salta",
+			"population": 512686
+		},
+		"peak": {
+			"name": "Volcán Llullaillaco",
+			"elevation": 6739
+		},
+		"position": "north"
+	},
+	"formosa": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Chaco",
+			"Salta"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Formosa",
+			"nameDe": "Formosa",
+			"nameIt": "Formosa",
+			"population": 221383
+		},
+		"position": "north-east"
+	},
+	"chaco": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Corrientes",
+			"Formosa",
+			"Salta",
+			"Santa Fe",
+			"Santiago del Estero"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Resistencia",
+			"nameDe": "Resistencia",
+			"nameIt": "Resistencia",
+			"population": 387158
+		},
+		"position": "north"
+	},
+	"misiones": {
+		"kind": "region",
+		"borders": [
+			"Corrientes"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Posadas",
+			"nameDe": "Posadas",
+			"nameIt": "Posadas",
+			"population": 357119
+		},
+		"position": "north-east"
+	},
+	"tucuman": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Catamarca",
+			"Salta",
+			"Santiago del Estero"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tucumán",
+			"nameDe": "San Miguel de Tucumán",
+			"nameIt": "San Miguel de Tucumán",
+			"population": 830000
+		},
+		"position": "north"
+	},
+	"catamarca": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Córdoba",
+			"La Rioja",
+			"Salta",
+			"Santiago del Estero",
+			"Tucumán"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Catamarca",
+			"nameDe": "San Fernando del Valle de Catamarca",
+			"nameIt": "San Fernando del Valle de Catamarca",
+			"population": 188812
+		},
+		"peak": {
+			"name": "Nevado Ojos del Salado",
+			"elevation": 6880
+		},
+		"position": "north-west"
+	},
+	"santiago-del-estero": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Catamarca",
+			"Chaco",
+			"Córdoba",
+			"Salta",
+			"Santa Fe",
+			"Tucumán"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Santiago del Estero",
+			"nameDe": "Santiago del Estero",
+			"nameIt": "Santiago del Estero",
+			"population": 354692
+		},
+		"position": "north"
+	},
+	"corrientes": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Chaco",
+			"Entre Ríos",
+			"Misiones",
+			"Santa Fe"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Corrientes",
+			"nameDe": "Corrientes",
+			"nameIt": "Corrientes",
+			"population": 340823
+		},
+		"position": "north-east"
+	},
+	"la-rioja": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Catamarca",
+			"Córdoba",
+			"San Juan",
+			"San Luis"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "La Rioja",
+			"nameDe": "La Rioja",
+			"nameIt": "La Rioja",
+			"population": 162620
+		},
+		"position": "north-west"
+	},
+	"san-juan": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"La Rioja",
+			"Mendoza",
+			"San Luis"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "San Juan",
+			"nameDe": "San Juan",
+			"nameIt": "San Juan",
+			"population": 447048
+		},
+		"position": "north-west"
+	},
+	"santa-fe": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Buenos Aires",
+			"Chaco",
+			"Córdoba",
+			"Corrientes",
+			"Entre Ríos",
+			"Santiago del Estero"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Rosario",
+			"nameDe": "Rosario",
+			"nameIt": "Rosario",
+			"population": 1203000
+		},
+		"position": "north"
+	},
+	"entre-rios": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Buenos Aires",
+			"Corrientes",
+			"Santa Fe"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Paraná",
+			"nameDe": "Paraná",
+			"nameIt": "Paraná",
+			"population": 262295
+		},
+		"position": "north-east"
+	},
+	"cordoba": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Buenos Aires",
+			"Catamarca",
+			"La Pampa",
+			"La Rioja",
+			"San Luis",
+			"Santa Fe",
+			"Santiago del Estero"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Córdoba",
+			"nameDe": "Córdoba",
+			"nameIt": "Córdoba",
+			"population": 1452000
+		},
+		"peak": {
+			"name": "Cerro Champaquí",
+			"elevation": 2770
+		},
+		"position": "north"
+	},
+	"san-luis": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Córdoba",
+			"La Pampa",
+			"La Rioja",
+			"Mendoza",
+			"San Juan"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "San Luis",
+			"nameDe": "San Luis",
+			"nameIt": "San Luis",
+			"population": 432310
+		},
+		"position": "centre"
+	},
+	"ciudad-de-buenos-aires": {
+		"kind": "region",
+		"type": "Federal District",
+		"borders": [
+			"Buenos Aires"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Buenos Aires",
+			"nameDe": "Buenos Aires",
+			"nameIt": "Buenos Aires",
+			"population": 12795000
+		},
+		"position": "east"
+	},
+	"mendoza": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"La Pampa",
+			"Neuquén",
+			"Río Negro",
+			"San Juan",
+			"San Luis"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Mendoza",
+			"nameDe": "Mendoza",
+			"nameIt": "Mendoza",
+			"population": 893000
+		},
+		"peak": {
+			"name": "Cerro Aconcagua",
+			"elevation": 6959
+		},
+		"position": "west"
+	},
+	"buenos-aires": {
+		"kind": "region",
+		"type": "Federal District",
+		"borders": [
+			"Ciudad de Buenos Aires",
+			"Córdoba",
+			"Entre Ríos",
+			"La Pampa",
+			"Río Negro",
+			"Santa Fe"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "La Plata",
+			"nameDe": "La Plata",
+			"nameIt": "La Plata",
+			"population": 694253
+		},
+		"peak": {
+			"name": "Cerro Tres Picos",
+			"elevation": 1243
+		},
+		"position": "east"
+	},
+	"la-pampa": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Buenos Aires",
+			"Córdoba",
+			"Mendoza",
+			"Neuquén",
+			"Río Negro",
+			"San Luis"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Santa Rosa",
+			"nameDe": "Santa Rosa de Toay",
+			"nameIt": "Santa Rosa",
+			"population": 111424
+		},
+		"position": "centre"
+	},
+	"neuquen": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"La Pampa",
+			"Mendoza",
+			"Río Negro"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Neuquén",
+			"nameDe": "Neuquén",
+			"nameIt": "Neuquén",
+			"population": 242092
+		},
+		"peak": {
+			"name": "Volcán Domuyo",
+			"elevation": 4709
+		},
+		"position": "west"
+	},
+	"rio-negro": {
+		"kind": "region",
+		"borders": [
+			"Buenos Aires",
+			"Chubut",
+			"La Pampa",
+			"Mendoza",
+			"Neuquén"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Bariloche",
+			"nameDe": "Bariloche",
+			"nameIt": "San Carlos de Bariloche",
+			"population": 95394
+		},
+		"position": "west"
+	},
+	"chubut": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Río Negro",
+			"Santa Cruz"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Comodoro Rivadavia",
+			"nameDe": "Comodoro Rivadavia",
+			"nameIt": "Comodoro Rivadavia",
+			"population": 140850
+		},
+		"position": "south-west"
+	},
+	"santa-cruz": {
+		"kind": "region",
+		"borders": [
+			"Chubut"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Río Gallegos",
+			"nameDe": "Río Gallegos",
+			"nameIt": "Río Gallegos",
+			"population": 85700
+		},
+		"peak": {
+			"name": "Monte Fitz Roy",
+			"elevation": 3375
+		},
+		"position": "south-west"
+	},
+	"tierra-del-fuego": {
+		"kind": "region",
+		"type": "National Territory",
+		"coastal": true,
+		"largestCity": {
+			"name": "Ushuaia",
+			"nameDe": "Ushuaia",
+			"nameIt": "Ushuaia",
+			"population": 58028
+		},
+		"position": "south"
+	}
+}

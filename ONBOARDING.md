@@ -77,13 +77,14 @@ packages/
 
 data/
   maps/<map-id>/          generated per-map assets: map.json, tiles.pmtiles,
-                           tour.json, terrain.pmtiles - committed to git,
-                           not hand-edited
+                           tour.json, terrain.pmtiles, facts.json -
+                           committed to git, not hand-edited
   styles/base.json         shared MapLibre style, used by all maps
   source/                  raw Natural Earth downloads
   scripts/build-map.ts     the pipeline that turns source data into a map/
   scripts/build-terrain.ts  the Terrain layer's own tileset (FT-33), for a
                              map that already exists
+  scripts/build-facts.ts    the fact box's derived data (FT-34)
 
 desktop/                  Tauri wrapper (Iteration 7) - wraps app/build
                            unmodified in a native window, no separate UI code

@@ -1,0 +1,672 @@
+{
+	"heilongjiang": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "黑龙江省|黑龍江省",
+		"borders": [
+			"Inner Mongol",
+			"Jilin"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Harbin",
+			"nameDe": "Harbin",
+			"nameIt": "Harbin",
+			"population": 3621000
+		},
+		"position": "north-east"
+	},
+	"inner-mongol": {
+		"kind": "region",
+		"type": "Autonomous Region",
+		"localName": "內蒙古自治區|内蒙古自治区",
+		"borders": [
+			"Gansu",
+			"Hebei",
+			"Heilongjiang",
+			"Jilin",
+			"Liaoning",
+			"Ningxia",
+			"Shaanxi",
+			"Shanxi"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Baotou",
+			"nameDe": "Baotou",
+			"nameIt": "Baotou",
+			"population": 2036000
+		},
+		"peak": {
+			"name": "Helan Shan",
+			"elevation": 3540
+		},
+		"position": "north"
+	},
+	"jilin": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "吉林",
+		"borders": [
+			"Heilongjiang",
+			"Inner Mongol",
+			"Liaoning"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Changchun",
+			"nameDe": "Changchun",
+			"nameIt": "Changchun",
+			"population": 3183000
+		},
+		"peak": {
+			"name": "Paektu-san",
+			"elevation": 2744
+		},
+		"position": "north-east"
+	},
+	"xinjiang": {
+		"kind": "region",
+		"type": "Autonomous Region",
+		"localName": "新疆維吾爾自治區|新疆维吾尔自治区",
+		"borders": [
+			"Gansu",
+			"Qinghai",
+			"Xizang"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ürümqi",
+			"nameDe": "Ürümqi",
+			"nameIt": "Ürümqi",
+			"population": 3575000
+		},
+		"peak": {
+			"name": "Kongkoerh",
+			"elevation": 7649
+		},
+		"position": "west"
+	},
+	"liaoning": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "遼寧|辽宁",
+		"borders": [
+			"Hebei",
+			"Inner Mongol",
+			"Jilin"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Shenyeng",
+			"nameDe": "Shenyang",
+			"nameIt": "Shenyang",
+			"population": 4787000
+		},
+		"position": "east"
+	},
+	"beijing": {
+		"kind": "region",
+		"type": "Municipality",
+		"localName": "北京|北京",
+		"borders": [
+			"Hebei",
+			"Tianjin"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Beijing",
+			"nameDe": "Peking",
+			"nameIt": "Pechino",
+			"population": 11106000
+		},
+		"position": "east"
+	},
+	"tianjin": {
+		"kind": "region",
+		"type": "Municipality",
+		"localName": "天津|天津",
+		"borders": [
+			"Beijing",
+			"Hebei"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tianjin",
+			"nameDe": "Tianjin",
+			"nameIt": "Tientsin",
+			"population": 7180000
+		},
+		"position": "east"
+	},
+	"hebei": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "河北",
+		"borders": [
+			"Beijing",
+			"Henan",
+			"Inner Mongol",
+			"Liaoning",
+			"Shandong",
+			"Shanxi",
+			"Tianjin"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Shijiazhuang",
+			"nameDe": "Shijiazhuang",
+			"nameIt": "Shijiazhuang",
+			"population": 2417000
+		},
+		"peak": {
+			"name": "Yunwu Shan",
+			"elevation": 1867
+		},
+		"position": "east"
+	},
+	"gansu": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "甘肅|甘肃",
+		"borders": [
+			"Inner Mongol",
+			"Ningxia",
+			"Qinghai",
+			"Shaanxi",
+			"Sichuan",
+			"Xinjiang"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Lanzhou",
+			"nameDe": "Lanzhou",
+			"nameIt": "Lanzhou",
+			"population": 2561000
+		},
+		"peak": {
+			"name": "Mazong Shan",
+			"elevation": 2584
+		},
+		"position": "centre"
+	},
+	"shanxi": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "山西",
+		"borders": [
+			"Hebei",
+			"Henan",
+			"Inner Mongol",
+			"Shaanxi"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Taiyuan",
+			"nameDe": "Taiyuan",
+			"nameIt": "Taiyuan",
+			"population": 2913000
+		},
+		"peak": {
+			"name": "Wutai Shan",
+			"elevation": 3058
+		},
+		"position": "centre"
+	},
+	"ningxia": {
+		"kind": "region",
+		"type": "Autonomous Region",
+		"localName": "寧夏回族自治區|宁夏回族自治区",
+		"borders": [
+			"Gansu",
+			"Inner Mongol",
+			"Shaanxi"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Yinchuan",
+			"nameDe": "Yinchuan",
+			"nameIt": "Yinchuan",
+			"population": 991000
+		},
+		"position": "centre"
+	},
+	"shandong": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "山東|山东",
+		"borders": [
+			"Anhui",
+			"Hebei",
+			"Henan",
+			"Jiangsu"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Zibo",
+			"nameDe": "Zibo",
+			"nameIt": "Zibo",
+			"population": 3061000
+		},
+		"position": "east"
+	},
+	"shaanxi": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "陝西|陕西",
+		"borders": [
+			"Chongqing",
+			"Gansu",
+			"Henan",
+			"Hubei",
+			"Inner Mongol",
+			"Ningxia",
+			"Shanxi",
+			"Sichuan"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Xian",
+			"nameDe": "Xi’an",
+			"nameIt": "Xi'an",
+			"population": 4009000
+		},
+		"peak": {
+			"name": "Taibai Shan",
+			"elevation": 3767
+		},
+		"position": "centre"
+	},
+	"qinghai": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Gansu",
+			"Sichuan",
+			"Xinjiang",
+			"Xizang"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Xining",
+			"nameDe": "Xining",
+			"nameIt": "Xining",
+			"population": 1048000
+		},
+		"peak": {
+			"name": "Geladandong",
+			"elevation": 6621
+		},
+		"position": "centre"
+	},
+	"henan": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "河南",
+		"borders": [
+			"Anhui",
+			"Hebei",
+			"Hubei",
+			"Shaanxi",
+			"Shandong",
+			"Shanxi"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Zhengzhou",
+			"nameDe": "Zhengzhou",
+			"nameIt": "Zhengzhou",
+			"population": 2636000
+		},
+		"position": "centre"
+	},
+	"jiangsu": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "江蘇|江苏",
+		"borders": [
+			"Anhui",
+			"Shandong",
+			"Shanghai",
+			"Zhejiang"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Nanjing",
+			"nameDe": "Nanjing",
+			"nameIt": "Nanchino",
+			"population": 3679000
+		},
+		"position": "east"
+	},
+	"anhui": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "安徽|安徽",
+		"borders": [
+			"Henan",
+			"Hubei",
+			"Jiangsu",
+			"Jiangxi",
+			"Shandong",
+			"Zhejiang"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Hefei",
+			"nameDe": "Hefei",
+			"nameIt": "Hefei",
+			"population": 2035000
+		},
+		"peak": {
+			"name": "Qingliang Feng",
+			"elevation": 1787
+		},
+		"position": "east"
+	},
+	"xizang": {
+		"kind": "region",
+		"type": "Autonomous Region",
+		"localName": "西藏自治區|西藏自治区",
+		"borders": [
+			"Qinghai",
+			"Sichuan",
+			"Xinjiang",
+			"Yunnan"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Lhasa",
+			"nameDe": "Lhasa",
+			"nameIt": "Lhasa",
+			"population": 219599
+		},
+		"peak": {
+			"name": "Mount Everest",
+			"elevation": 8848
+		},
+		"position": "west"
+	},
+	"shanghai": {
+		"kind": "region",
+		"type": "Municipality",
+		"localName": "上海|上海",
+		"borders": [
+			"Jiangsu",
+			"Zhejiang"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Shanghai",
+			"nameDe": "Shanghai",
+			"nameIt": "Shanghai",
+			"population": 14987000
+		},
+		"position": "east"
+	},
+	"hubei": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "湖北",
+		"borders": [
+			"Anhui",
+			"Chongqing",
+			"Henan",
+			"Hunan",
+			"Jiangxi",
+			"Shaanxi"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Wuhan",
+			"nameDe": "Wuhan",
+			"nameIt": "Wuhan",
+			"population": 7243000
+		},
+		"position": "centre"
+	},
+	"chongqing": {
+		"kind": "region",
+		"type": "Municipality",
+		"localName": "重慶|重庆",
+		"borders": [
+			"Guizhou",
+			"Hubei",
+			"Hunan",
+			"Shaanxi",
+			"Sichuan"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Chongqing",
+			"nameDe": "Chongqing",
+			"nameIt": "Chongqing",
+			"population": 6461000
+		},
+		"position": "centre"
+	},
+	"sichuan": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "四川",
+		"borders": [
+			"Chongqing",
+			"Gansu",
+			"Guizhou",
+			"Qinghai",
+			"Shaanxi",
+			"Xizang",
+			"Yunnan"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Chengdu",
+			"nameDe": "Chengdu",
+			"nameIt": "Chengdu",
+			"population": 4123000
+		},
+		"peak": {
+			"name": "Gongga Shan",
+			"elevation": 7556
+		},
+		"position": "centre"
+	},
+	"zhejiang": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "浙江",
+		"borders": [
+			"Anhui",
+			"Fujian",
+			"Jiangsu",
+			"Jiangxi",
+			"Shanghai"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Hangzhou",
+			"nameDe": "Hangzhou",
+			"nameIt": "Hangzhou",
+			"population": 3007000
+		},
+		"position": "south-east"
+	},
+	"hunan": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "湖南",
+		"borders": [
+			"Chongqing",
+			"Guangdong",
+			"Guangxi",
+			"Guizhou",
+			"Hubei",
+			"Jiangxi"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Changsha",
+			"nameDe": "Changsha",
+			"nameIt": "Changsha",
+			"population": 2604000
+		},
+		"position": "south"
+	},
+	"jiangxi": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "江西",
+		"borders": [
+			"Anhui",
+			"Fujian",
+			"Guangdong",
+			"Hubei",
+			"Hunan",
+			"Zhejiang"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Nanchang",
+			"nameDe": "Nanchang",
+			"nameIt": "Nanchang",
+			"population": 2350000
+		},
+		"peak": {
+			"name": "Nanfengmian",
+			"elevation": 2140
+		},
+		"position": "south-east"
+	},
+	"guizhou": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "貴州|贵州",
+		"borders": [
+			"Chongqing",
+			"Guangxi",
+			"Hunan",
+			"Sichuan",
+			"Yunnan"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Guiyang",
+			"nameDe": "Guiyang",
+			"nameIt": "Guiyang",
+			"population": 3662000
+		},
+		"peak": {
+			"name": "Fenghuang Shan",
+			"elevation": 2570
+		},
+		"position": "south"
+	},
+	"fujian": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "福建",
+		"borders": [
+			"Guangdong",
+			"Jiangxi",
+			"Zhejiang"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Zhangzhou",
+			"nameDe": "Zhangzhou",
+			"nameIt": "Zhangzhou",
+			"population": 3531147
+		},
+		"peak": {
+			"name": "Huanggang Shan",
+			"elevation": 2170
+		},
+		"position": "south-east"
+	},
+	"yunnan": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "雲南|云南",
+		"borders": [
+			"Guangxi",
+			"Guizhou",
+			"Sichuan",
+			"Xizang"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kunming",
+			"nameDe": "Kunming",
+			"nameIt": "Kunming",
+			"population": 2931000
+		},
+		"peak": {
+			"name": "Laotzyunshan",
+			"elevation": 4500
+		},
+		"position": "south"
+	},
+	"guangxi": {
+		"kind": "region",
+		"type": "Autonomous Region",
+		"localName": "廣西壯族自治區|广西壮族自治区",
+		"borders": [
+			"Guangdong",
+			"Guizhou",
+			"Hunan",
+			"Yunnan"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Hechi",
+			"nameDe": "Hechi",
+			"nameIt": "Hechi",
+			"population": 3830000
+		},
+		"peak": {
+			"name": "Shengtang Shan",
+			"elevation": 1935
+		},
+		"position": "south"
+	},
+	"guangdong": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "廣東|广东",
+		"borders": [
+			"Fujian",
+			"Guangxi",
+			"Hunan",
+			"Jiangxi"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Guangzhou",
+			"nameDe": "Guangzhou",
+			"nameIt": "Canton",
+			"population": 8829000
+		},
+		"peak": {
+			"name": "Paishidin",
+			"elevation": 1895
+		},
+		"position": "south"
+	},
+	"hainan": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "海南",
+		"coastal": true,
+		"largestCity": {
+			"name": "Haikou",
+			"nameDe": "Haikou",
+			"nameIt": "Haikou",
+			"population": 2046189
+		},
+		"peak": {
+			"name": "Wuzhi Shan",
+			"elevation": 1840
+		},
+		"position": "south"
+	}
+}

@@ -879,6 +879,56 @@ deliberately **not** rebuilt — the Terrain layer is a separate archive, so
 the existing tilesets did not change, and rebuilding them anyway would have
 meant 63 binary files in one commit for no reason (see the next section).
 
+## The derived fact: `facts.json` (FT-34, 2026-09-19)
+
+Every map has a `facts.json` beside its `map.json`, one entry per target,
+written by `data/scripts/build-facts.ts` and holding **structured fields,
+not sentences** — a population, a list of neighbours, a compass position.
+`app/src/lib/facts.ts` turns those into clauses at run time through the i18n
+dictionary, which is what makes the derived half trilingual without a word
+of it being translated by hand.
+
+```bash
+npx tsx data/scripts/build-facts.ts --map=italy-regions
+npx tsx data/scripts/build-facts.ts --all
+```
+
+**Coverage over the 2 235 targets** (measured 2026-09-19, 503 KB in total):
+
+| Field                    | Targets   |     | Field            | Targets   |
+| ------------------------ | --------- | --- | ---------------- | --------- |
+| `coastal`, `position`    | 2 235 · 100 % |  | `largestCity`    | 911 · 41 % |
+| `population` (+ rank)    | 1 182 · 53 %  |  | `population1950` | 360 · 16 % |
+| `borders`                | 1 031 · 46 %  |  | `peak`           | 193 · 9 %  |
+| `region`                 | 1 008 · 45 %  |  | `localName`      | 174 · 8 %  |
+| `type`                   | 985 · 44 %    |  | `capitalOf`      | 28 · 1 %   |
+
+**Three things here were found the hard way and are worth keeping:**
+
+- **Coastal is decided by shared vertices, not by distance.** Natural
+  Earth's admin-1 polygons and its coastline are generalised from the same
+  land, so a coastal region's boundary *shares vertices* with the coastline.
+  Hashing the coastline to a hundredth of a degree and testing a region's
+  own boundary against it returns, for Italy, exactly the five landlocked
+  regions (Valle d'Aosta, Piemonte, Lombardia, Trentino-Alto Adige, Umbria)
+  and the fifteen coastal ones. A town, having no boundary, falls back to a
+  distance test.
+- **Source rows are matched to targets by extent, never by name.** A map may
+  be dissolved (no admin-1 row is called "Piemonte" — the regions come from
+  the provinces), and surviving names are often rewritten on the way out
+  (Apulia → Puglia). The test is **containment, then smallest**: comparing
+  corners fails because simplification drops small outlying islands, so
+  Sicily's source rows reach Lampedusa at 35.5° N while its target stops at
+  36.7° N — more than a degree out, same shape. With containment, all 110 of
+  Italy's provinces and all 20 of its regions match.
+- **`POP1950`…`POP2050` are in THOUSANDS**, unlike `POP_MAX`, which is
+  absolute. Seattle's row reads 795 against a `POP_MAX` of 3 074 000. Both
+  are right once multiplied out and both are nonsense if they are not.
+
+`facts.json` rebuilds byte-identically (checked on `italy-regions` and
+`usa-cities`), and `mapData.test.ts` requires every target to have exactly
+one entry and every entry to belong to a target.
+
 ## What reproduces, and what doesn't
 
 `map.json` and `tour.json` are reproducible: rebuilding a shipped map with

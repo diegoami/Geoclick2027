@@ -1,0 +1,403 @@
+{
+	"mexicali": {
+		"kind": "city",
+		"population": 885000,
+		"populationRank": 14,
+		"population1950": 66000,
+		"region": "Baja California",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"tijuana": {
+		"kind": "city",
+		"population": 1553000,
+		"populationRank": 5,
+		"population1950": 60000,
+		"region": "Baja California",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"ensenada": {
+		"kind": "city",
+		"population": 256565,
+		"populationRank": 46,
+		"region": "Baja California",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"ciudad-juarez": {
+		"kind": "city",
+		"population": 1343000,
+		"populationRank": 8,
+		"population1950": 123000,
+		"region": "Chihuahua",
+		"coastal": false,
+		"position": "north"
+	},
+	"hermosillo": {
+		"kind": "city",
+		"population": 595811,
+		"populationRank": 23,
+		"region": "Sonora",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"mazatlan": {
+		"kind": "city",
+		"population": 500000,
+		"populationRank": 29,
+		"region": "Sonora",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"chihuahua": {
+		"kind": "city",
+		"population": 793000,
+		"populationRank": 19,
+		"population1950": 87000,
+		"coastal": false,
+		"position": "north"
+	},
+	"nuevo-laredo": {
+		"kind": "city",
+		"population": 349550,
+		"populationRank": 38,
+		"region": "Tamaulipas",
+		"coastal": false,
+		"position": "north"
+	},
+	"ciudad-obregon": {
+		"kind": "city",
+		"population": 288002,
+		"populationRank": 42,
+		"region": "Sonora",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"reynosa": {
+		"kind": "city",
+		"population": 498654,
+		"populationRank": 30,
+		"region": "Tamaulipas",
+		"coastal": false,
+		"position": "centre"
+	},
+	"matamoros": {
+		"kind": "city",
+		"population": 538785,
+		"populationRank": 26,
+		"region": "Tamaulipas",
+		"coastal": false,
+		"position": "centre"
+	},
+	"los-mochis": {
+		"kind": "city",
+		"population": 249047,
+		"populationRank": 49,
+		"region": "Sinaloa",
+		"coastal": true,
+		"position": "west"
+	},
+	"monterrey": {
+		"kind": "city",
+		"population": 3712000,
+		"populationRank": 3,
+		"population1950": 356000,
+		"region": "Nuevo León",
+		"coastal": false,
+		"position": "centre"
+	},
+	"torreon": {
+		"kind": "city",
+		"population": 1144000,
+		"populationRank": 9,
+		"population1950": 189000,
+		"region": "Coahuila",
+		"coastal": false,
+		"position": "centre"
+	},
+	"gomez-palacio": {
+		"kind": "city",
+		"population": 399328,
+		"populationRank": 35,
+		"region": "Durango",
+		"coastal": false,
+		"position": "centre"
+	},
+	"saltillo": {
+		"kind": "city",
+		"population": 754000,
+		"populationRank": 20,
+		"population1950": 70000,
+		"region": "Coahuila",
+		"coastal": false,
+		"position": "centre"
+	},
+	"culiacan": {
+		"kind": "city",
+		"population": 809000,
+		"populationRank": 18,
+		"population1950": 49000,
+		"region": "Sinaloa",
+		"coastal": false,
+		"position": "west"
+	},
+	"durango": {
+		"kind": "city",
+		"population": 457140,
+		"populationRank": 32,
+		"coastal": false,
+		"position": "centre"
+	},
+	"ciudad-victoria": {
+		"kind": "city",
+		"population": 274900,
+		"populationRank": 44,
+		"region": "Tamaulipas",
+		"coastal": false,
+		"position": "centre"
+	},
+	"tampico": {
+		"kind": "city",
+		"population": 859419,
+		"populationRank": 16,
+		"region": "Tamaulipas",
+		"coastal": true,
+		"position": "centre"
+	},
+	"san-luis-potosi": {
+		"kind": "city",
+		"population": 992000,
+		"populationRank": 11,
+		"population1950": 132000,
+		"coastal": false,
+		"position": "centre"
+	},
+	"aguascalientes": {
+		"kind": "city",
+		"population": 869000,
+		"populationRank": 15,
+		"population1950": 94000,
+		"coastal": false,
+		"position": "south"
+	},
+	"tepic": {
+		"kind": "city",
+		"population": 318781,
+		"populationRank": 41,
+		"region": "Nayarit",
+		"coastal": false,
+		"position": "south"
+	},
+	"cancun": {
+		"kind": "city",
+		"population": 542043,
+		"populationRank": 25,
+		"region": "Quintana Roo",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"leon": {
+		"kind": "city",
+		"population": 1488000,
+		"populationRank": 7,
+		"population1950": 123000,
+		"region": "Guanajuato",
+		"coastal": false,
+		"position": "south"
+	},
+	"merida": {
+		"kind": "city",
+		"population": 965000,
+		"populationRank": 12,
+		"population1950": 143000,
+		"region": "Yucatán",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"irapuato": {
+		"kind": "city",
+		"population": 339554,
+		"populationRank": 39,
+		"region": "Guanajuato",
+		"coastal": false,
+		"position": "south"
+	},
+	"guadalajara": {
+		"kind": "city",
+		"population": 4198000,
+		"populationRank": 2,
+		"population1950": 403000,
+		"region": "Jalisco",
+		"coastal": false,
+		"position": "south"
+	},
+	"queretaro": {
+		"kind": "city",
+		"population": 961000,
+		"populationRank": 13,
+		"population1950": 49000,
+		"coastal": false,
+		"position": "south"
+	},
+	"celaya": {
+		"kind": "city",
+		"population": 383697,
+		"populationRank": 36,
+		"region": "Guanajuato",
+		"coastal": false,
+		"position": "south"
+	},
+	"poza-rica-de-hidalgo": {
+		"kind": "city",
+		"population": 254481,
+		"populationRank": 47,
+		"region": "Veracruz",
+		"coastal": false,
+		"position": "south"
+	},
+	"pachuca": {
+		"kind": "city",
+		"population": 319581,
+		"populationRank": 40,
+		"region": "Hidalgo",
+		"coastal": false,
+		"position": "south"
+	},
+	"zumpango": {
+		"kind": "city",
+		"population": 250000,
+		"populationRank": 48,
+		"region": "México",
+		"coastal": false,
+		"position": "south"
+	},
+	"morelia": {
+		"kind": "city",
+		"population": 644306,
+		"populationRank": 22,
+		"region": "Michoacán",
+		"coastal": false,
+		"position": "south"
+	},
+	"xalapa": {
+		"kind": "city",
+		"population": 452186,
+		"populationRank": 33,
+		"region": "Veracruz",
+		"coastal": false,
+		"position": "south"
+	},
+	"ciudad-de-mexico": {
+		"kind": "city",
+		"population": 19028000,
+		"populationRank": 1,
+		"population1950": 2883000,
+		"region": "Distrito Federal",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south"
+	},
+	"uruapan": {
+		"kind": "city",
+		"population": 264531,
+		"populationRank": 45,
+		"region": "Michoacán",
+		"coastal": false,
+		"position": "south"
+	},
+	"nezahualcoyotl": {
+		"kind": "city",
+		"population": 1109363,
+		"populationRank": 10,
+		"region": "México",
+		"coastal": false,
+		"position": "south"
+	},
+	"tlaxcala": {
+		"kind": "city",
+		"population": 503878,
+		"populationRank": 28,
+		"coastal": false,
+		"position": "south"
+	},
+	"toluca": {
+		"kind": "city",
+		"population": 1531000,
+		"populationRank": 6,
+		"population1950": 54000,
+		"region": "México",
+		"coastal": false,
+		"position": "south"
+	},
+	"veracruz": {
+		"kind": "city",
+		"population": 578963,
+		"populationRank": 24,
+		"coastal": true,
+		"position": "south-east"
+	},
+	"puebla": {
+		"kind": "city",
+		"population": 2195000,
+		"populationRank": 4,
+		"population1950": 227000,
+		"coastal": false,
+		"position": "south"
+	},
+	"cuernavaca": {
+		"kind": "city",
+		"population": 834001,
+		"populationRank": 17,
+		"region": "Morelos",
+		"coastal": false,
+		"position": "south"
+	},
+	"orizaba": {
+		"kind": "city",
+		"population": 355333,
+		"populationRank": 37,
+		"region": "Veracruz",
+		"coastal": false,
+		"position": "south"
+	},
+	"coatzacoalcos": {
+		"kind": "city",
+		"population": 287285,
+		"populationRank": 43,
+		"region": "Veracruz",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"villahermosa": {
+		"kind": "city",
+		"population": 428564,
+		"populationRank": 34,
+		"region": "Tabasco",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"oaxaca": {
+		"kind": "city",
+		"population": 530728,
+		"populationRank": 27,
+		"coastal": false,
+		"position": "south-east"
+	},
+	"acapulco": {
+		"kind": "city",
+		"population": 715584,
+		"populationRank": 21,
+		"region": "Guerrero",
+		"coastal": true,
+		"position": "south"
+	},
+	"tuxtla-gutierrez": {
+		"kind": "city",
+		"population": 481128,
+		"populationRank": 31,
+		"region": "Chiapas",
+		"coastal": false,
+		"position": "south-east"
+	}
+}

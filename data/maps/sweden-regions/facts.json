@@ -1,0 +1,378 @@
+{
+	"norrbotten": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Västerbotten"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Luleå",
+			"nameDe": "Luleå",
+			"nameIt": "Luleå",
+			"population": 48638
+		},
+		"peak": {
+			"name": "Kebnekaise",
+			"elevation": 2111
+		},
+		"position": "north"
+	},
+	"vasterbotten": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Jämtland",
+			"Norrbotten",
+			"Västernorrland"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Umeå",
+			"nameDe": "Umeå",
+			"nameIt": "Umeå",
+			"population": 78197
+		},
+		"position": "north"
+	},
+	"jamtland": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Dalarna",
+			"Gävleborg",
+			"Västerbotten",
+			"Västernorrland"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Östersund",
+			"nameDe": "Östersund",
+			"nameIt": "Östersund",
+			"population": 46178
+		},
+		"position": "west"
+	},
+	"vasternorrland": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Gävleborg",
+			"Jämtland",
+			"Västerbotten"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Sundsvall",
+			"nameDe": "Sundsvall",
+			"nameIt": "Sundsvall",
+			"population": 73389
+		},
+		"position": "centre"
+	},
+	"gavleborg": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Dalarna",
+			"Jämtland",
+			"Uppsala",
+			"Västernorrland",
+			"Västmanland"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Gävle",
+			"nameDe": "Gävle",
+			"nameIt": "Gävle",
+			"population": 68635
+		},
+		"position": "centre"
+	},
+	"dalarna": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Gävleborg",
+			"Jämtland",
+			"Örebro",
+			"Värmland",
+			"Västmanland"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Borlänge",
+			"nameDe": "Borlänge",
+			"nameIt": "Borlänge",
+			"population": 39422
+		},
+		"position": "west"
+	},
+	"uppsala": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Gävleborg",
+			"Södermanland",
+			"Stockholm",
+			"Västmanland"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Uppsala",
+			"nameDe": "Uppsala",
+			"nameIt": "Uppsala",
+			"population": 133117
+		},
+		"position": "centre"
+	},
+	"varmland": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Dalarna",
+			"Örebro",
+			"Västra Götaland"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Karlstad",
+			"nameDe": "Karlstad",
+			"nameIt": "Karlstad",
+			"population": 74141
+		},
+		"position": "south-west"
+	},
+	"vastmanland": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Dalarna",
+			"Gävleborg",
+			"Örebro",
+			"Södermanland",
+			"Uppsala"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Västerås",
+			"nameDe": "Västerås",
+			"nameIt": "Västerås",
+			"population": 107194
+		},
+		"position": "south"
+	},
+	"stockholm": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Södermanland",
+			"Uppsala"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Stockholm",
+			"nameDe": "Stockholm",
+			"nameIt": "Stoccolma",
+			"population": 1264000
+		},
+		"position": "south"
+	},
+	"orebro": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Dalarna",
+			"Östergötland",
+			"Södermanland",
+			"Värmland",
+			"Västmanland",
+			"Västra Götaland"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Örebro",
+			"nameDe": "Örebro",
+			"nameIt": "Örebro",
+			"population": 98573
+		},
+		"position": "south-west"
+	},
+	"sodermanland": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Örebro",
+			"Östergötland",
+			"Stockholm",
+			"Uppsala",
+			"Västmanland"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Nyköping",
+			"nameDe": "Nyköping",
+			"nameIt": "Nyköping",
+			"population": 27582
+		},
+		"position": "south"
+	},
+	"ostergotland": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Jönköping",
+			"Kalmar",
+			"Örebro",
+			"Södermanland",
+			"Västra Götaland"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Linköping",
+			"nameDe": "Linköping",
+			"nameIt": "Linköping",
+			"population": 96732
+		},
+		"position": "south"
+	},
+	"vastra-gotaland": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Halland",
+			"Jönköping",
+			"Örebro",
+			"Östergötland",
+			"Värmland"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Göteborg",
+			"nameDe": "Göteborg",
+			"nameIt": "Göteborg",
+			"population": 537797
+		},
+		"position": "south-west"
+	},
+	"jonkoping": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Halland",
+			"Kalmar",
+			"Kronoberg",
+			"Östergötland",
+			"Västra Götaland"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Jönköping",
+			"nameDe": "Jönköping",
+			"nameIt": "Jönköping",
+			"population": 89780
+		},
+		"position": "south-west"
+	},
+	"gotland": {
+		"kind": "region",
+		"type": "County",
+		"coastal": true,
+		"largestCity": {
+			"name": "Visby",
+			"nameDe": "Visby",
+			"nameIt": "Visby",
+			"population": 22593
+		},
+		"position": "south"
+	},
+	"kalmar": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Blekinge",
+			"Jönköping",
+			"Kronoberg",
+			"Östergötland"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Kalmar",
+			"nameDe": "Kalmar",
+			"nameIt": "Kalmar",
+			"population": 35024
+		},
+		"position": "south"
+	},
+	"halland": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Jönköping",
+			"Kronoberg",
+			"Skåne",
+			"Västra Götaland"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Halmstad",
+			"nameDe": "Halmstad",
+			"nameIt": "Halmstad",
+			"population": 55657
+		},
+		"position": "south-west"
+	},
+	"kronoberg": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Blekinge",
+			"Halland",
+			"Jönköping",
+			"Kalmar",
+			"Skåne"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Växjö",
+			"nameDe": "Växjö",
+			"nameIt": "Växjö",
+			"population": 59600
+		},
+		"position": "south-west"
+	},
+	"blekinge": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Kalmar",
+			"Kronoberg",
+			"Skåne"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Karlskrona",
+			"nameDe": "Karlskrona",
+			"nameIt": "Karlskrona",
+			"population": 35212
+		},
+		"position": "south-west"
+	},
+	"skane": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Blekinge",
+			"Halland",
+			"Kronoberg"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Malmö",
+			"nameDe": "Malmö",
+			"nameIt": "Malmö",
+			"population": 269349
+		},
+		"position": "south-west"
+	}
+}

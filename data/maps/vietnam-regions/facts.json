@@ -1,0 +1,1112 @@
+{
+	"ha-giang": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bắc Kạn",
+			"Cao Bằng",
+			"Lào Cai",
+			"Tuyên Quang",
+			"Yên Bái"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ha Giang",
+			"nameDe": "Hà Giang",
+			"nameIt": "Ha Giang",
+			"population": 38362
+		},
+		"position": "north"
+	},
+	"cao-bang": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bắc Kạn",
+			"Hà Giang",
+			"Lạng Sơn",
+			"Tuyên Quang"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Cao Bằng",
+			"nameDe": "Cao Bằng",
+			"nameIt": "Cao Bằng",
+			"population": 41112
+		},
+		"position": "north"
+	},
+	"lai-chau": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Điện Biên",
+			"Lào Cai",
+			"Sơn La"
+		],
+		"coastal": false,
+		"peak": {
+			"name": "Fan Si Pan",
+			"elevation": 3142
+		},
+		"position": "north-west"
+	},
+	"lao-cai": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Hà Giang",
+			"Lai Châu",
+			"Sơn La",
+			"Yên Bái"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Lao Chi",
+			"nameDe": "Lào Cai",
+			"nameIt": "Lào Cai",
+			"population": 67206
+		},
+		"position": "north-west"
+	},
+	"bac-kan": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Cao Bằng",
+			"Hà Giang",
+			"Lạng Sơn",
+			"Thái Nguyên",
+			"Tuyên Quang"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bắc Kạn",
+			"nameDe": "Bắc Kạn",
+			"nameIt": "Bắc Kạn",
+			"population": 29227
+		},
+		"position": "north"
+	},
+	"tuyen-quang": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bắc Kạn",
+			"Cao Bằng",
+			"Hà Giang",
+			"Phú Thọ",
+			"Thái Nguyên",
+			"Vĩnh Phúc",
+			"Yên Bái"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tuyên Quang",
+			"nameDe": "Tuyen Quang",
+			"nameIt": "Tuyen Quang",
+			"population": 36430
+		},
+		"position": "north"
+	},
+	"lang-son": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bắc Giang",
+			"Bắc Kạn",
+			"Cao Bằng",
+			"Quảng Ninh",
+			"Thái Nguyên"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Lạng Sơn",
+			"nameDe": "Lạng Sơn",
+			"nameIt": "Lạng Sơn",
+			"population": 148000
+		},
+		"position": "north"
+	},
+	"yen-bai": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Hà Giang",
+			"Lào Cai",
+			"Phú Thọ",
+			"Sơn La",
+			"Tuyên Quang"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Yên Bái",
+			"nameDe": "Yên Bái",
+			"nameIt": "Yên Bái",
+			"population": 96540
+		},
+		"position": "north-west"
+	},
+	"ien-bien": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Lai Châu",
+			"Sơn La"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Luan Chau",
+			"nameDe": "Luan Chau",
+			"nameIt": "Luan Chau",
+			"population": 7335
+		},
+		"position": "north-west"
+	},
+	"thai-nguyen": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bắc Giang",
+			"Bắc Kạn",
+			"Hà Nội",
+			"Lạng Sơn",
+			"Tuyên Quang",
+			"Vĩnh Phúc"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Thái Nguyên",
+			"nameDe": "Thái Nguyên",
+			"nameIt": "Thái Nguyên",
+			"population": 500000
+		},
+		"position": "north"
+	},
+	"bac-giang": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bắc Ninh",
+			"Hà Nội",
+			"Hải Dương",
+			"Lạng Sơn",
+			"Quảng Ninh",
+			"Thái Nguyên"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bắc Giang",
+			"nameDe": "Bắc Giang",
+			"nameIt": "Bắc Giang",
+			"population": 53728
+		},
+		"position": "north"
+	},
+	"vinh-phuc": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Hà Nội",
+			"Phú Thọ",
+			"Thái Nguyên",
+			"Tuyên Quang"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"phu-tho": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Hà Nội",
+			"Hòa Bình",
+			"Sơn La",
+			"Tuyên Quang",
+			"Vĩnh Phúc",
+			"Yên Bái"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Việt Trì",
+			"nameDe": "Việt Trì",
+			"nameIt": "Việt Trì",
+			"population": 350000
+		},
+		"position": "north"
+	},
+	"son-la": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Điện Biên",
+			"Hòa Bình",
+			"Lai Châu",
+			"Lào Cai",
+			"Phú Thọ",
+			"Thanh Hóa",
+			"Yên Bái"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Sơn La",
+			"nameDe": "Sơn La",
+			"nameIt": "Sơn La",
+			"population": 19054
+		},
+		"position": "north-west"
+	},
+	"quang-ninh": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bắc Giang",
+			"Hải Dương",
+			"Hải Phòng",
+			"Lạng Sơn"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Hong Gai",
+			"nameDe": "Hạ Long",
+			"nameIt": "Hạ Long",
+			"population": 172915
+		},
+		"position": "north-east"
+	},
+	"bac-ninh": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bắc Giang",
+			"Hà Nội",
+			"Hải Dương",
+			"Hưng Yên"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"ha-noi": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bắc Giang",
+			"Bắc Ninh",
+			"Hà Nam",
+			"Hòa Bình",
+			"Hưng Yên",
+			"Phú Thọ",
+			"Thái Nguyên",
+			"Vĩnh Phúc"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Hanoi",
+			"nameDe": "Hanoi",
+			"nameIt": "Hanoi",
+			"population": 4378000
+		},
+		"position": "north"
+	},
+	"hai-duong": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bắc Giang",
+			"Bắc Ninh",
+			"Hải Phòng",
+			"Hưng Yên",
+			"Quảng Ninh",
+			"Thái Bình"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Hai Duong",
+			"nameDe": "Hải Dương",
+			"nameIt": "Hải Dương",
+			"population": 58030
+		},
+		"position": "north"
+	},
+	"hung-yen": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Bắc Ninh",
+			"Hà Nam",
+			"Hà Nội",
+			"Hải Dương",
+			"Thái Bình"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"hai-phong": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Hải Dương",
+			"Quảng Ninh",
+			"Thái Bình"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Haiphong",
+			"nameDe": "Hải Phòng",
+			"nameIt": "Haiphong",
+			"population": 1969000
+		},
+		"position": "north"
+	},
+	"hoa-binh": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Hà Nam",
+			"Hà Nội",
+			"Ninh Bình",
+			"Phú Thọ",
+			"Sơn La",
+			"Thanh Hóa"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Hoa Binh",
+			"nameDe": "Hòa Bình",
+			"nameIt": "Hòa Bình",
+			"population": 105260
+		},
+		"position": "north"
+	},
+	"ha-nam": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Hà Nội",
+			"Hòa Bình",
+			"Hưng Yên",
+			"Nam Định",
+			"Ninh Bình",
+			"Thái Bình"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"thai-binh": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Hà Nam",
+			"Hải Dương",
+			"Hải Phòng",
+			"Hưng Yên",
+			"Nam Định"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Thái Bình",
+			"nameDe": "Thái Bình",
+			"nameIt": "Thái Bình",
+			"population": 210000
+		},
+		"position": "north"
+	},
+	"nam-inh": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Hà Nam",
+			"Ninh Bình",
+			"Thái Bình"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Nam Định",
+			"nameDe": "Nam Định",
+			"nameIt": "Nam Dinh",
+			"population": 243186
+		},
+		"position": "north"
+	},
+	"ninh-binh": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Hà Nam",
+			"Hòa Bình",
+			"Nam Định",
+			"Thanh Hóa"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Ninh Bình",
+			"nameDe": "Ninh Bình",
+			"nameIt": "Ninh Bình",
+			"population": 130517
+		},
+		"position": "north"
+	},
+	"thanh-hoa": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Hòa Bình",
+			"Nghệ An",
+			"Ninh Bình",
+			"Sơn La"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Thanh Hóa",
+			"nameDe": "Thanh Hóa",
+			"nameIt": "Thanh Hóa",
+			"population": 197551
+		},
+		"position": "north"
+	},
+	"nghe-an": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Hà Tĩnh",
+			"Thanh Hóa"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Vinh",
+			"nameDe": "Vinh",
+			"nameIt": "Vinh",
+			"population": 593645
+		},
+		"position": "north"
+	},
+	"ha-tinh": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Nghệ An",
+			"Quảng Bình"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Hà Tĩnh",
+			"nameDe": "Hà Tĩnh",
+			"nameIt": "Hà Tĩnh",
+			"population": 165396
+		},
+		"position": "centre"
+	},
+	"quang-binh": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Hà Tĩnh",
+			"Quảng Trị"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Đồng Hới",
+			"nameDe": "Đồng Hới",
+			"nameIt": "Dong Hoi",
+			"population": 189265
+		},
+		"position": "centre"
+	},
+	"quang-tri": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Quảng Bình",
+			"Thừa Thiên Huế"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Quảng Trị",
+			"nameDe": "Quảng Trị",
+			"nameIt": "Quảng Trị",
+			"population": 72722
+		},
+		"position": "centre"
+	},
+	"thua-thien-hue": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Đà Nẵng",
+			"Quảng Nam",
+			"Quảng Trị"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Hue",
+			"nameDe": "Huế",
+			"nameIt": "Huế",
+			"population": 950000
+		},
+		"position": "east"
+	},
+	"a-nang": {
+		"kind": "region",
+		"type": "City|Municipality|Thanh Pho",
+		"borders": [
+			"Quảng Nam",
+			"Thừa Thiên Huế"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Da Nang",
+			"nameDe": "Đà Nẵng",
+			"nameIt": "Da Nang",
+			"population": 1000000
+		},
+		"position": "east"
+	},
+	"quang-nam": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Đà Nẵng",
+			"Kon Tum",
+			"Quảng Ngãi",
+			"Thừa Thiên Huế"
+		],
+		"coastal": true,
+		"position": "east"
+	},
+	"quang-ngai": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bình Định",
+			"Gia Lai",
+			"Kon Tum",
+			"Quảng Nam"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Quảng Ngãi",
+			"nameDe": "Quảng Ngãi",
+			"nameIt": "Quảng Ngãi",
+			"population": 250000
+		},
+		"position": "east"
+	},
+	"kon-tum": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Gia Lai",
+			"Quảng Nam",
+			"Quảng Ngãi"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kon Tum",
+			"nameDe": "Kon Tum",
+			"nameIt": "Kon Tum",
+			"population": 105489
+		},
+		"peak": {
+			"name": "Ngoc Linh",
+			"elevation": 2598
+		},
+		"position": "east"
+	},
+	"binh-inh": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Gia Lai",
+			"Phú Yên",
+			"Quảng Ngãi"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Qui Nhon",
+			"nameDe": "Quy Nhơn",
+			"nameIt": "Qui Nhon",
+			"population": 805290
+		},
+		"position": "east"
+	},
+	"gia-lai": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Bình Định",
+			"Đắk Lắk",
+			"Kon Tum",
+			"Phú Yên",
+			"Quảng Ngãi"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Play Ku",
+			"nameDe": "Plei Cu",
+			"nameIt": "Pleiku",
+			"population": 142900
+		},
+		"position": "east"
+	},
+	"phu-yen": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bình Định",
+			"Đắk Lắk",
+			"Gia Lai",
+			"Khánh Hòa"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tuy Hòa",
+			"nameDe": "Tuy Hòa",
+			"nameIt": "Tuy Hoa",
+			"population": 69596
+		},
+		"position": "south-east"
+	},
+	"ak-lak": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Đắk Nông",
+			"Gia Lai",
+			"Khánh Hòa",
+			"Lâm Đồng",
+			"Phú Yên"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Buon Me Thuot",
+			"nameDe": "Buôn Ma Thuột",
+			"nameIt": "Buôn Ma Thuột",
+			"population": 349945
+		},
+		"peak": {
+			"name": "Chuo Yang Sin",
+			"elevation": 2420
+		},
+		"position": "south-east"
+	},
+	"khanh-hoa": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Đắk Lắk",
+			"Lâm Đồng",
+			"Ninh Thuận",
+			"Phú Yên"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Nha Trang",
+			"nameDe": "Nha Trang",
+			"nameIt": "Nha Trang",
+			"population": 411556
+		},
+		"position": "south-east"
+	},
+	"ak-nong": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Bình Phước",
+			"Đắk Lắk",
+			"Lâm Đồng"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"binh-phuoc": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bình Dương",
+			"Đắk Nông",
+			"Đồng Nai",
+			"Lâm Đồng",
+			"Tây Ninh"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Hon Quan",
+			"nameDe": "Hon Quan",
+			"nameIt": "Hớn Quản",
+			"population": 40279
+		},
+		"position": "south"
+	},
+	"lam-ong": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bình Phước",
+			"Bình Thuận",
+			"Đắk Lắk",
+			"Đắk Nông",
+			"Đồng Nai",
+			"Khánh Hòa",
+			"Ninh Thuận"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Da Lat",
+			"nameDe": "Đà Lạt",
+			"nameIt": "Da Lat",
+			"population": 256019
+		},
+		"position": "south-east"
+	},
+	"ninh-thuan": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bình Thuận",
+			"Khánh Hòa",
+			"Lâm Đồng"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Phan Rang",
+			"nameDe": "Phan Rang–Tháp Chàm",
+			"nameIt": "Phan Rang–Tháp Chàm",
+			"population": 179773
+		},
+		"position": "south-east"
+	},
+	"tay-ninh": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bình Dương",
+			"Bình Phước",
+			"Long An",
+			"Thành phố Hồ Chí Minh"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tây Ninh",
+			"nameDe": "Tây Ninh",
+			"nameIt": "Tay Ninh",
+			"population": 126370
+		},
+		"position": "south"
+	},
+	"binh-duong": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bình Phước",
+			"Đồng Nai",
+			"Tây Ninh",
+			"Thành phố Hồ Chí Minh"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Thu Dau Mot",
+			"nameDe": "Thủ Dầu Một",
+			"nameIt": "Thủ Dầu Một",
+			"population": 244277
+		},
+		"position": "south"
+	},
+	"binh-thuan": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bà Rịa - Vũng Tàu",
+			"Đồng Nai",
+			"Lâm Đồng",
+			"Ninh Thuận"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Phan Thiet",
+			"nameDe": "Phan Thiết",
+			"nameIt": "Phan Thiết",
+			"population": 336846
+		},
+		"position": "south-east"
+	},
+	"ong-nai": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Bà Rịa - Vũng Tàu",
+			"Bình Dương",
+			"Bình Phước",
+			"Bình Thuận",
+			"Lâm Đồng",
+			"Thành phố Hồ Chí Minh"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Biên Hòa",
+			"nameDe": "Biên Hòa",
+			"nameIt": "Biên Hòa",
+			"population": 652646
+		},
+		"position": "south-east"
+	},
+	"thanh-pho-ho-chi-minh": {
+		"kind": "region",
+		"type": "City|Municipality|Thanh Pho",
+		"borders": [
+			"Bình Dương",
+			"Đồng Nai",
+			"Long An",
+			"Tây Ninh"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Ho Chi Minh City",
+			"nameDe": "Ho-Chi-Minh-Stadt",
+			"nameIt": "Ho Chi Minh",
+			"population": 5314000
+		},
+		"position": "south"
+	},
+	"long-an": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Đồng Tháp",
+			"Tây Ninh",
+			"Thành phố Hồ Chí Minh",
+			"Tiền Giang"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tan An",
+			"nameDe": "Tân An",
+			"nameIt": "Tân An",
+			"population": 137498
+		},
+		"position": "south"
+	},
+	"ong-thap": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"An Giang",
+			"Cần Thơ",
+			"Long An",
+			"Tiền Giang",
+			"Vĩnh Long"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Cao Lãnh",
+			"nameDe": "Cao Lãnh",
+			"nameIt": "Cao Lãnh",
+			"population": 149837
+		},
+		"position": "south"
+	},
+	"ba-ria-vung-tau": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bình Thuận",
+			"Đồng Nai"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Vung Tau",
+			"nameDe": "Vũng Tàu",
+			"nameIt": "Vũng Tàu",
+			"population": 248767
+		},
+		"position": "south-east"
+	},
+	"an-giang": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Cần Thơ",
+			"Đồng Tháp",
+			"Kiên Giang"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Long Xuyen",
+			"nameDe": "Long Xuyên",
+			"nameIt": "Long Xuyen",
+			"population": 350000
+		},
+		"position": "south"
+	},
+	"tien-giang": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bến Tre",
+			"Cần Thơ",
+			"Đồng Tháp",
+			"Long An",
+			"Vĩnh Long"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Mỹ Tho",
+			"nameDe": "Mỹ Tho",
+			"nameIt": "Mỹ Tho",
+			"population": 124143
+		},
+		"position": "south"
+	},
+	"can-tho": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"An Giang",
+			"Đồng Tháp",
+			"Hậu Giang",
+			"Kiên Giang",
+			"Tiền Giang",
+			"Vĩnh Long"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"vinh-long": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bến Tre",
+			"Cần Thơ",
+			"Đồng Tháp",
+			"Hậu Giang",
+			"Tiền Giang",
+			"Trà Vinh"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Vĩnh Long",
+			"nameDe": "Vĩnh Long",
+			"nameIt": "Vĩnh Long",
+			"population": 103314
+		},
+		"position": "south"
+	},
+	"ben-tre": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Tiền Giang",
+			"Vĩnh Long"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Truc Giang",
+			"nameDe": "Bến Tre",
+			"nameIt": "Ben Tre",
+			"population": 59442
+		},
+		"position": "south"
+	},
+	"kien-giang": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"An Giang",
+			"Bạc Liêu",
+			"Cà Mau",
+			"Cần Thơ",
+			"Hậu Giang"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Rạch Giá",
+			"nameDe": "Rach Gia",
+			"nameIt": "Rach Gia",
+			"population": 300000
+		},
+		"position": "south"
+	},
+	"hau-giang": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Bạc Liêu",
+			"Cần Thơ",
+			"Kiên Giang",
+			"Sóc Trăng",
+			"Vĩnh Long"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Can Tho",
+			"nameDe": "Cần Thơ",
+			"nameIt": "Cần Thơ",
+			"population": 1121000
+		},
+		"position": "south"
+	},
+	"tra-vinh": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Vĩnh Long"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tra Vinh",
+			"nameDe": "Trà Vinh",
+			"nameIt": "Trà Vinh",
+			"population": 131360
+		},
+		"position": "south"
+	},
+	"soc-trang": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bạc Liêu",
+			"Hậu Giang"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Sóc Trăng",
+			"nameDe": "Sóc Trăng",
+			"nameIt": "Sóc Trăng",
+			"population": 300000
+		},
+		"position": "south"
+	},
+	"bac-lieu": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Cà Mau",
+			"Hậu Giang",
+			"Kiên Giang",
+			"Sóc Trăng"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Bạc Liêu",
+			"nameDe": "Bạc Liêu",
+			"nameIt": "Bạc Liêu",
+			"population": 225000
+		},
+		"position": "south"
+	},
+	"ca-mau": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bạc Liêu",
+			"Kiên Giang"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Cà Mau",
+			"nameDe": "Cà Mau",
+			"nameIt": "Ca Mau",
+			"population": 356636
+		},
+		"position": "south"
+	}
+}
