@@ -33,8 +33,7 @@
 				const target = parentRoute(location.pathname, resolve('/').replace(/\/$/, ''));
 				if (target.kind === 'exit') App.exitApp();
 				else if (target.kind === 'home') goto(resolve('/'), { replaceState: true });
-				else
-					goto(resolve('/map/[mapId]/overview', { mapId: target.mapId }), { replaceState: true });
+				else goto(resolve('/map/[mapId]', { mapId: target.mapId }), { replaceState: true });
 			});
 			if (destroyed) handle.remove();
 			else removeListener = () => handle.remove();

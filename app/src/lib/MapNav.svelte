@@ -61,6 +61,26 @@
 		</a>
 		<a
 			class="nav-btn nav-btn--action"
+			class:nav-btn--active={active === 'explore'}
+			data-tutorial="nav-explore"
+			href={resolve('/map/[mapId]', { mapId })}
+		>
+			<svg
+				class="nav-icon"
+				width="22"
+				height="22"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="1.8"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				><circle cx="12" cy="12" r="9" /><path d="M15.5 8.5l-2 5-5 2 2-5z" /></svg
+			>
+			<span class="nav-label">{t('nav.explore')}</span>
+		</a>
+		<a
+			class="nav-btn nav-btn--action"
 			class:nav-btn--active={active === 'overview'}
 			data-tutorial="nav-overview"
 			href={resolve('/map/[mapId]/overview', { mapId })}
@@ -82,26 +102,6 @@
 				/></svg
 			>
 			<span class="nav-label">{t('nav.overview')}</span>
-		</a>
-		<a
-			class="nav-btn nav-btn--action"
-			class:nav-btn--active={active === 'explore'}
-			data-tutorial="nav-explore"
-			href={resolve('/map/[mapId]', { mapId })}
-		>
-			<svg
-				class="nav-icon"
-				width="22"
-				height="22"
-				viewBox="0 0 24 24"
-				fill="none"
-				stroke="currentColor"
-				stroke-width="1.8"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				><circle cx="12" cy="12" r="9" /><path d="M15.5 8.5l-2 5-5 2 2-5z" /></svg
-			>
-			<span class="nav-label">{t('nav.explore')}</span>
 		</a>
 		<a
 			class="nav-btn nav-btn--action"

@@ -55,6 +55,8 @@ export type TranslationKey =
 	| 'fact.borders'
 	| 'fact.and'
 	| 'fact.close'
+	| 'known.clear'
+	| 'known.chosen'
 	| 'nav.loading'
 	| 'home.subtitle'
 	| 'home.recent'
@@ -172,6 +174,8 @@ const en: Dictionary = {
 	'fact.borders': 'Borders {names}.',
 	'fact.and': 'and',
 	'fact.close': 'Close',
+	'known.clear': 'Clear',
+	'known.chosen': 'Chosen',
 	'nav.loading': 'Loading…',
 
 	'home.subtitle': 'Pick a demo map to explore.',
@@ -304,6 +308,8 @@ const de: Dictionary = {
 	'fact.borders': 'Grenzt an {names}.',
 	'fact.and': 'und',
 	'fact.close': 'Schließen',
+	'known.clear': 'Zurücksetzen',
+	'known.chosen': 'Gewählt',
 	'nav.loading': 'Lädt…',
 
 	'home.subtitle': 'Wähle eine Demokarte zum Erkunden.',
@@ -436,6 +442,8 @@ const it: Dictionary = {
 	'fact.borders': 'Confina con {names}.',
 	'fact.and': 'e',
 	'fact.close': 'Chiudi',
+	'known.clear': 'Azzera',
+	'known.chosen': 'Scelto',
 	'nav.loading': 'Caricamento…',
 
 	'home.subtitle': 'Scegli una mappa demo da esplorare.',
