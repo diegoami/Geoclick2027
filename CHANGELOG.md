@@ -5,6 +5,60 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
+## Unreleased
+
+**Nineteen more maps, including the United States' cities — and a search box to find any of them.**
+Six tasks (FT-27 to FT-32), the programme in
+[`docs/PLAN_V0.7.md`](docs/PLAN_V0.7.md). Geoclick goes from 44 maps in 22
+countries to **63 in 28**.
+
+For players:
+
+- **The United States has cities at last** — four maps of them. **Cities**
+  is the fifty over a million; **Cities — East**, **— Center** and
+  **— West** split the country at the Mississippi and the Rockies and take
+  everything over 200 000: 82, 48 and 44 places.
+- **Six countries that had no map at all**: Turkey (81 provinces, 49
+  towns), Nigeria (37 states, 50), Vietnam (63 provinces, 44), Colombia (33
+  regions, 34), Egypt (27 governorates, 30) and South Korea (17 regions,
+  26).
+- **Italy's provinces now come in thirds as well** — North, Center and
+  South. The full map of 110 can only write about half its names at the
+  zoom it opens at; each third writes nearly all of its own.
+- **A search box above the map list.** Type a country ("korea") or a kind
+  of map ("towns") and the list narrows, with a count; Escape or Clear puts
+  it back. It follows the language you are in, so "Städte" works in German.
+- **The Progress tab is now called Known** (Gewusst, Conoscenza) — it says
+  what the screen shows: the names you know, drawn as strongly as you know
+  them.
+- **Easier to hit on a phone.** The language pills and the favourite star
+  keep their size but take taps from a finger-sized area around them, and
+  the map's zoom buttons grew from 29 to 40 px.
+- Place names were checked against the source for every new map, and a
+  number of real errors fixed: "Washington, D.C.", "St. Paul" and
+  "Ft. Worth" each had a double space, "Barlett" was Bartlett, Tennessee,
+  three Vietnamese provinces carried their macro-region's name instead of
+  their own, and Nasarawa, Elazığ, Seongnam, Osogbo and Ogbomoso were
+  spelled the old way.
+
+Under the hood:
+
+- FT-27: `--lon-min`/`--lon-max`/`--lat-min`/`--lat-max` on the city
+  builder, and a rule that tells two places of the same name apart by their
+  region ("Kansas City, Missouri") while leaving two rows for the _same_
+  place to the existing dedup.
+- FT-28: the four US maps; `usa-cities-west` stops at −125 so Honolulu and
+  Anchorage stay out, as `usa-states` already does.
+- FT-29: the same slice flags on the polygon builder, and Italy in thirds.
+- FT-30: twelve maps for six countries, each built from the name field that
+  the source actually gets right (`name_tr`, `name_vi`, `name_en`…).
+- FT-31: `mapSearch.ts`, matching country and label, accent- and
+  case-insensitive; the catalog is sorted alphabetically again.
+- FT-32: the tab rename in three languages, touch targets, and a check of
+  the real accessibility tree (the star and pills do carry their names and
+  pressed state — v0.5.0's note blamed the app for what was the emulator).
+- The map data grows by about 4 MB; 63 maps now.
+
 ## v0.6.0 — 2026-09-18 — Harder as you get better
 
 **Harder as you get better: the game now tracks how well you know each name, and the map stops giving the answer away.**
