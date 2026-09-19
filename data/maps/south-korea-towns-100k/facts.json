@@ -5,7 +5,12 @@
 		"populationRank": 23,
 		"region": "Gangwon-do",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"\"Spring river\" — chun spring, cheon river.",
+			"The capital of Gangwon, on a lake formed by dams on the Bukhan river.",
+			"Dakgalbi, stir-fried spicy chicken, was invented here in the 1960s as cheap food for soldiers and students."
+		]
 	},
 	"gangneung": {
 		"kind": "city",
@@ -13,7 +18,12 @@
 		"populationRank": 24,
 		"region": "Gangwon-do",
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"\"River hill\" — one half of the portmanteau that makes the province name Gangwon.",
+			"The coastal venues for the 2018 Winter Olympics were here.",
+			"Its Danoje festival, a shamanic rite going back centuries, is a UNESCO intangible heritage item."
+		]
 	},
 	"goyang": {
 		"kind": "city",
@@ -22,7 +32,12 @@
 		"population1950": 39000,
 		"region": "Gyeonggi-do",
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"\"High sun\" or \"high brightness\", from the merging of two older districts.",
+			"A satellite city of Seoul, and the site of KINTEX, Korea’s largest exhibition centre.",
+			"Its Haengju fortress saw a 1593 battle in which civilians, including women carrying stones in their aprons, helped repel a Japanese force."
+		]
 	},
 	"seoul": {
 		"kind": "city",
@@ -45,7 +60,12 @@
 		"population1950": 31000,
 		"region": "Gyeonggi-do",
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"\"Wealthy river\" — bu wealth, cheon river.",
+			"Squeezed between Seoul and Incheon, it is one of the most densely populated cities in the country.",
+			"It is a UNESCO City of Literature and hosts a well-known fantastic film festival."
+		]
 	},
 	"incheon": {
 		"kind": "city",
@@ -68,7 +88,12 @@
 		"population1950": 54000,
 		"region": "Gyeonggi-do",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"\"South of the fortress\" — seong fortress, nam south.",
+			"Bundang in it was one of Korea’s first planned new towns, built in the early 1990s.",
+			"Pangyo beside it is the country’s main software cluster, often called the Korean Silicon Valley."
+		]
 	},
 	"wonju": {
 		"kind": "city",
@@ -76,7 +101,12 @@
 		"populationRank": 22,
 		"region": "Gangwon-do",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"\"Field district\" — the other half of the Gangwon portmanteau.",
+			"Its Chiaksan national park has some of the steepest hiking in the country.",
+			"The Goryeo-era woodblocks of the Tripitaka were first carved in this region before being moved south."
+		]
 	},
 	"ansan": {
 		"kind": "city",
@@ -84,7 +114,12 @@
 		"populationRank": 14,
 		"region": "Gyeonggi-do",
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"\"Peaceful mountain\" — an peace, san mountain.",
+			"It has one of the largest foreign-born populations in Korea, with a multicultural district serving dozens of nationalities.",
+			"The Sewol ferry disaster of 2014 killed 250 students from a single high school here."
+		]
 	},
 	"suwon": {
 		"kind": "city",
@@ -93,7 +128,12 @@
 		"population1950": 74000,
 		"region": "Gyeonggi-do",
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"\"Water source\" — su water, won source.",
+			"Its Hwaseong fortress was built in the 1790s by a king for his father’s tomb, using a crane its designer invented, and is a UNESCO site.",
+			"Samsung Electronics has its main research campus in the city."
+		]
 	},
 	"cheongju": {
 		"kind": "city",
@@ -101,7 +141,12 @@
 		"populationRank": 13,
 		"region": "Chungcheongbuk-do",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"\"Clear district\" — one half of the Chungcheong portmanteau.",
+			"The Jikji, printed here in 1377 with movable metal type, is 78 years older than the Gutenberg Bible and is a UNESCO Memory of the World item.",
+			"The temple that printed it is gone; only its site and the book, now in Paris, survive."
+		]
 	},
 	"andong": {
 		"kind": "city",
@@ -109,7 +154,12 @@
 		"populationRank": 26,
 		"region": "Daegu",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"\"Eastern peace\" — an peace, dong east.",
+			"It is the most Confucian city in Korea, and its Hahoe village and mask dance are both UNESCO-listed.",
+			"Andong soju, distilled here since the Goryeo period, is far stronger than the modern industrial kind."
+		]
 	},
 	"daejeon": {
 		"kind": "city",
@@ -130,7 +180,12 @@
 		"populationRank": 16,
 		"region": "Daegu",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"\"Encircling bay\" — po a bay or inlet.",
+			"POSCO here is one of the largest steelmakers in the world, built from nothing in 1968 with Japanese reparations money.",
+			"Homigot on its cape has a giant bronze hand rising from the sea, where Koreans watch the year’s first sunrise."
+		]
 	},
 	"gunsan": {
 		"kind": "city",
@@ -138,7 +193,12 @@
 		"populationRank": 21,
 		"region": "Jeollabuk-do",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"\"Group mountain\" — gun a group, san mountain, for the islands offshore.",
+			"It was a rice-export port under Japanese rule, and more Japanese colonial buildings survive here than anywhere in Korea.",
+			"Its Saemangeum seawall is the longest in the world at 33 km."
+		]
 	},
 	"iksan": {
 		"kind": "city",
@@ -146,7 +206,12 @@
 		"populationRank": 19,
 		"region": "Jeollabuk-do",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"\"Increasing mountain\".",
+			"Mireuksa here was the largest Buddhist temple in Baekje, and its stone pagoda is the oldest and biggest in Korea.",
+			"A gilt-bronze reliquary found inside it in 2009 rewrote what was known about the temple’s founding."
+		]
 	},
 	"daegu": {
 		"kind": "city",
@@ -168,7 +233,12 @@
 		"populationRank": 25,
 		"region": "Daegu",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"\"Capital district\" — gyeong capital, the same character as in Gyeonggi.",
+			"It was the capital of the Silla kingdom for a thousand years and is called a museum without walls.",
+			"Seokguram grotto and Bulguksa temple above it are UNESCO sites, and royal tomb mounds sit among the streets."
+		]
 	},
 	"jeonju": {
 		"kind": "city",
@@ -176,7 +246,12 @@
 		"populationRank": 15,
 		"region": "Jeollabuk-do",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"\"Perfect district\" — one half of the Jeolla portmanteau.",
+			"It is the ancestral seat of the Joseon royal house and a UNESCO City of Gastronomy.",
+			"Bibimbap is its dish, and its hanok village has about 700 traditional tiled houses."
+		]
 	},
 	"ulsan": {
 		"kind": "city",
@@ -197,7 +272,12 @@
 		"populationRank": 7,
 		"region": "Gyeongsangnam-do",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"\"Prosperous field\" — chang to flourish, won a field.",
+			"Korea’s first planned industrial city, laid out in the 1970s for heavy machinery.",
+			"It introduced the country’s first public bicycle-sharing scheme and has unusually wide, green streets."
+		]
 	},
 	"gwangju": {
 		"kind": "city",
@@ -232,7 +312,12 @@
 		"populationRank": 20,
 		"region": "Gwangju",
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"\"Wood port\" — mok wood, po a port.",
+			"The gateway to the thousands of islands of the south-west, with ferries to most of them.",
+			"The Sewol ferry was raised and brought here in 2017; its hull is kept as a memorial."
+		]
 	},
 	"yeosu": {
 		"kind": "city",
@@ -240,7 +325,12 @@
 		"populationRank": 18,
 		"region": "Gwangju",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"\"Beautiful water\" — yeo beautiful, su water.",
+			"Admiral Yi Sun-sin based his fleet here, and replicas of his ironclad turtle ships are moored in the harbour.",
+			"It hosted the 2012 World Expo on the theme of the ocean."
+		]
 	},
 	"jeju": {
 		"kind": "city",

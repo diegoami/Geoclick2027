@@ -5,7 +5,12 @@
 		"populationRank": 13,
 		"region": "Pomeranian",
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"From an old Pomeranian name, probably from a personal name or a word for a marsh.",
+			"It was a fishing village until Poland, cut off from Gdańsk by the Free City arrangement, built a port here from 1926.",
+			"Within thirteen years it was the busiest port on the Baltic, which is why it looks entirely modernist."
+		]
 	},
 	"gdansk": {
 		"kind": "city",
@@ -13,7 +18,12 @@
 		"populationRank": 5,
 		"region": "Pomeranian",
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"From the river Gdań, itself from an old Slavic root; the German form was Danzig.",
+			"The Second World War began here on 1 September 1939 with the shelling of Westerplatte.",
+			"Solidarity was founded in its shipyard in 1980, and that is where the end of communism in Europe started."
+		]
 	},
 	"koszalin": {
 		"kind": "city",
@@ -21,7 +31,12 @@
 		"populationRank": 21,
 		"region": "West Pomeranian",
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"From a Slavic personal name, Koszała, or a word for a basket-maker.",
+			"German as Köslin until 1945; its population was entirely replaced after the war.",
+			"Mount Chłopska Góra above it has a ski slope of sorts, unusual for a town this close to the flat Baltic coast."
+		]
 	},
 	"elblag": {
 		"kind": "city",
@@ -29,7 +44,12 @@
 		"populationRank": 19,
 		"region": "Warmian-Masurian",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"From the river Elbląg; the German form was Elbing.",
+			"The Elbląg Canal from here carries boats overland on rail cradles up five slipways, a working nineteenth-century oddity.",
+			"It was a Hanseatic town and briefly richer than Gdańsk, before the river silted."
+		]
 	},
 	"olsztyn": {
 		"kind": "city",
@@ -37,7 +57,12 @@
 		"populationRank": 17,
 		"region": "Warmian-Masurian",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"From olsza, the alder tree — German Allenstein.",
+			"Copernicus was administrator of its castle in 1516–21 and organised its defence against the Teutonic Knights.",
+			"It has eleven lakes inside the city limits, in the middle of the Masurian lake district."
+		]
 	},
 	"grudziadz": {
 		"kind": "city",
@@ -45,7 +70,12 @@
 		"populationRank": 22,
 		"region": "Kuyavian-Pomeranian",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"From gród, a fortified settlement — the same root as Novgorod and Belgrade.",
+			"Its granaries stand in a wall along the Vistula, one of the most distinctive riverfronts in Poland.",
+			"German as Graudenz for 150 years; the town returned to Poland in 1920."
+		]
 	},
 	"szczecin": {
 		"kind": "city",
@@ -53,7 +83,12 @@
 		"populationRank": 10,
 		"region": "West Pomeranian",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"From a Slavic root, possibly szczet, a bristle, or a personal name; German Stettin.",
+			"It is 12 km from Germany, was German until 1945, and is older than the Polish state.",
+			"Catherine the Great was born here, as Sophie of Anhalt-Zerbst, before marrying into the Russian throne."
+		]
 	},
 	"bia-ystok": {
 		"kind": "city",
@@ -61,7 +96,12 @@
 		"populationRank": 14,
 		"region": "Podlachian",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"\"White slope\" or \"white stream\" — biały white, stok a slope or watercourse.",
+			"Ludwik Zamenhof was born here and invented Esperanto, partly because the town’s Poles, Jews, Germans and Russians could not talk to each other.",
+			"The Branicki Palace in it is called the Versailles of Podlasie."
+		]
 	},
 	"bydgoszcz": {
 		"kind": "city",
@@ -69,7 +109,12 @@
 		"populationRank": 11,
 		"region": "Kuyavian-Pomeranian",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"From a personal name, Bydgost, plus a possessive ending.",
+			"German as Bromberg for over a century; its canal of 1774 linked the Vistula and the Oder basins.",
+			"Its granary buildings on the Brda and the sculpture of a man on a tightrope over the river are the city’s emblem."
+		]
 	},
 	"poznan": {
 		"kind": "city",
@@ -77,7 +122,12 @@
 		"populationRank": 8,
 		"region": "Greater Poland",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"From a personal name, Poznan, meaning roughly \"the known one\".",
+			"Poland began here: Mieszko I was baptised in 966 in this area, which is the founding date of the Polish state.",
+			"Two mechanical goats butt heads on its town hall clock every noon, a ritual since 1551."
+		]
 	},
 	"warszawa": {
 		"kind": "city",
@@ -87,7 +137,12 @@
 		"region": "Masovian",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"From a personal name, Warsz — the mermaid legend of Wars and Sawa is a later folk invention.",
+			"About 85% of the city was deliberately destroyed after the 1944 uprising and rebuilt from paintings and photographs.",
+			"That reconstruction is itself a UNESCO site, listed for the act of rebuilding rather than for the original."
+		]
 	},
 	"zielona-gora": {
 		"kind": "city",
@@ -95,7 +150,12 @@
 		"populationRank": 20,
 		"region": "Lubusz",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"\"Green mountain\" — German Grünberg, the same words.",
+			"It has grown wine since the thirteenth century, the most northerly vineyards in Poland, and holds a wine festival each September.",
+			"It was one of the few Silesian towns whose German population was not entirely displaced immediately in 1945."
+		]
 	},
 	"odz": {
 		"kind": "city",
@@ -104,14 +164,24 @@
 		"population1950": 608000,
 		"region": "Lódz",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"Łódź means \"boat\", and the coat of arms is one, though the city sits on no navigable river.",
+			"It grew from 800 people to 300,000 in a century on textiles, which is why it is laid out like Manchester.",
+			"Its Piotrkowska Street runs over 4 km, one of the longest commercial streets in Europe."
+		]
 	},
 	"lublin": {
 		"kind": "city",
 		"population": 360044,
 		"populationRank": 12,
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"Probably from the personal name Lubla.",
+			"The Union of Lublin of 1569 joined Poland and Lithuania into one commonwealth for two centuries.",
+			"Majdanek on its edge was a Nazi camp captured almost intact in 1944, the first the world saw in full."
+		]
 	},
 	"wroc-aw": {
 		"kind": "city",
@@ -119,7 +189,12 @@
 		"populationRank": 7,
 		"region": "Lower Silesian",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"From Vratislav, a Bohemian duke — German Breslau is the same name worn differently.",
+			"It has been Polish, Bohemian, Austrian, Prussian and German before returning in 1945, and its population was almost wholly exchanged.",
+			"Over 600 small bronze dwarf figures are hidden around the city, a nod to an anti-communist protest movement."
+		]
 	},
 	"kielce": {
 		"kind": "city",
@@ -127,14 +202,24 @@
 		"populationRank": 16,
 		"region": "Swietokrzyskie",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"Of uncertain origin, possibly from kieł or a personal name.",
+			"A pogrom here in 1946, after the war, killed 42 Jewish survivors and drove most of Poland’s remaining Jews to emigrate.",
+			"The Świętokrzyskie mountains around it are among the oldest in Europe."
+		]
 	},
 	"opole": {
 		"kind": "city",
 		"population": 131412,
 		"populationRank": 18,
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"From an Old Slavic word for a community of villages holding land together — the word is older than the town.",
+			"It hosts Poland’s national festival of Polish song, running since 1963.",
+			"It has the country’s largest German minority, and road signs in the region are bilingual."
+		]
 	},
 	"bytom": {
 		"kind": "city",
@@ -142,7 +227,12 @@
 		"populationRank": 6,
 		"region": "Silesian",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Probably from byt, a dwelling or existence — German Beuthen.",
+			"Coal and zinc were mined directly under the town, and parts of it have subsided visibly.",
+			"It is one of the oldest towns of Upper Silesia, with charter rights from 1254."
+		]
 	},
 	"gliwice": {
 		"kind": "city",
@@ -150,7 +240,12 @@
 		"populationRank": 9,
 		"region": "Silesian",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Of uncertain Slavic origin — German Gleiwitz.",
+			"The Gleiwitz incident of 31 August 1939, a staged Polish attack on its radio tower, was the Nazi pretext for invading Poland.",
+			"That tower still stands and is the tallest wooden structure in the world at 118 m."
+		]
 	},
 	"katowice": {
 		"kind": "city",
@@ -158,7 +253,12 @@
 		"populationRank": 1,
 		"region": "Silesian",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Probably from kat, a hangman, or from a personal name Kat.",
+			"It sits over a coalfield so intensively worked that whole districts were built for miners.",
+			"Its Spodek arena of 1971, shaped like a flying saucer, is a landmark of Polish modernism."
+		]
 	},
 	"krakow": {
 		"kind": "city",
@@ -167,7 +267,12 @@
 		"population1950": 339000,
 		"region": "Lesser Poland",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"From Krak, the legendary founder who, in the story, killed a dragon that lived under the castle hill.",
+			"It was Poland’s capital for five centuries and survived the war almost undamaged, unlike Warsaw.",
+			"A trumpeter plays from St Mary’s tower every hour and breaks off mid-note, for a trumpeter said to have been shot in the throat in 1241."
+		]
 	},
 	"rzeszow": {
 		"kind": "city",
@@ -175,6 +280,11 @@
 		"populationRank": 15,
 		"region": "Subcarpathian",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"From a personal name, Rzech.",
+			"It has become Poland’s aviation centre, with an industrial cluster called Aviation Valley.",
+			"It is the closest large Polish city to Ukraine and became the main logistics hub for aid after 2022."
+		]
 	}
 }

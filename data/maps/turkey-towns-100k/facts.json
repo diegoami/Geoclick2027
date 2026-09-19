@@ -118,7 +118,12 @@
 		"populationRank": 16,
 		"region": "Kocaeli",
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"From Nicomedia, through Greek \"eis Nikomedian\" — the same worn-down construction as Istanbul and Izmir.",
+			"It was the eastern capital of the Roman Empire under Diocletian, before Constantinople was built.",
+			"The 1999 earthquake here killed over 17,000 people and reshaped Turkish building regulation."
+		]
 	},
 	"adapazar": {
 		"kind": "city",
@@ -126,7 +131,12 @@
 		"populationRank": 25,
 		"region": "Sakarya",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"\"Island market\" — ada island, pazar market: a market on land ringed by river branches.",
+			"It is the capital of Sakarya province and the centre of Turkey’s railway rolling-stock industry.",
+			"The 1999 earthquake struck here too, and parts of the town sank into liquefied ground."
+		]
 	},
 	"corum": {
 		"kind": "city",
@@ -524,7 +534,12 @@
 		"populationRank": 42,
 		"region": "Mardin",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"From ancient Nisibis, a Mesopotamian city on the Roman-Persian frontier.",
+			"Its School of Nisibis was a major centre of Syriac learning from the fourth century, sometimes called an early university.",
+			"The Syrian border runs along the edge of the town, dividing it from Qamishli on the other side."
+		]
 	},
 	"adana": {
 		"kind": "city",
@@ -545,7 +560,12 @@
 		"populationRank": 8,
 		"region": "Mersin",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"An ancient name of unclear origin, recorded by the Hittites as Tarsa.",
+			"St Paul was born here, and Cleopatra sailed up its river to meet Mark Antony in 41 BC.",
+			"The Cilician Gates above it are the pass through the Taurus that every army crossing Anatolia has used."
+		]
 	},
 	"antalya": {
 		"kind": "city",
@@ -578,7 +598,12 @@
 		"populationRank": 24,
 		"region": "Hatay",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"\"Little Alexander\" — Alexandretta, founded by Alexander the Great after his victory at Issus nearby in 333 BC.",
+			"It was the Mediterranean outlet for Aleppo for centuries, and its hinterland is Arabic-speaking.",
+			"Turkey’s main naval base on the eastern Mediterranean is here."
+		]
 	},
 	"antakya": {
 		"kind": "city",
@@ -586,6 +611,11 @@
 		"populationRank": 40,
 		"region": "Hatay",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"From Antioch, founded around 300 BC by Seleucus and named for his father Antiochus.",
+			"It was the third city of the Roman Empire, and the followers of Jesus were first called Christians here.",
+			"Its mosaic museum holds one of the largest collections in the world; the 2023 earthquake destroyed much of the old town."
+		]
 	}
 }

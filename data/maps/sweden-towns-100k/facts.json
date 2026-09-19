@@ -17,7 +17,12 @@
 		"populationRank": 5,
 		"region": "Västmanland",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"\"Western Aros\" — aros is a river mouth, so the name is the western river mouth, against Uppsala’s eastern one.",
+			"ASEA, which became ABB, was founded here in 1883 and made the town an electrical engineering centre.",
+			"Its Anundshög is Sweden’s largest burial mound, with stone ship settings beside it."
+		]
 	},
 	"stockholm": {
 		"kind": "city",
@@ -39,7 +44,12 @@
 		"populationRank": 2,
 		"region": "Västra Götaland",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"\"Fortress of the Geats\" — Göta plus borg, founded in 1621 by Gustav II Adolf with Dutch engineers, which is why it has canals.",
+			"Volvo was founded here in 1927, and the name is Latin for \"I roll\".",
+			"Its Liseberg is the largest amusement park in Scandinavia, and the city holds Sweden’s biggest port."
+		]
 	},
 	"malmo": {
 		"kind": "city",
@@ -47,6 +57,11 @@
 		"populationRank": 3,
 		"region": "Skåne",
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": [
+			"Probably from malm, a sandy or gravelly ground, plus haug, a mound.",
+			"Danish until 1658, and now joined to Copenhagen by the Öresund bridge, which becomes a tunnel halfway across.",
+			"Its Turning Torso, twisting 90 degrees over 54 floors, was the tallest building in Scandinavia when finished."
+		]
 	}
 }

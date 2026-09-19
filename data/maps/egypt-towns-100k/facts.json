@@ -5,21 +5,36 @@
 		"populationRank": 22,
 		"region": "Kafr ash Shaykh",
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"Rosetta to Europeans, Rashid in Arabic — the name means \"the rightly guided\".",
+			"The Rosetta Stone was found here in 1799 by a French soldier digging a fort foundation.",
+			"Its Greek, demotic and hieroglyphic text let Champollion decipher hieroglyphs in 1822."
+		]
 	},
 	"dumyat": {
 		"kind": "city",
 		"population": 299459,
 		"populationRank": 19,
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"The Arabic form of Damietta, from Ancient Egyptian Tamiat through Coptic.",
+			"The Fifth Crusade took it after an eighteen-month siege in 1219.",
+			"It is Egypt’s furniture-making capital, with thousands of small workshops."
+		]
 	},
 	"matruh": {
 		"kind": "city",
 		"population": 103470,
 		"populationRank": 30,
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"Marsa Matruh, \"the harbour of Matruh\" — marsa is an anchorage.",
+			"Its harbour was ancient Paraetonium, and Cleopatra is said to have swum in a cove nearby.",
+			"El Alamein, where the 1942 battle turned the desert war, is along this coast."
+		]
 	},
 	"bur-said": {
 		"kind": "city",
@@ -27,7 +42,12 @@
 		"populationRank": 5,
 		"region": "Bur Sa`id",
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"Port Said in Arabic — bur is port, and Said was the viceroy who granted the canal concession.",
+			"Built in 1859 with the northern entrance of the Suez Canal.",
+			"The Anglo-French invasion of 1956 landed here, and the city’s resistance is a national story."
+		]
 	},
 	"alexandria": {
 		"kind": "city",
@@ -49,7 +69,12 @@
 		"populationRank": 24,
 		"region": "Shamal Sina'",
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": [
+			"Arabic for \"the booth\" or \"the palm-frond shelter\".",
+			"The largest town in Sinai and its administrative capital.",
+			"It sits on the ancient coast road between Egypt and Palestine, walked by armies in both directions for millennia."
+		]
 	},
 	"kafr-el-sheikh": {
 		"kind": "city",
@@ -70,7 +95,12 @@
 		"populationRank": 7,
 		"region": "Ad Daqahliyah",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"\"The victorious\" — named for the defeat of the Fifth Crusade here in 1221.",
+			"Louis IX of France was captured in a house in this town in 1250, ending his crusade.",
+			"Its university has one of Egypt’s best-regarded medical faculties."
+		]
 	},
 	"damanhur": {
 		"kind": "city",
@@ -78,7 +108,12 @@
 		"populationRank": 10,
 		"region": "Al Buhayrah",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"From Ancient Egyptian Dmi-n-Hor, \"the town of Horus\" — a name over three thousand years old.",
+			"It was Hermopolis Parva to the Greeks.",
+			"It sits in the western Delta and is a centre of the cotton trade."
+		]
 	},
 	"tanta": {
 		"kind": "city",
@@ -86,7 +121,12 @@
 		"populationRank": 14,
 		"region": "Al Gharbiyah",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"Of Ancient Egyptian origin, worn down through Coptic Tantathō.",
+			"Its mulid for al-Sayyid al-Badawi draws crowds comparable in size to the Hajj.",
+			"It is the largest town of the central Delta and a cotton-ginning centre."
+		]
 	},
 	"ismailia": {
 		"kind": "city",
@@ -107,7 +147,12 @@
 		"populationRank": 20,
 		"region": "Ash Sharqiyah",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"Of uncertain origin — possibly from a family name, or from an Arabic word for a mound.",
+			"Bubastis beside it was the cult city of Bastet, the cat goddess, whose festival Herodotus called the rowdiest in Egypt.",
+			"Ahmed Urabi, who led the 1879 revolt against foreign control, came from a village nearby."
+		]
 	},
 	"shibin-el-kom": {
 		"kind": "city",
@@ -115,7 +160,12 @@
 		"populationRank": 23,
 		"region": "Al Minufiyah",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"\"Shibin of the mound\" — kom is a mound of ancient debris, the standard word in Egyptian place names.",
+			"The capital of Monufia, the province that produced two Egyptian presidents.",
+			"Entirely surrounded by Delta farmland, some of the most intensively cultivated soil on earth."
+		]
 	},
 	"benha": {
 		"kind": "city",
@@ -123,7 +173,12 @@
 		"populationRank": 25,
 		"region": "Al Qalyubiyah",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"From Ancient Egyptian through Coptic Panaho.",
+			"Athribis beside it was an ancient capital, and a hoard of gold and silver was found there in 1924.",
+			"It is known across Egypt for its honey and its sweets."
+		]
 	},
 	"cairo": {
 		"kind": "city",
@@ -172,7 +227,12 @@
 		"populationRank": 15,
 		"region": "Al Fayyum",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"From Coptic phiom, \"the lake\" — itself from Ancient Egyptian pa-yom, the sea.",
+			"One of the oldest cities in Egypt, known to the Greeks as Crocodilopolis for the crocodile god worshipped there.",
+			"Its mummy portraits, painted on wood in the Roman period, are the most lifelike faces to survive from antiquity."
+		]
 	},
 	"beni-suef": {
 		"kind": "city",
@@ -193,7 +253,12 @@
 		"populationRank": 27,
 		"region": "Al Minya",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"Of Coptic origin, from an older Egyptian settlement name.",
+			"It sits opposite Gebel el-Teir, a cliff-top monastery said to have sheltered the Holy Family.",
+			"The town is a sugar-cane and cotton centre on the west bank of the Nile."
+		]
 	},
 	"el-minya": {
 		"kind": "city",
@@ -201,7 +266,12 @@
 		"populationRank": 11,
 		"region": "Al Minya",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"From Coptic Tmoone, \"the residence\".",
+			"Amarna nearby was Akhenaten’s capital, built and abandoned within one reign for his one-god religion.",
+			"It is called the bride of Upper Egypt and has the largest Christian population share in the country."
+		]
 	},
 	"mallawi": {
 		"kind": "city",
@@ -209,7 +279,12 @@
 		"populationRank": 21,
 		"region": "Al Minya",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"Of Coptic or older Egyptian origin.",
+			"Tuna el-Gebel nearby holds catacombs with millions of mummified ibises and baboons sacred to Thoth.",
+			"Its museum was looted and burned in 2013; many objects were later recovered."
+		]
 	},
 	"hurghada": {
 		"kind": "city",
@@ -217,7 +292,12 @@
 		"populationRank": 26,
 		"region": "Al Bahr al Ahmar",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"From an Arabic word for a local thorny plant, hurghad.",
+			"A fishing village until the 1980s, now the main Red Sea resort with hundreds of hotels.",
+			"Giftun island offshore is a protected area, and the reefs here are among the most heat-tolerant in the world."
+		]
 	},
 	"asyut": {
 		"kind": "city",
@@ -250,7 +330,12 @@
 		"populationRank": 29,
 		"region": "Suhaj",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"Named for a Coptic monastery of St George — Girga is George.",
+			"It was the capital of Upper Egypt under the Ottomans.",
+			"Abydos, the cult centre of Osiris and site of the king list that gave Egyptology its chronology, is in its district."
+		]
 	},
 	"qena": {
 		"kind": "city",
@@ -284,7 +369,12 @@
 		"populationRank": 17,
 		"region": "Aswan",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"\"The mound of Ombos\" — kom a mound, Ombos from Ancient Egyptian Nubt, \"the golden\".",
+			"Its temple is double, divided down the middle between the crocodile god Sobek and the falcon god Haroeris.",
+			"A wall there carves what appear to be surgical instruments, among the earliest medical illustrations known."
+		]
 	},
 	"aswan": {
 		"kind": "city",
