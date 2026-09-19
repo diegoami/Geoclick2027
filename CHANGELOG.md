@@ -22,12 +22,18 @@ For players:
   German, Alpi and Mar Adriatico in Italian.
 - A terrain name never covers a name you are learning — it gives way, and
   comes back when there is room.
+- **Peaks and the great circles**, in the same Terrain switch. Mont Blanc
+  4 807 m above Valle d'Aosta, Monte Etna 3 322 m on Sicilia, Fuji on
+  Honshu, the Qattara Depression at −133 m in Egypt's western desert — and
+  the Tropic of Cancer drawn straight across Egypt, just above Aswan.
 - With Terrain on, the region colours lighten so the ground shows through:
   the Apennines run visibly down the middle of Italy, the Appalachians up
   the eastern United States. Switching it off puts the colours straight back.
 
 Under the hood:
 
+- FT-37: two more Natural Earth datasets; 12 peaks per map, the tallest
+  first, and named depressions always kept.
 - FT-33: five more Natural Earth datasets; a second tileset per map
   (`terrain.pmtiles`, 4.94 MB over all 63, fetched only when the layer is
   switched on) built by `data/scripts/build-terrain.ts`; its maximum zoom

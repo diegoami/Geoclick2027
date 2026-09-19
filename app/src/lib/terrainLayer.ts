@@ -59,6 +59,20 @@ function terrainPriority(rank: unknown): number {
 	return TERRAIN_LABEL_PRIORITY - scale / 100;
 }
 
+// A summit beats the range it sits in - it is the sharper hook - and a great
+// circle, which is a fact about the whole map rather than a place on it,
+// gives way to both. All three still sit below every target name.
+const PEAK_LABEL_PRIORITY = -0.5;
+const LINE_LABEL_PRIORITY = -2;
+// A peak's name goes beside its 3 px dot, never on it (the same rule a
+// town's name follows, FT-24 - see labelCollision.ts's DOT_CLEARANCE_PX).
+const PEAK_CLEARANCE_PX = 9;
+
+/** "4807" as "4807 m", in the player's own digits. */
+function formatMetres(elevation: number): string {
+	return `${Math.round(elevation).toLocaleString(getLanguage())} m`;
+}
+
 const LAYERS: LayerSpecification[] = [
 	{
 		id: 'sea-fill',
@@ -88,6 +102,21 @@ const LAYERS: LayerSpecification[] = [
 		}
 	},
 	{
+		// The great circles (FT-37): Equator, Tropics, Polar Circles, Date
+		// Line. Dashed and grey, because they are not a thing on the ground -
+		// a solid line here would read as a border or a river.
+		id: 'lines-line',
+		type: 'line',
+		source: TERRAIN_SOURCE,
+		'source-layer': 'lines',
+		paint: {
+			'line-color': '#9a8f74',
+			'line-width': 1.2,
+			'line-dasharray': [4, 3],
+			'line-opacity': 0.8
+		}
+	},
+	{
 		id: 'rivers-line',
 		type: 'line',
 		source: TERRAIN_SOURCE,
@@ -109,6 +138,24 @@ const LAYERS: LayerSpecification[] = [
 				2.6
 			],
 			'line-opacity': 0.9
+		}
+	},
+	{
+		// A peak's marker (FT-37). A small triangle would need an image or a
+		// glyph server; a tiny brown circle with a ring reads as "a point on
+		// the ground" and needs neither, and it is deliberately smaller and a
+		// different colour from a town's target dot so the two can never be
+		// confused while playing a towns map.
+		id: 'peaks-point',
+		type: 'circle',
+		source: TERRAIN_SOURCE,
+		'source-layer': 'peaks',
+		paint: {
+			'circle-radius': 3,
+			'circle-color': '#7a6242',
+			'circle-stroke-width': 1.2,
+			'circle-stroke-color': '#f6f1e2',
+			'circle-opacity': 0.95
 		}
 	}
 ];
@@ -248,28 +295,75 @@ export class TerrainLayer {
 	/** One popup per named feature currently in view. */
 	private drawLabels(): void {
 		this.removeLabels();
-		const features = this.map.querySourceFeatures(TERRAIN_SOURCE, {
-			sourceLayer: 'physical_labels'
-		});
 		const seen = new Set<string>();
-		for (const feature of features) {
+		// Ranges and seas, then the peaks, then the great circles. Each is a
+		// point layer in the same archive; the peaks add their height to the
+		// name, because "Mont Blanc 4 807 m" is a better hook than the name
+		// alone, and a circle's label rides on the line itself.
+		this.drawLabelLayer(
+			'physical_labels',
+			seen,
+			(p) => labelFor(p),
+			(p) => terrainPriority(p.rank)
+		);
+		this.drawLabelLayer(
+			'peaks',
+			seen,
+			(p) =>
+				`${labelFor(p)}${typeof p.elevation === 'number' ? ` ${formatMetres(p.elevation)}` : ''}`,
+			// Above the ranges and seas, below every target name: a summit is a
+			// sharper hook than the range it sits in, and the tallest wins.
+			(p) => PEAK_LABEL_PRIORITY + (typeof p.elevation === 'number' ? p.elevation / 1e5 : 0)
+		);
+		this.drawLabelLayer(
+			'lines',
+			seen,
+			(p) => labelFor(p),
+			() => LINE_LABEL_PRIORITY
+		);
+	}
+
+	/** One popup per named feature of a point layer in the terrain archive. */
+	private drawLabelLayer(
+		sourceLayer: string,
+		seen: Set<string>,
+		text: (properties: Record<string, unknown>) => string,
+		priority: (properties: Record<string, unknown>) => number
+	): void {
+		for (const feature of this.map.querySourceFeatures(TERRAIN_SOURCE, { sourceLayer })) {
 			const properties = (feature.properties ?? {}) as Record<string, unknown>;
-			const text = labelFor(properties);
+			const label = text(properties);
 			// A feature split across tile boundaries comes back once per tile.
-			if (text === '' || seen.has(text)) continue;
-			seen.add(text);
+			if (label === '' || seen.has(label)) continue;
 			const geometry = feature.geometry;
-			if (geometry.type !== 'Point') continue;
+			// A great circle is a line: its label goes where the line enters
+			// the map, which for a clipped line is its first point.
+			const at =
+				geometry.type === 'Point'
+					? (geometry.coordinates as [number, number])
+					: geometry.type === 'LineString'
+						? (geometry.coordinates[Math.floor(geometry.coordinates.length / 2)] as [
+								number,
+								number
+							])
+						: undefined;
+			if (!at) continue;
+			seen.add(label);
 			const popup = new maplibregl.Popup({
 				closeButton: false,
 				closeOnClick: false,
 				anchor: 'center',
-				className: 'geoclick-terrain-label'
+				className: `geoclick-terrain-label geoclick-terrain-${sourceLayer}`
 			})
-				.setLngLat(geometry.coordinates as [number, number])
-				.setText(text)
+				.setLngLat(at)
+				.setText(label)
 				.addTo(this.map);
-			registerLabel(popup, { priority: terrainPriority(properties.rank) });
+			registerLabel(popup, {
+				priority: priority(properties),
+				// A peak's name sits beside its dot, never on it - the same rule
+				// a town's name follows (FT-24).
+				beside: sourceLayer === 'peaks' ? PEAK_CLEARANCE_PX : undefined
+			});
 			this.popups.push(popup);
 		}
 	}

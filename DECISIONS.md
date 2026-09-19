@@ -1172,6 +1172,40 @@ answers:
   Overview the background stays background, while in the quiz — where few
   names are on the map yet — the terrain shows.
 
+## Peaks and the great circles (2026-09-19, FT-37)
+
+- **Two more landmark sets inside the same Terrain toggle**, not a second
+  switch. The product owner, after trying FT-33: _"any other landmarks that
+  could help with mnemonics? Such as volcanoes, mountain peaks, national
+  parks and whatever."_ Named summits carry their height ("Mont Blanc
+  4 807 m"), because the number is part of the hook; the great circles are
+  dashed and grey, because a solid line there would read as a border.
+- **What was rejected, and why** — measured against all 63 maps rather than
+  argued about:
+  - **National parks**: Natural Earth's file is the **United States only**,
+    61 features. One country of 28.
+  - **Airports**: 1 659 placements, every map has some, so coverage was not
+    the problem — an airport sits at a city the player is already learning,
+    so it restates a dot already on screen.
+  - **Glaciated areas** (1.6 MB): five countries' worth of value.
+  - **Urban areas** (12.8 MB) and **roads/railroads** (8.9/14.8 MB): too
+    heavy, and on a towns map the built-up blob hints at the answer.
+- **Volcanoes are not a Natural Earth layer at all** — but the famous ones
+  are already in the elevation points as plain mountains (Vesuvio, Monte
+  Etna, Fuji, Nevado del Ruiz). A real volcano/park/heritage-site pass needs
+  **Wikidata**, which is CC0 and which this data can already address:
+  Natural Earth carries a Wikidata id for 94 % of admin-1 rows and 98 % of
+  populated places. That went into FT-34's fact pipeline rather than onto
+  the map, because the licensing is clean (unlike OpenStreetMap's ODbL
+  share-alike, or the Smithsonian volcano catalogue) and because a fact
+  reads better than another dot.
+- **Twelve peaks per map.** China has 97 named summits inside its box and
+  Russia 87; drawing all of them makes a wall of text the collision pass
+  then has to hide, which costs tile bytes to achieve nothing. Named
+  depressions are exempt from the cap — there are nine in the world, and
+  the Qattara Depression at −133 m is exactly the sort of thing that fixes
+  a place in the mind.
+
 ## The tab is called Known, and a finger can hit things (2026-09-18, FT-32)
 
 - **The retention tab is "Known"** (Gewusst, Conoscenza), not Progress.

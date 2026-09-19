@@ -146,3 +146,21 @@
 .geoclick-terrain-label .maplibregl-popup-tip {
 	display: none;
 }
+
+/* A peak's name carries its height (FT-37), so it needs to read as a fact
+ * about a point rather than a region's name: upright, not italic, and a
+ * shade darker than a range's name. */
+.geoclick-terrain-peaks .maplibregl-popup-content {
+	color: #6f5a3c;
+	font-style: normal;
+	letter-spacing: 0.02em;
+}
+/* A great circle is a fact about the whole map, not a place on it - set
+ * small, spaced out and faint, the way an atlas prints it along the line. */
+.geoclick-terrain-lines .maplibregl-popup-content {
+	color: #8a8168;
+	font-size: 0.625rem;
+	font-style: normal;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+}

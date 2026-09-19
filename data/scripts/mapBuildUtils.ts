@@ -30,9 +30,18 @@ export const MARINE_SHP = path.join(
 	REPO_ROOT,
 	'data/source/ne_10m_geography_marine_polys/ne_10m_geography_marine_polys.shp'
 );
+// FT-37's two landmark sources.
+export const PEAKS_SHP = path.join(
+	REPO_ROOT,
+	'data/source/ne_10m_geography_regions_elevation_points/ne_10m_geography_regions_elevation_points.shp'
+);
+export const LINES_SHP = path.join(
+	REPO_ROOT,
+	'data/source/ne_10m_geographic_lines/ne_10m_geographic_lines.shp'
+);
 
 /** Every source the Terrain layer needs; both builders require all of them. */
-export const PHYSICAL_SHPS = [OCEAN_SHP, RIVERS_SHP, TERRAIN_SHP, MARINE_SHP];
+export const PHYSICAL_SHPS = [OCEAN_SHP, RIVERS_SHP, TERRAIN_SHP, MARINE_SHP, PEAKS_SHP, LINES_SHP];
 
 /**
  * Which of the given shapefiles have not been downloaded. Named rather than
@@ -209,21 +218,25 @@ function clipToBbox(
 	]);
 }
 
-/** The four files tippecanoe needs for one map's Terrain layer. */
+/** The files tippecanoe needs for one map's Terrain layer. */
 export interface PhysicalPaths {
 	sea: string;
 	rivers: string;
 	terrain: string;
 	labels: string;
+	peaks: string;
+	lines: string;
 }
 
-/** Where those four files live while a map is being built. */
+/** Where those files live while a map is being built. */
 export function physicalPaths(absOutDir: string): PhysicalPaths {
 	return {
 		sea: path.join(absOutDir, '.tmp-sea.geojson'),
 		rivers: path.join(absOutDir, '.tmp-rivers.geojson'),
 		terrain: path.join(absOutDir, '.tmp-terrain.geojson'),
-		labels: path.join(absOutDir, '.tmp-physical-labels.geojson')
+		labels: path.join(absOutDir, '.tmp-physical-labels.geojson'),
+		peaks: path.join(absOutDir, '.tmp-peaks.geojson'),
+		lines: path.join(absOutDir, '.tmp-lines.geojson')
 	};
 }
 
@@ -319,7 +332,11 @@ export function buildTerrainTileset(
 		'-L',
 		`terrain:${simplified.terrain}`,
 		'-L',
-		`physical_labels:${paths.labels}`
+		`physical_labels:${paths.labels}`,
+		'-L',
+		`peaks:${paths.peaks}`,
+		'-L',
+		`lines:${paths.lines}`
 	]);
 	pmtilesConvert(mbtilesPath, pmtilesPath);
 
@@ -432,6 +449,66 @@ export function labelPointsFrom(
 	return points;
 }
 
+// --- Peaks (FT-37) ---------------------------------------------------------
+//
+// Natural Earth's 711 named elevation points. Only two of its six feature
+// classes are usable: `mountain` (633 of them, the famous volcanoes among
+// them - Vesuvio, Monte Etna, Fuji, Nevado del Ruiz - even though the
+// dataset does not flag a volcano as such) and `depression`, which is nine
+// features but includes the Qattara Depression, exactly the sort of thing
+// that fixes a place in the mind. The other four classes are unusable
+// rather than merely uninteresting: every `spot elevation` row has a null
+// name, and the `plateau` rows are Antarctic research stations ("Vostok
+// Station (Rus.)", "Fuji Station (Japan)" - which is why Japan's real Fuji
+// has to come from the `mountain` class, not from the tallest row).
+const PEAK_CLASSES = ['mountain', 'depression'];
+
+// How many named peaks one map may draw. China has 97 in its box and Russia
+// 87; a map that writes all of them is a wall of text the collision pass
+// then has to hide, which costs tile bytes to achieve nothing.
+export const PEAKS_PER_MAP = 12;
+
+export interface PeakFeature {
+	properties: {
+		name?: string | null;
+		elevation?: number | null;
+		// `kind` rather than `featurecla`: the ogr2ogr select below renames it,
+		// so that every layer in this tileset calls its class the same thing.
+		kind?: string | null;
+		[field: string]: string | number | null | undefined;
+	};
+	geometry: { coordinates: [number, number] };
+}
+
+/**
+ * The peaks one map should draw: named, of a usable class, inside the box,
+ * tallest first and capped. Depressions are kept whichever way the cap
+ * falls - there are nine in the world and each one is a landmark.
+ */
+export function selectPeaks<T extends PeakFeature>(
+	features: T[],
+	bbox: [number, number, number, number],
+	limit = PEAKS_PER_MAP
+): T[] {
+	const usable = features.filter((f) => {
+		const { name, kind } = f.properties;
+		if (typeof name !== 'string' || name === '') return false;
+		if (!PEAK_CLASSES.includes(String(kind))) return false;
+		const [lon, lat] = f.geometry.coordinates;
+		return lon >= bbox[0] && lon <= bbox[2] && lat >= bbox[1] && lat <= bbox[3];
+	});
+	const isDepression = (f: T) => f.properties.kind === 'depression';
+	const height = (f: T) =>
+		typeof f.properties.elevation === 'number' ? f.properties.elevation : 0;
+	const mountains = usable
+		.filter((f) => !isDepression(f))
+		.sort((a, b) => height(b) - height(a))
+		.slice(0, limit);
+	return [...usable.filter(isDepression), ...mountains].sort((a, b) =>
+		(a.properties.name as string).localeCompare(b.properties.name as string, 'en')
+	);
+}
+
 function writeLabelPoints(
 	sourcePaths: string[],
 	outPath: string,
@@ -495,4 +572,39 @@ export function selectPhysical(
 	);
 	writeLabelPoints([paths.terrain, marinePath], paths.labels, labelBbox);
 	rmSync(marinePath);
+
+	// Peaks (FT-37). Clipped to the label box, not the padded one, for the
+	// same reason the names are: a summit two countries away is not a hook.
+	clipToBbox(
+		PEAKS_SHP,
+		labelBbox,
+		[
+			'-sql',
+			`SELECT name AS name, name_de AS name_de, name_it AS name_it, ` +
+				`featurecla AS kind, elevation AS elevation ` +
+				`FROM ne_10m_geography_regions_elevation_points`
+		],
+		paths.peaks
+	);
+	const peaks = JSON.parse(readFileSync(paths.peaks, 'utf8')) as { features: PeakFeature[] };
+	writeFileSync(
+		paths.peaks,
+		JSON.stringify({
+			type: 'FeatureCollection',
+			features: selectPeaks(peaks.features, labelBbox)
+		})
+	);
+
+	// The great circles, on the padded box so a line crossing the corner of
+	// the map still reaches both edges.
+	clipToBbox(
+		LINES_SHP,
+		bbox,
+		[
+			'-sql',
+			`SELECT name AS name, name_de AS name_de, name_it AS name_it ` +
+				`FROM ne_10m_geographic_lines WHERE name IS NOT NULL`
+		],
+		paths.lines
+	);
 }

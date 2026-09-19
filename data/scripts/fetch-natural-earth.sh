@@ -58,8 +58,14 @@ fetch ne_10m_geography_regions_polys \
 	"https://naturalearth.s3.amazonaws.com/10m_physical/ne_10m_geography_regions_polys.zip"
 fetch ne_10m_geography_marine_polys \
 	"https://naturalearth.s3.amazonaws.com/10m_physical/ne_10m_geography_marine_polys.zip"
-# Named peaks with their elevation. Not drawn by the Terrain layer - it is
-# the fact builder (FT-34) that reads this one; cached here so there is one
-# place that knows where source data comes from.
+# Named peaks with their elevation (FT-37). 711 worldwide, and the famous
+# volcanoes are among them even though Natural Earth does not flag them as
+# such: Vesuvio, Monte Etna, Fuji, Nevado del Ruiz.
 fetch ne_10m_geography_regions_elevation_points \
 	"https://naturalearth.s3.amazonaws.com/10m_physical/ne_10m_geography_regions_elevation_points.zip"
+# Six lines and 30 KB (FT-37): Equator, both Tropics, both Polar Circles and
+# the Date Line. Nothing to curate - they are the same everywhere - and for
+# a dozen countries they are the hook: Manaus is on the Equator, Cairo just
+# north of the Tropic of Cancer, Rovaniemi on the Arctic Circle.
+fetch ne_10m_geographic_lines \
+	"https://naturalearth.s3.amazonaws.com/10m_physical/ne_10m_geographic_lines.zip"
