@@ -22,6 +22,9 @@ For players:
   German, Alpi and Mar Adriatico in Italian.
 - A terrain name never covers a name you are learning — it gives way, and
   comes back when there is room.
+- With Terrain on, the region colours lighten so the ground shows through:
+  the Apennines run visibly down the middle of Italy, the Appalachians up
+  the eastern United States. Switching it off puts the colours straight back.
 
 Under the hood:
 

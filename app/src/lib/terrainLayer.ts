@@ -113,6 +113,28 @@ const LAYERS: LayerSpecification[] = [
 	}
 ];
 
+// What the layers ABOVE the terrain get multiplied down to while it is on.
+// Without this the layer is there but unreadable: a polygon map paints every
+// target at 0.55, and 0.85 once it is solved or revealed - which on the
+// Overview is all of them - and a points map lays its country context over
+// the whole country at 0.85 too. The product owner's report on the first
+// build was exactly that: hardly visible under the dark green, and hardly
+// visible under the other colours either.
+//
+// The factors are deliberately different. A target fill is the game and has
+// to stay legible enough to tell two neighbours apart, so it keeps about
+// half its weight. The country-context fill on a points map is pure
+// backdrop, and with the sea drawn the coastline already says where the
+// country is, so it gives up most of its own.
+const TARGET_DIM = 0.45;
+const CONTEXT_DIM = 0.25;
+const DIMMED: { layer: string; property: 'fill-opacity' | 'circle-opacity'; factor: number }[] = [
+	{ layer: 'targets-fill', property: 'fill-opacity', factor: TARGET_DIM },
+	{ layer: 'context-fill', property: 'fill-opacity', factor: CONTEXT_DIM }
+	// targets-circle is deliberately absent: a town marker is a 9 px dot the
+	// player has to hit, not a wash of colour over the terrain.
+];
+
 /** The label text in the player's language, falling back to the source's. */
 function labelFor(properties: Record<string, unknown>): string {
 	const lang = getLanguage();
@@ -131,15 +153,46 @@ export class TerrainLayer {
 	private popups: maplibregl.Popup[] = [];
 	private added = false;
 	private pending = false;
+	// The opacity each dimmed layer had before this class touched it, so
+	// switching off restores the map exactly and switching on twice does not
+	// multiply the factor in twice.
+	private originalOpacity = new globalThis.Map<string, unknown>();
 
 	constructor(
 		private map: maplibregl.Map,
 		private mapId: string
 	) {}
 
+	/**
+	 * Multiplies the layers above the terrain down so it can be seen through
+	 * them, or puts them back exactly as they were.
+	 */
+	private dimOverlyingLayers(dim: boolean): void {
+		for (const { layer, property, factor } of DIMMED) {
+			if (!this.map.getLayer(layer)) continue;
+			if (dim) {
+				if (!this.originalOpacity.has(layer)) {
+					this.originalOpacity.set(layer, this.map.getPaintProperty(layer, property));
+				}
+				const original = this.originalOpacity.get(layer);
+				// Wrapping the original rather than restating it: targets-fill's
+				// opacity is a `case` over five feature-states (base.json), and a
+				// second copy of that here would rot the moment either changed.
+				this.map.setPaintProperty(layer, property, [
+					'*',
+					original as number,
+					factor
+				] as unknown as number);
+			} else if (this.originalOpacity.has(layer)) {
+				this.map.setPaintProperty(layer, property, this.originalOpacity.get(layer) as number);
+			}
+		}
+	}
+
 	async setVisible(visible: boolean): Promise<void> {
 		if (!visible) {
 			this.removeLabels();
+			this.dimOverlyingLayers(false);
 			for (const layer of LAYERS) {
 				if (this.map.getLayer(layer.id)) {
 					this.map.setLayoutProperty(layer.id, 'visibility', 'none');
@@ -153,6 +206,7 @@ export class TerrainLayer {
 					this.map.setLayoutProperty(layer.id, 'visibility', 'visible');
 				}
 			}
+			this.dimOverlyingLayers(true);
 			this.drawLabels();
 			return;
 		}
@@ -175,6 +229,7 @@ export class TerrainLayer {
 		const before = this.map.getLayer(BEFORE_LAYER) ? BEFORE_LAYER : undefined;
 		for (const layer of LAYERS) this.map.addLayer(layer, before);
 		this.added = true;
+		this.dimOverlyingLayers(true);
 
 		// The label points arrive with the tiles, so wait for the source
 		// before asking for them.

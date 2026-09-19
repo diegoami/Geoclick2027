@@ -1153,6 +1153,18 @@ answers:
   zoom level less reaches 553 KB and two reach 385 KB. So each map's terrain
   is built to three levels above the zoom it opens at, and MapLibre
   over-zooms past that — a slightly soft coastline on a background layer.
+- **Switching Terrain on lightens what is drawn over it** (amended
+  2026-09-19, after the product owner tried the first build: _"rilievo is
+  hardly visible because the dark green colour is too strong, and hardly
+  visible also when there are other colours"_). He was right — a polygon map
+  paints every target at 0.55 and at 0.85 once solved, which on the Overview
+  is all of them, and a points map lays its country context over the whole
+  country at 0.85. So while the layer is on, `targets-fill` keeps 45 % of its
+  opacity and `context-fill` 25 %; switching off restores both exactly. The
+  two factors differ on purpose: a target fill is the game and has to stay
+  legible enough to tell two neighbours apart, while the country context is
+  pure backdrop and the sea already says where the coast is. Town markers are
+  not dimmed at all — a 9 px dot is a thing to hit, not a wash of colour.
 - **Terrain names always lose a collision.** Registered with a negative
   priority (`labelCollision.ts`), so a region's own name wins the space, and
   among themselves Natural Earth's scalerank decides, so the Alps beat a
