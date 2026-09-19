@@ -138,11 +138,13 @@ export type TranslationKey =
 	| 'tutorial.step8'
 	| 'tutorial.step9'
 	| 'tutorial.step10'
-	| 'tutorial.step11';
+	| 'tutorial.step11'
+	| 'lang.label';
 
 type Dictionary = Record<TranslationKey, string>;
 
 const en: Dictionary = {
+	'lang.label': 'Language',
 	'nav.maps': 'Maps',
 	'nav.overview': 'Overview',
 	'nav.explore': 'Known',
@@ -277,6 +279,7 @@ const en: Dictionary = {
 };
 
 const de: Dictionary = {
+	'lang.label': 'Sprache',
 	'nav.maps': 'Karten',
 	'nav.overview': 'Übersicht',
 	'nav.explore': 'Gewusst',
@@ -411,6 +414,7 @@ const de: Dictionary = {
 };
 
 const it: Dictionary = {
+	'lang.label': 'Lingua',
 	'nav.maps': 'Mappe',
 	'nav.overview': 'Panoramica',
 	'nav.explore': 'Conoscenza',

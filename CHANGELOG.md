@@ -5,6 +5,28 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
+## Unreleased
+
+**Three things the product owner asked for after trying v0.9.0.**
+
+For players:
+
+- **Terrain is on by default now.** It shipped switched off, so unless you
+  pressed the button you never saw the sea, the rivers, the Alps or the
+  peaks at all — which rather defeated the point of adding them. Every map
+  now opens with them on. If you turned Terrain off yourself, it stays off:
+  the change only affects devices that never touched the button.
+- **The tour is a little slower.** A step now holds for 4 seconds rather
+  than 3, and the camera takes longer to settle, so there is time to read a
+  name and find the place rather than just watch it light up. Long tours
+  still speed up to stay under three minutes, and 0.75× joins the speed menu
+  if you want to set it yourself.
+- **The language picker is one button instead of three.** It shows the
+  language you are in and opens a list — English, Deutsch, Italiano, each in
+  its own language — so the map bar keeps its space no matter how many
+  languages get added later. It works from the keyboard: arrow keys to move,
+  Enter to choose, Escape to close.
+
 ## v0.9.0 — 2026-09-19 — The map you build yourself
 
 **A map you build by tapping, and a name-fact on every place in the app.**

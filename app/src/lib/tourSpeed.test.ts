@@ -2,17 +2,34 @@ import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { DEFAULT_MAPS_DIR, listMapIds } from '../../../data/scripts/build-map-index';
-import { TOUR_TIME_BUDGET_MS, defaultTourSpeed, tourDurationMs } from './tourSpeed';
+import {
+	TOUR_DEFAULT_FLOOR,
+	TOUR_TIME_BUDGET_MS,
+	defaultTourSpeed,
+	tourDurationMs
+} from './tourSpeed';
 
 const steps = (n: number, dwellMs = 3000) => Array.from({ length: n }, () => ({ dwellMs }));
 const loadSteps = (id: string): { dwellMs: number }[] =>
 	JSON.parse(readFileSync(path.join(DEFAULT_MAPS_DIR, id, 'tour.json'), 'utf8')).steps;
 
 describe('defaultTourSpeed', () => {
-	it('leaves a tour that fits the budget at 1x', () => {
-		expect(defaultTourSpeed(steps(20))).toBe(1);
-		expect(defaultTourSpeed(steps(60))).toBe(1); // exactly 3:00
-		expect(defaultTourSpeed([])).toBe(1);
+	it('starts a tour that fits the budget at the floor, 0.75x', () => {
+		// The floor moved from 1x to 0.75x in v0.9.1, so a 20-region tour now
+		// runs 80 s rather than 60 s - long enough to take a region in, not
+		// just to watch it light up.
+		expect(defaultTourSpeed(steps(20))).toBe(TOUR_DEFAULT_FLOOR);
+		expect(defaultTourSpeed([])).toBe(TOUR_DEFAULT_FLOOR);
+	});
+
+	it('gives up the floor before it gives up the budget', () => {
+		// 60 steps is 3:00 at 1x, which is 4:00 at the floor - over budget, so
+		// this one starts at 1x. The budget outranks the floor.
+		expect(defaultTourSpeed(steps(60))).toBe(1);
+		// The boundary: 45 steps is exactly 3:00 at the floor, so it still
+		// fits; 46 does not, and gives the floor up rather than the budget.
+		expect(defaultTourSpeed(steps(45))).toBe(TOUR_DEFAULT_FLOOR);
+		expect(defaultTourSpeed(steps(46))).toBe(1);
 	});
 
 	it('picks the slowest speed that brings a long tour under the budget', () => {
@@ -26,7 +43,9 @@ describe('defaultTourSpeed', () => {
 	});
 
 	it('uses the real dwell times, not a step count', () => {
-		expect(defaultTourSpeed(steps(110, 1000))).toBe(1);
+		// 110 steps but only 1 s each: 1:50 at 1x, 2:27 at the floor, so it
+		// gets the floor like any short tour.
+		expect(defaultTourSpeed(steps(110, 1000))).toBe(TOUR_DEFAULT_FLOOR);
 	});
 });
 
@@ -45,20 +64,17 @@ describe('committed tours at their default speed', () => {
 		expect(tourDurationMs(s, defaultTourSpeed(s))).toBe(165_000);
 	});
 
-	it('only the longest tours change speed; every other map stays at 1x', () => {
-		const changed = listMapIds()
-			.filter((id) => defaultTourSpeed(loadSteps(id)) !== 1)
-			.map((id) => `${id}@${defaultTourSpeed(loadSteps(id))}x`)
-			.sort();
-		// Every tour over the 3:00 budget: usa-cities-east joined at FT-28,
-		// turkey-regions (81 provinces) and vietnam-regions (63) at FT-30.
-		expect(changed).toEqual([
-			'italy-provinces@2x',
-			'japan-towns-100k@1.5x',
-			'russia-regions@1.5x',
-			'turkey-regions@1.5x',
-			'usa-cities-east@1.5x',
-			'vietnam-regions@1.5x'
-		]);
+	it('no committed tour is left over the budget by the slower floor', () => {
+		// The floor makes every tour 33% longer, so this is the check that
+		// matters after the change: nothing may exceed 3:00 at its default.
+		const over = listMapIds()
+			.map((id) => ({ id, s: loadSteps(id) }))
+			.map(({ id, s }) => ({
+				id,
+				speed: defaultTourSpeed(s),
+				ms: tourDurationMs(s, defaultTourSpeed(s))
+			}))
+			.filter(({ speed, ms }) => speed !== 3 && ms > TOUR_TIME_BUDGET_MS);
+		expect(over).toEqual([]);
 	});
 });

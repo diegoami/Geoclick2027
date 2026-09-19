@@ -687,13 +687,33 @@ or amend an entry here as part of that change, not as an afterthought.
   Good enough for three languages and a handful of counted strings; would
   need revisiting (a real plural-rules table) if a language with richer
   plural categories (e.g. Polish, Russian) were ever added.
-- **Switcher is three small text pills (EN/DE/IT), not flags or a
-  dropdown.** Matches the existing muted, small-pill visual language from
-  GUI/UX round 1 (see above) rather than introducing a new control style.
-  Shown in two places: `MapNav.svelte` (present on every map-scoped view)
+- **~~Three small text pills (EN/DE/IT)~~ one pill that opens a list.**
+  *Corrected 2026-09-19 (FT-43).* Three pills matched the muted small-pill
+  language from GUI/UX round 1, which is why they were chosen — but they
+  cost a pill's width per language in a map bar that is already tight on a
+  phone, so the control could not grow. The product owner's point: "it is
+  not scalable for more languages." One button, 44 px wide closed, costs
+  the same whatever the list holds.
+- **A listbox, not a native `<select>`.** A `<select>` would have been less
+  code and free keyboard support, but it can only show one string per
+  option, and this control wants two: terse closed ("EN") and readable open
+  ("English"). The popup therefore implements the listbox pattern properly —
+  `aria-haspopup`, `aria-expanded`, `role="option"`/`aria-selected`, arrow
+  keys, Home/End, Enter/Space to commit, Escape to close and return focus,
+  and an outside pointerdown to dismiss.
+- **Arrowing does not change the language.** The keyboard cursor is separate
+  state from the chosen language, so moving through the list does not
+  re-render the whole UI on every keystroke; the choice commits on Enter or
+  click.
+- **Names are shown in their own language**, never translated — the
+  convention every real switcher uses, so a language you cannot yet read is
+  still recognisable. The picker's own accessible name *is* translated
+  (`lang.label`), which the three-pill version got wrong: it hardcoded
+  `aria-label="Language"` in English.
+- Shown in two places: `MapNav.svelte` (present on every map-scoped view)
   and the home page header (which doesn't render `MapNav`) - both reuse
   the same `LanguageSwitcher.svelte` component rather than duplicating
-  the markup.
+  the markup. Unchanged.
 
 ## Visual refresh: background (2026-09-13)
 
@@ -834,6 +854,17 @@ or amend an entry here as part of that change, not as an afterthought.
   or fewer (41 of 44) keeps its current pace. Only the outliers speed up.
   1.5 s a province is still long enough to read each name.
   `tourSpeed.test.ts` pins the rule against every committed tour.
+- **The floor moved from 1x to 0.75x** (2026-09-19, FT-43; product owner:
+  "the tour a tad slower"). A short tour now starts at 0.75x, so a step
+  dwells 4 s rather than 3 s and the camera eases over 1.6 s rather than
+  1.2 s. 3 s was enough to watch a region light up but not to read its
+  name, find it and take it in. The budget still outranks the floor: a tour
+  that would exceed 3 minutes at 0.75x starts at 1x or faster, so nothing
+  got longer than the budget — `tourSpeed.test.ts` asserts exactly that
+  over all 63 committed tours, which is the check that matters when every
+  tour is suddenly a third longer. The boundary is 45 steps: 45 is exactly
+  3:00 at the floor and keeps it, 46 gives the floor up. 0.75x also joined
+  the speed menu, so the pace is still the player's to override.
 
 ## SSO/cross-device sync deferred (2026-09-13)
 
@@ -1214,10 +1245,25 @@ answers:
   anything that could help mnemonics". A region drawn with nothing around it
   has nothing to sit against, and a name with nothing to hang on is a name
   you re-learn every session.
-- **Off by default, one setting for all 63 maps.** Non-invasive was the ask,
-  so a returning player's map looks exactly as it did until they press
-  Terrain. And a player who wants the sea wants it everywhere: having to
-  switch it on again for each of 63 maps would be worse than no setting.
+- **~~Off~~ ON by default, one setting for all 63 maps.** *Corrected
+  2026-09-19 (FT-43) — it shipped off and that was wrong.* The original
+  reasoning was that non-invasive was the ask, so a returning player's map
+  should look exactly as it did until they pressed Terrain. What actually
+  happened is that the product owner, who asked for the feature, opened the
+  Known map after the release and asked why the landmarks and reliefs were
+  missing and whether they had been merged. They had; he had simply never
+  pressed the button. A feature nobody sees unless they press something is
+  not non-invasive, it is invisible — and that is a worse failure than a map
+  that changed appearance once. It is now on unless a player turns it off.
+- **The default flip does not override anyone.** The preference stores three
+  states, not two: `'1'` on, `'0'` off, and *absent* meaning never touched.
+  Only the absent case takes the new default, so a player who deliberately
+  turned Terrain off stays off. Worth keeping in mind for any future default
+  that flips: a two-state flag cannot tell "off" from "unset", and flipping
+  its default silently overrules everyone who chose the old one.
+- **One setting for every map, not one per map.** A player who wants the sea
+  wants it everywhere; having to switch it on again for each of 63 maps
+  would be worse than no setting. Unchanged.
 - **Named features, not elevation shading.** What helps a mnemonic is a
   *name* — the Alps, the Adriatic, the Po — and Natural Earth already has
   1 047 named land features and 306 named marine ones, carrying German and
