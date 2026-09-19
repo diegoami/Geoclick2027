@@ -20,7 +20,7 @@
 	import { tutorialExploreReveal } from './tutorial.svelte';
 	import { DOT_CLEARANCE_PX, areaShares, registerLabel } from './labelCollision';
 	import FactCard from './FactCard.svelte';
-	import { fetchFacts, rotateHook, type Facts } from './facts';
+	import { fetchFacts, placeFacts, type Facts } from './facts';
 
 	let { mapId }: { mapId: string } = $props();
 
@@ -34,7 +34,9 @@
 	let selectedFeatureId: number | string | undefined;
 	// The fact box (FT-35), on the click that already reveals the name.
 	let facts = $state<Facts>({});
-	let asked = $state<{ id: string; name: string; hook?: string } | undefined>(undefined);
+	let asked = $state<{ id: string; name: string; origin?: string; extra?: string } | undefined>(
+		undefined
+	);
 
 	// This is the map the player builds (FT-39, docs/PLAN_V0.9.md), and the
 	// screen a map now opens on. Two things put a name on it: the clean
@@ -197,7 +199,7 @@
 							? {
 									id: target.id,
 									name: target.name,
-									hook: rotateHook(mapId, target.id, facts[target.id])
+									...placeFacts(mapId, target.id, facts[target.id])
 								}
 							: undefined;
 					// The tutorial's step (FT-11) moves on once a name shows.
@@ -238,7 +240,8 @@
 		<FactCard
 			name={asked.name}
 			fact={facts[asked.id]}
-			hook={asked.hook}
+			origin={asked.origin}
+			extra={asked.extra}
 			bottom={anyShown ? '3.5rem' : '0.75rem'}
 			onclose={() => (asked = undefined)}
 		/>

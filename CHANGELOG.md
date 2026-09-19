@@ -5,6 +5,14 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
+## Unreleased
+
+- **The name origin is back on every card.** It was only ever showing one
+  visit in three: the card rotated through all of a place’s facts, and only
+  the first is about the name. Now that one is pinned and stays put, and the
+  rotation moves the second line instead — so you always get "named for the
+  Longobards", plus something different about Lombardia each time.
+
 ## v0.9.2 — 2026-09-19 — What the second look found
 
 **Three things found by using v0.9.1**, one of them a way to get the

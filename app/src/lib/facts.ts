@@ -179,9 +179,41 @@ export function pickHook(
 	return { hook: hooks[index], next: index + 1 };
 }
 
+/** What the card shows for a place: a pinned origin and a rotating extra. */
+export interface PlaceFacts {
+	/** Where the name comes from. Always the same sentence, never rotates. */
+	origin?: string;
+	/** One of the others, a different one each time. Undefined if there is
+	 *  only the origin. */
+	extra?: string;
+}
+
 /**
- * The next name-fact for a place, advancing its rotation. Returns undefined
- * when nobody has written one - most places, for now.
+ * The name-facts for a place: the origin pinned, one of the rest rotating.
+ *
+ * The FIRST entry in an authored list is always about the NAME - that is the
+ * rule every file in data/facts/ is written to - and it is the half that
+ * does the work, so it is shown every time. Rotating it away, which is what
+ * this used to do, meant two visits in three had no etymology on the card
+ * at all (FT-47).
+ *
+ * Returns nothing at all when nobody has written a fact for the place.
+ */
+export function placeFacts(mapId: string, targetId: string, fact: Fact | undefined): PlaceFacts {
+	const hooks = fact?.hooks;
+	if (!hooks || hooks.length === 0) return {};
+	const origin = hooks[0];
+	// Only the ones after the origin rotate, so the rotation counter is over
+	// a shorter list than it used to be. An old stored count is harmless -
+	// pickHook wraps it.
+	const rest = hooks.slice(1);
+	if (rest.length === 0) return { origin };
+	return { origin, extra: rotateHook(mapId, targetId, { ...fact, hooks: rest }) };
+}
+
+/**
+ * The next fact from a place's list, advancing its rotation. Returns
+ * undefined when the list is empty.
  */
 export function rotateHook(mapId: string, targetId: string, fact: Fact | undefined) {
 	const key = `${mapId}/${targetId}`;

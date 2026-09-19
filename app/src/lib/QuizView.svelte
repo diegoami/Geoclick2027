@@ -15,7 +15,7 @@
 	import { DOT_CLEARANCE_PX, registerLabel } from './labelCollision';
 	import { forgetRound, rememberRound, roundInProgress } from './quizRound';
 	import FactCard from './FactCard.svelte';
-	import { fetchFacts, rotateHook, type Facts } from './facts';
+	import { fetchFacts, placeFacts, type Facts } from './facts';
 	import {
 		createQuizSession,
 		attemptMatch,
@@ -74,7 +74,9 @@
 	// next drop replaces it, which means a missed name's card stays up for
 	// exactly as long as the player is still looking at that mistake.
 	let facts = $state<Facts>({});
-	let told = $state<{ id: string; name: string; hook?: string } | undefined>(undefined);
+	let told = $state<{ id: string; name: string; origin?: string; extra?: string } | undefined>(
+		undefined
+	);
 	let toldTimer: ReturnType<typeof setTimeout> | undefined;
 	/** How long a correctly placed name's card stays before it gets out of
 	 *  the way. A missed one is not on a timer at all. */
@@ -421,7 +423,7 @@
 		// correctly gets the same card briefly and then hands the map back:
 		// the card sits over the bottom of the map, and on a tall country
 		// that is somewhere the next slip may have to go.
-		told = { id: targetId, name, hook: rotateHook(mapId, targetId, facts[targetId]) };
+		told = { id: targetId, name, ...placeFacts(mapId, targetId, facts[targetId]) };
 		if (toldTimer) clearTimeout(toldTimer);
 		if (!revealed) {
 			toldTimer = setTimeout(() => {
@@ -776,7 +778,8 @@
 		<FactCard
 			name={told.name}
 			fact={facts[told.id]}
-			hook={told.hook}
+			origin={told.origin}
+			extra={told.extra}
 			bottom="calc({trayHeightPx ?? trayMinPx}px + 0.5rem)"
 			onclose={() => (told = undefined)}
 		/>

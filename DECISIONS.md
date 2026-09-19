@@ -13,6 +13,26 @@ Keep this updated the same way as the other docs: when a decision gets
 made, made explicitly to correct an earlier one, or gets revisited, add
 or amend an entry here as part of that change, not as an afterthought.
 
+## The name origin is pinned, not rotated (2026-09-19, FT-47)
+
+- **The first fact in an authored list is shown every visit; only the rest
+  rotate.** Every file in `data/facts/` is written to the rule that entry
+  one is about the NAME, so the card rotating through all of them meant two
+  visits in three carried no etymology at all. The product owner, once
+  FT-45 had made the card sparse enough to notice: "now I have lost the name
+  origin. You went too far with this."
+- **It was not FT-45 that lost it.** This had been the behaviour since FT-41
+  made the lists three deep, in v0.9.0; the derived paragraph was just
+  covering for it. Worth recording, because the obvious fix - put the
+  derived line back - would have fixed nothing.
+- **It also restores what was asked for in the first place**, when the second
+  line was designed: "we keep this line and then a second line with rotating
+  facts." The origin was always meant to be the pinned half.
+- **So the card is up to three lines**, in descending order of worth: where
+  the name comes from (always), something else about the place (a different
+  one each visit), and the surviving derived clause (quiet and small). A
+  place with only one authored fact shows only the origin.
+
 ## The card says only what the map does not (2026-09-19, FT-45)
 
 - **The derived line is gone, bar a clause.** It composed a whole sentence
