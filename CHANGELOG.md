@@ -34,6 +34,12 @@ Under the hood:
 
 - FT-37: two more Natural Earth datasets; 12 peaks per map, the tallest
   first, and named depressions always kept.
+- FT-34: a `facts.json` beside every `map.json` (503 KB over all 63 maps,
+  fetched lazily) holding structured fields rather than prose, so the
+  derived half of the fact box is trilingual with nothing translated by
+  hand. Coastal-or-not is decided by vertices shared with the coastline,
+  which gets Italy exactly right; source rows are matched to targets by
+  extent rather than by name, which is what makes it work on dissolved maps.
 - FT-33: five more Natural Earth datasets; a second tileset per map
   (`terrain.pmtiles`, 4.94 MB over all 63, fetched only when the layer is
   switched on) built by `data/scripts/build-terrain.ts`; its maximum zoom

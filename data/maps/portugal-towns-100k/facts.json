@@ -1,0 +1,41 @@
+{
+	"braga": {
+		"kind": "city",
+		"population": 826833,
+		"populationRank": 3,
+		"coastal": false,
+		"position": "north-east"
+	},
+	"porto": {
+		"kind": "city",
+		"population": 1337000,
+		"populationRank": 2,
+		"population1950": 730000,
+		"coastal": true,
+		"position": "north-east"
+	},
+	"coimbra": {
+		"kind": "city",
+		"population": 106582,
+		"populationRank": 5,
+		"coastal": false,
+		"position": "east"
+	},
+	"lisboa": {
+		"kind": "city",
+		"population": 2812000,
+		"populationRank": 1,
+		"population1950": 1304000,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south-west"
+	},
+	"setubal": {
+		"kind": "city",
+		"population": 117974,
+		"populationRank": 4,
+		"region": "Lisboa",
+		"coastal": true,
+		"position": "south"
+	}
+}

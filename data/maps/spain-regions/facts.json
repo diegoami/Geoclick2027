@@ -1,0 +1,293 @@
+{
+	"asturias": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Cantabria",
+			"Castilla y León",
+			"Galicia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Gijón",
+			"nameDe": "Gijón",
+			"nameIt": "Gijón",
+			"population": 335972
+		},
+		"position": "north-west"
+	},
+	"cantabria": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Asturias",
+			"Castilla y León",
+			"País Vasco"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Santander",
+			"nameDe": "Santander",
+			"nameIt": "Santander",
+			"population": 208763
+		},
+		"position": "north"
+	},
+	"pais-vasco": {
+		"kind": "region",
+		"borders": [
+			"Cantabria",
+			"Castilla y León",
+			"La Rioja",
+			"Navarra"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Bilbao",
+			"nameDe": "Bilbao",
+			"nameIt": "Bilbao",
+			"population": 875552
+		},
+		"position": "north"
+	},
+	"galicia": {
+		"kind": "region",
+		"borders": [
+			"Asturias",
+			"Castilla y León"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Vigo",
+			"nameDe": "Vigo",
+			"nameIt": "Vigo",
+			"population": 378952
+		},
+		"position": "north-west"
+	},
+	"navarra": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Aragón",
+			"La Rioja",
+			"País Vasco"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Pamplona",
+			"nameDe": "Pamplona",
+			"nameIt": "Pamplona",
+			"population": 274545
+		},
+		"position": "north"
+	},
+	"la-rioja": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Aragón",
+			"Castilla y León",
+			"Navarra",
+			"País Vasco"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Logroño",
+			"nameDe": "Logroño",
+			"nameIt": "Logroño",
+			"population": 143698
+		},
+		"peak": {
+			"name": "Mount San Lorenzo",
+			"elevation": 2271
+		},
+		"position": "north"
+	},
+	"cataluna": {
+		"kind": "region",
+		"borders": [
+			"Aragón",
+			"Comunidad Valenciana"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Barcelona",
+			"nameDe": "Barcelona",
+			"nameIt": "Barcellona",
+			"population": 4920000
+		},
+		"position": "north-east"
+	},
+	"castilla-y-leon": {
+		"kind": "region",
+		"borders": [
+			"Aragón",
+			"Asturias",
+			"Cantabria",
+			"Castilla-La Mancha",
+			"Extremadura",
+			"Galicia",
+			"La Rioja",
+			"Madrid",
+			"País Vasco"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Valladolid",
+			"nameDe": "Valladolid",
+			"nameIt": "Valladolid",
+			"population": 322304
+		},
+		"peak": {
+			"name": "Torre de Cerredo",
+			"elevation": 2648
+		},
+		"position": "north"
+	},
+	"aragon": {
+		"kind": "region",
+		"borders": [
+			"Castilla y León",
+			"Castilla-La Mancha",
+			"Cataluña",
+			"Comunidad Valenciana",
+			"La Rioja",
+			"Navarra"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Zaragoza",
+			"nameDe": "Saragossa",
+			"nameIt": "Saragozza",
+			"population": 649404
+		},
+		"peak": {
+			"name": "Pico de Aneto",
+			"elevation": 3404
+		},
+		"position": "north"
+	},
+	"madrid": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Castilla y León",
+			"Castilla-La Mancha"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Madrid",
+			"nameDe": "Madrid",
+			"nameIt": "Madrid",
+			"population": 5567000
+		},
+		"position": "centre"
+	},
+	"castilla-la-mancha": {
+		"kind": "region",
+		"borders": [
+			"Andalucía",
+			"Aragón",
+			"Castilla y León",
+			"Comunidad Valenciana",
+			"Extremadura",
+			"Madrid",
+			"Murcia"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Albacete",
+			"nameDe": "Albacete",
+			"nameIt": "Albacete",
+			"population": 158094
+		},
+		"position": "centre"
+	},
+	"islas-baleares": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"coastal": true,
+		"largestCity": {
+			"name": "Palma",
+			"nameDe": "Palma",
+			"nameIt": "Palma di Maiorca",
+			"population": 375773
+		},
+		"peak": {
+			"name": "Puig Mayor",
+			"elevation": 1445
+		},
+		"position": "east"
+	},
+	"comunidad-valenciana": {
+		"kind": "region",
+		"borders": [
+			"Aragón",
+			"Castilla-La Mancha",
+			"Cataluña",
+			"Murcia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Valencia",
+			"nameDe": "Valencia",
+			"nameIt": "Valencia",
+			"population": 808000
+		},
+		"position": "centre"
+	},
+	"extremadura": {
+		"kind": "region",
+		"borders": [
+			"Andalucía",
+			"Castilla y León",
+			"Castilla-La Mancha"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Badajoz",
+			"nameDe": "Badajoz",
+			"nameIt": "Badajoz",
+			"population": 140133
+		},
+		"position": "west"
+	},
+	"murcia": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Andalucía",
+			"Castilla-La Mancha",
+			"Comunidad Valenciana"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Murcia",
+			"nameDe": "Murcia",
+			"nameIt": "Murcia",
+			"population": 406807
+		},
+		"position": "south"
+	},
+	"andalucia": {
+		"kind": "region",
+		"borders": [
+			"Castilla-La Mancha",
+			"Extremadura",
+			"Murcia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Seville",
+			"nameDe": "Sevilla",
+			"nameIt": "Siviglia",
+			"population": 1212045
+		},
+		"peak": {
+			"name": "Mulhacén",
+			"elevation": 3479
+		},
+		"position": "south"
+	}
+}

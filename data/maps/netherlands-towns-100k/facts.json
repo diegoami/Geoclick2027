@@ -1,0 +1,99 @@
+{
+	"leeuwarden": {
+		"kind": "city",
+		"population": 125778,
+		"populationRank": 10,
+		"region": "Friesland",
+		"coastal": true,
+		"position": "north"
+	},
+	"groningen": {
+		"kind": "city",
+		"population": 216688,
+		"populationRank": 7,
+		"coastal": false,
+		"position": "north-east"
+	},
+	"zwolle": {
+		"kind": "city",
+		"population": 111805,
+		"populationRank": 12,
+		"region": "Overijssel",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"haarlem": {
+		"kind": "city",
+		"population": 349957,
+		"populationRank": 6,
+		"region": "Noord-Holland",
+		"coastal": true,
+		"position": "west"
+	},
+	"amsterdam": {
+		"kind": "city",
+		"population": 1031000,
+		"populationRank": 2,
+		"population1950": 851000,
+		"region": "Noord-Holland",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "west"
+	},
+	"utrecht": {
+		"kind": "city",
+		"population": 640000,
+		"populationRank": 4,
+		"coastal": false,
+		"position": "centre"
+	},
+	"den-haag": {
+		"kind": "city",
+		"population": 1406000,
+		"populationRank": 1,
+		"region": "Zuid-Holland",
+		"coastal": true,
+		"position": "west"
+	},
+	"arnhem": {
+		"kind": "city",
+		"population": 141674,
+		"populationRank": 8,
+		"region": "Gelderland",
+		"coastal": false,
+		"position": "east"
+	},
+	"rotterdam": {
+		"kind": "city",
+		"population": 1005000,
+		"populationRank": 3,
+		"population1950": 764000,
+		"region": "Zuid-Holland",
+		"coastal": false,
+		"position": "west"
+	},
+	"s-hertogenbosch": {
+		"kind": "city",
+		"population": 134520,
+		"populationRank": 9,
+		"region": "Noord-Brabant",
+		"coastal": false,
+		"position": "centre"
+	},
+	"eindhoven": {
+		"kind": "city",
+		"population": 398053,
+		"populationRank": 5,
+		"region": "Noord-Brabant",
+		"coastal": false,
+		"position": "south"
+	},
+	"maastricht": {
+		"kind": "city",
+		"population": 122378,
+		"populationRank": 11,
+		"region": "Limburg",
+		"coastal": false,
+		"position": "south"
+	}
+}

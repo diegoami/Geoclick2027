@@ -1,0 +1,572 @@
+{
+	"aceh": {
+		"kind": "region",
+		"type": "Autonomous Province",
+		"borders": [
+			"Sumatera Utara"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Banda Aceh",
+			"nameDe": "Banda Aceh",
+			"nameIt": "Banda Aceh",
+			"population": 513698
+		},
+		"peak": {
+			"name": "Abongabong",
+			"elevation": 2985
+		},
+		"position": "north-west"
+	},
+	"sulawesi-utara": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Gorontalo"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Manado",
+			"nameDe": "Manado",
+			"nameIt": "Manado",
+			"population": 451893
+		},
+		"position": "north"
+	},
+	"sumatera-utara": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Aceh",
+			"Riau",
+			"Sumatera Barat"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Medan",
+			"nameDe": "Medan",
+			"nameIt": "Medan",
+			"population": 2115000
+		},
+		"position": "north-west"
+	},
+	"kepulauan-riau": {
+		"kind": "region",
+		"type": "Province",
+		"coastal": true,
+		"largestCity": {
+			"name": "Tanjungpinang",
+			"nameDe": "Tanjung Pinang",
+			"nameIt": "Tanjung Pinang",
+			"population": 226666
+		},
+		"position": "north-west"
+	},
+	"kalimantan-timur": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Kalimantan Barat",
+			"Kalimantan Selatan",
+			"Kalimantan Tengah"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Samarinda",
+			"nameDe": "Samarinda",
+			"nameIt": "Samarinda",
+			"population": 592228
+		},
+		"peak": {
+			"name": "Longnawan",
+			"elevation": 2988
+		},
+		"position": "north"
+	},
+	"riau": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Jambi",
+			"Sumatera Barat",
+			"Sumatera Utara"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Pekanbaru",
+			"nameDe": "Pekanbaru",
+			"nameIt": "Pekanbaru",
+			"population": 799000
+		},
+		"position": "north-west"
+	},
+	"gorontalo": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Sulawesi Tengah",
+			"Sulawesi Utara"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Gorontalo",
+			"nameDe": "Kota Gorontalo",
+			"nameIt": "Gorontalo",
+			"population": 365497
+		},
+		"position": "north"
+	},
+	"maluku-utara": {
+		"kind": "region",
+		"type": "Province",
+		"coastal": true,
+		"largestCity": {
+			"name": "Ternate",
+			"nameDe": "Ternate",
+			"nameIt": "Ternate",
+			"population": 187521
+		},
+		"peak": {
+			"name": "Buku Sulat",
+			"elevation": 1508
+		},
+		"position": "east"
+	},
+	"kalimantan-barat": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Kalimantan Tengah",
+			"Kalimantan Timur"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Pontianak",
+			"nameDe": "Pontianak",
+			"nameIt": "Pontianak",
+			"population": 607311
+		},
+		"position": "centre"
+	},
+	"sulawesi-tengah": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Gorontalo",
+			"Sulawesi Barat",
+			"Sulawesi Selatan",
+			"Sulawesi Tenggara"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Palu",
+			"nameDe": "Palu",
+			"nameIt": "Palu",
+			"population": 612445
+		},
+		"peak": {
+			"name": "Fuyul Sojol",
+			"elevation": 3030
+		},
+		"position": "centre"
+	},
+	"sumatera-barat": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bengkulu",
+			"Jambi",
+			"Riau",
+			"Sumatera Utara"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Padang",
+			"nameDe": "Padang",
+			"nameIt": "Padang",
+			"population": 855000
+		},
+		"peak": {
+			"name": "Gunung Kerinci",
+			"elevation": 3805
+		},
+		"position": "west"
+	},
+	"kalimantan-tengah": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Kalimantan Barat",
+			"Kalimantan Selatan",
+			"Kalimantan Timur"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Palangkaraya",
+			"nameDe": "Palangka Raya",
+			"nameIt": "Palangkaraya",
+			"population": 148289
+		},
+		"peak": {
+			"name": "Bukit Raya",
+			"elevation": 2278
+		},
+		"position": "centre"
+	},
+	"jambi": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bengkulu",
+			"Riau",
+			"Sumatera Barat",
+			"Sumatera Selatan"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Jambi",
+			"nameDe": "Jambi",
+			"nameIt": "Jambi",
+			"population": 457090
+		},
+		"position": "west"
+	},
+	"papua-barat": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Papua"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Sorong",
+			"nameDe": "Sorong",
+			"nameIt": "Sorong",
+			"population": 125535
+		},
+		"peak": {
+			"name": "Gunung Umsini",
+			"elevation": 2970
+		},
+		"position": "east"
+	},
+	"sulawesi-barat": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Sulawesi Selatan",
+			"Sulawesi Tengah"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Majene",
+			"nameDe": "Majene",
+			"nameIt": "Majene",
+			"population": 272377
+		},
+		"position": "centre"
+	},
+	"bangka-belitung": {
+		"kind": "region",
+		"type": "Province",
+		"coastal": true,
+		"largestCity": {
+			"name": "Pangkalpinang",
+			"nameDe": "Pangkal Pinang",
+			"nameIt": "Pangkal Pinang",
+			"population": 125933
+		},
+		"position": "west"
+	},
+	"kalimantan-selatan": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Kalimantan Tengah",
+			"Kalimantan Timur"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Bandjarmasin",
+			"nameDe": "Banjarmasin",
+			"nameIt": "Banjarmasin",
+			"population": 603576
+		},
+		"position": "centre"
+	},
+	"sumatera-selatan": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bengkulu",
+			"Jambi",
+			"Lampung"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Palembang",
+			"nameDe": "Palembang",
+			"nameIt": "Palembang",
+			"population": 1749000
+		},
+		"position": "west"
+	},
+	"bengkulu": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Jambi",
+			"Lampung",
+			"Sumatera Barat",
+			"Sumatera Selatan"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Bengkulu",
+			"nameDe": "Bengkulu",
+			"nameIt": "Bengkulu",
+			"population": 426673
+		},
+		"position": "west"
+	},
+	"sulawesi-selatan": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Sulawesi Barat",
+			"Sulawesi Tengah",
+			"Sulawesi Tenggara"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Makassar",
+			"nameDe": "Makassar",
+			"nameIt": "Makassar",
+			"population": 1262000
+		},
+		"peak": {
+			"name": "Bulu Rantekombola",
+			"elevation": 3455
+		},
+		"position": "centre"
+	},
+	"sulawesi-tenggara": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Sulawesi Selatan",
+			"Sulawesi Tengah"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Kendari",
+			"nameDe": "Kendari",
+			"nameIt": "Kendari",
+			"population": 165377
+		},
+		"position": "centre"
+	},
+	"lampung": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bengkulu",
+			"Sumatera Selatan"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Bandar Lampung",
+			"nameDe": "Bandar Lampung",
+			"nameIt": "Bandar Lampung",
+			"population": 881801
+		},
+		"position": "west"
+	},
+	"papua": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Papua Barat"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Jayapura",
+			"nameDe": "Jayapura",
+			"nameIt": "Jayapura",
+			"population": 169341
+		},
+		"peak": {
+			"name": "Puncak Jaya",
+			"elevation": 4884
+		},
+		"position": "east"
+	},
+	"maluku": {
+		"kind": "region",
+		"type": "Province",
+		"coastal": true,
+		"largestCity": {
+			"name": "Ambon",
+			"nameDe": "Ambon",
+			"nameIt": "Ambon",
+			"population": 355596
+		},
+		"peak": {
+			"name": "Gunung Binaiya",
+			"elevation": 3027
+		},
+		"position": "south-east"
+	},
+	"jakarta-raya": {
+		"kind": "region",
+		"type": "Special district",
+		"borders": [
+			"Banten",
+			"Jawa Barat"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Jakarta",
+			"nameDe": "Jakarta",
+			"nameIt": "Giacarta",
+			"population": 9125000
+		},
+		"position": "south-west"
+	},
+	"banten": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Jakarta Raya",
+			"Jawa Barat"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Serang",
+			"nameDe": "Serang",
+			"nameIt": "Serang",
+			"population": 164767
+		},
+		"position": "south-west"
+	},
+	"jawa-barat": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Banten",
+			"Jakarta Raya",
+			"Jawa Tengah"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Bandung",
+			"nameDe": "Bandung",
+			"nameIt": "Bandung",
+			"population": 2394000
+		},
+		"peak": {
+			"name": "Gunung Ciremay",
+			"elevation": 3077
+		},
+		"position": "south-west"
+	},
+	"jawa-tengah": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Jawa Barat",
+			"Jawa Timur",
+			"Yogyakarta"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Semarang",
+			"nameDe": "Semarang",
+			"nameIt": "Semarang",
+			"population": 1396000
+		},
+		"peak": {
+			"name": "Gunung Merapi",
+			"elevation": 2968
+		},
+		"position": "south-west"
+	},
+	"jawa-timur": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bali",
+			"Jawa Tengah"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Surabaya",
+			"nameDe": "Surabaya",
+			"nameIt": "Surabaya",
+			"population": 2845000
+		},
+		"peak": {
+			"name": "Gunung Semeru",
+			"elevation": 3676
+		},
+		"position": "south"
+	},
+	"yogyakarta": {
+		"kind": "region",
+		"type": "Special region",
+		"borders": [
+			"Jawa Tengah"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Yogyakarta",
+			"nameDe": "Yogyakarta",
+			"nameIt": "Yogyakarta",
+			"population": 636660
+		},
+		"position": "south-west"
+	},
+	"bali": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Jawa Timur"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Denpasar",
+			"nameDe": "Denpasar",
+			"nameIt": "Denpasar",
+			"population": 732344
+		},
+		"position": "south"
+	},
+	"nusa-tenggara-barat": {
+		"kind": "region",
+		"type": "Province",
+		"coastal": true,
+		"largestCity": {
+			"name": "Mataram",
+			"nameDe": "Mataram",
+			"nameIt": "Mataram",
+			"population": 499409
+		},
+		"peak": {
+			"name": "Gunung Rinjani",
+			"elevation": 3726
+		},
+		"position": "south"
+	},
+	"nusa-tenggara-timur": {
+		"kind": "region",
+		"type": "Province",
+		"coastal": true,
+		"largestCity": {
+			"name": "Kupang",
+			"nameDe": "Kupang",
+			"nameIt": "Kupang",
+			"population": 282396
+		},
+		"position": "south"
+	}
+}

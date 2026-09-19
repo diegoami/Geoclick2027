@@ -1,0 +1,670 @@
+{
+	"ladakh": {
+		"kind": "region",
+		"type": "Union Territory",
+		"borders": [
+			"Himachal Pradesh",
+			"Jammu and Kashmir"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Leh",
+			"nameDe": "Leh",
+			"nameIt": "Leh",
+			"population": 30870
+		},
+		"peak": {
+			"name": "Nun",
+			"elevation": 7135
+		},
+		"position": "north-west"
+	},
+	"jammu-and-kashmir": {
+		"kind": "region",
+		"type": "Union Territory",
+		"borders": [
+			"Himachal Pradesh",
+			"Ladakh",
+			"Punjab"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Srinagar",
+			"nameDe": "Srinagar",
+			"nameIt": "Srinagar",
+			"population": 1140000
+		},
+		"position": "north-west"
+	},
+	"himachal-pradesh": {
+		"kind": "region",
+		"type": "Union Territory",
+		"borders": [
+			"Haryana",
+			"Jammu and Kashmir",
+			"Ladakh",
+			"Punjab",
+			"Uttar Pradesh",
+			"Uttarakhand"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Pathankot",
+			"nameDe": "Pathankot",
+			"nameIt": "Pathankot",
+			"population": 253987
+		},
+		"position": "north-west"
+	},
+	"punjab": {
+		"kind": "region",
+		"borders": [
+			"Chandigarh",
+			"Haryana",
+			"Himachal Pradesh",
+			"Jammu and Kashmir",
+			"Rajasthan"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Lahore",
+			"nameDe": "Lahore",
+			"nameIt": "Lahore",
+			"population": 6577000
+		},
+		"position": "north-west"
+	},
+	"chandigarh": {
+		"kind": "region",
+		"type": "Union Territory",
+		"borders": [
+			"Haryana",
+			"Punjab"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Chandigarh",
+			"nameDe": "Chandigarh",
+			"nameIt": "Chandigarh",
+			"population": 979000
+		},
+		"position": "north-west"
+	},
+	"uttarakhand": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Haryana",
+			"Himachal Pradesh",
+			"Uttar Pradesh"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Dehra Dun",
+			"nameDe": "Dehradun",
+			"nameIt": "Dehradun",
+			"population": 714223
+		},
+		"peak": {
+			"name": "Nanda Devi",
+			"elevation": 7817
+		},
+		"position": "north"
+	},
+	"haryana": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Chandigarh",
+			"Delhi",
+			"Himachal Pradesh",
+			"Punjab",
+			"Rajasthan",
+			"Uttar Pradesh",
+			"Uttarakhand"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Faridabad",
+			"nameDe": "Faridabad",
+			"nameIt": "Faridabad",
+			"population": 1394000
+		},
+		"position": "north-west"
+	},
+	"delhi": {
+		"kind": "region",
+		"type": "Union Territory",
+		"borders": [
+			"Haryana",
+			"Uttar Pradesh"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Delhi",
+			"nameDe": "Delhi",
+			"nameIt": "Delhi",
+			"population": 15926000
+		},
+		"position": "north-west"
+	},
+	"arunachal-pradesh": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Assam",
+			"Nagaland"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Itanagar",
+			"nameDe": "Itanagar",
+			"nameIt": "Itanagar",
+			"population": 44971
+		},
+		"position": "north-east"
+	},
+	"sikkim": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"West Bengal"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Gangtok",
+			"nameDe": "Gangtok",
+			"nameIt": "Gangtok",
+			"population": 77900
+		},
+		"peak": {
+			"name": "Kanchenjunga",
+			"elevation": 8586
+		},
+		"position": "north-east"
+	},
+	"uttar-pradesh": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Bihar",
+			"Chhattisgarh",
+			"Delhi",
+			"Haryana",
+			"Himachal Pradesh",
+			"Jharkhand",
+			"Madhya Pradesh",
+			"Rajasthan",
+			"Uttarakhand"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kanpur",
+			"nameDe": "Kanpur",
+			"nameIt": "Kanpur",
+			"population": 3162000
+		},
+		"position": "north"
+	},
+	"rajasthan": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Gujarat",
+			"Haryana",
+			"Madhya Pradesh",
+			"Punjab",
+			"Uttar Pradesh"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Jaipur",
+			"nameDe": "Jaipur",
+			"nameIt": "Jaipur",
+			"population": 2917000
+		},
+		"peak": {
+			"name": "Guru Sikhar",
+			"elevation": 1722
+		},
+		"position": "north-west"
+	},
+	"nagaland": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Arunachal Pradesh",
+			"Assam",
+			"Manipur"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kohima",
+			"nameDe": "Kohima",
+			"nameIt": "Kohima",
+			"population": 92113
+		},
+		"position": "north-east"
+	},
+	"assam": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Arunachal Pradesh",
+			"Manipur",
+			"Meghalaya",
+			"Mizoram",
+			"Nagaland",
+			"Tripura",
+			"West Bengal"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Guwahati",
+			"nameDe": "Guwahati",
+			"nameIt": "Guwahati",
+			"population": 983000
+		},
+		"position": "north-east"
+	},
+	"bihar": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Jharkhand",
+			"Uttar Pradesh",
+			"West Bengal"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Patna",
+			"nameDe": "Patna",
+			"nameIt": "Patna",
+			"population": 2158000
+		},
+		"position": "centre"
+	},
+	"meghalaya": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Assam"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Shillong",
+			"nameDe": "Shillong",
+			"nameIt": "Shillong",
+			"population": 375527
+		},
+		"position": "east"
+	},
+	"manipur": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Assam",
+			"Mizoram",
+			"Nagaland"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Imphal",
+			"nameDe": "Imphal",
+			"nameIt": "Imphal",
+			"population": 264986
+		},
+		"position": "east"
+	},
+	"west-bengal": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Assam",
+			"Bihar",
+			"Jharkhand",
+			"Odisha",
+			"Sikkim"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Kolkata",
+			"nameDe": "Kalkutta",
+			"nameIt": "Calcutta",
+			"population": 14787000
+		},
+		"position": "east"
+	},
+	"madhya-pradesh": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Chhattisgarh",
+			"Gujarat",
+			"Maharashtra",
+			"Rajasthan",
+			"Uttar Pradesh"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Indore",
+			"nameDe": "Indore",
+			"nameIt": "Indore",
+			"population": 2026000
+		},
+		"position": "centre"
+	},
+	"tripura": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Assam",
+			"Mizoram"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Agartala",
+			"nameDe": "Agartala",
+			"nameIt": "Agartala",
+			"population": 203264
+		},
+		"position": "east"
+	},
+	"jharkhand": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Bihar",
+			"Chhattisgarh",
+			"Odisha",
+			"Uttar Pradesh",
+			"West Bengal"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Jamshedpur",
+			"nameDe": "Jamshedpur",
+			"nameIt": "Jamshedpur",
+			"population": 1300000
+		},
+		"position": "centre"
+	},
+	"mizoram": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Assam",
+			"Manipur",
+			"Tripura"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Aizawl",
+			"nameDe": "Aizawl",
+			"nameIt": "Aizawl",
+			"population": 283021
+		},
+		"position": "east"
+	},
+	"gujarat": {
+		"kind": "region",
+		"borders": [
+			"Dadra and Nagar Haveli and Daman and Diu",
+			"Madhya Pradesh",
+			"Maharashtra",
+			"Rajasthan"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Ahmedabad",
+			"nameDe": "Ahmedabad",
+			"nameIt": "Ahmedabad",
+			"population": 5375000
+		},
+		"position": "west"
+	},
+	"chhattisgarh": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Jharkhand",
+			"Madhya Pradesh",
+			"Maharashtra",
+			"Odisha",
+			"Telangana",
+			"Uttar Pradesh"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bhilai",
+			"nameDe": "Bhilai",
+			"nameIt": "Bhilai Nagar",
+			"population": 1097000
+		},
+		"position": "centre"
+	},
+	"dadra-and-nagar-haveli-and-daman-and-diu": {
+		"kind": "region",
+		"type": "Union Territory",
+		"borders": [
+			"Gujarat",
+			"Maharashtra"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Daman",
+			"nameDe": "Daman",
+			"nameIt": "Daman",
+			"population": 39737
+		},
+		"position": "west"
+	},
+	"odisha": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Andhra Pradesh",
+			"Chhattisgarh",
+			"Jharkhand",
+			"Telangana",
+			"West Bengal"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Bhubaneswar",
+			"nameDe": "Bhubaneswar",
+			"nameIt": "Bhubaneswar",
+			"population": 844000
+		},
+		"peak": {
+			"name": "Mahendra Giri",
+			"elevation": 1501
+		},
+		"position": "centre"
+	},
+	"maharashtra": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Chhattisgarh",
+			"Dadra and Nagar Haveli and Daman and Diu",
+			"Goa",
+			"Gujarat",
+			"Karnataka",
+			"Madhya Pradesh",
+			"Telangana"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Mumbai",
+			"nameDe": "Mumbai",
+			"nameIt": "Mumbai",
+			"population": 18978000
+		},
+		"peak": {
+			"name": "Salher",
+			"elevation": 1567
+		},
+		"position": "west"
+	},
+	"telangana": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Andhra Pradesh",
+			"Chhattisgarh",
+			"Karnataka",
+			"Maharashtra",
+			"Odisha"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Hyderabad",
+			"nameDe": "Hyderabad",
+			"nameIt": "Hyderabad",
+			"population": 6376000
+		},
+		"position": "centre"
+	},
+	"andhra-pradesh": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Karnataka",
+			"Odisha",
+			"Tamil Nadu",
+			"Telangana"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Amaravati",
+			"nameDe": "Amaravati",
+			"nameIt": "Amaravati",
+			"population": 5800000
+		},
+		"position": "south"
+	},
+	"goa": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Karnataka",
+			"Maharashtra"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Panaji",
+			"nameDe": "Panaji",
+			"nameIt": "Panaji",
+			"population": 65586
+		},
+		"position": "south-west"
+	},
+	"karnataka": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Andhra Pradesh",
+			"Goa",
+			"Kerala",
+			"Maharashtra",
+			"Tamil Nadu",
+			"Telangana"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Bengaluru",
+			"nameDe": "Bengaluru",
+			"nameIt": "Bangalore",
+			"population": 6787000
+		},
+		"peak": {
+			"name": "Kodachadri",
+			"elevation": 1343
+		},
+		"position": "south-west"
+	},
+	"puducherry": {
+		"kind": "region",
+		"type": "Union Territory",
+		"borders": [
+			"Kerala",
+			"Tamil Nadu"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Puducherry",
+			"nameDe": "Puducherry",
+			"nameIt": "Pondicherry",
+			"population": 227411
+		},
+		"position": "south-west"
+	},
+	"tamil-nadu": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Andhra Pradesh",
+			"Karnataka",
+			"Kerala",
+			"Puducherry"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Chennai",
+			"nameDe": "Chennai",
+			"nameIt": "Chennai",
+			"population": 7163000
+		},
+		"peak": {
+			"name": "Doda Betta",
+			"elevation": 2636
+		},
+		"position": "south"
+	},
+	"kerala": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Karnataka",
+			"Puducherry",
+			"Tamil Nadu"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Kochi",
+			"nameDe": "Kochi",
+			"nameIt": "Kochi",
+			"population": 1519000
+		},
+		"peak": {
+			"name": "Anai Mudi",
+			"elevation": 2695
+		},
+		"position": "south-west"
+	},
+	"andaman-and-nicobar": {
+		"kind": "region",
+		"type": "Union Territory",
+		"coastal": true,
+		"largestCity": {
+			"name": "Port Blair",
+			"nameDe": "Port Blair",
+			"nameIt": "Port Blair",
+			"population": 127562
+		},
+		"position": "south-east"
+	},
+	"lakshadweep": {
+		"kind": "region",
+		"type": "Union Territory",
+		"coastal": true,
+		"largestCity": {
+			"name": "Kavaratti",
+			"nameDe": "Kavaratti",
+			"nameIt": "Kavaratti",
+			"population": 10688
+		},
+		"position": "south-west"
+	}
+}

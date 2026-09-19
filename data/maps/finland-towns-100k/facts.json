@@ -1,0 +1,68 @@
+{
+	"oulu": {
+		"kind": "city",
+		"population": 136752,
+		"populationRank": 4,
+		"region": "Northern Ostrobothnia",
+		"coastal": true,
+		"position": "north"
+	},
+	"kuopio": {
+		"kind": "city",
+		"population": 91900,
+		"populationRank": 7,
+		"region": "Eastern Finland",
+		"coastal": false,
+		"position": "east"
+	},
+	"jyvaskyla": {
+		"kind": "city",
+		"population": 98136,
+		"populationRank": 6,
+		"region": "Central Finland",
+		"coastal": false,
+		"position": "east"
+	},
+	"tampere": {
+		"kind": "city",
+		"population": 259279,
+		"populationRank": 2,
+		"region": "Pirkanmaa",
+		"coastal": false,
+		"position": "south"
+	},
+	"pori": {
+		"kind": "city",
+		"population": 76772,
+		"populationRank": 8,
+		"region": "Satakunta",
+		"coastal": true,
+		"position": "south-west"
+	},
+	"lahti": {
+		"kind": "city",
+		"population": 98826,
+		"populationRank": 5,
+		"region": "Päijänne Tavastia",
+		"coastal": false,
+		"position": "south"
+	},
+	"turku": {
+		"kind": "city",
+		"population": 175945,
+		"populationRank": 3,
+		"region": "Finland Proper",
+		"coastal": true,
+		"position": "south-west"
+	},
+	"helsinki": {
+		"kind": "city",
+		"population": 1115000,
+		"populationRank": 1,
+		"population1950": 366000,
+		"region": "Southern Finland",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south"
+	}
+}

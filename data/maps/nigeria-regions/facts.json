@@ -1,0 +1,689 @@
+{
+	"sokoto": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Kebbi",
+			"Zamfara"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Sokoto",
+			"nameDe": "Sokoto",
+			"nameIt": "Sokoto",
+			"population": 732178
+		},
+		"position": "north-west"
+	},
+	"katsina": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Jigawa",
+			"Kaduna",
+			"Kano",
+			"Zamfara"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Katsina",
+			"nameDe": "Katsina",
+			"nameIt": "Katsina",
+			"population": 432149
+		},
+		"position": "north"
+	},
+	"zamfara": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Kaduna",
+			"Katsina",
+			"Kebbi",
+			"Niger",
+			"Sokoto"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Gusau",
+			"nameDe": "Gusau",
+			"nameIt": "Gusau",
+			"population": 226857
+		},
+		"position": "north-west"
+	},
+	"yobe": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Bauchi",
+			"Borno",
+			"Gombe",
+			"Jigawa"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Damaturu",
+			"nameDe": "Damaturu",
+			"nameIt": "Damaturu",
+			"population": 255895
+		},
+		"position": "north-east"
+	},
+	"jigawa": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Bauchi",
+			"Kano",
+			"Katsina",
+			"Yobe"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Dutse",
+			"nameDe": "Dutse",
+			"nameIt": "Dutse",
+			"population": 17129
+		},
+		"position": "north"
+	},
+	"borno": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Adamawa",
+			"Gombe",
+			"Yobe"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Maiduguri",
+			"nameDe": "Maiduguri",
+			"nameIt": "Maiduguri",
+			"population": 896000
+		},
+		"position": "north-east"
+	},
+	"kebbi": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Niger",
+			"Sokoto",
+			"Zamfara"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Birnin Kebbi",
+			"nameDe": "Birnin Kebbi",
+			"nameIt": "Birnin Kebbi",
+			"population": 108164
+		},
+		"position": "north-west"
+	},
+	"kano": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Bauchi",
+			"Jigawa",
+			"Kaduna",
+			"Katsina"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kano",
+			"nameDe": "Kano",
+			"nameIt": "Kano",
+			"population": 3140000
+		},
+		"position": "north"
+	},
+	"bauchi": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Gombe",
+			"Jigawa",
+			"Kaduna",
+			"Kano",
+			"Plateau",
+			"Taraba",
+			"Yobe"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bauchi",
+			"nameDe": "Bauchi",
+			"nameIt": "Bauchi",
+			"population": 316149
+		},
+		"position": "north"
+	},
+	"gombe": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Adamawa",
+			"Bauchi",
+			"Borno",
+			"Taraba",
+			"Yobe"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Gombe",
+			"nameDe": "Gombe",
+			"nameIt": "Gombe",
+			"population": 270366
+		},
+		"position": "east"
+	},
+	"kaduna": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Bauchi",
+			"Federal Capital Territory",
+			"Kano",
+			"Katsina",
+			"Nasarawa",
+			"Niger",
+			"Plateau",
+			"Zamfara"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kaduna",
+			"nameDe": "Kaduna",
+			"nameIt": "Kaduna",
+			"population": 1442000
+		},
+		"position": "centre"
+	},
+	"niger": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Federal Capital Territory",
+			"Kaduna",
+			"Kebbi",
+			"Kogi",
+			"Kwara",
+			"Zamfara"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Minna",
+			"nameDe": "Minna",
+			"nameIt": "Minna",
+			"population": 291905
+		},
+		"position": "west"
+	},
+	"plateau": {
+		"kind": "region",
+		"borders": [
+			"Bauchi",
+			"Kaduna",
+			"Nasarawa",
+			"Taraba"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Jos",
+			"nameDe": "Jos",
+			"nameIt": "Jos",
+			"population": 816824
+		},
+		"position": "centre"
+	},
+	"adamawa": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Borno",
+			"Gombe",
+			"Taraba"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Mubi",
+			"nameDe": "Mubi",
+			"nameIt": "Mubi",
+			"population": 225705
+		},
+		"peak": {
+			"name": "Mount Dimlang",
+			"elevation": 2042
+		},
+		"position": "east"
+	},
+	"kwara": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Ekiti",
+			"Kogi",
+			"Niger",
+			"Osun",
+			"Oyo"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ilorin",
+			"nameDe": "Ilorin",
+			"nameIt": "Ilorin",
+			"population": 771000
+		},
+		"position": "west"
+	},
+	"federal-capital-territory": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Kaduna",
+			"Kogi",
+			"Nasarawa",
+			"Niger"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Abuja",
+			"nameDe": "Abuja",
+			"nameIt": "Abuja",
+			"population": 1576000
+		},
+		"position": "centre"
+	},
+	"nasarawa": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Benue",
+			"Federal Capital Territory",
+			"Kaduna",
+			"Kogi",
+			"Plateau",
+			"Taraba"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Lafia",
+			"nameDe": "Lafia",
+			"nameIt": "Lafia",
+			"population": 127236
+		},
+		"position": "centre"
+	},
+	"oyo": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Kwara",
+			"Ogun",
+			"Osun"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ibadan",
+			"nameDe": "Ibadan",
+			"nameIt": "Ibadan",
+			"population": 2628000
+		},
+		"position": "west"
+	},
+	"taraba": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Adamawa",
+			"Bauchi",
+			"Benue",
+			"Gombe",
+			"Nasarawa",
+			"Plateau"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Jalingo",
+			"nameDe": "Jalingo",
+			"nameIt": "Jalingo",
+			"population": 117757
+		},
+		"peak": {
+			"name": "Chappal Wadi",
+			"elevation": 2419
+		},
+		"position": "centre"
+	},
+	"ekiti": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Kogi",
+			"Kwara",
+			"Ondo",
+			"Osun"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ado Ekiti",
+			"nameDe": "Ado Ekiti",
+			"nameIt": "Ado Ekiti",
+			"population": 446749
+		},
+		"position": "west"
+	},
+	"kogi": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Anambra",
+			"Benue",
+			"Delta",
+			"Edo",
+			"Ekiti",
+			"Enugu",
+			"Federal Capital Territory",
+			"Kwara",
+			"Nasarawa",
+			"Niger",
+			"Ondo"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Idah",
+			"nameDe": "Idah",
+			"nameIt": "Idah",
+			"population": 75087
+		},
+		"position": "west"
+	},
+	"osun": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Ekiti",
+			"Kwara",
+			"Ogun",
+			"Ondo",
+			"Oyo"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ife",
+			"nameDe": "Ile-Ife",
+			"nameIt": "Ife",
+			"population": 482365
+		},
+		"position": "west"
+	},
+	"benue": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Cross River",
+			"Ebonyi",
+			"Enugu",
+			"Kogi",
+			"Nasarawa",
+			"Taraba"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Makurdi",
+			"nameDe": "Makurdi",
+			"nameIt": "Makurdi",
+			"population": 292645
+		},
+		"position": "south"
+	},
+	"ogun": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Lagos",
+			"Ondo",
+			"Osun",
+			"Oyo"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Abeokuta",
+			"nameDe": "Abeokuta",
+			"nameIt": "Abeokuta",
+			"population": 593100
+		},
+		"position": "south-west"
+	},
+	"ondo": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Delta",
+			"Edo",
+			"Ekiti",
+			"Kogi",
+			"Ogun",
+			"Osun"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Ikare",
+			"nameDe": "Ikare",
+			"nameIt": "Ikare",
+			"population": 1099931
+		},
+		"position": "south-west"
+	},
+	"edo": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Anambra",
+			"Delta",
+			"Kogi",
+			"Ondo"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Benin City",
+			"nameDe": "Benin City",
+			"nameIt": "Benin City",
+			"population": 1190000
+		},
+		"position": "south-west"
+	},
+	"lagos": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Ogun"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Lagos",
+			"nameDe": "Lagos",
+			"nameIt": "Lagos",
+			"population": 9466000
+		},
+		"position": "south-west"
+	},
+	"enugu": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Abia",
+			"Anambra",
+			"Benue",
+			"Ebonyi",
+			"Kogi"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Enugu",
+			"nameDe": "Enugu",
+			"nameIt": "Enugu",
+			"population": 688862
+		},
+		"position": "south"
+	},
+	"anambra": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Abia",
+			"Delta",
+			"Edo",
+			"Enugu",
+			"Imo",
+			"Kogi",
+			"Rivers"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Awka",
+			"nameDe": "Awka",
+			"nameIt": "Awka",
+			"population": 500000
+		},
+		"position": "south"
+	},
+	"ebonyi": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Abia",
+			"Benue",
+			"Cross River",
+			"Enugu"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"cross-river": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Abia",
+			"Akwa Ibom",
+			"Benue",
+			"Ebonyi"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Calabar",
+			"nameDe": "Calabar",
+			"nameIt": "Calabar",
+			"population": 461796
+		},
+		"position": "south"
+	},
+	"delta": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Anambra",
+			"Bayelsa",
+			"Edo",
+			"Kogi",
+			"Ondo",
+			"Rivers"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Warri",
+			"nameDe": "Warri",
+			"nameIt": "Warri",
+			"population": 830106
+		},
+		"position": "south-west"
+	},
+	"imo": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Abia",
+			"Anambra",
+			"Rivers"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Owerri",
+			"nameDe": "Owerri",
+			"nameIt": "Owerri",
+			"population": 215038
+		},
+		"position": "south"
+	},
+	"abia": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Akwa Ibom",
+			"Anambra",
+			"Cross River",
+			"Ebonyi",
+			"Enugu",
+			"Imo",
+			"Rivers"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Aba",
+			"nameDe": "Aba",
+			"nameIt": "Aba",
+			"population": 897560
+		},
+		"position": "south"
+	},
+	"rivers": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Abia",
+			"Akwa Ibom",
+			"Anambra",
+			"Bayelsa",
+			"Delta",
+			"Imo"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Port Harcourt",
+			"nameDe": "Port Harcourt",
+			"nameIt": "Port Harcourt",
+			"population": 1020000
+		},
+		"position": "south"
+	},
+	"akwa-ibom": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Abia",
+			"Cross River",
+			"Rivers"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Uyo",
+			"nameDe": "Uyo",
+			"nameIt": "Uyo",
+			"population": 554906
+		},
+		"position": "south"
+	},
+	"bayelsa": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Delta",
+			"Rivers"
+		],
+		"coastal": true,
+		"position": "south-west"
+	}
+}

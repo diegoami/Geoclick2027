@@ -1,0 +1,1514 @@
+{
+	"k-rklareli": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Edirne",
+			"İstanbul",
+			"Tekirdağ"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Lüleburgaz",
+			"nameDe": "Lüleburgaz",
+			"nameIt": "Lüleburgaz",
+			"population": 90899
+		},
+		"position": "north-west"
+	},
+	"sinop": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Çorum",
+			"Kastamonu",
+			"Samsun"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Sinop",
+			"nameDe": "Sinop",
+			"nameIt": "Sinope",
+			"population": 34834
+		},
+		"position": "north"
+	},
+	"bart-n": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Karabük",
+			"Kastamonu",
+			"Zonguldak"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"kastamonu": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bartın",
+			"Çankırı",
+			"Çorum",
+			"Karabük",
+			"Sinop"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Kastamonu",
+			"nameDe": "Kastamonu",
+			"nameIt": "Kastamonu",
+			"population": 70402
+		},
+		"position": "north"
+	},
+	"zonguldak": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bartın",
+			"Bolu",
+			"Düzce",
+			"Karabük"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Zonguldak",
+			"nameDe": "Zonguldak",
+			"nameIt": "Zonguldak",
+			"population": 156918
+		},
+		"position": "north-west"
+	},
+	"edirne": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Çanakkale",
+			"Kırklareli",
+			"Tekirdağ"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Edirne",
+			"nameDe": "Edirne",
+			"nameIt": "Edirne",
+			"population": 126470
+		},
+		"position": "north-west"
+	},
+	"samsun": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Amasya",
+			"Çorum",
+			"Ordu",
+			"Sinop",
+			"Tokat"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Samsun",
+			"nameDe": "Samsun",
+			"nameIt": "Samsun",
+			"population": 609339
+		},
+		"position": "north"
+	},
+	"istanbul": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Kırklareli",
+			"Kocaeli",
+			"Tekirdağ"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Istanbul",
+			"nameDe": "Istanbul",
+			"nameIt": "Istanbul",
+			"population": 10061000
+		},
+		"position": "north-west"
+	},
+	"karabuk": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bartın",
+			"Bolu",
+			"Çankırı",
+			"Kastamonu",
+			"Zonguldak"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Karabük",
+			"nameDe": "Karabük",
+			"nameIt": "Karabük",
+			"population": 128564
+		},
+		"position": "north"
+	},
+	"ardahan": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Artvin",
+			"Erzurum",
+			"Kars"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"artvin": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Ardahan",
+			"Erzurum",
+			"Rize"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Artvin",
+			"nameDe": "Artvin",
+			"nameIt": "Artvin",
+			"population": 32272
+		},
+		"position": "north-east"
+	},
+	"tekirdag": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Çanakkale",
+			"Edirne",
+			"İstanbul",
+			"Kırklareli"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tekirdağ",
+			"nameDe": "Tekirdağ",
+			"nameIt": "Tekirdağ",
+			"population": 122287
+		},
+		"position": "north-west"
+	},
+	"rize": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Artvin",
+			"Bayburt",
+			"Erzurum",
+			"Trabzon"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Rize",
+			"nameDe": "Rize",
+			"nameIt": "Rize",
+			"population": 279450
+		},
+		"peak": {
+			"name": "Kackar Dagi",
+			"elevation": 3931
+		},
+		"position": "north-east"
+	},
+	"duzce": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bolu",
+			"Sakarya",
+			"Zonguldak"
+		],
+		"coastal": true,
+		"position": "north-west"
+	},
+	"kocaeli": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bursa",
+			"İstanbul",
+			"Sakarya",
+			"Yalova"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "İzmit",
+			"nameDe": "İzmit",
+			"nameIt": "İzmit",
+			"population": 466504
+		},
+		"position": "north-west"
+	},
+	"trabzon": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bayburt",
+			"Erzurum",
+			"Giresun",
+			"Gümüşhane",
+			"Rize"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Trabzon",
+			"nameDe": "Trabzon",
+			"nameIt": "Trebisonda",
+			"population": 764714
+		},
+		"position": "north-east"
+	},
+	"sakarya": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bilecik",
+			"Bolu",
+			"Bursa",
+			"Düzce",
+			"Kocaeli"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Sakarya",
+			"nameDe": "Adapazarı",
+			"nameIt": "Adapazarı",
+			"population": 286787
+		},
+		"position": "north-west"
+	},
+	"ordu": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Giresun",
+			"Samsun",
+			"Sivas",
+			"Tokat"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Ordu",
+			"nameDe": "Altınordu",
+			"nameIt": "Ordu",
+			"population": 155117
+		},
+		"position": "north"
+	},
+	"cank-r": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Ankara",
+			"Bolu",
+			"Çorum",
+			"Karabük",
+			"Kastamonu",
+			"Kırıkkale"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Çankırı",
+			"nameDe": "Çankırı",
+			"nameIt": "Çankırı",
+			"population": 71379
+		},
+		"position": "north"
+	},
+	"amasya": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Çorum",
+			"Samsun",
+			"Tokat",
+			"Yozgat"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Amasya",
+			"nameDe": "Amasya",
+			"nameIt": "Amasya",
+			"population": 82896
+		},
+		"position": "north"
+	},
+	"corum": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Amasya",
+			"Çankırı",
+			"Kastamonu",
+			"Kırıkkale",
+			"Samsun",
+			"Sinop",
+			"Yozgat"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Corum",
+			"nameDe": "Çorum",
+			"nameIt": "Çorum",
+			"population": 183418
+		},
+		"position": "north"
+	},
+	"bolu": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Ankara",
+			"Bilecik",
+			"Çankırı",
+			"Düzce",
+			"Eskişehir",
+			"Karabük",
+			"Sakarya",
+			"Zonguldak"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bolu",
+			"nameDe": "Bolu",
+			"nameIt": "Bolu",
+			"population": 96629
+		},
+		"position": "north-west"
+	},
+	"yalova": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bursa",
+			"Kocaeli"
+		],
+		"coastal": true,
+		"position": "north-west"
+	},
+	"giresun": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Erzincan",
+			"Gümüşhane",
+			"Ordu",
+			"Sivas",
+			"Trabzon"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Giresun",
+			"nameDe": "Giresun",
+			"nameIt": "Giresun",
+			"population": 98864
+		},
+		"position": "north-east"
+	},
+	"kars": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Ağrı",
+			"Ardahan",
+			"Erzurum",
+			"Iğdır"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kars",
+			"nameDe": "Kars",
+			"nameIt": "Kars",
+			"population": 77486
+		},
+		"position": "north-east"
+	},
+	"tokat": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Amasya",
+			"Ordu",
+			"Samsun",
+			"Sivas",
+			"Yozgat"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tokat",
+			"nameDe": "Tokat",
+			"nameIt": "Tokat",
+			"population": 129702
+		},
+		"position": "north"
+	},
+	"gumushane": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bayburt",
+			"Erzincan",
+			"Giresun",
+			"Trabzon"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Gümüşhane",
+			"nameDe": "Gümüşhane",
+			"nameIt": "Gümüşhane",
+			"population": 32250
+		},
+		"position": "north-east"
+	},
+	"bayburt": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Erzincan",
+			"Erzurum",
+			"Gümüşhane",
+			"Rize",
+			"Trabzon"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"bursa": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Balıkesir",
+			"Bilecik",
+			"Kocaeli",
+			"Kütahya",
+			"Sakarya",
+			"Yalova"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Bursa",
+			"nameDe": "Bursa",
+			"nameIt": "Bursa",
+			"population": 1492000
+		},
+		"peak": {
+			"name": "Uludağ Tepe",
+			"elevation": 2543
+		},
+		"position": "north-west"
+	},
+	"canakkale": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Balıkesir",
+			"Edirne",
+			"Tekirdağ"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Çanakkale",
+			"nameDe": "Çanakkale",
+			"nameIt": "Çanakkale",
+			"population": 87791
+		},
+		"position": "north-west"
+	},
+	"bilecik": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bolu",
+			"Bursa",
+			"Eskişehir",
+			"Kütahya",
+			"Sakarya"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bilecik",
+			"nameDe": "Bilecik",
+			"nameIt": "Bilecik",
+			"population": 40285
+		},
+		"position": "north-west"
+	},
+	"erzurum": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Ağrı",
+			"Ardahan",
+			"Artvin",
+			"Bayburt",
+			"Bingöl",
+			"Erzincan",
+			"Kars",
+			"Muş",
+			"Rize",
+			"Trabzon"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Erzurum",
+			"nameDe": "Erzurum",
+			"nameIt": "Erzurum",
+			"population": 420691
+		},
+		"position": "north-east"
+	},
+	"igd-r": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Ağrı",
+			"Kars"
+		],
+		"coastal": false,
+		"peak": {
+			"name": "Mount Ararat",
+			"elevation": 5137
+		},
+		"position": "east"
+	},
+	"k-r-kkale": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Ankara",
+			"Çankırı",
+			"Çorum",
+			"Kırşehir",
+			"Yozgat"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kırıkkale",
+			"nameDe": "Kırıkkale",
+			"nameIt": "Kırıkkale",
+			"population": 211138
+		},
+		"position": "centre"
+	},
+	"bal-kesir": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bursa",
+			"Çanakkale",
+			"İzmir",
+			"Kütahya",
+			"Manisa"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Balıkesir",
+			"nameDe": "Balıkesir",
+			"nameIt": "Balıkesir",
+			"population": 261516
+		},
+		"position": "west"
+	},
+	"ankara": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Aksaray",
+			"Bolu",
+			"Çankırı",
+			"Eskişehir",
+			"Kırıkkale",
+			"Kırşehir",
+			"Konya"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ankara",
+			"nameDe": "Ankara",
+			"nameIt": "Ankara",
+			"population": 3716000
+		},
+		"position": "centre"
+	},
+	"eskisehir": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Afyonkarahisar",
+			"Ankara",
+			"Bilecik",
+			"Bolu",
+			"Konya",
+			"Kütahya"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Eskişehir",
+			"nameDe": "Eskişehir",
+			"nameIt": "Eskişehir",
+			"population": 514869
+		},
+		"position": "west"
+	},
+	"yozgat": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Amasya",
+			"Çorum",
+			"Kayseri",
+			"Kırıkkale",
+			"Kırşehir",
+			"Nevşehir",
+			"Sivas",
+			"Tokat"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Yozgat",
+			"nameDe": "Yozgat",
+			"nameIt": "Yozgat",
+			"population": 87881
+		},
+		"position": "centre"
+	},
+	"sivas": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Erzincan",
+			"Giresun",
+			"Kahramanmaraş",
+			"Kayseri",
+			"Malatya",
+			"Ordu",
+			"Tokat",
+			"Yozgat"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Sivas",
+			"nameDe": "Sivas",
+			"nameIt": "Sivas",
+			"population": 264022
+		},
+		"position": "centre"
+	},
+	"erzincan": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bayburt",
+			"Bingöl",
+			"Elazığ",
+			"Erzurum",
+			"Giresun",
+			"Gümüşhane",
+			"Malatya",
+			"Sivas",
+			"Tunceli"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Erzincan",
+			"nameDe": "Erzincan",
+			"nameIt": "Erzincan",
+			"population": 129407
+		},
+		"position": "east"
+	},
+	"agr": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bitlis",
+			"Erzurum",
+			"Iğdır",
+			"Kars",
+			"Muş",
+			"Van"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ağrı",
+			"nameDe": "Ağrı",
+			"nameIt": "Ağrı",
+			"population": 87854
+		},
+		"position": "east"
+	},
+	"k-rsehir": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Aksaray",
+			"Ankara",
+			"Kırıkkale",
+			"Nevşehir",
+			"Yozgat"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kırşehir",
+			"nameDe": "Kırşehir",
+			"nameIt": "Kırşehir",
+			"population": 94336
+		},
+		"position": "centre"
+	},
+	"kutahya": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Afyonkarahisar",
+			"Balıkesir",
+			"Bilecik",
+			"Bursa",
+			"Eskişehir",
+			"Manisa",
+			"Uşak"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kütahya",
+			"nameDe": "Kütahya",
+			"nameIt": "Kütahya",
+			"population": 185008
+		},
+		"position": "west"
+	},
+	"tunceli": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bingöl",
+			"Elazığ",
+			"Erzincan"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tunceli",
+			"nameDe": "Tunceli",
+			"nameIt": "Tunceli",
+			"population": 29062
+		},
+		"position": "east"
+	},
+	"bingol": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Diyarbakır",
+			"Elazığ",
+			"Erzincan",
+			"Erzurum",
+			"Muş",
+			"Tunceli"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bingöl",
+			"nameDe": "Bingöl",
+			"nameIt": "Bingöl",
+			"population": 80568
+		},
+		"position": "east"
+	},
+	"mus": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Ağrı",
+			"Batman",
+			"Bingöl",
+			"Bitlis",
+			"Diyarbakır",
+			"Erzurum"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Muş",
+			"nameDe": "Muş",
+			"nameIt": "Muş",
+			"population": 82536
+		},
+		"position": "east"
+	},
+	"nevsehir": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Aksaray",
+			"Kayseri",
+			"Kırşehir",
+			"Niğde",
+			"Yozgat"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Nevşehir",
+			"nameDe": "Nevşehir",
+			"nameIt": "Nevşehir",
+			"population": 75527
+		},
+		"position": "centre"
+	},
+	"elaz-g": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bingöl",
+			"Diyarbakır",
+			"Erzincan",
+			"Malatya",
+			"Tunceli"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Elâzığ",
+			"nameDe": "Elazığ",
+			"nameIt": "Elâzığ",
+			"population": 271492
+		},
+		"position": "east"
+	},
+	"manisa": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Aydın",
+			"Balıkesir",
+			"Denizli",
+			"İzmir",
+			"Kütahya",
+			"Uşak"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Manisa",
+			"nameDe": "Manisa",
+			"nameIt": "Magnesia",
+			"population": 243971
+		},
+		"position": "west"
+	},
+	"izmir": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Aydın",
+			"Balıkesir",
+			"Manisa"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "İzmir",
+			"nameDe": "Izmir",
+			"nameIt": "Smirne",
+			"population": 2587000
+		},
+		"position": "west"
+	},
+	"van": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Ağrı",
+			"Bitlis",
+			"Hakkâri",
+			"Siirt",
+			"Şırnak"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Van",
+			"nameDe": "Van",
+			"nameIt": "Van",
+			"population": 371713
+		},
+		"position": "east"
+	},
+	"kayseri": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Adana",
+			"Kahramanmaraş",
+			"Nevşehir",
+			"Niğde",
+			"Sivas",
+			"Yozgat"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kayseri",
+			"nameDe": "Kayseri",
+			"nameIt": "Kayseri",
+			"population": 592840
+		},
+		"peak": {
+			"name": "Erciyes Dagi",
+			"elevation": 3917
+		},
+		"position": "centre"
+	},
+	"usak": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Afyonkarahisar",
+			"Denizli",
+			"Kütahya",
+			"Manisa"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Uşak",
+			"nameDe": "Uşak",
+			"nameIt": "Uşak",
+			"population": 152862
+		},
+		"position": "west"
+	},
+	"bitlis": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Ağrı",
+			"Batman",
+			"Muş",
+			"Siirt",
+			"Van"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tatvan",
+			"nameDe": "Tatvan",
+			"nameIt": "Tatvan",
+			"population": 73222
+		},
+		"position": "east"
+	},
+	"afyonkarahisar": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Burdur",
+			"Denizli",
+			"Eskişehir",
+			"Isparta",
+			"Konya",
+			"Kütahya",
+			"Uşak"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Afyon",
+			"nameDe": "Afyonkarahisar",
+			"nameIt": "Afyonkarahisar",
+			"population": 156992
+		},
+		"position": "west"
+	},
+	"malatya": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Adıyaman",
+			"Diyarbakır",
+			"Elazığ",
+			"Erzincan",
+			"Kahramanmaraş",
+			"Sivas"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Malatya",
+			"nameDe": "Malatya",
+			"nameIt": "Malatya",
+			"population": 461574
+		},
+		"position": "centre"
+	},
+	"aksaray": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Ankara",
+			"Kırşehir",
+			"Konya",
+			"Nevşehir",
+			"Niğde"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"diyarbak-r": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Adıyaman",
+			"Batman",
+			"Bingöl",
+			"Elazığ",
+			"Malatya",
+			"Mardin",
+			"Muş",
+			"Şanlıurfa"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Diyarbakır",
+			"nameDe": "Diyarbakır",
+			"nameIt": "Diyarbakır",
+			"population": 644763
+		},
+		"position": "east"
+	},
+	"batman": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bitlis",
+			"Diyarbakır",
+			"Mardin",
+			"Muş",
+			"Siirt",
+			"Şırnak"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Batman",
+			"nameDe": "Batman",
+			"nameIt": "Batman",
+			"population": 302074
+		},
+		"position": "east"
+	},
+	"konya": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Afyonkarahisar",
+			"Aksaray",
+			"Ankara",
+			"Antalya",
+			"Eskişehir",
+			"Isparta",
+			"Karaman",
+			"Mersin",
+			"Niğde"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Konya",
+			"nameDe": "Konya",
+			"nameIt": "Konya",
+			"population": 919000
+		},
+		"peak": {
+			"name": "Kizilkaya",
+			"elevation": 3767
+		},
+		"position": "centre"
+	},
+	"kahramanmaras": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Adana",
+			"Adıyaman",
+			"Gaziantep",
+			"Kayseri",
+			"Malatya",
+			"Osmaniye",
+			"Sivas"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kahramanmaraş",
+			"nameDe": "Kahramanmaraş",
+			"nameIt": "Kahramanmaraş",
+			"population": 376045
+		},
+		"position": "centre"
+	},
+	"isparta": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Afyonkarahisar",
+			"Antalya",
+			"Burdur",
+			"Konya"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Isparta",
+			"nameDe": "Isparta",
+			"nameIt": "Isparta",
+			"population": 172334
+		},
+		"position": "west"
+	},
+	"siirt": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Batman",
+			"Bitlis",
+			"Mardin",
+			"Şırnak",
+			"Van"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Siirt",
+			"nameDe": "Siirt",
+			"nameIt": "Siirt",
+			"population": 114034
+		},
+		"position": "east"
+	},
+	"nigde": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Adana",
+			"Aksaray",
+			"Kayseri",
+			"Konya",
+			"Mersin",
+			"Nevşehir"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Niğde",
+			"nameDe": "Niğde",
+			"nameIt": "Niğde",
+			"population": 91039
+		},
+		"peak": {
+			"name": "Demirkazik",
+			"elevation": 3756
+		},
+		"position": "south"
+	},
+	"ad-yaman": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Diyarbakır",
+			"Gaziantep",
+			"Kahramanmaraş",
+			"Malatya",
+			"Şanlıurfa"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Adıyaman",
+			"nameDe": "Adıyaman",
+			"nameIt": "Adıyaman",
+			"population": 223744
+		},
+		"position": "south"
+	},
+	"ayd-n": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Denizli",
+			"İzmir",
+			"Manisa",
+			"Muğla"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Aydın",
+			"nameDe": "Aydın",
+			"nameIt": "Aydın",
+			"population": 198857
+		},
+		"position": "south-west"
+	},
+	"denizli": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Afyonkarahisar",
+			"Aydın",
+			"Burdur",
+			"Manisa",
+			"Muğla",
+			"Uşak"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Denizli",
+			"nameDe": "Denizli",
+			"nameIt": "Denizli",
+			"population": 372344
+		},
+		"position": "south-west"
+	},
+	"adana": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Hatay",
+			"Kahramanmaraş",
+			"Kayseri",
+			"Mersin",
+			"Niğde",
+			"Osmaniye"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Adana",
+			"nameDe": "Adana",
+			"nameIt": "Adana",
+			"population": 1293000
+		},
+		"position": "south"
+	},
+	"hakkari": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Şırnak",
+			"Van"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Hakkâri",
+			"nameDe": "Hakkâri",
+			"nameIt": "Hakkâri",
+			"population": 77699
+		},
+		"position": "south-east"
+	},
+	"s-rnak": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Batman",
+			"Hakkâri",
+			"Mardin",
+			"Siirt",
+			"Van"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"burdur": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Afyonkarahisar",
+			"Antalya",
+			"Denizli",
+			"Isparta",
+			"Muğla"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Burdur",
+			"nameDe": "Burdur",
+			"nameIt": "Burdur",
+			"population": 66158
+		},
+		"position": "south-west"
+	},
+	"sanl-urfa": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Adıyaman",
+			"Diyarbakır",
+			"Gaziantep",
+			"Mardin"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Şanlıurfa",
+			"nameDe": "Şanlıurfa",
+			"nameIt": "Şanlıurfa",
+			"population": 449549
+		},
+		"position": "south-east"
+	},
+	"mardin": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Batman",
+			"Diyarbakır",
+			"Şanlıurfa",
+			"Siirt",
+			"Şırnak"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Nusaybin",
+			"nameDe": "Nusaybin",
+			"nameIt": "Nusaybin",
+			"population": 152668
+		},
+		"position": "south-east"
+	},
+	"osmaniye": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Adana",
+			"Gaziantep",
+			"Hatay",
+			"Kahramanmaraş"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"gaziantep": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Adıyaman",
+			"Hatay",
+			"Kahramanmaraş",
+			"Kilis",
+			"Osmaniye",
+			"Şanlıurfa"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Gaziantep",
+			"nameDe": "Gaziantep",
+			"nameIt": "Gaziantep",
+			"population": 1044000
+		},
+		"position": "south"
+	},
+	"karaman": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Antalya",
+			"Konya",
+			"Mersin"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Karaman",
+			"nameDe": "Karaman",
+			"nameIt": "Karaman",
+			"population": 120399
+		},
+		"position": "south"
+	},
+	"mugla": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Antalya",
+			"Aydın",
+			"Burdur",
+			"Denizli"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Muğla",
+			"nameDe": "Muğla",
+			"nameIt": "Muğla",
+			"population": 48183
+		},
+		"position": "south-west"
+	},
+	"kilis": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Gaziantep",
+			"Hatay"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kilis",
+			"nameDe": "Kilis",
+			"nameIt": "Kilis",
+			"population": 82301
+		},
+		"position": "south"
+	},
+	"antalya": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Burdur",
+			"Isparta",
+			"Karaman",
+			"Konya",
+			"Mersin",
+			"Muğla"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Antalya",
+			"nameDe": "Antalya",
+			"nameIt": "Adalia",
+			"population": 783000
+		},
+		"peak": {
+			"name": "Kizlar Sivrisi",
+			"elevation": 3070
+		},
+		"position": "south-west"
+	},
+	"mersin": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Adana",
+			"Antalya",
+			"Karaman",
+			"Konya",
+			"Niğde"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tarsus",
+			"nameDe": "Tarsus",
+			"nameIt": "Tarso",
+			"population": 894318
+		},
+		"position": "south"
+	},
+	"hatay": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Adana",
+			"Gaziantep",
+			"Kilis",
+			"Osmaniye"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "İskenderun",
+			"nameDe": "İskenderun",
+			"nameIt": "Alessandretta",
+			"population": 297943
+		},
+		"position": "south"
+	}
+}

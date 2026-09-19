@@ -1,0 +1,324 @@
+{
+	"lappi": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Pohjois-Pohjanmaa"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Rovaniemi",
+			"nameDe": "Rovaniemi",
+			"nameIt": "Rovaniemi",
+			"population": 34781
+		},
+		"position": "north"
+	},
+	"pohjois-pohjanmaa": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Kainuu",
+			"Keski-Pohjanmaa",
+			"Keski-Suomi",
+			"Lappi",
+			"Pohjois-Savo"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Oulu",
+			"nameDe": "Oulu",
+			"nameIt": "Oulu",
+			"population": 136752
+		},
+		"position": "centre"
+	},
+	"kainuu": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Pohjois-Karjala",
+			"Pohjois-Pohjanmaa",
+			"Pohjois-Savo"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"keski-pohjanmaa": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Etelä-Pohjanmaa",
+			"Keski-Suomi",
+			"Pohjanmaa",
+			"Pohjois-Pohjanmaa"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Kokkola",
+			"nameDe": "Kokkola",
+			"nameIt": "Kokkola",
+			"population": 46714
+		},
+		"position": "west"
+	},
+	"pohjois-savo": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Etelä-Savo",
+			"Kainuu",
+			"Keski-Suomi",
+			"Pohjois-Karjala",
+			"Pohjois-Pohjanmaa"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kuopio",
+			"nameDe": "Kuopio",
+			"nameIt": "Kuopio",
+			"population": 91900
+		},
+		"position": "south"
+	},
+	"pohjanmaa": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Etelä-Pohjanmaa",
+			"Keski-Pohjanmaa",
+			"Satakunta"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Vaasa",
+			"nameDe": "Vaasa",
+			"nameIt": "Vaasa",
+			"population": 57014
+		},
+		"position": "south-west"
+	},
+	"pohjois-karjala": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Etelä-Karjala",
+			"Etelä-Savo",
+			"Kainuu",
+			"Pohjois-Savo"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Joensuu",
+			"nameDe": "Joensuu",
+			"nameIt": "Joensuu",
+			"population": 53388
+		},
+		"peak": {
+			"name": "Ukko Koli",
+			"elevation": 347
+		},
+		"position": "south-east"
+	},
+	"etela-pohjanmaa": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Keski-Pohjanmaa",
+			"Keski-Suomi",
+			"Pirkanmaa",
+			"Pohjanmaa",
+			"Satakunta"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"keski-suomi": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Etelä-Pohjanmaa",
+			"Etelä-Savo",
+			"Keski-Pohjanmaa",
+			"Päijät-Häme",
+			"Pirkanmaa",
+			"Pohjois-Pohjanmaa",
+			"Pohjois-Savo"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Jyväskylä",
+			"nameDe": "Jyväskylä",
+			"nameIt": "Jyväskylä",
+			"population": 98136
+		},
+		"position": "south"
+	},
+	"etela-savo": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Etelä-Karjala",
+			"Keski-Suomi",
+			"Kymenlaakso",
+			"Päijät-Häme",
+			"Pohjois-Karjala",
+			"Pohjois-Savo"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Mikkeli",
+			"nameDe": "Mikkeli",
+			"nameIt": "Mikkeli",
+			"population": 46550
+		},
+		"position": "south-east"
+	},
+	"pirkanmaa": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Etelä-Pohjanmaa",
+			"Kanta-Häme",
+			"Keski-Suomi",
+			"Päijät-Häme",
+			"Satakunta",
+			"Varsinais-Suomi"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tampere",
+			"nameDe": "Tampere",
+			"nameIt": "Tampere",
+			"population": 259279
+		},
+		"position": "south-west"
+	},
+	"satakunta": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Etelä-Pohjanmaa",
+			"Pirkanmaa",
+			"Pohjanmaa",
+			"Varsinais-Suomi"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Pori",
+			"nameDe": "Pori",
+			"nameIt": "Pori",
+			"population": 76772
+		},
+		"position": "south-west"
+	},
+	"etela-karjala": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Etelä-Savo",
+			"Kymenlaakso",
+			"Pohjois-Karjala"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Lappeenranta",
+			"nameDe": "Lappeenranta",
+			"nameIt": "Lappeenranta",
+			"population": 59276
+		},
+		"position": "south-east"
+	},
+	"paijat-hame": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Etelä-Savo",
+			"Kanta-Häme",
+			"Keski-Suomi",
+			"Kymenlaakso",
+			"Pirkanmaa",
+			"Uusimaa"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Lahti",
+			"nameDe": "Lahti",
+			"nameIt": "Lahti",
+			"population": 98826
+		},
+		"position": "south"
+	},
+	"kanta-hame": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Päijät-Häme",
+			"Pirkanmaa",
+			"Uusimaa",
+			"Varsinais-Suomi"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Hämeenlinna",
+			"nameDe": "Hämeenlinna",
+			"nameIt": "Hämeenlinna",
+			"population": 47261
+		},
+		"position": "south-west"
+	},
+	"kymenlaakso": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Etelä-Karjala",
+			"Etelä-Savo",
+			"Päijät-Häme",
+			"Uusimaa"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Kouvola",
+			"nameDe": "Kouvola",
+			"nameIt": "Kouvola",
+			"population": 31133
+		},
+		"position": "south"
+	},
+	"varsinais-suomi": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Kanta-Häme",
+			"Pirkanmaa",
+			"Satakunta",
+			"Uusimaa"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Turku",
+			"nameDe": "Turku",
+			"nameIt": "Turku",
+			"population": 175945
+		},
+		"position": "south-west"
+	},
+	"uusimaa": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Kanta-Häme",
+			"Kymenlaakso",
+			"Päijät-Häme",
+			"Varsinais-Suomi"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Helsinki",
+			"nameDe": "Helsinki",
+			"nameIt": "Helsinki",
+			"population": 1115000
+		},
+		"position": "south"
+	}
+}

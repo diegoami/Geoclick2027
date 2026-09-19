@@ -1,0 +1,538 @@
+{
+	"benevento": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Avellino",
+			"Caserta",
+			"Napoli"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Benevento",
+			"nameDe": "Benevento",
+			"nameIt": "Benevento",
+			"population": 61791
+		},
+		"position": "north"
+	},
+	"caserta": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Benevento",
+			"Napoli"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Caserta",
+			"nameDe": "Caserta",
+			"nameIt": "Caserta",
+			"population": 250000
+		},
+		"position": "north"
+	},
+	"barletta-andria-trani": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bari",
+			"Potenza"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Barletta",
+			"nameDe": "Barletta",
+			"nameIt": "Barletta",
+			"population": 107830
+		},
+		"position": "north-east"
+	},
+	"avellino": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Benevento",
+			"Napoli",
+			"Potenza",
+			"Salerno"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"bari": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Barletta-Andria Trani",
+			"Brindisi",
+			"Matera",
+			"Potenza",
+			"Taranto"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Bari",
+			"nameDe": "Bari",
+			"nameIt": "Bari",
+			"population": 500577
+		},
+		"position": "north-east"
+	},
+	"olbia-tempio": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Nuoro",
+			"Sassari"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Olbia",
+			"nameDe": "Olbia",
+			"nameIt": "Olbia",
+			"population": 45366
+		},
+		"position": "north-west"
+	},
+	"napoli": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Avellino",
+			"Benevento",
+			"Caserta",
+			"Salerno"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Naples",
+			"nameDe": "Neapel",
+			"nameIt": "Napoli",
+			"population": 2250000
+		},
+		"peak": {
+			"name": "Vesuvio",
+			"elevation": 1281
+		},
+		"position": "north"
+	},
+	"brindisi": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bari",
+			"Lecce",
+			"Taranto"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Brindisi",
+			"nameDe": "Brindisi",
+			"nameIt": "Brindisi",
+			"population": 104437
+		},
+		"position": "north-east"
+	},
+	"sassari": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Nuoro",
+			"Olbia-Tempio",
+			"Oristano"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Sassari",
+			"nameDe": "Sassari",
+			"nameIt": "Sassari",
+			"population": 120729
+		},
+		"position": "north-west"
+	},
+	"taranto": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bari",
+			"Brindisi",
+			"Lecce",
+			"Matera"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Taranto",
+			"nameDe": "Tarent",
+			"nameIt": "Taranto",
+			"population": 202033
+		},
+		"position": "north-east"
+	},
+	"potenza": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Avellino",
+			"Bari",
+			"Barletta-Andria Trani",
+			"Cosenza",
+			"Matera",
+			"Salerno"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Potenza",
+			"nameDe": "Potenza",
+			"nameIt": "Potenza",
+			"population": 69060
+		},
+		"position": "north-east"
+	},
+	"matera": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bari",
+			"Cosenza",
+			"Potenza",
+			"Taranto"
+		],
+		"coastal": true,
+		"position": "north-east"
+	},
+	"salerno": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Avellino",
+			"Napoli",
+			"Potenza"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Salerno",
+			"nameDe": "Salerno",
+			"nameIt": "Salerno",
+			"population": 954265
+		},
+		"position": "north-east"
+	},
+	"nuoro": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Cagliari",
+			"Ogliastra",
+			"Olbia-Tempio",
+			"Oristano",
+			"Sassari"
+		],
+		"coastal": true,
+		"position": "north-west"
+	},
+	"lecce": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Brindisi",
+			"Taranto"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Lecce",
+			"nameDe": "Lecce",
+			"nameIt": "Lecce",
+			"population": 162582
+		},
+		"position": "north-east"
+	},
+	"oristano": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Cagliari",
+			"Medio Campidano",
+			"Nuoro",
+			"Sassari"
+		],
+		"coastal": true,
+		"position": "north-west"
+	},
+	"ogliastra": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Cagliari",
+			"Nuoro"
+		],
+		"coastal": true,
+		"peak": {
+			"name": "Punta la Marmora",
+			"elevation": 1834
+		},
+		"position": "north-west"
+	},
+	"cosenza": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Catanzaro",
+			"Crotone",
+			"Matera",
+			"Potenza"
+		],
+		"coastal": true,
+		"position": "east"
+	},
+	"medio-campidano": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Cagliari",
+			"Carbonia-Iglesias",
+			"Oristano"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"cagliari": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Carbonia-Iglesias",
+			"Medio Campidano",
+			"Nuoro",
+			"Ogliastra",
+			"Oristano"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Cagliari",
+			"nameDe": "Cagliari",
+			"nameIt": "Cagliari",
+			"population": 291511
+		},
+		"position": "west"
+	},
+	"carbonia-iglesias": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Cagliari",
+			"Medio Campidano"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"crotone": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Catanzaro",
+			"Cosenza"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Crotone",
+			"nameDe": "Crotone",
+			"nameIt": "Crotone",
+			"population": 60010
+		},
+		"position": "east"
+	},
+	"catanzaro": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Cosenza",
+			"Crotone",
+			"Reggio Calabria",
+			"Vibo Valentia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Catanzaro",
+			"nameDe": "Catanzaro",
+			"nameIt": "Catanzaro",
+			"population": 95251
+		},
+		"position": "east"
+	},
+	"vibo-valentia": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Catanzaro",
+			"Reggio Calabria"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Vibo Valentia",
+			"nameDe": "Vibo Valentia",
+			"nameIt": "Vibo Valentia",
+			"population": 33957
+		},
+		"position": "east"
+	},
+	"reggio-calabria": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Catanzaro",
+			"Vibo Valentia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Reggio di Calabria",
+			"nameDe": "Reggio Calabria",
+			"nameIt": "Reggio Calabria",
+			"population": 180353
+		},
+		"position": "south-east"
+	},
+	"messina": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Catania",
+			"Enna",
+			"Palermo"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Messina",
+			"nameDe": "Messina",
+			"nameIt": "Messina",
+			"population": 252026
+		},
+		"position": "south"
+	},
+	"palermo": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Agrigento",
+			"Caltanissetta",
+			"Enna",
+			"Messina",
+			"Trapani"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Palermo",
+			"nameDe": "Palermo",
+			"nameIt": "Palermo",
+			"population": 863000
+		},
+		"position": "south"
+	},
+	"trapani": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Agrigento",
+			"Palermo"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Marsala",
+			"nameDe": "Marsala",
+			"nameIt": "Marsala",
+			"population": 77784
+		},
+		"position": "south"
+	},
+	"enna": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Caltanissetta",
+			"Catania",
+			"Messina",
+			"Palermo"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"catania": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Caltanissetta",
+			"Enna",
+			"Messina",
+			"Ragusa",
+			"Siracusa"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Catania",
+			"nameDe": "Catania",
+			"nameIt": "Catania",
+			"population": 674542
+		},
+		"peak": {
+			"name": "Monte Etna",
+			"elevation": 3322
+		},
+		"position": "south"
+	},
+	"agrigento": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Caltanissetta",
+			"Palermo",
+			"Trapani"
+		],
+		"coastal": true,
+		"position": "south"
+	},
+	"caltanissetta": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Agrigento",
+			"Catania",
+			"Enna",
+			"Palermo",
+			"Ragusa"
+		],
+		"coastal": true,
+		"position": "south"
+	},
+	"siracusa": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Catania",
+			"Ragusa"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Siracusa",
+			"nameDe": "Syrakus",
+			"nameIt": "Siracusa",
+			"population": 123657
+		},
+		"position": "south-east"
+	},
+	"ragusa": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Caltanissetta",
+			"Catania",
+			"Siracusa"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Ragusa",
+			"nameDe": "Ragusa",
+			"nameIt": "Ragusa",
+			"population": 68956
+		},
+		"position": "south"
+	}
+}

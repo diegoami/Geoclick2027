@@ -1,0 +1,1730 @@
+{
+	"bolzano": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Belluno",
+			"Sondrio",
+			"Trento"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bolzano",
+			"nameDe": "Bozen",
+			"nameIt": "Bolzano",
+			"population": 95895
+		},
+		"position": "north"
+	},
+	"sondrio": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bergamo",
+			"Bolzano",
+			"Brescia",
+			"Como",
+			"Lecco",
+			"Trento"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"belluno": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bolzano",
+			"Pordenone",
+			"Trento",
+			"Treviso",
+			"Udine",
+			"Vicenza"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"udine": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Belluno",
+			"Gorizia",
+			"Pordenone",
+			"Venezia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Udine",
+			"nameDe": "Udine",
+			"nameIt": "Udine",
+			"population": 119009
+		},
+		"position": "north"
+	},
+	"trento": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Belluno",
+			"Bolzano",
+			"Brescia",
+			"Sondrio",
+			"Verona",
+			"Vicenza"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Trento",
+			"nameDe": "Trient",
+			"nameIt": "Trento",
+			"population": 107808
+		},
+		"position": "north"
+	},
+	"verbano-cusio-ossola": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Aosta",
+			"Novara",
+			"Varese",
+			"Vercelli"
+		],
+		"coastal": false,
+		"peak": {
+			"name": "Monte Rosa",
+			"elevation": 4634
+		},
+		"position": "north-west"
+	},
+	"pordenone": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Belluno",
+			"Treviso",
+			"Udine",
+			"Venezia"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"como": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Lecco",
+			"Monza e Brianza",
+			"Sondrio",
+			"Varese"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Como",
+			"nameDe": "Como",
+			"nameIt": "Como",
+			"population": 250000
+		},
+		"position": "north-west"
+	},
+	"lecco": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bergamo",
+			"Como",
+			"Monza e Brianza",
+			"Sondrio"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"gorizia": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Trieste",
+			"Udine"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"varese": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Como",
+			"Milano",
+			"Monza e Brianza",
+			"Novara",
+			"Verbano-Cusio-Ossola"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"treviso": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Belluno",
+			"Padova",
+			"Pordenone",
+			"Venezia",
+			"Vicenza"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Treviso",
+			"nameDe": "Treviso",
+			"nameIt": "Treviso",
+			"population": 177309
+		},
+		"position": "north"
+	},
+	"brescia": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bergamo",
+			"Cremona",
+			"Mantova",
+			"Sondrio",
+			"Trento",
+			"Verona"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"bergamo": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Brescia",
+			"Cremona",
+			"Lecco",
+			"Milano",
+			"Monza e Brianza",
+			"Sondrio"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bergamo",
+			"nameDe": "Bergamo",
+			"nameIt": "Bergamo",
+			"population": 200000
+		},
+		"position": "north-west"
+	},
+	"aosta": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Biella",
+			"Torino",
+			"Verbano-Cusio-Ossola",
+			"Vercelli"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Aosta",
+			"nameDe": "Aosta",
+			"nameIt": "Aosta",
+			"population": 34062
+		},
+		"position": "north-west"
+	},
+	"trieste": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Gorizia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Trieste",
+			"nameDe": "Triest",
+			"nameIt": "Trieste",
+			"population": 216035
+		},
+		"position": "north"
+	},
+	"monza-e-brianza": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bergamo",
+			"Como",
+			"Lecco",
+			"Milano",
+			"Varese"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"vicenza": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Belluno",
+			"Padova",
+			"Trento",
+			"Treviso",
+			"Verona"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"novara": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Milano",
+			"Pavia",
+			"Varese",
+			"Verbano-Cusio-Ossola",
+			"Vercelli"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Novara",
+			"nameDe": "Novara",
+			"nameIt": "Novara",
+			"population": 100910
+		},
+		"position": "north-west"
+	},
+	"biella": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Aosta",
+			"Torino",
+			"Vercelli"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"vercelli": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Alessandria",
+			"Aosta",
+			"Biella",
+			"Novara",
+			"Pavia",
+			"Torino",
+			"Verbano-Cusio-Ossola"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"verona": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Brescia",
+			"Mantova",
+			"Padova",
+			"Rovigo",
+			"Trento",
+			"Vicenza"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Verona",
+			"nameDe": "Verona",
+			"nameIt": "Verona",
+			"population": 347459
+		},
+		"position": "north"
+	},
+	"venezia": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Padova",
+			"Pordenone",
+			"Rovigo",
+			"Treviso",
+			"Udine"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Venice",
+			"nameDe": "Venedig",
+			"nameIt": "Venezia",
+			"population": 270816
+		},
+		"position": "north"
+	},
+	"milano": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bergamo",
+			"Cremona",
+			"Lodi",
+			"Monza e Brianza",
+			"Novara",
+			"Pavia",
+			"Varese"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Milan",
+			"nameDe": "Mailand",
+			"nameIt": "Milano",
+			"population": 2945000
+		},
+		"position": "north-west"
+	},
+	"padova": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Rovigo",
+			"Treviso",
+			"Venezia",
+			"Verona",
+			"Vicenza"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"lodi": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Cremona",
+			"Milano",
+			"Pavia",
+			"Piacenza"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"cremona": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bergamo",
+			"Brescia",
+			"Lodi",
+			"Mantova",
+			"Milano",
+			"Parma",
+			"Piacenza",
+			"Reggio Emilia"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"mantova": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Brescia",
+			"Cremona",
+			"Ferrara",
+			"Modena",
+			"Parma",
+			"Reggio Emilia",
+			"Rovigo",
+			"Verona"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"torino": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Alessandria",
+			"Aosta",
+			"Asti",
+			"Biella",
+			"Cuneo",
+			"Vercelli"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Turin",
+			"nameDe": "Turin",
+			"nameIt": "Torino",
+			"population": 1652000
+		},
+		"position": "north-west"
+	},
+	"pavia": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Alessandria",
+			"Lodi",
+			"Milano",
+			"Novara",
+			"Piacenza",
+			"Vercelli"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"rovigo": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Ferrara",
+			"Mantova",
+			"Padova",
+			"Venezia",
+			"Verona"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"alessandria": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Asti",
+			"Genova",
+			"Pavia",
+			"Piacenza",
+			"Savona",
+			"Torino",
+			"Vercelli"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"piacenza": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Alessandria",
+			"Cremona",
+			"Genova",
+			"Lodi",
+			"Parma",
+			"Pavia"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"asti": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Alessandria",
+			"Cuneo",
+			"Savona",
+			"Torino"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Asti",
+			"nameDe": "Asti",
+			"nameIt": "Asti",
+			"population": 71276
+		},
+		"position": "north-west"
+	},
+	"ferrara": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bologna",
+			"Mantova",
+			"Modena",
+			"Ravenna",
+			"Rovigo"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Ferrara",
+			"nameDe": "Ferrara",
+			"nameIt": "Ferrara",
+			"population": 130992
+		},
+		"position": "north"
+	},
+	"parma": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Cremona",
+			"Genova",
+			"La Spezia",
+			"Mantova",
+			"Massa-Carrara",
+			"Piacenza",
+			"Reggio Emilia"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Parma",
+			"nameDe": "Parma",
+			"nameIt": "Parma",
+			"population": 166011
+		},
+		"position": "north-west"
+	},
+	"reggio-emilia": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Cremona",
+			"Lucca",
+			"Mantova",
+			"Massa-Carrara",
+			"Modena",
+			"Parma"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"modena": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bologna",
+			"Ferrara",
+			"Lucca",
+			"Mantova",
+			"Pistoia",
+			"Reggio Emilia"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Modena",
+			"nameDe": "Modena",
+			"nameIt": "Modena",
+			"population": 175502
+		},
+		"position": "north"
+	},
+	"cuneo": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Asti",
+			"Imperia",
+			"Savona",
+			"Torino"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"genova": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Alessandria",
+			"La Spezia",
+			"Parma",
+			"Piacenza",
+			"Savona"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Genoa",
+			"nameDe": "Genua",
+			"nameIt": "Genova",
+			"population": 647497
+		},
+		"position": "north-west"
+	},
+	"bologna": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Ferrara",
+			"Firenze",
+			"Modena",
+			"Pistoia",
+			"Prato",
+			"Ravenna"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bologna",
+			"nameDe": "Bologna",
+			"nameIt": "Bologna",
+			"population": 488172
+		},
+		"position": "north"
+	},
+	"ravenna": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bologna",
+			"Ferrara",
+			"Firenze",
+			"Forlì-Cesena"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Ravenna",
+			"nameDe": "Ravenna",
+			"nameIt": "Ravenna",
+			"population": 134631
+		},
+		"position": "north"
+	},
+	"savona": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Alessandria",
+			"Asti",
+			"Cuneo",
+			"Genova",
+			"Imperia"
+		],
+		"coastal": true,
+		"position": "north-west"
+	},
+	"la-spezia": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Genova",
+			"Massa-Carrara",
+			"Parma"
+		],
+		"coastal": true,
+		"position": "north-west"
+	},
+	"massa-carrara": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"La Spezia",
+			"Lucca",
+			"Parma",
+			"Reggio Emilia"
+		],
+		"coastal": true,
+		"position": "north-west"
+	},
+	"forli-cesena": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Arezzo",
+			"Firenze",
+			"Ravenna",
+			"Rimini"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"lucca": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Firenze",
+			"Massa-Carrara",
+			"Modena",
+			"Pisa",
+			"Pistoia",
+			"Reggio Emilia"
+		],
+		"coastal": true,
+		"position": "north-west"
+	},
+	"pistoia": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bologna",
+			"Firenze",
+			"Lucca",
+			"Modena",
+			"Prato"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"rimini": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Arezzo",
+			"Forlì-Cesena",
+			"Pesaro e Urbino"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"imperia": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Cuneo",
+			"Savona"
+		],
+		"coastal": true,
+		"position": "north-west"
+	},
+	"prato": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bologna",
+			"Firenze",
+			"Pistoia"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"firenze": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Arezzo",
+			"Bologna",
+			"Forlì-Cesena",
+			"Lucca",
+			"Pisa",
+			"Pistoia",
+			"Prato",
+			"Ravenna",
+			"Siena"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Florence",
+			"nameDe": "Florenz",
+			"nameIt": "Firenze",
+			"population": 1500000
+		},
+		"position": "north"
+	},
+	"pesaro-e-urbino": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Ancona",
+			"Arezzo",
+			"Perugia",
+			"Rimini"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"arezzo": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Firenze",
+			"Forlì-Cesena",
+			"Perugia",
+			"Pesaro e Urbino",
+			"Rimini",
+			"Siena"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Arezzo",
+			"nameDe": "Arezzo",
+			"nameIt": "Arezzo",
+			"population": 91589
+		},
+		"position": "centre"
+	},
+	"ancona": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Macerata",
+			"Perugia",
+			"Pesaro e Urbino"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Ancona",
+			"nameDe": "Ancona",
+			"nameIt": "Ancona",
+			"population": 100507
+		},
+		"position": "centre"
+	},
+	"pisa": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Firenze",
+			"Grosseto",
+			"Livorno",
+			"Lucca",
+			"Siena"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Pisa",
+			"nameDe": "Pisa",
+			"nameIt": "Pisa",
+			"population": 203336
+		},
+		"position": "centre"
+	},
+	"livorno": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Grosseto",
+			"Pisa"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Livorno",
+			"nameDe": "Livorno",
+			"nameIt": "Livorno",
+			"population": 156274
+		},
+		"position": "west"
+	},
+	"siena": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Arezzo",
+			"Firenze",
+			"Grosseto",
+			"Perugia",
+			"Pisa",
+			"Terni",
+			"Viterbo"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Siena",
+			"nameDe": "Siena",
+			"nameIt": "Siena",
+			"population": 52625
+		},
+		"position": "centre"
+	},
+	"macerata": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Ancona",
+			"Ascoli Piceno",
+			"Fermo",
+			"Perugia"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"perugia": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Ancona",
+			"Arezzo",
+			"Ascoli Piceno",
+			"Macerata",
+			"Pesaro e Urbino",
+			"Rieti",
+			"Siena",
+			"Terni"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Perugia",
+			"nameDe": "Perugia",
+			"nameIt": "Perugia",
+			"population": 149125
+		},
+		"position": "centre"
+	},
+	"fermo": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Ascoli Piceno",
+			"Macerata"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"ascoli-piceno": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Fermo",
+			"Macerata",
+			"Perugia",
+			"Rieti",
+			"Teramo"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"grosseto": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Livorno",
+			"Pisa",
+			"Siena",
+			"Viterbo"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"teramo": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Ascoli Piceno",
+			"L'Aquila",
+			"Pescara",
+			"Rieti"
+		],
+		"coastal": true,
+		"peak": {
+			"name": "Corno Grande",
+			"elevation": 2912
+		},
+		"position": "centre"
+	},
+	"terni": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Perugia",
+			"Rieti",
+			"Siena",
+			"Viterbo"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"viterbo": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Grosseto",
+			"Rieti",
+			"Roma",
+			"Siena",
+			"Terni"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"rieti": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Ascoli Piceno",
+			"L'Aquila",
+			"Perugia",
+			"Roma",
+			"Teramo",
+			"Terni",
+			"Viterbo"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"pescara": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Chieti",
+			"L'Aquila",
+			"Teramo"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Pescara",
+			"nameDe": "Pescara",
+			"nameIt": "Pescara",
+			"population": 314789
+		},
+		"position": "centre"
+	},
+	"l-aquila": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Chieti",
+			"Frosinone",
+			"Isernia",
+			"Pescara",
+			"Rieti",
+			"Roma",
+			"Teramo"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "L'Aquila",
+			"nameDe": "L’Aquila",
+			"nameIt": "L'Aquila",
+			"population": 68503
+		},
+		"peak": {
+			"name": "Monte Viglio",
+			"elevation": 2156
+		},
+		"position": "centre"
+	},
+	"chieti": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Campobasso",
+			"Isernia",
+			"L'Aquila",
+			"Pescara"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"roma": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Frosinone",
+			"L'Aquila",
+			"Latina",
+			"Rieti",
+			"Viterbo"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Rome",
+			"nameDe": "Rom",
+			"nameIt": "Roma",
+			"population": 3339000
+		},
+		"position": "centre"
+	},
+	"campobasso": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Benevento",
+			"Caserta",
+			"Chieti",
+			"Foggia",
+			"Isernia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Campobasso",
+			"nameDe": "Campobasso",
+			"nameIt": "Campobasso",
+			"population": 50762
+		},
+		"position": "east"
+	},
+	"isernia": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Campobasso",
+			"Caserta",
+			"Chieti",
+			"Frosinone",
+			"L'Aquila"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"frosinone": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Caserta",
+			"Isernia",
+			"L'Aquila",
+			"Latina",
+			"Roma"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"foggia": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Avellino",
+			"Barletta-Andria Trani",
+			"Benevento",
+			"Campobasso",
+			"Potenza"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Foggia",
+			"nameDe": "Foggia",
+			"nameIt": "Foggia",
+			"population": 155203
+		},
+		"position": "east"
+	},
+	"latina": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Caserta",
+			"Frosinone",
+			"Roma"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"benevento": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Avellino",
+			"Campobasso",
+			"Caserta",
+			"Foggia",
+			"Napoli"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Benevento",
+			"nameDe": "Benevento",
+			"nameIt": "Benevento",
+			"population": 61791
+		},
+		"position": "east"
+	},
+	"caserta": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Benevento",
+			"Campobasso",
+			"Frosinone",
+			"Isernia",
+			"Latina",
+			"Napoli"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Caserta",
+			"nameDe": "Caserta",
+			"nameIt": "Caserta",
+			"population": 250000
+		},
+		"position": "centre"
+	},
+	"barletta-andria-trani": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bari",
+			"Foggia",
+			"Potenza"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Barletta",
+			"nameDe": "Barletta",
+			"nameIt": "Barletta",
+			"population": 107830
+		},
+		"position": "east"
+	},
+	"avellino": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Benevento",
+			"Foggia",
+			"Napoli",
+			"Potenza",
+			"Salerno"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"bari": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Barletta-Andria Trani",
+			"Brindisi",
+			"Matera",
+			"Potenza",
+			"Taranto"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Bari",
+			"nameDe": "Bari",
+			"nameIt": "Bari",
+			"population": 500577
+		},
+		"position": "east"
+	},
+	"olbia-tempio": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Nuoro",
+			"Sassari"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Olbia",
+			"nameDe": "Olbia",
+			"nameIt": "Olbia",
+			"population": 45366
+		},
+		"position": "west"
+	},
+	"napoli": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Avellino",
+			"Benevento",
+			"Caserta",
+			"Salerno"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Naples",
+			"nameDe": "Neapel",
+			"nameIt": "Napoli",
+			"population": 2250000
+		},
+		"peak": {
+			"name": "Vesuvio",
+			"elevation": 1281
+		},
+		"position": "centre"
+	},
+	"brindisi": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bari",
+			"Lecce",
+			"Taranto"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Brindisi",
+			"nameDe": "Brindisi",
+			"nameIt": "Brindisi",
+			"population": 104437
+		},
+		"position": "east"
+	},
+	"sassari": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Nuoro",
+			"Olbia-Tempio",
+			"Oristano"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Sassari",
+			"nameDe": "Sassari",
+			"nameIt": "Sassari",
+			"population": 120729
+		},
+		"position": "west"
+	},
+	"taranto": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bari",
+			"Brindisi",
+			"Lecce",
+			"Matera"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Taranto",
+			"nameDe": "Tarent",
+			"nameIt": "Taranto",
+			"population": 202033
+		},
+		"position": "east"
+	},
+	"potenza": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Avellino",
+			"Bari",
+			"Barletta-Andria Trani",
+			"Cosenza",
+			"Foggia",
+			"Matera",
+			"Salerno"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Potenza",
+			"nameDe": "Potenza",
+			"nameIt": "Potenza",
+			"population": 69060
+		},
+		"position": "east"
+	},
+	"matera": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bari",
+			"Cosenza",
+			"Potenza",
+			"Taranto"
+		],
+		"coastal": true,
+		"position": "east"
+	},
+	"salerno": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Avellino",
+			"Napoli",
+			"Potenza"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Salerno",
+			"nameDe": "Salerno",
+			"nameIt": "Salerno",
+			"population": 954265
+		},
+		"position": "east"
+	},
+	"nuoro": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Cagliari",
+			"Ogliastra",
+			"Olbia-Tempio",
+			"Oristano",
+			"Sassari"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"lecce": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Brindisi",
+			"Taranto"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Lecce",
+			"nameDe": "Lecce",
+			"nameIt": "Lecce",
+			"population": 162582
+		},
+		"position": "east"
+	},
+	"oristano": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Cagliari",
+			"Medio Campidano",
+			"Nuoro",
+			"Sassari"
+		],
+		"coastal": true,
+		"position": "south-west"
+	},
+	"ogliastra": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Cagliari",
+			"Nuoro"
+		],
+		"coastal": true,
+		"peak": {
+			"name": "Punta la Marmora",
+			"elevation": 1834
+		},
+		"position": "south-west"
+	},
+	"cosenza": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Catanzaro",
+			"Crotone",
+			"Matera",
+			"Potenza"
+		],
+		"coastal": true,
+		"position": "south-east"
+	},
+	"medio-campidano": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Cagliari",
+			"Carbonia-Iglesias",
+			"Oristano"
+		],
+		"coastal": true,
+		"position": "south-west"
+	},
+	"cagliari": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Carbonia-Iglesias",
+			"Medio Campidano",
+			"Nuoro",
+			"Ogliastra",
+			"Oristano"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Cagliari",
+			"nameDe": "Cagliari",
+			"nameIt": "Cagliari",
+			"population": 291511
+		},
+		"position": "south-west"
+	},
+	"carbonia-iglesias": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Cagliari",
+			"Medio Campidano"
+		],
+		"coastal": true,
+		"position": "south-west"
+	},
+	"crotone": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Catanzaro",
+			"Cosenza"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Crotone",
+			"nameDe": "Crotone",
+			"nameIt": "Crotone",
+			"population": 60010
+		},
+		"position": "south-east"
+	},
+	"catanzaro": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Cosenza",
+			"Crotone",
+			"Reggio Calabria",
+			"Vibo Valentia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Catanzaro",
+			"nameDe": "Catanzaro",
+			"nameIt": "Catanzaro",
+			"population": 95251
+		},
+		"position": "south-east"
+	},
+	"vibo-valentia": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Catanzaro",
+			"Reggio Calabria"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Vibo Valentia",
+			"nameDe": "Vibo Valentia",
+			"nameIt": "Vibo Valentia",
+			"population": 33957
+		},
+		"position": "south-east"
+	},
+	"reggio-calabria": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Catanzaro",
+			"Vibo Valentia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Reggio di Calabria",
+			"nameDe": "Reggio Calabria",
+			"nameIt": "Reggio Calabria",
+			"population": 180353
+		},
+		"position": "south-east"
+	},
+	"messina": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Catania",
+			"Enna",
+			"Palermo"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Messina",
+			"nameDe": "Messina",
+			"nameIt": "Messina",
+			"population": 252026
+		},
+		"position": "south-east"
+	},
+	"palermo": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Agrigento",
+			"Caltanissetta",
+			"Enna",
+			"Messina",
+			"Trapani"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Palermo",
+			"nameDe": "Palermo",
+			"nameIt": "Palermo",
+			"population": 863000
+		},
+		"position": "south"
+	},
+	"trapani": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Agrigento",
+			"Palermo"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Marsala",
+			"nameDe": "Marsala",
+			"nameIt": "Marsala",
+			"population": 77784
+		},
+		"position": "south"
+	},
+	"enna": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Caltanissetta",
+			"Catania",
+			"Messina",
+			"Palermo"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"catania": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Caltanissetta",
+			"Enna",
+			"Messina",
+			"Ragusa",
+			"Siracusa"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Catania",
+			"nameDe": "Catania",
+			"nameIt": "Catania",
+			"population": 674542
+		},
+		"peak": {
+			"name": "Monte Etna",
+			"elevation": 3322
+		},
+		"position": "south-east"
+	},
+	"agrigento": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Caltanissetta",
+			"Palermo",
+			"Trapani"
+		],
+		"coastal": true,
+		"position": "south"
+	},
+	"caltanissetta": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Agrigento",
+			"Catania",
+			"Enna",
+			"Palermo",
+			"Ragusa"
+		],
+		"coastal": true,
+		"position": "south"
+	},
+	"siracusa": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Catania",
+			"Ragusa"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Siracusa",
+			"nameDe": "Syrakus",
+			"nameIt": "Siracusa",
+			"population": 123657
+		},
+		"position": "south-east"
+	},
+	"ragusa": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Caltanissetta",
+			"Catania",
+			"Siracusa"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Ragusa",
+			"nameDe": "Ragusa",
+			"nameIt": "Ragusa",
+			"population": 68956
+		},
+		"position": "south-east"
+	}
+}

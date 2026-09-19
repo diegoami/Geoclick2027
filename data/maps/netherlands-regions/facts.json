@@ -1,0 +1,209 @@
+{
+	"groningen": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Drenthe",
+			"Friesland"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Groningen",
+			"nameDe": "Groningen",
+			"nameIt": "Groninga",
+			"population": 216688
+		},
+		"position": "north-east"
+	},
+	"friesland": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Drenthe",
+			"Flevoland",
+			"Groningen",
+			"Noord-Holland",
+			"Overijssel"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Leeuwarden",
+			"nameDe": "Leeuwarden",
+			"nameIt": "Leeuwarden",
+			"population": 125778
+		},
+		"position": "north"
+	},
+	"drenthe": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Friesland",
+			"Groningen",
+			"Overijssel"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Assen",
+			"nameDe": "Assen",
+			"nameIt": "Assen",
+			"population": 62237
+		},
+		"position": "north-east"
+	},
+	"noord-holland": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Flevoland",
+			"Friesland",
+			"Utrecht",
+			"Zuid-Holland"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Amsterdam",
+			"nameDe": "Amsterdam",
+			"nameIt": "Amsterdam",
+			"population": 1031000
+		},
+		"position": "north"
+	},
+	"flevoland": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Friesland",
+			"Gelderland",
+			"Noord-Holland",
+			"Overijssel",
+			"Utrecht"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"overijssel": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Drenthe",
+			"Flevoland",
+			"Friesland",
+			"Gelderland"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Zwolle",
+			"nameDe": "Zwolle",
+			"nameIt": "Zwolle",
+			"population": 111805
+		},
+		"position": "east"
+	},
+	"gelderland": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Flevoland",
+			"Limburg",
+			"Noord-Brabant",
+			"Overijssel",
+			"Utrecht",
+			"Zuid-Holland"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Arnhem",
+			"nameDe": "Arnheim",
+			"nameIt": "Arnhem",
+			"population": 141674
+		},
+		"position": "centre"
+	},
+	"utrecht": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Flevoland",
+			"Gelderland",
+			"Noord-Holland",
+			"Zuid-Holland"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Utrecht",
+			"nameDe": "Utrecht",
+			"nameIt": "Utrecht",
+			"population": 640000
+		},
+		"position": "centre"
+	},
+	"zuid-holland": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Gelderland",
+			"Noord-Brabant",
+			"Noord-Holland",
+			"Utrecht",
+			"Zeeland"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "The Hague",
+			"nameDe": "Den Haag",
+			"nameIt": "L'Aia",
+			"population": 1406000
+		},
+		"position": "west"
+	},
+	"noord-brabant": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Gelderland",
+			"Limburg",
+			"Zeeland",
+			"Zuid-Holland"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Eindhoven",
+			"nameDe": "Eindhoven",
+			"nameIt": "Eindhoven",
+			"population": 398053
+		},
+		"position": "south"
+	},
+	"zeeland": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Noord-Brabant",
+			"Zuid-Holland"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Middelburg",
+			"nameDe": "Middelburg",
+			"nameIt": "Middelburg",
+			"population": 46485
+		},
+		"position": "south-west"
+	},
+	"limburg": {
+		"kind": "region",
+		"borders": [
+			"Gelderland",
+			"Noord-Brabant"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Maastricht",
+			"nameDe": "Maastricht",
+			"nameIt": "Maastricht",
+			"population": 122378
+		},
+		"position": "south"
+	}
+}

@@ -1,0 +1,620 @@
+{
+	"san-andres-y-providencia": {
+		"kind": "region",
+		"type": "Department",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"la-guajira": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Cesar",
+			"Magdalena"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Riohacha",
+			"nameDe": "Riohacha",
+			"nameIt": "Riohacha",
+			"population": 133186
+		},
+		"position": "north"
+	},
+	"atlantico": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Bolívar",
+			"Magdalena"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Barranquilla",
+			"nameDe": "Barranquilla",
+			"nameIt": "Barranquilla",
+			"population": 1798000
+		},
+		"position": "north"
+	},
+	"magdalena": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Atlántico",
+			"Bolívar",
+			"Cesar",
+			"La Guajira"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Santa Marta",
+			"nameDe": "Santa Marta",
+			"nameIt": "Santa Marta",
+			"population": 431781
+		},
+		"peak": {
+			"name": "Pico Cristóbal Colón",
+			"elevation": 5775
+		},
+		"position": "north"
+	},
+	"cesar": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Bolívar",
+			"La Guajira",
+			"Magdalena",
+			"Norte de Santander",
+			"Santander"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Valledupar",
+			"nameDe": "Valledupar",
+			"nameIt": "Valledupar",
+			"population": 308237
+		},
+		"position": "north"
+	},
+	"sucre": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Bolívar",
+			"Córdoba"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Sincelejo",
+			"nameDe": "Sincelejo",
+			"nameIt": "Sincelejo",
+			"population": 261187
+		},
+		"position": "north"
+	},
+	"bolivar": {
+		"kind": "region",
+		"borders": [
+			"Antioquia",
+			"Atlántico",
+			"Cesar",
+			"Córdoba",
+			"Magdalena",
+			"Santander",
+			"Sucre"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Cartagena",
+			"nameDe": "Cartagena",
+			"nameIt": "Cartagena de Indias",
+			"population": 887000
+		},
+		"position": "north"
+	},
+	"cordoba": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Antioquia",
+			"Bolívar",
+			"Sucre"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Montería",
+			"nameDe": "Montería",
+			"nameIt": "Montería",
+			"population": 275198
+		},
+		"position": "north"
+	},
+	"norte-de-santander": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Boyacá",
+			"Cesar",
+			"Santander"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Cúcuta",
+			"nameDe": "Cúcuta",
+			"nameIt": "Cúcuta",
+			"population": 722146
+		},
+		"position": "north"
+	},
+	"antioquia": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Bolívar",
+			"Boyacá",
+			"Caldas",
+			"Chocó",
+			"Córdoba",
+			"Risaralda",
+			"Santander"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Medellín",
+			"nameDe": "Medellín",
+			"nameIt": "Medellín",
+			"population": 3297000
+		},
+		"position": "north"
+	},
+	"santander": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Antioquia",
+			"Bolívar",
+			"Boyacá",
+			"Cesar",
+			"Norte de Santander"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bucaramanga",
+			"nameDe": "Bucaramanga",
+			"nameIt": "Bucaramanga",
+			"population": 1009000
+		},
+		"position": "centre"
+	},
+	"arauca": {
+		"kind": "region",
+		"type": "Intendancy",
+		"borders": [
+			"Boyacá",
+			"Casanare",
+			"Vichada"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Arauca",
+			"nameDe": "Arauca",
+			"nameIt": "Arauca",
+			"population": 69264
+		},
+		"position": "east"
+	},
+	"choco": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Antioquia",
+			"Risaralda",
+			"Valle del Cauca"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Quibdó",
+			"nameDe": "Quibdó",
+			"nameIt": "Quibdó",
+			"population": 92780
+		},
+		"peak": {
+			"name": "Alto de Buey",
+			"elevation": 1810
+		},
+		"position": "west"
+	},
+	"boyaca": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Antioquia",
+			"Arauca",
+			"Caldas",
+			"Casanare",
+			"Cundinamarca",
+			"Meta",
+			"Norte de Santander",
+			"Santander"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tunja",
+			"nameDe": "Tunja",
+			"nameIt": "Tunja",
+			"population": 161412
+		},
+		"peak": {
+			"name": "Ritacuba Blanco",
+			"elevation": 5410
+		},
+		"position": "centre"
+	},
+	"casanare": {
+		"kind": "region",
+		"type": "Intendancy",
+		"borders": [
+			"Arauca",
+			"Boyacá",
+			"Cundinamarca",
+			"Meta",
+			"Vichada"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Yopal",
+			"nameDe": "Yopal",
+			"nameIt": "Yopal",
+			"population": 61029
+		},
+		"position": "east"
+	},
+	"caldas": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Antioquia",
+			"Boyacá",
+			"Cundinamarca",
+			"Risaralda",
+			"Tolima"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Manizales",
+			"nameDe": "Manizales",
+			"nameIt": "Manizales",
+			"population": 375848
+		},
+		"position": "centre"
+	},
+	"risaralda": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Antioquia",
+			"Caldas",
+			"Chocó",
+			"Quindío",
+			"Tolima",
+			"Valle del Cauca"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Pereira",
+			"nameDe": "Pereira",
+			"nameIt": "Pereira",
+			"population": 568750
+		},
+		"position": "centre"
+	},
+	"cundinamarca": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Bogotá",
+			"Boyacá",
+			"Caldas",
+			"Casanare",
+			"Huila",
+			"Meta",
+			"Tolima"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Girardot",
+			"nameDe": "Girardot",
+			"nameIt": "Girardot",
+			"population": 130289
+		},
+		"position": "centre"
+	},
+	"vichada": {
+		"kind": "region",
+		"type": "Commissiary",
+		"borders": [
+			"Arauca",
+			"Casanare",
+			"Guainía",
+			"Guaviare",
+			"Meta"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Puerto Carreño",
+			"nameDe": "Puerto Carreño",
+			"nameIt": "Puerto Carreño",
+			"population": 10216
+		},
+		"position": "east"
+	},
+	"quindio": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Risaralda",
+			"Tolima",
+			"Valle del Cauca"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Armenia",
+			"nameDe": "Armenia",
+			"nameIt": "Armenia",
+			"population": 315328
+		},
+		"position": "centre"
+	},
+	"bogota": {
+		"kind": "region",
+		"type": "Federal District",
+		"borders": [
+			"Cundinamarca",
+			"Huila",
+			"Meta"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bogota",
+			"nameDe": "Bogotá",
+			"nameIt": "Bogotà",
+			"population": 7772000
+		},
+		"position": "centre"
+	},
+	"tolima": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Caldas",
+			"Cauca",
+			"Cundinamarca",
+			"Huila",
+			"Quindío",
+			"Risaralda",
+			"Valle del Cauca"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ibagué",
+			"nameDe": "Ibagué",
+			"nameIt": "Ibagué",
+			"population": 421685
+		},
+		"peak": {
+			"name": "Nevado del Ruiz",
+			"elevation": 5311
+		},
+		"position": "centre"
+	},
+	"valle-del-cauca": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Cauca",
+			"Chocó",
+			"Quindío",
+			"Risaralda",
+			"Tolima"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Cali",
+			"nameDe": "Cali",
+			"nameIt": "Cali",
+			"population": 2254000
+		},
+		"position": "centre"
+	},
+	"meta": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Bogotá",
+			"Boyacá",
+			"Caquetá",
+			"Casanare",
+			"Cundinamarca",
+			"Guaviare",
+			"Huila",
+			"Vichada"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Villavicencio",
+			"nameDe": "Villavicencio",
+			"nameIt": "Villavicencio",
+			"population": 374763
+		},
+		"position": "centre"
+	},
+	"huila": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Bogotá",
+			"Caquetá",
+			"Cauca",
+			"Cundinamarca",
+			"Meta",
+			"Tolima"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Neiva",
+			"nameDe": "Neiva",
+			"nameIt": "Neiva",
+			"population": 352855
+		},
+		"position": "centre"
+	},
+	"guainia": {
+		"kind": "region",
+		"type": "Commissiary",
+		"borders": [
+			"Guaviare",
+			"Vaupés",
+			"Vichada"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Inírida",
+			"nameDe": "Inírida",
+			"nameIt": "Inírida",
+			"population": 9065
+		},
+		"position": "east"
+	},
+	"cauca": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Caquetá",
+			"Huila",
+			"Nariño",
+			"Putumayo",
+			"Tolima",
+			"Valle del Cauca"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Popayán",
+			"nameDe": "Popayán",
+			"nameIt": "Popayán",
+			"population": 258750
+		},
+		"position": "west"
+	},
+	"guaviare": {
+		"kind": "region",
+		"type": "Commissiary",
+		"borders": [
+			"Caquetá",
+			"Guainía",
+			"Meta",
+			"Vaupés",
+			"Vichada"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"narino": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Cauca",
+			"Putumayo"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Pasto",
+			"nameDe": "Pasto",
+			"nameIt": "Pasto",
+			"population": 382236
+		},
+		"peak": {
+			"name": "Volcán Galeras",
+			"elevation": 4276
+		},
+		"position": "west"
+	},
+	"caqueta": {
+		"kind": "region",
+		"type": "Intendancy",
+		"borders": [
+			"Amazonas",
+			"Cauca",
+			"Guaviare",
+			"Huila",
+			"Meta",
+			"Putumayo",
+			"Vaupés"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Florencia",
+			"nameDe": "Florencia",
+			"nameIt": "Florencia",
+			"population": 130337
+		},
+		"position": "south"
+	},
+	"putumayo": {
+		"kind": "region",
+		"type": "Intendancy",
+		"borders": [
+			"Amazonas",
+			"Caquetá",
+			"Cauca",
+			"Nariño"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Mocoa",
+			"nameDe": "Mocoa",
+			"nameIt": "Mocoa",
+			"population": 22035
+		},
+		"position": "south"
+	},
+	"vaupes": {
+		"kind": "region",
+		"type": "Commissiary",
+		"borders": [
+			"Amazonas",
+			"Caquetá",
+			"Guainía",
+			"Guaviare"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Mitú",
+			"nameDe": "Mitú",
+			"nameIt": "Mitú",
+			"population": 5917
+		},
+		"position": "south-east"
+	},
+	"amazonas": {
+		"kind": "region",
+		"borders": [
+			"Caquetá",
+			"Putumayo",
+			"Vaupés"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Leticia",
+			"nameDe": "Leticia",
+			"nameIt": "Leticia",
+			"population": 59575
+		},
+		"peak": {
+			"name": "Pico da Neblina",
+			"elevation": 3014
+		},
+		"position": "south"
+	}
+}

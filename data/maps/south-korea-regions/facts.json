@@ -1,0 +1,307 @@
+{
+	"gangwon": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "강원도",
+		"borders": [
+			"Gyeonggi",
+			"North Chungcheong",
+			"North Gyeongsang"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Wonju",
+			"nameDe": "Wonju",
+			"nameIt": "Wonju",
+			"population": 243387
+		},
+		"peak": {
+			"name": "Sorak-san",
+			"elevation": 1708
+		},
+		"position": "north"
+	},
+	"seoul": {
+		"kind": "region",
+		"type": "Capital Metropolitan City",
+		"localName": "서울특별시",
+		"borders": [
+			"Gyeonggi"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Seoul",
+			"nameDe": "Seoul",
+			"nameIt": "Seul",
+			"population": 9796000
+		},
+		"position": "north-west"
+	},
+	"gyeonggi": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "경기도",
+		"borders": [
+			"Gangwon",
+			"Incheon",
+			"North Chungcheong",
+			"Seoul",
+			"South Chungcheong"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Suwon",
+			"nameDe": "Suwon",
+			"nameIt": "Suwon",
+			"population": 1078000
+		},
+		"position": "north-west"
+	},
+	"incheon": {
+		"kind": "region",
+		"type": "Metropolitan City",
+		"localName": "인천광역시",
+		"borders": [
+			"Gyeonggi"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Incheon",
+			"nameDe": "Incheon",
+			"nameIt": "Incheon",
+			"population": 2550000
+		},
+		"position": "north-west"
+	},
+	"north-chungcheong": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "충청북도",
+		"borders": [
+			"Daejeon",
+			"Gangwon",
+			"Gyeonggi",
+			"North Gyeongsang",
+			"North Jeolla",
+			"Sejong",
+			"South Chungcheong"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Cheongju",
+			"nameDe": "Cheongju",
+			"nameIt": "Cheongju",
+			"population": 775096
+		},
+		"position": "centre"
+	},
+	"sejong": {
+		"kind": "region",
+		"type": "Special self-governing city",
+		"localName": "세종특별자치시",
+		"borders": [
+			"Daejeon",
+			"North Chungcheong",
+			"South Chungcheong"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"north-gyeongsang": {
+		"kind": "region",
+		"type": "Metropolitan City",
+		"localName": "경상북도",
+		"borders": [
+			"Daegu",
+			"Gangwon",
+			"North Chungcheong",
+			"North Jeolla",
+			"South Gyeongsang",
+			"Ulsan"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Pohang",
+			"nameDe": "Pohang",
+			"nameIt": "Pohang",
+			"population": 435266
+		},
+		"position": "east"
+	},
+	"south-chungcheong": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "충청남도",
+		"borders": [
+			"Daejeon",
+			"Gyeonggi",
+			"North Chungcheong",
+			"North Jeolla",
+			"Sejong"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"daejeon": {
+		"kind": "region",
+		"type": "Metropolitan City",
+		"localName": "대전광역시",
+		"borders": [
+			"North Chungcheong",
+			"Sejong",
+			"South Chungcheong"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Daejeon",
+			"nameDe": "Daejeon",
+			"nameIt": "Daejeon",
+			"population": 1468000
+		},
+		"position": "west"
+	},
+	"daegu": {
+		"kind": "region",
+		"type": "Metropolitan City",
+		"localName": "대구광역시",
+		"borders": [
+			"North Gyeongsang"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Daegu",
+			"nameDe": "Daegu",
+			"nameIt": "Taegu",
+			"population": 2460000
+		},
+		"position": "centre"
+	},
+	"north-jeolla": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "전라북도",
+		"borders": [
+			"North Chungcheong",
+			"North Gyeongsang",
+			"South Chungcheong",
+			"South Gyeongsang",
+			"South Jeolla"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Jeonju",
+			"nameDe": "Jeonju",
+			"nameIt": "Jeonju",
+			"population": 711424
+		},
+		"position": "west"
+	},
+	"ulsan": {
+		"kind": "region",
+		"type": "Metropolitan City",
+		"localName": "울산광역시",
+		"borders": [
+			"North Gyeongsang",
+			"South Gyeongsang"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Ulsan",
+			"nameDe": "Ulsan",
+			"nameIt": "Ulsan",
+			"population": 1061000
+		},
+		"position": "centre"
+	},
+	"south-gyeongsang": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "경상남도",
+		"borders": [
+			"Busan",
+			"North Gyeongsang",
+			"North Jeolla",
+			"South Jeolla",
+			"Ulsan"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Changwon",
+			"nameDe": "Changwon",
+			"nameIt": "Changwon",
+			"population": 1081499
+		},
+		"peak": {
+			"name": "Chiri-san",
+			"elevation": 1915
+		},
+		"position": "centre"
+	},
+	"gwangju": {
+		"kind": "region",
+		"type": "Metropolitan City",
+		"localName": "광주광역시",
+		"borders": [
+			"South Jeolla"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Gwangju",
+			"nameDe": "Gwangju",
+			"nameIt": "Gwangju",
+			"population": 1440000
+		},
+		"position": "west"
+	},
+	"busan": {
+		"kind": "region",
+		"type": "Metropolitan City",
+		"localName": "부산광역시",
+		"borders": [
+			"South Gyeongsang"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Busan",
+			"nameDe": "Busan",
+			"nameIt": "Pusan",
+			"population": 3480000
+		},
+		"position": "centre"
+	},
+	"south-jeolla": {
+		"kind": "region",
+		"type": "Metropolitan City",
+		"localName": "전라남도",
+		"borders": [
+			"Gwangju",
+			"North Jeolla",
+			"South Gyeongsang"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Yeosu",
+			"nameDe": "Yeosu",
+			"nameIt": "Yeosu",
+			"population": 341994
+		},
+		"position": "south-west"
+	},
+	"jeju": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "제주특별자치도",
+		"coastal": true,
+		"largestCity": {
+			"name": "Jeju",
+			"nameDe": "Jeju-si",
+			"nameIt": "Jeju",
+			"population": 408364
+		},
+		"peak": {
+			"name": "Halla-san",
+			"elevation": 1950
+		},
+		"position": "south-west"
+	}
+}

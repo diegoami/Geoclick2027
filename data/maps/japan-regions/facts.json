@@ -1,0 +1,894 @@
+{
+	"hokkaido": {
+		"kind": "region",
+		"type": "Circuit",
+		"localName": "北海道",
+		"coastal": true,
+		"largestCity": {
+			"name": "Sapporo",
+			"nameDe": "Sapporo",
+			"nameIt": "Sapporo",
+			"population": 2544000
+		},
+		"peak": {
+			"name": "Asahi-dake",
+			"elevation": 2290
+		},
+		"position": "north-east"
+	},
+	"aomori": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "青森県",
+		"borders": [
+			"Akita",
+			"Iwate"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Aomori",
+			"nameDe": "Aomori",
+			"nameIt": "Aomori",
+			"population": 298394
+		},
+		"position": "north-east"
+	},
+	"akita": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "秋田県",
+		"borders": [
+			"Aomori",
+			"Iwate",
+			"Miyagi",
+			"Yamagata"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Akita",
+			"nameDe": "Akita",
+			"nameIt": "Akita",
+			"population": 320069
+		},
+		"position": "north-east"
+	},
+	"iwate": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "岩手県",
+		"borders": [
+			"Akita",
+			"Aomori",
+			"Miyagi"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Morioka",
+			"nameDe": "Morioka",
+			"nameIt": "Morioka",
+			"population": 295172
+		},
+		"peak": {
+			"name": "Iwate-san",
+			"elevation": 2038
+		},
+		"position": "north-east"
+	},
+	"yamagata": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "山形県",
+		"borders": [
+			"Akita",
+			"Fukushima",
+			"Miyagi",
+			"Niigata"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Yamagata",
+			"nameDe": "Yamagata",
+			"nameIt": "Yamagata",
+			"population": 272209
+		},
+		"position": "east"
+	},
+	"miyagi": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "宮城県",
+		"borders": [
+			"Akita",
+			"Fukushima",
+			"Iwate",
+			"Yamagata"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Sendai",
+			"nameDe": "Sendai",
+			"nameIt": "Sendai",
+			"population": 2250000
+		},
+		"position": "east"
+	},
+	"niigata": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "新潟県",
+		"borders": [
+			"Fukushima",
+			"Gunma",
+			"Nagano",
+			"Toyama",
+			"Yamagata"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Niigata",
+			"nameDe": "Niigata",
+			"nameIt": "Niigata",
+			"population": 569797
+		},
+		"position": "east"
+	},
+	"fukushima": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "福島県",
+		"borders": [
+			"Gunma",
+			"Ibaraki",
+			"Miyagi",
+			"Niigata",
+			"Tochigi",
+			"Yamagata"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Iwaki",
+			"nameDe": "Iwaki",
+			"nameIt": "Iwaki",
+			"population": 357309
+		},
+		"position": "east"
+	},
+	"ishikawa": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "石川県",
+		"borders": [
+			"Fukui",
+			"Gifu",
+			"Toyama"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Kanazawa",
+			"nameDe": "Kanazawa",
+			"nameIt": "Kanazawa",
+			"population": 551249
+		},
+		"position": "centre"
+	},
+	"tochigi": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "栃木県",
+		"borders": [
+			"Fukushima",
+			"Gunma",
+			"Ibaraki"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Utsunomiya",
+			"nameDe": "Utsunomiya",
+			"nameIt": "Utsunomiya",
+			"population": 667752
+		},
+		"position": "east"
+	},
+	"toyama": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "富山県",
+		"borders": [
+			"Gifu",
+			"Ishikawa",
+			"Nagano",
+			"Niigata"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Toyama",
+			"nameDe": "Toyama",
+			"nameIt": "Toyama",
+			"population": 332812
+		},
+		"peak": {
+			"name": "Tate-yama",
+			"elevation": 3015
+		},
+		"position": "centre"
+	},
+	"gunma": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "群馬県",
+		"borders": [
+			"Fukushima",
+			"Ibaraki",
+			"Nagano",
+			"Niigata",
+			"Saitama",
+			"Tochigi"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Maebashi",
+			"nameDe": "Maebashi",
+			"nameIt": "Maebashi",
+			"population": 344871
+		},
+		"position": "east"
+	},
+	"ibaraki": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "茨城県",
+		"borders": [
+			"Chiba",
+			"Fukushima",
+			"Gunma",
+			"Saitama",
+			"Tochigi"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Mito",
+			"nameDe": "Mito",
+			"nameIt": "Mito",
+			"population": 353892
+		},
+		"position": "east"
+	},
+	"nagano": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "長野県",
+		"borders": [
+			"Aichi",
+			"Gifu",
+			"Gunma",
+			"Niigata",
+			"Saitama",
+			"Shizuoka",
+			"Toyama",
+			"Yamanashi"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Nagano",
+			"nameDe": "Nagano",
+			"nameIt": "Nagano",
+			"population": 594311
+		},
+		"position": "centre"
+	},
+	"saitama": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "埼玉県",
+		"borders": [
+			"Chiba",
+			"Gunma",
+			"Ibaraki",
+			"Nagano",
+			"Tokyo",
+			"Yamanashi"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kawagoe",
+			"nameDe": "Kawagoe",
+			"nameIt": "Kawagoe",
+			"population": 337931
+		},
+		"position": "east"
+	},
+	"fukui": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "福井県",
+		"borders": [
+			"Gifu",
+			"Ishikawa",
+			"Kyōto",
+			"Shiga"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Fukui",
+			"nameDe": "Fukui",
+			"nameIt": "Fukui",
+			"population": 248707
+		},
+		"position": "centre"
+	},
+	"gifu": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "岐阜県",
+		"borders": [
+			"Aichi",
+			"Fukui",
+			"Ishikawa",
+			"Mie",
+			"Nagano",
+			"Shiga",
+			"Toyama"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Gifu",
+			"nameDe": "Gifu",
+			"nameIt": "Gifu",
+			"population": 412895
+		},
+		"position": "centre"
+	},
+	"tokyo": {
+		"kind": "region",
+		"borders": [
+			"Chiba",
+			"Kanagawa",
+			"Saitama",
+			"Yamanashi"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Nagoya",
+			"nameDe": "Nagoya",
+			"nameIt": "Nagoya",
+			"population": 3230000
+		},
+		"peak": {
+			"name": "Fuji",
+			"elevation": 3776
+		},
+		"position": "east"
+	},
+	"yamanashi": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "山梨県",
+		"borders": [
+			"Kanagawa",
+			"Nagano",
+			"Saitama",
+			"Shizuoka",
+			"Tokyo"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kōfu",
+			"nameDe": "Kōfu",
+			"nameIt": "Kōfu",
+			"population": 197540
+		},
+		"peak": {
+			"name": "Fuji",
+			"elevation": 3776
+		},
+		"position": "east"
+	},
+	"chiba": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "千葉県",
+		"borders": [
+			"Ibaraki",
+			"Saitama",
+			"Tokyo"
+		],
+		"coastal": true,
+		"position": "east"
+	},
+	"kanagawa": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "神奈川県",
+		"borders": [
+			"Shizuoka",
+			"Tokyo",
+			"Yamanashi"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Yokohama",
+			"nameDe": "Yokohama",
+			"nameIt": "Yokohama",
+			"population": 3697894
+		},
+		"position": "east"
+	},
+	"tottori": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "鳥取県",
+		"borders": [
+			"Hiroshima",
+			"Hyōgo",
+			"Okayama",
+			"Shimane"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tottori",
+			"nameDe": "Tottori",
+			"nameIt": "Tottori",
+			"population": 154098
+		},
+		"position": "centre"
+	},
+	"shimane": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "島根県",
+		"borders": [
+			"Hiroshima",
+			"Tottori",
+			"Yamaguchi"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Matsue",
+			"nameDe": "Matsue",
+			"nameIt": "Matsue",
+			"population": 156811
+		},
+		"position": "centre"
+	},
+	"kyoto": {
+		"kind": "region",
+		"type": "Urban Prefecture",
+		"localName": "京都府",
+		"borders": [
+			"Fukui",
+			"Hyōgo",
+			"Mie",
+			"Nara",
+			"Ōsaka",
+			"Shiga"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Kyoto",
+			"nameDe": "Kyōto",
+			"nameIt": "Kyoto",
+			"population": 1805000
+		},
+		"position": "centre"
+	},
+	"shiga": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "滋賀県",
+		"borders": [
+			"Fukui",
+			"Gifu",
+			"Kyōto",
+			"Mie"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ōtsu",
+			"nameDe": "Ōtsu",
+			"nameIt": "Ōtsu",
+			"population": 536976
+		},
+		"position": "centre"
+	},
+	"shizuoka": {
+		"kind": "region",
+		"type": "Prefecture",
+		"borders": [
+			"Aichi",
+			"Kanagawa",
+			"Nagano",
+			"Yamanashi"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Hamamatsu",
+			"nameDe": "Hamamatsu",
+			"nameIt": "Hamamatsu",
+			"population": 977023
+		},
+		"position": "centre"
+	},
+	"aichi": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "愛知県",
+		"borders": [
+			"Gifu",
+			"Mie",
+			"Nagano",
+			"Shizuoka"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Nagoya",
+			"nameDe": "Nagoya",
+			"nameIt": "Nagoya",
+			"population": 3230000
+		},
+		"position": "centre"
+	},
+	"hyogo": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "兵庫県",
+		"borders": [
+			"Kyōto",
+			"Okayama",
+			"Ōsaka",
+			"Tottori"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Kōbe",
+			"nameDe": "Kōbe",
+			"nameIt": "Kōbe",
+			"population": 1528478
+		},
+		"position": "centre"
+	},
+	"okayama": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "岡山県",
+		"borders": [
+			"Hiroshima",
+			"Hyōgo",
+			"Tottori"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Okayama",
+			"nameDe": "Okayama",
+			"nameIt": "Okayama",
+			"population": 866092
+		},
+		"position": "centre"
+	},
+	"osaka": {
+		"kind": "region",
+		"type": "Urban Prefecture",
+		"localName": "大阪府",
+		"borders": [
+			"Hyōgo",
+			"Kyōto",
+			"Nara",
+			"Wakayama"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Ōsaka",
+			"nameDe": "Ōsaka",
+			"nameIt": "Osaka",
+			"population": 11294000
+		},
+		"position": "centre"
+	},
+	"hiroshima": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "広島県",
+		"borders": [
+			"Okayama",
+			"Shimane",
+			"Tottori",
+			"Yamaguchi"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Hiroshima",
+			"nameDe": "Hiroshima",
+			"nameIt": "Hiroshima",
+			"population": 2045000
+		},
+		"position": "centre"
+	},
+	"mie": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "三重県",
+		"borders": [
+			"Aichi",
+			"Gifu",
+			"Kyōto",
+			"Nara",
+			"Shiga",
+			"Wakayama"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tsu",
+			"nameDe": "Tsu",
+			"nameIt": "Tsu",
+			"population": 500000
+		},
+		"position": "centre"
+	},
+	"nara": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "奈良県",
+		"borders": [
+			"Kyōto",
+			"Mie",
+			"Ōsaka",
+			"Wakayama"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"yamaguchi": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "山口県",
+		"borders": [
+			"Hiroshima",
+			"Shimane"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Shimonoseki",
+			"nameDe": "Shimonoseki",
+			"nameIt": "Shimonoseki",
+			"population": 245786
+		},
+		"position": "centre"
+	},
+	"kagawa": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "香川県",
+		"borders": [
+			"Ehime",
+			"Tokushima"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Takamatsu",
+			"nameDe": "Takamatsu",
+			"nameIt": "Takamatsu",
+			"population": 334223
+		},
+		"position": "centre"
+	},
+	"wakayama": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "和歌山県",
+		"borders": [
+			"Mie",
+			"Nara",
+			"Ōsaka"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Wakayama",
+			"nameDe": "Wakayama",
+			"nameIt": "Wakayama",
+			"population": 440006
+		},
+		"position": "centre"
+	},
+	"tokushima": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "徳島県",
+		"borders": [
+			"Ehime",
+			"Kagawa",
+			"Kōchi"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tokushima",
+			"nameDe": "Tokushima",
+			"nameIt": "Tokushima",
+			"population": 443760
+		},
+		"position": "centre"
+	},
+	"nagasaki": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "長崎県",
+		"borders": [
+			"Saga"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Nagasaki",
+			"nameDe": "Nagasaki",
+			"nameIt": "Nagasaki",
+			"population": 435455
+		},
+		"peak": {
+			"name": "Unzen-dake",
+			"elevation": 1500
+		},
+		"position": "west"
+	},
+	"ehime": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "愛媛県",
+		"borders": [
+			"Kagawa",
+			"Kōchi",
+			"Tokushima"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Matsuyama",
+			"nameDe": "Matsuyama",
+			"nameIt": "Matsuyama",
+			"population": 533541
+		},
+		"peak": {
+			"name": "Ishizuchi-san",
+			"elevation": 1982
+		},
+		"position": "centre"
+	},
+	"fukuoka": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "福岡県",
+		"borders": [
+			"Kumamoto",
+			"Ōita",
+			"Saga"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Fukuoka",
+			"nameDe": "Fukuoka",
+			"nameIt": "Fukuoka",
+			"population": 2792000
+		},
+		"position": "west"
+	},
+	"kochi": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "高知県",
+		"borders": [
+			"Ehime",
+			"Tokushima"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Kōchi",
+			"nameDe": "Kōchi",
+			"nameIt": "Kōchi",
+			"population": 335570
+		},
+		"position": "centre"
+	},
+	"saga": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "佐賀県",
+		"borders": [
+			"Fukuoka",
+			"Nagasaki"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"oita": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "大分県",
+		"borders": [
+			"Fukuoka",
+			"Kumamoto",
+			"Miyazaki"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Ōita",
+			"nameDe": "Ōita",
+			"nameIt": "Ōita",
+			"population": 448907
+		},
+		"peak": {
+			"name": "Kuju-san",
+			"elevation": 1788
+		},
+		"position": "centre"
+	},
+	"kumamoto": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "熊本県",
+		"borders": [
+			"Fukuoka",
+			"Kagoshima",
+			"Miyazaki",
+			"Ōita"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Kumamoto",
+			"nameDe": "Kumamoto",
+			"nameIt": "Kumamoto",
+			"population": 718232
+		},
+		"position": "west"
+	},
+	"miyazaki": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "宮崎県",
+		"borders": [
+			"Kagoshima",
+			"Kumamoto",
+			"Ōita"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Miyazaki",
+			"nameDe": "Miyazaki",
+			"nameIt": "Miyazaki",
+			"population": 324384
+		},
+		"position": "centre"
+	},
+	"kagoshima": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "鹿児島県",
+		"borders": [
+			"Kumamoto",
+			"Miyazaki"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Kagoshima",
+			"nameDe": "Kagoshima",
+			"nameIt": "Kagoshima",
+			"population": 555352
+		},
+		"peak": {
+			"name": "Sakurajima",
+			"elevation": 1117
+		},
+		"position": "south-west"
+	},
+	"okinawa": {
+		"kind": "region",
+		"type": "Prefecture",
+		"localName": "沖縄県",
+		"coastal": true,
+		"largestCity": {
+			"name": "Naha",
+			"nameDe": "Naha",
+			"nameIt": "Naha",
+			"population": 905238
+		},
+		"peak": {
+			"name": "Yonaha-dake",
+			"elevation": 498
+		},
+		"position": "south-west"
+	}
+}

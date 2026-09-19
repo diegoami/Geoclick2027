@@ -73,6 +73,17 @@ pairs well with a canvas/map-heavy UI.
   archive rather than four more layers in the map's own: DECISIONS.md,
   "The map can show what is under it".
 
+- **A derived fact per target** (v0.8.0, FT-34). `data/scripts/build-facts.ts`
+  writes `data/maps/<id>/facts.json` beside each `map.json` — structured
+  fields, not prose: where a place sits in its country, whether it has a
+  coast, what range it is in, its biggest town, its tallest summit, its
+  neighbours, its population and what that was in 1950. The sentence is
+  composed at run time by `app/src/lib/facts.ts` from the i18n dictionary,
+  so the derived half is trilingual with nothing translated by hand — only
+  proper nouns and numbers cross the language boundary. The geometry behind
+  it (`data/scripts/factGeometry.ts`) is pure and unit-tested; the file is
+  fetched lazily, and a map without one is simply a map with no fact box.
+
 ## Domain model
 
 **Target** — the thing being learned. Not just points: a river or mountain

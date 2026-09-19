@@ -1,0 +1,341 @@
+{
+	"trentino-alto-adige": {
+		"kind": "region",
+		"borders": [
+			"Lombardia",
+			"Veneto"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Trento",
+			"nameDe": "Trient",
+			"nameIt": "Trento",
+			"population": 107808
+		},
+		"position": "north"
+	},
+	"friuli-venezia-giulia": {
+		"kind": "region",
+		"borders": [
+			"Veneto"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Trieste",
+			"nameDe": "Triest",
+			"nameIt": "Trieste",
+			"population": 216035
+		},
+		"position": "north"
+	},
+	"veneto": {
+		"kind": "region",
+		"borders": [
+			"Emilia-Romagna",
+			"Friuli-Venezia Giulia",
+			"Lombardia",
+			"Trentino-Alto Adige"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Verona",
+			"nameDe": "Verona",
+			"nameIt": "Verona",
+			"population": 347459
+		},
+		"position": "north"
+	},
+	"valle-d-aosta": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Piemonte"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Aosta",
+			"nameDe": "Aosta",
+			"nameIt": "Aosta",
+			"population": 34062
+		},
+		"position": "north-west"
+	},
+	"lombardia": {
+		"kind": "region",
+		"borders": [
+			"Emilia-Romagna",
+			"Piemonte",
+			"Trentino-Alto Adige",
+			"Veneto"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Milan",
+			"nameDe": "Mailand",
+			"nameIt": "Milano",
+			"population": 2945000
+		},
+		"position": "north-west"
+	},
+	"piemonte": {
+		"kind": "region",
+		"borders": [
+			"Emilia-Romagna",
+			"Liguria",
+			"Lombardia",
+			"Valle d'Aosta"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Turin",
+			"nameDe": "Turin",
+			"nameIt": "Torino",
+			"population": 1652000
+		},
+		"peak": {
+			"name": "Monte Rosa",
+			"elevation": 4634
+		},
+		"position": "north-west"
+	},
+	"emilia-romagna": {
+		"kind": "region",
+		"borders": [
+			"Liguria",
+			"Lombardia",
+			"Marche",
+			"Piemonte",
+			"Toscana",
+			"Veneto"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Bologna",
+			"nameDe": "Bologna",
+			"nameIt": "Bologna",
+			"population": 488172
+		},
+		"position": "north"
+	},
+	"liguria": {
+		"kind": "region",
+		"borders": [
+			"Emilia-Romagna",
+			"Piemonte",
+			"Toscana"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Genoa",
+			"nameDe": "Genua",
+			"nameIt": "Genova",
+			"population": 647497
+		},
+		"position": "north-west"
+	},
+	"toscana": {
+		"kind": "region",
+		"borders": [
+			"Emilia-Romagna",
+			"Lazio",
+			"Liguria",
+			"Marche",
+			"Umbria"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Florence",
+			"nameDe": "Florenz",
+			"nameIt": "Firenze",
+			"population": 1500000
+		},
+		"position": "centre"
+	},
+	"marche": {
+		"kind": "region",
+		"borders": [
+			"Abruzzo",
+			"Emilia-Romagna",
+			"Lazio",
+			"Toscana",
+			"Umbria"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Ancona",
+			"nameDe": "Ancona",
+			"nameIt": "Ancona",
+			"population": 100507
+		},
+		"position": "centre"
+	},
+	"umbria": {
+		"kind": "region",
+		"borders": [
+			"Lazio",
+			"Marche",
+			"Toscana"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Perugia",
+			"nameDe": "Perugia",
+			"nameIt": "Perugia",
+			"population": 149125
+		},
+		"position": "centre"
+	},
+	"abruzzo": {
+		"kind": "region",
+		"borders": [
+			"Lazio",
+			"Marche",
+			"Molise"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Pescara",
+			"nameDe": "Pescara",
+			"nameIt": "Pescara",
+			"population": 314789
+		},
+		"peak": {
+			"name": "Corno Grande",
+			"elevation": 2912
+		},
+		"position": "centre"
+	},
+	"lazio": {
+		"kind": "region",
+		"borders": [
+			"Abruzzo",
+			"Campania",
+			"Marche",
+			"Molise",
+			"Toscana",
+			"Umbria"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Rome",
+			"nameDe": "Rom",
+			"nameIt": "Roma",
+			"population": 3339000
+		},
+		"position": "centre"
+	},
+	"molise": {
+		"kind": "region",
+		"borders": [
+			"Abruzzo",
+			"Campania",
+			"Lazio",
+			"Puglia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Campobasso",
+			"nameDe": "Campobasso",
+			"nameIt": "Campobasso",
+			"population": 50762
+		},
+		"position": "centre"
+	},
+	"puglia": {
+		"kind": "region",
+		"borders": [
+			"Basilicata",
+			"Campania",
+			"Molise"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Bari",
+			"nameDe": "Bari",
+			"nameIt": "Bari",
+			"population": 500577
+		},
+		"position": "east"
+	},
+	"campania": {
+		"kind": "region",
+		"borders": [
+			"Basilicata",
+			"Lazio",
+			"Molise",
+			"Puglia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Naples",
+			"nameDe": "Neapel",
+			"nameIt": "Napoli",
+			"population": 2250000
+		},
+		"peak": {
+			"name": "Vesuvio",
+			"elevation": 1281
+		},
+		"position": "east"
+	},
+	"basilicata": {
+		"kind": "region",
+		"borders": [
+			"Calabria",
+			"Campania",
+			"Puglia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Potenza",
+			"nameDe": "Potenza",
+			"nameIt": "Potenza",
+			"population": 69060
+		},
+		"position": "east"
+	},
+	"sardegna": {
+		"kind": "region",
+		"coastal": true,
+		"largestCity": {
+			"name": "Cagliari",
+			"nameDe": "Cagliari",
+			"nameIt": "Cagliari",
+			"population": 291511
+		},
+		"peak": {
+			"name": "Punta la Marmora",
+			"elevation": 1834
+		},
+		"position": "south-west"
+	},
+	"calabria": {
+		"kind": "region",
+		"borders": [
+			"Basilicata"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Reggio di Calabria",
+			"nameDe": "Reggio Calabria",
+			"nameIt": "Reggio Calabria",
+			"population": 180353
+		},
+		"position": "south-east"
+	},
+	"sicilia": {
+		"kind": "region",
+		"coastal": true,
+		"largestCity": {
+			"name": "Palermo",
+			"nameDe": "Palermo",
+			"nameIt": "Palermo",
+			"population": 863000
+		},
+		"peak": {
+			"name": "Monte Etna",
+			"elevation": 3322
+		},
+		"position": "south"
+	}
+}

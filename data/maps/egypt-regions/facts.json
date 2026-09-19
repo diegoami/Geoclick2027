@@ -1,0 +1,508 @@
+{
+	"damietta": {
+		"kind": "region",
+		"type": "Governorate",
+		"borders": [
+			"Dakahlia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Dumyat",
+			"nameDe": "Damiette",
+			"nameIt": "Damietta",
+			"population": 299459
+		},
+		"position": "north"
+	},
+	"kafr-el-sheikh": {
+		"kind": "region",
+		"type": "Governorate",
+		"borders": [
+			"Beheira",
+			"Dakahlia",
+			"Gharbia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Rashid",
+			"nameDe": "Rosette",
+			"nameIt": "Rosetta",
+			"population": 199509
+		},
+		"position": "north"
+	},
+	"port-said": {
+		"kind": "region",
+		"type": "Governorate",
+		"borders": [
+			"Al Sharqia",
+			"Ismailia",
+			"North Sinai"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Bur Said",
+			"nameDe": "Port Said",
+			"nameIt": "Porto Said",
+			"population": 623864
+		},
+		"position": "north"
+	},
+	"dakahlia": {
+		"kind": "region",
+		"type": "Governorate",
+		"borders": [
+			"Al Sharqia",
+			"Damietta",
+			"Gharbia",
+			"Kafr el-Sheikh",
+			"Qalyubia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "El Mansura",
+			"nameDe": "al-Mansura",
+			"nameIt": "Mansura",
+			"population": 600000
+		},
+		"position": "north"
+	},
+	"gharbia": {
+		"kind": "region",
+		"type": "Governorate",
+		"borders": [
+			"Beheira",
+			"Dakahlia",
+			"Kafr el-Sheikh",
+			"Monufia",
+			"Qalyubia"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tanta",
+			"nameDe": "Tanta",
+			"nameIt": "Tanta",
+			"population": 404901
+		},
+		"position": "north"
+	},
+	"alexandria": {
+		"kind": "region",
+		"type": "Governorate",
+		"borders": [
+			"Beheira",
+			"Matrouh"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Alexandria",
+			"nameDe": "Alexandria",
+			"nameIt": "Alessandria d'Egitto",
+			"population": 4165000
+		},
+		"position": "north"
+	},
+	"al-sharqia": {
+		"kind": "region",
+		"type": "Governorate",
+		"borders": [
+			"Cairo",
+			"Dakahlia",
+			"Ismailia",
+			"Port Said",
+			"Qalyubia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Zagazig",
+			"nameDe": "Zagazig",
+			"nameIt": "Zagazig",
+			"population": 285097
+		},
+		"position": "north"
+	},
+	"beheira": {
+		"kind": "region",
+		"type": "Governorate",
+		"borders": [
+			"Alexandria",
+			"Gharbia",
+			"Giza",
+			"Kafr el-Sheikh",
+			"Matrouh",
+			"Monufia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Damanhûr",
+			"nameDe": "Damanhur",
+			"nameIt": "Damanhur",
+			"population": 500000
+		},
+		"position": "north"
+	},
+	"ismailia": {
+		"kind": "region",
+		"type": "Governorate",
+		"borders": [
+			"Al Sharqia",
+			"Cairo",
+			"North Sinai",
+			"Port Said",
+			"Suez"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Ismaïlia",
+			"nameDe": "Ismailia",
+			"nameIt": "Ismailia",
+			"population": 656135
+		},
+		"position": "north"
+	},
+	"monufia": {
+		"kind": "region",
+		"type": "Governorate",
+		"borders": [
+			"Beheira",
+			"Gharbia",
+			"Giza",
+			"Qalyubia"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Shibin el Kom",
+			"nameDe": "Schibin al-Kaum",
+			"nameIt": "Shibin El Kom",
+			"population": 182900
+		},
+		"position": "north"
+	},
+	"north-sinai": {
+		"kind": "region",
+		"type": "Governorate",
+		"borders": [
+			"Ismailia",
+			"Port Said",
+			"South Sinai",
+			"Suez"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "El Arish",
+			"nameDe": "Al-Arisch",
+			"nameIt": "Al-Arish",
+			"population": 178651
+		},
+		"position": "north-east"
+	},
+	"qalyubia": {
+		"kind": "region",
+		"type": "Governorate",
+		"borders": [
+			"Al Sharqia",
+			"Cairo",
+			"Dakahlia",
+			"Gharbia",
+			"Giza",
+			"Monufia"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Benha",
+			"nameDe": "Banha",
+			"nameIt": "Banha",
+			"population": 167029
+		},
+		"position": "north"
+	},
+	"cairo": {
+		"kind": "region",
+		"type": "Governorate",
+		"borders": [
+			"Al Sharqia",
+			"Giza",
+			"Ismailia",
+			"Qalyubia",
+			"Suez"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Cairo",
+			"nameDe": "Kairo",
+			"nameIt": "Il Cairo",
+			"population": 11893000
+		},
+		"position": "north"
+	},
+	"matrouh": {
+		"kind": "region",
+		"type": "Governorate",
+		"borders": [
+			"Alexandria",
+			"Beheira",
+			"Giza",
+			"New Valley"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Matruh",
+			"nameDe": "Marsa Matruh",
+			"nameIt": "Marsa Matruh",
+			"population": 103470
+		},
+		"position": "north-west"
+	},
+	"suez": {
+		"kind": "region",
+		"type": "Governorate",
+		"borders": [
+			"Cairo",
+			"Giza",
+			"Ismailia",
+			"North Sinai",
+			"Red Sea",
+			"South Sinai"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Suez",
+			"nameDe": "Sues",
+			"nameIt": "Suez",
+			"population": 508335
+		},
+		"position": "north"
+	},
+	"faiyum": {
+		"kind": "region",
+		"type": "Governorate",
+		"borders": [
+			"Beni Suef",
+			"Giza"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "El Faiyum",
+			"nameDe": "al-Fayyūm",
+			"nameIt": "Fayyum",
+			"population": 316772
+		},
+		"position": "north"
+	},
+	"beni-suef": {
+		"kind": "region",
+		"type": "Governorate",
+		"borders": [
+			"Faiyum",
+			"Giza",
+			"Minya",
+			"Red Sea"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Beni Suef",
+			"nameDe": "Bani Suwaif",
+			"nameIt": "Beni Suef",
+			"population": 489450
+		},
+		"position": "north"
+	},
+	"giza": {
+		"kind": "region",
+		"type": "Governorate",
+		"borders": [
+			"Beheira",
+			"Beni Suef",
+			"Cairo",
+			"Faiyum",
+			"Matrouh",
+			"Minya",
+			"Monufia",
+			"New Valley",
+			"Qalyubia",
+			"Red Sea",
+			"Suez"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Giza",
+			"nameDe": "Gizeh",
+			"nameIt": "Giza",
+			"population": 2681863
+		},
+		"position": "north"
+	},
+	"south-sinai": {
+		"kind": "region",
+		"type": "Governorate",
+		"borders": [
+			"North Sinai",
+			"Suez"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "El Tur",
+			"nameDe": "El-Tor",
+			"nameIt": "El-Tor",
+			"population": 27628
+		},
+		"peak": {
+			"name": "Gebel Katherna",
+			"elevation": 2629
+		},
+		"position": "north-east"
+	},
+	"minya": {
+		"kind": "region",
+		"type": "Governorate",
+		"borders": [
+			"Asyut",
+			"Beni Suef",
+			"Giza",
+			"New Valley",
+			"Red Sea"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "El Minya",
+			"nameDe": "Al-Minya",
+			"nameIt": "Minya",
+			"population": 500000
+		},
+		"position": "centre"
+	},
+	"asyut": {
+		"kind": "region",
+		"type": "Governorate",
+		"borders": [
+			"Minya",
+			"New Valley",
+			"Red Sea",
+			"Sohag"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Asyut",
+			"nameDe": "Asyut",
+			"nameIt": "Asyūṭ",
+			"population": 420585
+		},
+		"position": "centre"
+	},
+	"sohag": {
+		"kind": "region",
+		"type": "Governorate",
+		"borders": [
+			"Asyut",
+			"New Valley",
+			"Qena",
+			"Red Sea"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Sohag",
+			"nameDe": "Sohag",
+			"nameIt": "Sohag",
+			"population": 600000
+		},
+		"position": "centre"
+	},
+	"luxor": {
+		"kind": "region",
+		"type": "Governorate",
+		"borders": [
+			"Qena"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Luxor",
+			"nameDe": "Luxor",
+			"nameIt": "Luxor",
+			"population": 609248
+		},
+		"position": "centre"
+	},
+	"qena": {
+		"kind": "region",
+		"type": "Governorate",
+		"borders": [
+			"Aswan",
+			"Luxor",
+			"New Valley",
+			"Red Sea",
+			"Sohag"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Qena",
+			"nameDe": "Qina",
+			"nameIt": "Qena",
+			"population": 302027
+		},
+		"position": "centre"
+	},
+	"red-sea": {
+		"kind": "region",
+		"type": "Governorate",
+		"borders": [
+			"Aswan",
+			"Asyut",
+			"Beni Suef",
+			"Giza",
+			"Minya",
+			"Qena",
+			"Sohag",
+			"Suez"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Hurghada",
+			"nameDe": "Hurghada",
+			"nameIt": "Hurghada",
+			"population": 157204
+		},
+		"peak": {
+			"name": "Jabal Is",
+			"elevation": 1851
+		},
+		"position": "east"
+	},
+	"new-valley": {
+		"kind": "region",
+		"type": "Governorate",
+		"borders": [
+			"Aswan",
+			"Asyut",
+			"Giza",
+			"Matrouh",
+			"Minya",
+			"Qena",
+			"Sohag"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "El Kharga",
+			"nameDe": "al-Charga",
+			"nameIt": "El Kharga",
+			"population": 49991
+		},
+		"position": "south"
+	},
+	"aswan": {
+		"kind": "region",
+		"type": "Governorate",
+		"borders": [
+			"New Valley",
+			"Qena",
+			"Red Sea"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Aswan",
+			"nameDe": "Assuan",
+			"nameIt": "Assuan",
+			"population": 313442
+		},
+		"position": "south"
+	}
+}

@@ -1,0 +1,364 @@
+{
+	"pesaro-e-urbino": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Ancona",
+			"Arezzo",
+			"Perugia"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"arezzo": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Perugia",
+			"Pesaro e Urbino",
+			"Siena"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Arezzo",
+			"nameDe": "Arezzo",
+			"nameIt": "Arezzo",
+			"population": 91589
+		},
+		"position": "north-west"
+	},
+	"ancona": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Macerata",
+			"Perugia",
+			"Pesaro e Urbino"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Ancona",
+			"nameDe": "Ancona",
+			"nameIt": "Ancona",
+			"population": 100507
+		},
+		"position": "north"
+	},
+	"pisa": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Grosseto",
+			"Livorno",
+			"Siena"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Pisa",
+			"nameDe": "Pisa",
+			"nameIt": "Pisa",
+			"population": 203336
+		},
+		"position": "north-west"
+	},
+	"livorno": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Grosseto",
+			"Pisa"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Livorno",
+			"nameDe": "Livorno",
+			"nameIt": "Livorno",
+			"population": 156274
+		},
+		"position": "north-west"
+	},
+	"siena": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Arezzo",
+			"Grosseto",
+			"Perugia",
+			"Pisa",
+			"Terni",
+			"Viterbo"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Siena",
+			"nameDe": "Siena",
+			"nameIt": "Siena",
+			"population": 52625
+		},
+		"position": "north-west"
+	},
+	"macerata": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Ancona",
+			"Ascoli Piceno",
+			"Fermo",
+			"Perugia"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"perugia": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Ancona",
+			"Arezzo",
+			"Ascoli Piceno",
+			"Macerata",
+			"Pesaro e Urbino",
+			"Rieti",
+			"Siena",
+			"Terni"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Perugia",
+			"nameDe": "Perugia",
+			"nameIt": "Perugia",
+			"population": 149125
+		},
+		"position": "north"
+	},
+	"fermo": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Ascoli Piceno",
+			"Macerata"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"ascoli-piceno": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Fermo",
+			"Macerata",
+			"Perugia",
+			"Rieti",
+			"Teramo"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"grosseto": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Livorno",
+			"Pisa",
+			"Siena",
+			"Viterbo"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"teramo": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Ascoli Piceno",
+			"L'Aquila",
+			"Pescara",
+			"Rieti"
+		],
+		"coastal": true,
+		"peak": {
+			"name": "Corno Grande",
+			"elevation": 2912
+		},
+		"position": "centre"
+	},
+	"terni": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Perugia",
+			"Rieti",
+			"Siena",
+			"Viterbo"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"viterbo": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Grosseto",
+			"Rieti",
+			"Roma",
+			"Siena",
+			"Terni"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"rieti": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Ascoli Piceno",
+			"L'Aquila",
+			"Perugia",
+			"Roma",
+			"Teramo",
+			"Terni",
+			"Viterbo"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"pescara": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Chieti",
+			"L'Aquila",
+			"Teramo"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Pescara",
+			"nameDe": "Pescara",
+			"nameIt": "Pescara",
+			"population": 314789
+		},
+		"position": "centre"
+	},
+	"l-aquila": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Chieti",
+			"Frosinone",
+			"Isernia",
+			"Pescara",
+			"Rieti",
+			"Roma",
+			"Teramo"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "L'Aquila",
+			"nameDe": "L’Aquila",
+			"nameIt": "L'Aquila",
+			"population": 68503
+		},
+		"peak": {
+			"name": "Monte Viglio",
+			"elevation": 2156
+		},
+		"position": "centre"
+	},
+	"chieti": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Campobasso",
+			"Isernia",
+			"L'Aquila",
+			"Pescara"
+		],
+		"coastal": true,
+		"position": "east"
+	},
+	"roma": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Frosinone",
+			"L'Aquila",
+			"Latina",
+			"Rieti",
+			"Viterbo"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Rome",
+			"nameDe": "Rom",
+			"nameIt": "Roma",
+			"population": 3339000
+		},
+		"position": "south"
+	},
+	"campobasso": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Chieti",
+			"Foggia",
+			"Isernia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Campobasso",
+			"nameDe": "Campobasso",
+			"nameIt": "Campobasso",
+			"population": 50762
+		},
+		"position": "south-east"
+	},
+	"isernia": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Campobasso",
+			"Chieti",
+			"Frosinone",
+			"L'Aquila"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"frosinone": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Isernia",
+			"L'Aquila",
+			"Latina",
+			"Roma"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"foggia": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Campobasso"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Foggia",
+			"nameDe": "Foggia",
+			"nameIt": "Foggia",
+			"population": 155203
+		},
+		"position": "south-east"
+	},
+	"latina": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Frosinone",
+			"Roma"
+		],
+		"coastal": true,
+		"position": "south"
+	}
+}

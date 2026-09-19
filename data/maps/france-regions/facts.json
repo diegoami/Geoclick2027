@@ -1,0 +1,223 @@
+{
+	"hauts-de-france": {
+		"kind": "region",
+		"borders": [
+			"Grand Est",
+			"Île-de-France",
+			"Normandie"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Lille",
+			"nameDe": "Lille",
+			"nameIt": "Lilla",
+			"population": 1044000
+		},
+		"position": "north"
+	},
+	"normandie": {
+		"kind": "region",
+		"borders": [
+			"Bretagne",
+			"Centre-Val de Loire",
+			"Hauts-de-France",
+			"Île-de-France",
+			"Pays de la Loire"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Rouen",
+			"nameDe": "Rouen",
+			"nameIt": "Rouen",
+			"population": 532559
+		},
+		"position": "north-west"
+	},
+	"grand-est": {
+		"kind": "region",
+		"borders": [
+			"Bourgogne-Franche-Comté",
+			"Hauts-de-France",
+			"Île-de-France"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Strasbourg",
+			"nameDe": "Straßburg",
+			"nameIt": "Strasburgo",
+			"population": 439972
+		},
+		"position": "north-east"
+	},
+	"ile-de-france": {
+		"kind": "region",
+		"borders": [
+			"Bourgogne-Franche-Comté",
+			"Centre-Val de Loire",
+			"Grand Est",
+			"Hauts-de-France",
+			"Normandie"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Paris",
+			"nameDe": "Paris",
+			"nameIt": "Parigi",
+			"population": 9904000
+		},
+		"position": "north"
+	},
+	"bretagne": {
+		"kind": "region",
+		"borders": [
+			"Normandie",
+			"Pays de la Loire"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Rennes",
+			"nameDe": "Rennes",
+			"nameIt": "Rennes",
+			"population": 209375
+		},
+		"position": "north-west"
+	},
+	"centre-val-de-loire": {
+		"kind": "region",
+		"borders": [
+			"Auvergne-Rhône-Alpes",
+			"Bourgogne-Franche-Comté",
+			"Île-de-France",
+			"Normandie",
+			"Nouvelle-Aquitaine",
+			"Pays de la Loire"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tours",
+			"nameDe": "Tours",
+			"nameIt": "Tours",
+			"population": 236096
+		},
+		"position": "centre"
+	},
+	"pays-de-la-loire": {
+		"kind": "region",
+		"borders": [
+			"Bretagne",
+			"Centre-Val de Loire",
+			"Normandie",
+			"Nouvelle-Aquitaine"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Nantes",
+			"nameDe": "Nantes",
+			"nameIt": "Nantes",
+			"population": 438537
+		},
+		"position": "west"
+	},
+	"bourgogne-franche-comte": {
+		"kind": "region",
+		"borders": [
+			"Auvergne-Rhône-Alpes",
+			"Centre-Val de Loire",
+			"Grand Est",
+			"Île-de-France"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Dijon",
+			"nameDe": "Dijon",
+			"nameIt": "Digione",
+			"population": 169946
+		},
+		"position": "east"
+	},
+	"auvergne-rhone-alpes": {
+		"kind": "region",
+		"borders": [
+			"Bourgogne-Franche-Comté",
+			"Centre-Val de Loire",
+			"Nouvelle-Aquitaine",
+			"Occitanie",
+			"Provence-Alpes-Côte-d'Azur"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Lyon",
+			"nameDe": "Lyon",
+			"nameIt": "Lione",
+			"population": 1423000
+		},
+		"peak": {
+			"name": "Mont Blanc",
+			"elevation": 4807
+		},
+		"position": "centre"
+	},
+	"nouvelle-aquitaine": {
+		"kind": "region",
+		"borders": [
+			"Auvergne-Rhône-Alpes",
+			"Centre-Val de Loire",
+			"Occitanie",
+			"Pays de la Loire"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Bordeaux",
+			"nameDe": "Bordeaux",
+			"nameIt": "Bordeaux",
+			"population": 803000
+		},
+		"position": "centre"
+	},
+	"provence-alpes-cote-d-azur": {
+		"kind": "region",
+		"borders": [
+			"Auvergne-Rhône-Alpes",
+			"Occitanie"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Marseille",
+			"nameDe": "Marseille",
+			"nameIt": "Marsiglia",
+			"population": 1400000
+		},
+		"position": "south-east"
+	},
+	"occitanie": {
+		"kind": "region",
+		"borders": [
+			"Auvergne-Rhône-Alpes",
+			"Nouvelle-Aquitaine",
+			"Provence-Alpes-Côte-d'Azur"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Toulouse",
+			"nameDe": "Toulouse",
+			"nameIt": "Tolosa",
+			"population": 847000
+		},
+		"position": "south"
+	},
+	"corse": {
+		"kind": "region",
+		"coastal": true,
+		"largestCity": {
+			"name": "Ajaccio",
+			"nameDe": "Ajaccio",
+			"nameIt": "Ajaccio",
+			"population": 54364
+		},
+		"peak": {
+			"name": "Monte Cinto",
+			"elevation": 2706
+		},
+		"position": "south-east"
+	}
+}

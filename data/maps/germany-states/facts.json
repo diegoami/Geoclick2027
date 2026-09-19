@@ -1,0 +1,304 @@
+{
+	"schleswig-holstein": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Hamburg",
+			"Mecklenburg-Vorpommern",
+			"Niedersachsen"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Kiel",
+			"nameDe": "Kiel",
+			"nameIt": "Kiel",
+			"population": 269427
+		},
+		"position": "north"
+	},
+	"mecklenburg-vorpommern": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Brandenburg",
+			"Niedersachsen",
+			"Schleswig-Holstein"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Rostock",
+			"nameDe": "Rostock",
+			"nameIt": "Rostock",
+			"population": 203080
+		},
+		"position": "north-east"
+	},
+	"hamburg": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Niedersachsen",
+			"Schleswig-Holstein"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Hamburg",
+			"nameDe": "Hamburg",
+			"nameIt": "Amburgo",
+			"population": 1757000
+		},
+		"position": "north"
+	},
+	"bremen": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Niedersachsen"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Bremen",
+			"nameDe": "Bremen",
+			"nameIt": "Brema",
+			"population": 724909
+		},
+		"position": "north-west"
+	},
+	"niedersachsen": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Brandenburg",
+			"Bremen",
+			"Hamburg",
+			"Hessen",
+			"Mecklenburg-Vorpommern",
+			"Nordrhein-Westfalen",
+			"Sachsen-Anhalt",
+			"Schleswig-Holstein",
+			"Thüringen"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Hanover",
+			"nameDe": "Hannover",
+			"nameIt": "Hannover",
+			"population": 722490
+		},
+		"position": "north"
+	},
+	"berlin": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Brandenburg"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Berlin",
+			"nameDe": "Berlin",
+			"nameIt": "Berlino",
+			"population": 3406000
+		},
+		"position": "north-east"
+	},
+	"brandenburg": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Berlin",
+			"Mecklenburg-Vorpommern",
+			"Niedersachsen",
+			"Sachsen",
+			"Sachsen-Anhalt"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Potsdam",
+			"nameDe": "Potsdam",
+			"nameIt": "Potsdam",
+			"population": 218095
+		},
+		"position": "north-east"
+	},
+	"sachsen-anhalt": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Brandenburg",
+			"Niedersachsen",
+			"Sachsen",
+			"Thüringen"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Magdeburg",
+			"nameDe": "Magdeburg",
+			"nameIt": "Magdeburgo",
+			"population": 229826
+		},
+		"peak": {
+			"name": "Brocken",
+			"elevation": 1141
+		},
+		"position": "centre"
+	},
+	"nordrhein-westfalen": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Hessen",
+			"Niedersachsen",
+			"Rheinland-Pfalz"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Essen",
+			"nameDe": "Essen",
+			"nameIt": "Essen",
+			"population": 1742135
+		},
+		"peak": {
+			"name": "Vaalserberg",
+			"elevation": 321
+		},
+		"position": "west"
+	},
+	"thuringen": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Bayern",
+			"Hessen",
+			"Niedersachsen",
+			"Sachsen",
+			"Sachsen-Anhalt"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Erfurt",
+			"nameDe": "Erfurt",
+			"nameIt": "Erfurt",
+			"population": 203254
+		},
+		"position": "centre"
+	},
+	"sachsen": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Bayern",
+			"Brandenburg",
+			"Sachsen-Anhalt",
+			"Thüringen"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Dresden",
+			"nameDe": "Dresden",
+			"nameIt": "Dresda",
+			"population": 617515
+		},
+		"position": "east"
+	},
+	"hessen": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Baden-Württemberg",
+			"Bayern",
+			"Niedersachsen",
+			"Nordrhein-Westfalen",
+			"Rheinland-Pfalz",
+			"Thüringen"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Frankfurt",
+			"nameDe": "Frankfurt",
+			"nameIt": "Francoforte",
+			"population": 2895000
+		},
+		"position": "centre"
+	},
+	"rheinland-pfalz": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Baden-Württemberg",
+			"Hessen",
+			"Nordrhein-Westfalen",
+			"Saarland"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Koblenz",
+			"nameDe": "Koblenz",
+			"nameIt": "Coblenza",
+			"population": 312633
+		},
+		"peak": {
+			"name": "Hohe Acht",
+			"elevation": 747
+		},
+		"position": "west"
+	},
+	"saarland": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Rheinland-Pfalz"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Saarbrücken",
+			"nameDe": "Saarbrücken",
+			"nameIt": "Saarbrücken",
+			"population": 770001
+		},
+		"position": "south-west"
+	},
+	"bayern": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Baden-Württemberg",
+			"Hessen",
+			"Sachsen",
+			"Thüringen"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Munich",
+			"nameDe": "München",
+			"nameIt": "Monaco di Baviera",
+			"population": 1275000
+		},
+		"peak": {
+			"name": "Zugspitze",
+			"elevation": 2963
+		},
+		"position": "south"
+	},
+	"baden-wurttemberg": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Bayern",
+			"Hessen",
+			"Rheinland-Pfalz"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Stuttgart",
+			"nameDe": "Stuttgart",
+			"nameIt": "Stoccarda",
+			"population": 2944700
+		},
+		"peak": {
+			"name": "Feldberg",
+			"elevation": 1493
+		},
+		"position": "south"
+	}
+}

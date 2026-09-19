@@ -1,0 +1,521 @@
+{
+	"roraima": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Amazonas",
+			"Pará"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Boa Vista",
+			"nameDe": "Boa Vista",
+			"nameIt": "Boa Vista",
+			"population": 235150
+		},
+		"position": "north-west"
+	},
+	"amapa": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Pará"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Vila Velha",
+			"nameDe": "Vila Velha",
+			"nameIt": "Vila Velha",
+			"population": 1209091
+		},
+		"position": "north"
+	},
+	"para": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Amapá",
+			"Amazonas",
+			"Maranhão",
+			"Mato Grosso",
+			"Roraima",
+			"Tocantins"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Belém",
+			"nameDe": "Belém",
+			"nameIt": "Belém",
+			"population": 2167000
+		},
+		"peak": {
+			"name": "Serra dos Carajás-Pico",
+			"elevation": 898
+		},
+		"position": "north"
+	},
+	"amazonas": {
+		"kind": "region",
+		"borders": [
+			"Acre",
+			"Mato Grosso",
+			"Pará",
+			"Rondônia",
+			"Roraima"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Manaus",
+			"nameDe": "Manaus",
+			"nameIt": "Manaus",
+			"population": 1753000
+		},
+		"peak": {
+			"name": "Pico da Neblina",
+			"elevation": 3014
+		},
+		"position": "north-west"
+	},
+	"ceara": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Paraíba",
+			"Pernambuco",
+			"Piauí",
+			"Rio Grande do Norte"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Fortaleza",
+			"nameDe": "Fortaleza",
+			"nameIt": "Fortaleza",
+			"population": 3602319
+		},
+		"peak": {
+			"name": "Pico Serra Branca",
+			"elevation": 1154
+		},
+		"position": "north-east"
+	},
+	"maranhao": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Pará",
+			"Piauí",
+			"Tocantins"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "São Luís",
+			"nameDe": "São Luís",
+			"nameIt": "São Luís",
+			"population": 1038000
+		},
+		"position": "north-east"
+	},
+	"rio-grande-do-norte": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Ceará",
+			"Paraíba"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Natal",
+			"nameDe": "Natal",
+			"nameIt": "Natal",
+			"population": 1088000
+		},
+		"position": "north-east"
+	},
+	"piaui": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Bahia",
+			"Ceará",
+			"Maranhão",
+			"Pernambuco",
+			"Tocantins"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Teresina",
+			"nameDe": "Teresina",
+			"nameIt": "Teresina",
+			"population": 907000
+		},
+		"position": "north-east"
+	},
+	"paraiba": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Ceará",
+			"Pernambuco",
+			"Rio Grande do Norte"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "João Pessoa",
+			"nameDe": "João Pessoa",
+			"nameIt": "João Pessoa",
+			"population": 956000
+		},
+		"peak": {
+			"name": "Pico do Jabre",
+			"elevation": 1197
+		},
+		"position": "north-east"
+	},
+	"pernambuco": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Alagoas",
+			"Bahia",
+			"Ceará",
+			"Paraíba",
+			"Piauí"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Recife",
+			"nameDe": "Recife",
+			"nameIt": "Recife",
+			"population": 3651000
+		},
+		"position": "east"
+	},
+	"acre": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Amazonas",
+			"Rondônia"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Rio Branco",
+			"nameDe": "Rio Branco",
+			"nameIt": "Rio Branco",
+			"population": 257642
+		},
+		"position": "west"
+	},
+	"tocantins": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Bahia",
+			"Goiás",
+			"Maranhão",
+			"Mato Grosso",
+			"Pará",
+			"Piauí"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Palmas",
+			"nameDe": "Palmas",
+			"nameIt": "Palmas",
+			"population": 235315
+		},
+		"position": "centre"
+	},
+	"alagoas": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Bahia",
+			"Pernambuco",
+			"Sergipe"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Maceió",
+			"nameDe": "Maceió",
+			"nameIt": "Maceió",
+			"population": 1186000
+		},
+		"position": "east"
+	},
+	"sergipe": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Alagoas",
+			"Bahia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Aracaju",
+			"nameDe": "Aracaju",
+			"nameIt": "Aracaju",
+			"population": 685356
+		},
+		"position": "east"
+	},
+	"rondonia": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Acre",
+			"Amazonas",
+			"Mato Grosso"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Porto Velho",
+			"nameDe": "Porto Velho",
+			"nameIt": "Porto Velho",
+			"population": 306180
+		},
+		"position": "west"
+	},
+	"mato-grosso": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Amazonas",
+			"Goiás",
+			"Mato Grosso do Sul",
+			"Pará",
+			"Rondônia",
+			"Tocantins"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Cuiabá",
+			"nameDe": "Cuiabá",
+			"nameIt": "Cuiabá",
+			"population": 806000
+		},
+		"position": "centre"
+	},
+	"bahia": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Alagoas",
+			"Espírito Santo",
+			"Goiás",
+			"Minas Gerais",
+			"Pernambuco",
+			"Piauí",
+			"Sergipe",
+			"Tocantins"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Salvador",
+			"nameDe": "Salvador da Bahía",
+			"nameIt": "Salvador",
+			"population": 3484000
+		},
+		"peak": {
+			"name": "Serra do Barbado",
+			"elevation": 2033
+		},
+		"position": "east"
+	},
+	"distrito-federal": {
+		"kind": "region",
+		"type": "Federal District",
+		"borders": [
+			"Goiás",
+			"Minas Gerais"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Brasília",
+			"nameDe": "Brasília",
+			"nameIt": "Brasilia",
+			"population": 3716996
+		},
+		"position": "east"
+	},
+	"goias": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Bahia",
+			"Distrito Federal",
+			"Mato Grosso",
+			"Mato Grosso do Sul",
+			"Minas Gerais",
+			"Tocantins"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Goiânia",
+			"nameDe": "Goiânia",
+			"nameIt": "Goiânia",
+			"population": 2022000
+		},
+		"peak": {
+			"name": "Chapada dos Veadeiros",
+			"elevation": 1691
+		},
+		"position": "centre"
+	},
+	"minas-gerais": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Bahia",
+			"Distrito Federal",
+			"Espírito Santo",
+			"Goiás",
+			"Mato Grosso do Sul",
+			"Rio de Janeiro",
+			"São Paulo"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Belo Horizonte",
+			"nameDe": "Belo Horizonte",
+			"nameIt": "Belo Horizonte",
+			"population": 5575000
+		},
+		"position": "east"
+	},
+	"espirito-santo": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Bahia",
+			"Minas Gerais",
+			"Rio de Janeiro"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Vitória",
+			"nameDe": "Vitória",
+			"nameIt": "Vitória",
+			"population": 1704000
+		},
+		"peak": {
+			"name": "Pico da Bandeira",
+			"elevation": 2890
+		},
+		"position": "east"
+	},
+	"mato-grosso-do-sul": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Goiás",
+			"Mato Grosso",
+			"Minas Gerais",
+			"Paraná",
+			"São Paulo"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Campo Grande",
+			"nameDe": "Campo Grande",
+			"nameIt": "Campo Grande",
+			"population": 778000
+		},
+		"position": "centre"
+	},
+	"rio-de-janeiro": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Espírito Santo",
+			"Minas Gerais",
+			"São Paulo"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Rio de Janeiro",
+			"nameDe": "Rio de Janeiro",
+			"nameIt": "Rio de Janeiro",
+			"population": 11748000
+		},
+		"position": "south-east"
+	},
+	"sao-paulo": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Mato Grosso do Sul",
+			"Minas Gerais",
+			"Paraná",
+			"Rio de Janeiro"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "São Paulo",
+			"nameDe": "São Paulo",
+			"nameIt": "San Paolo",
+			"population": 18845000
+		},
+		"peak": {
+			"name": "Pico da Pedra da Mina",
+			"elevation": 2798
+		},
+		"position": "south"
+	},
+	"parana": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Mato Grosso do Sul",
+			"Santa Catarina",
+			"São Paulo"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Curitiba",
+			"nameDe": "Curitiba",
+			"nameIt": "Curitiba",
+			"population": 3084000
+		},
+		"peak": {
+			"name": "Pico Paraná",
+			"elevation": 1877
+		},
+		"position": "south"
+	},
+	"santa-catarina": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Paraná",
+			"Rio Grande do Sul"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Florianópolis",
+			"nameDe": "Florianópolis",
+			"nameIt": "Florianópolis",
+			"population": 1023000
+		},
+		"peak": {
+			"name": "Morro da Boa Vista",
+			"elevation": 1827
+		},
+		"position": "south"
+	},
+	"rio-grande-do-sul": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Santa Catarina"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Porto Alegre",
+			"nameDe": "Porto Alegre",
+			"nameIt": "Porto Alegre",
+			"population": 3917000
+		},
+		"position": "south"
+	}
+}

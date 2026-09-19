@@ -1,0 +1,254 @@
+{
+	"highlands-and-islands": {
+		"kind": "region",
+		"borders": [
+			"Eastern",
+			"North Eastern",
+			"South Western"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Inverness",
+			"nameDe": "Inverness",
+			"nameIt": "Inverness",
+			"population": 45158
+		},
+		"peak": {
+			"name": "Ben Nevis",
+			"elevation": 1343
+		},
+		"position": "north"
+	},
+	"north-eastern": {
+		"kind": "region",
+		"type": "Unitary District",
+		"borders": [
+			"Eastern",
+			"Highlands and Islands"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"eastern": {
+		"kind": "region",
+		"borders": [
+			"Highlands and Islands",
+			"North East",
+			"North Eastern",
+			"North West",
+			"South Western"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Edinburgh",
+			"nameDe": "Edinburgh",
+			"nameIt": "Edimburgo",
+			"population": 504966
+		},
+		"position": "centre"
+	},
+	"south-western": {
+		"kind": "region",
+		"borders": [
+			"Eastern",
+			"Highlands and Islands",
+			"North West"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Glasgow",
+			"nameDe": "Glasgow",
+			"nameIt": "Glasgow",
+			"population": 1160000
+		},
+		"position": "centre"
+	},
+	"north-east": {
+		"kind": "region",
+		"borders": [
+			"Eastern",
+			"North West",
+			"Yorkshire and the Humber"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Newcastle",
+			"nameDe": "Newcastle upon Tyne",
+			"nameIt": "Newcastle upon Tyne",
+			"population": 882000
+		},
+		"position": "centre"
+	},
+	"north-west": {
+		"kind": "region",
+		"borders": [
+			"East Midlands",
+			"Eastern",
+			"North East",
+			"South Western",
+			"West Midlands",
+			"West Wales and the Valleys",
+			"Yorkshire and the Humber"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Manchester",
+			"nameDe": "Manchester",
+			"nameIt": "Manchester",
+			"population": 2230000
+		},
+		"position": "centre"
+	},
+	"yorkshire-and-the-humber": {
+		"kind": "region",
+		"borders": [
+			"East Midlands",
+			"North East",
+			"North West"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Leeds",
+			"nameDe": "Leeds",
+			"nameIt": "Leeds",
+			"population": 1529000
+		},
+		"position": "east"
+	},
+	"east-midlands": {
+		"kind": "region",
+		"borders": [
+			"East",
+			"North West",
+			"South East",
+			"West Midlands",
+			"Yorkshire and the Humber"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Nottingham",
+			"nameDe": "Nottingham",
+			"nameIt": "Nottingham",
+			"population": 825600
+		},
+		"position": "south-east"
+	},
+	"west-midlands": {
+		"kind": "region",
+		"borders": [
+			"East Midlands",
+			"North West",
+			"South East",
+			"South West",
+			"West Wales and the Valleys"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Birmingham",
+			"nameDe": "Birmingham",
+			"nameIt": "Birmingham",
+			"population": 2285000
+		},
+		"position": "south"
+	},
+	"east-wales": {
+		"kind": "region",
+		"borders": [
+			"West Wales and the Valleys"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Swansea",
+			"nameDe": "Swansea",
+			"nameIt": "Swansea",
+			"population": 294339
+		},
+		"peak": {
+			"name": "Snowdon",
+			"elevation": 1085
+		},
+		"position": "south"
+	},
+	"west-wales-and-the-valleys": {
+		"kind": "region",
+		"borders": [
+			"East Wales",
+			"North West",
+			"South West",
+			"West Midlands"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Cardiff",
+			"nameDe": "Cardiff",
+			"nameIt": "Cardiff",
+			"population": 861400
+		},
+		"position": "south"
+	},
+	"east": {
+		"kind": "region",
+		"borders": [
+			"East Midlands",
+			"Greater London",
+			"South East"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Southend-on-Sea",
+			"nameDe": "Southend-on-Sea",
+			"nameIt": "Southend-on-Sea",
+			"population": 618386
+		},
+		"position": "south-east"
+	},
+	"greater-london": {
+		"kind": "region",
+		"borders": [
+			"East",
+			"South East"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "London",
+			"nameDe": "London",
+			"nameIt": "Londra",
+			"population": 8567000
+		},
+		"position": "south-east"
+	},
+	"south-east": {
+		"kind": "region",
+		"borders": [
+			"East",
+			"East Midlands",
+			"Greater London",
+			"South West",
+			"West Midlands"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Brighton",
+			"nameDe": "Brighton",
+			"nameIt": "Brighton",
+			"population": 503008
+		},
+		"position": "south-east"
+	},
+	"south-west": {
+		"kind": "region",
+		"borders": [
+			"South East",
+			"West Midlands",
+			"West Wales and the Valleys"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Bristol",
+			"nameDe": "Bristol",
+			"nameIt": "Bristol",
+			"population": 553528
+		},
+		"position": "south"
+	}
+}

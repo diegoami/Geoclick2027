@@ -1,0 +1,409 @@
+{
+	"vila-velha": {
+		"kind": "city",
+		"population": 1209091,
+		"populationRank": 17,
+		"region": "Amapi",
+		"coastal": false,
+		"position": "north"
+	},
+	"macapa": {
+		"kind": "city",
+		"population": 499166,
+		"populationRank": 42,
+		"region": "Amapá",
+		"coastal": true,
+		"position": "north"
+	},
+	"belem": {
+		"kind": "city",
+		"population": 2167000,
+		"populationRank": 11,
+		"population1950": 242000,
+		"region": "Pará",
+		"coastal": true,
+		"position": "north"
+	},
+	"sao-luis": {
+		"kind": "city",
+		"population": 1038000,
+		"populationRank": 20,
+		"population1950": 120000,
+		"region": "Maranhão",
+		"coastal": true,
+		"position": "north"
+	},
+	"manaus": {
+		"kind": "city",
+		"population": 1753000,
+		"populationRank": 13,
+		"population1950": 90000,
+		"region": "Amazonas",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"fortaleza": {
+		"kind": "city",
+		"population": 3602319,
+		"populationRank": 7,
+		"population1950": 264000,
+		"region": "Ceará",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"teresina": {
+		"kind": "city",
+		"population": 907000,
+		"populationRank": 25,
+		"population1950": 54000,
+		"region": "Piauí",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"natal": {
+		"kind": "city",
+		"population": 1088000,
+		"populationRank": 19,
+		"population1950": 108000,
+		"region": "Rio Grande do Norte",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"joao-pessoa": {
+		"kind": "city",
+		"population": 956000,
+		"populationRank": 23,
+		"population1950": 117000,
+		"region": "Paraíba",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"campina-grande": {
+		"kind": "city",
+		"population": 417261,
+		"populationRank": 48,
+		"region": "Paraíba",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"olinda": {
+		"kind": "city",
+		"population": 921840,
+		"populationRank": 24,
+		"region": "Pernambuco",
+		"coastal": true,
+		"position": "east"
+	},
+	"recife": {
+		"kind": "city",
+		"population": 3651000,
+		"populationRank": 6,
+		"population1950": 661000,
+		"region": "Pernambuco",
+		"coastal": true,
+		"position": "east"
+	},
+	"jaboatao": {
+		"kind": "city",
+		"population": 702621,
+		"populationRank": 32,
+		"region": "Pernambuco",
+		"coastal": true,
+		"position": "east"
+	},
+	"maceio": {
+		"kind": "city",
+		"population": 1186000,
+		"populationRank": 18,
+		"population1950": 123000,
+		"region": "Alagoas",
+		"coastal": true,
+		"position": "east"
+	},
+	"aracaju": {
+		"kind": "city",
+		"population": 685356,
+		"populationRank": 33,
+		"region": "Sergipe",
+		"coastal": true,
+		"position": "east"
+	},
+	"feira-de-santana": {
+		"kind": "city",
+		"population": 481911,
+		"populationRank": 43,
+		"region": "Bahia",
+		"coastal": false,
+		"position": "east"
+	},
+	"salvador": {
+		"kind": "city",
+		"population": 3484000,
+		"populationRank": 8,
+		"population1950": 403000,
+		"region": "Bahia",
+		"coastal": true,
+		"position": "east"
+	},
+	"cuiaba": {
+		"kind": "city",
+		"population": 806000,
+		"populationRank": 29,
+		"population1950": 27000,
+		"region": "Mato Grosso",
+		"coastal": false,
+		"position": "west"
+	},
+	"brasilia": {
+		"kind": "city",
+		"population": 3716996,
+		"populationRank": 5,
+		"population1950": 36000,
+		"region": "Distrito Federal",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "centre"
+	},
+	"goiania": {
+		"kind": "city",
+		"population": 2022000,
+		"populationRank": 12,
+		"population1950": 53000,
+		"region": "Goiás",
+		"coastal": false,
+		"position": "centre"
+	},
+	"uberlandia": {
+		"kind": "city",
+		"population": 563536,
+		"populationRank": 37,
+		"region": "Minas Gerais",
+		"coastal": false,
+		"position": "centre"
+	},
+	"belo-horizonte": {
+		"kind": "city",
+		"population": 5575000,
+		"populationRank": 3,
+		"population1950": 412000,
+		"region": "Minas Gerais",
+		"coastal": false,
+		"position": "south"
+	},
+	"vitoria": {
+		"kind": "city",
+		"population": 1704000,
+		"populationRank": 15,
+		"population1950": 85000,
+		"region": "Espírito Santo",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"campo-grande": {
+		"kind": "city",
+		"population": 778000,
+		"populationRank": 30,
+		"population1950": 32000,
+		"region": "Mato Grosso do Sul",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"ribeirao-preto": {
+		"kind": "city",
+		"population": 551267,
+		"populationRank": 39,
+		"region": "São Paulo",
+		"coastal": false,
+		"position": "south"
+	},
+	"juiz-de-fora": {
+		"kind": "city",
+		"population": 470193,
+		"populationRank": 45,
+		"region": "Minas Gerais",
+		"coastal": false,
+		"position": "south"
+	},
+	"volta-redonda": {
+		"kind": "city",
+		"population": 456362,
+		"populationRank": 46,
+		"region": "Rio de Janeiro",
+		"coastal": false,
+		"position": "south"
+	},
+	"americana": {
+		"kind": "city",
+		"population": 479472,
+		"populationRank": 44,
+		"region": "São Paulo",
+		"coastal": false,
+		"position": "south"
+	},
+	"nova-iguacu": {
+		"kind": "city",
+		"population": 844583,
+		"populationRank": 27,
+		"region": "Rio de Janeiro",
+		"coastal": false,
+		"position": "south"
+	},
+	"duque-de-caxias": {
+		"kind": "city",
+		"population": 842890,
+		"populationRank": 28,
+		"region": "Rio de Janeiro",
+		"coastal": true,
+		"position": "south"
+	},
+	"niteroi": {
+		"kind": "city",
+		"population": 1500513,
+		"populationRank": 16,
+		"region": "Rio de Janeiro",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"rio-de-janeiro": {
+		"kind": "city",
+		"population": 11748000,
+		"populationRank": 2,
+		"population1950": 2950000,
+		"coastal": true,
+		"position": "south-east"
+	},
+	"campinas": {
+		"kind": "city",
+		"population": 2791000,
+		"populationRank": 10,
+		"population1950": 152000,
+		"region": "São Paulo",
+		"coastal": false,
+		"position": "south"
+	},
+	"sao-jose-dos-campos": {
+		"kind": "city",
+		"population": 753769,
+		"populationRank": 31,
+		"region": "São Paulo",
+		"coastal": false,
+		"position": "south"
+	},
+	"jundiai": {
+		"kind": "city",
+		"population": 505548,
+		"populationRank": 41,
+		"region": "São Paulo",
+		"coastal": false,
+		"position": "south"
+	},
+	"londrina": {
+		"kind": "city",
+		"population": 520238,
+		"populationRank": 40,
+		"region": "Paraná",
+		"coastal": false,
+		"position": "south"
+	},
+	"sorocaba": {
+		"kind": "city",
+		"population": 563281,
+		"populationRank": 38,
+		"region": "São Paulo",
+		"coastal": false,
+		"position": "south"
+	},
+	"sao-paulo": {
+		"kind": "city",
+		"population": 18845000,
+		"populationRank": 1,
+		"population1950": 2334000,
+		"coastal": false,
+		"position": "south"
+	},
+	"santo-andre": {
+		"kind": "city",
+		"population": 662373,
+		"populationRank": 35,
+		"region": "São Paulo",
+		"coastal": false,
+		"position": "south"
+	},
+	"santos": {
+		"kind": "city",
+		"population": 1709000,
+		"populationRank": 14,
+		"population1950": 246000,
+		"region": "São Paulo",
+		"coastal": true,
+		"position": "south"
+	},
+	"curitiba": {
+		"kind": "city",
+		"population": 3084000,
+		"populationRank": 9,
+		"population1950": 158000,
+		"region": "Paraná",
+		"coastal": false,
+		"position": "south"
+	},
+	"foz-do-iguacu": {
+		"kind": "city",
+		"population": 440455,
+		"populationRank": 47,
+		"region": "Paraná",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"sao-jose-dos-pinhais": {
+		"kind": "city",
+		"population": 665063,
+		"populationRank": 34,
+		"region": "Paraná",
+		"coastal": false,
+		"position": "south"
+	},
+	"joinville": {
+		"kind": "city",
+		"population": 988000,
+		"populationRank": 22,
+		"population1950": 64000,
+		"region": "Santa Catarina",
+		"coastal": true,
+		"position": "south"
+	},
+	"florianopolis": {
+		"kind": "city",
+		"population": 1023000,
+		"populationRank": 21,
+		"population1950": 68000,
+		"region": "Santa Catarina",
+		"coastal": true,
+		"position": "south"
+	},
+	"novo-hamburgo": {
+		"kind": "city",
+		"population": 876990,
+		"populationRank": 26,
+		"region": "Rio Grande do Sul",
+		"coastal": false,
+		"position": "south"
+	},
+	"canoas": {
+		"kind": "city",
+		"population": 600000,
+		"populationRank": 36,
+		"region": "Rio Grande do Sul",
+		"coastal": true,
+		"position": "south"
+	},
+	"porto-alegre": {
+		"kind": "city",
+		"population": 3917000,
+		"populationRank": 4,
+		"population1950": 488000,
+		"region": "Rio Grande do Sul",
+		"coastal": true,
+		"position": "south"
+	}
+}

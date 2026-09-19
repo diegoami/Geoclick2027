@@ -1,0 +1,1700 @@
+{
+	"arkhangelsk": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Вологодская область",
+		"borders": [
+			"Karelia",
+			"Kirov",
+			"Komi",
+			"Nenets",
+			"Vologda"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Archangel",
+			"nameDe": "Archangelsk",
+			"nameIt": "Arcangelo",
+			"population": 356051
+		},
+		"peak": {
+			"name": "Gora Sedova",
+			"elevation": 1549
+		},
+		"position": "north-west"
+	},
+	"nenets": {
+		"kind": "region",
+		"type": "Autonomous Province",
+		"localName": "Ненецкий АОк",
+		"borders": [
+			"Arkhangelsk",
+			"Komi",
+			"Yamal-Nenets"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Naryan Mar",
+			"nameDe": "Narjan-Mar",
+			"nameIt": "Nar'jan-Mar",
+			"population": 21658
+		},
+		"position": "west"
+	},
+	"murmansk": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Мурманская область",
+		"borders": [
+			"Karelia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Murmansk",
+			"nameDe": "Murmansk",
+			"nameIt": "Murmansk",
+			"population": 319263
+		},
+		"position": "west"
+	},
+	"yamal-nenets": {
+		"kind": "region",
+		"type": "Autonomous Province",
+		"localName": "Ямало-Ненецкий АОк",
+		"borders": [
+			"Khanty-Mansiy",
+			"Komi",
+			"Krasnoyarsk",
+			"Nenets"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Nakhodka",
+			"nameDe": "Nachodka",
+			"nameIt": "Nachodka",
+			"population": 159551
+		},
+		"position": "centre"
+	},
+	"chukotka": {
+		"kind": "region",
+		"borders": [
+			"Kamchatka",
+			"Magadan",
+			"Sakha (Yakutia)"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"krasnoyarsk": {
+		"kind": "region",
+		"type": "Territory",
+		"localName": "Красноярский край",
+		"borders": [
+			"Irkutsk",
+			"Kemerovo",
+			"Khakass",
+			"Khanty-Mansiy",
+			"Sakha (Yakutia)",
+			"Tomsk",
+			"Tuva",
+			"Yamal-Nenets"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Krasnoyarsk",
+			"nameDe": "Krasnojarsk",
+			"nameIt": "Krasnojarsk",
+			"population": 925000
+		},
+		"peak": {
+			"name": "Grandiozny Peak",
+			"elevation": 2891
+		},
+		"position": "centre"
+	},
+	"sakha-yakutia": {
+		"kind": "region",
+		"type": "Autonomous Province",
+		"localName": "Чукотский АОк",
+		"borders": [
+			"Amur",
+			"Chita",
+			"Chukotka",
+			"Irkutsk",
+			"Khabarovsk",
+			"Krasnoyarsk",
+			"Magadan"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Yakutsk",
+			"nameDe": "Jakutsk",
+			"nameIt": "Jakutsk",
+			"population": 235600
+		},
+		"peak": {
+			"name": "Gora Pobeda",
+			"elevation": 3003
+		},
+		"position": "east"
+	},
+	"komi": {
+		"kind": "region",
+		"type": "Republic",
+		"localName": "Республика Коми",
+		"borders": [
+			"Arkhangelsk",
+			"Khanty-Mansiy",
+			"Kirov",
+			"Nenets",
+			"Perm",
+			"Sverdlovsk",
+			"Yamal-Nenets"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Syktyvkar",
+			"nameDe": "Syktywkar",
+			"nameIt": "Syktyvkar",
+			"population": 230910
+		},
+		"position": "west"
+	},
+	"karelia": {
+		"kind": "region",
+		"type": "Republic",
+		"localName": "Республика Карелия",
+		"borders": [
+			"Arkhangelsk",
+			"Leningrad",
+			"Murmansk",
+			"Vologda"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Petrozavodsk",
+			"nameDe": "Petrosawodsk",
+			"nameIt": "Petrozavodsk",
+			"population": 265025
+		},
+		"position": "west"
+	},
+	"magadan": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Магаданская область",
+		"borders": [
+			"Chukotka",
+			"Kamchatka",
+			"Khabarovsk",
+			"Sakha (Yakutia)"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Magadan",
+			"nameDe": "Magadan",
+			"nameIt": "Magadan",
+			"population": 95282
+		},
+		"peak": {
+			"name": "Pik Aborigen",
+			"elevation": 2586
+		},
+		"position": "east"
+	},
+	"khanty-mansiy": {
+		"kind": "region",
+		"type": "Autonomous Province",
+		"localName": "Ханты-Мансийский АОк",
+		"borders": [
+			"Komi",
+			"Krasnoyarsk",
+			"Sverdlovsk",
+			"Tomsk",
+			"Tyumen",
+			"Yamal-Nenets"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Surgut",
+			"nameDe": "Surgut",
+			"nameIt": "Surgut",
+			"population": 400000
+		},
+		"peak": {
+			"name": "Gora Narodnaya",
+			"elevation": 1895
+		},
+		"position": "centre"
+	},
+	"vologda": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Вологодская область",
+		"borders": [
+			"Arkhangelsk",
+			"Karelia",
+			"Kirov",
+			"Kostroma",
+			"Leningrad",
+			"Novgorod",
+			"Tver",
+			"Yaroslavl"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Cherepovets",
+			"nameDe": "Tscherepowez",
+			"nameIt": "Čerepovec",
+			"population": 311850
+		},
+		"position": "west"
+	},
+	"city-of-st-petersburg": {
+		"kind": "region",
+		"type": "Federal City",
+		"localName": "Санкт-Петербург (горсовет)",
+		"borders": [
+			"Leningrad"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "St.  Petersburg",
+			"nameDe": "Sankt Petersburg",
+			"nameIt": "San Pietroburgo",
+			"population": 4553000
+		},
+		"position": "west"
+	},
+	"leningrad": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Ленинградская область",
+		"borders": [
+			"City of St. Petersburg",
+			"Karelia",
+			"Novgorod",
+			"Pskov",
+			"Vologda"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Vyborg",
+			"nameDe": "Wyborg",
+			"nameIt": "Vyborg",
+			"population": 117201
+		},
+		"position": "west"
+	},
+	"sverdlovsk": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Свердловская область",
+		"borders": [
+			"Bashkortostan",
+			"Chelyabinsk",
+			"Khanty-Mansiy",
+			"Komi",
+			"Kurgan",
+			"Perm",
+			"Tyumen"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Yekaterinburg",
+			"nameDe": "Jekaterinburg",
+			"nameIt": "Ekaterinburg",
+			"population": 1313000
+		},
+		"peak": {
+			"name": "Gora Konzhakovskiy Kamen",
+			"elevation": 1569
+		},
+		"position": "west"
+	},
+	"perm": {
+		"kind": "region",
+		"type": "Territory",
+		"localName": "Пермская область",
+		"borders": [
+			"Bashkortostan",
+			"Kirov",
+			"Komi",
+			"Sverdlovsk",
+			"Udmurt"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Perm",
+			"nameDe": "Perm",
+			"nameIt": "Perm'",
+			"population": 997000
+		},
+		"position": "west"
+	},
+	"kirov": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Кировская область",
+		"borders": [
+			"Arkhangelsk",
+			"Komi",
+			"Kostroma",
+			"Mariy-El",
+			"Nizhegorod",
+			"Perm",
+			"Tatarstan",
+			"Udmurt",
+			"Vologda"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kirov",
+			"nameDe": "Kirow",
+			"nameIt": "Kirov",
+			"population": 457437
+		},
+		"position": "west"
+	},
+	"kostroma": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Костромская область",
+		"borders": [
+			"Ivanovo",
+			"Kirov",
+			"Nizhegorod",
+			"Vologda",
+			"Yaroslavl"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kostroma",
+			"nameDe": "Kostroma",
+			"nameIt": "Kostroma",
+			"population": 277656
+		},
+		"position": "west"
+	},
+	"tomsk": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Томская область",
+		"borders": [
+			"Kemerovo",
+			"Khanty-Mansiy",
+			"Krasnoyarsk",
+			"Novosibirsk",
+			"Omsk",
+			"Tyumen"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tomsk",
+			"nameDe": "Tomsk",
+			"nameIt": "Tomsk",
+			"population": 535479
+		},
+		"position": "centre"
+	},
+	"novgorod": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Новгородская область",
+		"borders": [
+			"Leningrad",
+			"Pskov",
+			"Tver",
+			"Vologda"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Velikiy Novgorod",
+			"nameDe": "Weliki Nowgorod",
+			"nameIt": "Velikij Novgorod",
+			"population": 218717
+		},
+		"position": "west"
+	},
+	"kamchatka": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Chukotka",
+			"Magadan"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Petropavlovsk-Kamchatsky",
+			"nameDe": "Petropawlowsk-Kamtschatski",
+			"nameIt": "Petropavlovsk-Kamčatskij",
+			"population": 187282
+		},
+		"peak": {
+			"name": "Klyuchevskaya Sopka",
+			"elevation": 4750
+		},
+		"position": "east"
+	},
+	"yaroslavl": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Ярославская область",
+		"borders": [
+			"Ivanovo",
+			"Kostroma",
+			"Moskovskaya",
+			"Tver",
+			"Vladimir",
+			"Vologda"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Yaroslavl",
+			"nameDe": "Jaroslawl",
+			"nameIt": "Jaroslavl'",
+			"population": 606730
+		},
+		"position": "west"
+	},
+	"irkutsk": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Иркутская область",
+		"borders": [
+			"Buryat",
+			"Chita",
+			"Krasnoyarsk",
+			"Sakha (Yakutia)",
+			"Tuva"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Irkutsk",
+			"nameDe": "Irkutsk",
+			"nameIt": "Irkutsk",
+			"population": 586695
+		},
+		"peak": {
+			"name": "Gora Korolenko",
+			"elevation": 1647
+		},
+		"position": "centre"
+	},
+	"tyumen": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Тюменская область",
+		"borders": [
+			"Khanty-Mansiy",
+			"Kurgan",
+			"Omsk",
+			"Sverdlovsk",
+			"Tomsk"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tyumen",
+			"nameDe": "Tjumen",
+			"nameIt": "Tjumen'",
+			"population": 519119
+		},
+		"position": "west"
+	},
+	"pskov": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Псковская область",
+		"borders": [
+			"Leningrad",
+			"Novgorod",
+			"Smolensk",
+			"Tver"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Pskov",
+			"nameDe": "Pskow",
+			"nameIt": "Pskov",
+			"population": 201990
+		},
+		"position": "west"
+	},
+	"tver": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Тверская область",
+		"borders": [
+			"Moskovskaya",
+			"Novgorod",
+			"Pskov",
+			"Smolensk",
+			"Vladimir",
+			"Vologda",
+			"Yaroslavl"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tver",
+			"nameDe": "Twer",
+			"nameIt": "Tver'",
+			"population": 400212
+		},
+		"position": "west"
+	},
+	"udmurt": {
+		"kind": "region",
+		"type": "Republic",
+		"localName": "Удмуртская Республика",
+		"borders": [
+			"Bashkortostan",
+			"Kirov",
+			"Perm",
+			"Tatarstan"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Izhevsk",
+			"nameDe": "Ischewsk",
+			"nameIt": "Iževsk",
+			"population": 631038
+		},
+		"position": "west"
+	},
+	"ivanovo": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Ивановская область",
+		"borders": [
+			"Kostroma",
+			"Nizhegorod",
+			"Vladimir",
+			"Yaroslavl"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ivanovo",
+			"nameDe": "Iwanowo",
+			"nameIt": "Ivanovo",
+			"population": 420839
+		},
+		"position": "west"
+	},
+	"mariy-el": {
+		"kind": "region",
+		"type": "Republic",
+		"localName": "Республика Марий Эл",
+		"borders": [
+			"Chuvash",
+			"Kirov",
+			"Nizhegorod",
+			"Tatarstan"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Yoshkar Ola",
+			"nameDe": "Joschkar-Ola",
+			"nameIt": "Joškar-Ola",
+			"population": 324406
+		},
+		"position": "west"
+	},
+	"nizhegorod": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Нижегородская область",
+		"borders": [
+			"Chuvash",
+			"Ivanovo",
+			"Kirov",
+			"Kostroma",
+			"Mariy-El",
+			"Mordovia",
+			"Ryazan",
+			"Vladimir"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Nizhny Novgorod",
+			"nameDe": "Nischni Nowgorod",
+			"nameIt": "Nižnij Novgorod",
+			"population": 1278000
+		},
+		"position": "west"
+	},
+	"omsk": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Омская область",
+		"borders": [
+			"Novosibirsk",
+			"Tomsk",
+			"Tyumen"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Omsk",
+			"nameDe": "Omsk",
+			"nameIt": "Omsk",
+			"population": 1135000
+		},
+		"position": "centre"
+	},
+	"vladimir": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Владимирская область",
+		"borders": [
+			"Ivanovo",
+			"Moskovskaya",
+			"Nizhegorod",
+			"Ryazan",
+			"Tver",
+			"Yaroslavl"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Vladimir",
+			"nameDe": "Wladimir",
+			"nameIt": "Vladimir",
+			"population": 318648
+		},
+		"position": "west"
+	},
+	"moskovskaya": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Московская область",
+		"borders": [
+			"Kaluga",
+			"Moskva",
+			"Ryazan",
+			"Smolensk",
+			"Tula",
+			"Tver",
+			"Vladimir",
+			"Yaroslavl"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Noginsk",
+			"nameDe": "Noginsk",
+			"nameIt": "Noginsk",
+			"population": 229731
+		},
+		"position": "west"
+	},
+	"kurgan": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Курганская область",
+		"borders": [
+			"Chelyabinsk",
+			"Sverdlovsk",
+			"Tyumen"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kurgan",
+			"nameDe": "Kurgan",
+			"nameIt": "Kurgan",
+			"population": 343129
+		},
+		"position": "west"
+	},
+	"chuvash": {
+		"kind": "region",
+		"type": "Republic",
+		"localName": "Чувашская Республика",
+		"borders": [
+			"Mariy-El",
+			"Mordovia",
+			"Nizhegorod",
+			"Tatarstan",
+			"Ulyanovsk"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Cheboksary",
+			"nameDe": "Tscheboksary",
+			"nameIt": "Čeboksary",
+			"population": 446781
+		},
+		"position": "west"
+	},
+	"moskva": {
+		"kind": "region",
+		"type": "Federal City",
+		"localName": "Московская область",
+		"borders": [
+			"Kaluga",
+			"Moskovskaya"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Moscow",
+			"nameDe": "Moskau",
+			"nameIt": "Mosca",
+			"population": 10452000
+		},
+		"peak": {
+			"name": "Lenina",
+			"elevation": 150
+		},
+		"position": "west"
+	},
+	"tatarstan": {
+		"kind": "region",
+		"type": "Republic",
+		"localName": "Республика Татарстан",
+		"borders": [
+			"Bashkortostan",
+			"Chuvash",
+			"Kirov",
+			"Mariy-El",
+			"Orenburg",
+			"Samara",
+			"Udmurt",
+			"Ulyanovsk"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kazan",
+			"nameDe": "Kasan",
+			"nameIt": "Kazan’",
+			"population": 1115000
+		},
+		"position": "west"
+	},
+	"novosibirsk": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Новосибирская область",
+		"borders": [
+			"Altay",
+			"Kemerovo",
+			"Omsk",
+			"Tomsk"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Novosibirsk",
+			"nameDe": "Nowosibirsk",
+			"nameIt": "Novosibirsk",
+			"population": 1389000
+		},
+		"position": "centre"
+	},
+	"kaliningrad": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Калининградская область",
+		"coastal": true,
+		"largestCity": {
+			"name": "Kaliningrad",
+			"nameDe": "Kaliningrad",
+			"nameIt": "Kaliningrad",
+			"population": 434954
+		},
+		"position": "west"
+	},
+	"smolensk": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Смоленская область",
+		"borders": [
+			"Bryansk",
+			"Kaluga",
+			"Moskovskaya",
+			"Pskov",
+			"Tver"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Smolensk",
+			"nameDe": "Smolensk",
+			"nameIt": "Smolensk",
+			"population": 320991
+		},
+		"position": "west"
+	},
+	"khabarovsk": {
+		"kind": "region",
+		"type": "Territory",
+		"localName": "Хабаровский край",
+		"borders": [
+			"Amur",
+			"Magadan",
+			"Primorye",
+			"Sakha (Yakutia)",
+			"Sakhalin",
+			"Yevrey"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Khabarovsk",
+			"nameDe": "Chabarowsk",
+			"nameIt": "Chabarovsk",
+			"population": 579000
+		},
+		"peak": {
+			"name": "Gora Golets-Oblachnyy",
+			"elevation": 2482
+		},
+		"position": "south-east"
+	},
+	"kemerovo": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Кемеровская область",
+		"borders": [
+			"Altay",
+			"Gorno-Altay",
+			"Khakass",
+			"Krasnoyarsk",
+			"Novosibirsk",
+			"Tomsk"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Novokuznetsk",
+			"nameDe": "Nowokusnezk",
+			"nameIt": "Novokuzneck",
+			"population": 539616
+		},
+		"position": "south"
+	},
+	"mordovia": {
+		"kind": "region",
+		"type": "Republic",
+		"localName": "Республика Мордовия",
+		"borders": [
+			"Chuvash",
+			"Nizhegorod",
+			"Penza",
+			"Ryazan",
+			"Ulyanovsk"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Saransk",
+			"nameDe": "Saransk",
+			"nameIt": "Saransk",
+			"population": 303394
+		},
+		"position": "south-west"
+	},
+	"ryazan": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Рязанская область",
+		"borders": [
+			"Lipetsk",
+			"Mordovia",
+			"Moskovskaya",
+			"Nizhegorod",
+			"Penza",
+			"Tambov",
+			"Tula",
+			"Vladimir"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ryazan",
+			"nameDe": "Rjasan",
+			"nameIt": "Rjazan'",
+			"population": 520173
+		},
+		"position": "south-west"
+	},
+	"kaluga": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Калужская область",
+		"borders": [
+			"Bryansk",
+			"Moskovskaya",
+			"Moskva",
+			"Orel",
+			"Smolensk",
+			"Tula"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kaluga",
+			"nameDe": "Kaluga",
+			"nameIt": "Kaluga",
+			"population": 338978
+		},
+		"position": "south-west"
+	},
+	"chelyabinsk": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Челябинская область",
+		"borders": [
+			"Bashkortostan",
+			"Kurgan",
+			"Orenburg",
+			"Sverdlovsk"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Chelyabinsk",
+			"nameDe": "Tscheljabinsk",
+			"nameIt": "Čeljabinsk",
+			"population": 1091000
+		},
+		"position": "south-west"
+	},
+	"bashkortostan": {
+		"kind": "region",
+		"type": "Republic",
+		"localName": "Республика Башкортостан",
+		"borders": [
+			"Chelyabinsk",
+			"Orenburg",
+			"Perm",
+			"Sverdlovsk",
+			"Tatarstan",
+			"Udmurt"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ufa",
+			"nameDe": "Ufa",
+			"nameIt": "Ufa",
+			"population": 1018000
+		},
+		"peak": {
+			"name": "Gora Yamantau",
+			"elevation": 1638
+		},
+		"position": "south-west"
+	},
+	"tula": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Тульская область",
+		"borders": [
+			"Kaluga",
+			"Lipetsk",
+			"Moskovskaya",
+			"Orel",
+			"Ryazan"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tula",
+			"nameDe": "Tula",
+			"nameIt": "Tula",
+			"population": 489486
+		},
+		"position": "south-west"
+	},
+	"chita": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Читинская область",
+		"borders": [
+			"Amur",
+			"Buryat",
+			"Irkutsk",
+			"Sakha (Yakutia)"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Chita",
+			"nameDe": "Tschita",
+			"nameIt": "Čita",
+			"population": 308500
+		},
+		"peak": {
+			"name": "Pik BAM",
+			"elevation": 3072
+		},
+		"position": "south"
+	},
+	"ulyanovsk": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Ульяновская область",
+		"borders": [
+			"Chuvash",
+			"Mordovia",
+			"Penza",
+			"Samara",
+			"Saratov",
+			"Tatarstan"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ulyanovsk",
+			"nameDe": "Uljanowsk",
+			"nameIt": "Ul'janovsk",
+			"population": 640680
+		},
+		"position": "south-west"
+	},
+	"buryat": {
+		"kind": "region",
+		"type": "Republic",
+		"localName": "Республика Бурятия",
+		"borders": [
+			"Chita",
+			"Irkutsk",
+			"Tuva"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ulan-Ude",
+			"nameDe": "Ulan-Ude",
+			"nameIt": "Ulan-Udė",
+			"population": 360278
+		},
+		"peak": {
+			"name": "Gora Munku-Sardyk",
+			"elevation": 3491
+		},
+		"position": "south"
+	},
+	"khakass": {
+		"kind": "region",
+		"type": "Republic",
+		"localName": "Республика Хакасия",
+		"borders": [
+			"Gorno-Altay",
+			"Kemerovo",
+			"Krasnoyarsk",
+			"Tuva"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Chernogorsk",
+			"nameDe": "Tschernogorsk",
+			"nameIt": "Černogorsk",
+			"population": 71582
+		},
+		"position": "south"
+	},
+	"samara": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Самарская область",
+		"borders": [
+			"Orenburg",
+			"Saratov",
+			"Tatarstan",
+			"Ulyanovsk"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Samara",
+			"nameDe": "Samara",
+			"nameIt": "Samara",
+			"population": 1137000
+		},
+		"position": "south-west"
+	},
+	"penza": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Пензенская область",
+		"borders": [
+			"Mordovia",
+			"Ryazan",
+			"Saratov",
+			"Tambov",
+			"Ulyanovsk"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Penza",
+			"nameDe": "Pensa",
+			"nameIt": "Penza",
+			"population": 512602
+		},
+		"position": "south-west"
+	},
+	"amur": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Амурская область",
+		"borders": [
+			"Chita",
+			"Khabarovsk",
+			"Sakha (Yakutia)",
+			"Yevrey"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Blagoveshchensk",
+			"nameDe": "Blagoweschtschensk",
+			"nameIt": "Blagoveščensk",
+			"population": 221296
+		},
+		"position": "south-east"
+	},
+	"bryansk": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Брянская область",
+		"borders": [
+			"Kaluga",
+			"Kursk",
+			"Orel",
+			"Smolensk"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bryansk",
+			"nameDe": "Brjansk",
+			"nameIt": "Brjansk",
+			"population": 427236
+		},
+		"position": "south-west"
+	},
+	"orel": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Орловская область",
+		"borders": [
+			"Bryansk",
+			"Kaluga",
+			"Kursk",
+			"Lipetsk",
+			"Tula"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Orel",
+			"nameDe": "Orjol",
+			"nameIt": "Orël",
+			"population": 334552
+		},
+		"position": "south-west"
+	},
+	"lipetsk": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Липецкая область",
+		"borders": [
+			"Kursk",
+			"Orel",
+			"Ryazan",
+			"Tambov",
+			"Tula",
+			"Voronezh"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Lipetsk",
+			"nameDe": "Lipezk",
+			"nameIt": "Lipeck",
+			"population": 515655
+		},
+		"position": "south-west"
+	},
+	"tambov": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Тамбовская область",
+		"borders": [
+			"Lipetsk",
+			"Penza",
+			"Ryazan",
+			"Saratov",
+			"Voronezh"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tambov",
+			"nameDe": "Tambow",
+			"nameIt": "Tambov",
+			"population": 301482
+		},
+		"position": "south-west"
+	},
+	"altay": {
+		"kind": "region",
+		"type": "Territory",
+		"localName": "Алтайский край",
+		"borders": [
+			"Gorno-Altay",
+			"Kemerovo",
+			"Novosibirsk"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Barnaul",
+			"nameDe": "Barnaul",
+			"nameIt": "Barnaul",
+			"population": 599579
+		},
+		"position": "south"
+	},
+	"orenburg": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Оренбургская область",
+		"borders": [
+			"Bashkortostan",
+			"Chelyabinsk",
+			"Samara",
+			"Saratov",
+			"Tatarstan"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Orenburg",
+			"nameDe": "Orenburg",
+			"nameIt": "Orenburg",
+			"population": 550204
+		},
+		"position": "south-west"
+	},
+	"tuva": {
+		"kind": "region",
+		"type": "Republic",
+		"localName": "Республика Тыва",
+		"borders": [
+			"Buryat",
+			"Gorno-Altay",
+			"Irkutsk",
+			"Khakass",
+			"Krasnoyarsk"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kyzyl",
+			"nameDe": "Kysyl",
+			"nameIt": "Kyzyl",
+			"population": 108240
+		},
+		"position": "south"
+	},
+	"kursk": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Курская область",
+		"borders": [
+			"Belgorod",
+			"Bryansk",
+			"Lipetsk",
+			"Orel",
+			"Voronezh"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kursk",
+			"nameDe": "Kursk",
+			"nameIt": "Kursk",
+			"population": 409431
+		},
+		"position": "south-west"
+	},
+	"saratov": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Саратовская область",
+		"borders": [
+			"Orenburg",
+			"Penza",
+			"Samara",
+			"Tambov",
+			"Ulyanovsk",
+			"Volgograd",
+			"Voronezh"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Saratov",
+			"nameDe": "Saratow",
+			"nameIt": "Saratov",
+			"population": 843000
+		},
+		"position": "south-west"
+	},
+	"gorno-altay": {
+		"kind": "region",
+		"type": "Republic",
+		"localName": "Республика Алтай",
+		"borders": [
+			"Altay",
+			"Kemerovo",
+			"Khakass",
+			"Tuva"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Gorno Altaysk",
+			"nameDe": "Gorno-Altaisk",
+			"nameIt": "Gorno-Altajsk",
+			"population": 59868
+		},
+		"peak": {
+			"name": "Belukha",
+			"elevation": 4506
+		},
+		"position": "south"
+	},
+	"voronezh": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Воронежская область",
+		"borders": [
+			"Belgorod",
+			"Kursk",
+			"Lipetsk",
+			"Rostov",
+			"Saratov",
+			"Tambov",
+			"Volgograd"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Voronezh",
+			"nameDe": "Woronesch",
+			"nameIt": "Voronež",
+			"population": 844000
+		},
+		"position": "south-west"
+	},
+	"belgorod": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Белгородская область",
+		"borders": [
+			"Kursk",
+			"Voronezh"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Belgorod",
+			"nameDe": "Belgorod",
+			"nameIt": "Belgorod",
+			"population": 345289
+		},
+		"position": "south-west"
+	},
+	"volgograd": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Волгоградская область",
+		"borders": [
+			"Astrakhan",
+			"Kalmyk",
+			"Rostov",
+			"Saratov",
+			"Voronezh"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Volgograd",
+			"nameDe": "Wolgograd",
+			"nameIt": "Volgograd",
+			"population": 984000
+		},
+		"position": "south-west"
+	},
+	"sakhalin": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Сахалинская область",
+		"borders": [
+			"Khabarovsk"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Yuzhno Sakhalinsk",
+			"nameDe": "Juschno-Sachalinsk",
+			"nameIt": "Južno-Sachalinsk",
+			"population": 176484
+		},
+		"peak": {
+			"name": "Vulkan Alaid",
+			"elevation": 2339
+		},
+		"position": "south-east"
+	},
+	"yevrey": {
+		"kind": "region",
+		"type": "Autonomous Region",
+		"localName": "Eврейская АОб",
+		"borders": [
+			"Amur",
+			"Khabarovsk"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Birobidzhan",
+			"nameDe": "Birobidschan",
+			"nameIt": "Birobidžan",
+			"population": 76146
+		},
+		"position": "south-east"
+	},
+	"rostov": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Ростовская область",
+		"borders": [
+			"Kalmyk",
+			"Krasnodar",
+			"Stavropol",
+			"Volgograd",
+			"Voronezh"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Rostov",
+			"nameDe": "Rostow am Don",
+			"nameIt": "Rostov sul Don",
+			"population": 1052000
+		},
+		"position": "south-west"
+	},
+	"astrakhan": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Астраханская область",
+		"borders": [
+			"Kalmyk",
+			"Volgograd"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Astrakhan",
+			"nameDe": "Astrachan",
+			"nameIt": "Astrachan'",
+			"population": 502533
+		},
+		"position": "south-west"
+	},
+	"kalmyk": {
+		"kind": "region",
+		"type": "Republic",
+		"localName": "Республика Калмыкия",
+		"borders": [
+			"Astrakhan",
+			"Dagestan",
+			"Rostov",
+			"Stavropol",
+			"Volgograd"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Elista",
+			"nameDe": "Elista",
+			"nameIt": "Ėlista",
+			"population": 106971
+		},
+		"position": "south-west"
+	},
+	"primorye": {
+		"kind": "region",
+		"type": "Territory",
+		"localName": "Приморский край",
+		"borders": [
+			"Khabarovsk"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Vladivostok",
+			"nameDe": "Wladiwostok",
+			"nameIt": "Vladivostok",
+			"population": 587022
+		},
+		"position": "south-east"
+	},
+	"krasnodar": {
+		"kind": "region",
+		"type": "Territory",
+		"localName": "Краснодарский край",
+		"borders": [
+			"Adygey",
+			"Karachay-Cherkess",
+			"Rostov",
+			"Stavropol"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Krasnodar",
+			"nameDe": "Krasnodar",
+			"nameIt": "Krasnodar",
+			"population": 649851
+		},
+		"position": "south-west"
+	},
+	"stavropol": {
+		"kind": "region",
+		"type": "Territory",
+		"localName": "Ставропольский край",
+		"borders": [
+			"Chechnya",
+			"Dagestan",
+			"Ingush",
+			"Kabardin-Balkar",
+			"Kalmyk",
+			"Karachay-Cherkess",
+			"Krasnodar",
+			"North Ossetia",
+			"Rostov"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Stavropol",
+			"nameDe": "Stawropol",
+			"nameIt": "Stavropol'",
+			"population": 363064
+		},
+		"position": "south-west"
+	},
+	"adygey": {
+		"kind": "region",
+		"type": "Republic",
+		"localName": "Республика Адыгея",
+		"borders": [
+			"Karachay-Cherkess",
+			"Krasnodar"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Maykop",
+			"nameDe": "Maikop",
+			"nameIt": "Majkop",
+			"population": 158451
+		},
+		"position": "south-west"
+	},
+	"karachay-cherkess": {
+		"kind": "region",
+		"type": "Republic",
+		"localName": "Карачаево-Черкессия Республика",
+		"borders": [
+			"Adygey",
+			"Kabardin-Balkar",
+			"Krasnodar",
+			"Stavropol"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Cherkessk",
+			"nameDe": "Tscherkessk",
+			"nameIt": "Čerkessk",
+			"population": 116224
+		},
+		"peak": {
+			"name": "Dombai-Ulgen",
+			"elevation": 4038
+		},
+		"position": "south-west"
+	},
+	"kabardin-balkar": {
+		"kind": "region",
+		"type": "Republic",
+		"localName": "Кабардино-Балкарская Республика",
+		"borders": [
+			"Ingush",
+			"Karachay-Cherkess",
+			"North Ossetia",
+			"Stavropol"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Nalchik",
+			"nameDe": "Naltschik",
+			"nameIt": "Nal'čik",
+			"population": 307866
+		},
+		"peak": {
+			"name": "Gora Elbrus",
+			"elevation": 5642
+		},
+		"position": "south-west"
+	},
+	"chechnya": {
+		"kind": "region",
+		"type": "Republic",
+		"localName": "Республика Чечено-Ингушская",
+		"borders": [
+			"Dagestan",
+			"Ingush",
+			"North Ossetia",
+			"Stavropol"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Grozny",
+			"nameDe": "Grosny",
+			"nameIt": "Groznyj",
+			"population": 226100
+		},
+		"peak": {
+			"name": "Gora Tebulosmta",
+			"elevation": 4494
+		},
+		"position": "south-west"
+	},
+	"north-ossetia": {
+		"kind": "region",
+		"type": "Republic",
+		"localName": "Республика Северная Осетия-Алания",
+		"borders": [
+			"Chechnya",
+			"Ingush",
+			"Kabardin-Balkar",
+			"Stavropol"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Vladikavkaz",
+			"nameDe": "Wladikawkas",
+			"nameIt": "Vladikavkaz",
+			"population": 364630
+		},
+		"position": "south-west"
+	},
+	"ingush": {
+		"kind": "region",
+		"type": "Republic",
+		"localName": "Респу́блика Ингуше́тия",
+		"borders": [
+			"Chechnya",
+			"Kabardin-Balkar",
+			"North Ossetia",
+			"Stavropol"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Nazran",
+			"nameDe": "Nasran",
+			"nameIt": "Nazran'",
+			"population": 93357
+		},
+		"position": "south-west"
+	},
+	"dagestan": {
+		"kind": "region",
+		"type": "Republic",
+		"localName": "Республика Дагестан",
+		"borders": [
+			"Chechnya",
+			"Kalmyk",
+			"Stavropol"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Makhachkala",
+			"nameDe": "Machatschkala",
+			"nameIt": "Machačkala",
+			"population": 554981
+		},
+		"peak": {
+			"name": "Bazar Dyuzi",
+			"elevation": 4466
+		},
+		"position": "south-west"
+	}
+}

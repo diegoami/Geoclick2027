@@ -1,0 +1,160 @@
+{
+	"northern-territory": {
+		"kind": "region",
+		"type": "Territory",
+		"borders": [
+			"Queensland",
+			"South Australia",
+			"Western Australia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Darwin",
+			"nameDe": "Darwin",
+			"nameIt": "Darwin",
+			"population": 93080
+		},
+		"peak": {
+			"name": "Mount Zeil",
+			"elevation": 1531
+		},
+		"position": "north"
+	},
+	"queensland": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"New South Wales",
+			"Northern Territory",
+			"South Australia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Brisbane",
+			"nameDe": "Brisbane",
+			"nameIt": "Brisbane",
+			"population": 1860000
+		},
+		"peak": {
+			"name": "Mount Bartle Frere",
+			"elevation": 1622
+		},
+		"position": "north-east"
+	},
+	"western-australia": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Northern Territory",
+			"South Australia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Perth",
+			"nameDe": "Perth",
+			"nameIt": "Perth",
+			"population": 1532000
+		},
+		"peak": {
+			"name": "Mount Meharry",
+			"elevation": 1253
+		},
+		"position": "west"
+	},
+	"south-australia": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"New South Wales",
+			"Northern Territory",
+			"Queensland",
+			"Victoria",
+			"Western Australia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Adelaide",
+			"nameDe": "Adelaide",
+			"nameIt": "Adelaide",
+			"population": 1145000
+		},
+		"peak": {
+			"name": "Saint Mary Peak",
+			"elevation": 1171
+		},
+		"position": "centre"
+	},
+	"new-south-wales": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Australian Capital Territory",
+			"Queensland",
+			"South Australia",
+			"Victoria"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Sydney",
+			"nameDe": "Sydney",
+			"nameIt": "Sydney",
+			"population": 4630000
+		},
+		"peak": {
+			"name": "Mount Kosciuszko",
+			"elevation": 2228
+		},
+		"position": "south-east"
+	},
+	"australian-capital-territory": {
+		"kind": "region",
+		"type": "Territory",
+		"borders": [
+			"New South Wales"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Canberra",
+			"nameDe": "Canberra",
+			"nameIt": "Canberra",
+			"population": 327700
+		},
+		"position": "south-east"
+	},
+	"victoria": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"New South Wales",
+			"South Australia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Melbourne",
+			"nameDe": "Melbourne",
+			"nameIt": "Melbourne",
+			"population": 4170000
+		},
+		"peak": {
+			"name": "Mount Bogong",
+			"elevation": 1986
+		},
+		"position": "south-east"
+	},
+	"tasmania": {
+		"kind": "region",
+		"type": "State",
+		"coastal": true,
+		"largestCity": {
+			"name": "Hobart",
+			"nameDe": "Hobart",
+			"nameIt": "Hobart",
+			"population": 80870
+		},
+		"peak": {
+			"name": "Mount Ossa",
+			"elevation": 1617
+		},
+		"position": "south-east"
+	}
+}

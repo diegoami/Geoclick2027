@@ -1,0 +1,396 @@
+{
+	"surgut": {
+		"kind": "city",
+		"population": 400000,
+		"populationRank": 46,
+		"region": "Khanty-Mansiy",
+		"coastal": false,
+		"position": "north"
+	},
+	"saint-petersburg": {
+		"kind": "city",
+		"population": 4553000,
+		"populationRank": 2,
+		"population1950": 2903000,
+		"region": "City of St. Petersburg",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"kirov": {
+		"kind": "city",
+		"population": 457437,
+		"populationRank": 38,
+		"coastal": false,
+		"position": "north-west"
+	},
+	"perm": {
+		"kind": "city",
+		"population": 997000,
+		"populationRank": 12,
+		"population1950": 498000,
+		"region": "Perm'",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"nizhny-tagil": {
+		"kind": "city",
+		"population": 381116,
+		"populationRank": 47,
+		"region": "Sverdlovsk",
+		"coastal": false,
+		"position": "north"
+	},
+	"yaroslavl": {
+		"kind": "city",
+		"population": 606730,
+		"populationRank": 21,
+		"region": "Yaroslavl'",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"tyumen": {
+		"kind": "city",
+		"population": 519119,
+		"populationRank": 31,
+		"region": "Tyumen'",
+		"coastal": false,
+		"position": "north"
+	},
+	"ivanovo": {
+		"kind": "city",
+		"population": 420839,
+		"populationRank": 42,
+		"coastal": false,
+		"position": "north-west"
+	},
+	"tver": {
+		"kind": "city",
+		"population": 400212,
+		"populationRank": 45,
+		"region": "Tver'",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"yekaterinburg": {
+		"kind": "city",
+		"population": 1313000,
+		"populationRank": 4,
+		"population1950": 628000,
+		"region": "Sverdlovsk",
+		"coastal": false,
+		"position": "north"
+	},
+	"izhevsk": {
+		"kind": "city",
+		"population": 631038,
+		"populationRank": 20,
+		"region": "Udmurt",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"tomsk": {
+		"kind": "city",
+		"population": 535479,
+		"populationRank": 29,
+		"coastal": false,
+		"position": "north"
+	},
+	"nizhny-novgorod": {
+		"kind": "city",
+		"population": 1278000,
+		"populationRank": 5,
+		"population1950": 796000,
+		"region": "Nizhegorod",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"cheboksary": {
+		"kind": "city",
+		"population": 446781,
+		"populationRank": 39,
+		"region": "Chuvash",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"krasnoyarsk": {
+		"kind": "city",
+		"population": 925000,
+		"populationRank": 14,
+		"population1950": 290000,
+		"coastal": false,
+		"position": "north"
+	},
+	"moscow": {
+		"kind": "city",
+		"population": 10452000,
+		"populationRank": 1,
+		"population1950": 5356000,
+		"region": "Moskva",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"kazan": {
+		"kind": "city",
+		"population": 1115000,
+		"populationRank": 8,
+		"population1950": 514000,
+		"region": "Tatarstan",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"naberezhnyye-chelny": {
+		"kind": "city",
+		"population": 461086,
+		"populationRank": 37,
+		"region": "Tatarstan",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"kemerovo": {
+		"kind": "city",
+		"population": 477090,
+		"populationRank": 36,
+		"coastal": false,
+		"position": "north"
+	},
+	"chelyabinsk": {
+		"kind": "city",
+		"population": 1091000,
+		"populationRank": 9,
+		"population1950": 573000,
+		"coastal": false,
+		"position": "centre"
+	},
+	"novosibirsk": {
+		"kind": "city",
+		"population": 1389000,
+		"populationRank": 3,
+		"population1950": 719000,
+		"coastal": false,
+		"position": "centre"
+	},
+	"omsk": {
+		"kind": "city",
+		"population": 1135000,
+		"populationRank": 7,
+		"population1950": 444000,
+		"coastal": false,
+		"position": "centre"
+	},
+	"ufa": {
+		"kind": "city",
+		"population": 1018000,
+		"populationRank": 11,
+		"population1950": 418000,
+		"region": "Bashkortostan",
+		"coastal": false,
+		"position": "west"
+	},
+	"kaliningrad": {
+		"kind": "city",
+		"population": 434954,
+		"populationRank": 40,
+		"coastal": false,
+		"position": "west"
+	},
+	"ryazan": {
+		"kind": "city",
+		"population": 520173,
+		"populationRank": 30,
+		"region": "Ryazan'",
+		"coastal": false,
+		"position": "west"
+	},
+	"ulyanovsk": {
+		"kind": "city",
+		"population": 640680,
+		"populationRank": 19,
+		"region": "Ul'yanovsk",
+		"coastal": false,
+		"position": "west"
+	},
+	"tula": {
+		"kind": "city",
+		"population": 489486,
+		"populationRank": 35,
+		"coastal": false,
+		"position": "west"
+	},
+	"novokuznetsk": {
+		"kind": "city",
+		"population": 539616,
+		"populationRank": 28,
+		"region": "Kemerovo",
+		"coastal": false,
+		"position": "centre"
+	},
+	"tolyatti": {
+		"kind": "city",
+		"population": 702879,
+		"populationRank": 17,
+		"region": "Samara",
+		"coastal": false,
+		"position": "west"
+	},
+	"magnitogorsk": {
+		"kind": "city",
+		"population": 413351,
+		"populationRank": 43,
+		"region": "Chelyabinsk",
+		"coastal": false,
+		"position": "centre"
+	},
+	"barnaul": {
+		"kind": "city",
+		"population": 599579,
+		"populationRank": 22,
+		"region": "Altay",
+		"coastal": false,
+		"position": "centre"
+	},
+	"bryansk": {
+		"kind": "city",
+		"population": 427236,
+		"populationRank": 41,
+		"coastal": false,
+		"position": "west"
+	},
+	"samara": {
+		"kind": "city",
+		"population": 1137000,
+		"populationRank": 6,
+		"population1950": 658000,
+		"coastal": false,
+		"position": "west"
+	},
+	"penza": {
+		"kind": "city",
+		"population": 512602,
+		"populationRank": 33,
+		"coastal": false,
+		"position": "west"
+	},
+	"lipetsk": {
+		"kind": "city",
+		"population": 515655,
+		"populationRank": 32,
+		"coastal": false,
+		"position": "west"
+	},
+	"irkutsk": {
+		"kind": "city",
+		"population": 586695,
+		"populationRank": 24,
+		"coastal": false,
+		"position": "east"
+	},
+	"ulan-ude": {
+		"kind": "city",
+		"population": 360278,
+		"populationRank": 50,
+		"region": "Buryat",
+		"coastal": false,
+		"position": "east"
+	},
+	"orenburg": {
+		"kind": "city",
+		"population": 550204,
+		"populationRank": 27,
+		"coastal": false,
+		"position": "west"
+	},
+	"kursk": {
+		"kind": "city",
+		"population": 409431,
+		"populationRank": 44,
+		"coastal": false,
+		"position": "west"
+	},
+	"voronezh": {
+		"kind": "city",
+		"population": 844000,
+		"populationRank": 15,
+		"population1950": 332000,
+		"coastal": false,
+		"position": "west"
+	},
+	"saratov": {
+		"kind": "city",
+		"population": 843000,
+		"populationRank": 16,
+		"population1950": 473000,
+		"coastal": false,
+		"position": "west"
+	},
+	"volgograd": {
+		"kind": "city",
+		"population": 984000,
+		"populationRank": 13,
+		"population1950": 461000,
+		"coastal": false,
+		"position": "south-west"
+	},
+	"khabarovsk": {
+		"kind": "city",
+		"population": 579000,
+		"populationRank": 25,
+		"coastal": false,
+		"position": "south-east"
+	},
+	"rostov": {
+		"kind": "city",
+		"population": 1052000,
+		"populationRank": 10,
+		"population1950": 484000,
+		"coastal": false,
+		"position": "south-west"
+	},
+	"astrakhan": {
+		"kind": "city",
+		"population": 502533,
+		"populationRank": 34,
+		"region": "Astrakhan'",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"stavropol": {
+		"kind": "city",
+		"population": 363064,
+		"populationRank": 49,
+		"region": "Stavropol'",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"krasnodar": {
+		"kind": "city",
+		"population": 649851,
+		"populationRank": 18,
+		"coastal": false,
+		"position": "south-west"
+	},
+	"vladivostok": {
+		"kind": "city",
+		"population": 587022,
+		"populationRank": 23,
+		"region": "Primor'ye",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"vladikavkaz": {
+		"kind": "city",
+		"population": 364630,
+		"populationRank": 48,
+		"region": "North Ossetia",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"makhachkala": {
+		"kind": "city",
+		"population": 554981,
+		"populationRank": 26,
+		"region": "Dagestan",
+		"coastal": true,
+		"position": "south-west"
+	}
+}

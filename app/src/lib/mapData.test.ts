@@ -105,6 +105,18 @@ describe('map data integrity - every committed map', () => {
 		expect(existsSync(path.join(DEFAULT_MAPS_DIR, id, 'terrain.pmtiles'))).toBe(true);
 	});
 
+	// FT-34: every target gets a derived fact, and every fact belongs to a
+	// target. A key that matches nothing would be a fact nobody ever sees;
+	// a target with no entry would be a blank box on one place and not the
+	// next, which reads as a bug rather than as "nothing to say".
+	it.each(mapIds)('%s: has a derived fact for each of its targets', (id) => {
+		const factsFile = path.join(DEFAULT_MAPS_DIR, id, 'facts.json');
+		expect(existsSync(factsFile)).toBe(true);
+		const facts = JSON.parse(readFileSync(factsFile, 'utf8')) as Record<string, unknown>;
+		const targetIds = loadMap(id).targets.map((t) => t.id);
+		expect(Object.keys(facts).sort()).toEqual([...targetIds].sort());
+	});
+
 	it('data/maps/index.json is in sync with the map.json files', () => {
 		const committed = readFileSync(path.join(DEFAULT_MAPS_DIR, 'index.json'), 'utf8');
 		// Compare line endings-insensitively: the file is LF in git (.gitattributes).
