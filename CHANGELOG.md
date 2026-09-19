@@ -5,39 +5,37 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
-## Unreleased
+## v0.9.0 — 2026-09-19 — The map you build yourself
 
-**Something to hang a name on.** The programme in
-[`docs/PLAN_V0.8.md`](docs/PLAN_V0.8.md).
+**A map you build by tapping, and a name-fact on every place in the app.**
+Nine tasks over two programmes — FT-33 to FT-37 in
+[`docs/PLAN_V0.8.md`](docs/PLAN_V0.8.md) and FT-39 to FT-42 in
+[`docs/PLAN_V0.9.md`](docs/PLAN_V0.9.md). **There is no stable v0.8.0**: that
+programme only ever shipped as `v0.8.0-beta.1`, and everything in it is
+here, so this release supersedes it.
 
 For players:
 
-- **On a phone the fact card shows one line at a time**, and changes to
-  the other every few seconds — the name-fact first, because that is the
-  one worth having if you only read one. Two lines are a real share of a
-  phone screen, and the map is the thing you are learning. Tablets and
-  desktops are unchanged, and so is the card for anyone whose device asks
-  for less motion: that one shows both lines and stays still.
-- **Every place on every map now says where its name comes from.** All 28
+- **A map now opens on Known, and you build it by tapping.** Tap a place and
+  its name stays on the map; tap it again and it goes. Tap a second and the
+  first one stays put — so the set of names in front of you is the set you
+  chose to work on, not whatever you touched last. It is remembered per map,
+  so it is still there tomorrow, and a **Clear** control puts a cluttered map
+  back to plain. Overview is still there as a tab.
+- **Every place on every map says where its name comes from.** All 28
   countries, all 63 maps, all 2 235 places — 5 448 sentences, at least three
-  for every place, so the card keeps saying something new. Hiroshima is
-  "wide island"; Giresun is where the word cherry comes from; Nîmes is where
-  denim comes from; Teramo and Terni are the same word, "between the
-  rivers"; and Chicago is the Miami-Illinois word for the wild garlic that
-  grew in its marshes.
-- **A second line saying why a place is called what it is**, on Italy's
-  twenty regions to start with. Lombardia is named for the Longobards, the
-  "long-beards" who took the north in 568; Piemonte is ai piedi dei monti,
-  at the foot of the mountains; Marche is plural because a march was a
-  frontier province and this coast held several; Lazio is Latium, the land
-  of the Latins, which is where Latin comes from. Each place has more than
-  one, and you get a different one each time you meet it.
-- **Every place now tells you something about itself.** Tap a region in the
+  for every place, so the card keeps saying something new each time you meet
+  it. Hiroshima is "wide island"; Giresun is where the word cherry comes
+  from; Nîmes is where denim comes from; Teramo and Terni turn out to be the
+  same word, "between the rivers"; Lombardia is named for the Longobards,
+  the "long-beards" who took the north in 568; and Chicago is the
+  Miami-Illinois word for the wild garlic that grew in its marshes.
+- **Every place also tells you something about itself.** Tap a region in the
   Overview, click one in Known, or resolve a name in the Quiz, and a line
   appears: where it is, whether it has a coast, what range it is in, its
   biggest city, its highest point, who it borders. The Tour narrates each
-  stop the same way. In the Quiz it can only ever appear *after* an answer
-  is resolved, so it never gives one away — and after a mistake it stays up
+  stop the same way. In the Quiz it can only ever appear *after* an answer is
+  resolved, so it never gives one away — and after a mistake it stays up
   until your next drop, because that is the moment worth reading it.
 - **A Terrain button in the map bar** (Gelände, Rilievo). Press it and the
   sea turns blue, the rivers appear, and the ranges, deserts and seas around
@@ -45,25 +43,50 @@ For players:
   Puglia, the Po across Lombardia. Until now every map was politics only,
   with the water the same sand colour as the land, so no coastline read at
   all. Off by default, one setting for every map, remembered per device.
-- **The names come in your language**: Alpen and Adriatisches Meer in
-  German, Alpi and Mar Adriatico in Italian.
-- A terrain name never covers a name you are learning — it gives way, and
-  comes back when there is room.
+- **Peaks and the great circles**, in the same Terrain switch. Mont Blanc
+  4 807 m above Valle d'Aosta, Monte Etna 3 322 m on Sicilia, Fuji on Honshu,
+  the Qattara Depression at −133 m in Egypt's western desert — and the Tropic
+  of Cancer drawn straight across Egypt, just above Aswan.
+- With Terrain on, the region colours lighten so the ground shows through:
+  the Apennines run visibly down the middle of Italy, the Appalachians up the
+  eastern United States. Switching it off puts the colours straight back.
+- **The terrain names come in your language**: Alpen and Adriatisches Meer in
+  German, Alpi and Mar Adriatico in Italian. A terrain name never covers a
+  name you are learning — it gives way, and comes back when there is room.
 - Terrain names are placed inside the thing they name, and a name whose
   feature is really somewhere else is left off: the Apennines now sit on the
   ridge rather than out to sea, and a map of Italy no longer labels the
   Balkan Peninsula. Natural Earth calls the Apennines "Appennino ligure" in
   Italian, naming one sub-range for the whole chain; that is corrected.
-- **Peaks and the great circles**, in the same Terrain switch. Mont Blanc
-  4 807 m above Valle d'Aosta, Monte Etna 3 322 m on Sicilia, Fuji on
-  Honshu, the Qattara Depression at −133 m in Egypt's western desert — and
-  the Tropic of Cancer drawn straight across Egypt, just above Aswan.
-- With Terrain on, the region colours lighten so the ground shows through:
-  the Apennines run visibly down the middle of Italy, the Appalachians up
-  the eastern United States. Switching it off puts the colours straight back.
+- **On a phone the fact card shows one line at a time**, and changes to the
+  other every few seconds — the name-fact first, because that is the one
+  worth having if you only read one. Tablets and desktops are unchanged, and
+  so is the card for anyone whose device asks for less motion: that one shows
+  both lines and stays still.
+- **The tutorial teaches the new model.** Its steps were reordered and
+  rewritten in all three languages to show tapping names on and off as the
+  way to build a map to study from, and every step was checked against the
+  screen it actually lands on.
 
 Under the hood:
 
+- FT-42: `cardLines.ts` holds the small-screen rule — either viewport edge
+  ≤ 700 px, so a phone held sideways counts — as a pure, unit-tested
+  function; the card watches `matchMedia` and no caller changed.
+- FT-41: 28 authored country files feeding all 63 maps. Authoring per country
+  rather than per map is what made it affordable: Italy's 131 entries feed
+  five maps and the USA's 219 feed five more. Where one id means two places
+  on two maps — `new-york` the state and the city — the entry splits by kind.
+  `facts.json` grows from 503 KB to 1.4 MB over all 63 maps, fetched lazily
+  and per map; the largest single file is 64 KB.
+- FT-40: the tutorial's zoom detection moved into `createMap`, after the
+  tutorial stuck on step 2 because the step moved screens and its wiring did
+  not.
+- FT-39: `shownNames.ts` holds the whole show/hide rule — earned strength
+  from the clean streak, overridden either way by a tap — pure and
+  unit-tested, with the view only drawing what it is told. The overrides live
+  in `mapPrefs.svelte.ts` (localStorage), not the SQLite progress store:
+  they are a view of a map, not a record of what the player knows.
 - FT-37: two more Natural Earth datasets; 12 peaks per map, the tallest
   first, and named depressions always kept.
 - FT-36: name-facts authored per country in `data/facts/`, projected into
@@ -71,16 +94,33 @@ Under the hood:
   that fails on a fact written for an id no map has.
 - FT-35: one card, four screens, declaring itself to `mapFit` and taking no
   pointer events so a drag that crosses it still reaches the map.
-- FT-34: a `facts.json` beside every `map.json` (503 KB over all 63 maps,
-  fetched lazily) holding structured fields rather than prose, so the
-  derived half of the fact box is trilingual with nothing translated by
-  hand. Coastal-or-not is decided by vertices shared with the coastline,
-  which gets Italy exactly right; source rows are matched to targets by
-  extent rather than by name, which is what makes it work on dissolved maps.
+- FT-34: a `facts.json` beside every `map.json` holding structured fields
+  rather than prose, so the derived half of the fact box is trilingual with
+  nothing translated by hand. Coastal-or-not is decided by vertices shared
+  with the coastline, which gets Italy exactly right; source rows are matched
+  to targets by extent rather than by name, which is what makes it work on
+  dissolved maps.
 - FT-33: five more Natural Earth datasets; a second tileset per map
   (`terrain.pmtiles`, 4.94 MB over all 63, fetched only when the layer is
   switched on) built by `data/scripts/build-terrain.ts`; its maximum zoom
   follows each map's extent.
+- Android versionCode 90099.
+
+Not covered:
+
+- **FT-38, the Wikidata landmark pass**, is not in this release. It was split
+  out of FT-34 when the Wikidata SPARQL endpoint proved too unreliable to
+  depend on — the same query took 1 s, then 29 s, then returned a 502 — and
+  it stays deferred rather than shipping a build that hangs waiting on
+  someone else's server.
+- **The name-facts are English only.** The derived line above them is
+  trilingual, because it is composed at run time from numbers and the i18n
+  dictionary; the authored sentences are prose and would have to be
+  translated by hand. Decision 3 in PLAN_V0.8.md.
+- **The Android signing key changed on 2026-09-19.** An install from any
+  download before the v0.7.0 re-upload cannot be updated in place — Android
+  refuses an update signed by a different key. Uninstall first, which clears
+  that device's saved progress on this app.
 
 ## v0.7.0 — 2026-09-19 — More maps, and slices of them
 
