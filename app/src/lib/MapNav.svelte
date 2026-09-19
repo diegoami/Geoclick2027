@@ -17,6 +17,7 @@
 	import { recordVisit } from './mapPrefs.svelte';
 	import FavouriteStar from './FavouriteStar.svelte';
 	import TutorialButton from './TutorialButton.svelte';
+	import TerrainButton from './TerrainButton.svelte';
 
 	let {
 		mapId,
@@ -145,6 +146,7 @@
 	{/if}
 	<div class="prefs-row">
 		<LanguageSwitcher />
+		<TerrainButton />
 		<TutorialButton />
 	</div>
 </div>

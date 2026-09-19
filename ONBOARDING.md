@@ -77,10 +77,13 @@ packages/
 
 data/
   maps/<map-id>/          generated per-map assets: map.json, tiles.pmtiles,
-                           tour.json - committed to git, not hand-edited
+                           tour.json, terrain.pmtiles - committed to git,
+                           not hand-edited
   styles/base.json         shared MapLibre style, used by all maps
   source/                  raw Natural Earth downloads
   scripts/build-map.ts     the pipeline that turns source data into a map/
+  scripts/build-terrain.ts  the Terrain layer's own tileset (FT-33), for a
+                             map that already exists
 
 desktop/                  Tauri wrapper (Iteration 7) - wraps app/build
                            unmodified in a native window, no separate UI code
@@ -106,6 +109,16 @@ demo map, you'll spend it in `data/scripts/build-map.ts` and
 `data/maps/` — read [MAPS.md](MAPS.md) first, it has the exact commands
 and the known snags already found. ARCHITECTURE.md has a per-area
 breakdown if you need more.
+
+**A gotcha worth knowing before you touch either builder** (FT-33): a map
+now has **two** tilesets. `tiles.pmtiles` is the game; `terrain.pmtiles` is
+the optional sea/rivers/named-terrain layer behind the map bar's Terrain
+button, and it is a separate file precisely so the 63 existing
+`tiles.pmtiles` never had to be rebuilt. If you add a map, both builders
+write both files and you commit both. If you change something about the
+Terrain layer alone, use `build-terrain.ts --all --force` and leave
+`tiles.pmtiles` alone — MAPS.md's rule against committing a rebuilt tileset
+that says nothing still holds.
 
 ## Getting it running locally
 

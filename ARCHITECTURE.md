@@ -57,6 +57,21 @@ pairs well with a canvas/map-heavy UI.
   region's name on its middle or a line off it, a town's beside its dot,
   never on it) and hides any name with nowhere left to go, until a zoom
   makes room. See DECISIONS.md, "Names never overlap".
+- **A second tileset per map, for the Terrain layer** (v0.8.0, FT-33).
+  Beside each map's `tiles.pmtiles` sits a `terrain.pmtiles` holding the
+  sea, the rivers and Natural Earth's *named* physical features — ranges,
+  deserts, basins, seas — built by `data/scripts/build-terrain.ts`. It is
+  off by default and lives behind the map bar's Terrain button
+  (`TerrainButton.svelte` → `mapPrefs.svelte.ts` → `refreshTerrain()`),
+  and `terrainLayer.ts` adds the source and its three style layers to the
+  live map the first time it is asked for, so nothing is fetched until
+  then. Its names are DOM popups through the same `labelCollision.ts` as
+  every other name, at a negative priority so a target's own name always
+  wins the space. The layers are declared in `terrainLayer.ts` rather than
+  in `base.json` because MapLibre rejects a style layer whose source does
+  not exist yet; `base.json`'s metadata note points at it. Why a separate
+  archive rather than four more layers in the map's own: DECISIONS.md,
+  "The map can show what is under it".
 
 ## Domain model
 

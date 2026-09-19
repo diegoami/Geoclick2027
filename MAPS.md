@@ -16,12 +16,18 @@ says how it was made.
 ```
 data/scripts/fetch-natural-earth.sh   downloads + caches source datasets
 data/scripts/build-map.ts             filter → simplify → tile → derive map.json
+data/scripts/build-terrain.ts         terrain.pmtiles for a map that exists
 ```
 
 1. `fetch-natural-earth.sh` — downloads (once, cached in `data/source/`,
    gitignored) the Natural Earth datasets the pipeline uses: the admin-1
    states/provinces layer (`ne_10m_admin_1_states_provinces`) and a
-   lakes layer (`ne_10m_lakes`, contextual water fill only).
+   lakes layer (`ne_10m_lakes`, contextual water fill only), plus the five
+   physical datasets the Terrain layer needs (FT-33): `ne_10m_ocean`,
+   `ne_10m_rivers_lake_centerlines`, `ne_10m_geography_regions_polys`
+   (named ranges, deserts, plateaus, basins), `ne_10m_geography_marine_polys`
+   (named seas, gulfs, bays) and `ne_10m_geography_regions_elevation_points`
+   (named peaks, read by the fact builder, not drawn).
 2. `build-map.ts --country=<name> --out=<dir> [options]` — filters the
    source to one country (`ogr2ogr`), optionally dissolves finer
    features into a coarser level (`--dissolve=<field>`, mapshaper),
@@ -791,6 +797,65 @@ max-count logic runs there instead, since min-count/max-count both
 need visibility into the full candidate pool to decide whether to
 reach below the threshold or truncate above it.
 
+## The Terrain layer: `terrain.pmtiles` (FT-33, 2026-09-19)
+
+Every map has a **second** tileset beside its `tiles.pmtiles`, holding the
+sea, the rivers and the named physical features around it. The app's Terrain
+button (map bar, beside the language pills) fetches it on demand; it is off
+by default, so a player who never presses the button never downloads it.
+
+**Four layers**, all clipped to the map's padded extent (`-clipsrc`, not
+`-spat`: the ocean is a single global polygon, so a bbox *filter* would hand
+every map the whole world's coastline):
+
+| Layer             | Source                           | What it is                                                |
+| ----------------- | -------------------------------- | --------------------------------------------------------- |
+| `sea`             | `ne_10m_ocean`                   | the water, so a coastline reads at all                     |
+| `rivers`          | `ne_10m_rivers_lake_centerlines` | rivers only — lake centerlines and canals are left out     |
+| `terrain`         | `ne_10m_geography_regions_polys` | named ranges, deserts, plateaus, basins, coasts            |
+| `physical_labels` | the two above + marine polys     | one point per named feature, with `name_de` and `name_it`  |
+
+Islands, island groups, continents, NE's three "Lake" polygons and its
+`Dragons-be-here` joke entry are skipped: they either restate the coastline
+the sea layer already draws, or are too broad to be a mnemonic.
+
+**Two numbers are chosen per map, not fixed:**
+
+- **The clip box** is the targets' extent padded by 25 % (`padBbox`), so the
+  sea reaches the screen edge — the app fits a map to its targets and then
+  pads that fit in pixels (`mapFit.ts`), so the visible area is always wider
+  than the targets.
+- **The label box is tighter** (5 %). The polygons need the generous box;
+  the *names* do not. Without this, Italy's map labels the Atlas Saharien
+  and the Böhmerwald.
+- **The maximum zoom** follows the map's extent:
+  `min(6, max(4, round(log2(360 / span)) + 3))`. Cost here is driven by
+  extent, not detail — Russia is 850 KB at zoom 6, and simplifying its
+  vertices ten times harder only reaches 547 KB, while one zoom level less
+  reaches 553 KB and two reach 385 KB. Past the built maximum MapLibre
+  over-zooms: a slightly soft coastline on a background layer, nothing more.
+
+`--drop-rate=1` is **required** on this tileset, the same as on a towns map:
+without it tippecanoe thins point features at low zoom and silently drops
+ALPS and APPENNINI from Italy — the two names the layer exists for — while
+keeping smaller ranges further out.
+
+**Building it.** New maps get one from `build-map.ts` / `build-points-map.ts`
+automatically. For a map that already exists:
+
+```bash
+npx tsx data/scripts/build-terrain.ts --map=italy-regions
+npx tsx data/scripts/build-terrain.ts --all          # skips maps that have one
+npx tsx data/scripts/build-terrain.ts --all --force  # rebuilds every one
+```
+
+The 63 maps shipping today were backfilled with `--all --force` on
+2026-09-19: **4.94 MB in total**, from 6.4 KB (portugal-towns-100k) to
+385 KB (russia-regions), averaging 80 KB. Their `tiles.pmtiles` were
+deliberately **not** rebuilt — the Terrain layer is a separate archive, so
+the existing tilesets did not change, and rebuilding them anyway would have
+meant 63 binary files in one commit for no reason (see the next section).
+
 ## What reproduces, and what doesn't
 
 `map.json` and `tour.json` are reproducible: rebuilding a shipped map with
@@ -805,6 +870,11 @@ five bytes shorter and differing from byte 32 on, from identical input (the
 is simply not promised to be deterministic between versions. So: **don't
 commit a rebuilt tileset unless the map itself changed** — it is a 200 KB
 diff that says nothing.
+
+`terrain.pmtiles` *is* byte-stable within one toolchain version: building
+`italy-regions` twice in a row on tippecanoe v2.49.0 gave the same MD5
+(2026-09-19). The label file it contains is sorted by name for exactly that
+reason. The cross-version caveat above still applies to it.
 
 ## Beyond Natural Earth's admin-1 data
 

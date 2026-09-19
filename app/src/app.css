@@ -120,3 +120,29 @@
 .geoclick-retention .maplibregl-popup-content:is(.is-hovered, .is-magnified) {
 	opacity: 1;
 }
+
+/* The Terrain layer's names (FT-33, terrainLayer.ts): ranges, deserts, seas
+ * and the like. Deliberately unlike every other label on the map - no box,
+ * letter-spaced, brown for land and blue for water, the way a physical atlas
+ * writes them - so a background name is never mistaken for a target's name.
+ * They also lose every collision (labelCollision.ts gives them a negative
+ * priority), so a region's own name always wins the space. */
+.geoclick-terrain-label .maplibregl-popup-content {
+	padding: 0;
+	background: none;
+	border: none;
+	box-shadow: none;
+	color: #8a7a55;
+	font-family: system-ui, sans-serif;
+	font-size: 0.6875rem;
+	font-weight: 600;
+	font-style: italic;
+	letter-spacing: 0.06em;
+	text-shadow:
+		0 0 3px #f0ead9,
+		0 0 3px #f0ead9;
+	white-space: nowrap;
+}
+.geoclick-terrain-label .maplibregl-popup-tip {
+	display: none;
+}

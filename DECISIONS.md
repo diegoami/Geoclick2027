@@ -1112,6 +1112,54 @@ answers:
   - The favourite star is a tip in the outro, not a step. Finish leaves
     the player on the tour, which keeps playing.
 
+## The map can show what is under it (2026-09-19, FT-33)
+
+- **The sea is blue now, behind a button.** Until v0.8.0 every map was
+  politics only — flat coloured shapes on sand, with the water exactly the
+  same sand as the land, so no coastline read at all. The product owner's
+  diagnosis was the right one: "the overview maps may be too political, and
+  we might think of a way to show non-invasively elevation, coast, rivers or
+  anything that could help mnemonics". A region drawn with nothing around it
+  has nothing to sit against, and a name with nothing to hang on is a name
+  you re-learn every session.
+- **Off by default, one setting for all 63 maps.** Non-invasive was the ask,
+  so a returning player's map looks exactly as it did until they press
+  Terrain. And a player who wants the sea wants it everywhere: having to
+  switch it on again for each of 63 maps would be worse than no setting.
+- **Named features, not elevation shading.** What helps a mnemonic is a
+  *name* — the Alps, the Adriatic, the Po — and Natural Earth already has
+  1 047 named land features and 306 named marine ones, carrying German and
+  Italian names, which is why the Terrain labels are trilingual without a
+  word being translated by hand. Hypsometric shading would need a source
+  that is not Natural Earth, a new pipeline step, and real weight in every
+  tileset; deferred deliberately, not forgotten (docs/PLAN_V0.8.md).
+- **Its own tileset, not four more layers in the map's own.** Measured on
+  `italy-regions`, not guessed: folding the physical layers into
+  `tiles.pmtiles` cost +238 KB (45 KB → 283 KB), or +130 KB with the same
+  simplification the targets get — while a separate archive at the map's own
+  zoom ceiling is 53 KB and is fetched only when the button is pressed. That
+  matters more than it looks: `geoclickMap.ts` pulls a whole archive into
+  memory on desktop and Android, because neither shell serves range
+  requests, so the inline version would have charged every player who never
+  switches it on, on every map open.
+- **Which also meant the 63 existing tilesets did not have to change.** A
+  separate archive is a new file, not a modified one, so the backfill
+  (`build-terrain.ts --all`) added 63 files and touched none. MAPS.md's
+  standing rule — don't commit a rebuilt tileset unless the map itself
+  changed — would otherwise have been broken 63 times over for nothing.
+- **The maximum zoom follows the map, and stops well short of the targets'.**
+  Cost here is driven by extent, not detail: Russia is 850 KB at zoom 6, and
+  simplifying its vertices ten times harder only reaches 547 KB, while one
+  zoom level less reaches 553 KB and two reach 385 KB. So each map's terrain
+  is built to three levels above the zoom it opens at, and MapLibre
+  over-zooms past that — a slightly soft coastline on a background layer.
+- **Terrain names always lose a collision.** Registered with a negative
+  priority (`labelCollision.ts`), so a region's own name wins the space, and
+  among themselves Natural Earth's scalerank decides, so the Alps beat a
+  ridge next door. The effect is the right way round: on a fully labelled
+  Overview the background stays background, while in the quiz — where few
+  names are on the map yet — the terrain shows.
+
 ## The tab is called Known, and a finger can hit things (2026-09-18, FT-32)
 
 - **The retention tab is "Known"** (Gewusst, Conoscenza), not Progress.

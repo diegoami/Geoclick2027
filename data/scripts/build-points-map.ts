@@ -13,16 +13,23 @@
 //   npx tsx data/scripts/build-points-map.ts --country="Italy" --out=data/maps/italy-towns-100k --name-field=NAME_IT --min-population=100000 --name="Italy — Towns"
 
 import { execFileSync } from 'node:child_process';
-import { mkdirSync, readFileSync, writeFileSync, rmSync, existsSync } from 'node:fs';
+import { mkdirSync, readFileSync, writeFileSync, rmSync } from 'node:fs';
 import path from 'node:path';
 import {
 	REPO_ROOT,
 	LAKES_SHP,
+	PHYSICAL_SHPS,
+	missingSources,
 	parseArgs,
 	slugify,
 	overallBboxOf,
 	selectNearbyLakes,
 	selectCountryContext,
+	selectPhysical,
+	physicalPaths,
+	buildTerrainTileset,
+	cleanupPhysical,
+	padBbox,
 	pmtilesConvert
 } from './mapBuildUtils.js';
 import { colorizeMapDir } from './mapColors.js';
@@ -189,9 +196,11 @@ async function main() {
 		);
 		process.exit(1);
 	}
-	if (!existsSync(SOURCE_SHP) || !existsSync(LAKES_SHP)) {
+	const missing = missingSources([SOURCE_SHP, LAKES_SHP, ...PHYSICAL_SHPS]);
+	if (missing.length > 0) {
 		console.error(
-			`Source shapefile not found (${SOURCE_SHP} / ${LAKES_SHP}). Run data/scripts/fetch-natural-earth.sh first.`
+			`Source shapefile(s) not found:\n  ${missing.join('\n  ')}\n` +
+				'Run data/scripts/fetch-natural-earth.sh first.'
 		);
 		process.exit(1);
 	}
@@ -203,6 +212,7 @@ async function main() {
 	const targetsPath = path.join(absOutDir, '.tmp-targets.geojson');
 	const lakesPath = path.join(absOutDir, '.tmp-lakes.geojson');
 	const contextPath = path.join(absOutDir, '.tmp-context.geojson');
+	const physical = physicalPaths(absOutDir);
 	const mbtilesPath = path.join(absOutDir, '.tmp-tiles.mbtiles');
 	const pmtilesPath = path.join(absOutDir, 'tiles.pmtiles');
 	const mapJsonPath = path.join(absOutDir, 'map.json');
@@ -361,8 +371,11 @@ async function main() {
 	};
 	writeFileSync(targetsPath, JSON.stringify(targetsGeojson));
 
-	console.log('[3/5] Selecting nearby lakes and country/region context...');
+	console.log('[3/5] Selecting nearby lakes, country/region context and terrain...');
 	selectNearbyLakes(overallBboxOf(targets), lakesPath);
+	// Sea, rivers and named terrain (FT-33) - off by default in the app,
+	// behind the map bar's Terrain button.
+	selectPhysical(padBbox(overallBboxOf(targets)), physical, padBbox(overallBboxOf(targets), 0.05));
 	// A point map's markers otherwise float with nothing showing the
 	// country's outline or internal admin-1 borders - a polygon map doesn't
 	// have this problem (the targets themselves, filled edge to edge,
@@ -398,12 +411,15 @@ async function main() {
 		`context:${contextPath}`
 	]);
 	pmtilesConvert(mbtilesPath, pmtilesPath);
+	// Its own archive, fetched only when the player switches Terrain on.
+	buildTerrainTileset(physical, { absOutDir, mapName, bbox: padBbox(overallBboxOf(targets)) });
 
 	console.log('[5/5] Cleaning up...');
 	rmSync(filteredPath);
 	rmSync(targetsPath);
 	rmSync(lakesPath);
 	rmSync(contextPath);
+	cleanupPhysical(physical);
 	rmSync(mbtilesPath);
 
 	console.log(`Done: ${targets.length} targets -> ${mapJsonPath}`);

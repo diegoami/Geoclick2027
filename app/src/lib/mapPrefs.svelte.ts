@@ -100,3 +100,38 @@ export function isFavourite(mapId: string): boolean {
 export function favouriteMaps(): string[] {
 	return favourites.filter(isCatalogMap);
 }
+
+// --- the Terrain layer (FT-33) ---
+//
+// One setting for every map, not one per map: a player who wants the sea
+// and the rivers wants them everywhere, and having to switch it on again
+// for each of 63 maps would be worse than no setting. Off by default -
+// the layer is there to help, and it should not change what a returning
+// player sees without being asked for.
+
+const TERRAIN_KEY = 'geoclick:terrain:v1';
+
+function readFlag(key: string): boolean {
+	if (typeof localStorage === 'undefined') return false;
+	try {
+		return localStorage.getItem(key) === '1';
+	} catch {
+		return false;
+	}
+}
+
+let terrain = $state<boolean>(readFlag(TERRAIN_KEY));
+
+export function terrainShown(): boolean {
+	return terrain;
+}
+
+export function setTerrainShown(shown: boolean): void {
+	terrain = shown;
+	if (typeof localStorage === 'undefined') return;
+	try {
+		localStorage.setItem(TERRAIN_KEY, shown ? '1' : '0');
+	} catch {
+		// Full or blocked storage: the setting still holds for this session.
+	}
+}

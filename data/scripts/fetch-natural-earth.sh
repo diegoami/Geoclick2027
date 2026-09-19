@@ -7,6 +7,15 @@
 # recognizable coastline), and populated places (the point target maps -
 # towns/cities, see build-points-map.ts and MAPS.md's "Point-target
 # design" section).
+#
+# The five physical datasets below are the Terrain layer (FT-33,
+# docs/PLAN_V0.8.md): ocean and rivers so a coastline reads at all - until
+# v0.8.0 the sea was the same sand colour as the land - plus Natural
+# Earth's *named* physical features, which are the point of the exercise.
+# A region is easier to remember against something ("behind the Alps", "on
+# the Black Sea") than on its own, and the same named features feed the
+# derived half of the fact box (FT-34), so these two features share one
+# download.
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -39,3 +48,18 @@ fetch ne_10m_lakes \
 	"https://naturalearth.s3.amazonaws.com/10m_physical/ne_10m_lakes.zip"
 fetch ne_10m_populated_places \
 	"https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_populated_places.zip"
+
+# --- Terrain layer (FT-33) ---
+fetch ne_10m_ocean \
+	"https://naturalearth.s3.amazonaws.com/10m_physical/ne_10m_ocean.zip"
+fetch ne_10m_rivers_lake_centerlines \
+	"https://naturalearth.s3.amazonaws.com/10m_physical/ne_10m_rivers_lake_centerlines.zip"
+fetch ne_10m_geography_regions_polys \
+	"https://naturalearth.s3.amazonaws.com/10m_physical/ne_10m_geography_regions_polys.zip"
+fetch ne_10m_geography_marine_polys \
+	"https://naturalearth.s3.amazonaws.com/10m_physical/ne_10m_geography_marine_polys.zip"
+# Named peaks with their elevation. Not drawn by the Terrain layer - it is
+# the fact builder (FT-34) that reads this one; cached here so there is one
+# place that knows where source data comes from.
+fetch ne_10m_geography_regions_elevation_points \
+	"https://naturalearth.s3.amazonaws.com/10m_physical/ne_10m_geography_regions_elevation_points.zip"
