@@ -69,7 +69,10 @@ Check items off as they land; update "Status" as iterations complete.
   [docs/PLAN_V0.7.md](docs/PLAN_V0.7.md) — v0.7.0, "more maps, and slices
   of them": the United States' cities, six countries that had none,
   Italy's provinces in thirds, and a search box over the map list. Both
-  are complete; **63 maps across 28 countries** ship today.
+  are complete; **63 maps across 28 countries** ship today. A third is
+  planned: [docs/PLAN_V0.8.md](docs/PLAN_V0.8.md) — v0.8.0, "something to
+  hang a name on": a fact box on every place, and a map with sea, rivers
+  and named terrain behind a toggle.
 - **Not started**: everything else below.
 - **Next up**: motion/feedback design (reveal animations, streak
   indicators, sound, correct-drop juiciness) and a broader component/
