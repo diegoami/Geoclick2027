@@ -27,7 +27,8 @@ let root: HTMLElement | undefined;
 interface CardProps {
 	name: string;
 	fact: Fact | undefined;
-	hook?: string;
+	origin?: string;
+	extra?: string;
 	bottom?: string;
 	onclose?: () => void;
 }
@@ -64,7 +65,7 @@ describe('FactCard', () => {
 	it('leads with the name-fact and follows with the little context left', () => {
 		// FT-45: the derived paragraph is gone. A region keeps its biggest
 		// city; everything about position, coast, summit and neighbours went.
-		const { root } = render({ name: 'Piemonte', fact: piemonte, hook: HOOK });
+		const { root } = render({ name: 'Piemonte', fact: piemonte, origin: HOOK });
 		const text = root.querySelector('[data-testid="fact-card"]')!.textContent!;
 		expect(text).toContain('Piemonte');
 		expect(text).toContain(HOOK);
@@ -73,7 +74,7 @@ describe('FactCard', () => {
 	});
 
 	it('shows the name-fact alone when there is no context to add', () => {
-		const { root } = render({ name: 'Nowhere', fact: undefined, hook: HOOK });
+		const { root } = render({ name: 'Nowhere', fact: undefined, origin: HOOK });
 		const card = root.querySelector('[data-testid="fact-card"]')!;
 		expect(card.textContent).toContain(HOOK);
 		expect(card.querySelector('[data-testid="fact-city"]')).toBeNull();
@@ -82,7 +83,7 @@ describe('FactCard', () => {
 	it('never captures a drag crossing it', () => {
 		// The quiz is a drag-and-drop game and this card sits over the map. If
 		// it took pointer events, a drop that passed over it would be lost.
-		const { root } = render({ name: 'Piemonte', fact: piemonte, hook: HOOK, onclose: () => {} });
+		const { root } = render({ name: 'Piemonte', fact: piemonte, origin: HOOK, onclose: () => {} });
 		const card = root.querySelector<HTMLElement>('[data-testid="fact-card"]')!;
 		expect(getComputedStyle(card).pointerEvents).toBe('none');
 		// ...except its own close button, which has to be clickable.
@@ -94,14 +95,14 @@ describe('FactCard', () => {
 		// FT-25's contract: an overlay declares itself and mapFitPadding
 		// reserves the space. Without this the southern edge of a map would
 		// open behind the card.
-		const { root, container } = render({ name: 'Piemonte', fact: piemonte, hook: HOOK });
+		const { root, container } = render({ name: 'Piemonte', fact: piemonte, origin: HOOK });
 		const card = root.querySelector<HTMLElement>('[data-testid="fact-card"]')!;
 		expect(card.dataset.mapOverlay).toBe('bottom');
 		expect(mapFitPadding(container).bottom).toBeGreaterThan(card.getBoundingClientRect().height);
 	});
 
 	it('sits where the screen asks it to, clear of a tray or a legend', () => {
-		const { root } = render({ name: 'Piemonte', fact: piemonte, hook: HOOK, bottom: '200px' });
+		const { root } = render({ name: 'Piemonte', fact: piemonte, origin: HOOK, bottom: '200px' });
 		const card = root.querySelector<HTMLElement>('[data-testid="fact-card"]')!;
 		expect(getComputedStyle(card).bottom).toBe('200px');
 	});
@@ -109,13 +110,13 @@ describe('FactCard', () => {
 	it('has no close button when the screen drives it', () => {
 		// The tour changes the card on every step, so a dismiss would only
 		// last until the next one.
-		const { root } = render({ name: 'Piemonte', fact: piemonte, hook: HOOK });
+		const { root } = render({ name: 'Piemonte', fact: piemonte, origin: HOOK });
 		expect(root.querySelector('[data-testid="fact-card"] button')).toBeNull();
 	});
 
 	it('follows the language', () => {
 		setLanguage('it');
-		const { root } = render({ name: 'Piemonte', fact: piemonte, hook: HOOK });
+		const { root } = render({ name: 'Piemonte', fact: piemonte, origin: HOOK });
 		expect(root.querySelector('[data-testid="fact-card"]')!.textContent).toContain(
 			'Città più grande: Torino'
 		);

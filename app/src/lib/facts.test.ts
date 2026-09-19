@@ -2,8 +2,8 @@
 // structured, not prose, so these tests are about which clauses get made,
 // in which order, and that all three languages produce a real sentence
 // rather than a template with a hole in it.
-import { describe, expect, it } from 'vitest';
-import { factClauses, formatCount, pickHook, type Fact } from './facts';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import { factClauses, formatCount, pickHook, placeFacts, type Fact } from './facts';
 import { LANGUAGES, setLanguage } from './i18n.svelte';
 
 const piemonte: Fact = {
@@ -91,6 +91,61 @@ describe('formatCount', () => {
 		expect(formatCount(1652000, 'en')).toBe('1,652,000');
 		expect(formatCount(1652000, 'de')).toBe('1.652.000');
 		expect(formatCount(1652000, 'it')).toBe('1.652.000');
+	});
+});
+
+describe('placeFacts (FT-47: the origin is pinned)', () => {
+	// The bug this fixes: the card rotated through ALL of a place's facts,
+	// and only the first is about the name - so two visits in three showed
+	// no etymology at all. "Now I have lost the name origin."
+	const three = (hooks: string[]): Fact => ({ kind: 'region', hooks });
+
+	// This suite runs in the server project, which has no localStorage -
+	// and without it readRotation() always reports 0, so the rotation would
+	// never actually move and the test would pass for the wrong reason. A
+	// minimal in-memory stub makes it exercise the real thing.
+	beforeEach(() => {
+		const store = new Map<string, string>();
+		vi.stubGlobal('localStorage', {
+			getItem: (k: string) => store.get(k) ?? null,
+			setItem: (k: string, v: string) => void store.set(k, v),
+			removeItem: (k: string) => void store.delete(k)
+		});
+	});
+	afterEach(() => vi.unstubAllGlobals());
+
+	it('gives the same origin every single visit', () => {
+		const fact = three(['from the Longobards', 'the bankers', 'the economy']);
+		const seen = [];
+		for (let i = 0; i < 6; i++) seen.push(placeFacts('m', 't', fact).origin);
+		expect(new Set(seen)).toEqual(new Set(['from the Longobards']));
+	});
+
+	it('rotates the others, and never serves the origin among them', () => {
+		const fact = three(['from the Longobards', 'the bankers', 'the economy']);
+		const extras = [];
+		for (let i = 0; i < 4; i++) extras.push(placeFacts('m', 't', fact).extra);
+		expect(extras).toEqual(['the bankers', 'the economy', 'the bankers', 'the economy']);
+		expect(extras).not.toContain('from the Longobards');
+	});
+
+	it('has no extra when the origin is all that was written', () => {
+		const only = placeFacts('m', 't', three(['from the Longobards']));
+		expect(only.origin).toBe('from the Longobards');
+		expect(only.extra).toBeUndefined();
+	});
+
+	it('says nothing at all for a place nobody has written about', () => {
+		expect(placeFacts('m', 't', undefined)).toEqual({});
+		expect(placeFacts('m', 't', { kind: 'region' })).toEqual({});
+		expect(placeFacts('m', 't', three([]))).toEqual({});
+	});
+
+	it('keeps each place\u2019s rotation to itself', () => {
+		const fact = three(['origin', 'a', 'b']);
+		expect(placeFacts('m', 'one', fact).extra).toBe('a');
+		expect(placeFacts('m', 'two', fact).extra).toBe('a');
+		expect(placeFacts('m', 'one', fact).extra).toBe('b');
 	});
 });
 

@@ -10,7 +10,7 @@
 	import { mapDisplayName } from './mapCatalog';
 	import { DOT_CLEARANCE_PX, areaShares, registerLabel } from './labelCollision';
 	import FactCard from './FactCard.svelte';
-	import { fetchFacts, rotateHook, type Facts } from './facts';
+	import { fetchFacts, placeFacts, type Facts } from './facts';
 
 	let { mapId }: { mapId: string } = $props();
 
@@ -26,7 +26,9 @@
 	// place is. Fetched lazily: a map whose facts.json is missing simply has
 	// no card, and opening a map is not made slower by it.
 	let facts = $state<Facts>({});
-	let asked = $state<{ id: string; name: string; hook?: string } | undefined>(undefined);
+	let asked = $state<{ id: string; name: string; origin?: string; extra?: string } | undefined>(
+		undefined
+	);
 	// Not reactive state - popups are imperative MapLibre objects, only
 	// created once on load and torn down on destroy. Same reasoning as
 	// QuizView's solvedPopups.
@@ -72,7 +74,7 @@
 						? {
 								id: target.id,
 								name: target.name,
-								hook: rotateHook(mapId, target.id, facts[target.id])
+								...placeFacts(mapId, target.id, facts[target.id])
 							}
 						: undefined;
 				});
@@ -142,7 +144,8 @@
 		<FactCard
 			name={asked.name}
 			fact={facts[asked.id]}
-			hook={asked.hook}
+			origin={asked.origin}
+			extra={asked.extra}
 			onclose={() => (asked = undefined)}
 		/>
 	{/if}

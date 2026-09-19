@@ -14,7 +14,7 @@
 	import { DOT_CLEARANCE_PX, registerLabel } from './labelCollision';
 	import type { MapDefinition, Target } from './mapDefinition';
 	import FactCard from './FactCard.svelte';
-	import { fetchFacts, rotateHook, type Facts } from './facts';
+	import { fetchFacts, placeFacts, type Facts, type PlaceFacts } from './facts';
 
 	let { mapId }: { mapId: string } = $props();
 
@@ -58,7 +58,7 @@
 	// Picked once per step rather than derived from currentTarget: choosing a
 	// name-fact advances that place's rotation (FT-36), and a $derived would
 	// advance it again on every unrelated re-render.
-	let tourHook = $state<string | undefined>(undefined);
+	let tourFacts = $state<PlaceFacts>({});
 
 	let currentTarget = $derived.by((): Target | undefined => {
 		if (!mapDef || !tour) return undefined;
@@ -86,7 +86,7 @@
 		finished = false;
 		// A new stop is a new encounter with the place, so its name-fact moves
 		// on: a second run of the tour tells you something different.
-		tourHook = rotateHook(mapId, target.id, facts[target.id]);
+		tourFacts = placeFacts(mapId, target.id, facts[target.id]);
 
 		map.setFeatureState(
 			{ source: 'targets', sourceLayer: 'targets', id: target.name },
@@ -234,7 +234,8 @@
 			<FactCard
 				name={currentTarget.name}
 				fact={facts[currentTarget.id]}
-				hook={tourHook}
+				origin={tourFacts.origin}
+				extra={tourFacts.extra}
 				bottom="4.25rem"
 			/>
 		{/if}

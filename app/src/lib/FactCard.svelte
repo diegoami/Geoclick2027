@@ -10,6 +10,11 @@
 	// It declares data-map-overlay="bottom" so mapFit.ts keeps the map clear
 	// of it (FT-25's contract, the same one the map bar uses at the top).
 	//
+	// Three lines at most, in descending order of what they are worth:
+	//   1. where the NAME comes from - pinned, the same every visit (FT-47)
+	//   2. something else about the place - a different one each visit
+	//   3. the little of the derived line that survives - quiet, small
+	//
 	// SHORTER since FT-45 (product owner, 2026-09-19). The card used to lead
 	// with a derived line composed from Natural Earth - "In the south of the
 	// country. No coast of its own. Biggest city: Milan." - above the
@@ -28,7 +33,8 @@
 	let {
 		name,
 		fact,
-		hook,
+		origin,
+		extra,
 		bottom = '0.75rem',
 		onclose
 	}: {
@@ -37,12 +43,19 @@
 		/** Its derived fields; only a little of it is shown - see factClauses. */
 		fact: Fact | undefined;
 		/**
-		 * The rotating name-fact (FT-36): why the place is called what it is.
-		 * The VIEW picks it rather than this component, because picking one
+		 * Where the name comes from. PINNED: the same sentence every time,
+		 * because it is the half that does the work (FT-47). It used to
+		 * rotate with the others, which meant two visits in three showed no
+		 * etymology at all.
+		 */
+		origin?: string;
+		/**
+		 * One of the place's other facts, a different one each visit. The
+		 * VIEW picks it rather than this component, because picking one
 		 * advances the rotation, and a component that re-renders - on a
 		 * language change, say - must not advance it again.
 		 */
-		hook?: string;
+		extra?: string;
 		/**
 		 * How far off the bottom of the map to sit. The Known screen has a
 		 * legend down there and the Quiz has a tray whose height the player
@@ -59,20 +72,26 @@
 	const context = $derived(factClauses(fact).join(' '));
 </script>
 
-{#if hook || context}
+{#if origin || extra || context}
 	<div class="fact-card" data-map-overlay="bottom" data-testid="fact-card" style="bottom: {bottom}">
 		<div class="fact-body">
-			{#if hook}
+			<!-- Where the name comes from. Always here. -->
+			{#if origin}
 				<p class="fact-where">
 					<span class="fact-name">{name}</span>
-					<span class="fact-text" data-testid="fact-hook">{hook}</span>
+					<span class="fact-text" data-testid="fact-origin">{origin}</span>
 				</p>
 			{/if}
-			<!-- What little is left of the derived line. Under the name-fact,
-			     not over it: the name-fact is what the card is for. -->
+			<!-- Something else about the place, a different one each visit. -->
+			{#if extra}
+				<p class="fact-extra" data-testid="fact-extra">
+					{#if !origin}<span class="fact-name">{name}</span>{/if}{extra}
+				</p>
+			{/if}
+			<!-- What little is left of the derived line, quietest of the three. -->
 			{#if context}
 				<p class="fact-city" data-testid="fact-city">
-					{#if !hook}<span class="fact-name">{name}</span>{/if}{context}
+					{#if !origin && !extra}<span class="fact-name">{name}</span>{/if}{context}
 				</p>
 			{/if}
 		</div>
@@ -123,8 +142,15 @@
 		color: #2b332e;
 	}
 	.fact-where,
+	.fact-extra,
 	.fact-city {
 		margin: 0;
+	}
+	/* Between the origin and the clause: plainer than the origin, but still
+	   something to read rather than something to glance at. */
+	.fact-extra {
+		margin-top: 0.25rem;
+		color: #3d4a42;
 	}
 	/* Quieter than the name-fact above it: it is context, not the point. */
 	.fact-city {

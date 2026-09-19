@@ -96,7 +96,12 @@ pairs well with a canvas/map-heavy UI.
   reserves its space, and takes no pointer events, so a quiz drag that
   crosses it still lands on the map underneath.
 
-  **It shows one name-fact and at most one derived clause** (v0.9.1,
+  **It pins the name origin and rotates the rest** (v0.9.3, FT-47):
+  `placeFacts` returns hooks[0] as a fixed `origin` and rotates hooks[1..]
+  as `extra`, so the etymology is on the card every visit. Rotating all of
+  them, which is what it did before, hid the origin two visits in three.
+
+  **It shows at most one derived clause** (v0.9.1,
   FT-45). The derived half used to be a composed sentence and led the card;
   it was cut to what the map does not already show - a region's biggest
   city, a town's region and rank - and moved under the name-fact. That
