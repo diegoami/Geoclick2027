@@ -5,9 +5,10 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
-## Unreleased
+## v0.9.2 — 2026-09-19 — What the second look found
 
-**What the second look found.**
+**Three things found by using v0.9.1**, one of them a way to get the
+tutorial stuck. FT-44 to FT-46.
 
 For players:
 
@@ -24,6 +25,32 @@ For players:
   for a mistake you could no longer make with it. It now asks for any name
   on any wrong region, and if you finish the whole quiz without a single
   mistake it lets you move on.
+
+Under the hood:
+
+- FT-44: the tutorial machine gained a `quizDone` flag. A drop step offers
+  Next once the tray is empty, because a step waiting for something that can
+  never happen is a trap, not a lesson. It is a flag only and never advances
+  a step by itself. The copy no longer names a slip that may already be
+  placed.
+- FT-45: `factClauses` returns at most two short clauses instead of
+  composing a paragraph — a region's biggest city, or a town's region and
+  rank. The **data is untouched**: `build-facts.ts` still writes every
+  field, so about 0.20 MB of the 1.4 MB of facts shipped is now fields
+  nothing reads. That buys a one-line revert instead of a data migration if
+  a clause is ever wanted back; MAPS.md records the figure.
+- FT-45 also **undid FT-42**. The small-screen rotation existed to alternate
+  two full lines, and one line plus a short clause fit together on a phone,
+  so `cardLines.ts` and its tests were deleted rather than left as a
+  mechanism with nothing to rotate. Its DECISIONS entry is marked superseded
+  rather than left to be found and believed.
+- FT-46: an invisible `targets-hit` circle of radius 22 over each radius-9
+  town dot, with the click bound to it **instead of** the dot — it covers
+  the dot completely, so binding both would fire twice for one tap and
+  toggle a name straight back off. MapLibre hit-tests geometry rather than
+  painted pixels, so a transparent layer still answers clicks, and it is a
+  style layer over a source that already exists: no tileset changed.
+- Android versionCode 90299.
 
 ## v0.9.1 — 2026-09-19 — What the first look at v0.9.0 found
 
