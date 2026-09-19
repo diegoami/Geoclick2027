@@ -8,6 +8,8 @@
 	import { mapDisplayName } from './mapCatalog';
 	import { tutorialMapGesture } from './tutorial.svelte';
 	import { DOT_CLEARANCE_PX, areaShares, registerLabel } from './labelCollision';
+	import FactCard from './FactCard.svelte';
+	import { fetchFacts, type Facts } from './facts';
 
 	let { mapId }: { mapId: string } = $props();
 
@@ -15,6 +17,12 @@
 	let map: maplibregl.Map | undefined;
 	let mapDef = $state<MapDefinition | undefined>(undefined);
 	let error = $state<string | undefined>(undefined);
+	// The fact box (FT-35). Every name is already written on this screen, so
+	// asking about a place gives nothing away - the card only says what the
+	// place is. Fetched lazily: a map whose facts.json is missing simply has
+	// no card, and opening a map is not made slower by it.
+	let facts = $state<Facts>({});
+	let asked = $state<{ id: string; name: string } | undefined>(undefined);
 	// Not reactive state - popups are imperative MapLibre objects, only
 	// created once on load and torn down on destroy. Same reasoning as
 	// QuizView's solvedPopups.
@@ -30,6 +38,26 @@
 			mapDef = loadedMapDef;
 
 			map = createMap(container, loadedMapDef, style);
+			fetchFacts(mapId).then((loaded) => {
+				if (!cancelled) facts = loaded;
+			});
+
+			// Tap or click a place to be told what it is. Bound to both target
+			// layers, as every view does: a map's tileset only ever has
+			// features for one of the two (MAPS.md, "Point-target design").
+			for (const layerId of ['targets-fill', 'targets-circle']) {
+				map.on('click', layerId, (e: maplibregl.MapLayerMouseEvent) => {
+					const name = e.features?.[0]?.properties?.name as string | undefined;
+					const target = loadedMapDef.targets.find((t) => t.name === name);
+					asked = target ? { id: target.id, name: target.name } : undefined;
+				});
+				map.on('mouseenter', layerId, () => {
+					map!.getCanvas().style.cursor = 'pointer';
+				});
+				map.on('mouseleave', layerId, () => {
+					map!.getCanvas().style.cursor = '';
+				});
+			}
 			// The tutorial's zoom-and-pan step (FT-11) waits for the player's own
 			// gesture, and a move counts once it ends. Which events carry the
 			// player's input differs: the +/- buttons pass it on every move event,
@@ -105,6 +133,9 @@
 		<MapNav {mapId} mapName={mapDisplayName(mapId) ?? mapDef?.name} active="overview" />
 	{/if}
 	<div class="container" bind:this={container}></div>
+	{#if asked}
+		<FactCard name={asked.name} fact={facts[asked.id]} onclose={() => (asked = undefined)} />
+	{/if}
 </div>
 
 <style>

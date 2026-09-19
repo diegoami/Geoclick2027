@@ -84,6 +84,16 @@ pairs well with a canvas/map-heavy UI.
   it (`data/scripts/factGeometry.ts`) is pure and unit-tested; the file is
   fetched lazily, and a map without one is simply a map with no fact box.
 
+- **One fact card, four screens** (v0.8.0, FT-35). `FactCard.svelte` is
+  rendered by the Overview (tap a place), Known (the click that already
+  reveals the name), the Quiz (inside `markSolved`, so it cannot appear
+  before an answer is resolved) and the Tour (each step, filling the
+  `narration` field `tour.ts` declared in iteration 6 and never used). Each
+  view decides *when*; the card only decides how it looks and how many
+  clauses fit. It declares `data-map-overlay="bottom"` so `mapFit.ts`
+  reserves its space, and takes no pointer events, so a quiz drag that
+  crosses it still lands on the map underneath.
+
 ## Domain model
 
 **Target** — the thing being learned. Not just points: a river or mountain
