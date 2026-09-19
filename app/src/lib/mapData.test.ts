@@ -5,7 +5,7 @@
 // Deliberately asserts invariants, never an exact object shape - GC-032 adds a
 // `colorIndex` field to every target, and extra fields must stay legal.
 
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import {
@@ -95,6 +95,14 @@ describe('map data integrity - every committed map', () => {
 			noDirectory: [],
 			duplicatedInCatalog: []
 		});
+	});
+
+	// FT-33: the Terrain layer is its own archive, fetched only when the
+	// player switches it on. A map missing one would fail silently - the
+	// button would do nothing at all on that map and nowhere else.
+	it.each(mapIds)('%s: has both its tileset and its terrain tileset', (id) => {
+		expect(existsSync(path.join(DEFAULT_MAPS_DIR, id, 'tiles.pmtiles'))).toBe(true);
+		expect(existsSync(path.join(DEFAULT_MAPS_DIR, id, 'terrain.pmtiles'))).toBe(true);
 	});
 
 	it('data/maps/index.json is in sync with the map.json files', () => {

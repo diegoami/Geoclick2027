@@ -10,8 +10,29 @@ import { enableLabelCollision } from './labelCollision';
 import { isNativeShell } from './platform';
 import { overallExtent, type MapDefinition } from './mapDefinition';
 import { mapFitPadding } from './mapFit';
+import { TerrainLayer } from './terrainLayer';
+import { terrainShown } from './mapPrefs.svelte';
 
 let protocol: Protocol | undefined;
+
+// Every live map's Terrain layer, so the map bar's button can reach it
+// without each view having to pass the map object around. In practice there
+// is exactly one map on screen at a time; a Map keyed by the map itself
+// means a view that forgets to clean up cannot leak a stale entry, since
+// createMap removes it on 'remove'.
+const terrainLayers = new Map<maplibregl.Map, TerrainLayer>();
+
+/**
+ * Shows or hides the Terrain layer on whatever map is open, to match the
+ * stored preference. Called by the map bar's Terrain button (MapNav).
+ */
+export function refreshTerrain(): void {
+	for (const layer of terrainLayers.values()) {
+		layer.setVisible(terrainShown()).catch((e) => {
+			console.error('Could not show the terrain layer:', e);
+		});
+	}
+}
 
 function ensurePmtilesProtocol(): Protocol {
 	if (!protocol) {
@@ -46,6 +67,16 @@ class ArrayBufferSource implements Source {
 	async getBytes(offset: number, length: number): Promise<RangeResponse> {
 		return { data: this.buffer.slice(offset, offset + length) };
 	}
+}
+
+/**
+ * Buffers one archive for the native shells, protocol and all. The Terrain
+ * layer (terrainLayer.ts) loads its own tileset on demand and needs the
+ * same treatment as the map's - hence a named entry point rather than the
+ * module-private helper below.
+ */
+export async function registerTilesArchive(url: string): Promise<void> {
+	await registerBufferedPmtiles(ensurePmtilesProtocol(), url);
 }
 
 async function registerBufferedPmtiles(mapProtocol: Protocol, url: string): Promise<void> {
@@ -130,6 +161,23 @@ export function createMap(
 	};
 	map.on('style.load', applyColorIndex);
 	if (map.isStyleLoaded()) applyColorIndex();
+
+	// Sea, rivers and named terrain (FT-33), if the player has them on. Wired
+	// here rather than in each view so every screen - Overview, Known, Quiz,
+	// Tour - gets the same background from the same switch.
+	const terrain = new TerrainLayer(map, mapDef.id);
+	const applyTerrain = () => {
+		terrain.setVisible(terrainShown()).catch((e) => {
+			// A missing or unreadable terrain.pmtiles must never break the map
+			// the player came for.
+			console.error('Could not show the terrain layer:', e);
+		});
+	};
+	map.on('style.load', applyTerrain);
+	if (map.isStyleLoaded()) applyTerrain();
+	map.once('remove', () => terrain.destroy());
+	terrainLayers.set(map, terrain);
+	map.once('remove', () => terrainLayers.delete(map));
 
 	// Magnify a name label under the mouse (FT-02) or on a tap (FT-03). Labels
 	// take no pointer input, so drags on them move the map (FT-18).

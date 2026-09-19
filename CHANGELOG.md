@@ -5,6 +5,34 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
+## Unreleased
+
+**Something to hang a name on.** The programme in
+[`docs/PLAN_V0.8.md`](docs/PLAN_V0.8.md).
+
+For players:
+
+- **A Terrain button in the map bar** (Gelände, Rilievo). Press it and the
+  sea turns blue, the rivers appear, and the ranges, deserts and seas around
+  the map get their names — the Alps behind Trentino, the Adriatic beside
+  Puglia, the Po across Lombardia. Until now every map was politics only,
+  with the water the same sand colour as the land, so no coastline read at
+  all. Off by default, one setting for every map, remembered per device.
+- **The names come in your language**: Alpen and Adriatisches Meer in
+  German, Alpi and Mar Adriatico in Italian.
+- A terrain name never covers a name you are learning — it gives way, and
+  comes back when there is room.
+- With Terrain on, the region colours lighten so the ground shows through:
+  the Apennines run visibly down the middle of Italy, the Appalachians up
+  the eastern United States. Switching it off puts the colours straight back.
+
+Under the hood:
+
+- FT-33: five more Natural Earth datasets; a second tileset per map
+  (`terrain.pmtiles`, 4.94 MB over all 63, fetched only when the layer is
+  switched on) built by `data/scripts/build-terrain.ts`; its maximum zoom
+  follows each map's extent.
+
 ## v0.7.0 — 2026-09-19 — More maps, and slices of them
 
 **Nineteen more maps, including the United States' cities — and a search box to find any of them.**

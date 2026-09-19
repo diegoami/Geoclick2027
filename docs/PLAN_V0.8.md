@@ -173,6 +173,34 @@ goes into MAPS.md as it lands.
 - **The size gate:** if a map's `tiles.pmtiles` grows by more than **40 % or
   250 KB**, drop `terrain` and `marine` for that map and record the
   exception in MAPS.md. Report the before/after table for all 63.
+
+**What actually happened (2026-09-19).** The size gate failed on the first
+map tried — `italy-regions` went 45 KB → 283 KB, +532 % — which turned out
+to be the useful result. Measuring where the weight was led to a better
+shape than this task specified: the physical layers went into **their own
+archive per map** (`terrain.pmtiles`, built by a new
+`data/scripts/build-terrain.ts`) instead of into `tiles.pmtiles`. Three
+consequences, all good:
+
+- Nothing is downloaded until the button is pressed, which matters because
+  `geoclickMap.ts` pulls a whole archive into memory on desktop and Android.
+- **No existing tileset changed at all**, so the 63-file binary diff under
+  "Risks" never happened; the backfill adds 63 new files and modifies none.
+- The maximum zoom could then follow each map's extent
+  (`min(6, max(4, round(log2(360 / span)) + 3))`), since cost here is driven
+  by extent rather than detail. Total: **4.94 MB over 63 maps**, from 6.4 KB
+  (portugal-towns-100k) to 385 KB (russia-regions), average 80 KB.
+
+Two things the plan did not anticipate:
+
+- `--drop-rate=1` is **required**. Without it tippecanoe thinned the label
+  points at low zoom and silently dropped ALPS and APPENNINI from Italy —
+  the two names the layer exists for — while keeping smaller ranges further
+  out. The same trap `build-points-map.ts` documents for city markers.
+- The labels are **trilingual from the source**, better than decision 3
+  assumed: `ne_10m_geography_regions_polys` and the marine and river files
+  all carry `name_de` and `name_it`, so German players get Alpen and
+  Adriatisches Meer with nothing translated by hand.
 - **Tests:** a unit test per selector; `map.json` and `tour.json` must come
   back **byte-identical** for a rebuilt map (only the tiles may change) —
   the established proof that a pipeline change altered nothing it should
@@ -271,9 +299,9 @@ the product owner's test on the phone first, then the stable release.
 
 ## Progress ledger
 
-| Task  | State       | Merge | Notes |
-| ----- | ----------- | ----- | ----- |
-| FT-33 | not started | —     |       |
+| Task  | State                 | Merge | Notes                                                                                                                                                                                             |
+| ----- | --------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| FT-33 | **awaiting approval** | —     | terrain in its own archive per map, not inside `tiles.pmtiles` — so no existing tileset changed; 4.94 MB over 63 maps, off by default; labels trilingual from the source; `--drop-rate=1` was load-bearing |
 | FT-34 | not started | —     |       |
 | FT-35 | not started | —     |       |
 | FT-36 | not started | —     |       |

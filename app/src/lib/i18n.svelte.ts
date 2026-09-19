@@ -32,6 +32,7 @@ export type TranslationKey =
 	| 'retention.seen'
 	| 'nav.quiz'
 	| 'nav.tour'
+	| 'nav.terrain'
 	| 'nav.loading'
 	| 'home.subtitle'
 	| 'home.recent'
@@ -126,6 +127,7 @@ const en: Dictionary = {
 	'retention.seen': 'Seen once',
 	'nav.quiz': 'Quiz',
 	'nav.tour': 'Tour',
+	'nav.terrain': 'Terrain',
 	'nav.loading': 'Loading…',
 
 	'home.subtitle': 'Pick a demo map to explore.',
@@ -235,6 +237,7 @@ const de: Dictionary = {
 	'retention.seen': 'Einmal',
 	'nav.quiz': 'Quiz',
 	'nav.tour': 'Tour',
+	'nav.terrain': 'Gelände',
 	'nav.loading': 'Lädt…',
 
 	'home.subtitle': 'Wähle eine Demokarte zum Erkunden.',
@@ -344,6 +347,7 @@ const it: Dictionary = {
 	'retention.seen': 'Una volta',
 	'nav.quiz': 'Quiz',
 	'nav.tour': 'Tour',
+	'nav.terrain': 'Rilievo',
 	'nav.loading': 'Caricamento…',
 
 	'home.subtitle': 'Scegli una mappa demo da esplorare.',
