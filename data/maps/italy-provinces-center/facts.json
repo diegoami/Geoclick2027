@@ -8,7 +8,12 @@
 			"Perugia"
 		],
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"Pesaro is from Pisaurum, the river Isaurus; Urbino from Urvinum, probably from urvus, a curved thing — the hill’s shape.",
+			"Urbino under Federico da Montefeltro was one of the great courts of the Renaissance, and its palace is a UNESCO site.",
+			"Raphael was born in Urbino and Rossini in Pesaro."
+		]
 	},
 	"arezzo": {
 		"kind": "region",
@@ -25,7 +30,12 @@
 			"nameIt": "Arezzo",
 			"population": 91589
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"From Arretium, an Etruscan city and one of the twelve of their league.",
+			"Piero della Francesca painted the Legend of the True Cross here, one of the great fresco cycles.",
+			"Guido of Arezzo invented the modern musical staff and the do-re-mi naming of notes around 1025."
+		]
 	},
 	"ancona": {
 		"kind": "region",
@@ -42,7 +52,12 @@
 			"nameIt": "Ancona",
 			"population": 100507
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"From Greek ankon, \"elbow\" — the shape of its promontory; it was founded by Greeks from Syracuse.",
+			"Its harbour is the only one on the Adriatic coast that faces east, so the sun both rises and sets over the sea.",
+			"Trajan’s arch of 115 AD still stands on the quay, built to thank him for paying for the port."
+		]
 	},
 	"pisa": {
 		"kind": "region",
@@ -59,7 +74,12 @@
 			"nameIt": "Pisa",
 			"population": 203336
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"Probably from a Ligurian or Greek word for a river mouth or marshy ground.",
+			"Its tower began leaning before the third storey was finished, because the ground is soft on one side; it took 199 years to build.",
+			"Pisa was a maritime republic that once rivalled Genoa, and Galileo was born here."
+		]
 	},
 	"livorno": {
 		"kind": "region",
@@ -75,7 +95,12 @@
 			"nameIt": "Livorno",
 			"population": 156274
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"Of uncertain origin; the English called it Leghorn, which is why the chicken breed is named that.",
+			"The Medici made it a free port in 1591 with a law guaranteeing religious tolerance, which drew Jews, Greeks, Armenians and Protestants.",
+			"Modigliani and Mascagni were both born here, and its Venezia quarter is cut through by canals."
+		]
 	},
 	"siena": {
 		"kind": "region",
@@ -95,7 +120,12 @@
 			"nameIt": "Siena",
 			"population": 52625
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": [
+			"Possibly from the Etruscan Saina family or from the Senones, a Gaulish tribe.",
+			"Its Palio, a bareback horse race around the Piazza del Campo, is run twice a summer between city wards and lasts about ninety seconds.",
+			"The whole historic centre is a UNESCO site, and burnt sienna pigment is named for the local earth."
+		]
 	},
 	"macerata": {
 		"kind": "region",
@@ -107,7 +137,12 @@
 			"Perugia"
 		],
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"From Latin maceria, a ruined wall — the town was built from the ruins of Roman Helvia Recina.",
+			"Its Sferisterio, built in 1829 for a ball game, is now one of Italy’s best open-air opera houses.",
+			"Matteo Ricci, the Jesuit who brought Western mathematics to China and mapped it for Europe, was born here."
+		]
 	},
 	"perugia": {
 		"kind": "region",
@@ -129,7 +164,12 @@
 			"nameIt": "Perugia",
 			"population": 149125
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"From Perusia, an Etruscan city; the name is pre-Roman and not explained.",
+			"Its Etruscan arch is still the main gate, and the university for foreigners has taught Italian to the world since 1921.",
+			"Perugina makes Baci chocolates here, and the Umbria Jazz festival is one of Europe’s largest."
+		]
 	},
 	"fermo": {
 		"kind": "region",
@@ -139,7 +179,12 @@
 			"Macerata"
 		],
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": [
+			"From Firmum Picenum, \"the firm place\", a Roman colony of 264 BC.",
+			"Its Roman cisterns beneath the town, 2,000 m² of vaulted chambers, still hold water after two millennia.",
+			"It was made a province again in 2004, having lost the status under Napoleon."
+		]
 	},
 	"ascoli-piceno": {
 		"kind": "region",
@@ -152,7 +197,12 @@
 			"Teramo"
 		],
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"From Asculum, a Picene town; the Piceni took their name from the picus, the woodpecker that legend says led them here.",
+			"Its Piazza del Popolo is paved entirely in travertine and is one of the finest Renaissance squares in Italy.",
+			"Olive all’ascolana — stuffed, breaded and fried olives — are from here and have protected status."
+		]
 	},
 	"grosseto": {
 		"kind": "region",
@@ -164,7 +214,12 @@
 			"Viterbo"
 		],
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Probably from a diminutive of grosso, or from a family name.",
+			"The Maremma around it was malarial marsh until it was drained in the 1800s and 1930s.",
+			"Its butteri are mounted cattle herders who once beat Buffalo Bill’s cowboys in a contest when his show came to Rome."
+		]
 	},
 	"teramo": {
 		"kind": "region",
@@ -180,7 +235,12 @@
 			"name": "Corno Grande",
 			"elevation": 2912
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"From Interamnia, \"between the rivers\" — it sits between two.",
+			"The Gran Sasso is in this province, with the Calderone, the southernmost glacier in Europe.",
+			"A physics laboratory sits under the mountain, shielded by 1,400 m of rock, where neutrinos are detected."
+		]
 	},
 	"terni": {
 		"kind": "region",
@@ -192,7 +252,12 @@
 			"Viterbo"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"Also from Interamna, \"between rivers\" — the same name as Teramo, differently worn down.",
+			"St Valentine was its bishop and is buried here, which makes the town the origin of Valentine’s Day.",
+			"The Marmore falls nearby are 165 m and entirely artificial, cut by a Roman consul in 271 BC to drain a marsh."
+		]
 	},
 	"viterbo": {
 		"kind": "region",
@@ -205,7 +270,12 @@
 			"Terni"
 		],
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": [
+			"Possibly from Vetus Urbs, \"old city\", or from a pre-Roman name.",
+			"It was the papal seat in the 1200s, and the word conclave comes from an incident here: the citizens locked the cardinals in and removed the roof to hurry them along.",
+			"Its San Pellegrino quarter is one of the best-preserved medieval districts in Italy."
+		]
 	},
 	"rieti": {
 		"kind": "region",
@@ -220,7 +290,12 @@
 			"Viterbo"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"From Reate, a Sabine town.",
+			"It claims to be the geographic centre of Italy, with a plaque in the main square to prove it.",
+			"St Francis lived in four sanctuaries in this valley and is said to have created the first Christmas nativity scene at Greccio in 1223."
+		]
 	},
 	"pescara": {
 		"kind": "region",
@@ -237,7 +312,12 @@
 			"nameIt": "Pescara",
 			"population": 314789
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"From Piscaria, \"abounding in fish\", the name of the river.",
+			"Gabriele d’Annunzio was born here, and the province was created in 1927 out of parts of two others.",
+			"It has the widest beach on the Adriatic and the largest port in Abruzzo."
+		]
 	},
 	"l-aquila": {
 		"kind": "region",
@@ -262,7 +342,12 @@
 			"name": "Monte Viglio",
 			"elevation": 2156
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": [
+			"\"The eagle\" — founded in 1254 and named for the imperial eagle, or for the 99 castles whose people came together to build it.",
+			"The city has 99 of everything by tradition: its fountain has 99 spouts and its bell tolls 99 times each night.",
+			"The 2009 earthquake killed 309 people and emptied the centre for years; restoration is still under way."
+		]
 	},
 	"chieti": {
 		"kind": "region",
@@ -274,7 +359,12 @@
 			"Pescara"
 		],
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": [
+			"From Teate, capital of the Marrucini; legend credits Achilles with founding it.",
+			"The Warrior of Capestrano, a 2.5 m stone figure from the 6th century BC, is the emblem of pre-Roman Italy and is in its museum.",
+			"Its province produces most of Abruzzo’s wine, mainly montepulciano."
+		]
 	},
 	"roma": {
 		"kind": "region",
@@ -293,7 +383,12 @@
 			"nameIt": "Roma",
 			"population": 3339000
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Legend says Romulus; more likely from Etruscan Ruma, a family name, or from an old word for the river.",
+			"It was the largest city in the world for about five centuries and the first to reach a million people.",
+			"Its historic centre, the Vatican and the extraterritorial properties are jointly a UNESCO site, and the Pantheon’s dome is still the largest unreinforced concrete dome ever built."
+		]
 	},
 	"campobasso": {
 		"kind": "region",
@@ -310,7 +405,12 @@
 			"nameIt": "Campobasso",
 			"population": 50762
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"\"Low field\" — campus bassus, from its position below the old castle.",
+			"It has made scissors and knives since the 1300s, a craft still practised in the town.",
+			"Its Misteri procession carries children on hidden iron frames so that they appear to float in mid-air."
+		]
 	},
 	"isernia": {
 		"kind": "region",
@@ -322,7 +422,12 @@
 			"L'Aquila"
 		],
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"From Aesernia, a Samnite town.",
+			"Isernia La Pineta nearby is one of the oldest human sites in Europe, with tools and butchered bone from about 600,000 years ago.",
+			"It is the smallest province in Molise, itself the least known region in Italy."
+		]
 	},
 	"frosinone": {
 		"kind": "region",
@@ -334,7 +439,12 @@
 			"Roma"
 		],
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"From Frusino, a Volscian town of uncertain meaning.",
+			"The abbey of Montecassino is in this province: founded by St Benedict in 529, it was destroyed four times and rebuilt each time, most recently after 1944.",
+			"Fiuggi’s water has been drunk as a cure for kidney stones since Michelangelo recommended it."
+		]
 	},
 	"foggia": {
 		"kind": "region",
@@ -349,7 +459,12 @@
 			"nameIt": "Foggia",
 			"population": 155203
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": [
+			"Probably from Latin fovea, a pit — grain was stored in underground pits here, and some survive under the streets.",
+			"The Tavoliere around it is the second largest plain in Italy and its main durum wheat area.",
+			"The Gargano promontory in the province is the spur of the boot, with its own ancient forest and the shrine of Monte Sant’Angelo, a UNESCO site."
+		]
 	},
 	"latina": {
 		"kind": "region",
@@ -359,6 +474,11 @@
 			"Roma"
 		],
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": [
+			"Named in 1932 for Latium; it was Littoria under Fascism and renamed in 1945.",
+			"The city was built from nothing on the drained Pontine marshes, malarial swamp since antiquity.",
+			"Its rationalist architecture makes it one of the clearest examples of 1930s Italian town planning."
+		]
 	}
 }

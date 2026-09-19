@@ -68,11 +68,18 @@
 		"P. T. Barnum was its mayor, and he built the circus's winter quarters here.",
 		"Connecticut’s largest city, and its Beardsley Park was laid out by Frederick Law Olmsted."
 	],
-	"new-york": [
-		"New Amsterdam until the English took it in 1664 and renamed it for the Duke of York.",
-		"Dutch names survive all over it: Brooklyn was Breukelen, Harlem was Haarlem, and the Bronx was the farm of Jonas Bronck.",
-		"About 800 languages are spoken in it, more than anywhere else on earth, and Queens alone has some 160."
-	],
+	"new-york": {
+		"region": [
+			"Named in 1664 for the Duke of York, later James II, when the English took New Amsterdam from the Dutch.",
+			"The Erie Canal, opened in 1825, linked the Hudson to the Great Lakes and made New York the busiest port in the country.",
+			"Its Adirondack Park is larger than Yellowstone, Yosemite, Grand Canyon and Glacier combined, and is constitutionally \"forever wild\"."
+		],
+		"city": [
+			"New Amsterdam until the English took it in 1664 and renamed it for the Duke of York.",
+			"Dutch names survive all over it: Brooklyn was Breukelen, Harlem was Haarlem, and the Bronx was the farm of Jonas Bronck.",
+			"About 800 languages are spoken in it, more than anywhere else on earth, and Queens alone has some 160."
+		]
+	},
 	"pittsburgh": [
 		"For William Pitt, British prime minister, named by the general who took the fort in 1758.",
 		"It keeps the -h that most American -burgs lost, after a twenty-year fight with the federal board that had spelled it Pittsburg.",
@@ -262,5 +269,245 @@
 		"From Mayaimi, the name of a lake and the people beside it — a Native word, not a Spanish one, despite the city's Spanish present.",
 		"It was incorporated in 1896 by 344 voters, a third of them Black Bahamians, and it is the only major American city founded by a woman — Julia Tuttle.",
 		"More than half its residents were born abroad — a higher share than any other large American city."
+	],
+	"north-dakota": [
+		"Dakota is the Sioux word for \"friend\" or \"ally\" — the people’s own name for themselves.",
+		"It was split from South Dakota in 1889, and the two were admitted on the same day with the papers shuffled so nobody knows which was 39th and which 40th.",
+		"The Bakken shale under it made it briefly the second-largest oil producer in the country, and its population grew after a century of decline."
+	],
+	"washington": [
+		"The only state named after a president — and it was nearly called Columbia, changed to avoid confusion with the District of Columbia.",
+		"That change failed entirely: people say Washington State to this day to avoid exactly that confusion.",
+		"Mount St Helens here lost 400 m of its summit in 1980 in the deadliest eruption in US history."
+	],
+	"montana": [
+		"From Spanish montaña, \"mountain\" — chosen by a congressman who liked the sound of it.",
+		"The fourth largest state with the third lowest population density; it has more cattle than people.",
+		"Custer was killed at the Little Bighorn here in 1876, and Glacier National Park has lost most of the glaciers it was named for."
+	],
+	"minnesota": [
+		"From Dakota mni sota, \"sky-tinted water\" or \"cloudy water\", for the Minnesota river.",
+		"It calls itself the land of 10,000 lakes and actually has about 11,842.",
+		"The Mississippi rises here at Lake Itasca, narrow enough to step across."
+	],
+	"idaho": [
+		"A made-up word: a lobbyist claimed it was Shoshone for \"gem of the mountains\", then admitted he had invented it — but the name had stuck.",
+		"It grows about a third of all US potatoes, in volcanic soil watered by the Snake River.",
+		"Hells Canyon on its border is the deepest river gorge in North America, deeper than the Grand Canyon."
+	],
+	"maine": [
+		"Probably from the French province of Maine, or simply from \"the main\" — sailors’ shorthand for the mainland as against the islands.",
+		"The most forested state, about 89% trees, and it produces nearly all the wild blueberries in the country.",
+		"Its coastline is 5,600 km once the inlets are counted, longer than California’s."
+	],
+	"michigan": [
+		"From Ojibwe mishigami, \"large water\" — for the lake.",
+		"The only state in two separate pieces, joined by a five-mile bridge over the Straits of Mackinac.",
+		"It touches four of the five Great Lakes, and no point in it is more than 137 km from one."
+	],
+	"wisconsin": [
+		"From a Miami word recorded by the French as Meskousing, probably \"river running through a red place\"; the spelling drifted to Wisconsin.",
+		"It makes about a quarter of all American cheese, and its residents are called cheeseheads without embarrassment.",
+		"The Republican Party was founded in Ripon here in 1854, and the state pioneered workers’ compensation and unemployment insurance."
+	],
+	"south-dakota": [
+		"The same Dakota — \"friend\" in Sioux — as its northern twin.",
+		"Mount Rushmore was carved between 1927 and 1941 into a mountain sacred to the Lakota, whose claim to the Black Hills the Supreme Court upheld in 1980.",
+		"They refused the compensation, which now sits accruing interest at over a billion dollars, because accepting it would confirm the sale."
+	],
+	"oregon": [
+		"Origin genuinely unknown: possibly from a French map’s mislabelled \"Ouaricon-sint\", or from a Spanish or Algonquian word.",
+		"Crater Lake here is the deepest lake in the United States at 594 m, filling the caldera of a collapsed volcano.",
+		"It has no sales tax, and by law you could not pump your own petrol in most of the state until 2023."
+	],
+	"new-hampshire": [
+		"Named in 1629 after the English county of Hampshire by a captain who had lived there.",
+		"Its presidential primary has gone first in the nation since 1920, which is written into state law.",
+		"The Old Man of the Mountain, its stone-face emblem, collapsed in 2003 — the state kept it on the licence plates."
+	],
+	"vermont": [
+		"From French vert mont, \"green mountain\" — the name of the Green Mountain Boys who fought for its independence.",
+		"It was an independent republic from 1777 to 1791, with its own currency and postal service.",
+		"The first state to abolish adult slavery in its constitution, in 1777, and it has no billboards by law."
+	],
+	"wyoming": [
+		"From a Delaware phrase, xwé:wamənk, \"at the big river flat\" — a Pennsylvania valley name transplanted 2,000 km west.",
+		"The least populous state, with fewer people than several American cities.",
+		"It gave women the vote in 1869, half a century before the nation, and Yellowstone here was the world’s first national park."
+	],
+	"massachusetts": [
+		"From the Massachusett people: \"at the great hill\", probably the Blue Hills near Boston.",
+		"Harvard, founded 1636, is the oldest university in the country, and the first American public school and first subway are both here.",
+		"It was the first state to legalise same-sex marriage, in 2004."
+	],
+	"iowa": [
+		"Named for the Ioway people, whose own name may come from a word meaning \"sleepy ones\" given by neighbours.",
+		"It has about a quarter of the best-grade farmland in the country and grows more corn than any other state.",
+		"Its caucuses opened the presidential nominating season for half a century."
+	],
+	"rhode-island": [
+		"Probably from Dutch roodt eylandt, \"red island\", for its clay — or from a supposed likeness to Rhodes.",
+		"The smallest state, and the one with the longest official name: it was \"the State of Rhode Island and Providence Plantations\" until 2020.",
+		"It was founded by Roger Williams as a refuge for religious dissenters, and had the first Baptist church and the oldest synagogue in America."
+	],
+	"connecticut": [
+		"From Mohegan quinnitukqut, \"at the long tidal river\".",
+		"Its 1639 Fundamental Orders are sometimes called the first written constitution in the Western world, which is why it is the Constitution State.",
+		"Hartford has been the insurance capital of America since the 1800s, starting with fire policies."
+	],
+	"nebraska": [
+		"From Otoe ñí braðke or Omaha ni btháska, \"flat water\" — the Platte river, which is exactly that.",
+		"The only state with a unicameral, officially nonpartisan legislature.",
+		"Its Sandhills are the largest sand dune area in the Western Hemisphere, held in place by grass."
+	],
+	"pennsylvania": [
+		"\"Penn’s woods\" — but named for William Penn’s father; Penn himself was embarrassed and tried to have it changed.",
+		"The Declaration of Independence and the Constitution were both signed in Philadelphia.",
+		"It is officially a Commonwealth, as are Virginia, Massachusetts and Kentucky, which means nothing legally."
+	],
+	"ohio": [
+		"From Seneca ohi:yo’, \"good river\" or \"large creek\".",
+		"Eight presidents were born here, more than any state except Virginia, which is why it is called the Mother of Presidents.",
+		"The Wright brothers were from Dayton, and both Neil Armstrong and John Glenn were Ohioans."
+	],
+	"new-jersey": [
+		"Named for the Channel Island of Jersey, home of one of the colony’s proprietors.",
+		"The most densely populated state, and it has more diners than anywhere else in the country.",
+		"Edison’s Menlo Park lab here produced the phonograph and the practical light bulb, and the first baseball game was played in Hoboken."
+	],
+	"indiana": [
+		"\"Land of the Indians\", coined for a land company in 1768 — a name given by settlers, not by the people it names.",
+		"Its 500-mile race has run at the Brickyard since 1911.",
+		"It has more miles of interstate per square mile than any other state, which is why it calls itself the Crossroads of America."
+	],
+	"illinois": [
+		"From the Illinois Confederation, through French — the -ois ending is a French spelling, which is why the s is silent.",
+		"Chicago’s 1871 fire led to the rebuilding that produced the world’s first skyscraper in 1885.",
+		"It produces more soybeans and nuclear power than any other state."
+	],
+	"utah": [
+		"From the Ute people; the name may mean \"people of the mountains\".",
+		"The Great Salt Lake in it is the largest lake west of the Mississippi and saltier than the ocean.",
+		"About 62% of its people are Mormon, and Salt Lake City was founded in 1847 by settlers who walked there."
+	],
+	"delaware": [
+		"Named for the Delaware river, itself named for Lord De La Warr, a colonial governor — the Lenape people were then renamed after him too.",
+		"The first state to ratify the Constitution, in 1787, which is why it is called the First State.",
+		"More than half of all US public companies are legally incorporated here, for its courts and its corporate law."
+	],
+	"colorado": [
+		"Spanish for \"coloured red\", for the silt in the Colorado river.",
+		"It has more land above 3,000 m than any other state, and its lowest point is higher than the highest point in eighteen others.",
+		"Its border is drawn entirely with straight lines, though survey errors left it with 697 sides rather than four."
+	],
+	"west-virginia": [
+		"It split from Virginia in 1863 rather than leave the Union — the only state formed by seceding from a seceding state.",
+		"Almost entirely mountainous, with the highest average elevation east of the Mississippi.",
+		"The Hatfield-McCoy feud ran along its Kentucky border, and coal mining shaped both its economy and its politics."
+	],
+	"district-of-columbia": [
+		"Columbia is a poetic name for America, from Columbus; the district was carved from Maryland and Virginia to belong to no state.",
+		"Its residents had no presidential vote until 1961 and still have no voting member of Congress — hence the licence plates reading \"taxation without representation\".",
+		"No building may rise above a 1910 height limit, which is why the city stays low and the Capitol still dominates."
+	],
+	"maryland": [
+		"For Henrietta Maria, queen of Charles I — one of several colonies named for a monarch’s wife.",
+		"The Star-Spangled Banner was written here during the 1814 bombardment of Fort McHenry.",
+		"The Chesapeake Bay in it is the largest estuary in the country, and its blue crabs are a state institution."
+	],
+	"nevada": [
+		"Spanish for \"snow-covered\", from the Sierra Nevada on its western edge — which is odd for the driest state in the country.",
+		"The federal government owns about 80% of it, more than any other state.",
+		"Gambling was legalised in 1931 during the Depression, and the Hoover Dam was built the same decade."
+	],
+	"kansas": [
+		"From the Kansa people, whose name means \"people of the south wind\".",
+		"It is measurably flatter than a pancake, by an actual study that compared both.",
+		"Its 1954 Brown v. Board of Education case ended legal school segregation across the country."
+	],
+	"missouri": [
+		"From a Siouan word meaning \"those who have dugout canoes\", the name Illinois people used for their neighbours.",
+		"The Gateway Arch in St Louis marks where westward expansion began; the Oregon, Santa Fe and California trails all started in this state.",
+		"The 1857 Dred Scott case that helped precipitate the Civil War was filed in St Louis."
+	],
+	"virginia": [
+		"For Elizabeth I, the Virgin Queen — the oldest English place name in America, given in 1584.",
+		"Eight presidents were born here, more than any other state, and four of the first five.",
+		"Jamestown in 1607 was the first permanent English settlement, and the Civil War ended at Appomattox in this state."
+	],
+	"kentucky": [
+		"From an Iroquoian word, probably kentá:ke, \"on the meadow\" — not, as often claimed, \"dark and bloody ground\".",
+		"Mammoth Cave here is the longest cave system in the world, with over 680 km mapped and no end found.",
+		"It makes about 95% of the world’s bourbon, which must by law be aged in new charred oak."
+	],
+	"california": [
+		"From a fictional island in a 1510 Spanish romance, ruled by a black queen called Calafia — explorers thought the peninsula was that island.",
+		"If it were a country it would have one of the largest economies in the world.",
+		"It holds both the highest and lowest points in the contiguous states, Mount Whitney and Death Valley, 135 km apart."
+	],
+	"tennessee": [
+		"From Tanasi, a Cherokee town on the Little Tennessee river; the meaning is not known.",
+		"It borders eight states, tied with Missouri for the most.",
+		"Memphis and Nashville between them produced blues, rock and roll and country; Sun Studio recorded Elvis, Cash and Presley’s first single."
+	],
+	"oklahoma": [
+		"From Choctaw okla humma, \"red people\" — proposed by a Choctaw chief for the Indian Territory.",
+		"Sixty-seven tribes were relocated here, many along the Trail of Tears, and it has the second-largest Native American population.",
+		"The 1889 land runs opened it to settlers who raced for claims; those who slipped in early were called Sooners."
+	],
+	"north-carolina": [
+		"Carolina is from Carolus, Latin for Charles — for Charles I, and later confirmed for Charles II.",
+		"The Wright brothers flew at Kitty Hawk here in 1903, choosing it for the steady wind and soft sand.",
+		"Its Outer Banks are barrier islands that shift, and the graveyard of the Atlantic offshore has wrecked over a thousand ships."
+	],
+	"arkansas": [
+		"From a French rendering of a Quapaw name — which is why it is pronounced like Kansas’s neighbour but spelled with a silent s.",
+		"The Crater of Diamonds here is the only diamond mine in the world where the public may dig and keep what they find.",
+		"Walmart was founded in Bentonville in 1962 and is now the largest company in the world by revenue."
+	],
+	"arizona": [
+		"Probably from O’odham alĩ ṣon-ak, \"small spring\", through Spanish Arizonac.",
+		"The Grand Canyon is 446 km long and up to 1,857 m deep, cut by the Colorado over millions of years.",
+		"It does not observe daylight saving time, except on the Navajo Nation, which does."
+	],
+	"new-mexico": [
+		"Named by Spaniards in the 1560s, decades before there was a country called Mexico — so it is not \"new\" anything.",
+		"The first atomic bomb was detonated at Trinity here in July 1945, and Los Alamos designed it.",
+		"It has the highest share of Hispanic residents of any state, and Santa Fe is the oldest capital city in the country, from 1610."
+	],
+	"south-carolina": [
+		"The other half of Carolus, split from the north in 1712.",
+		"The Civil War began here when Confederate guns fired on Fort Sumter in Charleston harbour in April 1861.",
+		"Its Gullah communities on the Sea Islands kept a creole language and West African traditions more intact than anywhere else in the country."
+	],
+	"georgia": [
+		"For George II, who chartered it in 1732 as a colony for debtors and a buffer against Spanish Florida.",
+		"The largest state east of the Mississippi.",
+		"Martin Luther King was born in Atlanta, and the state produces most of America’s peanuts and pecans."
+	],
+	"alabama": [
+		"From the Alabama people, whose name may mean \"clearers of the thicket\".",
+		"The Montgomery bus boycott began here in 1955 and the Selma marches in 1965; the state is where the civil rights movement was decided.",
+		"Rockets for the Apollo programme were designed at Huntsville, which is why it is called Rocket City."
+	],
+	"mississippi": [
+		"From Ojibwe misi-ziibi, \"great river\".",
+		"The Delta here produced the blues, and Muddy Waters, B.B. King and Robert Johnson all came from within a hundred miles of each other.",
+		"Elvis Presley was born in Tupelo, and the state’s catfish farms supply most of the American crop."
+	],
+	"texas": [
+		"From Caddo táysha’, \"friend\" or \"ally\", which the Spanish heard as tejas — the state motto is simply \"Friendship\".",
+		"It was an independent republic from 1836 to 1845, and it is the only state that may legally fly its flag at the same height as the national one.",
+		"The second largest state, and its economy alone would be among the ten largest countries in the world."
+	],
+	"louisiana": [
+		"For Louis XIV, named by La Salle when he claimed the whole Mississippi basin for France in 1682.",
+		"The only state whose law derives from the Napoleonic Code rather than English common law, so it has parishes rather than counties.",
+		"The United States bought it from Napoleon in 1803 for about four cents a hectare, doubling the size of the country."
+	],
+	"florida": [
+		"Spanish for \"flowery\", named by Ponce de León in 1513 — probably for Pascua Florida, the Easter season, as much as for the vegetation.",
+		"The Everglades are a river 100 km wide and 15 cm deep, flowing so slowly it looks like a swamp.",
+		"It has the longest coastline in the contiguous states, and more golf courses than any other."
 	]
 }
