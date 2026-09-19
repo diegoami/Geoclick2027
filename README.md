@@ -4,7 +4,7 @@ A geography-learning game: pick a map, take a guided tour, then quiz
 yourself with drag-and-drop matching and spaced repetition. Portfolio
 project — see [ARCHITECTURE.md](ARCHITECTURE.md) for the full pitch.
 
-**Play it:** <https://zesty-centaur-40e7c5.netlify.app/> — the live web
+**Play it:** <https://geoclick.netlify.app/> — the live web
 app, built from `main`. No install or account needed; progress is kept
 in your browser.
 

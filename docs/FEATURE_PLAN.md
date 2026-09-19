@@ -105,7 +105,7 @@ Effort: **Low** is under an hour or so, **Medium** is a focused session,
 ### FT-01 — Link the live web app from the README · Low · deps: none
 
 - **Why:** FEATURE_BACKLOG.md §1: README.md never links to
-  <https://zesty-centaur-40e7c5.netlify.app/>. It's cheap and useful
+  <https://geoclick.netlify.app/>. It's cheap and useful
   whatever else happens.
 - **Do:** add a "Play it" link near the top of README.md. Placeholder
   mentions of downloads wait for FT-08.

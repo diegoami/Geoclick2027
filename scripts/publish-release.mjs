@@ -72,7 +72,7 @@ const banner = {
 const notes =
 	(stage ? banner[stage] : '') +
 	`${playerPart}\n\n---\n\n` +
-	`**Play in the browser:** https://zesty-centaur-40e7c5.netlify.app/\n\n` +
+	`**Play in the browser:** https://geoclick.netlify.app/\n\n` +
 	`Windows: run the \`-setup.exe\` (SmartScreen warns about an unknown publisher: *More info → Run anyway*). ` +
 	`Android: open the \`.apk\` on your phone and allow installing unknown apps. ` +
 	`Details and checksums: see the [README](https://github.com/${RELEASES_REPO}#download).\n`;

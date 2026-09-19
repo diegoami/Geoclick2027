@@ -26,7 +26,7 @@ guessed at.
 
 **Ask:** publish the desktop installer and the Android APK as downloadable
 artifacts on GitHub, plus make sure the live web app's link
-([zesty-centaur-40e7c5.netlify.app](https://zesty-centaur-40e7c5.netlify.app/))
+([geoclick.netlify.app](https://geoclick.netlify.app/))
 is easy to find. Question raised: the repo
 ([github.com/diegoami/Geoclick2027](https://github.com/diegoami/Geoclick2027))
 is **private** — confirmed directly via `gh repo view` — can binaries even

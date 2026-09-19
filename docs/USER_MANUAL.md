@@ -76,7 +76,7 @@ states or provinces are, and where its main towns and cities are.
 
 ## 2. Getting Geoclick
 
-- **In a web browser:** open https://zesty-centaur-40e7c5.netlify.app/.
+- **In a web browser:** open https://geoclick.netlify.app/.
   Nothing to install; it works in any recent browser, on a computer or a
   phone.
 - **Windows and Android apps:** download them from the public releases

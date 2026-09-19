@@ -6,7 +6,7 @@ brings back what you're about to forget. It works in English, German and
 Italian.
 
 **Play in your browser, nothing to install:**
-<https://zesty-centaur-40e7c5.netlify.app/>
+<https://geoclick.netlify.app/>
 
 This repository only holds the downloadable apps. The game's source code
 is kept elsewhere.

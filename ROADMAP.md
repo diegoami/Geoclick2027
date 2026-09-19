@@ -515,7 +515,7 @@ from script data, not a click event).
 **Deliverable:** a shareable URL anyone can open in a browser — no clone,
 no install — showing whatever the app can do at the time (tour mode at
 minimum, quiz mode once Iteration 4 lands). **Done:**
-[zesty-centaur-40e7c5.netlify.app](https://zesty-centaur-40e7c5.netlify.app/).
+[geoclick.netlify.app](https://geoclick.netlify.app/).
 
 Not part of the linear build order — pick this up whenever there's
 something worth showing off, no earlier than Iteration 3. See
@@ -711,7 +711,7 @@ zero console errors) before being pushed.
 
 ### Netlify — chosen
 
-Live: **[zesty-centaur-40e7c5.netlify.app](https://zesty-centaur-40e7c5.netlify.app/)**.
+Live: **[geoclick.netlify.app](https://geoclick.netlify.app/)**.
 `netlify.toml` merged from `deploy/netlify` into `main`; `deploy/vercel`
 and `deploy/github-pages` left as-is (their prep work stays valid if
 ever needed later, e.g. if Netlify's free tier stops fitting).

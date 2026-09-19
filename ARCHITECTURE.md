@@ -307,7 +307,10 @@ each in its own branch, to see which one actually works with the least
 fighting.
 
 **Netlify — chosen.** Live at
-[zesty-centaur-40e7c5.netlify.app](https://zesty-centaur-40e7c5.netlify.app/).
+[geoclick.netlify.app](https://geoclick.netlify.app/). The site was renamed from its
+generated name (`zesty-centaur-40e7c5`) on 2026-09-19; the old address is
+gone, so anything still quoting it — older release notes, the review of
+2026-09-14 — points at a 404.
 Confirmed to have exactly the properties Cloudflare didn't: `_redirects`
 only applies to genuinely unmatched paths (existing files win), and real
 HTTP Range-request support — the live deploy returns `206 Partial
