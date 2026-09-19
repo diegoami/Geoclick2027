@@ -5,6 +5,26 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
+## Unreleased
+
+**What the second look found.**
+
+For players:
+
+- **The fact card stops telling you what the map is already showing.** It
+  used to open with "In the north-west of the country. No coast of its own."
+  — which you can see for yourself. Now it leads with the name-fact, and
+  adds only what the map cannot show you: a region's biggest city, or a
+  town's region and how big it is against the others.
+- **Towns are easier to hit.** The tap area for a town was its dot and
+  nothing more. It is now about two and a half times wider, so a finger
+  lands on it without aiming.
+- **The tutorial cannot get stuck** at "now get one wrong on purpose". If
+  you placed the name it suggested correctly instead, it sat there waiting
+  for a mistake you could no longer make with it. It now asks for any name
+  on any wrong region, and if you finish the whole quiz without a single
+  mistake it lets you move on.
+
 ## v0.9.1 — 2026-09-19 — What the first look at v0.9.0 found
 
 **Three things the product owner asked for after trying v0.9.0**, one of

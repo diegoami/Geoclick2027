@@ -149,12 +149,15 @@
 				if (!cancelled) facts = loaded;
 			});
 
-			// Bound to both the polygon (targets-fill) and point
-			// (targets-circle) layers - a given map's tileset only ever has
-			// features for one of the two, so binding both is a harmless
-			// no-op for whichever doesn't apply. See MAPS.md's "Point-target
-			// design" section.
-			for (const layerId of ['targets-fill', 'targets-circle']) {
+			// Bound to the polygon layer (targets-fill) and to the point
+			// maps' invisible HIT layer (targets-hit), not to the dot itself -
+			// the dot is 9 px in radius and a finger needs about 22 (FT-46).
+			// A given map's tileset only ever has features for one of the two,
+			// so binding both is a harmless no-op for whichever does not
+			// apply. Never bind targets-circle as well: targets-hit covers it
+			// completely, so a tap would fire twice and undo itself. See
+			// MAPS.md's "Point-target design" section.
+			for (const layerId of ['targets-fill', 'targets-hit']) {
 				// A tap turns a name on, or off if it is already there (FT-39).
 				// The name stays until it is tapped again, so what is on the
 				// map is the set the player has chosen to study.

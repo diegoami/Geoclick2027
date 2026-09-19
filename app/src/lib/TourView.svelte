@@ -235,7 +235,6 @@
 				name={currentTarget.name}
 				fact={facts[currentTarget.id]}
 				hook={tourHook}
-				max={2}
 				bottom="4.25rem"
 			/>
 		{/if}

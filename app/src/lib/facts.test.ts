@@ -25,74 +25,58 @@ const seattle: Fact = {
 	position: 'north-west'
 };
 
-describe('factClauses', () => {
+describe('factClauses (FT-45: only what the map does not already show)', () => {
+	// This used to compose a whole sentence - position, coast, terrain, peak,
+	// neighbours, population, growth since 1950. The product owner's verdict
+	// after using it: the descriptions are "useless and distracting", and the
+	// reason why is the rule these tests pin - "I can see myself if it is on
+	// the north or on the south". The map shows you where a place is. What
+	// is left is what it does not show.
 	it('says nothing at all about a place it has no facts for', () => {
 		expect(factClauses(undefined)).toEqual([]);
-		expect(factClauses({})).toEqual([]);
 	});
 
-	it('puts where it is before what is in it', () => {
-		// The order is the argument of the feature: what fixes a place in the
-		// mind is first where it is, then what it is against, then numbers.
-		setLanguage('en');
-		expect(factClauses(piemonte)).toEqual([
-			'In the north-west of the country.',
-			'No coast of its own.',
-			'Highest point: Monte Rosa, 4,634 m.',
-			'Biggest city: Turin (1,652,000).',
-			"Borders Liguria, Lombardia and Valle d'Aosta."
-		]);
+	it('gives a region its biggest city, and nothing else', () => {
+		const clauses = factClauses(piemonte);
+		expect(clauses).toHaveLength(1);
+		expect(clauses[0]).toMatch(/Turin/);
+		expect(clauses[0]).toMatch(/1,652,000/);
 	});
 
-	it('leaves the authored name-facts out of the derived line', () => {
-		// They are the SECOND line of the card, rotating (FT-36) - mixing them
-		// into the derived clauses would lose that distinction.
-		setLanguage('en');
-		const clauses = factClauses({ ...piemonte, hooks: ['Named for the Longobards.'] });
-		expect(clauses.join(' ')).not.toContain('Longobards');
+	it('gives a town its region and its rank, and nothing else', () => {
+		const clauses = factClauses(seattle);
+		expect(clauses).toEqual(['In Washington.', 'No. 14 by population on this map.']);
 	});
 
-	it('prefers how a city grew over what it merely is', () => {
-		setLanguage('en');
-		expect(factClauses(seattle)).toContain('795,000 people in 1950, 3,074,000 today.');
-		expect(factClauses(seattle).join(' ')).not.toContain('About 3,074,000 people.');
+	it('never says where a place is - the map is already showing that', () => {
+		const said = [...factClauses(piemonte), ...factClauses(seattle)].join(' ');
+		expect(said).not.toMatch(/north|south|east|west/i);
+		expect(said).not.toMatch(/coast|landlocked/i);
 	});
 
-	it('gives the bare count when the city did not really grow', () => {
-		setLanguage('en');
-		const steady: Fact = { kind: 'city', population: 900000, population1950: 800000 };
-		expect(factClauses(steady)).toEqual(['About 900,000 people.']);
+	it('drops the other clauses too: terrain, peak, neighbours, growth', () => {
+		// The fields are still in the data and still parsed; they are simply
+		// not shown. Bringing one back is a line in factClauses.
+		const said = [...factClauses(piemonte), ...factClauses(seattle)].join(' ');
+		expect(said).not.toMatch(/Monte Rosa|Liguria|Lombardia|795,000|3,074,000/);
 	});
 
-	it('only calls a region landlocked, never a city', () => {
-		// "No coast of its own" is a fact about a region's border. An inland
-		// town is just a town.
-		setLanguage('en');
-		expect(factClauses({ kind: 'region', coastal: false })).toEqual(['No coast of its own.']);
-		expect(factClauses({ kind: 'city', coastal: false })).toEqual([]);
-	});
-
-	it('joins neighbours with the language’s own conjunction', () => {
-		setLanguage('de');
-		expect(factClauses({ borders: ['Bayern', 'Hessen', 'Sachsen'] })).toEqual([
-			'Grenzt an Bayern, Hessen und Sachsen.'
-		]);
-		setLanguage('it');
-		expect(factClauses({ borders: ['Lazio', 'Marche'] })).toEqual(['Confina con Lazio e Marche.']);
-		setLanguage('en');
+	it('says nothing where there is nothing left to say', () => {
+		expect(factClauses({ kind: 'region', position: 'north-west', coastal: true })).toEqual([]);
+		expect(factClauses({ kind: 'city', position: 'north-west' })).toEqual([]);
 	});
 
 	it('takes the city name in the reader’s own language', () => {
 		setLanguage('it');
-		expect(factClauses(piemonte)).toContain('Città più grande: Torino (1.652.000).');
+		expect(factClauses(piemonte)[0]).toMatch(/Torino/);
 		setLanguage('en');
+		expect(factClauses(piemonte)[0]).toMatch(/Turin/);
 	});
 
-	it('produces a filled sentence in every language, never a leftover slot', () => {
-		// A missing translation would leave {name} or {population} visible.
+	it('produces filled sentences in every language, never a leftover slot', () => {
 		for (const language of LANGUAGES) {
 			setLanguage(language);
-			for (const fact of [piemonte, seattle, { ...piemonte, terrain: ['ALPS'] }]) {
+			for (const fact of [piemonte, seattle]) {
 				const clauses = factClauses(fact);
 				expect(clauses.length).toBeGreaterThan(0);
 				expect(clauses.join(' ')).not.toMatch(/[{}]/);

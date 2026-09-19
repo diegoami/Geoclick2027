@@ -157,6 +157,21 @@
 				"circle-stroke-width": 1.5,
 				"circle-stroke-color": "#3f5d52"
 			}
+		},
+		{
+			"id": "targets-hit",
+			"type": "circle",
+			"source": "targets",
+			"source-layer": "targets",
+			"filter": ["==", ["geometry-type"], "Point"],
+			"metadata": {
+				"geoclick:note": "A town's tap target, not its dot (FT-46). Invisible - circle-opacity 0 - and 22 px in radius against the dot's 9, so a finger gets about 44 px to hit, the floor the language picker and the zoom buttons already use (review F8). MapLibre hit-tests geometry rather than painted pixels, so a fully transparent layer still answers clicks and queryRenderedFeatures. Views bind their click to THIS layer instead of targets-circle, never both: this circle covers that one completely, so two bindings would fire two handlers for one tap and toggle a name straight back off. Last in the list, so it sits above the dot - it paints nothing, so that costs no appearance. No tile rebuild was needed: it is a style layer over a source that already exists."
+			},
+			"paint": {
+				"circle-radius": 22,
+				"circle-color": "#000000",
+				"circle-opacity": 0
+			}
 		}
 	]
 }

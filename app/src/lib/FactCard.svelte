@@ -5,18 +5,23 @@
 	// The same card serves four screens, because the fact is the same fact
 	// wherever you meet it: tap a region in the Overview, click one in Known,
 	// resolve a name in the Quiz, or watch a step of the Tour. Each view
-	// decides WHEN to show it; this component only decides how it looks and
-	// how many clauses fit.
+	// decides WHEN to show it; this component only decides how it looks.
 	//
 	// It declares data-map-overlay="bottom" so mapFit.ts keeps the map clear
 	// of it (FT-25's contract, the same one the map bar uses at the top).
 	//
-	// On a small screen it shows ONE of its two lines at a time and rotates
-	// between them every few seconds (FT-42), because on a phone two lines
-	// are a real share of the screen and the map is the thing being learned.
-	// The rule for what counts as small lives in cardLines.ts; this file
-	// does the timing and the drawing only.
-	import { cardLines, nextLine, ROTATE_MS, SMALL_VIEWPORT_QUERY } from './cardLines';
+	// SHORTER since FT-45 (product owner, 2026-09-19). The card used to lead
+	// with a derived line composed from Natural Earth - "In the south of the
+	// country. No coast of its own. Biggest city: Milan." - above the
+	// authored name-fact. That line was "useless and distracting", and the
+	// reason is the principle behind the whole cut: the map already shows
+	// you where a place is. What survives is what the map does NOT show - a
+	// region’s biggest city, or a town’s region and its rank - and it sits
+	// UNDER the name-fact now rather than over it.
+	//
+	// That also removed FT-42's reason to exist: the small-screen rotation
+	// was built to alternate two full lines, and these two are short enough
+	// to show at once. `cardLines.ts` went with it.
 	import { factClauses, type Fact } from './facts';
 	import { t } from './i18n.svelte';
 
@@ -24,12 +29,12 @@
 		name,
 		fact,
 		hook,
-		max = 3,
 		bottom = '0.75rem',
 		onclose
 	}: {
 		/** The place the card is about. */
 		name: string;
+		/** Its derived fields; only a little of it is shown - see factClauses. */
 		fact: Fact | undefined;
 		/**
 		 * The rotating name-fact (FT-36): why the place is called what it is.
@@ -38,8 +43,6 @@
 		 * language change, say - must not advance it again.
 		 */
 		hook?: string;
-		/** How many clauses this screen has room for. */
-		max?: number;
 		/**
 		 * How far off the bottom of the map to sit. The Known screen has a
 		 * legend down there and the Quiz has a tray whose height the player
@@ -51,104 +54,26 @@
 	} = $props();
 
 	// Recomputed when the language changes, because t() is read inside.
-	const clauses = $derived(factClauses(fact).slice(0, max));
-	const derivedLine = $derived(clauses.join(' '));
-
-	// The two lines in the order a small screen shows them: name-fact first.
-	const lines = $derived(cardLines(derivedLine, hook));
-
-	// Whether this viewport gets one line at a time, and whether it wants
-	// the rotation at all. Both are live: a phone turned sideways crosses
-	// the threshold, and the motion setting can change while the app is open.
-	let small = $state(false);
-	let stillness = $state(false);
-	$effect(() => {
-		if (typeof matchMedia !== 'function') return;
-		const isSmall = matchMedia(SMALL_VIEWPORT_QUERY);
-		const wantsStillness = matchMedia('(prefers-reduced-motion: reduce)');
-		const sync = () => {
-			small = isSmall.matches;
-			stillness = wantsStillness.matches;
-		};
-		sync();
-		isSmall.addEventListener('change', sync);
-		wantsStillness.addEventListener('change', sync);
-		return () => {
-			isSmall.removeEventListener('change', sync);
-			wantsStillness.removeEventListener('change', sync);
-		};
-	});
-
-	// Someone who has asked for less motion gets the full card instead of a
-	// rotating one: text that changes under the reader IS motion, and the
-	// honest alternative is to show everything at once and spend the height.
-	// They lose map area rather than losing a line - see DECISIONS.md.
-	const rotating = $derived(small && !stillness && lines.length > 1);
-
-	let shown = $state(0);
-	// A new place starts its card at the beginning. Keyed on the text rather
-	// than on the name, because two places can share a name across maps and
-	// the same place re-rendered in another language is still the same place
-	// arriving fresh.
-	$effect(() => {
-		void lines.map((line) => line.text).join('\u0000');
-		shown = 0;
-	});
-
-	$effect(() => {
-		if (!rotating) return;
-		const count = lines.length;
-		const timer = setInterval(() => {
-			shown = nextLine(shown, count);
-		}, ROTATE_MS);
-		return () => clearInterval(timer);
-	});
-
-	// Guard against an index left behind by a card that had more lines.
-	const line = $derived(lines[Math.min(shown, lines.length - 1)]);
+	// One or two short clauses since FT-45 - a region's biggest city, or a
+	// town's region and rank - never the old paragraph.
+	const context = $derived(factClauses(fact).join(' '));
 </script>
 
-{#if lines.length > 0}
-	<div
-		class="fact-card"
-		class:is-rotating={rotating}
-		data-map-overlay="bottom"
-		data-testid="fact-card"
-		style="bottom: {bottom}"
-	>
+{#if hook || context}
+	<div class="fact-card" data-map-overlay="bottom" data-testid="fact-card" style="bottom: {bottom}">
 		<div class="fact-body">
-			{#if rotating}
-				<!-- One line at a time (FT-42). The name always stays, so the
-				     card never stops saying what it is about; only the line
-				     under it changes. aria-live is off deliberately: a line
-				     announced every five seconds would talk over the player,
-				     and anyone who has asked for less motion is not rotating
-				     at all and has both lines in front of them. -->
+			{#if hook}
 				<p class="fact-where">
 					<span class="fact-name">{name}</span>
-					<span
-						class="fact-text"
-						class:is-hook={line.kind === 'hook'}
-						data-testid={line.kind === 'hook' ? 'fact-hook' : 'fact-derived'}>{line.text}</span
-					>
+					<span class="fact-text" data-testid="fact-hook">{hook}</span>
 				</p>
-				<span class="fact-dots" aria-hidden="true" data-testid="fact-dots">
-					{#each lines as dotLine, i (dotLine.kind)}
-						<span class="fact-dot" class:is-on={i === shown}></span>
-					{/each}
-				</span>
-			{:else}
-				<p class="fact-where">
-					<span class="fact-name">{name}</span>
-					<span class="fact-text" data-testid="fact-derived">{derivedLine}</span>
+			{/if}
+			<!-- What little is left of the derived line. Under the name-fact,
+			     not over it: the name-fact is what the card is for. -->
+			{#if context}
+				<p class="fact-city" data-testid="fact-city">
+					{#if !hook}<span class="fact-name">{name}</span>{/if}{context}
 				</p>
-				<!-- Why it is called that (FT-36). A second line, not another
-				     clause: the derived line above says where the place is, and
-				     this says where its NAME comes from, which is the thing being
-				     learned. -->
-				{#if hook}
-					<p class="fact-hook" data-testid="fact-hook">{hook}</p>
-				{/if}
 			{/if}
 		</div>
 		{#if onclose}
@@ -198,16 +123,14 @@
 		color: #2b332e;
 	}
 	.fact-where,
-	.fact-hook {
+	.fact-city {
 		margin: 0;
 	}
-	/* Set apart from the line above it, and in the accent the app uses for
-	   anything it is offering rather than stating. */
-	.fact-hook {
-		margin-top: 0.3rem;
-		padding-top: 0.3rem;
-		border-top: 1px solid rgba(17, 24, 21, 0.09);
-		color: #6b4a22;
+	/* Quieter than the name-fact above it: it is context, not the point. */
+	.fact-city {
+		margin-top: 0.15rem;
+		color: #6b7770;
+		font-size: 0.75rem;
 	}
 	.fact-name {
 		font-weight: 700;
@@ -218,34 +141,10 @@
 		color: #7b877f;
 		font-weight: 400;
 	}
+	/* The accent the app uses for anything it is offering rather than
+	   stating. It was the second line's colour when there were two. */
 	.fact-text {
-		color: #3d4a42;
-	}
-	/* The rotating line keeps the colour it would have had as its own row,
-	   so the player can tell at a glance which of the two they are reading
-	   without the border that separates them on a large screen. */
-	.fact-text.is-hook {
 		color: #6b4a22;
-	}
-	.fact-dots {
-		display: flex;
-		gap: 0.25rem;
-		margin-top: 0.3rem;
-	}
-	.fact-dot {
-		width: 0.3rem;
-		height: 0.3rem;
-		background: rgba(17, 24, 21, 0.18);
-		border-radius: 999px;
-		transition: background-color 180ms ease;
-	}
-	.fact-dot.is-on {
-		background: #6b4a22;
-	}
-	@media (prefers-reduced-motion: reduce) {
-		.fact-dot {
-			transition: none;
-		}
 	}
 	.fact-close {
 		flex: none;

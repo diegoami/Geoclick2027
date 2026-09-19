@@ -96,16 +96,12 @@ pairs well with a canvas/map-heavy UI.
   reserves its space, and takes no pointer events, so a quiz drag that
   crosses it still lands on the map underneath.
 
-  **On a small screen it shows one line at a time** (v0.9.0, FT-42) and
-  rotates every five seconds, name-fact first. `cardLines.ts` holds the
-  whole rule - what counts as small (either viewport edge ≤ 700 px, so a
-  phone held sideways counts), the order of the lines, and the wrap - and
-  is pure and unit-tested; the component only does the timing and the
-  drawing. It watches `matchMedia` rather than a resize handler, so
-  turning a phone sideways crosses the threshold live. Under
-  `prefers-reduced-motion` it does not rotate and shows both lines
-  instead, because a changing line is motion and hiding half the content
-  is worse than spending the height.
+  **It shows one name-fact and at most one derived clause** (v0.9.1,
+  FT-45). The derived half used to be a composed sentence and led the card;
+  it was cut to what the map does not already show - a region's biggest
+  city, a town's region and rank - and moved under the name-fact. That
+  removed FT-42's small-screen rotation, which existed to alternate two
+  full lines, so `cardLines.ts` went with it.
 
 - **Name-facts, authored and rotating** (v0.8.0, FT-36). `data/facts/<country>.json`
   is the only hand-written content in the project: a list of one-sentence

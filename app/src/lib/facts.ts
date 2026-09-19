@@ -70,17 +70,10 @@ export async function fetchFacts(mapId: string): Promise<Facts> {
 	}
 }
 
-const POSITION_KEYS: Record<CompassPosition, TranslationKey> = {
-	north: 'fact.position.north',
-	south: 'fact.position.south',
-	east: 'fact.position.east',
-	west: 'fact.position.west',
-	'north-east': 'fact.position.northEast',
-	'north-west': 'fact.position.northWest',
-	'south-east': 'fact.position.southEast',
-	'south-west': 'fact.position.southWest',
-	centre: 'fact.position.centre'
-};
+// The position table and the name-joiner that used to live here went with
+// the clauses they served (FT-45): nothing says where a place is, or lists
+// its neighbours, any more. Their i18n keys are still in the dictionary, so
+// bringing a clause back is a small edit rather than a retranslation.
 
 /** A number the way the player's own language writes it. */
 export function formatCount(value: number, language = getLanguage()): string {
@@ -98,21 +91,34 @@ function localName(
 }
 
 /**
- * Joins names the way the language does: "a, b and c" / "a, b und c" /
- * "a, b e c". Only the final conjunction differs, so it is one key.
- */
-function joinNames(names: string[]): string {
-	if (names.length <= 1) return names[0] ?? '';
-	return `${names.slice(0, -1).join(', ')} ${t('fact.and')} ${names[names.length - 1]}`;
-}
-
-/**
- * The fact as an ordered list of short clauses, most useful first.
+ * The little that is left of the derived line (FT-45).
  *
- * The order is the argument of the whole feature: what fixes a place in the
- * mind is first where it is, then what it is against - the sea, a range -
- * and only then the numbers. The authored hook, when there is one, goes
- * first of all: it is the thing a person chose to say about this place.
+ * This used to compose a whole sentence from everything build-facts.ts
+ * knows - where the place is, whether it has a coast, what range crosses
+ * it, its highest point, its neighbours, its population and its growth
+ * since 1950 - in that order, on the argument that position fixes a place
+ * in the mind before numbers do.
+ *
+ * The product owner's verdict after using it (2026-09-19): "the descriptions
+ * like 'in the south of the country, no coast' are useless and distracting.
+ * They should be dropped... we can just keep the info about the Biggest
+ * City", and for a town, "you can keep the mention about the region and 3
+ * biggest town, but come on, I can see myself if it is on the north or on
+ * the south."
+ *
+ * That last clause is the principle for the whole cut: the map already
+ * shows you where a place is. A sentence that says it again is words in
+ * front of the thing they describe. What survives is what the map does
+ * NOT show - which region a town belongs to, how big it is against the
+ * others, which city is a region's largest:
+ *
+ *   region -> its biggest city
+ *   town   -> the region it is in, and its rank by population
+ *
+ * The rest of the pipeline is untouched: build-facts.ts still writes every
+ * field and facts.json still carries them. Bringing a clause back is one
+ * line here and nothing has to be rebuilt. What the unused fields cost in
+ * shipped bytes is recorded in MAPS.md.
  */
 export function factClauses(fact: Fact | undefined): string[] {
 	if (!fact) return [];
@@ -120,42 +126,18 @@ export function factClauses(fact: Fact | undefined): string[] {
 	const add = (key: TranslationKey, params?: Record<string, string | number>) =>
 		clauses.push(t(key, params));
 
-	if (fact.capitalOf === 'country') add('fact.capital');
-	if (fact.position) add(POSITION_KEYS[fact.position]);
-	if (fact.region) add('fact.cityIn', { region: fact.region });
-
-	if (fact.coastal === true) add('fact.coastal');
-	else if (fact.coastal === false && fact.kind === 'region') add('fact.landlocked');
-
-	if (fact.terrain?.length) add('fact.terrain', { name: fact.terrain[0] });
-	if (fact.peak) {
-		add('fact.peak', {
-			name: fact.peak.name,
-			elevation: formatCount(fact.peak.elevation)
-		});
+	if (fact.kind === 'city') {
+		if (fact.region) add('fact.cityIn', { region: fact.region });
+		if (fact.populationRank) add('fact.cityRank', { rank: fact.populationRank });
+		return clauses;
 	}
+
 	if (fact.largestCity) {
 		add('fact.largestCity', {
 			name: localName(fact.largestCity),
 			population: formatCount(fact.largestCity.population)
 		});
 	}
-	if (fact.populationRank) add('fact.cityRank', { rank: fact.populationRank });
-	if (fact.population) {
-		// Growth says more than a bare count, so it wins when both are known -
-		// "300 000 in 1950, 3 million now" is a fact about a place, where
-		// "3 million" is a fact about a number.
-		if (fact.population1950 && fact.population1950 * 1.5 < fact.population) {
-			add('fact.grew', {
-				before: formatCount(fact.population1950),
-				after: formatCount(fact.population)
-			});
-		} else {
-			add('fact.population', { population: formatCount(fact.population) });
-		}
-	}
-	if (fact.borders?.length) add('fact.borders', { names: joinNames(fact.borders) });
-
 	return clauses;
 }
 

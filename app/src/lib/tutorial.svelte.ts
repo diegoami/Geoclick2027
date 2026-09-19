@@ -97,6 +97,11 @@ export function tutorialExploreReveal(): void {
 	later({ type: 'reveal' }, 1000);
 }
 
+/** The quiz ran out of slips, so no further drop can happen. */
+export function tutorialQuizComplete(): void {
+	dispatch({ type: 'quizDone' });
+}
+
 /** The player pressed the Terrain button. */
 export function tutorialTerrainToggled(): void {
 	// Longer than the others: the layer has to fetch and draw before the

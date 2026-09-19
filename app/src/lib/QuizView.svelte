@@ -11,7 +11,7 @@
 	import MapNav from './MapNav.svelte';
 	import { t, tPlural } from './i18n.svelte';
 	import { mapDisplayName } from './mapCatalog';
-	import { tutorialDrop } from './tutorial.svelte';
+	import { tutorialDrop, tutorialQuizComplete } from './tutorial.svelte';
 	import { DOT_CLEARANCE_PX, registerLabel } from './labelCollision';
 	import { forgetRound, rememberRound, roundInProgress } from './quizRound';
 	import FactCard from './FactCard.svelte';
@@ -221,6 +221,14 @@
 	// forcing a replay. Reset whenever a new session starts, so the next
 	// completion shows the panel again.
 	let scorePanelDismissed = $state(false);
+
+	// Tell the tutorial when the tray is empty (FT-44). Its "get one wrong on
+	// purpose" step waits for a wrong drop, and a player who places every
+	// region correctly can no longer make one - without this the step waits
+	// for something that can never happen.
+	$effect(() => {
+		if (complete) tutorialQuizComplete();
+	});
 
 	$effect(() => {
 		if (complete && score && !summarySaved) {
@@ -769,7 +777,6 @@
 			name={told.name}
 			fact={facts[told.id]}
 			hook={told.hook}
-			max={2}
 			bottom="calc({trayHeightPx ?? trayMinPx}px + 0.5rem)"
 			onclose={() => (told = undefined)}
 		/>

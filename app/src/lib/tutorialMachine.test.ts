@@ -187,6 +187,70 @@ describe('tutorial machine', () => {
 		expect(showsNext(state)).toBe(true);
 	});
 
+	// FT-44. Reported by the product owner: at "get one wrong on purpose", he
+	// put Sardegna in the RIGHT place. The step waits for a wrong drop, so it
+	// sat there - and Sardegna, the name the copy tells you to use, was gone
+	// from the tray.
+	describe('the wrong-drop step cannot trap the player', () => {
+		const atWrongDrop = play(
+			[
+				{ type: 'next' },
+				route('explore'),
+				{ type: 'gesture' },
+				{ type: 'reveal' },
+				{ type: 'terrain' },
+				route('overview'),
+				route('quiz'),
+				{ type: 'drop', correct: true }
+			],
+			atIntro
+		).state;
+
+		it('still waits for a wrong drop while the quiz has names left', () => {
+			expect(STEPS[atWrongDrop.step].id).toBe('wrong-drop');
+			// Placing more names correctly does not satisfy it, and must not:
+			// the step is there to show what a mistake looks like.
+			const more = play([{ type: 'drop', correct: true }], atWrongDrop).state;
+			expect(STEPS[more.step].id).toBe('wrong-drop');
+			expect(showsNext(more)).toBe(false);
+		});
+
+		it('offers Next once the quiz is finished, when no wrong drop is possible', () => {
+			// Place everything correctly and the tray empties. Without this the
+			// step waits for something that can never happen and the only way
+			// out is Skip.
+			const finished = play([{ type: 'quizDone' }], atWrongDrop).state;
+			expect(STEPS[finished.step].id).toBe('wrong-drop');
+			expect(showsNext(finished)).toBe(true);
+			expect(STEPS[play([{ type: 'next' }], finished).state.step].id).toBe('check-overview');
+		});
+
+		it('a finished quiz never advances a step by itself', () => {
+			// It is a flag, not an action: it must not skip the player past the
+			// step they are on.
+			const same = play([{ type: 'quizDone' }], atWrongDrop).state;
+			expect(same.step).toBe(atWrongDrop.step);
+		});
+
+		it('frees the correct-drop step too, for the same reason', () => {
+			const atCorrectDrop = play(
+				[
+					{ type: 'next' },
+					route('explore'),
+					{ type: 'gesture' },
+					{ type: 'reveal' },
+					{ type: 'terrain' },
+					route('overview'),
+					route('quiz')
+				],
+				atIntro
+			).state;
+			expect(STEPS[atCorrectDrop.step].id).toBe('correct-drop');
+			expect(showsNext(atCorrectDrop)).toBe(false);
+			expect(showsNext(play([{ type: 'quizDone' }], atCorrectDrop).state)).toBe(true);
+		});
+	});
+
 	it('Skip ends the tutorial from any step and keeps the player where they are', () => {
 		const { state, effects } = play(
 			[{ type: 'next' }, route('explore'), { type: 'skip' }],

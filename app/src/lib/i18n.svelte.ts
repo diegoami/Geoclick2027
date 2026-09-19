@@ -275,7 +275,7 @@ const en: Dictionary = {
 	'tutorial.step6':
 		'Drag a name from the tray onto its region. Try **Sicilia**: the big island off the toe of the boot.',
 	'tutorial.step7':
-		'Now get one wrong on purpose: drop **Sardegna** anywhere on the mainland. The region you hit flashes red, and Sardegna is shown where it really is.',
+		'Now get one wrong on purpose: drag **any** name onto a region it does not belong to — **Sardegna** onto the mainland, say. The region you hit flashes red, and the name is shown where it really belongs.',
 	'tutorial.step8': 'Not sure where a region is? Look it up in the **overview**.',
 	'tutorial.step9': 'Found Sardegna? Go back to the **Quiz**.',
 	'tutorial.step10':
@@ -414,7 +414,7 @@ const de: Dictionary = {
 	'tutorial.step6':
 		'Ziehe einen Namen aus der Ablage auf seine Region. Versuch es mit **Sicilia**, der großen Insel vor der Stiefelspitze.',
 	'tutorial.step7':
-		'Jetzt ein Fehler mit Absicht: Lege **Sardegna** irgendwo auf dem Festland ab. Die getroffene Region blinkt rot, und Sardegna wird dort gezeigt, wo sie wirklich liegt.',
+		'Jetzt ein Fehler mit Absicht: Zieh **irgendeinen** Namen auf eine Region, zu der er nicht gehört — zum Beispiel **Sardegna** aufs Festland. Die getroffene Region blinkt rot, und der Name wird dort gezeigt, wo er wirklich hingehört.',
 	'tutorial.step8': 'Nicht sicher, wo eine Region liegt? Schau in der **Übersicht** nach.',
 	'tutorial.step9': 'Sardegna gefunden? Dann zurück zum **Quiz**.',
 	'tutorial.step10':
@@ -553,7 +553,7 @@ const it: Dictionary = {
 	'tutorial.step6':
 		"Trascina un nome dal vassoio sulla sua regione. Prova con **Sicilia**, l'isola grande davanti alla punta dello stivale.",
 	'tutorial.step7':
-		'Ora sbaglia apposta: lascia **Sardegna** in un punto qualsiasi della penisola. La regione che hai toccato lampeggia in rosso e Sardegna viene mostrata dove si trova davvero.',
+		'Ora sbaglia apposta: trascina **un nome qualsiasi** su una regione a cui non appartiene — per esempio **Sardegna** sulla penisola. La regione che hai toccato lampeggia in rosso e il nome viene mostrato dove si trova davvero.',
 	'tutorial.step8': "Non sai dov'è una regione? Controlla nella **panoramica**.",
 	'tutorial.step9': 'Trovata la Sardegna? Torna al **Quiz**.',
 	'tutorial.step10':
