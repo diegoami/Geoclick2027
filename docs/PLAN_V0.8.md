@@ -8,8 +8,9 @@ where it is — and a name with nothing attached to it is a name you
 re-learn every session, which is exactly what the ladder and the scheduler
 are fighting against.
 
-**Status: planned.** The product decisions below were taken by the product
-owner on 2026-09-19; no task is started.
+**Status: in progress.** FT-33 merged 2026-09-19; FT-37 was added the same
+day, after the product owner saw it working. The ledger near the bottom is
+the current state.
 
 Input: the product owner's request — _"When I am on a new map I have no
 clue how to start learning regions and cities. I start clicking around, the
@@ -209,6 +210,42 @@ Two things the plan did not anticipate:
   layers and any per-map exception; toggle survives a reload; with Terrain
   off the map is what it was before.
 
+### FT-37 — Peaks, and the lines round the world · Medium · deps: FT-33
+
+Added 2026-09-19, after the product owner saw FT-33 working and asked what
+else could hang a name on something: _"any other landmarks that could help
+with mnemonics? Such as volcanoes, mountain peaks, national parks and
+whatever. Anything that could help with memory hooks."_ Two of the
+candidates measured well enough to build; the rest are recorded under "Out
+of scope" with the numbers that ruled them out.
+
+- **Named peaks** — `ne_10m_geography_regions_elevation_points`, 711
+  worldwide with an elevation and German/Italian names. Median 8 per map,
+  and **58 of 63 maps have at least one**; the five that do not (the
+  Netherlands, Portugal, the Finnish and Swedish towns maps) are flat
+  countries, so an empty layer there is correct rather than a gap. The
+  quality is the point: Italy gets Mont Blanc, Monte Rosa, Matterhorn,
+  Monte Etna and Corno Grande, Japan gets Fuji, Turkey gets Mount Ararat,
+  Colombia gets Nevado del Ruiz and Volcán Galeras. Natural Earth does not
+  flag volcanoes as such, but the famous ones are all in this file.
+- **The great circles** — `ne_10m_geographic_lines`, six features and
+  30 KB: Equator, both Tropics, both Polar Circles, the Date Line. A hook
+  for about a dozen countries and almost free, with nothing to curate:
+  Manaus sits on the Equator, Cairo just north of the Tropic of Cancer,
+  Rovaniemi on the Arctic Circle.
+- **Do:** two more `fetch` lines; two more layers in the terrain tileset
+  (`peaks` as points with `elevation`, `lines` as lines with `name`); a
+  small triangle marker plus the name and height for a peak, and a thin
+  dashed line with its name for a circle. Both inside the existing Terrain
+  toggle — this is the same switch, not a second one. Peaks are filtered by
+  the same label box as the other names, and ranked for collisions by
+  height, so the tallest wins.
+- **Tests:** the peak filter and its ranking, pure and unit-tested; a
+  browser check that Italy draws Mont Blanc and Etna and that Egypt draws
+  the Tropic of Cancer.
+- **DoD:** gates green; terrain tilesets rebuilt with `--all --force` and
+  the new total reported; MAPS.md updated.
+
 ### FT-34 — The derived fact · High · deps: FT-33
 
 - **Why:** 2 235 rows need something true to say, and no one is going to
@@ -235,6 +272,19 @@ Two things the plan did not anticipate:
     named terrain;
   - per **region**: type and local name, who it borders, its biggest city,
     coastal or landlocked, which ranges or deserts cross it.
+- **Wikidata, added to this task 2026-09-19** (the product owner's call,
+  when asking after volcanoes and national parks). Natural Earth has no
+  worldwide dataset for either — its parks file is the United States only,
+  61 features — but it does carry a **Wikidata id for 94 % of admin-1 rows
+  and 98 % of populated places**, so every target can be addressed
+  precisely, with no fuzzy name matching. Wikidata is **CC0**: no
+  attribution obligation, unlike OpenStreetMap (ODbL, share-alike) or the
+  Smithsonian volcano catalogue. Queried once at build time and baked into
+  the committed `facts.json`, so the app still needs no network. What it can
+  give that Natural Earth cannot: volcanoes, national parks, UNESCO World
+  Heritage sites, and each region's own highest point. **Proved on one
+  country first**, before anything is promised for the other 27 — if the
+  answers come back thin or wrong, the task still ships on its derived half.
 - **Reuse, do not rebuild:** adjacency is already computed by
   `data/scripts/mapColors.ts` for graph colouring — that is the `borders`
   list, for free. `overallBboxOf` gives "north-west of the country".
@@ -290,24 +340,41 @@ Two things the plan did not anticipate:
 
 ## Order
 
-FT-33 → FT-34 → FT-35 → FT-36, strictly: the terrain data is what FT-34's
-`terrain` field reads, FT-34's output is what FT-35 renders, and there is no
-point reviewing hooks before they can be seen in place.
+FT-33 → FT-37 → FT-34 → FT-35 → FT-36, strictly: the terrain data is what
+FT-34's `terrain` field reads, FT-34's output is what FT-35 renders, and
+there is no point reviewing hooks before they can be seen in place. FT-37
+comes second rather than last despite its number — it extends the tileset
+FT-33 just built, so doing it before FT-34 means the terrain tilesets are
+rebuilt once instead of twice.
 
 **→ Release `v0.8.0`** per [RELEASES.md](RELEASES.md): a beta pre-release for
 the product owner's test on the phone first, then the stable release.
 
 ## Progress ledger
 
-| Task  | State                 | Merge | Notes                                                                                                                                                                                             |
-| ----- | --------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| FT-33 | **awaiting approval** | —     | terrain in its own archive per map, not inside `tiles.pmtiles` — so no existing tileset changed; 4.94 MB over 63 maps, off by default; labels trilingual from the source; `--drop-rate=1` was load-bearing |
-| FT-34 | not started | —     |       |
-| FT-35 | not started | —     |       |
-| FT-36 | not started | —     |       |
+| Task  | State       | Merge     | Notes                                                                                                                                                                                                                                                                                          |
+| ----- | ----------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| FT-33 | **merged**  | `5a00902` | terrain in its own archive per map, not inside `tiles.pmtiles` — so no existing tileset changed; 4.94 MB over 63 maps, off by default; labels trilingual from the source; `--drop-rate=1` was load-bearing; the fills above it dim while it is on, after the product owner found it unreadable |
+| FT-37 | not started | —         |                                                                                                                                                                                                                                                                                                |
+| FT-34 | not started | —         |                                                                                                                                                                                                                                                                                                |
+| FT-35 | not started | —         |                                                                                                                                                                                                                                                                                                |
+| FT-36 | not started | —         |                                                                                                                                                                                                                                                                                                |
 
 ## Out of scope
 
+- **Landmarks that measured badly** (2026-09-19, checked against all 63
+  maps rather than assumed):
+  - **National parks.** Natural Earth's `parks_and_protected_lands` is the
+    **United States only** — 61 features, extent −167° to −78°. One country
+    of 28. Worldwide parks need Wikidata (folded into FT-34).
+  - **Airports.** 1 659 placements and every map has some, so coverage is
+    not the problem — usefulness is. An airport sits at a city the player
+    is already learning, so it mostly restates a dot already on screen.
+  - **Glaciated areas.** 1.6 MB, and meaningful only for Canada, Russia and
+    the Nordics; dead weight on the other fifty maps.
+  - **Urban areas** (12.8 MB) and **roads/railroads** (8.9 / 14.8 MB): too
+    heavy, and on a towns map the built-up blob arguably hints at the
+    answer the player is meant to find.
 - **The news line.** The product owner asked for it as a bonus — facts kept
   current, "somewhat related to geography". Fetching anything current needs
   the network, and the desktop and Android builds must work with none. The
