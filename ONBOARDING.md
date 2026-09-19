@@ -541,6 +541,16 @@ that same discipline into any task you pick up:
     banner, a second bar - only has to say where it is. The quiz passes
     its tray's height in as well, because it sets that height and fits in
     the same tick, before the DOM has it.
+  - **The fact card is responsive on its own** (FT-42). Views pass it the
+    same props whatever the screen; it reads `matchMedia` itself and, on a
+    small viewport, shows one of its two lines at a time and rotates them.
+    The rule lives in `cardLines.ts`, not in the component and not in a
+    media query in CSS, because it also has to drive a timer — so it is a
+    pure function with unit tests. If you are adding a screen that uses
+    the card, you do not have to do anything for phones. **Small means
+    either edge ≤ 700 px**, not width alone: that is deliberate, so a
+    phone held sideways counts, and it is the one breakpoint in the app
+    that does not follow the usual width-only rule.
   - `window.__map` is the real MapLibre map of whichever map view is
     open, on the dev server only (`createMap`). Browser checks use it for
     `map.project(lngLat)` - the screen position of a place - which is how

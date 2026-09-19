@@ -12,6 +12,12 @@ one entry per tagged version on `main`.
 
 For players:
 
+- **On a phone the fact card shows one line at a time**, and changes to
+  the other every few seconds — the name-fact first, because that is the
+  one worth having if you only read one. Two lines are a real share of a
+  phone screen, and the map is the thing you are learning. Tablets and
+  desktops are unchanged, and so is the card for anyone whose device asks
+  for less motion: that one shows both lines and stays still.
 - **Every place on every map now says where its name comes from.** All 28
   countries, all 63 maps, all 2 235 places — 5 448 sentences, at least three
   for every place, so the card keeps saying something new. Hiroshima is

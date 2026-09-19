@@ -13,6 +13,45 @@ Keep this updated the same way as the other docs: when a decision gets
 made, made explicitly to correct an earlier one, or gets revisited, add
 or amend an entry here as part of that change, not as an afterthought.
 
+## One line at a time on a small screen (2026-09-19, FT-42)
+
+- **The fact card shows one of its two lines at a time on a phone**, and
+  rotates between them. Raised by the product owner while FT-39 was being
+  merged: "when it comes to phone and tablets we might have to make cuts,
+  we might want to show one line and then we rotate." The card is
+  something to read; the map is the thing being learned, and on a phone
+  two lines are a real share of it.
+- **"Small" means EITHER dimension ≤ 700 px**, not width alone (product
+  owner, 2026-09-19). A phone held sideways is wide but short, and short
+  is the case that costs the map its space — a width-only breakpoint,
+  which is what the rest of the app uses, would miss exactly the worst
+  case. The rule is one pure function, `isSmallViewport` in
+  `cardLines.ts`, so it can be tested without a browser.
+- **It rotates on a timer, every 5 s**, rather than on a tap or a swipe
+  (product owner, same day). A tap would need the card to accept pointer
+  events, which FT-35 deliberately refused so that a quiz drag crossing
+  the card still reaches the map; a swipe would compete with both the
+  map's pan and the quiz's drag. A timer needs no gesture at all.
+- **The name-fact leads** (product owner, same day). It is the half he
+  called the thing he had not seen in other programs, so if a player
+  reads only one line it should be that one. Note this is the *opposite*
+  order to the large-screen card, where the derived line sits physically
+  on top — that layout is FT-35's and is unchanged. The order only
+  governs which comes first when they are shown one at a time.
+- **Anyone who has asked for less motion gets the whole card instead.**
+  Text that changes under the reader is motion, so `prefers-reduced-
+  motion: reduce` turns the rotation off — and then showing one line
+  would simply hide half the content, so both are shown and the height is
+  spent. Those players trade map area for completeness, which is the
+  right way round for an accessibility fallback.
+- **The saving is real but smaller than "one line instead of two"
+  sounds**: measured over five Italian regions, 29 px upright (3.4% of an
+  850 px screen) and 22 px sideways (5.5% of a 400 px one). The reason is
+  that a name-fact is a whole sentence and wraps to two or three *visual*
+  lines at 400 px wide, so removing one *logical* line removes less than
+  half the card. Shortening the sentences for small screens, or clamping
+  the visible text, would buy more; neither was in scope here.
+
 ## Quiz mechanic
 
 - **Drag-and-drop slip matching, not flashcard recognition/recall.** A
