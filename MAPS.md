@@ -933,6 +933,14 @@ file is `italy-provinces` at 64 KB. `facts.json` is fetched lazily and per
 map, so what matters is that per-map figure, not the total; no map's file
 approaches the size of its tileset.
 
+Since FT-45 the app reads only four of those fields - `hooks`, `kind`,
+`largestCity`, and `region`/`populationRank` for a town. The rest are still
+written and still shipped: about **0.20 MB of the 1.4 MB** across all 63
+maps is fields nothing currently displays. That is deliberate. Keeping them
+means a dropped clause can come back in one line of `factClauses` with no
+rebuild of anything; the alternative saves a fifth of a megabyte and makes
+that a data migration. Revisit if the figure grows.
+
 **Coverage over the 2 235 targets** (measured 2026-09-19, 503 KB in total):
 
 | Field                    | Targets   |     | Field            | Targets   |

@@ -58,10 +58,13 @@
 				if (!cancelled) facts = loaded;
 			});
 
-			// Tap or click a place to be told what it is. Bound to both target
-			// layers, as every view does: a map's tileset only ever has
-			// features for one of the two (MAPS.md, "Point-target design").
-			for (const layerId of ['targets-fill', 'targets-circle']) {
+			// Tap or click a place to be told what it is. Bound to the polygon
+			// layer and to the point maps' invisible HIT layer, not to the dot
+			// itself - the dot is 9 px in radius and a finger needs about 22
+			// (FT-46). A map's tileset only ever has features for one of the
+			// two (MAPS.md, "Point-target design"). Never bind targets-circle
+			// as well: targets-hit covers it, so a tap would fire twice.
+			for (const layerId of ['targets-fill', 'targets-hit']) {
 				map.on('click', layerId, (e: maplibregl.MapLayerMouseEvent) => {
 					const name = e.features?.[0]?.properties?.name as string | undefined;
 					const target = loadedMapDef.targets.find((t) => t.name === name);

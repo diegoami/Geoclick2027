@@ -190,6 +190,7 @@ export interface Done {
 	gesture: boolean;
 	reveal: boolean;
 	terrain: boolean;
+	quizDone: boolean;
 	correctDrop: boolean;
 	wrongDrop: boolean;
 }
@@ -212,6 +213,7 @@ export type TutorialEvent =
 	| { type: 'gesture' }
 	| { type: 'reveal' }
 	| { type: 'terrain' }
+	| { type: 'quizDone' } // no slips left, so no further drop is possible
 	| { type: 'drop'; correct: boolean };
 
 export type Effect =
@@ -221,6 +223,7 @@ const noneDone: Done = {
 	gesture: false,
 	reveal: false,
 	terrain: false,
+	quizDone: false,
 	correctDrop: false,
 	wrongDrop: false
 };
@@ -245,6 +248,11 @@ export function isStepDone(state: TutorialState, index = state.step): boolean {
 		case 'terrain':
 			return state.done.terrain;
 		case 'drop':
+			// A finished quiz counts as done for either drop step. Without
+			// this, a player who places every region correctly can never make
+			// the wrong drop the step is waiting for, and the tutorial has no
+			// way forward but Skip.
+			if (state.done.quizDone) return true;
 			return advance.correct ? state.done.correctDrop : state.done.wrongDrop;
 		default:
 			return false;
@@ -329,6 +337,13 @@ export function transition(
 		case 'back':
 			if (state.status !== 'running' || !step.numbered || state.step <= 1) return same;
 			return goTo(state, state.step - 1);
+
+		case 'quizDone': {
+			// Only a flag: it makes Next appear on a drop step (above), and
+			// never advances a step by itself.
+			if (state.status === 'idle') return same;
+			return { state: { ...state, done: { ...state.done, quizDone: true } }, effects: [] };
+		}
 
 		case 'gesture':
 		case 'reveal':

@@ -13,7 +13,52 @@ Keep this updated the same way as the other docs: when a decision gets
 made, made explicitly to correct an earlier one, or gets revisited, add
 or amend an entry here as part of that change, not as an afterthought.
 
-## One line at a time on a small screen (2026-09-19, FT-42)
+## The card says only what the map does not (2026-09-19, FT-45)
+
+- **The derived line is gone, bar a clause.** It composed a whole sentence
+  from Natural Earth - where the place is, whether it has a coast, what
+  range crosses it, its highest point, its neighbours, its population and
+  its growth since 1950. The product owner's verdict after using it: "the
+  descriptions like 'in the south of the country, no coast' are useless and
+  distracting. They should be dropped."
+- **The reason is the rule for anything added here later**: "I can see
+  myself if it is on the north or on the south." The map is already showing
+  you where a place is. A sentence that repeats it puts words in front of
+  the thing they describe. What earns its place is what the map does *not*
+  show.
+- **So what survives is exactly that.** A region keeps its biggest city; a
+  town keeps the region it belongs to and its rank by population. Nothing
+  keeps a compass point, a coastline, a summit or a neighbour list.
+- **The name-fact now leads the card**, with that clause underneath it in
+  smaller, quieter type. It used to be the other way round.
+- **The data is untouched.** `build-facts.ts` still writes every field and
+  `facts.json` still carries them; only `factClauses` chose to stop reading
+  them. Bringing a clause back is one line and no rebuild. The cost of that
+  choice is about 0.20 MB of the 1.4 MB of facts shipped in every build -
+  recorded in MAPS.md rather than quietly paid.
+- **This undid FT-42.** The small-screen rotation existed to alternate two
+  full lines; one line and a short clause fit together on a phone, so
+  `cardLines.ts` and its tests were deleted rather than left as a mechanism
+  with nothing to rotate. The entry below is kept for the reasoning, which
+  still holds if a second line ever comes back.
+
+## A town's tap target is not its dot (2026-09-19, FT-46)
+
+- **An invisible 22 px circle sits over every 9 px town dot**, and the click
+  binds to that. The product owner: "on the known map, the clicking area for
+  towns may be too small." It was exactly the dot - 18 px across, fine for a
+  mouse and well under the 44 px this app already treats as the floor for a
+  finger (the language picker, the zoom buttons, review F8).
+- **Bind to the hit layer or the dot, never both.** The hit circle covers
+  the dot completely, so two bindings would fire two handlers for one tap
+  and toggle a name straight back off. Both MapView and OverviewView bind
+  `targets-hit`, not `targets-circle`.
+- **It costs nothing to draw and nothing to rebuild.** MapLibre hit-tests
+  geometry rather than painted pixels, so a fully transparent layer still
+  answers clicks; and it is a style layer over a source that already exists,
+  so no tileset changed.
+
+## One line at a time on a small screen (2026-09-19, FT-42) — superseded by FT-45
 
 - **The fact card shows one of its two lines at a time on a phone**, and
   rotates between them. Raised by the product owner while FT-39 was being
