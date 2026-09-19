@@ -196,7 +196,7 @@ the product owner's test on the phone first, then the stable release.
 | ----- | ---------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | FT-27 | **merged** | `434d703` | slice flags + same-name disambiguation, both pure and unit-tested; the italy-towns rebuild came out byte-identical; three US name typos fixed                    |
 | FT-28 | **merged** | `2d59d4c` | four maps: 50 over a million, then East 82 / Center 48 / West 44; four source name errors fixed; crowding measured against japan-towns                           |
-| FT-29 | todo       | —         |                                                                                                                                                                  |
+| FT-29 | **merged** | `9bf05f1` | slice flags on the polygon builder; North 52 / Center 24 / South 34, each readable at the zoom it opens at (94-100% of names against the full map 50%)           |
 | FT-30 | **merged** | `f18435e` | twelve maps, 60 maps in 28 countries now; three Vietnamese provinces renamed from their macro-regions, Colombia placeholder excluded, Turkey duplicate collapsed |
 | FT-31 | **merged** | `2993b65` | a search box over country and map label, language-aware; catalog sorted alphabetically                                                                           |
 | FT-32 | **merged** | `6d56b74` | tab renamed Known, ladder thresholds kept; touch targets 38x44 / 44x44 / 40x40; accessibility tree checked; 30 screenshots retaken                               |
