@@ -1,5 +1,11 @@
 # v0.10.0 — The name-facts in your own language (planned 2026-09-19)
 
+> **Queued behind v0.9.4.** On 2026-09-20 the product owner put the code
+> review's eight issues ahead of this: [PLAN_V0.9.4.md](PLAN_V0.9.4.md),
+> FT-52 to FT-59, all eight in the next release. This plan keeps its
+> number and its three unanswered product decisions; nothing here has
+> changed except when it starts.
+
 ## Why
 
 Geoclick is trilingual everywhere except the one place a player actually

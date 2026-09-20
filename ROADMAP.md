@@ -89,6 +89,24 @@ Check items off as they land; update "Status" as iterations complete.
   **There is no stable v0.8.0**: that programme only ever shipped as
   `v0.8.0-beta.1`, and v0.9.0 carries all of it, so it supersedes that
   beta rather than following it.
+- **v0.9.1 to v0.9.3 shipped 2026-09-19** — Terrain on by default and the
+  language switcher rebuilt (v0.9.1); the fact card cut back to what the
+  map cannot show and a bigger tap target for towns (v0.9.2, FT-45/FT-46);
+  the name origin pinned as the card's first line (v0.9.3, FT-47). Each
+  entry is in [CHANGELOG.md](CHANGELOG.md).
+- **v0.9.4 planned 2026-09-20, nothing started**:
+  [docs/PLAN_V0.9.4.md](docs/PLAN_V0.9.4.md) — "the review's eight".
+  The other session's code review filed GitHub issues #1-#8; all eight were
+  verified against the source on 2026-09-20 and all eight hold. The product
+  owner put them ahead of v0.10.0 and asked for all eight in the next
+  release: FT-52 (antimeridian wrapping read from the bbox — Chukotka's
+  label currently scores a negative area), FT-53 (terrain labels follow a
+  language switch), FT-54 (terrain-off honoured during the first load),
+  FT-55 (the tutorial's Back/Resume reaches the Overview route), FT-56
+  (validate the `tour.json` that ships, not `tourOrder`), FT-57 (storage
+  failures stay out of gameplay), FT-58 (build the static assets instead of
+  committing symlinks), FT-59 (one component test across QuizView's seams).
+  No product decisions are needed; **v0.10.0 queues behind it**.
 - **Not started**: everything else below.
 - **Next up**: motion/feedback design (reveal animations, streak
   indicators, sound, correct-drop juiciness) and a broader component/

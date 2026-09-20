@@ -21,7 +21,8 @@ before any work starts.
 | Remediation programme | Closed with v0.2.0 ([REMEDIATION_PLAN.md](REMEDIATION_PLAN.md)) |
 | Feature programme | Closed with v0.5.0 ([FEATURE_PLAN.md](FEATURE_PLAN.md)) |
 | Since then | Per-release plans: [PLAN_V0.6.md](PLAN_V0.6.md) through [PLAN_V0.9.md](PLAN_V0.9.md), each with its own ledger |
-| Next | [PLAN_V0.10.md](PLAN_V0.10.md) — **blocked on three product decisions**, see "How to resume" |
+| Next | [PLAN_V0.9.4.md](PLAN_V0.9.4.md) — **the review's eight issues, FT-52 to FT-59.** Planned 2026-09-20, nothing started. All eight ship in v0.9.4; the product owner put them ahead of v0.10.0 |
+| After that | [PLAN_V0.10.md](PLAN_V0.10.md) — translating the name-facts, still **blocked on three product decisions**, see "How to resume" |
 
 Shipped since the v0.5.0 handover, in one paragraph each:
 
@@ -65,8 +66,15 @@ the generated one.
 
 ## How to resume
 
-v0.10.0 is planned but **cannot start**: it needs three answers from the
-product owner (PLAN_V0.10.md, "Product decisions needed") —
+**Start with [PLAN_V0.9.4.md](PLAN_V0.9.4.md).** FT-52 first — it is the
+only task in the batch that touches generated data, so the rebuilt
+`russia-regions/map.json` should be the only `map.json` in its diff. Open
+`app/src/lib/labelCollision.ts:308`. The plan needs no decisions from the
+product owner; it can be worked straight through.
+
+v0.10.0 comes **after** v0.9.4 and still **cannot start**: it needs three
+answers from the product owner (PLAN_V0.10.md, "Product decisions
+needed") —
 
 1. Which languages, and in what order? (Italian first is recommended: the
    product owner reads it and will catch bad phrasing immediately.)
@@ -76,9 +84,7 @@ product owner (PLAN_V0.10.md, "Product decisions needed") —
 
 Suggested first message for the next session:
 
-> Read docs/HANDOVER.md. v0.9.3 is out and v0.10.0 (translating the
-> name-facts) is blocked on three decisions in docs/PLAN_V0.10.md — ask me
-> those three, then propose an order.
+> Read docs/HANDOVER.md, then docs/PLAN_V0.9.4.md. Start FT-52.
 
 Whatever comes next, the working rules stay (CLAUDE.md §3):
 
@@ -113,18 +119,21 @@ Eight issues, #1-#8, filed by the other session's review. **All eight were
 verified against the code on 2026-09-20 and all eight hold** — unlike the
 earlier issue that had a central fact backwards, this batch cites real line
 numbers and describes real behaviour. Three needed sharpening, noted below.
-Nothing is fixed yet.
 
-| # | What | Size | Live today? |
-|---|---|---|---|
-| 6 | `areaShares` trusts `crossesAntimeridian` instead of `west > east` | S | **Yes** — Chukotka |
-| 3 | Terrain labels keep the old language after a switch | S | **Yes** |
-| 2 | Terrain turns itself back on if switched off during first load | S | **Yes** |
-| 1 | Tutorial `navigateTo('overview')` goes to the Known route | S | **Yes** |
-| 4 | Storage failures can blank the app or block a quiz | M | Latent |
-| 5 | `app/static/{maps,styles}` are committed symlinks | M | Latent |
-| 7 | The integrity suite validates `tourOrder`, not the shipped `tour.json` | S | Gate gap |
-| 8 | No component test crosses QuizView's persistence/resume seams | M | Gate gap |
+**They are now scheduled: [PLAN_V0.9.4.md](PLAN_V0.9.4.md), FT-52 to FT-59,
+all eight in the next release** (product owner, 2026-09-20 — ahead of
+v0.10.0). Nothing is fixed yet; the table below maps each issue to its task.
+
+| # | Task | What | Size | Live today? |
+|---|---|---|---|---|
+| 6 | FT-52 | `areaShares` trusts `crossesAntimeridian` instead of `west > east` | S | **Yes** — Chukotka |
+| 3 | FT-53 | Terrain labels keep the old language after a switch | S | **Yes** |
+| 2 | FT-54 | Terrain turns itself back on if switched off during first load | S | **Yes** |
+| 1 | FT-55 | Tutorial `navigateTo('overview')` goes to the Known route | S | **Yes** |
+| 7 | FT-56 | The integrity suite validates `tourOrder`, not the shipped `tour.json` | S | Gate gap |
+| 4 | FT-57 | Storage failures can blank the app or block a quiz | M | Latent |
+| 5 | FT-58 | `app/static/{maps,styles}` are committed symlinks | M | Latent |
+| 8 | FT-59 | No component test crosses QuizView's persistence/resume seams | M | Gate gap |
 
 Sharpenings found while verifying:
 
