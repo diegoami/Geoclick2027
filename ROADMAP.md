@@ -116,9 +116,9 @@ Check items off as they land; update "Status" as iterations complete.
   requirement — Duisburg's name covering Essen with open space to its
   west), region names sitting on a centroid instead of stretching along
   the region (now: a spike first), and the map card's `{known} / {total}
-  known` line replaced by a progress bar shown only when there is
-  progress — the score panel's copy of it stays, since the two record
-  different things. Written up as
+  known` line replaced by a progress bar over `knownCount / total`,
+  hidden at zero — the score panel's copy of it stays, since the two
+  record different things. Written up as
   the first item of the Iteration 8+ backlog below, each with the
   decision that settles it. Alongside them, a second item raised the same
   day: **the start screen becomes a zoomable world map** — the map list
@@ -1527,15 +1527,16 @@ loop actually feels good. Candidates below, in rough priority order.
         for a map with no card states at all (`+page.svelte:92`), so a
         never-played map shows nothing — the case the bar has to handle
         is a map that *has* been played but has no name at a clean streak
-        of 3 yet, which reads `0 / 49 known` today. That is also the one
-        open question: whether the bar is driven by `knownCount` (and so
-        stays hidden until the first name is actually known, making a
-        played map look untouched) or by something finer-grained — the
-        share of targets ever placed correctly, say — which moves on the
-        first round and rewards starting. Untouched either way: the
-        round's own `{placed} / {total}` subtitle (`quiz.subtitle`), and
-        `retention.known`, which is the Known map's own label, a
-        different thing that happens to share the word.
+        of 3 yet, which reads `0 / 49 known` today. The bar is
+        `knownCount / total` — the same number the line showed, drawn
+        instead of written — and it is hidden at zero, so that map shows
+        nothing until its first name is actually known. Nothing
+        finer-grained: a bar that creeps on partial streaks would be
+        measuring something the word "known" does not mean. Untouched:
+        the round's own `{placed} / {total}` subtitle
+        (`quiz.subtitle`), and `retention.known`, which is the Known
+        map's own label, a different thing that happens to share the
+        word.
 
 - [ ] **The start screen becomes a zoomable world map, raised
       2026-09-20.** The map list as it stands cannot be finalized — it is
