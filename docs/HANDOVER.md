@@ -107,6 +107,44 @@ Whatever comes next, the working rules stay (CLAUDE.md §3):
   release he has already asked for (above). Alpha and beta pre-releases
   count as releases (RELEASES.md, "Pre-releases").
 
+## The open GitHub issues (triaged 2026-09-20)
+
+Eight issues, #1-#8, filed by the other session's review. **All eight were
+verified against the code on 2026-09-20 and all eight hold** — unlike the
+earlier issue that had a central fact backwards, this batch cites real line
+numbers and describes real behaviour. Three needed sharpening, noted below.
+Nothing is fixed yet.
+
+| # | What | Size | Live today? |
+|---|---|---|---|
+| 6 | `areaShares` trusts `crossesAntimeridian` instead of `west > east` | S | **Yes** — Chukotka |
+| 3 | Terrain labels keep the old language after a switch | S | **Yes** |
+| 2 | Terrain turns itself back on if switched off during first load | S | **Yes** |
+| 1 | Tutorial `navigateTo('overview')` goes to the Known route | S | **Yes** |
+| 4 | Storage failures can blank the app or block a quiz | M | Latent |
+| 5 | `app/static/{maps,styles}` are committed symlinks | M | Latent |
+| 7 | The integrity suite validates `tourOrder`, not the shipped `tour.json` | S | Gate gap |
+| 8 | No component test crosses QuizView's persistence/resume seams | M | Gate gap |
+
+Sharpenings found while verifying:
+
+- **#6 — exactly one target in all 63 maps is affected.** `chukotka` in
+  `russia-regions` has `west 157.6920 > east -169.7009` and no flag; no
+  target in any map carries the flag at all. `build-map.ts:428` does emit
+  it now, so the artifact simply predates that and was never rebuilt. The
+  fix is a runtime `west > east` check *and* a rebuild.
+- **#3 — the mechanism is not "nothing subscribes to language".**
+  `getLanguage()` is module-scope `$state` and the view effects *would*
+  track it, because `setVisible()` reaches `drawLabels()` synchronously.
+  They don't, because on a map's first open the labels are drawn after
+  `await this.add()`, outside the effect's tracking. A fix that adds a
+  language effect works; a fix that assumes the read was never reactive
+  will look in the wrong place.
+- **#7 — no shipped tour is currently broken.** All 63 `tour.json` files
+  were checked on 2026-09-20: correct `mapId`, steps a permutation of the
+  target ids, all `dwellMs` finite and positive. This is a gate that
+  guards the wrong artifact, not a live defect.
+
 ## Not verified, or still open
 
 - **FT-38 (Wikidata landmark enrichment)** is open and **parked on the same
