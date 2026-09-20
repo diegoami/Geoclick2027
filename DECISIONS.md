@@ -5,9 +5,12 @@ made along the way, with the reasoning, not the implementation detail.
 For "what was built and how it was verified," see the relevant
 iteration in [ROADMAP.md](ROADMAP.md) or the system description in
 [ARCHITECTURE.md](ARCHITECTURE.md); this file exists so "why did we
-decide X" doesn't require digging through either. Workflow/process rules
+decide X" doesn't require digging through either. Workflow/process *rules*
 (how Claude works in this repo) live in [CLAUDE.md](CLAUDE.md), not here
-— this file is about the product and its design, not day-to-day process.
+— that file is read in full at the start of every session, so it states
+the rule and nothing else. Where a rule was learned the hard way, the
+story that justifies it lives here, under its own heading, and CLAUDE.md
+points at it by name.
 
 Keep this updated the same way as the other docs: when a decision gets
 made, made explicitly to correct an earlier one, or gets revisited, add
@@ -116,6 +119,48 @@ or amend an entry here as part of that change, not as an afterthought.
   lines at 400 px wide, so removing one *logical* line removes less than
   half the card. Shortening the sentences for small screens, or clamping
   the visible text, would buy more; neither was in scope here.
+
+## Two labelled test steps, not one (2026-09-13, moved here 2026-09-20)
+
+- **"Test locally" and "test the deployment" are reported as two separate,
+  explicitly named steps** whenever both apply. Verify locally first — dev
+  server, or a production build served locally — and say so; only then check
+  the live site, and say that too.
+- **Why, and it cost real time:** the Iteration 4 quiz shipped correctly and
+  passed every local check, while Netlify kept serving a stale build from a
+  stuck production-branch setting. Conflating the two turned "why doesn't
+  this feature work" into hours of chasing a feature that was fine. A report
+  that does not separate them cannot distinguish a broken feature from a
+  broken deploy.
+- This rule was in `CLAUDE.md` with its story attached until issue #9 moved
+  the story here; the rule itself stays there, pointing at this entry.
+
+## Hand a dashboard problem back (2026-09-13, moved here 2026-09-20)
+
+- **Don't go down debugging rabbit holes — webhook configs, CLI internals,
+  package source — when the user can fix it in a couple of dashboard clicks.**
+  Try the direct tool once or twice; if that does not resolve it cleanly, say
+  so and hand it back.
+- **Why:** real time went into Netlify's zip/symlink internals and GitHub
+  webhook delivery logs, diagnosing a stuck deploy that the user fixed by
+  clicking "Trigger deploy" once.
+- The rule has since paid for itself more than once — most recently on
+  2026-09-19, when an Android emulator stopped rendering mid-release. Three
+  attempts, then it was reported as an unverified artifact rather than
+  investigated further; a plain `adb kill-server` fixed it the next day.
+
+## Netlify build cost (2026-09-13, moved here 2026-09-20)
+
+- **Build cost is not a constraint** (confirmed by the product owner
+  directly). A push to `main` is not something to ration, and release-branch
+  indirection to avoid builds is not wanted.
+- **Still do not trigger a manual deploy** — via the MCP `deploy-site` tool
+  or otherwise — as a debugging step. Push and let the git-triggered build
+  run, then prod-check once the local build is known good. That is about
+  keeping the two test steps legible (above), not about cost.
+- If a deploy genuinely needs triggering by hand, that is the user's call
+  from the dashboard. Related: the product owner tracks
+  deploy status himself and does not want it reported back unprompted.
 
 ## Quiz mechanic
 

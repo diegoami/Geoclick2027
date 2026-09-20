@@ -254,6 +254,41 @@ Iteration 8+, not started.
 /mobile                        Capacitor wrapper
 ```
 
+### How built map data reaches all three shells
+
+There is exactly one copy of the map data in the repo, and three shells
+reach it through two symlinks and one mirror. Nothing copies it:
+
+```
+data/maps/    <--- app/static/maps      (symlink, committed as mode 120000)
+data/styles/  <--- app/static/styles    (symlink, committed as mode 120000)
+```
+
+`app/static/` holds only those two links plus two real files, `_redirects`
+and `robots.txt`. Everything a map needs — `map.json`, `tour.json`,
+`facts.json`, `tiles.pmtiles`, `terrain.pmtiles` — is served straight out
+of `data/maps/<id>/` at `/maps/<id>/…`, so a rebuilt map is live on the
+dev server with no copy step, and the app fetches the same URL in all
+three shells.
+
+`vite build` resolves the links and writes real files into `app/build/`.
+Both native shells then wrap **that same directory**, unmodified:
+
+- `desktop/src-tauri/tauri.conf.json` → `build.frontendDist:
+  "../../app/build"`
+- `mobile/capacitor.config.ts` → `webDir: '../app/build'`, from which
+  `npx cap sync` copies into the Android assets
+
+So `app/build` is the single artifact: the web deploy, the desktop
+bundle's payload and the APK's assets are the same bytes, and there is no
+mobile-only or desktop-only frontend code.
+
+**The symlinks are the fragile part.** A tool that does not preserve them
+— a zip round-trip, a Windows checkout without Developer Mode or
+`core.symlinks=true` — turns each into a small text file containing a
+path, and the build then ships 15-byte "tilesets". ONBOARDING.md's
+"Gotchas" section has the symptoms and the fix.
+
 ## Screens and navigation
 
 The home page (`/`) lists every map by country. Above that list come
