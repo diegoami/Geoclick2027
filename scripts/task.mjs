@@ -14,7 +14,7 @@
 //   node scripts/task.mjs state GC-010 awaiting-approval --note "gates green"
 //   node scripts/task.mjs finish GC-010        # after the merge: clean up + integrated
 //   node scripts/task.mjs doctor [--fix]       # zombie sweep: worktrees, branches, ports
-//   node scripts/task.mjs gates [--json]       # the four quality gates
+//   node scripts/task.mjs gates [--json|--quiet]  # the four quality gates
 //
 // Live state is one JSON file per task under <repo>/.orchestrator/state/
 // (gitignored), written only through this script: temp-file + rename, and a
@@ -432,7 +432,7 @@ function cmdStart(doc, id, force) {
 	console.log(`\n${t.id}  ${t.title}`);
 	console.log(`  spec     : node scripts/task.mjs show ${t.id}`);
 	console.log(`  dev      : npm run dev --workspace=app -- --port ${doc.devPort}`);
-	console.log(`  gates    : node scripts/task.mjs gates`);
+	console.log(`  gates    : node scripts/task.mjs gates [--quiet|--json]`);
 	console.log(`  worklog  : node scripts/task.mjs log ${t.id}`);
 	console.log('\nWhen the DoD is met and the gates are green:');
 	console.log(`  node scripts/task.mjs state ${t.id} awaiting-approval --note "..."`);
@@ -735,7 +735,11 @@ function listeningPorts() {
 
 // ------------------------------------------------------------------- gates
 
-function runGateSet(quiet) {
+// `quiet` pipes each gate's output instead of streaming it. The four gates
+// together emit ~100 KB, most of it the names of 683 passing tests, which
+// buries the one line that matters when something fails. Piped output is held
+// in memory and only the tail of a FAILING gate is ever printed.
+function runGateSet(quiet, tailChars = 4000) {
 	const results = [];
 	let failed = null;
 	for (const gate of GATES) {
@@ -752,6 +756,7 @@ function runGateSet(quiet) {
 			maxBuffer: 64 * 1024 * 1024
 		});
 		const ok = res.status === 0;
+		if (quiet) process.stdout.write(`  ${ok ? 'PASS' : 'FAIL'}  ${gate.name}\n`);
 		results.push({
 			gate: gate.name,
 			command: `npm ${gate.argv.join(' ')}`,
@@ -760,7 +765,9 @@ function runGateSet(quiet) {
 			...(res.signal ? { signal: res.signal } : {}),
 			...(res.error ? { error: res.error.message } : {}),
 			ms: Date.now() - started,
-			...(quiet && !ok ? { output: `${res.stdout ?? ''}${res.stderr ?? ''}`.slice(-4000) } : {})
+			...(quiet && !ok
+				? { output: `${res.stdout ?? ''}${res.stderr ?? ''}`.slice(-tailChars) }
+				: {})
 		});
 		if (!ok) {
 			failed = gate.name;
@@ -770,11 +777,18 @@ function runGateSet(quiet) {
 	return { ok: !failed, failedGate: failed, cwd: REPO_ROOT, results };
 }
 
-function cmdGates(asJson) {
-	const verdict = runGateSet(asJson);
+function cmdGates(asJson, quiet = false) {
+	// Three modes: --json pipes and prints a machine-readable verdict, --quiet
+	// pipes and prints a human summary, and the default streams everything.
+	const verdict = runGateSet(asJson || quiet, quiet ? 12000 : 4000);
 	if (asJson) {
 		console.log(JSON.stringify(verdict, null, 2));
 	} else {
+		if (quiet && verdict.failedGate) {
+			const failed = verdict.results.at(-1);
+			console.log(`\n--- ${verdict.failedGate} output (tail) ---`);
+			console.log(failed?.output?.trimEnd() ?? '(no output captured)');
+		}
 		console.log('\n--- summary ---');
 		for (const r of verdict.results) console.log(`  ${r.ok ? 'PASS' : 'FAIL'}  ${r.gate}  (${r.ms}ms)`);
 		if (verdict.failedGate) {
@@ -801,7 +815,7 @@ function flag(rest, name) {
 
 const [, , cmd, ...rest] = process.argv;
 
-if (cmd === 'gates') cmdGates(rest.includes('--json')); // needs no tasks.yaml
+if (cmd === 'gates') cmdGates(rest.includes('--json'), rest.includes('--quiet')); // needs no tasks.yaml
 
 const doc = cmd ? loadTasks() : null;
 
