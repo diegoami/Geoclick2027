@@ -12,6 +12,12 @@ leaving it stale for the next person.
 
 ## Read these first, in order
 
+0. [docs/HANDOVER.md](docs/HANDOVER.md) — **where things stand right
+   now**: the current release, what is blocked on what, what is not
+   verified, and the gotchas that have already cost someone a day. It is
+   a snapshot, rewritten at the end of a piece of work rather than
+   appended to, so it is short and current. Start here; the rest of this
+   list is reference.
 1. **This file** — orientation and how to work day to day.
 2. [ARCHITECTURE.md](ARCHITECTURE.md) — what the system is made of and why
    (stack choices, domain model, hosting). Read the sections relevant to
@@ -497,6 +503,12 @@ you edit it:
   build cost". If you find yourself adding a paragraph of justification
   to `CLAUDE.md`, that is the signal: write it here or in DECISIONS.md
   and leave a pointer.
+
+- **A session ends in `docs/HANDOVER.md`, not in the chat.** Claude
+  sessions are cleared, and the transcript goes with them. Whatever the
+  next person or session needs to know — what landed, what state the
+  branch is in, what the next action is — is written into that file
+  before the work is called done.
 
 Everything else — how the build works, where data comes from, why the
 product behaves as it does — lives in the files listed at the top of

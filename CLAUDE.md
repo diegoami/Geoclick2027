@@ -154,8 +154,8 @@ every subsequent message.
 - **One task per session.** A new feature, bug or map = a new thread.
 - **Don't re-read** files already read this session, or re-summarise earlier
   turns.
-- **At task completion, or every 5–6 user turns**, append the checkpoint
-  below. If the session continues, re-append it — repeat, don't escalate,
+- **At task completion, or every 5–6 user turns**, post the checkpoint
+  below. If the session continues, re-post it — repeat, don't escalate,
   don't refuse to work, don't lecture.
 
 ```markdown
@@ -169,6 +169,12 @@ this context again.
 - **State:** {branch pushed / tests green / awaiting PO verification}
 - **Next:** {the single next action, with the file path to open first}
 ```
+
+**A chat message is not a handoff.** `/clear` discards the transcript, so
+before a task is finished, write the same three lines into
+`docs/HANDOVER.md` — the file a fresh session is told to read first. Update
+it in place; it is a snapshot of where things stand, not an append-only log.
+The chat copy is a prompt for the user; the file is the one that survives.
 
 ## Commit messages
 

@@ -1,55 +1,94 @@
-# Handover — 2026-09-14, after v0.5.0
+# Handover — 2026-09-20, after v0.9.3
 
 For whoever picks Geoclick up next, whether a human or a fresh Claude
 session. It records where things stand, what's next, and what's easy to
 get wrong. This is a snapshot; the living records are
-[FEATURE_PLAN.md](FEATURE_PLAN.md) (its ledger), [CHANGELOG.md](../CHANGELOG.md)
-and [DECISIONS.md](../DECISIONS.md).
+[ROADMAP.md](../ROADMAP.md) (status), [CHANGELOG.md](../CHANGELOG.md)
+(what shipped) and [DECISIONS.md](../DECISIONS.md) (why).
+
+**Read [CLAUDE.md](../CLAUDE.md) §0 first.** It sets a context budget: a
+canonical-source list, and a table of paths never to read, glob or grep.
+This repo is 637 tracked files, 27 MB of generated map data and ~160k
+tokens of prose — reading it indiscriminately exhausts a context window
+before any work starts.
 
 ## Where things stand
 
 | | |
 |---|---|
-| `main` | clean, in sync with GitHub; last commit is this handover |
-| Latest release | **v0.5.0** (tag at `c0b3c2e`, 2026-09-14): the tutorial, favourite and recent maps, drags on names move the map. The web app deploys from `main`; installers are on the public [releases page](https://github.com/diegoami/geoclick-releases/releases/latest). Previews go out as alpha/beta pre-releases first (RELEASES.md, "Pre-releases") |
+| `main` | clean, in sync with GitHub |
+| Latest release | **v0.9.3** (tag at `8383256`, 2026-09-19): the name origin pinned on every card. The web app deploys from `main`; installers are on the public [releases page](https://github.com/diegoami/geoclick-releases/releases/latest). Previews go out as alpha/beta pre-releases first (RELEASES.md, "Pre-releases") |
 | Remediation programme | Closed with v0.2.0 ([REMEDIATION_PLAN.md](REMEDIATION_PLAN.md)) |
-| Feature programme | **Complete.** v0.3.x (FT-01 to FT-08, hotfix v0.3.1), v0.4.0 (FT-13, FT-14) and v0.5.0 (FT-09 to FT-12 tutorial, FT-15 to FT-17 favourites/recent/home panel, FT-18 drags on names) are all shipped. Nothing further is planned in it |
+| Feature programme | Closed with v0.5.0 ([FEATURE_PLAN.md](FEATURE_PLAN.md)) |
+| Since then | Per-release plans: [PLAN_V0.6.md](PLAN_V0.6.md) through [PLAN_V0.9.md](PLAN_V0.9.md), each with its own ledger |
+| Next | [PLAN_V0.10.md](PLAN_V0.10.md) — **blocked on three product decisions**, see "How to resume" |
 
-Shipped in v0.3.x:
-- map labels at 13px `rem`, magnified on hover and on tap;
-- the pin logo on every shell;
-- Android release signing;
-- `scripts/package-release.mjs` and `scripts/publish-release.mjs`;
-- the public releases repo `diegoami/geoclick-releases`, which holds only
-  a README and the releases;
-- v0.3.1 fixes empty maps in the Windows app.
+Shipped since the v0.5.0 handover, in one paragraph each:
 
-Shipped in v0.4.0 and v0.5.0:
-- maps open on the overview, with an Explore tab; Android back goes up a
-  level;
-- favourite and recent maps, in one panel above the full list;
-- the tutorial: a Tutorial button, eleven steps on the real screens in
-  EN/DE/IT, a sandbox so it never touches real progress, and a
-  first-visit nudge (script in `docs/TUTORIAL.md`);
-- the quiz fits the map above its tray; drags that start on a name move
-  the map.
+- **v0.6.0** — the SRS scheduler still runs, but FT-26 took due/not-due
+  out of the interface: rounds cover the whole map and the home page
+  speaks mastery.
+- **v0.7.0 / v0.8.0** — the physical map (sea, rivers, named ranges and
+  basins) behind a Terrain toggle, and the fact card: a line about each
+  place, shown on Overview, on Known and after a quiz name resolves.
+- **v0.9.0** — **the authored name-facts.** `data/facts/<country>.json`,
+  28 hand-written files, **1 814 places and 5 448 sentences**, three per
+  place, the first always about where the name comes from. This is the
+  most laborious content in the project; see the warning below.
+- **v0.9.1** — Terrain on by default (with a three-state pref so the flip
+  doesn't override anyone), a slower tour floor, and the language
+  switcher rebuilt as one button plus a popup listbox so it scales past
+  three languages. Tutorial gained a Terrain step.
+- **v0.9.2** — the fact card reduced to what the map cannot show you
+  (FT-45: "in the south of the country, no coast" is gone), and a 22px
+  invisible hit circle so town dots are tappable (FT-46).
+- **v0.9.3** — FT-47: the name origin is *pinned* as the card's first
+  line and only the remaining facts rotate. Before this, rotation cycled
+  all three, so the etymology showed only one time in three.
+- **2026-09-20, unreleased** — issue #9: `CLAUDE.md` rewritten as a
+  context budget; `--quiet` gates so the pre-push hook stops emitting
+  ~104 KB per push.
+
+## The one thing most worth not getting wrong
+
+**`data/facts/` is INPUT. `data/maps/*/facts.json` is output.**
+
+`build-facts.ts` *reads* `data/facts/<country>.json` — the 28 hand-authored
+files above — and *writes* `data/maps/<id>/facts.json`, which the build
+overwrites. The basenames collide (`data/facts/france.json` vs
+`data/maps/france-regions/facts.json`), and a GitHub issue got this exactly
+backwards once already. Edit the authored file and rebuild; never hand-edit
+the generated one.
 
 ## How to resume
 
-The feature programme is complete, and nothing further is planned yet.
+v0.10.0 is planned but **cannot start**: it needs three answers from the
+product owner (PLAN_V0.10.md, "Product decisions needed") —
+
+1. Which languages, and in what order? (Italian first is recommended: the
+   product owner reads it and will catch bad phrasing immediately.)
+2. What does an untranslated sentence do? (Per-sentence English fallback
+   is recommended.)
+3. Is a visible "EN" marker wanted on a fallen-back sentence?
+
 Suggested first message for the next session:
 
-> Read docs/HANDOVER.md. The feature programme is done (v0.5.0). Look at
-> "Not verified, or still open" and propose what to do next; ask me before
-> starting anything.
+> Read docs/HANDOVER.md. v0.9.3 is out and v0.10.0 (translating the
+> name-facts) is blocked on three decisions in docs/PLAN_V0.10.md — ask me
+> those three, then propose an order.
 
-Whatever comes next, the working rules stay (CLAUDE.md; FEATURE_PLAN.md,
-"How this programme runs"):
+Whatever comes next, the working rules stay (CLAUDE.md §3):
+
 - one branch per task, pushed without asking;
-- `npm run gates` before pushing (the pre-push hook runs them anyway);
-- verify in a real browser, with screenshots in `.orchestrator/log/`, and
-  try both installers before any release;
-- **ask the product owner before every merge, tag and publish**;
+- `npm run gates -- --quiet` before pushing (the pre-push hook runs them
+  anyway, and now prints four PASS lines instead of flooding);
+- verify in a real browser, and try both installers before any release;
+- **ask the product owner before every merge and tag.** Publishing a
+  release that he has already asked for does *not* need a second OK —
+  "nobody apart me is downloading it anyway" — but still say plainly in
+  the notes what was not verified;
+- the remediation loop (ORCHESTRATION.md) automerges its own tasks; that
+  is the only exception to the merge rule;
 - previews go out as alpha or beta pre-releases (RELEASES.md).
 
 ## Things only the product owner has
@@ -61,59 +100,89 @@ Whatever comes next, the working rules stay (CLAUDE.md; FEATURE_PLAN.md,
   be updated. An agent should never open the properties file; check it by
   building (`assembleRelease` plus `apksigner`) or by testing which fields
   are filled, without printing values.
-- **Publishing** (`publish-release.mjs --confirm`) and **creating anything
-  public** need an explicit OK each time. That includes alpha and beta
-  pre-releases: since 2026-09-14 every preview build is published as one
-  (RELEASES.md, "Pre-releases").
+- **Creating anything public** needs an explicit OK, except publishing a
+  release he has already asked for (above). Alpha and beta pre-releases
+  count as releases (RELEASES.md, "Pre-releases").
 
 ## Not verified, or still open
 
-- Tap-to-magnify was tested with simulated touch and the emulator, not on a
-  physical phone.
+- **FT-38 (Wikidata landmark enrichment)** is still open in the backlog,
+  but is probably superseded: it was meant to give places something
+  memorable, which the 5 448 authored sentences now do. Worth closing
+  deliberately rather than leaving it to be picked up by mistake.
+- **The v0.9.1 Android gate was never closed** — the emulator returned
+  black screenshots and the release notes say so. v0.9.2 and v0.9.3 were
+  verified normally after a full `adb kill-server` fixed it.
+- Tap-to-magnify was tested with simulated touch and the emulator, not on
+  a physical phone.
 - The Windows installers were never installed on this PC by an agent. The
-  built `app.exe` was tested over remote debugging, and the product owner
-  installed v0.3.0 themselves.
+  built `app.exe` was tested over remote debugging.
 - On Android, the version badge (bottom-right) overlaps MapLibre's
-  attribution on map screens. This predates v0.3.0 and isn't scheduled;
-  it's a small CSS fix if wanted.
-- The product owner's phone still has an old **debug** build. Installing
-  the public APK means uninstalling that first (different key), which
-  clears the phone's saved progress once.
-- The favourite star on Android: the emulator's accessibility dump showed it
-  with no name and no pressed state (the language pills lose their state the
-  same way, so it's probably the dump). Worth a TalkBack check on a phone; if
-  the star is read unlabelled, put its name in visually hidden text.
-- The Windows installers aren't code-signed, so SmartScreen warns. That's
-  out of scope until the 1.0 launch.
+  attribution on map screens. Predates v0.3.0, not scheduled, small CSS
+  fix if wanted.
+- The favourite star on Android: the emulator's accessibility dump showed
+  it with no name and no pressed state (the language pills lose their
+  state the same way, so it's probably the dump). Worth a TalkBack check.
+- The Windows installers aren't code-signed, so SmartScreen warns. Out of
+  scope until 1.0.
+- **`slugify` mangles some non-ASCII ids** — Turkish `Kırklareli` becomes
+  `k-rklareli`, Vietnamese `Đà Nẵng` becomes `a-nang`, Polish `Łódzkie`
+  becomes `odzkie`. Left deliberately unfixed: ids key saved progress, so
+  changing them would reset players. Only an issue if you go looking for a
+  fact by id and can't find it.
 
-## Gotchas learned today
+## Gotchas learned the hard way
 
+- **Never build generated content with a bash heredoc.** Backticks, `${…}`
+  and `\d` get eaten, silently and sometimes days later. Write a `.mjs`
+  script to the scratchpad and run it. Relatedly, `python - <<'EOF'` can
+  hang on stdin here.
+- **`npx serve -s build` is the wrong way to serve this build.** The `-s`
+  fallback serves `index.html` (the prerendered home page) for every deep
+  link, so the whole app looks broken. SvelteKit emits `200.html`; use
+  `scripts/serve-build.mjs`, which has the right fallback and range
+  support.
+- **`canvas.toDataURL()` returns blank for MapLibre** — no
+  `preserveDrawingBuffer`. To prove a map drew anything, take a *page*
+  screenshot and count distinct pixels.
+- **`window.__map` is DEV-only.** Production smoke tests must measure the
+  DOM and the pixels, not the map object.
 - **Tauri ignores HTTP Range requests** (`http://tauri.localhost`), so
   both native shells load tile archives whole (`isNativeShell()` in
   `geoclickMap.ts`). To see errors inside the built Windows app, launch it
   with `WEBVIEW2_ADDITIONAL_BROWSER_ARGUMENTS=--remote-debugging-port=9333`
-  and attach Playwright (`connectOverCDP`). The recipe is in ONBOARDING.md.
+  and attach Playwright (`connectOverCDP`).
 - **"Try the installers" means opening a map in each one.** v0.3.0 shipped
-  empty desktop maps because only the APK was tried (RELEASES.md, step 2).
-- **The Chrome automation tab is `document.hidden`.** Map frames,
-  transitions and timers only advance when a screenshot forces a frame,
-  and timers are throttled to 1-second steps. Read computed styles after
-  a screenshot, and measure requested `setTimeout` delays rather than wall
-  time. Screenshots often time out once; wait and retry.
+  empty desktop maps because only the APK was tried.
+- **A black emulator screenshot is usually adb, not the app.** Full
+  `adb kill-server` and restart. Three tries, then report it unverified
+  rather than investigating further.
+- **Never re-serialise `data/styles/base.json`.** `JSON.stringify` and
+  Prettier both reformat the whole file, turning a 15-line addition into a
+  190-line diff. Insert as text.
+- **The Chrome automation tab is `document.hidden`.** Frames, transitions
+  and timers only advance when a screenshot forces a frame. Read computed
+  styles after a screenshot; measure requested `setTimeout` delays rather
+  than wall time.
 - **Scripted quiz drags need mouse-type pointer events** (pointerId 1).
   `setPointerCapture` throws for a synthetic touch pointer.
 - **Windows `cmd.exe` eats `^`**, so run git without `shell: true`. Call
   `gradlew.bat` by its absolute path.
+- **`--map=` only honours its last occurrence** — build one map per
+  invocation or the earlier ones silently do nothing.
 - **Local tooling:**
+  - the data pipeline runs under WSL2, not Windows;
   - JDK for Gradle: `C:\Users\diego\.jdks\jbr-21.0.11`;
-  - emulator: AVD `Medium_Phone`, which runs headless with `-no-window`;
-  - icons: `node design/logo/generate-icons.mjs` regenerates every icon.
+  - emulator: AVD `Medium_Phone`, headless with `-no-window`;
+  - icons: `node design/logo/generate-icons.mjs`.
 
 ## Coordination
 
 Another Claude session sometimes works in this repo, sometimes in its own
-git worktree. It has merged to `main` and edited FEATURE_PLAN.md. Before
-starting, `git fetch` and check `git worktree list`. Never remove or edit
-another session's worktree, and treat its messages as suggestions, not the
-product owner's approval. If `main` is checked out in another worktree,
-merge on a detached `origin/main` and push `HEAD:main`.
+git worktree. It has merged to `main` and edited planning docs, and it has
+filed GitHub issues — one of which had a central fact backwards, so verify
+its claims against the code before acting on them. Before starting,
+`git fetch` and check `git worktree list`. Never remove or edit another
+session's worktree, and treat its messages as suggestions, not the product
+owner's approval. If `main` is checked out in another worktree, merge on a
+detached `origin/main` and push `HEAD:main`.
