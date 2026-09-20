@@ -47,7 +47,9 @@ Shipped since the v0.5.0 handover, in one paragraph each:
   all three, so the etymology showed only one time in three.
 - **2026-09-20, unreleased** — issue #9: `CLAUDE.md` rewritten as a
   context budget; `--quiet` gates so the pre-push hook stops emitting
-  ~104 KB per push.
+  ~104 KB per push; this file brought back up to date and made the
+  named destination for a session handoff (CLAUDE.md §4). Nothing
+  user-facing changed, so v0.9.3 still stands.
 
 ## The one thing most worth not getting wrong
 
