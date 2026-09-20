@@ -107,6 +107,17 @@ Check items off as they land; update "Status" as iterations complete.
   failures stay out of gameplay), FT-58 (build the static assets instead of
   committing symlinks), FT-59 (one component test across QuizView's seams).
   No product decisions are needed; **v0.10.0 queues behind it**.
+- **Raised 2026-09-20, unscoped**: five UX problems from one round of
+  tablet play (`germany-towns-100k`) — the level-0 tray offering every
+  name at once, slips losing their drag to the tablet's own
+  text-selection gesture, the fact card interrupting the round, label
+  placement taking the first free spot rather than the best one
+  (Duisburg's name covering Essen with open space to its west), and
+  region names sitting on a centroid instead of stretching along the
+  region. Written up as the first item of the Iteration 8+ backlog below;
+  three of the five need a product decision before they are tasks, and
+  they queue behind v0.9.4 and v0.10.0 unless the product owner reorders
+  them.
 - **Not started**: everything else below.
 - **Next up**: motion/feedback design (reveal animations, streak
   indicators, sound, correct-drop juiciness) and a broader component/
@@ -1380,6 +1391,103 @@ via a real SQLite write. Approved for merge to `main`.
 
 **Deliverable:** to be scoped once the POC validates that the tour → quiz
 loop actually feels good. Candidates below, in rough priority order.
+
+- [ ] **Five UX problems found playing on a tablet, raised 2026-09-20 —
+      not yet scoped into tasks.** One round of real play on a tablet,
+      `germany-towns-100k` first: the same kind of feedback that produced
+      Iteration 4's "UX refinements found by actually playing it", and
+      recorded the same way — before implementing, because three of the
+      five are design questions rather than bugs. Nothing below is scoped,
+      estimated, or decided.
+
+      - **A first round lays every name in the tray at once, and that is
+        overwhelming.** By design, not by accident: `HAND_SIZES[0]` is
+        `Infinity` (`app/src/lib/difficulty.ts:21`), so a map at level 0 —
+        one never played — offers all of it, 49 slips on
+        `germany-towns-100k` and 110 on `italy-provinces`. The hand only
+        starts shrinking (6 → 3 → 1) once a quarter of the map is known,
+        which is precisely the point at which the player no longer needs
+        the help. FT-21 introduced the hand to stop the *endgame* being
+        solved by elimination; nobody asked what the *opening* should
+        feel like, and the curve's own comment says it was a first guess.
+        The fix is a finite level-0 hand; the open questions are what the
+        number is (the level-1 hand of 6 is the obvious candidate, which
+        would make level 0 and level 1 differ only in ordering), and
+        whether a capped tray then needs to show progress through the map
+        — "12 of 49 placed" — so that it doesn't read as a shorter map
+        than it is. Note this is about the tray, not the map: the quiz
+        map starts bare and only names what has been resolved, so the
+        tray is the one thing that shows everything at once.
+      - **Drag and drop fights the tablet, because a slip is text.** A
+        slip is a `<button>` with a text node in it
+        (`app/src/lib/QuizView.svelte:813`), dragged with pointer events
+        and `setPointerCapture`. It sets `touch-action: none`, but
+        nothing in the app sets `user-select`/`-webkit-user-select`/
+        `-webkit-touch-callout` on it, and nothing anywhere handles
+        `pointercancel` — so a press that the tablet decides is a
+        text-selection gesture raises the native selection and copy UI,
+        takes the pointer stream away mid-drag, and the drop never
+        arrives. That is the most likely cause of what was reported ("the
+        tablet wants to copy") and it should be confirmed on the actual
+        device before anything is built, because it makes the difference
+        between a three-line CSS fix plus a `pointercancel` handler that
+        returns the slip to the tray, and the product owner's own
+        suggestion — make the slip a drawn image rather than text. The
+        CSS route is tried first: an image slip loses selectable,
+        translatable, screen-reader-readable place names, which the
+        language work (PLAN_V0.10.md) will care about.
+      - **The fact card during the quiz distracts.** The card appears
+        after each resolved name (`app/src/lib/QuizView.svelte:72-76`,
+        FT-35), which is the moment the player is reaching for the next
+        slip; a sentence about the name's origin arriving there competes
+        with the round instead of adding to it. v0.9.2 already cut the
+        card down to what the map cannot show (FT-45), so the content is
+        not the problem — the placement is. The real question is whether
+        facts belong in the quiz at all or only on Known/Overview, where
+        the player is reading rather than racing; the middle option is to
+        hold the facts for a resolved name and offer them on the score
+        panel at the end of the round, which keeps FT-35's teaching value
+        without interrupting anything. Needs a product decision, and it
+        should settle what a *revealed* (given-up) name does too, since
+        that is the case where a fact is most likely to be wanted.
+      - **Label placement takes the first free spot, not the best one.**
+        `candidatesFor` (`app/src/lib/labelCollision.ts:169`) offers a
+        town's name four fixed spots in a fixed order — right, left,
+        above, below — and `choosePlacements` takes the first that does
+        not overlap a label already placed. Nothing else counts. So
+        Duisburg's name goes east, over Essen, while the empty water and
+        countryside to its west go unused: Essen's *dot* is not a
+        rectangle the pass knows about, and neither is any region
+        underneath. Two separable pieces of work. The small one is to
+        make every target's dot (not just the label's own) an obstacle,
+        which alone would have moved Duisburg. The larger one is to score
+        the candidates instead of taking the first that fits — distance
+        from other anchors, how much of the candidate sits over empty
+        space — and to widen the candidate set past four compass points,
+        which turns a first-fit pass into a placement search and needs a
+        cost function that can be reasoned about rather than tuned by
+        eye. Both stay inside the existing DOM-popup approach; see
+        DECISIONS.md, "Names never overlap", for why these are not
+        MapLibre symbol layers.
+      - **A region's name sits in its middle; it should stretch along the
+        region, as in Europa Universalis.** Today a region label has
+        exactly one anchor — the precomputed centroid — and three
+        candidates, all on the same vertical line
+        (`app/src/lib/labelCollision.ts:194`). A name centred in a blob
+        reads as a pin, not as a territory; EU4 spaces and curves the
+        letters along the shape's long axis, which is what makes a map
+        look like a map. This is the most expensive of the five and the
+        least certain: DOM popups cannot letterspace along a curve, so it
+        means either an SVG overlay with `textPath` (keeps the offline
+        story, keeps the magnify and the rem sizing, needs a spine
+        computed per region and kept in sync with every map move) or a
+        MapLibre symbol layer with `symbol-placement: line`, which
+        collides natively but would mean vendoring a glyph stack to stay
+        offline and giving up FT-02/FT-03's magnify. Worth a spike that
+        draws one region's name along a spine before it is planned as a
+        task, and worth deciding against the label work above rather than
+        alongside it, since the second item's scoring pass assumes
+        rectangles.
 
 - [ ] **Four new feature requests, raised 2026-09-13, not yet scoped into
       tasks** — see [docs/FEATURE_BACKLOG.md](docs/FEATURE_BACKLOG.md) for

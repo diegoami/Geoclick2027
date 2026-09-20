@@ -23,6 +23,7 @@ before any work starts.
 | Since then | Per-release plans: [PLAN_V0.6.md](PLAN_V0.6.md) through [PLAN_V0.9.md](PLAN_V0.9.md), each with its own ledger |
 | Next | [PLAN_V0.9.4.md](PLAN_V0.9.4.md) — **the review's eight issues, FT-52 to FT-59.** Planned 2026-09-20, nothing started. All eight ship in v0.9.4; the product owner put them ahead of v0.10.0 |
 | After that | [PLAN_V0.10.md](PLAN_V0.10.md) — translating the name-facts, still **blocked on three product decisions**, see "How to resume" |
+| Raised, unscoped | Five UX problems from one round of tablet play, 2026-09-20 — first item of ROADMAP.md's Iteration 8+ backlog. The level-0 tray offering every name at once (`difficulty.ts:21`), slips losing their drag to the tablet's text-selection gesture, the fact card interrupting the quiz, label placement taking the first free spot not the best one, and region names on a centroid rather than stretched along the region. Three of the five need a product decision first; none is scheduled |
 
 Shipped since the v0.5.0 handover, in one paragraph each:
 
