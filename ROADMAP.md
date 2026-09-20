@@ -115,8 +115,10 @@ Check items off as they land; update "Status" as iterations complete.
   first free spot rather than the best one (now: best fit is a
   requirement — Duisburg's name covering Essen with open space to its
   west), region names sitting on a centroid instead of stretching along
-  the region (now: a spike first), and the `{known} / {total} known` line
-  to be dropped from both the score panel and the map list. Written up as
+  the region (now: a spike first), and the map card's `{known} / {total}
+  known` line replaced by a progress bar shown only when there is
+  progress — the score panel's copy of it stays, since the two record
+  different things. Written up as
   the first item of the Iteration 8+ backlog below, each with the
   decision that settles it. Alongside them, a second item raised the same
   day: **the start screen becomes a zoomable world map** — the map list
@@ -1507,19 +1509,32 @@ loop actually feels good. Candidates below, in rough priority order.
         is decided *against* the placement work above rather than
         alongside it, since that pass scores rectangles and a stretched
         name is not one.
-      - **Drop the "{known} / {total} known" line — decided 2026-09-20.**
-        FT-26 added it in two places as one statement: the end-of-round
-        score panel (`quiz.known`, `app/src/lib/QuizView.svelte:757`) and
-        every card in the home page's map list (`home.known`). It reads
-        as a grade rather than as progress, and it is the one number on
-        the screen the player cannot do anything about. Recorded as both
-        places, because keeping one and dropping the other would have the
-        map list and the score panel telling different stories — the
-        exact thing FT-26 put them in to avoid. Two translation keys in
-        each of the three languages. Note what this does *not* touch: the
-        round's own `{placed} / {total}` subtitle (`quiz.subtitle`),
-        which is live progress through the round and stays, and
-        `retention.known`, which is the Known map's own label — a
+      - **Replace the map card's "{known} / {total} known" with a
+        progress bar — decided 2026-09-20, the map list only.** The line
+        shows in two places, and only the map list's copy goes:
+        `home.known` on every card of the home page
+        (`app/src/routes/+page.svelte:145`). The score panel's
+        `quiz.known` **stays** — the two record different things, the
+        card a map's standing and the popup what the round just played
+        left behind, and they should stop being written as one statement.
+        Note for whoever implements it: `QuizView.svelte:751` currently
+        comments the opposite ("the same line the map list shows, so
+        finishing here and going back tell the same story", FT-26), and
+        that comment is now wrong — amend it rather than leave it to be
+        found first. In the card's place, a progress bar, **and only when
+        there is progress to show**: a bar sitting at zero is worse than
+        the number it replaced. Today `mastery` is already `undefined`
+        for a map with no card states at all (`+page.svelte:92`), so a
+        never-played map shows nothing — the case the bar has to handle
+        is a map that *has* been played but has no name at a clean streak
+        of 3 yet, which reads `0 / 49 known` today. That is also the one
+        open question: whether the bar is driven by `knownCount` (and so
+        stays hidden until the first name is actually known, making a
+        played map look untouched) or by something finer-grained — the
+        share of targets ever placed correctly, say — which moves on the
+        first round and rewards starting. Untouched either way: the
+        round's own `{placed} / {total}` subtitle (`quiz.subtitle`), and
+        `retention.known`, which is the Known map's own label, a
         different thing that happens to share the word.
 
 - [ ] **The start screen becomes a zoomable world map, raised
