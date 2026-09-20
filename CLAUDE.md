@@ -175,6 +175,8 @@ End every commit with:
 
     Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
 
-Name the model actually doing the work. This line said "Sonnet 5" until
-2026-09-20 while the last 40 commits all said "Opus 5" — the rule was
-stale, not the commits.
+Name the model actually doing the work, and update this line when that
+changes. History: 116 commits trailered "Sonnet 5" up to 2026-09-13, then
+274 and counting trailered "Opus 5". This line still said "Sonnet 5" on
+2026-09-20 — it was right when written and nobody amended it at the
+switch.
