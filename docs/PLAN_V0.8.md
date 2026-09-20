@@ -362,6 +362,17 @@ of scope" with the numbers that ruled them out.
 
 ### FT-38 — The Wikidata landmark pass · Medium · deps: FT-34
 
+**Parked 2026-09-20, not cancelled.** FT-45 has since cut the composed
+derived sentence down to two short clauses, so the slot this clause was
+written for is gone: reviving it means either a new card line, which FT-45
+deliberately cut back, or folding landmarks into the authored prose, which
+is a manual job. It is *not* superseded by the authored sentences — FT-45's
+own rule is that the card says only what the map does not show, and a
+volcano or a UNESCO site inside a region is exactly that. Revisit after the
+v0.10.0 language decisions: FT-34 recorded that structured data is
+trilingual for free, and if translating 5 448 authored sentences proves
+expensive, templated landmark facts get more attractive, not less.
+
 Split out of FT-34 on 2026-09-19, once the probe showed it was a task
 rather than a coda. The measurements are under FT-34; the shape that
 follows from them:
@@ -404,7 +415,7 @@ the product owner's test on the phone first, then the stable release.
 | FT-34 | **merged**  | `63520c1` | 2 235 facts, 503 KB, structured not prose so the derived half is trilingual for free; coastal by shared vertices, source rows matched by extent not name, POP1950 is in thousands. **The Wikidata landmark pass became FT-38** — the query service ran the same query in 1 s, 29 s and 24 s and refused the broad one with a 502 |
 | FT-35 | **merged**  | `ac9284c` | one card, four screens; in the Quiz it is set inside `markSolved` so it cannot precede an answer, and it takes no pointer events so a drag across it still reaches the map                                                                                                                                                       |
 | FT-36 | **merged**  | `7f6192a` | 101 places authored across Italy, China and the USA, 155 placements; a list per place rotating on each encounter; the file must be named for the country as map.json spells it, and an id that is two places splits by kind                                                                                                      |
-| FT-38 | not started | —         | the Wikidata landmark pass, split out of FT-34                                                                                                                                                                                                                                                                                   |
+| FT-38 | **parked**  | —         | the Wikidata landmark pass, split out of FT-34; parked 2026-09-20 on unsettled product choices and the card slot FT-45 removed — see the task above                                                                                                                                                                                                                                                                                   |
 
 ## Out of scope
 

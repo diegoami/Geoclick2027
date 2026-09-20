@@ -16,6 +16,35 @@ Keep this updated the same way as the other docs: when a decision gets
 made, made explicitly to correct an earlier one, or gets revisited, add
 or amend an entry here as part of that change, not as an afterthought.
 
+## FT-38 is parked, not superseded (2026-09-20, FT-38)
+
+- **The Wikidata landmark pass stays open, blocked on the same product
+  decisions as v0.10.0.** HANDOVER.md had called it probably superseded by
+  the 5 448 authored sentences, on the grounds that both exist to give a
+  place something memorable.
+- **That reasoning does not survive FT-45.** The rule set there is that the
+  card says only what the map does not show. A volcano, a national park or
+  a UNESCO site inside a region is exactly that — it is not the same
+  category as "in the south of the country, no coast", which was cut
+  because the map already shows it. On its own criterion, a landmark clause
+  qualifies.
+- **What actually blocks it is the slot, not the content.** FT-45 reduced
+  `factClauses` to at most two short clauses, and the landmark clause was
+  written to land in the composed sentence that no longer exists. Reviving
+  it means either a new card line — which FT-45 deliberately cut back — or
+  folding landmarks into the authored prose, which is a different, manual
+  job. Its product choices (which kinds, how many, how phrased) were also
+  never settled, and they determine the query.
+- **Revisit after the v0.10.0 language decisions, not before.** FT-34 chose
+  structured over prose so the derived half would be trilingual for free.
+  The authored sentences are prose and need a human translator per
+  language. If translating 5 448 of them proves expensive, templated
+  landmark facts get *more* attractive, not less — so the order matters:
+  decide the languages first, then reconsider this.
+- **Closing it would have been the cheaper mistake.** A backlog item
+  dismissed on a reason that does not hold is harder to recover than one
+  parked with the real blocker written down.
+
 ## The name origin is pinned, not rotated (2026-09-19, FT-47)
 
 - **The first fact in an authored list is shown every visit; only the rest

@@ -48,7 +48,8 @@ Shipped since the v0.5.0 handover, in one paragraph each:
 - **2026-09-20, unreleased** — issue #9: `CLAUDE.md` rewritten as a
   context budget; `--quiet` gates so the pre-push hook stops emitting
   ~104 KB per push; this file brought back up to date and made the
-  named destination for a session handoff (CLAUDE.md §4). Nothing
+  named destination for a session handoff (CLAUDE.md §4); FT-38
+  reassessed and parked rather than closed (DECISIONS.md). Nothing
   user-facing changed, so v0.9.3 still stands.
 
 ## The one thing most worth not getting wrong
@@ -108,10 +109,25 @@ Whatever comes next, the working rules stay (CLAUDE.md §3):
 
 ## Not verified, or still open
 
-- **FT-38 (Wikidata landmark enrichment)** is still open in the backlog,
-  but is probably superseded: it was meant to give places something
-  memorable, which the 5 448 authored sentences now do. Worth closing
-  deliberately rather than leaving it to be picked up by mistake.
+- **FT-38 (Wikidata landmark enrichment)** is open and **parked on the same
+  product decisions as v0.10.0**, not superseded. An earlier version of this
+  file called it probably superseded by the 5 448 authored sentences; that
+  reasoning does not survive FT-45, whose rule is that the card says only
+  what the map does not show — and a volcano or a UNESCO site inside a
+  region is exactly that. What actually blocks it:
+  - **FT-45 removed the slot it was built for.** The landmark clause was to
+    land in the composed derived sentence; `factClauses` now returns at most
+    two short clauses. Reviving FT-38 means either a new card line, which
+    FT-45 deliberately cut back, or folding landmarks into the authored
+    prose, which is a different and manual job.
+  - **Its product choices were never settled** — which landmark kinds earn a
+    clause, how many per place, how each is phrased (PLAN_V0.8.md, FT-38).
+    They determine the query, so nothing can be built before them.
+  - **Revisit after the v0.10.0 language decisions, not before.** FT-34
+    recorded that structured data is trilingual for free; the authored
+    sentences are prose and need a human translator per language. If
+    translation proves expensive, templated landmark facts get *more*
+    attractive, not less.
 - **The v0.9.1 Android gate was never closed** — the emulator returned
   black screenshots and the release notes say so. v0.9.2 and v0.9.3 were
   verified normally after a full `adb kill-server` fixed it.
