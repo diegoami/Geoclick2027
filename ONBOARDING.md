@@ -21,7 +21,8 @@ leaving it stale for the next person.
    the project is right now.
 4. [CLAUDE.md](CLAUDE.md) — working conventions. Written for an AI
    assistant collaborating on this repo, but every rule in it applies to
-   any contributor, human or not.
+   any contributor, human or not. Deliberately short and rule-only — see
+   **AI assistant scope** below for why, and where the reasoning went.
 5. [DECISIONS.md](DECISIONS.md) — *why* the product works the way it
    does, as a scannable list rather than scattered through iteration
    write-ups. Worth a skim before changing behavior that looks like it
@@ -459,16 +460,42 @@ that same discipline into any task you pick up:
 3. **State "tested locally" explicitly** when you report the change is
    ready, separately from any deployment concern — don't conflate "does
    the feature work" with "did it deploy," they're different questions
-   with different failure modes (this bit the project once already, see
-   CLAUDE.md).
-4. **Get it reviewed/approved before merging to `main`.** Every push to
-   `main` triggers a real Netlify build, which costs build credits on the
-   plan in use — don't merge speculatively or as a way to "just see if it
-   deploys."
+   with different failure modes (this bit the project once already — the
+   story is in DECISIONS.md, "Two labelled test steps, not one").
+4. **Get it reviewed/approved before merging to `main`.** This is a
+   review gate, not a cost one: nothing lands on `main` without the
+   product owner having had a chance to try it. Build cost stopped being
+   a constraint on 2026-09-13 (DECISIONS.md, "Netlify build cost"), but
+   "just see if it deploys" is still not a reason to merge — verify the
+   build locally first.
 5. **Update ROADMAP.md** (check off what landed, note what changed if
    scope shifted) **and ARCHITECTURE.md** (if you changed how something is
    structured, not just a bug fix) as part of finishing the task, not as
    an afterthought.
+
+## AI assistant scope
+
+Most of the development here is done by Claude, and `CLAUDE.md` is the
+brief it works from. Two things about that file are worth knowing before
+you edit it:
+
+- **It is loaded in full at the start of every session**, before anything
+  is read or asked. Anything in it is paid for on every single task,
+  whether or not the task touches it. That is why it is kept rule-only
+  and short — see its own §0, which sets the budget and names the
+  canonical source for each kind of file.
+- **Reasoning does not belong in it.** When a rule was learned the hard
+  way, the rule stays in `CLAUDE.md` and the story moves to
+  [DECISIONS.md](DECISIONS.md) under its own heading, which `CLAUDE.md`
+  names. Three such entries were moved out on 2026-09-20 — "Two labelled
+  test steps, not one", "Hand a dashboard problem back" and "Netlify
+  build cost". If you find yourself adding a paragraph of justification
+  to `CLAUDE.md`, that is the signal: write it here or in DECISIONS.md
+  and leave a pointer.
+
+Everything else — how the build works, where data comes from, why the
+product behaves as it does — lives in the files listed at the top of
+this one, and is read on demand rather than up front.
 
 ## Conventions worth knowing before you write code
 

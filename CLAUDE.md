@@ -1,114 +1,182 @@
 # Geoclick — working notes for Claude
 
-Geography learning game. See [ARCHITECTURE.md](ARCHITECTURE.md) for system
-design, [ROADMAP.md](ROADMAP.md) for the iteration plan, current status,
-and per-iteration deliverables, [ONBOARDING.md](ONBOARDING.md) for a
-running guide aimed at a new/junior contributor picking up small tasks,
-[DECISIONS.md](DECISIONS.md) for a scannable log of *why* things work
-the way they do — product/design decisions and the reasoning behind them,
-separate from this file's workflow rules — and [MAPS.md](MAPS.md) for the
-map-creation process: the exact build command behind every map currently
-shipping, and what's planned next.
+Geography learning game. SvelteKit + MapLibre GL + PMTiles; Tauri (desktop),
+Capacitor (Android); local-first SQLite; Natural Earth map data.
 
-## Workflow
+## 0. Context budget — read this first
 
-- New features/fixes: work on a branch, not directly on `main`. Commit and
-  push the branch without asking first. Test locally and report concrete
-  verification steps so the user can test it themselves too. Only merge
-  to `main` after the user explicitly OKs it — this is a testing/review
-  gate, not a cost-avoidance one (see below): nothing lands there without
-  the user having had a chance to try it first. `main` is the normal
-  integration branch — merge task/feature branches straight into it once
-  approved, no release-branch buffering needed in between. Small doc-only
-  changes (ROADMAP.md/ARCHITECTURE.md/CLAUDE.md edits with no app code)
-  can still go straight to `main` without that check-in. **Exception: the
-  remediation loop** (`docs/ORCHESTRATION.md`) automerges each task itself
-  once its gates are green and its DoD is verified — the product owner's
-  call, 2026-09-13 — and only stops for release tags and the cases listed
-  in that doc's "Automerge" section. Everything outside the loop still
-  follows the ask-first rule above.
-- Keep ROADMAP.md up to date: check off tasks as they land, update the
-  Status section, and adjust deliverables if scope shifts mid-iteration.
-- Update ARCHITECTURE.md as part of finishing each iteration — not just
-  the original design doc, keep it a real map of how the code is
-  organized as it grows. This is how the user (who isn't reading the code
-  directly) keeps a grasp of it.
-- Keep ONBOARDING.md current too: if a change adds a new gotcha, moves
-  where something important lives, or changes the day-to-day workflow,
-  reflect it there — it's written for a hypothetical junior dev and goes
-  stale the same way ROADMAP.md/ARCHITECTURE.md would if left alone.
-- Record product/design decisions in DECISIONS.md as they're made —
-  not just what was built (that's ROADMAP.md's job) but *why*, in a
-  form that's quick to scan later without digging through iteration
-  prose. When a later decision corrects or supersedes an earlier one,
-  update that entry rather than leaving a stale one to be found first.
-- Keep MAPS.md current whenever a map gets built or the pipeline
-  changes: record the exact command that produced a new map (not just
-  that it exists), and keep the "planned" section honest — move an
-  entry out once it's actually shipped rather than leaving it listed as
-  upcoming.
-- Tag a real release (`vX.Y.Z` on `main`) with release notes in
-  `CHANGELOG.md` whenever a meaningful batch of work lands — not every
-  merge, but not left informal either. See `CHANGELOG.md` for the log
-  and `docs/RELEASES.md` for the versioning scheme once it exists.
-- Previews count as releases too (product owner's rule, 2026-09-14). Any
-  build handed to players or testers before it's final, whether desktop
-  or Android, is published on the public releases page as an **alpha**
-  (unmerged work, tested only by the developer) or a **beta** (merged,
-  waiting for the product owner's test). Each is a GitHub pre-release,
-  never "latest", with a warning in its notes. Don't hand out
-  untracked local builds instead. See `docs/RELEASES.md`, "Pre-releases".
-- Roles: the user is Product Manager, Claude is Developer. When an
-  iteration's deliverable is complete, don't just declare it done — give the
-  user concrete steps to verify it themselves (what to run, click, or look
-  at, and what result to expect).
-- Treat "test locally" and "test the deployment" as two separate,
-  explicitly labeled steps whenever both apply — never let a deploy
-  problem read as a feature problem or vice versa. Verify locally first
-  (dev server, or a production build served locally) and say so
-  explicitly; only then check the live site, and say that explicitly too.
-  Reason: the Iteration 4 quiz shipped correctly and passed every local
-  check, while Netlify kept serving a stale build from a stuck production
-  branch setting — conflating the two wasted real time chasing a "why
-  doesn't the feature work" question that was actually "why hasn't this
-  deployed."
-- Don't go down debugging rabbit holes (digging through webhook configs,
-  CLI internals, package source, etc.) when the issue can just be fixed
-  manually by the user in a couple of clicks — e.g. a dashboard setting,
-  a manual "trigger deploy" button. Try the direct/available tool once or
-  twice; if that doesn't resolve it cleanly, say so and hand it back to
-  the user rather than escalating into deeper investigation on my own.
-  Reason: spent real time digging into Netlify's zip/symlink internals
-  and GitHub webhook delivery logs to diagnose a stuck deploy, when the
-  user could (and did) just click "Trigger deploy" in the dashboard and
-  it worked immediately.
-- Netlify build cost is **no longer a constraint** (2026-09-13, confirmed
-  by the user directly) — a `main` push is not something to ration or
-  route around with release-branch indirection. Still don't trigger a
-  manual deploy (via the MCP `deploy-site` tool or otherwise) just to
-  check something as a debugging step — push to `main` and let the normal
-  git-triggered build handle it, and prod-check the live site once
-  you're already confident the local build is correct. That's about
-  keeping "test locally" and "test the deployment" as separate, legible
-  steps (see below), not about cost. If a deploy needs triggering
-  manually (e.g. auto-deploy seems stuck), that's the user's call to make
-  from the dashboard, not something to do repeatedly on your own
-  initiative.
+This repo is ~150 hand-written source files wrapped in 637 tracked files,
+27 MB of generated map data, and ~160k tokens of prose. Reading it
+indiscriminately exhausts the context window before any work starts.
 
-## Stack
+**Canonical source. Work here:**
 
-- SvelteKit (frontend/app shell)
-- MapLibre GL JS + PMTiles (map rendering, vector tiles)
-- Tauri (desktop packaging), Capacitor (mobile packaging) — planned, not
-  yet scaffolded
-- Local-first storage: SQLite (Tauri plugin / Capacitor plugin), no backend
-  for the POC
-- Map source data: Natural Earth (public domain)
+    app/src/{lib,routes}/       packages/{srs,quiz-engine}/src/
+    data/scripts/*.ts           scripts/*.mjs
+    data/facts/*.json           data/styles/base.json      <- AUTHORED, see below
+    desktop/src-tauri/src/      mobile/android/app/src/main/{java,res/values}/
+    root configs: package.json, netlify.toml, app/vite.config.*, app/eslint.config.js
+    version manifests (scripts/sync-version.mjs writes all seven):
+      {,app/,desktop/,mobile/}package.json, desktop/src-tauri/{tauri.conf.json,Cargo.toml},
+      mobile/android/app/build.gradle
+    also real, not generated: mobile/capacitor.config.ts,
+      app/static/{_redirects,robots.txt}
+
+**Never read, glob, or grep** (unless a task names one specific file):
+
+| Path | Why |
+|---|---|
+| `app/static/maps`, `app/static/styles` | **symlinks** into `data/` — address the `data/` path |
+| `mobile/android/app/src/main/assets/public/` | `cap sync` copy of `app/build` |
+| `mobile/.../assets/capacitor.*.json`, `res/xml/config.xml` | generated — edit `mobile/capacitor.config.ts` |
+| `data/maps/**` | 64 dirs, 126 binaries + ~330k tokens of generated JSON |
+| `data/source/` | gitignored raw Natural Earth downloads |
+| `node_modules/`, `app/.svelte-kit/`, `app/build/`, `dist*/`, `.netlify/` | deps + build output |
+| `desktop/src-tauri/{target,gen}/`, `mobile/android/{.gradle,build}/`, `**/app/build/` | build output |
+| `package-lock.json`, `Cargo.lock` | grep one version string at most; never open |
+| `docs/manual/*.jpg`, `design/logo/*.png`, `**/icons/*`, `res/{mipmap,drawable}-*/*` | binaries |
+| `app/.vscode/`, `.idea/`, `.orchestrator/`, `.git/` | tooling / machine-local |
+
+**`data/facts/` is INPUT; `data/maps/*/facts.json` is output.** They are easy
+to confuse and the cost of confusing them is high. `data/facts/<country>.json`
+is 28 hand-authored files — 1 814 places, 5 448 sentences, the most laborious
+content in the project and the subject of `docs/PLAN_V0.10.md`.
+`build-facts.ts` **reads** them and **writes** `data/maps/<id>/facts.json`.
+Edit the authored file and rebuild; never hand-edit the generated one.
+
+**Map data is generated, not authored.** To understand a map's shape, read
+`data/scripts/build-map.ts` and at most **one** sample `data/maps/*/map.json`.
+Never enumerate `data/maps/`. To change map output, change the script and
+rebuild.
+
+**Prose is on-demand.** `DECISIONS.md` (18k words), `ROADMAP.md` (14k),
+`MAPS.md` (10k), `CHANGELOG.md` (7.5k), `ONBOARDING.md` (5.7k), `docs/**`.
+Never read one end-to-end to "get oriented". Locate, then slice:
+
+    grep -n "terrain" ROADMAP.md | head -20
+    sed -n '840,880p' ROADMAP.md
+
+Writing to them is unchanged (see §3) — append/edit the relevant section
+without re-reading the whole file.
+
+**Search shape.** Scope every search; never follow symlinks.
+
+    # good
+    grep -rn "quizRound" app/src packages/*/src
+    # bad — walks 26 MB of tiles twice
+    grep -r "quizRound" .
+
+## 1. Output discipline
+
+- **Diffs only.** Show the changed function or hunk with a few lines of
+  context. Never re-echo a whole file after editing it, and never paste a
+  file back to confirm an edit landed.
+- **No read-back-to-verify.** The edit tool errors if it fails; a clean
+  result means it applied.
+- **Cite, don't quote.** Refer to `app/src/lib/quizRound.ts:118`; quote code
+  only when the exact text is the point.
+- **Summaries are short.** What changed, where, how to verify. No recaps of
+  work already reported in this session.
+- **One plan, not three.** State the approach taken; don't enumerate
+  alternatives that were rejected.
+
+## 2. Quiet terminal
+
+Commands here are loud by default. Filter at the source — never dump raw
+output and then explain it.
+
+    # Tests — the default reporter is verbose; override it (14 lines, 683 tests)
+    npm run test:unit --workspace=app -- --run --reporter=dot 2>&1 | tail -20
+
+    # All four gates at once — the release checklist's own step
+    npm run gates 2>&1 | tail -8
+
+    # Lint / typecheck — failures only
+    npm run lint 2>&1 | grep -E "error|warning|✖" | head -30
+    npm run check 2>&1 | tail -20
+
+    # Build — confirm success, don't transcribe it
+    npm run build 2>&1 | tail -15
+
+    # Install — never stream it
+    npm ci > /dev/null 2>&1 && echo "deps ok"
+
+    # Map builds write 64 dirs of output
+    npm run build-map -- <args> 2>&1 | tail -10
+
+    # git — bounded by default
+    git log --oneline -10        # never bare `git log`
+    git status --short
+    git diff --stat              # then `git diff -- <path>` for one file
+
+Rules: always bound with `head`/`tail`; prefer `--short`/`--stat`/`--dot`;
+`grep` for the failure rather than printing the pass; send installers and
+downloads to `/dev/null`. If a command floods anyway, do not paste the
+flood — report the one line that mattered.
+
+## 3. Workflow (unchanged)
+
+- New features/fixes: work on a branch, never directly on `main`. Commit and
+  push without asking. Test locally and give the user concrete verification
+  steps. Merge to `main` only after the user explicitly OKs it — a
+  testing/review gate, not a cost gate. Doc-only changes may go straight to
+  `main`. **Exception:** the remediation loop (`docs/ORCHESTRATION.md`)
+  automerges its own tasks once gates are green.
+- Keep `ROADMAP.md`, `ARCHITECTURE.md`, `ONBOARDING.md`, `DECISIONS.md`,
+  `MAPS.md` current as work lands — each has a distinct charter (status /
+  code map / newcomer guide / *why* / map build commands). Edit the relevant
+  section; do not read the file whole to do it. When a later decision
+  supersedes an earlier one, amend that entry rather than leaving a stale one
+  to be found first.
+- Tag releases (`vX.Y.Z` on `main`) with notes in `CHANGELOG.md` for
+  meaningful batches. Previews handed to any tester are published as alpha
+  (unmerged) or beta (merged, awaiting PO test) pre-releases — see
+  `docs/RELEASES.md`. Say in the entry what was built and what was actually
+  tried, rather than implying it.
+- Roles: user is Product Manager, Claude is Developer. Finish by telling the
+  user exactly what to run/click and what to expect.
+- **"Test locally" and "test the deployment" are two separately labelled
+  steps.** Verify locally first and say so; only then check the live site,
+  and say that too. (Why: see `DECISIONS.md` — "Two labelled test steps".)
+- Don't debug what the user can fix in two dashboard clicks. Try the direct
+  tool once or twice, then hand it back. (Why: see `DECISIONS.md` — "Hand a
+  dashboard problem back".)
+- Netlify build cost is not a constraint. Still, don't trigger manual deploys
+  as a debugging step — push and let git-triggered builds run. (Why: see
+  `DECISIONS.md` — "Netlify build cost".)
+
+## 4. Session lifecycle
+
+Every turn replays the whole transcript, so a costly read is re-billed on
+every subsequent message.
+
+- **One task per session.** A new feature, bug or map = a new thread.
+- **Don't re-read** files already read this session, or re-summarise earlier
+  turns.
+- **At task completion, or every 5–6 user turns**, append the checkpoint
+  below. If the session continues, re-append it — repeat, don't escalate,
+  don't refuse to work, don't lecture.
+
+```markdown
+---
+⚠️ **Context checkpoint — turn {N}.** This thread now replays its full history
+on every message. Start a fresh chat before the next task to avoid paying for
+this context again.
+
+**Handoff for the next session:**
+- **Done:** {one line — what changed, which files, which branch}
+- **State:** {branch pushed / tests green / awaiting PO verification}
+- **Next:** {the single next action, with the file path to open first}
+```
 
 ## Commit messages
 
 End every commit with:
 
-```
-Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>
-```
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+Name the model actually doing the work, and update this line when that
+changes. History: 116 commits trailered "Sonnet 5" up to 2026-09-13, then
+274 and counting trailered "Opus 5". This line still said "Sonnet 5" on
+2026-09-20 — it was right when written and nobody amended it at the
+switch.
