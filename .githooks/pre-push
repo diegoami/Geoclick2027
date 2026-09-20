@@ -25,4 +25,7 @@ if [ "$pushes_code" = 0 ]; then
 fi
 
 echo "pre-push: running quality gates (bypass with git push --no-verify)"
-exec node scripts/task.mjs gates
+# --quiet: pipe each gate instead of streaming it. A push that passes prints
+# four PASS lines; a push that fails prints the tail of the gate that failed.
+# Without it this hook emitted ~100 KB per push, mostly passing test names.
+exec node scripts/task.mjs gates --quiet

@@ -88,8 +88,9 @@ output and then explain it.
     # Tests — the default reporter is verbose; override it (14 lines, 683 tests)
     npm run test:unit --workspace=app -- --run --reporter=dot 2>&1 | tail -20
 
-    # All four gates at once — the release checklist's own step
-    npm run gates 2>&1 | tail -8
+    # All four gates at once — the release checklist's own step.
+    # --quiet prints four PASS lines, or the tail of the gate that failed.
+    npm run gates -- --quiet
 
     # Lint / typecheck — failures only
     npm run lint 2>&1 | grep -E "error|warning|✖" | head -30

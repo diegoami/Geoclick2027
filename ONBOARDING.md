@@ -149,12 +149,13 @@ npm run check    # svelte-check / type-check, plus tsc on data/scripts (data/tsc
 npm run lint     # prettier + eslint on the app and on data/scripts
 npm run format   # prettier --write on both
 npm run gates    # all four quality gates in order, stops at the first failure
+npm run gates -- --quiet   # same, but only PASS/FAIL lines (and the tail of a failure)
 ```
 
 ### The pre-push hook
 
 `npm run setup-hooks` (once per clone) sets `core.hooksPath` to the
-committed `.githooks/` directory. Its `pre-push` runs `npm run gates` —
+committed `.githooks/` directory. Its `pre-push` runs the four gates —
 `check`, `test`, `lint`, `build`, in that order — and **rejects the push
 if any gate fails**. This is the project's only automated gate: there is
 no hosted CI, and before this hook existed `npm run lint` failed silently
@@ -168,6 +169,10 @@ below). Expect ~15-20s per push.
   gate on work you are about to merge.
 - It deliberately does **not** run the Tauri or Android builds — a
   multi-minute pre-push is one that gets bypassed every time.
+- It runs them with `--quiet`, so a clean push prints four `PASS` lines
+  instead of ~100 KB of passing test names. A gate that fails prints the
+  tail of *its* output, which is the part you need. Run
+  `npm run gates` by hand if you want to watch the full stream.
 - `node scripts/task.mjs gates --json` gives the same verdict as JSON
   (per-gate pass/fail, exit code, timing, tail of output on failure).
 

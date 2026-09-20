@@ -35,7 +35,8 @@ Open the URL Vite prints (typically `http://localhost:5173`).
 
 `npm run setup-hooks` points git at the committed `.githooks/`, whose
 `pre-push` runs the four quality gates (`check`, `test`, `lint`, `build`)
-and rejects the push if one fails. Run them by hand with `npm run gates`;
+and rejects the push if one fails. Run them by hand with `npm run gates`
+(add `-- --quiet` for PASS/FAIL lines only);
 skip the hook for a single push with `git push --no-verify`.
 
 ## Quick start (desktop app)
