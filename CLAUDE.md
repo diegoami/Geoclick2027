@@ -171,10 +171,16 @@ this context again.
 ```
 
 **A chat message is not a handoff.** `/clear` discards the transcript, so
-before a task is finished, write the same three lines into
-`docs/HANDOVER.md` — the file a fresh session is told to read first. Update
-it in place; it is a snapshot of where things stand, not an append-only log.
-The chat copy is a prompt for the user; the file is the one that survives.
+the three lines above also go into `docs/HANDOVER.md` — the file a fresh
+session is told to read first. Update it in place; it is a snapshot of where
+things stand, not an append-only log.
+
+**Update the file _before_ posting the checkpoint, in the same turn** — they
+are one action, not two (product owner's rule, 2026-09-20). Asking someone to
+start a fresh session while `HANDOVER.md` still describes an older state
+hands that session a stale snapshot, which is the precise failure the file
+exists to prevent. If a task ends without a checkpoint, the file is still
+updated; the chat copy is a prompt for the user, the file is what survives.
 
 ## Commit messages
 
