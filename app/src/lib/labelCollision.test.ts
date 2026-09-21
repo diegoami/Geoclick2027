@@ -102,13 +102,17 @@ describe('areaShares', () => {
 		expect(shares.get('north')!).toBeLessThan(0.11);
 	});
 
-	it('measures a target that wraps the antimeridian', () => {
-		const wrapping: Target = {
-			...target('chukotka', [170, 60, -150, 70]),
-			crossesAntimeridian: true
-		};
-		const shares = areaShares([wrapping, target('plain', [0, 60, 20, 70])]);
-		expect(shares.get('chukotka')).toBe(1);
+	it('measures a target that wraps the antimeridian, flag or no flag', () => {
+		// The bbox is authoritative (FT-52). A wrapping bbox with no
+		// `crossesAntimeridian` flag must measure the same as one with it -
+		// otherwise Chukotka, which shipped without the flag, gets a negative
+		// area and loses every collision first.
+		const wrapBbox: [number, number, number, number] = [170, 60, -150, 70];
+		const flagged: Target = { ...target('flagged', wrapBbox), crossesAntimeridian: true };
+		const unflagged: Target = target('unflagged', wrapBbox);
+		const shares = areaShares([flagged, unflagged, target('plain', [0, 60, 20, 70])]);
+		expect(shares.get('flagged')).toBe(1);
+		expect(shares.get('unflagged')).toBe(1);
 		expect(shares.get('plain')).toBeCloseTo(0.5, 2);
 	});
 

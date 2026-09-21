@@ -304,8 +304,11 @@ export function areaShares(targets: Target[]): Map<string, number> {
 	let largest = 0;
 	for (const target of targets) {
 		const [west, south, east, north] = target.bbox;
-		// A bbox that wraps the antimeridian has west > east (mapDefinition.ts).
-		const width = (target.crossesAntimeridian ? east + 360 : east) - west;
+		// A bbox that wraps the antimeridian has west > east. Read wrapping
+		// from the bbox itself, not the optional `crossesAntimeridian` flag:
+		// the bbox is the authoritative geometry, and a map can arrive
+		// without the flag (FT-52, mapDefinition.ts).
+		const width = east - west + (west > east ? 360 : 0);
 		// Degrees of longitude are narrower away from the equator; without this,
 		// a northern region would outrank a bigger southern one.
 		const area = width * Math.cos(((south + north) / 2) * (Math.PI / 180)) * (north - south);

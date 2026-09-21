@@ -22,7 +22,11 @@ export interface Target {
 	// targets share one (data/scripts/mapColors.ts). Applied as feature-state
 	// by createMap; optional so an older map.json still renders (fallback colour).
 	colorIndex?: number;
-	// Set only on a target whose bbox wraps the antimeridian (west > east).
+	// A cached note that this target's bbox wraps the antimeridian
+	// (west > east), written by build-map.ts. Documentary only (FT-52): the
+	// runtime derives wrapping from `west > east` itself, so a map that
+	// omits the flag - or an externally authored one - still renders and
+	// frames correctly.
 	crossesAntimeridian?: true;
 }
 
@@ -52,8 +56,13 @@ export interface MapDefinition {
 export function overallExtent(map: MapDefinition): [number, number, number, number] {
 	let [minLon, minLat, maxLon, maxLat] = overallBounds(map);
 	for (const target of map.targets) {
-		if (target.crossesAntimeridian) continue;
 		const [west, south, east, north] = target.bbox;
+		// A bbox that wraps the antimeridian has west > east. Its extent is
+		// what would pull the camera out to the whole hemisphere, so it
+		// contributes its centroid only (via overallBounds above). Detected
+		// from the bbox, not the optional flag, so a map without the flag is
+		// framed correctly too (FT-52).
+		if (west > east) continue;
 		minLon = Math.min(minLon, west);
 		maxLon = Math.max(maxLon, east);
 		minLat = Math.min(minLat, south);
