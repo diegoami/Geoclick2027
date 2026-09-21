@@ -94,8 +94,9 @@ Check items off as they land; update "Status" as iterations complete.
   map cannot show and a bigger tap target for towns (v0.9.2, FT-45/FT-46);
   the name origin pinned as the card's first line (v0.9.3, FT-47). Each
   entry is in [CHANGELOG.md](CHANGELOG.md).
-- **v0.9.4 planned 2026-09-20, nothing started**:
+- **v0.9.4 planned 2026-09-20, in progress**:
   [docs/PLAN_V0.9.4.md](docs/PLAN_V0.9.4.md) — "the review's eight".
+  FT-52 merged (`69cfa3d`, PR #10); FT-53 next, the rest not started.
   The other session's code review filed GitHub issues #1-#8; all eight were
   verified against the source on 2026-09-20 and all eight hold. The product
   owner put them ahead of v0.10.0 and asked for all eight in the next

@@ -10,7 +10,8 @@ Nothing user-facing is added here, so this is a patch.
 [PLAN_V0.10.md](PLAN_V0.10.md) — translating the name-facts — keeps its
 number and queues behind this.
 
-**Status: planned.** No task is started.
+**Status: in progress.** FT-52 is merged (`69cfa3d`, PR #10); FT-53 next.
+No other task is started.
 
 ## No product decisions needed
 
@@ -209,7 +210,7 @@ paths the installers exercise differently from the browser.
 
 | Task  | State       | Merge | Notes                                                                   |
 | ----- | ----------- | ----- | ----------------------------------------------------------------------- |
-| FT-52 | not started | —     | issue #6, antimeridian from the bbox; needs a `russia-regions` rebuild  |
+| FT-52 | **merged**  | `69cfa3d` | issue #6, antimeridian from the bbox; flag now documentary, integrity assertion added, `russia-regions` rebuilt (PR #10, reviewed by Luna) |
 | FT-53 | not started | —     | issue #3, terrain labels follow the language                            |
 | FT-54 | not started | —     | issue #2, terrain-off honoured during the first load                    |
 | FT-55 | not started | —     | issue #1, tutorial Back/Resume reaches the Overview route               |

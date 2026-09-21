@@ -1,4 +1,4 @@
-# Handover — 2026-09-20, after v0.9.3
+# Handover — 2026-09-22, v0.9.4 in progress (FT-52 merged)
 
 For whoever picks Geoclick up next, whether a human or a fresh Claude
 session. It records where things stand, what's next, and what's easy to
@@ -17,11 +17,12 @@ before any work starts.
 | | |
 |---|---|
 | `main` | clean, in sync with GitHub |
+| Deploy | The product owner **stopped deploying** on 2026-09-22, so a `main` merge no longer triggers a live Netlify build. Merges still need the product owner's OK (CLAUDE.md §3) — that rule is a review gate, not the old cost gate |
 | Latest release | **v0.9.3** (tag at `8383256`, 2026-09-19): the name origin pinned on every card. The web app deploys from `main`; installers are on the public [releases page](https://github.com/diegoami/geoclick-releases/releases/latest). Previews go out as alpha/beta pre-releases first (RELEASES.md, "Pre-releases") |
 | Remediation programme | Closed with v0.2.0 ([REMEDIATION_PLAN.md](REMEDIATION_PLAN.md)) |
 | Feature programme | Closed with v0.5.0 ([FEATURE_PLAN.md](FEATURE_PLAN.md)) |
 | Since then | Per-release plans: [PLAN_V0.6.md](PLAN_V0.6.md) through [PLAN_V0.9.md](PLAN_V0.9.md), each with its own ledger |
-| Next | [PLAN_V0.9.4.md](PLAN_V0.9.4.md) — **the review's eight issues, FT-52 to FT-59.** Planned 2026-09-20, nothing started. All eight ship in v0.9.4; the product owner put them ahead of v0.10.0 |
+| Next | [PLAN_V0.9.4.md](PLAN_V0.9.4.md) — **the review's eight issues, FT-52 to FT-59. In progress: FT-52 merged (`69cfa3d`, PR #10); FT-53 next.** All eight ship in v0.9.4; the product owner put them ahead of v0.10.0 |
 | After that | [PLAN_V0.10.md](PLAN_V0.10.md) — translating the name-facts, still **blocked on three product decisions**, see "How to resume" |
 | Raised, unscoped | Six UX problems from one round of tablet play, 2026-09-20, **decided the same day** — first item of ROADMAP.md's Iteration 8+ backlog: the level-0 tray offering every name at once (`difficulty.ts:21`), slips losing their drag to the tablet's text-selection gesture, the fact card now only on a name the player could *not* place, best-fit label placement as a requirement rather than first-fit, a spike for Europa-Universalis-style stretched region names, and the map card's `{known} / {total} known` line replaced by a progress bar over `knownCount / total`, hidden at zero (the score panel keeps its copy — the two record different things). Each entry carries its decision; none is scheduled or estimated |
 | Also raised 2026-09-20 | **The start screen becomes a zoomable world map** — pick the country on the map, then the kind of quiz. The map list cannot be finalized as a list: the goal is a high number of maps, and `mapCatalog.ts` is already 31 countries and 66 maps. Favourites and Recent stay unchanged. Second item of the Iteration 8+ backlog, with the open questions listed there |
@@ -54,6 +55,12 @@ Shipped since the v0.5.0 handover, in one paragraph each:
   named destination for a session handoff (CLAUDE.md §4); FT-38
   reassessed and parked rather than closed (DECISIONS.md). Nothing
   user-facing changed, so v0.9.3 still stands.
+- **2026-09-22, unreleased** — **FT-52** (issue #6): `areaShares` and
+  `overallExtent` now derive antimeridian wrapping from the bbox
+  (`west > east`); the `crossesAntimeridian` flag is documentary, the
+  integrity suite asserts flag and bbox agree, and `russia-regions/map.json`
+  is rebuilt to carry it. PR #10, the first task through the Luna review
+  loop ([REVIEW_LOOP.md](REVIEW_LOOP.md)).
 
 ## The one thing most worth not getting wrong
 
@@ -68,10 +75,12 @@ the generated one.
 
 ## How to resume
 
-**Start with [PLAN_V0.9.4.md](PLAN_V0.9.4.md).** FT-52 first — it is the
-only task in the batch that touches generated data, so the rebuilt
-`russia-regions/map.json` should be the only `map.json` in its diff. Open
-`app/src/lib/labelCollision.ts:308`. The plan needs no decisions from the
+**Start with [PLAN_V0.9.4.md](PLAN_V0.9.4.md).** FT-52 is merged
+(`69cfa3d`, PR #10, reviewed by Luna); **FT-53 is next** — terrain labels
+keep the old language after a switch, because `setVisible()`'s first draw
+happens after `await this.add()`, outside the effect's tracking. Open
+`app/src/lib/terrainLayer.ts`. FT-54 depends on FT-53 only to keep two
+branches out of that file at once. The plan needs no decisions from the
 product owner; it can be worked straight through.
 
 v0.10.0 comes **after** v0.9.4 and still **cannot start**: it needs three
@@ -86,7 +95,7 @@ needed") —
 
 Suggested first message for the next session:
 
-> Read docs/HANDOVER.md, then docs/PLAN_V0.9.4.md. Start FT-52.
+> Read docs/HANDOVER.md, then docs/PLAN_V0.9.4.md. Start FT-53.
 
 Whatever comes next, the working rules stay (CLAUDE.md §3):
 
