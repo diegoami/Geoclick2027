@@ -21,6 +21,7 @@ interface TargetLike {
 	name: unknown;
 	centroid: unknown;
 	bbox: unknown;
+	crossesAntimeridian?: unknown;
 }
 interface MapLike {
 	targets: TargetLike[];
@@ -50,6 +51,20 @@ function mapProblems(map: MapLike): string[] {
 		if (!isFiniteTuple(t.centroid, 2))
 			problems.push(`${String(t.id)}: centroid not 2 finite numbers`);
 		if (!isFiniteTuple(t.bbox, 4)) problems.push(`${String(t.id)}: bbox not 4 finite numbers`);
+		else {
+			// FT-52: the bbox is authoritative for antimeridian wrapping
+			// (west > east), but build-map.ts also writes a documentary
+			// `crossesAntimeridian` flag. The two must agree, or one of them
+			// is lying and a target's label silently loses every collision it
+			// enters.
+			const [west, , east] = t.bbox as number[];
+			const wraps = west > east;
+			const flagged = t.crossesAntimeridian === true;
+			if (wraps !== flagged)
+				problems.push(
+					`${String(t.id)}: crossesAntimeridian ${flagged} disagrees with bbox west${wraps ? '>' : '<='}east`
+				);
+		}
 	}
 	const ids = new Set(map.targets.map((t) => t.id));
 	const tour = map.tourOrder;
@@ -151,7 +166,8 @@ describe('map data integrity - the checks catch what they claim to', () => {
 		name,
 		centroid: [10, 50],
 		bbox: [9, 49, 11, 51],
-		colorIndex: 3 // an extra field (GC-032) must not be a problem
+		colorIndex: 3, // an extra field (GC-032) must not be a problem
+		crossesAntimeridian: undefined as boolean | undefined
 	});
 	const clean = (): MapLike => ({
 		targets: [target('a', 'Alpha'), target('b', 'Beta')],
@@ -189,6 +205,27 @@ describe('map data integrity - the checks catch what they claim to', () => {
 				'tourOrder is not a permutation of the target ids'
 			);
 		}
+	});
+
+	it('flags a wrapping bbox with no flag, and a flag on a non-wrapping bbox', () => {
+		// FT-52: the bbox decides. A wrapping bbox (west > east) that lacks
+		// the flag is the Chukotka case; a flag on an ordinary bbox is a lie.
+		const unflagged = clean();
+		unflagged.targets[0].bbox = [170, 10, -150, 20];
+		expect(mapProblems(unflagged)).toContain(
+			'a: crossesAntimeridian false disagrees with bbox west>east'
+		);
+
+		const agreeing = clean();
+		agreeing.targets[0].bbox = [170, 10, -150, 20];
+		agreeing.targets[0].crossesAntimeridian = true;
+		expect(mapProblems(agreeing)).toEqual([]);
+
+		const lying = clean();
+		lying.targets[0].crossesAntimeridian = true;
+		expect(mapProblems(lying)).toContain(
+			'a: crossesAntimeridian true disagrees with bbox west<=east'
+		);
 	});
 
 	it('flags catalog drift in both directions', () => {

@@ -84,8 +84,11 @@ data/scripts/build-terrain.ts         terrain.pmtiles for a map that exists
   frames it correctly; naive min/max code doesn't (`overallBboxOf` mis-clips
   the lake `-spat` filter for Russia). `build-map.ts` now logs a WARNING
   for such a target and writes `crossesAntimeridian: true` on it — only on
-  it, so other maps' output is byte-identical. Not backfilled: the
-  committed `russia-regions/map.json` gains the flag on its next rebuild.
+  it, so other maps' output is byte-identical. Backfilled in FT-52: the
+  committed `russia-regions/map.json` carries the flag, and the runtime no
+  longer depends on it — `areaShares` and `overallExtent` derive wrapping
+  from `west > east` itself, so a map that omits the flag is handled too.
+  `mapData.test.ts` asserts the flag and the bbox agree.
 - **Target ids from `slugify`** — accents are stripped (`München` →
   `munchen`), but Latin letters with no Unicode decomposition (Ł, Ø, ß,
   Đ…) are dropped, and non-Latin scripts slug to an empty string.
