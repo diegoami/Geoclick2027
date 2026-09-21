@@ -91,6 +91,9 @@ Suggested first message for the next session:
 Whatever comes next, the working rules stay (CLAUDE.md §3):
 
 - one branch per task, pushed without asking;
+- **every task PR is reviewed by ChatGPT GPT-5.6 Luna, high, over GitHub —
+  implementer and reviewer comment back and forth until they agree, each
+  signing with its model name ([REVIEW_LOOP.md](REVIEW_LOOP.md));**
 - `npm run gates -- --quiet` before pushing (the pre-push hook runs them
   anyway, and now prints four PASS lines instead of flooding);
 - verify in a real browser, and try both installers before any release;

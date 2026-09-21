@@ -134,8 +134,15 @@ flood — report the one line that mattered.
   (unmerged) or beta (merged, awaiting PO test) pre-releases — see
   `docs/RELEASES.md`. Say in the entry what was built and what was actually
   tried, rather than implying it.
-- Roles: user is Product Manager, Claude is Developer. Finish by telling the
-  user exactly what to run/click and what to expect.
+- Roles: the user is Product Manager; the implementing model is the
+  Developer. Finish by telling the user exactly what to run/click and what
+  to expect.
+- **Every task PR gets an independent review from ChatGPT GPT-5.6 Luna,
+  high (`opencode/gpt-5.6-luna#high`), over GitHub, before merge.** The
+  implementer opens the PR, Luna reviews and comments, the implementer
+  replies, and the two iterate until they agree. Each signs every comment
+  with its model name. Procedure: [docs/REVIEW_LOOP.md](docs/REVIEW_LOOP.md).
+  This is additional to, not a replacement for, the user's merge OK.
 - **"Test locally" and "test the deployment" are two separately labelled
   steps.** Verify locally first and say so; only then check the live site,
   and say that too. (Why: see `DECISIONS.md` — "Two labelled test steps".)
@@ -184,12 +191,12 @@ updated; the chat copy is a prompt for the user, the file is what survives.
 
 ## Commit messages
 
-End every commit with:
+End every commit with a trailer naming the model that did the work:
 
-    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+    Co-Authored-By: DeepSeek V4.1 Flash <noreply@opencode.ai>
 
-Name the model actually doing the work, and update this line when that
-changes. History: 116 commits trailered "Sonnet 5" up to 2026-09-13, then
-274 and counting trailered "Opus 5". This line still said "Sonnet 5" on
-2026-09-20 — it was right when written and nobody amended it at the
-switch.
+Update this line when the implementing model changes. History: 116 commits
+trailered "Sonnet 5" up to 2026-09-13, then 274 trailered "Opus 5"; the
+implementing model became DeepSeek V4.1 Flash on 2026-09-21, with ChatGPT
+GPT-5.6 Luna (high) as the PR reviewer ([docs/REVIEW_LOOP.md](docs/REVIEW_LOOP.md)).
+The trailer was left stale once already — keep it current.
