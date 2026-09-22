@@ -27,7 +27,7 @@
 	import { overallExtent, type MapDefinition } from './mapDefinition';
 	import { handSize, knownCount, mapLevel, refillHand, type Level } from './difficulty';
 	import {
-		createPlayableProgressRepository,
+		loadPlayableCardStates,
 		todayLocalDate,
 		type ProgressRepository
 	} from './progressRepository';
@@ -35,9 +35,9 @@
 
 	let { mapId }: { mapId: string } = $props();
 
-	// Assigned at the top of onMount's async init, before anything below
-	// (refreshCardStates, the completion $effect, onSlipPointerUp) can run -
-	// a plain module-scope variable, not $state, same as cardStatesByTargetId.
+	// Assigned at the top of onMount's async init, before anything below (the
+	// completion $effect, onSlipPointerUp) can run - a plain module-scope
+	// variable, not $state, same as cardStatesByTargetId.
 	let progressRepository: ProgressRepository;
 
 	let container: HTMLDivElement;
@@ -562,17 +562,6 @@
 		}
 	}
 
-	// Reads each target's current card state and returns the ids that are
-	// NOT due yet - refreshes `cardStatesByTargetId` as a side effect, since
-	// `rate()` needs each target's previous state and this is the one place
-	// that state gets (re)loaded from the repository.
-	/** Reads what the scheduler knows about this map, which the round needs
-	 * for its difficulty (FT-21) and for grading each answer. */
-	async function refreshCardStates(): Promise<void> {
-		const cardStates = await progressRepository.getCardStates(mapId);
-		cardStatesByTargetId = new Map(cardStates.map((c) => [c.targetId, c]));
-	}
-
 	function clearAllVisuals() {
 		// Before 'load' there are no visuals to clear, and setFeatureState
 		// would throw - and "Play again", the only way in, can't be reached
@@ -661,15 +650,17 @@
 		let cancelled = false;
 
 		(async () => {
-			const progress = await createPlayableProgressRepository();
-			progressRepository = progress.repository;
-			storageWarning = progress.failed;
+			// Reads what the scheduler knows, falling back to memory if the
+			// native database cannot be opened - the round plays on, it just
+			// will not be remembered (FT-57).
+			const loaded = await loadPlayableCardStates(mapId);
+			progressRepository = loaded.repository;
+			cardStatesByTargetId = new Map(loaded.cardStates.map((c) => [c.targetId, c]));
+			storageWarning = loaded.failed;
+
 			const { mapDef: loadedMapDef, style } = await fetchMapDefAndStyle(mapId);
 			if (cancelled) return;
 			mapDef = loadedMapDef;
-
-			await refreshCardStates();
-			if (cancelled) return;
 
 			({ map, terrain } = createMap(container, loadedMapDef, style));
 			fetchFacts(mapId).then((loaded) => {

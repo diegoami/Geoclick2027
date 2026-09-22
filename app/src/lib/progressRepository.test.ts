@@ -2,10 +2,11 @@ import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import {
 	createInMemoryProgressRepository,
 	createLocalStorageProgressRepository,
-	createPlayableProgressRepository,
 	createSandboxedProgressRepository,
+	loadPlayableCardStates,
 	todayLocalDate,
 	type CardState,
+	type ProgressRepository,
 	type SessionSummary
 } from './progressRepository';
 
@@ -216,12 +217,13 @@ describe('storage failures are not app failures (FT-57)', () => {
 		expect(await repo.getCardStates('italy-regions')).toEqual([sampleCard]);
 	});
 
-	it('plays on an in-memory repository when opening the real one fails', async () => {
+	it('plays on an in-memory repository when the repository cannot be created', async () => {
 		const logged = vi.spyOn(console, 'error').mockImplementation(() => {});
-		const { repository, failed } = await createPlayableProgressRepository(() =>
+		const { repository, cardStates, failed } = await loadPlayableCardStates('italy-regions', () =>
 			Promise.reject(new Error('database is locked'))
 		);
 		expect(failed).toBe(true);
+		expect(cardStates).toEqual([]);
 		expect(logged).toHaveBeenCalled();
 
 		// The stand-in is a working repository, so the round can be played.
@@ -230,13 +232,35 @@ describe('storage failures are not app failures (FT-57)', () => {
 		expect(localStorage.length).toBe(0);
 	});
 
-	it('uses the real repository when opening it works', async () => {
-		const { repository, failed } = await createPlayableProgressRepository(async () =>
-			createLocalStorageProgressRepository()
+	it('falls back when the native repository opens lazily and the first read fails', async () => {
+		// The SQLite and Capacitor repositories create their connection on the
+		// first read, not when they are created, so a real open failure
+		// surfaces here - not in the factory (FT-57).
+		const logged = vi.spyOn(console, 'error').mockImplementation(() => {});
+		const lazyFailure: ProgressRepository = {
+			...createInMemoryProgressRepository(),
+			getCardStates: () => Promise.reject(new Error('unable to open database file'))
+		};
+
+		const { repository, cardStates, failed } = await loadPlayableCardStates('italy-regions', () =>
+			Promise.resolve(lazyFailure)
+		);
+		expect(failed).toBe(true);
+		expect(cardStates).toEqual([]);
+		expect(logged).toHaveBeenCalled();
+		expect(repository).not.toBe(lazyFailure);
+	});
+
+	it('uses the real repository when it opens and reads', async () => {
+		const real = createLocalStorageProgressRepository();
+		await real.saveCardState('italy-regions', sampleCard);
+		const { repository, cardStates, failed } = await loadPlayableCardStates(
+			'italy-regions',
+			async () => real
 		);
 		expect(failed).toBe(false);
-		await repository.saveCardState('italy-regions', sampleCard);
-		expect(localStorage.getItem('geoclick:progress:v1:italy-regions:cards')).toContain('Abruzzo');
+		expect(cardStates).toEqual([sampleCard]);
+		expect(repository).toBe(real);
 	});
 });
 

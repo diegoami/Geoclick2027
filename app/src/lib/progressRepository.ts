@@ -155,20 +155,25 @@ export async function createProgressRepository(): Promise<ProgressRepository> {
 }
 
 /**
- * The repository to play with (FT-57): the real one, or an in-memory stand-in
- * if opening it fails. A transient native-database failure must not stop a
- * quiz that would otherwise play fine - the round runs, and `failed` says its
- * progress will not be saved so the view can say so too. The `create` seam is
- * for tests.
+ * A repository and the card states it holds for one map, falling back to
+ * memory if either opening the repository or reading it fails (FT-57). The
+ * read is part of opening: the native repositories create their database
+ * connection lazily, on the first read, so a real open failure surfaces here
+ * rather than when the repository is created. The round is playable either
+ * way; `failed` says its progress will not be saved. The `create` seam is for
+ * tests.
  */
-export async function createPlayableProgressRepository(
+export async function loadPlayableCardStates(
+	mapId: string,
 	create: () => Promise<ProgressRepository> = createProgressRepository
-): Promise<{ repository: ProgressRepository; failed: boolean }> {
+): Promise<{ repository: ProgressRepository; cardStates: CardState[]; failed: boolean }> {
 	try {
-		return { repository: await create(), failed: false };
+		const repository = await create();
+		const cardStates = await repository.getCardStates(mapId);
+		return { repository, cardStates, failed: false };
 	} catch (e) {
-		console.error('Could not open saved progress; this round will not be remembered.', e);
-		return { repository: createInMemoryProgressRepository(), failed: true };
+		console.error('Could not read saved progress; this round will not be remembered.', e);
+		return { repository: createInMemoryProgressRepository(), cardStates: [], failed: true };
 	}
 }
 
