@@ -51,6 +51,16 @@ const PLACES_SHP = path.join(
 	'data/source/ne_10m_populated_places/ne_10m_populated_places.shp'
 );
 
+/** The languages the authored name-facts can be written in. */
+export type Language = 'en' | 'it' | 'de';
+
+/**
+ * A place's name-facts per language (FT-49, docs/PLAN_V0.10.md). Only the
+ * languages a place actually has sentences in appear, so a half-translated
+ * country is partly English; the app falls back per sentence at read time.
+ */
+export type LangHooks = Partial<Record<Language, string[]>>;
+
 /** One target's derived facts. Every field is optional: a fact that cannot
  *  be computed is left out rather than guessed, and the app renders only
  *  what it is given. */
@@ -85,7 +95,7 @@ export interface DerivedFact {
 	 * data/facts/<country>.json. A list: the card shows a different one each
 	 * time you meet the place, and the first is always about the NAME.
 	 */
-	hooks?: string[];
+	hooks?: string[] | LangHooks;
 }
 
 /**
@@ -97,13 +107,35 @@ export interface DerivedFact {
  * rather than four copies drifting apart. Missing file, or a country
  * nobody has written for yet: no hooks, and the card shows its derived
  * line alone.
+ *
+ * Each value is one of:
+ *   - a plain list - English, applying to whichever kind of target has the id;
+ *   - a per-language object ({ en, it, de }) - the same, per language;
+ *   - a per-kind object ({ any, region, city }), each itself a list or a
+ *     per-language object - for an id that is two different places (China
+ *     has five; Jilin's province facts would be false of its town).
  */
 interface AuthoredHooks {
-	/** Applies whichever kind of target carries this id. */
-	any?: string[];
-	/** Only when the target is a region, or only when it is a city. */
-	region?: string[];
-	city?: string[];
+	any?: LangHooks;
+	region?: LangHooks;
+	city?: LangHooks;
+}
+
+const AUTHORED_LANGUAGES: Language[] = ['en', 'it', 'de'];
+
+/** A list (English) or a per-language object, normalised; undefined if empty. */
+function asLangHooks(value: unknown): LangHooks | undefined {
+	const isSentences = (v: unknown): v is string[] =>
+		Array.isArray(v) && v.length > 0 && v.every((s) => typeof s === 'string' && s !== '');
+	if (isSentences(value)) return { en: value };
+	if (!value || typeof value !== 'object' || Array.isArray(value)) return undefined;
+	const byLang = value as Record<string, unknown>;
+	const hooks: LangHooks = {};
+	for (const language of AUTHORED_LANGUAGES) {
+		const sentences = byLang[language];
+		if (isSentences(sentences)) hooks[language] = sentences;
+	}
+	return Object.keys(hooks).length > 0 ? hooks : undefined;
 }
 
 function hooksForCountry(country: string | undefined): Record<string, AuthoredHooks> {
@@ -115,16 +147,16 @@ function hooksForCountry(country: string | undefined): Record<string, AuthoredHo
 	const file = path.join(REPO_ROOT, 'data/facts', `${slugify(country)}.json`);
 	if (!existsSync(file)) return {};
 	const raw = JSON.parse(readFileSync(file, 'utf8')) as Record<string, unknown>;
-	const isSentences = (v: unknown): v is string[] =>
-		Array.isArray(v) && v.length > 0 && v.every((s) => typeof s === 'string' && s !== '');
 
 	const hooks: Record<string, AuthoredHooks> = {};
 	for (const [id, value] of Object.entries(raw)) {
 		// `_note` and any other commentary key: the authored files explain
 		// themselves at the top, and that is not a place.
 		if (id.startsWith('_')) continue;
-		if (isSentences(value)) {
-			hooks[id] = { any: value };
+		// A plain list or a per-language object: applies to any kind.
+		const direct = asLangHooks(value);
+		if (direct) {
+			hooks[id] = { any: direct };
 			continue;
 		}
 		// The long form, for an id that is two different places. Target ids
@@ -133,15 +165,30 @@ function hooksForCountry(country: string | undefined): Record<string, AuthoredHo
 		// municipalities where the province IS the city and one - Jilin -
 		// where they are genuinely different and a province's facts would be
 		// false of the town.
-		if (value && typeof value === 'object' && !Array.isArray(value)) {
+		if (value && typeof value === 'object') {
 			const byKind = value as Record<string, unknown>;
 			const entry: AuthoredHooks = {};
-			if (isSentences(byKind.region)) entry.region = byKind.region;
-			if (isSentences(byKind.city)) entry.city = byKind.city;
-			if (entry.region || entry.city) hooks[id] = entry;
+			const any = asLangHooks(byKind.any);
+			const region = asLangHooks(byKind.region);
+			const city = asLangHooks(byKind.city);
+			if (any) entry.any = any;
+			if (region) entry.region = region;
+			if (city) entry.city = city;
+			if (entry.any || entry.region || entry.city) hooks[id] = entry;
 		}
 	}
 	return hooks;
+}
+
+/**
+ * What goes into facts.json: the plain list when a place has English only,
+ * the per-language object once a second language exists. Keeping the plain
+ * list means a country nobody has translated stays byte-identical to its
+ * earlier build (FT-49); the app reads both.
+ */
+function asStoredHooks(hooks: LangHooks): string[] | LangHooks {
+	const languages = Object.keys(hooks);
+	return languages.length === 1 && hooks.en ? hooks.en : hooks;
 }
 
 interface Feature<G = AnyGeometry> {
@@ -441,7 +488,8 @@ async function buildOne(mapId: string): Promise<number> {
 		// A kind-specific list wins over the catch-all, so a province's facts
 		// are never shown for a town that shares its id.
 		const sentences = (fact?.kind && authored?.[fact.kind]) || authored?.any;
-		ordered[target.id] = sentences ? { ...fact, hooks: sentences } : fact;
+		const stored = sentences ? asStoredHooks(sentences) : undefined;
+		ordered[target.id] = stored ? { ...fact, hooks: stored } : fact;
 	}
 	writeFileSync(path.join(absOutDir, 'facts.json'), `${JSON.stringify(ordered, null, '\t')}\n`);
 	return Object.keys(ordered).length;

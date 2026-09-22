@@ -3,7 +3,14 @@
 // in which order, and that all three languages produce a real sentence
 // rather than a template with a hole in it.
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { factClauses, formatCount, pickHook, placeFacts, type Fact } from './facts';
+import {
+	factClauses,
+	formatCount,
+	hooksInLanguage,
+	pickHook,
+	placeFacts,
+	type Fact
+} from './facts';
 import { LANGUAGES, setLanguage } from './i18n.svelte';
 
 const piemonte: Fact = {
@@ -146,6 +153,74 @@ describe('placeFacts (FT-47: the origin is pinned)', () => {
 		expect(placeFacts('m', 'one', fact).extra).toBe('a');
 		expect(placeFacts('m', 'two', fact).extra).toBe('a');
 		expect(placeFacts('m', 'one', fact).extra).toBe('b');
+	});
+});
+
+describe('placeFacts in the reader’s language (FT-49)', () => {
+	const translated: Fact = {
+		kind: 'region',
+		hooks: {
+			en: ['from the Longobards', 'the bankers', 'the economy'],
+			it: ['dai Longobardi', 'i banchieri']
+		}
+	};
+
+	it('is the whole list for a language that has one, English for the gaps', () => {
+		expect(hooksInLanguage(translated.hooks, 'en')).toEqual([
+			'from the Longobards',
+			'the bankers',
+			'the economy'
+		]);
+		// Two Italian, three English: the third sentence is English.
+		expect(hooksInLanguage(translated.hooks, 'it')).toEqual([
+			'dai Longobardi',
+			'i banchieri',
+			'the economy'
+		]);
+	});
+
+	it('reads a plain array as English in every language', () => {
+		const english: Fact = { kind: 'region', hooks: ['one', 'two'] };
+		for (const language of LANGUAGES) {
+			expect(hooksInLanguage(english.hooks, language)).toEqual(['one', 'two']);
+		}
+	});
+
+	it('has nothing for a place nobody has written about', () => {
+		expect(hooksInLanguage(undefined, 'it')).toEqual([]);
+		expect(hooksInLanguage({ it: [] }, 'it')).toEqual([]);
+	});
+
+	// These need the rotation store, as the FT-47 suite explains.
+	beforeEach(() => {
+		const store = new Map<string, string>();
+		vi.stubGlobal('localStorage', {
+			getItem: (k: string) => store.get(k) ?? null,
+			setItem: (k: string, v: string) => void store.set(k, v),
+			removeItem: (k: string) => void store.delete(k)
+		});
+	});
+	afterEach(() => {
+		vi.unstubAllGlobals();
+		setLanguage('en');
+	});
+
+	it('shows the origin in the reader’s language', () => {
+		setLanguage('it');
+		expect(placeFacts('m', 't', translated).origin).toBe('dai Longobardi');
+	});
+
+	it('rotates the rest of the reader’s language, falling back per sentence', () => {
+		setLanguage('it');
+		expect(placeFacts('m', 't', translated).extra).toBe('i banchieri');
+		expect(placeFacts('m', 't', translated).extra).toBe('the economy');
+	});
+
+	it('falls back entirely when the language has no sentences at all', () => {
+		const englishOnly: Fact = { kind: 'region', hooks: { en: ['one', 'two'] } };
+		setLanguage('it');
+		expect(placeFacts('m', 't', englishOnly).origin).toBe('one');
+		expect(placeFacts('m', 't', englishOnly).extra).toBe('two');
 	});
 });
 
