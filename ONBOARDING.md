@@ -70,8 +70,9 @@ app/                    SvelteKit app (the actual game UI)
     geoclickMap.ts        shared map-loading helpers used by all three views
     mapDefinition.ts, tour.ts   data-shape types + tour logic
   src/routes/            SvelteKit file-based routing
-  static/maps -> ../../data/maps       symlink, see "Gotchas" below
-  static/styles -> ../../data/styles   symlink, same gotcha
+  static/{maps,styles}                 prepared at build time from data/, see "Gotchas"
+  scripts/prepare-assets.mjs           links (or copies) data/{maps,styles} into static/
+  scripts/check-build-assets.mjs       postbuild: fails the build if they are missing
   scripts/copy-maplibre-worker.mjs     postbuild step, see "Gotchas"
 
 packages/
@@ -604,19 +605,21 @@ this one, and is read on demand rather than up front.
 
 ## Gotchas that have already cost real time
 
-- **`app/static/maps` and `app/static/styles` are symlinks** into
-  `data/`. A normal local build (`npm run build`) or a git-based CI build
-  resolves these fine. Any deploy path that zips/archives the source
-  instead of doing a git clone (e.g. a manual "upload source and build
-  remotely" flow) can silently drop symlinks, producing a build that's
-  missing all map data. If map assets 404 on a deploy but work locally,
-  check this first. **Git for Windows hits the same failure mode a
-  different way**: it doesn't create real symlinks by default, so a
-  fresh Windows clone can turn these into tiny text files containing the
-  literal target path instead of real directories - confirmed directly
-  (a packaged Windows build 404'd on every map's `map.json`). Fix:
-  enable Windows Developer Mode, `git config --global core.symlinks
-  true`, then re-clone (an existing checkout won't self-heal).
+- **`app/static/maps` and `app/static/styles` are prepared at build time,
+  not committed.** `app/scripts/prepare-assets.mjs` links (or copies, if
+  the filesystem refuses) `data/maps` and `data/styles` there; `predev` and
+  `prebuild` run it, and the paths are gitignored, so a fresh clone has no
+  static assets until its first dev/build — deliberately. Before FT-58 they
+  were committed symlinks (mode `120000`), and **Git for Windows doesn't
+  create real symlinks by default**: it turns them into tiny text files
+  containing the literal target path, `vite build` still *succeeds*, and
+  the build 404s on every `map.json` (a packaged Windows build shipped that
+  way once). The old fix was "enable Developer Mode and re-clone"; now
+  `postbuild` runs `app/scripts/check-build-assets.mjs`, which **fails**
+  when `maps/index.json`, a map's `map.json` or `styles/base.json` is
+  missing under `app/build`, so that class of failure cannot ship. If map
+  assets 404 on a deploy but work locally, run
+  `node scripts/prepare-assets.mjs` and rebuild.
 - **`.pmtiles`/icon binary files need `.gitattributes`, or a Windows
   checkout can silently corrupt them.** Without an explicit `binary`
   declaration, Git falls back to content-sniffing to decide text vs.
