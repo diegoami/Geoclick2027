@@ -105,6 +105,7 @@ export type TranslationKey =
 	| 'quiz.backToMaps'
 	| 'quiz.playAgain'
 	| 'quiz.resizeTrayAriaLabel'
+	| 'quiz.storageWarning'
 	| 'tour.prev'
 	| 'tour.replay'
 	| 'tour.pause'
@@ -231,6 +232,8 @@ const en: Dictionary = {
 	'quiz.backToMaps': 'Back to maps',
 	'quiz.playAgain': 'Play again',
 	'quiz.resizeTrayAriaLabel': 'Resize name tray',
+	'quiz.storageWarning':
+		'Progress cannot be saved on this device right now, so this round will not be remembered.',
 
 	'tour.prev': '‹ Prev',
 	'tour.replay': 'Replay',
@@ -370,6 +373,8 @@ const de: Dictionary = {
 	'quiz.backToMaps': 'Zurück zu den Karten',
 	'quiz.playAgain': 'Nochmal spielen',
 	'quiz.resizeTrayAriaLabel': 'Größe der Namensablage anpassen',
+	'quiz.storageWarning':
+		'Fortschritt kann auf diesem Gerät gerade nicht gespeichert werden — diese Runde wird nicht gemerkt.',
 
 	'tour.prev': '‹ Zurück',
 	'tour.replay': 'Nochmal',
@@ -509,6 +514,8 @@ const it: Dictionary = {
 	'quiz.backToMaps': 'Torna alle mappe',
 	'quiz.playAgain': 'Gioca ancora',
 	'quiz.resizeTrayAriaLabel': 'Ridimensiona il vassoio dei nomi',
+	'quiz.storageWarning':
+		'Al momento non è possibile salvare i progressi su questo dispositivo, quindi questa partita non verrà ricordata.',
 
 	'tour.prev': '‹ Indietro',
 	'tour.replay': 'Riguarda',
@@ -570,11 +577,17 @@ function isLanguage(value: string | null): value is Language {
 
 // Guarded the same way createLocalStorageProgressRepository is
 // (progressRepository.ts) - the home page and other routes prerender at
-// build time, when localStorage doesn't exist.
+// build time, when localStorage doesn't exist. The read is inside the try:
+// a disabled or sandboxed localStorage throws on getItem itself, and the
+// app must still start in English (FT-57).
 function loadInitialLanguage(): Language {
-	if (typeof localStorage === 'undefined') return 'en';
-	const stored = localStorage.getItem(STORAGE_KEY);
-	return isLanguage(stored) ? stored : 'en';
+	try {
+		if (typeof localStorage === 'undefined') return 'en';
+		const stored = localStorage.getItem(STORAGE_KEY);
+		return isLanguage(stored) ? stored : 'en';
+	} catch {
+		return 'en';
+	}
 }
 
 // Module-scope $state, not a class/writable store - the standard Svelte 5
@@ -590,8 +603,14 @@ export function getLanguage(): Language {
 
 export function setLanguage(language: Language): void {
 	currentLanguage = language;
-	if (typeof localStorage !== 'undefined') {
-		localStorage.setItem(STORAGE_KEY, language);
+	// The switch itself must work even where storage refuses: the language
+	// changes for this run and simply is not remembered (FT-57).
+	try {
+		if (typeof localStorage !== 'undefined') {
+			localStorage.setItem(STORAGE_KEY, language);
+		}
+	} catch {
+		// Not worth logging every switch; the run still shows the language.
 	}
 }
 

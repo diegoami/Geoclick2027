@@ -3,8 +3,10 @@ import {
 	createInMemoryProgressRepository,
 	createLocalStorageProgressRepository,
 	createSandboxedProgressRepository,
+	loadPlayableCardStates,
 	todayLocalDate,
 	type CardState,
+	type ProgressRepository,
 	type SessionSummary
 } from './progressRepository';
 
@@ -168,6 +170,97 @@ describe('localStorage progress repository - failed writes (GC-041)', () => {
 		expect(warn).toHaveBeenCalledTimes(1);
 		// Nothing was stored - the failure is swallowed, not faked as success.
 		expect(await repo.getCardStates('italy-regions')).toEqual([]);
+	});
+});
+
+describe('storage failures are not app failures (FT-57)', () => {
+	afterEach(() => {
+		vi.restoreAllMocks();
+	});
+
+	it('reads nothing when getItem itself throws', async () => {
+		localStorage.setItem('geoclick:progress:v1:italy-regions:cards', JSON.stringify([sampleCard]));
+		localStorage.getItem = () => {
+			throw new DOMException('Access is denied for this document.', 'SecurityError');
+		};
+		const repo = createLocalStorageProgressRepository();
+		await expect(repo.getCardStates('italy-regions')).resolves.toEqual([]);
+		await expect(repo.getLastSessionSummary('italy-regions')).resolves.toBeUndefined();
+	});
+
+	it('ignores a stored value of the wrong shape', async () => {
+		// Right key, wrong value: an object where an array belongs, an array
+		// element missing the scheduler fields, and a summary missing its own.
+		localStorage.setItem(
+			'geoclick:progress:v1:italy-regions:cards',
+			JSON.stringify({ nope: true })
+		);
+		localStorage.setItem(
+			'geoclick:progress:v1:usa-states:cards',
+			JSON.stringify([{ targetId: 'Texas' }])
+		);
+		localStorage.setItem(
+			'geoclick:progress:v1:italy-regions:lastSession',
+			JSON.stringify({ total: 20 })
+		);
+		const repo = createLocalStorageProgressRepository();
+		await expect(repo.getCardStates('italy-regions')).resolves.toEqual([]);
+		await expect(repo.getCardStates('usa-states')).resolves.toEqual([]);
+		await expect(repo.getLastSessionSummary('italy-regions')).resolves.toBeUndefined();
+	});
+
+	it('still reads real data, including a card saved before cleanStreak existed', async () => {
+		const legacy = { ...sampleCard } as Partial<CardState>;
+		delete legacy.cleanStreak;
+		localStorage.setItem('geoclick:progress:v1:italy-regions:cards', JSON.stringify([legacy]));
+		const repo = createLocalStorageProgressRepository();
+		expect(await repo.getCardStates('italy-regions')).toEqual([sampleCard]);
+	});
+
+	it('plays on an in-memory repository when the repository cannot be created', async () => {
+		const logged = vi.spyOn(console, 'error').mockImplementation(() => {});
+		const { repository, cardStates, failed } = await loadPlayableCardStates('italy-regions', () =>
+			Promise.reject(new Error('database is locked'))
+		);
+		expect(failed).toBe(true);
+		expect(cardStates).toEqual([]);
+		expect(logged).toHaveBeenCalled();
+
+		// The stand-in is a working repository, so the round can be played.
+		await repository.saveCardState('italy-regions', sampleCard);
+		expect(await repository.getCardStates('italy-regions')).toEqual([sampleCard]);
+		expect(localStorage.length).toBe(0);
+	});
+
+	it('falls back when the native repository opens lazily and the first read fails', async () => {
+		// The SQLite and Capacitor repositories create their connection on the
+		// first read, not when they are created, so a real open failure
+		// surfaces here - not in the factory (FT-57).
+		const logged = vi.spyOn(console, 'error').mockImplementation(() => {});
+		const lazyFailure: ProgressRepository = {
+			...createInMemoryProgressRepository(),
+			getCardStates: () => Promise.reject(new Error('unable to open database file'))
+		};
+
+		const { repository, cardStates, failed } = await loadPlayableCardStates('italy-regions', () =>
+			Promise.resolve(lazyFailure)
+		);
+		expect(failed).toBe(true);
+		expect(cardStates).toEqual([]);
+		expect(logged).toHaveBeenCalled();
+		expect(repository).not.toBe(lazyFailure);
+	});
+
+	it('uses the real repository when it opens and reads', async () => {
+		const real = createLocalStorageProgressRepository();
+		await real.saveCardState('italy-regions', sampleCard);
+		const { repository, cardStates, failed } = await loadPlayableCardStates(
+			'italy-regions',
+			async () => real
+		);
+		expect(failed).toBe(false);
+		expect(cardStates).toEqual([sampleCard]);
+		expect(repository).toBe(real);
 	});
 });
 

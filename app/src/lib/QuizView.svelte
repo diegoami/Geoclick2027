@@ -27,7 +27,7 @@
 	import { overallExtent, type MapDefinition } from './mapDefinition';
 	import { handSize, knownCount, mapLevel, refillHand, type Level } from './difficulty';
 	import {
-		createProgressRepository,
+		loadPlayableCardStates,
 		todayLocalDate,
 		type ProgressRepository
 	} from './progressRepository';
@@ -35,9 +35,9 @@
 
 	let { mapId }: { mapId: string } = $props();
 
-	// Assigned at the top of onMount's async init, before anything below
-	// (refreshCardStates, the completion $effect, onSlipPointerUp) can run -
-	// a plain module-scope variable, not $state, same as cardStatesByTargetId.
+	// Assigned at the top of onMount's async init, before anything below (the
+	// completion $effect, onSlipPointerUp) can run - a plain module-scope
+	// variable, not $state, same as cardStatesByTargetId.
 	let progressRepository: ProgressRepository;
 
 	let container: HTMLDivElement;
@@ -65,6 +65,9 @@
 	let mapDef = $state<MapDefinition | undefined>(undefined);
 	let session = $state<QuizSession | undefined>(undefined);
 	let error = $state<string | undefined>(undefined);
+	// True when saved progress could not be opened and the round is running on
+	// the in-memory stand-in: playable, but nothing will be remembered (FT-57).
+	let storageWarning = $state(false);
 	let dragging = $state<{ targetId: string; name: string; x: number; y: number } | undefined>(
 		undefined
 	);
@@ -559,17 +562,6 @@
 		}
 	}
 
-	// Reads each target's current card state and returns the ids that are
-	// NOT due yet - refreshes `cardStatesByTargetId` as a side effect, since
-	// `rate()` needs each target's previous state and this is the one place
-	// that state gets (re)loaded from the repository.
-	/** Reads what the scheduler knows about this map, which the round needs
-	 * for its difficulty (FT-21) and for grading each answer. */
-	async function refreshCardStates(): Promise<void> {
-		const cardStates = await progressRepository.getCardStates(mapId);
-		cardStatesByTargetId = new Map(cardStates.map((c) => [c.targetId, c]));
-	}
-
 	function clearAllVisuals() {
 		// Before 'load' there are no visuals to clear, and setFeatureState
 		// would throw - and "Play again", the only way in, can't be reached
@@ -658,13 +650,17 @@
 		let cancelled = false;
 
 		(async () => {
-			progressRepository = await createProgressRepository();
+			// Reads what the scheduler knows, falling back to memory if the
+			// native database cannot be opened - the round plays on, it just
+			// will not be remembered (FT-57).
+			const loaded = await loadPlayableCardStates(mapId);
+			progressRepository = loaded.repository;
+			cardStatesByTargetId = new Map(loaded.cardStates.map((c) => [c.targetId, c]));
+			storageWarning = loaded.failed;
+
 			const { mapDef: loadedMapDef, style } = await fetchMapDefAndStyle(mapId);
 			if (cancelled) return;
 			mapDef = loadedMapDef;
-
-			await refreshCardStates();
-			if (cancelled) return;
 
 			({ map, terrain } = createMap(container, loadedMapDef, style));
 			fetchFacts(mapId).then((loaded) => {
@@ -735,6 +731,10 @@
 				{/if}
 			{/snippet}
 		</MapNav>
+
+		{#if storageWarning}
+			<p class="storage-warning" role="status">{t('quiz.storageWarning')}</p>
+		{/if}
 
 		{#if complete && score && session && !scorePanelDismissed}
 			{@const revealedCount = session.items.filter((i) => i.status === 'revealed').length}
@@ -1022,5 +1022,24 @@
 		padding: 1rem;
 		font-family: system-ui, sans-serif;
 		color: #a33;
+	}
+	/* A round that cannot be saved is still worth playing: the notice sits
+	   quietly at the top and does not take the map away (FT-57). */
+	.storage-warning {
+		position: absolute;
+		top: 4.5rem;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 5;
+		margin: 0;
+		padding: 0.4rem 0.8rem;
+		max-width: calc(100% - 2rem);
+		font-family: system-ui, sans-serif;
+		font-size: 0.85rem;
+		text-align: center;
+		color: #7a4a12;
+		background: #fdf1dd;
+		border: 1px solid rgba(181, 105, 31, 0.35);
+		border-radius: 0.5rem;
 	}
 </style>
