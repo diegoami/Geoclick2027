@@ -27,7 +27,7 @@
 	import { overallExtent, type MapDefinition } from './mapDefinition';
 	import { handSize, knownCount, mapLevel, refillHand, type Level } from './difficulty';
 	import {
-		createProgressRepository,
+		createPlayableProgressRepository,
 		todayLocalDate,
 		type ProgressRepository
 	} from './progressRepository';
@@ -65,6 +65,9 @@
 	let mapDef = $state<MapDefinition | undefined>(undefined);
 	let session = $state<QuizSession | undefined>(undefined);
 	let error = $state<string | undefined>(undefined);
+	// True when saved progress could not be opened and the round is running on
+	// the in-memory stand-in: playable, but nothing will be remembered (FT-57).
+	let storageWarning = $state(false);
 	let dragging = $state<{ targetId: string; name: string; x: number; y: number } | undefined>(
 		undefined
 	);
@@ -658,7 +661,9 @@
 		let cancelled = false;
 
 		(async () => {
-			progressRepository = await createProgressRepository();
+			const progress = await createPlayableProgressRepository();
+			progressRepository = progress.repository;
+			storageWarning = progress.failed;
 			const { mapDef: loadedMapDef, style } = await fetchMapDefAndStyle(mapId);
 			if (cancelled) return;
 			mapDef = loadedMapDef;
@@ -735,6 +740,10 @@
 				{/if}
 			{/snippet}
 		</MapNav>
+
+		{#if storageWarning}
+			<p class="storage-warning" role="status">{t('quiz.storageWarning')}</p>
+		{/if}
 
 		{#if complete && score && session && !scorePanelDismissed}
 			{@const revealedCount = session.items.filter((i) => i.status === 'revealed').length}
@@ -1022,5 +1031,24 @@
 		padding: 1rem;
 		font-family: system-ui, sans-serif;
 		color: #a33;
+	}
+	/* A round that cannot be saved is still worth playing: the notice sits
+	   quietly at the top and does not take the map away (FT-57). */
+	.storage-warning {
+		position: absolute;
+		top: 4.5rem;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 5;
+		margin: 0;
+		padding: 0.4rem 0.8rem;
+		max-width: calc(100% - 2rem);
+		font-family: system-ui, sans-serif;
+		font-size: 0.85rem;
+		text-align: center;
+		color: #7a4a12;
+		background: #fdf1dd;
+		border: 1px solid rgba(181, 105, 31, 0.35);
+		border-radius: 0.5rem;
 	}
 </style>

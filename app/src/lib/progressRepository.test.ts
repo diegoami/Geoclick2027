@@ -2,6 +2,7 @@ import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import {
 	createInMemoryProgressRepository,
 	createLocalStorageProgressRepository,
+	createPlayableProgressRepository,
 	createSandboxedProgressRepository,
 	todayLocalDate,
 	type CardState,
@@ -168,6 +169,74 @@ describe('localStorage progress repository - failed writes (GC-041)', () => {
 		expect(warn).toHaveBeenCalledTimes(1);
 		// Nothing was stored - the failure is swallowed, not faked as success.
 		expect(await repo.getCardStates('italy-regions')).toEqual([]);
+	});
+});
+
+describe('storage failures are not app failures (FT-57)', () => {
+	afterEach(() => {
+		vi.restoreAllMocks();
+	});
+
+	it('reads nothing when getItem itself throws', async () => {
+		localStorage.setItem('geoclick:progress:v1:italy-regions:cards', JSON.stringify([sampleCard]));
+		localStorage.getItem = () => {
+			throw new DOMException('Access is denied for this document.', 'SecurityError');
+		};
+		const repo = createLocalStorageProgressRepository();
+		await expect(repo.getCardStates('italy-regions')).resolves.toEqual([]);
+		await expect(repo.getLastSessionSummary('italy-regions')).resolves.toBeUndefined();
+	});
+
+	it('ignores a stored value of the wrong shape', async () => {
+		// Right key, wrong value: an object where an array belongs, an array
+		// element missing the scheduler fields, and a summary missing its own.
+		localStorage.setItem(
+			'geoclick:progress:v1:italy-regions:cards',
+			JSON.stringify({ nope: true })
+		);
+		localStorage.setItem(
+			'geoclick:progress:v1:usa-states:cards',
+			JSON.stringify([{ targetId: 'Texas' }])
+		);
+		localStorage.setItem(
+			'geoclick:progress:v1:italy-regions:lastSession',
+			JSON.stringify({ total: 20 })
+		);
+		const repo = createLocalStorageProgressRepository();
+		await expect(repo.getCardStates('italy-regions')).resolves.toEqual([]);
+		await expect(repo.getCardStates('usa-states')).resolves.toEqual([]);
+		await expect(repo.getLastSessionSummary('italy-regions')).resolves.toBeUndefined();
+	});
+
+	it('still reads real data, including a card saved before cleanStreak existed', async () => {
+		const legacy = { ...sampleCard } as Partial<CardState>;
+		delete legacy.cleanStreak;
+		localStorage.setItem('geoclick:progress:v1:italy-regions:cards', JSON.stringify([legacy]));
+		const repo = createLocalStorageProgressRepository();
+		expect(await repo.getCardStates('italy-regions')).toEqual([sampleCard]);
+	});
+
+	it('plays on an in-memory repository when opening the real one fails', async () => {
+		const logged = vi.spyOn(console, 'error').mockImplementation(() => {});
+		const { repository, failed } = await createPlayableProgressRepository(() =>
+			Promise.reject(new Error('database is locked'))
+		);
+		expect(failed).toBe(true);
+		expect(logged).toHaveBeenCalled();
+
+		// The stand-in is a working repository, so the round can be played.
+		await repository.saveCardState('italy-regions', sampleCard);
+		expect(await repository.getCardStates('italy-regions')).toEqual([sampleCard]);
+		expect(localStorage.length).toBe(0);
+	});
+
+	it('uses the real repository when opening it works', async () => {
+		const { repository, failed } = await createPlayableProgressRepository(async () =>
+			createLocalStorageProgressRepository()
+		);
+		expect(failed).toBe(false);
+		await repository.saveCardState('italy-regions', sampleCard);
+		expect(localStorage.getItem('geoclick:progress:v1:italy-regions:cards')).toContain('Abruzzo');
 	});
 });
 

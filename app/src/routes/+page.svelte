@@ -2,8 +2,13 @@
 	import { onMount } from 'svelte';
 	import { resolve } from '$app/paths';
 	import mapIndex from '../../../data/maps/index.json';
-	import { createProgressRepository, type SessionSummary } from '$lib/progressRepository';
-	import { handSize, knownCount, mapLevel, type Level } from '$lib/difficulty';
+	import {
+		createProgressRepository,
+		type ProgressRepository,
+		type SessionSummary
+	} from '$lib/progressRepository';
+	import { handSize } from '$lib/difficulty';
+	import { loadHomeProgress, type Mastery } from '$lib/homeProgress';
 	import { countMaps, filterGroups } from '$lib/mapSearch';
 	import { t, tPlural } from '$lib/i18n.svelte';
 	import LanguageSwitcher from '$lib/LanguageSwitcher.svelte';
@@ -33,11 +38,9 @@
 	// fetching.
 	let lastSessions = $state<Record<string, SessionSummary | undefined>>({});
 
-	// How well each map is known (FT-26): the names placed right three times
-	// in a row, out of the map's names, plus how many names its quiz offers at
-	// a time. A map never played has no mastery at all and says nothing - it
-	// is a map to start, not a map at 0.
-	type Mastery = { known: number; total: number; level: Level };
+	// How well each map is known (FT-26), read by loadHomeProgress. A map
+	// never played has no mastery at all and says nothing - it is a map to
+	// start, not a map at 0.
 	let masteries = $state<Record<string, Mastery | undefined>>({});
 
 	// What the player has typed into the search box (FT-31). Sixty maps in
@@ -77,35 +80,23 @@
 		void isTutorialSandboxActive();
 		let stale = false;
 		(async () => {
-			const repository = await createProgressRepository();
-			const summaryEntries = await Promise.all(
-				demoMaps.map(
-					async (map) => [map.id, await repository.getLastSessionSummary(map.id)] as const
-				)
+			let repository: ProgressRepository;
+			try {
+				repository = await createProgressRepository();
+			} catch (e) {
+				// The home page is a list, not the game: showing it with no
+				// progress data beats not showing it at all (FT-57).
+				console.error('Could not open saved progress for the home page.', e);
+				return;
+			}
+			const progress = await loadHomeProgress(
+				repository,
+				demoMaps.map((map) => map.id),
+				targetIdsByMap
 			);
 			if (stale) return;
-			lastSessions = Object.fromEntries(summaryEntries);
-
-			const masteryEntries = await Promise.all(
-				demoMaps.map(async (map) => {
-					const cardStates = await repository.getCardStates(map.id);
-					if (cardStates.length === 0) return [map.id, undefined] as const;
-					const byId = new Map(cardStates.map((c) => [c.targetId, c]));
-					// Over the map's CURRENT target ids: a name with no card state
-					// counts as unknown, and progress for a since-renamed or removed
-					// target is ignored - same semantics as the due counts had.
-					const targetIds = targetIdsByMap.get(map.id) ?? [];
-					const streaks = targetIds.map((id) => byId.get(id)?.cleanStreak ?? 0);
-					const mastery: Mastery = {
-						known: knownCount(streaks),
-						total: targetIds.length,
-						level: mapLevel(streaks)
-					};
-					return [map.id, mastery] as const;
-				})
-			);
-			if (stale) return;
-			masteries = Object.fromEntries(masteryEntries);
+			lastSessions = progress.summaries;
+			masteries = progress.masteries;
 		})();
 		return () => {
 			stale = true;

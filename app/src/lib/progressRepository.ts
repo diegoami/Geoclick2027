@@ -56,15 +56,55 @@ export function todayLocalDate(): string {
 	return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
 }
 
-function readJson<T>(key: string): T | undefined {
-	if (typeof localStorage === 'undefined') return undefined;
-	const raw = localStorage.getItem(key);
-	if (!raw) return undefined;
+function isRecord(value: unknown): value is Record<string, unknown> {
+	return typeof value === 'object' && value !== null && !Array.isArray(value);
+}
+
+// Stored shapes are validated, not cast: a hand-edited or half-written value
+// must read as "nothing saved yet", never as a CardState with undefined fields
+// that crashes the scheduler later. `cleanStreak` may be absent - cards saved
+// before v0.6.0 have no streak, and withCleanStreak fills it in.
+function isCardState(value: unknown): value is CardState {
+	if (!isRecord(value)) return false;
+	return (
+		typeof value.targetId === 'string' &&
+		typeof value.easeFactor === 'number' &&
+		typeof value.interval === 'number' &&
+		typeof value.repetitions === 'number' &&
+		typeof value.dueDate === 'string' &&
+		typeof value.lastReviewedAt === 'string' &&
+		(value.cleanStreak === undefined || typeof value.cleanStreak === 'number')
+	);
+}
+
+function isCardStateArray(value: unknown): value is CardState[] {
+	return Array.isArray(value) && value.every(isCardState);
+}
+
+function isSessionSummary(value: unknown): value is SessionSummary {
+	if (!isRecord(value)) return false;
+	return (
+		typeof value.total === 'number' &&
+		typeof value.perfect === 'number' &&
+		typeof value.totalErrors === 'number' &&
+		typeof value.completedAt === 'string'
+	);
+}
+
+/**
+ * Reads and validates one stored value. The whole access is inside the try,
+ * not just JSON.parse: a disabled or sandboxed localStorage throws on getItem
+ * itself (FT-57). Any failure - a throw, unparseable text, a value of the
+ * wrong shape - reads as "nothing saved yet".
+ */
+function readJson<T>(key: string, isValue: (value: unknown) => value is T): T | undefined {
 	try {
-		return JSON.parse(raw) as T;
+		if (typeof localStorage === 'undefined') return undefined;
+		const raw = localStorage.getItem(key);
+		if (!raw) return undefined;
+		const parsed: unknown = JSON.parse(raw);
+		return isValue(parsed) ? parsed : undefined;
 	} catch {
-		// Corrupt/foreign data under our own key shouldn't crash the app -
-		// treat it the same as "nothing saved yet".
 		return undefined;
 	}
 }
@@ -114,6 +154,24 @@ export async function createProgressRepository(): Promise<ProgressRepository> {
 	return sandbox ? createSandboxedProgressRepository(real, sandbox.memory, sandbox.mapId) : real;
 }
 
+/**
+ * The repository to play with (FT-57): the real one, or an in-memory stand-in
+ * if opening it fails. A transient native-database failure must not stop a
+ * quiz that would otherwise play fine - the round runs, and `failed` says its
+ * progress will not be saved so the view can say so too. The `create` seam is
+ * for tests.
+ */
+export async function createPlayableProgressRepository(
+	create: () => Promise<ProgressRepository> = createProgressRepository
+): Promise<{ repository: ProgressRepository; failed: boolean }> {
+	try {
+		return { repository: await create(), failed: false };
+	} catch (e) {
+		console.error('Could not open saved progress; this round will not be remembered.', e);
+		return { repository: createInMemoryProgressRepository(), failed: true };
+	}
+}
+
 // Dynamic imports so a plain-browser build never pulls in
 // @tauri-apps/plugin-sql or @capacitor-community/sqlite at all.
 async function createRealProgressRepository(): Promise<ProgressRepository> {
@@ -142,11 +200,11 @@ function withCleanStreak(states: CardState[]): CardState[] {
 export function createLocalStorageProgressRepository(): ProgressRepository {
 	return {
 		async getCardStates(mapId) {
-			return withCleanStreak(readJson<CardState[]>(cardsKey(mapId)) ?? []);
+			return withCleanStreak(readJson<CardState[]>(cardsKey(mapId), isCardStateArray) ?? []);
 		},
 
 		async saveCardState(mapId, state) {
-			const states = readJson<CardState[]>(cardsKey(mapId)) ?? [];
+			const states = readJson<CardState[]>(cardsKey(mapId), isCardStateArray) ?? [];
 			const index = states.findIndex((s) => s.targetId === state.targetId);
 			if (index === -1) states.push(state);
 			else states[index] = state;
@@ -154,7 +212,7 @@ export function createLocalStorageProgressRepository(): ProgressRepository {
 		},
 
 		async getLastSessionSummary(mapId) {
-			return readJson<SessionSummary>(lastSessionKey(mapId));
+			return readJson<SessionSummary>(lastSessionKey(mapId), isSessionSummary);
 		},
 
 		async saveLastSessionSummary(mapId, summary) {
@@ -162,24 +220,33 @@ export function createLocalStorageProgressRepository(): ProgressRepository {
 		},
 
 		async clearMap(mapId) {
-			if (typeof localStorage === 'undefined') return;
-			// Exact keys, not a prefix match: clearing "italy-regions" must never
-			// touch a map whose id merely starts with that.
-			localStorage.removeItem(cardsKey(mapId));
-			localStorage.removeItem(lastSessionKey(mapId));
+			try {
+				if (typeof localStorage === 'undefined') return;
+				// Exact keys, not a prefix match: clearing "italy-regions" must
+				// never touch a map whose id merely starts with that.
+				localStorage.removeItem(cardsKey(mapId));
+				localStorage.removeItem(lastSessionKey(mapId));
+			} catch (e) {
+				console.warn('Could not clear saved progress for this map.', e);
+			}
 		},
 
 		async clearAll() {
-			if (typeof localStorage === 'undefined') return;
-			// Only our progress namespace - the UI language (geoclick:language:v1)
-			// and anything else sharing the origin stays. Collect first: removing
-			// while indexing by key(i) would skip entries.
-			const ours: string[] = [];
-			for (let i = 0; i < localStorage.length; i++) {
-				const key = localStorage.key(i);
-				if (key?.startsWith(`${STORAGE_PREFIX}:`)) ours.push(key);
+			try {
+				if (typeof localStorage === 'undefined') return;
+				// Only our progress namespace - the UI language
+				// (geoclick:language:v1) and anything else sharing the origin
+				// stays. Collect first: removing while indexing by key(i) would
+				// skip entries.
+				const ours: string[] = [];
+				for (let i = 0; i < localStorage.length; i++) {
+					const key = localStorage.key(i);
+					if (key?.startsWith(`${STORAGE_PREFIX}:`)) ours.push(key);
+				}
+				for (const key of ours) localStorage.removeItem(key);
+			} catch (e) {
+				console.warn('Could not clear saved progress.', e);
 			}
-			for (const key of ours) localStorage.removeItem(key);
 		}
 	};
 }
