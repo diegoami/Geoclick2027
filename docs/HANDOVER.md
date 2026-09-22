@@ -1,4 +1,4 @@
-# Handover — 2026-09-22, v0.9.4 in progress (FT-55 merged)
+# Handover — 2026-09-22, v0.9.4 in progress (FT-57 merged)
 
 For whoever picks Geoclick up next, whether a human or a fresh Claude
 session. It records where things stand, what's next, and what's easy to
@@ -22,7 +22,7 @@ before any work starts.
 | Remediation programme | Closed with v0.2.0 ([REMEDIATION_PLAN.md](REMEDIATION_PLAN.md)) |
 | Feature programme | Closed with v0.5.0 ([FEATURE_PLAN.md](FEATURE_PLAN.md)) |
 | Since then | Per-release plans: [PLAN_V0.6.md](PLAN_V0.6.md) through [PLAN_V0.9.md](PLAN_V0.9.md), each with its own ledger |
-| Next | [PLAN_V0.9.4.md](PLAN_V0.9.4.md) — **FT-52 to FT-55 merged; FT-57 and FT-58 still to do.** Reshaped 2026-09-22 by what is worth doing before v0.10.0: the three the player sees, plus the two robustness items (storage failure blanks the app, the symlink build). FT-56/FT-59 (test gates) are deferred, and **v0.10.0 follows this release** |
+| Next | [PLAN_V0.9.4.md](PLAN_V0.9.4.md) — **FT-52 to FT-57 merged; FT-58 still to do.** Reshaped 2026-09-22 by what is worth doing before v0.10.0: the three the player sees, plus the two robustness items (storage failure blanks the app, the symlink build). FT-56/FT-59 (test gates) are deferred, and **v0.10.0 follows this release** |
 | After that | [PLAN_V0.10.md](PLAN_V0.10.md) — translating the name-facts, still **blocked on three product decisions**, see "How to resume" |
 | Raised, unscoped | Six UX problems from one round of tablet play, 2026-09-20, **decided the same day** — first item of ROADMAP.md's Iteration 8+ backlog: the level-0 tray offering every name at once (`difficulty.ts:21`), slips losing their drag to the tablet's text-selection gesture, the fact card now only on a name the player could *not* place, best-fit label placement as a requirement rather than first-fit, a spike for Europa-Universalis-style stretched region names, and the map card's `{known} / {total} known` line replaced by a progress bar over `knownCount / total`, hidden at zero (the score panel keeps its copy — the two record different things). Each entry carries its decision; none is scheduled or estimated |
 | Also raised 2026-09-20 | **The start screen becomes a zoomable world map** — pick the country on the map, then the kind of quiz. The map list cannot be finalized as a list: the goal is a high number of maps, and `mapCatalog.ts` is already 31 countries and 66 maps. Favourites and Recent stay unchanged. Second item of the Iteration 8+ backlog, with the open questions listed there |
@@ -77,6 +77,12 @@ Shipped since the v0.5.0 handover, in one paragraph each:
   Known route, so the step re-paused on arrival; the Screen-to-URL
   translation is now `screenPath()`, tested through the effect handler.
   PR #14, reviewed by Luna (one blocking finding on the test, fixed).
+- **2026-09-22, unreleased** — **FT-57** (issue #4): storage failures stay
+  out of gameplay. Reads are guarded and shape-validated, the language
+  read/write survive a throw, the home page reads each map on its own
+  (`loadHomeProgress`), and the quiz falls back to an in-memory repository
+  when the real one cannot be opened or read, showing a notice. PR #15,
+  reviewed by Luna (one blocking finding on the lazy native open, fixed).
 
 ## The one thing most worth not getting wrong
 
@@ -92,14 +98,13 @@ the generated one.
 ## How to resume
 
 **Start with [PLAN_V0.9.4.md](PLAN_V0.9.4.md).** FT-52 (`69cfa3d`, PR #10),
-FT-53 (`a0bc72b`, PR #12), FT-54 (`5f5b767`, PR #13) and FT-55 (`a1fdc24`,
-PR #14) are merged, all reviewed by Luna; **FT-57 is next** — a storage
-failure can blank the app or block a quiz. Open
-`app/src/lib/progressRepository.ts`, `i18n.svelte.ts`, `+page.svelte` and
-`QuizView.svelte`. Then **FT-58** (build the static assets instead of
-symlinking them). **FT-56 and FT-59 (both test gates) were moved out on
-2026-09-22**; they are listed under the plan's "Deferred" section. The plan
-needs no decisions from the product owner; it can be worked straight
+FT-53 (`a0bc72b`, PR #12), FT-54 (`5f5b767`, PR #13), FT-55 (`a1fdc24`,
+PR #14) and FT-57 (`a0e379d`, PR #15) are merged, all reviewed by Luna;
+**FT-58 is next** — build the static assets instead of committing symlinks.
+Open `app/package.json` (`postbuild`), `app/static/`, `app/scripts/` and
+`ONBOARDING.md:563-576`. **FT-56 and FT-59 (both test gates) were moved out
+on 2026-09-22**; they are listed under the plan's "Deferred" section. The
+plan needs no decisions from the product owner; it can be worked straight
 through.
 
 v0.10.0 comes **after** v0.9.4 and still **cannot start**: it needs three
@@ -114,7 +119,7 @@ needed") —
 
 Suggested first message for the next session:
 
-> Read docs/HANDOVER.md, then docs/PLAN_V0.9.4.md. Start FT-57.
+> Read docs/HANDOVER.md, then docs/PLAN_V0.9.4.md. Start FT-58.
 
 Whatever comes next, the working rules stay (CLAUDE.md §3):
 

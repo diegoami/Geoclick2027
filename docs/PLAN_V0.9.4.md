@@ -17,8 +17,8 @@ Nothing user-facing is added here, so this is a patch.
 number and queues behind this.
 
 **Status: in progress.** FT-52 (`69cfa3d`, PR #10), FT-53 (`a0bc72b`,
-PR #12), FT-54 (`5f5b767`, PR #13) and FT-55 (`a1fdc24`, PR #14) are
-merged; FT-57 next.
+PR #12), FT-54 (`5f5b767`, PR #13), FT-55 (`a1fdc24`, PR #14) and FT-57
+(`a0e379d`, PR #15) are merged; FT-58 next.
 
 
 ## No product decisions needed
@@ -233,7 +233,7 @@ are still authoritative; this section is only scheduling.
 | FT-54 | **merged**  | `5f5b767` | issue #2, terrain-off honoured during the first load; latest press wins, the tiles-arrived wait is cleared on hide (PR #13, reviewed by Luna) |
 | FT-55 | **merged**  | `a1fdc24` | issue #1, the tutorial's Back/Resume reaches the Overview route; `screenPath()`, effect-level `navigateTo()` test (PR #14, reviewed by Luna) |
 | FT-56 | **deferred** | —    | issue #7, validate `tour.json`, not `tourOrder` — moved out 2026-09-22 (test gate) |
-| FT-57 | not started | —     | issue #4, storage failures stay out of gameplay                         |
+| FT-57 | **merged**  | `a0e379d` | issue #4, storage failures stay out of gameplay; guarded+validated reads, per-map home reads, in-memory quiz fallback (PR #15, reviewed by Luna) |
 | FT-58 | not started | —     | issue #5, build the static assets instead of symlinking them            |
 | FT-59 | **deferred** | —    | issue #8, one component test across QuizView's seams — moved out 2026-09-22 (test gap) |
 

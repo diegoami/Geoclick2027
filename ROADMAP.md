@@ -98,13 +98,12 @@ Check items off as they land; update "Status" as iterations complete.
   [docs/PLAN_V0.9.4.md](docs/PLAN_V0.9.4.md). The other session's code
   review filed GitHub issues #1-#8; all eight were verified on 2026-09-20.
   FT-52 (`69cfa3d`, PR #10), FT-53 (`a0bc72b`, PR #12), FT-54
-  (`5f5b767`, PR #13) and FT-55 (`a1fdc24`, PR #14) are merged. What remains
-  is the two robustness items the product owner kept for this release:
-  **FT-57** (storage failures stay out of gameplay) and **FT-58** (build the
-  static assets instead of committing symlinks). **FT-56** (validate the
-  shipped `tour.json`) and **FT-59** (a QuizView seam test), both test gates,
-  are deferred to a hardening batch. No product decisions needed;
-  **v0.10.0 follows.**
+  (`5f5b767`, PR #13), FT-55 (`a1fdc24`, PR #14) and FT-57 (`a0e379d`,
+  PR #15) are merged. What remains is **FT-58** (build the static assets
+  instead of committing symlinks), the last item the product owner kept for
+  this release. **FT-56** (validate the shipped `tour.json`) and **FT-59**
+  (a QuizView seam test), both test gates, are deferred to a hardening batch.
+  No product decisions needed; **v0.10.0 follows.**
 - **Raised by the product owner 2026-09-22, backlogged**: GitHub issue #11 —
   on the Known map an explicitly tapped name kept its earned colour instead
   of **Chosen**. Decided: an explicit tap is Chosen regardless of the streak,
