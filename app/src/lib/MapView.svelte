@@ -8,7 +8,7 @@
 	import MapNav from './MapNav.svelte';
 	import type { MapDefinition } from './mapDefinition';
 	import { mapDisplayName } from './mapCatalog';
-	import { t } from './i18n.svelte';
+	import { getLanguage, t } from './i18n.svelte';
 	import { createProgressRepository } from './progressRepository';
 	import { tapOverride, visibleTier } from './shownNames';
 	import {
@@ -134,6 +134,17 @@
 			// the player came for.
 			console.error('Could not show the terrain layer:', e);
 		});
+	});
+
+	// A language switch has to reach the terrain names too (FT-53). On a
+	// map's first open they are drawn after `await this.add()` inside
+	// setVisible, so the effect above never tracked getLanguage() and the
+	// labels kept the old language while everything around them changed.
+	// Reading it here establishes the subscription; refreshLabels() redraws
+	// the names in the new language.
+	$effect(() => {
+		const language = getLanguage();
+		terrain?.refreshLabels(language);
 	});
 	onMount(() => {
 		let cancelled = false;

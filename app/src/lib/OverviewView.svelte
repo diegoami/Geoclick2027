@@ -11,6 +11,7 @@
 	import { DOT_CLEARANCE_PX, areaShares, registerLabel } from './labelCollision';
 	import FactCard from './FactCard.svelte';
 	import { fetchFacts, placeFacts, type Facts } from './facts';
+	import { getLanguage } from './i18n.svelte';
 
 	let { mapId }: { mapId: string } = $props();
 
@@ -46,6 +47,17 @@
 			// the player came for.
 			console.error('Could not show the terrain layer:', e);
 		});
+	});
+
+	// A language switch has to reach the terrain names too (FT-53). On a
+	// map's first open they are drawn after `await this.add()` inside
+	// setVisible, so the effect above never tracked getLanguage() and the
+	// labels kept the old language while everything around them changed.
+	// Reading it here establishes the subscription; refreshLabels() redraws
+	// the names in the new language.
+	$effect(() => {
+		const language = getLanguage();
+		terrain?.refreshLabels(language);
 	});
 	onMount(() => {
 		let cancelled = false;

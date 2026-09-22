@@ -31,7 +31,7 @@ import { asset } from '$app/paths';
 import { registerTilesArchive } from './pmtilesSource';
 import { registerLabel } from './labelCollision';
 import { isNativeShell } from './platform';
-import { getLanguage } from './i18n.svelte';
+import { getLanguage, type Language } from './i18n.svelte';
 
 export const TERRAIN_SOURCE = 'terrain';
 
@@ -69,8 +69,8 @@ const LINE_LABEL_PRIORITY = -2;
 const PEAK_CLEARANCE_PX = 9;
 
 /** "4807" as "4807 m", in the player's own digits. */
-function formatMetres(elevation: number): string {
-	return `${Math.round(elevation).toLocaleString(getLanguage())} m`;
+function formatMetres(elevation: number, language: Language): string {
+	return `${Math.round(elevation).toLocaleString(language)} m`;
 }
 
 const LAYERS: LayerSpecification[] = [
@@ -183,10 +183,9 @@ const DIMMED: { layer: string; property: 'fill-opacity' | 'circle-opacity'; fact
 ];
 
 /** The label text in the player's language, falling back to the source's. */
-function labelFor(properties: Record<string, unknown>): string {
-	const lang = getLanguage();
+function labelFor(properties: Record<string, unknown>, language: Language): string {
 	const localized =
-		lang === 'de' ? properties.name_de : lang === 'it' ? properties.name_it : undefined;
+		language === 'de' ? properties.name_de : language === 'it' ? properties.name_it : undefined;
 	return typeof localized === 'string' && localized !== ''
 		? localized
 		: String(properties.name ?? '');
@@ -199,6 +198,11 @@ function labelFor(properties: Record<string, unknown>): string {
 export class TerrainLayer {
 	private popups: maplibregl.Popup[] = [];
 	private added = false;
+	/**
+	 * The latest visibility the button asked for (FT-53). Kept so a label
+	 * refresh cannot put names back on a layer the player has switched off.
+	 */
+	private visible = false;
 	private pending = false;
 	// The opacity each dimmed layer had before this class touched it, so
 	// switching off restores the map exactly and switching on twice does not
@@ -237,6 +241,7 @@ export class TerrainLayer {
 	}
 
 	async setVisible(visible: boolean): Promise<void> {
+		this.visible = visible;
 		if (!visible) {
 			this.removeLabels();
 			this.dimOverlyingLayers(false);
@@ -254,7 +259,7 @@ export class TerrainLayer {
 				}
 			}
 			this.dimOverlyingLayers(true);
-			this.drawLabels();
+			this.drawLabels(getLanguage());
 			return;
 		}
 		// Two presses in quick succession must not fetch twice.
@@ -265,6 +270,37 @@ export class TerrainLayer {
 		} finally {
 			this.pending = false;
 		}
+	}
+
+	/**
+	 * Redraws the labels in `language` (FT-53). The views call this from an
+	 * effect that reads `getLanguage()`, so a language switch reaches the
+	 * terrain even on a map's first open - when `setVisible(true)` draws the
+	 * labels after `await this.add()` and the read therefore lands outside
+	 * the effect's tracking window. The subscription is not missing; it is
+	 * never established, which is why the redraw cannot simply live inside
+	 * `setVisible`.
+	 *
+	 * A no-op unless the layer is on the map and visible: a refresh while it
+	 * is off must not put labels back.
+	 */
+	refreshLabels(language: Language): void {
+		if (!this.visible || !this.added) return;
+		this.drawLabels(language);
+	}
+
+	/**
+	 * The popup one terrain label is drawn in. A method rather than a direct
+	 * `new` so a test can stand a popup in without a MapLibre map - the same
+	 * stand-in `registerLabel` already accepts (labelCollision.ts).
+	 */
+	protected createPopup(className: string): maplibregl.Popup {
+		return new maplibregl.Popup({
+			closeButton: false,
+			closeOnClick: false,
+			anchor: 'center',
+			className
+		});
 	}
 
 	/**
@@ -310,19 +346,19 @@ export class TerrainLayer {
 		// The label points arrive with the tiles, so wait for the source
 		// before asking for them.
 		if (this.map.isSourceLoaded(TERRAIN_SOURCE)) {
-			this.drawLabels();
+			this.drawLabels(getLanguage());
 		} else {
 			const onData = (e: maplibregl.MapSourceDataEvent) => {
 				if (e.sourceId !== TERRAIN_SOURCE || !e.isSourceLoaded) return;
 				this.map.off('sourcedata', onData);
-				this.drawLabels();
+				this.drawLabels(getLanguage());
 			};
 			this.map.on('sourcedata', onData);
 		}
 	}
 
-	/** One popup per named feature currently in view. */
-	private drawLabels(): void {
+	/** One popup per named feature currently in view, in `language`. */
+	private drawLabels(language: Language): void {
 		this.removeLabels();
 		const seen = new Set<string>();
 		// Ranges and seas, then the peaks, then the great circles. Each is a
@@ -332,14 +368,14 @@ export class TerrainLayer {
 		this.drawLabelLayer(
 			'physical_labels',
 			seen,
-			(p) => labelFor(p),
+			(p) => labelFor(p, language),
 			(p) => terrainPriority(p.rank)
 		);
 		this.drawLabelLayer(
 			'peaks',
 			seen,
 			(p) =>
-				`${labelFor(p)}${typeof p.elevation === 'number' ? ` ${formatMetres(p.elevation)}` : ''}`,
+				`${labelFor(p, language)}${typeof p.elevation === 'number' ? ` ${formatMetres(p.elevation, language)}` : ''}`,
 			// Above the ranges and seas, below every target name: a summit is a
 			// sharper hook than the range it sits in, and the tallest wins.
 			(p) => PEAK_LABEL_PRIORITY + (typeof p.elevation === 'number' ? p.elevation / 1e5 : 0)
@@ -347,7 +383,7 @@ export class TerrainLayer {
 		this.drawLabelLayer(
 			'lines',
 			seen,
-			(p) => labelFor(p),
+			(p) => labelFor(p, language),
 			() => LINE_LABEL_PRIORITY
 		);
 	}
@@ -378,12 +414,7 @@ export class TerrainLayer {
 						: undefined;
 			if (!at) continue;
 			seen.add(label);
-			const popup = new maplibregl.Popup({
-				closeButton: false,
-				closeOnClick: false,
-				anchor: 'center',
-				className: `geoclick-terrain-label geoclick-terrain-${sourceLayer}`
-			})
+			const popup = this.createPopup(`geoclick-terrain-label geoclick-terrain-${sourceLayer}`)
 				.setLngLat(at)
 				.setText(label)
 				.addTo(this.map);
