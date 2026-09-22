@@ -276,7 +276,7 @@ app fetches the same URL in all three shells. Where the filesystem refused
 a link and `prepare-assets.mjs` copied instead, a change to the source data
 needs it re-run.
 
-`vite build` resolves the links and writes real files into `app/build/`.
+`vite build` copies the prepared directories into `app/build/` as real files.
 Both native shells then wrap **that same directory**, unmodified:
 
 - `desktop/src-tauri/tauri.conf.json` → `build.frontendDist:
