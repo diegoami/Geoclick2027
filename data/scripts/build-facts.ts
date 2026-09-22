@@ -43,6 +43,7 @@ import {
 	type Position,
 	type Position2Words
 } from './factGeometry.js';
+import { parseAuthoredFile, type AuthoredHooks, type LangHooks } from './authoredHooks.js';
 
 const MAPS_DIR = path.join(REPO_ROOT, 'data/maps');
 const COASTLINE_SHP = path.join(REPO_ROOT, 'data/source/ne_10m_coastline/ne_10m_coastline.shp');
@@ -85,7 +86,7 @@ export interface DerivedFact {
 	 * data/facts/<country>.json. A list: the card shows a different one each
 	 * time you meet the place, and the first is always about the NAME.
 	 */
-	hooks?: string[];
+	hooks?: string[] | LangHooks;
 }
 
 /**
@@ -96,16 +97,8 @@ export interface DerivedFact {
  * country's cities and each of its regional slices - share one sentence
  * rather than four copies drifting apart. Missing file, or a country
  * nobody has written for yet: no hooks, and the card shows its derived
- * line alone.
+ * line alone. The file's shape is parsed by authoredHooks.ts.
  */
-interface AuthoredHooks {
-	/** Applies whichever kind of target carries this id. */
-	any?: string[];
-	/** Only when the target is a region, or only when it is a city. */
-	region?: string[];
-	city?: string[];
-}
-
 function hooksForCountry(country: string | undefined): Record<string, AuthoredHooks> {
 	if (!country) return {};
 	// The filename is the country as map.json spells it: "United States of
@@ -114,34 +107,18 @@ function hooksForCountry(country: string | undefined): Record<string, AuthoredHo
 	// no table.
 	const file = path.join(REPO_ROOT, 'data/facts', `${slugify(country)}.json`);
 	if (!existsSync(file)) return {};
-	const raw = JSON.parse(readFileSync(file, 'utf8')) as Record<string, unknown>;
-	const isSentences = (v: unknown): v is string[] =>
-		Array.isArray(v) && v.length > 0 && v.every((s) => typeof s === 'string' && s !== '');
+	return parseAuthoredFile(JSON.parse(readFileSync(file, 'utf8')) as Record<string, unknown>);
+}
 
-	const hooks: Record<string, AuthoredHooks> = {};
-	for (const [id, value] of Object.entries(raw)) {
-		// `_note` and any other commentary key: the authored files explain
-		// themselves at the top, and that is not a place.
-		if (id.startsWith('_')) continue;
-		if (isSentences(value)) {
-			hooks[id] = { any: value };
-			continue;
-		}
-		// The long form, for an id that is two different places. Target ids
-		// are shared across every map of a country, and a province can share
-		// one with a city inside it: China has five, four of them
-		// municipalities where the province IS the city and one - Jilin -
-		// where they are genuinely different and a province's facts would be
-		// false of the town.
-		if (value && typeof value === 'object' && !Array.isArray(value)) {
-			const byKind = value as Record<string, unknown>;
-			const entry: AuthoredHooks = {};
-			if (isSentences(byKind.region)) entry.region = byKind.region;
-			if (isSentences(byKind.city)) entry.city = byKind.city;
-			if (entry.region || entry.city) hooks[id] = entry;
-		}
-	}
-	return hooks;
+/**
+ * What goes into facts.json: the plain list when a place has English only,
+ * the per-language object once a second language exists. Keeping the plain
+ * list means a country nobody has translated stays byte-identical to its
+ * earlier build (FT-49); the app reads both.
+ */
+function asStoredHooks(hooks: LangHooks): string[] | LangHooks {
+	const languages = Object.keys(hooks);
+	return languages.length === 1 && hooks.en ? hooks.en : hooks;
 }
 
 interface Feature<G = AnyGeometry> {
@@ -441,7 +418,8 @@ async function buildOne(mapId: string): Promise<number> {
 		// A kind-specific list wins over the catch-all, so a province's facts
 		// are never shown for a town that shares its id.
 		const sentences = (fact?.kind && authored?.[fact.kind]) || authored?.any;
-		ordered[target.id] = sentences ? { ...fact, hooks: sentences } : fact;
+		const stored = sentences ? asStoredHooks(sentences) : undefined;
+		ordered[target.id] = stored ? { ...fact, hooks: stored } : fact;
 	}
 	writeFileSync(path.join(absOutDir, 'facts.json'), `${JSON.stringify(ordered, null, '\t')}\n`);
 	return Object.keys(ordered).length;

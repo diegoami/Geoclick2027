@@ -13,7 +13,7 @@
 // nothing here guesses.
 
 import { asset } from '$app/paths';
-import { getLanguage, t, type TranslationKey } from './i18n.svelte';
+import { getLanguage, t, type Language, type TranslationKey } from './i18n.svelte';
 
 export type CompassPosition =
 	| 'north'
@@ -25,6 +25,11 @@ export type CompassPosition =
 	| 'south-east'
 	| 'south-west'
 	| 'centre';
+
+/** A place's name-facts per language (FT-49); mirrors LangHooks in
+ *  data/scripts/build-facts.ts. A plain array still means English, which is
+ *  what every country not yet translated stores. */
+export type LangHooks = Partial<Record<Language, string[]>>;
 
 /** Mirrors DerivedFact in data/scripts/build-facts.ts. */
 export interface Fact {
@@ -50,7 +55,7 @@ export interface Fact {
 	 * comes from, who it is named after - because the name is what is being
 	 * learned, and the derived line above already says where the place is.
 	 */
-	hooks?: string[];
+	hooks?: string[] | LangHooks;
 }
 
 export type Facts = Record<string, Fact>;
@@ -179,6 +184,32 @@ export function pickHook(
 	return { hook: hooks[index], next: index + 1 };
 }
 
+/**
+ * The name-facts to show in `language` (FT-49).
+ *
+ * A plain array is English, which is what every country not yet translated
+ * stores. For a per-language object the languages fall back PER SENTENCE: a
+ * place with two Italian sentences and three English ones shows the two
+ * Italian ones and the English third, so a half-finished country is partly
+ * English, never broken (docs/PLAN_V0.10.md).
+ */
+export function hooksInLanguage(
+	hooks: Fact['hooks'],
+	language: Language = getLanguage()
+): string[] {
+	if (!hooks) return [];
+	if (Array.isArray(hooks)) return hooks;
+	const english = hooks.en ?? [];
+	const translated = hooks[language] ?? [];
+	const length = Math.max(english.length, translated.length);
+	const sentences: string[] = [];
+	for (let i = 0; i < length; i++) {
+		const sentence = translated[i] ?? english[i];
+		if (sentence) sentences.push(sentence);
+	}
+	return sentences;
+}
+
 /** What the card shows for a place: a pinned origin and a rotating extra. */
 export interface PlaceFacts {
 	/** Where the name comes from. Always the same sentence, never rotates. */
@@ -200,25 +231,25 @@ export interface PlaceFacts {
  * Returns nothing at all when nobody has written a fact for the place.
  */
 export function placeFacts(mapId: string, targetId: string, fact: Fact | undefined): PlaceFacts {
-	const hooks = fact?.hooks;
-	if (!hooks || hooks.length === 0) return {};
+	const hooks = hooksInLanguage(fact?.hooks);
+	if (hooks.length === 0) return {};
 	const origin = hooks[0];
 	// Only the ones after the origin rotate, so the rotation counter is over
 	// a shorter list than it used to be. An old stored count is harmless -
 	// pickHook wraps it.
 	const rest = hooks.slice(1);
 	if (rest.length === 0) return { origin };
-	return { origin, extra: rotateHook(mapId, targetId, { ...fact, hooks: rest }) };
+	return { origin, extra: rotateHook(mapId, targetId, rest) };
 }
 
 /**
  * The next fact from a place's list, advancing its rotation. Returns
  * undefined when the list is empty.
  */
-export function rotateHook(mapId: string, targetId: string, fact: Fact | undefined) {
+export function rotateHook(mapId: string, targetId: string, hooks: string[]) {
 	const key = `${mapId}/${targetId}`;
 	const rotation = readRotation();
-	const picked = pickHook(fact?.hooks, rotation[key] ?? 0);
+	const picked = pickHook(hooks, rotation[key] ?? 0);
 	if (!picked) return undefined;
 	if (typeof localStorage !== 'undefined') {
 		try {
