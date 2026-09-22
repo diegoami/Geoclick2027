@@ -18,11 +18,11 @@ before any work starts.
 |---|---|
 | `main` | clean, in sync with GitHub |
 | Deploy | The product owner **stopped deploying** on 2026-09-22, so a `main` merge no longer triggers a live Netlify build. Merges still need the product owner's OK (CLAUDE.md §3) — that rule is a review gate, not the old cost gate |
-| Latest release | **v0.9.3** (tag at `8383256`, 2026-09-19): the name origin pinned on every card. The web app deploys from `main`; installers are on the public [releases page](https://github.com/diegoami/geoclick-releases/releases/latest). Previews go out as alpha/beta pre-releases first (RELEASES.md, "Pre-releases") |
+| Latest release | **v0.9.4** (tag at `5387ff2`, 2026-09-22): the review's six fixes (FT-52 to FT-58). Installers are on the public [releases page](https://github.com/diegoami/geoclick-releases/releases/latest) — **published but not smoke-tested** (no map was opened in either shell). The web app deploys from `main`; the product owner stopped deploying on 2026-09-22. Previews go out as alpha/beta pre-releases first (RELEASES.md, "Pre-releases") |
 | Remediation programme | Closed with v0.2.0 ([REMEDIATION_PLAN.md](REMEDIATION_PLAN.md)) |
 | Feature programme | Closed with v0.5.0 ([FEATURE_PLAN.md](FEATURE_PLAN.md)) |
 | Since then | Per-release plans: [PLAN_V0.6.md](PLAN_V0.6.md) through [PLAN_V0.9.md](PLAN_V0.9.md), each with its own ledger |
-| Next | [PLAN_V0.9.4.md](PLAN_V0.9.4.md) — **FT-52 to FT-58 merged; v0.9.4 is code complete and needs its release gate** (open a map in the Windows and Android installers — FT-58's only unverified part). Reshaped 2026-09-22 by what is worth doing before v0.10.0: the three the player sees, plus the two robustness items. FT-56/FT-59 (test gates) are deferred, and **v0.10.0 follows this release** |
+| Next | **v0.9.4 is released** (tag `v0.9.4`, 2026-09-22). The only outstanding check is the installer smoke test — the published Windows and Android builds were not opened to confirm a map draws |
 | After that | [PLAN_V0.10.md](PLAN_V0.10.md) — translating the name-facts, still **blocked on three product decisions**, see "How to resume" |
 | Raised, unscoped | Six UX problems from one round of tablet play, 2026-09-20, **decided the same day** — first item of ROADMAP.md's Iteration 8+ backlog: the level-0 tray offering every name at once (`difficulty.ts:21`), slips losing their drag to the tablet's text-selection gesture, the fact card now only on a name the player could *not* place, best-fit label placement as a requirement rather than first-fit, a spike for Europa-Universalis-style stretched region names, and the map card's `{known} / {total} known` line replaced by a progress bar over `knownCount / total`, hidden at zero (the score panel keeps its copy — the two record different things). Each entry carries its decision; none is scheduled or estimated |
 | Also raised 2026-09-20 | **The start screen becomes a zoomable world map** — pick the country on the map, then the kind of quiz. The map list cannot be finalized as a list: the goal is a high number of maps, and `mapCatalog.ts` is already 31 countries and 66 maps. Favourites and Recent stay unchanged. Second item of the Iteration 8+ backlog, with the open questions listed there |
@@ -109,21 +109,15 @@ the generated one.
 
 ## How to resume
 
-**Start with [PLAN_V0.9.4.md](PLAN_V0.9.4.md).** FT-52 (`69cfa3d`, PR #10),
-FT-53 (`a0bc72b`, PR #12), FT-54 (`5f5b767`, PR #13), FT-55 (`a1fdc24`,
-PR #14), FT-57 (`a0e379d`, PR #15) and FT-58 (`039c8e7`, PR #16) are
-merged, all reviewed by Luna. Every v0.9.4 task is complete. What remains is
-the **release gate** per [RELEASES.md](RELEASES.md) — open a map in the
-Windows and Android installers, which is the one part of FT-58's DoD not
-exercised here (the build prepares the assets and fails if they are
-missing, but the packaged apps were not launched). **FT-56 and FT-59 (both
-test gates) were moved out on 2026-09-22**; they are listed under the
-plan's "Deferred" section. The plan needs no decisions from the product
-owner.
+**v0.9.4 is released** (tag `v0.9.4`, 2026-09-22), with FT-52 to FT-58
+merged, all reviewed by Luna. One check is outstanding: the published
+Windows and Android installers were **not opened to confirm a map draws**
+(the product owner accepted publishing without it) — do that before trusting
+them. **FT-56 and FT-59 (both test gates) were moved out to a later
+hardening batch**; they are listed under the plan's "Deferred" section.
 
-v0.10.0 comes **after** v0.9.4 and still **cannot start**: it needs three
-answers from the product owner (PLAN_V0.10.md, "Product decisions
-needed") —
+v0.10.0 is next and still **cannot start**: it needs three answers from the
+product owner (PLAN_V0.10.md, "Product decisions needed") —
 
 1. Which languages, and in what order? (Italian first is recommended: the
    product owner reads it and will catch bad phrasing immediately.)
@@ -133,7 +127,7 @@ needed") —
 
 Suggested first message for the next session:
 
-> Read docs/HANDOVER.md, then docs/PLAN_V0.9.4.md. v0.9.4 is complete; run its release gate.
+> Read docs/HANDOVER.md, then docs/PLAN_V0.10.md. v0.9.4 is released; the installer smoke test is outstanding.
 
 Whatever comes next, the working rules stay (CLAUDE.md §3):
 

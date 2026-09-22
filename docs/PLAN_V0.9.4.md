@@ -16,11 +16,12 @@ Nothing user-facing is added here, so this is a patch.
 [PLAN_V0.10.md](PLAN_V0.10.md) — translating the name-facts — keeps its
 number and queues behind this.
 
-**Status: code complete, not released.** FT-52 (`69cfa3d`, PR #10), FT-53
-(`a0bc72b`, PR #12), FT-54 (`5f5b767`, PR #13), FT-55 (`a1fdc24`, PR #14),
-FT-57 (`a0e379d`, PR #15) and FT-58 (`039c8e7` and `739bd20`, PR #16/#17)
-are merged. What remains is the release gate: open a map in the Windows and
-Android installers ([RELEASES.md](RELEASES.md)).
+**Status: released 2026-09-22.** Tag `v0.9.4`; the Windows `.msi` and
+`-setup.exe` and the Android `.apk` are published on the releases page.
+FT-52 (`69cfa3d`, PR #10), FT-53 (`a0bc72b`, PR #12), FT-54 (`5f5b767`,
+PR #13), FT-55 (`a1fdc24`, PR #14), FT-57 (`a0e379d`, PR #15) and FT-58
+(`039c8e7` and `739bd20`, PR #16/#17) are merged. The installer smoke test
+was skipped (the product owner accepted publishing untested).
 
 
 ## No product decisions needed

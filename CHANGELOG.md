@@ -55,7 +55,9 @@ Under the hood:
   loop; the reviewer's blocking findings are all fixed.
 - **Installers:** rebuilt from the v0.9.4 tag — the Windows `.msi` (26.2 MB)
   and `-setup.exe` (25.0 MB), and the Android `.apk` (33.8 MB), signed with
-  the current key, Android versionCode 90499.
+  the current key, Android versionCode 90499 — and published to the releases
+  page. **Not tried in this build:** neither shell was opened to check a map
+  draws; that check is outstanding.
 
 Not covered:
 
