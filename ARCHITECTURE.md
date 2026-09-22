@@ -267,12 +267,14 @@ data/maps/    <--- app/static/maps      (prepared link or copy)
 data/styles/  <--- app/static/styles    (prepared link or copy)
 ```
 
-`app/static/` holds only those two links plus two real files, `_redirects`
-and `robots.txt`. Everything a map needs — `map.json`, `tour.json`,
-`facts.json`, `tiles.pmtiles`, `terrain.pmtiles` — is served straight out
-of `data/maps/<id>/` at `/maps/<id>/…`, so a rebuilt map is live on the
-dev server with no copy step, and the app fetches the same URL in all
-three shells.
+`app/static/` holds only those two prepared directories plus two real
+files, `_redirects` and `robots.txt`. Everything a map needs — `map.json`,
+`tour.json`, `facts.json`, `tiles.pmtiles`, `terrain.pmtiles` — is served
+straight out of `data/maps/<id>/` at `/maps/<id>/…`, so with the link in
+place a rebuilt map is live on the dev server with no copy step, and the
+app fetches the same URL in all three shells. Where the filesystem refused
+a link and `prepare-assets.mjs` copied instead, a change to the source data
+needs it re-run.
 
 `vite build` resolves the links and writes real files into `app/build/`.
 Both native shells then wrap **that same directory**, unmodified:
