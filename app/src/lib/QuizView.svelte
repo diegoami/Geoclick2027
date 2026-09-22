@@ -74,17 +74,13 @@
 	let wrongFlashId = $state<string | undefined>(undefined);
 
 	// The fact box (FT-35). It can only ever appear AFTER a name is resolved,
-	// because it is set in markSolved - so it cannot give an answer away. The
-	// next drop replaces it, which means a missed name's card stays up for
-	// exactly as long as the player is still looking at that mistake.
+	// because it is set in markSolved - so it cannot give an answer away.
+	// Since FT-62 it is shown only for a name the player could NOT place: a
+	// correct drop clears it, so it no longer competes with the next slip.
 	let facts = $state<Facts>({});
 	let told = $state<{ id: string; name: string; origin?: string; extra?: string } | undefined>(
 		undefined
 	);
-	let toldTimer: ReturnType<typeof setTimeout> | undefined;
-	/** How long a correctly placed name's card stays before it gets out of
-	 *  the way. A missed one is not on a timer at all. */
-	const TOLD_PAUSE_MS = 4000;
 
 	// How hard this map plays, and which names the tray is offering right now
 	// (FT-21, difficulty.ts). The better the map is known, the fewer names are
@@ -420,21 +416,15 @@
 		});
 		solvedPopups.set(targetId, popup);
 
-		// Now that the name is on the map, say what the place is (FT-35). A
-		// name that had to be REVEALED holds its card until the next drop -
-		// that is the moment the player has to be told something, and taking
-		// it away on a timer would take it away mid-sentence. A name placed
-		// correctly gets the same card briefly and then hands the map back:
-		// the card sits over the bottom of the map, and on a tall country
-		// that is somewhere the next slip may have to go.
-		told = { id: targetId, name, ...placeFacts(mapId, targetId, facts[targetId]) };
-		if (toldTimer) clearTimeout(toldTimer);
-		if (!revealed) {
-			toldTimer = setTimeout(() => {
-				if (told?.id === targetId) told = undefined;
-			}, TOLD_PAUSE_MS);
-			flashTimers.add(toldTimer);
-		}
+		// Now that the name is on the map, say what the place is (FT-35), but
+		// only for a name the player could NOT place (FT-62): a correct drop
+		// replaces the card with nothing, so it stops competing with the next
+		// slip, and the fact lands at the one moment the player has a reason to
+		// read it. No timer either way - the next resolved drop, or the close
+		// button, takes it away.
+		told = revealed
+			? { id: targetId, name, ...placeFacts(mapId, targetId, facts[targetId]) }
+			: undefined;
 	}
 
 	function onSlipPointerUp(e: PointerEvent) {

@@ -201,6 +201,10 @@ correcting, and each changes the work:
   seams.
 - **DoD:** gates green; the test fails if the grade written for a revealed
   drop is changed.
+- **Add FT-62's card rule when this lands (2026-09-23):** a correct resolved
+  item clears the fact card (`told`), a revealed one sets it, and closing it
+  clears it. FT-62 shipped without a parent-state test because this harness
+  does not exist yet.
 
 ## Order
 
