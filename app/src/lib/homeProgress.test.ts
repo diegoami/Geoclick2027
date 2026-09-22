@@ -85,4 +85,17 @@ describe('loadHomeProgress', () => {
 		expect(masteries['usa-states']).toBeUndefined();
 		expect(logged).toHaveBeenCalled();
 	});
+
+	it('keeps a mastery for a played map with no known name yet', async () => {
+		// The FT-65 wiring: the card hides its bar when known === 0, but the
+		// mastery still exists, so the level ladder has something to say later.
+		const repository = createInMemoryProgressRepository();
+		await repository.saveCardState('italy-regions', card('piemonte', 1));
+		const { masteries } = await loadHomeProgress(
+			repository,
+			['italy-regions'],
+			new Map([['italy-regions', ['piemonte']]])
+		);
+		expect(masteries['italy-regions']).toEqual({ known: 0, total: 1, level: 0 });
+	});
 });

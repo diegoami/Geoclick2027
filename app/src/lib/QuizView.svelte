@@ -214,9 +214,10 @@
 	// completion saves/computes again.
 	let summarySaved = false;
 
-	// How much of the map is known once the round is over (FT-26) - the same
-	// line the home page shows, so the score panel and the map list tell the
-	// same story. Undefined until a round ends.
+	// How much of the map is known once the round is over (FT-26). The score
+	// panel's copy stays written text while the map card's became a bar
+	// (FT-65): the two record different things - what this round left behind,
+	// against a map's standing. Undefined until a round ends.
 	let knownAfterRound = $state<number | undefined>(undefined);
 	// Lets the score panel be dismissed to see the finished map underneath
 	// (it's a centered overlay with no other way to look past it) without
@@ -747,8 +748,9 @@
 						{t('quiz.revealedNote', { count: revealedCount })}
 					</p>
 				{/if}
-				<!-- What the round left behind: the same line the map list shows,
-				     so finishing here and going back tell the same story (FT-26). -->
+				<!-- What the round left behind (FT-26). The map list shows a bar
+				     (FT-65); this panel keeps the number, because it records what
+				     this round left behind rather than the map's standing. -->
 				{#if knownAfterRound !== undefined && mapDef}
 					<p class="known-note">
 						{t('quiz.known', { known: knownAfterRound, total: mapDef.targets.length })}

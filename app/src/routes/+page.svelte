@@ -12,6 +12,7 @@
 	import { countMaps, filterGroups } from '$lib/mapSearch';
 	import { t, tPlural } from '$lib/i18n.svelte';
 	import LanguageSwitcher from '$lib/LanguageSwitcher.svelte';
+	import KnownProgress from '$lib/KnownProgress.svelte';
 	import { mapDisplayName, mapGroups } from '$lib/mapCatalog';
 	import { favouriteMaps, recentMaps } from '$lib/mapPrefs.svelte';
 	import FavouriteStar from '$lib/FavouriteStar.svelte';
@@ -133,7 +134,13 @@
 				<span class="map-name">{label}</span>
 				{#if mastery}
 					<span class="mastery" class:all-known={mastery.known === mastery.total}>
-						{t('home.known', { known: mastery.known, total: mastery.total })}
+						<!-- A bar, not the number (FT-65); it renders nothing until the
+						     first name is known. -->
+						<KnownProgress
+							known={mastery.known}
+							total={mastery.total}
+							allKnown={mastery.known === mastery.total}
+						/>
 						<!-- The ladder, but only once it has started holding names back
 						     (FT-21): at level 0 every name is on offer and there is
 						     nothing to explain. -->
