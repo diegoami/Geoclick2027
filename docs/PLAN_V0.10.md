@@ -241,4 +241,4 @@ The FT-48 gate is already passed. **→ Release `v0.10.0`** per
 | FT-62 | **merged**  | `b2f0c8b` | the fact card only on a name not placed (PR #19) |
 | FT-63 | not started | —     | labels go where there is the most room   |
 | FT-64 | not started | —     | spike: names stretched along the region  |
-| FT-65 | not started | —     | map card progress bar, not the known line |
+| FT-65 | **merged**  | `f3b4421` | map card progress bar, hidden at zero (PR #20) |
