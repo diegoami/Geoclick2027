@@ -94,16 +94,16 @@ Check items off as they land; update "Status" as iterations complete.
   map cannot show and a bigger tap target for towns (v0.9.2, FT-45/FT-46);
   the name origin pinned as the card's first line (v0.9.3, FT-47). Each
   entry is in [CHANGELOG.md](CHANGELOG.md).
-- **v0.9.4 planned 2026-09-20, reshaped 2026-09-22, in progress**:
+- **v0.9.4 planned 2026-09-20, reshaped 2026-09-22, code complete**:
   [docs/PLAN_V0.9.4.md](docs/PLAN_V0.9.4.md). The other session's code
   review filed GitHub issues #1-#8; all eight were verified on 2026-09-20.
   FT-52 (`69cfa3d`, PR #10), FT-53 (`a0bc72b`, PR #12), FT-54
-  (`5f5b767`, PR #13), FT-55 (`a1fdc24`, PR #14) and FT-57 (`a0e379d`,
-  PR #15) are merged. What remains is **FT-58** (build the static assets
-  instead of committing symlinks), the last item the product owner kept for
-  this release. **FT-56** (validate the shipped `tour.json`) and **FT-59**
-  (a QuizView seam test), both test gates, are deferred to a hardening batch.
-  No product decisions needed; **v0.10.0 follows.**
+  (`5f5b767`, PR #13), FT-55 (`a1fdc24`, PR #14), FT-57 (`a0e379d`,
+  PR #15) and FT-58 (`039c8e7`, PR #16) are merged: **v0.9.4 is code
+  complete**, pending its release gate. **FT-56** (validate the shipped
+  `tour.json`) and **FT-59** (a QuizView seam test), both test gates, are
+  deferred to a hardening batch. No product decisions needed; **v0.10.0
+  follows.**
 - **Raised by the product owner 2026-09-22, backlogged**: GitHub issue #11 —
   on the Known map an explicitly tapped name kept its earned colour instead
   of **Chosen**. Decided: an explicit tap is Chosen regardless of the streak,

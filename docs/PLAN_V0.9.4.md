@@ -1,4 +1,4 @@
-# v0.9.4 — The review's fixes that matter (planned 2026-09-20, reshaped 2026-09-22)
+# v0.9.4 — The review's fixes that matter (planned 2026-09-20, reshaped 2026-09-22, code complete 2026-09-22)
 
 Eight issues, `#1`–`#8`, were filed by the other session's review and all
 eight were verified against the source on 2026-09-20. FT-52 shipped first.
@@ -16,9 +16,11 @@ Nothing user-facing is added here, so this is a patch.
 [PLAN_V0.10.md](PLAN_V0.10.md) — translating the name-facts — keeps its
 number and queues behind this.
 
-**Status: in progress.** FT-52 (`69cfa3d`, PR #10), FT-53 (`a0bc72b`,
-PR #12), FT-54 (`5f5b767`, PR #13), FT-55 (`a1fdc24`, PR #14) and FT-57
-(`a0e379d`, PR #15) are merged; FT-58 is in review (PR #16).
+**Status: code complete, not released.** FT-52 (`69cfa3d`, PR #10), FT-53
+(`a0bc72b`, PR #12), FT-54 (`5f5b767`, PR #13), FT-55 (`a1fdc24`, PR #14),
+FT-57 (`a0e379d`, PR #15) and FT-58 (`039c8e7`, PR #16) are merged. What
+remains is the release gate: open a map in the Windows and Android
+installers ([RELEASES.md](RELEASES.md)).
 
 
 ## No product decisions needed
@@ -234,7 +236,7 @@ are still authoritative; this section is only scheduling.
 | FT-55 | **merged**  | `a1fdc24` | issue #1, the tutorial's Back/Resume reaches the Overview route; `screenPath()`, effect-level `navigateTo()` test (PR #14, reviewed by Luna) |
 | FT-56 | **deferred** | —    | issue #7, validate `tour.json`, not `tourOrder` — moved out 2026-09-22 (test gate) |
 | FT-57 | **merged**  | `a0e379d` | issue #4, storage failures stay out of gameplay; guarded+validated reads, per-map home reads, in-memory quiz fallback (PR #15, reviewed by Luna) |
-| FT-58 | **in review** | —    | issue #5, build the static assets instead of symlinking them; prepared at build time, postbuild check (PR #16) |
+| FT-58 | **merged**  | `039c8e7` | issue #5, build the static assets instead of symlinking them; prepared at build time, postbuild check (PR #16, reviewed by Luna) |
 | FT-59 | **deferred** | —    | issue #8, one component test across QuizView's seams — moved out 2026-09-22 (test gap) |
 
 ## Out of scope
