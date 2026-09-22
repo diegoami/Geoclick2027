@@ -43,20 +43,38 @@ export function dispatch(event: TutorialEvent): void {
 	void carryOut(result.effects);
 }
 
-function navigateTo(screen: Screen): Promise<void> {
+/**
+ * The URL a tutorial screen lives at. The state machine emits the right
+ * `navigate` effect; this is the layer that mistranslated `overview` as the
+ * Known route, so Back and Resume arrived on a step that immediately re-paused
+ * (FT-55, issue #1).
+ */
+function screenPath(screen: Screen): string {
 	const mapId = TUTORIAL_MAP_ID;
 	switch (screen) {
 		case 'home':
-			return goto(resolve('/'));
+			return resolve('/');
 		case 'explore':
-			return goto(resolve('/map/[mapId]', { mapId }));
+			return resolve('/map/[mapId]', { mapId });
 		case 'overview':
-			return goto(resolve('/map/[mapId]', { mapId }));
+			return resolve('/map/[mapId]/overview', { mapId });
 		case 'quiz':
-			return goto(resolve('/map/[mapId]/quiz', { mapId }));
+			return resolve('/map/[mapId]/quiz', { mapId });
 		case 'tour':
-			return goto(resolve('/map/[mapId]/tour', { mapId }));
+			return resolve('/map/[mapId]/tour', { mapId });
 	}
+}
+
+/**
+ * Carries out one `navigate` effect. Exported so a test can drive the effect
+ * handler itself - capturing the `goto` argument for every screen - rather
+ * than only the mapping it happens to use.
+ */
+export function navigateTo(screen: Screen): Promise<void> {
+	// screenPath() is where resolve() is called; the rule only sees the call
+	// site, and the indirection is what lets the test check every screen.
+	// eslint-disable-next-line svelte/no-navigation-without-resolve
+	return goto(screenPath(screen));
 }
 
 async function carryOut(effects: Effect[]): Promise<void> {
