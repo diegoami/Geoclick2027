@@ -2,9 +2,12 @@
 // the language is module-scope state, so both the DOM and a real module
 // instance are part of what is under test. FT-53, issue #3.
 import { beforeEach, describe, expect, it } from 'vitest';
+import { tick } from 'svelte';
+import { render } from 'vitest-browser-svelte';
 import type * as maplibregl from 'maplibre-gl';
 import { getLanguage, setLanguage } from './i18n.svelte';
 import { TerrainLayer } from './terrainLayer';
+import TerrainLanguageFixture from './terrainLanguage.fixture.svelte';
 
 // The popup MapLibre would create, without a map or a WebGL context - the
 // same stand-in `registerLabel` already accepts (labelCollision.ts). It
@@ -124,5 +127,29 @@ describe('terrain labels and the language', () => {
 		const layer = new TestTerrainLayer(fakeMap(FEATURES), 'test-map');
 		layer.refreshLabels('it');
 		expect(layer.labels()).toEqual([]);
+	});
+});
+
+// The regression FT-53 fixes lives in the view wiring, not in the layer: on
+// a map's first open the draw happens after an await, so an effect that only
+// follows the Terrain preference never subscribes to the language. This
+// mounts the shared helper the four views call, with a real layer, and
+// changes the language the way the player does.
+describe('the view wiring that follows the language', () => {
+	beforeEach(() => setLanguage('en'));
+
+	it('redraws a first-opened map’s labels when the language changes', async () => {
+		const layer = new TestTerrainLayer(fakeMap(FEATURES), 'test-map');
+		await render(TerrainLanguageFixture, { terrain: () => layer });
+
+		// What the views' Terrain effect does on mount.
+		await layer.setVisible(true);
+		expect(layer.labels()).toEqual(['Alps', 'Mont Blanc 4,807 m']);
+
+		// The player switches language; nothing else calls into the layer.
+		setLanguage('it');
+		await tick();
+
+		expect(layer.labels()).toEqual(['Alpi', 'Monte Bianco 4807 m']);
 	});
 });

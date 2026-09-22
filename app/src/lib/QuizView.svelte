@@ -5,11 +5,12 @@
 	import { resolve } from '$app/paths';
 	import { fetchMapDefAndStyle, createMap } from './geoclickMap';
 	import type { TerrainLayer } from './terrainLayer';
+	import { followTerrainLanguage } from './terrainLanguage.svelte';
 	import { terrainShown } from './mapPrefs.svelte';
 	import { mapFitPadding } from './mapFit';
 	import { resolveDrop } from './quizDrop';
 	import MapNav from './MapNav.svelte';
-	import { getLanguage, t, tPlural } from './i18n.svelte';
+	import { t, tPlural } from './i18n.svelte';
 	import { mapDisplayName } from './mapCatalog';
 	import { tutorialDrop, tutorialQuizComplete } from './tutorial.svelte';
 	import { DOT_CLEARANCE_PX, registerLabel } from './labelCollision';
@@ -649,16 +650,10 @@
 		});
 	});
 
-	// A language switch has to reach the terrain names too (FT-53). On a
-	// map's first open they are drawn after `await this.add()` inside
-	// setVisible, so the effect above never tracked getLanguage() and the
-	// labels kept the old language while everything around them changed.
-	// Reading it here establishes the subscription; refreshLabels() redraws
-	// the names in the new language.
-	$effect(() => {
-		const language = getLanguage();
-		terrain?.refreshLabels(language);
-	});
+	// A language switch has to reach the terrain names too (FT-53); the
+	// helper reads getLanguage() so the subscription exists even on a map's
+	// first open, when the labels are drawn after an await.
+	followTerrainLanguage(() => terrain);
 	onMount(() => {
 		let cancelled = false;
 
