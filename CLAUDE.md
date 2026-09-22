@@ -26,7 +26,7 @@ indiscriminately exhausts the context window before any work starts.
 
 | Path | Why |
 |---|---|
-| `app/static/maps`, `app/static/styles` | **symlinks** into `data/` — address the `data/` path |
+| `app/static/maps`, `app/static/styles` | **prepared at build time** from `data/` (gitignored) — address the `data/` path |
 | `mobile/android/app/src/main/assets/public/` | `cap sync` copy of `app/build` |
 | `mobile/.../assets/capacitor.*.json`, `res/xml/config.xml` | generated — edit `mobile/capacitor.config.ts` |
 | `data/maps/**` | 64 dirs, 126 binaries + ~330k tokens of generated JSON |

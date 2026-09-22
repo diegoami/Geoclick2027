@@ -1374,9 +1374,11 @@ Windows-specific bugs found and fixed, both now in ONBOARDING.md's
 - **`app/static/maps`/`app/static/styles` symlinks don't survive a
   default Git-for-Windows checkout** — they became tiny text files
   containing the literal target path instead of real directories,
-  breaking every map. Fixed via Windows Developer Mode + `git config
-  --global core.symlinks true` + a fresh clone (an existing checkout
-  doesn't self-heal).
+  breaking every map. Fixed at the time via Windows Developer Mode +
+  `git config --global core.symlinks true` + a fresh clone (an existing
+  checkout doesn't self-heal). **Superseded by FT-58 (v0.9.4):** the paths
+  are no longer committed; the build prepares them itself and fails if they
+  are missing.
 - **`.pmtiles`/icon binaries had no `.gitattributes`, so a Windows
   checkout with `core.autocrlf=true` silently corrupted them** — region
   name labels (from `map.json`, via DOM popups) rendered fine, but no

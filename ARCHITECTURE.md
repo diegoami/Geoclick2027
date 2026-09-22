@@ -257,21 +257,26 @@ Iteration 8+, not started.
 ### How built map data reaches all three shells
 
 There is exactly one copy of the map data in the repo, and three shells
-reach it through two symlinks and one mirror. Nothing copies it:
+reach it through one prepared directory and one mirror. `app/static/maps`
+and `app/static/styles` are **generated from `data/` at build time** by
+`app/scripts/prepare-assets.mjs` (run from `predev` and `prebuild`); they
+are gitignored, not committed:
 
 ```
-data/maps/    <--- app/static/maps      (symlink, committed as mode 120000)
-data/styles/  <--- app/static/styles    (symlink, committed as mode 120000)
+data/maps/    <--- app/static/maps      (prepared link or copy)
+data/styles/  <--- app/static/styles    (prepared link or copy)
 ```
 
-`app/static/` holds only those two links plus two real files, `_redirects`
-and `robots.txt`. Everything a map needs — `map.json`, `tour.json`,
-`facts.json`, `tiles.pmtiles`, `terrain.pmtiles` — is served straight out
-of `data/maps/<id>/` at `/maps/<id>/…`, so a rebuilt map is live on the
-dev server with no copy step, and the app fetches the same URL in all
-three shells.
+`app/static/` holds only those two prepared directories plus two real
+files, `_redirects` and `robots.txt`. Everything a map needs — `map.json`,
+`tour.json`, `facts.json`, `tiles.pmtiles`, `terrain.pmtiles` — is served
+straight out of `data/maps/<id>/` at `/maps/<id>/…`, so with the link in
+place a rebuilt map is live on the dev server with no copy step, and the
+app fetches the same URL in all three shells. Where the filesystem refused
+a link and `prepare-assets.mjs` copied instead, a change to the source data
+needs it re-run.
 
-`vite build` resolves the links and writes real files into `app/build/`.
+`vite build` copies the prepared directories into `app/build/` as real files.
 Both native shells then wrap **that same directory**, unmodified:
 
 - `desktop/src-tauri/tauri.conf.json` → `build.frontendDist:
@@ -283,11 +288,17 @@ So `app/build` is the single artifact: the web deploy, the desktop
 bundle's payload and the APK's assets are the same bytes, and there is no
 mobile-only or desktop-only frontend code.
 
-**The symlinks are the fragile part.** A tool that does not preserve them
-— a zip round-trip, a Windows checkout without Developer Mode or
-`core.symlinks=true` — turns each into a small text file containing a
-path, and the build then ships 15-byte "tilesets". ONBOARDING.md's
-"Gotchas" section has the symptoms and the fix.
+**Preparing them is the fragile part, so the build checks it.** Until
+FT-58 these were committed symlinks: a tool that did not preserve them — a
+zip round-trip, a Windows checkout without Developer Mode or
+`core.symlinks=true` — turned each into a small text file containing a
+path, and the build then shipped 15-byte "tilesets". Now
+`prepare-assets.mjs` creates the link on whatever machine builds (a
+junction on Windows, which needs no Developer Mode; a plain directory
+symlink elsewhere; a copy if linking is refused), and
+`check-build-assets.mjs` runs in `postbuild` and **fails** when the assets
+did not reach `app/build`. ONBOARDING.md's "Gotchas" section has the
+symptoms.
 
 ## Screens and navigation
 
