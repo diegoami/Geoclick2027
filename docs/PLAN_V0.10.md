@@ -1,4 +1,4 @@
-# v0.10.0 — The name-facts in your own language (planned 2026-09-19)
+# v0.10.0 — The name-facts in your own language, and the tablet-play fixes (planned 2026-09-19, rescoped 2026-09-23)
 
 > **Queued behind v0.9.4, now unblocked.** On 2026-09-20 the product owner
 > put the code review's issues ahead of this; on 2026-09-22 that batch was
@@ -131,6 +131,81 @@ it after the Italian.
 - **Postponed (2026-09-22).** Not in v0.10.0's scope until the Italian has
   been read; planned, not dropped.
 
+## The tablet-play fixes (product owner, 2026-09-23)
+
+The Iteration 8+ backlog's first item, decided 2026-09-20 and unscheduled.
+The product owner put it **in v0.10.0** on 2026-09-23. The full reasoning
+for each lives in ROADMAP.md's backlog entry; these are the tasks.
+
+### FT-60 — A finite first hand · Small · 🧑 the number
+
+- **Why:** `HAND_SIZES[0]` is `Infinity` (`app/src/lib/difficulty.ts:21`),
+  so a map never played lays every name in the tray at once — 49 slips on
+  `germany-towns-100k`, 110 on `italy-provinces`. The hand only starts
+  shrinking once a quarter of the map is known.
+- **Do:** a finite level-0 hand. **The number is the open question**; the
+  level-1 size of 6 is the candidate.
+- **DoD:** a first round offers a finite hand; no new indicator is needed
+  (`quiz.subtitle` already shows placed-of-total).
+
+### FT-61 — A slip keeps its drag on a tablet · Small
+
+- **Why:** a slip is a `<button>` holding text, and nothing sets
+  `user-select`/`-webkit-touch-callout` or handles `pointercancel`, so a
+  tablet's text-selection gesture takes the pointer mid-drag — "the tablet
+  wants to copy".
+- **Do:** confirm on the actual device first, then the CSS plus a
+  `pointercancel` handler that returns the slip to the tray. The drawn-image
+  slip is the fallback only if that fails; it costs selectable,
+  translatable, screen-reader-readable place names.
+- **DoD:** on the tablet, a slip drags and drops with no selection UI, and a
+  cancelled drag returns it.
+
+### FT-62 — The fact card only on a name you could not place · Small
+
+- **Why:** the card appears after every resolved name, at the moment the
+  player is reaching for the next slip. The content is fine (FT-45); the
+  timing is not.
+- **Do:** show it only when the name was *not* answered correctly —
+  `status === 'revealed'`.
+- **DoD:** a correct drop says nothing; a revealed name still shows the
+  card. Decide whether the dwell time changes now it is rarer.
+
+### FT-63 — Labels go where there is the most room · Medium
+
+- **Why:** `candidatesFor` (`app/src/lib/labelCollision.ts:169`) offers four
+  fixed spots and the pass takes the first that fits, so Duisburg's name
+  covers Essen while open space to its west goes unused.
+- **Do:** every target's dot becomes an obstacle; the candidate set widens
+  past four compass points; each candidate is scored — room around it,
+  distance to the nearest anchor and dot, how much sits over background —
+  and the best is taken. Keep the cost explainable, cheap for 110 labels,
+  and stable under a one-pixel pan.
+- **DoD:** Duisburg moves west; panning does not shuffle the map's names.
+
+### FT-64 — Spike: region names stretched along the region · Small spike
+
+- **Why:** a region's name sits on its centroid and reads as a pin, not a
+  territory. Drawing it along the shape's long axis is what makes a map
+  look like a map (Europa Universalis does this).
+- **Do:** a spike only — draw one region's name along a computed spine, on
+  a real map at real zoom levels, and see whether it reads. That decides
+  between an SVG `textPath` overlay (keeps offline, magnify and rem sizing)
+  and a MapLibre symbol layer with `symbol-placement: line` (needs a
+  vendored glyph stack, loses FT-02/FT-03).
+- **DoD:** a decision, not a shipped feature.
+
+### FT-65 — The map card shows a progress bar, not the known line · Small
+
+- **Why:** `home.known` shows `{known} / {total}` on every map card, and a
+  played map with no known name reads "0 / 49 known".
+- **Do:** a progress bar over `knownCount / total`, **hidden at zero**, on
+  the map list only. The score panel's `quiz.known` stays; fix the comment
+  at `app/src/lib/QuizView.svelte:751` that still says the two are one
+  statement. Leave `quiz.subtitle` and `retention.known` alone.
+- **DoD:** a played-but-none-known map shows nothing; a map with known
+  names shows the bar.
+
 ## Out of scope
 
 - **Machine translation.** These are careful sentences about etymology,
@@ -143,13 +218,15 @@ it after the Italian.
 
 ## Order
 
-FT-48 → 🧑 → FT-49 → FT-50. **FT-51 (German) is postponed** until the
-Italian has been read.
+**The tablet-play fixes first, then the Italian bulk.** The small, visible
+ones — **FT-62**, **FT-65**, **FT-61**, **FT-60** (once the product owner
+fixes the number) — then **FT-63** (best-fit placement), then the **FT-64**
+spike, which decides whether stretched names become a task at all. Then
+**FT-50**, the remaining 27 countries of Italian, batched by country.
+**FT-51 (German) is postponed.**
 
-The gate after FT-48 is the one that matters. Everything after it is
-volume.
-
-**→ Release `v0.10.0`** per [RELEASES.md](RELEASES.md).
+The FT-48 gate is already passed. **→ Release `v0.10.0`** per
+[RELEASES.md](RELEASES.md).
 
 ## Progress ledger
 
@@ -159,3 +236,9 @@ volume.
 | FT-49 | **merged**  | `51892fc` | per-language `hooks`, per-sentence fallback (PR #18) |
 | FT-50 | not started | —     | Italian, the other 27 countries              |
 | FT-51 | postponed   | —     | German, only if the Italian read well   |
+| FT-60 | not started | —     | finite level-0 hand (the number is 🧑)   |
+| FT-61 | not started | —     | a slip keeps its drag on a tablet        |
+| FT-62 | not started | —     | fact card only on a name not placed      |
+| FT-63 | not started | —     | labels go where there is the most room   |
+| FT-64 | not started | —     | spike: names stretched along the region  |
+| FT-65 | not started | —     | map card progress bar, not the known line |

@@ -105,12 +105,13 @@ Check items off as they land; update "Status" as iterations complete.
   `tour.json`) and **FT-59** (a QuizView seam test), both test gates, are
   deferred to a hardening batch. No product decisions needed; **v0.10.0
   follows.**
-- **v0.10.0 in progress, started 2026-09-23**:
+- **v0.10.0 in progress, started and rescoped 2026-09-23**:
   [docs/PLAN_V0.10.md](docs/PLAN_V0.10.md) — translating the 5 448
-  name-facts. Decisions: **Italian first**, **per-sentence English
-  fallback**, **no "EN" marker**, **German postponed**. **FT-48 and FT-49
-  merged** (Italy's 20 regions in Italian, and the per-language shape);
-  **FT-50** (the other 27 countries) is next.
+  name-facts **and the six tablet-play UX fixes** the product owner moved
+  into this release (FT-60 to FT-65). Translation decisions: **Italian
+  first**, **per-sentence English fallback**, **no "EN" marker**, **German
+  postponed**. **FT-48 and FT-49 merged** (Italy's 20 regions in Italian,
+  and the per-language shape); **FT-60 to FT-65, then FT-50**, is next.
 - **Raised by the product owner 2026-09-22, backlogged**: GitHub issue #11 —
   on the Known map an explicitly tapped name kept its earned colour instead
   of **Chosen**. Decided: an explicit tap is Chosen regardless of the streak,
@@ -128,11 +129,11 @@ Check items off as they land; update "Status" as iterations complete.
   hidden at zero — the score panel's copy of it stays, since the two
   record different things. Written up as
   the first item of the Iteration 8+ backlog below, each with the
-  decision that settles it. Alongside them, a second item raised the same
-  day: **the start screen becomes a zoomable world map** — the map list
-  cannot be finalized as a list, because the goal is a high number of
-  maps; Favourites and Recent stay as they are. Both queue behind v0.9.4
-  and v0.10.0 unless the product owner reorders them.
+  decision that settles it. **On 2026-09-23 the product owner moved all six
+  into v0.10.0** (FT-60 to FT-65). A second item raised the same day, **the
+  start screen becomes a zoomable world map**, stays in the backlog — the
+  map list cannot be finalized as a list because the goal is a high number
+  of maps; Favourites and Recent stay as they are.
 - **Not started**: everything else below.
 - **Next up**: motion/feedback design (reveal animations, streak
   indicators, sound, correct-drop juiciness) and a broader component/
@@ -1410,7 +1411,7 @@ via a real SQLite write. Approved for merge to `main`.
 loop actually feels good. Candidates below, in rough priority order.
 
 - [ ] **Six UX problems found playing on a tablet, raised 2026-09-20,
-      decided the same day — not yet scoped into tasks.** One round of
+      decided the same day — now in v0.10.0 as FT-60 to FT-65 (2026-09-23).** One round of
       real play on a tablet, `germany-towns-100k` first: the same kind of
       feedback that produced Iteration 4's "UX refinements found by
       actually playing it", and recorded the same way — before
