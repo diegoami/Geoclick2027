@@ -16,8 +16,8 @@ Nothing user-facing is added here, so this is a patch.
 [PLAN_V0.10.md](PLAN_V0.10.md) — translating the name-facts — keeps its
 number and queues behind this.
 
-**Status: in progress.** FT-52 (`69cfa3d`, PR #10) and FT-53 (`a0bc72b`,
-PR #12) are merged; FT-54 next.
+**Status: in progress.** FT-52 (`69cfa3d`, PR #10), FT-53 (`a0bc72b`,
+PR #12) and FT-54 (`5f5b767`, PR #13) are merged; FT-55 next.
 
 
 ## No product decisions needed
@@ -229,7 +229,7 @@ are still authoritative; this section is only scheduling.
 | ----- | ----------- | ----- | ----------------------------------------------------------------------- |
 | FT-52 | **merged**  | `69cfa3d` | issue #6, antimeridian from the bbox; flag now documentary, integrity assertion added, `russia-regions` rebuilt (PR #10, reviewed by Luna) |
 | FT-53 | **merged**  | `a0bc72b` | issue #3, terrain labels follow the language; shared `followTerrainLanguage()` helper, `refreshLabels()`, browser test of the wiring (PR #12, reviewed by Luna) |
-| FT-54 | not started | —     | issue #2, terrain-off honoured during the first load                    |
+| FT-54 | **merged**  | `5f5b767` | issue #2, terrain-off honoured during the first load; latest press wins, the tiles-arrived wait is cleared on hide (PR #13, reviewed by Luna) |
 | FT-55 | not started | —     | issue #1, tutorial Back/Resume reaches the Overview route               |
 | FT-56 | **deferred** | —    | issue #7, validate `tour.json`, not `tourOrder` — moved out 2026-09-22 (test gate) |
 | FT-57 | not started | —     | issue #4, storage failures stay out of gameplay                         |

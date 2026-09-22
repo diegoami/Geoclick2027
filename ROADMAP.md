@@ -97,12 +97,12 @@ Check items off as they land; update "Status" as iterations complete.
 - **v0.9.4 planned 2026-09-20, reshaped 2026-09-22, in progress**:
   [docs/PLAN_V0.9.4.md](docs/PLAN_V0.9.4.md). The other session's code
   review filed GitHub issues #1-#8; all eight were verified on 2026-09-20.
-  FT-52 merged (`69cfa3d`, PR #10) and FT-53 (`a0bc72b`, PR #12). The product
-  owner then split the rest by what is worth doing before v0.10.0: **FT-54**
-  (terrain-off honoured during the first load) and **FT-55** (the tutorial's
-  Back/Resume reaches the Overview route) ship next — the two a player can
-  still see — alongside **FT-57** (storage failures stay out of gameplay) and
-  **FT-58** (build the static assets instead of committing symlinks). **FT-56** (validate the shipped `tour.json`) and
+  FT-52 (`69cfa3d`, PR #10), FT-53 (`a0bc72b`, PR #12) and FT-54
+  (`5f5b767`, PR #13) are merged. The product owner split the rest by what is
+  worth doing before v0.10.0: **FT-55** (the tutorial's Back/Resume reaches
+  the Overview route) ships next — the last a player can see — alongside
+  **FT-57** (storage failures stay out of gameplay) and **FT-58** (build the
+  static assets instead of committing symlinks). **FT-56** (validate the shipped `tour.json`) and
   **FT-59** (a QuizView seam test), both test gates, are deferred to a
   hardening batch. No product decisions needed; **v0.10.0 follows.**
 - **Raised by the product owner 2026-09-22, backlogged**: GitHub issue #11 —
