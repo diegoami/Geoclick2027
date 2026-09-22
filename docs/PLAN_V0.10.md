@@ -137,15 +137,15 @@ The Iteration 8+ backlog's first item, decided 2026-09-20 and unscheduled.
 The product owner put it **in v0.10.0** on 2026-09-23. The full reasoning
 for each lives in ROADMAP.md's backlog entry; these are the tasks.
 
-### FT-60 — A finite first hand · Small · 🧑 the number
+### FT-60 — A finite first hand · Small
 
 - **Why:** `HAND_SIZES[0]` is `Infinity` (`app/src/lib/difficulty.ts:21`),
   so a map never played lays every name in the tray at once — 49 slips on
   `germany-towns-100k`, 110 on `italy-provinces`. The hand only starts
   shrinking once a quarter of the map is known.
-- **Do:** a finite level-0 hand. **The number is the open question**; the
-  level-1 size of 6 is the candidate.
-- **DoD:** a first round offers a finite hand; no new indicator is needed
+- **Do:** a finite level-0 hand. **The hand holds 10** (product owner,
+  2026-09-23).
+- **DoD:** a first round offers ten names; no new indicator is needed
   (`quiz.subtitle` already shows placed-of-total).
 
 ### FT-61 — A slip keeps its drag on a tablet · Small
@@ -154,12 +154,13 @@ for each lives in ROADMAP.md's backlog entry; these are the tasks.
   `user-select`/`-webkit-touch-callout` or handles `pointercancel`, so a
   tablet's text-selection gesture takes the pointer mid-drag — "the tablet
   wants to copy".
-- **Do:** confirm on the actual device first, then the CSS plus a
-  `pointercancel` handler that returns the slip to the tray. The drawn-image
+- **Do:** set the text-selection guards and add a `pointercancel` handler
+  that returns the slip to the tray. **Build it now and confirm on the
+  tablet at release time** (product owner, 2026-09-23). The drawn-image
   slip is the fallback only if that fails; it costs selectable,
   translatable, screen-reader-readable place names.
-- **DoD:** on the tablet, a slip drags and drops with no selection UI, and a
-  cancelled drag returns it.
+- **DoD:** a slip drags and drops with no selection UI, and a cancelled drag
+  returns it — confirmed on the tablet during the release gate.
 
 ### FT-62 — The fact card only on a name you could not place · Small
 
@@ -219,11 +220,10 @@ for each lives in ROADMAP.md's backlog entry; these are the tasks.
 ## Order
 
 **The tablet-play fixes first, then the Italian bulk.** The small, visible
-ones — **FT-62**, **FT-65**, **FT-61**, **FT-60** (once the product owner
-fixes the number) — then **FT-63** (best-fit placement), then the **FT-64**
-spike, which decides whether stretched names become a task at all. Then
-**FT-50**, the remaining 27 countries of Italian, batched by country.
-**FT-51 (German) is postponed.**
+ones — **FT-62**, **FT-65**, **FT-61**, **FT-60** — then **FT-63** (best-fit
+placement), then the **FT-64** spike, which decides whether stretched names
+become a task at all. Then **FT-50**, the remaining 27 countries of Italian,
+batched by country. **FT-51 (German) is postponed.**
 
 The FT-48 gate is already passed. **→ Release `v0.10.0`** per
 [RELEASES.md](RELEASES.md).
@@ -236,8 +236,8 @@ The FT-48 gate is already passed. **→ Release `v0.10.0`** per
 | FT-49 | **merged**  | `51892fc` | per-language `hooks`, per-sentence fallback (PR #18) |
 | FT-50 | not started | —     | Italian, the other 27 countries              |
 | FT-51 | postponed   | —     | German, only if the Italian read well   |
-| FT-60 | not started | —     | finite level-0 hand (the number is 🧑)   |
-| FT-61 | not started | —     | a slip keeps its drag on a tablet        |
+| FT-60 | not started | —     | finite level-0 hand, size 10             |
+| FT-61 | not started | —     | a slip keeps its drag on a tablet; confirm on device at release |
 | FT-62 | not started | —     | fact card only on a name not placed      |
 | FT-63 | not started | —     | labels go where there is the most room   |
 | FT-64 | not started | —     | spike: names stretched along the region  |
