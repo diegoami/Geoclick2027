@@ -13,6 +13,13 @@
 // found the hard way, and reproduced. A true symlink is replaced as a link, so
 // data/ is safe. check-build-assets.mjs still guards the result, so a
 // half-prepared static directory cannot ship.
+//
+// GEOCLICK_PREPARE_ASSETS_COPY=1 forces the copy path, for the test.
+//
+// A worktree that still carries a junction from the brief PR #16 version
+// should run this once *before* any `git checkout`, `git rebase` or
+// `git bisect` that could reach a pre-FT-58 commit: this unlinks the junction
+// safely, after which history operations are safe.
 import { cpSync, existsSync, lstatSync, mkdirSync, rmSync, symlinkSync, unlinkSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -38,6 +45,10 @@ function remove(path) {
 	else rmSync(path, { recursive: true, force: true });
 }
 
+// The test that exercises the copy fallback forces it with this, rather than
+// needing a machine where directory symlinks are refused.
+const forceCopy = process.env.GEOCLICK_PREPARE_ASSETS_COPY === '1';
+
 for (const name of ['maps', 'styles']) {
 	const source = join(repoDir, 'data', name);
 	if (!existsSync(source)) {
@@ -47,13 +58,17 @@ for (const name of ['maps', 'styles']) {
 	const dest = join(appDir, 'static', name);
 	mkdirSync(join(appDir, 'static'), { recursive: true });
 	remove(dest);
-	try {
-		// A true directory symlink, never a Windows junction (see the header).
-		// Creating one needs a privilege Windows may not grant, in which case
-		// the data is copied instead.
-		symlinkSync(source, dest, 'dir');
-	} catch {
-		cpSync(source, dest, { recursive: true });
+	if (!forceCopy) {
+		try {
+			// A true directory symlink, never a Windows junction (see the
+			// header). Creating one needs a privilege Windows may not grant,
+			// in which case the data is copied instead.
+			symlinkSync(source, dest, 'dir');
+			continue;
+		} catch {
+			// Fall through to the copy.
+		}
 	}
+	cpSync(source, dest, { recursive: true });
 }
 console.log('Prepared app/static/maps and app/static/styles.');

@@ -623,7 +623,12 @@ this one, and is read on demand rather than up front.
   `maps/index.json`, a map's `map.json` or `styles/base.json` is missing
   under `app/build`, so that class of failure cannot ship. If map assets 404
   on a deploy but work locally, run `node scripts/prepare-assets.mjs` and
-  rebuild.
+  rebuild. **A worktree prepared by the brief PR #16 version has a junction
+  there** — run `node scripts/prepare-assets.mjs` once before any
+  `git checkout`, `git rebase` or `git bisect` that could reach a pre-FT-58
+  commit, because Git follows a junction when it replaces that path and
+  would delete `data/`. Running the script converts it to a true symlink (or
+  a copy) and the risk is gone.
 - **`.pmtiles`/icon binary files need `.gitattributes`, or a Windows
   checkout can silently corrupt them.** Without an explicit `binary`
   declaration, Git falls back to content-sniffing to decide text vs.
