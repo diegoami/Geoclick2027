@@ -238,7 +238,7 @@ The FT-48 gate is already passed. **→ Release `v0.10.0`** per
 | FT-51 | postponed   | —     | German, only if the Italian read well   |
 | FT-60 | not started | —     | finite level-0 hand, size 10             |
 | FT-61 | not started | —     | a slip keeps its drag on a tablet; confirm on device at release |
-| FT-62 | not started | —     | fact card only on a name not placed      |
+| FT-62 | **merged**  | `b2f0c8b` | the fact card only on a name not placed (PR #19) |
 | FT-63 | not started | —     | labels go where there is the most room   |
 | FT-64 | not started | —     | spike: names stretched along the region  |
 | FT-65 | not started | —     | map card progress bar, not the known line |
