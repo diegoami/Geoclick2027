@@ -7,7 +7,7 @@ import { tick } from 'svelte';
 import { render } from 'vitest-browser-svelte';
 import type * as maplibregl from 'maplibre-gl';
 import { getLanguage, setLanguage } from './i18n.svelte';
-import { TerrainLayer } from './terrainLayer';
+import { TERRAIN_SOURCE, TerrainLayer } from './terrainLayer';
 import TerrainLanguageFixture from './terrainLanguage.fixture.svelte';
 
 // The popup MapLibre would create, without a map or a WebGL context - the
@@ -67,6 +67,7 @@ function fakeMap(features: Record<string, unknown[]>) {
 // the load land, and the harness records what the layer then did.
 function loadingMap() {
 	const sources = new Set<string>();
+	let addSourceCalls = 0;
 	const added: string[] = [];
 	const visibility = new Map<string, string>();
 	const dims: Array<{ layer: string; value: unknown }> = [];
@@ -80,7 +81,10 @@ function loadingMap() {
 		isStyleLoaded: () => styleLoaded,
 		isSourceLoaded: () => true,
 		getSource: (id: string) => (sources.has(id) ? {} : undefined),
-		addSource: (id: string) => void sources.add(id),
+		addSource: (id: string) => {
+			addSourceCalls++;
+			sources.add(id);
+		},
 		// targets-fill is a real style layer the dimming touches; the terrain
 		// layers only exist once `add()` has run.
 		getLayer: (id: string) => (id === 'targets-fill' || added.includes(id) ? {} : undefined),
@@ -103,6 +107,7 @@ function loadingMap() {
 	return {
 		map: map as unknown as maplibregl.Map,
 		sources,
+		addSourceCalls: () => addSourceCalls,
 		added,
 		visibility,
 		dims,
@@ -110,6 +115,48 @@ function loadingMap() {
 		resolveStyle: () => {
 			styleLoaded = true;
 			for (const handler of listeners.get('styledata') ?? []) handler({});
+		}
+	};
+}
+
+// A map whose style is ready but whose tiles have not arrived, so `add()` adds
+// the layers and then parks waiting for the source. `emitSourceReady()`
+// delivers the tiles - after the player may have switched Terrain off.
+function sourceLoadingMap() {
+	const added: string[] = [];
+	const visibility = new Map<string, string>();
+	const dims: Array<{ layer: string; value: unknown }> = [];
+	const listeners = new Map<string, Set<(...args: unknown[]) => void>>();
+	const map = {
+		isStyleLoaded: () => true,
+		isSourceLoaded: () => false,
+		getSource: () => undefined,
+		addSource: () => {},
+		getLayer: (id: string) => (id === 'targets-fill' || added.includes(id) ? {} : undefined),
+		addLayer: (layer: { id: string }) => void added.push(layer.id),
+		getPaintProperty: () => 0.55,
+		setPaintProperty: (layer: string, _property: string, value: unknown) =>
+			void dims.push({ layer, value }),
+		setLayoutProperty: (id: string, _property: string, value: string) =>
+			void visibility.set(id, value),
+		querySourceFeatures: (_source: string, { sourceLayer }: { sourceLayer: string }) =>
+			(FEATURES as Record<string, unknown[]>)[sourceLayer] ?? [],
+		on: (type: string, handler: (...args: unknown[]) => void) => {
+			if (!listeners.has(type)) listeners.set(type, new Set());
+			listeners.get(type)!.add(handler);
+		},
+		off: (type: string, handler: (...args: unknown[]) => void) =>
+			void listeners.get(type)?.delete(handler)
+	};
+	return {
+		map: map as unknown as maplibregl.Map,
+		visibility,
+		dims,
+		/** How many tiles-arrived handlers are waiting. */
+		sourceHandlers: () => listeners.get('sourcedata')?.size ?? 0,
+		emitSourceReady: () => {
+			for (const handler of [...(listeners.get('sourcedata') ?? [])])
+				handler({ sourceId: TERRAIN_SOURCE, isSourceLoaded: true });
 		}
 	};
 }
@@ -200,7 +247,7 @@ describe('a toggle during the first load', () => {
 		harness.resolveStyle();
 		await showing;
 
-		expect(harness.sources.size).toBe(1); // one fetch, not two
+		expect(harness.addSourceCalls()).toBe(1); // one addSource, not two
 		expect(harness.added).toHaveLength(5);
 		expect([...harness.visibility.values()]).toEqual(['none', 'none', 'none', 'none', 'none']);
 		expect(harness.dims).toEqual([]); // nothing left dimmed
@@ -222,6 +269,38 @@ describe('a toggle during the first load', () => {
 		// Never hidden, dimmed and labelled: the button reads on.
 		expect(harness.visibility.size).toBe(0);
 		expect(harness.dims.length).toBeGreaterThan(0);
+		expect(layer.labels()).toEqual(['Alps', 'Mont Blanc 4,807 m']);
+	});
+});
+
+// The tiles can land after the player has already switched Terrain off. The
+// pending "source ready" wait must not draw labels then, and must not stack.
+describe('the tiles arriving late', () => {
+	beforeEach(() => setLanguage('en'));
+
+	it('does not draw labels when it was switched off before they arrived', async () => {
+		const harness = sourceLoadingMap();
+		const layer = new TestTerrainLayer(harness.map, 'test-map');
+
+		await layer.setVisible(true); // layers added, waiting for the tiles
+		expect(harness.sourceHandlers()).toBe(1);
+		await layer.setVisible(false); // switched off before they land
+		expect(harness.sourceHandlers()).toBe(0);
+
+		harness.emitSourceReady();
+		expect(layer.labels()).toEqual([]);
+	});
+
+	it('keeps one wait when toggled off and on before they arrive', async () => {
+		const harness = sourceLoadingMap();
+		const layer = new TestTerrainLayer(harness.map, 'test-map');
+
+		await layer.setVisible(true);
+		await layer.setVisible(false);
+		await layer.setVisible(true);
+		expect(harness.sourceHandlers()).toBe(1); // not stacked
+
+		harness.emitSourceReady();
 		expect(layer.labels()).toEqual(['Alps', 'Mont Blanc 4,807 m']);
 	});
 });

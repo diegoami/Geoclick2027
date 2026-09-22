@@ -204,6 +204,13 @@ export class TerrainLayer {
 	 */
 	private visible = false;
 	private pending = false;
+	/**
+	 * The pending "the tiles have arrived" handler, if the source was still
+	 * loading when the labels were last asked for. At most one is live, and
+	 * hiding the layer drops it, so tiles landing later cannot put names back
+	 * on a map the player switched off (FT-54).
+	 */
+	private sourceReady: ((e: maplibregl.MapSourceDataEvent) => void) | undefined;
 	// The opacity each dimmed layer had before this class touched it, so
 	// switching off restores the map exactly and switching on twice does not
 	// multiply the factor in twice.
@@ -278,6 +285,7 @@ export class TerrainLayer {
 			return;
 		}
 		this.removeLabels();
+		this.clearSourceReady();
 		this.dimOverlyingLayers(false);
 		for (const layer of LAYERS) {
 			if (this.map.getLayer(layer.id)) {
@@ -296,12 +304,26 @@ export class TerrainLayer {
 			this.drawLabels(getLanguage());
 			return;
 		}
+		// One pending wait is enough: turning it on again before the tiles
+		// arrive must not stack a second handler.
+		if (this.sourceReady) return;
 		const onData = (e: maplibregl.MapSourceDataEvent) => {
 			if (e.sourceId !== TERRAIN_SOURCE || !e.isSourceLoaded) return;
-			this.map.off('sourcedata', onData);
+			this.clearSourceReady();
+			// The player may have switched Terrain off while the tiles were on
+			// their way; the names must not come back (FT-54).
+			if (!this.visible) return;
 			this.drawLabels(getLanguage());
 		};
+		this.sourceReady = onData;
 		this.map.on('sourcedata', onData);
+	}
+
+	/** Drops the pending tiles-arrived handler, if there is one. */
+	private clearSourceReady(): void {
+		if (!this.sourceReady) return;
+		this.map.off('sourcedata', this.sourceReady);
+		this.sourceReady = undefined;
 	}
 
 	/**
@@ -465,6 +487,7 @@ export class TerrainLayer {
 	}
 
 	destroy(): void {
+		this.clearSourceReady();
 		this.removeLabels();
 	}
 }
