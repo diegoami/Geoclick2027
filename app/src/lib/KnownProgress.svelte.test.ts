@@ -30,4 +30,17 @@ describe('KnownProgress', () => {
 			true
 		);
 	});
+
+	it('cannot be pushed past its bounds by a bad caller', async () => {
+		// A map always has targets, and `loadHomeProgress` bounds known by
+		// total - but the component takes arbitrary props.
+		const none = await render(KnownProgress, { known: 5, total: 0 });
+		expect(none.container.querySelector('[role="progressbar"]')).toBeNull();
+		const negative = await render(KnownProgress, { known: -1, total: 4 });
+		expect(negative.container.querySelector('[role="progressbar"]')).toBeNull();
+		const over = await render(KnownProgress, { known: 5, total: 4 });
+		const bar = over.container.querySelector('[role="progressbar"]')!;
+		expect(bar.getAttribute('aria-valuenow')).toBe('4');
+		expect(bar.querySelector<HTMLElement>('.known-bar-fill')!.style.width).toBe('100%');
+	});
 });

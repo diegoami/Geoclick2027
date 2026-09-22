@@ -12,19 +12,26 @@
 		total,
 		allKnown = false
 	}: { known: number; total: number; allKnown?: boolean } = $props();
+
+	// Defensive: the component takes arbitrary props. `loadHomeProgress` bounds
+	// known by total and total is a map's target count, so this cannot fire in
+	// the shipped path - but a bad caller must not draw a fill past 100% or
+	// divide by zero.
+	const value = $derived(total > 0 ? Math.min(Math.max(known, 0), total) : 0);
+	const percent = $derived(total > 0 ? Math.round((value / total) * 100) : 0);
 </script>
 
-{#if known > 0}
+{#if value > 0}
 	<span
 		class="known-bar"
 		class:all-known={allKnown}
 		role="progressbar"
-		aria-label={t('home.known', { known, total })}
-		aria-valuenow={known}
+		aria-label={t('home.known', { known: value, total })}
+		aria-valuenow={value}
 		aria-valuemin={0}
 		aria-valuemax={total}
 	>
-		<span class="known-bar-fill" style="width: {Math.round((known / total) * 100)}%"></span>
+		<span class="known-bar-fill" style="width: {percent}%"></span>
 	</span>
 {/if}
 
