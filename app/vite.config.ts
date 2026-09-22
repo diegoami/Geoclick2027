@@ -35,7 +35,15 @@ export default defineConfig({
 	// breaking the worker at runtime (tiles fetch fine, nothing renders).
 	// Excluding it from pre-bundling serves it straight from node_modules,
 	// where the relative path still resolves.
-	optimizeDeps: { exclude: ['maplibre-gl'] },
+	//
+	// The `include` list is for modules imported dynamically at runtime
+	// (`isNativeShell`, the pmtiles reader). Vite discovers them mid-test-run
+	// otherwise, reloads the page and the import fails; naming them up front
+	// keeps that discovery out of the run.
+	optimizeDeps: {
+		exclude: ['maplibre-gl'],
+		include: ['@tauri-apps/api/core', '@capacitor/core', 'pmtiles']
+	},
 	plugins: [
 		sveltekit({
 			compilerOptions: {

@@ -5,6 +5,7 @@
 	import { resolve } from '$app/paths';
 	import { fetchMapDefAndStyle, createMap } from './geoclickMap';
 	import type { TerrainLayer } from './terrainLayer';
+	import { followTerrainLanguage } from './terrainLanguage.svelte';
 	import { terrainShown } from './mapPrefs.svelte';
 	import { mapFitPadding } from './mapFit';
 	import { resolveDrop } from './quizDrop';
@@ -648,6 +649,11 @@
 			console.error('Could not show the terrain layer:', e);
 		});
 	});
+
+	// A language switch has to reach the terrain names too (FT-53); the
+	// helper reads getLanguage() so the subscription exists even on a map's
+	// first open, when the labels are drawn after an await.
+	followTerrainLanguage(() => terrain);
 	onMount(() => {
 		let cancelled = false;
 
