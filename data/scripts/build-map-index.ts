@@ -8,8 +8,8 @@
 // whenever a map is added, removed or rebuilt; app/src/lib/mapData.test.ts
 // regenerates the index in memory and fails if the committed file is stale.
 //
-// data/maps is also what the app serves under /maps (app/static/maps is a
-// symlink to it), so the index ships as /maps/index.json.
+// data/maps is also what the app serves under /maps (app/static/maps is
+// prepared from it at build time), so the index ships as /maps/index.json.
 
 import { readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
 import path from 'node:path';

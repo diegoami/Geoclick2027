@@ -3,7 +3,16 @@
 // style assets must be prepared on whatever machine builds, and a build that
 // ends up without them must fail rather than ship.
 import { execFileSync } from 'node:child_process';
-import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import {
+	existsSync,
+	lstatSync,
+	mkdirSync,
+	mkdtempSync,
+	readFileSync,
+	rmSync,
+	symlinkSync,
+	writeFileSync
+} from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -11,10 +20,11 @@ import { afterEach, describe, expect, it } from 'vitest';
 
 const scriptsDir = fileURLToPath(new URL('../../scripts/', import.meta.url));
 
-function run(script: string, ...args: string[]) {
+function runEnv(env: NodeJS.ProcessEnv, script: string, ...args: string[]) {
 	try {
 		const stdout = execFileSync(process.execPath, [join(scriptsDir, script), ...args], {
-			encoding: 'utf8'
+			encoding: 'utf8',
+			env: { ...process.env, ...env }
 		});
 		return { status: 0, output: stdout };
 	} catch (e) {
@@ -24,6 +34,10 @@ function run(script: string, ...args: string[]) {
 			output: `${failure.stdout ?? ''}${failure.stderr ?? ''}`
 		};
 	}
+}
+
+function run(script: string, ...args: string[]) {
+	return runEnv({}, script, ...args);
 }
 
 const scratch: string[] = [];
@@ -107,5 +121,81 @@ describe('the build lifecycle', () => {
 	it('checks the assets after the build, and still copies the worker', () => {
 		expect(scripts.postbuild).toContain('check-build-assets.mjs');
 		expect(scripts.postbuild).toContain('copy-maplibre-worker.mjs');
+	});
+});
+
+// A scratch repo with commit A tracking a link at app/static/maps (the
+// pre-FT-58 shape) and commit B removing it and gitignoring it (FT-58). The
+// link entry is staged with `update-index`, so setup needs no OS symlinks.
+function scratchGitRepo() {
+	const repo = tempDir('geoclick-git-');
+	const git = (...args: string[]) =>
+		execFileSync('git', args, { cwd: repo, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] });
+
+	git('init', '-q');
+	git('config', 'user.email', 'test@example.com');
+	git('config', 'user.name', 'test');
+	mkdirSync(join(repo, 'data', 'maps'), { recursive: true });
+	mkdirSync(join(repo, 'data', 'styles'), { recursive: true });
+	mkdirSync(join(repo, 'app', 'static'), { recursive: true });
+	writeFileSync(join(repo, 'data', 'maps', 'marker.json'), '{"keep":true}');
+	writeFileSync(join(repo, 'data', 'styles', 'base.json'), '{}');
+	git('add', '-A');
+
+	// Commit A: a tracked symlink, without asking the OS to create one.
+	const blob = execFileSync('git', ['hash-object', '-w', '--stdin'], {
+		cwd: repo,
+		encoding: 'utf8',
+		input: '../../data/maps'
+	}).trim();
+	git('update-index', '--add', '--cacheinfo', `120000,${blob},app/static/maps`);
+	git('commit', '-qm', 'A');
+	const old = git('rev-parse', 'HEAD').trim();
+
+	// Commit B: the link is removed from the index and gitignored.
+	git('rm', '-q', '--cached', 'app/static/maps');
+	writeFileSync(join(repo, '.gitignore'), '/app/static/maps\n');
+	git('add', '-A');
+	git('commit', '-qm', 'B');
+
+	return { repo, old, git };
+}
+
+describe('prepare-assets and a checkout over it (FT-58 regression)', () => {
+	// Git for Windows recurses through a Windows *junction* when it replaces
+	// the path, deleting the junction's target contents - it emptied the real
+	// data/maps during the FT-58 merge. prepare-assets uses a true symlink or
+	// a copy instead; both survive the checkout that caused it.
+	const canCreateSymlink = (() => {
+		const dir = mkdtempSync(join(tmpdir(), 'geoclick-symlink-check-'));
+		try {
+			mkdirSync(join(dir, 'target'));
+			symlinkSync(join(dir, 'target'), join(dir, 'link'), 'dir');
+			return true;
+		} catch {
+			return false;
+		} finally {
+			rmSync(dir, { recursive: true, force: true });
+		}
+	})();
+
+	it.skipIf(!canCreateSymlink)('survives a checkout when it prepared a symlink', () => {
+		const { repo, old, git } = scratchGitRepo();
+		expect(run('prepare-assets.mjs', repo).status).toBe(0);
+		expect(lstatSync(join(repo, 'app', 'static', 'maps')).isSymbolicLink()).toBe(true);
+
+		git('checkout', '-q', '-f', old);
+		expect(existsSync(join(repo, 'data', 'maps', 'marker.json'))).toBe(true);
+	});
+
+	it('survives a checkout when it prepared a copy', () => {
+		const { repo, old, git } = scratchGitRepo();
+		const prepared = runEnv({ GEOCLICK_PREPARE_ASSETS_COPY: '1' }, 'prepare-assets.mjs', repo);
+		expect(prepared.status).toBe(0);
+		// A real directory, not a link: the no-symlink-privilege path.
+		expect(lstatSync(join(repo, 'app', 'static', 'maps')).isSymbolicLink()).toBe(false);
+
+		git('checkout', '-q', '-f', old);
+		expect(existsSync(join(repo, 'data', 'maps', 'marker.json'))).toBe(true);
 	});
 });
