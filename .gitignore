@@ -10,7 +10,7 @@ build/
 dist/
 
 # Prepared at build/dev time by app/scripts/prepare-assets.mjs (FT-58). The
-# data lives in data/maps and data/styles; these paths are links to it.
+# data lives in data/maps and data/styles; these paths are generated from it.
 /app/static/maps
 /app/static/styles
 

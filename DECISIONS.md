@@ -1184,8 +1184,10 @@ no `.gitattributes` change, no file moved.
      15.6 MiB that is a non-issue. GitHub only starts warning on single
      files at 50 MB and rejects at 100 MB; the largest tileset is 2 MB.
      All three shells keep working unchanged: the Netlify build, Tauri's
-     `frontendDist` and Capacitor's `cap sync` all read the files straight
-     off disk through the `app/static/maps` symlink.
+     `frontendDist` and Capacitor's `cap sync` all read the files through
+     the prepared `app/static/maps` path (a committed symlink when this was
+     written; FT-58 makes the build prepare it, so a checkout no longer
+     carries the link).
   2. **Git LFS.** Two very different variants. *LFS for new/rebuilt
      tilesets only* rewrites nothing — but also saves nothing on the
      14.22 MB already in history, only on growth. *Migrating history*

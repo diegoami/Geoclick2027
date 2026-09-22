@@ -3,7 +3,7 @@
 // style assets must be prepared on whatever machine builds, and a build that
 // ends up without them must fail rather than ship.
 import { execFileSync } from 'node:child_process';
-import { existsSync, mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -88,5 +88,24 @@ describe('check-build-assets', () => {
 		const result = run('check-build-assets.mjs', build);
 		expect(result.status).toBe(1);
 		expect(result.output).toContain('map/style assets');
+	});
+});
+
+describe('the build lifecycle', () => {
+	// The hooks are the wiring the two scripts rely on. A regression that
+	// removed them would leave every test above green while a build shipped
+	// with no map data (FT-58).
+	const { scripts } = JSON.parse(
+		readFileSync(fileURLToPath(new URL('../../package.json', import.meta.url)), 'utf8')
+	) as { scripts: Record<string, string> };
+
+	it('prepares the assets before dev and before the build', () => {
+		expect(scripts.predev).toContain('prepare-assets.mjs');
+		expect(scripts.prebuild).toContain('prepare-assets.mjs');
+	});
+
+	it('checks the assets after the build, and still copies the worker', () => {
+		expect(scripts.postbuild).toContain('check-build-assets.mjs');
+		expect(scripts.postbuild).toContain('copy-maplibre-worker.mjs');
 	});
 });

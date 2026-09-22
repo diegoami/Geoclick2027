@@ -180,7 +180,7 @@ place, and the reasoning is on issue #11.
 | 1 | FT-55 | Tutorial `navigateTo('overview')` goes to the Known route | S | **Yes** |
 | 7 | FT-56 | The integrity suite validates `tourOrder`, not the shipped `tour.json` | S | Gate gap |
 | 4 | FT-57 | Storage failures can blank the app or block a quiz | M | Latent |
-| 5 | FT-58 | `app/static/{maps,styles}` are committed symlinks | M | Latent |
+| 5 | FT-58 | `app/static/{maps,styles}` were committed symlinks | M | **Fixed** in v0.9.4 |
 | 8 | FT-59 | No component test crosses QuizView's persistence/resume seams | M | Gate gap |
 
 Sharpenings found while verifying:
