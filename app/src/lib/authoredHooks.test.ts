@@ -29,20 +29,21 @@ describe('parseAuthoredHooks', () => {
 		});
 	});
 
-	// The bug this pins: a mixed object used to be read as a per-language
-	// object, silently discarding the kind.
-	it('keeps both branches of a mixed kind+language object', () => {
-		expect(parseAuthoredHooks({ en: ['general'], city: ['city fact'] })).toEqual({
-			any: { en: ['general'] },
-			city: { en: ['city fact'] }
+	it('keeps a per-kind form with an explicit any', () => {
+		expect(parseAuthoredHooks({ any: ['a'], city: ['c'] })).toEqual({
+			any: { en: ['a'] },
+			city: { en: ['c'] }
 		});
 	});
 
-	it('reads top-level languages as the any kind', () => {
-		expect(parseAuthoredHooks({ en: ['general'], it: ['generale'], city: ['c'] })).toEqual({
-			any: { en: ['general'], it: ['generale'] },
-			city: { en: ['c'] }
-		});
+	// Either reading of a mixed object would silently discard the other
+	// branch, so the shape is rejected outright - a loud file error beats a
+	// quiet data loss.
+	it('rejects a value that mixes a language key with a kind key', () => {
+		expect(() => parseAuthoredHooks({ en: ['general'], city: ['city fact'] })).toThrow(
+			/cannot mix/
+		);
+		expect(() => parseAuthoredHooks({ any: ['a'], en: ['b'], city: ['c'] })).toThrow(/cannot mix/);
 	});
 
 	it('has nothing for an empty or nonsense value', () => {

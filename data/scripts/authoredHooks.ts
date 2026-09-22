@@ -25,6 +25,7 @@ export interface AuthoredHooks {
 }
 
 const LANGUAGES: Language[] = ['en', 'it', 'de'];
+const KINDS = ['any', 'region', 'city'] as const;
 
 function isSentences(value: unknown): value is string[] {
 	return (
@@ -52,26 +53,41 @@ export function asLangHooks(value: unknown): LangHooks | undefined {
 }
 
 /**
- * Normalise one authored value.
+ * Normalise one authored value. There are exactly two object forms, and
+ * mixing them in one object is an ERROR rather than a silent choice:
  *
- * A plain list is English, for any kind. An object may carry kinds
- * (`any`/`region`/`city`) and/or language keys at the top level, where a
- * top-level language key is shorthand for `any`. BOTH portions are
- * normalised, so a mixed value such as `{ en, city }` keeps both branches
- * rather than silently dropping one.
+ *   - per-language: `{ en: [...], it: [...] }` - applies to any kind;
+ *   - per-kind: `{ any?: ..., region?: ..., city?: ... }` - each value is a
+ *     list or a per-language object.
+ *
+ * (A plain list is English, for any kind.) An object with both a language key
+ * and a kind key - `{ en, city }`, or `{ any, en, city }` - is rejected,
+ * because either reading would silently discard the other branch.
  */
 export function parseAuthoredHooks(value: unknown): AuthoredHooks | undefined {
 	if (isSentences(value)) return { any: { en: value } };
 	if (!value || typeof value !== 'object' || Array.isArray(value)) return undefined;
 	const record = value as Record<string, unknown>;
-	const any = asLangHooks(record.any) ?? pickLanguages(record);
-	const region = asLangHooks(record.region);
-	const city = asLangHooks(record.city);
-	const hooks: AuthoredHooks = {};
-	if (any) hooks.any = any;
-	if (region) hooks.region = region;
-	if (city) hooks.city = city;
-	return hooks.any || hooks.region || hooks.city ? hooks : undefined;
+	const kinds = KINDS.filter((kind) => record[kind] !== undefined);
+	const languages = LANGUAGES.filter((language) => record[language] !== undefined);
+	if (kinds.length > 0 && languages.length > 0) {
+		throw new Error(
+			`an authored value cannot mix a language key (${languages.join(', ')}) with a kind key ` +
+				`(${kinds.join(', ')}); use { en, it } for any kind, or { any, region, city } for the kinds`
+		);
+	}
+	if (kinds.length > 0) {
+		const hooks: AuthoredHooks = {};
+		const any = asLangHooks(record.any);
+		const region = asLangHooks(record.region);
+		const city = asLangHooks(record.city);
+		if (any) hooks.any = any;
+		if (region) hooks.region = region;
+		if (city) hooks.city = city;
+		return hooks.any || hooks.region || hooks.city ? hooks : undefined;
+	}
+	const any = pickLanguages(record);
+	return any ? { any } : undefined;
 }
 
 /**
