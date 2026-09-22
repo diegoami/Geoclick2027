@@ -43,6 +43,7 @@ import {
 	type Position,
 	type Position2Words
 } from './factGeometry.js';
+import { parseAuthoredFile, type AuthoredHooks, type LangHooks } from './authoredHooks.js';
 
 const MAPS_DIR = path.join(REPO_ROOT, 'data/maps');
 const COASTLINE_SHP = path.join(REPO_ROOT, 'data/source/ne_10m_coastline/ne_10m_coastline.shp');
@@ -50,16 +51,6 @@ const PLACES_SHP = path.join(
 	REPO_ROOT,
 	'data/source/ne_10m_populated_places/ne_10m_populated_places.shp'
 );
-
-/** The languages the authored name-facts can be written in. */
-export type Language = 'en' | 'it' | 'de';
-
-/**
- * A place's name-facts per language (FT-49, docs/PLAN_V0.10.md). Only the
- * languages a place actually has sentences in appear, so a half-translated
- * country is partly English; the app falls back per sentence at read time.
- */
-export type LangHooks = Partial<Record<Language, string[]>>;
 
 /** One target's derived facts. Every field is optional: a fact that cannot
  *  be computed is left out rather than guessed, and the app renders only
@@ -106,38 +97,8 @@ export interface DerivedFact {
  * country's cities and each of its regional slices - share one sentence
  * rather than four copies drifting apart. Missing file, or a country
  * nobody has written for yet: no hooks, and the card shows its derived
- * line alone.
- *
- * Each value is one of:
- *   - a plain list - English, applying to whichever kind of target has the id;
- *   - a per-language object ({ en, it, de }) - the same, per language;
- *   - a per-kind object ({ any, region, city }), each itself a list or a
- *     per-language object - for an id that is two different places (China
- *     has five; Jilin's province facts would be false of its town).
+ * line alone. The file's shape is parsed by authoredHooks.ts.
  */
-interface AuthoredHooks {
-	any?: LangHooks;
-	region?: LangHooks;
-	city?: LangHooks;
-}
-
-const AUTHORED_LANGUAGES: Language[] = ['en', 'it', 'de'];
-
-/** A list (English) or a per-language object, normalised; undefined if empty. */
-function asLangHooks(value: unknown): LangHooks | undefined {
-	const isSentences = (v: unknown): v is string[] =>
-		Array.isArray(v) && v.length > 0 && v.every((s) => typeof s === 'string' && s !== '');
-	if (isSentences(value)) return { en: value };
-	if (!value || typeof value !== 'object' || Array.isArray(value)) return undefined;
-	const byLang = value as Record<string, unknown>;
-	const hooks: LangHooks = {};
-	for (const language of AUTHORED_LANGUAGES) {
-		const sentences = byLang[language];
-		if (isSentences(sentences)) hooks[language] = sentences;
-	}
-	return Object.keys(hooks).length > 0 ? hooks : undefined;
-}
-
 function hooksForCountry(country: string | undefined): Record<string, AuthoredHooks> {
 	if (!country) return {};
 	// The filename is the country as map.json spells it: "United States of
@@ -146,38 +107,7 @@ function hooksForCountry(country: string | undefined): Record<string, AuthoredHo
 	// no table.
 	const file = path.join(REPO_ROOT, 'data/facts', `${slugify(country)}.json`);
 	if (!existsSync(file)) return {};
-	const raw = JSON.parse(readFileSync(file, 'utf8')) as Record<string, unknown>;
-
-	const hooks: Record<string, AuthoredHooks> = {};
-	for (const [id, value] of Object.entries(raw)) {
-		// `_note` and any other commentary key: the authored files explain
-		// themselves at the top, and that is not a place.
-		if (id.startsWith('_')) continue;
-		// A plain list or a per-language object: applies to any kind.
-		const direct = asLangHooks(value);
-		if (direct) {
-			hooks[id] = { any: direct };
-			continue;
-		}
-		// The long form, for an id that is two different places. Target ids
-		// are shared across every map of a country, and a province can share
-		// one with a city inside it: China has five, four of them
-		// municipalities where the province IS the city and one - Jilin -
-		// where they are genuinely different and a province's facts would be
-		// false of the town.
-		if (value && typeof value === 'object') {
-			const byKind = value as Record<string, unknown>;
-			const entry: AuthoredHooks = {};
-			const any = asLangHooks(byKind.any);
-			const region = asLangHooks(byKind.region);
-			const city = asLangHooks(byKind.city);
-			if (any) entry.any = any;
-			if (region) entry.region = region;
-			if (city) entry.city = city;
-			if (entry.any || entry.region || entry.city) hooks[id] = entry;
-		}
-	}
-	return hooks;
+	return parseAuthoredFile(JSON.parse(readFileSync(file, 'utf8')) as Record<string, unknown>);
 }
 
 /**
