@@ -204,6 +204,13 @@ export class TerrainLayer {
 	 */
 	private visible = false;
 	private pending = false;
+	/**
+	 * The pending "the tiles have arrived" handler, if the source was still
+	 * loading when the labels were last asked for. At most one is live, and
+	 * hiding the layer drops it, so tiles landing later cannot put names back
+	 * on a map the player switched off (FT-54).
+	 */
+	private sourceReady: ((e: maplibregl.MapSourceDataEvent) => void) | undefined;
 	// The opacity each dimmed layer had before this class touched it, so
 	// switching off restores the map exactly and switching on twice does not
 	// multiply the factor in twice.
@@ -242,24 +249,14 @@ export class TerrainLayer {
 
 	async setVisible(visible: boolean): Promise<void> {
 		this.visible = visible;
-		if (!visible) {
-			this.removeLabels();
-			this.dimOverlyingLayers(false);
-			for (const layer of LAYERS) {
-				if (this.map.getLayer(layer.id)) {
-					this.map.setLayoutProperty(layer.id, 'visibility', 'none');
-				}
-			}
+		if (this.added) {
+			this.applyVisibility(visible);
 			return;
 		}
-		if (this.added) {
-			for (const layer of LAYERS) {
-				if (this.map.getLayer(layer.id)) {
-					this.map.setLayoutProperty(layer.id, 'visibility', 'visible');
-				}
-			}
-			this.dimOverlyingLayers(true);
-			this.drawLabels(getLanguage());
+		if (!visible) {
+			// Nothing is on the map yet. The flag set above is what stops an
+			// in-flight `add()` from showing the terrain when it lands.
+			this.applyVisibility(false);
 			return;
 		}
 		// Two presses in quick succession must not fetch twice.
@@ -270,6 +267,63 @@ export class TerrainLayer {
 		} finally {
 			this.pending = false;
 		}
+	}
+
+	/**
+	 * Shows or hides the layers already on the map, and follows them with the
+	 * dimming and the labels. Only meaningful once `add()` has run.
+	 */
+	private applyVisibility(visible: boolean): void {
+		if (visible) {
+			for (const layer of LAYERS) {
+				if (this.map.getLayer(layer.id)) {
+					this.map.setLayoutProperty(layer.id, 'visibility', 'visible');
+				}
+			}
+			this.dimOverlyingLayers(true);
+			this.drawLabelsWhenSourceReady();
+			return;
+		}
+		this.removeLabels();
+		this.clearSourceReady();
+		this.dimOverlyingLayers(false);
+		for (const layer of LAYERS) {
+			if (this.map.getLayer(layer.id)) {
+				this.map.setLayoutProperty(layer.id, 'visibility', 'none');
+			}
+		}
+	}
+
+	/**
+	 * Draws the labels, waiting for the tiles if they have not arrived yet.
+	 * The label points come with the source, so asking before it loads would
+	 * draw nothing and never retry.
+	 */
+	private drawLabelsWhenSourceReady(): void {
+		if (this.map.isSourceLoaded(TERRAIN_SOURCE)) {
+			this.drawLabels(getLanguage());
+			return;
+		}
+		// One pending wait is enough: turning it on again before the tiles
+		// arrive must not stack a second handler.
+		if (this.sourceReady) return;
+		const onData = (e: maplibregl.MapSourceDataEvent) => {
+			if (e.sourceId !== TERRAIN_SOURCE || !e.isSourceLoaded) return;
+			this.clearSourceReady();
+			// The player may have switched Terrain off while the tiles were on
+			// their way; the names must not come back (FT-54).
+			if (!this.visible) return;
+			this.drawLabels(getLanguage());
+		};
+		this.sourceReady = onData;
+		this.map.on('sourcedata', onData);
+	}
+
+	/** Drops the pending tiles-arrived handler, if there is one. */
+	private clearSourceReady(): void {
+		if (!this.sourceReady) return;
+		this.map.off('sourcedata', this.sourceReady);
+		this.sourceReady = undefined;
 	}
 
 	/**
@@ -341,20 +395,19 @@ export class TerrainLayer {
 		const before = this.map.getLayer(BEFORE_LAYER) ? BEFORE_LAYER : undefined;
 		for (const layer of LAYERS) this.map.addLayer(layer, before);
 		this.added = true;
+
+		// The player may have switched Terrain off while the archive was
+		// loading. The button wins: apply the latest request now the layers
+		// exist, rather than the `true` this load was started with (FT-54).
+		if (!this.visible) {
+			this.applyVisibility(false);
+			return;
+		}
 		this.dimOverlyingLayers(true);
 
 		// The label points arrive with the tiles, so wait for the source
 		// before asking for them.
-		if (this.map.isSourceLoaded(TERRAIN_SOURCE)) {
-			this.drawLabels(getLanguage());
-		} else {
-			const onData = (e: maplibregl.MapSourceDataEvent) => {
-				if (e.sourceId !== TERRAIN_SOURCE || !e.isSourceLoaded) return;
-				this.map.off('sourcedata', onData);
-				this.drawLabels(getLanguage());
-			};
-			this.map.on('sourcedata', onData);
-		}
+		this.drawLabelsWhenSourceReady();
 	}
 
 	/** One popup per named feature currently in view, in `language`. */
@@ -434,6 +487,7 @@ export class TerrainLayer {
 	}
 
 	destroy(): void {
+		this.clearSourceReady();
 		this.removeLabels();
 	}
 }
