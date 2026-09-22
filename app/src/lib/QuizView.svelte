@@ -382,6 +382,16 @@
 		setHover(regionAtPoint(e.clientX, e.clientY));
 	}
 
+	function onSlipPointerCancel() {
+		// The tablet's own gesture - a text-selection gesture, or the browser
+		// taking the pointer for a scroll - can cancel the drag mid-flight.
+		// Put the slip back rather than leaving it stuck under the finger
+		// (FT-61). No error is recorded: this is "changed my mind", like a
+		// drop back on the tray.
+		setHover(undefined);
+		dragging = undefined;
+	}
+
 	function markSolved(
 		targetId: string,
 		name: string,
@@ -802,6 +812,7 @@
 					onpointerdown={onTrayHandlePointerDown}
 					onpointermove={onTrayHandlePointerMove}
 					onpointerup={onTrayHandlePointerUp}
+					onpointercancel={onTrayHandlePointerUp}
 					onkeydown={onTrayHandleKeydown}
 				></div>
 			</div>
@@ -817,6 +828,7 @@
 						onpointerdown={(e) => onSlipPointerDown(e, item.target.id, item.target.name)}
 						onpointermove={onSlipPointerMove}
 						onpointerup={onSlipPointerUp}
+						onpointercancel={onSlipPointerCancel}
 					>
 						{item.target.name}
 					</button>
@@ -904,6 +916,12 @@
 		padding: 0.4rem 0.7rem;
 		cursor: grab;
 		touch-action: none;
+		/* A tablet can read a press on text as a selection gesture and raise
+		   the native copy UI, taking the pointer mid-drag (FT-61). The slip
+		   is a control, not selectable text. */
+		user-select: none;
+		-webkit-user-select: none;
+		-webkit-touch-callout: none;
 		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 	}
 	.slip.wrong {
