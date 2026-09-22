@@ -23,7 +23,7 @@ before any work starts.
 | Feature programme | Closed with v0.5.0 ([FEATURE_PLAN.md](FEATURE_PLAN.md)) |
 | Since then | Per-release plans: [PLAN_V0.6.md](PLAN_V0.6.md) through [PLAN_V0.9.md](PLAN_V0.9.md), each with its own ledger |
 | Next | **v0.9.4 is released** (tag `v0.9.4`, 2026-09-22). The only outstanding check is the installer smoke test — the published Windows and Android builds were not opened to confirm a map draws |
-| After that | [PLAN_V0.10.md](PLAN_V0.10.md) — translating the name-facts, still **blocked on three product decisions**, see "How to resume" |
+| After that | [PLAN_V0.10.md](PLAN_V0.10.md) — translating the name-facts. **Unblocked 2026-09-22**: Italian first, per-sentence English fallback, no "EN" marker, German postponed. Start with FT-48 |
 | Raised, unscoped | Six UX problems from one round of tablet play, 2026-09-20, **decided the same day** — first item of ROADMAP.md's Iteration 8+ backlog: the level-0 tray offering every name at once (`difficulty.ts:21`), slips losing their drag to the tablet's text-selection gesture, the fact card now only on a name the player could *not* place, best-fit label placement as a requirement rather than first-fit, a spike for Europa-Universalis-style stretched region names, and the map card's `{known} / {total} known` line replaced by a progress bar over `knownCount / total`, hidden at zero (the score panel keeps its copy — the two record different things). Each entry carries its decision; none is scheduled or estimated |
 | Also raised 2026-09-20 | **The start screen becomes a zoomable world map** — pick the country on the map, then the kind of quiz. The map list cannot be finalized as a list: the goal is a high number of maps, and `mapCatalog.ts` is already 31 countries and 66 maps. Favourites and Recent stay unchanged. Second item of the Iteration 8+ backlog, with the open questions listed there |
 
@@ -116,18 +116,16 @@ Windows and Android installers were **not opened to confirm a map draws**
 them. **FT-56 and FT-59 (both test gates) were moved out to a later
 hardening batch**; they are listed under the plan's "Deferred" section.
 
-v0.10.0 is next and still **cannot start**: it needs three answers from the
-product owner (PLAN_V0.10.md, "Product decisions needed") —
-
-1. Which languages, and in what order? (Italian first is recommended: the
-   product owner reads it and will catch bad phrasing immediately.)
-2. What does an untranslated sentence do? (Per-sentence English fallback
-   is recommended.)
-3. Is a visible "EN" marker wanted on a fallen-back sentence?
+**v0.10.0 is unblocked and next.** Its three product decisions were
+**answered on 2026-09-22** (PLAN_V0.10.md, "Product decisions"): Italian
+first, per-sentence English fallback, no "EN" marker, and **German
+postponed**. Start with **FT-48** — Italy's 20 regions, 60 sentences, in
+Italian — then the product owner reads them. The gate after FT-48 is the
+one that matters; the rest (FT-49, FT-50) is volume.
 
 Suggested first message for the next session:
 
-> Read docs/HANDOVER.md, then docs/PLAN_V0.10.md. v0.9.4 is released; the installer smoke test is outstanding.
+> Read docs/HANDOVER.md, then docs/PLAN_V0.10.md. Start FT-48. (The v0.9.4 installer smoke test is still outstanding.)
 
 Whatever comes next, the working rules stay (CLAUDE.md §3):
 

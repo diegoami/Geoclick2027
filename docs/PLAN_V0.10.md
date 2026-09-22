@@ -1,12 +1,12 @@
 # v0.10.0 — The name-facts in your own language (planned 2026-09-19)
 
-> **Queued behind v0.9.4.** On 2026-09-20 the product owner put the code
-> review's issues ahead of this; on 2026-09-22 that batch was reshaped to
-> the ones worth doing before v0.10.0 —
-> [PLAN_V0.9.4.md](PLAN_V0.9.4.md) ships FT-52 (merged), FT-53, FT-54,
-> FT-55, FT-57 and FT-58, and defers the two test gates (FT-56, FT-59).
-> This plan keeps its number and its three unanswered product decisions;
-> it starts when v0.9.4 lands.
+> **Queued behind v0.9.4, now unblocked.** On 2026-09-20 the product owner
+> put the code review's issues ahead of this; on 2026-09-22 that batch was
+> reshaped to the ones worth doing before v0.10.0 —
+> [PLAN_V0.9.4.md](PLAN_V0.9.4.md) shipped FT-52 to FT-58 and deferred the
+> two test gates (FT-56, FT-59) — and **v0.9.4 was released on 2026-09-22**.
+> This plan keeps its number. Its three product decisions were **answered
+> on 2026-09-22** (below), so it can start.
 
 ## Why
 
@@ -61,15 +61,20 @@ a native reader finds grating.** That cannot be caught by a lint or a test.
 It can only be caught by the product owner reading it, which is why the
 first task below is twenty minutes of work and a review gate, not a batch.
 
-## Product decisions needed
+## Product decisions (answered 2026-09-22)
 
-🧑 Three, before any bulk authoring:
+🧑 **Italian first. Per-sentence English fallback. No "EN" marker. German
+postponed.** The three questions and what was chosen:
 
-| #   | Question                          | Options                                                                                                 |
-| --- | --------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| 1   | Which languages, and in what order? | **Italian first** (the product owner reads it and will catch bad phrasing immediately), then German if the Italian reads well; or both at once; or neither, and label the English as deliberate |
-| 2   | What does an untranslated sentence do? | **Fall back to English per sentence** (recommended — a half-finished set is partly English, never broken), or hide the card until a set is complete |
-| 3   | Is a visible marker wanted?       | A small "EN" tag on a sentence that fell back, so it reads as deliberate rather than broken — or nothing |
+| #   | Question                          | Decision                                                                 |
+| --- | --------------------------------- | ------------------------------------------------------------------------ |
+| 1   | Which languages, and in what order? | **Italian first**; decide on German after reading it.                    |
+| 2   | What does an untranslated sentence do? | **Fall back to English per sentence** — a half-finished set is partly English, never broken. |
+| 3   | Is a visible marker wanted?       | **No marker** — the English reads as English; a tag would clutter the card. |
+
+**German is postponed** (FT-51), not refused: it has no native reader on
+the project, so its register risk has nobody positioned to catch it. Decide
+it after the Italian.
 
 ## Tasks
 
@@ -120,8 +125,9 @@ first task below is twenty minutes of work and a review gate, not a batch.
 
 - Same again, if the Italian went well. Split out deliberately: German has
   no native reader on this project, so it carries the register risk with no
-  one positioned to catch it. That is worth deciding on its own once the
-  Italian is done, not assuming now.
+  one positioned to catch it.
+- **Postponed (2026-09-22).** Not in v0.10.0's scope until the Italian has
+  been read; planned, not dropped.
 
 ## Out of scope
 
@@ -135,7 +141,8 @@ first task below is twenty minutes of work and a review gate, not a batch.
 
 ## Order
 
-FT-48 → 🧑 → FT-49 → FT-50 → 🧑 → FT-51.
+FT-48 → 🧑 → FT-49 → FT-50. **FT-51 (German) is postponed** until the
+Italian has been read.
 
 The gate after FT-48 is the one that matters. Everything after it is
 volume.
@@ -149,4 +156,4 @@ volume.
 | FT-48 | not started | —     | 60 Italian sentences, then a read            |
 | FT-49 | not started | —     | per-language `hooks`, per-sentence fallback  |
 | FT-50 | not started | —     | Italian, the other 27 countries              |
-| FT-51 | not started | —     | German, only if the Italian read well        |
+| FT-51 | postponed   | —     | German, only if the Italian read well   |

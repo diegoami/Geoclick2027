@@ -105,6 +105,11 @@ Check items off as they land; update "Status" as iterations complete.
   `tour.json`) and **FT-59** (a QuizView seam test), both test gates, are
   deferred to a hardening batch. No product decisions needed; **v0.10.0
   follows.**
+- **v0.10.0 next, unblocked 2026-09-22**:
+  [docs/PLAN_V0.10.md](docs/PLAN_V0.10.md) — translating the 5 448
+  name-facts. Decisions taken: **Italian first**, **per-sentence English
+  fallback**, **no "EN" marker**, and **German postponed**. Starts with
+  FT-48 (Italy's 20 regions, 60 sentences) and the product owner's read.
 - **Raised by the product owner 2026-09-22, backlogged**: GitHub issue #11 —
   on the Known map an explicitly tapped name kept its earned colour instead
   of **Chosen**. Decided: an explicit tap is Chosen regardless of the streak,

@@ -16,6 +16,26 @@ Keep this updated the same way as the other docs: when a decision gets
 made, made explicitly to correct an earlier one, or gets revisited, add
 or amend an entry here as part of that change, not as an afterthought.
 
+## The v0.10.0 language decisions (2026-09-22, v0.10.0)
+
+- **Italian first.** The product owner reads Italian, so he catches stilted
+  prose immediately — the one failure mode the plan names and no test can
+  catch. **German is postponed, not refused**: it has no native reader on
+  the project, so its register risk has nobody positioned to catch it.
+  Decide it after reading the Italian.
+- **Per-sentence English fallback.** A place with two Italian sentences and
+  three English ones shows two and one; a half-finished set is partly
+  English, never broken. Hiding a card until a whole set is complete was the
+  alternative, and it would make a half-translated country worse than an
+  untranslated one.
+- **No "EN" marker.** A fallen-back sentence reads as English, which is
+  honest enough; a tag on a name-fact would clutter the card and imply the
+  English is a stopgap rather than the source the translations come from.
+- **These unblock [docs/PLAN_V0.10.md](docs/PLAN_V0.10.md).** FT-48 (Italy's
+  20 regions, 60 sentences, Italian) is the first task and the only one that
+  needs reading before the bulk; the register it sets is then copied for
+  5 388 more.
+
 ## FT-38 is parked, not superseded (2026-09-20, FT-38)
 
 - **The Wikidata landmark pass stays open, blocked on the same product
