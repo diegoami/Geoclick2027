@@ -22,7 +22,7 @@ before any work starts.
 | Remediation programme | Closed with v0.2.0 ([REMEDIATION_PLAN.md](REMEDIATION_PLAN.md)) |
 | Feature programme | Closed with v0.5.0 ([FEATURE_PLAN.md](FEATURE_PLAN.md)) |
 | Since then | Per-release plans: [PLAN_V0.6.md](PLAN_V0.6.md) through [PLAN_V0.9.md](PLAN_V0.9.md), each with its own ledger |
-| Next | [PLAN_V0.9.4.md](PLAN_V0.9.4.md) — **the review's eight issues, FT-52 to FT-59. In progress: FT-52 merged (`69cfa3d`, PR #10); FT-53 next.** All eight ship in v0.9.4; the product owner put them ahead of v0.10.0 |
+| Next | [PLAN_V0.9.4.md](PLAN_V0.9.4.md) — **FT-52 merged; FT-53/54/55/57/58 still to do.** Reshaped 2026-09-22 by what is worth doing before v0.10.0: the three the player sees, plus the two robustness items (storage failure blanks the app, the symlink build). FT-56/FT-59 (test gates) are deferred, and **v0.10.0 follows this release** |
 | After that | [PLAN_V0.10.md](PLAN_V0.10.md) — translating the name-facts, still **blocked on three product decisions**, see "How to resume" |
 | Raised, unscoped | Six UX problems from one round of tablet play, 2026-09-20, **decided the same day** — first item of ROADMAP.md's Iteration 8+ backlog: the level-0 tray offering every name at once (`difficulty.ts:21`), slips losing their drag to the tablet's text-selection gesture, the fact card now only on a name the player could *not* place, best-fit label placement as a requirement rather than first-fit, a spike for Europa-Universalis-style stretched region names, and the map card's `{known} / {total} known` line replaced by a progress bar over `knownCount / total`, hidden at zero (the score panel keeps its copy — the two record different things). Each entry carries its decision; none is scheduled or estimated |
 | Also raised 2026-09-20 | **The start screen becomes a zoomable world map** — pick the country on the map, then the kind of quiz. The map list cannot be finalized as a list: the goal is a high number of maps, and `mapCatalog.ts` is already 31 countries and 66 maps. Favourites and Recent stay unchanged. Second item of the Iteration 8+ backlog, with the open questions listed there |
@@ -80,7 +80,11 @@ the generated one.
 keep the old language after a switch, because `setVisible()`'s first draw
 happens after `await this.add()`, outside the effect's tracking. Open
 `app/src/lib/terrainLayer.ts`. FT-54 depends on FT-53 only to keep two
-branches out of that file at once. The plan needs no decisions from the
+branches out of that file at once. Then **FT-57** (storage failures stay
+out of gameplay) and **FT-58** (build the static assets instead of
+symlinking them), independent of the trio and of each other. **FT-56 and
+FT-59 (both test gates) were moved out on 2026-09-22**; they are listed
+under the plan's "Deferred" section. The plan needs no decisions from the
 product owner; it can be worked straight through.
 
 v0.10.0 comes **after** v0.9.4 and still **cannot start**: it needs three
@@ -134,9 +138,19 @@ verified against the code on 2026-09-20 and all eight hold** — unlike the
 earlier issue that had a central fact backwards, this batch cites real line
 numbers and describes real behaviour. Three needed sharpening, noted below.
 
-**They are now scheduled: [PLAN_V0.9.4.md](PLAN_V0.9.4.md), FT-52 to FT-59,
-all eight in the next release** (product owner, 2026-09-20 — ahead of
-v0.10.0). Nothing is fixed yet; the table below maps each issue to its task.
+**Scheduling (reshaped 2026-09-22): [PLAN_V0.9.4.md](PLAN_V0.9.4.md) ships
+the player-visible and robustness fixes — FT-53, FT-54, FT-55, FT-57 and
+FT-58 (FT-52 is already merged). The two test gates, FT-56 and FT-59, are
+deferred to a later hardening batch.** The table below maps each issue to
+its task.
+
+A ninth issue, **#11**, was raised by the product owner on 2026-09-22 and is
+**open, unscheduled (backlog)**: on the Known map an explicitly tapped name
+kept its earned colour instead of **Chosen**. Decided the same day — an
+explicit tap is Chosen regardless of the streak, and the choice is
+**session-only** (it resets on reopen; this changes FT-39's persisted
+override). The fix is not started; `visibleTier` in `shownNames.ts` is the
+place, and the reasoning is on issue #11.
 
 | # | Task | What | Size | Live today? |
 |---|---|---|---|---|

@@ -1,17 +1,23 @@
-# v0.9.4 — The review's eight (planned 2026-09-20)
+# v0.9.4 — The review's fixes that matter (planned 2026-09-20, reshaped 2026-09-22)
 
-Eight issues, `#1`–`#8`, filed by the other session's review of the code.
-All eight were verified against the source on 2026-09-20 and all eight
-hold; the triage table is in [HANDOVER.md](HANDOVER.md). The product
-owner's call, the same day: **fixing them comes before v0.10.0, and all
-eight ship in the next release.**
+Eight issues, `#1`–`#8`, were filed by the other session's review and all
+eight were verified against the source on 2026-09-20. FT-52 shipped first.
+On 2026-09-22 the product owner reshaped the rest by whether it is worth
+doing before v0.10.0: the three a player can see — **FT-53, FT-54, FT-55**
+— plus the two that bite when they bite, even though nobody sees them
+coming — **FT-57** (a storage failure can blank the app or block a quiz)
+and **FT-58** (the committed symlinks already shipped a build whose every
+map 404'd). Only the two test gates, **FT-56** and **FT-59**, are deferred
+to a later hardening batch; their specs are left intact below. **v0.10.0
+follows this release.**
+
 
 Nothing user-facing is added here, so this is a patch.
 [PLAN_V0.10.md](PLAN_V0.10.md) — translating the name-facts — keeps its
 number and queues behind this.
 
 **Status: in progress.** FT-52 is merged (`69cfa3d`, PR #10); FT-53 next.
-No other task is started.
+
 
 ## No product decisions needed
 
@@ -193,18 +199,28 @@ correcting, and each changes the work:
 
 ## Order
 
-**FT-52 → FT-53 → FT-54 → FT-55** first: the four defects a player can hit
-today, and FT-52 leads because it is the only one that touches generated
-data — `russia-regions` is rebuilt, and that should be the sole `map.json`
-in any diff. **FT-56** follows while the tour is fresh. **FT-57 and FT-58**
-are independent of everything above and of each other. **FT-59** last: it
-is the only task whose value is unchanged by being late, and the only one
-likely to grow.
+**FT-53 → FT-54 → FT-55** first: the three the player sees. FT-54 depends
+on FT-53 only to keep two branches out of `terrainLayer.ts` at once; the
+fixes themselves are independent. Then **FT-57** and **FT-58**, which are
+independent of each other and of the trio.
 
 **→ Release `v0.9.4`** per [RELEASES.md](RELEASES.md). The Android and
 Windows gates are the usual ones — open a map in each installer — plus a
 tour and a language switch with terrain on, since FT-53 and FT-54 land on
-paths the installers exercise differently from the browser.
+paths the installers exercise differently from the browser, and FT-58
+changes how the assets get into the build.
+
+## Deferred to a hardening batch (2026-09-22)
+
+Both are test gates: they close a hole in the suite, not a defect a player
+can hit, so the product owner moved them out of v0.9.4. Their specs above
+are still authoritative; this section is only scheduling.
+
+- **FT-56** — validate the `tour.json` that ships, not `tourOrder`. A test
+  gate; no shipped tour is broken.
+- **FT-59** — one component test across QuizView's seams. A test gap.
+
+
 
 ## Progress ledger
 
@@ -214,10 +230,10 @@ paths the installers exercise differently from the browser.
 | FT-53 | not started | —     | issue #3, terrain labels follow the language                            |
 | FT-54 | not started | —     | issue #2, terrain-off honoured during the first load                    |
 | FT-55 | not started | —     | issue #1, tutorial Back/Resume reaches the Overview route               |
-| FT-56 | not started | —     | issue #7, validate `tour.json`, not `tourOrder`                         |
+| FT-56 | **deferred** | —    | issue #7, validate `tour.json`, not `tourOrder` — moved out 2026-09-22 (test gate) |
 | FT-57 | not started | —     | issue #4, storage failures stay out of gameplay                         |
 | FT-58 | not started | —     | issue #5, build the static assets instead of symlinking them            |
-| FT-59 | not started | —     | issue #8, one component test across QuizView's seams                    |
+| FT-59 | **deferred** | —    | issue #8, one component test across QuizView's seams — moved out 2026-09-22 (test gap) |
 
 ## Out of scope
 
