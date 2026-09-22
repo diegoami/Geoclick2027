@@ -420,8 +420,8 @@
 		// only for a name the player could NOT place (FT-62): a correct drop
 		// replaces the card with nothing, so it stops competing with the next
 		// slip, and the fact lands at the one moment the player has a reason to
-		// read it. No timer either way - the next drop, or the close button,
-		// takes it away.
+		// read it. No timer either way - the next resolved drop, or the close
+		// button, takes it away.
 		told = revealed
 			? { id: targetId, name, ...placeFacts(mapId, targetId, facts[targetId]) }
 			: undefined;
