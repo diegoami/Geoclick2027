@@ -1,6 +1,7 @@
 // Runs in the browser project (real Chromium): the labels are DOM popups and
 // the language is module-scope state, so both the DOM and a real module
-// instance are part of what is under test. FT-53, issue #3.
+// instance are part of what is under test. FT-53 (issue #3) and FT-54
+// (issue #2).
 import { beforeEach, describe, expect, it } from 'vitest';
 import { tick } from 'svelte';
 import { render } from 'vitest-browser-svelte';
@@ -59,6 +60,58 @@ function fakeMap(features: Record<string, unknown[]>) {
 		on: () => {},
 		off: () => {}
 	} as unknown as maplibregl.Map;
+}
+
+// A map whose style is not ready yet, so `setVisible(true)` parks inside
+// `add()` waiting for it - the window FT-54 is about. `resolveStyle()` lets
+// the load land, and the harness records what the layer then did.
+function loadingMap() {
+	const sources = new Set<string>();
+	const added: string[] = [];
+	const visibility = new Map<string, string>();
+	const dims: Array<{ layer: string; value: unknown }> = [];
+	const listeners = new Map<string, Set<(...args: unknown[]) => void>>();
+	let styleLoaded = false;
+	let styleWaitStarted: (() => void) | undefined;
+	const waiting = new Promise<void>((r) => {
+		styleWaitStarted = r;
+	});
+	const map = {
+		isStyleLoaded: () => styleLoaded,
+		isSourceLoaded: () => true,
+		getSource: (id: string) => (sources.has(id) ? {} : undefined),
+		addSource: (id: string) => void sources.add(id),
+		// targets-fill is a real style layer the dimming touches; the terrain
+		// layers only exist once `add()` has run.
+		getLayer: (id: string) => (id === 'targets-fill' || added.includes(id) ? {} : undefined),
+		addLayer: (layer: { id: string }) => void added.push(layer.id),
+		getPaintProperty: () => 0.55,
+		setPaintProperty: (layer: string, _property: string, value: unknown) =>
+			void dims.push({ layer, value }),
+		setLayoutProperty: (id: string, _property: string, value: string) =>
+			void visibility.set(id, value),
+		querySourceFeatures: (_source: string, { sourceLayer }: { sourceLayer: string }) =>
+			(FEATURES as Record<string, unknown[]>)[sourceLayer] ?? [],
+		on: (type: string, handler: (...args: unknown[]) => void) => {
+			if (!listeners.has(type)) listeners.set(type, new Set());
+			listeners.get(type)!.add(handler);
+			if (type === 'styledata') styleWaitStarted?.();
+		},
+		off: (type: string, handler: (...args: unknown[]) => void) =>
+			void listeners.get(type)?.delete(handler)
+	};
+	return {
+		map: map as unknown as maplibregl.Map,
+		sources,
+		added,
+		visibility,
+		dims,
+		waiting,
+		resolveStyle: () => {
+			styleLoaded = true;
+			for (const handler of listeners.get('styledata') ?? []) handler({});
+		}
+	};
 }
 
 class TestTerrainLayer extends TerrainLayer {
@@ -127,6 +180,49 @@ describe('terrain labels and the language', () => {
 		const layer = new TestTerrainLayer(fakeMap(FEATURES), 'test-map');
 		layer.refreshLabels('it');
 		expect(layer.labels()).toEqual([]);
+	});
+});
+
+// FT-54, issue #2: terrain is on by default and its first load waits for the
+// style. A switch-off inside that window must win, not be undone when the
+// load lands.
+describe('a toggle during the first load', () => {
+	beforeEach(() => setLanguage('en'));
+
+	it('stays off when the player switches it off while it is loading', async () => {
+		const harness = loadingMap();
+		const layer = new TestTerrainLayer(harness.map, 'test-map');
+
+		const showing = layer.setVisible(true);
+		await harness.waiting; // the style wait is registered
+		await layer.setVisible(false); // switched off mid-load
+
+		harness.resolveStyle();
+		await showing;
+
+		expect(harness.sources.size).toBe(1); // one fetch, not two
+		expect(harness.added).toHaveLength(5);
+		expect([...harness.visibility.values()]).toEqual(['none', 'none', 'none', 'none', 'none']);
+		expect(harness.dims).toEqual([]); // nothing left dimmed
+		expect(layer.labels()).toEqual([]); // and no names on the map
+	});
+
+	it('shows when the last press is on', async () => {
+		const harness = loadingMap();
+		const layer = new TestTerrainLayer(harness.map, 'test-map');
+
+		const showing = layer.setVisible(true);
+		await harness.waiting;
+		await layer.setVisible(false);
+		await layer.setVisible(true);
+
+		harness.resolveStyle();
+		await showing;
+
+		// Never hidden, dimmed and labelled: the button reads on.
+		expect(harness.visibility.size).toBe(0);
+		expect(harness.dims.length).toBeGreaterThan(0);
+		expect(layer.labels()).toEqual(['Alps', 'Mont Blanc 4,807 m']);
 	});
 });
 
