@@ -110,8 +110,9 @@ Check items off as they land; update "Status" as iterations complete.
   name-facts **and the six tablet-play UX fixes** the product owner moved
   into this release (FT-60 to FT-65). Translation decisions: **Italian
   first**, **per-sentence English fallback**, **no "EN" marker**, **German
-  postponed**. **FT-48 and FT-49 merged** (Italy's 20 regions in Italian,
-  and the per-language shape); **FT-60 to FT-65, then FT-50**, is next.
+  postponed**. Merged: **FT-48/FT-49** (Italy's 20 regions in Italian;
+  per-language `hooks`), **FT-62**, **FT-65** and **FT-61** (three of the
+  six UX fixes). **FT-60, then FT-63, the FT-64 spike and FT-50**, is next.
 - **Raised by the product owner 2026-09-22, backlogged**: GitHub issue #11 —
   on the Known map an explicitly tapped name kept its earned colour instead
   of **Chosen**. Decided: an explicit tap is Chosen regardless of the streak,

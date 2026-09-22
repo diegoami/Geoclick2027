@@ -22,7 +22,7 @@ before any work starts.
 | Remediation programme | Closed with v0.2.0 ([REMEDIATION_PLAN.md](REMEDIATION_PLAN.md)) |
 | Feature programme | Closed with v0.5.0 ([FEATURE_PLAN.md](FEATURE_PLAN.md)) |
 | Since then | Per-release plans: [PLAN_V0.6.md](PLAN_V0.6.md) through [PLAN_V0.9.md](PLAN_V0.9.md), each with its own ledger |
-| Next | [PLAN_V0.10.md](PLAN_V0.10.md) — translating the name-facts. **FT-48 and FT-49 merged** (Italy's 20 regions in Italian; per-language `hooks` with per-sentence English fallback). **FT-50 next** — the other 27 countries. (v0.9.4's installer smoke test is still outstanding) |
+| Next | [PLAN_V0.10.md](PLAN_V0.10.md). Merged: **FT-48/FT-49** (Italy's 20 regions in Italian; per-language `hooks`, per-sentence fallback), **FT-62** (the fact card only on a miss), **FT-65** (the map-card bar) and **FT-61** (the tablet slip guards). **FT-60 next** — a finite first hand of 10 — then FT-63, the FT-64 spike and FT-50 (the other 27 countries). The v0.9.4 installer smoke test and the FT-61 tablet check are outstanding |
 | After that | **FT-51 (German) is postponed** until the Italian has been read; the two v0.9.4 test gates (FT-56, FT-59) wait in a hardening batch |
 | In v0.10.0 | Six UX problems from one round of tablet play, 2026-09-20, **decided the same day** and **moved into v0.10.0 on 2026-09-23** as FT-60 to FT-65: the level-0 tray offering every name at once (`difficulty.ts:21`), slips losing their drag to the tablet's text-selection gesture, the fact card now only on a name the player could *not* place, best-fit label placement as a requirement rather than first-fit, a spike for Europa-Universalis-style stretched region names, and the map card's `{known} / {total} known` line replaced by a progress bar over `knownCount / total`, hidden at zero (the score panel keeps its copy — the two record different things). Each entry carries its decision; the plan is [PLAN_V0.10.md](PLAN_V0.10.md) |
 | Also raised 2026-09-20 | **The start screen becomes a zoomable world map** — pick the country on the map, then the kind of quiz. The map list cannot be finalized as a list: the goal is a high number of maps, and `mapCatalog.ts` is already 31 countries and 66 maps. Favourites and Recent stay unchanged. Second item of the Iteration 8+ backlog, with the open questions listed there |
@@ -116,12 +116,16 @@ Windows and Android installers were **not opened to confirm a map draws**
 them. **FT-56 and FT-59 (both test gates) were moved out to a later
 hardening batch**; they are listed under the plan's "Deferred" section.
 
-**v0.10.0 is under way.** FT-48 (Italy's 20 regions, 60 Italian sentences)
-and FT-49 (the per-language shape and the per-sentence English fallback)
-are merged (PR #18), and the product owner read and approved the voice.
-**FT-50 is next** — the other 27 countries, ~5,388 sentences, batched by
-country with the product owner spot-checking each. FT-51 (German) is
-postponed. The v0.9.4 installer smoke test is still outstanding.
+**v0.10.0 is under way.** Merged: **FT-48/FT-49** (Italy's 20 regions in
+Italian, and the per-language shape with per-sentence English fallback — the
+product owner read and approved the voice), **FT-62** (the fact card only on
+a name the player could not place), **FT-65** (the map-card progress bar,
+hidden at zero) and **FT-61** (the tablet slip guards). **FT-60 is next** — a
+finite first hand of 10 — then **FT-63** (best-fit label placement), the
+**FT-64** spike, and **FT-50** (the other 27 countries, ~5,388 sentences,
+batched by country with spot-checks). **FT-51 (German) is postponed.** Two
+things wait for the release gate: the v0.9.4 installer smoke test, and the
+FT-61 tablet check.
 
 Suggested first message for the next session:
 

@@ -237,7 +237,7 @@ The FT-48 gate is already passed. **→ Release `v0.10.0`** per
 | FT-50 | not started | —     | Italian, the other 27 countries              |
 | FT-51 | postponed   | —     | German, only if the Italian read well   |
 | FT-60 | not started | —     | finite level-0 hand, size 10             |
-| FT-61 | not started | —     | a slip keeps its drag on a tablet; confirm on device at release |
+| FT-61 | **merged**  | `6b794b8` | a slip keeps its drag on a tablet; confirm on device at release (PR #21) |
 | FT-62 | **merged**  | `b2f0c8b` | the fact card only on a name not placed (PR #19) |
 | FT-63 | not started | —     | labels go where there is the most room   |
 | FT-64 | not started | —     | spike: names stretched along the region  |
