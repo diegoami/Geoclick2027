@@ -7,8 +7,8 @@ one entry per tagged version on `main`.
 
 ## v0.9.4 — 2026-09-22 — The review's fixes that matter
 
-Six defects from an independent code review, all shipped. Three a player
-can see, two that only bite when they bite, and one build-robustness fix.
+**Six defects from an independent code review, all fixed — three a player can see, two that only bite when they bite, and one build-robustness fix.**
+
 FT-52 to FT-58.
 
 For players:
@@ -53,6 +53,9 @@ Under the hood:
   symlink or a copy.
 - **Every PR was reviewed by a second model** through a standing review
   loop; the reviewer's blocking findings are all fixed.
+- **Installers:** rebuilt from the v0.9.4 tag — the Windows `.msi` (26.2 MB)
+  and `-setup.exe` (25.0 MB), and the Android `.apk` (33.8 MB), signed with
+  the current key, Android versionCode 90499.
 
 Not covered:
 
