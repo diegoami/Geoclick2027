@@ -5,6 +5,62 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
+## v0.9.4 — 2026-09-22 — The review's fixes that matter
+
+Six defects from an independent code review, all shipped. Three a player
+can see, two that only bite when they bite, and one build-robustness fix.
+FT-52 to FT-58.
+
+For players:
+
+- **Terrain names follow the language.** Switching to Italian with a map
+  open used to leave the mountain, sea and river labels in the previous
+  language while everything around them changed. They now switch with it.
+- **The Terrain button does what it says.** Turning Terrain off while it
+  was still loading let it come back by itself, with the map left dimmed
+  and the button reading off. It now stays off.
+- **Back in the tutorial goes back.** Back out of the first quiz step — or
+  Resume onto an Overview step — landed on the Known screen instead of the
+  Overview and immediately paused again. It now reaches the Overview.
+- **A storage failure no longer takes the app with it.** When the device's
+  storage refuses to be read, the home page still lists every map and a
+  quiz still plays: the round just is not remembered, and a notice says so.
+  The language picker keeps working too.
+- **A Russian region's label stopped being the first to give way.**
+  Chukotka straddles the antimeridian, so its width was computed as
+  negative and its name lost every collision it entered.
+
+Under the hood:
+
+- **FT-52:** antimeridian wrapping is derived from the bbox (`west > east`)
+  rather than the optional `crossesAntimeridian` flag; the integrity suite
+  asserts the two agree, and `russia-regions` was rebuilt.
+- **FT-53:** the terrain layer gained `refreshLabels()`, called from a
+  shared `followTerrainLanguage()` effect — on a map's first open the
+  labels are drawn after an `await`, so the language was never tracked.
+- **FT-54:** `add()` applies the latest requested visibility once the
+  layers exist, and the pending tiles-arrived wait is dropped on hide.
+- **FT-55:** the Screen-to-URL translation is `screenPath()`, tested
+  through the effect handler rather than the emitted effect.
+- **FT-57:** stored values are shape-validated instead of cast; the home
+  page reads each map independently; and the quiz falls back to an
+  in-memory repository when the real one cannot be opened or read.
+- **FT-58:** `app/static/{maps,styles}` are prepared at build time instead
+  of being committed symlinks, and `postbuild` fails the build if the map
+  and style assets did not reach `app/build`. The first version used a
+  Windows junction, which Git follows when replacing the path — it deleted
+  the generated data during the merge; the prepared path is now a true
+  symlink or a copy.
+- **Every PR was reviewed by a second model** through a standing review
+  loop; the reviewer's blocking findings are all fixed.
+
+Not covered:
+
+- **FT-56 and FT-59**, both test gates, were deliberately moved out of
+  v0.9.4 to a later hardening batch.
+- **The name-facts are still English only** — v0.10.0, still blocked on
+  three product decisions.
+
 ## v0.9.3 — 2026-09-19 — The name origin, every time
 
 FT-47, plus the plan for the one thing in the app that is still English
