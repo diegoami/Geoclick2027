@@ -6,7 +6,9 @@
 > [PLAN_V0.9.4.md](PLAN_V0.9.4.md) shipped FT-52 to FT-58 and deferred the
 > two test gates (FT-56, FT-59) — and **v0.9.4 was released on 2026-09-22**.
 > This plan keeps its number. Its three product decisions were **answered
-> on 2026-09-22** (below), so it can start.
+> on 2026-09-22** (below) and it has started: **FT-48 and FT-49 are
+> merged** (Italy's 20 regions in Italian, and the per-language shape with
+> per-sentence fallback). **FT-50** — the other 27 countries — is next.
 
 ## Why
 
@@ -153,7 +155,7 @@ volume.
 
 | Task  | State       | Merge | Notes                                        |
 | ----- | ----------- | ----- | -------------------------------------------- |
-| FT-48 | not started | —     | 60 Italian sentences, then a read            |
-| FT-49 | not started | —     | per-language `hooks`, per-sentence fallback  |
+| FT-48 | **merged**  | `51892fc` | Italy's 20 regions, 60 Italian sentences, read and approved (PR #18) |
+| FT-49 | **merged**  | `51892fc` | per-language `hooks`, per-sentence fallback (PR #18) |
 | FT-50 | not started | —     | Italian, the other 27 countries              |
 | FT-51 | postponed   | —     | German, only if the Italian read well   |
