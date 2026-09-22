@@ -1,4 +1,4 @@
-# Handover — 2026-09-22, v0.9.4 in progress (FT-52 merged)
+# Handover — 2026-09-22, v0.9.4 in progress (FT-53 merged)
 
 For whoever picks Geoclick up next, whether a human or a fresh Claude
 session. It records where things stand, what's next, and what's easy to
@@ -22,7 +22,7 @@ before any work starts.
 | Remediation programme | Closed with v0.2.0 ([REMEDIATION_PLAN.md](REMEDIATION_PLAN.md)) |
 | Feature programme | Closed with v0.5.0 ([FEATURE_PLAN.md](FEATURE_PLAN.md)) |
 | Since then | Per-release plans: [PLAN_V0.6.md](PLAN_V0.6.md) through [PLAN_V0.9.md](PLAN_V0.9.md), each with its own ledger |
-| Next | [PLAN_V0.9.4.md](PLAN_V0.9.4.md) — **FT-52 merged; FT-53/54/55/57/58 still to do.** Reshaped 2026-09-22 by what is worth doing before v0.10.0: the three the player sees, plus the two robustness items (storage failure blanks the app, the symlink build). FT-56/FT-59 (test gates) are deferred, and **v0.10.0 follows this release** |
+| Next | [PLAN_V0.9.4.md](PLAN_V0.9.4.md) — **FT-52 and FT-53 merged; FT-54/55/57/58 still to do.** Reshaped 2026-09-22 by what is worth doing before v0.10.0: the three the player sees, plus the two robustness items (storage failure blanks the app, the symlink build). FT-56/FT-59 (test gates) are deferred, and **v0.10.0 follows this release** |
 | After that | [PLAN_V0.10.md](PLAN_V0.10.md) — translating the name-facts, still **blocked on three product decisions**, see "How to resume" |
 | Raised, unscoped | Six UX problems from one round of tablet play, 2026-09-20, **decided the same day** — first item of ROADMAP.md's Iteration 8+ backlog: the level-0 tray offering every name at once (`difficulty.ts:21`), slips losing their drag to the tablet's text-selection gesture, the fact card now only on a name the player could *not* place, best-fit label placement as a requirement rather than first-fit, a spike for Europa-Universalis-style stretched region names, and the map card's `{known} / {total} known` line replaced by a progress bar over `knownCount / total`, hidden at zero (the score panel keeps its copy — the two record different things). Each entry carries its decision; none is scheduled or estimated |
 | Also raised 2026-09-20 | **The start screen becomes a zoomable world map** — pick the country on the map, then the kind of quiz. The map list cannot be finalized as a list: the goal is a high number of maps, and `mapCatalog.ts` is already 31 countries and 66 maps. Favourites and Recent stay unchanged. Second item of the Iteration 8+ backlog, with the open questions listed there |
@@ -61,6 +61,12 @@ Shipped since the v0.5.0 handover, in one paragraph each:
   integrity suite asserts flag and bbox agree, and `russia-regions/map.json`
   is rebuilt to carry it. PR #10, the first task through the Luna review
   loop ([REVIEW_LOOP.md](REVIEW_LOOP.md)).
+- **2026-09-22, unreleased** — **FT-53** (issue #3): terrain labels follow a
+  language switch. On a map's first open the labels are drawn after an
+  `await`, so the view effect never subscribed to the language; a shared
+  `followTerrainLanguage()` helper reads it explicitly and
+  `TerrainLayer.refreshLabels()` redraws the names. PR #12, reviewed by
+  Luna (one blocking finding on the test, fixed).
 
 ## The one thing most worth not getting wrong
 
@@ -75,17 +81,16 @@ the generated one.
 
 ## How to resume
 
-**Start with [PLAN_V0.9.4.md](PLAN_V0.9.4.md).** FT-52 is merged
-(`69cfa3d`, PR #10, reviewed by Luna); **FT-53 is next** — terrain labels
-keep the old language after a switch, because `setVisible()`'s first draw
-happens after `await this.add()`, outside the effect's tracking. Open
-`app/src/lib/terrainLayer.ts`. FT-54 depends on FT-53 only to keep two
-branches out of that file at once. Then **FT-57** (storage failures stay
-out of gameplay) and **FT-58** (build the static assets instead of
-symlinking them), independent of the trio and of each other. **FT-56 and
-FT-59 (both test gates) were moved out on 2026-09-22**; they are listed
-under the plan's "Deferred" section. The plan needs no decisions from the
-product owner; it can be worked straight through.
+**Start with [PLAN_V0.9.4.md](PLAN_V0.9.4.md).** FT-52 (`69cfa3d`, PR #10)
+and FT-53 (`a0bc72b`, PR #12) are merged, both reviewed by Luna; **FT-54 is
+next** — terrain switched off during its first load comes back when `add()`
+finishes, and the map stays dimmed with the button reading off. Open
+`app/src/lib/terrainLayer.ts`. Then **FT-55** (the tutorial's Back/Resume
+reaches the Overview route), then **FT-57** (storage failures stay out of
+gameplay) and **FT-58** (build the static assets instead of symlinking
+them). **FT-56 and FT-59 (both test gates) were moved out on 2026-09-22**;
+they are listed under the plan's "Deferred" section. The plan needs no
+decisions from the product owner; it can be worked straight through.
 
 v0.10.0 comes **after** v0.9.4 and still **cannot start**: it needs three
 answers from the product owner (PLAN_V0.10.md, "Product decisions
@@ -99,7 +104,7 @@ needed") —
 
 Suggested first message for the next session:
 
-> Read docs/HANDOVER.md, then docs/PLAN_V0.9.4.md. Start FT-53.
+> Read docs/HANDOVER.md, then docs/PLAN_V0.9.4.md. Start FT-54.
 
 Whatever comes next, the working rules stay (CLAUDE.md §3):
 
