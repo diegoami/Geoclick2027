@@ -99,7 +99,7 @@ Check items off as they land; update "Status" as iterations complete.
   review filed GitHub issues #1-#8; all eight were verified on 2026-09-20.
   FT-52 (`69cfa3d`, PR #10), FT-53 (`a0bc72b`, PR #12), FT-54
   (`5f5b767`, PR #13), FT-55 (`a1fdc24`, PR #14), FT-57 (`a0e379d`,
-  PR #15) and FT-58 (`039c8e7`, PR #16) are merged: **v0.9.4 is code
+  PR #15) and FT-58 (`039c8e7`/`739bd20`, PR #16/#17) are merged: **v0.9.4 is code
   complete**, pending its release gate. **FT-56** (validate the shipped
   `tour.json`) and **FT-59** (a QuizView seam test), both test gates, are
   deferred to a hardening batch. No product decisions needed; **v0.10.0

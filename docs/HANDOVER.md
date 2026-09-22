@@ -85,10 +85,16 @@ Shipped since the v0.5.0 handover, in one paragraph each:
   reviewed by Luna (one blocking finding on the lazy native open, fixed).
 - **2026-09-22, unreleased** — **FT-58** (issue #5): the map and style
   assets are prepared at build time instead of being committed symlinks.
-  `prepare-assets.mjs` links (or copies) `data/{maps,styles}` into
-  `app/static` from `predev`/`prebuild`, and `check-build-assets.mjs` fails
-  the build in `postbuild` when they did not reach `app/build`. PR #16,
-  reviewed by Luna (no blocking findings).
+  `prepare-assets.mjs` creates a true directory symlink (or a copy where the
+  OS refuses one) at `app/static` from `predev`/`prebuild`, and
+  `check-build-assets.mjs` fails the build in `postbuild` when they did not
+  reach `app/build`. PR #16, reviewed by Luna (no blocking findings).
+- **2026-09-22, unreleased** — **FT-58 follow-up**: the first version used a
+  Windows junction, which Git follows when it replaces the path — the #16
+  merge checkout deleted `data/maps` and `data/styles` from the worktree
+  (restored from git). `prepare-assets.mjs` now uses a true symlink or a
+  copy, never a junction, with a checkout regression test. PR #17, reviewed
+  by Luna (no blocking findings).
 
 ## The one thing most worth not getting wrong
 
