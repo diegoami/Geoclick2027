@@ -44,13 +44,12 @@ export function dispatch(event: TutorialEvent): void {
 }
 
 /**
- * The URL a tutorial screen lives at. Exported so a test can check the
- * translation for every screen: the state machine emits the right `navigate`
- * effect, and this is the layer that mistranslated `overview` as the Known
- * route, so Back and Resume arrived on a step that immediately re-paused
+ * The URL a tutorial screen lives at. The state machine emits the right
+ * `navigate` effect; this is the layer that mistranslated `overview` as the
+ * Known route, so Back and Resume arrived on a step that immediately re-paused
  * (FT-55, issue #1).
  */
-export function screenPath(screen: Screen): string {
+function screenPath(screen: Screen): string {
 	const mapId = TUTORIAL_MAP_ID;
 	switch (screen) {
 		case 'home':
@@ -66,7 +65,12 @@ export function screenPath(screen: Screen): string {
 	}
 }
 
-function navigateTo(screen: Screen): Promise<void> {
+/**
+ * Carries out one `navigate` effect. Exported so a test can drive the effect
+ * handler itself - capturing the `goto` argument for every screen - rather
+ * than only the mapping it happens to use.
+ */
+export function navigateTo(screen: Screen): Promise<void> {
 	// screenPath() is where resolve() is called; the rule only sees the call
 	// site, and the indirection is what lets the test check every screen.
 	// eslint-disable-next-line svelte/no-navigation-without-resolve
