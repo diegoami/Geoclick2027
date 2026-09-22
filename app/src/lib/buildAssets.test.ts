@@ -3,7 +3,15 @@
 // style assets must be prepared on whatever machine builds, and a build that
 // ends up without them must fail rather than ship.
 import { execFileSync } from 'node:child_process';
-import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import {
+	existsSync,
+	mkdirSync,
+	mkdtempSync,
+	readFileSync,
+	rmSync,
+	symlinkSync,
+	writeFileSync
+} from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -107,5 +115,64 @@ describe('the build lifecycle', () => {
 	it('checks the assets after the build, and still copies the worker', () => {
 		expect(scripts.postbuild).toContain('check-build-assets.mjs');
 		expect(scripts.postbuild).toContain('copy-maplibre-worker.mjs');
+	});
+});
+
+describe('prepare-assets and a checkout over it (FT-58 regression)', () => {
+	// Git for Windows recurses through a Windows *junction* when it replaces
+	// the path, deleting the junction's target contents - it emptied the real
+	// data/maps during the FT-58 merge. prepare-assets must therefore use a
+	// true symlink (or a copy), never a junction. This replays the checkout
+	// that caused it: it fails if the prepared link is a junction, and passes
+	// for a symlink or a copy.
+	const canCreateSymlink = (() => {
+		const dir = mkdtempSync(join(tmpdir(), 'geoclick-symlink-check-'));
+		try {
+			mkdirSync(join(dir, 'target'));
+			symlinkSync(join(dir, 'target'), join(dir, 'link'), 'dir');
+			return true;
+		} catch {
+			return false;
+		} finally {
+			rmSync(dir, { recursive: true, force: true });
+		}
+	})();
+
+	it.skipIf(!canCreateSymlink)('survives a checkout to a commit that tracks a link', () => {
+		const repo = tempDir('geoclick-git-');
+		const git = (...args: string[]) =>
+			execFileSync('git', args, {
+				cwd: repo,
+				encoding: 'utf8',
+				stdio: ['ignore', 'pipe', 'ignore']
+			});
+
+		git('init', '-q');
+		git('config', 'user.email', 'test@example.com');
+		git('config', 'user.name', 'test');
+		mkdirSync(join(repo, 'data', 'maps'), { recursive: true });
+		mkdirSync(join(repo, 'data', 'styles'), { recursive: true });
+		mkdirSync(join(repo, 'app', 'static'), { recursive: true });
+		writeFileSync(join(repo, 'data', 'maps', 'marker.json'), '{"keep":true}');
+		writeFileSync(join(repo, 'data', 'styles', 'base.json'), '{}');
+
+		// Commit A: app/static/maps is a tracked symlink, the pre-FT-58 shape.
+		symlinkSync(join(repo, 'data', 'maps'), join(repo, 'app', 'static', 'maps'), 'dir');
+		git('add', '-A');
+		git('commit', '-qm', 'A');
+		const old = git('rev-parse', 'HEAD').trim();
+
+		// Commit B: the link is removed from the index and gitignored.
+		git('rm', '-q', '--cached', 'app/static/maps');
+		writeFileSync(join(repo, '.gitignore'), '/app/static/maps\n');
+		git('add', '-A');
+		git('commit', '-qm', 'B');
+
+		// The build prepares the link, then a checkout reaches for old A.
+		rmSync(join(repo, 'app', 'static', 'maps'), { recursive: true, force: true });
+		expect(run('prepare-assets.mjs', repo).status).toBe(0);
+		git('checkout', '-q', old);
+
+		expect(existsSync(join(repo, 'data', 'maps', 'marker.json'))).toBe(true);
 	});
 });

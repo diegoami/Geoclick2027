@@ -293,9 +293,8 @@ FT-58 these were committed symlinks: a tool that did not preserve them — a
 zip round-trip, a Windows checkout without Developer Mode or
 `core.symlinks=true` — turned each into a small text file containing a
 path, and the build then shipped 15-byte "tilesets". Now
-`prepare-assets.mjs` creates the link on whatever machine builds (a
-junction on Windows, which needs no Developer Mode; a plain directory
-symlink elsewhere; a copy if linking is refused), and
+`prepare-assets.mjs` creates a true directory symlink on whatever machine
+builds, or copies the data where the OS refuses one, and
 `check-build-assets.mjs` runs in `postbuild` and **fails** when the assets
 did not reach `app/build`. ONBOARDING.md's "Gotchas" section has the
 symptoms.

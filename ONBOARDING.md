@@ -606,20 +606,24 @@ this one, and is read on demand rather than up front.
 ## Gotchas that have already cost real time
 
 - **`app/static/maps` and `app/static/styles` are prepared at build time,
-  not committed.** `app/scripts/prepare-assets.mjs` links (or copies, if
-  the filesystem refuses) `data/maps` and `data/styles` there; `predev` and
-  `prebuild` run it, and the paths are gitignored, so a fresh clone has no
-  static assets until its first dev/build — deliberately. Before FT-58 they
-  were committed symlinks (mode `120000`), and **Git for Windows doesn't
-  create real symlinks by default**: it turns them into tiny text files
-  containing the literal target path, `vite build` still *succeeds*, and
-  the build 404s on every `map.json` (a packaged Windows build shipped that
-  way once). The old fix was "enable Developer Mode and re-clone"; now
-  `postbuild` runs `app/scripts/check-build-assets.mjs`, which **fails**
-  when `maps/index.json`, a map's `map.json` or `styles/base.json` is
-  missing under `app/build`, so that class of failure cannot ship. If map
-  assets 404 on a deploy but work locally, run
-  `node scripts/prepare-assets.mjs` and rebuild.
+  not committed.** `app/scripts/prepare-assets.mjs` links or copies
+  `data/maps` and `data/styles` there; `predev` and `prebuild` run it, and
+  the paths are gitignored, so a fresh clone has no static assets until its
+  first dev/build — deliberately. It uses a **true directory symlink, never
+  a Windows junction**: Git for Windows treats a junction as a directory, so
+  checking out a commit that tracked a link at that path recurses through
+  the junction and deletes `data/maps` — it emptied the generated data once,
+  during the FT-58 merge. Where the OS refuses a symlink (no Developer Mode),
+  the script copies instead. Before FT-58 these were committed symlinks (mode
+  `120000`), and **Git for Windows doesn't create real symlinks by default**:
+  it turns them into tiny text files containing the literal target path,
+  `vite build` still *succeeds*, and the build 404s on every `map.json` (a
+  packaged Windows build shipped that way once). Now `postbuild` runs
+  `app/scripts/check-build-assets.mjs`, which **fails** when
+  `maps/index.json`, a map's `map.json` or `styles/base.json` is missing
+  under `app/build`, so that class of failure cannot ship. If map assets 404
+  on a deploy but work locally, run `node scripts/prepare-assets.mjs` and
+  rebuild.
 - **`.pmtiles`/icon binary files need `.gitattributes`, or a Windows
   checkout can silently corrupt them.** Without an explicit `binary`
   declaration, Git falls back to content-sniffing to decide text vs.
