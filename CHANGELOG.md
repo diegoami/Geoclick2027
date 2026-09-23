@@ -5,7 +5,7 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
-## Unreleased — v0.10.0 — The facts in Italian, and a calmer quiz
+## v0.10.0 — 2026-09-23 — The facts in Italian, and a calmer quiz
 
 **Every place's facts now read in Italian, and six things that got in the way of playing on a tablet are fixed.**
 
@@ -60,16 +60,24 @@ Under the hood:
   collision pass and the magnify hit-test. Quiz and Tour keep pills.
 - **FT-65:** a progress bar over `knownCount / total` on the map list,
   hidden at zero.
-- **Review:** these PRs had no per-PR review. The release is reviewed
-  once, as a whole, on the `release/0.10.0` PR (CLAUDE.md §3a).
+- **Review:** these PRs had no per-PR review. v0.10.0 is the first
+  milestone under CLAUDE.md §3a: an independent model reviewed
+  `v0.9.4..` the candidate on the `Milestone v0.10.0` issue, and the tag
+  sits on exactly the commit it agreed with. Round 1 (AGREE, no issues)
+  ran on `3ab4820`, the same code as `v0.10.0-beta.1`.
+- **Installers:** `v0.10.0-beta.1` (Windows `-setup.exe`, Android `.apk`)
+  was packaged and published before the candidate; a map drew in the built
+  Windows app and in the APK on the emulator. The stable installers are
+  built from the `v0.10.0` tag; the milestone issue records what was tried
+  on them and on a device (FT-61 on a tablet, FT-66 on a phone or tablet).
 
 Not covered:
 
 - **German (FT-51)** is postponed until the Italian has been read.
 - **FT-56 and FT-59**, the two v0.9.4 test gates, still wait for a
   hardening batch.
-- **Not yet tried on a device:** FT-61 on a real tablet, FT-66 on a real
-  phone or tablet. The Italian was spot-checked, not read end to end.
+- **The Italian was spot-checked, not read end to end.** One Sardinian
+  sentence still carries em dashes against the Italian house style.
 
 ## v0.9.4 — 2026-09-22 — The review's fixes that matter
 
