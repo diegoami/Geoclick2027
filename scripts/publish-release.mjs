@@ -48,11 +48,21 @@ for (const line of readFileSync(path.join(dir, 'SHA256SUMS.txt'), 'utf8').trim()
 	if (actual !== hash) fail(`${name} does not match SHA256SUMS.txt - repackage.`);
 }
 
+// --- the tagged commit the release is built from (CLAUDE.md §3a) ---
+const git = (a) => spawnSync('git', a, { cwd: ROOT, encoding: 'utf8' });
+const tagged = git(['rev-parse', '--verify', '--quiet', `${tag}^{commit}`]).stdout.trim();
+if (!tagged) fail(`there is no ${tag} tag here - tag the commit first, then package from it.`);
+if (git(['rev-parse', 'HEAD']).stdout.trim() !== tagged)
+	fail(`HEAD is not ${tag} (${tagged.slice(0, 7)}) - check out the tag the release was packaged from.`);
+
 // --- notes: the player-facing part of this version's CHANGELOG entry ---
-// A pre-release has no entry of its own yet: it uses "## Unreleased", which
-// becomes the stable version's entry when it ships.
+// A beta is built from a milestone candidate, which already carries its
+// `## vX.Y.Z — …` entry (docs/RELEASES.md, "The milestone"); an alpha has no
+// entry of its own yet and uses "## Unreleased".
 const changelog = readFileSync(path.join(ROOT, 'CHANGELOG.md'), 'utf8');
-const heading = stage ? '## Unreleased' : `## ${tag} `;
+const stableHeading = `## v${version.replace(/-(alpha|beta)\.\d+$/, '')} `;
+const heading =
+	!stage || changelog.includes(`\n${stableHeading}`) ? stableHeading : '## Unreleased';
 const start = changelog.indexOf(heading);
 if (start < 0) fail(`CHANGELOG.md has no "${heading.trim()}" entry yet - write it first.`);
 const next = changelog.indexOf('\n## ', start + 1);
@@ -72,6 +82,7 @@ const banner = {
 const notes =
 	(stage ? banner[stage] : '') +
 	`${playerPart}\n\n---\n\n` +
+	`Built from commit \`${tagged}\` (tag \`${tag}\`).\n\n` +
 	`**Play in the browser:** https://geoclick.netlify.app/\n\n` +
 	`Windows: run the \`-setup.exe\` (SmartScreen warns about an unknown publisher: *More info → Run anyway*). ` +
 	`Android: open the \`.apk\` on your phone and allow installing unknown apps. ` +
