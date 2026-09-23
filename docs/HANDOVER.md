@@ -1,4 +1,4 @@
-# Handover — 2026-09-23, v0.10.0 under way (FT-64 spike decided; FT-66 next)
+# Handover — 2026-09-23, v0.10.0 under way (FT-66 in PR #24, awaiting PO test; FT-50 next)
 
 For whoever picks Geoclick up next, whether a human or a fresh Claude
 session. It records where things stand, what's next, and what's easy to
@@ -23,7 +23,7 @@ before any work starts.
 | Remediation programme | Closed with v0.2.0 ([REMEDIATION_PLAN.md](REMEDIATION_PLAN.md)); its automerge exception went with it |
 | Feature programme | Closed with v0.5.0 ([FEATURE_PLAN.md](FEATURE_PLAN.md)) |
 | Since then | Per-release plans: [PLAN_V0.6.md](PLAN_V0.6.md) through [PLAN_V0.9.4.md](PLAN_V0.9.4.md), each with its own ledger; now [PLAN_V0.10.md](PLAN_V0.10.md) |
-| Next | **FT-66** — region names along the region (Medium; scheduled by the product owner 2026-09-23 before FT-50). Then **FT-50** (Italian for the other 27 countries). The **FT-64 spike is decided**: stretched region names read; an SVG `textPath` over a build-time spine, today's pill where a name does not fit (DECISIONS.md, "Region names along the region"; spike branch `spike/ft-64-stretched-names`, not for merge). FT-66's Do/DoD are in PLAN_V0.10.md; the spike's `data/scripts/spine.ts` and `app/src/lib/spineLabels.ts` are the starting point. Merged so far: FT-48/FT-49, FT-62, FT-65, FT-61, FT-60 ([PR #22](https://github.com/diegoami/Geoclick2027/pull/22), `8b75e1e`), FT-63 ([PR #23](https://github.com/diegoami/Geoclick2027/pull/23), `a0537d6`). The v0.9.4 installer smoke test and the FT-61 tablet check are outstanding |
+| Next | **FT-66 is built, [PR #24](https://github.com/diegoami/Geoclick2027/pull/24)** on `feat/ft-66-names-along-region`, awaiting the product owner's test and merge OK: on the Explore map a region's name is drawn along the region where it fits at the popup's size, the popup elsewhere (DECISIONS.md, "Region names along the region"). Spines for all 32 polygon maps come from the committed tiles: `npm run build-map-spines` (MAPS.md step 7). After the merge: **FT-50** (Italian for the other 27 countries). Merged so far: FT-48/FT-49, FT-62, FT-65, FT-61, FT-60 ([PR #22](https://github.com/diegoami/Geoclick2027/pull/22), `8b75e1e`), FT-63 ([PR #23](https://github.com/diegoami/Geoclick2027/pull/23), `a0537d6`). The v0.9.4 installer smoke test and the FT-61 tablet check are outstanding |
 | After that | **FT-51 (German) is postponed** until the Italian has been read; the two v0.9.4 test gates (FT-56, FT-59) wait in a hardening batch |
 | Also raised 2026-09-20 | **The start screen becomes a zoomable world map** — pick the country on the map, then the kind of quiz. The map list cannot be finalized as a list: the goal is a high number of maps, and `mapCatalog.ts` is already 31 countries and 66 maps. Favourites and Recent stay unchanged. Second item of the Iteration 8+ backlog, with the open questions listed there |
 
@@ -87,8 +87,8 @@ placement) is merged (PR #23, `a0537d6`): a town's name has eight spots, each fr
 in pixels (room, reach, other towns' dots, the map's edge), and a stay bonus
 only while the map moves. Measured on germany-towns-100k: no name covers
 another town's dot, a pan moves no name, Duisburg goes west. The **FT-64**
-spike is decided (stretched names read). Next is **FT-66** (names along the
-region, scheduled first), then **FT-50** (the other 27
+spike is decided (stretched names read), and **FT-66** is built on it (PR
+#24, awaiting the product owner's test). Then **FT-50** (the other 27
 countries, ~5,388 sentences, batched by country with spot-checks). **FT-51
 (German) is postponed.** Two things wait for the release gate: the v0.9.4
 installer smoke test (the published Windows and Android installers were
@@ -96,7 +96,7 @@ installer smoke test (the published Windows and Android installers were
 
 Suggested first message for the next session:
 
-> Read docs/HANDOVER.md, then docs/PLAN_V0.10.md. Start FT-66 (region names along the region) on a branch; the spike branch `spike/ft-64-stretched-names` holds the code to start from. (The v0.9.4 installer smoke test is still outstanding.)
+> Read docs/HANDOVER.md, then docs/PLAN_V0.10.md. If PR #24 (FT-66) is merged, start FT-50 with the first country batch; if the product owner found issues in it, fix those on `feat/ft-66-names-along-region` first. (The v0.9.4 installer smoke test is still outstanding.)
 
 Whatever comes next, the working rules stay (CLAUDE.md §3):
 
