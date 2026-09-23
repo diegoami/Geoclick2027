@@ -1,4 +1,4 @@
-# Handover — 2026-09-23, v0.10.0 under way (FT-60 in PR #22, awaiting merge OK)
+# Handover — 2026-09-23, v0.10.0 under way (FT-60 merged; FT-63 next)
 
 For whoever picks Geoclick up next, whether a human or a fresh Claude
 session. It records where things stand, what's next, and what's easy to
@@ -23,7 +23,7 @@ before any work starts.
 | Remediation programme | Closed with v0.2.0 ([REMEDIATION_PLAN.md](REMEDIATION_PLAN.md)); its automerge exception went with it |
 | Feature programme | Closed with v0.5.0 ([FEATURE_PLAN.md](FEATURE_PLAN.md)) |
 | Since then | Per-release plans: [PLAN_V0.6.md](PLAN_V0.6.md) through [PLAN_V0.9.4.md](PLAN_V0.9.4.md), each with its own ledger; now [PLAN_V0.10.md](PLAN_V0.10.md) |
-| Next | **FT-60** — a finite first hand of 10 — is [PR #22](https://github.com/diegoami/Geoclick2027/pull/22), reviewed over three rounds (reviewer: all findings resolved), **awaiting the product owner's merge OK**. Then FT-63 (best-fit label placement), the FT-64 spike and FT-50 (the other 27 countries). Merged so far: FT-48/FT-49, FT-62, FT-65, FT-61. The v0.9.4 installer smoke test and the FT-61 tablet check are outstanding |
+| Next | **FT-63** — best-fit label placement. Then the FT-64 spike and FT-50 (the other 27 countries). Merged so far: FT-48/FT-49, FT-62, FT-65, FT-61, FT-60 ([PR #22](https://github.com/diegoami/Geoclick2027/pull/22), `8b75e1e`). The v0.9.4 installer smoke test and the FT-61 tablet check are outstanding |
 | After that | **FT-51 (German) is postponed** until the Italian has been read; the two v0.9.4 test gates (FT-56, FT-59) wait in a hardening batch |
 | Also raised 2026-09-20 | **The start screen becomes a zoomable world map** — pick the country on the map, then the kind of quiz. The map list cannot be finalized as a list: the goal is a high number of maps, and `mapCatalog.ts` is already 31 countries and 66 maps. Favourites and Recent stay unchanged. Second item of the Iteration 8+ backlog, with the open questions listed there |
 
@@ -79,13 +79,10 @@ the generated one.
 
 ## How to resume
 
-**v0.10.0 is under way.** Merged: **FT-48/FT-49**, **FT-62**, **FT-65** and
-**FT-61**. **FT-60** — a finite first hand of 10 — is **PR #22**, branch
-`fix/ft-60-finite-first-hand`: `HAND_SIZES[0]` is 10, and while the tutorial
-runs its two spotlit slips (Sicilia, Sardegna) are dealt first and any round
-left open on `italy-regions` is forgotten. Reviewer's verdict after round 3:
-all findings resolved. **Waiting for the product owner's merge OK**; on merge,
-record it in the PLAN_V0.10 ledger and ROADMAP.md:115. Then **FT-63**
+**v0.10.0 is under way.** Merged: **FT-48/FT-49**, **FT-62**, **FT-65**,
+**FT-61** and **FT-60** (PR #22, `8b75e1e`: `HAND_SIZES[0]` is 10, and while
+the tutorial runs its two spotlit slips are dealt first and any round left
+open on `italy-regions` is forgotten). Next is **FT-63**
 (best-fit label placement), the **FT-64** spike, and **FT-50** (the other 27
 countries, ~5,388 sentences, batched by country with spot-checks). **FT-51
 (German) is postponed.** Two things wait for the release gate: the v0.9.4
@@ -94,7 +91,7 @@ installer smoke test (the published Windows and Android installers were
 
 Suggested first message for the next session:
 
-> Read docs/HANDOVER.md, then docs/PLAN_V0.10.md. If PR #22 (FT-60) is merged, record it and start FT-63. (The v0.9.4 installer smoke test is still outstanding.)
+> Read docs/HANDOVER.md, then docs/PLAN_V0.10.md. Start FT-63 (best-fit label placement). (The v0.9.4 installer smoke test is still outstanding.)
 
 Whatever comes next, the working rules stay (CLAUDE.md §3):
 
