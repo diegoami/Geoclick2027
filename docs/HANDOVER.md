@@ -1,4 +1,4 @@
-# Handover — 2026-09-23, v0.10.0 under way (FT-60 merged; FT-63 next)
+# Handover — 2026-09-23, v0.10.0 under way (FT-63 in PR #23, awaiting merge OK)
 
 For whoever picks Geoclick up next, whether a human or a fresh Claude
 session. It records where things stand, what's next, and what's easy to
@@ -18,12 +18,12 @@ before any work starts.
 |---|---|
 | `main` | clean, in sync with GitHub; all four gates pass (736 unit tests), checked 2026-09-23 |
 | Deploy | The product owner **stopped deploying** on 2026-09-22, so a `main` merge no longer triggers a live Netlify build. Merges still need the product owner's OK (CLAUDE.md §3) — that rule is a review gate, not the old cost gate |
-| Who works | **Claude Opus 5.5** implements, and **a fresh Claude subagent reviews** every task PR (product owner, 2026-09-23 — [REVIEW_LOOP.md](REVIEW_LOOP.md)). PRs #10–#21 were DeepSeek V4.1 Flash, reviewed by ChatGPT GPT-5.6 Luna |
+| Who works | **Claude Opus 5.5** implements, with no per-PR review. **At milestones** (before a release tag, or on request) Claude hands the product owner a prompt for an **independent model** to review the repository (product owner, 2026-09-23 — [REVIEW_LOOP.md](REVIEW_LOOP.md)). PRs #10–#21 were DeepSeek V4.1 Flash, reviewed by ChatGPT GPT-5.6 Luna |
 | Latest release | **v0.9.4** (tag at `5387ff2`, 2026-09-22): the review's six fixes (FT-52 to FT-58). Installers are on the public [releases page](https://github.com/diegoami/geoclick-releases/releases/latest) — **published but not smoke-tested** (no map was opened in either shell). Previews go out as alpha/beta pre-releases first (RELEASES.md, "Pre-releases") |
 | Remediation programme | Closed with v0.2.0 ([REMEDIATION_PLAN.md](REMEDIATION_PLAN.md)); its automerge exception went with it |
 | Feature programme | Closed with v0.5.0 ([FEATURE_PLAN.md](FEATURE_PLAN.md)) |
 | Since then | Per-release plans: [PLAN_V0.6.md](PLAN_V0.6.md) through [PLAN_V0.9.4.md](PLAN_V0.9.4.md), each with its own ledger; now [PLAN_V0.10.md](PLAN_V0.10.md) |
-| Next | **FT-63** — best-fit label placement. Then the FT-64 spike and FT-50 (the other 27 countries). Merged so far: FT-48/FT-49, FT-62, FT-65, FT-61, FT-60 ([PR #22](https://github.com/diegoami/Geoclick2027/pull/22), `8b75e1e`). The v0.9.4 installer smoke test and the FT-61 tablet check are outstanding |
+| Next | **FT-63** — best-fit label placement — is [PR #23](https://github.com/diegoami/Geoclick2027/pull/23), branch `feat/ft-63-best-fit-labels`, gates green, one review round answered, **awaiting the product owner's merge OK**. Then the FT-64 spike and FT-50 (the other 27 countries). Merged so far: FT-48/FT-49, FT-62, FT-65, FT-61, FT-60 ([PR #22](https://github.com/diegoami/Geoclick2027/pull/22), `8b75e1e`). The v0.9.4 installer smoke test and the FT-61 tablet check are outstanding |
 | After that | **FT-51 (German) is postponed** until the Italian has been read; the two v0.9.4 test gates (FT-56, FT-59) wait in a hardening batch |
 | Also raised 2026-09-20 | **The start screen becomes a zoomable world map** — pick the country on the map, then the kind of quiz. The map list cannot be finalized as a list: the goal is a high number of maps, and `mapCatalog.ts` is already 31 countries and 66 maps. Favourites and Recent stay unchanged. Second item of the Iteration 8+ backlog, with the open questions listed there |
 
@@ -82,8 +82,13 @@ the generated one.
 **v0.10.0 is under way.** Merged: **FT-48/FT-49**, **FT-62**, **FT-65**,
 **FT-61** and **FT-60** (PR #22, `8b75e1e`: `HAND_SIZES[0]` is 10, and while
 the tutorial runs its two spotlit slips are dealt first and any round left
-open on `italy-regions` is forgotten). Next is **FT-63**
-(best-fit label placement), the **FT-64** spike, and **FT-50** (the other 27
+open on `italy-regions` is forgotten). **FT-63** (best-fit label
+placement) is **PR #23**: a town's name has eight spots, each free one scored
+in pixels (room, reach, other towns' dots, the map's edge), and a stay bonus
+only while the map moves. Measured on germany-towns-100k: no name covers
+another town's dot, a pan moves no name, Duisburg goes west. **Waiting for
+the merge OK**; on merge, mark it in the PLAN_V0.10 ledger and ROADMAP.md's
+v0.10.0 status line. Then the **FT-64** spike, and **FT-50** (the other 27
 countries, ~5,388 sentences, batched by country with spot-checks). **FT-51
 (German) is postponed.** Two things wait for the release gate: the v0.9.4
 installer smoke test (the published Windows and Android installers were
@@ -91,14 +96,14 @@ installer smoke test (the published Windows and Android installers were
 
 Suggested first message for the next session:
 
-> Read docs/HANDOVER.md, then docs/PLAN_V0.10.md. Start FT-63 (best-fit label placement). (The v0.9.4 installer smoke test is still outstanding.)
+> Read docs/HANDOVER.md, then docs/PLAN_V0.10.md. If PR #23 (FT-63) is merged, record it and start the FT-64 spike. (The v0.9.4 installer smoke test is still outstanding.)
 
 Whatever comes next, the working rules stay (CLAUDE.md §3):
 
 - one branch per task, pushed without asking;
-- **every task PR is reviewed on GitHub by a fresh Claude subagent — posted
-  verbatim, every finding answered, iterated until the reviewer says its
-  findings are resolved ([REVIEW_LOOP.md](REVIEW_LOOP.md));**
+- **no per-PR review; at a milestone, hand the product owner the
+  independent-model review prompt ([REVIEW_LOOP.md](REVIEW_LOOP.md)) and
+  answer every finding that comes back;**
 - commit trailer `Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>`;
 - `npm run gates -- --quiet` before pushing (the pre-push hook runs them
   anyway, and prints four PASS lines instead of flooding);

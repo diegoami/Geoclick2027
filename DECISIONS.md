@@ -215,9 +215,22 @@ or amend an entry here as part of that change, not as an afterthought.
   git-triggered build run" no longer produces a live site to check. Never
   trigger a deploy yourself; restarting them is the product owner's call.
 
-## Claude reviews its own PRs (2026-09-23)
+## An independent model reviews at milestones (2026-09-23)
 
-- **Every task PR is reviewed by a fresh Claude subagent**, replacing ChatGPT
+- **Claude works without a per-PR review; at milestones the product owner
+  runs an independent model over the repository** (product owner,
+  2026-09-23, the same day as the entry below it, which it supersedes).
+  Claude hands over a ready-to-paste prompt (docs/REVIEW_LOOP.md) and the
+  findings come back through the product owner. What this buys back is
+  the thing the fresh-Claude loop traded away: a second model's blind
+  spots. What it gives up is a review on every PR; a milestone review sees
+  a batch at once, so a bug can sit on `main` until the next one. PR #23
+  (FT-63) had one fresh-Claude round before the switch.
+
+## Claude reviews its own PRs (2026-09-23, superseded the same day)
+
+- *Superseded by the entry above.* **Every task PR is reviewed by a fresh
+  Claude subagent**, replacing ChatGPT
   GPT-5.6 Luna (high), who had reviewed PRs #10–#21 under opencode. The
   product owner decided it when the implementing model changed to Claude
   Opus 5.5: opencode's `subagent({model: …})` cannot be driven from a Claude

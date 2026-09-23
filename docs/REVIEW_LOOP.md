@@ -1,91 +1,77 @@
-# The review loop — a fresh Claude over GitHub
+# Reviews — an independent model, at milestones
 
-**Standing rule (product owner, 2026-09-21; reviewer changed 2026-09-23).**
-Every task PR gets a review before it merges. The implementer builds and
-opens the PR; a reviewer reviews it and its review is posted on GitHub; the
-implementer replies; the two iterate until they agree. This is in addition
-to — never instead of — the product owner's own merge OK (CLAUDE.md §3).
+**Standing rule (product owner, 2026-09-23).** Claude does its work —
+branches, PRs, gates, local verification — without a per-PR review round.
+At each **milestone** Claude gives the product owner a ready-to-paste
+prompt, and the product owner runs it in an **independent model** (not
+Claude) with access to the repository. The findings come back through the
+product owner, who decides which become tasks. Claude never spawns the
+reviewer itself. The product owner's merge OK (CLAUDE.md §3) is unchanged.
 
-## The two roles
+A milestone is, by default:
 
-| Role | Model | Job | Signature |
-|---|---|---|---|
-| Implementer | Claude Opus 5.5 (the working session) | writes the code, opens the PR, answers findings | `— Claude Opus 5.5 (implementer)` |
-| Reviewer | Claude, as a fresh subagent | reviews the diff; its review is posted on GitHub | `— Claude Opus 5.5 (fresh subagent, reviewer)` |
+- a release candidate, before its `vX.Y.Z` tag; or
+- whenever the product owner asks for one.
 
-**Claude reviews itself** (product owner, 2026-09-23). What keeps that from
-being a rubber stamp is the fresh context: the reviewer is spawned with no
-memory of the implementation, so it sees the diff the way a stranger would,
-not the way its author meant it. What it cannot give is a second model's
-blind spots — see DECISIONS.md, "Claude reviews its own PRs".
+## The prompt
 
-## The loop, per task
-
-1. **Implementer:** branch, code, `npm run gates -- --quiet`, push.
-2. **Implementer:** open the PR (`gh pr create`). The body names the issue
-   (`Fixes #N`), what changed, how it was verified, and any deviation from
-   the plan.
-3. **Reviewer:** read the diff (`gh pr diff <n>`) and write an honest review.
-   Findings are ranked — **blocking** (a correctness or contract problem),
-   **worth doing**, or **nit**. A blocking finding names the file and line
-   and what would make it pass.
-4. **Implementer:** post the review verbatim, then answer every finding in a
-   comment — either the fix is pushed, or why it will not be. No finding is
-   left unaddressed.
-5. **Repeat 3–4** — a new fresh reviewer each round, given the previous
-   review and the reply — until a reviewer states that its findings are
-   resolved or explicitly deferred. Silence is not agreement.
-6. Only then is the PR ready for the product owner's merge OK. The loop does
-   not replace that gate, and a PR is never merged in the same breath as its
-   last re-review.
-
-A finding the implementer declines to fix is settled only when the reviewer
-accepts the reason. If the two cannot agree, both record the disagreement in
-the PR and hand it to the product owner to decide.
-
-## How the reviewer is actually run
-
-From a Claude Code session, with the Agent tool (general-purpose subagent,
-no prior context):
+Fill in the three placeholders and hand it over whole, in a fenced block:
 
 ```
-Agent({
-  description: "Review PR #<n>",
-  prompt: "You are the reviewer on PR #<n> of diegoami/Geoclick2027. You did
-           not write it. Read CLAUDE.md §0 (context budget), the linked issue
-           and the diff (gh pr diff <n>). Do not trust the PR body: read the
-           cited lines and run the relevant tests yourself. Rank findings
-           blocking / worth doing / nit. Write the review, in Markdown, to
-           <scratchpad>/review-<n>-<round>.md with the Write tool and sign it
-           '— Claude Opus 5.5 (fresh subagent, reviewer)'. Do not post it."
-})
+You are an independent reviewer of the Geoclick repository
+(https://github.com/diegoami/Geoclick2027). You did not write any of it.
+
+Scope: the changes from <BASE> to <HEAD> (`git diff --stat <BASE>..<HEAD>`),
+which delivered: <ONE LINE PER TASK/PR>. Review the rest of the repository
+only where those changes touch it.
+
+Before anything else, read CLAUDE.md section 0: it lists the generated and
+binary paths you must not read (map data, build output, lockfiles), and
+the "quiet terminal" commands in section 2.
+
+Do not trust PR descriptions, commit messages or docs: read the cited
+lines and run the checks yourself (`npm ci`, then `npm run gates -- --quiet`
+for typecheck, tests, lint and build).
+
+Look for: correctness bugs and unhandled edge cases; places where the code
+and DECISIONS.md / ARCHITECTURE.md disagree; missing or vacuous tests;
+performance on the paths that run per frame or per map move; anything that
+breaks offline use (desktop and Android builds must work with no network).
+
+Rank each finding BLOCKING (a correctness or contract problem), WORTH DOING,
+or NIT. For each give file:line, a concrete failure scenario (input or state
+-> wrong result), and what would fix it. Say which findings you verified by
+running something and which by reading only. Do not modify files, commit or
+push. Output one Markdown report.
 ```
 
-The implementer then posts that file unchanged:
+The report comes back to Claude from the product owner. Answer every
+finding — fixed (with the commit), or why not — the same way a PR review
+used to be answered.
 
-    gh pr comment <n> --body-file <scratchpad>/review-<n>-<round>.md
+## Before: the per-PR loops (superseded)
 
-**Never paraphrase away a finding** — post it as written, then answer it.
+- **2026-09-21 to 2026-09-22:** every task PR (#10–#21) was reviewed by
+  ChatGPT GPT-5.6 Luna (high), spawned as an opencode subagent, while
+  DeepSeek V4.1 Flash implemented.
+- **2026-09-23, one PR:** a fresh Claude subagent reviewed PR #23 (FT-63)
+  once, its review posted verbatim and answered, before the product owner
+  replaced per-PR reviews with milestone reviews by an independent model.
+  See DECISIONS.md, "An independent model reviews at milestones".
 
-### Encoding: write comment bodies as UTF-8 without a BOM
+## Encoding: write GitHub comment bodies as UTF-8 without a BOM
 
-Write every comment body to a file with the Write tool (or a Node script)
-and pass it with `--body-file`. Never build it with PowerShell `Out-File`,
-`Set-Content` or a here-string piped to `gh`: on PRs #19–#21 that put a BOM
-in front of the comments and turned `—` into `?` in the signatures, which
-breaks a search for who said what.
+Still applies whenever Claude posts to GitHub (e.g. answering a milestone
+review on a PR). Write the body to a file with the Write tool (or a Node
+script) and pass it with `--body-file`. Never build it with PowerShell
+`Out-File`, `Set-Content` or a here-string piped to `gh`: on PRs #19–#21
+that put a BOM in front of the comments and turned `—` into `?` in the
+signatures, which breaks a search for who said what.
 
-## History
+## Why an independent model
 
-PRs #10–#21 (FT-52 to FT-65, 2026-09-21 to 2026-09-22) were implemented by
-DeepSeek V4.1 Flash and reviewed by ChatGPT GPT-5.6 Luna (high), spawned as
-an opencode subagent; their comments are signed with those names. Both ran
-under opencode, which a Claude Code session cannot drive.
-
-## Why this exists
-
-The eight v0.9.4 issues were found by exactly this shape of review, and the
-earlier review that produced them had one central fact backwards
-(HANDOVER.md). A reviewer on every PR catches that class of error before it
-reaches `main`, while independent verification — running the gates, reading
-the cited lines — stays the implementer's job too.
+The eight v0.9.4 issues were found by an outside review, and the earlier
+review that produced them had one central fact backwards (HANDOVER.md). A
+different model brings different blind spots, which a fresh Claude context
+cannot; independent verification — running the gates, reading the cited
+lines — stays Claude's job on every task regardless.
