@@ -239,6 +239,6 @@ The FT-48 gate is already passed. **→ Release `v0.10.0`** per
 | FT-60 | **merged**  | `8b75e1e` | finite level-0 hand, size 10; tutorial slips dealt first (PR #22) |
 | FT-61 | **merged**  | `6b794b8` | a slip keeps its drag on a tablet; confirm on device at release (PR #21) |
 | FT-62 | **merged**  | `b2f0c8b` | the fact card only on a name not placed (PR #19) |
-| FT-63 | not started | —     | labels go where there is the most room   |
+| FT-63 | **in review** | —   | labels go where there is the most room: 8 spots, scored; every dot an obstacle |
 | FT-64 | not started | —     | spike: names stretched along the region  |
 | FT-65 | **merged**  | `f3b4421` | map card progress bar, hidden at zero (PR #20) |

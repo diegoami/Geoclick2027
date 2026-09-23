@@ -133,9 +133,9 @@ describe('choosePlacements', () => {
 			{ priority: 1, candidates: [at(0, 0), at(100, 0)] },
 			{ priority: 0, candidates: [at(10, 4), at(200, 0)] }
 		]);
-		expect(placements[0]).toEqual({ visible: true, offset: [0, 0] });
+		expect(placements[0]).toEqual({ visible: true, offset: [0, 0], index: 0 });
 		// Its first spot was taken, so it took the next one instead of going.
-		expect(placements[1]).toEqual({ visible: true, offset: [200, 0] });
+		expect(placements[1]).toEqual({ visible: true, offset: [200, 0], index: 1 });
 	});
 
 	it('drops a label only once every spot it has is taken', () => {
@@ -164,5 +164,95 @@ describe('choosePlacements', () => {
 			{ priority: 0, candidates: [at(0, 0, 0, 0)] }
 		]);
 		expect(placements.map((p) => p.visible)).toEqual([true, true]);
+	});
+});
+
+describe('choosePlacements, best fit (FT-63)', () => {
+	// A town at (100, 100), its name 60 x 18 and 14 px off the dot: the
+	// spots candidatesFor gives it on the right and on the left.
+	const spot = (dx: number, dy = 0, x = 100, y = 100) => ({
+		offset: [dx, dy] as [number, number],
+		rect: { left: x + dx - 30, right: x + dx + 30, top: y + dy - 9, bottom: y + dy + 9 }
+	});
+	const right = spot(44);
+	const left = spot(-44);
+	// A name already placed, `distance` px to the right of the right-hand spot.
+	const neighbour = (distance: number) => ({
+		priority: 9,
+		candidates: [{ offset: [0, 0] as [number, number], rect: rect(174 + distance, 91) }]
+	});
+	const town = { x: 100, y: 100 };
+
+	it('takes the spot with more room, not the first one free', () => {
+		const placements = choosePlacements([neighbour(4), { priority: 1, candidates: [right, left] }]);
+		// The right-hand spot was free, but 4 px from the next name.
+		expect(placements[1]).toMatchObject({ visible: true, index: 1 });
+	});
+
+	it("keeps a name off another town's dot", () => {
+		const placements = choosePlacements([{ priority: 1, candidates: [right, left] }], {
+			dots: [town, { x: 150, y: 100 }]
+		});
+		// Its own dot doesn't count; Essen's, to the right, does.
+		expect(placements[0]).toMatchObject({ visible: true, index: 1 });
+	});
+
+	it('still draws a name when every spot it has covers a dot', () => {
+		const placements = choosePlacements([{ priority: 1, candidates: [right, left] }], {
+			dots: [town, { x: 150, y: 100 }, { x: 50, y: 100 }]
+		});
+		expect(placements[0]).toMatchObject({ visible: true, index: 0 });
+	});
+
+	it('keeps a name on the map rather than off its edge', () => {
+		const placements = choosePlacements([{ priority: 1, candidates: [right, left] }], {
+			bounds: { left: 0, top: 0, right: 160, bottom: 300 }
+		});
+		expect(placements[0].index).toBe(1);
+	});
+
+	it('keeps a name where it is against a spot only a little better', () => {
+		const label = { priority: 1, candidates: [right, left] };
+		// 10 px of room on the right, 12 on the left: the left wins from
+		// scratch, but not from a name that already sits on the right.
+		expect(choosePlacements([neighbour(10), label])[1].index).toBe(1);
+		expect(choosePlacements([neighbour(10), { ...label, current: 0 }])[1].index).toBe(0);
+	});
+
+	it('moves nothing when the whole map pans', () => {
+		const layout = (dx: number, dy: number) => {
+			const shift = (c: { offset: [number, number]; rect: ReturnType<typeof rect> }) => ({
+				offset: c.offset,
+				rect: {
+					left: c.rect.left + dx,
+					right: c.rect.right + dx,
+					top: c.rect.top + dy,
+					bottom: c.rect.bottom + dy
+				}
+			});
+			const labels = [
+				neighbour(6),
+				{ priority: 2, candidates: [right, left, spot(0, -23), spot(0, 23)] },
+				{ priority: 1, candidates: [spot(44, 0, 160, 120), spot(-44, 0, 160, 120)] }
+			];
+			const dots = [town, { x: 160, y: 120 }, { x: 60, y: 140 }];
+			return choosePlacements(
+				labels.map((label, i) => ({
+					...label,
+					candidates: label.candidates.map(shift),
+					// Where each sat before the pan: a pan must not unseat them.
+					current: [0, 1, 0][i]
+				})),
+				{
+					dots: dots.map((d) => ({ x: d.x + dx, y: d.y + dy })),
+					// Far enough out that the pan brings no name near an edge.
+					bounds: { left: -1000, top: -1000, right: 2000, bottom: 2000 }
+				}
+			).map((p) => p.index);
+		};
+		const still = layout(0, 0);
+		expect(layout(1, 0)).toEqual(still);
+		expect(layout(0.4, -1)).toEqual(still);
+		expect(layout(-37, 12)).toEqual(still);
 	});
 });

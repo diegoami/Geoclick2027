@@ -1725,11 +1725,46 @@ answers:
   line above or below it; further than that and it would start to look
   like the neighbour's name. A town's name never sits on its dot - the
   player has to see the dot they are aiming at, especially while dragging
-  a slip onto it - so it takes the first free side, right, left, above,
-  below, at a fixed clearance from the dot's middle. Both come out of the
-  same pass: a label offers the spots it would accept, best first, and
-  gets the first one that is free. On Italy - Towns this is the
-  difference between 26 names and all 40.
+  a slip onto it - so it goes beside it, at a fixed clearance from the
+  dot's middle. Both come out of the same pass: a label offers the spots
+  it would accept, and gets the best one that is free. On Italy - Towns
+  this is the difference between 26 names and all 40.
+- **"Best" is a score, not the first free spot** (FT-63, amends FT-24,
+  which took a town's first free side - right, left, above, below - and
+  so put Duisburg's name over Essen's dot with open space to its west).
+  A town's name now has eight spots, the four sides and the four
+  corners, and every free one is scored in pixels: room to the nearest
+  name or dot (capped at 12 px), minus twice how far it strays from its
+  place, minus 100 for each other town's dot it would cover, minus 30
+  times the share of it off the map's edge, minus 0.5 per step down the
+  view's own order (the tie-break, so a name with room on both sides
+  still goes right). Every town's dot counts, named or not - in a quiz,
+  the unsolved ones too. A dot is a cost, not a wall: a name that can
+  only go over a dot still goes there, so a dot never hides a name. The
+  pass is still greedy, though, so a more important name taking its best
+  spot can take a lesser one's only spot: on 2 000 random 40-town
+  layouts the reviewer drew 38.9 names on average against FT-24's 36.0,
+  but 23 of those layouts drew fewer. Straying counts double so that a
+  region's one-line step can never win back its cost in room: a region's
+  name still leaves its middle only when the middle is taken. What sits
+  *under* a name - water, a region border - is not scored: the pass
+  knows the labels and the dots, not the map's paint. The map's edge is
+  the whole container, map bar included, so a name under the bar counts
+  as on the map.
+- **A pan moves only the names at the map's edge** (FT-63). Every other
+  term is relative to the labels and dots, so a pan gives the same
+  answer - provided every position comes from the map's projection. A
+  label's place used to be read back from the DOM, which MapLibre rounds
+  to a whole pixel; against unrounded dots that was enough to flip
+  Hannover across its dot on a half-pixel pan. It now comes from
+  `map.project` of the popup's own place, the same as the dots, on the
+  world copy nearest the view. While the map is moving - between MapLibre's `move` and
+  `moveend` - a name keeps its spot against one up to 4 px better (the
+  stay bonus), so the pixel rounding of a pan or a zoom's animation
+  doesn't flicker names side to side. On a still map every pass places
+  each name afresh: a bonus kept for good (round 1 of PR #23) left a name
+  pushed aside by a neighbour's hover, or by the edge, on its second-best
+  side long after the neighbour or the edge had gone.
 - **Which name gives way**: the smaller region's. Area (from each
   target's bbox, corrected for latitude) decides between two names that
   want the same place, the way an atlas keeps the big name and lets the

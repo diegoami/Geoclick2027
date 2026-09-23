@@ -72,6 +72,7 @@ function fakeMap() {
 		},
 		off: (type: string, fn: () => void) => listeners.get(type)?.delete(fn),
 		moved: () => listeners.get('move')?.forEach((fn) => fn()),
+		stopped: () => listeners.get('moveend')?.forEach((fn) => fn()),
 		listenerCount: () => [...listeners.values()].reduce((n, set) => n + set.size, 0)
 	};
 }
@@ -245,5 +246,83 @@ describe('where a label goes (FT-24)', () => {
 		enableLabelCollision(fakeMap(), container);
 		await nextFrame();
 		expect(drawn(container)).not.toContain('Alessandria');
+	});
+
+	it("moves a town name off a neighbour's dot, to where there is room (FT-63)", async () => {
+		// Duisburg, with Essen's dot 40 px to its east and no name of its own
+		// yet - the quiz hasn't reached it.
+		const container = placedFixture([
+			{ name: 'Duisburg', x: 300, y: 200, beside: DOT_CLEARANCE_PX }
+		]);
+		// Off the page's corner, so the dots (container-relative, like
+		// map.project) and the labels (page-relative) only meet if the pass
+		// converts one to the other.
+		container.style.left = '100px';
+		container.style.top = '50px';
+		enableLabelCollision(fakeMap(), container, {
+			dots: () => [
+				{ x: 300, y: 200 },
+				{ x: 340, y: 200 }
+			]
+		});
+		await nextFrame();
+		expect(drawn(container)).toEqual(['Duisburg']);
+		// West of its dot, the way the first free side never put it.
+		expect(boxOf(container, 'Duisburg').right).toBeLessThanOrEqual(
+			100 + 300 - DOT_CLEARANCE_PX + 0.5
+		);
+	});
+
+	it('keeps a name where it is while the map moves, and places it afresh once it stops (FT-63)', async () => {
+		const container = placedFixture([
+			{ name: 'Caserta', x: 360, y: 200, priority: 5 },
+			{ name: 'Napoli', x: 300, y: 200, priority: 1, beside: DOT_CLEARANCE_PX }
+		]);
+		const map = fakeMap();
+		enableLabelCollision(map, container);
+		await nextFrame();
+		const napoliIsLeft = () => boxOf(container, 'Napoli').right <= 300 - DOT_CLEARANCE_PX + 0.5;
+		expect(napoliIsLeft()).toBe(true);
+
+		// Caserta moves away mid-gesture, freeing the right-hand side: while the
+		// map is still moving, Napoli stays put rather than flicker across.
+		const caserta = container.querySelector<HTMLElement>('.maplibregl-popup')!;
+		caserta.style.left = '560px';
+		map.moved();
+		await nextFrame();
+		expect(napoliIsLeft()).toBe(true);
+
+		// Once the map stops, it takes its favourite spot again.
+		map.stopped();
+		await nextFrame();
+		expect(boxOf(container, 'Napoli').left).toBeGreaterThanOrEqual(300 + DOT_CLEARANCE_PX - 0.5);
+	});
+
+	it('puts a name back once the neighbour that pushed it aside shrinks again (FT-63)', async () => {
+		const container = placedFixture([
+			{ name: 'Napoli', x: 300, y: 200, priority: 1, beside: DOT_CLEARANCE_PX },
+			{ name: 'Caserta', x: 0, y: 200, priority: 0 }
+		]);
+		// Caserta 13 px clear of Napoli's right-hand spot: more than the room
+		// that counts, so Napoli has no reason to leave its favourite side...
+		const [, caserta] = container.querySelectorAll<HTMLElement>('.maplibregl-popup');
+		const width = caserta.getBoundingClientRect().width;
+		const napoliRight = 300 + DOT_CLEARANCE_PX + boxOf(container, 'Napoli').width;
+		caserta.style.left = `${napoliRight + 13 + width / 2}px`;
+		enableLabelCollision(fakeMap(), container);
+		await nextFrame();
+		const napoliIsRight = () => boxOf(container, 'Napoli').left >= 300 + DOT_CLEARANCE_PX - 0.5;
+		expect(napoliIsRight()).toBe(true);
+
+		// ...until Caserta is magnified and grows into it (FT-02/FT-03).
+		const content = caserta.querySelector('.maplibregl-popup-content')!;
+		content.classList.add(HOVERED_CLASS);
+		await new Promise((r) => setTimeout(r, 400));
+		expect(napoliIsRight()).toBe(false);
+
+		// The hover ends: Napoli goes back, with no map move to prompt it.
+		content.classList.remove(HOVERED_CLASS);
+		await new Promise((r) => setTimeout(r, 400));
+		expect(napoliIsRight()).toBe(true);
 	});
 });
