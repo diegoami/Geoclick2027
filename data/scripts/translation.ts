@@ -56,7 +56,7 @@ export function missingTranslations(raw: Record<string, unknown>, lang: Language
  * becomes a colon or a comma, the apostrophe is the typographic one, and a
  * sentence left in English is not a translation.
  */
-function houseStyle(lang: Language, given: string[], en: string[]): string | undefined {
+export function houseStyle(lang: Language, given: string[], en: string[]): string | undefined {
 	if (lang !== 'it') return undefined;
 	for (const [n, s] of given.entries()) {
 		if (s.includes('—')) return `sentence ${n + 1} keeps an em dash`;

@@ -1,7 +1,13 @@
 // Adding a language to an authored country file (FT-50). Imported from
 // data/scripts the way authoredHooks.test.ts is.
+import { readFileSync, readdirSync } from 'node:fs';
+import path from 'node:path';
 import { describe, expect, it } from 'vitest';
-import { mergeTranslations, missingTranslations } from '../../../data/scripts/translation';
+import {
+	houseStyle,
+	mergeTranslations,
+	missingTranslations
+} from '../../../data/scripts/translation';
 
 const file = () => ({
 	_note: ['commentary, not a place'],
@@ -66,5 +72,36 @@ describe('mergeTranslations', () => {
 	it('wants a split patch for a place split by kind', () => {
 		const { problems } = mergeTranslations(file(), 'it', { jilin: ['Provincia.'] });
 		expect(problems).toEqual(['jilin: split by kind in the file, so the patch must be too']);
+	});
+});
+
+// FT-67: houseStyle runs when a translation is merged, but Italy was
+// translated before the check existed and kept an em dash through a review.
+// Every Italian sentence already authored is held to it here, so none can
+// slip past again, whenever and however it was written.
+describe('the Italian house style holds for every authored sentence', () => {
+	const factsDir = path.resolve(__dirname, '../../../data/facts');
+	const files = readdirSync(factsDir).filter((f) => f.endsWith('.json'));
+	const isRecord = (v: unknown): v is Record<string, unknown> =>
+		!!v && typeof v === 'object' && !Array.isArray(v);
+
+	it('finds all the country files', () => {
+		expect(files.length).toBeGreaterThanOrEqual(28);
+	});
+
+	it.each(files)('%s', (file) => {
+		const raw = JSON.parse(readFileSync(path.join(factsDir, file), 'utf8'));
+		const problems: string[] = [];
+		const check = (where: string, value: unknown) => {
+			if (!isRecord(value) || !Array.isArray(value.it)) return;
+			const problem = houseStyle('it', value.it as string[], (value.en ?? []) as string[]);
+			if (problem) problems.push(`${where}: ${problem}`);
+		};
+		for (const [id, value] of Object.entries(raw)) {
+			if (id.startsWith('_') || !isRecord(value)) continue;
+			if ('en' in value || 'it' in value) check(id, value);
+			else for (const [kind, byKind] of Object.entries(value)) check(`${id}.${kind}`, byKind);
+		}
+		expect(problems).toEqual([]);
 	});
 });
