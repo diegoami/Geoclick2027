@@ -12,7 +12,8 @@
 	import MapNav from './MapNav.svelte';
 	import { t, tPlural } from './i18n.svelte';
 	import { mapDisplayName } from './mapCatalog';
-	import { tutorialDrop, tutorialQuizComplete } from './tutorial.svelte';
+	import { tutorialDrop, tutorialQuizComplete, tutorialState } from './tutorial.svelte';
+	import { tutorialSlipIds } from './tutorialMachine';
 	import { DOT_CLEARANCE_PX, registerLabel } from './labelCollision';
 	import { forgetRound, rememberRound, roundInProgress } from './quizRound';
 	import FactCard from './FactCard.svelte';
@@ -93,9 +94,11 @@
 		session ? session.items.filter((i) => i.status === 'pending').map((i) => i.target.id) : [];
 
 	/** Draw or top up the names on offer. Called when a session starts and
-	 * after every resolved drop. */
+	 * after every resolved drop. While a tutorial runs, the slips it spotlights
+	 * are dealt first, or "Try Sicilia" could point at an empty tray (FT-60). */
 	function dealHand() {
-		hand = refillHand(pendingIds(), hand, handSize(level));
+		const preferred = tutorialState().status === 'idle' ? [] : tutorialSlipIds();
+		hand = refillHand(pendingIds(), hand, handSize(level), Math.random, preferred);
 	}
 
 	/** The map's level from the clean streaks of its targets; a target with no
@@ -121,8 +124,9 @@
 	let trayMaxPx = $state(500); // replaced once window is available (see onMount)
 	const TRAY_MAX_FRACTION = 0.7; // drag ceiling, as a fraction of the viewport
 	// Caps the auto-sized default (which otherwise fits every row with no
-	// scrolling) so a map with hundreds of targets - e.g. italy-provinces -
-	// doesn't default to covering most of the map.
+	// scrolling) so a tray of long names on a phone doesn't default to
+	// covering most of the map. Written when a new map dealt every name
+	// (110 slips on italy-provinces); the hand is ten at most since FT-60.
 	const TRAY_DEFAULT_CAP_FRACTION = 0.3;
 	// Not reactive - just bookkeeping for the drag gesture itself, same
 	// reasoning as hoveredName below.

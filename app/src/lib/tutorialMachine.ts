@@ -183,6 +183,16 @@ export const STEPS: Step[] = [
 	}
 ];
 
+/** The slips the tutorial spotlights in the quiz, as target ids ('sicilia',
+ * 'sardegna'). QuizView deals them into the first hand while a tutorial runs,
+ * because a hand of ten (FT-60) no longer holds every region. */
+export function tutorialSlipIds(): string[] {
+	return STEPS.flatMap((step) => {
+		const spot = step.highlight.quiz?.spot;
+		return spot?.startsWith('slip-') ? [spot.slice('slip-'.length)] : [];
+	});
+}
+
 export const NUMBERED_STEPS = STEPS.filter((s) => s.numbered).length;
 
 /** Actions the player has done at least once in this run. */

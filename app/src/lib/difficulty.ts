@@ -54,16 +54,24 @@ export function handSize(level: Level): number {
  * on offer, topped back up to `size` with a random pick of the rest. Keeping
  * the survivors means a name the player has been staring at doesn't vanish
  * mid-thought.
+ *
+ * `preferred` names, where still pending, are dealt ahead of the random pick:
+ * the tutorial spotlights Sicilia and Sardegna, and a hand of ten from Italy's
+ * twenty regions would otherwise leave each out half the time (FT-60).
  */
 export function refillHand(
 	pendingIds: readonly string[],
 	hand: readonly string[],
 	size: number,
-	random: () => number = Math.random
+	random: () => number = Math.random,
+	preferred: readonly string[] = []
 ): string[] {
 	const pending = new Set(pendingIds);
 	const kept = [...new Set(hand)].filter((id) => pending.has(id));
 	if (kept.length >= size) return kept.slice(0, size);
+	for (const id of preferred) {
+		if (kept.length < size && pending.has(id) && !kept.includes(id)) kept.push(id);
+	}
 	const pool = pendingIds.filter((id) => !kept.includes(id));
 	for (let i = pool.length - 1; i > 0; i--) {
 		const j = Math.floor(random() * (i + 1));

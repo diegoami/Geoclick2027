@@ -1772,7 +1772,9 @@ answers:
   85 % one. **Amended 2026-09-23 (FT-60):** under 25 % was *every name*
   until the product owner capped it at ten — a new map laid its whole deck
   in the tray (49 slips on `germany-towns-100k`, 110 on `italy-provinces`),
-  which on a tablet is a wall of slips rather than a hand. `app/src/lib/difficulty.ts` holds the thresholds and the
+  which on a tablet is a wall of slips rather than a hand. While a tutorial
+  runs, the two slips it spotlights (Sicilia, Sardegna) are dealt first.
+  `app/src/lib/difficulty.ts` holds the thresholds and the
   drawing, pure and unit-tested; QuizView deals at the start of a round and
   tops the hand up after every resolved drop.
 - **Why:** with every remaining name in front of the player, the end of a

@@ -7,6 +7,7 @@ import {
 	showsNext,
 	stepNumber,
 	transition,
+	tutorialSlipIds,
 	type Place,
 	type TutorialEvent,
 	type TutorialState
@@ -292,5 +293,11 @@ describe('placeOf', () => {
 	it('treats any other map or page as elsewhere', () => {
 		expect(placeOf('/map/usa-states/quiz', '', 'italy-regions')).toBe('elsewhere');
 		expect(placeOf('/map/italy-regions/editor', '', 'italy-regions')).toBe('elsewhere');
+	});
+});
+
+describe('tutorialSlipIds', () => {
+	it('names the slips the quiz steps spotlight (FT-60)', () => {
+		expect(tutorialSlipIds()).toEqual(['sicilia', 'sardegna']);
 	});
 });
