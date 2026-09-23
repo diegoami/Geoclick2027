@@ -1,11 +1,11 @@
 # Translating Geoclick's name-facts into Italian (FT-50)
 
 > The brief each translator is given, one country file at a time
-> ([PLAN_V0.10.md](PLAN_V0.10.md), FT-50). Workflow: `npm run translate-facts
--- --country=<c> --lang=it --extract=<c>.en.json`, translate into
-> `<c>.it.json` following this file, `--merge=<c>.it.json` (it rejects wrong
-> counts, unknown places, a leftover em dash or a straight apostrophe), then
-> `npm run refresh-facts-hooks` and commit the country on its own.
+> ([PLAN_V0.10.md](PLAN_V0.10.md), FT-50). The workflow: extract the English
+> with `npm run translate-facts -- --country=<c> --lang=it --extract=<file>`,
+> translate it following this file, merge with `--merge=<file>` (it rejects
+> wrong counts, unknown places, a leftover em dash or a straight apostrophe),
+> then run `npm run refresh-facts-hooks` and commit the country on its own.
 
 Geoclick is a geography game. When a player taps a place on the map, a card
 shows ONE of these sentences, alone, under a short derived line (position,
