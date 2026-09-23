@@ -204,8 +204,11 @@
 .geoclick-stretched text.retention-seen {
 	opacity: 0.45;
 }
+/* Darker than the accent (#34): at 13 px the accent's 4.2:1 on white is
+ * under WCAG's 4.5:1; this is about 5.8:1. The fallback below uses it too, so
+ * a name asked for is one colour whichever way it is drawn. */
 .geoclick-stretched text.retention-asked {
-	fill: rgb(181, 105, 31);
+	fill: rgb(150, 85, 20);
 }
 /* Magnified (FT-02/FT-03): a stretched name is already as big as its region
  * allows, so it comes forward - full strength, a touch larger - rather than
@@ -214,6 +217,41 @@
 	opacity: 1;
 	transform: scale(1.08);
 }
+/* A region's name that does not fit along its region (#34, Explore only): the
+ * stretched name's smaller sibling - the same serif capitals, ink and halo,
+ * set straight - rather than a box in another typeface, so the two read as one
+ * system at two sizes, as an atlas sets big and small territories. The tier
+ * sizes and strengths above still apply. Town names keep the pill beside
+ * their dot (FT-24), and Quiz and Overview labels keep their boxes. Upright
+ * serif, where terrain names are italic sans, keeps the two apart. */
+.geoclick-retention.geoclick-region-name .maplibregl-popup-content {
+	padding: 0;
+	border-radius: 0;
+	background: none;
+	color: rgba(31, 61, 42, 0.9);
+	font-family: Georgia, 'Times New Roman', serif;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	text-shadow:
+		0 0 2px rgba(255, 255, 255, 0.9),
+		0 0 3px rgba(255, 255, 255, 0.8);
+}
+.geoclick-retention.geoclick-region-name.retention-asked .maplibregl-popup-content {
+	background: none;
+	color: rgb(150, 85, 20);
+}
+/* Magnified, it grows like any name; with no box to darken, a wider halo
+ * keeps it clear of the map under it. */
+.geoclick-retention.geoclick-region-name .maplibregl-popup-content:is(.is-hovered, .is-magnified) {
+	padding: 0;
+	background: none;
+	text-shadow:
+		0 0 2px #ffffff,
+		0 0 4px #ffffff,
+		0 0 6px rgba(255, 255, 255, 0.8);
+}
+
 /* The popup a stretched name stands in for: kept, so the name can fall back
  * to it the moment the stretched one stops fitting, but not drawn. */
 .maplibregl-popup:has(> .maplibregl-popup-content.is-stretched) {
