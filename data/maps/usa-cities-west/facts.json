@@ -6,11 +6,18 @@
 		"region": "Washington",
 		"coastal": true,
 		"position": "north-west",
-		"hooks": [
-			"Named for the son of an investor, a boy who was eating Everett apples when the question came up.",
-			"Boeing’s factory here is the largest building in the world by volume.",
-			"It builds the 747, 767, 777 and 787, and has its own fire department and clinics."
-		]
+		"hooks": {
+			"en": [
+				"Named for Everett Colby, the young son of one of its investors.",
+				"Boeing’s factory here is the largest building in the world by volume.",
+				"It has built the 747, 767, 777 and 787, and has its own fire department and clinics."
+			],
+			"it": [
+				"Prende il nome da Everett Colby, il giovane figlio di uno dei suoi investitori.",
+				"La fabbrica Boeing di qui è l’edificio più grande del mondo per volume.",
+				"Vi si sono costruiti il 747, il 767, il 777 e il 787, e ha vigili del fuoco e ambulatori propri."
+			]
+		}
 	},
 	"spokane": {
 		"kind": "city",
@@ -19,11 +26,18 @@
 		"region": "Washington",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"From the Spokane people, whose name means \"children of the sun\".",
-			"It hosted the 1974 World’s Fair, the smallest city ever to do so, and turned its railyards into a riverfront park.",
-			"Father’s Day was invented here in 1910 by a woman whose father raised six children alone."
-		]
+		"hooks": {
+			"en": [
+				"From the Spokane people, whose name means \"children of the sun\".",
+				"It hosted the 1974 World’s Fair, the smallest city ever to do so, and turned its railyards into a riverfront park.",
+				"Father’s Day was invented here in 1910 by a woman whose father raised six children alone."
+			],
+			"it": [
+				"Dal popolo degli Spokane, il cui nome significa \"figli del sole\".",
+				"Ospitò l’Esposizione universale del 1974, la città più piccola che l’abbia mai fatto, e trasformò i suoi scali ferroviari in un parco sul fiume.",
+				"La festa del papà fu inventata qui nel 1910 da una donna il cui padre aveva cresciuto sei figli da solo."
+			]
+		}
 	},
 	"seattle": {
 		"kind": "city",
@@ -33,11 +47,18 @@
 		"region": "Washington",
 		"coastal": true,
 		"position": "north-west",
-		"hooks": [
-			"Named for Chief Si'ahl of the Duwamish and Suquamish, who was friendly to the settlers; the city anglicised his name and he is buried across the sound from it.",
-			"Boeing, Microsoft, Amazon and Starbucks all started here.",
-			"Its Pike Place Market has run since 1907, and the city regrades of 1898–1930 washed entire hills into the bay."
-		]
+		"hooks": {
+			"en": [
+				"Named for Chief Si'ahl of the Duwamish and Suquamish, who was friendly to the settlers; the city anglicised his name and he is buried across the sound from it.",
+				"Boeing, Microsoft, Amazon and Starbucks all started here.",
+				"Its Pike Place Market has run since 1907, and the city regrades of 1898–1930 washed entire hills into the bay."
+			],
+			"it": [
+				"Prende il nome dal capo Si’ahl dei Duwamish e dei Suquamish, amico dei coloni; la città ne anglicizzò il nome, e lui è sepolto sulla sponda opposta del Puget Sound.",
+				"Boeing, Microsoft, Amazon e Starbucks sono nate tutte qui.",
+				"Il suo Pike Place Market è aperto dal 1907, e tra il 1898 e il 1930 i lavori di livellamento dilavarono nella baia intere colline."
+			]
+		}
 	},
 	"tacoma": {
 		"kind": "city",
@@ -46,11 +67,18 @@
 		"region": "Washington",
 		"coastal": true,
 		"position": "north-west",
-		"hooks": [
-			"From the Lushootseed name for Mount Rainier, Tahoma, meaning \"the mother of waters\".",
-			"Its 1940 suspension bridge, Galloping Gertie, twisted itself apart in the wind four months after opening.",
-			"The film of that collapse is shown in engineering courses worldwide."
-		]
+		"hooks": {
+			"en": [
+				"From the Lushootseed name for Mount Rainier, Tahoma, meaning \"the mother of waters\".",
+				"Its 1940 suspension bridge, Galloping Gertie, twisted itself apart in the wind four months after opening.",
+				"The film of that collapse is shown in engineering courses worldwide."
+			],
+			"it": [
+				"Dal nome lushootseed del monte Rainier, Tahoma, che significa \"la madre delle acque\".",
+				"Il suo ponte sospeso del 1940, Galloping Gertie, si torse fino a spezzarsi sotto il vento quattro mesi dopo l’inaugurazione.",
+				"Il filmato di quel crollo viene proiettato nei corsi di ingegneria di tutto il mondo."
+			]
+		}
 	},
 	"vancouver": {
 		"kind": "city",
@@ -59,11 +87,18 @@
 		"region": "Washington",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"Named for Captain George Vancouver — this is the Washington one, which is older than the Canadian city.",
-			"Fort Vancouver here was the headquarters of the Hudson’s Bay Company west of the Rockies.",
-			"It sits across the Columbia from Portland, and its residents shop there to avoid sales tax."
-		]
+		"hooks": {
+			"en": [
+				"Named for Captain George Vancouver — this is the Washington one, which is older than the Canadian city.",
+				"Fort Vancouver here was the headquarters of the Hudson’s Bay Company west of the Rockies.",
+				"It sits across the Columbia from Portland, and its residents shop there to avoid sales tax."
+			],
+			"it": [
+				"Prende il nome dal capitano George Vancouver: questa è quella dello stato di Washington, più antica della città canadese.",
+				"Fort Vancouver, qui, era il quartier generale della Compagnia della Baia di Hudson a ovest delle Montagne Rocciose.",
+				"Sta di fronte a Portland, sull’altra sponda del Columbia, e i suoi abitanti vanno a fare acquisti lì per evitare l’imposta sulle vendite."
+			]
+		}
 	},
 	"portland": {
 		"kind": "city",
@@ -73,11 +108,18 @@
 		"region": "Oregon",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"Decided by a coin toss in 1845: two founders wanted Boston and Portland after their home towns, and the Maine man won two throws out of three.",
-			"The losing penny survives and is on display in the city's historical society.",
-			"Powell’s City of Books fills a whole block and is the largest independent bookshop in the world."
-		]
+		"hooks": {
+			"en": [
+				"Decided by a coin toss in 1845: two founders wanted Boston and Portland after their home towns, and the Maine man won two throws out of three.",
+				"The losing penny survives and is on display in the city's historical society.",
+				"Powell’s City of Books fills a whole block and is the largest independent bookshop in the world."
+			],
+			"it": [
+				"Decisa a testa o croce nel 1845: due fondatori volevano chiamarla Boston e Portland come le loro città d’origine, e l’uomo del Maine vinse due lanci su tre.",
+				"Il penny che fece perdere Boston esiste ancora ed è esposto presso la società storica della città.",
+				"Powell’s City of Books occupa un intero isolato ed è la più grande libreria indipendente del mondo."
+			]
+		}
 	},
 	"salem": {
 		"kind": "city",
@@ -86,11 +128,18 @@
 		"region": "Oregon",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"From Hebrew shalom, peace — this is the Oregon capital, named by missionaries.",
-			"The Oregon Trail ended in its valley, which is why the state’s settlement began there.",
-			"Its capitol is topped not by a dome but by a gilded pioneer with an axe."
-		]
+		"hooks": {
+			"en": [
+				"From Hebrew shalom, peace — this is the Oregon capital, named by missionaries.",
+				"The Oregon Trail ended in its valley, which is why the state’s settlement began there.",
+				"Its capitol is topped not by a dome but by a gilded pioneer with an axe."
+			],
+			"it": [
+				"Dall’ebraico shalom, \"pace\": questa è la capitale dell’Oregon, battezzata dai missionari.",
+				"L’Oregon Trail finiva nella sua valle, ed è per questo che il popolamento dello stato cominciò lì.",
+				"Il suo Campidoglio non è coronato da una cupola ma da un pioniere dorato con l’ascia."
+			]
+		}
 	},
 	"eugene": {
 		"kind": "city",
@@ -99,11 +148,18 @@
 		"region": "Oregon",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"Named for Eugene Skinner, who claimed the land in 1846.",
-			"Nike began here when a track coach poured rubber into his wife’s waffle iron to make a sole.",
-			"It is called Track Town USA and has hosted the American Olympic trials repeatedly."
-		]
+		"hooks": {
+			"en": [
+				"Named for Eugene Skinner, who claimed the land in 1846.",
+				"Nike began here when a track coach poured rubber into his wife’s waffle iron to make a sole.",
+				"It is called Track Town USA and has hosted the American Olympic trials repeatedly."
+			],
+			"it": [
+				"Prende il nome da Eugene Skinner, che rivendicò il terreno nel 1846.",
+				"Nike nacque qui quando un allenatore di atletica versò della gomma nella piastra per waffle della moglie per ricavarne una suola.",
+				"La chiamano Track Town USA e ha ospitato più volte le selezioni olimpiche americane."
+			]
+		}
 	},
 	"boise": {
 		"kind": "city",
@@ -112,11 +168,18 @@
 		"region": "Idaho",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"From French les bois, \"the woods\" — trappers seeing trees after crossing the plain.",
-			"It has the largest Basque population in the United States, with a whole block devoted to Basque culture.",
-			"Its capitol is the only one in the country heated by geothermal water."
-		]
+		"hooks": {
+			"en": [
+				"From French les bois, \"the woods\" — trappers seeing trees after crossing the plain.",
+				"It has the largest Basque population in the United States, with a whole block devoted to Basque culture.",
+				"Its capitol is the only one in the country heated by geothermal water."
+			],
+			"it": [
+				"Dal francese les bois, \"i boschi\": i cacciatori di pellicce videro alberi dopo aver attraversato la pianura.",
+				"Ha la più numerosa comunità basca degli Stati Uniti, con un intero isolato dedicato alla cultura basca.",
+				"Il suo Campidoglio è l’unico del paese riscaldato con acqua geotermica."
+			]
+		}
 	},
 	"ogden": {
 		"kind": "city",
@@ -125,11 +188,18 @@
 		"region": "Utah",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"Named for Peter Skene Ogden, a Hudson’s Bay trapper who never settled there.",
-			"The transcontinental railroads met at Promontory Summit nearby in 1869, and Ogden became the junction.",
-			"Its 25th Street was so rough that Al Capone reportedly called it too wild for him."
-		]
+		"hooks": {
+			"en": [
+				"Named for Peter Skene Ogden, a Hudson’s Bay trapper who never settled there.",
+				"The transcontinental railroads met at Promontory Summit nearby in 1869, and Ogden became the junction.",
+				"Its 25th Street was so rough that Al Capone reportedly called it too wild for him."
+			],
+			"it": [
+				"Prende il nome da Peter Skene Ogden, un cacciatore di pellicce della Compagnia della Baia di Hudson che non vi si stabilì mai.",
+				"Nel 1869 le ferrovie transcontinentali si congiunsero nella vicina Promontory Summit, e Ogden ne divenne lo snodo.",
+				"La sua 25th Street era così malfamata che Al Capone, pare, la trovò troppo selvaggia persino per lui."
+			]
+		}
 	},
 	"salt-lake-city": {
 		"kind": "city",
@@ -139,11 +209,18 @@
 		"region": "Utah",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"Named for the Great Salt Lake, the largest lake west of the Mississippi and saltier than the ocean.",
-			"Brigham Young led settlers here in 1847 and is said to have declared \"this is the right place\".",
-			"Its streets were laid out wide enough to turn a wagon team around, which is why they are still unusually broad."
-		]
+		"hooks": {
+			"en": [
+				"Named for the Great Salt Lake, the largest lake west of the Mississippi and saltier than the ocean.",
+				"Brigham Young led settlers here in 1847 and is said to have declared \"this is the right place\".",
+				"Its streets were laid out wide enough to turn a wagon team around, which is why they are still unusually broad."
+			],
+			"it": [
+				"Prende il nome dal Gran Lago Salato, il più grande lago a ovest del Mississippi e più salato dell’oceano.",
+				"Brigham Young vi guidò i coloni nel 1847, e si dice che abbia dichiarato: \"Questo è il posto giusto\".",
+				"Le sue strade furono tracciate abbastanza larghe da far girare un carro con tutto il suo tiro, ed è per questo che sono ancora insolitamente ampie."
+			]
+		}
 	},
 	"fort-collins": {
 		"kind": "city",
@@ -152,11 +229,18 @@
 		"region": "Colorado",
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"Named for a military fort established in 1864 and named for a colonel.",
-			"Its Old Town was the model for the Main Street at Disneyland, laid out by a designer who grew up there.",
-			"It has more craft breweries per head than almost any American city."
-		]
+		"hooks": {
+			"en": [
+				"Named for a military fort established in 1864 and named for a colonel.",
+				"Its Old Town was the model for the Main Street at Disneyland, laid out by a designer who grew up there.",
+				"It has more craft breweries per head than almost any American city."
+			],
+			"it": [
+				"Prende il nome da un forte militare fondato nel 1864, a sua volta intitolato a un colonnello.",
+				"La sua Old Town fu il modello della Main Street di Disneyland, progettata da un designer cresciuto qui.",
+				"Ha più birrifici artigianali per abitante di quasi ogni altra città americana."
+			]
+		}
 	},
 	"provo": {
 		"kind": "city",
@@ -165,11 +249,18 @@
 		"region": "Utah",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"Named for Étienne Provost, a French-Canadian trapper.",
-			"Brigham Young University here is the largest religious university in the United States.",
-			"It sits between Utah Lake and a mountain wall that rises 2,200 m above the valley floor."
-		]
+		"hooks": {
+			"en": [
+				"Named for Étienne Provost, a French-Canadian trapper.",
+				"Brigham Young University here is the largest religious university in the United States.",
+				"It sits between Utah Lake and a mountain wall that rises 2,200 m above the valley floor."
+			],
+			"it": [
+				"Prende il nome da Étienne Provost, un cacciatore di pellicce franco-canadese.",
+				"La Brigham Young University, qui, è la più grande università religiosa degli Stati Uniti.",
+				"Sorge tra lo Utah Lake e una parete montuosa che si alza per 2.200 m sopra il fondovalle."
+			]
+		}
 	},
 	"denver": {
 		"kind": "city",
@@ -179,11 +270,18 @@
 		"region": "Colorado",
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"For James Denver, governor of Kansas Territory — the founders were flattering a man who had already resigned without knowing it.",
-			"The Mile High City, exactly: one step on the Capitol's west stairs is 5,280 feet above sea level.",
-			"The Rockies rise straight out of the plains west of it, and the thin air makes baseballs fly further."
-		]
+		"hooks": {
+			"en": [
+				"For James Denver, governor of Kansas Territory — the founders were flattering a man who had already resigned without knowing it.",
+				"The Mile High City, exactly: one step on the Capitol's west stairs is 5,280 feet above sea level.",
+				"The Rockies rise straight out of the plains west of it, and the thin air makes baseballs fly further."
+			],
+			"it": [
+				"Per James Denver, governatore del Territorio del Kansas: i fondatori adulavano un uomo che, a loro insaputa, si era già dimesso.",
+				"La Mile High City, alta un miglio esatto: un gradino della scalinata ovest del Campidoglio si trova a 5.280 piedi sul livello del mare.",
+				"Le Montagne Rocciose si alzano dritte dalla pianura a ovest della città, e l’aria rarefatta fa volare più lontano le palle da baseball."
+			]
+		}
 	},
 	"aurora": {
 		"kind": "city",
@@ -192,11 +290,18 @@
 		"region": "Colorado",
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"Named for the Roman goddess of dawn.",
-			"It was the first American city to light its entire street system electrically, in 1881, and calls itself the City of Lights.",
-			"It is the second largest city in Illinois."
-		]
+		"hooks": {
+			"en": [
+				"Named for the Roman goddess of dawn.",
+				"It was the first American city to light its entire street system electrically, in 1881, and calls itself the City of Lights.",
+				"It is the second largest city in Illinois."
+			],
+			"it": [
+				"Prende il nome dalla dea romana dell’alba.",
+				"Nel 1881 fu la prima città americana a illuminare elettricamente tutte le sue strade, e si fa chiamare la Città delle luci.",
+				"È la seconda città più grande dell’Illinois."
+			]
+		}
 	},
 	"reno": {
 		"kind": "city",
@@ -205,11 +310,18 @@
 		"region": "Nevada",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"Named for Jesse Reno, a Union general killed in 1862.",
-			"It calls itself the Biggest Little City in the World, on an arch that has spanned Virginia Street since 1929.",
-			"Nevada’s quick divorces made it the divorce capital of America for decades before Las Vegas took the gambling."
-		]
+		"hooks": {
+			"en": [
+				"Named for Jesse Reno, a Union general killed in 1862.",
+				"It calls itself the Biggest Little City in the World, on an arch that has spanned Virginia Street since 1929.",
+				"Nevada’s quick divorces made it the divorce capital of America for decades before Las Vegas took the gambling."
+			],
+			"it": [
+				"Prende il nome da Jesse Reno, un generale nordista caduto nel 1862.",
+				"Si proclama \"la più grande piccola città del mondo\", la Biggest Little City in the World, su un arco che scavalca Virginia Street dal 1929.",
+				"Grazie ai divorzi rapidi del Nevada fu per decenni la capitale americana del divorzio, prima che Las Vegas le soffiasse il gioco d’azzardo."
+			]
+		}
 	},
 	"colorado-springs": {
 		"kind": "city",
@@ -218,11 +330,18 @@
 		"region": "Colorado",
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"Named for the Colorado River and for springs in Manitou nearby — the city itself has no springs.",
-			"Pikes Peak above it inspired the words to \"America the Beautiful\" in 1893.",
-			"The Air Force Academy and NORAD, dug into Cheyenne Mountain, are both here."
-		]
+		"hooks": {
+			"en": [
+				"Named for the Colorado River and for springs in Manitou nearby — the city itself has no springs.",
+				"Pikes Peak above it inspired the words to \"America the Beautiful\" in 1893.",
+				"The Air Force Academy and NORAD, dug into Cheyenne Mountain, are both here."
+			],
+			"it": [
+				"Prende il nome dal fiume Colorado e dalle sorgenti della vicina Manitou: la città in sé non ha sorgenti.",
+				"Il Pikes Peak che la sovrasta ispirò nel 1893 i versi di \"America the Beautiful\".",
+				"Qui si trovano sia l’Accademia dell’Aeronautica sia il NORAD, scavato dentro Cheyenne Mountain."
+			]
+		}
 	},
 	"sacramento": {
 		"kind": "city",
@@ -232,11 +351,18 @@
 		"region": "California",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"For the Santísimo Sacramento — the Blessed Sacrament — the name a Spanish explorer gave the river in 1808.",
-			"The Gold Rush started 60 km away at Sutter's Mill, and the city grew as the place the miners bought their shovels.",
-			"California’s capital, built where two rivers meet, and the western end of the first transcontinental railroad."
-		]
+		"hooks": {
+			"en": [
+				"For the Santísimo Sacramento — the Blessed Sacrament — the name a Spanish explorer gave the river in 1808.",
+				"The Gold Rush started 60 km away at Sutter's Mill, and the city grew as the place the miners bought their shovels.",
+				"California’s capital, built where two rivers meet, and the western end of the first transcontinental railroad."
+			],
+			"it": [
+				"Dal Santísimo Sacramento: il nome che un esploratore spagnolo diede al fiume nel 1808.",
+				"La corsa all’oro cominciò a 60 km da qui, a Sutter’s Mill, e la città crebbe come il posto dove i cercatori compravano le pale.",
+				"La capitale della California, costruita dove si incontrano due fiumi, e il capolinea occidentale della prima ferrovia transcontinentale."
+			]
+		}
 	},
 	"santa-rosa": {
 		"kind": "city",
@@ -245,11 +371,18 @@
 		"region": "California",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"Named for St Rose of Lima, the first saint born in the Americas.",
-			"Luther Burbank bred over 800 plant varieties in his garden here, including the Russet Burbank potato.",
-			"Charles Schulz lived in the town, and a Peanuts museum stands near his old ice rink."
-		]
+		"hooks": {
+			"en": [
+				"Named for St Rose of Lima, the first saint born in the Americas.",
+				"Luther Burbank bred hundreds of plant varieties in his garden here, including the Santa Rosa plum.",
+				"Charles Schulz lived in the town, and a Peanuts museum stands near his old ice rink."
+			],
+			"it": [
+				"Prende il nome da santa Rosa da Lima, la prima santa nata nelle Americhe.",
+				"Nel suo giardino di qui Luther Burbank creò centinaia di varietà di piante, tra cui la susina Santa Rosa.",
+				"Charles Schulz visse in città, e un museo dei Peanuts sorge vicino alla sua vecchia pista di pattinaggio."
+			]
+		}
 	},
 	"stockton": {
 		"kind": "city",
@@ -258,11 +391,18 @@
 		"region": "California",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"Named for Robert Stockton, a naval commodore in the Mexican-American War.",
-			"It was the supply port for the southern goldfields, reached by riverboat from San Francisco.",
-			"It became the largest American city ever to declare bankruptcy in 2012, a record since surpassed."
-		]
+		"hooks": {
+			"en": [
+				"Named for Robert Stockton, a naval commodore in the Mexican-American War.",
+				"It was the supply port for the southern goldfields, reached by riverboat from San Francisco.",
+				"It became the largest American city ever to declare bankruptcy in 2012, a record since surpassed."
+			],
+			"it": [
+				"Prende il nome da Robert Stockton, commodoro della marina nella guerra messico-statunitense.",
+				"Era il porto di rifornimento dei giacimenti auriferi meridionali, raggiunto in battello fluviale da San Francisco.",
+				"Nel 2012 divenne la più grande città americana mai dichiarata fallita, un primato poi superato."
+			]
+		}
 	},
 	"berkeley": {
 		"kind": "city",
@@ -271,11 +411,18 @@
 		"region": "California",
 		"coastal": true,
 		"position": "west",
-		"hooks": [
-			"Named for George Berkeley, the Irish philosopher, for a line of his about empire moving west.",
-			"The university here was the first campus of the University of California, opened in 1868.",
-			"The Free Speech Movement began on its steps in 1964, and sixteen chemical elements were discovered in its labs."
-		]
+		"hooks": {
+			"en": [
+				"Named for George Berkeley, the Irish philosopher, for a line of his about empire moving west.",
+				"The University of California, founded in 1868, moved to its campus here in 1873, which is still its flagship.",
+				"The Free Speech Movement began on its steps in 1964, and sixteen chemical elements were discovered in its labs."
+			],
+			"it": [
+				"Prende il nome da George Berkeley, il filosofo irlandese, per un suo verso sull’impero che avanza verso ovest.",
+				"L’Università della California, fondata nel 1868, si trasferì qui nel 1873, nel campus che ne è ancora la sede principale.",
+				"Il Free Speech Movement nacque sui suoi gradini nel 1964, e nei suoi laboratori sono stati scoperti sedici elementi chimici."
+			]
+		}
 	},
 	"oakland": {
 		"kind": "city",
@@ -284,11 +431,18 @@
 		"region": "California",
 		"coastal": true,
 		"position": "west",
-		"hooks": [
-			"For the coast live oaks that covered the hills when it was founded in 1852.",
-			"Gertrude Stein grew up here and wrote the line everyone quotes against it: \"there is no there there\" — she meant her childhood home was gone.",
-			"Its port pioneered container shipping in 1962, and it is the greenest big city in California by tree cover."
-		]
+		"hooks": {
+			"en": [
+				"For the coast live oaks that covered the hills when it was founded in 1852.",
+				"Gertrude Stein grew up here and wrote the line everyone quotes against it: \"there is no there there\" — she meant her childhood home was gone.",
+				"Its port pioneered container shipping in 1962, and it is the greenest big city in California by tree cover."
+			],
+			"it": [
+				"Per le querce della costa che coprivano le colline quando fu fondata, nel 1852.",
+				"Gertrude Stein ci crebbe e scrisse la frase che tutti le rinfacciano, \"lì non c’è nessun lì\": intendeva che la casa della sua infanzia non esisteva più.",
+				"Il suo porto aprì la strada ai container nel 1962, ed è la grande città più verde della California per copertura arborea."
+			]
+		}
 	},
 	"san-francisco": {
 		"kind": "city",
@@ -298,11 +452,18 @@
 		"region": "California",
 		"coastal": true,
 		"position": "west",
-		"hooks": [
-			"For St Francis of Assisi, via the Spanish mission founded in 1776.",
-			"It went from about 1,000 people to 25,000 in a year when gold was found in 1848, and ships were abandoned in the bay by crews who ran for the hills.",
-			"The 1906 earthquake and fire destroyed about 80% of it, and it was largely rebuilt within a decade."
-		]
+		"hooks": {
+			"en": [
+				"For St Francis of Assisi, via the Spanish mission founded in 1776.",
+				"It went from about 1,000 people to 25,000 in a year when gold was found in 1848, and ships were abandoned in the bay by crews who ran for the hills.",
+				"The 1906 earthquake and fire destroyed about 80% of it, and it was largely rebuilt within a decade."
+			],
+			"it": [
+				"Per San Francesco d’Assisi, attraverso la missione spagnola fondata nel 1776.",
+				"Quando nel 1848 si trovò l’oro passò in un anno da circa 1.000 a 25.000 abitanti, e nella baia restarono navi abbandonate dagli equipaggi corsi verso le colline.",
+				"Il terremoto e l’incendio del 1906 ne distrussero circa l’80%, e fu in gran parte ricostruita nel giro di un decennio."
+			]
+		}
 	},
 	"modesto": {
 		"kind": "city",
@@ -311,11 +472,18 @@
 		"region": "California",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"\"Modest\" — the town was to be named for a banker who declined the honour, so they named it for his modesty.",
-			"George Lucas grew up here and based American Graffiti on its cruising culture.",
-			"It is the centre of one of the most productive farming counties in the world."
-		]
+		"hooks": {
+			"en": [
+				"\"Modest\" — the town was to be named for a banker who declined the honour, so they named it for his modesty.",
+				"George Lucas grew up here and based American Graffiti on its cruising culture.",
+				"It is the centre of one of the most productive farming counties in the world."
+			],
+			"it": [
+				"Il nome è proprio \"modesto\": la città doveva chiamarsi come un banchiere che declinò l’onore, e così la battezzarono per la sua modestia.",
+				"George Lucas crebbe qui e si ispirò alle sue serate di vasche in auto per American Graffiti.",
+				"È il centro di una delle contee agricole più produttive del mondo."
+			]
+		}
 	},
 	"san-mateo": {
 		"kind": "city",
@@ -324,11 +492,18 @@
 		"region": "California",
 		"coastal": true,
 		"position": "west",
-		"hooks": [
-			"Named for St Matthew, from a Spanish expedition camp in 1776.",
-			"It sits in the middle of the San Francisco Peninsula, between the city and Silicon Valley.",
-			"Its Coyote Point had one of the first public aviation fields in California."
-		]
+		"hooks": {
+			"en": [
+				"Named for St Matthew, from a Spanish expedition camp in 1776.",
+				"It sits in the middle of the San Francisco Peninsula, between the city and Silicon Valley.",
+				"Its Coyote Point had one of the first public aviation fields in California."
+			],
+			"it": [
+				"Prende il nome da san Matteo, da un accampamento di una spedizione spagnola del 1776.",
+				"Si trova a metà della penisola di San Francisco, tra la città e la Silicon Valley.",
+				"A Coyote Point c’era uno dei primi campi d’aviazione pubblici della California."
+			]
+		}
 	},
 	"san-jose": {
 		"kind": "city",
@@ -338,11 +513,18 @@
 		"region": "California",
 		"coastal": true,
 		"position": "west",
-		"hooks": [
-			"For St Joseph — the first Spanish civil town in California, founded 1777, before either San Francisco or Los Angeles had a village.",
-			"Now the biggest city in the Bay Area and the capital of Silicon Valley, which has no official boundaries at all.",
-			"It has more engineers per head than anywhere in America, and the Winchester house here has stairs that lead nowhere."
-		]
+		"hooks": {
+			"en": [
+				"For St Joseph — the first Spanish civil town in California, founded 1777, before either San Francisco or Los Angeles had a village.",
+				"Now the biggest city in the Bay Area and the capital of Silicon Valley, which has no official boundaries at all.",
+				"It has more engineers per head than anywhere in America, and the Winchester house here has stairs that lead nowhere."
+			],
+			"it": [
+				"Per San Giuseppe: la prima città civile spagnola della California, fondata nel 1777, quando né San Francisco né Los Angeles avevano ancora un villaggio.",
+				"Oggi è la città più grande della Bay Area e la capitale della Silicon Valley, che non ha confini ufficiali di alcun tipo.",
+				"Ha più ingegneri per abitante di qualunque altro posto d’America, e la Winchester House, qui, ha scale che non portano da nessuna parte."
+			]
+		}
 	},
 	"fresno": {
 		"kind": "city",
@@ -351,11 +533,18 @@
 		"region": "California",
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"Spanish for \"ash tree\", for the ash growing along the San Joaquin River.",
-			"Its county produces more agricultural value than any other in the United States.",
-			"It is the nearest large city to Yosemite, Kings Canyon and Sequoia national parks."
-		]
+		"hooks": {
+			"en": [
+				"Spanish for \"ash tree\", for the ash growing along the San Joaquin River.",
+				"Its county produces more agricultural value than any other in the United States.",
+				"It is the nearest large city to Yosemite, Kings Canyon and Sequoia national parks."
+			],
+			"it": [
+				"In spagnolo \"frassino\", per i frassini che crescevano lungo il fiume San Joaquin.",
+				"La sua contea produce un valore agricolo maggiore di qualsiasi altra degli Stati Uniti.",
+				"È la grande città più vicina ai parchi nazionali di Yosemite, Kings Canyon e Sequoia."
+			]
+		}
 	},
 	"las-vegas": {
 		"kind": "city",
@@ -365,11 +554,18 @@
 		"region": "Nevada",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"Spanish for \"the meadows\" — there were springs and grass here, which is why a desert road stopped at this spot.",
-			"The springs ran dry in 1962; the city that grew on them now draws its water from the Colorado.",
-			"The Strip is not in the city at all — it lies just outside the limits, in unincorporated Clark County."
-		]
+		"hooks": {
+			"en": [
+				"Spanish for \"the meadows\" — there were springs and grass here, which is why a desert road stopped at this spot.",
+				"The springs ran dry in 1962; the city that grew on them now draws its water from the Colorado.",
+				"The Strip is not in the city at all — it lies just outside the limits, in unincorporated Clark County."
+			],
+			"it": [
+				"In spagnolo \"i prati\": qui c’erano sorgenti ed erba, ed è per questo che una pista nel deserto si fermava proprio in questo punto.",
+				"Le sorgenti si seccarono nel 1962; la città cresciuta intorno a esse oggi prende l’acqua dal Colorado.",
+				"La Strip non è affatto in città: si trova appena fuori dai confini comunali, in territorio non municipalizzato della contea di Clark."
+			]
+		}
 	},
 	"bakersfield": {
 		"kind": "city",
@@ -378,11 +574,18 @@
 		"region": "California",
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"Named for Thomas Baker, who grew alfalfa in a field travellers stopped at.",
-			"The Bakersfield Sound, a harder-edged country music, was created here by Buck Owens and Merle Haggard.",
-			"It sits over one of the largest oilfields in the country, found in 1899."
-		]
+		"hooks": {
+			"en": [
+				"Named for Thomas Baker, who grew alfalfa in a field travellers stopped at.",
+				"The Bakersfield Sound, a harder-edged country music, was created here by Buck Owens and Merle Haggard.",
+				"It sits over one of the largest oilfields in the country, found in 1899."
+			],
+			"it": [
+				"Prende il nome da Thomas Baker, che coltivava erba medica in un campo dove si fermavano i viaggiatori.",
+				"Il Bakersfield Sound, un country più aspro, nacque qui con Buck Owens e Merle Haggard.",
+				"Sorge sopra uno dei giacimenti petroliferi più grandi del paese, scoperto nel 1899."
+			]
+		}
 	},
 	"albuquerque": {
 		"kind": "city",
@@ -391,11 +594,18 @@
 		"region": "New Mexico",
 		"coastal": false,
 		"position": "south-east",
-		"hooks": [
-			"Named in 1706 for the Duke of Alburquerque, viceroy of New Spain — the first R was dropped later.",
-			"Its International Balloon Fiesta is the largest such event in the world, with hundreds of balloons.",
-			"A local wind pattern called the box lets balloons return to where they started, which is why it is held here."
-		]
+		"hooks": {
+			"en": [
+				"Named in 1706 for the Duke of Alburquerque, viceroy of New Spain — the first R was dropped later.",
+				"Its International Balloon Fiesta is the largest such event in the world, with hundreds of balloons.",
+				"A local wind pattern called the box lets balloons return to where they started, which is why it is held here."
+			],
+			"it": [
+				"Battezzata nel 1706 in onore del duca di Alburquerque, viceré della Nuova Spagna: la prima R cadde più tardi.",
+				"La sua International Balloon Fiesta è il più grande raduno di mongolfiere al mondo, con centinaia di palloni.",
+				"Un regime di venti locale chiamato box, \"la scatola\", permette alle mongolfiere di tornare al punto di partenza: per questo la festa si tiene qui."
+			]
+		}
 	},
 	"lancaster": {
 		"kind": "city",
@@ -404,11 +614,18 @@
 		"region": "California",
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"Named for Lancaster in England — this is the Pennsylvania one.",
-			"It was the capital of the United States for one day, 27 September 1777, as Congress fled Philadelphia.",
-			"The surrounding county has one of the largest Amish populations in the world."
-		]
+		"hooks": {
+			"en": [
+				"Named for Lancaster in England — this is the Pennsylvania one.",
+				"It was the capital of the United States for one day, 27 September 1777, as Congress fled Philadelphia.",
+				"The surrounding county has one of the largest Amish populations in the world."
+			],
+			"it": [
+				"Prende il nome da Lancaster, in Inghilterra: questa è quella della Pennsylvania.",
+				"Fu capitale degli Stati Uniti per un solo giorno, il 27 settembre 1777, mentre il Congresso fuggiva da Filadelfia.",
+				"La contea che la circonda ospita una delle più numerose comunità amish del mondo."
+			]
+		}
 	},
 	"san-bernardino": {
 		"kind": "city",
@@ -418,11 +635,18 @@
 		"region": "California",
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"For St Bernardino of Siena, named by Spanish missionaries who crossed the pass on his feast day in 1810.",
-			"Route 66's original end ran through it, and the first McDonald's opened here in 1940.",
-			"The Cajon Pass beside it is the gap through the mountains that every railway, road and pipeline to Los Angeles uses."
-		]
+		"hooks": {
+			"en": [
+				"For St Bernardino of Siena, named by Spanish missionaries who crossed the pass on his feast day in 1810.",
+				"Route 66's original end ran through it, and the first McDonald's opened here in 1940.",
+				"The Cajon Pass beside it is the gap through the mountains that every railway, road and pipeline to Los Angeles uses."
+			],
+			"it": [
+				"Per San Bernardino da Siena: la battezzarono così i missionari spagnoli che attraversarono il passo nel giorno della sua festa, nel 1810.",
+				"Il tratto finale originario della Route 66 la attraversava, e il primo McDonald’s aprì qui nel 1940.",
+				"Il Cajon Pass, lì accanto, è il varco tra le montagne che usano tutte le ferrovie, le strade e le condotte dirette a Los Angeles."
+			]
+		}
 	},
 	"los-angeles": {
 		"kind": "city",
@@ -432,11 +656,18 @@
 		"region": "California",
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"Short for El Pueblo de Nuestra Señora la Reina de los Ángeles — the town of Our Lady the Queen of the Angels, founded 1781.",
-			"It annexed its way to size: the map is full of independent cities it grew around rather than swallowed.",
-			"It has more museums than any other American city, and the La Brea tar pits in the middle of it still bubble fossils."
-		]
+		"hooks": {
+			"en": [
+				"Short for El Pueblo de Nuestra Señora la Reina de los Ángeles — the town of Our Lady the Queen of the Angels, founded 1781.",
+				"It annexed its way to size: the map is full of independent cities it grew around rather than swallowed.",
+				"It has more museums than any other American city, and the La Brea tar pits in the middle of it still bubble fossils."
+			],
+			"it": [
+				"Forma breve di El Pueblo de Nuestra Señora la Reina de los Ángeles, il paese fondato nel 1781.",
+				"È cresciuta a forza di annessioni: la mappa è piena di città indipendenti che ha circondato anziché inghiottire.",
+				"Ha più musei di qualunque altra città americana, e i pozzi di catrame di La Brea, in piena città, fanno ancora affiorare fossili."
+			]
+		}
 	},
 	"riverside": {
 		"kind": "city",
@@ -445,11 +676,18 @@
 		"region": "California",
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"Named simply for its position beside the Santa Ana River.",
-			"The navel orange was introduced to America here in 1873 from two Brazilian trees.",
-			"One of those original trees is still alive and fenced in a city intersection."
-		]
+		"hooks": {
+			"en": [
+				"Named simply for its position beside the Santa Ana River.",
+				"The navel orange was introduced to America here in 1873 from two Brazilian trees.",
+				"One of those original trees is still alive and fenced in a city intersection."
+			],
+			"it": [
+				"Il nome dice solo la sua posizione, sulla riva del fiume Santa Ana.",
+				"L’arancia navel fu introdotta in America qui, nel 1873, da due alberi brasiliani.",
+				"Uno di quegli alberi originari è ancora vivo, recintato in un incrocio della città."
+			]
+		}
 	},
 	"palm-springs": {
 		"kind": "city",
@@ -458,11 +696,18 @@
 		"region": "California",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"Named for its palm groves and hot springs, which the Cahuilla people used long before it was a resort.",
-			"Hollywood stars settled here because studio contracts required them to stay within two hours of Los Angeles.",
-			"It has the largest collection of mid-century modern architecture in the world."
-		]
+		"hooks": {
+			"en": [
+				"Named for its palm groves and hot springs, which the Cahuilla people used long before it was a resort.",
+				"Hollywood stars settled here because studio contracts required them to stay within two hours of Los Angeles.",
+				"It has the largest collection of mid-century modern architecture in the world."
+			],
+			"it": [
+				"Prende il nome dai suoi palmeti e dalle sue sorgenti calde, che i Cahuilla usavano molto prima che diventasse una località di villeggiatura.",
+				"Le star di Hollywood si stabilirono qui perché i contratti con gli studi imponevano di restare entro due ore da Los Angeles.",
+				"Ha la più grande collezione al mondo di architettura modernista di metà Novecento."
+			]
+		}
 	},
 	"long-beach": {
 		"kind": "city",
@@ -471,11 +716,18 @@
 		"region": "California",
 		"coastal": true,
 		"position": "south-west",
-		"hooks": [
-			"Named in 1888 for the obvious: a long, flat beach, which the developers were selling.",
-			"Its port and Los Angeles's share one harbour and together handle about a third of everything imported into the country.",
-			"The Queen Mary has been moored here as a hotel since 1967, and oil is still pumped from islands disguised as resorts."
-		]
+		"hooks": {
+			"en": [
+				"Named in 1888 for the obvious: a long, flat beach, which the developers were selling.",
+				"Its port and Los Angeles's share one harbour and together handle about a third of everything imported into the country.",
+				"The Queen Mary has been moored here as a hotel since 1967, and oil is still pumped from islands disguised as resorts."
+			],
+			"it": [
+				"Battezzata nel 1888 per l’ovvio: una spiaggia lunga e piatta, che i costruttori mettevano in vendita.",
+				"Il suo porto e quello di Los Angeles condividono un’unica rada e insieme movimentano circa un terzo di tutto ciò che il paese importa.",
+				"La Queen Mary è ormeggiata qui come albergo dal 1967, e si estrae ancora petrolio da isole travestite da resort."
+			]
+		}
 	},
 	"irvine": {
 		"kind": "city",
@@ -484,11 +736,18 @@
 		"region": "California",
 		"coastal": true,
 		"position": "south-west",
-		"hooks": [
-			"For James Irvine, a Gold Rush merchant who bought a 400 km² ranch; the city was built on it in 1971 to a single plan.",
-			"One of the few large American cities that is entirely master-planned, village by village.",
-			"Consistently among the safest cities of its size in America, and built around a university opened in 1965."
-		]
+		"hooks": {
+			"en": [
+				"For James Irvine, a Gold Rush merchant who bought a 400 km² ranch; the city was built on it in 1971 to a single plan.",
+				"One of the few large American cities that is entirely master-planned, village by village.",
+				"Consistently among the safest cities of its size in America, and built around a university opened in 1965."
+			],
+			"it": [
+				"Per James Irvine, un mercante della corsa all’oro che comprò un ranch di 400 km²; la città vi fu costruita nel 1971 secondo un unico piano.",
+				"Una delle poche grandi città americane interamente pianificate, villaggio per villaggio.",
+				"Stabilmente tra le città più sicure della sua taglia in America, e costruita intorno a un’università aperta nel 1965."
+			]
+		}
 	},
 	"glendale": {
 		"kind": "city",
@@ -497,11 +756,18 @@
 		"region": "Arizona",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"A descriptive name — a glen and a dale, chosen by settlers in 1886; this is the Arizona one.",
-			"It sits in the Phoenix metropolitan area and hosts the Cardinals’ stadium.",
-			"Its downtown holds one of the largest Christmas light displays in the south-west."
-		]
+		"hooks": {
+			"en": [
+				"A descriptive name — a glen and a dale; this is the Arizona one, founded in 1892.",
+				"It sits in the Phoenix metropolitan area and hosts the Cardinals’ stadium.",
+				"Its downtown holds one of the largest Christmas light displays in the south-west."
+			],
+			"it": [
+				"Un nome descrittivo: glen e dale, due parole inglesi per \"valle\"; questa è quella dell’Arizona, fondata nel 1892.",
+				"Fa parte dell’area metropolitana di Phoenix e ospita lo stadio dei Cardinals.",
+				"Il suo centro ospita una delle più grandi luminarie natalizie del sud-ovest."
+			]
+		}
 	},
 	"phoenix": {
 		"kind": "city",
@@ -511,11 +777,18 @@
 		"region": "Arizona",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"Named by a settler who saw the canals of a vanished people and said a new city would rise from their ashes — the Hohokam had irrigated this valley for a thousand years and gone.",
-			"The modern canals follow the Hohokam lines, and the city is the hottest big one in the country.",
-			"The fifth largest city in America, and the largest state capital, spread over 1,340 km² of desert."
-		]
+		"hooks": {
+			"en": [
+				"Named by a settler who saw the canals of a vanished people and said a new city would rise from their ashes — the Hohokam had irrigated this valley for a thousand years and gone.",
+				"The modern canals follow the Hohokam lines, and the city is the hottest big one in the country.",
+				"The fifth largest city in America, and the largest state capital, spread over 1,340 km² of desert."
+			],
+			"it": [
+				"La battezzò un colono che vide i canali di un popolo scomparso e disse che dalle loro ceneri sarebbe risorta una nuova città: gli Hohokam avevano irrigato questa valle per mille anni, poi erano spariti.",
+				"I canali moderni seguono i tracciati hohokam, e la città è la più calda tra le grandi città del paese.",
+				"La quinta città d’America e la capitale di Stato più grande, distesa su 1.340 km² di deserto."
+			]
+		}
 	},
 	"mesa": {
 		"kind": "city",
@@ -524,11 +797,18 @@
 		"region": "Arizona",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"Spanish for \"table\" — the flat-topped plateau the town was laid out on in 1878.",
-			"Bigger than Atlanta, Miami or St Louis, and almost nobody outside Arizona has heard of it.",
-			"It has more spring-training baseball history than anywhere, and the Superstition Mountains rise right behind it."
-		]
+		"hooks": {
+			"en": [
+				"Spanish for \"table\" — the flat-topped plateau the town was laid out on in 1878.",
+				"Bigger than Atlanta, Miami or St Louis, and almost nobody outside Arizona has heard of it.",
+				"It has more spring-training baseball history than anywhere, and the Superstition Mountains rise right behind it."
+			],
+			"it": [
+				"In spagnolo \"tavola\": l’altopiano dalla cima piatta su cui la città fu tracciata nel 1878.",
+				"Più grande di Atlanta, Miami o St. Louis, e quasi nessuno fuori dall’Arizona ne ha mai sentito parlare.",
+				"Nessun luogo ha più storia di ritiri precampionato del baseball, e le Superstition Mountains si alzano proprio alle sue spalle."
+			]
+		}
 	},
 	"oceanside": {
 		"kind": "city",
@@ -537,11 +817,18 @@
 		"region": "California",
 		"coastal": true,
 		"position": "south-west",
-		"hooks": [
-			"Named for its position on the coast, straightforwardly.",
-			"Camp Pendleton beside it is one of the largest Marine Corps bases in the country.",
-			"Its wooden pier is one of the longest on the West Coast, at about 590 m."
-		]
+		"hooks": {
+			"en": [
+				"Named for its position on the coast, straightforwardly.",
+				"Camp Pendleton beside it is one of the largest Marine Corps bases in the country.",
+				"Its wooden pier is one of the longest on the West Coast, at about 590 m."
+			],
+			"it": [
+				"Prende il nome, molto semplicemente, dalla sua posizione in riva all’oceano.",
+				"Camp Pendleton, accanto, è una delle più grandi basi dei Marines del paese.",
+				"Il suo pontile di legno, lungo circa 590 m, è uno dei più lunghi della costa occidentale."
+			]
+		}
 	},
 	"san-diego": {
 		"kind": "city",
@@ -551,11 +838,18 @@
 		"region": "California",
 		"coastal": true,
 		"position": "south-west",
-		"hooks": [
-			"For San Diego de Alcalá, named on his feast day in 1602 — and the site of the first Spanish mission in California, in 1769.",
-			"Its bay is the best natural harbour on the coast, which is why the Pacific Fleet lives there.",
-			"Its zoo pioneered open enclosures without bars, and the city has the mildest big-city climate in America."
-		]
+		"hooks": {
+			"en": [
+				"For San Diego de Alcalá, named on his feast day in 1602 — and the site of the first Spanish mission in California, in 1769.",
+				"Its bay is the best natural harbour on the coast, which is why the Pacific Fleet lives there.",
+				"Its zoo pioneered open enclosures without bars, and the city has the mildest big-city climate in America."
+			],
+			"it": [
+				"Per San Diego di Alcalá, nel giorno della cui festa ricevette il nome, nel 1602; qui sorse anche la prima missione spagnola della California, nel 1769.",
+				"La sua baia è il miglior porto naturale della costa, ed è per questo che vi ha sede la Flotta del Pacifico.",
+				"Il suo zoo fu il primo con recinti aperti senza sbarre, e la città ha il clima più mite tra le grandi città d’America."
+			]
+		}
 	},
 	"tucson": {
 		"kind": "city",
@@ -565,11 +859,18 @@
 		"region": "Arizona",
 		"coastal": false,
 		"position": "south-east",
-		"hooks": [
-			"From the O’odham cuk ṣon, \"at the base of the black hill\" — the volcanic hill west of the city.",
-			"It has been continuously inhabited for about 4,000 years, among the longest of any American city.",
-			"It was the first UNESCO City of Gastronomy in the United States, for its desert food traditions."
-		]
+		"hooks": {
+			"en": [
+				"From the O’odham cuk ṣon, \"at the base of the black hill\" — the volcanic hill west of the city.",
+				"It has been continuously inhabited for about 4,000 years, among the longest of any American city.",
+				"It was the first UNESCO City of Gastronomy in the United States, for its desert food traditions."
+			],
+			"it": [
+				"Dal cuk ṣon degli O’odham, \"ai piedi della collina nera\": la collina vulcanica a ovest della città.",
+				"È abitata ininterrottamente da circa 4.000 anni, uno dei primati più lunghi fra le città americane.",
+				"È stata la prima Città creativa UNESCO della gastronomia negli Stati Uniti, per le sue tradizioni alimentari del deserto."
+			]
+		}
 	},
 	"el-paso": {
 		"kind": "city",
@@ -579,10 +880,17 @@
 		"region": "Texas",
 		"coastal": false,
 		"position": "south-east",
-		"hooks": [
-			"\"The pass\" — El Paso del Norte, the gap between two mountain ranges that the Rio Grande runs through.",
-			"That pass was the main route between Mexico and New Mexico for three centuries.",
-			"It forms one binational area with Ciudad Juárez, among the largest on any border in the world."
-		]
+		"hooks": {
+			"en": [
+				"\"The pass\" — El Paso del Norte, the gap between two mountain ranges that the Rio Grande runs through.",
+				"That pass was the main route between Mexico and New Mexico for three centuries.",
+				"It forms one binational area with Ciudad Juárez, among the largest on any border in the world."
+			],
+			"it": [
+				"\"Il passo\": El Paso del Norte, la gola tra due catene montuose attraversata dal Rio Grande.",
+				"Per tre secoli quel passo fu la via principale tra il Messico e il Nuovo Messico.",
+				"Forma un’unica area binazionale con Ciudad Juárez, tra le più grandi di qualsiasi confine al mondo."
+			]
+		}
 	}
 }

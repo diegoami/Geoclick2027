@@ -15,11 +15,18 @@
 			"population": 162842
 		},
 		"position": "north",
-		"hooks": [
-			"Dakota is the Sioux word for \"friend\" or \"ally\" — the people’s own name for themselves.",
-			"It was split from South Dakota in 1889, and the two were admitted on the same day with the papers shuffled so nobody knows which was 39th and which 40th.",
-			"The Bakken shale under it made it briefly the second-largest oil producer in the country, and its population grew after a century of decline."
-		]
+		"hooks": {
+			"en": [
+				"Dakota is the Sioux word for \"friend\" or \"ally\" — the people’s own name for themselves.",
+				"It was split from South Dakota in 1889, and the two were admitted on the same day with the papers shuffled so nobody knows which was 39th and which 40th.",
+				"The Bakken shale under it made it briefly the second-largest oil producer in the country, and its population grew after a century of decline."
+			],
+			"it": [
+				"Dakota è la parola sioux per \"amico\" o \"alleato\": il nome che il popolo dà a sé stesso.",
+				"Fu separato dal Dakota del Sud nel 1889, e i due furono ammessi nello stesso giorno, con i documenti mescolati così che nessuno sa quale sia stato il 39° e quale il 40°.",
+				"Lo scisto del Bakken, nel suo sottosuolo, ne fece per un periodo il secondo produttore di petrolio del paese, e la popolazione tornò a crescere dopo un secolo di declino."
+			]
+		}
 	},
 	"washington": {
 		"kind": "region",
@@ -40,11 +47,18 @@
 			"elevation": 4392
 		},
 		"position": "north-west",
-		"hooks": [
-			"The only state named after a president — and it was nearly called Columbia, changed to avoid confusion with the District of Columbia.",
-			"That change failed entirely: people say Washington State to this day to avoid exactly that confusion.",
-			"Mount St Helens here lost 400 m of its summit in 1980 in the deadliest eruption in US history."
-		]
+		"hooks": {
+			"en": [
+				"The only state named after a president — and it was nearly called Columbia, changed to avoid confusion with the District of Columbia.",
+				"That change failed entirely: people say Washington State to this day to avoid exactly that confusion.",
+				"Mount St Helens here lost 400 m of its summit in 1980 in the deadliest eruption in US history."
+			],
+			"it": [
+				"L’unico Stato che porta il nome di un presidente, e per poco non si chiamò Columbia: il nome fu cambiato per evitare confusione con il Distretto di Columbia.",
+				"Il cambio fallì in pieno: ancora oggi si dice Washington State proprio per evitare quella confusione.",
+				"Nel 1980 il monte Sant’Elena perse qui 400 m di vetta nell’eruzione più letale della storia degli Stati Uniti."
+			]
+		}
 	},
 	"montana": {
 		"kind": "region",
@@ -67,11 +81,18 @@
 			"elevation": 3417
 		},
 		"position": "north-west",
-		"hooks": [
-			"From Spanish montaña, \"mountain\" — chosen by a congressman who liked the sound of it.",
-			"The fourth largest state with the third lowest population density; it has more cattle than people.",
-			"Custer was killed at the Little Bighorn here in 1876, and Glacier National Park has lost most of the glaciers it was named for."
-		]
+		"hooks": {
+			"en": [
+				"From Spanish montaña, \"mountain\" — chosen by a congressman who liked the sound of it.",
+				"The fourth largest state with the third lowest population density; it has more cattle than people.",
+				"Custer was killed at the Little Bighorn here in 1876, and Glacier National Park has lost most of the glaciers it was named for."
+			],
+			"it": [
+				"Dallo spagnolo montaña, \"montagna\": lo scelse un deputato del Congresso a cui piaceva il suono.",
+				"Il quarto Stato per estensione e il terzo per densità più bassa; ha più bovini che abitanti.",
+				"Qui, nel 1876, Custer fu ucciso a Little Bighorn, e il Glacier National Park ha perso gran parte dei ghiacciai da cui prende il nome."
+			]
+		}
 	},
 	"minnesota": {
 		"kind": "region",
@@ -95,11 +116,18 @@
 			"elevation": 701
 		},
 		"position": "north",
-		"hooks": [
-			"From Dakota mni sota, \"sky-tinted water\" or \"cloudy water\", for the Minnesota river.",
-			"It calls itself the land of 10,000 lakes and actually has about 11,842.",
-			"The Mississippi rises here at Lake Itasca, narrow enough to step across."
-		]
+		"hooks": {
+			"en": [
+				"From Dakota mni sota, \"sky-tinted water\" or \"cloudy water\", for the Minnesota river.",
+				"It calls itself the land of 10,000 lakes and actually has about 11,842.",
+				"The Mississippi rises here at Lake Itasca, narrow enough to step across."
+			],
+			"it": [
+				"Dal dakota mni sota, \"acqua color del cielo\" o \"acqua torbida\", per il fiume Minnesota.",
+				"Si fa chiamare la terra dei 10.000 laghi, e in realtà ne ha circa 11.842.",
+				"Il Mississippi nasce qui dal lago Itasca, così stretto che lo si attraversa con un passo."
+			]
+		}
 	},
 	"idaho": {
 		"kind": "region",
@@ -124,11 +152,18 @@
 			"elevation": 3859
 		},
 		"position": "north-west",
-		"hooks": [
-			"A made-up word: a lobbyist claimed it was Shoshone for \"gem of the mountains\", then admitted he had invented it — but the name had stuck.",
-			"It grows about a third of all US potatoes, in volcanic soil watered by the Snake River.",
-			"Hells Canyon on its border is the deepest river gorge in North America, deeper than the Grand Canyon."
-		]
+		"hooks": {
+			"en": [
+				"A made-up word: a lobbyist claimed it was Shoshone for \"gem of the mountains\", then admitted he had invented it — but the name had stuck.",
+				"It grows about a third of all US potatoes, in volcanic soil watered by the Snake River.",
+				"Hells Canyon on its border is the deepest river gorge in North America, deeper than the Grand Canyon."
+			],
+			"it": [
+				"Una parola di fantasia: un lobbista sostenne che in shoshone significasse \"gemma delle montagne\", poi ammise di essersela inventata, ma ormai il nome era rimasto.",
+				"Coltiva circa un terzo di tutte le patate degli Stati Uniti, in suolo vulcanico irrigato dallo Snake River.",
+				"Lo Hells Canyon, sul suo confine, è la gola fluviale più profonda del Nord America, più del Grand Canyon."
+			]
+		}
 	},
 	"maine": {
 		"kind": "region",
@@ -148,11 +183,18 @@
 			"elevation": 1606
 		},
 		"position": "north-east",
-		"hooks": [
-			"Probably from the French province of Maine, or simply from \"the main\" — sailors’ shorthand for the mainland as against the islands.",
-			"The most forested state, about 89% trees, and it produces nearly all the wild blueberries in the country.",
-			"Its coastline is 5,600 km once the inlets are counted, longer than California’s."
-		]
+		"hooks": {
+			"en": [
+				"Probably from the French province of Maine, or simply from \"the main\" — sailors’ shorthand for the mainland as against the islands.",
+				"The most forested state, about 89% trees, and it produces nearly all the wild blueberries in the country.",
+				"Its coastline is 5,600 km once the inlets are counted, longer than California’s."
+			],
+			"it": [
+				"Probabilmente dalla provincia francese del Maine, oppure semplicemente da \"the main\", il modo sbrigativo dei marinai per dire la terraferma, in contrapposizione alle isole.",
+				"Lo Stato più boscoso, coperto di alberi per circa l’89%, e produce quasi tutti i mirtilli selvatici del paese.",
+				"Contando le insenature la sua costa misura 5.600 km, più di quella della California."
+			]
+		}
 	},
 	"michigan": {
 		"kind": "region",
@@ -172,11 +214,18 @@
 			"population": 4101000
 		},
 		"position": "north",
-		"hooks": [
-			"From Ojibwe mishigami, \"large water\" — for the lake.",
-			"The only state in two separate pieces, joined by a five-mile bridge over the Straits of Mackinac.",
-			"It touches four of the five Great Lakes, and no point in it is more than 137 km from one."
-		]
+		"hooks": {
+			"en": [
+				"From Ojibwe mishigami, \"large water\" — for the lake.",
+				"The only state in two separate pieces, joined by a five-mile bridge over the Straits of Mackinac.",
+				"It touches four of the five Great Lakes, and no point in it is more than 137 km from one."
+			],
+			"it": [
+				"Dall’ojibwe mishigami, \"grande acqua\": per il lago.",
+				"L’unico Stato in due pezzi separati, uniti da un ponte di cinque miglia sullo stretto di Mackinac.",
+				"Tocca quattro dei cinque Grandi Laghi, e nessun suo punto dista più di 137 km da uno di essi."
+			]
+		}
 	},
 	"wisconsin": {
 		"kind": "region",
@@ -195,11 +244,18 @@
 			"population": 1388000
 		},
 		"position": "north",
-		"hooks": [
-			"From a Miami word recorded by the French as Meskousing, probably \"river running through a red place\"; the spelling drifted to Wisconsin.",
-			"It makes about a quarter of all American cheese, and its residents are called cheeseheads without embarrassment.",
-			"The Republican Party was founded in Ripon here in 1854, and the state pioneered workers’ compensation and unemployment insurance."
-		]
+		"hooks": {
+			"en": [
+				"From a Miami word recorded by the French as Meskousing, probably \"river running through a red place\"; the spelling drifted to Wisconsin.",
+				"It makes about a quarter of all American cheese, and its residents are called cheeseheads without embarrassment.",
+				"The Republican Party was founded in Ripon here in 1854, and the state pioneered workers’ compensation and unemployment insurance."
+			],
+			"it": [
+				"Da una parola miami che i francesi annotarono come Meskousing, probabilmente \"fiume che scorre in un luogo rosso\"; poi la grafia scivolò fino a Wisconsin.",
+				"Produce circa un quarto di tutto il formaggio americano, e i suoi abitanti si fanno chiamare cheeseheads, \"teste di formaggio\", senza alcun imbarazzo.",
+				"Il Partito repubblicano fu fondato qui, a Ripon, nel 1854, e lo Stato fu il primo a introdurre l’indennizzo per gli infortuni sul lavoro e il sussidio di disoccupazione."
+			]
+		}
 	},
 	"south-dakota": {
 		"kind": "region",
@@ -224,11 +280,18 @@
 			"elevation": 2207
 		},
 		"position": "north",
-		"hooks": [
-			"The same Dakota — \"friend\" in Sioux — as its northern twin.",
-			"Mount Rushmore was carved between 1927 and 1941 into a mountain sacred to the Lakota, whose claim to the Black Hills the Supreme Court upheld in 1980.",
-			"They refused the compensation, which now sits accruing interest at over a billion dollars, because accepting it would confirm the sale."
-		]
+		"hooks": {
+			"en": [
+				"The same Dakota — \"friend\" in Sioux — as its northern twin.",
+				"Mount Rushmore was carved between 1927 and 1941 into a mountain sacred to the Lakota, whose claim to the Black Hills the Supreme Court upheld in 1980.",
+				"They refused the compensation, which now sits accruing interest at over a billion dollars, because accepting it would confirm the sale."
+			],
+			"it": [
+				"Lo stesso Dakota, \"amico\" in sioux, del suo gemello del nord.",
+				"Il monte Rushmore fu scolpito tra il 1927 e il 1941 in una montagna sacra ai Lakota, la cui rivendicazione sulle Black Hills fu riconosciuta dalla Corte Suprema nel 1980.",
+				"I Lakota rifiutarono l’indennizzo, che ora matura interessi e supera il miliardo di dollari, perché accettarlo significherebbe convalidare la vendita."
+			]
+		}
 	},
 	"oregon": {
 		"kind": "region",
@@ -251,11 +314,18 @@
 			"elevation": 3426
 		},
 		"position": "north-west",
-		"hooks": [
-			"Origin genuinely unknown: possibly from a French map’s mislabelled \"Ouaricon-sint\", or from a Spanish or Algonquian word.",
-			"Crater Lake here is the deepest lake in the United States at 594 m, filling the caldera of a collapsed volcano.",
-			"It has no sales tax, and by law you could not pump your own petrol in most of the state until 2023."
-		]
+		"hooks": {
+			"en": [
+				"Origin genuinely unknown: possibly from a French map’s mislabelled \"Ouaricon-sint\", or from a Spanish or Algonquian word.",
+				"Crater Lake here is the deepest lake in the United States at 594 m, filling the caldera of a collapsed volcano.",
+				"It has no sales tax, and by law you could not pump your own petrol in most of the state until 2023."
+			],
+			"it": [
+				"Origine davvero sconosciuta: forse un’etichetta sbagliata su una mappa francese, \"Ouaricon-sint\", o una parola spagnola o algonchina.",
+				"Il Crater Lake, qui, è il lago più profondo degli Stati Uniti, con 594 m, e riempie la caldera di un vulcano collassato.",
+				"Non ha imposta sulle vendite, e fino al 2023 in gran parte dello Stato la legge vietava di fare benzina da sé."
+			]
+		}
 	},
 	"new-hampshire": {
 		"kind": "region",
@@ -277,11 +347,18 @@
 			"elevation": 1917
 		},
 		"position": "north-east",
-		"hooks": [
-			"Named in 1629 after the English county of Hampshire by a captain who had lived there.",
-			"Its presidential primary has gone first in the nation since 1920, which is written into state law.",
-			"The Old Man of the Mountain, its stone-face emblem, collapsed in 2003 — the state kept it on the licence plates."
-		]
+		"hooks": {
+			"en": [
+				"Named in 1629 after the English county of Hampshire by a captain who had lived there.",
+				"Its presidential primary has gone first in the nation since 1920, which is written into state law.",
+				"The Old Man of the Mountain, its stone-face emblem, collapsed in 2003 — the state kept it on the licence plates."
+			],
+			"it": [
+				"Battezzato nel 1629 come la contea inglese dello Hampshire da un capitano che vi aveva vissuto.",
+				"Dal 1920 le sue primarie presidenziali sono le prime del paese, e lo prescrive una legge dello Stato.",
+				"L’Old Man of the Mountain, il volto di pietra che ne era l’emblema, crollò nel 2003: lo Stato lo ha tenuto sulle targhe."
+			]
+		}
 	},
 	"vermont": {
 		"kind": "region",
@@ -299,11 +376,18 @@
 			"population": 93807
 		},
 		"position": "north-east",
-		"hooks": [
-			"From French vert mont, \"green mountain\" — the name of the Green Mountain Boys who fought for its independence.",
-			"It was an independent republic from 1777 to 1791, with its own currency and postal service.",
-			"The first state to abolish adult slavery in its constitution, in 1777, and it has no billboards by law."
-		]
+		"hooks": {
+			"en": [
+				"From French vert mont, \"green mountain\" — the name of the Green Mountain Boys who fought for its independence.",
+				"It was an independent republic from 1777 to 1791, with its own currency and postal service.",
+				"The first state to abolish adult slavery in its constitution, in 1777, and it has no billboards by law."
+			],
+			"it": [
+				"Dal francese vert mont, \"monte verde\": il nome dei Green Mountain Boys che combatterono per la sua indipendenza.",
+				"Fu una repubblica indipendente dal 1777 al 1791, con una sua moneta e un suo servizio postale.",
+				"Il primo Stato ad abolire nella sua costituzione la schiavitù degli adulti, nel 1777, e per legge non ha cartelloni pubblicitari."
+			]
+		}
 	},
 	"wyoming": {
 		"kind": "region",
@@ -328,11 +412,18 @@
 			"elevation": 4207
 		},
 		"position": "north-west",
-		"hooks": [
-			"From a Delaware phrase, xwé:wamənk, \"at the big river flat\" — a Pennsylvania valley name transplanted 2,000 km west.",
-			"The least populous state, with fewer people than several American cities.",
-			"It gave women the vote in 1869, half a century before the nation, and Yellowstone here was the world’s first national park."
-		]
+		"hooks": {
+			"en": [
+				"From a Delaware phrase, xwé:wamənk, \"at the big river flat\" — a Pennsylvania valley name transplanted 2,000 km west.",
+				"The least populous state, with fewer people than several American cities.",
+				"It gave women the vote in 1869, half a century before the nation, and Yellowstone here was the world’s first national park."
+			],
+			"it": [
+				"Da un’espressione delaware, xwé:wamənk, \"presso la grande piana del fiume\": il nome di una valle della Pennsylvania trapiantato 2.000 km più a ovest.",
+				"Lo Stato meno popoloso, con meno abitanti di diverse città americane.",
+				"Diede il voto alle donne nel 1869, mezzo secolo prima del resto del paese, e Yellowstone, qui, fu il primo parco nazionale del mondo."
+			]
+		}
 	},
 	"new-york": {
 		"kind": "region",
@@ -356,11 +447,18 @@
 			"elevation": 1274
 		},
 		"position": "north-east",
-		"hooks": [
-			"Named in 1664 for the Duke of York, later James II, when the English took New Amsterdam from the Dutch.",
-			"The Erie Canal, opened in 1825, linked the Hudson to the Great Lakes and made New York the busiest port in the country.",
-			"Its Adirondack Park is larger than Yellowstone, Yosemite, Grand Canyon and Glacier combined, and is constitutionally \"forever wild\"."
-		]
+		"hooks": {
+			"en": [
+				"Named in 1664 for the Duke of York, later James II, when the English took New Amsterdam from the Dutch.",
+				"The Erie Canal, opened in 1825, linked the Hudson to the Great Lakes and made New York the busiest port in the country.",
+				"Its Adirondack Park is larger than Yellowstone, Yosemite, Grand Canyon and Glacier combined, and is constitutionally \"forever wild\"."
+			],
+			"it": [
+				"Battezzato nel 1664 in onore del duca di York, poi Giacomo II, quando gli inglesi strapparono Nuova Amsterdam agli olandesi.",
+				"Il canale Erie, aperto nel 1825, collegò lo Hudson ai Grandi Laghi e fece di New York il porto più trafficato del paese.",
+				"Il suo Adirondack Park è più grande di Yellowstone, Yosemite, Grand Canyon e Glacier messi insieme, ed è \"per sempre selvaggio\" per Costituzione."
+			]
+		}
 	},
 	"massachusetts": {
 		"kind": "region",
@@ -380,11 +478,18 @@
 			"population": 4467000
 		},
 		"position": "north-east",
-		"hooks": [
-			"From the Massachusett people: \"at the great hill\", probably the Blue Hills near Boston.",
-			"Harvard, founded 1636, is the oldest university in the country, and the first American public school and first subway are both here.",
-			"It was the first state to legalise same-sex marriage, in 2004."
-		]
+		"hooks": {
+			"en": [
+				"From the Massachusett people: \"at the great hill\", probably the Blue Hills near Boston.",
+				"Harvard, founded 1636, is the oldest university in the country, and the first American public school and first subway are both here.",
+				"It was the first state to legalise same-sex marriage, in 2004."
+			],
+			"it": [
+				"Dal popolo massachusett: \"presso la grande collina\", probabilmente le Blue Hills vicino a Boston.",
+				"Harvard, fondata nel 1636, è la più antica università del paese, e qui sono nate anche la prima scuola pubblica e la prima metropolitana d’America.",
+				"Fu il primo Stato a legalizzare il matrimonio tra persone dello stesso sesso, nel 2004."
+			]
+		}
 	},
 	"iowa": {
 		"kind": "region",
@@ -405,11 +510,18 @@
 			"population": 380655
 		},
 		"position": "north",
-		"hooks": [
-			"Named for the Ioway people, whose own name may come from a word meaning \"sleepy ones\" given by neighbours.",
-			"It has about a quarter of the best-grade farmland in the country and grows more corn than any other state.",
-			"Its caucuses opened the presidential nominating season for half a century."
-		]
+		"hooks": {
+			"en": [
+				"Named for the Ioway people, whose own name may come from a word meaning \"sleepy ones\" given by neighbours.",
+				"It has about a quarter of the best-grade farmland in the country and grows more corn than any other state.",
+				"Its caucuses opened the presidential nominating season for half a century."
+			],
+			"it": [
+				"Prende il nome dagli Ioway, il cui nome potrebbe venire da una parola che significa \"i dormiglioni\", data loro dai vicini.",
+				"Ha circa un quarto dei terreni agricoli migliori del paese e coltiva più mais di qualunque altro Stato.",
+				"Per mezzo secolo i suoi caucus hanno aperto la stagione delle nomination presidenziali."
+			]
+		}
 	},
 	"rhode-island": {
 		"kind": "region",
@@ -426,11 +538,18 @@
 			"population": 1277000
 		},
 		"position": "north-east",
-		"hooks": [
-			"Probably from Dutch roodt eylandt, \"red island\", for its clay — or from a supposed likeness to Rhodes.",
-			"The smallest state, and the one with the longest official name: it was \"the State of Rhode Island and Providence Plantations\" until 2020.",
-			"It was founded by Roger Williams as a refuge for religious dissenters, and had the first Baptist church and the oldest synagogue in America."
-		]
+		"hooks": {
+			"en": [
+				"Probably from Dutch roodt eylandt, \"red island\", for its clay — or from a supposed likeness to Rhodes.",
+				"The smallest state, and the one with the longest official name: it was \"the State of Rhode Island and Providence Plantations\" until 2020.",
+				"It was founded by Roger Williams as a refuge for religious dissenters, and had the first Baptist church and the oldest synagogue in America."
+			],
+			"it": [
+				"Probabilmente dall’olandese roodt eylandt, \"isola rossa\", per la sua argilla, oppure da una presunta somiglianza con Rodi.",
+				"Lo Stato più piccolo, e quello con il nome ufficiale più lungo: fino al 2020 era lo \"State of Rhode Island and Providence Plantations\".",
+				"Lo fondò Roger Williams come rifugio per i dissidenti religiosi, ed ebbe la prima chiesa battista e la più antica sinagoga d’America."
+			]
+		}
 	},
 	"connecticut": {
 		"kind": "region",
@@ -448,11 +567,18 @@
 			"population": 1018000
 		},
 		"position": "north-east",
-		"hooks": [
-			"From Mohegan quinnitukqut, \"at the long tidal river\".",
-			"Its 1639 Fundamental Orders are sometimes called the first written constitution in the Western world, which is why it is the Constitution State.",
-			"Hartford has been the insurance capital of America since the 1800s, starting with fire policies."
-		]
+		"hooks": {
+			"en": [
+				"From Mohegan quinnitukqut, \"at the long tidal river\".",
+				"Its 1639 Fundamental Orders are sometimes called the first written constitution in the Western world, which is why it is the Constitution State.",
+				"Hartford has been the insurance capital of America since the 1800s, starting with fire policies."
+			],
+			"it": [
+				"Dal mohegan quinnitukqut, \"presso il lungo fiume di marea\".",
+				"I suoi Fundamental Orders del 1639 sono talvolta chiamati la prima costituzione scritta del mondo occidentale, ed è per questo che è il Constitution State.",
+				"Hartford è la capitale americana delle assicurazioni dall’Ottocento, a cominciare dalle polizze contro gli incendi."
+			]
+		}
 	},
 	"nebraska": {
 		"kind": "region",
@@ -473,11 +599,18 @@
 			"population": 877110
 		},
 		"position": "north",
-		"hooks": [
-			"From Otoe ñí braðke or Omaha ni btháska, \"flat water\" — the Platte river, which is exactly that.",
-			"The only state with a unicameral, officially nonpartisan legislature.",
-			"Its Sandhills are the largest sand dune area in the Western Hemisphere, held in place by grass."
-		]
+		"hooks": {
+			"en": [
+				"From Otoe ñí braðke or Omaha ni btháska, \"flat water\" — the Platte river, which is exactly that.",
+				"The only state with a unicameral, officially nonpartisan legislature.",
+				"Its Sandhills are the largest sand dune area in the Western Hemisphere, held in place by grass."
+			],
+			"it": [
+				"Dall’otoe ñí braðke o dall’omaha ni btháska, \"acqua piatta\": il fiume Platte, che è esattamente così.",
+				"L’unico Stato con un parlamento monocamerale e ufficialmente apartitico.",
+				"Le sue Sandhills sono la più vasta area di dune dell’emisfero occidentale, tenute ferme dall’erba."
+			]
+		}
 	},
 	"pennsylvania": {
 		"kind": "region",
@@ -498,11 +631,18 @@
 			"population": 5492000
 		},
 		"position": "east",
-		"hooks": [
-			"\"Penn’s woods\" — but named for William Penn’s father; Penn himself was embarrassed and tried to have it changed.",
-			"The Declaration of Independence and the Constitution were both signed in Philadelphia.",
-			"It is officially a Commonwealth, as are Virginia, Massachusetts and Kentucky, which means nothing legally."
-		]
+		"hooks": {
+			"en": [
+				"\"Penn’s woods\" — but named for William Penn’s father; Penn himself was embarrassed and tried to have it changed.",
+				"The Declaration of Independence and the Constitution were both signed in Philadelphia.",
+				"It is officially a Commonwealth, as are Virginia, Massachusetts and Kentucky, which means nothing legally."
+			],
+			"it": [
+				"\"I boschi di Penn\", ma in onore del padre di William Penn; Penn stesso ne era imbarazzato e cercò di farlo cambiare.",
+				"La Dichiarazione d’indipendenza e la Costituzione furono entrambe firmate a Filadelfia.",
+				"Ufficialmente è un Commonwealth, come la Virginia, il Massachusetts e il Kentucky, cosa che giuridicamente non significa nulla."
+			]
+		}
 	},
 	"ohio": {
 		"kind": "region",
@@ -522,11 +662,18 @@
 			"population": 1890000
 		},
 		"position": "east",
-		"hooks": [
-			"From Seneca ohi:yo’, \"good river\" or \"large creek\".",
-			"Eight presidents were born here, more than any state except Virginia, which is why it is called the Mother of Presidents.",
-			"The Wright brothers were from Dayton, and both Neil Armstrong and John Glenn were Ohioans."
-		]
+		"hooks": {
+			"en": [
+				"From Seneca ohi:yo’, \"good river\" or \"large creek\".",
+				"Seven presidents were born here, second only to Virginia, and it too is called the Mother of Presidents.",
+				"The Wright brothers were from Dayton, and both Neil Armstrong and John Glenn were Ohioans."
+			],
+			"it": [
+				"Dal seneca ohi:yo’, \"fiume buono\" o \"grande torrente\".",
+				"Qui sono nati sette presidenti, secondo solo alla Virginia, e anche l’Ohio è chiamato la Madre dei presidenti.",
+				"I fratelli Wright erano di Dayton, e sia Neil Armstrong sia John Glenn erano dell’Ohio."
+			]
+		}
 	},
 	"new-jersey": {
 		"kind": "region",
@@ -544,11 +691,18 @@
 			"population": 366513
 		},
 		"position": "east",
-		"hooks": [
-			"Named for the Channel Island of Jersey, home of one of the colony’s proprietors.",
-			"The most densely populated state, and it has more diners than anywhere else in the country.",
-			"Edison’s Menlo Park lab here produced the phonograph and the practical light bulb, and the first baseball game was played in Hoboken."
-		]
+		"hooks": {
+			"en": [
+				"Named for the Channel Island of Jersey, home of one of the colony’s proprietors.",
+				"The most densely populated state, and it has more diners than anywhere else in the country.",
+				"Edison’s Menlo Park lab here produced the phonograph and the practical light bulb, and the first baseball game was played in Hoboken."
+			],
+			"it": [
+				"Prende il nome dall’isola di Jersey, nella Manica, patria di uno dei proprietari della colonia.",
+				"Lo Stato più densamente popolato, e ha più diner di qualunque altro posto del paese.",
+				"Il laboratorio di Edison a Menlo Park, qui, produsse il fonografo e la lampadina elettrica di uso pratico, e la prima partita di baseball si giocò a Hoboken."
+			]
+		}
 	},
 	"indiana": {
 		"kind": "region",
@@ -567,11 +721,18 @@
 			"population": 1436000
 		},
 		"position": "centre",
-		"hooks": [
-			"\"Land of the Indians\", coined for a land company in 1768 — a name given by settlers, not by the people it names.",
-			"Its 500-mile race has run at the Brickyard since 1911.",
-			"It has more miles of interstate per square mile than any other state, which is why it calls itself the Crossroads of America."
-		]
+		"hooks": {
+			"en": [
+				"\"Land of the Indians\", coined for a land company in 1768 — a name given by settlers, not by the people it names.",
+				"Its 500-mile race has run at the Brickyard since 1911.",
+				"It has more miles of interstate per square mile than any other state, which is why it calls itself the Crossroads of America."
+			],
+			"it": [
+				"\"Terra degli indiani\", coniato nel 1768 per una compagnia fondiaria: un nome dato dai coloni, non dal popolo che nomina.",
+				"La sua 500 Miglia si corre al Brickyard dal 1911.",
+				"Ha più miglia di autostrade interstatali per miglio quadrato di qualunque altro Stato, ed è per questo che si definisce il Crocevia d’America."
+			]
+		}
 	},
 	"illinois": {
 		"kind": "region",
@@ -592,11 +753,18 @@
 			"population": 8990000
 		},
 		"position": "centre",
-		"hooks": [
-			"From the Illinois Confederation, through French — the -ois ending is a French spelling, which is why the s is silent.",
-			"Chicago’s 1871 fire led to the rebuilding that produced the world’s first skyscraper in 1885.",
-			"It produces more soybeans and nuclear power than any other state."
-		]
+		"hooks": {
+			"en": [
+				"From the Illinois Confederation, through French — the -ois ending is a French spelling, which is why the s is silent.",
+				"Chicago’s 1871 fire led to the rebuilding that produced the world’s first skyscraper in 1885.",
+				"It produces more soybeans and nuclear power than any other state."
+			],
+			"it": [
+				"Dalla Confederazione illinois, attraverso il francese: la desinenza -ois è una grafia francese, ed è per questo che la s è muta.",
+				"L’incendio di Chicago del 1871 portò alla ricostruzione da cui nacque, nel 1885, il primo grattacielo del mondo.",
+				"Produce più soia ed energia nucleare di qualunque altro Stato."
+			]
+		}
 	},
 	"utah": {
 		"kind": "region",
@@ -621,11 +789,18 @@
 			"elevation": 4123
 		},
 		"position": "west",
-		"hooks": [
-			"From the Ute people; the name may mean \"people of the mountains\".",
-			"The Great Salt Lake in it is the largest lake west of the Mississippi and saltier than the ocean.",
-			"About 62% of its people are Mormon, and Salt Lake City was founded in 1847 by settlers who walked there."
-		]
+		"hooks": {
+			"en": [
+				"From the Ute people; the name may mean \"people of the mountains\".",
+				"The Great Salt Lake in it is the largest lake west of the Mississippi and saltier than the ocean.",
+				"About 62% of its people are Mormon, and Salt Lake City was founded in 1847 by settlers who walked there."
+			],
+			"it": [
+				"Dal popolo ute; il nome potrebbe significare \"gente delle montagne\".",
+				"Il suo Gran Lago Salato è il lago più grande a ovest del Mississippi, ed è più salato dell’oceano.",
+				"Circa il 62% degli abitanti è mormone, e Salt Lake City fu fondata nel 1847 da coloni arrivati a piedi."
+			]
+		}
 	},
 	"delaware": {
 		"kind": "region",
@@ -643,11 +818,18 @@
 			"population": 161560
 		},
 		"position": "east",
-		"hooks": [
-			"Named for the Delaware river, itself named for Lord De La Warr, a colonial governor — the Lenape people were then renamed after him too.",
-			"The first state to ratify the Constitution, in 1787, which is why it is called the First State.",
-			"More than half of all US public companies are legally incorporated here, for its courts and its corporate law."
-		]
+		"hooks": {
+			"en": [
+				"Named for the Delaware river, itself named for Lord De La Warr, a colonial governor — the Lenape people were then renamed after him too.",
+				"The first state to ratify the Constitution, in 1787, which is why it is called the First State.",
+				"More than half of all US public companies are legally incorporated here, for its courts and its corporate law."
+			],
+			"it": [
+				"Prende il nome dal fiume Delaware, a sua volta intitolato a Lord De La Warr, un governatore coloniale: poi anche il popolo lenape fu ribattezzato come lui.",
+				"Il primo Stato a ratificare la Costituzione, nel 1787, ed è per questo che lo chiamano il First State.",
+				"Più di metà delle società quotate statunitensi ha qui la sede legale, per i suoi tribunali e il suo diritto societario."
+			]
+		}
 	},
 	"colorado": {
 		"kind": "region",
@@ -673,11 +855,18 @@
 			"elevation": 4402
 		},
 		"position": "west",
-		"hooks": [
-			"Spanish for \"coloured red\", for the silt in the Colorado river.",
-			"It has more land above 3,000 m than any other state, and its lowest point is higher than the highest point in eighteen others.",
-			"Its border is drawn entirely with straight lines, though survey errors left it with 697 sides rather than four."
-		]
+		"hooks": {
+			"en": [
+				"Spanish for \"coloured red\", for the silt in the Colorado river.",
+				"It has more land above 3,000 m than any other state, and its lowest point is higher than the highest point in eighteen others.",
+				"Its border is drawn entirely with straight lines, though survey errors left it with 697 sides rather than four."
+			],
+			"it": [
+				"In spagnolo \"colorato di rosso\", per il limo del fiume Colorado.",
+				"Ha più territorio sopra i 3.000 m di qualunque altro Stato, e il suo punto più basso è più alto del punto più alto di diciotto altri.",
+				"I suoi confini sono tracciati tutti in linea retta, ma per errori di rilevamento ha 697 lati anziché quattro."
+			]
+		}
 	},
 	"west-virginia": {
 		"kind": "region",
@@ -701,11 +890,18 @@
 			"elevation": 1482
 		},
 		"position": "east",
-		"hooks": [
-			"It split from Virginia in 1863 rather than leave the Union — the only state formed by seceding from a seceding state.",
-			"Almost entirely mountainous, with the highest average elevation east of the Mississippi.",
-			"The Hatfield-McCoy feud ran along its Kentucky border, and coal mining shaped both its economy and its politics."
-		]
+		"hooks": {
+			"en": [
+				"It split from Virginia in 1863 rather than leave the Union — the only state formed by seceding from a seceding state.",
+				"Almost entirely mountainous, with the highest average elevation east of the Mississippi.",
+				"The Hatfield-McCoy feud ran along its Kentucky border, and coal mining shaped both its economy and its politics."
+			],
+			"it": [
+				"Si staccò dalla Virginia nel 1863 per non lasciare l’Unione: l’unico Stato nato dalla secessione da uno Stato secessionista.",
+				"Quasi interamente montuosa, con la quota media più alta a est del Mississippi.",
+				"La faida tra Hatfield e McCoy si consumò lungo il suo confine con il Kentucky, e le miniere di carbone ne hanno plasmato sia l’economia sia la politica."
+			]
+		}
 	},
 	"district-of-columbia": {
 		"kind": "region",
@@ -722,11 +918,18 @@
 			"population": 4338000
 		},
 		"position": "east",
-		"hooks": [
-			"Columbia is a poetic name for America, from Columbus; the district was carved from Maryland and Virginia to belong to no state.",
-			"Its residents had no presidential vote until 1961 and still have no voting member of Congress — hence the licence plates reading \"taxation without representation\".",
-			"No building may rise above a 1910 height limit, which is why the city stays low and the Capitol still dominates."
-		]
+		"hooks": {
+			"en": [
+				"Columbia is a poetic name for America, from Columbus; the district was carved from Maryland and Virginia to belong to no state.",
+				"Its residents had no presidential vote until 1961 and still have no voting member of Congress — hence the licence plates reading \"taxation without representation\".",
+				"No building may rise above a 1910 height limit, which is why the city stays low and the Capitol still dominates."
+			],
+			"it": [
+				"Columbia è un nome poetico dell’America, da Colombo; il distretto fu ritagliato dal Maryland e dalla Virginia perché non appartenesse a nessuno Stato.",
+				"I suoi abitanti non ebbero voto presidenziale fino al 1961 e ancora non hanno un membro del Congresso con diritto di voto: da qui le targhe con la scritta \"taxation without representation\".",
+				"Nessun edificio può superare il limite d’altezza del 1910, ed è per questo che la città resta bassa e il Campidoglio la domina ancora."
+			]
+		}
 	},
 	"maryland": {
 		"kind": "region",
@@ -746,11 +949,18 @@
 			"population": 2255000
 		},
 		"position": "east",
-		"hooks": [
-			"For Henrietta Maria, queen of Charles I — one of several colonies named for a monarch’s wife.",
-			"The Star-Spangled Banner was written here during the 1814 bombardment of Fort McHenry.",
-			"The Chesapeake Bay in it is the largest estuary in the country, and its blue crabs are a state institution."
-		]
+		"hooks": {
+			"en": [
+				"For Henrietta Maria, queen of Charles I — the only one of the colonies named for a monarch’s wife.",
+				"The Star-Spangled Banner was written here during the 1814 bombardment of Fort McHenry.",
+				"The Chesapeake Bay in it is the largest estuary in the country, and its blue crabs are a state institution."
+			],
+			"it": [
+				"Per Enrichetta Maria, regina di Carlo I: l’unica delle colonie che prese il nome dalla moglie di un sovrano.",
+				"The Star-Spangled Banner fu scritto qui durante il bombardamento di Fort McHenry, nel 1814.",
+				"La baia di Chesapeake è il più grande estuario del paese, e i suoi granchi blu sono un’istituzione dello Stato."
+			]
+		}
 	},
 	"nevada": {
 		"kind": "region",
@@ -774,11 +984,18 @@
 			"elevation": 3982
 		},
 		"position": "west",
-		"hooks": [
-			"Spanish for \"snow-covered\", from the Sierra Nevada on its western edge — which is odd for the driest state in the country.",
-			"The federal government owns about 80% of it, more than any other state.",
-			"Gambling was legalised in 1931 during the Depression, and the Hoover Dam was built the same decade."
-		]
+		"hooks": {
+			"en": [
+				"Spanish for \"snow-covered\", from the Sierra Nevada on its western edge — which is odd for the driest state in the country.",
+				"The federal government owns about 80% of it, more than any other state.",
+				"Gambling was legalised in 1931 during the Depression, and the Hoover Dam was built the same decade."
+			],
+			"it": [
+				"In spagnolo \"innevata\", dalla Sierra Nevada sul suo margine occidentale: strano, per lo Stato più arido del paese.",
+				"Il governo federale ne possiede circa l’80%, più che in qualunque altro Stato.",
+				"Il gioco d’azzardo fu legalizzato nel 1931, durante la Depressione, e nello stesso decennio fu costruita la diga di Hoover."
+			]
+		}
 	},
 	"kansas": {
 		"kind": "region",
@@ -797,11 +1014,18 @@
 			"population": 501577
 		},
 		"position": "centre",
-		"hooks": [
-			"From the Kansa people, whose name means \"people of the south wind\".",
-			"It is measurably flatter than a pancake, by an actual study that compared both.",
-			"Its 1954 Brown v. Board of Education case ended legal school segregation across the country."
-		]
+		"hooks": {
+			"en": [
+				"From the Kansa people, whose name means \"people of the south wind\".",
+				"It is measurably flatter than a pancake, by an actual study that compared both.",
+				"Its 1954 Brown v. Board of Education case ended legal school segregation across the country."
+			],
+			"it": [
+				"Dal popolo kansa, il cui nome significa \"popolo del vento del sud\".",
+				"È più piatto di un pancake, e non per modo di dire: lo ha misurato uno studio che ha confrontato le due cose.",
+				"La sua causa Brown v. Board of Education, del 1954, mise fine alla segregazione scolastica legale in tutto il paese."
+			]
+		}
 	},
 	"missouri": {
 		"kind": "region",
@@ -824,11 +1048,18 @@
 			"population": 2199000
 		},
 		"position": "centre",
-		"hooks": [
-			"From a Siouan word meaning \"those who have dugout canoes\", the name Illinois people used for their neighbours.",
-			"The Gateway Arch in St Louis marks where westward expansion began; the Oregon, Santa Fe and California trails all started in this state.",
-			"The 1857 Dred Scott case that helped precipitate the Civil War was filed in St Louis."
-		]
+		"hooks": {
+			"en": [
+				"From a Siouan word meaning \"those who have dugout canoes\", the name Illinois people used for their neighbours.",
+				"The Gateway Arch in St Louis marks where westward expansion began; the Oregon, Santa Fe and California trails all started in this state.",
+				"The 1857 Dred Scott case that helped precipitate the Civil War was filed in St Louis."
+			],
+			"it": [
+				"Da una parola siouan che significa \"quelli che hanno canoe scavate nel tronco\", il nome che gli Illinois davano ai loro vicini.",
+				"Il Gateway Arch di St. Louis segna il punto da cui partì l’espansione verso ovest; le piste dell’Oregon, di Santa Fe e della California cominciavano tutte in questo Stato.",
+				"La causa Dred Scott del 1857, che contribuì a far precipitare la guerra di secessione, fu intentata a St. Louis."
+			]
+		}
 	},
 	"virginia": {
 		"kind": "region",
@@ -853,11 +1084,18 @@
 			"elevation": 1746
 		},
 		"position": "east",
-		"hooks": [
-			"For Elizabeth I, the Virgin Queen — the oldest English place name in America, given in 1584.",
-			"Eight presidents were born here, more than any other state, and four of the first five.",
-			"Jamestown in 1607 was the first permanent English settlement, and the Civil War ended at Appomattox in this state."
-		]
+		"hooks": {
+			"en": [
+				"For Elizabeth I, the Virgin Queen — the oldest English place name in America, given in 1584.",
+				"Eight presidents were born here, more than any other state, and four of the first five.",
+				"Jamestown in 1607 was the first permanent English settlement, and the Civil War ended at Appomattox in this state."
+			],
+			"it": [
+				"Per Elisabetta I, la regina vergine: il più antico toponimo inglese d’America, dato nel 1584.",
+				"Qui sono nati otto presidenti, più che in qualunque altro Stato, e quattro dei primi cinque.",
+				"Jamestown, nel 1607, fu il primo insediamento inglese permanente, e la guerra di secessione finì ad Appomattox, in questo Stato."
+			]
+		}
 	},
 	"kentucky": {
 		"kind": "region",
@@ -879,11 +1117,18 @@
 			"population": 948000
 		},
 		"position": "east",
-		"hooks": [
-			"From an Iroquoian word, probably kentá:ke, \"on the meadow\" — not, as often claimed, \"dark and bloody ground\".",
-			"Mammoth Cave here is the longest cave system in the world, with over 680 km mapped and no end found.",
-			"It makes about 95% of the world’s bourbon, which must by law be aged in new charred oak."
-		]
+		"hooks": {
+			"en": [
+				"From an Iroquoian word, probably kentá:ke, \"on the meadow\" — not, as often claimed, \"dark and bloody ground\".",
+				"Mammoth Cave here is the longest cave system in the world, with over 680 km mapped and no end found.",
+				"It makes about 95% of the world’s bourbon, which must by law be aged in new charred oak."
+			],
+			"it": [
+				"Da una parola irochese, probabilmente kentá:ke, \"sul prato\": non, come si sente dire spesso, \"terra buia e sanguinosa\".",
+				"La Mammoth Cave, qui, è il sistema di grotte più lungo del mondo, con oltre 680 km mappati e nessuna fine in vista.",
+				"Produce circa il 95% del bourbon mondiale, che per legge deve invecchiare in botti nuove di quercia carbonizzata."
+			]
+		}
 	},
 	"california": {
 		"kind": "region",
@@ -905,11 +1150,18 @@
 			"elevation": 4421
 		},
 		"position": "west",
-		"hooks": [
-			"From a fictional island in a 1510 Spanish romance, ruled by a black queen called Calafia — explorers thought the peninsula was that island.",
-			"If it were a country it would have one of the largest economies in the world.",
-			"It holds both the highest and lowest points in the contiguous states, Mount Whitney and Death Valley, 135 km apart."
-		]
+		"hooks": {
+			"en": [
+				"From a fictional island in a 1510 Spanish romance, ruled by a black queen called Calafia — explorers thought the peninsula was that island.",
+				"If it were a country it would have one of the largest economies in the world.",
+				"It holds both the highest and lowest points in the contiguous states, Mount Whitney and Death Valley, 135 km apart."
+			],
+			"it": [
+				"Da un’isola immaginaria di un romanzo cavalleresco spagnolo del 1510, governata da una regina nera di nome Calafia: gli esploratori credettero che la penisola fosse quell’isola.",
+				"Se fosse un paese, avrebbe una delle economie più grandi del mondo.",
+				"Ha sia il punto più alto sia il più basso degli Stati contigui, il monte Whitney e la Valle della Morte, a 135 km l’uno dall’altra."
+			]
+		}
 	},
 	"tennessee": {
 		"kind": "region",
@@ -936,11 +1188,18 @@
 			"elevation": 2025
 		},
 		"position": "east",
-		"hooks": [
-			"From Tanasi, a Cherokee town on the Little Tennessee river; the meaning is not known.",
-			"It borders eight states, tied with Missouri for the most.",
-			"Memphis and Nashville between them produced blues, rock and roll and country; Sun Studio recorded Elvis, Cash and Presley’s first single."
-		]
+		"hooks": {
+			"en": [
+				"From Tanasi, a Cherokee town on the Little Tennessee river; the meaning is not known.",
+				"It borders eight states, tied with Missouri for the most.",
+				"Memphis and Nashville between them produced blues, rock and roll and country; Sun Studio recorded the first singles of both Elvis Presley and Johnny Cash."
+			],
+			"it": [
+				"Da Tanasi, un villaggio cherokee sul fiume Little Tennessee; il significato non è noto.",
+				"Confina con otto Stati, a pari merito con il Missouri per il numero più alto.",
+				"Memphis e Nashville, tra loro, hanno dato al mondo il blues, il rock and roll e il country; il Sun Studio registrò i primi singoli sia di Elvis Presley sia di Johnny Cash."
+			]
+		}
 	},
 	"oklahoma": {
 		"kind": "region",
@@ -961,11 +1220,18 @@
 			"population": 946962
 		},
 		"position": "centre",
-		"hooks": [
-			"From Choctaw okla humma, \"red people\" — proposed by a Choctaw chief for the Indian Territory.",
-			"Sixty-seven tribes were relocated here, many along the Trail of Tears, and it has the second-largest Native American population.",
-			"The 1889 land runs opened it to settlers who raced for claims; those who slipped in early were called Sooners."
-		]
+		"hooks": {
+			"en": [
+				"From Choctaw okla humma, \"red people\" — proposed by a Choctaw chief for the Indian Territory.",
+				"Sixty-seven tribes were relocated here, many along the Trail of Tears, and it has the second-largest Native American population.",
+				"The 1889 land runs opened it to settlers who raced for claims; those who slipped in early were called Sooners."
+			],
+			"it": [
+				"Dal choctaw okla humma, \"popolo rosso\": lo propose un capo choctaw per il Territorio Indiano.",
+				"Qui furono trasferite sessantasette tribù, molte lungo il Sentiero delle lacrime, e ha la seconda popolazione nativa americana del paese.",
+				"Le corse alla terra del 1889 lo aprirono a coloni che si precipitavano a occupare i lotti; chi entrava di nascosto in anticipo veniva chiamato Sooner."
+			]
+		}
 	},
 	"north-carolina": {
 		"kind": "region",
@@ -988,11 +1254,18 @@
 			"elevation": 2037
 		},
 		"position": "east",
-		"hooks": [
-			"Carolina is from Carolus, Latin for Charles — for Charles I, and later confirmed for Charles II.",
-			"The Wright brothers flew at Kitty Hawk here in 1903, choosing it for the steady wind and soft sand.",
-			"Its Outer Banks are barrier islands that shift, and the graveyard of the Atlantic offshore has wrecked over a thousand ships."
-		]
+		"hooks": {
+			"en": [
+				"Carolina is from Carolus, Latin for Charles — for Charles I, and later confirmed for Charles II.",
+				"The Wright brothers flew at Kitty Hawk here in 1903, choosing it for the steady wind and soft sand.",
+				"Its Outer Banks are barrier islands that shift, and the graveyard of the Atlantic offshore has wrecked over a thousand ships."
+			],
+			"it": [
+				"Carolina viene da Carolus, Carlo in latino: per Carlo I, e più tardi confermato per Carlo II.",
+				"I fratelli Wright volarono qui, a Kitty Hawk, nel 1903, scegliendola per il vento costante e la sabbia soffice.",
+				"Le sue Outer Banks sono isole barriera che si spostano, e al largo il cimitero dell’Atlantico ha fatto naufragare più di mille navi."
+			]
+		}
 	},
 	"arkansas": {
 		"kind": "region",
@@ -1017,11 +1290,18 @@
 			"elevation": 839
 		},
 		"position": "centre",
-		"hooks": [
-			"From a French rendering of a Quapaw name — which is why it is pronounced like Kansas’s neighbour but spelled with a silent s.",
-			"The Crater of Diamonds here is the only diamond mine in the world where the public may dig and keep what they find.",
-			"Walmart was founded in Bentonville in 1962 and is now the largest company in the world by revenue."
-		]
+		"hooks": {
+			"en": [
+				"From a French rendering of a Quapaw name — which is why it ends like Kansas but is said with a silent s.",
+				"The Crater of Diamonds here is the only diamond mine in the world where the public may dig and keep what they find.",
+				"Walmart opened its first store at Rogers in 1962, is run from Bentonville, and is now the largest company in the world by revenue."
+			],
+			"it": [
+				"Dalla trascrizione francese di un nome quapaw, ed è per questo che finisce come Kansas ma si pronuncia con la s muta.",
+				"Il Crater of Diamonds, qui, è l’unica miniera di diamanti al mondo in cui chiunque può scavare e tenersi ciò che trova.",
+				"Walmart aprì il suo primo negozio a Rogers nel 1962, ha sede a Bentonville ed è oggi la più grande azienda del mondo per fatturato."
+			]
+		}
 	},
 	"arizona": {
 		"kind": "region",
@@ -1045,11 +1325,18 @@
 			"elevation": 3851
 		},
 		"position": "west",
-		"hooks": [
-			"Probably from O’odham alĩ ṣon-ak, \"small spring\", through Spanish Arizonac.",
-			"The Grand Canyon is 446 km long and up to 1,857 m deep, cut by the Colorado over millions of years.",
-			"It does not observe daylight saving time, except on the Navajo Nation, which does."
-		]
+		"hooks": {
+			"en": [
+				"Probably from O’odham alĩ ṣon-ak, \"small spring\", through Spanish Arizonac.",
+				"The Grand Canyon is 446 km long and up to 1,857 m deep, cut by the Colorado over millions of years.",
+				"It does not observe daylight saving time, except on the Navajo Nation, which does."
+			],
+			"it": [
+				"Probabilmente dall’o’odham alĩ ṣon-ak, \"piccola sorgente\", attraverso lo spagnolo Arizonac.",
+				"Il Grand Canyon è lungo 446 km e profondo fino a 1.857 m, scavato dal Colorado in milioni di anni.",
+				"Non adotta l’ora legale, tranne nella Navajo Nation, che invece la adotta."
+			]
+		}
 	},
 	"new-mexico": {
 		"kind": "region",
@@ -1073,11 +1360,18 @@
 			"elevation": 3993
 		},
 		"position": "west",
-		"hooks": [
-			"Named by Spaniards in the 1560s, decades before there was a country called Mexico — so it is not \"new\" anything.",
-			"The first atomic bomb was detonated at Trinity here in July 1945, and Los Alamos designed it.",
-			"It has the highest share of Hispanic residents of any state, and Santa Fe is the oldest capital city in the country, from 1610."
-		]
+		"hooks": {
+			"en": [
+				"Named by Spaniards in the 1560s, two and a half centuries before there was a country called Mexico — so it is not \"new\" anything.",
+				"The first atomic bomb was detonated at Trinity here in July 1945, and Los Alamos designed it.",
+				"It has the highest share of Hispanic residents of any state, and Santa Fe is the oldest capital city in the country, from 1610."
+			],
+			"it": [
+				"Lo battezzarono gli spagnoli negli anni Sessanta del Cinquecento, due secoli e mezzo prima che esistesse un paese chiamato Messico: quindi non è il \"nuovo\" di nulla.",
+				"La prima bomba atomica esplose qui, al test Trinity, nel luglio 1945, e fu progettata a Los Alamos.",
+				"Ha la quota più alta di abitanti ispanici tra tutti gli Stati, e Santa Fe è la capitale più antica del paese, dal 1610."
+			]
+		}
 	},
 	"south-carolina": {
 		"kind": "region",
@@ -1094,11 +1388,18 @@
 			"population": 411940
 		},
 		"position": "east",
-		"hooks": [
-			"The other half of Carolus, split from the north in 1712.",
-			"The Civil War began here when Confederate guns fired on Fort Sumter in Charleston harbour in April 1861.",
-			"Its Gullah communities on the Sea Islands kept a creole language and West African traditions more intact than anywhere else in the country."
-		]
+		"hooks": {
+			"en": [
+				"The other half of Carolus, split from the north in 1712.",
+				"The Civil War began here when Confederate guns fired on Fort Sumter in Charleston harbour in April 1861.",
+				"Its Gullah communities on the Sea Islands kept a creole language and West African traditions more intact than anywhere else in the country."
+			],
+			"it": [
+				"L’altra metà di Carolus, separata dal nord nel 1712.",
+				"La guerra di secessione cominciò qui, quando i cannoni confederati spararono su Fort Sumter, nel porto di Charleston, nell’aprile 1861.",
+				"Le sue comunità gullah, nelle Sea Islands, hanno conservato una lingua creola e tradizioni dell’Africa occidentale più intatte che in qualunque altro posto del paese."
+			]
+		}
 	},
 	"georgia": {
 		"kind": "region",
@@ -1118,11 +1419,18 @@
 			"population": 4506000
 		},
 		"position": "south-east",
-		"hooks": [
-			"For George II, who chartered it in 1732 as a colony for debtors and a buffer against Spanish Florida.",
-			"The largest state east of the Mississippi.",
-			"Martin Luther King was born in Atlanta, and the state produces most of America’s peanuts and pecans."
-		]
+		"hooks": {
+			"en": [
+				"For George II, who chartered it in 1732 as a colony for debtors and a buffer against Spanish Florida.",
+				"The largest state east of the Mississippi.",
+				"Martin Luther King was born in Atlanta, and the state produces most of America’s peanuts and pecans."
+			],
+			"it": [
+				"Per Giorgio II, che nel 1732 la istituì con una carta come colonia per debitori e come cuscinetto contro la Florida spagnola.",
+				"Lo Stato più grande a est del Mississippi.",
+				"Martin Luther King nacque ad Atlanta, e lo Stato produce la maggior parte delle arachidi e delle noci pecan d’America."
+			]
+		}
 	},
 	"alabama": {
 		"kind": "region",
@@ -1141,11 +1449,18 @@
 			"population": 1128047
 		},
 		"position": "south",
-		"hooks": [
-			"From the Alabama people, whose name may mean \"clearers of the thicket\".",
-			"The Montgomery bus boycott began here in 1955 and the Selma marches in 1965; the state is where the civil rights movement was decided.",
-			"Rockets for the Apollo programme were designed at Huntsville, which is why it is called Rocket City."
-		]
+		"hooks": {
+			"en": [
+				"From the Alabama people, whose name may mean \"clearers of the thicket\".",
+				"The Montgomery bus boycott began here in 1955 and the Selma marches in 1965; the state is where the civil rights movement was decided.",
+				"Rockets for the Apollo programme were designed at Huntsville, which is why it is called Rocket City."
+			],
+			"it": [
+				"Dal popolo alabama, il cui nome potrebbe significare \"quelli che sgombrano la boscaglia\".",
+				"Il boicottaggio degli autobus di Montgomery cominciò qui nel 1955 e le marce di Selma nel 1965: è in questo Stato che si decise il movimento per i diritti civili.",
+				"I razzi del programma Apollo furono progettati a Huntsville, che per questo è chiamata Rocket City."
+			]
+		}
 	},
 	"mississippi": {
 		"kind": "region",
@@ -1164,11 +1479,18 @@
 			"population": 250902
 		},
 		"position": "south",
-		"hooks": [
-			"From Ojibwe misi-ziibi, \"great river\".",
-			"The Delta here produced the blues, and Muddy Waters, B.B. King and Robert Johnson all came from within a hundred miles of each other.",
-			"Elvis Presley was born in Tupelo, and the state’s catfish farms supply most of the American crop."
-		]
+		"hooks": {
+			"en": [
+				"From Ojibwe misi-ziibi, \"great river\".",
+				"The Delta here produced the blues, and Muddy Waters, B.B. King and Robert Johnson all came from within a hundred miles of each other.",
+				"Elvis Presley was born in Tupelo, and the state’s catfish farms supply most of the American crop."
+			],
+			"it": [
+				"Dall’ojibwe misi-ziibi, \"grande fiume\".",
+				"Il Delta, qui, ha dato vita al blues, e Muddy Waters, B.B. King e Robert Johnson venivano tutti da luoghi a meno di cento miglia l’uno dall’altro.",
+				"Elvis Presley nacque a Tupelo, e gli allevamenti di pesce gatto dello Stato forniscono la maggior parte della produzione americana."
+			]
+		}
 	},
 	"texas": {
 		"kind": "region",
@@ -1191,11 +1513,18 @@
 			"elevation": 2667
 		},
 		"position": "south",
-		"hooks": [
-			"From Caddo táysha’, \"friend\" or \"ally\", which the Spanish heard as tejas — the state motto is simply \"Friendship\".",
-			"It was an independent republic from 1836 to 1845, and it is the only state that may legally fly its flag at the same height as the national one.",
-			"The second largest state, and its economy alone would be among the ten largest countries in the world."
-		]
+		"hooks": {
+			"en": [
+				"From Caddo táysha’, \"friend\" or \"ally\", which the Spanish heard as tejas — the state motto is simply \"Friendship\".",
+				"It was an independent republic from 1836 to 1845, and still flies that republic's Lone Star flag.",
+				"The second largest state, and its economy alone would be among the ten largest countries in the world."
+			],
+			"it": [
+				"Dal caddo táysha’, \"amico\" o \"alleato\", che gli spagnoli sentirono come tejas: il motto dello Stato è semplicemente \"Amicizia\".",
+				"Fu una repubblica indipendente dal 1836 al 1845, e issa ancora la bandiera con la stella solitaria di quella repubblica.",
+				"Il secondo Stato per estensione, e la sua economia, da sola, sarebbe tra quelle dei dieci paesi più grandi del mondo."
+			]
+		}
 	},
 	"louisiana": {
 		"kind": "region",
@@ -1213,11 +1542,18 @@
 			"population": 785000
 		},
 		"position": "south",
-		"hooks": [
-			"For Louis XIV, named by La Salle when he claimed the whole Mississippi basin for France in 1682.",
-			"The only state whose law derives from the Napoleonic Code rather than English common law, so it has parishes rather than counties.",
-			"The United States bought it from Napoleon in 1803 for about four cents a hectare, doubling the size of the country."
-		]
+		"hooks": {
+			"en": [
+				"For Louis XIV, named by La Salle when he claimed the whole Mississippi basin for France in 1682.",
+				"The only state whose law derives from the Napoleonic Code rather than English common law, so it has parishes rather than counties.",
+				"The United States bought it from Napoleon in 1803 for about seven cents a hectare, doubling the size of the country."
+			],
+			"it": [
+				"Per Luigi XIV: la battezzò La Salle quando, nel 1682, rivendicò alla Francia l’intero bacino del Mississippi.",
+				"L’unico Stato il cui diritto deriva dal Codice napoleonico anziché dalla common law inglese, e così ha parrocchie invece di contee.",
+				"Gli Stati Uniti la comprarono da Napoleone nel 1803 per circa sette centesimi l’ettaro, raddoppiando le dimensioni del paese."
+			]
+		}
 	},
 	"florida": {
 		"kind": "region",
@@ -1234,10 +1570,17 @@
 			"population": 5585000
 		},
 		"position": "south-east",
-		"hooks": [
-			"Spanish for \"flowery\", named by Ponce de León in 1513 — probably for Pascua Florida, the Easter season, as much as for the vegetation.",
-			"The Everglades are a river 100 km wide and 15 cm deep, flowing so slowly it looks like a swamp.",
-			"It has the longest coastline in the contiguous states, and more golf courses than any other."
-		]
+		"hooks": {
+			"en": [
+				"Spanish for \"flowery\", named by Ponce de León in 1513 — probably for Pascua Florida, the Easter season, as much as for the vegetation.",
+				"The Everglades are a river 100 km wide and 15 cm deep, flowing so slowly it looks like a swamp.",
+				"It has the longest coastline in the contiguous states, and more golf courses than any other."
+			],
+			"it": [
+				"In spagnolo \"fiorita\", la battezzò Ponce de León nel 1513: probabilmente per la Pascua Florida, il periodo di Pasqua, non meno che per la vegetazione.",
+				"Le Everglades sono un fiume largo 100 km e profondo 15 cm, che scorre così lento da sembrare una palude.",
+				"Ha la costa più lunga degli Stati contigui, e più campi da golf di qualunque altro."
+			]
+		}
 	}
 }

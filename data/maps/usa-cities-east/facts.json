@@ -7,11 +7,18 @@
 		"region": "New York",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"Named for Nathaniel Rochester, who bought the land in 1803 — this is the New York one.",
-			"Kodak, Xerox and Bausch & Lomb were all founded here, making it a capital of imaging.",
-			"Susan B. Anthony was arrested in the city in 1872 for voting, and Frederick Douglass published his newspaper there."
-		]
+		"hooks": {
+			"en": [
+				"Named for Nathaniel Rochester, who bought the land in 1803 — this is the New York one.",
+				"Kodak, Xerox and Bausch & Lomb were all founded here, making it a capital of imaging.",
+				"Susan B. Anthony was arrested in the city in 1872 for voting, and Frederick Douglass published his newspaper there."
+			],
+			"it": [
+				"Prende il nome da Nathaniel Rochester, che comprò il terreno nel 1803: questa è quella dello stato di New York.",
+				"Kodak, Xerox e Bausch & Lomb sono nate tutte qui, e ne hanno fatto una capitale dell’immagine.",
+				"Nel 1872 Susan B. Anthony fu arrestata qui per aver votato, e Frederick Douglass vi pubblicava il suo giornale."
+			]
+		}
 	},
 	"syracuse": {
 		"kind": "city",
@@ -20,11 +27,18 @@
 		"region": "New York",
 		"coastal": false,
 		"position": "north-east",
-		"hooks": [
-			"Named for Syracuse in Sicily, because the salt springs nearby reminded a visitor of a lake there.",
-			"It supplied most of the salt in the United States in the 1800s and was called Salt City.",
-			"The Erie Canal ran straight through its main street, which is now a road."
-		]
+		"hooks": {
+			"en": [
+				"Named for Syracuse in Sicily, because the salt springs nearby reminded a visitor of a lake there.",
+				"It supplied most of the salt in the United States in the 1800s and was called Salt City.",
+				"The Erie Canal ran straight through its main street, which is now a road."
+			],
+			"it": [
+				"Prende il nome da Siracusa: le sorgenti salate dei dintorni ricordarono a un visitatore un lago di quelle parti.",
+				"Nell’Ottocento forniva la maggior parte del sale degli Stati Uniti e la chiamavano Salt City, \"la città del sale\".",
+				"Il canale Erie passava proprio lungo la sua via principale; oggi al suo posto c’è una strada."
+			]
+		}
 	},
 	"flint": {
 		"kind": "city",
@@ -33,11 +47,18 @@
 		"region": "Michigan",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"Named for the Flint River, itself a translation of an Ojibwe name for its stony bed.",
-			"General Motors was founded here in 1908, and the 1936-37 sit-down strike created the modern American labour movement.",
-			"The 2014 switch of its water supply caused a lead-poisoning crisis that made the city a national scandal."
-		]
+		"hooks": {
+			"en": [
+				"Named for the Flint River, itself a translation of an Ojibwe name for its stony bed.",
+				"General Motors was founded here in 1908, and the 1936-37 sit-down strike created the modern American labour movement.",
+				"The 2014 switch of its water supply caused a lead-poisoning crisis that made the city a national scandal."
+			],
+			"it": [
+				"Prende il nome dal fiume Flint, \"selce\", a sua volta traduzione di un nome ojibwe che allude al suo letto sassoso.",
+				"General Motors fu fondata qui nel 1908, e lo sciopero con occupazione delle fabbriche del 1936-37 diede vita al moderno movimento operaio americano.",
+				"Nel 2014 il cambio della sua fonte idrica provocò una crisi da avvelenamento da piombo che fece della città uno scandalo nazionale."
+			]
+		}
 	},
 	"grand-rapids": {
 		"kind": "city",
@@ -46,11 +67,18 @@
 		"region": "Michigan",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"Named for the rapids on the Grand River, which were later flattened by dams.",
-			"It made so much furniture that it was called Furniture City, and it was the first American city to fluoridate its water, in 1945.",
-			"Gerald Ford grew up here and is buried on his museum’s grounds."
-		]
+		"hooks": {
+			"en": [
+				"Named for the rapids on the Grand River, which were later flattened by dams.",
+				"It made so much furniture that it was called Furniture City, and it was the first American city to fluoridate its water, in 1945.",
+				"Gerald Ford grew up here and is buried on his museum’s grounds."
+			],
+			"it": [
+				"Prende il nome dalle rapide del Grand River, poi spianate dalle dighe.",
+				"Produceva tanti mobili da essere chiamata Furniture City, e nel 1945 fu la prima città americana a fluorare l’acqua.",
+				"Gerald Ford crebbe qui ed è sepolto nel parco del museo a lui dedicato."
+			]
+		}
 	},
 	"buffalo": {
 		"kind": "city",
@@ -60,11 +88,18 @@
 		"region": "New York",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"Probably a mangled French beau fleuve, \"beautiful river\" — there were never any buffalo here.",
-			"The Erie Canal ended at its harbour, which is why it grew, and the St Lawrence Seaway bypassing it is why it stopped.",
-			"Buffalo wings were invented at the Anchor Bar in 1964, from a part of the chicken nobody wanted."
-		]
+		"hooks": {
+			"en": [
+				"Probably a mangled French beau fleuve, \"beautiful river\" — there were never any buffalo here.",
+				"The Erie Canal ended at its harbour, which is why it grew, and the St Lawrence Seaway bypassing it is why it stopped.",
+				"Buffalo wings were invented at the Anchor Bar in 1964, from a part of the chicken nobody wanted."
+			],
+			"it": [
+				"Probabilmente il francese beau fleuve, \"bel fiume\", storpiato: di bufali, qui, non ce ne sono mai stati.",
+				"Il canale Erie finiva nel suo porto, ed è per questo che crebbe; la Seaway del San Lorenzo, che la aggirò, è il motivo per cui smise di crescere.",
+				"Le buffalo wings furono inventate all’Anchor Bar nel 1964, con una parte del pollo che nessuno voleva."
+			]
+		}
 	},
 	"lansing": {
 		"kind": "city",
@@ -73,11 +108,18 @@
 		"region": "Michigan",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"Named after Lansing, New York, which was itself named for a lawyer who vanished in 1829 and was never found.",
-			"It is the capital of Michigan, chosen in 1847 partly because it was remote enough to be safe from British Canada.",
-			"Oldsmobile was founded here, and Malcolm X spent part of his childhood in the city."
-		]
+		"hooks": {
+			"en": [
+				"Named after Lansing, New York, which was itself named for a lawyer who vanished in 1829 and was never found.",
+				"It is the capital of Michigan, chosen in 1847 partly because it was remote enough to be safe from British Canada.",
+				"Oldsmobile was founded here, and Malcolm X spent part of his childhood in the city."
+			],
+			"it": [
+				"Prende il nome da Lansing, nello stato di New York, che a sua volta deve il nome a un giurista scomparso nel 1829 e mai ritrovato.",
+				"È la capitale del Michigan, scelta nel 1847 anche perché abbastanza isolata da essere al sicuro dal Canada britannico.",
+				"Qui nacque la Oldsmobile, e Malcolm X vi trascorse parte dell’infanzia."
+			]
+		}
 	},
 	"albany": {
 		"kind": "city",
@@ -86,11 +128,18 @@
 		"region": "New York",
 		"coastal": false,
 		"position": "north-east",
-		"hooks": [
-			"Named for the Duke of York and Albany, later James II — Albany being his Scottish title.",
-			"It is one of the oldest continuously chartered cities in the United States, from 1686.",
-			"The Erie Canal ended here, which made New York the country’s main port."
-		]
+		"hooks": {
+			"en": [
+				"Named for the Duke of York and Albany, later James II — Albany being his Scottish title.",
+				"It is one of the oldest continuously chartered cities in the United States, from 1686.",
+				"The Erie Canal ended here, which made New York the country’s main port."
+			],
+			"it": [
+				"Prende il nome dal duca di York e Albany, il futuro Giacomo II: Albany era il suo titolo scozzese.",
+				"È una delle città degli Stati Uniti con lo statuto più antico ancora in vigore, dal 1686.",
+				"Qui terminava il canale Erie, che fece di New York il porto principale del paese."
+			]
+		}
 	},
 	"lowell": {
 		"kind": "city",
@@ -99,11 +148,18 @@
 		"region": "Massachusetts",
 		"coastal": false,
 		"position": "north-east",
-		"hooks": [
-			"Named for Francis Cabot Lowell, who memorised British power-loom designs on a visit and reproduced them.",
-			"It was America’s first large planned industrial city, staffed by young women from New England farms.",
-			"Jack Kerouac was born here and is buried in the town."
-		]
+		"hooks": {
+			"en": [
+				"Named for Francis Cabot Lowell, who memorised British power-loom designs on a visit and reproduced them.",
+				"It was America’s first large planned industrial city, staffed by young women from New England farms.",
+				"Jack Kerouac was born here and is buried in the town."
+			],
+			"it": [
+				"Prende il nome da Francis Cabot Lowell, che durante un viaggio imparò a memoria i progetti dei telai meccanici britannici e li riprodusse.",
+				"Fu la prima grande città industriale pianificata d’America, e nelle sue fabbriche lavoravano ragazze venute dalle fattorie del New England.",
+				"Jack Kerouac nacque qui ed è sepolto in città."
+			]
+		}
 	},
 	"salem": {
 		"kind": "city",
@@ -112,11 +168,18 @@
 		"region": "Massachusetts",
 		"coastal": true,
 		"position": "north-east",
-		"hooks": [
-			"From Hebrew shalom, peace — this is the Oregon capital, named by missionaries.",
-			"The Oregon Trail ended in its valley, which is why the state’s settlement began there.",
-			"Its capitol is topped not by a dome but by a gilded pioneer with an axe."
-		]
+		"hooks": {
+			"en": [
+				"From Hebrew shalom, peace — this is the Oregon capital, named by missionaries.",
+				"The Oregon Trail ended in its valley, which is why the state’s settlement began there.",
+				"Its capitol is topped not by a dome but by a gilded pioneer with an axe."
+			],
+			"it": [
+				"Dall’ebraico shalom, \"pace\": questa è la capitale dell’Oregon, battezzata dai missionari.",
+				"L’Oregon Trail finiva nella sua valle, ed è per questo che il popolamento dello stato cominciò lì.",
+				"Il suo Campidoglio non è coronato da una cupola ma da un pioniere dorato con l’ascia."
+			]
+		}
 	},
 	"detroit": {
 		"kind": "city",
@@ -126,11 +189,18 @@
 		"region": "Michigan",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"French détroit, \"the strait\" — the narrow water between Lake Erie and Lake St Clair that it guards.",
-			"Ford's moving assembly line started here in 1913 and cut the time to build a car from twelve hours to ninety minutes.",
-			"Motown Records started in a house on West Grand Boulevard and recorded in its converted garage."
-		]
+		"hooks": {
+			"en": [
+				"French détroit, \"the strait\" — the narrow water between Lake Erie and Lake St Clair that it guards.",
+				"Ford's moving assembly line started here in 1913 and cut the time to build a car from twelve hours to ninety minutes.",
+				"Motown Records started in a house on West Grand Boulevard and recorded in its converted garage."
+			],
+			"it": [
+				"Il francese détroit, \"lo stretto\": il braccio d’acqua tra il lago Erie e il lago Saint Clair, che la città sorveglia.",
+				"La catena di montaggio mobile di Ford partì qui nel 1913 e ridusse il tempo per costruire un’auto da dodici ore a novanta minuti.",
+				"La Motown nacque in una casa di West Grand Boulevard e registrava nel suo garage, trasformato in studio."
+			]
+		}
 	},
 	"boston": {
 		"kind": "city",
@@ -140,11 +210,18 @@
 		"region": "Massachusetts",
 		"coastal": true,
 		"position": "north-east",
-		"hooks": [
-			"Named for Boston in Lincolnshire, which is itself worn down from \"Botolph's stone\".",
-			"Its street plan follows cow paths and colonial shorelines, which is why it is the least grid-like big city in the country.",
-			"Its subway opened in 1897, the first in America, and Harvard across the river dates from 1636."
-		]
+		"hooks": {
+			"en": [
+				"Named for Boston in Lincolnshire, which is itself worn down from \"Botolph's stone\".",
+				"Its street plan follows cow paths and colonial shorelines, which is why it is the least grid-like big city in the country.",
+				"Its subway opened in 1897, the first in America, and Harvard across the river dates from 1636."
+			],
+			"it": [
+				"Prende il nome da Boston nel Lincolnshire, che a sua volta è \"la pietra di Botolph\" consumata dal tempo.",
+				"La sua pianta segue i sentieri delle vacche e le vecchie rive coloniali: per questo è la grande città meno a scacchiera del paese.",
+				"La sua metropolitana aprì nel 1897, la prima d’America, e Harvard, sull’altra sponda del fiume, risale al 1636."
+			]
+		}
 	},
 	"ann-arbor": {
 		"kind": "city",
@@ -153,11 +230,18 @@
 		"region": "Michigan",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"Named for the wives of two founders, both called Ann, and for the burr oak groves — \"Ann’s arbour\".",
-			"The University of Michigan moved here in 1837 and dominates the town.",
-			"Its stadium holds over 107,000 people, the largest in the United States."
-		]
+		"hooks": {
+			"en": [
+				"Named for the wives of two founders, both called Ann, and for the burr oak groves — \"Ann’s arbour\".",
+				"The University of Michigan moved here in 1837 and dominates the town.",
+				"Its stadium holds over 107,000 people, the largest in the United States."
+			],
+			"it": [
+				"Prende il nome dalle mogli di due fondatori, entrambe di nome Ann, e dai boschetti di querce: \"il pergolato di Ann\".",
+				"L’Università del Michigan vi si trasferì nel 1837 e domina la città.",
+				"Il suo stadio contiene più di 107.000 persone: il più grande degli Stati Uniti."
+			]
+		}
 	},
 	"worcester": {
 		"kind": "city",
@@ -166,11 +250,18 @@
 		"region": "Massachusetts",
 		"coastal": false,
 		"position": "north-east",
-		"hooks": [
-			"Named for Worcester in England.",
-			"The birth control pill, the monkey wrench and the smiley face were all developed here.",
-			"The first National Woman’s Rights Convention met in the town in 1850."
-		]
+		"hooks": {
+			"en": [
+				"Named for Worcester in England.",
+				"The birth control pill, the monkey wrench and the smiley face were all developed here.",
+				"The first National Woman’s Rights Convention met in the town in 1850."
+			],
+			"it": [
+				"Prende il nome da Worcester, in Inghilterra.",
+				"Qui sono state messe a punto la pillola anticoncezionale, la chiave inglese e la faccina sorridente.",
+				"Nel 1850 si tenne qui la prima Convenzione nazionale per i diritti delle donne."
+			]
+		}
 	},
 	"springfield": {
 		"kind": "city",
@@ -179,11 +270,18 @@
 		"region": "Massachusetts",
 		"coastal": false,
 		"position": "north-east",
-		"hooks": [
-			"One of the commonest place names in America — this is Illinois’s capital, named for a spring by a field.",
-			"Lincoln lived here for 24 years, and it holds his home, his law office and his tomb.",
-			"The horseshoe sandwich, an open sandwich buried in chips and cheese sauce, was invented in the town."
-		]
+		"hooks": {
+			"en": [
+				"One of the commonest place names in America — this is Illinois’s capital, named for a spring by a field.",
+				"Lincoln lived here for 24 years, and it holds his home, his law office and his tomb.",
+				"The horseshoe sandwich, an open sandwich buried in chips and cheese sauce, was invented in the town."
+			],
+			"it": [
+				"Uno dei toponimi più comuni d’America: questa è la capitale dell’Illinois, e il nome vuol dire \"campo della sorgente\".",
+				"Lincoln visse qui per 24 anni, e la città conserva la sua casa, il suo studio legale e la sua tomba.",
+				"Qui è nato l’horseshoe sandwich, un panino aperto sepolto sotto patatine e salsa al formaggio."
+			]
+		}
 	},
 	"providence": {
 		"kind": "city",
@@ -193,11 +291,18 @@
 		"region": "Rhode Island",
 		"coastal": true,
 		"position": "north-east",
-		"hooks": [
-			"Roger Williams, thrown out of Massachusetts for arguing that church and state should be separate, named it for \"God's merciful providence\" in guiding him there.",
-			"The colony he founded was the first to guarantee freedom of religion.",
-			"Brown University is here, and the city sits at the head of Narragansett Bay on seven hills."
-		]
+		"hooks": {
+			"en": [
+				"Roger Williams, thrown out of Massachusetts for arguing that church and state should be separate, named it for \"God's merciful providence\" in guiding him there.",
+				"The colony he founded was the first to guarantee freedom of religion.",
+				"Brown University is here, and the city sits at the head of Narragansett Bay on seven hills."
+			],
+			"it": [
+				"Roger Williams, cacciato dal Massachusetts perché sosteneva che Chiesa e Stato dovessero restare separati, la chiamò così per la \"misericordiosa provvidenza di Dio\" che ve lo aveva guidato.",
+				"La colonia che fondò fu la prima a garantire la libertà di religione.",
+				"Qui c’è la Brown University, e la città sorge su sette colli, in cima alla baia di Narragansett."
+			]
+		}
 	},
 	"hartford": {
 		"kind": "city",
@@ -207,11 +312,18 @@
 		"region": "Connecticut",
 		"coastal": false,
 		"position": "north-east",
-		"hooks": [
-			"Named for Hertford in England, the birthplace of a settler.",
-			"It has been the insurance capital of America since the 1800s, starting with fire policies.",
-			"Mark Twain built a house here and wrote Tom Sawyer and Huckleberry Finn in it."
-		]
+		"hooks": {
+			"en": [
+				"Named for Hertford in England, the birthplace of a settler.",
+				"It has been the insurance capital of America since the 1800s, starting with fire policies.",
+				"Mark Twain built a house here and wrote Tom Sawyer and Huckleberry Finn in it."
+			],
+			"it": [
+				"Prende il nome da Hertford, in Inghilterra, città natale di uno dei coloni.",
+				"Dall’Ottocento è la capitale americana delle assicurazioni, a cominciare dalle polizze contro gli incendi.",
+				"Mark Twain vi si fece costruire una casa, e lì scrisse Tom Sawyer e Huckleberry Finn."
+			]
+		}
 	},
 	"south-bend": {
 		"kind": "city",
@@ -220,11 +332,18 @@
 		"region": "Indiana",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"Named for the southernmost bend of the St Joseph River.",
-			"The University of Notre Dame was founded here in 1842 by French priests.",
-			"Studebaker built wagons and then cars in the town for over a century."
-		]
+		"hooks": {
+			"en": [
+				"Named for the southernmost bend of the St Joseph River.",
+				"The University of Notre Dame was founded here in 1842 by French priests.",
+				"Studebaker built wagons and then cars in the town for over a century."
+			],
+			"it": [
+				"Prende il nome dall’ansa più meridionale del fiume St. Joseph.",
+				"L’Università di Notre Dame fu fondata qui nel 1842 da sacerdoti francesi.",
+				"Per oltre un secolo la Studebaker vi costruì carri e poi automobili."
+			]
+		}
 	},
 	"toledo": {
 		"kind": "city",
@@ -233,11 +352,18 @@
 		"region": "Ohio",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"Named for Toledo in Spain, apparently chosen simply because it was easy to say.",
-			"Ohio and Michigan nearly went to war over it in 1835; Ohio got the city and Michigan got the Upper Peninsula.",
-			"It made so much glass that it is called the Glass City."
-		]
+		"hooks": {
+			"en": [
+				"Named for Toledo in Spain, apparently chosen simply because it was easy to say.",
+				"Ohio and Michigan nearly went to war over it in 1835; Ohio got the city and Michigan got the Upper Peninsula.",
+				"It made so much glass that it is called the Glass City."
+			],
+			"it": [
+				"Prende il nome da Toledo, in Spagna, scelto a quanto pare solo perché era facile da pronunciare.",
+				"Nel 1835 l’Ohio e il Michigan per poco non si fecero la guerra per il suo possesso; l’Ohio ebbe la città e il Michigan la Penisola Superiore.",
+				"Ha prodotto tanto vetro che la chiamano Glass City, \"la città del vetro\"."
+			]
+		}
 	},
 	"cleveland": {
 		"kind": "city",
@@ -247,11 +373,18 @@
 		"region": "Ohio",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"Named for Moses Cleaveland, who surveyed it in 1796; a newspaper is said to have dropped the first a to fit its masthead.",
-			"Its river caught fire in 1969 — oil slick and debris — and the outrage helped produce the Clean Water Act.",
-			"The Rock and Roll Hall of Fame is here, because a local DJ coined the phrase in 1951."
-		]
+		"hooks": {
+			"en": [
+				"Named for Moses Cleaveland, who surveyed it in 1796; a newspaper is said to have dropped the first a to fit its masthead.",
+				"Its river caught fire in 1969 — oil slick and debris — and the outrage helped produce the Clean Water Act.",
+				"The Rock and Roll Hall of Fame is here, because a local DJ coined the phrase in 1951."
+			],
+			"it": [
+				"Prende il nome da Moses Cleaveland, che ne fece il rilievo nel 1796; si dice che un giornale abbia tolto la prima a per farla stare nella testata.",
+				"Nel 1969 il suo fiume prese fuoco, tra chiazze di petrolio e detriti, e l’indignazione contribuì a far nascere il Clean Water Act.",
+				"Qui c’è la Rock and Roll Hall of Fame, perché fu un DJ locale a coniare l’espressione, nel 1951."
+			]
+		}
 	},
 	"new-haven": {
 		"kind": "city",
@@ -260,11 +393,18 @@
 		"region": "Connecticut",
 		"coastal": true,
 		"position": "north-east",
-		"hooks": [
-			"Simply a new harbour, named by Puritan settlers in 1638.",
-			"Yale moved here in 1716, and the town was laid out on nine squares, one of the first planned grids in America.",
-			"The hamburger, the lollipop and the modern pizza crust are all claimed by the town, with varying evidence."
-		]
+		"hooks": {
+			"en": [
+				"Simply a new harbour, named by Puritan settlers in 1638.",
+				"Yale moved here in 1716, and the town was laid out on nine squares, one of the first planned grids in America.",
+				"The hamburger, the lollipop and the modern pizza crust are all claimed by the town, with varying evidence."
+			],
+			"it": [
+				"Semplicemente un \"nuovo porto\", battezzato dai coloni puritani nel 1638.",
+				"Yale vi si trasferì nel 1716, e la città fu disegnata su una griglia di nove quadrati, uno dei primi piani a scacchiera d’America.",
+				"L’hamburger, il lecca-lecca e la moderna base della pizza: la città li rivendica tutti, con prove più o meno solide."
+			]
+		}
 	},
 	"bridgeport": {
 		"kind": "city",
@@ -274,11 +414,18 @@
 		"region": "Connecticut",
 		"coastal": true,
 		"position": "north-east",
-		"hooks": [
-			"Literally what it was: the port at the bridge over the Pequonnock.",
-			"P. T. Barnum was its mayor, and he built the circus's winter quarters here.",
-			"Connecticut’s largest city, and its Beardsley Park was laid out by Frederick Law Olmsted."
-		]
+		"hooks": {
+			"en": [
+				"Literally what it was: the port at the bridge over the Pequonnock.",
+				"P. T. Barnum was its mayor, and he built the circus's winter quarters here.",
+				"Connecticut’s largest city, and its Beardsley Park was laid out by Frederick Law Olmsted."
+			],
+			"it": [
+				"Alla lettera ciò che era: il porto presso il ponte sul Pequonnock.",
+				"P. T. Barnum ne fu sindaco, e vi costruì i quartieri invernali del suo circo.",
+				"La città più grande del Connecticut, e il suo Beardsley Park fu progettato da Frederick Law Olmsted."
+			]
+		}
 	},
 	"youngstown": {
 		"kind": "city",
@@ -287,11 +434,18 @@
 		"region": "Ohio",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"Named for John Young, who bought the land in 1797.",
-			"Its steel mills closed almost overnight in 1977, on a day the town still calls Black Monday.",
-			"About 50,000 jobs went within a few years, and the population has fallen by more than half since."
-		]
+		"hooks": {
+			"en": [
+				"Named for John Young, who bought the land in 1797.",
+				"Its steel mills closed almost overnight in 1977, on a day the town still calls Black Monday.",
+				"About 50,000 jobs went within a few years, and the population has fallen by more than half since."
+			],
+			"it": [
+				"Prende il nome da John Young, che comprò il terreno nel 1797.",
+				"Nel 1977 le sue acciaierie chiusero quasi da un giorno all’altro, in una data che la città chiama ancora il lunedì nero.",
+				"In pochi anni andarono persi circa 50.000 posti di lavoro, e da allora la popolazione si è più che dimezzata."
+			]
+		}
 	},
 	"fort-wayne": {
 		"kind": "city",
@@ -300,11 +454,18 @@
 		"region": "Indiana",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"Named for General Anthony Wayne, who built a fort here in 1794.",
-			"The first night baseball game under electric light was played in the town in 1883.",
-			"It sits where three rivers meet and was a key portage between the Great Lakes and the Mississippi."
-		]
+		"hooks": {
+			"en": [
+				"Named for General Anthony Wayne, who built a fort here in 1794.",
+				"The first night baseball game under electric light was played in the town in 1883.",
+				"It sits where three rivers meet and was a key portage between the Great Lakes and the Mississippi."
+			],
+			"it": [
+				"Prende il nome dal generale Anthony Wayne, che qui costruì un forte nel 1794.",
+				"Nel 1883 si giocò qui la prima partita di baseball in notturna sotto la luce elettrica.",
+				"Sorge alla confluenza di tre fiumi ed era un punto chiave di trasbordo via terra tra i Grandi Laghi e il Mississippi."
+			]
+		}
 	},
 	"akron": {
 		"kind": "city",
@@ -313,11 +474,18 @@
 		"region": "Ohio",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"From Greek akron, \"summit\" — it is the high point of the Ohio and Erie Canal.",
-			"Goodyear, Firestone and General Tire were all founded here, making it the Rubber Capital of the World.",
-			"Alcoholics Anonymous was founded in the town in 1935."
-		]
+		"hooks": {
+			"en": [
+				"From Greek akron, \"summit\" — it is the high point of the Ohio and Erie Canal.",
+				"Goodyear, Firestone and General Tire were all founded here, making it the Rubber Capital of the World.",
+				"Alcoholics Anonymous was founded in the town in 1935."
+			],
+			"it": [
+				"Dal greco akron, \"sommità\": è il punto più alto del canale Ohio-Erie.",
+				"Goodyear, Firestone e General Tire sono nate tutte qui, e ne hanno fatto la capitale mondiale della gomma.",
+				"Gli Alcolisti Anonimi furono fondati qui nel 1935."
+			]
+		}
 	},
 	"stamford": {
 		"kind": "city",
@@ -326,11 +494,18 @@
 		"region": "Connecticut",
 		"coastal": true,
 		"position": "north-east",
-		"hooks": [
-			"Named for Stamford in Lincolnshire, England.",
-			"It has more corporate headquarters per head than almost any American city, many relocated from New York.",
-			"The Hope Street area was once the centre of American lock manufacturing."
-		]
+		"hooks": {
+			"en": [
+				"Named for Stamford in Lincolnshire, England.",
+				"It has more corporate headquarters per head than almost any American city, many relocated from New York.",
+				"The Hope Street area was once the centre of American lock manufacturing."
+			],
+			"it": [
+				"Prende il nome da Stamford, nel Lincolnshire, in Inghilterra.",
+				"Ha più sedi di grandi aziende per abitante di quasi ogni altra città americana, molte trasferite da New York.",
+				"La zona di Hope Street fu un tempo il centro dell’industria americana delle serrature."
+			]
+		}
 	},
 	"canton": {
 		"kind": "city",
@@ -339,11 +514,18 @@
 		"region": "Ohio",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"Named after Canton in China, by a surveyor honouring a merchant who traded there.",
-			"The Pro Football Hall of Fame is here because the NFL was founded in a car showroom in the town in 1920.",
-			"President McKinley ran his 1896 campaign from his front porch here and is buried in the city."
-		]
+		"hooks": {
+			"en": [
+				"Named after Canton in China, by a surveyor honouring a merchant who traded there.",
+				"The Pro Football Hall of Fame is here because the NFL was founded in a car showroom in the town in 1920.",
+				"President McKinley ran his 1896 campaign from his front porch here and is buried in the city."
+			],
+			"it": [
+				"Prende il nome da Canton, in Cina, scelto da un agrimensore in onore di un mercante che commerciava laggiù.",
+				"La Pro Football Hall of Fame è qui perché nel 1920 la NFL fu fondata in città, nel salone di un concessionario d’auto.",
+				"Il presidente McKinley condusse qui la sua campagna del 1896 dal portico di casa, ed è sepolto in città."
+			]
+		}
 	},
 	"new-york": {
 		"kind": "city",
@@ -352,11 +534,18 @@
 		"population1950": 12338000,
 		"coastal": true,
 		"position": "north-east",
-		"hooks": [
-			"New Amsterdam until the English took it in 1664 and renamed it for the Duke of York.",
-			"Dutch names survive all over it: Brooklyn was Breukelen, Harlem was Haarlem, and the Bronx was the farm of Jonas Bronck.",
-			"About 800 languages are spoken in it, more than anywhere else on earth, and Queens alone has some 160."
-		]
+		"hooks": {
+			"en": [
+				"New Amsterdam until the English took it in 1664 and renamed it for the Duke of York.",
+				"Dutch names survive all over it: Brooklyn was Breukelen, Harlem was Haarlem, and the Bronx was the farm of Jonas Bronck.",
+				"About 800 languages are spoken in it, more than anywhere else on earth, and Queens alone has some 160."
+			],
+			"it": [
+				"Era Nuova Amsterdam finché gli inglesi non la presero nel 1664 e la ribattezzarono in onore del duca di York.",
+				"I nomi olandesi sopravvivono ovunque: Brooklyn era Breukelen, Harlem era Haarlem e il Bronx era la fattoria di Jonas Bronck.",
+				"Vi si parlano circa 800 lingue, più che in qualunque altro luogo della Terra, e il solo Queens ne conta circa 160."
+			]
+		}
 	},
 	"newark": {
 		"kind": "city",
@@ -365,11 +554,18 @@
 		"region": "New Jersey",
 		"coastal": true,
 		"position": "north-east",
-		"hooks": [
-			"Named for Newark-on-Trent in England, or possibly meant as \"New Ark\" by its Puritan founders.",
-			"It is one of the oldest American cities, founded 1666, and its airport was the first major one in the country.",
-			"Its 1967 riots were among the most destructive of that decade and reshaped the city."
-		]
+		"hooks": {
+			"en": [
+				"Named for Newark-on-Trent in England, or possibly meant as \"New Ark\" by its Puritan founders.",
+				"It is one of the oldest American cities, founded 1666, and its airport was the first major one in the country.",
+				"Its 1967 riots were among the most destructive of that decade and reshaped the city."
+			],
+			"it": [
+				"Prende il nome da Newark-on-Trent, in Inghilterra, o forse i suoi fondatori puritani intendevano \"New Ark\", la nuova arca.",
+				"È una delle città più antiche degli Stati Uniti, fondata nel 1666, e il suo aeroporto fu il primo grande scalo del paese.",
+				"I disordini del 1967 furono tra i più distruttivi di quel decennio e cambiarono il volto della città."
+			]
+		}
 	},
 	"allentown": {
 		"kind": "city",
@@ -378,11 +574,18 @@
 		"region": "Pennsylvania",
 		"coastal": false,
 		"position": "north-east",
-		"hooks": [
-			"Named for William Allen, a Philadelphia mayor who founded it in 1762.",
-			"The Liberty Bell was hidden under a church floor here in 1777 to keep it from the British.",
-			"Billy Joel’s song about it was actually about Bethlehem next door; he used Allentown because it scanned."
-		]
+		"hooks": {
+			"en": [
+				"Named for William Allen, a Philadelphia mayor who founded it in 1762.",
+				"The Liberty Bell was hidden under a church floor here in 1777 to keep it from the British.",
+				"Billy Joel’s song about it was actually about Bethlehem next door; he used Allentown because it scanned."
+			],
+			"it": [
+				"Prende il nome da William Allen, sindaco di Filadelfia, che la fondò nel 1762.",
+				"Nel 1777 la Campana della Libertà fu nascosta qui sotto il pavimento di una chiesa, per sottrarla ai britannici.",
+				"La canzone che Billy Joel le ha dedicato parla in realtà della vicina Bethlehem; scelse Allentown perché stava meglio nella metrica."
+			]
+		}
 	},
 	"pittsburgh": {
 		"kind": "city",
@@ -392,11 +595,18 @@
 		"region": "Pennsylvania",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"For William Pitt, British prime minister, named by the general who took the fort in 1758.",
-			"It keeps the -h that most American -burgs lost, after a twenty-year fight with the federal board that had spelled it Pittsburg.",
-			"It has 446 bridges, more than any other city in the world, because three rivers meet here."
-		]
+		"hooks": {
+			"en": [
+				"For William Pitt, British prime minister, named by the general who took the fort in 1758.",
+				"It keeps the -h that most American -burgs lost, after a twenty-year fight with the federal board that had spelled it Pittsburg.",
+				"It has 446 bridges, more than any other city in the world, because three rivers meet here."
+			],
+			"it": [
+				"Prende il nome da William Pitt, primo ministro britannico, e glielo diede il generale che nel 1758 conquistò il forte.",
+				"Conserva la -h che quasi tutte le -burg americane hanno perso, dopo vent’anni di lotta con l’ente federale che l’aveva scritta Pittsburg.",
+				"Ha 446 ponti, più di qualunque altra città al mondo, perché qui si incontrano tre fiumi."
+			]
+		}
 	},
 	"harrisburg": {
 		"kind": "city",
@@ -405,11 +615,18 @@
 		"region": "Pennsylvania",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"Named for John Harris, who ran a ferry across the Susquehanna.",
-			"It is the capital of Pennsylvania, and its capitol was called a palace of art by Theodore Roosevelt.",
-			"Three Mile Island, the site of America’s worst nuclear accident in 1979, is a few miles downstream."
-		]
+		"hooks": {
+			"en": [
+				"Named for John Harris, who ran a ferry across the Susquehanna.",
+				"It is the capital of Pennsylvania, and its capitol was called a palace of art by Theodore Roosevelt.",
+				"Three Mile Island, the site of America’s worst nuclear accident in 1979, is a few miles downstream."
+			],
+			"it": [
+				"Prende il nome da John Harris, che gestiva un traghetto sul Susquehanna.",
+				"È la capitale della Pennsylvania, e Theodore Roosevelt definì il suo Campidoglio un \"palazzo dell’arte\".",
+				"Three Mile Island, teatro nel 1979 del peggior incidente nucleare d’America, si trova poche miglia più a valle."
+			]
+		}
 	},
 	"trenton": {
 		"kind": "city",
@@ -418,11 +635,18 @@
 		"region": "New Jersey",
 		"coastal": false,
 		"position": "north-east",
-		"hooks": [
-			"Named for William Trent, an early landowner — Trent’s town.",
-			"Washington crossed the Delaware to attack it on Christmas night 1776, the victory that saved the Revolution.",
-			"Its bridge carries the slogan \"Trenton Makes, The World Takes\", from its manufacturing years."
-		]
+		"hooks": {
+			"en": [
+				"Named for William Trent, an early landowner — Trent’s town.",
+				"Washington crossed the Delaware to attack it on Christmas night 1776, the victory that saved the Revolution.",
+				"Its bridge carries the slogan \"Trenton Makes, The World Takes\", from its manufacturing years."
+			],
+			"it": [
+				"Prende il nome da William Trent, uno dei primi proprietari terrieri: \"la città di Trent\".",
+				"Washington attraversò il Delaware per attaccarla la notte di Natale del 1776: la vittoria che salvò la Rivoluzione.",
+				"Sul suo ponte campeggia lo slogan \"Trenton Makes, The World Takes\" (Trenton produce, il mondo prende), eredità dei suoi anni industriali."
+			]
+		}
 	},
 	"lancaster": {
 		"kind": "city",
@@ -431,11 +655,18 @@
 		"region": "Pennsylvania",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"Named for Lancaster in England — this is the Pennsylvania one.",
-			"It was the capital of the United States for one day, 27 September 1777, as Congress fled Philadelphia.",
-			"The surrounding county has one of the largest Amish populations in the world."
-		]
+		"hooks": {
+			"en": [
+				"Named for Lancaster in England — this is the Pennsylvania one.",
+				"It was the capital of the United States for one day, 27 September 1777, as Congress fled Philadelphia.",
+				"The surrounding county has one of the largest Amish populations in the world."
+			],
+			"it": [
+				"Prende il nome da Lancaster, in Inghilterra: questa è quella della Pennsylvania.",
+				"Fu capitale degli Stati Uniti per un solo giorno, il 27 settembre 1777, mentre il Congresso fuggiva da Filadelfia.",
+				"La contea che la circonda ospita una delle più numerose comunità amish del mondo."
+			]
+		}
 	},
 	"columbus-ohio": {
 		"kind": "city",
@@ -445,11 +676,18 @@
 		"region": "Ohio",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"Named for Christopher Columbus in 1812 — it was created from nothing purely to be the state capital.",
-			"Ohio State has one of the largest student bodies in the country.",
-			"It is the largest city in Ohio and one of the fastest-growing in the Midwest."
-		]
+		"hooks": {
+			"en": [
+				"Named for Christopher Columbus in 1812 — it was created from nothing purely to be the state capital.",
+				"Ohio State has one of the largest student bodies in the country.",
+				"It is the largest city in Ohio and one of the fastest-growing in the Midwest."
+			],
+			"it": [
+				"Prende il nome da Cristoforo Colombo, nel 1812: fu creata dal nulla solo per essere la capitale dello stato.",
+				"L’Ohio State è una delle università con più studenti del paese.",
+				"È la città più grande dell’Ohio e una di quelle che crescono più in fretta nel Midwest."
+			]
+		}
 	},
 	"york": {
 		"kind": "city",
@@ -458,11 +696,18 @@
 		"region": "Pennsylvania",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"Named for York in England — this is the Pennsylvania one.",
-			"The Articles of Confederation were adopted here in 1777 while Congress sheltered from the British.",
-			"It has made peppermint patties, barbells and motorcycles, and the Harley-Davidson plant here builds most of their big bikes."
-		]
+		"hooks": {
+			"en": [
+				"Named for York in England — this is the Pennsylvania one.",
+				"The Articles of Confederation were adopted here in 1777 while Congress sheltered from the British.",
+				"It has made peppermint patties, barbells and motorcycles, and the Harley-Davidson plant here builds most of their big bikes."
+			],
+			"it": [
+				"Prende il nome da York, in Inghilterra: questa è quella della Pennsylvania.",
+				"Qui nel 1777 furono adottati gli Articoli della Confederazione, mentre il Congresso si riparava dai britannici.",
+				"Ha prodotto dolcetti alla menta ricoperti di cioccolato, bilancieri e motociclette, e lo stabilimento Harley-Davidson di qui costruisce la maggior parte delle sue moto di grossa cilindrata."
+			]
+		}
 	},
 	"philadelphia": {
 		"kind": "city",
@@ -472,11 +717,18 @@
 		"region": "Pennsylvania",
 		"coastal": true,
 		"position": "north-east",
-		"hooks": [
-			"Greek for \"brotherly love\" — philos and adelphos — the name William Penn gave his Quaker colony's capital.",
-			"Penn laid it out on a grid with five squares in 1682, a century before anyone else in America thought to plan a city.",
-			"The Declaration of Independence and the Constitution were both written and signed here."
-		]
+		"hooks": {
+			"en": [
+				"Greek for \"brotherly love\" — philos and adelphos — the name William Penn gave his Quaker colony's capital.",
+				"Penn laid it out on a grid with five squares in 1682, one of the first planned cities in America.",
+				"The Declaration of Independence and the Constitution were both written and signed here."
+			],
+			"it": [
+				"In greco \"amore fraterno\", da philos e adelphos: il nome che William Penn diede alla capitale della sua colonia quacchera.",
+				"Nel 1682 Penn la tracciò a scacchiera con cinque piazze: una delle prime città pianificate d’America.",
+				"La Dichiarazione d’indipendenza e la Costituzione furono entrambe scritte e firmate qui."
+			]
+		}
 	},
 	"dayton": {
 		"kind": "city",
@@ -486,11 +738,18 @@
 		"region": "Ohio",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"Named for Jonathan Dayton, the youngest man to sign the Constitution, who never visited.",
-			"The Wright brothers had their bicycle shop here and designed the first aeroplane in it.",
-			"The 1995 agreement that ended the Bosnian war was negotiated at its air force base."
-		]
+		"hooks": {
+			"en": [
+				"Named for Jonathan Dayton, the youngest man to sign the Constitution, who never visited.",
+				"The Wright brothers had their bicycle shop here and designed the first aeroplane in it.",
+				"The 1995 agreement that ended the Bosnian war was negotiated at its air force base."
+			],
+			"it": [
+				"Prende il nome da Jonathan Dayton, il più giovane firmatario della Costituzione, che non ci mise mai piede.",
+				"I fratelli Wright avevano qui la loro bottega di biciclette, e fu lì che progettarono il primo aeroplano.",
+				"L’accordo del 1995 che mise fine alla guerra in Bosnia fu negoziato nella sua base aerea."
+			]
+		}
 	},
 	"indianapolis": {
 		"kind": "city",
@@ -500,11 +759,18 @@
 		"region": "Indiana",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"\"Indiana\" plus the Greek polis, coined in 1821 for a capital that did not exist yet.",
-			"Built on a site chosen for being the middle of the state, with no river worth using — one of the few big American cities not founded on navigable water.",
-			"Its 500-mile race has run since 1911 and fills the largest sports venue on earth, seating 250,000."
-		]
+		"hooks": {
+			"en": [
+				"\"Indiana\" plus the Greek polis, coined in 1821 for a capital that did not exist yet.",
+				"Built on a site chosen for being the middle of the state, with no river worth using — one of the few big American cities not founded on navigable water.",
+				"Its 500-mile race has run since 1911 and fills the largest sports venue on earth, seating 250,000."
+			],
+			"it": [
+				"\"Indiana\" più il greco polis, coniato nel 1821 per una capitale che ancora non esisteva.",
+				"Sorge su un sito scelto perché al centro dello Stato, senza un fiume che servisse a qualcosa: una delle poche grandi città americane non fondate su acque navigabili.",
+				"La sua 500 Miglia si corre dal 1911 e riempie il più grande impianto sportivo della Terra, con 250.000 posti."
+			]
+		}
 	},
 	"baltimore": {
 		"kind": "city",
@@ -514,11 +780,18 @@
 		"region": "Maryland",
 		"coastal": true,
 		"position": "north",
-		"hooks": [
-			"For Lord Baltimore, the Irish title of the family that founded Maryland; Baltimore itself is baile an tí mhóir, \"town of the big house\".",
-			"The bombardment of its Fort McHenry in 1814 is what Francis Scott Key was watching when he wrote the national anthem.",
-			"Its harbour clipper ships were the fastest afloat in the 1800s, built for speed over cargo."
-		]
+		"hooks": {
+			"en": [
+				"For Lord Baltimore, the Irish title of the family that founded Maryland; Baltimore itself is baile an tí mhóir, \"town of the big house\".",
+				"The bombardment of its Fort McHenry in 1814 is what Francis Scott Key was watching when he wrote the national anthem.",
+				"Its harbour clipper ships were the fastest afloat in the 1800s, built for speed over cargo."
+			],
+			"it": [
+				"Per Lord Baltimore, il titolo irlandese della famiglia che fondò il Maryland; Baltimore stessa è baile an tí mhóir, \"il paese della casa grande\".",
+				"Francis Scott Key stava guardando il bombardamento del suo Fort McHenry, nel 1814, quando scrisse l’inno nazionale.",
+				"I clipper del suo porto furono le navi più veloci dell’Ottocento, costruite per la velocità più che per il carico."
+			]
+		}
 	},
 	"cincinnati": {
 		"kind": "city",
@@ -528,11 +801,18 @@
 		"region": "Ohio",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"For the Society of the Cincinnati, Revolutionary officers who named themselves after Cincinnatus, the Roman who left his plough to save Rome and then went back to it.",
-			"It was called Losantiville for two years first, a made-up word meaning \"town opposite the mouth of the Licking\".",
-			"It was America’s first boomtown, and was called Porkopolis for the pork it packed and shipped downriver."
-		]
+		"hooks": {
+			"en": [
+				"For the Society of the Cincinnati, Revolutionary officers who named themselves after Cincinnatus, the Roman who left his plough to save Rome and then went back to it.",
+				"It was called Losantiville for two years first, a made-up word meaning \"town opposite the mouth of the Licking\".",
+				"It was America’s first boomtown, and was called Porkopolis for the pork it packed and shipped downriver."
+			],
+			"it": [
+				"Per la Society of the Cincinnati, gli ufficiali della Rivoluzione che si erano dati il nome di Cincinnato, il romano che lasciò l’aratro per salvare Roma e poi vi tornò.",
+				"Per i primi due anni si chiamò Losantiville, una parola inventata che significa \"città di fronte alla foce del Licking\".",
+				"Fu la prima città del boom in America, e la chiamavano Porkopolis per la carne di maiale che lavorava e spediva a valle lungo il fiume."
+			]
+		}
 	},
 	"covington": {
 		"kind": "city",
@@ -541,11 +821,18 @@
 		"region": "Kentucky",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"Named for General Leonard Covington, killed in the War of 1812.",
-			"It faces Cincinnati across the Ohio River, joined by a suspension bridge Roebling built as a trial run for Brooklyn.",
-			"That bridge was the longest in the world when it opened in 1866."
-		]
+		"hooks": {
+			"en": [
+				"Named for General Leonard Covington, killed in the War of 1812.",
+				"It faces Cincinnati across the Ohio River, joined by a suspension bridge Roebling built as a trial run for Brooklyn.",
+				"That bridge was the longest in the world when it opened in 1866."
+			],
+			"it": [
+				"Prende il nome dal generale Leonard Covington, caduto nella guerra del 1812.",
+				"Guarda Cincinnati dall’altra parte dell’Ohio, a cui è unita da un ponte sospeso che Roebling costruì come prova generale per quello di Brooklyn.",
+				"Quando fu inaugurato, nel 1866, quel ponte era il più lungo del mondo."
+			]
+		}
 	},
 	"washington-d-c": {
 		"kind": "city",
@@ -556,11 +843,18 @@
 		"capitalOf": "country",
 		"coastal": true,
 		"position": "north",
-		"hooks": [
-			"George Washington chose the site but never called it after himself; Congress did that, and the District of Columbia is a Latin flourish for the same Columbus.",
-			"It is in no state on purpose: the founders did not want the capital beholden to one.",
-			"No building may rise above a limit set in 1910, which is why it stays low and the Capitol still dominates."
-		]
+		"hooks": {
+			"en": [
+				"George Washington chose the site but never called it after himself; the commissioners laying it out did, in 1791, and the District of Columbia is a Latin flourish for the same Columbus.",
+				"It is in no state on purpose: the founders did not want the capital beholden to one.",
+				"No building may rise above a limit set in 1910, which is why it stays low and the Capitol still dominates."
+			],
+			"it": [
+				"George Washington scelse il sito ma non gli diede mai il proprio nome; lo fecero nel 1791 i commissari incaricati di tracciarla, e District of Columbia è un vezzo latino per lo stesso Colombo.",
+				"Di proposito non appartiene a nessuno Stato: i fondatori non volevano una capitale in debito verso uno solo.",
+				"Nessun edificio può superare un limite fissato nel 1910: per questo la città resta bassa e il Campidoglio la domina ancora."
+			]
+		}
 	},
 	"louisville": {
 		"kind": "city",
@@ -570,11 +864,18 @@
 		"region": "Kentucky",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"Named for Louis XVI, in gratitude for French help in the Revolution.",
-			"The Kentucky Derby has run at Churchill Downs here since 1875, the oldest continuously held sporting event in the country.",
-			"Muhammad Ali was born here, and the Louisville Slugger bat has been made in the city since 1884."
-		]
+		"hooks": {
+			"en": [
+				"Named for Louis XVI, in gratitude for French help in the Revolution.",
+				"The Kentucky Derby has run at Churchill Downs here since 1875, the oldest continuously held sporting event in the country.",
+				"Muhammad Ali was born here, and the Louisville Slugger bat has been made in the city since 1884."
+			],
+			"it": [
+				"Prende il nome da Luigi XVI, in segno di gratitudine per l’aiuto francese nella Rivoluzione.",
+				"Il Kentucky Derby si corre qui a Churchill Downs dal 1875: è l’evento sportivo più antico del paese disputato senza interruzioni.",
+				"Qui nacque Muhammad Ali, e la mazza Louisville Slugger si fabbrica in città dal 1884."
+			]
+		}
 	},
 	"lexington": {
 		"kind": "city",
@@ -583,11 +884,18 @@
 		"region": "Kentucky",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"Named for Lexington, Massachusetts, where the Revolution’s first shots were fired.",
-			"It calls itself the horse capital of the world, surrounded by thoroughbred farms on limestone pasture.",
-			"That limestone is why the grass looks blue in spring and the region is called the Bluegrass."
-		]
+		"hooks": {
+			"en": [
+				"Named for Lexington, Massachusetts, where the Revolution’s first shots were fired.",
+				"It calls itself the horse capital of the world, surrounded by thoroughbred farms on limestone pasture.",
+				"That limestone makes the grass rich, and its seed heads give it the blue tint in spring that named the Bluegrass."
+			],
+			"it": [
+				"Prende il nome da Lexington, in Massachusetts, dove furono sparati i primi colpi della Rivoluzione.",
+				"Si proclama capitale mondiale del cavallo, circondata da allevamenti di purosangue su pascoli calcarei.",
+				"Quel calcare rende l’erba ricca, e in primavera le sue spighe le danno la sfumatura blu che ha dato il nome al Bluegrass."
+			]
+		}
 	},
 	"richmond": {
 		"kind": "city",
@@ -597,11 +905,18 @@
 		"region": "Virginia",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"Named for Richmond upon Thames in England, which a founder thought the river view resembled.",
-			"It was the capital of the Confederacy and burned as it fell in 1865.",
-			"Patrick Henry gave the \"give me liberty or give me death\" speech in one of its churches in 1775."
-		]
+		"hooks": {
+			"en": [
+				"Named for Richmond upon Thames in England, which a founder thought the river view resembled.",
+				"It was the capital of the Confederacy and burned as it fell in 1865.",
+				"Patrick Henry gave the \"give me liberty or give me death\" speech in one of its churches in 1775."
+			],
+			"it": [
+				"Prende il nome da Richmond upon Thames, in Inghilterra, perché a uno dei fondatori la vista sul fiume ricordava quella.",
+				"Fu la capitale della Confederazione e bruciò mentre cadeva, nel 1865.",
+				"Nel 1775, in una delle sue chiese, Patrick Henry pronunciò il discorso del \"datemi la libertà o datemi la morte\"."
+			]
+		}
 	},
 	"hampton": {
 		"kind": "city",
@@ -610,11 +925,18 @@
 		"region": "Virginia",
 		"coastal": true,
 		"position": "centre",
-		"hooks": [
-			"Named for the Earl of Southampton — the oldest continuously English-speaking settlement in America, from 1610.",
-			"The first Africans brought to English North America landed nearby at Point Comfort in 1619.",
-			"NASA Langley here trained the Mercury astronauts and employed the mathematicians of Hidden Figures."
-		]
+		"hooks": {
+			"en": [
+				"Named for the Earl of Southampton — the oldest continuously English-speaking settlement in America, from 1610.",
+				"The first Africans brought to English North America landed nearby at Point Comfort in 1619.",
+				"NASA Langley here trained the Mercury astronauts and employed the mathematicians of Hidden Figures."
+			],
+			"it": [
+				"Prende il nome dal conte di Southampton: è il più antico insediamento d’America di lingua inglese abitato senza interruzioni, dal 1610.",
+				"I primi africani portati nell’America del Nord inglese sbarcarono qui vicino, a Point Comfort, nel 1619.",
+				"Il centro NASA di Langley, qui, addestrò gli astronauti del programma Mercury e diede lavoro alle matematiche raccontate in Il diritto di contare."
+			]
+		}
 	},
 	"virginia-beach": {
 		"kind": "city",
@@ -624,11 +946,18 @@
 		"region": "Virginia",
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"The plainest name on this map: the beach in Virginia, which is itself named for Elizabeth I, the virgin queen.",
-			"Its 56 km of seafront are in the record books as the longest pleasure beach in the world.",
-			"The first English colonists in America landed at Cape Henry here in 1607, before moving up to Jamestown."
-		]
+		"hooks": {
+			"en": [
+				"The plainest name on this map: the beach in Virginia, which is itself named for Elizabeth I, the virgin queen.",
+				"Its 56 km of seafront are in the record books as the longest pleasure beach in the world.",
+				"The first English colonists in America landed at Cape Henry here in 1607, before moving up to Jamestown."
+			],
+			"it": [
+				"Il nome più semplice di questa mappa: la spiaggia in Virginia, che a sua volta prende il nome da Elisabetta I, la regina vergine.",
+				"I suoi 56 km di lungomare sono nel libro dei record come la spiaggia balneare più lunga del mondo.",
+				"I primi coloni inglesi d’America sbarcarono qui a Cape Henry nel 1607, prima di risalire fino a Jamestown."
+			]
+		}
 	},
 	"norfolk": {
 		"kind": "city",
@@ -637,11 +966,18 @@
 		"region": "Virginia",
 		"coastal": true,
 		"position": "centre",
-		"hooks": [
-			"For Norfolk in England — the \"north folk\" of East Anglia, as Suffolk were the south.",
-			"It has the largest naval base on earth, and the deep harbour is why the city is there at all.",
-			"Its harbour has never frozen, which is why the navy chose it, and the Chesapeake Bay Bridge-Tunnel runs 28 km across the bay mouth."
-		]
+		"hooks": {
+			"en": [
+				"For Norfolk in England — the \"north folk\" of East Anglia, as Suffolk were the south.",
+				"It has the largest naval base on earth, and the deep harbour is why the city is there at all.",
+				"Its harbour has never frozen, which is why the navy chose it, and the Chesapeake Bay Bridge-Tunnel runs 28 km across the bay mouth."
+			],
+			"it": [
+				"Per il Norfolk in Inghilterra: la \"gente del nord\" dell’East Anglia, come quella del Suffolk era la gente del sud.",
+				"Ha la più grande base navale della Terra, e il porto profondo è il motivo stesso per cui la città esiste.",
+				"Il suo porto non è mai gelato, ed è per questo che la marina lo scelse; il Chesapeake Bay Bridge-Tunnel attraversa per 28 km l’imboccatura della baia."
+			]
+		}
 	},
 	"nashville": {
 		"kind": "city",
@@ -651,11 +987,18 @@
 		"region": "Tennessee",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"Named for Francis Nash, a general killed in the Revolution.",
-			"It is the capital of country music, and the Grand Ole Opry has broadcast since 1925.",
-			"It has a full-size concrete replica of the Parthenon, built for an exposition in 1897."
-		]
+		"hooks": {
+			"en": [
+				"Named for Francis Nash, a general killed in the Revolution.",
+				"It is the capital of country music, and the Grand Ole Opry has broadcast since 1925.",
+				"It has a full-size concrete replica of the Parthenon, rebuilt in the 1920s from a plaster one made for an 1897 exposition."
+			],
+			"it": [
+				"Prende il nome da Francis Nash, un generale caduto nella Rivoluzione.",
+				"È la capitale della musica country, e il Grand Ole Opry va in onda dal 1925.",
+				"Ha una replica del Partenone a grandezza naturale, ricostruita in cemento negli anni Venti al posto di quella in gesso fatta per un’esposizione del 1897."
+			]
+		}
 	},
 	"winston-salem": {
 		"kind": "city",
@@ -664,11 +1007,18 @@
 		"region": "North Carolina",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"Two towns joined in 1913: Salem was founded by Moravians in 1766, Winston named for a Revolutionary officer.",
-			"R. J. Reynolds built its tobacco industry here, and the town made Camel cigarettes.",
-			"Old Salem is preserved as a working eighteenth-century Moravian village."
-		]
+		"hooks": {
+			"en": [
+				"Two towns joined in 1913: Salem was founded by Moravians in 1766, Winston named for a Revolutionary officer.",
+				"R. J. Reynolds built its tobacco industry here, and the town made Camel cigarettes.",
+				"Old Salem is preserved as a working eighteenth-century Moravian village."
+			],
+			"it": [
+				"Due città unite nel 1913: Salem fu fondata dai Moravi nel 1766, Winston prende il nome da un ufficiale della Rivoluzione.",
+				"R. J. Reynolds vi costruì la sua industria del tabacco, e la città produceva le sigarette Camel.",
+				"Old Salem è conservata come un villaggio moravo del Settecento ancora vivo."
+			]
+		}
 	},
 	"greensboro": {
 		"kind": "city",
@@ -677,11 +1027,18 @@
 		"region": "North Carolina",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"Named for Nathanael Greene, whose 1781 battle here wore down Cornwallis before Yorktown.",
-			"The 1960 Woolworth’s sit-in by four students started the lunch-counter movement across the South.",
-			"That counter is now in the Smithsonian, and the building is a civil rights museum."
-		]
+		"hooks": {
+			"en": [
+				"Named for Nathanael Greene, whose 1781 battle here wore down Cornwallis before Yorktown.",
+				"The 1960 Woolworth’s sit-in by four students started the lunch-counter movement across the South.",
+				"That counter is now in the Smithsonian, and the building is a civil rights museum."
+			],
+			"it": [
+				"Prende il nome da Nathanael Greene, la cui battaglia qui nel 1781 logorò Cornwallis prima di Yorktown.",
+				"Nel 1960 il sit-in di quattro studenti da Woolworth’s diede il via ai sit-in nelle tavole calde di tutto il Sud.",
+				"Quel bancone oggi è allo Smithsonian, e l’edificio è un museo dei diritti civili."
+			]
+		}
 	},
 	"durham": {
 		"kind": "city",
@@ -690,11 +1047,18 @@
 		"region": "North Carolina",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"Named for Bartlett Durham, who donated land for the railway station.",
-			"Its tobacco wealth built Duke University, and its Black Wall Street on Parrish Street was a centre of Black business.",
-			"With Raleigh and Chapel Hill it forms the Research Triangle."
-		]
+		"hooks": {
+			"en": [
+				"Named for Bartlett Durham, who donated land for the railway station.",
+				"Its tobacco wealth built Duke University, and its Black Wall Street on Parrish Street was a centre of Black business.",
+				"With Raleigh and Chapel Hill it forms the Research Triangle."
+			],
+			"it": [
+				"Prende il nome da Bartlett Durham, che donò il terreno per la stazione ferroviaria.",
+				"La ricchezza del tabacco costruì la Duke University, e la sua Black Wall Street, in Parrish Street, era un centro dell’imprenditoria nera.",
+				"Con Raleigh e Chapel Hill forma il Research Triangle."
+			]
+		}
 	},
 	"knoxville": {
 		"kind": "city",
@@ -703,11 +1067,18 @@
 		"region": "Tennessee",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"Named for Henry Knox, Washington’s secretary of war.",
-			"The 1982 World’s Fair was held here, and its gold Sunsphere still stands.",
-			"The Oak Ridge site nearby enriched the uranium for the Hiroshima bomb, in a town built in secret for 75,000 people."
-		]
+		"hooks": {
+			"en": [
+				"Named for Henry Knox, Washington’s secretary of war.",
+				"The 1982 World’s Fair was held here, and its gold Sunsphere still stands.",
+				"The Oak Ridge site nearby enriched the uranium for the Hiroshima bomb, in a town built in secret for 75,000 people."
+			],
+			"it": [
+				"Prende il nome da Henry Knox, segretario alla Guerra di Washington.",
+				"Qui si tenne l’Esposizione universale del 1982, e la sua Sunsphere dorata è ancora in piedi.",
+				"Nel vicino sito di Oak Ridge fu arricchito l’uranio per la bomba di Hiroshima, in una città per 75.000 persone costruita in segreto."
+			]
+		}
 	},
 	"raleigh": {
 		"kind": "city",
@@ -716,11 +1087,18 @@
 		"region": "North Carolina",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"For Sir Walter Raleigh, who sent the first English colonists to this coast in the 1580s and never set foot in America himself.",
-			"Like Indianapolis it was built to be a capital, chosen in 1792 for sitting near the middle of the state.",
-			"With Durham and Chapel Hill it forms the Research Triangle, named for the three universities at its corners."
-		]
+		"hooks": {
+			"en": [
+				"For Sir Walter Raleigh, who sent the first English colonists to this coast in the 1580s and never set foot in America himself.",
+				"Like Indianapolis it was built to be a capital, chosen in 1792 for sitting near the middle of the state.",
+				"With Durham and Chapel Hill it forms the Research Triangle, named for the three universities at its corners."
+			],
+			"it": [
+				"Per Sir Walter Raleigh, che negli anni Ottanta del Cinquecento mandò su questa costa i primi coloni inglesi senza mai mettere piede in America.",
+				"Come Indianapolis, fu costruita per essere una capitale, scelta nel 1792 perché si trovava vicino al centro dello Stato.",
+				"Con Durham e Chapel Hill forma il Research Triangle, che prende il nome dalle tre università ai suoi vertici."
+			]
+		}
 	},
 	"charlotte": {
 		"kind": "city",
@@ -730,11 +1108,18 @@
 		"region": "North Carolina",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"Named for Charlotte of Mecklenburg-Strelitz, George III’s queen — which is why it is called the Queen City.",
-			"It is the second largest banking centre in the United States after New York.",
-			"America’s first gold rush happened nearby in 1799, when a boy found a 17-pound nugget and the family used it as a doorstop."
-		]
+		"hooks": {
+			"en": [
+				"Named for Charlotte of Mecklenburg-Strelitz, George III’s queen — which is why it is called the Queen City.",
+				"It is the second largest banking centre in the United States after New York.",
+				"America’s first gold rush happened nearby in 1799, when a boy found a 17-pound nugget and the family used it as a doorstop."
+			],
+			"it": [
+				"Prende il nome da Carlotta di Meclemburgo-Strelitz, moglie di Giorgio III: per questo la chiamano Queen City, \"la città della regina\".",
+				"È il secondo centro bancario degli Stati Uniti dopo New York.",
+				"Nel 1799 qui vicino scoppiò la prima corsa all’oro d’America, quando un ragazzo trovò una pepita di 17 libbre che la famiglia usò come fermaporta."
+			]
+		}
 	},
 	"chattanooga": {
 		"kind": "city",
@@ -743,11 +1128,18 @@
 		"region": "Tennessee",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"From a Creek word, possibly \"rock rising to a point\", for Lookout Mountain.",
-			"It was a crucial railway junction in the Civil War and was fought over repeatedly.",
-			"It was the first American city to offer citywide gigabit internet, in 2010, through its own utility."
-		]
+		"hooks": {
+			"en": [
+				"From a Creek word, possibly \"rock rising to a point\", for Lookout Mountain.",
+				"It was a crucial railway junction in the Civil War and was fought over repeatedly.",
+				"It was the first American city to offer citywide gigabit internet, in 2010, through its own utility."
+			],
+			"it": [
+				"Da una parola creek, forse \"roccia che sale a punta\", riferita a Lookout Mountain.",
+				"Durante la guerra di secessione fu un nodo ferroviario cruciale e fu contesa più volte.",
+				"Nel 2010 fu la prima città americana a offrire internet a un gigabit in tutto il territorio comunale, grazie alla propria azienda di servizi pubblici."
+			]
+		}
 	},
 	"fayetteville": {
 		"kind": "city",
@@ -756,11 +1148,18 @@
 		"region": "North Carolina",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"Named for the Marquis de Lafayette — the first American city named for him, and the only one he visited.",
-			"Fort Bragg beside it is one of the largest military bases in the world by population.",
-			"The town was the site of North Carolina’s ratification of the Constitution in 1789."
-		]
+		"hooks": {
+			"en": [
+				"Named for the Marquis de Lafayette — the first American city named for him, and the only one he visited.",
+				"Fort Bragg beside it is one of the largest military bases in the world by population.",
+				"The town was the site of North Carolina’s ratification of the Constitution in 1789."
+			],
+			"it": [
+				"Prende il nome dal marchese di La Fayette: la prima città americana a lui dedicata, e l’unica che visitò.",
+				"Fort Bragg, accanto, è una delle basi militari più grandi del mondo per popolazione.",
+				"Nel 1789 la città fu teatro della ratifica della Costituzione da parte della Carolina del Nord."
+			]
+		}
 	},
 	"greenville": {
 		"kind": "city",
@@ -769,11 +1168,18 @@
 		"region": "South Carolina",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"Named for Nathanael Greene, like Greensboro — this is the South Carolina one.",
-			"Its Falls Park has a curved suspension bridge built over a waterfall that a road bridge had hidden for decades.",
-			"The textile mills here made it the Textile Capital of the World, and BMW now builds cars nearby."
-		]
+		"hooks": {
+			"en": [
+				"Named for Nathanael Greene, like Greensboro — this is the South Carolina one.",
+				"Its Falls Park has a curved suspension bridge built over a waterfall that a road bridge had hidden for decades.",
+				"The textile mills here made it the Textile Capital of the World, and BMW now builds cars nearby."
+			],
+			"it": [
+				"Prende il nome da Nathanael Greene, come Greensboro: questa è quella della Carolina del Sud.",
+				"Nel suo Falls Park un ponte sospeso curvo scavalca una cascata che per decenni era rimasta nascosta da un ponte stradale.",
+				"Gli stabilimenti tessili ne fecero la capitale mondiale del tessile, e oggi la BMW costruisce auto qui vicino."
+			]
+		}
 	},
 	"huntsville": {
 		"kind": "city",
@@ -782,11 +1188,18 @@
 		"region": "Alabama",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"Named for John Hunt, who settled at a big spring in 1805.",
-			"Wernher von Braun and his team designed the Saturn V here, which is why it is called Rocket City.",
-			"Its Space and Rocket Center holds the largest collection of rocketry hardware in the world."
-		]
+		"hooks": {
+			"en": [
+				"Named for John Hunt, who settled at a big spring in 1805.",
+				"Wernher von Braun and his team designed the Saturn V here, which is why it is called Rocket City.",
+				"Its Space and Rocket Center holds the largest collection of rocketry hardware in the world."
+			],
+			"it": [
+				"Prende il nome da John Hunt, che nel 1805 si stabilì presso una grande sorgente.",
+				"Wernher von Braun e la sua squadra progettarono qui il Saturn V: per questo la chiamano Rocket City, \"la città dei razzi\".",
+				"Il suo Space and Rocket Center custodisce la più grande collezione di materiale missilistico del mondo."
+			]
+		}
 	},
 	"columbia": {
 		"kind": "city",
@@ -795,11 +1208,18 @@
 		"region": "South Carolina",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"From Columbia, the poetic name for America derived from Columbus.",
-			"It is the home of the University of Missouri, which founded the first journalism school in the world in 1908.",
-			"The town is regularly ranked among the best small American cities to live in."
-		]
+		"hooks": {
+			"en": [
+				"From Columbia, the poetic name for America derived from Columbus.",
+				"It is the home of the University of Missouri, which founded the first journalism school in the world in 1908.",
+				"The town is regularly ranked among the best small American cities to live in."
+			],
+			"it": [
+				"Da Columbia, il nome poetico dell’America derivato da Colombo.",
+				"Ospita l’Università del Missouri, che nel 1908 fondò la prima scuola di giornalismo del mondo.",
+				"Figura regolarmente tra le migliori piccole città americane in cui vivere."
+			]
+		}
 	},
 	"atlanta": {
 		"kind": "city",
@@ -809,11 +1229,18 @@
 		"region": "Georgia",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"A railway invention: the end of the Western and Atlantic line, feminised into Atlanta.",
-			"Sherman burned it in 1864, which is why almost nothing in the centre predates the Civil War.",
-			"Its airport is the busiest in the world, and Coca-Cola was invented here in 1886 by a pharmacist."
-		]
+		"hooks": {
+			"en": [
+				"A railway invention: the end of the Western and Atlantic line, feminised into Atlanta.",
+				"Sherman burned it in 1864, which is why almost nothing in the centre predates the Civil War.",
+				"Its airport is the busiest in the world, and Coca-Cola was invented here in 1886 by a pharmacist."
+			],
+			"it": [
+				"Un’invenzione delle ferrovie: il capolinea della Western and Atlantic, volto al femminile in Atlanta.",
+				"Sherman la bruciò nel 1864, ed è per questo che nel centro quasi nulla è anteriore alla guerra di secessione.",
+				"Il suo aeroporto è il più trafficato del mondo, e la Coca-Cola fu inventata qui nel 1886 da un farmacista."
+			]
+		}
 	},
 	"birmingham": {
 		"kind": "city",
@@ -822,11 +1249,18 @@
 		"region": "Alabama",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"For Birmingham in England, because both were built on iron — the founders were declaring an ambition in 1871.",
-			"It is the only place in the world with coal, iron ore and limestone, the three things steel needs, all within a few kilometres.",
-			"A 17 m cast-iron statue of Vulcan, the largest in the world, stands over it — the god of the forge, for the iron."
-		]
+		"hooks": {
+			"en": [
+				"For Birmingham in England, because both were built on iron — the founders were declaring an ambition in 1871.",
+				"It is the only place in the world with coal, iron ore and limestone, the three things steel needs, all within a few kilometres.",
+				"A 17 m cast-iron statue of Vulcan, the largest in the world, stands over it — the god of the forge, for the iron."
+			],
+			"it": [
+				"Per Birmingham in Inghilterra, perché entrambe erano nate dal ferro: nel 1871 i fondatori dichiaravano un’ambizione.",
+				"È l’unico posto al mondo con carbone, minerale di ferro e calcare, le tre cose che servono all’acciaio, tutti a pochi chilometri di distanza.",
+				"La sovrasta una statua di Vulcano in ghisa alta 17 m, la più grande al mondo: il dio della fucina, per il ferro."
+			]
+		}
 	},
 	"augusta": {
 		"kind": "city",
@@ -835,11 +1269,18 @@
 		"region": "Georgia",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"Named for Princess Augusta, mother of George III.",
-			"The Masters has been played at Augusta National since 1934.",
-			"James Brown grew up here, and a statue of him stands on Broad Street."
-		]
+		"hooks": {
+			"en": [
+				"Named for Princess Augusta, mother of George III.",
+				"The Masters has been played at Augusta National since 1934.",
+				"James Brown grew up here, and a statue of him stands on Broad Street."
+			],
+			"it": [
+				"Prende il nome dalla principessa Augusta, madre di Giorgio III.",
+				"Il Masters si gioca all’Augusta National dal 1934.",
+				"James Brown crebbe qui, e una sua statua si trova su Broad Street."
+			]
+		}
 	},
 	"charleston": {
 		"kind": "city",
@@ -848,11 +1289,18 @@
 		"region": "South Carolina",
 		"coastal": true,
 		"position": "centre",
-		"hooks": [
-			"Named for Charles II — it was Charles Town until 1783.",
-			"The Civil War began in its harbour when Confederate guns fired on Fort Sumter in April 1861.",
-			"About 40% of enslaved Africans brought to North America arrived through this port."
-		]
+		"hooks": {
+			"en": [
+				"Named for Charles II — it was Charles Town until 1783.",
+				"The Civil War began in its harbour when Confederate guns fired on Fort Sumter in April 1861.",
+				"About 40% of enslaved Africans brought to North America arrived through this port."
+			],
+			"it": [
+				"Prende il nome da Carlo II: fino al 1783 si chiamava Charles Town.",
+				"La guerra di secessione cominciò nel suo porto, quando nell’aprile 1861 i cannoni confederati aprirono il fuoco su Fort Sumter.",
+				"Circa il 40% degli africani ridotti in schiavitù portati nel Nord America arrivò attraverso questo porto."
+			]
+		}
 	},
 	"columbus-georgia": {
 		"kind": "city",
@@ -861,11 +1309,18 @@
 		"region": "Georgia",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"Named for Columbus, like the Ohio city, and founded in 1828 at the head of navigation on the Chattahoochee.",
-			"Coca-Cola’s inventor, John Pemberton, developed an early version of the formula here before moving to Atlanta.",
-			"Its whitewater course on the river is the longest urban one in the world."
-		]
+		"hooks": {
+			"en": [
+				"Named for Columbus, like the Ohio city, and founded in 1828 at the head of navigation on the Chattahoochee.",
+				"Coca-Cola’s inventor, John Pemberton, developed an early version of the formula here before moving to Atlanta.",
+				"Its whitewater course on the river is the longest urban one in the world."
+			],
+			"it": [
+				"Prende il nome da Colombo, come la città dell’Ohio, e fu fondata nel 1828 dove finiva la navigabilità del Chattahoochee.",
+				"L’inventore della Coca-Cola, John Pemberton, mise a punto qui una prima versione della ricetta prima di trasferirsi ad Atlanta.",
+				"Il suo percorso di rafting sul fiume è il più lungo al mondo in ambiente urbano."
+			]
+		}
 	},
 	"tallahassee": {
 		"kind": "city",
@@ -874,11 +1329,18 @@
 		"region": "Florida",
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"From a Muscogee word meaning \"old fields\" or \"abandoned town\".",
-			"It was chosen as Florida’s capital in 1824 because it was halfway between St Augustine and Pensacola.",
-			"It was the only Confederate capital east of the Mississippi not captured during the war."
-		]
+		"hooks": {
+			"en": [
+				"From a Muscogee word meaning \"old fields\" or \"abandoned town\".",
+				"It was chosen as Florida’s capital in 1824 because it was halfway between St Augustine and Pensacola.",
+				"It was the only Confederate capital east of the Mississippi not captured during the war."
+			],
+			"it": [
+				"Da una parola muscogee che significa \"campi vecchi\" o \"città abbandonata\".",
+				"Nel 1824 fu scelta come capitale della Florida perché si trovava a metà strada tra St. Augustine e Pensacola.",
+				"Fu l’unica capitale confederata a est del Mississippi a non essere conquistata durante la guerra."
+			]
+		}
 	},
 	"jacksonville": {
 		"kind": "city",
@@ -888,11 +1350,18 @@
 		"region": "Florida",
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"Named for Andrew Jackson, the first military governor of Florida, who never visited it.",
-			"It is the largest city in the contiguous United States by land area, after a 1968 merger with its county.",
-			"Its port and naval bases make it one of the largest military centres in the country."
-		]
+		"hooks": {
+			"en": [
+				"Named for Andrew Jackson, the first military governor of Florida, who never visited it.",
+				"It is the largest city in the contiguous United States by land area, after a 1968 merger with its county.",
+				"Its port and naval bases make it one of the largest military centres in the country."
+			],
+			"it": [
+				"Prende il nome da Andrew Jackson, primo governatore militare della Florida, che non la visitò mai.",
+				"Dopo la fusione del 1968 con la sua contea, è la città più estesa degli Stati Uniti continentali.",
+				"Il porto e le basi navali ne fanno uno dei maggiori centri militari del paese."
+			]
+		}
 	},
 	"daytona-beach": {
 		"kind": "city",
@@ -901,11 +1370,18 @@
 		"region": "Florida",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"Named for Mathias Day, who bought the land in 1870.",
-			"Its hard-packed sand beach was used for land speed records from 1903 to 1935.",
-			"That is why NASCAR was founded here, and the Daytona 500 is its biggest race."
-		]
+		"hooks": {
+			"en": [
+				"Named for Mathias Day, who bought the land in 1870.",
+				"Its hard-packed sand beach was used for land speed records from 1903 to 1935.",
+				"That is why NASCAR was founded here, and the Daytona 500 is its biggest race."
+			],
+			"it": [
+				"Prende il nome da Mathias Day, che comprò il terreno nel 1870.",
+				"Dal 1903 al 1935 la sua spiaggia di sabbia compatta fu usata per i record di velocità su terra.",
+				"Per questo la NASCAR fu fondata qui, e la Daytona 500 è la sua gara più importante."
+			]
+		}
 	},
 	"sanford": {
 		"kind": "city",
@@ -914,11 +1390,18 @@
 		"region": "Florida",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"Named for Henry Sanford, an American diplomat who founded it in 1870.",
-			"It calls itself the celery capital, having grown much of the country’s crop.",
-			"Its lake is the head of navigation on the St Johns, one of the few American rivers that flows north."
-		]
+		"hooks": {
+			"en": [
+				"Named for Henry Sanford, an American diplomat who founded it in 1870.",
+				"It calls itself the celery capital, having grown much of the country’s crop.",
+				"Its lake is the head of navigation on the St Johns, one of the few American rivers that flows north."
+			],
+			"it": [
+				"Prende il nome da Henry Sanford, diplomatico americano che la fondò nel 1870.",
+				"Si proclama capitale del sedano, dopo averne coltivato gran parte del raccolto nazionale.",
+				"Il suo lago è il punto più a monte navigabile del St. Johns, uno dei pochi fiumi americani che scorrono verso nord."
+			]
+		}
 	},
 	"orlando": {
 		"kind": "city",
@@ -928,11 +1411,18 @@
 		"region": "Florida",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"Probably for a soldier named Orlando Reeves who died here in 1835, though the records are thin enough that the town may have invented him.",
-			"Disney bought 110 km² of swamp through shell companies in the 1960s so nobody would raise the price.",
-			"More people visit it each year than any other American city, and it has more hotel rooms than anywhere except Las Vegas."
-		]
+		"hooks": {
+			"en": [
+				"Probably for a soldier named Orlando Reeves who died here in 1835, though the records are thin enough that the town may have invented him.",
+				"Disney bought 110 km² of swamp through shell companies in the 1960s so nobody would raise the price.",
+				"More people visit it each year than any other American city, and it has more hotel rooms than anywhere except Las Vegas."
+			],
+			"it": [
+				"Probabilmente per un soldato di nome Orlando Reeves morto qui nel 1835, anche se le fonti sono così scarse che la città potrebbe esserselo inventato.",
+				"Negli anni Sessanta la Disney comprò 110 km² di palude tramite società di comodo, perché nessuno alzasse il prezzo.",
+				"Ogni anno la visitano più persone che qualunque altra città americana, e ha più camere d’albergo di qualunque posto tranne Las Vegas."
+			]
+		}
 	},
 	"kissimmee": {
 		"kind": "city",
@@ -941,11 +1431,18 @@
 		"region": "Florida",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"From a Calusa or Creek word of uncertain meaning, possibly \"long water\".",
-			"It was a cattle town before Walt Disney World opened next door in 1971.",
-			"Florida’s cattle industry is the oldest in the United States, started by the Spanish in the 1500s."
-		]
+		"hooks": {
+			"en": [
+				"From a Calusa or Creek word of uncertain meaning, possibly \"long water\".",
+				"It was a cattle town before Walt Disney World opened next door in 1971.",
+				"Florida’s cattle industry is the oldest in the United States, started by the Spanish in the 1500s."
+			],
+			"it": [
+				"Da una parola calusa o creek di significato incerto, forse \"acqua lunga\".",
+				"Era una città di allevatori prima che nel 1971 aprisse, lì accanto, Walt Disney World.",
+				"L’allevamento di bestiame della Florida è il più antico degli Stati Uniti, avviato dagli spagnoli nel Cinquecento."
+			]
+		}
 	},
 	"melbourne": {
 		"kind": "city",
@@ -954,11 +1451,18 @@
 		"region": "Florida",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"Named for Melbourne, Australia — its first postmaster had lived there.",
-			"It sits on the Space Coast, and Cape Canaveral launches are visible from its beaches.",
-			"Its Indian River Lagoon is one of the most biologically diverse estuaries in North America."
-		]
+		"hooks": {
+			"en": [
+				"Named for Melbourne, Australia — its first postmaster had lived there.",
+				"It sits on the Space Coast, and Cape Canaveral launches are visible from its beaches.",
+				"Its Indian River Lagoon is one of the most biologically diverse estuaries in North America."
+			],
+			"it": [
+				"Prende il nome da Melbourne, in Australia, dove aveva vissuto il suo primo direttore delle poste.",
+				"Si trova sulla Space Coast, e dalle sue spiagge si vedono i lanci da Cape Canaveral.",
+				"La sua Indian River Lagoon è uno degli estuari con la maggiore biodiversità del Nord America."
+			]
+		}
 	},
 	"tampa": {
 		"kind": "city",
@@ -968,11 +1472,18 @@
 		"region": "Florida",
 		"coastal": true,
 		"position": "south-west",
-		"hooks": [
-			"A Calusa word recorded by the Spanish, meaning something like \"sticks of fire\" — possibly for the lightning, which is the worst in the country here.",
-			"Cuban cigar makers built Ybor City here in the 1880s, and José Martí planned the Cuban revolution from its rolling floors.",
-			"Its port is Florida’s largest, and the Gasparilla pirate festival has been held since 1904."
-		]
+		"hooks": {
+			"en": [
+				"A Calusa word recorded by the Spanish, meaning something like \"sticks of fire\" — possibly for the lightning, which is the worst in the country here.",
+				"Cuban cigar makers built Ybor City here in the 1880s, and José Martí planned the Cuban revolution from its rolling floors.",
+				"Its port is Florida’s largest, and the Gasparilla pirate festival has been held since 1904."
+			],
+			"it": [
+				"Una parola calusa annotata dagli spagnoli, che significa qualcosa come \"bastoni di fuoco\": forse per i fulmini, che qui sono i peggiori del paese.",
+				"Negli anni Ottanta dell’Ottocento i sigarai cubani costruirono qui Ybor City, e José Martí preparò la rivoluzione cubana dai laboratori dove si arrotolavano i sigari.",
+				"Il suo porto è il più grande della Florida, e il festival dei pirati di Gasparilla si tiene dal 1904."
+			]
+		}
 	},
 	"st-petersburg": {
 		"kind": "city",
@@ -981,11 +1492,18 @@
 		"region": "Florida",
 		"coastal": true,
 		"position": "south-west",
-		"hooks": [
-			"Named for St Petersburg in Russia, the birthplace of a co-founder who won the naming in a coin toss.",
-			"The loser got to name the hotel, and called it the Detroit.",
-			"It holds the largest collection of Salvador Dalí’s work outside Spain, and averages 361 sunny days a year."
-		]
+		"hooks": {
+			"en": [
+				"Named for St Petersburg in Russia, the birthplace of a co-founder who won the naming in a coin toss.",
+				"The loser got to name the hotel, and called it the Detroit.",
+				"It holds the largest collection of Salvador Dalí’s work outside Spain, and averages 361 sunny days a year."
+			],
+			"it": [
+				"Prende il nome da San Pietroburgo, città natale di uno dei fondatori, che si aggiudicò la scelta del nome a testa o croce.",
+				"Lo sconfitto ebbe il diritto di battezzare l’albergo, e lo chiamò Detroit.",
+				"Custodisce la più grande collezione di opere di Salvador Dalí fuori dalla Spagna, e ha in media 361 giorni di sole all’anno."
+			]
+		}
 	},
 	"fort-pierce": {
 		"kind": "city",
@@ -994,11 +1512,18 @@
 		"region": "Florida",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"Named for a fort built in 1838 during the Second Seminole War.",
-			"Zora Neale Hurston spent her last years here and is buried in the town.",
-			"It sits on the Indian River Lagoon and is a centre of citrus growing."
-		]
+		"hooks": {
+			"en": [
+				"Named for a fort built in 1838 during the Second Seminole War.",
+				"Zora Neale Hurston spent her last years here and is buried in the town.",
+				"It sits on the Indian River Lagoon and is a centre of citrus growing."
+			],
+			"it": [
+				"Prende il nome da un forte costruito nel 1838 durante la seconda guerra seminole.",
+				"Zora Neale Hurston vi trascorse gli ultimi anni ed è sepolta in città.",
+				"Si affaccia sulla Indian River Lagoon ed è un centro della coltivazione degli agrumi."
+			]
+		}
 	},
 	"sarasota": {
 		"kind": "city",
@@ -1007,11 +1532,18 @@
 		"region": "Florida",
 		"coastal": true,
 		"position": "south-west",
-		"hooks": [
-			"Of uncertain origin, possibly from a Spanish or Calusa name.",
-			"The Ringling circus wintered here from 1927, and John Ringling left the city an art museum and a Venetian Gothic mansion.",
-			"Siesta Key beach is almost pure quartz, which is why the sand stays cool underfoot."
-		]
+		"hooks": {
+			"en": [
+				"Of uncertain origin, possibly from a Spanish or Calusa name.",
+				"The Ringling circus wintered here from 1927, and John Ringling left the city an art museum and a Venetian Gothic mansion.",
+				"Siesta Key beach is almost pure quartz, which is why the sand stays cool underfoot."
+			],
+			"it": [
+				"Di origine incerta, forse da un nome spagnolo o calusa.",
+				"Dal 1927 il circo Ringling vi trascorreva l’inverno, e John Ringling lasciò alla città un museo d’arte e una villa in gotico veneziano.",
+				"La spiaggia di Siesta Key è quasi puro quarzo, ed è per questo che la sabbia resta fresca sotto i piedi."
+			]
+		}
 	},
 	"west-palm-beach": {
 		"kind": "city",
@@ -1020,11 +1552,18 @@
 		"region": "Florida",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"West of Palm Beach, which is named for coconut palms that grew from a Spanish ship wrecked in 1878 with 20,000 coconuts aboard.",
-			"Henry Flagler built it as the place his hotel's staff lived, across the water from the guests.",
-			"The Norton Museum here holds one of the best Chinese collections in America, endowed by a steel magnate."
-		]
+		"hooks": {
+			"en": [
+				"West of Palm Beach, which is named for coconut palms that grew from a Spanish ship wrecked in 1878 with 20,000 coconuts aboard.",
+				"Henry Flagler built it as the place his hotel's staff lived, across the water from the guests.",
+				"The Norton Museum here holds one of the best Chinese collections in America, endowed by a steel magnate."
+			],
+			"it": [
+				"A ovest di Palm Beach, che prende il nome dalle palme da cocco nate da una nave spagnola naufragata nel 1878 con 20.000 noci di cocco a bordo.",
+				"Henry Flagler la costruì perché vi abitasse il personale del suo albergo, sull’altra riva rispetto agli ospiti.",
+				"Il Norton Museum, fondato da un magnate dell’acciaio, custodisce qui una delle migliori collezioni di arte cinese d’America."
+			]
+		}
 	},
 	"coral-springs": {
 		"kind": "city",
@@ -1033,11 +1572,18 @@
 		"region": "Florida",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"Named by a development company for coral rock and a spring, neither of which is actually there.",
-			"It was planned from scratch in 1963 with strict rules on architecture and signage.",
-			"No building may have a flat roof and business signs must follow a uniform code."
-		]
+		"hooks": {
+			"en": [
+				"Named by a development company for coral rock and a spring, neither of which is actually there.",
+				"It was planned from scratch in 1963 with strict rules on architecture and signage.",
+				"No building may have a flat roof and business signs must follow a uniform code."
+			],
+			"it": [
+				"Battezzata da una società immobiliare per la roccia corallina e una sorgente, due cose che in realtà lì non ci sono.",
+				"Fu pianificata da zero nel 1963, con regole severe su architettura e insegne.",
+				"Nessun edificio può avere il tetto piano, e le insegne dei negozi devono seguire un codice uniforme."
+			]
+		}
 	},
 	"naples": {
 		"kind": "city",
@@ -1046,11 +1592,18 @@
 		"region": "Florida",
 		"coastal": true,
 		"position": "south-west",
-		"hooks": [
-			"Named for Naples in Italy, by promoters who claimed its bay was finer than the original.",
-			"It has one of the highest concentrations of millionaires in the United States.",
-			"Its pier, built in 1888, has been rebuilt after hurricanes and fires five times."
-		]
+		"hooks": {
+			"en": [
+				"Named for Naples in Italy, by promoters who claimed its bay was finer than the original.",
+				"It has one of the highest concentrations of millionaires in the United States.",
+				"Its pier, built in 1888, has been rebuilt after hurricanes and fires five times."
+			],
+			"it": [
+				"Prende il nome da Napoli, per volere di promotori immobiliari che sostenevano che la sua baia fosse più bella dell’originale.",
+				"Ha una delle più alte concentrazioni di milionari degli Stati Uniti.",
+				"Il suo pontile, costruito nel 1888, è stato ricostruito cinque volte dopo uragani e incendi."
+			]
+		}
 	},
 	"fort-lauderdale": {
 		"kind": "city",
@@ -1059,11 +1612,18 @@
 		"region": "Florida",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"Forts built in the Second Seminole War, named for Major William Lauderdale who commanded the men who built them.",
-			"It has 300 km of canals, which is why it is called the Venice of America.",
-			"More than 45,000 boats are registered here, and it hosts the largest boat show in the world."
-		]
+		"hooks": {
+			"en": [
+				"Forts built in the Second Seminole War, named for Major William Lauderdale who commanded the men who built them.",
+				"It has 300 km of canals, which is why it is called the Venice of America.",
+				"More than 45,000 boats are registered here, and it hosts the largest boat show in the world."
+			],
+			"it": [
+				"Forti costruiti durante la seconda guerra seminole e intitolati al maggiore William Lauderdale, che comandava gli uomini che li costruirono.",
+				"Ha 300 km di canali, ed è per questo che la chiamano la Venezia d’America.",
+				"Qui sono registrate più di 45.000 barche, e la città ospita il più grande salone nautico del mondo."
+			]
+		}
 	},
 	"miami-beach": {
 		"kind": "city",
@@ -1072,11 +1632,18 @@
 		"region": "Florida",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"A barrier island turned into a resort from 1913 by a Quaker farmer who first tried to grow avocados on it.",
-			"Its Art Deco district has about 800 buildings from the 1920s and 1930s, the largest such concentration in the world.",
-			"Those buildings were saved from demolition in the 1970s by a preservation campaign led by one designer."
-		]
+		"hooks": {
+			"en": [
+				"A barrier island turned into a resort from 1913 by a Quaker farmer who first tried to grow avocados on it.",
+				"Its Art Deco district has about 800 buildings from the 1920s and 1930s, the largest such concentration in the world.",
+				"Those buildings were saved from demolition in the 1970s by a preservation campaign led by one designer."
+			],
+			"it": [
+				"Un’isola barriera trasformata in località balneare dal 1913 da un agricoltore quacchero che vi aveva prima provato a coltivare avocado.",
+				"Il suo quartiere Art Déco conta circa 800 edifici degli anni Venti e Trenta: la più grande concentrazione del genere al mondo.",
+				"Negli anni Settanta quegli edifici furono salvati dalla demolizione da una campagna di tutela guidata da un designer."
+			]
+		}
 	},
 	"miami": {
 		"kind": "city",
@@ -1086,10 +1653,17 @@
 		"region": "Florida",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"From Mayaimi, the name of a lake and the people beside it — a Native word, not a Spanish one, despite the city's Spanish present.",
-			"It was incorporated in 1896 by 344 voters, a third of them Black Bahamians, and it is the only major American city founded by a woman — Julia Tuttle.",
-			"More than half its residents were born abroad — a higher share than any other large American city."
-		]
+		"hooks": {
+			"en": [
+				"From Mayaimi, the name of a lake and the people beside it — a Native word, not a Spanish one, despite the city's Spanish present.",
+				"It was incorporated in 1896 by 344 voters, a third of them Black Bahamians, and it is the only major American city founded by a woman — Julia Tuttle.",
+				"More than half its residents were born abroad — a higher share than any other large American city."
+			],
+			"it": [
+				"Da Mayaimi, il nome di un lago e del popolo che viveva sulle sue rive: una parola indigena, non spagnola, nonostante il presente ispanico della città.",
+				"Fu costituita in città nel 1896 da 344 elettori, un terzo dei quali neri delle Bahamas, ed è l’unica grande città americana fondata da una donna, Julia Tuttle.",
+				"Più di metà dei suoi abitanti è nata all’estero: una quota più alta che in qualunque altra grande città americana."
+			]
+		}
 	}
 }
