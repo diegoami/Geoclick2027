@@ -14,47 +14,62 @@ The log itself: [`CHANGELOG.md`](../CHANGELOG.md).
 > — one Opus agent in a loop rather than an orchestrator directing others — and
 > what each batch contains, since the nice-to-have tier came back in.
 >
-> **Fourth change (2026-09-23, [#26](https://github.com/diegoami/Geoclick2027/issues/26)).**
-> A release is staged on a short-lived **`release/X.Y.Z` PR**. Not to ration
-> builds this time: a staged release is a review milestone (CLAUDE.md §3a),
-> and a review needs a thread and a SHA. See "The release PR" below.
+> **Fourth change (2026-09-23, [#26](https://github.com/diegoami/Geoclick2027/issues/26)),
+> amended the same day ([#29](https://github.com/diegoami/Geoclick2027/issues/29)).**
+> A release is a **milestone** (CLAUDE.md §3a): an annotated tag on `main`,
+> on exactly the commit an independent review agreed with, and the release
+> is built from that tag. The short-lived `release/X.Y.Z` PR of #26 was
+> dropped: its stable tag landed on a merge commit nobody had reviewed.
 
 ## The shape of it
 
 ```
   task branch ──merge (owner OK)──► main
-  main ──► release/X.Y.Z PR: CHANGELOG entry + X.Y.Z-beta.N ──► beta published, reviewed, owner tests
-       ──► bump to X.Y.Z ──merge (owner OK)──► tag vX.Y.Z on the merge commit ──► publish
+  release prep PR (X.Y.Z + CHANGELOG) ──merge (owner OK)──► main = candidate ──► milestone issue
+  candidate ──► review (AGREE | BLOCK → fix PRs → candidate moves → re-review)
+            ──► beta from the candidate (optional) ──► owner's checks
+            ──► tag vX.Y.Z on exactly the reviewed SHA ──► package from the tag ──► publish
 ```
 
 `main` is the integration branch. Task branches merge into it one at a time, as
 each is approved. A release is a **tag on `main`** plus the `CHANGELOG.md` entry
-that explains it, and from v0.10.0 both arrive through a release PR.
+that explains it.
 
-## The release PR (from v0.10.0)
+## The milestone (from v0.10.0)
 
-1. Branch `release/X.Y.Z` from `main` once everything for the release is
-   merged. On it: the `CHANGELOG.md` entry, still headed `## Unreleased`
-   (`publish-release.mjs` takes a beta's notes from that heading; "Release
-   notes" below), and
-   `node scripts/sync-version.mjs X.Y.Z-beta.1`. Run the gates; push; open
-   the PR against `main`, with `Review: not run` in its body.
-2. **Stage the beta.** Tag the branch head `vX.Y.Z-beta.1` and package from
-   the tag ("Build and publish the installers", step 1). Paste
-   `SHA256SUMS.txt` into the PR body. Try both installers (step 2); publish
-   the beta (step 3). The PR at this head is the **release milestone**:
-   offer the review-handoff prompt now, reviewing `git diff <last
-   tag>..<head>`. The reviewer and the owner see the same build.
-3. **The owner tests the beta.** A fix goes to its own task PR on `main`;
-   merge `main` into the release branch and stage `beta.2` the same way.
-   Update the PR's `Review:` line when a verdict arrives.
-4. **On the owner's OK:** `sync-version.mjs X.Y.Z` on the branch, and the
-   CHANGELOG heading renamed from `## Unreleased` to `## vX.Y.Z — <date> — …`;
-   gates,
-   push. The owner merges the PR with a **merge commit**, not a squash, so
-   the beta tags stay in `main`'s history. Tag the merge commit
-   `git tag -a vX.Y.Z -m "vX.Y.Z — <theme>"`, push the tag, package from it
-   and publish.
+1. **Release prep.** Once everything for the release is merged, an ordinary
+   PR carries `node scripts/sync-version.mjs X.Y.Z` and the `CHANGELOG.md`
+   entry, headed `## vX.Y.Z — <date> — <theme>` ("Release notes" below).
+   Gates; the owner merges. That merge commit on `main` is the
+   **candidate**.
+2. **Milestone issue.** Open `Milestone vX.Y.Z` with the proposed tag, the
+   candidate's full SHA, the previous tag, the PRs merged since and the
+   gate results on a clean checkout of the candidate (the `review-handoff`
+   skill has the full list). Until the tag, `main` takes only fixes for this
+   milestone's findings.
+3. **Review.** Give the owner the review-handoff prompt: the reviewer checks
+   out the candidate and reviews `git diff <previous tag>..<candidate>`, and
+   posts AGREE or BLOCK on the milestone issue. **The tag waits.** On BLOCK
+   the fixes land as ordinary PRs, the candidate moves to the new `main`
+   commit, and a re-review prompt follows unasked; a third round without
+   AGREE goes to the owner. The owner may also tag without a review, and the
+   issue records that.
+4. **Beta, if one is wanted** (it can run alongside the review). On a
+   throwaway commit on top of the candidate, carrying only
+   `sync-version.mjs X.Y.Z-beta.N`, tag `vX.Y.Z-beta.N`; it is never merged,
+   and the tag keeps it. Package from that tag, try both installers, and
+   publish ("Build and publish the installers"). The code is the candidate's,
+   so the owner tests what the reviewer reviews. Record the beta tag and its
+   `SHA256SUMS.txt` on the milestone issue. If the candidate moves, the next
+   beta is `beta.N+1` on the new candidate.
+5. **Before the tag:** the installer check (open a map in each shell) and
+   any device check the release names, on the candidate or its beta.
+6. **On AGREE:** `git tag -a vX.Y.Z <reviewed sha> -m "vX.Y.Z — <theme>"` —
+   exactly the SHA the verdict names, never a later commit; push the tag;
+   check it out, package from it and publish. `publish-release.mjs` refuses
+   to run unless HEAD is the tag, and the notes name the tagged commit. Work
+   merged after the candidate waits for the next milestone. Close the
+   milestone issue with the tag and the release link.
 
 ## What counts as a batch
 
@@ -157,7 +172,7 @@ or beta pre-release, and clearly marked so.**
 | Stage | When | Version and tag | Tested by |
 |---|---|---|---|
 | **alpha** | a preview of work that isn't merged yet, for example to try a feature on a phone | `X.Y.Z-alpha.N` | the developer only |
-| **beta** | everything for the release is merged to `main`, staged on the `release/X.Y.Z` PR, gates pass; waiting for the product owner's test | `X.Y.Z-beta.N` | the developer; product owner testing |
+| **beta** | everything for the release is merged to `main`, the milestone candidate is on `main` and the gates pass; waiting for the product owner's test | `X.Y.Z-beta.N` | the developer; product owner testing |
 | **stable** | the product owner has tried it (the "Cutting a release" checklist below) | `X.Y.Z` | both |
 
 - **Published as GitHub pre-releases** on
@@ -172,17 +187,18 @@ or beta pre-release, and clearly marked so.**
 - **Desktop and Android both ship:** the Windows `-setup.exe` and the APK.
   Pre-releases skip the `.msi`, because the MSI format only takes numeric
   versions and WiX rejects "alpha".
-- **Notes** come from a `## Unreleased` section at the top of
-  CHANGELOG.md. Each task adds its player-facing bullet there under
-  "For players:" as it merges. At the stable release that section is
-  renamed to the version.
+- **Notes** come from the version's CHANGELOG entry. Each task adds its
+  player-facing bullet to a `## Unreleased` section under "For players:"
+  as it merges; the release prep PR renames it to `## vX.Y.Z — …`. A beta
+  uses that entry; an alpha, which has none yet, uses `## Unreleased`.
 - **Where an alpha is built from:** a *throwaway commit* on top of the
   task branch, carrying only the version bump. It's tagged
   `vX.Y.Z-alpha.N` and never merged; the tag keeps it. The task branch
   stays free of version numbers.
-- **Where a beta is built from:** a "Release vX.Y.Z-beta.N" bump commit
-  on the `release/X.Y.Z` branch, tagged (from v0.10.0; before, on `main`).
-  The stable release bumps the branch again, to `X.Y.Z`, before it merges.
+- **Where a beta is built from:** a *throwaway commit* on top of the
+  milestone candidate, carrying only the version change to
+  `X.Y.Z-beta.N`, tagged and never merged ("The milestone", step 4). The
+  candidate itself already carries `X.Y.Z`, and the stable tag goes on it.
 - **Same checks as stable.** Package from the tag with
   `package-release.mjs`, then try both installers by opening a map in
   each (step 2 below). Show the product owner the `publish-release.mjs`
@@ -218,7 +234,7 @@ a release whose desktop/Android binaries were not rebuilt says so in its
 ## Cutting a release
 
 *Historical: this is the v0.1.x–v0.2.0 loop's checklist. From v0.10.0 the
-steps run through "The release PR" above; its smoke test (step 4) and the
+steps run through "The milestone" above; its smoke test (step 4) and the
 two-step labelling still apply.*
 
 Run by the loop agent once a wave closes. Steps 1-5 and 7-8 are mechanical;
@@ -316,7 +332,9 @@ There is no CI (FEATURE_PLAN.md, decision 2).
    the Windows app, use ONBOARDING.md's WebView2 remote-debugging recipe.
    The Windows installers aren't code-signed, so SmartScreen shows
    "unknown publisher". That's expected.
-3. **Publish: product owner's OK first, every time.** Publishing is public
+3. **Publish: the product owner's OK first.** It is standing for a release
+   the owner has already asked for ("nobody apart me is downloading it
+   anyway"); the notes still say plainly what was not verified. Publishing is public
    and outward-facing. `node scripts/publish-release.mjs` is a dry run:
    - it checks the files against `SHA256SUMS.txt`;
    - it builds the release notes from the player-facing part of the
@@ -351,8 +369,8 @@ curate from there. Then mark each task `released` with `task.mjs state`.
 ## Hotfixes
 
 If something ships broken: branch `hotfix/x.y.z` from `main`, fix it, run the
-gates, get the human's OK, merge to `main`, then ship the next patch through
-its own `release/x.y.z` PR. No forward-merge
+gates, get the human's OK, merge to `main`, then ship the next patch as its
+own milestone ("The milestone" above). No forward-merge
 step and no release branch to reconcile — that complexity existed only to serve
 the release-branch model. An extra build costs nothing now; shipping broken
 still does, which is what step 4 above is for.

@@ -1,56 +1,73 @@
 ---
 name: review-handoff
-description: Write the prompt the owner runs in a different model (Codex, DeepSeek, or another tool) so it independently reviews the repository at a milestone and records the result on GitHub. Use when a design proposal is written, when a PR that implements one is ready to merge, or when a release is staged on its release/X.Y.Z PR (the milestones in CLAUDE.md §3a), and whenever the owner asks for a review prompt. Also use when the owner says a review is in, to process it.
+description: Write the prompt the owner runs in a different model (Codex, DeepSeek, or another tool) so it independently reviews a milestone, a release candidate on main before its vX.Y.Z tag, and records the result on the milestone issue. Use when a milestone issue is opened, when a BLOCK's fixes have moved the candidate (the re-review), and whenever the owner asks for a review prompt. Also use when the owner says a review is in, to process it.
 ---
 
 # Review handoff
 
-First check the milestone is one: `CLAUDE.md` §3a lists them. A tooling fix
-without a proposal, a docs or wording change, a small fix inside an agreed
-plan, or a re-review is not. Do not write a prompt for it; at most say in one
-line that a review is possible, and write the prompt only if the owner asks.
+A milestone is a release (`CLAUDE.md` §3a): the tag `vX.Y.Z` on `main`, on
+the exact commit the release is built from. The review runs once per
+milestone, on the **milestone issue**, before the tag. Nothing else gets a
+prompt: not a proposal, not a PR, not a docs or process change. At most say
+in one line that a review is possible, and write the prompt only if the
+owner asks.
 
 Claude implements; a different model reviews, in whatever tool the owner
-picks. At each milestone, give the owner one prompt in a single fenced `text`
-block with nothing else in it. Tell the owner to run it in a **fresh
-session** of that tool: a reused session carries its earlier conclusions. The
-reviewer starts with no context and posts its results to GitHub itself, so
-the prompt has to carry everything it needs, and it must not assume a tool.
+picks. Give the owner one prompt in a single fenced `text` block with
+nothing else in it. Tell the owner to run it in a **fresh session** of that
+tool: a reused session carries its earlier conclusions. The reviewer starts
+with no context and posts its results to GitHub itself, so the prompt has
+to carry everything it needs, and it must not assume a tool.
 
-The review is offered, never waited on. Do not stop work for it: set the PR
-body's `Review:` line to `not run`, and update it when a verdict arrives
-(`AGREE at <sha>`, or `BLOCK at <sha>: #n, #m`).
+**The tag waits for the verdict.** On BLOCK, the fixes land in ordinary
+PRs, the candidate moves, and you give a re-review prompt without being
+asked (the variant below). A third round that does not end in AGREE goes to
+the owner. The owner may tag without a review; the milestone issue then
+records that.
 
 This repository has no `AGENTS.md`. The prompt's first line makes the tool
 the reviewer; a tool that reads `CLAUDE.md` on its own finds the same
 handover at the top of §3a. If the tool sandboxes network access, every `gh`
 call needs it: tell the owner to approve those calls when asked.
 
+## The milestone issue
+
+Open it once the version bump and the CHANGELOG entry are merged, before
+writing the prompt. Title: `Milestone vX.Y.Z`. Body:
+
+- **Tag:** `vX.Y.Z` (the next version in the existing scheme)
+- **Candidate:** the full SHA of the `main` commit (`git rev-parse origin/main`)
+- **Previous milestone:** the last stable tag, with its commit
+- **Merged since:** one line per PR (`git log --merges --oneline <prev>..<sha>`)
+- **Gates on the candidate:** `npm run gates -- --quiet` from a clean
+  checkout of the SHA, with the unit test counts
+- **Beta, if any:** the `vX.Y.Z-beta.N` tag, the commit it sits on (the
+  candidate plus the version change only), and its `SHA256SUMS.txt`
+- **Rounds:** one line per review round: SHA, verdict, and issues
+- **Before the tag:** the installer and device checks RELEASES.md requires
+
+`main` takes only fixes for this milestone's findings until it is tagged.
+When the candidate moves, edit the issue and add a round line.
+
 ## Fill in before writing
 
 - **Repo**: `gh repo view --json nameWithOwner --jq .nameWithOwner`.
-- **Milestone and thread**: design (the `proposal` issue), PR (the PR that
-  closes a proposal), or release (the `release/X.Y.Z` PR).
-- **Head SHA**: `git rev-parse HEAD` on the branch under review, pushed. A
-  review of a stale head wastes a round. For a PR already merged, the merge
-  commit, and the review reads `git diff <sha>^1 <sha>`.
-- **Diff to review**: design, the proposal text; PR, `git diff main...<sha>`;
-  release, `git diff <last tag>..<sha>` (the last stable tag, e.g. `v0.9.4`),
-  plus the staged `SHA256SUMS.txt` in the PR body.
-- **What changed and why**: two or three sentences. Do not argue for the
-  change. For a release, one line per merged PR since the last tag.
+- **Thread**: the milestone issue URL.
+- **Candidate**: its full SHA, pushed on `main`.
+- **Previous tag**: the last stable `vX.Y.Z`. The diff is
+  `git diff <previous tag>..<candidate SHA>`.
+- **What changed and why**: one line per PR merged since the previous tag.
+  Do not argue for the change.
 - **Claims to verify**: the specific things the work says are true, with
   `file:line`. These are what the reviewer checks hardest.
 - **Checks already run**: each command, its pass *count*, and what it would
-  have caught (`npm run gates -- --quiet`: typecheck, unit tests with their
-  count, lint, build; any browser or installer check). The reviewer should
-  aim at what those checks cannot see.
+  have caught (the gates; any browser, installer or device check). The
+  reviewer should aim at what those checks cannot see.
 - **Known owner decisions**: questions already put to the owner, so the
   reviewer does not report them as defects. The standing ones are in the
   template; add the milestone's own.
-- **Labels**: `gh label list`. `review`, `bug`, `robustness`, `tests`,
-  `design`, `cleanup` and `documentation` should all exist
-  (`gh label create review --description "Found by an independent review"`).
+- **Labels**: `review`, `bug`, `robustness`, `tests`, `design`, `cleanup`
+  and `documentation` should all exist (`gh label list`).
 
 ## Template
 
@@ -60,12 +77,15 @@ review-handoff prompt: this prompt defines your job. Claude did this work. Do
 not trust its description, its commit messages or its docs. Verify everything
 against the code.
 
-MILESTONE: <design proposal | pull request | staged release>
-THREAD: <issue or PR URL>
-HEAD: <branch> at <sha>. Check out that SHA before you start, and stop and say
-so if you cannot.
+MILESTONE: v<X.Y.Z>, a release. The tag waits for your verdict and will be
+created on exactly the SHA you review.
+THREAD: <milestone issue URL>
+CANDIDATE: main at <full sha>. Check out that SHA before you start, and stop
+and say so if you cannot.
+PREVIOUS MILESTONE: <previous tag>
 
-WHAT CHANGED: <two or three sentences; for a release, one line per PR>
+WHAT CHANGED since <previous tag>:
+- <PR #n: one line>
 
 CLAIMS TO VERIFY:
 - <claim> (<file:line>)
@@ -94,9 +114,7 @@ lines, or the tail of the failing gate). If `check` dies with exit code
 3221225477, rerun it once: that is a native svelte-check crash, not a type
 error.
 
-Review <the proposal | the diff against main, git diff main...<sha> | the
-merged diff, git diff <sha>^1 <sha> | the release diff, git diff <last
-tag>..<sha>, and the staged checksums in the PR body>, and follow it into any
+Review git diff <previous tag>..<candidate sha>, and follow it into any
 file it touches or relies on. Look hardest at correctness and edge cases,
 code that disagrees with DECISIONS.md or ARCHITECTURE.md, missing or vacuous
 tests, work done per frame or per map move, and anything that breaks offline
@@ -104,23 +122,23 @@ use (the desktop and Android builds must work with no network). Problems
 elsewhere in the repository count too, as out of scope.
 
 Rules:
-- Do not edit files, commit or push. Your only writes are the GitHub issues
-  and the one comment described below, made with the gh CLI.
+- Do not edit files, commit, push or tag. Your only writes are the GitHub
+  issues and the one comment described below, made with the gh CLI.
 - Reproduce every finding: cite file:line, and give the command, the input or
   the reasoning that shows it. Leave out anything you could not reproduce.
 - Do not report style preferences.
 - Before opening an issue, search open issues (gh issue list --search) and
   comment on an existing one instead of duplicating it.
-- Write issue and comment bodies to a file as UTF-8 without a BOM and pass
-  them with --body-file.
+- Write every issue and comment body to a file as UTF-8 without a byte-order
+  mark and pass it with --body-file.
 
 1. For each finding, open one issue:
    gh issue create --label review --label <bug|robustness|tests|design|cleanup|documentation>
    Title: the defect, stated plainly.
    Body:
-     - Severity: MUST-FIX (a defect this change introduces or fails to
-       resolve, that should be fixed before merging), SHOULD, or OUT OF
-       SCOPE (not caused by this change)
+     - Severity: MUST-FIX (a defect in this milestone's changes that must
+       be fixed before the tag), SHOULD, or OUT OF SCOPE (not caused by
+       this milestone's changes)
      - Found by: review of <THREAD> at <sha>
      - What: the defect, with file:line and a reproduction
      - Why it matters: what a player or maintainer would notice
@@ -130,7 +148,7 @@ Rules:
 
 2. Then, always, even if you found nothing, post one comment on THREAD:
    VERDICT: AGREE | BLOCK        (BLOCK if any MUST-FIX issue was opened)
-   Reviewed: <sha>
+   Reviewed: <full sha>
    Issues opened: #n (MUST-FIX), #m (SHOULD), ... or "none"
    Owner decisions: questions only the owner can settle, or "none"
    Nits: one line each, or "none" (nits do not get issues)
@@ -138,20 +156,36 @@ Rules:
    — Reviewer (<tool>, <model>)
 ```
 
+## Re-review, after a BLOCK
+
+Give it without being asked once the MUST-FIX fixes are merged and the
+issue names the new candidate. Use the same template with the new SHA and
+the same previous tag, so the verdict still covers the whole milestone. Add
+these lines after CLAIMS TO VERIFY:
+
+```text
+ROUND: <2 or 3>. The last round was BLOCK at <old sha>: <#n, #m>.
+Since then: git diff <old sha>..<new sha> (<the fix PRs>). Check first that
+each MUST-FIX is resolved, then that the fixes broke nothing else.
+```
+
+After a third round without AGREE, stop: put the open findings to the
+owner with a recommended default.
+
 ## When the owner says the review is in
 
-- Read the verdict comment on the thread and every issue it lists
-  (`gh issue view <n>`), and update the PR body's `Review:` line. Note whether
-  the SHA it names is the current head or an earlier one.
+- Read the verdict comment on the milestone issue and every issue it lists
+  (`gh issue view <n>`), and add the round line to the issue. Check that the
+  SHA it names is the current candidate.
 - Reproduce each finding yourself before acting on it. A reviewer can be wrong,
   and so can you.
-- MUST-FIX and SHOULD: fix it, with `Fixes #n` in the PR, or rebut it with
-  evidence in a comment on the issue and leave the close to the owner. If the
-  PR is already merged, the fix is a new PR. Recommend which fixes belong
-  before the merge; the owner decides. OUT OF SCOPE: leave the issue for its
-  own change. Owner decisions: put them to the owner with a recommended
-  default. Nits: your call, and say which you took.
-- Reply on the thread with what happened to each finding. Write the body with
-  the Write tool and pass it with `--body-file` (UTF-8, no BOM).
-- Rerun the gates after any fix. Do not offer a re-review prompt; write one
-  only if the owner asks.
+- MUST-FIX: fix it in an ordinary PR (`Fixes #n`), or rebut it with evidence
+  on the issue and leave the close to the owner. SHOULD: fix it now or in
+  the next milestone; recommend which, and the owner decides. OUT OF SCOPE:
+  leave the issue for its own change. Owner decisions: put them to the owner
+  with a recommended default. Nits: your call, and say which you took.
+- Reply on the milestone issue with what happened to each finding. Write the
+  body with the Write tool and pass it with `--body-file` (UTF-8, no BOM).
+- AGREE: run the checks RELEASES.md requires before the tag, then tag
+  exactly the reviewed SHA and build from the tag (RELEASES.md, "The
+  milestone").

@@ -291,8 +291,42 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   git-triggered build run" no longer produces a live site to check. Never
   trigger a deploy yourself; restarting them is the product owner's call.
 
-## An independent model reviews at milestones, on GitHub (2026-09-23)
+## A milestone is a release tag, reviewed before it is created (2026-09-23)
 
+- **A milestone is a release**: an annotated `vX.Y.Z` tag on `main`, on
+  exactly the commit the review agreed with and the release is built from
+  (product owner's cross-project definition, adopted after evaluation,
+  [#29](https://github.com/diegoami/Geoclick2027/issues/29); amends the
+  GitHub-review entry below, the same day). The review runs on a
+  **milestone issue** over `git diff <previous tag>..<candidate>`; **the tag
+  waits for it**; a BLOCK moves the candidate and brings a re-review
+  unasked; a third round without AGREE goes to the owner, who may also tag
+  without a review. Proposals and PRs are no longer milestones, and the
+  `Review:` line on PRs is gone.
+- **Why it was adopted, not just copied:** under #26 the stable tag landed
+  on the release PR's merge commit, after a version bump and whatever doc
+  commits reached `main` meanwhile. v0.10.0 was reviewed at `3ab4820`
+  (versioned `0.10.0-beta.1`) and would have been tagged on a commit nobody
+  reviewed. Tag = reviewed SHA = build source closes that. It also drops
+  the release branch, the merge-commit rule and beta tags off `main`.
+- **What it costs:** a proposal, or a Medium task's PR, no longer gets an
+  independent look before merge; a design flaw surfaces at the release
+  review. The owner's agreement stays the design gate. The "no re-reviews"
+  rule of #26 is reversed for BLOCKs, because the tag cannot go on an
+  unreviewed SHA.
+- **Adapted here:** a beta is a throwaway version-only commit on the
+  candidate, so the candidate already carries `X.Y.Z` and the tested code is
+  the reviewed code; `main` takes only the milestone's fixes while its issue
+  is open; the round ceiling lives in CLAUDE.md §3a (there is no
+  PRINCIPLES.md); Claude keeps publishing (standing permission);
+  `publish-release.mjs` refuses unless HEAD is the tag and names the
+  tagged commit in the notes. Baseline: `v0.9.4` (`5387ff2`), already
+  tagged on `main`; the first milestone under these rules is `v0.10.0`.
+
+## An independent model reviews at milestones, on GitHub (2026-09-23, amended the same day)
+
+- *Amended by the entry above: milestones are now release tags only; the
+  release PR and the `Review:` line below are gone.*
 - **The review is recorded on GitHub by the reviewer itself** (product
   owner, 2026-09-23, [#26](https://github.com/diegoami/Geoclick2027/issues/26),
   adapted from diegoami/discola-web; amends the first version of this
