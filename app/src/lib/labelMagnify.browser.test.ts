@@ -2,7 +2,15 @@
 // layout and real PointerEvents.
 import { afterEach, describe, expect, it } from 'vitest';
 import '../app.css';
-import { HOVERED_CLASS, MAGNIFIED_CLASS, enableLabelMagnify } from './labelMagnify';
+import {
+	HOVERED_CLASS,
+	MAGNIFIED_CLASS,
+	STRETCHED_CLASS,
+	enableLabelMagnify,
+	labelAt,
+	registerHitShape,
+	unregisterHitShape
+} from './labelMagnify';
 
 // The DOM shape MapLibre renders: popups are children of the map container,
 // alongside the canvas. Labels are placed at fixed spots so input can be
@@ -134,5 +142,34 @@ describe('enableLabelMagnify', () => {
 		disable();
 		tap(canvas, centre(toscana));
 		expect(withClass(container, MAGNIFIED_CLASS)).toEqual([]);
+	});
+});
+
+describe('stretched names (FT-66)', () => {
+	it('finds a stretched name by its own shape, and skips the popup it stands in for', () => {
+		const { container, toscana, canvas } = fixture();
+		toscana.classList.add(STRETCHED_CLASS);
+		const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+		const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+		svg.appendChild(text);
+		container.appendChild(svg);
+		// On the name: a band along y = 50, x 20 to 220.
+		registerHitShape(text, (x, y) => x >= 20 && x <= 220 && Math.abs(y - 50) <= 8);
+		try {
+			expect(labelAt(container, 100, 52)).toBe(text);
+			expect(labelAt(container, 100, 80)).toBeUndefined();
+			// The hidden popup is not a target, even where it would have been.
+			const at = centre(toscana);
+			expect(labelAt(container, at.x, at.y)).toBeUndefined();
+
+			const stop = enableLabelMagnify(container);
+			pointer(canvas, 'pointerdown', { x: 100, y: 50 });
+			pointer(canvas, 'pointerup', { x: 100, y: 50 });
+			expect(text.classList.contains(MAGNIFIED_CLASS)).toBe(true);
+			stop();
+		} finally {
+			unregisterHitShape(text);
+			container.remove();
+		}
 	});
 });

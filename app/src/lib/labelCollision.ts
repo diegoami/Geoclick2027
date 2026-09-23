@@ -45,7 +45,7 @@
 // (FT-02/FT-03), the retention strengths (FT-22) and the rem-based sizing
 // that all live in CSS today. See DECISIONS.md, "Names never overlap".
 
-import { CROWDED_CLASS, HOVERED_CLASS, MAGNIFIED_CLASS } from './labelMagnify';
+import { CROWDED_CLASS, HOVERED_CLASS, MAGNIFIED_CLASS, STRETCHED_CLASS } from './labelMagnify';
 import type { Target } from './mapDefinition';
 
 /** Set by the views on a popup element: bigger wins a contested spot. */
@@ -124,6 +124,12 @@ export interface PlacementContext {
 	dots?: Dot[];
 	/** The map's own rectangle: a name off its edge can't be read. */
 	bounds?: LabelRect;
+	/**
+	 * Names drawn along their region (FT-66): fixed, and always drawn while
+	 * they fit, so no label may cover them - except one the player is
+	 * pointing at or has tapped, which always gets its place.
+	 */
+	obstacles?: LabelRect[];
 }
 
 function overlaps(a: LabelRect, b: LabelRect, gap: number): boolean {
@@ -224,17 +230,19 @@ export function choosePlacements(
 		index: 0
 	}));
 	const kept: LabelRect[] = [];
+	const fixed = context.obstacles ?? [];
 	for (const index of order) {
-		const { candidates, current } = labels[index];
+		const { candidates, current, priority } = labels[index];
 		if (hasNoSize(candidates[0].rect)) {
 			chosen[index].visible = true;
 			continue;
 		}
+		const avoid = priority === Infinity ? kept : [...fixed, ...kept];
 		let best = -1;
 		let bestScore = -Infinity;
 		candidates.forEach((candidate, rank) => {
-			if (kept.some((other) => overlaps(candidate.rect, other, gap))) return;
-			const score = scoreOf(candidate, rank, current, kept, context);
+			if (avoid.some((other) => overlaps(candidate.rect, other, gap))) return;
+			const score = scoreOf(candidate, rank, current, avoid, context);
 			if (score > bestScore) {
 				best = rank;
 				bestScore = score;
@@ -279,6 +287,16 @@ interface RegisteredLabel {
 // Keyed by the popup's element, which is what the pass walks over. A WeakMap,
 // so a popup the view removed is forgotten with its element.
 const registry = new WeakMap<HTMLElement, RegisteredLabel>();
+
+// Per map container: where its stretched names are (FT-66), in px relative to
+// the container. Set by the view that draws them, read on every pass.
+const obstacleSources = new WeakMap<HTMLElement, () => LabelRect[]>();
+
+/** Tells the pass what in `container` no popup may cover; undefined clears it. */
+export function setLabelObstacles(container: HTMLElement, source?: () => LabelRect[]): void {
+	if (source) obstacleSources.set(container, source);
+	else obstacleSources.delete(container);
+}
 
 export interface LabelOptions {
 	/** Bigger wins a contested spot. Unregistered labels rank 0. */
@@ -420,16 +438,29 @@ export function enableLabelCollision(
 
 	const pass = () => {
 		frame = 0;
-		const popups = [...container.querySelectorAll<HTMLElement>('.maplibregl-popup')];
+		// A popup whose name is drawn along its region instead takes no part.
+		const popups = [...container.querySelectorAll<HTMLElement>('.maplibregl-popup')].filter(
+			(popup) => !popup.querySelector(`.${STRETCHED_CLASS}`)
+		);
 		if (popups.length === 0) return;
 		const bounds = container.getBoundingClientRect();
 		const onPage = ({ x, y }: Dot) => ({ x: x + bounds.left, y: y + bounds.top });
+		const obstacles = (obstacleSources.get(container)?.() ?? []).map((r) => ({
+			left: r.left + bounds.left,
+			right: r.right + bounds.left,
+			top: r.top + bounds.top,
+			bottom: r.bottom + bounds.top
+		}));
 		const labels = readLabels(popups, (label) => {
 			const place = project && label.getLngLat?.();
 			return place ? onPage(project([place.lng, place.lat])) : undefined;
 		});
 		if (!moving) for (const label of labels) label.current = undefined;
-		const placements = choosePlacements(labels, { bounds, dots: dots().map(onPage) });
+		const placements = choosePlacements(labels, {
+			bounds,
+			dots: dots().map(onPage),
+			obstacles
+		});
 		popups.forEach((popup, index) => {
 			const { visible, offset, index: chosen } = placements[index];
 			popup.classList.toggle(CROWDED_CLASS, !visible);

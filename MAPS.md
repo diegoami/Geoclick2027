@@ -69,6 +69,16 @@ data/scripts/build-terrain.ts         terrain.pmtiles for a map that exists
    `colorIndex`, needs only node, and never rebuilds tiles.
    `app/src/lib/mapColors.test.ts` recomputes adjacency from every
    map's tiles and fails if two neighbours share a colour.
+7. **Spines** (FT-66) — the curve each region's name is drawn along on
+   the Explore map. `build-map.ts` writes them at the end, from the
+   tiles it just built; for a committed map, `npm run build-map-spines
+   -- --map=<id>` (omit `--map` to redo every map). Node only, like the
+   colours: it reads `tiles.pmtiles`, stitches each region's clipped
+   pieces on a raster mask, and only adds/updates/drops `spine` in
+   `map.json`. Point maps are skipped. A region too small or twisted
+   for a curve (Maryland, Rieti, 17 of ~1 000 in all) gets none and
+   keeps its centred name. `app/src/lib/mapData.test.ts` checks every
+   spine is well formed and ends inside its target's bbox.
 
 ### Build-script settings and known quirks (GC-031)
 

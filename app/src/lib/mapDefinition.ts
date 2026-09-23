@@ -28,6 +28,18 @@ export interface Target {
 	// omits the flag - or an externally authored one - still renders and
 	// frames correctly.
 	crossesAntimeridian?: true;
+	// The curve a region's name is drawn along (FT-66), written by
+	// data/scripts/mapSpines.ts. Absent for towns and for the few regions too
+	// small or twisted to carry one; those names stay on their centroid.
+	spine?: Spine;
+}
+
+/** A quadratic Bezier (start, control, end, [lon, lat]) through the middle of
+ * a region along its long axis, and the curve's length over the region's
+ * typical width along it. See data/scripts/spine.ts. */
+export interface Spine {
+	curve: [[number, number], [number, number], [number, number]];
+	aspect: number;
 }
 
 export interface MapDefinition {

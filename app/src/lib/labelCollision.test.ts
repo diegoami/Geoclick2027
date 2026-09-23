@@ -256,3 +256,33 @@ describe('choosePlacements, best fit (FT-63)', () => {
 		expect(layout(-37, 12)).toEqual(still);
 	});
 });
+
+describe('choosePlacements, stretched names as obstacles (FT-66)', () => {
+	const at = (left: number, top: number, offset: [number, number] = [0, 0]) => ({
+		offset,
+		rect: rect(left, top)
+	});
+	const stretched = [rect(0, 0, 200, 20)];
+
+	it('keeps a name off a stretched name, taking its next spot', () => {
+		const [placed] = choosePlacements(
+			[{ priority: 1, candidates: [at(50, 5), at(50, 45, [0, 40])] }],
+			{ obstacles: stretched }
+		);
+		expect(placed).toMatchObject({ visible: true, index: 1 });
+	});
+
+	it('hides a name with nowhere else to go', () => {
+		const [placed] = choosePlacements([{ priority: 1, candidates: [at(50, 5)] }], {
+			obstacles: stretched
+		});
+		expect(placed.visible).toBe(false);
+	});
+
+	it('lets the name the player is pointing at through', () => {
+		const [placed] = choosePlacements([{ priority: Infinity, candidates: [at(50, 5)] }], {
+			obstacles: stretched
+		});
+		expect(placed.visible).toBe(true);
+	});
+});
