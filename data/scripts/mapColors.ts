@@ -71,12 +71,19 @@ function lonLatToTile(lon: number, lat: number, z: number): [number, number] {
 	return [x, y];
 }
 
-interface DecodedPolygon {
+export interface DecodedPolygon {
 	name: string;
 	rings: [number, number][][]; // world tile-units at the chosen zoom
 }
 
-async function decodeTargets(tilesFile: string, names: Set<string>): Promise<DecodedPolygon[]> {
+/** One zoom's worth of every target's polygon pieces, clipped per tile (a
+ * target crossing a tile edge comes back as several, overlapping by the
+ * tile buffer). `worldSize` is the world's width in the rings' units, so
+ * `x / worldSize` is normalised Web Mercator. Also used by mapSpines.ts. */
+export async function decodeTargetTiles(
+	tilesFile: string,
+	names: Set<string>
+): Promise<{ polys: DecodedPolygon[]; worldSize: number }> {
 	const pm = new PMTiles(new FileSource(tilesFile));
 	const h = await pm.getHeader();
 	// The lowest zoom (>= 5, for detail) at which every target is present - tiny
@@ -87,12 +94,14 @@ async function decodeTargets(tilesFile: string, names: Set<string>): Promise<Dec
 		const [x1, y1] = lonLatToTile(h.maxLon, h.minLat, z);
 		const polys: DecodedPolygon[] = [];
 		const seen = new Set<string>();
+		let extent = 4096;
 		for (let tx = Math.floor(x0); tx <= Math.min(2 ** z - 1, Math.floor(x1)); tx++) {
 			for (let ty = Math.floor(y0); ty <= Math.min(2 ** z - 1, Math.floor(y1)); ty++) {
 				const res = await pm.getZxy(z, tx, ty);
 				if (!res) continue;
 				const layer = new VectorTile(new PbfReader(new Uint8Array(res.data))).layers['targets'];
 				if (!layer) continue;
+				extent = layer.extent;
 				for (let i = 0; i < layer.length; i++) {
 					const f = layer.feature(i);
 					const name = f.properties.name;
@@ -106,7 +115,7 @@ async function decodeTargets(tilesFile: string, names: Set<string>): Promise<Dec
 				}
 			}
 		}
-		if ([...names].every((n) => seen.has(n))) return polys;
+		if ([...names].every((n) => seen.has(n))) return { polys, worldSize: extent * 2 ** z };
 		if (z === h.maxZoom) {
 			const missing = [...names].filter((n) => !seen.has(n));
 			throw new Error(`${tilesFile}: targets missing from every zoom: ${missing.join(', ')}`);
@@ -118,7 +127,7 @@ async function decodeTargets(tilesFile: string, names: Set<string>): Promise<Dec
 /** Adjacency of polygon targets, from the committed tiles. Keyed by target name. */
 export async function polygonAdjacency(tilesFile: string, names: string[]): Promise<Adjacency> {
 	const adj: Adjacency = new Map(names.map((n) => [n, new Set<string>()]));
-	const polys = await decodeTargets(tilesFile, new Set(names));
+	const { polys } = await decodeTargetTiles(tilesFile, new Set(names));
 
 	let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity; // prettier-ignore
 	for (const p of polys)

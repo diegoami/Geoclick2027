@@ -27,6 +27,7 @@ import {
 	crossesAntimeridian
 } from './mapBuildUtils.js';
 import { colorizeMapDir } from './mapColors.js';
+import { spineMapDir } from './mapSpines.js';
 import { isUnbounded, parseBounds, withinBounds } from './placeSelection.js';
 
 const SOURCE_SHP = path.join(
@@ -525,6 +526,9 @@ async function main() {
 	// rerun `npm run build-map-colors -- --map=<id>` after hand-editing map.json.
 	const { colours } = await colorizeMapDir(absOutDir);
 	console.log(`Colours -> ${colours} colorIndex slots in map.json`);
+	// The curve each name is drawn along (FT-66), from the same tiles.
+	const { spines } = await spineMapDir(absOutDir);
+	console.log(`Spines -> ${spines}/${targets.length} targets in map.json`);
 }
 
 await main();

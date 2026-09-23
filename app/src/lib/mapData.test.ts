@@ -22,6 +22,7 @@ interface TargetLike {
 	centroid: unknown;
 	bbox: unknown;
 	crossesAntimeridian?: unknown;
+	spine?: unknown;
 }
 interface MapLike {
 	targets: TargetLike[];
@@ -36,6 +37,34 @@ function duplicates(values: unknown[]): unknown[] {
 	const dup = new Set<unknown>();
 	for (const v of values) (seen.has(v) ? dup : seen).add(v);
 	return [...dup];
+}
+
+/**
+ * FT-66: a spine is three finite [lon, lat] points and a positive aspect, and
+ * its ends lie in the target's own bbox - a spine built for the wrong target
+ * would draw a name across a neighbour. The bbox gets a little slack: spines
+ * come from the tiles, bboxes from the source shapes.
+ */
+function spineProblems(t: TargetLike): string[] {
+	const spine = t.spine as { curve?: unknown; aspect?: unknown } | null;
+	const curve = spine?.curve;
+	const aspect = spine?.aspect;
+	if (
+		!Array.isArray(curve) ||
+		curve.length !== 3 ||
+		!curve.every((p) => isFiniteTuple(p, 2)) ||
+		!(typeof aspect === 'number' && aspect > 0 && Number.isFinite(aspect))
+	)
+		return [`${String(t.id)}: spine is not 3 finite points and a positive aspect`];
+	if (!isFiniteTuple(t.bbox, 4)) return [];
+	const [west, south, east, north] = t.bbox as number[];
+	if (west > east) return []; // wraps the antimeridian: no simple containment
+	const slack = 0.02 * Math.max(east - west, north - south);
+	const outside = [curve[0], curve[2]].some(
+		([lon, lat]: number[]) =>
+			lon < west - slack || lon > east + slack || lat < south - slack || lat > north + slack
+	);
+	return outside ? [`${String(t.id)}: spine ends outside its bbox`] : [];
 }
 
 /** Every broken invariant in one map, as readable strings. Empty = clean. */
@@ -65,6 +94,7 @@ function mapProblems(map: MapLike): string[] {
 					`${String(t.id)}: crossesAntimeridian ${flagged} disagrees with bbox west${wraps ? '>' : '<='}east`
 				);
 		}
+		if (t.spine !== undefined) problems.push(...spineProblems(t));
 	}
 	const ids = new Set(map.targets.map((t) => t.id));
 	const tour = map.tourOrder;
@@ -197,6 +227,25 @@ describe('map data integrity - the checks catch what they claim to', () => {
 		expect(mapProblems(m)).toEqual(
 			expect.arrayContaining(['a: centroid not 2 finite numbers', 'b: bbox not 4 finite numbers'])
 		);
+	});
+
+	it('accepts a spine inside its bbox, flags a malformed or misplaced one', () => {
+		const m = clean();
+		const spine = (curve: number[][]) => ({ curve, aspect: 3 });
+		m.targets[0].spine = spine([
+			[9.2, 50],
+			[10, 50.3],
+			[10.8, 50]
+		]);
+		expect(mapProblems(m)).toEqual([]);
+		m.targets[1].spine = spine([[9.2, 50]]);
+		expect(mapProblems(m)).toContain('b: spine is not 3 finite points and a positive aspect');
+		m.targets[1].spine = spine([
+			[20, 50],
+			[21, 50],
+			[22, 50]
+		]);
+		expect(mapProblems(m)).toContain('b: spine ends outside its bbox');
 	});
 
 	it('flags a tourOrder that is not a permutation', () => {

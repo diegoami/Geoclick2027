@@ -60,6 +60,15 @@ pairs well with a canvas/map-heavy UI.
   and hides
   any name with nowhere left to go, until a zoom makes room. See
   DECISIONS.md, "Names never overlap".
+  Since FT-66 the Explore map draws a region's name *along* the region
+  where it fits: `stretchedNames.ts` is an SVG `textPath` overlay over the
+  canvas, one curve per region from the `spine` in `map.json` (three
+  points of a quadratic Bezier, written by `data/scripts/mapSpines.ts`
+  from the committed tiles). Where a name does not fit at the popup's own
+  size, its popup - kept all along, hidden with `is-stretched` - comes
+  back. Stretched names are fixed obstacles to the collision pass
+  (`setLabelObstacles`) and register a hit shape with `labelMagnify.ts`,
+  so hover and tap reach them. Quiz and Tour still draw popups only.
 - **A second tileset per map, for the Terrain layer** (v0.8.0, FT-33).
   Beside each map's `tiles.pmtiles` sits a `terrain.pmtiles` holding the
   sea, the rivers and Natural Earth's *named* physical features — ranges,

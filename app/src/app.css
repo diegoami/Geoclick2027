@@ -172,3 +172,50 @@
 .geoclick-retention.retention-asked .maplibregl-popup-content {
 	background: rgba(181, 105, 31, 0.9);
 }
+
+/* Region names drawn along the region (FT-66, stretchedNames.ts): capitals
+ * spaced out along the shape, as an atlas writes a territory. An SVG overlay
+ * over the map canvas and under the popups; it takes no pointer input, like
+ * every label (FT-18). Dark ink with a light halo instead of the popup's box -
+ * a box cannot follow a curve. The same four strengths as the popups (FT-22). */
+.geoclick-stretched {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+	pointer-events: none;
+}
+.geoclick-stretched text {
+	font-family: Georgia, 'Times New Roman', serif;
+	font-weight: 600;
+	fill: rgba(31, 61, 42, 0.9);
+	stroke: rgba(255, 255, 255, 0.8);
+	stroke-width: 3px;
+	stroke-linejoin: round;
+	paint-order: stroke;
+	transform-box: fill-box;
+	transform-origin: center;
+	transition: transform 120ms ease-out;
+}
+.geoclick-stretched text.retention-nearly {
+	opacity: 0.72;
+}
+.geoclick-stretched text.retention-seen {
+	opacity: 0.45;
+}
+.geoclick-stretched text.retention-asked {
+	fill: rgb(181, 105, 31);
+}
+/* Magnified (FT-02/FT-03): a stretched name is already as big as its region
+ * allows, so it comes forward - full strength, a touch larger - rather than
+ * growing out of its region. */
+.geoclick-stretched text:is(.is-hovered, .is-magnified) {
+	opacity: 1;
+	transform: scale(1.08);
+}
+/* The popup a stretched name stands in for: kept, so the name can fall back
+ * to it the moment the stretched one stops fitting, but not drawn. */
+.maplibregl-popup:has(> .maplibregl-popup-content.is-stretched) {
+	display: none;
+}

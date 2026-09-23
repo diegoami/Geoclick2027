@@ -54,6 +54,18 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   the retention tiers (known / nearly / seen / chosen) need their SVG
   styling; the size floor moves to rem. Explore first; Quiz and Tour
   labels are a separate call. Medium, not Small.
+- **Built as FT-66 (2026-09-23), with three choices the spike left open.**
+  *Spines come from the committed tiles, not the source shapefile:*
+  `build-map.ts` needs the WSL2 toolchain, and rebuilding 32 maps' tiles
+  to add a field would churn every tileset; the tiles already hold the
+  geometry `mapColors.ts` reads, and a raster mask stitches a region's
+  tile-clipped pieces with no polygon union. *The size floor is the
+  popup's own, 0.8125 rem:* a stretched name never reads smaller than
+  the pill it replaces, which on a phone at the country view leaves
+  most names as pills - the intended hybrid. *A stretched name is a hard
+  obstacle to every popup except a magnified one*, which still always
+  gets its place; a magnified stretched name comes forward (full
+  strength, 8 % larger) rather than growing out of its region.
 
 ## The v0.10.0 language decisions (2026-09-22, v0.10.0)
 

@@ -22,11 +22,14 @@
 	import { DOT_CLEARANCE_PX, areaShares, registerLabel } from './labelCollision';
 	import FactCard from './FactCard.svelte';
 	import { fetchFacts, placeFacts, type Facts } from './facts';
+	import { StretchedNames } from './stretchedNames';
 
 	let { mapId }: { mapId: string } = $props();
 
 	let container: HTMLDivElement;
 	let map: maplibregl.Map | undefined;
+	// Region names drawn along the region where they fit (FT-66).
+	let stretched: StretchedNames | undefined;
 	// Sea, rivers and named terrain (FT-33). The $effect below follows the
 	// map bar's Terrain button, which only writes the preference.
 	let terrain = $state<TerrainLayer | undefined>(undefined);
@@ -70,6 +73,7 @@
 			const tier = visibleTier(streaks[target.id] ?? 0, nameOverride(mapId, target.id));
 			const existing = shownPopups.get(target.id);
 			if (!tier) {
+				stretched?.delete(target.id);
 				existing?.remove();
 				shownPopups.delete(target.id);
 				continue;
@@ -99,6 +103,9 @@
 				beside: target.type === 'city' ? DOT_CLEARANCE_PX : undefined
 			});
 			shownPopups.set(target.id, popup);
+			// Along the region where it fits; the popup is its fallback (FT-66).
+			if (target.spine)
+				stretched?.set(target.id, { name: target.name, spine: target.spine, tier, popup });
 		}
 		anyShown = drawn;
 	}
@@ -150,6 +157,7 @@
 			mapDef = loadedMapDef;
 
 			({ map, terrain } = createMap(container, loadedMapDef, style));
+			stretched = new StretchedNames(map);
 			loadStreaks(loadedMapDef).catch((e) =>
 				console.error('Failed to read progress for the Known map:', e)
 			);
@@ -229,6 +237,7 @@
 	});
 
 	onDestroy(() => {
+		stretched?.destroy();
 		for (const p of shownPopups.values()) p.remove();
 		shownPopups.clear();
 		map?.remove();
