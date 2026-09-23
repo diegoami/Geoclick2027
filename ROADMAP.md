@@ -120,6 +120,16 @@ Check items off as they land; update "Status" as iterations complete.
   name-fact in Italian, 5 448 sentences. **Released as v0.10.0 on 2026-09-23**
   (tag `3256670`, [Milestone v0.10.0](https://github.com/diegoami/Geoclick2027/issues/31):
   the first milestone under the release-tag rules, two review rounds, both AGREE).
+- **Hardening batch, agreed 2026-09-23**
+  ([#32](https://github.com/diegoami/Geoclick2027/issues/32)): one branch,
+  `hardening-batch`, with a commit per task. It has no release of its own and
+  ships with the next feature release. **FT-56:** `mapData.test.ts` checks
+  every shipped `tour.json` against its `tourOrder`. **FT-67:** every
+  authored Italian sentence is held to `houseStyle`, and sardegna's em
+  dashes are gone. **FT-68:** the stretched names' coordinate conversions
+  are tested with the map inset and the page scrolled. **FT-59:**
+  `QuizView.svelte.test.ts` covers grading, resume and the summary. Its PR
+  waits for the product owner's merge.
 - **Raised by the product owner 2026-09-22, backlogged**: GitHub issue #11 —
   on the Known map an explicitly tapped name kept its earned colour instead
   of **Chosen**. Decided: an explicit tap is Chosen regardless of the streak,
