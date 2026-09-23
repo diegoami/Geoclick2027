@@ -16,11 +16,18 @@
 			"population": 740000
 		},
 		"position": "north",
-		"hooks": [
-			"Pomorze is po morze, \"along the sea\" — the same root as the German Pommern next door.",
-			"Gdańsk is here: a free city between the wars, and the shipyard where Solidarity began in 1980.",
-			"The Hel Peninsula reaches 35 km into the Baltic here on a spit barely 300 m wide in places."
-		]
+		"hooks": {
+			"en": [
+				"Pomorze is po morze, \"along the sea\" — the same root as the German Pommern next door.",
+				"Gdańsk is here: a free city between the wars, and the shipyard where Solidarity began in 1980.",
+				"The Hel Peninsula reaches 35 km into the Baltic here on a spit barely 300 m wide in places."
+			],
+			"it": [
+				"Pomorze è po morze, \"lungo il mare\": la stessa radice del tedesco Pommern, qui accanto.",
+				"Qui c’è Danzica: città libera tra le due guerre, e il cantiere navale dove nel 1980 nacque Solidarność.",
+				"Qui la penisola di Hel si spinge per 35 km nel Baltico, su una lingua di sabbia larga in certi punti appena 300 m."
+			]
+		}
 	},
 	"warminsko-mazurskie": {
 		"kind": "region",
@@ -39,11 +46,18 @@
 			"population": 186670
 		},
 		"position": "north-east",
-		"hooks": [
-			"Warmia is named for the Varmians, a Baltic Prussian tribe, and Mazury for the Masurians who settled after them — two peoples in one hyphen.",
-			"The land of a thousand lakes, and the last corner of Poland where Old Prussian, a Baltic language, was still spoken into the 1700s.",
-			"The Elbląg Canal carries boats overland on rail cradles up five slipways — a working nineteenth-century oddity found nowhere else."
-		]
+		"hooks": {
+			"en": [
+				"Warmia is named for the Varmians, a Baltic Prussian tribe, and Mazury for the Masurians who settled after them — two peoples in one hyphen.",
+				"The land of a thousand lakes, and the last corner of Poland where Old Prussian, a Baltic language, was still spoken into the 1700s.",
+				"The Elbląg Canal carries boats overland on rail cradles up five slipways — a working nineteenth-century oddity found nowhere else."
+			],
+			"it": [
+				"La Varmia prende il nome dai Varmi, una tribù prussiana baltica, e la Masuria dai Masuri che vi si stabilirono dopo di loro: due popoli uniti da un trattino.",
+				"La terra dei mille laghi, e l’ultimo angolo della Polonia dove l’antico prussiano, una lingua baltica, si parlò fino al Settecento.",
+				"Il canale di Elbląg fa risalire le barche via terra su carrelli a rotaia lungo cinque piani inclinati: una stranezza ottocentesca ancora in funzione, che non esiste altrove."
+			]
+		}
 	},
 	"zachodniopomorskie": {
 		"kind": "region",
@@ -61,11 +75,18 @@
 			"population": 407811
 		},
 		"position": "north-west",
-		"hooks": [
-			"\"West Pomerania\" — zachodni is western, so the name is literally the western half of \"along the sea\".",
-			"Szczecin, its capital, is 12 km from Germany and was German until 1945; the city is older than Poland.",
-			"Świnoujście, on its western edge, is the only Polish town spread over more than forty islands."
-		]
+		"hooks": {
+			"en": [
+				"\"West Pomerania\" — zachodni is western, so the name is literally the western half of \"along the sea\".",
+				"Szczecin, its capital, is 12 km from Germany and was German until 1945; the city is older than Poland.",
+				"Świnoujście, on its western edge, is the only Polish town spread over more than forty islands."
+			],
+			"it": [
+				"\"Pomerania occidentale\": zachodni vuol dire occidentale, quindi il nome è letteralmente la metà occidentale di \"lungo il mare\".",
+				"Stettino, il capoluogo, è a 12 km dalla Germania ed è stata tedesca fino al 1945; la città è più antica della Polonia.",
+				"Świnoujście, al suo margine occidentale, è l’unica città polacca che si estende su più di quaranta isole."
+			]
+		}
 	},
 	"podlaskie": {
 		"kind": "region",
@@ -83,11 +104,18 @@
 			"population": 291855
 		},
 		"position": "north-east",
-		"hooks": [
-			"Most likely pod lasem, \"under the forest\" — or from Podlachia, the land beside the Lachy, an old name for the Poles.",
-			"Białowieża here is the last primeval lowland forest in Europe, and the only place with wild bison.",
-			"Tatar villages here have wooden mosques dating from the 1700s, settled by Tatars given land for their cavalry service."
-		]
+		"hooks": {
+			"en": [
+				"Most likely pod lasem, \"under the forest\" — or from Podlachia, the land beside the Lachy, an old name for the Poles.",
+				"Białowieża here is one of the last primeval lowland forests in Europe, and home to the largest herd of wild European bison.",
+				"Tatar villages here have wooden mosques dating from the 1700s, settled by Tatars given land for their cavalry service."
+			],
+			"it": [
+				"Molto probabilmente da pod lasem, \"sotto la foresta\", oppure da Podlachia, la terra accanto ai Lachy, antico nome dei Polacchi.",
+				"Qui Białowieża è una delle ultime foreste primigenie di pianura d’Europa, e ospita il più grande branco di bisonti europei allo stato selvatico.",
+				"Qui ci sono villaggi tatari con moschee di legno del Settecento, popolati da Tatari che avevano ricevuto terre in cambio del servizio in cavalleria."
+			]
+		}
 	},
 	"kujawsko-pomorskie": {
 		"kind": "region",
@@ -107,11 +135,18 @@
 			"population": 366452
 		},
 		"position": "north",
-		"hooks": [
-			"Kujawy is an old word for bare windy ground, joined to Pomorze, the sea-coast lands — a region of two halves named for two landscapes.",
-			"Toruń is here, where Copernicus was born, and the city's gothic core survived the war intact.",
-			"Ciechocinek’s salt-graduation towers, 1.7 km of blackthorn twigs dripping brine, have been breathed in as a cure since 1824."
-		]
+		"hooks": {
+			"en": [
+				"Kujawy is an old word for bare windy ground, joined to Pomorze, the sea-coast lands — a region of two halves named for two landscapes.",
+				"Toruń is here, where Copernicus was born, and the city's gothic core survived the war intact.",
+				"Ciechocinek’s salt-graduation towers, 1.7 km of blackthorn twigs dripping brine, have been breathed in as a cure since 1824."
+			],
+			"it": [
+				"Kujawy, la Cuiavia, è un’antica parola per una terra nuda e ventosa, unita a Pomorze, le terre lungo il mare: una regione di due metà, con il nome di due paesaggi.",
+				"Qui c’è Toruń, dove nacque Copernico, e il centro gotico della città è uscito intatto dalla guerra.",
+				"Dal 1824 si va a Ciechocinek a respirare, come cura, l’aria delle sue torri di graduazione: 1,7 km di rami di prugnolo su cui gocciola acqua salata."
+			]
+		}
 	},
 	"wielkopolskie": {
 		"kind": "region",
@@ -133,11 +168,18 @@
 			"population": 623997
 		},
 		"position": "west",
-		"hooks": [
-			"\"Greater Poland\" — but greater means older, not bigger: this is where the Polish state began, around Gniezno and Poznań in the 900s.",
-			"Its name is the reason Małopolska is \"Lesser\": the younger acquisition, not the smaller one.",
-			"The first Polish cathedral was built at Gniezno, and every early king was crowned there before Kraków took over."
-		]
+		"hooks": {
+			"en": [
+				"\"Greater Poland\" — but greater means older, not bigger: this is where the Polish state began, around Gniezno and Poznań in the 900s.",
+				"Its name is the reason Małopolska is \"Lesser\": the younger acquisition, not the smaller one.",
+				"Gniezno became Poland's first archbishopric in 1000, and every early king was crowned there before Kraków took over."
+			],
+			"it": [
+				"\"Grande Polonia\", ma grande nel senso di più antica, non di più estesa: qui, attorno a Gniezno e Posnania, nacque lo Stato polacco nel X secolo.",
+				"È a causa del suo nome che la Piccola Polonia si dice \"piccola\": perché acquisita dopo, non perché più piccola.",
+				"Gniezno divenne nel 1000 il primo arcivescovado polacco, e lì furono incoronati tutti i primi re, prima che subentrasse Cracovia."
+			]
+		}
 	},
 	"lubuskie": {
 		"kind": "region",
@@ -155,11 +197,18 @@
 			"population": 118433
 		},
 		"position": "west",
-		"hooks": [
-			"Named after Lubusz, a town that is not even in it — Lebus sits on the German side of the Oder, and the name was chosen in 1950 for its history.",
-			"More than half of it is forest, the most wooded region in Poland.",
-			"Its Łagów and Międzyrzecz forests hide a vast unfinished German bunker system, now home to Europe’s largest bat colony."
-		]
+		"hooks": {
+			"en": [
+				"Named after Lubusz, a town that is not even in it — Lebus sits on the German side of the Oder, and the name was chosen in 1999 for its history.",
+				"More than half of it is forest, the most wooded region in Poland.",
+				"Its Łagów and Międzyrzecz forests hide a vast unfinished German bunker system, now home to Europe’s largest bat colony."
+			],
+			"it": [
+				"Prende il nome da Lubusz, una città che non ne fa nemmeno parte: Lebus si trova sulla sponda tedesca dell’Oder, e il nome fu scelto nel 1999 per la sua storia.",
+				"Più di metà del territorio è coperta di foreste: è la regione più boscosa della Polonia.",
+				"Nelle sue foreste di Łagów e Międzyrzecz si nasconde un vasto sistema di bunker tedeschi mai finito, che oggi ospita la più grande colonia di pipistrelli d’Europa."
+			]
+		}
 	},
 	"mazowieckie": {
 		"kind": "region",
@@ -180,11 +229,18 @@
 			"population": 1707000
 		},
 		"position": "east",
-		"hooks": [
-			"Mazowsze, the land of the Mazovians, a Polish tribe — the same root as Mazury in the north-east.",
-			"Warsaw was a Mazovian town, and only became the capital in 1596 when the king moved it from Kraków.",
-			"Chopin was born at Żelazowa Wola here, and 85% of Warsaw was deliberately destroyed in 1944 and rebuilt from paintings."
-		]
+		"hooks": {
+			"en": [
+				"Mazowsze, the land of the Mazovians, a Polish tribe — the same root as Mazury in the north-east.",
+				"Warsaw was a Mazovian town, and only became the capital in 1596 when the king moved it from Kraków.",
+				"Chopin was born at Żelazowa Wola here, and 85% of Warsaw was deliberately destroyed in 1944 and rebuilt from paintings."
+			],
+			"it": [
+				"Mazowsze, la terra dei Masovi, una tribù polacca: la stessa radice della Masuria, a nord-est.",
+				"Varsavia era una città della Masovia e divenne capitale solo nel 1596, quando il re vi trasferì la capitale da Cracovia.",
+				"Chopin nacque qui, a Żelazowa Wola, e nel 1944 l’85% di Varsavia fu distrutto deliberatamente, per poi essere ricostruito partendo dai dipinti."
+			]
+		}
 	},
 	"odzkie": {
 		"kind": "region",
@@ -205,11 +261,18 @@
 			"population": 758000
 		},
 		"position": "centre",
-		"hooks": [
-			"Łódź means \"boat\", and the city's coat of arms is one — though it sits on no navigable river, which nobody has fully explained.",
-			"It grew from 800 people to 300,000 in a century on textiles, which is why it is laid out like Manchester rather than like a Polish town.",
-			"Piotrkowska Street runs straight for over 4 km, one of the longest commercial streets in Europe."
-		]
+		"hooks": {
+			"en": [
+				"Łódź means \"boat\", and the city's coat of arms is one — though it sits on no navigable river, which nobody has fully explained.",
+				"It grew from 800 people to 300,000 in a century on textiles, which is why it is laid out like Manchester rather than like a Polish town.",
+				"Piotrkowska Street runs straight for over 4 km, one of the longest commercial streets in Europe."
+			],
+			"it": [
+				"Łódź significa \"barca\", e lo stemma della città è proprio una barca, anche se non sorge su alcun fiume navigabile: un mistero che nessuno ha mai chiarito del tutto.",
+				"In un secolo passò da 800 a 300.000 abitanti grazie al tessile, ed è per questo che è disegnata come Manchester e non come una città polacca.",
+				"Via Piotrkowska corre dritta per oltre 4 km: è una delle vie commerciali più lunghe d’Europa."
+			]
+		}
 	},
 	"lubelskie": {
 		"kind": "region",
@@ -228,11 +291,18 @@
 			"population": 360044
 		},
 		"position": "east",
-		"hooks": [
-			"Named for Lublin, whose own name is probably from the personal name Lubla.",
-			"The Union of Lublin was signed here in 1569, joining Poland and Lithuania into one commonwealth for two hundred years.",
-			"Zamość was built in one go in the 1580s as an ideal Renaissance town, and survives complete."
-		]
+		"hooks": {
+			"en": [
+				"Named for Lublin, whose own name is probably from the personal name Lubla.",
+				"The Union of Lublin was signed here in 1569, joining Poland and Lithuania into one commonwealth for two hundred years.",
+				"Zamość was built in one go in the 1580s as an ideal Renaissance town, and survives complete."
+			],
+			"it": [
+				"Prende il nome da Lublino, che a sua volta lo deve probabilmente a un nome di persona, Lubla.",
+				"Qui nel 1569 fu firmata l’Unione di Lublino, che fece di Polonia e Lituania un’unica confederazione per duecento anni.",
+				"Zamość fu costruita in un colpo solo negli anni Ottanta del Cinquecento come città ideale del Rinascimento, ed è arrivata intatta fino a oggi."
+			]
+		}
 	},
 	"dolnoslaskie": {
 		"kind": "region",
@@ -254,11 +324,18 @@
 			"elevation": 1603
 		},
 		"position": "south-west",
-		"hooks": [
-			"\"Lower Silesia\" — dolny is lower, and Śląsk is Silesia, most likely from the Ślęża mountain and the tribe beneath it.",
-			"Wrocław has been Polish, Bohemian, Austrian, Prussian and German before returning in 1945 — the most-changed big city in Europe.",
-			"It has more castles than any other region in Poland, and Wrocław’s centenary hall was the first great reinforced-concrete dome."
-		]
+		"hooks": {
+			"en": [
+				"\"Lower Silesia\" — dolny is lower, and Śląsk is Silesia, most likely from the Ślęża mountain and the tribe beneath it.",
+				"Wrocław has been Polish, Bohemian, Austrian, Prussian and German before returning in 1945 — the most-changed big city in Europe.",
+				"It has more castles than any other region in Poland, and Wrocław’s centenary hall was the first great reinforced-concrete dome."
+			],
+			"it": [
+				"\"Bassa Slesia\": dolny vuol dire basso, e Śląsk è la Slesia, molto probabilmente dal monte Ślęża e dalla tribù che viveva ai suoi piedi.",
+				"Breslavia è stata polacca, boema, austriaca, prussiana e tedesca prima di tornare polacca nel 1945: la grande città europea che ha cambiato più volte bandiera.",
+				"Ha più castelli di qualsiasi altra regione polacca, e la Sala del Centenario di Breslavia fu la prima grande cupola in cemento armato."
+			]
+		}
 	},
 	"swietokrzyskie": {
 		"kind": "region",
@@ -279,11 +356,18 @@
 			"population": 215733
 		},
 		"position": "south",
-		"hooks": [
-			"\"Holy Cross\" — named for the abbey on Łysa Góra that claimed a relic of the True Cross.",
-			"Its mountains are among the oldest in Europe, worn down to gentle ridges long before the Alps existed.",
-			"Its Krzemionki flint mines were worked 5,000 years ago and are a UNESCO site."
-		]
+		"hooks": {
+			"en": [
+				"\"Holy Cross\" — named for the abbey on Łysa Góra that claimed a relic of the True Cross.",
+				"Its mountains are among the oldest in Europe, worn down to gentle ridges long before the Alps existed.",
+				"Its Krzemionki flint mines were worked 5,000 years ago and are a UNESCO site."
+			],
+			"it": [
+				"\"Santa Croce\": prende il nome dall’abbazia sul monte Łysa Góra, che sosteneva di custodire una reliquia della Vera Croce.",
+				"I suoi monti sono tra i più antichi d’Europa, ridotti a dolci crinali molto prima che esistessero le Alpi.",
+				"Le sue miniere di selce di Krzemionki erano già sfruttate 5.000 anni fa e sono patrimonio UNESCO."
+			]
+		}
 	},
 	"opolskie": {
 		"kind": "region",
@@ -302,11 +386,18 @@
 			"population": 131412
 		},
 		"position": "south",
-		"hooks": [
-			"From Opole, which in Old Slavic meant a community of villages holding land together — the word is older than the town.",
-			"It has Poland's largest German minority, and road signs here are bilingual.",
-			"The smallest voivodeship, and the one whose villages win Poland’s best-kept-village competitions most often."
-		]
+		"hooks": {
+			"en": [
+				"From Opole, which in Old Slavic meant a community of villages holding land together — the word is older than the town.",
+				"It has Poland's largest German minority, and road signs here are bilingual.",
+				"The smallest voivodeship, and the one whose villages win Poland’s best-kept-village competitions most often."
+			],
+			"it": [
+				"Da Opole, che in antico slavo indicava una comunità di villaggi che possedevano la terra in comune: la parola è più antica della città.",
+				"Ha la più grande minoranza tedesca della Polonia, e qui i cartelli stradali sono bilingui.",
+				"Il voivodato più piccolo, e quello i cui villaggi vincono più spesso i concorsi polacchi per il paese più curato."
+			]
+		}
 	},
 	"slaskie": {
 		"kind": "region",
@@ -325,11 +416,18 @@
 			"population": 2746000
 		},
 		"position": "south",
-		"hooks": [
-			"Silesia without a qualifier: the upper part, where the coal is.",
-			"The most densely populated region in the country, and the Silesian dialect is close enough to a language that a million people declare it as one.",
-			"Katowice sits over a coalfield so worked that whole districts were built for miners, and the region has Poland’s densest rail network."
-		]
+		"hooks": {
+			"en": [
+				"Silesia without a qualifier: the upper part, where the coal is.",
+				"The most densely populated region in the country, and the Silesian dialect is close enough to a language that hundreds of thousands of people declare it as one.",
+				"Katowice sits over a coalfield so worked that whole districts were built for miners, and the region has Poland’s densest rail network."
+			],
+			"it": [
+				"La Slesia senza aggettivi: la parte alta, quella del carbone.",
+				"La regione più densamente popolata del paese, e lo slesiano è così vicino a essere una lingua che centinaia di migliaia di persone lo dichiarano tale.",
+				"Katowice sorge su un bacino carbonifero così sfruttato che interi quartieri furono costruiti per i minatori, e la regione ha la rete ferroviaria più fitta della Polonia."
+			]
+		}
 	},
 	"podkarpackie": {
 		"kind": "region",
@@ -347,11 +445,18 @@
 			"population": 245686
 		},
 		"position": "south-east",
-		"hooks": [
-			"\"Under the Carpathians\" — pod is under, and the mountains make the whole southern border.",
-			"Łańcut and Przemyśl here are as close to Ukraine as to the rest of Poland, and the region is the country's poorest and its most forested after Lubuskie.",
-			"The world’s first oil well was drilled at Bóbrka here in 1854, five years before Pennsylvania."
-		]
+		"hooks": {
+			"en": [
+				"\"Under the Carpathians\" — pod is under, and the mountains make the whole southern border.",
+				"Łańcut and Przemyśl here are as close to Ukraine as to the rest of Poland, and the region is one of the country's poorest and its most forested after Lubuskie.",
+				"One of the world’s first oil mines was dug at Bóbrka here in 1854, five years before the Drake well in Pennsylvania."
+			],
+			"it": [
+				"\"Sotto i Carpazi\": pod vuol dire sotto, e i monti formano l’intero confine meridionale.",
+				"Łańcut e Przemyśl sono vicine all’Ucraina quanto al resto della Polonia, e la regione è tra le più povere del paese e la più boscosa dopo il voivodato di Lubusz.",
+				"Qui, a Bóbrka, nel 1854 fu scavata una delle prime miniere di petrolio al mondo, cinque anni prima del pozzo Drake in Pennsylvania."
+			]
+		}
 	},
 	"ma-opolskie": {
 		"kind": "region",
@@ -369,10 +474,17 @@
 			"population": 756000
 		},
 		"position": "south",
-		"hooks": [
-			"\"Lesser Poland\" — lesser meaning younger, the lands added after Wielkopolska, not the smaller ones.",
-			"Kraków was the capital for five centuries and kept the royal castle, the university and the coronation cathedral after the court left.",
-			"The Wieliczka salt mine has been worked since the 1200s and has chapels carved entirely from rock salt, chandeliers included."
-		]
+		"hooks": {
+			"en": [
+				"\"Lesser Poland\" — lesser meaning younger, the lands added after Wielkopolska, not the smaller ones.",
+				"Kraków was the capital for five centuries and kept the royal castle, the university and the coronation cathedral after the court left.",
+				"The Wieliczka salt mine has been worked since the 1200s and has chapels carved entirely from rock salt, chandeliers included."
+			],
+			"it": [
+				"\"Piccola Polonia\": piccola nel senso di più giovane, le terre aggiunte dopo la Grande Polonia, non le più piccole.",
+				"Cracovia fu capitale per cinque secoli e, partita la corte, conservò il castello reale, l’università e la cattedrale delle incoronazioni.",
+				"La miniera di sale di Wieliczka è sfruttata dal Duecento e ha cappelle scavate interamente nel salgemma, lampadari compresi."
+			]
+		}
 	}
 }
