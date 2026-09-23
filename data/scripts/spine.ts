@@ -114,10 +114,23 @@ function rasterise(pieces: Ring[][]): Mask | null {
 	return mask;
 }
 
-/** Keeps only the largest connected part: a name belongs on the mainland. */
+/**
+ * A cell's share of the ground, relative to one at the equator: Web Mercator
+ * inflates area by 1/cos^2(latitude), and cos(latitude) is 1/cosh of the
+ * Mercator y below.
+ */
+const groundArea = (y: number) => 1 / Math.cosh(Math.PI * (1 - 2 * y)) ** 2;
+
+/**
+ * Keeps only the largest connected part: a name belongs on the mainland.
+ * Largest on the ground, not on the map - counted in Mercator cells, Nunavut's
+ * Ellesmere Island (80 N) outweighed its mainland (63 N), and the name went
+ * off the top of the screen.
+ */
 function keepLargestPart(mask: Mask): number[] {
 	const label = new Int32Array(mask.cells.length);
 	let best: number[] = [];
+	let bestArea = 0;
 	const stack: number[] = [];
 	for (let start = 0; start < mask.cells.length; start++) {
 		if (!mask.cells[start] || label[start]) continue;
@@ -140,7 +153,8 @@ function keepLargestPart(mask: Mask): number[] {
 				stack.push(n);
 			}
 		}
-		if (part.length > best.length) best = part;
+		const area = part.reduce((sum, i) => sum + groundArea(mask.centre(i)[1]), 0);
+		if (area > bestArea) [best, bestArea] = [part, area];
 	}
 	mask.cells.fill(0);
 	for (const i of best) mask.cells[i] = 1;
