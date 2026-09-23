@@ -14,11 +14,18 @@
 			"population": 1044000
 		},
 		"position": "north",
-		"hooks": [
-			"Simply \"upper France\" — a name invented in 2016, chosen by the region's own residents from a shortlist after Nord-Pas-de-Calais-Picardie proved unusable.",
-			"Picardy underneath it is older and better named: from the picque, the pike its infantry carried.",
-			"The Somme runs through it, and its 1916 battlefields and cemeteries are the reason most visitors come."
-		]
+		"hooks": {
+			"en": [
+				"Simply \"upper France\" — a name invented in 2016, chosen by the region's own residents from a shortlist after Nord-Pas-de-Calais-Picardie proved unusable.",
+				"Picardy underneath it is older and better named: from the picque, the pike its infantry carried.",
+				"The Somme runs through it, and its 1916 battlefields and cemeteries are the reason most visitors come."
+			],
+			"it": [
+				"Semplicemente \"l’alta Francia\": un nome inventato nel 2016, scelto dagli stessi abitanti della regione da una rosa di proposte, dopo che Nord-Pas-de-Calais-Piccardia si era rivelato impraticabile.",
+				"Sotto c’è la Piccardia, più antica e con un nome migliore: da picque, la picca che portavano i suoi fanti.",
+				"La attraversa la Somme, e sono i campi di battaglia e i cimiteri del 1916 a richiamare la maggior parte dei visitatori."
+			]
+		}
 	},
 	"normandie": {
 		"kind": "region",
@@ -37,11 +44,18 @@
 			"population": 532559
 		},
 		"position": "north-west",
-		"hooks": [
-			"The land of the Northmen: Vikings under Rollo were granted it in 911, settled, and within a century spoke French and called themselves Normans.",
-			"Those Normans then took England in 1066, which is why perhaps a third of English vocabulary arrived from this one region.",
-			"The D-Day landings came ashore on its beaches in 1944, and Mont-Saint-Michel sits on its border with Brittany."
-		]
+		"hooks": {
+			"en": [
+				"The land of the Northmen: Vikings under Rollo were granted it in 911, settled, and within a century spoke French and called themselves Normans.",
+				"Those Normans then took England in 1066, which is why perhaps a third of English vocabulary arrived from this one region.",
+				"The D-Day landings came ashore on its beaches in 1944, and Mont-Saint-Michel sits on its border with Brittany."
+			],
+			"it": [
+				"La terra degli uomini del Nord: nel 911 i Vichinghi di Rollone la ricevettero in concessione, vi si stabilirono e nel giro di un secolo parlavano francese e si chiamavano Normanni.",
+				"Quegli stessi Normanni conquistarono poi l’Inghilterra nel 1066: ecco perché forse un terzo del lessico inglese è arrivato da quest’unica regione.",
+				"Nel 1944 le truppe del D-Day sbarcarono sulle sue spiagge, e Mont-Saint-Michel sorge al suo confine con la Bretagna."
+			]
+		}
 	},
 	"grand-est": {
 		"kind": "region",
@@ -58,11 +72,18 @@
 			"population": 439972
 		},
 		"position": "north-east",
-		"hooks": [
-			"\"Great East\" — another 2016 coinage, over Alsace, Lorraine and Champagne, three names far older than the one on the map.",
-			"Alsace and Lorraine changed hands between France and Germany four times between 1871 and 1945, which is why Strasbourg was chosen for the European Parliament.",
-			"Champagne may only be called champagne if it comes from here, a rule France has defended in court worldwide for a century."
-		]
+		"hooks": {
+			"en": [
+				"\"Great East\" — another 2016 coinage, over Alsace, Lorraine and Champagne, three names far older than the one on the map.",
+				"Alsace and Lorraine changed hands between France and Germany four times between 1871 and 1945, which is why Strasbourg was chosen for the European Parliament.",
+				"Champagne may only be called champagne if it comes from here, a rule France has defended in court worldwide for a century."
+			],
+			"it": [
+				"\"Grande Est\": un altro nome coniato nel 2016, steso sopra Alsazia, Lorena e Champagne, tre nomi ben più antichi di quello sulla carta.",
+				"Tra il 1871 e il 1945 Alsazia e Lorena passarono quattro volte dalla Francia alla Germania e viceversa, ed è per questo che Strasburgo fu scelta come sede del Parlamento europeo.",
+				"Lo champagne può chiamarsi champagne solo se viene da qui, una regola che la Francia difende da un secolo nei tribunali di tutto il mondo."
+			]
+		}
 	},
 	"ile-de-france": {
 		"kind": "region",
@@ -81,11 +102,18 @@
 			"population": 9904000
 		},
 		"position": "north",
-		"hooks": [
-			"The \"island of France\" — not an island but the land between the Seine, the Marne and the Oise, the royal domain the kingdom grew outwards from.",
-			"It is the smallest region by area but holds about a fifth of the whole country's population.",
-			"Versailles is here, and so is every one of France's high-speed lines, which all radiate from Paris."
-		]
+		"hooks": {
+			"en": [
+				"The \"island of France\" — not an island but the land between the Seine, the Marne and the Oise, the royal domain the kingdom grew outwards from.",
+				"It is the smallest region by area but holds about a fifth of the whole country's population.",
+				"Versailles is here, and so is every one of France's high-speed lines, which all radiate from Paris."
+			],
+			"it": [
+				"\"Isola di Francia\": non un’isola, ma la terra tra Senna, Marna e Oise, il dominio regio a partire dal quale il regno si allargò.",
+				"È la regione più piccola per superficie, ma ospita circa un quinto della popolazione dell’intero paese.",
+				"Qui c’è Versailles, e qui passano tutte le linee francesi ad alta velocità, che si irradiano da Parigi."
+			]
+		}
 	},
 	"bretagne": {
 		"kind": "region",
@@ -101,11 +129,18 @@
 			"population": 209375
 		},
 		"position": "north-west",
-		"hooks": [
-			"Named for Britons who crossed from Cornwall and Wales in the fifth century — which is why Brittany and Britain share a name.",
-			"Breton is a Celtic language, closer to Welsh than to French, and about 200,000 people still speak it.",
-			"It has more coastline than any other French region, and its tides at Mont-Saint-Michel are among the largest in Europe."
-		]
+		"hooks": {
+			"en": [
+				"Named for Britons who crossed from Cornwall and Wales in the fifth century — which is why Brittany and Britain share a name.",
+				"Breton is a Celtic language, closer to Welsh than to French, and about 200,000 people still speak it.",
+				"It has more coastline than any other French region, and its tides at Mont-Saint-Michel are among the largest in Europe."
+			],
+			"it": [
+				"Prende il nome dai Britanni che nel V secolo attraversarono il mare dalla Cornovaglia e dal Galles: ecco perché Bretagna e Gran Bretagna condividono il nome.",
+				"Il bretone è una lingua celtica, più vicina al gallese che al francese, e circa 200.000 persone lo parlano ancora.",
+				"Ha più coste di qualsiasi altra regione francese, e le sue maree a Mont-Saint-Michel sono tra le più ampie d’Europa."
+			]
+		}
 	},
 	"centre-val-de-loire": {
 		"kind": "region",
@@ -125,11 +160,18 @@
 			"population": 236096
 		},
 		"position": "centre",
-		"hooks": [
-			"The centre of France plus the valley of the Loire — a name that describes a location rather than remembers anything.",
-			"Its stretch of the Loire holds the great châteaux — Chambord, Chenonceau, Amboise — and is a UNESCO site for that reason.",
-			"The Loire is the longest river in France, 1,006 km, and the last big one in Europe with no dam on its lower course."
-		]
+		"hooks": {
+			"en": [
+				"The centre of France plus the valley of the Loire — a name that describes a location rather than remembers anything.",
+				"Its stretch of the Loire holds the great châteaux — Chambord, Chenonceau, Amboise — and is a UNESCO site for that reason.",
+				"The Loire is the longest river in France, 1,006 km, and the last big one in Europe with no dam on its lower course."
+			],
+			"it": [
+				"Il centro della Francia più la valle della Loira: un nome che descrive una posizione anziché ricordare qualcosa.",
+				"Il suo tratto di Loira custodisce i grandi castelli (Chambord, Chenonceau, Amboise) ed è patrimonio UNESCO proprio per questo.",
+				"La Loira è il fiume più lungo di Francia, 1.006 km, e l’ultimo grande fiume d’Europa senza una diga nel suo corso inferiore."
+			]
+		}
 	},
 	"pays-de-la-loire": {
 		"kind": "region",
@@ -147,11 +189,18 @@
 			"population": 438537
 		},
 		"position": "west",
-		"hooks": [
-			"\"Lands of the Loire\", and a slightly awkward name: the region was assembled in 1955 and the river only clips its southern half.",
-			"Nantes, its capital, was the historic capital of Brittany, which many Bretons still consider it to be.",
-			"The Le Mans 24-hour race has run here since 1923, on roads that are public for the rest of the year."
-		]
+		"hooks": {
+			"en": [
+				"\"Lands of the Loire\", and a slightly awkward name: the region was assembled in 1955 and the river only clips its southern half.",
+				"Nantes, its capital, was the historic capital of Brittany, which many Bretons still consider it to be.",
+				"The Le Mans 24-hour race has run here since 1923, on roads that are public for the rest of the year."
+			],
+			"it": [
+				"\"Paesi della Loira\", un nome un po’ forzato: la regione fu messa insieme nel 1955 e il fiume ne lambisce appena la metà meridionale.",
+				"Nantes, il capoluogo, fu la capitale storica della Bretagna, e molti bretoni la considerano ancora tale.",
+				"La 24 Ore di Le Mans si corre qui dal 1923, su strade che per il resto dell’anno sono aperte al traffico."
+			]
+		}
 	},
 	"bourgogne-franche-comte": {
 		"kind": "region",
@@ -169,11 +218,18 @@
 			"population": 169946
 		},
 		"position": "east",
-		"hooks": [
-			"Burgundy is named for the Burgundians, a Germanic people who settled here around 450; Franche-Comté is the \"free county\", exempt from feudal dues.",
-			"The dukes of Burgundy were so rich in the 1400s that they were effectively a rival kingdom, ruling the Low Countries as well.",
-			"Its Côte d'Or produces the most expensive wine on earth by the hectare, from plots sometimes smaller than a tennis court."
-		]
+		"hooks": {
+			"en": [
+				"Burgundy is named for the Burgundians, a Germanic people who settled here around 450; Franche-Comté is the \"free county\", exempt from feudal dues.",
+				"The dukes of Burgundy were so rich in the 1400s that they were effectively a rival kingdom, ruling the Low Countries as well.",
+				"Its Côte d'Or produces the most expensive wine on earth by the hectare, from plots sometimes smaller than a tennis court."
+			],
+			"it": [
+				"La Borgogna prende il nome dai Burgundi, un popolo germanico che vi si stabilì intorno al 450; la Franca Contea è la \"contea libera\", esente dai tributi feudali.",
+				"Nel Quattrocento i duchi di Borgogna erano così ricchi da essere di fatto un regno rivale, che governava anche i Paesi Bassi.",
+				"La sua Côte d’Or produce il vino più caro al mondo per ettaro, da appezzamenti a volte più piccoli di un campo da tennis."
+			]
+		}
 	},
 	"auvergne-rhone-alpes": {
 		"kind": "region",
@@ -196,11 +252,18 @@
 			"elevation": 4807
 		},
 		"position": "centre",
-		"hooks": [
-			"The Arverni were the tribe whose chief Vercingetorix fought Caesar; the Rhône and the Alps supply the rest of the name.",
-			"The Auvergne is built on a chain of about eighty extinct volcanoes, the Chaîne des Puys, now a UNESCO site.",
-			"Mont Blanc stands on its border at 4,808 m, and Lyon, its capital, is the gastronomic capital of France by long consent."
-		]
+		"hooks": {
+			"en": [
+				"The Arverni were the tribe whose chief Vercingetorix fought Caesar; the Rhône and the Alps supply the rest of the name.",
+				"The Auvergne is built on a chain of about eighty extinct volcanoes, the Chaîne des Puys, now a UNESCO site.",
+				"Mont Blanc stands on its border at 4,808 m, and Lyon, its capital, is the gastronomic capital of France by long consent."
+			],
+			"it": [
+				"Gli Arverni erano la tribù di Vercingetorige, il capo che combatté contro Cesare; il Rodano e le Alpi danno il resto del nome.",
+				"L’Alvernia poggia su una catena di circa ottanta vulcani spenti, la Chaîne des Puys, oggi patrimonio UNESCO.",
+				"Il Monte Bianco si erge sul suo confine a 4.808 m, e Lione, il capoluogo, è da tempo riconosciuta come la capitale gastronomica di Francia."
+			]
+		}
 	},
 	"nouvelle-aquitaine": {
 		"kind": "region",
@@ -218,11 +281,18 @@
 			"population": 803000
 		},
 		"position": "centre",
-		"hooks": [
-			"Aquitania is Latin for \"land of waters\" — its rivers and its Atlantic coast — with \"new\" added in 2016 when three regions merged.",
-			"Eleanor of Aquitaine brought it to the English crown by marriage in 1152, and it stayed English for three hundred years.",
-			"The largest region in France, larger than Austria, and Bordeaux at its centre is the most valuable wine region in the world."
-		]
+		"hooks": {
+			"en": [
+				"Aquitania is Latin for \"land of waters\" — its rivers and its Atlantic coast — with \"new\" added in 2016 when three regions merged.",
+				"Eleanor of Aquitaine brought it to the English crown by marriage in 1152, and it stayed English for three hundred years.",
+				"The largest region in France, larger than Austria, and Bordeaux at its centre is the most valuable wine region in the world."
+			],
+			"it": [
+				"In latino Aquitania è la \"terra delle acque\", cioè i suoi fiumi e la costa atlantica; il \"Nuova\" fu aggiunto nel 2016, quando si fusero tre regioni.",
+				"Eleonora d’Aquitania la portò alla corona inglese con il matrimonio del 1152, e rimase inglese per trecento anni.",
+				"È la regione più grande di Francia, più estesa dell’Austria, e Bordeaux, al suo centro, è la zona vinicola di maggior valore al mondo."
+			]
+		}
 	},
 	"provence-alpes-cote-d-azur": {
 		"kind": "region",
@@ -238,11 +308,18 @@
 			"population": 1400000
 		},
 		"position": "south-east",
-		"hooks": [
-			"Provence is simply provincia — the Romans' first province outside Italy, so important they called it \"the Province\" and nothing else.",
-			"The Côte d'Azur was named in 1887 by a writer for the colour of the sea, and the name sold the coast to the world.",
-			"Its Roman remains are the best outside Italy: the Pont du Gard, the arena at Arles, the theatre at Orange."
-		]
+		"hooks": {
+			"en": [
+				"Provence is simply provincia — the Romans' first province outside Italy, so important they called it \"the Province\" and nothing else.",
+				"The Côte d'Azur was named in 1887 by a writer for the colour of the sea, and the name sold the coast to the world.",
+				"Its Roman remains are the best outside Italy: the Pont du Gard, the arena at Arles, the theatre at Orange."
+			],
+			"it": [
+				"Provenza è semplicemente provincia: la prima provincia dei Romani fuori dall’Italia, tanto importante da essere chiamata \"la Provincia\" e nient’altro.",
+				"La Costa Azzurra fu battezzata così nel 1887 da uno scrittore, per il colore del mare, e fu quel nome a lanciarla nel mondo intero.",
+				"Ha le migliori vestigia romane fuori d’Italia: il Pont du Gard, l’arena di Arles, il teatro di Orange."
+			]
+		}
 	},
 	"occitanie": {
 		"kind": "region",
@@ -259,11 +336,18 @@
 			"population": 847000
 		},
 		"position": "south",
-		"hooks": [
-			"Named in 2016 for the langue d'oc, the southern tongue where \"yes\" was oc rather than the northern oïl that became French.",
-			"Occitan was the language of the troubadours, and the first European poetry in a living language was written in it.",
-			"Carcassonne's double walls and the Canal du Midi, dug in the 1680s to link the Atlantic to the Mediterranean, are both here."
-		]
+		"hooks": {
+			"en": [
+				"Named in 2016 for the langue d'oc, the southern tongue where \"yes\" was oc rather than the northern oïl that became French.",
+				"Occitan was the language of the troubadours, and the first European poetry in a living language was written in it.",
+				"Carcassonne's double walls and the Canal du Midi, dug in the 1680s to link the Atlantic to the Mediterranean, are both here."
+			],
+			"it": [
+				"Il nome, del 2016, viene dalla lingua d’oc, la parlata del sud dove \"sì\" si diceva oc, e non oïl come nella lingua del nord da cui è nato il francese.",
+				"L’occitano fu la lingua dei trovatori, e la prima poesia europea in una lingua viva fu scritta proprio in occitano.",
+				"Qui si trovano sia la doppia cinta muraria di Carcassonne sia il Canal du Midi, scavato negli anni Ottanta del Seicento per collegare l’Atlantico al Mediterraneo."
+			]
+		}
 	},
 	"corse": {
 		"kind": "region",
@@ -279,10 +363,17 @@
 			"elevation": 2706
 		},
 		"position": "south-east",
-		"hooks": [
-			"Corsica's name is pre-Roman and unexplained; the Greeks called it Kalliste, \"the most beautiful\".",
-			"Genoese until 1768, when Genoa sold it to France — a year before Napoleon was born in Ajaccio, which made him French by a margin of months.",
-			"Two thirds of it is mountain, and the GR20 across its spine is considered the hardest long-distance path in Europe."
-		]
+		"hooks": {
+			"en": [
+				"Corsica's name is pre-Roman and unexplained; the Greeks called it Kalliste, \"the most beautiful\".",
+				"Genoese until 1768, when Genoa sold it to France — a year before Napoleon was born in Ajaccio, which made him French by a margin of months.",
+				"Two thirds of it is mountain, and the GR20 across its spine is considered the hardest long-distance path in Europe."
+			],
+			"it": [
+				"Il nome della Corsica è preromano e resta inspiegato; i Greci la chiamavano Kalliste, \"la più bella\".",
+				"Genovese fino al 1768, quando Genova la vendette alla Francia: un anno prima che Napoleone nascesse ad Ajaccio, cosa che lo fece nascere francese per questione di mesi.",
+				"Per due terzi è montagna, e il GR20 che ne percorre la dorsale è considerato il sentiero a lunga percorrenza più duro d’Europa."
+			]
+		}
 	}
 }
