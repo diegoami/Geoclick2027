@@ -1,4 +1,4 @@
-# Handover — 2026-09-23, v0.10.0 release waits on the review-process proposal (#26)
+# Handover — 2026-09-23, GitHub review process in a PR; v0.10.0 release PR next
 
 For whoever picks Geoclick up next, whether a human or a fresh Claude
 session. It records where things stand, what's next, and what's easy to
@@ -18,12 +18,12 @@ before any work starts.
 |---|---|
 | `main` | clean, in sync with GitHub; all four gates pass (736 unit tests), checked 2026-09-23 |
 | Deploy | The product owner **stopped deploying** on 2026-09-22, so a `main` merge no longer triggers a live Netlify build. Merges still need the product owner's OK (CLAUDE.md §3) — that rule is a review gate, not the old cost gate |
-| Who works | **Claude Opus 5.5** implements, with no per-PR review. **At milestones** (before a release tag, or on request) Claude hands the product owner a prompt for an **independent model** to review the repository (product owner, 2026-09-23 — [REVIEW_LOOP.md](REVIEW_LOOP.md)). PRs #10–#21 were DeepSeek V4.1 Flash, reviewed by ChatGPT GPT-5.6 Luna |
+| Who works | **Claude Opus 5.5** implements, with no per-PR review. **At milestones** (a `proposal` issue, a PR that implements one, a `release/X.Y.Z` PR) Claude offers the product owner a prompt for a **different model, any tool**; the reviewer opens GitHub issues and posts an AGREE/BLOCK verdict itself (CLAUDE.md §3a, skill `review-handoff`; agreed on [#26](https://github.com/diegoami/Geoclick2027/issues/26), 2026-09-23). Offered, never waited on. PRs #10–#21 were DeepSeek V4.1 Flash, reviewed by ChatGPT GPT-5.6 Luna |
 | Latest release | **v0.9.4** (tag at `5387ff2`, 2026-09-22): the review's six fixes (FT-52 to FT-58). Installers are on the public [releases page](https://github.com/diegoami/geoclick-releases/releases/latest) — **published but not smoke-tested** (no map was opened in either shell). Previews go out as alpha/beta pre-releases first (RELEASES.md, "Pre-releases") |
 | Remediation programme | Closed with v0.2.0 ([REMEDIATION_PLAN.md](REMEDIATION_PLAN.md)); its automerge exception went with it |
 | Feature programme | Closed with v0.5.0 ([FEATURE_PLAN.md](FEATURE_PLAN.md)) |
 | Since then | Per-release plans: [PLAN_V0.6.md](PLAN_V0.6.md) through [PLAN_V0.9.4.md](PLAN_V0.9.4.md), each with its own ledger; now [PLAN_V0.10.md](PLAN_V0.10.md) |
-| Next | **The v0.10.0 release** (docs/RELEASES.md): every task in PLAN_V0.10.md is merged except FT-51 (German, postponed). **Blocked on [#26](https://github.com/diegoami/Geoclick2027/issues/26)**: the product owner rejected the paste-back review prompt (REVIEW_LOOP.md) on 2026-09-23 — reviews must go through GitHub, as in discola-web. #26 proposes the new process (reviewer opens issues and posts a verdict; `release/X.Y.Z` PR as the release thread). Wait for the owner's agreement, then implement it on a branch and open a PR; after that merges, `release/0.10.0` is the first review. Then write the CHANGELOG entry saying what was built and what was actually tried. **FT-50 is merged** ([PR #25](https://github.com/diegoami/Geoclick2027/pull/25), `3af3ae5`): every name-fact in Italian, ~180 English facts corrected (DECISIONS.md, "Translating fact-checked the English"); three new sentences (Paraíba, Wonju, Sukabumi) the product owner may still want to read. Outstanding at the release gate: the v0.9.4 installer smoke test, the FT-61 tablet check, FT-66 on a real phone/tablet. A leftover Cloudflare "Workers Builds" check fails on every PR — a dashboard job for the product owner |
+| Next | **The v0.10.0 release** (docs/RELEASES.md): every task in PLAN_V0.10.md is merged except FT-51 (German, postponed). **The review process is agreed ([#26](https://github.com/diegoami/Geoclick2027/issues/26)) and implemented on branch `process/github-review`** (PR open, waiting for the owner's merge; not a milestone, so no review prompt). After it merges: open `release/0.10.0` (RELEASES.md, "The release PR") with the CHANGELOG entry and `0.10.0-beta.1`, stage the beta with its checksums in the PR body, and offer the review-handoff prompt on that PR (`v0.9.4..<head>`, PRs #18–#25 were never reviewed). The CHANGELOG entry says what was built and what was actually tried saying what was built and what was actually tried. **FT-50 is merged** ([PR #25](https://github.com/diegoami/Geoclick2027/pull/25), `3af3ae5`): every name-fact in Italian, ~180 English facts corrected (DECISIONS.md, "Translating fact-checked the English"); three new sentences (Paraíba, Wonju, Sukabumi) the product owner may still want to read. Outstanding at the release gate: the v0.9.4 installer smoke test, the FT-61 tablet check, FT-66 on a real phone/tablet. A leftover Cloudflare "Workers Builds" check fails on every PR — a dashboard job for the product owner |
 | After that | **FT-51 (German) is postponed** until the Italian has been read; the two v0.9.4 test gates (FT-56, FT-59) wait in a hardening batch |
 | Also raised 2026-09-20 | **The start screen becomes a zoomable world map** — pick the country on the map, then the kind of quiz. The map list cannot be finalized as a list: the goal is a high number of maps, and `mapCatalog.ts` is already 31 countries and 66 maps. Favourites and Recent stay unchanged. Second item of the Iteration 8+ backlog, with the open questions listed there |
 
@@ -96,14 +96,14 @@ installer smoke test (the published Windows and Android installers were
 
 Suggested first message for the next session:
 
-> Read docs/HANDOVER.md, then issue #26 and my answers on it. Implement the agreed review process on a branch and open the PR. (The v0.9.4 installer smoke test is still outstanding.)
+> Read docs/HANDOVER.md, then docs/RELEASES.md "The release PR". Open release/0.10.0 and stage the beta; give me the review-handoff prompt for it. (The v0.9.4 installer smoke test is still outstanding.)
 
 Whatever comes next, the working rules stay (CLAUDE.md §3):
 
 - one branch per task, pushed without asking;
-- **no per-PR review; at a milestone, hand the product owner the
-  independent-model review prompt ([REVIEW_LOOP.md](REVIEW_LOOP.md)) and
-  answer every finding that comes back;**
+- **reviews at milestones only (CLAUDE.md §3a): offer the review-handoff
+  prompt, never wait on it; when a review is in, read it from GitHub,
+  reproduce each finding, fix (`Fixes #n`) or rebut it on the issue;**
 - commit trailer `Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>`;
 - `npm run gates -- --quiet` before pushing (the pre-push hook runs them
   anyway, and prints four PASS lines instead of flooding);

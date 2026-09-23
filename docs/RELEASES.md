@@ -13,17 +13,45 @@ The log itself: [`CHANGELOG.md`](../CHANGELOG.md).
 > Releases, no milestones, no release branches. Draft 3 changes only who does it
 > — one Opus agent in a loop rather than an orchestrator directing others — and
 > what each batch contains, since the nice-to-have tier came back in.
+>
+> **Fourth change (2026-09-23, [#26](https://github.com/diegoami/Geoclick2027/issues/26)).**
+> A release is staged on a short-lived **`release/X.Y.Z` PR**. Not to ration
+> builds this time: a staged release is a review milestone (CLAUDE.md §3a),
+> and a review needs a thread and a SHA. See "The release PR" below.
 
 ## The shape of it
 
 ```
-  task branch ──merge (human OK)──► main ──(wave complete)──► tag vX.Y.Z + CHANGELOG entry
+  task branch ──merge (owner OK)──► main
+  main ──► release/X.Y.Z PR: CHANGELOG entry + X.Y.Z-beta.N ──► beta published, reviewed, owner tests
+       ──► bump to X.Y.Z ──merge (owner OK)──► tag vX.Y.Z on the merge commit ──► publish
 ```
 
 `main` is the integration branch. Task branches merge into it one at a time, as
-each is approved — see ORCHESTRATION.md's loop, steps 8-10. A release is not a
-separate branch or a separate merge; it is a **tag on a commit of `main` that is
-already there**, plus the `CHANGELOG.md` entry that explains it.
+each is approved. A release is a **tag on `main`** plus the `CHANGELOG.md` entry
+that explains it, and from v0.10.0 both arrive through a release PR.
+
+## The release PR (from v0.10.0)
+
+1. Branch `release/X.Y.Z` from `main` once everything for the release is
+   merged. On it: the `CHANGELOG.md` entry (the `## Unreleased` section
+   renamed to the version, "Release notes" below), and
+   `node scripts/sync-version.mjs X.Y.Z-beta.1`. Run the gates; push; open
+   the PR against `main`, with `Review: not run` in its body.
+2. **Stage the beta.** Tag the branch head `vX.Y.Z-beta.1` and package from
+   the tag ("Build and publish the installers", step 1). Paste
+   `SHA256SUMS.txt` into the PR body. Try both installers (step 2); publish
+   the beta (step 3). The PR at this head is the **release milestone**:
+   offer the review-handoff prompt now, reviewing `git diff <last
+   tag>..<head>`. The reviewer and the owner see the same build.
+3. **The owner tests the beta.** A fix goes to its own task PR on `main`;
+   merge `main` into the release branch and stage `beta.2` the same way.
+   Update the PR's `Review:` line when a verdict arrives.
+4. **On the owner's OK:** `sync-version.mjs X.Y.Z` on the branch, gates,
+   push. The owner merges the PR with a **merge commit**, not a squash, so
+   the beta tags stay in `main`'s history. Tag the merge commit
+   `git tag -a vX.Y.Z -m "vX.Y.Z — <theme>"`, push the tag, package from it
+   and publish.
 
 ## What counts as a batch
 
@@ -126,7 +154,7 @@ or beta pre-release, and clearly marked so.**
 | Stage | When | Version and tag | Tested by |
 |---|---|---|---|
 | **alpha** | a preview of work that isn't merged yet, for example to try a feature on a phone | `X.Y.Z-alpha.N` | the developer only |
-| **beta** | everything for the release is merged to `main` and the gates pass; waiting for the product owner's test | `X.Y.Z-beta.N` | the developer; product owner testing |
+| **beta** | everything for the release is merged to `main`, staged on the `release/X.Y.Z` PR, gates pass; waiting for the product owner's test | `X.Y.Z-beta.N` | the developer; product owner testing |
 | **stable** | the product owner has tried it (the "Cutting a release" checklist below) | `X.Y.Z` | both |
 
 - **Published as GitHub pre-releases** on
@@ -150,7 +178,8 @@ or beta pre-release, and clearly marked so.**
   `vX.Y.Z-alpha.N` and never merged; the tag keeps it. The task branch
   stays free of version numbers.
 - **Where a beta is built from:** a "Release vX.Y.Z-beta.N" bump commit
-  on `main`, tagged. The stable release bumps `main` again, to `X.Y.Z`.
+  on the `release/X.Y.Z` branch, tagged (from v0.10.0; before, on `main`).
+  The stable release bumps the branch again, to `X.Y.Z`, before it merges.
 - **Same checks as stable.** Package from the tag with
   `package-release.mjs`, then try both installers by opening a map in
   each (step 2 below). Show the product owner the `publish-release.mjs`
@@ -184,6 +213,10 @@ a release whose desktop/Android binaries were not rebuilt says so in its
 | `v0.2.0` | waves 3 + 4 + close, plus GC-080 (held back by product-owner override — DAG-ready in wave 1, but it's a decision document, not a fix, so it ships with the milestone instead) | GC-004, 022, 032, 033, 080 | Adjacent regions stop sharing a colour and the palette is legible again; tours on 100+ target maps become watchable; popup text stops going through `setHTML` and the popup CSS lives in one place; `data/scripts` is typechecked and linted; the pmtiles storage question gets a decided answer. **Milestone: the 2026-09-13 review is closed out.** |
 
 ## Cutting a release
+
+*Historical: this is the v0.1.x–v0.2.0 loop's checklist. From v0.10.0 the
+steps run through "The release PR" above; its smoke test (step 4) and the
+two-step labelling still apply.*
 
 Run by the loop agent once a wave closes. Steps 1-5 and 7-8 are mechanical;
 step 6 is the product owner's, and it is the one that cannot be skipped. Since
@@ -315,7 +348,8 @@ curate from there. Then mark each task `released` with `task.mjs state`.
 ## Hotfixes
 
 If something ships broken: branch `hotfix/x.y.z` from `main`, fix it, run the
-gates, get the human's OK, merge to `main`, tag the next patch. No forward-merge
+gates, get the human's OK, merge to `main`, then ship the next patch through
+its own `release/x.y.z` PR. No forward-merge
 step and no release branch to reconcile — that complexity existed only to serve
 the release-branch model. An extra build costs nothing now; shipping broken
 still does, which is what step 4 above is for.

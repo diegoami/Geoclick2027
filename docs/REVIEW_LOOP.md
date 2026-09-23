@@ -1,53 +1,23 @@
-# Reviews — an independent model, at milestones
+# Reviews — an independent model, at milestones, on GitHub
 
-**Standing rule (product owner, 2026-09-23).** Claude does its work —
-branches, PRs, gates, local verification — without a per-PR review round.
-At each **milestone** Claude gives the product owner a ready-to-paste
-prompt, and the product owner runs it in an **independent model** (not
-Claude) with access to the repository. The findings come back through the
-product owner, who decides which become tasks. Claude never spawns the
-reviewer itself. The product owner's merge OK (CLAUDE.md §3) is unchanged.
+**The process lives in [CLAUDE.md §3a](../CLAUDE.md)** and the prompt
+template in [`.claude/skills/review-handoff/SKILL.md`](../.claude/skills/review-handoff/SKILL.md)
+(product owner, 2026-09-23, [#26](https://github.com/diegoami/Geoclick2027/issues/26),
+adapted from diegoami/discola-web). In short: at a milestone (a design
+proposal, a PR that implements one, a staged release) Claude hands the
+product owner a prompt; the owner runs it in a different model, in any tool;
+the reviewer opens one GitHub issue per reproduced finding and always posts
+one AGREE/BLOCK verdict on the thread. Nothing is pasted back.
 
-A milestone is, by default:
+This file keeps only the history and the encoding rule.
 
-- a release candidate, before its `vX.Y.Z` tag; or
-- whenever the product owner asks for one.
+## The paste-back prompt (2026-09-23, superseded the same day)
 
-## The prompt
-
-Fill in the three placeholders and hand it over whole, in a fenced block:
-
-```
-You are an independent reviewer of the Geoclick repository
-(https://github.com/diegoami/Geoclick2027). You did not write any of it.
-
-Scope: the changes from <BASE> to <HEAD> (`git diff --stat <BASE>..<HEAD>`),
-which delivered: <ONE LINE PER TASK/PR>. Review the rest of the repository
-only where those changes touch it.
-
-Before anything else, read CLAUDE.md section 0: it lists the generated and
-binary paths you must not read (map data, build output, lockfiles), and
-the "quiet terminal" commands in section 2.
-
-Do not trust PR descriptions, commit messages or docs: read the cited
-lines and run the checks yourself (`npm ci`, then `npm run gates -- --quiet`
-for typecheck, tests, lint and build).
-
-Look for: correctness bugs and unhandled edge cases; places where the code
-and DECISIONS.md / ARCHITECTURE.md disagree; missing or vacuous tests;
-performance on the paths that run per frame or per map move; anything that
-breaks offline use (desktop and Android builds must work with no network).
-
-Rank each finding BLOCKING (a correctness or contract problem), WORTH DOING,
-or NIT. For each give file:line, a concrete failure scenario (input or state
--> wrong result), and what would fix it. Say which findings you verified by
-running something and which by reading only. Do not modify files, commit or
-push. Output one Markdown report.
-```
-
-The report comes back to Claude from the product owner. Answer every
-finding — fixed (with the commit), or why not — the same way a PR review
-used to be answered.
+The first milestone-review prompt asked the independent model for one
+Markdown report, which the product owner pasted back into a Claude session.
+It was handed over once, for v0.10.0 (`v0.9.4..f2eca43`), and withdrawn
+before it ran: findings that never reach GitHub leave no issue, no verdict
+on the thread and no `Review:` line on a PR.
 
 ## Before: the per-PR loops (superseded)
 

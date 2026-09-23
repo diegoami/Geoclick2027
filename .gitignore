@@ -41,3 +41,8 @@ vite.config.ts.timestamp-*
 
 # Packaged release installers (scripts/package-release.mjs) - published, never committed
 /dist-release
+
+# Claude Code: the review-handoff skill in .claude/skills/ is tracked;
+# machine-local settings and agent worktrees are not.
+.claude/settings.local.json
+.claude/worktrees/
