@@ -143,7 +143,7 @@ Check items off as they land; update "Status" as iterations complete.
 - **Built 2026-09-24** ([PR #37](https://github.com/diegoami/Geoclick2027/pull/37),
   `tapped-name-shows`): on Explore, the name whose fact card is open always
   shows, even when boxed in by curved neighbours (Basilicata at the country
-  view). It waits for the owner's merge OK.
+  view). **Merged** 2026-09-24.
 - **Raised by the product owner 2026-09-22, backlogged**: GitHub issue #11 —
   on the Known map an explicitly tapped name kept its earned colour instead
   of **Chosen**. Decided: an explicit tap is Chosen regardless of the streak,
