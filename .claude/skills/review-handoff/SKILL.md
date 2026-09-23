@@ -169,6 +169,10 @@ Since then: git diff <old sha>..<new sha> (<the fix PRs>). Check first that
 each MUST-FIX is resolved, then that the fixes broke nothing else.
 ```
 
+The same prompt serves whenever the candidate moves after any verdict, not
+only after a BLOCK. v0.10.0's round 2 followed an AGREE on a commit made
+before the candidate existed. Say what the last round saw and what moved.
+
 After a third round without AGREE, stop: put the open findings to the
 owner with a recommended default.
 

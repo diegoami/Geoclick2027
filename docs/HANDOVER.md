@@ -1,4 +1,4 @@
-# Handover — 2026-09-23, v0.10.0 release prep (PR #28) waiting for merge; milestone issue next
+# Handover — 2026-09-23, v0.10.0 released; next work not yet chosen
 
 For whoever picks Geoclick up next, whether a human or a fresh Claude
 session. It records where things stand, what's next, and what's easy to
@@ -19,12 +19,12 @@ before any work starts.
 | `main` | clean, in sync with GitHub; all four gates pass (736 unit tests), checked 2026-09-23 |
 | Deploy | The product owner **stopped deploying** on 2026-09-22, so a `main` merge no longer triggers a live Netlify build. Merges still need the product owner's OK (CLAUDE.md §3) — that rule is a review gate, not the old cost gate |
 | Who works | **Claude Opus 5.5** implements, with no per-PR review. **A milestone is a release tag** on `main` (CLAUDE.md §3a, agreed on [#29](https://github.com/diegoami/Geoclick2027/issues/29), 2026-09-23): before the tag, Claude opens a milestone issue and gives the product owner a prompt for a **different model, any tool**; the reviewer opens GitHub issues and posts AGREE/BLOCK on the milestone issue; **the tag waits for it** and goes on exactly the reviewed SHA. PRs #10–#21 were DeepSeek V4.1 Flash, reviewed by ChatGPT GPT-5.6 Luna |
-| Latest release | **v0.9.4** (tag at `5387ff2`, 2026-09-22): the review's six fixes (FT-52 to FT-58). Installers are on the public [releases page](https://github.com/diegoami/geoclick-releases/releases/latest) — **published but not smoke-tested** (no map was opened in either shell). Previews go out as alpha/beta pre-releases first (RELEASES.md, "Pre-releases") |
+| Latest release | **v0.10.0** (tag at `3256670`, 2026-09-23): every name-fact in Italian and the six tablet-play fixes. The first milestone under CLAUDE.md §3a: [Milestone v0.10.0 (#31)](https://github.com/diegoami/Geoclick2027/issues/31), two review rounds, both AGREE, the tag on exactly the reviewed SHA. [Published](https://github.com/diegoami/geoclick-releases/releases/tag/v0.10.0) with `.msi`, `-setup.exe` and APK; a map drew in the tag's built Windows app and in the APK on the emulator; the owner checked FT-61 on a tablet and FT-66 on a phone/tablet (on `v0.10.0-beta.1`, same app code). Previews go out as alpha/beta pre-releases first (RELEASES.md) |
 | Remediation programme | Closed with v0.2.0 ([REMEDIATION_PLAN.md](REMEDIATION_PLAN.md)); its automerge exception went with it |
 | Feature programme | Closed with v0.5.0 ([FEATURE_PLAN.md](FEATURE_PLAN.md)) |
 | Since then | Per-release plans: [PLAN_V0.6.md](PLAN_V0.6.md) through [PLAN_V0.9.4.md](PLAN_V0.9.4.md), each with its own ledger; now [PLAN_V0.10.md](PLAN_V0.10.md) |
-| Next | **The v0.10.0 release, now under the milestone rules.** Every task in PLAN_V0.10.md is merged except FT-51 (German, postponed). The milestone definition changed on 2026-09-23 ([#29](https://github.com/diegoami/Geoclick2027/issues/29), merged as PR #30, `b63d925`). **[PR #28](https://github.com/diegoami/Geoclick2027/pull/28) is now the release prep** (done: `e33b486`, waiting for the owner's merge) — bump to `0.10.0`, CHANGELOG heading `## Unreleased — v0.10.0 — …` renamed to `## v0.10.0 — <date> — …`, drop `Review:` from its body; the owner merges it; its merge commit is the **candidate**; open `Milestone v0.10.0` (previous tag `v0.9.4`, `5387ff2`) and give the **re-review** prompt (round 2: round 1 was AGREE at `3ab4820`, same code, the delta is version strings and docs). On AGREE, after the owner's device checks (FT-61 tablet, FT-66 phone/tablet, on `v0.10.0-beta.1`, same code), tag `v0.10.0` on exactly the reviewed SHA, package from the tag and publish. `v0.10.0-beta.1` (published, a map drew in the built Windows app and in the APK on the emulator) stays as it is. Two review nits wait for after v0.10.0: `data/facts/italy.json` sardegna Italian sentence 2 keeps em dashes (the only one of 5 448), and no browser test crosses the stretched-names/collision coordinate conversion (hardening batch, with FT-59). A leftover Cloudflare "Workers Builds" check fails on every PR — a dashboard job for the product owner |
-| After that | **FT-51 (German) is postponed** until the Italian has been read; the two v0.9.4 test gates (FT-56, FT-59) wait in a hardening batch |
+| Next | **Not chosen yet — the product owner picks.** Candidates: the **hardening batch** (FT-56 #7, FT-59 #8, plus the v0.10.0 review's two leftovers: `data/facts/italy.json` sardegna Italian sentence 2 keeps em dashes — the only one of 5 448 — and no browser test crosses the stretched-names/collision coordinate conversion); **#11** (explicit tap is Chosen, session-only); **FT-51 German** (postponed until the Italian has been read); the **zoomable world-map start screen** (below). A leftover Cloudflare "Workers Builds" check fails on every PR — a dashboard job for the product owner. **Merges:** three times on 2026-09-23 the owner said "merged" while the PR was still open on GitHub; Claude merged each on that OK with a merge commit — check `gh pr view` before assuming |
+| After that | The next milestone is `v0.10.1` or `v0.11.0`, depending on what is picked: release prep PR → candidate → milestone issue → review → tag (docs/RELEASES.md, "The milestone") |
 | Also raised 2026-09-20 | **The start screen becomes a zoomable world map** — pick the country on the map, then the kind of quiz. The map list cannot be finalized as a list: the goal is a high number of maps, and `mapCatalog.ts` is already 31 countries and 66 maps. Favourites and Recent stay unchanged. Second item of the Iteration 8+ backlog, with the open questions listed there |
 
 Shipped since the v0.5.0 handover, in one paragraph each:
@@ -58,7 +58,7 @@ Shipped since the v0.5.0 handover, in one paragraph each:
   style assets prepared at build time, not committed symlinks — see the
   junction gotcha below). Also in this window: `CLAUDE.md` rewritten as a
   context budget and `--quiet` gates (issue #9).
-- **v0.10.0, in progress** — FT-48/FT-49 (Italy's 20 regions in Italian;
+- **v0.10.0** — every name-fact in Italian (FT-50), FT-48/FT-49 (Italy's 20 regions in Italian;
   per-language facts with per-sentence English fallback), FT-62 (the fact
   card only on a name the player could *not* place), FT-65 (the map card's
   `{known} / {total} known` line replaced by a progress bar, hidden at zero)
@@ -79,7 +79,7 @@ the generated one.
 
 ## How to resume
 
-**v0.10.0 is under way.** Merged: **FT-48/FT-49**, **FT-62**, **FT-65**,
+**v0.10.0 shipped on 2026-09-23.** In it: **FT-48/FT-49**, **FT-62**, **FT-65**,
 **FT-61** and **FT-60** (PR #22, `8b75e1e`: `HAND_SIZES[0]` is 10, and while
 the tutorial runs its two spotlit slips are dealt first and any round left
 open on `italy-regions` is forgotten). **FT-63** (best-fit label
@@ -88,15 +88,13 @@ in pixels (room, reach, other towns' dots, the map's edge), and a stay bonus
 only while the map moves. Measured on germany-towns-100k: no name covers
 another town's dot, a pan moves no name, Duisburg goes west. The **FT-64**
 spike is decided (stretched names read), and **FT-66** is merged on it (PR
-#24, `4b8205a`). Next is **FT-50** (the other 27
-countries, ~5,388 sentences, batched by country with spot-checks). **FT-51
-(German) is postponed.** Two things wait for the release gate: the v0.9.4
-installer smoke test (the published Windows and Android installers were
-**not opened to confirm a map draws**), and the FT-61 check on a real tablet.
+#24, `4b8205a`). **FT-50** translated the other 27 countries (PR #25). **FT-51
+(German) is postponed.** The v0.9.4 installer smoke test is superseded: the
+v0.10.0 installers were opened on a map in both shells.
 
 Suggested first message for the next session:
 
-> Read docs/HANDOVER.md. PR #28 is merged: open Milestone v0.10.0 on its merge commit and give me the re-review prompt.
+> Read docs/HANDOVER.md. Next: <pick from the "Next" row>. Propose it as a GitHub issue first (CLAUDE.md §3, "Design first").
 
 Whatever comes next, the working rules stay (CLAUDE.md §3):
 

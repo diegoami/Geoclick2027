@@ -117,7 +117,9 @@ Check items off as they land; update "Status" as iterations complete.
   scheduled 2026-09-23). **FT-66 is merged** (PR #24, `4b8205a`):
   region names drawn along the region on the Explore map. **FT-50 is merged**
   ([PR #25](https://github.com/diegoami/Geoclick2027/pull/25), `3af3ae5`): every
-  name-fact in Italian, 5 448 sentences. **Next: the v0.10.0 release.**
+  name-fact in Italian, 5 448 sentences. **Released as v0.10.0 on 2026-09-23**
+  (tag `3256670`, [Milestone v0.10.0](https://github.com/diegoami/Geoclick2027/issues/31):
+  the first milestone under the release-tag rules, two review rounds, both AGREE).
 - **Raised by the product owner 2026-09-22, backlogged**: GitHub issue #11 —
   on the Known map an explicitly tapped name kept its earned colour instead
   of **Chosen**. Decided: an explicit tap is Chosen regardless of the streak,
