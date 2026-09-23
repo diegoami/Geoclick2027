@@ -25,7 +25,6 @@ import {
 	TERRAIN_SHP,
 	PEAKS_SHP,
 	parseArgs,
-	slugify,
 	overallBboxOf,
 	crossesAntimeridian,
 	padBbox
@@ -43,7 +42,8 @@ import {
 	type Position,
 	type Position2Words
 } from './factGeometry.js';
-import { parseAuthoredFile, type AuthoredHooks, type LangHooks } from './authoredHooks.js';
+import type { LangHooks } from './authoredHooks.js';
+import { hooksForCountry, withHooks } from './factsHooks.js';
 
 const MAPS_DIR = path.join(REPO_ROOT, 'data/maps');
 const COASTLINE_SHP = path.join(REPO_ROOT, 'data/source/ne_10m_coastline/ne_10m_coastline.shp');
@@ -87,38 +87,6 @@ export interface DerivedFact {
 	 * time you meet the place, and the first is always about the NAME.
 	 */
 	hooks?: string[] | LangHooks;
-}
-
-/**
- * The hand-written name-facts for a country, keyed by target id.
- *
- * Authored per COUNTRY and projected into every map that contains the
- * place, so Italy's regions and its provinces - and, for a towns file, a
- * country's cities and each of its regional slices - share one sentence
- * rather than four copies drifting apart. Missing file, or a country
- * nobody has written for yet: no hooks, and the card shows its derived
- * line alone. The file's shape is parsed by authoredHooks.ts.
- */
-function hooksForCountry(country: string | undefined): Record<string, AuthoredHooks> {
-	if (!country) return {};
-	// The filename is the country as map.json spells it: "United States of
-	// America" is united-states-of-america.json. Naming it for the country
-	// rather than for a convenient short form is what makes the lookup need
-	// no table.
-	const file = path.join(REPO_ROOT, 'data/facts', `${slugify(country)}.json`);
-	if (!existsSync(file)) return {};
-	return parseAuthoredFile(JSON.parse(readFileSync(file, 'utf8')) as Record<string, unknown>);
-}
-
-/**
- * What goes into facts.json: the plain list when a place has English only,
- * the per-language object once a second language exists. Keeping the plain
- * list means a country nobody has translated stays byte-identical to its
- * earlier build (FT-49); the app reads both.
- */
-function asStoredHooks(hooks: LangHooks): string[] | LangHooks {
-	const languages = Object.keys(hooks);
-	return languages.length === 1 && hooks.en ? hooks.en : hooks;
 }
 
 interface Feature<G = AnyGeometry> {
@@ -413,13 +381,8 @@ async function buildOne(mapId: string): Promise<number> {
 	// produces an identical file - MAPS.md's reproducibility rule.
 	const ordered: Record<string, DerivedFact> = {};
 	for (const target of map.targets) {
-		const fact = facts[target.id];
-		const authored = hooks[target.id];
-		// A kind-specific list wins over the catch-all, so a province's facts
-		// are never shown for a town that shares its id.
-		const sentences = (fact?.kind && authored?.[fact.kind]) || authored?.any;
-		const stored = sentences ? asStoredHooks(sentences) : undefined;
-		ordered[target.id] = stored ? { ...fact, hooks: stored } : fact;
+		// A kind-specific list wins over the catch-all (factsHooks.ts).
+		ordered[target.id] = withHooks(facts[target.id], hooks[target.id]);
 	}
 	writeFileSync(path.join(absOutDir, 'facts.json'), `${JSON.stringify(ordered, null, '\t')}\n`);
 	return Object.keys(ordered).length;
