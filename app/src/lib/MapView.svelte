@@ -22,6 +22,8 @@
 	import { DOT_CLEARANCE_PX, areaShares, registerLabel } from './labelCollision';
 	import FactCard from './FactCard.svelte';
 	import { fetchFacts, placeFacts, type Facts } from './facts';
+	import { asset } from '$app/paths';
+	import { drawSpineLabels } from './spineLabels';
 
 	let { mapId }: { mapId: string } = $props();
 
@@ -150,6 +152,19 @@
 			mapDef = loadedMapDef;
 
 			({ map, terrain } = createMap(container, loadedMapDef, style));
+			// FT-64 spike: ?spine draws every name along its region.
+			const spineMode = new URLSearchParams(location.search).get('spine');
+			if (spineMode !== null) {
+				const m = map;
+				m.once('load', () =>
+					drawSpineLabels(
+						m,
+						loadedMapDef,
+						asset(`/maps/${mapId}/spines.json`),
+						spineMode === 'debug'
+					).catch((e) => console.error('FT-64 spike:', e))
+				);
+			}
 			loadStreaks(loadedMapDef).catch((e) =>
 				console.error('Failed to read progress for the Known map:', e)
 			);
