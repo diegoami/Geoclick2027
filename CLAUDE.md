@@ -5,7 +5,7 @@ Capacitor (Android); local-first SQLite; Natural Earth map data.
 
 ## 0. Context budget — read this first
 
-This repo is ~150 hand-written source files wrapped in 637 tracked files,
+This repo is ~150 hand-written source files wrapped in ~650 tracked files,
 27 MB of generated map data, and ~160k tokens of prose. Reading it
 indiscriminately exhausts the context window before any work starts.
 
@@ -85,7 +85,7 @@ without re-reading the whole file.
 Commands here are loud by default. Filter at the source — never dump raw
 output and then explain it.
 
-    # Tests — the default reporter is verbose; override it (14 lines, 683 tests)
+    # Tests — the default reporter is verbose; override it (14 lines, 736 tests)
     npm run test:unit --workspace=app -- --run --reporter=dot 2>&1 | tail -20
 
     # All four gates at once — the release checklist's own step.
@@ -121,8 +121,8 @@ flood — report the one line that mattered.
   push without asking. Test locally and give the user concrete verification
   steps. Merge to `main` only after the user explicitly OKs it — a
   testing/review gate, not a cost gate. Doc-only changes may go straight to
-  `main`. **Exception:** the remediation loop (`docs/ORCHESTRATION.md`)
-  automerges its own tasks once gates are green.
+  `main`. There is no automerge exception: the remediation loop
+  (`docs/ORCHESTRATION.md`) that had one closed with v0.2.0.
 - Keep `ROADMAP.md`, `ARCHITECTURE.md`, `ONBOARDING.md`, `DECISIONS.md`,
   `MAPS.md` current as work lands — each has a distinct charter (status /
   code map / newcomer guide / *why* / map build commands). Edit the relevant
@@ -137,21 +137,25 @@ flood — report the one line that mattered.
 - Roles: the user is Product Manager; the implementing model is the
   Developer. Finish by telling the user exactly what to run/click and what
   to expect.
-- **Every task PR gets an independent review from ChatGPT GPT-5.6 Luna,
-  high (`opencode/gpt-5.6-luna#high`), over GitHub, before merge.** The
-  implementer opens the PR, Luna reviews and comments, the implementer
-  replies, and the two iterate until they agree. Each signs every comment
-  with its model name. Procedure: [docs/REVIEW_LOOP.md](docs/REVIEW_LOOP.md).
+- **Every task PR gets a review over GitHub before merge, by a fresh Claude
+  subagent** (Claude reviews itself — product owner, 2026-09-23). The
+  implementer opens the PR, spawns a reviewer with no memory of the
+  implementation, posts its review verbatim, replies, and the two iterate
+  until the reviewer says its findings are resolved. Each comment is signed
+  with its role. Procedure: [docs/REVIEW_LOOP.md](docs/REVIEW_LOOP.md).
   This is additional to, not a replacement for, the user's merge OK.
 - **"Test locally" and "test the deployment" are two separately labelled
   steps.** Verify locally first and say so; only then check the live site,
-  and say that too. (Why: see `DECISIONS.md` — "Two labelled test steps".)
+  and say that too. While deploys are stopped (below) there is no live step
+  — say so rather than skipping it silently. (Why: see `DECISIONS.md` —
+  "Two labelled test steps".)
 - Don't debug what the user can fix in two dashboard clicks. Try the direct
   tool once or twice, then hand it back. (Why: see `DECISIONS.md` — "Hand a
   dashboard problem back".)
-- Netlify build cost is not a constraint. Still, don't trigger manual deploys
-  as a debugging step — push and let git-triggered builds run. (Why: see
-  `DECISIONS.md` — "Netlify build cost".)
+- **Deploys are stopped** (product owner, 2026-09-22): a merge to `main` no
+  longer publishes the web app. Never trigger a deploy yourself; restarting
+  them is the product owner's call. (Why: see `DECISIONS.md` — "Netlify
+  build cost".)
 
 ## 4. Session lifecycle
 
@@ -193,10 +197,12 @@ updated; the chat copy is a prompt for the user, the file is what survives.
 
 End every commit with a trailer naming the model that did the work:
 
-    Co-Authored-By: DeepSeek V4.1 Flash <noreply@opencode.ai>
+    Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 
 Update this line when the implementing model changes. History: 116 commits
-trailered "Sonnet 5" up to 2026-09-13, then 274 trailered "Opus 5"; the
-implementing model became DeepSeek V4.1 Flash on 2026-09-21, with ChatGPT
-GPT-5.6 Luna (high) as the PR reviewer ([docs/REVIEW_LOOP.md](docs/REVIEW_LOOP.md)).
-The trailer was left stale once already — keep it current.
+trailered "Sonnet 5" up to 2026-09-13, then 274 trailered "Opus 5"; then 32
+trailered "DeepSeek V4.1 Flash" from 2026-09-21, with ChatGPT GPT-5.6 Luna
+(high) reviewing its PRs. On 2026-09-23 the implementing model became Claude
+Opus 5.5, reviewed by a fresh Claude subagent
+([docs/REVIEW_LOOP.md](docs/REVIEW_LOOP.md)). The trailer was left stale once
+already — keep it current.

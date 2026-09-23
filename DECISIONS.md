@@ -210,6 +210,27 @@ or amend an entry here as part of that change, not as an afterthought.
 - If a deploy genuinely needs triggering by hand, that is the user's call
   from the dashboard. Related: the product owner tracks
   deploy status himself and does not want it reported back unprompted.
+- **Superseded in part, 2026-09-22: the product owner stopped deploying.** A
+  merge to `main` no longer publishes the web app, so "push and let the
+  git-triggered build run" no longer produces a live site to check. Never
+  trigger a deploy yourself; restarting them is the product owner's call.
+
+## Claude reviews its own PRs (2026-09-23)
+
+- **Every task PR is reviewed by a fresh Claude subagent**, replacing ChatGPT
+  GPT-5.6 Luna (high), who had reviewed PRs #10–#21 under opencode. The
+  product owner decided it when the implementing model changed to Claude
+  Opus 5.5: opencode's `subagent({model: …})` cannot be driven from a Claude
+  Code session, so the Luna procedure could not run as written.
+- **What is kept:** a reviewer with no memory of the implementation, on
+  GitHub, with findings ranked and every one answered — the part that caught
+  a blocking finding on four of the seven v0.9.4 PRs (#12–#15).
+- **What is traded away:** a second model's blind spots. The original rule
+  said a model cannot review its own work with fresh eyes; a fresh context
+  answers the "own work" half, not the "same model" half. The reviewer is
+  told to distrust the PR body and verify cited lines and tests itself, which
+  narrows the gap without closing it.
+- Procedure: [docs/REVIEW_LOOP.md](docs/REVIEW_LOOP.md).
 
 ## Quiz mechanic
 

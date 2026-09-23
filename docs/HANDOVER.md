@@ -1,4 +1,4 @@
-# Handover — 2026-09-22, v0.9.4 code complete (FT-58 merged)
+# Handover — 2026-09-23, v0.10.0 under way (FT-61 merged, FT-60 next)
 
 For whoever picks Geoclick up next, whether a human or a fresh Claude
 session. It records where things stand, what's next, and what's easy to
@@ -8,7 +8,7 @@ get wrong. This is a snapshot; the living records are
 
 **Read [CLAUDE.md](../CLAUDE.md) §0 first.** It sets a context budget: a
 canonical-source list, and a table of paths never to read, glob or grep.
-This repo is 637 tracked files, 27 MB of generated map data and ~160k
+This repo is ~650 tracked files, 27 MB of generated map data and ~160k
 tokens of prose — reading it indiscriminately exhausts a context window
 before any work starts.
 
@@ -16,15 +16,15 @@ before any work starts.
 
 | | |
 |---|---|
-| `main` | clean, in sync with GitHub |
+| `main` | clean, in sync with GitHub; all four gates pass (736 unit tests), checked 2026-09-23 |
 | Deploy | The product owner **stopped deploying** on 2026-09-22, so a `main` merge no longer triggers a live Netlify build. Merges still need the product owner's OK (CLAUDE.md §3) — that rule is a review gate, not the old cost gate |
-| Latest release | **v0.9.4** (tag at `5387ff2`, 2026-09-22): the review's six fixes (FT-52 to FT-58). Installers are on the public [releases page](https://github.com/diegoami/geoclick-releases/releases/latest) — **published but not smoke-tested** (no map was opened in either shell). The web app deploys from `main`; the product owner stopped deploying on 2026-09-22. Previews go out as alpha/beta pre-releases first (RELEASES.md, "Pre-releases") |
-| Remediation programme | Closed with v0.2.0 ([REMEDIATION_PLAN.md](REMEDIATION_PLAN.md)) |
+| Who works | **Claude Opus 5.5** implements, and **a fresh Claude subagent reviews** every task PR (product owner, 2026-09-23 — [REVIEW_LOOP.md](REVIEW_LOOP.md)). PRs #10–#21 were DeepSeek V4.1 Flash, reviewed by ChatGPT GPT-5.6 Luna |
+| Latest release | **v0.9.4** (tag at `5387ff2`, 2026-09-22): the review's six fixes (FT-52 to FT-58). Installers are on the public [releases page](https://github.com/diegoami/geoclick-releases/releases/latest) — **published but not smoke-tested** (no map was opened in either shell). Previews go out as alpha/beta pre-releases first (RELEASES.md, "Pre-releases") |
+| Remediation programme | Closed with v0.2.0 ([REMEDIATION_PLAN.md](REMEDIATION_PLAN.md)); its automerge exception went with it |
 | Feature programme | Closed with v0.5.0 ([FEATURE_PLAN.md](FEATURE_PLAN.md)) |
-| Since then | Per-release plans: [PLAN_V0.6.md](PLAN_V0.6.md) through [PLAN_V0.9.md](PLAN_V0.9.md), each with its own ledger |
-| Next | [PLAN_V0.10.md](PLAN_V0.10.md). Merged: **FT-48/FT-49** (Italy's 20 regions in Italian; per-language `hooks`, per-sentence fallback), **FT-62** (the fact card only on a miss), **FT-65** (the map-card bar) and **FT-61** (the tablet slip guards). **FT-60 next** — a finite first hand of 10 — then FT-63, the FT-64 spike and FT-50 (the other 27 countries). The v0.9.4 installer smoke test and the FT-61 tablet check are outstanding |
+| Since then | Per-release plans: [PLAN_V0.6.md](PLAN_V0.6.md) through [PLAN_V0.9.4.md](PLAN_V0.9.4.md), each with its own ledger; now [PLAN_V0.10.md](PLAN_V0.10.md) |
+| Next | **FT-60** — a finite first hand of 10 — then FT-63 (best-fit label placement), the FT-64 spike and FT-50 (the other 27 countries). Merged so far: FT-48/FT-49, FT-62, FT-65, FT-61. The v0.9.4 installer smoke test and the FT-61 tablet check are outstanding |
 | After that | **FT-51 (German) is postponed** until the Italian has been read; the two v0.9.4 test gates (FT-56, FT-59) wait in a hardening batch |
-| In v0.10.0 | Six UX problems from one round of tablet play, 2026-09-20, **decided the same day** and **moved into v0.10.0 on 2026-09-23** as FT-60 to FT-65: the level-0 tray offering every name at once (`difficulty.ts:21`), slips losing their drag to the tablet's text-selection gesture, the fact card now only on a name the player could *not* place, best-fit label placement as a requirement rather than first-fit, a spike for Europa-Universalis-style stretched region names, and the map card's `{known} / {total} known` line replaced by a progress bar over `knownCount / total`, hidden at zero (the score panel keeps its copy — the two record different things). Each entry carries its decision; the plan is [PLAN_V0.10.md](PLAN_V0.10.md) |
 | Also raised 2026-09-20 | **The start screen becomes a zoomable world map** — pick the country on the map, then the kind of quiz. The map list cannot be finalized as a list: the goal is a high number of maps, and `mapCatalog.ts` is already 31 countries and 66 maps. Favourites and Recent stay unchanged. Second item of the Iteration 8+ backlog, with the open questions listed there |
 
 Shipped since the v0.5.0 handover, in one paragraph each:
@@ -49,52 +49,22 @@ Shipped since the v0.5.0 handover, in one paragraph each:
 - **v0.9.3** — FT-47: the name origin is *pinned* as the card's first
   line and only the remaining facts rotate. Before this, rotation cycled
   all three, so the etymology showed only one time in three.
-- **2026-09-20, unreleased** — issue #9: `CLAUDE.md` rewritten as a
-  context budget; `--quiet` gates so the pre-push hook stops emitting
-  ~104 KB per push; this file brought back up to date and made the
-  named destination for a session handoff (CLAUDE.md §4); FT-38
-  reassessed and parked rather than closed (DECISIONS.md). Nothing
-  user-facing changed, so v0.9.3 still stands.
-- **2026-09-22, unreleased** — **FT-52** (issue #6): `areaShares` and
-  `overallExtent` now derive antimeridian wrapping from the bbox
-  (`west > east`); the `crossesAntimeridian` flag is documentary, the
-  integrity suite asserts flag and bbox agree, and `russia-regions/map.json`
-  is rebuilt to carry it. PR #10, the first task through the Luna review
-  loop ([REVIEW_LOOP.md](REVIEW_LOOP.md)).
-- **2026-09-22, unreleased** — **FT-53** (issue #3): terrain labels follow a
-  language switch. On a map's first open the labels are drawn after an
-  `await`, so the view effect never subscribed to the language; a shared
-  `followTerrainLanguage()` helper reads it explicitly and
-  `TerrainLayer.refreshLabels()` redraws the names. PR #12, reviewed by
-  Luna (one blocking finding on the test, fixed).
-- **2026-09-22, unreleased** — **FT-54** (issue #2): terrain switched off
-  during its first load stays off. `add()` applies the latest requested
-  visibility once the layers exist, and the pending tiles-arrived wait is
-  dropped on hide. PR #13, reviewed by Luna (one blocking finding on a
-  deferred callback, fixed).
-- **2026-09-22, unreleased** — **FT-55** (issue #1): the tutorial's Back and
-  Resume reach the Overview. `navigateTo('overview')` had resolved to the
-  Known route, so the step re-paused on arrival; the Screen-to-URL
-  translation is now `screenPath()`, tested through the effect handler.
-  PR #14, reviewed by Luna (one blocking finding on the test, fixed).
-- **2026-09-22, unreleased** — **FT-57** (issue #4): storage failures stay
-  out of gameplay. Reads are guarded and shape-validated, the language
-  read/write survive a throw, the home page reads each map on its own
-  (`loadHomeProgress`), and the quiz falls back to an in-memory repository
-  when the real one cannot be opened or read, showing a notice. PR #15,
-  reviewed by Luna (one blocking finding on the lazy native open, fixed).
-- **2026-09-22, unreleased** — **FT-58** (issue #5): the map and style
-  assets are prepared at build time instead of being committed symlinks.
-  `prepare-assets.mjs` creates a true directory symlink (or a copy where the
-  OS refuses one) at `app/static` from `predev`/`prebuild`, and
-  `check-build-assets.mjs` fails the build in `postbuild` when they did not
-  reach `app/build`. PR #16, reviewed by Luna (no blocking findings).
-- **2026-09-22, unreleased** — **FT-58 follow-up**: the first version used a
-  Windows junction, which Git follows when it replaces the path — the #16
-  merge checkout deleted `data/maps` and `data/styles` from the worktree
-  (restored from git). `prepare-assets.mjs` now uses a true symlink or a
-  copy, never a junction, with a checkout regression test. PR #17, reviewed
-  by Luna (no blocking findings).
+- **v0.9.4** — the review's fixes, PRs #10–#17, each reviewed by Luna:
+  FT-52 (antimeridian wrapping derived from the bbox; `russia-regions`
+  rebuilt), FT-53 (terrain labels follow a language switch), FT-54 (terrain
+  switched off during its first load stays off), FT-55 (the tutorial's Back
+  and Resume reach the Overview), FT-57 (storage failures stay out of
+  gameplay, with an in-memory fallback for the quiz) and FT-58 (map and
+  style assets prepared at build time, not committed symlinks — see the
+  junction gotcha below). Also in this window: `CLAUDE.md` rewritten as a
+  context budget and `--quiet` gates (issue #9).
+- **v0.10.0, in progress** — FT-48/FT-49 (Italy's 20 regions in Italian;
+  per-language facts with per-sentence English fallback), FT-62 (the fact
+  card only on a name the player could *not* place), FT-65 (the map card's
+  `{known} / {total} known` line replaced by a progress bar, hidden at zero)
+  and FT-61 (tablet slips keep their drag against the text-selection
+  gesture). The six FT-60 to FT-65 fixes come from one round of tablet play
+  on 2026-09-20; each plan entry carries its decision.
 
 ## The one thing most worth not getting wrong
 
@@ -109,43 +79,33 @@ the generated one.
 
 ## How to resume
 
-**v0.9.4 is released** (tag `v0.9.4`, 2026-09-22), with FT-52 to FT-58
-merged, all reviewed by Luna. One check is outstanding: the published
-Windows and Android installers were **not opened to confirm a map draws**
-(the product owner accepted publishing without it) — do that before trusting
-them. **FT-56 and FT-59 (both test gates) were moved out to a later
-hardening batch**; they are listed under the plan's "Deferred" section.
-
-**v0.10.0 is under way.** Merged: **FT-48/FT-49** (Italy's 20 regions in
-Italian, and the per-language shape with per-sentence English fallback — the
-product owner read and approved the voice), **FT-62** (the fact card only on
-a name the player could not place), **FT-65** (the map-card progress bar,
-hidden at zero) and **FT-61** (the tablet slip guards). **FT-60 is next** — a
-finite first hand of 10 — then **FT-63** (best-fit label placement), the
-**FT-64** spike, and **FT-50** (the other 27 countries, ~5,388 sentences,
-batched by country with spot-checks). **FT-51 (German) is postponed.** Two
-things wait for the release gate: the v0.9.4 installer smoke test, and the
-FT-61 tablet check.
+**v0.10.0 is under way.** Merged: **FT-48/FT-49**, **FT-62**, **FT-65** and
+**FT-61**. **FT-60 is next** — a finite first hand of 10 (the level-0 tray
+offers every name at once today, `difficulty.ts:21`) — then **FT-63**
+(best-fit label placement), the **FT-64** spike, and **FT-50** (the other 27
+countries, ~5,388 sentences, batched by country with spot-checks). **FT-51
+(German) is postponed.** Two things wait for the release gate: the v0.9.4
+installer smoke test (the published Windows and Android installers were
+**not opened to confirm a map draws**), and the FT-61 check on a real tablet.
 
 Suggested first message for the next session:
 
-> Read docs/HANDOVER.md, then docs/PLAN_V0.10.md. Start FT-50. (The v0.9.4 installer smoke test is still outstanding.)
+> Read docs/HANDOVER.md, then docs/PLAN_V0.10.md. Start FT-60. (The v0.9.4 installer smoke test is still outstanding.)
 
 Whatever comes next, the working rules stay (CLAUDE.md §3):
 
 - one branch per task, pushed without asking;
-- **every task PR is reviewed by ChatGPT GPT-5.6 Luna, high, over GitHub —
-  implementer and reviewer comment back and forth until they agree, each
-  signing with its model name ([REVIEW_LOOP.md](REVIEW_LOOP.md));**
+- **every task PR is reviewed on GitHub by a fresh Claude subagent — posted
+  verbatim, every finding answered, iterated until the reviewer says its
+  findings are resolved ([REVIEW_LOOP.md](REVIEW_LOOP.md));**
+- commit trailer `Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>`;
 - `npm run gates -- --quiet` before pushing (the pre-push hook runs them
-  anyway, and now prints four PASS lines instead of flooding);
+  anyway, and prints four PASS lines instead of flooding);
 - verify in a real browser, and try both installers before any release;
-- **ask the product owner before every merge and tag.** Publishing a
-  release that he has already asked for does *not* need a second OK —
-  "nobody apart me is downloading it anyway" — but still say plainly in
-  the notes what was not verified;
-- the remediation loop (ORCHESTRATION.md) automerges its own tasks; that
-  is the only exception to the merge rule;
+- **ask the product owner before every merge and tag** — there is no
+  automerge exception any more. Publishing a release that he has already
+  asked for does *not* need a second OK — "nobody apart me is downloading it
+  anyway" — but still say plainly in the notes what was not verified;
 - previews go out as alpha or beta pre-releases (RELEASES.md).
 
 ## Things only the product owner has
@@ -161,56 +121,24 @@ Whatever comes next, the working rules stay (CLAUDE.md §3):
   release he has already asked for (above). Alpha and beta pre-releases
   count as releases (RELEASES.md, "Pre-releases").
 
-## The open GitHub issues (triaged 2026-09-20)
+## The open GitHub issues
 
-Eight issues, #1-#8, filed by the other session's review. **All eight were
-verified against the code on 2026-09-20 and all eight hold** — unlike the
-earlier issue that had a central fact backwards, this batch cites real line
-numbers and describes real behaviour. Three needed sharpening, noted below.
+Three are open. Issues #1–#6 were fixed in v0.9.4 (FT-52 to FT-58).
 
-**Scheduling (reshaped 2026-09-22): [PLAN_V0.9.4.md](PLAN_V0.9.4.md) ships
-the player-visible and robustness fixes — FT-53, FT-54, FT-55, FT-57 and
-FT-58 (FT-52 is already merged). The two test gates, FT-56 and FT-59, are
-deferred to a later hardening batch.** The table below maps each issue to
-its task.
-
-A ninth issue, **#11**, was raised by the product owner on 2026-09-22 and is
-**open, unscheduled (backlog)**: on the Known map an explicitly tapped name
-kept its earned colour instead of **Chosen**. Decided the same day — an
-explicit tap is Chosen regardless of the streak, and the choice is
-**session-only** (it resets on reopen; this changes FT-39's persisted
-override). The fix is not started; `visibleTier` in `shownNames.ts` is the
-place, and the reasoning is on issue #11.
-
-| # | Task | What | Size | Live today? |
+| # | Task | What | Size | Scheduled |
 |---|---|---|---|---|
-| 6 | FT-52 | `areaShares` trusts `crossesAntimeridian` instead of `west > east` | S | **Yes** — Chukotka |
-| 3 | FT-53 | Terrain labels keep the old language after a switch | S | **Yes** |
-| 2 | FT-54 | Terrain turns itself back on if switched off during first load | S | **Yes** |
-| 1 | FT-55 | Tutorial `navigateTo('overview')` goes to the Known route | S | **Yes** |
-| 7 | FT-56 | The integrity suite validates `tourOrder`, not the shipped `tour.json` | S | Gate gap |
-| 4 | FT-57 | Storage failures can blank the app or block a quiz | M | Latent |
-| 5 | FT-58 | `app/static/{maps,styles}` were committed symlinks | M | **Fixed** in v0.9.4 |
-| 8 | FT-59 | No component test crosses QuizView's persistence/resume seams | M | Gate gap |
+| 7 | FT-56 | The integrity suite validates `tourOrder`, not the shipped `tour.json` | S | Hardening batch |
+| 8 | FT-59 | No component test crosses QuizView's persistence/resume seams | M | Hardening batch |
+| 11 | — | On the Known map an explicitly tapped name keeps its earned colour instead of **Chosen** | S | Backlog |
 
-Sharpenings found while verifying:
-
-- **#6 — exactly one target in all 63 maps is affected.** `chukotka` in
-  `russia-regions` has `west 157.6920 > east -169.7009` and no flag; no
-  target in any map carries the flag at all. `build-map.ts:428` does emit
-  it now, so the artifact simply predates that and was never rebuilt. The
-  fix is a runtime `west > east` check *and* a rebuild.
-- **#3 — the mechanism is not "nothing subscribes to language".**
-  `getLanguage()` is module-scope `$state` and the view effects *would*
-  track it, because `setVisible()` reaches `drawLabels()` synchronously.
-  They don't, because on a map's first open the labels are drawn after
-  `await this.add()`, outside the effect's tracking. A fix that adds a
-  language effect works; a fix that assumes the read was never reactive
-  will look in the wrong place.
 - **#7 — no shipped tour is currently broken.** All 63 `tour.json` files
   were checked on 2026-09-20: correct `mapId`, steps a permutation of the
-  target ids, all `dwellMs` finite and positive. This is a gate that
-  guards the wrong artifact, not a live defect.
+  target ids, all `dwellMs` finite and positive. This is a gate that guards
+  the wrong artifact, not a live defect.
+- **#11 was decided on 2026-09-22** — an explicit tap is Chosen regardless of
+  the streak, and the choice is **session-only** (it resets on reopen; this
+  changes FT-39's persisted override). Not started; `visibleTier` in
+  `shownNames.ts` is the place, and the reasoning is on the issue.
 
 ## Not verified, or still open
 
@@ -233,6 +161,10 @@ Sharpenings found while verifying:
     sentences are prose and need a human translator per language. If
     translation proves expensive, templated landmark facts get *more*
     attractive, not less.
+- **The `check` gate crashed once** on 2026-09-23 — `svelte-check` exited
+  with 3221225477 (0xC0000005, a native access violation, Node 24.21), not a
+  type error. The rerun passed with 0 errors. If it recurs, it is the tool,
+  not the code; rerun before investigating.
 - **The v0.9.1 Android gate was never closed** — the emulator returned
   black screenshots and the release notes say so. v0.9.2 and v0.9.3 were
   verified normally after a full `adb kill-server` fixed it.
@@ -260,6 +192,13 @@ Sharpenings found while verifying:
   and `\d` get eaten, silently and sometimes days later. Write a `.mjs`
   script to the scratchpad and run it. Relatedly, `python - <<'EOF'` can
   hang on stdin here.
+- **Never put a Windows junction inside the repo.** Git follows a junction
+  when a checkout replaces the path: the PR #16 merge deleted `data/maps`
+  and `data/styles` from the worktree (restored from git).
+  `prepare-assets.mjs` uses a true symlink or a copy, never a junction.
+- **Write PR comment bodies as UTF-8 without a BOM** (Write tool, then
+  `gh pr comment --body-file`). PowerShell `Out-File` put BOMs on PRs
+  #19–#21 and turned `—` into `?` in PR #20's signatures.
 - **`npx serve -s build` is the wrong way to serve this build.** The `-s`
   fallback serves `index.html` (the prerendered home page) for every deep
   link, so the whole app looks broken. SvelteKit emits `200.html`; use
