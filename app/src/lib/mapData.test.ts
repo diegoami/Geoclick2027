@@ -26,8 +26,13 @@ interface TargetLike {
 	spine?: unknown;
 }
 interface MapLike {
+	id?: unknown;
 	targets: TargetLike[];
 	tourOrder: unknown;
+}
+interface TourLike {
+	mapId: unknown;
+	steps: unknown;
 }
 
 const isFiniteTuple = (v: unknown, length: number) =>
@@ -110,6 +115,28 @@ function mapProblems(map: MapLike): string[] {
 	return problems;
 }
 
+/**
+ * FT-56: the tour the app plays is tour.json (tour.ts `fetchTour`), not
+ * map.json's `tourOrder` - that is only the build's input. The two must stay
+ * one: same map, same targets in the same order, and a dwell the tour can wait.
+ */
+function tourProblems(map: MapLike, tour: TourLike): string[] {
+	const problems: string[] = [];
+	if (tour.mapId !== map.id)
+		problems.push(`tour mapId ${String(tour.mapId)} is not the map's id ${String(map.id)}`);
+	const steps = tour.steps;
+	if (!Array.isArray(steps) || steps.length === 0) return [...problems, 'tour has no steps'];
+	const targetIds = steps.map((s: { targetId?: unknown }) => s?.targetId);
+	if (JSON.stringify(targetIds) !== JSON.stringify(map.tourOrder))
+		problems.push('tour steps are not tourOrder, in order');
+	steps.forEach((s: { dwellMs?: unknown }, i) => {
+		const dwell = s?.dwellMs;
+		if (!(typeof dwell === 'number' && Number.isFinite(dwell) && dwell > 0))
+			problems.push(`step ${i}: dwellMs is not a positive finite number`);
+	});
+	return problems;
+}
+
 /** Map directories and catalog ids must be the same set, both ways. */
 function catalogDrift(dirIds: string[], catalogIds: string[]) {
 	const dirs = new Set(dirIds);
@@ -124,6 +151,8 @@ function catalogDrift(dirIds: string[], catalogIds: string[]) {
 const mapIds = listMapIds();
 const loadMap = (id: string): MapLike =>
 	JSON.parse(readFileSync(path.join(DEFAULT_MAPS_DIR, id, 'map.json'), 'utf8'));
+const loadTour = (id: string): TourLike =>
+	JSON.parse(readFileSync(path.join(DEFAULT_MAPS_DIR, id, 'tour.json'), 'utf8'));
 
 describe('map data integrity - every committed map', () => {
 	it('finds the maps at all', () => {
@@ -132,6 +161,10 @@ describe('map data integrity - every committed map', () => {
 
 	it.each(mapIds)('%s: unique names and ids, finite geometry, tourOrder a permutation', (id) => {
 		expect(mapProblems(loadMap(id))).toEqual([]);
+	});
+
+	it.each(mapIds)('%s: the shipped tour.json plays tourOrder, with positive dwells', (id) => {
+		expect(tourProblems(loadMap(id), loadTour(id))).toEqual([]);
 	});
 
 	it('map directories and mapCatalog list exactly the same ids', () => {
@@ -277,6 +310,46 @@ describe('map data integrity - the checks catch what they claim to', () => {
 				'tourOrder is not a permutation of the target ids'
 			);
 		}
+	});
+
+	describe('tourProblems (FT-56)', () => {
+		const map = (): MapLike => ({ ...clean(), id: 'm' });
+		const step = (targetId: string, dwellMs: unknown = 1500) => ({ targetId, dwellMs });
+		const tour = (steps: unknown, mapId: unknown = 'm'): TourLike => ({ mapId, steps });
+
+		it('a tour that plays tourOrder has no problems', () => {
+			expect(tourProblems(map(), tour([step('a'), step('b')]))).toEqual([]);
+		});
+
+		it('flags a tour for another map', () => {
+			expect(tourProblems(map(), tour([step('a'), step('b')], 'other'))).toContain(
+				"tour mapId other is not the map's id m"
+			);
+		});
+
+		it('flags an empty or missing steps list', () => {
+			for (const steps of [[], undefined])
+				expect(tourProblems(map(), tour(steps))).toContain('tour has no steps');
+		});
+
+		it('flags a missing, duplicated, stale or reordered target', () => {
+			for (const steps of [
+				[step('a')],
+				[step('a'), step('a')],
+				[step('a'), step('zzz')],
+				[step('b'), step('a')]
+			])
+				expect(tourProblems(map(), tour(steps))).toContain(
+					'tour steps are not tourOrder, in order'
+				);
+		});
+
+		it('flags a dwell of 0, NaN or a string', () => {
+			for (const dwell of [0, NaN, '1500'])
+				expect(tourProblems(map(), tour([step('a'), step('b', dwell)]))).toEqual([
+					'step 1: dwellMs is not a positive finite number'
+				]);
+		});
 	});
 
 	it('flags a wrapping bbox with no flag, and a flag on a non-wrapping bbox', () => {
