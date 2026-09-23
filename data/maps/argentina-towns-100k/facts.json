@@ -6,11 +6,18 @@
 		"region": "Jujuy",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"\"Holy Saviour of Jujuy\" — the saint plus the province name, which is of lost indigenous origin.",
-			"It was founded three times, the first two attempts destroyed by the Omaguaca people.",
-			"Belgrano ordered the whole population to evacuate and burn everything in 1812, the Jujuy Exodus, to deny the Spanish supplies."
-		]
+		"hooks": {
+			"en": [
+				"\"Holy Saviour of Jujuy\" — the saint plus the province name, which is of lost indigenous origin.",
+				"It was founded three times, the first two attempts destroyed by the Omaguaca people.",
+				"Belgrano ordered the whole population to evacuate and burn everything in 1812, the Jujuy Exodus, to deny the Spanish supplies."
+			],
+			"it": [
+				"\"Santo Salvatore di Jujuy\": il santo più il nome della provincia, di origine indigena ormai oscura.",
+				"Fu fondata tre volte: i primi due tentativi furono distrutti dagli Omaguaca.",
+				"Nel 1812 Belgrano ordinò a tutta la popolazione di evacuare e bruciare ogni cosa, l’Esodo di Jujuy, per non lasciare rifornimenti agli spagnoli."
+			]
+		}
 	},
 	"salta": {
 		"kind": "city",
@@ -18,11 +25,18 @@
 		"populationRank": 8,
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"Probably from Aymara sallta, \"beautiful\" — and the province's nickname is Salta la linda, Salta the beautiful.",
-			"The Tren a las Nubes climbs to 4,220 m on a viaduct across a gorge, one of the highest railways in the world.",
-			"Cafayate here grows torrontés, the white grape Argentina makes better than anyone, at 1,700 m."
-		]
+		"hooks": {
+			"en": [
+				"Probably from Aymara sallta, \"beautiful\" — and the province's nickname is Salta la linda, Salta the beautiful.",
+				"The Tren a las Nubes climbs to 4,220 m on a viaduct across a gorge, one of the highest railways in the world.",
+				"Cafayate here grows torrontés, the white grape Argentina makes better than anyone, at 1,700 m."
+			],
+			"it": [
+				"Probabilmente dall’aymara sallta, \"bella\": e infatti il soprannome della provincia è Salta la linda, Salta la bella.",
+				"Il Tren a las Nubes sale fino a 4.220 m su un viadotto che scavalca una gola, ed è una delle ferrovie più alte del mondo.",
+				"Qui, a Cafayate, si coltiva a 1.700 m il torrontés, l’uva bianca che l’Argentina fa meglio di chiunque altro."
+			]
+		}
 	},
 	"formosa": {
 		"kind": "city",
@@ -30,11 +44,18 @@
 		"populationRank": 20,
 		"coastal": false,
 		"position": "north-east",
-		"hooks": [
-			"Portuguese and old Spanish for \"beautiful\" — the same word that named Taiwan, given to a bend in the Paraguay river.",
-			"The hottest province: over 45 °C is normal, and its western half is dry thorn scrub.",
-			"The Bañado La Estrella, a flooded plain of drowned trees, is one of the largest wetlands in South America."
-		]
+		"hooks": {
+			"en": [
+				"Portuguese and old Spanish for \"beautiful\" — the same word that named Taiwan, given to a bend in the Paraguay river.",
+				"The hottest province: summer heat can pass 45 °C, and its western half is dry thorn scrub.",
+				"The Bañado La Estrella, a flooded plain of drowned trees, is one of the largest wetlands in South America."
+			],
+			"it": [
+				"In portoghese e in spagnolo antico vuol dire \"bella\": la stessa parola che diede il nome a Taiwan, qui data a un’ansa del fiume Paraguay.",
+				"La provincia più calda: d’estate si possono superare i 45 °C, e la sua metà occidentale è una boscaglia secca e spinosa.",
+				"Il Bañado La Estrella, una pianura allagata di alberi sommersi, è una delle zone umide più grandi del Sudamerica."
+			]
+		}
 	},
 	"tucuman": {
 		"kind": "city",
@@ -43,11 +64,18 @@
 		"population1950": 224000,
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"Probably from a Quechua or local phrase meaning \"where the yuchán tree grows\", or the name of a chief.",
-			"The smallest province and the most densely populated, called the garden of the republic; it grows most of Argentina's lemons — and Argentina is the world's largest exporter.",
-			"Argentina's independence was declared in the city of San Miguel de Tucumán on 9 July 1816."
-		]
+		"hooks": {
+			"en": [
+				"Probably from a Quechua or local phrase meaning \"where the yuchán tree grows\", or the name of a chief.",
+				"The smallest province and the most densely populated, called the garden of the republic; it grows most of Argentina's lemons.",
+				"Argentina's independence was declared in the city of San Miguel de Tucumán on 9 July 1816."
+			],
+			"it": [
+				"Probabilmente da un’espressione quechua o locale che significa \"dove cresce l’albero yuchán\", oppure dal nome di un capo.",
+				"La provincia più piccola e la più densamente popolata, detta il giardino della Repubblica; produce la maggior parte dei limoni argentini.",
+				"L’indipendenza argentina fu proclamata nella città di San Miguel de Tucumán il 9 luglio 1816."
+			]
+		}
 	},
 	"posadas": {
 		"kind": "city",
@@ -56,11 +84,18 @@
 		"region": "Misiones",
 		"coastal": false,
 		"position": "north-east",
-		"hooks": [
-			"Named for Gervasio Antonio de Posadas, an early head of state of the United Provinces.",
-			"It faces Encarnación in Paraguay across the Paraná, joined by a bridge.",
-			"The Jesuit mission ruins of San Ignacio Miní, a UNESCO site, are in its province."
-		]
+		"hooks": {
+			"en": [
+				"Named for Gervasio Antonio de Posadas, an early head of state of the United Provinces.",
+				"It faces Encarnación in Paraguay across the Paraná, joined by a bridge.",
+				"The Jesuit mission ruins of San Ignacio Miní, a UNESCO site, are in its province."
+			],
+			"it": [
+				"Prende il nome da Gervasio Antonio de Posadas, uno dei primi capi di Stato delle Province Unite.",
+				"Si affaccia su Encarnación, in Paraguay, dall’altra sponda del Paraná, e un ponte unisce le due città.",
+				"Le rovine della missione gesuitica di San Ignacio Miní, patrimonio UNESCO, si trovano nella sua provincia."
+			]
+		}
 	},
 	"resistencia": {
 		"kind": "city",
@@ -69,11 +104,18 @@
 		"region": "Chaco",
 		"coastal": false,
 		"position": "north-east",
-		"hooks": [
-			"Spanish for \"resistance\", named for settlers who held out against attacks while founding it in 1878.",
-			"It has over 600 sculptures in its streets and calls itself the city of statues.",
-			"It sits opposite Corrientes across the Paraná, joined by a suspension bridge."
-		]
+		"hooks": {
+			"en": [
+				"Spanish for \"resistance\", named for settlers who held out against attacks while founding it in 1878.",
+				"It has over 600 sculptures in its streets and calls itself the city of statues.",
+				"It sits opposite Corrientes across the Paraná, joined by a cable-stayed bridge."
+			],
+			"it": [
+				"In spagnolo \"resistenza\": in onore dei coloni che resistettero agli attacchi mentre la fondavano, nel 1878.",
+				"Nelle sue strade ci sono oltre 600 sculture, e si fa chiamare la città delle statue.",
+				"Sta di fronte a Corrientes, sull’altra riva del Paraná, e le due città sono unite da un ponte strallato."
+			]
+		}
 	},
 	"corrientes": {
 		"kind": "city",
@@ -81,11 +123,18 @@
 		"populationRank": 15,
 		"coastal": false,
 		"position": "north-east",
-		"hooks": [
-			"From the currents — the city was founded in 1588 at a stretch of the Paraná called the seven currents.",
-			"The Iberá wetlands here are the second largest in South America after the Pantanal, and jaguars and giant anteaters have been reintroduced.",
-			"Chamamé, its accordion music, is on the UNESCO intangible heritage list, and Guaraní is co-official in the province."
-		]
+		"hooks": {
+			"en": [
+				"From the currents — the city was founded in 1588 at a stretch of the Paraná called the seven currents.",
+				"The Iberá wetlands here are the second largest in South America after the Pantanal, and jaguars and giant anteaters have been reintroduced.",
+				"Chamamé, its accordion music, is on the UNESCO intangible heritage list, and Guaraní is co-official in the province."
+			],
+			"it": [
+				"Dalle correnti: la città fu fondata nel 1588 in un tratto del Paraná detto delle sette correnti.",
+				"Le zone umide dell’Iberá sono le seconde del Sudamerica per estensione dopo il Pantanal, e vi sono stati reintrodotti giaguari e formichieri giganti.",
+				"Il chamamé, la sua musica per fisarmonica, è patrimonio immateriale UNESCO, e nella provincia il guaraní è lingua co-ufficiale."
+			]
+		}
 	},
 	"santiago-del-estero": {
 		"kind": "city",
@@ -93,11 +142,18 @@
 		"populationRank": 14,
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"\"Saint James of the lagoon\" — of the estero, the marsh, to tell it from every other Santiago in the Spanish empire.",
-			"The oldest continuously inhabited Spanish city in Argentina, founded 1553.",
-			"Quichua, the local form of Quechua, is still spoken here, cut off from the Andean varieties by hundreds of kilometres."
-		]
+		"hooks": {
+			"en": [
+				"\"Saint James of the lagoon\" — of the estero, the marsh, to tell it from every other Santiago in the Spanish empire.",
+				"The oldest continuously inhabited Spanish city in Argentina, founded 1553.",
+				"Quichua, the local form of Quechua, is still spoken here, cut off from the Andean varieties by hundreds of kilometres."
+			],
+			"it": [
+				"\"San Giacomo della laguna\": dell’estero, la palude, per distinguerla da tutte le altre Santiago dell’impero spagnolo.",
+				"La più antica città spagnola dell’Argentina abitata senza interruzioni, fondata nel 1553.",
+				"Qui si parla ancora il quichua, la variante locale del quechua, separato da centinaia di chilometri dalle varietà andine."
+			]
+		}
 	},
 	"catamarca": {
 		"kind": "city",
@@ -105,11 +161,18 @@
 		"populationRank": 21,
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"From Quechua, most likely \"fortress on the slope\" — cata, a slope, and marca, a settlement or fort.",
-			"Its Antofagasta de la Sierra is desert at 3,500 m, with volcanoes, salt flats and almost nobody.",
-			"It produces most of Argentina's lithium, alongside Salta and Jujuy, from brine under the salt pans."
-		]
+		"hooks": {
+			"en": [
+				"From Quechua, most likely \"fortress on the slope\" — cata, a slope, and marca, a settlement or fort.",
+				"Its Antofagasta de la Sierra is desert at 3,500 m, with volcanoes, salt flats and almost nobody.",
+				"It produces most of Argentina's lithium, alongside Salta and Jujuy, from brine under the salt pans."
+			],
+			"it": [
+				"Dal quechua, molto probabilmente \"fortezza sul pendio\": cata, pendio, e marca, insediamento o forte.",
+				"La sua Antofagasta de la Sierra è un deserto a 3.500 m, con vulcani, saline e quasi nessun abitante.",
+				"Insieme a Salta e Jujuy produce la maggior parte del litio argentino, estratto dalla salamoia sotto le saline."
+			]
+		}
 	},
 	"la-rioja": {
 		"kind": "city",
@@ -117,11 +180,18 @@
 		"populationRank": 22,
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"Named by a governor after his own home region in Spain — so Argentina's La Rioja is the Spanish one's namesake, not its rival.",
-			"Talampaya here is a canyon of red sandstone holding some of the world's oldest dinosaur fossils, from 230 million years ago.",
-			"It is dry enough that its vineyards depend entirely on Andean meltwater channelled down from the mountains."
-		]
+		"hooks": {
+			"en": [
+				"Named by a governor after his own home region in Spain — so Argentina's La Rioja is the Spanish one's namesake, not its rival.",
+				"Talampaya here is a canyon of red sandstone holding some of the world's oldest dinosaur fossils, from 230 million years ago.",
+				"It is dry enough that its vineyards depend entirely on Andean meltwater channelled down from the mountains."
+			],
+			"it": [
+				"Un governatore le diede il nome della sua regione d’origine in Spagna: così la Rioja argentina è un omaggio a quella spagnola, non una sua rivale.",
+				"Qui Talampaya è un canyon di arenaria rossa che custodisce alcuni dei fossili di dinosauro più antichi del mondo, di 230 milioni di anni fa.",
+				"È così arida che i suoi vigneti dipendono interamente dall’acqua di disgelo delle Ande, incanalata giù dalle montagne."
+			]
+		}
 	},
 	"concordia": {
 		"kind": "city",
@@ -130,11 +200,18 @@
 		"region": "Entre Ríos",
 		"coastal": false,
 		"position": "north-east",
-		"hooks": [
-			"Latin for \"harmony\" — a hopeful name given at its founding in 1832.",
-			"It is the centre of Argentina’s citrus industry, especially mandarins and blood oranges.",
-			"The Salto Grande dam nearby is shared with Uruguay and drowned the falls the town was named after."
-		]
+		"hooks": {
+			"en": [
+				"Latin for \"harmony\" — a hopeful name given at its founding in 1832.",
+				"It is the centre of Argentina’s citrus industry, especially mandarins and blood oranges.",
+				"The Salto Grande dam nearby is shared with Uruguay and drowned the falls it is named after."
+			],
+			"it": [
+				"Dal latino concordia: un nome di buon augurio, dato alla sua fondazione nel 1832.",
+				"È il centro dell’industria agrumicola argentina, soprattutto di mandarini e arance rosse.",
+				"La vicina diga di Salto Grande, condivisa con l’Uruguay, ha sommerso le cascate da cui prende il nome."
+			]
+		}
 	},
 	"cordoba": {
 		"kind": "city",
@@ -143,11 +220,18 @@
 		"population1950": 429000,
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"Named in 1573 after Córdoba in Spain, by a founder whose family came from there.",
-			"Its university, founded 1613, is the oldest in Argentina and the fourth oldest in the Americas.",
-			"The Jesuit block and estancias around it are a UNESCO site, and the sierras make it the country's inland holiday region."
-		]
+		"hooks": {
+			"en": [
+				"Named in 1573 after Córdoba in Spain, by a founder whose family came from there.",
+				"Its university, founded 1613, is the oldest in Argentina and the fourth oldest in the Americas.",
+				"The Jesuit block and estancias around it are a UNESCO site, and the sierras make it the country's inland holiday region."
+			],
+			"it": [
+				"Chiamata così nel 1573 in onore di Cordova, in Spagna, da un fondatore la cui famiglia era originaria di lì.",
+				"La sua università, fondata nel 1613, è la più antica dell’Argentina e la quarta più antica delle Americhe.",
+				"L’isolato dei gesuiti e le estancias dei dintorni sono patrimonio UNESCO, e le sierras ne fanno la regione di villeggiatura dell’entroterra."
+			]
+		}
 	},
 	"san-juan": {
 		"kind": "city",
@@ -155,11 +239,18 @@
 		"populationRank": 10,
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"For St John the Baptist, on whose feast the valley was claimed in 1562.",
-			"The Ischigualasto valley in it, called the Valley of the Moon, produced the first known dinosaurs, Eoraptor and Herrerasaurus.",
-			"It is the second wine province after Mendoza and gets about 300 days of sun a year."
-		]
+		"hooks": {
+			"en": [
+				"For St John the Baptist, on whose feast the valley was claimed in 1562.",
+				"The Ischigualasto valley in it, called the Valley of the Moon, produced the first known dinosaurs, Eoraptor and Herrerasaurus.",
+				"It is the second wine province after Mendoza and gets about 300 days of sun a year."
+			],
+			"it": [
+				"Da San Giovanni Battista: fu nel giorno della sua festa, nel 1562, che si prese possesso della valle.",
+				"La valle di Ischigualasto, detta Valle della Luna, ha restituito i primi dinosauri conosciuti, Eoraptor e Herrerasaurus.",
+				"È la seconda provincia vinicola dopo Mendoza e ha circa 300 giorni di sole all’anno."
+			]
+		}
 	},
 	"santa-fe": {
 		"kind": "city",
@@ -167,11 +258,18 @@
 		"populationRank": 9,
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"\"Holy faith\", named in 1573 after Santa Fe in Granada, the camp from which Spain took the last Moorish city.",
-			"Rosario in it is where the Argentine flag was first raised, and where both Che Guevara and Lionel Messi were born.",
-			"The Paraná running along it carries Argentina's grain exports; most of the country's soy leaves through its ports."
-		]
+		"hooks": {
+			"en": [
+				"\"Holy faith\", named in 1573 after Santa Fe in Granada, the camp from which Spain took the last Moorish city.",
+				"Rosario in it is where the Argentine flag was first raised, and where both Che Guevara and Lionel Messi were born.",
+				"The Paraná running along it carries Argentina's grain exports; most of the country's soy leaves through its ports."
+			],
+			"it": [
+				"\"Santa fede\": prende il nome, nel 1573, da Santa Fe presso Granada, l’accampamento da cui la Spagna conquistò l’ultima città moresca.",
+				"Qui si trova Rosario, dove fu issata per la prima volta la bandiera argentina e dove sono nati sia Che Guevara sia Lionel Messi.",
+				"Il Paraná che la costeggia trasporta le esportazioni di cereali dell’Argentina; la maggior parte della soia del paese parte dai suoi porti."
+			]
+		}
 	},
 	"parana": {
 		"kind": "city",
@@ -180,11 +278,18 @@
 		"region": "Entre Ríos",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"From Tupi pará-nã, \"like the sea\" — the river is wide enough to deserve it.",
-			"It was the capital of the Argentine Confederation from 1853 to 1861.",
-			"A tunnel under the river joins it to Santa Fe, one of the first underwater road tunnels in South America."
-		]
+		"hooks": {
+			"en": [
+				"From Tupi pará-nã, \"like the sea\" — the river is wide enough to deserve it.",
+				"It was the capital of the Argentine Confederation from 1853 to 1861.",
+				"A tunnel under the river joins it to Santa Fe, one of the first underwater road tunnels in South America."
+			],
+			"it": [
+				"Dal tupi pará-nã, \"simile al mare\": il fiume è abbastanza largo da meritarlo.",
+				"Fu la capitale della Confederazione argentina dal 1853 al 1861.",
+				"Un tunnel sotto il fiume la collega a Santa Fe: una delle prime gallerie stradali subacquee del Sudamerica."
+			]
+		}
 	},
 	"mendoza": {
 		"kind": "city",
@@ -193,11 +298,18 @@
 		"population1950": 246000,
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"For García Hurtado de Mendoza, the governor of Chile who ordered the city founded in 1561.",
-			"It makes about 70% of Argentina's wine, and malbec — a minor grape in France — became its own here.",
-			"Aconcagua on its border is the highest mountain outside Asia at 6,961 m, and its whole irrigation system is Inca in origin."
-		]
+		"hooks": {
+			"en": [
+				"For García Hurtado de Mendoza, the governor of Chile who ordered the city founded in 1561.",
+				"It makes about 70% of Argentina's wine, and malbec — a minor grape in France — became its own here.",
+				"Aconcagua in its west is the highest mountain outside Asia at 6,961 m, and its irrigation canals go back to the Huarpe and the Inca."
+			],
+			"it": [
+				"Da García Hurtado de Mendoza, il governatore del Cile che ordinò la fondazione della città nel 1561.",
+				"Produce circa il 70% del vino argentino, e il malbec, vitigno minore in Francia, qui è diventato di casa.",
+				"L’Aconcagua, a ovest, è con i suoi 6.961 m la montagna più alta fuori dall’Asia, e i canali d’irrigazione della provincia risalgono agli Huarpe e agli Inca."
+			]
+		}
 	},
 	"rosario": {
 		"kind": "city",
@@ -207,11 +319,18 @@
 		"region": "Santa Fe",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"For the Virgin of the Rosary — the city has no formal founding date or founder, unusually.",
-			"The Argentine flag was first raised here by Belgrano in 1812, and a vast monument marks the spot.",
-			"Che Guevara and Lionel Messi were both born in the city."
-		]
+		"hooks": {
+			"en": [
+				"For the Virgin of the Rosary — the city has no formal founding date or founder, unusually.",
+				"The Argentine flag was first raised here by Belgrano in 1812, and a vast monument marks the spot.",
+				"Che Guevara and Lionel Messi were both born in the city."
+			],
+			"it": [
+				"Dalla Madonna del Rosario: caso insolito, la città non ha né una data di fondazione ufficiale né un fondatore.",
+				"Qui nel 1812 Belgrano issò per la prima volta la bandiera argentina, e un enorme monumento ne segna il luogo.",
+				"Che Guevara e Lionel Messi sono nati entrambi in questa città."
+			]
+		}
 	},
 	"san-martin": {
 		"kind": "city",
@@ -220,11 +339,18 @@
 		"region": "Mendoza",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"Named for José de San Martín, who led the liberation of Argentina, Chile and Peru.",
-			"He crossed the Andes in 1817 with 5,000 men and their artillery, a feat compared to Hannibal’s.",
-			"General San Martín is part of Greater Buenos Aires and an industrial centre."
-		]
+		"hooks": {
+			"en": [
+				"Named for José de San Martín, who led the liberation of Argentina, Chile and Peru.",
+				"He crossed the Andes in 1817 with 5,000 men and their artillery, a feat compared to Hannibal’s.",
+				"General San Martín is part of Greater Buenos Aires and an industrial centre."
+			],
+			"it": [
+				"Prende il nome da José de San Martín, che guidò la liberazione di Argentina, Cile e Perù.",
+				"Nel 1817 attraversò le Ande con 5.000 uomini e la loro artiglieria, un’impresa paragonata a quella di Annibale.",
+				"General San Martín fa parte della Grande Buenos Aires ed è un polo industriale."
+			]
+		}
 	},
 	"rio-cuarto": {
 		"kind": "city",
@@ -233,11 +359,18 @@
 		"region": "Córdoba",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"\"Fourth river\" — Spanish surveyors numbered the rivers crossing the pampa rather than naming them.",
-			"It was a frontier fort against the Ranquel people and is now Córdoba province’s second city.",
-			"It sits at the centre of Argentina’s soy and peanut belt."
-		]
+		"hooks": {
+			"en": [
+				"\"Fourth river\" — Spanish surveyors numbered the rivers crossing the pampa rather than naming them.",
+				"It was a frontier fort against the Ranquel people and is now Córdoba province’s second city.",
+				"It sits at the centre of Argentina’s soy and peanut belt."
+			],
+			"it": [
+				"\"Quarto fiume\": i topografi spagnoli numeravano i fiumi che attraversavano la pampa invece di dar loro un nome.",
+				"Fu un forte di frontiera contro i Ranquel e oggi è la seconda città della provincia di Córdoba.",
+				"Si trova al centro della fascia argentina della soia e delle arachidi."
+			]
+		}
 	},
 	"san-luis": {
 		"kind": "city",
@@ -245,11 +378,18 @@
 		"populationRank": 11,
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"For St Louis, Louis IX of France, whose feast fell near the founding in 1594.",
-			"It passed a law giving every resident free wireless internet, unusually early, in 2007.",
-			"Its Sierra de las Quijadas is a red rock national park with dinosaur and pterosaur tracks."
-		]
+		"hooks": {
+			"en": [
+				"For St Louis, Louis IX of France, whose feast fell near the founding in 1594.",
+				"It passed a law giving every resident free wireless internet, unusually early, in 2007.",
+				"Its Sierra de las Quijadas is a red rock national park with dinosaur and pterosaur tracks."
+			],
+			"it": [
+				"Da San Luigi, Luigi IX di Francia, la cui festa cadeva vicino alla data della fondazione, nel 1594.",
+				"Nel 2007, con insolito anticipo, approvò una legge che garantiva a ogni residente internet wireless gratuito.",
+				"La sua Sierra de las Quijadas è un parco nazionale di roccia rossa con impronte di dinosauri e pterosauri."
+			]
+		}
 	},
 	"san-nicolas": {
 		"kind": "city",
@@ -258,11 +398,18 @@
 		"region": "Ciudad de Buenos Aires",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"For St Nicholas of Bari — San Nicolás de los Arroyos, \"of the streams\".",
-			"The San Nicolás Agreement of 1852 here set the terms for Argentina’s constitution.",
-			"Its steelworks was the country’s first integrated mill, opened in 1960."
-		]
+		"hooks": {
+			"en": [
+				"For St Nicholas of Bari — San Nicolás de los Arroyos, \"of the streams\".",
+				"The San Nicolás Agreement of 1852 here set the terms for Argentina’s constitution.",
+				"Its steelworks was the country’s first integrated mill, opened in 1960."
+			],
+			"it": [
+				"Da San Nicola di Bari: San Nicolás de los Arroyos, \"dei ruscelli\".",
+				"L’Accordo di San Nicolás, firmato qui nel 1852, fissò le basi della costituzione argentina.",
+				"La sua acciaieria fu il primo impianto siderurgico a ciclo integrale del paese, inaugurato nel 1960."
+			]
+		}
 	},
 	"san-rafael": {
 		"kind": "city",
@@ -271,11 +418,18 @@
 		"region": "Mendoza",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"For the archangel Raphael.",
-			"It is the second city of Mendoza province and makes a large share of Argentina’s wine and preserved fruit.",
-			"The Atuel canyon nearby is a gorge of coloured rock used for rafting and climbing."
-		]
+		"hooks": {
+			"en": [
+				"For the archangel Raphael.",
+				"It is the second city of Mendoza province and makes a large share of Argentina’s wine and preserved fruit.",
+				"The Atuel canyon nearby is a gorge of coloured rock used for rafting and climbing."
+			],
+			"it": [
+				"Dall’arcangelo Raffaele.",
+				"È la seconda città della provincia di Mendoza e produce una buona parte del vino e delle conserve di frutta dell’Argentina.",
+				"Il vicino canyon dell’Atuel è una gola di roccia colorata dove si fanno rafting e arrampicata."
+			]
+		}
 	},
 	"buenos-aires": {
 		"kind": "city",
@@ -286,11 +440,18 @@
 		"capitalOf": "country",
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"The province around the capital, sharing its name but administered separately — the city is a district of its own.",
-			"The pampas here are some of the most fertile grassland on earth, and the beef and grain from them made Argentina briefly one of the world's richest countries.",
-			"The gaucho tradition comes from this plain, and Martín Fierro, the national poem, is about one."
-		]
+		"hooks": {
+			"en": [
+				"The province around the capital, sharing its name but administered separately — the city is a district of its own.",
+				"The pampas here are some of the most fertile grassland on earth, and the beef and grain from them made Argentina briefly one of the world's richest countries.",
+				"The gaucho tradition comes from this plain, and Martín Fierro, the national poem, is about one."
+			],
+			"it": [
+				"La provincia intorno alla capitale, che ne condivide il nome ma è amministrata a parte: la città è un distretto a sé.",
+				"La pampa qui è tra le praterie più fertili della terra, e la carne e i cereali che ne venivano fecero per un breve periodo dell’Argentina uno dei paesi più ricchi del mondo.",
+				"La tradizione dei gauchos nasce da questa pianura, e il Martín Fierro, il poema nazionale, racconta di uno di loro."
+			]
+		}
 	},
 	"la-plata": {
 		"kind": "city",
@@ -299,11 +460,18 @@
 		"region": "Ciudad de Buenos Aires",
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"\"The silver\" — from the Río de la Plata, named by Spaniards hoping for silver they never found there.",
-			"Built from nothing in 1882 as a planned capital for Buenos Aires province, on a perfect square grid with diagonals.",
-			"Its cathedral is the largest neo-Gothic church in the Americas, finished in 1999 after 114 years."
-		]
+		"hooks": {
+			"en": [
+				"\"The silver\" — from the Río de la Plata, named by Spaniards hoping for silver they never found there.",
+				"Built from nothing in 1882 as a planned capital for Buenos Aires province, on a perfect square grid with diagonals.",
+				"Its cathedral is the largest neo-Gothic church in the Americas, finished in 1999 after 114 years."
+			],
+			"it": [
+				"\"L’argento\": dal Río de la Plata, battezzato così dagli spagnoli che speravano in un argento che lì non trovarono mai.",
+				"Costruita dal nulla nel 1882 come capoluogo pianificato della provincia di Buenos Aires, su una perfetta griglia quadrata attraversata da diagonali.",
+				"La sua cattedrale è la più grande chiesa neogotica delle Americhe, completata nel 1999 dopo 114 anni."
+			]
+		}
 	},
 	"santa-rosa": {
 		"kind": "city",
@@ -312,11 +480,18 @@
 		"region": "La Pampa",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"For St Rose of Lima, the first saint born in the Americas.",
-			"The capital of La Pampa, founded in 1892 by a rancher on his own land.",
-			"The Parque Luro nearby preserves a patch of caldén forest, the pampas’ only native woodland."
-		]
+		"hooks": {
+			"en": [
+				"For St Rose of Lima, the first saint born in the Americas.",
+				"The capital of La Pampa, founded in 1892 by a rancher on his own land.",
+				"The Parque Luro nearby preserves a patch of caldén forest, the pampas’ only native woodland."
+			],
+			"it": [
+				"Da Santa Rosa da Lima, la prima santa nata nelle Americhe.",
+				"Capoluogo della provincia di La Pampa, fu fondata nel 1892 da un allevatore sulla propria terra.",
+				"Il vicino Parque Luro conserva un lembo di foresta di caldén, l’unico bosco nativo della pampa."
+			]
+		}
 	},
 	"tandil": {
 		"kind": "city",
@@ -325,11 +500,18 @@
 		"region": "Ciudad de Buenos Aires",
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"From a Mapudungun word, possibly \"falling stone\", for a balancing rock that stood above the town.",
-			"That rock, the Piedra Movediza, fell in 1912; a replica now stands in its place.",
-			"The town is known nationwide for its salami and cheese, and its hills are among the oldest rock in South America."
-		]
+		"hooks": {
+			"en": [
+				"From a Mapudungun word, possibly \"falling stone\", for a balancing rock that stood above the town.",
+				"That rock, the Piedra Movediza, fell in 1912; a replica now stands in its place.",
+				"The town is known nationwide for its salami and cheese, and its hills are among the oldest rock in South America."
+			],
+			"it": [
+				"Da una parola mapudungun, forse \"pietra che cade\", per un masso in bilico che sovrastava la città.",
+				"Quella roccia, la Piedra Movediza, crollò nel 1912; oggi al suo posto c’è una replica.",
+				"La città è famosa in tutto il paese per il salame e i formaggi, e le sue colline sono tra le rocce più antiche del Sudamerica."
+			]
+		}
 	},
 	"mar-del-plata": {
 		"kind": "city",
@@ -338,11 +520,18 @@
 		"region": "Ciudad de Buenos Aires",
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"\"Sea of the Plata\" — the seaside counterpart to the river name.",
-			"Argentina’s main beach resort, where Buenos Aires goes in January.",
-			"Its film festival is the only competitive one in Latin America recognised by the international federation."
-		]
+		"hooks": {
+			"en": [
+				"\"Sea of the Plata\" — the seaside counterpart to the river name.",
+				"Argentina’s main beach resort, where Buenos Aires goes in January.",
+				"Its film festival is the only competitive one in Latin America recognised by the international federation."
+			],
+			"it": [
+				"\"Mare del Plata\": il corrispettivo marino del nome del fiume.",
+				"La principale località balneare argentina, dove Buenos Aires si trasferisce a gennaio.",
+				"Il suo festival del cinema è l’unico competitivo dell’America Latina riconosciuto dalla federazione internazionale."
+			]
+		}
 	},
 	"bahia-blanca": {
 		"kind": "city",
@@ -351,11 +540,18 @@
 		"region": "Ciudad de Buenos Aires",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"\"White bay\", for the salt flats around its harbour.",
-			"It is the main deep-water port of the southern pampas and ships much of Argentina’s grain.",
-			"Its naval base at Puerto Belgrano is the largest in the country."
-		]
+		"hooks": {
+			"en": [
+				"\"White bay\", for the salt flats around its harbour.",
+				"It is the main deep-water port of the southern pampas and ships much of Argentina’s grain.",
+				"Its naval base at Puerto Belgrano is the largest in the country."
+			],
+			"it": [
+				"\"Baia bianca\", per le saline intorno al suo porto.",
+				"È il principale porto d’acque profonde della pampa meridionale e imbarca gran parte dei cereali argentini.",
+				"La sua base navale di Puerto Belgrano è la più grande del paese."
+			]
+		}
 	},
 	"neuquen": {
 		"kind": "city",
@@ -363,11 +559,18 @@
 		"populationRank": 19,
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"From Mapudungun newenken, \"bold\" or \"forceful\", the name of the river.",
-			"Vaca Muerta under it is one of the largest shale oil and gas fields in the world.",
-			"Its Valle de los Dinosaurios yielded Argentinosaurus and Giganotosaurus — among the largest herbivore and carnivore ever found."
-		]
+		"hooks": {
+			"en": [
+				"From Mapudungun newenken, \"bold\" or \"forceful\", the name of the river.",
+				"Vaca Muerta under it is one of the largest shale oil and gas fields in the world.",
+				"Its Valle de los Dinosaurios yielded Argentinosaurus and Giganotosaurus — among the largest herbivore and carnivore ever found."
+			],
+			"it": [
+				"Dal mapudungun newenken, \"audace\" o \"impetuoso\", il nome del fiume.",
+				"Nel suo sottosuolo si trova Vaca Muerta, uno dei più grandi giacimenti di petrolio e gas di scisto del mondo.",
+				"La sua Valle de los Dinosaurios ha restituito l’Argentinosaurus e il Giganotosaurus, tra i più grandi erbivori e carnivori mai scoperti."
+			]
+		}
 	},
 	"comodoro-rivadavia": {
 		"kind": "city",
@@ -376,10 +579,17 @@
 		"region": "Chubut",
 		"coastal": true,
 		"position": "south-west",
-		"hooks": [
-			"Named for a naval commodore, Martín Rivadavia.",
-			"Argentine oil was discovered here by accident in 1907 by men drilling for water.",
-			"It is the windiest city in the country, and the wind is now farmed for electricity."
-		]
+		"hooks": {
+			"en": [
+				"Named for a naval commodore, Martín Rivadavia.",
+				"Argentine oil was discovered here by accident in 1907 by men drilling for water.",
+				"It is the windiest city in the country, and the wind is now farmed for electricity."
+			],
+			"it": [
+				"Prende il nome da un commodoro della marina, Martín Rivadavia.",
+				"Qui il petrolio argentino fu scoperto per caso nel 1907, da uomini che trivellavano in cerca d’acqua.",
+				"È la città più ventosa del paese, e oggi quel vento lo raccolgono i parchi eolici per produrre elettricità."
+			]
+		}
 	}
 }
