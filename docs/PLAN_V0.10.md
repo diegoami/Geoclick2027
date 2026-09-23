@@ -8,7 +8,8 @@
 > This plan keeps its number. Its three product decisions were **answered
 > on 2026-09-22** (below) and it has started: **FT-48 and FT-49 are
 > merged** (Italy's 20 regions in Italian, and the per-language shape with
-> per-sentence fallback). **FT-50** — the other 27 countries — is next.
+> per-sentence fallback). **FT-66** (region names along the region) is
+> next, then **FT-50** — the other 27 countries.
 
 ## Why
 
@@ -199,10 +200,10 @@ for each lives in ROADMAP.md's backlog entry; these are the tasks.
   build-time spine (three points a region), with today's pill wherever the
   stretched name does not fit. Spike on `spike/ft-64-stretched-names`, not
   for merge; the reasoning is in DECISIONS.md, "Region names along the
-  region". The follow-up is proposed as **FT-66** below — whether and when
-  is the product owner's call.
+  region". The follow-up is **FT-66** below, scheduled by the product
+  owner (2026-09-23) before FT-50.
 
-### FT-66 — Region names along the region · Medium · proposed, not scheduled
+### FT-66 — Region names along the region · Medium · deps: FT-64 · before FT-50
 
 - **Why:** FT-64 showed it reads.
 - **Do:** `build-map.ts` writes a `spine` (quadratic Bézier + aspect) per
@@ -240,8 +241,8 @@ for each lives in ROADMAP.md's backlog entry; these are the tasks.
 **The tablet-play fixes first, then the Italian bulk.** The small, visible
 ones — **FT-62**, **FT-65**, **FT-61**, **FT-60** — then **FT-63** (best-fit
 placement), then the **FT-64** spike, which decides whether stretched names
-become a task at all (it did: **FT-66**, proposed, placement in the order
-the product owner's call). Then **FT-50**, the remaining 27 countries of Italian,
+become a task at all. It did: **FT-66**, scheduled by the product owner
+(2026-09-23) straight after it. Then **FT-50**, the remaining 27 countries of Italian,
 batched by country. **FT-51 (German) is postponed.**
 
 The FT-48 gate is already passed. **→ Release `v0.10.0`** per
@@ -259,5 +260,6 @@ The FT-48 gate is already passed. **→ Release `v0.10.0`** per
 | FT-61 | **merged**  | `6b794b8` | a slip keeps its drag on a tablet; confirm on device at release (PR #21) |
 | FT-62 | **merged**  | `b2f0c8b` | the fact card only on a name not placed (PR #19) |
 | FT-63 | **merged**  | `a0537d6` | labels go where there is the most room: 8 spots, scored; every dot an obstacle (PR #23) |
-| FT-64 | **decided** | —     | it reads; SVG `textPath`, pill as fallback; follow-up FT-66 awaits the PO (DECISIONS.md) |
+| FT-64 | **decided** | —     | it reads; SVG `textPath`, pill as fallback; follow-up FT-66 (DECISIONS.md) |
+| FT-66 | not started | —     | names along the region; next, before FT-50   |
 | FT-65 | **merged**  | `f3b4421` | map card progress bar, hidden at zero (PR #20) |

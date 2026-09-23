@@ -114,7 +114,7 @@ Check items off as they land; update "Status" as iterations complete.
   per-language `hooks`), **FT-62**, **FT-65**, **FT-61**, **FT-60** and **FT-63** (five
   of the six UX fixes). **The FT-64 spike is decided** (stretched names
   read; SVG overlay with the pill as fallback; follow-up **FT-66**
-  proposed, not scheduled). **FT-50** is next.
+  scheduled 2026-09-23). **FT-66 is next, then FT-50.**
 - **Raised by the product owner 2026-09-22, backlogged**: GitHub issue #11 —
   on the Known map an explicitly tapped name kept its earned colour instead
   of **Chosen**. Decided: an explicit tap is Chosen regardless of the streak,
@@ -1528,7 +1528,7 @@ loop actually feels good. Candidates below, in rough priority order.
         alongside it, since that pass scores rectangles and a stretched
         name is not one. **Spiked as FT-64 (2026-09-23): it reads** — an
         SVG `textPath` over a build-time spine, the pill where a name does
-        not fit; follow-up FT-66 proposed. See DECISIONS.md, "Region names
+        not fit; follow-up FT-66, scheduled before FT-50. See DECISIONS.md, "Region names
         along the region".
       - **Replace the map card's "{known} / {total} known" with a
         progress bar — decided 2026-09-20, the map list only.** The line
