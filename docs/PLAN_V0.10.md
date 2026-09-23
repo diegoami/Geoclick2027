@@ -254,7 +254,7 @@ The FT-48 gate is already passed. **→ Release `v0.10.0`** per
 | ----- | ----------- | ----- | -------------------------------------------- |
 | FT-48 | **merged**  | `51892fc` | Italy's 20 regions, 60 Italian sentences, read and approved (PR #18) |
 | FT-49 | **merged**  | `51892fc` | per-language `hooks`, per-sentence fallback (PR #18) |
-| FT-50 | **in progress** | —  | wave 1 on `feat/ft-50-italian`: Italy (all), Portugal, Spain, France — 693 of ~5 400; awaiting PO spot-check |
+| FT-50 | **in progress** | —  | `feat/ft-50-italian`: 18 of 28 countries, 3 168 of 5 448 sentences; voice approved after wave 1; ~120 English facts corrected on the way |
 | FT-51 | postponed   | —     | German, only if the Italian read well   |
 | FT-60 | **merged**  | `8b75e1e` | finite level-0 hand, size 10; tutorial slips dealt first (PR #22) |
 | FT-61 | **merged**  | `6b794b8` | a slip keeps its drag on a tablet; confirm on device at release (PR #21) |

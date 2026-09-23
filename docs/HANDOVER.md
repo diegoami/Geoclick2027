@@ -1,4 +1,4 @@
-# Handover — 2026-09-23, v0.10.0 under way (FT-50 wave 1 done, awaiting PO spot-check)
+# Handover — 2026-09-23, v0.10.0 under way (FT-50: 18 of 28 countries in Italian, last wave running)
 
 For whoever picks Geoclick up next, whether a human or a fresh Claude
 session. It records where things stand, what's next, and what's easy to
@@ -23,7 +23,7 @@ before any work starts.
 | Remediation programme | Closed with v0.2.0 ([REMEDIATION_PLAN.md](REMEDIATION_PLAN.md)); its automerge exception went with it |
 | Feature programme | Closed with v0.5.0 ([FEATURE_PLAN.md](FEATURE_PLAN.md)) |
 | Since then | Per-release plans: [PLAN_V0.6.md](PLAN_V0.6.md) through [PLAN_V0.9.4.md](PLAN_V0.9.4.md), each with its own ledger; now [PLAN_V0.10.md](PLAN_V0.10.md) |
-| Next | **FT-50 in progress** on `feat/ft-50-italian` (pushed, not merged). **Wave 1 done**: Italy's 111 provinces (Italy is now wholly Italian), Portugal, Spain, France — 693 sentences, one commit per country. **Waiting on the product owner's spot-check** of wave 1 before the other 23 countries (~4 700 sentences). Workflow: `npm run translate-facts -- --country=<c> --lang=it --extract=…` → one translator subagent per country following [TRANSLATION_STYLE_IT.md](TRANSLATION_STYLE_IT.md) (on the branch) → review a sample → `--merge=…` (rejects wrong counts, em dashes, straight apostrophes) → `npm run refresh-facts-hooks` (node only, no WSL) → commit the country. `mapData.test.ts` fails if a map ships sentences its country file no longer holds. One English fact was corrected on the way (Castel del Monte, one-cent coin). FT-66 is merged ([PR #24](https://github.com/diegoami/Geoclick2027/pull/24), `4b8205a`). The v0.9.4 installer smoke test, the FT-61 tablet check and FT-66 on a real phone/tablet are outstanding. Every PR shows a failing "Workers Builds" check from a leftover Cloudflare integration — a dashboard job for the product owner |
+| Next | **FT-50 in progress** on `feat/ft-50-italian` (pushed, not merged). The product owner approved the voice after wave 1. **Done, one commit per country: 18 of 28** — Italy, Portugal, Spain, France, Germany, Netherlands, Poland, Sweden, Finland, Ukraine, UK, Australia, Canada, Argentina, Colombia, Mexico, Brazil, USA (3 168 of 5 448 sentences). **Left: China, Japan, South Korea, India, Indonesia, Vietnam, Russia, Turkey, Egypt, Nigeria** — extract any still missing with `npm run translate-facts -- --country=<c> --lang=it --extract=<file>`. Workflow per country: a translator subagent following [TRANSLATION_STYLE_IT.md](TRANSLATION_STYLE_IT.md) (on the branch), which also flags English sentences it thinks are wrong → verify each flag, fix the clear ones in BOTH languages just before that country's merge → `--merge=…` → `npm run refresh-facts-hooks` → commit only `data/facts/<c>.json` + `data/maps/<prefix>-*/facts.json`, listing the English corrections in the message (about 120 so far). Then: PR, product owner test, merge; the plan's DoD is every place with English having Italian. The v0.9.4 installer smoke test, the FT-61 tablet check and FT-66 on a real phone/tablet are outstanding; a leftover Cloudflare check fails on every PR (dashboard job) |
 | After that | **FT-51 (German) is postponed** until the Italian has been read; the two v0.9.4 test gates (FT-56, FT-59) wait in a hardening batch |
 | Also raised 2026-09-20 | **The start screen becomes a zoomable world map** — pick the country on the map, then the kind of quiz. The map list cannot be finalized as a list: the goal is a high number of maps, and `mapCatalog.ts` is already 31 countries and 66 maps. Favourites and Recent stay unchanged. Second item of the Iteration 8+ backlog, with the open questions listed there |
 
@@ -96,7 +96,7 @@ installer smoke test (the published Windows and Android installers were
 
 Suggested first message for the next session:
 
-> Read docs/HANDOVER.md, then docs/PLAN_V0.10.md. Check out feat/ft-50-italian; apply the product owner's wave-1 spot-check notes, then translate the next wave of countries per docs/TRANSLATION_STYLE_IT.md. (The v0.9.4 installer smoke test is still outstanding.)
+> Read docs/HANDOVER.md, then docs/PLAN_V0.10.md. Check out feat/ft-50-italian and finish FT-50: translate whichever of the ten remaining countries have no Italian yet, per docs/TRANSLATION_STYLE_IT.md, then open the PR. (The v0.9.4 installer smoke test is still outstanding.)
 
 Whatever comes next, the working rules stay (CLAUDE.md §3):
 
