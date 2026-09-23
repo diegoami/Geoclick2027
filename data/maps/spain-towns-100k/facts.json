@@ -6,11 +6,18 @@
 		"region": "Principado de Asturias",
 		"coastal": true,
 		"position": "north-west",
-		"hooks": [
-			"Probably from Latin saxum, a rock, through an older Gigia.",
-			"Asturias’s largest city and its industrial port, built on coal and steel.",
-			"Its Roman baths sit under the old fishermen’s quarter, Cimavilla, on the headland."
-		]
+		"hooks": {
+			"en": [
+				"Probably from Latin saxum, a rock, through an older Gigia.",
+				"Asturias’s largest city and its industrial port, built on coal and steel.",
+				"Its Roman baths sit under the old fishermen’s quarter, Cimavilla, on the headland."
+			],
+			"it": [
+				"Probabilmente dal latino saxum, roccia, attraverso un più antico Gigia.",
+				"La città più grande delle Asturie e il suo porto industriale, cresciuto sul carbone e sull’acciaio.",
+				"Le sue terme romane si trovano sotto l’antico quartiere dei pescatori, Cimavilla, sul promontorio."
+			]
+		}
 	},
 	"santander": {
 		"kind": "city",
@@ -19,11 +26,18 @@
 		"region": "Cantabria",
 		"coastal": true,
 		"position": "north",
-		"hooks": [
-			"A contraction of Sanctus Emeterius, a martyr — San Emeterio worn down to Santander.",
-			"A 1941 fire destroyed most of the old town, which is why it looks modern.",
-			"The Altamira caves are in its province, and the Magdalena palace was the royal summer residence."
-		]
+		"hooks": {
+			"en": [
+				"A contraction of Sanctus Emeterius, a martyr — San Emeterio worn down to Santander.",
+				"A 1941 fire destroyed most of the old town, which is why it looks modern.",
+				"The Altamira caves are in its province, and the Magdalena palace was the royal summer residence."
+			],
+			"it": [
+				"Una contrazione di Sanctus Emeterius, un martire: San Emeterio, consumato dal tempo, è diventato Santander.",
+				"Un incendio nel 1941 distrusse gran parte della città vecchia, ed è per questo che ha un aspetto moderno.",
+				"Le grotte di Altamira sono nella sua provincia, e il palazzo della Magdalena era la residenza estiva dei reali."
+			]
+		}
 	},
 	"oviedo": {
 		"kind": "city",
@@ -32,11 +46,18 @@
 		"region": "Principado de Asturias",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"Probably from Latin ovetum, a place of eggs or of a personal name.",
-			"It was the capital of the Christian kingdom of Asturias, the first Reconquista state.",
-			"Its pre-Romanesque churches from the 800s are a UNESCO site and unlike anything else in Europe."
-		]
+		"hooks": {
+			"en": [
+				"Probably from Latin ovetum, a place of eggs or of a personal name.",
+				"It was the capital of the Christian kingdom of Asturias, the first Reconquista state.",
+				"Its pre-Romanesque churches from the 800s are a UNESCO site and unlike anything else in Europe."
+			],
+			"it": [
+				"Probabilmente dal latino ovetum, un luogo delle uova, oppure da un nome di persona.",
+				"Fu la capitale del regno cristiano delle Asturie, il primo stato della Reconquista.",
+				"Le sue chiese preromaniche del IX secolo sono patrimonio UNESCO e non somigliano a nient’altro in Europa."
+			]
+		}
 	},
 	"la-coruna": {
 		"kind": "city",
@@ -45,11 +66,18 @@
 		"region": "Galicia",
 		"coastal": true,
 		"position": "north-west",
-		"hooks": [
-			"Of disputed origin, possibly from Latin columna, a column — fitting, given its tower.",
-			"The Tower of Hercules there is a working Roman lighthouse from the first century, the oldest still in use, and a UNESCO site.",
-			"The Spanish Armada sailed from here in 1588, and Drake attacked the town the next year."
-		]
+		"hooks": {
+			"en": [
+				"Of disputed origin, possibly from Latin columna, a column — fitting, given its tower.",
+				"The Tower of Hercules there is a working Roman lighthouse from the first century, the oldest still in use, and a UNESCO site.",
+				"The Spanish Armada sailed from here in 1588, and Drake attacked the town the next year."
+			],
+			"it": [
+				"Di origine discussa, forse dal latino columna, \"colonna\": un nome appropriato, vista la sua torre.",
+				"La Torre di Ercole è un faro romano del I secolo tuttora in funzione, il più antico ancora in uso, ed è patrimonio UNESCO.",
+				"L’Invincibile Armata salpò da qui nel 1588, e Drake attaccò la città l’anno dopo."
+			]
+		}
 	},
 	"san-sebastian": {
 		"kind": "city",
@@ -58,11 +86,18 @@
 		"region": "País Vasco",
 		"coastal": true,
 		"position": "north",
-		"hooks": [
-			"For St Sebastian; in Basque it is Donostia, which is the same saint’s name with the Basque \"don\" honorific.",
-			"It has more Michelin stars per head than almost anywhere in the world.",
-			"Its pintxos bars serve small plates left on the counter, and its film festival is Spain’s most important."
-		]
+		"hooks": {
+			"en": [
+				"For St Sebastian; in Basque it is Donostia, which is the same saint’s name with the Basque \"don\" honorific.",
+				"It has more Michelin stars per head than almost anywhere in the world.",
+				"Its pintxos bars serve small plates left on the counter, and its film festival is Spain’s most important."
+			],
+			"it": [
+				"Da San Sebastiano; in basco è Donostia, lo stesso nome del santo con il titolo onorifico basco \"don\".",
+				"Ha più stelle Michelin per abitante di quasi ogni altro luogo al mondo.",
+				"Nei suoi bar di pintxos i piccoli piatti restano esposti sul bancone, e il suo festival del cinema è il più importante di Spagna."
+			]
+		}
 	},
 	"bilbao": {
 		"kind": "city",
@@ -71,11 +106,18 @@
 		"region": "País Vasco",
 		"coastal": true,
 		"position": "north",
-		"hooks": [
-			"Of disputed origin, possibly from bi-albo, \"two sides\" of the river, in Basque.",
-			"The Guggenheim, opened 1997, turned a dying steel port into a destination, and the effect is named after the city.",
-			"Its estuary was so polluted it was biologically dead; salmon have returned since the cleanup."
-		]
+		"hooks": {
+			"en": [
+				"Of disputed origin, possibly from bi-albo, \"two sides\" of the river, in Basque.",
+				"The Guggenheim, opened 1997, turned a dying steel port into a destination, and the effect is named after the city.",
+				"Its estuary was so polluted it was biologically dead; salmon have returned since the cleanup."
+			],
+			"it": [
+				"Di origine discussa, forse dal basco bi-albo, i \"due lati\" del fiume.",
+				"Il Guggenheim, aperto nel 1997, ha fatto di un porto siderurgico morente una meta, e l’effetto porta il nome della città.",
+				"Il suo estuario era così inquinato da essere biologicamente morto; dopo il risanamento sono tornati i salmoni."
+			]
+		}
 	},
 	"vitoria": {
 		"kind": "city",
@@ -84,11 +126,18 @@
 		"region": "País Vasco",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"Latin victoria, \"victory\", given in 1181 — in Basque it is Gasteiz, an older name for the hill village.",
-			"The capital of the Basque Country, chosen as neutral ground between Bilbao and San Sebastián.",
-			"Wellington beat the French here in 1813, effectively ending Napoleonic rule in Spain."
-		]
+		"hooks": {
+			"en": [
+				"Latin victoria, \"victory\", given in 1181 — in Basque it is Gasteiz, an older name for the hill village.",
+				"The capital of the Basque Country, chosen as neutral ground between Bilbao and San Sebastián.",
+				"Wellington beat the French here in 1813, effectively ending Napoleonic rule in Spain."
+			],
+			"it": [
+				"Dal latino victoria, \"vittoria\", nome dato nel 1181: in basco è Gasteiz, un nome più antico del villaggio sulla collina.",
+				"La capitale dei Paesi Baschi, scelta come terreno neutrale tra Bilbao e San Sebastián.",
+				"Qui nel 1813 Wellington sconfisse i francesi, ponendo di fatto fine al dominio napoleonico in Spagna."
+			]
+		}
 	},
 	"pamplona": {
 		"kind": "city",
@@ -97,11 +146,18 @@
 		"region": "Comunidad Foral de Navarra",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"From Pompaelo, founded by Pompey the Great in 74 BC and named for himself.",
-			"The bulls run through its streets every July in the festival of San Fermín.",
-			"Hemingway made it famous in The Sun Also Rises in 1926, and the town has been busy ever since."
-		]
+		"hooks": {
+			"en": [
+				"From Pompaelo, founded by Pompey the Great in 74 BC and named for himself.",
+				"The bulls run through its streets every July in the festival of San Fermín.",
+				"Hemingway made it famous in The Sun Also Rises in 1926, and the town has been busy ever since."
+			],
+			"it": [
+				"Da Pompaelo, fondata da Pompeo Magno nel 74 a.C., che le diede il proprio nome.",
+				"Ogni luglio i tori corrono per le sue strade durante la festa di San Fermín.",
+				"Hemingway la rese famosa nel 1926 con Fiesta, e da allora la città non si è più svuotata."
+			]
+		}
 	},
 	"leon": {
 		"kind": "city",
@@ -110,11 +166,18 @@
 		"region": "Castilla y León",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"Not the lion: from Latin legio, the camp of the Seventh Legion.",
-			"The lion on its arms is a pun the heralds could not resist.",
-			"Its 1188 assembly is recognised by UNESCO as the earliest parliamentary system in Europe."
-		]
+		"hooks": {
+			"en": [
+				"Not the lion: from Latin legio, the camp of the Seventh Legion.",
+				"The lion on its arms is a pun the heralds could not resist.",
+				"Its 1188 assembly is recognised by UNESCO as the earliest parliamentary system in Europe."
+			],
+			"it": [
+				"Non il leone: dal latino legio, l’accampamento della Settima Legione.",
+				"Il leone nel suo stemma è un gioco di parole a cui gli araldisti non seppero resistere.",
+				"La sua assemblea del 1188 è riconosciuta dall’UNESCO come il più antico sistema parlamentare d’Europa."
+			]
+		}
 	},
 	"logrono": {
 		"kind": "city",
@@ -123,11 +186,18 @@
 		"region": "La Rioja",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"Of uncertain origin, possibly from a Basque or Latin root about a ford.",
-			"The capital of La Rioja and the town every pilgrim on the Camino passes through.",
-			"Its Calle Laurel has about fifty bars, each traditionally serving one signature pintxo."
-		]
+		"hooks": {
+			"en": [
+				"Of uncertain origin, possibly from a Basque or Latin root about a ford.",
+				"The capital of La Rioja and the town every pilgrim on the Camino passes through.",
+				"Its Calle Laurel has about fifty bars, each traditionally serving one signature pintxo."
+			],
+			"it": [
+				"Di origine incerta, forse da una radice basca o latina legata a un guado.",
+				"La capitale della Rioja, e la città da cui passa ogni pellegrino del Cammino.",
+				"La sua Calle Laurel conta una cinquantina di bar, ognuno dei quali, per tradizione, serve il suo pintxo caratteristico."
+			]
+		}
 	},
 	"burgos": {
 		"kind": "city",
@@ -136,11 +206,18 @@
 		"region": "Castilla y León",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"From Germanic burgs, a fortified town — a Visigothic word.",
-			"El Cid was born nearby and is buried in its cathedral, which is a UNESCO site.",
-			"Atapuerca in its province holds the oldest human remains in western Europe, about 1.2 million years old."
-		]
+		"hooks": {
+			"en": [
+				"From Germanic burgs, a fortified town — a Visigothic word.",
+				"El Cid was born nearby and is buried in its cathedral, which is a UNESCO site.",
+				"Atapuerca in its province holds the oldest human remains in western Europe, about 1.2 million years old."
+			],
+			"it": [
+				"Dal germanico burgs, città fortificata: una parola visigota.",
+				"El Cid nacque poco lontano ed è sepolto nella sua cattedrale, patrimonio UNESCO.",
+				"Atapuerca, nella sua provincia, custodisce i più antichi resti umani dell’Europa occidentale, vecchi di circa 1,2 milioni di anni."
+			]
+		}
 	},
 	"ourense": {
 		"kind": "city",
@@ -149,11 +226,18 @@
 		"region": "Galicia",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"From Latin auriense, \"of gold\", for gold panned in the Miño — or from aquae urentes, burning waters.",
-			"Its thermal springs are the most abundant in Spain, some at 65 °C, and pools line the river.",
-			"Its Roman bridge has been rebuilt repeatedly on the original piers."
-		]
+		"hooks": {
+			"en": [
+				"From Latin auriense, \"of gold\", for gold panned in the Miño — or from aquae urentes, burning waters.",
+				"Its thermal springs are the most abundant in Spain, some at 65 °C, and pools line the river.",
+				"Its Roman bridge has been rebuilt repeatedly on the original piers."
+			],
+			"it": [
+				"Dal latino auriense, \"dell’oro\", per l’oro setacciato nel Miño, oppure da aquae urentes, \"acque ardenti\".",
+				"Le sue sorgenti termali sono le più abbondanti di Spagna, alcune a 65 °C, e lungo il fiume si susseguono le vasche.",
+				"Il suo ponte romano è stato ricostruito più volte sui piloni originali."
+			]
+		}
 	},
 	"vigo": {
 		"kind": "city",
@@ -162,11 +246,18 @@
 		"region": "Galicia",
 		"coastal": true,
 		"position": "north-west",
-		"hooks": [
-			"From Latin vicus, a village or settlement.",
-			"It lands more fish than any other port in Europe.",
-			"The Cíes islands off it are a national park, and Jules Verne had the Nautilus visit its bay."
-		]
+		"hooks": {
+			"en": [
+				"From Latin vicus, a village or settlement.",
+				"It lands more fish than any other port in Europe.",
+				"The Cíes islands off it are a national park, and Jules Verne had the Nautilus visit its bay."
+			],
+			"it": [
+				"Dal latino vicus, villaggio o insediamento.",
+				"Nessun altro porto d’Europa sbarca più pesce.",
+				"Le isole Cíes, al largo, sono un parco nazionale, e Giulio Verne fece entrare il Nautilus nella sua baia."
+			]
+		}
 	},
 	"valladolid": {
 		"kind": "city",
@@ -175,11 +266,18 @@
 		"region": "Castilla y León",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"Possibly from Arabic balad al-walid, \"town of the governor\", or from a Celtic-Latin root.",
-			"It was the capital of Spain on and off until 1561, and Columbus died here in 1506.",
-			"Cervantes lived in the town while Don Quixote was being printed."
-		]
+		"hooks": {
+			"en": [
+				"Possibly from Arabic balad al-walid, \"town of the governor\", or from a Celtic-Latin root.",
+				"It was the capital of Spain on and off until 1561, and Columbus died here in 1506.",
+				"Cervantes lived in the town while Don Quixote was being printed."
+			],
+			"it": [
+				"Forse dall’arabo balad al-walid, \"città del governatore\", oppure da una radice celtico-latina.",
+				"Fu capitale di Spagna a più riprese fino al 1561, e qui nel 1506 morì Colombo.",
+				"Cervantes viveva in città mentre si stampava il Don Chisciotte."
+			]
+		}
 	},
 	"zaragoza": {
 		"kind": "city",
@@ -188,11 +286,18 @@
 		"region": "Aragón",
 		"coastal": false,
 		"position": "north-east",
-		"hooks": [
-			"From Caesaraugusta, founded by Augustus — the name worn down through Arabic Saraqusta.",
-			"Its basilica of El Pilar is the first church in the world dedicated to the Virgin, by tradition.",
-			"Goya was born in a village nearby and painted a dome in that basilica."
-		]
+		"hooks": {
+			"en": [
+				"From Caesaraugusta, founded by Augustus — the name worn down through Arabic Saraqusta.",
+				"Its basilica of El Pilar is the first church in the world dedicated to the Virgin, by tradition.",
+				"Goya was born in a village nearby and painted a dome in that basilica."
+			],
+			"it": [
+				"Da Caesaraugusta, fondata da Augusto: un nome consumato dal tempo passando per l’arabo Saraqusta.",
+				"La sua basilica del Pilar è, per tradizione, la prima chiesa al mondo dedicata alla Vergine.",
+				"Goya nacque in un villaggio vicino e dipinse una cupola di quella basilica."
+			]
+		}
 	},
 	"mataro": {
 		"kind": "city",
@@ -201,11 +306,18 @@
 		"region": "Cataluña",
 		"coastal": true,
 		"position": "north-east",
-		"hooks": [
-			"Probably from Iluro, an Iberian name, through Latin.",
-			"Spain’s first railway ran from Barcelona to here in 1848.",
-			"Its Roman villa and the modernist buildings by a young Gaudí are both in the town."
-		]
+		"hooks": {
+			"en": [
+				"Probably from Iluro, an Iberian name, through Latin.",
+				"Spain’s first railway ran from Barcelona to here in 1848.",
+				"Its Roman villa and the modernist buildings by a young Gaudí are both in the town."
+			],
+			"it": [
+				"Probabilmente da Iluro, un nome iberico, attraverso il latino.",
+				"Nel 1848 la prima ferrovia di Spagna andava da Barcellona fin qui.",
+				"La villa romana e gli edifici modernisti di un giovane Gaudí si trovano entrambi in città."
+			]
+		}
 	},
 	"barcelona": {
 		"kind": "city",
@@ -215,11 +327,18 @@
 		"region": "Cataluña",
 		"coastal": true,
 		"position": "north-east",
-		"hooks": [
-			"Possibly from the Barcid family — Hamilcar Barca, Hannibal’s father — or from an Iberian name.",
-			"The Sagrada Família has been under construction since 1882 and is still unfinished.",
-			"Gaudí’s work here forms seven UNESCO-listed buildings, and the 1992 Olympics reopened the city to its seafront."
-		]
+		"hooks": {
+			"en": [
+				"Possibly from the Barcid family — Hamilcar Barca, Hannibal’s father — or from an Iberian name.",
+				"The Sagrada Família has been under construction since 1882 and is still unfinished.",
+				"Gaudí’s work here forms seven UNESCO-listed buildings, and the 1992 Olympics reopened the city to its seafront."
+			],
+			"it": [
+				"Forse dai Barcidi, la famiglia di Amilcare Barca, padre di Annibale, oppure da un nome iberico.",
+				"La Sagrada Família è in costruzione dal 1882 e non è ancora finita.",
+				"Qui sette edifici di Gaudí sono patrimonio UNESCO, e le Olimpiadi del 1992 hanno restituito alla città il suo lungomare."
+			]
+		}
 	},
 	"tarragona": {
 		"kind": "city",
@@ -228,11 +347,18 @@
 		"region": "Cataluña",
 		"coastal": true,
 		"position": "north-east",
-		"hooks": [
-			"From Tarraco, capital of Rome’s largest Spanish province.",
-			"Its Roman amphitheatre, circus, walls and aqueduct are a UNESCO site.",
-			"The human castles, castells, built in its region are another UNESCO heritage item."
-		]
+		"hooks": {
+			"en": [
+				"From Tarraco, capital of Rome’s largest Spanish province.",
+				"Its Roman amphitheatre, circus, walls and aqueduct are a UNESCO site.",
+				"The human castles, castells, built in its region are another UNESCO heritage item."
+			],
+			"it": [
+				"Da Tarraco, capitale della più grande provincia romana di Spagna.",
+				"Il suo anfiteatro romano, il circo, le mura e l’acquedotto sono patrimonio UNESCO.",
+				"Anche le torri umane, i castells, innalzate nella sua regione, sono patrimonio UNESCO."
+			]
+		}
 	},
 	"salamanca": {
 		"kind": "city",
@@ -241,11 +367,18 @@
 		"region": "Castilla y León",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"Of pre-Roman origin, probably from a Celtic or Iberian name, Helmantica.",
-			"Its university, founded 1218, is the oldest in Spain and gave Columbus his first hearing.",
-			"Its old town is built of sandstone that turns gold in the evening, and is a UNESCO site."
-		]
+		"hooks": {
+			"en": [
+				"Of pre-Roman origin, probably from a Celtic or Iberian name, Helmantica.",
+				"Its university, founded 1218, is the oldest in Spain and gave Columbus his first hearing.",
+				"Its old town is built of sandstone that turns gold in the evening, and is a UNESCO site."
+			],
+			"it": [
+				"Di origine preromana, probabilmente da un nome celtico o iberico, Helmantica.",
+				"La sua università, fondata nel 1218, è la più antica di Spagna e fu la prima a dare ascolto a Colombo.",
+				"Il centro storico è costruito in arenaria che la sera si fa dorata, ed è patrimonio UNESCO."
+			]
+		}
 	},
 	"madrid": {
 		"kind": "city",
@@ -256,11 +389,18 @@
 		"capitalOf": "country",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"From Arabic al-Majrit, \"source of water\" — the Moorish fortress was named for its streams, and the Christians kept the name.",
-			"A provincial town until Philip II moved the court here in 1561, chosen largely for sitting in the middle of the country.",
-			"At 650 m it is the highest capital in Europe, and the Prado holds the finest collection of Spanish painting anywhere."
-		]
+		"hooks": {
+			"en": [
+				"From Arabic al-Majrit, \"source of water\" — the Moorish fortress was named for its streams, and the Christians kept the name.",
+				"A provincial town until Philip II moved the court here in 1561, chosen largely for sitting in the middle of the country.",
+				"At 650 m it is the highest capital in Europe, and the Prado holds the finest collection of Spanish painting anywhere."
+			],
+			"it": [
+				"Dall’arabo al-Majrit, \"sorgente d’acqua\": la fortezza moresca prese il nome dai suoi ruscelli, e i cristiani lo mantennero.",
+				"Una città di provincia finché Filippo II non vi trasferì la corte nel 1561, scegliendola soprattutto perché stava al centro del paese.",
+				"A 650 m è la capitale più alta d’Europa, e il Prado custodisce la più bella collezione di pittura spagnola al mondo."
+			]
+		}
 	},
 	"castellon-de-la-plana": {
 		"kind": "city",
@@ -269,11 +409,18 @@
 		"region": "Comunidad Valenciana",
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"\"Castle of the plain\" — the town was moved down from its hill castle in 1252.",
-			"It produces most of Spain’s ceramic tiles, and Spain is one of the world’s largest exporters.",
-			"Its Magdalena festival commemorates that move down from the hill."
-		]
+		"hooks": {
+			"en": [
+				"\"Castle of the plain\" — the town was moved down from its hill castle in 1252.",
+				"It produces most of Spain’s ceramic tiles, and Spain is one of the world’s largest exporters.",
+				"Its Magdalena festival commemorates that move down from the hill."
+			],
+			"it": [
+				"\"Castello della piana\": nel 1252 la città fu trasferita a valle dal castello sulla collina.",
+				"Produce la maggior parte delle piastrelle di ceramica spagnole, e la Spagna è tra i maggiori esportatori al mondo.",
+				"La sua festa della Magdalena ricorda quella discesa dalla collina."
+			]
+		}
 	},
 	"palma-de-mallorca": {
 		"kind": "city",
@@ -282,11 +429,18 @@
 		"region": "Islas Baleares",
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"Latin palma, a palm — and Mallorca is simply maior, the larger island, against Menorca the smaller.",
-			"Its cathedral has the largest Gothic rose window in the world, and Gaudí reworked the interior.",
-			"Chopin and George Sand spent a famously miserable winter in a monastery at Valldemossa nearby."
-		]
+		"hooks": {
+			"en": [
+				"Latin palma, a palm — and Mallorca is simply maior, the larger island, against Menorca the smaller.",
+				"Its cathedral has the largest Gothic rose window in the world, and Gaudí reworked the interior.",
+				"Chopin and George Sand spent a famously miserable winter in a monastery at Valldemossa nearby."
+			],
+			"it": [
+				"Dal latino palma, la palma: e Maiorca è semplicemente maior, l’isola più grande, di fronte a Minorca, la più piccola.",
+				"La sua cattedrale ha il rosone gotico più grande del mondo, e Gaudí ne rimaneggiò l’interno.",
+				"Chopin e George Sand trascorsero un inverno notoriamente infelice in un monastero di Valldemossa, poco lontano."
+			]
+		}
 	},
 	"valencia": {
 		"kind": "city",
@@ -296,11 +450,18 @@
 		"region": "Comunidad Valenciana",
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"Latin valentia, \"strength\" or \"valour\" — a name Rome gave several towns.",
-			"Paella comes from its Albufera lagoon, cooked over orange wood with rabbit and beans.",
-			"Its Water Tribunal has met outside the cathedral every Thursday for a thousand years to settle irrigation disputes, and is UNESCO-listed."
-		]
+		"hooks": {
+			"en": [
+				"Latin valentia, \"strength\" or \"valour\" — a name Rome gave several towns.",
+				"Paella comes from its Albufera lagoon, cooked over orange wood with rabbit and beans.",
+				"Its Water Tribunal has met outside the cathedral every Thursday for a thousand years to settle irrigation disputes, and is UNESCO-listed."
+			],
+			"it": [
+				"Il latino valentia, \"forza\" o \"valore\": un nome che Roma diede a diverse città.",
+				"La paella nasce nella sua laguna, l’Albufera, e si cuoce su legna d’arancio con coniglio e fagioli.",
+				"Il suo Tribunale delle Acque si riunisce ogni giovedì davanti alla cattedrale da mille anni per dirimere le liti sull’irrigazione, ed è patrimonio UNESCO."
+			]
+		}
 	},
 	"albacete": {
 		"kind": "city",
@@ -309,11 +470,18 @@
 		"region": "Castilla-La Mancha",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"From Arabic al-basit, \"the plain\".",
-			"It has made knives and scissors since the 1400s and has a museum of them.",
-			"La Mancha around it grows more vines by area than any other region in the world."
-		]
+		"hooks": {
+			"en": [
+				"From Arabic al-basit, \"the plain\".",
+				"It has made knives and scissors since the 1400s and has a museum of them.",
+				"La Mancha around it grows more vines by area than any other region in the world."
+			],
+			"it": [
+				"Dall’arabo al-basit, \"la pianura\".",
+				"Produce coltelli e forbici dal Quattrocento e ha un museo dedicato.",
+				"La Mancha che la circonda è la regione con la più vasta superficie a vigneto del mondo."
+			]
+		}
 	},
 	"badajoz": {
 		"kind": "city",
@@ -322,11 +490,18 @@
 		"region": "Extremadura",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"From Arabic Batalyaws, itself possibly from a Latin name.",
-			"Its Alcazaba is one of the largest Moorish fortresses in Spain.",
-			"It sits on the Portuguese border and was besieged repeatedly in the Peninsular War."
-		]
+		"hooks": {
+			"en": [
+				"From Arabic Batalyaws, itself possibly from a Latin name.",
+				"Its Alcazaba is one of the largest Moorish fortresses in Spain.",
+				"It sits on the Portuguese border and was besieged repeatedly in the Peninsular War."
+			],
+			"it": [
+				"Dall’arabo Batalyaws, a sua volta forse da un nome latino.",
+				"La sua Alcazaba è una delle più grandi fortezze moresche di Spagna.",
+				"Si trova sul confine con il Portogallo e fu assediata più volte durante la guerra d’indipendenza spagnola."
+			]
+		}
 	},
 	"alicante": {
 		"kind": "city",
@@ -335,11 +510,18 @@
 		"region": "Comunidad Valenciana",
 		"coastal": true,
 		"position": "south-east",
-		"hooks": [
-			"From Greek Akra Leuka, \"white peak\", through Arabic al-Laqant.",
-			"Its Santa Bárbara castle sits on a rock over the town, one of the largest medieval fortresses in Spain.",
-			"The Bonfires of Saint John each June burn satirical figures in the streets."
-		]
+		"hooks": {
+			"en": [
+				"From Greek Akra Leuka, \"white peak\", through Arabic al-Laqant.",
+				"Its Santa Bárbara castle sits on a rock over the town, one of the largest medieval fortresses in Spain.",
+				"The Bonfires of Saint John each June burn satirical figures in the streets."
+			],
+			"it": [
+				"Dal greco Akra Leuka, \"picco bianco\", attraverso l’arabo al-Laqant.",
+				"Il castello di Santa Bárbara sorge su una rupe sopra la città, ed è una delle più grandi fortezze medievali di Spagna.",
+				"Ogni giugno, con i Falò di San Giovanni, si bruciano figure satiriche per le strade."
+			]
+		}
 	},
 	"murcia": {
 		"kind": "city",
@@ -348,11 +530,18 @@
 		"region": "Región de Murcia",
 		"coastal": false,
 		"position": "south-east",
-		"hooks": [
-			"Uncertain: possibly Latin myrtea, the myrtle, or murtia from the Arabic Mursiyah — the Moors founded the city in 825.",
-			"Its huerta is irrigated by canals the Moors dug eleven centuries ago, still running on the same gradients.",
-			"Called the orchard of Europe, it grows vegetables for half the continent from one of the driest places in it."
-		]
+		"hooks": {
+			"en": [
+				"Uncertain: possibly Latin myrtea, the myrtle, or murtia from the Arabic Mursiyah — the Moors founded the city in 825.",
+				"Its huerta is irrigated by canals the Moors dug eleven centuries ago, still running on the same gradients.",
+				"Called the orchard of Europe, it grows vegetables for half the continent from one of the driest places in it."
+			],
+			"it": [
+				"Origine incerta: forse il latino myrtea, il mirto, o murtia dall’arabo Mursiyah; furono i Mori a fondare la città, nell’825.",
+				"La sua huerta è irrigata da canali che i Mori scavarono undici secoli fa, e che scorrono ancora con le stesse pendenze.",
+				"Detta l’orto d’Europa, coltiva verdure per mezzo continente da una delle sue zone più aride."
+			]
+		}
 	},
 	"cordoba": {
 		"kind": "city",
@@ -361,11 +550,18 @@
 		"region": "Andalucía",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"Of Phoenician or Iberian origin, possibly qart-tuba, \"good town\".",
-			"It was the largest city in the world in the tenth century, capital of the Caliphate of Córdoba.",
-			"Its Mezquita, a mosque with a cathedral built inside it, is a UNESCO site, and so is its patio festival."
-		]
+		"hooks": {
+			"en": [
+				"Of Phoenician or Iberian origin, possibly qart-tuba, \"good town\".",
+				"It was the largest city in the world in the tenth century, capital of the Caliphate of Córdoba.",
+				"Its Mezquita, a mosque with a cathedral built inside it, is a UNESCO site, and so is its patio festival."
+			],
+			"it": [
+				"Di origine fenicia o iberica, forse qart-tuba, \"città buona\".",
+				"Nel X secolo era la città più grande del mondo, capitale del Califfato di Cordova.",
+				"La sua Mezquita, una moschea con una cattedrale costruita al suo interno, è patrimonio UNESCO, e lo è anche la sua festa dei patii."
+			]
+		}
 	},
 	"jaen": {
 		"kind": "city",
@@ -374,11 +570,18 @@
 		"region": "Andalucía",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"From Arabic jayyan, \"crossroads of caravans\".",
-			"Its province produces more olive oil than any country except Spain itself.",
-			"Its cathedral was the model for many built in the Spanish Americas."
-		]
+		"hooks": {
+			"en": [
+				"From Arabic jayyan, \"crossroads of caravans\".",
+				"Its province produces more olive oil than any country except Spain itself.",
+				"Its cathedral was the model for many built in the Spanish Americas."
+			],
+			"it": [
+				"Dall’arabo jayyan, \"crocevia di carovane\".",
+				"La sua provincia produce più olio d’oliva di qualunque paese, Spagna esclusa.",
+				"La sua cattedrale fece da modello a molte di quelle costruite nell’America spagnola."
+			]
+		}
 	},
 	"cartagena": {
 		"kind": "city",
@@ -387,11 +590,18 @@
 		"region": "Región de Murcia",
 		"coastal": true,
 		"position": "south-east",
-		"hooks": [
-			"\"New Carthage\" — founded by the Carthaginians in 227 BC, and the model for Cartagena in Colombia.",
-			"Its Roman theatre was only found in 1988, under a demolished cathedral and market.",
-			"Spain’s Mediterranean naval base has been here since the 1700s, and the first practical submarine was launched in the harbour in 1888."
-		]
+		"hooks": {
+			"en": [
+				"\"New Carthage\" — founded by the Carthaginians in 227 BC, and the model for Cartagena in Colombia.",
+				"Its Roman theatre was only found in 1988, under a demolished cathedral and market.",
+				"Spain’s Mediterranean naval base has been here since the 1700s, and the first practical submarine was launched in the harbour in 1888."
+			],
+			"it": [
+				"\"Nuova Cartagine\": fondata dai Cartaginesi nel 227 a.C., fu il modello della Cartagena colombiana.",
+				"Il suo teatro romano fu scoperto solo nel 1988, sotto una cattedrale e un mercato demoliti.",
+				"La base navale spagnola del Mediterraneo è qui dal Settecento, e nel porto, nel 1888, fu varato il primo sottomarino davvero operativo."
+			]
+		}
 	},
 	"sevilla": {
 		"kind": "city",
@@ -400,11 +610,18 @@
 		"region": "Andalucía",
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"From Phoenician or Iberian Hisbaal, through Roman Hispalis and Arabic Ishbiliya.",
-			"It held a monopoly on trade with the Americas for two centuries, and Magellan’s expedition sailed from it.",
-			"Its cathedral is the largest Gothic church in the world and holds Columbus’s tomb."
-		]
+		"hooks": {
+			"en": [
+				"From Phoenician or Iberian Hisbaal, through Roman Hispalis and Arabic Ishbiliya.",
+				"It held a monopoly on trade with the Americas for two centuries, and Magellan’s expedition sailed from it.",
+				"Its cathedral is the largest Gothic church in the world and holds Columbus’s tomb."
+			],
+			"it": [
+				"Dal fenicio o iberico Hisbaal, attraverso la romana Hispalis e l’arabo Ishbiliya.",
+				"Per due secoli ebbe il monopolio del commercio con le Americhe, e da qui salpò la spedizione di Magellano.",
+				"La sua cattedrale è la più grande chiesa gotica del mondo e custodisce la tomba di Colombo."
+			]
+		}
 	},
 	"huelva": {
 		"kind": "city",
@@ -413,11 +630,18 @@
 		"region": "Andalucía",
 		"coastal": true,
 		"position": "south-west",
-		"hooks": [
-			"From Onuba, an Iberian or Phoenician name.",
-			"Columbus sailed from Palos in this province in 1492, and the monastery at La Rábida is where he found backing.",
-			"Its Doñana wetlands are one of Europe’s most important bird reserves and hold the Iberian lynx."
-		]
+		"hooks": {
+			"en": [
+				"From Onuba, an Iberian or Phoenician name.",
+				"Columbus sailed from Palos in this province in 1492, and the monastery at La Rábida is where he found backing.",
+				"Its Doñana wetlands are one of Europe’s most important bird reserves and hold the Iberian lynx."
+			],
+			"it": [
+				"Da Onuba, un nome iberico o fenicio.",
+				"Colombo salpò nel 1492 da Palos, in questa provincia, ed è nel monastero della Rábida che trovò appoggio.",
+				"Le zone umide di Doñana sono tra le riserve ornitologiche più importanti d’Europa e ospitano la lince iberica."
+			]
+		}
 	},
 	"granada": {
 		"kind": "city",
@@ -426,11 +650,18 @@
 		"region": "Andalucía",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"Possibly from the pomegranate, granada, which is on its arms — or from an Arabic or Latin name.",
-			"The Alhambra above it was the last Moorish palace in Spain, surrendered in 1492.",
-			"The Sierra Nevada behind it has the southernmost ski resort in Europe, an hour from the coast."
-		]
+		"hooks": {
+			"en": [
+				"Possibly from the pomegranate, granada, which is on its arms — or from an Arabic or Latin name.",
+				"The Alhambra above it was the last Moorish palace in Spain, surrendered in 1492.",
+				"The Sierra Nevada behind it has the southernmost ski resort in Europe, an hour from the coast."
+			],
+			"it": [
+				"Forse dal melograno, granada, che compare nel suo stemma, oppure da un nome arabo o latino.",
+				"L’Alhambra che la sovrasta fu l’ultimo palazzo moresco di Spagna, consegnato ai cristiani nel 1492.",
+				"La Sierra Nevada alle sue spalle ha la stazione sciistica più meridionale d’Europa, a un’ora dalla costa."
+			]
+		}
 	},
 	"almeria": {
 		"kind": "city",
@@ -439,11 +670,18 @@
 		"region": "Andalucía",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"From Arabic al-Mariyya, \"the watchtower\" or \"the mirror of the sea\".",
-			"The driest place in Europe, with about 200 mm of rain a year.",
-			"Its plastic greenhouses cover some 300 km², visible from space, and supply much of Europe’s winter vegetables."
-		]
+		"hooks": {
+			"en": [
+				"From Arabic al-Mariyya, \"the watchtower\" or \"the mirror of the sea\".",
+				"The driest place in Europe, with about 200 mm of rain a year.",
+				"Its plastic greenhouses cover some 300 km², visible from space, and supply much of Europe’s winter vegetables."
+			],
+			"it": [
+				"Dall’arabo al-Mariyya, \"la torre di vedetta\" o \"lo specchio del mare\".",
+				"Il luogo più arido d’Europa, con circa 200 mm di pioggia l’anno.",
+				"Le sue serre di plastica, visibili dallo spazio, coprono circa 300 km² e forniscono gran parte delle verdure invernali d’Europa."
+			]
+		}
 	},
 	"malaga": {
 		"kind": "city",
@@ -452,11 +690,18 @@
 		"region": "Andalucía",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"From Phoenician malaka, probably \"to salt\" — it was a fish-salting town.",
-			"Picasso was born here, and the museum of his work sits near the Roman theatre.",
-			"It is one of the oldest continuously inhabited cities in the world, founded about 770 BC."
-		]
+		"hooks": {
+			"en": [
+				"From Phoenician malaka, probably \"to salt\" — it was a fish-salting town.",
+				"Picasso was born here, and the museum of his work sits near the Roman theatre.",
+				"It is one of the oldest continuously inhabited cities in the world, founded about 770 BC."
+			],
+			"it": [
+				"Dal fenicio malaka, probabilmente \"salare\": era una città dove si salava il pesce.",
+				"Picasso nacque qui, e il museo dedicato alle sue opere sorge vicino al teatro romano.",
+				"È una delle città abitate ininterrottamente più antiche del mondo, fondata intorno al 770 a.C."
+			]
+		}
 	},
 	"cadiz": {
 		"kind": "city",
@@ -465,11 +710,18 @@
 		"region": "Andalucía",
 		"coastal": true,
 		"position": "south-west",
-		"hooks": [
-			"From Phoenician gadir, \"walled stronghold\", through Latin Gades.",
-			"Founded about 1100 BC, it is usually called the oldest continuously inhabited city in western Europe.",
-			"Spain’s first liberal constitution was written here in 1812 while the city was under French siege."
-		]
+		"hooks": {
+			"en": [
+				"From Phoenician gadir, \"walled stronghold\", through Latin Gades.",
+				"Founded about 1100 BC, it is usually called the oldest continuously inhabited city in western Europe.",
+				"Spain’s first liberal constitution was written here in 1812 while the city was under French siege."
+			],
+			"it": [
+				"Dal fenicio gadir, \"roccaforte cinta di mura\", attraverso il latino Gades.",
+				"Fondata intorno al 1100 a.C., è di solito considerata la città abitata ininterrottamente più antica dell’Europa occidentale.",
+				"La prima costituzione liberale di Spagna fu scritta qui nel 1812, mentre la città era assediata dai francesi."
+			]
+		}
 	},
 	"marbella": {
 		"kind": "city",
@@ -478,11 +730,18 @@
 		"region": "Andalucía",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"Probably from Arabic marbal-la, or from an older Iberian name — the \"beautiful sea\" reading is folk etymology.",
-			"It became a luxury resort after a German aristocrat opened a club there in 1954.",
-			"Its Puerto Banús marina was built in 1970 and is one of the most expensive moorings in the Mediterranean."
-		]
+		"hooks": {
+			"en": [
+				"Probably from Arabic marbal-la, or from an older Iberian name — the \"beautiful sea\" reading is folk etymology.",
+				"It became a luxury resort after a German aristocrat opened a club there in 1954.",
+				"Its Puerto Banús marina was built in 1970 and is one of the most expensive moorings in the Mediterranean."
+			],
+			"it": [
+				"Probabilmente dall’arabo marbal-la, o da un più antico nome iberico: la lettura \"mare bello\" è un’etimologia popolare.",
+				"Divenne una località di lusso dopo che un aristocratico tedesco vi aprì un club nel 1954.",
+				"Il suo porto turistico, Puerto Banús, fu costruito nel 1970 ed è uno degli ormeggi più cari del Mediterraneo."
+			]
+		}
 	},
 	"algeciras": {
 		"kind": "city",
@@ -491,10 +750,17 @@
 		"region": "Andalucía",
 		"coastal": true,
 		"position": "south-west",
-		"hooks": [
-			"From Arabic al-Jazira al-Khadra, \"the green island\", for an islet in its bay.",
-			"It was the first town the Moors founded in Iberia, in 711, on landing.",
-			"Its port handles more container traffic than any other in Spain and faces Gibraltar across the bay."
-		]
+		"hooks": {
+			"en": [
+				"From Arabic al-Jazira al-Khadra, \"the green island\", for an islet in its bay.",
+				"It was the first town the Moors founded in Iberia, in 711, on landing.",
+				"Its port handles more container traffic than any other in Spain and faces Gibraltar across the bay."
+			],
+			"it": [
+				"Dall’arabo al-Jazira al-Khadra, \"l’isola verde\", per un isolotto nella sua baia.",
+				"Fu la prima città fondata dai Mori nella penisola iberica, nel 711, appena sbarcati.",
+				"Il suo porto movimenta più container di qualunque altro in Spagna e guarda Gibilterra dall’altra parte della baia."
+			]
+		}
 	}
 }
