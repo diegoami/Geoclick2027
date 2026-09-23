@@ -139,7 +139,11 @@ Check items off as they land; update "Status" as iterations complete.
   on branch `explore-label-typography`. On Explore, a region's fallback name
   is set in the stretched names' type (serif capitals, ink and halo, no box),
   and the asked ink darkens to about 5.8:1. Towns, Quiz and Overview keep
-  their boxes. The owner checks it on a tablet, then merges.
+  their boxes. **Merged** ([PR #36](https://github.com/diegoami/Geoclick2027/pull/36), 2026-09-24).
+- **Built 2026-09-24** ([PR #37](https://github.com/diegoami/Geoclick2027/pull/37),
+  `tapped-name-shows`): on Explore, the name whose fact card is open always
+  shows, even when boxed in by curved neighbours (Basilicata at the country
+  view). It waits for the owner's merge OK.
 - **Raised by the product owner 2026-09-22, backlogged**: GitHub issue #11 —
   on the Known map an explicitly tapped name kept its earned colour instead
   of **Chosen**. Decided: an explicit tap is Chosen regardless of the streak,
