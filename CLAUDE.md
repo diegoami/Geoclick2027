@@ -130,22 +130,21 @@ flood — report the one line that mattered.
   supersedes an earlier one, amend that entry rather than leaving a stale one
   to be found first.
 - Tag releases (`vX.Y.Z` on `main`) with notes in `CHANGELOG.md` for
-  meaningful batches. Previews handed to any tester are published as alpha
-  (unmerged) or beta (merged, awaiting PO test) pre-releases — see
-  `docs/RELEASES.md`. Say in the entry what was built and what was actually
+  meaningful batches, staged on a `release/X.Y.Z` PR. Previews handed to
+  any tester are published as alpha (an unmerged task branch) or beta (the
+  release PR, awaiting PO test) pre-releases — see `docs/RELEASES.md`. Say in the entry what was built and what was actually
   tried, rather than implying it.
 - Roles: the user is Product Manager; the implementing model is the
   Developer. Finish by telling the user exactly what to run/click and what
   to expect.
-- **Reviews happen at milestones, by an independent model** (product
-  owner, 2026-09-23, replacing the per-PR fresh-Claude loop). Claude does
-  its work without a per-PR review round. At each milestone — before a
-  release is tagged, or when the product owner asks — Claude hands the
-  product owner a ready-to-paste prompt for a *different* model to review
-  the repository and find issues; the findings come back through the
-  product owner. Never spawn the reviewer yourself. Prompt template:
-  [docs/REVIEW_LOOP.md](docs/REVIEW_LOOP.md). The user's merge OK is
-  unchanged.
+- **Design first.** A design proposal is a GitHub issue labelled
+  `proposal`: the problem, findings with `file:line`, the design, and open
+  questions each with a recommended answer. Propose, get the product
+  owner's agreement, then branch. A per-release plan is one proposal (the
+  `docs/PLAN_V*.md` file may hold the detail; the issue is the thread); a
+  Medium or Large task, or a spike, gets its own. Small fixes inside an
+  agreed plan need none.
+- **Independent review at milestones** — see §3a.
 - **"Test locally" and "test the deployment" are two separately labelled
   steps.** Verify locally first and say so; only then check the live site,
   and say that too. While deploys are stopped (below) there is no live step
@@ -158,6 +157,58 @@ flood — report the one line that mattered.
   longer publishes the web app. Never trigger a deploy yourself; restarting
   them is the product owner's call. (Why: see `DECISIONS.md` — "Netlify
   build cost".)
+
+## 3a. Independent review
+
+*Reviewer: if a review-handoff prompt brought you here, that prompt defines
+your job; this file is the standard you review against.*
+
+Claude does the work itself, the design and the implementation, and never
+spawns its own reviewer. At each milestone it gives the product owner a
+prompt to run in a **different model**, in whatever tool the owner picks
+(Codex, DeepSeek, or another), in a fresh session every time. Nothing here
+assumes one tool. The review is **offered, never waited on**: the owner's
+agreement starts a branch and the owner's decision merges or publishes,
+reviewed or not. When a review does run, it is recorded on the thread the
+milestone already has:
+
+| Milestone | Thread | Offer the prompt |
+|---|---|---|
+| Design proposal written | the `proposal` issue | with the proposal |
+| PR that implements a proposal, gates green | the PR (it says `Closes #n` for the proposal) | when the PR is ready to merge |
+| Release staged | the `release/X.Y.Z` PR, with the beta's `SHA256SUMS.txt` in its body | before the owner's test and the stable tag (`docs/RELEASES.md`) |
+
+**Nothing else gets a review prompt by default**: not tooling fixes without
+a proposal, not wording or docs changes, not small fixes inside an agreed
+plan (the release review covers them), not re-reviews. At most a one-line
+mention that a review is possible; the prompt only if the owner asks.
+
+Every milestone PR body carries a `Review:` line that Claude keeps current:
+`not run`, `AGREE at <sha>`, or `BLOCK at <sha>: #n, #m`. A review can still
+run after the merge, against the merged commit; its findings are ordinary
+issues for a later PR.
+
+The reviewer posts to GitHub itself, and nothing is pasted back:
+
+- **one issue per reproduced finding**, labelled `review` plus a category
+  label (`bug`, `robustness`, `tests`, `design`, `cleanup`,
+  `documentation`), linking back to the thread and the SHA;
+- **always one verdict comment** on the thread: AGREE, or BLOCK when any
+  finding is MUST-FIX; the SHA reviewed, the issues it opened, what it
+  checked and found clean. A review that finds nothing still leaves a
+  record.
+
+Severities: **MUST-FIX** (fix before merging if the review arrives in time,
+otherwise first), **SHOULD**, and **OUT OF SCOPE** (not caused by the
+change). None of them locks anything; the owner decides.
+
+The `review-handoff` skill (`.claude/skills/review-handoff/SKILL.md`) holds
+the prompt template. When the owner says the review is in: read it from
+GitHub, reproduce each finding before acting on it, and fix it (`Fixes #n`
+in the PR) or rebut it with evidence on the issue. Recommend which fixes
+belong before the merge; the owner decides. Owner decisions go to the owner
+with a recommended default, not into the code. (Why: see `DECISIONS.md` —
+"An independent model reviews at milestones, on GitHub".)
 
 ## 4. Session lifecycle
 
@@ -205,6 +256,6 @@ Update this line when the implementing model changes. History: 116 commits
 trailered "Sonnet 5" up to 2026-09-13, then 274 trailered "Opus 5"; then 32
 trailered "DeepSeek V4.1 Flash" from 2026-09-21, with ChatGPT GPT-5.6 Luna
 (high) reviewing its PRs. On 2026-09-23 the implementing model became Claude
-Opus 5.5; the same day, reviews moved to an independent model at milestones
-([docs/REVIEW_LOOP.md](docs/REVIEW_LOOP.md)). The trailer was left stale once
+Opus 5.5; the same day, reviews moved to an independent model at milestones,
+recorded on GitHub (§3a). The trailer was left stale once
 already — keep it current.

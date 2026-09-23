@@ -290,13 +290,35 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   git-triggered build run" no longer produces a live site to check. Never
   trigger a deploy yourself; restarting them is the product owner's call.
 
-## An independent model reviews at milestones (2026-09-23)
+## An independent model reviews at milestones, on GitHub (2026-09-23)
 
-- **Claude works without a per-PR review; at milestones the product owner
-  runs an independent model over the repository** (product owner,
-  2026-09-23, the same day as the entry below it, which it supersedes).
-  Claude hands over a ready-to-paste prompt (docs/REVIEW_LOOP.md) and the
-  findings come back through the product owner. What this buys back is
+- **The review is recorded on GitHub by the reviewer itself** (product
+  owner, 2026-09-23, [#26](https://github.com/diegoami/Geoclick2027/issues/26),
+  adapted from diegoami/discola-web; amends the first version of this
+  entry, below). One issue per reproduced finding, labelled `review` plus a
+  category; always one AGREE/BLOCK verdict comment naming the SHA; a
+  `Review:` line on every milestone PR. Process: CLAUDE.md §3a; prompt:
+  `.claude/skills/review-handoff/SKILL.md`.
+- **Why GitHub and not a pasted report:** the first version handed the
+  owner a prompt whose output was one Markdown report, pasted back into a
+  Claude session. Findings then lived in a transcript: no issue to close
+  with `Fixes #n`, no verdict on the thread, no record that a review ran
+  or found nothing. The owner rejected it before it ran.
+- **Milestones only** — a design proposal, a PR that implements one, a
+  staged release. Discola also reviews every PR that changes what runs;
+  that was dropped here, and so was its re-review after a MUST-FIX fix. A
+  small fix inside an agreed plan is covered by the release review. **The
+  review is offered, never waited on**: the owner's agreement starts a
+  branch and the owner's decision merges, reviewed or not. **Tool-neutral**: the
+  owner picks the tool (Codex, DeepSeek, …); the prompt signs "— Reviewer
+  (<tool>, <model>)". No `AGENTS.md` was added — the prompt's first line
+  does the handover, and a second instruction file would drift.
+- **Releases gained a `release/X.Y.Z` PR** so a staged release has a
+  thread and a SHA to review; the beta is packaged from its head, so the
+  reviewer and the owner see the same build (docs/RELEASES.md).
+- *First version, same day:* **Claude works without a per-PR review; at
+  milestones the product owner runs an independent model over the
+  repository**, superseding the entry below it. What this buys back is
   the thing the fresh-Claude loop traded away: a second model's blind
   spots. What it gives up is a review on every PR; a milestone review sees
   a batch at once, so a bug can sit on `main` until the next one. PR #23
