@@ -1,4 +1,4 @@
-# Handover — 2026-09-23, v0.10.0 released; next work not yet chosen
+# Handover — 2026-09-23, v0.10.0 released; hardening batch proposed (#32)
 
 For whoever picks Geoclick up next, whether a human or a fresh Claude
 session. It records where things stand, what's next, and what's easy to
@@ -23,7 +23,7 @@ before any work starts.
 | Remediation programme | Closed with v0.2.0 ([REMEDIATION_PLAN.md](REMEDIATION_PLAN.md)); its automerge exception went with it |
 | Feature programme | Closed with v0.5.0 ([FEATURE_PLAN.md](FEATURE_PLAN.md)) |
 | Since then | Per-release plans: [PLAN_V0.6.md](PLAN_V0.6.md) through [PLAN_V0.9.4.md](PLAN_V0.9.4.md), each with its own ledger; now [PLAN_V0.10.md](PLAN_V0.10.md) |
-| Next | **Not chosen yet — the product owner picks.** Candidates: the **hardening batch** (FT-56 #7, FT-59 #8, plus the v0.10.0 review's two leftovers: `data/facts/italy.json` sardegna Italian sentence 2 keeps em dashes — the only one of 5 448 — and no browser test crosses the stretched-names/collision coordinate conversion); **#11** (explicit tap is Chosen, session-only); **FT-51 German** (postponed until the Italian has been read); the **zoomable world-map start screen** (below). A leftover Cloudflare "Workers Builds" check fails on every PR — a dashboard job for the product owner. **Merges:** three times on 2026-09-23 the owner said "merged" while the PR was still open on GitHub; Claude merged each on that OK with a merge commit — check `gh pr view` before assuming |
+| Next | **The hardening batch, proposed as [#32](https://github.com/diegoami/Geoclick2027/issues/32)** (FT-56, FT-59, FT-67, FT-68), waiting for the owner's agreement; then one branch, one PR. Other candidates after it: the rest of this list. Candidates were: the **hardening batch** (FT-56 #7, FT-59 #8, plus the v0.10.0 review's two leftovers: `data/facts/italy.json` sardegna Italian sentence 2 keeps em dashes — the only one of 5 448 — and no browser test crosses the stretched-names/collision coordinate conversion); **#11** (explicit tap is Chosen, session-only); **FT-51 German** (postponed until the Italian has been read); the **zoomable world-map start screen** (below). A leftover Cloudflare "Workers Builds" check fails on every PR — a dashboard job for the product owner. **Merges:** three times on 2026-09-23 the owner said "merged" while the PR was still open on GitHub; Claude merged each on that OK with a merge commit — check `gh pr view` before assuming |
 | After that | The next milestone is `v0.10.1` or `v0.11.0`, depending on what is picked: release prep PR → candidate → milestone issue → review → tag (docs/RELEASES.md, "The milestone") |
 | Also raised 2026-09-20 | **The start screen becomes a zoomable world map** — pick the country on the map, then the kind of quiz. The map list cannot be finalized as a list: the goal is a high number of maps, and `mapCatalog.ts` is already 31 countries and 66 maps. Favourites and Recent stay unchanged. Second item of the Iteration 8+ backlog, with the open questions listed there |
 
@@ -94,7 +94,7 @@ v0.10.0 installers were opened on a map in both shells.
 
 Suggested first message for the next session:
 
-> Read docs/HANDOVER.md. Next: <pick from the "Next" row>. Propose it as a GitHub issue first (CLAUDE.md §3, "Design first").
+> Read docs/HANDOVER.md, then issue #32 and my answers on it. Build the hardening batch on one branch.
 
 Whatever comes next, the working rules stay (CLAUDE.md §3):
 
