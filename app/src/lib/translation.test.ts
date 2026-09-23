@@ -50,6 +50,19 @@ describe('mergeTranslations', () => {
 		expect(merged).toEqual(file());
 	});
 
+	it('holds Italian to the house style', () => {
+		const { problems } = mergeTranslations(file(), 'it', {
+			lisboa: ['Uno — due.', 'Due.']
+		});
+		expect(problems).toEqual(['lisboa: sentence 1 keeps an em dash']);
+		expect(mergeTranslations(file(), 'it', { lisboa: ["L'isola.", 'Due.'] }).problems).toEqual([
+			'lisboa: sentence 1 has a straight apostrophe'
+		]);
+		expect(mergeTranslations(file(), 'it', { lisboa: ['Uno.', 'Two.'] }).problems).toEqual([
+			'lisboa: sentence 2 is still the English'
+		]);
+	});
+
 	it('wants a split patch for a place split by kind', () => {
 		const { problems } = mergeTranslations(file(), 'it', { jilin: ['Provincia.'] });
 		expect(problems).toEqual(['jilin: split by kind in the file, so the patch must be too']);

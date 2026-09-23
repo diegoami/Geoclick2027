@@ -51,6 +51,21 @@ export function missingTranslations(raw: Record<string, unknown>, lang: Language
 	return missing;
 }
 
+/**
+ * Italian house style (docs/TRANSLATION_STYLE_IT.md): the English em dash
+ * becomes a colon or a comma, the apostrophe is the typographic one, and a
+ * sentence left in English is not a translation.
+ */
+function houseStyle(lang: Language, given: string[], en: string[]): string | undefined {
+	if (lang !== 'it') return undefined;
+	for (const [n, s] of given.entries()) {
+		if (s.includes('—')) return `sentence ${n + 1} keeps an em dash`;
+		if (/\p{L}'\p{L}/u.test(s)) return `sentence ${n + 1} has a straight apostrophe`;
+		if (s === en[n]) return `sentence ${n + 1} is still the English`;
+	}
+	return undefined;
+}
+
 /** A list or a per-language object with `lang` added, keys in en/it/de order. */
 function withLanguage(
 	value: unknown,
@@ -85,6 +100,7 @@ export function mergeTranslations(
 			problem = 'not a list of non-empty sentences';
 		else if (given.length !== en.length)
 			problem = `${given.length} sentences for ${en.length} English`;
+		else problem = houseStyle(lang, given, en);
 		if (problem) problems.push(`${where}: ${problem}`);
 		return !problem;
 	};
