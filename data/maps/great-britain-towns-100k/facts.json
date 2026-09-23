@@ -5,11 +5,18 @@
 		"populationRank": 32,
 		"coastal": true,
 		"position": "north",
-		"hooks": [
-			"\"Mouth of the Don\" — aber is a Brittonic word for a river mouth, the same element as in Aberystwyth and Abergavenny.",
-			"It is built almost entirely of granite quarried at Rubislaw, once the biggest man-made hole in Europe.",
-			"North Sea oil came ashore here from 1975 and turned a fishing port into Europe’s offshore capital."
-		]
+		"hooks": {
+			"en": [
+				"\"Mouth of the Don\" — aber is a Brittonic word for a river mouth, the same element as in Aberystwyth and Abergavenny.",
+				"It is built almost entirely of granite quarried at Rubislaw, once the biggest man-made hole in Europe.",
+				"North Sea oil came ashore here from 1975 and turned a fishing port into Europe’s offshore capital."
+			],
+			"it": [
+				"\"Foce del Don\": aber è una parola brittonica per la foce di un fiume, lo stesso elemento di Aberystwyth e Abergavenny.",
+				"È costruita quasi interamente con granito cavato a Rubislaw, un tempo il più grande buco scavato dall’uomo in Europa.",
+				"Dal 1975 il petrolio del Mare del Nord arrivò a terra qui e fece di un porto peschereccio la capitale europea dell’offshore."
+			]
+		}
 	},
 	"dundee": {
 		"kind": "city",
@@ -17,11 +24,18 @@
 		"populationRank": 34,
 		"coastal": true,
 		"position": "north-west",
-		"hooks": [
-			"Probably from Gaelic dùn, a fort, plus a personal name or a word for fire.",
-			"It was built on jute, jam and journalism: the jute came from Bengal, the marmalade was invented here, and the Beano is still published in the town.",
-			"Scott’s Antarctic ship Discovery was built here and is moored on its waterfront."
-		]
+		"hooks": {
+			"en": [
+				"Probably from Gaelic dùn, a fort, plus a personal name or a word for fire.",
+				"It was built on jute, jam and journalism: the jute came from Bengal, the marmalade was invented here, and the Beano is still published in the town.",
+				"Scott’s Antarctic ship Discovery was built here and is moored on its waterfront."
+			],
+			"it": [
+				"Probabilmente dal gaelico dùn, \"forte\", più un nome di persona o una parola che significa fuoco.",
+				"Si è fatta su iuta, marmellata e giornalismo: la iuta arrivava dal Bengala, la marmellata d’arance fu inventata qui, e il Beano si pubblica ancora in città.",
+				"La Discovery, la nave antartica di Scott, fu costruita qui ed è ormeggiata sul suo lungomare."
+			]
+		}
 	},
 	"edinburgh": {
 		"kind": "city",
@@ -29,11 +43,18 @@
 		"populationRank": 13,
 		"coastal": true,
 		"position": "north-west",
-		"hooks": [
-			"Probably from Brittonic Din Eidyn, \"the fort of Eidyn\", with the Old English burh replacing din.",
-			"Its old and new towns are together a UNESCO site, the new one laid out on a grid in 1767.",
-			"Its festival is the largest arts festival in the world, and the castle sits on a plug of extinct volcano."
-		]
+		"hooks": {
+			"en": [
+				"Probably from Brittonic Din Eidyn, \"the fort of Eidyn\", with the Old English burh replacing din.",
+				"Its old and new towns are together a UNESCO site, the new one laid out on a grid in 1767.",
+				"Its festival is the largest arts festival in the world, and the castle sits on a plug of extinct volcano."
+			],
+			"it": [
+				"Probabilmente dal brittonico Din Eidyn, \"il forte di Eidyn\", con l’antico inglese burh al posto di din.",
+				"La sua città vecchia e la sua città nuova sono insieme patrimonio UNESCO; la nuova fu tracciata a scacchiera nel 1767.",
+				"Il suo festival è il più grande festival artistico del mondo, e il castello sorge sul camino di un vulcano spento."
+			]
+		}
 	},
 	"glasgow": {
 		"kind": "city",
@@ -42,11 +63,18 @@
 		"population1950": 1755000,
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"From Brittonic glas cau, \"green hollow\" — the green place by the Molendinar burn.",
-			"Its Clyde shipyards built a fifth of the world’s ships by 1900, including the Queen Mary.",
-			"Charles Rennie Mackintosh’s buildings made it a capital of art nouveau, and it was the second city of the empire."
-		]
+		"hooks": {
+			"en": [
+				"From Brittonic glas cau, \"green hollow\" — the green place by the Molendinar burn.",
+				"Its Clyde shipyards built a fifth of the world’s ships by 1900, including the Queen Mary.",
+				"Charles Rennie Mackintosh’s buildings made it a capital of art nouveau, and it was the second city of the empire."
+			],
+			"it": [
+				"Dal brittonico glas cau, \"conca verde\": il luogo verde lungo il torrente Molendinar.",
+				"Nel 1900 i suoi cantieri sul Clyde costruivano già un quinto delle navi del mondo; da lì uscì anche la Queen Mary.",
+				"Gli edifici di Charles Rennie Mackintosh ne fecero una capitale dell’art nouveau, e fu la seconda città dell’impero."
+			]
+		}
 	},
 	"newcastle-upon-tyne": {
 		"kind": "city",
@@ -56,11 +84,18 @@
 		"region": "Tyne and Wear",
 		"coastal": true,
 		"position": "north",
-		"hooks": [
-			"The castle was new in 1080, when William the Conqueror’s son built it — it has been called new ever since.",
-			"Hadrian’s Wall runs through the city, and the Romans had a bridge here first.",
-			"Its Tyne Bridge of 1928 was the model for the Sydney Harbour Bridge, built by the same firm."
-		]
+		"hooks": {
+			"en": [
+				"The castle was new in 1080, when William the Conqueror’s son built it — it has been called new ever since.",
+				"Hadrian’s Wall runs through the city, and the Romans had a bridge here first.",
+				"Its Tyne Bridge of 1928 was the model for the Sydney Harbour Bridge, built by the same firm."
+			],
+			"it": [
+				"Il castello era nuovo nel 1080, quando lo costruì il figlio di Guglielmo il Conquistatore: da allora è rimasto \"nuovo\".",
+				"Il Vallo di Adriano attraversa la città, e il primo ponte qui lo costruirono i Romani.",
+				"Il suo Tyne Bridge del 1928 fece da modello al Sydney Harbour Bridge, costruito dalla stessa impresa."
+			]
+		}
 	},
 	"sunderland": {
 		"kind": "city",
@@ -69,11 +104,18 @@
 		"region": "Tyne and Wear",
 		"coastal": true,
 		"position": "north",
-		"hooks": [
-			"From \"sundered land\" — land separated from an estate, or from the monastery across the river.",
-			"It was the largest shipbuilding town in the world in the 1800s, building a quarter of British tonnage.",
-			"The Venerable Bede wrote his history at Monkwearmouth-Jarrow here, and its glassmakers taught the craft to England."
-		]
+		"hooks": {
+			"en": [
+				"From \"sundered land\" — land separated from an estate, or from the monastery across the river.",
+				"It was the largest shipbuilding town in the world in the 1800s, building a quarter of British tonnage.",
+				"The Venerable Bede began his monastic life at Monkwearmouth here, and its glassmakers taught the craft to England."
+			],
+			"it": [
+				"Da \"sundered land\", terra separata: staccata da una tenuta, o dal monastero sull’altra riva del fiume.",
+				"Nell’Ottocento fu la più grande città cantieristica del mondo, e costruiva un quarto del tonnellaggio britannico.",
+				"Il Venerabile Beda cominciò qui la vita monastica, a Monkwearmouth, e i suoi vetrai insegnarono il mestiere all’Inghilterra."
+			]
+		}
 	},
 	"middlesbrough": {
 		"kind": "city",
@@ -82,11 +124,18 @@
 		"region": "Stockton-on-Tees",
 		"coastal": true,
 		"position": "centre",
-		"hooks": [
-			"\"The middle fortified place\" — probably a monastic site halfway between Durham and Whitby.",
-			"Its iron built the Sydney Harbour Bridge, and Captain Cook was born nearby.",
-			"Its Transporter Bridge carries a gondola across the Tees, one of very few still working anywhere."
-		]
+		"hooks": {
+			"en": [
+				"\"The middle fortified place\" — probably a monastic site halfway between Durham and Whitby.",
+				"Its iron built the Sydney Harbour Bridge, and Captain Cook was born nearby.",
+				"Its Transporter Bridge carries a gondola across the Tees, one of very few still working anywhere."
+			],
+			"it": [
+				"\"Il luogo fortificato di mezzo\": probabilmente un sito monastico a metà strada tra Durham e Whitby.",
+				"Il suo ferro servì a costruire il Sydney Harbour Bridge, e il capitano Cook nacque poco lontano.",
+				"Il suo ponte trasbordatore porta una gondola da una riva all’altra del Tees, ed è uno dei pochissimi ancora in funzione al mondo."
+			]
+		}
 	},
 	"york": {
 		"kind": "city",
@@ -94,11 +143,18 @@
 		"populationRank": 33,
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"Norse Jórvík, from Roman Eboracum, probably \"place of the yews\".",
-			"It was the Viking capital of England for nearly a century, and its streets still end in -gate, Norse for a street.",
-			"Its Minster has the largest expanse of medieval stained glass in the world, and Constantine was proclaimed emperor here in 306."
-		]
+		"hooks": {
+			"en": [
+				"Norse Jórvík, from Roman Eboracum, probably \"place of the yews\".",
+				"It was the Viking capital of England for nearly a century, and its streets still end in -gate, Norse for a street.",
+				"Its Minster has the largest expanse of medieval stained glass in the world, and Constantine was proclaimed emperor here in 306."
+			],
+			"it": [
+				"Il norreno Jórvík, dal romano Eboracum, probabilmente \"luogo dei tassi\".",
+				"Fu la capitale vichinga d’Inghilterra per quasi un secolo, e le sue strade finiscono ancora in -gate, in norreno \"strada\".",
+				"La sua cattedrale, il Minster, ha la più vasta superficie di vetrate medievali del mondo, e qui Costantino fu proclamato imperatore nel 306."
+			]
+		}
 	},
 	"blackpool": {
 		"kind": "city",
@@ -107,11 +163,18 @@
 		"region": "Lancashire",
 		"coastal": true,
 		"position": "west",
-		"hooks": [
-			"From a black pool — a peaty drainage channel that ran into the sea.",
-			"Its tower, opened 1894, was modelled on the Eiffel Tower at half the height.",
-			"Britain’s first electric street lighting ran here in 1879, which grew into the autumn Illuminations."
-		]
+		"hooks": {
+			"en": [
+				"From a black pool — a peaty drainage channel that ran into the sea.",
+				"Its tower, opened 1894, was modelled on the Eiffel Tower at half the height.",
+				"Britain’s first electric street lighting ran here in 1879, which grew into the autumn Illuminations."
+			],
+			"it": [
+				"Da una pozza nera: un canale di scolo torboso che sfociava in mare.",
+				"La sua torre, inaugurata nel 1894, ricalca la Torre Eiffel ma è alta la metà.",
+				"Qui nel 1879 si accese la prima illuminazione stradale elettrica della Gran Bretagna, da cui nacquero le Illuminations d’autunno."
+			]
+		}
 	},
 	"bradford": {
 		"kind": "city",
@@ -120,11 +183,18 @@
 		"region": "West Yorkshire",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"\"The broad ford\" over the Bradford Beck.",
-			"It was the wool capital of the world, and its Little Germany district was built by German-Jewish textile merchants.",
-			"It is a UNESCO City of Film, the first in the world, and holds the National Science and Media Museum."
-		]
+		"hooks": {
+			"en": [
+				"\"The broad ford\" over the Bradford Beck.",
+				"It was the wool capital of the world, and its Little Germany district was built by German-Jewish textile merchants.",
+				"It is a UNESCO City of Film, the first in the world, and holds the National Science and Media Museum."
+			],
+			"it": [
+				"\"Il guado largo\" sul Bradford Beck.",
+				"Fu la capitale mondiale della lana, e il suo quartiere Little Germany fu costruito da mercanti tessili ebrei tedeschi.",
+				"È Città del Cinema UNESCO, la prima al mondo, e ospita il National Science and Media Museum."
+			]
+		}
 	},
 	"leeds": {
 		"kind": "city",
@@ -134,11 +204,18 @@
 		"region": "West Yorkshire",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"From Loidis, the name of a Brittonic kingdom or district.",
-			"Its 1816 Leeds and Liverpool Canal and its mills made it a centre of ready-made clothing.",
-			"Louis Le Prince shot what is probably the world’s first moving film on Leeds Bridge in 1888, then vanished from a train."
-		]
+		"hooks": {
+			"en": [
+				"From Loidis, the name of a Brittonic kingdom or district.",
+				"Its 1816 Leeds and Liverpool Canal and its mills made it a centre of ready-made clothing.",
+				"Louis Le Prince shot what is probably the world’s first moving film on Leeds Bridge in 1888, then vanished from a train."
+			],
+			"it": [
+				"Da Loidis, il nome di un regno o di un distretto brittonico.",
+				"Il canale Leeds-Liverpool, del 1816, e le sue fabbriche tessili ne fecero un centro dell’abbigliamento confezionato.",
+				"Nel 1888 Louis Le Prince girò sul Leeds Bridge quello che è probabilmente il primo filmato della storia, poi scomparve da un treno."
+			]
+		}
 	},
 	"kingston-upon-hull": {
 		"kind": "city",
@@ -146,11 +223,18 @@
 		"populationRank": 25,
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"\"The king’s town on the Hull\" — Edward I bought it in 1293 and renamed it.",
-			"William Wilberforce, who led the campaign against the slave trade, was born and elected here.",
-			"Its telephone boxes are cream, not red, because it kept its own municipal phone company."
-		]
+		"hooks": {
+			"en": [
+				"\"The king’s town on the Hull\" — Edward I bought it in 1293 and renamed it.",
+				"William Wilberforce, who led the campaign against the slave trade, was born and elected here.",
+				"Its telephone boxes are cream, not red, because it kept its own municipal phone company."
+			],
+			"it": [
+				"\"La città del re sull’Hull\": Edoardo I la comprò nel 1293 e le cambiò nome.",
+				"William Wilberforce, che guidò la campagna contro la tratta degli schiavi, nacque e fu eletto qui.",
+				"Le sue cabine telefoniche sono color crema, non rosse, perché la città ha conservato una propria compagnia telefonica municipale."
+			]
+		}
 	},
 	"manchester": {
 		"kind": "city",
@@ -159,11 +243,18 @@
 		"population1950": 2422000,
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"From Roman Mamucium, probably \"breast-shaped hill\", plus the -chester that marks a Roman camp.",
-			"The first industrial city in the world, built on cotton, and called Cottonopolis.",
-			"The atom was first split here by Rutherford, and the first stored-program computer ran in the university in 1948."
-		]
+		"hooks": {
+			"en": [
+				"From Roman Mamucium, probably \"breast-shaped hill\", plus the -chester that marks a Roman camp.",
+				"The first industrial city in the world, built on cotton, and called Cottonopolis.",
+				"The atom was first split here by Rutherford, and the first stored-program computer ran in the university in 1948."
+			],
+			"it": [
+				"Dal romano Mamucium, probabilmente \"collina a forma di seno\", più il -chester che indica un accampamento romano.",
+				"La prima città industriale del mondo, costruita sul cotone e soprannominata Cottonopolis.",
+				"Qui Rutherford scisse per primo l’atomo, e nel 1948 all’università girò il primo computer a programma memorizzato."
+			]
+		}
 	},
 	"liverpool": {
 		"kind": "city",
@@ -173,11 +264,18 @@
 		"region": "Merseyside",
 		"coastal": true,
 		"position": "west",
-		"hooks": [
-			"Probably from \"liver\", a thick or muddy pool — the bird on the city arms is a later invention to fit the name.",
-			"It handled about 40% of the world’s trade at its peak, including a large share of the transatlantic slave trade.",
-			"Its waterfront was a UNESCO site until 2021, and the Beatles formed in the city in 1960."
-		]
+		"hooks": {
+			"en": [
+				"Probably from \"liver\", a thick or muddy pool — the bird on the city arms is a later invention to fit the name.",
+				"It handled about 40% of the world’s trade at its peak, including a large share of the transatlantic slave trade.",
+				"Its waterfront was a UNESCO site until 2021, and the Beatles formed in the city in 1960."
+			],
+			"it": [
+				"Probabilmente da \"liver\", una pozza densa o fangosa: l’uccello dello stemma cittadino è un’invenzione successiva, fatta per accordarsi al nome.",
+				"Al suo apice gestiva circa il 40% del commercio mondiale, compresa una larga parte della tratta atlantica degli schiavi.",
+				"Il suo lungomare fu patrimonio UNESCO fino al 2021, e i Beatles si formarono in città nel 1960."
+			]
+		}
 	},
 	"sheffield": {
 		"kind": "city",
@@ -186,11 +284,18 @@
 		"region": "South Yorkshire",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"\"Open land by the river Sheaf\" — sheaf is from an Old English word meaning to divide.",
-			"Crucible steel and then stainless steel were both invented here, in 1740 and 1913.",
-			"It is the greenest large city in England, with over two million trees and a third of it inside the Peak District."
-		]
+		"hooks": {
+			"en": [
+				"\"Open land by the river Sheaf\" — sheaf is from an Old English word meaning to divide.",
+				"Crucible steel and then stainless steel were both invented here, in 1740 and 1913.",
+				"It is the greenest large city in England, with over two million trees and a third of it inside the Peak District."
+			],
+			"it": [
+				"\"Terreno aperto presso il fiume Sheaf\": sheaf viene da una parola dell’antico inglese che significa dividere.",
+				"Qui furono inventati sia l’acciaio al crogiolo sia l’acciaio inossidabile, nel 1740 e nel 1913.",
+				"È la grande città più verde d’Inghilterra, con oltre due milioni di alberi e un terzo del territorio dentro il Peak District."
+			]
+		}
 	},
 	"stoke-on-trent": {
 		"kind": "city",
@@ -198,11 +303,18 @@
 		"populationRank": 21,
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"Stoke is Old English stoc, a place or dependent settlement — one of the commonest names in England.",
-			"It is six towns federated in 1910, which is why it has no single centre; Arnold Bennett called them the Five Towns.",
-			"Wedgwood, Spode and Minton all potted here, and bone china was invented in the town."
-		]
+		"hooks": {
+			"en": [
+				"Stoke is Old English stoc, a place or dependent settlement — one of the commonest names in England.",
+				"It is six towns federated in 1910, which is why it has no single centre; Arnold Bennett called them the Five Towns.",
+				"Wedgwood, Spode and Minton all potted here, and bone china was invented in the town."
+			],
+			"it": [
+				"Stoke è l’antico inglese stoc, un luogo o un insediamento dipendente: uno dei toponimi più comuni d’Inghilterra.",
+				"Sono sei città federate nel 1910, ed è per questo che non ha un centro unico; Arnold Bennett le chiamava le Cinque Città.",
+				"Wedgwood, Spode e Minton lavoravano tutti qui la ceramica, e in città fu inventata la porcellana bone china."
+			]
+		}
 	},
 	"nottingham": {
 		"kind": "city",
@@ -210,11 +322,18 @@
 		"populationRank": 9,
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"From Snotingaham, \"the homestead of Snot’s people\" — the Normans dropped the S because they found it hard to say.",
-			"The Robin Hood story is set in its sheriff’s county, and the castle stands on caves cut into sandstone.",
-			"There are over 800 of those caves under the city, the largest such network in Britain."
-		]
+		"hooks": {
+			"en": [
+				"From Snotingaham, \"the homestead of Snot’s people\" — the Normans dropped the S because they found it hard to say.",
+				"The Robin Hood story is set in its sheriff’s county, and the castle stands on caves cut into sandstone.",
+				"There are over 800 of those caves under the city, the largest such network in Britain."
+			],
+			"it": [
+				"Da Snotingaham, \"la fattoria della gente di Snot\": i Normanni tolsero la S perché la trovavano difficile da pronunciare.",
+				"La leggenda di Robin Hood è ambientata nella contea del suo sceriffo, e il castello sorge su grotte scavate nell’arenaria.",
+				"Sotto la città si contano oltre 800 grotte scavate nell’arenaria, la rete più estesa di questo tipo in Gran Bretagna."
+			]
+		}
 	},
 	"norwich": {
 		"kind": "city",
@@ -223,11 +342,18 @@
 		"region": "Norfolk",
 		"coastal": false,
 		"position": "south-east",
-		"hooks": [
-			"The \"north wic\" — wic being a trading settlement, the same element as in Ipswich and Greenwich.",
-			"It was England’s second city for centuries and has more medieval churches than any city north of the Alps.",
-			"It is a UNESCO City of Literature and had Britain’s first provincial public library."
-		]
+		"hooks": {
+			"en": [
+				"The \"north wic\" — wic being a trading settlement, the same element as in Ipswich and Greenwich.",
+				"It was England’s second city for centuries and has more medieval churches than any city north of the Alps.",
+				"It is a UNESCO City of Literature and had Britain’s first provincial public library."
+			],
+			"it": [
+				"Il \"north wic\": wic era un insediamento commerciale, lo stesso elemento di Ipswich e Greenwich.",
+				"Per secoli fu la seconda città d’Inghilterra e ha più chiese medievali di qualsiasi altra città a nord delle Alpi.",
+				"È Città della Letteratura UNESCO ed ebbe la prima biblioteca pubblica di provincia della Gran Bretagna."
+			]
+		}
 	},
 	"leicester": {
 		"kind": "city",
@@ -235,11 +361,18 @@
 		"populationRank": 16,
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"From the Ligore people plus the Roman -cester — \"the Roman fort of the Ligore\".",
-			"Richard III was buried here after Bosworth and found under a car park in 2012.",
-			"It is one of the most diverse cities in Britain and holds the largest Diwali celebration outside India."
-		]
+		"hooks": {
+			"en": [
+				"From the Ligore people plus the Roman -cester — \"the Roman fort of the Ligore\".",
+				"Richard III was buried here after Bosworth and found under a car park in 2012.",
+				"It is one of the most diverse cities in Britain and holds the largest Diwali celebration outside India."
+			],
+			"it": [
+				"Dal popolo dei Ligore più il -cester romano: \"il forte romano dei Ligore\".",
+				"Riccardo III fu sepolto qui dopo Bosworth e ritrovato sotto un parcheggio nel 2012.",
+				"È una delle città più multiculturali della Gran Bretagna e ospita la più grande festa di Diwali fuori dall’India."
+			]
+		}
 	},
 	"peterborough": {
 		"kind": "city",
@@ -247,11 +380,18 @@
 		"populationRank": 36,
 		"coastal": false,
 		"position": "south-east",
-		"hooks": [
-			"\"St Peter’s borough\", after the monastery dedicated to him.",
-			"Its cathedral holds the grave of Catherine of Aragon, and Mary Queen of Scots was buried there before being moved.",
-			"Flag Fen nearby is a Bronze Age wooden causeway preserved in the peat since about 1300 BC."
-		]
+		"hooks": {
+			"en": [
+				"\"St Peter’s borough\", after the monastery dedicated to him.",
+				"Its cathedral holds the grave of Catherine of Aragon, and Mary Queen of Scots was buried there before being moved.",
+				"Flag Fen nearby is a Bronze Age wooden causeway preserved in the peat since about 1300 BC."
+			],
+			"it": [
+				"\"Il borgo di San Pietro\", dal monastero a lui dedicato.",
+				"La sua cattedrale custodisce la tomba di Caterina d’Aragona, e vi fu sepolta anche Maria Stuarda prima di essere traslata.",
+				"Flag Fen, qui vicino, è una strada rialzata in legno dell’età del bronzo, conservata nella torba dal 1300 a.C. circa."
+			]
+		}
 	},
 	"birmingham": {
 		"kind": "city",
@@ -261,11 +401,18 @@
 		"region": "West Midlands",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"\"The homestead of Beorma’s people\" — a personal name plus -ing and -ham.",
-			"It had more canal miles than Venice at its peak, built to move coal and iron.",
-			"The Lunar Society met here and included Boulton, Watt, Priestley and Darwin’s grandfather."
-		]
+		"hooks": {
+			"en": [
+				"\"The homestead of Beorma’s people\" — a personal name plus -ing and -ham.",
+				"It had more canal miles than Venice at its peak, built to move coal and iron.",
+				"The Lunar Society met here and included Boulton, Watt, Priestley and Darwin’s grandfather."
+			],
+			"it": [
+				"\"La fattoria della gente di Beorma\": un nome di persona più -ing e -ham.",
+				"Al suo apice aveva più chilometri di canali di Venezia, scavati per trasportare carbone e ferro.",
+				"Qui si riuniva la Lunar Society, di cui facevano parte Boulton, Watt, Priestley e il nonno di Darwin."
+			]
+		}
 	},
 	"coventry": {
 		"kind": "city",
@@ -274,11 +421,18 @@
 		"region": "West Midlands",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"Probably \"Cofa’s tree\" — a personal name plus a tree marking a meeting place.",
-			"Lady Godiva is said to have ridden through it naked to protest her husband’s taxes.",
-			"Its cathedral was destroyed in 1940 and the ruins left beside the new one, which made the city a symbol of reconciliation."
-		]
+		"hooks": {
+			"en": [
+				"Probably \"Cofa’s tree\" — a personal name plus a tree marking a meeting place.",
+				"Lady Godiva is said to have ridden through it naked to protest her husband’s taxes.",
+				"Its cathedral was destroyed in 1940 and the ruins left beside the new one, which made the city a symbol of reconciliation."
+			],
+			"it": [
+				"Probabilmente \"l’albero di Cofa\": un nome di persona più un albero che segnava un luogo di riunione.",
+				"Si dice che Lady Godiva l’abbia attraversata a cavallo nuda per protestare contro le tasse del marito.",
+				"La sua cattedrale fu distrutta nel 1940 e le rovine furono lasciate accanto a quella nuova, facendo della città un simbolo di riconciliazione."
+			]
+		}
 	},
 	"cambridge": {
 		"kind": "city",
@@ -287,11 +441,18 @@
 		"region": "Cambridgeshire",
 		"coastal": false,
 		"position": "south-east",
-		"hooks": [
-			"\"The bridge over the Granta\" — the river’s name later changed to the Cam to match the town, not the other way round.",
-			"Its university was founded in 1209 by scholars fleeing Oxford after a dispute with townspeople.",
-			"The structure of DNA was worked out here in 1953, and the university has produced more Nobel laureates than most countries."
-		]
+		"hooks": {
+			"en": [
+				"\"The bridge over the Granta\" — the river’s name later changed to the Cam to match the town, not the other way round.",
+				"Its university was founded in 1209 by scholars fleeing Oxford after a dispute with townspeople.",
+				"The structure of DNA was worked out here in 1953, and the university has produced more Nobel laureates than most countries."
+			],
+			"it": [
+				"\"Il ponte sul Granta\": più tardi il fiume cambiò nome in Cam per accordarsi alla città, non il contrario.",
+				"La sua università fu fondata nel 1209 da studiosi fuggiti da Oxford dopo una lite con gli abitanti.",
+				"Qui nel 1953 fu scoperta la struttura del DNA, e l’università ha avuto più premi Nobel della maggior parte dei paesi."
+			]
+		}
 	},
 	"ipswich": {
 		"kind": "city",
@@ -300,11 +461,18 @@
 		"region": "Suffolk",
 		"coastal": true,
 		"position": "south-east",
-		"hooks": [
-			"\"Gipe’s wic\" — a trading settlement, and one of the oldest continuously occupied English towns, from about 600.",
-			"Thomas Wolsey, Henry VIII’s cardinal, was born here as a butcher’s son.",
-			"Constable painted the Suffolk countryside around it, and the area is still called Constable Country."
-		]
+		"hooks": {
+			"en": [
+				"\"Gipe’s wic\" — a trading settlement, and one of the oldest continuously occupied English towns, from about 600.",
+				"Thomas Wolsey, Henry VIII’s cardinal, was born here as a butcher’s son.",
+				"Constable painted the Suffolk countryside around it, and the area is still called Constable Country."
+			],
+			"it": [
+				"\"Il wic di Gipe\": un insediamento commerciale, e una delle città inglesi abitate senza interruzione da più tempo, dal 600 circa.",
+				"Thomas Wolsey, il cardinale di Enrico VIII, nacque qui, figlio di un macellaio.",
+				"Constable dipinse le campagne del Suffolk qui attorno, e la zona si chiama ancora Constable Country."
+			]
+		}
 	},
 	"luton": {
 		"kind": "city",
@@ -312,11 +480,18 @@
 		"populationRank": 29,
 		"coastal": false,
 		"position": "south-east",
-		"hooks": [
-			"\"Farm on the river Lea\" — Lea plus tun, a settlement.",
-			"It made straw hats for two centuries, which is why its football club is nicknamed the Hatters.",
-			"Vauxhall built cars here from 1905, and its airport is one of London’s busiest."
-		]
+		"hooks": {
+			"en": [
+				"\"Farm on the river Lea\" — Lea plus tun, a settlement.",
+				"It made straw hats for two centuries, which is why its football club is nicknamed the Hatters.",
+				"Vauxhall built cars here from 1905, and its airport is one of London’s busiest."
+			],
+			"it": [
+				"\"Fattoria sul fiume Lea\": Lea più tun, un insediamento.",
+				"Per due secoli fabbricò cappelli di paglia, ed è per questo che la sua squadra di calcio è soprannominata the Hatters, \"i cappellai\".",
+				"La Vauxhall vi costruì automobili dal 1905, e il suo aeroporto è uno dei più trafficati di Londra."
+			]
+		}
 	},
 	"oxford": {
 		"kind": "city",
@@ -325,11 +500,18 @@
 		"region": "Oxfordshire",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"\"The ford for oxen\" over the Thames.",
-			"Its university is the oldest in the English-speaking world, teaching since at least 1096.",
-			"The Bodleian is entitled to a copy of every book published in Britain, and Tolkien and Lewis wrote in its pubs."
-		]
+		"hooks": {
+			"en": [
+				"\"The ford for oxen\" over the Thames.",
+				"Its university is the oldest in the English-speaking world, teaching since at least 1096.",
+				"The Bodleian is entitled to a copy of every book published in Britain, and Tolkien and Lewis wrote in its pubs."
+			],
+			"it": [
+				"\"Il guado dei buoi\" sul Tamigi.",
+				"La sua università è la più antica del mondo anglofono, e vi si insegna almeno dal 1096.",
+				"La Bodleian ha diritto a una copia di ogni libro pubblicato in Gran Bretagna, e Tolkien e Lewis scrivevano nei suoi pub."
+			]
+		}
 	},
 	"swansea": {
 		"kind": "city",
@@ -337,11 +519,18 @@
 		"populationRank": 26,
 		"coastal": true,
 		"position": "south-west",
-		"hooks": [
-			"Probably Norse Sveinn’s ey, \"Sveinn’s island\"; in Welsh it is Abertawe, \"mouth of the Tawe\".",
-			"It smelted most of the world’s copper in the 1800s and was called Copperopolis.",
-			"Dylan Thomas was born here and called it an ugly, lovely town."
-		]
+		"hooks": {
+			"en": [
+				"Probably Norse Sveinn’s ey, \"Sveinn’s island\"; in Welsh it is Abertawe, \"mouth of the Tawe\".",
+				"It smelted most of the world’s copper in the 1800s and was called Copperopolis.",
+				"Dylan Thomas was born here and called it an ugly, lovely town."
+			],
+			"it": [
+				"Probabilmente il norreno Sveinn’s ey, \"l’isola di Sveinn\"; in gallese è Abertawe, \"foce del Tawe\".",
+				"Nell’Ottocento fondeva la maggior parte del rame del mondo, e la chiamavano Copperopolis.",
+				"Dylan Thomas nacque qui e la definì una città brutta e adorabile."
+			]
+		}
 	},
 	"southend-on-sea": {
 		"kind": "city",
@@ -349,11 +538,18 @@
 		"populationRank": 11,
 		"coastal": true,
 		"position": "south-east",
-		"hooks": [
-			"The \"south end\" of the village of Prittlewell, which it long ago outgrew.",
-			"Its pier is the longest pleasure pier in the world at 2.15 km, with its own railway.",
-			"It became a city in 2022, in tribute to its murdered MP."
-		]
+		"hooks": {
+			"en": [
+				"The \"south end\" of the village of Prittlewell, which it long ago outgrew.",
+				"Its pier is the longest pleasure pier in the world at 2.15 km, with its own railway.",
+				"It became a city in 2022, in tribute to its murdered MP."
+			],
+			"it": [
+				"L’\"estremità sud\" del villaggio di Prittlewell, ormai da tempo molto più grande del villaggio stesso.",
+				"Il suo molo, lungo 2,15 km e con una propria ferrovia, è il pontile da passeggio più lungo del mondo.",
+				"È diventata città nel 2022, in omaggio al suo deputato assassinato."
+			]
+		}
 	},
 	"london": {
 		"kind": "city",
@@ -364,11 +560,18 @@
 		"capitalOf": "country",
 		"coastal": false,
 		"position": "south-east",
-		"hooks": [
-			"Londinium is pre-Roman and unexplained; the best guess is a Brittonic name about the unfordable river.",
-			"It was the largest city in the world from about 1825 to 1925, and about 300 languages are spoken in it.",
-			"Its Underground, opened 1863, was the first in the world, and the 1666 fire destroyed 13,200 houses."
-		]
+		"hooks": {
+			"en": [
+				"Londinium is pre-Roman and unexplained; the best guess is a Brittonic name about the unfordable river.",
+				"It was the largest city in the world from about 1825 to 1925, and about 300 languages are spoken in it.",
+				"Its Underground, opened 1863, was the first in the world, and the 1666 fire destroyed 13,200 houses."
+			],
+			"it": [
+				"Londinium è preromano e senza spiegazione; l’ipotesi migliore è un nome brittonico legato al fiume che non si può guadare.",
+				"Fu la città più grande del mondo all’incirca dal 1825 al 1925, e vi si parlano circa 300 lingue.",
+				"La sua metropolitana, aperta nel 1863, fu la prima del mondo, e l’incendio del 1666 distrusse 13.200 case."
+			]
+		}
 	},
 	"cardiff": {
 		"kind": "city",
@@ -376,11 +579,18 @@
 		"populationRank": 8,
 		"coastal": true,
 		"position": "south-west",
-		"hooks": [
-			"Welsh Caerdydd, probably \"the fort on the Taff\" — caer is a fort, the same word as in Caernarfon.",
-			"It was the largest coal port in the world by 1913, shipping what the valleys dug.",
-			"Its Coal Exchange saw the world’s first recorded million-pound deal, in 1904."
-		]
+		"hooks": {
+			"en": [
+				"Welsh Caerdydd, probably \"the fort on the Taff\" — caer is a fort, the same word as in Caernarfon.",
+				"It was the largest coal port in the world by 1913, shipping what the valleys dug.",
+				"Its Coal Exchange saw the world’s first recorded million-pound deal, in 1904."
+			],
+			"it": [
+				"In gallese Caerdydd, probabilmente \"il forte sul Taff\": caer è un forte, la stessa parola di Caernarfon.",
+				"Nel 1913 era il più grande porto carbonifero del mondo, e spediva ciò che le valli estraevano.",
+				"Nella sua Borsa del carbone si concluse, nel 1904, il primo affare da un milione di sterline mai registrato al mondo."
+			]
+		}
 	},
 	"reading": {
 		"kind": "city",
@@ -389,11 +599,18 @@
 		"region": "Oxfordshire",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"\"The people of Reada\" — a personal name meaning the red one.",
-			"Oscar Wilde was imprisoned in its gaol and wrote The Ballad of Reading Gaol about it.",
-			"Its abbey holds the oldest known English song, Sumer Is Icumen In, written down there about 1250."
-		]
+		"hooks": {
+			"en": [
+				"\"The people of Reada\" — a personal name meaning the red one.",
+				"Oscar Wilde was imprisoned in its gaol and wrote The Ballad of Reading Gaol about it.",
+				"The oldest known English song, Sumer Is Icumen In, was written down at its abbey about 1250."
+			],
+			"it": [
+				"\"La gente di Reada\": un nome di persona che significa \"il rosso\".",
+				"Oscar Wilde fu rinchiuso nel suo carcere e ne scrisse nella Ballata del carcere di Reading.",
+				"La più antica canzone inglese conosciuta, Sumer Is Icumen In, fu trascritta nella sua abbazia verso il 1250."
+			]
+		}
 	},
 	"bristol": {
 		"kind": "city",
@@ -401,11 +618,18 @@
 		"populationRank": 12,
 		"coastal": true,
 		"position": "south-west",
-		"hooks": [
-			"From Brycgstow, \"the place at the bridge\" — the local accent added the final L.",
-			"Its merchants financed a large share of the transatlantic slave trade, which the city has been reckoning with publicly.",
-			"Brunel built the Clifton Suspension Bridge and the SS Great Britain here, and Cabot sailed from it in 1497."
-		]
+		"hooks": {
+			"en": [
+				"From Brycgstow, \"the place at the bridge\" — the local accent added the final L.",
+				"Its merchants financed a large share of the transatlantic slave trade, which the city has been reckoning with publicly.",
+				"Brunel built the Clifton Suspension Bridge and the SS Great Britain here, and Cabot sailed from it in 1497."
+			],
+			"it": [
+				"Da Brycgstow, \"il luogo presso il ponte\": la L finale l’ha aggiunta l’accento locale.",
+				"I suoi mercanti finanziarono una larga parte della tratta atlantica degli schiavi, con cui la città sta facendo i conti pubblicamente.",
+				"Qui Brunel costruì il Clifton Suspension Bridge e la SS Great Britain, e da qui Giovanni Caboto salpò nel 1497."
+			]
+		}
 	},
 	"southampton": {
 		"kind": "city",
@@ -413,11 +637,18 @@
 		"populationRank": 23,
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"The \"south hamtun\", to distinguish it from Northampton — hamtun is a home farm or settlement.",
-			"The Titanic sailed from here in 1912, and about a third of those who died came from the town.",
-			"It was the main embarkation port for D-Day and still handles most British cruise traffic."
-		]
+		"hooks": {
+			"en": [
+				"The \"south hamtun\", to distinguish it from Northampton — hamtun is a home farm or settlement.",
+				"The Titanic sailed from here in 1912, and about a third of those who died came from the town.",
+				"It was the main embarkation port for D-Day and still handles most British cruise traffic."
+			],
+			"it": [
+				"La \"south hamtun\", per distinguerla da Northampton: hamtun è una fattoria padronale o un insediamento.",
+				"Il Titanic salpò da qui nel 1912, e circa un terzo di chi morì veniva dalla città.",
+				"Fu il principale porto d’imbarco del D-Day e gestisce ancora la maggior parte del traffico crocieristico britannico."
+			]
+		}
 	},
 	"brighton": {
 		"kind": "city",
@@ -426,11 +657,18 @@
 		"region": "Brighton and Hove",
 		"coastal": true,
 		"position": "south-east",
-		"hooks": [
-			"From Beorhthelm’s tun, a personal name plus a settlement — worn down to Brighthelmstone and then Brighton.",
-			"The Prince Regent built the Royal Pavilion here in Indian and Chinese style, finished in 1823.",
-			"The railway from London in 1841 made it the first mass seaside resort in the world."
-		]
+		"hooks": {
+			"en": [
+				"From Beorhthelm’s tun, a personal name plus a settlement — worn down to Brighthelmstone and then Brighton.",
+				"The Prince Regent built the Royal Pavilion here in Indian and Chinese style, finished in 1823.",
+				"The railway from London in 1841 made it the first mass seaside resort in the world."
+			],
+			"it": [
+				"Da Beorhthelm’s tun, un nome di persona più un insediamento, consumato dal tempo in Brighthelmstone e poi in Brighton.",
+				"Qui il Principe Reggente fece costruire il Royal Pavilion in stile indiano e cinese, terminato nel 1823.",
+				"La ferrovia da Londra, nel 1841, ne fece la prima località balneare di massa del mondo."
+			]
+		}
 	},
 	"portsmouth": {
 		"kind": "city",
@@ -438,11 +676,18 @@
 		"populationRank": 18,
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"\"The mouth of the harbour\" — port plus mouth, straightforwardly.",
-			"HMS Victory sits in its dockyard, the oldest commissioned warship in the world, alongside the raised Mary Rose.",
-			"Dickens was born here, and it is the only island city in the United Kingdom."
-		]
+		"hooks": {
+			"en": [
+				"\"The mouth of the harbour\" — port plus mouth, straightforwardly.",
+				"HMS Victory sits in its dockyard, the oldest commissioned warship in the world, alongside the raised Mary Rose.",
+				"Dickens was born here, and it is the only island city in the United Kingdom."
+			],
+			"it": [
+				"\"La bocca del porto\": port più mouth, senza giri di parole.",
+				"Nel suo arsenale c’è l’HMS Victory, la più antica nave da guerra ancora in servizio al mondo, accanto alla Mary Rose riportata a galla.",
+				"Qui nacque Dickens, ed è l’unica città-isola del Regno Unito."
+			]
+		}
 	},
 	"bournemouth": {
 		"kind": "city",
@@ -450,11 +695,18 @@
 		"populationRank": 19,
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"\"The mouth of the bourne\" — a bourne is a small stream.",
-			"It was empty heathland until 1810, when one man built a house there as a health resort.",
-			"Mary Shelley is buried in the town, with the heart of Percy Bysshe Shelley reportedly in the grave."
-		]
+		"hooks": {
+			"en": [
+				"\"The mouth of the bourne\" — a bourne is a small stream.",
+				"It was empty heathland until 1810, when one man built a house there as a health resort.",
+				"Mary Shelley is buried in the town, with the heart of Percy Bysshe Shelley reportedly in the grave."
+			],
+			"it": [
+				"\"La foce del bourne\": un bourne è un piccolo ruscello.",
+				"Era una brughiera deserta fino al 1810, quando un uomo vi costruì una casa come luogo di cura.",
+				"Mary Shelley è sepolta in città, e nella sua tomba ci sarebbe il cuore di Percy Bysshe Shelley."
+			]
+		}
 	},
 	"exeter": {
 		"kind": "city",
@@ -463,11 +715,18 @@
 		"region": "Devon",
 		"coastal": true,
 		"position": "south-west",
-		"hooks": [
-			"From the river Exe plus the Roman -cester — \"the fort on the Exe\".",
-			"Its underground medieval passages, built to carry fresh water, can still be walked.",
-			"Its cathedral has the longest uninterrupted medieval vaulted ceiling in the world, 96 m."
-		]
+		"hooks": {
+			"en": [
+				"From the river Exe plus the Roman -cester — \"the fort on the Exe\".",
+				"Its underground medieval passages, built to carry fresh water, can still be walked.",
+				"Its cathedral has the longest uninterrupted medieval vaulted ceiling in the world, 96 m."
+			],
+			"it": [
+				"Dal fiume Exe più il -cester romano: \"il forte sull’Exe\".",
+				"I suoi passaggi sotterranei medievali, costruiti per portare acqua potabile, si possono ancora percorrere.",
+				"La sua cattedrale ha la volta medievale ininterrotta più lunga del mondo, 96 m."
+			]
+		}
 	},
 	"plymouth": {
 		"kind": "city",
@@ -475,10 +734,17 @@
 		"populationRank": 28,
 		"coastal": true,
 		"position": "south-west",
-		"hooks": [
-			"\"The mouth of the Plym.\"",
-			"The Mayflower sailed from here in 1620, and Drake played bowls on the Hoe as the Armada approached.",
-			"It was bombed flat in 1941 and rebuilt on a modernist plan by Patrick Abercrombie."
-		]
+		"hooks": {
+			"en": [
+				"\"The mouth of the Plym.\"",
+				"The Mayflower sailed from here in 1620, and Drake played bowls on the Hoe as the Armada approached.",
+				"It was bombed flat in 1941 and rebuilt on a modernist plan by Patrick Abercrombie."
+			],
+			"it": [
+				"\"La foce del Plym.\"",
+				"Il Mayflower salpò da qui nel 1620, e Drake giocava a bocce sullo Hoe mentre l’Armada si avvicinava.",
+				"Fu rasa al suolo dalle bombe nel 1941 e ricostruita secondo un piano modernista di Patrick Abercrombie."
+			]
+		}
 	}
 }
