@@ -3,11 +3,14 @@
 **The process lives in [CLAUDE.md §3a](../CLAUDE.md)** and the prompt
 template in [`.claude/skills/review-handoff/SKILL.md`](../.claude/skills/review-handoff/SKILL.md)
 (product owner, 2026-09-23, [#26](https://github.com/diegoami/Geoclick2027/issues/26),
-adapted from diegoami/discola-web). In short: at a milestone (a design
-proposal, a PR that implements one, a staged release) Claude hands the
-product owner a prompt; the owner runs it in a different model, in any tool;
-the reviewer opens one GitHub issue per reproduced finding and always posts
-one AGREE/BLOCK verdict on the thread. Nothing is pasted back.
+adapted from diegoami/discola-web; milestones redefined the same day,
+[#29](https://github.com/diegoami/Geoclick2027/issues/29)). In short: a
+milestone is a release tag on `main`. Before the tag, Claude opens a
+milestone issue and hands the product owner a prompt; the owner runs it in
+a different model, in any tool; the reviewer opens one GitHub issue per
+reproduced finding and always posts one AGREE/BLOCK verdict on the
+milestone issue. The tag goes on exactly the reviewed commit. Nothing is
+pasted back.
 
 This file keeps only the history and the encoding rule.
 
