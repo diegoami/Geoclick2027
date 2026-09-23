@@ -5,11 +5,18 @@
 		"populationRank": 18,
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"Probably from chornyi, \"black\" — the dark soil or the dark woods around it.",
-			"One of the oldest cities in the country, and its Saviour Cathedral was begun before 1036, older than anything standing in Kyiv.",
-			"Its northern edge touches both Russia and Belarus, and the three-country point sits in forest north of the city."
-		]
+		"hooks": {
+			"en": [
+				"Probably from chornyi, \"black\" — the dark soil or the dark woods around it.",
+				"One of the oldest cities in the country, and its Saviour Cathedral was begun before 1036, older than anything standing in Kyiv.",
+				"Its northern edge touches both Russia and Belarus, and the three-country point sits in forest north of the city."
+			],
+			"it": [
+				"Probabilmente da chornyi, \"nero\": la terra scura o i boschi scuri che la circondano.",
+				"È una delle città più antiche del paese, e la sua cattedrale del Salvatore fu iniziata prima del 1036: è più antica di qualunque edificio rimasto in piedi a Kyiv.",
+				"Il suo confine settentrionale tocca sia la Russia sia la Bielorussia, e il triplice confine si trova nella foresta a nord della città."
+			]
+		}
 	},
 	"konotop": {
 		"kind": "city",
@@ -18,11 +25,18 @@
 		"region": "Sumy",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"\"Horse drowning\" — kon a horse, top to drown: a boggy ford where horses were lost.",
-			"The 1659 battle here saw a Cossack and Tatar force destroy a much larger Muscovite army.",
-			"It is a major railway junction on the line from Kyiv to Moscow."
-		]
+		"hooks": {
+			"en": [
+				"\"Horse drowning\" — kon a horse, top to drown: a boggy ford where horses were lost.",
+				"The 1659 battle here saw a Cossack and Tatar force destroy a much larger Muscovite army.",
+				"It is a major railway junction on the line from Kyiv to Moscow."
+			],
+			"it": [
+				"\"Cavalli annegati\": kon è il cavallo, top annegare; era un guado paludoso dove si perdevano i cavalli.",
+				"Nella battaglia del 1659, qui, cosacchi e tatari distrussero un esercito moscovita molto più numeroso.",
+				"È un importante nodo ferroviario sulla linea da Kyiv a Mosca."
+			]
+		}
 	},
 	"nizhyn": {
 		"kind": "city",
@@ -31,11 +45,18 @@
 		"region": "Chernihiv",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"Of uncertain origin, possibly from a personal name or from an older settlement.",
-			"Gogol studied at its gymnasium, and the town’s pickled cucumbers are a national brand.",
-			"It had one of the largest Greek merchant communities in Ukraine, with its own self-governing court from 1657."
-		]
+		"hooks": {
+			"en": [
+				"Of uncertain origin, possibly from a personal name or from an older settlement.",
+				"Gogol studied at its gymnasium, and the town’s pickled cucumbers are a national brand.",
+				"It had one of the largest Greek merchant communities in Ukraine, with its own self-governing court from 1657."
+			],
+			"it": [
+				"Di origine incerta, forse da un nome di persona o da un insediamento più antico.",
+				"Gogol studiò nel suo ginnasio, e i cetrioli sottaceto della città sono un marchio nazionale.",
+				"Ebbe una delle più grandi comunità di mercanti greci dell’Ucraina, con un proprio tribunale autonomo dal 1657."
+			]
+		}
 	},
 	"sumy": {
 		"kind": "city",
@@ -43,11 +64,18 @@
 		"populationRank": 21,
 		"coastal": false,
 		"position": "north-east",
-		"hooks": [
-			"From sumka, a bag or pouch: legend says three hunting bags were found at the founding, and the city's arms show three of them.",
-			"Founded in 1655 by Cossacks moving east away from Polish rule.",
-			"Its sugar refineries made it rich in the 1800s, and the Kharytonenko family built the town a theatre and a cathedral out of the profits."
-		]
+		"hooks": {
+			"en": [
+				"From sumka, a bag or pouch: legend says three hunting bags were found at the founding, and the city's arms show three of them.",
+				"Founded in 1655 by Cossacks moving east away from Polish rule.",
+				"Its sugar refineries made it rich in the 1800s, and the Kharytonenko family built the town a theatre and a cathedral out of the profits."
+			],
+			"it": [
+				"Da sumka, borsa o bisaccia: secondo la leggenda alla fondazione furono trovate tre borse da caccia, e lo stemma della città ne mostra tre.",
+				"Fondata nel 1655 da cosacchi che si spostavano verso est per sottrarsi al dominio polacco.",
+				"Nell’Ottocento i suoi zuccherifici la resero ricca, e con i profitti la famiglia Kharytonenko costruì per la città un teatro e una cattedrale."
+			]
+		}
 	},
 	"lutsk": {
 		"kind": "city",
@@ -56,11 +84,18 @@
 		"region": "Volyn",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"Probably from luka, a river bend or meadow.",
-			"Its Lubart castle from the 1340s is on the 200-hryvnia note.",
-			"A 1429 congress of European monarchs met there to discuss the Ottoman threat and broke up without agreeing."
-		]
+		"hooks": {
+			"en": [
+				"Probably from luka, a river bend or meadow.",
+				"Its Lubart castle from the 1340s is on the 200-hryvnia note.",
+				"A 1429 congress of European monarchs met there to discuss the Ottoman threat and broke up without agreeing."
+			],
+			"it": [
+				"Probabilmente da luka, ansa di fiume o prato.",
+				"Il suo castello di Lubart, degli anni Quaranta del Trecento, è sulla banconota da 200 grivnie.",
+				"Nel 1429 un congresso di sovrani europei vi si riunì per discutere della minaccia ottomana, e si sciolse senza trovare un accordo."
+			]
+		}
 	},
 	"rivne": {
 		"kind": "city",
@@ -68,11 +103,18 @@
 		"populationRank": 23,
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"From rivnyi, \"flat\" or \"even\" — the ground around the town.",
-			"It was Polish between the wars and had one of the largest Jewish communities in Volhynia before 1941.",
-			"Its north is peat bog and amber, dug illegally on a scale visible from orbit."
-		]
+		"hooks": {
+			"en": [
+				"From rivnyi, \"flat\" or \"even\" — the ground around the town.",
+				"It was Polish between the wars and had one of the largest Jewish communities in Volhynia before 1941.",
+				"Its north is peat bog and amber, dug illegally on a scale visible from orbit."
+			],
+			"it": [
+				"Da rivnyi, \"piatto\" o \"piano\": il terreno intorno alla città.",
+				"Tra le due guerre era polacca, e prima del 1941 aveva una delle più grandi comunità ebraiche della Volinia.",
+				"Il suo nord è fatto di torbiere e di ambra, scavata abusivamente su una scala visibile dallo spazio."
+			]
+		}
 	},
 	"kyiv": {
 		"kind": "city",
@@ -83,11 +125,18 @@
 		"capitalOf": "country",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"Named for Kyi, the eldest of three brothers who legend says founded the city with their sister Lybid.",
-			"The Kyivan Rus state here was the origin of both Ukraine and Russia, which is why the name carries the weight it does.",
-			"Its metro station Arsenalna is the deepest in the world at 105 m, dug through the cliffs above the Dnipro."
-		]
+		"hooks": {
+			"en": [
+				"Named for Kyi, the eldest of three brothers who legend says founded the city with their sister Lybid.",
+				"The Kyivan Rus state here was the origin of both Ukraine and Russia, which is why the name carries the weight it does.",
+				"Its metro station Arsenalna is one of the deepest in the world at 105 m, dug through the cliffs above the Dnipro."
+			],
+			"it": [
+				"Prende il nome da Kyi, il maggiore di tre fratelli che secondo la leggenda fondarono la città insieme alla sorella Lybid.",
+				"Lo stato della Rus’ di Kyiv, nato qui, è all’origine sia dell’Ucraina sia della Russia: per questo il nome ha il peso che ha.",
+				"La sua stazione della metropolitana Arsenalna è una delle più profonde del mondo, a 105 m, scavata nelle alture sopra il Dnipro."
+			]
+		}
 	},
 	"zhytomyr": {
 		"kind": "city",
@@ -95,11 +144,18 @@
 		"populationRank": 22,
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"Most likely from a founder's name, Zhytomyr — zhyto also means rye, so the folk reading is \"rye and peace\".",
-			"Korolev, who built the rockets that launched Sputnik and Gagarin, was born here.",
-			"It has Ukraine’s largest granite quarries, and the pink stone from them faces buildings across the former Soviet Union."
-		]
+		"hooks": {
+			"en": [
+				"Most likely from a founder's name, Zhytomyr — zhyto also means rye, so the folk reading is \"rye and peace\".",
+				"Korolev, who built the rockets that launched Sputnik and Gagarin, was born here.",
+				"It has Ukraine’s largest granite quarries, and the pink stone from them faces buildings across the former Soviet Union."
+			],
+			"it": [
+				"Con ogni probabilità dal nome di un fondatore, Zhytomyr; ma zhyto vuol dire anche segale, e così la lettura popolare è \"segale e pace\".",
+				"Qui nacque Korolëv, il costruttore dei razzi che lanciarono lo Sputnik e Gagarin.",
+				"Ha le più grandi cave di granito dell’Ucraina, e la pietra rosa che ne esce riveste edifici in tutta l’ex Unione Sovietica."
+			]
+		}
 	},
 	"kharkiv": {
 		"kind": "city",
@@ -108,11 +164,18 @@
 		"population1950": 758000,
 		"coastal": false,
 		"position": "north-east",
-		"hooks": [
-			"Named for the river Kharkiv, which may itself come from a semi-legendary Cossack founder called Kharko.",
-			"It was the capital of Soviet Ukraine until 1934, which is why it has the constructivist Derzhprom, one of the first skyscrapers in Europe.",
-			"Its Freedom Square is one of the largest city squares in Europe, and the region borders Russia for 300 km."
-		]
+		"hooks": {
+			"en": [
+				"Named for the river Kharkiv, which may itself come from a semi-legendary Cossack founder called Kharko.",
+				"It was the capital of Soviet Ukraine until 1934, which is why it has the constructivist Derzhprom, one of the first skyscrapers in Europe.",
+				"Its Freedom Square is one of the largest city squares in Europe, and the region borders Russia for 300 km."
+			],
+			"it": [
+				"Prende il nome dal fiume Charkiv, che a sua volta potrebbe venire da un fondatore cosacco semileggendario di nome Charko.",
+				"Fu la capitale dell’Ucraina sovietica fino al 1934, ed è per questo che ha il Derzhprom costruttivista, uno dei primi grattacieli d’Europa.",
+				"La sua piazza della Libertà è tra le più grandi d’Europa, e la regione confina con la Russia per 300 km."
+			]
+		}
 	},
 	"lviv": {
 		"kind": "city",
@@ -121,11 +184,18 @@
 		"region": "L'viv",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"\"Lev's city\" — King Danylo of Galicia founded it around 1250 and named it for his son Lev.",
-			"Austrian until 1918 and Polish until 1939, it is the most central-European city in Ukraine, down to the coffee houses.",
-			"It has more coffee houses per head than any Ukrainian city, and its Lychakiv cemetery is a Central European necropolis on the scale of Père Lachaise."
-		]
+		"hooks": {
+			"en": [
+				"\"Lev's city\" — King Danylo of Galicia founded it around 1250 and named it for his son Lev.",
+				"Austrian until 1918 and Polish until 1939, it is the most central-European city in Ukraine, down to the coffee houses.",
+				"It has more coffee houses per head than any Ukrainian city, and its Lychakiv cemetery is a Central European necropolis on the scale of Père Lachaise."
+			],
+			"it": [
+				"La \"città di Lev\": re Danylo di Galizia la fondò intorno al 1250 e le diede il nome del figlio Lev.",
+				"Austriaca fino al 1918 e polacca fino al 1939, è la città più mitteleuropea dell’Ucraina, fino ai suoi caffè.",
+				"Ha più caffè per abitante di qualunque altra città ucraina, e il suo cimitero di Lychakiv è una necropoli mitteleuropea delle dimensioni del Père-Lachaise."
+			]
+		}
 	},
 	"bila-tserkva": {
 		"kind": "city",
@@ -134,11 +204,18 @@
 		"region": "Kiev",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"\"White church\" — bila white, tserkva church, for a church of white stone.",
-			"The 1651 treaty signed here, after Khmelnytskyi’s defeat at Berestechko, cut the Cossack territory sharply.",
-			"Its Oleksandriia park, laid out in 1788, is one of the largest landscape parks in Europe."
-		]
+		"hooks": {
+			"en": [
+				"\"White church\" — bila white, tserkva church, for a church of white stone.",
+				"The 1651 treaty signed here, after Khmelnytskyi’s defeat at Berestechko, cut the Cossack territory sharply.",
+				"Its Oleksandriia park, laid out in 1793, is one of the largest landscape parks in Europe."
+			],
+			"it": [
+				"\"Chiesa bianca\": bila è bianca, tserkva è chiesa, da una chiesa di pietra bianca.",
+				"Il trattato firmato qui nel 1651, dopo la sconfitta di Khmelnytskyi a Berestechko, ridusse drasticamente il territorio cosacco.",
+				"Il suo parco Oleksandriia, disegnato nel 1793, è uno dei più grandi parchi paesaggistici d’Europa."
+			]
+		}
 	},
 	"poltava": {
 		"kind": "city",
@@ -146,11 +223,18 @@
 		"populationRank": 17,
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"From the river Ltava, with the prefix po-, \"along\" — the settlement by the Ltava.",
-			"Peter the Great beat the Swedes here in 1709, ending Sweden's time as a great power.",
-			"Gogol was born in this region, and its dialect is the base of literary Ukrainian."
-		]
+		"hooks": {
+			"en": [
+				"From the river Ltava, with the prefix po-, \"along\" — the settlement by the Ltava.",
+				"Peter the Great beat the Swedes here in 1709, ending Sweden's time as a great power.",
+				"Gogol was born in this region, and its dialect is the base of literary Ukrainian."
+			],
+			"it": [
+				"Dal fiume Ltava, con il prefisso po-, \"lungo\": l’abitato lungo il fiume.",
+				"Qui nel 1709 Pietro il Grande sconfisse gli svedesi, ponendo fine all’epoca della Svezia grande potenza.",
+				"Gogol nacque in questa regione, e il dialetto della zona è alla base dell’ucraino letterario."
+			]
+		}
 	},
 	"ternopil": {
 		"kind": "city",
@@ -159,11 +243,18 @@
 		"region": "Ternopil'",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"Ternovyi pil, \"thorn field\" — the blackthorn scrub the town was built on.",
-			"Its lake is artificial and four centuries old, dug as part of the town's defences.",
-			"The Optymistychna cave beneath it runs over 260 km, the longest gypsum cave in the world."
-		]
+		"hooks": {
+			"en": [
+				"Ternovyi pil, \"thorn field\" — the blackthorn scrub the town was built on.",
+				"Its lake is artificial and four centuries old, dug as part of the town's defences.",
+				"The Optymistychna cave beneath it runs over 260 km, the longest gypsum cave in the world."
+			],
+			"it": [
+				"Ternovyi pil, \"campo di spine\": la macchia di prugnoli su cui sorse la città.",
+				"Il suo lago è artificiale e ha quattro secoli: fu scavato come parte delle difese della città.",
+				"La grotta Optymistychna, nel suo sottosuolo, supera i 260 km: è la grotta nel gesso più lunga del mondo."
+			]
+		}
 	},
 	"cherkasy": {
 		"kind": "city",
@@ -171,11 +262,18 @@
 		"populationRank": 20,
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"From the Cherkasy, an old name for the Cossacks — possibly linked to the Circassians of the Caucasus.",
-			"The Dnipro widens into the Kremenchuk Reservoir here, 250 km long and the largest body of water in the country.",
-			"Chyhyryn nearby was the Cossack hetman capital, and Shevchenko, the national poet, is buried on a hill above the Dnipro here."
-		]
+		"hooks": {
+			"en": [
+				"From the Cherkasy, an old name for the Cossacks — possibly linked to the Circassians of the Caucasus.",
+				"The Dnipro widens into the Kremenchuk Reservoir here, about 150 km long and the largest body of water in the country.",
+				"Chyhyryn nearby was the Cossack hetman capital, and Shevchenko, the national poet, is buried on a hill above the Dnipro here."
+			],
+			"it": [
+				"Da Cherkasy, un antico nome dei cosacchi, forse legato ai Circassi del Caucaso.",
+				"Qui il Dnipro si allarga nel bacino di Kremenchuk, lungo circa 150 km e il più grande specchio d’acqua del paese.",
+				"Chyhyryn, poco lontano, fu la capitale degli etmani cosacchi, e Shevchenko, il poeta nazionale, è sepolto qui su una collina sopra il Dnipro."
+			]
+		}
 	},
 	"khmelnytskyi": {
 		"kind": "city",
@@ -184,11 +282,18 @@
 		"region": "Khmel'nyts'kyy",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"Renamed in 1954 for Bohdan Khmelnytskyi, the Cossack hetman; before that it was Proskuriv.",
-			"His 1648 uprising against Poland created a Cossack state and is the founding story of modern Ukraine.",
-			"Kamianets-Podilskyi here stands on an island of rock inside a river canyon, with a bridge to its castle across the gorge."
-		]
+		"hooks": {
+			"en": [
+				"Renamed in 1954 for Bohdan Khmelnytskyi, the Cossack hetman; before that it was Proskuriv.",
+				"His 1648 uprising against Poland created a Cossack state and is the founding story of modern Ukraine.",
+				"Kamianets-Podilskyi here stands on an island of rock inside a river canyon, with a bridge to its castle across the gorge."
+			],
+			"it": [
+				"Ribattezzata nel 1954 in onore di Bohdan Khmelnytskyi, l’etmano cosacco; prima si chiamava Proskuriv.",
+				"La rivolta di Khmelnytskyi del 1648 contro la Polonia diede vita a uno stato cosacco, ed è il racconto fondativo dell’Ucraina moderna.",
+				"Qui Kamianets-Podilskyi sorge su un’isola di roccia dentro il canyon di un fiume, con un ponte che scavalca la gola fino al castello."
+			]
+		}
 	},
 	"drohobych": {
 		"kind": "city",
@@ -197,11 +302,18 @@
 		"region": "L'viv",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"Possibly \"the second Bych\", from an older settlement destroyed and rebuilt.",
-			"It grew rich on salt, then on oil: the Boryslav field nearby was one of the world’s first, drilled from the 1850s.",
-			"Bruno Schulz, the writer and artist, lived and was murdered here in 1942."
-		]
+		"hooks": {
+			"en": [
+				"Possibly \"the second Bych\", from an older settlement destroyed and rebuilt.",
+				"It grew rich on salt, then on oil: the Boryslav field nearby was one of the world’s first, drilled from the 1850s.",
+				"Bruno Schulz, the writer and artist, lived and was murdered here in 1942."
+			],
+			"it": [
+				"Forse \"il secondo Bych\", da un insediamento più antico distrutto e ricostruito.",
+				"Si arricchì con il sale, poi con il petrolio: il vicino giacimento di Boryslav fu tra i primi al mondo, trivellato dagli anni Cinquanta dell’Ottocento.",
+				"Bruno Schulz, scrittore e artista, visse qui e qui fu assassinato nel 1942."
+			]
+		}
 	},
 	"vinnytsia": {
 		"kind": "city",
@@ -210,11 +322,18 @@
 		"region": "Vinnytsya",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"Probably from vino, an old Slavic word for a dowry or tribute paid in land.",
-			"Hitler’s Werwolf headquarters was built in the forest outside it, and he spent months of 1942 and 1943 there.",
-			"Its fountain on the Southern Buh is the largest floating fountain in Europe."
-		]
+		"hooks": {
+			"en": [
+				"Probably from vino, an old Slavic word for a dowry or tribute paid in land.",
+				"Hitler’s Werwolf headquarters was built in the forest outside it, and he spent months of 1942 and 1943 there.",
+				"Its fountain on the Southern Buh is the largest floating fountain in Europe."
+			],
+			"it": [
+				"Probabilmente da vino, antica parola slava che indicava una dote o un tributo pagato in terre.",
+				"Nella foresta fuori città fu costruito il quartier generale Werwolf di Hitler, che vi trascorse mesi tra il 1942 e il 1943.",
+				"La sua fontana sul Bug Meridionale è la più grande fontana galleggiante d’Europa."
+			]
+		}
 	},
 	"kremenchuk": {
 		"kind": "city",
@@ -223,11 +342,18 @@
 		"region": "Poltava",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"From kremin, flint, plus a diminutive — the flinty place.",
-			"Its refinery is the only working oil refinery in Ukraine.",
-			"The Dnipro widens into the Kremenchuk Reservoir here, 250 km long and the largest body of water in the country."
-		]
+		"hooks": {
+			"en": [
+				"From kremin, flint, plus a diminutive — the flinty place.",
+				"Its refinery is the only working oil refinery in Ukraine.",
+				"The Dnipro widens into the Kremenchuk Reservoir here, 250 km long and the largest body of water in the country."
+			],
+			"it": [
+				"Da kremin, selce, più un diminutivo: il posto delle selci.",
+				"La sua raffineria è l’unica raffineria di petrolio in funzione in Ucraina.",
+				"Qui il Dnipro si allarga nel bacino di Kremenchuk, lungo 250 km e il più grande specchio d’acqua del paese."
+			]
+		}
 	},
 	"ivano-frankivsk": {
 		"kind": "city",
@@ -236,11 +362,18 @@
 		"region": "Ivano-Frankivs'k",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"Renamed in 1962 for the poet Ivan Franko; for three centuries before that it was Stanislaviv, after the founder's son.",
-			"The gateway to the Carpathians and the Hutsul highlands, whose music and woodwork are unlike anything else in the country.",
-			"The Hoverla, Ukraine’s highest mountain at 2,061 m, stands on its border with Zakarpattia."
-		]
+		"hooks": {
+			"en": [
+				"Renamed in 1962 for the poet Ivan Franko; for three centuries before that it was Stanislaviv, after the founder's son.",
+				"The gateway to the Carpathians and the Hutsul highlands, whose music and woodwork are unlike anything else in the country.",
+				"The Hoverla, Ukraine’s highest mountain at 2,061 m, stands on its border with Zakarpattia."
+			],
+			"it": [
+				"Ribattezzata nel 1962 in onore del poeta Ivan Franko; nei tre secoli precedenti era Stanislaviv, dal nome del figlio del fondatore.",
+				"La porta dei Carpazi e degli altipiani huzuli, la cui musica e i cui lavori in legno non somigliano a nient’altro nel paese.",
+				"Il monte Hoverla, 2.061 m, il più alto dell’Ucraina, sorge sul suo confine con la Transcarpazia."
+			]
+		}
 	},
 	"lysychansk": {
 		"kind": "city",
@@ -249,11 +382,18 @@
 		"region": "Luhans'k",
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"From lysychka, a little fox — foxes lived in the ravines.",
-			"The first coal mine in the Donbas was sunk here in 1795, which makes it the oldest mining town in the basin.",
-			"Its glassworks supplied bottles across the Russian Empire."
-		]
+		"hooks": {
+			"en": [
+				"From lysychka, a little fox — foxes lived in the ravines.",
+				"The first coal mine in the Donbas was sunk here in 1795, which makes it the oldest mining town in the basin.",
+				"Its glassworks supplied bottles across the Russian Empire."
+			],
+			"it": [
+				"Da lysychka, piccola volpe: nei burroni vivevano le volpi.",
+				"La prima miniera di carbone del Donbas fu scavata qui nel 1795, il che ne fa la più antica città mineraria del bacino.",
+				"Le sue vetrerie fornivano bottiglie a tutto l’Impero russo."
+			]
+		}
 	},
 	"kramatorsk": {
 		"kind": "city",
@@ -262,11 +402,18 @@
 		"region": "Donets'k",
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"From a railway halt name, probably \"Kramatorskaya\" from a local river or a German surveyor’s note.",
-			"It became the administrative centre of Donetsk oblast after 2014.",
-			"Its heavy machine works built some of the largest industrial presses in the Soviet Union."
-		]
+		"hooks": {
+			"en": [
+				"From a railway halt name, probably \"Kramatorskaya\" from a local river or a German surveyor’s note.",
+				"It became the administrative centre of Donetsk oblast after 2014.",
+				"Its heavy machine works built some of the largest industrial presses in the Soviet Union."
+			],
+			"it": [
+				"Dal nome di una fermata ferroviaria, probabilmente \"Kramatorskaya\", da un fiume locale o da un appunto di un topografo tedesco.",
+				"Dopo il 2014 è diventata il centro amministrativo della regione di Donetsk.",
+				"Le sue officine di macchinari pesanti costruirono alcune delle più grandi presse industriali dell’Unione Sovietica."
+			]
+		}
 	},
 	"kamianets-podilskyi": {
 		"kind": "city",
@@ -275,11 +422,18 @@
 		"region": "Khmel'nyts'kyy",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"\"Stony town of Podillia\" — kamin is a stone; the old town sits on an island of rock inside a river canyon.",
-			"A bridge crosses the gorge to its castle, and the whole site looks engineered but is natural.",
-			"The Ottomans held it from 1672 to 1699, the furthest north-west they ever ruled."
-		]
+		"hooks": {
+			"en": [
+				"\"Stony town of Podillia\" — kamin is a stone; the old town sits on an island of rock inside a river canyon.",
+				"A bridge crosses the gorge to its castle, and the whole site looks engineered but is natural.",
+				"The Ottomans held it from 1672 to 1699, as the capital of their northernmost province."
+			],
+			"it": [
+				"\"Città di pietra della Podolia\": kamin è la pietra; la città vecchia sorge su un’isola di roccia dentro il canyon di un fiume.",
+				"Un ponte attraversa la gola fino al castello, e tutto il sito sembra opera dell’uomo ma è naturale.",
+				"Gli Ottomani la tennero dal 1672 al 1699, come capoluogo della loro provincia più settentrionale."
+			]
+		}
 	},
 	"uzhhorod": {
 		"kind": "city",
@@ -288,11 +442,18 @@
 		"region": "Transcarpathia",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"\"Town on the Uzh\" — the river, plus horod, a fortified town.",
-			"The capital of Zakarpattia, the only Ukrainian region beyond the Carpathians.",
-			"Its cherry blossom avenue, planted in the 1920s under Czechoslovak rule, is one of the longest in Europe."
-		]
+		"hooks": {
+			"en": [
+				"\"Town on the Uzh\" — the river, plus horod, a fortified town.",
+				"The capital of Zakarpattia, the only Ukrainian region beyond the Carpathians.",
+				"Its cherry blossom avenue, planted in the 1920s under Czechoslovak rule, is one of the longest in Europe."
+			],
+			"it": [
+				"\"Città sull’Uzh\": il fiume, più horod, città fortificata.",
+				"Il capoluogo della Transcarpazia, l’unica regione ucraina al di là dei Carpazi.",
+				"Il suo viale di ciliegi in fiore, piantato negli anni Venti sotto il governo cecoslovacco, è uno dei più lunghi d’Europa."
+			]
+		}
 	},
 	"luhansk": {
 		"kind": "city",
@@ -301,11 +462,18 @@
 		"region": "Luhans'k",
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"From the river Luhan, itself from luh, a water meadow.",
-			"Founded in 1795 around a British-built cannon foundry, to arm the Black Sea fleet.",
-			"Its steppe was some of the last unploughed grassland in Europe, protected in reserves since 1968."
-		]
+		"hooks": {
+			"en": [
+				"From the river Luhan, itself from luh, a water meadow.",
+				"Founded in 1795 around a British-built cannon foundry, to arm the Black Sea fleet.",
+				"Its steppe was some of the last unploughed grassland in Europe, protected in reserves since 1968."
+			],
+			"it": [
+				"Dal fiume Luhan, a sua volta da luh, prato golenale.",
+				"Fondata nel 1795 intorno a una fonderia di cannoni costruita dai britannici, per armare la flotta del Mar Nero.",
+				"La sua steppa era tra le ultime praterie mai arate d’Europa, protetta in riserve dal 1968."
+			]
+		}
 	},
 	"kropyvnytskyi": {
 		"kind": "city",
@@ -314,11 +482,18 @@
 		"region": "Kirovohrad",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"Renamed in 2016 for Marko Kropyvnytskyi, a playwright; the map may still show the Soviet Kirovohrad.",
-			"It was founded as Fort St Elizabeth in 1754 and has been renamed five times.",
-			"Ukrainian professional theatre began here in 1882 with Kropyvnytskyi’s own company."
-		]
+		"hooks": {
+			"en": [
+				"Renamed in 2016 for Marko Kropyvnytskyi, a playwright; the map may still show the Soviet Kirovohrad.",
+				"It was founded as Fort St Elizabeth in 1754 and has been renamed five times.",
+				"Ukrainian professional theatre began here in 1882 with Kropyvnytskyi’s own company."
+			],
+			"it": [
+				"Ribattezzata nel 2016 in onore del drammaturgo Marko Kropyvnytskyi; la mappa potrebbe mostrare ancora il nome sovietico, Kirovohrad.",
+				"Fu fondata nel 1754 come forte di Santa Elisabetta, e ha cambiato nome cinque volte.",
+				"Il teatro professionale ucraino nacque qui nel 1882, con la compagnia dello stesso Kropyvnytskyi."
+			]
+		}
 	},
 	"dnipro": {
 		"kind": "city",
@@ -328,11 +503,18 @@
 		"region": "Dnipropetrovs'k",
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"Named for the river; the city dropped \"petrovsk\" in 2016, having been Dnipropetrovsk since 1926.",
-			"It was Katerynoslav first, \"Catherine’s glory\", founded by Potemkin for Catherine the Great.",
-			"Its Pivdenmash plant built Soviet ICBMs, and the city was closed to foreigners until 1987."
-		]
+		"hooks": {
+			"en": [
+				"Named for the river; the city dropped \"petrovsk\" in 2016, having been Dnipropetrovsk since 1926.",
+				"It was Katerynoslav first, \"Catherine’s glory\", founded by Potemkin for Catherine the Great.",
+				"Its Pivdenmash plant built Soviet ICBMs, and the city was closed to foreigners until 1987."
+			],
+			"it": [
+				"Prende il nome dal fiume; nel 2016 la città ha lasciato cadere \"petrovsk\", dopo essersi chiamata Dnipropetrovsk dal 1926.",
+				"In origine fu Katerynoslav, \"gloria di Caterina\", fondata da Potëmkin per Caterina la Grande.",
+				"Il suo stabilimento Pivdenmash costruiva i missili balistici intercontinentali sovietici, e la città fu chiusa agli stranieri fino al 1987."
+			]
+		}
 	},
 	"chernivtsi": {
 		"kind": "city",
@@ -340,11 +522,18 @@
 		"populationRank": 19,
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"From chornyi, \"black\", and a fortress of black wood or black earth on the Prut.",
-			"Austrian until 1918, and so mixed that its university was German, its theatre Romanian and its poets — Paul Celan among them — wrote in German.",
-			"Its university buildings, built as the residence of Orthodox metropolitans, are a UNESCO site of brick patterns and coloured roofs."
-		]
+		"hooks": {
+			"en": [
+				"From chornyi, \"black\", and a fortress of black wood or black earth on the Prut.",
+				"Austrian until 1918, and so mixed that its university was German, its theatre Romanian and its poets — Paul Celan among them — wrote in German.",
+				"Its university buildings, built as the residence of Orthodox metropolitans, are a UNESCO site of brick patterns and coloured roofs."
+			],
+			"it": [
+				"Da chornyi, \"nero\", e una fortezza di legno nero o di terra nera sul Prut.",
+				"Austriaca fino al 1918, e così mescolata che l’università era tedesca, il teatro romeno e i poeti, tra cui Paul Celan, scrivevano in tedesco.",
+				"Gli edifici dell’università, costruiti come residenza dei metropoliti ortodossi, sono patrimonio UNESCO, tra decori in mattoni e tetti colorati."
+			]
+		}
 	},
 	"horlivka": {
 		"kind": "city",
@@ -353,11 +542,18 @@
 		"region": "Donets'k",
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"Named for Pyotr Gorlov, the mining engineer who developed its coal in the 1860s.",
-			"It was one of the most heavily industrialised towns of the Donbas, with coal, chemicals and machinery.",
-			"Its chemical plant made much of the Soviet Union’s nitrogen fertiliser."
-		]
+		"hooks": {
+			"en": [
+				"Named for Pyotr Gorlov, the mining engineer who developed its coal in the 1860s.",
+				"It was one of the most heavily industrialised towns of the Donbas, with coal, chemicals and machinery.",
+				"Its chemical plant made much of the Soviet Union’s nitrogen fertiliser."
+			],
+			"it": [
+				"Prende il nome da Pëtr Gorlov, l’ingegnere minerario che negli anni Sessanta dell’Ottocento avviò l’estrazione del suo carbone.",
+				"Fu una delle città più industrializzate del Donbas, tra carbone, chimica e macchinari.",
+				"Il suo impianto chimico produceva gran parte dei fertilizzanti azotati dell’Unione Sovietica."
+			]
+		}
 	},
 	"makiivka": {
 		"kind": "city",
@@ -366,11 +562,18 @@
 		"region": "Donets'k",
 		"coastal": false,
 		"position": "south-east",
-		"hooks": [
-			"Probably from a personal name, Makiy.",
-			"A coal and steel town effectively merged with Donetsk next door.",
-			"Its 1908 mine disaster killed 270 men, the worst in the Russian Empire’s mining history."
-		]
+		"hooks": {
+			"en": [
+				"Probably from a personal name, Makiy.",
+				"A coal and steel town effectively merged with Donetsk next door.",
+				"Its 1908 mine disaster killed 270 men, the worst in the Russian Empire’s mining history."
+			],
+			"it": [
+				"Probabilmente da un nome di persona, Makiy.",
+				"Una città del carbone e dell’acciaio, di fatto fusa con la vicina Donetsk.",
+				"Il disastro minerario del 1908 uccise 270 uomini: il peggiore nella storia mineraria dell’Impero russo."
+			]
+		}
 	},
 	"donetsk": {
 		"kind": "city",
@@ -380,11 +583,18 @@
 		"region": "Donets'k",
 		"coastal": false,
 		"position": "south-east",
-		"hooks": [
-			"From the Siverskyi Donets river; donets is a little Don.",
-			"Founded in 1869 by a Welsh ironmaster, John Hughes, and called Yuzivka — a Russian rendering of his name — for fifty years.",
-			"The region is honeycombed with mine workings, and the spoil heaps outside the city are its best-known skyline."
-		]
+		"hooks": {
+			"en": [
+				"From the Siverskyi Donets river; donets is a little Don.",
+				"Founded in 1869 by a Welsh ironmaster, John Hughes, and called Yuzivka — a Russian rendering of his name — for fifty years.",
+				"The region is honeycombed with mine workings, and the spoil heaps outside the city are its best-known skyline."
+			],
+			"it": [
+				"Dal fiume Siverskyi Donets; donets è un piccolo Don.",
+				"Fondata nel 1869 da un industriale gallese del ferro, John Hughes, e chiamata per cinquant’anni Yuzivka, una resa russa del suo nome.",
+				"La regione è crivellata di gallerie minerarie, e le colline di scorie alle porte della città sono il suo profilo più noto."
+			]
+		}
 	},
 	"kryvyi-rih": {
 		"kind": "city",
@@ -393,11 +603,18 @@
 		"region": "Dnipropetrovs'k",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"\"Crooked horn\" — kryvyi crooked, rih a horn or spit of land where two rivers meet.",
-			"It is the longest city in Europe, stretching over 120 km along its iron ore seam.",
-			"That seam is one of the largest iron deposits in the world, and Zelensky was born in the city."
-		]
+		"hooks": {
+			"en": [
+				"\"Crooked horn\" — kryvyi crooked, rih a horn or spit of land where two rivers meet.",
+				"It is the longest city in Europe, stretching over 120 km along its iron ore seam.",
+				"That seam is one of the largest iron deposits in the world, and Zelensky was born in the city."
+			],
+			"it": [
+				"\"Corno storto\": kryvyi è storto, rih è un corno o una lingua di terra dove due fiumi si incontrano.",
+				"È la città più lunga d’Europa: si estende per oltre 120 km lungo il suo filone di minerale di ferro.",
+				"Quel filone è uno dei più grandi giacimenti di ferro del mondo, e in città è nato Zelensky."
+			]
+		}
 	},
 	"zaporizhzhia": {
 		"kind": "city",
@@ -407,11 +624,18 @@
 		"region": "Zaporizhzhya",
 		"coastal": false,
 		"position": "south-east",
-		"hooks": [
-			"\"Beyond the rapids\" — za porohamy, the Dnipro cataracts the Cossack Sich sat below.",
-			"The rapids are gone, drowned by the 1932 DniproHES dam that made the reservoir.",
-			"Khortytsia, an island in the river here, was the Cossack Sich itself."
-		]
+		"hooks": {
+			"en": [
+				"\"Beyond the rapids\" — za porohamy, the Dnipro cataracts the Cossack Sich sat below.",
+				"The rapids are gone, drowned by the 1932 DniproHES dam that made the reservoir.",
+				"Khortytsia, an island in the river here, was the Cossack Sich itself."
+			],
+			"it": [
+				"\"Oltre le rapide\": za porohamy, le cateratte del Dnipro sotto le quali stava la Sich cosacca.",
+				"Le rapide non ci sono più, sommerse dalla diga DniproHES del 1932 che creò il bacino.",
+				"Khortytsia, un’isola sul fiume proprio qui, era la Sich cosacca vera e propria."
+			]
+		}
 	},
 	"nikopol": {
 		"kind": "city",
@@ -420,11 +644,18 @@
 		"region": "Dnipropetrovs'k",
 		"coastal": false,
 		"position": "south-east",
-		"hooks": [
-			"Greek for \"city of victory\" — nike plus polis, one of Catherine the Great’s classical coinages.",
-			"It sits across the reservoir from the Zaporizhzhia nuclear plant, the largest in Europe.",
-			"Its manganese basin is among the biggest in the world."
-		]
+		"hooks": {
+			"en": [
+				"Greek for \"city of victory\" — nike plus polis, one of Catherine the Great’s classical coinages.",
+				"It sits across the reservoir from the Zaporizhzhia nuclear plant, the largest in Europe.",
+				"Its manganese basin is among the biggest in the world."
+			],
+			"it": [
+				"In greco \"città della vittoria\": nike più polis, uno dei conii classici di Caterina la Grande.",
+				"Sorge di fronte alla centrale nucleare di Zaporizhzhia, dall’altra parte del bacino: la più grande d’Europa.",
+				"Il suo bacino di manganese è tra i più grandi del mondo."
+			]
+		}
 	},
 	"mariupol": {
 		"kind": "city",
@@ -433,11 +664,18 @@
 		"region": "Donets'k",
 		"coastal": true,
 		"position": "south-east",
-		"hooks": [
-			"\"City of Mary\" — founded in 1778 for Greek Christians resettled from Crimea, who named it for an icon.",
-			"Those Greeks, the Rumeíka speakers, kept their language in villages around it into the twentieth century.",
-			"Its Azovstal works was one of the largest steel plants in Europe."
-		]
+		"hooks": {
+			"en": [
+				"\"City of Mary\" — founded in 1778 for Greek Christians resettled from Crimea, who named it for an icon.",
+				"Those Greeks, the Rumeíka speakers, kept their language in villages around it into the twentieth century.",
+				"Its Azovstal works was one of the largest steel plants in Europe."
+			],
+			"it": [
+				"\"Città di Maria\": fondata nel 1778 per i cristiani greci trasferiti dalla Crimea, che la chiamarono così per un’icona.",
+				"Quei Greci, che parlavano il rumeíka, conservarono la loro lingua nei villaggi dei dintorni fin dentro il Novecento.",
+				"Le sue acciaierie Azovstal erano tra le più grandi d’Europa."
+			]
+		}
 	},
 	"mykolaiv": {
 		"kind": "city",
@@ -446,11 +684,18 @@
 		"region": "Mykolayiv",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"For St Nicholas, patron of sailors: the shipyard was founded on his feast day in 1789.",
-			"Most of the Soviet Union’s aircraft carriers were built here, on a river 100 km from the sea.",
-			"Its astronomical observatory has been recording since 1821."
-		]
+		"hooks": {
+			"en": [
+				"For St Nicholas, patron of sailors: nearby Ochakiv fell to Russia on his feast day in 1788, and the shipyard was founded the next year.",
+				"Most of the Soviet Union’s aircraft carriers were built here, on a river 100 km from the sea.",
+				"Its astronomical observatory has been recording since 1821."
+			],
+			"it": [
+				"Prende il nome da San Nicola, patrono dei marinai: la vicina Očakiv cadde in mano russa nel giorno della sua festa, nel 1788, e il cantiere fu fondato l’anno dopo.",
+				"Qui fu costruita la maggior parte delle portaerei dell’Unione Sovietica, su un fiume a 100 km dal mare.",
+				"Il suo osservatorio astronomico è in attività dal 1821."
+			]
+		}
 	},
 	"melitopol": {
 		"kind": "city",
@@ -459,11 +704,18 @@
 		"region": "Zaporizhzhya",
 		"coastal": false,
 		"position": "south-east",
-		"hooks": [
-			"Greek for \"city of honey\" — meli honey, polis city.",
-			"It grows the cherries that are a national brand, and holds a cherry festival each June.",
-			"The Stone Grave nearby is a sandstone outcrop with petroglyphs going back to the Mesolithic."
-		]
+		"hooks": {
+			"en": [
+				"Greek for \"city of honey\" — meli honey, polis city.",
+				"It grows the cherries that are a national brand, and holds a cherry festival each June.",
+				"The Stone Grave nearby is a sandstone outcrop with petroglyphs going back to the Mesolithic."
+			],
+			"it": [
+				"In greco \"città del miele\": meli è il miele, polis la città.",
+				"Coltiva le ciliegie che sono un marchio nazionale, e ogni giugno ospita una festa delle ciliegie.",
+				"La Tomba di Pietra, poco lontano, è un affioramento di arenaria con petroglifi che risalgono al Mesolitico."
+			]
+		}
 	},
 	"berdiansk": {
 		"kind": "city",
@@ -472,11 +724,18 @@
 		"region": "Zaporizhzhya",
 		"coastal": true,
 		"position": "south-east",
-		"hooks": [
-			"From the river Berda, probably from a Turkic word.",
-			"A Sea of Azov spa town whose mud baths have drawn visitors since the 1800s.",
-			"Its spit reaches 20 km into the sea and is a stop for migrating birds."
-		]
+		"hooks": {
+			"en": [
+				"From the river Berda, probably from a Turkic word.",
+				"A Sea of Azov spa town whose mud baths have drawn visitors since the 1800s.",
+				"Its spit reaches 20 km into the sea and is a stop for migrating birds."
+			],
+			"it": [
+				"Dal fiume Berda, probabilmente da una parola turca.",
+				"Una località termale sul Mare d’Azov, i cui bagni di fango attirano visitatori dall’Ottocento.",
+				"La sua lingua di sabbia si spinge per 20 km nel mare ed è una tappa per gli uccelli migratori."
+			]
+		}
 	},
 	"kherson": {
 		"kind": "city",
@@ -485,11 +744,18 @@
 		"region": "Crimea",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"For Chersonesos, the Greek city in Crimea — Catherine the Great liked classical names and used them across the south.",
-			"The first Black Sea shipyard was here, before Mykolayiv and before Sevastopol.",
-			"The Dnipro fans into a delta of two thousand islands and channels here before reaching the sea."
-		]
+		"hooks": {
+			"en": [
+				"For Chersonesos, the Greek city in Crimea — Catherine the Great liked classical names and used them across the south.",
+				"The first Black Sea shipyard was here, before Mykolayiv and before Sevastopol.",
+				"The Dnipro fans into a delta of two thousand islands and channels here before reaching the sea."
+			],
+			"it": [
+				"Da Chersoneso, la città greca in Crimea: Caterina la Grande amava i nomi classici e li usò in tutto il sud.",
+				"Qui nacque il primo cantiere navale del Mar Nero, prima di Mykolaiv e prima di Sebastopoli.",
+				"Qui il Dnipro si apre a ventaglio in un delta di duemila isole e canali prima di raggiungere il mare."
+			]
+		}
 	},
 	"odesa": {
 		"kind": "city",
@@ -499,10 +765,17 @@
 		"region": "Odessa",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"Named in 1795 after Odessos, a Greek colony thought to have stood nearby — it did not, but the name stayed.",
-			"A free port for its first sixty years, which is why it filled with Greeks, Italians, Jews and Frenchmen and sounds unlike anywhere else in Ukraine.",
-			"The Potemkin Steps run 192 steps down to the port, built so that from the top only the landings show."
-		]
+		"hooks": {
+			"en": [
+				"Named in 1795 after Odessos, a Greek colony thought to have stood nearby — it did not, but the name stayed.",
+				"A free port for forty years in the 1800s, which is why it filled with Greeks, Italians, Jews and Frenchmen and sounds unlike anywhere else in Ukraine.",
+				"The Potemkin Steps run 192 steps down to the port, built so that from the top only the landings show."
+			],
+			"it": [
+				"Chiamata così nel 1795 da Odessos, una colonia greca che si credeva sorgesse nei dintorni: non era così, ma il nome rimase.",
+				"Fu porto franco per quarant’anni nell’Ottocento: per questo si riempì di greci, italiani, ebrei e francesi, e ha una parlata che non somiglia a nessun’altra in Ucraina.",
+				"La scalinata Potëmkin scende al porto con 192 gradini, costruita in modo che dall’alto si vedano solo i pianerottoli."
+			]
+		}
 	}
 }
