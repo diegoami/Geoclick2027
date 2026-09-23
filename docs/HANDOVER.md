@@ -1,4 +1,4 @@
-# Handover — 2026-09-23, v0.10.0 under way (FT-50: 18 of 28 countries in Italian, last wave running)
+# Handover — 2026-09-23, v0.10.0 under way (FT-50 built, PR #25 awaiting PO test)
 
 For whoever picks Geoclick up next, whether a human or a fresh Claude
 session. It records where things stand, what's next, and what's easy to
@@ -23,7 +23,7 @@ before any work starts.
 | Remediation programme | Closed with v0.2.0 ([REMEDIATION_PLAN.md](REMEDIATION_PLAN.md)); its automerge exception went with it |
 | Feature programme | Closed with v0.5.0 ([FEATURE_PLAN.md](FEATURE_PLAN.md)) |
 | Since then | Per-release plans: [PLAN_V0.6.md](PLAN_V0.6.md) through [PLAN_V0.9.4.md](PLAN_V0.9.4.md), each with its own ledger; now [PLAN_V0.10.md](PLAN_V0.10.md) |
-| Next | **FT-50 in progress** on `feat/ft-50-italian` (pushed, not merged). The product owner approved the voice after wave 1. **Done, one commit per country: 18 of 28** — Italy, Portugal, Spain, France, Germany, Netherlands, Poland, Sweden, Finland, Ukraine, UK, Australia, Canada, Argentina, Colombia, Mexico, Brazil, USA (3 168 of 5 448 sentences). **Left: China, Japan, South Korea, India, Indonesia, Vietnam, Russia, Turkey, Egypt, Nigeria** — extract any still missing with `npm run translate-facts -- --country=<c> --lang=it --extract=<file>`. Workflow per country: a translator subagent following [TRANSLATION_STYLE_IT.md](TRANSLATION_STYLE_IT.md) (on the branch), which also flags English sentences it thinks are wrong → verify each flag, fix the clear ones in BOTH languages just before that country's merge → `--merge=…` → `npm run refresh-facts-hooks` → commit only `data/facts/<c>.json` + `data/maps/<prefix>-*/facts.json`, listing the English corrections in the message (about 120 so far). Then: PR, product owner test, merge; the plan's DoD is every place with English having Italian. The v0.9.4 installer smoke test, the FT-61 tablet check and FT-66 on a real phone/tablet are outstanding; a leftover Cloudflare check fails on every PR (dashboard job) |
+| Next | **FT-50 is built: [PR #25](https://github.com/diegoami/Geoclick2027/pull/25)** on `feat/ft-50-italian`, awaiting the product owner's test and merge OK. Every name-fact is in Italian (5 448 of 5 448, 28 countries, one commit each); ~180 English facts corrected along the way (DECISIONS.md, "Translating fact-checked the English"); three sentences are new writing (Paraíba, Wonju, Sukabumi) for the product owner to read. Tools: `npm run translate-facts`, `npm run refresh-facts-hooks`, brief `docs/TRANSLATION_STYLE_IT.md`. After the merge, v0.10.0's remaining work is the release itself (RELEASES.md) and the milestone review prompt (REVIEW_LOOP.md); FT-51 (German) stays postponed. Outstanding: the v0.9.4 installer smoke test, the FT-61 tablet check, FT-66 on a real phone/tablet; a leftover Cloudflare check fails on every PR (dashboard job) |
 | After that | **FT-51 (German) is postponed** until the Italian has been read; the two v0.9.4 test gates (FT-56, FT-59) wait in a hardening batch |
 | Also raised 2026-09-20 | **The start screen becomes a zoomable world map** — pick the country on the map, then the kind of quiz. The map list cannot be finalized as a list: the goal is a high number of maps, and `mapCatalog.ts` is already 31 countries and 66 maps. Favourites and Recent stay unchanged. Second item of the Iteration 8+ backlog, with the open questions listed there |
 
@@ -96,7 +96,7 @@ installer smoke test (the published Windows and Android installers were
 
 Suggested first message for the next session:
 
-> Read docs/HANDOVER.md, then docs/PLAN_V0.10.md. Check out feat/ft-50-italian and finish FT-50: translate whichever of the ten remaining countries have no Italian yet, per docs/TRANSLATION_STYLE_IT.md, then open the PR. (The v0.9.4 installer smoke test is still outstanding.)
+> Read docs/HANDOVER.md, then docs/PLAN_V0.10.md. If PR #25 (FT-50) is merged, prepare the v0.10.0 release per docs/RELEASES.md and hand the product owner the milestone review prompt (docs/REVIEW_LOOP.md). (The v0.9.4 installer smoke test is still outstanding.)
 
 Whatever comes next, the working rules stay (CLAUDE.md §3):
 

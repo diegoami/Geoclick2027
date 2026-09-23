@@ -9,7 +9,8 @@
 > on 2026-09-22** (below) and it has started: **FT-48 and FT-49 are
 > merged** (Italy's 20 regions in Italian, and the per-language shape with
 > per-sentence fallback). **FT-66** (region names along the region) is
-> merged (PR #24); **FT-50** — the other 27 countries — is next.
+> merged (PR #24); **FT-50** — the other 27 countries — is built, all
+> 5 448 sentences, in PR #25 awaiting the product owner's test.
 
 ## Why
 
@@ -254,7 +255,7 @@ The FT-48 gate is already passed. **→ Release `v0.10.0`** per
 | ----- | ----------- | ----- | -------------------------------------------- |
 | FT-48 | **merged**  | `51892fc` | Italy's 20 regions, 60 Italian sentences, read and approved (PR #18) |
 | FT-49 | **merged**  | `51892fc` | per-language `hooks`, per-sentence fallback (PR #18) |
-| FT-50 | **in progress** | —  | `feat/ft-50-italian`: 18 of 28 countries, 3 168 of 5 448 sentences; voice approved after wave 1; ~120 English facts corrected on the way |
+| FT-50 | **PR #25**  | —     | all 28 countries, 5 448 of 5 448 sentences; ~180 English facts corrected on the way; awaiting PO test |
 | FT-51 | postponed   | —     | German, only if the Italian read well   |
 | FT-60 | **merged**  | `8b75e1e` | finite level-0 hand, size 10; tutorial slips dealt first (PR #22) |
 | FT-61 | **merged**  | `6b794b8` | a slip keeps its drag on a tablet; confirm on device at release (PR #21) |

@@ -16,6 +16,30 @@ Keep this updated the same way as the other docs: when a decision gets
 made, made explicitly to correct an earlier one, or gets revisited, add
 or amend an entry here as part of that change, not as an afterthought.
 
+## Translating fact-checked the English (2026-09-23, FT-50)
+
+Every country file was translated by its own subagent, told to translate
+faithfully and to *report* any English sentence it thought was wrong. The
+reports were checked one by one and about 180 sentences were corrected, in
+both languages, each listed in its country's commit message.
+
+- **Correct the source, not just the translation.** A wrong fact is wrong
+  for the English reader too; fixing only the Italian would make the two
+  disagree. So the English was edited in the same commit as its Italian.
+- **Clear errors only.** Arguable claims (Drenthe has "no city of any
+  size", Åre is Sweden's biggest ski resort) were left alone; a hedge was
+  added where the truth is disputed (Armenia's name, Doğubayazıt's crater).
+- **Several were contradictions inside one file** — Ohio and Virginia each
+  claimed eight presidents; two provinces each claimed to be the smallest
+  (Brazil, Colombia, Turkey). A lint could find these by comparing
+  superlatives across a file; not built.
+- **Three sentences are new writing**, where the wrong fact had no true
+  replacement: Paraíba (Sousa's dinosaur footprints), Wonju (Chiaksan
+  National Park), Sukabumi (Mount Gede). Flagged to the product owner.
+- **Why it matters for FT-51:** a German pass would re-read the same
+  English; running it after these corrections means it starts from the
+  better text.
+
 ## Region names along the region: an SVG overlay, with the pill as fallback (2026-09-23, FT-64 spike)
 
 The spike drew every region's name along a computed spine on
