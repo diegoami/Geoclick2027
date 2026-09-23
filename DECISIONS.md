@@ -59,7 +59,8 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   zoom and bearing. About 160 bytes a region. Near-round shapes get a level
   axis; ends narrower than 45 % of the median width are dropped; a curve
   that leaves the shape is retried with more bow, then straight. 2 of 98
-  regions got no spine (Maryland, Sachsen).
+  regions got no spine (Maryland, Sachsen) in the spike's sample; across
+  all 32 polygon maps it is 17 of about 1 050 (MAPS.md).
 - **SVG `textPath`, not a MapLibre `symbol-placement: line` layer.** The
   symbol layer still needs the same build-time spine (as a line in the
   tiles), plus a vendored glyph stack to stay offline, and gives up the

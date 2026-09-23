@@ -34,8 +34,9 @@ that explains it, and from v0.10.0 both arrive through a release PR.
 ## The release PR (from v0.10.0)
 
 1. Branch `release/X.Y.Z` from `main` once everything for the release is
-   merged. On it: the `CHANGELOG.md` entry (the `## Unreleased` section
-   renamed to the version, "Release notes" below), and
+   merged. On it: the `CHANGELOG.md` entry, still headed `## Unreleased`
+   (`publish-release.mjs` takes a beta's notes from that heading; "Release
+   notes" below), and
    `node scripts/sync-version.mjs X.Y.Z-beta.1`. Run the gates; push; open
    the PR against `main`, with `Review: not run` in its body.
 2. **Stage the beta.** Tag the branch head `vX.Y.Z-beta.1` and package from
@@ -47,7 +48,9 @@ that explains it, and from v0.10.0 both arrive through a release PR.
 3. **The owner tests the beta.** A fix goes to its own task PR on `main`;
    merge `main` into the release branch and stage `beta.2` the same way.
    Update the PR's `Review:` line when a verdict arrives.
-4. **On the owner's OK:** `sync-version.mjs X.Y.Z` on the branch, gates,
+4. **On the owner's OK:** `sync-version.mjs X.Y.Z` on the branch, and the
+   CHANGELOG heading renamed from `## Unreleased` to `## vX.Y.Z — <date> — …`;
+   gates,
    push. The owner merges the PR with a **merge commit**, not a squash, so
    the beta tags stay in `main`'s history. Tag the merge commit
    `git tag -a vX.Y.Z -m "vX.Y.Z — <theme>"`, push the tag, package from it
