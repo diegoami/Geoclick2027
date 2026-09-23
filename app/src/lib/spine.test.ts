@@ -75,6 +75,14 @@ describe('computeSpine', () => {
 		expect(e[1]).toBeLessThan(2);
 	});
 
+	it('measures the mainland on the ground, not on the Mercator map', () => {
+		// Nunavut: an arctic island that Mercator draws larger than the
+		// mainland, though it is a sixth of its real size.
+		const [s, , e] = computeSpine([box(-110, 60, -90, 66), box(-80, 78, -70, 83)])!.curve;
+		expect(s[1]).toBeLessThan(66);
+		expect(e[1]).toBeLessThan(66);
+	});
+
 	it('gives up on nothing at all', () => {
 		expect(computeSpine([])).toBeNull();
 	});
