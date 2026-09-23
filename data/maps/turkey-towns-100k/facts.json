@@ -5,11 +5,18 @@
 		"populationRank": 46,
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"From Hadrianopolis, founded by the emperor Hadrian — worn down through Greek to Edirne.",
-			"It was the Ottoman capital for almost a century before Constantinople fell, and the Selimiye mosque here is Sinan's masterpiece and a UNESCO site.",
-			"Its oil wrestling tournament at Kırkpınar has been held every year since 1346, the oldest continuously running sporting event in the world."
-		]
+		"hooks": {
+			"en": [
+				"From Hadrianopolis, founded by the emperor Hadrian — worn down through Greek to Edirne.",
+				"It was the Ottoman capital for almost a century before Constantinople fell, and the Selimiye mosque here is Sinan's masterpiece and a UNESCO site.",
+				"Its oil wrestling tournament at Kırkpınar has been held every year since 1346, the oldest continuously running sporting event in the world."
+			],
+			"it": [
+				"Da Hadrianopolis, la città fondata dall’imperatore Adriano, consumata dal tempo attraverso il greco fino a diventare Edirne.",
+				"Fu capitale ottomana per quasi un secolo prima della caduta di Costantinopoli, e la sua moschea Selimiye è il capolavoro di Sinan e patrimonio UNESCO.",
+				"Il suo torneo di lotta nell’olio a Kırkpınar si tiene ogni anno dal 1346: è la competizione sportiva più antica del mondo disputata senza interruzione."
+			]
+		}
 	},
 	"zonguldak": {
 		"kind": "city",
@@ -18,11 +25,18 @@
 		"region": "Zinguldak",
 		"coastal": true,
 		"position": "north-west",
-		"hooks": [
-			"A recent name, probably from a local word for a marshy meadow — one of the few provinces without an ancient name.",
-			"Turkey's only hard coal basin, worked since 1848, and its mines run out under the Black Sea.",
-			"The coal here fuelled the Ottoman navy and then the republic's first industry."
-		]
+		"hooks": {
+			"en": [
+				"A recent name, probably from a local word for a marshy meadow — one of the few provinces without an ancient name.",
+				"Turkey's only hard coal basin, worked since 1848, and its mines run out under the Black Sea.",
+				"The coal here fuelled the Ottoman navy and then the republic's first industry."
+			],
+			"it": [
+				"Un nome recente, probabilmente da una parola locale per un prato paludoso: una delle poche province senza un nome antico.",
+				"L’unico bacino di litantrace della Turchia, sfruttato dal 1848: le sue miniere si spingono sotto il Mar Nero.",
+				"Il carbone di qui alimentò la marina ottomana e poi la prima industria della repubblica."
+			]
+		}
 	},
 	"samsun": {
 		"kind": "city",
@@ -30,11 +44,18 @@
 		"populationRank": 13,
 		"coastal": true,
 		"position": "north",
-		"hooks": [
-			"From Greek Amisos, with the Turkish prefix worn on from \"eis Amison\", \"to Amisos\".",
-			"Atatürk landed here on 19 May 1919 to begin the war of independence, which is why that date is a national holiday.",
-			"It sits on the delta of the Kızılırmak, Turkey's longest river, and grows most of the country's tobacco."
-		]
+		"hooks": {
+			"en": [
+				"From Greek Amisos, with the Turkish prefix worn on from \"eis Amison\", \"to Amisos\".",
+				"Atatürk landed here on 19 May 1919 to begin the war of independence, which is why that date is a national holiday.",
+				"It sits on the delta of the Kızılırmak, Turkey's longest river, and grows most of the country's tobacco."
+			],
+			"it": [
+				"Dal greco Amisos, con il prefisso che il turco ha conservato da \"eis Amison\", \"verso Amisos\".",
+				"Qui Atatürk sbarcò il 19 maggio 1919 per dare inizio alla guerra d’indipendenza, ed è per questo che quel giorno è festa nazionale.",
+				"Sorge sul delta del Kızılırmak, il fiume più lungo della Turchia, e coltiva la maggior parte del tabacco del paese."
+			]
+		}
 	},
 	"karabuk": {
 		"kind": "city",
@@ -43,11 +64,18 @@
 		"region": "Zinguldak",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"\"Black bend\" or \"black bush\" — kara, black, plus a word for a river bend.",
-			"Created around the steelworks built here in 1937, the republic's first heavy industry project.",
-			"Safranbolu in it has hundreds of preserved Ottoman merchant houses and is a UNESCO site."
-		]
+		"hooks": {
+			"en": [
+				"\"Black bend\" or \"black bush\" — kara, black, plus a word for a river bend.",
+				"Created around the steelworks built here in 1937, the republic's first heavy industry project.",
+				"Safranbolu in it has hundreds of preserved Ottoman merchant houses and is a UNESCO site."
+			],
+			"it": [
+				"\"Ansa nera\" o \"cespuglio nero\": kara, nero, più una parola che indica l’ansa di un fiume.",
+				"Nata intorno all’acciaieria costruita qui nel 1937, il primo progetto di industria pesante della repubblica.",
+				"Safranbolu, nel suo territorio, conserva centinaia di case di mercanti ottomani ed è patrimonio UNESCO."
+			]
+		}
 	},
 	"rize": {
 		"kind": "city",
@@ -55,11 +83,18 @@
 		"populationRank": 26,
 		"coastal": true,
 		"position": "north-east",
-		"hooks": [
-			"From Greek Rhizaion, from rhiza, a root or a foothill.",
-			"It grows nearly all of Turkey's tea, planted from the 1920s after the loss of coffee-growing lands made an alternative urgent.",
-			"The wettest province in the country, over 2,200 mm a year, and its Ayder plateau is Alpine meadow above the cloud."
-		]
+		"hooks": {
+			"en": [
+				"From Greek Rhizaion, from rhiza, a root or a foothill.",
+				"It grows nearly all of Turkey's tea, planted from the 1920s after the loss of coffee-growing lands made an alternative urgent.",
+				"The wettest province in the country, over 2,200 mm a year, and its Ayder plateau is Alpine meadow above the cloud."
+			],
+			"it": [
+				"Dal greco Rhizaion, da rhiza, radice, ma anche piede del monte.",
+				"Produce quasi tutto il tè della Turchia, piantato dagli anni Venti, quando la perdita delle terre del caffè rese urgente un’alternativa.",
+				"La provincia più piovosa del paese, oltre 2.200 mm l’anno, e il suo altopiano di Ayder è un prato alpino sopra le nuvole."
+			]
+		}
 	},
 	"istanbul": {
 		"kind": "city",
@@ -69,11 +104,18 @@
 		"region": "Istanbul",
 		"coastal": true,
 		"position": "north-west",
-		"hooks": [
-			"From Greek eis tin polin, \"to the city\" — travellers said where they were going and the phrase became the name.",
-			"The only city on two continents, and it was the capital of the Roman, Byzantine and Ottoman empires in turn for 1,600 years.",
-			"Hagia Sophia's dome, finished in 537, was the largest in the world for nearly a thousand years."
-		]
+		"hooks": {
+			"en": [
+				"From Greek eis tin polin, \"to the city\" — travellers said where they were going and the phrase became the name.",
+				"The best-known city on two continents, and it was the capital of the Roman, Byzantine and Ottoman empires in turn for 1,600 years.",
+				"Hagia Sophia's dome, finished in 537, was the largest in the world for nearly a thousand years."
+			],
+			"it": [
+				"Dal greco eis tin polin, \"verso la città\": i viaggiatori dicevano dove andavano, e la frase divenne il nome.",
+				"La più celebre città su due continenti, e per 1.600 anni fu, una dopo l’altra, capitale degli imperi romano, bizantino e ottomano.",
+				"La cupola di Santa Sofia, completata nel 537, fu la più grande del mondo per quasi mille anni."
+			]
+		}
 	},
 	"ordu": {
 		"kind": "city",
@@ -81,11 +123,18 @@
 		"populationRank": 39,
 		"coastal": true,
 		"position": "north-east",
-		"hooks": [
-			"Turkish for \"army\" — the name of a camp that became a town; the same word gives English \"horde\".",
-			"It produces a large share of Turkey's hazelnuts, and Turkey grows about 70% of the world's.",
-			"Boztepe above the town is reached by cable car and looks down the whole coast."
-		]
+		"hooks": {
+			"en": [
+				"Turkish for \"army\" — the name of a camp that became a town; the same word gives English \"horde\".",
+				"It produces a large share of Turkey's hazelnuts, and Turkey grows about 70% of the world's.",
+				"Boztepe above the town is reached by cable car and looks down the whole coast."
+			],
+			"it": [
+				"In turco \"esercito\": il nome di un accampamento diventato città; dalla stessa parola viene \"orda\".",
+				"Produce una grossa parte delle nocciole della Turchia, che a sua volta ne coltiva circa il 70% di tutto il mondo.",
+				"Il Boztepe, sopra la città, si raggiunge in funivia e domina tutta la costa."
+			]
+		}
 	},
 	"tekirdag": {
 		"kind": "city",
@@ -94,11 +143,18 @@
 		"region": "Tekirdag",
 		"coastal": true,
 		"position": "north-west",
-		"hooks": [
-			"\"Tekfur mountain\" — tekfur was the Turkish word for a Byzantine lord, so the name means the lord's mountain.",
-			"Its rakı is the most respected in Turkey, distilled from Thracian grapes and aniseed.",
-			"The Ganos ridge along its coast was known in antiquity for wine and is still terraced for it."
-		]
+		"hooks": {
+			"en": [
+				"\"Tekfur mountain\" — tekfur was the Turkish word for a Byzantine lord, so the name means the lord's mountain.",
+				"Its rakı is the most respected in Turkey, distilled from Thracian grapes and aniseed.",
+				"The Ganos ridge along its coast was known in antiquity for wine and is still terraced for it."
+			],
+			"it": [
+				"\"Monte del tekfur\": tekfur era la parola turca per un signore bizantino, quindi il nome significa il monte del signore.",
+				"Il suo rakı è il più stimato della Turchia, distillato da uve della Tracia e anice.",
+				"La dorsale di Ganos lungo la sua costa era nota nell’antichità per il vino, e ancora oggi è terrazzata a vigneto."
+			]
+		}
 	},
 	"trabzon": {
 		"kind": "city",
@@ -106,11 +162,18 @@
 		"populationRank": 10,
 		"coastal": true,
 		"position": "north-east",
-		"hooks": [
-			"From Greek Trapezous, \"table\" — the flat-topped hill the city was built on.",
-			"It was the capital of a Greek empire of its own, Trebizond, which outlasted Constantinople by eight years until 1461.",
-			"The Sumela monastery near it clings to a cliff face 300 m up, founded in 386."
-		]
+		"hooks": {
+			"en": [
+				"From Greek Trapezous, \"table\" — the flat-topped hill the city was built on.",
+				"It was the capital of a Greek empire of its own, Trebizond, which outlasted Constantinople by eight years until 1461.",
+				"The Sumela monastery near it clings to a cliff face 300 m up, founded in 386."
+			],
+			"it": [
+				"Dal greco Trapezous, \"tavola\": la collina dalla cima piatta su cui fu costruita la città.",
+				"Fu la capitale di un impero greco tutto suo, quello di Trebisonda, che sopravvisse a Costantinopoli di otto anni, fino al 1461.",
+				"Il monastero di Sumela, lì vicino, è aggrappato a una parete di roccia a 300 m d’altezza, e fu fondato nel 386."
+			]
+		}
 	},
 	"izmit": {
 		"kind": "city",
@@ -119,11 +182,18 @@
 		"region": "Kocaeli",
 		"coastal": true,
 		"position": "north-west",
-		"hooks": [
-			"From Nicomedia, through Greek \"eis Nikomedian\" — the same worn-down construction as Istanbul and Izmir.",
-			"It was the eastern capital of the Roman Empire under Diocletian, before Constantinople was built.",
-			"The 1999 earthquake here killed over 17,000 people and reshaped Turkish building regulation."
-		]
+		"hooks": {
+			"en": [
+				"From Nicomedia, through Greek \"eis Nikomedian\" — the same worn-down construction as Istanbul and Izmir.",
+				"It was the eastern capital of the Roman Empire under Diocletian, before Constantinople was built.",
+				"The 1999 earthquake here killed over 17,000 people and reshaped Turkish building regulation."
+			],
+			"it": [
+				"Da Nicomedia, attraverso il greco \"eis Nikomedian\": la stessa costruzione, consumata dal tempo, di Istanbul e İzmir.",
+				"Fu la capitale orientale dell’impero romano sotto Diocleziano, prima che fosse costruita Costantinopoli.",
+				"Il terremoto del 1999 qui uccise oltre 17.000 persone e cambiò le norme edilizie turche."
+			]
+		}
 	},
 	"adapazar": {
 		"kind": "city",
@@ -132,11 +202,18 @@
 		"region": "Sakarya",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"\"Island market\" — ada island, pazar market: a market on land ringed by river branches.",
-			"It is the capital of Sakarya province and the centre of Turkey’s railway rolling-stock industry.",
-			"The 1999 earthquake struck here too, and parts of the town sank into liquefied ground."
-		]
+		"hooks": {
+			"en": [
+				"\"Island market\" — ada island, pazar market: a market on land ringed by river branches.",
+				"It is the capital of Sakarya province and the centre of Turkey’s railway rolling-stock industry.",
+				"The 1999 earthquake struck here too, and parts of the town sank into liquefied ground."
+			],
+			"it": [
+				"\"Mercato dell’isola\": ada isola, pazar mercato; un mercato su una terra cinta dai rami del fiume.",
+				"È il capoluogo della provincia di Sakarya e il centro dell’industria turca del materiale rotabile ferroviario.",
+				"Anche qui colpì il terremoto del 1999, e parti della città sprofondarono nel terreno liquefatto."
+			]
+		}
 	},
 	"corum": {
 		"kind": "city",
@@ -144,11 +221,18 @@
 		"populationRank": 35,
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"Of uncertain origin — possibly from Çorumlu, a tribal name, or from a word meaning a mixed place.",
-			"Hattusa here was the Hittite capital, and its archive of clay tablets gave the world its first known peace treaty, with Egypt.",
-			"It produces most of Turkey's leblebi, roasted chickpeas, and its clay is used for bricks nationwide."
-		]
+		"hooks": {
+			"en": [
+				"Of uncertain origin — possibly from Çorumlu, a tribal name, or from a word meaning a mixed place.",
+				"Hattusa here was the Hittite capital, and its archive of clay tablets gave the world its first known peace treaty, with Egypt.",
+				"It produces most of Turkey's leblebi, roasted chickpeas, and its clay is used for bricks nationwide."
+			],
+			"it": [
+				"Di origine incerta: forse da Çorumlu, un nome tribale, o da una parola che indica un luogo misto.",
+				"Qui sorgeva Hattusa, la capitale ittita, e il suo archivio di tavolette d’argilla ha dato al mondo il primo trattato di pace conosciuto, con l’Egitto.",
+				"Produce la maggior parte dei leblebi della Turchia, i ceci tostati, e la sua argilla serve a fare mattoni in tutto il paese."
+			]
+		}
 	},
 	"tokat": {
 		"kind": "city",
@@ -156,11 +240,18 @@
 		"populationRank": 43,
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"Possibly from a word for a fortified place, or from Armenian or Greek origins that are now unclear.",
-			"Its printed cloth, yazma, is block-printed by hand using techniques unchanged for centuries.",
-			"The Roman bridge at Tokat and the Hittite site at Maşat Höyük both show how long this pass has been used."
-		]
+		"hooks": {
+			"en": [
+				"Possibly from a word for a fortified place, or from Armenian or Greek origins that are now unclear.",
+				"Its printed cloth, yazma, is block-printed by hand using techniques unchanged for centuries.",
+				"The Roman bridge at Tokat and the Hittite site at Maşat Höyük both show how long this pass has been used."
+			],
+			"it": [
+				"Forse da una parola che indica un luogo fortificato, o da origini armene o greche oggi poco chiare.",
+				"La sua stoffa stampata, lo yazma, viene decorata a mano con matrici di legno, secondo tecniche immutate da secoli.",
+				"Il ponte romano di Tokat e il sito ittita di Maşat Höyük mostrano entrambi da quanto tempo si percorre questo passo."
+			]
+		}
 	},
 	"bursa": {
 		"kind": "city",
@@ -169,11 +260,18 @@
 		"population1950": 148000,
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"From Prusa, named for Prusias, the king of Bithynia who founded it around 200 BC.",
-			"The first Ottoman capital, and its early mosques and tombs are a UNESCO site.",
-			"Turkish silk was woven here, the İskender kebab was invented here, and Uludağ above it is the country's best-known ski mountain."
-		]
+		"hooks": {
+			"en": [
+				"From Prusa, named for Prusias, the king of Bithynia who founded it around 200 BC.",
+				"The first Ottoman capital, and its early mosques and tombs are a UNESCO site.",
+				"Turkish silk was woven here, the İskender kebab was invented here, and Uludağ above it is the country's best-known ski mountain."
+			],
+			"it": [
+				"Da Prusa, dal nome di Prusia, il re di Bitinia che la fondò intorno al 200 a.C.",
+				"La prima capitale ottomana: le sue prime moschee e i suoi mausolei sono patrimonio UNESCO.",
+				"Qui si tesseva la seta turca, qui fu inventato l’İskender kebab, e l’Uludağ che la sovrasta è la montagna da sci più famosa del paese."
+			]
+		}
 	},
 	"ankara": {
 		"kind": "city",
@@ -183,11 +281,18 @@
 		"capitalOf": "country",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"From Ancyra, Greek for \"anchor\" — the Galatians or the Phrygians are said to have found one here, far from any sea.",
-			"Atatürk made it the capital in 1923 over Istanbul, deliberately choosing a small Anatolian town of 30,000 people.",
-			"The Angora goat, cat and rabbit are all named after it, and its mohair was a protected Ottoman export."
-		]
+		"hooks": {
+			"en": [
+				"From Ancyra, Greek for \"anchor\" — the Galatians or the Phrygians are said to have found one here, far from any sea.",
+				"Atatürk made it the capital in 1923 over Istanbul, deliberately choosing a small Anatolian town of 30,000 people.",
+				"The Angora goat, cat and rabbit are all named after it, and its mohair was a protected Ottoman export."
+			],
+			"it": [
+				"Da Ancyra, che in greco vuol dire \"àncora\": si dice che i Galati o i Frigi ne avessero trovata una qui, lontano da ogni mare.",
+				"Atatürk ne fece la capitale nel 1923 al posto di Istanbul, scegliendo di proposito una piccola città anatolica di 30.000 abitanti.",
+				"La capra, il gatto e il coniglio d’Angora prendono tutti il nome da qui, e il suo mohair era un’esportazione ottomana protetta."
+			]
+		}
 	},
 	"erzurum": {
 		"kind": "city",
@@ -195,11 +300,18 @@
 		"populationRank": 19,
 		"coastal": false,
 		"position": "north-east",
-		"hooks": [
-			"From Arz-ı Rum, \"the land of the Romans\" — Rum meaning Byzantine, which is what the Turks called them.",
-			"The highest large city in Turkey at 1,900 m, and one of the coldest; it hosted the 2011 Winter Universiade.",
-			"Its Çifte Minareli Medrese from the 1200s is one of the finest Seljuk buildings anywhere."
-		]
+		"hooks": {
+			"en": [
+				"From Arz-ı Rum, \"the land of the Romans\" — Rum meaning Byzantine, which is what the Turks called them.",
+				"The highest large city in Turkey at 1,900 m, and one of the coldest; it hosted the 2011 Winter Universiade.",
+				"Its Çifte Minareli Medrese from the 1200s is one of the finest Seljuk buildings anywhere."
+			],
+			"it": [
+				"Da Arz-ı Rum, \"la terra dei Romani\": Rum voleva dire bizantini, ed è così che i Turchi li chiamavano.",
+				"La più alta tra le grandi città della Turchia, a 1.900 m, e una delle più fredde; nel 2011 ha ospitato l’Universiade invernale.",
+				"La sua Çifte Minareli Medrese, del Duecento, è uno dei più begli edifici selgiuchidi in assoluto."
+			]
+		}
 	},
 	"k-r-kkale": {
 		"kind": "city",
@@ -208,11 +320,18 @@
 		"region": "Kinkkale",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"\"Forty castles\" — kırk forty, kale castle, though the name may really be from a village called Kırıkköy.",
-			"Founded around a state arms factory in 1925 and made a province in 1989, so it is one of the newest.",
-			"It has the country's largest oil refinery inland, at the junction of the main east–west pipelines."
-		]
+		"hooks": {
+			"en": [
+				"\"Forty castles\" — kırk forty, kale castle, though the name may really be from a village called Kırıkköy.",
+				"Founded around a state arms factory in 1925 and made a province in 1989, so it is one of the newest.",
+				"It has the country's largest oil refinery inland, at the junction of the main east–west pipelines."
+			],
+			"it": [
+				"\"Quaranta castelli\": kırk quaranta, kale castello, anche se il nome potrebbe venire in realtà da un villaggio chiamato Kırıkköy.",
+				"Nata nel 1925 intorno a una fabbrica statale di armi e divenuta provincia nel 1989, è una delle più recenti.",
+				"Ha la più grande raffineria dell’entroterra del paese, all’incrocio dei principali oleodotti est-ovest."
+			]
+		}
 	},
 	"eskisehir": {
 		"kind": "city",
@@ -221,11 +340,18 @@
 		"region": "Eskisehir",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"\"Old city\" — the Turkish name for what had been Dorylaeum, a Byzantine town.",
-			"Meerschaum, the white stone smoking pipes are carved from, is mined almost nowhere else in the world.",
-			"It is Turkey's most student-heavy city and has a reputation as its most liveable."
-		]
+		"hooks": {
+			"en": [
+				"\"Old city\" — the Turkish name for what had been Dorylaeum, a Byzantine town.",
+				"Meerschaum, the white stone smoking pipes are carved from, is mined almost nowhere else in the world.",
+				"It is Turkey's most student-heavy city and has a reputation as its most liveable."
+			],
+			"it": [
+				"\"Città vecchia\": il nome turco di quella che era stata Dorileo, una città bizantina.",
+				"La schiuma di mare, la pietra bianca da cui si intagliano le pipe, non si estrae quasi in nessun altro posto al mondo.",
+				"È la città turca con più studenti e ha fama di essere la più vivibile."
+			]
+		}
 	},
 	"erzincan": {
 		"kind": "city",
@@ -233,11 +359,18 @@
 		"populationRank": 44,
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"From Erez, an old Armenian settlement name, with a Persian diminutive.",
-			"Destroyed by earthquakes repeatedly, most catastrophically in 1939 when about 33,000 people died — the deadliest in Turkish history.",
-			"The Kemaliye gorge road here was cut through cliffs by hand by villagers over 132 years."
-		]
+		"hooks": {
+			"en": [
+				"From Erez, an old Armenian settlement name, with a Persian diminutive.",
+				"Destroyed by earthquakes repeatedly, most catastrophically in 1939 when about 33,000 people died — the deadliest in Turkish history until 2023.",
+				"The Kemaliye gorge road here was cut through cliffs by hand by villagers over 132 years."
+			],
+			"it": [
+				"Da Erez, antico nome armeno di un insediamento, con un diminutivo persiano.",
+				"Distrutta più volte dai terremoti, nel modo più catastrofico nel 1939, quando morirono circa 33.000 persone: il più letale della storia turca fino al 2023.",
+				"Qui la strada della gola di Kemaliye fu scavata a mano nelle pareti di roccia dagli abitanti dei villaggi, nell’arco di 132 anni."
+			]
+		}
 	},
 	"sivas": {
 		"kind": "city",
@@ -245,11 +378,18 @@
 		"populationRank": 28,
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"From Sebasteia, named for Augustus — sebastos is the Greek translation of the Latin augustus.",
-			"The 1919 congress held here set the terms of the independence movement, and the building is now a museum.",
-			"Its Divriği hospital and mosque, with carved portals unlike anything else in Islamic architecture, is a UNESCO site."
-		]
+		"hooks": {
+			"en": [
+				"From Sebasteia, named for Augustus — sebastos is the Greek translation of the Latin augustus.",
+				"The 1919 congress held here set the terms of the independence movement, and the building is now a museum.",
+				"Its Divriği hospital and mosque, with carved portals unlike anything else in Islamic architecture, is a UNESCO site."
+			],
+			"it": [
+				"Da Sebasteia, in onore di Augusto: sebastos è la traduzione greca del latino augustus.",
+				"Il congresso che si tenne qui nel 1919 fissò i termini del movimento d’indipendenza, e l’edificio oggi è un museo.",
+				"L’ospedale e la moschea di Divriği, con portali scolpiti che non hanno eguali nell’architettura islamica, sono patrimonio UNESCO."
+			]
+		}
 	},
 	"bal-kesir": {
 		"kind": "city",
@@ -258,11 +398,18 @@
 		"region": "Balikesir",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"From Palaiokastron, Greek for \"old castle\", worn down through Turkish.",
-			"It has coast on both the Aegean and the Marmara, the only province on both.",
-			"Kaz Dağı in it is the ancient Mount Ida, where the judgement of Paris is set and from which the gods watched the Trojan War."
-		]
+		"hooks": {
+			"en": [
+				"From Palaiokastron, Greek for \"old castle\", worn down through Turkish.",
+				"It has coast on both the Aegean and the Marmara, one of only two provinces on both.",
+				"Kaz Dağı in it is the ancient Mount Ida, where the judgement of Paris is set and from which the gods watched the Trojan War."
+			],
+			"it": [
+				"Da Palaiokastron, in greco \"vecchio castello\", consumato dal tempo attraverso il turco.",
+				"Ha coste sia sull’Egeo sia sul Mar di Marmara: è una delle sole due province affacciate su entrambi.",
+				"Il Kaz Dağı, nel suo territorio, è l’antico monte Ida, dove è ambientato il giudizio di Paride e da cui gli dèi osservavano la guerra di Troia."
+			]
+		}
 	},
 	"kutahya": {
 		"kind": "city",
@@ -270,11 +417,18 @@
 		"populationRank": 34,
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"From Cotyaeum, a Phrygian and then Roman town.",
-			"Its tiles and ceramics have been made since the 1400s and decorated mosques across the empire after Iznik's kilns declined.",
-			"Aizanoi in the province has the best-preserved temple of Zeus in Anatolia and the world's first known stock exchange building."
-		]
+		"hooks": {
+			"en": [
+				"From Cotyaeum, a Phrygian and then Roman town.",
+				"Its tiles and ceramics have been made since the 1400s and decorated mosques across the empire after Iznik's kilns declined.",
+				"Aizanoi in the province has the best-preserved temple of Zeus in Anatolia and the world's first known stock exchange building."
+			],
+			"it": [
+				"Da Cotyaeum, città frigia e poi romana.",
+				"Le sue piastrelle e ceramiche si producono dal Quattrocento e, dopo il declino delle fornaci di Iznik, decorarono moschee in tutto l’impero.",
+				"Aizanoi, nella provincia, ha il tempio di Zeus meglio conservato dell’Anatolia e il più antico edificio di borsa conosciuto al mondo."
+			]
+		}
 	},
 	"afyonkarahisar": {
 		"kind": "city",
@@ -283,11 +437,18 @@
 		"region": "Afyon",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"\"Opium black castle\" — afyon is opium, kara black, hisar fortress: the poppy fields and the black rock the citadel sits on.",
-			"Turkey is one of the few countries licensed to grow opium poppies for the world's legal medical morphine, and most of it is grown here.",
-			"Its thermal springs are the most used in Turkey, and its clotted cream and Turkish delight are national brands."
-		]
+		"hooks": {
+			"en": [
+				"\"Opium black castle\" — afyon is opium, kara black, hisar fortress: the poppy fields and the black rock the citadel sits on.",
+				"Turkey is one of the few countries licensed to grow opium poppies for the world's legal medical morphine, and most of it is grown here.",
+				"Its thermal springs are the most used in Turkey, and its clotted cream and Turkish delight are national brands."
+			],
+			"it": [
+				"\"Castello nero dell’oppio\": afyon è oppio, kara nero, hisar fortezza; i campi di papaveri e la roccia nera su cui sorge la cittadella.",
+				"La Turchia è uno dei pochi paesi autorizzati a coltivare il papavero da oppio per la morfina a uso medico legale di tutto il mondo, e la maggior parte cresce qui.",
+				"Le sue sorgenti termali sono le più frequentate della Turchia, e il suo kaymak e i suoi lokum sono marchi nazionali."
+			]
+		}
 	},
 	"kayseri": {
 		"kind": "city",
@@ -295,11 +456,18 @@
 		"populationRank": 14,
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"From Caesarea, named for Caesar — Tiberius renamed the Cappadocian capital Mazaca after Augustus.",
-			"Mount Erciyes above it is an extinct volcano of 3,864 m whose ash created the Cappadocian landscape next door.",
-			"Its merchants are proverbial in Turkey for shrewdness, and the city has more industrial exporters than almost any other."
-		]
+		"hooks": {
+			"en": [
+				"From Caesarea, named for Caesar — Archelaus, Rome's client king, renamed the Cappadocian capital Mazaca after Augustus.",
+				"Mount Erciyes above it is an extinct volcano of 3,864 m whose ash created the Cappadocian landscape next door.",
+				"Its merchants are proverbial in Turkey for shrewdness, and the city has more industrial exporters than almost any other."
+			],
+			"it": [
+				"Da Cesarea, che prende il nome da Cesare: Archelao, re cliente di Roma, ribattezzò così Mazaca, la capitale della Cappadocia, in onore di Augusto.",
+				"Il monte Erciyes, che la sovrasta, è un vulcano spento di 3.864 m, e la sua cenere ha creato il paesaggio della vicina Cappadocia.",
+				"In Turchia i suoi mercanti sono proverbiali per la furbizia, e la città ha più industrie esportatrici di quasi ogni altra."
+			]
+		}
 	},
 	"usak": {
 		"kind": "city",
@@ -308,11 +476,18 @@
 		"region": "Usak",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"Turkish for \"servant\" or \"young man\", though the name may predate that reading.",
-			"Its carpets were exported to Europe from the 1500s and appear in Holbein's and Lotto's paintings — which is why dealers call the patterns Holbein and Lotto carpets.",
-			"The Karun treasure, Lydian gold looted from here, was recovered from New York in 1993 after a long legal fight."
-		]
+		"hooks": {
+			"en": [
+				"Turkish for \"servant\" or \"young man\", though the name may predate that reading.",
+				"Its carpets were exported to Europe from the 1500s and appear in Holbein's and Lotto's paintings — which is why dealers call the patterns Holbein and Lotto carpets.",
+				"The Karun treasure, Lydian gold looted from here, was recovered from New York in 1993 after a long legal fight."
+			],
+			"it": [
+				"In turco \"servitore\" o \"giovanotto\", anche se il nome potrebbe essere più antico di questa lettura.",
+				"I suoi tappeti si esportavano in Europa dal Cinquecento e compaiono nei quadri di Holbein e di Lotto: per questo i mercanti chiamano quei disegni tappeti Holbein e tappeti Lotto.",
+				"Il tesoro di Karun, oro lidio trafugato da qui, fu recuperato da New York nel 1993 dopo una lunga battaglia legale."
+			]
+		}
 	},
 	"elaz-g": {
 		"kind": "city",
@@ -321,11 +496,18 @@
 		"region": "Elazig",
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"From El-Aziz, \"the glorious\", named for Sultan Abdülaziz in 1866 and later Turkified.",
-			"Harput above it is the old town, abandoned for the new one on the plain.",
-			"Its Keban dam created a lake that drowned the old town of Ağın and several archaeological sites."
-		]
+		"hooks": {
+			"en": [
+				"From El-Aziz, \"the glorious\", named for Sultan Abdülaziz in 1866 and later Turkified.",
+				"Harput above it is the old town, abandoned for the new one on the plain.",
+				"Its Keban dam created a lake that drowned the old town of Ağın and several archaeological sites."
+			],
+			"it": [
+				"Da El-Aziz, \"il glorioso\", dal nome del sultano Abdülaziz nel 1866, poi turchizzato.",
+				"Harput, sopra la città, è il centro antico, abbandonato per quello nuovo in pianura.",
+				"La sua diga di Keban ha creato un lago che ha sommerso il vecchio centro di Ağın e diversi siti archeologici."
+			]
+		}
 	},
 	"manisa": {
 		"kind": "city",
@@ -333,11 +515,18 @@
 		"populationRank": 30,
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"From Magnesia ad Sipylum — and the same Magnesia gives us magnet, magnesium and manganese.",
-			"The Ottoman princes trained here as well as at Amasya, and its Mesir festival has distributed a spiced paste as medicine since 1527.",
-			"Mount Sipylus above it has a natural rock face the Greeks took for Niobe weeping, which Homer mentions."
-		]
+		"hooks": {
+			"en": [
+				"From Magnesia ad Sipylum — and the same Magnesia gives us magnet, magnesium and manganese.",
+				"The Ottoman princes trained here as well as at Amasya, and its Mesir festival has distributed a spiced paste as medicine since 1527.",
+				"Mount Sipylus above it has a natural rock face the Greeks took for Niobe weeping, which Homer mentions."
+			],
+			"it": [
+				"Da Magnesia ad Sipylum: e dalla stessa Magnesia vengono magnete, magnesio e manganese.",
+				"I principi ottomani si formavano qui oltre che ad Amasya, e la sua festa del Mesir distribuisce dal 1527 una pasta speziata come medicina.",
+				"Il monte Sipilo, che la sovrasta, ha una parete di roccia naturale in cui i Greci vedevano Niobe in lacrime, ricordata da Omero."
+			]
+		}
 	},
 	"van": {
 		"kind": "city",
@@ -345,11 +534,18 @@
 		"populationRank": 22,
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"From Biainili, the Urartians' own name for their kingdom — the name is nearly three thousand years old.",
-			"Lake Van is Turkey's largest and is soda water, seven times saltier than the sea, with only one fish species able to live in it.",
-			"The Van cat has one blue eye and one amber, and swims — unusual in a cat."
-		]
+		"hooks": {
+			"en": [
+				"From Biainili, the Urartians' own name for their kingdom — the name is nearly three thousand years old.",
+				"Lake Van is Turkey's largest and is soda water, so alkaline that only one fish species can live in it.",
+				"The Van cat has one blue eye and one amber, and swims — unusual in a cat."
+			],
+			"it": [
+				"Da Biainili, il nome che gli Urartei davano al proprio regno: un nome vecchio di quasi tremila anni.",
+				"Il lago di Van è il più grande della Turchia e ha acque sodiche, così alcaline che una sola specie di pesce riesce a viverci.",
+				"Il gatto di Van ha un occhio azzurro e uno ambra, e nuota: cosa insolita per un gatto."
+			]
+		}
 	},
 	"izmir": {
 		"kind": "city",
@@ -359,11 +555,18 @@
 		"region": "Izmir",
 		"coastal": true,
 		"position": "west",
-		"hooks": [
-			"From Smyrna, through Greek \"eis Smyrnen\" — the same \"to the city\" construction that produced Istanbul.",
-			"One of the candidates for Homer's birthplace, and continuously inhabited for about 8,500 years.",
-			"Ephesus in the province had the Temple of Artemis, one of the seven wonders, and its library facade is the image of Roman Asia."
-		]
+		"hooks": {
+			"en": [
+				"From Smyrna, through Greek \"eis Smyrnen\" — the same \"to the city\" construction that produced Istanbul.",
+				"One of the candidates for Homer's birthplace, and continuously inhabited for about 8,500 years.",
+				"Ephesus in the province had the Temple of Artemis, one of the seven wonders, and its library facade is the image of Roman Asia."
+			],
+			"it": [
+				"Da Smirne, attraverso il greco \"eis Smyrnen\": la stessa costruzione \"verso la città\" che ha dato Istanbul.",
+				"È tra le città candidate a patria di Omero, ed è abitata ininterrottamente da circa 8.500 anni.",
+				"Efeso, nella provincia, aveva il tempio di Artemide, una delle sette meraviglie, e la facciata della sua biblioteca è l’immagine stessa dell’Asia romana."
+			]
+		}
 	},
 	"malatya": {
 		"kind": "city",
@@ -371,11 +574,18 @@
 		"populationRank": 17,
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"From Hittite Melid or Maldiya, meaning honey — a name over three thousand years old.",
-			"It grows about 80% of the world's dried apricots.",
-			"Aslantepe mound in it is a UNESCO site with one of the oldest known palaces and the earliest swords ever found."
-		]
+		"hooks": {
+			"en": [
+				"From Hittite Melid or Maldiya, meaning honey — a name over three thousand years old.",
+				"It grows about 80% of the world's dried apricots.",
+				"Aslantepe mound in it is a UNESCO site with one of the oldest known palaces and the earliest swords ever found."
+			],
+			"it": [
+				"Dall’ittita Melid o Maldiya, che significa miele: un nome di oltre tremila anni.",
+				"Produce circa l’80% delle albicocche secche del mondo.",
+				"Il tumulo di Aslantepe, nel suo territorio, è patrimonio UNESCO, con uno dei palazzi più antichi conosciuti e le spade più antiche mai ritrovate."
+			]
+		}
 	},
 	"siirt": {
 		"kind": "city",
@@ -383,11 +593,18 @@
 		"populationRank": 49,
 		"coastal": false,
 		"position": "south-east",
-		"hooks": [
-			"From Aramaic or Arabic, possibly Se'ert, \"city\", or from an older Assyrian name.",
-			"Its pistachios are a distinct variety, and the province gives its name to the Siirt blanket, woven from mohair.",
-			"The Botan valley here is one of the deepest canyons in Turkey."
-		]
+		"hooks": {
+			"en": [
+				"From Aramaic or Arabic, possibly Se'ert, \"city\", or from an older Assyrian name.",
+				"Its pistachios are a distinct variety, and the province gives its name to the Siirt blanket, woven from mohair.",
+				"The Botan valley here is one of the deepest canyons in Turkey."
+			],
+			"it": [
+				"Dall’aramaico o dall’arabo, forse Se’ert, \"città\", o da un nome assiro più antico.",
+				"I suoi pistacchi sono una varietà a sé, e la provincia dà il nome alla coperta di Siirt, tessuta in mohair.",
+				"Qui la valle del Botan è uno dei canyon più profondi della Turchia."
+			]
+		}
 	},
 	"diyarbak-r": {
 		"kind": "city",
@@ -396,11 +613,18 @@
 		"region": "Diyarbakir",
 		"coastal": false,
 		"position": "south-east",
-		"hooks": [
-			"\"The land of the Bakr\" — diyar is land or abode, Bakr the Arab tribe that settled here in the 600s.",
-			"Its black basalt walls run 5.8 km, second in length only to the Great Wall by an old claim, and are a UNESCO site.",
-			"It is the largest Kurdish-majority city in Turkey, and its watermelons were once grown so large they were carried by camel."
-		]
+		"hooks": {
+			"en": [
+				"\"The land of the Bakr\" — diyar is land or abode, Bakr the Arab tribe that settled here in the 600s.",
+				"Its black basalt walls run 5.8 km, second in length only to the Great Wall by an old claim, and are a UNESCO site.",
+				"It is the largest Kurdish-majority city in Turkey, and its watermelons were once grown so large they were carried by camel."
+			],
+			"it": [
+				"\"La terra dei Bakr\": diyar è terra o dimora, e i Bakr sono la tribù araba che si stabilì qui nel VII secolo.",
+				"Le sue mura di basalto nero corrono per 5,8 km, seconde in lunghezza solo alla Grande Muraglia secondo una vecchia pretesa, e sono patrimonio UNESCO.",
+				"È la più grande città a maggioranza curda della Turchia, e un tempo le sue angurie crescevano così grandi da essere trasportate a dorso di cammello."
+			]
+		}
 	},
 	"batman": {
 		"kind": "city",
@@ -408,11 +632,18 @@
 		"populationRank": 23,
 		"coastal": false,
 		"position": "south-east",
-		"hooks": [
-			"Nothing to do with the comic: it is from the Batman river, and batman was also an Ottoman unit of weight.",
-			"The city grew from a village of 3,000 to a city on oil found here in 1940.",
-			"Hasankeyf in the province, a 12,000-year-old town, was flooded by the Ilısu dam in 2020 after a long international campaign to save it."
-		]
+		"hooks": {
+			"en": [
+				"Nothing to do with the comic: it is from the Batman river, and batman was also an Ottoman unit of weight.",
+				"The city grew from a village of 3,000 to a city on oil found here in 1940.",
+				"Hasankeyf in the province, a 12,000-year-old town, was flooded by the Ilısu dam in 2020 after a long international campaign to save it."
+			],
+			"it": [
+				"Il fumetto non c’entra: viene dal fiume Batman, e batman era anche un’unità di peso ottomana.",
+				"Grazie al petrolio trovato qui nel 1940, da villaggio di 3.000 abitanti è diventata una città.",
+				"Hasankeyf, nella provincia, un abitato di 12.000 anni, è stato sommerso dalla diga di Ilısu nel 2020, dopo una lunga campagna internazionale per salvarlo."
+			]
+		}
 	},
 	"konya": {
 		"kind": "city",
@@ -421,11 +652,18 @@
 		"population1950": 97000,
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"From Iconium, which the Greeks explained with a story about an eikon, an image, set up here.",
-			"Rumi lived, wrote and died here, and the whirling dervish ceremony his followers developed is a UNESCO heritage item.",
-			"The largest province in Turkey by area, and its plain grows most of the country's grain — it is called Turkey's breadbasket."
-		]
+		"hooks": {
+			"en": [
+				"From Iconium, which the Greeks explained with a story about an eikon, an image, set up here.",
+				"Rumi lived, wrote and died here, and the whirling dervish ceremony his followers developed is a UNESCO heritage item.",
+				"The largest province in Turkey by area, and its plain grows most of the country's grain — it is called Turkey's breadbasket."
+			],
+			"it": [
+				"Da Iconio, che i Greci spiegavano con la storia di un’eikon, un’immagine, eretta qui.",
+				"Qui Rumi visse, scrisse e morì, e la cerimonia dei dervisci rotanti nata tra i suoi seguaci è patrimonio UNESCO.",
+				"La provincia più grande della Turchia per superficie, e la sua pianura produce la maggior parte dei cereali del paese: la chiamano il granaio della Turchia."
+			]
+		}
 	},
 	"ayd-n": {
 		"kind": "city",
@@ -434,11 +672,18 @@
 		"region": "Aydin",
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"Named for the Aydınoğulları, a Turkish beylik that ruled the region after the Seljuks; aydın also means bright.",
-			"It grows more figs than anywhere in the world, and the Aegean fig is Turkey's oldest protected export.",
-			"Aphrodisias in it was a city of marble sculptors whose work reached across the Roman empire; it is a UNESCO site."
-		]
+		"hooks": {
+			"en": [
+				"Named for the Aydınoğulları, a Turkish beylik that ruled the region after the Seljuks; aydın also means bright.",
+				"It grows more figs than anywhere in the world, and the Aegean fig is Turkey's oldest protected export.",
+				"Aphrodisias in it was a city of marble sculptors whose work reached across the Roman empire; it is a UNESCO site."
+			],
+			"it": [
+				"Prende il nome dagli Aydınoğulları, un beylik turco che governò la regione dopo i Selgiuchidi; aydın significa anche luminoso.",
+				"Produce più fichi di qualunque altro posto al mondo, e il fico dell’Egeo è la più antica esportazione tutelata della Turchia.",
+				"Afrodisia, nel suo territorio, era una città di scultori del marmo le cui opere arrivavano in tutto l’impero romano; è patrimonio UNESCO."
+			]
+		}
 	},
 	"denizli": {
 		"kind": "city",
@@ -446,11 +691,18 @@
 		"populationRank": 21,
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"\"With sea\" — which is odd for an inland province; the name probably referred to abundant water rather than the sea.",
-			"Pamukkale here is a hillside of white travertine terraces filled with warm water, a UNESCO site.",
-			"Hierapolis on top of it was a Roman spa town, and its Plutonium emitted enough carbon dioxide to kill sacrificial animals, which the priests presented as a miracle."
-		]
+		"hooks": {
+			"en": [
+				"\"With sea\" — which is odd for an inland province; the name probably referred to abundant water rather than the sea.",
+				"Pamukkale here is a hillside of white travertine terraces filled with warm water, a UNESCO site.",
+				"Hierapolis on top of it was a Roman spa town, and its Plutonium emitted enough carbon dioxide to kill sacrificial animals, which the priests presented as a miracle."
+			],
+			"it": [
+				"\"Con il mare\": strano, per una provincia dell’entroterra; probabilmente il nome si riferiva all’abbondanza d’acqua più che al mare.",
+				"Qui Pamukkale è un pendio di terrazze bianche di travertino colme d’acqua tiepida, patrimonio UNESCO.",
+				"Ierapoli, in cima, era una città termale romana, e il suo Plutonium emetteva abbastanza anidride carbonica da uccidere gli animali sacrificali, cosa che i sacerdoti presentavano come un miracolo."
+			]
+		}
 	},
 	"ad-yaman": {
 		"kind": "city",
@@ -459,11 +711,18 @@
 		"region": "Adiyaman",
 		"coastal": false,
 		"position": "south-east",
-		"hooks": [
-			"\"The unfortunate man\" in Turkish by folk etymology; the older name was Hısn-ı Mansur, the fortress of Mansur.",
-			"Mount Nemrut here has the colossal heads of a first-century BC king's tomb sanctuary, and is a UNESCO site.",
-			"That king, Antiochus I of Commagene, had himself carved among Greek and Persian gods as their equal."
-		]
+		"hooks": {
+			"en": [
+				"\"The unfortunate man\" in Turkish by folk etymology; the older name was Hısn-ı Mansur, the fortress of Mansur.",
+				"Mount Nemrut here has the colossal heads of a first-century BC king's tomb sanctuary, and is a UNESCO site.",
+				"That king, Antiochus I of Commagene, had himself carved among Greek and Persian gods as their equal."
+			],
+			"it": [
+				"\"L’uomo sventurato\" in turco, secondo l’etimologia popolare; il nome più antico era Hısn-ı Mansur, la fortezza di Mansur.",
+				"Qui il monte Nemrut ha le teste colossali del santuario funerario di un re del I secolo a.C., ed è patrimonio UNESCO.",
+				"Quel re, Antioco I di Commagene, si fece scolpire tra gli dèi greci e persiani come loro pari."
+			]
+		}
 	},
 	"isparta": {
 		"kind": "city",
@@ -471,11 +730,18 @@
 		"populationRank": 36,
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"From Greek Sparta or from Baris — the derivation is contested; it has nothing to do with the Peloponnesian Sparta beyond the name.",
-			"It produces a large share of the world's rose oil, distilled from Rosa damascena picked before dawn in May.",
-			"It takes about 4,000 kg of petals to make one kilogram of oil, which is why the oil is priced like a precious metal."
-		]
+		"hooks": {
+			"en": [
+				"From Greek Sparta or from Baris — the derivation is contested; it has nothing to do with the Peloponnesian Sparta beyond the name.",
+				"It produces a large share of the world's rose oil, distilled from Rosa damascena picked before dawn in May.",
+				"It takes about 4,000 kg of petals to make one kilogram of oil, which is why the oil is priced like a precious metal."
+			],
+			"it": [
+				"Dal greco Sparta o da Baris (l’etimologia è discussa); con la Sparta del Peloponneso non ha nulla in comune oltre al nome.",
+				"Produce una grossa parte dell’olio di rosa del mondo, distillato dalla Rosa damascena raccolta prima dell’alba, in maggio.",
+				"Servono circa 4.000 kg di petali per un chilo di olio, ed è per questo che l’olio ha il prezzo di un metallo prezioso."
+			]
+		}
 	},
 	"kahramanmaras": {
 		"kind": "city",
@@ -484,11 +750,18 @@
 		"region": "K. Maras",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"\"Heroic Maraş\" — the title was added in 1973 for the town's resistance to French occupation in 1920.",
-			"Its ice cream is made with salep and mastic, stretchy enough to be cut with a knife and eaten with a fork.",
-			"The February 2023 earthquake had its epicentre in this province and killed over 50,000 people across the region."
-		]
+		"hooks": {
+			"en": [
+				"\"Heroic Maraş\" — the title was added in 1973 for the town's resistance to French occupation in 1920.",
+				"Its ice cream is made with salep and mastic, stretchy enough to be cut with a knife and eaten with a fork.",
+				"The February 2023 earthquake had its epicentre in this province and killed over 50,000 people across the region."
+			],
+			"it": [
+				"\"Maraş eroica\": il titolo fu aggiunto nel 1973 per la resistenza della città all’occupazione francese nel 1920.",
+				"Il suo gelato si fa con salep e mastice, così elastico da tagliarsi col coltello e mangiarsi con la forchetta.",
+				"Il terremoto del febbraio 2023 ebbe l’epicentro in questa provincia e uccise oltre 50.000 persone in tutta la regione."
+			]
+		}
 	},
 	"karaman": {
 		"kind": "city",
@@ -496,11 +769,18 @@
 		"populationRank": 48,
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"Named for the Karamanid beylik, the Seljuks' strongest successor, which held out against the Ottomans until 1487.",
-			"In 1277 the Karamanid ruler decreed that only Turkish would be used in government — the first such order, and marked in Turkey as Language Day.",
-			"Its Binbirkilise, \"a thousand and one churches\", is a field of ruined Byzantine chapels on a volcanic slope."
-		]
+		"hooks": {
+			"en": [
+				"Named for the Karamanid beylik, the Seljuks' strongest successor, which held out against the Ottomans until 1487.",
+				"In 1277 the Karamanid ruler decreed that only Turkish would be used in government — the first such order, and marked in Turkey as Language Day.",
+				"Its Binbirkilise, \"a thousand and one churches\", is a field of ruined Byzantine chapels on a volcanic slope."
+			],
+			"it": [
+				"Prende il nome dal beylik dei Karamanidi, il più forte erede dei Selgiuchidi, che resistette agli Ottomani fino al 1487.",
+				"Nel 1277 il sovrano karamanide decretò che nel governo si usasse solo il turco: il primo ordine del genere, che la Turchia celebra come Festa della lingua.",
+				"Il suo Binbirkilise, \"mille e una chiesa\", è un campo di cappelle bizantine in rovina su un pendio vulcanico."
+			]
+		}
 	},
 	"sanl-urfa": {
 		"kind": "city",
@@ -509,11 +789,18 @@
 		"region": "Sanliurfa",
 		"coastal": false,
 		"position": "south-east",
-		"hooks": [
-			"\"Glorious Urfa\" — the title was added in 1984 for its resistance in 1920; Urfa is from Edessa, through Syriac Urhai.",
-			"Göbekli Tepe here is the oldest known monumental architecture in the world, about 11,500 years old — older than farming, pottery or writing.",
-			"Abraham is said by local tradition to have been born in a cave in the city, which makes it a pilgrimage site for three religions."
-		]
+		"hooks": {
+			"en": [
+				"\"Glorious Urfa\" — the title was added in 1984 for its resistance in 1920; Urfa is from Edessa, through Syriac Urhai.",
+				"Göbekli Tepe here is the oldest known monumental architecture in the world, about 11,500 years old — older than farming, pottery or writing.",
+				"Abraham is said by local tradition to have been born in a cave in the city, which makes it a pilgrimage site for three religions."
+			],
+			"it": [
+				"\"Urfa gloriosa\": il titolo fu aggiunto nel 1984 per la resistenza del 1920; Urfa viene da Edessa, attraverso il siriaco Urhai.",
+				"Qui Göbekli Tepe è la più antica architettura monumentale conosciuta al mondo, di circa 11.500 anni: più antica dell’agricoltura, della ceramica e della scrittura.",
+				"Secondo la tradizione locale Abramo nacque in una grotta della città, che per questo è meta di pellegrinaggio per tre religioni."
+			]
+		}
 	},
 	"gaziantep": {
 		"kind": "city",
@@ -522,11 +809,18 @@
 		"population1950": 104000,
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"\"Veteran Antep\" — gazi was added in 1921 for the town's siege resistance; Antep is probably from Aïntab, \"good spring\".",
-			"It is Turkey's gastronomic capital and a UNESCO City of Gastronomy; its baklava has protected status.",
-			"The Zeugma mosaic museum here holds mosaics rescued from a Roman city flooded by a dam, including the Gypsy Girl."
-		]
+		"hooks": {
+			"en": [
+				"\"Veteran Antep\" — gazi was added in 1921 for the town's siege resistance; Antep is probably from Aïntab, \"good spring\".",
+				"It is Turkey's gastronomic capital and a UNESCO City of Gastronomy; its baklava has protected status.",
+				"The Zeugma mosaic museum here holds mosaics rescued from a Roman city flooded by a dam, including the Gypsy Girl."
+			],
+			"it": [
+				"\"Antep la veterana\": gazi fu aggiunto nel 1921 per la resistenza della città all’assedio; Antep viene probabilmente da Aïntab, \"buona sorgente\".",
+				"È la capitale gastronomica della Turchia e Città creativa UNESCO per la gastronomia; il suo baklava è un prodotto tutelato.",
+				"Qui il museo dei mosaici di Zeugma custodisce i mosaici salvati da una città romana sommersa da una diga, tra cui la Ragazza zingara."
+			]
+		}
 	},
 	"nusaybin": {
 		"kind": "city",
@@ -535,11 +829,18 @@
 		"region": "Mardin",
 		"coastal": false,
 		"position": "south-east",
-		"hooks": [
-			"From ancient Nisibis, a Mesopotamian city on the Roman-Persian frontier.",
-			"Its School of Nisibis was a major centre of Syriac learning from the fourth century, sometimes called an early university.",
-			"The Syrian border runs along the edge of the town, dividing it from Qamishli on the other side."
-		]
+		"hooks": {
+			"en": [
+				"From ancient Nisibis, a Mesopotamian city on the Roman-Persian frontier.",
+				"Its School of Nisibis was a major centre of Syriac learning from the fourth century, sometimes called an early university.",
+				"The Syrian border runs along the edge of the town, dividing it from Qamishli on the other side."
+			],
+			"it": [
+				"Dall’antica Nisibi, città mesopotamica sulla frontiera tra Roma e la Persia.",
+				"La sua Scuola di Nisibi fu dal IV secolo un grande centro di cultura siriaca, a volte definita una delle prime università.",
+				"Il confine siriano corre lungo il margine della città e la separa da Qamishli, dall’altra parte."
+			]
+		}
 	},
 	"adana": {
 		"kind": "city",
@@ -548,11 +849,18 @@
 		"population1950": 138000,
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"Possibly from Adanos, a figure in Hittite myth, or from a word related to the Danuna people.",
-			"Its kebab is a national institution, and the province is the centre of Turkish cotton.",
-			"The Taşköprü bridge over the Seyhan was built in the Roman period and carried traffic until 2007."
-		]
+		"hooks": {
+			"en": [
+				"Possibly from Adanos, a figure in Hittite myth, or from a word related to the Danuna people.",
+				"Its kebab is a national institution, and the province is the centre of Turkish cotton.",
+				"The Taşköprü bridge over the Seyhan was built in the Roman period and carried traffic until 2007."
+			],
+			"it": [
+				"Forse da Adanos, una figura del mito ittita, o da una parola legata al popolo dei Danuna.",
+				"Il suo kebab è un’istituzione nazionale, e la provincia è il centro del cotone turco.",
+				"Il ponte Taşköprü sul Seyhan fu costruito in epoca romana e ha retto il traffico fino al 2007."
+			]
+		}
 	},
 	"tarsus": {
 		"kind": "city",
@@ -561,11 +869,18 @@
 		"region": "Mersin",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"An ancient name of unclear origin, recorded by the Hittites as Tarsa.",
-			"St Paul was born here, and Cleopatra sailed up its river to meet Mark Antony in 41 BC.",
-			"The Cilician Gates above it are the pass through the Taurus that every army crossing Anatolia has used."
-		]
+		"hooks": {
+			"en": [
+				"An ancient name of unclear origin, recorded by the Hittites as Tarsa.",
+				"St Paul was born here, and Cleopatra sailed up its river to meet Mark Antony in 41 BC.",
+				"The Cilician Gates above it are the pass through the Taurus that every army crossing Anatolia has used."
+			],
+			"it": [
+				"Un nome antico di origine poco chiara, registrato dagli Ittiti come Tarsa.",
+				"Qui nacque san Paolo, e nel 41 a.C. Cleopatra risalì il suo fiume per incontrare Marco Antonio.",
+				"Le Porte Cilicie, sopra la città, sono il passo attraverso il Tauro usato da ogni esercito che abbia attraversato l’Anatolia."
+			]
+		}
 	},
 	"antalya": {
 		"kind": "city",
@@ -574,11 +889,18 @@
 		"population1950": 27000,
 		"coastal": true,
 		"position": "south-west",
-		"hooks": [
-			"From Attaleia, founded by Attalus II of Pergamon in about 150 BC and named for himself.",
-			"It is one of the most visited cities in the world by international arrivals, and its Konyaaltı and Lara beaches run for kilometres.",
-			"The Lycian Way along its coast is a 540 km waymarked path past rock tombs cut into cliffs."
-		]
+		"hooks": {
+			"en": [
+				"From Attaleia, founded by Attalus II of Pergamon in about 150 BC and named for himself.",
+				"It is one of the most visited cities in the world by international arrivals, and its Konyaaltı and Lara beaches run for kilometres.",
+				"The Lycian Way along its coast is a 540 km waymarked path past rock tombs cut into cliffs."
+			],
+			"it": [
+				"Da Attaleia, fondata intorno al 150 a.C. da Attalo II di Pergamo, che le diede il proprio nome.",
+				"È una delle città più visitate al mondo per arrivi internazionali, e le sue spiagge di Konyaaltı e Lara si stendono per chilometri.",
+				"La Via Licia, lungo la sua costa, è un sentiero segnalato di 540 km che passa accanto a tombe scavate nelle scogliere."
+			]
+		}
 	},
 	"mersin": {
 		"kind": "city",
@@ -586,11 +908,18 @@
 		"populationRank": 12,
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"Possibly from the myrtle, mersin in Turkish, which grows along this coast.",
-			"Turkey's largest container port, and the terminus of the road to Syria and the Gulf.",
-			"Its Kızkalesi is a castle on an island 200 m offshore, with a matching one on the beach."
-		]
+		"hooks": {
+			"en": [
+				"Possibly from the myrtle, mersin in Turkish, which grows along this coast.",
+				"Turkey's largest container port, and the terminus of the road to Syria and the Gulf.",
+				"Its Kızkalesi is a castle on an island 200 m offshore, with a matching one on the beach."
+			],
+			"it": [
+				"Forse dal mirto, in turco mersin, che cresce lungo questa costa.",
+				"Il più grande porto container della Turchia, e il capolinea della strada per la Siria e il Golfo.",
+				"Il suo Kızkalesi è un castello su un’isola a 200 m dalla riva, con un castello gemello sulla spiaggia."
+			]
+		}
 	},
 	"iskenderun": {
 		"kind": "city",
@@ -599,11 +928,18 @@
 		"region": "Hatay",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"\"Little Alexander\" — Alexandretta, founded by Alexander the Great after his victory at Issus nearby in 333 BC.",
-			"It was the Mediterranean outlet for Aleppo for centuries, and its hinterland is Arabic-speaking.",
-			"Turkey’s main naval base on the eastern Mediterranean is here."
-		]
+		"hooks": {
+			"en": [
+				"\"Little Alexander\" — Alexandretta, founded by Alexander the Great after his victory at Issus nearby in 333 BC.",
+				"It was the Mediterranean outlet for Aleppo for centuries, and its hinterland is Arabic-speaking.",
+				"Turkey’s main naval base on the eastern Mediterranean is here."
+			],
+			"it": [
+				"\"Piccolo Alessandro\": Alessandretta, fondata da Alessandro Magno dopo la vittoria nella vicina Isso, nel 333 a.C.",
+				"Per secoli fu lo sbocco di Aleppo sul Mediterraneo, e il suo entroterra parla arabo.",
+				"Qui si trova la principale base navale turca del Mediterraneo orientale."
+			]
+		}
 	},
 	"antakya": {
 		"kind": "city",
@@ -612,10 +948,17 @@
 		"region": "Hatay",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"From Antioch, founded around 300 BC by Seleucus and named for his father Antiochus.",
-			"It was the third city of the Roman Empire, and the followers of Jesus were first called Christians here.",
-			"Its mosaic museum holds one of the largest collections in the world; the 2023 earthquake destroyed much of the old town."
-		]
+		"hooks": {
+			"en": [
+				"From Antioch, founded around 300 BC by Seleucus and named for his father Antiochus.",
+				"It was the third city of the Roman Empire, and the followers of Jesus were first called Christians here.",
+				"Its mosaic museum holds one of the largest collections in the world; the 2023 earthquake destroyed much of the old town."
+			],
+			"it": [
+				"Da Antiochia, fondata intorno al 300 a.C. da Seleuco e chiamata così in onore del padre Antioco.",
+				"Fu la terza città dell’impero romano, e fu qui che i seguaci di Gesù vennero chiamati per la prima volta cristiani.",
+				"Il suo museo dei mosaici ha una delle collezioni più grandi del mondo; il terremoto del 2023 ha distrutto gran parte della città vecchia."
+			]
+		}
 	}
 }
