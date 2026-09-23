@@ -16,6 +16,45 @@ Keep this updated the same way as the other docs: when a decision gets
 made, made explicitly to correct an earlier one, or gets revisited, add
 or amend an entry here as part of that change, not as an afterthought.
 
+## Region names along the region: an SVG overlay, with the pill as fallback (2026-09-23, FT-64 spike)
+
+The spike drew every region's name along a computed spine on
+`italy-regions`, `usa-states`, `germany-states` and `france-regions`, at
+real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
+(`f1f8f9b`, not for merge); open any of the four maps with `?spine`
+(`?spine=debug` strokes the spine).
+
+- **It reads.** At desktop zooms the maps look like maps: Liguria follows
+  its crescent, Puglia and Calabria run down their peninsulas, Florida
+  down its own, Emilia-Romagna along the Po; square states keep a level
+  name. Spare length goes between the letters, EU4-style, up to 1.6 em.
+- **The spine is computed at build time, three points per region.** A
+  weighted parabola through the middle of the shape along its principal
+  axis — which is exactly a quadratic Bézier, and Mercator-to-screen is
+  affine, so `start, control, end` in `map.json` draws the curve at every
+  zoom and bearing. About 160 bytes a region. Near-round shapes get a level
+  axis; ends narrower than 45 % of the median width are dropped; a curve
+  that leaves the shape is retried with more bow, then straight. 2 of 98
+  regions got no spine (Maryland, Sachsen).
+- **SVG `textPath`, not a MapLibre `symbol-placement: line` layer.** The
+  symbol layer still needs the same build-time spine (as a line in the
+  tiles), plus a vendored glyph stack to stay offline, and gives up the
+  magnify and the rem floor — to buy native collision, which a name kept
+  inside its own region barely needs. The style's `glyphs` URL stays
+  unused (see the note in `data/styles/base.json`).
+- **A stretched name only where it fits; today's pill everywhere else.**
+  The name's size follows the region's width, so on a phone at the
+  whole-country view only 3 of Italy's 20 names reach a readable 9 px.
+  A name that does not fit — and a region with no spine, and every town —
+  keeps the popup pill and its collision pass (FT-23/FT-63). Near-upright
+  names read bottom to top, so a hair's change of slope cannot flip one.
+- **What a real task has to add.** The SVG names join `labelCollision.ts`
+  as fixed obstacles (terrain names overlap them today); the magnify
+  (`labelMagnify.ts`) finds popups by DOM, so it needs an SVG hit-test;
+  the retention tiers (known / nearly / seen / chosen) need their SVG
+  styling; the size floor moves to rem. Explore first; Quiz and Tour
+  labels are a separate call. Medium, not Small.
+
 ## The v0.10.0 language decisions (2026-09-22, v0.10.0)
 
 - **Italian first.** The product owner reads Italian, so he catches stilted

@@ -195,6 +195,24 @@ for each lives in ROADMAP.md's backlog entry; these are the tasks.
   and a MapLibre symbol layer with `symbol-placement: line` (needs a
   vendored glyph stack, loses FT-02/FT-03).
 - **DoD:** a decision, not a shipped feature.
+- **Result (2026-09-23):** it reads. An SVG `textPath` overlay over a
+  build-time spine (three points a region), with today's pill wherever the
+  stretched name does not fit. Spike on `spike/ft-64-stretched-names`, not
+  for merge; the reasoning is in DECISIONS.md, "Region names along the
+  region". The follow-up is proposed as **FT-66** below — whether and when
+  is the product owner's call.
+
+### FT-66 — Region names along the region · Medium · proposed, not scheduled
+
+- **Why:** FT-64 showed it reads.
+- **Do:** `build-map.ts` writes a `spine` (quadratic Bézier + aspect) per
+  polygon target into `map.json`; Explore draws a shown name along it
+  where it fits and keeps the pill where it does not. The SVG names join
+  the collision pass as obstacles, get a magnify hit-test, the four
+  retention styles and a rem floor. Quiz and Tour stay on pills.
+- **DoD:** Explore on Italy and the USA shows stretched names at desktop
+  zoom, pills on a phone at the country view; no overlap with terrain
+  names; magnify works on both.
 
 ### FT-65 — The map card shows a progress bar, not the known line · Small
 
@@ -222,7 +240,8 @@ for each lives in ROADMAP.md's backlog entry; these are the tasks.
 **The tablet-play fixes first, then the Italian bulk.** The small, visible
 ones — **FT-62**, **FT-65**, **FT-61**, **FT-60** — then **FT-63** (best-fit
 placement), then the **FT-64** spike, which decides whether stretched names
-become a task at all. Then **FT-50**, the remaining 27 countries of Italian,
+become a task at all (it did: **FT-66**, proposed, placement in the order
+the product owner's call). Then **FT-50**, the remaining 27 countries of Italian,
 batched by country. **FT-51 (German) is postponed.**
 
 The FT-48 gate is already passed. **→ Release `v0.10.0`** per
@@ -240,5 +259,5 @@ The FT-48 gate is already passed. **→ Release `v0.10.0`** per
 | FT-61 | **merged**  | `6b794b8` | a slip keeps its drag on a tablet; confirm on device at release (PR #21) |
 | FT-62 | **merged**  | `b2f0c8b` | the fact card only on a name not placed (PR #19) |
 | FT-63 | **merged**  | `a0537d6` | labels go where there is the most room: 8 spots, scored; every dot an obstacle (PR #23) |
-| FT-64 | not started | —     | spike: names stretched along the region  |
+| FT-64 | **decided** | —     | it reads; SVG `textPath`, pill as fallback; follow-up FT-66 awaits the PO (DECISIONS.md) |
 | FT-65 | **merged**  | `f3b4421` | map card progress bar, hidden at zero (PR #20) |

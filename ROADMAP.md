@@ -112,7 +112,9 @@ Check items off as they land; update "Status" as iterations complete.
   first**, **per-sentence English fallback**, **no "EN" marker**, **German
   postponed**. Merged: **FT-48/FT-49** (Italy's 20 regions in Italian;
   per-language `hooks`), **FT-62**, **FT-65**, **FT-61**, **FT-60** and **FT-63** (five
-  of the six UX fixes). **The FT-64 spike, then FT-50**, is next.
+  of the six UX fixes). **The FT-64 spike is decided** (stretched names
+  read; SVG overlay with the pill as fallback; follow-up **FT-66**
+  proposed, not scheduled). **FT-50** is next.
 - **Raised by the product owner 2026-09-22, backlogged**: GitHub issue #11 —
   on the Known map an explicitly tapped name kept its earned colour instead
   of **Chosen**. Decided: an explicit tap is Chosen regardless of the streak,
@@ -1524,7 +1526,10 @@ loop actually feels good. Candidates below, in rough priority order.
         whether it reads — before anything is estimated or scheduled. It
         is decided *against* the placement work above rather than
         alongside it, since that pass scores rectangles and a stretched
-        name is not one.
+        name is not one. **Spiked as FT-64 (2026-09-23): it reads** — an
+        SVG `textPath` over a build-time spine, the pill where a name does
+        not fit; follow-up FT-66 proposed. See DECISIONS.md, "Region names
+        along the region".
       - **Replace the map card's "{known} / {total} known" with a
         progress bar — decided 2026-09-20, the map list only.** The line
         shows in two places, and only the map list's copy goes:
