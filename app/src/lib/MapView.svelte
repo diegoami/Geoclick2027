@@ -94,6 +94,9 @@
 					.addTo(map);
 			popup.addClassName('geoclick-solved-popup');
 			popup.addClassName('geoclick-retention');
+			// A region's name is set like its stretched one, in the atlas's
+			// type (#34); a town keeps the pill beside its dot (FT-24).
+			if (target.type !== 'city') popup.addClassName('geoclick-region-name');
 			for (const t of ['known', 'nearly', 'seen', 'asked']) {
 				if (t === tier) popup.addClassName(`retention-${t}`);
 				else popup.removeClassName(`retention-${t}`);

@@ -91,6 +91,19 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   obstacle to every popup except a magnified one*, which still always
   gets its place; a magnified stretched name comes forward (full
   strength, 8 % larger) rather than growing out of its region.
+- **Amended 2026-09-23 ([#34](https://github.com/diegoami/Geoclick2027/issues/34)):
+  the hybrid is one typography at two sizes, not two styles.** On Argentina,
+  where three names were curved and six were orange sans-serif boxes, the
+  product owner found the labels "kind of mixed". The size rule is unchanged,
+  but on Explore a region's fallback name is now set like its stretched one:
+  Georgia capitals, the same ink and halo, and no box, the way an atlas sets
+  a small territory. *Towns keep the pill* beside their dot (the owner's
+  call), and Quiz and Overview labels keep their boxes: those have no
+  stretched names, and the green and gold boxes are a quiz signal of their
+  own. *The asked ink darkened* from the accent (4.2:1 on white) to
+  `rgb(150, 85, 20)` (about 5.8:1), in both forms, so an asked name is one
+  colour however it is drawn. *The hit area lost the pill's padding*,
+  accepted pending a tablet check.
 
 ## The v0.10.0 language decisions (2026-09-22, v0.10.0)
 

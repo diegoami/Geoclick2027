@@ -135,10 +135,11 @@ Check items off as they land; update "Status" as iterations complete.
   counting Mercator cells, so Ellesmere Island won and the name was drawn
   off-screen. Parts are now weighted by ground area; one spine in 63 maps
   changed. Like the hardening batch, it ships with the next feature release.
-- **Proposed 2026-09-23**: [#34](https://github.com/diegoami/Geoclick2027/issues/34).
-  Explore's fallback region labels move to the stretched names' typography,
-  so the two stop looking like different systems. Town names keep their
-  boxes (the owner's answer to Q2). Q1, Q3 and Q4 are still open.
+- **Agreed and built 2026-09-23**: [#34](https://github.com/diegoami/Geoclick2027/issues/34),
+  on branch `explore-label-typography`. On Explore, a region's fallback name
+  is set in the stretched names' type (serif capitals, ink and halo, no box),
+  and the asked ink darkens to about 5.8:1. Towns, Quiz and Overview keep
+  their boxes. The owner checks it on a tablet, then merges.
 - **Raised by the product owner 2026-09-22, backlogged**: GitHub issue #11 —
   on the Known map an explicitly tapped name kept its earned colour instead
   of **Chosen**. Decided: an explicit tap is Chosen regardless of the streak,
