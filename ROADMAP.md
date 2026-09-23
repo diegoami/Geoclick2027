@@ -115,9 +115,9 @@ Check items off as they land; update "Status" as iterations complete.
   of the six UX fixes). **The FT-64 spike is decided** (stretched names
   read; SVG overlay with the pill as fallback; follow-up **FT-66**
   scheduled 2026-09-23). **FT-66 is merged** (PR #24, `4b8205a`):
-  region names drawn along the region on the Explore map. **FT-50 is built**
-  ([PR #25](https://github.com/diegoami/Geoclick2027/pull/25)): every
-  name-fact in Italian, 5 448 sentences; awaiting the product owner's test.
+  region names drawn along the region on the Explore map. **FT-50 is merged**
+  ([PR #25](https://github.com/diegoami/Geoclick2027/pull/25), `3af3ae5`): every
+  name-fact in Italian, 5 448 sentences. **Next: the v0.10.0 release.**
 - **Raised by the product owner 2026-09-22, backlogged**: GitHub issue #11 —
   on the Known map an explicitly tapped name kept its earned colour instead
   of **Chosen**. Decided: an explicit tap is Chosen regardless of the streak,
