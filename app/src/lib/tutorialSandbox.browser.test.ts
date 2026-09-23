@@ -4,6 +4,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { createQuizSession } from '@geoclick/quiz-engine';
 import { rate } from '@geoclick/srs';
 import { recentMaps, recordVisit } from './mapPrefs.svelte';
+import { rememberRound, roundInProgress } from './quizRound';
 import {
 	createLocalStorageProgressRepository,
 	createProgressRepository,
@@ -53,6 +54,12 @@ describe('tutorial sandbox', () => {
 		expect(isTutorialSandboxActive()).toBe(true);
 		const { session } = await mountQuiz();
 		expect(session.items.every((i) => i.status === 'pending')).toBe(true);
+	});
+
+	it('does not resume a round left open on the tutorial map before it began (FT-60)', () => {
+		rememberRound(TUTORIAL_MAP_ID, { session: createQuizSession(targets), hand: ['abruzzo'] });
+		startTutorialSandbox();
+		expect(roundInProgress(TUTORIAL_MAP_ID)).toBeUndefined();
 	});
 
 	it('a whole tutorial quiz writes nothing to localStorage, not even Recent', async () => {

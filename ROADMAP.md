@@ -1423,7 +1423,9 @@ loop actually feels good. Candidates below, in rough priority order.
       do is now settled.
 
       - **A first round lays every name in the tray at once, and that is
-        overwhelming.** By design, not by accident: `HAND_SIZES[0]` is
+        overwhelming.** *(Done as FT-60, PR #22: the level-0 hand holds
+        10, the product owner's number, 2026-09-23. The entry below is
+        the problem as raised.)* By design, not by accident: `HAND_SIZES[0]` is
         `Infinity` (`app/src/lib/difficulty.ts:21`), so a map at level 0 —
         one never played — offers all of it, 49 slips on
         `germany-towns-100k` and 110 on `italy-provinces`. The hand only

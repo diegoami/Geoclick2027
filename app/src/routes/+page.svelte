@@ -141,9 +141,9 @@
 							total={mastery.total}
 							allKnown={mastery.known === mastery.total}
 						/>
-						<!-- The ladder, but only once it has started holding names back
-						     (FT-21): at level 0 every name is on offer and there is
-						     nothing to explain. -->
+						<!-- The ladder, but only once the hand has started shrinking
+						     (FT-21): level 0's hand of ten is the default and there is
+						     nothing to explain (FT-60). -->
 						{#if mastery.level > 0}
 							· {tPlural('quiz.namesAtATime', handSize(mastery.level), {
 								count: handSize(mastery.level)

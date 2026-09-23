@@ -31,8 +31,8 @@ describe('mapLevel', () => {
 });
 
 describe('handSize', () => {
-	it('offers every name at level 0 and one at level 3', () => {
-		expect(handSize(0)).toBe(Infinity);
+	it('offers ten names at level 0 and one at level 3', () => {
+		expect(handSize(0)).toBe(10);
 		expect(handSize(1)).toBe(6);
 		expect(handSize(2)).toBe(3);
 		expect(handSize(3)).toBe(1);
@@ -66,8 +66,28 @@ describe('refillHand', () => {
 		expect(hand.every((id) => pending.includes(id))).toBe(true);
 	});
 
-	it('gives every pending name at level 0 (hand size Infinity)', () => {
-		expect(refillHand(pending, [], Infinity, first).sort()).toEqual([...pending].sort());
+	it('deals a first hand of ten from a map larger than that (FT-60)', () => {
+		const many = Array.from({ length: 49 }, (_, i) => `t${i}`);
+		const hand = refillHand(many, [], handSize(0), first);
+		expect(hand).toHaveLength(10);
+		expect(new Set(hand).size).toBe(10);
+	});
+
+	it('deals every name when a map has fewer than the hand holds', () => {
+		expect(refillHand(pending, [], handSize(0), first).sort()).toEqual([...pending].sort());
+	});
+
+	it('deals preferred names first, when still pending (FT-60, the tutorial)', () => {
+		const many = Array.from({ length: 20 }, (_, i) => `t${i}`);
+		// `first` keeps the shuffle's order, which would never reach t18/t19.
+		const hand = refillHand(many, [], 10, first, ['t19', 't18', 'gone']);
+		expect(hand).toHaveLength(10);
+		expect(hand.slice(0, 2)).toEqual(['t19', 't18']);
+		expect(hand).not.toContain('gone');
+	});
+
+	it('keeps survivors ahead of preferred names when the hand is full', () => {
+		expect(refillHand(pending, ['a', 'b'], 2, first, ['e'])).toEqual(['a', 'b']);
 	});
 
 	it('shrinks the hand when the size drops below what is held', () => {
