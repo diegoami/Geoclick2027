@@ -246,4 +246,56 @@ describe('where a label goes (FT-24)', () => {
 		await nextFrame();
 		expect(drawn(container)).not.toContain('Alessandria');
 	});
+
+	it("moves a town name off a neighbour's dot, to where there is room (FT-63)", async () => {
+		// Duisburg, with Essen's dot 40 px to its east and no name of its own
+		// yet - the quiz hasn't reached it.
+		const container = placedFixture([
+			{ name: 'Duisburg', x: 300, y: 200, beside: DOT_CLEARANCE_PX }
+		]);
+		enableLabelCollision(fakeMap(), container, () => [
+			{ x: 300, y: 200 },
+			{ x: 340, y: 200 }
+		]);
+		await nextFrame();
+		expect(drawn(container)).toEqual(['Duisburg']);
+		// West of its dot, the way the first free side never put it.
+		expect(boxOf(container, 'Duisburg').right).toBeLessThanOrEqual(300 - DOT_CLEARANCE_PX + 0.5);
+	});
+
+	it('keeps a name where it is through a pan, and places it afresh after a zoom (FT-63)', async () => {
+		const container = placedFixture([
+			{ name: 'Caserta', x: 360, y: 200, priority: 5 },
+			{ name: 'Napoli', x: 300, y: 200, priority: 1, beside: DOT_CLEARANCE_PX }
+		]);
+		let zoom = 7;
+		const listeners = new Map<string, Set<() => void>>();
+		const emit = (type: string) => listeners.get(type)?.forEach((fn) => fn());
+		const map = {
+			on: (type: string, fn: () => void) => {
+				if (!listeners.has(type)) listeners.set(type, new Set());
+				listeners.get(type)!.add(fn);
+			},
+			off: (type: string, fn: () => void) => listeners.get(type)?.delete(fn),
+			getZoom: () => zoom
+		};
+		enableLabelCollision(map, container);
+		await nextFrame();
+		const napoliIsLeft = () => boxOf(container, 'Napoli').right <= 300 - DOT_CLEARANCE_PX + 0.5;
+		expect(napoliIsLeft()).toBe(true);
+
+		// Caserta moves away, freeing the right-hand side: a pan leaves Napoli be.
+		const caserta = [...container.querySelectorAll<HTMLElement>('.maplibregl-popup')][0];
+		caserta.style.left = '560px';
+		emit('move');
+		emit('moveend');
+		await nextFrame();
+		expect(napoliIsLeft()).toBe(true);
+
+		// A zoom that ends puts it back in its favourite spot, right of the dot.
+		zoom = 8;
+		emit('moveend');
+		await nextFrame();
+		expect(boxOf(container, 'Napoli').left).toBeGreaterThanOrEqual(300 + DOT_CLEARANCE_PX - 0.5);
+	});
 });

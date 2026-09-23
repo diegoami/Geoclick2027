@@ -1712,11 +1712,33 @@ answers:
   line above or below it; further than that and it would start to look
   like the neighbour's name. A town's name never sits on its dot - the
   player has to see the dot they are aiming at, especially while dragging
-  a slip onto it - so it takes the first free side, right, left, above,
-  below, at a fixed clearance from the dot's middle. Both come out of the
-  same pass: a label offers the spots it would accept, best first, and
-  gets the first one that is free. On Italy - Towns this is the
-  difference between 26 names and all 40.
+  a slip onto it - so it goes beside it, at a fixed clearance from the
+  dot's middle. Both come out of the same pass: a label offers the spots
+  it would accept, and gets the best one that is free. On Italy - Towns
+  this is the difference between 26 names and all 40.
+- **"Best" is a score, not the first free spot** (FT-63, amends FT-24,
+  which took a town's first free side - right, left, above, below - and
+  so put Duisburg's name over Essen's dot with open space to its west).
+  A town's name now has eight spots, the four sides and the four
+  corners, and every free one is scored in pixels: room to the nearest
+  name or dot (capped at 12 px), minus how far it strays from its place,
+  minus 100 for each other town's dot it would cover, minus 30 times the
+  share of it off the map's edge, minus 0.5 per step down the view's own
+  order (the tie-break, so a name with room on both sides still goes
+  right). Every town's dot counts, named or not - in a quiz, the unsolved
+  ones too. A dot is a cost, not a wall: a name that can only go over a
+  dot still goes there, so no name is hidden that FT-24 drew. The room
+  cap sits below a region's one-line step, so a region's name still
+  leaves its middle only when the middle is taken. What sits *under* a
+  name - water, a region border - is not scored: the pass knows the
+  labels and the dots, not the map's paint.
+- **A pan never moves a name; a zoom may** (FT-63). Every term but the
+  map's edge is relative, so a pan gives the same answer, and a name
+  keeps its spot against one up to 4 px better (the stay bonus), which
+  absorbs pixel rounding and stops names flickering side to side while a
+  zoom animates. The bonus is dropped for one pass once a zoom *ends*:
+  kept for good, a name pushed to the left while zoomed out stayed there
+  after zooming back in, with the right side free.
 - **Which name gives way**: the smaller region's. Area (from each
   target's bbox, corrected for latitude) decides between two names that
   want the same place, the way an atlas keeps the big name and lets the

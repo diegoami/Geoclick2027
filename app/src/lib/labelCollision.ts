@@ -14,8 +14,24 @@
 //
 // A name has more than one spot to try (FT-24). A region's name wants to sit
 // on its middle, and steps one line up or down if that is taken. A town's
-// name must never cover its dot, so it takes the first free side: right,
-// left, above, below. Views say which by registering the label.
+// name must never cover its dot, so it goes beside it: any of the four sides
+// or the four corners. Views say which by registering the label.
+//
+// "Best" is a score, not the first spot that fits (FT-63). Taking the first
+// free side put Duisburg's name over Essen's dot while open space to its west
+// went unused. Every free spot now adds up, in pixels:
+//   + room: how far it keeps from the nearest name or dot, up to ROOM_CAP_PX
+//   - reach: how far it strays from its own place (a region's middle is 0)
+//   - DOT_COST for each other town's dot it would cover
+//   - OFFSCREEN_COST times the share of it off the edge of the map
+//   - RANK_COST per step down the view's own order, so ties go to reading order
+//   + STAY_BONUS if it is the spot the name already holds
+// and the highest wins. Every term but the map's edge is relative to the
+// other labels and dots, so a pan changes nothing; the stay bonus keeps a
+// name put when pixel rounding makes two spots nearly equal, and keeps names
+// from flickering side to side while a zoom animates. Once a zoom ends, the
+// bonus is dropped for one pass: without that, a name pushed left of its dot
+// while zoomed out stayed there after zooming in, with the right side free.
 //
 // Why not a MapLibre symbol layer, which collides labels natively: symbol
 // layers render text from glyph PBFs, and the style's `glyphs` URL points at
@@ -39,6 +55,21 @@ const GAP_PX = 3;
  * never on it - a player has to see the dot they are aiming at (FT-24).
  */
 export const DOT_CLEARANCE_PX = 14;
+/** A dot as an obstacle, in px: `targets-circle`'s radius 9 plus its outline. */
+export const DOT_RADIUS_PX = 10.5;
+/**
+ * Room beyond this doesn't count, in px. Kept below a region's one-line step,
+ * so a region's name leaves its middle only when the middle is taken.
+ */
+const ROOM_CAP_PX = 12;
+/** A spot over another town's dot is taken only when there is no clean one. */
+const DOT_COST = 100;
+/** What a spot costs if it lies entirely off the map. */
+const OFFSCREEN_COST = 30;
+/** What each step down the view's order of spots costs: a tie-break. */
+const RANK_COST = 0.5;
+/** What keeps a name where it is, against a spot only a pixel or two better. */
+const STAY_BONUS = 4;
 
 export interface LabelRect {
 	left: number;
@@ -56,14 +87,34 @@ export interface LabelCandidate {
 export interface LabelPlacement {
 	/** Bigger is placed first. Ties keep the order given, so labels don't swap. */
 	priority: number;
-	/** Spots to try, best first. Always at least one. */
+	/** Spots to try, the view's favourite first. Always at least one. */
 	candidates: LabelCandidate[];
+	/** Which of them the label holds now, if it is drawn. */
+	current?: number;
 }
 
 /** What the pass decided for one label. */
 export interface ChosenPlacement {
 	visible: boolean;
 	offset: [number, number];
+	/** Which candidate that offset is. */
+	index: number;
+}
+
+/** A town's dot, in the same screen coordinates as the labels. */
+export interface Dot {
+	x: number;
+	y: number;
+}
+
+/** What else the labels share the screen with. */
+export interface PlacementContext {
+	/** Breathing room between two labels, in px. */
+	gap?: number;
+	/** Every town's dot, named or not: a name should not cover one. */
+	dots?: Dot[];
+	/** The map's own rectangle: a name off its edge can't be read. */
+	bounds?: LabelRect;
 }
 
 function overlaps(a: LabelRect, b: LabelRect, gap: number): boolean {
@@ -79,31 +130,99 @@ function hasNoSize(rect: LabelRect): boolean {
 	return rect.right <= rect.left || rect.bottom <= rect.top;
 }
 
+/** How far apart two rectangles are, in px: 0 if they touch. */
+function rectDistance(a: LabelRect, b: LabelRect): number {
+	const dx = Math.max(0, a.left - b.right, b.left - a.right);
+	const dy = Math.max(0, a.top - b.bottom, b.top - a.bottom);
+	return Math.hypot(dx, dy);
+}
+
+/** How far a point is from a rectangle, in px: 0 if it is inside. */
+function pointDistance(rect: LabelRect, x: number, y: number): number {
+	const dx = Math.max(0, rect.left - x, x - rect.right);
+	const dy = Math.max(0, rect.top - y, y - rect.bottom);
+	return Math.hypot(dx, dy);
+}
+
+/** The share of a rectangle (0 to 1) that lies outside another. */
+function outsideShare(rect: LabelRect, bounds: LabelRect): number {
+	const width = Math.max(0, Math.min(rect.right, bounds.right) - Math.max(rect.left, bounds.left));
+	const height = Math.max(0, Math.min(rect.bottom, bounds.bottom) - Math.max(rect.top, bounds.top));
+	return 1 - (width * height) / ((rect.right - rect.left) * (rect.bottom - rect.top));
+}
+
+/** What a free spot is worth: the sum the top of this file explains. */
+function scoreOf(
+	candidate: LabelCandidate,
+	rank: number,
+	current: number | undefined,
+	kept: LabelRect[],
+	{ dots = [], bounds }: PlacementContext
+): number {
+	const { rect, offset } = candidate;
+	// The place the label names: where it would sit with no offset at all.
+	const x = (rect.left + rect.right) / 2 - offset[0];
+	const y = (rect.top + rect.bottom) / 2 - offset[1];
+	let room = ROOM_CAP_PX;
+	for (const other of kept) room = Math.min(room, rectDistance(rect, other));
+	let covered = 0;
+	for (const dot of dots) {
+		// Its own dot: the offset already keeps clear of that one.
+		if (Math.abs(dot.x - x) < 1 && Math.abs(dot.y - y) < 1) continue;
+		const clear = pointDistance(rect, dot.x, dot.y) - DOT_RADIUS_PX;
+		if (clear < 0) covered++;
+		room = Math.min(room, Math.max(0, clear));
+	}
+	return (
+		room -
+		pointDistance(rect, x, y) -
+		covered * DOT_COST -
+		(bounds ? outsideShare(rect, bounds) * OFFSCREEN_COST : 0) -
+		rank * RANK_COST +
+		(rank === current ? STAY_BONUS : 0)
+	);
+}
+
 /**
- * Places the labels: the most important first, each in the first spot it has
- * that doesn't touch a label already placed. One result per label, in the
- * order given; a label with nowhere to go is not visible, and keeps its first
- * spot so it lands sensibly when the map next makes room. A label with no
- * size yet (not laid out) is always kept - it can't hide anything, and the
+ * Places the labels: the most important first, each in the best-scoring spot
+ * it has that doesn't touch a label already placed. One result per label, in
+ * the order given; a label with nowhere to go is not visible, and keeps its
+ * first spot so it lands sensibly when the map next makes room. A label with
+ * no size yet (not laid out) is always kept - it can't hide anything, and the
  * next pass will place it properly.
  */
-export function choosePlacements(labels: LabelPlacement[], gap = GAP_PX): ChosenPlacement[] {
+export function choosePlacements(
+	labels: LabelPlacement[],
+	context: PlacementContext = {}
+): ChosenPlacement[] {
+	const gap = context.gap ?? GAP_PX;
 	const order = labels.map((label, index) => index);
 	order.sort((a, b) => labels[b].priority - labels[a].priority || a - b);
-	const chosen = labels.map((label) => ({ visible: false, offset: label.candidates[0].offset }));
+	const chosen: ChosenPlacement[] = labels.map((label) => ({
+		visible: false,
+		offset: label.candidates[0].offset,
+		index: 0
+	}));
 	const kept: LabelRect[] = [];
 	for (const index of order) {
-		const candidates = labels[index].candidates;
+		const { candidates, current } = labels[index];
 		if (hasNoSize(candidates[0].rect)) {
 			chosen[index].visible = true;
 			continue;
 		}
-		const fits = candidates.find((candidate) =>
-			kept.every((other) => !overlaps(candidate.rect, other, gap))
-		);
-		if (!fits) continue;
-		chosen[index] = { visible: true, offset: fits.offset };
-		kept.push(fits.rect);
+		let best = -1;
+		let bestScore = -Infinity;
+		candidates.forEach((candidate, rank) => {
+			if (kept.some((other) => overlaps(candidate.rect, other, gap))) return;
+			const score = scoreOf(candidate, rank, current, kept, context);
+			if (score > bestScore) {
+				best = rank;
+				bestScore = score;
+			}
+		});
+		if (best < 0) continue;
+		chosen[index] = { visible: true, offset: candidates[best].offset, index: best };
+		kept.push(candidates[best].rect);
 	}
 	return chosen;
 }
@@ -115,7 +234,7 @@ export function chooseVisible(labels: { priority: number; rect: LabelRect }[], g
 			priority,
 			candidates: [{ offset: [0, 0] as [number, number], rect }]
 		})),
-		gap
+		{ gap }
 	).map((placement) => placement.visible);
 }
 
@@ -129,6 +248,8 @@ interface RegisteredLabel {
 	label: MovableLabel;
 	/** The offset the pass last applied, so it can work back to the anchor. */
 	applied: [number, number];
+	/** Which candidate that was, while the label is drawn (the stay bonus). */
+	current?: number;
 	/** Set for a point target: how far to keep off the dot. */
 	beside?: number;
 }
@@ -165,7 +286,7 @@ export function registerLabel(label: MovableLabel, options: LabelOptions = {}): 
 	registry.set(element, { label, applied: [0, 0], beside: options.beside });
 }
 
-/** The spots one label may take, best first. */
+/** The spots one label may take, the view's favourite first. */
 function candidatesFor(
 	anchor: { x: number; y: number },
 	width: number,
@@ -182,10 +303,24 @@ function candidatesFor(
 		}
 	});
 	if (beside !== undefined) {
-		// Beside the dot: the first free side, reading order first.
+		// Beside the dot: the four sides in reading order, then the four
+		// corners, right-hand ones first. A corner's nearest point keeps the
+		// same distance from the dot as a side's does.
 		const x = beside + width / 2;
 		const y = beside + height / 2;
-		return [at(x, 0), at(-x, 0), at(0, -y), at(0, y)];
+		const d = beside * Math.SQRT1_2;
+		const cx = d + width / 2;
+		const cy = d + height / 2;
+		return [
+			at(x, 0),
+			at(-x, 0),
+			at(0, -y),
+			at(0, y),
+			at(cx, -cy),
+			at(cx, cy),
+			at(-cx, -cy),
+			at(-cx, cy)
+		];
 	}
 	// On the place itself, or one line off it if that is taken. Any further
 	// and the name would start to look like it belongs to the neighbour.
@@ -213,6 +348,7 @@ function readLabels(popups: HTMLElement[]): (LabelPlacement & { registered?: Reg
 			candidates: registered
 				? candidatesFor(anchor, width, height, registered.beside)
 				: [{ offset: [0, 0] as [number, number], rect }],
+			current: registered?.current,
 			registered
 		};
 	});
@@ -222,28 +358,46 @@ function readLabels(popups: HTMLElement[]): (LabelPlacement & { registered?: Reg
 type CollisionMap = {
 	on(type: 'move' | 'moveend' | 'resize', listener: () => void): unknown;
 	off(type: 'move' | 'moveend' | 'resize', listener: () => void): unknown;
+	/** Tells a zoom from a pan. Without it, every move counts as a pan. */
+	getZoom?(): number;
 };
 
 /**
  * Keeps the labels in a map container from overlapping. Runs once per frame
  * at most, reads every label's rectangle before writing anything (so the
  * browser lays out once, not once per label), and returns a function that
- * stops it.
+ * stops it. `dots` gives every town's dot on screen, relative to the
+ * container - `map.project` of each point target - so names keep off them.
  */
-export function enableLabelCollision(map: CollisionMap, container: HTMLElement): () => void {
+export function enableLabelCollision(
+	map: CollisionMap,
+	container: HTMLElement,
+	dots: () => Dot[] = () => []
+): () => void {
 	let frame = 0;
+	// Whether the next pass places every name afresh, without the stay bonus:
+	// the first one, and the first after a zoom ends.
+	let fresh = true;
+	let settledZoom = map.getZoom?.();
 
 	const pass = () => {
 		frame = 0;
 		const popups = [...container.querySelectorAll<HTMLElement>('.maplibregl-popup')];
 		if (popups.length === 0) return;
 		const labels = readLabels(popups);
-		const placements = choosePlacements(labels);
+		if (fresh) for (const label of labels) label.current = undefined;
+		fresh = false;
+		const bounds = container.getBoundingClientRect();
+		const placements = choosePlacements(labels, {
+			bounds,
+			dots: dots().map(({ x, y }) => ({ x: x + bounds.left, y: y + bounds.top }))
+		});
 		popups.forEach((popup, index) => {
-			const { visible, offset } = placements[index];
+			const { visible, offset, index: chosen } = placements[index];
 			popup.classList.toggle(CROWDED_CLASS, !visible);
 			const registered = labels[index].registered;
 			if (!registered) return;
+			registered.current = visible ? chosen : undefined;
 			if (registered.applied[0] === offset[0] && registered.applied[1] === offset[1]) return;
 			registered.applied = offset;
 			registered.label.setOffset(offset);
@@ -252,9 +406,15 @@ export function enableLabelCollision(map: CollisionMap, container: HTMLElement):
 	const schedule = () => {
 		if (!frame) frame = requestAnimationFrame(pass);
 	};
+	const settle = () => {
+		const zoom = map.getZoom?.();
+		if (zoom !== settledZoom) fresh = true;
+		settledZoom = zoom;
+		schedule();
+	};
 
 	map.on('move', schedule);
-	map.on('moveend', schedule);
+	map.on('moveend', settle);
 	map.on('resize', schedule);
 	// Labels are added as the game goes on - each solved quiz target is a new
 	// popup, the tour rewrites one, magnifying grows one (FT-02/FT-03) - so the
@@ -287,7 +447,7 @@ export function enableLabelCollision(map: CollisionMap, container: HTMLElement):
 		observer.disconnect();
 		container.removeEventListener('transitionend', schedule);
 		map.off('move', schedule);
-		map.off('moveend', schedule);
+		map.off('moveend', settle);
 		map.off('resize', schedule);
 	};
 }

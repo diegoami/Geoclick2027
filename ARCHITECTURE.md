@@ -53,10 +53,12 @@ pairs well with a canvas/map-heavy UI.
   the player has earned or asked for.
   Since v0.6.0 (FT-23/FT-24) those popups never overlap:
   `labelCollision.ts`, installed by `createMap` for every view, measures
-  them after each map move, puts each in the best free spot it has (a
-  region's name on its middle or a line off it, a town's beside its dot,
-  never on it) and hides any name with nowhere left to go, until a zoom
-  makes room. See DECISIONS.md, "Names never overlap".
+  them after each map move, puts each in the best-scoring free spot it
+  has (a region's name on its middle or a line off it, a town's on one
+  of eight spots beside its dot, never on it, and off every other town's
+  dot - `createMap` hands the pass the projected dots, FT-63) and hides
+  any name with nowhere left to go, until a zoom makes room. See
+  DECISIONS.md, "Names never overlap".
 - **A second tileset per map, for the Terrain layer** (v0.8.0, FT-33).
   Beside each map's `tiles.pmtiles` sits a `terrain.pmtiles` holding the
   sea, the rivers and Natural Earth's *named* physical features — ranges,

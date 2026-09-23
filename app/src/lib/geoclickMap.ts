@@ -130,8 +130,13 @@ export function createMap(
 	// take no pointer input, so drags on them move the map (FT-18).
 	map.once('remove', enableLabelMagnify(container));
 	// Names never overlap (FT-23): whatever names a view draws, the ones that
-	// don't fit are hidden until the player zooms in far enough for them.
-	map.once('remove', enableLabelCollision(map, container));
+	// don't fit are hidden until the player zooms in far enough for them. Every
+	// town's dot counts, named or not - a quiz's unsolved ones too (FT-63).
+	const towns = mapDef.targets.filter((t) => t.type === 'city').map((t) => t.centroid);
+	map.once(
+		'remove',
+		enableLabelCollision(map, container, () => towns.map((c) => map.project(c)))
+	);
 
 	if (import.meta.env.DEV && typeof window !== 'undefined') {
 		// Debug/test aid, on the dev server only (it used to ship to every user
