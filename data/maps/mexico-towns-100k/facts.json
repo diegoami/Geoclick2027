@@ -7,11 +7,18 @@
 		"region": "Baja California",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"A portmanteau of Mexico and California — its twin across the border, Calexico, is the same two words the other way round.",
-			"It has the largest Chinese-descended community in Mexico, brought in to dig irrigation canals from 1903.",
-			"Its Chinatown, La Chinesca, has tunnels and basements built to escape the 50 °C summer heat."
-		]
+		"hooks": {
+			"en": [
+				"A portmanteau of Mexico and California — its twin across the border, Calexico, is the same two words the other way round.",
+				"It has the largest Chinese-descended community in Mexico, brought in to dig irrigation canals from 1903.",
+				"Its Chinatown, La Chinesca, has tunnels and basements built to escape the 50 °C summer heat."
+			],
+			"it": [
+				"Una fusione di Mexico e California: la sua gemella oltre il confine, Calexico, è fatta delle stesse due parole al contrario.",
+				"Ha la più grande comunità di origine cinese del Messico, arrivata dal 1903 per scavare i canali d’irrigazione.",
+				"La sua Chinatown, La Chinesca, ha gallerie e scantinati costruiti per sfuggire ai 50 °C dell’estate."
+			]
+		}
 	},
 	"tijuana": {
 		"kind": "city",
@@ -21,11 +28,18 @@
 		"region": "Baja California",
 		"coastal": true,
 		"position": "north-west",
-		"hooks": [
-			"Probably from a Kumeyaay word, tiwan, \"by the sea\", rather than the folk story about a woman called Tía Juana.",
-			"Its border crossing is one of the busiest in the world, with tens of millions of crossings a year.",
-			"The Caesar salad was invented here in 1924 by an Italian restaurateur during Prohibition."
-		]
+		"hooks": {
+			"en": [
+				"Probably from a Kumeyaay word, tiwan, \"by the sea\", rather than the folk story about a woman called Tía Juana.",
+				"Its border crossing is one of the busiest in the world, with tens of millions of crossings a year.",
+				"The Caesar salad was invented here in 1924 by an Italian restaurateur during Prohibition."
+			],
+			"it": [
+				"Probabilmente da una parola kumeyaay, tiwan, \"vicino al mare\", più che dalla leggenda di una donna chiamata Tía Juana.",
+				"Il suo valico di frontiera è tra i più trafficati al mondo, con decine di milioni di passaggi l’anno.",
+				"L’insalata Caesar fu inventata qui nel 1924 da un ristoratore italiano, durante il Proibizionismo."
+			]
+		}
 	},
 	"ensenada": {
 		"kind": "city",
@@ -34,11 +48,18 @@
 		"region": "Baja California",
 		"coastal": true,
 		"position": "north-west",
-		"hooks": [
-			"Spanish for \"cove\" or \"inlet\".",
-			"Its Valle de Guadalupe produces about 70% of Mexican wine.",
-			"La Bufadora nearby is a marine geyser that shoots seawater 30 m up through a sea cave."
-		]
+		"hooks": {
+			"en": [
+				"Spanish for \"cove\" or \"inlet\".",
+				"Its Valle de Guadalupe produces about 70% of Mexican wine.",
+				"La Bufadora nearby is a marine geyser that shoots seawater 30 m up through a sea cave."
+			],
+			"it": [
+				"In spagnolo \"cala\" o \"insenatura\".",
+				"La sua Valle de Guadalupe produce circa il 70% del vino messicano.",
+				"Poco lontano, La Bufadora è un geyser marino che da una grotta sul mare spara l’acqua a 30 m d’altezza."
+			]
+		}
 	},
 	"ciudad-juarez": {
 		"kind": "city",
@@ -48,11 +69,18 @@
 		"region": "Chihuahua",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"Renamed in 1888 for Benito Juárez, who governed Mexico from here during the French occupation.",
-			"It faces El Paso across the Rio Grande, forming one of the largest binational conurbations in the world.",
-			"Its maquiladora assembly plants employ hundreds of thousands of people making goods for the American market."
-		]
+		"hooks": {
+			"en": [
+				"Renamed in 1888 for Benito Juárez, who governed Mexico from here during the French occupation.",
+				"It faces El Paso across the Rio Grande, forming one of the largest binational conurbations in the world.",
+				"Its maquiladora assembly plants employ hundreds of thousands of people making goods for the American market."
+			],
+			"it": [
+				"Ribattezzata nel 1888 in onore di Benito Juárez, che da qui governò il Messico durante l’occupazione francese.",
+				"Sta di fronte a El Paso, oltre il Rio Grande, e forma con essa una delle più grandi conurbazioni binazionali del mondo.",
+				"Le sue maquiladoras, fabbriche di assemblaggio, danno lavoro a centinaia di migliaia di persone che producono merci per il mercato americano."
+			]
+		}
 	},
 	"hermosillo": {
 		"kind": "city",
@@ -61,11 +89,18 @@
 		"region": "Sonora",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"Named in 1828 for José María González Hermosillo, an independence general.",
-			"One of the hottest cities in Mexico, regularly above 48 °C in summer.",
-			"Ford has built cars here since 1986, and the city is the capital of Sonora."
-		]
+		"hooks": {
+			"en": [
+				"Named in 1828 for José María González Hermosillo, an independence general.",
+				"One of the hottest cities in Mexico, where summers often pass 45 °C.",
+				"Ford has built cars here since 1986, and the city is the capital of Sonora."
+			],
+			"it": [
+				"Chiamata così nel 1828 in onore di José María González Hermosillo, generale della guerra d’indipendenza.",
+				"Una delle città più calde del Messico, dove d’estate si superano spesso i 45 °C.",
+				"La Ford vi costruisce auto dal 1986, e la città è la capitale di Sonora."
+			]
+		}
 	},
 	"mazatlan": {
 		"kind": "city",
@@ -74,11 +109,18 @@
 		"region": "Sonora",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"From Nahuatl mazatl, \"deer\", plus -tlan — \"place of deer\".",
-			"Its carnival is one of the largest in the world, behind Rio and New Orleans.",
-			"It has the longest seafront promenade in Mexico, about 21 km."
-		]
+		"hooks": {
+			"en": [
+				"From Nahuatl mazatl, \"deer\", plus -tlan — \"place of deer\".",
+				"Its carnival is one of the largest in the world, behind Rio and New Orleans.",
+				"It has the longest seafront promenade in Mexico, about 21 km."
+			],
+			"it": [
+				"Dal nahuatl mazatl, \"cervo\", più -tlan: \"luogo dei cervi\".",
+				"Il suo carnevale è tra i più grandi del mondo, dopo quelli di Rio e di New Orleans.",
+				"Ha il lungomare più esteso del Messico, circa 21 km."
+			]
+		}
 	},
 	"chihuahua": {
 		"kind": "city",
@@ -87,11 +129,18 @@
 		"population1950": 87000,
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"Probably Nahuatl or Tarahumara for \"dry sandy place\" or \"between two waters\"; the dog is named after the state, not the other way round.",
-			"The largest state in Mexico, bigger than the United Kingdom.",
-			"Copper Canyon in it is deeper and larger than the Grand Canyon, and the railway through it climbs 2,400 m with 86 tunnels."
-		]
+		"hooks": {
+			"en": [
+				"Probably Nahuatl or Tarahumara for \"dry sandy place\" or \"between two waters\"; the dog is named after the state, not the other way round.",
+				"The largest state in Mexico, bigger than the United Kingdom.",
+				"Copper Canyon in it is deeper and larger than the Grand Canyon, and the railway through it climbs 2,400 m with 86 tunnels."
+			],
+			"it": [
+				"Probabilmente dal nahuatl o dal tarahumara, \"luogo secco e sabbioso\" o \"tra due acque\"; è il cane a prendere il nome dallo stato, non il contrario.",
+				"Lo stato più grande del Messico, più esteso del Regno Unito.",
+				"Il suo Canyon del Rame è più profondo e più vasto del Grand Canyon, e la ferrovia che lo attraversa sale di 2.400 m passando per 86 gallerie."
+			]
+		}
 	},
 	"nuevo-laredo": {
 		"kind": "city",
@@ -100,11 +149,18 @@
 		"region": "Tamaulipas",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"\"New Laredo\" — founded in 1848 by residents of Laredo who chose to stay Mexican after the border moved.",
-			"They dug up their dead and brought them across the river with them.",
-			"It is the largest inland port in Latin America, handling much of the trade between Mexico and the United States."
-		]
+		"hooks": {
+			"en": [
+				"\"New Laredo\" — founded in 1848 by residents of Laredo who chose to stay Mexican after the border moved.",
+				"They dug up their dead and brought them across the river with them.",
+				"It is the largest inland port in Latin America, handling much of the trade between Mexico and the United States."
+			],
+			"it": [
+				"\"Nuova Laredo\": fondata nel 1848 da abitanti di Laredo che scelsero di restare messicani quando il confine si spostò.",
+				"Dissotterrarono i loro morti e se li portarono dietro, dall’altra parte del fiume.",
+				"È il più grande porto secco dell’America Latina, e gestisce buona parte degli scambi tra il Messico e gli Stati Uniti."
+			]
+		}
 	},
 	"ciudad-obregon": {
 		"kind": "city",
@@ -113,11 +169,18 @@
 		"region": "Sonora",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"Named for Álvaro Obregón, a general and president assassinated in 1928.",
-			"It is the centre of the Yaqui valley, where Norman Borlaug bred the wheat that started the Green Revolution.",
-			"That work fed perhaps a billion people and won him the Nobel Peace Prize."
-		]
+		"hooks": {
+			"en": [
+				"Named for Álvaro Obregón, a general and president assassinated in 1928.",
+				"It is the centre of the Yaqui valley, where Norman Borlaug bred the wheat that started the Green Revolution.",
+				"That work fed perhaps a billion people and won him the Nobel Peace Prize."
+			],
+			"it": [
+				"Porta il nome di Álvaro Obregón, generale e presidente assassinato nel 1928.",
+				"È il centro della valle dello Yaqui, dove Norman Borlaug selezionò il grano che diede avvio alla Rivoluzione verde.",
+				"Quel lavoro sfamò forse un miliardo di persone e gli valse il premio Nobel per la pace."
+			]
+		}
 	},
 	"reynosa": {
 		"kind": "city",
@@ -126,11 +189,18 @@
 		"region": "Tamaulipas",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"Named for Reinosa in Spain, the birthplace of a colonial official.",
-			"It is a major crossing point and a centre of natural gas production.",
-			"Its maquiladoras make a large share of Mexico’s electronics exports."
-		]
+		"hooks": {
+			"en": [
+				"Named for Reinosa in Spain, the birthplace of a colonial official.",
+				"It is a major crossing point and a centre of natural gas production.",
+				"Its maquiladoras make a large share of Mexico’s electronics exports."
+			],
+			"it": [
+				"Prende il nome da Reinosa, in Spagna, città natale di un funzionario coloniale.",
+				"È un importante punto di passaggio della frontiera e un centro di produzione di gas naturale.",
+				"Le sue maquiladoras producono una larga parte dell’elettronica che il Messico esporta."
+			]
+		}
 	},
 	"matamoros": {
 		"kind": "city",
@@ -139,11 +209,18 @@
 		"region": "Tamaulipas",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"Named for Mariano Matamoros, a priest and independence fighter executed in 1814.",
-			"The first battles of the Mexican-American War were fought just outside it in 1846.",
-			"It faces Brownsville, Texas, across the Rio Grande."
-		]
+		"hooks": {
+			"en": [
+				"Named for Mariano Matamoros, a priest and independence fighter executed in 1814.",
+				"The first battles of the Mexican-American War were fought just outside it in 1846.",
+				"It faces Brownsville, Texas, across the Rio Grande."
+			],
+			"it": [
+				"Porta il nome di Mariano Matamoros, sacerdote e combattente dell’indipendenza giustiziato nel 1814.",
+				"Le prime battaglie della guerra messicano-statunitense si combatterono nel 1846 appena fuori città.",
+				"Sta di fronte a Brownsville, in Texas, sull’altra sponda del Rio Grande."
+			]
+		}
 	},
 	"los-mochis": {
 		"kind": "city",
@@ -152,11 +229,18 @@
 		"region": "Sinaloa",
 		"coastal": true,
 		"position": "west",
-		"hooks": [
-			"From a Cahita word for a land turtle, or for a flowering plant.",
-			"It is the Pacific terminus of the Copper Canyon railway, which climbs 2,400 m with 86 tunnels.",
-			"The town was founded around a sugar mill built by an American socialist colony in 1893."
-		]
+		"hooks": {
+			"en": [
+				"From a Cahita word for a land turtle, or for a flowering plant.",
+				"It is the Pacific terminus of the Copper Canyon railway, which climbs 2,400 m with 86 tunnels.",
+				"The town grew up in the early 1900s around an American-built sugar mill."
+			],
+			"it": [
+				"Da una parola cahita che indica una tartaruga di terra, o una pianta da fiore.",
+				"È il capolinea sul Pacifico della ferrovia del Canyon del Rame, che sale di 2.400 m passando per 86 gallerie.",
+				"La città nacque all’inizio del Novecento attorno a uno zuccherificio costruito da americani."
+			]
+		}
 	},
 	"monterrey": {
 		"kind": "city",
@@ -166,11 +250,18 @@
 		"region": "Nuevo León",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"Named in 1596 for the Count of Monterrey, then viceroy of New Spain.",
-			"It is Mexico’s industrial capital, with the highest income per head of any large Mexican city.",
-			"The Cerro de la Silla, a saddle-shaped mountain, stands over it and is the city’s emblem."
-		]
+		"hooks": {
+			"en": [
+				"Named in 1596 for the Count of Monterrey, then viceroy of New Spain.",
+				"It is Mexico’s industrial capital, with the highest income per head of any large Mexican city.",
+				"The Cerro de la Silla, a saddle-shaped mountain, stands over it and is the city’s emblem."
+			],
+			"it": [
+				"Chiamata così nel 1596 in onore del conte di Monterrey, allora viceré della Nuova Spagna.",
+				"È la capitale industriale del Messico, con il reddito pro capite più alto tra le grandi città messicane.",
+				"Il Cerro de la Silla, una montagna a forma di sella, la domina ed è il simbolo della città."
+			]
+		}
 	},
 	"torreon": {
 		"kind": "city",
@@ -180,11 +271,18 @@
 		"region": "Coahuila",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"\"Large tower\" — named for a watchtower built against raids.",
-			"It forms one urban area with Gómez Palacio and Lerdo, called La Laguna.",
-			"A massacre of about 300 Chinese residents here in 1911 was one of the worst episodes of the revolution."
-		]
+		"hooks": {
+			"en": [
+				"\"Large tower\" — named for a watchtower built against raids.",
+				"It forms one urban area with Gómez Palacio and Lerdo, called La Laguna.",
+				"A massacre of about 300 Chinese residents here in 1911 was one of the worst episodes of the revolution."
+			],
+			"it": [
+				"\"Grande torre\": prende il nome da una torre di guardia costruita contro le incursioni.",
+				"Forma un’unica area urbana con Gómez Palacio e Lerdo, chiamata La Laguna.",
+				"Il massacro di circa 300 residenti cinesi, avvenuto qui nel 1911, fu uno degli episodi peggiori della rivoluzione."
+			]
+		}
 	},
 	"gomez-palacio": {
 		"kind": "city",
@@ -193,11 +291,18 @@
 		"region": "Durango",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"Named for Francisco Gómez Palacio, a nineteenth-century Durango politician.",
-			"It sits across the Nazas river from Torreón, in a different state.",
-			"The Mapimí Silent Zone north of it is a desert patch with a long-running local legend about radio interference."
-		]
+		"hooks": {
+			"en": [
+				"Named for Francisco Gómez Palacio, a nineteenth-century Durango politician.",
+				"It sits across the Nazas river from Torreón, in a different state.",
+				"The Mapimí Silent Zone north of it is a desert patch with a long-running local legend about radio interference."
+			],
+			"it": [
+				"Porta il nome di Francisco Gómez Palacio, politico di Durango dell’Ottocento.",
+				"Sorge sulla sponda del fiume Nazas opposta a Torreón, ma in un altro stato.",
+				"A nord si trova la Zona del Silenzio di Mapimí, un tratto di deserto su cui da tempo circola una leggenda locale di interferenze radio."
+			]
+		}
 	},
 	"saltillo": {
 		"kind": "city",
@@ -207,11 +312,18 @@
 		"region": "Coahuila",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"From a diminutive of salto, a waterfall or jump — for a stream that fell nearby.",
-			"It is the oldest town in north-east Mexico, founded in 1577.",
-			"Its sarapes, woven blankets in bright bands, are the classic Mexican design, and it now builds cars for several makers."
-		]
+		"hooks": {
+			"en": [
+				"From a diminutive of salto, a waterfall or jump — for a stream that fell nearby.",
+				"It is the oldest town in north-east Mexico, founded in 1577.",
+				"Its sarapes, woven blankets in bright bands, are the classic Mexican design, and it now builds cars for several makers."
+			],
+			"it": [
+				"Da un diminutivo di salto, cascata o balzo: per un ruscello che precipitava lì vicino.",
+				"È la città più antica del Messico nord-orientale, fondata nel 1577.",
+				"I suoi sarape, coperte tessute a bande vivaci, sono il disegno messicano per eccellenza, e oggi la città produce auto per diverse case."
+			]
+		}
 	},
 	"culiacan": {
 		"kind": "city",
@@ -221,11 +333,18 @@
 		"region": "Sinaloa",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"From Nahuatl colhuacan, \"place of those who have ancestors\" or \"of the crooked hill\".",
-			"It is the capital of Sinaloa and the centre of Mexico’s vegetable exports.",
-			"Its botanical garden holds a permanent collection of contemporary sculpture among the plants."
-		]
+		"hooks": {
+			"en": [
+				"From Nahuatl colhuacan, \"place of those who have ancestors\" or \"of the crooked hill\".",
+				"It is the capital of Sinaloa and the centre of Mexico’s vegetable exports.",
+				"Its botanical garden holds a permanent collection of contemporary sculpture among the plants."
+			],
+			"it": [
+				"Dal nahuatl colhuacan, \"luogo di coloro che hanno antenati\" o \"del colle ricurvo\".",
+				"È la capitale di Sinaloa e il centro delle esportazioni di ortaggi del Messico.",
+				"Il suo orto botanico ospita, tra le piante, una collezione permanente di scultura contemporanea."
+			]
+		}
 	},
 	"durango": {
 		"kind": "city",
@@ -233,11 +352,18 @@
 		"populationRank": 32,
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"Named by a Basque founder in 1563 after Durango in the Basque Country, whose own name means \"beyond the water\".",
-			"Its dry canyons stood in for the American West in dozens of films, and John Wayne shot many of his here.",
-			"The Sierra Madre Occidental crossing it holds the Espinazo del Diablo, a road along a knife-edge ridge."
-		]
+		"hooks": {
+			"en": [
+				"Named by a Basque founder in 1563 after Durango in the Basque Country, whose own name means \"beyond the water\".",
+				"Its dry canyons stood in for the American West in dozens of films, and John Wayne shot many of his here.",
+				"The Sierra Madre Occidental crossing it holds the Espinazo del Diablo, a road along a knife-edge ridge."
+			],
+			"it": [
+				"Gli diede il nome nel 1563 un fondatore basco, da Durango nei Paesi Baschi, il cui nome significa a sua volta \"al di là dell’acqua\".",
+				"I suoi canyon aridi hanno fatto da Far West in decine di film, e John Wayne ci girò molti dei suoi.",
+				"La Sierra Madre Occidentale che lo attraversa ospita l’Espinazo del Diablo, una strada che corre su una cresta affilata come una lama."
+			]
+		}
 	},
 	"ciudad-victoria": {
 		"kind": "city",
@@ -246,11 +372,18 @@
 		"region": "Tamaulipas",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"Named for Guadalupe Victoria, the first president of Mexico.",
-			"It sits at the foot of the Sierra Madre Oriental, with the El Cielo biosphere reserve nearby.",
-			"That reserve is where tropical, desert and temperate forests meet, which makes for unusual bird lists."
-		]
+		"hooks": {
+			"en": [
+				"Named for Guadalupe Victoria, the first president of Mexico.",
+				"It sits at the foot of the Sierra Madre Oriental, with the El Cielo biosphere reserve nearby.",
+				"That reserve is where tropical, desert and temperate forests meet, which makes for unusual bird lists."
+			],
+			"it": [
+				"Porta il nome di Guadalupe Victoria, il primo presidente del Messico.",
+				"Sorge ai piedi della Sierra Madre Orientale, con la riserva della biosfera di El Cielo poco lontano.",
+				"In quella riserva si incontrano boschi tropicali, desertici e temperati, il che rende insolito l’elenco degli uccelli che vi si osservano."
+			]
+		}
 	},
 	"tampico": {
 		"kind": "city",
@@ -259,11 +392,18 @@
 		"region": "Tamaulipas",
 		"coastal": true,
 		"position": "centre",
-		"hooks": [
-			"From Huastec tam-piko, \"place of otters\" or \"place of dogs\".",
-			"Mexico’s oil boom began here in 1901, and the city was briefly one of the world’s great oil ports.",
-			"B. Traven set The Treasure of the Sierra Madre in and around it."
-		]
+		"hooks": {
+			"en": [
+				"From Huastec tam-piko, \"place of otters\" or \"place of dogs\".",
+				"Mexico’s oil boom began here in 1901, and the city was briefly one of the world’s great oil ports.",
+				"B. Traven set The Treasure of the Sierra Madre in and around it."
+			],
+			"it": [
+				"Dall’huasteco tam-piko, \"luogo delle lontre\" o \"luogo dei cani\".",
+				"Il boom petrolifero messicano cominciò qui nel 1901, e per un breve periodo la città fu uno dei grandi porti petroliferi del mondo.",
+				"B. Traven ambientò Il tesoro della Sierra Madre in città e nei dintorni."
+			]
+		}
 	},
 	"san-luis-potosi": {
 		"kind": "city",
@@ -272,11 +412,18 @@
 		"population1950": 132000,
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"St Louis plus Potosí — the Bolivian silver mountain, borrowed as a boast that this one would be as rich.",
-			"Real de Catorce here is a semi-abandoned silver town reached through a 2.3 km tunnel.",
-			"Huasteca Potosina, its eastern half, is waterfalls and turquoise rivers, and the Wixárika make a 400 km pilgrimage across the state each year."
-		]
+		"hooks": {
+			"en": [
+				"St Louis plus Potosí — the Bolivian silver mountain, borrowed as a boast that this one would be as rich.",
+				"Real de Catorce here is a semi-abandoned silver town reached through a 2.3 km tunnel.",
+				"Huasteca Potosina, its eastern half, is waterfalls and turquoise rivers, and the Wixárika make a 400 km pilgrimage across the state each year."
+			],
+			"it": [
+				"San Luigi più Potosí, la montagna d’argento boliviana, preso in prestito come vanto: questa sarebbe stata altrettanto ricca.",
+				"Qui si trova Real de Catorce, una città dell’argento semiabbandonata a cui si arriva attraverso una galleria di 2,3 km.",
+				"La Huasteca Potosina, la sua metà orientale, è fatta di cascate e fiumi color turchese, e ogni anno i Wixárika attraversano lo stato in un pellegrinaggio di 400 km."
+			]
+		}
 	},
 	"aguascalientes": {
 		"kind": "city",
@@ -285,11 +432,18 @@
 		"population1950": 94000,
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"\"Hot waters\", for the thermal springs the city was founded on in 1575.",
-			"The smallest mainland state, and much of its old city is undermined by tunnels nobody has fully mapped.",
-			"Its San Marcos fair is the oldest and largest in Mexico, running since 1828."
-		]
+		"hooks": {
+			"en": [
+				"\"Hot waters\", for the thermal springs the city was founded on in 1575.",
+				"One of the smallest states, and much of its old city is undermined by tunnels nobody has fully mapped.",
+				"Its San Marcos fair is the oldest and largest in Mexico, running since 1828."
+			],
+			"it": [
+				"\"Acque calde\", per le sorgenti termali su cui la città fu fondata nel 1575.",
+				"Uno degli stati più piccoli, e sotto gran parte della sua città vecchia corrono gallerie che nessuno ha mai mappato per intero.",
+				"La sua fiera di San Marcos è la più antica e la più grande del Messico, e si tiene dal 1828."
+			]
+		}
 	},
 	"tepic": {
 		"kind": "city",
@@ -298,11 +452,18 @@
 		"region": "Nayarit",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"From Nahuatl tepictli, \"hard stone\" or \"solid place\".",
-			"It is the capital of Nayarit and sits below the Sangangüey volcano.",
-			"The Wixárika (Huichol) sell yarn paintings and beadwork here, made with peyote visions."
-		]
+		"hooks": {
+			"en": [
+				"From Nahuatl tepictli, \"hard stone\" or \"solid place\".",
+				"It is the capital of Nayarit and sits below the Sangangüey volcano.",
+				"The Wixárika (Huichol) sell yarn paintings and beadwork here, made with peyote visions."
+			],
+			"it": [
+				"Dal nahuatl tepictli, \"pietra dura\" o \"luogo solido\".",
+				"È la capitale di Nayarit e sorge ai piedi del vulcano Sangangüey.",
+				"Qui i Wixárika (Huichol) vendono i loro quadri di filati e i lavori di perline, nati dalle visioni del peyote."
+			]
+		}
 	},
 	"cancun": {
 		"kind": "city",
@@ -311,11 +472,18 @@
 		"region": "Quintana Roo",
 		"coastal": true,
 		"position": "south-east",
-		"hooks": [
-			"From Maya kaan kun, \"nest of snakes\" or \"place of the golden snake\".",
-			"It was an uninhabited sandbar with three caretakers in 1970, when a computer model picked it as the best site for a resort.",
-			"It now receives more international visitors than any other city in Latin America."
-		]
+		"hooks": {
+			"en": [
+				"From Maya kaan kun, \"nest of snakes\" or \"place of the golden snake\".",
+				"It was an uninhabited sandbar with three caretakers in 1970, when a computer model picked it as the best site for a resort.",
+				"It now receives more international visitors than any other city in Latin America."
+			],
+			"it": [
+				"Dal maya kaan kun, \"nido di serpenti\" o \"luogo del serpente d’oro\".",
+				"Nel 1970 era un banco di sabbia disabitato, con tre custodi, quando un modello al computer lo scelse come il posto migliore per una località turistica.",
+				"Oggi accoglie più visitatori internazionali di qualunque altra città dell’America Latina."
+			]
+		}
 	},
 	"leon": {
 		"kind": "city",
@@ -325,11 +493,18 @@
 		"region": "Guanajuato",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"Named for León in Spain — León de los Aldama in full.",
-			"It makes most of Mexico’s shoes and leather goods.",
-			"Its hot-air balloon festival is the largest in Latin America."
-		]
+		"hooks": {
+			"en": [
+				"Named for León in Spain — León de los Aldama in full.",
+				"It makes most of Mexico’s shoes and leather goods.",
+				"Its hot-air balloon festival is the largest in Latin America."
+			],
+			"it": [
+				"Prende il nome da León, in Spagna: per intero, León de los Aldama.",
+				"Produce la maggior parte delle scarpe e degli articoli in pelle del Messico.",
+				"Il suo festival delle mongolfiere è il più grande dell’America Latina."
+			]
+		}
 	},
 	"merida": {
 		"kind": "city",
@@ -339,11 +514,18 @@
 		"region": "Yucatán",
 		"coastal": false,
 		"position": "south-east",
-		"hooks": [
-			"Named for Mérida in Spain, because its Maya ruins reminded the conquistadors of that city’s Roman ones.",
-			"It was built with the stones of T'hó, the Maya city that stood on the site.",
-			"Henequen fibre made it so rich around 1900 that it was said to have more millionaires than anywhere in Mexico."
-		]
+		"hooks": {
+			"en": [
+				"Named for Mérida in Spain, because its Maya ruins reminded the conquistadors of that city’s Roman ones.",
+				"It was built with the stones of T'hó, the Maya city that stood on the site.",
+				"Henequen fibre made it so rich around 1900 that it was said to have more millionaires than anywhere in Mexico."
+			],
+			"it": [
+				"Prende il nome da Mérida, in Spagna, perché le sue rovine maya ricordavano ai conquistadores quelle romane della città spagnola.",
+				"Fu costruita con le pietre di T’hó, la città maya che sorgeva in quel luogo.",
+				"Intorno al 1900 la fibra di henequen la rese così ricca che si diceva contasse più milionari di qualunque altro posto del Messico."
+			]
+		}
 	},
 	"irapuato": {
 		"kind": "city",
@@ -352,11 +534,18 @@
 		"region": "Guanajuato",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"From a Purépecha or Nahuatl word, possibly \"place of low houses\".",
-			"It is Mexico’s strawberry capital and celebrates it with a festival.",
-			"It sits in the Bajío, the fertile basin that was colonial Mexico’s granary."
-		]
+		"hooks": {
+			"en": [
+				"From a Purépecha or Nahuatl word, possibly \"place of low houses\".",
+				"It is Mexico’s strawberry capital and celebrates it with a festival.",
+				"It sits in the Bajío, the fertile basin that was colonial Mexico’s granary."
+			],
+			"it": [
+				"Da una parola purépecha o nahuatl, forse \"luogo delle case basse\".",
+				"È la capitale messicana delle fragole, e le dedica una festa.",
+				"Sorge nel Bajío, il fertile bacino che fu il granaio del Messico coloniale."
+			]
+		}
 	},
 	"guadalajara": {
 		"kind": "city",
@@ -366,11 +555,18 @@
 		"region": "Jalisco",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"From Arabic wadi al-hijarah, \"river of stones\" — named for Guadalajara in Spain, which the Moors named.",
-			"Mariachi, tequila, the charreada rodeo and the wide sombrero all come from this region.",
-			"It is Mexico’s second city and holds the largest book fair in the Spanish-speaking world."
-		]
+		"hooks": {
+			"en": [
+				"From Arabic wadi al-hijarah, \"river of stones\" — named for Guadalajara in Spain, which the Moors named.",
+				"Mariachi, tequila, the charreada rodeo and the wide sombrero all come from this region.",
+				"It is Mexico’s second city and holds the largest book fair in the Spanish-speaking world."
+			],
+			"it": [
+				"Dall’arabo wadi al-hijarah, \"fiume di pietre\": prende il nome da Guadalajara in Spagna, battezzata così dai Mori.",
+				"Mariachi, tequila, il rodeo della charreada e il sombrero a tesa larga vengono tutti da questa regione.",
+				"È la seconda città del Messico e ospita la più grande fiera del libro del mondo di lingua spagnola."
+			]
+		}
 	},
 	"queretaro": {
 		"kind": "city",
@@ -379,11 +575,18 @@
 		"population1950": 49000,
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"Probably Purépecha k'erhi-iretarhu, \"place of the great town\", though a Nahuatl derivation about a ball game is also offered.",
-			"Its aqueduct of 74 arches, built in the 1720s, still frames the city, and the historic centre is a UNESCO site.",
-			"Mexico's 1917 constitution was written here, and Maximilian was executed on a hill just outside in 1867."
-		]
+		"hooks": {
+			"en": [
+				"Probably Purépecha k'erhi-iretarhu, \"place of the great town\", though a Nahuatl derivation about a ball game is also offered.",
+				"Its aqueduct of 74 arches, built in the 1720s, still frames the city, and the historic centre is a UNESCO site.",
+				"Mexico's 1917 constitution was written here, and Maximilian was executed on a hill just outside in 1867."
+			],
+			"it": [
+				"Probabilmente dal purépecha k’erhi-iretarhu, \"luogo della grande città\", anche se si propone pure un’etimologia nahuatl legata al gioco della palla.",
+				"Il suo acquedotto di 74 arcate, costruito negli anni Venti del Settecento, fa ancora da cornice alla città, e il centro storico è patrimonio dell’UNESCO.",
+				"Qui fu scritta la costituzione messicana del 1917, e nel 1867 Massimiliano fu giustiziato su una collina appena fuori città."
+			]
+		}
 	},
 	"celaya": {
 		"kind": "city",
@@ -392,11 +595,18 @@
 		"region": "Guanajuato",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"Possibly from Basque zelaia, \"flat land\" — many of its founders were Basque.",
-			"It is famous throughout Mexico for cajeta, a caramel made from goat’s milk.",
-			"Obregón lost his arm at the battle of Celaya in 1915, one of the decisive fights of the revolution."
-		]
+		"hooks": {
+			"en": [
+				"Possibly from Basque zelaia, \"flat land\" — many of its founders were Basque.",
+				"It is famous throughout Mexico for cajeta, a caramel made from goat’s milk.",
+				"Obregón beat Villa here in 1915, one of the decisive fights of the revolution."
+			],
+			"it": [
+				"Forse dal basco zelaia, \"terra piana\": molti dei suoi fondatori erano baschi.",
+				"È famosa in tutto il Messico per la cajeta, un caramello fatto con latte di capra.",
+				"Qui nel 1915 Obregón sconfisse Villa, in uno degli scontri decisivi della rivoluzione."
+			]
+		}
 	},
 	"poza-rica-de-hidalgo": {
 		"kind": "city",
@@ -405,11 +615,18 @@
 		"region": "Veracruz",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"\"Rich pool\" — named for a pool where oil seeped to the surface.",
-			"The field found here in 1930 was one of Mexico’s largest and drove the 1938 nationalisation of oil.",
-			"El Tajín nearby is a UNESCO site with a pyramid of 365 niches, one for each day of the year."
-		]
+		"hooks": {
+			"en": [
+				"\"Rich pool\" — named for a pool where oil seeped to the surface.",
+				"The field found here in 1930 was one of Mexico’s largest and drove the 1938 nationalisation of oil.",
+				"El Tajín nearby is a UNESCO site with a pyramid of 365 niches, one for each day of the year."
+			],
+			"it": [
+				"\"Pozza ricca\": prende il nome da una pozza in cui il petrolio affiorava in superficie.",
+				"Il giacimento scoperto qui nel 1930 fu uno dei più grandi del Messico e portò alla nazionalizzazione del petrolio del 1938.",
+				"Poco lontano, El Tajín è patrimonio dell’UNESCO, con una piramide di 365 nicchie, una per ogni giorno dell’anno."
+			]
+		}
 	},
 	"pachuca": {
 		"kind": "city",
@@ -418,11 +635,18 @@
 		"region": "Hidalgo",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"From Nahuatl patlachuican, \"narrow place\" or \"place of silver\".",
-			"Cornish miners came here in 1824, and their pasties became pastes, now the town’s speciality.",
-			"They also brought football: Pachuca is Mexico’s oldest club, founded in 1901."
-		]
+		"hooks": {
+			"en": [
+				"From Nahuatl patlachuican, \"narrow place\" or \"place of silver\".",
+				"Cornish miners came here in 1824, and their pasties became pastes, now the town’s speciality.",
+				"They also brought football: Pachuca is Mexico’s oldest club, founded in 1901."
+			],
+			"it": [
+				"Dal nahuatl patlachuican, \"luogo stretto\" o \"luogo dell’argento\".",
+				"Nel 1824 arrivarono qui minatori della Cornovaglia, e i loro pasty diventarono i pastes, oggi la specialità della città.",
+				"Portarono anche il calcio: il Pachuca, fondato nel 1901, è il club più antico del Messico."
+			]
+		}
 	},
 	"zumpango": {
 		"kind": "city",
@@ -431,11 +655,18 @@
 		"region": "México",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"From Nahuatl tzompanco, \"place of the skull rack\" — the tzompantli where skulls were displayed.",
-			"Its lake is one of the last remnants of the lake system that once filled the Valley of Mexico.",
-			"Mexico City’s new Felipe Ángeles airport was built at Santa Lucía nearby."
-		]
+		"hooks": {
+			"en": [
+				"From Nahuatl tzompanco, \"place of the skull rack\" — the tzompantli where skulls were displayed.",
+				"Its lake is one of the last remnants of the lake system that once filled the Valley of Mexico.",
+				"Mexico City’s new Felipe Ángeles airport was built at Santa Lucía nearby."
+			],
+			"it": [
+				"Dal nahuatl tzompanco, \"luogo della rastrelliera dei teschi\": lo tzompantli dove si esponevano i crani.",
+				"Il suo lago è uno degli ultimi resti del sistema di laghi che un tempo riempiva la Valle del Messico.",
+				"Il nuovo aeroporto Felipe Ángeles di Città del Messico è stato costruito poco lontano, a Santa Lucía."
+			]
+		}
 	},
 	"morelia": {
 		"kind": "city",
@@ -444,11 +675,18 @@
 		"region": "Michoacán",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"Renamed in 1828 for José María Morelos, who was born in it; it was Valladolid before.",
-			"Its pink stone colonial centre is a UNESCO site, and its aqueduct has 253 arches.",
-			"Its conservatory, founded in 1743, is the oldest music school in the Americas."
-		]
+		"hooks": {
+			"en": [
+				"Renamed in 1828 for José María Morelos, who was born in it; it was Valladolid before.",
+				"Its pink stone colonial centre is a UNESCO site, and its aqueduct has 253 arches.",
+				"Its conservatory, founded in 1743, is the oldest music school in the Americas."
+			],
+			"it": [
+				"Ribattezzata nel 1828 in onore di José María Morelos, che vi era nato; prima si chiamava Valladolid.",
+				"Il suo centro coloniale in pietra rosa è patrimonio dell’UNESCO, e il suo acquedotto conta 253 arcate.",
+				"Il suo conservatorio, fondato nel 1743, è la più antica scuola di musica delle Americhe."
+			]
+		}
 	},
 	"xalapa": {
 		"kind": "city",
@@ -457,11 +695,18 @@
 		"region": "Veracruz",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"From Nahuatl xalli apan, \"on the sandy water\" — a spring in sandy ground.",
-			"Its anthropology museum holds the best collection of Olmec art, including several colossal heads.",
-			"It is called the city of flowers, and grows much of Mexico’s coffee in the hills around it."
-		]
+		"hooks": {
+			"en": [
+				"From Nahuatl xalli apan, \"on the sandy water\" — a spring in sandy ground.",
+				"Its anthropology museum holds the best collection of Olmec art, including several colossal heads.",
+				"It is called the city of flowers, and grows much of Mexico’s coffee in the hills around it."
+			],
+			"it": [
+				"Dal nahuatl xalli apan, \"sull’acqua sabbiosa\": una sorgente in un terreno sabbioso.",
+				"Il suo museo di antropologia custodisce la migliore collezione di arte olmeca, tra cui diverse teste colossali.",
+				"La chiamano la città dei fiori, e sulle colline intorno si coltiva buona parte del caffè messicano."
+			]
+		}
 	},
 	"ciudad-de-mexico": {
 		"kind": "city",
@@ -472,11 +717,18 @@
 		"capitalOf": "country",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"From Mexica, the Aztecs’ own name for themselves — the city and the country share it.",
-			"It is built on the drained lake bed of Tenochtitlán and sinks up to 50 cm a year in places.",
-			"Its Zócalo is one of the largest city squares in the world, laid over the Aztec ceremonial precinct."
-		]
+		"hooks": {
+			"en": [
+				"From Mexica, the Aztecs’ own name for themselves — the city and the country share it.",
+				"It is built on the drained lake bed of Tenochtitlán and sinks up to 50 cm a year in places.",
+				"Its Zócalo is one of the largest city squares in the world, laid over the Aztec ceremonial precinct."
+			],
+			"it": [
+				"Da Mexica, il nome con cui gli Aztechi chiamavano sé stessi: la città e il paese lo condividono.",
+				"Sorge sul letto prosciugato del lago di Tenochtitlán e in certi punti sprofonda fino a 50 cm l’anno.",
+				"Il suo Zócalo è una delle piazze cittadine più grandi del mondo, e si stende sopra il recinto cerimoniale degli Aztechi."
+			]
+		}
 	},
 	"uruapan": {
 		"kind": "city",
@@ -485,11 +737,18 @@
 		"region": "Michoacán",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"From Purépecha urani, \"where everything flows\" or \"place of flowering trees\".",
-			"It is the avocado capital of the world; Michoacán grows most of the global supply.",
-			"The Paricutín volcano nearby rose out of a cornfield in 1943 and grew 424 m in a year while farmers watched."
-		]
+		"hooks": {
+			"en": [
+				"From Purépecha urani, \"where everything flows\" or \"place of flowering trees\".",
+				"It is the avocado capital of the world; Michoacán grows most of the global supply.",
+				"The Paricutín volcano nearby rose out of a cornfield in 1943 and grew 336 m in its first year while farmers watched."
+			],
+			"it": [
+				"Dal purépecha urani, \"dove tutto scorre\" o \"luogo degli alberi in fiore\".",
+				"È la capitale mondiale dell’avocado: il Michoacán coltiva la maggior parte degli avocado del mondo.",
+				"Poco lontano, nel 1943, il vulcano Paricutín spuntò da un campo di mais e nel primo anno crebbe di 336 m sotto gli occhi dei contadini."
+			]
+		}
 	},
 	"nezahualcoyotl": {
 		"kind": "city",
@@ -498,11 +757,18 @@
 		"region": "México",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"Named for Nezahualcóyotl, \"fasting coyote\", the poet-king of Texcoco who died in 1472.",
-			"It was built on the dry bed of Lake Texcoco from the 1940s by people with nowhere else to go.",
-			"It went from salt flats to over a million people in about thirty years."
-		]
+		"hooks": {
+			"en": [
+				"Named for Nezahualcóyotl, \"fasting coyote\", the poet-king of Texcoco who died in 1472.",
+				"It was built on the dry bed of Lake Texcoco from the 1940s by people with nowhere else to go.",
+				"It went from salt flats to over a million people in about thirty years."
+			],
+			"it": [
+				"Porta il nome di Nezahualcóyotl, \"coyote che digiuna\", il re poeta di Texcoco morto nel 1472.",
+				"Fu costruita a partire dagli anni Quaranta sul letto asciutto del lago Texcoco, da gente che non aveva altro posto dove andare.",
+				"In una trentina d’anni passò da distesa salina a oltre un milione di abitanti."
+			]
+		}
 	},
 	"tlaxcala": {
 		"kind": "city",
@@ -510,11 +776,18 @@
 		"populationRank": 28,
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"From Nahuatl texcalli, \"place of maize tortillas\" or of crags, depending on which reading you take.",
-			"The smallest state, and the one that allied with Cortés against the Aztecs — which is why its people were never conquered and got privileges the rest did not.",
-			"Cacaxtla in it holds battle murals in Maya style, painted around 650, among the best-preserved in Mesoamerica."
-		]
+		"hooks": {
+			"en": [
+				"From Nahuatl — tlaxcalli, \"tortilla\", or texcalli, \"crag\", depending on which reading you take.",
+				"The smallest state, and the one that allied with Cortés against the Aztecs — which is why its people were never conquered and got privileges the rest did not.",
+				"Cacaxtla in it holds battle murals in Maya style, painted around 650, among the best-preserved in Mesoamerica."
+			],
+			"it": [
+				"Dal nahuatl: tlaxcalli, \"tortilla\", o texcalli, \"rupe\", a seconda di come lo si legge.",
+				"Lo stato più piccolo, e quello che si alleò con Cortés contro gli Aztechi: ecco perché il suo popolo non fu mai conquistato e ottenne privilegi negati agli altri.",
+				"A Cacaxtla ci sono murali di battaglia in stile maya, dipinti intorno al 650, tra i meglio conservati della Mesoamerica."
+			]
+		}
 	},
 	"toluca": {
 		"kind": "city",
@@ -524,11 +797,18 @@
 		"region": "México",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"From Nahuatl tollocan, \"place of the god Tolo\" or \"place of rushes\".",
-			"The highest large city in Mexico at 2,660 m, with the Nevado de Toluca volcano above it.",
-			"That volcano has two lakes inside its crater, of the Sun and the Moon."
-		]
+		"hooks": {
+			"en": [
+				"From Nahuatl tollocan, \"place of the god Tolo\" or \"place of rushes\".",
+				"The highest large city in Mexico at 2,660 m, with the Nevado de Toluca volcano above it.",
+				"That volcano has two lakes inside its crater, of the Sun and the Moon."
+			],
+			"it": [
+				"Dal nahuatl tollocan, \"luogo del dio Tolo\" o \"luogo dei giunchi\".",
+				"La grande città più alta del Messico, a 2.660 m, sovrastata dal vulcano Nevado de Toluca.",
+				"Quel vulcano ha due laghi dentro il cratere, quello del Sole e quello della Luna."
+			]
+		}
 	},
 	"veracruz": {
 		"kind": "city",
@@ -536,11 +816,18 @@
 		"populationRank": 24,
 		"coastal": true,
 		"position": "south-east",
-		"hooks": [
-			"\"True cross\" — Cortés landed on Good Friday 1519 and named the first Spanish town in the mainland Americas for it.",
-			"Everything Spain took out of Mexico left through this port for three hundred years, and everything African and Caribbean came in: son jarocho music is the result.",
-			"Pico de Orizaba on its border is Mexico's highest mountain at 5,636 m, and vanilla was first cultivated by the Totonac here."
-		]
+		"hooks": {
+			"en": [
+				"\"True cross\" — Cortés landed on Good Friday 1519 and named the first Spanish town in Mexico for it.",
+				"Everything Spain took out of Mexico left through this port for three hundred years, and everything African and Caribbean came in: son jarocho music is the result.",
+				"Pico de Orizaba on its border is Mexico's highest mountain at 5,636 m, and vanilla was first cultivated by the Totonac here."
+			],
+			"it": [
+				"\"Vera croce\": Cortés sbarcò il Venerdì santo del 1519 e con quel nome battezzò la prima città spagnola del Messico.",
+				"Per trecento anni tutto ciò che la Spagna portava via dal Messico partì da questo porto, e tutto ciò che era africano e caraibico entrò da qui: la musica son jarocho ne è il frutto.",
+				"Il Pico de Orizaba, al suo confine, è la montagna più alta del Messico con 5.636 m, e fu qui che i Totonachi coltivarono per primi la vaniglia."
+			]
+		}
 	},
 	"puebla": {
 		"kind": "city",
@@ -549,11 +836,18 @@
 		"population1950": 227000,
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"Short for Puebla de los Ángeles, \"town of the angels\" — founded in 1531 as a Spanish town with no indigenous settlement underneath it.",
-			"Cinco de Mayo commemorates the 1862 battle here, where a smaller Mexican force beat the French army.",
-			"Cholula beside it has the largest pyramid by volume in the world, with a church built on top of it — the Spanish thought it was a hill."
-		]
+		"hooks": {
+			"en": [
+				"Short for Puebla de los Ángeles, \"town of the angels\" — founded in 1531 as a Spanish town with no indigenous settlement underneath it.",
+				"Cinco de Mayo commemorates the 1862 battle here, where a smaller Mexican force beat the French army.",
+				"Cholula beside it has the largest pyramid by volume in the world, with a church built on top of it — the Spanish thought it was a hill."
+			],
+			"it": [
+				"Abbreviazione di Puebla de los Ángeles, \"città degli angeli\": fondata nel 1531 come città spagnola, senza alcun insediamento indigeno al di sotto.",
+				"Il Cinco de Mayo ricorda la battaglia combattuta qui nel 1862, quando un esercito messicano più piccolo sconfisse quello francese.",
+				"La vicina Cholula ha la piramide più grande del mondo per volume, con una chiesa costruita in cima: gli Spagnoli la credevano una collina."
+			]
+		}
 	},
 	"cuernavaca": {
 		"kind": "city",
@@ -562,11 +856,18 @@
 		"region": "Morelos",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"A Spanish mangling of Nahuatl cuauhnahuac, \"near the trees\" — they heard \"cow horn\".",
-			"Its mild weather made it the retreat of Aztec emperors, then Cortés, then Maximilian.",
-			"It is called the city of eternal spring, and Malcolm Lowry set Under the Volcano here."
-		]
+		"hooks": {
+			"en": [
+				"A Spanish mangling of Nahuatl cuauhnahuac, \"near the trees\" — they heard \"cow horn\".",
+				"Its mild weather made it the retreat of Aztec emperors, then Cortés, then Maximilian.",
+				"It is called the city of eternal spring, and Malcolm Lowry set Under the Volcano here."
+			],
+			"it": [
+				"Una storpiatura spagnola del nahuatl cuauhnahuac, \"vicino agli alberi\": gli Spagnoli ci sentirono \"corno di vacca\".",
+				"Il clima mite ne fece il rifugio degli imperatori aztechi, poi di Cortés, poi di Massimiliano.",
+				"La chiamano la città dell’eterna primavera, e Malcolm Lowry vi ambientò Sotto il vulcano."
+			]
+		}
 	},
 	"orizaba": {
 		"kind": "city",
@@ -575,11 +876,18 @@
 		"region": "Veracruz",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"From Nahuatl ahuilizapan, \"place of pleasant waters\".",
-			"Pico de Orizaba above it is Mexico’s highest mountain at 5,636 m and the third highest in North America.",
-			"Its 1907 textile strike at Río Blanco was crushed by the army and is counted a precursor of the revolution."
-		]
+		"hooks": {
+			"en": [
+				"From Nahuatl ahuilizapan, \"place of pleasant waters\".",
+				"Pico de Orizaba above it is Mexico’s highest mountain at 5,636 m and the third highest in North America.",
+				"Its 1907 textile strike at Río Blanco was crushed by the army and is counted a precursor of the revolution."
+			],
+			"it": [
+				"Dal nahuatl ahuilizapan, \"luogo delle acque piacevoli\".",
+				"Il Pico de Orizaba che la sovrasta è la montagna più alta del Messico, con 5.636 m, e la terza del Nordamerica.",
+				"Lo sciopero tessile di Río Blanco del 1907 fu schiacciato dall’esercito ed è considerato un precursore della rivoluzione."
+			]
+		}
 	},
 	"coatzacoalcos": {
 		"kind": "city",
@@ -588,11 +896,18 @@
 		"region": "Veracruz",
 		"coastal": true,
 		"position": "south-east",
-		"hooks": [
-			"From Nahuatl coatzacualco, \"where the snake hides\" — said to be where Quetzalcoatl departed.",
-			"It is the main port of Mexico’s petrochemical industry.",
-			"It sits on the Isthmus of Tehuantepec, the narrowest part of Mexico, about 200 km across."
-		]
+		"hooks": {
+			"en": [
+				"From Nahuatl coatzacualco, \"where the snake hides\" — said to be where Quetzalcoatl departed.",
+				"It is the main port of Mexico’s petrochemical industry.",
+				"It sits on the Isthmus of Tehuantepec, the narrowest part of Mexico, about 200 km across."
+			],
+			"it": [
+				"Dal nahuatl coatzacualco, \"dove si nasconde il serpente\": si dice che da qui sia partito Quetzalcoatl.",
+				"È il principale porto dell’industria petrolchimica messicana.",
+				"Sorge sull’istmo di Tehuantepec, il punto più stretto del Messico, largo circa 200 km."
+			]
+		}
 	},
 	"villahermosa": {
 		"kind": "city",
@@ -601,11 +916,18 @@
 		"region": "Tabasco",
 		"coastal": false,
 		"position": "south-east",
-		"hooks": [
-			"\"Beautiful town\" — Villahermosa de San Juan Bautista in full.",
-			"Its La Venta park displays Olmec colossal heads moved there from a site threatened by oil drilling.",
-			"It is one of the wettest and most humid cities in Mexico."
-		]
+		"hooks": {
+			"en": [
+				"\"Beautiful town\" — Villahermosa de San Juan Bautista in full.",
+				"Its La Venta park displays Olmec colossal heads moved there from a site threatened by oil drilling.",
+				"It is one of the wettest and most humid cities in Mexico."
+			],
+			"it": [
+				"\"Bella città\": per intero, Villahermosa de San Juan Bautista.",
+				"Il suo parco di La Venta espone teste colossali olmeche portate qui da un sito minacciato dalle trivellazioni petrolifere.",
+				"È una delle città più piovose e umide del Messico."
+			]
+		}
 	},
 	"oaxaca": {
 		"kind": "city",
@@ -613,11 +935,18 @@
 		"populationRank": 27,
 		"coastal": false,
 		"position": "south-east",
-		"hooks": [
-			"From Nahuatl huaxyacac, \"at the nose of the guaje tree\", a pod-bearing tree still common there.",
-			"The most linguistically diverse state in Mexico: sixteen indigenous language groups, and many of its towns govern by customary law rather than party politics.",
-			"Monte Albán above the city was the Zapotec capital, and the state is the home of mole, mezcal and Día de Muertos as the world pictures it."
-		]
+		"hooks": {
+			"en": [
+				"From Nahuatl huaxyacac, \"at the nose of the guaje tree\", a pod-bearing tree still common there.",
+				"The most linguistically diverse state in Mexico: sixteen indigenous language groups, and many of its towns govern by customary law rather than party politics.",
+				"Monte Albán above the city was the Zapotec capital, and the state is the home of mole, mezcal and Día de Muertos as the world pictures it."
+			],
+			"it": [
+				"Dal nahuatl huaxyacac, \"presso il naso dell’albero di guaje\", un albero dai baccelli ancora comune nella zona.",
+				"Lo stato con la maggiore varietà linguistica del Messico: sedici gruppi di lingue indigene, e molti suoi comuni si governano con il diritto consuetudinario anziché con i partiti.",
+				"Monte Albán, sopra la città, fu la capitale degli Zapotechi, e lo stato è la patria del mole, del mezcal e del Día de Muertos così come se lo immagina il mondo."
+			]
+		}
 	},
 	"acapulco": {
 		"kind": "city",
@@ -626,11 +955,18 @@
 		"region": "Guerrero",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"From Nahuatl acatl poloa, \"where the reeds were destroyed\".",
-			"It was the Pacific end of the Manila galleon route for 250 years, bringing Asian silk and porcelain across two oceans.",
-			"Its La Quebrada divers have leapt 35 m into a narrow inlet since 1934, timing the jump to the swell."
-		]
+		"hooks": {
+			"en": [
+				"From Nahuatl acatl poloa, \"where the reeds were destroyed\".",
+				"It was the Pacific end of the Manila galleon route for 250 years, bringing Asian silk and porcelain across two oceans.",
+				"Its La Quebrada divers have leapt 35 m into a narrow inlet since 1934, timing the jump to the swell."
+			],
+			"it": [
+				"Dal nahuatl acatl poloa, \"dove le canne furono distrutte\".",
+				"Per 250 anni fu il capolinea sul Pacifico del galeone di Manila, che portava sete e porcellane asiatiche attraverso due oceani.",
+				"Dal 1934 i tuffatori di La Quebrada si lanciano da 35 m in una stretta insenatura, calcolando il salto sull’onda."
+			]
+		}
 	},
 	"tuxtla-gutierrez": {
 		"kind": "city",
@@ -639,10 +975,17 @@
 		"region": "Chiapas",
 		"coastal": false,
 		"position": "south-east",
-		"hooks": [
-			"Tuxtla is from Nahuatl tochtlan, \"place of rabbits\"; Gutiérrez was a state governor.",
-			"The Sumidero canyon beside it has walls up to 1,000 m high and is on the state coat of arms.",
-			"It is the capital of Chiapas and the gateway to the Maya sites at Palenque."
-		]
+		"hooks": {
+			"en": [
+				"Tuxtla is from Nahuatl tochtlan, \"place of rabbits\"; Gutiérrez was a state governor.",
+				"The Sumidero canyon beside it has walls up to 1,000 m high and is on the state coat of arms.",
+				"It is the capital of Chiapas and the gateway to the Maya sites at Palenque."
+			],
+			"it": [
+				"Tuxtla viene dal nahuatl tochtlan, \"luogo dei conigli\"; Gutiérrez era un governatore dello stato.",
+				"Il canyon del Sumidero, lì accanto, ha pareti alte fino a 1.000 m e compare nello stemma dello stato.",
+				"È la capitale del Chiapas e la porta d’accesso ai siti maya di Palenque."
+			]
+		}
 	}
 }
