@@ -14,6 +14,7 @@
 	import { mapDisplayName } from './mapCatalog';
 	import { tutorialDrop, tutorialQuizComplete, tutorialState } from './tutorial.svelte';
 	import { tutorialSlipIds } from './tutorialMachine';
+	import { TUTORIAL_MAP_ID } from './tutorialSandbox.svelte';
 	import { DOT_CLEARANCE_PX, registerLabel } from './labelCollision';
 	import { forgetRound, rememberRound, roundInProgress } from './quizRound';
 	import FactCard from './FactCard.svelte';
@@ -97,7 +98,8 @@
 	 * after every resolved drop. While a tutorial runs, the slips it spotlights
 	 * are dealt first, or "Try Sicilia" could point at an empty tray (FT-60). */
 	function dealHand() {
-		const preferred = tutorialState().status === 'idle' ? [] : tutorialSlipIds();
+		const inTutorial = tutorialState().status !== 'idle' && mapId === TUTORIAL_MAP_ID;
+		const preferred = inTutorial ? tutorialSlipIds() : [];
 		hand = refillHand(pendingIds(), hand, handSize(level), Math.random, preferred);
 	}
 
