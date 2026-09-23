@@ -721,9 +721,9 @@
 							total: session.items.length
 						})}</span
 					>
-					<!-- Only once the map is known well enough for the tray to hold
-					     back names (FT-21); at level 0 every name is on offer and
-					     there is nothing to explain. -->
+					<!-- Only once the map is known well enough for the hand to
+					     shrink (FT-21); level 0's hand of ten is the default and
+					     there is nothing to explain (FT-60). -->
 					{#if level > 0}
 						<span class="level"
 							>· {tPlural('quiz.namesAtATime', handSize(level), { count: handSize(level) })}</span

@@ -16,9 +16,11 @@ export type Level = 0 | 1 | 2 | 3;
 /** The share of a map's names that must be known to reach each level. */
 export const LEVEL_SHARES = [0, 0.25, 0.6, 0.85] as const;
 
-/** How many names the tray offers at each level; Infinity means "all of them".
- * First guess at the curve, not measured - expect to retune. */
-export const HAND_SIZES = [Infinity, 6, 3, 1] as const;
+/** How many names the tray offers at each level. Level 0 was Infinity ("all
+ * of them") until FT-60: a new map laid its whole deck in the tray - 110 slips
+ * on italy-provinces - so the first hand now holds 10 (product owner,
+ * 2026-09-23). The rest of the curve is a first guess, not measured. */
+export const HAND_SIZES = [10, 6, 3, 1] as const;
 
 /** A name counts towards the level once it has been placed right this many
  * times in a row with no mistake (packages/srs). */
@@ -67,6 +69,5 @@ export function refillHand(
 		const j = Math.floor(random() * (i + 1));
 		[pool[i], pool[j]] = [pool[j], pool[i]];
 	}
-	// size is Infinity at level 0, where slice simply takes the whole pool.
 	return [...kept, ...pool.slice(0, size - kept.length)];
 }

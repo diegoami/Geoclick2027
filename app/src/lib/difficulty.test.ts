@@ -32,7 +32,7 @@ describe('mapLevel', () => {
 
 describe('handSize', () => {
 	it('offers every name at level 0 and one at level 3', () => {
-		expect(handSize(0)).toBe(Infinity);
+		expect(handSize(0)).toBe(10);
 		expect(handSize(1)).toBe(6);
 		expect(handSize(2)).toBe(3);
 		expect(handSize(3)).toBe(1);
@@ -66,8 +66,15 @@ describe('refillHand', () => {
 		expect(hand.every((id) => pending.includes(id))).toBe(true);
 	});
 
-	it('gives every pending name at level 0 (hand size Infinity)', () => {
-		expect(refillHand(pending, [], Infinity, first).sort()).toEqual([...pending].sort());
+	it('deals a first hand of ten from a map larger than that (FT-60)', () => {
+		const many = Array.from({ length: 49 }, (_, i) => `t${i}`);
+		const hand = refillHand(many, [], handSize(0), first);
+		expect(hand).toHaveLength(10);
+		expect(new Set(hand).size).toBe(10);
+	});
+
+	it('deals every name when a map has fewer than the hand holds', () => {
+		expect(refillHand(pending, [], handSize(0), first).sort()).toEqual([...pending].sort());
 	});
 
 	it('shrinks the hand when the size drops below what is held', () => {

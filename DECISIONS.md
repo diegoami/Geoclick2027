@@ -1768,8 +1768,11 @@ answers:
 
 - **The quiz deals a *hand*, not the whole deck.** How many names the tray
   offers depends on how much of the map is known (names at a clean streak
-  of 3 or more): under 25 % every name, from 25 % six, from 60 % three,
-  from 85 % one. `app/src/lib/difficulty.ts` holds the thresholds and the
+  of 3 or more): under 25 % ten, from 25 % six, from 60 % three, from
+  85 % one. **Amended 2026-09-23 (FT-60):** under 25 % was *every name*
+  until the product owner capped it at ten — a new map laid its whole deck
+  in the tray (49 slips on `germany-towns-100k`, 110 on `italy-provinces`),
+  which on a tablet is a wall of slips rather than a hand. `app/src/lib/difficulty.ts` holds the thresholds and the
   drawing, pure and unit-tested; QuizView deals at the start of a round and
   tops the hand up after every resolved drop.
 - **Why:** with every remaining name in front of the player, the end of a
@@ -1781,8 +1784,8 @@ answers:
   placed, so a name the player is still thinking about doesn't vanish and
   reappear elsewhere.
 - **The level is shown, not hidden:** a quiet note beside the progress
-  line, "3 names at a time". Nothing is shown at level 0, where there is
-  nothing to explain.
+  line, "3 names at a time". Nothing is shown at level 0: ten is the
+  default hand, and the progress line already counts placed-of-total.
 - The thresholds and the hand sizes are a first guess, not measured; they
   live in one place so they can be retuned.
 
