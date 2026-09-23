@@ -111,8 +111,8 @@ Check items off as they land; update "Status" as iterations complete.
   into this release (FT-60 to FT-65). Translation decisions: **Italian
   first**, **per-sentence English fallback**, **no "EN" marker**, **German
   postponed**. Merged: **FT-48/FT-49** (Italy's 20 regions in Italian;
-  per-language `hooks`), **FT-62**, **FT-65**, **FT-61** and **FT-60** (four of the
-  six UX fixes). **FT-63, then the FT-64 spike and FT-50**, is next.
+  per-language `hooks`), **FT-62**, **FT-65**, **FT-61**, **FT-60** and **FT-63** (five
+  of the six UX fixes). **The FT-64 spike, then FT-50**, is next.
 - **Raised by the product owner 2026-09-22, backlogged**: GitHub issue #11 —
   on the Known map an explicitly tapped name kept its earned colour instead
   of **Chosen**. Decided: an explicit tap is Chosen regardless of the streak,
