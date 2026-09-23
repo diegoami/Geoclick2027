@@ -1,4 +1,4 @@
-# Handover — 2026-09-23, milestone = release tag (PR open); v0.10.0 re-review next
+# Handover — 2026-09-23, v0.10.0 release prep (PR #28) waiting for merge; milestone issue next
 
 For whoever picks Geoclick up next, whether a human or a fresh Claude
 session. It records where things stand, what's next, and what's easy to
@@ -23,7 +23,7 @@ before any work starts.
 | Remediation programme | Closed with v0.2.0 ([REMEDIATION_PLAN.md](REMEDIATION_PLAN.md)); its automerge exception went with it |
 | Feature programme | Closed with v0.5.0 ([FEATURE_PLAN.md](FEATURE_PLAN.md)) |
 | Since then | Per-release plans: [PLAN_V0.6.md](PLAN_V0.6.md) through [PLAN_V0.9.4.md](PLAN_V0.9.4.md), each with its own ledger; now [PLAN_V0.10.md](PLAN_V0.10.md) |
-| Next | **The v0.10.0 release, now under the milestone rules.** Every task in PLAN_V0.10.md is merged except FT-51 (German, postponed). The milestone definition changed on 2026-09-23 ([#29](https://github.com/diegoami/Geoclick2027/issues/29), PR on `process/milestone-is-a-release`, waiting for the owner's merge). After it merges: **[PR #28](https://github.com/diegoami/Geoclick2027/pull/28) becomes the release prep PR** — bump to `0.10.0`, CHANGELOG heading `## Unreleased — v0.10.0 — …` renamed to `## v0.10.0 — <date> — …`, drop `Review:` from its body; the owner merges it; its merge commit is the **candidate**; open `Milestone v0.10.0` (previous tag `v0.9.4`, `5387ff2`) and give the **re-review** prompt (round 2: round 1 was AGREE at `3ab4820`, same code, the delta is version strings and docs). On AGREE, after the owner's device checks (FT-61 tablet, FT-66 phone/tablet, on `v0.10.0-beta.1`, same code), tag `v0.10.0` on exactly the reviewed SHA, package from the tag and publish. `v0.10.0-beta.1` (published, a map drew in the built Windows app and in the APK on the emulator) stays as it is. Two review nits wait for after v0.10.0: `data/facts/italy.json` sardegna Italian sentence 2 keeps em dashes (the only one of 5 448), and no browser test crosses the stretched-names/collision coordinate conversion (hardening batch, with FT-59). A leftover Cloudflare "Workers Builds" check fails on every PR — a dashboard job for the product owner |
+| Next | **The v0.10.0 release, now under the milestone rules.** Every task in PLAN_V0.10.md is merged except FT-51 (German, postponed). The milestone definition changed on 2026-09-23 ([#29](https://github.com/diegoami/Geoclick2027/issues/29), merged as PR #30, `b63d925`). **[PR #28](https://github.com/diegoami/Geoclick2027/pull/28) is now the release prep** (done: `e33b486`, waiting for the owner's merge) — bump to `0.10.0`, CHANGELOG heading `## Unreleased — v0.10.0 — …` renamed to `## v0.10.0 — <date> — …`, drop `Review:` from its body; the owner merges it; its merge commit is the **candidate**; open `Milestone v0.10.0` (previous tag `v0.9.4`, `5387ff2`) and give the **re-review** prompt (round 2: round 1 was AGREE at `3ab4820`, same code, the delta is version strings and docs). On AGREE, after the owner's device checks (FT-61 tablet, FT-66 phone/tablet, on `v0.10.0-beta.1`, same code), tag `v0.10.0` on exactly the reviewed SHA, package from the tag and publish. `v0.10.0-beta.1` (published, a map drew in the built Windows app and in the APK on the emulator) stays as it is. Two review nits wait for after v0.10.0: `data/facts/italy.json` sardegna Italian sentence 2 keeps em dashes (the only one of 5 448), and no browser test crosses the stretched-names/collision coordinate conversion (hardening batch, with FT-59). A leftover Cloudflare "Workers Builds" check fails on every PR — a dashboard job for the product owner |
 | After that | **FT-51 (German) is postponed** until the Italian has been read; the two v0.9.4 test gates (FT-56, FT-59) wait in a hardening batch |
 | Also raised 2026-09-20 | **The start screen becomes a zoomable world map** — pick the country on the map, then the kind of quiz. The map list cannot be finalized as a list: the goal is a high number of maps, and `mapCatalog.ts` is already 31 countries and 66 maps. Favourites and Recent stay unchanged. Second item of the Iteration 8+ backlog, with the open questions listed there |
 
@@ -96,7 +96,7 @@ installer smoke test (the published Windows and Android installers were
 
 Suggested first message for the next session:
 
-> Read docs/HANDOVER.md. The milestone PR is merged. Turn PR #28 into the v0.10.0 release prep, and after I merge it open the milestone issue and give me the re-review prompt.
+> Read docs/HANDOVER.md. PR #28 is merged: open Milestone v0.10.0 on its merge commit and give me the re-review prompt.
 
 Whatever comes next, the working rules stay (CLAUDE.md §3):
 
