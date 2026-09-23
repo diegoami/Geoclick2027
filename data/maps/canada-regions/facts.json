@@ -22,11 +22,18 @@
 			"elevation": 2773
 		},
 		"position": "north-west",
-		"hooks": [
-			"Named from Ottawa's point of view: what was north-west of the settled country in 1870, when it was very much larger than it is now.",
-			"It has been carved up three times — Alberta, Saskatchewan, Yukon and Nunavut were all taken out of it.",
-			"Eleven languages are official here, nine of them Indigenous, more than any other jurisdiction in the country."
-		]
+		"hooks": {
+			"en": [
+				"Named from Ottawa's point of view: what was north-west of the settled country in 1870, when it was very much larger than it is now.",
+				"It has been carved up three times — Alberta, Saskatchewan, Yukon and Nunavut were all taken out of it.",
+				"Eleven languages are official here, nine of them Indigenous, more than any other jurisdiction in the country."
+			],
+			"it": [
+				"Il nome riflette il punto di vista di Ottawa: ciò che nel 1870 stava a nord-ovest del paese colonizzato, quando il territorio era molto più vasto di oggi.",
+				"È stato smembrato tre volte: Alberta, Saskatchewan, Yukon e Nunavut sono stati tutti ritagliati dal suo territorio.",
+				"Qui le lingue ufficiali sono undici, nove delle quali indigene: più che in qualsiasi altra giurisdizione del paese."
+			]
+		}
 	},
 	"nunavut": {
 		"kind": "region",
@@ -50,11 +57,18 @@
 			"elevation": 2616
 		},
 		"position": "centre",
-		"hooks": [
-			"\"Our land\" in Inuktitut — the name was chosen by the people who live there, for a territory created in 1999.",
-			"The youngest and largest jurisdiction, a fifth of Canada, with about 40,000 people and no road connecting it to the rest of the country.",
-			"Its capital, Iqaluit, means \"place of many fish\", and the sun does not set there for weeks in summer."
-		]
+		"hooks": {
+			"en": [
+				"\"Our land\" in Inuktitut — the name was chosen by the people who live there, for a territory created in 1999.",
+				"The youngest and largest jurisdiction, a fifth of Canada, with about 40,000 people and no road connecting it to the rest of the country.",
+				"Its capital, Iqaluit, means \"place of many fish\", and in midsummer the sun sets there for only a few hours."
+			],
+			"it": [
+				"\"La nostra terra\" in inuktitut: il nome lo scelsero gli abitanti stessi, per un territorio creato nel 1999.",
+				"La giurisdizione più giovane e più vasta, un quinto del Canada, con circa 40.000 abitanti e nessuna strada che la colleghi al resto del paese.",
+				"La sua capitale, Iqaluit, significa \"luogo dei molti pesci\", e a metà estate lì il sole tramonta solo per poche ore."
+			]
+		}
 	},
 	"yukon": {
 		"kind": "region",
@@ -75,11 +89,18 @@
 			"elevation": 5959
 		},
 		"position": "west",
-		"hooks": [
-			"From a Gwich'in word, roughly \"great river\" — the Yukon River, which runs 3,190 km to the Bering Sea.",
-			"The Klondike gold rush of 1897 brought 100,000 people north; most never reached the goldfields.",
-			"Mount Logan here is Canada's highest at 5,959 m, and its base is the largest of any mountain on earth outside Asia."
-		]
+		"hooks": {
+			"en": [
+				"From a Gwich'in word, roughly \"great river\" — the Yukon River, which runs 3,190 km to the Bering Sea.",
+				"The Klondike gold rush of 1897 brought 100,000 people north; most never reached the goldfields.",
+				"Mount Logan here is Canada's highest at 5,959 m, and it has the largest base of any non-volcanic mountain on earth."
+			],
+			"it": [
+				"Da una parola gwich’in, all’incirca \"grande fiume\": lo Yukon, che scorre per 3.190 km fino al mare di Bering.",
+				"La corsa all’oro del Klondike, nel 1897, spinse a nord 100.000 persone; la maggior parte non raggiunse mai i giacimenti.",
+				"Qui il monte Logan, con i suoi 5.959 m, è la vetta più alta del Canada, e la sua base è la più ampia di qualsiasi montagna non vulcanica della Terra."
+			]
+		}
 	},
 	"manitoba": {
 		"kind": "region",
@@ -102,11 +123,18 @@
 			"elevation": 831
 		},
 		"position": "south",
-		"hooks": [
-			"From Cree or Ojibwe manitou-wapow, \"the strait of the spirit\" — the sound the waves make on the rocks of Lake Manitoba.",
-			"Churchill on its Hudson Bay coast calls itself the polar bear capital of the world, and the bears walk through the town.",
-			"It has about 100,000 lakes, and Winnipeg at its centre is the coldest city of its size anywhere."
-		]
+		"hooks": {
+			"en": [
+				"From Cree or Ojibwe manitou-wapow, \"the strait of the spirit\" — the sound the waves make on the rocks of Lake Manitoba.",
+				"Churchill on its Hudson Bay coast calls itself the polar bear capital of the world, and the bears walk through the town.",
+				"It has about 100,000 lakes, and Winnipeg at its centre is the coldest city of its size anywhere."
+			],
+			"it": [
+				"Dal cree o dall’ojibwe manitou-wapow, \"lo stretto dello spirito\": il rumore che fanno le onde sulle rocce del lago Manitoba.",
+				"Churchill, sulla sua costa della baia di Hudson, si proclama capitale mondiale dell’orso polare, e gli orsi passeggiano per la città.",
+				"Conta circa 100.000 laghi, e Winnipeg, al suo centro, è la città più fredda del mondo tra quelle delle sue dimensioni."
+			]
+		}
 	},
 	"saskatchewan": {
 		"kind": "region",
@@ -125,11 +153,18 @@
 			"population": 198958
 		},
 		"position": "south",
-		"hooks": [
-			"From Cree kisiskāciwani-sīpiy, \"swift-flowing river\".",
-			"It supplies a large share of the world's potash and uranium, both mined from under the prairie.",
-			"Nearly a rectangle on the map, and flat enough that the grain elevators are visible for miles — its highest point is a hill in the far south-west."
-		]
+		"hooks": {
+			"en": [
+				"From Cree kisiskāciwani-sīpiy, \"swift-flowing river\".",
+				"It supplies a large share of the world's potash and uranium, both mined from under the prairie.",
+				"Nearly a rectangle on the map, and flat enough that the grain elevators are visible for miles — its highest point is a hill in the far south-west."
+			],
+			"it": [
+				"Dal cree kisiskāciwani-sīpiy, \"fiume che scorre veloce\".",
+				"Fornisce una quota consistente della potassa e dell’uranio del mondo, entrambi estratti dal sottosuolo della prateria.",
+				"Sulla carta è quasi un rettangolo, e così piatto che i silos del grano si vedono a chilometri di distanza: il suo punto più alto è una collina all’estremo sud-ovest."
+			]
+		}
 	},
 	"alberta": {
 		"kind": "region",
@@ -147,11 +182,18 @@
 			"population": 1110000
 		},
 		"position": "south-west",
-		"hooks": [
-			"Named in 1882 for Princess Louise Caroline Alberta, Queen Victoria's daughter, whose husband was then governor general.",
-			"Its oil sands hold one of the largest crude reserves on earth, and Calgary grew on them.",
-			"Banff, founded 1885, was Canada's first national park, and Dinosaur Provincial Park here has yielded more dinosaur species than almost anywhere."
-		]
+		"hooks": {
+			"en": [
+				"Named in 1882 for Princess Louise Caroline Alberta, Queen Victoria's daughter, whose husband was then governor general.",
+				"Its oil sands hold one of the largest crude reserves on earth, and Calgary grew on them.",
+				"Banff, founded 1885, was Canada's first national park, and Dinosaur Provincial Park here has yielded more dinosaur species than almost anywhere."
+			],
+			"it": [
+				"Battezzata nel 1882 in onore della principessa Luisa Carolina Alberta, figlia della regina Vittoria, il cui marito era allora governatore generale.",
+				"Le sue sabbie bituminose racchiudono una delle maggiori riserve di greggio della Terra, e su di esse è cresciuta Calgary.",
+				"Banff, fondato nel 1885, fu il primo parco nazionale del Canada, e qui il Dinosaur Provincial Park ha restituito più specie di dinosauri di quasi ogni altro luogo."
+			]
+		}
 	},
 	"british-columbia": {
 		"kind": "region",
@@ -173,11 +215,18 @@
 			"elevation": 4019
 		},
 		"position": "south-west",
-		"hooks": [
-			"Queen Victoria chose it: Columbia for the Columbia River, British to distinguish it from the American part.",
-			"It has more than 25,000 km of coastline once the fjords and islands are counted, and 60% of it is forest.",
-			"Its temperate rainforest holds Douglas firs over 90 m tall, and Vancouver is the mildest major city in the country."
-		]
+		"hooks": {
+			"en": [
+				"Queen Victoria chose it: Columbia for the Columbia River, British to distinguish it from the American part.",
+				"It has more than 25,000 km of coastline once the fjords and islands are counted, and 60% of it is forest.",
+				"Its temperate rainforest holds Douglas firs over 90 m tall, and Vancouver is the mildest major city in the country."
+			],
+			"it": [
+				"Il nome lo scelse la regina Vittoria: Columbia dal fiume Columbia, Britannica per distinguerla dalla parte americana.",
+				"Contando fiordi e isole, ha oltre 25.000 km di costa, e il 60% del suo territorio è foresta.",
+				"La sua foresta pluviale temperata ospita abeti di Douglas alti più di 90 m, e Vancouver è la grande città più mite del paese."
+			]
+		}
 	},
 	"quebec": {
 		"kind": "region",
@@ -200,11 +249,18 @@
 			"elevation": 1268
 		},
 		"position": "south-east",
-		"hooks": [
-			"From Algonquin kébec, \"where the river narrows\" — the point at Quebec City where the St Lawrence closes in.",
-			"The only province where French is the sole official language, and about 85% of people speak it at home.",
-			"It is larger than any European country except Russia, and it generates almost all its electricity from water."
-		]
+		"hooks": {
+			"en": [
+				"From Algonquin kébec, \"where the river narrows\" — the point at Quebec City where the St Lawrence closes in.",
+				"The only province where French is the sole official language, and about 85% of people speak it at home.",
+				"It is larger than any European country except Russia, and it generates almost all its electricity from water."
+			],
+			"it": [
+				"Dall’algonchino kébec, \"dove il fiume si restringe\": all’altezza della città di Québec il San Lorenzo si fa stretto.",
+				"L’unica provincia in cui il francese è la sola lingua ufficiale, e circa l’85% degli abitanti lo parla in casa.",
+				"È più grande di qualsiasi paese europeo tranne la Russia, e ricava quasi tutta la sua elettricità dall’acqua."
+			]
+		}
 	},
 	"newfoundland-and-labrador": {
 		"kind": "region",
@@ -225,11 +281,18 @@
 			"elevation": 1652
 		},
 		"position": "south-east",
-		"hooks": [
-			"Newfoundland is exactly what it says, the \"new found land\" of 1497; Labrador is from lavrador, Portuguese for a landholder, after the navigator João Fernandes Lavrador.",
-			"L'Anse aux Meadows here is the only confirmed Norse site in North America, five hundred years before Columbus.",
-			"Its cod fishery, the richest in the world for four centuries, collapsed in 1992 and 30,000 people lost their work in a day."
-		]
+		"hooks": {
+			"en": [
+				"Newfoundland is exactly what it says, the \"new found land\" of 1497; Labrador is from lavrador, Portuguese for a landholder, after the navigator João Fernandes Lavrador.",
+				"L'Anse aux Meadows here is the only confirmed Norse site in North America, five hundred years before Columbus.",
+				"Its cod fishery, the richest in the world for four centuries, collapsed in 1992 and 30,000 people lost their work in a day."
+			],
+			"it": [
+				"Terranova (Newfoundland) è letteralmente la \"terra nuova trovata\" del 1497; Labrador viene da lavrador, in portoghese \"proprietario terriero\", dal navigatore João Fernandes Lavrador.",
+				"Qui L’Anse aux Meadows è l’unico sito vichingo accertato del Nord America, cinquecento anni prima di Colombo.",
+				"La sua pesca del merluzzo, la più ricca del mondo per quattro secoli, crollò nel 1992 e 30.000 persone persero il lavoro in un giorno."
+			]
+		}
 	},
 	"ontario": {
 		"kind": "region",
@@ -250,11 +313,18 @@
 			"elevation": 693
 		},
 		"position": "south",
-		"hooks": [
-			"From an Iroquoian word, probably ontarí:io, \"great lake\" or \"beautiful water\".",
-			"Nearly two in five Canadians live here, and Toronto is the country's largest city by a wide margin.",
-			"Its border with the United States runs through four of the five Great Lakes, and Niagara Falls is on it."
-		]
+		"hooks": {
+			"en": [
+				"From an Iroquoian word, probably ontarí:io, \"great lake\" or \"beautiful water\".",
+				"Nearly two in five Canadians live here, and Toronto is the country's largest city by a wide margin.",
+				"Its border with the United States runs through four of the five Great Lakes, and Niagara Falls is on it."
+			],
+			"it": [
+				"Da una parola irochese, probabilmente ontarí:io, \"grande lago\" o \"bell’acqua\".",
+				"Qui vivono quasi due canadesi su cinque, e Toronto è di gran lunga la città più grande del paese.",
+				"Il suo confine con gli Stati Uniti attraversa quattro dei cinque Grandi Laghi e passa per le cascate del Niagara."
+			]
+		}
 	},
 	"prince-edward-island": {
 		"kind": "region",
@@ -267,11 +337,18 @@
 			"population": 42402
 		},
 		"position": "south-east",
-		"hooks": [
-			"Renamed in 1799 for Prince Edward, Duke of Kent, Queen Victoria's father, who was then commanding the garrison at Halifax.",
-			"The smallest province, and the most densely populated — the whole island is about 5,700 km².",
-			"Its soil is red from iron oxide, it grows a quarter of Canada's potatoes, and Anne of Green Gables is set here."
-		]
+		"hooks": {
+			"en": [
+				"Renamed in 1799 for Prince Edward, Duke of Kent, Queen Victoria's father, who was then commanding the garrison at Halifax.",
+				"The smallest province, and the most densely populated — the whole island is about 5,700 km².",
+				"Its soil is red from iron oxide, it grows a quarter of Canada's potatoes, and Anne of Green Gables is set here."
+			],
+			"it": [
+				"Ribattezzata nel 1799 in onore del principe Edoardo, duca di Kent, padre della regina Vittoria, che allora comandava la guarnigione di Halifax.",
+				"La provincia più piccola e la più densamente popolata: l’intera isola misura circa 5.700 km².",
+				"Il suo suolo è rosso per l’ossido di ferro, produce un quarto delle patate del Canada, e qui è ambientato Anna dai capelli rossi."
+			]
+		}
 	},
 	"new-brunswick": {
 		"kind": "region",
@@ -288,11 +365,18 @@
 			"population": 90635
 		},
 		"position": "south-east",
-		"hooks": [
-			"Named in 1784 for the House of Brunswick-Lüneburg, the German line that George III belonged to.",
-			"The only officially bilingual province: about a third of it is Acadian French-speaking.",
-			"The Bay of Fundy on its coast has the highest tides on earth, up to 16 m, which reverses the rapids at Saint John twice a day."
-		]
+		"hooks": {
+			"en": [
+				"Named in 1784 for the House of Brunswick-Lüneburg, the German line that George III belonged to.",
+				"The only officially bilingual province: about a third of it is Acadian French-speaking.",
+				"The Bay of Fundy on its coast has the highest tides on earth, up to 16 m, which reverses the rapids at Saint John twice a day."
+			],
+			"it": [
+				"Battezzato nel 1784 in onore della casa di Brunswick-Lüneburg, il ramo tedesco a cui apparteneva Giorgio III.",
+				"L’unica provincia ufficialmente bilingue: circa un terzo degli abitanti è acadiano di lingua francese.",
+				"La baia di Fundy, sulla sua costa, ha le maree più alte della Terra, fino a 16 m, che due volte al giorno invertono le rapide di Saint John."
+			]
+		}
 	},
 	"nova-scotia": {
 		"kind": "region",
@@ -312,10 +396,17 @@
 			"elevation": 535
 		},
 		"position": "south-east",
-		"hooks": [
-			"Latin for New Scotland, from a 1621 land grant — and it is the only province whose flag and coat of arms are in Latin.",
-			"Halifax harbour saw the largest man-made explosion before the atomic bomb, when a munitions ship blew up in 1917.",
-			"Almost an island, joined to the mainland by a strip 24 km wide, and no part of it is more than 67 km from the sea."
-		]
+		"hooks": {
+			"en": [
+				"Latin for New Scotland, from a 1621 land grant by James VI of Scotland.",
+				"Halifax harbour saw the largest man-made explosion before the atomic bomb, when a munitions ship blew up in 1917.",
+				"Almost an island, joined to the mainland by a strip 24 km wide, and no part of it is more than 67 km from the sea."
+			],
+			"it": [
+				"Nova Scotia è latino, \"Nuova Scozia\", e viene da una concessione di terre del 1621 di Giacomo VI di Scozia.",
+				"Il porto di Halifax vide la più grande esplosione provocata dall’uomo prima della bomba atomica, quando nel 1917 saltò in aria una nave carica di munizioni.",
+				"È quasi un’isola, unita alla terraferma da una striscia larga 24 km, e nessun suo punto dista più di 67 km dal mare."
+			]
+		}
 	}
 }

@@ -6,11 +6,18 @@
 		"region": "Hokkaido",
 		"coastal": false,
 		"position": "north-east",
-		"hooks": [
-			"\"Northern view\" — kita north, mi to see.",
-			"It produces most of Japan’s peppermint; at one point it supplied about 70% of the world’s.",
-			"It is one of the coldest cities in Japan, with a large temperature range between summer and winter."
-		]
+		"hooks": {
+			"en": [
+				"\"Northern view\" — kita north, mi to see.",
+				"It produces most of Japan’s peppermint; at one point it supplied about 70% of the world’s.",
+				"It is one of the coldest cities in Japan, with a large temperature range between summer and winter."
+			],
+			"it": [
+				"\"Vista settentrionale\": kita nord, mi vedere.",
+				"Produce la maggior parte della menta piperita giapponese; a un certo punto forniva circa il 70% di quella mondiale.",
+				"È una delle città più fredde del Giappone, con una forte escursione termica tra estate e inverno."
+			]
+		}
 	},
 	"asahikawa": {
 		"kind": "city",
@@ -19,11 +26,18 @@
 		"region": "Hokkaido",
 		"coastal": false,
 		"position": "north-east",
-		"hooks": [
-			"\"Morning sun river\" — asahi is the rising sun.",
-			"Japan’s lowest recorded temperature, −41 °C, was measured here in 1902.",
-			"Its zoo redesigned its enclosures around how animals actually move and became the most visited in Japan."
-		]
+		"hooks": {
+			"en": [
+				"\"Morning sun river\" — asahi is the rising sun.",
+				"Japan’s lowest recorded temperature, −41 °C, was measured here in 1902.",
+				"Its zoo redesigned its enclosures around how animals actually move and became the most visited in Japan."
+			],
+			"it": [
+				"\"Fiume del sole del mattino\": asahi è il sole che sorge.",
+				"La temperatura più bassa mai registrata in Giappone, −41 °C, fu misurata qui nel 1902.",
+				"Il suo zoo ha ridisegnato i recinti in base a come gli animali si muovono davvero ed è diventato il più visitato del Giappone."
+			]
+		}
 	},
 	"otaru": {
 		"kind": "city",
@@ -32,11 +46,18 @@
 		"region": "Hokkaido",
 		"coastal": true,
 		"position": "north-east",
-		"hooks": [
-			"From Ainu ota-or-nay, \"river running through the sandy beach\" — one of many Ainu names in Hokkaidō.",
-			"Its canal district of stone warehouses is what remains of a herring boom that made it rich.",
-			"It is known for glassware, originally made as floats for fishing nets."
-		]
+		"hooks": {
+			"en": [
+				"From Ainu ota-or-nay, \"river running through the sandy beach\" — one of many Ainu names in Hokkaidō.",
+				"Its canal district of stone warehouses is what remains of a herring boom that made it rich.",
+				"It is known for glassware, originally made as floats for fishing nets."
+			],
+			"it": [
+				"Dall’ainu ota-or-nay, \"fiume che scorre attraverso la spiaggia sabbiosa\": uno dei tanti nomi ainu dell’Hokkaido.",
+				"Il suo quartiere del canale, con i magazzini in pietra, è ciò che resta del periodo d’oro della pesca delle aringhe, che la rese ricca.",
+				"È nota per i suoi vetri, nati come galleggianti per le reti da pesca."
+			]
+		}
 	},
 	"sapporo": {
 		"kind": "city",
@@ -46,11 +67,18 @@
 		"region": "Hokkaido",
 		"coastal": true,
 		"position": "north-east",
-		"hooks": [
-			"From Ainu sat-poro-pet, \"dry great river\".",
-			"Laid out on a grid in 1869 with American advice, which is why it looks unlike any other Japanese city.",
-			"Its snow festival carves buildings from two million tonnes of snow, and it hosted the 1972 Winter Olympics."
-		]
+		"hooks": {
+			"en": [
+				"From Ainu sat-poro-pet, \"dry great river\".",
+				"Laid out on a grid in 1869 with American advice, which is why it looks unlike any other Japanese city.",
+				"Its snow festival carves buildings from two million tonnes of snow, and it hosted the 1972 Winter Olympics."
+			],
+			"it": [
+				"Dall’ainu sat-poro-pet, \"grande fiume secco\".",
+				"Tracciata a scacchiera nel 1869 su consiglio americano, ed è per questo che non somiglia a nessun’altra città giapponese.",
+				"Il suo festival della neve scolpisce edifici in due milioni di tonnellate di neve, e ha ospitato le Olimpiadi invernali del 1972."
+			]
+		}
 	},
 	"kushiro": {
 		"kind": "city",
@@ -59,11 +87,18 @@
 		"region": "Hokkaido",
 		"coastal": true,
 		"position": "north-east",
-		"hooks": [
-			"From an Ainu name, possibly kus-ru, \"a road to pass through\".",
-			"Its marsh is Japan’s largest wetland and the home of the red-crowned crane, saved from near-extinction there.",
-			"It is one of the foggiest places in Japan, with sea fog for much of the summer."
-		]
+		"hooks": {
+			"en": [
+				"From an Ainu name, possibly kus-ru, \"a road to pass through\".",
+				"Its marsh is Japan’s largest wetland and the home of the red-crowned crane, saved from near-extinction there.",
+				"It is one of the foggiest places in Japan, with sea fog for much of the summer."
+			],
+			"it": [
+				"Da un nome ainu, forse kus-ru, \"una strada per passare\".",
+				"La sua palude è la zona umida più grande del Giappone e la casa della gru della Manciuria, salvata lì quando era ormai quasi estinta.",
+				"È uno dei luoghi più nebbiosi del Giappone, con nebbia marina per buona parte dell’estate."
+			]
+		}
 	},
 	"obihiro": {
 		"kind": "city",
@@ -72,11 +107,18 @@
 		"region": "Hokkaido",
 		"coastal": false,
 		"position": "north-east",
-		"hooks": [
-			"From Ainu o-pere-perke-p, \"a river split at its mouth\".",
-			"Its ban'ei racing has draught horses pull heavy sledges up sand ramps — found nowhere else in the world.",
-			"The Tokachi plain around it is Japan’s largest farming region, growing beans, potatoes and sugar beet."
-		]
+		"hooks": {
+			"en": [
+				"From Ainu o-pere-perke-p, \"a river split at its mouth\".",
+				"Its ban'ei racing has draught horses pull heavy sledges up sand ramps — found nowhere else in the world.",
+				"The Tokachi plain around it is Japan’s largest farming region, growing beans, potatoes and sugar beet."
+			],
+			"it": [
+				"Dall’ainu o-pere-perke-p, \"un fiume che si divide alla foce\".",
+				"Nelle sue corse ban’ei i cavalli da tiro trascinano pesanti slitte su rampe di sabbia: non esistono in nessun’altra parte del mondo.",
+				"La piana di Tokachi intorno alla città è la più grande regione agricola del Giappone, e produce fagioli, patate e barbabietola da zucchero."
+			]
+		}
 	},
 	"tomakomai": {
 		"kind": "city",
@@ -85,11 +127,18 @@
 		"region": "Hokkaido",
 		"coastal": true,
 		"position": "north-east",
-		"hooks": [
-			"From Ainu to-mak-oma-i, \"a river running in behind a swamp\".",
-			"It has one of Japan’s largest paper mills and a major ice hockey tradition.",
-			"Its port is Hokkaidō’s busiest, handling most of the island’s freight."
-		]
+		"hooks": {
+			"en": [
+				"From Ainu to-mak-oma-i, \"a river running in behind a swamp\".",
+				"It has one of Japan’s largest paper mills and a major ice hockey tradition.",
+				"Its port is Hokkaidō’s busiest, handling most of the island’s freight."
+			],
+			"it": [
+				"Dall’ainu to-mak-oma-i, \"un fiume che scorre dentro, dietro una palude\".",
+				"Ha una delle più grandi cartiere del Giappone e una forte tradizione di hockey su ghiaccio.",
+				"Il suo porto è il più trafficato dell’Hokkaido, e movimenta la maggior parte delle merci dell’isola."
+			]
+		}
 	},
 	"muroran": {
 		"kind": "city",
@@ -98,11 +147,18 @@
 		"region": "Hokkaido",
 		"coastal": true,
 		"position": "north-east",
-		"hooks": [
-			"From Ainu mo-ruerani, \"a small slope down\".",
-			"A steel town on a hooked peninsula, with one of Japan’s largest mills.",
-			"Its Hakuchō bridge is the longest suspension bridge in eastern Japan."
-		]
+		"hooks": {
+			"en": [
+				"From Ainu mo-ruerani, \"a small slope down\".",
+				"A steel town on a hooked peninsula, with one of Japan’s largest mills.",
+				"Its Hakuchō bridge is the longest suspension bridge in eastern Japan."
+			],
+			"it": [
+				"Dall’ainu mo-ruerani, \"un piccolo pendio in discesa\".",
+				"Una città dell’acciaio su una penisola a uncino, con una delle più grandi acciaierie del Giappone.",
+				"Il suo ponte Hakuchō è il ponte sospeso più lungo del Giappone orientale."
+			]
+		}
 	},
 	"hakodate": {
 		"kind": "city",
@@ -111,11 +167,18 @@
 		"region": "Hokkaido",
 		"coastal": true,
 		"position": "north-east",
-		"hooks": [
-			"\"Box fort\" — hako box, date a fort, for a fortified residence built in 1454.",
-			"One of the first two ports opened to foreigners in 1854, which is why it has Russian and Western churches.",
-			"Its Goryōkaku is a star fort in Western style, the last stand of the shogunate’s forces in 1869."
-		]
+		"hooks": {
+			"en": [
+				"\"Box fort\" — hako box, date a fort, for a fortified residence built in 1454.",
+				"One of the first two ports opened to foreigners in 1854, which is why it has Russian and Western churches.",
+				"Its Goryōkaku is a star fort in Western style, the last stand of the shogunate’s forces in 1869."
+			],
+			"it": [
+				"\"Forte a scatola\": hako scatola, date forte, per una residenza fortificata costruita nel 1454.",
+				"Nel 1854 fu uno dei primi due porti aperti agli stranieri, ed è per questo che ha chiese russe e occidentali.",
+				"Il suo Goryōkaku è una fortezza a stella in stile occidentale, dove le forze dello shogunato opposero l’ultima resistenza nel 1869."
+			]
+		}
 	},
 	"aomori": {
 		"kind": "city",
@@ -123,11 +186,18 @@
 		"populationRank": 44,
 		"coastal": true,
 		"position": "north-east",
-		"hooks": [
-			"\"Blue forest\" — the dark wooded hill that sailors steered by when entering the bay.",
-			"The Sannai-Maruyama site here was a settled village 5,900 years ago, which upended the idea that the Jōmon were only wandering foragers.",
-			"It grows about half of all Japanese apples, and its Nebuta festival parades illuminated paper warriors the size of houses."
-		]
+		"hooks": {
+			"en": [
+				"\"Blue forest\" — the dark wooded hill that sailors steered by when entering the bay.",
+				"The Sannai-Maruyama site here was a settled village 5,900 years ago, which upended the idea that the Jōmon were only wandering foragers.",
+				"It grows about half of all Japanese apples, and its Nebuta festival parades illuminated paper warriors the size of houses."
+			],
+			"it": [
+				"\"Foresta blu\": la collina scura e boscosa su cui si orientavano i marinai per entrare nella baia.",
+				"Il sito di Sannai-Maruyama era un villaggio stabile già 5.900 anni fa, e ha ribaltato l’idea che i Jōmon fossero soltanto raccoglitori nomadi.",
+				"Produce circa metà delle mele giapponesi, e il suo festival Nebuta fa sfilare guerrieri di carta illuminati, grandi come case."
+			]
+		}
 	},
 	"hirosaki": {
 		"kind": "city",
@@ -136,11 +206,18 @@
 		"region": "Aomori",
 		"coastal": false,
 		"position": "north-east",
-		"hooks": [
-			"\"Wide cape\" — hiro wide, saki a cape.",
-			"Its castle grounds hold about 2,600 cherry trees, considered among the finest blossom in Japan.",
-			"It grows a large share of the apples that make Aomori the apple prefecture."
-		]
+		"hooks": {
+			"en": [
+				"\"Wide cape\" — hiro wide, saki a cape.",
+				"Its castle grounds hold about 2,600 cherry trees, considered among the finest blossom in Japan.",
+				"It grows a large share of the apples that make Aomori the apple prefecture."
+			],
+			"it": [
+				"\"Capo largo\": hiro largo, saki capo.",
+				"Il parco del castello ha circa 2.600 ciliegi, la cui fioritura è considerata tra le più belle del Giappone.",
+				"Coltiva buona parte delle mele che fanno di Aomori la prefettura delle mele."
+			]
+		}
 	},
 	"hachinohe": {
 		"kind": "city",
@@ -149,11 +226,18 @@
 		"region": "Aomori",
 		"coastal": true,
 		"position": "north-east",
-		"hooks": [
-			"\"Eighth door\" — the area was divided into numbered horse-breeding pastures, and this was the eighth.",
-			"Several nearby towns keep the same numbering: Sannohe is the third, Ichinohe the first.",
-			"Its Sansha Taisai festival parades enormous floats and is a UNESCO heritage item."
-		]
+		"hooks": {
+			"en": [
+				"\"Eighth door\" — the area was divided into numbered horse-breeding pastures, and this was the eighth.",
+				"Several nearby towns keep the same numbering: Sannohe is the third, Ichinohe the first.",
+				"Its Sansha Taisai festival parades enormous floats and is a UNESCO heritage item."
+			],
+			"it": [
+				"\"Ottava porta\": la zona era divisa in pascoli numerati per l’allevamento dei cavalli, e questo era l’ottavo.",
+				"Diverse città vicine conservano la stessa numerazione: Sannohe è la terza, Ichinohe la prima.",
+				"Il suo festival Sansha Taisai fa sfilare carri enormi ed è iscritto nel patrimonio UNESCO."
+			]
+		}
 	},
 	"morioka": {
 		"kind": "city",
@@ -162,11 +246,18 @@
 		"region": "Iwate",
 		"coastal": false,
 		"position": "north-east",
-		"hooks": [
-			"\"Abundant hill\" — mori abundance, oka hill.",
-			"Its wanko soba is served in small bowls refilled until the eater surrenders; the record is over 500.",
-			"Nambu ironware, its cast-iron kettles, has been made here since the 1600s."
-		]
+		"hooks": {
+			"en": [
+				"\"Abundant hill\" — mori abundance, oka hill.",
+				"Its wanko soba is served in small bowls refilled until the eater surrenders; the record is over 500.",
+				"Nambu ironware, its cast-iron kettles, has been made here since the 1600s."
+			],
+			"it": [
+				"\"Collina abbondante\": mori abbondanza, oka collina.",
+				"Il suo wanko soba viene servito in ciotoline riempite di continuo finché chi mangia non si arrende; il record supera le 500.",
+				"I bollitori in ghisa Nambu, il suo artigianato del ferro, si producono qui dal Seicento."
+			]
+		}
 	},
 	"akita": {
 		"kind": "city",
@@ -174,11 +265,18 @@
 		"populationRank": 42,
 		"coastal": true,
 		"position": "north-east",
-		"hooks": [
-			"\"Autumn field\", though the older written form suggests it may first have meant boggy or poor ground and been improved on paper.",
-			"The Akita dog comes from here — Hachikō, who waited nine years at Shibuya station, was one.",
-			"It has the highest rice yield per head in Japan and makes some of its most respected sake."
-		]
+		"hooks": {
+			"en": [
+				"\"Autumn field\", though the older written form suggests it may first have meant boggy or poor ground and been improved on paper.",
+				"The Akita dog comes from here — Hachikō, who waited nine years at Shibuya station, was one.",
+				"It has the highest rice yield per head in Japan and makes some of its most respected sake."
+			],
+			"it": [
+				"\"Campo d’autunno\", anche se la grafia più antica fa pensare che all’inizio indicasse forse un terreno paludoso o povero, nobilitato poi sulla carta.",
+				"Il cane Akita viene da qui: Hachikō, che aspettò nove anni alla stazione di Shibuya, era uno di loro.",
+				"Ha la resa di riso per abitante più alta del Giappone e produce alcuni dei sake più apprezzati del paese."
+			]
+		}
 	},
 	"sakata": {
 		"kind": "city",
@@ -187,11 +285,18 @@
 		"region": "Yamagata",
 		"coastal": true,
 		"position": "north-east",
-		"hooks": [
-			"\"Slope rice field\" — saka a slope, ta a paddy.",
-			"It was the northern terminus of the kitamaebune shipping route that carried rice to Osaka.",
-			"The Sankyo rice warehouses from 1893, shaded by a row of zelkova trees, are still in use."
-		]
+		"hooks": {
+			"en": [
+				"\"Slope rice field\" — saka a slope, ta a paddy.",
+				"It was a major port on the kitamaebune shipping route that carried rice to Osaka.",
+				"The Sankyo rice warehouses from 1893, shaded by a row of zelkova trees, are still in use."
+			],
+			"it": [
+				"\"Risaia in pendio\": saka pendio, ta risaia.",
+				"Era un porto importante della rotta marittima kitamaebune, che portava il riso a Osaka.",
+				"I magazzini del riso di Sankyo, del 1893, all’ombra di una fila di zelkove, sono ancora in uso."
+			]
+		}
 	},
 	"yamagata": {
 		"kind": "city",
@@ -199,11 +304,18 @@
 		"populationRank": 47,
 		"coastal": false,
 		"position": "north-east",
-		"hooks": [
-			"\"Mountain shape\", for the ring of peaks around its basin.",
-			"It grows about 70% of Japan's cherries, and its Yonezawa beef ranks with Kobe's.",
-			"The Dewa Sanzan here are three sacred mountains walked by yamabushi ascetics, and its Ginzan hot spring is the wooden-inn street everyone photographs in snow."
-		]
+		"hooks": {
+			"en": [
+				"\"Mountain shape\", for the ring of peaks around its basin.",
+				"It grows about 70% of Japan's cherries, and its Yonezawa beef ranks with Kobe's.",
+				"The Dewa Sanzan here are three sacred mountains walked by yamabushi ascetics, and its Ginzan hot spring is the wooden-inn street everyone photographs in snow."
+			],
+			"it": [
+				"\"Forma di montagna\", per la corona di vette intorno alla sua conca.",
+				"Produce circa il 70% delle ciliegie del Giappone, e il suo manzo di Yonezawa regge il confronto con quello di Kobe.",
+				"I Dewa Sanzan sono tre montagne sacre percorse dagli asceti yamabushi, e le terme di Ginzan sono la via di locande in legno che tutti fotografano sotto la neve."
+			]
+		}
 	},
 	"sendai": {
 		"kind": "city",
@@ -213,11 +325,18 @@
 		"region": "Miyagi",
 		"coastal": true,
 		"position": "north-east",
-		"hooks": [
-			"\"A thousand generations\" — though an older written form meant \"a thousand hermits\".",
-			"Date Masamune, the one-eyed warlord, built it in 1600 and it remains the largest city in northern Honshū.",
-			"Its Tanabata festival in August is the biggest in Japan, and its zelkova-lined avenues make it the city of trees."
-		]
+		"hooks": {
+			"en": [
+				"\"A thousand generations\" — though an older written form meant \"a thousand hermits\".",
+				"Date Masamune, the one-eyed warlord, built it in 1600 and it remains the largest city in northern Honshū.",
+				"Its Tanabata festival in August is the biggest in Japan, and its zelkova-lined avenues make it the city of trees."
+			],
+			"it": [
+				"\"Mille generazioni\": anche se una grafia più antica voleva dire \"mille eremiti\".",
+				"La fondò nel 1600 Date Masamune, il signore della guerra con un occhio solo, ed è ancora la città più grande dell’Honshū settentrionale.",
+				"Il suo festival di Tanabata, ad agosto, è il più grande del Giappone, e i viali alberati di zelkove le valgono il nome di città degli alberi."
+			]
+		}
 	},
 	"niigata": {
 		"kind": "city",
@@ -225,11 +344,18 @@
 		"populationRank": 21,
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"\"New lagoon\" — the harbour that formed where the Shinano river changed course.",
-			"Its Koshihikari rice is the standard by which Japanese rice is judged, and it has more sake breweries than any other prefecture.",
-			"The Shinano is Japan's longest river at 367 km, and the snow here reaches several metres in the mountains."
-		]
+		"hooks": {
+			"en": [
+				"\"New lagoon\" — the harbour that formed where the Shinano river changed course.",
+				"Its Koshihikari rice is the standard by which Japanese rice is judged, and it has more sake breweries than any other prefecture.",
+				"The Shinano is Japan's longest river at 367 km, and the snow here reaches several metres in the mountains."
+			],
+			"it": [
+				"\"Nuova laguna\": il porto che si formò dove il fiume Shinano cambiò corso.",
+				"Il suo riso Koshihikari è il metro con cui si giudica il riso giapponese, e ha più produttori di sake di qualsiasi altra prefettura.",
+				"Lo Shinano, con i suoi 367 km, è il fiume più lungo del Giappone, e in montagna qui la neve arriva a diversi metri."
+			]
+		}
 	},
 	"fukushima": {
 		"kind": "city",
@@ -237,11 +363,18 @@
 		"populationRank": 46,
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"\"Fortune island\", for a castle on a rise in the marsh that stood out like an island.",
-			"The third largest prefecture, and its Aizu region held out for the shogun in 1868 — the story of the teenage Byakkotai is still taught.",
-			"The 2011 nuclear accident displaced 160,000 people; most of the prefecture was never evacuated and its peaches are again a national brand."
-		]
+		"hooks": {
+			"en": [
+				"\"Fortune island\", for a castle on a rise in the marsh that stood out like an island.",
+				"The third largest prefecture, and its Aizu region held out for the shogun in 1868 — the story of the teenage Byakkotai is still taught.",
+				"The 2011 nuclear accident displaced 160,000 people; most of the prefecture was never evacuated and its peaches are again a national brand."
+			],
+			"it": [
+				"\"Isola della fortuna\", per un castello su un’altura nella palude che spiccava come un’isola.",
+				"La terza prefettura per estensione, e la sua regione di Aizu resistette fino all’ultimo per lo shogun nel 1868: la storia dei giovanissimi del Byakkotai si insegna ancora.",
+				"L’incidente nucleare del 2011 costrinse 160.000 persone a lasciare le loro case; la maggior parte della prefettura non fu mai evacuata, e le sue pesche sono tornate a essere un marchio nazionale."
+			]
+		}
 	},
 	"nagaoka": {
 		"kind": "city",
@@ -250,11 +383,18 @@
 		"region": "Niigata",
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"\"Long hill\" — naga long, oka hill.",
-			"Its firework festival on the Shinano river is one of Japan’s three greatest, begun to mourn the 1945 air raid.",
-			"Yamamoto Isoroku, who planned Pearl Harbor and opposed the war he was ordered to fight, was born here."
-		]
+		"hooks": {
+			"en": [
+				"\"Long hill\" — naga long, oka hill.",
+				"Its firework festival on the Shinano river is one of Japan’s three greatest, begun to mourn the 1945 air raid.",
+				"Yamamoto Isoroku, who planned Pearl Harbor and opposed the war he was ordered to fight, was born here."
+			],
+			"it": [
+				"\"Collina lunga\": naga lungo, oka collina.",
+				"Il suo festival dei fuochi d’artificio sul fiume Shinano è uno dei tre più grandi del Giappone, nato per commemorare il bombardamento aereo del 1945.",
+				"Qui nacque Yamamoto Isoroku, che pianificò Pearl Harbor e si era opposto alla guerra che gli fu ordinato di combattere."
+			]
+		}
 	},
 	"koriyama": {
 		"kind": "city",
@@ -263,11 +403,18 @@
 		"region": "Fukushima",
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"\"District mountain\" — kōri an old administrative district.",
-			"The Asaka canal, dug in 1882 to bring water over a watershed from Lake Inawashiro, made the dry plateau farmable.",
-			"It is a transport hub where several rail lines meet in central Fukushima."
-		]
+		"hooks": {
+			"en": [
+				"\"District mountain\" — kōri an old administrative district.",
+				"The Asaka canal, dug in 1882 to bring water over a watershed from Lake Inawashiro, made the dry plateau farmable.",
+				"It is a transport hub where several rail lines meet in central Fukushima."
+			],
+			"it": [
+				"\"Montagna del distretto\": kōri era un antico distretto amministrativo.",
+				"Il canale di Asaka, scavato nel 1882 per portare l’acqua del lago Inawashiro oltre uno spartiacque, rese coltivabile l’altopiano arido.",
+				"È un nodo di trasporti dove si incontrano diverse linee ferroviarie, nel centro di Fukushima."
+			]
+		}
 	},
 	"iwaki": {
 		"kind": "city",
@@ -276,11 +423,18 @@
 		"region": "Fukushima",
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"\"Rock city\" — iwa rock, ki a castle or citadel.",
-			"It has one of the largest city areas in Japan, formed by merging fourteen towns in 1966.",
-			"Its Spa Resort Hawaiians was built by a dying coal company in 1966 and retrained miners’ daughters as hula dancers."
-		]
+		"hooks": {
+			"en": [
+				"\"Rock city\" — iwa rock, ki a castle or citadel.",
+				"It has one of the largest city areas in Japan, formed by merging fourteen towns in 1966.",
+				"Its Spa Resort Hawaiians was built by a dying coal company in 1966 and retrained miners’ daughters as hula dancers."
+			],
+			"it": [
+				"\"Città di roccia\": iwa roccia, ki castello o cittadella.",
+				"Ha una delle superfici comunali più estese del Giappone, nata dalla fusione di quattordici comuni nel 1966.",
+				"Il suo Spa Resort Hawaiians fu costruito nel 1966 da una società carbonifera ormai al tramonto, che riconvertì le figlie dei minatori in ballerine di hula."
+			]
+		}
 	},
 	"toyama": {
 		"kind": "city",
@@ -288,11 +442,18 @@
 		"populationRank": 40,
 		"coastal": true,
 		"position": "centre",
-		"hooks": [
-			"\"Rich mountain\" — and the mountains are the point: the Tateyama range rises 3,000 m almost straight out of the bay.",
-			"Its snow corridor at Murodō is cut through drifts up to 20 m high every spring.",
-			"Toyama's travelling medicine sellers went door to door across Japan from the 1690s, leaving a box and charging only for what was used."
-		]
+		"hooks": {
+			"en": [
+				"\"Rich mountain\" — and the mountains are the point: the Tateyama range rises 3,000 m almost straight out of the bay.",
+				"Its snow corridor at Murodō is cut through drifts up to 20 m high every spring.",
+				"Toyama's travelling medicine sellers went door to door across Japan from the 1690s, leaving a box and charging only for what was used."
+			],
+			"it": [
+				"\"Montagna ricca\", e sono proprio le montagne il punto: la catena del Tateyama si innalza per 3.000 m quasi a picco sulla baia.",
+				"Il suo corridoio di neve a Murodō viene scavato ogni primavera tra cumuli alti fino a 20 m.",
+				"Dagli anni novanta del Seicento i venditori ambulanti di medicine di Toyama giravano il Giappone porta a porta, lasciando una scatola e facendo pagare solo ciò che era stato usato."
+			]
+		}
 	},
 	"takaoka": {
 		"kind": "city",
@@ -301,11 +462,18 @@
 		"region": "Toyama",
 		"coastal": true,
 		"position": "centre",
-		"hooks": [
-			"\"High hill\" — the name comes from a phrase in the Chinese Book of Songs about a phoenix.",
-			"It has cast bronze for 400 years and made most of Japan’s temple bells and Buddha statues.",
-			"Its Great Buddha is one of the three largest in Japan."
-		]
+		"hooks": {
+			"en": [
+				"\"High hill\" — the name comes from a phrase in the Chinese Book of Songs about a phoenix.",
+				"It has cast bronze for 400 years and made most of Japan’s temple bells and Buddha statues.",
+				"Its Great Buddha is one of the three largest in Japan."
+			],
+			"it": [
+				"\"Collina alta\": il nome viene da un’espressione del Libro delle Odi cinese su una fenice.",
+				"Fonde il bronzo da 400 anni e ha prodotto la maggior parte delle campane dei templi e delle statue del Buddha del Giappone.",
+				"Il suo Grande Buddha è uno dei tre più grandi del Giappone."
+			]
+		}
 	},
 	"nagano": {
 		"kind": "city",
@@ -313,11 +481,18 @@
 		"populationRank": 19,
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"\"Long field\", for the valley floor its capital sits on.",
-			"Zenkōji temple here is older than the split of Japanese Buddhism into sects, so every sect maintains it jointly.",
-			"It held the 1998 Winter Olympics, and its snow monkeys at Jigokudani bathe in hot springs."
-		]
+		"hooks": {
+			"en": [
+				"\"Long field\", for the valley floor its capital sits on.",
+				"Zenkōji temple here is older than the split of Japanese Buddhism into sects, so it belongs to none and is run jointly by two schools, Tendai and Jōdo.",
+				"It held the 1998 Winter Olympics, and its snow monkeys at Jigokudani bathe in hot springs."
+			],
+			"it": [
+				"\"Campo lungo\", per il fondovalle su cui sorge il capoluogo.",
+				"Il tempio Zenkōji è più antico della divisione del buddhismo giapponese in sette, e così non appartiene a nessuna ed è gestito insieme da due scuole, Tendai e Jōdo.",
+				"Ha ospitato le Olimpiadi invernali del 1998, e le sue scimmie delle nevi di Jigokudani fanno il bagno nelle sorgenti termali."
+			]
+		}
 	},
 	"kanazawa": {
 		"kind": "city",
@@ -326,11 +501,18 @@
 		"region": "Ishikawa",
 		"coastal": true,
 		"position": "centre",
-		"hooks": [
-			"\"Golden marsh\" — from a legend of a peasant who washed gold dust in a spring.",
-			"Its Kenrokuen is one of the three great gardens of Japan.",
-			"It produces about 99% of Japan’s gold leaf, and was rich enough on rice that it was spared bombing."
-		]
+		"hooks": {
+			"en": [
+				"\"Golden marsh\" — from a legend of a peasant who washed gold dust in a spring.",
+				"Its Kenrokuen is one of the three great gardens of Japan.",
+				"It produces about 99% of Japan’s gold leaf, and was spared bombing in the war."
+			],
+			"it": [
+				"\"Palude d’oro\": da una leggenda su un contadino che lavava polvere d’oro in una sorgente.",
+				"Il suo Kenrokuen è uno dei tre grandi giardini del Giappone.",
+				"Produce circa il 99% della foglia d’oro giapponese, e in guerra fu risparmiata dai bombardamenti."
+			]
+		}
 	},
 	"utsunomiya": {
 		"kind": "city",
@@ -339,11 +521,18 @@
 		"region": "Tochigi",
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"\"Shrine of the second palace\" or \"the foremost shrine\" — the reading is disputed.",
-			"It is Japan’s gyoza capital, with the highest household spending on dumplings in the country.",
-			"Its Ōya stone, quarried nearby, was used by Frank Lloyd Wright in the Imperial Hotel in Tokyo."
-		]
+		"hooks": {
+			"en": [
+				"\"Shrine of the second palace\" or \"the foremost shrine\" — the reading is disputed.",
+				"It is Japan’s gyoza capital, with the highest household spending on dumplings in the country.",
+				"Its Ōya stone, quarried nearby, was used by Frank Lloyd Wright in the Imperial Hotel in Tokyo."
+			],
+			"it": [
+				"\"Santuario del secondo palazzo\" o \"il santuario più importante\": la lettura è discussa.",
+				"È la capitale giapponese dei gyoza, con la spesa delle famiglie per i ravioli più alta del paese.",
+				"La sua pietra di Ōya, cavata nei dintorni, fu usata da Frank Lloyd Wright per l’Imperial Hotel di Tokyo."
+			]
+		}
 	},
 	"maebashi": {
 		"kind": "city",
@@ -352,11 +541,18 @@
 		"region": "Gunma",
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"\"Front bridge\" — mae front, hashi a bridge.",
-			"It is the capital of Gunma and was a silk-reeling centre in the Meiji period.",
-			"Its winds off the Akagi mountain are strong enough to be a local byword."
-		]
+		"hooks": {
+			"en": [
+				"\"Front bridge\" — mae front, hashi a bridge.",
+				"It is the capital of Gunma and was a silk-reeling centre in the Meiji period.",
+				"Its winds off the Akagi mountain are strong enough to be a local byword."
+			],
+			"it": [
+				"\"Ponte anteriore\": mae davanti, hashi ponte.",
+				"È il capoluogo di Gunma e nel periodo Meiji fu un centro della trattura della seta.",
+				"I venti che vi scendono dal monte Akagi sono così forti da essere proverbiali."
+			]
+		}
 	},
 	"mito": {
 		"kind": "city",
@@ -365,11 +561,18 @@
 		"region": "Ibaraki",
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"\"Water gate\" — mi water, to a gate or door.",
-			"It was a senior Tokugawa branch house, and its scholars developed the ideology that eventually toppled the shogunate.",
-			"Its Kairakuen is another of the three great gardens of Japan, planted with 3,000 plum trees."
-		]
+		"hooks": {
+			"en": [
+				"\"Water gate\" — mi water, to a gate or door.",
+				"It was a senior Tokugawa branch house, and its scholars developed the ideology that eventually toppled the shogunate.",
+				"Its Kairakuen is another of the three great gardens of Japan, planted with 3,000 plum trees."
+			],
+			"it": [
+				"\"Porta dell’acqua\": mi acqua, to porta o uscio.",
+				"Era sede di uno dei rami maggiori dei Tokugawa, e i suoi studiosi elaborarono l’ideologia che alla fine rovesciò lo shogunato.",
+				"Il suo Kairakuen è un altro dei tre grandi giardini del Giappone, con 3.000 pruni."
+			]
+		}
 	},
 	"matsumoto": {
 		"kind": "city",
@@ -378,11 +581,18 @@
 		"region": "Nagano",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"\"Origin of the pines\" — matsu pine, moto origin.",
-			"Its castle is one of twelve with an original keep and one of five national treasures; it is called the crow castle for its black walls.",
-			"The Suzuki method of teaching the violin was developed here."
-		]
+		"hooks": {
+			"en": [
+				"\"Origin of the pines\" — matsu pine, moto origin.",
+				"Its castle is one of twelve with an original keep and one of five national treasures; it is called the crow castle for its black walls.",
+				"The Suzuki method of teaching the violin was developed here."
+			],
+			"it": [
+				"\"Origine dei pini\": matsu pino, moto origine.",
+				"Il suo castello è uno dei dodici con il mastio originale e uno dei cinque tesori nazionali; per le mura nere lo chiamano il castello del corvo.",
+				"Qui è nato il metodo Suzuki per l’insegnamento del violino."
+			]
+		}
 	},
 	"fukui": {
 		"kind": "city",
@@ -390,11 +600,18 @@
 		"populationRank": 48,
 		"coastal": true,
 		"position": "centre",
-		"hooks": [
-			"\"Fortune well\", renamed from an earlier name meaning \"north village\" because the old one was thought unlucky.",
-			"More dinosaur fossils have been found here than anywhere else in Japan, and several species carry the name Fukui.",
-			"It repeatedly ranks first in Japan for happiness and for children's school results, and makes over 90% of the country's spectacle frames."
-		]
+		"hooks": {
+			"en": [
+				"\"Fortune well\", renamed from an earlier name meaning \"north village\" because the old one was thought unlucky.",
+				"More dinosaur fossils have been found here than anywhere else in Japan, and several species carry the name Fukui.",
+				"It repeatedly ranks first in Japan for happiness and for children's school results, and makes over 90% of the country's spectacle frames."
+			],
+			"it": [
+				"\"Pozzo della fortuna\", un nome che ne sostituì uno più antico, \"villaggio del nord\", ritenuto di cattivo auspicio.",
+				"Qui si sono trovati più fossili di dinosauro che in qualsiasi altra parte del Giappone, e diverse specie portano il nome di Fukui.",
+				"Si classifica spesso al primo posto in Giappone per felicità e per i risultati scolastici dei bambini, e produce oltre il 90% delle montature per occhiali del paese."
+			]
+		}
 	},
 	"kawagoe": {
 		"kind": "city",
@@ -403,11 +620,18 @@
 		"region": "Saitama",
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"\"River crossing\" — kawa river, goe to cross.",
-			"It kept its Edo-period kurazukuri warehouse streets and is called Little Edo for them.",
-			"Its Toki no Kane bell tower has marked the hours since the 1600s and is rung four times a day."
-		]
+		"hooks": {
+			"en": [
+				"\"River crossing\" — kawa river, goe to cross.",
+				"It kept its Edo-period kurazukuri warehouse streets and is called Little Edo for them.",
+				"Its Toki no Kane bell tower has marked the hours since the 1600s and is rung four times a day."
+			],
+			"it": [
+				"\"Guado del fiume\": kawa fiume, goe attraversare.",
+				"Ha conservato le sue vie di magazzini kurazukuri dell’epoca Edo, e per questo la chiamano la Piccola Edo.",
+				"La sua torre campanaria Toki no Kane segna le ore dal Seicento e suona quattro volte al giorno."
+			]
+		}
 	},
 	"tokyo": {
 		"kind": "city",
@@ -417,11 +641,18 @@
 		"capitalOf": "country",
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"\"Eastern capital\" — renamed from Edo in 1868 when the emperor moved here from Kyōto, the old capital in the west.",
-			"Greater Tokyo is the largest metropolitan area in the world, about 37 million people.",
-			"Edo was already the world's largest city by 1720, with over a million people, and its fire brigades were organised by neighbourhood."
-		]
+		"hooks": {
+			"en": [
+				"\"Eastern capital\" — renamed from Edo in 1868 when the emperor moved here from Kyōto, the old capital in the west.",
+				"Greater Tokyo is the largest metropolitan area in the world, about 37 million people.",
+				"Edo was already the world's largest city by 1720, with over a million people, and its fire brigades were organised by neighbourhood."
+			],
+			"it": [
+				"\"Capitale dell’est\": così fu ribattezzata Edo nel 1868, quando l’imperatore vi si trasferì da Kyoto, l’antica capitale a ovest.",
+				"La Grande Tokyo è l’area metropolitana più grande del mondo, con circa 37 milioni di abitanti.",
+				"Già nel 1720 Edo era la città più grande del mondo, con oltre un milione di abitanti, e i suoi pompieri erano organizzati per quartiere."
+			]
+		}
 	},
 	"hachioji": {
 		"kind": "city",
@@ -430,11 +661,18 @@
 		"region": "Tokyo",
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"\"Eight princes\" — named for a shrine to the eight children of a Shinto deity.",
-			"It was the silk road of Japan: raw silk from the mountains passed through here to Yokohama for export.",
-			"It has more universities than anywhere in Tokyo outside the centre."
-		]
+		"hooks": {
+			"en": [
+				"\"Eight princes\" — named for a shrine to the eight children of a Shinto deity.",
+				"It was the silk road of Japan: raw silk from the mountains passed through here to Yokohama for export.",
+				"It has more universities than anywhere in Tokyo outside the centre."
+			],
+			"it": [
+				"\"Otto principi\": prende il nome da un santuario dedicato agli otto figli di una divinità shintoista.",
+				"Era la via della seta del Giappone: la seta grezza delle montagne passava di qui verso Yokohama per l’esportazione.",
+				"Ha più università di qualsiasi altro luogo di Tokyo fuori dal centro."
+			]
+		}
 	},
 	"kofu": {
 		"kind": "city",
@@ -443,11 +681,18 @@
 		"region": "Yamanashi",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"\"Armour capital\" — from the fortress of the Takeda clan.",
-			"Takeda Shingen, the warlord who fought Oda Nobunaga, ruled from here and is the city’s emblem.",
-			"It is the centre of Japanese winemaking, using the koshu grape, and cuts most of the country’s jewellery."
-		]
+		"hooks": {
+			"en": [
+				"\"Armour capital\" — from the fortress of the Takeda clan.",
+				"Takeda Shingen, the warlord who fought Oda Nobunaga, ruled from here and is the city’s emblem.",
+				"It is the centre of Japanese winemaking, using the koshu grape, and cuts most of the country’s jewellery."
+			],
+			"it": [
+				"\"Capitale dell’armatura\": dalla fortezza del clan Takeda.",
+				"Takeda Shingen, il signore della guerra che combatté Oda Nobunaga, governava da qui ed è l’emblema della città.",
+				"È il centro del vino giapponese, fatto con l’uva koshu, e vi si taglia la maggior parte dei gioielli del paese."
+			]
+		}
 	},
 	"kawasaki": {
 		"kind": "city",
@@ -456,11 +701,18 @@
 		"region": "Kanagawa",
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"\"River cape\" — kawa river, saki a cape.",
-			"A post town on the Tōkaidō road that became one of Japan’s densest industrial belts.",
-			"Its Kanamara festival, with a large pink portable shrine, began as a prayer for protection against disease."
-		]
+		"hooks": {
+			"en": [
+				"\"River cape\" — kawa river, saki a cape.",
+				"A post town on the Tōkaidō road that became one of Japan’s densest industrial belts.",
+				"Its Kanamara festival, with a large pink portable shrine, began as a prayer for protection against disease."
+			],
+			"it": [
+				"\"Capo del fiume\": kawa fiume, saki capo.",
+				"Una stazione di posta sulla via del Tōkaidō diventata una delle fasce industriali più dense del Giappone.",
+				"Il suo festival Kanamara, con un grande santuario portatile rosa, nacque come preghiera per proteggersi dalle malattie."
+			]
+		}
 	},
 	"tottori": {
 		"kind": "city",
@@ -468,11 +720,18 @@
 		"populationRank": 63,
 		"coastal": true,
 		"position": "centre",
-		"hooks": [
-			"\"Bird taking\" — its people once caught waterfowl for the imperial court and paid their tax in birds.",
-			"The least populated prefecture, with about 540,000 people, and the only one with no McDonald's for a time, which it advertised.",
-			"Its sand dunes run 16 km along the coast and are the largest in Japan, with camels for the tourists."
-		]
+		"hooks": {
+			"en": [
+				"\"Bird taking\" — its people once caught waterfowl for the imperial court and paid their tax in birds.",
+				"The least populated prefecture, with about 540,000 people, and the last to get a Starbucks, in 2015 — it joked that it had the sand dunes instead.",
+				"Its sand dunes run 16 km along the coast and are the largest in Japan, with camels for the tourists."
+			],
+			"it": [
+				"\"Cattura di uccelli\": un tempo i suoi abitanti catturavano uccelli acquatici per la corte imperiale e pagavano le tasse in uccelli.",
+				"La prefettura meno popolosa, con circa 540.000 abitanti, e l’ultima ad avere uno Starbucks, nel 2015: scherzava di avere al suo posto le dune di sabbia.",
+				"Le sue dune di sabbia corrono per 16 km lungo la costa e sono le più grandi del Giappone, con tanto di cammelli per i turisti."
+			]
+		}
 	},
 	"matsue": {
 		"kind": "city",
@@ -481,11 +740,18 @@
 		"region": "Shimane",
 		"coastal": true,
 		"position": "west",
-		"hooks": [
-			"\"Pine inlet\" — matsu pine, e an inlet.",
-			"Its castle is one of the twelve with an original keep and a national treasure.",
-			"Lafcadio Hearn lived here and wrote the books that introduced Japan to Western readers in the 1890s."
-		]
+		"hooks": {
+			"en": [
+				"\"Pine inlet\" — matsu pine, e an inlet.",
+				"Its castle is one of the twelve with an original keep and a national treasure.",
+				"Lafcadio Hearn lived here and wrote the books that introduced Japan to Western readers in the 1890s."
+			],
+			"it": [
+				"\"Insenatura dei pini\": matsu pino, e insenatura.",
+				"Il suo castello è uno dei dodici con il mastio originale ed è tesoro nazionale.",
+				"Qui visse Lafcadio Hearn, che negli anni novanta dell’Ottocento scrisse i libri che fecero conoscere il Giappone ai lettori occidentali."
+			]
+		}
 	},
 	"yokohama": {
 		"kind": "city",
@@ -494,11 +760,18 @@
 		"region": "Kanagawa",
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"\"Horizontal beach\" — yoko sideways, hama a beach.",
-			"A fishing village until 1859, when it became the first port opened to foreigners; it is now Japan’s second city.",
-			"Its Chinatown is the largest in Japan, and Japan’s first railway, daily newspaper and gas lamps all began here."
-		]
+		"hooks": {
+			"en": [
+				"\"Horizontal beach\" — yoko sideways, hama a beach.",
+				"A fishing village until 1859, when it was opened to foreign trade; it is now Japan’s second city.",
+				"Its Chinatown is the largest in Japan, and Japan’s first railway, daily newspaper and gas lamps all began here."
+			],
+			"it": [
+				"\"Spiaggia orizzontale\": yoko di traverso, hama spiaggia.",
+				"Villaggio di pescatori fino al 1859, quando fu aperta al commercio con gli stranieri; oggi è la seconda città del Giappone.",
+				"La sua Chinatown è la più grande del Giappone, e qui sono nati la prima ferrovia, il primo quotidiano e i primi lampioni a gas del paese."
+			]
+		}
 	},
 	"gifu": {
 		"kind": "city",
@@ -506,11 +779,18 @@
 		"populationRank": 31,
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"Invented in 1567 by Oda Nobunaga, who took Qi (gi) from the Chinese mountain where the Zhou dynasty began and fu from Confucius's birthplace — a name announcing he meant to rule the country.",
-			"Its Shirakawa-gō farmhouses have steep thatched roofs built to shed metres of snow, and are a UNESCO site.",
-			"Cormorant fishing on the Nagara river here has been practised by the same families for 1,300 years."
-		]
+		"hooks": {
+			"en": [
+				"Invented in 1567 by Oda Nobunaga, who took Qi (gi) from the Chinese mountain where the Zhou dynasty began and fu from Confucius's birthplace — a name announcing he meant to rule the country.",
+				"Its Shirakawa-gō farmhouses have steep thatched roofs built to shed metres of snow, and are a UNESCO site.",
+				"Cormorant fishing on the Nagara river here has been practised by the same families for 1,300 years."
+			],
+			"it": [
+				"Nome inventato nel 1567 da Oda Nobunaga, che prese Qi (gi) dal monte cinese dove ebbe inizio la dinastia Zhou e fu dal luogo natale di Confucio: un nome che annunciava la sua intenzione di governare il paese.",
+				"Le sue case coloniche di Shirakawa-gō hanno ripidi tetti di paglia costruiti per far scivolare via metri di neve, e sono patrimonio UNESCO.",
+				"Qui la pesca con i cormorani sul fiume Nagara è praticata dalle stesse famiglie da 1.300 anni."
+			]
+		}
 	},
 	"nagoya": {
 		"kind": "city",
@@ -520,11 +800,18 @@
 		"region": "Aichi",
 		"coastal": true,
 		"position": "centre",
-		"hooks": [
-			"Possibly from nagoyaka, \"peaceful\", or from an older place name.",
-			"Toyota, Brother and Noritake all come from this region, and it is Japan’s manufacturing heart.",
-			"Its castle’s golden shachihoko, dolphin-like roof ornaments, are the city’s emblem."
-		]
+		"hooks": {
+			"en": [
+				"Possibly from nagoyaka, \"peaceful\", or from an older place name.",
+				"Toyota, Brother and Noritake all come from this region, and it is Japan’s manufacturing heart.",
+				"Its castle’s golden shachihoko, dolphin-like roof ornaments, are the city’s emblem."
+			],
+			"it": [
+				"Forse da nagoyaka, \"pacifico\", o da un toponimo più antico.",
+				"Toyota, Brother e Noritake vengono tutte da questa regione, che è il cuore manifatturiero del Giappone.",
+				"Gli shachihoko dorati del suo castello, ornamenti del tetto simili a delfini, sono l’emblema della città."
+			]
+		}
 	},
 	"kyoto": {
 		"kind": "city",
@@ -533,11 +820,18 @@
 		"population1950": 1002000,
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"\"Capital city\" — simply that, because it was, from 794 to 1868, for over a thousand years.",
-			"It was deliberately left off the atomic bomb target list for its cultural value, which is why its 1,600 temples survive.",
-			"Its Kiyomizu temple's stage is built without a single nail, and Nishijin has woven brocade in the same district since the 1400s."
-		]
+		"hooks": {
+			"en": [
+				"\"Capital city\" — simply that, because it was, from 794 to 1868, for over a thousand years.",
+				"It was deliberately left off the atomic bomb target list for its cultural value, which is why its 1,600 temples survive.",
+				"Its Kiyomizu temple's stage is built without a single nail, and Nishijin has woven brocade in the same district since the 1400s."
+			],
+			"it": [
+				"\"Città capitale\": semplicemente questo, perché lo fu, dal 794 al 1868, per oltre mille anni.",
+				"Fu lasciata fuori di proposito dalla lista degli obiettivi della bomba atomica per il suo valore culturale, ed è per questo che i suoi 1.600 templi sono sopravvissuti.",
+				"Il palco del tempio di Kiyomizu è costruito senza un solo chiodo, e dal Quattrocento a Nishijin si tessono broccati sempre nello stesso quartiere."
+			]
+		}
 	},
 	"otsu": {
 		"kind": "city",
@@ -546,11 +840,18 @@
 		"region": "Shiga",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"\"Big port\" — ō great, tsu a port, on Lake Biwa.",
-			"It was briefly the imperial capital in the 660s.",
-			"The Ōtsu incident of 1891, when a policeman attacked the visiting Russian crown prince, nearly caused a diplomatic catastrophe."
-		]
+		"hooks": {
+			"en": [
+				"\"Big port\" — ō great, tsu a port, on Lake Biwa.",
+				"It was briefly the imperial capital in the 660s.",
+				"The Ōtsu incident of 1891, when a policeman attacked the visiting Russian crown prince, nearly caused a diplomatic catastrophe."
+			],
+			"it": [
+				"\"Grande porto\": ō grande, tsu porto, sul lago Biwa.",
+				"Fu per breve tempo capitale imperiale, negli anni sessanta del VII secolo.",
+				"L’incidente di Ōtsu del 1891, quando un poliziotto aggredì il principe ereditario russo in visita, per poco non provocò una catastrofe diplomatica."
+			]
+		}
 	},
 	"shizuoka": {
 		"kind": "city",
@@ -558,11 +859,18 @@
 		"populationRank": 17,
 		"coastal": true,
 		"position": "centre",
-		"hooks": [
-			"\"Quiet hill\", a name chosen in 1869 to replace the old Sunpu.",
-			"It grows about 40% of Japan's tea, on slopes with Fuji behind them.",
-			"Mount Fuji's southern half is here, at 3,776 m, and the prefecture also makes most of Japan's plastic models and musical instruments."
-		]
+		"hooks": {
+			"en": [
+				"\"Quiet hill\", a name chosen in 1869 to replace the old Sunpu.",
+				"It grows about 40% of Japan's tea, on slopes with Fuji behind them.",
+				"Mount Fuji's southern half is here, at 3,776 m, and the prefecture also makes most of Japan's plastic models and musical instruments."
+			],
+			"it": [
+				"\"Collina tranquilla\", un nome scelto nel 1869 al posto dell’antico Sunpu.",
+				"Produce circa il 40% del tè giapponese, su pendii con il Fuji alle spalle.",
+				"Qui c’è la metà meridionale del monte Fuji, alto 3.776 m, e la prefettura produce anche la maggior parte dei modellini in plastica e degli strumenti musicali del Giappone."
+			]
+		}
 	},
 	"hamamatsu": {
 		"kind": "city",
@@ -571,11 +879,18 @@
 		"region": "Shizuoka",
 		"coastal": true,
 		"position": "centre",
-		"hooks": [
-			"\"Beach pine\" — hama beach, matsu pine.",
-			"Yamaha, Kawai and Roland were all founded here, which makes it the musical instrument capital of the world.",
-			"Honda also began in the city, and its unagi eel from Lake Hamana is a national brand."
-		]
+		"hooks": {
+			"en": [
+				"\"Beach pine\" — hama beach, matsu pine.",
+				"Yamaha and Kawai were founded here and Roland is based here, which makes it the musical instrument capital of the world.",
+				"Honda also began in the city, and its unagi eel from Lake Hamana is a national brand."
+			],
+			"it": [
+				"\"Pino della spiaggia\": hama spiaggia, matsu pino.",
+				"Yamaha e Kawai sono state fondate qui, e qui ha sede anche Roland: questo ne fa la capitale mondiale degli strumenti musicali.",
+				"Anche la Honda è nata in questa città, e l’anguilla unagi del lago Hamana è un marchio nazionale."
+			]
+		}
 	},
 	"tsu": {
 		"kind": "city",
@@ -584,11 +899,18 @@
 		"region": "Mie",
 		"coastal": true,
 		"position": "centre",
-		"hooks": [
-			"Japanese for \"port\" — and with one syllable and two letters in romaji, it is the shortest city name in the world.",
-			"It is the capital of Mie prefecture.",
-			"Its Tsu castle was built by a lord who also designed several others, and the town grew as a post station."
-		]
+		"hooks": {
+			"en": [
+				"Japanese for \"port\" — written with a single kana, つ, it is often called the shortest city name in the world.",
+				"It is the capital of Mie prefecture.",
+				"Its Tsu castle was built by a lord who also designed several others, and the town grew as a post station."
+			],
+			"it": [
+				"In giapponese vuol dire \"porto\": si scrive con un solo kana, つ, e si dice spesso che sia il nome di città più corto del mondo.",
+				"È il capoluogo della prefettura di Mie.",
+				"Il castello di Tsu fu costruito da un signore che ne progettò anche diversi altri, e la città crebbe come stazione di posta."
+			]
+		}
 	},
 	"osaka": {
 		"kind": "city",
@@ -598,11 +920,18 @@
 		"region": "Osaka",
 		"coastal": true,
 		"position": "centre",
-		"hooks": [
-			"\"Great slope\", for the incline up to the old Ishiyama temple; the second character was changed in the 1800s because the old one could be read as \"samurai rebellion\".",
-			"It was the merchant capital of Japan, and the world's first futures exchange traded rice here from 1697.",
-			"Its people greet each other by asking whether business is good, and the city is Japan's kitchen — kuidaore means eating yourself bankrupt."
-		]
+		"hooks": {
+			"en": [
+				"\"Great slope\", for the incline up to the old Ishiyama temple; the second character was changed in the 1800s because the old one could be read as \"samurai rebellion\".",
+				"It was the merchant capital of Japan, and the world's first futures exchange traded rice here from 1697.",
+				"Its people greet each other by asking whether business is good, and the city is Japan's kitchen — kuidaore means eating yourself bankrupt."
+			],
+			"it": [
+				"\"Grande pendio\", per la salita verso l’antico tempio di Ishiyama; il secondo carattere fu cambiato nell’Ottocento perché quello vecchio si poteva leggere \"ribellione dei samurai\".",
+				"Era la capitale mercantile del Giappone, e dal 1697 vi si scambiava riso nel primo mercato a termine del mondo.",
+				"I suoi abitanti si salutano chiedendosi se gli affari vanno bene, e la città è la cucina del Giappone: kuidaore vuol dire mangiare fino alla bancarotta."
+			]
+		}
 	},
 	"kobe": {
 		"kind": "city",
@@ -611,11 +940,18 @@
 		"region": "Hyogo",
 		"coastal": true,
 		"position": "centre",
-		"hooks": [
-			"\"Shrine door\" — kanbe were households assigned to support a shrine, here the Ikuta shrine.",
-			"Kobe beef is from cattle raised in Hyōgo prefecture to a strict standard.",
-			"The 1995 earthquake killed over 6,400 people and led to a rebuilding that made the port safer than before."
-		]
+		"hooks": {
+			"en": [
+				"\"Shrine door\" — kanbe were households assigned to support a shrine, here the Ikuta shrine.",
+				"Kobe beef is from cattle raised in Hyōgo prefecture to a strict standard.",
+				"The 1995 earthquake killed over 6,400 people and led to a rebuilding that made the port safer than before."
+			],
+			"it": [
+				"\"Porta del santuario\": i kanbe erano famiglie incaricate di mantenere un santuario, qui quello di Ikuta.",
+				"Il manzo di Kobe viene da bovini allevati nella prefettura di Hyōgo secondo regole rigorose.",
+				"Il terremoto del 1995 fece oltre 6.400 vittime, e la ricostruzione rese il porto più sicuro di prima."
+			]
+		}
 	},
 	"okayama": {
 		"kind": "city",
@@ -623,11 +959,18 @@
 		"populationRank": 15,
 		"coastal": true,
 		"position": "centre",
-		"hooks": [
-			"\"Hill mountain\", after the rise its castle was built on.",
-			"Kōrakuen here is the third of the three great gardens of Japan.",
-			"The Momotarō peach-boy story is claimed by the prefecture, and it does grow the white peaches and muscat grapes to back the claim."
-		]
+		"hooks": {
+			"en": [
+				"\"Hill mountain\", after the rise its castle was built on.",
+				"Kōrakuen here is the third of the three great gardens of Japan.",
+				"The Momotarō peach-boy story is claimed by the prefecture, and it does grow the white peaches and muscat grapes to back the claim."
+			],
+			"it": [
+				"\"Collina-montagna\", per l’altura su cui fu costruito il castello.",
+				"Il Kōrakuen è il terzo dei tre grandi giardini del Giappone.",
+				"La prefettura rivendica la fiaba di Momotarō, il bambino nato da una pesca, e coltiva davvero le pesche bianche e l’uva moscato che le danno ragione."
+			]
+		}
 	},
 	"hiroshima": {
 		"kind": "city",
@@ -636,11 +979,18 @@
 		"population1950": 503000,
 		"coastal": true,
 		"position": "west",
-		"hooks": [
-			"\"Wide island\" — the delta of the Ōta river, which the city is built across.",
-			"The first atomic bomb was dropped here on 6 August 1945; the Genbaku Dome was left standing as it was and is a UNESCO site.",
-			"Miyajima's torii gate offshore appears to float at high tide, and is another of the three classic views of Japan."
-		]
+		"hooks": {
+			"en": [
+				"\"Wide island\" — the delta of the Ōta river, which the city is built across.",
+				"The first atomic bomb was dropped here on 6 August 1945; the Genbaku Dome was left standing as it was and is a UNESCO site.",
+				"Miyajima's torii gate offshore appears to float at high tide, and is another of the three classic views of Japan."
+			],
+			"it": [
+				"\"Isola larga\": il delta del fiume Ōta, su cui si estende la città.",
+				"La prima bomba atomica fu sganciata qui il 6 agosto 1945; la Cupola della bomba atomica fu lasciata in piedi così com’era ed è patrimonio UNESCO.",
+				"Il torii di Miyajima, al largo, sembra galleggiare con l’alta marea, ed è un altro dei tre paesaggi classici del Giappone."
+			]
+		}
 	},
 	"takamatsu": {
 		"kind": "city",
@@ -649,11 +999,18 @@
 		"region": "Kagawa",
 		"coastal": true,
 		"position": "centre",
-		"hooks": [
-			"\"High pine\" — taka high, matsu pine.",
-			"Its Ritsurin garden is often ranked with the three great gardens and is larger than any of them.",
-			"It is the udon capital of Japan, and its castle’s moat is filled with seawater and stocked with sea bream."
-		]
+		"hooks": {
+			"en": [
+				"\"High pine\" — taka high, matsu pine.",
+				"Its Ritsurin garden is often ranked with the three great gardens and is larger than any of them.",
+				"It is the udon capital of Japan, and its castle’s moat is filled with seawater and stocked with sea bream."
+			],
+			"it": [
+				"\"Pino alto\": taka alto, matsu pino.",
+				"Il suo giardino Ritsurin è spesso messo alla pari dei tre grandi giardini ed è più vasto di ciascuno di essi.",
+				"È la capitale giapponese degli udon, e il fossato del suo castello è pieno d’acqua di mare e popolato di orate."
+			]
+		}
 	},
 	"kure": {
 		"kind": "city",
@@ -662,11 +1019,18 @@
 		"region": "Hiroshima",
 		"coastal": true,
 		"position": "west",
-		"hooks": [
-			"Of uncertain origin, possibly from a word for a sheltered inlet.",
-			"The battleship Yamato, the largest ever built, was constructed here in secret and launched in 1940.",
-			"Its naval arsenal made it a main target in 1945; the Yamato Museum now tells the story."
-		]
+		"hooks": {
+			"en": [
+				"Of uncertain origin, possibly from a word for a sheltered inlet.",
+				"The battleship Yamato, the largest ever built, was constructed here in secret and launched in 1940.",
+				"Its naval arsenal made it a main target in 1945; the Yamato Museum now tells the story."
+			],
+			"it": [
+				"Di origine incerta, forse da una parola per un’insenatura riparata.",
+				"La corazzata Yamato, la più grande mai costruita, fu realizzata qui in segreto e varata nel 1940.",
+				"Il suo arsenale navale ne fece un obiettivo primario nel 1945; oggi il Museo Yamato ne racconta la storia."
+			]
+		}
 	},
 	"wakayama": {
 		"kind": "city",
@@ -674,11 +1038,18 @@
 		"populationRank": 29,
 		"coastal": true,
 		"position": "centre",
-		"hooks": [
-			"\"Young mountain\", after a hill where a castle was built in 1585.",
-			"The Kumano Kodō pilgrimage routes cross it and are one of only two pilgrimage roads on the UNESCO list, with Santiago's.",
-			"It grows about 20% of Japan's mandarins and most of its umeboshi plums."
-		]
+		"hooks": {
+			"en": [
+				"\"Young mountain\", after a hill where a castle was built in 1585.",
+				"The Kumano Kodō pilgrimage routes cross it and are one of only two pilgrimage roads on the UNESCO list, with Santiago's.",
+				"It grows about 20% of Japan's mandarins and most of its umeboshi plums."
+			],
+			"it": [
+				"\"Montagna giovane\", da una collina su cui nel 1585 fu costruito un castello.",
+				"Le vie di pellegrinaggio del Kumano Kodō la attraversano e sono uno dei due soli cammini di pellegrinaggio nella lista UNESCO, insieme a quello di Santiago.",
+				"Produce circa il 20% dei mandarini giapponesi e la maggior parte delle prugne umeboshi."
+			]
+		}
 	},
 	"tokushima": {
 		"kind": "city",
@@ -686,11 +1057,18 @@
 		"populationRank": 28,
 		"coastal": true,
 		"position": "centre",
-		"hooks": [
-			"\"Virtue island\", named by a warlord in 1585 for the delta the castle stood on.",
-			"Its Awa Odori is Japan's largest dance festival, drawing over a million people every August.",
-			"The Naruto whirlpools in the strait off it are among the largest in the world, up to 20 m across."
-		]
+		"hooks": {
+			"en": [
+				"\"Virtue island\", named by a warlord in 1585 for the delta the castle stood on.",
+				"Its Awa Odori is Japan's largest dance festival, drawing over a million people every August.",
+				"The Naruto whirlpools in the strait off it are among the largest in the world, up to 20 m across."
+			],
+			"it": [
+				"\"Isola della virtù\", nome dato nel 1585 da un signore della guerra al delta su cui sorgeva il castello.",
+				"Il suo Awa Odori è il più grande festival di danza del Giappone, e ogni agosto richiama oltre un milione di persone.",
+				"I vortici di Naruto, nello stretto al largo della sua costa, sono tra i più grandi del mondo, larghi fino a 20 m."
+			]
+		}
 	},
 	"shimonoseki": {
 		"kind": "city",
@@ -699,11 +1077,18 @@
 		"region": "Yamaguchi",
 		"coastal": true,
 		"position": "west",
-		"hooks": [
-			"\"Lower barrier\" — shimo lower, seki a barrier or checkpoint.",
-			"The 1185 sea battle of Dan-no-ura in its strait ended the Genpei War and the Taira clan.",
-			"It handles most of Japan’s pufferfish, fugu, and the 1895 treaty ending the war with China was signed here."
-		]
+		"hooks": {
+			"en": [
+				"\"Lower barrier\" — shimo lower, seki a barrier or checkpoint.",
+				"The 1185 sea battle of Dan-no-ura in its strait ended the Genpei War and the Taira clan.",
+				"It handles most of Japan’s pufferfish, fugu, and the 1895 treaty ending the war with China was signed here."
+			],
+			"it": [
+				"\"Barriera inferiore\": shimo inferiore, seki barriera o posto di controllo.",
+				"La battaglia navale di Dan-no-ura del 1185, nel suo stretto, pose fine alla guerra Genpei e al clan Taira.",
+				"Vi passa la maggior parte del pesce palla giapponese, il fugu, e qui fu firmato il trattato del 1895 che chiuse la guerra con la Cina."
+			]
+		}
 	},
 	"kitakyushu": {
 		"kind": "city",
@@ -712,11 +1097,18 @@
 		"region": "Fukuoka",
 		"coastal": true,
 		"position": "west",
-		"hooks": [
-			"\"North Kyūshū\" — formed in 1963 by merging five towns at the island’s northern tip.",
-			"Its Yawata steelworks, opened in 1901, started Japanese heavy industry and is a UNESCO site.",
-			"It was the primary target for the second atomic bomb on 9 August 1945; cloud over the city sent the aircraft to Nagasaki."
-		]
+		"hooks": {
+			"en": [
+				"\"North Kyūshū\" — formed in 1963 by merging five towns at the island’s northern tip.",
+				"Its Yawata steelworks, opened in 1901, started Japanese heavy industry and is a UNESCO site.",
+				"It was the primary target for the second atomic bomb on 9 August 1945; cloud over the city sent the aircraft to Nagasaki."
+			],
+			"it": [
+				"\"Kyūshū del nord\": nata nel 1963 dalla fusione di cinque città all’estremità settentrionale dell’isola.",
+				"Le sue acciaierie di Yawata, aperte nel 1901, diedero avvio all’industria pesante giapponese e sono patrimonio UNESCO.",
+				"Era l’obiettivo principale della seconda bomba atomica, il 9 agosto 1945; le nuvole sulla città dirottarono l’aereo su Nagasaki."
+			]
+		}
 	},
 	"matsuyama": {
 		"kind": "city",
@@ -725,11 +1117,18 @@
 		"region": "Ehime",
 		"coastal": true,
 		"position": "west",
-		"hooks": [
-			"\"Pine mountain\" — matsu pine, yama mountain.",
-			"Dōgo Onsen here claims to be Japan’s oldest hot spring and inspired the bathhouse in Spirited Away.",
-			"Natsume Sōseki taught in the town and set Botchan, one of Japan’s most-read novels, in it."
-		]
+		"hooks": {
+			"en": [
+				"\"Pine mountain\" — matsu pine, yama mountain.",
+				"Dōgo Onsen here claims to be Japan’s oldest hot spring and inspired the bathhouse in Spirited Away.",
+				"Natsume Sōseki taught in the town and set Botchan, one of Japan’s most-read novels, in it."
+			],
+			"it": [
+				"\"Montagna dei pini\": matsu pino, yama montagna.",
+				"Dōgo Onsen sostiene di essere la più antica sorgente termale del Giappone e ha ispirato lo stabilimento termale de La città incantata.",
+				"Natsume Sōseki insegnò in città e vi ambientò Botchan, uno dei romanzi più letti del Giappone."
+			]
+		}
 	},
 	"fukuoka": {
 		"kind": "city",
@@ -738,11 +1137,18 @@
 		"population1950": 954000,
 		"coastal": true,
 		"position": "west",
-		"hooks": [
-			"\"Fortune hill\" — the lord who built the castle in 1601 named it after his family's old home in Okayama.",
-			"Closer to Seoul than to Tokyo, and it has been Japan's gate to the continent since the Mongol invasions failed on its coast in 1274 and 1281.",
-			"Tonkotsu ramen was invented here, and its yatai food stalls are the largest such street-food scene in Japan."
-		]
+		"hooks": {
+			"en": [
+				"\"Fortune hill\" — the lord who built the castle in 1601 named it after his family's old home in Okayama.",
+				"Closer to Seoul than to Tokyo, and it has been Japan's gate to the continent since the Mongol invasions failed on its coast in 1274 and 1281.",
+				"Tonkotsu ramen was invented here, and its yatai food stalls are the largest such street-food scene in Japan."
+			],
+			"it": [
+				"\"Collina della fortuna\": il signore che costruì il castello nel 1601 lo chiamò come l’antica terra della sua famiglia, a Okayama.",
+				"Più vicina a Seul che a Tokyo, è la porta del Giappone verso il continente da quando le invasioni mongole fallirono sulle sue coste, nel 1274 e nel 1281.",
+				"Qui è nato il ramen tonkotsu, e le sue bancarelle yatai sono il più grande polo di cibo di strada del Giappone."
+			]
+		}
 	},
 	"kochi": {
 		"kind": "city",
@@ -751,11 +1157,18 @@
 		"region": "Kochi",
 		"coastal": true,
 		"position": "centre",
-		"hooks": [
-			"\"High knowledge\", chosen for a castle site whose earlier name meant a river between two rivers.",
-			"Sakamoto Ryōma, who brokered the alliance that ended the shogunate, was born here and is on every souvenir.",
-			"The wettest prefecture, and the Shimanto river in it is called Japan's last clear stream, with no dam on its main course."
-		]
+		"hooks": {
+			"en": [
+				"\"High knowledge\", chosen for a castle site whose earlier name meant a river between two rivers.",
+				"Sakamoto Ryōma, who brokered the alliance that ended the shogunate, was born here and is on every souvenir.",
+				"The wettest prefecture, and the Shimanto river in it is called Japan's last clear stream, with no dam on its main course."
+			],
+			"it": [
+				"\"Alta conoscenza\", scelto per il sito di un castello il cui nome più antico significava \"fiume tra due fiumi\".",
+				"Sakamoto Ryōma, che mediò l’alleanza che mise fine allo shogunato, nacque qui ed è su ogni souvenir.",
+				"La prefettura più piovosa, e il suo fiume Shimanto è chiamato l’ultimo corso d’acqua limpido del Giappone, senza dighe sul corso principale."
+			]
+		}
 	},
 	"oita": {
 		"kind": "city",
@@ -764,11 +1177,18 @@
 		"region": "Oita",
 		"coastal": true,
 		"position": "west",
-		"hooks": [
-			"\"Great field\" — the older written form meant many rice paddies.",
-			"It produces more hot spring water than any other prefecture, and Beppu alone has over 2,000 vents.",
-			"Usa shrine in it is the head of about 40,000 Hachiman shrines across Japan."
-		]
+		"hooks": {
+			"en": [
+				"\"Great field\" — the older written form meant many rice paddies.",
+				"It produces more hot spring water than any other prefecture, and Beppu alone has over 2,000 vents.",
+				"Usa shrine in it is the head of about 40,000 Hachiman shrines across Japan."
+			],
+			"it": [
+				"\"Grande campo\": la grafia più antica voleva dire \"molte risaie\".",
+				"Produce più acqua termale di qualsiasi altra prefettura, e la sola Beppu ha oltre 2.000 bocche termali.",
+				"Il santuario di Usa è a capo di circa 40.000 santuari di Hachiman in tutto il Giappone."
+			]
+		}
 	},
 	"sasebo": {
 		"kind": "city",
@@ -777,11 +1197,18 @@
 		"region": "Nagasaki",
 		"coastal": true,
 		"position": "west",
-		"hooks": [
-			"Of uncertain origin, possibly from an older local name.",
-			"A fishing village until the navy chose its deep sheltered harbour in 1889; it is still a major naval base.",
-			"Its Kujūku islands, actually 208 of them, fill the bay, and the Sasebo burger is a local institution from the American presence."
-		]
+		"hooks": {
+			"en": [
+				"Of uncertain origin, possibly from an older local name.",
+				"A fishing village until the navy chose its deep sheltered harbour in 1889; it is still a major naval base.",
+				"Its Kujūku islands, actually 208 of them, fill the bay, and the Sasebo burger is a local institution from the American presence."
+			],
+			"it": [
+				"Di origine incerta, forse da un nome locale più antico.",
+				"Villaggio di pescatori finché, nel 1889, la marina non scelse il suo porto profondo e riparato; è ancora un’importante base navale.",
+				"Le sue isole Kujūku, che in realtà sono 208, riempiono la baia, e il Sasebo burger è un’istituzione locale nata dalla presenza americana."
+			]
+		}
 	},
 	"kumamoto": {
 		"kind": "city",
@@ -789,11 +1216,18 @@
 		"populationRank": 16,
 		"coastal": true,
 		"position": "west",
-		"hooks": [
-			"\"Bear origin\" — though the first character was changed from an older one meaning a river bend, so the bear is a spelling accident.",
-			"Its castle, built in 1607 with curved walls designed to be unclimbable, withstood a 54-day siege in 1877 and was badly damaged by the 2016 earthquake.",
-			"Mount Aso in it has one of the largest volcanic calderas in the world, 25 km across, with towns and farms inside it."
-		]
+		"hooks": {
+			"en": [
+				"\"Bear origin\" — though the first character was changed from an older one meaning a river bend, so the bear is a spelling accident.",
+				"Its castle, built in 1607 with curved walls designed to be unclimbable, withstood a 54-day siege in 1877 and was badly damaged by the 2016 earthquake.",
+				"Mount Aso in it has one of the largest volcanic calderas in the world, 25 km across, with towns and farms inside it."
+			],
+			"it": [
+				"\"Origine dell’orso\": ma il primo carattere sostituì uno più antico che indicava un’ansa di fiume, quindi l’orso è un incidente ortografico.",
+				"Il suo castello, costruito nel 1607 con mura curve pensate per essere inscalabili, resistette a un assedio di 54 giorni nel 1877 e fu gravemente danneggiato dal terremoto del 2016.",
+				"Il monte Aso ha una delle caldere vulcaniche più grandi del mondo, larga 25 km, con paesi e campi al suo interno."
+			]
+		}
 	},
 	"nagasaki": {
 		"kind": "city",
@@ -801,11 +1235,18 @@
 		"populationRank": 30,
 		"coastal": true,
 		"position": "west",
-		"hooks": [
-			"\"Long cape\", for the promontory the harbour curls around.",
-			"For over two hundred years the artificial island of Dejima here was the only place foreigners could trade in Japan, and Dutch books were the only window on the West.",
-			"The second atomic bomb fell here on 9 August 1945; it also has more islands than any other prefecture, about 970."
-		]
+		"hooks": {
+			"en": [
+				"\"Long cape\", for the promontory the harbour curls around.",
+				"For over two hundred years the artificial island of Dejima here was the only place foreigners could trade in Japan, and Dutch books were the only window on the West.",
+				"The second atomic bomb fell here on 9 August 1945; it also has more islands than any other prefecture, about 970."
+			],
+			"it": [
+				"\"Capo lungo\", per il promontorio attorno a cui si incurva il porto.",
+				"Per oltre duecento anni l’isola artificiale di Dejima fu l’unico luogo del Giappone dove gli stranieri potevano commerciare, e i libri olandesi l’unica finestra sull’Occidente.",
+				"Qui cadde la seconda bomba atomica, il 9 agosto 1945; è anche la prefettura con più isole, circa 970."
+			]
+		}
 	},
 	"miyazaki": {
 		"kind": "city",
@@ -813,11 +1254,18 @@
 		"populationRank": 41,
 		"coastal": true,
 		"position": "south-west",
-		"hooks": [
-			"\"Shrine cape\", for a promontory with a shrine on it.",
-			"Japanese myth places the descent of the first emperor's ancestors here, and Takachiho gorge is where the sun goddess is said to have hidden.",
-			"It has the most sunshine hours of any prefecture and grows mangoes marketed as taiyō no tamago, eggs of the sun."
-		]
+		"hooks": {
+			"en": [
+				"\"Shrine cape\", for a promontory with a shrine on it.",
+				"Japanese myth places the descent of the first emperor's ancestors here, and Takachiho gorge is where the sun goddess is said to have hidden.",
+				"It has the most sunshine hours of any prefecture and grows mangoes marketed as taiyō no tamago, eggs of the sun."
+			],
+			"it": [
+				"\"Capo del santuario\", per un promontorio con sopra un santuario.",
+				"Il mito giapponese colloca qui la discesa degli antenati del primo imperatore, e la gola di Takachiho sarebbe il luogo in cui si nascose la dea del sole.",
+				"È la prefettura con più ore di sole e coltiva mango venduti come taiyō no tamago, \"uova del sole\"."
+			]
+		}
 	},
 	"kagoshima": {
 		"kind": "city",
@@ -825,11 +1273,18 @@
 		"populationRank": 22,
 		"coastal": true,
 		"position": "south-west",
-		"hooks": [
-			"\"Deer child island\", most likely from an old word for the island in its bay rather than from actual deer.",
-			"Sakurajima in that bay is one of the world's most active volcanoes and dusts the city with ash most weeks.",
-			"Its Satsuma domain opened Japan to Western technology early, and the prefecture grows most of the country's sweet potatoes and sends up its rockets from Tanegashima."
-		]
+		"hooks": {
+			"en": [
+				"\"Deer child island\", most likely from an old word for the island in its bay rather than from actual deer.",
+				"Sakurajima in that bay is one of the world's most active volcanoes and dusts the city with ash most weeks.",
+				"Its Satsuma domain opened Japan to Western technology early, and the prefecture grows most of the country's sweet potatoes and sends up its rockets from Tanegashima."
+			],
+			"it": [
+				"\"Isola del cerbiatto\", più probabilmente da un’antica parola per l’isola nella sua baia che da veri cervi.",
+				"Il Sakurajima, nella sua baia, è uno dei vulcani più attivi del mondo e copre di cenere la città quasi ogni settimana.",
+				"Il suo feudo di Satsuma aprì presto il Giappone alla tecnologia occidentale, e la prefettura coltiva la maggior parte delle patate dolci del paese e lancia i razzi giapponesi da Tanegashima."
+			]
+		}
 	},
 	"naha": {
 		"kind": "city",
@@ -838,10 +1293,17 @@
 		"region": "Okinawa",
 		"coastal": true,
 		"position": "south-west",
-		"hooks": [
-			"Of Ryūkyūan origin, possibly \"fishing ground\" or \"a place of catch\".",
-			"It was the port of the Ryūkyū Kingdom, which traded with China and south-east Asia as an independent state.",
-			"Shuri castle above it burned in 2019, the fifth time in its history, and is being rebuilt again."
-		]
+		"hooks": {
+			"en": [
+				"Of Ryūkyūan origin, possibly \"fishing ground\" or \"a place of catch\".",
+				"It was the port of the Ryūkyū Kingdom, which traded with China and south-east Asia as an independent state.",
+				"Shuri castle above it burned in 2019, the fifth time in its history, and is being rebuilt again."
+			],
+			"it": [
+				"Di origine ryūkyūana, forse \"zona di pesca\" o \"luogo della cattura\".",
+				"Era il porto del Regno delle Ryūkyū, che commerciava con la Cina e il Sud-est asiatico come stato indipendente.",
+				"Il castello di Shuri, che la domina, è bruciato nel 2019, per la quinta volta nella sua storia, e viene ricostruito di nuovo."
+			]
+		}
 	}
 }

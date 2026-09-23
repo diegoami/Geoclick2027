@@ -6,11 +6,18 @@
 		"region": "Northern Ostrobothnia",
 		"coastal": true,
 		"position": "north",
-		"hooks": [
-			"Probably from a Sámi word for flood water, or from a word for a river.",
-			"Built on tar: Finnish pine tar was shipped from here in barrels to caulk the world’s sailing fleets.",
-			"It later grew Nokia’s radio research, and it hosts the air guitar world championships every August."
-		]
+		"hooks": {
+			"en": [
+				"Probably from a Sámi word for flood water, or from a word for a river.",
+				"Built on tar: Finnish pine tar was shipped from here in barrels to caulk the world’s sailing fleets.",
+				"It later grew Nokia’s radio research, and it hosts the air guitar world championships every August."
+			],
+			"it": [
+				"Probabilmente da una parola sámi per l’acqua di piena, oppure da una parola che indica un fiume.",
+				"Costruita sul catrame: da qui il catrame di pino finlandese partiva in barili per calafatare le flotte a vela di tutto il mondo.",
+				"In seguito vi crebbe la ricerca radio di Nokia, e ogni agosto ospita i campionati mondiali di air guitar."
+			]
+		}
 	},
 	"kuopio": {
 		"kind": "city",
@@ -19,11 +26,18 @@
 		"region": "Eastern Finland",
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"Of uncertain origin, possibly from a personal name or from a word for a hollow.",
-			"Its kalakukko — fish and pork baked inside a rye loaf — has protected status.",
-			"Puijo tower above it looks out over the Kallavesi lake system in every direction."
-		]
+		"hooks": {
+			"en": [
+				"Of uncertain origin, possibly from a personal name or from a word for a hollow.",
+				"Its kalakukko — fish and pork baked inside a rye loaf — has protected status.",
+				"Puijo tower above it looks out over the Kallavesi lake system in every direction."
+			],
+			"it": [
+				"Di origine incerta, forse da un nome di persona o da una parola che indica un avvallamento.",
+				"Il suo kalakukko, pesce e maiale cotti dentro una pagnotta di segale, è un prodotto a denominazione protetta.",
+				"Dalla torre di Puijo, che la sovrasta, lo sguardo abbraccia in ogni direzione il sistema lacustre del Kallavesi."
+			]
+		}
 	},
 	"jyvaskyla": {
 		"kind": "city",
@@ -32,11 +46,18 @@
 		"region": "Central Finland",
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"\"Grain village\" — jyvä is a grain, kylä a village.",
-			"Alvar Aalto studied and built here, and the city holds more of his buildings than anywhere else.",
-			"It has hosted a round of the World Rally Championship since 1951, on gravel roads that produce the sport’s biggest jumps."
-		]
+		"hooks": {
+			"en": [
+				"\"Grain village\" — jyvä is a grain, kylä a village.",
+				"Alvar Aalto studied and built here, and the city holds more of his buildings than anywhere else.",
+				"Its rally has run since 1951 and has been a round of the World Rally Championship since 1973, on gravel roads that produce the sport’s biggest jumps."
+			],
+			"it": [
+				"\"Villaggio del grano\": jyvä significa chicco, kylä villaggio.",
+				"Alvar Aalto studiò e costruì qui, e la città conserva più edifici suoi di qualunque altro luogo.",
+				"Il suo rally si corre dal 1951 ed è una prova del Campionato del mondo dal 1973, su strade sterrate che regalano i salti più lunghi di questo sport."
+			]
+		}
 	},
 	"tampere": {
 		"kind": "city",
@@ -45,11 +66,18 @@
 		"region": "Pirkanmaa",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"Probably from a Swedish or older word for the rapids the town was built on.",
-			"Built on the Tammerkoski rapids between two lakes, it was Finland’s industrial city — the Manchester of the north.",
-			"Lenin and Stalin met for the first time here in 1905, and the world’s only Lenin museum outside Russia ran in the building until 2024."
-		]
+		"hooks": {
+			"en": [
+				"Probably from a Swedish or older word for the rapids the town was built on.",
+				"Built on the Tammerkoski rapids between two lakes, it was Finland’s industrial city — the Manchester of the north.",
+				"Lenin and Stalin met for the first time here in 1905, and the world’s only Lenin museum outside Russia ran in the building until 2024."
+			],
+			"it": [
+				"Probabilmente da una parola svedese, o più antica, per le rapide su cui sorse la città.",
+				"Costruita sulle rapide del Tammerkoski tra due laghi, fu la città industriale della Finlandia: la Manchester del nord.",
+				"Lenin e Stalin si incontrarono qui per la prima volta nel 1905, e l’unico museo di Lenin al mondo fuori dalla Russia ha avuto sede nell’edificio fino al 2024."
+			]
+		}
 	},
 	"pori": {
 		"kind": "city",
@@ -58,11 +86,18 @@
 		"region": "Satakunta",
 		"coastal": true,
 		"position": "south-west",
-		"hooks": [
-			"From Swedish Björneborg, \"bear fortress\" — Pori is the Finnish rendering of it.",
-			"Its jazz festival, running since 1966, is one of the oldest and largest in Europe.",
-			"Yyteri beach nearby is the longest sand beach in the Nordic countries."
-		]
+		"hooks": {
+			"en": [
+				"From Swedish Björneborg, \"bear fortress\" — Pori is the Finnish rendering of it.",
+				"Its jazz festival, running since 1966, is one of the oldest and largest in Europe.",
+				"Yyteri beach nearby is the longest sand beach in the Nordic countries."
+			],
+			"it": [
+				"Dallo svedese Björneborg, \"fortezza dell’orso\": Pori ne è la resa finlandese.",
+				"Il suo festival jazz, nato nel 1966, è uno dei più antichi e più grandi d’Europa.",
+				"La vicina spiaggia di Yyteri è la spiaggia di sabbia più lunga dei paesi nordici."
+			]
+		}
 	},
 	"lahti": {
 		"kind": "city",
@@ -71,11 +106,18 @@
 		"region": "Päijänne Tavastia",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"Finnish for \"bay\" — the town sits at the end of one on Lake Vesijärvi.",
-			"Its ski jumps are Finland’s best known, and it has hosted the Nordic world championships seven times.",
-			"It was European Green Capital in 2021, having cleaned up a lake that industry had effectively killed."
-		]
+		"hooks": {
+			"en": [
+				"Finnish for \"bay\" — the town sits at the end of one on Lake Vesijärvi.",
+				"Its ski jumps are Finland’s best known, and it has hosted the Nordic world championships seven times.",
+				"It was European Green Capital in 2021, having cleaned up a lake that industry had effectively killed."
+			],
+			"it": [
+				"In finlandese \"baia\": la città sorge in fondo a una baia del lago Vesijärvi.",
+				"I suoi trampolini sono i più noti della Finlandia, e la città ha ospitato sette volte i Mondiali di sci nordico.",
+				"Nel 2021 è stata Capitale verde europea, dopo aver risanato un lago che l’industria aveva di fatto ucciso."
+			]
+		}
 	},
 	"turku": {
 		"kind": "city",
@@ -84,11 +126,18 @@
 		"region": "Finland Proper",
 		"coastal": true,
 		"position": "south-west",
-		"hooks": [
-			"From an Old East Slavic word for a marketplace, torgu — the same root as the Russian torg.",
-			"The oldest city in Finland and its capital until 1812, with a cathedral begun in the 1280s.",
-			"The 1827 fire destroyed three quarters of it, the worst fire in Nordic history, which is why the capital had already moved."
-		]
+		"hooks": {
+			"en": [
+				"From an Old East Slavic word for a marketplace, torgu — the same root as the Russian torg.",
+				"The oldest city in Finland and its capital until 1812, with a cathedral begun in the 1280s.",
+				"The 1827 fire destroyed three quarters of it, the worst fire in Nordic history — but the capital had already moved to Helsinki in 1812."
+			],
+			"it": [
+				"Da una parola dell’antico slavo orientale per mercato, torgu: la stessa radice del russo torg.",
+				"La città più antica della Finlandia e sua capitale fino al 1812, con una cattedrale iniziata negli anni Ottanta del Duecento.",
+				"L’incendio del 1827 ne distrusse tre quarti, il peggiore della storia nordica; ma la capitale si era già spostata a Helsinki nel 1812."
+			]
+		}
 	},
 	"helsinki": {
 		"kind": "city",
@@ -99,10 +148,17 @@
 		"capitalOf": "country",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"From Helsinge, a parish name probably brought by settlers from Hälsingland in Sweden.",
-			"Founded in 1550 to rival Tallinn, it stayed a small town for 250 years until Russia made it the capital in 1812.",
-			"Its centre was rebuilt in neoclassical style to resemble St Petersburg, which is why Cold War films used it as a stand-in for Moscow."
-		]
+		"hooks": {
+			"en": [
+				"From Helsinge, a parish name probably brought by settlers from Hälsingland in Sweden.",
+				"Founded in 1550 to rival Tallinn, it stayed a small town for 250 years until Russia made it the capital in 1812.",
+				"Its centre was rebuilt in neoclassical style to resemble St Petersburg, which is why Cold War films used it as a stand-in for Moscow."
+			],
+			"it": [
+				"Da Helsinge, nome di una parrocchia portato probabilmente da coloni venuti dall’Hälsingland, in Svezia.",
+				"Fondata nel 1550 per rivaleggiare con Tallinn, rimase una piccola città per 250 anni, finché la Russia non ne fece la capitale nel 1812.",
+				"Il centro fu ricostruito in stile neoclassico sul modello di San Pietroburgo, ed è per questo che i film della guerra fredda lo usavano come controfigura di Mosca."
+			]
+		}
 	}
 }

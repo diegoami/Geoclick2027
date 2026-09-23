@@ -15,11 +15,18 @@
 			"population": 335972
 		},
 		"position": "north-west",
-		"hooks": [
-			"Named for the Astures, a people Rome needed two hundred years to subdue; the name may come from a river, the Astura.",
-			"The only part of Iberia the Moors never held, which is why every later Spanish king's heir is called the Prince of Asturias.",
-			"Its cider is poured from above the head to aerate it, and the region makes most of Spain’s blue cheese, Cabrales."
-		]
+		"hooks": {
+			"en": [
+				"Named for the Astures, a people Rome needed two hundred years to subdue; the name may come from a river, the Astura.",
+				"The only part of Iberia the Moors never held, which is why every later Spanish king's heir is called the Prince of Asturias.",
+				"Its cider is poured from above the head to aerate it, and the region makes most of Spain’s blue cheese, Cabrales."
+			],
+			"it": [
+				"Prende il nome dagli Asturi, un popolo che Roma impiegò duecento anni a sottomettere; il nome potrebbe venire da un fiume, l’Astura.",
+				"L’unica parte della penisola iberica mai occupata dai Mori, ed è per questo che ogni successivo erede al trono di Spagna porta il titolo di Principe delle Asturie.",
+				"Il suo sidro si versa tenendo la bottiglia sopra la testa, per ossigenarlo, e la regione produce la maggior parte dell’erborinato spagnolo, il Cabrales."
+			]
+		}
 	},
 	"cantabria": {
 		"kind": "region",
@@ -37,11 +44,18 @@
 			"population": 208763
 		},
 		"position": "north",
-		"hooks": [
-			"From the Cantabri, the other people who held out against Rome — Augustus came in person to finish the war, and it still took a decade.",
-			"The Altamira caves here hold paintings 36,000 years old; when they were found in 1880 nobody believed they were prehistoric.",
-			"Green and wet, unlike the Spain of the postcards: it gets more rain than London, which is why the north is called España Verde."
-		]
+		"hooks": {
+			"en": [
+				"From the Cantabri, the other people who held out against Rome — Augustus came in person to finish the war, and it still took a decade.",
+				"The Altamira caves here hold paintings 36,000 years old; when they were found in 1880 nobody believed they were prehistoric.",
+				"Green and wet, unlike the Spain of the postcards: it gets more rain than London, which is why the north is called España Verde."
+			],
+			"it": [
+				"Dai Cantabri, l’altro popolo che resistette a Roma: Augusto venne di persona a chiudere la guerra, e ci volle comunque un decennio.",
+				"Le grotte di Altamira custodiscono pitture di 36.000 anni fa; quando furono scoperte, nel 1880, nessuno credette che fossero preistoriche.",
+				"Verde e piovosa, ben diversa dalla Spagna delle cartoline: piove più che a Londra, ed è per questo che il nord si chiama España Verde."
+			]
+		}
 	},
 	"pais-vasco": {
 		"kind": "region",
@@ -59,11 +73,18 @@
 			"population": 875552
 		},
 		"position": "north",
-		"hooks": [
-			"\"Basque country\" — Vasco is from the Vascones, the Roman name for the people. They call it Euskadi, from their own word for their language.",
-			"Basque is unrelated to any other living language on earth, and was spoken here before Indo-European reached Europe.",
-			"Bilbao’s Guggenheim turned a dying steel port into a destination, and the word for the effect — the Bilbao effect — is now used worldwide."
-		]
+		"hooks": {
+			"en": [
+				"\"Basque country\" — Vasco is from the Vascones, the Roman name for the people. They call it Euskadi, from their own word for their language.",
+				"Basque is unrelated to any other living language on earth, and was spoken here before Indo-European reached Europe.",
+				"Bilbao’s Guggenheim turned a dying steel port into a destination, and the word for the effect — the Bilbao effect — is now used worldwide."
+			],
+			"it": [
+				"\"Paese basco\": Vasco viene dai Vascones, il nome che i Romani davano a quel popolo. Loro lo chiamano Euskadi, dalla parola con cui indicano la propria lingua.",
+				"Il basco non è imparentato con nessun’altra lingua viva al mondo, e qui lo si parlava già prima che l’indoeuropeo arrivasse in Europa.",
+				"Il Guggenheim di Bilbao ha fatto di un porto siderurgico morente una meta, e il nome del fenomeno, l’effetto Bilbao, oggi si usa in tutto il mondo."
+			]
+		}
 	},
 	"galicia": {
 		"kind": "region",
@@ -79,11 +100,18 @@
 			"population": 378952
 		},
 		"position": "north-west",
-		"hooks": [
-			"From the Callaeci or Gallaeci, the tribes Rome met in the north-west — the same root, distantly, as Gaul and Wales: a word outsiders used for Celts.",
-			"Santiago de Compostela is here, the end of the pilgrim road, and Galician is close enough to Portuguese that the two were one language until the 1300s.",
-			"Its coast is cut into rías, drowned river valleys, and it lands more seafood than any other region in Europe."
-		]
+		"hooks": {
+			"en": [
+				"From the Callaeci or Gallaeci, the tribes Rome met in the north-west — the same root, distantly, as Gaul and Wales: a word outsiders used for Celts.",
+				"Santiago de Compostela is here, the end of the pilgrim road, and Galician is close enough to Portuguese that the two were one language until the 1300s.",
+				"Its coast is cut into rías, drowned river valleys, and it lands more seafood than any other region in Europe."
+			],
+			"it": [
+				"Dai Callaeci o Gallaeci, le tribù che Roma incontrò nel nord-ovest: la stessa radice, alla lontana, di Gallia e Galles, una parola con cui gli stranieri indicavano i Celti.",
+				"Qui si trova Santiago de Compostela, la meta del cammino dei pellegrini, e il galiziano è così vicino al portoghese che le due lingue furono una sola fino al Trecento.",
+				"La sua costa è intagliata dalle rías, valli fluviali sommerse, e sbarca più prodotti del mare di qualunque altra regione d’Europa."
+			]
+		}
 	},
 	"navarra": {
 		"kind": "region",
@@ -101,11 +129,18 @@
 			"population": 274545
 		},
 		"position": "north",
-		"hooks": [
-			"Probably Basque nava, a flat valley among hills, plus -erri, land.",
-			"An independent kingdom for seven centuries, straddling the Pyrenees; France kept the northern half until 1620.",
-			"The bulls run through Pamplona every July, a tradition Hemingway made famous in 1926."
-		]
+		"hooks": {
+			"en": [
+				"Probably Basque nava, a flat valley among hills, plus -erri, land.",
+				"An independent kingdom for seven centuries, straddling the Pyrenees; France kept the northern half until 1620.",
+				"The bulls run through Pamplona every July, a tradition Hemingway made famous in 1926."
+			],
+			"it": [
+				"Probabilmente dal basco nava, una valle piana tra le colline, più -erri, terra.",
+				"Regno indipendente per sette secoli, a cavallo dei Pirenei; la Francia ne tenne la metà settentrionale fino al 1620.",
+				"Ogni luglio i tori corrono per le vie di Pamplona, una tradizione che Hemingway rese celebre nel 1926."
+			]
+		}
 	},
 	"la-rioja": {
 		"kind": "region",
@@ -128,11 +163,18 @@
 			"elevation": 2271
 		},
 		"position": "north",
-		"hooks": [
-			"The river Oja, or possibly rio oja from the Arabic — and the article stays: it is La Rioja, never just Rioja, for the region.",
-			"Spain's smallest mainland region, and the one whose name is on more bottles than any other.",
-			"Dinosaur footprints — more than 10,000 of them — are preserved in its rock, and Spanish was first written down at the San Millán monastery here."
-		]
+		"hooks": {
+			"en": [
+				"The river Oja, or possibly rio oja from the Arabic — and the article stays: it is La Rioja, never just Rioja, for the region.",
+				"Spain's smallest mainland region, and the one whose name is on more bottles than any other.",
+				"Dinosaur footprints — more than 10,000 of them — are preserved in its rock, and Spanish was first written down at the San Millán monastery here."
+			],
+			"it": [
+				"Il fiume Oja, o forse rio oja dall’arabo; e l’articolo non si toglie: per la regione è La Rioja, mai semplicemente Rioja.",
+				"La più piccola regione della Spagna continentale, e quella il cui nome compare su più bottiglie di qualunque altra.",
+				"Le sue rocce conservano impronte di dinosauro, più di 10.000, ed è qui, nel monastero di San Millán, che lo spagnolo fu scritto per la prima volta."
+			]
+		}
 	},
 	"cataluna": {
 		"kind": "region",
@@ -148,11 +190,18 @@
 			"population": 4920000
 		},
 		"position": "north-east",
-		"hooks": [
-			"Nobody is certain: most likely from the castlà, the castellans who held the frontier castles, or from Gothia plus Alania.",
-			"Barcelona was the Frankish empire's southern march against the Moors, which is why the region faces the Mediterranean and France more than Madrid.",
-			"Catalan is spoken by about 9 million people, and the Sagrada Família has been under construction since 1882."
-		]
+		"hooks": {
+			"en": [
+				"Nobody is certain: most likely from the castlà, the castellans who held the frontier castles, or from Gothia plus Alania.",
+				"Barcelona was the Frankish empire's southern march against the Moors, which is why the region faces the Mediterranean and France more than Madrid.",
+				"Catalan is spoken by about 9 million people, and the Sagrada Família has been under construction since 1882."
+			],
+			"it": [
+				"Nessuno ne è certo: molto probabilmente dai castlà, i castellani che presidiavano i castelli di frontiera, oppure da Gothia più Alania.",
+				"Barcellona fu la marca meridionale dell’impero franco contro i Mori, ed è per questo che la regione guarda al Mediterraneo e alla Francia più che a Madrid.",
+				"Il catalano è parlato da circa 9 milioni di persone, e la Sagrada Família è in costruzione dal 1882."
+			]
+		}
 	},
 	"castilla-y-leon": {
 		"kind": "region",
@@ -179,11 +228,18 @@
 			"elevation": 2648
 		},
 		"position": "north",
-		"hooks": [
-			"Castilla is \"land of castles\", the frontier forts against the Moors; León is not the lion but Latin legio, the Seventh Legion's camp.",
-			"The lion on its arms is a pun the heralds could not resist — the city was a legion, not a cat.",
-			"The largest region in Spain, larger than Portugal, and it holds Salamanca’s university, founded in 1218."
-		]
+		"hooks": {
+			"en": [
+				"Castilla is \"land of castles\", the frontier forts against the Moors; León is not the lion but Latin legio, the Seventh Legion's camp.",
+				"The lion on its arms is a pun the heralds could not resist — the city was a legion, not a cat.",
+				"The largest region in Spain, larger than Portugal, and it holds Salamanca’s university, founded in 1218."
+			],
+			"it": [
+				"Castiglia è \"terra di castelli\", i forti di frontiera contro i Mori; León non è il leone ma il latino legio, l’accampamento della Settima Legione.",
+				"Il leone nel suo stemma è un gioco di parole a cui gli araldisti non seppero resistere: la città era una legione, non un felino.",
+				"La regione più grande della Spagna, più estesa del Portogallo, e ospita l’università di Salamanca, fondata nel 1218."
+			]
+		}
 	},
 	"aragon": {
 		"kind": "region",
@@ -207,11 +263,18 @@
 			"elevation": 3404
 		},
 		"position": "north",
-		"hooks": [
-			"Named for the river Aragón, which itself is probably pre-Roman and pre-Basque.",
-			"Its marriage to Castilla in 1469 made Spain, and its own empire had already taken Sicily, Sardinia and Naples.",
-			"The Pyrenees give it Spain’s highest peaks outside the Sierra Nevada, and its south is near-desert: the Monegros."
-		]
+		"hooks": {
+			"en": [
+				"Named for the river Aragón, which itself is probably pre-Roman and pre-Basque.",
+				"Its marriage to Castilla in 1469 made Spain, and its own empire had already taken Sicily, Sardinia and Naples.",
+				"The Pyrenees give it Spain’s highest peaks outside the Sierra Nevada, and its south is near-desert: the Monegros."
+			],
+			"it": [
+				"Prende il nome dal fiume Aragón, un nome a sua volta probabilmente preromano e anteriore al basco.",
+				"Le nozze con la Castiglia, nel 1469, diedero vita alla Spagna, e il suo impero aveva già conquistato Sicilia, Sardegna e Napoli.",
+				"I Pirenei le danno le vette più alte di Spagna, Sierra Nevada a parte, e il suo sud è quasi un deserto: i Monegros."
+			]
+		}
 	},
 	"madrid": {
 		"kind": "region",
@@ -228,11 +291,18 @@
 			"population": 5567000
 		},
 		"position": "centre",
-		"hooks": [
-			"From Arabic al-Majrit, \"source of water\" — the Moorish fortress was named for its streams, and the Christians kept the name.",
-			"A provincial town until Philip II moved the court here in 1561, chosen largely for sitting in the middle of the country.",
-			"At 650 m it is the highest capital in Europe, and the Prado holds the finest collection of Spanish painting anywhere."
-		]
+		"hooks": {
+			"en": [
+				"From Arabic al-Majrit, \"source of water\" — the Moorish fortress was named for its streams, and the Christians kept the name.",
+				"A provincial town until Philip II moved the court here in 1561, chosen largely for sitting in the middle of the country.",
+				"At 650 m it is the highest capital in Europe, and the Prado holds the finest collection of Spanish painting anywhere."
+			],
+			"it": [
+				"Dall’arabo al-Majrit, \"sorgente d’acqua\": la fortezza moresca prese il nome dai suoi ruscelli, e i cristiani lo mantennero.",
+				"Una città di provincia finché Filippo II non vi trasferì la corte nel 1561, scegliendola soprattutto perché stava al centro del paese.",
+				"A 650 m è la capitale più alta d’Europa, e il Prado custodisce la più bella collezione di pittura spagnola al mondo."
+			]
+		}
 	},
 	"castilla-la-mancha": {
 		"kind": "region",
@@ -253,11 +323,18 @@
 			"population": 158094
 		},
 		"position": "centre",
-		"hooks": [
-			"Castilla again, plus La Mancha, from Arabic al-mansha, \"the dry land\" — and it is: a high, flat, hot plain.",
-			"Don Quixote rode here, and the windmills he charged still stand on the ridge at Consuegra.",
-			"Toledo here was a city of Christians, Muslims and Jews together, and its steel was the best in Europe for swords."
-		]
+		"hooks": {
+			"en": [
+				"Castilla again, plus La Mancha, from Arabic al-mansha, \"the dry land\" — and it is: a high, flat, hot plain.",
+				"Don Quixote rode here, and the windmills he charged still stand on the ridge at Consuegra.",
+				"Toledo here was a city of Christians, Muslims and Jews together, and its steel was the best in Europe for swords."
+			],
+			"it": [
+				"Di nuovo Castiglia, più La Mancha, dall’arabo al-mansha, \"la terra secca\": e lo è davvero, un altopiano piatto e caldo.",
+				"Don Chisciotte cavalcò qui, e i mulini a vento contro cui si lanciò sono ancora in piedi sul crinale di Consuegra.",
+				"Qui Toledo fu una città di cristiani, musulmani ed ebrei insieme, e il suo acciaio era il migliore d’Europa per le spade."
+			]
+		}
 	},
 	"islas-baleares": {
 		"kind": "region",
@@ -274,11 +351,18 @@
 			"elevation": 1445
 		},
 		"position": "east",
-		"hooks": [
-			"From Greek ballein, \"to throw\" — the islanders were slingers, and Carthage and Rome both hired them.",
-			"Mallorca and Menorca are simply the larger and the smaller, from Latin maior and minor.",
-			"Ibiza’s clubs and Menorca’s prehistoric stone towers, the talayots, are on the same small archipelago."
-		]
+		"hooks": {
+			"en": [
+				"From Greek ballein, \"to throw\" — the islanders were slingers, and Carthage and Rome both hired them.",
+				"Mallorca and Menorca are simply the larger and the smaller, from Latin maior and minor.",
+				"Ibiza’s clubs and Menorca’s prehistoric stone towers, the talayots, are on the same small archipelago."
+			],
+			"it": [
+				"Dal greco ballein, \"lanciare\": gli isolani erano frombolieri, e sia Cartagine sia Roma li assoldarono.",
+				"Maiorca e Minorca sono semplicemente la più grande e la più piccola, dal latino maior e minor.",
+				"Le discoteche di Ibiza e le torri preistoriche in pietra di Minorca, i talayot, stanno nello stesso piccolo arcipelago."
+			]
+		}
 	},
 	"comunidad-valenciana": {
 		"kind": "region",
@@ -296,11 +380,18 @@
 			"population": 808000
 		},
 		"position": "centre",
-		"hooks": [
-			"Valencia is Latin valentia, \"strength\" or \"valour\" — a name Rome gave several towns, and this one kept.",
-			"Its Albufera lagoon is where paella comes from, cooked over orange wood with rabbit and beans rather than seafood.",
-			"Its Fallas festival burns enormous satirical figures every March, and the region grows most of Spain’s oranges."
-		]
+		"hooks": {
+			"en": [
+				"Valencia is Latin valentia, \"strength\" or \"valour\" — a name Rome gave several towns, and this one kept.",
+				"Its Albufera lagoon is where paella comes from, cooked over orange wood with rabbit and beans rather than seafood.",
+				"Its Fallas festival burns enormous satirical figures every March, and the region grows most of Spain’s oranges."
+			],
+			"it": [
+				"Valencia è il latino valentia, \"forza\" o \"valore\": un nome che Roma diede a diverse città, e che questa ha conservato.",
+				"La sua laguna, l’Albufera, è la patria della paella, cotta su legna d’arancio con coniglio e fagioli anziché con i frutti di mare.",
+				"Ogni marzo la festa delle Fallas brucia enormi figure satiriche, e la regione coltiva la maggior parte delle arance spagnole."
+			]
+		}
 	},
 	"extremadura": {
 		"kind": "region",
@@ -317,11 +408,18 @@
 			"population": 140133
 		},
 		"position": "west",
-		"hooks": [
-			"Not \"extremely hard\": it is extrema durii, the land beyond the Duero — the outer edge of the reconquered frontier.",
-			"Cortés, Pizarro and Balboa all came from this one poor province, which is why so many places in the Americas carry Extremaduran names.",
-			"Its dehesa — open oak pasture — feeds the black pigs that become jamón ibérico de bellota."
-		]
+		"hooks": {
+			"en": [
+				"Not \"extremely hard\": it is extrema durii, the land beyond the Duero — the outer edge of the reconquered frontier.",
+				"Cortés, Pizarro and Balboa all came from this one poor province, which is why so many places in the Americas carry Extremaduran names.",
+				"Its dehesa — open oak pasture — feeds the black pigs that become jamón ibérico de bellota."
+			],
+			"it": [
+				"Non \"estremamente dura\": è extrema durii, la terra oltre il Duero, l’estremo margine della frontiera riconquistata.",
+				"Cortés, Pizarro e Balboa venivano tutti da questa sola, povera provincia, ed è per questo che tanti luoghi delle Americhe portano nomi dell’Estremadura.",
+				"La sua dehesa, un pascolo aperto punteggiato di querce, nutre i maiali neri da cui nasce il jamón ibérico de bellota."
+			]
+		}
 	},
 	"murcia": {
 		"kind": "region",
@@ -339,11 +437,18 @@
 			"population": 406807
 		},
 		"position": "south",
-		"hooks": [
-			"Uncertain: possibly Latin myrtea, the myrtle, or murtia from the Arabic Mursiyah — the Moors founded the city in 825.",
-			"Its huerta is irrigated by canals the Moors dug eleven centuries ago, still running on the same gradients.",
-			"Called the orchard of Europe, it grows vegetables for half the continent from one of the driest places in it."
-		]
+		"hooks": {
+			"en": [
+				"Uncertain: possibly Latin myrtea, the myrtle, or murtia from the Arabic Mursiyah — the Moors founded the city in 825.",
+				"Its huerta is irrigated by canals the Moors dug eleven centuries ago, still running on the same gradients.",
+				"Called the orchard of Europe, it grows vegetables for half the continent from one of the driest places in it."
+			],
+			"it": [
+				"Origine incerta: forse il latino myrtea, il mirto, o murtia dall’arabo Mursiyah; furono i Mori a fondare la città, nell’825.",
+				"La sua huerta è irrigata da canali che i Mori scavarono undici secoli fa, e che scorrono ancora con le stesse pendenze.",
+				"Detta l’orto d’Europa, coltiva verdure per mezzo continente da una delle sue zone più aride."
+			]
+		}
 	},
 	"andalucia": {
 		"kind": "region",
@@ -364,10 +469,17 @@
 			"elevation": 3479
 		},
 		"position": "south",
-		"hooks": [
-			"From Arabic al-Andalus, the Moorish name for all of Iberia — which may itself come from the Vandals who passed through.",
-			"The Moors held it for nearly eight hundred years, until 1492: longer than the time since, and the Alhambra, the Mezquita and flamenco all carry it.",
-			"The most populous region in Spain, and the Sierra Nevada above Granada has the southernmost ski resort in Europe."
-		]
+		"hooks": {
+			"en": [
+				"From Arabic al-Andalus, the Moorish name for all of Iberia — which may itself come from the Vandals who passed through.",
+				"The Moors held it for nearly eight hundred years, until 1492: longer than the time since, and the Alhambra, the Mezquita and flamenco all carry it.",
+				"The most populous region in Spain, and the Sierra Nevada above Granada has the southernmost ski resort in Europe."
+			],
+			"it": [
+				"Dall’arabo al-Andalus, il nome moresco dell’intera penisola iberica, che forse deriva a sua volta dai Vandali che vi passarono.",
+				"I Mori la tennero per quasi ottocento anni, fino al 1492: più di quanto sia passato da allora, e l’Alhambra, la Mezquita e il flamenco ne portano tutti il segno.",
+				"La regione più popolosa della Spagna, e sulla Sierra Nevada, sopra Granada, c’è la stazione sciistica più meridionale d’Europa."
+			]
+		}
 	}
 }

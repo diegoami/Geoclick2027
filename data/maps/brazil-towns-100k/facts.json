@@ -6,11 +6,18 @@
 		"region": "Amapi",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"\"Old town\" — it was the first Portuguese settlement in Espírito Santo, founded in 1535.",
-			"Its Penha convent stands on a rock above the beach and is one of Brazil’s oldest.",
-			"It is now effectively a suburb of Vitória across the bay."
-		]
+		"hooks": {
+			"en": [
+				"\"Old town\" — it was the first Portuguese settlement in Espírito Santo, founded in 1535.",
+				"Its Penha convent stands on a rock above the beach and is one of Brazil’s oldest.",
+				"It is now effectively a suburb of Vitória across the bay."
+			],
+			"it": [
+				"\"Borgo vecchio\": fu il primo insediamento portoghese nell’Espírito Santo, fondato nel 1535.",
+				"Il suo convento della Penha sorge su una roccia sopra la spiaggia ed è uno dei più antichi del Brasile.",
+				"Oggi è di fatto un sobborgo di Vitória, sull’altra sponda della baia."
+			]
+		}
 	},
 	"macapa": {
 		"kind": "city",
@@ -19,11 +26,18 @@
 		"region": "Amapá",
 		"coastal": true,
 		"position": "north",
-		"hooks": [
-			"From a Tupi word, macapaba, \"place of many bacabas\", a palm fruit.",
-			"The equator runs straight through the city, and through the middle of its football stadium.",
-			"Its Fortaleza de São José, built in the 1760s, is the largest colonial fort in Brazil."
-		]
+		"hooks": {
+			"en": [
+				"From a Tupi word, macapaba, \"place of many bacabas\", a palm fruit.",
+				"The equator runs straight through the city, and through the middle of its football stadium.",
+				"Its Fortaleza de São José, built in the 1760s, is the largest colonial fort in Brazil."
+			],
+			"it": [
+				"Da una parola tupi, macapaba, \"luogo di molte bacaba\", un frutto di palma.",
+				"L’equatore attraversa la città da parte a parte, e passa proprio a metà del suo stadio di calcio.",
+				"La sua Fortaleza de São José, costruita negli anni Sessanta del Settecento, è il più grande forte coloniale del Brasile."
+			]
+		}
 	},
 	"belem": {
 		"kind": "city",
@@ -33,11 +47,18 @@
 		"region": "Pará",
 		"coastal": true,
 		"position": "north",
-		"hooks": [
-			"\"Bethlehem\" — founded in 1616 as Santa Maria de Belém do Grão-Pará.",
-			"Its Círio de Nazaré procession draws about two million people, one of the largest religious gatherings in the world.",
-			"The Ver-o-Peso market on its waterfront is the largest open-air market in Latin America."
-		]
+		"hooks": {
+			"en": [
+				"\"Bethlehem\" — founded in 1616 as Santa Maria de Belém do Grão-Pará.",
+				"Its Círio de Nazaré procession draws about two million people, one of the largest religious gatherings in the world.",
+				"The Ver-o-Peso market on its waterfront is the largest open-air market in Latin America."
+			],
+			"it": [
+				"\"Betlemme\": fondata nel 1616 come Santa Maria de Belém do Grão-Pará.",
+				"La sua processione del Círio de Nazaré richiama circa due milioni di persone, uno dei più grandi raduni religiosi del mondo.",
+				"Il mercato di Ver-o-Peso, affacciato sull’acqua, è il più grande mercato all’aperto dell’America Latina."
+			]
+		}
 	},
 	"sao-luis": {
 		"kind": "city",
@@ -47,11 +68,18 @@
 		"region": "Maranhão",
 		"coastal": true,
 		"position": "north",
-		"hooks": [
-			"For St Louis, Louis IX of France — the only Brazilian state capital founded by the French, in 1612.",
-			"It was then taken by the Dutch and then by the Portuguese, all within twenty-five years.",
-			"Its old town of tiled colonial houses is a UNESCO site, and it is the home of Brazilian reggae."
-		]
+		"hooks": {
+			"en": [
+				"For St Louis, Louis IX of France — the only Brazilian state capital founded by the French, in 1612.",
+				"The Portuguese took it in 1615, the Dutch in 1641, and the Portuguese back in 1644.",
+				"Its old town of tiled colonial houses is a UNESCO site, and it is the home of Brazilian reggae."
+			],
+			"it": [
+				"Da san Luigi, Luigi IX di Francia: l’unica capitale di stato brasiliana fondata dai francesi, nel 1612.",
+				"I portoghesi la presero nel 1615, gli olandesi nel 1641, e i portoghesi se la ripresero nel 1644.",
+				"La sua città vecchia di case coloniali rivestite di azulejos è patrimonio UNESCO, ed è la patria del reggae brasiliano."
+			]
+		}
 	},
 	"manaus": {
 		"kind": "city",
@@ -61,11 +89,18 @@
 		"region": "Amazonas",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"Named for the Manaós, an indigenous people whose name may mean \"mother of the gods\".",
-			"The rubber boom made it so rich that it built an opera house in 1896 with Italian marble and French glass shipped up the Amazon.",
-			"The Meeting of Waters here has the black Rio Negro and the sandy Solimões running side by side for 6 km without mixing."
-		]
+		"hooks": {
+			"en": [
+				"Named for the Manaós, an indigenous people whose name may mean \"mother of the gods\".",
+				"The rubber boom made it so rich that it built an opera house in 1896 with Italian marble and French glass shipped up the Amazon.",
+				"The Meeting of Waters here has the black Rio Negro and the sandy Solimões running side by side for 6 km without mixing."
+			],
+			"it": [
+				"Prende il nome dai Manaós, un popolo indigeno il cui nome potrebbe significare \"madre degli dèi\".",
+				"Il boom della gomma la rese così ricca che nel 1896 costruì un teatro dell’opera con marmo italiano e vetri francesi, portati fin lì risalendo il Rio delle Amazzoni.",
+				"Qui, all’Incontro delle Acque, le acque nere del Rio Negro e quelle sabbiose del Solimões scorrono affiancate per 6 km senza mescolarsi."
+			]
+		}
 	},
 	"fortaleza": {
 		"kind": "city",
@@ -75,11 +110,18 @@
 		"region": "Ceará",
 		"coastal": true,
 		"position": "north-east",
-		"hooks": [
-			"Portuguese for \"fortress\", after a Dutch fort built on the site in 1649.",
-			"It has about 25 km of urban beach and is one of Brazil’s most visited cities.",
-			"Its forró music and its lace-making are both regional traditions of the north-east."
-		]
+		"hooks": {
+			"en": [
+				"Portuguese for \"fortress\", after a Dutch fort built on the site in 1649.",
+				"It has about 25 km of urban beach and is one of Brazil’s most visited cities.",
+				"Its forró music and its lace-making are both regional traditions of the north-east."
+			],
+			"it": [
+				"In portoghese \"fortezza\", da un forte olandese costruito sul posto nel 1649.",
+				"Ha circa 25 km di spiagge urbane ed è una delle città più visitate del Brasile.",
+				"Il forró e la lavorazione del merletto sono entrambi tradizioni regionali del Nordest."
+			]
+		}
 	},
 	"teresina": {
 		"kind": "city",
@@ -89,11 +131,18 @@
 		"region": "Piauí",
 		"coastal": false,
 		"position": "north-east",
-		"hooks": [
-			"Named in 1852 for Empress Teresa Cristina, wife of Pedro II.",
-			"The only state capital in the north-east that is not on the coast.",
-			"It is one of the hottest cities in Brazil, regularly above 40 °C, and is called the green city for the trees planted to cope with it."
-		]
+		"hooks": {
+			"en": [
+				"Named in 1852 for Empress Teresa Cristina, wife of Pedro II.",
+				"The only state capital in the north-east that is not on the coast.",
+				"It is one of the hottest cities in Brazil, regularly above 40 °C, and is called the green city for the trees planted to cope with it."
+			],
+			"it": [
+				"Battezzata nel 1852 in onore dell’imperatrice Teresa Cristina, moglie di Pietro II.",
+				"L’unica capitale di stato del Nordest che non sia sulla costa.",
+				"È una delle città più calde del Brasile, spesso sopra i 40 °C, e la chiamano la città verde per gli alberi piantati per difendersi dal caldo."
+			]
+		}
 	},
 	"natal": {
 		"kind": "city",
@@ -103,11 +152,18 @@
 		"region": "Rio Grande do Norte",
 		"coastal": true,
 		"position": "north-east",
-		"hooks": [
-			"Portuguese for \"Christmas\" — the Portuguese entered its river on 25 December 1597.",
-			"Its Genipabu dunes are crossed by buggy, and the coast has some of the most reliable wind in Brazil.",
-			"It was a major Allied air base in the Second World War, the shortest hop between the Americas and Africa."
-		]
+		"hooks": {
+			"en": [
+				"Portuguese for \"Christmas\" — the Portuguese entered its river on 25 December 1597.",
+				"Its Genipabu dunes are crossed by buggy, and the coast has some of the most reliable wind in Brazil.",
+				"It was a major Allied air base in the Second World War, the shortest hop between the Americas and Africa."
+			],
+			"it": [
+				"In portoghese \"Natale\": i portoghesi entrarono nel suo fiume il 25 dicembre 1597.",
+				"Le sue dune di Genipabu si attraversano in buggy, e la costa ha alcuni dei venti più costanti del Brasile.",
+				"Nella seconda guerra mondiale fu una grande base aerea alleata, sul tratto più breve tra le Americhe e l’Africa."
+			]
+		}
 	},
 	"joao-pessoa": {
 		"kind": "city",
@@ -117,11 +173,18 @@
 		"region": "Paraíba",
 		"coastal": true,
 		"position": "north-east",
-		"hooks": [
-			"Renamed in 1930 for João Pessoa, a state president whose assassination triggered the revolution that year.",
-			"Ponta do Seixas nearby is the easternmost point of the Americas, so the continent sees the sunrise here first.",
-			"It is one of the greenest cities in the world by tree cover, with a forest reserve in its centre."
-		]
+		"hooks": {
+			"en": [
+				"Renamed in 1930 for João Pessoa, a state president whose assassination triggered the revolution that year.",
+				"Ponta do Seixas nearby is the easternmost point of the Americas, so the continent sees the sunrise here first.",
+				"It is one of the greenest cities in the world by tree cover, with a forest reserve in its centre."
+			],
+			"it": [
+				"Ribattezzata nel 1930 in onore di João Pessoa, presidente dello stato il cui assassinio fece scoppiare la rivoluzione di quell’anno.",
+				"Ponta do Seixas, lì vicino, è il punto più orientale delle Americhe: per questo il sole sorge qui prima che in qualsiasi altro punto del continente.",
+				"È una delle città più verdi del mondo per copertura arborea, con una riserva forestale in pieno centro."
+			]
+		}
 	},
 	"campina-grande": {
 		"kind": "city",
@@ -130,11 +193,18 @@
 		"region": "Paraíba",
 		"coastal": false,
 		"position": "north-east",
-		"hooks": [
-			"\"Great meadow\" — for the clearing where the town began.",
-			"Its São João festival in June claims to be the largest in the world, running the whole month.",
-			"It has been a technology hub since the 1960s, with a strong computing faculty."
-		]
+		"hooks": {
+			"en": [
+				"\"Great meadow\" — for the clearing where the town began.",
+				"Its São João festival in June claims to be the largest in the world, running the whole month.",
+				"It has been a technology hub since the 1960s, with a strong computing faculty."
+			],
+			"it": [
+				"\"Grande prato\": dalla radura in cui nacque la città.",
+				"La sua festa di São João, a giugno, rivendica il titolo di più grande del mondo e dura tutto il mese.",
+				"Dagli anni Sessanta è un polo tecnologico, con una facoltà di informatica di alto livello."
+			]
+		}
 	},
 	"olinda": {
 		"kind": "city",
@@ -143,11 +213,18 @@
 		"region": "Pernambuco",
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"From the Portuguese \"Ó, linda!\" — \"oh, beautiful!\" — which a founder is said to have exclaimed at the view.",
-			"Its baroque churches and steep streets are a UNESCO site.",
-			"Its carnival is played in the streets with giant puppets and has no ticketed parades at all."
-		]
+		"hooks": {
+			"en": [
+				"From the Portuguese \"Ó, linda!\" — \"oh, beautiful!\" — which a founder is said to have exclaimed at the view.",
+				"Its baroque churches and steep streets are a UNESCO site.",
+				"Its carnival is played in the streets with giant puppets and has no ticketed parades at all."
+			],
+			"it": [
+				"Dal portoghese \"Ó, linda!\", \"oh, che bella!\", che uno dei fondatori avrebbe esclamato davanti al panorama.",
+				"Le sue chiese barocche e le sue strade ripide sono patrimonio UNESCO.",
+				"Il suo carnevale si fa per le strade, con pupazzi giganti, e non ha nessuna sfilata a pagamento."
+			]
+		}
 	},
 	"recife": {
 		"kind": "city",
@@ -157,11 +234,18 @@
 		"region": "Pernambuco",
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"Portuguese for \"reef\" — the coral reef along its shore, which shelters the port.",
-			"The Dutch held it from 1630 to 1654 and built the first synagogue in the Americas here.",
-			"It has bridges and canals enough to be called the Brazilian Venice, and frevo and maracatu are its music."
-		]
+		"hooks": {
+			"en": [
+				"Portuguese for \"reef\" — the coral reef along its shore, which shelters the port.",
+				"The Dutch held it from 1630 to 1654 and built the first synagogue in the Americas here.",
+				"It has bridges and canals enough to be called the Brazilian Venice, and frevo and maracatu are its music."
+			],
+			"it": [
+				"In portoghese \"scogliera\": la barriera corallina lungo la riva, che ripara il porto.",
+				"Gli olandesi la tennero dal 1630 al 1654 e vi costruirono la prima sinagoga delle Americhe.",
+				"Ha abbastanza ponti e canali da essere chiamata la Venezia brasiliana, e il frevo e il maracatu sono la sua musica."
+			]
+		}
 	},
 	"jaboatao": {
 		"kind": "city",
@@ -170,11 +254,18 @@
 		"region": "Pernambuco",
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"From a Tupi word for a local tree, the jaboatão.",
-			"Part of the Recife metropolitan area and one of the most populous towns in Pernambuco.",
-			"The 1645 battle of Monte das Tabocas nearby began the revolt that drove the Dutch out of Brazil."
-		]
+		"hooks": {
+			"en": [
+				"From a Tupi word for a local tree, the jaboatão.",
+				"Part of the Recife metropolitan area and one of the most populous towns in Pernambuco.",
+				"The 1645 battle of Monte das Tabocas nearby began the revolt that drove the Dutch out of Brazil."
+			],
+			"it": [
+				"Da una parola tupi per un albero locale, lo jaboatão.",
+				"Fa parte dell’area metropolitana di Recife ed è uno dei comuni più popolosi del Pernambuco.",
+				"La battaglia di Monte das Tabocas, combattuta qui vicino nel 1645, diede inizio alla rivolta che cacciò gli olandesi dal Brasile."
+			]
+		}
 	},
 	"maceio": {
 		"kind": "city",
@@ -184,11 +275,18 @@
 		"region": "Alagoas",
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"From a Tupi word, maçayó, meaning something like \"what covers the marsh\".",
-			"Its beaches have natural pools inside the reef at low tide, with water the colour of the Caribbean.",
-			"Parts of the city have been evacuated since 2018 because salt mining under it caused the ground to sink."
-		]
+		"hooks": {
+			"en": [
+				"From a Tupi word, maçayó, meaning something like \"what covers the marsh\".",
+				"Its beaches have natural pools inside the reef at low tide, with water the colour of the Caribbean.",
+				"Parts of the city have been evacuated since 2018 because salt mining under it caused the ground to sink."
+			],
+			"it": [
+				"Da una parola tupi, maçayó, che significa all’incirca \"ciò che copre la palude\".",
+				"A bassa marea le sue spiagge formano piscine naturali dentro la barriera, con un’acqua color Caraibi.",
+				"Dal 2018 alcune zone della città sono state evacuate, perché l’estrazione di sale nel sottosuolo ha fatto sprofondare il terreno."
+			]
+		}
 	},
 	"aracaju": {
 		"kind": "city",
@@ -197,11 +295,18 @@
 		"region": "Sergipe",
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"From Tupi ara plus caju, \"the cashew tree of the parrots\".",
-			"Brazil’s first planned state capital, laid out on a grid in 1855.",
-			"It is one of the smallest capitals and regularly rates among the best for quality of life."
-		]
+		"hooks": {
+			"en": [
+				"From Tupi ara plus caju, \"the cashew tree of the parrots\".",
+				"One of Brazil’s first planned state capitals, laid out on a grid in 1855.",
+				"It is one of the smallest capitals and regularly rates among the best for quality of life."
+			],
+			"it": [
+				"Dal tupi ara e caju, \"l’anacardio dei pappagalli\".",
+				"Una delle prime capitali di stato pianificate del Brasile, tracciata a scacchiera nel 1855.",
+				"È una delle capitali più piccole e risulta spesso tra le migliori per qualità della vita."
+			]
+		}
 	},
 	"feira-de-santana": {
 		"kind": "city",
@@ -210,11 +315,18 @@
 		"region": "Bahia",
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"\"St Anne’s fair\" — it grew from a cattle market held at a farm chapel.",
-			"It is still the largest cattle market in the north-east and the biggest city in Bahia after Salvador.",
-			"It is called the gateway to the sertão, where the coast gives way to the dry interior."
-		]
+		"hooks": {
+			"en": [
+				"\"St Anne’s fair\" — it grew from a cattle market held at a farm chapel.",
+				"It is still the largest cattle market in the north-east and the biggest city in Bahia after Salvador.",
+				"It is called the gateway to the sertão, where the coast gives way to the dry interior."
+			],
+			"it": [
+				"\"Fiera di sant’Anna\": nacque da un mercato del bestiame che si teneva presso la cappella di una fattoria.",
+				"È ancora il più grande mercato di bestiame del Nordest e la città più grande di Bahia dopo Salvador.",
+				"La chiamano la porta del sertão, dove la costa lascia il posto all’interno arido."
+			]
+		}
 	},
 	"salvador": {
 		"kind": "city",
@@ -224,11 +336,18 @@
 		"region": "Bahia",
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"\"Saviour\" — São Salvador da Bahia de Todos os Santos, founded 1549 as Brazil’s first capital.",
-			"It received more enslaved Africans than any other port in the Americas, which shaped everything about it.",
-			"Candomblé, capoeira and the berimbau all belong here, and its Pelourinho district is a UNESCO site."
-		]
+		"hooks": {
+			"en": [
+				"\"Saviour\" — São Salvador da Bahia de Todos os Santos, founded 1549 as Brazil’s first capital.",
+				"It received more enslaved Africans than any other port in the Americas, which shaped everything about it.",
+				"Candomblé, capoeira and the berimbau all belong here, and its Pelourinho district is a UNESCO site."
+			],
+			"it": [
+				"\"Salvatore\": São Salvador da Bahia de Todos os Santos, fondata nel 1549 come prima capitale del Brasile.",
+				"Ricevette più africani ridotti in schiavitù di qualsiasi altro porto delle Americhe, e questo ne ha segnato ogni aspetto.",
+				"Il candomblé, la capoeira e il berimbau sono di casa qui, e il suo quartiere del Pelourinho è patrimonio UNESCO."
+			]
+		}
 	},
 	"cuiaba": {
 		"kind": "city",
@@ -238,11 +357,18 @@
 		"region": "Mato Grosso",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"From a Bororo word, possibly for a fishing arrow or a local fish.",
-			"It is very close to the geographic centre of South America, marked by an obelisk.",
-			"It is one of the hottest Brazilian cities and the gateway to the northern Pantanal."
-		]
+		"hooks": {
+			"en": [
+				"From a Bororo word, possibly for a fishing arrow or a local fish.",
+				"It is very close to the geographic centre of South America, marked by an obelisk.",
+				"It is one of the hottest Brazilian cities and the gateway to the northern Pantanal."
+			],
+			"it": [
+				"Da una parola bororo, che forse indicava una freccia da pesca o un pesce locale.",
+				"È vicinissima al centro geografico del Sud America, segnato da un obelisco.",
+				"È una delle città più calde del Brasile e la porta d’accesso al Pantanal settentrionale."
+			]
+		}
 	},
 	"brasilia": {
 		"kind": "city",
@@ -253,11 +379,18 @@
 		"capitalOf": "country",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"The feminine Latin form of Brazil — a name proposed as early as 1822 for a capital that took 138 years to build.",
-			"Built in 41 months and inaugurated in 1960, designed by Lúcio Costa and Oscar Niemeyer.",
-			"It is the only city built in the twentieth century to be a UNESCO World Heritage site."
-		]
+		"hooks": {
+			"en": [
+				"The feminine Latin form of Brazil — a name proposed as early as 1822 for a capital that took 138 years to build.",
+				"Built in 41 months and inaugurated in 1960, designed by Lúcio Costa and Oscar Niemeyer.",
+				"It is the only city built in the twentieth century to be a UNESCO World Heritage site."
+			],
+			"it": [
+				"La forma latina femminile di Brasile: un nome proposto già nel 1822 per una capitale che avrebbe impiegato 138 anni a essere costruita.",
+				"Costruita in 41 mesi e inaugurata nel 1960, su progetto di Lúcio Costa e Oscar Niemeyer.",
+				"È l’unica città costruita nel Novecento a essere patrimonio mondiale dell’UNESCO."
+			]
+		}
 	},
 	"goiania": {
 		"kind": "city",
@@ -267,11 +400,18 @@
 		"region": "Goiás",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"From Goiás, the state, plus a Latin ending — a name coined for a planned capital founded in 1933.",
-			"It has one of the highest ratios of green space per resident of any city in the world.",
-			"A radiotherapy source scavenged from an abandoned clinic here in 1987 caused one of the worst radiological accidents ever."
-		]
+		"hooks": {
+			"en": [
+				"From Goiás, the state, plus a Latin ending — a name coined for a planned capital founded in 1933.",
+				"It has one of the highest ratios of green space per resident of any city in the world.",
+				"A radiotherapy source scavenged from an abandoned clinic here in 1987 caused one of the worst radiological accidents ever."
+			],
+			"it": [
+				"Da Goiás, lo stato, più una desinenza latina: un nome coniato per una capitale pianificata fondata nel 1933.",
+				"È tra le città al mondo con più verde pubblico per abitante.",
+				"Nel 1987 una sorgente per radioterapia sottratta a una clinica abbandonata causò qui uno dei peggiori incidenti radiologici di sempre."
+			]
+		}
 	},
 	"uberlandia": {
 		"kind": "city",
@@ -280,11 +420,18 @@
 		"region": "Minas Gerais",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"From Latin uber, fertile, plus landia — \"fertile land\".",
-			"It is a logistics hub at the centre of Brazil’s agricultural belt.",
-			"Its cerrado soil was thought useless until soil science made it farmable in the 1970s, which transformed Brazilian agriculture."
-		]
+		"hooks": {
+			"en": [
+				"From Latin uber, fertile, plus landia — \"fertile land\".",
+				"It is a logistics hub at the centre of Brazil’s agricultural belt.",
+				"Its cerrado soil was thought useless until soil science made it farmable in the 1970s, which transformed Brazilian agriculture."
+			],
+			"it": [
+				"Dal latino uber, \"fertile\", più landia: \"terra fertile\".",
+				"È un nodo logistico al centro della fascia agricola del Brasile.",
+				"Il suo suolo di cerrado era considerato inservibile finché negli anni Settanta la scienza del suolo non lo rese coltivabile, trasformando l’agricoltura brasiliana."
+			]
+		}
 	},
 	"belo-horizonte": {
 		"kind": "city",
@@ -294,11 +441,18 @@
 		"region": "Minas Gerais",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"\"Beautiful horizon\" — for the ring of mountains around it.",
-			"Brazil’s first planned modern city, laid out in 1897 on a grid with diagonals.",
-			"Niemeyer’s first major works are at Pampulha here, a UNESCO site, including a church the church refused to consecrate for fourteen years."
-		]
+		"hooks": {
+			"en": [
+				"\"Beautiful horizon\" — for the ring of mountains around it.",
+				"Brazil’s first planned modern city, laid out in 1897 on a grid with diagonals.",
+				"Niemeyer’s first major works are at Pampulha here, a UNESCO site, including a church the church refused to consecrate for fourteen years."
+			],
+			"it": [
+				"\"Bell’orizzonte\": per la corona di montagne che la circonda.",
+				"La prima città moderna pianificata del Brasile, tracciata nel 1897 a scacchiera, con strade diagonali.",
+				"A Pampulha, patrimonio UNESCO, ci sono le prime grandi opere di Niemeyer, tra cui una chiesa che la Chiesa si rifiutò di consacrare per quattordici anni."
+			]
+		}
 	},
 	"vitoria": {
 		"kind": "city",
@@ -308,11 +462,18 @@
 		"region": "Espírito Santo",
 		"coastal": true,
 		"position": "south-east",
-		"hooks": [
-			"\"Victory\", named for a win over indigenous forces in 1551.",
-			"It is on an island, and its port ships the iron ore that comes by rail from Minas Gerais.",
-			"Its Convento da Penha stands on a rock 154 m above the sea and has been a pilgrimage site since 1558."
-		]
+		"hooks": {
+			"en": [
+				"\"Victory\", named for a win over indigenous forces in 1551.",
+				"It is on an island, and its port ships the iron ore that comes by rail from Minas Gerais.",
+				"Its Convento da Penha stands on a rock 154 m above the sea and has been a pilgrimage site since 1558."
+			],
+			"it": [
+				"\"Vittoria\", per una battaglia vinta contro le forze indigene nel 1551.",
+				"Sorge su un’isola, e il suo porto spedisce il ferro che arriva in treno dal Minas Gerais.",
+				"Il suo Convento da Penha sorge su una roccia a 154 m sul mare ed è meta di pellegrinaggi dal 1558."
+			]
+		}
 	},
 	"campo-grande": {
 		"kind": "city",
@@ -322,11 +483,18 @@
 		"region": "Mato Grosso do Sul",
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"\"Great field\" — for the open grassland it was founded on in 1872.",
-			"It is called the brown city for the red earth its streets were cut from.",
-			"It has the second-largest Japanese-descended community in Brazil and a large Paraguayan and Lebanese presence."
-		]
+		"hooks": {
+			"en": [
+				"\"Great field\" — for the open grassland it was founded on in 1872.",
+				"It is called the brown city for the red earth its streets were cut from.",
+				"It has the second-largest Japanese-descended community in Brazil and a large Paraguayan and Lebanese presence."
+			],
+			"it": [
+				"\"Grande campo\": per la prateria aperta su cui fu fondata nel 1872.",
+				"La chiamano la città bruna per la terra rossa in cui furono tracciate le sue strade.",
+				"Ha la seconda comunità di origine giapponese del Brasile e una forte presenza paraguaiana e libanese."
+			]
+		}
 	},
 	"ribeirao-preto": {
 		"kind": "city",
@@ -335,11 +503,18 @@
 		"region": "São Paulo",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"\"Black stream\" — for a creek darkened by vegetation.",
-			"It was the centre of the coffee boom and was called the Brazilian California.",
-			"It now produces a large share of Brazil’s sugar and ethanol, and its Pinguim brewery is a local institution."
-		]
+		"hooks": {
+			"en": [
+				"\"Black stream\" — for a creek darkened by vegetation.",
+				"It was the centre of the coffee boom and was called the Brazilian California.",
+				"It now produces a large share of Brazil’s sugar and ethanol, and its Pinguim brewery is a local institution."
+			],
+			"it": [
+				"\"Ruscello nero\": per un torrente scurito dalla vegetazione.",
+				"Fu il centro del boom del caffè e la chiamavano la California brasiliana.",
+				"Oggi produce una parte importante dello zucchero e dell’etanolo del Brasile, e la sua birreria Pinguim è un’istituzione cittadina."
+			]
+		}
 	},
 	"juiz-de-fora": {
 		"kind": "city",
@@ -348,11 +523,18 @@
 		"region": "Minas Gerais",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"\"Outside judge\" — a colonial official who heard cases in towns without their own magistrate lived here.",
-			"The first macadamised road in Brazil was built through it in 1861.",
-			"It had Latin America’s first hydroelectric plant, Marmelos, opened in 1889."
-		]
+		"hooks": {
+			"en": [
+				"\"Outside judge\" — a colonial official who heard cases in towns without their own magistrate lived here.",
+				"The first macadamised road in Brazil was built through it in 1861.",
+				"It had Latin America’s first hydroelectric plant, Marmelos, opened in 1889."
+			],
+			"it": [
+				"\"Giudice di fuori\": qui viveva un funzionario coloniale che giudicava le cause nei paesi senza un magistrato proprio.",
+				"La prima strada in macadam del Brasile, costruita nel 1861, passava di qui.",
+				"Ebbe la prima centrale idroelettrica dell’America Latina, Marmelos, inaugurata nel 1889."
+			]
+		}
 	},
 	"volta-redonda": {
 		"kind": "city",
@@ -361,11 +543,18 @@
 		"region": "Rio de Janeiro",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"\"Round bend\" — for a curve in the Paraíba do Sul river.",
-			"Brazil’s first integrated steel mill was built here in 1941, funded in exchange for Brazil joining the Allies.",
-			"The town grew entirely around that plant, which is still one of Latin America’s largest."
-		]
+		"hooks": {
+			"en": [
+				"\"Round bend\" — for a curve in the Paraíba do Sul river.",
+				"Brazil’s first integrated steel mill was built here in 1941, funded in exchange for Brazil joining the Allies.",
+				"The town grew entirely around that plant, which is still one of Latin America’s largest."
+			],
+			"it": [
+				"\"Ansa rotonda\": per una curva del fiume Paraíba do Sul.",
+				"Qui nel 1941 fu costruita la prima acciaieria a ciclo integrale del Brasile, finanziata in cambio dell’ingresso del Brasile tra gli Alleati.",
+				"La città è cresciuta interamente attorno a quell’impianto, che è ancora uno dei più grandi dell’America Latina."
+			]
+		}
 	},
 	"americana": {
 		"kind": "city",
@@ -374,11 +563,18 @@
 		"region": "São Paulo",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"Named for Confederate refugees from the American South who settled here after 1865.",
-			"Their descendants still hold a Confederado festival, and some graves carry English inscriptions.",
-			"The town became a textile centre, and its flag carries a reference to that founding."
-		]
+		"hooks": {
+			"en": [
+				"Named for Confederate refugees from the American South who settled here after 1865.",
+				"Their descendants still hold a Confederado festival, and some graves carry English inscriptions.",
+				"The town became a textile centre, and its flag carries a reference to that founding."
+			],
+			"it": [
+				"Prende il nome dai profughi confederati del Sud degli Stati Uniti che si stabilirono qui dopo il 1865.",
+				"I loro discendenti celebrano ancora una festa dei Confederados, e su alcune tombe ci sono iscrizioni in inglese.",
+				"La città divenne un centro tessile, e la sua bandiera contiene un richiamo a quella fondazione."
+			]
+		}
 	},
 	"nova-iguacu": {
 		"kind": "city",
@@ -387,11 +583,18 @@
 		"region": "Rio de Janeiro",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"\"New Iguaçu\" — iguaçu is Tupi for \"great water\".",
-			"It was Brazil’s orange capital in the 1930s, exporting across the Atlantic.",
-			"It is now part of the Rio de Janeiro metropolitan area."
-		]
+		"hooks": {
+			"en": [
+				"\"New Iguaçu\" — iguaçu is Tupi for \"great water\".",
+				"It was Brazil’s orange capital in the 1930s, exporting across the Atlantic.",
+				"It is now part of the Rio de Janeiro metropolitan area."
+			],
+			"it": [
+				"\"Nuova Iguaçu\": iguaçu in tupi significa \"grande acqua\".",
+				"Negli anni Trenta era la capitale brasiliana delle arance, che esportava oltre l’Atlantico.",
+				"Oggi fa parte dell’area metropolitana di Rio de Janeiro."
+			]
+		}
 	},
 	"duque-de-caxias": {
 		"kind": "city",
@@ -400,11 +603,18 @@
 		"region": "Rio de Janeiro",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"Named for the Duke of Caxias, the patron of the Brazilian army.",
-			"It holds one of Brazil’s largest oil refineries.",
-			"Its economy is one of the largest in Rio de Janeiro state despite deep inequality."
-		]
+		"hooks": {
+			"en": [
+				"Named for the Duke of Caxias, the patron of the Brazilian army.",
+				"It holds one of Brazil’s largest oil refineries.",
+				"Its economy is one of the largest in Rio de Janeiro state despite deep inequality."
+			],
+			"it": [
+				"Prende il nome dal duca di Caxias, patrono dell’esercito brasiliano.",
+				"Ospita una delle più grandi raffinerie di petrolio del Brasile.",
+				"La sua economia è tra le maggiori dello stato di Rio de Janeiro, nonostante profonde disuguaglianze."
+			]
+		}
 	},
 	"niteroi": {
 		"kind": "city",
@@ -413,11 +623,18 @@
 		"region": "Rio de Janeiro",
 		"coastal": true,
 		"position": "south-east",
-		"hooks": [
-			"From Tupi nhiteroi, \"hidden water\" or \"water that hides\".",
-			"It faces Rio across Guanabara Bay, joined by a 13 km bridge.",
-			"Its Niemeyer contemporary art museum, a flying-saucer shape on a clifftop, is one of his best-known buildings."
-		]
+		"hooks": {
+			"en": [
+				"From Tupi nhiteroi, \"hidden water\" or \"water that hides\".",
+				"It faces Rio across Guanabara Bay, joined by a 13 km bridge.",
+				"Its Niemeyer contemporary art museum, a flying-saucer shape on a clifftop, is one of his best-known buildings."
+			],
+			"it": [
+				"Dal tupi nhiteroi, \"acqua nascosta\" o \"acqua che si nasconde\".",
+				"Guarda Rio dall’altra parte della baia di Guanabara, a cui è unita da un ponte di 13 km.",
+				"Il suo museo d’arte contemporanea firmato da Niemeyer, un disco volante in cima a una scogliera, è uno degli edifici più noti dell’architetto."
+			]
+		}
 	},
 	"rio-de-janeiro": {
 		"kind": "city",
@@ -426,11 +643,18 @@
 		"population1950": 2950000,
 		"coastal": true,
 		"position": "south-east",
-		"hooks": [
-			"\"January river\" — Portuguese sailors entered Guanabara Bay on 1 January 1502 and took it for a river mouth, which it is not.",
-			"It was the capital of Brazil for nearly two centuries, and briefly the capital of the entire Portuguese empire when the court fled Napoleon in 1808.",
-			"Christ the Redeemer was finished in 1931, and the city's carnival is the largest in the world."
-		]
+		"hooks": {
+			"en": [
+				"\"January river\" — Portuguese sailors entered Guanabara Bay on 1 January 1502 and took it for a river mouth, which it is not.",
+				"It was the capital of Brazil for nearly two centuries, and briefly the capital of the entire Portuguese empire when the court fled Napoleon in 1808.",
+				"Christ the Redeemer was finished in 1931, and the city's carnival is the largest in the world."
+			],
+			"it": [
+				"\"Fiume di gennaio\": il 1º gennaio 1502 i navigatori portoghesi entrarono nella baia di Guanabara e la presero per la foce di un fiume, che non è.",
+				"Fu capitale del Brasile per quasi due secoli, e per un breve periodo dell’intero impero portoghese, quando nel 1808 la corte fuggì da Napoleone.",
+				"Il Cristo Redentore fu completato nel 1931, e il carnevale della città è il più grande del mondo."
+			]
+		}
 	},
 	"campinas": {
 		"kind": "city",
@@ -440,11 +664,18 @@
 		"region": "São Paulo",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"\"Little fields\" — for the grassy clearings in the forest where it was founded.",
-			"Its university, Unicamp, is one of the most productive research institutions in Latin America.",
-			"The region around it produces a large share of Brazil’s high-technology output."
-		]
+		"hooks": {
+			"en": [
+				"\"Little fields\" — for the grassy clearings in the forest where it was founded.",
+				"Its university, Unicamp, is one of the most productive research institutions in Latin America.",
+				"The region around it produces a large share of Brazil’s high-technology output."
+			],
+			"it": [
+				"\"Piccoli campi\": per le radure erbose nella foresta dove fu fondata.",
+				"La sua università, l’Unicamp, è uno degli istituti di ricerca più produttivi dell’America Latina.",
+				"La regione intorno produce una quota importante dell’alta tecnologia brasiliana."
+			]
+		}
 	},
 	"sao-jose-dos-campos": {
 		"kind": "city",
@@ -453,11 +684,18 @@
 		"region": "São Paulo",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"\"St Joseph of the fields.\"",
-			"Embraer, the world’s third-largest aircraft maker, was founded and is based here.",
-			"Brazil’s aerospace institute and space research agency are also in the city."
-		]
+		"hooks": {
+			"en": [
+				"\"St Joseph of the fields.\"",
+				"Embraer, the world’s third-largest aircraft maker, was founded and is based here.",
+				"Brazil’s aerospace institute and space research agency are also in the city."
+			],
+			"it": [
+				"\"San Giuseppe dei campi\".",
+				"Qui è nata e ha sede Embraer, il terzo costruttore di aerei al mondo.",
+				"In città hanno sede anche l’istituto aerospaziale e l’agenzia di ricerca spaziale del Brasile."
+			]
+		}
 	},
 	"jundiai": {
 		"kind": "city",
@@ -466,11 +704,18 @@
 		"region": "São Paulo",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"From a Tupi word, yundiá, a species of catfish, plus a river word.",
-			"Its Serra do Japi is one of the largest remaining patches of Atlantic forest in the state.",
-			"It is a grape and wine town, with an Italian-descended farming community."
-		]
+		"hooks": {
+			"en": [
+				"From a Tupi word, yundiá, a species of catfish, plus a river word.",
+				"Its Serra do Japi is one of the largest remaining patches of Atlantic forest in the state.",
+				"It is a grape and wine town, with an Italian-descended farming community."
+			],
+			"it": [
+				"Da una parola tupi, yundiá, una specie di pesce gatto, più una parola che indica il fiume.",
+				"La sua Serra do Japi è uno dei più grandi lembi di foresta atlantica rimasti nello stato.",
+				"È una città di uva e di vino, con una comunità contadina di origine italiana."
+			]
+		}
 	},
 	"londrina": {
 		"kind": "city",
@@ -479,11 +724,18 @@
 		"region": "Paraná",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"\"Little London\" — founded in 1930 by a British land company developing coffee country.",
-			"It went from forest to city in a single generation.",
-			"Its cathedral is a modernist cone, and the city is the second largest in Paraná."
-		]
+		"hooks": {
+			"en": [
+				"\"Little London\" — founded in 1930 by a British land company developing coffee country.",
+				"It went from forest to city in a single generation.",
+				"Its cathedral is a modernist cone, and the city is the second largest in Paraná."
+			],
+			"it": [
+				"\"Piccola Londra\": fondata nel 1930 da una compagnia fondiaria britannica che colonizzava le terre del caffè.",
+				"Passò da foresta a città nel giro di una sola generazione.",
+				"La sua cattedrale è un cono modernista, e la città è la seconda del Paraná per grandezza."
+			]
+		}
 	},
 	"sorocaba": {
 		"kind": "city",
@@ -492,11 +744,18 @@
 		"region": "São Paulo",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"From Tupi soroc-aba, \"torn earth\" or \"cut in the ground\".",
-			"It was the end of the mule trail from the south, and its animal fair was the largest in colonial Brazil.",
-			"It is now an industrial city and one of the most cycle-friendly in the country."
-		]
+		"hooks": {
+			"en": [
+				"From Tupi soroc-aba, \"torn earth\" or \"cut in the ground\".",
+				"It was the end of the mule trail from the south, and its animal fair was the largest in colonial Brazil.",
+				"It is now an industrial city and one of the most cycle-friendly in the country."
+			],
+			"it": [
+				"Dal tupi soroc-aba, \"terra strappata\" o \"taglio nel terreno\".",
+				"Qui finiva la pista dei muli che veniva dal sud, e la sua fiera di animali era la più grande del Brasile coloniale.",
+				"Oggi è una città industriale e una delle più a misura di bicicletta del paese."
+			]
+		}
 	},
 	"sao-paulo": {
 		"kind": "city",
@@ -505,11 +764,18 @@
 		"population1950": 2334000,
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"For St Paul: Jesuits founded a college here on the day of his conversion in 1554.",
-			"The largest city in the southern hemisphere, and its metropolitan economy is bigger than most countries'.",
-			"It has the largest Japanese population outside Japan, and its coffee wealth in the 1800s built the railways and then the industry."
-		]
+		"hooks": {
+			"en": [
+				"For St Paul: Jesuits founded a college here on the day of his conversion in 1554.",
+				"The largest city in the southern hemisphere, and its metropolitan economy is bigger than most countries'.",
+				"It has the largest Japanese population outside Japan, and its coffee wealth in the 1800s built the railways and then the industry."
+			],
+			"it": [
+				"Prende il nome da san Paolo: i gesuiti vi fondarono un collegio nel giorno della sua conversione, nel 1554.",
+				"La città più grande dell’emisfero australe, con un’economia metropolitana più grande di quella della maggior parte dei paesi.",
+				"Ha la più grande popolazione giapponese fuori dal Giappone, e nell’Ottocento la ricchezza del caffè vi costruì prima le ferrovie e poi l’industria."
+			]
+		}
 	},
 	"santo-andre": {
 		"kind": "city",
@@ -518,11 +784,18 @@
 		"region": "São Paulo",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"Named for St Andrew, after a village founded in 1553 by João Ramalho.",
-			"It is one of the ABC towns, the industrial belt where Brazil’s car industry and its trade union movement both grew.",
-			"Lula led the strikes here in 1979-80 that helped end the military dictatorship."
-		]
+		"hooks": {
+			"en": [
+				"Named for St Andrew, after a village founded in 1553 by João Ramalho.",
+				"It is one of the ABC towns, the industrial belt where Brazil’s car industry and its trade union movement both grew.",
+				"Lula led the strikes here in 1979-80 that helped end the military dictatorship."
+			],
+			"it": [
+				"Prende il nome da sant’Andrea, come il villaggio fondato nel 1553 da João Ramalho.",
+				"È una delle città dell’ABC, la cintura industriale dove crebbero sia l’industria automobilistica sia il movimento sindacale brasiliano.",
+				"Qui Lula guidò gli scioperi del 1979-80 che contribuirono a porre fine alla dittatura militare."
+			]
+		}
 	},
 	"santos": {
 		"kind": "city",
@@ -532,11 +805,18 @@
 		"region": "São Paulo",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"\"Saints\" — from Todos os Santos, All Saints, the name of its founding hospital.",
-			"It is the largest port in Latin America and ships most of Brazil’s coffee and soy.",
-			"Pelé played his entire Brazilian career at Santos FC, and the city has a beachfront garden 5 km long."
-		]
+		"hooks": {
+			"en": [
+				"\"Saints\" — from Todos os Santos, All Saints, the name of its founding hospital.",
+				"It is the largest port in Latin America and ships most of Brazil’s coffee and soy.",
+				"Pelé played his entire Brazilian career at Santos FC, and the city has a beachfront garden 5 km long."
+			],
+			"it": [
+				"\"Santi\": da Todos os Santos, Tutti i Santi, il nome dell’ospedale da cui nacque la città.",
+				"È il più grande porto dell’America Latina e da qui parte la maggior parte del caffè e della soia del Brasile.",
+				"Pelé giocò tutta la sua carriera brasiliana nel Santos FC, e la città ha un giardino lungo 5 km sul lungomare."
+			]
+		}
 	},
 	"curitiba": {
 		"kind": "city",
@@ -546,11 +826,18 @@
 		"region": "Paraná",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"From Tupi kurí tyba, \"many pine trees\" — the araucaria pine that is the state’s symbol.",
-			"It invented bus rapid transit in 1974, an idea now copied in hundreds of cities.",
-			"Its Oscar Niemeyer Museum is shaped like a giant eye on a pedestal."
-		]
+		"hooks": {
+			"en": [
+				"From Tupi kurí tyba, \"many pine trees\" — the araucaria pine that is the state’s symbol.",
+				"It invented bus rapid transit in 1974, an idea now copied in hundreds of cities.",
+				"Its Oscar Niemeyer Museum is shaped like a giant eye on a pedestal."
+			],
+			"it": [
+				"Dal tupi kurí tyba, \"molti pini\": l’araucaria, il pino simbolo dello stato.",
+				"Nel 1974 ha inventato il sistema di autobus rapidi su corsia dedicata, un’idea oggi copiata in centinaia di città.",
+				"Il suo Museo Oscar Niemeyer ha la forma di un occhio gigante su un piedistallo."
+			]
+		}
 	},
 	"foz-do-iguacu": {
 		"kind": "city",
@@ -559,11 +846,18 @@
 		"region": "Paraná",
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"\"Mouth of the Iguaçu\" — where that river meets the Paraná.",
-			"The Iguaçu falls here have 275 separate drops and are a UNESCO site.",
-			"The Itaipu dam just upstream was the largest hydroelectric plant in the world until Three Gorges."
-		]
+		"hooks": {
+			"en": [
+				"\"Mouth of the Iguaçu\" — where that river meets the Paraná.",
+				"The Iguaçu falls here have 275 separate drops and are a UNESCO site.",
+				"The Itaipu dam just upstream was the largest hydroelectric plant in the world until Three Gorges."
+			],
+			"it": [
+				"\"Foce dell’Iguaçu\": dove quel fiume incontra il Paraná.",
+				"Le cascate dell’Iguaçu, qui, contano 275 salti distinti e sono patrimonio UNESCO.",
+				"La diga di Itaipu, poco più a monte, è stata la centrale idroelettrica più grande del mondo fino alle Tre Gole."
+			]
+		}
 	},
 	"sao-jose-dos-pinhais": {
 		"kind": "city",
@@ -572,11 +866,18 @@
 		"region": "Paraná",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"\"St Joseph of the pine groves.\"",
-			"It holds Curitiba’s international airport and several car plants.",
-			"Its colonial farms were settled by Poles and Ukrainians in the 1870s, whose descendants still hold festivals there."
-		]
+		"hooks": {
+			"en": [
+				"\"St Joseph of the pine groves.\"",
+				"It holds Curitiba’s international airport and several car plants.",
+				"Its colonial farms were settled by Poles and Ukrainians in the 1870s, whose descendants still hold festivals there."
+			],
+			"it": [
+				"\"San Giuseppe delle pinete\".",
+				"Ospita l’aeroporto internazionale di Curitiba e diverse fabbriche di automobili.",
+				"Le sue fattorie coloniali furono popolate da polacchi e ucraini negli anni Settanta dell’Ottocento, e i loro discendenti vi celebrano ancora le loro feste."
+			]
+		}
 	},
 	"joinville": {
 		"kind": "city",
@@ -586,11 +887,18 @@
 		"region": "Santa Catarina",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"Named for the Prince of Joinville, who received the land as a dowry when he married a Brazilian princess.",
-			"It was settled by Germans and Swiss from 1851 and is the largest city in Santa Catarina.",
-			"It hosts the largest dance festival in the world, and the Bolshoi’s only school outside Russia."
-		]
+		"hooks": {
+			"en": [
+				"Named for the Prince of Joinville, who received the land as a dowry when he married a Brazilian princess.",
+				"It was settled by Germans and Swiss from 1851 and is the largest city in Santa Catarina.",
+				"It hosts the largest dance festival in the world, and the Bolshoi’s only school outside Russia."
+			],
+			"it": [
+				"Prende il nome dal principe di Joinville, che ricevette queste terre in dote sposando una principessa brasiliana.",
+				"Colonizzata da tedeschi e svizzeri dal 1851, è la città più grande di Santa Catarina.",
+				"Ospita il più grande festival di danza del mondo e l’unica scuola del Bolshoi fuori dalla Russia."
+			]
+		}
 	},
 	"florianopolis": {
 		"kind": "city",
@@ -600,11 +908,18 @@
 		"region": "Santa Catarina",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"Renamed in 1894 for Floriano Peixoto, Brazil’s second president — it was Desterro before.",
-			"It is mostly an island with 42 beaches, and is a centre of Brazilian technology start-ups.",
-			"Its Hercílio Luz bridge, built 1926, is one of the longest suspension bridges in the world with an eyebar chain."
-		]
+		"hooks": {
+			"en": [
+				"Renamed in 1894 for Floriano Peixoto, Brazil’s second president — it was Desterro before.",
+				"It is mostly an island with 42 beaches, and is a centre of Brazilian technology start-ups.",
+				"Its Hercílio Luz bridge, built 1926, is one of the longest suspension bridges in the world with an eyebar chain."
+			],
+			"it": [
+				"Ribattezzata nel 1894 in onore di Floriano Peixoto, secondo presidente del Brasile: prima si chiamava Desterro.",
+				"È per lo più un’isola, con 42 spiagge, ed è un centro delle start-up tecnologiche brasiliane.",
+				"Il suo ponte Hercílio Luz, del 1926, è uno dei ponti sospesi a catene di barre a occhio più lunghi del mondo."
+			]
+		}
 	},
 	"novo-hamburgo": {
 		"kind": "city",
@@ -613,11 +928,18 @@
 		"region": "Rio Grande do Sul",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"\"New Hamburg\" — founded by German settlers who arrived from 1824.",
-			"It was the centre of Brazil’s footwear industry, which exported worldwide.",
-			"Its shoe fair and shoe museum are both the largest in Latin America."
-		]
+		"hooks": {
+			"en": [
+				"\"New Hamburg\" — founded by German settlers who arrived from 1824.",
+				"It was the centre of Brazil’s footwear industry, which exported worldwide.",
+				"Its shoe fair and shoe museum are both the largest in Latin America."
+			],
+			"it": [
+				"\"Nuova Amburgo\": fondata da coloni tedeschi arrivati a partire dal 1824.",
+				"Fu il centro dell’industria calzaturiera brasiliana, che esportava in tutto il mondo.",
+				"La sua fiera della calzatura e il suo museo della scarpa sono entrambi i più grandi dell’America Latina."
+			]
+		}
 	},
 	"canoas": {
 		"kind": "city",
@@ -626,11 +948,18 @@
 		"region": "Rio Grande do Sul",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"\"Canoes\" — for the dugouts used on the streams around it.",
-			"It holds one of Brazil’s largest oil refineries and a major air force base.",
-			"It is part of the Porto Alegre metropolitan area."
-		]
+		"hooks": {
+			"en": [
+				"\"Canoes\" — for the dugouts used on the streams around it.",
+				"It holds one of Brazil’s largest oil refineries and a major air force base.",
+				"It is part of the Porto Alegre metropolitan area."
+			],
+			"it": [
+				"\"Canoe\": per le piroghe usate sui corsi d’acqua dei dintorni.",
+				"Ospita una delle più grandi raffinerie di petrolio del Brasile e un’importante base dell’aeronautica militare.",
+				"Fa parte dell’area metropolitana di Porto Alegre."
+			]
+		}
 	},
 	"porto-alegre": {
 		"kind": "city",
@@ -640,10 +969,17 @@
 		"region": "Rio Grande do Sul",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"\"Happy harbour\" — named in 1772 for the pleasantness of its site on the Guaíba.",
-			"It is the heart of gaúcho culture, sharing the pampas traditions of Uruguay and Argentina.",
-			"It invented participatory budgeting in 1989, letting residents vote on public spending, which is now used worldwide."
-		]
+		"hooks": {
+			"en": [
+				"\"Happy harbour\" — named in 1772 for the pleasantness of its site on the Guaíba.",
+				"It is the heart of gaúcho culture, sharing the pampas traditions of Uruguay and Argentina.",
+				"It invented participatory budgeting in 1989, letting residents vote on public spending, which is now used worldwide."
+			],
+			"it": [
+				"\"Porto allegro\": battezzata nel 1772 per l’amenità della sua posizione sul Guaíba.",
+				"È il cuore della cultura gaúcha, che condivide le tradizioni delle pampas con Uruguay e Argentina.",
+				"Nel 1989 ha inventato il bilancio partecipativo, che lascia ai cittadini il voto sulla spesa pubblica e oggi si usa in tutto il mondo."
+			]
+		}
 	}
 }

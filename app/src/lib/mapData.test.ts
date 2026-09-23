@@ -14,6 +14,7 @@ import {
 	listMapIds,
 	serializeMapIndex
 } from '../../../data/scripts/build-map-index';
+import { hooksForCountry, storedHooksFor } from '../../../data/scripts/factsHooks';
 import { mapGroups } from './mapCatalog';
 
 interface TargetLike {
@@ -160,6 +161,28 @@ describe('map data integrity - every committed map', () => {
 		const facts = JSON.parse(readFileSync(factsFile, 'utf8')) as Record<string, unknown>;
 		const targetIds = loadMap(id).targets.map((t) => t.id);
 		expect(Object.keys(facts).sort()).toEqual([...targetIds].sort());
+	});
+
+	// FT-50: the sentences a map ships are the ones its country file holds.
+	// Translating a country is an edit to data/facts/ and then a rebuild -
+	// `npm run refresh-facts-hooks` - and forgetting the rebuild would leave
+	// the Italian written but never shown, with nothing else failing.
+	it.each(mapIds)('%s: ships the sentences its country file holds', (id) => {
+		const { country } = JSON.parse(
+			readFileSync(path.join(DEFAULT_MAPS_DIR, id, 'map.json'), 'utf8')
+		) as { country?: string };
+		const authored = hooksForCountry(country);
+		const facts = JSON.parse(
+			readFileSync(path.join(DEFAULT_MAPS_DIR, id, 'facts.json'), 'utf8')
+		) as Record<string, { kind?: 'region' | 'city'; hooks?: unknown }>;
+		const stale = Object.entries(facts)
+			.filter(
+				([targetId, fact]) =>
+					JSON.stringify(fact.hooks) !==
+					JSON.stringify(storedHooksFor(authored[targetId], fact.kind))
+			)
+			.map(([targetId]) => targetId);
+		expect(stale).toEqual([]);
 	});
 
 	// FT-36: an authored name-fact whose id matches no target is a sentence

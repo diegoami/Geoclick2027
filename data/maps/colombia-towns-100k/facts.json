@@ -6,11 +6,18 @@
 		"region": "La Guajira",
 		"coastal": true,
 		"position": "north-east",
-		"hooks": [
-			"\"River of the axe\" — hacha is an axe, from a story about one found or lost at the river mouth.",
-			"Founded in 1535 for pearl fishing, using enslaved divers.",
-			"It is the capital of La Guajira and the gateway to Wayuu territory."
-		]
+		"hooks": {
+			"en": [
+				"\"River of the axe\" — hacha is an axe, from a story about one found or lost at the river mouth.",
+				"Founded in 1535 for pearl fishing, using enslaved divers.",
+				"It is the capital of La Guajira and the gateway to Wayuu territory."
+			],
+			"it": [
+				"\"Fiume dell’ascia\": hacha è l’ascia, per una storia su un’ascia trovata o perduta alla foce.",
+				"Fondata nel 1535 per la pesca delle perle, affidata a tuffatori ridotti in schiavitù.",
+				"È il capoluogo della Guajira e la porta del territorio wayuu."
+			]
+		}
 	},
 	"santa-marta": {
 		"kind": "city",
@@ -19,11 +26,18 @@
 		"region": "Magdalena",
 		"coastal": true,
 		"position": "north-east",
-		"hooks": [
-			"Named for St Martha, on whose feast day it was founded in 1525.",
-			"The oldest surviving city in Colombia and one of the oldest in South America.",
-			"Bolívar died just outside it in 1830, at a farm now preserved as a museum."
-		]
+		"hooks": {
+			"en": [
+				"Named for St Martha, on whose feast day it was founded in 1525.",
+				"The oldest surviving city in Colombia and one of the oldest in South America.",
+				"Bolívar died just outside it in 1830, at a farm now preserved as a museum."
+			],
+			"it": [
+				"Prende il nome da santa Marta, nel giorno della cui festa fu fondata nel 1525.",
+				"La più antica città della Colombia ancora esistente e una delle più antiche del Sud America.",
+				"Bolívar morì appena fuori città nel 1830, in una tenuta oggi conservata come museo."
+			]
+		}
 	},
 	"cienaga": {
 		"kind": "city",
@@ -32,11 +46,18 @@
 		"region": "Magdalena",
 		"coastal": true,
 		"position": "north",
-		"hooks": [
-			"Spanish for \"marsh\" — for the Ciénaga Grande, Colombia’s largest coastal lagoon.",
-			"The 1928 banana workers’ massacre happened in its square; García Márquez put it in One Hundred Years of Solitude.",
-			"Its lagoon has stilt villages where houses stand directly in the water."
-		]
+		"hooks": {
+			"en": [
+				"Spanish for \"marsh\" — for the Ciénaga Grande, Colombia’s largest coastal lagoon.",
+				"The 1928 banana workers’ massacre happened in its square; García Márquez put it in One Hundred Years of Solitude.",
+				"Its lagoon has stilt villages where houses stand directly in the water."
+			],
+			"it": [
+				"In spagnolo \"palude\": per la Ciénaga Grande, la più grande laguna costiera della Colombia.",
+				"Nella sua piazza avvenne il massacro dei lavoratori delle bananiere del 1928; García Márquez lo raccontò in Cent’anni di solitudine.",
+				"Nella sua laguna ci sono villaggi su palafitte, con le case piantate direttamente nell’acqua."
+			]
+		}
 	},
 	"barranquilla": {
 		"kind": "city",
@@ -46,11 +67,18 @@
 		"region": "Atlántico",
 		"coastal": true,
 		"position": "north",
-		"hooks": [
-			"From barranca, a ravine or bluff — the little bluffs above the Magdalena.",
-			"Its carnival is the second largest in the world after Rio’s and a UNESCO heritage item.",
-			"Shakira was born here, and the city had Latin America’s first commercial airline, founded in 1919."
-		]
+		"hooks": {
+			"en": [
+				"From barranca, a ravine or bluff — the little bluffs above the Magdalena.",
+				"Its carnival is the second largest in the world after Rio’s and a UNESCO heritage item.",
+				"Shakira was born here, and the city had Latin America’s first commercial airline, founded in 1919."
+			],
+			"it": [
+				"Da barranca, un burrone o una scarpata: le piccole scarpate sopra il Magdalena.",
+				"Il suo carnevale è il secondo al mondo per grandezza dopo quello di Rio ed è patrimonio UNESCO.",
+				"Qui è nata Shakira, e la città ebbe la prima compagnia aerea commerciale dell’America Latina, fondata nel 1919."
+			]
+		}
 	},
 	"soledad": {
 		"kind": "city",
@@ -59,11 +87,18 @@
 		"region": "Atlántico",
 		"coastal": true,
 		"position": "north",
-		"hooks": [
-			"Spanish for \"solitude\", after a church of Our Lady of Solitude.",
-			"It has effectively merged with Barranquilla next door.",
-			"Its butifarra sausage is a regional speciality sold from street carts."
-		]
+		"hooks": {
+			"en": [
+				"Spanish for \"solitude\", after a church of Our Lady of Solitude.",
+				"It has effectively merged with Barranquilla next door.",
+				"Its butifarra sausage is a regional speciality sold from street carts."
+			],
+			"it": [
+				"In spagnolo \"solitudine\", da una chiesa della Madonna della Solitudine.",
+				"Di fatto si è fusa con la vicina Barranquilla.",
+				"La sua butifarra, una salsiccia, è una specialità regionale venduta dai carretti di strada."
+			]
+		}
 	},
 	"valledupar": {
 		"kind": "city",
@@ -72,11 +107,18 @@
 		"region": "Cesar",
 		"coastal": false,
 		"position": "north-east",
-		"hooks": [
-			"\"Valley of Upar\" — named for a local chief, Cacique Upar.",
-			"Vallenato music was born here, and the Festival de la Leyenda Vallenata is its main competition.",
-			"It sits between the Sierra Nevada and the Serranía del Perijá, with both ranges visible."
-		]
+		"hooks": {
+			"en": [
+				"\"Valley of Upar\" — named for a local chief, Cacique Upar.",
+				"Vallenato music was born here, and the Festival de la Leyenda Vallenata is its main competition.",
+				"It sits between the Sierra Nevada and the Serranía del Perijá, with both ranges visible."
+			],
+			"it": [
+				"\"Valle di Upar\": prende il nome da un capo locale, il cacicco Upar.",
+				"Qui è nato il vallenato, e il Festival de la Leyenda Vallenata è la sua gara principale.",
+				"Sorge tra la Sierra Nevada e la Serranía del Perijá, ed entrambe le catene sono visibili."
+			]
+		}
 	},
 	"cartagena": {
 		"kind": "city",
@@ -86,11 +128,18 @@
 		"region": "Bolívar",
 		"coastal": true,
 		"position": "north",
-		"hooks": [
-			"Named for Cartagena in Spain, which is itself named for Carthage.",
-			"Its 11 km of walls and its fortress were built against pirates and are a UNESCO site.",
-			"It was the main slave port of Spanish South America and the seat of the Inquisition for the region."
-		]
+		"hooks": {
+			"en": [
+				"Named for Cartagena in Spain, which is itself named for Carthage.",
+				"Its 11 km of walls and its fortress were built against pirates and are a UNESCO site.",
+				"It was the main slave port of Spanish South America and the seat of the Inquisition for the region."
+			],
+			"it": [
+				"Prende il nome da Cartagena in Spagna, che a sua volta lo prende da Cartagine.",
+				"I suoi 11 km di mura e la sua fortezza furono costruiti contro i pirati e sono patrimonio UNESCO.",
+				"Fu il principale porto negriero del Sud America spagnolo e la sede dell’Inquisizione per la regione."
+			]
+		}
 	},
 	"sincelejo": {
 		"kind": "city",
@@ -99,11 +148,18 @@
 		"region": "Sucre",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"From a local indigenous name, probably referring to a chief or a place.",
-			"Its corralejas bullfighting festival uses a wooden arena built each January.",
-			"It is the capital of Sucre and the centre of a cattle region."
-		]
+		"hooks": {
+			"en": [
+				"From a local indigenous name, probably referring to a chief or a place.",
+				"Its corralejas bullfighting festival uses a wooden arena built each January.",
+				"It is the capital of Sucre and the centre of a cattle region."
+			],
+			"it": [
+				"Da un nome indigeno locale, probabilmente riferito a un capo o a un luogo.",
+				"Le corralejas, la sua festa taurina, si tengono in un’arena di legno costruita ogni gennaio.",
+				"È il capoluogo di Sucre e il centro di una regione di allevamento."
+			]
+		}
 	},
 	"magangue": {
 		"kind": "city",
@@ -112,11 +168,18 @@
 		"region": "Bolívar",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"From a local chief’s name, Magangué.",
-			"It sits at the mouth of the Cauca where it joins the Magdalena, which made it a major river port.",
-			"Its market serves the Mojana wetlands, reachable mainly by boat."
-		]
+		"hooks": {
+			"en": [
+				"From a local chief’s name, Magangué.",
+				"It sits at the mouth of the Cauca where it joins the Magdalena, which made it a major river port.",
+				"Its market serves the Mojana wetlands, reachable mainly by boat."
+			],
+			"it": [
+				"Dal nome di un capo locale, Magangué.",
+				"Sorge alla foce del Cauca, dove confluisce nel Magdalena, e questo ne ha fatto un importante porto fluviale.",
+				"Il suo mercato serve le paludi della Mojana, raggiungibili soprattutto in barca."
+			]
+		}
 	},
 	"monteria": {
 		"kind": "city",
@@ -125,11 +188,18 @@
 		"region": "Córdoba",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"From montería, a hunt or a hunting ground.",
-			"The capital of Córdoba and the centre of Colombian cattle raising.",
-			"Its riverside park along the Sinú is crossed by traditional planchón ferries still poled across."
-		]
+		"hooks": {
+			"en": [
+				"From montería, a hunt or a hunting ground.",
+				"The capital of Córdoba and the centre of Colombian cattle raising.",
+				"Its riverside park along the Sinú is crossed by traditional planchón ferries still poled across."
+			],
+			"it": [
+				"Da montería, una battuta di caccia o una riserva di caccia.",
+				"Il capoluogo di Córdoba e il centro dell’allevamento colombiano.",
+				"Il suo parco lungo il Sinú è attraversato dai tradizionali traghetti planchón, ancora spinti con la pertica da una riva all’altra."
+			]
+		}
 	},
 	"cucuta": {
 		"kind": "city",
@@ -138,11 +208,18 @@
 		"region": "Norte de Santander",
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"From a Barí word, possibly \"house of duendes\" or a local place name.",
-			"The 1821 congress here wrote the constitution of Gran Colombia.",
-			"It sits on the Venezuelan border, the busiest crossing in South America."
-		]
+		"hooks": {
+			"en": [
+				"From a Barí word, possibly \"house of duendes\" or a local place name.",
+				"The 1821 congress here wrote the constitution of Gran Colombia.",
+				"It sits on the Venezuelan border, the busiest crossing in South America."
+			],
+			"it": [
+				"Da una parola barí, forse \"casa dei folletti\" o il nome di un luogo del posto.",
+				"Qui il congresso del 1821 scrisse la costituzione della Gran Colombia.",
+				"Sorge sul confine venezuelano, il valico più trafficato del Sud America."
+			]
+		}
 	},
 	"bucaramanga": {
 		"kind": "city",
@@ -152,11 +229,18 @@
 		"region": "Santander",
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"From a Guane word, possibly combining a chief’s name with a local term.",
-			"Called the city of parks, and it sits on a terrace above a valley that is actively eroding towards it.",
-			"It is a centre of leather and footwear manufacturing."
-		]
+		"hooks": {
+			"en": [
+				"From a Guane word, possibly combining a chief’s name with a local term.",
+				"Called the city of parks, and it sits on a terrace above a valley that is actively eroding towards it.",
+				"It is a centre of leather and footwear manufacturing."
+			],
+			"it": [
+				"Da una parola guane, forse l’unione del nome di un capo con un termine locale.",
+				"La chiamano la città dei parchi, e sorge su un terrazzo sopra una valle la cui erosione avanza verso di essa.",
+				"È un centro di lavorazione del cuoio e di produzione di calzature."
+			]
+		}
 	},
 	"barrancabermeja": {
 		"kind": "city",
@@ -165,11 +249,18 @@
 		"region": "Santander",
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"\"Vermilion bluff\" — barranca a bluff, bermeja reddish, for the coloured cliffs on the Magdalena.",
-			"Colombia’s largest oil refinery is here, and the country’s oil industry began nearby in 1918.",
-			"It was one of the most violent towns in the country during the conflict, fought over by all sides."
-		]
+		"hooks": {
+			"en": [
+				"\"Vermilion bluff\" — barranca a bluff, bermeja reddish, for the coloured cliffs on the Magdalena.",
+				"Colombia’s largest oil refinery is here, and the country’s oil industry began nearby in 1918.",
+				"It was one of the most violent towns in the country during the conflict, fought over by all sides."
+			],
+			"it": [
+				"\"Scarpata vermiglia\": barranca è la scarpata, bermeja rossiccia, per le rupi colorate sul Magdalena.",
+				"Qui c’è la più grande raffineria di petrolio della Colombia, e l’industria petrolifera del paese nacque nei dintorni nel 1918.",
+				"Durante il conflitto fu una delle città più violente del paese, contesa da tutte le parti."
+			]
+		}
 	},
 	"bello": {
 		"kind": "city",
@@ -178,11 +269,18 @@
 		"region": "Antioquia",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"Named for Andrés Bello, the Venezuelan scholar who wrote the Spanish grammar used across Latin America.",
-			"It is part of the Medellín metropolitan area.",
-			"Marco Fidel Suárez, a president born to a laundress here, is the town’s emblem of social mobility."
-		]
+		"hooks": {
+			"en": [
+				"Named for Andrés Bello, the Venezuelan scholar who wrote the Spanish grammar used across Latin America.",
+				"It is part of the Medellín metropolitan area.",
+				"Marco Fidel Suárez, a president born to a laundress here, is the town’s emblem of social mobility."
+			],
+			"it": [
+				"Prende il nome da Andrés Bello, lo studioso venezuelano che scrisse la grammatica spagnola usata in tutta l’America Latina.",
+				"Fa parte dell’area metropolitana di Medellín.",
+				"Marco Fidel Suárez, presidente nato qui da una lavandaia, è per la città l’emblema dell’ascesa sociale."
+			]
+		}
 	},
 	"medellin": {
 		"kind": "city",
@@ -192,11 +290,18 @@
 		"region": "Antioquia",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"Named for Medellín in Extremadura, the birthplace of Cortés.",
-			"It was the most violent city in the world around 1991 and is now studied for its urban transformation.",
-			"Its Metrocable gondolas serve hillside barrios as public transport, an idea since copied worldwide."
-		]
+		"hooks": {
+			"en": [
+				"Named for Medellín in Extremadura, the birthplace of Cortés.",
+				"It was the most violent city in the world around 1991 and is now studied for its urban transformation.",
+				"Its Metrocable gondolas serve hillside barrios as public transport, an idea since copied worldwide."
+			],
+			"it": [
+				"Prende il nome da Medellín in Estremadura, luogo natale di Cortés.",
+				"Intorno al 1991 era la città più violenta del mondo, e oggi è studiata per la sua trasformazione urbana.",
+				"Le cabine della sua Metrocable servono da trasporto pubblico ai quartieri in collina, un’idea poi copiata in tutto il mondo."
+			]
+		}
 	},
 	"duitama": {
 		"kind": "city",
@@ -205,11 +310,18 @@
 		"region": "Boyacá",
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"From a Muisca chief’s name, Tundama.",
-			"The battle of the Pantano de Vargas nearby in 1819 preceded the decisive victory at Boyacá.",
-			"It is a centre of leather and wool crafts on the Bogotá–Venezuela road."
-		]
+		"hooks": {
+			"en": [
+				"From a Muisca chief’s name, Tundama.",
+				"The battle of the Pantano de Vargas nearby in 1819 preceded the decisive victory at Boyacá.",
+				"It is a centre of leather and wool crafts on the Bogotá–Venezuela road."
+			],
+			"it": [
+				"Dal nome di un capo muisca, Tundama.",
+				"La battaglia del Pantano de Vargas, combattuta qui vicino nel 1819, precedette la vittoria decisiva di Boyacá.",
+				"È un centro dell’artigianato del cuoio e della lana sulla strada tra Bogotà e il Venezuela."
+			]
+		}
 	},
 	"sogamoso": {
 		"kind": "city",
@@ -218,11 +330,18 @@
 		"region": "Boyacá",
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"From Muisca Sugamuxi, the name of its priest-ruler.",
-			"It held the Temple of the Sun, the holiest Muisca site, burned by accident by Spanish soldiers in 1537.",
-			"A reconstruction stands at its archaeological museum."
-		]
+		"hooks": {
+			"en": [
+				"From Muisca Sugamuxi, the name of its priest-ruler.",
+				"It held the Temple of the Sun, the holiest Muisca site, burned by accident by Spanish soldiers in 1537.",
+				"A reconstruction stands at its archaeological museum."
+			],
+			"it": [
+				"Dal muisca Sugamuxi, il nome del suo sovrano-sacerdote.",
+				"Ospitava il Tempio del Sole, il luogo più sacro dei Muisca, incendiato per errore da soldati spagnoli nel 1537.",
+				"Una ricostruzione si trova nel suo museo archeologico."
+			]
+		}
 	},
 	"tunja": {
 		"kind": "city",
@@ -231,11 +350,18 @@
 		"region": "Boyacá",
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"From Muisca Hunza, the seat of the zaque, one of the two Muisca rulers.",
-			"One of the highest cities in Colombia at 2,820 m, and one of the coldest.",
-			"Its colonial houses have painted ceilings mixing Christian and indigenous imagery."
-		]
+		"hooks": {
+			"en": [
+				"From Muisca Hunza, the seat of the zaque, one of the two Muisca rulers.",
+				"One of the highest cities in Colombia at 2,820 m, and one of the coldest.",
+				"Its colonial houses have painted ceilings mixing Christian and indigenous imagery."
+			],
+			"it": [
+				"Dal muisca Hunza, sede dello zaque, uno dei due sovrani muisca.",
+				"Una delle città più alte della Colombia, a 2.820 m, e una delle più fredde.",
+				"Le sue case coloniali hanno soffitti dipinti che mescolano immagini cristiane e indigene."
+			]
+		}
 	},
 	"manizales": {
 		"kind": "city",
@@ -244,11 +370,18 @@
 		"region": "Caldas",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"From manizal, a place of manís — small quartz stones found in its soil.",
-			"Founded in 1849 by Antioquian colonists and rebuilt twice after fires.",
-			"It sits at 2,150 m under the Nevado del Ruiz and holds an annual coffee-country fair."
-		]
+		"hooks": {
+			"en": [
+				"From manizal, a place of manís — small quartz stones found in its soil.",
+				"Founded in 1849 by Antioquian colonists and rebuilt twice after fires.",
+				"It sits at 2,150 m under the Nevado del Ruiz and holds an annual coffee-country fair."
+			],
+			"it": [
+				"Da manizal, luogo di manís: piccole pietre di quarzo che si trovano nel suo suolo.",
+				"Fondata nel 1849 da coloni antioqueños e ricostruita due volte dopo altrettanti incendi.",
+				"Sorge a 2.150 m, sotto il Nevado del Ruiz, e ospita ogni anno una fiera della regione del caffè."
+			]
+		}
 	},
 	"pereira": {
 		"kind": "city",
@@ -257,11 +390,18 @@
 		"region": "Risaralda",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"Named for Francisco Pereira Martínez, who donated the land in 1863.",
-			"The commercial centre of the coffee axis, a UNESCO cultural landscape.",
-			"Its Bolívar statue in the main square shows him nude on horseback, which caused a scandal in 1963."
-		]
+		"hooks": {
+			"en": [
+				"Named for Francisco Pereira Martínez, who donated the land in 1863.",
+				"The commercial centre of the coffee axis, a UNESCO cultural landscape.",
+				"Its Bolívar statue in the main square shows him nude on horseback, which caused a scandal in 1963."
+			],
+			"it": [
+				"Prende il nome da Francisco Pereira Martínez, che nel 1863 donò il terreno.",
+				"Il cuore commerciale dell’asse del caffè, un paesaggio culturale patrimonio UNESCO.",
+				"La statua di Bolívar nella piazza principale lo ritrae nudo a cavallo, cosa che nel 1963 fece scandalo."
+			]
+		}
 	},
 	"cartago": {
 		"kind": "city",
@@ -270,11 +410,18 @@
 		"region": "Valle del Cauca",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"Named for Carthage, via Spain — one of several classical names given by Spanish founders.",
-			"Founded in 1540, it is one of the oldest towns in the Cauca valley.",
-			"Its embroidery is a recognised craft, sold across Colombia."
-		]
+		"hooks": {
+			"en": [
+				"Named for Carthage, via Spain — one of several classical names given by Spanish founders.",
+				"Founded in 1540, it is one of the oldest towns in the Cauca valley.",
+				"Its embroidery is a recognised craft, sold across Colombia."
+			],
+			"it": [
+				"Prende il nome da Cartagine, passando per la Spagna: uno dei vari nomi classici dati dai fondatori spagnoli.",
+				"Fondata nel 1540, è una delle città più antiche della valle del Cauca.",
+				"Il suo ricamo è un artigianato riconosciuto, venduto in tutta la Colombia."
+			]
+		}
 	},
 	"bogota": {
 		"kind": "city",
@@ -285,11 +432,18 @@
 		"capitalOf": "country",
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"From Bacatá, the Muisca capital — \"enclosure outside the farmland\"; the Spanish added Santa Fe and the two names competed for centuries.",
-			"At 2,640 m it is one of the highest capitals in the world, and its Gold Museum holds 55,000 pieces of pre-Hispanic goldwork.",
-			"Its Ciclovía closes 120 km of streets to cars every Sunday, a practice now copied in cities worldwide."
-		]
+		"hooks": {
+			"en": [
+				"From Bacatá, the Muisca capital — \"enclosure outside the farmland\"; the Spanish added Santa Fe and the two names competed for centuries.",
+				"At 2,640 m it is one of the highest capitals in the world, and its Gold Museum holds 55,000 pieces of pre-Hispanic goldwork.",
+				"Its Ciclovía closes 120 km of streets to cars every Sunday, a practice now copied in cities worldwide."
+			],
+			"it": [
+				"Da Bacatá, la capitale muisca, \"recinto fuori dai campi coltivati\"; gli spagnoli aggiunsero Santa Fe e i due nomi si fecero concorrenza per secoli.",
+				"A 2.640 m è una delle capitali più alte del mondo, e il suo Museo dell’Oro custodisce 55.000 pezzi di oreficeria preispanica.",
+				"La sua Ciclovía chiude alle auto 120 km di strade ogni domenica, un’usanza oggi copiata da città di tutto il mondo."
+			]
+		}
 	},
 	"armenia": {
 		"kind": "city",
@@ -298,11 +452,18 @@
 		"region": "Quindío",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"Named in 1889, possibly in sympathy with Armenians then being massacred in the Ottoman Empire.",
-			"The capital of Quindío and the smallest department’s main city.",
-			"A 1999 earthquake killed about a thousand people and destroyed much of it."
-		]
+		"hooks": {
+			"en": [
+				"Founded in 1889 under a name whose origin is disputed; one story ties it to the Armenians massacred in the Ottoman Empire in the 1890s.",
+				"The capital of Quindío and the smallest department’s main city.",
+				"A 1999 earthquake killed about a thousand people and destroyed much of it."
+			],
+			"it": [
+				"Fondata nel 1889 con un nome di origine discussa; una delle spiegazioni lo lega agli Armeni massacrati nell’Impero ottomano negli anni Novanta dell’Ottocento.",
+				"Il capoluogo del Quindío e la città principale del dipartimento più piccolo.",
+				"Un terremoto nel 1999 uccise circa mille persone e ne distrusse gran parte."
+			]
+		}
 	},
 	"ibague": {
 		"kind": "city",
@@ -311,11 +472,18 @@
 		"region": "Tolima",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"Named for the Ibagué, a local indigenous group.",
-			"It calls itself the musical capital of Colombia and has a conservatory founded in 1906.",
-			"Its Combeima canyon climbs to the Nevado del Tolima volcano."
-		]
+		"hooks": {
+			"en": [
+				"Named for the Ibagué, a local indigenous group.",
+				"It calls itself the musical capital of Colombia and has a conservatory founded in 1906.",
+				"Its Combeima canyon climbs to the Nevado del Tolima volcano."
+			],
+			"it": [
+				"Prende il nome dagli Ibagué, un gruppo indigeno locale.",
+				"Si definisce la capitale musicale della Colombia e ha un conservatorio fondato nel 1906.",
+				"Il suo canyon del Combeima sale fino al vulcano Nevado del Tolima."
+			]
+		}
 	},
 	"girardot": {
 		"kind": "city",
@@ -324,11 +492,18 @@
 		"region": "Cundinamarca",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"Named for Atanasio Girardot, an officer killed at 22 in the independence war.",
-			"A hot-weather river town on the Magdalena, traditionally where Bogotá goes for the weekend.",
-			"Its 1930 railway bridge was one of the longest in the country."
-		]
+		"hooks": {
+			"en": [
+				"Named for Atanasio Girardot, an officer killed at 22 in the independence war.",
+				"A hot-weather river town on the Magdalena, traditionally where Bogotá goes for the weekend.",
+				"Its 1930 railway bridge was one of the longest in the country."
+			],
+			"it": [
+				"Prende il nome da Atanasio Girardot, ufficiale caduto a 22 anni nella guerra d’indipendenza.",
+				"Una calda città fluviale sul Magdalena, dove tradizionalmente Bogotà va a passare il fine settimana.",
+				"Il suo ponte ferroviario del 1930 era uno dei più lunghi del paese."
+			]
+		}
 	},
 	"villavicencio": {
 		"kind": "city",
@@ -337,11 +512,18 @@
 		"region": "Meta",
 		"coastal": false,
 		"position": "south-east",
-		"hooks": [
-			"Named for Antonio Villavicencio, an independence figure executed in 1816.",
-			"It is the gateway to the llanos, where the plains begin at the foot of the Andes.",
-			"Joropo, the harp-driven music of the plains, is centred on the town."
-		]
+		"hooks": {
+			"en": [
+				"Named for Antonio Villavicencio, an independence figure executed in 1816.",
+				"It is the gateway to the llanos, where the plains begin at the foot of the Andes.",
+				"Joropo, the harp-driven music of the plains, is centred on the town."
+			],
+			"it": [
+				"Prende il nome da Antonio Villavicencio, protagonista dell’indipendenza giustiziato nel 1816.",
+				"È la porta dei llanos, dove la pianura comincia ai piedi delle Ande.",
+				"Il joropo, la musica delle pianure trascinata dall’arpa, ha qui il suo centro."
+			]
+		}
 	},
 	"tulua": {
 		"kind": "city",
@@ -350,11 +532,18 @@
 		"region": "Valle del Cauca",
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"From a local word, possibly \"easy land\" or \"fertile valley\".",
-			"Its market is one of the largest in the Cauca valley.",
-			"The novelist Gustavo Álvarez Gardeazábal set much of his work here."
-		]
+		"hooks": {
+			"en": [
+				"From a local word, possibly \"easy land\" or \"fertile valley\".",
+				"Its market is one of the largest in the Cauca valley.",
+				"The novelist Gustavo Álvarez Gardeazábal set much of his work here."
+			],
+			"it": [
+				"Da una parola locale, forse \"terra facile\" o \"valle fertile\".",
+				"Il suo mercato è uno dei più grandi della valle del Cauca.",
+				"Il romanziere Gustavo Álvarez Gardeazábal vi ha ambientato gran parte delle sue opere."
+			]
+		}
 	},
 	"buenaventura": {
 		"kind": "city",
@@ -363,11 +552,18 @@
 		"region": "Valle del Cauca",
 		"coastal": true,
 		"position": "south-west",
-		"hooks": [
-			"\"Good fortune\", named on the feast of St Bonaventure in 1540.",
-			"Colombia’s main Pacific port, handling a large share of the country’s trade.",
-			"It is overwhelmingly Afro-Colombian and among the poorest cities in the country despite that traffic."
-		]
+		"hooks": {
+			"en": [
+				"\"Good fortune\", named on the feast of St Bonaventure in 1540.",
+				"Colombia’s main Pacific port, handling a large share of the country’s trade.",
+				"It is overwhelmingly Afro-Colombian and among the poorest cities in the country despite that traffic."
+			],
+			"it": [
+				"\"Buona sorte\": il nome le fu dato nel giorno di san Bonaventura del 1540.",
+				"Il principale porto colombiano sul Pacifico, da cui passa una larga parte dei traffici del paese.",
+				"È in stragrande maggioranza afrocolombiana e, nonostante quel traffico, tra le città più povere del paese."
+			]
+		}
 	},
 	"cali": {
 		"kind": "city",
@@ -377,11 +573,18 @@
 		"region": "Valle del Cauca",
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"Of uncertain origin, possibly from a local word or from Spanish; founded in 1536.",
-			"The salsa capital of the world by common consent, with more salsa schools than Havana.",
-			"Its Cristo Rey statue stands over the city, and the surrounding valley is almost entirely sugar cane."
-		]
+		"hooks": {
+			"en": [
+				"Of uncertain origin, possibly from a local word or from Spanish; founded in 1536.",
+				"The salsa capital of the world by common consent, with more salsa schools than Havana.",
+				"Its Cristo Rey statue stands over the city, and the surrounding valley is almost entirely sugar cane."
+			],
+			"it": [
+				"Di origine incerta, forse da una parola locale o dallo spagnolo; fondata nel 1536.",
+				"Per comune consenso la capitale mondiale della salsa, con più scuole di salsa dell’Avana.",
+				"La statua del Cristo Rey domina la città, e la valle intorno è quasi tutta canna da zucchero."
+			]
+		}
 	},
 	"neiva": {
 		"kind": "city",
@@ -390,11 +593,18 @@
 		"region": "Huila",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"Possibly named after a place in Hispaniola, or from a local word.",
-			"The Tatacoa desert nearby has one of the best night skies in the country.",
-			"Its Festival del Bambuco is one of the oldest folk festivals in Colombia."
-		]
+		"hooks": {
+			"en": [
+				"Possibly named after a place in Hispaniola, or from a local word.",
+				"The Tatacoa desert nearby has one of the best night skies in the country.",
+				"Its Festival del Bambuco is one of the oldest folk festivals in Colombia."
+			],
+			"it": [
+				"Forse prende il nome da un luogo di Hispaniola, o da una parola locale.",
+				"Il vicino deserto della Tatacoa ha uno dei cieli notturni più belli del paese.",
+				"Il suo Festival del Bambuco è uno dei più antichi festival folcloristici della Colombia."
+			]
+		}
 	},
 	"popayan": {
 		"kind": "city",
@@ -403,11 +613,18 @@
 		"region": "Cauca",
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"From a chief’s name, Popayán, or a local word for a village.",
-			"Its white colonial centre gives it the name the white city, and its Holy Week processions are the oldest in the Americas.",
-			"It has produced seventeen Colombian presidents, more than any other city."
-		]
+		"hooks": {
+			"en": [
+				"From a chief’s name, Popayán, or a local word for a village.",
+				"Its white colonial centre gives it the name the white city, and its Holy Week processions are the oldest in the Americas.",
+				"It has produced seventeen Colombian presidents, more than any other city."
+			],
+			"it": [
+				"Dal nome di un capo, Popayán, o da una parola locale per villaggio.",
+				"Il centro coloniale bianco le vale il soprannome di città bianca, e le sue processioni della Settimana Santa sono le più antiche delle Americhe.",
+				"Ha dato alla Colombia diciassette presidenti, più di qualsiasi altra città."
+			]
+		}
 	},
 	"florencia": {
 		"kind": "city",
@@ -416,11 +633,18 @@
 		"region": "Caquetá",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"Named for Florence in Italy, by a founder who admired it.",
-			"The capital of Caquetá, where the Andes give way to Amazon rainforest.",
-			"It grew from a rubber-tapping outpost founded in 1902."
-		]
+		"hooks": {
+			"en": [
+				"Named for Florence in Italy, by a founder who admired it.",
+				"The capital of Caquetá, where the Andes give way to Amazon rainforest.",
+				"It grew from a rubber-tapping outpost founded in 1902."
+			],
+			"it": [
+				"Prende il nome da Firenze, per volere di un fondatore che la ammirava.",
+				"Il capoluogo del Caquetá, dove le Ande cedono il passo alla foresta amazzonica.",
+				"È nata da un avamposto di raccoglitori di caucciù fondato nel 1902."
+			]
+		}
 	},
 	"pasto": {
 		"kind": "city",
@@ -429,11 +653,18 @@
 		"region": "Nariño",
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"From the Pastos people, whose name it carries — officially San Juan de Pasto.",
-			"Its Carnaval de Negros y Blancos in January is a UNESCO heritage item, with black and white face paint on successive days.",
-			"Barniz de Pasto, a varnish made from a local plant resin and applied to wood, is a craft found nowhere else."
-		]
+		"hooks": {
+			"en": [
+				"From the Pastos people, whose name it carries — officially San Juan de Pasto.",
+				"Its Carnaval de Negros y Blancos in January is a UNESCO heritage item, with black and white face paint on successive days.",
+				"Barniz de Pasto, a varnish made from a local plant resin and applied to wood, is a craft found nowhere else."
+			],
+			"it": [
+				"Dal popolo dei Pastos, di cui porta il nome: ufficialmente San Juan de Pasto.",
+				"Il suo Carnaval de Negros y Blancos, a gennaio, è patrimonio UNESCO, con i volti dipinti di nero e poi di bianco in giorni successivi.",
+				"Il barniz de Pasto, una vernice ricavata dalla resina di una pianta locale e stesa sul legno, è un artigianato che non esiste altrove."
+			]
+		}
 	},
 	"ipiales": {
 		"kind": "city",
@@ -442,10 +673,17 @@
 		"region": "Nariño",
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"From a local indigenous name.",
-			"Las Lajas sanctuary here is built into a gorge on a bridge, one of the most photographed churches in South America.",
-			"It sits on the Ecuadorian border at 2,900 m, the main crossing between the two countries."
-		]
+		"hooks": {
+			"en": [
+				"From a local indigenous name.",
+				"Las Lajas sanctuary here is built into a gorge on a bridge, one of the most photographed churches in South America.",
+				"It sits on the Ecuadorian border at 2,900 m, the main crossing between the two countries."
+			],
+			"it": [
+				"Da un nome indigeno locale.",
+				"Il santuario di Las Lajas, qui, è costruito dentro una gola, sopra un ponte: una delle chiese più fotografate del Sud America.",
+				"Sorge sul confine con l’Ecuador a 2.900 m ed è il principale valico tra i due paesi."
+			]
+		}
 	}
 }

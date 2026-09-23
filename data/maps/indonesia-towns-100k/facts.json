@@ -6,11 +6,18 @@
 		"region": "Aceh",
 		"coastal": true,
 		"position": "north-west",
-		"hooks": [
-			"\"Port of Aceh\" — bandar is a port, a Persian word that spread across the Muslim trading world.",
-			"The 2004 tsunami killed about a quarter of the city’s people; a ship carried inland by the wave is left where it landed.",
-			"Its Baiturrahman mosque survived the wave and sheltered survivors."
-		]
+		"hooks": {
+			"en": [
+				"\"Port of Aceh\" — bandar is a port, a Persian word that spread across the Muslim trading world.",
+				"The 2004 tsunami killed about a quarter of the city’s people; a ship carried inland by the wave is left where it landed.",
+				"Its Baiturrahman mosque survived the wave and sheltered survivors."
+			],
+			"it": [
+				"\"Porto di Aceh\": bandar significa porto, una parola persiana diffusa in tutto il mondo mercantile musulmano.",
+				"Lo tsunami del 2004 uccise circa un quarto degli abitanti della città; una nave trascinata nell’entroterra dall’onda è rimasta dove si è arenata.",
+				"La sua moschea Baiturrahman resistette all’onda e diede rifugio ai sopravvissuti."
+			]
+		}
 	},
 	"binjai": {
 		"kind": "city",
@@ -19,11 +26,18 @@
 		"region": "Sumatera Utara",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"Named for the binjai, a mango relative that grows in Sumatra.",
-			"A plantation town near Medan, growing rubber and oil palm.",
-			"It sits at the edge of the Leuser ecosystem, one of the last places where orangutans, tigers, rhinos and elephants live together."
-		]
+		"hooks": {
+			"en": [
+				"Named for the binjai, a mango relative that grows in Sumatra.",
+				"A plantation town near Medan, growing rubber and oil palm.",
+				"It sits at the edge of the Leuser ecosystem, one of the last places where orangutans, tigers, rhinos and elephants live together."
+			],
+			"it": [
+				"Prende il nome dal binjai, un parente del mango che cresce a Sumatra.",
+				"Una città di piantagioni vicino a Medan, dove si coltivano gomma e palma da olio.",
+				"Sorge ai margini dell’ecosistema del Leuser, uno degli ultimi luoghi dove oranghi, tigri, rinoceronti ed elefanti vivono insieme."
+			]
+		}
 	},
 	"medan": {
 		"kind": "city",
@@ -33,11 +47,18 @@
 		"region": "Sumatera Utara",
 		"coastal": true,
 		"position": "north-west",
-		"hooks": [
-			"From a Malay word for a field or an open place — or possibly from Tamil maidan.",
-			"It grew on tobacco: Deli leaf from here was the world’s best cigar wrapper.",
-			"It is Indonesia’s fourth largest city and has large Tamil and Chinese communities."
-		]
+		"hooks": {
+			"en": [
+				"From a Malay word for a field or an open place — or possibly from Tamil maidan.",
+				"It grew on tobacco: Deli leaf from here was the world’s best cigar wrapper.",
+				"It is Indonesia’s fourth largest city and has large Tamil and Chinese communities."
+			],
+			"it": [
+				"Da una parola malese per campo o spazio aperto, o forse dal tamil maidan.",
+				"È cresciuta con il tabacco: la foglia di Deli prodotta qui era la migliore fascia per sigari del mondo.",
+				"È la quarta città dell’Indonesia e ha grandi comunità tamil e cinesi."
+			]
+		}
 	},
 	"tebingtinggi": {
 		"kind": "city",
@@ -46,11 +67,18 @@
 		"region": "Sumatera Utara",
 		"coastal": true,
 		"position": "north-west",
-		"hooks": [
-			"\"High cliff\" — tebing a cliff, tinggi high.",
-			"A rail junction between Medan and the plantation belt.",
-			"It sits on the road to Lake Toba, the supervolcano caldera."
-		]
+		"hooks": {
+			"en": [
+				"\"High cliff\" — tebing a cliff, tinggi high.",
+				"A rail junction between Medan and the plantation belt.",
+				"It sits on the road to Lake Toba, the supervolcano caldera."
+			],
+			"it": [
+				"\"Alta rupe\": tebing è la rupe, tinggi alto.",
+				"Nodo ferroviario tra Medan e la fascia delle piantagioni.",
+				"Sorge sulla strada per il lago Toba, la caldera del supervulcano."
+			]
+		}
 	},
 	"pematangsiantar": {
 		"kind": "city",
@@ -59,11 +87,18 @@
 		"region": "Sumatera Utara",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"From pematang, a raised ridge or dyke, plus Siantar, a local name.",
-			"It is the main town of the Simalungun Batak and has one of Indonesia’s oldest zoos.",
-			"Its becak are powered by vintage BSA motorcycles left behind after the war."
-		]
+		"hooks": {
+			"en": [
+				"From pematang, a raised ridge or dyke, plus Siantar, a local name.",
+				"It is the main town of the Simalungun Batak and has one of Indonesia’s oldest zoos.",
+				"Its becak are powered by vintage BSA motorcycles left behind after the war."
+			],
+			"it": [
+				"Da pematang, un argine o terrapieno rialzato, più Siantar, un nome locale.",
+				"È il centro principale dei Batak Simalungun e ha uno degli zoo più antichi dell’Indonesia.",
+				"I suoi becak montano motociclette BSA d’epoca, rimaste qui dopo la guerra."
+			]
+		}
 	},
 	"sibolga": {
 		"kind": "city",
@@ -72,11 +107,18 @@
 		"region": "Sumatera Utara",
 		"coastal": true,
 		"position": "north-west",
-		"hooks": [
-			"Of Batak origin, possibly from a phrase about a bay.",
-			"A small port on the Indian Ocean, and the ferry point for Nias island.",
-			"Nias, offshore, has megalithic villages and a stone-jumping tradition performed over 2 m walls."
-		]
+		"hooks": {
+			"en": [
+				"Of Batak origin, possibly from a phrase about a bay.",
+				"A small port on the Indian Ocean, and the ferry point for Nias island.",
+				"Nias, offshore, has megalithic villages and a stone-jumping tradition performed over 2 m walls."
+			],
+			"it": [
+				"Di origine batak, forse da un’espressione che riguarda una baia.",
+				"Un piccolo porto sull’Oceano Indiano, e punto d’imbarco dei traghetti per l’isola di Nias.",
+				"Nias, al largo, ha villaggi megalitici e una tradizione di salto della pietra che si esegue sopra muri di 2 m."
+			]
+		}
 	},
 	"manado": {
 		"kind": "city",
@@ -85,11 +127,18 @@
 		"region": "Sulawesi Utara",
 		"coastal": true,
 		"position": "north-east",
-		"hooks": [
-			"From a Minahasan word, possibly \"on the coast\" or the name of an island.",
-			"Bunaken off it drops to 1,500 m just offshore, which is why its wall diving is world famous.",
-			"Its Minahasan cooking is the spiciest in Indonesia, with dishes other Indonesians approach carefully."
-		]
+		"hooks": {
+			"en": [
+				"From a Minahasan word, possibly \"on the coast\" or the name of an island.",
+				"Bunaken off it drops to 1,500 m just offshore, which is why its wall diving is world famous.",
+				"Its Minahasan cooking is the spiciest in Indonesia, with dishes other Indonesians approach carefully."
+			],
+			"it": [
+				"Da una parola minahasa, forse \"sulla costa\", o dal nome di un’isola.",
+				"Bunaken, al largo della città, precipita fino a 1.500 m appena fuori dalla riva, ed è per questo che le sue immersioni in parete sono famose in tutto il mondo.",
+				"La sua cucina minahasa è la più piccante dell’Indonesia, con piatti che gli altri indonesiani affrontano con cautela."
+			]
+		}
 	},
 	"padangsidempuan": {
 		"kind": "city",
@@ -98,11 +147,18 @@
 		"region": "Sumatera Utara",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"\"The field of Sidempuan\" — padang is a field or plain.",
-			"It is the main town of the southern Batak region and is known for its salak fruit.",
-			"It sits in a valley ringed by hills, on the Trans-Sumatran highway."
-		]
+		"hooks": {
+			"en": [
+				"\"The field of Sidempuan\" — padang is a field or plain.",
+				"It is the main town of the southern Batak region and is known for its salak fruit.",
+				"It sits in a valley ringed by hills, on the Trans-Sumatran highway."
+			],
+			"it": [
+				"\"Il campo di Sidempuan\": padang è un campo o una pianura.",
+				"È il centro principale della regione batak meridionale ed è nota per i suoi frutti di salak.",
+				"Sorge in una valle circondata da colline, sulla strada Trans-Sumatra."
+			]
+		}
 	},
 	"tanjungpinang": {
 		"kind": "city",
@@ -111,11 +167,18 @@
 		"region": "Kepulauan Riau",
 		"coastal": true,
 		"position": "north-west",
-		"hooks": [
-			"\"Pinang cape\" — tanjung a cape, pinang the areca palm.",
-			"It was the seat of the Riau-Lingga sultanate, and standard Malay — the basis of Indonesian — was codified in this area.",
-			"Penyengat island beside it has a mosque said to be mortared with egg white."
-		]
+		"hooks": {
+			"en": [
+				"\"Pinang cape\" — tanjung a cape, pinang the areca palm.",
+				"It was the seat of the Riau-Lingga sultanate, and standard Malay — the basis of Indonesian — was codified in this area.",
+				"Penyengat island beside it has a mosque said to be mortared with egg white."
+			],
+			"it": [
+				"\"Capo pinang\": tanjung è il capo, pinang la palma di areca.",
+				"Fu la sede del sultanato di Riau-Lingga, e il malese standard, la base dell’indonesiano, fu codificato in questa zona.",
+				"Sull’isola di Penyengat, lì accanto, c’è una moschea la cui malta, si dice, fu impastata con l’albume d’uovo."
+			]
+		}
 	},
 	"singkawang": {
 		"kind": "city",
@@ -124,11 +187,18 @@
 		"region": "Kalimantan Barat",
 		"coastal": true,
 		"position": "north",
-		"hooks": [
-			"From Hakka Chinese san kew jong, \"a town of hills, sea and estuary\".",
-			"It has the highest proportion of Chinese-descended residents of any Indonesian city, about a third.",
-			"Its Cap Go Meh festival, fifteen days after Chinese New Year, is the largest in the country."
-		]
+		"hooks": {
+			"en": [
+				"From Hakka Chinese san kew jong, \"a town of hills, sea and estuary\".",
+				"It has the highest proportion of Chinese-descended residents of any Indonesian city, about a third.",
+				"Its Cap Go Meh festival, fifteen days after Chinese New Year, is the largest in the country."
+			],
+			"it": [
+				"Dal cinese hakka san kew jong, \"città di colline, mare ed estuario\".",
+				"Ha la più alta percentuale di abitanti di origine cinese tra le città indonesiane, circa un terzo.",
+				"La sua festa di Cap Go Meh, quindici giorni dopo il Capodanno cinese, è la più grande del paese."
+			]
+		}
 	},
 	"pekanbaru": {
 		"kind": "city",
@@ -138,11 +208,18 @@
 		"region": "Riau",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"\"New market\" — pekan a market, baru new.",
-			"The centre of Indonesia’s oil industry, near the Duri and Minas fields.",
-			"The Japanese built a railway through here in 1944-45 with forced labour; thousands died and it was never used."
-		]
+		"hooks": {
+			"en": [
+				"\"New market\" — pekan a market, baru new.",
+				"The centre of Indonesia’s oil industry, near the Duri and Minas fields.",
+				"The Japanese built a railway through here in 1944-45 with forced labour; thousands died and it was never used."
+			],
+			"it": [
+				"\"Mercato nuovo\": pekan è il mercato, baru nuovo.",
+				"Il centro dell’industria petrolifera indonesiana, vicino ai giacimenti di Duri e Minas.",
+				"Nel 1944-45 i giapponesi vi costruirono una ferrovia con il lavoro forzato; morirono in migliaia e non fu mai usata."
+			]
+		}
 	},
 	"gorontalo": {
 		"kind": "city",
@@ -150,11 +227,18 @@
 		"populationRank": 31,
 		"coastal": true,
 		"position": "north-east",
-		"hooks": [
-			"Probably from hulontalangi, \"a more valuable land\", or from a word for a place that floods.",
-			"Split from North Sulawesi in 2000; it is one of Indonesia's newest provinces and is Muslim-majority in a largely Christian neighbourhood.",
-			"Its whale sharks gather close to shore at Botubarani, where fishermen feed them by hand."
-		]
+		"hooks": {
+			"en": [
+				"Probably from hulontalangi, \"a more valuable land\", or from a word for a place that floods.",
+				"Split from North Sulawesi in 2000; it is one of Indonesia's newest provinces and is Muslim-majority in a largely Christian neighbourhood.",
+				"Its whale sharks gather close to shore at Botubarani, where fishermen feed them by hand."
+			],
+			"it": [
+				"Probabilmente da hulontalangi, \"una terra di maggior valore\", oppure da una parola per un luogo soggetto a inondazioni.",
+				"Separata da Sulawesi settentrionale nel 2000, è una delle province più giovani dell’Indonesia, a maggioranza musulmana in un vicinato in gran parte cristiano.",
+				"I suoi squali balena si radunano vicino alla riva a Botubarani, dove i pescatori li nutrono a mano."
+			]
+		}
 	},
 	"pontianak": {
 		"kind": "city",
@@ -163,11 +247,18 @@
 		"region": "Kalimantan Barat",
 		"coastal": true,
 		"position": "centre",
-		"hooks": [
-			"Named for a vampiric ghost of Malay folklore — the founding sultan is said to have been harassed by one.",
-			"The equator runs through the city, marked by a monument where the sun casts no shadow twice a year.",
-			"It sits at the fork of the Kapuas, Indonesia’s longest river."
-		]
+		"hooks": {
+			"en": [
+				"Named for a vampiric ghost of Malay folklore — the founding sultan is said to have been harassed by one.",
+				"The equator runs through the city, marked by a monument where the sun casts no shadow twice a year.",
+				"It sits at the fork of the Kapuas, Indonesia’s longest river."
+			],
+			"it": [
+				"Prende il nome da un fantasma vampiresco del folklore malese: si dice che il sultano fondatore ne fosse tormentato.",
+				"L’equatore attraversa la città, segnato da un monumento dove due volte l’anno il sole non proietta ombra.",
+				"Sorge alla biforcazione del Kapuas, il fiume più lungo dell’Indonesia."
+			]
+		}
 	},
 	"bukittinggi": {
 		"kind": "city",
@@ -176,11 +267,18 @@
 		"region": "Sumatera Barat",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"\"High hill\" — bukit a hill, tinggi high.",
-			"It was the capital of the emergency government of Indonesia in 1948-49 when the Dutch captured the leadership.",
-			"Its Japanese tunnel system, dug by forced labour in 1942, runs for kilometres under the town."
-		]
+		"hooks": {
+			"en": [
+				"\"High hill\" — bukit a hill, tinggi high.",
+				"It was the capital of the emergency government of Indonesia in 1948-49 when the Dutch captured the leadership.",
+				"Its Japanese tunnel system, dug by forced labour in 1942, runs for kilometres under the town."
+			],
+			"it": [
+				"\"Collina alta\": bukit è la collina, tinggi alto.",
+				"Nel 1948-49, quando gli olandesi catturarono i dirigenti del paese, fu la capitale del governo d’emergenza dell’Indonesia.",
+				"Il suo sistema di gallerie giapponesi, scavato nel 1942 con il lavoro forzato, corre per chilometri sotto la città."
+			]
+		}
 	},
 	"samarinda": {
 		"kind": "city",
@@ -189,11 +287,18 @@
 		"region": "Kalimantan Timur",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"From sama rendah, \"equally low\" — the founding Buginese settlers built houses all at the same height to show equality.",
-			"It is the capital of East Kalimantan and sits on the Mahakam river.",
-			"Indonesia’s new capital, Nusantara, is being built in its province."
-		]
+		"hooks": {
+			"en": [
+				"From sama rendah, \"equally low\" — the founding Buginese settlers built houses all at the same height to show equality.",
+				"It is the capital of East Kalimantan and sits on the Mahakam river.",
+				"Indonesia’s new capital, Nusantara, is being built in its province."
+			],
+			"it": [
+				"Da sama rendah, \"ugualmente bassi\": i coloni bugis che la fondarono costruirono tutte le case alla stessa altezza in segno di uguaglianza.",
+				"È il capoluogo del Kalimantan orientale e sorge sul fiume Mahakam.",
+				"Nella sua provincia si sta costruendo Nusantara, la nuova capitale dell’Indonesia."
+			]
+		}
 	},
 	"palu": {
 		"kind": "city",
@@ -202,11 +307,18 @@
 		"region": "Sulawesi Tengah",
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"From a local word meaning a place that has been levelled, or a bay.",
-			"The 2018 earthquake, tsunami and soil liquefaction here swallowed whole neighbourhoods.",
-			"Its bay is unusually deep and narrow, which amplified the wave."
-		]
+		"hooks": {
+			"en": [
+				"From a local word meaning a place that has been levelled, or a bay.",
+				"The 2018 earthquake, tsunami and soil liquefaction here swallowed whole neighbourhoods.",
+				"Its bay is unusually deep and narrow, which amplified the wave."
+			],
+			"it": [
+				"Da una parola locale che indica un luogo spianato, oppure una baia.",
+				"Il terremoto, lo tsunami e la liquefazione del suolo del 2018 inghiottirono qui interi quartieri.",
+				"La sua baia è insolitamente profonda e stretta, e questo amplificò l’onda."
+			]
+		}
 	},
 	"padang": {
 		"kind": "city",
@@ -216,11 +328,18 @@
 		"region": "Sumatera Barat",
 		"coastal": true,
 		"position": "west",
-		"hooks": [
-			"\"Field\" or \"plain\" in Malay.",
-			"Padang food, served by bringing every dish to the table and charging only for what is eaten, is the most widespread regional cuisine in Indonesia.",
-			"Rendang, from this region, is regularly voted one of the world’s best dishes."
-		]
+		"hooks": {
+			"en": [
+				"\"Field\" or \"plain\" in Malay.",
+				"Padang food, served by bringing every dish to the table and charging only for what is eaten, is the most widespread regional cuisine in Indonesia.",
+				"Rendang, from this region, is regularly voted one of the world’s best dishes."
+			],
+			"it": [
+				"\"Campo\" o \"pianura\" in malese.",
+				"La cucina padang, servita portando in tavola tutti i piatti e facendo pagare solo quelli consumati, è la cucina regionale più diffusa in Indonesia.",
+				"Il rendang, originario di questa regione, viene regolarmente votato tra i piatti migliori del mondo."
+			]
+		}
 	},
 	"balikpapan": {
 		"kind": "city",
@@ -229,11 +348,18 @@
 		"region": "Kalimantan Timur",
 		"coastal": true,
 		"position": "centre",
-		"hooks": [
-			"From a legend about a plank, balik papan, that floated back to shore.",
-			"The oil city of Borneo, with a refinery running since 1922.",
-			"It is regularly rated the cleanest and most liveable city in Kalimantan."
-		]
+		"hooks": {
+			"en": [
+				"From a legend about a plank, balik papan, that floated back to shore.",
+				"The oil city of Borneo, with a refinery running since 1922.",
+				"It is regularly rated the cleanest and most liveable city in Kalimantan."
+			],
+			"it": [
+				"Da una leggenda su un’asse, balik papan, che tornò a riva galleggiando.",
+				"La città del petrolio del Borneo, con una raffineria in funzione dal 1922.",
+				"Viene regolarmente giudicata la città più pulita e vivibile del Kalimantan."
+			]
+		}
 	},
 	"jambi": {
 		"kind": "city",
@@ -241,11 +367,18 @@
 		"populationRank": 27,
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"Possibly from Javanese jambe, the areca palm, or from a local word for a place to ford.",
-			"The Srivijaya-era temple complex at Muaro Jambi is the largest ancient site in Indonesia, larger than Borobudur in area.",
-			"Kerinci in it is Sumatra's highest volcano at 3,805 m, and the forest around it holds the Sumatran tiger."
-		]
+		"hooks": {
+			"en": [
+				"Possibly from Javanese jambe, the areca palm, or from a local word for a place to ford.",
+				"The Srivijaya-era temple complex at Muaro Jambi is the largest ancient site in Indonesia, larger than Borobudur in area.",
+				"Kerinci in it is Sumatra's highest volcano at 3,805 m, and the forest around it holds the Sumatran tiger."
+			],
+			"it": [
+				"Forse dal giavanese jambe, la palma di areca, oppure da una parola locale per un punto di guado.",
+				"Il complesso di templi dell’epoca di Srivijaya a Muaro Jambi è il più grande sito antico dell’Indonesia, più esteso di Borobudur.",
+				"Il suo Kerinci, con 3.805 m, è il vulcano più alto di Sumatra, e la foresta che lo circonda ospita la tigre di Sumatra."
+			]
+		}
 	},
 	"palembang": {
 		"kind": "city",
@@ -255,11 +388,18 @@
 		"region": "Sumatera Selatan",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"From limbang, to pan for gold, with the pe- prefix — a place where things are washed.",
-			"It was the capital of Srivijaya, a maritime empire that dominated the region from the 600s to the 1200s.",
-			"Its Ampera bridge used to lift in the middle for ships; the mechanism was removed in 1970."
-		]
+		"hooks": {
+			"en": [
+				"From limbang, to pan for gold, with the pe- prefix — a place where things are washed.",
+				"It was the capital of Srivijaya, a maritime empire that dominated the region from the 600s to the 1200s.",
+				"Its Ampera bridge used to lift in the middle for ships; the mechanism was removed in 1970."
+			],
+			"it": [
+				"Da limbang, setacciare l’oro, con il prefisso pe-: un luogo dove si lavano le cose.",
+				"Fu la capitale di Srivijaya, un impero marittimo che dominò la regione dal VII al XIII secolo.",
+				"Il suo ponte Ampera si alzava al centro per far passare le navi; il meccanismo fu rimosso nel 1970."
+			]
+		}
 	},
 	"banjarmasin": {
 		"kind": "city",
@@ -268,11 +408,18 @@
 		"region": "Kalimantan Selatan",
 		"coastal": true,
 		"position": "centre",
-		"hooks": [
-			"From banjar, a row of settlements, plus masih, a local chief’s name.",
-			"It is built on water, with floating markets where traders sell from canoes at dawn.",
-			"It is called the city of a thousand rivers, and much of it is below sea level."
-		]
+		"hooks": {
+			"en": [
+				"From banjar, a row of settlements, plus masih, a local chief’s name.",
+				"It is built on water, with floating markets where traders sell from canoes at dawn.",
+				"It is called the city of a thousand rivers, and much of it is below sea level."
+			],
+			"it": [
+				"Da banjar, una fila di insediamenti, più masih, il nome di un capo locale.",
+				"È costruita sull’acqua, con mercati galleggianti dove all’alba i commercianti vendono dalle canoe.",
+				"La chiamano la città dei mille fiumi, e buona parte di essa è sotto il livello del mare."
+			]
+		}
 	},
 	"martapura": {
 		"kind": "city",
@@ -281,11 +428,18 @@
 		"region": "Kalimantan Selatan",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"\"City of jewels\" — from Sanskrit marta plus pura, a city.",
-			"It is the diamond-trading centre of Indonesia, with stones dug by hand from river gravel at Cempaka.",
-			"The Trisakti diamond, 166 carats, was found nearby in 1965."
-		]
+		"hooks": {
+			"en": [
+				"\"City of jewels\" — from Sanskrit marta plus pura, a city.",
+				"It is the diamond-trading centre of Indonesia, with stones dug by hand from river gravel at Cempaka.",
+				"The Trisakti diamond, 166 carats, was found nearby in 1965."
+			],
+			"it": [
+				"\"Città dei gioielli\": dal sanscrito marta più pura, \"città\".",
+				"È il centro del commercio di diamanti in Indonesia, con pietre estratte a mano dalla ghiaia dei fiumi a Cempaka.",
+				"Il diamante Trisakti, di 166 carati, fu trovato nei dintorni nel 1965."
+			]
+		}
 	},
 	"majene": {
 		"kind": "city",
@@ -294,11 +448,18 @@
 		"region": "Sulawesi Barat",
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"Of Mandar origin; the town is the historic seat of the Mandar people.",
-			"Its sandeq sailing boats with outriggers are among the fastest traditional sailing craft in the world.",
-			"It is the cultural centre of West Sulawesi, with a museum of Mandar seafaring."
-		]
+		"hooks": {
+			"en": [
+				"Of Mandar origin; the town is the historic seat of the Mandar people.",
+				"Its sandeq sailing boats with outriggers are among the fastest traditional sailing craft in the world.",
+				"It is the cultural centre of West Sulawesi, with a museum of Mandar seafaring."
+			],
+			"it": [
+				"Di origine mandar; la città è la sede storica del popolo mandar.",
+				"I suoi sandeq, barche a vela con bilancieri, sono tra le imbarcazioni tradizionali a vela più veloci del mondo.",
+				"È il centro culturale di Sulawesi occidentale, con un museo della navigazione mandar."
+			]
+		}
 	},
 	"ambon": {
 		"kind": "city",
@@ -307,11 +468,18 @@
 		"region": "Maluku",
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"Possibly from ambong, a Malay word for dew, or from a local name.",
-			"It was the Dutch East India Company’s first headquarters in the archipelago, before Batavia.",
-			"The 1623 Amboyna massacre of English traders here ended English ambitions in the Spice Islands and pushed them towards India."
-		]
+		"hooks": {
+			"en": [
+				"Possibly from ambong, a Malay word for dew, or from a local name.",
+				"It was the Dutch East India Company’s first headquarters in the archipelago, before Batavia.",
+				"The 1623 Amboyna massacre of English traders here ended English ambitions in the Spice Islands and pushed them towards India."
+			],
+			"it": [
+				"Forse da ambong, parola malese per rugiada, o da un nome locale.",
+				"Fu il primo quartier generale della Compagnia olandese delle Indie orientali nell’arcipelago, prima di Batavia.",
+				"Il massacro di Amboina del 1623, in cui qui furono uccisi mercanti inglesi, chiuse le ambizioni dell’Inghilterra sulle Isole delle Spezie e la spinse verso l’India."
+			]
+		}
 	},
 	"bengkulu": {
 		"kind": "city",
@@ -319,11 +487,18 @@
 		"populationRank": 30,
 		"coastal": true,
 		"position": "west",
-		"hooks": [
-			"Possibly from bangkahulu, \"the place where the head is\" — a reference to an old battle.",
-			"The British held it as Bencoolen for 140 years and swapped it for Singapore in 1824.",
-			"Rafflesia arnoldii, the largest single flower in the world at a metre across, was found here and is the provincial emblem."
-		]
+		"hooks": {
+			"en": [
+				"Possibly from bangkahulu, \"the place where the head is\" — a reference to an old battle.",
+				"The British held it as Bencoolen for 140 years and gave it to the Dutch in 1824, in the treaty that secured their hold on Singapore.",
+				"Rafflesia arnoldii, the largest single flower in the world at a metre across, was found here and is the provincial emblem."
+			],
+			"it": [
+				"Forse da bangkahulu, \"il luogo dove sta la testa\": un riferimento a un’antica battaglia.",
+				"I britannici la tennero per 140 anni con il nome di Bencoolen e nel 1824 la cedettero agli olandesi, con il trattato che assicurò loro Singapore.",
+				"La Rafflesia arnoldii, il fiore singolo più grande del mondo con un metro di diametro, fu scoperta qui ed è l’emblema della provincia."
+			]
+		}
 	},
 	"makassar": {
 		"kind": "city",
@@ -333,11 +508,18 @@
 		"region": "Sulawesi Selatan",
 		"coastal": true,
 		"position": "south-east",
-		"hooks": [
-			"Of local origin; it was Ujung Pandang from 1971 to 1999 before reverting.",
-			"Its Bugis and Makassar sailors ranged as far as northern Australia, trading with Aboriginal people for centuries.",
-			"The oil used on Victorian hair gave English the word antimacassar, for the cloth protecting chair backs."
-		]
+		"hooks": {
+			"en": [
+				"Of local origin; it was Ujung Pandang from 1971 to 1999 before reverting.",
+				"Its Bugis and Makassar sailors ranged as far as northern Australia, trading with Aboriginal people for centuries.",
+				"The oil used on Victorian hair gave English the word antimacassar, for the cloth protecting chair backs."
+			],
+			"it": [
+				"Di origine locale; dal 1971 al 1999 si chiamò Ujung Pandang, poi riprese il nome.",
+				"I suoi navigatori bugis e makassaresi si spinsero fino all’Australia settentrionale, commerciando per secoli con gli aborigeni.",
+				"L’olio di Macassar, usato sui capelli in epoca vittoriana, diede all’inglese la parola antimacassar: il panno che protegge gli schienali delle poltrone."
+			]
+		}
 	},
 	"bandar-lampung": {
 		"kind": "city",
@@ -346,11 +528,18 @@
 		"region": "Lampung",
 		"coastal": true,
 		"position": "south-west",
-		"hooks": [
-			"\"Port of Lampung\" — bandar a port, the same Persian word as in Banda Aceh.",
-			"Krakatoa is in the strait off it; the 1883 eruption destroyed the towns it was formed from.",
-			"It is the gateway between Sumatra and Java, with ferries across the Sunda Strait."
-		]
+		"hooks": {
+			"en": [
+				"\"Port of Lampung\" — bandar a port, the same Persian word as in Banda Aceh.",
+				"Krakatoa is in the strait off it; the 1883 eruption destroyed the towns it was formed from.",
+				"It is the gateway between Sumatra and Java, with ferries across the Sunda Strait."
+			],
+			"it": [
+				"\"Porto di Lampung\": bandar è il porto, la stessa parola persiana di Banda Aceh.",
+				"Il Krakatoa sorge nello stretto di fronte; l’eruzione del 1883 distrusse le cittadine da cui la città è nata.",
+				"È la porta tra Sumatra e Giava, con traghetti che attraversano lo stretto della Sonda."
+			]
+		}
 	},
 	"jakarta": {
 		"kind": "city",
@@ -361,11 +550,18 @@
 		"capitalOf": "country",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"From Jayakarta, \"complete victory\", given in 1527; the Dutch renamed it Batavia and Indonesia changed it back in 1942.",
-			"It is sinking up to 25 cm a year in the north, faster than almost any other city.",
-			"That is why the capital is being moved to Borneo, a decision taken in 2019."
-		]
+		"hooks": {
+			"en": [
+				"From Jayakarta, \"complete victory\", given in 1527; the Dutch renamed it Batavia, and the name came back under the Japanese occupation in 1942.",
+				"It is sinking up to 25 cm a year in the north, faster than almost any other city.",
+				"That is why the capital is being moved to Borneo, a decision taken in 2019."
+			],
+			"it": [
+				"Da Jayakarta, \"vittoria completa\", nome dato nel 1527; gli olandesi la ribattezzarono Batavia, e il nome tornò con l’occupazione giapponese del 1942.",
+				"Nella parte nord sprofonda fino a 25 cm l’anno, più in fretta di quasi ogni altra città.",
+				"Per questo la capitale si sta trasferendo nel Borneo, una decisione presa nel 2019."
+			]
+		}
 	},
 	"bekasi": {
 		"kind": "city",
@@ -374,11 +570,18 @@
 		"region": "Jakarta Raya",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"From Sanskrit candrabhaga, a river name — the same root as Chenab in Pakistan.",
-			"It is one of Indonesia’s largest industrial zones and part of Greater Jakarta.",
-			"Its population has grown roughly tenfold since 1980."
-		]
+		"hooks": {
+			"en": [
+				"From Sanskrit candrabhaga, a river name — the same root as Chenab in Pakistan.",
+				"It is one of Indonesia’s largest industrial zones and part of Greater Jakarta.",
+				"Its population has grown roughly tenfold since 1980."
+			],
+			"it": [
+				"Dal sanscrito candrabhaga, nome di un fiume: la stessa radice del Chenab, in Pakistan.",
+				"È una delle più grandi zone industriali dell’Indonesia e fa parte della Grande Giacarta.",
+				"La sua popolazione è cresciuta di circa dieci volte dal 1980."
+			]
+		}
 	},
 	"bogor": {
 		"kind": "city",
@@ -388,11 +591,18 @@
 		"region": "Jawa Barat",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"From a Sundanese word for the sugar palm, or possibly \"tree stump\".",
-			"It has more thunderstorms than almost anywhere on earth, about 320 days a year, and is called the rain city.",
-			"Its botanical garden, founded 1817, is one of the oldest in the tropics and where oil palm was first grown in Asia."
-		]
+		"hooks": {
+			"en": [
+				"From a Sundanese word for the sugar palm, or possibly \"tree stump\".",
+				"It has more thunderstorms than almost anywhere on earth, about 320 days a year, and is called the rain city.",
+				"Its botanical garden, founded 1817, is one of the oldest in the tropics and where oil palm was first grown in Asia."
+			],
+			"it": [
+				"Da una parola sundanese per la palma da zucchero, o forse \"ceppo d’albero\".",
+				"Ha più temporali di quasi ogni altro luogo sulla Terra, circa 320 giorni l’anno, e la chiamano la città della pioggia.",
+				"Il suo orto botanico, fondato nel 1817, è uno dei più antichi dei tropici, ed è lì che la palma da olio fu coltivata per la prima volta in Asia."
+			]
+		}
 	},
 	"cirebon": {
 		"kind": "city",
@@ -401,11 +611,18 @@
 		"region": "Jawa Barat",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"From caruban, \"a mixture\", or from ci-rebon, \"shrimp water\" — the town made shrimp paste.",
-			"Its palaces mix Javanese, Chinese, Islamic and European design, reflecting that mixture.",
-			"Its batik, in a cloud pattern called megamendung, is a distinct style."
-		]
+		"hooks": {
+			"en": [
+				"From caruban, \"a mixture\", or from ci-rebon, \"shrimp water\" — the town made shrimp paste.",
+				"Its palaces mix Javanese, Chinese, Islamic and European design, reflecting that mixture.",
+				"Its batik, in a cloud pattern called megamendung, is a distinct style."
+			],
+			"it": [
+				"Da caruban, \"miscuglio\", oppure da ci-rebon, \"acqua di gamberetti\": la città produceva pasta di gamberetti.",
+				"I suoi palazzi mescolano stile giavanese, cinese, islamico ed europeo, e rispecchiano quel miscuglio.",
+				"Il suo batik, con un motivo a nuvole chiamato megamendung, è uno stile a sé."
+			]
+		}
 	},
 	"tegal": {
 		"kind": "city",
@@ -414,11 +631,18 @@
 		"region": "Jawa Tengah",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"From a Javanese word for a dry field.",
-			"Its warung tegal, cheap eating stalls, are found all over Jakarta and are an institution.",
-			"It has made metal goods since Dutch times and is nicknamed the Japan of Indonesia for its workshops."
-		]
+		"hooks": {
+			"en": [
+				"From a Javanese word for a dry field.",
+				"Its warung tegal, cheap eating stalls, are found all over Jakarta and are an institution.",
+				"It has made metal goods since Dutch times and is nicknamed the Japan of Indonesia for its workshops."
+			],
+			"it": [
+				"Da una parola giavanese per un campo asciutto.",
+				"I suoi warung tegal, chioschi dove si mangia con poco, si trovano in tutta Giacarta e sono un’istituzione.",
+				"Lavora il metallo fin dall’epoca olandese e, per le sue officine, è soprannominata il Giappone dell’Indonesia."
+			]
+		}
 	},
 	"pekalongan": {
 		"kind": "city",
@@ -427,11 +651,18 @@
 		"region": "Jawa Tengah",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"Possibly from a word about a harvest or an abundance.",
-			"It is a UNESCO Creative City for its batik, and its patterns absorbed Chinese, Arab and Dutch influences.",
-			"Its batik museum holds pieces going back two centuries."
-		]
+		"hooks": {
+			"en": [
+				"Possibly from a word about a harvest or an abundance.",
+				"It is a UNESCO Creative City for its batik, and its patterns absorbed Chinese, Arab and Dutch influences.",
+				"Its batik museum holds pieces going back two centuries."
+			],
+			"it": [
+				"Forse da una parola che ha a che fare con un raccolto o con l’abbondanza.",
+				"È Città creativa UNESCO per il suo batik, i cui motivi hanno assorbito influenze cinesi, arabe e olandesi.",
+				"Il suo museo del batik conserva pezzi che risalgono a due secoli fa."
+			]
+		}
 	},
 	"sukabumi": {
 		"kind": "city",
@@ -440,11 +671,18 @@
 		"region": "Jawa Barat",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"\"Pleasant land\" — suka pleasure, bumi earth, in Sundanese.",
-			"It sits below Mount Gede and was a Dutch hill retreat from Batavia.",
-			"The world’s oldest known geothermal drilling in Asia took place nearby in 1926."
-		]
+		"hooks": {
+			"en": [
+				"\"Pleasant land\" — suka pleasure, bumi earth, in Sundanese.",
+				"It sits below Mount Gede and was a Dutch hill retreat from Batavia.",
+				"It sits at the southern foot of Mount Gede, whose park was one of Indonesia's first five national parks."
+			],
+			"it": [
+				"\"Terra piacevole\": in sundanese suka è piacere, bumi terra.",
+				"Sorge ai piedi del monte Gede e fu un luogo di villeggiatura in collina per gli olandesi di Batavia.",
+				"Sorge ai piedi meridionali del monte Gede, il cui parco fu uno dei primi cinque parchi nazionali dell’Indonesia."
+			]
+		}
 	},
 	"bandung": {
 		"kind": "city",
@@ -454,11 +692,18 @@
 		"region": "Jawa Barat",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"From bendung, a dam — a lake formed by a lava flow once filled the basin.",
-			"The 1955 Asian-African Conference here founded the Non-Aligned Movement.",
-			"It is called the Paris of Java for its art deco buildings and its cool highland climate."
-		]
+		"hooks": {
+			"en": [
+				"From bendung, a dam — a lake formed by a lava flow once filled the basin.",
+				"The 1955 Asian-African Conference here founded the Non-Aligned Movement.",
+				"It is called the Paris of Java for its art deco buildings and its cool highland climate."
+			],
+			"it": [
+				"Da bendung, una diga: un tempo la conca era occupata da un lago formato da una colata di lava.",
+				"La Conferenza afro-asiatica del 1955, tenutasi qui, diede vita al Movimento dei non allineati.",
+				"La chiamano la Parigi di Giava per i suoi edifici art déco e il clima fresco d’altura."
+			]
+		}
 	},
 	"semarang": {
 		"kind": "city",
@@ -468,11 +713,18 @@
 		"region": "Jawa Tengah",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"From asem arang, \"sparse tamarind trees\".",
-			"Its Lawang Sewu, \"a thousand doors\", was the Dutch railway headquarters and is the city’s landmark.",
-			"Admiral Zheng He’s fleet landed nearby in the 1400s, and a temple marks the spot."
-		]
+		"hooks": {
+			"en": [
+				"From asem arang, \"sparse tamarind trees\".",
+				"Its Lawang Sewu, \"a thousand doors\", was the Dutch railway headquarters and is the city’s landmark.",
+				"Admiral Zheng He’s fleet landed nearby in the 1400s, and a temple marks the spot."
+			],
+			"it": [
+				"Da asem arang, \"tamarindi radi\".",
+				"Il suo Lawang Sewu, \"mille porte\", fu la sede delle ferrovie olandesi ed è il simbolo della città.",
+				"La flotta dell’ammiraglio Zheng He approdò nei dintorni nel Quattrocento, e un tempio segna il punto."
+			]
+		}
 	},
 	"surabaya": {
 		"kind": "city",
@@ -482,11 +734,18 @@
 		"region": "Jawa Timur",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"From suro, a shark, and boyo, a crocodile — the two are on the city arms, fighting.",
-			"The independence fighting of November 1945 here is commemorated as Heroes’ Day.",
-			"It is Indonesia’s second city and its main eastern port."
-		]
+		"hooks": {
+			"en": [
+				"From suro, a shark, and boyo, a crocodile — the two are on the city arms, fighting.",
+				"The independence fighting of November 1945 here is commemorated as Heroes’ Day.",
+				"It is Indonesia’s second city and its main eastern port."
+			],
+			"it": [
+				"Da suro, squalo, e boyo, coccodrillo: i due compaiono sullo stemma della città, mentre lottano.",
+				"Gli scontri per l’indipendenza del novembre 1945, combattuti qui, sono ricordati come Giorno degli Eroi.",
+				"È la seconda città dell’Indonesia e il suo principale porto orientale."
+			]
+		}
 	},
 	"tasikmalaya": {
 		"kind": "city",
@@ -495,11 +754,18 @@
 		"region": "Jawa Barat",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"From tasik, a lake, plus malaya, a range of hills.",
-			"It is known for handicrafts: umbrellas, embroidery and woven pandan mats.",
-			"It is one of the most devoutly Muslim towns in West Java, with many pesantren schools."
-		]
+		"hooks": {
+			"en": [
+				"From tasik, a lake, plus malaya, a range of hills.",
+				"It is known for handicrafts: umbrellas, embroidery and woven pandan mats.",
+				"It is one of the most devoutly Muslim towns in West Java, with many pesantren schools."
+			],
+			"it": [
+				"Da tasik, lago, più malaya, una catena di colline.",
+				"È nota per l’artigianato: ombrelli, ricami e stuoie intrecciate di pandano.",
+				"È una delle città più devotamente musulmane di Giava occidentale, con molte scuole pesantren."
+			]
+		}
 	},
 	"surakarta": {
 		"kind": "city",
@@ -508,11 +774,18 @@
 		"region": "Jawa Tengah",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"\"Brave and prosperous\" — also called Solo, after the Bengawan Solo river.",
-			"Its royal court is one of two heirs to the Mataram sultanate, the other being Yogyakarta.",
-			"Solo batik is the more restrained of the two court styles, and the city is a centre of Javanese classical arts."
-		]
+		"hooks": {
+			"en": [
+				"\"Brave and prosperous\" — also called Solo, after the Bengawan Solo river.",
+				"Its royal court is one of two heirs to the Mataram sultanate, the other being Yogyakarta.",
+				"Solo batik is the more restrained of the two court styles, and the city is a centre of Javanese classical arts."
+			],
+			"it": [
+				"\"Coraggiosa e prospera\": detta anche Solo, dal fiume Bengawan Solo.",
+				"La sua corte reale è una delle due eredi del sultanato di Mataram; l’altra è Yogyakarta.",
+				"Il batik di Solo è il più sobrio dei due stili di corte, e la città è un centro delle arti classiche giavanesi."
+			]
+		}
 	},
 	"pasuruan": {
 		"kind": "city",
@@ -521,11 +794,18 @@
 		"region": "Jawa Timur",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"Possibly from pasuruhan, a place of command or assembly.",
-			"It was a major sugar port under the Dutch.",
-			"It is the gateway to Mount Bromo, which sits in a sea of volcanic sand."
-		]
+		"hooks": {
+			"en": [
+				"Possibly from pasuruhan, a place of command or assembly.",
+				"It was a major sugar port under the Dutch.",
+				"It is the gateway to Mount Bromo, which sits in a sea of volcanic sand."
+			],
+			"it": [
+				"Forse da pasuruhan, un luogo di comando o di adunanza.",
+				"Sotto gli olandesi fu un importante porto dello zucchero.",
+				"È la porta d’accesso al monte Bromo, che sorge in un mare di sabbia vulcanica."
+			]
+		}
 	},
 	"cilacap": {
 		"kind": "city",
@@ -534,11 +814,18 @@
 		"region": "Jawa Tengah",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"Of Javanese origin, possibly from a word for a marshy place.",
-			"It has the only deep-water port on Java’s south coast and a large refinery.",
-			"Nusakambangan island off it holds Indonesia’s highest-security prisons."
-		]
+		"hooks": {
+			"en": [
+				"Of Javanese origin, possibly from a word for a marshy place.",
+				"It has the only deep-water port on Java’s south coast and a large refinery.",
+				"Nusakambangan island off it holds Indonesia’s highest-security prisons."
+			],
+			"it": [
+				"Di origine giavanese, forse da una parola per un luogo paludoso.",
+				"Ha l’unico porto d’acque profonde della costa meridionale di Giava e una grande raffineria.",
+				"L’isola di Nusakambangan, al largo, ospita le carceri di massima sicurezza dell’Indonesia."
+			]
+		}
 	},
 	"yogyakarta": {
 		"kind": "city",
@@ -546,11 +833,18 @@
 		"populationRank": 16,
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"From Ayodhya, the city in the Ramayana, plus karta, prosperous — \"a fit and prosperous Ayodhya\".",
-			"The only Indonesian region still ruled by its monarchy: the sultan is governor by right, not election.",
-			"It was the capital of the republic during the independence war, and is the country's student and arts city."
-		]
+		"hooks": {
+			"en": [
+				"From Ayodhya, the city in the Ramayana, plus karta, prosperous — \"a fit and prosperous Ayodhya\".",
+				"The only Indonesian region still ruled by its monarchy: the sultan is governor by right, not election.",
+				"It was the capital of the republic during the independence war, and is the country's student and arts city."
+			],
+			"it": [
+				"Da Ayodhya, la città del Ramayana, più karta, \"prospera\": \"un’Ayodhya degna e prospera\".",
+				"L’unica regione indonesiana ancora governata dalla sua monarchia: il sultano è governatore per diritto, non per elezione.",
+				"Fu la capitale della repubblica durante la guerra d’indipendenza, ed è la città degli studenti e delle arti del paese."
+			]
+		}
 	},
 	"kediri": {
 		"kind": "city",
@@ -559,11 +853,18 @@
 		"region": "Jawa Timur",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"From Sanskrit or Javanese kadiri, \"to stand\" or \"self-standing\".",
-			"It was the capital of a kingdom in the 1000s and 1100s whose court produced major Javanese literature.",
-			"Gudang Garam, one of the world’s largest clove cigarette makers, is based here."
-		]
+		"hooks": {
+			"en": [
+				"From Sanskrit or Javanese kadiri, \"to stand\" or \"self-standing\".",
+				"It was the capital of a kingdom in the 1000s and 1100s whose court produced major Javanese literature.",
+				"Gudang Garam, one of the world’s largest clove cigarette makers, is based here."
+			],
+			"it": [
+				"Dal sanscrito o giavanese kadiri, \"stare in piedi\" o \"che si regge da sé\".",
+				"Tra l’XI e il XII secolo fu capitale di un regno la cui corte produsse grandi opere della letteratura giavanese.",
+				"Qui ha sede Gudang Garam, uno dei maggiori produttori al mondo di sigarette ai chiodi di garofano."
+			]
+		}
 	},
 	"malang": {
 		"kind": "city",
@@ -573,11 +874,18 @@
 		"region": "Jawa Timur",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"From a Javanese word meaning to obstruct or lie across.",
-			"It sits at 450 m and was a Dutch colonial retreat, with art deco streets still intact.",
-			"Its people use an inverted slang, boso walikan, in which words are said backwards — Malang becomes Ngalam."
-		]
+		"hooks": {
+			"en": [
+				"From a Javanese word meaning to obstruct or lie across.",
+				"It sits at 450 m and was a Dutch colonial retreat, with art deco streets still intact.",
+				"Its people use an inverted slang, boso walikan, in which words are said backwards — Malang becomes Ngalam."
+			],
+			"it": [
+				"Da una parola giavanese che significa ostacolare o stare di traverso.",
+				"Sorge a 450 m e fu un luogo di villeggiatura coloniale olandese, con strade art déco ancora intatte.",
+				"I suoi abitanti usano un gergo alla rovescia, il boso walikan, in cui le parole si pronunciano al contrario: Malang diventa Ngalam."
+			]
+		}
 	},
 	"singaraja": {
 		"kind": "city",
@@ -586,11 +894,18 @@
 		"region": "Bali",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"\"Lion king\" — from a palace built in 1604 by a king who took that title.",
-			"It was the Dutch capital of Bali and the island’s main port until the 1930s.",
-			"Its Gedong Kirtya holds thousands of lontar palm-leaf manuscripts, the only such library in the world."
-		]
+		"hooks": {
+			"en": [
+				"\"Lion king\" — from a palace built in 1604 by a king who took that title.",
+				"It was the Dutch capital of Bali and the island’s main port until the 1930s.",
+				"Its Gedong Kirtya holds thousands of lontar palm-leaf manuscripts, the only such library in the world."
+			],
+			"it": [
+				"\"Re leone\": da un palazzo costruito nel 1604 da un re che prese quel titolo.",
+				"Fu la capitale olandese di Bali e il principale porto dell’isola fino agli anni Trenta.",
+				"Il suo Gedong Kirtya conserva migliaia di manoscritti lontar su foglie di palma: l’unica biblioteca del genere al mondo."
+			]
+		}
 	},
 	"jember": {
 		"kind": "city",
@@ -599,11 +914,18 @@
 		"region": "Jawa Timur",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"Of Javanese or Madurese origin.",
-			"Its carnival is one of the largest costume parades in the world, staged on a 3.6 km stretch of street.",
-			"It is a tobacco region, growing cigar wrapper leaf exported to Germany and the Netherlands."
-		]
+		"hooks": {
+			"en": [
+				"Of Javanese or Madurese origin.",
+				"Its carnival is one of the largest costume parades in the world, staged on a 3.6 km stretch of street.",
+				"It is a tobacco region, growing cigar wrapper leaf exported to Germany and the Netherlands."
+			],
+			"it": [
+				"Di origine giavanese o madurese.",
+				"Il suo carnevale è una delle più grandi sfilate in costume del mondo, allestita su un tratto di strada di 3,6 km.",
+				"È una zona di tabacco, dove si coltiva foglia da fascia per sigari esportata in Germania e nei Paesi Bassi."
+			]
+		}
 	},
 	"mataram": {
 		"kind": "city",
@@ -612,11 +934,18 @@
 		"region": "Nusa Tenggara Barat",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"Named for the Mataram sultanate of Java, though the city is on Lombok.",
-			"It is the capital of West Nusa Tenggara and sits below Mount Rinjani.",
-			"Balinese rulers held Lombok for two centuries, which is why the town has Hindu temples alongside mosques."
-		]
+		"hooks": {
+			"en": [
+				"Named for the Mataram sultanate of Java, though the city is on Lombok.",
+				"It is the capital of West Nusa Tenggara and sits below Mount Rinjani.",
+				"Balinese rulers held Lombok for two centuries, which is why the town has Hindu temples alongside mosques."
+			],
+			"it": [
+				"Prende il nome dal sultanato giavanese di Mataram, anche se la città è a Lombok.",
+				"È il capoluogo di Nusa Tenggara occidentale e sorge ai piedi del monte Rinjani.",
+				"I sovrani balinesi tennero Lombok per due secoli, ed è per questo che in città ci sono templi indù accanto alle moschee."
+			]
+		}
 	},
 	"denpasar": {
 		"kind": "city",
@@ -625,11 +954,18 @@
 		"region": "Bali",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"\"North of the market\" — den north, pasar market.",
-			"It is the capital of Bali and its largest city, though most visitors stay elsewhere on the island.",
-			"The 1906 puputan here was a ritual mass suicide of the royal court in the face of Dutch guns."
-		]
+		"hooks": {
+			"en": [
+				"\"North of the market\" — den north, pasar market.",
+				"It is the capital of Bali and its largest city, though most visitors stay elsewhere on the island.",
+				"The 1906 puputan here was a ritual mass suicide of the royal court in the face of Dutch guns."
+			],
+			"it": [
+				"\"A nord del mercato\": den è nord, pasar mercato.",
+				"È il capoluogo di Bali e la sua città più grande, anche se quasi tutti i visitatori alloggiano altrove sull’isola.",
+				"Il puputan del 1906, qui, fu un suicidio rituale di massa della corte reale di fronte alle armi olandesi."
+			]
+		}
 	},
 	"kupang": {
 		"kind": "city",
@@ -638,10 +974,17 @@
 		"region": "Nusa Tenggara Timur",
 		"coastal": true,
 		"position": "south-east",
-		"hooks": [
-			"From a local chief’s name, Koepan.",
-			"Captain Bligh reached here in 1789 after 47 days in an open boat following the Bounty mutiny, having sailed 6,700 km.",
-			"It is the capital of East Nusa Tenggara and the closest Indonesian city to Australia."
-		]
+		"hooks": {
+			"en": [
+				"From a local chief’s name, Koepan.",
+				"Captain Bligh reached here in 1789 after 47 days in an open boat following the Bounty mutiny, having sailed 6,700 km.",
+				"It is the capital of East Nusa Tenggara and the closest Indonesian city to Australia."
+			],
+			"it": [
+				"Dal nome di un capo locale, Koepan.",
+				"Dopo l’ammutinamento del Bounty, nel 1789, il capitano Bligh arrivò qui su una scialuppa aperta: 47 giorni di mare e 6.700 km percorsi.",
+				"È il capoluogo di Nusa Tenggara orientale e la città indonesiana più vicina all’Australia."
+			]
+		}
 	}
 }

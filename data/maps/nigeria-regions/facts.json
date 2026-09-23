@@ -14,11 +14,18 @@
 			"population": 732178
 		},
 		"position": "north-west",
-		"hooks": [
-			"From Arabic suq, a market — the Hausa rendering of the name of the caliphate's capital.",
-			"The Sokoto Caliphate, founded by Usman dan Fodio in 1804, was the largest state in Africa in the nineteenth century.",
-			"Its Sultan is still the most senior Muslim authority in Nigeria, and the state is the hottest part of the country."
-		]
+		"hooks": {
+			"en": [
+				"From Arabic suq, a market — the Hausa rendering of the name of the caliphate's capital.",
+				"The Sokoto Caliphate, founded by Usman dan Fodio in 1804, was the largest state in Africa in the nineteenth century.",
+				"Its Sultan is still the most senior Muslim authority in Nigeria, and the state is the hottest part of the country."
+			],
+			"it": [
+				"Dall’arabo suq, \"mercato\": la resa hausa del nome della capitale del califfato.",
+				"Il califfato di Sokoto, fondato da Usman dan Fodio nel 1804, fu lo stato più grande dell’Africa nell’Ottocento.",
+				"Il suo sultano è ancora oggi la massima autorità musulmana della Nigeria, e lo stato è la zona più calda del paese."
+			]
+		}
 	},
 	"katsina": {
 		"kind": "region",
@@ -37,11 +44,18 @@
 			"population": 432149
 		},
 		"position": "north",
-		"hooks": [
-			"Named for the city, said to be after Katsina, the wife of a local ruler.",
-			"One of the seven original Hausa city-states, and a centre of Islamic learning that rivalled Timbuktu in the 1500s.",
-			"Its Gobarau minaret, built of mud in the fifteenth century, is one of the oldest surviving structures in West Africa."
-		]
+		"hooks": {
+			"en": [
+				"Named for the city, said to be after Katsina, the wife of a local ruler.",
+				"One of the seven original Hausa city-states, and a centre of Islamic learning that rivalled Timbuktu in the 1500s.",
+				"Its Gobarau minaret, built of mud in the fifteenth century, is one of the oldest surviving structures in West Africa."
+			],
+			"it": [
+				"Prende il nome dalla città, che a sua volta lo prenderebbe da Katsina, moglie di un sovrano locale.",
+				"Una delle sette città-stato hausa originarie, e un centro di studi islamici che nel Cinquecento rivaleggiava con Timbuctù.",
+				"Il suo minareto di Gobarau, costruito in fango nel Quattrocento, è una delle più antiche strutture sopravvissute dell’Africa occidentale."
+			]
+		}
 	},
 	"zamfara": {
 		"kind": "region",
@@ -61,11 +75,18 @@
 			"population": 226857
 		},
 		"position": "north-west",
-		"hooks": [
-			"Named for the Zamfarawa, a Hausa subgroup, and their old kingdom.",
-			"In 1999 it became the first Nigerian state to adopt sharia criminal law, and eleven others followed.",
-			"Artisanal gold mining here caused one of the worst lead-poisoning episodes ever recorded, in 2010."
-		]
+		"hooks": {
+			"en": [
+				"Named for the Zamfarawa, a Hausa subgroup, and their old kingdom.",
+				"In 1999 it became the first Nigerian state to adopt sharia criminal law, and eleven others followed.",
+				"Artisanal gold mining here caused one of the worst lead-poisoning episodes ever recorded, in 2010."
+			],
+			"it": [
+				"Prende il nome dagli Zamfarawa, un sottogruppo hausa, e dal loro antico regno.",
+				"Nel 1999 fu il primo stato nigeriano ad adottare il diritto penale della sharia, e altri undici ne seguirono l’esempio.",
+				"L’estrazione artigianale dell’oro vi causò nel 2010 uno dei peggiori casi di avvelenamento da piombo mai registrati."
+			]
+		}
 	},
 	"yobe": {
 		"kind": "region",
@@ -84,11 +105,18 @@
 			"population": 255895
 		},
 		"position": "north-east",
-		"hooks": [
-			"Named for the Yobe river, which forms part of the border with Niger.",
-			"It was split from Borno in 1991, so it shares the Kanuri history of the old Bornu empire.",
-			"Much of it is Sahel scrub, and the Hadejia-Nguru wetlands on its edge are a vital stop for birds crossing the Sahara."
-		]
+		"hooks": {
+			"en": [
+				"Named for the Yobe river, which forms part of the border with Niger.",
+				"It was split from Borno in 1991, so it shares the Kanuri history of the old Bornu empire.",
+				"Much of it is Sahel scrub, and the Hadejia-Nguru wetlands on its edge are a vital stop for birds crossing the Sahara."
+			],
+			"it": [
+				"Prende il nome dal fiume Yobe, che segna parte del confine con il Niger.",
+				"Fu separato dal Borno nel 1991, e ne condivide quindi la storia kanuri dell’antico impero del Bornu.",
+				"È in gran parte boscaglia saheliana, e le zone umide di Hadejia-Nguru al suo margine sono una tappa vitale per gli uccelli che attraversano il Sahara."
+			]
+		}
 	},
 	"jigawa": {
 		"kind": "region",
@@ -107,11 +135,18 @@
 			"population": 17129
 		},
 		"position": "north",
-		"hooks": [
-			"From a Hausa word for sandy soil, which describes most of it.",
-			"Split from Kano in 1991; it is one of the most rural states, with a low urban share and heavy reliance on farming.",
-			"The Hadejia river through it supports irrigated rice and wheat in an otherwise dry landscape."
-		]
+		"hooks": {
+			"en": [
+				"From a Hausa word for sandy soil, which describes most of it.",
+				"Split from Kano in 1991; it is one of the most rural states, with a low urban share and heavy reliance on farming.",
+				"The Hadejia river through it supports irrigated rice and wheat in an otherwise dry landscape."
+			],
+			"it": [
+				"Da una parola hausa che indica il suolo sabbioso, e che descrive gran parte del suo territorio.",
+				"Separato da Kano nel 1991, è uno degli stati più rurali, con poca popolazione urbana e una forte dipendenza dall’agricoltura.",
+				"Il fiume Hadejia che lo attraversa alimenta risaie e campi di grano irrigati in un paesaggio altrimenti arido."
+			]
+		}
 	},
 	"borno": {
 		"kind": "region",
@@ -129,11 +164,18 @@
 			"population": 896000
 		},
 		"position": "north-east",
-		"hooks": [
-			"From the Kanem-Bornu empire, one of the longest-lasting states in African history — its dynasty ruled for about a thousand years.",
-			"Lake Chad on its border has shrunk by about 90% since the 1960s, which has destroyed fishing and farming livelihoods.",
-			"It was the centre of the Boko Haram insurgency from 2009, which displaced over two million people."
-		]
+		"hooks": {
+			"en": [
+				"From the Kanem-Bornu empire, one of the longest-lasting states in African history — its dynasty ruled for about a thousand years.",
+				"Lake Chad on its border has shrunk by about 90% since the 1960s, which has destroyed fishing and farming livelihoods.",
+				"It was the centre of the Boko Haram insurgency from 2009, which displaced over two million people."
+			],
+			"it": [
+				"Dall’impero del Kanem-Bornu, uno degli stati più longevi della storia africana: la sua dinastia regnò per circa mille anni.",
+				"Il lago Ciad, al suo confine, si è ridotto di circa il 90% dagli anni Sessanta, distruggendo la pesca e l’agricoltura di cui vivevano in tanti.",
+				"Dal 2009 è stato il centro dell’insurrezione di Boko Haram, che ha costretto alla fuga oltre due milioni di persone."
+			]
+		}
 	},
 	"kebbi": {
 		"kind": "region",
@@ -151,11 +193,18 @@
 			"population": 108164
 		},
 		"position": "north-west",
-		"hooks": [
-			"Named for the old Kebbi kingdom, whose people the Hausa called the Kabawa.",
-			"Argungu in it holds a fishing festival where thousands of men enter the river at once with hand nets and gourds, a truce tradition dating from 1934.",
-			"It grows more rice than almost any other state, irrigated from the Niger and the Rima."
-		]
+		"hooks": {
+			"en": [
+				"Named for the old Kebbi kingdom, whose people the Hausa called the Kabawa.",
+				"Argungu in it holds a fishing festival where thousands of men enter the river at once with hand nets and gourds, a truce tradition dating from 1934.",
+				"It grows more rice than almost any other state, irrigated from the Niger and the Rima."
+			],
+			"it": [
+				"Prende il nome dall’antico regno di Kebbi, il cui popolo gli Hausa chiamavano Kabawa.",
+				"Ad Argungu si tiene una festa della pesca in cui migliaia di uomini entrano insieme nel fiume con reti a mano e zucche: una tradizione di tregua che risale al 1934.",
+				"Produce più riso di quasi ogni altro stato, irrigato dal Niger e dal Rima."
+			]
+		}
 	},
 	"kano": {
 		"kind": "region",
@@ -174,11 +223,18 @@
 			"population": 3140000
 		},
 		"position": "north",
-		"hooks": [
-			"Named for the city, traditionally after Kano, a blacksmith who settled at the foot of Dala hill.",
-			"The greatest trans-Saharan trade city in Hausaland, walled since the eleventh century, and its dye pits at Kofar Mata have been worked since 1498.",
-			"It is the most populous state in northern Nigeria and the commercial capital of the north."
-		]
+		"hooks": {
+			"en": [
+				"Named for the city, traditionally after Kano, a blacksmith who settled at the foot of Dala hill.",
+				"The greatest trans-Saharan trade city in Hausaland, walled since the eleventh century, and its dye pits at Kofar Mata have been worked since 1498.",
+				"It is the most populous state in northern Nigeria and the commercial capital of the north."
+			],
+			"it": [
+				"Prende il nome dalla città, che secondo la tradizione lo deve a Kano, un fabbro stabilitosi ai piedi della collina di Dala.",
+				"La più grande città del commercio transahariano del paese hausa, cinta di mura dall’XI secolo; le sue vasche di tintura di Kofar Mata sono in uso dal 1498.",
+				"È lo stato più popoloso della Nigeria settentrionale e la capitale commerciale del nord."
+			]
+		}
 	},
 	"bauchi": {
 		"kind": "region",
@@ -200,11 +256,18 @@
 			"population": 316149
 		},
 		"position": "north",
-		"hooks": [
-			"Said to be named after a hunter called Baushe who founded the town.",
-			"Yankari here is Nigeria's best-known game reserve, with the country's largest surviving elephant population.",
-			"Sir Abubakar Tafawa Balewa, Nigeria's first prime minister, came from this state."
-		]
+		"hooks": {
+			"en": [
+				"Said to be named after a hunter called Baushe who founded the town.",
+				"Yankari here is Nigeria's best-known game reserve, with the country's largest surviving elephant population.",
+				"Sir Abubakar Tafawa Balewa, Nigeria's first prime minister, came from this state."
+			],
+			"it": [
+				"Si dice che prenda il nome da un cacciatore di nome Baushe, che fondò la città.",
+				"Qui Yankari è la riserva faunistica più nota della Nigeria, con la più grande popolazione di elefanti sopravvissuta nel paese.",
+				"Sir Abubakar Tafawa Balewa, il primo capo di governo della Nigeria, veniva da questo stato."
+			]
+		}
 	},
 	"gombe": {
 		"kind": "region",
@@ -224,11 +287,18 @@
 			"population": 270366
 		},
 		"position": "east",
-		"hooks": [
-			"Named for the town, founded by a Fulani leader in the jihad of the early 1800s.",
-			"Split from Bauchi in 1996, one of the last states created.",
-			"Its Tangale-Waja hills give it more relief than the plains around, and it sits on the edge of the Sahel."
-		]
+		"hooks": {
+			"en": [
+				"Named for the town, founded by a Fulani leader in the jihad of the early 1800s.",
+				"Split from Bauchi in 1996, one of the last states created.",
+				"Its Tangale-Waja hills give it more relief than the plains around, and it sits on the edge of the Sahel."
+			],
+			"it": [
+				"Prende il nome dalla città, fondata da un capo fulani durante la jihad dei primi dell’Ottocento.",
+				"Separato dal Bauchi nel 1996: è uno degli ultimi stati creati.",
+				"Le colline di Tangale-Waja gli danno più rilievo delle pianure circostanti, e si trova al margine del Sahel."
+			]
+		}
 	},
 	"kaduna": {
 		"kind": "region",
@@ -251,11 +321,18 @@
 			"population": 1442000
 		},
 		"position": "centre",
-		"hooks": [
-			"From the Hausa kadduna, plural of kada, \"crocodile\" — the river was full of them.",
-			"The British made it the capital of the Northern Region in 1917, so it is a colonial creation rather than an old emirate.",
-			"It sits on the fault line between Muslim north and Christian south, which has made it the site of repeated communal violence."
-		]
+		"hooks": {
+			"en": [
+				"From the Hausa kadduna, plural of kada, \"crocodile\" — the river was full of them.",
+				"The British made it the capital of the Northern Region in 1917, so it is a colonial creation rather than an old emirate.",
+				"It sits on the fault line between Muslim north and Christian south, which has made it the site of repeated communal violence."
+			],
+			"it": [
+				"Dall’hausa kadduna, plurale di kada, \"coccodrillo\": il fiume ne era pieno.",
+				"I britannici ne fecero la capitale della Regione Settentrionale nel 1917: è quindi una creazione coloniale, non un antico emirato.",
+				"Si trova sulla linea di faglia tra il nord musulmano e il sud cristiano, e per questo è stata teatro di ripetute violenze tra comunità."
+			]
+		}
 	},
 	"niger": {
 		"kind": "region",
@@ -276,11 +353,18 @@
 			"population": 291905
 		},
 		"position": "west",
-		"hooks": [
-			"Named for the river, whose own name probably comes from Tuareg n'ger-n-gereo, \"river of rivers\" — not from Latin for black.",
-			"The largest state in Nigeria by area, and it holds both the Kainji and Shiroro dams.",
-			"Gurara falls and the Zuma rock, a 300 m monolith on the Abuja road, are both here."
-		]
+		"hooks": {
+			"en": [
+				"Named for the river, whose own name probably comes from Tuareg n'ger-n-gereo, \"river of rivers\" — not from Latin for black.",
+				"The largest state in Nigeria by area, and it holds both the Kainji and Shiroro dams.",
+				"Gurara falls and the Zuma rock, a 300 m monolith on the Abuja road, are both here."
+			],
+			"it": [
+				"Prende il nome dal fiume, il cui nome viene probabilmente dal tuareg n’ger-n-gereo, \"fiume dei fiumi\", e non dalla parola latina per nero.",
+				"Il più grande stato della Nigeria per superficie, e ospita sia la diga di Kainji sia quella di Shiroro.",
+				"Qui si trovano sia le cascate di Gurara sia lo Zuma Rock, un monolite di 300 m lungo la strada per Abuja."
+			]
+		}
 	},
 	"plateau": {
 		"kind": "region",
@@ -298,11 +382,18 @@
 			"population": 816824
 		},
 		"position": "centre",
-		"hooks": [
-			"Named for the Jos Plateau, which rises to about 1,200 m and is cool enough that the British built a hill station on it.",
-			"Tin was mined here from 1902, and the Nok culture nearby produced terracotta sculpture from about 500 BC — the oldest figurative art in West Africa.",
-			"Its altitude gives it a climate mild enough to grow strawberries and potatoes in the tropics."
-		]
+		"hooks": {
+			"en": [
+				"Named for the Jos Plateau, which rises to about 1,200 m and is cool enough that the British built a hill station on it.",
+				"Tin was mined here from 1902, and the Nok culture nearby produced terracotta sculpture from about 500 BC — the oldest figurative art in West Africa.",
+				"Its altitude gives it a climate mild enough to grow strawberries and potatoes in the tropics."
+			],
+			"it": [
+				"Prende il nome dall’altopiano di Jos, che sale fino a circa 1.200 m ed è così fresco che i britannici vi costruirono una stazione climatica d’altura.",
+				"Qui si estraeva stagno dal 1902, e la vicina cultura Nok produsse sculture in terracotta a partire dal 500 a.C. circa: la più antica arte figurativa dell’Africa occidentale.",
+				"L’altitudine gli dà un clima abbastanza mite da coltivare fragole e patate ai tropici."
+			]
+		}
 	},
 	"adamawa": {
 		"kind": "region",
@@ -324,11 +415,18 @@
 			"elevation": 2042
 		},
 		"position": "east",
-		"hooks": [
-			"Named for Modibbo Adama, the Fulani leader who founded an emirate here in the early 1800s.",
-			"The Mandara and Alantika mountains along its Cameroon border hold communities that resisted both the jihad and colonial rule.",
-			"Its Sukur cultural landscape, terraced fields and stone-paved paths, is a UNESCO site."
-		]
+		"hooks": {
+			"en": [
+				"Named for Modibbo Adama, the Fulani leader who founded an emirate here in the early 1800s.",
+				"The Mandara and Alantika mountains along its Cameroon border hold communities that resisted both the jihad and colonial rule.",
+				"Its Sukur cultural landscape, terraced fields and stone-paved paths, is a UNESCO site."
+			],
+			"it": [
+				"Prende il nome da Modibbo Adama, il capo fulani che vi fondò un emirato nei primi dell’Ottocento.",
+				"I monti Mandara e Alantika, lungo il confine con il Camerun, ospitano comunità che resistettero sia alla jihad sia al dominio coloniale.",
+				"Il suo paesaggio culturale di Sukur, fatto di campi terrazzati e sentieri lastricati in pietra, è patrimonio UNESCO."
+			]
+		}
 	},
 	"kwara": {
 		"kind": "region",
@@ -348,11 +446,18 @@
 			"population": 771000
 		},
 		"position": "west",
-		"hooks": [
-			"From a Nupe word for the Niger river.",
-			"It is the meeting point of north and south: Yoruba-majority but grouped with the northern states.",
-			"Ilorin, its capital, was a Yoruba town taken into the Sokoto Caliphate, which is why it is Muslim-majority and Yoruba-speaking at once."
-		]
+		"hooks": {
+			"en": [
+				"From a Nupe word for the Niger river.",
+				"It is the meeting point of north and south: Yoruba-majority but grouped with the northern states.",
+				"Ilorin, its capital, was a Yoruba town taken into the Sokoto Caliphate, which is why it is Muslim-majority and Yoruba-speaking at once."
+			],
+			"it": [
+				"Da una parola nupe che indica il fiume Niger.",
+				"È il punto d’incontro tra nord e sud: a maggioranza yoruba, ma raggruppato con gli stati del nord.",
+				"Ilorin, la capitale, era una città yoruba entrata nel califfato di Sokoto: per questo è insieme a maggioranza musulmana e di lingua yoruba."
+			]
+		}
 	},
 	"federal-capital-territory": {
 		"kind": "region",
@@ -371,11 +476,18 @@
 			"population": 1576000
 		},
 		"position": "centre",
-		"hooks": [
-			"Not a name but a status: territory carved out in 1976 for a new, neutral capital away from Lagos.",
-			"Abuja was chosen for being ethnically neutral and central, and the government moved there in 1991.",
-			"Aso Rock, a 400 m monolith, stands behind the presidential complex, which is named after it."
-		]
+		"hooks": {
+			"en": [
+				"Not a name but a status: territory carved out in 1976 for a new, neutral capital away from Lagos.",
+				"Abuja was chosen for being ethnically neutral and central, and the government moved there in 1991.",
+				"Aso Rock, a 400 m monolith, stands behind the presidential complex, which is named after it."
+			],
+			"it": [
+				"Non un nome ma uno status: un territorio ritagliato nel 1976 per una nuova capitale neutrale, lontano da Lagos.",
+				"Abuja fu scelta perché etnicamente neutrale e centrale, e il governo vi si trasferì nel 1991.",
+				"L’Aso Rock, un monolite di 400 m, si erge alle spalle del complesso presidenziale, che ne porta il nome."
+			]
+		}
 	},
 	"nasarawa": {
 		"kind": "region",
@@ -396,11 +508,18 @@
 			"population": 127236
 		},
 		"position": "centre",
-		"hooks": [
-			"From Arabic nasara, \"victory\" or \"help\" — a name given by a nineteenth-century emir.",
-			"Split from Plateau in 1996, and it holds a large share of Nigeria's solid minerals, including barite and lithium.",
-			"Its Farin Ruwa falls drop about 150 m, among the highest in the country."
-		]
+		"hooks": {
+			"en": [
+				"From Arabic nasara, \"victory\" or \"help\" — a name given by a nineteenth-century emir.",
+				"Split from Plateau in 1996, and it holds a large share of Nigeria's solid minerals, including barite and lithium.",
+				"Its Farin Ruwa falls drop about 150 m, among the highest in the country."
+			],
+			"it": [
+				"Dall’arabo nasara, \"vittoria\" o \"aiuto\": un nome dato da un emiro dell’Ottocento.",
+				"Separato dal Plateau nel 1996, custodisce una quota importante dei minerali solidi della Nigeria, tra cui barite e litio.",
+				"Le sue cascate di Farin Ruwa fanno un salto di circa 150 m, tra i più alti del paese."
+			]
+		}
 	},
 	"oyo": {
 		"kind": "region",
@@ -418,11 +537,18 @@
 			"population": 2628000
 		},
 		"position": "west",
-		"hooks": [
-			"Named for the Oyo Empire, the dominant Yoruba power from the 1600s to the 1830s, with a cavalry that controlled the savanna.",
-			"Ibadan, its capital, was the largest city in tropical Africa for much of the twentieth century, and has Nigeria's oldest university, from 1948.",
-			"The Old Oyo capital's fall in the 1830s scattered Yoruba people south and is the origin of many modern Yoruba towns."
-		]
+		"hooks": {
+			"en": [
+				"Named for the Oyo Empire, the dominant Yoruba power from the 1600s to the 1830s, with a cavalry that controlled the savanna.",
+				"Ibadan, its capital, was the largest city in tropical Africa for much of the twentieth century, and has Nigeria's oldest university, from 1948.",
+				"The Old Oyo capital's fall in the 1830s scattered Yoruba people south and is the origin of many modern Yoruba towns."
+			],
+			"it": [
+				"Prende il nome dall’impero di Oyo, la potenza yoruba dominante dal Seicento agli anni Trenta dell’Ottocento, con una cavalleria che controllava la savana.",
+				"Ibadan, la capitale, fu per buona parte del Novecento la più grande città dell’Africa tropicale, e ha la più antica università della Nigeria, del 1948.",
+				"La caduta dell’antica capitale, la Vecchia Oyo, negli anni Trenta dell’Ottocento disperse gli Yoruba verso sud ed è all’origine di molte città yoruba moderne."
+			]
+		}
 	},
 	"taraba": {
 		"kind": "region",
@@ -447,11 +573,18 @@
 			"elevation": 2419
 		},
 		"position": "centre",
-		"hooks": [
-			"Named for the Taraba river.",
-			"The Mambilla Plateau in it is the highest land in Nigeria, above 1,800 m, with tea plantations and a temperate climate.",
-			"It is one of the most ethnically diverse states in the country, with dozens of small language groups."
-		]
+		"hooks": {
+			"en": [
+				"Named for the Taraba river.",
+				"The Mambilla Plateau in it is the highest land in Nigeria, above 1,800 m, with tea plantations and a temperate climate.",
+				"It is one of the most ethnically diverse states in the country, with dozens of small language groups."
+			],
+			"it": [
+				"Prende il nome dal fiume Taraba.",
+				"L’altopiano di Mambilla è la terra più alta della Nigeria, sopra i 1.800 m, con piantagioni di tè e un clima temperato.",
+				"È uno degli stati etnicamente più eterogenei del paese, con decine di piccoli gruppi linguistici."
+			]
+		}
 	},
 	"ekiti": {
 		"kind": "region",
@@ -470,11 +603,18 @@
 			"population": 446749
 		},
 		"position": "west",
-		"hooks": [
-			"From the Yoruba okiti, \"hill\" — the land of hills, which it is.",
-			"It has produced an unusual number of professors for its size, and Nigerians call it the fountain of knowledge.",
-			"Ikogosi in it has warm and cold springs that meet and flow side by side without mixing at once."
-		]
+		"hooks": {
+			"en": [
+				"From the Yoruba okiti, \"hill\" — the land of hills, which it is.",
+				"It has produced an unusual number of professors for its size, and Nigerians call it the fountain of knowledge.",
+				"Ikogosi in it has warm and cold springs that meet and flow side by side without mixing at once."
+			],
+			"it": [
+				"Dallo yoruba okiti, \"collina\": la terra delle colline, e lo è davvero.",
+				"Ha dato un numero insolito di professori universitari per le sue dimensioni, e i nigeriani lo chiamano la fonte del sapere.",
+				"A Ikogosi una sorgente calda e una fredda si incontrano e scorrono fianco a fianco senza mescolarsi subito."
+			]
+		}
 	},
 	"kogi": {
 		"kind": "region",
@@ -500,11 +640,18 @@
 			"population": 75087
 		},
 		"position": "west",
-		"hooks": [
-			"From a Hausa or Nupe word for river — appropriately, since the Niger and the Benue meet at Lokoja, its capital.",
-			"Lokoja was the first administrative capital of colonial Nigeria, chosen for that confluence.",
-			"The state borders ten others, more than any other in Nigeria."
-		]
+		"hooks": {
+			"en": [
+				"From a Hausa or Nupe word for river — appropriately, since the Niger and the Benue meet at Lokoja, its capital.",
+				"Lokoja was the first administrative capital of colonial Nigeria, chosen for that confluence.",
+				"The state borders ten others, more than any other in Nigeria."
+			],
+			"it": [
+				"Da una parola hausa o nupe che significa fiume: a ragione, visto che il Niger e il Benue si incontrano a Lokoja, la sua capitale.",
+				"Lokoja fu la prima capitale amministrativa della Nigeria coloniale, scelta proprio per quella confluenza.",
+				"Lo stato confina con altri dieci, più di qualsiasi altro in Nigeria."
+			]
+		}
 	},
 	"osun": {
 		"kind": "region",
@@ -524,11 +671,18 @@
 			"population": 482365
 		},
 		"position": "west",
-		"hooks": [
-			"Named for the Osun river and the goddess of the same name.",
-			"The Osun-Osogbo sacred grove is a UNESCO site — one of the last intact forest shrines of the Yoruba religion, restored by an Austrian artist who settled there.",
-			"Ile-Ife in it is where Yoruba tradition places the creation of the world, and its bronze heads from about 1300 astonished European scholars."
-		]
+		"hooks": {
+			"en": [
+				"Named for the Osun river and the goddess of the same name.",
+				"The Osun-Osogbo sacred grove is a UNESCO site — one of the last intact forest shrines of the Yoruba religion, restored by an Austrian artist who settled there.",
+				"Ile-Ife in it is where Yoruba tradition places the creation of the world, and its bronze heads from about 1300 astonished European scholars."
+			],
+			"it": [
+				"Prende il nome dal fiume Osun e dalla dea omonima.",
+				"Il bosco sacro di Osun-Osogbo è patrimonio UNESCO: uno degli ultimi santuari forestali intatti della religione yoruba, restaurato da un’artista austriaca che vi si stabilì.",
+				"Ile-Ife è il luogo in cui la tradizione yoruba colloca la creazione del mondo, e le sue teste in bronzo del 1300 circa sbalordirono gli studiosi europei."
+			]
+		}
 	},
 	"benue": {
 		"kind": "region",
@@ -549,11 +703,18 @@
 			"population": 292645
 		},
 		"position": "south",
-		"hooks": [
-			"Named for the Benue river, the Niger's largest tributary; the name comes from a Batta phrase, \"mother of waters\".",
-			"Called the food basket of the nation: it produces a large share of Nigeria's yams, and Nigeria grows most of the world's.",
-			"The Tiv people here are one of Nigeria's larger groups and were traditionally organised without chiefs."
-		]
+		"hooks": {
+			"en": [
+				"Named for the Benue river, the Niger's largest tributary; the name comes from a Batta phrase, \"mother of waters\".",
+				"Called the food basket of the nation: it produces a large share of Nigeria's yams, and Nigeria grows most of the world's.",
+				"The Tiv people here are one of Nigeria's larger groups and were traditionally organised without chiefs."
+			],
+			"it": [
+				"Prende il nome dal fiume Benue, il maggiore affluente del Niger; il nome viene da un’espressione batta, \"madre delle acque\".",
+				"Lo chiamano il granaio della nazione: produce gran parte degli ignami della Nigeria, e la Nigeria coltiva la maggior parte di quelli del mondo.",
+				"I Tiv, che vivono qui, sono uno dei gruppi più numerosi della Nigeria e tradizionalmente si organizzavano senza capi."
+			]
+		}
 	},
 	"ogun": {
 		"kind": "region",
@@ -572,11 +733,18 @@
 			"population": 593100
 		},
 		"position": "south-west",
-		"hooks": [
-			"Named for the Ogun river, which shares its name with the Yoruba god of iron.",
-			"Abeokuta, its capital, means \"under the rock\", and its Olumo rock sheltered refugees during the nineteenth-century wars.",
-			"It has produced more Nigerian heads of state than any other state, including Obasanjo, and Fela Kuti was born here."
-		]
+		"hooks": {
+			"en": [
+				"Named for the Ogun river, which shares its name with the Yoruba god of iron.",
+				"Abeokuta, its capital, means \"under the rock\", and its Olumo rock sheltered refugees during the nineteenth-century wars.",
+				"It has produced more Nigerian heads of state than any other state, including Obasanjo, and Fela Kuti was born here."
+			],
+			"it": [
+				"Prende il nome dal fiume Ogun, che ha lo stesso nome del dio yoruba del ferro.",
+				"Abeokuta, la capitale, significa \"sotto la roccia\", e la sua roccia di Olumo diede riparo ai profughi durante le guerre dell’Ottocento.",
+				"Ha dato alla Nigeria più capi di stato di qualsiasi altro stato, tra cui Obasanjo, e qui nacque Fela Kuti."
+			]
+		}
 	},
 	"ondo": {
 		"kind": "region",
@@ -597,11 +765,18 @@
 			"population": 1099931
 		},
 		"position": "south-west",
-		"hooks": [
-			"Named for the town of Ondo, whose own name is said to mean \"the settlers\".",
-			"Nigeria's largest cocoa producer, and cocoa was the country's main export before oil.",
-			"Idanre hills in it are a UNESCO tentative site, with an old town on top reached by 660 steps."
-		]
+		"hooks": {
+			"en": [
+				"Named for the town of Ondo, whose own name is said to mean \"the settlers\".",
+				"Nigeria's largest cocoa producer, and cocoa was the country's main export before oil.",
+				"Idanre hills in it are a UNESCO tentative site, with an old town on top reached by 660 steps."
+			],
+			"it": [
+				"Prende il nome dalla città di Ondo, il cui nome si dice significhi \"i coloni\".",
+				"Il maggior produttore di cacao della Nigeria, e prima del petrolio il cacao era la principale esportazione del paese.",
+				"Le colline di Idanre sono nella lista propositiva dell’UNESCO, con un antico abitato in cima a cui si arriva salendo 660 gradini."
+			]
+		}
 	},
 	"edo": {
 		"kind": "region",
@@ -620,11 +795,18 @@
 			"population": 1190000
 		},
 		"position": "south-west",
-		"hooks": [
-			"Named for the Edo people and the Benin Kingdom, whose own capital they called Edo.",
-			"The Benin Bronzes were looted from its royal palace by a British expedition in 1897 and are now the most contested objects in European museums.",
-			"The Walls of Benin were once among the longest earthworks in the world, several times the length of the Great Wall by some estimates."
-		]
+		"hooks": {
+			"en": [
+				"Named for the Edo people and the Benin Kingdom, whose own capital they called Edo.",
+				"The Benin Bronzes were looted from its royal palace by a British expedition in 1897 and are now the most contested objects in European museums.",
+				"The Walls of Benin were once among the longest earthworks in the world, several times the length of the Great Wall by some estimates."
+			],
+			"it": [
+				"Prende il nome dal popolo edo e dal regno del Benin, che chiamava Edo la propria capitale.",
+				"I bronzi del Benin furono saccheggiati dal suo palazzo reale da una spedizione britannica nel 1897 e oggi sono gli oggetti più contesi dei musei europei.",
+				"Le mura del Benin erano un tempo tra le più lunghe opere in terra del mondo: secondo alcune stime, diverse volte la lunghezza della Grande Muraglia."
+			]
+		}
 	},
 	"lagos": {
 		"kind": "region",
@@ -640,11 +822,18 @@
 			"population": 9466000
 		},
 		"position": "south-west",
-		"hooks": [
-			"Portuguese for \"lakes\", after the lagoons — named by traders for the town of Lagos in Portugal.",
-			"The smallest state by area and the largest by population, and one of the fastest-growing cities in the world.",
-			"It was Nigeria's capital until 1991 and remains its commercial centre; Nollywood, the world's second-largest film industry by output, is based here."
-		]
+		"hooks": {
+			"en": [
+				"Portuguese for \"lakes\", after the lagoons — named by traders for the town of Lagos in Portugal.",
+				"The smallest state by area and the largest by population, and one of the fastest-growing cities in the world.",
+				"It was Nigeria's capital until 1991 and remains its commercial centre; Nollywood, the world's second-largest film industry by output, is based here."
+			],
+			"it": [
+				"In portoghese \"laghi\", per le lagune: i mercanti la chiamarono come la città di Lagos in Portogallo.",
+				"Lo stato più piccolo per superficie e il più grande per popolazione, e una delle città a crescita più rapida del mondo.",
+				"Fu la capitale della Nigeria fino al 1991 e ne resta il centro commerciale; qui ha sede Nollywood, la seconda industria cinematografica del mondo per numero di film prodotti."
+			]
+		}
 	},
 	"enugu": {
 		"kind": "region",
@@ -664,11 +853,18 @@
 			"population": 688862
 		},
 		"position": "south",
-		"hooks": [
-			"From Igbo enu ugwu, \"the top of the hill\".",
-			"Coal was found here in 1909 and the city grew around it — it is still called the coal city.",
-			"It was the capital of Biafra at the start of the 1967–70 war."
-		]
+		"hooks": {
+			"en": [
+				"From Igbo enu ugwu, \"the top of the hill\".",
+				"Coal was found here in 1909 and the city grew around it — it is still called the coal city.",
+				"It was the capital of Biafra at the start of the 1967–70 war."
+			],
+			"it": [
+				"Dall’igbo enu ugwu, \"la cima della collina\".",
+				"Qui nel 1909 fu trovato il carbone e la città gli crebbe intorno: la chiamano ancora la città del carbone.",
+				"Fu la capitale del Biafra all’inizio della guerra del 1967–70."
+			]
+		}
 	},
 	"anambra": {
 		"kind": "region",
@@ -690,11 +886,18 @@
 			"population": 500000
 		},
 		"position": "south",
-		"hooks": [
-			"An anglicised form of Oma Mbala, the name of a tributary of the Niger.",
-			"Igbo-Ukwu here produced bronze castings from the ninth century, made by lost-wax methods, centuries before Benin or Ife.",
-			"It has one of the highest population densities in Africa and is known for its trading and apprenticeship system."
-		]
+		"hooks": {
+			"en": [
+				"An anglicised form of Oma Mbala, the name of a tributary of the Niger.",
+				"Igbo-Ukwu here produced bronze castings from the ninth century, made by lost-wax methods, centuries before Benin or Ife.",
+				"It has one of the highest population densities in Africa and is known for its trading and apprenticeship system."
+			],
+			"it": [
+				"Forma anglicizzata di Oma Mbala, il nome di un affluente del Niger.",
+				"A Igbo-Ukwu si fondevano bronzi già dal IX secolo, con la tecnica della cera persa, secoli prima del Benin o di Ife.",
+				"Ha una delle densità di popolazione più alte d’Africa ed è noto per il suo sistema di commercio e di apprendistato."
+			]
+		}
 	},
 	"ebonyi": {
 		"kind": "region",
@@ -707,11 +910,18 @@
 		],
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"From Aboine, a river, rendered into English as Ebonyi.",
-			"Created in 1996, and it produces most of Nigeria's rice and its salt — Abakaliki is called the salt of the nation.",
-			"Its lead and zinc deposits have been mined since colonial times."
-		]
+		"hooks": {
+			"en": [
+				"From Aboine, a river, rendered into English as Ebonyi.",
+				"Created in 1996, it is a major rice state and a source of salt — Abakaliki is called the salt of the nation.",
+				"Its lead and zinc deposits have been mined since colonial times."
+			],
+			"it": [
+				"Da Aboine, un fiume, reso in inglese come Ebonyi.",
+				"Creato nel 1996, è un grande produttore di riso e di sale: Abakaliki è chiamata il sale della nazione.",
+				"I suoi giacimenti di piombo e zinco sono sfruttati fin dall’epoca coloniale."
+			]
+		}
 	},
 	"cross-river": {
 		"kind": "region",
@@ -730,11 +940,18 @@
 			"population": 461796
 		},
 		"position": "south",
-		"hooks": [
-			"Named in English for the Cross River, which the Efik called the Oyono.",
-			"Calabar was a major slave-trade port and later the first capital of the Niger Coast Protectorate.",
-			"Its rainforest holds the Cross River gorilla, the rarest great ape in the world, with about 300 left."
-		]
+		"hooks": {
+			"en": [
+				"Named in English for the Cross River, which the Efik called the Oyono.",
+				"Calabar was a major slave-trade port and later the first capital of the Niger Coast Protectorate.",
+				"Its rainforest holds the Cross River gorilla, the rarest great ape in the world, with about 300 left."
+			],
+			"it": [
+				"Il nome inglese viene dal fiume Cross, che gli Efik chiamavano Oyono.",
+				"Calabar fu un grande porto della tratta degli schiavi e poi la prima capitale del Protettorato della Costa del Niger.",
+				"La sua foresta pluviale ospita il gorilla del Cross River, la grande scimmia più rara del mondo, con circa 300 esemplari rimasti."
+			]
+		}
 	},
 	"delta": {
 		"kind": "region",
@@ -755,11 +972,18 @@
 			"population": 830106
 		},
 		"position": "south-west",
-		"hooks": [
-			"Named for the Niger Delta, one of the largest river deltas in the world.",
-			"It produces a large share of Nigeria's oil, and the pollution and gas flaring here have been the subject of international litigation.",
-			"Its mangroves are the most extensive in Africa, and the delta has over 240 fish species."
-		]
+		"hooks": {
+			"en": [
+				"Named for the Niger Delta, one of the largest river deltas in the world.",
+				"It produces a large share of Nigeria's oil, and the pollution and gas flaring here have been the subject of international litigation.",
+				"Its mangroves are the most extensive in Africa, and the delta has over 240 fish species."
+			],
+			"it": [
+				"Prende il nome dal delta del Niger, uno dei più grandi delta fluviali del mondo.",
+				"Produce una quota importante del petrolio nigeriano, e l’inquinamento e la combustione in torcia del gas sono stati oggetto di cause internazionali.",
+				"Le sue mangrovie sono le più estese d’Africa, e il delta ospita oltre 240 specie di pesci."
+			]
+		}
 	},
 	"imo": {
 		"kind": "region",
@@ -777,11 +1001,18 @@
 			"population": 215038
 		},
 		"position": "south",
-		"hooks": [
-			"Named for the Imo river.",
-			"The Aba Women's War of 1929 started in this region — thousands of women protested colonial taxation and forced policy change.",
-			"It is one of the most densely populated states, and heavy gully erosion is a serious problem in its soils."
-		]
+		"hooks": {
+			"en": [
+				"Named for the Imo river.",
+				"The 1929 Women's War spread through this region — thousands of women protested colonial taxation and forced policy change.",
+				"It is one of the most densely populated states, and heavy gully erosion is a serious problem in its soils."
+			],
+			"it": [
+				"Prende il nome dal fiume Imo.",
+				"La guerra delle donne del 1929 si estese a questa regione: migliaia di donne protestarono contro le tasse coloniali e imposero un cambio di politica.",
+				"È uno degli stati più densamente popolati, e l’erosione che scava profondi burroni è un problema serio per i suoi suoli."
+			]
+		}
 	},
 	"abia": {
 		"kind": "region",
@@ -803,11 +1034,18 @@
 			"population": 897560
 		},
 		"position": "south",
-		"hooks": [
-			"An acronym, unusually: from the initials of Aba, Bende, Isuikwuato and Afikpo, the districts that formed it in 1991.",
-			"Aba is Nigeria's informal manufacturing capital, where workshops make shoes and clothing exported across West Africa.",
-			"The Long Juju of Arochukwu here was an oracle that arbitrated disputes across Igboland and was used to supply the slave trade."
-		]
+		"hooks": {
+			"en": [
+				"An acronym, unusually: from the initials of Aba, Bende, Isuikwuato and Afikpo, the districts that formed it in 1991.",
+				"Aba is Nigeria's informal manufacturing capital, where workshops make shoes and clothing exported across West Africa.",
+				"The Long Juju of Arochukwu here was an oracle that arbitrated disputes across Igboland and was used to supply the slave trade."
+			],
+			"it": [
+				"Una sigla, cosa insolita: le iniziali di Aba, Bende, Isuikwuato e Afikpo, i distretti che lo formarono nel 1991.",
+				"Aba è la capitale della manifattura informale della Nigeria: le sue botteghe fanno scarpe e abiti esportati in tutta l’Africa occidentale.",
+				"Qui il Long Juju di Arochukwu era un oracolo che dirimeva le contese in tutto il paese igbo, e fu usato per rifornire la tratta degli schiavi."
+			]
+		}
 	},
 	"rivers": {
 		"kind": "region",
@@ -828,11 +1066,18 @@
 			"population": 1020000
 		},
 		"position": "south",
-		"hooks": [
-			"Named in English for the many creeks and rivers of the delta it sits in.",
-			"Port Harcourt, its capital, is the centre of Nigeria's oil industry and was built by the British in 1913 to export coal from Enugu.",
-			"Ken Saro-Wiwa, executed in 1995 for leading Ogoni protests against oil pollution here, made the region an international cause."
-		]
+		"hooks": {
+			"en": [
+				"Named in English for the many creeks and rivers of the delta it sits in.",
+				"Port Harcourt, its capital, is the centre of Nigeria's oil industry and was built by the British in 1913 to export coal from Enugu.",
+				"Ken Saro-Wiwa, executed in 1995 for leading Ogoni protests against oil pollution here, made the region an international cause."
+			],
+			"it": [
+				"Il nome inglese viene dai tanti canali e fiumi del delta in cui si trova.",
+				"Port Harcourt, la capitale, è il centro dell’industria petrolifera nigeriana e fu costruita dai britannici nel 1913 per esportare il carbone di Enugu.",
+				"Ken Saro-Wiwa, giustiziato nel 1995 per aver guidato qui le proteste ogoni contro l’inquinamento petrolifero, fece della regione una causa internazionale."
+			]
+		}
 	},
 	"akwa-ibom": {
 		"kind": "region",
@@ -850,11 +1095,18 @@
 			"population": 554906
 		},
 		"position": "south",
-		"hooks": [
-			"From the Qua Iboe river, rendered in Ibibio as Akwa Ibom.",
-			"It has one of the highest oil outputs in the country, and Ibom is the largest ethnic group, the Ibibio.",
-			"Its Ibeno beach is one of the longest sand beaches in West Africa."
-		]
+		"hooks": {
+			"en": [
+				"From the Qua Iboe river, rendered in Ibibio as Akwa Ibom.",
+				"It has one of the highest oil outputs in the country, and its largest ethnic group is the Ibibio.",
+				"Its Ibeno beach is one of the longest sand beaches in West Africa."
+			],
+			"it": [
+				"Dal fiume Qua Iboe, reso in ibibio come Akwa Ibom.",
+				"Ha una delle maggiori produzioni di petrolio del paese, e il suo gruppo etnico più numeroso sono gli Ibibio.",
+				"La sua spiaggia di Ibeno è una delle spiagge di sabbia più lunghe dell’Africa occidentale."
+			]
+		}
 	},
 	"bayelsa": {
 		"kind": "region",
@@ -865,10 +1117,17 @@
 		],
 		"coastal": true,
 		"position": "south-west",
-		"hooks": [
-			"Another acronym: Brass, Yenagoa and Sagbama, the three areas joined to make it in 1996.",
-			"The smallest state by population, and almost entirely creeks, swamp and mangrove — much of it is reachable only by boat.",
-			"Oloibiri in it is where Nigerian oil was first struck in 1956; the well is dry and the town has little to show for it."
-		]
+		"hooks": {
+			"en": [
+				"Another acronym: Brass, Yenagoa and Sagbama, the three areas joined to make it in 1996.",
+				"The smallest state by population, and almost entirely creeks, swamp and mangrove — much of it is reachable only by boat.",
+				"Oloibiri in it is where Nigerian oil was first struck in 1956; the well is dry and the town has little to show for it."
+			],
+			"it": [
+				"Un’altra sigla: Brass, Yenagoa e Sagbama, le tre aree unite nel 1996 per formarlo.",
+				"Lo stato meno popoloso, fatto quasi solo di canali, paludi e mangrovie: gran parte è raggiungibile solo in barca.",
+				"A Oloibiri nel 1956 si trovò per la prima volta il petrolio nigeriano; il pozzo è esaurito e la città ne ha ricavato ben poco."
+			]
+		}
 	}
 }

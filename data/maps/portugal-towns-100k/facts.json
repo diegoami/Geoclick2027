@@ -5,11 +5,18 @@
 		"populationRank": 3,
 		"coastal": false,
 		"position": "north-east",
-		"hooks": [
-			"From the Bracari, a Celtic people; Rome made it Bracara Augusta and it became the religious capital of the country.",
-			"Its archbishops outranked Lisbon's for centuries, and the saying goes that Braga prays while Porto works.",
-			"Bom Jesus do Monte above the town climbs a baroque staircase of nearly six hundred steps, and a water-counterweight funicular from 1882 still hauls those who decline."
-		]
+		"hooks": {
+			"en": [
+				"From the Bracari, a Celtic people; Rome made it Bracara Augusta and it became the religious capital of the country.",
+				"Its archbishops outranked Lisbon's for centuries, and the saying goes that Braga prays while Porto works.",
+				"Bom Jesus do Monte above the town climbs a baroque staircase of nearly six hundred steps, and a water-counterweight funicular from 1882 still hauls those who decline."
+			],
+			"it": [
+				"Prende il nome dai Bracari, un popolo celtico; Roma ne fece Bracara Augusta, e divenne la capitale religiosa del paese.",
+				"Per secoli i suoi arcivescovi ebbero la precedenza su quelli di Lisbona, e come dice il proverbio, Braga prega mentre Porto lavora.",
+				"Al Bom Jesus do Monte, sopra la città, si sale per una scalinata barocca di quasi seicento gradini, e chi vi rinuncia ci arriva ancora con una funicolare a contrappeso d’acqua del 1882."
+			]
+		}
 	},
 	"porto": {
 		"kind": "city",
@@ -18,11 +25,18 @@
 		"population1950": 730000,
 		"coastal": true,
 		"position": "north-east",
-		"hooks": [
-			"From Portus Cale, the Roman harbour at the Douro mouth — the name of the town became the name of the country.",
-			"Port wine is named for it, though the wine is grown 100 km upriver and only aged in Vila Nova de Gaia across the water.",
-			"Its Luís I bridge was built in 1886 by a partner of Gustave Eiffel, and the Lello bookshop below it is claimed as an inspiration for Hogwarts."
-		]
+		"hooks": {
+			"en": [
+				"From Portus Cale, the Roman harbour at the Douro mouth — the name of the town became the name of the country.",
+				"Port wine is named for it, though the wine is grown 100 km upriver and only aged in Vila Nova de Gaia across the water.",
+				"Its Luís I bridge was built in 1886 by a partner of Gustave Eiffel, and the Lello bookshop below it is claimed as an inspiration for Hogwarts."
+			],
+			"it": [
+				"Viene da Portus Cale, il porto romano alla foce del Douro: il nome della città è diventato quello del paese.",
+				"Il vino Porto prende il nome dalla città, anche se nasce 100 km più a monte e a Vila Nova de Gaia, sull’altra riva, viene solo messo a invecchiare.",
+				"Il suo ponte Luís I fu costruito nel 1886 da un socio di Gustave Eiffel, e la libreria Lello, più in basso, viene indicata come una delle ispirazioni di Hogwarts."
+			]
+		}
 	},
 	"coimbra": {
 		"kind": "city",
@@ -30,11 +44,18 @@
 		"populationRank": 5,
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"From Conimbriga, a Celtic hill fort nearby; briga means a fortified place, the same element as in many Iberian names.",
-			"Its university, founded in 1290, is one of the oldest in continuous operation anywhere, and its baroque library is kept free of insects by a colony of bats.",
-			"The capital of Portugal for over a century in the Middle Ages, before Lisbon took over."
-		]
+		"hooks": {
+			"en": [
+				"From Conimbriga, a Celtic hill fort nearby; briga means a fortified place, the same element as in many Iberian names.",
+				"Its university, founded in 1290, is one of the oldest in continuous operation anywhere, and its baroque library is kept free of insects by a colony of bats.",
+				"The capital of Portugal for over a century in the Middle Ages, before Lisbon took over."
+			],
+			"it": [
+				"Da Conimbriga, una fortezza celtica d’altura poco lontano; briga significa \"luogo fortificato\", lo stesso elemento di molti nomi iberici.",
+				"La sua università, fondata nel 1290, è una delle più antiche al mondo rimaste sempre in attività, e a tenere lontani gli insetti dalla sua biblioteca barocca è una colonia di pipistrelli.",
+				"Nel Medioevo fu la capitale del Portogallo per più di un secolo, prima che le subentrasse Lisbona."
+			]
+		}
 	},
 	"lisboa": {
 		"kind": "city",
@@ -44,11 +65,18 @@
 		"capitalOf": "country",
 		"coastal": true,
 		"position": "south-west",
-		"hooks": [
-			"The oldest layer of all: probably Phoenician Alis Ubbo, \"safe harbour\", though the Romans preferred a legend about Ulysses founding it.",
-			"The 1755 earthquake, fire and tsunami killed tens of thousands and led to the first scientific study of an earthquake anywhere.",
-			"Its Belém tower and Jerónimos monastery were paid for with a 5% tax on the spices coming back from India."
-		]
+		"hooks": {
+			"en": [
+				"The oldest layer of all: probably Phoenician Alis Ubbo, \"safe harbour\", though the Romans preferred a legend about Ulysses founding it.",
+				"The 1755 earthquake, fire and tsunami killed tens of thousands and led to the first scientific study of an earthquake anywhere.",
+				"Its Belém tower and Jerónimos monastery were paid for with a 5% tax on the spices coming back from India."
+			],
+			"it": [
+				"Lo strato più antico di tutti: probabilmente il fenicio Alis Ubbo, \"porto sicuro\", anche se i Romani preferivano la leggenda che la voleva fondata da Ulisse.",
+				"Il terremoto, l’incendio e il maremoto del 1755 fecero decine di migliaia di morti e portarono al primo studio scientifico di un terremoto mai condotto al mondo.",
+				"La torre di Belém e il monastero dos Jerónimos furono pagati con una tassa del 5% sulle spezie che arrivavano dall’India."
+			]
+		}
 	},
 	"setubal": {
 		"kind": "city",
@@ -57,10 +85,17 @@
 		"region": "Lisboa",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"Uncertain: possibly from Cetobriga, a Roman fish-salting town, with briga again the fortified place.",
-			"Its estuary holds a resident pod of bottlenose dolphins, one of very few in Europe.",
-			"The Arrábida hills beside it drop straight into the sea, and the moscatel grown on them is fortified like port."
-		]
+		"hooks": {
+			"en": [
+				"Uncertain: possibly from Cetobriga, a Roman fish-salting town, with briga again the fortified place.",
+				"Its estuary holds a resident pod of bottlenose dolphins, one of very few in Europe.",
+				"The Arrábida hills beside it drop straight into the sea, and the moscatel grown on them is fortified like port."
+			],
+			"it": [
+				"Un’origine incerta: forse da Cetobriga, una città romana dove si salava il pesce, con briga ancora una volta \"luogo fortificato\".",
+				"Il suo estuario ospita un gruppo stanziale di tursiopi, uno dei pochissimi in Europa.",
+				"I colli dell’Arrábida, lì accanto, scendono a picco sul mare, e il moscatel dei loro pendii viene reso liquoroso come il Porto."
+			]
+		}
 	}
 }

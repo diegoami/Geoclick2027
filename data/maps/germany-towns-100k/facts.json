@@ -6,11 +6,18 @@
 		"region": "Schleswig-Holstein",
 		"coastal": true,
 		"position": "north",
-		"hooks": [
-			"From Old Saxon kil, a wedge or narrow inlet — the fjord the city sits on.",
-			"The Kiel Canal here is the busiest artificial waterway in the world.",
-			"The German revolution of 1918 began with a sailors’ mutiny in its harbour, and Kieler Woche is the largest sailing event anywhere."
-		]
+		"hooks": {
+			"en": [
+				"From Old Saxon kil, a wedge or narrow inlet — the fjord the city sits on.",
+				"The Kiel Canal here is the busiest artificial waterway in the world.",
+				"The German revolution of 1918 began with a sailors’ mutiny in its harbour, and Kieler Woche is the largest sailing event anywhere."
+			],
+			"it": [
+				"Dall’antico sassone kil, cuneo o insenatura stretta: il fiordo su cui sorge la città.",
+				"Qui passa il canale di Kiel, la via d’acqua artificiale più trafficata del mondo.",
+				"La rivoluzione tedesca del 1918 cominciò con un ammutinamento di marinai nel suo porto, e la Kieler Woche è la più grande manifestazione velica del mondo."
+			]
+		}
 	},
 	"rostock": {
 		"kind": "city",
@@ -19,11 +26,18 @@
 		"region": "Mecklenburg-Vorpommern",
 		"coastal": true,
 		"position": "north-east",
-		"hooks": [
-			"From Slavic rostok, \"the spreading of a river\" — the widening of the Warnow.",
-			"It was one of the leading Hanseatic towns, and its university of 1419 is the oldest on the Baltic.",
-			"It was the centre of East German shipbuilding and its sea trade."
-		]
+		"hooks": {
+			"en": [
+				"From Slavic rostok, \"the spreading of a river\" — the widening of the Warnow.",
+				"It was one of the leading Hanseatic towns, and its university of 1419 is the oldest on the Baltic.",
+				"It was the centre of East German shipbuilding and its sea trade."
+			],
+			"it": [
+				"Dallo slavo rostok, \"l’allargarsi di un fiume\": il punto in cui si allarga la Warnow.",
+				"Fu una delle principali città anseatiche, e la sua università, del 1419, è la più antica del Baltico.",
+				"Fu il centro della cantieristica navale della Germania Est e dei suoi commerci marittimi."
+			]
+		}
 	},
 	"lubeck": {
 		"kind": "city",
@@ -32,11 +46,18 @@
 		"region": "Schleswig-Holstein",
 		"coastal": true,
 		"position": "north",
-		"hooks": [
-			"From Slavic Liubice, \"the lovely one\".",
-			"It was the queen of the Hanseatic League, which it effectively led for two centuries, and its old town is a UNESCO site.",
-			"Marzipan was made famous here, and Thomas Mann set Buddenbrooks in his own family’s town."
-		]
+		"hooks": {
+			"en": [
+				"From Slavic Liubice, \"the lovely one\".",
+				"It was the queen of the Hanseatic League, which it effectively led for two centuries, and its old town is a UNESCO site.",
+				"Marzipan was made famous here, and Thomas Mann set Buddenbrooks in his own family’s town."
+			],
+			"it": [
+				"Dallo slavo Liubice, \"la graziosa\".",
+				"Fu la regina della Lega anseatica, che di fatto guidò per due secoli, e il suo centro storico è patrimonio UNESCO.",
+				"Qui il marzapane divenne famoso, e Thomas Mann ambientò I Buddenbrook nella città della sua famiglia."
+			]
+		}
 	},
 	"hamburg": {
 		"kind": "city",
@@ -45,11 +66,18 @@
 		"population1950": 1608000,
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"From Hammaburg, a castle Charlemagne built around 825 — hamma is a bend in a river, and the Elbe bends here.",
-			"Officially the Free and Hanseatic City: the Hanse's habits of independence are still in its name and in its number plates, HH.",
-			"It has more bridges than Venice, Amsterdam and London combined — around 2,500 of them, over canals and the harbour."
-		]
+		"hooks": {
+			"en": [
+				"From Hammaburg, a castle built in the early ninth century — hamma is a bend in a river, and the Elbe bends here.",
+				"Officially the Free and Hanseatic City: the Hanse's habits of independence are still in its name and in its number plates, HH.",
+				"It has more bridges than Venice, Amsterdam and London combined — around 2,500 of them, over canals and the harbour."
+			],
+			"it": [
+				"Da Hammaburg, un castello costruito all’inizio del IX secolo: hamma è l’ansa di un fiume, e qui l’Elba fa un’ansa.",
+				"Ufficialmente è la Libera e Anseatica Città: l’abitudine all’indipendenza dell’Hansa sopravvive nel nome e nelle targhe, HH.",
+				"Ha più ponti di Venezia, Amsterdam e Londra messe insieme: circa 2.500, sopra i canali e il porto."
+			]
+		}
 	},
 	"bremerhaven": {
 		"kind": "city",
@@ -58,11 +86,18 @@
 		"region": "Bremen",
 		"coastal": true,
 		"position": "north-west",
-		"hooks": [
-			"\"Bremen’s harbour\" — Bremen bought the land in 1827 because its own river had silted up.",
-			"About seven million emigrants left for America through this port, and a museum tells their story.",
-			"It handles more cars than almost any port in the world."
-		]
+		"hooks": {
+			"en": [
+				"\"Bremen’s harbour\" — Bremen bought the land in 1827 because its own river had silted up.",
+				"About seven million emigrants left for America through this port, and a museum tells their story.",
+				"It handles more cars than almost any port in the world."
+			],
+			"it": [
+				"\"Il porto di Brema\": Brema comprò il terreno nel 1827 perché il suo fiume si era insabbiato.",
+				"Da questo porto partirono per l’America circa sette milioni di emigranti, e un museo ne racconta la storia.",
+				"Movimenta più automobili di quasi ogni altro porto del mondo."
+			]
+		}
 	},
 	"oldenburg": {
 		"kind": "city",
@@ -71,11 +106,18 @@
 		"region": "Niedersachsen",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"\"Old fortress\" — a castle on the Hunte.",
-			"Its grand dukes stayed neutral long enough to keep the town out of most German wars.",
-			"It has one of the highest shares of cyclists in Germany, and its horse breed is known worldwide."
-		]
+		"hooks": {
+			"en": [
+				"\"Old fortress\" — a castle on the Hunte.",
+				"Its grand dukes stayed neutral long enough to keep the town out of most German wars.",
+				"It has one of the highest shares of cyclists in Germany, and its horse breed is known worldwide."
+			],
+			"it": [
+				"\"Vecchia fortezza\": un castello sulla Hunte.",
+				"I suoi granduchi rimasero neutrali abbastanza a lungo da tenere la città fuori dalla maggior parte delle guerre tedesche.",
+				"Ha una delle quote di ciclisti più alte della Germania, e la sua razza di cavalli è nota in tutto il mondo."
+			]
+		}
 	},
 	"bremen": {
 		"kind": "city",
@@ -83,11 +125,18 @@
 		"populationRank": 14,
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"From bremo, Old Saxon for \"edge\" — the town sat on the bank of the Weser where the ground rose above the marsh.",
-			"The smallest state, and a strange shape: it is two cities, Bremen and Bremerhaven, 60 km apart with Niedersachsen in between.",
-			"The Bremen Town Musicians of the fairy tale never actually reach Bremen, but the statue of them is the city’s best-known landmark."
-		]
+		"hooks": {
+			"en": [
+				"From bremo, Old Saxon for \"edge\" — the town sat on the bank of the Weser where the ground rose above the marsh.",
+				"The smallest state, and a strange shape: it is two cities, Bremen and Bremerhaven, 60 km apart with Niedersachsen in between.",
+				"The Bremen Town Musicians of the fairy tale never actually reach Bremen, but the statue of them is the city’s best-known landmark."
+			],
+			"it": [
+				"Da bremo, \"orlo\" in antico sassone: la città sorgeva sulla riva del Weser, dove il terreno si alzava sopra la palude.",
+				"Il Land più piccolo, e dalla forma strana: sono due città, Brema e Bremerhaven, a 60 km l’una dall’altra, con la Bassa Sassonia in mezzo.",
+				"I musicanti di Brema della fiaba a Brema non ci arrivano mai, ma la loro statua è il monumento più noto della città."
+			]
+		}
 	},
 	"berlin": {
 		"kind": "city",
@@ -97,11 +146,18 @@
 		"capitalOf": "country",
 		"coastal": false,
 		"position": "north-east",
-		"hooks": [
-			"Not the bear: it is most likely Slavic berl-, a swamp — the bear on the coat of arms is a pun that came later and stuck.",
-			"An island in Brandenburg, and its own state; the two have voted twice on merging and said no both times.",
-			"It has more museums than rainy days a year, and the Wall ran 155 km through and around it for 28 years."
-		]
+		"hooks": {
+			"en": [
+				"Not the bear: it is most likely Slavic berl-, a swamp — the bear on the coat of arms is a pun that came later and stuck.",
+				"An island in Brandenburg, and its own state; the two voted on merging in 1996 and said no.",
+				"It has more museums than rainy days a year, and the Wall ran 155 km through and around it for 28 years."
+			],
+			"it": [
+				"Non viene dall’orso: molto probabilmente è lo slavo berl-, \"palude\"; l’orso dello stemma è un gioco di parole venuto dopo, che ha attecchito.",
+				"Un’isola dentro il Brandeburgo, e un Land a sé; i due votarono sulla fusione nel 1996, e dissero no.",
+				"Ha più musei che giorni di pioggia all’anno, e per 28 anni il Muro l’ha attraversata e circondata per 155 km."
+			]
+		}
 	},
 	"potsdam": {
 		"kind": "city",
@@ -110,11 +166,18 @@
 		"region": "Brandenburg",
 		"coastal": false,
 		"position": "north-east",
-		"hooks": [
-			"From Slavic Poztupimi, probably \"beneath the oaks\".",
-			"Frederick the Great built Sanssouci here as his summer retreat; its palaces and parks are a UNESCO site.",
-			"The 1945 conference that divided post-war Europe was held at Cecilienhof in the town."
-		]
+		"hooks": {
+			"en": [
+				"From Slavic Poztupimi, probably \"beneath the oaks\".",
+				"Frederick the Great built Sanssouci here as his summer retreat; its palaces and parks are a UNESCO site.",
+				"The 1945 conference that divided post-war Europe was held at Cecilienhof in the town."
+			],
+			"it": [
+				"Dallo slavo Poztupimi, probabilmente \"sotto le querce\".",
+				"Federico il Grande vi costruì Sanssouci come residenza estiva; i suoi palazzi e parchi sono patrimonio UNESCO.",
+				"La conferenza del 1945 che divise l’Europa del dopoguerra si tenne in città, al Cecilienhof."
+			]
+		}
 	},
 	"hannover": {
 		"kind": "city",
@@ -123,11 +186,18 @@
 		"region": "Niedersachsen",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"\"High bank\" — hohes Ufer, the raised ground above the Leine.",
-			"Its electors became kings of Britain in 1714, so Britain and Hanover shared a monarch for 123 years.",
-			"Leibniz worked here for forty years as court librarian, and the city’s Herrenhausen gardens are baroque in the Dutch manner."
-		]
+		"hooks": {
+			"en": [
+				"\"High bank\" — hohes Ufer, the raised ground above the Leine.",
+				"Its electors became kings of Britain in 1714, so Britain and Hanover shared a monarch for 123 years.",
+				"Leibniz worked here for forty years as court librarian, and the city’s Herrenhausen gardens are baroque in the Dutch manner."
+			],
+			"it": [
+				"\"Riva alta\": hohes Ufer, il terreno rialzato sopra la Leine.",
+				"I suoi principi elettori divennero re di Gran Bretagna nel 1714, così Gran Bretagna e Hannover ebbero lo stesso sovrano per 123 anni.",
+				"Leibniz vi lavorò per quarant’anni come bibliotecario di corte, e i giardini di Herrenhausen sono barocchi alla maniera olandese."
+			]
+		}
 	},
 	"osnabruck": {
 		"kind": "city",
@@ -136,11 +206,18 @@
 		"region": "Niedersachsen",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"\"Bridge over the Hase\" — Osna is probably an older name for the river, plus Brücke.",
-			"Half of the Peace of Westphalia was negotiated here in 1648, the other half in Münster; it ended the Thirty Years’ War.",
-			"Erich Maria Remarque, who wrote All Quiet on the Western Front, was born in the town."
-		]
+		"hooks": {
+			"en": [
+				"\"Bridge over the Hase\" — Osna is probably an older name for the river, plus Brücke.",
+				"Half of the Peace of Westphalia was negotiated here in 1648, the other half in Münster; it ended the Thirty Years’ War.",
+				"Erich Maria Remarque, who wrote All Quiet on the Western Front, was born in the town."
+			],
+			"it": [
+				"\"Ponte sulla Hase\": Osna è probabilmente un nome più antico del fiume, più Brücke.",
+				"Metà della pace di Vestfalia fu negoziata qui nel 1648, l’altra metà a Münster; mise fine alla guerra dei Trent’anni.",
+				"Erich Maria Remarque, autore di Niente di nuovo sul fronte occidentale, nacque in questa città."
+			]
+		}
 	},
 	"braunschweig": {
 		"kind": "city",
@@ -149,11 +226,18 @@
 		"region": "Niedersachsen",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"\"Bruno’s settlement\" — the English call it Brunswick, which is the same name.",
-			"Henry the Lion made it his capital and put a bronze lion in the square in 1166, the first free-standing sculpture north of the Alps.",
-			"Gauss was born here and studied at its university, the oldest technical university in Germany."
-		]
+		"hooks": {
+			"en": [
+				"\"Bruno’s settlement\" — the English call it Brunswick, which is the same name.",
+				"Henry the Lion made it his capital and put a bronze lion in the square in 1166, the first free-standing sculpture north of the Alps.",
+				"Gauss was born here and studied at its university, the oldest technical university in Germany."
+			],
+			"it": [
+				"\"L’insediamento di Bruno\": gli inglesi la chiamano Brunswick, ed è lo stesso nome.",
+				"Enrico il Leone ne fece la sua capitale e nel 1166 pose in piazza un leone di bronzo, la prima scultura a tutto tondo a nord delle Alpi.",
+				"Gauss vi nacque e studiò nella sua università, il più antico politecnico della Germania."
+			]
+		}
 	},
 	"magdeburg": {
 		"kind": "city",
@@ -162,11 +246,18 @@
 		"region": "Sachsen-Anhalt",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"\"Mighty fortress\" or \"maidens’ fortress\" — magd can mean either, and the maiden is on the city arms.",
-			"Otto von Guericke, its mayor, proved the force of a vacuum here in 1654 with two copper hemispheres that sixteen horses could not pull apart.",
-			"The city was destroyed in 1631 in one of the worst atrocities of the Thirty Years’ War, and \"magdeburgisation\" became a word for total destruction."
-		]
+		"hooks": {
+			"en": [
+				"\"Mighty fortress\" or \"maidens’ fortress\" — magd can mean either, and the maiden is on the city arms.",
+				"Otto von Guericke, its mayor, proved the force of a vacuum in 1654 with two copper hemispheres that sixteen horses could not pull apart.",
+				"The city was destroyed in 1631 in one of the worst atrocities of the Thirty Years’ War, and \"magdeburgisation\" became a word for total destruction."
+			],
+			"it": [
+				"\"Fortezza potente\" o \"fortezza delle fanciulle\": magd può voler dire l’una o l’altra cosa, e la fanciulla è nello stemma della città.",
+				"Otto von Guericke, il suo borgomastro, dimostrò nel 1654 la forza del vuoto con due emisferi di rame che sedici cavalli non riuscirono a separare.",
+				"Nel 1631 la città fu distrutta in una delle peggiori atrocità della guerra dei Trent’anni, e \"magdeburghizzazione\" divenne sinonimo di distruzione totale."
+			]
+		}
 	},
 	"bielefeld": {
 		"kind": "city",
@@ -175,11 +266,18 @@
 		"region": "Nordrhein-Westfalen",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"\"Bare field\" — biel is from an old word for an axe or a bare place.",
-			"A long-running German internet joke insists the city does not exist; the council once offered a million euros for proof.",
-			"Dr. Oetker, the baking-powder and frozen-pizza company, was founded and is based here."
-		]
+		"hooks": {
+			"en": [
+				"\"Bare field\" — biel is from an old word for an axe or a bare place.",
+				"A long-running German internet joke insists the city does not exist; the council once offered a million euros for proof.",
+				"Dr. Oetker, the baking-powder and frozen-pizza company, was founded and is based here."
+			],
+			"it": [
+				"\"Campo spoglio\": biel viene da un’antica parola per ascia o per luogo spoglio.",
+				"Un vecchio scherzo della rete tedesca sostiene che la città non esista; il comune arrivò a offrire un milione di euro a chi ne avesse fornito la prova.",
+				"Qui è nata e ha sede la Dr. Oetker, l’azienda del lievito per dolci e delle pizze surgelate."
+			]
+		}
 	},
 	"munster": {
 		"kind": "city",
@@ -188,11 +286,18 @@
 		"region": "Nordrhein-Westfalen",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"From monasterium, a monastery — the same root as the English \"minster\".",
-			"The other half of the Peace of Westphalia was signed here in 1648.",
-			"It has more bicycles than people and is Germany’s cycling capital; the Anabaptist commune that seized the town in 1534 ended with three cages hung from a church tower, which are still there."
-		]
+		"hooks": {
+			"en": [
+				"From monasterium, a monastery — the same root as the English \"minster\".",
+				"The other half of the Peace of Westphalia was signed here in 1648.",
+				"It has more bicycles than people and is Germany’s cycling capital; the Anabaptist commune that seized the town in 1534 ended with three cages hung from a church tower, which are still there."
+			],
+			"it": [
+				"Da monasterium, monastero: la stessa radice dell’inglese \"minster\".",
+				"L’altra metà della pace di Vestfalia fu firmata qui nel 1648.",
+				"Ha più biciclette che abitanti ed è la capitale tedesca della bicicletta; la comune anabattista che prese la città nel 1534 finì con tre gabbie appese alla torre di una chiesa, dove sono ancora."
+			]
+		}
 	},
 	"cottbus": {
 		"kind": "city",
@@ -201,11 +306,18 @@
 		"region": "Brandenburg",
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"From a Slavic personal name, Chotibud.",
-			"It is the cultural centre of the Sorbs, a Slavic people with their own language, and signs are bilingual.",
-			"Its Branitz park was landscaped by Prince Pückler, who is buried under an earth pyramid in a lake there."
-		]
+		"hooks": {
+			"en": [
+				"From a Slavic personal name, Chotibud.",
+				"It is the cultural centre of the Sorbs, a Slavic people with their own language, and signs are bilingual.",
+				"Its Branitz park was landscaped by Prince Pückler, who is buried under an earth pyramid in a lake there."
+			],
+			"it": [
+				"Da un nome di persona slavo, Chotibud.",
+				"È il centro culturale dei Sorbi, un popolo slavo con una lingua propria, e i cartelli sono bilingui.",
+				"Il suo parco di Branitz fu disegnato dal principe Pückler, che vi è sepolto sotto una piramide di terra in mezzo a un lago."
+			]
+		}
 	},
 	"dortmund": {
 		"kind": "city",
@@ -214,11 +326,18 @@
 		"region": "Nordrhein-Westfalen",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"From Throtmanni, an older name of uncertain meaning.",
-			"It was a Hanseatic town, then coal and steel; the last pit closed in 1987 and the last furnace in 2001.",
-			"Its stadium has the largest standing terrace in European football, holding about 25,000."
-		]
+		"hooks": {
+			"en": [
+				"From Throtmanni, an older name of uncertain meaning.",
+				"It was a Hanseatic town, then coal and steel; the last pit closed in 1987 and the last furnace in 2001.",
+				"Its stadium has the largest standing terrace in European football, holding about 25,000."
+			],
+			"it": [
+				"Da Throtmanni, un nome più antico dal significato incerto.",
+				"Fu città anseatica, poi carbone e acciaio; l’ultima miniera chiuse nel 1987, l’ultimo altoforno nel 2001.",
+				"Il suo stadio ha la più grande tribuna per spettatori in piedi del calcio europeo: circa 25.000 persone."
+			]
+		}
 	},
 	"gottingen": {
 		"kind": "city",
@@ -227,11 +346,18 @@
 		"region": "Niedersachsen",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"From a village called Gutingi, \"by the stream of Gota\".",
-			"Its university has produced over forty Nobel laureates, and the Göttingen school effectively created modern mathematics and quantum physics.",
-			"The Göttingen Seven, professors dismissed in 1837 for protesting against a king, became a symbol of academic freedom."
-		]
+		"hooks": {
+			"en": [
+				"From a village called Gutingi, \"by the stream of Gota\".",
+				"Its university has produced over forty Nobel laureates, and the Göttingen school effectively created modern mathematics and quantum physics.",
+				"The Göttingen Seven, professors dismissed in 1837 for protesting against a king, became a symbol of academic freedom."
+			],
+			"it": [
+				"Da un villaggio chiamato Gutingi, \"presso il ruscello di Gota\".",
+				"La sua università ha prodotto oltre quaranta premi Nobel, e la scuola di Gottinga ha di fatto creato la matematica moderna e la fisica quantistica.",
+				"I Sette di Gottinga, professori licenziati nel 1837 per aver protestato contro un re, divennero un simbolo della libertà accademica."
+			]
+		}
 	},
 	"essen": {
 		"kind": "city",
@@ -240,11 +366,18 @@
 		"region": "Nordrhein-Westfalen",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"Of uncertain origin, possibly from a word for a forge or from asnithi, a meadow.",
-			"Krupp built its steel and armaments empire here, and the family villa has 269 rooms.",
-			"The Zollverein coal mine, called the most beautiful colliery in the world, is a UNESCO site."
-		]
+		"hooks": {
+			"en": [
+				"Of uncertain origin, possibly from a word for a forge or from asnithi, a meadow.",
+				"Krupp built its steel and armaments empire here, and the family villa has 269 rooms.",
+				"The Zollverein coal mine, called the most beautiful colliery in the world, is a UNESCO site."
+			],
+			"it": [
+				"Di origine incerta, forse da una parola per fucina o da asnithi, un prato.",
+				"Qui la Krupp costruì il suo impero dell’acciaio e delle armi, e la villa di famiglia ha 269 stanze.",
+				"La miniera di carbone dello Zollverein, detta la più bella miniera del mondo, è patrimonio UNESCO."
+			]
+		}
 	},
 	"duisburg": {
 		"kind": "city",
@@ -253,11 +386,18 @@
 		"region": "Nordrhein-Westfalen",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"From an old word for a fortified place, duis being possibly a marsh or a hill.",
-			"It has the largest inland port in the world, where the Ruhr meets the Rhine.",
-			"Mercator, who invented the map projection every sailor used, lived and died here."
-		]
+		"hooks": {
+			"en": [
+				"From an old word for a fortified place, duis being possibly a marsh or a hill.",
+				"It has the largest inland port in the world, where the Ruhr meets the Rhine.",
+				"Mercator, who invented the map projection every sailor used, lived and died here."
+			],
+			"it": [
+				"Da un’antica parola per luogo fortificato; duis forse indicava una palude o una collina.",
+				"Ha il più grande porto fluviale del mondo, dove la Ruhr incontra il Reno.",
+				"Qui visse e morì Mercatore, che inventò la proiezione cartografica usata da ogni navigatore."
+			]
+		}
 	},
 	"leipzig": {
 		"kind": "city",
@@ -266,11 +406,18 @@
 		"region": "Sachsen",
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"From Slavic Lipsk, \"place of lime trees\".",
-			"Bach was cantor at the Thomaskirche for 27 years and is buried in it.",
-			"The Monday demonstrations that brought down East Germany began at its Nikolaikirche in 1989."
-		]
+		"hooks": {
+			"en": [
+				"From Slavic Lipsk, \"place of lime trees\".",
+				"Bach was cantor at the Thomaskirche for 27 years and is buried in it.",
+				"The Monday demonstrations that brought down East Germany began at its Nikolaikirche in 1989."
+			],
+			"it": [
+				"Dallo slavo Lipsk, \"luogo dei tigli\".",
+				"Bach fu Kantor alla Thomaskirche per 27 anni, e vi è sepolto.",
+				"Le manifestazioni del lunedì che fecero cadere la Germania Est partirono nel 1989 dalla sua Nikolaikirche."
+			]
+		}
 	},
 	"kassel": {
 		"kind": "city",
@@ -279,11 +426,18 @@
 		"region": "Hessen",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"From Castellum Cattorum, a Roman-era fort of the Chatti — the same tribe that named Hessen.",
-			"The Brothers Grimm collected their tales here, and the town’s museum is devoted to them.",
-			"It holds documenta, the world’s most important contemporary art exhibition, every five years."
-		]
+		"hooks": {
+			"en": [
+				"From Castellum Cattorum, a Roman-era fort of the Chatti — the same tribe that named Hessen.",
+				"The Brothers Grimm collected their tales here, and the town’s museum is devoted to them.",
+				"It holds documenta, the world’s most important contemporary art exhibition, every five years."
+			],
+			"it": [
+				"Da Castellum Cattorum, un forte d’epoca romana dei Catti: la stessa tribù che ha dato il nome all’Assia.",
+				"I fratelli Grimm raccolsero qui le loro fiabe, e il museo della città è dedicato a loro.",
+				"Ospita ogni cinque anni documenta, la più importante mostra d’arte contemporanea del mondo."
+			]
+		}
 	},
 	"wuppertal": {
 		"kind": "city",
@@ -292,11 +446,18 @@
 		"region": "Nordrhein-Westfalen",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"\"Wupper valley\" — a name invented in 1930 when several towns merged.",
-			"Its Schwebebahn, a suspended monorail hanging over the river, opened in 1901 and still runs.",
-			"An elephant fell out of it into the river in 1950 and survived; Friedrich Engels was born in the town."
-		]
+		"hooks": {
+			"en": [
+				"\"Wupper valley\" — a name invented in 1930 when several towns merged.",
+				"Its Schwebebahn, a suspended monorail hanging over the river, opened in 1901 and still runs.",
+				"An elephant fell out of it into the river in 1950 and survived; Friedrich Engels was born in the town."
+			],
+			"it": [
+				"\"Valle della Wupper\": un nome inventato nel 1930, quando diverse città si fusero.",
+				"La sua Schwebebahn, una monorotaia sospesa sopra il fiume, fu inaugurata nel 1901 e funziona ancora.",
+				"Nel 1950 un elefante cadde dalla monorotaia nel fiume e sopravvisse; Friedrich Engels nacque in questa città."
+			]
+		}
 	},
 	"dusseldorf": {
 		"kind": "city",
@@ -305,11 +466,18 @@
 		"region": "Nordrhein-Westfalen",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"\"Village on the Düssel\" — dorf is a village, and the Düssel is a small tributary.",
-			"Its Königsallee is one of the most expensive shopping streets in Europe.",
-			"It has the largest Japanese community in Germany, and Kraftwerk invented electronic pop here in the 1970s."
-		]
+		"hooks": {
+			"en": [
+				"\"Village on the Düssel\" — dorf is a village, and the Düssel is a small tributary.",
+				"Its Königsallee is one of the most expensive shopping streets in Europe.",
+				"It has the largest Japanese community in Germany, and Kraftwerk invented electronic pop here in the 1970s."
+			],
+			"it": [
+				"\"Villaggio sulla Düssel\": dorf è villaggio, e la Düssel è un piccolo affluente.",
+				"La sua Königsallee è una delle vie commerciali più care d’Europa.",
+				"Ha la più grande comunità giapponese della Germania, e qui negli anni Settanta i Kraftwerk inventarono il pop elettronico."
+			]
+		}
 	},
 	"dresden": {
 		"kind": "city",
@@ -318,11 +486,18 @@
 		"region": "Sachsen",
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"From Sorbian Drežďany, \"people of the riverside forest\".",
-			"It was firebombed in February 1945, and its Frauenkirche was rebuilt from the rubble stone by numbered stone, finishing in 2005.",
-			"Its Green Vault holds the largest treasure collection in Europe, and European porcelain was invented in the city in 1708."
-		]
+		"hooks": {
+			"en": [
+				"From Sorbian Drežďany, \"people of the riverside forest\".",
+				"It was firebombed in February 1945, and its Frauenkirche was rebuilt from the rubble stone by numbered stone, finishing in 2005.",
+				"Its Green Vault holds the largest treasure collection in Europe, and European porcelain was invented in the city in 1708."
+			],
+			"it": [
+				"Dal sorabo Drežďany, \"gente del bosco sul fiume\".",
+				"Nel febbraio 1945 fu colpita da bombardamenti incendiari, e la sua Frauenkirche fu ricostruita dalle macerie, pietra per pietra, ognuna numerata: i lavori finirono nel 2005.",
+				"La sua Volta Verde custodisce la più grande collezione di tesori d’Europa, e la porcellana europea fu inventata in città nel 1708."
+			]
+		}
 	},
 	"erfurt": {
 		"kind": "city",
@@ -331,11 +506,18 @@
 		"region": "Thüringen",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"From an older name meaning the ford across the Erpf or a muddy ford.",
-			"Luther was a monk here, and its Krämerbrücke is the longest inhabited bridge in Europe, with shops on it since 1325.",
-			"Its Old Synagogue is the oldest standing in Europe, and a UNESCO site."
-		]
+		"hooks": {
+			"en": [
+				"From an older name meaning the ford across the Erpf or a muddy ford.",
+				"Luther was a monk here, and its Krämerbrücke is the longest inhabited bridge in Europe, with shops on it since 1325.",
+				"Its Old Synagogue is the oldest standing in Europe, and a UNESCO site."
+			],
+			"it": [
+				"Da un nome più antico che significa il guado sull’Erpf, o un guado fangoso.",
+				"Lutero vi fu monaco, e il suo Krämerbrücke è il ponte abitato più lungo d’Europa, con botteghe sopra fin dal 1325.",
+				"La sua Sinagoga Vecchia è la più antica ancora in piedi in Europa, ed è patrimonio UNESCO."
+			]
+		}
 	},
 	"koln": {
 		"kind": "city",
@@ -345,11 +527,18 @@
 		"region": "Nordrhein-Westfalen",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"From Colonia Claudia Ara Agrippinensium — the Roman colony founded for Agrippina, who was born there.",
-			"Its cathedral took 632 years to build, from 1248 to 1880, and was then the tallest building in the world.",
-			"Eau de Cologne was invented here in 1709, which is why the city’s name is a perfume."
-		]
+		"hooks": {
+			"en": [
+				"From Colonia Claudia Ara Agrippinensium — the Roman colony founded for Agrippina, who was born there.",
+				"Its cathedral took 632 years to build, from 1248 to 1880, and was then the tallest building in the world.",
+				"Eau de Cologne was invented here in 1709, which is why the city’s name is a perfume."
+			],
+			"it": [
+				"Da Colonia Claudia Ara Agrippinensium: la colonia romana fondata per Agrippina, che vi era nata.",
+				"La sua cattedrale richiese 632 anni di lavori, dal 1248 al 1880, e all’epoca era l’edificio più alto del mondo.",
+				"L’acqua di Colonia fu inventata qui nel 1709: ecco perché il nome della città è diventato un profumo."
+			]
+		}
 	},
 	"jena": {
 		"kind": "city",
@@ -358,11 +547,18 @@
 		"region": "Thüringen",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"From a Slavic or Germanic word, possibly for a narrow place.",
-			"Carl Zeiss and Ernst Abbe built modern optics here; Abbe also introduced the eight-hour day.",
-			"Hegel finished the Phenomenology of Spirit in the town as Napoleon’s army arrived to fight the battle of Jena in 1806."
-		]
+		"hooks": {
+			"en": [
+				"From a Slavic or Germanic word, possibly for a narrow place.",
+				"Carl Zeiss and Ernst Abbe built modern optics here; Abbe also introduced the eight-hour day.",
+				"Hegel finished the Phenomenology of Spirit in the town as Napoleon’s army arrived to fight the battle of Jena in 1806."
+			],
+			"it": [
+				"Da una parola slava o germanica che forse indicava un luogo stretto.",
+				"Carl Zeiss ed Ernst Abbe qui crearono l’ottica moderna; Abbe introdusse anche la giornata di otto ore.",
+				"Hegel terminò qui la Fenomenologia dello spirito proprio mentre arrivava l’esercito di Napoleone, per la battaglia di Jena del 1806."
+			]
+		}
 	},
 	"gera": {
 		"kind": "city",
@@ -371,11 +567,18 @@
 		"region": "Thüringen",
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"Named for the river Gera, a name of Germanic or older origin.",
-			"It was a centre of East German uranium mining through the Wismut company, which was kept secret for decades.",
-			"Otto Dix, whose paintings of the First World War are among the most unflinching made, was born here."
-		]
+		"hooks": {
+			"en": [
+				"Named for the river Gera, a name of Germanic or older origin.",
+				"It was a centre of East German uranium mining through the Wismut company, which was kept secret for decades.",
+				"Otto Dix, whose paintings of the First World War are among the most unflinching made, was born here."
+			],
+			"it": [
+				"Prende il nome dal fiume Gera, un nome di origine germanica o ancora più antica.",
+				"Fu un centro dell’estrazione di uranio della Germania Est, attraverso la società Wismut, tenuta segreta per decenni.",
+				"Qui nacque Otto Dix, i cui dipinti della Prima guerra mondiale sono tra i più crudi mai realizzati."
+			]
+		}
 	},
 	"chemnitz": {
 		"kind": "city",
@@ -384,11 +587,18 @@
 		"region": "Sachsen",
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"From Sorbian kamjenica, \"stony brook\".",
-			"It was Karl-Marx-Stadt from 1953 to 1990 and still has a 7 m bronze Marx head in the centre.",
-			"It was the most industrialised German city per head around 1900, called the Saxon Manchester."
-		]
+		"hooks": {
+			"en": [
+				"From Sorbian kamjenica, \"stony brook\".",
+				"It was Karl-Marx-Stadt from 1953 to 1990 and still has a 7 m bronze Marx head in the centre.",
+				"It was the most industrialised German city per head around 1900, called the Saxon Manchester."
+			],
+			"it": [
+				"Dal sorabo kamjenica, \"ruscello sassoso\".",
+				"Dal 1953 al 1990 si chiamò Karl-Marx-Stadt, e in centro ha ancora una testa di Marx in bronzo alta 7 m.",
+				"Intorno al 1900 era la città tedesca più industrializzata per abitante, e la chiamavano la Manchester sassone."
+			]
+		}
 	},
 	"bonn": {
 		"kind": "city",
@@ -397,11 +607,18 @@
 		"region": "Nordrhein-Westfalen",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"From Latin Bonna, probably from a Celtic word for a foundation or a settlement.",
-			"It was the capital of West Germany from 1949 to 1990, chosen partly because it was small enough not to rival a reunified Berlin.",
-			"Beethoven was born here in 1770, and his birthplace is a museum."
-		]
+		"hooks": {
+			"en": [
+				"From Latin Bonna, probably from a Celtic word for a foundation or a settlement.",
+				"It was the capital of West Germany from 1949 to 1990, chosen partly because it was small enough not to rival a reunified Berlin.",
+				"Beethoven was born here in 1770, and his birthplace is a museum."
+			],
+			"it": [
+				"Dal latino Bonna, probabilmente da una parola celtica per fondazione o insediamento.",
+				"Fu la capitale della Germania Ovest dal 1949 al 1990, scelta anche perché abbastanza piccola da non fare concorrenza a una Berlino riunificata.",
+				"Beethoven vi nacque nel 1770, e la sua casa natale è un museo."
+			]
+		}
 	},
 	"koblenz": {
 		"kind": "city",
@@ -410,11 +627,18 @@
 		"region": "Rheinland-Pfalz",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"From Latin confluentes, \"the flowing together\" — the Rhine meets the Moselle here.",
-			"That corner, the Deutsches Eck, has carried a huge equestrian monument since 1897.",
-			"The Ehrenbreitstein fortress opposite is one of the largest in Europe, and the valley is a UNESCO site."
-		]
+		"hooks": {
+			"en": [
+				"From Latin confluentes, \"the flowing together\" — the Rhine meets the Moselle here.",
+				"That corner, the Deutsches Eck, has carried a huge equestrian monument since 1897.",
+				"The Ehrenbreitstein fortress opposite is one of the largest in Europe, and the valley is a UNESCO site."
+			],
+			"it": [
+				"Dal latino confluentes, \"il confluire\": qui il Reno incontra la Mosella.",
+				"Quell’angolo, il Deutsches Eck, porta dal 1897 un enorme monumento equestre.",
+				"La fortezza di Ehrenbreitstein, sull’altra sponda, è una delle più grandi d’Europa, e la valle è patrimonio UNESCO."
+			]
+		}
 	},
 	"frankfurt": {
 		"kind": "city",
@@ -423,11 +647,18 @@
 		"region": "Hessen",
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"\"The ford of the Franks\" — a crossing of the Main used by the Frankish people.",
-			"Holy Roman Emperors were elected and later crowned here for six centuries.",
-			"Goethe was born in the city, and it now holds the European Central Bank and the world’s largest book fair."
-		]
+		"hooks": {
+			"en": [
+				"\"The ford of the Franks\" — a crossing of the Main used by the Frankish people.",
+				"Holy Roman Emperors were elected and later crowned here for six centuries.",
+				"Goethe was born in the city, and it now holds the European Central Bank and the world’s largest book fair."
+			],
+			"it": [
+				"\"Il guado dei Franchi\": un passaggio sul Meno usato dal popolo franco.",
+				"Per sei secoli qui furono eletti, e più tardi incoronati, gli imperatori del Sacro Romano Impero.",
+				"Goethe nacque in questa città, che oggi ospita la Banca centrale europea e la più grande fiera del libro del mondo."
+			]
+		}
 	},
 	"wiesbaden": {
 		"kind": "city",
@@ -436,11 +667,18 @@
 		"region": "Hessen",
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"\"Meadow baths\" — Wiesen meadows, Baden baths, for its 26 hot springs.",
-			"It was one of Europe’s grandest spa towns, with more millionaires per head than anywhere in Germany by 1900.",
-			"Dostoevsky gambled away everything he had in its casino, which produced The Gambler."
-		]
+		"hooks": {
+			"en": [
+				"\"Meadow baths\" — Wiesen meadows, Baden baths, for its 26 hot springs.",
+				"It was one of Europe’s grandest spa towns, with more millionaires per head than anywhere in Germany by 1900.",
+				"Dostoevsky gambled away everything he had in its casino, which produced The Gambler."
+			],
+			"it": [
+				"\"Bagni del prato\": Wiesen, prati, e Baden, bagni, per le sue 26 sorgenti calde.",
+				"Fu una delle stazioni termali più sfarzose d’Europa, e nel 1900 aveva più milionari per abitante di qualsiasi altro luogo della Germania.",
+				"Dostoevskij perse tutto ciò che aveva nel suo casinò, e ne nacque Il giocatore."
+			]
+		}
 	},
 	"mainz": {
 		"kind": "city",
@@ -449,11 +687,18 @@
 		"region": "Rheinland-Pfalz",
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"From Roman Mogontiacum, named for the Celtic god Mogons.",
-			"Gutenberg printed the first European book with movable type here around 1450.",
-			"Its carnival is one of Germany’s three biggest, and its cathedral has stood for over a thousand years."
-		]
+		"hooks": {
+			"en": [
+				"From Roman Mogontiacum, named for the Celtic god Mogons.",
+				"Gutenberg printed the first European book with movable type here around 1450.",
+				"Its carnival is one of Germany’s three biggest, and its cathedral has stood for over a thousand years."
+			],
+			"it": [
+				"Dalla romana Mogontiacum, che prende il nome dal dio celtico Mogons.",
+				"Qui, intorno al 1450, Gutenberg stampò il primo libro europeo a caratteri mobili.",
+				"Il suo carnevale è uno dei tre più grandi della Germania, e il suo duomo è in piedi da più di mille anni."
+			]
+		}
 	},
 	"wurzburg": {
 		"kind": "city",
@@ -462,11 +707,18 @@
 		"region": "Bayern",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"From an older name, possibly from a word for a herb or a hill, plus Burg.",
-			"Its Residenz is one of the finest baroque palaces in Europe, with a Tiepolo ceiling that is the largest fresco in the world, and a UNESCO site.",
-			"Röntgen discovered X-rays in its university in 1895."
-		]
+		"hooks": {
+			"en": [
+				"From an older name, possibly from a word for a herb or a hill, plus Burg.",
+				"Its Residenz is one of the finest baroque palaces in Europe, with a Tiepolo ceiling that is the largest fresco in the world, and a UNESCO site.",
+				"Röntgen discovered X-rays in its university in 1895."
+			],
+			"it": [
+				"Da un nome più antico, forse da una parola per un’erba o per una collina, più Burg.",
+				"La sua Residenz è uno dei più bei palazzi barocchi d’Europa, con un soffitto del Tiepolo che è il più grande affresco del mondo, ed è patrimonio UNESCO.",
+				"Röntgen scoprì i raggi X nella sua università nel 1895."
+			]
+		}
 	},
 	"mannheim": {
 		"kind": "city",
@@ -475,11 +727,18 @@
 		"region": "Baden-Württemberg",
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"From a personal name, Manno, plus Heim, a home.",
-			"Its centre is laid out as a grid of numbered and lettered blocks rather than named streets — unique in Germany.",
-			"Karl Benz drove the first automobile here in 1886, and his wife then made the first long-distance drive from the town."
-		]
+		"hooks": {
+			"en": [
+				"From a personal name, Manno, plus Heim, a home.",
+				"Its centre is laid out as a grid of numbered and lettered blocks rather than named streets — unique in Germany.",
+				"Karl Benz drove the first automobile here in 1886, and his wife then made the first long-distance drive from the town."
+			],
+			"it": [
+				"Da un nome di persona, Manno, più Heim, casa.",
+				"Il suo centro è una griglia di isolati indicati da lettere e numeri anziché vie con un nome: un caso unico in Germania.",
+				"Karl Benz vi guidò la prima automobile nel 1886, e poi sua moglie partì da qui per il primo viaggio a lunga distanza."
+			]
+		}
 	},
 	"furth": {
 		"kind": "city",
@@ -488,11 +747,18 @@
 		"region": "Bayern",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"German for \"ford\" — the crossing of the Rednitz.",
-			"Germany’s first railway ran from here to Nuremberg in 1835.",
-			"Henry Kissinger was born in the town, and it had one of Bavaria’s largest Jewish communities."
-		]
+		"hooks": {
+			"en": [
+				"German for \"ford\" — the crossing of the Rednitz.",
+				"Germany’s first railway ran from here to Nuremberg in 1835.",
+				"Henry Kissinger was born in the town, and it had one of Bavaria’s largest Jewish communities."
+			],
+			"it": [
+				"\"Guado\" in tedesco: l’attraversamento della Rednitz.",
+				"Da qui partiva la prima ferrovia della Germania, che nel 1835 la collegò a Norimberga.",
+				"Henry Kissinger nacque in questa città, che ebbe una delle maggiori comunità ebraiche della Baviera."
+			]
+		}
 	},
 	"nurnberg": {
 		"kind": "city",
@@ -501,11 +767,18 @@
 		"region": "Bayern",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"Probably \"rocky hill\" — from an old word nuor for rock, plus Berg.",
-			"Its Nazi rally grounds and then the post-war trials made the city’s name a byword for both.",
-			"The pocket watch, the first globe and the first recorded gingerbread guild all came from here."
-		]
+		"hooks": {
+			"en": [
+				"Probably \"rocky hill\" — from an old word nuor for rock, plus Berg.",
+				"Its Nazi rally grounds and then the post-war trials made the city’s name a byword for both.",
+				"The pocket watch, the first globe and the first recorded gingerbread guild all came from here."
+			],
+			"it": [
+				"Probabilmente \"colle roccioso\": da un’antica parola nuor, roccia, più Berg.",
+				"L’area dei raduni nazisti e poi i processi del dopoguerra hanno reso il nome della città sinonimo di entrambi.",
+				"L’orologio da tasca, il primo globo e la prima corporazione documentata di fornai di panpepato vengono tutti da qui."
+			]
+		}
 	},
 	"heidelberg": {
 		"kind": "city",
@@ -514,11 +787,18 @@
 		"region": "Baden-Württemberg",
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"Possibly \"blueberry mountain\", from Heidelbeere, or from Heide, a heath.",
-			"Its university, founded 1386, is the oldest in Germany.",
-			"The jaw of Homo heidelbergensis was found nearby in 1907, and the town survived the war almost undamaged."
-		]
+		"hooks": {
+			"en": [
+				"Possibly \"blueberry mountain\", from Heidelbeere, or from Heide, a heath.",
+				"Its university, founded 1386, is the oldest in Germany.",
+				"The jaw of Homo heidelbergensis was found nearby in 1907, and the town survived the war almost undamaged."
+			],
+			"it": [
+				"Forse \"monte dei mirtilli\", da Heidelbeere, oppure da Heide, brughiera.",
+				"La sua università, fondata nel 1386, è la più antica della Germania.",
+				"La mandibola dell’Homo heidelbergensis fu trovata qui vicino nel 1907, e la città uscì dalla guerra quasi intatta."
+			]
+		}
 	},
 	"saarbrucken": {
 		"kind": "city",
@@ -527,11 +807,18 @@
 		"region": "Saarland",
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"\"Bridges over the Saar.\"",
-			"It has changed between France and Germany repeatedly, most recently returning in 1957.",
-			"Its Völklingen ironworks nearby is the only intact nineteenth-century ironworks in the world and a UNESCO site."
-		]
+		"hooks": {
+			"en": [
+				"\"Bridges over the Saar.\"",
+				"It has changed between France and Germany repeatedly, most recently returning in 1957.",
+				"Its Völklingen ironworks nearby is the only intact nineteenth-century ironworks in the world and a UNESCO site."
+			],
+			"it": [
+				"\"Ponti sulla Saar\".",
+				"È passata più volte dalla Francia alla Germania e viceversa, l’ultima volta tornando nel 1957.",
+				"Le vicine ferriere di Völklingen sono l’unico impianto siderurgico ottocentesco rimasto intatto al mondo, e sono patrimonio UNESCO."
+			]
+		}
 	},
 	"regensburg": {
 		"kind": "city",
@@ -540,11 +827,18 @@
 		"region": "Bayern",
 		"coastal": false,
 		"position": "south-east",
-		"hooks": [
-			"\"Fortress on the Regen\" — the river that joins the Danube here.",
-			"Its Stone Bridge of 1146 was the only Danube crossing for 800 km and made the town rich; the old town is a UNESCO site.",
-			"The Imperial Diet sat here permanently from 1663 to 1806, effectively making it the empire’s parliament."
-		]
+		"hooks": {
+			"en": [
+				"\"Fortress on the Regen\" — the river that joins the Danube here.",
+				"Its Stone Bridge of 1146 was the only Danube crossing for 800 km and made the town rich; the old town is a UNESCO site.",
+				"The Imperial Diet sat here permanently from 1663 to 1806, effectively making it the empire’s parliament."
+			],
+			"it": [
+				"\"Fortezza sul Regen\": il fiume che qui confluisce nel Danubio.",
+				"Il suo Ponte di pietra del 1146 fu per 800 km l’unico attraversamento del Danubio e fece ricca la città; il centro storico è patrimonio UNESCO.",
+				"La Dieta imperiale vi sedette stabilmente dal 1663 al 1806, facendone di fatto il parlamento dell’impero."
+			]
+		}
 	},
 	"karlsruhe": {
 		"kind": "city",
@@ -553,11 +847,18 @@
 		"region": "Baden-Württemberg",
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"\"Karl’s rest\" — a margrave built a palace here in 1715 and named it for the peace he hoped to find.",
-			"The city fans out from that palace in 32 streets like a wheel, which is why it is called the fan city.",
-			"Germany’s federal constitutional court sits here, and Heinrich Hertz proved radio waves exist in its university."
-		]
+		"hooks": {
+			"en": [
+				"\"Karl’s rest\" — a margrave built a palace here in 1715 and named it for the peace he hoped to find.",
+				"The city fans out from that palace in 32 streets like a wheel, which is why it is called the fan city.",
+				"Germany’s federal constitutional court sits here, and Heinrich Hertz proved radio waves exist in its university."
+			],
+			"it": [
+				"\"Il riposo di Carlo\": nel 1715 un margravio vi costruì un palazzo e lo chiamò così per la pace che sperava di trovarvi.",
+				"La città si apre a ventaglio da quel palazzo con 32 strade, come i raggi di una ruota: per questo la chiamano la città a ventaglio.",
+				"Qui ha sede la Corte costituzionale federale tedesca, e Heinrich Hertz dimostrò l’esistenza delle onde radio nella sua università."
+			]
+		}
 	},
 	"stuttgart": {
 		"kind": "city",
@@ -566,11 +867,18 @@
 		"region": "Baden-Württemberg",
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"From Stuotgarten, \"stud garden\" — a horse stud founded about 950, which is why a horse is on the city arms.",
-			"Mercedes and Porsche both build here, and Karl Benz’s successors made the city the birthplace of the car.",
-			"It sits in a bowl of vineyards, and vines grow inside the city limits."
-		]
+		"hooks": {
+			"en": [
+				"From Stuotgarten, \"stud garden\" — a horse stud founded about 950, which is why a horse is on the city arms.",
+				"Mercedes and Porsche both build here, and Karl Benz’s successors made the city the birthplace of the car.",
+				"It sits in a bowl of vineyards, and vines grow inside the city limits."
+			],
+			"it": [
+				"Da Stuotgarten, \"giardino delle giumente\": un allevamento di cavalli fondato intorno al 950, ed è per questo che nello stemma della città c’è un cavallo.",
+				"Mercedes e Porsche producono entrambe qui, e i successori di Karl Benz hanno fatto della città la culla dell’automobile.",
+				"Sorge in una conca di vigneti, e le viti crescono anche dentro i confini comunali."
+			]
+		}
 	},
 	"ingolstadt": {
 		"kind": "city",
@@ -579,11 +887,18 @@
 		"region": "Bayern",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"\"The place of Ingold’s people.\"",
-			"Mary Shelley had Frankenstein study at its university and build his creature in the town.",
-			"Audi has been based here since 1949, and its Bavarian purity law for beer was proclaimed in the town in 1516."
-		]
+		"hooks": {
+			"en": [
+				"\"The place of Ingold’s people.\"",
+				"Mary Shelley had Frankenstein study at its university and build his creature in the town.",
+				"Audi has been based here since 1949, and its Bavarian purity law for beer was proclaimed in the town in 1516."
+			],
+			"it": [
+				"\"Il luogo della gente di Ingold\".",
+				"Mary Shelley fece studiare Frankenstein nella sua università e gli fece costruire qui la sua creatura.",
+				"L’Audi ha sede qui dal 1949, e la legge bavarese sulla purezza della birra fu proclamata in questa città nel 1516."
+			]
+		}
 	},
 	"ulm": {
 		"kind": "city",
@@ -592,11 +907,18 @@
 		"region": "Baden-Württemberg",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"From an old word for a damp place or a turning of the river.",
-			"Its Minster has the tallest church steeple in the world at 161.5 m, with 768 steps.",
-			"Einstein was born here, and a tailor tried to fly from the city wall over the Danube in 1811 and fell in."
-		]
+		"hooks": {
+			"en": [
+				"From an old word for a damp place or a turning of the river.",
+				"Its Minster has the tallest church steeple in the world at 161.5 m, with 768 steps.",
+				"Einstein was born here, and a tailor tried to fly from the city wall over the Danube in 1811 and fell in."
+			],
+			"it": [
+				"Da un’antica parola per luogo umido o per un’ansa del fiume.",
+				"Il suo duomo ha il campanile più alto del mondo: 161,5 m, con 768 gradini.",
+				"Einstein nacque qui, e nel 1811 un sarto tentò di volare dalle mura della città sopra il Danubio e ci finì dentro."
+			]
+		}
 	},
 	"augsburg": {
 		"kind": "city",
@@ -605,11 +927,18 @@
 		"region": "Bayern",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"From Augusta Vindelicorum, founded by Augustus in 15 BC — one of Germany’s oldest cities.",
-			"The Fuggerei here, built in 1521, is the oldest social housing in the world still in use; rent is one Rhenish guilder a year, about 88 cents.",
-			"Its water management system is a UNESCO site, and the 1555 Peace of Augsburg let each prince choose his realm’s religion."
-		]
+		"hooks": {
+			"en": [
+				"From Augusta Vindelicorum, founded by Augustus in 15 BC — one of Germany’s oldest cities.",
+				"The Fuggerei here, built in 1521, is the oldest social housing in the world still in use; rent is one Rhenish guilder a year, about 88 cents.",
+				"Its water management system is a UNESCO site, and the 1555 Peace of Augsburg let each prince choose his realm’s religion."
+			],
+			"it": [
+				"Da Augusta Vindelicorum, fondata da Augusto nel 15 a.C.: una delle città più antiche della Germania.",
+				"La Fuggerei, costruita qui nel 1521, è il più antico complesso di case popolari al mondo ancora abitato; l’affitto è un fiorino renano all’anno, circa 88 centesimi.",
+				"Il suo sistema di gestione delle acque è patrimonio UNESCO, e la pace di Augusta del 1555 lasciò a ogni principe la scelta della religione dei suoi domini."
+			]
+		}
 	},
 	"munchen": {
 		"kind": "city",
@@ -619,11 +948,18 @@
 		"region": "Bayern",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"\"By the monks\" — Munichen, from a monastic settlement, which is why a monk is on the city arms.",
-			"Oktoberfest began as a royal wedding party in 1810 and now draws about six million people.",
-			"Its Englischer Garten is larger than Central Park, and surfers ride a standing wave on a stream inside it."
-		]
+		"hooks": {
+			"en": [
+				"\"By the monks\" — Munichen, from a monastic settlement, which is why a monk is on the city arms.",
+				"Oktoberfest began as a royal wedding party in 1810 and now draws about six million people.",
+				"Its Englischer Garten is larger than Central Park, and surfers ride a standing wave on a stream inside it."
+			],
+			"it": [
+				"\"Presso i monaci\": Munichen, da un insediamento monastico, ed è per questo che nello stemma della città c’è un monaco.",
+				"L’Oktoberfest nacque nel 1810 come festa per un matrimonio reale e oggi richiama circa sei milioni di persone.",
+				"Il suo Englischer Garten è più grande di Central Park, e al suo interno i surfisti cavalcano un’onda stazionaria su un ruscello."
+			]
+		}
 	},
 	"freiburg-im-breisgau": {
 		"kind": "city",
@@ -632,10 +968,17 @@
 		"region": "Baden-Württemberg",
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"\"Free town\" — founded in 1120 with a free market charter; Breisgau distinguishes it from other Freiburgs.",
-			"It is the sunniest city in Germany and a pioneer of solar power, with a whole district built to produce more energy than it uses.",
-			"Its Bächle, small water channels, run along the streets; local lore says stepping in one means you will marry a Freiburger."
-		]
+		"hooks": {
+			"en": [
+				"\"Free town\" — founded in 1120 with a free market charter; Breisgau distinguishes it from other Freiburgs.",
+				"It is the sunniest city in Germany and a pioneer of solar power, with a whole district built to produce more energy than it uses.",
+				"Its Bächle, small water channels, run along the streets; local lore says stepping in one means you will marry a Freiburger."
+			],
+			"it": [
+				"\"Città libera\": fondata nel 1120 con un privilegio di libero mercato; \"in Brisgovia\" la distingue dalle altre Friburgo.",
+				"È la città più soleggiata della Germania e una pioniera dell’energia solare, con un intero quartiere costruito per produrre più energia di quanta ne consumi.",
+				"Lungo le sue strade corrono i Bächle, piccoli canali d’acqua; secondo la tradizione locale, chi ci mette un piede dentro sposerà un friburghese."
+			]
+		}
 	}
 }

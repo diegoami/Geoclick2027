@@ -20,6 +20,8 @@
 		"build-map-index": "tsx data/scripts/build-map-index.ts",
 		"build-map-colors": "tsx data/scripts/build-map-colors.ts",
 		"build-map-spines": "tsx data/scripts/build-map-spines.ts",
+		"refresh-facts-hooks": "tsx data/scripts/refresh-facts-hooks.ts",
+		"translate-facts": "tsx data/scripts/translate-facts.ts",
 		"gates": "node scripts/task.mjs gates",
 		"setup-hooks": "git config core.hooksPath .githooks"
 	},

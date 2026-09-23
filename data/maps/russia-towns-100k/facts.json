@@ -6,11 +6,18 @@
 		"region": "Khanty-Mansiy",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"From a Khanty word, possibly \"fish pit\".",
-			"Founded in 1594 as a Siberian fort, then rebuilt as an oil town in the 1960s.",
-			"Its power station is one of the largest in the world, burning gas that was once simply flared off."
-		]
+		"hooks": {
+			"en": [
+				"From a Khanty word, possibly \"fish pit\".",
+				"Founded in 1594 as a Siberian fort, then rebuilt as an oil town in the 1960s.",
+				"Its power station is one of the largest in the world, burning gas that was once simply flared off."
+			],
+			"it": [
+				"Da una parola chanty, forse \"fossa dei pesci\".",
+				"Fondata nel 1594 come fortino siberiano, poi ricostruita come città del petrolio negli anni Sessanta.",
+				"La sua centrale elettrica è una delle più grandi del mondo, alimentata dal gas che un tempo veniva semplicemente bruciato in torcia."
+			]
+		}
 	},
 	"saint-petersburg": {
 		"kind": "city",
@@ -20,11 +27,18 @@
 		"region": "City of St. Petersburg",
 		"coastal": true,
 		"position": "north-west",
-		"hooks": [
-			"Named by Peter the Great for his patron saint, in Dutch-German form because he admired the Dutch.",
-			"Built on marsh from 1703 at great cost in lives, and the capital for two centuries.",
-			"The siege of 1941–44 lasted 872 days and killed about a million civilians, mostly by starvation."
-		]
+		"hooks": {
+			"en": [
+				"Named by Peter the Great for his patron saint, in Dutch-German form because he admired the Dutch.",
+				"Built on marsh from 1703 at great cost in lives, and the capital for two centuries.",
+				"The siege of 1941–44 lasted 872 days and killed about a million civilians, mostly by starvation."
+			],
+			"it": [
+				"Pietro il Grande le diede il nome del suo santo patrono, in forma olandese-tedesca, perché ammirava gli Olandesi.",
+				"Costruita su una palude a partire dal 1703, a un grande costo in vite umane, fu capitale per due secoli.",
+				"L’assedio del 1941-44 durò 872 giorni e uccise circa un milione di civili, per lo più di fame."
+			]
+		}
 	},
 	"kirov": {
 		"kind": "city",
@@ -32,11 +46,18 @@
 		"populationRank": 38,
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"Named for Sergei Kirov, the party boss whose 1934 assassination Stalin used as the pretext for the Great Purge.",
-			"The city was Vyatka before that, after its river, and there is a long-running campaign to change it back.",
-			"Dymkovo toys, brightly painted clay figures made here since the 1400s, are a Russian folk-art standard."
-		]
+		"hooks": {
+			"en": [
+				"Named for Sergei Kirov, the party boss whose 1934 assassination Stalin used as the pretext for the Great Purge.",
+				"The city was Vyatka before that, after its river, and there is a long-running campaign to change it back.",
+				"Dymkovo toys, brightly painted clay figures made here since the 1400s, are a Russian folk-art standard."
+			],
+			"it": [
+				"Prende il nome da Sergej Kirov, il capo di partito il cui assassinio nel 1934 fu il pretesto di Stalin per il Grande Terrore.",
+				"Prima la città si chiamava Vjatka, come il suo fiume, e da tempo c’è chi si batte per ridarle quel nome.",
+				"I giocattoli di Dymkovo, figurine di argilla dipinte a colori vivaci prodotte qui dal Quattrocento, sono un classico dell’arte popolare russa."
+			]
+		}
 	},
 	"perm": {
 		"kind": "city",
@@ -46,11 +67,18 @@
 		"region": "Perm'",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"From a Finno-Ugric phrase, probably perä maa, \"the far land\", which the Russians took as the region's name.",
-			"The Permian geological period is named after it — the last period before the dinosaurs, defined from rocks here in 1841.",
-			"Kungur ice cave in the region has grottoes that stay frozen year-round."
-		]
+		"hooks": {
+			"en": [
+				"From a Finno-Ugric phrase, probably perä maa, \"the far land\", which the Russians took as the region's name.",
+				"The Permian geological period is named after it — the last period before the dinosaurs, defined from rocks here in 1841.",
+				"Kungur ice cave in the region has grottoes that stay frozen year-round."
+			],
+			"it": [
+				"Da un’espressione ugrofinnica, probabilmente perä maa, \"la terra lontana\", che i Russi presero come nome della regione.",
+				"Il periodo geologico Permiano prende il nome da qui: l’ultimo periodo prima dei dinosauri, definito nel 1841 a partire dalle rocce di questa zona.",
+				"La grotta di ghiaccio di Kungur, nella regione, ha grotte che restano gelate tutto l’anno."
+			]
+		}
 	},
 	"nizhny-tagil": {
 		"kind": "city",
@@ -59,11 +87,18 @@
 		"region": "Sverdlovsk",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"\"Lower Tagil\" — nizhny lower, on the Tagil river, distinguishing it from an upper works.",
-			"The Demidov family built ironworks here in 1725; the iron roofed the Houses of Parliament in London.",
-			"Its tank factory built more T-34s than anywhere else in the war and still makes Russian tanks."
-		]
+		"hooks": {
+			"en": [
+				"\"Lower Tagil\" — nizhny lower, on the Tagil river, distinguishing it from an upper works.",
+				"The Demidov family built ironworks here in 1725; the iron roofed the Houses of Parliament in London.",
+				"Its tank factory built more T-34s than anywhere else in the war and still makes Russian tanks."
+			],
+			"it": [
+				"\"Tagil inferiore\": nizhny inferiore, sul fiume Tagil, per distinguerla da uno stabilimento più a monte.",
+				"Nel 1725 la famiglia Demidov vi costruì delle ferriere; con quel ferro fu coperto il tetto del Parlamento di Londra.",
+				"La sua fabbrica di carri armati costruì più T-34 di qualunque altra durante la guerra, e produce ancora carri russi."
+			]
+		}
 	},
 	"yaroslavl": {
 		"kind": "city",
@@ -72,11 +107,18 @@
 		"region": "Yaroslavl'",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"Named for Yaroslav the Wise, who founded it around 1010 — legend says on the spot where he killed a bear with an axe, which is on the city's arms.",
-			"Its centre is a UNESCO site, laid out on a radial plan by Catherine the Great.",
-			"Russia's first professional theatre opened here in 1750."
-		]
+		"hooks": {
+			"en": [
+				"Named for Yaroslav the Wise, who founded it around 1010 — legend says on the spot where he killed a bear with an axe, which is on the city's arms.",
+				"Its centre is a UNESCO site, laid out on a radial plan by Catherine the Great.",
+				"Russia's first professional theatre opened here in 1750."
+			],
+			"it": [
+				"Prende il nome da Jaroslav il Saggio, che la fondò intorno al 1010: la leggenda vuole che fosse nel punto in cui uccise un orso con un’ascia, che compare nello stemma della città.",
+				"Il suo centro è un sito UNESCO, disegnato su una pianta radiale da Caterina la Grande.",
+				"Il primo teatro professionale della Russia aprì qui nel 1750."
+			]
+		}
 	},
 	"tyumen": {
 		"kind": "city",
@@ -85,11 +127,18 @@
 		"region": "Tyumen'",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"Probably from a Turkic phrase meaning \"ten thousand\", the size of a Tatar military unit.",
-			"The first Russian town in Siberia, founded in 1586 on the site of a Tatar khanate capital.",
-			"The oil and gas of the West Siberian basin is administered from here, which makes it one of Russia's richest regions."
-		]
+		"hooks": {
+			"en": [
+				"Probably from a Turkic phrase meaning \"ten thousand\", the size of a Tatar military unit.",
+				"The first Russian town in Siberia, founded in 1586 on the site of a Tatar khanate capital.",
+				"The oil and gas of the West Siberian basin is administered from here, which makes it one of Russia's richest regions."
+			],
+			"it": [
+				"Probabilmente da un’espressione turca che significa \"diecimila\", la consistenza di un’unità militare tatara.",
+				"La prima città russa in Siberia, fondata nel 1586 dove sorgeva la capitale di un khanato tataro.",
+				"Il petrolio e il gas del bacino della Siberia occidentale sono amministrati da qui, il che ne fa una delle regioni più ricche della Russia."
+			]
+		}
 	},
 	"ivanovo": {
 		"kind": "city",
@@ -97,11 +146,18 @@
 		"populationRank": 42,
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"From the personal name Ivan — the town grew from a village called Ivanovo.",
-			"It was the centre of Russian textiles and is still called the city of brides, because the mills employed mostly women.",
-			"The first workers' soviet in Russian history was formed here in 1905, two years before the better-known ones."
-		]
+		"hooks": {
+			"en": [
+				"From the personal name Ivan — the town grew from a village called Ivanovo.",
+				"It was the centre of Russian textiles and is still called the city of brides, because the mills employed mostly women.",
+				"The first workers' soviet in Russian history was formed here in May 1905, months before the better-known one in St Petersburg."
+			],
+			"it": [
+				"Dal nome di persona Ivan: la città nacque da un villaggio chiamato Ivanovo.",
+				"Era il centro del tessile russo ed è ancora chiamata la città delle spose, perché nelle filande lavoravano soprattutto donne.",
+				"Il primo soviet operaio della storia russa nacque qui nel maggio 1905, pochi mesi prima di quello, più noto, di San Pietroburgo."
+			]
+		}
 	},
 	"tver": {
 		"kind": "city",
@@ -110,11 +166,18 @@
 		"region": "Tver'",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"From a Finnic river name, Tikhvera; it was Kalinin in Soviet times and changed back in 1990.",
-			"Tver was Moscow's main rival for leadership of the Russian lands in the 1300s and lost.",
-			"Afanasy Nikitin, a merchant from here, reached India in the 1460s — thirty years before Vasco da Gama — and wrote it up."
-		]
+		"hooks": {
+			"en": [
+				"From a Finnic river name, Tikhvera; it was Kalinin in Soviet times and changed back in 1990.",
+				"Tver was Moscow's main rival for leadership of the Russian lands in the 1300s and lost.",
+				"Afanasy Nikitin, a merchant from here, reached India in the 1460s — thirty years before Vasco da Gama — and wrote it up."
+			],
+			"it": [
+				"Da un nome finnico di fiume, Tikhvera; in epoca sovietica si chiamava Kalinin, e nel 1990 è tornata al vecchio nome.",
+				"Nel Trecento Tver fu la principale rivale di Mosca per la guida delle terre russe, e perse.",
+				"Afanasij Nikitin, un mercante di qui, raggiunse l’India negli anni Sessanta del Quattrocento, trent’anni prima di Vasco da Gama, e ne lasciò un resoconto."
+			]
+		}
 	},
 	"yekaterinburg": {
 		"kind": "city",
@@ -124,11 +187,18 @@
 		"region": "Sverdlovsk",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"Named in 1723 for Catherine I, Peter the Great’s wife — and for St Catherine.",
-			"The last tsar and his family were shot here in 1918; a cathedral now stands on the site.",
-			"It is the main city of the Urals, on the boundary between Europe and Asia."
-		]
+		"hooks": {
+			"en": [
+				"Named in 1723 for Catherine I, Peter the Great’s wife — and for St Catherine.",
+				"The last tsar and his family were shot here in 1918; a cathedral now stands on the site.",
+				"It is the main city of the Urals, on the boundary between Europe and Asia."
+			],
+			"it": [
+				"Chiamata così nel 1723 in onore di Caterina I, moglie di Pietro il Grande, e di santa Caterina.",
+				"Qui l’ultimo zar e la sua famiglia furono fucilati nel 1918; oggi sul luogo sorge una cattedrale.",
+				"È la città principale degli Urali, sul confine tra Europa e Asia."
+			]
+		}
 	},
 	"izhevsk": {
 		"kind": "city",
@@ -137,11 +207,18 @@
 		"region": "Udmurt",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"Named for the Izh river; it was Ustinov from 1984 to 1987, which the residents rejected.",
-			"Kalashnikov designed and built the AK-47 here, and the factory still makes them.",
-			"It is the capital of Udmurtia, whose language is Finno-Ugric."
-		]
+		"hooks": {
+			"en": [
+				"Named for the Izh river; it was Ustinov from 1984 to 1987, which the residents rejected.",
+				"The AK-47 was first mass-produced here, Kalashnikov lived here for the rest of his life, and the factory still makes them.",
+				"It is the capital of Udmurtia, whose language is Finno-Ugric."
+			],
+			"it": [
+				"Prende il nome dal fiume Iž; dal 1984 al 1987 si chiamò Ustinov, un nome che gli abitanti rifiutarono.",
+				"Qui l’AK-47 fu prodotto in serie per la prima volta, qui Kalašnikov visse per il resto della vita, e la fabbrica lo produce ancora.",
+				"È la capitale dell’Udmurtia, la cui lingua è ugrofinnica."
+			]
+		}
 	},
 	"tomsk": {
 		"kind": "city",
@@ -149,11 +226,18 @@
 		"populationRank": 29,
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"Named for the Tom river, from a Ket or Turkic word for a river.",
-			"The first university in Siberia opened here in 1888, and it is still the most student-dense city in Russia.",
-			"Its wooden lace architecture — carved window surrounds on timber houses — is the best preserved in the country."
-		]
+		"hooks": {
+			"en": [
+				"Named for the Tom river, from a Ket or Turkic word for a river.",
+				"The first university in Siberia opened here in 1888, and it is still the most student-dense city in Russia.",
+				"Its wooden lace architecture — carved window surrounds on timber houses — is the best preserved in the country."
+			],
+			"it": [
+				"Prende il nome dal fiume Tom, da una parola ket o turca che significa fiume.",
+				"Qui nel 1888 aprì la prima università della Siberia, ed è ancora la città russa con la più alta densità di studenti.",
+				"La sua architettura in legno a merletto, con cornici intagliate alle finestre delle case di tronchi, è la meglio conservata del paese."
+			]
+		}
 	},
 	"nizhny-novgorod": {
 		"kind": "city",
@@ -163,11 +247,18 @@
 		"region": "Nizhegorod",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"\"Lower new town\" — lower than Novgorod, and downstream.",
-			"Its trade fair was the largest in the Russian Empire, and the city stands where the Oka meets the Volga.",
-			"Closed to foreigners in Soviet times under the name Gorky, which is why Sakharov was exiled here."
-		]
+		"hooks": {
+			"en": [
+				"\"Lower new town\" — lower than Novgorod, and downstream.",
+				"Its trade fair was the largest in the Russian Empire, and the city stands where the Oka meets the Volga.",
+				"Closed to foreigners in Soviet times under the name Gorky, which is why Sakharov was exiled here."
+			],
+			"it": [
+				"\"Città nuova di sotto\": più in basso di Novgorod, e a valle.",
+				"La sua fiera era la più grande dell’Impero russo, e la città sorge dove l’Oka confluisce nel Volga.",
+				"In epoca sovietica, col nome di Gorkij, era chiusa agli stranieri, ed è per questo che Sacharov vi fu mandato in esilio."
+			]
+		}
 	},
 	"cheboksary": {
 		"kind": "city",
@@ -176,11 +267,18 @@
 		"region": "Chuvash",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"Of Chuvash or Mari origin, possibly from a personal name plus a word for a settlement.",
-			"The capital of Chuvashia, whose language is the only surviving Oghur Turkic one.",
-			"Much of the old town was flooded by a Volga reservoir in 1980; a bay now covers it."
-		]
+		"hooks": {
+			"en": [
+				"Of Chuvash or Mari origin, possibly from a personal name plus a word for a settlement.",
+				"The capital of Chuvashia, whose language is the only surviving Oghur Turkic one.",
+				"Much of the old town was flooded by a Volga reservoir in 1980; a bay now covers it."
+			],
+			"it": [
+				"Di origine ciuvascia o mari, forse da un nome di persona più una parola per insediamento.",
+				"La capitale della Ciuvascia, la cui lingua è l’unica lingua turca oghura sopravvissuta.",
+				"Nel 1980 buona parte della città vecchia fu sommersa da un bacino artificiale del Volga; oggi al suo posto c’è una baia."
+			]
+		}
 	},
 	"krasnoyarsk": {
 		"kind": "city",
@@ -189,11 +287,18 @@
 		"population1950": 290000,
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"\"Red ravine\" — krasny red, yar a steep bank: the fort was built on a red clay bluff in 1628.",
-			"The second largest region in Russia, running 3,000 km from the Arctic to Mongolia.",
-			"Norilsk in it is one of the most polluted places in the world from nickel smelting, and one of the northernmost cities anywhere."
-		]
+		"hooks": {
+			"en": [
+				"\"Red ravine\" — krasny red, yar a steep bank: the fort was built on a red clay bluff in 1628.",
+				"The second largest region in Russia, running 3,000 km from the Arctic to the Sayan mountains.",
+				"Norilsk in it is one of the most polluted places in the world from nickel smelting, and one of the northernmost cities anywhere."
+			],
+			"it": [
+				"\"Burrone rosso\": krasny rosso, yar una riva scoscesa; il forte fu costruito nel 1628 su una scarpata di argilla rossa.",
+				"È la seconda regione più grande della Russia, e si estende per 3.000 km dall’Artico ai monti Sajany.",
+				"Norilsk, che si trova qui, è uno dei luoghi più inquinati del mondo per via della fusione del nichel, e una delle città più settentrionali in assoluto."
+			]
+		}
 	},
 	"moscow": {
 		"kind": "city",
@@ -204,11 +309,18 @@
 		"capitalOf": "country",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"Named for the river, whose own name is probably Finno-Ugric or Baltic, perhaps meaning wet or marshy.",
-			"The capital since 1480, except for the two centuries when St Petersburg was.",
-			"Its metro stations were built as palaces for the people, with chandeliers and mosaics, some 84 m down."
-		]
+		"hooks": {
+			"en": [
+				"Named for the river, whose own name is probably Finno-Ugric or Baltic, perhaps meaning wet or marshy.",
+				"The capital since 1480, except for the two centuries when St Petersburg was.",
+				"Its metro stations were built as palaces for the people, with chandeliers and mosaics, some 84 m down."
+			],
+			"it": [
+				"Prende il nome dal fiume, il cui nome è probabilmente ugrofinnico o baltico, e forse significa umido o paludoso.",
+				"Capitale dal 1480, tranne per i due secoli in cui lo fu San Pietroburgo.",
+				"Le sue stazioni della metropolitana furono costruite come palazzi per il popolo, con lampadari e mosaici, alcune a 84 m di profondità."
+			]
+		}
 	},
 	"kazan": {
 		"kind": "city",
@@ -218,11 +330,18 @@
 		"region": "Tatarstan",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"From a Tatar word for a cauldron — a legend has one dropped in the river at the founding.",
-			"It was the capital of a khanate until Ivan the Terrible took it in 1552; its kremlin is a UNESCO site.",
-			"It calls itself Russia’s third capital, and its Qolşärif mosque and Orthodox cathedral stand inside the same walls."
-		]
+		"hooks": {
+			"en": [
+				"From a Tatar word for a cauldron — a legend has one dropped in the river at the founding.",
+				"It was the capital of a khanate until Ivan the Terrible took it in 1552; its kremlin is a UNESCO site.",
+				"It calls itself Russia’s third capital, and its Qolşärif mosque and Orthodox cathedral stand inside the same walls."
+			],
+			"it": [
+				"Da una parola tatara che significa calderone: una leggenda racconta che ne cadde uno nel fiume al momento della fondazione.",
+				"Fu la capitale di un khanato finché Ivan il Terribile non la prese nel 1552; il suo cremlino è un sito UNESCO.",
+				"Si definisce la terza capitale della Russia, e la sua moschea Qolşärif e la cattedrale ortodossa sorgono dentro le stesse mura."
+			]
+		}
 	},
 	"naberezhnyye-chelny": {
 		"kind": "city",
@@ -231,11 +350,18 @@
 		"region": "Tatarstan",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"\"The riverside boats\" — naberezhnaya is an embankment, chelny old flat-bottomed boats.",
-			"It was built in the 1970s around KamAZ, the truck plant, and was called Brezhnev from 1982 to 1988.",
-			"KamAZ trucks have won the Dakar Rally more often than any other manufacturer."
-		]
+		"hooks": {
+			"en": [
+				"\"The riverside boats\" — naberezhnaya is an embankment, chelny old flat-bottomed boats.",
+				"It was built in the 1970s around KamAZ, the truck plant, and was called Brezhnev from 1982 to 1988.",
+				"KamAZ trucks have won the Dakar Rally more often than any other manufacturer."
+			],
+			"it": [
+				"\"Le barche del lungofiume\": naberezhnaya è un lungofiume, chelny sono antiche barche a fondo piatto.",
+				"Fu costruita negli anni Settanta intorno al KamAZ, la fabbrica di camion, e dal 1982 al 1988 si chiamò Brežnev.",
+				"I camion KamAZ hanno vinto il Rally Dakar più volte di qualunque altro costruttore."
+			]
+		}
 	},
 	"kemerovo": {
 		"kind": "city",
@@ -243,11 +369,18 @@
 		"populationRank": 36,
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"From a family name or from kemer, a Turkic word for a riverbank.",
-			"The Kuzbass coalfield here produces most of Russia's coal.",
-			"Tomskaya Pisanitsa in it has rock carvings up to 4,000 years old on cliffs above the Tom."
-		]
+		"hooks": {
+			"en": [
+				"From a family name or from kemer, a Turkic word for a riverbank.",
+				"The Kuzbass coalfield here produces most of Russia's coal.",
+				"Tomskaya Pisanitsa in it has rock carvings up to 4,000 years old on cliffs above the Tom."
+			],
+			"it": [
+				"Da un cognome, o da kemer, una parola turca che significa riva di fiume.",
+				"Il bacino carbonifero del Kuzbass, qui, produce la maggior parte del carbone russo.",
+				"A Tomskaja Pisanica, che si trova qui, ci sono incisioni rupestri vecchie fino a 4.000 anni, sulle rupi sopra il Tom."
+			]
+		}
 	},
 	"chelyabinsk": {
 		"kind": "city",
@@ -256,11 +389,18 @@
 		"population1950": 573000,
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"From a Bashkir word, possibly selebe, a hollow or pit.",
-			"A meteor exploded over the city in 2013 with the force of 500 kilotons, injuring 1,500 people, mostly from flying glass.",
-			"Mayak nearby suffered a nuclear accident in 1957 that was kept secret for thirty years and was among the worst ever."
-		]
+		"hooks": {
+			"en": [
+				"From a Bashkir word, possibly selebe, a hollow or pit.",
+				"A meteor exploded over the city in 2013 with the force of 500 kilotons, injuring 1,500 people, mostly from flying glass.",
+				"Mayak nearby suffered a nuclear accident in 1957 that was kept secret for thirty years and was among the worst ever."
+			],
+			"it": [
+				"Da una parola baschira, forse selebe, un avvallamento o una fossa.",
+				"Nel 2013 un meteorite esplose sopra la città con la potenza di 500 kilotoni, ferendo 1.500 persone, per lo più con le schegge di vetro.",
+				"Nel 1957 a Majak, qui vicino, avvenne un incidente nucleare che rimase segreto per trent’anni e fu tra i peggiori di sempre."
+			]
+		}
 	},
 	"novosibirsk": {
 		"kind": "city",
@@ -269,11 +409,18 @@
 		"population1950": 719000,
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"\"New Siberian town\" — founded in 1893 where the Trans-Siberian Railway crossed the Ob.",
-			"It reached a million people faster than any city in history at the time, in under seventy years.",
-			"Akademgorodok outside it was built in 1957 as a science city in the forest, and still holds dozens of research institutes."
-		]
+		"hooks": {
+			"en": [
+				"\"New Siberian town\" — founded in 1893 where the Trans-Siberian Railway crossed the Ob.",
+				"It reached a million people faster than any city in history at the time, in under seventy years.",
+				"Akademgorodok outside it was built in 1957 as a science city in the forest, and still holds dozens of research institutes."
+			],
+			"it": [
+				"\"Nuova città siberiana\": fondata nel 1893 dove la Transiberiana attraversava l’Ob.",
+				"Raggiunse il milione di abitanti più in fretta di qualunque altra città della storia fino ad allora, in meno di settant’anni.",
+				"Akademgorodok, alle sue porte, fu costruita nel 1957 come città della scienza nella foresta, e ospita ancora decine di istituti di ricerca."
+			]
+		}
 	},
 	"omsk": {
 		"kind": "city",
@@ -282,11 +429,18 @@
 		"population1950": 444000,
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"Named for the Om river, from a Baraba Tatar word meaning \"quiet\".",
-			"It was the capital of White Russia under Admiral Kolchak in 1918–19, and the imperial gold reserve was held here.",
-			"Dostoevsky served four years at hard labour in its prison, which became The House of the Dead."
-		]
+		"hooks": {
+			"en": [
+				"Named for the Om river, from a Baraba Tatar word meaning \"quiet\".",
+				"It was the capital of White Russia under Admiral Kolchak in 1918–19, and the imperial gold reserve was held here.",
+				"Dostoevsky served four years at hard labour in its prison, which became The House of the Dead."
+			],
+			"it": [
+				"Prende il nome dal fiume Om, da una parola dei Tatari della Baraba che significa \"quieto\".",
+				"Nel 1918-19 fu la capitale della Russia bianca sotto l’ammiraglio Kolčak, e qui era custodita la riserva aurea imperiale.",
+				"Dostoevskij scontò quattro anni di lavori forzati nel suo carcere, che divenne le Memorie dalla casa dei morti."
+			]
+		}
 	},
 	"ufa": {
 		"kind": "city",
@@ -296,11 +450,18 @@
 		"region": "Bashkortostan",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"Possibly from a Bashkir word for dark water, or from a Turkic word for high ground.",
-			"The capital of Bashkortostan, and one of the most ethnically mixed large cities in Russia.",
-			"Its Salavat Yulaev statue, a Bashkir rebel on a rearing horse, is the largest equestrian statue in the country."
-		]
+		"hooks": {
+			"en": [
+				"Possibly from a Bashkir word for dark water, or from a Turkic word for high ground.",
+				"The capital of Bashkortostan, and one of the most ethnically mixed large cities in Russia.",
+				"Its Salavat Yulaev statue, a Bashkir rebel on a rearing horse, is the largest equestrian statue in the country."
+			],
+			"it": [
+				"Forse da una parola baschira per acqua scura, o da una parola turca per altura.",
+				"La capitale del Bashkortostan, e una delle grandi città russe più mescolate dal punto di vista etnico.",
+				"La sua statua di Salavat Julaev, un ribelle baschiro su un cavallo impennato, è la più grande statua equestre del paese."
+			]
+		}
 	},
 	"kaliningrad": {
 		"kind": "city",
@@ -308,11 +469,18 @@
 		"populationRank": 40,
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"Named for Mikhail Kalinin, a Soviet figurehead — it was Königsberg, \"king's mountain\", founded by the Teutonic Knights in 1255.",
-			"An exclave: it borders Poland and Lithuania and has no land connection to the rest of Russia.",
-			"Kant was born, taught and died here and never left the city; his tomb is on the cathedral wall."
-		]
+		"hooks": {
+			"en": [
+				"Named for Mikhail Kalinin, a Soviet figurehead — it was Königsberg, \"king's mountain\", founded by the Teutonic Knights in 1255.",
+				"An exclave: it borders Poland and Lithuania and has no land connection to the rest of Russia.",
+				"Kant was born, taught and died here and never left East Prussia; his tomb is on the cathedral wall."
+			],
+			"it": [
+				"Prende il nome da Michail Kalinin, un capo di Stato sovietico di facciata; era Königsberg, \"monte del re\", fondata dai Cavalieri teutonici nel 1255.",
+				"È un’exclave: confina con Polonia e Lituania e non ha alcun collegamento via terra con il resto della Russia.",
+				"Kant vi nacque, vi insegnò e vi morì senza mai lasciare la Prussia orientale; la sua tomba è addossata al muro della cattedrale."
+			]
+		}
 	},
 	"ryazan": {
 		"kind": "city",
@@ -321,11 +489,18 @@
 		"region": "Ryazan'",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"Possibly from a word for a cut or a slope, or from the Erzya people.",
-			"Old Ryazan was destroyed by the Mongols in 1237 and never rebuilt; the modern city is a different town that took the name.",
-			"Yesenin, one of Russia's best-loved poets, was born in a village here."
-		]
+		"hooks": {
+			"en": [
+				"Possibly from a word for a cut or a slope, or from the Erzya people.",
+				"Old Ryazan was destroyed by the Mongols in 1237 and never rebuilt; the modern city is a different town that took the name.",
+				"Yesenin, one of Russia's best-loved poets, was born in a village here."
+			],
+			"it": [
+				"Forse da una parola che indica un taglio o un pendio, oppure dal popolo erzja.",
+				"La vecchia Rjazan fu distrutta dai Mongoli nel 1237 e mai ricostruita; la città moderna è un altro centro, che ne prese il nome.",
+				"Esenin, uno dei poeti più amati della Russia, nacque in un villaggio di qui."
+			]
+		}
 	},
 	"ulyanovsk": {
 		"kind": "city",
@@ -334,11 +509,18 @@
 		"region": "Ul'yanovsk",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"Named for Lenin, whose real surname was Ulyanov and who was born here when it was Simbirsk.",
-			"Kerensky, the head of the Provisional Government Lenin overthrew, was born in the same town, and his father taught Lenin.",
-			"It sits on the Volga, and its bridge is among the longest in Europe at nearly 6 km."
-		]
+		"hooks": {
+			"en": [
+				"Named for Lenin, whose real surname was Ulyanov and who was born here when it was Simbirsk.",
+				"Kerensky, the head of the Provisional Government Lenin overthrew, was born in the same town, and his father taught Lenin.",
+				"It sits on the Volga, and its bridge is among the longest in Europe at nearly 6 km."
+			],
+			"it": [
+				"Prende il nome da Lenin, il cui vero cognome era Uljanov e che nacque qui, quando la città si chiamava Simbirsk.",
+				"Nella stessa città nacque Kerenskij, il capo del Governo provvisorio rovesciato da Lenin, e suo padre fu insegnante di Lenin.",
+				"Sorge sul Volga, e il suo ponte, lungo quasi 6 km, è tra i più lunghi d’Europa."
+			]
+		}
 	},
 	"tula": {
 		"kind": "city",
@@ -346,11 +528,18 @@
 		"populationRank": 35,
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"Possibly from a word for a hidden or sheltered place.",
-			"It has made Russian weapons since 1712 and its samovars since the 1770s — \"taking a samovar to Tula\" is the Russian coals to Newcastle.",
-			"Tolstoy's estate Yasnaya Polyana is here, where he wrote War and Peace and is buried under a mound with no headstone."
-		]
+		"hooks": {
+			"en": [
+				"Possibly from a word for a hidden or sheltered place.",
+				"It has made Russian weapons since 1712 and its samovars since the 1770s — \"taking a samovar to Tula\" is the Russian coals to Newcastle.",
+				"Tolstoy's estate Yasnaya Polyana is here, where he wrote War and Peace and is buried under a mound with no headstone."
+			],
+			"it": [
+				"Forse da una parola che indica un luogo nascosto o riparato.",
+				"Fabbrica armi russe dal 1712 e samovar dagli anni Settanta del Settecento: \"portare il samovar a Tula\" è l’equivalente russo di \"portare acqua al mare\".",
+				"Qui c’è Jasnaja Poljana, la tenuta di Tolstoj, dove scrisse Guerra e pace e dove è sepolto sotto un tumulo senza lapide."
+			]
+		}
 	},
 	"novokuznetsk": {
 		"kind": "city",
@@ -359,11 +548,18 @@
 		"region": "Kemerovo",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"\"New Kuznetsk\" — kuznets is a smith, so the name is the new smiths’ town.",
-			"Its steelworks was a flagship of the first Five-Year Plan, built in 1932 at enormous human cost.",
-			"Dostoevsky married his first wife here in 1857 while in Siberian exile."
-		]
+		"hooks": {
+			"en": [
+				"\"New Kuznetsk\" — kuznets is a smith, so the name is the new smiths’ town.",
+				"Its steelworks was a flagship of the first Five-Year Plan, built in 1932 at enormous human cost.",
+				"Dostoevsky married his first wife here in 1857 while in Siberian exile."
+			],
+			"it": [
+				"\"Nuova Kuzneck\": kuznets è il fabbro, quindi il nome è la nuova città dei fabbri.",
+				"Le sue acciaierie furono un fiore all’occhiello del primo piano quinquennale, costruite nel 1932 a un costo umano enorme.",
+				"Nel 1857, durante l’esilio in Siberia, Dostoevskij vi sposò la sua prima moglie."
+			]
+		}
 	},
 	"tolyatti": {
 		"kind": "city",
@@ -372,11 +568,18 @@
 		"region": "Samara",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"Named in 1964 for Palmiro Togliatti, the Italian communist leader, who had just died.",
-			"That was not sentiment alone: Fiat built the AvtoVAZ plant here, which made the Lada.",
-			"The old town of Stavropol-on-Volga was flooded by a reservoir in 1955 and the city moved wholesale."
-		]
+		"hooks": {
+			"en": [
+				"Named in 1964 for Palmiro Togliatti, the Italian communist leader, who had just died.",
+				"That was not sentiment alone: Fiat built the AvtoVAZ plant here, which made the Lada.",
+				"The old town of Stavropol-on-Volga was flooded by a reservoir in 1955 and the city moved wholesale."
+			],
+			"it": [
+				"Chiamata così nel 1964 in onore di Palmiro Togliatti, il leader comunista italiano, appena morto.",
+				"Non fu solo per affetto: qui la Fiat costruì lo stabilimento AvtoVAZ, che produceva la Lada.",
+				"La vecchia città di Stavropol sul Volga fu sommersa da un bacino artificiale nel 1955, e la città si spostò in blocco."
+			]
+		}
 	},
 	"magnitogorsk": {
 		"kind": "city",
@@ -385,11 +588,18 @@
 		"region": "Chelyabinsk",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"\"Magnetic mountain town\" — built beside a mountain of almost pure iron ore that deflected compasses.",
-			"Its steelworks was built in the 1930s on a design copied from Gary, Indiana, with American engineers.",
-			"It supplied about half the steel in Soviet tanks during the war; the ore mountain is now largely gone."
-		]
+		"hooks": {
+			"en": [
+				"\"Magnetic mountain town\" — built beside a mountain of almost pure iron ore that deflected compasses.",
+				"Its steelworks was built in the 1930s on a design copied from Gary, Indiana, with American engineers.",
+				"It supplied about half the steel in Soviet tanks during the war; the ore mountain is now largely gone."
+			],
+			"it": [
+				"\"Città del monte magnetico\": costruita accanto a una montagna di minerale di ferro quasi puro che faceva deviare le bussole.",
+				"Le sue acciaierie furono costruite negli anni Trenta su un progetto copiato da quelle di Gary, nell’Indiana, con ingegneri americani.",
+				"Durante la guerra fornì circa metà dell’acciaio dei carri armati sovietici; oggi la montagna di minerale è in gran parte scomparsa."
+			]
+		}
 	},
 	"barnaul": {
 		"kind": "city",
@@ -398,11 +608,18 @@
 		"region": "Altay",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"Probably from a Turkic or Ket phrase, \"wolf river\" or \"good camp\".",
-			"It began as a Demidov silver smelter in 1730 and became the capital of the Altai.",
-			"Its 1917-era merchant architecture survived, unusually for a Siberian city."
-		]
+		"hooks": {
+			"en": [
+				"Probably from a Turkic or Ket phrase, \"wolf river\" or \"good camp\".",
+				"It began as a Demidov silver smelter in 1730 and became the capital of the Altai.",
+				"Its 1917-era merchant architecture survived, unusually for a Siberian city."
+			],
+			"it": [
+				"Probabilmente da un’espressione turca o ket, \"fiume dei lupi\" o \"buon accampamento\".",
+				"Nacque nel 1730 come fonderia d’argento dei Demidov e divenne il capoluogo dell’Altaj.",
+				"La sua architettura mercantile di prima del 1917 è sopravvissuta, cosa insolita per una città siberiana."
+			]
+		}
 	},
 	"bryansk": {
 		"kind": "city",
@@ -410,11 +627,18 @@
 		"populationRank": 41,
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"From debryansk, \"place of thickets\" — debri means dense forest.",
-			"Its forests sheltered the largest Soviet partisan movement of the war, tens of thousands of fighters behind German lines.",
-			"It was the most heavily contaminated Russian region after Chernobyl, which is over the border in Ukraine."
-		]
+		"hooks": {
+			"en": [
+				"From debryansk, \"place of thickets\" — debri means dense forest.",
+				"Its forests sheltered the largest Soviet partisan movement of the war, tens of thousands of fighters behind German lines.",
+				"It was the most heavily contaminated Russian region after Chernobyl, which is over the border in Ukraine."
+			],
+			"it": [
+				"Da debryansk, \"luogo delle boscaglie\": debri significa foresta fitta.",
+				"Le sue foreste diedero rifugio al più grande movimento partigiano sovietico della guerra, decine di migliaia di combattenti dietro le linee tedesche.",
+				"Dopo Černobyl, che si trova oltre confine in Ucraina, fu la regione russa più contaminata."
+			]
+		}
 	},
 	"samara": {
 		"kind": "city",
@@ -423,11 +647,18 @@
 		"population1950": 658000,
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"From the Samara river, possibly from a Turkic or Iranian word for steppe river.",
-			"It was Kuybyshev in Soviet times and was the reserve capital in 1941: a bunker was dug for Stalin 37 m down, and he never used it.",
-			"The Zhiguli hills force the Volga into a great loop here, and Soviet rockets including Gagarin's were built in the city."
-		]
+		"hooks": {
+			"en": [
+				"From the Samara river, possibly from a Turkic or Iranian word for steppe river.",
+				"It was Kuybyshev in Soviet times and was the reserve capital in 1941: a bunker was dug for Stalin 37 m down, and he never used it.",
+				"The Zhiguli hills force the Volga into a great loop here, and Soviet rockets including Gagarin's were built in the city."
+			],
+			"it": [
+				"Dal fiume Samara, forse da una parola turca o iranica che significa fiume della steppa.",
+				"In epoca sovietica si chiamava Kujbyšev e nel 1941 fu la capitale di riserva: per Stalin fu scavato un bunker a 37 m di profondità, che lui non usò mai.",
+				"Qui i colli di Žiguli costringono il Volga a una grande ansa, e in città si costruivano i razzi sovietici, compreso quello di Gagarin."
+			]
+		}
 	},
 	"penza": {
 		"kind": "city",
@@ -435,11 +666,18 @@
 		"populationRank": 33,
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"From the river, probably a Finno-Ugric name.",
-			"Meyerhold, the theatre director shot in 1940, was born here, and his house is a museum.",
-			"It sits on the forest-steppe border, and its black earth is some of the most fertile in Russia."
-		]
+		"hooks": {
+			"en": [
+				"From the river, probably a Finno-Ugric name.",
+				"Meyerhold, the theatre director shot in 1940, was born here, and his house is a museum.",
+				"It sits on the forest-steppe border, and its black earth is some of the most fertile in Russia."
+			],
+			"it": [
+				"Dal fiume, un nome probabilmente ugrofinnico.",
+				"Mejerchold, il regista teatrale fucilato nel 1940, nacque qui, e la sua casa è un museo.",
+				"Sorge al confine tra foresta e steppa, e la sua terra nera è tra le più fertili della Russia."
+			]
+		}
 	},
 	"lipetsk": {
 		"kind": "city",
@@ -447,11 +685,18 @@
 		"populationRank": 32,
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"From lipa, the lime tree, which grew along its river.",
-			"Peter the Great built ironworks here to arm his new navy, and the town grew around them.",
-			"It has one of the largest steel plants in Russia and one of the country's oldest spa waters."
-		]
+		"hooks": {
+			"en": [
+				"From lipa, the lime tree, which grew along its river.",
+				"Peter the Great built ironworks here to arm his new navy, and the town grew around them.",
+				"It has one of the largest steel plants in Russia and one of the country's oldest spa waters."
+			],
+			"it": [
+				"Da lipa, il tiglio, che cresceva lungo il suo fiume.",
+				"Pietro il Grande vi costruì ferriere per armare la sua nuova flotta, e la città crebbe intorno a esse.",
+				"Ha una delle più grandi acciaierie della Russia e una delle più antiche acque termali del paese."
+			]
+		}
 	},
 	"irkutsk": {
 		"kind": "city",
@@ -459,11 +704,18 @@
 		"populationRank": 24,
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"Named for the Irkut river, from a Buryat word.",
-			"Lake Baikal is here: the deepest lake in the world at 1,642 m, holding about a fifth of all unfrozen fresh water on earth.",
-			"Exiled Decembrist officers settled in the city after 1825 and turned a frontier town into \"the Paris of Siberia\"."
-		]
+		"hooks": {
+			"en": [
+				"Named for the Irkut river, from a Buryat word.",
+				"Lake Baikal is here: the deepest lake in the world at 1,642 m, holding about a fifth of all unfrozen fresh water on earth.",
+				"Exiled Decembrist officers settled in the city after 1825 and turned a frontier town into \"the Paris of Siberia\"."
+			],
+			"it": [
+				"Prende il nome dal fiume Irkut, da una parola buriata.",
+				"Qui c’è il lago Bajkal: il lago più profondo del mondo, con 1.642 m, che contiene circa un quinto di tutta l’acqua dolce non ghiacciata della Terra.",
+				"Dopo il 1825 in città si stabilirono gli ufficiali decabristi esiliati, che trasformarono un avamposto di frontiera nella \"Parigi della Siberia\"."
+			]
+		}
 	},
 	"ulan-ude": {
 		"kind": "city",
@@ -472,11 +724,18 @@
 		"region": "Buryat",
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"\"Red Uda\" — ulan is red in Buryat and Mongolian, Uda is the river; it was Verkhneudinsk before 1934.",
-			"It has the largest Lenin head in the world, 7.7 m of bronze in the main square.",
-			"Ivolginsky datsan nearby is the centre of Russian Buddhism."
-		]
+		"hooks": {
+			"en": [
+				"\"Red Uda\" — ulan is red in Buryat and Mongolian, Uda is the river; it was Verkhneudinsk before 1934.",
+				"It has the largest Lenin head in the world, 7.7 m of bronze in the main square.",
+				"Ivolginsky datsan nearby is the centre of Russian Buddhism."
+			],
+			"it": [
+				"\"Uda rossa\": ulan in buriato e in mongolo significa rosso, Uda è il fiume; prima del 1934 si chiamava Verchneudinsk.",
+				"Ha la testa di Lenin più grande del mondo: 7,7 m di bronzo nella piazza principale.",
+				"Il datsan di Ivolginsk, qui vicino, è il centro del buddhismo russo."
+			]
+		}
 	},
 	"orenburg": {
 		"kind": "city",
@@ -484,11 +743,18 @@
 		"populationRank": 27,
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"\"Fortress on the Or\" — though the town was moved and now sits on the Ural, not the Or.",
-			"Its knitted goat-down shawls are so fine that a full-size one passes through a wedding ring.",
-			"It was the gateway to Central Asia for the Russian Empire, and the first Soviet space launches were tracked from here."
-		]
+		"hooks": {
+			"en": [
+				"\"Fortress on the Or\" — though the town was moved and now sits on the Ural, not the Or.",
+				"Its knitted goat-down shawls are so fine that a full-size one passes through a wedding ring.",
+				"It was the gateway to Central Asia for the Russian Empire, and the first Soviet space launches were tracked from here."
+			],
+			"it": [
+				"\"Fortezza sull’Or\": anche se la città fu spostata, e ora sorge sull’Ural, non sull’Or.",
+				"I suoi scialli lavorati a maglia in piumino di capra sono così fini che uno a grandezza intera passa dentro una fede nuziale.",
+				"Per l’Impero russo era la porta dell’Asia centrale, e da qui furono seguiti i primi lanci spaziali sovietici."
+			]
+		}
 	},
 	"kursk": {
 		"kind": "city",
@@ -496,11 +762,18 @@
 		"populationRank": 44,
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"From the river Kur, itself probably from a word for a bird or a spring.",
-			"The 1943 battle here was the largest tank battle ever fought and ended German offensive capacity in the east.",
-			"The Kursk Magnetic Anomaly beneath it is the largest iron ore deposit in the world, and it deflects compass needles."
-		]
+		"hooks": {
+			"en": [
+				"From the river Kur, itself probably from a word for a bird or a spring.",
+				"The 1943 battle here was the largest tank battle ever fought and ended German offensive capacity in the east.",
+				"The Kursk Magnetic Anomaly beneath it is the largest iron ore deposit in the world, and it deflects compass needles."
+			],
+			"it": [
+				"Dal fiume Kur, a sua volta probabilmente da una parola per un uccello o per una sorgente.",
+				"La battaglia del 1943, qui, fu la più grande battaglia di carri armati mai combattuta e pose fine alla capacità offensiva tedesca a est.",
+				"L’Anomalia magnetica di Kursk, nel suo sottosuolo, è il più grande giacimento di minerale di ferro del mondo, e fa deviare gli aghi delle bussole."
+			]
+		}
 	},
 	"voronezh": {
 		"kind": "city",
@@ -509,11 +782,18 @@
 		"population1950": 332000,
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"Of uncertain origin — possibly from a personal name or from voron, a raven.",
-			"Peter the Great built Russia's first navy here in 1695–96, on a river far from any sea, and sailed it down to the Don.",
-			"Its black earth is among the most fertile soil on earth; a cube of it was displayed at the 1900 Paris Exposition as a standard."
-		]
+		"hooks": {
+			"en": [
+				"Of uncertain origin — possibly from a personal name or from voron, a raven.",
+				"Peter the Great built Russia's first navy here in 1695–96, on a river far from any sea, and sailed it down to the Don.",
+				"Its black earth is among the most fertile soil on earth; a cube of it was displayed at the 1900 Paris Exposition as a standard."
+			],
+			"it": [
+				"Di origine incerta: forse da un nome di persona, o da voron, corvo.",
+				"Nel 1695-96 Pietro il Grande vi costruì la prima flotta russa, su un fiume lontano da qualunque mare, e la fece scendere fino al Don.",
+				"La sua terra nera è tra i suoli più fertili del mondo; un cubo di questa terra fu esposto all’Esposizione di Parigi del 1900 come campione di riferimento."
+			]
+		}
 	},
 	"saratov": {
 		"kind": "city",
@@ -522,11 +802,18 @@
 		"population1950": 473000,
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"Probably from Turkic sary tau, \"yellow mountain\", for the hills above the Volga.",
-			"Gagarin landed in a field in this region in 1961 and was found by a farmer and her granddaughter, who thought he was an alien.",
-			"Chernyshevsky, whose novel What Is to Be Done? shaped a generation of revolutionaries, was born here."
-		]
+		"hooks": {
+			"en": [
+				"Probably from Turkic sary tau, \"yellow mountain\", for the hills above the Volga.",
+				"Gagarin landed in a field in this region in 1961 and was found by a farmer and her granddaughter, who thought he was an alien.",
+				"Chernyshevsky, whose novel What Is to Be Done? shaped a generation of revolutionaries, was born here."
+			],
+			"it": [
+				"Probabilmente dal turco sary tau, \"monte giallo\", per le colline sopra il Volga.",
+				"Nel 1961 Gagarin atterrò in un campo di questa regione e fu trovato da una contadina e da sua nipote, che lo presero per un alieno.",
+				"Černyševskij, il cui romanzo Che fare? formò una generazione di rivoluzionari, nacque qui."
+			]
+		}
 	},
 	"volgograd": {
 		"kind": "city",
@@ -535,11 +822,18 @@
 		"population1950": 461000,
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"\"Volga town\" — it was Tsaritsyn, then Stalingrad, then renamed in 1961 during de-Stalinisation.",
-			"The battle here in 1942–43 was the bloodiest in history, with perhaps two million casualties, and turned the war.",
-			"The Motherland Calls statue on Mamayev Kurgan was the tallest in the world when built, at 85 m with the sword."
-		]
+		"hooks": {
+			"en": [
+				"\"Volga town\" — it was Tsaritsyn, then Stalingrad, then renamed in 1961 during de-Stalinisation.",
+				"The battle here in 1942–43 was the bloodiest in history, with perhaps two million casualties, and turned the war.",
+				"The Motherland Calls statue on Mamayev Kurgan was the tallest in the world when built, at 85 m with the sword."
+			],
+			"it": [
+				"\"Città del Volga\": era Caricyn, poi Stalingrado, poi fu ribattezzata nel 1961, durante la destalinizzazione.",
+				"La battaglia combattuta qui nel 1942-43 fu la più sanguinosa della storia, con forse due milioni di perdite, e cambiò le sorti della guerra.",
+				"La statua della Madre Patria chiama, sul Mamaev Kurgan, era la più alta del mondo quando fu costruita: 85 m, spada compresa."
+			]
+		}
 	},
 	"khabarovsk": {
 		"kind": "city",
@@ -547,11 +841,18 @@
 		"populationRank": 25,
 		"coastal": false,
 		"position": "south-east",
-		"hooks": [
-			"Named for Yerofey Khabarov, a seventeenth-century explorer whose treatment of the Amur peoples was brutal enough that Moscow recalled him.",
-			"The city sits on the Amur, directly across from China, and the river freezes solid enough to drive on.",
-			"The region is the size of Germany and Poland together, with 1.3 million people."
-		]
+		"hooks": {
+			"en": [
+				"Named for Yerofey Khabarov, a seventeenth-century explorer whose treatment of the Amur peoples was brutal enough that Moscow recalled him.",
+				"The city sits on the Amur, directly across from China, and the river freezes solid enough to drive on.",
+				"The region is the size of Germany and Poland together, with 1.3 million people."
+			],
+			"it": [
+				"Prende il nome da Erofej Chabarov, un esploratore del Seicento che trattò i popoli dell’Amur con tale brutalità che Mosca lo richiamò.",
+				"La città sorge sull’Amur, proprio di fronte alla Cina, e il fiume gela abbastanza da poterci passare in auto.",
+				"La regione è grande quanto Germania e Polonia messe insieme, con 1,3 milioni di abitanti."
+			]
+		}
 	},
 	"rostov": {
 		"kind": "city",
@@ -560,11 +861,18 @@
 		"population1950": 484000,
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"Rostov-on-Don, named to distinguish it from the older Rostov Veliky near Moscow; the name is from a personal name, Rost.",
-			"It is the capital of the Don Cossacks, whose self-governing host held the steppe frontier for the tsars.",
-			"Sholokhov's And Quiet Flows the Don, which won the Nobel Prize, is set in its villages."
-		]
+		"hooks": {
+			"en": [
+				"Rostov-on-Don, named to distinguish it from the older Rostov Veliky near Moscow; the name is from a personal name, Rost.",
+				"It is the capital of the Don Cossacks, whose self-governing host held the steppe frontier for the tsars.",
+				"Sholokhov's And Quiet Flows the Don, which won the Nobel Prize, is set in its villages."
+			],
+			"it": [
+				"Rostov sul Don, chiamata così per distinguerla dalla più antica Rostov Velikij, vicino a Mosca; il nome viene da un nome di persona, Rost.",
+				"È la capitale dei cosacchi del Don, la cui armata autonoma presidiava per gli zar la frontiera della steppa.",
+				"Il placido Don di Šolochov, che vinse il premio Nobel, è ambientato nei suoi villaggi."
+			]
+		}
 	},
 	"astrakhan": {
 		"kind": "city",
@@ -573,11 +881,18 @@
 		"region": "Astrakhan'",
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"Probably from Hajji Tarkhan, a title meaning a privileged man who had made the pilgrimage.",
-			"It sits on the Volga delta, the largest in Europe, where the river fans into 500 channels before the Caspian.",
-			"Most of the world's beluga caviar came from here before the sturgeon collapsed; it is now farmed."
-		]
+		"hooks": {
+			"en": [
+				"Probably from Hajji Tarkhan, a title meaning a privileged man who had made the pilgrimage.",
+				"It sits on the Volga delta, the largest in Europe, where the river fans into 500 channels before the Caspian.",
+				"Most of the world's beluga caviar came from here before the sturgeon collapsed; it is now farmed."
+			],
+			"it": [
+				"Probabilmente da Hajji Tarkhan, un titolo che indicava un uomo privilegiato che aveva compiuto il pellegrinaggio.",
+				"Sorge sul delta del Volga, il più grande d’Europa, dove il fiume si apre a ventaglio in 500 canali prima del Caspio.",
+				"Prima del crollo degli storioni da qui veniva la maggior parte del caviale beluga del mondo; oggi è d’allevamento."
+			]
+		}
 	},
 	"stavropol": {
 		"kind": "city",
@@ -586,11 +901,18 @@
 		"region": "Stavropol'",
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"Greek for \"city of the cross\", from a cross found when the fortress was built in 1777.",
-			"Gorbachev was born and made his career here before Moscow.",
-			"Its mineral water spas — Kislovodsk, Pyatigorsk, Yessentuki — have drawn Russians since the 1800s, and Lermontov was killed in a duel at Pyatigorsk."
-		]
+		"hooks": {
+			"en": [
+				"Greek for \"city of the cross\", from a cross found when the fortress was built in 1777.",
+				"Gorbachev was born and made his career here before Moscow.",
+				"Its mineral water spas — Kislovodsk, Pyatigorsk, Yessentuki — have drawn Russians since the 1800s, and Lermontov was killed in a duel at Pyatigorsk."
+			],
+			"it": [
+				"In greco \"città della croce\", da una croce trovata quando fu costruita la fortezza, nel 1777.",
+				"Gorbačëv nacque qui e vi fece carriera prima di Mosca.",
+				"Le sue terme di acque minerali, Kislovodsk, Pjatigorsk, Essentuki, attirano i Russi dall’Ottocento, e Lermontov fu ucciso in duello a Pjatigorsk."
+			]
+		}
 	},
 	"krasnodar": {
 		"kind": "city",
@@ -598,11 +920,18 @@
 		"populationRank": 18,
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"\"Gift of the reds\" — renamed in 1920 from Yekaterinodar, \"Catherine's gift\", for the land she gave the Cossacks.",
-			"Sochi in it hosted the 2014 Winter Olympics in a subtropical resort where palms grow.",
-			"It is Russia's main agricultural region, growing most of its rice, tea and wine."
-		]
+		"hooks": {
+			"en": [
+				"\"Gift of the reds\" — renamed in 1920 from Yekaterinodar, \"Catherine's gift\", for the land she gave the Cossacks.",
+				"Sochi in it hosted the 2014 Winter Olympics in a subtropical resort where palms grow.",
+				"It is Russia's main agricultural region, growing most of its rice, tea and wine."
+			],
+			"it": [
+				"\"Dono dei rossi\": ribattezzata nel 1920, prima era Ekaterinodar, \"dono di Caterina\", per la terra che lei donò ai cosacchi.",
+				"Soči, che si trova qui, ha ospitato le Olimpiadi invernali del 2014 in una località balneare subtropicale dove crescono le palme.",
+				"È la principale regione agricola della Russia, e produce la maggior parte del suo riso, del suo tè e del suo vino."
+			]
+		}
 	},
 	"vladivostok": {
 		"kind": "city",
@@ -611,11 +940,18 @@
 		"region": "Primor'ye",
 		"coastal": true,
 		"position": "south-east",
-		"hooks": [
-			"\"Ruler of the east\" — vladi, to rule, plus vostok, east; it was named in 1860 as a statement of intent.",
-			"The terminus of the Trans-Siberian, 9,289 km from Moscow, about seven days by train.",
-			"It was closed to foreigners and even to most Soviet citizens until 1992 because of the Pacific Fleet."
-		]
+		"hooks": {
+			"en": [
+				"\"Ruler of the east\" — vladi, to rule, plus vostok, east; it was named in 1860 as a statement of intent.",
+				"The terminus of the Trans-Siberian, 9,289 km from Moscow, about seven days by train.",
+				"It was closed to foreigners and even to most Soviet citizens until 1992 because of the Pacific Fleet."
+			],
+			"it": [
+				"\"Signore dell’oriente\": vladi, dominare, più vostok, oriente; il nome, dato nel 1860, era una dichiarazione d’intenti.",
+				"Il capolinea della Transiberiana, a 9.289 km da Mosca: circa sette giorni di treno.",
+				"Fino al 1992 fu chiusa agli stranieri e persino alla maggior parte dei cittadini sovietici, per via della Flotta del Pacifico."
+			]
+		}
 	},
 	"vladikavkaz": {
 		"kind": "city",
@@ -624,11 +960,18 @@
 		"region": "North Ossetia",
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"\"Ruler of the Caucasus\" — the same vladi, founded in 1784 as a fortress guarding the Georgian Military Road.",
-			"That road through the Darial gorge is the only direct route across the central Caucasus.",
-			"It is the capital of North Ossetia, whose language descends from the Scythians."
-		]
+		"hooks": {
+			"en": [
+				"\"Ruler of the Caucasus\" — the same vladi, founded in 1784 as a fortress guarding the Georgian Military Road.",
+				"That road through the Darial gorge is the only direct route across the central Caucasus.",
+				"It is the capital of North Ossetia, whose language descends from the Scythians."
+			],
+			"it": [
+				"\"Signore del Caucaso\": lo stesso vladi; fu fondata nel 1784 come fortezza a guardia della Strada militare georgiana.",
+				"Quella strada, attraverso la gola di Darial, è l’unica via diretta che attraversa il Caucaso centrale.",
+				"È la capitale dell’Ossezia del Nord, la cui lingua discende da quella degli Sciti."
+			]
+		}
 	},
 	"makhachkala": {
 		"kind": "city",
@@ -637,10 +980,17 @@
 		"region": "Dagestan",
 		"coastal": true,
 		"position": "south-west",
-		"hooks": [
-			"Named in 1921 for Makhach Dakhadaev, a Dagestani revolutionary; it was Petrovsk before.",
-			"The capital of Dagestan, where over thirty languages from three unrelated families are spoken.",
-			"It sits on the Caspian, the largest inland body of water in the world."
-		]
+		"hooks": {
+			"en": [
+				"Named in 1921 for Makhach Dakhadaev, a Dagestani revolutionary; it was Petrovsk before.",
+				"The capital of Dagestan, where over thirty languages from three unrelated families are spoken.",
+				"It sits on the Caspian, the largest inland body of water in the world."
+			],
+			"it": [
+				"Chiamata così nel 1921 in onore di Machač Dachadaev, un rivoluzionario daghestano; prima si chiamava Petrovsk.",
+				"La capitale del Daghestan, dove si parlano più di trenta lingue di tre famiglie non imparentate.",
+				"Si affaccia sul Caspio, il più grande specchio d’acqua interno del mondo."
+			]
+		}
 	}
 }

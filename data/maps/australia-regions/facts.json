@@ -19,11 +19,18 @@
 			"elevation": 1531
 		},
 		"position": "north",
-		"hooks": [
-			"Never granted statehood, so it kept the description it was given when South Australia administered it — it is still a territory, run from Darwin.",
-			"Uluru is here, and it was handed back to its Anangu owners in 1985 and leased back as a national park.",
-			"A sixth of Australia's land with about 1% of its people, and the highest Aboriginal population share of any state or territory."
-		]
+		"hooks": {
+			"en": [
+				"Never granted statehood, so it kept the description it was given when South Australia administered it — it is still a territory, run from Darwin.",
+				"Uluru is here, and it was handed back to its Anangu owners in 1985 and leased back as a national park.",
+				"A sixth of Australia's land with about 1% of its people, and the highest Aboriginal population share of any state or territory."
+			],
+			"it": [
+				"Mai elevato a Stato, ha conservato la definizione che gli fu data quando lo amministrava l’Australia Meridionale: è ancora un territorio, governato da Darwin.",
+				"Qui c’è Uluru, restituito nel 1985 ai suoi proprietari anangu e ripreso in affitto come parco nazionale.",
+				"Un sesto del territorio australiano con circa l’1% della popolazione, e la quota di aborigeni più alta di qualsiasi Stato o territorio."
+			]
+		}
 	},
 	"queensland": {
 		"kind": "region",
@@ -45,11 +52,18 @@
 			"elevation": 1622
 		},
 		"position": "north-east",
-		"hooks": [
-			"Queen Victoria named it after herself in 1859 when it separated from New South Wales — she rejected \"Cooksland\".",
-			"The Great Barrier Reef runs 2,300 km along its coast, the largest structure on earth built by living things.",
-			"The Daintree here is the oldest continuously surviving rainforest in the world, at about 180 million years."
-		]
+		"hooks": {
+			"en": [
+				"Queen Victoria named it after herself in 1859 when it separated from New South Wales — she rejected \"Cooksland\".",
+				"The Great Barrier Reef runs 2,300 km along its coast, the largest structure on earth built by living things.",
+				"The Daintree here is the oldest continuously surviving rainforest in the world, at about 180 million years."
+			],
+			"it": [
+				"Nel 1859, quando si staccò dal Nuovo Galles del Sud, la regina Vittoria gli diede il proprio nome, scartando \"Cooksland\".",
+				"La Grande Barriera Corallina corre per 2.300 km lungo la sua costa: la più grande struttura sulla Terra costruita da esseri viventi.",
+				"Il Daintree, qui, è la foresta pluviale più antica del mondo sopravvissuta senza interruzioni: ha circa 180 milioni di anni."
+			]
+		}
 	},
 	"western-australia": {
 		"kind": "region",
@@ -70,11 +84,18 @@
 			"elevation": 1253
 		},
 		"position": "west",
-		"hooks": [
-			"Exactly what it says, and it says a lot: it is a third of the continent, and the largest subdivision of any country on earth after Russia's Sakha.",
-			"Perth, its capital, is the most isolated major city in the world — the nearest one of any size is 2,100 km away.",
-			"Its stromatolites at Shark Bay are living colonies of the oldest known form of life, still doing what they did 3.5 billion years ago."
-		]
+		"hooks": {
+			"en": [
+				"Exactly what it says, and it says a lot: it is a third of the continent, and the largest subdivision of any country on earth after Russia's Sakha.",
+				"Perth, its capital, is the most isolated major city in the world — the nearest one of any size is 2,100 km away.",
+				"Its stromatolites at Shark Bay are living colonies of the oldest known form of life, still doing what they did 3.5 billion years ago."
+			],
+			"it": [
+				"Il nome dice esattamente cos’è, e dice molto: è un terzo del continente, la suddivisione più vasta di qualunque paese al mondo dopo la Jacuzia russa.",
+				"Perth, la sua capitale, è la grande città più isolata del mondo: la più vicina di qualche dimensione è a 2.100 km.",
+				"Le sue stromatoliti di Shark Bay sono colonie viventi della più antica forma di vita conosciuta, che fanno ancora ciò che facevano 3,5 miliardi di anni fa."
+			]
+		}
 	},
 	"south-australia": {
 		"kind": "region",
@@ -98,11 +119,18 @@
 			"elevation": 1171
 		},
 		"position": "centre",
-		"hooks": [
-			"The compass again — and it is the only state founded entirely by free settlers, with no convicts, which its residents have never stopped mentioning.",
-			"The driest state on the driest inhabited continent, yet the Barossa Valley in it is Australia's best-known wine region.",
-			"Coober Pedy in its desert mines most of the world's opal, and its residents live underground to escape 50 °C heat."
-		]
+		"hooks": {
+			"en": [
+				"The compass again — and it is the only state founded entirely by free settlers, with no convicts, which its residents have never stopped mentioning.",
+				"The driest state on the driest inhabited continent, yet the Barossa Valley in it is Australia's best-known wine region.",
+				"Coober Pedy in its desert mines most of the world's opal, and its residents live underground to escape 50 °C heat."
+			],
+			"it": [
+				"Ancora la bussola: ed è l’unico Stato fondato interamente da coloni liberi, senza forzati, cosa che i suoi abitanti non hanno mai smesso di ricordare.",
+				"Lo Stato più arido del continente abitato più arido, eppure la sua Barossa Valley è la regione vinicola più nota d’Australia.",
+				"Coober Pedy, nel suo deserto, estrae la maggior parte dell’opale del mondo, e i suoi abitanti vivono sottoterra per sfuggire a caldi da 50 °C."
+			]
+		}
 	},
 	"new-south-wales": {
 		"kind": "region",
@@ -125,11 +153,18 @@
 			"elevation": 2228
 		},
 		"position": "south-east",
-		"hooks": [
-			"Cook named it in 1770, apparently thinking the coast resembled south Wales — the \"new\" was to distinguish it from the original.",
-			"The first British colony in Australia, 1788, and once it covered most of the continent; every eastern state was carved out of it.",
-			"Sydney is here, and its Opera House took sixteen years and ten times its budget, finishing in 1973."
-		]
+		"hooks": {
+			"en": [
+				"Cook named it in 1770, apparently thinking the coast resembled south Wales — the \"new\" was to distinguish it from the original.",
+				"The first British colony in Australia, 1788, and once it covered most of the continent; every eastern state was carved out of it.",
+				"Sydney is here, and its Opera House took sixteen years and some fourteen times its budget, finishing in 1973."
+			],
+			"it": [
+				"Lo battezzò Cook nel 1770, a quanto pare trovando che la costa somigliasse al Galles meridionale: \"nuovo\" serviva a distinguerlo dall’originale.",
+				"La prima colonia britannica in Australia, nel 1788, un tempo estesa su gran parte del continente: ogni Stato orientale è stato ricavato da essa.",
+				"Qui c’è Sydney, e per la sua Opera House ci vollero sedici anni e circa quattordici volte il preventivo: fu completata nel 1973."
+			]
+		}
 	},
 	"australian-capital-territory": {
 		"kind": "region",
@@ -145,11 +180,18 @@
 			"population": 327700
 		},
 		"position": "south-east",
-		"hooks": [
-			"Land taken out of New South Wales in 1911 for a capital, because Sydney and Melbourne could not agree which of them it should be.",
-			"Canberra's name is from a local Ngunnawal word, probably \"meeting place\", and the city was designed by an American, Walter Burley Griffin.",
-			"The smallest jurisdiction, and the only one entirely inland."
-		]
+		"hooks": {
+			"en": [
+				"Land taken out of New South Wales in 1911 for a capital, because Sydney and Melbourne could not agree which of them it should be.",
+				"Canberra's name is from a local Ngunnawal word, probably \"meeting place\", and the city was designed by an American, Walter Burley Griffin.",
+				"The smallest jurisdiction, and the only one entirely inland."
+			],
+			"it": [
+				"Terra sottratta al Nuovo Galles del Sud nel 1911 per farne una capitale, perché Sydney e Melbourne non riuscivano ad accordarsi su quale delle due dovesse esserlo.",
+				"Il nome Canberra viene da una parola ngunnawal del posto, probabilmente \"luogo d’incontro\", e la città fu progettata da un americano, Walter Burley Griffin.",
+				"La più piccola delle giurisdizioni, e l’unica senza alcuno sbocco sul mare."
+			]
+		}
 	},
 	"victoria": {
 		"kind": "region",
@@ -170,11 +212,18 @@
 			"elevation": 1986
 		},
 		"position": "south-east",
-		"hooks": [
-			"The queen again, in 1851 — and the gold rush that started the same year made it briefly the richest place in the world.",
-			"The smallest mainland state, and the most densely populated; Melbourne in it was Australia's capital until 1927.",
-			"The Twelve Apostles on its coast are limestone stacks the Southern Ocean is still knocking down — only eight remain standing."
-		]
+		"hooks": {
+			"en": [
+				"The queen again, in 1851 — and the gold rush that started the same year made it briefly the richest place in the world.",
+				"The smallest mainland state, and the most densely populated; Melbourne in it was Australia's capital until 1927.",
+				"The Twelve Apostles on its coast are limestone stacks the Southern Ocean is still knocking down — only eight remain standing."
+			],
+			"it": [
+				"Ancora la regina, nel 1851: e la corsa all’oro iniziata quello stesso anno ne fece per breve tempo il luogo più ricco del mondo.",
+				"Il più piccolo Stato della terraferma, e il più densamente popolato; la sua Melbourne fu la capitale dell’Australia fino al 1927.",
+				"I Dodici Apostoli sulla sua costa sono faraglioni calcarei che l’Oceano Australe continua ad abbattere: ne restano in piedi solo otto."
+			]
+		}
 	},
 	"tasmania": {
 		"kind": "region",
@@ -191,10 +240,17 @@
 			"elevation": 1617
 		},
 		"position": "south-east",
-		"hooks": [
-			"For Abel Tasman, the Dutch navigator who sighted it in 1642; it was Van Diemen's Land until 1856, when the convict associations made a new name attractive.",
-			"Separated from the mainland when the sea rose about 12,000 years ago, which is why the Tasmanian devil survives here and nowhere else.",
-			"Its air, measured at Cape Grim in the north-west, is the cleanest in the world."
-		]
+		"hooks": {
+			"en": [
+				"For Abel Tasman, the Dutch navigator who sighted it in 1642; it was Van Diemen's Land until 1856, when the convict associations made a new name attractive.",
+				"Separated from the mainland when the sea rose about 12,000 years ago, which is why the Tasmanian devil survives here and nowhere else.",
+				"Its air, measured at Cape Grim in the north-west, is the cleanest in the world."
+			],
+			"it": [
+				"Prende il nome da Abel Tasman, il navigatore olandese che la avvistò nel 1642; fu Terra di Van Diemen fino al 1856, quando il legame con i forzati rese allettante un nome nuovo.",
+				"Si staccò dal continente quando il mare si alzò, circa 12.000 anni fa: per questo il diavolo della Tasmania sopravvive qui e in nessun altro luogo.",
+				"La sua aria, misurata a Cape Grim, nel nord-ovest, è la più pulita del mondo."
+			]
+		}
 	}
 }

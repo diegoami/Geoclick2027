@@ -5,11 +5,18 @@
 		"populationRank": 4,
 		"coastal": false,
 		"position": "north-east",
-		"hooks": [
-			"\"Upper halls\" — the high seat of the old kings, as against a lower Sala downstream.",
-			"Gamla Uppsala's royal burial mounds are from the 500s, and the pagan temple beside them was described by a German chronicler in 1070.",
-			"Its university, 1477, is the oldest in Scandinavia, and Linnaeus taught here — his garden is still planted to his own plan."
-		]
+		"hooks": {
+			"en": [
+				"\"Upper halls\" — the high seat of the old kings, as against a lower Sala downstream.",
+				"Gamla Uppsala's royal burial mounds are from the 500s, and the pagan temple beside them was described by a German chronicler in 1070.",
+				"Its university, 1477, is the oldest in Scandinavia, and Linnaeus taught here — his garden is still planted to his own plan."
+			],
+			"it": [
+				"\"Sale alte\": la sede elevata degli antichi re, in contrapposizione a una Sala più in basso, a valle.",
+				"I tumuli reali di Gamla Uppsala risalgono al VI secolo, e il tempio pagano che sorgeva accanto fu descritto da un cronista tedesco nel 1070.",
+				"La sua università, del 1477, è la più antica della Scandinavia, e qui insegnò Linneo: il suo giardino è ancora piantato secondo il disegno che ne fece lui stesso."
+			]
+		}
 	},
 	"vasteras": {
 		"kind": "city",
@@ -18,11 +25,18 @@
 		"region": "Västmanland",
 		"coastal": false,
 		"position": "north-east",
-		"hooks": [
-			"\"Western Aros\" — aros is a river mouth, so the name is the western river mouth, against Uppsala’s eastern one.",
-			"ASEA, which became ABB, was founded here in 1883 and made the town an electrical engineering centre.",
-			"Its Anundshög is Sweden’s largest burial mound, with stone ship settings beside it."
-		]
+		"hooks": {
+			"en": [
+				"\"Western Aros\" — aros is a river mouth, so the name is the western river mouth, against Uppsala’s eastern one.",
+				"ASEA, which became ABB, was based here from 1890 and made the town an electrical engineering centre.",
+				"Its Anundshög is Sweden’s largest burial mound, with stone ship settings beside it."
+			],
+			"it": [
+				"\"Aros occidentale\": aros è una foce di fiume, quindi il nome significa la foce occidentale, in contrapposizione a quella orientale di Uppsala.",
+				"L’ASEA, poi diventata ABB, ebbe qui la sua sede dal 1890 e fece della città un centro dell’ingegneria elettrica.",
+				"Il suo Anundshög è il più grande tumulo funerario della Svezia, affiancato da navi di pietra."
+			]
+		}
 	},
 	"stockholm": {
 		"kind": "city",
@@ -32,11 +46,18 @@
 		"capitalOf": "country",
 		"coastal": true,
 		"position": "north-east",
-		"hooks": [
-			"\"Log islet\" — stock, a log, plus holme, an islet: the city began on a fortified island in 1252.",
-			"It is built on fourteen islands where Lake Mälaren meets the Baltic, and its archipelago has about 30,000 more.",
-			"The Vasa, a warship that sank on her maiden voyage in 1628, was raised in 1961 and is 98% original timber."
-		]
+		"hooks": {
+			"en": [
+				"\"Log islet\" — stock, a log, plus holme, an islet: the city began on a fortified island in 1252.",
+				"It is built on fourteen islands where Lake Mälaren meets the Baltic, and its archipelago has about 30,000 more.",
+				"The Vasa, a warship that sank on her maiden voyage in 1628, was raised in 1961 and is 98% original timber."
+			],
+			"it": [
+				"\"Isolotto del tronco\": stock è il tronco, holme l’isolotto, e la città nacque su un’isola fortificata nel 1252.",
+				"È costruita su quattordici isole dove il lago Mälaren incontra il Baltico, e il suo arcipelago ne conta altre 30.000 circa.",
+				"Il Vasa, nave da guerra affondata durante il viaggio inaugurale nel 1628, fu recuperato nel 1961 e il suo legno è originale al 98%."
+			]
+		}
 	},
 	"goteborg": {
 		"kind": "city",
@@ -45,11 +66,18 @@
 		"region": "Västra Götaland",
 		"coastal": true,
 		"position": "west",
-		"hooks": [
-			"\"Fortress of the Geats\" — Göta plus borg, founded in 1621 by Gustav II Adolf with Dutch engineers, which is why it has canals.",
-			"Volvo was founded here in 1927, and the name is Latin for \"I roll\".",
-			"Its Liseberg is the largest amusement park in Scandinavia, and the city holds Sweden’s biggest port."
-		]
+		"hooks": {
+			"en": [
+				"\"Fortress of the Geats\" — Göta plus borg, founded in 1621 by Gustav II Adolf with Dutch engineers, which is why it has canals.",
+				"Volvo was founded here in 1927, and the name is Latin for \"I roll\".",
+				"Its Liseberg is the largest amusement park in Scandinavia, and the city holds Sweden’s biggest port."
+			],
+			"it": [
+				"\"Fortezza dei Geati\", da Göta più borg: fu fondata nel 1621 da Gustavo II Adolfo con ingegneri olandesi, ed è per questo che ha i canali.",
+				"Qui nel 1927 nacque la Volvo, il cui nome in latino significa \"io rotolo\".",
+				"Il suo Liseberg è il più grande parco divertimenti della Scandinavia, e la città ha il maggior porto della Svezia."
+			]
+		}
 	},
 	"malmo": {
 		"kind": "city",
@@ -58,10 +86,17 @@
 		"region": "Skåne",
 		"coastal": true,
 		"position": "south-west",
-		"hooks": [
-			"Probably from malm, a sandy or gravelly ground, plus haug, a mound.",
-			"Danish until 1658, and now joined to Copenhagen by the Öresund bridge, which becomes a tunnel halfway across.",
-			"Its Turning Torso, twisting 90 degrees over 54 floors, was the tallest building in Scandinavia when finished."
-		]
+		"hooks": {
+			"en": [
+				"Probably from malm, a sandy or gravelly ground, plus haug, a mound.",
+				"Danish until 1658, and now joined to Copenhagen by the Öresund bridge, which becomes a tunnel halfway across.",
+				"Its Turning Torso, twisting 90 degrees over 54 floors, was the tallest building in Scandinavia when finished."
+			],
+			"it": [
+				"Probabilmente da malm, terreno sabbioso o ghiaioso, più haug, un tumulo.",
+				"Danese fino al 1658, oggi è collegata a Copenaghen dal ponte dell’Öresund, che a metà percorso diventa un tunnel.",
+				"Il suo Turning Torso, che ruota di 90 gradi su 54 piani, al suo completamento era l’edificio più alto della Scandinavia."
+			]
+		}
 	}
 }

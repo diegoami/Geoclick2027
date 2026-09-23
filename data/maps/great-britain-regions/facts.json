@@ -18,11 +18,18 @@
 			"elevation": 1343
 		},
 		"position": "north",
-		"hooks": [
-			"The Highland line is a real geological boundary, the Highland Boundary Fault, and the name marks a cultural border as much as a physical one.",
-			"Gaelic survives here more than anywhere: in the Western Isles about half the population still speaks it.",
-			"Ben Nevis at 1,345 m is Britain's highest point, and the Highland Clearances emptied these glens of people for sheep between 1750 and 1860."
-		]
+		"hooks": {
+			"en": [
+				"The Highland line is a real geological boundary, the Highland Boundary Fault, and the name marks a cultural border as much as a physical one.",
+				"Gaelic survives here more than anywhere: in the Western Isles about half the population still speaks it.",
+				"Ben Nevis at 1,345 m is Britain's highest point, and the Highland Clearances emptied these glens of people for sheep between 1750 and 1860."
+			],
+			"it": [
+				"La Highland line è un vero confine geologico, la Highland Boundary Fault, e il nome segna una frontiera culturale non meno che fisica.",
+				"Il gaelico sopravvive qui più che altrove: nelle Ebridi Esterne circa metà della popolazione lo parla ancora.",
+				"Il Ben Nevis, con i suoi 1.345 m, è il punto più alto della Gran Bretagna, e tra il 1750 e il 1860 le Highland Clearances svuotarono queste valli per far posto alle pecore."
+			]
+		}
 	},
 	"north-eastern": {
 		"kind": "region",
@@ -33,11 +40,18 @@
 		],
 		"coastal": true,
 		"position": "north",
-		"hooks": [
-			"Eurostat's name for Scotland's north-east — the land the old earldom of Mar and the city of Aberdeen sit in.",
-			"Aberdeen is the granite city, built almost entirely from stone quarried at Rubislaw, once the biggest man-made hole in Europe.",
-			"North Sea oil came ashore here from 1975 and turned a fishing port into Europe's offshore capital."
-		]
+		"hooks": {
+			"en": [
+				"Eurostat's name for Scotland's north-east — the land the old earldom of Mar and the city of Aberdeen sit in.",
+				"Aberdeen is the granite city, built almost entirely from stone quarried at Rubislaw, once the biggest man-made hole in Europe.",
+				"North Sea oil came ashore here from 1975 and turned a fishing port into Europe's offshore capital."
+			],
+			"it": [
+				"Il nome che Eurostat dà al nord-est della Scozia: la terra dove si trovano l’antica contea di Mar e la città di Aberdeen.",
+				"Aberdeen è la città di granito, costruita quasi interamente con la pietra della cava di Rubislaw, un tempo il più grande buco scavato dall’uomo in Europa.",
+				"Dal 1975 il petrolio del Mare del Nord arrivò a terra qui e fece di un porto peschereccio la capitale europea dell’offshore."
+			]
+		}
 	},
 	"eastern": {
 		"kind": "region",
@@ -56,11 +70,18 @@
 			"population": 504966
 		},
 		"position": "centre",
-		"hooks": [
-			"Scotland's eastern belt, holding Edinburgh and the old kingdom of Fife — Fife is one of the oldest place names in Scotland, from a Pictish district.",
-			"Edinburgh's old and new towns are together a UNESCO site, the new one laid out in 1767 on a grid while the old climbs the volcanic ridge.",
-			"The Forth Bridge of 1890 was the first big steel structure in Britain, and painting it became a proverb for a job never finished."
-		]
+		"hooks": {
+			"en": [
+				"Scotland's eastern belt, holding Edinburgh and the old kingdom of Fife — Fife is one of the oldest place names in Scotland, from a Pictish district.",
+				"Edinburgh's old and new towns are together a UNESCO site, the new one laid out in 1767 on a grid while the old climbs the volcanic ridge.",
+				"The Forth Bridge of 1890 was the first big steel structure in Britain, and painting it became a proverb for a job never finished."
+			],
+			"it": [
+				"La fascia orientale della Scozia, con Edimburgo e l’antico regno del Fife: Fife è uno dei toponimi più antichi della Scozia, da un distretto dei Pitti.",
+				"La città vecchia e la città nuova di Edimburgo sono insieme patrimonio UNESCO: la nuova fu tracciata a scacchiera nel 1767, mentre la vecchia si arrampica sulla cresta vulcanica.",
+				"Il Forth Bridge del 1890 fu la prima grande struttura in acciaio della Gran Bretagna, e dipingerlo divenne proverbiale per un lavoro che non finisce mai."
+			]
+		}
 	},
 	"south-western": {
 		"kind": "region",
@@ -77,11 +98,18 @@
 			"population": 1160000
 		},
 		"position": "centre",
-		"hooks": [
-			"Scotland's south-west and industrial middle, centred on Glasgow — whose name is Brittonic glas cau, \"green hollow\".",
-			"Clyde shipyards built a fifth of the world's ships by 1900, including the Queen Mary and the QE2.",
-			"Burns was born at Alloway in Ayrshire here, and his birthday is marked with a supper worldwide."
-		]
+		"hooks": {
+			"en": [
+				"Scotland's south-west and industrial middle, centred on Glasgow — whose name is Brittonic glas cau, \"green hollow\".",
+				"Clyde shipyards built a fifth of the world's ships by 1900, and later the Queen Mary and the QE2.",
+				"Burns was born at Alloway in Ayrshire here, and his birthday is marked with a supper worldwide."
+			],
+			"it": [
+				"Il sud-ovest e la fascia industriale centrale della Scozia, attorno a Glasgow, il cui nome è il brittonico glas cau, \"conca verde\".",
+				"Nel 1900 i cantieri del Clyde costruivano già un quinto delle navi del mondo; da lì uscirono anche la Queen Mary e la QE2.",
+				"Burns nacque qui, ad Alloway nell’Ayrshire, e il suo compleanno si festeggia con una cena in tutto il mondo."
+			]
+		}
 	},
 	"north-east": {
 		"kind": "region",
@@ -98,11 +126,18 @@
 			"population": 882000
 		},
 		"position": "centre",
-		"hooks": [
-			"This was Northumbria, the \"land north of the Humber\" — a kingdom that once reached from the Humber to Edinburgh.",
-			"Hadrian's Wall crosses it, 117 km built from AD 122, and Newcastle's name is from a castle of 1080 that was new then.",
-			"Lindisfarne off its coast produced the Lindisfarne Gospels around 700 and was the first place the Vikings raided in 793."
-		]
+		"hooks": {
+			"en": [
+				"This was Northumbria, the \"land north of the Humber\" — a kingdom that once reached from the Humber to Edinburgh.",
+				"Hadrian's Wall crosses it, 117 km built from AD 122, and Newcastle's name is from a castle of 1080 that was new then.",
+				"Lindisfarne off its coast produced the Lindisfarne Gospels around 700 and suffered the first great Viking raid in 793."
+			],
+			"it": [
+				"Questa era la Northumbria, la \"terra a nord dello Humber\": un regno che un tempo si estendeva dallo Humber fino a Edimburgo.",
+				"Lo attraversa il Vallo di Adriano, 117 km costruiti a partire dal 122 d.C., e il nome di Newcastle viene da un castello del 1080 che allora era nuovo.",
+				"Lindisfarne, al largo della sua costa, produsse i Vangeli di Lindisfarne intorno al 700 e subì la prima grande razzia vichinga, nel 793."
+			]
+		}
 	},
 	"north-west": {
 		"kind": "region",
@@ -123,11 +158,18 @@
 			"population": 2230000
 		},
 		"position": "centre",
-		"hooks": [
-			"Lancashire and Cumbria — Cumbria is from the same root as Cymru, the Welsh name for Wales, because Brittonic was spoken here longest.",
-			"Manchester was the first industrial city in the world, and cotton made it; Liverpool shipped the cotton and, earlier, the slaves who grew it.",
-			"The Lake District in it is England's largest national park, and Wordsworth and Beatrix Potter both made it famous."
-		]
+		"hooks": {
+			"en": [
+				"Lancashire and Cumbria — Cumbria is from the same root as Cymru, the Welsh name for Wales, because Brittonic was spoken here longest.",
+				"Manchester was the first industrial city in the world, and cotton made it; Liverpool shipped the cotton and, earlier, the slaves who grew it.",
+				"The Lake District in it is England's largest national park, and Wordsworth and Beatrix Potter both made it famous."
+			],
+			"it": [
+				"Il Lancashire e la Cumbria: Cumbria ha la stessa radice di Cymru, il nome gallese del Galles, perché qui il brittonico si parlò più a lungo.",
+				"Manchester fu la prima città industriale del mondo, e la fece il cotone; Liverpool spediva il cotone e, prima ancora, gli schiavi che lo coltivavano.",
+				"Qui c’è il Lake District, il più grande parco nazionale d’Inghilterra, reso famoso da Wordsworth come da Beatrix Potter."
+			]
+		}
 	},
 	"yorkshire-and-the-humber": {
 		"kind": "region",
@@ -144,11 +186,18 @@
 			"population": 1529000
 		},
 		"position": "east",
-		"hooks": [
-			"York is Norse Jórvík, itself from Roman Eboracum, probably \"place of the yews\"; the Humber is an older, pre-English river name nobody has explained.",
-			"Yorkshire was the largest English county and was split in Ridings — from Norse thriðjungr, a third, which is why there were three and no South Riding.",
-			"York was the Viking capital of England for nearly a century, and its street names still end in -gate, Norse for a street."
-		]
+		"hooks": {
+			"en": [
+				"York is Norse Jórvík, itself from Roman Eboracum, probably \"place of the yews\"; the Humber is an older, pre-English river name nobody has explained.",
+				"Yorkshire was the largest English county and was split in Ridings — from Norse thriðjungr, a third, which is why there were three and no South Riding.",
+				"York was the Viking capital of England for nearly a century, and its street names still end in -gate, Norse for a street."
+			],
+			"it": [
+				"York è il norreno Jórvík, a sua volta dal romano Eboracum, probabilmente \"luogo dei tassi\"; Humber è un nome di fiume più antico, preinglese, che nessuno ha saputo spiegare.",
+				"Lo Yorkshire era la contea più grande d’Inghilterra ed era diviso in Ridings, dal norreno thriðjungr, \"un terzo\": per questo erano tre e non c’era un South Riding.",
+				"York fu la capitale vichinga d’Inghilterra per quasi un secolo, e i nomi delle sue strade finiscono ancora in -gate, in norreno \"strada\"."
+			]
+		}
 	},
 	"east-midlands": {
 		"kind": "region",
@@ -167,11 +216,18 @@
 			"population": 825600
 		},
 		"position": "south-east",
-		"hooks": [
-			"The Midlands is simply the middle land of England, and this half was the core of Mercia, the kingdom that dominated the 700s.",
-			"The Danelaw's Five Boroughs — Derby, Leicester, Lincoln, Nottingham and Stamford — were all here, which is why the dialect is full of Norse words.",
-			"Sherwood Forest and the Robin Hood story belong to it, and so does Melton Mowbray's pork pie, which has protected status."
-		]
+		"hooks": {
+			"en": [
+				"The Midlands is simply the middle land of England, and this half was the core of Mercia, the kingdom that dominated the 700s.",
+				"The Danelaw's Five Boroughs — Derby, Leicester, Lincoln, Nottingham and Stamford — were all here, which is why the dialect is full of Norse words.",
+				"Sherwood Forest and the Robin Hood story belong to it, and so does Melton Mowbray's pork pie, which has protected status."
+			],
+			"it": [
+				"Le Midlands sono semplicemente la terra di mezzo dell’Inghilterra, e questa metà era il cuore della Mercia, il regno egemone nell’VIII secolo.",
+				"I Cinque Borghi del Danelaw erano tutti qui: Derby, Leicester, Lincoln, Nottingham e Stamford; per questo il dialetto è pieno di parole norrene.",
+				"Qui ci sono la foresta di Sherwood e la leggenda di Robin Hood, e anche il pork pie di Melton Mowbray, che è un prodotto tutelato."
+			]
+		}
 	},
 	"west-midlands": {
 		"kind": "region",
@@ -190,11 +246,18 @@
 			"population": 2285000
 		},
 		"position": "south",
-		"hooks": [
-			"The other half of Mercia, and the Black Country in it was named for the soot and the thirty-foot coal seam beneath it.",
-			"Birmingham had more canal miles than Venice at its peak, built to move coal and iron.",
-			"Shakespeare was born at Stratford-upon-Avon here, and the Industrial Revolution's first iron bridge was cast just over its edge at Coalbrookdale."
-		]
+		"hooks": {
+			"en": [
+				"The other half of Mercia, and the Black Country in it was named for the soot and the thirty-foot coal seam beneath it.",
+				"Birmingham had more canal miles than Venice at its peak, built to move coal and iron.",
+				"Shakespeare was born at Stratford-upon-Avon here, and the Industrial Revolution's first iron bridge was cast at Coalbrookdale, in its Shropshire corner."
+			],
+			"it": [
+				"L’altra metà della Mercia, e il suo Black Country prese il nome dalla fuliggine e dal filone di carbone spesso nove metri che gli corre sotto.",
+				"Nel momento di massimo sviluppo Birmingham aveva più chilometri di canali di Venezia, scavati per trasportare carbone e ferro.",
+				"Shakespeare nacque qui, a Stratford-upon-Avon, e il primo ponte di ferro della Rivoluzione industriale fu fuso a Coalbrookdale, nel suo angolo dello Shropshire."
+			]
+		}
 	},
 	"east-wales": {
 		"kind": "region",
@@ -213,11 +276,18 @@
 			"elevation": 1085
 		},
 		"position": "south",
-		"hooks": [
-			"The English called them Wealas, \"foreigners\"; the Welsh call the country Cymru, \"fellow countrymen\" — two names for the same people from opposite sides.",
-			"Cardiff was the world's largest coal port by 1913, shipping what the valleys dug.",
-			"Offa's Dyke, an earthwork 8th-century Mercia built along this border, is still walkable for 285 km."
-		]
+		"hooks": {
+			"en": [
+				"The English called them Wealas, \"foreigners\"; the Welsh call the country Cymru, \"fellow countrymen\" — two names for the same people from opposite sides.",
+				"Cardiff was the world's largest coal port by 1913, shipping what the valleys dug.",
+				"Offa's Dyke, an earthwork 8th-century Mercia built along this border, is still walkable for 285 km."
+			],
+			"it": [
+				"Gli inglesi li chiamavano Wealas, \"stranieri\"; i gallesi chiamano il paese Cymru, \"compatrioti\": due nomi per lo stesso popolo, dati dalle due parti opposte.",
+				"Nel 1913 Cardiff era il più grande porto carbonifero del mondo, e spediva ciò che le valli estraevano.",
+				"Il Vallo di Offa, un terrapieno che la Mercia dell’VIII secolo costruì lungo questo confine, si può ancora percorrere a piedi per 285 km."
+			]
+		}
 	},
 	"west-wales-and-the-valleys": {
 		"kind": "region",
@@ -235,11 +305,18 @@
 			"population": 861400
 		},
 		"position": "south",
-		"hooks": [
-			"The Valleys are the narrow coal valleys of the south; west Wales is where Welsh is strongest, over half the population in Gwynedd and Anglesey.",
-			"Wales had over 600 working pits in 1913 and none by 1995; the last, Tower Colliery, was bought and run by its own miners.",
-			"Snowdonia is here, and the slate landscape of north-west Wales — which roofed the nineteenth-century world — is a UNESCO site."
-		]
+		"hooks": {
+			"en": [
+				"The Valleys are the narrow coal valleys of the south; west Wales is where Welsh is strongest, over half the population in Gwynedd and Anglesey.",
+				"Wales had over 600 working pits in 1913; the last deep mine, Tower Colliery, was bought by its own miners in 1995 and ran until 2008.",
+				"Snowdonia is here, and the slate landscape of north-west Wales — which roofed the nineteenth-century world — is a UNESCO site."
+			],
+			"it": [
+				"Le Valleys sono le strette valli carbonifere del sud; il Galles occidentale è dove il gallese è più vivo: lo parla oltre metà della popolazione nel Gwynedd e ad Anglesey.",
+				"Nel 1913 il Galles aveva più di 600 miniere attive; l’ultima miniera profonda, Tower Colliery, fu comprata dai suoi stessi minatori nel 1995 e restò aperta fino al 2008.",
+				"Qui c’è Snowdonia, e il paesaggio dell’ardesia del Galles nord-occidentale, che coprì i tetti del mondo ottocentesco, è patrimonio UNESCO."
+			]
+		}
 	},
 	"east": {
 		"kind": "region",
@@ -256,11 +333,18 @@
 			"population": 618386
 		},
 		"position": "south-east",
-		"hooks": [
-			"East Anglia, the land of the East Angles, one of the Anglo-Saxon kingdoms — the Angles are also where England got its name.",
-			"The Fens were drained by Dutch engineers from the 1630s and are the flattest, most fertile land in Britain, some of it below sea level.",
-			"Sutton Hoo in Suffolk held a ship burial of about 625, probably a king's, with a helmet that is now the emblem of the period."
-		]
+		"hooks": {
+			"en": [
+				"East Anglia, the land of the East Angles, one of the Anglo-Saxon kingdoms — the Angles are also where England got its name.",
+				"The Fens were drained by Dutch engineers from the 1630s and are the flattest, most fertile land in Britain, some of it below sea level.",
+				"Sutton Hoo in Suffolk held a ship burial of about 625, probably a king's, with a helmet that is now the emblem of the period."
+			],
+			"it": [
+				"L’Anglia orientale, la terra degli Angli dell’Est, uno dei regni anglosassoni: dagli Angli prende il nome anche l’Inghilterra.",
+				"Le Fens furono prosciugate da ingegneri olandesi a partire dagli anni Trenta del Seicento e sono la terra più piatta e fertile della Gran Bretagna, in parte sotto il livello del mare.",
+				"A Sutton Hoo, nel Suffolk, c’era una sepoltura in nave del 625 circa, probabilmente di un re, con un elmo che oggi è l’emblema di quell’epoca."
+			]
+		}
 	},
 	"greater-london": {
 		"kind": "region",
@@ -276,11 +360,18 @@
 			"population": 8567000
 		},
 		"position": "south-east",
-		"hooks": [
-			"Londinium is pre-Roman and unexplained — the best guess is a Brittonic name meaning something like the place at the unfordable river.",
-			"It was the largest city in the world from about 1825 to 1925, and about 300 languages are spoken in it today.",
-			"The 1666 fire destroyed 13,200 houses and 87 churches, and Wren rebuilt 51 of them plus St Paul's."
-		]
+		"hooks": {
+			"en": [
+				"Londinium is pre-Roman and unexplained — the best guess is a Brittonic name meaning something like the place at the unfordable river.",
+				"It was the largest city in the world from about 1825 to 1925, and about 300 languages are spoken in it today.",
+				"The 1666 fire destroyed 13,200 houses and 87 churches, and Wren rebuilt 51 of them plus St Paul's."
+			],
+			"it": [
+				"Londinium è preromano e senza spiegazione: l’ipotesi migliore è un nome brittonico che significa più o meno il luogo presso il fiume che non si può guadare.",
+				"Fu la città più grande del mondo all’incirca dal 1825 al 1925, e oggi vi si parlano circa 300 lingue.",
+				"L’incendio del 1666 distrusse 13.200 case e 87 chiese, e Wren ne ricostruì 51, più la cattedrale di St Paul."
+			]
+		}
 	},
 	"south-east": {
 		"kind": "region",
@@ -299,11 +390,18 @@
 			"population": 503008
 		},
 		"position": "south-east",
-		"hooks": [
-			"Kent is the oldest recorded place name in Britain, written by Pytheas around 325 BC; Sussex and Essex are the South and East Saxons.",
-			"The Channel is 33 km wide at Dover, and the tunnel under it, opened in 1994, has the longest undersea section of any rail tunnel.",
-			"Canterbury has been the seat of English Christianity since 597, and Chaucer's pilgrims were walking there."
-		]
+		"hooks": {
+			"en": [
+				"Kent is the oldest recorded place name in Britain, written by Pytheas around 325 BC; Sussex and Essex are the South and East Saxons.",
+				"The Channel is 33 km wide at Dover, and the tunnel under it, opened in 1994, has the longest undersea section of any rail tunnel.",
+				"Canterbury has been the seat of English Christianity since 597, and Chaucer's pilgrims were walking there."
+			],
+			"it": [
+				"Kent è il toponimo più antico attestato in Gran Bretagna, scritto da Pitea intorno al 325 a.C.; Sussex ed Essex sono i Sassoni del Sud e dell’Est.",
+				"A Dover la Manica è larga 33 km, e il tunnel che la attraversa, aperto nel 1994, ha il tratto sottomarino più lungo di qualsiasi galleria ferroviaria.",
+				"Canterbury è la sede del cristianesimo inglese dal 597, ed è lì che erano diretti i pellegrini di Chaucer."
+			]
+		}
 	},
 	"south-west": {
 		"kind": "region",
@@ -320,10 +418,17 @@
 			"population": 553528
 		},
 		"position": "south",
-		"hooks": [
-			"Cornwall is Kernow plus the same wealas, \"foreigners\" — literally the foreigners of Kernow; Devon is from the Dumnonii tribe.",
-			"Cornish died out as an everyday language around 1800 and has been revived since; the county was tin country for 4,000 years.",
-			"Stonehenge and Bath are both here: the stones were raised around 2500 BC, and Bath's spring has poured 46 °C water since long before Rome plumbed it."
-		]
+		"hooks": {
+			"en": [
+				"Cornwall is Kernow plus the same wealas, \"foreigners\" — literally the foreigners of Kernow; Devon is from the Dumnonii tribe.",
+				"Cornish died out as an everyday language around 1800 and has been revived since; the county was tin country for 4,000 years.",
+				"Stonehenge and Bath are both here: the stones were raised around 2500 BC, and Bath's spring has poured 46 °C water since long before Rome plumbed it."
+			],
+			"it": [
+				"Cornwall, la Cornovaglia, è Kernow più lo stesso wealas, \"stranieri\": letteralmente gli stranieri di Kernow; Devon viene dalla tribù dei Dumnoni.",
+				"Il cornico si estinse come lingua quotidiana verso il 1800 e da allora è stato fatto rinascere; la contea è stata terra di stagno per 4.000 anni.",
+				"Qui ci sono sia Stonehenge sia Bath: le pietre furono erette intorno al 2500 a.C., e la sorgente di Bath sgorga acqua a 46 °C da molto prima che Roma la incanalasse."
+			]
+		}
 	}
 }

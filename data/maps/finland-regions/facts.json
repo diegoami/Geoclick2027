@@ -13,11 +13,18 @@
 			"population": 34781
 		},
 		"position": "north",
-		"hooks": [
-			"Lapland, from a word outsiders used for the Sámi; the Sámi call their own land Sápmi and consider Lapp pejorative.",
-			"The largest region, nearly a third of Finland, with about 3% of its people and more reindeer than residents.",
-			"The sun stays up for over two months at its northern tip, and does not rise at all for nearly as long in winter."
-		]
+		"hooks": {
+			"en": [
+				"Lapland, from a word outsiders used for the Sámi; the Sámi call their own land Sápmi and consider Lapp pejorative.",
+				"The largest region, nearly a third of Finland, with about 3% of its people and more reindeer than residents.",
+				"The sun stays up for over two months at its northern tip, and does not rise at all for nearly as long in winter."
+			],
+			"it": [
+				"Lapponia viene da una parola con cui gli estranei indicavano i Sámi; i Sámi chiamano la propria terra Sápmi e considerano spregiativo il termine lappone.",
+				"La regione più vasta, quasi un terzo della Finlandia, con circa il 3% degli abitanti e più renne che residenti.",
+				"All’estremità settentrionale il sole resta sopra l’orizzonte per oltre due mesi, e d’inverno non sorge affatto per quasi altrettanto tempo."
+			]
+		}
 	},
 	"pohjois-pohjanmaa": {
 		"kind": "region",
@@ -37,11 +44,18 @@
 			"population": 136752
 		},
 		"position": "centre",
-		"hooks": [
-			"\"North Ostrobothnia\" — pohja means both north and the bottom of something, and this is the top of the Gulf of Bothnia.",
-			"Oulu in it was built on tar: Finnish pine tar caulked the world's sailing fleets, and it was shipped from here in barrels.",
-			"The same town later grew Nokia's radio research, and it holds the air guitar world championships every August."
-		]
+		"hooks": {
+			"en": [
+				"\"North Ostrobothnia\" — pohja means both north and the bottom of something, and this is the top of the Gulf of Bothnia.",
+				"Oulu in it was built on tar: Finnish pine tar caulked the world's sailing fleets, and it was shipped from here in barrels.",
+				"The same town later grew Nokia's radio research, and it holds the air guitar world championships every August."
+			],
+			"it": [
+				"\"Ostrobotnia settentrionale\": pohja significa sia nord sia il fondo di qualcosa, e qui si è in cima al golfo di Botnia.",
+				"Oulu, in questa regione, fu costruita sul catrame: il catrame di pino finlandese calafatava le flotte a vela di tutto il mondo, e da qui partiva in barili.",
+				"In seguito la stessa città vide crescere la ricerca radio di Nokia, e ogni agosto ospita i campionati mondiali di air guitar."
+			]
+		}
 	},
 	"kainuu": {
 		"kind": "region",
@@ -53,11 +67,18 @@
 		],
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"An old name, probably from kainu, a word for the people of the gulf shore — the same root that gives Kvenland in Norse sources.",
-			"The emptiest region in the European Union outside Lapland, mostly forest and bog.",
-			"Kuhmo in it hosts a chamber music festival that brings the world's soloists to a town of 8,000."
-		]
+		"hooks": {
+			"en": [
+				"An old name, probably from kainu, a word for the people of the gulf shore — the same root that gives Kvenland in Norse sources.",
+				"One of the emptiest regions in the European Union, mostly forest and bog.",
+				"Kuhmo in it hosts a chamber music festival that brings the world's soloists to a town of 8,000."
+			],
+			"it": [
+				"Un nome antico, probabilmente da kainu, una parola per la gente della costa del golfo: la stessa radice che dà Kvenland nelle fonti norrene.",
+				"Una delle regioni più spopolate dell’Unione europea: quasi tutta foreste e paludi.",
+				"Kuhmo, in questa regione, ospita un festival di musica da camera che porta i solisti di tutto il mondo in una cittadina di 8.000 abitanti."
+			]
+		}
 	},
 	"keski-pohjanmaa": {
 		"kind": "region",
@@ -76,11 +97,18 @@
 			"population": 46714
 		},
 		"position": "west",
-		"hooks": [
-			"\"Central Ostrobothnia\", the middle of the three Bothnian lands.",
-			"Kokkola, its capital, has Finland's largest inorganic chemistry cluster, built on cobalt refining.",
-			"It is bilingual: its coast is Swedish-speaking, its interior Finnish, and the line between them is sharp."
-		]
+		"hooks": {
+			"en": [
+				"\"Central Ostrobothnia\", the middle of the three Bothnian lands.",
+				"Kokkola, its capital, has Finland's largest inorganic chemistry cluster, built on cobalt refining.",
+				"It is bilingual: its coast is Swedish-speaking, its interior Finnish, and the line between them is sharp."
+			],
+			"it": [
+				"\"Ostrobotnia centrale\", quella di mezzo fra le tre terre botniche.",
+				"Kokkola, il capoluogo, ospita il più grande polo della chimica inorganica di Finlandia, nato dalla raffinazione del cobalto.",
+				"È bilingue: la costa parla svedese, l’interno finlandese, e il confine tra i due è netto."
+			]
+		}
 	},
 	"pohjois-savo": {
 		"kind": "region",
@@ -100,11 +128,18 @@
 			"population": 91900
 		},
 		"position": "south",
-		"hooks": [
-			"North Savo — Savo is an ancient tribal name, and its dialect is the one Finns find funniest, with a reputation for never giving a straight answer.",
-			"Kuopio's kalakukko is fish and pork baked inside a rye loaf, and it has protected status.",
-			"The region is more water than most: the Saimaa lake system reaches into it, and Puijo tower above Kuopio looks over it all."
-		]
+		"hooks": {
+			"en": [
+				"North Savo — Savo is an ancient tribal name, and its dialect is the one Finns find funniest, with a reputation for never giving a straight answer.",
+				"Kuopio's kalakukko is fish and pork baked inside a rye loaf, and it has protected status.",
+				"The region is more water than most: the Saimaa lake system reaches into it, and Puijo tower above Kuopio looks over it all."
+			],
+			"it": [
+				"Savo settentrionale: Savo è un antico nome tribale, e il suo dialetto è quello che i finlandesi trovano più buffo, con la fama di non dare mai una risposta diretta.",
+				"Il kalakukko di Kuopio è pesce e maiale cotti dentro una pagnotta di segale, ed è un prodotto a denominazione protetta.",
+				"Una regione con più acqua di quasi tutte le altre: il sistema lacustre del Saimaa vi si spinge, e dalla torre di Puijo, sopra Kuopio, lo si domina tutto."
+			]
+		}
 	},
 	"pohjanmaa": {
 		"kind": "region",
@@ -122,11 +157,18 @@
 			"population": 57014
 		},
 		"position": "south-west",
-		"hooks": [
-			"Ostrobothnia without a qualifier — the coastal land at the bottom of the gulf.",
-			"The most Swedish-speaking region in Finland: over half its people speak Swedish at home.",
-			"Vaasa on its coast is the centre of a large energy-technology cluster, and the land between it and Sweden is still rising out of the sea."
-		]
+		"hooks": {
+			"en": [
+				"Ostrobothnia without a qualifier — the coastal land at the bottom of the gulf.",
+				"The most Swedish-speaking region on the Finnish mainland: about half its people speak Swedish at home.",
+				"Vaasa on its coast is the centre of a large energy-technology cluster, and the land between it and Sweden is still rising out of the sea."
+			],
+			"it": [
+				"L’Ostrobotnia senza aggettivi: la terra costiera in fondo al golfo.",
+				"La regione più svedesofona della Finlandia continentale: circa metà degli abitanti parla svedese in casa.",
+				"Vaasa, sulla sua costa, è il centro di un grande polo delle tecnologie energetiche, e la terra tra la città e la Svezia continua a emergere dal mare."
+			]
+		}
 	},
 	"pohjois-karjala": {
 		"kind": "region",
@@ -149,11 +191,18 @@
 			"elevation": 347
 		},
 		"position": "south-east",
-		"hooks": [
-			"North Karelia — the Finnish part of Karelia, most of which was ceded to the Soviet Union in 1944.",
-			"Koli hill here is the national landscape: the view from it was painted so often that it became what Finland looks like.",
-			"It is the most easterly point of the European Union, and its Orthodox monastery at Valamo was moved here wholesale from the lost territory."
-		]
+		"hooks": {
+			"en": [
+				"North Karelia — the Finnish part of Karelia, most of which was ceded to the Soviet Union in 1944.",
+				"Koli hill here is the national landscape: the view from it was painted so often that it became what Finland looks like.",
+				"It holds the easternmost point of the mainland European Union, and its Orthodox monastery at Valamo was moved here wholesale from the lost territory."
+			],
+			"it": [
+				"Carelia settentrionale: la parte finlandese della Carelia, regione in gran parte ceduta all’Unione Sovietica nel 1944.",
+				"Qui il colle di Koli è il paesaggio nazionale: la vista dalla sua cima è stata dipinta così tante volte da diventare l’immagine stessa della Finlandia.",
+				"Qui si trova il punto più orientale dell’Unione europea continentale, e il suo monastero ortodosso di Valamo fu trasferito qui in blocco dai territori perduti."
+			]
+		}
 	},
 	"etela-pohjanmaa": {
 		"kind": "region",
@@ -167,11 +216,18 @@
 		],
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"South Ostrobothnia, the third of the Bothnian lands, and the only one entirely inland.",
-			"Its people have a reputation for stubbornness and a knife-carrying past, and the puukkojunkkarit of the 1800s were its bandits.",
-			"The flattest farmland in Finland, and the Provinssi festival at Seinäjoki is one of the country's oldest."
-		]
+		"hooks": {
+			"en": [
+				"South Ostrobothnia, the third of the Bothnian lands, and the only one entirely inland.",
+				"Its people have a reputation for stubbornness and a knife-carrying past, and the puukkojunkkarit of the 1800s were its bandits.",
+				"The flattest farmland in Finland, and the Provinssi festival at Seinäjoki is one of the country's oldest."
+			],
+			"it": [
+				"Ostrobotnia meridionale, la terza delle terre botniche, e l’unica interamente nell’entroterra.",
+				"La sua gente ha fama di testardaggine e un passato col coltello alla cintura, e i puukkojunkkarit dell’Ottocento erano i suoi banditi.",
+				"Le terre coltivate più piatte della Finlandia, e il festival Provinssi a Seinäjoki è tra i più antichi del paese."
+			]
+		}
 	},
 	"keski-suomi": {
 		"kind": "region",
@@ -193,11 +249,18 @@
 			"population": 98136
 		},
 		"position": "south",
-		"hooks": [
-			"\"Central Finland\", and it is, more or less, the middle of the country.",
-			"Jyväskylä in it holds more buildings by Alvar Aalto than anywhere else, including his own house and studio.",
-			"Its Petäjävesi church, built of logs in 1765 by a local farmer with no plans, is a UNESCO site."
-		]
+		"hooks": {
+			"en": [
+				"\"Central Finland\", and it is, more or less, the middle of the country.",
+				"Jyväskylä in it holds more buildings by Alvar Aalto than anywhere else, including his experimental summer house on Muuratsalo island.",
+				"Its Petäjävesi church, built of logs in 1765 by a local farmer with no plans, is a UNESCO site."
+			],
+			"it": [
+				"\"Finlandia centrale\", e in effetti è, più o meno, il centro del paese.",
+				"Jyväskylä conserva più edifici di Alvar Aalto di qualunque altro luogo, compresa la sua casa estiva sperimentale sull’isola di Muuratsalo.",
+				"La sua chiesa di Petäjävesi, costruita in tronchi nel 1765 da un contadino del posto senza alcun progetto, è patrimonio UNESCO."
+			]
+		}
 	},
 	"etela-savo": {
 		"kind": "region",
@@ -218,11 +281,18 @@
 			"population": 46550
 		},
 		"position": "south-east",
-		"hooks": [
-			"South Savo, the other half of the old Savo province.",
-			"Saimaa, Finland's largest lake and Europe's fourth, fills much of it — and holds the Saimaa ringed seal, of which about 400 exist.",
-			"Olavinlinna castle at Savonlinna, built in 1475 to face Russia, now stages an opera festival in its courtyard."
-		]
+		"hooks": {
+			"en": [
+				"South Savo, the other half of the old Savo province.",
+				"Saimaa, Finland's largest lake and Europe's fourth, fills much of it — and holds the Saimaa ringed seal, of which about 400 exist.",
+				"Olavinlinna castle at Savonlinna, built in 1475 to face Russia, now stages an opera festival in its courtyard."
+			],
+			"it": [
+				"Savo meridionale, l’altra metà dell’antica provincia di Savo.",
+				"Il Saimaa, il lago più grande della Finlandia e il quarto d’Europa, ne occupa gran parte e ospita la foca degli anelli del Saimaa, di cui esistono circa 400 esemplari.",
+				"Il castello di Olavinlinna a Savonlinna, costruito nel 1475 per fronteggiare la Russia, oggi ospita un festival d’opera nel suo cortile."
+			]
+		}
 	},
 	"pirkanmaa": {
 		"kind": "region",
@@ -243,11 +313,18 @@
 			"population": 259279
 		},
 		"position": "south-west",
-		"hooks": [
-			"Named for the Pirkkalaiset, medieval traders and tax collectors who ranged north into Lapland.",
-			"Tampere in it was Finland's industrial city, built on rapids between two lakes, and is called the Manchester of the north.",
-			"The Finnish sauna society counts Tampere the sauna capital of the world, with more public saunas than any other city."
-		]
+		"hooks": {
+			"en": [
+				"Named for the Pirkkalaiset, medieval traders and tax collectors who ranged north into Lapland.",
+				"Tampere in it was Finland's industrial city, built on rapids between two lakes, and is called the Manchester of the north.",
+				"The Finnish sauna society counts Tampere the sauna capital of the world, with more public saunas than any other city."
+			],
+			"it": [
+				"Prende il nome dai Pirkkalaiset, mercanti ed esattori medievali che si spingevano a nord fino in Lapponia.",
+				"Tampere, in questa regione, fu la città industriale della Finlandia, sorta sulle rapide tra due laghi, e la chiamano la Manchester del nord.",
+				"La Società finlandese della sauna considera Tampere la capitale mondiale della sauna, con più saune pubbliche di qualunque altra città."
+			]
+		}
 	},
 	"satakunta": {
 		"kind": "region",
@@ -266,11 +343,18 @@
 			"population": 76772
 		},
 		"position": "south-west",
-		"hooks": [
-			"\"A hundred\" — the old administrative hundred, the same unit as in England's hundreds and Sweden's härad.",
-			"Rauma's old town is the largest wooden town centre in the Nordic countries and a UNESCO site.",
-			"Its Sammallahdenmäki burial cairns are Bronze Age, 3,000 years old, and also UNESCO-listed."
-		]
+		"hooks": {
+			"en": [
+				"\"A hundred\" — the old administrative hundred, the same unit as in England's hundreds and Sweden's härad.",
+				"Rauma's old town is the largest wooden town centre in the Nordic countries and a UNESCO site.",
+				"Its Sammallahdenmäki burial cairns are Bronze Age, 3,000 years old, and also UNESCO-listed."
+			],
+			"it": [
+				"\"Centena\": l’antica circoscrizione amministrativa, la stessa unità degli hundreds inglesi e dello härad svedese.",
+				"Il centro storico di Rauma è il più grande centro in legno dei paesi nordici ed è patrimonio UNESCO.",
+				"I suoi tumuli funerari di Sammallahdenmäki risalgono all’età del bronzo, hanno 3.000 anni e sono anch’essi patrimonio UNESCO."
+			]
+		}
 	},
 	"etela-karjala": {
 		"kind": "region",
@@ -288,11 +372,18 @@
 			"population": 59276
 		},
 		"position": "south-east",
-		"hooks": [
-			"South Karelia — the part of Karelia Finland kept, with the border running right past Lappeenranta.",
-			"Its Saimaa Canal runs to Vyborg on the Russian side, leased from Russia and used by Finnish shipping.",
-			"Imatra's rapids were Finland's first tourist attraction; Catherine the Great came to see them in 1772."
-		]
+		"hooks": {
+			"en": [
+				"South Karelia — the part of Karelia Finland kept, with the border running right past Lappeenranta.",
+				"Its Saimaa Canal runs to Vyborg on the Russian side, leased from Russia and used by Finnish shipping.",
+				"Imatra's rapids were Finland's first tourist attraction; Catherine the Great came to see them in 1772."
+			],
+			"it": [
+				"Carelia meridionale: la parte di Carelia che la Finlandia ha conservato, con il confine che passa proprio accanto a Lappeenranta.",
+				"Il suo canale del Saimaa, preso in affitto dalla Russia e usato dalla navigazione finlandese, arriva fino a Vyborg, sul lato russo.",
+				"Le rapide di Imatra furono la prima attrazione turistica della Finlandia; Caterina la Grande venne a vederle nel 1772."
+			]
+		}
 	},
 	"paijat-hame": {
 		"kind": "region",
@@ -313,11 +404,18 @@
 			"population": 98826
 		},
 		"position": "south",
-		"hooks": [
-			"Häme by the Päijänne — Häme is one of the oldest tribal names in Finland, and Päijänne is its long lake.",
-			"Lahti's ski jumps are the country's best known, and it has hosted the Nordic world championships seven times.",
-			"Helsinki drinks from this region: a 120 km rock tunnel carries water from Päijänne to the capital."
-		]
+		"hooks": {
+			"en": [
+				"Häme by the Päijänne — Häme is one of the oldest tribal names in Finland, and Päijänne is its long lake.",
+				"Lahti's ski jumps are the country's best known, and it has hosted the Nordic world championships seven times.",
+				"Helsinki drinks from this region: a 120 km rock tunnel carries water from Päijänne to the capital."
+			],
+			"it": [
+				"La Tavastia sul Päijänne: Häme, cioè Tavastia, è uno dei nomi tribali più antichi della Finlandia, e il Päijänne è il suo lungo lago.",
+				"I trampolini di Lahti sono i più noti del paese, e la città ha ospitato sette volte i Mondiali di sci nordico.",
+				"Helsinki beve da questa regione: una galleria di 120 km scavata nella roccia porta l’acqua dal Päijänne alla capitale."
+			]
+		}
 	},
 	"kanta-hame": {
 		"kind": "region",
@@ -336,11 +434,18 @@
 			"population": 47261
 		},
 		"position": "south-west",
-		"hooks": [
-			"\"Häme proper\" — kanta means the base or stock, marking this as the original Häme against its neighbour.",
-			"Häme castle at Hämeenlinna was built by the Swedes around 1260 to hold the region, and is one of Finland's three medieval royal castles.",
-			"Sibelius was born in Hämeenlinna, and the Hämeen Härkätie, the Ox Road across it, is Finland's oldest road."
-		]
+		"hooks": {
+			"en": [
+				"\"Häme proper\" — kanta means the base or stock, marking this as the original Häme against its neighbour.",
+				"Häme castle at Hämeenlinna was built by the Swedes around 1260 to hold the region, and is one of Finland's three medieval royal castles.",
+				"Sibelius was born in Hämeenlinna, and the Hämeen Härkätie, the Ox Road across it, is Finland's oldest road."
+			],
+			"it": [
+				"\"Tavastia propria\": kanta significa base o ceppo, e la indica come la Tavastia originaria rispetto alla regione vicina.",
+				"Il castello di Häme a Hämeenlinna fu costruito dagli svedesi intorno al 1260 per controllare la regione, ed è uno dei tre castelli reali medievali della Finlandia.",
+				"Sibelius nacque a Hämeenlinna, e la Hämeen Härkätie, la Via dei Buoi che la attraversa, è la strada più antica della Finlandia."
+			]
+		}
 	},
 	"kymenlaakso": {
 		"kind": "region",
@@ -359,11 +464,18 @@
 			"population": 31133
 		},
 		"position": "south",
-		"hooks": [
-			"\"The valley of the Kymi\", the river that runs through it to the Gulf of Finland.",
-			"Kotka and Hamina grew as border fortresses, and Hamina is laid out as a perfect octagon around its town hall.",
-			"The Kymi's rapids powered Finland's paper industry, and the region still ships a large share of it."
-		]
+		"hooks": {
+			"en": [
+				"\"The valley of the Kymi\", the river that runs through it to the Gulf of Finland.",
+				"Kotka and Hamina grew as border fortresses, and Hamina is laid out as a perfect octagon around its town hall.",
+				"The Kymi's rapids powered Finland's paper industry, and the region still ships a large share of it."
+			],
+			"it": [
+				"\"La valle del Kymi\", il fiume che la attraversa fino al golfo di Finlandia.",
+				"Kotka e Hamina nacquero come fortezze di confine, e Hamina è disegnata come un ottagono perfetto attorno al suo municipio.",
+				"Le rapide del Kymi alimentarono l’industria cartaria finlandese, e la regione ne spedisce ancora una buona parte."
+			]
+		}
 	},
 	"varsinais-suomi": {
 		"kind": "region",
@@ -382,11 +494,18 @@
 			"population": 175945
 		},
 		"position": "south-west",
-		"hooks": [
-			"\"Finland proper\" — this is where the name Finland meant, before it spread to the whole country.",
-			"Turku was the capital until 1812 and has Finland's oldest university tradition, from 1640.",
-			"Its archipelago is made of tens of thousands of islands, the largest such archipelago in the world by island count."
-		]
+		"hooks": {
+			"en": [
+				"\"Finland proper\" — this is where the name Finland meant, before it spread to the whole country.",
+				"Turku was the capital until 1812 and has Finland's oldest university tradition, from 1640.",
+				"Its archipelago is made of tens of thousands of islands, the largest such archipelago in the world by island count."
+			],
+			"it": [
+				"\"Finlandia propria\": è questo il luogo che il nome Finlandia indicava, prima di estendersi a tutto il paese.",
+				"Turku fu la capitale fino al 1812 e vanta la più antica tradizione universitaria della Finlandia, dal 1640.",
+				"Il suo arcipelago conta decine di migliaia di isole: il più grande al mondo per numero di isole."
+			]
+		}
 	},
 	"uusimaa": {
 		"kind": "region",
@@ -405,10 +524,17 @@
 			"population": 1115000
 		},
 		"position": "south",
-		"hooks": [
-			"\"New land\" — new because Swedish settlers came to this coast in the 1200s and 1300s, after the older provinces inland.",
-			"Helsinki was founded in 1550 to rival Tallinn and stayed a small town for 250 years until Russia made it the capital in 1812.",
-			"A third of all Finns live here, and Suomenlinna, the sea fortress off Helsinki, is a UNESCO site built by Sweden and captured by Russia."
-		]
+		"hooks": {
+			"en": [
+				"\"New land\" — new because Swedish settlers came to this coast in the 1200s and 1300s, after the older provinces inland.",
+				"Helsinki was founded in 1550 to rival Tallinn and stayed a small town for 250 years until Russia made it the capital in 1812.",
+				"A third of all Finns live here, and Suomenlinna, the sea fortress off Helsinki, is a UNESCO site built by Sweden and captured by Russia."
+			],
+			"it": [
+				"\"Terra nuova\": nuova perché i coloni svedesi arrivarono su questa costa nel Duecento e nel Trecento, dopo le province più antiche dell’interno.",
+				"Helsinki fu fondata nel 1550 per rivaleggiare con Tallinn e rimase una piccola città per 250 anni, finché la Russia non ne fece la capitale nel 1812.",
+				"Qui vive un terzo di tutti i finlandesi, e Suomenlinna, la fortezza sul mare davanti a Helsinki, è un sito UNESCO costruito dalla Svezia e conquistato dalla Russia."
+			]
+		}
 	}
 }

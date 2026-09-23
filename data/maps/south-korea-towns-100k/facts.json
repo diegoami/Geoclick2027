@@ -6,11 +6,18 @@
 		"region": "Gangwon-do",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"\"Spring river\" — chun spring, cheon river.",
-			"The capital of Gangwon, on a lake formed by dams on the Bukhan river.",
-			"Dakgalbi, stir-fried spicy chicken, was invented here in the 1960s as cheap food for soldiers and students."
-		]
+		"hooks": {
+			"en": [
+				"\"Spring river\" — chun spring, cheon river.",
+				"The capital of Gangwon, on a lake formed by dams on the Bukhan river.",
+				"Dakgalbi, stir-fried spicy chicken, was invented here in the 1960s as cheap food for soldiers and students."
+			],
+			"it": [
+				"\"Fiume di primavera\": chun primavera, cheon fiume.",
+				"Il capoluogo del Gangwon, su un lago formato dalle dighe sul fiume Bukhan.",
+				"Il dakgalbi, pollo piccante saltato in padella, fu inventato qui negli anni Sessanta come cibo economico per soldati e studenti."
+			]
+		}
 	},
 	"gangneung": {
 		"kind": "city",
@@ -19,11 +26,18 @@
 		"region": "Gangwon-do",
 		"coastal": true,
 		"position": "north-east",
-		"hooks": [
-			"\"River hill\" — one half of the portmanteau that makes the province name Gangwon.",
-			"The coastal venues for the 2018 Winter Olympics were here.",
-			"Its Danoje festival, a shamanic rite going back centuries, is a UNESCO intangible heritage item."
-		]
+		"hooks": {
+			"en": [
+				"\"River hill\" — one half of the portmanteau that makes the province name Gangwon.",
+				"The coastal venues for the 2018 Winter Olympics were here.",
+				"Its Danoje festival, a shamanic rite going back centuries, is a UNESCO intangible heritage item."
+			],
+			"it": [
+				"\"Collina del fiume\": una delle due metà della fusione da cui nasce il nome della provincia, Gangwon.",
+				"Qui si trovavano gli impianti costieri delle Olimpiadi invernali del 2018.",
+				"Il suo festival Danoje, un rito sciamanico vecchio di secoli, è patrimonio immateriale UNESCO."
+			]
+		}
 	},
 	"goyang": {
 		"kind": "city",
@@ -33,11 +47,18 @@
 		"region": "Gyeonggi-do",
 		"coastal": true,
 		"position": "north-west",
-		"hooks": [
-			"\"High sun\" or \"high brightness\", from the merging of two older districts.",
-			"A satellite city of Seoul, and the site of KINTEX, Korea’s largest exhibition centre.",
-			"Its Haengju fortress saw a 1593 battle in which civilians, including women carrying stones in their aprons, helped repel a Japanese force."
-		]
+		"hooks": {
+			"en": [
+				"\"High sun\" or \"high brightness\", from the merging of two older districts.",
+				"A satellite city of Seoul, and the site of KINTEX, Korea’s largest exhibition centre.",
+				"Its Haengju fortress saw a 1593 battle in which civilians, including women carrying stones in their aprons, helped repel a Japanese force."
+			],
+			"it": [
+				"\"Sole alto\" o \"alto splendore\", dalla fusione di due distretti più antichi.",
+				"Città satellite di Seul, e sede del KINTEX, il più grande centro espositivo della Corea.",
+				"La sua fortezza di Haengju vide nel 1593 una battaglia in cui i civili, comprese donne che portavano pietre nei grembiuli, aiutarono a respingere un contingente giapponese."
+			]
+		}
 	},
 	"seoul": {
 		"kind": "city",
@@ -47,11 +68,18 @@
 		"capitalOf": "country",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"Unusual among Korean place names in being pure native Korean rather than Sino-Korean: seoul simply means \"capital\", so the city is called Capital.",
-			"It has been the capital since 1394, and about half of all South Koreans live in it or its surrounding region.",
-			"Its subway is one of the busiest and longest in the world, and the city was almost entirely rebuilt after the Korean War flattened it."
-		]
+		"hooks": {
+			"en": [
+				"Unusual among Korean place names in being pure native Korean rather than Sino-Korean: seoul simply means \"capital\", so the city is called Capital.",
+				"It has been the capital since 1394, and about half of all South Koreans live in it or its surrounding region.",
+				"Its subway is one of the busiest and longest in the world, and the city was almost entirely rebuilt after the Korean War flattened it."
+			],
+			"it": [
+				"Caso raro tra i toponimi coreani, è un nome puramente coreano e non sino-coreano: seoul significa semplicemente \"capitale\", e la città si chiama quindi Capitale.",
+				"È la capitale dal 1394, e circa metà dei sudcoreani vive in città o nell’area che la circonda.",
+				"La sua metropolitana è tra le più trafficate e le più estese al mondo, e la città fu ricostruita quasi per intero dopo che la guerra di Corea l’aveva rasa al suolo."
+			]
+		}
 	},
 	"bucheon": {
 		"kind": "city",
@@ -61,11 +89,18 @@
 		"region": "Gyeonggi-do",
 		"coastal": true,
 		"position": "north-west",
-		"hooks": [
-			"\"Wealthy river\" — bu wealth, cheon river.",
-			"Squeezed between Seoul and Incheon, it is one of the most densely populated cities in the country.",
-			"It is a UNESCO City of Literature and hosts a well-known fantastic film festival."
-		]
+		"hooks": {
+			"en": [
+				"\"Wealthy river\" — bu wealth, cheon river.",
+				"Squeezed between Seoul and Incheon, it is one of the most densely populated cities in the country.",
+				"It is a UNESCO City of Literature and hosts a well-known fantastic film festival."
+			],
+			"it": [
+				"\"Fiume ricco\": bu ricchezza, cheon fiume.",
+				"Stretta tra Seul e Incheon, è una delle città più densamente popolate del paese.",
+				"È Città della Letteratura UNESCO e ospita un noto festival del cinema fantastico."
+			]
+		}
 	},
 	"incheon": {
 		"kind": "city",
@@ -75,11 +110,18 @@
 		"region": "Inch'on-gwangyoksi",
 		"coastal": true,
 		"position": "north-west",
-		"hooks": [
-			"\"Kind river\" in Sino-Korean, though the older name was Michuhol; the modern name dates from 1413.",
-			"MacArthur's 1950 landing here turned the Korean War, and the tides that made it risky are among the largest in Asia.",
-			"Its airport is regularly rated the best in the world and is built on land reclaimed between two islands."
-		]
+		"hooks": {
+			"en": [
+				"\"Kind river\" in Sino-Korean, though the older name was Michuhol; the modern name dates from 1413.",
+				"MacArthur's 1950 landing here turned the Korean War, and the tides that made it risky are among the largest in Asia.",
+				"Its airport is regularly rated the best in the world and is built on land reclaimed between two islands."
+			],
+			"it": [
+				"\"Fiume benevolo\" in sino-coreano, anche se il nome più antico era Michuhol; quello moderno risale al 1413.",
+				"Lo sbarco di MacArthur qui nel 1950 cambiò le sorti della guerra di Corea, e le maree che lo rendevano rischioso sono tra le più ampie dell’Asia.",
+				"Il suo aeroporto è regolarmente giudicato il migliore del mondo ed è costruito su terreno sottratto al mare tra due isole."
+			]
+		}
 	},
 	"seongnam": {
 		"kind": "city",
@@ -89,11 +131,18 @@
 		"region": "Gyeonggi-do",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"\"South of the fortress\" — seong fortress, nam south.",
-			"Bundang in it was one of Korea’s first planned new towns, built in the early 1990s.",
-			"Pangyo beside it is the country’s main software cluster, often called the Korean Silicon Valley."
-		]
+		"hooks": {
+			"en": [
+				"\"South of the fortress\" — seong fortress, nam south.",
+				"Bundang in it was one of Korea’s first planned new towns, built in the early 1990s.",
+				"Pangyo beside it is the country’s main software cluster, often called the Korean Silicon Valley."
+			],
+			"it": [
+				"\"A sud della fortezza\": seong fortezza, nam sud.",
+				"Bundang, nel suo territorio, fu una delle prime città nuove pianificate della Corea, costruita all’inizio degli anni Novanta.",
+				"Pangyo, lì accanto, è il principale polo del software del paese, spesso chiamato la Silicon Valley coreana."
+			]
+		}
 	},
 	"wonju": {
 		"kind": "city",
@@ -102,11 +151,18 @@
 		"region": "Gangwon-do",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"\"Field district\" — the other half of the Gangwon portmanteau.",
-			"Its Chiaksan national park has some of the steepest hiking in the country.",
-			"The Goryeo-era woodblocks of the Tripitaka were first carved in this region before being moved south."
-		]
+		"hooks": {
+			"en": [
+				"\"Field district\" — the other half of the Gangwon portmanteau.",
+				"Its Chiaksan national park has some of the steepest hiking in the country.",
+				"Chiaksan National Park, known for its steep trails, rises beside the city."
+			],
+			"it": [
+				"\"Distretto dei campi\": l’altra metà della fusione che forma Gangwon.",
+				"Il suo parco nazionale del Chiaksan offre alcuni dei sentieri più ripidi del paese.",
+				"Accanto alla città si alza il parco nazionale del Chiaksan, noto per i suoi sentieri ripidi."
+			]
+		}
 	},
 	"ansan": {
 		"kind": "city",
@@ -115,11 +171,18 @@
 		"region": "Gyeonggi-do",
 		"coastal": true,
 		"position": "north-west",
-		"hooks": [
-			"\"Peaceful mountain\" — an peace, san mountain.",
-			"It has one of the largest foreign-born populations in Korea, with a multicultural district serving dozens of nationalities.",
-			"The Sewol ferry disaster of 2014 killed 250 students from a single high school here."
-		]
+		"hooks": {
+			"en": [
+				"\"Peaceful mountain\" — an peace, san mountain.",
+				"It has one of the largest foreign-born populations in Korea, with a multicultural district serving dozens of nationalities.",
+				"The Sewol ferry disaster of 2014 killed 250 students from a single high school here."
+			],
+			"it": [
+				"\"Montagna pacifica\": an pace, san montagna.",
+				"Ha una delle più numerose popolazioni di origine straniera della Corea, con un quartiere multiculturale che accoglie decine di nazionalità.",
+				"Il naufragio del traghetto Sewol, nel 2014, uccise 250 studenti di un’unica scuola superiore di questa città."
+			]
+		}
 	},
 	"suwon": {
 		"kind": "city",
@@ -129,11 +192,18 @@
 		"region": "Gyeonggi-do",
 		"coastal": true,
 		"position": "north-west",
-		"hooks": [
-			"\"Water source\" — su water, won source.",
-			"Its Hwaseong fortress was built in the 1790s by a king for his father’s tomb, using a crane its designer invented, and is a UNESCO site.",
-			"Samsung Electronics has its main research campus in the city."
-		]
+		"hooks": {
+			"en": [
+				"\"Water source\" — su water, won source.",
+				"Its Hwaseong fortress was built in the 1790s by a king for his father’s tomb, using a crane its designer invented, and is a UNESCO site.",
+				"Samsung Electronics has its main research campus in the city."
+			],
+			"it": [
+				"\"Sorgente d’acqua\": su acqua, won sorgente.",
+				"La sua fortezza Hwaseong fu costruita negli anni Novanta del Settecento da un re per la tomba del padre, con una gru inventata dal suo progettista, ed è patrimonio UNESCO.",
+				"Samsung Electronics ha in città il suo principale campus di ricerca."
+			]
+		}
 	},
 	"cheongju": {
 		"kind": "city",
@@ -142,11 +212,18 @@
 		"region": "Chungcheongbuk-do",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"\"Clear district\" — one half of the Chungcheong portmanteau.",
-			"The Jikji, printed here in 1377 with movable metal type, is 78 years older than the Gutenberg Bible and is a UNESCO Memory of the World item.",
-			"The temple that printed it is gone; only its site and the book, now in Paris, survive."
-		]
+		"hooks": {
+			"en": [
+				"\"Clear district\" — one half of the Chungcheong portmanteau.",
+				"The Jikji, printed here in 1377 with movable metal type, is 78 years older than the Gutenberg Bible and is a UNESCO Memory of the World item.",
+				"The temple that printed it is gone; only its site and the book, now in Paris, survive."
+			],
+			"it": [
+				"\"Distretto limpido\": una delle due metà della fusione Chungcheong.",
+				"Il Jikji, stampato qui nel 1377 con caratteri mobili metallici, è di 78 anni più antico della Bibbia di Gutenberg ed è iscritto nel registro Memoria del mondo dell’UNESCO.",
+				"Il tempio che lo stampò non esiste più; ne restano solo il sito e il libro, oggi a Parigi."
+			]
+		}
 	},
 	"andong": {
 		"kind": "city",
@@ -155,11 +232,18 @@
 		"region": "Daegu",
 		"coastal": false,
 		"position": "north-east",
-		"hooks": [
-			"\"Eastern peace\" — an peace, dong east.",
-			"It is the most Confucian city in Korea, and its Hahoe village and mask dance are both UNESCO-listed.",
-			"Andong soju, distilled here since the Goryeo period, is far stronger than the modern industrial kind."
-		]
+		"hooks": {
+			"en": [
+				"\"Eastern peace\" — an peace, dong east.",
+				"It is the most Confucian city in Korea, and its Hahoe village and mask dance are both UNESCO-listed.",
+				"Andong soju, distilled here since the Goryeo period, is far stronger than the modern industrial kind."
+			],
+			"it": [
+				"\"Pace orientale\": an pace, dong est.",
+				"È la città più confuciana della Corea, e il suo villaggio di Hahoe e la sua danza delle maschere sono entrambi patrimonio UNESCO.",
+				"Il soju di Andong, distillato qui dall’epoca Goryeo, è molto più forte di quello industriale moderno."
+			]
+		}
 	},
 	"daejeon": {
 		"kind": "city",
@@ -168,11 +252,18 @@
 		"population1950": 131000,
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"\"Big field\" — daejeon is the Sino-Korean reading of an older native name, Hanbat, meaning exactly the same thing.",
-			"It was a village until the railway arrived in 1905 and is now the country's science city, with dozens of government research institutes.",
-			"Its Daedeok cluster developed much of Korea's semiconductor and telecoms research."
-		]
+		"hooks": {
+			"en": [
+				"\"Big field\" — daejeon is the Sino-Korean reading of an older native name, Hanbat, meaning exactly the same thing.",
+				"It was a village until the railway arrived in 1905 and is now the country's science city, with dozens of government research institutes.",
+				"Its Daedeok cluster developed much of Korea's semiconductor and telecoms research."
+			],
+			"it": [
+				"\"Grande campo\": daejeon è la lettura sino-coreana di un nome coreano più antico, Hanbat, che significa esattamente la stessa cosa.",
+				"Era un villaggio finché nel 1905 non arrivò la ferrovia, e oggi è la città della scienza del paese, con decine di istituti di ricerca statali.",
+				"Il suo polo di Daedeok ha sviluppato buona parte della ricerca coreana su semiconduttori e telecomunicazioni."
+			]
+		}
 	},
 	"pohang": {
 		"kind": "city",
@@ -181,11 +272,18 @@
 		"region": "Daegu",
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"\"Encircling bay\" — po a bay or inlet.",
-			"POSCO here is one of the largest steelmakers in the world, built from nothing in 1968 with Japanese reparations money.",
-			"Homigot on its cape has a giant bronze hand rising from the sea, where Koreans watch the year’s first sunrise."
-		]
+		"hooks": {
+			"en": [
+				"\"Encircling bay\" — po a bay or inlet.",
+				"POSCO here is one of the largest steelmakers in the world, built from nothing in 1968 with Japanese reparations money.",
+				"Homigot on its cape has a giant bronze hand rising from the sea, where Koreans watch the year’s first sunrise."
+			],
+			"it": [
+				"\"Baia avvolgente\": po è una baia o un’insenatura.",
+				"Qui la POSCO, uno dei maggiori produttori di acciaio al mondo, nacque dal nulla nel 1968 con i fondi delle riparazioni giapponesi.",
+				"Sul capo di Homigot una gigantesca mano di bronzo emerge dal mare: è lì che i coreani guardano sorgere il primo sole dell’anno."
+			]
+		}
 	},
 	"gunsan": {
 		"kind": "city",
@@ -194,11 +292,18 @@
 		"region": "Jeollabuk-do",
 		"coastal": true,
 		"position": "west",
-		"hooks": [
-			"\"Group mountain\" — gun a group, san mountain, for the islands offshore.",
-			"It was a rice-export port under Japanese rule, and more Japanese colonial buildings survive here than anywhere in Korea.",
-			"Its Saemangeum seawall is the longest in the world at 33 km."
-		]
+		"hooks": {
+			"en": [
+				"\"Group mountain\" — gun a group, san mountain, for the islands offshore.",
+				"It was a rice-export port under Japanese rule, and more Japanese colonial buildings survive here than anywhere in Korea.",
+				"Its Saemangeum seawall is the longest in the world at 33 km."
+			],
+			"it": [
+				"\"Gruppo di monti\": gun gruppo, san monte, per le isole al largo.",
+				"Sotto il dominio giapponese era un porto per l’esportazione del riso, e qui sopravvivono più edifici coloniali giapponesi che in qualsiasi altro luogo della Corea.",
+				"Il suo argine marino di Saemangeum, con 33 km, è il più lungo del mondo."
+			]
+		}
 	},
 	"iksan": {
 		"kind": "city",
@@ -207,11 +312,18 @@
 		"region": "Jeollabuk-do",
 		"coastal": true,
 		"position": "west",
-		"hooks": [
-			"\"Increasing mountain\".",
-			"Mireuksa here was the largest Buddhist temple in Baekje, and its stone pagoda is the oldest and biggest in Korea.",
-			"A gilt-bronze reliquary found inside it in 2009 rewrote what was known about the temple’s founding."
-		]
+		"hooks": {
+			"en": [
+				"\"Increasing mountain\".",
+				"Mireuksa here was the largest Buddhist temple in Baekje, and its stone pagoda is the oldest and biggest in Korea.",
+				"A gilt-bronze reliquary found inside it in 2009 rewrote what was known about the temple’s founding."
+			],
+			"it": [
+				"\"Montagna che cresce\".",
+				"Il Mireuksa, qui, era il più grande tempio buddhista del regno di Baekje, e la sua pagoda di pietra è la più antica e la più grande della Corea.",
+				"Un reliquiario di bronzo dorato trovato al suo interno nel 2009 ha riscritto ciò che si sapeva sulla fondazione del tempio."
+			]
+		}
 	},
 	"daegu": {
 		"kind": "city",
@@ -221,11 +333,18 @@
 		"region": "Taegu-gwangyoksi",
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"\"Big hill\", from the Sino-Korean characters for large and hill.",
-			"It sits in a basin and is the hottest city in Korea, regularly the summer record-holder.",
-			"Korea's textile industry grew here, and its medicinal herb market has traded since 1658."
-		]
+		"hooks": {
+			"en": [
+				"\"Big hill\", from the Sino-Korean characters for large and hill.",
+				"It sits in a basin and is the hottest city in Korea, regularly the summer record-holder.",
+				"Korea's textile industry grew here, and its medicinal herb market has traded since 1658."
+			],
+			"it": [
+				"\"Grande collina\", dai caratteri sino-coreani per grande e collina.",
+				"Si trova in una conca ed è la città più calda della Corea, regolarmente in testa ai record estivi.",
+				"Qui si sviluppò l’industria tessile coreana, e il suo mercato di erbe medicinali è attivo dal 1658."
+			]
+		}
 	},
 	"gyeongju": {
 		"kind": "city",
@@ -234,11 +353,18 @@
 		"region": "Daegu",
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"\"Capital district\" — gyeong capital, the same character as in Gyeonggi.",
-			"It was the capital of the Silla kingdom for a thousand years and is called a museum without walls.",
-			"Seokguram grotto and Bulguksa temple above it are UNESCO sites, and royal tomb mounds sit among the streets."
-		]
+		"hooks": {
+			"en": [
+				"\"Celebration district\" — its gyeong means \"celebration\", a different character from the gyeong, \"capital\", of Gyeonggi.",
+				"It was the capital of the Silla kingdom for a thousand years and is called a museum without walls.",
+				"Seokguram grotto and Bulguksa temple above it are UNESCO sites, and royal tomb mounds sit among the streets."
+			],
+			"it": [
+				"\"Distretto della celebrazione\": il suo gyeong significa \"celebrazione\", un carattere diverso dal gyeong, \"capitale\", di Gyeonggi.",
+				"Fu per mille anni la capitale del regno di Silla ed è chiamata un museo senza mura.",
+				"La grotta di Seokguram e il tempio di Bulguksa, sopra la città, sono patrimonio UNESCO, e i tumuli delle tombe reali sorgono in mezzo alle strade."
+			]
+		}
 	},
 	"jeonju": {
 		"kind": "city",
@@ -247,11 +373,18 @@
 		"region": "Jeollabuk-do",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"\"Perfect district\" — one half of the Jeolla portmanteau.",
-			"It is the ancestral seat of the Joseon royal house and a UNESCO City of Gastronomy.",
-			"Bibimbap is its dish, and its hanok village has about 700 traditional tiled houses."
-		]
+		"hooks": {
+			"en": [
+				"\"Perfect district\" — one half of the Jeolla portmanteau.",
+				"It is the ancestral seat of the Joseon royal house and a UNESCO City of Gastronomy.",
+				"Bibimbap is its dish, and its hanok village has about 700 traditional tiled houses."
+			],
+			"it": [
+				"\"Distretto perfetto\": una delle due metà della fusione Jeolla.",
+				"È la sede ancestrale della casa reale dei Joseon e Città della Gastronomia UNESCO.",
+				"Il bibimbap è il suo piatto, e il suo villaggio hanok conta circa 700 case tradizionali con i tetti di tegole."
+			]
+		}
 	},
 	"ulsan": {
 		"kind": "city",
@@ -260,11 +393,18 @@
 		"population1950": 29000,
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"\"Mountain of Ul\", after an older local name.",
-			"It has the highest income per head in Korea: Hyundai's shipyard here is the largest in the world, and its car plant among the largest.",
-			"The Bangudae petroglyphs nearby show whale hunting carved about 7,000 years ago — some of the earliest evidence of whaling anywhere."
-		]
+		"hooks": {
+			"en": [
+				"\"Mountain of Ul\", after an older local name.",
+				"It has the highest income per head in Korea: Hyundai's shipyard here is the largest in the world, and its car plant among the largest.",
+				"The Bangudae petroglyphs nearby show whale hunting carved about 7,000 years ago — some of the earliest evidence of whaling anywhere."
+			],
+			"it": [
+				"\"Montagna di Ul\", da un antico nome locale.",
+				"Ha il reddito pro capite più alto della Corea: qui il cantiere navale della Hyundai è il più grande del mondo, e la sua fabbrica di automobili è tra le più grandi.",
+				"I petroglifi di Bangudae, poco lontano, mostrano scene di caccia alla balena incise circa 7.000 anni fa: tra le prime testimonianze di baleneria al mondo."
+			]
+		}
 	},
 	"changwon": {
 		"kind": "city",
@@ -273,11 +413,18 @@
 		"region": "Gyeongsangnam-do",
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"\"Prosperous field\" — chang to flourish, won a field.",
-			"Korea’s first planned industrial city, laid out in the 1970s for heavy machinery.",
-			"It introduced the country’s first public bicycle-sharing scheme and has unusually wide, green streets."
-		]
+		"hooks": {
+			"en": [
+				"\"Prosperous field\" — chang to flourish, won a field.",
+				"Korea’s first planned industrial city, laid out in the 1970s for heavy machinery.",
+				"It introduced the country’s first public bicycle-sharing scheme and has unusually wide, green streets."
+			],
+			"it": [
+				"\"Campo prospero\": chang fiorire, won campo.",
+				"La prima città industriale pianificata della Corea, progettata negli anni Settanta per la meccanica pesante.",
+				"Ha introdotto il primo servizio pubblico di biciclette condivise del paese e ha strade insolitamente larghe e verdi."
+			]
+		}
 	},
 	"gwangju": {
 		"kind": "city",
@@ -287,11 +434,18 @@
 		"region": "Kwangju-gwangyoksi",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"\"Bright district\" — gwang is light, ju a district.",
-			"The 1980 uprising here against military rule was crushed with hundreds killed, and is now the founding story of South Korean democracy.",
-			"The city holds Asia's oldest contemporary art biennale, started in 1995 in memory of those events."
-		]
+		"hooks": {
+			"en": [
+				"\"Bright district\" — gwang is light, ju a district.",
+				"The 1980 uprising here against military rule was crushed with hundreds killed, and is now the founding story of South Korean democracy.",
+				"The city holds Asia's oldest contemporary art biennale, started in 1995 in memory of those events."
+			],
+			"it": [
+				"\"Distretto luminoso\": gwang è la luce, ju un distretto.",
+				"La rivolta scoppiata qui nel 1980 contro il regime militare fu soffocata con centinaia di morti, ed è oggi il racconto fondativo della democrazia sudcoreana.",
+				"La città ospita la più antica biennale d’arte contemporanea dell’Asia, nata nel 1995 in memoria di quei fatti."
+			]
+		}
 	},
 	"busan": {
 		"kind": "city",
@@ -300,11 +454,18 @@
 		"population1950": 948000,
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"\"Cauldron mountain\", for a peak behind the city said to look like an upturned pot.",
-			"The second city and the country's great port, and the only major city the North never took — it held the Pusan Perimeter in 1950.",
-			"Its Jagalchi fish market is Korea's largest, and its film festival is the most important in Asia."
-		]
+		"hooks": {
+			"en": [
+				"\"Cauldron mountain\", for a peak behind the city said to look like an upturned pot.",
+				"The second city and the country's great port, and one of the few major cities the North never took — it held the Pusan Perimeter in 1950.",
+				"Its Jagalchi fish market is Korea's largest, and its film festival is the most important in Asia."
+			],
+			"it": [
+				"\"Montagna del calderone\", per una vetta alle spalle della città che, si dice, somiglia a una pentola rovesciata.",
+				"La seconda città e il grande porto del paese, e una delle poche grandi città che il Nord non conquistò mai: nel 1950 tenne il perimetro di Pusan.",
+				"Il suo mercato del pesce di Jagalchi è il più grande della Corea, e il suo festival del cinema è il più importante dell’Asia."
+			]
+		}
 	},
 	"mokpo": {
 		"kind": "city",
@@ -313,11 +474,18 @@
 		"region": "Gwangju",
 		"coastal": true,
 		"position": "south-west",
-		"hooks": [
-			"\"Wood port\" — mok wood, po a port.",
-			"The gateway to the thousands of islands of the south-west, with ferries to most of them.",
-			"The Sewol ferry was raised and brought here in 2017; its hull is kept as a memorial."
-		]
+		"hooks": {
+			"en": [
+				"\"Wood port\" — mok wood, po a port.",
+				"The gateway to the thousands of islands of the south-west, with ferries to most of them.",
+				"The Sewol ferry was raised and brought here in 2017; its hull is kept as a memorial."
+			],
+			"it": [
+				"\"Porto del legno\": mok legno, po porto.",
+				"La porta d’accesso alle migliaia di isole del sud-ovest, con traghetti verso la maggior parte di esse.",
+				"Il traghetto Sewol fu recuperato e portato qui nel 2017; lo scafo è conservato come memoriale."
+			]
+		}
 	},
 	"yeosu": {
 		"kind": "city",
@@ -326,11 +494,18 @@
 		"region": "Gwangju",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"\"Beautiful water\" — yeo beautiful, su water.",
-			"Admiral Yi Sun-sin based his fleet here, and replicas of his ironclad turtle ships are moored in the harbour.",
-			"It hosted the 2012 World Expo on the theme of the ocean."
-		]
+		"hooks": {
+			"en": [
+				"\"Beautiful water\" — yeo beautiful, su water.",
+				"Admiral Yi Sun-sin based his fleet here, and replicas of his ironclad turtle ships are moored in the harbour.",
+				"It hosted the 2012 World Expo on the theme of the ocean."
+			],
+			"it": [
+				"\"Acqua bella\": yeo bello, su acqua.",
+				"L’ammiraglio Yi Sun-sin aveva qui la base della sua flotta, e nel porto sono ormeggiate repliche delle sue navi tartaruga corazzate.",
+				"Ha ospitato l’Expo 2012, sul tema dell’oceano."
+			]
+		}
 	},
 	"jeju": {
 		"kind": "city",
@@ -338,10 +513,17 @@
 		"populationRank": 17,
 		"coastal": true,
 		"position": "south-west",
-		"hooks": [
-			"\"The district across\" — je is to cross over, ju a district: the island over the water.",
-			"A shield volcano: Hallasan at 1,947 m is South Korea's highest point, and the island's lava tubes are a UNESCO site.",
-			"Its haenyeo, women who free-dive for shellfish into their seventies without breathing apparatus, are on the UNESCO intangible heritage list."
-		]
+		"hooks": {
+			"en": [
+				"\"The district across\" — je is to cross over, ju a district: the island over the water.",
+				"A shield volcano: Hallasan at 1,947 m is South Korea's highest point, and the island's lava tubes are a UNESCO site.",
+				"Its haenyeo, women who free-dive for shellfish into their seventies without breathing apparatus, are on the UNESCO intangible heritage list."
+			],
+			"it": [
+				"\"Il distretto al di là\": je significa attraversare, ju distretto, cioè l’isola al di là del mare.",
+				"Un vulcano a scudo: l’Hallasan, 1.947 m, è il punto più alto della Corea del Sud, e i tunnel di lava dell’isola sono patrimonio UNESCO.",
+				"Le sue haenyeo, donne che fino a oltre settant’anni si immergono in apnea senza respiratori per raccogliere molluschi, sono iscritte nella lista UNESCO del patrimonio immateriale."
+			]
+		}
 	}
 }
