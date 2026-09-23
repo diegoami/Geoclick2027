@@ -9,8 +9,7 @@
 > on 2026-09-22** (below) and it has started: **FT-48 and FT-49 are
 > merged** (Italy's 20 regions in Italian, and the per-language shape with
 > per-sentence fallback). **FT-66** (region names along the region) is
-> built and awaiting the product owner's test (PR #24); **FT-50** — the
-> other 27 countries — is next.
+> merged (PR #24); **FT-50** — the other 27 countries — is next.
 
 ## Why
 
@@ -262,5 +261,5 @@ The FT-48 gate is already passed. **→ Release `v0.10.0`** per
 | FT-62 | **merged**  | `b2f0c8b` | the fact card only on a name not placed (PR #19) |
 | FT-63 | **merged**  | `a0537d6` | labels go where there is the most room: 8 spots, scored; every dot an obstacle (PR #23) |
 | FT-64 | **decided** | —     | it reads; SVG `textPath`, pill as fallback; follow-up FT-66 (DECISIONS.md) |
-| FT-66 | **PR #24**  | —     | names along the region where they fit, pill elsewhere; spines for 32 maps from the tiles; awaiting PO test |
+| FT-66 | **merged**  | `4b8205a` | names along the region where they fit, pill elsewhere; spines for 32 maps from the tiles (PR #24) |
 | FT-65 | **merged**  | `f3b4421` | map card progress bar, hidden at zero (PR #20) |
