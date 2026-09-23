@@ -11,6 +11,7 @@ import {
 	registerHitShape,
 	unregisterHitShape
 } from './labelMagnify';
+import { StretchedNames } from './stretchedNames';
 
 // The DOM shape MapLibre renders: popups are children of the map container,
 // alongside the canvas. Labels are placed at fixed spots so input can be
@@ -170,6 +171,64 @@ describe('stretched names (FT-66)', () => {
 		} finally {
 			unregisterHitShape(text);
 			container.remove();
+		}
+	});
+});
+
+// FT-68: a stretched name's hit shape is laid out in container px and asked
+// about client px, so it converts. Off the page's corner, with the page
+// scrolled, a missing or reversed conversion misses the name entirely.
+describe('stretched names off the page corner (FT-68)', () => {
+	afterEach(() => {
+		document.body.replaceChildren();
+		window.scrollTo(0, 0);
+	});
+
+	it('finds a stretched name at its client point, and not one pixel past its edge', () => {
+		const container = document.createElement('div');
+		container.style.cssText = 'position:relative;margin:420px 0 0 170px;width:600px;height:400px';
+		container.innerHTML = '<div class="maplibregl-canvas-container"></div>';
+		const spacer = document.createElement('div');
+		spacer.style.height = '3000px';
+		document.body.append(container, spacer);
+		window.scrollTo(0, 150);
+		// Identity projection: a spine's [lon, lat] is its container px.
+		const map = {
+			on: () => {},
+			off: () => {},
+			getContainer: () => container,
+			getCanvasContainer: () => container.firstElementChild as HTMLElement,
+			project: ([x, y]: [number, number]) => ({ x, y })
+		};
+		const names = new StretchedNames(
+			map as unknown as ConstructorParameters<typeof StretchedNames>[0]
+		);
+		// Toscana along y = 200, x 100 to 500, in container px.
+		names.set('toscana', {
+			name: 'Toscana',
+			spine: {
+				curve: [
+					[100, 200],
+					[300, 200],
+					[500, 200]
+				],
+				aspect: 10
+			},
+			tier: 'known',
+			popup: { getElement: () => undefined }
+		});
+		try {
+			const text = container.querySelector('svg text')!;
+			const { left, top } = container.getBoundingClientRect();
+			expect({ left, top }).toEqual({ left: 170, top: 420 - 150 });
+			// The name's middle, in client px.
+			expect(labelAt(container, left + 300, top + 200)).toBe(text);
+			// The hit band reaches 0.6 font sizes from the line (hitsLayout).
+			const reach = 0.6 * parseFloat((text as SVGTextElement).style.fontSize);
+			expect(labelAt(container, left + 300, top + 200 + reach - 1)).toBe(text);
+			expect(labelAt(container, left + 300, top + 200 + reach + 1)).toBeUndefined();
+		} finally {
+			names.destroy();
 		}
 	});
 });

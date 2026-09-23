@@ -9,6 +9,7 @@ import {
 	registerLabel
 } from './labelCollision';
 import { CROWDED_CLASS, HOVERED_CLASS, labelAt } from './labelMagnify';
+import { StretchedNames } from './stretchedNames';
 
 // The DOM shape MapLibre renders: one .maplibregl-popup per name, positioned
 // by the map, each wrapping a .maplibregl-popup-content with the name in it.
@@ -324,5 +325,71 @@ describe('where a label goes (FT-24)', () => {
 		content.classList.remove(HOVERED_CLASS);
 		await new Promise((r) => setTimeout(r, 400));
 		expect(napoliIsRight()).toBe(true);
+	});
+});
+
+// FT-68: a stretched name is an obstacle in container px (map.project), and
+// the pass compares it with popups in client px. Every other case keeps the
+// container at the page's corner, where a missing or reversed conversion
+// changes nothing; here it sits in from the edge and the page is scrolled.
+describe('stretched names as obstacles, off the page corner (FT-68)', () => {
+	afterEach(() => {
+		document.body.replaceChildren();
+		window.scrollTo(0, 0);
+	});
+
+	function offsetMap() {
+		const container = document.createElement('div');
+		container.style.cssText = 'position:relative;margin:420px 0 0 170px;width:600px;height:400px';
+		container.innerHTML = '<div class="maplibregl-canvas-container"></div>';
+		const spacer = document.createElement('div');
+		spacer.style.height = '3000px';
+		document.body.append(container, spacer);
+		window.scrollTo(0, 150);
+		// Identity projection: a spine's [lon, lat] is its container px.
+		const map = {
+			...fakeMap(),
+			getContainer: () => container,
+			getCanvasContainer: () => container.firstElementChild as HTMLElement,
+			project: ([x, y]: [number, number]) => ({ x, y })
+		};
+		const names = new StretchedNames(
+			map as unknown as ConstructorParameters<typeof StretchedNames>[0]
+		);
+		// Toscana along y = 200, x 100 to 500, in container px.
+		names.set('toscana', {
+			name: 'Toscana',
+			spine: {
+				curve: [
+					[100, 200],
+					[300, 200],
+					[500, 200]
+				],
+				aspect: 10
+			},
+			tier: 'known',
+			popup: { getElement: () => undefined }
+		});
+		return { container, map, names };
+	}
+
+	const pill = (container: HTMLElement, name: string, left: number, top: number) => {
+		const popup = document.createElement('div');
+		popup.className = 'maplibregl-popup geoclick-solved-popup';
+		popup.style.cssText = `position:absolute;left:${left}px;top:${top}px`;
+		popup.innerHTML = `<div class="maplibregl-popup-content">${name}</div>`;
+		container.append(popup);
+	};
+
+	it('a pill label where a stretched name sits yields to it', async () => {
+		const { container, map, names } = offsetMap();
+		expect(container.getBoundingClientRect()).toMatchObject({ left: 170, top: 420 - 150 });
+		pill(container, 'Firenze', 280, 190);
+		pill(container, 'Roma', 280, 320);
+		enableLabelCollision(map, container);
+		await nextFrame();
+		// Firenze sits on the name and is hidden; Roma, clear of it, is drawn.
+		expect(drawn(container)).toEqual(['Roma']);
+		names.destroy();
 	});
 });
