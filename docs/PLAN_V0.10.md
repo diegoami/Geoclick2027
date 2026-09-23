@@ -236,7 +236,7 @@ The FT-48 gate is already passed. **→ Release `v0.10.0`** per
 | FT-49 | **merged**  | `51892fc` | per-language `hooks`, per-sentence fallback (PR #18) |
 | FT-50 | not started | —     | Italian, the other 27 countries              |
 | FT-51 | postponed   | —     | German, only if the Italian read well   |
-| FT-60 | not started | —     | finite level-0 hand, size 10             |
+| FT-60 | **in review** | —   | finite level-0 hand, size 10; tutorial slips dealt first (PR #22, reviewer: resolved) |
 | FT-61 | **merged**  | `6b794b8` | a slip keeps its drag on a tablet; confirm on device at release (PR #21) |
 | FT-62 | **merged**  | `b2f0c8b` | the fact card only on a name not placed (PR #19) |
 | FT-63 | not started | —     | labels go where there is the most room   |
