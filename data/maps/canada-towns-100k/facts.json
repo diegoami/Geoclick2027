@@ -7,11 +7,18 @@
 		"region": "Alberta",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"Named for Edmonton, then a village near London, by a Hudson’s Bay clerk from there.",
-			"The northernmost large city in North America, and the gateway to the oil sands.",
-			"Its river valley park system is the largest stretch of urban parkland on the continent."
-		]
+		"hooks": {
+			"en": [
+				"Named for Edmonton, then a village near London, by a Hudson’s Bay clerk from there.",
+				"The northernmost large city in North America, and the gateway to the oil sands.",
+				"Its river valley park system is the largest stretch of urban parkland on the continent."
+			],
+			"it": [
+				"Prende il nome da Edmonton, allora un villaggio vicino a Londra, per volontà di un impiegato della Compagnia della Baia di Hudson che veniva da lì.",
+				"La grande città più settentrionale del Nord America, e la porta d’accesso alle sabbie bituminose.",
+				"Il sistema di parchi lungo la valle del suo fiume è la più vasta distesa di verde urbano del continente."
+			]
+		}
 	},
 	"saskatoon": {
 		"kind": "city",
@@ -20,11 +27,18 @@
 		"region": "Saskatchewan",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"From the Cree misâskwatômina, the saskatoon berry that grows along its river.",
-			"It has more bridges over its river than its size warrants and is called the city of bridges.",
-			"The Canadian Light Source synchrotron here is the country’s only one."
-		]
+		"hooks": {
+			"en": [
+				"From the Cree misâskwatômina, the saskatoon berry that grows along its river.",
+				"It has more bridges over its river than its size warrants and is called the city of bridges.",
+				"The Canadian Light Source synchrotron here is the country’s only one."
+			],
+			"it": [
+				"Dal cree misâskwatômina, la bacca di amelanchier (in inglese saskatoon) che cresce lungo il suo fiume.",
+				"Ha più ponti sul suo fiume di quanti ne giustifichino le sue dimensioni, e la chiamano la città dei ponti.",
+				"Il sincrotrone Canadian Light Source che si trova qui è l’unico del paese."
+			]
+		}
 	},
 	"calgary": {
 		"kind": "city",
@@ -34,11 +48,18 @@
 		"region": "Alberta",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"Named for Calgary on Mull in Scotland — from Gaelic for \"beach of the meadow\".",
-			"Its Stampede, running since 1912, calls itself the greatest outdoor show on earth.",
-			"It hosted the 1988 Winter Olympics and has the most head offices per head in Canada, from the oil industry."
-		]
+		"hooks": {
+			"en": [
+				"Named for Calgary on Mull in Scotland — from Gaelic for \"beach of the meadow\".",
+				"Its Stampede, running since 1912, calls itself the greatest outdoor show on earth.",
+				"It hosted the 1988 Winter Olympics and has the most head offices per head in Canada, from the oil industry."
+			],
+			"it": [
+				"Prende il nome da Calgary, sull’isola di Mull in Scozia: dal gaelico \"spiaggia del prato\".",
+				"Il suo Stampede, che si tiene dal 1912, si proclama il più grande spettacolo all’aperto della Terra.",
+				"Ha ospitato le Olimpiadi invernali del 1988 e, grazie al petrolio, è la città canadese con più sedi centrali di aziende per abitante."
+			]
+		}
 	},
 	"regina": {
 		"kind": "city",
@@ -47,11 +68,18 @@
 		"region": "Saskatchewan",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"Latin for \"queen\", named for Victoria in 1882 — it had been Pile of Bones, after the bison remains left there.",
-			"Every tree in the city was planted; the site was bare prairie.",
-			"The Royal Canadian Mounted Police have trained here since 1885."
-		]
+		"hooks": {
+			"en": [
+				"Latin for \"queen\", named for Victoria in 1882 — it had been Pile of Bones, after the bison remains left there.",
+				"Every tree in the city was planted; the site was bare prairie.",
+				"The Royal Canadian Mounted Police have trained here since 1885."
+			],
+			"it": [
+				"Nome latino, \"regina\", dato nel 1882 in onore di Vittoria: prima si chiamava Pile of Bones, \"mucchio di ossa\", per i resti di bisonte rimasti sul posto.",
+				"Ogni albero della città è stato piantato: qui c’era solo prateria nuda.",
+				"La Reale polizia a cavallo canadese addestra qui le sue reclute dal 1885."
+			]
+		}
 	},
 	"kelowna": {
 		"kind": "city",
@@ -60,11 +88,18 @@
 		"region": "British Columbia",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"From Okanagan kì?láwna?, \"grizzly bear\".",
-			"The centre of British Columbia’s wine and orchard country, in a valley with a semi-desert climate.",
-			"Its lake is said to hold Ogopogo, a monster in Syilx tradition long before settlers arrived."
-		]
+		"hooks": {
+			"en": [
+				"From Okanagan kì?láwna?, \"grizzly bear\".",
+				"The centre of British Columbia’s wine and orchard country, in a valley with a semi-desert climate.",
+				"Its lake is said to hold Ogopogo, a monster in Syilx tradition long before settlers arrived."
+			],
+			"it": [
+				"Dall’okanagan kì?láwna?, \"orso grizzly\".",
+				"Il cuore della zona dei vigneti e dei frutteti della Columbia Britannica, in una valle dal clima semidesertico.",
+				"Si dice che il suo lago ospiti l’Ogopogo, un mostro della tradizione syilx ben prima dell’arrivo dei coloni."
+			]
+		}
 	},
 	"winnipeg": {
 		"kind": "city",
@@ -73,11 +108,18 @@
 		"region": "Manitoba",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"From Cree wînipêk, \"muddy water\", for the lake north of it.",
-			"The Forks, where the Red and Assiniboine meet, has been a meeting place for about 6,000 years.",
-			"The 1919 General Strike here shut the city for six weeks and shaped Canadian labour law."
-		]
+		"hooks": {
+			"en": [
+				"From Cree wînipêk, \"muddy water\", for the lake north of it.",
+				"The Forks, where the Red and Assiniboine meet, has been a meeting place for about 6,000 years.",
+				"The 1919 General Strike here shut the city for six weeks and shaped Canadian labour law."
+			],
+			"it": [
+				"Dal cree wînipêk, \"acqua fangosa\", per il lago a nord della città.",
+				"The Forks, dove confluiscono il Red e l’Assiniboine, è un luogo d’incontro da circa 6.000 anni.",
+				"Lo sciopero generale del 1919 paralizzò la città per sei settimane e diede forma al diritto del lavoro canadese."
+			]
+		}
 	},
 	"vancouver": {
 		"kind": "city",
@@ -87,11 +129,18 @@
 		"region": "British Columbia",
 		"coastal": true,
 		"position": "west",
-		"hooks": [
-			"Named for Captain George Vancouver, who charted the coast in 1792.",
-			"Its Stanley Park is larger than Central Park and mostly still forest.",
-			"It is regularly rated among the most liveable cities in the world and among the least affordable."
-		]
+		"hooks": {
+			"en": [
+				"Named for Captain George Vancouver, who charted the coast in 1792.",
+				"Its Stanley Park is larger than Central Park and mostly still forest.",
+				"It is regularly rated among the most liveable cities in the world and among the least affordable."
+			],
+			"it": [
+				"Prende il nome dal capitano George Vancouver, che cartografò la costa nel 1792.",
+				"Il suo Stanley Park è più grande di Central Park ed è ancora in gran parte foresta.",
+				"Compare regolarmente tra le città più vivibili del mondo, e tra le più care."
+			]
+		}
 	},
 	"abbotsford": {
 		"kind": "city",
@@ -100,11 +149,18 @@
 		"region": "British Columbia",
 		"coastal": false,
 		"position": "west",
-		"hooks": [
-			"Named after a local settler family, or after Walter Scott’s house in Scotland.",
-			"It produces more farm revenue per hectare than anywhere else in Canada, mostly berries and poultry.",
-			"It sits directly on the US border in the Fraser Valley."
-		]
+		"hooks": {
+			"en": [
+				"Named after a local settler family, or after Walter Scott’s house in Scotland.",
+				"It produces more farm revenue per hectare than anywhere else in Canada, mostly berries and poultry.",
+				"It sits directly on the US border in the Fraser Valley."
+			],
+			"it": [
+				"Prende il nome da una famiglia di coloni del posto, oppure dalla casa di Walter Scott in Scozia.",
+				"Produce più reddito agricolo per ettaro di qualsiasi altro luogo del Canada, soprattutto piccoli frutti e pollame.",
+				"Si trova proprio sul confine con gli Stati Uniti, nella valle del Fraser."
+			]
+		}
 	},
 	"victoria": {
 		"kind": "city",
@@ -113,11 +169,18 @@
 		"region": "British Columbia",
 		"coastal": true,
 		"position": "west",
-		"hooks": [
-			"Named for Queen Victoria; it is the capital of British Columbia, not Vancouver.",
-			"The mildest climate in Canada, so it grows palms and its gardens flower in February.",
-			"Butchart Gardens nearby was planted in an exhausted limestone quarry from 1904."
-		]
+		"hooks": {
+			"en": [
+				"Named for Queen Victoria; it is the capital of British Columbia, not Vancouver.",
+				"The mildest climate in Canada, so it grows palms and its gardens flower in February.",
+				"Butchart Gardens nearby was planted in an exhausted limestone quarry from 1904."
+			],
+			"it": [
+				"Prende il nome dalla regina Vittoria; è la capitale della Columbia Britannica, non Vancouver.",
+				"Il clima più mite del Canada: qui crescono le palme e i giardini fioriscono a febbraio.",
+				"I vicini Butchart Gardens furono piantati a partire dal 1904 in una cava di calcare esaurita."
+			]
+		}
 	},
 	"st-john-s": {
 		"kind": "city",
@@ -126,11 +189,18 @@
 		"region": "Newfoundland and Labrador",
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"Named for St John the Baptist, on whose feast Cabot is said to have arrived in 1497.",
-			"The oldest English-founded city in North America, and its harbour is entered through a narrow gap in the cliffs.",
-			"Marconi received the first transatlantic radio signal here in 1901, on Signal Hill."
-		]
+		"hooks": {
+			"en": [
+				"Named for St John the Baptist, on whose feast Cabot is said to have arrived in 1497.",
+				"The oldest English-founded city in North America, and its harbour is entered through a narrow gap in the cliffs.",
+				"Marconi received the first transatlantic radio signal here in 1901, on Signal Hill."
+			],
+			"it": [
+				"Prende il nome da san Giovanni Battista: si dice che Caboto sia arrivato nel giorno della sua festa, nel 1497.",
+				"La più antica città di fondazione inglese del Nord America, e al suo porto si accede da una stretta apertura tra le scogliere.",
+				"Qui, sul Signal Hill, Marconi ricevette nel 1901 il primo segnale radio transatlantico."
+			]
+		}
 	},
 	"quebec": {
 		"kind": "city",
@@ -138,11 +208,18 @@
 		"populationRank": 9,
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"From Algonquin kébec, \"where the river narrows\" — the point at Quebec City where the St Lawrence closes in.",
-			"The only province where French is the sole official language, and about 85% of people speak it at home.",
-			"It is larger than any European country except Russia, and it generates almost all its electricity from water."
-		]
+		"hooks": {
+			"en": [
+				"From Algonquin kébec, \"where the river narrows\" — the point at Quebec City where the St Lawrence closes in.",
+				"The only province where French is the sole official language, and about 85% of people speak it at home.",
+				"It is larger than any European country except Russia, and it generates almost all its electricity from water."
+			],
+			"it": [
+				"Dall’algonchino kébec, \"dove il fiume si restringe\": all’altezza della città di Québec il San Lorenzo si fa stretto.",
+				"L’unica provincia in cui il francese è la sola lingua ufficiale, e circa l’85% degli abitanti lo parla in casa.",
+				"È più grande di qualsiasi paese europeo tranne la Russia, e ricava quasi tutta la sua elettricità dall’acqua."
+			]
+		}
 	},
 	"sudbury": {
 		"kind": "city",
@@ -151,11 +228,18 @@
 		"region": "Ontario",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"Named for Sudbury in Suffolk, the wife’s birthplace of a railway official.",
-			"A meteorite impact about 1.85 billion years ago created its nickel deposits, among the world’s richest.",
-			"Apollo astronauts trained here because the landscape, stripped by smelting, resembled the Moon."
-		]
+		"hooks": {
+			"en": [
+				"Named for Sudbury in Suffolk, the wife’s birthplace of a railway official.",
+				"A meteorite impact about 1.85 billion years ago created its nickel deposits, among the world’s richest.",
+				"Apollo astronauts trained here because the landscape, stripped by smelting, resembled the Moon."
+			],
+			"it": [
+				"Prende il nome da Sudbury, nel Suffolk, paese natale della moglie di un funzionario delle ferrovie.",
+				"L’impatto di un meteorite circa 1,85 miliardi di anni fa creò i suoi giacimenti di nichel, tra i più ricchi del mondo.",
+				"Gli astronauti delle missioni Apollo si addestrarono qui perché il paesaggio, spogliato dalle fonderie, somigliava alla Luna."
+			]
+		}
 	},
 	"trois-rivieres": {
 		"kind": "city",
@@ -164,11 +248,18 @@
 		"region": "Québec",
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"\"Three rivers\" — though there is one river with two islands splitting its mouth into three channels.",
-			"Founded in 1634, the second oldest French city in Canada after Quebec.",
-			"Its paper mills once made it the largest newsprint producer in the world."
-		]
+		"hooks": {
+			"en": [
+				"\"Three rivers\" — though there is one river with two islands splitting its mouth into three channels.",
+				"Founded in 1634, the second oldest French city in Canada after Quebec.",
+				"Its paper mills once made it the largest newsprint producer in the world."
+			],
+			"it": [
+				"\"Tre fiumi\": eppure il fiume è uno solo, con due isole che dividono la foce in tre canali.",
+				"Fondata nel 1634, è la seconda città francese più antica del Canada dopo Québec.",
+				"Le sue cartiere ne fecero un tempo il maggior produttore mondiale di carta da giornale."
+			]
+		}
 	},
 	"montreal": {
 		"kind": "city",
@@ -178,11 +269,18 @@
 		"region": "Québec",
 		"coastal": true,
 		"position": "south-east",
-		"hooks": [
-			"From Mont Royal, the hill Jacques Cartier named in 1535 for Francis I.",
-			"The largest French-speaking city in the Americas and the second largest in the world after Paris.",
-			"Its Underground City links 32 km of passages, built so the winter can be avoided entirely."
-		]
+		"hooks": {
+			"en": [
+				"From Mont Royal, the hill Jacques Cartier named in 1535 for Francis I.",
+				"The largest French-speaking city in the Americas and one of the largest in the world.",
+				"Its Underground City links 32 km of passages, built so the winter can be avoided entirely."
+			],
+			"it": [
+				"Dal Mont Royal, il colle a cui Jacques Cartier diede il nome nel 1535 in onore di Francesco I.",
+				"La più grande città francofona delle Americhe e una delle più grandi del mondo.",
+				"La sua Città sotterranea collega 32 km di passaggi, costruiti per poter evitare del tutto l’inverno."
+			]
+		}
 	},
 	"ottawa": {
 		"kind": "city",
@@ -193,11 +291,18 @@
 		"capitalOf": "country",
 		"coastal": false,
 		"position": "south-east",
-		"hooks": [
-			"From the Algonquin adawe, \"to trade\" — the Ottawa river was a trading route.",
-			"Queen Victoria chose it as capital in 1857, partly because it was far from the American border.",
-			"Its Rideau Canal freezes into the world’s largest skating rink, 7.8 km long, and is a UNESCO site."
-		]
+		"hooks": {
+			"en": [
+				"From the Algonquin adawe, \"to trade\" — the Ottawa river was a trading route.",
+				"Queen Victoria chose it as capital in 1857, partly because it was far from the American border.",
+				"Its Rideau Canal freezes into the world’s largest skating rink, 7.8 km long, and is a UNESCO site."
+			],
+			"it": [
+				"Dall’algonchino adawe, \"commerciare\": il fiume Ottawa era una via commerciale.",
+				"La regina Vittoria la scelse come capitale nel 1857, anche perché era lontana dal confine americano.",
+				"Il suo canale Rideau, ghiacciando, diventa la pista di pattinaggio più grande del mondo, lunga 7,8 km, ed è patrimonio UNESCO."
+			]
+		}
 	},
 	"sherbrooke": {
 		"kind": "city",
@@ -206,11 +311,18 @@
 		"region": "Québec",
 		"coastal": false,
 		"position": "south-east",
-		"hooks": [
-			"Named for Sir John Coape Sherbrooke, a governor general.",
-			"The main city of the Eastern Townships, settled by Loyalists and now overwhelmingly francophone.",
-			"Its gorge in the middle of the town drops 50 m and once powered the mills."
-		]
+		"hooks": {
+			"en": [
+				"Named for Sir John Coape Sherbrooke, a governor general.",
+				"The main city of the Eastern Townships, settled by Loyalists and now overwhelmingly francophone.",
+				"Its gorge in the middle of the town drops 50 m and once powered the mills."
+			],
+			"it": [
+				"Prende il nome da Sir John Coape Sherbrooke, un governatore generale.",
+				"La città principale dei Cantons-de-l’Est, colonizzata dai lealisti e oggi francofona in stragrande maggioranza.",
+				"La gola in mezzo alla città ha un dislivello di 50 m e un tempo dava energia ai mulini."
+			]
+		}
 	},
 	"halifax": {
 		"kind": "city",
@@ -219,11 +331,18 @@
 		"region": "Nova Scotia",
 		"coastal": true,
 		"position": "south-east",
-		"hooks": [
-			"Named for the Earl of Halifax, who was president of the Board of Trade when it was founded in 1749.",
-			"The 1917 explosion of a munitions ship in its harbour was the largest man-made blast before the atomic bomb.",
-			"Titanic victims were brought here, and 150 are buried in its cemeteries."
-		]
+		"hooks": {
+			"en": [
+				"Named for the Earl of Halifax, who was president of the Board of Trade when it was founded in 1749.",
+				"The 1917 explosion of a munitions ship in its harbour was the largest man-made blast before the atomic bomb.",
+				"Titanic victims were brought here, and 150 are buried in its cemeteries."
+			],
+			"it": [
+				"Prende il nome dal conte di Halifax, presidente del Board of Trade quando fu fondata, nel 1749.",
+				"L’esplosione di una nave carica di munizioni nel suo porto, nel 1917, fu la più grande deflagrazione provocata dall’uomo prima della bomba atomica.",
+				"Qui furono portate le vittime del Titanic, e 150 sono sepolte nei suoi cimiteri."
+			]
+		}
 	},
 	"barrie": {
 		"kind": "city",
@@ -232,11 +351,18 @@
 		"region": "Ontario",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"Named for Sir Robert Barrie, a naval commodore on the Great Lakes.",
-			"It sits on Kempenfelt Bay, an arm of Lake Simcoe, and is one of Canada’s fastest-growing cities.",
-			"Its snow, off Georgian Bay, regularly buries the region in lake-effect storms."
-		]
+		"hooks": {
+			"en": [
+				"Named for Sir Robert Barrie, a naval commodore on the Great Lakes.",
+				"It sits on Kempenfelt Bay, an arm of Lake Simcoe, and is one of Canada’s fastest-growing cities.",
+				"Its snow, off Georgian Bay, regularly buries the region in lake-effect storms."
+			],
+			"it": [
+				"Prende il nome da Sir Robert Barrie, commodoro della marina sui Grandi Laghi.",
+				"Sorge sulla baia di Kempenfelt, un braccio del lago Simcoe, ed è una delle città canadesi che crescono più in fretta.",
+				"La neve che arriva dalla baia Georgiana seppellisce regolarmente la regione sotto nevicate da effetto lago."
+			]
+		}
 	},
 	"kingston": {
 		"kind": "city",
@@ -245,11 +371,18 @@
 		"region": "Ontario",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"Named for George III — it was Fort Frontenac under the French.",
-			"It was the first capital of the Province of Canada, from 1841 to 1844.",
-			"Its Rideau Canal and fortifications are a UNESCO site, built to defend against an American attack that never came."
-		]
+		"hooks": {
+			"en": [
+				"Named for George III — it was Fort Frontenac under the French.",
+				"It was the first capital of the Province of Canada, from 1841 to 1844.",
+				"Its Rideau Canal and fortifications are a UNESCO site, built to defend against an American attack that never came."
+			],
+			"it": [
+				"Prende il nome da Giorgio III: sotto i francesi era Fort Frontenac.",
+				"Fu la prima capitale della Provincia del Canada, dal 1841 al 1844.",
+				"Il suo canale Rideau e le sue fortificazioni, patrimonio UNESCO, furono costruiti per difendersi da un attacco americano che non arrivò mai."
+			]
+		}
 	},
 	"oshawa": {
 		"kind": "city",
@@ -258,11 +391,18 @@
 		"region": "Ontario",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"From an Ojibwe word meaning roughly \"where we must leave the canoes\".",
-			"General Motors of Canada has built cars here since 1918, on the site of a carriage works.",
-			"That works, McLaughlin, made it Canada’s motor city."
-		]
+		"hooks": {
+			"en": [
+				"From an Ojibwe word meaning roughly \"where we must leave the canoes\".",
+				"General Motors of Canada has built cars here since 1918, on the site of a carriage works.",
+				"That works, McLaughlin, made it Canada’s motor city."
+			],
+			"it": [
+				"Da una parola ojibwe che significa all’incirca \"dove dobbiamo lasciare le canoe\".",
+				"La General Motors of Canada costruisce auto qui dal 1918, dove prima sorgeva una fabbrica di carrozze.",
+				"Fu quella fabbrica, la McLaughlin, a farne la città dell’automobile del Canada."
+			]
+		}
 	},
 	"toronto": {
 		"kind": "city",
@@ -272,11 +412,18 @@
 		"region": "Ontario",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"From Mohawk tkaronto, \"where there are trees standing in the water\" — fishing weirs further north.",
-			"About half its residents were born outside Canada, one of the highest shares of any city in the world.",
-			"The CN Tower was the tallest free-standing structure in the world for 32 years."
-		]
+		"hooks": {
+			"en": [
+				"From Mohawk tkaronto, \"where there are trees standing in the water\" — fishing weirs further north.",
+				"About half its residents were born outside Canada, one of the highest shares of any city in the world.",
+				"The CN Tower was the tallest free-standing structure in the world for 32 years."
+			],
+			"it": [
+				"Dal mohawk tkaronto, \"dove ci sono alberi ritti nell’acqua\": gli sbarramenti per la pesca più a nord.",
+				"Circa metà dei suoi abitanti è nata fuori dal Canada, una delle quote più alte di qualsiasi città del mondo.",
+				"La CN Tower è stata per 32 anni la struttura autoportante più alta del mondo."
+			]
+		}
 	},
 	"kitchener": {
 		"kind": "city",
@@ -285,11 +432,18 @@
 		"region": "Ontario",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"It was Berlin until 1916, when anti-German feeling forced a change; it was renamed for Lord Kitchener.",
-			"It still holds the largest Oktoberfest outside Germany.",
-			"It sits beside Waterloo, with which it forms one urban area, and has a large Old Order Mennonite community nearby."
-		]
+		"hooks": {
+			"en": [
+				"It was Berlin until 1916, when anti-German feeling forced a change; it was renamed for Lord Kitchener.",
+				"It still holds the largest Oktoberfest outside Germany.",
+				"It sits beside Waterloo, with which it forms one urban area, and has a large Old Order Mennonite community nearby."
+			],
+			"it": [
+				"Si chiamava Berlin fino al 1916, quando il sentimento antitedesco impose un cambio; fu ribattezzata in onore di Lord Kitchener.",
+				"Ospita ancora la più grande Oktoberfest fuori dalla Germania.",
+				"Sorge accanto a Waterloo, con cui forma un’unica area urbana, e nei dintorni vive una grande comunità di mennoniti del Vecchio Ordine."
+			]
+		}
 	},
 	"hamilton": {
 		"kind": "city",
@@ -298,11 +452,18 @@
 		"region": "Ontario",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"Named for George Hamilton, who laid out the townsite in 1815.",
-			"Canada’s steel city, built on the Niagara Escarpment, which gives it over a hundred waterfalls inside the city limits.",
-			"That is more waterfalls per area than anywhere else in the world of comparable size."
-		]
+		"hooks": {
+			"en": [
+				"Named for George Hamilton, who laid out the townsite in 1815.",
+				"Canada’s steel city, built on the Niagara Escarpment, which gives it over a hundred waterfalls inside the city limits.",
+				"That is more waterfalls per area than anywhere else in the world of comparable size."
+			],
+			"it": [
+				"Prende il nome da George Hamilton, che nel 1815 tracciò la pianta dell’abitato.",
+				"La città dell’acciaio del Canada, costruita sulla scarpata del Niagara, che le regala più di cento cascate entro i confini comunali.",
+				"Nessun altro luogo al mondo di dimensioni paragonabili ha tante cascate per superficie."
+			]
+		}
 	},
 	"london": {
 		"kind": "city",
@@ -311,11 +472,18 @@
 		"region": "Ontario",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"Named for London, England, in 1793 — and it sits on its own Thames, also named to match.",
-			"It has a Covent Garden Market and an Oxford Street, following the same theme.",
-			"Insulin was conceived here in 1920, when Frederick Banting woke at two in the morning with the idea."
-		]
+		"hooks": {
+			"en": [
+				"Named for London, England, in 1793 — and it sits on its own Thames, also named to match.",
+				"It has a Covent Garden Market and an Oxford Street, following the same theme.",
+				"Insulin was conceived here in 1920, when Frederick Banting woke at two in the morning with the idea."
+			],
+			"it": [
+				"Prende il nome da Londra, in Inghilterra, dal 1793, e sorge su un Tamigi tutto suo, battezzato anch’esso per fare il paio.",
+				"Ha un Covent Garden Market e una Oxford Street, sullo stesso tema.",
+				"L’insulina fu concepita qui nel 1920, quando Frederick Banting si svegliò alle due di notte con l’idea."
+			]
+		}
 	},
 	"sarnia": {
 		"kind": "city",
@@ -324,11 +492,18 @@
 		"region": "Ontario",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"Named for Sarnia, the Roman name for Guernsey — chosen by a governor who had been its lieutenant governor.",
-			"Its Chemical Valley holds about 40% of Canada’s petrochemical industry.",
-			"The Blue Water Bridge here crosses to Michigan at the foot of Lake Huron."
-		]
+		"hooks": {
+			"en": [
+				"Named for Sarnia, the Roman name for Guernsey — chosen by a governor who had been its lieutenant governor.",
+				"Its Chemical Valley holds about 40% of Canada’s petrochemical industry.",
+				"The Blue Water Bridge here crosses to Michigan at the foot of Lake Huron."
+			],
+			"it": [
+				"Prende il nome da Sarnia, il nome romano di Guernsey: lo scelse un governatore che era stato vicegovernatore dell’isola.",
+				"La sua Chemical Valley concentra circa il 40% dell’industria petrolchimica canadese.",
+				"Qui il Blue Water Bridge passa in Michigan, all’uscita del lago Huron."
+			]
+		}
 	},
 	"windsor": {
 		"kind": "city",
@@ -337,10 +512,17 @@
 		"region": "Ontario",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"Named for Windsor in England.",
-			"The southernmost city in Canada — it is actually south of Detroit, which lies across the river to the north.",
-			"It is Canada’s automotive capital, and during Prohibition most of the liquor smuggled into America crossed here."
-		]
+		"hooks": {
+			"en": [
+				"Named for Windsor in England.",
+				"The southernmost city in Canada — it is actually south of Detroit, which lies across the river to the north.",
+				"It is Canada’s automotive capital, and during Prohibition most of the liquor smuggled into America crossed here."
+			],
+			"it": [
+				"Prende il nome da Windsor, in Inghilterra.",
+				"La città più meridionale del Canada: si trova addirittura a sud di Detroit, che sta a nord, sull’altra sponda del fiume.",
+				"È la capitale canadese dell’automobile, e durante il Proibizionismo passava da qui la maggior parte degli alcolici contrabbandati in America."
+			]
+		}
 	}
 }
