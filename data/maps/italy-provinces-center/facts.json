@@ -9,11 +9,18 @@
 		],
 		"coastal": true,
 		"position": "north",
-		"hooks": [
-			"Pesaro is from Pisaurum, the river Isaurus; Urbino from Urvinum, probably from urvus, a curved thing — the hill’s shape.",
-			"Urbino under Federico da Montefeltro was one of the great courts of the Renaissance, and its palace is a UNESCO site.",
-			"Raphael was born in Urbino and Rossini in Pesaro."
-		]
+		"hooks": {
+			"en": [
+				"Pesaro is from Pisaurum, the river Isaurus; Urbino from Urvinum, probably from urvus, a curved thing — the hill’s shape.",
+				"Urbino under Federico da Montefeltro was one of the great courts of the Renaissance, and its palace is a UNESCO site.",
+				"Raphael was born in Urbino and Rossini in Pesaro."
+			],
+			"it": [
+				"Pesaro viene da Pisaurum, dal fiume Isaurus; Urbino da Urvinum, probabilmente da urvus, \"qualcosa di curvo\": la forma del colle.",
+				"Urbino, sotto Federico da Montefeltro, fu una delle grandi corti del Rinascimento, e il suo palazzo è patrimonio UNESCO.",
+				"Raffaello nacque a Urbino e Rossini a Pesaro."
+			]
+		}
 	},
 	"arezzo": {
 		"kind": "region",
@@ -31,11 +38,18 @@
 			"population": 91589
 		},
 		"position": "north-west",
-		"hooks": [
-			"From Arretium, an Etruscan city and one of the twelve of their league.",
-			"Piero della Francesca painted the Legend of the True Cross here, one of the great fresco cycles.",
-			"Guido of Arezzo invented the modern musical staff and the do-re-mi naming of notes around 1025."
-		]
+		"hooks": {
+			"en": [
+				"From Arretium, an Etruscan city and one of the twelve of their league.",
+				"Piero della Francesca painted the Legend of the True Cross here, one of the great fresco cycles.",
+				"Guido of Arezzo invented the modern musical staff and the do-re-mi naming of notes around 1025."
+			],
+			"it": [
+				"Da Arretium, città etrusca e una delle dodici della loro lega.",
+				"Piero della Francesca vi dipinse la Leggenda della Vera Croce, uno dei grandi cicli di affreschi.",
+				"Guido d’Arezzo inventò intorno al 1025 il pentagramma moderno e il do-re-mi per dare il nome alle note."
+			]
+		}
 	},
 	"ancona": {
 		"kind": "region",
@@ -53,11 +67,18 @@
 			"population": 100507
 		},
 		"position": "north",
-		"hooks": [
-			"From Greek ankon, \"elbow\" — the shape of its promontory; it was founded by Greeks from Syracuse.",
-			"Its harbour is the only one on the Adriatic coast that faces east, so the sun both rises and sets over the sea.",
-			"Trajan’s arch of 115 AD still stands on the quay, built to thank him for paying for the port."
-		]
+		"hooks": {
+			"en": [
+				"From Greek ankon, \"elbow\" — the shape of its promontory; it was founded by Greeks from Syracuse.",
+				"Its harbour is the only one on the Adriatic coast that faces east, so the sun both rises and sets over the sea.",
+				"Trajan’s arch of 115 AD still stands on the quay, built to thank him for paying for the port."
+			],
+			"it": [
+				"Dal greco ankon, \"gomito\", la forma del suo promontorio; la fondarono Greci venuti da Siracusa.",
+				"Il suo porto è l’unico della costa adriatica rivolto a est, così il sole vi sorge e vi tramonta sul mare.",
+				"L’arco di Traiano del 115 d.C. è ancora in piedi sulla banchina, eretto per ringraziarlo di aver finanziato il porto."
+			]
+		}
 	},
 	"pisa": {
 		"kind": "region",
@@ -75,11 +96,18 @@
 			"population": 203336
 		},
 		"position": "north-west",
-		"hooks": [
-			"Probably from a Ligurian or Greek word for a river mouth or marshy ground.",
-			"Its tower began leaning before the third storey was finished, because the ground is soft on one side; it took 199 years to build.",
-			"Pisa was a maritime republic that once rivalled Genoa, and Galileo was born here."
-		]
+		"hooks": {
+			"en": [
+				"Probably from a Ligurian or Greek word for a river mouth or marshy ground.",
+				"Its tower began leaning before the third storey was finished, because the ground is soft on one side; it took 199 years to build.",
+				"Pisa was a maritime republic that once rivalled Genoa, and Galileo was born here."
+			],
+			"it": [
+				"Probabilmente da una parola ligure o greca per una foce di fiume o un terreno paludoso.",
+				"La sua torre cominciò a pendere prima che fosse finito il terzo piano, perché da un lato il terreno è cedevole; per costruirla ci vollero 199 anni.",
+				"Pisa fu una repubblica marinara che un tempo rivaleggiava con Genova, e qui nacque Galileo."
+			]
+		}
 	},
 	"livorno": {
 		"kind": "region",
@@ -96,11 +124,18 @@
 			"population": 156274
 		},
 		"position": "north-west",
-		"hooks": [
-			"Of uncertain origin; the English called it Leghorn, which is why the chicken breed is named that.",
-			"The Medici made it a free port in 1591 with a law guaranteeing religious tolerance, which drew Jews, Greeks, Armenians and Protestants.",
-			"Modigliani and Mascagni were both born here, and its Venezia quarter is cut through by canals."
-		]
+		"hooks": {
+			"en": [
+				"Of uncertain origin; the English called it Leghorn, which is why the chicken breed is named that.",
+				"The Medici made it a free port in 1591 with a law guaranteeing religious tolerance, which drew Jews, Greeks, Armenians and Protestants.",
+				"Modigliani and Mascagni were both born here, and its Venezia quarter is cut through by canals."
+			],
+			"it": [
+				"Di origine incerta; gli inglesi la chiamavano Leghorn, ed è per questo che la razza di galline porta quel nome.",
+				"I Medici ne fecero un porto franco nel 1591, con una legge che garantiva la tolleranza religiosa e che attirò ebrei, greci, armeni e protestanti.",
+				"Modigliani e Mascagni nacquero entrambi qui, e il suo quartiere della Venezia è attraversato da canali."
+			]
+		}
 	},
 	"siena": {
 		"kind": "region",
@@ -121,11 +156,18 @@
 			"population": 52625
 		},
 		"position": "north-west",
-		"hooks": [
-			"Possibly from the Etruscan Saina family or from the Senones, a Gaulish tribe.",
-			"Its Palio, a bareback horse race around the Piazza del Campo, is run twice a summer between city wards and lasts about ninety seconds.",
-			"The whole historic centre is a UNESCO site, and burnt sienna pigment is named for the local earth."
-		]
+		"hooks": {
+			"en": [
+				"Possibly from the Etruscan Saina family or from the Senones, a Gaulish tribe.",
+				"Its Palio, a bareback horse race around the Piazza del Campo, is run twice a summer between city wards and lasts about ninety seconds.",
+				"The whole historic centre is a UNESCO site, and burnt sienna pigment is named for the local earth."
+			],
+			"it": [
+				"Forse dalla famiglia etrusca dei Saina o dai Senoni, una tribù gallica.",
+				"Il suo Palio, corso con i cavalli montati a pelo intorno a Piazza del Campo, si disputa due volte ogni estate tra le contrade e dura circa novanta secondi.",
+				"Tutto il centro storico è patrimonio UNESCO, e il pigmento terra di Siena bruciata prende il nome dalla terra del luogo."
+			]
+		}
 	},
 	"macerata": {
 		"kind": "region",
@@ -138,11 +180,18 @@
 		],
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"From Latin maceria, a ruined wall — the town was built from the ruins of Roman Helvia Recina.",
-			"Its Sferisterio, built in 1829 for a ball game, is now one of Italy’s best open-air opera houses.",
-			"Matteo Ricci, the Jesuit who brought Western mathematics to China and mapped it for Europe, was born here."
-		]
+		"hooks": {
+			"en": [
+				"From Latin maceria, a ruined wall — the town was built from the ruins of Roman Helvia Recina.",
+				"Its Sferisterio, built in 1829 for a ball game, is now one of Italy’s best open-air opera houses.",
+				"Matteo Ricci, the Jesuit who brought Western mathematics to China and mapped it for Europe, was born here."
+			],
+			"it": [
+				"Dal latino maceria, \"muro in rovina\": la città fu costruita con le rovine della romana Helvia Recina.",
+				"Il suo Sferisterio, costruito nel 1829 per il gioco del pallone, è oggi uno dei migliori teatri d’opera all’aperto d’Italia.",
+				"Qui nacque Matteo Ricci, il gesuita che portò la matematica occidentale in Cina e ne disegnò le mappe per l’Europa."
+			]
+		}
 	},
 	"perugia": {
 		"kind": "region",
@@ -165,11 +214,18 @@
 			"population": 149125
 		},
 		"position": "north",
-		"hooks": [
-			"From Perusia, an Etruscan city; the name is pre-Roman and not explained.",
-			"Its Etruscan arch is still the main gate, and the university for foreigners has taught Italian to the world since 1921.",
-			"Perugina makes Baci chocolates here, and the Umbria Jazz festival is one of Europe’s largest."
-		]
+		"hooks": {
+			"en": [
+				"From Perusia, an Etruscan city; the name is pre-Roman and not explained.",
+				"Its Etruscan arch is still the main gate, and the university for foreigners has taught Italian to the world since 1921.",
+				"Perugina makes Baci chocolates here, and the Umbria Jazz festival is one of Europe’s largest."
+			],
+			"it": [
+				"Da Perusia, città etrusca; il nome è preromano e resta senza spiegazione.",
+				"Il suo arco etrusco è ancora la porta principale, e l’Università per Stranieri insegna l’italiano al mondo dal 1921.",
+				"La Perugina vi produce i Baci, e Umbria Jazz è uno dei festival più grandi d’Europa."
+			]
+		}
 	},
 	"fermo": {
 		"kind": "region",
@@ -180,11 +236,18 @@
 		],
 		"coastal": true,
 		"position": "north",
-		"hooks": [
-			"From Firmum Picenum, \"the firm place\", a Roman colony of 264 BC.",
-			"Its Roman cisterns beneath the town, 2,000 m² of vaulted chambers, still hold water after two millennia.",
-			"It was made a province again in 2004, having lost the status under Napoleon."
-		]
+		"hooks": {
+			"en": [
+				"From Firmum Picenum, \"the firm place\", a Roman colony of 264 BC.",
+				"Its Roman cisterns beneath the town, 2,000 m² of vaulted chambers, still hold water after two millennia.",
+				"It was made a province again in 2004, having lost the status under Napoleon."
+			],
+			"it": [
+				"Da Firmum Picenum, \"il luogo saldo\", colonia romana del 264 a.C.",
+				"Le sue cisterne romane sotto la città, 2.000 m² di sale a volta, contengono ancora acqua dopo due millenni.",
+				"È tornata provincia nel 2004, dopo aver perso questo rango sotto Napoleone."
+			]
+		}
 	},
 	"ascoli-piceno": {
 		"kind": "region",
@@ -198,11 +261,18 @@
 		],
 		"coastal": true,
 		"position": "centre",
-		"hooks": [
-			"From Asculum, a Picene town; the Piceni took their name from the picus, the woodpecker that legend says led them here.",
-			"Its Piazza del Popolo is paved entirely in travertine and is one of the finest Renaissance squares in Italy.",
-			"Olive all’ascolana — stuffed, breaded and fried olives — are from here and have protected status."
-		]
+		"hooks": {
+			"en": [
+				"From Asculum, a Picene town; the Piceni took their name from the picus, the woodpecker that legend says led them here.",
+				"Its Piazza del Popolo is paved entirely in travertine and is one of the finest Renaissance squares in Italy.",
+				"Olive all’ascolana — stuffed, breaded and fried olives — are from here and have protected status."
+			],
+			"it": [
+				"Da Asculum, città picena; i Piceni presero il nome dal picus, il picchio che secondo la leggenda li guidò fin qui.",
+				"La sua Piazza del Popolo è interamente lastricata di travertino ed è una delle più belle piazze rinascimentali d’Italia.",
+				"Le olive all’ascolana sono nate qui e sono un prodotto tutelato."
+			]
+		}
 	},
 	"grosseto": {
 		"kind": "region",
@@ -215,11 +285,18 @@
 		],
 		"coastal": true,
 		"position": "west",
-		"hooks": [
-			"Probably from a diminutive of grosso, or from a family name.",
-			"The Maremma around it was malarial marsh until it was drained in the 1800s and 1930s.",
-			"Its butteri are mounted cattle herders who once beat Buffalo Bill’s cowboys in a contest when his show came to Rome."
-		]
+		"hooks": {
+			"en": [
+				"Probably from a diminutive of grosso, or from a family name.",
+				"The Maremma around it was malarial marsh until it was drained in the 1800s and 1930s.",
+				"Its butteri are mounted cattle herders who once beat Buffalo Bill’s cowboys in a contest when his show came to Rome."
+			],
+			"it": [
+				"Probabilmente da un diminutivo di grosso, o da un nome di famiglia.",
+				"La Maremma che la circonda fu palude malarica finché non venne bonificata, nell’Ottocento e negli anni Trenta.",
+				"I suoi butteri una volta sconfissero in gara i cowboy di Buffalo Bill, quando il suo spettacolo arrivò a Roma."
+			]
+		}
 	},
 	"teramo": {
 		"kind": "region",
@@ -236,11 +313,18 @@
 			"elevation": 2912
 		},
 		"position": "centre",
-		"hooks": [
-			"From Interamnia, \"between the rivers\" — it sits between two.",
-			"The Gran Sasso is in this province, with the Calderone, the southernmost glacier in Europe.",
-			"A physics laboratory sits under the mountain, shielded by 1,400 m of rock, where neutrinos are detected."
-		]
+		"hooks": {
+			"en": [
+				"From Interamnia, \"between the rivers\" — it sits between two.",
+				"The Gran Sasso is in this province, with the Calderone, the southernmost glacier in Europe.",
+				"A physics laboratory sits under the mountain, shielded by 1,400 m of rock, where neutrinos are detected."
+			],
+			"it": [
+				"Da Interamnia, \"tra i fiumi\": la città sorge proprio tra due corsi d’acqua.",
+				"In questa provincia c’è il Gran Sasso, con il Calderone, il ghiacciaio più meridionale d’Europa.",
+				"Sotto la montagna c’è un laboratorio di fisica, schermato da 1.400 m di roccia, dove si rilevano i neutrini."
+			]
+		}
 	},
 	"terni": {
 		"kind": "region",
@@ -253,11 +337,18 @@
 		],
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"Also from Interamna, \"between rivers\" — the same name as Teramo, differently worn down.",
-			"St Valentine was its bishop and is buried here, which makes the town the origin of Valentine’s Day.",
-			"The Marmore falls nearby are 165 m and entirely artificial, cut by a Roman consul in 271 BC to drain a marsh."
-		]
+		"hooks": {
+			"en": [
+				"Also from Interamna, \"between rivers\" — the same name as Teramo, differently worn down.",
+				"St Valentine was its bishop and is buried here, which makes the town the origin of Valentine’s Day.",
+				"The Marmore falls nearby are 165 m and entirely artificial, cut by a Roman consul in 271 BC to drain a marsh."
+			],
+			"it": [
+				"Anche Terni viene da Interamna, \"tra i fiumi\": lo stesso nome di Teramo, consumato dal tempo in un altro modo.",
+				"San Valentino ne fu vescovo ed è sepolto qui: per questo la festa degli innamorati nasce in questa città.",
+				"La vicina cascata delle Marmore, alta 165 m, è interamente artificiale: la aprì un console romano nel 271 a.C. per prosciugare una palude."
+			]
+		}
 	},
 	"viterbo": {
 		"kind": "region",
@@ -271,11 +362,18 @@
 		],
 		"coastal": true,
 		"position": "west",
-		"hooks": [
-			"Possibly from Vetus Urbs, \"old city\", or from a pre-Roman name.",
-			"It was the papal seat in the 1200s, and the word conclave comes from an incident here: the citizens locked the cardinals in and removed the roof to hurry them along.",
-			"Its San Pellegrino quarter is one of the best-preserved medieval districts in Italy."
-		]
+		"hooks": {
+			"en": [
+				"Possibly from Vetus Urbs, \"old city\", or from a pre-Roman name.",
+				"It was the papal seat in the 1200s, and the word conclave comes from an incident here: the citizens locked the cardinals in and removed the roof to hurry them along.",
+				"Its San Pellegrino quarter is one of the best-preserved medieval districts in Italy."
+			],
+			"it": [
+				"Forse da Vetus Urbs, \"città vecchia\", o da un nome preromano.",
+				"Nel Duecento fu sede papale, e la parola conclave nasce da un episodio avvenuto qui: i cittadini chiusero a chiave i cardinali e scoperchiarono il tetto per spingerli a sbrigarsi.",
+				"Il suo quartiere di San Pellegrino è uno dei quartieri medievali meglio conservati d’Italia."
+			]
+		}
 	},
 	"rieti": {
 		"kind": "region",
@@ -291,11 +389,18 @@
 		],
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"From Reate, a Sabine town.",
-			"It claims to be the geographic centre of Italy, with a plaque in the main square to prove it.",
-			"St Francis lived in four sanctuaries in this valley and is said to have created the first Christmas nativity scene at Greccio in 1223."
-		]
+		"hooks": {
+			"en": [
+				"From Reate, a Sabine town.",
+				"It claims to be the geographic centre of Italy, with a plaque in the main square to prove it.",
+				"St Francis lived in four sanctuaries in this valley and is said to have created the first Christmas nativity scene at Greccio in 1223."
+			],
+			"it": [
+				"Da Reate, città sabina.",
+				"Si proclama centro geografico d’Italia, e nella piazza principale c’è una targa a dimostrarlo.",
+				"San Francesco visse in quattro santuari di questa valle, e si dice che a Greccio, nel 1223, abbia allestito il primo presepe."
+			]
+		}
 	},
 	"pescara": {
 		"kind": "region",
@@ -313,11 +418,18 @@
 			"population": 314789
 		},
 		"position": "centre",
-		"hooks": [
-			"From Piscaria, \"abounding in fish\", the name of the river.",
-			"Gabriele d’Annunzio was born here, and the province was created in 1927 out of parts of two others.",
-			"It has the widest beach on the Adriatic and the largest port in Abruzzo."
-		]
+		"hooks": {
+			"en": [
+				"From Piscaria, \"abounding in fish\", the name of the river.",
+				"Gabriele d’Annunzio was born here, and the province was created in 1927 out of parts of two others.",
+				"It has the widest beach on the Adriatic and the largest port in Abruzzo."
+			],
+			"it": [
+				"Da Piscaria, \"ricca di pesci\", il nome del fiume.",
+				"Qui nacque Gabriele d’Annunzio, e la provincia fu creata nel 1927 con parti di altre due.",
+				"Ha la spiaggia più ampia dell’Adriatico e il porto più grande d’Abruzzo."
+			]
+		}
 	},
 	"l-aquila": {
 		"kind": "region",
@@ -343,11 +455,18 @@
 			"elevation": 2156
 		},
 		"position": "centre",
-		"hooks": [
-			"\"The eagle\" — founded in 1254 and named for the imperial eagle, or for the 99 castles whose people came together to build it.",
-			"The city has 99 of everything by tradition: its fountain has 99 spouts and its bell tolls 99 times each night.",
-			"The 2009 earthquake killed 309 people and emptied the centre for years; restoration is still under way."
-		]
+		"hooks": {
+			"en": [
+				"\"The eagle\" — founded in 1254 and named for the imperial eagle, or for the 99 castles whose people came together to build it.",
+				"The city has 99 of everything by tradition: its fountain has 99 spouts and its bell tolls 99 times each night.",
+				"The 2009 earthquake killed 309 people and emptied the centre for years; restoration is still under way."
+			],
+			"it": [
+				"Fondata nel 1254, deve il nome all’aquila imperiale, oppure ai 99 castelli i cui abitanti si riunirono per costruirla.",
+				"Per tradizione la città ha 99 di tutto: la sua fontana ha 99 cannelle e la sua campana suona 99 rintocchi ogni sera.",
+				"Il terremoto del 2009 uccise 309 persone e svuotò il centro per anni; la ricostruzione è ancora in corso."
+			]
+		}
 	},
 	"chieti": {
 		"kind": "region",
@@ -360,11 +479,18 @@
 		],
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"From Teate, capital of the Marrucini; legend credits Achilles with founding it.",
-			"The Warrior of Capestrano, a 2.5 m stone figure from the 6th century BC, is the emblem of pre-Roman Italy and is in its museum.",
-			"Its province produces most of Abruzzo’s wine, mainly montepulciano."
-		]
+		"hooks": {
+			"en": [
+				"From Teate, capital of the Marrucini; legend credits Achilles with founding it.",
+				"The Warrior of Capestrano, a 2.5 m stone figure from the 6th century BC, is the emblem of pre-Roman Italy and is in its museum.",
+				"Its province produces most of Abruzzo’s wine, mainly montepulciano."
+			],
+			"it": [
+				"Da Teate, capitale dei Marrucini; la leggenda ne attribuisce la fondazione ad Achille.",
+				"Il Guerriero di Capestrano, una statua in pietra di 2,5 m del VI secolo a.C., è il simbolo dell’Italia preromana ed è custodito nel suo museo.",
+				"La sua provincia produce la maggior parte del vino abruzzese, soprattutto montepulciano."
+			]
+		}
 	},
 	"roma": {
 		"kind": "region",
@@ -384,11 +510,18 @@
 			"population": 3339000
 		},
 		"position": "south",
-		"hooks": [
-			"Legend says Romulus; more likely from Etruscan Ruma, a family name, or from an old word for the river.",
-			"It was the largest city in the world for about five centuries and the first to reach a million people.",
-			"Its historic centre, the Vatican and the extraterritorial properties are jointly a UNESCO site, and the Pantheon’s dome is still the largest unreinforced concrete dome ever built."
-		]
+		"hooks": {
+			"en": [
+				"Legend says Romulus; more likely from Etruscan Ruma, a family name, or from an old word for the river.",
+				"It was the largest city in the world for about five centuries and the first to reach a million people.",
+				"Its historic centre, the Vatican and the extraterritorial properties are jointly a UNESCO site, and the Pantheon’s dome is still the largest unreinforced concrete dome ever built."
+			],
+			"it": [
+				"La leggenda dice Romolo; più probabilmente viene dall’etrusco Ruma, nome di famiglia, o da un’antica parola per il fiume.",
+				"Fu la città più grande del mondo per circa cinque secoli e la prima a raggiungere il milione di abitanti.",
+				"Il centro storico, il Vaticano e le proprietà extraterritoriali sono insieme patrimonio UNESCO, e la cupola del Pantheon è ancora la più grande cupola in calcestruzzo non armato mai costruita."
+			]
+		}
 	},
 	"campobasso": {
 		"kind": "region",
@@ -406,11 +539,18 @@
 			"population": 50762
 		},
 		"position": "south-east",
-		"hooks": [
-			"\"Low field\" — campus bassus, from its position below the old castle.",
-			"It has made scissors and knives since the 1300s, a craft still practised in the town.",
-			"Its Misteri procession carries children on hidden iron frames so that they appear to float in mid-air."
-		]
+		"hooks": {
+			"en": [
+				"\"Low field\" — campus bassus, from its position below the old castle.",
+				"It has made scissors and knives since the 1300s, a craft still practised in the town.",
+				"Its Misteri procession carries children on hidden iron frames so that they appear to float in mid-air."
+			],
+			"it": [
+				"Campus bassus, il campo basso, così detto per la sua posizione sotto il vecchio castello.",
+				"Fabbrica forbici e coltelli dal Trecento, un mestiere ancora vivo in città.",
+				"La sua sfilata dei Misteri porta bambini su strutture di ferro nascoste, così che sembrino sospesi a mezz’aria."
+			]
+		}
 	},
 	"isernia": {
 		"kind": "region",
@@ -423,11 +563,18 @@
 		],
 		"coastal": false,
 		"position": "south-east",
-		"hooks": [
-			"From Aesernia, a Samnite town.",
-			"Isernia La Pineta nearby is one of the oldest human sites in Europe, with tools and butchered bone from about 600,000 years ago.",
-			"It is the smallest province in Molise, itself the least known region in Italy."
-		]
+		"hooks": {
+			"en": [
+				"From Aesernia, a Samnite town.",
+				"Isernia La Pineta nearby is one of the oldest human sites in Europe, with tools and butchered bone from about 600,000 years ago.",
+				"It is the smallest province in Molise, itself the least known region in Italy."
+			],
+			"it": [
+				"Da Aesernia, città sannita.",
+				"La vicina Isernia La Pineta è uno dei più antichi siti umani d’Europa, con strumenti e ossa macellate di circa 600.000 anni fa.",
+				"È la provincia più piccola del Molise, che a sua volta è la regione meno conosciuta d’Italia."
+			]
+		}
 	},
 	"frosinone": {
 		"kind": "region",
@@ -440,11 +587,18 @@
 		],
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"From Frusino, a Volscian town of uncertain meaning.",
-			"The abbey of Montecassino is in this province: founded by St Benedict in 529, it was destroyed four times and rebuilt each time, most recently after 1944.",
-			"Fiuggi’s water has been drunk as a cure for kidney stones since Michelangelo recommended it."
-		]
+		"hooks": {
+			"en": [
+				"From Frusino, a Volscian town of uncertain meaning.",
+				"The abbey of Montecassino is in this province: founded by St Benedict in 529, it was destroyed four times and rebuilt each time, most recently after 1944.",
+				"Fiuggi’s water has been drunk as a cure for kidney stones since Michelangelo recommended it."
+			],
+			"it": [
+				"Da Frusino, città volsca dal nome di significato incerto.",
+				"In questa provincia sorge l’abbazia di Montecassino: fondata da san Benedetto nel 529, fu distrutta quattro volte e ogni volta ricostruita, l’ultima dopo il 1944.",
+				"L’acqua di Fiuggi si beve contro i calcoli renali da quando Michelangelo la raccomandò."
+			]
+		}
 	},
 	"foggia": {
 		"kind": "region",
@@ -460,11 +614,18 @@
 			"population": 155203
 		},
 		"position": "south-east",
-		"hooks": [
-			"Probably from Latin fovea, a pit — grain was stored in underground pits here, and some survive under the streets.",
-			"The Tavoliere around it is the second largest plain in Italy and its main durum wheat area.",
-			"The Gargano promontory in the province is the spur of the boot, with its own ancient forest and the shrine of Monte Sant’Angelo, a UNESCO site."
-		]
+		"hooks": {
+			"en": [
+				"Probably from Latin fovea, a pit — grain was stored in underground pits here, and some survive under the streets.",
+				"The Tavoliere around it is the second largest plain in Italy and its main durum wheat area.",
+				"The Gargano promontory in the province is the spur of the boot, with its own ancient forest and the shrine of Monte Sant’Angelo, a UNESCO site."
+			],
+			"it": [
+				"Probabilmente dal latino fovea, \"fossa\": qui il grano si conservava in fosse sotterranee, e alcune sopravvivono sotto le strade.",
+				"Il Tavoliere che la circonda è la seconda pianura d’Italia per estensione e la sua principale area di grano duro.",
+				"Il promontorio del Gargano, in provincia, è lo sperone dello stivale, con la sua antica foresta e il santuario di Monte Sant’Angelo, patrimonio UNESCO."
+			]
+		}
 	},
 	"latina": {
 		"kind": "region",
@@ -475,10 +636,17 @@
 		],
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"Named in 1932 for Latium; it was Littoria under Fascism and renamed in 1945.",
-			"The city was built from nothing on the drained Pontine marshes, malarial swamp since antiquity.",
-			"Its rationalist architecture makes it one of the clearest examples of 1930s Italian town planning."
-		]
+		"hooks": {
+			"en": [
+				"Named in 1932 for Latium; it was Littoria under Fascism and renamed in 1945.",
+				"The city was built from nothing on the drained Pontine marshes, malarial swamp since antiquity.",
+				"Its rationalist architecture makes it one of the clearest examples of 1930s Italian town planning."
+			],
+			"it": [
+				"Chiamata così nel 1932 dal nome del Lazio; sotto il fascismo era Littoria, e fu ribattezzata nel 1945.",
+				"La città fu costruita dal nulla sulle paludi pontine bonificate, acquitrini malarici fin dall’antichità.",
+				"La sua architettura razionalista ne fa uno degli esempi più chiari dell’urbanistica italiana degli anni Trenta."
+			]
+		}
 	}
 }

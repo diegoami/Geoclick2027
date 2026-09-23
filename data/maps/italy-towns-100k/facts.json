@@ -6,11 +6,18 @@
 		"region": "Trentino-Alto Adige",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"From Tridentum, \"three teeth\", for the three peaks above it — the city’s symbol is still a trident.",
-			"The Council of Trent met here from 1545 to 1563 and defined the Catholic response to the Reformation.",
-			"Its MUSE science museum was designed by Renzo Piano, and the province makes most of Italy’s metodo classico sparkling wine."
-		]
+		"hooks": {
+			"en": [
+				"From Tridentum, \"three teeth\", for the three peaks above it — the city’s symbol is still a trident.",
+				"The Council of Trent met here from 1545 to 1563 and defined the Catholic response to the Reformation.",
+				"Its MUSE science museum was designed by Renzo Piano, and the province makes most of Italy’s metodo classico sparkling wine."
+			],
+			"it": [
+				"Da Tridentum, \"tre denti\", per le tre cime che la sovrastano: il simbolo della città è ancora un tridente.",
+				"Il Concilio di Trento si riunì qui dal 1545 al 1563 e definì la risposta cattolica alla Riforma.",
+				"Il suo museo della scienza, il MUSE, è opera di Renzo Piano, e la provincia produce la maggior parte dello spumante metodo classico italiano."
+			]
+		}
 	},
 	"udine": {
 		"kind": "city",
@@ -19,11 +26,18 @@
 		"region": "Friuli-Venezia Giulia",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"Possibly from a pre-Roman word for a height, or from Udene, an old settlement name.",
-			"The capital of Friuli, where Friulian is spoken — a Romance language in its own right, not an Italian dialect.",
-			"Its castle hill is said to have been raised by Attila’s men so he could watch Aquileia burn."
-		]
+		"hooks": {
+			"en": [
+				"Possibly from a pre-Roman word for a height, or from Udene, an old settlement name.",
+				"The capital of Friuli, where Friulian is spoken — a Romance language in its own right, not an Italian dialect.",
+				"Its castle hill is said to have been raised by Attila’s men so he could watch Aquileia burn."
+			],
+			"it": [
+				"Forse da una parola preromana che indicava un’altura, o da Udene, antico nome di un insediamento.",
+				"La capitale del Friuli, dove si parla friulano: una lingua romanza a sé, non un dialetto italiano.",
+				"Si racconta che il colle del castello sia stato innalzato dagli uomini di Attila, perché lui potesse guardare Aquileia bruciare."
+			]
+		}
 	},
 	"como": {
 		"kind": "city",
@@ -32,11 +46,18 @@
 		"region": "Lombardia",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"From Comum, a pre-Roman name of unclear meaning; Caesar settled colonists here in 59 BC.",
-			"Alessandro Volta was born here and invented the battery; the volt is named after him and there is a temple to him on the lakefront.",
-			"Its silk industry has woven for Paris and Milan since the 1500s."
-		]
+		"hooks": {
+			"en": [
+				"From Comum, a pre-Roman name of unclear meaning; Caesar settled colonists here in 59 BC.",
+				"Alessandro Volta was born here and invented the battery; the volt is named after him and there is a temple to him on the lakefront.",
+				"Its silk industry has woven for Paris and Milan since the 1500s."
+			],
+			"it": [
+				"Da Comum, nome preromano di significato oscuro; Cesare vi insediò dei coloni nel 59 a.C.",
+				"Qui nacque Alessandro Volta, l’inventore della pila; il volt prende il nome da lui, e sul lungolago c’è un tempio a lui dedicato.",
+				"La sua industria della seta tesse per Parigi e Milano dal Cinquecento."
+			]
+		}
 	},
 	"bergamo": {
 		"kind": "city",
@@ -45,11 +66,18 @@
 		"region": "Lombardia",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"From Bergomum, probably Celtic or Ligurian, from a root meaning mountain.",
-			"Its Città Alta sits inside Venetian walls that are a UNESCO site, reached by funicular from the lower town.",
-			"Donizetti was born here, and the province was the hardest hit place in Europe in the first wave of the 2020 pandemic."
-		]
+		"hooks": {
+			"en": [
+				"From Bergomum, probably Celtic or Ligurian, from a root meaning mountain.",
+				"Its Città Alta sits inside Venetian walls that are a UNESCO site, reached by funicular from the lower town.",
+				"Donizetti was born here, and the province was the hardest hit place in Europe in the first wave of the 2020 pandemic."
+			],
+			"it": [
+				"Da Bergomum, probabilmente celtico o ligure, da una radice che significa monte.",
+				"La Città Alta è racchiusa da mura veneziane patrimonio UNESCO, e dalla città bassa ci si arriva in funicolare.",
+				"Qui nacque Donizetti, e nella prima ondata della pandemia del 2020 la provincia fu il luogo più colpito d’Europa."
+			]
+		}
 	},
 	"treviso": {
 		"kind": "city",
@@ -58,11 +86,18 @@
 		"region": "Veneto",
 		"coastal": true,
 		"position": "north",
-		"hooks": [
-			"From Tarvisium, probably Celtic tarvos, \"bull\".",
-			"Prosecco comes mainly from its hills at Conegliano and Valdobbiadene, a UNESCO landscape.",
-			"Radicchio and tiramisù are both claimed by this province, the second with reasonable evidence from a restaurant in the town."
-		]
+		"hooks": {
+			"en": [
+				"From Tarvisium, probably Celtic tarvos, \"bull\".",
+				"Prosecco comes mainly from its hills at Conegliano and Valdobbiadene, a UNESCO landscape.",
+				"Radicchio and tiramisù are both claimed by this province, the second with reasonable evidence from a restaurant in the town."
+			],
+			"it": [
+				"Da Tarvisium, probabilmente dal celtico tarvos, \"toro\".",
+				"Il prosecco viene soprattutto dalle sue colline di Conegliano e Valdobbiadene, un paesaggio patrimonio UNESCO.",
+				"Questa provincia rivendica sia il radicchio sia il tiramisù, il secondo con prove ragionevoli che portano a un ristorante della città."
+			]
+		}
 	},
 	"trieste": {
 		"kind": "city",
@@ -71,11 +106,18 @@
 		"region": "Friuli-Venezia Giulia",
 		"coastal": true,
 		"position": "north",
-		"hooks": [
-			"From Tergeste, probably from a pre-Roman root terg, a market.",
-			"It was Austria’s only major port for five centuries, which is why it has Viennese coffee houses and a Habsburg waterfront.",
-			"Joyce lived here for eleven years and wrote much of Ulysses in the city, and Svevo was his English pupil."
-		]
+		"hooks": {
+			"en": [
+				"From Tergeste, probably from a pre-Roman root terg, a market.",
+				"It was Austria’s only major port for five centuries, which is why it has Viennese coffee houses and a Habsburg waterfront.",
+				"Joyce lived here for eleven years and wrote much of Ulysses in the city, and Svevo was his English pupil."
+			],
+			"it": [
+				"Da Tergeste, probabilmente dalla radice preromana terg, \"mercato\".",
+				"Per cinque secoli fu l’unico grande porto dell’Austria: per questo ha i caffè viennesi e un lungomare asburgico.",
+				"Joyce visse qui undici anni e vi scrisse buona parte dell’Ulisse, e Svevo fu suo allievo d’inglese."
+			]
+		}
 	},
 	"milano": {
 		"kind": "city",
@@ -85,11 +127,18 @@
 		"region": "Lombardia",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"From Mediolanum, \"in the middle of the plain\" — medio plus a Celtic word for a plain.",
-			"Leonardo painted the Last Supper here, on a wall that has been deteriorating since he finished it in 1498.",
-			"It is Italy’s financial capital and one of the world’s four fashion capitals, and its Duomo took nearly six centuries to build."
-		]
+		"hooks": {
+			"en": [
+				"From Mediolanum, \"in the middle of the plain\" — medio plus a Celtic word for a plain.",
+				"Leonardo painted the Last Supper here, on a wall that has been deteriorating since he finished it in 1498.",
+				"It is Italy’s financial capital and one of the world’s four fashion capitals, and its Duomo took nearly six centuries to build."
+			],
+			"it": [
+				"Da Mediolanum, \"in mezzo alla pianura\": medio più una parola celtica che significa pianura.",
+				"Qui Leonardo dipinse il Cenacolo, su un muro che si deteriora da quando lo finì, nel 1498.",
+				"È la capitale finanziaria d’Italia e una delle quattro capitali mondiali della moda, e per costruire il suo Duomo ci sono voluti quasi sei secoli."
+			]
+		}
 	},
 	"novara": {
 		"kind": "city",
@@ -98,11 +147,18 @@
 		"region": "Piemonte",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"From Novaria — nov is new and aria probably a Celtic word for a plain.",
-			"It grows more rice than anywhere else in Europe, flooded paddies that mirror the Alps in spring.",
-			"The Basilica di San Gaudenzio’s dome, 121 m, is one of the tallest brick structures in the world."
-		]
+		"hooks": {
+			"en": [
+				"From Novaria — nov is new and aria probably a Celtic word for a plain.",
+				"It grows more rice than anywhere else in Europe, flooded paddies that mirror the Alps in spring.",
+				"The Basilica di San Gaudenzio’s dome, 121 m, is one of the tallest brick structures in the world."
+			],
+			"it": [
+				"Da Novaria: nov è \"nuovo\" e aria probabilmente una parola celtica per \"pianura\".",
+				"Produce più riso di qualunque altro luogo d’Europa, in risaie allagate che in primavera riflettono le Alpi.",
+				"La cupola della basilica di San Gaudenzio, alta 121 m, è una delle strutture in mattoni più alte del mondo."
+			]
+		}
 	},
 	"verona": {
 		"kind": "city",
@@ -111,11 +167,18 @@
 		"region": "Veneto",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"Of uncertain origin, possibly Etruscan or from a Celtic personal name.",
-			"Its Roman arena from 30 AD still stages opera to 15,000 people, and the city is a UNESCO site.",
-			"Shakespeare set Romeo and Juliet here without ever visiting; the balcony was added to a medieval house in the 1930s."
-		]
+		"hooks": {
+			"en": [
+				"Of uncertain origin, possibly Etruscan or from a Celtic personal name.",
+				"Its Roman arena from 30 AD still stages opera to 15,000 people, and the city is a UNESCO site.",
+				"Shakespeare set Romeo and Juliet here without ever visiting; the balcony was added to a medieval house in the 1930s."
+			],
+			"it": [
+				"Di origine incerta, forse etrusca o da un nome personale celtico.",
+				"La sua Arena romana, del 30 d.C., ospita ancora l’opera davanti a 15.000 spettatori, e la città è patrimonio UNESCO.",
+				"Shakespeare vi ambientò Romeo e Giulietta senza esserci mai stato; il balcone fu aggiunto a una casa medievale negli anni Trenta del Novecento."
+			]
+		}
 	},
 	"venezia": {
 		"kind": "city",
@@ -124,11 +187,18 @@
 		"region": "Veneto",
 		"coastal": true,
 		"position": "north",
-		"hooks": [
-			"From the Veneti, the pre-Roman people of the region.",
-			"The city is built on about 118 islands on millions of wooden piles, and was an independent republic for 1,100 years.",
-			"Marco Polo, Vivaldi and Casanova were all Venetians, and the city has no roads at all in its historic centre."
-		]
+		"hooks": {
+			"en": [
+				"From the Veneti, the pre-Roman people of the region.",
+				"The city is built on about 118 islands on millions of wooden piles, and was an independent republic for 1,100 years.",
+				"Marco Polo, Vivaldi and Casanova were all Venetians, and the city has no roads at all in its historic centre."
+			],
+			"it": [
+				"Dai Veneti, il popolo preromano della regione.",
+				"La città sorge su circa 118 isole, sopra milioni di pali di legno, e fu una repubblica indipendente per 1.100 anni.",
+				"Marco Polo, Vivaldi e Casanova erano tutti veneziani, e nel centro storico non c’è nemmeno una strada carrozzabile."
+			]
+		}
 	},
 	"torino": {
 		"kind": "city",
@@ -138,11 +208,18 @@
 		"region": "Piemonte",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"From Augusta Taurinorum — the Taurini were the local Celtic-Ligurian people, and the bull on the city arms is a pun on their name.",
-			"It was the first capital of united Italy, from 1861 to 1865, and Fiat was founded here in 1899.",
-			"Its Mole Antonelliana, built as a synagogue and now the film museum, was the tallest brick building in the world."
-		]
+		"hooks": {
+			"en": [
+				"From Augusta Taurinorum — the Taurini were the local Celtic-Ligurian people, and the bull on the city arms is a pun on their name.",
+				"It was the first capital of united Italy, from 1861 to 1865, and Fiat was founded here in 1899.",
+				"Its Mole Antonelliana, built as a synagogue and now the film museum, was the tallest brick building in the world."
+			],
+			"it": [
+				"Da Augusta Taurinorum: i Taurini erano il popolo celto-ligure del luogo, e il toro dello stemma cittadino è un gioco di parole sul loro nome.",
+				"Fu la prima capitale dell’Italia unita, dal 1861 al 1865, e nel 1899 vi nacque la Fiat.",
+				"La sua Mole Antonelliana, nata come sinagoga e oggi sede del Museo del Cinema, era l’edificio in mattoni più alto del mondo."
+			]
+		}
 	},
 	"ferrara": {
 		"kind": "city",
@@ -151,11 +228,18 @@
 		"region": "Emilia-Romagna",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"Possibly from ferrum, iron, or from a word for a ferry crossing on the Po.",
-			"The Este dukes made it a Renaissance capital, and its 1492 town extension is considered the first modern urban plan in Europe.",
-			"It is a UNESCO site, and the whole city is ringed by nine kilometres of walls you can cycle on."
-		]
+		"hooks": {
+			"en": [
+				"Possibly from ferrum, iron, or from a word for a ferry crossing on the Po.",
+				"The Este dukes made it a Renaissance capital, and its 1492 town extension is considered the first modern urban plan in Europe.",
+				"It is a UNESCO site, and the whole city is ringed by nine kilometres of walls you can cycle on."
+			],
+			"it": [
+				"Forse da ferrum, il ferro, o da una parola che indica un passaggio in traghetto sul Po.",
+				"Gli Este ne fecero una capitale del Rinascimento, e il suo ampliamento urbano del 1492 è considerato il primo piano urbanistico moderno d’Europa.",
+				"È patrimonio UNESCO, e l’intera città è cinta da nove chilometri di mura che si possono percorrere in bicicletta."
+			]
+		}
 	},
 	"parma": {
 		"kind": "city",
@@ -164,11 +248,18 @@
 		"region": "Emilia-Romagna",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"Probably from an Etruscan or Ligurian word, or from the Latin for a round shield.",
-			"Parmigiano Reggiano and prosciutto di Parma are both from here and both protected.",
-			"Correggio painted its cathedral dome, Verdi was born in the province, and Toscanini in the city."
-		]
+		"hooks": {
+			"en": [
+				"Probably from an Etruscan or Ligurian word, or from the Latin for a round shield.",
+				"Parmigiano Reggiano and prosciutto di Parma are both from here and both protected.",
+				"Correggio painted its cathedral dome, Verdi was born in the province, and Toscanini in the city."
+			],
+			"it": [
+				"Probabilmente da una parola etrusca o ligure, o dal termine latino per lo scudo rotondo.",
+				"Il Parmigiano Reggiano e il prosciutto di Parma vengono entrambi da qui, ed entrambi sono tutelati.",
+				"Correggio affrescò la cupola del suo duomo, Verdi nacque in provincia e Toscanini in città."
+			]
+		}
 	},
 	"modena": {
 		"kind": "city",
@@ -177,11 +268,18 @@
 		"region": "Emilia-Romagna",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"From Mutina, probably Etruscan.",
-			"Ferrari, Maserati, Lamborghini, De Tomaso and Pagani are all built within a few kilometres of the city.",
-			"Its cathedral and Ghirlandina tower are a UNESCO site, and traditional balsamic vinegar is aged here for at least twelve years."
-		]
+		"hooks": {
+			"en": [
+				"From Mutina, probably Etruscan.",
+				"Ferrari, Maserati, Lamborghini, De Tomaso and Pagani are all built within a few kilometres of the city.",
+				"Its cathedral and Ghirlandina tower are a UNESCO site, and traditional balsamic vinegar is aged here for at least twelve years."
+			],
+			"it": [
+				"Da Mutina, probabilmente etrusco.",
+				"Ferrari, Maserati, Lamborghini, De Tomaso e Pagani si costruiscono tutte a pochi chilometri dalla città.",
+				"Il duomo e la torre Ghirlandina sono patrimonio UNESCO, e qui l’aceto balsamico tradizionale invecchia per almeno dodici anni."
+			]
+		}
 	},
 	"bologna": {
 		"kind": "city",
@@ -190,11 +288,18 @@
 		"region": "Emilia-Romagna",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"From Bononia, a Celtic Boii settlement Latinised — the Boii also named Bohemia.",
-			"Its university, founded 1088, is the oldest continuously operating one in the world.",
-			"It has about 38 km of arcaded porticoes, a UNESCO site, and is nicknamed la dotta, la grassa, la rossa — learned, fat and red."
-		]
+		"hooks": {
+			"en": [
+				"From Bononia, a Celtic Boii settlement Latinised — the Boii also named Bohemia.",
+				"Its university, founded 1088, is the oldest continuously operating one in the world.",
+				"It has about 38 km of arcaded porticoes, a UNESCO site, and is nicknamed la dotta, la grassa, la rossa — learned, fat and red."
+			],
+			"it": [
+				"Da Bononia, un centro celtico dei Boi poi latinizzato: i Boi diedero il nome anche alla Boemia.",
+				"La sua università, fondata nel 1088, è la più antica del mondo tra quelle in attività ininterrotta.",
+				"Ha circa 38 km di portici, patrimonio UNESCO, ed è soprannominata la dotta, la grassa, la rossa."
+			]
+		}
 	},
 	"ravenna": {
 		"kind": "city",
@@ -203,11 +308,18 @@
 		"region": "Emilia-Romagna",
 		"coastal": true,
 		"position": "north",
-		"hooks": [
-			"Of uncertain, possibly Etruscan or Umbrian, origin.",
-			"It was capital of the Western Roman Empire, then of the Ostrogoths, then of Byzantine Italy.",
-			"Its eight early Christian buildings hold the finest mosaics in the world and are a UNESCO site; Dante is buried here."
-		]
+		"hooks": {
+			"en": [
+				"Of uncertain, possibly Etruscan or Umbrian, origin.",
+				"It was capital of the Western Roman Empire, then of the Ostrogoths, then of Byzantine Italy.",
+				"Its eight early Christian buildings hold the finest mosaics in the world and are a UNESCO site; Dante is buried here."
+			],
+			"it": [
+				"Di origine incerta, forse etrusca o umbra.",
+				"Fu capitale dell’Impero romano d’Occidente, poi degli Ostrogoti, poi dell’Italia bizantina.",
+				"I suoi otto edifici paleocristiani custodiscono i mosaici più belli del mondo e sono patrimonio UNESCO; qui è sepolto Dante."
+			]
+		}
 	},
 	"genova": {
 		"kind": "city",
@@ -216,11 +328,18 @@
 		"region": "Liguria",
 		"coastal": true,
 		"position": "north-west",
-		"hooks": [
-			"Possibly from a Ligurian root genu, a knee or a mouth — the bend of its harbour.",
-			"Columbus was born here, and the republic of Genoa ran a trading empire from Crimea to Gibraltar.",
-			"Its Rolli palaces are a UNESCO site, and pesto, focaccia and the jeans fabric named for Gênes all come from the city."
-		]
+		"hooks": {
+			"en": [
+				"Possibly from a Ligurian root genu, a knee or a mouth — the bend of its harbour.",
+				"Columbus was born here, and the republic of Genoa ran a trading empire from Crimea to Gibraltar.",
+				"Its Rolli palaces are a UNESCO site, and pesto, focaccia and the jeans fabric named for Gênes all come from the city."
+			],
+			"it": [
+				"Forse dalla radice ligure genu, \"ginocchio\" o \"bocca\": la curva del suo porto.",
+				"Qui nacque Colombo, e la Repubblica di Genova resse un impero commerciale dalla Crimea a Gibilterra.",
+				"I palazzi dei Rolli sono patrimonio UNESCO, e dalla città vengono il pesto, la focaccia e il tessuto dei jeans, che prende il nome da Gênes."
+			]
+		}
 	},
 	"firenze": {
 		"kind": "city",
@@ -229,11 +348,18 @@
 		"region": "Toscana",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"From Florentia, \"flourishing\" — a Roman colony of 59 BC for Caesar’s veterans.",
-			"The Renaissance began here: Brunelleschi’s dome, still the largest masonry dome in the world, was raised without a supporting framework.",
-			"Its dialect became standard Italian because Dante, Petrarch and Boccaccio all wrote in it."
-		]
+		"hooks": {
+			"en": [
+				"From Florentia, \"flourishing\" — a Roman colony of 59 BC for Caesar’s veterans.",
+				"The Renaissance began here: Brunelleschi’s dome, still the largest masonry dome in the world, was raised without a supporting framework.",
+				"Its dialect became standard Italian because Dante, Petrarch and Boccaccio all wrote in it."
+			],
+			"it": [
+				"Da Florentia, \"la fiorente\": colonia romana del 59 a.C. per i veterani di Cesare.",
+				"Qui è cominciato il Rinascimento: la cupola del Brunelleschi, ancora oggi la più grande cupola in muratura del mondo, fu innalzata senza centine.",
+				"Il suo dialetto è diventato l’italiano perché Dante, Petrarca e Boccaccio scrissero tutti in fiorentino."
+			]
+		}
 	},
 	"pisa": {
 		"kind": "city",
@@ -242,11 +368,18 @@
 		"region": "Toscana",
 		"coastal": true,
 		"position": "north-west",
-		"hooks": [
-			"Probably from a Ligurian or Greek word for a river mouth or marshy ground.",
-			"Its tower began leaning before the third storey was finished, because the ground is soft on one side; it took 199 years to build.",
-			"Pisa was a maritime republic that once rivalled Genoa, and Galileo was born here."
-		]
+		"hooks": {
+			"en": [
+				"Probably from a Ligurian or Greek word for a river mouth or marshy ground.",
+				"Its tower began leaning before the third storey was finished, because the ground is soft on one side; it took 199 years to build.",
+				"Pisa was a maritime republic that once rivalled Genoa, and Galileo was born here."
+			],
+			"it": [
+				"Probabilmente da una parola ligure o greca per una foce di fiume o un terreno paludoso.",
+				"La sua torre cominciò a pendere prima che fosse finito il terzo piano, perché da un lato il terreno è cedevole; per costruirla ci vollero 199 anni.",
+				"Pisa fu una repubblica marinara che un tempo rivaleggiava con Genova, e qui nacque Galileo."
+			]
+		}
 	},
 	"ancona": {
 		"kind": "city",
@@ -255,11 +388,18 @@
 		"region": "Marche",
 		"coastal": true,
 		"position": "north",
-		"hooks": [
-			"From Greek ankon, \"elbow\" — the shape of its promontory; it was founded by Greeks from Syracuse.",
-			"Its harbour is the only one on the Adriatic coast that faces east, so the sun both rises and sets over the sea.",
-			"Trajan’s arch of 115 AD still stands on the quay, built to thank him for paying for the port."
-		]
+		"hooks": {
+			"en": [
+				"From Greek ankon, \"elbow\" — the shape of its promontory; it was founded by Greeks from Syracuse.",
+				"Its harbour is the only one on the Adriatic coast that faces east, so the sun both rises and sets over the sea.",
+				"Trajan’s arch of 115 AD still stands on the quay, built to thank him for paying for the port."
+			],
+			"it": [
+				"Dal greco ankon, \"gomito\", la forma del suo promontorio; la fondarono Greci venuti da Siracusa.",
+				"Il suo porto è l’unico della costa adriatica rivolto a est, così il sole vi sorge e vi tramonta sul mare.",
+				"L’arco di Traiano del 115 d.C. è ancora in piedi sulla banchina, eretto per ringraziarlo di aver finanziato il porto."
+			]
+		}
 	},
 	"livorno": {
 		"kind": "city",
@@ -268,11 +408,18 @@
 		"region": "Toscana",
 		"coastal": true,
 		"position": "north-west",
-		"hooks": [
-			"Of uncertain origin; the English called it Leghorn, which is why the chicken breed is named that.",
-			"The Medici made it a free port in 1591 with a law guaranteeing religious tolerance, which drew Jews, Greeks, Armenians and Protestants.",
-			"Modigliani and Mascagni were both born here, and its Venezia quarter is cut through by canals."
-		]
+		"hooks": {
+			"en": [
+				"Of uncertain origin; the English called it Leghorn, which is why the chicken breed is named that.",
+				"The Medici made it a free port in 1591 with a law guaranteeing religious tolerance, which drew Jews, Greeks, Armenians and Protestants.",
+				"Modigliani and Mascagni were both born here, and its Venezia quarter is cut through by canals."
+			],
+			"it": [
+				"Di origine incerta; gli inglesi la chiamavano Leghorn, ed è per questo che la razza di galline porta quel nome.",
+				"I Medici ne fecero un porto franco nel 1591, con una legge che garantiva la tolleranza religiosa e che attirò ebrei, greci, armeni e protestanti.",
+				"Modigliani e Mascagni nacquero entrambi qui, e il suo quartiere della Venezia è attraversato da canali."
+			]
+		}
 	},
 	"perugia": {
 		"kind": "city",
@@ -281,11 +428,18 @@
 		"region": "Umbria",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"From Perusia, an Etruscan city; the name is pre-Roman and not explained.",
-			"Its Etruscan arch is still the main gate, and the university for foreigners has taught Italian to the world since 1921.",
-			"Perugina makes Baci chocolates here, and the Umbria Jazz festival is one of Europe’s largest."
-		]
+		"hooks": {
+			"en": [
+				"From Perusia, an Etruscan city; the name is pre-Roman and not explained.",
+				"Its Etruscan arch is still the main gate, and the university for foreigners has taught Italian to the world since 1921.",
+				"Perugina makes Baci chocolates here, and the Umbria Jazz festival is one of Europe’s largest."
+			],
+			"it": [
+				"Da Perusia, città etrusca; il nome è preromano e resta senza spiegazione.",
+				"Il suo arco etrusco è ancora la porta principale, e l’Università per Stranieri insegna l’italiano al mondo dal 1921.",
+				"La Perugina vi produce i Baci, e Umbria Jazz è uno dei festival più grandi d’Europa."
+			]
+		}
 	},
 	"pescara": {
 		"kind": "city",
@@ -294,11 +448,18 @@
 		"region": "Abruzzo",
 		"coastal": true,
 		"position": "centre",
-		"hooks": [
-			"From Piscaria, \"abounding in fish\", the name of the river.",
-			"Gabriele d’Annunzio was born here, and the province was created in 1927 out of parts of two others.",
-			"It has the widest beach on the Adriatic and the largest port in Abruzzo."
-		]
+		"hooks": {
+			"en": [
+				"From Piscaria, \"abounding in fish\", the name of the river.",
+				"Gabriele d’Annunzio was born here, and the province was created in 1927 out of parts of two others.",
+				"It has the widest beach on the Adriatic and the largest port in Abruzzo."
+			],
+			"it": [
+				"Da Piscaria, \"ricca di pesci\", il nome del fiume.",
+				"Qui nacque Gabriele d’Annunzio, e la provincia fu creata nel 1927 con parti di altre due.",
+				"Ha la spiaggia più ampia dell’Adriatico e il porto più grande d’Abruzzo."
+			]
+		}
 	},
 	"roma": {
 		"kind": "city",
@@ -309,11 +470,18 @@
 		"capitalOf": "country",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"Legend says Romulus; more likely from Etruscan Ruma, a family name, or from an old word for the river.",
-			"It was the largest city in the world for about five centuries and the first to reach a million people.",
-			"Its historic centre, the Vatican and the extraterritorial properties are jointly a UNESCO site, and the Pantheon’s dome is still the largest unreinforced concrete dome ever built."
-		]
+		"hooks": {
+			"en": [
+				"Legend says Romulus; more likely from Etruscan Ruma, a family name, or from an old word for the river.",
+				"It was the largest city in the world for about five centuries and the first to reach a million people.",
+				"Its historic centre, the Vatican and the extraterritorial properties are jointly a UNESCO site, and the Pantheon’s dome is still the largest unreinforced concrete dome ever built."
+			],
+			"it": [
+				"La leggenda dice Romolo; più probabilmente viene dall’etrusco Ruma, nome di famiglia, o da un’antica parola per il fiume.",
+				"Fu la città più grande del mondo per circa cinque secoli e la prima a raggiungere il milione di abitanti.",
+				"Il centro storico, il Vaticano e le proprietà extraterritoriali sono insieme patrimonio UNESCO, e la cupola del Pantheon è ancora la più grande cupola in calcestruzzo non armato mai costruita."
+			]
+		}
 	},
 	"foggia": {
 		"kind": "city",
@@ -322,11 +490,18 @@
 		"region": "Apulia",
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"Probably from Latin fovea, a pit — grain was stored in underground pits here, and some survive under the streets.",
-			"The Tavoliere around it is the second largest plain in Italy and its main durum wheat area.",
-			"The Gargano promontory in the province is the spur of the boot, with its own ancient forest and the shrine of Monte Sant’Angelo, a UNESCO site."
-		]
+		"hooks": {
+			"en": [
+				"Probably from Latin fovea, a pit — grain was stored in underground pits here, and some survive under the streets.",
+				"The Tavoliere around it is the second largest plain in Italy and its main durum wheat area.",
+				"The Gargano promontory in the province is the spur of the boot, with its own ancient forest and the shrine of Monte Sant’Angelo, a UNESCO site."
+			],
+			"it": [
+				"Probabilmente dal latino fovea, \"fossa\": qui il grano si conservava in fosse sotterranee, e alcune sopravvivono sotto le strade.",
+				"Il Tavoliere che la circonda è la seconda pianura d’Italia per estensione e la sua principale area di grano duro.",
+				"Il promontorio del Gargano, in provincia, è lo sperone dello stivale, con la sua antica foresta e il santuario di Monte Sant’Angelo, patrimonio UNESCO."
+			]
+		}
 	},
 	"barletta": {
 		"kind": "city",
@@ -335,11 +510,18 @@
 		"region": "Apulia",
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"From an older Barduli, of uncertain origin — the town shares its name with the Barletta-Andria-Trani province it helps head.",
-			"The Disfida di Barletta of 1503 was a duel of thirteen Italian knights against thirteen French, and Italy has celebrated the win ever since.",
-			"Its Colossus, a 5 m bronze Roman emperor, has stood in the street since crusaders left it behind in the 1200s."
-		]
+		"hooks": {
+			"en": [
+				"From an older Barduli, of uncertain origin — the town shares its name with the Barletta-Andria-Trani province it helps head.",
+				"The Disfida di Barletta of 1503 was a duel of thirteen Italian knights against thirteen French, and Italy has celebrated the win ever since.",
+				"Its Colossus, a 5 m bronze Roman emperor, has stood in the street since crusaders left it behind in the 1200s."
+			],
+			"it": [
+				"Da un più antico Barduli, di origine incerta: la città condivide il nome con la provincia di Barletta-Andria-Trani, di cui è uno dei capoluoghi.",
+				"La Disfida di Barletta, nel 1503, fu un duello tra tredici cavalieri italiani e tredici francesi, e da allora l’Italia celebra quella vittoria.",
+				"Il suo Colosso, un imperatore romano in bronzo alto 5 m, sta in strada da quando i crociati lo lasciarono lì nel Duecento."
+			]
+		}
 	},
 	"bari": {
 		"kind": "city",
@@ -348,11 +530,18 @@
 		"region": "Apulia",
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"From Barium, of pre-Roman origin.",
-			"The relics of St Nicholas were stolen from Myra by Bari sailors in 1087 and brought here, making it a pilgrimage site for Orthodox Christians too.",
-			"Its old town women make orecchiette pasta by hand in the street, and the province is a major olive oil producer."
-		]
+		"hooks": {
+			"en": [
+				"From Barium, of pre-Roman origin.",
+				"The relics of St Nicholas were stolen from Myra by Bari sailors in 1087 and brought here, making it a pilgrimage site for Orthodox Christians too.",
+				"Its old town women make orecchiette pasta by hand in the street, and the province is a major olive oil producer."
+			],
+			"it": [
+				"Da Barium, di origine preromana.",
+				"Le reliquie di san Nicola furono trafugate da Mira da marinai baresi nel 1087 e portate qui, facendone meta di pellegrinaggio anche per i cristiani ortodossi.",
+				"Nella città vecchia le donne fanno le orecchiette a mano per strada, e la provincia è una grande produttrice di olio d’oliva."
+			]
+		}
 	},
 	"caserta": {
 		"kind": "city",
@@ -361,11 +550,18 @@
 		"region": "Campania",
 		"coastal": false,
 		"position": "centre",
-		"hooks": [
-			"From casa irta, \"the house on the height\", the old hilltop village.",
-			"Its royal palace has 1,200 rooms and is the largest by volume in the world, built to rival Versailles; it is a UNESCO site.",
-			"Its aqueduct, also UNESCO-listed, carries water 38 km including across a three-tier bridge."
-		]
+		"hooks": {
+			"en": [
+				"From casa irta, \"the house on the height\", the old hilltop village.",
+				"Its royal palace has 1,200 rooms and is the largest by volume in the world, built to rival Versailles; it is a UNESCO site.",
+				"Its aqueduct, also UNESCO-listed, carries water 38 km including across a three-tier bridge."
+			],
+			"it": [
+				"Da casa irta, la casa arroccata sull’altura: l’antico borgo in collina.",
+				"La sua Reggia ha 1.200 stanze ed è la più grande al mondo per volume, costruita per rivaleggiare con Versailles; è patrimonio UNESCO.",
+				"Il suo acquedotto, anch’esso patrimonio UNESCO, porta l’acqua per 38 km, passando anche su un ponte a tre ordini di arcate."
+			]
+		}
 	},
 	"napoli": {
 		"kind": "city",
@@ -375,11 +571,18 @@
 		"region": "Campania",
 		"coastal": true,
 		"position": "centre",
-		"hooks": [
-			"From Greek Neapolis, \"new city\" — founded by Greeks around 600 BC, so the \"new\" city is 2,600 years old.",
-			"Vesuvius above it buried Pompeii and Herculaneum in 79 AD, and both are UNESCO sites.",
-			"Pizza was invented here, and Neapolitan pizza-making is on the UNESCO intangible heritage list."
-		]
+		"hooks": {
+			"en": [
+				"From Greek Neapolis, \"new city\" — founded by Greeks around 600 BC, so the \"new\" city is 2,600 years old.",
+				"Vesuvius above it buried Pompeii and Herculaneum in 79 AD, and both are UNESCO sites.",
+				"Pizza was invented here, and Neapolitan pizza-making is on the UNESCO intangible heritage list."
+			],
+			"it": [
+				"Dal greco Neapolis, \"città nuova\": fondata dai Greci intorno al 600 a.C., la città \"nuova\" ha 2.600 anni.",
+				"Il Vesuvio, che la sovrasta, seppellì Pompei ed Ercolano nel 79 d.C., ed entrambe sono patrimonio UNESCO.",
+				"Qui è nata la pizza, e l’arte del pizzaiuolo napoletano è nella lista UNESCO del patrimonio immateriale."
+			]
+		}
 	},
 	"sassari": {
 		"kind": "city",
@@ -388,11 +591,18 @@
 		"region": "Sardegna",
 		"coastal": true,
 		"position": "west",
-		"hooks": [
-			"Of uncertain origin, possibly from a Latin or Sardinian word for a stony place.",
-			"Its Cavalcata Sarda brings costumes from across Sardinia, and the Candelieri festival carries wooden columns through the streets.",
-			"The province holds many of the island’s nuraghi, Bronze Age stone towers found nowhere else in the world."
-		]
+		"hooks": {
+			"en": [
+				"Of uncertain origin, possibly from a Latin or Sardinian word for a stony place.",
+				"Its Cavalcata Sarda brings costumes from across Sardinia, and the Candelieri festival carries wooden columns through the streets.",
+				"The province holds many of the island’s nuraghi, Bronze Age stone towers found nowhere else in the world."
+			],
+			"it": [
+				"Di origine incerta, forse da una parola latina o sarda per un luogo pietroso.",
+				"La sua Cavalcata Sarda raduna costumi da tutta la Sardegna, e la festa dei Candelieri porta per le strade colonne di legno.",
+				"La provincia custodisce molti dei nuraghi dell’isola, torri di pietra dell’età del bronzo che non esistono in nessun’altra parte del mondo."
+			]
+		}
 	},
 	"salerno": {
 		"kind": "city",
@@ -401,11 +611,18 @@
 		"region": "Campania",
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"Probably from a pre-Roman root sal, salt or a river name.",
-			"Its medical school was the first in the Western world, active from the 800s, and admitted women.",
-			"The Amalfi Coast is in this province, a UNESCO site, and the Greek temples at Paestum are better preserved than most in Greece."
-		]
+		"hooks": {
+			"en": [
+				"Probably from a pre-Roman root sal, salt or a river name.",
+				"Its medical school was the first in the Western world, active from the 800s, and admitted women.",
+				"The Amalfi Coast is in this province, a UNESCO site, and the Greek temples at Paestum are better preserved than most in Greece."
+			],
+			"it": [
+				"Probabilmente da una radice preromana sal, \"sale\", o da un nome di fiume.",
+				"La sua Scuola Medica fu la prima del mondo occidentale, attiva dal IX secolo, e ammetteva le donne.",
+				"La Costiera Amalfitana, patrimonio UNESCO, è in questa provincia, e i templi greci di Paestum sono meglio conservati di quasi tutti quelli in Grecia."
+			]
+		}
 	},
 	"brindisi": {
 		"kind": "city",
@@ -414,11 +631,18 @@
 		"region": "Apulia",
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"From Messapic brention, \"deer’s head\", for the shape of its harbour.",
-			"The Appian Way ended here, and its terminal column still stands on the waterfront.",
-			"Virgil died in the town in 19 BC on his way back from Greece."
-		]
+		"hooks": {
+			"en": [
+				"From Messapic brention, \"deer’s head\", for the shape of its harbour.",
+				"The Appian Way ended here, and its terminal column still stands on the waterfront.",
+				"Virgil died in the town in 19 BC on his way back from Greece."
+			],
+			"it": [
+				"Dal messapico brention, \"testa di cervo\", per la forma del suo porto.",
+				"Qui finiva la via Appia, e la sua colonna terminale è ancora in piedi sul lungomare.",
+				"Virgilio morì in città nel 19 a.C., di ritorno dalla Grecia."
+			]
+		}
 	},
 	"taranto": {
 		"kind": "city",
@@ -427,11 +651,18 @@
 		"region": "Apulia",
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"From Greek Taras, named for a son of Poseidon; it was the most powerful Greek colony in Italy.",
-			"It has two seas: a closed lagoon and the open gulf, joined by a channel with a swing bridge.",
-			"Its Ilva steelworks is the largest in Europe and has been the subject of a long fight over pollution and employment."
-		]
+		"hooks": {
+			"en": [
+				"From Greek Taras, named for a son of Poseidon; it was the most powerful Greek colony in Italy.",
+				"It has two seas: a closed lagoon and the open gulf, joined by a channel with a swing bridge.",
+				"Its Ilva steelworks is the largest in Europe and has been the subject of a long fight over pollution and employment."
+			],
+			"it": [
+				"Dal greco Taras, dal nome di un figlio di Poseidone; fu la più potente colonia greca d’Italia.",
+				"Ha due mari: una laguna chiusa e il golfo aperto, uniti da un canale con un ponte girevole.",
+				"La sua acciaieria, l’Ilva, è la più grande d’Europa ed è da anni al centro di un lungo scontro tra inquinamento e occupazione."
+			]
+		}
 	},
 	"lecce": {
 		"kind": "city",
@@ -440,11 +671,18 @@
 		"region": "Apulia",
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"From Lupiae, a Messapic town.",
-			"Called the Florence of the south for its baroque, carved from a local limestone soft enough to work like wood.",
-			"The Salento around it is where pizzica, the tarantella danced to cure a spider bite, comes from."
-		]
+		"hooks": {
+			"en": [
+				"From Lupiae, a Messapic town.",
+				"Called the Florence of the south for its baroque, carved from a local limestone soft enough to work like wood.",
+				"The Salento around it is where pizzica, the tarantella danced to cure a spider bite, comes from."
+			],
+			"it": [
+				"Da Lupiae, città messapica.",
+				"È detta la Firenze del Sud per il suo barocco, scolpito in una pietra calcarea locale così tenera da lavorarsi come il legno.",
+				"Dal Salento che la circonda viene la pizzica, la tarantella danzata per guarire dal morso di un ragno."
+			]
+		}
 	},
 	"cagliari": {
 		"kind": "city",
@@ -453,11 +691,18 @@
 		"region": "Sardegna",
 		"coastal": true,
 		"position": "south-west",
-		"hooks": [
-			"From Karalis, probably Phoenician, meaning something like \"rocky place\".",
-			"Its Roman amphitheatre is cut directly into the rock of the hillside.",
-			"Flamingos breed in the salt pans inside the city limits, thousands of them, within sight of the apartment blocks."
-		]
+		"hooks": {
+			"en": [
+				"From Karalis, probably Phoenician, meaning something like \"rocky place\".",
+				"Its Roman amphitheatre is cut directly into the rock of the hillside.",
+				"Flamingos breed in the salt pans inside the city limits, thousands of them, within sight of the apartment blocks."
+			],
+			"it": [
+				"Da Karalis, probabilmente fenicio, con un significato simile a \"luogo roccioso\".",
+				"Il suo anfiteatro romano è scavato direttamente nella roccia della collina.",
+				"I fenicotteri nidificano a migliaia nelle saline dentro i confini comunali, in vista dei condomini."
+			]
+		}
 	},
 	"messina": {
 		"kind": "city",
@@ -466,11 +711,18 @@
 		"region": "Sicily",
 		"coastal": true,
 		"position": "south-east",
-		"hooks": [
-			"From Greek Messene, renamed after the city in the Peloponnese.",
-			"The 1908 earthquake and tsunami killed about 80,000 people and destroyed almost the entire city.",
-			"Its strait is where Scylla and Charybdis were placed in the Odyssey, and the currents there really are dangerous."
-		]
+		"hooks": {
+			"en": [
+				"From Greek Messene, renamed after the city in the Peloponnese.",
+				"The 1908 earthquake and tsunami killed about 80,000 people and destroyed almost the entire city.",
+				"Its strait is where Scylla and Charybdis were placed in the Odyssey, and the currents there really are dangerous."
+			],
+			"it": [
+				"Dal greco Messene: fu ribattezzata così dalla città omonima del Peloponneso.",
+				"Il terremoto e il maremoto del 1908 uccisero circa 80.000 persone e distrussero quasi tutta la città.",
+				"Nel suo stretto l’Odissea colloca Scilla e Cariddi, e le correnti lì sono davvero pericolose."
+			]
+		}
 	},
 	"palermo": {
 		"kind": "city",
@@ -480,11 +732,18 @@
 		"region": "Sicily",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"From Greek Panormos, \"all harbour\" — the whole bay is one.",
-			"It has been Phoenician, Greek, Roman, Byzantine, Arab, Norman, Swabian and Spanish, and its Arab-Norman buildings are a UNESCO site.",
-			"Its street markets still use Arabic-derived cries, and the Capuchin catacombs hold 8,000 mummified bodies."
-		]
+		"hooks": {
+			"en": [
+				"From Greek Panormos, \"all harbour\" — the whole bay is one.",
+				"It has been Phoenician, Greek, Roman, Byzantine, Arab, Norman, Swabian and Spanish, and its Arab-Norman buildings are a UNESCO site.",
+				"Its street markets still use Arabic-derived cries, and the Capuchin catacombs hold 8,000 mummified bodies."
+			],
+			"it": [
+				"Dal greco Panormos, \"tutto porto\": l’intera baia è un unico porto.",
+				"È stata fenicia, greca, romana, bizantina, araba, normanna, sveva e spagnola, e i suoi edifici arabo-normanni sono patrimonio UNESCO.",
+				"Nei suoi mercati di strada si sentono ancora grida di origine araba, e le catacombe dei Cappuccini custodiscono 8.000 corpi mummificati."
+			]
+		}
 	},
 	"reggio-calabria": {
 		"kind": "city",
@@ -493,11 +752,18 @@
 		"region": "Calabria",
 		"coastal": true,
 		"position": "south-east",
-		"hooks": [
-			"From Greek Rhegion, probably from rhegnumi, \"to break\" — the point where Sicily broke away from the mainland.",
-			"The Riace bronzes, two Greek warrior statues from about 450 BC, were found offshore in 1972 and are in its museum.",
-			"Its seafront was called the most beautiful kilometre in Italy by d’Annunzio, looking across to Etna."
-		]
+		"hooks": {
+			"en": [
+				"From Greek Rhegion, probably from rhegnumi, \"to break\" — the point where Sicily broke away from the mainland.",
+				"The Riace bronzes, two Greek warrior statues from about 450 BC, were found offshore in 1972 and are in its museum.",
+				"Its seafront was called the most beautiful kilometre in Italy by d’Annunzio, looking across to Etna."
+			],
+			"it": [
+				"Dal greco Rhegion, probabilmente da rhegnumi, \"spezzare\": il punto in cui la Sicilia si staccò dalla terraferma.",
+				"I Bronzi di Riace, due statue greche di guerrieri del 450 a.C. circa, furono ritrovati in mare nel 1972 e sono nel suo museo.",
+				"D’Annunzio definì il suo lungomare, affacciato sull’Etna, il più bel chilometro d’Italia."
+			]
+		}
 	},
 	"catania": {
 		"kind": "city",
@@ -506,11 +772,18 @@
 		"region": "Sicily",
 		"coastal": true,
 		"position": "south-east",
-		"hooks": [
-			"Possibly from Sicel katane, a grater or rough stone, for the lava field it is built on.",
-			"Etna has destroyed it repeatedly; after 1693 it was rebuilt in black-and-white baroque that is a UNESCO site.",
-			"Bellini was born here, and the city’s emblem is a Roman elephant carved in lava."
-		]
+		"hooks": {
+			"en": [
+				"Possibly from Sicel katane, a grater or rough stone, for the lava field it is built on.",
+				"Etna has destroyed it repeatedly; after 1693 it was rebuilt in black-and-white baroque that is a UNESCO site.",
+				"Bellini was born here, and the city’s emblem is a Roman elephant carved in lava."
+			],
+			"it": [
+				"Forse dal siculo katane, \"grattugia\" o \"pietra ruvida\", per il campo di lava su cui è costruita.",
+				"L’Etna l’ha distrutta più volte; dopo il 1693 fu ricostruita in un barocco bianco e nero che è patrimonio UNESCO.",
+				"Qui nacque Bellini, e il simbolo della città è un elefante romano scolpito nella lava."
+			]
+		}
 	},
 	"siracusa": {
 		"kind": "city",
@@ -519,10 +792,17 @@
 		"region": "Sicily",
 		"coastal": true,
 		"position": "south-east",
-		"hooks": [
-			"From Greek Syrakousai, probably from a Sicel word for a marsh.",
-			"Cicero called it the greatest and most beautiful of all Greek cities; it rivalled Athens and defeated its fleet in 413 BC.",
-			"Archimedes was born, worked and was killed here, and its Greek theatre still stages classical drama each summer."
-		]
+		"hooks": {
+			"en": [
+				"From Greek Syrakousai, probably from a Sicel word for a marsh.",
+				"Cicero called it the greatest and most beautiful of all Greek cities; it rivalled Athens and defeated its fleet in 413 BC.",
+				"Archimedes was born, worked and was killed here, and its Greek theatre still stages classical drama each summer."
+			],
+			"it": [
+				"Dal greco Syrakousai, probabilmente da una parola sicula per palude.",
+				"Cicerone la definì la più grande e la più bella di tutte le città greche; rivaleggiò con Atene e ne sconfisse la flotta nel 413 a.C.",
+				"Archimede nacque, lavorò e fu ucciso qui, e il suo teatro greco mette ancora in scena drammi classici ogni estate."
+			]
+		}
 	}
 }
