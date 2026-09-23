@@ -17,11 +17,18 @@
 			"elevation": 2985
 		},
 		"position": "north-west",
-		"hooks": [
-			"The name's origin is disputed; one old story has it as an acronym of the Arab, Chinese, European and Hindu traders who met here.",
-			"Called the veranda of Mecca: Islam entered the archipelago through this port, and it is the only province under sharia law.",
-			"The 2004 tsunami killed about 170,000 people here, and the disaster ended a thirty-year separatist war within a year."
-		]
+		"hooks": {
+			"en": [
+				"The name's origin is disputed; one old story has it as an acronym of the Arab, Chinese, European and Hindu traders who met here.",
+				"Called the veranda of Mecca: Islam entered the archipelago through this port, and it is the only province under sharia law.",
+				"The 2004 tsunami killed about 170,000 people here, and the disaster ended a thirty-year separatist war within a year."
+			],
+			"it": [
+				"L’origine del nome è discussa; secondo un vecchio racconto sarebbe l’acronimo dei mercanti arabi, cinesi, europei e indù che qui si incontravano.",
+				"Detta la \"veranda della Mecca\": l’islam è entrato nell’arcipelago da questo porto, ed è l’unica provincia in cui vige la sharia.",
+				"Lo tsunami del 2004 qui uccise circa 170.000 persone, e nel giro di un anno la catastrofe mise fine a una guerra separatista durata trent’anni."
+			]
+		}
 	},
 	"sulawesi-utara": {
 		"kind": "region",
@@ -37,11 +44,18 @@
 			"population": 451893
 		},
 		"position": "north",
-		"hooks": [
-			"North Sulawesi — the island's own name probably comes from sula besi, \"iron island\", for the metal traded from it.",
-			"Its Minahasan people are largely Christian and its cuisine is the spiciest in Indonesia, with dishes other Indonesians find alarming.",
-			"Bunaken off its coast drops to 1,500 m just offshore, which is why its wall diving is world famous."
-		]
+		"hooks": {
+			"en": [
+				"North Sulawesi — the island's own name probably comes from sula besi, \"iron island\", for the metal traded from it.",
+				"Its Minahasan people are largely Christian and its cuisine is the spiciest in Indonesia, with dishes other Indonesians find alarming.",
+				"Bunaken off its coast drops to 1,500 m just offshore, which is why its wall diving is world famous."
+			],
+			"it": [
+				"Sulawesi settentrionale: il nome dell’isola viene probabilmente da sula besi, \"isola del ferro\", per il metallo che vi si commerciava.",
+				"I suoi Minahasa sono in gran parte cristiani e la sua cucina è la più piccante dell’Indonesia, con piatti che mettono in allarme gli altri indonesiani.",
+				"Bunaken, al largo della sua costa, precipita fino a 1.500 m appena fuori dalla riva, ed è per questo che le sue immersioni in parete sono famose in tutto il mondo."
+			]
+		}
 	},
 	"sumatera-utara": {
 		"kind": "region",
@@ -59,11 +73,18 @@
 			"population": 2115000
 		},
 		"position": "north-west",
-		"hooks": [
-			"North Sumatra; Sumatra itself may come from samudra, Sanskrit for ocean, through an old kingdom's name.",
-			"Lake Toba here fills the caldera of a supervolcano that erupted about 74,000 years ago — the largest eruption in two million years.",
-			"The Batak peoples around that lake have their own script and were converted by German missionaries in the 1860s."
-		]
+		"hooks": {
+			"en": [
+				"North Sumatra; Sumatra itself may come from samudra, Sanskrit for ocean, through an old kingdom's name.",
+				"Lake Toba here fills the caldera of a supervolcano that erupted about 74,000 years ago — the largest eruption in two million years.",
+				"The Batak peoples around that lake have their own script and were converted by German missionaries in the 1860s."
+			],
+			"it": [
+				"Sumatra settentrionale; il nome Sumatra potrebbe venire da samudra, \"oceano\" in sanscrito, attraverso il nome di un antico regno.",
+				"Qui il lago Toba riempie la caldera di un supervulcano esploso circa 74.000 anni fa: l’eruzione più grande degli ultimi due milioni di anni.",
+				"I popoli batak intorno al lago hanno una scrittura propria e furono convertiti da missionari tedeschi negli anni Sessanta dell’Ottocento."
+			]
+		}
 	},
 	"kepulauan-riau": {
 		"kind": "region",
@@ -76,11 +97,18 @@
 			"population": 226666
 		},
 		"position": "north-west",
-		"hooks": [
-			"\"The Riau islands\" — kepulauan means archipelago, and Riau may come from a Portuguese or local word for a river mouth.",
-			"Batam in it sits 20 km from Singapore and was developed as a free-trade rival to it.",
-			"The province is about 96% sea, with some 2,400 islands scattered across it."
-		]
+		"hooks": {
+			"en": [
+				"\"The Riau islands\" — kepulauan means archipelago, and Riau may come from a Portuguese or local word for a river mouth.",
+				"Batam in it sits 20 km from Singapore and was developed as a free-trade rival to it.",
+				"The province is about 96% sea, with some 2,400 islands scattered across it."
+			],
+			"it": [
+				"\"Le isole Riau\": kepulauan significa arcipelago, e Riau potrebbe venire da una parola portoghese o locale per la foce di un fiume.",
+				"Batam, che ne fa parte, sorge a 20 km da Singapore ed è stata sviluppata come zona di libero scambio rivale della città-stato.",
+				"La provincia è mare per circa il 96%, con circa 2.400 isole disseminate al suo interno."
+			]
+		}
 	},
 	"kalimantan-timur": {
 		"kind": "region",
@@ -102,11 +130,18 @@
 			"elevation": 2988
 		},
 		"position": "north",
-		"hooks": [
-			"East Borneo — Kalimantan is the Indonesian name for the island, possibly from a word for raw sago or for the Kalamantan people.",
-			"Indonesia's new capital, Nusantara, is being built here to take the pressure off a sinking Jakarta.",
-			"Its coal and gas made it one of the richest provinces per head, and the Mahakam river through it holds a rare freshwater dolphin."
-		]
+		"hooks": {
+			"en": [
+				"East Borneo — Kalimantan is the Indonesian name for the island, possibly from a word for raw sago or for the Kalamantan people.",
+				"Indonesia's new capital, Nusantara, is being built here to take the pressure off a sinking Jakarta.",
+				"Its coal and gas made it one of the richest provinces per head, and the Mahakam river through it holds a rare freshwater dolphin."
+			],
+			"it": [
+				"Borneo orientale: Kalimantan è il nome indonesiano dell’isola, forse da una parola per il sago crudo o dal popolo dei Kalamantan.",
+				"Qui si sta costruendo la nuova capitale dell’Indonesia, Nusantara, per alleggerire il peso su una Giacarta che sprofonda.",
+				"Carbone e gas ne hanno fatto una delle province più ricche per abitante, e il fiume Mahakam che la attraversa ospita un raro delfino d’acqua dolce."
+			]
+		}
 	},
 	"riau": {
 		"kind": "region",
@@ -124,11 +159,18 @@
 			"population": 799000
 		},
 		"position": "north-west",
-		"hooks": [
-			"The mainland half of the same Riau name, on Sumatra's east coast.",
-			"It produces much of Indonesia's oil and a large share of its palm oil.",
-			"The haze from its peatland fires regularly closes airports and schools in Singapore and Malaysia."
-		]
+		"hooks": {
+			"en": [
+				"The mainland half of the same Riau name, on Sumatra's east coast.",
+				"It produces much of Indonesia's oil and a large share of its palm oil.",
+				"The haze from its peatland fires regularly closes airports and schools in Singapore and Malaysia."
+			],
+			"it": [
+				"L’altra metà del nome Riau, quella sulla terraferma, lungo la costa orientale di Sumatra.",
+				"Produce buona parte del petrolio indonesiano e una quota importante del suo olio di palma.",
+				"La coltre di fumo degli incendi nelle sue torbiere fa chiudere regolarmente aeroporti e scuole a Singapore e in Malaysia."
+			]
+		}
 	},
 	"gorontalo": {
 		"kind": "region",
@@ -145,11 +187,18 @@
 			"population": 365497
 		},
 		"position": "north",
-		"hooks": [
-			"Probably from hulontalangi, \"a more valuable land\", or from a word for a place that floods.",
-			"Split from North Sulawesi in 2000; it is one of Indonesia's newest provinces and is Muslim-majority in a largely Christian neighbourhood.",
-			"Its whale sharks gather close to shore at Botubarani, where fishermen feed them by hand."
-		]
+		"hooks": {
+			"en": [
+				"Probably from hulontalangi, \"a more valuable land\", or from a word for a place that floods.",
+				"Split from North Sulawesi in 2000; it is one of Indonesia's newest provinces and is Muslim-majority in a largely Christian neighbourhood.",
+				"Its whale sharks gather close to shore at Botubarani, where fishermen feed them by hand."
+			],
+			"it": [
+				"Probabilmente da hulontalangi, \"una terra di maggior valore\", oppure da una parola per un luogo soggetto a inondazioni.",
+				"Separata da Sulawesi settentrionale nel 2000, è una delle province più giovani dell’Indonesia, a maggioranza musulmana in un vicinato in gran parte cristiano.",
+				"I suoi squali balena si radunano vicino alla riva a Botubarani, dove i pescatori li nutrono a mano."
+			]
+		}
 	},
 	"maluku-utara": {
 		"kind": "region",
@@ -166,11 +215,18 @@
 			"elevation": 1508
 		},
 		"position": "east",
-		"hooks": [
-			"North Maluku — the Moluccas, from Arabic jazirat al-muluk, \"island of the kings\", for its sultans.",
-			"These were the original Spice Islands: cloves and nutmeg grew here and nowhere else, which is what brought Europe to Asia.",
-			"Ternate and Tidore, two volcanic cones a few kilometres apart, were rival sultanates that between them controlled the world clove supply."
-		]
+		"hooks": {
+			"en": [
+				"North Maluku — the Moluccas, from Arabic jazirat al-muluk, \"island of the kings\", for its sultans.",
+				"These were the original Spice Islands: cloves and nutmeg grew here and nowhere else, which is what brought Europe to Asia.",
+				"Ternate and Tidore, two volcanic cones a few kilometres apart, were rival sultanates that between them controlled the world clove supply."
+			],
+			"it": [
+				"Molucche settentrionali: le Molucche, dall’arabo jazirat al-muluk, \"isola dei re\", per i loro sultani.",
+				"Erano le vere Isole delle Spezie: chiodi di garofano e noce moscata crescevano qui e in nessun altro luogo, ed è questo che portò l’Europa in Asia.",
+				"Ternate e Tidore, due coni vulcanici a pochi chilometri l’uno dall’altro, erano sultanati rivali che si spartivano i chiodi di garofano di tutto il mondo."
+			]
+		}
 	},
 	"kalimantan-barat": {
 		"kind": "region",
@@ -187,11 +243,18 @@
 			"population": 607311
 		},
 		"position": "centre",
-		"hooks": [
-			"West Borneo.",
-			"The equator runs through Pontianak, its capital, which has a monument where the sun casts no shadow twice a year.",
-			"Its Kapuas is Indonesia's longest river at 1,143 km, and the province holds large orangutan populations."
-		]
+		"hooks": {
+			"en": [
+				"West Borneo.",
+				"The equator runs through Pontianak, its capital, which has a monument where the sun casts no shadow twice a year.",
+				"Its Kapuas is Indonesia's longest river at 1,143 km, and the province holds large orangutan populations."
+			],
+			"it": [
+				"Borneo occidentale.",
+				"L’equatore passa per Pontianak, il capoluogo, dove un monumento segna il punto in cui due volte l’anno il sole non proietta ombra.",
+				"Il suo Kapuas, con 1.143 km, è il fiume più lungo dell’Indonesia, e la provincia ospita grandi popolazioni di oranghi."
+			]
+		}
 	},
 	"sulawesi-tengah": {
 		"kind": "region",
@@ -214,11 +277,18 @@
 			"elevation": 3030
 		},
 		"position": "centre",
-		"hooks": [
-			"Central Sulawesi.",
-			"The Bada valley in it has hundreds of megalithic stone figures whose carvers and purpose are unknown.",
-			"Palu was hit in 2018 by an earthquake, tsunami and soil liquefaction at once, which swallowed whole neighbourhoods."
-		]
+		"hooks": {
+			"en": [
+				"Central Sulawesi.",
+				"The Bada valley in it has hundreds of megalithic stone figures whose carvers and purpose are unknown.",
+				"Palu was hit in 2018 by an earthquake, tsunami and soil liquefaction at once, which swallowed whole neighbourhoods."
+			],
+			"it": [
+				"Sulawesi centrale.",
+				"Nella sua valle di Bada ci sono centinaia di figure megalitiche di pietra di cui non si conoscono né gli scultori né lo scopo.",
+				"Nel 2018 Palu fu colpita contemporaneamente da terremoto, tsunami e liquefazione del suolo, che inghiottirono interi quartieri."
+			]
+		}
 	},
 	"sumatera-barat": {
 		"kind": "region",
@@ -241,11 +311,18 @@
 			"elevation": 3805
 		},
 		"position": "west",
-		"hooks": [
-			"West Sumatra.",
-			"Its Minangkabau are the largest matrilineal society in the world: property and family name pass through the mother.",
-			"Their houses have roofs curved like buffalo horns, and rendang, often voted the world's tastiest dish, is their cooking."
-		]
+		"hooks": {
+			"en": [
+				"West Sumatra.",
+				"Its Minangkabau are the largest matrilineal society in the world: property and family name pass through the mother.",
+				"Their houses have roofs curved like buffalo horns, and rendang, often voted the world's tastiest dish, is their cooking."
+			],
+			"it": [
+				"Sumatra occidentale.",
+				"I suoi Minangkabau sono la più grande società matrilineare del mondo: beni e nome di famiglia si trasmettono per linea materna.",
+				"Le loro case hanno tetti ricurvi come corna di bufalo, e il rendang, spesso votato il piatto più gustoso del mondo, viene dalla loro cucina."
+			]
+		}
 	},
 	"kalimantan-tengah": {
 		"kind": "region",
@@ -267,11 +344,18 @@
 			"elevation": 2278
 		},
 		"position": "centre",
-		"hooks": [
-			"Central Borneo.",
-			"Created in 1957 after Dayak protests at being governed from the coast; it is the largest province by area on the island.",
-			"Tanjung Puting in it is the best-known place to see wild orangutans, reached by river boat."
-		]
+		"hooks": {
+			"en": [
+				"Central Borneo.",
+				"Created in 1957 after Dayak protests at being governed from the coast; it is the largest province by area on the island.",
+				"Tanjung Puting in it is the best-known place to see wild orangutans, reached by river boat."
+			],
+			"it": [
+				"Borneo centrale.",
+				"Nata nel 1957 dopo le proteste dei Dayak, che non volevano essere governati dalla costa; per superficie è la provincia più grande dell’isola.",
+				"Il suo Tanjung Puting è il luogo più noto per vedere gli oranghi allo stato selvatico, e ci si arriva in barca risalendo il fiume."
+			]
+		}
 	},
 	"jambi": {
 		"kind": "region",
@@ -290,11 +374,18 @@
 			"population": 457090
 		},
 		"position": "west",
-		"hooks": [
-			"Possibly from Javanese jambe, the areca palm, or from a local word for a place to ford.",
-			"The Srivijaya-era temple complex at Muaro Jambi is the largest ancient site in Indonesia, larger than Borobudur in area.",
-			"Kerinci in it is Sumatra's highest volcano at 3,805 m, and the forest around it holds the Sumatran tiger."
-		]
+		"hooks": {
+			"en": [
+				"Possibly from Javanese jambe, the areca palm, or from a local word for a place to ford.",
+				"The Srivijaya-era temple complex at Muaro Jambi is the largest ancient site in Indonesia, larger than Borobudur in area.",
+				"Kerinci in it is Sumatra's highest volcano at 3,805 m, and the forest around it holds the Sumatran tiger."
+			],
+			"it": [
+				"Forse dal giavanese jambe, la palma di areca, oppure da una parola locale per un punto di guado.",
+				"Il complesso di templi dell’epoca di Srivijaya a Muaro Jambi è il più grande sito antico dell’Indonesia, più esteso di Borobudur.",
+				"Il suo Kerinci, con 3.805 m, è il vulcano più alto di Sumatra, e la foresta che lo circonda ospita la tigre di Sumatra."
+			]
+		}
 	},
 	"papua-barat": {
 		"kind": "region",
@@ -314,11 +405,18 @@
 			"elevation": 2970
 		},
 		"position": "east",
-		"hooks": [
-			"West Papua — Papua may come from a Malay word for frizzy hair, or from a Tidore phrase meaning \"not joining\".",
-			"Raja Ampat off its coast has the highest recorded coral and reef-fish diversity of anywhere on earth.",
-			"Its interior holds peoples contacted only in the twentieth century, and hundreds of languages."
-		]
+		"hooks": {
+			"en": [
+				"West Papua — Papua may come from a Malay word for frizzy hair, or from a Tidore phrase meaning \"not joining\".",
+				"Raja Ampat off its coast has the highest recorded coral and reef-fish diversity of anywhere on earth.",
+				"Its interior holds peoples contacted only in the twentieth century, and hundreds of languages."
+			],
+			"it": [
+				"Papua occidentale: Papua potrebbe venire da una parola malese per i capelli crespi, oppure da un’espressione di Tidore che significa \"che non si unisce\".",
+				"Raja Ampat, al largo della sua costa, ha la più alta diversità di coralli e pesci di barriera mai registrata sulla Terra.",
+				"Il suo interno ospita popoli contattati solo nel Novecento, e centinaia di lingue."
+			]
+		}
 	},
 	"sulawesi-barat": {
 		"kind": "region",
@@ -335,11 +433,18 @@
 			"population": 272377
 		},
 		"position": "centre",
-		"hooks": [
-			"West Sulawesi, split from the south in 2004.",
-			"The Mandar people here build sandeq sailing boats with outriggers, among the fastest traditional sailing craft in the world.",
-			"It is one of the least populated and least visited provinces on the island."
-		]
+		"hooks": {
+			"en": [
+				"West Sulawesi, split from the south in 2004.",
+				"The Mandar people here build sandeq sailing boats with outriggers, among the fastest traditional sailing craft in the world.",
+				"It is one of the least populated and least visited provinces on the island."
+			],
+			"it": [
+				"Sulawesi occidentale, staccata dal sud nel 2004.",
+				"Qui i Mandar costruiscono i sandeq, barche a vela con bilancieri, tra le imbarcazioni tradizionali a vela più veloci del mondo.",
+				"È una delle province meno popolate e meno visitate dell’isola."
+			]
+		}
 	},
 	"bangka-belitung": {
 		"kind": "region",
@@ -352,11 +457,18 @@
 			"population": 125933
 		},
 		"position": "west",
-		"hooks": [
-			"Two islands: Bangka may be from a word for tin, which is exactly what it produces.",
-			"They have supplied tin for over two centuries, and much of the world's solder has passed through them.",
-			"Belitung's granite boulders on white sand were made famous by the novel and film Laskar Pelangi."
-		]
+		"hooks": {
+			"en": [
+				"Two islands: Bangka may be from a word for tin, which is exactly what it produces.",
+				"They have supplied tin for over two centuries, and much of the world's solder has passed through them.",
+				"Belitung's granite boulders on white sand were made famous by the novel and film Laskar Pelangi."
+			],
+			"it": [
+				"Due isole: Bangka potrebbe venire da una parola che significa stagno, ed è proprio ciò che produce.",
+				"Forniscono stagno da oltre due secoli, e da qui è passata buona parte della lega per saldature usata nel mondo.",
+				"I massi di granito di Belitung sulla sabbia bianca sono diventati famosi grazie al romanzo e al film Laskar Pelangi."
+			]
+		}
 	},
 	"kalimantan-selatan": {
 		"kind": "region",
@@ -373,11 +485,18 @@
 			"population": 603576
 		},
 		"position": "centre",
-		"hooks": [
-			"South Borneo.",
-			"Banjarmasin in it is built on water, with floating markets where traders sell from canoes at dawn.",
-			"Its Meratus mountains hold Dayak communities, and the province mines a large share of Indonesia's coal."
-		]
+		"hooks": {
+			"en": [
+				"South Borneo.",
+				"Banjarmasin in it is built on water, with floating markets where traders sell from canoes at dawn.",
+				"Its Meratus mountains hold Dayak communities, and the province mines a large share of Indonesia's coal."
+			],
+			"it": [
+				"Borneo meridionale.",
+				"La sua Banjarmasin è costruita sull’acqua, con mercati galleggianti dove all’alba i commercianti vendono dalle canoe.",
+				"I suoi monti Meratus ospitano comunità dayak, e la provincia estrae una quota importante del carbone indonesiano."
+			]
+		}
 	},
 	"sumatera-selatan": {
 		"kind": "region",
@@ -395,11 +514,18 @@
 			"population": 1749000
 		},
 		"position": "west",
-		"hooks": [
-			"South Sumatra.",
-			"Palembang, its capital, was the seat of Srivijaya, a maritime empire that dominated the region from the 600s to the 1200s.",
-			"The Ampera bridge there used to lift in the middle to let ships pass; the lifting mechanism was removed in 1970."
-		]
+		"hooks": {
+			"en": [
+				"South Sumatra.",
+				"Palembang, its capital, was the seat of Srivijaya, a maritime empire that dominated the region from the 600s to the 1200s.",
+				"The Ampera bridge there used to lift in the middle to let ships pass; the lifting mechanism was removed in 1970."
+			],
+			"it": [
+				"Sumatra meridionale.",
+				"Palembang, il capoluogo, fu la sede di Srivijaya, un impero marittimo che dominò la regione dal VII al XIII secolo.",
+				"Il ponte Ampera, lì, si alzava al centro per far passare le navi; il meccanismo di sollevamento fu rimosso nel 1970."
+			]
+		}
 	},
 	"bengkulu": {
 		"kind": "region",
@@ -418,11 +544,18 @@
 			"population": 426673
 		},
 		"position": "west",
-		"hooks": [
-			"Possibly from bangkahulu, \"the place where the head is\" — a reference to an old battle.",
-			"The British held it as Bencoolen for 140 years and swapped it for Singapore in 1824.",
-			"Rafflesia arnoldii, the largest single flower in the world at a metre across, was found here and is the provincial emblem."
-		]
+		"hooks": {
+			"en": [
+				"Possibly from bangkahulu, \"the place where the head is\" — a reference to an old battle.",
+				"The British held it as Bencoolen for 140 years and gave it to the Dutch in 1824, in the treaty that secured their hold on Singapore.",
+				"Rafflesia arnoldii, the largest single flower in the world at a metre across, was found here and is the provincial emblem."
+			],
+			"it": [
+				"Forse da bangkahulu, \"il luogo dove sta la testa\": un riferimento a un’antica battaglia.",
+				"I britannici la tennero per 140 anni con il nome di Bencoolen e nel 1824 la cedettero agli olandesi, con il trattato che assicurò loro Singapore.",
+				"La Rafflesia arnoldii, il fiore singolo più grande del mondo con un metro di diametro, fu scoperta qui ed è l’emblema della provincia."
+			]
+		}
 	},
 	"sulawesi-selatan": {
 		"kind": "region",
@@ -444,11 +577,18 @@
 			"elevation": 3455
 		},
 		"position": "centre",
-		"hooks": [
-			"South Sulawesi.",
-			"Its Bugis were the great sailors of the archipelago, and their pinisi ships, still built by hand on the beach, are a UNESCO heritage item.",
-			"Toraja in its highlands holds funerals lasting days, with cliff graves and carved wooden effigies watching from the rock."
-		]
+		"hooks": {
+			"en": [
+				"South Sulawesi.",
+				"Its Bugis were the great sailors of the archipelago, and their pinisi ships, still built by hand on the beach, are a UNESCO heritage item.",
+				"Toraja in its highlands holds funerals lasting days, with cliff graves and carved wooden effigies watching from the rock."
+			],
+			"it": [
+				"Sulawesi meridionale.",
+				"I suoi Bugis furono i grandi navigatori dell’arcipelago, e i loro velieri pinisi, ancora costruiti a mano sulla spiaggia, sono patrimonio UNESCO.",
+				"Sui suoi altopiani, a Toraja, i funerali durano giorni, tra tombe scavate nella roccia ed effigi di legno scolpito che osservano dalla parete."
+			]
+		}
 	},
 	"sulawesi-tenggara": {
 		"kind": "region",
@@ -465,11 +605,18 @@
 			"population": 165377
 		},
 		"position": "centre",
-		"hooks": [
-			"South-East Sulawesi.",
-			"The Wakatobi islands off it sit in the middle of the Coral Triangle and are a national marine park.",
-			"Its nickel is a large share of the world supply, which the electric-car industry has made suddenly strategic."
-		]
+		"hooks": {
+			"en": [
+				"South-East Sulawesi.",
+				"The Wakatobi islands off it sit in the middle of the Coral Triangle and are a national marine park.",
+				"Its nickel is a large share of the world supply, which the electric-car industry has made suddenly strategic."
+			],
+			"it": [
+				"Sulawesi sudorientale.",
+				"Le isole Wakatobi, al largo, stanno al centro del Triangolo dei Coralli e sono un parco nazionale marino.",
+				"Il suo nichel è una quota importante della produzione mondiale, e l’industria dell’auto elettrica lo ha reso all’improvviso strategico."
+			]
+		}
 	},
 	"lampung": {
 		"kind": "region",
@@ -486,11 +633,18 @@
 			"population": 881801
 		},
 		"position": "west",
-		"hooks": [
-			"Possibly from lappung, meaning high or elevated, in the local language.",
-			"Krakatoa lies in the strait off it; the 1883 eruption was heard 4,800 km away and dropped global temperatures for years.",
-			"Its Way Kambas park runs an elephant school for the Sumatran elephant, and the province was the main destination of Java's transmigration programme."
-		]
+		"hooks": {
+			"en": [
+				"Possibly from lappung, meaning high or elevated, in the local language.",
+				"Krakatoa lies in the strait off it; the 1883 eruption was heard 4,800 km away and dropped global temperatures for years.",
+				"Its Way Kambas park runs an elephant school for the Sumatran elephant, and the province was the main destination of Java's transmigration programme."
+			],
+			"it": [
+				"Forse da lappung, che nella lingua locale significa alto o elevato.",
+				"Il Krakatoa si trova nello stretto di fronte alla provincia; l’eruzione del 1883 fu udita a 4.800 km di distanza e fece calare le temperature del pianeta per anni.",
+				"Il suo parco di Way Kambas gestisce una scuola per l’elefante di Sumatra, e la provincia fu la meta principale del programma di trasmigrazione da Giava."
+			]
+		}
 	},
 	"papua": {
 		"kind": "region",
@@ -510,11 +664,18 @@
 			"elevation": 4884
 		},
 		"position": "east",
-		"hooks": [
-			"The larger, eastern part of Indonesian New Guinea.",
-			"Puncak Jaya here is the highest peak between the Himalaya and the Andes at 4,884 m, and carries glaciers on the equator — now nearly gone.",
-			"The Baliem valley was unknown to the outside world until an aircraft spotted its farmed terraces and 50,000 inhabitants in 1938."
-		]
+		"hooks": {
+			"en": [
+				"The larger, eastern part of Indonesian New Guinea.",
+				"Puncak Jaya here is the highest peak between the Himalaya and the Andes at 4,884 m, and carries glaciers on the equator — now nearly gone.",
+				"The Baliem valley was unknown to the outside world until an aircraft spotted its farmed terraces and 50,000 inhabitants in 1938."
+			],
+			"it": [
+				"La parte più grande, quella orientale, della Nuova Guinea indonesiana.",
+				"Il Puncak Jaya, con 4.884 m, è la vetta più alta tra l’Himalaya e le Ande, e ha ghiacciai sull’equatore, ormai quasi scomparsi.",
+				"La valle del Baliem era sconosciuta al mondo esterno finché nel 1938 un aereo non ne avvistò i terrazzamenti coltivati e i 50.000 abitanti."
+			]
+		}
 	},
 	"maluku": {
 		"kind": "region",
@@ -531,11 +692,18 @@
 			"elevation": 3027
 		},
 		"position": "south-east",
-		"hooks": [
-			"The southern Moluccas, sharing the \"island of the kings\" name with the north.",
-			"Banda in it was the only source of nutmeg in the world; the Dutch massacred most of its population in 1621 to control the trade.",
-			"England traded its claim on Run, one of the Banda islands, to the Dutch in 1667 in exchange for Manhattan."
-		]
+		"hooks": {
+			"en": [
+				"The southern Moluccas, sharing the \"island of the kings\" name with the north.",
+				"Banda in it was the only source of nutmeg in the world; the Dutch massacred most of its population in 1621 to control the trade.",
+				"England traded its claim on Run, one of the Banda islands, to the Dutch in 1667 in exchange for Manhattan."
+			],
+			"it": [
+				"Le Molucche meridionali, che condividono con il nord il nome di \"isola dei re\".",
+				"La sua Banda era l’unica fonte di noce moscata al mondo; nel 1621 gli olandesi ne massacrarono gran parte della popolazione per controllarne il commercio.",
+				"Nel 1667 l’Inghilterra cedette agli olandesi i suoi diritti su Run, una delle isole Banda, in cambio di Manhattan."
+			]
+		}
 	},
 	"jakarta-raya": {
 		"kind": "region",
@@ -552,11 +720,18 @@
 			"population": 9125000
 		},
 		"position": "south-west",
-		"hooks": [
-			"\"Greater Jakarta\" — the city's name is from Jayakarta, \"complete victory\", given in 1527; the Dutch renamed it Batavia and Indonesia changed it back in 1942.",
-			"It is sinking up to 25 cm a year in the north, faster than almost any other city, which is why the capital is moving to Borneo.",
-			"Its metropolitan area is among the largest in the world, around 30 million people."
-		]
+		"hooks": {
+			"en": [
+				"\"Greater Jakarta\" — the city's name is from Jayakarta, \"complete victory\", given in 1527; the Dutch renamed it Batavia, and the name came back under the Japanese occupation in 1942.",
+				"It is sinking up to 25 cm a year in the north, faster than almost any other city, which is why the capital is moving to Borneo.",
+				"Its metropolitan area is among the largest in the world, around 30 million people."
+			],
+			"it": [
+				"\"Grande Giacarta\": il nome della città viene da Jayakarta, \"vittoria completa\", dato nel 1527; gli olandesi la ribattezzarono Batavia, e il nome tornò con l’occupazione giapponese del 1942.",
+				"Nella parte nord sprofonda fino a 25 cm l’anno, più in fretta di quasi ogni altra città, ed è per questo che la capitale si sta spostando nel Borneo.",
+				"La sua area metropolitana è tra le più grandi del mondo, con circa 30 milioni di abitanti."
+			]
+		}
 	},
 	"banten": {
 		"kind": "region",
@@ -573,11 +748,18 @@
 			"population": 164767
 		},
 		"position": "south-west",
-		"hooks": [
-			"Named for the sultanate of Banten, a pepper port powerful enough that the first English and Dutch fleets came here before anywhere else.",
-			"Split from West Java in 2000.",
-			"The Baduy people in its hills reject modern technology by choice, and the inner group allows no vehicles, footwear or money."
-		]
+		"hooks": {
+			"en": [
+				"Named for the sultanate of Banten, a pepper port powerful enough that the first English and Dutch fleets came here before anywhere else.",
+				"Split from West Java in 2000.",
+				"The Baduy people in its hills reject modern technology by choice, and the inner group allows no vehicles, footwear or money."
+			],
+			"it": [
+				"Prende il nome dal sultanato di Banten, un porto del pepe così potente che le prime flotte inglesi e olandesi vennero qui prima che altrove.",
+				"Separata da Giava occidentale nel 2000.",
+				"I Baduy, sulle sue colline, rifiutano per scelta la tecnologia moderna, e il gruppo più interno non ammette veicoli, calzature né denaro."
+			]
+		}
 	},
 	"jawa-barat": {
 		"kind": "region",
@@ -599,11 +781,18 @@
 			"elevation": 3077
 		},
 		"position": "south-west",
-		"hooks": [
-			"West Java — Java's own name may come from Sanskrit yava, barley or grain.",
-			"The most populous province in Indonesia, with about 50 million people.",
-			"Its Sundanese are the country's second-largest ethnic group, with their own language and a gamelan quite unlike the Javanese one."
-		]
+		"hooks": {
+			"en": [
+				"West Java — Java's own name may come from Sanskrit yava, barley or grain.",
+				"The most populous province in Indonesia, with about 50 million people.",
+				"Its Sundanese are the country's second-largest ethnic group, with their own language and a gamelan quite unlike the Javanese one."
+			],
+			"it": [
+				"Giava occidentale: il nome stesso di Giava potrebbe venire dal sanscrito yava, orzo o cereale.",
+				"La provincia più popolosa dell’Indonesia, con circa 50 milioni di abitanti.",
+				"I suoi Sundanesi sono il secondo gruppo etnico del paese, con una lingua propria e un gamelan molto diverso da quello giavanese."
+			]
+		}
 	},
 	"jawa-tengah": {
 		"kind": "region",
@@ -625,11 +814,18 @@
 			"elevation": 2968
 		},
 		"position": "south-west",
-		"hooks": [
-			"Central Java.",
-			"Borobudur here is the largest Buddhist temple in the world, built around 800 and abandoned within 150 years; Prambanan nearby is its Hindu counterpart.",
-			"Javanese court culture — batik, gamelan, wayang shadow puppets — all comes from this region, and all three are UNESCO heritage items."
-		]
+		"hooks": {
+			"en": [
+				"Central Java.",
+				"Borobudur here is the largest Buddhist temple in the world, built around 800 and abandoned within 150 years; Prambanan nearby is its Hindu counterpart.",
+				"Javanese court culture — batik, gamelan, wayang shadow puppets — all comes from this region, and all three are UNESCO heritage items."
+			],
+			"it": [
+				"Giava centrale.",
+				"Qui sorge Borobudur, il più grande tempio buddhista del mondo, costruito intorno all’800 e abbandonato nel giro di 150 anni; il vicino Prambanan è il suo corrispettivo indù.",
+				"Batik, gamelan, teatro d’ombre wayang: la cultura di corte giavanese viene tutta da questa regione, e tutti e tre sono patrimonio UNESCO."
+			]
+		}
 	},
 	"jawa-timur": {
 		"kind": "region",
@@ -650,11 +846,18 @@
 			"elevation": 3676
 		},
 		"position": "south",
-		"hooks": [
-			"East Java.",
-			"Mount Bromo in it sits inside a sea of volcanic sand, and the Tenggerese throw offerings into its crater each year.",
-			"Surabaya, its capital, is where the independence fighting of November 1945 took place, commemorated as Heroes' Day."
-		]
+		"hooks": {
+			"en": [
+				"East Java.",
+				"Mount Bromo in it sits inside a sea of volcanic sand, and the Tenggerese throw offerings into its crater each year.",
+				"Surabaya, its capital, is where the independence fighting of November 1945 took place, commemorated as Heroes' Day."
+			],
+			"it": [
+				"Giava orientale.",
+				"Il suo monte Bromo sorge in mezzo a un mare di sabbia vulcanica, e ogni anno i Tengger gettano offerte nel suo cratere.",
+				"A Surabaya, il capoluogo, si combatterono nel novembre 1945 gli scontri per l’indipendenza che oggi si ricordano come Giorno degli Eroi."
+			]
+		}
 	},
 	"yogyakarta": {
 		"kind": "region",
@@ -670,11 +873,18 @@
 			"population": 636660
 		},
 		"position": "south-west",
-		"hooks": [
-			"From Ayodhya, the city in the Ramayana, plus karta, prosperous — \"a fit and prosperous Ayodhya\".",
-			"The only Indonesian region still ruled by its monarchy: the sultan is governor by right, not election.",
-			"It was the capital of the republic during the independence war, and is the country's student and arts city."
-		]
+		"hooks": {
+			"en": [
+				"From Ayodhya, the city in the Ramayana, plus karta, prosperous — \"a fit and prosperous Ayodhya\".",
+				"The only Indonesian region still ruled by its monarchy: the sultan is governor by right, not election.",
+				"It was the capital of the republic during the independence war, and is the country's student and arts city."
+			],
+			"it": [
+				"Da Ayodhya, la città del Ramayana, più karta, \"prospera\": \"un’Ayodhya degna e prospera\".",
+				"L’unica regione indonesiana ancora governata dalla sua monarchia: il sultano è governatore per diritto, non per elezione.",
+				"Fu la capitale della repubblica durante la guerra d’indipendenza, ed è la città degli studenti e delle arti del paese."
+			]
+		}
 	},
 	"bali": {
 		"kind": "region",
@@ -690,11 +900,18 @@
 			"population": 732344
 		},
 		"position": "south",
-		"hooks": [
-			"Possibly from Sanskrit wali, an offering — which suits an island whose households make them daily.",
-			"The only Hindu-majority province, because Javanese nobility and priests fled here when Islam spread in the 1500s.",
-			"Its subak irrigation system, run by temple councils for over a thousand years, is a UNESCO site."
-		]
+		"hooks": {
+			"en": [
+				"Possibly from Sanskrit wali, an offering — which suits an island whose households make them daily.",
+				"The only Hindu-majority province, because Javanese nobility and priests fled here when Islam spread in the 1500s.",
+				"Its subak irrigation system, run by temple councils for over a thousand years, is a UNESCO site."
+			],
+			"it": [
+				"Forse dal sanscrito wali, \"offerta\": un nome adatto a un’isola dove le famiglie ne preparano ogni giorno.",
+				"L’unica provincia a maggioranza indù, perché la nobiltà e i sacerdoti giavanesi si rifugiarono qui quando l’islam si diffuse nel Cinquecento.",
+				"Il suo sistema di irrigazione subak, gestito dai consigli dei templi da oltre mille anni, è patrimonio UNESCO."
+			]
+		}
 	},
 	"nusa-tenggara-barat": {
 		"kind": "region",
@@ -711,11 +928,18 @@
 			"elevation": 3726
 		},
 		"position": "south",
-		"hooks": [
-			"\"West south-eastern islands\" — nusa is island, tenggara south-east.",
-			"Lombok's Rinjani is Indonesia's second-highest volcano, with a crater lake and a cone growing inside it.",
-			"Sumbawa next door produced the 1815 Tambora eruption, the largest in recorded history, which caused Europe's year without a summer."
-		]
+		"hooks": {
+			"en": [
+				"\"West south-eastern islands\" — nusa is island, tenggara south-east.",
+				"Lombok's Rinjani is Indonesia's second-highest volcano, with a crater lake and a cone growing inside it.",
+				"Sumbawa next door produced the 1815 Tambora eruption, the largest in recorded history, which caused Europe's year without a summer."
+			],
+			"it": [
+				"\"Isole sudorientali occidentali\": nusa è isola, tenggara sud-est.",
+				"Il Rinjani, a Lombok, è il secondo vulcano più alto dell’Indonesia, con un lago nel cratere e un cono che vi cresce dentro.",
+				"Sulla vicina Sumbawa eruttò nel 1815 il Tambora, l’eruzione più grande della storia documentata, che causò l’anno senza estate in Europa."
+			]
+		}
 	},
 	"nusa-tenggara-timur": {
 		"kind": "region",
@@ -728,10 +952,17 @@
 			"population": 282396
 		},
 		"position": "south",
-		"hooks": [
-			"The eastern half of the same island chain.",
-			"Komodo dragons live here and nowhere else — up to 3 m long, and only described by science in 1910.",
-			"It is the only Christian-majority province outside eastern Indonesia's Papua and Maluku, and its Sumba island keeps a megalithic burial tradition."
-		]
+		"hooks": {
+			"en": [
+				"The eastern half of the same island chain.",
+				"Komodo dragons live here and nowhere else — up to 3 m long, and only described by science in 1910.",
+				"It is one of Indonesia's few Christian-majority provinces, and its Sumba island keeps a megalithic burial tradition."
+			],
+			"it": [
+				"La metà orientale della stessa catena di isole.",
+				"I draghi di Komodo vivono qui e in nessun altro luogo: lunghi fino a 3 m, furono descritti dalla scienza solo nel 1910.",
+				"È una delle poche province indonesiane a maggioranza cristiana, e sulla sua isola di Sumba sopravvive una tradizione di sepolture megalitiche."
+			]
+		}
 	}
 }
