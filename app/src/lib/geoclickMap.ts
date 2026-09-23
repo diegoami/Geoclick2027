@@ -132,10 +132,14 @@ export function createMap(
 	// Names never overlap (FT-23): whatever names a view draws, the ones that
 	// don't fit are hidden until the player zooms in far enough for them. Every
 	// town's dot counts, named or not - a quiz's unsolved ones too (FT-63).
+	// Popups are drawn on the world copy nearest the view (MapLibre's
+	// smartWrap), so after a pan past 180 degrees the projection follows.
+	const project = ([lng, lat]: [number, number]) =>
+		map.project([lng + 360 * Math.round((map.getCenter().lng - lng) / 360), lat]);
 	const towns = mapDef.targets.filter((t) => t.type === 'city').map((t) => t.centroid);
 	map.once(
 		'remove',
-		enableLabelCollision(map, container, () => towns.map((c) => map.project(c)))
+		enableLabelCollision(map, container, { project, dots: () => towns.map(project) })
 	);
 
 	if (import.meta.env.DEV && typeof window !== 'undefined') {

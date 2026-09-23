@@ -55,8 +55,9 @@ pairs well with a canvas/map-heavy UI.
   `labelCollision.ts`, installed by `createMap` for every view, measures
   them after each map move, puts each in the best-scoring free spot it
   has (a region's name on its middle or a line off it, a town's on one
-  of eight spots beside its dot, never on it, and off every other town's
-  dot - `createMap` hands the pass the projected dots, FT-63) and hides
+  of eight spots beside its dot, never on it, and off other towns' dots
+  wherever it can - `createMap` hands the pass the projected dots, FT-63)
+  and hides
   any name with nowhere left to go, until a zoom makes room. See
   DECISIONS.md, "Names never overlap".
 - **A second tileset per map, for the Terrain layer** (v0.8.0, FT-33).

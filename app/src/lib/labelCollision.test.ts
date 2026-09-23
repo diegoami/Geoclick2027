@@ -237,8 +237,17 @@ describe('choosePlacements, best fit (FT-63)', () => {
 			];
 			const dots = [town, { x: 160, y: 120 }, { x: 60, y: 140 }];
 			return choosePlacements(
-				labels.map((label) => ({ ...label, candidates: label.candidates.map(shift) })),
-				{ dots: dots.map((d) => ({ x: d.x + dx, y: d.y + dy })) }
+				labels.map((label, i) => ({
+					...label,
+					candidates: label.candidates.map(shift),
+					// Where each sat before the pan: a pan must not unseat them.
+					current: [0, 1, 0][i]
+				})),
+				{
+					dots: dots.map((d) => ({ x: d.x + dx, y: d.y + dy })),
+					// Far enough out that the pan brings no name near an edge.
+					bounds: { left: -1000, top: -1000, right: 2000, bottom: 2000 }
+				}
 			).map((p) => p.index);
 		};
 		const still = layout(0, 0);

@@ -21,17 +21,21 @@
 // free side put Duisburg's name over Essen's dot while open space to its west
 // went unused. Every free spot now adds up, in pixels:
 //   + room: how far it keeps from the nearest name or dot, up to ROOM_CAP_PX
-//   - reach: how far it strays from its own place (a region's middle is 0)
+//   - REACH_WEIGHT times how far it strays from its own place (a region's
+//     middle strays 0; every spot beside a dot strays the same)
 //   - DOT_COST for each other town's dot it would cover
 //   - OFFSCREEN_COST times the share of it off the edge of the map
 //   - RANK_COST per step down the view's own order, so ties go to reading order
-//   + STAY_BONUS if it is the spot the name already holds
+//   + STAY_BONUS if it is the spot the name already holds - only while the
+//     map is moving
 // and the highest wins. Every term but the map's edge is relative to the
-// other labels and dots, so a pan changes nothing; the stay bonus keeps a
-// name put when pixel rounding makes two spots nearly equal, and keeps names
-// from flickering side to side while a zoom animates. Once a zoom ends, the
-// bonus is dropped for one pass: without that, a name pushed left of its dot
-// while zoomed out stayed there after zooming in, with the right side free.
+// other labels and dots, so a pan moves only the names at the edge. The stay
+// bonus stops names flickering side to side mid-gesture, when a zoom's
+// animation or the pixel rounding of a pan makes two spots nearly equal.
+// Once the map settles - and on every pass the map didn't cause, a hover or a
+// new quiz name - each name takes its best spot afresh: a bonus kept for good
+// left a name pushed aside by a neighbour's hover, or by the map's edge, on
+// its second-best side long after the neighbour or the edge had gone.
 //
 // Why not a MapLibre symbol layer, which collides labels natively: symbol
 // layers render text from glyph PBFs, and the style's `glyphs` URL points at
@@ -56,12 +60,17 @@ const GAP_PX = 3;
  */
 export const DOT_CLEARANCE_PX = 14;
 /** A dot as an obstacle, in px: `targets-circle`'s radius 9 plus its outline. */
-export const DOT_RADIUS_PX = 10.5;
-/**
- * Room beyond this doesn't count, in px. Kept below a region's one-line step,
- * so a region's name leaves its middle only when the middle is taken.
- */
+const DOT_RADIUS_PX = 10.5;
+/** Room beyond this doesn't count, in px. */
 const ROOM_CAP_PX = 12;
+/**
+ * Straying counts double. A region's one-line step strays half a line plus
+ * the 3 px gap, so for any label 6 px tall or more it costs at least 12 -
+ * never less than the most room it could win back. A free middle strays 0
+ * and scores at least 0, so it always wins: a region's name leaves its
+ * middle only when the middle is taken (or would cover a town's dot).
+ */
+const REACH_WEIGHT = 2;
 /** A spot over another town's dot is taken only when there is no clean one. */
 const DOT_COST = 100;
 /** What a spot costs if it lies entirely off the map. */
@@ -134,14 +143,16 @@ function hasNoSize(rect: LabelRect): boolean {
 function rectDistance(a: LabelRect, b: LabelRect): number {
 	const dx = Math.max(0, a.left - b.right, b.left - a.right);
 	const dy = Math.max(0, a.top - b.bottom, b.top - a.bottom);
-	return Math.hypot(dx, dy);
+	// Not Math.hypot: this runs ~100 000 times a frame, and hypot's overflow
+	// care, which screen distances never need, doubles the pass's cost.
+	return Math.sqrt(dx * dx + dy * dy);
 }
 
 /** How far a point is from a rectangle, in px: 0 if it is inside. */
 function pointDistance(rect: LabelRect, x: number, y: number): number {
 	const dx = Math.max(0, rect.left - x, x - rect.right);
 	const dy = Math.max(0, rect.top - y, y - rect.bottom);
-	return Math.hypot(dx, dy);
+	return Math.sqrt(dx * dx + dy * dy);
 }
 
 /** The share of a rectangle (0 to 1) that lies outside another. */
@@ -166,7 +177,16 @@ function scoreOf(
 	let room = ROOM_CAP_PX;
 	for (const other of kept) room = Math.min(room, rectDistance(rect, other));
 	let covered = 0;
+	const near = ROOM_CAP_PX + DOT_RADIUS_PX;
 	for (const dot of dots) {
+		// Too far to matter either way: skipped before the square root.
+		if (
+			dot.x < rect.left - near ||
+			dot.x > rect.right + near ||
+			dot.y < rect.top - near ||
+			dot.y > rect.bottom + near
+		)
+			continue;
 		// Its own dot: the offset already keeps clear of that one.
 		if (Math.abs(dot.x - x) < 1 && Math.abs(dot.y - y) < 1) continue;
 		const clear = pointDistance(rect, dot.x, dot.y) - DOT_RADIUS_PX;
@@ -175,7 +195,7 @@ function scoreOf(
 	}
 	return (
 		room -
-		pointDistance(rect, x, y) -
+		REACH_WEIGHT * pointDistance(rect, x, y) -
 		covered * DOT_COST -
 		(bounds ? outsideShare(rect, bounds) * OFFSCREEN_COST : 0) -
 		rank * RANK_COST +
@@ -242,6 +262,8 @@ export function chooseVisible(labels: { priority: number; rect: LabelRect }[], g
 export interface MovableLabel {
 	getElement(): HTMLElement | undefined;
 	setOffset(offset: [number, number]): unknown;
+	/** The place the label names - a Popup has it; a test stand-in may not. */
+	getLngLat?(): { lng: number; lat: number };
 }
 
 interface RegisteredLabel {
@@ -329,16 +351,25 @@ function candidatesFor(
 }
 
 /** The labels of one map container, as the collision pass sees them. */
-function readLabels(popups: HTMLElement[]): (LabelPlacement & { registered?: RegisteredLabel })[] {
+function readLabels(
+	popups: HTMLElement[],
+	placeOf: (label: MovableLabel) => Dot | undefined
+): (LabelPlacement & { registered?: RegisteredLabel })[] {
 	return popups.map((popup) => {
 		const registered = registry.get(popup);
 		const magnified = popup.querySelector(`.${HOVERED_CLASS}, .${MAGNIFIED_CLASS}`) !== null;
 		const priority = Number(popup.getAttribute(PRIORITY_ATTR) ?? 0);
 		const rect = popup.getBoundingClientRect();
 		const [dx, dy] = registered?.applied ?? [0, 0];
-		// Where the place itself is on screen: the label sits at its middle
-		// plus whatever offset the pass gave it last time.
-		const anchor = { x: (rect.left + rect.right) / 2 - dx, y: (rect.top + rect.bottom) / 2 - dy };
+		// Where the place itself is on screen. From the map's projection when
+		// there is one: the DOM has it rounded to a whole pixel (MapLibre
+		// positions popups that way), and against unrounded dots that rounding
+		// was enough to flip a near-tied name across its dot on a half-pixel
+		// pan. Otherwise the label's middle, less the offset last applied.
+		const anchor = (registered && placeOf(registered.label)) ?? {
+			x: (rect.left + rect.right) / 2 - dx,
+			y: (rect.top + rect.bottom) / 2 - dy
+		};
 		const width = rect.right - rect.left;
 		const height = rect.bottom - rect.top;
 		return {
@@ -354,44 +385,51 @@ function readLabels(popups: HTMLElement[]): (LabelPlacement & { registered?: Reg
 	});
 }
 
+/**
+ * What the pass is told about the map beyond its labels, in px relative to
+ * the container - what `map.project` returns.
+ */
+export interface CollisionGeometry {
+	/** Every town's dot on screen, so names keep off them. */
+	dots?: () => Dot[];
+	/** Where a place is on screen, so a label's anchor needn't come from the DOM. */
+	project?: (lngLat: [number, number]) => Dot;
+}
+
 /** Everything that can move, add or resize a label, coalesced into one pass. */
 type CollisionMap = {
 	on(type: 'move' | 'moveend' | 'resize', listener: () => void): unknown;
 	off(type: 'move' | 'moveend' | 'resize', listener: () => void): unknown;
-	/** Tells a zoom from a pan. Without it, every move counts as a pan. */
-	getZoom?(): number;
 };
 
 /**
  * Keeps the labels in a map container from overlapping. Runs once per frame
  * at most, reads every label's rectangle before writing anything (so the
  * browser lays out once, not once per label), and returns a function that
- * stops it. `dots` gives every town's dot on screen, relative to the
- * container - `map.project` of each point target - so names keep off them.
+ * stops it.
  */
 export function enableLabelCollision(
 	map: CollisionMap,
 	container: HTMLElement,
-	dots: () => Dot[] = () => []
+	{ dots = () => [], project }: CollisionGeometry = {}
 ): () => void {
 	let frame = 0;
-	// Whether the next pass places every name afresh, without the stay bonus:
-	// the first one, and the first after a zoom ends.
-	let fresh = true;
-	let settledZoom = map.getZoom?.();
+	// Between a 'move' and its 'moveend'. Only then does a name get the stay
+	// bonus; a pass on a still map places every name afresh.
+	let moving = false;
 
 	const pass = () => {
 		frame = 0;
 		const popups = [...container.querySelectorAll<HTMLElement>('.maplibregl-popup')];
 		if (popups.length === 0) return;
-		const labels = readLabels(popups);
-		if (fresh) for (const label of labels) label.current = undefined;
-		fresh = false;
 		const bounds = container.getBoundingClientRect();
-		const placements = choosePlacements(labels, {
-			bounds,
-			dots: dots().map(({ x, y }) => ({ x: x + bounds.left, y: y + bounds.top }))
+		const onPage = ({ x, y }: Dot) => ({ x: x + bounds.left, y: y + bounds.top });
+		const labels = readLabels(popups, (label) => {
+			const place = project && label.getLngLat?.();
+			return place ? onPage(project([place.lng, place.lat])) : undefined;
 		});
+		if (!moving) for (const label of labels) label.current = undefined;
+		const placements = choosePlacements(labels, { bounds, dots: dots().map(onPage) });
 		popups.forEach((popup, index) => {
 			const { visible, offset, index: chosen } = placements[index];
 			popup.classList.toggle(CROWDED_CLASS, !visible);
@@ -406,14 +444,16 @@ export function enableLabelCollision(
 	const schedule = () => {
 		if (!frame) frame = requestAnimationFrame(pass);
 	};
+	const move = () => {
+		moving = true;
+		schedule();
+	};
 	const settle = () => {
-		const zoom = map.getZoom?.();
-		if (zoom !== settledZoom) fresh = true;
-		settledZoom = zoom;
+		moving = false;
 		schedule();
 	};
 
-	map.on('move', schedule);
+	map.on('move', move);
 	map.on('moveend', settle);
 	map.on('resize', schedule);
 	// Labels are added as the game goes on - each solved quiz target is a new
@@ -446,7 +486,7 @@ export function enableLabelCollision(
 		cancelAnimationFrame(frame);
 		observer.disconnect();
 		container.removeEventListener('transitionend', schedule);
-		map.off('move', schedule);
+		map.off('move', move);
 		map.off('moveend', settle);
 		map.off('resize', schedule);
 	};

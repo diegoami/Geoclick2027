@@ -1502,7 +1502,7 @@ loop actually feels good. Candidates below, in rough priority order.
         what changes is what each step optimizes. Stays inside the
         DOM-popup approach — see DECISIONS.md, "Names never overlap".
         **Built as FT-63** (v0.10.0): eight spots, a pixel score, every
-        dot an obstacle, a stay bonus dropped after each zoom.
+        dot an obstacle, a stay bonus only while the map moves.
       - **A region's name sits in its middle; it should stretch along the
         region, as in Europa Universalis — a spike first, agreed
         2026-09-20.** Today a region label has exactly one anchor — the
