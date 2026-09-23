@@ -1,4 +1,4 @@
-# Handover — 2026-09-23, v0.10.0 under way (FT-50 merged; v0.10.0 release next)
+# Handover — 2026-09-23, v0.10.0 release: milestone review out
 
 For whoever picks Geoclick up next, whether a human or a fresh Claude
 session. It records where things stand, what's next, and what's easy to
@@ -23,7 +23,7 @@ before any work starts.
 | Remediation programme | Closed with v0.2.0 ([REMEDIATION_PLAN.md](REMEDIATION_PLAN.md)); its automerge exception went with it |
 | Feature programme | Closed with v0.5.0 ([FEATURE_PLAN.md](FEATURE_PLAN.md)) |
 | Since then | Per-release plans: [PLAN_V0.6.md](PLAN_V0.6.md) through [PLAN_V0.9.4.md](PLAN_V0.9.4.md), each with its own ledger; now [PLAN_V0.10.md](PLAN_V0.10.md) |
-| Next | **The v0.10.0 release** (docs/RELEASES.md): every task in PLAN_V0.10.md is merged except FT-51 (German, postponed). Before tagging: hand the product owner the milestone review prompt for an independent model (docs/REVIEW_LOOP.md), and write the CHANGELOG entry saying what was built and what was actually tried. **FT-50 is merged** ([PR #25](https://github.com/diegoami/Geoclick2027/pull/25), `3af3ae5`): every name-fact in Italian, ~180 English facts corrected (DECISIONS.md, "Translating fact-checked the English"); three new sentences (Paraíba, Wonju, Sukabumi) the product owner may still want to read. Outstanding at the release gate: the v0.9.4 installer smoke test, the FT-61 tablet check, FT-66 on a real phone/tablet. A leftover Cloudflare "Workers Builds" check fails on every PR — a dashboard job for the product owner |
+| Next | **The v0.10.0 release** (docs/RELEASES.md): every task in PLAN_V0.10.md is merged except FT-51 (German, postponed). **The milestone review prompt went to the product owner on 2026-09-23** (scope `v0.9.4..f2eca43`, PRs #18–#25); waiting for the independent model's report. Answer every finding (REVIEW_LOOP.md), then write the CHANGELOG entry saying what was built and what was actually tried. **FT-50 is merged** ([PR #25](https://github.com/diegoami/Geoclick2027/pull/25), `3af3ae5`): every name-fact in Italian, ~180 English facts corrected (DECISIONS.md, "Translating fact-checked the English"); three new sentences (Paraíba, Wonju, Sukabumi) the product owner may still want to read. Outstanding at the release gate: the v0.9.4 installer smoke test, the FT-61 tablet check, FT-66 on a real phone/tablet. A leftover Cloudflare "Workers Builds" check fails on every PR — a dashboard job for the product owner |
 | After that | **FT-51 (German) is postponed** until the Italian has been read; the two v0.9.4 test gates (FT-56, FT-59) wait in a hardening batch |
 | Also raised 2026-09-20 | **The start screen becomes a zoomable world map** — pick the country on the map, then the kind of quiz. The map list cannot be finalized as a list: the goal is a high number of maps, and `mapCatalog.ts` is already 31 countries and 66 maps. Favourites and Recent stay unchanged. Second item of the Iteration 8+ backlog, with the open questions listed there |
 
@@ -96,7 +96,7 @@ installer smoke test (the published Windows and Android installers were
 
 Suggested first message for the next session:
 
-> Read docs/HANDOVER.md, then docs/RELEASES.md. Prepare the v0.10.0 release: first the milestone review prompt (docs/REVIEW_LOOP.md) for the product owner, then the CHANGELOG entry. (The v0.9.4 installer smoke test is still outstanding.)
+> Read docs/HANDOVER.md, then docs/RELEASES.md. Here is the independent review of v0.9.4..f2eca43: <paste>. Answer every finding (docs/REVIEW_LOOP.md), then write the v0.10.0 CHANGELOG entry. (The v0.9.4 installer smoke test is still outstanding.)
 
 Whatever comes next, the working rules stay (CLAUDE.md §3):
 
