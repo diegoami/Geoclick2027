@@ -6,11 +6,18 @@
 		"region": "L?ng Son",
 		"coastal": false,
 		"position": "north",
-		"hooks": [
-			"\"Mountain pass\" — lang a village or pass, son mountain.",
-			"The Friendship Pass here has been the main land gate to China for two thousand years, and armies have used it in both directions.",
-			"The 1979 Chinese invasion destroyed the town almost completely; it was rebuilt from nothing."
-		]
+		"hooks": {
+			"en": [
+				"\"Mountain pass\" — lang a village or pass, son mountain.",
+				"The Friendship Pass here has been the main land gate to China for two thousand years, and armies have used it in both directions.",
+				"The 1979 Chinese invasion destroyed the town almost completely; it was rebuilt from nothing."
+			],
+			"it": [
+				"\"Passo di montagna\": lang villaggio o passo, son montagna.",
+				"Il Passo dell’Amicizia, qui, è da duemila anni la principale porta terrestre verso la Cina, e gli eserciti l’hanno varcato in entrambe le direzioni.",
+				"L’invasione cinese del 1979 distrusse la città quasi completamente; fu ricostruita dal nulla."
+			]
+		}
 	},
 	"thai-nguyen": {
 		"kind": "city",
@@ -18,11 +25,18 @@
 		"populationRank": 10,
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"\"Clear source\" or \"peaceful plain\" — thai meaning great or peaceful, nguyen a source or plain.",
-			"Its tan cuong tea is the most prized green tea in Vietnam.",
-			"It was the site of the country's first integrated steelworks, built with Chinese help in the 1960s."
-		]
+		"hooks": {
+			"en": [
+				"\"Clear source\" or \"peaceful plain\" — thai meaning great or peaceful, nguyen a source or plain.",
+				"Its tan cuong tea is the most prized green tea in Vietnam.",
+				"It was the site of the country's first integrated steelworks, built with Chinese help in the 1960s."
+			],
+			"it": [
+				"\"Sorgente limpida\" o \"pianura pacifica\": thai significa grande o pacifico, nguyen sorgente o pianura.",
+				"Il suo tè tan cuong è il tè verde più pregiato del Vietnam.",
+				"Qui sorse il primo stabilimento siderurgico a ciclo integrale del paese, costruito con l’aiuto cinese negli anni Sessanta."
+			]
+		}
 	},
 	"viet-tri": {
 		"kind": "city",
@@ -31,11 +45,18 @@
 		"region": "Phú Th?",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"\"Viet pond\" or \"Viet place\" — one of the oldest recorded settlements in the country.",
-			"The Hung kings are said to have had their capital here, and the national ancestral temple is just outside.",
-			"It was built up as an industrial city in the 1950s with Chinese and Soviet help."
-		]
+		"hooks": {
+			"en": [
+				"\"Viet pond\" or \"Viet place\" — one of the oldest recorded settlements in the country.",
+				"The Hung kings are said to have had their capital here, and the national ancestral temple is just outside.",
+				"It was built up as an industrial city in the 1950s with Chinese and Soviet help."
+			],
+			"it": [
+				"\"Stagno dei Viet\" o \"luogo dei Viet\": uno degli insediamenti più antichi documentati nel paese.",
+				"Si dice che i re Hung avessero qui la loro capitale, e il tempio nazionale degli antenati è appena fuori città.",
+				"Fu sviluppata come città industriale negli anni Cinquanta con l’aiuto cinese e sovietico."
+			]
+		}
 	},
 	"son-tay": {
 		"kind": "city",
@@ -44,11 +65,18 @@
 		"region": "Hà Tây",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"\"Western mountain\" — son mountain, tay west.",
-			"Its citadel of 1822 is built of laterite and is one of the best preserved in the north.",
-			"An American raid on its prison camp in 1970 found no prisoners; they had been moved."
-		]
+		"hooks": {
+			"en": [
+				"\"Western mountain\" — son mountain, tay west.",
+				"Its citadel of 1822 is built of laterite and is one of the best preserved in the north.",
+				"An American raid on its prison camp in 1970 found no prisoners; they had been moved."
+			],
+			"it": [
+				"\"Montagna dell’ovest\": son montagna, tay ovest.",
+				"La sua cittadella del 1822 è costruita in laterite ed è una delle meglio conservate del nord.",
+				"Un raid americano sul suo campo di prigionia, nel 1970, non trovò nessun prigioniero: erano stati trasferiti."
+			]
+		}
 	},
 	"cam-pha": {
 		"kind": "city",
@@ -57,11 +85,18 @@
 		"region": "Qu?ng Ninh",
 		"coastal": true,
 		"position": "north",
-		"hooks": [
-			"Probably from a local name; the town sits on the Ha Long coast.",
-			"It is the centre of Vietnam’s open-cast coal mining, with terraced pits above the sea.",
-			"Its coal has been dug since the French opened the field in the 1880s."
-		]
+		"hooks": {
+			"en": [
+				"Probably from a local name; the town sits on the Ha Long coast.",
+				"It is the centre of Vietnam’s open-cast coal mining, with terraced pits above the sea.",
+				"Its coal has been dug since the French opened the field in the 1880s."
+			],
+			"it": [
+				"Probabilmente da un nome locale; la città sorge sulla costa di Ha Long.",
+				"È il centro dell’estrazione di carbone a cielo aperto del Vietnam, con cave a gradoni sopra il mare.",
+				"Il suo carbone si estrae da quando i francesi aprirono il giacimento, negli anni Ottanta dell’Ottocento."
+			]
+		}
 	},
 	"ha-noi": {
 		"kind": "city",
@@ -72,11 +107,18 @@
 		"capitalOf": "country",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"\"Inside the rivers\" — ha river, noi inside: the city sits in the bend of the Red River.",
-			"It has been a capital on and off since 1010, when a king saw a dragon rise and named it Thang Long, ascending dragon.",
-			"Its Temple of Literature, founded in 1070, was Vietnam's first university, and the names of its doctoral graduates are carved on stone tortoises."
-		]
+		"hooks": {
+			"en": [
+				"\"Inside the rivers\" — ha river, noi inside: the city sits in the bend of the Red River.",
+				"It has been a capital on and off since 1010, when a king saw a dragon rise and named it Thang Long, ascending dragon.",
+				"Its Temple of Literature, founded in 1070, was Vietnam's first university, and the names of its doctoral graduates are carved on stone tortoises."
+			],
+			"it": [
+				"\"Dentro i fiumi\" (ha fiume, noi dentro): la città sorge nell’ansa del fiume Rosso.",
+				"È stata capitale a fasi alterne dal 1010, quando un re vide levarsi un drago e la chiamò Thang Long, \"drago che si innalza\".",
+				"Il suo Tempio della Letteratura, fondato nel 1070, fu la prima università del Vietnam, e i nomi dei suoi dottori sono incisi su tartarughe di pietra."
+			]
+		}
 	},
 	"ha-long": {
 		"kind": "city",
@@ -85,11 +127,18 @@
 		"region": "Qu?ng Ninh",
 		"coastal": true,
 		"position": "north",
-		"hooks": [
-			"\"Descending dragon\" — from the legend of dragons spitting jewels that became the bay’s islands.",
-			"Those 1,600 limestone islands are a UNESCO site and Vietnam’s best-known landscape.",
-			"The town was called Hon Gai until 1994, when it took the bay’s name for tourism."
-		]
+		"hooks": {
+			"en": [
+				"\"Descending dragon\" — from the legend of dragons spitting jewels that became the bay’s islands.",
+				"Those 1,600 limestone islands are a UNESCO site and Vietnam’s best-known landscape.",
+				"The town was called Hon Gai until 1994, when it took the bay’s name for tourism."
+			],
+			"it": [
+				"\"Drago che scende\": dalla leggenda dei draghi che sputavano gioielli, diventati le isole della baia.",
+				"Quelle 1.600 isole calcaree sono un sito UNESCO e il paesaggio più famoso del Vietnam.",
+				"La città si chiamava Hon Gai fino al 1994, quando prese il nome della baia per il turismo."
+			]
+		}
 	},
 	"hai-phong": {
 		"kind": "city",
@@ -99,11 +148,18 @@
 		"region": "Qu?ng Ninh",
 		"coastal": true,
 		"position": "north",
-		"hooks": [
-			"\"Coastal defence\" — hai sea, phong to guard.",
-			"The third largest city and the main port of the north.",
-			"Cat Ba island off it holds the golden-headed langur, of which about 70 remain — one of the rarest primates in the world."
-		]
+		"hooks": {
+			"en": [
+				"\"Coastal defence\" — hai sea, phong to guard.",
+				"The third largest city and the main port of the north.",
+				"Cat Ba island off it holds the golden-headed langur, of which about 70 remain — one of the rarest primates in the world."
+			],
+			"it": [
+				"\"Difesa costiera\": hai mare, phong custodire.",
+				"La terza città del paese e il principale porto del nord.",
+				"L’isola di Cat Ba, al largo, ospita il langur dalla testa dorata, di cui restano circa 70 esemplari: uno dei primati più rari al mondo."
+			]
+		}
 	},
 	"hoa-binh": {
 		"kind": "city",
@@ -111,11 +167,18 @@
 		"populationRank": 43,
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"\"Peace\" — hoa harmony, binh peace.",
-			"The Hoabinhian culture is named after this province: stone tools found here defined a whole prehistoric period across south-east Asia.",
-			"It is the heartland of the Muong people, whose language is the closest living relative of Vietnamese."
-		]
+		"hooks": {
+			"en": [
+				"\"Peace\" — hoa harmony, binh peace.",
+				"The Hoabinhian culture is named after this province: stone tools found here defined a whole prehistoric period across south-east Asia.",
+				"It is the heartland of the Muong people, whose language is the closest living relative of Vietnamese."
+			],
+			"it": [
+				"\"Pace\": hoa armonia, binh pace.",
+				"La cultura hoabinhiana prende il nome da questa provincia: gli utensili di pietra trovati qui hanno definito un intero periodo preistorico in tutto il Sud-est asiatico.",
+				"È la terra d’origine dei Muong, la cui lingua è la parente vivente più stretta del vietnamita."
+			]
+		}
 	},
 	"thai-binh": {
 		"kind": "city",
@@ -124,11 +187,18 @@
 		"region": "ThMi Bmnh",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"\"Great peace\" — a name that has been used for the region since the eleventh century.",
-			"Entirely flat delta with no mountains and no forest, and among the most intensively farmed land in Asia.",
-			"It has the highest rice yield per hectare in Vietnam and sends migrant workers all over the country."
-		]
+		"hooks": {
+			"en": [
+				"\"Great peace\" — a name that has been used for the region since the eleventh century.",
+				"Entirely flat delta with no mountains and no forest, and among the most intensively farmed land in Asia.",
+				"It has the highest rice yield per hectare in Vietnam and sends migrant workers all over the country."
+			],
+			"it": [
+				"\"Grande pace\": un nome usato per la regione fin dall’XI secolo.",
+				"Un delta tutto pianeggiante, senza montagne né foreste, e tra le terre coltivate più intensamente dell’Asia.",
+				"Ha la resa di riso per ettaro più alta del Vietnam e manda lavoratori migranti in tutto il paese."
+			]
+		}
 	},
 	"nam-inh": {
 		"kind": "city",
@@ -137,11 +207,18 @@
 		"region": "Nam n?nh",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"\"Southern settlement\" — nam south, dinh a settled place.",
-			"It was the capital of the Tran dynasty, which beat three Mongol invasions in the 1200s, once by planting iron-tipped stakes in a riverbed.",
-			"Phat Diem cathedral nearby is built in Vietnamese temple style with curved roofs, and the province has the country's largest Catholic population."
-		]
+		"hooks": {
+			"en": [
+				"\"Southern settlement\" — nam south, dinh a settled place.",
+				"It was the home and second capital of the Tran dynasty, which beat three Mongol invasions in the 1200s, once by planting iron-tipped stakes in a riverbed.",
+				"Phat Diem cathedral nearby is built in Vietnamese temple style with curved roofs, and the province has the country's largest Catholic population."
+			],
+			"it": [
+				"\"Insediamento del sud\": nam sud, dinh luogo di insediamento.",
+				"Fu la terra d’origine e la seconda capitale della dinastia Tran, che respinse tre invasioni mongole nel Duecento, una volta piantando pali dalla punta di ferro nel letto di un fiume.",
+				"La cattedrale di Phat Diem, poco lontano, è costruita nello stile dei templi vietnamiti con tetti ricurvi, e la provincia ha la più numerosa popolazione cattolica del paese."
+			]
+		}
 	},
 	"ninh-binh": {
 		"kind": "city",
@@ -150,11 +227,18 @@
 		"region": "Ninh Bmnh",
 		"coastal": false,
 		"position": "north-west",
-		"hooks": [
-			"\"Tranquil peace\".",
-			"Trang An here is a UNESCO site of limestone towers and river caves, and Hoa Lu was Vietnam's capital in the tenth century.",
-			"It is called Ha Long Bay on land, and the caves are rowed through by boatwomen using their feet on the oars."
-		]
+		"hooks": {
+			"en": [
+				"\"Tranquil peace\".",
+				"Trang An here is a UNESCO site of limestone towers and river caves, and Hoa Lu was Vietnam's capital in the tenth century.",
+				"It is called Ha Long Bay on land, and the caves are rowed through by boatwomen using their feet on the oars."
+			],
+			"it": [
+				"\"Pace tranquilla\".",
+				"Trang An è un sito UNESCO di torri calcaree e grotte fluviali, e Hoa Lu fu la capitale del Vietnam nel X secolo.",
+				"La chiamano la baia di Ha Long sulla terraferma, e le grotte si attraversano in barca, spinti da rematrici che manovrano i remi con i piedi."
+			]
+		}
 	},
 	"thanh-hoa": {
 		"kind": "city",
@@ -163,11 +247,18 @@
 		"region": "Thanh H",
 		"coastal": true,
 		"position": "north-west",
-		"hooks": [
-			"\"Pure harmony\" — thanh clear or pure, hoa harmony.",
-			"The Dong Son culture, which made Vietnam's great bronze drums from about 600 BC, is named after a village in this province.",
-			"The Ho dynasty citadel here, built in 1397 from enormous stone blocks, is a UNESCO site."
-		]
+		"hooks": {
+			"en": [
+				"\"Pure harmony\" — thanh clear or pure, hoa harmony.",
+				"The Dong Son culture, which made Vietnam's great bronze drums from about 600 BC, is named after a village in this province.",
+				"The Ho dynasty citadel here, built in 1397 from enormous stone blocks, is a UNESCO site."
+			],
+			"it": [
+				"\"Pura armonia\": thanh limpido o puro, hoa armonia.",
+				"La cultura di Dong Son, che dal 600 a.C. circa produsse i grandi tamburi di bronzo del Vietnam, prende il nome da un villaggio di questa provincia.",
+				"La cittadella della dinastia Ho, costruita nel 1397 con enormi blocchi di pietra, è un sito UNESCO."
+			]
+		}
 	},
 	"vinh": {
 		"kind": "city",
@@ -176,11 +267,18 @@
 		"region": "Ngh? An",
 		"coastal": true,
 		"position": "north-west",
-		"hooks": [
-			"Possibly from a word for a gulf or an older local name.",
-			"It was flattened by American bombing — one of the most heavily hit cities in the north — and rebuilt with East German help.",
-			"Ho Chi Minh was born in a village just outside it."
-		]
+		"hooks": {
+			"en": [
+				"Possibly from a word for a gulf or an older local name.",
+				"It was flattened by American bombing — one of the most heavily hit cities in the north — and rebuilt with East German help.",
+				"Ho Chi Minh was born in a village just outside it."
+			],
+			"it": [
+				"Forse da una parola che indica un golfo, o da un antico nome locale.",
+				"Fu rasa al suolo dai bombardamenti americani, una delle città più colpite del nord, e ricostruita con l’aiuto della Germania Est.",
+				"Ho Chi Minh nacque in un villaggio appena fuori città."
+			]
+		}
 	},
 	"ha-tinh": {
 		"kind": "city",
@@ -189,11 +287,18 @@
 		"region": "Ha Tinh",
 		"coastal": true,
 		"position": "north-west",
-		"hooks": [
-			"\"Quiet river\" — ha river, tinh quiet.",
-			"Nguyen Du, who wrote the Tale of Kieu — the poem every Vietnamese can quote — was from here.",
-			"The Ke Go reserve holds several bird species found nowhere else, and the province was the site of a major 2016 industrial marine pollution disaster."
-		]
+		"hooks": {
+			"en": [
+				"\"Quiet river\" — ha river, tinh quiet.",
+				"Nguyen Du, who wrote the Tale of Kieu — the poem every Vietnamese can quote — was from here.",
+				"The Ke Go reserve holds several bird species found nowhere else, and the province was the site of a major 2016 industrial marine pollution disaster."
+			],
+			"it": [
+				"\"Fiume quieto\": ha fiume, tinh quieto.",
+				"Era di qui Nguyen Du, autore del Racconto di Kieu, il poema che ogni vietnamita sa citare.",
+				"La riserva di Ke Go ospita diverse specie di uccelli che non vivono altrove, e nel 2016 la provincia fu teatro di un grave disastro di inquinamento marino industriale."
+			]
+		}
 	},
 	"ong-hoi": {
 		"kind": "city",
@@ -202,11 +307,18 @@
 		"region": "Qu?ng Bình",
 		"coastal": true,
 		"position": "centre",
-		"hooks": [
-			"\"Eastern gathering\" — dong east, hoi to gather.",
-			"The Son Doong and Phong Nha caves are in its province, the largest cave passages in the world.",
-			"It sits at Vietnam’s narrowest point, where the country is about 50 km wide."
-		]
+		"hooks": {
+			"en": [
+				"\"Eastern gathering\" — dong east, hoi to gather.",
+				"The Son Doong and Phong Nha caves are in its province, the largest cave passages in the world.",
+				"It sits at Vietnam’s narrowest point, where the country is about 50 km wide."
+			],
+			"it": [
+				"\"Raduno orientale\": dong est, hoi radunarsi.",
+				"Le grotte di Son Doong e Phong Nha sono nella sua provincia: le più grandi gallerie di grotta del mondo.",
+				"Sorge nel punto più stretto del Vietnam, dove il paese è largo circa 50 km."
+			]
+		}
 	},
 	"hue": {
 		"kind": "city",
@@ -215,11 +327,18 @@
 		"region": "Th?a Thiên - Hu?",
 		"coastal": true,
 		"position": "centre",
-		"hooks": [
-			"Probably a worn-down form of Thuan Hoa, the old regional name.",
-			"It was the imperial capital from 1802 to 1945; its citadel and royal tombs are a UNESCO site.",
-			"The 1968 battle for the city was the longest and bloodiest of the Tet Offensive."
-		]
+		"hooks": {
+			"en": [
+				"Probably a worn-down form of Thuan Hoa, the old regional name.",
+				"It was the imperial capital from 1802 to 1945; its citadel and royal tombs are a UNESCO site.",
+				"The 1968 battle for the city was the longest and bloodiest of the Tet Offensive."
+			],
+			"it": [
+				"Probabilmente una forma consumata dal tempo di Thuan Hoa, l’antico nome della regione.",
+				"Fu la capitale imperiale dal 1802 al 1945; la sua cittadella e le tombe reali sono un sito UNESCO.",
+				"La battaglia per la città del 1968 fu la più lunga e sanguinosa dell’offensiva del Tet."
+			]
+		}
 	},
 	"a-nang": {
 		"kind": "city",
@@ -228,11 +347,18 @@
 		"region": "Ðà N?ng",
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"Probably from Cham daknan, \"big river mouth\" — one of the Cham names that survive along this coast.",
-			"The Marble Mountains here are five limestone hills named for the five elements, honeycombed with caves and shrines.",
-			"The first American combat troops in Vietnam landed on its beach in 1965, and the city is now the country's most liveable by common consent."
-		]
+		"hooks": {
+			"en": [
+				"Probably from Cham daknan, \"big river mouth\" — one of the Cham names that survive along this coast.",
+				"The Marble Mountains here are five limestone hills named for the five elements, honeycombed with caves and shrines.",
+				"The first American combat troops in Vietnam landed on its beach in 1965, and the city is now the country's most liveable by common consent."
+			],
+			"it": [
+				"Probabilmente dal cham daknan, \"grande foce\": uno dei nomi cham che sopravvivono lungo questa costa.",
+				"Le Montagne di Marmo sono cinque colline calcaree intitolate ai cinque elementi, traforate di grotte e santuari.",
+				"Le prime truppe combattenti americane in Vietnam sbarcarono sulla sua spiaggia nel 1965, e oggi la città è per comune consenso la più vivibile del paese."
+			]
+		}
 	},
 	"quang-ngai": {
 		"kind": "city",
@@ -241,11 +367,18 @@
 		"region": "Qu?ng Ngãi",
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"\"Broad Ngai\" — quang broad again.",
-			"The My Lai massacre took place here in 1968, and the site is a memorial.",
-			"Ly Son island off its coast grows garlic in sand carried up from the beach, and was a base for the Hoang Sa flotilla that claimed the Paracels."
-		]
+		"hooks": {
+			"en": [
+				"\"Broad Ngai\" — quang broad again.",
+				"The My Lai massacre took place here in 1968, and the site is a memorial.",
+				"Ly Son island off its coast grows garlic in sand carried up from the beach, and was a base for the Hoang Sa flotilla that claimed the Paracels."
+			],
+			"it": [
+				"\"Ampio Ngai\": di nuovo quang, ampio.",
+				"Qui avvenne nel 1968 il massacro di My Lai, e il luogo è oggi un memoriale.",
+				"L’isola di Ly Son, al largo della sua costa, coltiva l’aglio nella sabbia portata su dalla spiaggia, e fu la base della flottiglia di Hoang Sa che rivendicò le isole Paracelso."
+			]
+		}
 	},
 	"kon-tum": {
 		"kind": "city",
@@ -254,11 +387,18 @@
 		"region": "Qu?ng Nam",
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"From Bahnar: kon means village and tum a lake — \"the village by the lake\".",
-			"One of the most ethnically diverse provinces, with Bahnar, Sedang, Gia Rai and Gie Trieng communities.",
-			"Its wooden cathedral, built by the French in 1913 in local stilt-house style, is one of the most unusual churches in Asia."
-		]
+		"hooks": {
+			"en": [
+				"From Bahnar: kon means village and tum a lake — \"the village by the lake\".",
+				"One of the most ethnically diverse provinces, with Bahnar, Sedang, Gia Rai and Gie Trieng communities.",
+				"Its wooden cathedral, built by the French in 1913 in local stilt-house style, is one of the most unusual churches in Asia."
+			],
+			"it": [
+				"Dal bahnar: kon significa villaggio e tum lago, \"il villaggio sul lago\".",
+				"Una delle province più varie per etnie, con comunità bahnar, sedang, gia rai e gie trieng.",
+				"La sua cattedrale di legno, costruita dai francesi nel 1913 nello stile locale delle case su palafitte, è una delle chiese più insolite dell’Asia."
+			]
+		}
 	},
 	"pleiku": {
 		"kind": "city",
@@ -267,11 +407,18 @@
 		"region": "Gia Lai",
 		"coastal": false,
 		"position": "east",
-		"hooks": [
-			"From Jarai: plei means village, and Ku was a local leader.",
-			"It was a key base in the central highlands, and the 1975 retreat from it began the fall of South Vietnam.",
-			"Bien Ho, a crater lake beside the town, supplies its water."
-		]
+		"hooks": {
+			"en": [
+				"From Jarai: plei means village, and Ku was a local leader.",
+				"It was a key base in the central highlands, and the 1975 retreat from it began the fall of South Vietnam.",
+				"Bien Ho, a crater lake beside the town, supplies its water."
+			],
+			"it": [
+				"Dal jarai: plei significa villaggio, e Ku era un capo locale.",
+				"Fu una base chiave degli altopiani centrali, e la ritirata del 1975 da qui diede inizio alla caduta del Vietnam del Sud.",
+				"Bien Ho, un lago di cratere accanto alla città, la rifornisce d’acqua."
+			]
+		}
 	},
 	"quy-nhon": {
 		"kind": "city",
@@ -280,11 +427,18 @@
 		"region": "Bình Ð?nh",
 		"coastal": true,
 		"position": "east",
-		"hooks": [
-			"From an old name meaning something like \"returning to benevolence\".",
-			"It was a Cham port, and Cham towers still stand within the city.",
-			"Its ICISE science centre hosts international physics meetings, founded by a Vietnamese-French physicist."
-		]
+		"hooks": {
+			"en": [
+				"From an old name meaning something like \"returning to benevolence\".",
+				"It was a Cham port, and Cham towers still stand within the city.",
+				"Its ICISE science centre hosts international physics meetings, founded by a Vietnamese-French physicist."
+			],
+			"it": [
+				"Da un antico nome che significa più o meno \"ritorno alla benevolenza\".",
+				"Fu un porto cham, e torri cham si ergono ancora in città.",
+				"Il suo centro scientifico ICISE, fondato da un fisico franco-vietnamita, ospita convegni internazionali di fisica."
+			]
+		}
 	},
 	"buon-ma-thuot": {
 		"kind": "city",
@@ -293,11 +447,18 @@
 		"region": "Dak Lak",
 		"coastal": false,
 		"position": "south-east",
-		"hooks": [
-			"From Rade: buon means village, and Ma Thuot was a chief — \"the village of father Thuot\".",
-			"The coffee capital of Vietnam, and Vietnam is the world’s largest producer of robusta.",
-			"Its capture in March 1975 was the opening move of the offensive that ended the war six weeks later."
-		]
+		"hooks": {
+			"en": [
+				"From Rade: buon means village, and Ma Thuot was a chief — \"the village of father Thuot\".",
+				"The coffee capital of Vietnam, and Vietnam is the world’s largest producer of robusta.",
+				"Its capture in March 1975 was the opening move of the offensive that ended the war seven weeks later."
+			],
+			"it": [
+				"Dal rade: buon significa villaggio e Ma Thuot era un capo, quindi \"il villaggio di padre Thuot\".",
+				"La capitale del caffè del Vietnam, e il Vietnam è il primo produttore mondiale di robusta.",
+				"La sua conquista, nel marzo 1975, fu la mossa d’apertura dell’offensiva che sette settimane dopo mise fine alla guerra."
+			]
+		}
 	},
 	"nha-trang": {
 		"kind": "city",
@@ -306,11 +467,18 @@
 		"region": "Khánh Hòa",
 		"coastal": true,
 		"position": "south-east",
-		"hooks": [
-			"From Cham ea trang, \"reed river\" — one of the Cham names that survive along this coast.",
-			"Its Po Nagar towers, built by the Cham from the 700s, are still used for worship.",
-			"Alexandre Yersin, who identified the plague bacterium, lived and is buried here, and is revered locally."
-		]
+		"hooks": {
+			"en": [
+				"From Cham ea trang, \"reed river\" — one of the Cham names that survive along this coast.",
+				"Its Po Nagar towers, built by the Cham from the 700s, are still used for worship.",
+				"Alexandre Yersin, who identified the plague bacterium, lived and is buried here, and is revered locally."
+			],
+			"it": [
+				"Dal cham ea trang, \"fiume delle canne\": uno dei nomi cham che sopravvivono lungo questa costa.",
+				"Le sue torri di Po Nagar, costruite dai Cham a partire dall’VIII secolo, sono ancora usate per il culto.",
+				"Alexandre Yersin, che identificò il bacillo della peste, visse ed è sepolto qui, dove è venerato."
+			]
+		}
 	},
 	"a-lat": {
 		"kind": "city",
@@ -319,11 +487,18 @@
 		"region": "Lâm Ð?ng",
 		"coastal": false,
 		"position": "south-east",
-		"hooks": [
-			"From K'Ho da lat, \"the river of the Lat people\" — the French also liked the Latin motto they could make of the letters.",
-			"Built as a French hill station at 1,500 m, it still grows Europe’s vegetables and flowers for the country.",
-			"Its cool climate makes it Vietnam’s honeymoon city, and it grows almost all the country’s artichokes."
-		]
+		"hooks": {
+			"en": [
+				"From K'Ho da lat, \"the river of the Lat people\" — the French also liked the Latin motto they could make of the letters.",
+				"Built as a French hill station at 1,500 m, it still grows Europe’s vegetables and flowers for the country.",
+				"Its cool climate makes it Vietnam’s honeymoon city, and it grows almost all the country’s artichokes."
+			],
+			"it": [
+				"Dal k’ho da lat, \"il fiume del popolo Lat\": ai francesi piaceva anche il motto latino che si poteva ricavare dalle lettere.",
+				"Costruita come stazione climatica francese a 1.500 m, coltiva ancora ortaggi e fiori europei per il paese.",
+				"Il clima fresco ne fa la città delle lune di miele del Vietnam, e produce quasi tutti i carciofi del paese."
+			]
+		}
 	},
 	"cam-ranh": {
 		"kind": "city",
@@ -332,11 +507,18 @@
 		"region": "Khánh Hòa",
 		"coastal": true,
 		"position": "south-east",
-		"hooks": [
-			"Of local origin; the bay is one of the finest deep-water harbours in Asia.",
-			"The Russian fleet anchored here before sailing to its destruction at Tsushima in 1905.",
-			"It was a major American base and then a Soviet one, and is now Vietnam’s tourist airport for Nha Trang."
-		]
+		"hooks": {
+			"en": [
+				"Of local origin; the bay is one of the finest deep-water harbours in Asia.",
+				"The Russian fleet anchored here before sailing to its destruction at Tsushima in 1905.",
+				"It was a major American base and then a Soviet one, and is now Vietnam’s tourist airport for Nha Trang."
+			],
+			"it": [
+				"Di origine locale; la baia è uno dei migliori porti in acque profonde dell’Asia.",
+				"La flotta russa si ancorò qui prima di salpare verso la sua distruzione a Tsushima, nel 1905.",
+				"Fu una grande base americana e poi sovietica, e oggi è l’aeroporto turistico del Vietnam per Nha Trang."
+			]
+		}
 	},
 	"phan-rang-thap-cham": {
 		"kind": "city",
@@ -345,11 +527,18 @@
 		"region": "Ninh Thu?n",
 		"coastal": true,
 		"position": "south-east",
-		"hooks": [
-			"Phan Rang is from Cham Panduranga; Thap Cham means \"Cham tower\".",
-			"The Po Klong Garai towers above it are the best preserved Cham temples in Vietnam.",
-			"The driest place in the country, with cactus, salt pans and table grapes."
-		]
+		"hooks": {
+			"en": [
+				"Phan Rang is from Cham Panduranga; Thap Cham means \"Cham tower\".",
+				"The Po Klong Garai towers above it are the best preserved Cham temples in Vietnam.",
+				"The driest place in the country, with cactus, salt pans and table grapes."
+			],
+			"it": [
+				"Phan Rang viene dal cham Panduranga; Thap Cham significa \"torre cham\".",
+				"Le torri di Po Klong Garai, che la sovrastano, sono i templi cham meglio conservati del Vietnam.",
+				"Il luogo più arido del paese, con cactus, saline e uva da tavola."
+			]
+		}
 	},
 	"tay-ninh": {
 		"kind": "city",
@@ -357,11 +546,18 @@
 		"populationRank": 40,
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"\"Western tranquillity\" — tay west.",
-			"The Cao Dai religion was founded here in 1926 and its Great Temple canonises Victor Hugo, Sun Yat-sen and Joan of Arc among its saints.",
-			"Ba Den mountain rises 986 m straight out of the plain, the only relief for a hundred kilometres."
-		]
+		"hooks": {
+			"en": [
+				"\"Western tranquillity\" — tay west.",
+				"The Cao Dai religion was founded here in 1926 and its Great Temple canonises Victor Hugo, Sun Yat-sen and Joan of Arc among its saints.",
+				"Ba Den mountain rises 986 m straight out of the plain, the only relief for a hundred kilometres."
+			],
+			"it": [
+				"\"Tranquillità dell’ovest\": tay ovest.",
+				"Il caodaismo fu fondato qui nel 1926, e il suo Grande Tempio annovera tra i santi Victor Hugo, Sun Yat-sen e Giovanna d’Arco.",
+				"Il monte Ba Den si alza per 986 m dritto dalla pianura, l’unico rilievo per cento chilometri."
+			]
+		}
 	},
 	"bien-hoa": {
 		"kind": "city",
@@ -370,11 +566,18 @@
 		"region": "Ðông Nam B?",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"\"Peaceful frontier\" — bien a border, hoa harmony.",
-			"One of the oldest Vietnamese settlements in the south, founded by Chinese refugees in the 1600s.",
-			"Its airbase was the busiest in the world at points during the war, and is heavily dioxin-contaminated."
-		]
+		"hooks": {
+			"en": [
+				"\"Peaceful frontier\" — bien a border, hoa harmony.",
+				"One of the oldest Vietnamese settlements in the south, founded by Chinese refugees in the 1600s.",
+				"Its airbase was the busiest in the world at points during the war, and is heavily dioxin-contaminated."
+			],
+			"it": [
+				"\"Frontiera pacifica\": bien confine, hoa armonia.",
+				"Uno dei più antichi insediamenti vietnamiti del sud, fondato da profughi cinesi nel Seicento.",
+				"La sua base aerea fu a tratti la più trafficata del mondo durante la guerra, ed è pesantemente contaminata dalla diossina."
+			]
+		}
 	},
 	"thu-dau-mot": {
 		"kind": "city",
@@ -383,11 +586,18 @@
 		"region": "Bình Duong",
 		"coastal": false,
 		"position": "south",
-		"hooks": [
-			"From a phrase about a tree on a mound — the derivation is debated.",
-			"Its lacquerware and pottery villages supplied Saigon for two centuries.",
-			"It is the capital of Binh Duong, the province with the highest income per head in Vietnam."
-		]
+		"hooks": {
+			"en": [
+				"From a phrase about a tree on a mound — the derivation is debated.",
+				"Its lacquerware and pottery villages supplied Saigon for two centuries.",
+				"It is the capital of Binh Duong, the province with the highest income per head in Vietnam."
+			],
+			"it": [
+				"Da un’espressione che parla di un albero su un’altura: l’etimologia è discussa.",
+				"I suoi villaggi di lacche e ceramiche rifornirono Saigon per due secoli.",
+				"È il capoluogo di Binh Duong, la provincia con il reddito pro capite più alto del Vietnam."
+			]
+		}
 	},
 	"phan-thiet": {
 		"kind": "city",
@@ -396,11 +606,18 @@
 		"region": "Bình Thu?n",
 		"coastal": true,
 		"position": "south-east",
-		"hooks": [
-			"From Cham hamu lithit, a local place name.",
-			"It makes the most famous fish sauce in Vietnam, fermented in wooden vats along the shore.",
-			"Mui Ne beside it has red and white sand dunes and is a kitesurfing centre."
-		]
+		"hooks": {
+			"en": [
+				"From Cham hamu lithit, a local place name.",
+				"It makes the most famous fish sauce in Vietnam, fermented in wooden vats along the shore.",
+				"Mui Ne beside it has red and white sand dunes and is a kitesurfing centre."
+			],
+			"it": [
+				"Dal cham hamu lithit, un toponimo locale.",
+				"Produce la salsa di pesce più famosa del Vietnam, fatta fermentare in tini di legno lungo la riva.",
+				"Mui Ne, lì accanto, ha dune di sabbia rossa e bianca ed è un centro del kitesurf."
+			]
+		}
 	},
 	"ho-chi-minh": {
 		"kind": "city",
@@ -410,11 +627,18 @@
 		"region": "H? Chí Minh city",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"Renamed in 1976 for Ho Chi Minh; the older Saigon may be from Khmer prey nokor, \"forest city\".",
-			"The largest city in Vietnam, producing about a fifth of national GDP.",
-			"The Cu Chi tunnels outside it run 250 km, with kitchens, hospitals and workshops dug by hand."
-		]
+		"hooks": {
+			"en": [
+				"Renamed in 1976 for Ho Chi Minh; the older Saigon may be from Khmer prey nokor, \"forest city\".",
+				"The largest city in Vietnam, producing about a fifth of national GDP.",
+				"The Cu Chi tunnels outside it run 250 km, with kitchens, hospitals and workshops dug by hand."
+			],
+			"it": [
+				"Ribattezzata nel 1976 in onore di Ho Chi Minh; il vecchio nome Saigon potrebbe venire dal khmer prey nokor, \"città della foresta\".",
+				"La città più grande del Vietnam, con circa un quinto del PIL nazionale.",
+				"I tunnel di Cu Chi, appena fuori città, si estendono per 250 km, con cucine, ospedali e officine scavati a mano."
+			]
+		}
 	},
 	"tan-an": {
 		"kind": "city",
@@ -423,11 +647,18 @@
 		"region": "Long An",
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"\"New peace\" — tan new, an peace.",
-			"The gateway from Ho Chi Minh City into the Mekong delta.",
-			"Its Dong Thap Muoi, the Plain of Reeds, took decades of engineering to make farmable."
-		]
+		"hooks": {
+			"en": [
+				"\"New peace\" — tan new, an peace.",
+				"The gateway from Ho Chi Minh City into the Mekong delta.",
+				"Its Dong Thap Muoi, the Plain of Reeds, took decades of engineering to make farmable."
+			],
+			"it": [
+				"\"Pace nuova\": tan nuovo, an pace.",
+				"La porta d’accesso dalla città di Ho Chi Minh al delta del Mekong.",
+				"Il suo Dong Thap Muoi, la Piana dei Giunchi, ha richiesto decenni di opere per diventare coltivabile."
+			]
+		}
 	},
 	"cao-lanh": {
 		"kind": "city",
@@ -436,11 +667,18 @@
 		"region": "Ð?ng Tháp",
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"From an older local name, possibly honouring a woman called Lanh.",
-			"Tram Chim park nearby protects the sarus crane, the tallest flying bird in the world.",
-			"It sits on the Tien, the northern branch of the Mekong."
-		]
+		"hooks": {
+			"en": [
+				"From an older local name, possibly honouring a woman called Lanh.",
+				"Tram Chim park nearby protects the sarus crane, the tallest flying bird in the world.",
+				"It sits on the Tien, the northern branch of the Mekong."
+			],
+			"it": [
+				"Da un antico nome locale, forse in onore di una donna di nome Lanh.",
+				"Il parco di Tram Chim, poco lontano, protegge la gru antigone, il più alto uccello volatore al mondo.",
+				"Sorge sul Tien, il ramo settentrionale del Mekong."
+			]
+		}
 	},
 	"long-xuyen": {
 		"kind": "city",
@@ -449,11 +687,18 @@
 		"region": "An Giang",
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"\"Dragon crossing\" — long dragon.",
-			"It is the capital of An Giang, which has the delta’s largest Cham Muslim and Khmer populations.",
-			"Ton Duc Thang, who succeeded Ho Chi Minh as president, was born on an island opposite the town."
-		]
+		"hooks": {
+			"en": [
+				"\"Dragon crossing\" — long dragon.",
+				"It is the capital of An Giang, which has the delta’s largest Cham Muslim and Khmer populations.",
+				"Ton Duc Thang, who succeeded Ho Chi Minh as president, was born on an island opposite the town."
+			],
+			"it": [
+				"\"Passaggio del drago\": long drago.",
+				"È il capoluogo dell’An Giang, che ha le più numerose popolazioni cham musulmane e khmer del delta.",
+				"Ton Duc Thang, che succedette a Ho Chi Minh come presidente, nacque su un’isola di fronte alla città."
+			]
+		}
 	},
 	"vung-tau": {
 		"kind": "city",
@@ -462,11 +707,18 @@
 		"region": "Bà R?a - Vung Tàu",
 		"coastal": true,
 		"position": "south",
-		"hooks": [
-			"\"Anchorage bay\" — vung a bay, tau a ship.",
-			"The French called it Cap Saint-Jacques and made it Saigon’s seaside resort.",
-			"Vietnam’s offshore oil and gas comes ashore here, and a 32 m Christ statue stands over the cape."
-		]
+		"hooks": {
+			"en": [
+				"\"Anchorage bay\" — vung a bay, tau a ship.",
+				"The French called it Cap Saint-Jacques and made it Saigon’s seaside resort.",
+				"Vietnam’s offshore oil and gas comes ashore here, and a 32 m Christ statue stands over the cape."
+			],
+			"it": [
+				"\"Baia d’ancoraggio\": vung baia, tau nave.",
+				"I francesi la chiamavano Cap Saint-Jacques e ne fecero la località balneare di Saigon.",
+				"Il petrolio e il gas estratti al largo del Vietnam arrivano a terra qui, e una statua di Cristo di 32 m domina il capo."
+			]
+		}
 	},
 	"my-tho": {
 		"kind": "city",
@@ -475,11 +727,18 @@
 		"region": "B?n Tre",
 		"coastal": true,
 		"position": "south-west",
-		"hooks": [
-			"From a Khmer name, probably me sa, \"white woman\" or a local term, reinterpreted in Vietnamese.",
-			"Founded by Chinese refugees in the 1680s, it is the oldest city in the Mekong delta.",
-			"Hu tieu My Tho, its noodle soup, is one of the delta’s best-known dishes."
-		]
+		"hooks": {
+			"en": [
+				"From a Khmer name, probably me sa, \"white woman\" or a local term, reinterpreted in Vietnamese.",
+				"Founded by Chinese refugees in the 1680s, it is the oldest city in the Mekong delta.",
+				"Hu tieu My Tho, its noodle soup, is one of the delta’s best-known dishes."
+			],
+			"it": [
+				"Da un nome khmer, probabilmente me sa, \"donna bianca\", o da un termine locale, reinterpretato in vietnamita.",
+				"Fondata da profughi cinesi negli anni Ottanta del Seicento, è la città più antica del delta del Mekong.",
+				"Lo hu tieu My Tho, la sua zuppa di noodle, è uno dei piatti più noti del delta."
+			]
+		}
 	},
 	"vinh-long": {
 		"kind": "city",
@@ -488,11 +747,18 @@
 		"region": "Vinh Long",
 		"coastal": true,
 		"position": "south-west",
-		"hooks": [
-			"\"Eternal dragon\" — vinh eternal, long dragon.",
-			"It sits between the two main Mekong branches, so it is almost entirely orchard and rice.",
-			"Its brick kilns along the Co Chien river form a landscape of beehive chimneys, now disappearing."
-		]
+		"hooks": {
+			"en": [
+				"\"Eternal dragon\" — vinh eternal, long dragon.",
+				"It sits between the two main Mekong branches, so it is almost entirely orchard and rice.",
+				"Its brick kilns along the Co Chien river form a landscape of beehive chimneys, now disappearing."
+			],
+			"it": [
+				"\"Drago eterno\": vinh eterno, long drago.",
+				"Sta tra i due rami principali del Mekong, perciò è quasi tutta frutteti e risaie.",
+				"Le sue fornaci di mattoni lungo il fiume Co Chien formano un paesaggio di ciminiere ad alveare, oggi in via di scomparsa."
+			]
+		}
 	},
 	"can-tho": {
 		"kind": "city",
@@ -501,11 +767,18 @@
 		"region": "d?ng b?ng sông C?u Long",
 		"coastal": true,
 		"position": "south-west",
-		"hooks": [
-			"Possibly from cam thi giang, \"river of poems\", or from a Khmer word — the derivation is contested.",
-			"The largest city in the Mekong delta and its administrative centre.",
-			"Cai Rang floating market here is the biggest in the region; boats advertise what they sell by hanging a sample from a pole."
-		]
+		"hooks": {
+			"en": [
+				"Possibly from cam thi giang, \"river of poems\", or from a Khmer word — the derivation is contested.",
+				"The largest city in the Mekong delta and its administrative centre.",
+				"Cai Rang floating market here is the biggest in the region; boats advertise what they sell by hanging a sample from a pole."
+			],
+			"it": [
+				"Forse da cam thi giang, \"fiume delle poesie\", o da una parola khmer: l’etimologia è discussa.",
+				"La città più grande del delta del Mekong e il suo centro amministrativo.",
+				"Il mercato galleggiante di Cai Rang è il più grande della regione; le barche annunciano cosa vendono appendendone un campione a una pertica."
+			]
+		}
 	},
 	"rach-gia": {
 		"kind": "city",
@@ -514,11 +787,18 @@
 		"region": "Kiên Giang",
 		"coastal": true,
 		"position": "south-west",
-		"hooks": [
-			"\"Gia tree creek\" — rach a creek, gia a mangrove-like tree.",
-			"Much of the modern town stands on land reclaimed from the sea.",
-			"It is the ferry port for Phu Quoc, Vietnam’s largest island."
-		]
+		"hooks": {
+			"en": [
+				"\"Gia tree creek\" — rach a creek, gia a mangrove-like tree.",
+				"Much of the modern town stands on land reclaimed from the sea.",
+				"It is the ferry port for Phu Quoc, Vietnam’s largest island."
+			],
+			"it": [
+				"\"Ruscello dell’albero gia\": rach ruscello, gia un albero simile alle mangrovie.",
+				"Buona parte della città moderna sorge su terre strappate al mare.",
+				"È il porto dei traghetti per Phu Quoc, l’isola più grande del Vietnam."
+			]
+		}
 	},
 	"tra-vinh": {
 		"kind": "city",
@@ -527,11 +807,18 @@
 		"region": "TrM Vinh",
 		"coastal": true,
 		"position": "south-west",
-		"hooks": [
-			"From Khmer prha trapeang, \"sacred pond\" — one of the clearest Khmer survivals in the delta.",
-			"It has one of the largest Khmer Krom populations in Vietnam, and about 140 Khmer Theravada pagodas.",
-			"Its Ba Om pond and the ancient trees around it are a national monument."
-		]
+		"hooks": {
+			"en": [
+				"From Khmer prha trapeang, \"sacred pond\" — one of the clearest Khmer survivals in the delta.",
+				"It has one of the largest Khmer Krom populations in Vietnam, and about 140 Khmer Theravada pagodas.",
+				"Its Ba Om pond and the ancient trees around it are a national monument."
+			],
+			"it": [
+				"Dal khmer prha trapeang, \"stagno sacro\": una delle sopravvivenze khmer più evidenti del delta.",
+				"Ha una delle maggiori popolazioni khmer krom del Vietnam e circa 140 pagode khmer theravada.",
+				"Il suo stagno di Ba Om e gli alberi secolari che lo circondano sono un monumento nazionale."
+			]
+		}
 	},
 	"soc-trang": {
 		"kind": "city",
@@ -540,11 +827,18 @@
 		"region": "Sóc Trang",
 		"coastal": true,
 		"position": "south-west",
-		"hooks": [
-			"From Khmer srok kh'leang, \"the region of the storehouse\".",
-			"The Doi pagoda here is home to thousands of flying foxes that roost in its trees and are protected by the monks.",
-			"Its Khmer ngo boat races draw crews of fifty paddlers and tens of thousands of spectators."
-		]
+		"hooks": {
+			"en": [
+				"From Khmer srok kh'leang, \"the region of the storehouse\".",
+				"The Doi pagoda here is home to thousands of flying foxes that roost in its trees and are protected by the monks.",
+				"Its Khmer ngo boat races draw crews of fifty paddlers and tens of thousands of spectators."
+			],
+			"it": [
+				"Dal khmer srok kh’leang, \"la regione del magazzino\".",
+				"La pagoda Doi ospita migliaia di volpi volanti che si appendono ai suoi alberi e sono protette dai monaci.",
+				"Le sue regate khmer di barche ngo schierano equipaggi di cinquanta rematori e richiamano decine di migliaia di spettatori."
+			]
+		}
 	},
 	"bac-lieu": {
 		"kind": "city",
@@ -553,11 +847,18 @@
 		"region": "B?c Liêu",
 		"coastal": true,
 		"position": "south-west",
-		"hooks": [
-			"Probably from a Khmer or Chinese name for a place of salt flats.",
-			"The Bac Lieu prince, who famously burned banknotes to boil an egg for a bet, is the delta's standard story about colonial-era excess.",
-			"It has the largest wind farm in Vietnam, built out into the tidal flats."
-		]
+		"hooks": {
+			"en": [
+				"Probably from a Khmer or Chinese name for a place of salt flats.",
+				"The Bac Lieu prince, who famously burned banknotes to boil an egg for a bet, is the delta's standard story about colonial-era excess.",
+				"It has the largest wind farm in Vietnam, built out into the tidal flats."
+			],
+			"it": [
+				"Probabilmente da un nome khmer o cinese che indicava un luogo di saline.",
+				"Il principe di Bac Lieu, che per scommessa bruciò banconote per cuocere un uovo, è la storia classica del delta sugli eccessi dell’epoca coloniale.",
+				"Ha il più grande parco eolico del Vietnam, costruito sulle piane di marea."
+			]
+		}
 	},
 	"ca-mau": {
 		"kind": "city",
@@ -565,10 +866,17 @@
 		"populationRank": 12,
 		"coastal": false,
 		"position": "south-west",
-		"hooks": [
-			"From Khmer tuk khmau, \"black water\" — the tannin-stained water of its mangrove swamps.",
-			"The southernmost province: Vietnam's mainland ends at its cape, which is still growing seaward as the Mekong deposits silt.",
-			"Its U Minh Ha forest is one of the last peat swamp forests in south-east Asia."
-		]
+		"hooks": {
+			"en": [
+				"From Khmer tuk khmau, \"black water\" — the tannin-stained water of its mangrove swamps.",
+				"The southernmost province: Vietnam's mainland ends at its cape, which is still growing seaward as the Mekong deposits silt.",
+				"Its U Minh Ha forest is one of the last peat swamp forests in south-east Asia."
+			],
+			"it": [
+				"Dal khmer tuk khmau, \"acqua nera\": l’acqua tinta di tannino delle sue paludi di mangrovie.",
+				"La provincia più meridionale: il Vietnam continentale finisce al suo capo, che continua ad avanzare verso il mare con il limo depositato dal Mekong.",
+				"La sua foresta di U Minh Ha è una delle ultime foreste palustri su torba del Sud-est asiatico."
+			]
+		}
 	}
 }
