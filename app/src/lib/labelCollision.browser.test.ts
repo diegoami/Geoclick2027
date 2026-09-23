@@ -4,6 +4,7 @@ import { afterEach, describe, expect, it } from 'vitest';
 import '../app.css';
 import {
 	DOT_CLEARANCE_PX,
+	FOCUSED_CLASS,
 	PRIORITY_ATTR,
 	enableLabelCollision,
 	registerLabel
@@ -390,6 +391,26 @@ describe('stretched names as obstacles, off the page corner (FT-68)', () => {
 		await nextFrame();
 		// Firenze sits on the name and is hidden; Roma, clear of it, is drawn.
 		expect(drawn(container)).toEqual(['Roma']);
+		names.destroy();
+	});
+
+	it('the name whose fact card is open takes its place anyway, and yields once it closes', async () => {
+		const { container, map, names } = offsetMap();
+		pill(container, 'Basilicata', 280, 190);
+		enableLabelCollision(map, container);
+		await nextFrame();
+		expect(drawn(container)).toEqual([]);
+
+		const content = container.querySelector('.maplibregl-popup-content')!;
+		content.classList.add(FOCUSED_CLASS);
+		await nextFrame();
+		await nextFrame();
+		expect(drawn(container)).toEqual(['Basilicata']);
+
+		content.classList.remove(FOCUSED_CLASS);
+		await nextFrame();
+		await nextFrame();
+		expect(drawn(container)).toEqual([]);
 		names.destroy();
 	});
 });

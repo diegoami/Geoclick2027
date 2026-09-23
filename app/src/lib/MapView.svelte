@@ -19,7 +19,7 @@
 		setNameOverride
 	} from './mapPrefs.svelte';
 	import { tutorialExploreReveal } from './tutorial.svelte';
-	import { DOT_CLEARANCE_PX, areaShares, registerLabel } from './labelCollision';
+	import { DOT_CLEARANCE_PX, FOCUSED_CLASS, areaShares, registerLabel } from './labelCollision';
 	import FactCard from './FactCard.svelte';
 	import { fetchFacts, placeFacts, type Facts } from './facts';
 	import { StretchedNames } from './stretchedNames';
@@ -112,6 +112,19 @@
 		}
 		anyShown = drawn;
 	}
+
+	// The name whose fact card is open always shows: a tap asked for it,
+	// so the collision pass may not hide it behind a stretched neighbour. When
+	// the card closes, it competes like any other name again.
+	$effect(() => {
+		const focused = asked?.id;
+		for (const [id, popup] of shownPopups) {
+			popup
+				.getElement()
+				?.querySelector('.maplibregl-popup-content')
+				?.classList.toggle(FOCUSED_CLASS, id === focused);
+		}
+	});
 
 	/**
 	 * Whether this map has any choice worth undoing. Read reactively so the

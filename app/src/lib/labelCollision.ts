@@ -50,6 +50,14 @@ import type { Target } from './mapDefinition';
 
 /** Set by the views on a popup element: bigger wins a contested spot. */
 export const PRIORITY_ATTR = 'data-label-priority';
+/**
+ * On a popup's content: the name whose fact card is open, the one the player
+ * just tapped. Like a magnified name it always gets its place, over the
+ * stretched names too - you asked for it, so it cannot be the one that is
+ * missing. On the content, not the popup, because the pass ignores
+ * class changes on popups (they are its own writes).
+ */
+export const FOCUSED_CLASS = 'is-focused';
 /** Breathing room between two labels, in px: touching names read as one. */
 const GAP_PX = 3;
 /**
@@ -375,7 +383,8 @@ function readLabels(
 ): (LabelPlacement & { registered?: RegisteredLabel })[] {
 	return popups.map((popup) => {
 		const registered = registry.get(popup);
-		const magnified = popup.querySelector(`.${HOVERED_CLASS}, .${MAGNIFIED_CLASS}`) !== null;
+		const magnified =
+			popup.querySelector(`.${HOVERED_CLASS}, .${MAGNIFIED_CLASS}, .${FOCUSED_CLASS}`) !== null;
 		const priority = Number(popup.getAttribute(PRIORITY_ATTR) ?? 0);
 		const rect = popup.getBoundingClientRect();
 		const [dx, dy] = registered?.applied ?? [0, 0];
@@ -391,8 +400,9 @@ function readLabels(
 		const width = rect.right - rect.left;
 		const height = rect.bottom - rect.top;
 		return {
-			// A name the player is pointing at, or has tapped, is the one name
-			// they asked for: it always wins its place.
+			// A name the player is pointing at, has tapped to magnify, or whose
+			// fact card is open is the one name they asked for: it always wins
+			// its place.
 			priority: magnified ? Infinity : Number.isFinite(priority) ? priority : 0,
 			candidates: registered
 				? candidatesFor(anchor, width, height, registered.beside)
