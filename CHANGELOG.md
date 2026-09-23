@@ -5,6 +5,72 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
+## Unreleased — v0.10.0 — The facts in Italian, and a calmer quiz
+
+**Every place's facts now read in Italian, and six things that got in the way of playing on a tablet are fixed.**
+
+FT-48 to FT-50 and FT-60 to FT-66 (FT-64 was a spike; FT-51, German, is postponed). PRs #18–#25.
+
+For players:
+
+- **The facts speak Italian.** With the interface in Italian, the fact
+  card now reads in Italian for all 1 814 places, from where the name
+  comes from to the rest of its facts. About 180 English facts were also
+  corrected along the way, so the English reads better too.
+- **A first round starts with ten names.** A map you had never played
+  used to put every name in the tray at once (110 on the Italian
+  provinces). The first hand now holds ten.
+- **Dragging a name works on a tablet.** Pressing on a name no longer
+  starts selecting its text, and a drag the tablet interrupts puts the
+  name back in the tray.
+- **The fact card waits for a miss.** It used to pop up after every
+  answer, just as you reached for the next name. Now it only appears
+  for a name you could not place.
+- **Town names find the free space.** A town's name goes where there is
+  the most room, so it no longer covers a neighbouring town's dot, and it
+  stays put while you pan.
+- **On the Known map, region names follow the region.** Where a name fits,
+  it is written along the shape of its region, the way an atlas labels a
+  territory. Where it does not fit, it keeps its usual label.
+- **The map list shows a progress bar** instead of "0 / 49 known". A map
+  with nothing known yet shows nothing.
+
+Under the hood:
+
+- **FT-48/FT-49:** facts are stored per language (`hooks`), with a
+  per-sentence English fallback and no "EN" marker; Italy's 20 regions
+  were the first file translated, and read, before the rest.
+- **FT-50:** all 28 country files, 5 448 of 5 448 sentences, one commit per
+  country, against `docs/TRANSLATION_STYLE_IT.md`. `translate-facts`
+  merges a translation only when the places, the sentence count and order
+  match; `refresh-facts-hooks` rewrites only the sentences in each map's
+  `facts.json`, with no WSL needed. A new integrity check fails if a map
+  ships sentences its country file no longer holds.
+- **FT-60:** `HAND_SIZES[0]` is 10; while the tutorial runs, its two
+  spotlit slips are dealt first.
+- **FT-61:** `user-select` and `-webkit-touch-callout` guards on the slip,
+  and a `pointercancel` handler that returns it to the tray.
+- **FT-62:** the fact card shows only on `status === 'revealed'`.
+- **FT-63:** eight candidate spots per town label, each scored in pixels
+  (room, reach, other towns' dots, the map's edge), and a stay bonus
+  only while the map moves.
+- **FT-64/FT-66:** `build-map.ts` writes a spine (quadratic Bézier) per
+  polygon target; Explore draws the name as an SVG `textPath` along it
+  where it fits and the pill elsewhere. The stretched names join the
+  collision pass and the magnify hit-test. Quiz and Tour keep pills.
+- **FT-65:** a progress bar over `knownCount / total` on the map list,
+  hidden at zero.
+- **Review:** these PRs had no per-PR review. The release is reviewed
+  once, as a whole, on the `release/0.10.0` PR (CLAUDE.md §3a).
+
+Not covered:
+
+- **German (FT-51)** is postponed until the Italian has been read.
+- **FT-56 and FT-59**, the two v0.9.4 test gates, still wait for a
+  hardening batch.
+- **Not yet tried on a device:** FT-61 on a real tablet, FT-66 on a real
+  phone or tablet. The Italian was spot-checked, not read end to end.
+
 ## v0.9.4 — 2026-09-22 — The review's fixes that matter
 
 **Six defects from an independent code review, all fixed — three a player can see, two that only bite when they bite, and one build-robustness fix.**
