@@ -17,10 +17,10 @@ let active = $state(false);
 export function startTutorialSandbox(): void {
 	setProgressSandbox({ mapId: TUTORIAL_MAP_ID, memory: createInMemoryProgressRepository() });
 	setUnrecordedMap(TUTORIAL_MAP_ID);
-	// Nor may a round left open before it began - a real half-played one, or
-	// an earlier run's on Replay - be resumed inside it: the map would not
-	// start empty, and its hand would skip the slips the tutorial deals first
-	// (FT-60).
+	// A round left open before the tutorial began - a real half-played one,
+	// or an earlier run's on Replay - must not be resumed inside it: the map
+	// would not start empty, and its hand would skip the slips the tutorial
+	// deals first (FT-60).
 	forgetRound(TUTORIAL_MAP_ID);
 	active = true;
 }

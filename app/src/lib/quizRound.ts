@@ -38,8 +38,9 @@ export function roundInProgress(mapId: string): RoundInProgress | undefined {
 	return round && { session: round.session, hand: [...round.hand] };
 }
 
-/** Throws this map's round away: it is finished, restarted, or was played in
- * the tutorial's sandbox, which keeps nothing. */
+/** Throws this map's round away: it is finished, restarted, was played in
+ * the tutorial's sandbox (which keeps nothing), or is about to be shadowed
+ * by a tutorial starting on its map (FT-60). */
 export function forgetRound(mapId: string): void {
 	rounds.delete(mapId);
 }
