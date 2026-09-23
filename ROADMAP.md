@@ -128,8 +128,17 @@ Check items off as they land; update "Status" as iterations complete.
   authored Italian sentence is held to `houseStyle`, and sardegna's em
   dashes are gone. **FT-68:** the stretched names' coordinate conversions
   are tested with the map inset and the page scrolled. **FT-59:**
-  `QuizView.svelte.test.ts` covers grading, resume and the summary. Its PR
-  waits for the product owner's merge.
+  `QuizView.svelte.test.ts` covers grading, resume and the summary. **Merged**
+  ([PR #33](https://github.com/diegoami/Geoclick2027/pull/33)).
+- **Fixed 2026-09-23, merged** ([PR #35](https://github.com/diegoami/Geoclick2027/pull/35)):
+  Nunavut had no name on Explore. `spine.ts` chose a region's largest part by
+  counting Mercator cells, so Ellesmere Island won and the name was drawn
+  off-screen. Parts are now weighted by ground area; one spine in 63 maps
+  changed. Like the hardening batch, it ships with the next feature release.
+- **Proposed 2026-09-23**: [#34](https://github.com/diegoami/Geoclick2027/issues/34).
+  Explore's fallback region labels move to the stretched names' typography,
+  so the two stop looking like different systems. Town names keep their
+  boxes (the owner's answer to Q2). Q1, Q3 and Q4 are still open.
 - **Raised by the product owner 2026-09-22, backlogged**: GitHub issue #11 —
   on the Known map an explicitly tapped name kept its earned colour instead
   of **Chosen**. Decided: an explicit tap is Chosen regardless of the streak,
