@@ -104,6 +104,15 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   `rgb(150, 85, 20)` (about 5.8:1), in both forms, so an asked name is one
   colour however it is drawn. *The hit area lost the pill's padding*,
   accepted pending a tablet check.
+- **Amended 2026-09-24: the name you just tapped always shows.** A
+  stretched name is still a hard obstacle, and at the country view that hid
+  small regions boxed in by curved neighbours: Basilicata between PUGLIA and
+  CAMPANIA, Umbria, Friuli-Venezia Giulia. The owner tapped Basilicata, got
+  its fact card, and saw no name. Now the name whose fact card is open
+  (`FOCUSED_CLASS` in `labelCollision.ts`, set by MapView) gets its place the
+  way a magnified one does, and competes normally again once the card closes.
+  The owner rejected the alternative, curved names giving way to small
+  regions: it would drop curved names exactly where the map is busiest.
 
 ## The v0.10.0 language decisions (2026-09-22, v0.10.0)
 
