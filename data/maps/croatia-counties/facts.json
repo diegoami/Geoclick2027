@@ -1,0 +1,308 @@
+{
+	"me-imurska": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Koprivničko-križevačka",
+			"Varaždinska"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"varazdinska": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Koprivničko-križevačka",
+			"Krapinsko-zagorska",
+			"Međimurska",
+			"Zagrebačka"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"koprivnicko-krizevacka": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Bjelovarsko-bilogorska",
+			"Međimurska",
+			"Varaždinska",
+			"Virovitičko-podravska",
+			"Zagrebačka"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"krapinsko-zagorska": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Grad Zagreb",
+			"Varaždinska",
+			"Zagrebačka"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"grad-zagreb": {
+		"kind": "region",
+		"type": "City",
+		"borders": [
+			"Krapinsko-zagorska",
+			"Zagrebačka"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Zagreb",
+			"nameDe": "Zagreb",
+			"nameIt": "Zagabria",
+			"population": 722526
+		},
+		"position": "north"
+	},
+	"bjelovarsko-bilogorska": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Koprivničko-križevačka",
+			"Požeško-slavonska",
+			"Sisačko-moslavačka",
+			"Virovitičko-podravska",
+			"Zagrebačka"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"zagrebacka": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Bjelovarsko-bilogorska",
+			"Grad Zagreb",
+			"Karlovačka",
+			"Koprivničko-križevačka",
+			"Krapinsko-zagorska",
+			"Sisačko-moslavačka",
+			"Varaždinska"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"viroviticko-podravska": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Bjelovarsko-bilogorska",
+			"Koprivničko-križevačka",
+			"Osječko-baranjska",
+			"Požeško-slavonska"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"osjecko-baranjska": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Brodsko-posavska",
+			"Požeško-slavonska",
+			"Virovitičko-podravska",
+			"Vukovarsko-srijemska"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Osijek",
+			"nameDe": "Osijek",
+			"nameIt": "Osijek",
+			"population": 95077
+		},
+		"position": "north-east"
+	},
+	"sisacko-moslavacka": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Bjelovarsko-bilogorska",
+			"Brodsko-posavska",
+			"Karlovačka",
+			"Požeško-slavonska",
+			"Zagrebačka"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"pozesko-slavonska": {
+		"kind": "region",
+		"borders": [
+			"Bjelovarsko-bilogorska",
+			"Brodsko-posavska",
+			"Osječko-baranjska",
+			"Sisačko-moslavačka",
+			"Virovitičko-podravska"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Slavonski Brod",
+			"nameDe": "Slavonski Brod",
+			"nameIt": "Slavonski Brod",
+			"population": 97718
+		},
+		"position": "north-east"
+	},
+	"karlovacka": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Ličko-senjska",
+			"Primorsko-goranska",
+			"Sisačko-moslavačka",
+			"Zadarska",
+			"Zagrebačka"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Karlovac",
+			"nameDe": "Karlovac",
+			"nameIt": "Karlovac",
+			"population": 55063
+		},
+		"position": "north-west"
+	},
+	"brodsko-posavska": {
+		"kind": "region",
+		"borders": [
+			"Osječko-baranjska",
+			"Požeško-slavonska",
+			"Sisačko-moslavačka",
+			"Vukovarsko-srijemska"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Slavonski Brod",
+			"nameDe": "Slavonski Brod",
+			"nameIt": "Slavonski Brod",
+			"population": 97718
+		},
+		"position": "north-east"
+	},
+	"istarska": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Primorsko-goranska"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Pula",
+			"nameDe": "Pula",
+			"nameIt": "Pola",
+			"population": 61599
+		},
+		"position": "west"
+	},
+	"vukovarsko-srijemska": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Brodsko-posavska",
+			"Osječko-baranjska"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"primorsko-goranska": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Istarska",
+			"Karlovačka",
+			"Ličko-senjska"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Rijeka",
+			"nameDe": "Rijeka",
+			"nameIt": "Fiume",
+			"population": 170992
+		},
+		"position": "west"
+	},
+	"licko-senjska": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Karlovačka",
+			"Primorsko-goranska",
+			"Zadarska"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"zadarska": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Karlovačka",
+			"Ličko-senjska",
+			"Šibensko-kninska",
+			"Splitsko-dalmatinska"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Zadar",
+			"nameDe": "Zadar",
+			"nameIt": "Zara",
+			"population": 71258
+		},
+		"position": "centre"
+	},
+	"sibensko-kninska": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Splitsko-dalmatinska",
+			"Zadarska"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Šibenik",
+			"nameDe": "Šibenik",
+			"nameIt": "Sebenico",
+			"population": 37112
+		},
+		"position": "south"
+	},
+	"splitsko-dalmatinska": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Dubrovačko-neretvanska",
+			"Šibensko-kninska",
+			"Zadarska"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Split",
+			"nameDe": "Split",
+			"nameIt": "Spalato",
+			"population": 214741
+		},
+		"position": "south"
+	},
+	"dubrovacko-neretvanska": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Splitsko-dalmatinska"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Dubrovnik",
+			"nameDe": "Dubrovnik",
+			"nameIt": "Ragusa",
+			"population": 36994
+		},
+		"position": "south-east"
+	}
+}

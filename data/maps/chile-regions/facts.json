@@ -1,0 +1,282 @@
+{
+	"arica-y-parinacota": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Tarapacá"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Arica",
+			"nameDe": "Arica",
+			"nameIt": "Arica",
+			"population": 185999
+		},
+		"position": "north"
+	},
+	"tarapaca": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Antofagasta",
+			"Arica y Parinacota"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Iquique",
+			"nameDe": "Iquique",
+			"nameIt": "Iquique",
+			"population": 227499
+		},
+		"position": "north-east"
+	},
+	"antofagasta": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Atacama",
+			"Tarapacá"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Antofagasta",
+			"nameDe": "Antofagasta",
+			"nameIt": "Antofagasta",
+			"population": 309832
+		},
+		"peak": {
+			"name": "Aucanquilcha",
+			"elevation": 6176
+		},
+		"position": "north-east"
+	},
+	"atacama": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Antofagasta",
+			"Coquimbo"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Copiapó",
+			"nameDe": "Copiapó",
+			"nameIt": "Copiapó",
+			"population": 129280
+		},
+		"position": "north"
+	},
+	"coquimbo": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Atacama",
+			"Valparaíso"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Coquimbo",
+			"nameDe": "Coquimbo",
+			"nameIt": "Coquimbo",
+			"population": 161317
+		},
+		"position": "centre"
+	},
+	"valparaiso": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Coquimbo",
+			"Metropolitana de Santiago",
+			"O'Higgins"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Valparaíso",
+			"nameDe": "Valparaíso",
+			"nameIt": "Valparaíso",
+			"population": 854000
+		},
+		"position": "centre"
+	},
+	"metropolitana-de-santiago": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"O'Higgins",
+			"Valparaíso"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Santiago",
+			"nameDe": "Santiago de Chile",
+			"nameIt": "Santiago del Cile",
+			"population": 5720000
+		},
+		"peak": {
+			"name": "Cerro Cantillana",
+			"elevation": 2281
+		},
+		"position": "centre"
+	},
+	"o-higgins": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Maule",
+			"Metropolitana de Santiago",
+			"Valparaíso"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Rancagua",
+			"nameDe": "Rancagua",
+			"nameIt": "Rancagua",
+			"population": 233268
+		},
+		"position": "centre"
+	},
+	"maule": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Ñuble",
+			"O'Higgins"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Talca",
+			"nameDe": "Talca",
+			"nameIt": "Talca",
+			"population": 197479
+		},
+		"position": "centre"
+	},
+	"nuble": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Biobío",
+			"Maule"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Chillán",
+			"nameDe": "Chillán",
+			"nameIt": "Chillán",
+			"population": 150396
+		},
+		"position": "centre"
+	},
+	"biobio": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"La Araucanía",
+			"Ñuble"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Concepción",
+			"nameDe": "Concepción",
+			"nameIt": "Concepción",
+			"population": 889725
+		},
+		"position": "centre"
+	},
+	"la-araucania": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Biobío",
+			"Los Ríos"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Temuco",
+			"nameDe": "Temuco",
+			"nameIt": "Temuco",
+			"population": 265901
+		},
+		"peak": {
+			"name": "Volcaán Villarrica",
+			"elevation": 2847
+		},
+		"position": "centre"
+	},
+	"los-rios": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"La Araucanía",
+			"Los Lagos"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Valdivia",
+			"nameDe": "Valdivia",
+			"nameIt": "Valdivia",
+			"population": 159599
+		},
+		"position": "west"
+	},
+	"los-lagos": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Aysén",
+			"Los Ríos"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Puerto Montt",
+			"nameDe": "Puerto Montt",
+			"nameIt": "Puerto Montt",
+			"population": 174629
+		},
+		"peak": {
+			"name": "Monte Tronador",
+			"elevation": 3554
+		},
+		"position": "west"
+	},
+	"aysen": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Los Lagos",
+			"Magallanes"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Coihaique",
+			"nameDe": "Coyhaique",
+			"nameIt": "Coyhaique",
+			"population": 45787
+		},
+		"peak": {
+			"name": "Cerro San Valentín",
+			"elevation": 4058
+		},
+		"position": "south-west"
+	},
+	"magallanes": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Aysén"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Punta Arenas",
+			"nameDe": "Punta Arenas",
+			"nameIt": "Punta Arenas",
+			"population": 117430
+		},
+		"peak": {
+			"name": "Cerro Darwin",
+			"elevation": 2580
+		},
+		"position": "south"
+	}
+}

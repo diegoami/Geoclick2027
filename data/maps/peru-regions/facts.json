@@ -1,0 +1,489 @@
+{
+	"tumbes": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Piura"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tumbes",
+			"nameDe": "Tumbes",
+			"nameIt": "Tumbes",
+			"population": 109223
+		},
+		"position": "north-west"
+	},
+	"loreto": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Amazonas",
+			"Huánuco",
+			"San Martín",
+			"Ucayali"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Iquitos",
+			"nameDe": "Iquitos",
+			"nameIt": "Iquitos",
+			"population": 458729
+		},
+		"position": "north"
+	},
+	"amazonas": {
+		"kind": "region",
+		"borders": [
+			"Cajamarca",
+			"La Libertad",
+			"Loreto",
+			"San Martín"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Leticia",
+			"nameDe": "Leticia",
+			"nameIt": "Leticia",
+			"population": 59575
+		},
+		"peak": {
+			"name": "Cerro Maine Hanari",
+			"elevation": 860
+		},
+		"position": "north-west"
+	},
+	"piura": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Cajamarca",
+			"Lambayeque",
+			"Tumbes"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Piura",
+			"nameDe": "Piura",
+			"nameIt": "Piura",
+			"population": 396932
+		},
+		"position": "north-west"
+	},
+	"cajamarca": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Amazonas",
+			"La Libertad",
+			"Lambayeque",
+			"Piura"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Cajamarca",
+			"nameDe": "Cajamarca",
+			"nameIt": "Cajamarca",
+			"population": 142665
+		},
+		"position": "west"
+	},
+	"lambayeque": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Cajamarca",
+			"La Libertad",
+			"Piura"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Chiclayo",
+			"nameDe": "Chiclayo",
+			"nameIt": "Chiclayo",
+			"population": 596792
+		},
+		"position": "west"
+	},
+	"san-martin": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Amazonas",
+			"Huánuco",
+			"La Libertad",
+			"Loreto"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Moyobamba",
+			"nameDe": "Moyobamba",
+			"nameIt": "Moyobamba",
+			"population": 47734
+		},
+		"position": "centre"
+	},
+	"la-libertad": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Amazonas",
+			"Áncash",
+			"Cajamarca",
+			"Huánuco",
+			"Lambayeque",
+			"San Martín"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Trujillo",
+			"nameDe": "Trujillo",
+			"nameIt": "Trujillo",
+			"population": 765171
+		},
+		"position": "west"
+	},
+	"ucayali": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Cusco",
+			"Huánuco",
+			"Junín",
+			"Loreto",
+			"Madre de Dios",
+			"Pasco"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Pucallpa",
+			"nameDe": "Pucallpa",
+			"nameIt": "Pucallpa",
+			"population": 310750
+		},
+		"position": "centre"
+	},
+	"ancash": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Huánuco",
+			"La Libertad",
+			"Lima Provincias"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Chimbote",
+			"nameDe": "Chimbote",
+			"nameIt": "Chimbote",
+			"population": 349846
+		},
+		"peak": {
+			"name": "Nevado Huascarán",
+			"elevation": 6768
+		},
+		"position": "west"
+	},
+	"huanuco": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Áncash",
+			"La Libertad",
+			"Lima Provincias",
+			"Loreto",
+			"Pasco",
+			"San Martín",
+			"Ucayali"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Huánuco",
+			"nameDe": "Huánuco",
+			"nameIt": "Huánuco",
+			"population": 158145
+		},
+		"position": "centre"
+	},
+	"pasco": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Huánuco",
+			"Junín",
+			"Lima Provincias",
+			"Ucayali"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Cerro de Pasco",
+			"nameDe": "Cerro de Pasco",
+			"nameIt": "Cerro de Pasco",
+			"population": 137232
+		},
+		"position": "centre"
+	},
+	"madre-de-dios": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Cusco",
+			"Puno",
+			"Ucayali"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Puerto Maldonado",
+			"nameDe": "Puerto Maldonado",
+			"nameIt": "Puerto Maldonado",
+			"population": 67155
+		},
+		"position": "east"
+	},
+	"junin": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Ayacucho",
+			"Cusco",
+			"Huancavelica",
+			"Lima Provincias",
+			"Pasco",
+			"Ucayali"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Huancayo",
+			"nameDe": "Huancayo",
+			"nameIt": "Huancayo",
+			"population": 412733
+		},
+		"position": "centre"
+	},
+	"lima-provincias": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Áncash",
+			"Huancavelica",
+			"Huánuco",
+			"Ica",
+			"Junín",
+			"Lima Metropolitana",
+			"Pasco"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Huaura",
+			"nameDe": "Huaura",
+			"nameIt": "Huaura",
+			"population": 40400
+		},
+		"position": "centre"
+	},
+	"lima-metropolitana": {
+		"kind": "region",
+		"type": "Captial District",
+		"borders": [
+			"Callao",
+			"Lima Provincias"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Lima",
+			"nameDe": "Lima",
+			"nameIt": "Lima",
+			"population": 8012000
+		},
+		"position": "centre"
+	},
+	"callao": {
+		"kind": "region",
+		"type": "Departamento",
+		"borders": [
+			"Lima Metropolitana"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Callao",
+			"nameDe": "Callao",
+			"nameIt": "Callao",
+			"population": 876877
+		},
+		"position": "west"
+	},
+	"huancavelica": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Ayacucho",
+			"Ica",
+			"Junín",
+			"Lima Provincias"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Huancavelica",
+			"nameDe": "Huancavelica",
+			"nameIt": "Huancavelica",
+			"population": 44388
+		},
+		"position": "south"
+	},
+	"cusco": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Apurímac",
+			"Arequipa",
+			"Ayacucho",
+			"Junín",
+			"Madre de Dios",
+			"Puno",
+			"Ucayali"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Cusco",
+			"nameDe": "Cusco",
+			"nameIt": "Cusco",
+			"population": 361182
+		},
+		"peak": {
+			"name": "Nevado Auzangate",
+			"elevation": 6372
+		},
+		"position": "south-east"
+	},
+	"ayacucho": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Apurímac",
+			"Arequipa",
+			"Cusco",
+			"Huancavelica",
+			"Ica",
+			"Junín"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ayacucho",
+			"nameDe": "Ayacucho",
+			"nameIt": "Ayacucho",
+			"population": 166314
+		},
+		"position": "south"
+	},
+	"apurimac": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Arequipa",
+			"Ayacucho",
+			"Cusco"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Abancay",
+			"nameDe": "Abancay",
+			"nameIt": "Abancay",
+			"population": 55111
+		},
+		"position": "south"
+	},
+	"ica": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Arequipa",
+			"Ayacucho",
+			"Huancavelica",
+			"Lima Provincias"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Ica",
+			"nameDe": "Ica",
+			"nameIt": "Ica",
+			"population": 279420
+		},
+		"position": "south"
+	},
+	"puno": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Arequipa",
+			"Cusco",
+			"Madre de Dios",
+			"Moquegua",
+			"Tacna"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Juliaca",
+			"nameDe": "Juliaca",
+			"nameIt": "Juliaca",
+			"population": 245675
+		},
+		"position": "south-east"
+	},
+	"arequipa": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Apurímac",
+			"Ayacucho",
+			"Cusco",
+			"Ica",
+			"Moquegua",
+			"Puno"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Arequipa",
+			"nameDe": "Arequipa",
+			"nameIt": "Arequipa",
+			"population": 815000
+		},
+		"peak": {
+			"name": "Nevado Coropuna",
+			"elevation": 6425
+		},
+		"position": "south"
+	},
+	"moquegua": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Arequipa",
+			"Puno",
+			"Tacna"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Moquegua",
+			"nameDe": "Moquegua",
+			"nameIt": "Moquegua",
+			"population": 54517
+		},
+		"position": "south-east"
+	},
+	"tacna": {
+		"kind": "region",
+		"type": "Department",
+		"borders": [
+			"Moquegua",
+			"Puno"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tacna",
+			"nameDe": "Tacna",
+			"nameIt": "Tacna",
+			"population": 280098
+		},
+		"position": "south-east"
+	}
+}

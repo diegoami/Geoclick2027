@@ -1,0 +1,915 @@
+{
+	"powiat-namys-owski": {
+		"kind": "region",
+		"borders": [
+			"powiat brzeski (Opolskie)",
+			"powiat kluczborski",
+			"powiat opolski (Opolskie)"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"powiat-kluczborski": {
+		"kind": "region",
+		"borders": [
+			"powiat namysłowski",
+			"powiat oleski",
+			"powiat opolski (Opolskie)"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"powiat-k-obucki": {
+		"kind": "region",
+		"borders": [
+			"Częstochowa",
+			"powiat częstochowski",
+			"powiat lubliniecki",
+			"powiat oleski"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"powiat-oleski": {
+		"kind": "region",
+		"borders": [
+			"powiat kłobucki",
+			"powiat kluczborski",
+			"powiat lubliniecki",
+			"powiat opolski (Opolskie)",
+			"powiat strzelecki"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"powiat-czestochowski": {
+		"kind": "region",
+		"borders": [
+			"Częstochowa",
+			"powiat kłobucki",
+			"powiat lubliniecki",
+			"powiat myszkowski",
+			"powiat zawierciański"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"czestochowa": {
+		"kind": "region",
+		"borders": [
+			"powiat częstochowski",
+			"powiat kłobucki"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"powiat-brzeski-opolskie": {
+		"kind": "region",
+		"borders": [
+			"powiat namysłowski",
+			"powiat nyski",
+			"powiat opolski (Opolskie)"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"powiat-opolski-opolskie": {
+		"kind": "region",
+		"borders": [
+			"Opole",
+			"powiat brzeski (Opolskie)",
+			"powiat kluczborski",
+			"powiat krapkowicki",
+			"powiat namysłowski",
+			"powiat nyski",
+			"powiat oleski",
+			"powiat prudnicki",
+			"powiat strzelecki"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"opole": {
+		"kind": "region",
+		"borders": [
+			"powiat opolski (Opolskie)"
+		],
+		"coastal": false,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"From an Old Slavic word for a community of villages holding land together — the word is older than the town.",
+				"It hosts Poland’s national festival of Polish song, running since 1963.",
+				"It has the country’s largest German minority, and road signs in the region are bilingual."
+			],
+			"it": [
+				"Da un’antica parola slava che indicava una comunità di villaggi che possedevano la terra in comune: la parola è più antica della città.",
+				"Ospita il Festival nazionale della canzone polacca, che si tiene dal 1963.",
+				"Ha la più grande minoranza tedesca del paese, e nella regione i cartelli stradali sono bilingui."
+			]
+		}
+	},
+	"powiat-lubliniecki": {
+		"kind": "region",
+		"borders": [
+			"powiat częstochowski",
+			"powiat kłobucki",
+			"powiat myszkowski",
+			"powiat oleski",
+			"powiat strzelecki",
+			"powiat tarnogórski"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"powiat-myszkowski": {
+		"kind": "region",
+		"borders": [
+			"powiat będziński",
+			"powiat częstochowski",
+			"powiat lubliniecki",
+			"powiat tarnogórski",
+			"powiat zawierciański"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"powiat-zawiercianski": {
+		"kind": "region",
+		"borders": [
+			"Dąbrowa Górnicza",
+			"powiat będziński",
+			"powiat częstochowski",
+			"powiat miechowski",
+			"powiat myszkowski",
+			"powiat olkuski"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"powiat-strzelecki": {
+		"kind": "region",
+		"borders": [
+			"powiat gliwicki",
+			"powiat kędzierzyńsko-kozielski",
+			"powiat krapkowicki",
+			"powiat lubliniecki",
+			"powiat oleski",
+			"powiat opolski (Opolskie)",
+			"powiat tarnogórski"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"powiat-tarnogorski": {
+		"kind": "region",
+		"borders": [
+			"Bytom",
+			"Gliwice",
+			"Piekary Śląskie",
+			"powiat będziński",
+			"powiat gliwicki",
+			"powiat lubliniecki",
+			"powiat myszkowski",
+			"powiat strzelecki",
+			"Zabrze"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-nyski": {
+		"kind": "region",
+		"borders": [
+			"powiat brzeski (Opolskie)",
+			"powiat opolski (Opolskie)",
+			"powiat prudnicki"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"powiat-krapkowicki": {
+		"kind": "region",
+		"borders": [
+			"powiat kędzierzyńsko-kozielski",
+			"powiat opolski (Opolskie)",
+			"powiat prudnicki",
+			"powiat strzelecki"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"powiat-prudnicki": {
+		"kind": "region",
+		"borders": [
+			"powiat głubczycki",
+			"powiat kędzierzyńsko-kozielski",
+			"powiat krapkowicki",
+			"powiat nyski",
+			"powiat opolski (Opolskie)"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"powiat-miechowski": {
+		"kind": "region",
+		"borders": [
+			"powiat krakowski",
+			"powiat olkuski",
+			"powiat proszowicki",
+			"powiat zawierciański"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"powiat-bedzinski": {
+		"kind": "region",
+		"borders": [
+			"Dąbrowa Górnicza",
+			"Jaworzno",
+			"Katowice",
+			"Piekary Śląskie",
+			"powiat myszkowski",
+			"powiat olkuski",
+			"powiat tarnogórski",
+			"powiat zawierciański",
+			"Siemianowice Śląskie",
+			"Sosnowiec"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"piekary-slaskie": {
+		"kind": "region",
+		"borders": [
+			"Bytom",
+			"Chorzów",
+			"powiat będziński",
+			"powiat tarnogórski",
+			"Siemianowice Śląskie"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"bytom": {
+		"kind": "region",
+		"borders": [
+			"Chorzów",
+			"Piekary Śląskie",
+			"powiat tarnogórski",
+			"Ruda Śląska",
+			"Świętochłowice",
+			"Zabrze"
+		],
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Probably from byt, a dwelling or existence — German Beuthen.",
+				"Coal and zinc were mined directly under the town, and parts of it have subsided visibly.",
+				"It is one of the oldest towns of Upper Silesia, with charter rights from 1254."
+			],
+			"it": [
+				"Probabilmente da byt, \"dimora\" o \"esistenza\": in tedesco Beuthen.",
+				"Carbone e zinco venivano estratti proprio sotto la città, e alcune sue parti sono visibilmente sprofondate.",
+				"È una delle città più antiche dell’Alta Slesia, con i diritti di città dal 1254."
+			]
+		}
+	},
+	"dabrowa-gornicza": {
+		"kind": "region",
+		"borders": [
+			"powiat będziński",
+			"powiat olkuski",
+			"powiat zawierciański",
+			"Sosnowiec"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-gliwicki": {
+		"kind": "region",
+		"borders": [
+			"Gliwice",
+			"powiat kędzierzyńsko-kozielski",
+			"powiat mikołowski",
+			"powiat raciborski",
+			"powiat rybnicki",
+			"powiat strzelecki",
+			"powiat tarnogórski",
+			"Ruda Śląska",
+			"Rybnik",
+			"Zabrze"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-olkuski": {
+		"kind": "region",
+		"borders": [
+			"Dąbrowa Górnicza",
+			"Jaworzno",
+			"powiat będziński",
+			"powiat chrzanowski",
+			"powiat krakowski",
+			"powiat miechowski",
+			"powiat zawierciański"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"siemianowice-slaskie": {
+		"kind": "region",
+		"borders": [
+			"Chorzów",
+			"Katowice",
+			"Piekary Śląskie",
+			"powiat będziński"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"zabrze": {
+		"kind": "region",
+		"borders": [
+			"Bytom",
+			"Gliwice",
+			"powiat gliwicki",
+			"powiat tarnogórski",
+			"Ruda Śląska"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"gliwice": {
+		"kind": "region",
+		"borders": [
+			"powiat gliwicki",
+			"powiat tarnogórski",
+			"Zabrze"
+		],
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Of uncertain Slavic origin — German Gleiwitz.",
+				"The Gleiwitz incident of 31 August 1939, a staged Polish attack on its radio tower, was the Nazi pretext for invading Poland.",
+				"That tower still stands and, at 111 m, is probably the tallest wooden structure in Europe."
+			],
+			"it": [
+				"Di incerta origine slava: in tedesco Gleiwitz.",
+				"L’incidente di Gleiwitz del 31 agosto 1939, un attacco polacco inscenato contro la sua torre radio, fu il pretesto nazista per invadere la Polonia.",
+				"Quella torre è ancora in piedi e, con i suoi 111 m, è probabilmente la struttura in legno più alta d’Europa."
+			]
+		}
+	},
+	"swietoch-owice": {
+		"kind": "region",
+		"borders": [
+			"Bytom",
+			"Chorzów",
+			"Ruda Śląska"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-kedzierzynsko-kozielski": {
+		"kind": "region",
+		"borders": [
+			"powiat gliwicki",
+			"powiat głubczycki",
+			"powiat krapkowicki",
+			"powiat prudnicki",
+			"powiat raciborski",
+			"powiat strzelecki"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"chorzow": {
+		"kind": "region",
+		"borders": [
+			"Bytom",
+			"Katowice",
+			"Piekary Śląskie",
+			"Ruda Śląska",
+			"Siemianowice Śląskie",
+			"Świętochłowice"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"sosnowiec": {
+		"kind": "region",
+		"borders": [
+			"Dąbrowa Górnicza",
+			"Jaworzno",
+			"Katowice",
+			"Mysłowice",
+			"powiat będziński"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"ruda-slaska": {
+		"kind": "region",
+		"borders": [
+			"Bytom",
+			"Chorzów",
+			"Katowice",
+			"powiat gliwicki",
+			"powiat mikołowski",
+			"Świętochłowice",
+			"Zabrze"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-dabrowski": {
+		"kind": "region",
+		"borders": [
+			"powiat tarnowski"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"powiat-proszowicki": {
+		"kind": "region",
+		"borders": [
+			"Kraków",
+			"powiat bocheński",
+			"powiat brzeski (Małopolskie)",
+			"powiat krakowski",
+			"powiat miechowski",
+			"powiat tarnowski"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"katowice": {
+		"kind": "region",
+		"borders": [
+			"Chorzów",
+			"Mysłowice",
+			"powiat będziński",
+			"powiat bieruńsko-lędziński",
+			"powiat mikołowski",
+			"Ruda Śląska",
+			"Siemianowice Śląskie",
+			"Sosnowiec",
+			"Tychy"
+		],
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Probably from kat, a hangman, or from a personal name Kat.",
+				"It sits over a coalfield so intensively worked that whole districts were built for miners.",
+				"Its Spodek arena of 1971, shaped like a flying saucer, is a landmark of Polish modernism."
+			],
+			"it": [
+				"Probabilmente da kat, \"boia\", o da un nome di persona, Kat.",
+				"Sorge su un bacino carbonifero sfruttato così intensamente che interi quartieri furono costruiti per i minatori.",
+				"Lo Spodek, la sua arena del 1971 a forma di disco volante, è un simbolo del modernismo polacco."
+			]
+		}
+	},
+	"mys-owice": {
+		"kind": "region",
+		"borders": [
+			"Jaworzno",
+			"Katowice",
+			"powiat bieruńsko-lędziński",
+			"Sosnowiec"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"jaworzno": {
+		"kind": "region",
+		"borders": [
+			"Mysłowice",
+			"powiat będziński",
+			"powiat bieruńsko-lędziński",
+			"powiat chrzanowski",
+			"powiat olkuski",
+			"powiat oświęcimski",
+			"Sosnowiec"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-miko-owski": {
+		"kind": "region",
+		"borders": [
+			"Katowice",
+			"powiat gliwicki",
+			"powiat pszczyński",
+			"powiat rybnicki",
+			"Ruda Śląska",
+			"Tychy",
+			"Żory"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-g-ubczycki": {
+		"kind": "region",
+		"borders": [
+			"powiat kędzierzyńsko-kozielski",
+			"powiat prudnicki",
+			"powiat raciborski"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"tychy": {
+		"kind": "region",
+		"borders": [
+			"Katowice",
+			"powiat bieruńsko-lędziński",
+			"powiat mikołowski",
+			"powiat pszczyński"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-chrzanowski": {
+		"kind": "region",
+		"borders": [
+			"Jaworzno",
+			"powiat krakowski",
+			"powiat olkuski",
+			"powiat oświęcimski",
+			"powiat wadowicki"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"rybnik": {
+		"kind": "region",
+		"borders": [
+			"powiat gliwicki",
+			"powiat raciborski",
+			"powiat rybnicki",
+			"powiat wodzisławski",
+			"Żory"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-rybnicki": {
+		"kind": "region",
+		"borders": [
+			"Jastrzębie-Zdrój",
+			"powiat gliwicki",
+			"powiat mikołowski",
+			"powiat raciborski",
+			"powiat wodzisławski",
+			"Rybnik",
+			"Żory"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-krakowski": {
+		"kind": "region",
+		"borders": [
+			"Kraków",
+			"powiat bocheński",
+			"powiat chrzanowski",
+			"powiat miechowski",
+			"powiat myślenicki",
+			"powiat olkuski",
+			"powiat proszowicki",
+			"powiat wadowicki",
+			"powiat wielicki"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-bierunsko-ledzinski": {
+		"kind": "region",
+		"borders": [
+			"Jaworzno",
+			"Katowice",
+			"Mysłowice",
+			"powiat oświęcimski",
+			"powiat pszczyński",
+			"Tychy"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-raciborski": {
+		"kind": "region",
+		"borders": [
+			"powiat gliwicki",
+			"powiat głubczycki",
+			"powiat kędzierzyńsko-kozielski",
+			"powiat rybnicki",
+			"powiat wodzisławski",
+			"Rybnik"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"krakow": {
+		"kind": "region",
+		"borders": [
+			"powiat krakowski",
+			"powiat proszowicki",
+			"powiat wielicki"
+		],
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"From Krak, the legendary founder who, in the story, killed a dragon that lived under the castle hill.",
+				"It was Poland’s capital for five centuries and survived the war almost undamaged, unlike Warsaw.",
+				"A trumpeter plays from St Mary’s tower every hour and breaks off mid-note, for a trumpeter said to have been shot in the throat in 1241."
+			],
+			"it": [
+				"Da Krak, il fondatore leggendario che, secondo la storia, uccise un drago che viveva sotto la collina del castello.",
+				"Fu la capitale della Polonia per cinque secoli e, a differenza di Varsavia, attraversò la guerra quasi senza danni.",
+				"Ogni ora un trombettiere suona dalla torre di Santa Maria e si interrompe a metà di una nota, in ricordo di un trombettiere che, si dice, fu colpito alla gola nel 1241."
+			]
+		}
+	},
+	"zory": {
+		"kind": "region",
+		"borders": [
+			"Jastrzębie-Zdrój",
+			"powiat mikołowski",
+			"powiat pszczyński",
+			"powiat rybnicki",
+			"Rybnik"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"tarnow": {
+		"kind": "region",
+		"borders": [
+			"powiat tarnowski"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"powiat-pszczynski": {
+		"kind": "region",
+		"borders": [
+			"Jastrzębie-Zdrój",
+			"powiat bielski (Śląskie)",
+			"powiat bieruńsko-lędziński",
+			"powiat cieszyński",
+			"powiat mikołowski",
+			"powiat oświęcimski",
+			"Tychy",
+			"Żory"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-wodzis-awski": {
+		"kind": "region",
+		"borders": [
+			"Jastrzębie-Zdrój",
+			"powiat raciborski",
+			"powiat rybnicki",
+			"Rybnik"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"powiat-oswiecimski": {
+		"kind": "region",
+		"borders": [
+			"Jaworzno",
+			"powiat bielski (Śląskie)",
+			"powiat bieruńsko-lędziński",
+			"powiat chrzanowski",
+			"powiat pszczyński",
+			"powiat wadowicki"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-tarnowski": {
+		"kind": "region",
+		"borders": [
+			"powiat brzeski (Małopolskie)",
+			"powiat dąbrowski",
+			"powiat gorlicki",
+			"powiat jasielski",
+			"powiat nowosądecki",
+			"powiat proszowicki",
+			"Tarnów"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"powiat-wielicki": {
+		"kind": "region",
+		"borders": [
+			"Kraków",
+			"powiat bocheński",
+			"powiat krakowski",
+			"powiat myślenicki"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"powiat-brzeski-ma-opolskie": {
+		"kind": "region",
+		"borders": [
+			"powiat bocheński",
+			"powiat limanowski",
+			"powiat nowosądecki",
+			"powiat proszowicki",
+			"powiat tarnowski"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"jastrzebie-zdroj": {
+		"kind": "region",
+		"borders": [
+			"powiat cieszyński",
+			"powiat pszczyński",
+			"powiat rybnicki",
+			"powiat wodzisławski",
+			"Żory"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-bochenski": {
+		"kind": "region",
+		"borders": [
+			"powiat brzeski (Małopolskie)",
+			"powiat krakowski",
+			"powiat limanowski",
+			"powiat myślenicki",
+			"powiat proszowicki",
+			"powiat wielicki"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"powiat-wadowicki": {
+		"kind": "region",
+		"borders": [
+			"powiat bielski (Śląskie)",
+			"powiat chrzanowski",
+			"powiat krakowski",
+			"powiat myślenicki",
+			"powiat oświęcimski",
+			"powiat suski",
+			"powiat żywiecki"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-bielski-slaskie": {
+		"kind": "region",
+		"borders": [
+			"Bielsko-Biała",
+			"powiat cieszyński",
+			"powiat oświęcimski",
+			"powiat pszczyński",
+			"powiat wadowicki",
+			"powiat żywiecki"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"bielsko-bia-a": {
+		"kind": "region",
+		"borders": [
+			"powiat bielski (Śląskie)",
+			"powiat cieszyński"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"powiat-myslenicki": {
+		"kind": "region",
+		"borders": [
+			"powiat bocheński",
+			"powiat krakowski",
+			"powiat limanowski",
+			"powiat nowotarski",
+			"powiat suski",
+			"powiat wadowicki",
+			"powiat wielicki"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"powiat-cieszynski": {
+		"kind": "region",
+		"borders": [
+			"Bielsko-Biała",
+			"Jastrzębie-Zdrój",
+			"powiat bielski (Śląskie)",
+			"powiat pszczyński",
+			"powiat żywiecki"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"powiat-suski": {
+		"kind": "region",
+		"borders": [
+			"powiat myślenicki",
+			"powiat nowotarski",
+			"powiat wadowicki",
+			"powiat żywiecki"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"powiat-limanowski": {
+		"kind": "region",
+		"borders": [
+			"powiat bocheński",
+			"powiat brzeski (Małopolskie)",
+			"powiat myślenicki",
+			"powiat nowosądecki",
+			"powiat nowotarski"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"powiat-jasielski": {
+		"kind": "region",
+		"borders": [
+			"powiat gorlicki",
+			"powiat tarnowski"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"powiat-zywiecki": {
+		"kind": "region",
+		"borders": [
+			"powiat bielski (Śląskie)",
+			"powiat cieszyński",
+			"powiat suski",
+			"powiat wadowicki"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"nowy-sacz": {
+		"kind": "region",
+		"borders": [
+			"powiat nowosądecki"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"powiat-gorlicki": {
+		"kind": "region",
+		"borders": [
+			"powiat jasielski",
+			"powiat nowosądecki",
+			"powiat tarnowski"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"powiat-nowosadecki": {
+		"kind": "region",
+		"borders": [
+			"Nowy Sącz",
+			"powiat brzeski (Małopolskie)",
+			"powiat gorlicki",
+			"powiat limanowski",
+			"powiat nowotarski",
+			"powiat tarnowski"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"powiat-nowotarski": {
+		"kind": "region",
+		"borders": [
+			"powiat limanowski",
+			"powiat myślenicki",
+			"powiat nowosądecki",
+			"powiat suski",
+			"powiat tatrzański"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"powiat-tatrzanski": {
+		"kind": "region",
+		"borders": [
+			"powiat nowotarski"
+		],
+		"coastal": false,
+		"position": "south"
+	}
+}

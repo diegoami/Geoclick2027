@@ -1,0 +1,750 @@
+{
+	"id": "croatia-counties",
+	"name": "Croatia — Counties",
+	"country": "Croatia",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "me-imurska",
+			"name": "Međimurska",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.547150000000002,
+				46.4157
+			],
+			"bbox": [
+				16.2349,
+				46.2844,
+				16.8594,
+				46.547
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						16.3123,
+						46.4625
+					],
+					[
+						16.5418,
+						46.3775
+					],
+					[
+						16.7986,
+						46.3429
+					]
+				],
+				"aspect": 2.1
+			}
+		},
+		{
+			"id": "varazdinska",
+			"name": "Varaždinska",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.3186,
+				46.20295
+			],
+			"bbox": [
+				15.8793,
+				46.0128,
+				16.7579,
+				46.3931
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						16.001,
+						46.2908
+					],
+					[
+						16.3241,
+						46.1775
+					],
+					[
+						16.6681,
+						46.2524
+					]
+				],
+				"aspect": 2.72
+			}
+		},
+		{
+			"id": "koprivnicko-krizevacka",
+			"name": "Koprivničko-križevačka",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.8281,
+				46.11755
+			],
+			"bbox": [
+				16.3496,
+				45.8703,
+				17.3066,
+				46.3648
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						16.4158,
+						46.0789
+					],
+					[
+						16.8149,
+						46.1903
+					],
+					[
+						17.1831,
+						46.0469
+					]
+				],
+				"aspect": 2.4
+			}
+		},
+		{
+			"id": "krapinsko-zagorska",
+			"name": "Krapinsko-zagorska",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.9229,
+				46.08515
+			],
+			"bbox": [
+				15.5899,
+				45.911,
+				16.2559,
+				46.2593
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						15.684,
+						46.1378
+					],
+					[
+						15.9231,
+						46.042
+					],
+					[
+						16.1925,
+						46.0834
+					]
+				],
+				"aspect": 1.42
+			}
+		},
+		{
+			"id": "grad-zagreb",
+			"name": "Grad Zagreb",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.9991,
+				45.7964
+			],
+			"bbox": [
+				15.7714,
+				45.6224,
+				16.2268,
+				45.9704
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						15.8398,
+						45.7087
+					],
+					[
+						15.9126,
+						45.856
+					],
+					[
+						16.1255,
+						45.9091
+					]
+				],
+				"aspect": 1.87
+			}
+		},
+		{
+			"id": "bjelovarsko-bilogorska",
+			"name": "Bjelovarsko-bilogorska",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.99435,
+				45.776650000000004
+			],
+			"bbox": [
+				16.4967,
+				45.4759,
+				17.492,
+				46.0774
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						16.6849,
+						45.8141
+					],
+					[
+						17.0254,
+						45.7585
+					],
+					[
+						17.366,
+						45.6118
+					]
+				],
+				"aspect": 1.24
+			}
+		},
+		{
+			"id": "zagrebacka",
+			"name": "Zagrebačka",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.970749999999999,
+				45.76795
+			],
+			"bbox": [
+				15.2489,
+				45.4748,
+				16.6926,
+				46.0611
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "viroviticko-podravska",
+			"name": "Virovitičko-podravska",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.60915,
+				45.72585
+			],
+			"bbox": [
+				17.1351,
+				45.4707,
+				18.0832,
+				45.981
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						17.2745,
+						45.9222
+					],
+					[
+						17.5844,
+						45.7316
+					],
+					[
+						17.9298,
+						45.573
+					]
+				],
+				"aspect": 2.36
+			}
+		},
+		{
+			"id": "osjecko-baranjska",
+			"name": "Osječko-baranjska",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.50625,
+				45.551950000000005
+			],
+			"bbox": [
+				17.9062,
+				45.1935,
+				19.1063,
+				45.9104
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						18.1287,
+						45.5942
+					],
+					[
+						18.5027,
+						45.495
+					],
+					[
+						18.8767,
+						45.6472
+					]
+				],
+				"aspect": 1.56
+			}
+		},
+		{
+			"id": "sisacko-moslavacka",
+			"name": "Sisačko-moslavačka",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.4103,
+				45.40895
+			],
+			"bbox": [
+				15.6394,
+				45.0059,
+				17.1812,
+				45.812
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						15.7879,
+						45.2715
+					],
+					[
+						16.349,
+						45.4809
+					],
+					[
+						16.9654,
+						45.3951
+					]
+				],
+				"aspect": 2.07
+			}
+		},
+		{
+			"id": "pozesko-slavonska",
+			"name": "Požeško-slavonska",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.685200000000002,
+				45.40795
+			],
+			"bbox": [
+				16.9292,
+				45.1856,
+				18.4412,
+				45.6303
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						17.1224,
+						45.4695
+					],
+					[
+						17.6416,
+						45.3123
+					],
+					[
+						18.1545,
+						45.4713
+					]
+				],
+				"aspect": 3.04
+			}
+		},
+		{
+			"id": "karlovacka",
+			"name": "Karlovačka",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.4067,
+				45.286950000000004
+			],
+			"bbox": [
+				14.9709,
+				44.8786,
+				15.8425,
+				45.6953
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						15.0356,
+						45.2468
+					],
+					[
+						15.3793,
+						45.3599
+					],
+					[
+						15.7231,
+						45.2409
+					]
+				],
+				"aspect": 1.32
+			}
+		},
+		{
+			"id": "brodsko-posavska",
+			"name": "Brodsko-posavska",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.80925,
+				45.22585
+			],
+			"bbox": [
+				17.0816,
+				45.0644,
+				18.5369,
+				45.3873
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						17.1965,
+						45.2695
+					],
+					[
+						17.4379,
+						45.2635
+					],
+					[
+						17.6668,
+						45.1863
+					]
+				],
+				"aspect": 1.71
+			}
+		},
+		{
+			"id": "istarska",
+			"name": "Istarska",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.870899999999999,
+				45.16995
+			],
+			"bbox": [
+				13.5071,
+				44.8257,
+				14.2347,
+				45.5142
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						13.6261,
+						45.2205
+					],
+					[
+						13.8938,
+						45.1122
+					],
+					[
+						14.1616,
+						45.1851
+					]
+				],
+				"aspect": 0.76
+			}
+		},
+		{
+			"id": "vukovarsko-srijemska",
+			"name": "Vukovarsko-srijemska",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.947049999999997,
+				45.16965
+			],
+			"bbox": [
+				18.5034,
+				44.8612,
+				19.3907,
+				45.4781
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						18.5842,
+						45.2238
+					],
+					[
+						18.8509,
+						45.1693
+					],
+					[
+						19.1176,
+						45.1337
+					]
+				],
+				"aspect": 0.97
+			}
+		},
+		{
+			"id": "primorsko-goranska",
+			"name": "Primorsko-goranska",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.67155,
+				45.15665
+			],
+			"bbox": [
+				14.1173,
+				44.6566,
+				15.2258,
+				45.6567
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						14.4659,
+						45.4814
+					],
+					[
+						14.7001,
+						45.3125
+					],
+					[
+						14.9946,
+						45.3086
+					]
+				],
+				"aspect": 1.26
+			}
+		},
+		{
+			"id": "licko-senjska",
+			"name": "Ličko-senjska",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.26525,
+				44.7214
+			],
+			"bbox": [
+				14.877,
+				44.317,
+				15.6535,
+				45.1258
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						15.0907,
+						45.0275
+					],
+					[
+						15.2144,
+						44.724
+					],
+					[
+						15.4405,
+						44.4513
+					]
+				],
+				"aspect": 1.81
+			}
+		},
+		{
+			"id": "zadarska",
+			"name": "Zadarska",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.83595,
+				44.4084
+			],
+			"bbox": [
+				15.1445,
+				43.8692,
+				16.5274,
+				44.9476
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						15.3581,
+						44.2184
+					],
+					[
+						15.7911,
+						44.3814
+					],
+					[
+						16.224,
+						44.247
+					]
+				],
+				"aspect": 1.24
+			}
+		},
+		{
+			"id": "sibensko-kninska",
+			"name": "Šibensko-kninska",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.9868,
+				43.7652
+			],
+			"bbox": [
+				15.5469,
+				43.504,
+				16.4267,
+				44.0264
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						15.7432,
+						43.82
+					],
+					[
+						16.0177,
+						43.7531
+					],
+					[
+						16.2922,
+						43.8227
+					]
+				],
+				"aspect": 1.64
+			}
+		},
+		{
+			"id": "splitsko-dalmatinska",
+			"name": "Splitsko-dalmatinska",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.73185,
+				43.4897
+			],
+			"bbox": [
+				16.0128,
+				43.0115,
+				17.4509,
+				43.9679
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						16.3177,
+						43.6966
+					],
+					[
+						16.9484,
+						43.6159
+					],
+					[
+						17.2705,
+						43.2145
+					]
+				],
+				"aspect": 3.54
+			}
+		},
+		{
+			"id": "dubrovacko-neretvanska",
+			"name": "Dubrovačko-neretvanska",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.5379,
+				42.8121
+			],
+			"bbox": [
+				16.6384,
+				42.476,
+				18.4374,
+				43.1482
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						17.1606,
+						43.0013
+					],
+					[
+						17.5594,
+						42.9009
+					],
+					[
+						17.9402,
+						42.7755
+					]
+				],
+				"aspect": 11.4
+			}
+		}
+	],
+	"tourOrder": [
+		"me-imurska",
+		"varazdinska",
+		"koprivnicko-krizevacka",
+		"krapinsko-zagorska",
+		"grad-zagreb",
+		"bjelovarsko-bilogorska",
+		"zagrebacka",
+		"viroviticko-podravska",
+		"osjecko-baranjska",
+		"sisacko-moslavacka",
+		"pozesko-slavonska",
+		"karlovacka",
+		"brodsko-posavska",
+		"istarska",
+		"vukovarsko-srijemska",
+		"primorsko-goranska",
+		"licko-senjska",
+		"zadarska",
+		"sibensko-kninska",
+		"splitsko-dalmatinska",
+		"dubrovacko-neretvanska"
+	]
+}

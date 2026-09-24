@@ -159,6 +159,104 @@ const NAME_FIXUPS: Record<string, Record<string, string>> = {
 	// Two cantons in English or in full, where every other one has the name
 	// it uses itself (Genève, Graubünden, Ticino).
 	Switzerland: { Lucerne: 'Luzern', 'Sankt Gallen': 'St. Gallen' },
+	// Belgium's provinces in their own language, Dutch or French; Brussels,
+	// officially both, keeps the English name every player knows it by.
+	Belgium: {
+		'West Flanders': 'West-Vlaanderen',
+		'East Flanders': 'Oost-Vlaanderen',
+		Antwerp: 'Antwerpen',
+		'Flemish Brabant': 'Vlaams-Brabant',
+		'Walloon Brabant': 'Brabant wallon',
+		Liege: 'Liège'
+	},
+	// The other thirteen Czech regions already come in Czech, as the
+	// adjective alone ("Jihomoravský"), the way Poland's voivodeships are.
+	'Czech Republic': { Prague: 'Praha' },
+	// Croatia's `name` field drops most diacritics and calls Požega-Slavonia
+	// "Brodsko-Posavska", its neighbour's name; `name_en` is right but gives
+	// the city of Zagreb and Zagreb County the same name. So the map builds
+	// with --name-field=adm1_code and every county is named here, in
+	// Croatian, as the adjective the way the Czech regions are.
+	Croatia: {
+		'HRV-1609': 'Međimurska',
+		'HRV-1606': 'Virovitičko-podravska',
+		'HRV-1608': 'Koprivničko-križevačka',
+		'HRV-1603': 'Osječko-baranjska',
+		'HRV-1592': 'Istarska',
+		'HRV-1490': 'Dubrovačko-neretvanska',
+		'HRV-1587': 'Sisačko-moslavačka',
+		'HRV-1602': 'Brodsko-posavska',
+		'HRV-1604': 'Požeško-slavonska',
+		'HRV-1583': 'Karlovačka',
+		'HRV-1493': 'Zadarska',
+		'HRV-1605': 'Vukovarsko-srijemska',
+		'HRV-1492': 'Splitsko-dalmatinska',
+		'HRV-1610': 'Varaždinska',
+		'HRV-1582': 'Krapinsko-zagorska',
+		'HRV-1588': 'Zagrebačka',
+		'HRV-1589': 'Grad Zagreb',
+		'HRV-1586': 'Primorsko-goranska',
+		'HRV-1491': 'Šibensko-kninska',
+		'HRV-1584': 'Ličko-senjska',
+		'HRV-1607': 'Bjelovarsko-bilogorska'
+	},
+	// A Greek or Bulgarian name is written in English, as Russia's and
+	// Ukraine's are: `name` has Greek transliterated three different ways.
+	// Mount Athos, self-governing and in no region, stays a target.
+	Greece: {
+		'Dytiki Makedonia': 'Western Macedonia',
+		Ipeiros: 'Epirus',
+		'Kentriki Makedonia': 'Central Macedonia',
+		'Anatoliki Makedonia kai Thraki': 'Eastern Macedonia and Thrace',
+		'Ayion Oros': 'Mount Athos',
+		Thessalia: 'Thessaly',
+		'Stereá Elláda': 'Central Greece',
+		Attiki: 'Attica',
+		Peloponnisos: 'Peloponnese',
+		'Dytiki Ellada': 'Western Greece',
+		Kriti: 'Crete',
+		'Notio Aigaio': 'South Aegean',
+		'Voreio Aigaio': 'North Aegean',
+		'Ionioi Nisoi': 'Ionian Islands'
+	},
+	// Sofia is two provinces: the capital's own and the one around it.
+	Bulgaria: { 'Grad Sofiya': 'Sofia City', Sofia: 'Sofia Province' },
+	// Chile's regions by the short names Chileans use; Biobío is the
+	// official spelling since 2018.
+	Chile: {
+		'Región Metropolitana de Santiago': 'Metropolitana de Santiago',
+		"Libertador General Bernardo O'Higgins": "O'Higgins",
+		'Aisén del General Carlos Ibáñez del Campo': 'Aysén',
+		'Magallanes y Antártica Chilena': 'Magallanes',
+		'Bío-Bío': 'Biobío'
+	},
+	// Lima is two: the capital's province and the region around it, which
+	// Peruvians call Lima Provincias.
+	Peru: { 'Lima Province': 'Lima Metropolitana', Lima: 'Lima Provincias' },
+	// Iran's provinces as English writes them.
+	Iran: {
+		'West Azarbaijan': 'West Azerbaijan',
+		'East Azarbaijan': 'East Azerbaijan',
+		Ardebil: 'Ardabil',
+		Kordestan: 'Kurdistan',
+		Esfahan: 'Isfahan',
+		'Chahar Mahall and Bakhtiari': 'Chaharmahal and Bakhtiari',
+		'Kohgiluyeh and Buyer Ahmad': 'Kohgiluyeh and Boyer-Ahmad'
+	},
+	Thailand: { 'Bangkok Metropolis': 'Bangkok', Phangnga: 'Phang Nga' },
+	// Saudi Arabia's regions as English writes them, not transliterated.
+	'Saudi Arabia': {
+		'Ash Sharqiyah': 'Eastern Province',
+		'Al Hudud ash Shamaliyah': 'Northern Borders',
+		'Al Jawf': 'Al-Jawf',
+		'`Asir': 'Asir',
+		Jizan: 'Jazan',
+		'Al Madinah': 'Medina',
+		Makkah: 'Mecca',
+		'Ar Riyad': 'Riyadh',
+		'Al Quassim': 'Qassim',
+		'Al Bahah': 'Al-Bahah'
+	},
 	// Poland's plain `name` field is English-translated ("Silesian", "Lesser
 	// Poland" - see --name-field=name_pl below), and `name_pl` itself is the
 	// full official form ("województwo śląskie"). Trimmed to the adjective
@@ -414,7 +512,8 @@ async function main() {
 	const countryList = parseList(args.countries);
 	// --clip keeps only the part of each shape inside a box
 	// ("lonMin,latMin,lonMax,latMax") or a WKT polygon: France without
-	// French Guiana, Russia west of the Urals. Unlike the --lon/--lat slice,
+	// French Guiana, Russia west of the Urals; for admin-1 maps, Chile's
+	// Valparaíso without Easter Island. Unlike the --lon/--lat slice,
 	// which keeps or drops a whole target by its middle, this cuts shapes.
 	const clip = args.clip;
 	// --min-area drops a country smaller than this many km² after the clip -
@@ -452,6 +551,13 @@ async function main() {
 	// register's districts carry no state, and a slice by state is how
 	// they are split into playable maps.
 	const within = parseList(args.within);
+	// --disambiguate-by=<field> tells apart the targets a source names twice
+	// by the admin-1 area each is in: Poland has a powiat brzeski in Opolskie
+	// and another in Małopolskie. The field, through the country's
+	// NAME_FIXUPS, names the area as the regions map does ("powiat brzeski
+	// (Opolskie)" from name_pl, not "(Opole)" from name).
+	const areaNameField = args['disambiguate-by'];
+	const disambiguate = areaNameField !== undefined;
 	const renames = new Map(
 		parseList(args.rename).map((pair) => pair.split('=').map((s) => s.trim()) as [string, string])
 	);
@@ -531,6 +637,7 @@ async function main() {
 	// Select every base field plus whichever extra ones this run actually
 	// needs (name-field/exclude-field default to 'name', already included).
 	const fields = Array.from(new Set([...BASE_FIELDS, nameField, excludeField]));
+	const clipArgs = clip ? ['-clipsrc', ...(clip.includes('(') ? [clip] : clip.split(','))] : [];
 
 	if (countryLevel) {
 		console.log(`[1/6] Filtering the countries of "${country}" from Natural Earth admin-0...`);
@@ -541,7 +648,6 @@ async function main() {
 			...(subregion ? [`SUBREGION = ${sqlString(subregion)}`] : []),
 			...(countryList.length > 0 ? [sqlIn('ADMIN', countryList)] : [])
 		].join(' AND ');
-		const clipArgs = clip ? ['-clipsrc', ...(clip.includes('(') ? [clip] : clip.split(','))] : [];
 		execFileSync('ogr2ogr', [
 			'-f',
 			'GeoJSON',
@@ -601,6 +707,7 @@ async function main() {
 			'GeoJSON',
 			'-where',
 			whereClause,
+			...clipArgs,
 			'-select',
 			fields.join(','),
 			filteredPath,
@@ -676,7 +783,7 @@ async function main() {
 	// here, before the tiles are written, so the tileset, the lakes and the
 	// country context that follow all describe the slice rather than the
 	// whole country.
-	if (within.length > 0) {
+	if (within.length > 0 || disambiguate) {
 		// Every admin-1 area of the country, so each target is given exactly
 		// one: the area its interior point is in, or - for an island or a
 		// stretch of coast that Natural Earth's coarser outline leaves out
@@ -689,7 +796,7 @@ async function main() {
 			'-where',
 			`admin=${sqlString(country)}`,
 			'-select',
-			'name',
+			Array.from(new Set(['name', areaNameField ?? 'name'])).join(','),
 			areasPath,
 			SOURCE_SHP
 		]);
@@ -717,9 +824,32 @@ async function main() {
 			}
 			return best.name;
 		};
-		const all = geojson.features.length;
-		geojson.features = geojson.features.filter((feature) => within.includes(areaOf(feature)));
-		console.log(`      within ${within.join(', ')} keeps ${geojson.features.length} of ${all}`);
+		const areaOfFeature = new Map(geojson.features.map((f) => [f, areaOf(f)]));
+		if (disambiguate) {
+			// Across the whole country, before any --within, so a name gets
+			// the same suffix on every map it appears on.
+			const count = new Map<string, number>();
+			for (const f of geojson.features) {
+				count.set(f.properties.name, (count.get(f.properties.name) ?? 0) + 1);
+			}
+			for (const f of geojson.features) {
+				if ((count.get(f.properties.name) ?? 0) < 2) continue;
+				const area = areas.features.find((a) => a.properties.name === areaOfFeature.get(f))!;
+				const label = String(area.properties[areaNameField!] ?? area.properties.name);
+				f.properties.name = `${f.properties.name} (${fixups[label] ?? label})`;
+			}
+			const names = geojson.features.map((f) => f.properties.name);
+			const twice = names.filter((n, i) => names.indexOf(n) !== i);
+			if (twice.length > 0) {
+				console.error(`--disambiguate: still named twice in one area: ${twice.join(', ')}`);
+				process.exit(1);
+			}
+		}
+		if (within.length > 0) {
+			const all = geojson.features.length;
+			geojson.features = geojson.features.filter((f) => within.includes(areaOfFeature.get(f)!));
+			console.log(`      within ${within.join(', ')} keeps ${geojson.features.length} of ${all}`);
+		}
 	}
 	if (!isUnbounded(bounds)) {
 		const all = geojson.features.length;

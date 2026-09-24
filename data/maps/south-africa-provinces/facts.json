@@ -1,0 +1,178 @@
+{
+	"limpopo": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Gauteng",
+			"Mpumalanga",
+			"North West"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Thohoyandou",
+			"nameDe": "Thohoyandou",
+			"nameIt": "Thohoyandou",
+			"population": 269707
+		},
+		"position": "north-east"
+	},
+	"mpumalanga": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Free State",
+			"Gauteng",
+			"KwaZulu-Natal",
+			"Limpopo"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Mbombela",
+			"nameDe": "Mbombela",
+			"nameIt": "Nelspruit",
+			"population": 348138
+		},
+		"peak": {
+			"name": "Die Berg",
+			"elevation": 2331
+		},
+		"position": "north-east"
+	},
+	"gauteng": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Free State",
+			"Limpopo",
+			"Mpumalanga",
+			"North West"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Johannesburg",
+			"nameDe": "Johannesburg",
+			"nameIt": "Johannesburg",
+			"population": 3435000
+		},
+		"position": "north-east"
+	},
+	"north-west": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Free State",
+			"Gauteng",
+			"Limpopo",
+			"Northern Cape"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Klerksdorp",
+			"nameDe": "Klerksdorp",
+			"nameIt": "Klerksdorp",
+			"population": 178921
+		},
+		"position": "centre"
+	},
+	"free-state": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Eastern Cape",
+			"Gauteng",
+			"KwaZulu-Natal",
+			"Mpumalanga",
+			"North West",
+			"Northern Cape"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bloemfontein",
+			"nameDe": "Bloemfontein",
+			"nameIt": "Bloemfontein",
+			"population": 463064
+		},
+		"position": "centre"
+	},
+	"northern-cape": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Eastern Cape",
+			"Free State",
+			"North West",
+			"Western Cape"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Kimberley",
+			"nameDe": "Kimberley",
+			"nameIt": "Kimberley",
+			"population": 165264
+		},
+		"peak": {
+			"name": "Bokkeveldberg",
+			"elevation": 843
+		},
+		"position": "west"
+	},
+	"kwazulu-natal": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Eastern Cape",
+			"Free State",
+			"Mpumalanga"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Durban",
+			"nameDe": "Durban",
+			"nameIt": "Durban",
+			"population": 2729000
+		},
+		"position": "east"
+	},
+	"eastern-cape": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Free State",
+			"KwaZulu-Natal",
+			"Northern Cape",
+			"Western Cape"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Port Elizabeth",
+			"nameDe": "Gqeberha",
+			"nameIt": "Port Elizabeth",
+			"population": 1021000
+		},
+		"peak": {
+			"name": "Kompasberg",
+			"elevation": 2504
+		},
+		"position": "south"
+	},
+	"western-cape": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Eastern Cape",
+			"Northern Cape"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Cape Town",
+			"nameDe": "Kapstadt",
+			"nameIt": "Città del Capo",
+			"population": 3215000
+		},
+		"peak": {
+			"name": "Seweweekspoort Peak",
+			"elevation": 2325
+		},
+		"position": "south-west"
+	}
+}

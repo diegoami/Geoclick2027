@@ -1,0 +1,1127 @@
+{
+	"id": "iran-provinces",
+	"name": "Iran — Provinces",
+	"country": "Iran",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "ardabil",
+			"name": "Ardabil",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				47.763850000000005,
+				38.444050000000004
+			],
+			"bbox": [
+				46.6452,
+				37.2028,
+				48.8825,
+				39.6853
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						47.6471,
+						39.342
+					],
+					[
+						47.9335,
+						38.3252
+					],
+					[
+						48.5261,
+						37.3882
+					]
+				],
+				"aspect": 3.55
+			}
+		},
+		{
+			"id": "east-azerbaijan",
+			"name": "East Azerbaijan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				46.805949999999996,
+				37.9719
+			],
+			"bbox": [
+				45.1566,
+				36.7568,
+				48.4553,
+				39.187
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						45.4722,
+						38.0859
+					],
+					[
+						46.592,
+						37.8636
+					],
+					[
+						47.7117,
+						37.6257
+					]
+				],
+				"aspect": 0.98
+			}
+		},
+		{
+			"id": "west-azerbaijan",
+			"name": "West Azerbaijan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				45.69685,
+				37.88565
+			],
+			"bbox": [
+				44.0614,
+				36.0054,
+				47.3323,
+				39.7659
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						44.5192,
+						39.1822
+					],
+					[
+						44.488,
+						37.5216
+					],
+					[
+						46.1413,
+						36.4301
+					]
+				],
+				"aspect": 3.85
+			}
+		},
+		{
+			"id": "gilan",
+			"name": "Gilan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				49.5162,
+				37.49805
+			],
+			"bbox": [
+				48.4561,
+				36.562,
+				50.5763,
+				38.4341
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						48.6733,
+						38.0335
+					],
+					[
+						49.1134,
+						37.1692
+					],
+					[
+						50.2197,
+						36.8215
+					]
+				],
+				"aspect": 3.2
+			}
+		},
+		{
+			"id": "north-khorasan",
+			"name": "North Khorasan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				57.0475,
+				37.4561
+			],
+			"bbox": [
+				55.8674,
+				36.6426,
+				58.2276,
+				38.2696
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						56.2463,
+						37.4493
+					],
+					[
+						57.0845,
+						37.6858
+					],
+					[
+						57.9227,
+						37.2842
+					]
+				],
+				"aspect": 1.05
+			}
+		},
+		{
+			"id": "golestan",
+			"name": "Golestan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				54.976699999999994,
+				37.30175
+			],
+			"bbox": [
+				53.7054,
+				36.4848,
+				56.248,
+				38.1187
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						54.1332,
+						36.7633
+					],
+					[
+						55.1143,
+						37.2114
+					],
+					[
+						55.8881,
+						37.8646
+					]
+				],
+				"aspect": 2.17
+			}
+		},
+		{
+			"id": "zanjan",
+			"name": "Zanjan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				48.2875,
+				36.389849999999996
+			],
+			"bbox": [
+				47.1938,
+				35.5558,
+				49.3812,
+				37.2239
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						47.5367,
+						36.7503
+					],
+					[
+						48.2537,
+						36.3382
+					],
+					[
+						48.9707,
+						36.4793
+					]
+				],
+				"aspect": 0.87
+			}
+		},
+		{
+			"id": "mazandaran",
+			"name": "Mazandaran",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				52.21235,
+				36.3896
+			],
+			"bbox": [
+				50.3046,
+				35.79,
+				54.1201,
+				36.9892
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						50.6911,
+						36.6375
+					],
+					[
+						52.107,
+						36.0224
+					],
+					[
+						53.6075,
+						36.4311
+					]
+				],
+				"aspect": 3.15
+			}
+		},
+		{
+			"id": "qazvin",
+			"name": "Qazvin",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				49.7011,
+				36.12535
+			],
+			"bbox": [
+				48.6012,
+				35.4376,
+				50.801,
+				36.8131
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						49.0287,
+						35.7603
+					],
+					[
+						49.7755,
+						36.144
+					],
+					[
+						50.5223,
+						36.2273
+					]
+				],
+				"aspect": 1.21
+			}
+		},
+		{
+			"id": "alborz",
+			"name": "Alborz",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				50.821200000000005,
+				35.961749999999995
+			],
+			"bbox": [
+				50.2855,
+				35.6048,
+				51.3569,
+				36.3187
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						50.4736,
+						35.7227
+					],
+					[
+						50.8333,
+						35.8828
+					],
+					[
+						51.052,
+						36.1728
+					]
+				],
+				"aspect": 1.55
+			}
+		},
+		{
+			"id": "semnan",
+			"name": "Semnan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				54.438050000000004,
+				35.8397
+			],
+			"bbox": [
+				51.7889,
+				34.325,
+				57.0872,
+				37.3544
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						52.5889,
+						34.882
+					],
+					[
+						54.6436,
+						35.1772
+					],
+					[
+						56.3516,
+						36.1368
+					]
+				],
+				"aspect": 1.72
+			}
+		},
+		{
+			"id": "kurdistan",
+			"name": "Kurdistan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				46.863550000000004,
+				35.6251
+			],
+			"bbox": [
+				45.5014,
+				34.7425,
+				48.2257,
+				36.5077
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						46.2523,
+						35.7751
+					],
+					[
+						47.0342,
+						35.5765
+					],
+					[
+						47.816,
+						35.7153
+					]
+				],
+				"aspect": 0.87
+			}
+		},
+		{
+			"id": "tehran",
+			"name": "Tehran",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				51.932050000000004,
+				35.495900000000006
+			],
+			"bbox": [
+				50.7847,
+				34.8755,
+				53.0794,
+				36.1163
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						51.0615,
+						35.5034
+					],
+					[
+						51.9769,
+						35.6324
+					],
+					[
+						52.9063,
+						35.6651
+					]
+				],
+				"aspect": 2.61
+			}
+		},
+		{
+			"id": "razavi-khorasan",
+			"name": "Razavi Khorasan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				58.75025,
+				35.32345
+			],
+			"bbox": [
+				56.2105,
+				32.7486,
+				61.29,
+				37.8983
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						57.3676,
+						35.4135
+					],
+					[
+						59.0913,
+						35.6444
+					],
+					[
+						60.8149,
+						35.6298
+					]
+				],
+				"aspect": 0.93
+			}
+		},
+		{
+			"id": "hamadan",
+			"name": "Hamadan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				48.54085,
+				34.83965
+			],
+			"bbox": [
+				47.6412,
+				33.9891,
+				49.4405,
+				35.6902
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						48.0791,
+						34.8001
+					],
+					[
+						48.5709,
+						34.8215
+					],
+					[
+						49.0628,
+						34.9357
+					]
+				],
+				"aspect": 0.52
+			}
+		},
+		{
+			"id": "qom",
+			"name": "Qom",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				50.97115,
+				34.6621
+			],
+			"bbox": [
+				50.06,
+				34.1058,
+				51.8823,
+				35.2184
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						50.4303,
+						34.4497
+					],
+					[
+						50.9583,
+						34.819
+					],
+					[
+						51.6403,
+						34.8474
+					]
+				],
+				"aspect": 1.47
+			}
+		},
+		{
+			"id": "markazi",
+			"name": "Markazi",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				49.97825,
+				34.58235
+			],
+			"bbox": [
+				48.9235,
+				33.4987,
+				51.033,
+				35.666
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						49.1944,
+						34.4465
+					],
+					[
+						49.9131,
+						34.2995
+					],
+					[
+						50.6318,
+						35.2333
+					]
+				],
+				"aspect": 0.92
+			}
+		},
+		{
+			"id": "kermanshah",
+			"name": "Kermanshah",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				46.709199999999996,
+				34.459
+			],
+			"bbox": [
+				45.4199,
+				33.633,
+				47.9985,
+				35.285
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						45.6919,
+						34.3856
+					],
+					[
+						46.6337,
+						34.4099
+					],
+					[
+						47.5519,
+						34.5627
+					]
+				],
+				"aspect": 1.65
+			}
+		},
+		{
+			"id": "lorestan",
+			"name": "Lorestan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				48.41405,
+				33.4756
+			],
+			"bbox": [
+				46.8266,
+				32.6015,
+				50.0015,
+				34.3497
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						47.3672,
+						33.6684
+					],
+					[
+						48.5003,
+						33.4707
+					],
+					[
+						49.6348,
+						33.2787
+					]
+				],
+				"aspect": 1.88
+			}
+		},
+		{
+			"id": "ilam",
+			"name": "Ilam",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				46.8117,
+				33.07065
+			],
+			"bbox": [
+				45.7246,
+				32.1035,
+				47.8988,
+				34.0378
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						46.0984,
+						33.7912
+					],
+					[
+						46.8174,
+						33.102
+					],
+					[
+						47.646,
+						32.4965
+					]
+				],
+				"aspect": 2.71
+			}
+		},
+		{
+			"id": "isfahan",
+			"name": "Isfahan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				52.4198,
+				32.6571
+			],
+			"bbox": [
+				49.4532,
+				30.7722,
+				55.3864,
+				34.542
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						50.5636,
+						32.6988
+					],
+					[
+						52.7452,
+						33.2954
+					],
+					[
+						54.9268,
+						33.8879
+					]
+				],
+				"aspect": 2.11
+			}
+		},
+		{
+			"id": "yazd",
+			"name": "Yazd",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				55.52575,
+				32.48525
+			],
+			"bbox": [
+				52.8271,
+				29.7932,
+				58.2244,
+				35.1773
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						53.5691,
+						31.217
+					],
+					[
+						55.8403,
+						32.165
+					],
+					[
+						57.1252,
+						33.9343
+					]
+				],
+				"aspect": 1.99
+			}
+		},
+		{
+			"id": "south-khorasan",
+			"name": "South Khorasan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				59.4799,
+				32.3352
+			],
+			"bbox": [
+				57.8347,
+				30.3924,
+				61.1251,
+				34.278
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						58.4523,
+						32.5087
+					],
+					[
+						59.5245,
+						32.7887
+					],
+					[
+						60.5967,
+						32.2009
+					]
+				],
+				"aspect": 0.56
+			}
+		},
+		{
+			"id": "chaharmahal-and-bakhtiari",
+			"name": "Chaharmahal and Bakhtiari",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				50.52345,
+				31.88075
+			],
+			"bbox": [
+				49.7361,
+				31.1064,
+				51.3108,
+				32.6551
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						50.1766,
+						32.4672
+					],
+					[
+						50.7969,
+						32.0242
+					],
+					[
+						50.9915,
+						31.3449
+					]
+				],
+				"aspect": 1.63
+			}
+		},
+		{
+			"id": "khuzestan",
+			"name": "Khuzestan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				49.004999999999995,
+				31.523049999999998
+			],
+			"bbox": [
+				47.5802,
+				30.0014,
+				50.4298,
+				33.0447
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						48.0227,
+						31.7101
+					],
+					[
+						48.9197,
+						31.6079
+					],
+					[
+						49.8167,
+						31.315
+					]
+				],
+				"aspect": 0.58
+			}
+		},
+		{
+			"id": "kohgiluyeh-and-boyer-ahmad",
+			"name": "Kohgiluyeh and Boyer-Ahmad",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				50.79795,
+				30.81635
+			],
+			"bbox": [
+				49.9548,
+				30.1448,
+				51.6411,
+				31.4879
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						50.0774,
+						31.059
+					],
+					[
+						50.7457,
+						30.5971
+					],
+					[
+						51.4139,
+						30.6863
+					]
+				],
+				"aspect": 1.57
+			}
+		},
+		{
+			"id": "fars",
+			"name": "Fars",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				53.067800000000005,
+				29.42595
+			],
+			"bbox": [
+				50.6015,
+				27.1394,
+				55.5341,
+				31.7125
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						52.1857,
+						30.8249
+					],
+					[
+						52.9211,
+						29.1726
+					],
+					[
+						54.3531,
+						27.9002
+					]
+				],
+				"aspect": 1.49
+			}
+		},
+		{
+			"id": "kerman",
+			"name": "Kerman",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				56.958,
+				29.02015
+			],
+			"bbox": [
+				54.4006,
+				26.0102,
+				59.5154,
+				32.0301
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						55.2362,
+						30.2791
+					],
+					[
+						57.123,
+						29.6367
+					],
+					[
+						59.0098,
+						28.9974
+					]
+				],
+				"aspect": 0.87
+			}
+		},
+		{
+			"id": "bushehr",
+			"name": "Bushehr",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				51.51075,
+				28.7706
+			],
+			"bbox": [
+				50.0506,
+				27.3224,
+				52.9709,
+				30.2188
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						50.4539,
+						30.006
+					],
+					[
+						51.3624,
+						28.9963
+					],
+					[
+						52.074,
+						27.855
+					]
+				],
+				"aspect": 3.9
+			}
+		},
+		{
+			"id": "sistan-and-baluchestan",
+			"name": "Sistan and Baluchestan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				61.0199,
+				28.25415
+			],
+			"bbox": [
+				58.7749,
+				25.0594,
+				63.2649,
+				31.4489
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						60.1043,
+						30.2262
+					],
+					[
+						61.1866,
+						28.0003
+					],
+					[
+						60.555,
+						25.6775
+					]
+				],
+				"aspect": 1.83
+			}
+		},
+		{
+			"id": "hormozgan",
+			"name": "Hormozgan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				55.96495,
+				27.18515
+			],
+			"bbox": [
+				52.6788,
+				25.4196,
+				59.2511,
+				28.9507
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						54.2404,
+						27.1284
+					],
+					[
+						57.2135,
+						28.3857
+					],
+					[
+						58.3487,
+						25.5838
+					]
+				],
+				"aspect": 4.52
+			}
+		}
+	],
+	"tourOrder": [
+		"ardabil",
+		"east-azerbaijan",
+		"west-azerbaijan",
+		"gilan",
+		"north-khorasan",
+		"golestan",
+		"zanjan",
+		"mazandaran",
+		"qazvin",
+		"alborz",
+		"semnan",
+		"kurdistan",
+		"tehran",
+		"razavi-khorasan",
+		"hamadan",
+		"qom",
+		"markazi",
+		"kermanshah",
+		"lorestan",
+		"ilam",
+		"isfahan",
+		"yazd",
+		"south-khorasan",
+		"chaharmahal-and-bakhtiari",
+		"khuzestan",
+		"kohgiluyeh-and-boyer-ahmad",
+		"fars",
+		"kerman",
+		"bushehr",
+		"sistan-and-baluchestan",
+		"hormozgan"
+	]
+}

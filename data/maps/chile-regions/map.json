@@ -1,0 +1,570 @@
+{
+	"id": "chile-regions",
+	"name": "Chile — Regions",
+	"country": "Chile",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "arica-y-parinacota",
+			"name": "Arica y Parinacota",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-69.67465,
+				-18.33905
+			],
+			"bbox": [
+				-70.3947,
+				-19.1715,
+				-68.9546,
+				-17.5066
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						-70.2381,
+						-18.5803
+					],
+					[
+						-69.6941,
+						-18.254
+					],
+					[
+						-69.1502,
+						-18.4232
+					]
+				],
+				"aspect": 1.03
+			}
+		},
+		{
+			"id": "tarapaca",
+			"name": "Tarapacá",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-69.38465,
+				-20.198900000000002
+			],
+			"bbox": [
+				-70.2877,
+				-21.4513,
+				-68.4816,
+				-18.9465
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						-70.0075,
+						-20.234
+					],
+					[
+						-69.4434,
+						-20.2423
+					],
+					[
+						-68.8794,
+						-20.185
+					]
+				],
+				"aspect": 0.45
+			}
+		},
+		{
+			"id": "antofagasta",
+			"name": "Antofagasta",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-68.8622,
+				-23.47815
+			],
+			"bbox": [
+				-70.7104,
+				-26.0286,
+				-67.014,
+				-20.9277
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						-69.763,
+						-25.1983
+					],
+					[
+						-68.6013,
+						-23.6466
+					],
+					[
+						-68.9415,
+						-21.7124
+					]
+				],
+				"aspect": 1.69
+			}
+		},
+		{
+			"id": "atacama",
+			"name": "Atacama",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-69.91205,
+				-27.5191
+			],
+			"bbox": [
+				-71.522,
+				-29.747,
+				-68.3021,
+				-25.2912
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						-70.6658,
+						-28.9147
+					],
+					[
+						-70.0715,
+						-27.3639
+					],
+					[
+						-69.1605,
+						-25.9139
+					]
+				],
+				"aspect": 2.22
+			}
+		},
+		{
+			"id": "coquimbo",
+			"name": "Coquimbo",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-70.78155,
+				-30.640300000000003
+			],
+			"bbox": [
+				-71.7134,
+				-32.2096,
+				-69.8497,
+				-29.071
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						-71.0047,
+						-31.8217
+					],
+					[
+						-71.0631,
+						-30.6859
+					],
+					[
+						-70.6475,
+						-29.5905
+					]
+				],
+				"aspect": 1.96
+			}
+		},
+		{
+			"id": "valparaiso",
+			"name": "Valparaíso",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-70.93575000000001,
+				-32.97255
+			],
+			"bbox": [
+				-71.8713,
+				-33.9712,
+				-70.0002,
+				-31.9739
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						-71.5717,
+						-32.8807
+					],
+					[
+						-70.9322,
+						-32.3306
+					],
+					[
+						-70.2927,
+						-32.2975
+					]
+				],
+				"aspect": 1.15
+			}
+		},
+		{
+			"id": "metropolitana-de-santiago",
+			"name": "Metropolitana de Santiago",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-70.75280000000001,
+				-33.6213
+			],
+			"bbox": [
+				-71.7179,
+				-34.2846,
+				-69.7877,
+				-32.958
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						-71.2402,
+						-33.5941
+					],
+					[
+						-70.6334,
+						-33.3717
+					],
+					[
+						-70.0266,
+						-33.6352
+					]
+				],
+				"aspect": 1.02
+			}
+		},
+		{
+			"id": "o-higgins",
+			"name": "O'Higgins",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-71.0756,
+				-34.4631
+			],
+			"bbox": [
+				-72.103,
+				-35.0274,
+				-70.0482,
+				-33.8988
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						-71.9026,
+						-34.449
+					],
+					[
+						-71.1071,
+						-34.5546
+					],
+					[
+						-70.3191,
+						-34.4289
+					]
+				],
+				"aspect": 1.47
+			}
+		},
+		{
+			"id": "maule",
+			"name": "Maule",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-71.5782,
+				-35.62105
+			],
+			"bbox": [
+				-72.7991,
+				-36.4812,
+				-70.3573,
+				-34.7609
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						-72.331,
+						-35.6048
+					],
+					[
+						-71.4636,
+						-35.5693
+					],
+					[
+						-70.5961,
+						-35.7024
+					]
+				],
+				"aspect": 1.03
+			}
+		},
+		{
+			"id": "nuble",
+			"name": "Ñuble",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-71.96185,
+				-36.605500000000006
+			],
+			"bbox": [
+				-72.8959,
+				-37.1983,
+				-71.0278,
+				-36.0127
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						-72.6504,
+						-36.2975
+					],
+					[
+						-72.1442,
+						-36.7859
+					],
+					[
+						-71.3465,
+						-36.7785
+					]
+				],
+				"aspect": 1.44
+			}
+		},
+		{
+			"id": "biobio",
+			"name": "Biobío",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-72.3438,
+				-37.456900000000005
+			],
+			"bbox": [
+				-73.6776,
+				-38.4757,
+				-71.01,
+				-36.4381
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						-73.4054,
+						-37.4732
+					],
+					[
+						-72.385,
+						-37.1439
+					],
+					[
+						-71.3647,
+						-37.5933
+					]
+				],
+				"aspect": 1.7
+			}
+		},
+		{
+			"id": "la-araucania",
+			"name": "La Araucanía",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-72.1869,
+				-38.68915
+			],
+			"bbox": [
+				-73.5251,
+				-39.7451,
+				-70.8487,
+				-37.6332
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						-73.1028,
+						-38.5819
+					],
+					[
+						-72.1902,
+						-38.9659
+					],
+					[
+						-71.2777,
+						-38.6671
+					]
+				],
+				"aspect": 0.83
+			}
+		},
+		{
+			"id": "los-rios",
+			"name": "Los Ríos",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-72.6867,
+				-40.01995
+			],
+			"bbox": [
+				-73.7486,
+				-40.6756,
+				-71.6248,
+				-39.3643
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						-73.3423,
+						-39.9047
+					],
+					[
+						-72.588,
+						-40.2782
+					],
+					[
+						-71.8338,
+						-40.098
+					]
+				],
+				"aspect": 1.22
+			}
+		},
+		{
+			"id": "los-lagos",
+			"name": "Los Lagos",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-73.03045,
+				-42.159000000000006
+			],
+			"bbox": [
+				-74.401,
+				-44.045,
+				-71.6599,
+				-40.273
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						-73.245,
+						-40.6181
+					],
+					[
+						-71.931,
+						-41.9936
+					],
+					[
+						-72.4412,
+						-43.6229
+					]
+				],
+				"aspect": 4.33
+			}
+		},
+		{
+			"id": "aysen",
+			"name": "Aysén",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-73.41485,
+				-46.390550000000005
+			],
+			"bbox": [
+				-75.707,
+				-49.2509,
+				-71.1227,
+				-43.5302
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						-73.4103,
+						-48.5531
+					],
+					[
+						-73.3727,
+						-46.8196
+					],
+					[
+						-72.3137,
+						-45.1796
+					]
+				],
+				"aspect": 2.6
+			}
+		},
+		{
+			"id": "magallanes",
+			"name": "Magallanes",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-71.0341,
+				-52.2638
+			],
+			"bbox": [
+				-75.6474,
+				-55.8898,
+				-66.4208,
+				-48.6378
+			],
+			"colorIndex": 2
+		}
+	],
+	"tourOrder": [
+		"arica-y-parinacota",
+		"tarapaca",
+		"antofagasta",
+		"atacama",
+		"coquimbo",
+		"valparaiso",
+		"metropolitana-de-santiago",
+		"o-higgins",
+		"maule",
+		"nuble",
+		"biobio",
+		"la-araucania",
+		"los-rios",
+		"los-lagos",
+		"aysen",
+		"magallanes"
+	]
+}

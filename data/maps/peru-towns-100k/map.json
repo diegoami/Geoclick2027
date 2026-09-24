@@ -1,0 +1,429 @@
+{
+	"id": "peru-towns-100k",
+	"name": "Peru — Towns",
+	"country": "Peru",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "tumbes",
+			"name": "Tumbes",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-80.4599832,
+				-3.5700289
+			],
+			"bbox": [
+				-80.4599832,
+				-3.5700289,
+				-80.4599832,
+				-3.5700289
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "iquitos",
+			"name": "Iquitos",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-73.2500098,
+				-3.7500179
+			],
+			"bbox": [
+				-73.2500098,
+				-3.7500179,
+				-73.2500098,
+				-3.7500179
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "sullana",
+			"name": "Sullana",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-80.6799956,
+				-4.8895866
+			],
+			"bbox": [
+				-80.6799956,
+				-4.8895866,
+				-80.6799956,
+				-4.8895866
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "piura",
+			"name": "Piura",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-80.6299728,
+				-5.2100321
+			],
+			"bbox": [
+				-80.6299728,
+				-5.2100321,
+				-80.6299728,
+				-5.2100321
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "chiclayo",
+			"name": "Chiclayo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-79.8365845,
+				-6.7629089
+			],
+			"bbox": [
+				-79.8365845,
+				-6.7629089,
+				-79.8365845,
+				-6.7629089
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "cajamarca",
+			"name": "Cajamarca",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-78.5300234,
+				-7.1500171
+			],
+			"bbox": [
+				-78.5300234,
+				-7.1500171,
+				-78.5300234,
+				-7.1500171
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "trujillo",
+			"name": "Trujillo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-79.0199677,
+				-8.1200354
+			],
+			"bbox": [
+				-79.0199677,
+				-8.1200354,
+				-79.0199677,
+				-8.1200354
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "pucallpa",
+			"name": "Pucallpa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-74.534996,
+				-8.3689091
+			],
+			"bbox": [
+				-74.534996,
+				-8.3689091,
+				-74.534996,
+				-8.3689091
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "chimbote",
+			"name": "Chimbote",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-78.5699952,
+				-9.0700032
+			],
+			"bbox": [
+				-78.5699952,
+				-9.0700032,
+				-78.5699952,
+				-9.0700032
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "huanuco",
+			"name": "Huánuco",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-76.2400082,
+				-9.9200289
+			],
+			"bbox": [
+				-76.2400082,
+				-9.9200289,
+				-76.2400082,
+				-9.9200289
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "cerro-de-pasco",
+			"name": "Cerro de Pasco",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-76.2699805,
+				-10.6900077
+			],
+			"bbox": [
+				-76.2699805,
+				-10.6900077,
+				-76.2699805,
+				-10.6900077
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "lima",
+			"name": "Lima",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-77.052008,
+				-12.0460668
+			],
+			"bbox": [
+				-77.052008,
+				-12.0460668,
+				-77.052008,
+				-12.0460668
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "callao",
+			"name": "Callao",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-77.1349665,
+				-12.0700268
+			],
+			"bbox": [
+				-77.1349665,
+				-12.0700268,
+				-77.1349665,
+				-12.0700268
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "huancayo",
+			"name": "Huancayo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-75.20002,
+				-12.0800004
+			],
+			"bbox": [
+				-75.20002,
+				-12.0800004,
+				-75.20002,
+				-12.0800004
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "ayacucho",
+			"name": "Ayacucho",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-74.2199506,
+				-13.175024
+			],
+			"bbox": [
+				-74.2199506,
+				-13.175024,
+				-74.2199506,
+				-13.175024
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "chincha-alta",
+			"name": "Chincha Alta",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-76.1399884,
+				-13.4196085
+			],
+			"bbox": [
+				-76.1399884,
+				-13.4196085,
+				-76.1399884,
+				-13.4196085
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "cusco",
+			"name": "Cusco",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-71.972155,
+				-13.5250285
+			],
+			"bbox": [
+				-71.972155,
+				-13.5250285,
+				-71.972155,
+				-13.5250285
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "ica",
+			"name": "Ica",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-75.7254918,
+				-14.0679927
+			],
+			"bbox": [
+				-75.7254918,
+				-14.0679927,
+				-75.7254918,
+				-14.0679927
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "juliaca",
+			"name": "Juliaca",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-70.1399671,
+				-15.4999984
+			],
+			"bbox": [
+				-70.1399671,
+				-15.4999984,
+				-70.1399671,
+				-15.4999984
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "puno",
+			"name": "Puno",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-70.0333069,
+				-15.8329496
+			],
+			"bbox": [
+				-70.0333069,
+				-15.8329496,
+				-70.0333069,
+				-15.8329496
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "arequipa",
+			"name": "Arequipa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-71.5319573,
+				-16.418048
+			],
+			"bbox": [
+				-71.5319573,
+				-16.418048,
+				-71.5319573,
+				-16.418048
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "tacna",
+			"name": "Tacna",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-70.250012,
+				-18.0000008
+			],
+			"bbox": [
+				-70.250012,
+				-18.0000008,
+				-70.250012,
+				-18.0000008
+			],
+			"colorIndex": 2
+		}
+	],
+	"tourOrder": [
+		"tumbes",
+		"iquitos",
+		"sullana",
+		"piura",
+		"chiclayo",
+		"cajamarca",
+		"trujillo",
+		"pucallpa",
+		"chimbote",
+		"huanuco",
+		"cerro-de-pasco",
+		"lima",
+		"callao",
+		"huancayo",
+		"ayacucho",
+		"chincha-alta",
+		"cusco",
+		"ica",
+		"juliaca",
+		"puno",
+		"arequipa",
+		"tacna"
+	]
+}

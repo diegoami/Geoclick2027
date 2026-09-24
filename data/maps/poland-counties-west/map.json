@@ -1,0 +1,2771 @@
+{
+	"id": "poland-counties-west",
+	"name": "Poland — Counties — West",
+	"country": "Poland",
+	"attribution": "© OpenStreetMap contributors, ODbL (via geoBoundaries); Natural Earth (public domain), https://www.naturalearthdata.com",
+	"boundarySource": "data/source/geoboundaries/POL-ADM2.geojson",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "powiat-z-otowski",
+			"name": "powiat złotowski",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.91525,
+				53.4169
+			],
+			"bbox": [
+				16.4398,
+				53.1779,
+				17.3907,
+				53.6559
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						16.6193,
+						53.4433
+					],
+					[
+						16.931,
+						53.3767
+					],
+					[
+						17.2426,
+						53.4166
+					]
+				],
+				"aspect": 1.26
+			}
+		},
+		{
+			"id": "powiat-pilski",
+			"name": "powiat pilski",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.91465,
+				53.16055
+			],
+			"bbox": [
+				16.3905,
+				52.9577,
+				17.4388,
+				53.3634
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						16.5905,
+						53.1607
+					],
+					[
+						17.0058,
+						53.084
+					],
+					[
+						17.3468,
+						53.2219
+					]
+				],
+				"aspect": 2.95
+			}
+		},
+		{
+			"id": "powiat-chodzieski",
+			"name": "powiat chodzieski",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.018349999999998,
+				52.953450000000004
+			],
+			"bbox": [
+				16.7378,
+				52.8171,
+				17.2989,
+				53.0898
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						16.8069,
+						52.9422
+					],
+					[
+						16.983,
+						52.9159
+					],
+					[
+						17.1591,
+						52.9915
+					]
+				],
+				"aspect": 1
+			}
+		},
+		{
+			"id": "powiat-czarnkowsko-trzcianecki",
+			"name": "powiat czarnkowsko-trzcianecki",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.349,
+				52.929
+			],
+			"bbox": [
+				15.9044,
+				52.727,
+				16.7936,
+				53.131
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						16.0476,
+						52.8864
+					],
+					[
+						16.3628,
+						52.9818
+					],
+					[
+						16.678,
+						52.8949
+					]
+				],
+				"aspect": 1.35
+			}
+		},
+		{
+			"id": "powiat-strzelecko-drezdenecki",
+			"name": "powiat strzelecko-drezdenecki",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.64235,
+				52.912549999999996
+			],
+			"bbox": [
+				15.2868,
+				52.7012,
+				15.9979,
+				53.1239
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						15.4845,
+						52.8461
+					],
+					[
+						15.6984,
+						52.8192
+					],
+					[
+						15.9122,
+						52.9162
+					]
+				],
+				"aspect": 0.92
+			}
+		},
+		{
+			"id": "powiat-wagrowiecki",
+			"name": "powiat wągrowiecki",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.266750000000002,
+				52.829
+			],
+			"bbox": [
+				17.0064,
+				52.574,
+				17.5271,
+				53.084
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						17.1796,
+						52.6361
+					],
+					[
+						17.2682,
+						52.789
+					],
+					[
+						17.3529,
+						52.942
+					]
+				],
+				"aspect": 1.55
+			}
+		},
+		{
+			"id": "powiat-gorzowski",
+			"name": "powiat gorzowski",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.0839,
+				52.7383
+			],
+			"bbox": [
+				14.5641,
+				52.5722,
+				15.6037,
+				52.9044
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "gorzow-wielkopolski",
+			"name": "Gorzów Wielkopolski",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.21575,
+				52.730549999999994
+			],
+			"bbox": [
+				15.1234,
+				52.6842,
+				15.3081,
+				52.7769
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						15.1417,
+						52.7409
+					],
+					[
+						15.2132,
+						52.7392
+					],
+					[
+						15.2846,
+						52.7176
+					]
+				],
+				"aspect": 1.38
+			}
+		},
+		{
+			"id": "powiat-obornicki",
+			"name": "powiat obornicki",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.85465,
+				52.727450000000005
+			],
+			"bbox": [
+				16.58,
+				52.5661,
+				17.1293,
+				52.8888
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						16.6702,
+						52.6628
+					],
+					[
+						16.8728,
+						52.724
+					],
+					[
+						17.0755,
+						52.7393
+					]
+				],
+				"aspect": 1.42
+			}
+		},
+		{
+			"id": "powiat-miedzychodzki",
+			"name": "powiat międzychodzki",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.060299999999998,
+				52.60155
+			],
+			"bbox": [
+				15.7821,
+				52.4482,
+				16.3385,
+				52.7549
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						15.8518,
+						52.6143
+					],
+					[
+						16.0347,
+						52.593
+					],
+					[
+						16.2175,
+						52.596
+					]
+				],
+				"aspect": 1.06
+			}
+		},
+		{
+			"id": "powiat-szamotulski",
+			"name": "powiat szamotulski",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.3739,
+				52.584900000000005
+			],
+			"bbox": [
+				16.0138,
+				52.3766,
+				16.734,
+				52.7932
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						16.1345,
+						52.7519
+					],
+					[
+						16.3695,
+						52.529
+					],
+					[
+						16.6045,
+						52.5703
+					]
+				],
+				"aspect": 1.61
+			}
+		},
+		{
+			"id": "powiat-gnieznienski",
+			"name": "powiat gnieźnieński",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.56935,
+				52.5555
+			],
+			"bbox": [
+				17.1515,
+				52.3721,
+				17.9872,
+				52.7389
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						17.3822,
+						52.5759
+					],
+					[
+						17.6217,
+						52.5058
+					],
+					[
+						17.8613,
+						52.512
+					]
+				],
+				"aspect": 1.08
+			}
+		},
+		{
+			"id": "powiat-miedzyrzecki",
+			"name": "powiat międzyrzecki",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.5884,
+				52.499449999999996
+			],
+			"bbox": [
+				15.2765,
+				52.2848,
+				15.9003,
+				52.7141
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						15.3752,
+						52.5277
+					],
+					[
+						15.5875,
+						52.5509
+					],
+					[
+						15.7998,
+						52.4749
+					]
+				],
+				"aspect": 0.75
+			}
+		},
+		{
+			"id": "powiat-sulecinski",
+			"name": "powiat sulęciński",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.04155,
+				52.427
+			],
+			"bbox": [
+				14.6473,
+				52.21,
+				15.4358,
+				52.644
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "powiat-poznanski",
+			"name": "powiat poznański",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.9292,
+				52.41905
+			],
+			"bbox": [
+				16.4607,
+				52.1619,
+				17.3977,
+				52.6762
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "poznan",
+			"name": "Poznań",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.898600000000002,
+				52.4076
+			],
+			"bbox": [
+				16.7316,
+				52.3102,
+				17.0656,
+				52.505
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						16.8242,
+						52.4236
+					],
+					[
+						16.9241,
+						52.4171
+					],
+					[
+						17.0241,
+						52.3866
+					]
+				],
+				"aspect": 1.16
+			}
+		},
+		{
+			"id": "powiat-nowotomyski",
+			"name": "powiat nowotomyski",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.17815,
+				52.34845
+			],
+			"bbox": [
+				15.8436,
+				52.1828,
+				16.5127,
+				52.5141
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						15.9143,
+						52.3293
+					],
+					[
+						16.1787,
+						52.4157
+					],
+					[
+						16.4432,
+						52.3472
+					]
+				],
+				"aspect": 1.52
+			}
+		},
+		{
+			"id": "powiat-s-ubicki",
+			"name": "powiat słubicki",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.78395,
+				52.3228
+			],
+			"bbox": [
+				14.5344,
+				52.0703,
+				15.0335,
+				52.5753
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						14.7867,
+						52.1499
+					],
+					[
+						14.7102,
+						52.3303
+					],
+					[
+						14.7902,
+						52.5075
+					]
+				],
+				"aspect": 1.92
+			}
+		},
+		{
+			"id": "powiat-s-upecki",
+			"name": "powiat słupecki",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.913449999999997,
+				52.31335
+			],
+			"bbox": [
+				17.694,
+				52.0734,
+				18.1329,
+				52.5533
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						17.891,
+						52.1211
+					],
+					[
+						17.8432,
+						52.3301
+					],
+					[
+						18.0269,
+						52.5088
+					]
+				],
+				"aspect": 2.78
+			}
+		},
+		{
+			"id": "powiat-koninski",
+			"name": "powiat koniński",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.296149999999997,
+				52.26155
+			],
+			"bbox": [
+				17.9346,
+				51.9797,
+				18.6577,
+				52.5434
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						18.0838,
+						52.0289
+					],
+					[
+						18.1506,
+						52.2763
+					],
+					[
+						18.4423,
+						52.4522
+					]
+				],
+				"aspect": 3.01
+			}
+		},
+		{
+			"id": "konin",
+			"name": "Konin",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.252499999999998,
+				52.258300000000006
+			],
+			"bbox": [
+				18.1926,
+				52.188,
+				18.3124,
+				52.3286
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						18.2464,
+						52.1977
+					],
+					[
+						18.2762,
+						52.2549
+					],
+					[
+						18.2703,
+						52.3148
+					]
+				],
+				"aspect": 2.87
+			}
+		},
+		{
+			"id": "powiat-kolski",
+			"name": "powiat kolski",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.78,
+				52.24445
+			],
+			"bbox": [
+				18.4597,
+				52.0609,
+				19.1003,
+				52.428
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						18.5611,
+						52.2476
+					],
+					[
+						18.7798,
+						52.1981
+					],
+					[
+						18.9984,
+						52.2771
+					]
+				],
+				"aspect": 0.99
+			}
+		},
+		{
+			"id": "powiat-wrzesinski",
+			"name": "powiat wrzesiński",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.58945,
+				52.24095
+			],
+			"bbox": [
+				17.3468,
+				52.0631,
+				17.8321,
+				52.4188
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						17.4899,
+						52.3806
+					],
+					[
+						17.5701,
+						52.2429
+					],
+					[
+						17.7188,
+						52.1289
+					]
+				],
+				"aspect": 1.68
+			}
+		},
+		{
+			"id": "powiat-swiebodzinski",
+			"name": "powiat świebodziński",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.48605,
+				52.2398
+			],
+			"bbox": [
+				15.0913,
+				52.1009,
+				15.8808,
+				52.3787
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						15.2678,
+						52.2747
+					],
+					[
+						15.5294,
+						52.2079
+					],
+					[
+						15.7988,
+						52.2564
+					]
+				],
+				"aspect": 1.81
+			}
+		},
+		{
+			"id": "powiat-sredzki-wielkopolskie",
+			"name": "powiat średzki (Wielkopolskie)",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.3049,
+				52.17955
+			],
+			"bbox": [
+				17.0954,
+				52.0105,
+				17.5144,
+				52.3486
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						17.1732,
+						52.2173
+					],
+					[
+						17.3052,
+						52.2249
+					],
+					[
+						17.4372,
+						52.1549
+					]
+				],
+				"aspect": 0.7
+			}
+		},
+		{
+			"id": "powiat-grodziski-wielkopolskie",
+			"name": "powiat grodziski (Wielkopolskie)",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.33995,
+				52.16045
+			],
+			"bbox": [
+				16.0727,
+				52.0337,
+				16.6072,
+				52.2872
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						16.1901,
+						52.1935
+					],
+					[
+						16.3657,
+						52.136
+					],
+					[
+						16.5414,
+						52.1819
+					]
+				],
+				"aspect": 1.19
+			}
+		},
+		{
+			"id": "powiat-wolsztynski",
+			"name": "powiat wolsztyński",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.1429,
+				52.08645
+			],
+			"bbox": [
+				15.8333,
+				51.9292,
+				16.4525,
+				52.2437
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						15.9568,
+						52.1732
+					],
+					[
+						16.0826,
+						52.0267
+					],
+					[
+						16.346,
+						51.9938
+					]
+				],
+				"aspect": 1.95
+			}
+		},
+		{
+			"id": "powiat-koscianski",
+			"name": "powiat kościański",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.71555,
+				52.066100000000006
+			],
+			"bbox": [
+				16.4264,
+				51.9168,
+				17.0047,
+				52.2154
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						16.4839,
+						52.0686
+					],
+					[
+						16.6888,
+						52.1137
+					],
+					[
+						16.8937,
+						52.038
+					]
+				],
+				"aspect": 1.35
+			}
+		},
+		{
+			"id": "powiat-sremski",
+			"name": "powiat śremski",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.05825,
+				52.0613
+			],
+			"bbox": [
+				16.7902,
+				51.9248,
+				17.3263,
+				52.1978
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						16.8746,
+						52.1596
+					],
+					[
+						17.0209,
+						52.0661
+					],
+					[
+						17.2069,
+						52.0077
+					]
+				],
+				"aspect": 1.65
+			}
+		},
+		{
+			"id": "powiat-jarocinski",
+			"name": "powiat jarociński",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.4501,
+				52.00895
+			],
+			"bbox": [
+				17.1886,
+				51.8734,
+				17.7116,
+				52.1445
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						17.3225,
+						51.9314
+					],
+					[
+						17.5006,
+						52.0219
+					],
+					[
+						17.6787,
+						52.0108
+					]
+				],
+				"aspect": 1.45
+			}
+		},
+		{
+			"id": "powiat-krosnienski-lubuskie",
+			"name": "powiat krośnieński (Lubuskie)",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.948350000000001,
+				52.006299999999996
+			],
+			"bbox": [
+				14.5904,
+				51.7865,
+				15.3063,
+				52.2261
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						14.7743,
+						51.9099
+					],
+					[
+						15.0439,
+						52.0033
+					],
+					[
+						15.1958,
+						52.1703
+					]
+				],
+				"aspect": 1.39
+			}
+		},
+		{
+			"id": "powiat-turecki",
+			"name": "powiat turecki",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.497799999999998,
+				51.9958
+			],
+			"bbox": [
+				18.2278,
+				51.8208,
+				18.7678,
+				52.1708
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						18.3151,
+						52.0398
+					],
+					[
+						18.5057,
+						51.9993
+					],
+					[
+						18.6962,
+						51.9684
+					]
+				],
+				"aspect": 0.83
+			}
+		},
+		{
+			"id": "powiat-zielonogorski",
+			"name": "powiat zielonogórski",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.5536,
+				51.9749
+			],
+			"bbox": [
+				15.1065,
+				51.7365,
+				16.0007,
+				52.2133
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "zielona-gora",
+			"name": "Zielona Góra",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.53335,
+				51.9291
+			],
+			"bbox": [
+				15.4143,
+				51.8234,
+				15.6524,
+				52.0348
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						15.4661,
+						51.9382
+					],
+					[
+						15.5441,
+						51.9255
+					],
+					[
+						15.6221,
+						51.9254
+					]
+				],
+				"aspect": 0.51
+			}
+		},
+		{
+			"id": "powiat-pleszewski",
+			"name": "powiat pleszewski",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.77825,
+				51.9253
+			],
+			"bbox": [
+				17.514,
+				51.7597,
+				18.0425,
+				52.0909
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "powiat-leszczynski",
+			"name": "powiat leszczyński",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.50075,
+				51.84595
+			],
+			"bbox": [
+				16.1018,
+				51.7049,
+				16.8997,
+				51.987
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						16.3327,
+						51.9108
+					],
+					[
+						16.5742,
+						51.8748
+					],
+					[
+						16.8157,
+						51.8388
+					]
+				],
+				"aspect": 1.96
+			}
+		},
+		{
+			"id": "leszno",
+			"name": "Leszno",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.573700000000002,
+				51.83985
+			],
+			"bbox": [
+				16.5238,
+				51.8064,
+				16.6236,
+				51.8733
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						16.5425,
+						51.8322
+					],
+					[
+						16.5759,
+						51.8414
+					],
+					[
+						16.6093,
+						51.8466
+					]
+				],
+				"aspect": 0.77
+			}
+		},
+		{
+			"id": "powiat-gostynski",
+			"name": "powiat gostyński",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.032899999999998,
+				51.83675
+			],
+			"bbox": [
+				16.729,
+				51.6933,
+				17.3368,
+				51.9802
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						16.881,
+						51.7984
+					],
+					[
+						17.0801,
+						51.8568
+					],
+					[
+						17.2791,
+						51.8506
+					]
+				],
+				"aspect": 1.15
+			}
+		},
+		{
+			"id": "powiat-nowosolski",
+			"name": "powiat nowosolski",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.72645,
+				51.83585
+			],
+			"bbox": [
+				15.4423,
+				51.645,
+				16.0106,
+				52.0267
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						15.5595,
+						51.731
+					],
+					[
+						15.7276,
+						51.7498
+					],
+					[
+						15.8179,
+						51.8201
+					]
+				],
+				"aspect": 0.78
+			}
+		},
+		{
+			"id": "powiat-wschowski",
+			"name": "powiat wschowski",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.125700000000002,
+				51.82765
+			],
+			"bbox": [
+				15.8352,
+				51.6635,
+				16.4162,
+				51.9918
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						15.9873,
+						51.9
+					],
+					[
+						16.1584,
+						51.8288
+					],
+					[
+						16.3355,
+						51.7636
+					]
+				],
+				"aspect": 1.63
+			}
+		},
+		{
+			"id": "powiat-kaliski",
+			"name": "powiat kaliski",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.20325,
+				51.78595
+			],
+			"bbox": [
+				17.9345,
+				51.5329,
+				18.472,
+				52.039
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						18.13,
+						51.9432
+					],
+					[
+						18.3249,
+						51.7783
+					],
+					[
+						18.2485,
+						51.5725
+					]
+				],
+				"aspect": 1.85
+			}
+		},
+		{
+			"id": "kalisz",
+			"name": "Kalisz",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.065,
+				51.745850000000004
+			],
+			"bbox": [
+				17.9979,
+				51.7063,
+				18.1321,
+				51.7854
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						18.016,
+						51.7393
+					],
+					[
+						18.0656,
+						51.7511
+					],
+					[
+						18.1153,
+						51.7423
+					]
+				],
+				"aspect": 0.88
+			}
+		},
+		{
+			"id": "powiat-krotoszynski",
+			"name": "powiat krotoszyński",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.4177,
+				51.742549999999994
+			],
+			"bbox": [
+				17.1282,
+				51.5843,
+				17.7072,
+				51.9008
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						17.2195,
+						51.7167
+					],
+					[
+						17.4174,
+						51.7778
+					],
+					[
+						17.6154,
+						51.7427
+					]
+				],
+				"aspect": 1.4
+			}
+		},
+		{
+			"id": "powiat-g-ogowski",
+			"name": "powiat głogowski",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.09485,
+				51.671350000000004
+			],
+			"bbox": [
+				15.8343,
+				51.5379,
+				16.3554,
+				51.8048
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						15.902,
+						51.6961
+					],
+					[
+						16.0933,
+						51.6849
+					],
+					[
+						16.2847,
+						51.648
+					]
+				],
+				"aspect": 2.5
+			}
+		},
+		{
+			"id": "powiat-rawicki",
+			"name": "powiat rawicki",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.9497,
+				51.647
+			],
+			"bbox": [
+				16.642,
+				51.55,
+				17.2574,
+				51.744
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						16.7277,
+						51.6941
+					],
+					[
+						16.9316,
+						51.612
+					],
+					[
+						17.1696,
+						51.6289
+					]
+				],
+				"aspect": 2.11
+			}
+		},
+		{
+			"id": "powiat-gorowski",
+			"name": "powiat górowski",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.54925,
+				51.635149999999996
+			],
+			"bbox": [
+				16.2701,
+				51.4854,
+				16.8284,
+				51.7849
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						16.4132,
+						51.7185
+					],
+					[
+						16.5438,
+						51.606
+					],
+					[
+						16.7428,
+						51.5412
+					]
+				],
+				"aspect": 1.46
+			}
+		},
+		{
+			"id": "powiat-zarski",
+			"name": "powiat żarski",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.9601,
+				51.6289
+			],
+			"bbox": [
+				14.65,
+				51.364,
+				15.2702,
+				51.8938
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						14.7681,
+						51.6965
+					],
+					[
+						14.9791,
+						51.6669
+					],
+					[
+						15.1901,
+						51.6938
+					]
+				],
+				"aspect": 0.78
+			}
+		},
+		{
+			"id": "powiat-ostrowski-wielkopolskie",
+			"name": "powiat ostrowski (Wielkopolskie)",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.850900000000003,
+				51.60795
+			],
+			"bbox": [
+				17.5146,
+				51.3995,
+				18.1872,
+				51.8164
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						17.5994,
+						51.5495
+					],
+					[
+						17.8201,
+						51.6774
+					],
+					[
+						18.0407,
+						51.6737
+					]
+				],
+				"aspect": 1.03
+			}
+		},
+		{
+			"id": "powiat-zaganski",
+			"name": "powiat żagański",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.42135,
+				51.5997
+			],
+			"bbox": [
+				14.993,
+				51.4177,
+				15.8497,
+				51.7817
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						15.1087,
+						51.5017
+					],
+					[
+						15.3805,
+						51.6536
+					],
+					[
+						15.751,
+						51.6161
+					]
+				],
+				"aspect": 2.42
+			}
+		},
+		{
+			"id": "powiat-milicki",
+			"name": "powiat milicki",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.283450000000002,
+				51.507999999999996
+			],
+			"bbox": [
+				16.9906,
+				51.3681,
+				17.5763,
+				51.6479
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						17.1343,
+						51.5045
+					],
+					[
+						17.3101,
+						51.5072
+					],
+					[
+						17.486,
+						51.5288
+					]
+				],
+				"aspect": 0.99
+			}
+		},
+		{
+			"id": "powiat-polkowicki",
+			"name": "powiat polkowicki",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.02,
+				51.4998
+			],
+			"bbox": [
+				15.7123,
+				51.3275,
+				16.3277,
+				51.6721
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						15.8454,
+						51.4991
+					],
+					[
+						16.0304,
+						51.4345
+					],
+					[
+						16.2153,
+						51.4805
+					]
+				],
+				"aspect": 1.09
+			}
+		},
+		{
+			"id": "powiat-lubinski",
+			"name": "powiat lubiński",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.245449999999998,
+				51.4464
+			],
+			"bbox": [
+				16.0138,
+				51.2836,
+				16.4771,
+				51.6092
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						16.1185,
+						51.3597
+					],
+					[
+						16.2681,
+						51.4503
+					],
+					[
+						16.4178,
+						51.4512
+					]
+				],
+				"aspect": 0.72
+			}
+		},
+		{
+			"id": "powiat-ostrzeszowski",
+			"name": "powiat ostrzeszowski",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.051499999999997,
+				51.4315
+			],
+			"bbox": [
+				17.72,
+				51.294,
+				18.383,
+				51.569
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						17.7722,
+						51.3707
+					],
+					[
+						18.0056,
+						51.5004
+					],
+					[
+						18.3182,
+						51.4887
+					]
+				],
+				"aspect": 2.35
+			}
+		},
+		{
+			"id": "powiat-trzebnicki",
+			"name": "powiat trzebnicki",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.052149999999997,
+				51.37295
+			],
+			"bbox": [
+				16.7642,
+				51.1649,
+				17.3401,
+				51.581
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						16.8373,
+						51.4076
+					],
+					[
+						17.0251,
+						51.3523
+					],
+					[
+						17.2129,
+						51.3364
+					]
+				],
+				"aspect": 0.71
+			}
+		},
+		{
+			"id": "powiat-wo-owski",
+			"name": "powiat wołowski",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.6127,
+				51.3721
+			],
+			"bbox": [
+				16.4157,
+				51.2264,
+				16.8097,
+				51.5178
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						16.4904,
+						51.3779
+					],
+					[
+						16.6194,
+						51.3801
+					],
+					[
+						16.7485,
+						51.3741
+					]
+				],
+				"aspect": 0.61
+			}
+		},
+		{
+			"id": "powiat-boles-awiecki",
+			"name": "powiat bolesławiecki",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.52945,
+				51.323899999999995
+			],
+			"bbox": [
+				15.2137,
+				51.1202,
+				15.8452,
+				51.5276
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						15.334,
+						51.3319
+					],
+					[
+						15.558,
+						51.313
+					],
+					[
+						15.782,
+						51.3787
+					]
+				],
+				"aspect": 0.92
+			}
+		},
+		{
+			"id": "powiat-olesnicki",
+			"name": "powiat oleśnicki",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.518700000000003,
+				51.25435
+			],
+			"bbox": [
+				17.2421,
+				51.0515,
+				17.7953,
+				51.4572
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						17.2984,
+						51.259
+					],
+					[
+						17.5014,
+						51.2388
+					],
+					[
+						17.7045,
+						51.296
+					]
+				],
+				"aspect": 0.98
+			}
+		},
+		{
+			"id": "powiat-kepinski",
+			"name": "powiat kępiński",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.9581,
+				51.248599999999996
+			],
+			"bbox": [
+				17.744,
+				51.1038,
+				18.1722,
+				51.3934
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						17.8494,
+						51.2276
+					],
+					[
+						17.9843,
+						51.2444
+					],
+					[
+						18.1191,
+						51.2462
+					]
+				],
+				"aspect": 0.71
+			}
+		},
+		{
+			"id": "powiat-legnicki",
+			"name": "powiat legnicki",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.1069,
+				51.24125
+			],
+			"bbox": [
+				15.7424,
+				51.0989,
+				16.4714,
+				51.3836
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						16.2307,
+						51.2093
+					],
+					[
+						16.3457,
+						51.2294
+					],
+					[
+						16.4372,
+						51.1977
+					]
+				],
+				"aspect": 0.77
+			}
+		},
+		{
+			"id": "legnica",
+			"name": "Legnica",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.1581,
+				51.20335
+			],
+			"bbox": [
+				16.0833,
+				51.1606,
+				16.2329,
+				51.2461
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						16.1195,
+						51.1737
+					],
+					[
+						16.1816,
+						51.1912
+					],
+					[
+						16.2065,
+						51.2311
+					]
+				],
+				"aspect": 1.48
+			}
+		},
+		{
+			"id": "powiat-zgorzelecki",
+			"name": "powiat zgorzelecki",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.0587,
+				51.162949999999995
+			],
+			"bbox": [
+				14.8212,
+				50.8619,
+				15.2962,
+				51.464
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						15.0583,
+						51.0607
+					],
+					[
+						15.104,
+						51.238
+					],
+					[
+						15.1803,
+						51.4091
+					]
+				],
+				"aspect": 2.82
+			}
+		},
+		{
+			"id": "powiat-sredzki-dolnoslaskie",
+			"name": "powiat średzki (Dolnośląskie)",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.62115,
+				51.126549999999995
+			],
+			"bbox": [
+				16.3372,
+				50.9927,
+				16.9051,
+				51.2604
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						16.4542,
+						51.0222
+					],
+					[
+						16.6001,
+						51.1462
+					],
+					[
+						16.8117,
+						51.2212
+					]
+				],
+				"aspect": 1.83
+			}
+		},
+		{
+			"id": "wroc-aw",
+			"name": "Wrocław",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.991750000000003,
+				51.1261
+			],
+			"bbox": [
+				16.8073,
+				51.0427,
+				17.1762,
+				51.2095
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						16.8644,
+						51.1499
+					],
+					[
+						16.986,
+						51.1129
+					],
+					[
+						17.1076,
+						51.1168
+					]
+				],
+				"aspect": 1.25
+			}
+		},
+		{
+			"id": "powiat-z-otoryjski",
+			"name": "powiat złotoryjski",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.879900000000001,
+				51.09295
+			],
+			"bbox": [
+				15.6978,
+				50.9236,
+				16.062,
+				51.2623
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						15.881,
+						51.2284
+					],
+					[
+						15.8643,
+						51.0983
+					],
+					[
+						15.889,
+						50.9685
+					]
+				],
+				"aspect": 1.86
+			}
+		},
+		{
+			"id": "powiat-lubanski",
+			"name": "powiat lubański",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.275,
+				51.04705
+			],
+			"bbox": [
+				15.1217,
+				50.8946,
+				15.4283,
+				51.1995
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						15.1629,
+						51.0869
+					],
+					[
+						15.2746,
+						51.0602
+					],
+					[
+						15.3863,
+						51.1008
+					]
+				],
+				"aspect": 0.72
+			}
+		},
+		{
+			"id": "powiat-wroc-awski",
+			"name": "powiat wrocławski",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.971049999999998,
+				51.043899999999994
+			],
+			"bbox": [
+				16.5661,
+				50.8122,
+				17.376,
+				51.2756
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						16.7249,
+						50.9184
+					],
+					[
+						17.0535,
+						50.9908
+					],
+					[
+						17.2539,
+						51.1716
+					]
+				],
+				"aspect": 2.18
+			}
+		},
+		{
+			"id": "powiat-lwowecki",
+			"name": "powiat lwówecki",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.5217,
+				51.01765
+			],
+			"bbox": [
+				15.277,
+				50.836,
+				15.7664,
+				51.1993
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						15.3463,
+						50.88
+					],
+					[
+						15.5226,
+						51.0019
+					],
+					[
+						15.6523,
+						51.1446
+					]
+				],
+				"aspect": 2.28
+			}
+		},
+		{
+			"id": "powiat-jaworski",
+			"name": "powiat jaworski",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.20375,
+				51.001850000000005
+			],
+			"bbox": [
+				15.9329,
+				50.8542,
+				16.4746,
+				51.1495
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						16.0256,
+						50.9244
+					],
+					[
+						16.1178,
+						51.0741
+					],
+					[
+						16.3505,
+						51.1206
+					]
+				],
+				"aspect": 2.03
+			}
+		},
+		{
+			"id": "powiat-o-awski",
+			"name": "powiat oławski",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.306449999999998,
+				50.9624
+			],
+			"bbox": [
+				17.0692,
+				50.8211,
+				17.5437,
+				51.1037
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						17.1669,
+						50.8829
+					],
+					[
+						17.331,
+						50.9446
+					],
+					[
+						17.4332,
+						51.0463
+					]
+				],
+				"aspect": 1.56
+			}
+		},
+		{
+			"id": "powiat-jeleniogorski",
+			"name": "powiat jeleniogórski",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.665099999999999,
+				50.87435
+			],
+			"bbox": [
+				15.3682,
+				50.7373,
+				15.962,
+				51.0114
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						15.4823,
+						50.872
+					],
+					[
+						15.7021,
+						50.7983
+					],
+					[
+						15.922,
+						50.8545
+					]
+				],
+				"aspect": 2.07
+			}
+		},
+		{
+			"id": "powiat-swidnicki-dolnoslaskie",
+			"name": "powiat świdnicki (Dolnośląskie)",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.43345,
+				50.871700000000004
+			],
+			"bbox": [
+				16.1698,
+				50.7144,
+				16.6971,
+				51.029
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						16.2388,
+						50.9506
+					],
+					[
+						16.4393,
+						50.8492
+					],
+					[
+						16.6398,
+						50.8692
+					]
+				],
+				"aspect": 1.37
+			}
+		},
+		{
+			"id": "jelenia-gora",
+			"name": "Jelenia Góra",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.72755,
+				50.84925
+			],
+			"bbox": [
+				15.5779,
+				50.7678,
+				15.8772,
+				50.9307
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						15.5981,
+						50.8001
+					],
+					[
+						15.6592,
+						50.8936
+					],
+					[
+						15.8161,
+						50.9226
+					]
+				],
+				"aspect": 4.65
+			}
+		},
+		{
+			"id": "wa-brzych",
+			"name": "Wałbrzych",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.28895,
+				50.786
+			],
+			"bbox": [
+				16.2272,
+				50.718,
+				16.3507,
+				50.854
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						16.278,
+						50.7306
+					],
+					[
+						16.2913,
+						50.7845
+					],
+					[
+						16.2965,
+						50.8388
+					]
+				],
+				"aspect": 1.85
+			}
+		},
+		{
+			"id": "powiat-strzelinski",
+			"name": "powiat strzeliński",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.1015,
+				50.765299999999996
+			],
+			"bbox": [
+				16.8579,
+				50.6135,
+				17.3451,
+				50.9171
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						16.9191,
+						50.7926
+					],
+					[
+						17.0776,
+						50.7968
+					],
+					[
+						17.236,
+						50.7362
+					]
+				],
+				"aspect": 0.93
+			}
+		},
+		{
+			"id": "powiat-wa-brzyski",
+			"name": "powiat wałbrzyski",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.27825,
+				50.76165
+			],
+			"bbox": [
+				16.0676,
+				50.6365,
+				16.4889,
+				50.8868
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						16.1193,
+						50.8214
+					],
+					[
+						16.2113,
+						50.6988
+					],
+					[
+						16.4191,
+						50.6677
+					]
+				],
+				"aspect": 2.24
+			}
+		},
+		{
+			"id": "powiat-kamiennogorski",
+			"name": "powiat kamiennogórski",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.9973,
+				50.74905
+			],
+			"bbox": [
+				15.8299,
+				50.5987,
+				16.1647,
+				50.8994
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						15.8837,
+						50.7767
+					],
+					[
+						15.9925,
+						50.7891
+					],
+					[
+						16.1012,
+						50.7355
+					]
+				],
+				"aspect": 0.92
+			}
+		},
+		{
+			"id": "powiat-dzierzoniowski",
+			"name": "powiat dzierżoniowski",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.68405,
+				50.7348
+			],
+			"bbox": [
+				16.4797,
+				50.625,
+				16.8884,
+				50.8446
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						16.5578,
+						50.7015
+					],
+					[
+						16.7032,
+						50.7643
+					],
+					[
+						16.8486,
+						50.7535
+					]
+				],
+				"aspect": 1.03
+			}
+		},
+		{
+			"id": "powiat-zabkowicki",
+			"name": "powiat ząbkowicki",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.874000000000002,
+				50.55455
+			],
+			"bbox": [
+				16.5831,
+				50.3998,
+				17.1649,
+				50.7093
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						16.692,
+						50.5621
+					],
+					[
+						16.875,
+						50.5271
+					],
+					[
+						17.058,
+						50.6036
+					]
+				],
+				"aspect": 1.08
+			}
+		},
+		{
+			"id": "powiat-k-odzki",
+			"name": "powiat kłodzki",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.6167,
+				50.388850000000005
+			],
+			"bbox": [
+				16.2051,
+				50.0966,
+				17.0283,
+				50.6811
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						16.429,
+						50.5238
+					],
+					[
+						16.6131,
+						50.3667
+					],
+					[
+						16.8001,
+						50.2105
+					]
+				],
+				"aspect": 1.43
+			}
+		}
+	],
+	"tourOrder": [
+		"powiat-z-otowski",
+		"powiat-pilski",
+		"powiat-chodzieski",
+		"powiat-czarnkowsko-trzcianecki",
+		"powiat-strzelecko-drezdenecki",
+		"powiat-wagrowiecki",
+		"powiat-gorzowski",
+		"gorzow-wielkopolski",
+		"powiat-obornicki",
+		"powiat-miedzychodzki",
+		"powiat-szamotulski",
+		"powiat-gnieznienski",
+		"powiat-miedzyrzecki",
+		"powiat-sulecinski",
+		"powiat-poznanski",
+		"poznan",
+		"powiat-nowotomyski",
+		"powiat-s-ubicki",
+		"powiat-s-upecki",
+		"powiat-koninski",
+		"konin",
+		"powiat-kolski",
+		"powiat-wrzesinski",
+		"powiat-swiebodzinski",
+		"powiat-sredzki-wielkopolskie",
+		"powiat-grodziski-wielkopolskie",
+		"powiat-wolsztynski",
+		"powiat-koscianski",
+		"powiat-sremski",
+		"powiat-jarocinski",
+		"powiat-krosnienski-lubuskie",
+		"powiat-turecki",
+		"powiat-zielonogorski",
+		"zielona-gora",
+		"powiat-pleszewski",
+		"powiat-leszczynski",
+		"leszno",
+		"powiat-gostynski",
+		"powiat-nowosolski",
+		"powiat-wschowski",
+		"powiat-kaliski",
+		"kalisz",
+		"powiat-krotoszynski",
+		"powiat-g-ogowski",
+		"powiat-rawicki",
+		"powiat-gorowski",
+		"powiat-zarski",
+		"powiat-ostrowski-wielkopolskie",
+		"powiat-zaganski",
+		"powiat-milicki",
+		"powiat-polkowicki",
+		"powiat-lubinski",
+		"powiat-ostrzeszowski",
+		"powiat-trzebnicki",
+		"powiat-wo-owski",
+		"powiat-boles-awiecki",
+		"powiat-olesnicki",
+		"powiat-kepinski",
+		"powiat-legnicki",
+		"legnica",
+		"powiat-zgorzelecki",
+		"powiat-sredzki-dolnoslaskie",
+		"wroc-aw",
+		"powiat-z-otoryjski",
+		"powiat-lubanski",
+		"powiat-wroc-awski",
+		"powiat-lwowecki",
+		"powiat-jaworski",
+		"powiat-o-awski",
+		"powiat-jeleniogorski",
+		"powiat-swidnicki-dolnoslaskie",
+		"jelenia-gora",
+		"wa-brzych",
+		"powiat-strzelinski",
+		"powiat-wa-brzyski",
+		"powiat-kamiennogorski",
+		"powiat-dzierzoniowski",
+		"powiat-zabkowicki",
+		"powiat-k-odzki"
+	]
+}

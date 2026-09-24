@@ -1,0 +1,515 @@
+{
+	"id": "czechia-regions",
+	"name": "Czechia — Regions",
+	"country": "Czech Republic",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "liberecky",
+			"name": "Liberecký",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.9729,
+				50.73950000000001
+			],
+			"bbox": [
+				14.34,
+				50.4712,
+				15.6058,
+				51.0078
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						14.473,
+						50.6526
+					],
+					[
+						14.9757,
+						50.8191
+					],
+					[
+						15.5009,
+						50.6735
+					]
+				],
+				"aspect": 2.08
+			}
+		},
+		{
+			"id": "ustecky",
+			"name": "Ústecký",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.78445,
+				50.562
+			],
+			"bbox": [
+				12.9606,
+				50.0872,
+				14.6083,
+				51.0368
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						13.2717,
+						50.3087
+					],
+					[
+						13.7923,
+						50.4769
+					],
+					[
+						14.2906,
+						50.665
+					]
+				],
+				"aspect": 1.63
+			}
+		},
+		{
+			"id": "kralovehradecky",
+			"name": "Královéhradecký",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.8535,
+				50.40235
+			],
+			"bbox": [
+				15.1228,
+				50.0223,
+				16.5842,
+				50.7824
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						15.2262,
+						50.385
+					],
+					[
+						15.7852,
+						50.4895
+					],
+					[
+						16.3442,
+						50.2519
+					]
+				],
+				"aspect": 1.84
+			}
+		},
+		{
+			"id": "karlovarsky",
+			"name": "Karlovarský",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.68475,
+				50.1732
+			],
+			"bbox": [
+				12.0796,
+				49.905,
+				13.2899,
+				50.4414
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						12.2758,
+						50.1456
+					],
+					[
+						12.7227,
+						50.18
+					],
+					[
+						13.1696,
+						50.1879
+					]
+				],
+				"aspect": 1.42
+			}
+		},
+		{
+			"id": "praha",
+			"name": "Praha",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.45,
+				50.061
+			],
+			"bbox": [
+				14.2169,
+				49.9568,
+				14.6831,
+				50.1652
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						14.2911,
+						50.0487
+					],
+					[
+						14.457,
+						50.0752
+					],
+					[
+						14.6229,
+						50.0678
+					]
+				],
+				"aspect": 1.22
+			}
+		},
+		{
+			"id": "stredocesky",
+			"name": "Středočeský",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.4559,
+				50.0457
+			],
+			"bbox": [
+				13.4057,
+				49.4895,
+				15.5061,
+				50.6019
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						13.8041,
+						49.923
+					],
+					[
+						14.5219,
+						49.8268
+					],
+					[
+						15.2396,
+						50.0995
+					]
+				],
+				"aspect": 1.23
+			}
+		},
+		{
+			"id": "pardubicky",
+			"name": "Pardubický",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.1144,
+				49.8935
+			],
+			"bbox": [
+				15.359,
+				49.5973,
+				16.8698,
+				50.1897
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						15.601,
+						49.9892
+					],
+					[
+						16.1251,
+						49.8768
+					],
+					[
+						16.672,
+						49.8308
+					]
+				],
+				"aspect": 1.86
+			}
+		},
+		{
+			"id": "olomoucky",
+			"name": "Olomoucký",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.31655,
+				49.8517
+			],
+			"bbox": [
+				16.7268,
+				49.2723,
+				17.9063,
+				50.4311
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						16.9978,
+						50.2862
+					],
+					[
+						16.8698,
+						49.8064
+					],
+					[
+						17.3799,
+						49.4335
+					]
+				],
+				"aspect": 2.75
+			}
+		},
+		{
+			"id": "moravskoslezsky",
+			"name": "Moravskoslezský",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.98335,
+				49.83355
+			],
+			"bbox": [
+				17.1335,
+				49.3776,
+				18.8332,
+				50.2895
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						17.3613,
+						50.0416
+					],
+					[
+						17.9394,
+						49.764
+					],
+					[
+						18.6039,
+						49.5775
+					]
+				],
+				"aspect": 2.31
+			}
+		},
+		{
+			"id": "plzensky",
+			"name": "Plzeňský",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.09785,
+				49.5389
+			],
+			"bbox": [
+				12.3836,
+				48.9693,
+				13.8121,
+				50.1085
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						12.6136,
+						49.6963
+					],
+					[
+						13.1194,
+						49.5889
+					],
+					[
+						13.6253,
+						49.5157
+					]
+				],
+				"aspect": 0.82
+			}
+		},
+		{
+			"id": "vysocina",
+			"name": "Vysočina",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.6386,
+				49.415
+			],
+			"bbox": [
+				14.8852,
+				48.9544,
+				16.392,
+				49.8756
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						15.0866,
+						49.4761
+					],
+					[
+						15.6624,
+						49.378
+					],
+					[
+						16.2383,
+						49.386
+					]
+				],
+				"aspect": 1.11
+			}
+		},
+		{
+			"id": "zlinsky",
+			"name": "Zlínský",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.76265,
+				49.18455
+			],
+			"bbox": [
+				17.1383,
+				48.8418,
+				18.387,
+				49.5273
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						17.3001,
+						49.1526
+					],
+					[
+						17.7441,
+						49.1134
+					],
+					[
+						18.1881,
+						49.3527
+					]
+				],
+				"aspect": 1.31
+			}
+		},
+		{
+			"id": "jihomoravsky",
+			"name": "Jihomoravský",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.595100000000002,
+				49.13235
+			],
+			"bbox": [
+				15.5442,
+				48.6308,
+				17.646,
+				49.6339
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						15.9359,
+						48.8519
+					],
+					[
+						16.5962,
+						49.4123
+					],
+					[
+						17.2566,
+						48.9382
+					]
+				],
+				"aspect": 1.48
+			}
+		},
+		{
+			"id": "jihocesky",
+			"name": "Jihočeský",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.548549999999999,
+				49.08565
+			],
+			"bbox": [
+				13.5224,
+				48.5579,
+				15.5747,
+				49.6134
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						13.8239,
+						49.1096
+					],
+					[
+						14.3572,
+						49.0247
+					],
+					[
+						14.8906,
+						49.1323
+					]
+				],
+				"aspect": 0.78
+			}
+		}
+	],
+	"tourOrder": [
+		"liberecky",
+		"ustecky",
+		"kralovehradecky",
+		"karlovarsky",
+		"praha",
+		"stredocesky",
+		"pardubicky",
+		"olomoucky",
+		"moravskoslezsky",
+		"plzensky",
+		"vysocina",
+		"zlinsky",
+		"jihomoravsky",
+		"jihocesky"
+	]
+}

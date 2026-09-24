@@ -1,0 +1,1002 @@
+{
+	"id": "bulgaria-provinces",
+	"name": "Bulgaria — Provinces",
+	"country": "Bulgaria",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "silistra",
+			"name": "Silistra",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				27.0074,
+				43.92295
+			],
+			"bbox": [
+				26.3323,
+				43.6689,
+				27.6825,
+				44.177
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						26.5048,
+						44.023
+					],
+					[
+						26.9874,
+						43.9131
+					],
+					[
+						27.4906,
+						43.9134
+					]
+				],
+				"aspect": 2.6
+			}
+		},
+		{
+			"id": "vidin",
+			"name": "Vidin",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				22.701050000000002,
+				43.807249999999996
+			],
+			"bbox": [
+				22.3495,
+				43.3861,
+				23.0526,
+				44.2284
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						22.7078,
+						43.4964
+					],
+					[
+						22.6305,
+						43.8094
+					],
+					[
+						22.7305,
+						44.1171
+					]
+				],
+				"aspect": 1.81
+			}
+		},
+		{
+			"id": "ruse",
+			"name": "Ruse",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				25.933149999999998,
+				43.6869
+			],
+			"bbox": [
+				25.4701,
+				43.3189,
+				26.3962,
+				44.0549
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						25.6402,
+						43.5051
+					],
+					[
+						26.0721,
+						43.6385
+					],
+					[
+						26.2521,
+						43.9564
+					]
+				],
+				"aspect": 2.01
+			}
+		},
+		{
+			"id": "dobrich",
+			"name": "Dobrich",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				27.9018,
+				43.67125
+			],
+			"bbox": [
+				27.2001,
+				43.3552,
+				28.6035,
+				43.9873
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						27.4296,
+						43.7675
+					],
+					[
+						27.9335,
+						43.6288
+					],
+					[
+						28.4591,
+						43.5458
+					]
+				],
+				"aspect": 1.84
+			}
+		},
+		{
+			"id": "razgrad",
+			"name": "Razgrad",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				26.59035,
+				43.6459
+			],
+			"bbox": [
+				26.1799,
+				43.3422,
+				27.0008,
+				43.9496
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						26.3566,
+						43.6797
+					],
+					[
+						26.6029,
+						43.5995
+					],
+					[
+						26.8492,
+						43.684
+					]
+				],
+				"aspect": 0.73
+			}
+		},
+		{
+			"id": "pleven",
+			"name": "Pleven",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				24.631999999999998,
+				43.502449999999996
+			],
+			"bbox": [
+				23.9786,
+				43.2054,
+				25.2854,
+				43.7995
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						24.3017,
+						43.4996
+					],
+					[
+						24.7125,
+						43.5325
+					],
+					[
+						25.1234,
+						43.5154
+					]
+				],
+				"aspect": 1.34
+			}
+		},
+		{
+			"id": "montana",
+			"name": "Montana",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				23.1734,
+				43.5019
+			],
+			"bbox": [
+				22.7243,
+				43.1172,
+				23.6225,
+				43.8866
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						23.0375,
+						43.2411
+					],
+					[
+						23.1221,
+						43.5654
+					],
+					[
+						23.428,
+						43.8104
+					]
+				],
+				"aspect": 1.57
+			}
+		},
+		{
+			"id": "vratsa",
+			"name": "Vratsa",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				23.83195,
+				43.4216
+			],
+			"bbox": [
+				23.3272,
+				43.0092,
+				24.3367,
+				43.834
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						23.4518,
+						43.3045
+					],
+					[
+						23.7687,
+						43.453
+					],
+					[
+						24.0856,
+						43.4962
+					]
+				],
+				"aspect": 0.64
+			}
+		},
+		{
+			"id": "shumen",
+			"name": "Shumen",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				26.995649999999998,
+				43.29425
+			],
+			"bbox": [
+				26.5724,
+				42.8889,
+				27.4189,
+				43.6996
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						26.8335,
+						42.9722
+					],
+					[
+						27.0003,
+						43.2926
+					],
+					[
+						27.131,
+						43.6205
+					]
+				],
+				"aspect": 1.9
+			}
+		},
+		{
+			"id": "targovishte",
+			"name": "Targovishte",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				26.35605,
+				43.2425
+			],
+			"bbox": [
+				25.9461,
+				42.9491,
+				26.766,
+				43.5359
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						26.0797,
+						43.3201
+					],
+					[
+						26.3816,
+						43.1633
+					],
+					[
+						26.6836,
+						43.2177
+					]
+				],
+				"aspect": 1.14
+			}
+		},
+		{
+			"id": "veliko-tarnovo",
+			"name": "Veliko Tarnovo",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				25.62225,
+				43.2287
+			],
+			"bbox": [
+				25.0725,
+				42.767,
+				26.172,
+				43.6904
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						25.2576,
+						43.4937
+					],
+					[
+						25.5982,
+						43.1881
+					],
+					[
+						25.9862,
+						42.9117
+					]
+				],
+				"aspect": 1.76
+			}
+		},
+		{
+			"id": "varna",
+			"name": "Varna",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				27.60305,
+				43.19665
+			],
+			"bbox": [
+				27.1191,
+				42.8221,
+				28.087,
+				43.5712
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						27.3022,
+						43.2148
+					],
+					[
+						27.5896,
+						43.2299
+					],
+					[
+						27.8771,
+						43.1287
+					]
+				],
+				"aspect": 0.68
+			}
+		},
+		{
+			"id": "lovech",
+			"name": "Lovech",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				24.54455,
+				43.01235
+			],
+			"bbox": [
+				23.9775,
+				42.714,
+				25.1116,
+				43.3107
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						24.12,
+						43.0474
+					],
+					[
+						24.492,
+						42.9223
+					],
+					[
+						24.864,
+						43.0585
+					]
+				],
+				"aspect": 1.15
+			}
+		},
+		{
+			"id": "gabrovo",
+			"name": "Gabrovo",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				25.24755,
+				42.96585
+			],
+			"bbox": [
+				24.8675,
+				42.7358,
+				25.6276,
+				43.1959
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						24.9552,
+						43.0367
+					],
+					[
+						25.2097,
+						42.8674
+					],
+					[
+						25.5562,
+						42.8711
+					]
+				],
+				"aspect": 1.49
+			}
+		},
+		{
+			"id": "sofia-city",
+			"name": "Sofia City",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				23.356949999999998,
+				42.659400000000005
+			],
+			"bbox": [
+				23.0595,
+				42.4208,
+				23.6544,
+				42.898
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						23.2059,
+						42.7398
+					],
+					[
+						23.3836,
+						42.7193
+					],
+					[
+						23.5613,
+						42.5732
+					]
+				],
+				"aspect": 0.72
+			}
+		},
+		{
+			"id": "sofia-province",
+			"name": "Sofia Province",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				23.573900000000002,
+				42.6432
+			],
+			"bbox": [
+				22.7396,
+				42.0991,
+				24.4082,
+				43.1873
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "pernik",
+			"name": "Pernik",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				22.8599,
+				42.629549999999995
+			],
+			"bbox": [
+				22.4413,
+				42.3602,
+				23.2785,
+				42.8989
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						22.5853,
+						42.794
+					],
+					[
+						22.8407,
+						42.605
+					],
+					[
+						23.1433,
+						42.4576
+					]
+				],
+				"aspect": 1.7
+			}
+		},
+		{
+			"id": "sliven",
+			"name": "Sliven",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				26.23585,
+				42.5971
+			],
+			"bbox": [
+				25.8109,
+				42.1527,
+				26.6608,
+				43.0415
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						26.0118,
+						42.2982
+					],
+					[
+						26.0901,
+						42.6681
+					],
+					[
+						26.4624,
+						42.924
+					]
+				],
+				"aspect": 2.15
+			}
+		},
+		{
+			"id": "burgas",
+			"name": "Burgas",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				27.2946,
+				42.44825
+			],
+			"bbox": [
+				26.5724,
+				41.9081,
+				28.0168,
+				42.9884
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						26.9146,
+						42.8718
+					],
+					[
+						27.4562,
+						42.5485
+					],
+					[
+						27.5967,
+						42.0329
+					]
+				],
+				"aspect": 1.98
+			}
+		},
+		{
+			"id": "stara-zagora",
+			"name": "Stara Zagora",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				25.577150000000003,
+				42.4012
+			],
+			"bbox": [
+				25.0115,
+				42.0196,
+				26.1428,
+				42.7828
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						25.2163,
+						42.4428
+					],
+					[
+						25.541,
+						42.5279
+					],
+					[
+						25.8657,
+						42.3831
+					]
+				],
+				"aspect": 0.78
+			}
+		},
+		{
+			"id": "kyustendil",
+			"name": "Kyustendil",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				22.9193,
+				42.32015
+			],
+			"bbox": [
+				22.345,
+				42.0074,
+				23.4936,
+				42.6329
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						22.5566,
+						42.3497
+					],
+					[
+						22.8878,
+						42.149
+					],
+					[
+						23.3421,
+						42.2066
+					]
+				],
+				"aspect": 1.78
+			}
+		},
+		{
+			"id": "plovdiv",
+			"name": "Plovdiv",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				24.86195,
+				42.2935
+			],
+			"bbox": [
+				24.3944,
+				41.795,
+				25.3295,
+				42.792
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						24.6924,
+						42.661
+					],
+					[
+						24.7041,
+						42.2575
+					],
+					[
+						25.0169,
+						41.9302
+					]
+				],
+				"aspect": 1.57
+			}
+		},
+		{
+			"id": "yambol",
+			"name": "Yambol",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				26.6098,
+				42.2887
+			],
+			"bbox": [
+				26.1301,
+				41.8816,
+				27.0895,
+				42.6958
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						26.2567,
+						42.2246
+					],
+					[
+						26.6094,
+						42.3565
+					],
+					[
+						26.9621,
+						42.238
+					]
+				],
+				"aspect": 0.89
+			}
+		},
+		{
+			"id": "pazardzhik",
+			"name": "Pazardzhik",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				24.125950000000003,
+				42.158
+			],
+			"bbox": [
+				23.7631,
+				41.6863,
+				24.4888,
+				42.6297
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						24.0608,
+						41.8153
+					],
+					[
+						24.1622,
+						42.1733
+					],
+					[
+						24.2178,
+						42.5347
+					]
+				],
+				"aspect": 1.71
+			}
+		},
+		{
+			"id": "haskovo",
+			"name": "Haskovo",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				25.88775,
+				41.877700000000004
+			],
+			"bbox": [
+				25.2226,
+				41.5627,
+				26.5529,
+				42.1927
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						25.3819,
+						42.0125
+					],
+					[
+						25.7954,
+						41.7952
+					],
+					[
+						26.287,
+						41.8646
+					]
+				],
+				"aspect": 1.79
+			}
+		},
+		{
+			"id": "blagoevgrad",
+			"name": "Blagoevgrad",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				23.52165,
+				41.745149999999995
+			],
+			"bbox": [
+				22.8456,
+				41.3127,
+				24.1977,
+				42.1776
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						23.05,
+						41.6623
+					],
+					[
+						23.4378,
+						41.8275
+					],
+					[
+						23.8256,
+						41.715
+					]
+				],
+				"aspect": 0.79
+			}
+		},
+		{
+			"id": "smolyan",
+			"name": "Smolyan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				24.6132,
+				41.62845
+			],
+			"bbox": [
+				24.0726,
+				41.3075,
+				25.1538,
+				41.9494
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						24.2823,
+						41.6861
+					],
+					[
+						24.6805,
+						41.7608
+					],
+					[
+						25.0788,
+						41.5499
+					]
+				],
+				"aspect": 1.28
+			}
+		},
+		{
+			"id": "kardzhali",
+			"name": "Kardzhali",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				25.6207,
+				41.57155
+			],
+			"bbox": [
+				25.0671,
+				41.2394,
+				26.1743,
+				41.9037
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						25.1464,
+						41.683
+					],
+					[
+						25.5143,
+						41.3967
+					],
+					[
+						26.0382,
+						41.4322
+					]
+				],
+				"aspect": 2.02
+			}
+		}
+	],
+	"tourOrder": [
+		"silistra",
+		"vidin",
+		"ruse",
+		"dobrich",
+		"razgrad",
+		"pleven",
+		"montana",
+		"vratsa",
+		"shumen",
+		"targovishte",
+		"veliko-tarnovo",
+		"varna",
+		"lovech",
+		"gabrovo",
+		"sofia-city",
+		"sofia-province",
+		"pernik",
+		"sliven",
+		"burgas",
+		"stara-zagora",
+		"kyustendil",
+		"plovdiv",
+		"yambol",
+		"pazardzhik",
+		"haskovo",
+		"blagoevgrad",
+		"smolyan",
+		"kardzhali"
+	]
+}

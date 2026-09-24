@@ -1,7 +1,7 @@
-// Germany's districts as a player names them (#39, batch D). Imported from
+// Germany's districts and Poland's powiats as a player names them (#39). Imported from
 // data/scripts the way placeSelection.test.ts does.
 import { describe, expect, it } from 'vitest';
-import { germanDistrictName, NAME_CLEANERS } from '../../../data/scripts/admin2';
+import { germanDistrictName, NAME_CLEANERS, polishCountyName } from '../../../data/scripts/admin2';
 
 describe('germanDistrictName', () => {
 	it('calls a city that is its own district by the city', () => {
@@ -33,5 +33,26 @@ describe('germanDistrictName', () => {
 
 	it('is the cleaner --clean-names=german-districts picks', () => {
 		expect(NAME_CLEANERS['german-districts']).toBe(germanDistrictName);
+	});
+});
+
+describe('polishCountyName', () => {
+	it('keeps a powiat OpenStreetMap already names in Polish', () => {
+		expect(polishCountyName('powiat oleski')).toBe('powiat oleski');
+		expect(polishCountyName('Rybnik')).toBe('Rybnik');
+	});
+
+	it('gives the powiats named in English after their seat their Polish names', () => {
+		expect(polishCountyName('Siedlce County')).toBe('powiat siedlecki');
+		expect(polishCountyName('Colberg County')).toBe('powiat kołobrzeski');
+		expect(polishCountyName('Tarnowskie Góry County')).toBe('powiat tarnogórski');
+	});
+
+	it('gives Kraków back its accent', () => {
+		expect(polishCountyName('Krakow')).toBe('Kraków');
+	});
+
+	it('is the cleaner --clean-names=polish-counties picks', () => {
+		expect(NAME_CLEANERS['polish-counties']).toBe(polishCountyName);
 	});
 });

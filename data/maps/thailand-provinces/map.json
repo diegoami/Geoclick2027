@@ -1,0 +1,2749 @@
+{
+	"id": "thailand-provinces",
+	"name": "Thailand — Provinces",
+	"country": "Thailand",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "chiang-rai",
+			"name": "Chiang Rai",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				99.90700000000001,
+				19.7212
+			],
+			"bbox": [
+				99.2706,
+				18.9984,
+				100.5434,
+				20.444
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						99.4055,
+						19.2852
+					],
+					[
+						99.6948,
+						19.882
+					],
+					[
+						100.3183,
+						20.1872
+					]
+				],
+				"aspect": 2.07
+			}
+		},
+		{
+			"id": "phayao",
+			"name": "Phayao",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				100.1566,
+				19.26805
+			],
+			"bbox": [
+				99.6874,
+				18.8117,
+				100.6258,
+				19.7244
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						99.7844,
+						19.2493
+					],
+					[
+						100.1555,
+						19.1202
+					],
+					[
+						100.5265,
+						19.2977
+					]
+				],
+				"aspect": 1.23
+			}
+		},
+		{
+			"id": "nan",
+			"name": "Nan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				100.83525,
+				18.814749999999997
+			],
+			"bbox": [
+				100.3526,
+				18.016,
+				101.3179,
+				19.6135
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						100.6478,
+						18.149
+					],
+					[
+						100.8404,
+						18.7987
+					],
+					[
+						100.9638,
+						19.4609
+					]
+				],
+				"aspect": 2.09
+			}
+		},
+		{
+			"id": "chiang-mai",
+			"name": "Chiang Mai",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				98.83685,
+				18.70145
+			],
+			"bbox": [
+				98.0835,
+				17.2501,
+				99.5902,
+				20.1528
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						98.3989,
+						17.8794
+					],
+					[
+						98.652,
+						18.9129
+					],
+					[
+						99.1984,
+						19.8427
+					]
+				],
+				"aspect": 2.87
+			}
+		},
+		{
+			"id": "mae-hong-son",
+			"name": "Mae Hong Son",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				98.04655,
+				18.672150000000002
+			],
+			"bbox": [
+				97.4381,
+				17.5549,
+				98.655,
+				19.7894
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						97.9462,
+						17.7828
+					],
+					[
+						97.6867,
+						18.7347
+					],
+					[
+						98.2909,
+						19.5118
+					]
+				],
+				"aspect": 3.7
+			}
+		},
+		{
+			"id": "lampang",
+			"name": "Lampang",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				99.5665,
+				18.35275
+			],
+			"bbox": [
+				99.0121,
+				17.2043,
+				100.1209,
+				19.5012
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						99.2421,
+						17.9693
+					],
+					[
+						99.7025,
+						18.4033
+					],
+					[
+						99.7684,
+						18.9663
+					]
+				],
+				"aspect": 1.77
+			}
+		},
+		{
+			"id": "phrae",
+			"name": "Phrae",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				99.92865,
+				18.253549999999997
+			],
+			"bbox": [
+				99.3154,
+				17.6771,
+				100.5419,
+				18.83
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						99.7506,
+						17.8538
+					],
+					[
+						100.2421,
+						18.085
+					],
+					[
+						100.3673,
+						18.6184
+					]
+				],
+				"aspect": 2.03
+			}
+		},
+		{
+			"id": "bueng-kan",
+			"name": "Bueng Kan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.72175,
+				18.10485
+			],
+			"bbox": [
+				103.2402,
+				17.7683,
+				104.2033,
+				18.4414
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						103.3833,
+						18.284
+					],
+					[
+						103.7211,
+						18.1548
+					],
+					[
+						104.0476,
+						18.0031
+					]
+				],
+				"aspect": 1.75
+			}
+		},
+		{
+			"id": "lamphun",
+			"name": "Lamphun",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				98.99785,
+				18.09515
+			],
+			"bbox": [
+				98.6809,
+				17.484,
+				99.3148,
+				18.7063
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						98.9077,
+						17.5902
+					],
+					[
+						98.8948,
+						18.105
+					],
+					[
+						99.0642,
+						18.59
+					]
+				],
+				"aspect": 3.95
+			}
+		},
+		{
+			"id": "nong-khai",
+			"name": "Nong Khai",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				102.74705,
+				17.9477
+			],
+			"bbox": [
+				102.0584,
+				17.6002,
+				103.4357,
+				18.2952
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "uttaradit",
+			"name": "Uttaradit",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				100.5309,
+				17.7686
+			],
+			"bbox": [
+				99.8966,
+				17.1656,
+				101.1652,
+				18.3716
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						100.0734,
+						17.4762
+					],
+					[
+						100.5854,
+						17.7687
+					],
+					[
+						101.0553,
+						18.1146
+					]
+				],
+				"aspect": 2.46
+			}
+		},
+		{
+			"id": "loei",
+			"name": "Loei",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				101.51465,
+				17.489449999999998
+			],
+			"bbox": [
+				100.8827,
+				16.7665,
+				102.1466,
+				18.2124
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						101.1577,
+						17.3124
+					],
+					[
+						101.5562,
+						17.3381
+					],
+					[
+						101.9548,
+						17.5331
+					]
+				],
+				"aspect": 0.96
+			}
+		},
+		{
+			"id": "udon-thani",
+			"name": "Udon Thani",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				102.8379,
+				17.464750000000002
+			],
+			"bbox": [
+				102.0246,
+				16.8411,
+				103.6512,
+				18.0884
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						102.1189,
+						17.8383
+					],
+					[
+						102.7862,
+						17.5261
+					],
+					[
+						103.3603,
+						17.0772
+					]
+				],
+				"aspect": 3.82
+			}
+		},
+		{
+			"id": "sakon-nakhon",
+			"name": "Sakon Nakhon",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.8457,
+				17.422150000000002
+			],
+			"bbox": [
+				103.2472,
+				16.7801,
+				104.4442,
+				18.0642
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						103.5145,
+						17.7835
+					],
+					[
+						103.7258,
+						17.3232
+					],
+					[
+						104.1767,
+						17.0589
+					]
+				],
+				"aspect": 1.43
+			}
+		},
+		{
+			"id": "nakhon-phanom",
+			"name": "Nakhon Phanom",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				104.40350000000001,
+				17.387
+			],
+			"bbox": [
+				103.9906,
+				16.7554,
+				104.8164,
+				18.0186
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						104.1166,
+						17.7926
+					],
+					[
+						104.5807,
+						17.4765
+					],
+					[
+						104.612,
+						16.9385
+					]
+				],
+				"aspect": 2.66
+			}
+		},
+		{
+			"id": "sukhothai",
+			"name": "Sukhothai",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				99.70245,
+				17.24745
+			],
+			"bbox": [
+				99.2798,
+				16.6881,
+				100.1251,
+				17.8068
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						99.7126,
+						16.8195
+					],
+					[
+						99.6542,
+						17.2435
+					],
+					[
+						99.7266,
+						17.6635
+					]
+				],
+				"aspect": 1.58
+			}
+		},
+		{
+			"id": "nong-bua-lam-phu",
+			"name": "Nong Bua Lam Phu",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				102.3111,
+				17.2046
+			],
+			"bbox": [
+				101.9464,
+				16.77,
+				102.6758,
+				17.6392
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						102.1943,
+						17.523
+					],
+					[
+						102.1718,
+						17.1209
+					],
+					[
+						102.483,
+						16.8548
+					]
+				],
+				"aspect": 1.82
+			}
+		},
+		{
+			"id": "phitsanulok",
+			"name": "Phitsanulok",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				100.49065,
+				17.027250000000002
+			],
+			"bbox": [
+				99.8883,
+				16.347,
+				101.093,
+				17.7075
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						100.1172,
+						16.8382
+					],
+					[
+						100.5299,
+						16.978
+					],
+					[
+						100.9425,
+						17.0717
+					]
+				],
+				"aspect": 0.91
+			}
+		},
+		{
+			"id": "kalasin",
+			"name": "Kalasin",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.67869999999999,
+				16.64795
+			],
+			"bbox": [
+				103.1131,
+				16.1956,
+				104.2443,
+				17.1003
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						103.2605,
+						16.6344
+					],
+					[
+						103.678,
+						16.6336
+					],
+					[
+						104.0955,
+						16.6262
+					]
+				],
+				"aspect": 1.36
+			}
+		},
+		{
+			"id": "mukdahan",
+			"name": "Mukdahan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				104.53045,
+				16.5434
+			],
+			"bbox": [
+				104.0729,
+				16.1906,
+				104.988,
+				16.8962
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						104.1963,
+						16.8101
+					],
+					[
+						104.5455,
+						16.5819
+					],
+					[
+						104.827,
+						16.2789
+					]
+				],
+				"aspect": 2.51
+			}
+		},
+		{
+			"id": "tak",
+			"name": "Tak",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				98.62700000000001,
+				16.4884
+			],
+			"bbox": [
+				97.908,
+				15.2206,
+				99.346,
+				17.7562
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						98.7077,
+						17.56
+					],
+					[
+						99.0565,
+						17.0823
+					],
+					[
+						98.8875,
+						16.5322
+					]
+				],
+				"aspect": 1.39
+			}
+		},
+		{
+			"id": "khon-kaen",
+			"name": "Khon Kaen",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				102.47290000000001,
+				16.33725
+			],
+			"bbox": [
+				101.7514,
+				15.6365,
+				103.1944,
+				17.038
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "kamphaeng-phet",
+			"name": "Kamphaeng Phet",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				99.51474999999999,
+				16.33625
+			],
+			"bbox": [
+				98.9973,
+				15.7846,
+				100.0322,
+				16.8879
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						99.1017,
+						16.2218
+					],
+					[
+						99.4835,
+						16.435
+					],
+					[
+						99.8654,
+						16.3234
+					]
+				],
+				"aspect": 0.82
+			}
+		},
+		{
+			"id": "phichit",
+			"name": "Phichit",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				100.3739,
+				16.25145
+			],
+			"bbox": [
+				99.9775,
+				15.9094,
+				100.7703,
+				16.5935
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						100.0776,
+						16.3131
+					],
+					[
+						100.337,
+						16.1965
+					],
+					[
+						100.5964,
+						16.2196
+					]
+				],
+				"aspect": 0.85
+			}
+		},
+		{
+			"id": "phetchabun",
+			"name": "Phetchabun",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				101.21145,
+				16.209
+			],
+			"bbox": [
+				100.6323,
+				15.302,
+				101.7906,
+				17.116
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						101.0619,
+						15.5479
+					],
+					[
+						100.8764,
+						16.3324
+					],
+					[
+						101.394,
+						16.9564
+					]
+				],
+				"aspect": 2.48
+			}
+		},
+		{
+			"id": "maha-sarakham",
+			"name": "Maha Sarakham",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.1902,
+				16.02255
+			],
+			"bbox": [
+				102.8548,
+				15.4017,
+				103.5256,
+				16.6434
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						103.0809,
+						16.3851
+					],
+					[
+						103.2486,
+						15.9793
+					],
+					[
+						103.2186,
+						15.5414
+					]
+				],
+				"aspect": 1.7
+			}
+		},
+		{
+			"id": "chaiyaphum",
+			"name": "Chaiyaphum",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				101.87610000000001,
+				15.959150000000001
+			],
+			"bbox": [
+				101.3004,
+				15.2141,
+				102.4518,
+				16.7042
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						101.4452,
+						15.9057
+					],
+					[
+						101.8229,
+						16.0614
+					],
+					[
+						102.2005,
+						16.1127
+					]
+				],
+				"aspect": 0.59
+			}
+		},
+		{
+			"id": "roi-et",
+			"name": "Roi Et",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.82735,
+				15.9385
+			],
+			"bbox": [
+				103.2988,
+				15.4102,
+				104.3559,
+				16.4668
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						103.6287,
+						15.5136
+					],
+					[
+						103.8214,
+						15.9617
+					],
+					[
+						104.0702,
+						16.3815
+					]
+				],
+				"aspect": 1.84
+			}
+		},
+		{
+			"id": "amnat-charoen",
+			"name": "Amnat Charoen",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				104.7658,
+				15.88395
+			],
+			"bbox": [
+				104.4246,
+				15.4739,
+				105.107,
+				16.294
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						104.4936,
+						15.8183
+					],
+					[
+						104.7445,
+						15.797
+					],
+					[
+						104.9954,
+						15.968
+					]
+				],
+				"aspect": 0.87
+			}
+		},
+		{
+			"id": "yasothon",
+			"name": "Yasothon",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				104.41145,
+				15.815
+			],
+			"bbox": [
+				104.01,
+				15.2848,
+				104.8129,
+				16.3452
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						104.2782,
+						15.4322
+					],
+					[
+						104.168,
+						15.8997
+					],
+					[
+						104.4713,
+						16.2666
+					]
+				],
+				"aspect": 2.56
+			}
+		},
+		{
+			"id": "nakhon-sawan",
+			"name": "Nakhon Sawan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				99.95564999999999,
+				15.69915
+			],
+			"bbox": [
+				99.0788,
+				15.0604,
+				100.8325,
+				16.3379
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						99.8717,
+						15.9404
+					],
+					[
+						100.2109,
+						15.5426
+					],
+					[
+						100.6551,
+						15.5315
+					]
+				],
+				"aspect": 1.3
+			}
+		},
+		{
+			"id": "uthai-thani",
+			"name": "Uthai Thani",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				99.51955000000001,
+				15.35865
+			],
+			"bbox": [
+				98.9804,
+				14.9442,
+				100.0587,
+				15.7731
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						99.1144,
+						15.3679
+					],
+					[
+						99.4528,
+						15.2289
+					],
+					[
+						99.7911,
+						15.4032
+					]
+				],
+				"aspect": 1.07
+			}
+		},
+		{
+			"id": "chai-nat",
+			"name": "Chai Nat",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				100.01374999999999,
+				15.1653
+			],
+			"bbox": [
+				99.7182,
+				14.909,
+				100.3093,
+				15.4216
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						99.8125,
+						15.1277
+					],
+					[
+						100.0232,
+						15.1345
+					],
+					[
+						100.234,
+						15.1603
+					]
+				],
+				"aspect": 1.05
+			}
+		},
+		{
+			"id": "ubon-ratchathani",
+			"name": "Ubon Ratchathani",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.01644999999999,
+				15.155000000000001
+			],
+			"bbox": [
+				104.3819,
+				14.2141,
+				105.651,
+				16.0959
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						105.1943,
+						14.52
+					],
+					[
+						104.9634,
+						15.2155
+					],
+					[
+						105.2658,
+						15.9083
+					]
+				],
+				"aspect": 2.11
+			}
+		},
+		{
+			"id": "lop-buri",
+			"name": "Lop Buri",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				100.9416,
+				15.07675
+			],
+			"bbox": [
+				100.4337,
+				14.6559,
+				101.4495,
+				15.4976
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						100.534,
+						15.0365
+					],
+					[
+						100.895,
+						15.2348
+					],
+					[
+						101.2561,
+						15.0986
+					]
+				],
+				"aspect": 1.11
+			}
+		},
+		{
+			"id": "nakhon-ratchasima",
+			"name": "Nakhon Ratchasima",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				102.0897,
+				14.96705
+			],
+			"bbox": [
+				101.1882,
+				14.1283,
+				102.9912,
+				15.8058
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						101.5253,
+						14.8167
+					],
+					[
+						102.1171,
+						14.7871
+					],
+					[
+						102.7089,
+						15.3061
+					]
+				],
+				"aspect": 1.13
+			}
+		},
+		{
+			"id": "si-sa-ket",
+			"name": "Si Sa Ket",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				104.42235,
+				14.9608
+			],
+			"bbox": [
+				103.9291,
+				14.3571,
+				104.9156,
+				15.5645
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						104.0844,
+						14.9395
+					],
+					[
+						104.42,
+						14.8646
+					],
+					[
+						104.7556,
+						14.727
+					]
+				],
+				"aspect": 0.71
+			}
+		},
+		{
+			"id": "buri-ram",
+			"name": "Buri Ram",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				102.9713,
+				14.96065
+			],
+			"bbox": [
+				102.4426,
+				14.1321,
+				103.5,
+				15.7892
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						102.7956,
+						14.2943
+					],
+					[
+						102.8853,
+						14.796
+					],
+					[
+						103.2349,
+						15.2158
+					]
+				],
+				"aspect": 1.65
+			}
+		},
+		{
+			"id": "sing-buri",
+			"name": "Sing Buri",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				100.3443,
+				14.94615
+			],
+			"bbox": [
+				100.2115,
+				14.7248,
+				100.4771,
+				15.1675
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						100.3575,
+						15.0996
+					],
+					[
+						100.3035,
+						14.9256
+					],
+					[
+						100.3949,
+						14.7728
+					]
+				],
+				"aspect": 2.05
+			}
+		},
+		{
+			"id": "surin",
+			"name": "Surin",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.58959999999999,
+				14.9121
+			],
+			"bbox": [
+				103.1027,
+				14.3419,
+				104.0765,
+				15.4823
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						103.3457,
+						14.7421
+					],
+					[
+						103.6516,
+						15.0047
+					],
+					[
+						103.9574,
+						14.9837
+					]
+				],
+				"aspect": 0.57
+			}
+		},
+		{
+			"id": "kanchanaburi",
+			"name": "Kanchanaburi",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				99.02285,
+				14.6994
+			],
+			"bbox": [
+				98.165,
+				13.7237,
+				99.8807,
+				15.6751
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						98.4878,
+						15.1437
+					],
+					[
+						99.0265,
+						14.5688
+					],
+					[
+						99.6009,
+						14.025
+					]
+				],
+				"aspect": 1.9
+			}
+		},
+		{
+			"id": "ang-thong",
+			"name": "Ang Thong",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				100.3562,
+				14.62365
+			],
+			"bbox": [
+				100.1967,
+				14.4545,
+				100.5157,
+				14.7928
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						100.2498,
+						14.6449
+					],
+					[
+						100.3672,
+						14.653
+					],
+					[
+						100.4847,
+						14.5823
+					]
+				],
+				"aspect": 0.81
+			}
+		},
+		{
+			"id": "suphan-buri",
+			"name": "Suphan Buri",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				99.78105,
+				14.56565
+			],
+			"bbox": [
+				99.28,
+				14.0618,
+				100.2821,
+				15.0695
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						99.4431,
+						14.9014
+					],
+					[
+						100.179,
+						14.8965
+					],
+					[
+						100.0469,
+						14.1955
+					]
+				],
+				"aspect": 2.24
+			}
+		},
+		{
+			"id": "saraburi",
+			"name": "Saraburi",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				100.90865,
+				14.54825
+			],
+			"bbox": [
+				100.5744,
+				14.2139,
+				101.2429,
+				14.8826
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						100.7589,
+						14.5867
+					],
+					[
+						100.9591,
+						14.4844
+					],
+					[
+						101.1594,
+						14.568
+					]
+				],
+				"aspect": 0.77
+			}
+		},
+		{
+			"id": "phra-nakhon-si-ayutthaya",
+			"name": "Phra Nakhon Si Ayutthaya",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				100.5219,
+				14.39945
+			],
+			"bbox": [
+				100.221,
+				14.113,
+				100.8228,
+				14.6859
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						100.3157,
+						14.2939
+					],
+					[
+						100.5222,
+						14.3607
+					],
+					[
+						100.7286,
+						14.3717
+					]
+				],
+				"aspect": 1.03
+			}
+		},
+		{
+			"id": "nakhon-nayok",
+			"name": "Nakhon Nayok",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				101.21045000000001,
+				14.229099999999999
+			],
+			"bbox": [
+				100.9053,
+				13.9554,
+				101.5156,
+				14.5028
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						100.9796,
+						14.0474
+					],
+					[
+						101.171,
+						14.2221
+					],
+					[
+						101.3777,
+						14.3792
+					]
+				],
+				"aspect": 1.7
+			}
+		},
+		{
+			"id": "pathum-thani",
+			"name": "Pathum Thani",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				100.6324,
+				14.08935
+			],
+			"bbox": [
+				100.3503,
+				13.918,
+				100.9145,
+				14.2607
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						100.3961,
+						14.0481
+					],
+					[
+						100.6476,
+						13.9917
+					],
+					[
+						100.8682,
+						14.1091
+					]
+				],
+				"aspect": 2.1
+			}
+		},
+		{
+			"id": "prachin-buri",
+			"name": "Prachin Buri",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				101.5968,
+				14.08905
+			],
+			"bbox": [
+				101.1408,
+				13.7168,
+				102.0528,
+				14.4613
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						101.3644,
+						14.0465
+					],
+					[
+						101.6385,
+						14.0543
+					],
+					[
+						101.9127,
+						14.1299
+					]
+				],
+				"aspect": 1.01
+			}
+		},
+		{
+			"id": "nonthaburi",
+			"name": "Nonthaburi",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				100.4076,
+				13.957149999999999
+			],
+			"bbox": [
+				100.2637,
+				13.7981,
+				100.5515,
+				14.1162
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						100.3045,
+						14.0693
+					],
+					[
+						100.338,
+						13.9166
+					],
+					[
+						100.4779,
+						13.8377
+					]
+				],
+				"aspect": 2.29
+			}
+		},
+		{
+			"id": "nakhon-pathom",
+			"name": "Nakhon Pathom",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				100.07175000000001,
+				13.9192
+			],
+			"bbox": [
+				99.8078,
+				13.6613,
+				100.3357,
+				14.1771
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						99.9694,
+						13.9485
+					],
+					[
+						100.1205,
+						13.9207
+					],
+					[
+						100.2717,
+						13.8887
+					]
+				],
+				"aspect": 0.64
+			}
+		},
+		{
+			"id": "bangkok",
+			"name": "Bangkok",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				100.62805,
+				13.7202
+			],
+			"bbox": [
+				100.3318,
+				13.4906,
+				100.9243,
+				13.9498
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						100.4112,
+						13.6749
+					],
+					[
+						100.6028,
+						13.831
+					],
+					[
+						100.8621,
+						13.8375
+					]
+				],
+				"aspect": 1.96
+			}
+		},
+		{
+			"id": "sa-kaeo",
+			"name": "Sa Kaeo",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				102.38855000000001,
+				13.6735
+			],
+			"bbox": [
+				101.8632,
+				13.1614,
+				102.9139,
+				14.1856
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						101.9638,
+						13.6902
+					],
+					[
+						102.3231,
+						13.6546
+					],
+					[
+						102.6825,
+						13.954
+					]
+				],
+				"aspect": 1.19
+			}
+		},
+		{
+			"id": "samut-prakan",
+			"name": "Samut Prakan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				100.70464999999999,
+				13.59485
+			],
+			"bbox": [
+				100.463,
+				13.4782,
+				100.9463,
+				13.7115
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						100.4962,
+						13.5792
+					],
+					[
+						100.681,
+						13.6001
+					],
+					[
+						100.8673,
+						13.6014
+					]
+				],
+				"aspect": 2.17
+			}
+		},
+		{
+			"id": "samut-sakhon",
+			"name": "Samut Sakhon",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				100.21934999999999,
+				13.578050000000001
+			],
+			"bbox": [
+				100.0379,
+				13.426,
+				100.4008,
+				13.7301
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						100.0764,
+						13.545
+					],
+					[
+						100.22,
+						13.5942
+					],
+					[
+						100.3637,
+						13.5846
+					]
+				],
+				"aspect": 1.41
+			}
+		},
+		{
+			"id": "chachoengsao",
+			"name": "Chachoengsao",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				101.41865,
+				13.57005
+			],
+			"bbox": [
+				100.841,
+				13.1717,
+				101.9963,
+				13.9684
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						100.9976,
+						13.7487
+					],
+					[
+						101.4669,
+						13.6889
+					],
+					[
+						101.8501,
+						13.419
+					]
+				],
+				"aspect": 2.31
+			}
+		},
+		{
+			"id": "ratchaburi",
+			"name": "Ratchaburi",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				99.61275,
+				13.5582
+			],
+			"bbox": [
+				99.1468,
+				13.1719,
+				100.0787,
+				13.9445
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						99.2378,
+						13.4802
+					],
+					[
+						99.5695,
+						13.4203
+					],
+					[
+						99.9013,
+						13.6701
+					]
+				],
+				"aspect": 1.15
+			}
+		},
+		{
+			"id": "samut-songkhram",
+			"name": "Samut Songkhram",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				99.97370000000001,
+				13.38945
+			],
+			"bbox": [
+				99.8584,
+				13.2693,
+				100.089,
+				13.5096
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						99.9049,
+						13.3062
+					],
+					[
+						99.9403,
+						13.4084
+					],
+					[
+						100.0219,
+						13.4807
+					]
+				],
+				"aspect": 1.64
+			}
+		},
+		{
+			"id": "chon-buri",
+			"name": "Chon Buri",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				101.2775,
+				13.1145
+			],
+			"bbox": [
+				100.8374,
+				12.6396,
+				101.7176,
+				13.5894
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						100.9756,
+						13.1533
+					],
+					[
+						101.2632,
+						13.3921
+					],
+					[
+						101.5507,
+						13.3622
+					]
+				],
+				"aspect": 1.12
+			}
+		},
+		{
+			"id": "phetchaburi",
+			"name": "Phetchaburi",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				99.59875,
+				12.93845
+			],
+			"bbox": [
+				99.0932,
+				12.5453,
+				100.1043,
+				13.3316
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						99.2264,
+						12.9522
+					],
+					[
+						99.5993,
+						12.8146
+					],
+					[
+						99.9722,
+						13.0062
+					]
+				],
+				"aspect": 1.17
+			}
+		},
+		{
+			"id": "rayong",
+			"name": "Rayong",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				101.40090000000001,
+				12.873899999999999
+			],
+			"bbox": [
+				100.978,
+				12.5969,
+				101.8238,
+				13.1509
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						101.121,
+						12.8301
+					],
+					[
+						101.4332,
+						12.8329
+					],
+					[
+						101.7371,
+						12.8968
+					]
+				],
+				"aspect": 1.44
+			}
+		},
+		{
+			"id": "chanthaburi",
+			"name": "Chanthaburi",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				102.09845,
+				12.8262
+			],
+			"bbox": [
+				101.6926,
+				12.3162,
+				102.5043,
+				13.3362
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						101.8699,
+						12.9378
+					],
+					[
+						102.1354,
+						12.7535
+					],
+					[
+						102.4009,
+						12.8176
+					]
+				],
+				"aspect": 0.7
+			}
+		},
+		{
+			"id": "trat",
+			"name": "Trat",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				102.51075,
+				12.157399999999999
+			],
+			"bbox": [
+				102.2564,
+				11.5688,
+				102.7651,
+				12.746
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						102.3926,
+						12.4086
+					],
+					[
+						102.5337,
+						12.4419
+					],
+					[
+						102.6748,
+						12.3428
+					]
+				],
+				"aspect": 0.62
+			}
+		},
+		{
+			"id": "prachuap-khiri-khan",
+			"name": "Prachuap Khiri Khan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				99.58045,
+				11.7962
+			],
+			"bbox": [
+				99.1409,
+				10.9562,
+				100.02,
+				12.6362
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						99.3412,
+						11.0755
+					],
+					[
+						99.7307,
+						11.737
+					],
+					[
+						99.7355,
+						12.4987
+					]
+				],
+				"aspect": 5.63
+			}
+		},
+		{
+			"id": "chumphon",
+			"name": "Chumphon",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				99.07220000000001,
+				10.3203
+			],
+			"bbox": [
+				98.641,
+				9.6012,
+				99.5034,
+				11.0394
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						98.8962,
+						9.7706
+					],
+					[
+						99.0737,
+						10.3368
+					],
+					[
+						99.2265,
+						10.9095
+					]
+				],
+				"aspect": 3.99
+			}
+		},
+		{
+			"id": "ranong",
+			"name": "Ranong",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				98.6819,
+				10.0473
+			],
+			"bbox": [
+				98.3896,
+				9.3064,
+				98.9742,
+				10.7882
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						98.5298,
+						9.4175
+					],
+					[
+						98.7808,
+						9.998
+					],
+					[
+						98.8763,
+						10.6205
+					]
+				],
+				"aspect": 6.58
+			}
+		},
+		{
+			"id": "surat-thani",
+			"name": "Surat Thani",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				99.2744,
+				9.054549999999999
+			],
+			"bbox": [
+				98.4587,
+				8.3135,
+				100.0901,
+				9.7956
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						98.5978,
+						9.126
+					],
+					[
+						99.1223,
+						8.9516
+					],
+					[
+						99.6468,
+						8.9974
+					]
+				],
+				"aspect": 1.31
+			}
+		},
+		{
+			"id": "phang-nga",
+			"name": "Phang Nga",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				98.4564,
+				8.7527
+			],
+			"bbox": [
+				98.1995,
+				8.1484,
+				98.7133,
+				9.357
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						98.4168,
+						8.2745
+					],
+					[
+						98.437,
+						8.7534
+					],
+					[
+						98.4135,
+						9.2318
+					]
+				],
+				"aspect": 5.28
+			}
+		},
+		{
+			"id": "nakhon-si-thammarat",
+			"name": "Nakhon Si Thammarat",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				99.7926,
+				8.557
+			],
+			"bbox": [
+				99.2427,
+				7.8017,
+				100.3425,
+				9.3123
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						99.3871,
+						8.4411
+					],
+					[
+						99.791,
+						8.5792
+					],
+					[
+						100.195,
+						8.3337
+					]
+				],
+				"aspect": 0.98
+			}
+		},
+		{
+			"id": "krabi",
+			"name": "Krabi",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				98.9836,
+				8.164250000000001
+			],
+			"bbox": [
+				98.6221,
+				7.6551,
+				99.3451,
+				8.6734
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						98.7258,
+						8.5031
+					],
+					[
+						99.0454,
+						8.1886
+					],
+					[
+						99.2531,
+						7.7935
+					]
+				],
+				"aspect": 2.74
+			}
+		},
+		{
+			"id": "phuket",
+			"name": "Phuket",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				98.35315,
+				7.99175
+			],
+			"bbox": [
+				98.2678,
+				7.7917,
+				98.4385,
+				8.1918
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						98.3347,
+						8.1192
+					],
+					[
+						98.354,
+						7.9893
+					],
+					[
+						98.3378,
+						7.8585
+					]
+				],
+				"aspect": 1.9
+			}
+		},
+		{
+			"id": "trang",
+			"name": "Trang",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				99.6516,
+				7.52755
+			],
+			"bbox": [
+				99.2568,
+				7.0634,
+				100.0464,
+				7.9917
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						99.5037,
+						7.8315
+					],
+					[
+						99.5402,
+						7.4631
+					],
+					[
+						99.8026,
+						7.2079
+					]
+				],
+				"aspect": 1.45
+			}
+		},
+		{
+			"id": "phatthalung",
+			"name": "Phatthalung",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				100.06155,
+				7.49775
+			],
+			"bbox": [
+				99.7443,
+				7.0917,
+				100.3788,
+				7.9038
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						99.9038,
+						7.8322
+					],
+					[
+						100.0158,
+						7.5282
+					],
+					[
+						100.1553,
+						7.2355
+					]
+				],
+				"aspect": 1.92
+			}
+		},
+		{
+			"id": "songkhla",
+			"name": "Songkhla",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				100.56700000000001,
+				7.1187000000000005
+			],
+			"bbox": [
+				100.0306,
+				6.2986,
+				101.1034,
+				7.9388
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						100.2194,
+						7.0874
+					],
+					[
+						100.5561,
+						6.7871
+					],
+					[
+						100.9447,
+						6.5577
+					]
+				],
+				"aspect": 1.74
+			}
+		},
+		{
+			"id": "satun",
+			"name": "Satun",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				99.90684999999999,
+				6.81115
+			],
+			"bbox": [
+				99.6003,
+				6.4796,
+				100.2134,
+				7.1427
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						99.7515,
+						7.04
+					],
+					[
+						100.0388,
+						6.9096
+					],
+					[
+						100.1145,
+						6.6121
+					]
+				],
+				"aspect": 1.79
+			}
+		},
+		{
+			"id": "pattani",
+			"name": "Pattani",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				101.38114999999999,
+				6.725149999999999
+			],
+			"bbox": [
+				101.0388,
+				6.5451,
+				101.7235,
+				6.9052
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						101.0858,
+						6.7504
+					],
+					[
+						101.3267,
+						6.7533
+					],
+					[
+						101.5582,
+						6.6934
+					]
+				],
+				"aspect": 1.65
+			}
+		},
+		{
+			"id": "narathiwat",
+			"name": "Narathiwat",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				101.7277,
+				6.18435
+			],
+			"bbox": [
+				101.3823,
+				5.7399,
+				102.0731,
+				6.6288
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						101.472,
+						6.2331
+					],
+					[
+						101.718,
+						6.1327
+					],
+					[
+						101.9641,
+						6.1464
+					]
+				],
+				"aspect": 0.79
+			}
+		},
+		{
+			"id": "yala",
+			"name": "Yala",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				101.21765,
+				6.1377500000000005
+			],
+			"bbox": [
+				100.8221,
+				5.6376,
+				101.6132,
+				6.6379
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						101.1934,
+						5.7619
+					],
+					[
+						101.2388,
+						6.1381
+					],
+					[
+						101.2395,
+						6.5185
+					]
+				],
+				"aspect": 1.88
+			}
+		}
+	],
+	"tourOrder": [
+		"chiang-rai",
+		"phayao",
+		"nan",
+		"chiang-mai",
+		"mae-hong-son",
+		"lampang",
+		"phrae",
+		"bueng-kan",
+		"lamphun",
+		"nong-khai",
+		"uttaradit",
+		"loei",
+		"udon-thani",
+		"sakon-nakhon",
+		"nakhon-phanom",
+		"sukhothai",
+		"nong-bua-lam-phu",
+		"phitsanulok",
+		"kalasin",
+		"mukdahan",
+		"tak",
+		"khon-kaen",
+		"kamphaeng-phet",
+		"phichit",
+		"phetchabun",
+		"maha-sarakham",
+		"chaiyaphum",
+		"roi-et",
+		"amnat-charoen",
+		"yasothon",
+		"nakhon-sawan",
+		"uthai-thani",
+		"chai-nat",
+		"ubon-ratchathani",
+		"lop-buri",
+		"nakhon-ratchasima",
+		"si-sa-ket",
+		"buri-ram",
+		"sing-buri",
+		"surin",
+		"kanchanaburi",
+		"ang-thong",
+		"suphan-buri",
+		"saraburi",
+		"phra-nakhon-si-ayutthaya",
+		"nakhon-nayok",
+		"pathum-thani",
+		"prachin-buri",
+		"nonthaburi",
+		"nakhon-pathom",
+		"bangkok",
+		"sa-kaeo",
+		"samut-prakan",
+		"samut-sakhon",
+		"chachoengsao",
+		"ratchaburi",
+		"samut-songkhram",
+		"chon-buri",
+		"phetchaburi",
+		"rayong",
+		"chanthaburi",
+		"trat",
+		"prachuap-khiri-khan",
+		"chumphon",
+		"ranong",
+		"surat-thani",
+		"phang-nga",
+		"nakhon-si-thammarat",
+		"krabi",
+		"phuket",
+		"trang",
+		"phatthalung",
+		"songkhla",
+		"satun",
+		"pattani",
+		"narathiwat",
+		"yala"
+	]
+}

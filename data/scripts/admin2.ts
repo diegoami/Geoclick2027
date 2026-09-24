@@ -3,7 +3,8 @@
 // Natural Earth stops at admin-1 for Germany, Poland and the Netherlands, so
 // their districts and municipalities come from geoBoundaries, which
 // republishes each country's official boundaries under that country's
-// licence (DECISIONS.md, "Admin-2 from geoBoundaries"). Its names are the
+// licence (DECISIONS.md, "Admin-2 from geoBoundaries") - Poland's from
+// OpenStreetMap, under ODbL. Its names are the
 // national source's, formatted for a register rather than a map. Tested
 // from app/src/lib/admin2.test.ts.
 
@@ -45,7 +46,37 @@ const SPELLED_OUT: Record<string, string> = {
 	'Weiden i.d. Opf': 'Weiden in der Oberpfalz'
 };
 
+/**
+ * A Polish powiat as Poles name it. geoBoundaries' copy is OpenStreetMap's,
+ * which writes most land powiats the Polish way ("powiat oleski") and the
+ * cities with powiat rights as the city ("Rybnik"), but eleven land powiats
+ * in English after their seat ("Siedlce County", "Colberg County" for
+ * Kołobrzeg's). Those are given their Polish names; the ten names Poland
+ * has twice ("powiat brzeski" in Opolskie and in Małopolskie) are told
+ * apart by build-map.ts's --disambiguate-by, which knows the voivodeship.
+ */
+export function polishCountyName(raw: string): string {
+	const trimmed = raw.trim();
+	return POLISH_COUNTIES[trimmed] ?? trimmed;
+}
+
+const POLISH_COUNTIES: Record<string, string> = {
+	'Siedlce County': 'powiat siedlecki',
+	'Gliwice County': 'powiat gliwicki',
+	'Racibórz County': 'powiat raciborski',
+	'Tarnowskie Góry County': 'powiat tarnogórski',
+	'Wodzisław County': 'powiat wodzisławski',
+	'Żyrardów County': 'powiat żyrardowski',
+	'Bielsko County': 'powiat bielski',
+	'Grodzisk Mazowiecki County': 'powiat grodziski',
+	'Lipno County': 'powiat lipnowski',
+	'Kutno County': 'powiat kutnowski',
+	'Colberg County': 'powiat kołobrzeski',
+	Krakow: 'Kraków'
+};
+
 /** The name cleaners a --clean-names flag can pick. */
 export const NAME_CLEANERS: Record<string, (raw: string) => string> = {
-	'german-districts': germanDistrictName
+	'german-districts': germanDistrictName,
+	'polish-counties': polishCountyName
 };
