@@ -174,12 +174,13 @@ Check items off as they land; update "Status" as iterations complete.
   v0.11.0 on 2026-09-24** (tag `133dbc8`, [Milestone v0.11.0](https://github.com/diegoami/Geoclick2027/issues/45):
   one review round, AGREE, no issues). Next: facts for the new maps and the
   Quiz labels in Explore's style, proposed as [#46](https://github.com/diegoami/Geoclick2027/issues/46).
-- **Building 2026-09-24** (branch `tablet-play-v012`, raised by the owner
+- **Built 2026-09-24** (branch `tablet-play-v012`, raised by the owner
   after playing v0.11.0 on a tablet): Terrain off and on again keeps its
   names; the credit line and the version badge sit above the Quiz's tray
   and the Tour's controls (the badge moves bottom-left); the credit starts
   folded on a narrow screen; a button under the zoom control hides the map
-  bar for the session. For v0.12, with #46.
+  bar for the session. Merged 2026-09-25 (PR #47), after the owner tried
+  `v0.12.0-alpha.1` on the tablet. Ships in v0.12, with #46.
 - **Raised and decided 2026-09-20, unscoped**: six UX problems from one
   round of tablet play (`germany-towns-100k`) — the level-0 tray offering
   every name at once, slips losing their drag to the tablet's own
