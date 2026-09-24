@@ -97,6 +97,12 @@ export type TranslationKey =
 	| 'mapType.citiesCentral'
 	| 'mapType.countries'
 	| 'mapType.capitals'
+	| 'mapType.townsNorth'
+	| 'mapType.townsWest'
+	| 'mapType.townsCenter'
+	| 'mapType.townsEast'
+	| 'mapType.townsSouthWest'
+	| 'mapType.townsSouthEast'
 	| 'quiz.subtitle'
 	| 'quiz.closeAriaLabel'
 	| 'quiz.known'
@@ -228,6 +234,12 @@ const en: Dictionary = {
 	'mapType.citiesCentral': 'Cities — Central',
 	'mapType.countries': 'Countries',
 	'mapType.capitals': 'Capitals',
+	'mapType.townsNorth': 'Towns — North',
+	'mapType.townsWest': 'Towns — West',
+	'mapType.townsCenter': 'Towns — Center',
+	'mapType.townsEast': 'Towns — East',
+	'mapType.townsSouthWest': 'Towns — South-West',
+	'mapType.townsSouthEast': 'Towns — South-East',
 
 	'quiz.subtitle': 'Drag each name onto its region — {placed} / {total} placed',
 	'quiz.closeAriaLabel': 'Close and view the map',
@@ -374,6 +386,12 @@ const de: Dictionary = {
 	'mapType.citiesCentral': 'Städte — Mitte',
 	'mapType.countries': 'Länder',
 	'mapType.capitals': 'Hauptstädte',
+	'mapType.townsNorth': 'Städte — Norden',
+	'mapType.townsWest': 'Städte — Westen',
+	'mapType.townsCenter': 'Städte — Mitte',
+	'mapType.townsEast': 'Städte — Osten',
+	'mapType.townsSouthWest': 'Städte — Südwesten',
+	'mapType.townsSouthEast': 'Städte — Südosten',
 
 	'quiz.subtitle': 'Ziehe jeden Namen auf seine Region — {placed} / {total} platziert',
 	'quiz.closeAriaLabel': 'Schließen und Karte ansehen',
@@ -520,6 +538,12 @@ const it: Dictionary = {
 	'mapType.citiesCentral': 'Città — Centro',
 	'mapType.countries': 'Paesi',
 	'mapType.capitals': 'Capitali',
+	'mapType.townsNorth': 'Città — Nord',
+	'mapType.townsWest': 'Città — Ovest',
+	'mapType.townsCenter': 'Città — Centro',
+	'mapType.townsEast': 'Città — Est',
+	'mapType.townsSouthWest': 'Città — Sud-ovest',
+	'mapType.townsSouthEast': 'Città — Sud-est',
 
 	'quiz.subtitle': 'Trascina ogni nome sulla sua regione — {placed} / {total} posizionati',
 	'quiz.closeAriaLabel': 'Chiudi e guarda la mappa',

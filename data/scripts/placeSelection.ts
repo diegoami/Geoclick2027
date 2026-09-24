@@ -126,3 +126,34 @@ export function disambiguate<T extends { name: string; region?: string }>(
 		};
 	});
 }
+
+/** Great-circle distance in km, on the sphere - plenty for "too close". */
+export function distanceKm(
+	a: { lon: number; lat: number },
+	b: { lon: number; lat: number }
+): number {
+	const rad = Math.PI / 180;
+	const dLat = (b.lat - a.lat) * rad;
+	const dLon = (b.lon - a.lon) * rad;
+	const h =
+		Math.sin(dLat / 2) ** 2 +
+		Math.cos(a.lat * rad) * Math.cos(b.lat * rad) * Math.sin(dLon / 2) ** 2;
+	return 2 * 6371.0088 * Math.asin(Math.sqrt(h));
+}
+
+/**
+ * Skips any place within `minKm` of one already kept, in the order given
+ * (#39, batch C). Given places sorted by population, a suburb gives way to
+ * the city it borders: around Frankfurt, Maintal and Mühlheim am Main are
+ * 2 km apart, a few pixels at the zoom a map of Hessen opens at, against a
+ * slip's 24 px drop target. The next town down takes the freed place, so a
+ * map keeps its size and spreads out instead.
+ */
+export function spacedOut<T extends { lon: number; lat: number }>(places: T[], minKm: number): T[] {
+	if (!(minKm > 0)) return places;
+	const kept: T[] = [];
+	for (const place of places) {
+		if (kept.every((other) => distanceKm(place, other) >= minKm)) kept.push(place);
+	}
+	return kept;
+}

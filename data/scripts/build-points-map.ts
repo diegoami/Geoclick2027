@@ -49,7 +49,13 @@ import {
 	sqlString
 } from './multiCountry.js';
 import { colorizeMapDir } from './mapColors.js';
-import { disambiguate, isUnbounded, parseBounds, withinBounds } from './placeSelection.js';
+import {
+	disambiguate,
+	isUnbounded,
+	parseBounds,
+	withinBounds,
+	spacedOut
+} from './placeSelection.js';
 
 const SOURCE_SHP = path.join(
 	REPO_ROOT,
@@ -161,7 +167,11 @@ const NAME_FIXUPS: Record<string, Record<string, string>> = {
 	Andorra: { Andorra: 'Andorra la Vella' },
 	Czechia: { Pizen: 'Plzeň' },
 	Lithuania: { Panevežys: 'Panevėžys' },
-	Kosovo: { Pec: 'Peja' }
+	Kosovo: { Pec: 'Peja' },
+	// Wikidata's label is the full name; the town is Frankfurt on
+	// germany-towns-100k and in data/facts/germany.json, and Frankfurt
+	// (Oder) keeps its own qualifier on the East map.
+	Germany: { 'Frankfurt am Main': 'Frankfurt' }
 };
 
 // The slice of the populated-places export this script reads - ogr2ogr's
@@ -232,6 +242,21 @@ async function main() {
 	// --max-per-country=N: on a map of several countries, at most N places
 	// from any one, so Russia does not fill Eastern Europe (#39).
 	const maxPerCountry = args['max-per-country'] ? Number(args['max-per-country']) : Infinity;
+	// --source=data/places/germany.geojson reads towns from a snapshot that
+	// fetch-wikidata-places.ts wrote (#39, batch C), in Natural Earth's field
+	// names, instead of Natural Earth's own 58 German places.
+	const placesSource = args.source;
+	const sourcePath = placesSource ? path.resolve(REPO_ROOT, placesSource) : SOURCE_SHP;
+	// --admin1=Bayern,Hessen keeps the towns of those admin-1 areas
+	// (ADM1NAME): a country's towns in parts that follow its own borders.
+	const admin1 = parseList(args.admin1);
+	// --min-spacing=5: no town within 5 km of a bigger one already chosen
+	// (placeSelection.ts's spacedOut). Off by default, so every map built
+	// before it existed rebuilds identically.
+	const minSpacing = Number(args['min-spacing'] ?? 0);
+	const attribution = placesSource
+		? 'Wikidata (CC0), https://www.wikidata.org; Natural Earth (public domain), https://www.naturalearthdata.com'
+		: 'Natural Earth (public domain), https://www.naturalearthdata.com';
 	const outDir = args.out;
 	const minPopulation = Number(args['min-population'] ?? 100000);
 	// Adaptive selection, added when the >100k-population threshold alone
@@ -277,7 +302,7 @@ async function main() {
 		);
 		process.exit(1);
 	}
-	const missing = missingSources([SOURCE_SHP, LAKES_SHP, ...PHYSICAL_SHPS]);
+	const missing = missingSources([sourcePath, LAKES_SHP, ...PHYSICAL_SHPS]);
 	if (missing.length > 0) {
 		console.error(
 			`Source shapefile(s) not found:\n  ${missing.join('\n  ')}\n` +
@@ -330,6 +355,7 @@ async function main() {
 			: `ADM0NAME='${country}'`;
 	const whereClause =
 		`${countryClause} AND POP_MAX > 0` +
+		(admin1.length ? ` AND ${sqlIn('ADM1NAME', admin1)}` : '') +
 		(capitalsOnly
 			? ` AND (FEATURECLA = 'Admin-0 capital'${also.length ? ` OR ${sqlIn('NAME', also)}` : ''})`
 			: '') +
@@ -345,7 +371,7 @@ async function main() {
 		// apart by the region they are in (FT-27).
 		`${nameFields.join(',')},ADM0NAME,ADM1NAME,POP_MAX`,
 		filteredPath,
-		SOURCE_SHP
+		sourcePath
 	]);
 
 	console.log(
@@ -370,6 +396,20 @@ async function main() {
 	let selectedFeatures = byPopulationDesc.filter(
 		(feature) => feature.properties.POP_MAX > minPopulation
 	);
+	if (minSpacing > 0) {
+		const before = selectedFeatures.length;
+		selectedFeatures = spacedOut(
+			selectedFeatures.map((feature) => ({
+				feature,
+				lon: feature.geometry.coordinates[0],
+				lat: feature.geometry.coordinates[1]
+			})),
+			minSpacing
+		).map((entry) => entry.feature);
+		console.log(
+			`      spacing keeps ${selectedFeatures.length} of ${before} (>= ${minSpacing} km apart)`
+		);
+	}
 	// Reach below the threshold, most-populous-first, rather than leaving a
 	// sparse country (e.g. Sweden: only 5 places clear 100k) with an
 	// unhelpfully tiny map.
@@ -447,7 +487,10 @@ async function main() {
 		id: path.basename(outDir),
 		name: mapName,
 		country,
-		attribution: 'Natural Earth (public domain), https://www.naturalearthdata.com',
+		attribution,
+		// Where the towns came from, when not Natural Earth: build-facts.ts
+		// reads the same file to match each town to its row.
+		...(placesSource ? { placesSource } : {}),
 		tiles: 'tiles.pmtiles',
 		targets,
 		tourOrder: targets.map((t) => t.id)
@@ -514,7 +557,9 @@ async function main() {
 		'--maximum-zoom=8',
 		'--drop-rate=1',
 		`--name=${mapName}`,
-		'--attribution=Natural Earth (public domain)',
+		placesSource
+			? '--attribution=Wikidata (CC0); Natural Earth (public domain)'
+			: '--attribution=Natural Earth (public domain)',
 		'--generate-ids',
 		'-L',
 		`targets:${targetsPath}`,

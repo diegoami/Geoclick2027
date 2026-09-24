@@ -879,6 +879,47 @@ of Oslo, not a town) were dropped; Brazzaville and Kinshasa, 9 km apart across
 the Congo, both stay as capitals. Fixups added to `build-points-map.ts`:
 Astana, Ngerulmud, Andorra la Vella, Plzeň, Panevėžys, Peja.
 
+### Germany's towns in six parts, from Wikidata (built 2026-09-24, #39 batch C)
+
+Six maps of 60 towns each, by state; the reasoning is in DECISIONS.md,
+"Germany's towns come from Wikidata". Node only for the fetch, WSL for the
+build as usual:
+
+```
+npx tsx data/scripts/fetch-wikidata-places.ts --country=germany --min-population=15000
+
+G='--country=Germany --source=data/places/germany.geojson --min-population=20000 --max-count=60 --min-spacing=5'
+npx tsx data/scripts/build-points-map.ts $G --admin1="Schleswig-Holstein,Hamburg,Niedersachsen,Bremen,Mecklenburg-Vorpommern" --out=data/maps/germany-towns-north --name="Germany — Towns — North"
+npx tsx data/scripts/build-points-map.ts $G --admin1="Nordrhein-Westfalen" --out=data/maps/germany-towns-west --name="Germany — Towns — West"
+npx tsx data/scripts/build-points-map.ts $G --admin1="Hessen,Rheinland-Pfalz,Saarland" --out=data/maps/germany-towns-center --name="Germany — Towns — Center"
+npx tsx data/scripts/build-points-map.ts $G --admin1="Berlin,Brandenburg,Sachsen,Sachsen-Anhalt,Thüringen" --out=data/maps/germany-towns-east --name="Germany — Towns — East"
+npx tsx data/scripts/build-points-map.ts $G --admin1="Baden-Württemberg" --out=data/maps/germany-towns-southwest --name="Germany — Towns — South-West"
+npx tsx data/scripts/build-points-map.ts $G --admin1="Bayern" --out=data/maps/germany-towns-southeast --name="Germany — Towns — South-East"
+npx tsx data/scripts/build-facts.ts --map=<each of the above>
+```
+
+- `fetch-wikidata-places.ts` runs two SPARQL queries (towns with names and
+  coordinates; their population statements since 2011) - joined in one, the
+  endpoint needs most of its 60-second limit. It throttles a client that has
+  used a minute of query time in the last minute, which shows up as
+  "other side closed" or a 503: wait a minute and rerun.
+- `--source` reads the snapshot; map.json records it as `placesSource`, and
+  `build-facts.ts` matches each town against the same file (population, state,
+  capital). The attribution names Wikidata as well as Natural Earth.
+- `--admin1` keeps the towns of the listed ADM1NAMEs - here the German state
+  names the snapshot writes from the AGS prefix.
+- `--min-spacing=<km>` (`placeSelection.ts`'s `spacedOut`) skips a town within
+  that distance of a bigger one already kept.
+
+| Map | Smallest town | Closest pair |
+|---|---|---|
+| germany-towns-north | 33 768 | 7.2 km |
+| germany-towns-west | 57 961 | 5.2 km |
+| germany-towns-center | 25 401 | 5.1 km |
+| germany-towns-east | 27 064 | 7.2 km |
+| germany-towns-southwest | 27 700 | 6.2 km |
+| germany-towns-southeast | 22 011 | 5.2 km |
+
 ## The Terrain layer: `terrain.pmtiles` (FT-33, 2026-09-19)
 
 Every map has a **second** tileset beside its `tiles.pmtiles`, holding the

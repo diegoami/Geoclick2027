@@ -16,6 +16,42 @@ Keep this updated the same way as the other docs: when a decision gets
 made, made explicitly to correct an earlier one, or gets revisited, add
 or amend an entry here as part of that change, not as an afterthought.
 
+## Germany's towns come from Wikidata (2026-09-24, #39 batch C)
+
+- **Natural Earth runs out at 58 German places**, and `germany-towns-100k`
+  already uses 49. More of Germany needs another source.
+- **Wikidata, because it is CC0**: public-domain-equivalent, so the
+  sourcing rule above still holds and nothing new goes in the attribution
+  beyond a credit. Every German municipality has its official key (AGS,
+  P439), whose first two digits are its state, a dated population and
+  coordinates. GeoNames (CC BY) and OSM (ODbL) would each have been a
+  licence change for the same towns.
+- **A committed snapshot, not a live query.** `fetch-wikidata-places.ts`
+  writes `data/places/germany.geojson` (992 towns over 15 000, one per
+  line, the fetch date in its header); the builders read the file. A map
+  rebuilds without a network, and a Wikidata edit changes nothing until
+  someone refetches on purpose - the same reason Natural Earth is
+  downloaded once. Its fields are named like Natural Earth's places, so
+  `build-points-map.ts --source` and `build-facts.ts` read it with the code
+  they already had.
+- **A town's newest dated population wins**, not the best-rank value: many
+  towns carry a preferred census figure next to a newer estimate. Figures
+  before 2011, the last census, are ignored.
+- **Six parts by state, 60 towns each**: North (SH, HH, NI, HB, MV), West
+  (NRW), Center (HE, RP, SL), East (BE, BB, SN, ST, TH), South-West (BW),
+  South-East (BY). The proposal had five; Bavaria and Baden-Württemberg
+  have 261 towns over 15 000 between them, too many for one map to reach
+  below the big cities. Thüringen went east, with the other new states.
+- **No town within 5 km of a bigger one** (`--min-spacing`). Around
+  Frankfurt, Maintal and Mühlheim am Main are 2 km apart - a few pixels at
+  the zoom a map of Hessen opens at, against a 24 px drop target. The next
+  town down takes the freed place, so the map spreads out rather than
+  shrinking.
+- **The 49 towns of `germany-towns-100k` keep their ids**, and with them
+  their authored sentences: Wikidata's "Frankfurt am Main" is fixed up to
+  the "Frankfurt" the older map and `data/facts/germany.json` use.
+  `germany-towns-100k` itself is unchanged.
+
 ## Maps of several countries (2026-09-24, #39)
 
 The product owner asked for continents, the parts of Europe, more of

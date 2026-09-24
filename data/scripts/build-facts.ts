@@ -110,7 +110,7 @@ function exportGeojson(source: string, args: string[], out: string): Feature[] {
 }
 
 /** The source data one map needs, all clipped to its own box. */
-function sourcesFor(bbox: Bbox) {
+function sourcesFor(bbox: Bbox, placesPath: string = PLACES_SHP) {
 	const spat = ['-spat', ...bbox.map(String)];
 	return {
 		coast: exportGeojson(COASTLINE_SHP, [...spat, '-select', 'featurecla'], tmp('coast')),
@@ -121,7 +121,7 @@ function sourcesFor(bbox: Bbox) {
 			tmp('peaks')
 		),
 		places: exportGeojson(
-			PLACES_SHP,
+			placesPath,
 			[...spat, '-select', 'NAME,NAME_DE,NAME_IT,POP_MAX,POP1950,ADM0CAP,ADM1NAME,ADM0NAME'],
 			tmp('places')
 		),
@@ -375,11 +375,17 @@ async function buildOne(mapId: string): Promise<number> {
 	const absOutDir = path.join(MAPS_DIR, mapId);
 	const map = JSON.parse(readFileSync(path.join(absOutDir, 'map.json'), 'utf8')) as {
 		country?: string;
+		placesSource?: string;
 		targets: (MapTarget & { country?: string })[];
 	};
 	const usable = map.targets.filter((t) => !t.crossesAntimeridian && !crossesAntimeridian(t.bbox));
 	const extent = overallBboxOf(usable.length > 0 ? usable : map.targets);
-	const sources = sourcesFor(padBbox(extent, 0.1));
+	// A towns map built from a Wikidata snapshot (#39) is matched against
+	// that snapshot: its towns are not in Natural Earth's places at all.
+	const sources = sourcesFor(
+		padBbox(extent, 0.1),
+		map.placesSource ? path.join(REPO_ROOT, map.placesSource) : undefined
+	);
 
 	const isCityMap = map.targets[0]?.type === 'city';
 	const facts = isCityMap

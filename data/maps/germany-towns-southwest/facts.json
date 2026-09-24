@@ -1,0 +1,554 @@
+{
+	"weinheim": {
+		"kind": "city",
+		"population": 45919,
+		"populationRank": 32,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "north"
+	},
+	"mannheim": {
+		"kind": "city",
+		"population": 319536,
+		"populationRank": 2,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"From a personal name, Manno, plus Heim, a home.",
+				"Its centre is laid out as a grid of numbered and lettered blocks rather than named streets — unique in Germany.",
+				"Karl Benz drove the first automobile here in 1886, and his wife then made the first long-distance drive from the town."
+			],
+			"it": [
+				"Da un nome di persona, Manno, più Heim, casa.",
+				"Il suo centro è una griglia di isolati indicati da lettere e numeri anziché vie con un nome: un caso unico in Germania.",
+				"Karl Benz vi guidò la prima automobile nel 1886, e poi sua moglie partì da qui per il primo viaggio a lunga distanza."
+			]
+		}
+	},
+	"heidelberg": {
+		"kind": "city",
+		"population": 156092,
+		"populationRank": 5,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Possibly \"blueberry mountain\", from Heidelbeere, or from Heide, a heath.",
+				"Its university, founded 1386, is the oldest in Germany.",
+				"The jaw of Homo heidelbergensis was found nearby in 1907, and the town survived the war almost undamaged."
+			],
+			"it": [
+				"Forse \"monte dei mirtilli\", da Heidelbeere, oppure da Heide, brughiera.",
+				"La sua università, fondata nel 1386, è la più antica della Germania.",
+				"La mandibola dell’Homo heidelbergensis fu trovata qui vicino nel 1907, e la città uscì dalla guerra quasi intatta."
+			]
+		}
+	},
+	"wiesloch": {
+		"kind": "city",
+		"population": 27911,
+		"populationRank": 58,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "north"
+	},
+	"sinsheim": {
+		"kind": "city",
+		"population": 37105,
+		"populationRank": 43,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "north"
+	},
+	"heilbronn": {
+		"kind": "city",
+		"population": 132516,
+		"populationRank": 7,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "north"
+	},
+	"crailsheim": {
+		"kind": "city",
+		"population": 35905,
+		"populationRank": 45,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"bruchsal": {
+		"kind": "city",
+		"population": 47578,
+		"populationRank": 29,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "north"
+	},
+	"schwabisch-hall": {
+		"kind": "city",
+		"population": 42598,
+		"populationRank": 35,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"bretten": {
+		"kind": "city",
+		"population": 30312,
+		"populationRank": 51,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "north"
+	},
+	"karlsruhe": {
+		"kind": "city",
+		"population": 309247,
+		"populationRank": 3,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"\"Karl’s rest\" — a margrave built a palace here in 1715 and named it for the peace he hoped to find.",
+				"The city fans out from that palace in 32 streets like a wheel, which is why it is called the fan city.",
+				"Germany’s federal constitutional court sits here, and Heinrich Hertz proved radio waves exist in its university."
+			],
+			"it": [
+				"\"Il riposo di Carlo\": nel 1715 un margravio vi costruì un palazzo e lo chiamò così per la pace che sperava di trovarvi.",
+				"La città si apre a ventaglio da quel palazzo con 32 strade, come i raggi di una ruota: per questo la chiamano la città a ventaglio.",
+				"Qui ha sede la Corte costituzionale federale tedesca, e Heinrich Hertz dimostrò l’esistenza delle onde radio nella sua università."
+			]
+		}
+	},
+	"bietigheim-bissingen": {
+		"kind": "city",
+		"population": 43354,
+		"populationRank": 34,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "north"
+	},
+	"backnang": {
+		"kind": "city",
+		"population": 38615,
+		"populationRank": 41,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"ettlingen": {
+		"kind": "city",
+		"population": 38557,
+		"populationRank": 42,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"vaihingen-an-der-enz": {
+		"kind": "city",
+		"population": 28558,
+		"populationRank": 56,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "north"
+	},
+	"ludwigsburg": {
+		"kind": "city",
+		"population": 93002,
+		"populationRank": 11,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "north"
+	},
+	"pforzheim": {
+		"kind": "city",
+		"population": 134422,
+		"populationRank": 6,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "centre"
+	},
+	"winnenden": {
+		"kind": "city",
+		"population": 29844,
+		"populationRank": 52,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "east"
+	},
+	"rastatt": {
+		"kind": "city",
+		"population": 50753,
+		"populationRank": 24,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "west"
+	},
+	"waiblingen": {
+		"kind": "city",
+		"population": 57186,
+		"populationRank": 20,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "centre"
+	},
+	"gaggenau": {
+		"kind": "city",
+		"population": 29394,
+		"populationRank": 54,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "west"
+	},
+	"leonberg": {
+		"kind": "city",
+		"population": 49514,
+		"populationRank": 27,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "centre"
+	},
+	"schwabisch-gmund": {
+		"kind": "city",
+		"population": 63930,
+		"populationRank": 15,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "east"
+	},
+	"schorndorf": {
+		"kind": "city",
+		"population": 41469,
+		"populationRank": 37,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "east"
+	},
+	"stuttgart": {
+		"kind": "city",
+		"population": 609365,
+		"populationRank": 1,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"From Stuotgarten, \"stud garden\" — a horse stud founded about 950, which is why a horse is on the city arms.",
+				"Mercedes and Porsche both build here, and Karl Benz’s successors made the city the birthplace of the car.",
+				"It sits in a bowl of vineyards, and vines grow inside the city limits."
+			],
+			"it": [
+				"Da Stuotgarten, \"giardino delle giumente\": un allevamento di cavalli fondato intorno al 950, ed è per questo che nello stemma della città c’è un cavallo.",
+				"Mercedes e Porsche producono entrambe qui, e i successori di Karl Benz hanno fatto della città la culla dell’automobile.",
+				"Sorge in una conca di vigneti, e le viti crescono anche dentro i confini comunali."
+			]
+		}
+	},
+	"baden-baden": {
+		"kind": "city",
+		"population": 56952,
+		"populationRank": 21,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "west"
+	},
+	"esslingen-am-neckar": {
+		"kind": "city",
+		"population": 95419,
+		"populationRank": 10,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "centre"
+	},
+	"sindelfingen": {
+		"kind": "city",
+		"population": 61428,
+		"populationRank": 18,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "centre"
+	},
+	"goppingen": {
+		"kind": "city",
+		"population": 58678,
+		"populationRank": 19,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "east"
+	},
+	"buhl": {
+		"kind": "city",
+		"population": 28433,
+		"populationRank": 57,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "west"
+	},
+	"leinfelden-echterdingen": {
+		"kind": "city",
+		"population": 41448,
+		"populationRank": 38,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "centre"
+	},
+	"heidenheim-an-der-brenz": {
+		"kind": "city",
+		"population": 50612,
+		"populationRank": 25,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "east"
+	},
+	"filderstadt": {
+		"kind": "city",
+		"population": 46274,
+		"populationRank": 31,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "centre"
+	},
+	"kirchheim-unter-teck": {
+		"kind": "city",
+		"population": 42382,
+		"populationRank": 36,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "east"
+	},
+	"nurtingen": {
+		"kind": "city",
+		"population": 40898,
+		"populationRank": 39,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "east"
+	},
+	"geislingen-an-der-steige": {
+		"kind": "city",
+		"population": 27781,
+		"populationRank": 59,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "east"
+	},
+	"herrenberg": {
+		"kind": "city",
+		"population": 34167,
+		"populationRank": 49,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "centre"
+	},
+	"kehl": {
+		"kind": "city",
+		"population": 39708,
+		"populationRank": 40,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "west"
+	},
+	"tubingen": {
+		"kind": "city",
+		"population": 92607,
+		"populationRank": 12,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "centre"
+	},
+	"reutlingen": {
+		"kind": "city",
+		"population": 119040,
+		"populationRank": 9,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "centre"
+	},
+	"rottenburg-am-neckar": {
+		"kind": "city",
+		"population": 45579,
+		"populationRank": 33,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "centre"
+	},
+	"offenburg": {
+		"kind": "city",
+		"population": 63437,
+		"populationRank": 16,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "west"
+	},
+	"ulm": {
+		"kind": "city",
+		"population": 130288,
+		"populationRank": 8,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"From an old word for a damp place or a turning of the river.",
+				"Its Minster has the tallest church steeple in the world at 161.5 m, with 768 steps.",
+				"Einstein was born here, and a tailor tried to fly from the city wall over the Danube in 1811 and fell in."
+			],
+			"it": [
+				"Da un’antica parola per luogo umido o per un’ansa del fiume.",
+				"Il suo duomo ha il campanile più alto del mondo: 161,5 m, con 768 gradini.",
+				"Einstein nacque qui, e nel 1811 un sarto tentò di volare dalle mura della città sopra il Danubio e ci finì dentro."
+			]
+		}
+	},
+	"lahr-schwarzwald": {
+		"kind": "city",
+		"population": 51208,
+		"populationRank": 23,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "west"
+	},
+	"ehingen": {
+		"kind": "city",
+		"population": 27700,
+		"populationRank": 60,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "east"
+	},
+	"balingen": {
+		"kind": "city",
+		"population": 35744,
+		"populationRank": 46,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "centre"
+	},
+	"albstadt": {
+		"kind": "city",
+		"population": 47047,
+		"populationRank": 30,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south"
+	},
+	"emmendingen": {
+		"kind": "city",
+		"population": 29530,
+		"populationRank": 53,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"biberach-an-der-ri": {
+		"kind": "city",
+		"population": 34275,
+		"populationRank": 48,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"villingen-schwenningen": {
+		"kind": "city",
+		"population": 89766,
+		"populationRank": 13,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south"
+	},
+	"freiburg-im-breisgau": {
+		"kind": "city",
+		"population": 238299,
+		"populationRank": 4,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"\"Free town\" — founded in 1120 with a free market charter; Breisgau distinguishes it from other Freiburgs.",
+				"It is the sunniest city in Germany and a pioneer of solar power, with a whole district built to produce more energy than it uses.",
+				"Its Bächle, small water channels, run along the streets; local lore says stepping in one means you will marry a Freiburger."
+			],
+			"it": [
+				"\"Città libera\": fondata nel 1120 con un privilegio di libero mercato; \"in Brisgovia\" la distingue dalle altre Friburgo.",
+				"È la città più soleggiata della Germania e una pioniera dell’energia solare, con un intero quartiere costruito per produrre più energia di quanta ne consumi.",
+				"Lungo le sue strade corrono i Bächle, piccoli canali d’acqua; secondo la tradizione locale, chi ci mette un piede dentro sposerà un friburghese."
+			]
+		}
+	},
+	"tuttlingen": {
+		"kind": "city",
+		"population": 37093,
+		"populationRank": 44,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south"
+	},
+	"ravensburg": {
+		"kind": "city",
+		"population": 50549,
+		"populationRank": 26,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"singen-hohentwiel": {
+		"kind": "city",
+		"population": 48089,
+		"populationRank": 28,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south"
+	},
+	"radolfzell-am-bodensee": {
+		"kind": "city",
+		"population": 31689,
+		"populationRank": 50,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south"
+	},
+	"wangen-im-allgau": {
+		"kind": "city",
+		"population": 28784,
+		"populationRank": 55,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"konstanz": {
+		"kind": "city",
+		"population": 86691,
+		"populationRank": 14,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south"
+	},
+	"friedrichshafen": {
+		"kind": "city",
+		"population": 62781,
+		"populationRank": 17,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"lorrach": {
+		"kind": "city",
+		"population": 51274,
+		"populationRank": 22,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"rheinfelden-baden": {
+		"kind": "city",
+		"population": 34788,
+		"populationRank": 47,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south-west"
+	}
+}
