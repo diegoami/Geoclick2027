@@ -1,0 +1,502 @@
+{
+	"schiermonnikoog": {
+		"kind": "region",
+		"borders": [
+			"Het Hogeland",
+			"Noardeast-Fryslân"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"het-hogeland": {
+		"kind": "region",
+		"borders": [
+			"Eemsdelta",
+			"Groningen",
+			"Noardeast-Fryslân",
+			"Schiermonnikoog",
+			"Westerkwartier"
+		],
+		"coastal": true,
+		"position": "north-east"
+	},
+	"ameland": {
+		"kind": "region",
+		"borders": [
+			"Noardeast-Fryslân",
+			"Terschelling",
+			"Waadhoeke"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"noardeast-fryslan": {
+		"kind": "region",
+		"borders": [
+			"Achtkarspelen",
+			"Ameland",
+			"Dantumadiel",
+			"Het Hogeland",
+			"Leeuwarden",
+			"Schiermonnikoog",
+			"Tytsjerksteradiel",
+			"Waadhoeke",
+			"Westerkwartier"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"eemsdelta": {
+		"kind": "region",
+		"borders": [
+			"Groningen",
+			"Het Hogeland",
+			"Midden-Groningen",
+			"Oldambt"
+		],
+		"coastal": true,
+		"position": "north-east"
+	},
+	"terschelling": {
+		"kind": "region",
+		"borders": [
+			"Ameland",
+			"Harlingen",
+			"Vlieland",
+			"Waadhoeke"
+		],
+		"coastal": true,
+		"position": "north-west"
+	},
+	"dantumadiel": {
+		"kind": "region",
+		"borders": [
+			"Achtkarspelen",
+			"Noardeast-Fryslân",
+			"Tytsjerksteradiel"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"waadhoeke": {
+		"kind": "region",
+		"borders": [
+			"Ameland",
+			"Harlingen",
+			"Leeuwarden",
+			"Noardeast-Fryslân",
+			"Súdwest-Fryslân",
+			"Terschelling"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"oldambt": {
+		"kind": "region",
+		"borders": [
+			"Eemsdelta",
+			"Midden-Groningen",
+			"Pekela",
+			"Westerwolde"
+		],
+		"coastal": true,
+		"position": "east"
+	},
+	"westerkwartier": {
+		"kind": "region",
+		"borders": [
+			"Achtkarspelen",
+			"Groningen",
+			"Het Hogeland",
+			"Noardeast-Fryslân",
+			"Noordenveld",
+			"Opsterland",
+			"Smallingerland"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"groningen": {
+		"kind": "region",
+		"borders": [
+			"Eemsdelta",
+			"Het Hogeland",
+			"Midden-Groningen",
+			"Noordenveld",
+			"Tynaarlo",
+			"Westerkwartier"
+		],
+		"coastal": true,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Probably from Groni, a personal name, plus -ingen, \"the people of\" — a common Germanic pattern all over the north.",
+				"Europe's largest gas field was found under it in 1959; the extraction caused earthquakes and is now being shut down.",
+				"Its university, founded 1614, took the Netherlands' first female student in 1871 and its students still outnumber almost every other Dutch city's per head."
+			],
+			"it": [
+				"Probabilmente da Groni, un nome di persona, con il suffisso -ingen, \"la gente di\": uno schema germanico diffuso in tutto il nord.",
+				"Nel 1959 vi si scoprì sotto il più grande giacimento di gas d’Europa; l’estrazione ha causato terremoti e ora il giacimento viene chiuso.",
+				"La sua università, fondata nel 1614, accolse nel 1871 la prima studentessa dei Paesi Bassi, e in proporzione agli abitanti i suoi studenti superano ancora quelli di quasi ogni altra città olandese."
+			]
+		}
+	},
+	"achtkarspelen": {
+		"kind": "region",
+		"borders": [
+			"Dantumadiel",
+			"Noardeast-Fryslân",
+			"Smallingerland",
+			"Tytsjerksteradiel",
+			"Westerkwartier"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"vlieland": {
+		"kind": "region",
+		"borders": [
+			"Harlingen",
+			"Terschelling"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"tytsjerksteradiel": {
+		"kind": "region",
+		"borders": [
+			"Achtkarspelen",
+			"Dantumadiel",
+			"Leeuwarden",
+			"Noardeast-Fryslân",
+			"Smallingerland"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"midden-groningen": {
+		"kind": "region",
+		"borders": [
+			"Aa en Hunze",
+			"Eemsdelta",
+			"Groningen",
+			"Oldambt",
+			"Pekela",
+			"Tynaarlo",
+			"Veendam"
+		],
+		"coastal": true,
+		"position": "east"
+	},
+	"leeuwarden": {
+		"kind": "region",
+		"borders": [
+			"De Fryske Marren",
+			"Heerenveen",
+			"Noardeast-Fryslân",
+			"Smallingerland",
+			"Súdwest-Fryslân",
+			"Tytsjerksteradiel",
+			"Waadhoeke"
+		],
+		"coastal": true,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Probably \"the settlement by the sheltered place\", though the lion in its name and arms is a later folk reading.",
+				"Mata Hari was born here in 1876, and M. C. Escher in 1898.",
+				"Its Oldehove tower leans like Pisa’s and was abandoned unfinished in 1533 when it started to tilt."
+			],
+			"it": [
+				"Probabilmente \"l’insediamento presso il luogo riparato\", anche se il leone nel nome e nello stemma è una lettura popolare più tarda.",
+				"Qui nacquero Mata Hari, nel 1876, e M. C. Escher, nel 1898.",
+				"La sua torre Oldehove pende come quella di Pisa e fu abbandonata incompiuta nel 1533, quando cominciò a inclinarsi."
+			]
+		}
+	},
+	"harlingen": {
+		"kind": "region",
+		"borders": [
+			"Súdwest-Fryslân",
+			"Terschelling",
+			"Vlieland",
+			"Waadhoeke"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"smallingerland": {
+		"kind": "region",
+		"borders": [
+			"Achtkarspelen",
+			"Heerenveen",
+			"Leeuwarden",
+			"Opsterland",
+			"Tytsjerksteradiel",
+			"Westerkwartier"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"tynaarlo": {
+		"kind": "region",
+		"borders": [
+			"Aa en Hunze",
+			"Assen",
+			"Groningen",
+			"Midden-Groningen",
+			"Noordenveld"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"noordenveld": {
+		"kind": "region",
+		"borders": [
+			"Assen",
+			"Groningen",
+			"Midden-Drenthe",
+			"Ooststellingwerf",
+			"Opsterland",
+			"Tynaarlo",
+			"Westerkwartier"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"veendam": {
+		"kind": "region",
+		"borders": [
+			"Aa en Hunze",
+			"Midden-Groningen",
+			"Pekela",
+			"Stadskanaal"
+		],
+		"coastal": true,
+		"position": "east"
+	},
+	"pekela": {
+		"kind": "region",
+		"borders": [
+			"Midden-Groningen",
+			"Oldambt",
+			"Stadskanaal",
+			"Veendam",
+			"Westerwolde"
+		],
+		"coastal": true,
+		"position": "east"
+	},
+	"opsterland": {
+		"kind": "region",
+		"borders": [
+			"Heerenveen",
+			"Noordenveld",
+			"Ooststellingwerf",
+			"Smallingerland",
+			"Westerkwartier"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"heerenveen": {
+		"kind": "region",
+		"borders": [
+			"De Fryske Marren",
+			"Leeuwarden",
+			"Ooststellingwerf",
+			"Opsterland",
+			"Smallingerland",
+			"Weststellingwerf"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"assen": {
+		"kind": "region",
+		"borders": [
+			"Aa en Hunze",
+			"Midden-Drenthe",
+			"Noordenveld",
+			"Tynaarlo"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"westerwolde": {
+		"kind": "region",
+		"borders": [
+			"Borger-Odoorn",
+			"Emmen",
+			"Oldambt",
+			"Pekela",
+			"Stadskanaal"
+		],
+		"coastal": true,
+		"position": "east"
+	},
+	"stadskanaal": {
+		"kind": "region",
+		"borders": [
+			"Aa en Hunze",
+			"Borger-Odoorn",
+			"Pekela",
+			"Veendam",
+			"Westerwolde"
+		],
+		"coastal": true,
+		"position": "east"
+	},
+	"ooststellingwerf": {
+		"kind": "region",
+		"borders": [
+			"Heerenveen",
+			"Midden-Drenthe",
+			"Noordenveld",
+			"Opsterland",
+			"Westerveld",
+			"Weststellingwerf"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"aa-en-hunze": {
+		"kind": "region",
+		"borders": [
+			"Assen",
+			"Borger-Odoorn",
+			"Coevorden",
+			"Midden-Drenthe",
+			"Midden-Groningen",
+			"Stadskanaal",
+			"Tynaarlo",
+			"Veendam"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"sudwest-fryslan": {
+		"kind": "region",
+		"borders": [
+			"De Fryske Marren",
+			"Harlingen",
+			"Leeuwarden",
+			"Waadhoeke"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"de-fryske-marren": {
+		"kind": "region",
+		"borders": [
+			"Heerenveen",
+			"Leeuwarden",
+			"Súdwest-Fryslân",
+			"Weststellingwerf"
+		],
+		"coastal": true,
+		"position": "south"
+	},
+	"borger-odoorn": {
+		"kind": "region",
+		"borders": [
+			"Aa en Hunze",
+			"Coevorden",
+			"Emmen",
+			"Stadskanaal",
+			"Westerwolde"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"weststellingwerf": {
+		"kind": "region",
+		"borders": [
+			"De Fryske Marren",
+			"Heerenveen",
+			"Ooststellingwerf",
+			"Westerveld"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"midden-drenthe": {
+		"kind": "region",
+		"borders": [
+			"Aa en Hunze",
+			"Assen",
+			"Coevorden",
+			"Hoogeveen",
+			"Noordenveld",
+			"Ooststellingwerf",
+			"Westerveld"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"westerveld": {
+		"kind": "region",
+		"borders": [
+			"De Wolden",
+			"Hoogeveen",
+			"Meppel",
+			"Midden-Drenthe",
+			"Ooststellingwerf",
+			"Weststellingwerf"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"coevorden": {
+		"kind": "region",
+		"borders": [
+			"Aa en Hunze",
+			"Borger-Odoorn",
+			"Emmen",
+			"Hoogeveen",
+			"Midden-Drenthe"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"emmen": {
+		"kind": "region",
+		"borders": [
+			"Borger-Odoorn",
+			"Coevorden",
+			"Westerwolde"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"hoogeveen": {
+		"kind": "region",
+		"borders": [
+			"Coevorden",
+			"De Wolden",
+			"Midden-Drenthe",
+			"Westerveld"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"meppel": {
+		"kind": "region",
+		"borders": [
+			"De Wolden",
+			"Westerveld"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"de-wolden": {
+		"kind": "region",
+		"borders": [
+			"Hoogeveen",
+			"Meppel",
+			"Westerveld"
+		],
+		"coastal": false,
+		"position": "south"
+	}
+}

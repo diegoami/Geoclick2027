@@ -97,12 +97,19 @@ export type TranslationKey =
 	| 'mapType.citiesCentral'
 	| 'mapType.countries'
 	| 'mapType.capitals'
-	| 'mapType.townsNorth'
-	| 'mapType.townsWest'
-	| 'mapType.townsCenter'
-	| 'mapType.townsEast'
-	| 'mapType.townsSouthWest'
-	| 'mapType.townsSouthEast'
+	| 'mapType.departments'
+	| 'mapType.counties'
+	| 'mapType.romanianCounties'
+	| 'mapType.cantons'
+	| 'mapType.germanDistricts'
+	| 'mapType.municipalities'
+	| 'mapPart.north'
+	| 'mapPart.south'
+	| 'mapPart.east'
+	| 'mapPart.west'
+	| 'mapPart.center'
+	| 'mapPart.southWest'
+	| 'mapPart.southEast'
 	| 'quiz.subtitle'
 	| 'quiz.closeAriaLabel'
 	| 'quiz.known'
@@ -234,12 +241,19 @@ const en: Dictionary = {
 	'mapType.citiesCentral': 'Cities — Central',
 	'mapType.countries': 'Countries',
 	'mapType.capitals': 'Capitals',
-	'mapType.townsNorth': 'Towns — North',
-	'mapType.townsWest': 'Towns — West',
-	'mapType.townsCenter': 'Towns — Center',
-	'mapType.townsEast': 'Towns — East',
-	'mapType.townsSouthWest': 'Towns — South-West',
-	'mapType.townsSouthEast': 'Towns — South-East',
+	'mapType.departments': 'Departments',
+	'mapType.counties': 'Counties',
+	'mapType.romanianCounties': 'Counties',
+	'mapType.cantons': 'Cantons',
+	'mapType.germanDistricts': 'Districts',
+	'mapType.municipalities': 'Municipalities',
+	'mapPart.north': 'North',
+	'mapPart.south': 'South',
+	'mapPart.east': 'East',
+	'mapPart.west': 'West',
+	'mapPart.center': 'Center',
+	'mapPart.southWest': 'South-West',
+	'mapPart.southEast': 'South-East',
 
 	'quiz.subtitle': 'Drag each name onto its region — {placed} / {total} placed',
 	'quiz.closeAriaLabel': 'Close and view the map',
@@ -386,12 +400,20 @@ const de: Dictionary = {
 	'mapType.citiesCentral': 'Städte — Mitte',
 	'mapType.countries': 'Länder',
 	'mapType.capitals': 'Hauptstädte',
-	'mapType.townsNorth': 'Städte — Norden',
-	'mapType.townsWest': 'Städte — Westen',
-	'mapType.townsCenter': 'Städte — Mitte',
-	'mapType.townsEast': 'Städte — Osten',
-	'mapType.townsSouthWest': 'Städte — Südwesten',
-	'mapType.townsSouthEast': 'Städte — Südosten',
+	'mapType.departments': 'Départements',
+	// Ireland's counties are Grafschaften in German, Romania's județe Kreise.
+	'mapType.counties': 'Grafschaften',
+	'mapType.romanianCounties': 'Kreise',
+	'mapType.cantons': 'Kantone',
+	'mapType.germanDistricts': 'Kreise',
+	'mapType.municipalities': 'Gemeinden',
+	'mapPart.north': 'Norden',
+	'mapPart.south': 'Süden',
+	'mapPart.east': 'Osten',
+	'mapPart.west': 'Westen',
+	'mapPart.center': 'Mitte',
+	'mapPart.southWest': 'Südwesten',
+	'mapPart.southEast': 'Südosten',
 
 	'quiz.subtitle': 'Ziehe jeden Namen auf seine Region — {placed} / {total} platziert',
 	'quiz.closeAriaLabel': 'Schließen und Karte ansehen',
@@ -538,12 +560,20 @@ const it: Dictionary = {
 	'mapType.citiesCentral': 'Città — Centro',
 	'mapType.countries': 'Paesi',
 	'mapType.capitals': 'Capitali',
-	'mapType.townsNorth': 'Città — Nord',
-	'mapType.townsWest': 'Città — Ovest',
-	'mapType.townsCenter': 'Città — Centro',
-	'mapType.townsEast': 'Città — Est',
-	'mapType.townsSouthWest': 'Città — Sud-ovest',
-	'mapType.townsSouthEast': 'Città — Sud-est',
+	'mapType.departments': 'Dipartimenti',
+	// Ireland's counties are contee in Italian, Romania's județe distretti.
+	'mapType.counties': 'Contee',
+	'mapType.romanianCounties': 'Distretti',
+	'mapType.cantons': 'Cantoni',
+	'mapType.germanDistricts': 'Circondari',
+	'mapType.municipalities': 'Comuni',
+	'mapPart.north': 'Nord',
+	'mapPart.south': 'Sud',
+	'mapPart.east': 'Est',
+	'mapPart.west': 'Ovest',
+	'mapPart.center': 'Centro',
+	'mapPart.southWest': 'Sud-ovest',
+	'mapPart.southEast': 'Sud-est',
 
 	'quiz.subtitle': 'Trascina ogni nome sulla sua regione — {placed} / {total} posizionati',
 	'quiz.closeAriaLabel': 'Chiudi e guarda la mappa',

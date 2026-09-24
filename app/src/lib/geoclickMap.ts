@@ -64,7 +64,15 @@ export function createMap(
 		bounds: overallExtent(mapDef),
 		// The map bar is already on screen, so the opening fit can keep the
 		// whole map clear of it (FT-25).
-		fitBoundsOptions: { padding: mapFitPadding(container) }
+		fitBoundsOptions: { padding: mapFitPadding(container) },
+		// The map's own credit, behind the attribution control's (i). The
+		// tileset carries it as well, but the pmtiles source never passes it
+		// on - which did not matter while every map was public domain, and
+		// does for a map from a register with an attribution licence (#39:
+		// Germany's Kreise, dl-de/by-2-0).
+		attributionControl: {
+			customAttribution: ['<a href="https://maplibre.org/">MapLibre</a>', mapDef.attribution]
+		}
 	});
 	map.addControl(new maplibregl.NavigationControl(), 'top-right');
 	// The tutorial rings the +/- buttons in its zoom-and-pan step (FT-11).

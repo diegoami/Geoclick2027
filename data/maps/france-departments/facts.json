@@ -1,0 +1,1595 @@
+{
+	"nord": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Aisne",
+			"Pas-de-Calais",
+			"Somme"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Lille",
+			"nameDe": "Lille",
+			"nameIt": "Lilla",
+			"population": 1044000
+		},
+		"position": "north"
+	},
+	"pas-de-calais": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Nord",
+			"Somme"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Calais",
+			"nameDe": "Calais",
+			"nameIt": "Calais",
+			"population": 92201
+		},
+		"position": "north"
+	},
+	"somme": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Aisne",
+			"Nord",
+			"Oise",
+			"Pas-de-Calais",
+			"Seine-Maritime"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Amiens",
+			"nameDe": "Amiens",
+			"nameIt": "Amiens",
+			"population": 143086
+		},
+		"position": "north"
+	},
+	"ardennes": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Aisne",
+			"Marne",
+			"Meuse"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"seine-maritime": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Eure",
+			"Oise",
+			"Somme"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Rouen",
+			"nameDe": "Rouen",
+			"nameIt": "Rouen",
+			"population": 532559
+		},
+		"position": "north"
+	},
+	"aisne": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Ardennes",
+			"Marne",
+			"Nord",
+			"Oise",
+			"Seine-et-Marne",
+			"Somme"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"oise": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Aisne",
+			"Eure",
+			"Seine-et-Marne",
+			"Seine-Maritime",
+			"Somme",
+			"Val-d'Oise"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"calvados": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Eure",
+			"Manche",
+			"Orne"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Caen",
+			"nameDe": "Caen",
+			"nameIt": "Caen",
+			"population": 190099
+		},
+		"position": "north-west"
+	},
+	"manche": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Calvados",
+			"Ille-et-Vilaine",
+			"Mayenne",
+			"Orne"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Cherbourg",
+			"nameDe": "Cherbourg-Octeville",
+			"nameIt": "Cherbourg-Octeville",
+			"population": 60991
+		},
+		"position": "north-west"
+	},
+	"eure": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Calvados",
+			"Eure-et-Loir",
+			"Oise",
+			"Orne",
+			"Seine-Maritime",
+			"Val-d'Oise",
+			"Yvelines"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"val-d-oise": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Eure",
+			"Hauts-de-Seine",
+			"Oise",
+			"Seine-et-Marne",
+			"Seine-Saint-Denis",
+			"Yvelines"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"meuse": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Ardennes",
+			"Haute-Marne",
+			"Marne",
+			"Meurthe-et-Moselle",
+			"Vosges"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"moselle": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Bas-Rhin",
+			"Meurthe-et-Moselle",
+			"Vosges"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Metz",
+			"nameDe": "Metz",
+			"nameIt": "Metz",
+			"population": 409186
+		},
+		"position": "north-east"
+	},
+	"marne": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Aisne",
+			"Ardennes",
+			"Aube",
+			"Haute-Marne",
+			"Meuse",
+			"Seine-et-Marne"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Reims",
+			"nameDe": "Reims",
+			"nameIt": "Reims",
+			"population": 196565
+		},
+		"position": "north"
+	},
+	"meurthe-et-moselle": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Bas-Rhin",
+			"Meuse",
+			"Moselle",
+			"Vosges"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Nancy",
+			"nameDe": "Nancy",
+			"nameIt": "Nancy",
+			"population": 268976
+		},
+		"position": "north-east"
+	},
+	"seine-saint-denis": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Hauts-de-Seine",
+			"Paris",
+			"Seine-et-Marne",
+			"Val-d'Oise",
+			"Val-de-Marne"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"paris": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Hauts-de-Seine",
+			"Seine-Saint-Denis",
+			"Val-de-Marne"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Paris",
+			"nameDe": "Paris",
+			"nameIt": "Parigi",
+			"population": 9904000
+		},
+		"position": "north",
+		"hooks": {
+			"en": [
+				"From the Parisii, the Gaulish tribe on the Île de la Cité; the Romans called it Lutetia.",
+				"The Eiffel Tower was built for the 1889 exposition and meant to be dismantled after twenty years.",
+				"Its catacombs hold the remains of about six million people, moved underground from overflowing cemeteries in 1786."
+			],
+			"it": [
+				"Dai Parisi, la tribù gallica dell’Île de la Cité; i Romani la chiamavano Lutetia.",
+				"La Torre Eiffel fu costruita per l’Esposizione del 1889 e doveva essere smontata dopo vent’anni.",
+				"Le sue catacombe custodiscono i resti di circa sei milioni di persone, trasferiti sottoterra nel 1786 da cimiteri ormai stracolmi."
+			]
+		}
+	},
+	"hauts-de-seine": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Essonne",
+			"Paris",
+			"Seine-Saint-Denis",
+			"Val-d'Oise",
+			"Val-de-Marne",
+			"Yvelines"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"val-de-marne": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Essonne",
+			"Hauts-de-Seine",
+			"Paris",
+			"Seine-et-Marne",
+			"Seine-Saint-Denis"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"yvelines": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Essonne",
+			"Eure",
+			"Eure-et-Loir",
+			"Hauts-de-Seine",
+			"Val-d'Oise"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Versailles",
+			"nameDe": "Versailles",
+			"nameIt": "Versailles",
+			"population": 85416
+		},
+		"position": "north"
+	},
+	"seine-et-marne": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Aisne",
+			"Aube",
+			"Essonne",
+			"Loiret",
+			"Marne",
+			"Oise",
+			"Seine-Saint-Denis",
+			"Val-d'Oise",
+			"Val-de-Marne",
+			"Yonne"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Melun",
+			"nameDe": "Melun",
+			"nameIt": "Melun",
+			"population": 249432
+		},
+		"position": "north"
+	},
+	"bas-rhin": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Haut-Rhin",
+			"Meurthe-et-Moselle",
+			"Moselle",
+			"Vosges"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Strasbourg",
+			"nameDe": "Straßburg",
+			"nameIt": "Strasburgo",
+			"population": 439972
+		},
+		"position": "north-east"
+	},
+	"orne": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Calvados",
+			"Eure",
+			"Eure-et-Loir",
+			"Manche",
+			"Mayenne",
+			"Sarthe"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"essonne": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Eure-et-Loir",
+			"Hauts-de-Seine",
+			"Loiret",
+			"Seine-et-Marne",
+			"Val-de-Marne",
+			"Yvelines"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"cotes-d-armor": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Finistère",
+			"Ille-et-Vilaine",
+			"Morbihan"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "St.-Brieuc",
+			"nameDe": "Saint-Brieuc",
+			"nameIt": "Saint-Brieuc",
+			"population": 53223
+		},
+		"position": "north-west"
+	},
+	"eure-et-loir": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Essonne",
+			"Eure",
+			"Loir-et-Cher",
+			"Loiret",
+			"Orne",
+			"Sarthe",
+			"Yvelines"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"aube": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Côte-d'Or",
+			"Haute-Marne",
+			"Marne",
+			"Seine-et-Marne",
+			"Yonne"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Troyes",
+			"nameDe": "Troyes",
+			"nameIt": "Troyes",
+			"population": 61703
+		},
+		"position": "north"
+	},
+	"finistere": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Côtes-d'Armor",
+			"Morbihan"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Brest",
+			"nameDe": "Brest",
+			"nameIt": "Brest",
+			"population": 144899
+		},
+		"position": "north-west"
+	},
+	"ille-et-vilaine": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Côtes-d'Armor",
+			"Loire-Atlantique",
+			"Maine-et-Loire",
+			"Manche",
+			"Mayenne",
+			"Morbihan"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Rennes",
+			"nameDe": "Rennes",
+			"nameIt": "Rennes",
+			"population": 209375
+		},
+		"position": "north-west"
+	},
+	"vosges": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Bas-Rhin",
+			"Haut-Rhin",
+			"Haute-Marne",
+			"Haute-Saône",
+			"Meurthe-et-Moselle",
+			"Meuse",
+			"Moselle",
+			"Territoire de Belfort"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"haute-marne": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Aube",
+			"Côte-d'Or",
+			"Haute-Saône",
+			"Marne",
+			"Meuse",
+			"Vosges"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"mayenne": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Ille-et-Vilaine",
+			"Maine-et-Loire",
+			"Manche",
+			"Orne",
+			"Sarthe"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"sarthe": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Eure-et-Loir",
+			"Indre-et-Loire",
+			"Loir-et-Cher",
+			"Maine-et-Loire",
+			"Mayenne",
+			"Orne"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Le Mans",
+			"nameDe": "Le Mans",
+			"nameIt": "Le Mans",
+			"population": 144515
+		},
+		"position": "north"
+	},
+	"loiret": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Cher",
+			"Essonne",
+			"Eure-et-Loir",
+			"Loir-et-Cher",
+			"Nièvre",
+			"Seine-et-Marne",
+			"Yonne"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Orléans",
+			"nameDe": "Orléans",
+			"nameIt": "Orléans",
+			"population": 217301
+		},
+		"position": "north"
+	},
+	"yonne": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Aube",
+			"Côte-d'Or",
+			"Loiret",
+			"Nièvre",
+			"Seine-et-Marne"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Auxerre",
+			"nameDe": "Auxerre",
+			"nameIt": "Auxerre",
+			"population": 41516
+		},
+		"position": "centre"
+	},
+	"haut-rhin": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Bas-Rhin",
+			"Territoire de Belfort",
+			"Vosges"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Mulhouse",
+			"nameDe": "Mülhausen",
+			"nameIt": "Mulhouse",
+			"population": 215454
+		},
+		"position": "east"
+	},
+	"morbihan": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Côtes-d'Armor",
+			"Finistère",
+			"Ille-et-Vilaine",
+			"Loire-Atlantique"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Lorient",
+			"nameDe": "Lorient",
+			"nameIt": "Lorient",
+			"population": 84952
+		},
+		"position": "west"
+	},
+	"loir-et-cher": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Cher",
+			"Eure-et-Loir",
+			"Indre",
+			"Indre-et-Loire",
+			"Loiret",
+			"Sarthe"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"haute-saone": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Côte-d'Or",
+			"Doubs",
+			"Haute-Marne",
+			"Jura",
+			"Territoire de Belfort",
+			"Vosges"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"territoire-de-belfort": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Doubs",
+			"Haut-Rhin",
+			"Haute-Saône",
+			"Vosges"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"cote-d-or": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Aube",
+			"Haute-Marne",
+			"Haute-Saône",
+			"Jura",
+			"Nièvre",
+			"Saône-et-Loire",
+			"Yonne"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Dijon",
+			"nameDe": "Dijon",
+			"nameIt": "Digione",
+			"population": 169946
+		},
+		"position": "east"
+	},
+	"maine-et-loire": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Deux-Sèvres",
+			"Ille-et-Vilaine",
+			"Indre-et-Loire",
+			"Loire-Atlantique",
+			"Mayenne",
+			"Sarthe",
+			"Vendée",
+			"Vienne"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Angers",
+			"nameDe": "Angers",
+			"nameIt": "Angers",
+			"population": 188380
+		},
+		"position": "west"
+	},
+	"loire-atlantique": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Ille-et-Vilaine",
+			"Maine-et-Loire",
+			"Morbihan",
+			"Vendée"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Nantes",
+			"nameDe": "Nantes",
+			"nameIt": "Nantes",
+			"population": 438537
+		},
+		"position": "west"
+	},
+	"indre-et-loire": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Indre",
+			"Loir-et-Cher",
+			"Maine-et-Loire",
+			"Sarthe",
+			"Vienne"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tours",
+			"nameDe": "Tours",
+			"nameIt": "Tours",
+			"population": 236096
+		},
+		"position": "centre"
+	},
+	"nievre": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Allier",
+			"Cher",
+			"Côte-d'Or",
+			"Loiret",
+			"Saône-et-Loire",
+			"Yonne"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Nevers",
+			"nameDe": "Nevers",
+			"nameIt": "Nevers",
+			"population": 45929
+		},
+		"position": "centre"
+	},
+	"doubs": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Haute-Saône",
+			"Jura",
+			"Territoire de Belfort"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Besançon",
+			"nameDe": "Besançon",
+			"nameIt": "Besançon",
+			"population": 128426
+		},
+		"position": "east"
+	},
+	"cher": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Allier",
+			"Creuse",
+			"Indre",
+			"Loir-et-Cher",
+			"Loiret",
+			"Nièvre"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bourges",
+			"nameDe": "Bourges",
+			"nameIt": "Bourges",
+			"population": 72340
+		},
+		"position": "centre"
+	},
+	"indre": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Cher",
+			"Creuse",
+			"Haute-Vienne",
+			"Indre-et-Loire",
+			"Loir-et-Cher",
+			"Vienne"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"jura": {
+		"kind": "region",
+		"borders": [
+			"Ain",
+			"Côte-d'Or",
+			"Doubs",
+			"Haute-Saône",
+			"Saône-et-Loire"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Delémont",
+			"nameDe": "Delsberg",
+			"nameIt": "Delémont",
+			"population": 11315
+		},
+		"position": "east"
+	},
+	"vendee": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Charente-Maritime",
+			"Deux-Sèvres",
+			"Loire-Atlantique",
+			"Maine-et-Loire"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"saone-et-loire": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Ain",
+			"Allier",
+			"Côte-d'Or",
+			"Jura",
+			"Loire",
+			"Nièvre",
+			"Rhône"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"vienne": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Charente",
+			"Deux-Sèvres",
+			"Haute-Vienne",
+			"Indre",
+			"Indre-et-Loire",
+			"Maine-et-Loire"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Poitier",
+			"nameDe": "Poitiers",
+			"nameIt": "Poitiers",
+			"population": 85960
+		},
+		"position": "centre"
+	},
+	"deux-sevres": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Charente",
+			"Charente-Maritime",
+			"Maine-et-Loire",
+			"Vendée",
+			"Vienne"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"allier": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Cher",
+			"Creuse",
+			"Loire",
+			"Nièvre",
+			"Puy-de-Dôme",
+			"Saône-et-Loire"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Vichy",
+			"nameDe": "Vichy",
+			"nameIt": "Vichy",
+			"population": 43158
+		},
+		"position": "centre"
+	},
+	"ain": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Haute-Savoie",
+			"Isère",
+			"Jura",
+			"Rhône",
+			"Saône-et-Loire",
+			"Savoie"
+		],
+		"coastal": false,
+		"peak": {
+			"name": "Crêt de la Neige",
+			"elevation": 1718
+		},
+		"position": "east"
+	},
+	"haute-savoie": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Ain",
+			"Savoie"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Annecy",
+			"nameDe": "Annecy",
+			"nameIt": "Annecy",
+			"population": 105749
+		},
+		"peak": {
+			"name": "Mont Blanc",
+			"elevation": 4807
+		},
+		"position": "east"
+	},
+	"creuse": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Allier",
+			"Cher",
+			"Corrèze",
+			"Haute-Vienne",
+			"Indre",
+			"Puy-de-Dôme"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"haute-vienne": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Charente",
+			"Corrèze",
+			"Creuse",
+			"Dordogne",
+			"Indre",
+			"Vienne"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Limoges",
+			"nameDe": "Limoges",
+			"nameIt": "Limoges",
+			"population": 152199
+		},
+		"position": "centre"
+	},
+	"rhone": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Ain",
+			"Isère",
+			"Loire",
+			"Saône-et-Loire"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Lyon",
+			"nameDe": "Lyon",
+			"nameIt": "Lione",
+			"population": 1423000
+		},
+		"position": "centre"
+	},
+	"puy-de-dome": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Allier",
+			"Cantal",
+			"Corrèze",
+			"Creuse",
+			"Haute-Loire",
+			"Loire"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Clermont-Ferrand",
+			"nameDe": "Clermont-Ferrand",
+			"nameIt": "Clermont-Ferrand",
+			"population": 233050
+		},
+		"peak": {
+			"name": "Puy de Sancy",
+			"elevation": 1885
+		},
+		"position": "centre"
+	},
+	"loire": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Allier",
+			"Ardèche",
+			"Haute-Loire",
+			"Isère",
+			"Puy-de-Dôme",
+			"Rhône",
+			"Saône-et-Loire"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Saint-Étienne",
+			"nameDe": "Saint-Étienne",
+			"nameIt": "Saint-Étienne",
+			"population": 265684
+		},
+		"position": "centre"
+	},
+	"charente-maritime": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Charente",
+			"Deux-Sèvres",
+			"Dordogne",
+			"Gironde",
+			"Vendée"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "La Rochelle",
+			"nameDe": "La Rochelle",
+			"nameIt": "La Rochelle",
+			"population": 76997
+		},
+		"position": "west"
+	},
+	"charente": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Charente-Maritime",
+			"Deux-Sèvres",
+			"Dordogne",
+			"Haute-Vienne",
+			"Vienne"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"savoie": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Ain",
+			"Haute-Savoie",
+			"Hautes-Alpes",
+			"Isère"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"correze": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Cantal",
+			"Creuse",
+			"Dordogne",
+			"Haute-Vienne",
+			"Lot",
+			"Puy-de-Dôme"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Brive",
+			"nameDe": "Brive-la-Gaillarde",
+			"nameIt": "Brive-la-Gaillarde",
+			"population": 55448
+		},
+		"position": "centre"
+	},
+	"isere": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Ain",
+			"Ardèche",
+			"Drôme",
+			"Hautes-Alpes",
+			"Loire",
+			"Rhône",
+			"Savoie"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Grenoble",
+			"nameDe": "Grenoble",
+			"nameIt": "Grenoble",
+			"population": 388574
+		},
+		"position": "east"
+	},
+	"dordogne": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Charente",
+			"Charente-Maritime",
+			"Corrèze",
+			"Gironde",
+			"Haute-Vienne",
+			"Lot",
+			"Lot-et-Garonne"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"haute-loire": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Ardèche",
+			"Cantal",
+			"Loire",
+			"Lozère",
+			"Puy-de-Dôme"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"cantal": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Aveyron",
+			"Corrèze",
+			"Haute-Loire",
+			"Lot",
+			"Lozère",
+			"Puy-de-Dôme"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"gironde": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Charente-Maritime",
+			"Dordogne",
+			"Landes",
+			"Lot-et-Garonne"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Bordeaux",
+			"nameDe": "Bordeaux",
+			"nameIt": "Bordeaux",
+			"population": 803000
+		},
+		"position": "west"
+	},
+	"ardeche": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Drôme",
+			"Gard",
+			"Haute-Loire",
+			"Isère",
+			"Loire",
+			"Lozère",
+			"Vaucluse"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"drome": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Alpes-de-Haute-Provence",
+			"Ardèche",
+			"Hautes-Alpes",
+			"Isère",
+			"Vaucluse"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"hautes-alpes": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Alpes-de-Haute-Provence",
+			"Drôme",
+			"Isère",
+			"Savoie"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"lot": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Aveyron",
+			"Cantal",
+			"Corrèze",
+			"Dordogne",
+			"Lot-et-Garonne",
+			"Tarn-et-Garonne"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"lozere": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Ardèche",
+			"Aveyron",
+			"Cantal",
+			"Gard",
+			"Haute-Loire"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"lot-et-garonne": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Dordogne",
+			"Gers",
+			"Gironde",
+			"Landes",
+			"Lot",
+			"Tarn-et-Garonne"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Agen",
+			"nameDe": "Agen",
+			"nameIt": "Agen",
+			"population": 58223
+		},
+		"position": "south"
+	},
+	"aveyron": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Cantal",
+			"Gard",
+			"Hérault",
+			"Lot",
+			"Lozère",
+			"Tarn",
+			"Tarn-et-Garonne"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"alpes-de-haute-provence": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Alpes-Maritimes",
+			"Bouches-du-Rhône",
+			"Drôme",
+			"Hautes-Alpes",
+			"Var",
+			"Vaucluse"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"tarn-et-garonne": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Aveyron",
+			"Gers",
+			"Haute-Garonne",
+			"Lot",
+			"Lot-et-Garonne",
+			"Tarn"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"vaucluse": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Alpes-de-Haute-Provence",
+			"Ardèche",
+			"Bouches-du-Rhône",
+			"Drôme",
+			"Gard",
+			"Var"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"landes": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Gers",
+			"Gironde",
+			"Lot-et-Garonne",
+			"Pyrénées-Atlantiques"
+		],
+		"coastal": true,
+		"position": "south-west"
+	},
+	"gard": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Ardèche",
+			"Aveyron",
+			"Bouches-du-Rhône",
+			"Hérault",
+			"Lozère",
+			"Vaucluse"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Nîmes",
+			"nameDe": "Nîmes",
+			"nameIt": "Nîmes",
+			"population": 169547
+		},
+		"position": "south"
+	},
+	"alpes-maritimes": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Alpes-de-Haute-Provence",
+			"Var"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Nice",
+			"nameDe": "Nizza",
+			"nameIt": "Nizza",
+			"population": 927000
+		},
+		"position": "south-east"
+	},
+	"tarn": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Aude",
+			"Aveyron",
+			"Haute-Garonne",
+			"Hérault",
+			"Tarn-et-Garonne"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"gers": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Haute-Garonne",
+			"Hautes-Pyrénées",
+			"Landes",
+			"Lot-et-Garonne",
+			"Pyrénées-Atlantiques",
+			"Tarn-et-Garonne"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"herault": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Aude",
+			"Aveyron",
+			"Gard",
+			"Tarn"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Montpellier",
+			"nameDe": "Montpellier",
+			"nameIt": "Montpellier",
+			"population": 327254
+		},
+		"position": "south"
+	},
+	"bouches-du-rhone": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Alpes-de-Haute-Provence",
+			"Gard",
+			"Var",
+			"Vaucluse"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Marseille",
+			"nameDe": "Marseille",
+			"nameIt": "Marsiglia",
+			"population": 1400000
+		},
+		"position": "south-east"
+	},
+	"var": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Alpes-de-Haute-Provence",
+			"Alpes-Maritimes",
+			"Bouches-du-Rhône",
+			"Vaucluse"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Toulon",
+			"nameDe": "Toulon",
+			"nameIt": "Tolone",
+			"population": 357693
+		},
+		"position": "south-east"
+	},
+	"haute-garonne": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Ariège",
+			"Aude",
+			"Gers",
+			"Hautes-Pyrénées",
+			"Tarn",
+			"Tarn-et-Garonne"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Toulouse",
+			"nameDe": "Toulouse",
+			"nameIt": "Tolosa",
+			"population": 847000
+		},
+		"position": "south"
+	},
+	"pyrenees-atlantiques": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Gers",
+			"Hautes-Pyrénées",
+			"Landes"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Biarritz",
+			"nameDe": "Biarritz",
+			"nameIt": "Biarritz",
+			"population": 145348
+		},
+		"position": "south-west"
+	},
+	"hautes-pyrenees": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Gers",
+			"Haute-Garonne",
+			"Pyrénées-Atlantiques"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tarbes",
+			"nameDe": "Tarbes",
+			"nameIt": "Tarbes",
+			"population": 54854
+		},
+		"position": "south"
+	},
+	"aude": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Ariège",
+			"Haute-Garonne",
+			"Hérault",
+			"Pyrénées-Orientales",
+			"Tarn"
+		],
+		"coastal": true,
+		"position": "south"
+	},
+	"ariege": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Aude",
+			"Haute-Garonne",
+			"Pyrénées-Orientales"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"pyrenees-orientales": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Ariège",
+			"Aude"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Perpignan",
+			"nameDe": "Perpignan",
+			"nameIt": "Perpignano",
+			"population": 146620
+		},
+		"position": "south"
+	},
+	"haute-corse": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Corse-du-Sud"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Bastia",
+			"nameDe": "Bastia",
+			"nameIt": "Bastia",
+			"population": 41001
+		},
+		"peak": {
+			"name": "Monte Cinto",
+			"elevation": 2706
+		},
+		"position": "south-east"
+	},
+	"corse-du-sud": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Haute-Corse"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Ajaccio",
+			"nameDe": "Ajaccio",
+			"nameIt": "Ajaccio",
+			"population": 54364
+		},
+		"position": "south-east"
+	}
+}

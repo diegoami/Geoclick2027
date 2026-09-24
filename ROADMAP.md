@@ -157,11 +157,15 @@ Check items off as they land; update "Status" as iterations complete.
   Capitals, and the cities of five parts of Europe (80 maps in all).
   **Batch C** (branch `maps-germany-towns`, stacked on A+B): Germany's
   towns in six parts by state, 60 each, from a committed Wikidata (CC0)
-  snapshot (86 maps in all). Next: **D**, admin-2 -
-  France's departments, Spain's provinces, Britain's counties, new European
-  countries from Natural Earth, and Germany's Kreise (BKG, dl-de/by-2-0),
-  the Netherlands' municipalities (CC0) and Poland's powiats (ODbL - to go
-  back to the owner) from geoBoundaries.
+  snapshot (86 maps in all). **Batch D** (branch `maps-admin2`, stacked
+  on C): France's departments (whole, North, South), Spain's provinces,
+  Ireland's counties, Switzerland's cantons, Austria's states, Romania's
+  counties from Natural Earth; Germany's 400 Kreise in six parts (BKG,
+  dl-de/by-2-0) and the Netherlands' 344 municipalities in five (CC0) from
+  geoBoundaries - 105 maps in all, and each map's credit is now shown.
+  **Waiting on the owner:** Poland's powiats (geoBoundaries' copy is OSM,
+  ODbL share-alike). **Not built:** Great Britain's counties and Hungary's
+  (Natural Earth's are out of date or broken; see DECISIONS.md).
 - **Raised and decided 2026-09-20, unscoped**: six UX problems from one
   round of tablet play (`germany-towns-100k`) — the level-0 tray offering
   every name at once, slips losing their drag to the tablet's own

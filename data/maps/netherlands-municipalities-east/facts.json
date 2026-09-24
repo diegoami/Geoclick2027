@@ -1,0 +1,1012 @@
+{
+	"steenwijkerland": {
+		"kind": "region",
+		"borders": [
+			"Noordoostpolder",
+			"Staphorst",
+			"Zwartewaterland"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"noordoostpolder": {
+		"kind": "region",
+		"borders": [
+			"Dronten",
+			"Kampen",
+			"Steenwijkerland",
+			"Urk",
+			"Zwartewaterland"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"urk": {
+		"kind": "region",
+		"borders": [
+			"Dronten",
+			"Lelystad",
+			"Noordoostpolder"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"staphorst": {
+		"kind": "region",
+		"borders": [
+			"Dalfsen",
+			"Hardenberg",
+			"Steenwijkerland",
+			"Zwartewaterland",
+			"Zwolle"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"zwartewaterland": {
+		"kind": "region",
+		"borders": [
+			"Kampen",
+			"Noordoostpolder",
+			"Staphorst",
+			"Steenwijkerland",
+			"Zwolle"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"hardenberg": {
+		"kind": "region",
+		"borders": [
+			"Dalfsen",
+			"Ommen",
+			"Staphorst",
+			"Twenterand"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"kampen": {
+		"kind": "region",
+		"borders": [
+			"Dronten",
+			"Hattem",
+			"Noordoostpolder",
+			"Oldebroek",
+			"Zwartewaterland",
+			"Zwolle"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"lelystad": {
+		"kind": "region",
+		"borders": [
+			"Almere",
+			"Dronten",
+			"Urk",
+			"Zeewolde"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"dronten": {
+		"kind": "region",
+		"borders": [
+			"Elburg",
+			"Harderwijk",
+			"Kampen",
+			"Lelystad",
+			"Noordoostpolder",
+			"Nunspeet",
+			"Oldebroek",
+			"Urk",
+			"Zeewolde"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"zwolle": {
+		"kind": "region",
+		"borders": [
+			"Dalfsen",
+			"Hattem",
+			"Heerde",
+			"Kampen",
+			"Olst-Wijhe",
+			"Raalte",
+			"Staphorst",
+			"Zwartewaterland"
+		],
+		"coastal": false,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"From an old word meaning \"swelling\" or a rise of dry ground in the marsh.",
+				"Its star-shaped fortifications survive as a moat and park ring around the old town.",
+				"Thomas à Kempis, who wrote The Imitation of Christ, the most-read Christian book after the Bible, lived just outside it."
+			],
+			"it": [
+				"Da un’antica parola che significa \"rigonfiamento\", o un rialzo di terra asciutta nella palude.",
+				"Delle sue fortificazioni a stella restano un fossato e un anello di parchi attorno al centro storico.",
+				"Tommaso da Kempis, autore dell’Imitazione di Cristo, il libro cristiano più letto dopo la Bibbia, visse appena fuori città."
+			]
+		}
+	},
+	"dalfsen": {
+		"kind": "region",
+		"borders": [
+			"Hardenberg",
+			"Ommen",
+			"Raalte",
+			"Staphorst",
+			"Zwolle"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"ommen": {
+		"kind": "region",
+		"borders": [
+			"Dalfsen",
+			"Hardenberg",
+			"Hellendoorn",
+			"Raalte",
+			"Twenterand"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"hattem": {
+		"kind": "region",
+		"borders": [
+			"Heerde",
+			"Kampen",
+			"Oldebroek",
+			"Zwolle"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"oldebroek": {
+		"kind": "region",
+		"borders": [
+			"Dronten",
+			"Elburg",
+			"Epe",
+			"Hattem",
+			"Heerde",
+			"Kampen"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"almere": {
+		"kind": "region",
+		"borders": [
+			"Lelystad",
+			"Zeewolde"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"twenterand": {
+		"kind": "region",
+		"borders": [
+			"Almelo",
+			"Hardenberg",
+			"Hellendoorn",
+			"Ommen",
+			"Tubbergen",
+			"Wierden"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"elburg": {
+		"kind": "region",
+		"borders": [
+			"Dronten",
+			"Epe",
+			"Nunspeet",
+			"Oldebroek"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"heerde": {
+		"kind": "region",
+		"borders": [
+			"Epe",
+			"Hattem",
+			"Oldebroek",
+			"Olst-Wijhe",
+			"Zwolle"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"tubbergen": {
+		"kind": "region",
+		"borders": [
+			"Almelo",
+			"Borne",
+			"Dinkelland",
+			"Twenterand"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"hellendoorn": {
+		"kind": "region",
+		"borders": [
+			"Ommen",
+			"Raalte",
+			"Rijssen-Holten",
+			"Twenterand",
+			"Wierden"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"raalte": {
+		"kind": "region",
+		"borders": [
+			"Dalfsen",
+			"Deventer",
+			"Hellendoorn",
+			"Olst-Wijhe",
+			"Ommen",
+			"Rijssen-Holten",
+			"Zwolle"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"olst-wijhe": {
+		"kind": "region",
+		"borders": [
+			"Deventer",
+			"Epe",
+			"Heerde",
+			"Raalte",
+			"Voorst",
+			"Zwolle"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"dinkelland": {
+		"kind": "region",
+		"borders": [
+			"Borne",
+			"Enschede",
+			"Hengelo (O)",
+			"Losser",
+			"Oldenzaal",
+			"Tubbergen"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"zeewolde": {
+		"kind": "region",
+		"borders": [
+			"Almere",
+			"Dronten",
+			"Ermelo",
+			"Harderwijk",
+			"Lelystad",
+			"Nijkerk",
+			"Putten"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"almelo": {
+		"kind": "region",
+		"borders": [
+			"Borne",
+			"Hof van Twente",
+			"Tubbergen",
+			"Twenterand",
+			"Wierden"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"wierden": {
+		"kind": "region",
+		"borders": [
+			"Almelo",
+			"Hellendoorn",
+			"Hof van Twente",
+			"Rijssen-Holten",
+			"Twenterand"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"harderwijk": {
+		"kind": "region",
+		"borders": [
+			"Dronten",
+			"Ermelo",
+			"Nunspeet",
+			"Zeewolde"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"nunspeet": {
+		"kind": "region",
+		"borders": [
+			"Apeldoorn",
+			"Dronten",
+			"Elburg",
+			"Epe",
+			"Ermelo",
+			"Harderwijk"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"epe": {
+		"kind": "region",
+		"borders": [
+			"Apeldoorn",
+			"Elburg",
+			"Heerde",
+			"Nunspeet",
+			"Oldebroek",
+			"Olst-Wijhe",
+			"Voorst"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"borne": {
+		"kind": "region",
+		"borders": [
+			"Almelo",
+			"Dinkelland",
+			"Hengelo (O)",
+			"Hof van Twente",
+			"Tubbergen"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"oldenzaal": {
+		"kind": "region",
+		"borders": [
+			"Dinkelland",
+			"Enschede",
+			"Losser"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"losser": {
+		"kind": "region",
+		"borders": [
+			"Dinkelland",
+			"Enschede",
+			"Oldenzaal"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"ermelo": {
+		"kind": "region",
+		"borders": [
+			"Apeldoorn",
+			"Barneveld",
+			"Harderwijk",
+			"Nunspeet",
+			"Putten",
+			"Zeewolde"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"rijssen-holten": {
+		"kind": "region",
+		"borders": [
+			"Deventer",
+			"Hellendoorn",
+			"Hof van Twente",
+			"Lochem",
+			"Raalte",
+			"Wierden"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"deventer": {
+		"kind": "region",
+		"borders": [
+			"Lochem",
+			"Olst-Wijhe",
+			"Raalte",
+			"Rijssen-Holten",
+			"Voorst"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"hengelo-o": {
+		"kind": "region",
+		"borders": [
+			"Borne",
+			"Dinkelland",
+			"Enschede",
+			"Haaksbergen",
+			"Hof van Twente"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"putten": {
+		"kind": "region",
+		"borders": [
+			"Barneveld",
+			"Ermelo",
+			"Nijkerk",
+			"Zeewolde"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"hof-van-twente": {
+		"kind": "region",
+		"borders": [
+			"Almelo",
+			"Berkelland",
+			"Borne",
+			"Haaksbergen",
+			"Hengelo (O)",
+			"Lochem",
+			"Rijssen-Holten",
+			"Wierden"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"voorst": {
+		"kind": "region",
+		"borders": [
+			"Apeldoorn",
+			"Brummen",
+			"Deventer",
+			"Epe",
+			"Lochem",
+			"Olst-Wijhe",
+			"Zutphen"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"enschede": {
+		"kind": "region",
+		"borders": [
+			"Dinkelland",
+			"Haaksbergen",
+			"Hengelo (O)",
+			"Losser",
+			"Oldenzaal"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"nijkerk": {
+		"kind": "region",
+		"borders": [
+			"Barneveld",
+			"Putten",
+			"Zeewolde"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"apeldoorn": {
+		"kind": "region",
+		"borders": [
+			"Arnhem",
+			"Barneveld",
+			"Brummen",
+			"Ede",
+			"Epe",
+			"Ermelo",
+			"Nunspeet",
+			"Rozendaal",
+			"Voorst"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"barneveld": {
+		"kind": "region",
+		"borders": [
+			"Apeldoorn",
+			"Ede",
+			"Ermelo",
+			"Nijkerk",
+			"Putten",
+			"Scherpenzeel"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"lochem": {
+		"kind": "region",
+		"borders": [
+			"Berkelland",
+			"Bronckhorst",
+			"Deventer",
+			"Hof van Twente",
+			"Rijssen-Holten",
+			"Voorst",
+			"Zutphen"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"haaksbergen": {
+		"kind": "region",
+		"borders": [
+			"Berkelland",
+			"Enschede",
+			"Hengelo (O)",
+			"Hof van Twente"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"zutphen": {
+		"kind": "region",
+		"borders": [
+			"Bronckhorst",
+			"Brummen",
+			"Lochem",
+			"Voorst"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"brummen": {
+		"kind": "region",
+		"borders": [
+			"Apeldoorn",
+			"Bronckhorst",
+			"Rheden",
+			"Rozendaal",
+			"Voorst",
+			"Zutphen"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"berkelland": {
+		"kind": "region",
+		"borders": [
+			"Bronckhorst",
+			"Haaksbergen",
+			"Hof van Twente",
+			"Lochem",
+			"Oost Gelre"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"scherpenzeel": {
+		"kind": "region",
+		"borders": [
+			"Barneveld"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"ede": {
+		"kind": "region",
+		"borders": [
+			"Apeldoorn",
+			"Arnhem",
+			"Barneveld",
+			"Renkum",
+			"Wageningen"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"bronckhorst": {
+		"kind": "region",
+		"borders": [
+			"Berkelland",
+			"Brummen",
+			"Doesburg",
+			"Doetinchem",
+			"Lochem",
+			"Oost Gelre",
+			"Oude IJsselstreek",
+			"Rheden",
+			"Zevenaar",
+			"Zutphen"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"rozendaal": {
+		"kind": "region",
+		"borders": [
+			"Apeldoorn",
+			"Arnhem",
+			"Brummen",
+			"Rheden"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"rheden": {
+		"kind": "region",
+		"borders": [
+			"Arnhem",
+			"Bronckhorst",
+			"Brummen",
+			"Doesburg",
+			"Rozendaal",
+			"Westervoort",
+			"Zevenaar"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"doesburg": {
+		"kind": "region",
+		"borders": [
+			"Bronckhorst",
+			"Rheden",
+			"Zevenaar"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"oost-gelre": {
+		"kind": "region",
+		"borders": [
+			"Aalten",
+			"Berkelland",
+			"Bronckhorst",
+			"Oude IJsselstreek",
+			"Winterswijk"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"arnhem": {
+		"kind": "region",
+		"borders": [
+			"Apeldoorn",
+			"Ede",
+			"Lingewaard",
+			"Overbetuwe",
+			"Renkum",
+			"Rheden",
+			"Rozendaal",
+			"Westervoort"
+		],
+		"coastal": false,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"From arn, an eagle, plus heim, a home — or from an older river name.",
+				"The 1944 airborne operation to take its bridge was the bridge too far; the battle destroyed much of the city.",
+				"Its open-air museum reassembles farmhouses and mills from across the country on one site."
+			],
+			"it": [
+				"Da arn, aquila, più heim, casa: oppure da un più antico nome di fiume.",
+				"L’operazione aviotrasportata del 1944 per conquistarne il ponte fu quella del \"ponte troppo lontano\"; la battaglia distrusse gran parte della città.",
+				"Il suo museo all’aperto rimonta in un unico luogo fattorie e mulini provenienti da tutto il paese."
+			]
+		}
+	},
+	"renkum": {
+		"kind": "region",
+		"borders": [
+			"Arnhem",
+			"Ede",
+			"Overbetuwe",
+			"Wageningen"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"wageningen": {
+		"kind": "region",
+		"borders": [
+			"Ede",
+			"Neder-Betuwe",
+			"Overbetuwe",
+			"Renkum"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"winterswijk": {
+		"kind": "region",
+		"borders": [
+			"Aalten",
+			"Oost Gelre"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"westervoort": {
+		"kind": "region",
+		"borders": [
+			"Arnhem",
+			"Duiven",
+			"Lingewaard",
+			"Rheden",
+			"Zevenaar"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"doetinchem": {
+		"kind": "region",
+		"borders": [
+			"Bronckhorst",
+			"Montferland",
+			"Oude IJsselstreek",
+			"Zevenaar"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"culemborg": {
+		"kind": "region",
+		"borders": [
+			"Buren",
+			"West Betuwe"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"duiven": {
+		"kind": "region",
+		"borders": [
+			"Lingewaard",
+			"Westervoort",
+			"Zevenaar"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"buren": {
+		"kind": "region",
+		"borders": [
+			"Culemborg",
+			"Neder-Betuwe",
+			"Tiel",
+			"West Betuwe"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"zevenaar": {
+		"kind": "region",
+		"borders": [
+			"Berg en Dal",
+			"Bronckhorst",
+			"Doesburg",
+			"Doetinchem",
+			"Duiven",
+			"Lingewaard",
+			"Montferland",
+			"Rheden",
+			"Westervoort"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"montferland": {
+		"kind": "region",
+		"borders": [
+			"Doetinchem",
+			"Oude IJsselstreek",
+			"Zevenaar"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"overbetuwe": {
+		"kind": "region",
+		"borders": [
+			"Arnhem",
+			"Beuningen",
+			"Lingewaard",
+			"Neder-Betuwe",
+			"Nijmegen",
+			"Renkum",
+			"Wageningen"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"neder-betuwe": {
+		"kind": "region",
+		"borders": [
+			"Beuningen",
+			"Buren",
+			"Druten",
+			"Overbetuwe",
+			"Tiel",
+			"Wageningen",
+			"West Maas en Waal"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"aalten": {
+		"kind": "region",
+		"borders": [
+			"Oost Gelre",
+			"Oude IJsselstreek",
+			"Winterswijk"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"oude-ijsselstreek": {
+		"kind": "region",
+		"borders": [
+			"Aalten",
+			"Bronckhorst",
+			"Doetinchem",
+			"Montferland",
+			"Oost Gelre"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"lingewaard": {
+		"kind": "region",
+		"borders": [
+			"Arnhem",
+			"Berg en Dal",
+			"Duiven",
+			"Nijmegen",
+			"Overbetuwe",
+			"Westervoort",
+			"Zevenaar"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"tiel": {
+		"kind": "region",
+		"borders": [
+			"Buren",
+			"Neder-Betuwe",
+			"West Betuwe",
+			"West Maas en Waal"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"west-betuwe": {
+		"kind": "region",
+		"borders": [
+			"Buren",
+			"Culemborg",
+			"Maasdriel",
+			"Tiel",
+			"West Maas en Waal",
+			"Zaltbommel"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"druten": {
+		"kind": "region",
+		"borders": [
+			"Beuningen",
+			"Neder-Betuwe",
+			"West Maas en Waal",
+			"Wijchen"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"beuningen": {
+		"kind": "region",
+		"borders": [
+			"Druten",
+			"Neder-Betuwe",
+			"Nijmegen",
+			"Overbetuwe",
+			"Wijchen"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"west-maas-en-waal": {
+		"kind": "region",
+		"borders": [
+			"Druten",
+			"Maasdriel",
+			"Neder-Betuwe",
+			"Tiel",
+			"West Betuwe",
+			"Wijchen"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"nijmegen": {
+		"kind": "region",
+		"borders": [
+			"Berg en Dal",
+			"Beuningen",
+			"Heumen",
+			"Lingewaard",
+			"Overbetuwe",
+			"Wijchen"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"wijchen": {
+		"kind": "region",
+		"borders": [
+			"Beuningen",
+			"Druten",
+			"Heumen",
+			"Nijmegen",
+			"West Maas en Waal"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"berg-en-dal": {
+		"kind": "region",
+		"borders": [
+			"Heumen",
+			"Lingewaard",
+			"Nijmegen",
+			"Zevenaar"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"maasdriel": {
+		"kind": "region",
+		"borders": [
+			"West Betuwe",
+			"West Maas en Waal",
+			"Zaltbommel"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"zaltbommel": {
+		"kind": "region",
+		"borders": [
+			"Maasdriel",
+			"West Betuwe"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"heumen": {
+		"kind": "region",
+		"borders": [
+			"Berg en Dal",
+			"Nijmegen",
+			"Wijchen"
+		],
+		"coastal": false,
+		"position": "south"
+	}
+}

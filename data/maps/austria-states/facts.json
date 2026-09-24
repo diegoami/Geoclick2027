@@ -1,0 +1,158 @@
+{
+	"wien": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Niederösterreich"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Vienna",
+			"nameDe": "Wien",
+			"nameIt": "Vienna",
+			"population": 2400000
+		},
+		"position": "north-east"
+	},
+	"niederosterreich": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Burgenland",
+			"Oberösterreich",
+			"Steiermark",
+			"Wien"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Wiener Neustadt",
+			"nameDe": "Wiener Neustadt",
+			"nameIt": "Wiener Neustadt",
+			"population": 82762
+		},
+		"position": "north-east"
+	},
+	"oberosterreich": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Niederösterreich",
+			"Salzburg",
+			"Steiermark"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Linz",
+			"nameDe": "Linz",
+			"nameIt": "Linz",
+			"population": 349161
+		},
+		"position": "centre"
+	},
+	"salzburg": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Kärnten",
+			"Oberösterreich",
+			"Steiermark",
+			"Tirol"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Salzburg",
+			"nameDe": "Salzburg",
+			"nameIt": "Salisburgo",
+			"population": 206279
+		},
+		"position": "centre"
+	},
+	"burgenland": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Niederösterreich",
+			"Steiermark"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Eisenstadt",
+			"nameDe": "Eisenstadt",
+			"nameIt": "Eisenstadt",
+			"population": 13165
+		},
+		"position": "east"
+	},
+	"steiermark": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Burgenland",
+			"Kärnten",
+			"Niederösterreich",
+			"Oberösterreich",
+			"Salzburg"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Graz",
+			"nameDe": "Graz",
+			"nameIt": "Graz",
+			"population": 263234
+		},
+		"position": "south-east"
+	},
+	"vorarlberg": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Tirol"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bregenz",
+			"nameDe": "Bregenz",
+			"nameIt": "Bregenz",
+			"population": 26928
+		},
+		"position": "south-west"
+	},
+	"tirol": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Kärnten",
+			"Salzburg",
+			"Vorarlberg"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Innsbruck",
+			"nameDe": "Innsbruck",
+			"nameIt": "Innsbruck",
+			"population": 155214
+		},
+		"position": "south-west"
+	},
+	"karnten": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Salzburg",
+			"Steiermark",
+			"Tirol"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Klagenfurt",
+			"nameDe": "Klagenfurt am Wörthersee",
+			"nameIt": "Klagenfurt am Wörthersee",
+			"population": 90610
+		},
+		"peak": {
+			"name": "Grossglockner",
+			"elevation": 3798
+		},
+		"position": "south"
+	}
+}

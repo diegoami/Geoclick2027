@@ -1,0 +1,2409 @@
+{
+	"id": "germany-districts-center",
+	"name": "Germany — Districts — Center",
+	"country": "Germany",
+	"attribution": "© GeoBasis-DE / BKG 2023, dl-de/by-2-0 (via geoBoundaries); Natural Earth (public domain), https://www.naturalearthdata.com",
+	"boundarySource": "data/source/geoboundaries/DEU-ADM3.geojson",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "landkreis-kassel",
+			"name": "Landkreis Kassel",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.42725,
+				51.4139
+			],
+			"bbox": [
+				9.0995,
+				51.1704,
+				9.755,
+				51.6574
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						9.1614,
+						51.3798
+					],
+					[
+						9.3754,
+						51.4966
+					],
+					[
+						9.5894,
+						51.4855
+					]
+				],
+				"aspect": 0.96
+			}
+		},
+		{
+			"id": "kassel",
+			"name": "Kassel",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.46245,
+				51.308049999999994
+			],
+			"bbox": [
+				9.3569,
+				51.2619,
+				9.568,
+				51.3542
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						9.3841,
+						51.3175
+					],
+					[
+						9.4535,
+						51.3026
+					],
+					[
+						9.5229,
+						51.3087
+					]
+				],
+				"aspect": 1.1
+			}
+		},
+		{
+			"id": "waldeck-frankenberg",
+			"name": "Waldeck-Frankenberg",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.84605,
+				51.22425
+			],
+			"bbox": [
+				8.4779,
+				50.9372,
+				9.2142,
+				51.5113
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						8.5758,
+						51.0436
+					],
+					[
+						8.8474,
+						51.2223
+					],
+					[
+						9.119,
+						51.2374
+					]
+				],
+				"aspect": 0.81
+			}
+		},
+		{
+			"id": "werra-mei-ner-kreis",
+			"name": "Werra-Meißner-Kreis",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.922,
+				51.20515
+			],
+			"bbox": [
+				9.6288,
+				50.9929,
+				10.2152,
+				51.4174
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						9.79,
+						51.3481
+					],
+					[
+						9.8635,
+						51.1736
+					],
+					[
+						10.0945,
+						51.0701
+					]
+				],
+				"aspect": 1.56
+			}
+		},
+		{
+			"id": "schwalm-eder-kreis",
+			"name": "Schwalm-Eder-Kreis",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.37605,
+				51.0159
+			],
+			"bbox": [
+				8.9746,
+				50.7769,
+				9.7775,
+				51.2549
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						9.1521,
+						50.981
+					],
+					[
+						9.3917,
+						51.004
+					],
+					[
+						9.6313,
+						51.1039
+					]
+				],
+				"aspect": 0.98
+			}
+		},
+		{
+			"id": "hersfeld-rotenburg",
+			"name": "Hersfeld-Rotenburg",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.74855,
+				50.90105
+			],
+			"bbox": [
+				9.4411,
+				50.7189,
+				10.056,
+				51.0832
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						9.5531,
+						50.8643
+					],
+					[
+						9.7381,
+						50.9519
+					],
+					[
+						9.923,
+						50.9275
+					]
+				],
+				"aspect": 0.84
+			}
+		},
+		{
+			"id": "marburg-biedenkopf",
+			"name": "Marburg-Biedenkopf",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.752199999999998,
+				50.836
+			],
+			"bbox": [
+				8.3555,
+				50.6753,
+				9.1489,
+				50.9967
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						8.4587,
+						50.8453
+					],
+					[
+						8.7427,
+						50.8056
+					],
+					[
+						9.0211,
+						50.8538
+					]
+				],
+				"aspect": 1.42
+			}
+		},
+		{
+			"id": "altenkirchen-westerwald",
+			"name": "Altenkirchen (Westerwald)",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.73975,
+				50.754999999999995
+			],
+			"bbox": [
+				7.4392,
+				50.5701,
+				8.0403,
+				50.9399
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						7.5001,
+						50.6359
+					],
+					[
+						7.6723,
+						50.7609
+					],
+					[
+						7.9246,
+						50.8102
+					]
+				],
+				"aspect": 2.88
+			}
+		},
+		{
+			"id": "lahn-dill-kreis",
+			"name": "Lahn-Dill-Kreis",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.3788,
+				50.64065
+			],
+			"bbox": [
+				8.1101,
+				50.3994,
+				8.6475,
+				50.8819
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						8.2522,
+						50.8039
+					],
+					[
+						8.3374,
+						50.6305
+					],
+					[
+						8.5218,
+						50.4887
+					]
+				],
+				"aspect": 1.96
+			}
+		},
+		{
+			"id": "vogelsbergkreis",
+			"name": "Vogelsbergkreis",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.2832,
+				50.613249999999994
+			],
+			"bbox": [
+				8.9184,
+				50.3899,
+				9.648,
+				50.8366
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						9.0071,
+						50.7047
+					],
+					[
+						9.2267,
+						50.5981
+					],
+					[
+						9.4463,
+						50.6252
+					]
+				],
+				"aspect": 0.8
+			}
+		},
+		{
+			"id": "fulda",
+			"name": "Fulda",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.755849999999999,
+				50.57985
+			],
+			"bbox": [
+				9.4287,
+				50.3561,
+				10.083,
+				50.8036
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						9.5147,
+						50.5056
+					],
+					[
+						9.7555,
+						50.6082
+					],
+					[
+						9.9962,
+						50.5639
+					]
+				],
+				"aspect": 1.25
+			}
+		},
+		{
+			"id": "neuwied",
+			"name": "Neuwied",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.4582999999999995,
+				50.563500000000005
+			],
+			"bbox": [
+				7.2124,
+				50.4118,
+				7.7042,
+				50.7152
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						7.3066,
+						50.5823
+					],
+					[
+						7.4812,
+						50.5102
+					],
+					[
+						7.6559,
+						50.5447
+					]
+				],
+				"aspect": 1.33
+			}
+		},
+		{
+			"id": "landkreis-gie-en",
+			"name": "Landkreis Gießen",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.8204,
+				50.5614
+			],
+			"bbox": [
+				8.5218,
+				50.415,
+				9.119,
+				50.7078
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						8.6344,
+						50.6013
+					],
+					[
+						8.8299,
+						50.5611
+					],
+					[
+						9.0254,
+						50.5545
+					]
+				],
+				"aspect": 1.2
+			}
+		},
+		{
+			"id": "westerwaldkreis",
+			"name": "Westerwaldkreis",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.87495,
+				50.54025
+			],
+			"bbox": [
+				7.5983,
+				50.3474,
+				8.1516,
+				50.7331
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						7.7041,
+						50.5195
+					],
+					[
+						7.8919,
+						50.5457
+					],
+					[
+						8.0797,
+						50.616
+					]
+				],
+				"aspect": 0.8
+			}
+		},
+		{
+			"id": "ahrweiler",
+			"name": "Ahrweiler",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.04405,
+				50.47805
+			],
+			"bbox": [
+				6.7437,
+				50.3066,
+				7.3444,
+				50.6495
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						6.8359,
+						50.384
+					],
+					[
+						7.021,
+						50.4781
+					],
+					[
+						7.2438,
+						50.5311
+					]
+				],
+				"aspect": 1.64
+			}
+		},
+		{
+			"id": "limburg-weilburg",
+			"name": "Limburg-Weilburg",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.2194,
+				50.43175
+			],
+			"bbox": [
+				7.9716,
+				50.2641,
+				8.4672,
+				50.5994
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						8.0174,
+						50.4602
+					],
+					[
+						8.1797,
+						50.4094
+					],
+					[
+						8.342,
+						50.4176
+					]
+				],
+				"aspect": 0.84
+			}
+		},
+		{
+			"id": "koblenz",
+			"name": "Koblenz",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.5865,
+				50.348
+			],
+			"bbox": [
+				7.4841,
+				50.2857,
+				7.6889,
+				50.4103
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						7.5114,
+						50.3449
+					],
+					[
+						7.5874,
+						50.3432
+					],
+					[
+						7.6634,
+						50.3578
+					]
+				],
+				"aspect": 1.6
+			}
+		},
+		{
+			"id": "wetteraukreis",
+			"name": "Wetteraukreis",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.9004,
+				50.330299999999994
+			],
+			"bbox": [
+				8.5141,
+				50.1626,
+				9.2867,
+				50.498
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						8.6413,
+						50.3692
+					],
+					[
+						8.9296,
+						50.3063
+					],
+					[
+						9.2116,
+						50.379
+					]
+				],
+				"aspect": 1.79
+			}
+		},
+		{
+			"id": "mayen-koblenz",
+			"name": "Mayen-Koblenz",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.32235,
+				50.3187
+			],
+			"bbox": [
+				6.9762,
+				50.1608,
+				7.6685,
+				50.4766
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						7.0606,
+						50.337
+					],
+					[
+						7.2687,
+						50.3468
+					],
+					[
+						7.4767,
+						50.3056
+					]
+				],
+				"aspect": 1.8
+			}
+		},
+		{
+			"id": "hochtaunuskreis",
+			"name": "Hochtaunuskreis",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.51885,
+				50.28725
+			],
+			"bbox": [
+				8.3263,
+				50.1595,
+				8.7114,
+				50.415
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						8.3975,
+						50.3158
+					],
+					[
+						8.5075,
+						50.2803
+					],
+					[
+						8.6175,
+						50.2534
+					]
+				],
+				"aspect": 0.67
+			}
+		},
+		{
+			"id": "main-kinzig-kreis",
+			"name": "Main-Kinzig-Kreis",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.264,
+				50.26525
+			],
+			"bbox": [
+				8.7806,
+				50.0671,
+				9.7474,
+				50.4634
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						8.9065,
+						50.1683
+					],
+					[
+						9.3002,
+						50.2061
+					],
+					[
+						9.636,
+						50.3438
+					]
+				],
+				"aspect": 2.9
+			}
+		},
+		{
+			"id": "rhein-lahn-kreis",
+			"name": "Rhein-Lahn-Kreis",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.85625,
+				50.24055
+			],
+			"bbox": [
+				7.5906,
+				50.0665,
+				8.1219,
+				50.4146
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						7.6756,
+						50.2394
+					],
+					[
+						7.8567,
+						50.2253
+					],
+					[
+						8.0378,
+						50.3224
+					]
+				],
+				"aspect": 1.13
+			}
+		},
+		{
+			"id": "vulkaneifel",
+			"name": "Vulkaneifel",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.7269000000000005,
+				50.2308
+			],
+			"bbox": [
+				6.385,
+				50.0734,
+				7.0688,
+				50.3882
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						6.5527,
+						50.2866
+					],
+					[
+						6.749,
+						50.1906
+					],
+					[
+						6.9452,
+						50.215
+					]
+				],
+				"aspect": 1.07
+			}
+		},
+		{
+			"id": "rheingau-taunus-kreis",
+			"name": "Rheingau-Taunus-Kreis",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.09125,
+				50.1338
+			],
+			"bbox": [
+				7.774,
+				49.9718,
+				8.4085,
+				50.2958
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						7.8986,
+						50.0296
+					],
+					[
+						8.0585,
+						50.1789
+					],
+					[
+						8.3239,
+						50.2432
+					]
+				],
+				"aspect": 2.17
+			}
+		},
+		{
+			"id": "frankfurt-am-main",
+			"name": "Frankfurt am Main",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.6343,
+				50.122
+			],
+			"bbox": [
+				8.4787,
+				50.0177,
+				8.7899,
+				50.2263
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						8.5481,
+						50.0724
+					],
+					[
+						8.6669,
+						50.0967
+					],
+					[
+						8.7103,
+						50.1689
+					]
+				],
+				"aspect": 1.29
+			}
+		},
+		{
+			"id": "cochem-zell",
+			"name": "Cochem-Zell",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.1673,
+				50.1202
+			],
+			"bbox": [
+				6.9527,
+				49.9594,
+				7.3819,
+				50.281
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						7.0059,
+						50.1605
+					],
+					[
+						7.1471,
+						50.159
+					],
+					[
+						7.2884,
+						50.0831
+					]
+				],
+				"aspect": 0.75
+			}
+		},
+		{
+			"id": "main-taunus-kreis",
+			"name": "Main-Taunus-Kreis",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.4589,
+				50.0998
+			],
+			"bbox": [
+				8.3266,
+				49.9981,
+				8.5912,
+				50.2015
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						8.355,
+						50.1246
+					],
+					[
+						8.4591,
+						50.0587
+					],
+					[
+						8.5631,
+						50.1528
+					]
+				],
+				"aspect": 1.8
+			}
+		},
+		{
+			"id": "offenbach-am-main",
+			"name": "Offenbach am Main",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.78055,
+				50.099549999999994
+			],
+			"bbox": [
+				8.7178,
+				50.0624,
+				8.8433,
+				50.1367
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						8.7379,
+						50.086
+					],
+					[
+						8.7828,
+						50.1059
+					],
+					[
+						8.8277,
+						50.0982
+					]
+				],
+				"aspect": 1.58
+			}
+		},
+		{
+			"id": "wiesbaden",
+			"name": "Wiesbaden",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.2544,
+				50.0717
+			],
+			"bbox": [
+				8.1227,
+				49.9951,
+				8.3861,
+				50.1483
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						8.1567,
+						50.0838
+					],
+					[
+						8.2576,
+						50.083
+					],
+					[
+						8.3585,
+						50.0686
+					]
+				],
+				"aspect": 1.26
+			}
+		},
+		{
+			"id": "eifelkreis-bitburg-prum",
+			"name": "Eifelkreis Bitburg-Prüm",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.41845,
+				50.06755
+			],
+			"bbox": [
+				6.1124,
+				49.8106,
+				6.7245,
+				50.3245
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						6.1938,
+						50.0836
+					],
+					[
+						6.4171,
+						50.1066
+					],
+					[
+						6.6405,
+						49.9931
+					]
+				],
+				"aspect": 0.72
+			}
+		},
+		{
+			"id": "rhein-hunsruck-kreis",
+			"name": "Rhein-Hunsrück-Kreis",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.483750000000001,
+				50.0583
+			],
+			"bbox": [
+				7.2027,
+				49.8561,
+				7.7648,
+				50.2605
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						7.3712,
+						50.0194
+					],
+					[
+						7.5167,
+						50.0583
+					],
+					[
+						7.6621,
+						50.0879
+					]
+				],
+				"aspect": 0.54
+			}
+		},
+		{
+			"id": "landkreis-offenbach",
+			"name": "Landkreis Offenbach",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.813400000000001,
+				50.04185
+			],
+			"bbox": [
+				8.5913,
+				49.9502,
+				9.0355,
+				50.1335
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						8.6415,
+						50.0019
+					],
+					[
+						8.8087,
+						50.0133
+					],
+					[
+						8.9701,
+						50.0438
+					]
+				],
+				"aspect": 2.01
+			}
+		},
+		{
+			"id": "mainz",
+			"name": "Mainz",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.2458,
+				49.965450000000004
+			],
+			"bbox": [
+				8.1486,
+				49.8956,
+				8.343,
+				50.0353
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						8.1687,
+						49.9945
+					],
+					[
+						8.2406,
+						49.9839
+					],
+					[
+						8.3124,
+						49.9562
+					]
+				],
+				"aspect": 1.25
+			}
+		},
+		{
+			"id": "mainz-bingen",
+			"name": "Mainz-Bingen",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.03365,
+				49.921099999999996
+			],
+			"bbox": [
+				7.6672,
+				49.7596,
+				8.4001,
+				50.0826
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						7.7273,
+						50.0202
+					],
+					[
+						8.0406,
+						49.9458
+					],
+					[
+						8.3317,
+						49.8409
+					]
+				],
+				"aspect": 5.83
+			}
+		},
+		{
+			"id": "bernkastel-wittlich",
+			"name": "Bernkastel-Wittlich",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.9748,
+				49.9012
+			],
+			"bbox": [
+				6.6873,
+				49.673,
+				7.2623,
+				50.1294
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						6.7631,
+						50.0111
+					],
+					[
+						6.9736,
+						49.8805
+					],
+					[
+						7.184,
+						49.8799
+					]
+				],
+				"aspect": 1.02
+			}
+		},
+		{
+			"id": "gro-gerau",
+			"name": "Groß-Gerau",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.4583,
+				49.892300000000006
+			],
+			"bbox": [
+				8.2882,
+				49.7229,
+				8.6284,
+				50.0617
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						8.4896,
+						50.0069
+					],
+					[
+						8.4009,
+						49.8769
+					],
+					[
+						8.5059,
+						49.7468
+					]
+				],
+				"aspect": 2.5
+			}
+		},
+		{
+			"id": "darmstadt",
+			"name": "Darmstadt",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.669899999999998,
+				49.8759
+			],
+			"bbox": [
+				8.5903,
+				49.7976,
+				8.7495,
+				49.9542
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						8.6337,
+						49.8252
+					],
+					[
+						8.6697,
+						49.8809
+					],
+					[
+						8.6989,
+						49.9381
+					]
+				],
+				"aspect": 1.77
+			}
+		},
+		{
+			"id": "darmstadt-dieburg",
+			"name": "Darmstadt-Dieburg",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.78495,
+				49.86045
+			],
+			"bbox": [
+				8.5198,
+				49.7231,
+				9.0501,
+				49.9978
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						8.7205,
+						49.7812
+					],
+					[
+						8.8349,
+						49.8792
+					],
+					[
+						8.993,
+						49.9208
+					]
+				],
+				"aspect": 1.44
+			}
+		},
+		{
+			"id": "bad-kreuznach",
+			"name": "Bad Kreuznach",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.6793,
+				49.8256
+			],
+			"bbox": [
+				7.3898,
+				49.6525,
+				7.9688,
+				49.9987
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						7.4835,
+						49.7832
+					],
+					[
+						7.6884,
+						49.8433
+					],
+					[
+						7.8933,
+						49.8514
+					]
+				],
+				"aspect": 1.28
+			}
+		},
+		{
+			"id": "trier",
+			"name": "Trier",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.6462,
+				49.776700000000005
+			],
+			"bbox": [
+				6.5542,
+				49.7,
+				6.7382,
+				49.8534
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						6.5977,
+						49.7196
+					],
+					[
+						6.69,
+						49.7584
+					],
+					[
+						6.7008,
+						49.8283
+					]
+				],
+				"aspect": 2.17
+			}
+		},
+		{
+			"id": "alzey-worms",
+			"name": "Alzey-Worms",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.192,
+				49.74405
+			],
+			"bbox": [
+				7.9054,
+				49.5881,
+				8.4786,
+				49.9
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						7.9746,
+						49.7837
+					],
+					[
+						8.1471,
+						49.7753
+					],
+					[
+						8.3197,
+						49.707
+					]
+				],
+				"aspect": 1.4
+			}
+		},
+		{
+			"id": "birkenfeld",
+			"name": "Birkenfeld",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.275399999999999,
+				49.724050000000005
+			],
+			"bbox": [
+				7.028,
+				49.5486,
+				7.5228,
+				49.8995
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						7.1039,
+						49.6675
+					],
+					[
+						7.252,
+						49.7434
+					],
+					[
+						7.4,
+						49.7274
+					]
+				],
+				"aspect": 0.71
+			}
+		},
+		{
+			"id": "trier-saarburg",
+			"name": "Trier-Saarburg",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.7049,
+				49.7175
+			],
+			"bbox": [
+				6.359,
+				49.5175,
+				7.0508,
+				49.9175
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						6.4667,
+						49.6224
+					],
+					[
+						6.6937,
+						49.6941
+					],
+					[
+						6.9206,
+						49.7229
+					]
+				],
+				"aspect": 1.68
+			}
+		},
+		{
+			"id": "worms",
+			"name": "Worms",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.342649999999999,
+				49.66175
+			],
+			"bbox": [
+				8.2389,
+				49.5868,
+				8.4464,
+				49.7367
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						8.2984,
+						49.5933
+					],
+					[
+						8.3395,
+						49.6265
+					],
+					[
+						8.326,
+						49.6785
+					]
+				],
+				"aspect": 1.04
+			}
+		},
+		{
+			"id": "odenwaldkreis",
+			"name": "Odenwaldkreis",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.9734,
+				49.65855
+			],
+			"bbox": [
+				8.796,
+				49.4706,
+				9.1508,
+				49.8465
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						8.9925,
+						49.5295
+					],
+					[
+						8.935,
+						49.6657
+					],
+					[
+						8.9999,
+						49.7989
+					]
+				],
+				"aspect": 1.91
+			}
+		},
+		{
+			"id": "donnersbergkreis",
+			"name": "Donnersbergkreis",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.9254,
+				49.627700000000004
+			],
+			"bbox": [
+				7.6963,
+				49.4896,
+				8.1545,
+				49.7658
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						7.7552,
+						49.6575
+					],
+					[
+						7.9181,
+						49.6193
+					],
+					[
+						8.0811,
+						49.6125
+					]
+				],
+				"aspect": 1.03
+			}
+		},
+		{
+			"id": "bergstra-e",
+			"name": "Bergstraße",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.644200000000001,
+				49.5753
+			],
+			"bbox": [
+				8.3565,
+				49.396,
+				8.9319,
+				49.7546
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						8.426,
+						49.661
+					],
+					[
+						8.6716,
+						49.6838
+					],
+					[
+						8.8514,
+						49.5748
+					]
+				],
+				"aspect": 1.94
+			}
+		},
+		{
+			"id": "kusel",
+			"name": "Kusel",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.4904,
+				49.5398
+			],
+			"bbox": [
+				7.2526,
+				49.372,
+				7.7282,
+				49.7076
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						7.3244,
+						49.4214
+					],
+					[
+						7.4189,
+						49.5659
+					],
+					[
+						7.6263,
+						49.6439
+					]
+				],
+				"aspect": 2.34
+			}
+		},
+		{
+			"id": "frankenthal-pfalz",
+			"name": "Frankenthal (Pfalz)",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.36625,
+				49.52975
+			],
+			"bbox": [
+				8.3094,
+				49.4853,
+				8.4231,
+				49.5742
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						8.3263,
+						49.5001
+					],
+					[
+						8.3434,
+						49.5425
+					],
+					[
+						8.4043,
+						49.5601
+					]
+				],
+				"aspect": 2.36
+			}
+		},
+		{
+			"id": "st-wendel",
+			"name": "St. Wendel",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.096299999999999,
+				49.525400000000005
+			],
+			"bbox": [
+				6.8915,
+				49.4114,
+				7.3011,
+				49.6394
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						6.9926,
+						49.5404
+					],
+					[
+						7.1212,
+						49.4987
+					],
+					[
+						7.2498,
+						49.5025
+					]
+				],
+				"aspect": 0.93
+			}
+		},
+		{
+			"id": "merzig-wadern",
+			"name": "Merzig-Wadern",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.66,
+				49.494299999999996
+			],
+			"bbox": [
+				6.357,
+				49.3752,
+				6.963,
+				49.6134
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						6.4106,
+						49.4819
+					],
+					[
+						6.6886,
+						49.4322
+					],
+					[
+						6.9223,
+						49.5422
+					]
+				],
+				"aspect": 2.96
+			}
+		},
+		{
+			"id": "ludwigshafen-am-rhein",
+			"name": "Ludwigshafen am Rhein",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.39095,
+				49.48425
+			],
+			"bbox": [
+				8.3094,
+				49.4267,
+				8.4725,
+				49.5418
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						8.3204,
+						49.483
+					],
+					[
+						8.3857,
+						49.4968
+					],
+					[
+						8.451,
+						49.4699
+					]
+				],
+				"aspect": 1.51
+			}
+		},
+		{
+			"id": "bad-durkheim",
+			"name": "Bad Dürkheim",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.0732,
+				49.4683
+			],
+			"bbox": [
+				7.832,
+				49.309,
+				8.3144,
+				49.6276
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						7.9242,
+						49.3413
+					],
+					[
+						8.088,
+						49.5366
+					],
+					[
+						8.2519,
+						49.484
+					]
+				],
+				"aspect": 1.23
+			}
+		},
+		{
+			"id": "landkreis-kaiserslautern",
+			"name": "Landkreis Kaiserslautern",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.68845,
+				49.44775
+			],
+			"bbox": [
+				7.3925,
+				49.3068,
+				7.9844,
+				49.5887
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						7.4551,
+						49.4225
+					],
+					[
+						7.6891,
+						49.5249
+					],
+					[
+						7.9231,
+						49.4813
+					]
+				],
+				"aspect": 2.7
+			}
+		},
+		{
+			"id": "kaiserslautern",
+			"name": "Kaiserslautern",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.75295,
+				49.427
+			],
+			"bbox": [
+				7.6352,
+				49.3589,
+				7.8707,
+				49.4951
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						7.6734,
+						49.4412
+					],
+					[
+						7.7573,
+						49.4413
+					],
+					[
+						7.8412,
+						49.4297
+					]
+				],
+				"aspect": 1.25
+			}
+		},
+		{
+			"id": "rhein-pfalz-kreis",
+			"name": "Rhein-Pfalz-Kreis",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.3719,
+				49.426
+			],
+			"bbox": [
+				8.2358,
+				49.2498,
+				8.508,
+				49.6022
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						8.3315,
+						49.447
+					],
+					[
+						8.396,
+						49.3661
+					],
+					[
+						8.3875,
+						49.2768
+					]
+				],
+				"aspect": 2.87
+			}
+		},
+		{
+			"id": "neunkirchen",
+			"name": "Neunkirchen",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.10475,
+				49.367999999999995
+			],
+			"bbox": [
+				6.9169,
+				49.2966,
+				7.2926,
+				49.4394
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						6.9606,
+						49.3982
+					],
+					[
+						7.0967,
+						49.3902
+					],
+					[
+						7.2225,
+						49.3491
+					]
+				],
+				"aspect": 2.27
+			}
+		},
+		{
+			"id": "saarlouis",
+			"name": "Saarlouis",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.7650500000000005,
+				49.3585
+			],
+			"bbox": [
+				6.5408,
+				49.2153,
+				6.9893,
+				49.5017
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						6.6093,
+						49.332
+					],
+					[
+						6.7508,
+						49.2586
+					],
+					[
+						6.8924,
+						49.4066
+					]
+				],
+				"aspect": 1.14
+			}
+		},
+		{
+			"id": "neustadt-an-der-weinstra-e",
+			"name": "Neustadt an der Weinstraße",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.1585,
+				49.344
+			],
+			"bbox": [
+				7.9996,
+				49.2961,
+				8.3174,
+				49.3919
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						8.0347,
+						49.3467
+					],
+					[
+						8.1621,
+						49.366
+					],
+					[
+						8.2655,
+						49.3131
+					]
+				],
+				"aspect": 3.8
+			}
+		},
+		{
+			"id": "speyer",
+			"name": "Speyer",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.43135,
+				49.32745
+			],
+			"bbox": [
+				8.3754,
+				49.283,
+				8.4873,
+				49.3719
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						8.4065,
+						49.3565
+					],
+					[
+						8.4343,
+						49.3222
+					],
+					[
+						8.4634,
+						49.2884
+					]
+				],
+				"aspect": 2.22
+			}
+		},
+		{
+			"id": "saarpfalz-kreis",
+			"name": "Saarpfalz-Kreis",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.2324,
+				49.26275
+			],
+			"bbox": [
+				7.0627,
+				49.1173,
+				7.4021,
+				49.4082
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						7.2066,
+						49.1417
+					],
+					[
+						7.1952,
+						49.2668
+					],
+					[
+						7.3268,
+						49.3563
+					]
+				],
+				"aspect": 1.7
+			}
+		},
+		{
+			"id": "zweibrucken",
+			"name": "Zweibrücken",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.35855,
+				49.25295
+			],
+			"bbox": [
+				7.2891,
+				49.1895,
+				7.428,
+				49.3164
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						7.3166,
+						49.2169
+					],
+					[
+						7.3862,
+						49.2413
+					],
+					[
+						7.4041,
+						49.2904
+					]
+				],
+				"aspect": 1.97
+			}
+		},
+		{
+			"id": "regionalverband-saarbrucken",
+			"name": "Regionalverband Saarbrücken",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.92285,
+				49.2448
+			],
+			"bbox": [
+				6.7112,
+				49.1119,
+				7.1345,
+				49.3777
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "landau-in-der-pfalz",
+			"name": "Landau in der Pfalz",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.02275,
+				49.241
+			],
+			"bbox": [
+				7.8677,
+				49.1687,
+				8.1778,
+				49.3133
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						8.0716,
+						49.2043
+					],
+					[
+						8.1155,
+						49.2007
+					],
+					[
+						8.1594,
+						49.2016
+					]
+				],
+				"aspect": 1.02
+			}
+		},
+		{
+			"id": "sudwestpfalz",
+			"name": "Südwestpfalz",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.618499999999999,
+				49.20495
+			],
+			"bbox": [
+				7.3203,
+				49.0329,
+				7.9167,
+				49.377
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "pirmasens",
+			"name": "Pirmasens",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.595000000000001,
+				49.1984
+			],
+			"bbox": [
+				7.5166,
+				49.1636,
+				7.6734,
+				49.2332
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						7.5422,
+						49.199
+					],
+					[
+						7.5957,
+						49.1925
+					],
+					[
+						7.6492,
+						49.2001
+					]
+				],
+				"aspect": 1.16
+			}
+		},
+		{
+			"id": "sudliche-weinstra-e",
+			"name": "Südliche Weinstraße",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.0743,
+				49.171549999999996
+			],
+			"bbox": [
+				7.8283,
+				48.9993,
+				8.3203,
+				49.3438
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "germersheim",
+			"name": "Germersheim",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.24075,
+				49.13165
+			],
+			"bbox": [
+				8.0684,
+				48.9666,
+				8.4131,
+				49.2967
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						8.143,
+						49.0043
+					],
+					[
+						8.2999,
+						49.1105
+					],
+					[
+						8.3319,
+						49.2558
+					]
+				],
+				"aspect": 2.53
+			}
+		}
+	],
+	"tourOrder": [
+		"landkreis-kassel",
+		"kassel",
+		"waldeck-frankenberg",
+		"werra-mei-ner-kreis",
+		"schwalm-eder-kreis",
+		"hersfeld-rotenburg",
+		"marburg-biedenkopf",
+		"altenkirchen-westerwald",
+		"lahn-dill-kreis",
+		"vogelsbergkreis",
+		"fulda",
+		"neuwied",
+		"landkreis-gie-en",
+		"westerwaldkreis",
+		"ahrweiler",
+		"limburg-weilburg",
+		"koblenz",
+		"wetteraukreis",
+		"mayen-koblenz",
+		"hochtaunuskreis",
+		"main-kinzig-kreis",
+		"rhein-lahn-kreis",
+		"vulkaneifel",
+		"rheingau-taunus-kreis",
+		"frankfurt-am-main",
+		"cochem-zell",
+		"main-taunus-kreis",
+		"offenbach-am-main",
+		"wiesbaden",
+		"eifelkreis-bitburg-prum",
+		"rhein-hunsruck-kreis",
+		"landkreis-offenbach",
+		"mainz",
+		"mainz-bingen",
+		"bernkastel-wittlich",
+		"gro-gerau",
+		"darmstadt",
+		"darmstadt-dieburg",
+		"bad-kreuznach",
+		"trier",
+		"alzey-worms",
+		"birkenfeld",
+		"trier-saarburg",
+		"worms",
+		"odenwaldkreis",
+		"donnersbergkreis",
+		"bergstra-e",
+		"kusel",
+		"frankenthal-pfalz",
+		"st-wendel",
+		"merzig-wadern",
+		"ludwigshafen-am-rhein",
+		"bad-durkheim",
+		"landkreis-kaiserslautern",
+		"kaiserslautern",
+		"rhein-pfalz-kreis",
+		"neunkirchen",
+		"saarlouis",
+		"neustadt-an-der-weinstra-e",
+		"speyer",
+		"saarpfalz-kreis",
+		"zweibrucken",
+		"regionalverband-saarbrucken",
+		"landau-in-der-pfalz",
+		"sudwestpfalz",
+		"pirmasens",
+		"sudliche-weinstra-e",
+		"germersheim"
+	]
+}

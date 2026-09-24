@@ -1,0 +1,318 @@
+{
+	"id": "austria-states",
+	"name": "Austria — States",
+	"country": "Austria",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "wien",
+			"name": "Wien",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.3798,
+				48.23865
+			],
+			"bbox": [
+				16.1882,
+				48.1492,
+				16.5714,
+				48.3281
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						16.2395,
+						48.2
+					],
+					[
+						16.3866,
+						48.2537
+					],
+					[
+						16.5337,
+						48.2134
+					]
+				],
+				"aspect": 1.51
+			}
+		},
+		{
+			"id": "niederosterreich",
+			"name": "Niederösterreich",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.75395,
+				48.225449999999995
+			],
+			"bbox": [
+				14.4454,
+				47.443,
+				17.0625,
+				49.0079
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "oberosterreich",
+			"name": "Oberösterreich",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.860199999999999,
+				48.126400000000004
+			],
+			"bbox": [
+				12.745,
+				47.4864,
+				14.9754,
+				48.7664
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						13.1708,
+						48.1286
+					],
+					[
+						13.9631,
+						48.0049
+					],
+					[
+						14.7555,
+						48.3774
+					]
+				],
+				"aspect": 1.52
+			}
+		},
+		{
+			"id": "salzburg",
+			"name": "Salzburg",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.010750000000002,
+				47.4929
+			],
+			"bbox": [
+				12.0843,
+				46.9542,
+				13.9372,
+				48.0316
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						12.277,
+						47.1331
+					],
+					[
+						13.0106,
+						47.7097
+					],
+					[
+						13.7441,
+						47.2139
+					]
+				],
+				"aspect": 2.35
+			}
+		},
+		{
+			"id": "burgenland",
+			"name": "Burgenland",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.55735,
+				47.4748
+			],
+			"bbox": [
+				16.0186,
+				46.8369,
+				17.0961,
+				48.1127
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						16.1788,
+						47.1509
+					],
+					[
+						16.5339,
+						47.5866
+					],
+					[
+						16.889,
+						48.0187
+					]
+				],
+				"aspect": 4.22
+			}
+		},
+		{
+			"id": "steiermark",
+			"name": "Steiermark",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.86485,
+				47.21995
+			],
+			"bbox": [
+				13.5818,
+				46.6146,
+				16.1479,
+				47.8253
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						13.8396,
+						47.4209
+					],
+					[
+						14.9296,
+						47.4444
+					],
+					[
+						15.8646,
+						47.0601
+					]
+				],
+				"aspect": 1.85
+			}
+		},
+		{
+			"id": "vorarlberg",
+			"name": "Vorarlberg",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.861650000000001,
+				47.1943
+			],
+			"bbox": [
+				9.5212,
+				46.8468,
+				10.2021,
+				47.5418
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						9.8002,
+						47.4826
+					],
+					[
+						9.8784,
+						47.2231
+					],
+					[
+						10.0083,
+						46.9726
+					]
+				],
+				"aspect": 1.57
+			}
+		},
+		{
+			"id": "tirol",
+			"name": "Tirol",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.53525,
+				47.17205
+			],
+			"bbox": [
+				10.1252,
+				46.6525,
+				12.9453,
+				47.6916
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						10.387,
+						47.1439
+					],
+					[
+						11.4646,
+						47.1353
+					],
+					[
+						12.3891,
+						47.5084
+					]
+				],
+				"aspect": 2.84
+			}
+		},
+		{
+			"id": "karnten",
+			"name": "Kärnten",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.869700000000002,
+				46.7652
+			],
+			"bbox": [
+				12.6338,
+				46.4184,
+				15.1056,
+				47.112
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						13.0089,
+						46.8601
+					],
+					[
+						13.8854,
+						46.6839
+					],
+					[
+						14.7923,
+						46.7547
+					]
+				],
+				"aspect": 2.41
+			}
+		}
+	],
+	"tourOrder": [
+		"wien",
+		"niederosterreich",
+		"oberosterreich",
+		"salzburg",
+		"burgenland",
+		"steiermark",
+		"vorarlberg",
+		"tirol",
+		"karnten"
+	]
+}

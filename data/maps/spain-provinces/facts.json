@@ -1,0 +1,1158 @@
+{
+	"asturias": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Cantabria",
+			"León",
+			"Lugo"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Gijón",
+			"nameDe": "Gijón",
+			"nameIt": "Gijón",
+			"population": 335972
+		},
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Named for the Astures, a people Rome needed two hundred years to subdue; the name may come from a river, the Astura.",
+				"The only part of Iberia the Moors never held, which is why every later Spanish king's heir is called the Prince of Asturias.",
+				"Its cider is poured from above the head to aerate it, and the region makes most of Spain’s blue cheese, Cabrales."
+			],
+			"it": [
+				"Prende il nome dagli Asturi, un popolo che Roma impiegò duecento anni a sottomettere; il nome potrebbe venire da un fiume, l’Astura.",
+				"L’unica parte della penisola iberica mai occupata dai Mori, ed è per questo che ogni successivo erede al trono di Spagna porta il titolo di Principe delle Asturie.",
+				"Il suo sidro si versa tenendo la bottiglia sopra la testa, per ossigenarlo, e la regione produce la maggior parte dell’erborinato spagnolo, il Cabrales."
+			]
+		}
+	},
+	"bizkaia": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Álava",
+			"Burgos",
+			"Cantabria",
+			"Gipuzkoa"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Bilbao",
+			"nameDe": "Bilbao",
+			"nameIt": "Bilbao",
+			"population": 875552
+		},
+		"position": "north"
+	},
+	"gipuzkoa": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Álava",
+			"Bizkaia",
+			"Navarra"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "San Sebastián",
+			"nameDe": "Donostia/San Sebastián",
+			"nameIt": "San Sebastián",
+			"population": 357468
+		},
+		"position": "north"
+	},
+	"a-coruna": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Lugo",
+			"Pontevedra"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "La Coruña",
+			"nameDe": "A Coruña",
+			"nameIt": "La Coruña",
+			"population": 370610
+		},
+		"position": "north-west"
+	},
+	"cantabria": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Asturias",
+			"Bizkaia",
+			"Burgos",
+			"León",
+			"Palencia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Santander",
+			"nameDe": "Santander",
+			"nameIt": "Santander",
+			"population": 208763
+		},
+		"position": "north",
+		"hooks": {
+			"en": [
+				"From the Cantabri, the other people who held out against Rome — Augustus came in person to finish the war, and it still took a decade.",
+				"The Altamira caves here hold paintings 36,000 years old; when they were found in 1880 nobody believed they were prehistoric.",
+				"Green and wet, unlike the Spain of the postcards: it gets more rain than London, which is why the north is called España Verde."
+			],
+			"it": [
+				"Dai Cantabri, l’altro popolo che resistette a Roma: Augusto venne di persona a chiudere la guerra, e ci volle comunque un decennio.",
+				"Le grotte di Altamira custodiscono pitture di 36.000 anni fa; quando furono scoperte, nel 1880, nessuno credette che fossero preistoriche.",
+				"Verde e piovosa, ben diversa dalla Spagna delle cartoline: piove più che a Londra, ed è per questo che il nord si chiama España Verde."
+			]
+		}
+	},
+	"lugo": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"A Coruña",
+			"Asturias",
+			"León",
+			"Ourense",
+			"Pontevedra"
+		],
+		"coastal": true,
+		"position": "north-west"
+	},
+	"alava": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Bizkaia",
+			"Burgos",
+			"Gipuzkoa",
+			"La Rioja",
+			"Navarra"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Vitoria",
+			"nameDe": "Vitoria-Gasteiz",
+			"nameIt": "Vitoria",
+			"population": 224578
+		},
+		"position": "north"
+	},
+	"leon": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Asturias",
+			"Cantabria",
+			"Lugo",
+			"Ourense",
+			"Palencia",
+			"Valladolid",
+			"Zamora"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "León",
+			"nameDe": "León",
+			"nameIt": "León",
+			"population": 136227
+		},
+		"peak": {
+			"name": "Torre de Cerredo",
+			"elevation": 2648
+		},
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Not the lion: from Latin legio, the camp of the Seventh Legion.",
+				"The lion on its arms is a pun the heralds could not resist.",
+				"Its 1188 assembly is recognised by UNESCO as the earliest parliamentary system in Europe."
+			],
+			"it": [
+				"Non il leone: dal latino legio, l’accampamento della Settima Legione.",
+				"Il leone nel suo stemma è un gioco di parole a cui gli araldisti non seppero resistere.",
+				"La sua assemblea del 1188 è riconosciuta dall’UNESCO come il più antico sistema parlamentare d’Europa."
+			]
+		}
+	},
+	"navarra": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Álava",
+			"Gipuzkoa",
+			"Huesca",
+			"La Rioja",
+			"Zaragoza"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Pamplona",
+			"nameDe": "Pamplona",
+			"nameIt": "Pamplona",
+			"population": 274545
+		},
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Probably Basque nava, a flat valley among hills, plus -erri, land.",
+				"An independent kingdom for seven centuries, straddling the Pyrenees; France kept the northern half until 1620.",
+				"The bulls run through Pamplona every July, a tradition Hemingway made famous in 1926."
+			],
+			"it": [
+				"Probabilmente dal basco nava, una valle piana tra le colline, più -erri, terra.",
+				"Regno indipendente per sette secoli, a cavallo dei Pirenei; la Francia ne tenne la metà settentrionale fino al 1620.",
+				"Ogni luglio i tori corrono per le vie di Pamplona, una tradizione che Hemingway rese celebre nel 1926."
+			]
+		}
+	},
+	"palencia": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Burgos",
+			"Cantabria",
+			"León",
+			"Valladolid"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"pontevedra": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"A Coruña",
+			"Lugo",
+			"Ourense"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Vigo",
+			"nameDe": "Vigo",
+			"nameIt": "Vigo",
+			"population": 378952
+		},
+		"position": "north-west"
+	},
+	"burgos": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Álava",
+			"Bizkaia",
+			"Cantabria",
+			"La Rioja",
+			"Palencia",
+			"Segovia",
+			"Soria",
+			"Valladolid"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Burgos",
+			"nameDe": "Burgos",
+			"nameIt": "Burgos",
+			"population": 170183
+		},
+		"position": "north",
+		"hooks": {
+			"en": [
+				"From Germanic burgs, a fortified town — a Visigothic word.",
+				"El Cid was born nearby and is buried in its cathedral, which is a UNESCO site.",
+				"Atapuerca in its province holds the oldest human remains in western Europe, about 1.2 million years old."
+			],
+			"it": [
+				"Dal germanico burgs, città fortificata: una parola visigota.",
+				"El Cid nacque poco lontano ed è sepolto nella sua cattedrale, patrimonio UNESCO.",
+				"Atapuerca, nella sua provincia, custodisce i più antichi resti umani dell’Europa occidentale, vecchi di circa 1,2 milioni di anni."
+			]
+		}
+	},
+	"la-rioja": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Álava",
+			"Burgos",
+			"Navarra",
+			"Soria",
+			"Zaragoza"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Logroño",
+			"nameDe": "Logroño",
+			"nameIt": "Logroño",
+			"population": 143698
+		},
+		"peak": {
+			"name": "Mount San Lorenzo",
+			"elevation": 2271
+		},
+		"position": "north",
+		"hooks": {
+			"en": [
+				"The river Oja, or possibly rio oja from the Arabic — and the article stays: it is La Rioja, never just Rioja, for the region.",
+				"Spain's smallest mainland region, and the one whose name is on more bottles than any other.",
+				"Dinosaur footprints — more than 10,000 of them — are preserved in its rock, and Spanish was first written down at the San Millán monastery here."
+			],
+			"it": [
+				"Il fiume Oja, o forse rio oja dall’arabo; e l’articolo non si toglie: per la regione è La Rioja, mai semplicemente Rioja.",
+				"La più piccola regione della Spagna continentale, e quella il cui nome compare su più bottiglie di qualunque altra.",
+				"Le sue rocce conservano impronte di dinosauro, più di 10.000, ed è qui, nel monastero di San Millán, che lo spagnolo fu scritto per la prima volta."
+			]
+		}
+	},
+	"ourense": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"León",
+			"Lugo",
+			"Pontevedra",
+			"Zamora"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ourense",
+			"nameDe": "Ourense",
+			"nameIt": "Ourense",
+			"population": 118107
+		},
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"From Latin auriense, \"of gold\", for gold panned in the Miño — or from aquae urentes, burning waters.",
+				"Its thermal springs are the most abundant in Spain, some at 65 °C, and pools line the river.",
+				"Its Roman bridge has been rebuilt repeatedly on the original piers."
+			],
+			"it": [
+				"Dal latino auriense, \"dell’oro\", per l’oro setacciato nel Miño, oppure da aquae urentes, \"acque ardenti\".",
+				"Le sue sorgenti termali sono le più abbondanti di Spagna, alcune a 65 °C, e lungo il fiume si susseguono le vasche.",
+				"Il suo ponte romano è stato ricostruito più volte sui piloni originali."
+			]
+		}
+	},
+	"huesca": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Lleida",
+			"Navarra",
+			"Zaragoza"
+		],
+		"coastal": false,
+		"peak": {
+			"name": "Pico de Aneto",
+			"elevation": 3404
+		},
+		"position": "north-east"
+	},
+	"girona": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Barcelona",
+			"Lleida"
+		],
+		"coastal": true,
+		"position": "north-east"
+	},
+	"lleida": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Barcelona",
+			"Girona",
+			"Huesca",
+			"Tarragona",
+			"Zaragoza"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"zaragoza": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Guadalajara",
+			"Huesca",
+			"La Rioja",
+			"Lleida",
+			"Navarra",
+			"Soria",
+			"Tarragona",
+			"Teruel"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Zaragoza",
+			"nameDe": "Saragossa",
+			"nameIt": "Saragozza",
+			"population": 649404
+		},
+		"position": "north",
+		"hooks": {
+			"en": [
+				"From Caesaraugusta, founded by Augustus — the name worn down through Arabic Saraqusta.",
+				"Its basilica of El Pilar is the first church in the world dedicated to the Virgin, by tradition.",
+				"Goya was born in a village nearby and painted a dome in that basilica."
+			],
+			"it": [
+				"Da Caesaraugusta, fondata da Augusto: un nome consumato dal tempo passando per l’arabo Saraqusta.",
+				"La sua basilica del Pilar è, per tradizione, la prima chiesa al mondo dedicata alla Vergine.",
+				"Goya nacque in un villaggio vicino e dipinse una cupola di quella basilica."
+			]
+		}
+	},
+	"barcelona": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Girona",
+			"Lleida",
+			"Tarragona"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Barcelona",
+			"nameDe": "Barcelona",
+			"nameIt": "Barcellona",
+			"population": 4920000
+		},
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Possibly from the Barcid family — Hamilcar Barca, Hannibal’s father — or from an Iberian name.",
+				"The Sagrada Família has been under construction since 1882 and is still unfinished.",
+				"Gaudí’s work here forms seven UNESCO-listed buildings, and the 1992 Olympics reopened the city to its seafront."
+			],
+			"it": [
+				"Forse dai Barcidi, la famiglia di Amilcare Barca, padre di Annibale, oppure da un nome iberico.",
+				"La Sagrada Família è in costruzione dal 1882 e non è ancora finita.",
+				"Qui sette edifici di Gaudí sono patrimonio UNESCO, e le Olimpiadi del 1992 hanno restituito alla città il suo lungomare."
+			]
+		}
+	},
+	"valladolid": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Ávila",
+			"Burgos",
+			"León",
+			"Palencia",
+			"Salamanca",
+			"Segovia",
+			"Zamora"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Valladolid",
+			"nameDe": "Valladolid",
+			"nameIt": "Valladolid",
+			"population": 322304
+		},
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Possibly from Arabic balad al-walid, \"town of the governor\", or from a Celtic-Latin root.",
+				"It was the capital of Spain on and off until 1561, and Columbus died here in 1506.",
+				"Cervantes lived in the town while Don Quixote was being printed."
+			],
+			"it": [
+				"Forse dall’arabo balad al-walid, \"città del governatore\", oppure da una radice celtico-latina.",
+				"Fu capitale di Spagna a più riprese fino al 1561, e qui nel 1506 morì Colombo.",
+				"Cervantes viveva in città mentre si stampava il Don Chisciotte."
+			]
+		}
+	},
+	"zamora": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"León",
+			"Ourense",
+			"Salamanca",
+			"Valladolid"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"soria": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Burgos",
+			"Guadalajara",
+			"La Rioja",
+			"Segovia",
+			"Zaragoza"
+		],
+		"coastal": false,
+		"peak": {
+			"name": "Moncayo",
+			"elevation": 2313
+		},
+		"position": "north"
+	},
+	"segovia": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Ávila",
+			"Burgos",
+			"Guadalajara",
+			"Madrid",
+			"Soria",
+			"Valladolid"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"tarragona": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Barcelona",
+			"Castellón",
+			"Lleida",
+			"Teruel",
+			"Zaragoza"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tarragona",
+			"nameDe": "Tarragona",
+			"nameIt": "Tarragona",
+			"population": 126291
+		},
+		"position": "east",
+		"hooks": {
+			"en": [
+				"From Tarraco, capital of Rome’s largest Spanish province.",
+				"Its Roman amphitheatre, circus, walls and aqueduct are a UNESCO site.",
+				"The human castles, castells, built in its region are another UNESCO heritage item."
+			],
+			"it": [
+				"Da Tarraco, capitale della più grande provincia romana di Spagna.",
+				"Il suo anfiteatro romano, il circo, le mura e l’acquedotto sono patrimonio UNESCO.",
+				"Anche le torri umane, i castells, innalzate nella sua regione, sono patrimonio UNESCO."
+			]
+		}
+	},
+	"salamanca": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Ávila",
+			"Cáceres",
+			"Valladolid",
+			"Zamora"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Salamanca",
+			"nameDe": "Salamanca",
+			"nameIt": "Salamanca",
+			"population": 162353
+		},
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Of pre-Roman origin, probably from a Celtic or Iberian name, Helmantica.",
+				"Its university, founded 1218, is the oldest in Spain and gave Columbus his first hearing.",
+				"Its old town is built of sandstone that turns gold in the evening, and is a UNESCO site."
+			],
+			"it": [
+				"Di origine preromana, probabilmente da un nome celtico o iberico, Helmantica.",
+				"La sua università, fondata nel 1218, è la più antica di Spagna e fu la prima a dare ascolto a Colombo.",
+				"Il centro storico è costruito in arenaria che la sera si fa dorata, ed è patrimonio UNESCO."
+			]
+		}
+	},
+	"guadalajara": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Cuenca",
+			"Madrid",
+			"Segovia",
+			"Soria",
+			"Teruel",
+			"Zaragoza"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Guadalajara",
+			"nameDe": "Guadalajara",
+			"nameIt": "Guadalajara",
+			"population": 72850
+		},
+		"position": "centre"
+	},
+	"avila": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Cáceres",
+			"Madrid",
+			"Salamanca",
+			"Segovia",
+			"Toledo",
+			"Valladolid"
+		],
+		"coastal": false,
+		"peak": {
+			"name": "Pico de Almanzor",
+			"elevation": 2592
+		},
+		"position": "west"
+	},
+	"teruel": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Castellón",
+			"Cuenca",
+			"Guadalajara",
+			"Tarragona",
+			"Valencia",
+			"Zaragoza"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"madrid": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Ávila",
+			"Cuenca",
+			"Guadalajara",
+			"Segovia",
+			"Toledo"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Madrid",
+			"nameDe": "Madrid",
+			"nameIt": "Madrid",
+			"population": 5567000
+		},
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"From Arabic al-Majrit, \"source of water\" — the Moorish fortress was named for its streams, and the Christians kept the name.",
+				"A provincial town until Philip II moved the court here in 1561, chosen largely for sitting in the middle of the country.",
+				"At 650 m it is the highest capital in Europe, and the Prado holds the finest collection of Spanish painting anywhere."
+			],
+			"it": [
+				"Dall’arabo al-Majrit, \"sorgente d’acqua\": la fortezza moresca prese il nome dai suoi ruscelli, e i cristiani lo mantennero.",
+				"Una città di provincia finché Filippo II non vi trasferì la corte nel 1561, scegliendola soprattutto perché stava al centro del paese.",
+				"A 650 m è la capitale più alta d’Europa, e il Prado custodisce la più bella collezione di pittura spagnola al mondo."
+			]
+		}
+	},
+	"castellon": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Tarragona",
+			"Teruel",
+			"Valencia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Castello",
+			"nameDe": "Castellón de la Plana",
+			"nameIt": "Castellón de la Plana",
+			"population": 180610
+		},
+		"position": "east"
+	},
+	"cuenca": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Albacete",
+			"Ciudad Real",
+			"Guadalajara",
+			"Madrid",
+			"Teruel",
+			"Toledo",
+			"Valencia"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"toledo": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Ávila",
+			"Badajoz",
+			"Cáceres",
+			"Ciudad Real",
+			"Cuenca",
+			"Madrid"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Toledo",
+			"nameDe": "Toledo",
+			"nameIt": "Toledo",
+			"population": 74632
+		},
+		"position": "centre"
+	},
+	"caceres": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Ávila",
+			"Badajoz",
+			"Ciudad Real",
+			"Salamanca",
+			"Toledo"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"illes-balears": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"coastal": true,
+		"largestCity": {
+			"name": "Palma",
+			"nameDe": "Palma",
+			"nameIt": "Palma di Maiorca",
+			"population": 375773
+		},
+		"peak": {
+			"name": "Puig Mayor",
+			"elevation": 1445
+		},
+		"position": "east"
+	},
+	"valencia": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Albacete",
+			"Alicante",
+			"Castellón",
+			"Cuenca",
+			"Teruel"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Valencia",
+			"nameDe": "Valencia",
+			"nameIt": "Valencia",
+			"population": 808000
+		},
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Latin valentia, \"strength\" or \"valour\" — a name Rome gave several towns.",
+				"Paella comes from its Albufera lagoon, cooked over orange wood with rabbit and beans.",
+				"Its Water Tribunal has met outside the cathedral every Thursday for a thousand years to settle irrigation disputes, and is UNESCO-listed."
+			],
+			"it": [
+				"Il latino valentia, \"forza\" o \"valore\": un nome che Roma diede a diverse città.",
+				"La paella nasce nella sua laguna, l’Albufera, e si cuoce su legna d’arancio con coniglio e fagioli.",
+				"Il suo Tribunale delle Acque si riunisce ogni giovedì davanti alla cattedrale da mille anni per dirimere le liti sull’irrigazione, ed è patrimonio UNESCO."
+			]
+		}
+	},
+	"ciudad-real": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Albacete",
+			"Badajoz",
+			"Cáceres",
+			"Córdoba",
+			"Cuenca",
+			"Jaén",
+			"Toledo"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"albacete": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Alicante",
+			"Ciudad Real",
+			"Cuenca",
+			"Granada",
+			"Jaén",
+			"Murcia",
+			"Valencia"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Albacete",
+			"nameDe": "Albacete",
+			"nameIt": "Albacete",
+			"population": 158094
+		},
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"From Arabic al-basit, \"the plain\".",
+				"It has made knives and scissors since the 1400s and has a museum of them.",
+				"La Mancha around it grows more vines by area than any other region in the world."
+			],
+			"it": [
+				"Dall’arabo al-basit, \"la pianura\".",
+				"Produce coltelli e forbici dal Quattrocento e ha un museo dedicato.",
+				"La Mancha che la circonda è la regione con la più vasta superficie a vigneto del mondo."
+			]
+		}
+	},
+	"badajoz": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Cáceres",
+			"Ciudad Real",
+			"Córdoba",
+			"Huelva",
+			"Sevilla",
+			"Toledo"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Badajoz",
+			"nameDe": "Badajoz",
+			"nameIt": "Badajoz",
+			"population": 140133
+		},
+		"position": "west",
+		"hooks": {
+			"en": [
+				"From Arabic Batalyaws, itself possibly from a Latin name.",
+				"Its Alcazaba is one of the largest Moorish fortresses in Spain.",
+				"It sits on the Portuguese border and was besieged repeatedly in the Peninsular War."
+			],
+			"it": [
+				"Dall’arabo Batalyaws, a sua volta forse da un nome latino.",
+				"La sua Alcazaba è una delle più grandi fortezze moresche di Spagna.",
+				"Si trova sul confine con il Portogallo e fu assediata più volte durante la guerra d’indipendenza spagnola."
+			]
+		}
+	},
+	"alicante": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Albacete",
+			"Murcia",
+			"Valencia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Alicante",
+			"nameDe": "Alicante",
+			"nameIt": "Alicante",
+			"population": 315863
+		},
+		"position": "south",
+		"hooks": {
+			"en": [
+				"From Greek Akra Leuka, \"white peak\", through Arabic al-Laqant.",
+				"Its Santa Bárbara castle sits on a rock over the town, one of the largest medieval fortresses in Spain.",
+				"The Bonfires of Saint John each June burn satirical figures in the streets."
+			],
+			"it": [
+				"Dal greco Akra Leuka, \"picco bianco\", attraverso l’arabo al-Laqant.",
+				"Il castello di Santa Bárbara sorge su una rupe sopra la città, ed è una delle più grandi fortezze medievali di Spagna.",
+				"Ogni giugno, con i Falò di San Giovanni, si bruciano figure satiriche per le strade."
+			]
+		}
+	},
+	"murcia": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Albacete",
+			"Alicante",
+			"Almería",
+			"Granada"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Murcia",
+			"nameDe": "Murcia",
+			"nameIt": "Murcia",
+			"population": 406807
+		},
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Uncertain: possibly Latin myrtea, the myrtle, or murtia from the Arabic Mursiyah — the Moors founded the city in 825.",
+				"Its huerta is irrigated by canals the Moors dug eleven centuries ago, still running on the same gradients.",
+				"Called the orchard of Europe, it grows vegetables for half the continent from one of the driest places in it."
+			],
+			"it": [
+				"Origine incerta: forse il latino myrtea, il mirto, o murtia dall’arabo Mursiyah; furono i Mori a fondare la città, nell’825.",
+				"La sua huerta è irrigata da canali che i Mori scavarono undici secoli fa, e che scorrono ancora con le stesse pendenze.",
+				"Detta l’orto d’Europa, coltiva verdure per mezzo continente da una delle sue zone più aride."
+			]
+		}
+	},
+	"jaen": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Albacete",
+			"Ciudad Real",
+			"Córdoba",
+			"Granada"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Jaén",
+			"nameDe": "Jaén",
+			"nameIt": "Jaén",
+			"population": 116400
+		},
+		"position": "south",
+		"hooks": {
+			"en": [
+				"From Arabic jayyan, \"crossroads of caravans\".",
+				"Its province produces more olive oil than any country except Spain itself.",
+				"Its cathedral was the model for many built in the Spanish Americas."
+			],
+			"it": [
+				"Dall’arabo jayyan, \"crocevia di carovane\".",
+				"La sua provincia produce più olio d’oliva di qualunque paese, Spagna esclusa.",
+				"La sua cattedrale fece da modello a molte di quelle costruite nell’America spagnola."
+			]
+		}
+	},
+	"cordoba": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Badajoz",
+			"Ciudad Real",
+			"Granada",
+			"Jaén",
+			"Málaga",
+			"Sevilla"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Córdoba",
+			"nameDe": "Córdoba",
+			"nameIt": "Cordova",
+			"population": 321376
+		},
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Of Phoenician or Iberian origin, possibly qart-tuba, \"good town\".",
+				"It was the largest city in the world in the tenth century, capital of the Caliphate of Córdoba.",
+				"Its Mezquita, a mosque with a cathedral built inside it, is a UNESCO site, and so is its patio festival."
+			],
+			"it": [
+				"Di origine fenicia o iberica, forse qart-tuba, \"città buona\".",
+				"Nel X secolo era la città più grande del mondo, capitale del Califfato di Cordova.",
+				"La sua Mezquita, una moschea con una cattedrale costruita al suo interno, è patrimonio UNESCO, e lo è anche la sua festa dei patii."
+			]
+		}
+	},
+	"sevilla": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Badajoz",
+			"Cádiz",
+			"Córdoba",
+			"Huelva",
+			"Málaga"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Seville",
+			"nameDe": "Sevilla",
+			"nameIt": "Siviglia",
+			"population": 1212045
+		},
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"From Phoenician or Iberian Hisbaal, through Roman Hispalis and Arabic Ishbiliya.",
+				"It held a monopoly on trade with the Americas for two centuries, and Magellan’s expedition sailed from it.",
+				"Its cathedral is the largest Gothic church in the world and holds Columbus’s tomb."
+			],
+			"it": [
+				"Dal fenicio o iberico Hisbaal, attraverso la romana Hispalis e l’arabo Ishbiliya.",
+				"Per due secoli ebbe il monopolio del commercio con le Americhe, e da qui salpò la spedizione di Magellano.",
+				"La sua cattedrale è la più grande chiesa gotica del mondo e custodisce la tomba di Colombo."
+			]
+		}
+	},
+	"huelva": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Badajoz",
+			"Cádiz",
+			"Sevilla"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Huelva",
+			"nameDe": "Huelva",
+			"nameIt": "Huelva",
+			"population": 144174
+		},
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"From Onuba, an Iberian or Phoenician name.",
+				"Columbus sailed from Palos in this province in 1492, and the monastery at La Rábida is where he found backing.",
+				"Its Doñana wetlands are one of Europe’s most important bird reserves and hold the Iberian lynx."
+			],
+			"it": [
+				"Da Onuba, un nome iberico o fenicio.",
+				"Colombo salpò nel 1492 da Palos, in questa provincia, ed è nel monastero della Rábida che trovò appoggio.",
+				"Le zone umide di Doñana sono tra le riserve ornitologiche più importanti d’Europa e ospitano la lince iberica."
+			]
+		}
+	},
+	"granada": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Albacete",
+			"Almería",
+			"Córdoba",
+			"Jaén",
+			"Málaga",
+			"Murcia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Granada‎",
+			"nameDe": "Granada",
+			"nameIt": "Granada",
+			"population": 388290
+		},
+		"peak": {
+			"name": "Mulhacén",
+			"elevation": 3479
+		},
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Possibly from the pomegranate, granada, which is on its arms — or from an Arabic or Latin name.",
+				"The Alhambra above it was the last Moorish palace in Spain, surrendered in 1492.",
+				"The Sierra Nevada behind it has the southernmost ski resort in Europe, an hour from the coast."
+			],
+			"it": [
+				"Forse dal melograno, granada, che compare nel suo stemma, oppure da un nome arabo o latino.",
+				"L’Alhambra che la sovrasta fu l’ultimo palazzo moresco di Spagna, consegnato ai cristiani nel 1492.",
+				"La Sierra Nevada alle sue spalle ha la stazione sciistica più meridionale d’Europa, a un’ora dalla costa."
+			]
+		}
+	},
+	"almeria": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Granada",
+			"Murcia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Almería",
+			"nameDe": "Almería",
+			"nameIt": "Almería",
+			"population": 179405
+		},
+		"position": "south",
+		"hooks": {
+			"en": [
+				"From Arabic al-Mariyya, \"the watchtower\" or \"the mirror of the sea\".",
+				"The driest place in Europe, with about 200 mm of rain a year.",
+				"Its plastic greenhouses cover some 300 km², visible from space, and supply much of Europe’s winter vegetables."
+			],
+			"it": [
+				"Dall’arabo al-Mariyya, \"la torre di vedetta\" o \"lo specchio del mare\".",
+				"Il luogo più arido d’Europa, con circa 200 mm di pioggia l’anno.",
+				"Le sue serre di plastica, visibili dallo spazio, coprono circa 300 km² e forniscono gran parte delle verdure invernali d’Europa."
+			]
+		}
+	},
+	"malaga": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Cádiz",
+			"Córdoba",
+			"Granada",
+			"Sevilla"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Málaga",
+			"nameDe": "Málaga",
+			"nameIt": "Malaga",
+			"population": 550058
+		},
+		"position": "south",
+		"hooks": {
+			"en": [
+				"From Phoenician malaka, probably \"to salt\" — it was a fish-salting town.",
+				"Picasso was born here, and the museum of his work sits near the Roman theatre.",
+				"It is one of the oldest continuously inhabited cities in the world, founded about 770 BC."
+			],
+			"it": [
+				"Dal fenicio malaka, probabilmente \"salare\": era una città dove si salava il pesce.",
+				"Picasso nacque qui, e il museo dedicato alle sue opere sorge vicino al teatro romano.",
+				"È una delle città abitate ininterrottamente più antiche del mondo, fondata intorno al 770 a.C."
+			]
+		}
+	},
+	"cadiz": {
+		"kind": "region",
+		"type": "Autonomous Community",
+		"borders": [
+			"Huelva",
+			"Málaga",
+			"Sevilla"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Cádiz",
+			"nameDe": "Cádiz",
+			"nameIt": "Cadice",
+			"population": 283157
+		},
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"From Phoenician gadir, \"walled stronghold\", through Latin Gades.",
+				"Founded about 1100 BC, it is usually called the oldest continuously inhabited city in western Europe.",
+				"Spain’s first liberal constitution was written here in 1812 while the city was under French siege."
+			],
+			"it": [
+				"Dal fenicio gadir, \"roccaforte cinta di mura\", attraverso il latino Gades.",
+				"Fondata intorno al 1100 a.C., è di solito considerata la città abitata ininterrottamente più antica dell’Europa occidentale.",
+				"La prima costituzione liberale di Spagna fu scritta qui nel 1812, mentre la città era assediata dai francesi."
+			]
+		}
+	}
+}

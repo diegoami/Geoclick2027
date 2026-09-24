@@ -1,0 +1,400 @@
+{
+	"donegal": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Leitrim"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Donegal",
+			"nameDe": "Donegal",
+			"nameIt": "Donegal Town",
+			"population": 2513
+		},
+		"position": "north"
+	},
+	"sligo": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Leitrim",
+			"Mayo",
+			"Roscommon"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Sligo",
+			"nameDe": "Sligo",
+			"nameIt": "Sligo",
+			"population": 20228
+		},
+		"position": "north"
+	},
+	"monaghan": {
+		"kind": "region",
+		"type": "Administrative County",
+		"borders": [
+			"Cavan",
+			"Louth",
+			"Meath"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Muineachan",
+			"nameDe": "Monaghan",
+			"nameIt": "Monaghan",
+			"population": 5937
+		},
+		"position": "north-east"
+	},
+	"leitrim": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Cavan",
+			"Donegal",
+			"Longford",
+			"Roscommon",
+			"Sligo"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"cavan": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Leitrim",
+			"Longford",
+			"Meath",
+			"Monaghan",
+			"Westmeath"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"louth": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Meath",
+			"Monaghan"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Dundalk",
+			"nameDe": "Dundalk",
+			"nameIt": "Dundalk",
+			"population": 38884
+		},
+		"position": "east"
+	},
+	"mayo": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Galway",
+			"Roscommon",
+			"Sligo"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"longford": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Cavan",
+			"Leitrim",
+			"Roscommon",
+			"Westmeath"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"roscommon": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Galway",
+			"Leitrim",
+			"Longford",
+			"Mayo",
+			"Offaly",
+			"Sligo",
+			"Westmeath"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ros Comain",
+			"nameDe": "Roscommon",
+			"nameIt": "Roscommon",
+			"population": 4860
+		},
+		"position": "centre"
+	},
+	"meath": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Cavan",
+			"Dublin",
+			"Kildare",
+			"Louth",
+			"Monaghan",
+			"Offaly",
+			"Westmeath"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Drogheda",
+			"nameDe": "Drogheda",
+			"nameIt": "Drogheda",
+			"population": 36533
+		},
+		"position": "east"
+	},
+	"westmeath": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Cavan",
+			"Longford",
+			"Meath",
+			"Offaly",
+			"Roscommon"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"dublin": {
+		"kind": "region",
+		"borders": [
+			"Kildare",
+			"Meath",
+			"Wicklow"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Dublin",
+			"nameDe": "Dublin",
+			"nameIt": "Dublino",
+			"population": 1059000
+		},
+		"position": "east"
+	},
+	"galway": {
+		"kind": "region",
+		"borders": [
+			"Clare",
+			"Mayo",
+			"Offaly",
+			"Roscommon",
+			"Tipperary"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Galway",
+			"nameDe": "Galway",
+			"nameIt": "Galway",
+			"population": 75594
+		},
+		"position": "west"
+	},
+	"kildare": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Carlow",
+			"Dublin",
+			"Laois",
+			"Meath",
+			"Offaly",
+			"Wicklow"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"offaly": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Galway",
+			"Kildare",
+			"Laois",
+			"Meath",
+			"Roscommon",
+			"Tipperary",
+			"Westmeath"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"laois": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Carlow",
+			"Kildare",
+			"Kilkenny",
+			"Offaly",
+			"Tipperary"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"wicklow": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Carlow",
+			"Dublin",
+			"Kildare",
+			"Wexford"
+		],
+		"coastal": true,
+		"position": "east"
+	},
+	"clare": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Galway",
+			"Limerick",
+			"Tipperary"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Shannon",
+			"nameDe": "Shannon",
+			"nameIt": "Shannon Town",
+			"population": 8781
+		},
+		"position": "west"
+	},
+	"carlow": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Kildare",
+			"Kilkenny",
+			"Laois",
+			"Wexford",
+			"Wicklow"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"tipperary": {
+		"kind": "region",
+		"borders": [
+			"Clare",
+			"Cork",
+			"Galway",
+			"Kilkenny",
+			"Laois",
+			"Limerick",
+			"Offaly",
+			"Waterford"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"kilkenny": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Carlow",
+			"Laois",
+			"Tipperary",
+			"Waterford",
+			"Wexford"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Waterford",
+			"nameDe": "Waterford",
+			"nameIt": "Waterford",
+			"population": 49275
+		},
+		"position": "south-east"
+	},
+	"limerick": {
+		"kind": "region",
+		"borders": [
+			"Clare",
+			"Cork",
+			"Kerry",
+			"Tipperary"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Limerick",
+			"nameDe": "Limerick",
+			"nameIt": "Limerick",
+			"population": 90054
+		},
+		"position": "south"
+	},
+	"wexford": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Carlow",
+			"Kilkenny",
+			"Waterford",
+			"Wicklow"
+		],
+		"coastal": true,
+		"position": "south-east"
+	},
+	"waterford": {
+		"kind": "region",
+		"borders": [
+			"Cork",
+			"Kilkenny",
+			"Tipperary",
+			"Wexford"
+		],
+		"coastal": true,
+		"position": "south"
+	},
+	"kerry": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Cork",
+			"Limerick"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tralee",
+			"nameDe": "Tralee",
+			"nameIt": "Tralee",
+			"population": 26384
+		},
+		"peak": {
+			"name": "Carrauntoohil",
+			"elevation": 1038
+		},
+		"position": "south-west"
+	},
+	"cork": {
+		"kind": "region",
+		"borders": [
+			"Kerry",
+			"Limerick",
+			"Tipperary",
+			"Waterford"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Cork",
+			"nameDe": "Cork",
+			"nameIt": "Cork",
+			"population": 188907
+		},
+		"position": "south"
+	}
+}

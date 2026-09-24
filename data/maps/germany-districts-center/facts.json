@@ -1,0 +1,846 @@
+{
+	"landkreis-kassel": {
+		"kind": "region",
+		"borders": [
+			"Kassel",
+			"Schwalm-Eder-Kreis",
+			"Waldeck-Frankenberg",
+			"Werra-Meißner-Kreis"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"kassel": {
+		"kind": "region",
+		"borders": [
+			"Landkreis Kassel"
+		],
+		"coastal": false,
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"From Castellum Cattorum, a Roman-era fort of the Chatti — the same tribe that named Hessen.",
+				"The Brothers Grimm collected their tales here, and the town’s museum is devoted to them.",
+				"It holds documenta, the world’s most important contemporary art exhibition, every five years."
+			],
+			"it": [
+				"Da Castellum Cattorum, un forte d’epoca romana dei Catti: la stessa tribù che ha dato il nome all’Assia.",
+				"I fratelli Grimm raccolsero qui le loro fiabe, e il museo della città è dedicato a loro.",
+				"Ospita ogni cinque anni documenta, la più importante mostra d’arte contemporanea del mondo."
+			]
+		}
+	},
+	"waldeck-frankenberg": {
+		"kind": "region",
+		"borders": [
+			"Landkreis Kassel",
+			"Marburg-Biedenkopf",
+			"Schwalm-Eder-Kreis"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"werra-mei-ner-kreis": {
+		"kind": "region",
+		"borders": [
+			"Hersfeld-Rotenburg",
+			"Landkreis Kassel",
+			"Schwalm-Eder-Kreis"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"schwalm-eder-kreis": {
+		"kind": "region",
+		"borders": [
+			"Hersfeld-Rotenburg",
+			"Landkreis Kassel",
+			"Marburg-Biedenkopf",
+			"Vogelsbergkreis",
+			"Waldeck-Frankenberg",
+			"Werra-Meißner-Kreis"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"hersfeld-rotenburg": {
+		"kind": "region",
+		"borders": [
+			"Fulda",
+			"Schwalm-Eder-Kreis",
+			"Vogelsbergkreis",
+			"Werra-Meißner-Kreis"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"marburg-biedenkopf": {
+		"kind": "region",
+		"borders": [
+			"Lahn-Dill-Kreis",
+			"Landkreis Gießen",
+			"Schwalm-Eder-Kreis",
+			"Vogelsbergkreis",
+			"Waldeck-Frankenberg"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"altenkirchen-westerwald": {
+		"kind": "region",
+		"borders": [
+			"Neuwied",
+			"Westerwaldkreis"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"lahn-dill-kreis": {
+		"kind": "region",
+		"borders": [
+			"Hochtaunuskreis",
+			"Landkreis Gießen",
+			"Limburg-Weilburg",
+			"Marburg-Biedenkopf",
+			"Westerwaldkreis",
+			"Wetteraukreis"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"vogelsbergkreis": {
+		"kind": "region",
+		"borders": [
+			"Fulda",
+			"Hersfeld-Rotenburg",
+			"Landkreis Gießen",
+			"Main-Kinzig-Kreis",
+			"Marburg-Biedenkopf",
+			"Schwalm-Eder-Kreis",
+			"Wetteraukreis"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"fulda": {
+		"kind": "region",
+		"borders": [
+			"Hersfeld-Rotenburg",
+			"Main-Kinzig-Kreis",
+			"Vogelsbergkreis"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"neuwied": {
+		"kind": "region",
+		"borders": [
+			"Ahrweiler",
+			"Altenkirchen (Westerwald)",
+			"Mayen-Koblenz",
+			"Westerwaldkreis"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"landkreis-gie-en": {
+		"kind": "region",
+		"borders": [
+			"Lahn-Dill-Kreis",
+			"Marburg-Biedenkopf",
+			"Vogelsbergkreis",
+			"Wetteraukreis"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"westerwaldkreis": {
+		"kind": "region",
+		"borders": [
+			"Altenkirchen (Westerwald)",
+			"Koblenz",
+			"Lahn-Dill-Kreis",
+			"Limburg-Weilburg",
+			"Mayen-Koblenz",
+			"Neuwied",
+			"Rhein-Lahn-Kreis"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"ahrweiler": {
+		"kind": "region",
+		"borders": [
+			"Mayen-Koblenz",
+			"Neuwied",
+			"Vulkaneifel"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"limburg-weilburg": {
+		"kind": "region",
+		"borders": [
+			"Hochtaunuskreis",
+			"Lahn-Dill-Kreis",
+			"Rhein-Lahn-Kreis",
+			"Rheingau-Taunus-Kreis",
+			"Westerwaldkreis"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"koblenz": {
+		"kind": "region",
+		"borders": [
+			"Mayen-Koblenz",
+			"Rhein-Lahn-Kreis",
+			"Westerwaldkreis"
+		],
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"From Latin confluentes, \"the flowing together\" — the Rhine meets the Moselle here.",
+				"That corner, the Deutsches Eck, has carried a huge equestrian monument since 1897.",
+				"The Ehrenbreitstein fortress opposite is one of the largest in Europe, and the valley is a UNESCO site."
+			],
+			"it": [
+				"Dal latino confluentes, \"il confluire\": qui il Reno incontra la Mosella.",
+				"Quell’angolo, il Deutsches Eck, porta dal 1897 un enorme monumento equestre.",
+				"La fortezza di Ehrenbreitstein, sull’altra sponda, è una delle più grandi d’Europa, e la valle è patrimonio UNESCO."
+			]
+		}
+	},
+	"wetteraukreis": {
+		"kind": "region",
+		"borders": [
+			"Frankfurt am Main",
+			"Hochtaunuskreis",
+			"Lahn-Dill-Kreis",
+			"Landkreis Gießen",
+			"Main-Kinzig-Kreis",
+			"Vogelsbergkreis"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"mayen-koblenz": {
+		"kind": "region",
+		"borders": [
+			"Ahrweiler",
+			"Cochem-Zell",
+			"Koblenz",
+			"Neuwied",
+			"Rhein-Hunsrück-Kreis",
+			"Rhein-Lahn-Kreis",
+			"Vulkaneifel",
+			"Westerwaldkreis"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"hochtaunuskreis": {
+		"kind": "region",
+		"borders": [
+			"Frankfurt am Main",
+			"Lahn-Dill-Kreis",
+			"Limburg-Weilburg",
+			"Main-Taunus-Kreis",
+			"Rheingau-Taunus-Kreis",
+			"Wetteraukreis"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"main-kinzig-kreis": {
+		"kind": "region",
+		"borders": [
+			"Frankfurt am Main",
+			"Fulda",
+			"Landkreis Offenbach",
+			"Offenbach am Main",
+			"Vogelsbergkreis",
+			"Wetteraukreis"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"rhein-lahn-kreis": {
+		"kind": "region",
+		"borders": [
+			"Koblenz",
+			"Limburg-Weilburg",
+			"Mainz-Bingen",
+			"Mayen-Koblenz",
+			"Rhein-Hunsrück-Kreis",
+			"Rheingau-Taunus-Kreis",
+			"Westerwaldkreis"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"vulkaneifel": {
+		"kind": "region",
+		"borders": [
+			"Ahrweiler",
+			"Bernkastel-Wittlich",
+			"Cochem-Zell",
+			"Eifelkreis Bitburg-Prüm",
+			"Mayen-Koblenz"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"rheingau-taunus-kreis": {
+		"kind": "region",
+		"borders": [
+			"Hochtaunuskreis",
+			"Limburg-Weilburg",
+			"Main-Taunus-Kreis",
+			"Mainz-Bingen",
+			"Rhein-Lahn-Kreis",
+			"Wiesbaden"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"frankfurt-am-main": {
+		"kind": "region",
+		"borders": [
+			"Groß-Gerau",
+			"Hochtaunuskreis",
+			"Landkreis Offenbach",
+			"Main-Kinzig-Kreis",
+			"Main-Taunus-Kreis",
+			"Offenbach am Main",
+			"Wetteraukreis"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"cochem-zell": {
+		"kind": "region",
+		"borders": [
+			"Bernkastel-Wittlich",
+			"Mayen-Koblenz",
+			"Rhein-Hunsrück-Kreis",
+			"Vulkaneifel"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"main-taunus-kreis": {
+		"kind": "region",
+		"borders": [
+			"Frankfurt am Main",
+			"Groß-Gerau",
+			"Hochtaunuskreis",
+			"Rheingau-Taunus-Kreis",
+			"Wiesbaden"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"offenbach-am-main": {
+		"kind": "region",
+		"borders": [
+			"Frankfurt am Main",
+			"Landkreis Offenbach",
+			"Main-Kinzig-Kreis"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"wiesbaden": {
+		"kind": "region",
+		"borders": [
+			"Groß-Gerau",
+			"Main-Taunus-Kreis",
+			"Mainz",
+			"Mainz-Bingen",
+			"Rheingau-Taunus-Kreis"
+		],
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"\"Meadow baths\" — Wiesen meadows, Baden baths, for its 26 hot springs.",
+				"It was one of Europe’s grandest spa towns, with more millionaires per head than anywhere in Germany by 1900.",
+				"Dostoevsky gambled away everything he had in its casino, which produced The Gambler."
+			],
+			"it": [
+				"\"Bagni del prato\": Wiesen, prati, e Baden, bagni, per le sue 26 sorgenti calde.",
+				"Fu una delle stazioni termali più sfarzose d’Europa, e nel 1900 aveva più milionari per abitante di qualsiasi altro luogo della Germania.",
+				"Dostoevskij perse tutto ciò che aveva nel suo casinò, e ne nacque Il giocatore."
+			]
+		}
+	},
+	"eifelkreis-bitburg-prum": {
+		"kind": "region",
+		"borders": [
+			"Bernkastel-Wittlich",
+			"Trier-Saarburg",
+			"Vulkaneifel"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"rhein-hunsruck-kreis": {
+		"kind": "region",
+		"borders": [
+			"Bad Kreuznach",
+			"Bernkastel-Wittlich",
+			"Birkenfeld",
+			"Cochem-Zell",
+			"Mainz-Bingen",
+			"Mayen-Koblenz",
+			"Rhein-Lahn-Kreis"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"landkreis-offenbach": {
+		"kind": "region",
+		"borders": [
+			"Darmstadt",
+			"Darmstadt-Dieburg",
+			"Frankfurt am Main",
+			"Groß-Gerau",
+			"Main-Kinzig-Kreis",
+			"Offenbach am Main"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"mainz": {
+		"kind": "region",
+		"borders": [
+			"Groß-Gerau",
+			"Mainz-Bingen",
+			"Wiesbaden"
+		],
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"From Roman Mogontiacum, named for the Celtic god Mogons.",
+				"Gutenberg printed the first European book with movable type here around 1450.",
+				"Its carnival is one of Germany’s three biggest, and its cathedral has stood for over a thousand years."
+			],
+			"it": [
+				"Dalla romana Mogontiacum, che prende il nome dal dio celtico Mogons.",
+				"Qui, intorno al 1450, Gutenberg stampò il primo libro europeo a caratteri mobili.",
+				"Il suo carnevale è uno dei tre più grandi della Germania, e il suo duomo è in piedi da più di mille anni."
+			]
+		}
+	},
+	"mainz-bingen": {
+		"kind": "region",
+		"borders": [
+			"Alzey-Worms",
+			"Bad Kreuznach",
+			"Groß-Gerau",
+			"Mainz",
+			"Rhein-Hunsrück-Kreis",
+			"Rhein-Lahn-Kreis",
+			"Rheingau-Taunus-Kreis",
+			"Wiesbaden"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"bernkastel-wittlich": {
+		"kind": "region",
+		"borders": [
+			"Birkenfeld",
+			"Cochem-Zell",
+			"Eifelkreis Bitburg-Prüm",
+			"Rhein-Hunsrück-Kreis",
+			"Trier-Saarburg",
+			"Vulkaneifel"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"gro-gerau": {
+		"kind": "region",
+		"borders": [
+			"Alzey-Worms",
+			"Bergstraße",
+			"Darmstadt-Dieburg",
+			"Frankfurt am Main",
+			"Landkreis Offenbach",
+			"Main-Taunus-Kreis",
+			"Mainz",
+			"Mainz-Bingen",
+			"Wiesbaden"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"darmstadt": {
+		"kind": "region",
+		"borders": [
+			"Darmstadt-Dieburg",
+			"Landkreis Offenbach"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"darmstadt-dieburg": {
+		"kind": "region",
+		"borders": [
+			"Bergstraße",
+			"Darmstadt",
+			"Groß-Gerau",
+			"Landkreis Offenbach",
+			"Odenwaldkreis"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"bad-kreuznach": {
+		"kind": "region",
+		"borders": [
+			"Alzey-Worms",
+			"Birkenfeld",
+			"Donnersbergkreis",
+			"Kusel",
+			"Mainz-Bingen",
+			"Rhein-Hunsrück-Kreis"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"trier": {
+		"kind": "region",
+		"borders": [
+			"Trier-Saarburg"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"alzey-worms": {
+		"kind": "region",
+		"borders": [
+			"Bad Dürkheim",
+			"Bad Kreuznach",
+			"Bergstraße",
+			"Donnersbergkreis",
+			"Groß-Gerau",
+			"Mainz-Bingen",
+			"Worms"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"birkenfeld": {
+		"kind": "region",
+		"borders": [
+			"Bad Kreuznach",
+			"Bernkastel-Wittlich",
+			"Kusel",
+			"Rhein-Hunsrück-Kreis",
+			"St. Wendel",
+			"Trier-Saarburg"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"trier-saarburg": {
+		"kind": "region",
+		"borders": [
+			"Bernkastel-Wittlich",
+			"Birkenfeld",
+			"Eifelkreis Bitburg-Prüm",
+			"Merzig-Wadern",
+			"St. Wendel",
+			"Trier"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"worms": {
+		"kind": "region",
+		"borders": [
+			"Alzey-Worms",
+			"Bad Dürkheim",
+			"Bergstraße",
+			"Rhein-Pfalz-Kreis"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"odenwaldkreis": {
+		"kind": "region",
+		"borders": [
+			"Bergstraße",
+			"Darmstadt-Dieburg"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"donnersbergkreis": {
+		"kind": "region",
+		"borders": [
+			"Alzey-Worms",
+			"Bad Dürkheim",
+			"Bad Kreuznach",
+			"Kusel",
+			"Landkreis Kaiserslautern"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"bergstra-e": {
+		"kind": "region",
+		"borders": [
+			"Alzey-Worms",
+			"Darmstadt-Dieburg",
+			"Groß-Gerau",
+			"Odenwaldkreis",
+			"Rhein-Pfalz-Kreis",
+			"Worms"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"kusel": {
+		"kind": "region",
+		"borders": [
+			"Bad Kreuznach",
+			"Birkenfeld",
+			"Donnersbergkreis",
+			"Landkreis Kaiserslautern",
+			"Neunkirchen",
+			"Saarpfalz-Kreis",
+			"St. Wendel"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"frankenthal-pfalz": {
+		"kind": "region",
+		"borders": [
+			"Ludwigshafen am Rhein",
+			"Rhein-Pfalz-Kreis"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"st-wendel": {
+		"kind": "region",
+		"borders": [
+			"Birkenfeld",
+			"Kusel",
+			"Merzig-Wadern",
+			"Neunkirchen",
+			"Saarlouis",
+			"Trier-Saarburg"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"merzig-wadern": {
+		"kind": "region",
+		"borders": [
+			"Saarlouis",
+			"St. Wendel",
+			"Trier-Saarburg"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"ludwigshafen-am-rhein": {
+		"kind": "region",
+		"borders": [
+			"Frankenthal (Pfalz)",
+			"Rhein-Pfalz-Kreis"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"bad-durkheim": {
+		"kind": "region",
+		"borders": [
+			"Alzey-Worms",
+			"Donnersbergkreis",
+			"Kaiserslautern",
+			"Landau in der Pfalz",
+			"Landkreis Kaiserslautern",
+			"Neustadt an der Weinstraße",
+			"Rhein-Pfalz-Kreis",
+			"Südliche Weinstraße",
+			"Südwestpfalz",
+			"Worms"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"landkreis-kaiserslautern": {
+		"kind": "region",
+		"borders": [
+			"Bad Dürkheim",
+			"Donnersbergkreis",
+			"Kaiserslautern",
+			"Kusel",
+			"Saarpfalz-Kreis",
+			"Südwestpfalz"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"kaiserslautern": {
+		"kind": "region",
+		"borders": [
+			"Bad Dürkheim",
+			"Landkreis Kaiserslautern"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"rhein-pfalz-kreis": {
+		"kind": "region",
+		"borders": [
+			"Bad Dürkheim",
+			"Bergstraße",
+			"Frankenthal (Pfalz)",
+			"Germersheim",
+			"Ludwigshafen am Rhein",
+			"Neustadt an der Weinstraße",
+			"Speyer",
+			"Südliche Weinstraße",
+			"Worms"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"neunkirchen": {
+		"kind": "region",
+		"borders": [
+			"Kusel",
+			"Regionalverband Saarbrücken",
+			"Saarlouis",
+			"Saarpfalz-Kreis",
+			"St. Wendel"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"saarlouis": {
+		"kind": "region",
+		"borders": [
+			"Merzig-Wadern",
+			"Neunkirchen",
+			"Regionalverband Saarbrücken",
+			"St. Wendel"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"neustadt-an-der-weinstra-e": {
+		"kind": "region",
+		"borders": [
+			"Bad Dürkheim",
+			"Rhein-Pfalz-Kreis",
+			"Südliche Weinstraße"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"speyer": {
+		"kind": "region",
+		"borders": [
+			"Rhein-Pfalz-Kreis"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"saarpfalz-kreis": {
+		"kind": "region",
+		"borders": [
+			"Kusel",
+			"Landkreis Kaiserslautern",
+			"Neunkirchen",
+			"Regionalverband Saarbrücken",
+			"Südwestpfalz",
+			"Zweibrücken"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"zweibrucken": {
+		"kind": "region",
+		"borders": [
+			"Saarpfalz-Kreis",
+			"Südwestpfalz"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"regionalverband-saarbrucken": {
+		"kind": "region",
+		"borders": [
+			"Neunkirchen",
+			"Saarlouis",
+			"Saarpfalz-Kreis"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"landau-in-der-pfalz": {
+		"kind": "region",
+		"borders": [
+			"Bad Dürkheim",
+			"Südliche Weinstraße",
+			"Südwestpfalz"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"sudwestpfalz": {
+		"kind": "region",
+		"borders": [
+			"Bad Dürkheim",
+			"Landau in der Pfalz",
+			"Landkreis Kaiserslautern",
+			"Pirmasens",
+			"Saarpfalz-Kreis",
+			"Südliche Weinstraße",
+			"Zweibrücken"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"pirmasens": {
+		"kind": "region",
+		"borders": [
+			"Südwestpfalz"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"sudliche-weinstra-e": {
+		"kind": "region",
+		"borders": [
+			"Bad Dürkheim",
+			"Germersheim",
+			"Landau in der Pfalz",
+			"Neustadt an der Weinstraße",
+			"Rhein-Pfalz-Kreis",
+			"Südwestpfalz"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"germersheim": {
+		"kind": "region",
+		"borders": [
+			"Rhein-Pfalz-Kreis",
+			"Südliche Weinstraße"
+		],
+		"coastal": false,
+		"position": "south"
+	}
+}

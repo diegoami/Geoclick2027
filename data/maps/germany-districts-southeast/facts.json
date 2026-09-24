@@ -1,0 +1,1176 @@
+{
+	"rhon-grabfeld": {
+		"kind": "region",
+		"borders": [
+			"Bad Kissingen",
+			"Haßberge",
+			"Landkreis Schweinfurt"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"kronach": {
+		"kind": "region",
+		"borders": [
+			"Kulmbach",
+			"Landkreis Coburg",
+			"Landkreis Hof",
+			"Lichtenfels"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"hof": {
+		"kind": "region",
+		"borders": [
+			"Landkreis Hof"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"coburg": {
+		"kind": "region",
+		"borders": [
+			"Landkreis Coburg"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"landkreis-hof": {
+		"kind": "region",
+		"borders": [
+			"Hof",
+			"Kronach",
+			"Kulmbach",
+			"Landkreis Bayreuth",
+			"Wunsiedel im Fichtelgebirge"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"landkreis-coburg": {
+		"kind": "region",
+		"borders": [
+			"Coburg",
+			"Haßberge",
+			"Kronach",
+			"Landkreis Bamberg",
+			"Lichtenfels"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"bad-kissingen": {
+		"kind": "region",
+		"borders": [
+			"Landkreis Schweinfurt",
+			"Main-Spessart",
+			"Rhön-Grabfeld"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"lichtenfels": {
+		"kind": "region",
+		"borders": [
+			"Kronach",
+			"Kulmbach",
+			"Landkreis Bamberg",
+			"Landkreis Bayreuth",
+			"Landkreis Coburg"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"kulmbach": {
+		"kind": "region",
+		"borders": [
+			"Kronach",
+			"Landkreis Bayreuth",
+			"Landkreis Hof",
+			"Lichtenfels"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"wunsiedel-im-fichtelgebirge": {
+		"kind": "region",
+		"borders": [
+			"Landkreis Bayreuth",
+			"Landkreis Hof",
+			"Tirschenreuth"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"schweinfurt": {
+		"kind": "region",
+		"borders": [
+			"Landkreis Schweinfurt"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"ha-berge": {
+		"kind": "region",
+		"borders": [
+			"Landkreis Bamberg",
+			"Landkreis Coburg",
+			"Landkreis Schweinfurt",
+			"Rhön-Grabfeld"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"landkreis-schweinfurt": {
+		"kind": "region",
+		"borders": [
+			"Bad Kissingen",
+			"Haßberge",
+			"Kitzingen",
+			"Landkreis Bamberg",
+			"Landkreis Würzburg",
+			"Main-Spessart",
+			"Rhön-Grabfeld",
+			"Schweinfurt"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"main-spessart": {
+		"kind": "region",
+		"borders": [
+			"Bad Kissingen",
+			"Landkreis Aschaffenburg",
+			"Landkreis Schweinfurt",
+			"Landkreis Würzburg",
+			"Miltenberg"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"landkreis-aschaffenburg": {
+		"kind": "region",
+		"borders": [
+			"Aschaffenburg",
+			"Main-Spessart",
+			"Miltenberg"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"aschaffenburg": {
+		"kind": "region",
+		"borders": [
+			"Landkreis Aschaffenburg",
+			"Miltenberg"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"bayreuth": {
+		"kind": "region",
+		"borders": [
+			"Landkreis Bayreuth"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"tirschenreuth": {
+		"kind": "region",
+		"borders": [
+			"Landkreis Bayreuth",
+			"Neustadt an der Waldnaab",
+			"Wunsiedel im Fichtelgebirge"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"landkreis-bamberg": {
+		"kind": "region",
+		"borders": [
+			"Bamberg",
+			"Erlangen-Höchstadt",
+			"Forchheim",
+			"Haßberge",
+			"Kitzingen",
+			"Landkreis Bayreuth",
+			"Landkreis Coburg",
+			"Landkreis Schweinfurt",
+			"Lichtenfels",
+			"Neustadt an der Aisch-Bad Windsheim"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"bamberg": {
+		"kind": "region",
+		"borders": [
+			"Landkreis Bamberg"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"landkreis-bayreuth": {
+		"kind": "region",
+		"borders": [
+			"Amberg-Sulzbach",
+			"Bayreuth",
+			"Forchheim",
+			"Kulmbach",
+			"Landkreis Bamberg",
+			"Landkreis Hof",
+			"Lichtenfels",
+			"Neustadt an der Waldnaab",
+			"Nürnberger Land",
+			"Tirschenreuth",
+			"Wunsiedel im Fichtelgebirge"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"wurzburg": {
+		"kind": "region",
+		"borders": [
+			"Landkreis Würzburg"
+		],
+		"coastal": false,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"From an older name, possibly from a word for a herb or a hill, plus Burg.",
+				"Its Residenz is one of the finest baroque palaces in Europe, with a Tiepolo ceiling that is the largest fresco in the world, and a UNESCO site.",
+				"Röntgen discovered X-rays in its university in 1895."
+			],
+			"it": [
+				"Da un nome più antico, forse da una parola per un’erba o per una collina, più Burg.",
+				"La sua Residenz è uno dei più bei palazzi barocchi d’Europa, con un soffitto del Tiepolo che è il più grande affresco del mondo, ed è patrimonio UNESCO.",
+				"Röntgen scoprì i raggi X nella sua università nel 1895."
+			]
+		}
+	},
+	"miltenberg": {
+		"kind": "region",
+		"borders": [
+			"Aschaffenburg",
+			"Landkreis Aschaffenburg",
+			"Main-Spessart"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"kitzingen": {
+		"kind": "region",
+		"borders": [
+			"Landkreis Bamberg",
+			"Landkreis Schweinfurt",
+			"Landkreis Würzburg",
+			"Neustadt an der Aisch-Bad Windsheim"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"forchheim": {
+		"kind": "region",
+		"borders": [
+			"Erlangen-Höchstadt",
+			"Landkreis Bamberg",
+			"Landkreis Bayreuth",
+			"Nürnberger Land"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"landkreis-wurzburg": {
+		"kind": "region",
+		"borders": [
+			"Kitzingen",
+			"Landkreis Schweinfurt",
+			"Main-Spessart",
+			"Neustadt an der Aisch-Bad Windsheim",
+			"Würzburg"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"neustadt-an-der-waldnaab": {
+		"kind": "region",
+		"borders": [
+			"Amberg-Sulzbach",
+			"Landkreis Bayreuth",
+			"Schwandorf",
+			"Tirschenreuth",
+			"Weiden in der Oberpfalz"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"weiden-in-der-oberpfalz": {
+		"kind": "region",
+		"borders": [
+			"Neustadt an der Waldnaab"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"erlangen-hochstadt": {
+		"kind": "region",
+		"borders": [
+			"Erlangen",
+			"Forchheim",
+			"Landkreis Bamberg",
+			"Landkreis Fürth",
+			"Neustadt an der Aisch-Bad Windsheim",
+			"Nürnberg",
+			"Nürnberger Land"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"erlangen": {
+		"kind": "region",
+		"borders": [
+			"Erlangen-Höchstadt",
+			"Fürth",
+			"Landkreis Fürth",
+			"Nürnberg"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"neustadt-an-der-aisch-bad-windsheim": {
+		"kind": "region",
+		"borders": [
+			"Erlangen-Höchstadt",
+			"Kitzingen",
+			"Landkreis Ansbach",
+			"Landkreis Bamberg",
+			"Landkreis Fürth",
+			"Landkreis Würzburg"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"nurnberger-land": {
+		"kind": "region",
+		"borders": [
+			"Amberg-Sulzbach",
+			"Erlangen-Höchstadt",
+			"Forchheim",
+			"Landkreis Bayreuth",
+			"Neumarkt in der Oberpfalz",
+			"Nürnberg",
+			"Roth"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"amberg-sulzbach": {
+		"kind": "region",
+		"borders": [
+			"Amberg",
+			"Landkreis Bayreuth",
+			"Neumarkt in der Oberpfalz",
+			"Neustadt an der Waldnaab",
+			"Nürnberger Land",
+			"Schwandorf"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"furth": {
+		"kind": "region",
+		"borders": [
+			"Erlangen",
+			"Landkreis Fürth",
+			"Nürnberg"
+		],
+		"coastal": false,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"German for \"ford\" — the crossing of the Rednitz.",
+				"Germany’s first railway ran from here to Nuremberg in 1835.",
+				"Henry Kissinger was born in the town, and it had one of Bavaria’s largest Jewish communities."
+			],
+			"it": [
+				"\"Guado\" in tedesco: l’attraversamento della Rednitz.",
+				"Da qui partiva la prima ferrovia della Germania, che nel 1835 la collegò a Norimberga.",
+				"Henry Kissinger nacque in questa città, che ebbe una delle maggiori comunità ebraiche della Baviera."
+			]
+		}
+	},
+	"amberg": {
+		"kind": "region",
+		"borders": [
+			"Amberg-Sulzbach"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"landkreis-furth": {
+		"kind": "region",
+		"borders": [
+			"Erlangen",
+			"Erlangen-Höchstadt",
+			"Fürth",
+			"Landkreis Ansbach",
+			"Neustadt an der Aisch-Bad Windsheim",
+			"Nürnberg",
+			"Roth"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"nurnberg": {
+		"kind": "region",
+		"borders": [
+			"Erlangen",
+			"Erlangen-Höchstadt",
+			"Fürth",
+			"Landkreis Fürth",
+			"Nürnberger Land",
+			"Roth",
+			"Schwabach"
+		],
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Probably \"rocky hill\" — from an old word nuor for rock, plus Berg.",
+				"Its Nazi rally grounds and then the post-war trials made the city’s name a byword for both.",
+				"The pocket watch, the first globe and the first recorded gingerbread guild all came from here."
+			],
+			"it": [
+				"Probabilmente \"colle roccioso\": da un’antica parola nuor, roccia, più Berg.",
+				"L’area dei raduni nazisti e poi i processi del dopoguerra hanno reso il nome della città sinonimo di entrambi.",
+				"L’orologio da tasca, il primo globo e la prima corporazione documentata di fornai di panpepato vengono tutti da qui."
+			]
+		}
+	},
+	"schwandorf": {
+		"kind": "region",
+		"borders": [
+			"Amberg-Sulzbach",
+			"Cham",
+			"Landkreis Regensburg",
+			"Neumarkt in der Oberpfalz",
+			"Neustadt an der Waldnaab"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"schwabach": {
+		"kind": "region",
+		"borders": [
+			"Nürnberg",
+			"Roth"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"ansbach": {
+		"kind": "region",
+		"borders": [
+			"Landkreis Ansbach"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"cham": {
+		"kind": "region",
+		"borders": [
+			"Landkreis Regensburg",
+			"Regen",
+			"Schwandorf",
+			"Straubing-Bogen"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"landkreis-ansbach": {
+		"kind": "region",
+		"borders": [
+			"Ansbach",
+			"Donau-Ries",
+			"Landkreis Fürth",
+			"Neustadt an der Aisch-Bad Windsheim",
+			"Roth",
+			"Weißenburg-Gunzenhausen"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"roth": {
+		"kind": "region",
+		"borders": [
+			"Eichstätt",
+			"Landkreis Ansbach",
+			"Landkreis Fürth",
+			"Neumarkt in der Oberpfalz",
+			"Nürnberg",
+			"Nürnberger Land",
+			"Schwabach",
+			"Weißenburg-Gunzenhausen"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"neumarkt-in-der-oberpfalz": {
+		"kind": "region",
+		"borders": [
+			"Amberg-Sulzbach",
+			"Eichstätt",
+			"Kelheim",
+			"Landkreis Regensburg",
+			"Nürnberger Land",
+			"Roth",
+			"Schwandorf"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"wei-enburg-gunzenhausen": {
+		"kind": "region",
+		"borders": [
+			"Donau-Ries",
+			"Eichstätt",
+			"Landkreis Ansbach",
+			"Roth"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"regensburg": {
+		"kind": "region",
+		"borders": [
+			"Landkreis Regensburg"
+		],
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"\"Fortress on the Regen\" — the river that joins the Danube here.",
+				"Its Stone Bridge of 1146 was the only Danube crossing for 800 km and made the town rich; the old town is a UNESCO site.",
+				"The Imperial Diet sat here permanently from 1663 to 1806, effectively making it the empire’s parliament."
+			],
+			"it": [
+				"\"Fortezza sul Regen\": il fiume che qui confluisce nel Danubio.",
+				"Il suo Ponte di pietra del 1146 fu per 800 km l’unico attraversamento del Danubio e fece ricca la città; il centro storico è patrimonio UNESCO.",
+				"La Dieta imperiale vi sedette stabilmente dal 1663 al 1806, facendone di fatto il parlamento dell’impero."
+			]
+		}
+	},
+	"regen": {
+		"kind": "region",
+		"borders": [
+			"Cham",
+			"Deggendorf",
+			"Freyung-Grafenau",
+			"Straubing-Bogen"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"landkreis-regensburg": {
+		"kind": "region",
+		"borders": [
+			"Cham",
+			"Kelheim",
+			"Landkreis Landshut",
+			"Neumarkt in der Oberpfalz",
+			"Regensburg",
+			"Schwandorf",
+			"Straubing-Bogen"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"straubing-bogen": {
+		"kind": "region",
+		"borders": [
+			"Cham",
+			"Deggendorf",
+			"Dingolfing-Landau",
+			"Landkreis Landshut",
+			"Landkreis Regensburg",
+			"Regen",
+			"Straubing"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"eichstatt": {
+		"kind": "region",
+		"borders": [
+			"Donau-Ries",
+			"Ingolstadt",
+			"Kelheim",
+			"Neuburg-Schrobenhausen",
+			"Neumarkt in der Oberpfalz",
+			"Pfaffenhofen an der Ilm",
+			"Roth",
+			"Weißenburg-Gunzenhausen"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"straubing": {
+		"kind": "region",
+		"borders": [
+			"Straubing-Bogen"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"freyung-grafenau": {
+		"kind": "region",
+		"borders": [
+			"Deggendorf",
+			"Landkreis Passau",
+			"Regen"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"donau-ries": {
+		"kind": "region",
+		"borders": [
+			"Aichach-Friedberg",
+			"Dillingen an der Donau",
+			"Eichstätt",
+			"Landkreis Ansbach",
+			"Landkreis Augsburg",
+			"Neuburg-Schrobenhausen",
+			"Weißenburg-Gunzenhausen"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"kelheim": {
+		"kind": "region",
+		"borders": [
+			"Eichstätt",
+			"Freising",
+			"Landkreis Landshut",
+			"Landkreis Regensburg",
+			"Neumarkt in der Oberpfalz",
+			"Pfaffenhofen an der Ilm"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"deggendorf": {
+		"kind": "region",
+		"borders": [
+			"Dingolfing-Landau",
+			"Freyung-Grafenau",
+			"Landkreis Passau",
+			"Regen",
+			"Rottal-Inn",
+			"Straubing-Bogen"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"ingolstadt": {
+		"kind": "region",
+		"borders": [
+			"Eichstätt",
+			"Neuburg-Schrobenhausen",
+			"Pfaffenhofen an der Ilm"
+		],
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"\"The place of Ingold’s people.\"",
+				"Mary Shelley had Frankenstein study at its university and build his creature in the town.",
+				"Audi has been based here since 1949, and its Bavarian purity law for beer was proclaimed in the town in 1516."
+			],
+			"it": [
+				"\"Il luogo della gente di Ingold\".",
+				"Mary Shelley fece studiare Frankenstein nella sua università e gli fece costruire qui la sua creatura.",
+				"L’Audi ha sede qui dal 1949, e la legge bavarese sulla purezza della birra fu proclamata in questa città nel 1516."
+			]
+		}
+	},
+	"neuburg-schrobenhausen": {
+		"kind": "region",
+		"borders": [
+			"Aichach-Friedberg",
+			"Donau-Ries",
+			"Eichstätt",
+			"Ingolstadt",
+			"Pfaffenhofen an der Ilm"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"dingolfing-landau": {
+		"kind": "region",
+		"borders": [
+			"Deggendorf",
+			"Landkreis Landshut",
+			"Rottal-Inn",
+			"Straubing-Bogen"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"dillingen-an-der-donau": {
+		"kind": "region",
+		"borders": [
+			"Donau-Ries",
+			"Günzburg",
+			"Landkreis Augsburg"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"pfaffenhofen-an-der-ilm": {
+		"kind": "region",
+		"borders": [
+			"Aichach-Friedberg",
+			"Dachau",
+			"Eichstätt",
+			"Freising",
+			"Ingolstadt",
+			"Kelheim",
+			"Neuburg-Schrobenhausen"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"passau": {
+		"kind": "region",
+		"borders": [
+			"Landkreis Passau"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"landshut": {
+		"kind": "region",
+		"borders": [
+			"Landkreis Landshut"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"landkreis-landshut": {
+		"kind": "region",
+		"borders": [
+			"Dingolfing-Landau",
+			"Erding",
+			"Freising",
+			"Kelheim",
+			"Landkreis Regensburg",
+			"Landshut",
+			"Mühldorf am Inn",
+			"Rottal-Inn",
+			"Straubing-Bogen"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"landkreis-passau": {
+		"kind": "region",
+		"borders": [
+			"Deggendorf",
+			"Freyung-Grafenau",
+			"Passau",
+			"Rottal-Inn"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"freising": {
+		"kind": "region",
+		"borders": [
+			"Dachau",
+			"Erding",
+			"Kelheim",
+			"Landkreis Landshut",
+			"Landkreis München",
+			"Pfaffenhofen an der Ilm"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"rottal-inn": {
+		"kind": "region",
+		"borders": [
+			"Altötting",
+			"Deggendorf",
+			"Dingolfing-Landau",
+			"Landkreis Landshut",
+			"Landkreis Passau",
+			"Mühldorf am Inn"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"aichach-friedberg": {
+		"kind": "region",
+		"borders": [
+			"Augsburg",
+			"Dachau",
+			"Donau-Ries",
+			"Fürstenfeldbruck",
+			"Landkreis Augsburg",
+			"Landsberg am Lech",
+			"Neuburg-Schrobenhausen",
+			"Pfaffenhofen an der Ilm"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"landkreis-augsburg": {
+		"kind": "region",
+		"borders": [
+			"Aichach-Friedberg",
+			"Augsburg",
+			"Dillingen an der Donau",
+			"Donau-Ries",
+			"Günzburg",
+			"Landsberg am Lech",
+			"Ostallgäu",
+			"Unterallgäu"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"augsburg": {
+		"kind": "region",
+		"borders": [
+			"Aichach-Friedberg",
+			"Landkreis Augsburg"
+		],
+		"coastal": false,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"From Augusta Vindelicorum, founded by Augustus in 15 BC — one of Germany’s oldest cities.",
+				"The Fuggerei here, built in 1521, is the oldest social housing in the world still in use; rent is one Rhenish guilder a year, about 88 cents.",
+				"Its water management system is a UNESCO site, and the 1555 Peace of Augsburg let each prince choose his realm’s religion."
+			],
+			"it": [
+				"Da Augusta Vindelicorum, fondata da Augusto nel 15 a.C.: una delle città più antiche della Germania.",
+				"La Fuggerei, costruita qui nel 1521, è il più antico complesso di case popolari al mondo ancora abitato; l’affitto è un fiorino renano all’anno, circa 88 centesimi.",
+				"Il suo sistema di gestione delle acque è patrimonio UNESCO, e la pace di Augusta del 1555 lasciò a ogni principe la scelta della religione dei suoi domini."
+			]
+		}
+	},
+	"gunzburg": {
+		"kind": "region",
+		"borders": [
+			"Dillingen an der Donau",
+			"Landkreis Augsburg",
+			"Neu-Ulm",
+			"Unterallgäu"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"dachau": {
+		"kind": "region",
+		"borders": [
+			"Aichach-Friedberg",
+			"Freising",
+			"Fürstenfeldbruck",
+			"Landkreis München",
+			"München",
+			"Pfaffenhofen an der Ilm"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"erding": {
+		"kind": "region",
+		"borders": [
+			"Ebersberg",
+			"Freising",
+			"Landkreis Landshut",
+			"Landkreis München",
+			"Mühldorf am Inn"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"neu-ulm": {
+		"kind": "region",
+		"borders": [
+			"Günzburg",
+			"Unterallgäu"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"muhldorf-am-inn": {
+		"kind": "region",
+		"borders": [
+			"Altötting",
+			"Ebersberg",
+			"Erding",
+			"Landkreis Landshut",
+			"Landkreis Rosenheim",
+			"Rottal-Inn",
+			"Traunstein"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"altotting": {
+		"kind": "region",
+		"borders": [
+			"Mühldorf am Inn",
+			"Rottal-Inn",
+			"Traunstein"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"furstenfeldbruck": {
+		"kind": "region",
+		"borders": [
+			"Aichach-Friedberg",
+			"Dachau",
+			"Landkreis München",
+			"Landsberg am Lech",
+			"München",
+			"Starnberg"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"munchen": {
+		"kind": "region",
+		"borders": [
+			"Dachau",
+			"Fürstenfeldbruck",
+			"Landkreis München"
+		],
+		"coastal": false,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"\"By the monks\" — Munichen, from a monastic settlement, which is why a monk is on the city arms.",
+				"Oktoberfest began as a royal wedding party in 1810 and now draws about six million people.",
+				"Its Englischer Garten is larger than Central Park, and surfers ride a standing wave on a stream inside it."
+			],
+			"it": [
+				"\"Presso i monaci\": Munichen, da un insediamento monastico, ed è per questo che nello stemma della città c’è un monaco.",
+				"L’Oktoberfest nacque nel 1810 come festa per un matrimonio reale e oggi richiama circa sei milioni di persone.",
+				"Il suo Englischer Garten è più grande di Central Park, e al suo interno i surfisti cavalcano un’onda stazionaria su un ruscello."
+			]
+		}
+	},
+	"landkreis-munchen": {
+		"kind": "region",
+		"borders": [
+			"Bad Tölz-Wolfratshausen",
+			"Dachau",
+			"Ebersberg",
+			"Erding",
+			"Freising",
+			"Fürstenfeldbruck",
+			"Landkreis Rosenheim",
+			"Miesbach",
+			"München",
+			"Starnberg"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"ebersberg": {
+		"kind": "region",
+		"borders": [
+			"Erding",
+			"Landkreis München",
+			"Landkreis Rosenheim",
+			"Mühldorf am Inn"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"landsberg-am-lech": {
+		"kind": "region",
+		"borders": [
+			"Aichach-Friedberg",
+			"Fürstenfeldbruck",
+			"Landkreis Augsburg",
+			"Ostallgäu",
+			"Starnberg",
+			"Weilheim-Schongau"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"unterallgau": {
+		"kind": "region",
+		"borders": [
+			"Günzburg",
+			"Landkreis Augsburg",
+			"Memmingen",
+			"Neu-Ulm",
+			"Oberallgäu",
+			"Ostallgäu"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"memmingen": {
+		"kind": "region",
+		"borders": [
+			"Unterallgäu"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"starnberg": {
+		"kind": "region",
+		"borders": [
+			"Bad Tölz-Wolfratshausen",
+			"Fürstenfeldbruck",
+			"Landkreis München",
+			"Landsberg am Lech",
+			"Weilheim-Schongau"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"traunstein": {
+		"kind": "region",
+		"borders": [
+			"Altötting",
+			"Berchtesgadener Land",
+			"Landkreis Rosenheim",
+			"Mühldorf am Inn"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"kaufbeuren": {
+		"kind": "region",
+		"borders": [
+			"Ostallgäu"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"landkreis-rosenheim": {
+		"kind": "region",
+		"borders": [
+			"Ebersberg",
+			"Landkreis München",
+			"Miesbach",
+			"Mühldorf am Inn",
+			"Rosenheim",
+			"Traunstein"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"rosenheim": {
+		"kind": "region",
+		"borders": [
+			"Landkreis Rosenheim"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"ostallgau": {
+		"kind": "region",
+		"borders": [
+			"Garmisch-Partenkirchen",
+			"Kaufbeuren",
+			"Landkreis Augsburg",
+			"Landsberg am Lech",
+			"Oberallgäu",
+			"Unterallgäu",
+			"Weilheim-Schongau"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"weilheim-schongau": {
+		"kind": "region",
+		"borders": [
+			"Bad Tölz-Wolfratshausen",
+			"Garmisch-Partenkirchen",
+			"Landsberg am Lech",
+			"Ostallgäu",
+			"Starnberg"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"miesbach": {
+		"kind": "region",
+		"borders": [
+			"Bad Tölz-Wolfratshausen",
+			"Landkreis München",
+			"Landkreis Rosenheim"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"kempten-allgau": {
+		"kind": "region",
+		"borders": [
+			"Oberallgäu"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"bad-tolz-wolfratshausen": {
+		"kind": "region",
+		"borders": [
+			"Garmisch-Partenkirchen",
+			"Landkreis München",
+			"Miesbach",
+			"Starnberg",
+			"Weilheim-Schongau"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"berchtesgadener-land": {
+		"kind": "region",
+		"borders": [
+			"Traunstein"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"lindau-bodensee": {
+		"kind": "region",
+		"borders": [
+			"Oberallgäu"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"oberallgau": {
+		"kind": "region",
+		"borders": [
+			"Kempten (Allgäu)",
+			"Lindau (Bodensee)",
+			"Ostallgäu",
+			"Unterallgäu"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"garmisch-partenkirchen": {
+		"kind": "region",
+		"borders": [
+			"Bad Tölz-Wolfratshausen",
+			"Ostallgäu",
+			"Weilheim-Schongau"
+		],
+		"coastal": false,
+		"position": "south"
+	}
+}

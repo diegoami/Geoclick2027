@@ -235,15 +235,16 @@ function factsForRegionMap(
 	targets: MapTarget[],
 	sources: Sources,
 	extent: Bbox,
-	borders: Map<string, Set<string>>
+	borders: Map<string, Set<string>>,
+	// Targets from a register outside Natural Earth (#39): no admin-1 row is
+	// theirs, and the smallest one covering a district is its whole state.
+	ownRows = true
 ): Record<string, DerivedFact> {
 	const coast = coastIndex(sources.coast.map((f) => f.geometry));
 	const countryMap = targets[0]?.type === 'country';
-	const sourceRows = rowsByTarget(
-		targets,
-		sources.admin1,
-		countryMap ? ['admin'] : ['name', 'region']
-	);
+	const sourceRows = ownRows
+		? rowsByTarget(targets, sources.admin1, countryMap ? ['admin'] : ['name', 'region'])
+		: new Map<string, Feature[]>();
 
 	const facts: Record<string, DerivedFact> = {};
 	for (const target of targets) {
@@ -376,6 +377,7 @@ async function buildOne(mapId: string): Promise<number> {
 	const map = JSON.parse(readFileSync(path.join(absOutDir, 'map.json'), 'utf8')) as {
 		country?: string;
 		placesSource?: string;
+		boundarySource?: string;
 		targets: (MapTarget & { country?: string })[];
 	};
 	const usable = map.targets.filter((t) => !t.crossesAntimeridian && !crossesAntimeridian(t.bbox));
@@ -390,7 +392,13 @@ async function buildOne(mapId: string): Promise<number> {
 	const isCityMap = map.targets[0]?.type === 'city';
 	const facts = isCityMap
 		? factsForCityMap(map.targets, sources, extent)
-		: factsForRegionMap(map.targets, sources, extent, await adjacencyForMapDir(absOutDir));
+		: factsForRegionMap(
+				map.targets,
+				sources,
+				extent,
+				await adjacencyForMapDir(absOutDir),
+				!map.boundarySource
+			);
 
 	// The authored name-facts, where a person has written any (FT-36).
 	const hooksFor = authoredResolver(map.country);

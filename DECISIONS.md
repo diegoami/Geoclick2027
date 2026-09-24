@@ -16,6 +16,59 @@ Keep this updated the same way as the other docs: when a decision gets
 made, made explicitly to correct an earlier one, or gets revisited, add
 or amend an entry here as part of that change, not as an afterthought.
 
+## Admin-2 maps, and the first boundaries not in the public domain (2026-09-24, #39 batch D)
+
+- **Natural Earth first.** Its admin-1 layer is already one level finer
+  than the maps showed for France (96 departments), Spain (50 provinces;
+  48 without the Canaries, Ceuta and Melilla, as for the communities) and
+  Ireland (34 councils, dissolved into the 26 counties people name). The
+  same layer gave four countries that had no map: Switzerland's cantons,
+  Austria's states, Romania's counties and Ireland's.
+- **Not built from it:** Great Britain's 232 units mix London boroughs,
+  metropolitan boroughs and unitary authorities, and predate the 2019-23
+  reorganisations (Bournemouth and Poole apart, Cumbria whole), so a map of
+  them would teach an outdated patchwork. Hungary's counties arrive with
+  its 23 cities with county rights as separate holes and broken accents
+  ("Gyôr"). Both wait for a better source.
+- **Names are the ones each place uses now.** Spain's provinces take their
+  only official names (Lleida, Girona, Ourense, A Coruña, Illes Balears);
+  Romania's counties get back the diacritics every field of the source
+  lost; two Swiss cantons in English or in full become Luzern and
+  St. Gallen; two French typos are fixed.
+- **Germany's Kreise and the Netherlands' municipalities come from
+  geoBoundaries** (owner's answer to #39 Q5: an attribution licence is
+  acceptable). geoBoundaries republishes each country's register under its
+  own licence: Germany's 400 Kreise are the BKG's, **dl-de/by-2-0 -
+  attribution required**; the 344 Dutch municipalities are **CC0**. The
+  source files are pinned to one geoBoundaries release commit.
+- **Poland's powiats are not built.** geoBoundaries' copy is from
+  OpenStreetMap, **ODbL** - share-alike, not attribution only, which
+  would put the derived tiles under ODbL too. That is a different answer
+  from the one the owner gave, so it goes back to the owner.
+- **The map's credit is now shown.** The tileset always carried it, but the
+  pmtiles source never passed it to MapLibre's attribution control, so no
+  map ever showed "Natural Earth". Harmless for public-domain data, not for
+  dl-de/by-2-0, so `createMap` now gives the control each map.json's
+  `attribution`: a line of small print along the bottom edge, collapsed
+  behind (i) on a narrow screen.
+- **Register names become map names** (`data/scripts/admin2.ts`): "Stuttgart,
+  Stadtkreis" is Stuttgart, "Heilbronn, Landkreis" is Landkreis Heilbronn
+  (the form that keeps it apart from the city), and the register's
+  abbreviations are spelled out as the towns maps spell the towns.
+- **Split by state, like the towns.** A register's district carries no
+  state, so `--within` gives each one the Natural Earth admin-1 area its
+  interior point is in - or, for the Wadden Islands that Natural Earth's
+  coarser coast leaves out, the nearest. Germany in the same six parts as
+  its towns (Bavaria's 96 Kreise stay one map, as Italy's 110 provinces
+  are one), the Netherlands in five.
+- **A district shares an id with the town it is named for**, and with it
+  the town's authored sentences, where they were written for any kind of
+  place: Heidelberg the Stadtkreis is Heidelberg the town, which is right,
+  and Sevilla the province shows Sevilla the city's lines, which is the
+  same conflation `spain-regions` already has for Madrid. Splitting those
+  entries into `region` and `city` lists is authoring work in
+  `data/facts/`, left for a later pass.
+
 ## Germany's towns come from Wikidata (2026-09-24, #39 batch C)
 
 - **Natural Earth runs out at 58 German places**, and `germany-towns-100k`

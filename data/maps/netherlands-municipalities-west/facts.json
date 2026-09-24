@@ -1,0 +1,845 @@
+{
+	"texel": {
+		"kind": "region",
+		"borders": [
+			"Den Helder",
+			"Hollands Kroon"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"den-helder": {
+		"kind": "region",
+		"borders": [
+			"Hollands Kroon",
+			"Schagen",
+			"Texel"
+		],
+		"coastal": true,
+		"position": "north-west"
+	},
+	"hollands-kroon": {
+		"kind": "region",
+		"borders": [
+			"Den Helder",
+			"Dijk en Waard",
+			"Medemblik",
+			"Opmeer",
+			"Schagen",
+			"Texel"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"medemblik": {
+		"kind": "region",
+		"borders": [
+			"Drechterland",
+			"Enkhuizen",
+			"Hollands Kroon",
+			"Hoorn",
+			"Koggenland",
+			"Opmeer",
+			"Stede Broec"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"schagen": {
+		"kind": "region",
+		"borders": [
+			"Bergen (NH)",
+			"Den Helder",
+			"Dijk en Waard",
+			"Hollands Kroon"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"enkhuizen": {
+		"kind": "region",
+		"borders": [
+			"Medemblik",
+			"Stede Broec"
+		],
+		"coastal": true,
+		"position": "east"
+	},
+	"opmeer": {
+		"kind": "region",
+		"borders": [
+			"Dijk en Waard",
+			"Hollands Kroon",
+			"Koggenland",
+			"Medemblik"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"stede-broec": {
+		"kind": "region",
+		"borders": [
+			"Drechterland",
+			"Enkhuizen",
+			"Medemblik"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"dijk-en-waard": {
+		"kind": "region",
+		"borders": [
+			"Alkmaar",
+			"Bergen (NH)",
+			"Hollands Kroon",
+			"Koggenland",
+			"Opmeer",
+			"Schagen"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"bergen-nh": {
+		"kind": "region",
+		"borders": [
+			"Alkmaar",
+			"Castricum",
+			"Dijk en Waard",
+			"Heiloo",
+			"Schagen"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"drechterland": {
+		"kind": "region",
+		"borders": [
+			"Hoorn",
+			"Medemblik",
+			"Stede Broec"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"koggenland": {
+		"kind": "region",
+		"borders": [
+			"Alkmaar",
+			"Dijk en Waard",
+			"Edam-Volendam",
+			"Hoorn",
+			"Medemblik",
+			"Opmeer",
+			"Purmerend"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"hoorn": {
+		"kind": "region",
+		"borders": [
+			"Drechterland",
+			"Edam-Volendam",
+			"Koggenland",
+			"Medemblik"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"heiloo": {
+		"kind": "region",
+		"borders": [
+			"Alkmaar",
+			"Bergen (NH)",
+			"Castricum"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"alkmaar": {
+		"kind": "region",
+		"borders": [
+			"Bergen (NH)",
+			"Castricum",
+			"Dijk en Waard",
+			"Heiloo",
+			"Koggenland",
+			"Purmerend",
+			"Uitgeest",
+			"Wormerland",
+			"Zaanstad"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"castricum": {
+		"kind": "region",
+		"borders": [
+			"Alkmaar",
+			"Bergen (NH)",
+			"Heemskerk",
+			"Heiloo",
+			"Uitgeest"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"edam-volendam": {
+		"kind": "region",
+		"borders": [
+			"Hoorn",
+			"Koggenland",
+			"Purmerend",
+			"Waterland"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"purmerend": {
+		"kind": "region",
+		"borders": [
+			"Alkmaar",
+			"Edam-Volendam",
+			"Koggenland",
+			"Landsmeer",
+			"Waterland",
+			"Wormerland"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"uitgeest": {
+		"kind": "region",
+		"borders": [
+			"Alkmaar",
+			"Castricum",
+			"Heemskerk",
+			"Zaanstad"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"heemskerk": {
+		"kind": "region",
+		"borders": [
+			"Beverwijk",
+			"Castricum",
+			"Uitgeest",
+			"Zaanstad"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"wormerland": {
+		"kind": "region",
+		"borders": [
+			"Alkmaar",
+			"Landsmeer",
+			"Oostzaan",
+			"Purmerend",
+			"Zaanstad"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"beverwijk": {
+		"kind": "region",
+		"borders": [
+			"Heemskerk",
+			"Velsen",
+			"Zaanstad"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"zaanstad": {
+		"kind": "region",
+		"borders": [
+			"Alkmaar",
+			"Amsterdam",
+			"Beverwijk",
+			"Haarlemmermeer",
+			"Heemskerk",
+			"Oostzaan",
+			"Uitgeest",
+			"Velsen",
+			"Wormerland"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"landsmeer": {
+		"kind": "region",
+		"borders": [
+			"Amsterdam",
+			"Oostzaan",
+			"Purmerend",
+			"Waterland",
+			"Wormerland"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"velsen": {
+		"kind": "region",
+		"borders": [
+			"Beverwijk",
+			"Bloemendaal",
+			"Haarlem",
+			"Haarlemmermeer",
+			"Zaanstad"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"oostzaan": {
+		"kind": "region",
+		"borders": [
+			"Amsterdam",
+			"Landsmeer",
+			"Wormerland",
+			"Zaanstad"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"waterland": {
+		"kind": "region",
+		"borders": [
+			"Amsterdam",
+			"Edam-Volendam",
+			"Gooise Meren",
+			"Landsmeer",
+			"Purmerend"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"haarlem": {
+		"kind": "region",
+		"borders": [
+			"Bloemendaal",
+			"Haarlemmermeer",
+			"Heemstede",
+			"Velsen"
+		],
+		"coastal": true,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"From haria-lo-heim, roughly \"settlement on a wooded dune\" — and New York’s Harlem is named after it.",
+				"The Dutch tulip mania of the 1630s centred on this town, where a single bulb briefly cost more than a house.",
+				"Frans Hals lived and painted here, and its Teylers Museum of 1784 is the oldest museum in the Netherlands."
+			],
+			"it": [
+				"Da haria-lo-heim, all’incirca \"insediamento su una duna boscosa\": e Harlem, a New York, prende il nome da qui.",
+				"La tulipomania olandese degli anni Trenta del Seicento ebbe il suo centro in questa città, dove per breve tempo un solo bulbo arrivò a costare più di una casa.",
+				"Frans Hals visse e dipinse qui, e il suo Teylers Museum, del 1784, è il museo più antico dei Paesi Bassi."
+			]
+		}
+	},
+	"bloemendaal": {
+		"kind": "region",
+		"borders": [
+			"Haarlem",
+			"Haarlemmermeer",
+			"Heemstede",
+			"Velsen",
+			"Zandvoort"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"zandvoort": {
+		"kind": "region",
+		"borders": [
+			"Bloemendaal"
+		],
+		"coastal": true,
+		"position": "south-west"
+	},
+	"amsterdam": {
+		"kind": "region",
+		"borders": [
+			"Amstelveen",
+			"De Ronde Venen",
+			"Diemen",
+			"Gooise Meren",
+			"Haarlemmermeer",
+			"Hilversum",
+			"Landsmeer",
+			"Oostzaan",
+			"Ouder-Amstel",
+			"Stichtse Vecht",
+			"Waterland",
+			"Wijdemeren",
+			"Zaanstad"
+		],
+		"coastal": false,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"\"Dam on the Amstel\" — a dam built about 1270, which is literally where the city and its name began.",
+				"It is built on millions of wooden piles driven into the marsh, and has 165 canals dug in the 1600s, a UNESCO site.",
+				"The Dutch East India Company, founded here in 1602, was the first company to issue tradable shares."
+			],
+			"it": [
+				"\"Diga sull’Amstel\": una diga costruita verso il 1270, ed è letteralmente lì che nacquero la città e il suo nome.",
+				"È costruita su milioni di pali di legno piantati nella palude e ha 165 canali scavati nel Seicento, patrimonio UNESCO.",
+				"La Compagnia olandese delle Indie orientali, fondata qui nel 1602, fu la prima società a emettere azioni negoziabili."
+			]
+		}
+	},
+	"heemstede": {
+		"kind": "region",
+		"borders": [
+			"Bloemendaal",
+			"Haarlem",
+			"Haarlemmermeer"
+		],
+		"coastal": true,
+		"position": "south-west"
+	},
+	"diemen": {
+		"kind": "region",
+		"borders": [
+			"Amsterdam",
+			"Gooise Meren",
+			"Ouder-Amstel"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"haarlemmermeer": {
+		"kind": "region",
+		"borders": [
+			"Aalsmeer",
+			"Amstelveen",
+			"Amsterdam",
+			"Bloemendaal",
+			"Haarlem",
+			"Heemstede",
+			"Velsen",
+			"Zaanstad"
+		],
+		"coastal": true,
+		"position": "south-west"
+	},
+	"gooise-meren": {
+		"kind": "region",
+		"borders": [
+			"Amsterdam",
+			"Diemen",
+			"Hilversum",
+			"Huizen",
+			"Waterland"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"huizen": {
+		"kind": "region",
+		"borders": [
+			"Blaricum",
+			"Gooise Meren",
+			"Hilversum",
+			"Laren"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"ouder-amstel": {
+		"kind": "region",
+		"borders": [
+			"Amstelveen",
+			"Amsterdam",
+			"De Ronde Venen",
+			"Diemen"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"amstelveen": {
+		"kind": "region",
+		"borders": [
+			"Aalsmeer",
+			"Amsterdam",
+			"De Ronde Venen",
+			"Haarlemmermeer",
+			"Ouder-Amstel",
+			"Uithoorn"
+		],
+		"coastal": true,
+		"position": "south-west"
+	},
+	"blaricum": {
+		"kind": "region",
+		"borders": [
+			"Eemnes",
+			"Hilversum",
+			"Huizen",
+			"Laren"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"aalsmeer": {
+		"kind": "region",
+		"borders": [
+			"Amstelveen",
+			"Haarlemmermeer",
+			"Uithoorn"
+		],
+		"coastal": true,
+		"position": "south-west"
+	},
+	"eemnes": {
+		"kind": "region",
+		"borders": [
+			"Baarn",
+			"Blaricum",
+			"Bunschoten",
+			"Laren"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"bunschoten": {
+		"kind": "region",
+		"borders": [
+			"Amersfoort",
+			"Baarn",
+			"Eemnes"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"laren": {
+		"kind": "region",
+		"borders": [
+			"Baarn",
+			"Blaricum",
+			"Eemnes",
+			"Hilversum",
+			"Huizen"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"uithoorn": {
+		"kind": "region",
+		"borders": [
+			"Aalsmeer",
+			"Amstelveen",
+			"De Ronde Venen"
+		],
+		"coastal": true,
+		"position": "south-west"
+	},
+	"hilversum": {
+		"kind": "region",
+		"borders": [
+			"Amsterdam",
+			"Baarn",
+			"Blaricum",
+			"De Bilt",
+			"Gooise Meren",
+			"Huizen",
+			"Laren",
+			"Wijdemeren"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"de-ronde-venen": {
+		"kind": "region",
+		"borders": [
+			"Amstelveen",
+			"Amsterdam",
+			"Ouder-Amstel",
+			"Stichtse Vecht",
+			"Uithoorn",
+			"Woerden"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"wijdemeren": {
+		"kind": "region",
+		"borders": [
+			"Amsterdam",
+			"De Bilt",
+			"Hilversum",
+			"Stichtse Vecht"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"stichtse-vecht": {
+		"kind": "region",
+		"borders": [
+			"Amsterdam",
+			"De Bilt",
+			"De Ronde Venen",
+			"Utrecht",
+			"Wijdemeren",
+			"Woerden"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"baarn": {
+		"kind": "region",
+		"borders": [
+			"Amersfoort",
+			"Bunschoten",
+			"De Bilt",
+			"Eemnes",
+			"Hilversum",
+			"Laren",
+			"Soest",
+			"Zeist"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"amersfoort": {
+		"kind": "region",
+		"borders": [
+			"Baarn",
+			"Bunschoten",
+			"Leusden",
+			"Soest",
+			"Zeist"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"soest": {
+		"kind": "region",
+		"borders": [
+			"Amersfoort",
+			"Baarn",
+			"Zeist"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"de-bilt": {
+		"kind": "region",
+		"borders": [
+			"Baarn",
+			"Hilversum",
+			"Stichtse Vecht",
+			"Utrecht",
+			"Wijdemeren",
+			"Zeist"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"leusden": {
+		"kind": "region",
+		"borders": [
+			"Amersfoort",
+			"Woudenberg",
+			"Zeist"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"zeist": {
+		"kind": "region",
+		"borders": [
+			"Amersfoort",
+			"Baarn",
+			"Bunnik",
+			"De Bilt",
+			"Leusden",
+			"Soest",
+			"Utrecht",
+			"Utrechtse Heuvelrug",
+			"Woudenberg"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"woerden": {
+		"kind": "region",
+		"borders": [
+			"De Ronde Venen",
+			"Montfoort",
+			"Stichtse Vecht",
+			"Utrecht"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"utrecht": {
+		"kind": "region",
+		"borders": [
+			"Bunnik",
+			"De Bilt",
+			"Houten",
+			"IJsselstein",
+			"Montfoort",
+			"Nieuwegein",
+			"Stichtse Vecht",
+			"Woerden",
+			"Zeist"
+		],
+		"coastal": false,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"From Latin ultra traiectum, \"beyond the ford\" — the Roman crossing of the Rhine, which became Trecht and then Utrecht.",
+				"The smallest province, and the most central: nearly every Dutch railway line passes through its station.",
+				"Its cathedral tower is the tallest in the country at 112 m, and the nave that once joined it blew down in a tornado in 1674 and was never rebuilt."
+			],
+			"it": [
+				"Dal latino ultra traiectum, \"oltre il guado\": il passaggio romano sul Reno, diventato poi Trecht e infine Utrecht.",
+				"La provincia più piccola, e la più centrale: quasi ogni linea ferroviaria olandese passa per la sua stazione.",
+				"La torre del suo duomo è la più alta del paese con 112 m, e la navata che un tempo vi si congiungeva crollò per una tromba d’aria nel 1674 e non fu mai ricostruita."
+			]
+		}
+	},
+	"woudenberg": {
+		"kind": "region",
+		"borders": [
+			"Leusden",
+			"Renswoude",
+			"Utrechtse Heuvelrug",
+			"Zeist"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"renswoude": {
+		"kind": "region",
+		"borders": [
+			"Utrechtse Heuvelrug",
+			"Veenendaal",
+			"Woudenberg"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"montfoort": {
+		"kind": "region",
+		"borders": [
+			"IJsselstein",
+			"Lopik",
+			"Oudewater",
+			"Utrecht",
+			"Woerden"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"bunnik": {
+		"kind": "region",
+		"borders": [
+			"Houten",
+			"Utrecht",
+			"Utrechtse Heuvelrug",
+			"Wijk bij Duurstede",
+			"Zeist"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"nieuwegein": {
+		"kind": "region",
+		"borders": [
+			"Houten",
+			"IJsselstein",
+			"Utrecht"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"utrechtse-heuvelrug": {
+		"kind": "region",
+		"borders": [
+			"Bunnik",
+			"Renswoude",
+			"Rhenen",
+			"Veenendaal",
+			"Wijk bij Duurstede",
+			"Woudenberg",
+			"Zeist"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"ijsselstein": {
+		"kind": "region",
+		"borders": [
+			"Lopik",
+			"Montfoort",
+			"Nieuwegein",
+			"Utrecht"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"oudewater": {
+		"kind": "region",
+		"borders": [
+			"Lopik",
+			"Montfoort"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"veenendaal": {
+		"kind": "region",
+		"borders": [
+			"Renswoude",
+			"Rhenen",
+			"Utrechtse Heuvelrug"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"houten": {
+		"kind": "region",
+		"borders": [
+			"Bunnik",
+			"Nieuwegein",
+			"Utrecht",
+			"Wijk bij Duurstede"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"wijk-bij-duurstede": {
+		"kind": "region",
+		"borders": [
+			"Bunnik",
+			"Houten",
+			"Utrechtse Heuvelrug"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"rhenen": {
+		"kind": "region",
+		"borders": [
+			"Utrechtse Heuvelrug",
+			"Veenendaal"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"lopik": {
+		"kind": "region",
+		"borders": [
+			"IJsselstein",
+			"Montfoort",
+			"Oudewater"
+		],
+		"coastal": false,
+		"position": "south"
+	}
+}
