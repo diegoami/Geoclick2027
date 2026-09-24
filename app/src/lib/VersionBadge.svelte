@@ -13,8 +13,11 @@
 <style>
 	.version-badge {
 		position: fixed;
-		right: 0.5rem;
-		bottom: 0.4rem;
+		/* Left: the map's credit line takes the bottom-right corner, and the
+		 * two overlapped on every map screen. */
+		left: 0.5rem;
+		/* Above the Quiz's tray or the Tour's controls (mapBottomOverlay.ts). */
+		bottom: calc(var(--window-bottom-overlay, 0px) + 0.4rem);
 		z-index: 20;
 		font-family: ui-monospace, monospace;
 		font-size: 0.7rem;

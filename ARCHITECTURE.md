@@ -92,6 +92,16 @@ pairs well with a canvas/map-heavy UI.
   archive rather than four more layers in the map's own: DECISIONS.md,
   "The map can show what is under it".
 
+- **The map's own chrome** (2026-09-24, tablet play). `createMap`
+  (`geoclickMap.ts`) adds, under MapLibre's zoom control,
+  `HideButtonsControl` (`hideButtonsControl.svelte.ts`), which toggles
+  `mapNavHidden()` in `mapPrefs.svelte.ts` (session-only) and `MapNav`
+  hides while it is on. The Quiz's tray and the Tour's controls call
+  `publishBottomOverlay` (`mapBottomOverlay.ts`) from an `$effect`; it sets
+  `--map-bottom-overlay` and `--window-bottom-overlay` on the page root,
+  which `app.css` (the map's bottom controls) and `VersionBadge.svelte`
+  read. `createMap` also folds the compact credit on a narrow screen.
+
 - **A derived fact per target** (v0.8.0, FT-34). `data/scripts/build-facts.ts`
   writes `data/maps/<id>/facts.json` beside each `map.json` — structured
   fields, not prose: where a place sits in its country, whether it has a

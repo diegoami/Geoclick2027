@@ -10,6 +10,7 @@ import { isNativeShell } from './platform';
 import { overallExtent, type MapDefinition } from './mapDefinition';
 import { mapFitPadding } from './mapFit';
 import { TerrainLayer } from './terrainLayer';
+import { HideButtonsControl } from './hideButtonsControl.svelte';
 import { tutorialMapGesture } from './tutorial.svelte';
 import { ensurePmtilesProtocol, registerTilesArchive } from './pmtilesSource';
 
@@ -52,6 +53,31 @@ export async function fetchMapDefAndStyle(
 	return { mapDef, style };
 }
 
+/**
+ * On a narrow screen MapLibre opens the credit spread across the bottom of
+ * the map and folds it behind its (i) only on the first drag - over the
+ * Quiz's names until then. It starts folded instead, as MapLibre leaves it
+ * after that drag; the (i) still opens it (tablet play, 2026-09-24). Watched
+ * rather than done on an event: MapLibre marks the credit compact only once
+ * its text has come in from the sources, and no map event lines up with it.
+ */
+function foldCreditOnNarrowScreens(map: maplibregl.Map, container: HTMLElement): void {
+	const credit = container.querySelector<HTMLElement>('.maplibregl-ctrl-attrib');
+	if (!credit) return;
+	const fold = () => {
+		if (!credit.classList.contains('maplibregl-compact-show')) return false;
+		credit.classList.remove('maplibregl-compact-show');
+		return true;
+	};
+	if (fold()) return;
+	const observer = new MutationObserver(() => {
+		if (fold()) observer.disconnect();
+	});
+	observer.observe(credit, { attributes: true, attributeFilter: ['class'] });
+	// On a wide screen it never goes compact, and the watch ends with the map.
+	map.once('remove', () => observer.disconnect());
+}
+
 export function createMap(
 	container: HTMLDivElement,
 	mapDef: MapDefinition,
@@ -74,7 +100,10 @@ export function createMap(
 			customAttribution: ['<a href="https://maplibre.org/">MapLibre</a>', mapDef.attribution]
 		}
 	});
+	foldCreditOnNarrowScreens(map, container);
 	map.addControl(new maplibregl.NavigationControl(), 'top-right');
+	// Under the zoom buttons: hides the map bar for a clear map (tablet play).
+	map.addControl(new HideButtonsControl(), 'top-right');
 	// The tutorial rings the +/- buttons in its zoom-and-pan step (FT-11).
 	container
 		.querySelector('.maplibregl-ctrl-top-right .maplibregl-ctrl-group')

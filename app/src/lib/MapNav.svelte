@@ -14,10 +14,11 @@
 	import type { Snippet } from 'svelte';
 	import { t } from './i18n.svelte';
 	import LanguageSwitcher from './LanguageSwitcher.svelte';
-	import { recordVisit } from './mapPrefs.svelte';
+	import { mapNavHidden, recordVisit } from './mapPrefs.svelte';
 	import FavouriteStar from './FavouriteStar.svelte';
 	import TutorialButton from './TutorialButton.svelte';
 	import TerrainButton from './TerrainButton.svelte';
+	import { tutorialState } from './tutorial.svelte';
 
 	let {
 		mapId,
@@ -41,9 +42,14 @@
 	// recordVisit reads the list it writes, and an effect would re-run on its
 	// own write.
 	onMount(() => recordVisit(mapId));
+
+	// The tutorial points at the tabs and the pills, so they show while it
+	// runs even if the player had hidden them.
+	const hidden = $derived(mapNavHidden() && tutorialState().status === 'idle');
 </script>
 
-<div class="nav-overlay" data-map-overlay="top">
+<!-- Hidden by the button under the zoom control (hideButtonsControl). -->
+<div class="nav-overlay" class:hidden data-map-overlay="top">
 	<div class="nav-row">
 		<a class="nav-btn nav-btn--back" href={resolve('/')}>
 			<svg
@@ -152,6 +158,9 @@
 </div>
 
 <style>
+	.nav-overlay.hidden {
+		display: none;
+	}
 	.nav-overlay {
 		position: absolute;
 		top: 0.75rem;

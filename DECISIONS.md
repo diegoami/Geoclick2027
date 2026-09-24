@@ -16,6 +16,39 @@ Keep this updated the same way as the other docs: when a decision gets
 made, made explicitly to correct an earlier one, or gets revisited, add
 or amend an entry here as part of that change, not as an afterthought.
 
+## Three fixes from tablet play after v0.11.0 (2026-09-24)
+
+Raised by the product owner after playing `v0.11.0` on a tablet.
+
+- **Terrain off and on again left the map without its names.** Hidden,
+  the terrain layers let MapLibre drop the source's tiles; shown again, the
+  source reports loaded with nothing in it, so the draw found no names and
+  never retried. Now a draw that finds nothing waits for the tiles, as a
+  first load does, and keeps waiting through a "loaded" that comes before
+  them (`terrainLayer.ts`). Switching off still drops the wait (FT-54).
+- **The credit line and the version badge no longer sit on the Quiz's
+  names.** A panel that covers the bottom of the map - the tray, the Tour's
+  controls - publishes how much it covers (`mapBottomOverlay.ts`), and
+  app.css lifts MapLibre's bottom controls and the badge by that much. Two
+  measures, not one: the credit is inside the map, the badge is fixed to
+  the window. The badge moves to the bottom-left, because the credit and
+  the badge had shared the bottom-right corner on every map screen.
+- **On a narrow screen the credit starts folded behind its (i).** MapLibre
+  opens it spread across the bottom and folds it only on the first drag;
+  `geoclickMap.ts` folds it the moment MapLibre makes it compact. Watched
+  with a MutationObserver, not on a map event: the credit turns compact
+  when its text comes in from the sources, and neither `load` nor the first
+  `idle` lines up with that. This makes batch D's "collapsed behind (i) on
+  a narrow screen" true.
+- **A button under the zoom control hides the map bar** (the tabs, the
+  map's name, the pills) for a clear map during a round. A MapLibre control,
+  so it stays where it is while everything else goes, and the way back is
+  under the finger that hid them. **Session-only**, as the chosen names
+  are (#11): it holds from map to map for the sitting, and a fresh start
+  shows the buttons, so nobody has to rediscover how to get them back.
+  While the tutorial runs the bar shows anyway: its steps point at the
+  tabs and the pills.
+
 ## Poland's powiats under ODbL, and eleven more countries (2026-09-24, #39 batch E)
 
 - **Poland's 380 powiats come from OpenStreetMap** (owner's answer,
