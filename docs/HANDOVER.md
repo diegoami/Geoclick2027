@@ -131,14 +131,8 @@ One is open (#11, fixed by PR #38 on merge). #7 and #8 closed with PR #33; #1–
 
 | # | Task | What | Size | Scheduled |
 |---|---|---|---|---|
-| 7 | FT-56 | The integrity suite validates `tourOrder`, not the shipped `tour.json` | S | Hardening batch |
-| 8 | FT-59 | No component test crosses QuizView's persistence/resume seams | M | Hardening batch |
 | 11 | — | On the Known map an explicitly tapped name keeps its earned colour instead of **Chosen** | S | PR #38, v0.10.1 |
 
-- **#7 — no shipped tour is currently broken.** All 63 `tour.json` files
-  were checked on 2026-09-20: correct `mapId`, steps a permutation of the
-  target ids, all `dwellMs` finite and positive. This is a gate that guards
-  the wrong artifact, not a live defect.
 - **#11 was decided on 2026-09-22** — an explicit tap is Chosen regardless of
   the streak, and the choice is **session-only** (it resets on reopen; this
   changes FT-39's persisted override). Not started; `visibleTier` in
