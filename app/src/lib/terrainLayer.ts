@@ -300,20 +300,28 @@ export class TerrainLayer {
 	 * draw nothing and never retry.
 	 */
 	private drawLabelsWhenSourceReady(): void {
-		if (this.map.isSourceLoaded(TERRAIN_SOURCE)) {
-			this.drawLabels(getLanguage());
-			return;
-		}
+		// "Loaded" is not enough on its own. While the layers were hidden,
+		// MapLibre let the source drop its tiles, so right after switching
+		// back on the source reports loaded with nothing in it - and a draw
+		// then finds no names and never retries. That was the second press
+		// of Terrain leaving the map without its names. Nothing drawn means
+		// wait for the tiles, as on a first load.
+		if (this.map.isSourceLoaded(TERRAIN_SOURCE) && this.drawLabels(getLanguage()) > 0) return;
 		// One pending wait is enough: turning it on again before the tiles
 		// arrive must not stack a second handler.
 		if (this.sourceReady) return;
 		const onData = (e: maplibregl.MapSourceDataEvent) => {
 			if (e.sourceId !== TERRAIN_SOURCE || !e.isSourceLoaded) return;
-			this.clearSourceReady();
 			// The player may have switched Terrain off while the tiles were on
 			// their way; the names must not come back (FT-54).
-			if (!this.visible) return;
-			this.drawLabels(getLanguage());
+			if (!this.visible) {
+				this.clearSourceReady();
+				return;
+			}
+			// Keep waiting until the names are really there: a "loaded" can
+			// come before the dropped tiles are fetched again. Hiding the
+			// layer or leaving the map drops this wait.
+			if (this.drawLabels(getLanguage()) > 0) this.clearSourceReady();
 		};
 		this.sourceReady = onData;
 		this.map.on('sourcedata', onData);
@@ -411,7 +419,8 @@ export class TerrainLayer {
 	}
 
 	/** One popup per named feature currently in view, in `language`. */
-	private drawLabels(language: Language): void {
+	/** Draws the labels and says how many; none means the tiles are not in yet. */
+	private drawLabels(language: Language): number {
 		this.removeLabels();
 		const seen = new Set<string>();
 		// Ranges and seas, then the peaks, then the great circles. Each is a
@@ -439,6 +448,7 @@ export class TerrainLayer {
 			(p) => labelFor(p, language),
 			() => LINE_LABEL_PRIORITY
 		);
+		return this.popups.length;
 	}
 
 	/** One popup per named feature of a point layer in the terrain archive. */

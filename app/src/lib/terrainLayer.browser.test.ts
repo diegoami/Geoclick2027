@@ -161,6 +161,50 @@ function sourceLoadingMap() {
 	};
 }
 
+// A map whose source drops its tiles while the terrain is hidden, as
+// MapLibre's does: switched back on, the source reports loaded but holds no
+// features until `emitTilesBack()` delivers them again.
+function tilesDroppedWhenHiddenMap() {
+	const added: string[] = [];
+	const listeners = new Map<string, Set<(...args: unknown[]) => void>>();
+	let hasTiles = true;
+	const map = {
+		isStyleLoaded: () => true,
+		isSourceLoaded: () => true,
+		getSource: () => undefined,
+		addSource: () => {},
+		getLayer: (id: string) => (id === 'targets-fill' || added.includes(id) ? {} : undefined),
+		addLayer: (layer: { id: string }) => void added.push(layer.id),
+		getPaintProperty: () => 0.55,
+		setPaintProperty: () => {},
+		setLayoutProperty: (_id: string, _property: string, value: string) => {
+			if (value === 'none') hasTiles = false;
+		},
+		querySourceFeatures: (_source: string, { sourceLayer }: { sourceLayer: string }) =>
+			hasTiles ? ((FEATURES as Record<string, unknown[]>)[sourceLayer] ?? []) : [],
+		on: (type: string, handler: (...args: unknown[]) => void) => {
+			if (!listeners.has(type)) listeners.set(type, new Set());
+			listeners.get(type)!.add(handler);
+		},
+		off: (type: string, handler: (...args: unknown[]) => void) =>
+			void listeners.get(type)?.delete(handler)
+	};
+	const emit = () => {
+		for (const handler of [...(listeners.get('sourcedata') ?? [])])
+			handler({ sourceId: TERRAIN_SOURCE, isSourceLoaded: true });
+	};
+	return {
+		map: map as unknown as maplibregl.Map,
+		sourceHandlers: () => listeners.get('sourcedata')?.size ?? 0,
+		/** A "loaded" event that arrives before the tiles do. */
+		emitLoadedWithoutTiles: emit,
+		emitTilesBack: () => {
+			hasTiles = true;
+			emit();
+		}
+	};
+}
+
 class TestTerrainLayer extends TerrainLayer {
 	private fakePopups: FakePopup[] = [];
 	protected override createPopup(): maplibregl.Popup {
@@ -302,6 +346,45 @@ describe('the tiles arriving late', () => {
 
 		harness.emitSourceReady();
 		expect(layer.labels()).toEqual(['Alps', 'Mont Blanc 4,807 m']);
+	});
+});
+
+describe('switching it off and on again', () => {
+	beforeEach(() => setLanguage('en'));
+
+	it('brings the names back once the dropped tiles return', async () => {
+		const harness = tilesDroppedWhenHiddenMap();
+		const layer = new TestTerrainLayer(harness.map, 'test-map');
+
+		await layer.setVisible(true);
+		expect(layer.labels()).toEqual(['Alps', 'Mont Blanc 4,807 m']);
+		await layer.setVisible(false);
+		expect(layer.labels()).toEqual([]);
+
+		await layer.setVisible(true); // loaded, but the tiles are gone
+		expect(layer.labels()).toEqual([]);
+		expect(harness.sourceHandlers()).toBe(1); // waiting, not given up
+
+		harness.emitLoadedWithoutTiles(); // a "loaded" before the tiles
+		expect(harness.sourceHandlers()).toBe(1);
+
+		harness.emitTilesBack();
+		expect(layer.labels()).toEqual(['Alps', 'Mont Blanc 4,807 m']);
+		expect(harness.sourceHandlers()).toBe(0);
+	});
+
+	it('stops waiting when switched off again before the tiles return', async () => {
+		const harness = tilesDroppedWhenHiddenMap();
+		const layer = new TestTerrainLayer(harness.map, 'test-map');
+
+		await layer.setVisible(true);
+		await layer.setVisible(false);
+		await layer.setVisible(true);
+		await layer.setVisible(false);
+		expect(harness.sourceHandlers()).toBe(0);
+
+		harness.emitTilesBack();
+		expect(layer.labels()).toEqual([]);
 	});
 });
 

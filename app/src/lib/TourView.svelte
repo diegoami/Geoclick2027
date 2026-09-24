@@ -15,11 +15,19 @@
 	import { DOT_CLEARANCE_PX, registerLabel } from './labelCollision';
 	import type { MapDefinition, Target } from './mapDefinition';
 	import FactCard from './FactCard.svelte';
+	import { publishBottomOverlay } from './mapBottomOverlay';
 	import { fetchFacts, placeFacts, type Facts, type PlaceFacts } from './facts';
 
 	let { mapId }: { mapId: string } = $props();
 
 	let container: HTMLDivElement;
+	// $state so the effect below runs once the controls render with the tour.
+	let controlsEl = $state<HTMLDivElement>();
+	// Lifts the map's credit line and the version badge above the controls
+	// (mapBottomOverlay.ts).
+	$effect(() => {
+		if (controlsEl) return publishBottomOverlay(controlsEl);
+	});
 	let map: maplibregl.Map | undefined;
 	// Sea, rivers and named terrain (FT-33). The $effect below follows the
 	// map bar's Terrain button, which only writes the preference.
@@ -247,7 +255,7 @@
 		{/if}
 
 		{#if tour}
-			<div class="controls" data-map-overlay="bottom">
+			<div class="controls" data-map-overlay="bottom" bind:this={controlsEl}>
 				<button onclick={back} disabled={stepIndex === 0}>{t('tour.prev')}</button>
 				<button onclick={togglePlay}>
 					{#if finished}{t('tour.replay')}{:else if playing}{t('tour.pause')}{:else}{t(

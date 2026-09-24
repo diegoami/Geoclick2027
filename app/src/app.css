@@ -252,6 +252,15 @@
 		0 0 6px rgba(255, 255, 255, 0.8);
 }
 
+/* The map's credit line sits above whatever covers the bottom of the map -
+ * the Quiz's tray, the Tour's controls - rather than on the names in it
+ * (mapBottomOverlay.ts publishes the height; 0 when nothing covers it).
+ * Qualified by the map so it outranks maplibre-gl.css's own bottom: 0. */
+.maplibregl-map .maplibregl-ctrl-bottom-right,
+.maplibregl-map .maplibregl-ctrl-bottom-left {
+	bottom: var(--map-bottom-overlay, 0px);
+}
+
 /* The popup a stretched name stands in for: kept, so the name can fall back
  * to it the moment the stretched one stops fitting, but not drawn. */
 .maplibregl-popup:has(> .maplibregl-popup-content.is-stretched) {

@@ -153,6 +153,24 @@ export function setTerrainShown(shown: boolean): void {
 	}
 }
 
+// --- the map's buttons, hidden (tablet play, 2026-09-24) ---
+//
+// The button under the zoom control hides the map bar - the view tabs, the
+// map's name, the language, Terrain and Tutorial - so a round on a tablet has
+// the whole map to itself. Session-only like the chosen names below: it holds
+// from map to map for the sitting, and a fresh start shows the buttons, so a
+// player who hid them once never has to hunt for how to get them back.
+
+let navHidden = $state(false);
+
+export function mapNavHidden(): boolean {
+	return navHidden;
+}
+
+export function setMapNavHidden(hidden: boolean): void {
+	navHidden = hidden;
+}
+
 // --- the names you have chosen to show (FT-39, docs/PLAN_V0.9.md) ---
 //
 // The Known map draws a name when the player has placed it cleanly at least

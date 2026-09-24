@@ -28,6 +28,7 @@
 	} from '@geoclick/quiz-engine';
 	import { overallExtent, type MapDefinition } from './mapDefinition';
 	import { handSize, knownCount, mapLevel, refillHand, type Level } from './difficulty';
+	import { publishBottomOverlay } from './mapBottomOverlay';
 	import {
 		loadPlayableCardStates,
 		todayLocalDate,
@@ -178,6 +179,12 @@
 		if (session && trayEl) {
 			requestAnimationFrame(measureTraySizing);
 		}
+	});
+
+	// Lifts the map's credit line and the version badge above the tray, so
+	// they are not drawn over the names (mapBottomOverlay.ts).
+	$effect(() => {
+		if (trayEl) return publishBottomOverlay(trayEl);
 	});
 
 	// There is one kind of round now, and it covers the whole map (v0.6.0,
