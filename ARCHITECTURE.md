@@ -139,9 +139,10 @@ pairs well with a canvas/map-heavy UI.
   `{region, city}` and `build-facts.ts` picks by the target's kind.
 
 - **The Known map is what a map opens on** (v0.9.0, FT-39), and a tap adds
-  or removes a name, kept per map in `mapPrefs.svelte.ts`. `shownNames.ts`
-  holds the whole rule - earned strength from the clean streak, overridden
-  either way by a tap - and is pure and unit-tested; `MapView.svelte` only
+  or removes a name, kept per map for the session in `mapPrefs.svelte.ts`
+  (in memory since #11). `shownNames.ts` holds the whole rule - earned
+  strength from the clean streak, overridden either way by a tap, a tapped
+  name always drawn as Chosen - and is pure and unit-tested; `MapView.svelte` only
   draws what it is told. The back-button hierarchy follows: every
   sub-screen returns to `/map/<id>`, which returns to the map list.
 

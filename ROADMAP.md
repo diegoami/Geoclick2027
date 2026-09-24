@@ -144,10 +144,11 @@ Check items off as they land; update "Status" as iterations complete.
   `tapped-name-shows`): on Explore, the name whose fact card is open always
   shows, even when boxed in by curved neighbours (Basilicata at the country
   view). **Merged** 2026-09-24.
-- **Raised by the product owner 2026-09-22, backlogged**: GitHub issue #11 —
-  on the Known map an explicitly tapped name kept its earned colour instead
-  of **Chosen**. Decided: an explicit tap is Chosen regardless of the streak,
-  and the choice is **session-only** (resets on reopen). Not scheduled.
+- **Built 2026-09-24** (GitHub issue #11, branch `known-tap-chosen`): on the
+  Known map an explicitly tapped name kept its earned colour instead of
+  **Chosen**. Now an explicit tap is Chosen regardless of the streak, and the
+  choice is **session-only** (resets on reopen; the FT-39 localStorage key
+  is removed on load). Ships in v0.10.1.
 - **Raised and decided 2026-09-20, unscoped**: six UX problems from one
   round of tablet play (`germany-towns-100k`) — the level-0 tray offering
   every name at once, slips losing their drag to the tablet's own

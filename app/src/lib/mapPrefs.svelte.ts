@@ -156,53 +156,38 @@ export function setTerrainShown(shown: boolean): void {
 // --- the names you have chosen to show (FT-39, docs/PLAN_V0.9.md) ---
 //
 // The Known map draws a name when the player has placed it cleanly at least
-// once (FT-22). A tap now overrides that, either way, and the override
-// sticks until it is tapped again - so the map in front of the player is
-// the set of names they have chosen to work on, not only what they have
-// earned.
+// once (FT-22). A tap overrides that, either way, and the override sticks
+// until it is tapped again or the app is closed - so the map in front of the
+// player is the set of names they have chosen to work on, not only what
+// they have earned.
 //
-// Kept HERE, in localStorage, and not in the SQLite progress store, because
-// that is what it is: a view of a map on this device, not a record of what
-// the player knows. Storing it as progress would mean a schema migration in
-// both native backends (capacitorMigrations.ts and lib.rs, which a test
-// holds to parity) to record something that is not progress. Same reasoning
-// as favourites and recents above.
+// Session-only (product owner, #11, 2026-09-22): the choice lives in memory
+// for the sitting, and reopening the app shows what is known and nothing
+// else. FT-39 kept it in localStorage; that key is dropped once on load so a
+// choice made under the old rule does not linger in storage. Never in the
+// SQLite progress store either way: it is a view of a map, not a record of
+// what the player knows.
 
-const SHOWN_KEY = 'geoclick:shown-names:v1';
+const LEGACY_SHOWN_KEY = 'geoclick:shown-names:v1';
 
 /** What a tap has said about one name, on top of what the player knows. */
 export type NameOverride = 'shown' | 'hidden';
 
-/** Every override, keyed `<mapId>/<targetId>`. */
-function readOverrides(): Record<string, NameOverride> {
-	if (typeof localStorage === 'undefined') return {};
-	try {
-		const raw = localStorage.getItem(SHOWN_KEY);
-		const value: unknown = raw ? JSON.parse(raw) : {};
-		if (!value || typeof value !== 'object') return {};
-		const out: Record<string, NameOverride> = {};
-		for (const [key, v] of Object.entries(value as Record<string, unknown>)) {
-			if (v === 'shown' || v === 'hidden') out[key] = v;
-		}
-		return out;
-	} catch {
-		return {};
-	}
-}
-
-let overrides = $state<Record<string, NameOverride>>(readOverrides());
-
-const overrideKey = (mapId: string, targetId: string) => `${mapId}/${targetId}`;
-
-function writeOverrides(next: Record<string, NameOverride>): void {
-	overrides = next;
+function dropLegacyOverrides(): void {
 	if (typeof localStorage === 'undefined') return;
 	try {
-		localStorage.setItem(SHOWN_KEY, JSON.stringify(next));
+		localStorage.removeItem(LEGACY_SHOWN_KEY);
 	} catch {
-		// Full or blocked storage: the choice holds for this session.
+		// Blocked storage: nothing was read from it, so nothing to undo.
 	}
 }
+
+dropLegacyOverrides();
+
+/** Every override this session, keyed `<mapId>/<targetId>`. */
+let overrides = $state<Record<string, NameOverride>>({});
+
+const overrideKey = (mapId: string, targetId: string) => `${mapId}/${targetId}`;
 
 /** What the player has said about this name, if anything. */
 export function nameOverride(mapId: string, targetId: string): NameOverride | undefined {
@@ -211,7 +196,7 @@ export function nameOverride(mapId: string, targetId: string): NameOverride | un
 
 /** Records a tap: the name is now shown, or now hidden. */
 export function setNameOverride(mapId: string, targetId: string, value: NameOverride): void {
-	writeOverrides({ ...overrides, [overrideKey(mapId, targetId)]: value });
+	overrides = { ...overrides, [overrideKey(mapId, targetId)]: value };
 }
 
 /** Forgets every choice on one map, so it goes back to showing what is known. */
@@ -221,7 +206,7 @@ export function clearNameOverrides(mapId: string): void {
 	for (const [key, value] of Object.entries(overrides)) {
 		if (!key.startsWith(prefix)) next[key] = value;
 	}
-	writeOverrides(next);
+	overrides = next;
 }
 
 /** Whether this map has any choice worth clearing. */

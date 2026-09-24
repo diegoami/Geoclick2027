@@ -30,11 +30,11 @@ describe('visibleTier', () => {
 		expect(visibleTier(0, 'shown')).toBe('asked');
 	});
 
-	it('keeps the strength a name was earned at when it is also asked for', () => {
-		// The map still reads as a record of progress underneath whatever
-		// has been pinned on top of it.
-		expect(visibleTier(1, 'shown')).toBe('seen');
-		expect(visibleTier(3, 'shown')).toBe('known');
+	it('draws a tapped name as Chosen even when it was already earned', () => {
+		// #11: an explicit tap outranks the streak (product owner, 2026-09-22).
+		expect(visibleTier(1, 'shown')).toBe('asked');
+		expect(visibleTier(2, 'shown')).toBe('asked');
+		expect(visibleTier(3, 'shown')).toBe('asked');
 	});
 
 	it('hides a name the player put away, however well they know it', () => {
@@ -70,8 +70,9 @@ describe('tapOverride', () => {
 
 	it('lets a name earned later appear on its own', () => {
 		// Someone taps a blank region, then learns it in the quiz. The
-		// override says 'shown' and the streak agrees - nothing to undo.
+		// override says 'shown' and the streak agrees - nothing to undo, and
+		// it stays Chosen for the rest of the session (#11).
 		expect(visibleTier(0, 'shown')).toBe('asked');
-		expect(visibleTier(3, 'shown')).toBe('known');
+		expect(visibleTier(3, 'shown')).toBe('asked');
 	});
 });

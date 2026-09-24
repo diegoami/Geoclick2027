@@ -1550,12 +1550,20 @@ answers:
 - **A name you asked for is drawn in the accent colour**, not as a fourth
   strength of knowing. The three earned strengths keep meaning exactly what
   they meant; "I put this here" and "I learned this" are different claims
-  and the map should not blur them.
-- **The choices live in localStorage, not in the progress store.** They are a
-  view of a map on this device, not a record of what the player knows -
-  same class of thing as favourites and recents. Storing them as progress
-  would have meant a schema migration in both native backends, which a test
-  holds to parity, to record something that is not progress.
+  and the map should not blur them. *Amended 2026-09-24 (#11):* as built,
+  a tapped name the player had already earned kept its earned strength, so
+  a tap looked like it did nothing. The product owner's rule: an explicit
+  tap is **Chosen** whatever the streak - the tap is the newer and more
+  deliberate claim.
+- **~~The choices live in localStorage~~, not in the progress store.** They
+  are a view of a map, not a record of what the player knows. Storing them
+  as progress would have meant a schema migration in both native backends,
+  which a test holds to parity, to record something that is not progress.
+  *Amended 2026-09-24 (#11, product owner 2026-09-22):* the choices are now
+  **session-only**, in memory; reopening the app shows what is known and
+  nothing else, and the old `geoclick:shown-names:v1` key is removed on
+  load. With a tap always drawn as Chosen, a persisted choice would pin a
+  learned name in the accent colour for good, hiding the progress under it.
 - **Overview stays** (decision 1). A map that opens on Known opens nearly
   empty for a newcomer, and Overview - every name at once - is what that
   player needs. Dropping it would have made the first meeting with a map a
