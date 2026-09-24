@@ -154,8 +154,10 @@ Check items off as they land; update "Status" as iterations complete.
   day): maps of several countries. **Batch A+B** (branch
   `maps-continents`): the builders learn `--level=country` and several
   countries at once, and 17 maps land - each continent's Countries and
-  Capitals, and the cities of five parts of Europe (80 maps in all). Next:
-  **C**, Germany's towns in five parts from Wikidata (CC0); **D**, admin-2 -
+  Capitals, and the cities of five parts of Europe (80 maps in all).
+  **Batch C** (branch `maps-germany-towns`, stacked on A+B): Germany's
+  towns in six parts by state, 60 each, from a committed Wikidata (CC0)
+  snapshot (86 maps in all). Next: **D**, admin-2 -
   France's departments, Spain's provinces, Britain's counties, new European
   countries from Natural Earth, and Germany's Kreise (BKG, dl-de/by-2-0),
   the Netherlands' municipalities (CC0) and Poland's powiats (ODbL - to go

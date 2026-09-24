@@ -8,7 +8,9 @@ import {
 	isUnbounded,
 	parseBounds,
 	withinBounds,
-	UNBOUNDED
+	UNBOUNDED,
+	distanceKm,
+	spacedOut
 } from '../../../data/scripts/placeSelection';
 
 const place = (name: string, lon: number, lat: number, region?: string) => ({
@@ -119,5 +121,37 @@ describe('disambiguate', () => {
 			place('Springfield', -72.5, 42.1)
 		]);
 		expect(result.map((c) => c.name)).toEqual(['Springfield', 'Springfield']);
+	});
+});
+
+describe('spacedOut (#39, batch C)', () => {
+	// Real coordinates, biggest first, as the builder passes them.
+	const frankfurt = { name: 'Frankfurt', lon: 8.6821, lat: 50.1109 };
+	const offenbach = { name: 'Offenbach am Main', lon: 8.7619, lat: 50.1006 };
+	const maintal = { name: 'Maintal', lon: 8.8375, lat: 50.1481 };
+	const muehlheim = { name: 'Mühlheim am Main', lon: 8.8325, lat: 50.1195 };
+	const darmstadt = { name: 'Darmstadt', lon: 8.6512, lat: 49.8728 };
+
+	it('measures a known distance', () => {
+		// Frankfurt to Darmstadt is about 26.6 km.
+		expect(distanceKm(frankfurt, darmstadt)).toBeGreaterThan(26);
+		expect(distanceKm(frankfurt, darmstadt)).toBeLessThan(27.5);
+	});
+
+	it('lets a suburb give way to the bigger town next to it', () => {
+		const kept = spacedOut([frankfurt, offenbach, maintal, muehlheim, darmstadt], 5);
+		// Offenbach is 5.8 km from Frankfurt and stays; Mühlheim is 3.2 km
+		// from Maintal, which came first, and goes.
+		expect(kept.map((p) => p.name)).toEqual([
+			'Frankfurt',
+			'Offenbach am Main',
+			'Maintal',
+			'Darmstadt'
+		]);
+	});
+
+	it('is a no-op at zero', () => {
+		const all = [frankfurt, offenbach, maintal, muehlheim];
+		expect(spacedOut(all, 0)).toBe(all);
 	});
 });

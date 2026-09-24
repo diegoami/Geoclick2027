@@ -1,0 +1,612 @@
+{
+	"flensburg": {
+		"kind": "city",
+		"population": 95568,
+		"populationRank": 16,
+		"region": "Schleswig-Holstein",
+		"coastal": true,
+		"position": "north"
+	},
+	"kiel": {
+		"kind": "city",
+		"population": 251842,
+		"populationRank": 5,
+		"region": "Schleswig-Holstein",
+		"coastal": true,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"From Old Saxon kil, a wedge or narrow inlet — the fjord the city sits on.",
+				"The Kiel Canal here is the busiest artificial waterway in the world.",
+				"The German revolution of 1918 began with a sailors’ mutiny in its harbour, and Kieler Woche is the largest sailing event anywhere."
+			],
+			"it": [
+				"Dall’antico sassone kil, cuneo o insenatura stretta: il fiordo su cui sorge la città.",
+				"Qui passa il canale di Kiel, la via d’acqua artificiale più trafficata del mondo.",
+				"La rivoluzione tedesca del 1918 cominciò con un ammutinamento di marinai nel suo porto, e la Kieler Woche è la più grande manifestazione velica del mondo."
+			]
+		}
+	},
+	"stralsund": {
+		"kind": "city",
+		"population": 55481,
+		"populationRank": 29,
+		"region": "Mecklenburg-Vorpommern",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"rostock": {
+		"kind": "city",
+		"population": 204929,
+		"populationRank": 7,
+		"region": "Mecklenburg-Vorpommern",
+		"coastal": true,
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"From Slavic rostok, \"the spreading of a river\" — the widening of the Warnow.",
+				"It was one of the leading Hanseatic towns, and its university of 1419 is the oldest on the Baltic.",
+				"It was the centre of East German shipbuilding and its sea trade."
+			],
+			"it": [
+				"Dallo slavo rostok, \"l’allargarsi di un fiume\": il punto in cui si allarga la Warnow.",
+				"Fu una delle principali città anseatiche, e la sua università, del 1419, è la più antica del Baltico.",
+				"Fu il centro della cantieristica navale della Germania Est e dei suoi commerci marittimi."
+			]
+		}
+	},
+	"greifswald": {
+		"kind": "city",
+		"population": 56154,
+		"populationRank": 28,
+		"region": "Mecklenburg-Vorpommern",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"neumunster": {
+		"kind": "city",
+		"population": 80145,
+		"populationRank": 19,
+		"region": "Schleswig-Holstein",
+		"coastal": false,
+		"position": "north"
+	},
+	"wismar": {
+		"kind": "city",
+		"population": 43103,
+		"populationRank": 43,
+		"region": "Mecklenburg-Vorpommern",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"lubeck": {
+		"kind": "city",
+		"population": 217061,
+		"populationRank": 6,
+		"region": "Schleswig-Holstein",
+		"coastal": true,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"From Slavic Liubice, \"the lovely one\".",
+				"It was the queen of the Hanseatic League, which it effectively led for two centuries, and its old town is a UNESCO site.",
+				"Marzipan was made famous here, and Thomas Mann set Buddenbrooks in his own family’s town."
+			],
+			"it": [
+				"Dallo slavo Liubice, \"la graziosa\".",
+				"Fu la regina della Lega anseatica, che di fatto guidò per due secoli, e il suo centro storico è patrimonio UNESCO.",
+				"Qui il marzapane divenne famoso, e Thomas Mann ambientò I Buddenbrook nella città della sua famiglia."
+			]
+		}
+	},
+	"cuxhaven": {
+		"kind": "city",
+		"population": 49545,
+		"populationRank": 34,
+		"region": "Niedersachsen",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"elmshorn": {
+		"kind": "city",
+		"population": 51375,
+		"populationRank": 32,
+		"region": "Schleswig-Holstein",
+		"coastal": true,
+		"position": "north"
+	},
+	"norderstedt": {
+		"kind": "city",
+		"population": 83196,
+		"populationRank": 17,
+		"region": "Schleswig-Holstein",
+		"coastal": false,
+		"position": "north"
+	},
+	"ahrensburg": {
+		"kind": "city",
+		"population": 34531,
+		"populationRank": 55,
+		"region": "Schleswig-Holstein",
+		"coastal": false,
+		"position": "centre"
+	},
+	"pinneberg": {
+		"kind": "city",
+		"population": 44941,
+		"populationRank": 39,
+		"region": "Schleswig-Holstein",
+		"coastal": true,
+		"position": "centre"
+	},
+	"schwerin": {
+		"kind": "city",
+		"population": 97922,
+		"populationRank": 15,
+		"region": "Mecklenburg-Vorpommern",
+		"coastal": false,
+		"position": "east"
+	},
+	"stade": {
+		"kind": "city",
+		"population": 48699,
+		"populationRank": 36,
+		"region": "Niedersachsen",
+		"coastal": true,
+		"position": "centre"
+	},
+	"wedel": {
+		"kind": "city",
+		"population": 34939,
+		"populationRank": 54,
+		"region": "Schleswig-Holstein",
+		"coastal": true,
+		"position": "centre"
+	},
+	"neubrandenburg": {
+		"kind": "city",
+		"population": 59494,
+		"populationRank": 24,
+		"region": "Mecklenburg-Vorpommern",
+		"coastal": false,
+		"position": "east"
+	},
+	"hamburg": {
+		"kind": "city",
+		"population": 1869473,
+		"populationRank": 1,
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"From Hammaburg, a castle built in the early ninth century — hamma is a bend in a river, and the Elbe bends here.",
+				"Officially the Free and Hanseatic City: the Hanse's habits of independence are still in its name and in its number plates, HH.",
+				"It has more bridges than Venice, Amsterdam and London combined — around 2,500 of them, over canals and the harbour."
+			],
+			"it": [
+				"Da Hammaburg, un castello costruito all’inizio del IX secolo: hamma è l’ansa di un fiume, e qui l’Elba fa un’ansa.",
+				"Ufficialmente è la Libera e Anseatica Città: l’abitudine all’indipendenza dell’Hansa sopravvive nel nome e nelle targhe, HH.",
+				"Ha più ponti di Venezia, Amsterdam e Londra messe insieme: circa 2.500, sopra i canali e il porto."
+			]
+		}
+	},
+	"bremerhaven": {
+		"kind": "city",
+		"population": 118502,
+		"populationRank": 12,
+		"region": "Bremen",
+		"coastal": true,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"\"Bremen’s harbour\" — Bremen bought the land in 1827 because its own river had silted up.",
+				"About seven million emigrants left for America through this port, and a museum tells their story.",
+				"It handles more cars than almost any port in the world."
+			],
+			"it": [
+				"\"Il porto di Brema\": Brema comprò il terreno nel 1827 perché il suo fiume si era insabbiato.",
+				"Da questo porto partirono per l’America circa sette milioni di emigranti, e un museo ne racconta la storia.",
+				"Movimenta più automobili di quasi ogni altro porto del mondo."
+			]
+		}
+	},
+	"wilhelmshaven": {
+		"kind": "city",
+		"population": 75324,
+		"populationRank": 20,
+		"region": "Niedersachsen",
+		"coastal": true,
+		"position": "west"
+	},
+	"buxtehude": {
+		"kind": "city",
+		"population": 41103,
+		"populationRank": 49,
+		"region": "Niedersachsen",
+		"coastal": true,
+		"position": "centre"
+	},
+	"aurich": {
+		"kind": "city",
+		"population": 42575,
+		"populationRank": 45,
+		"region": "Niedersachsen",
+		"coastal": true,
+		"position": "west"
+	},
+	"geesthacht": {
+		"kind": "city",
+		"population": 33955,
+		"populationRank": 58,
+		"region": "Schleswig-Holstein",
+		"coastal": false,
+		"position": "centre"
+	},
+	"seevetal": {
+		"kind": "city",
+		"population": 44091,
+		"populationRank": 42,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "centre"
+	},
+	"emden": {
+		"kind": "city",
+		"population": 49009,
+		"populationRank": 35,
+		"region": "Niedersachsen",
+		"coastal": true,
+		"position": "west"
+	},
+	"winsen": {
+		"kind": "city",
+		"population": 37050,
+		"populationRank": 50,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "centre"
+	},
+	"buchholz-in-der-nordheide": {
+		"kind": "city",
+		"population": 41636,
+		"populationRank": 47,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "centre"
+	},
+	"luneburg": {
+		"kind": "city",
+		"population": 74502,
+		"populationRank": 21,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "centre"
+	},
+	"leer": {
+		"kind": "city",
+		"population": 34277,
+		"populationRank": 56,
+		"region": "Niedersachsen",
+		"coastal": true,
+		"position": "west"
+	},
+	"oldenburg": {
+		"kind": "city",
+		"population": 177055,
+		"populationRank": 8,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"\"Old fortress\" — a castle on the Hunte.",
+				"Its grand dukes stayed neutral long enough to keep the town out of most German wars.",
+				"It has one of the highest shares of cyclists in Germany, and its horse breed is known worldwide."
+			],
+			"it": [
+				"\"Vecchia fortezza\": un castello sulla Hunte.",
+				"I suoi granduchi rimasero neutrali abbastanza a lungo da tenere la città fuori dalla maggior parte delle guerre tedesche.",
+				"Ha una delle quote di ciclisti più alte della Germania, e la sua razza di cavalli è nota in tutto il mondo."
+			]
+		}
+	},
+	"bremen": {
+		"kind": "city",
+		"population": 588413,
+		"populationRank": 2,
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"From bremo, Old Saxon for \"edge\" — the town sat on the bank of the Weser where the ground rose above the marsh.",
+				"The smallest state, and a strange shape: it is two cities, Bremen and Bremerhaven, 60 km apart with Niedersachsen in between.",
+				"The Bremen Town Musicians of the fairy tale never actually reach Bremen, but the statue of them is the city’s best-known landmark."
+			],
+			"it": [
+				"Da bremo, \"orlo\" in antico sassone: la città sorgeva sulla riva del Weser, dove il terreno si alzava sopra la palude.",
+				"Il Land più piccolo, e dalla forma strana: sono due città, Brema e Bremerhaven, a 60 km l’una dall’altra, con la Bassa Sassonia in mezzo.",
+				"I musicanti di Brema della fiaba a Brema non ci arrivano mai, ma la loro statua è il monumento più noto della città."
+			]
+		}
+	},
+	"papenburg": {
+		"kind": "city",
+		"population": 36972,
+		"populationRank": 52,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "west"
+	},
+	"delmenhorst": {
+		"kind": "city",
+		"population": 81274,
+		"populationRank": 18,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "west"
+	},
+	"stuhr": {
+		"kind": "city",
+		"population": 34052,
+		"populationRank": 57,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "west"
+	},
+	"cloppenburg": {
+		"kind": "city",
+		"population": 36535,
+		"populationRank": 53,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "west"
+	},
+	"vechta": {
+		"kind": "city",
+		"population": 33768,
+		"populationRank": 60,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "west"
+	},
+	"meppen": {
+		"kind": "city",
+		"population": 36984,
+		"populationRank": 51,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "west"
+	},
+	"celle": {
+		"kind": "city",
+		"population": 66930,
+		"populationRank": 22,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "centre"
+	},
+	"lingen": {
+		"kind": "city",
+		"population": 56539,
+		"populationRank": 27,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"neustadt-am-rubenberge": {
+		"kind": "city",
+		"population": 44696,
+		"populationRank": 40,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "south"
+	},
+	"gifhorn": {
+		"kind": "city",
+		"population": 42816,
+		"populationRank": 44,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "south"
+	},
+	"langenhagen": {
+		"kind": "city",
+		"population": 54059,
+		"populationRank": 30,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "south"
+	},
+	"nordhorn": {
+		"kind": "city",
+		"population": 57372,
+		"populationRank": 26,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"wunstorf": {
+		"kind": "city",
+		"population": 41126,
+		"populationRank": 48,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "south"
+	},
+	"wolfsburg": {
+		"kind": "city",
+		"population": 129813,
+		"populationRank": 11,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "south"
+	},
+	"garbsen": {
+		"kind": "city",
+		"population": 60007,
+		"populationRank": 23,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "south"
+	},
+	"hannover": {
+		"kind": "city",
+		"population": 522803,
+		"populationRank": 3,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"\"High bank\" — hohes Ufer, the raised ground above the Leine.",
+				"Its electors became kings of Britain in 1714, so Britain and Hanover shared a monarch for 123 years.",
+				"Leibniz worked here for forty years as court librarian, and the city’s Herrenhausen gardens are baroque in the Dutch manner."
+			],
+			"it": [
+				"\"Riva alta\": hohes Ufer, il terreno rialzato sopra la Leine.",
+				"I suoi principi elettori divennero re di Gran Bretagna nel 1714, così Gran Bretagna e Hannover ebbero lo stesso sovrano per 123 anni.",
+				"Leibniz vi lavorò per quarant’anni come bibliotecario di corte, e i giardini di Herrenhausen sono barocchi alla maniera olandese."
+			]
+		}
+	},
+	"lehrte": {
+		"kind": "city",
+		"population": 44140,
+		"populationRank": 41,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "south"
+	},
+	"peine": {
+		"kind": "city",
+		"population": 51005,
+		"populationRank": 33,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "south"
+	},
+	"laatzen": {
+		"kind": "city",
+		"population": 41724,
+		"populationRank": 46,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "south"
+	},
+	"barsinghausen": {
+		"kind": "city",
+		"population": 33833,
+		"populationRank": 59,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "south"
+	},
+	"osnabruck": {
+		"kind": "city",
+		"population": 166257,
+		"populationRank": 9,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"\"Bridge over the Hase\" — Osna is probably an older name for the river, plus Brücke.",
+				"Half of the Peace of Westphalia was negotiated here in 1648, the other half in Münster; it ended the Thirty Years’ War.",
+				"Erich Maria Remarque, who wrote All Quiet on the Western Front, was born in the town."
+			],
+			"it": [
+				"\"Ponte sulla Hase\": Osna è probabilmente un nome più antico del fiume, più Brücke.",
+				"Metà della pace di Vestfalia fu negoziata qui nel 1648, l’altra metà a Münster; mise fine alla guerra dei Trent’anni.",
+				"Erich Maria Remarque, autore di Niente di nuovo sul fronte occidentale, nacque in questa città."
+			]
+		}
+	},
+	"braunschweig": {
+		"kind": "city",
+		"population": 252811,
+		"populationRank": 4,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"\"Bruno’s settlement\" — the English call it Brunswick, which is the same name.",
+				"Henry the Lion made it his capital and put a bronze lion in the square in 1166, the first free-standing sculpture north of the Alps.",
+				"Gauss was born here and studied at its university, the oldest technical university in Germany."
+			],
+			"it": [
+				"\"L’insediamento di Bruno\": gli inglesi la chiamano Brunswick, ed è lo stesso nome.",
+				"Enrico il Leone ne fece la sua capitale e nel 1166 pose in piazza un leone di bronzo, la prima scultura a tutto tondo a nord delle Alpi.",
+				"Gauss vi nacque e studiò nella sua università, il più antico politecnico della Germania."
+			]
+		}
+	},
+	"melle": {
+		"kind": "city",
+		"population": 46396,
+		"populationRank": 38,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"wolfenbuttel": {
+		"kind": "city",
+		"population": 52511,
+		"populationRank": 31,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "south"
+	},
+	"salzgitter": {
+		"kind": "city",
+		"population": 104433,
+		"populationRank": 13,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "south"
+	},
+	"hildesheim": {
+		"kind": "city",
+		"population": 98207,
+		"populationRank": 14,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "south"
+	},
+	"hameln": {
+		"kind": "city",
+		"population": 58152,
+		"populationRank": 25,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "south"
+	},
+	"goslar": {
+		"kind": "city",
+		"population": 47454,
+		"populationRank": 37,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "south"
+	},
+	"gottingen": {
+		"kind": "city",
+		"population": 130521,
+		"populationRank": 10,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"From a village called Gutingi, \"by the stream of Gota\".",
+				"Its university has produced over forty Nobel laureates, and the Göttingen school effectively created modern mathematics and quantum physics.",
+				"The Göttingen Seven, professors dismissed in 1837 for protesting against a king, became a symbol of academic freedom."
+			],
+			"it": [
+				"Da un villaggio chiamato Gutingi, \"presso il ruscello di Gota\".",
+				"La sua università ha prodotto oltre quaranta premi Nobel, e la scuola di Gottinga ha di fatto creato la matematica moderna e la fisica quantistica.",
+				"I Sette di Gottinga, professori licenziati nel 1837 per aver protestato contro un re, divennero un simbolo della libertà accademica."
+			]
+		}
+	}
+}

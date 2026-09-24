@@ -126,7 +126,15 @@ export const mapGroups: CountryGroup[] = [
 		country: 'Germany',
 		maps: [
 			{ id: 'germany-states', labelKey: 'mapType.states' },
-			{ id: 'germany-towns-100k', labelKey: 'mapType.towns' }
+			{ id: 'germany-towns-100k', labelKey: 'mapType.towns' },
+			// Six parts of the country by its states, 60 towns each, from
+			// Wikidata (#39, batch C).
+			{ id: 'germany-towns-center', labelKey: 'mapType.townsCenter' },
+			{ id: 'germany-towns-east', labelKey: 'mapType.townsEast' },
+			{ id: 'germany-towns-north', labelKey: 'mapType.townsNorth' },
+			{ id: 'germany-towns-southeast', labelKey: 'mapType.townsSouthEast' },
+			{ id: 'germany-towns-southwest', labelKey: 'mapType.townsSouthWest' },
+			{ id: 'germany-towns-west', labelKey: 'mapType.townsWest' }
 		]
 	},
 	{

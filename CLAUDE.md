@@ -31,6 +31,7 @@ indiscriminately exhausts the context window before any work starts.
 | `mobile/.../assets/capacitor.*.json`, `res/xml/config.xml` | generated — edit `mobile/capacitor.config.ts` |
 | `data/maps/**` | 64 dirs, 126 binaries + ~330k tokens of generated JSON |
 | `data/source/` | gitignored raw Natural Earth downloads |
+| `data/places/*.geojson` | committed Wikidata snapshots (~1 000 towns each), written by `fetch-wikidata-places.ts` — grep one town at most |
 | `node_modules/`, `app/.svelte-kit/`, `app/build/`, `dist*/`, `.netlify/` | deps + build output |
 | `desktop/src-tauri/{target,gen}/`, `mobile/android/{.gradle,build}/`, `**/app/build/` | build output |
 | `package-lock.json`, `Cargo.lock` | grep one version string at most; never open |

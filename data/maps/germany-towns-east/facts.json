@@ -1,0 +1,602 @@
+{
+	"schwedt-oder": {
+		"kind": "city",
+		"population": 33633,
+		"populationRank": 40,
+		"region": "Brandenburg",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"neuruppin": {
+		"kind": "city",
+		"population": 33107,
+		"populationRank": 41,
+		"region": "Brandenburg",
+		"coastal": false,
+		"position": "north"
+	},
+	"eberswalde": {
+		"kind": "city",
+		"population": 41867,
+		"populationRank": 24,
+		"region": "Brandenburg",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"oranienburg": {
+		"kind": "city",
+		"population": 49824,
+		"populationRank": 19,
+		"region": "Brandenburg",
+		"coastal": false,
+		"position": "north"
+	},
+	"bernau-bei-berlin": {
+		"kind": "city",
+		"population": 44706,
+		"populationRank": 23,
+		"region": "Brandenburg",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"stendal": {
+		"kind": "city",
+		"population": 37750,
+		"populationRank": 32,
+		"region": "Sachsen-Anhalt",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"strausberg": {
+		"kind": "city",
+		"population": 27765,
+		"populationRank": 57,
+		"region": "Brandenburg",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"falkensee": {
+		"kind": "city",
+		"population": 46213,
+		"populationRank": 20,
+		"region": "Brandenburg",
+		"coastal": false,
+		"position": "north"
+	},
+	"berlin": {
+		"kind": "city",
+		"population": 3913644,
+		"populationRank": 1,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Not the bear: it is most likely Slavic berl-, a swamp — the bear on the coat of arms is a pun that came later and stuck.",
+				"An island in Brandenburg, and its own state; the two voted on merging in 1996 and said no.",
+				"It has more museums than rainy days a year, and the Wall ran 155 km through and around it for 28 years."
+			],
+			"it": [
+				"Non viene dall’orso: molto probabilmente è lo slavo berl-, \"palude\"; l’orso dello stemma è un gioco di parole venuto dopo, che ha attecchito.",
+				"Un’isola dentro il Brandeburgo, e un Land a sé; i due votarono sulla fusione nel 1996, e dissero no.",
+				"Ha più musei che giorni di pioggia all’anno, e per 28 anni il Muro l’ha attraversata e circondata per 155 km."
+			]
+		}
+	},
+	"brandenburg-an-der-havel": {
+		"kind": "city",
+		"population": 73945,
+		"populationRank": 14,
+		"region": "Brandenburg",
+		"coastal": false,
+		"position": "north"
+	},
+	"teltow": {
+		"kind": "city",
+		"population": 27698,
+		"populationRank": 58,
+		"region": "Brandenburg",
+		"coastal": false,
+		"position": "north"
+	},
+	"potsdam": {
+		"kind": "city",
+		"population": 185137,
+		"populationRank": 8,
+		"region": "Brandenburg",
+		"coastal": false,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"From Slavic Poztupimi, probably \"beneath the oaks\".",
+				"Frederick the Great built Sanssouci here as his summer retreat; its palaces and parks are a UNESCO site.",
+				"The 1945 conference that divided post-war Europe was held at Cecilienhof in the town."
+			],
+			"it": [
+				"Dallo slavo Poztupimi, probabilmente \"sotto le querce\".",
+				"Federico il Grande vi costruì Sanssouci come residenza estiva; i suoi palazzi e parchi sono patrimonio UNESCO.",
+				"La conferenza del 1945 che divise l’Europa del dopoguerra si tenne in città, al Cecilienhof."
+			]
+		}
+	},
+	"werder-havel": {
+		"kind": "city",
+		"population": 27064,
+		"populationRank": 60,
+		"region": "Brandenburg",
+		"coastal": false,
+		"position": "north"
+	},
+	"furstenwalde": {
+		"kind": "city",
+		"population": 31981,
+		"populationRank": 43,
+		"region": "Brandenburg",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"blankenfelde-mahlow": {
+		"kind": "city",
+		"population": 29280,
+		"populationRank": 51,
+		"region": "Brandenburg",
+		"coastal": false,
+		"position": "north"
+	},
+	"frankfurt-oder": {
+		"kind": "city",
+		"population": 56586,
+		"populationRank": 17,
+		"region": "Brandenburg",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"ludwigsfelde": {
+		"kind": "city",
+		"population": 29635,
+		"populationRank": 50,
+		"region": "Brandenburg",
+		"coastal": false,
+		"position": "north"
+	},
+	"konigs-wusterhausen": {
+		"kind": "city",
+		"population": 39590,
+		"populationRank": 29,
+		"region": "Brandenburg",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"magdeburg": {
+		"kind": "city",
+		"population": 244494,
+		"populationRank": 5,
+		"region": "Sachsen-Anhalt",
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"\"Mighty fortress\" or \"maidens’ fortress\" — magd can mean either, and the maiden is on the city arms.",
+				"Otto von Guericke, its mayor, proved the force of a vacuum in 1654 with two copper hemispheres that sixteen horses could not pull apart.",
+				"The city was destroyed in 1631 in one of the worst atrocities of the Thirty Years’ War, and \"magdeburgisation\" became a word for total destruction."
+			],
+			"it": [
+				"\"Fortezza potente\" o \"fortezza delle fanciulle\": magd può voler dire l’una o l’altra cosa, e la fanciulla è nello stemma della città.",
+				"Otto von Guericke, il suo borgomastro, dimostrò nel 1654 la forza del vuoto con due emisferi di rame che sedici cavalli non riuscirono a separare.",
+				"Nel 1631 la città fu distrutta in una delle peggiori atrocità della guerra dei Trent’anni, e \"magdeburghizzazione\" divenne sinonimo di distruzione totale."
+			]
+		}
+	},
+	"schonebeck": {
+		"kind": "city",
+		"population": 30250,
+		"populationRank": 49,
+		"region": "Sachsen-Anhalt",
+		"coastal": false,
+		"position": "west"
+	},
+	"halberstadt": {
+		"kind": "city",
+		"population": 36615,
+		"populationRank": 35,
+		"region": "Sachsen-Anhalt",
+		"coastal": false,
+		"position": "west"
+	},
+	"lutherstadt-wittenberg": {
+		"kind": "city",
+		"population": 44937,
+		"populationRank": 22,
+		"region": "Sachsen-Anhalt",
+		"coastal": false,
+		"position": "centre"
+	},
+	"wernigerode": {
+		"kind": "city",
+		"population": 31835,
+		"populationRank": 44,
+		"region": "Sachsen-Anhalt",
+		"coastal": false,
+		"position": "west"
+	},
+	"dessau-ro-lau": {
+		"kind": "city",
+		"population": 75035,
+		"populationRank": 13,
+		"region": "Sachsen-Anhalt",
+		"coastal": false,
+		"position": "centre"
+	},
+	"bernburg": {
+		"kind": "city",
+		"population": 30572,
+		"populationRank": 47,
+		"region": "Sachsen-Anhalt",
+		"coastal": false,
+		"position": "west"
+	},
+	"cottbus": {
+		"kind": "city",
+		"population": 95140,
+		"populationRank": 11,
+		"region": "Brandenburg",
+		"coastal": false,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"From a Slavic personal name, Chotibud.",
+				"It is the cultural centre of the Sorbs, a Slavic people with their own language, and signs are bilingual.",
+				"Its Branitz park was landscaped by Prince Pückler, who is buried under an earth pyramid in a lake there."
+			],
+			"it": [
+				"Da un nome di persona slavo, Chotibud.",
+				"È il centro culturale dei Sorbi, un popolo slavo con una lingua propria, e i cartelli sono bilingui.",
+				"Il suo parco di Branitz fu disegnato dal principe Pückler, che vi è sepolto sotto una piramide di terra in mezzo a un lago."
+			]
+		}
+	},
+	"bitterfeld-wolfen": {
+		"kind": "city",
+		"population": 36186,
+		"populationRank": 36,
+		"region": "Sachsen-Anhalt",
+		"coastal": false,
+		"position": "centre"
+	},
+	"nordhausen": {
+		"kind": "city",
+		"population": 40301,
+		"populationRank": 27,
+		"region": "Thüringen",
+		"coastal": false,
+		"position": "west"
+	},
+	"halle-saale": {
+		"kind": "city",
+		"population": 226186,
+		"populationRank": 6,
+		"region": "Sachsen-Anhalt",
+		"coastal": false,
+		"position": "centre"
+	},
+	"hoyerswerda": {
+		"kind": "city",
+		"population": 30458,
+		"populationRank": 48,
+		"region": "Sachsen",
+		"coastal": false,
+		"position": "east"
+	},
+	"merseburg": {
+		"kind": "city",
+		"population": 34491,
+		"populationRank": 38,
+		"region": "Sachsen-Anhalt",
+		"coastal": false,
+		"position": "centre"
+	},
+	"leipzig": {
+		"kind": "city",
+		"population": 633592,
+		"populationRank": 2,
+		"region": "Sachsen",
+		"coastal": false,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"From Slavic Lipsk, \"place of lime trees\".",
+				"Bach was cantor at the Thomaskirche for 27 years and is buried in it.",
+				"The Monday demonstrations that brought down East Germany began at its Nikolaikirche in 1989."
+			],
+			"it": [
+				"Dallo slavo Lipsk, \"luogo dei tigli\".",
+				"Bach fu Kantor alla Thomaskirche per 27 anni, e vi è sepolto.",
+				"Le manifestazioni del lunedì che fecero cadere la Germania Est partirono nel 1989 dalla sua Nikolaikirche."
+			]
+		}
+	},
+	"riesa": {
+		"kind": "city",
+		"population": 29238,
+		"populationRank": 52,
+		"region": "Sachsen",
+		"coastal": false,
+		"position": "south"
+	},
+	"grimma": {
+		"kind": "city",
+		"population": 27554,
+		"populationRank": 59,
+		"region": "Sachsen",
+		"coastal": false,
+		"position": "south"
+	},
+	"muhlhausen-thuringen": {
+		"kind": "city",
+		"population": 36155,
+		"populationRank": 37,
+		"region": "Thüringen",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"wei-enfels": {
+		"kind": "city",
+		"population": 37308,
+		"populationRank": 33,
+		"region": "Sachsen-Anhalt",
+		"coastal": false,
+		"position": "south"
+	},
+	"bautzen": {
+		"kind": "city",
+		"population": 37306,
+		"populationRank": 34,
+		"region": "Sachsen",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"mei-en": {
+		"kind": "city",
+		"population": 28863,
+		"populationRank": 53,
+		"region": "Sachsen",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"gorlitz": {
+		"kind": "city",
+		"population": 55065,
+		"populationRank": 18,
+		"region": "Sachsen",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"naumburg-saale": {
+		"kind": "city",
+		"population": 31617,
+		"populationRank": 45,
+		"region": "Sachsen-Anhalt",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"radebeul": {
+		"kind": "city",
+		"population": 33081,
+		"populationRank": 42,
+		"region": "Sachsen",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"dresden": {
+		"kind": "city",
+		"population": 562764,
+		"populationRank": 3,
+		"region": "Sachsen",
+		"coastal": false,
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"From Sorbian Drežďany, \"people of the riverside forest\".",
+				"It was firebombed in February 1945, and its Frauenkirche was rebuilt from the rubble stone by numbered stone, finishing in 2005.",
+				"Its Green Vault holds the largest treasure collection in Europe, and European porcelain was invented in the city in 1708."
+			],
+			"it": [
+				"Dal sorabo Drežďany, \"gente del bosco sul fiume\".",
+				"Nel febbraio 1945 fu colpita da bombardamenti incendiari, e la sua Frauenkirche fu ricostruita dalle macerie, pietra per pietra, ognuna numerata: i lavori finirono nel 2005.",
+				"La sua Volta Verde custodisce la più grande collezione di tesori d’Europa, e la porcellana europea fu inventata in città nel 1708."
+			]
+		}
+	},
+	"zeitz": {
+		"kind": "city",
+		"population": 27934,
+		"populationRank": 56,
+		"region": "Sachsen-Anhalt",
+		"coastal": false,
+		"position": "south"
+	},
+	"freital": {
+		"kind": "city",
+		"population": 39174,
+		"populationRank": 30,
+		"region": "Sachsen",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"altenburg": {
+		"kind": "city",
+		"population": 30867,
+		"populationRank": 46,
+		"region": "Thüringen",
+		"coastal": false,
+		"position": "south"
+	},
+	"weimar": {
+		"kind": "city",
+		"population": 65566,
+		"populationRank": 15,
+		"region": "Thüringen",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"erfurt": {
+		"kind": "city",
+		"population": 217159,
+		"populationRank": 7,
+		"region": "Thüringen",
+		"coastal": false,
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"From an older name meaning the ford across the Erpf or a muddy ford.",
+				"Luther was a monk here, and its Krämerbrücke is the longest inhabited bridge in Europe, with shops on it since 1325.",
+				"Its Old Synagogue is the oldest standing in Europe, and a UNESCO site."
+			],
+			"it": [
+				"Da un nome più antico che significa il guado sull’Erpf, o un guado fangoso.",
+				"Lutero vi fu monaco, e il suo Krämerbrücke è il ponte abitato più lungo d’Europa, con botteghe sopra fin dal 1325.",
+				"La sua Sinagoga Vecchia è la più antica ancora in piedi in Europa, ed è patrimonio UNESCO."
+			]
+		}
+	},
+	"eisenach": {
+		"kind": "city",
+		"population": 40505,
+		"populationRank": 26,
+		"region": "Thüringen",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"pirna": {
+		"kind": "city",
+		"population": 40039,
+		"populationRank": 28,
+		"region": "Sachsen",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"gotha": {
+		"kind": "city",
+		"population": 45904,
+		"populationRank": 21,
+		"region": "Thüringen",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"jena": {
+		"kind": "city",
+		"population": 109353,
+		"populationRank": 9,
+		"region": "Thüringen",
+		"coastal": false,
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"From a Slavic or Germanic word, possibly for a narrow place.",
+				"Carl Zeiss and Ernst Abbe built modern optics here; Abbe also introduced the eight-hour day.",
+				"Hegel finished the Phenomenology of Spirit in the town as Napoleon’s army arrived to fight the battle of Jena in 1806."
+			],
+			"it": [
+				"Da una parola slava o germanica che forse indicava un luogo stretto.",
+				"Carl Zeiss ed Ernst Abbe qui crearono l’ottica moderna; Abbe introdusse anche la giornata di otto ore.",
+				"Hegel terminò qui la Fenomenologia dello spirito proprio mentre arrivava l’esercito di Napoleone, per la battaglia di Jena del 1806."
+			]
+		}
+	},
+	"freiberg": {
+		"kind": "city",
+		"population": 41205,
+		"populationRank": 25,
+		"region": "Sachsen",
+		"coastal": false,
+		"position": "south"
+	},
+	"gera": {
+		"kind": "city",
+		"population": 95162,
+		"populationRank": 10,
+		"region": "Thüringen",
+		"coastal": false,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Named for the river Gera, a name of Germanic or older origin.",
+				"It was a centre of East German uranium mining through the Wismut company, which was kept secret for decades.",
+				"Otto Dix, whose paintings of the First World War are among the most unflinching made, was born here."
+			],
+			"it": [
+				"Prende il nome dal fiume Gera, un nome di origine germanica o ancora più antica.",
+				"Fu un centro dell’estrazione di uranio della Germania Est, attraverso la società Wismut, tenuta segreta per decenni.",
+				"Qui nacque Otto Dix, i cui dipinti della Prima guerra mondiale sono tra i più crudi mai realizzati."
+			]
+		}
+	},
+	"arnstadt": {
+		"kind": "city",
+		"population": 28509,
+		"populationRank": 54,
+		"region": "Thüringen",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"chemnitz": {
+		"kind": "city",
+		"population": 247252,
+		"populationRank": 4,
+		"region": "Sachsen",
+		"coastal": false,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"From Sorbian kamjenica, \"stony brook\".",
+				"It was Karl-Marx-Stadt from 1953 to 1990 and still has a 7 m bronze Marx head in the centre.",
+				"It was the most industrialised German city per head around 1900, called the Saxon Manchester."
+			],
+			"it": [
+				"Dal sorabo kamjenica, \"ruscello sassoso\".",
+				"Dal 1953 al 1990 si chiamò Karl-Marx-Stadt, e in centro ha ancora una testa di Marx in bronzo alta 7 m.",
+				"Intorno al 1900 era la città tedesca più industrializzata per abitante, e la chiamavano la Manchester sassone."
+			]
+		}
+	},
+	"zwickau": {
+		"kind": "city",
+		"population": 86405,
+		"populationRank": 12,
+		"region": "Sachsen",
+		"coastal": false,
+		"position": "south"
+	},
+	"ilmenau": {
+		"kind": "city",
+		"population": 38695,
+		"populationRank": 31,
+		"region": "Thüringen",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"saalfeld-saale": {
+		"kind": "city",
+		"population": 28474,
+		"populationRank": 55,
+		"region": "Thüringen",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"suhl": {
+		"kind": "city",
+		"population": 33976,
+		"populationRank": 39,
+		"region": "Thüringen",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"plauen": {
+		"kind": "city",
+		"population": 64893,
+		"populationRank": 16,
+		"region": "Sachsen",
+		"coastal": false,
+		"position": "south"
+	}
+}
