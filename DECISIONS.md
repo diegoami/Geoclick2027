@@ -16,6 +16,67 @@ Keep this updated the same way as the other docs: when a decision gets
 made, made explicitly to correct an earlier one, or gets revisited, add
 or amend an entry here as part of that change, not as an afterthought.
 
+## Maps of several countries (2026-09-24, #39)
+
+The product owner asked for continents, the parts of Europe, more of
+Germany and a finer level than admin-1. The proposal is
+[#39](https://github.com/diegoami/Geoclick2027/issues/39); the owner's
+answers to its six questions are on the issue. This entry records what the
+first batch (continents and the parts of Europe) settled.
+
+- **A country is what Natural Earth's admin-0 layer draws as its own
+  polygon**, if its TYPE is a sovereign state (including 'Sovereignty',
+  which is how the source types Cuba and Kazakhstan and nothing else), a
+  constituent country, or a disputed or indeterminate territory (Kosovo,
+  Palestine, Western Sahara, Somaliland, Northern Cyprus). Dependencies and
+  leases are out, and so, by name, are the territories that TYPE lets in:
+  the Crown dependencies, Åland, Greenland, and three British overseas
+  territories typed Disputed (Gibraltar, the Falklands, the British Indian
+  Ocean Territory). No political claim either way; the list is
+  `NOT_COUNTRIES` in `data/scripts/multiCountry.ts`.
+- **Micro-states are off the Countries maps, on the Capitals maps.** Below
+  2 500 km² after the clip (Malta, Andorra, Monaco, most Caribbean and
+  Pacific island states), a country is smaller than a slip's drop target at
+  a continent's zoom. A capital is a point and works at any size. Vatican
+  City is off both: it is 3 km from Rome.
+- **Europe has Russia to 60° E; Asia has no Russia.** All of Russia would
+  fill Asia and cross the antimeridian, and `russia-regions` already asks
+  for it. Every continent is clipped to a box (`--clip`), which also keeps
+  France's overseas departments off Europe and Hawaii off North America.
+- **Crimea is Ukraine's**, on the Countries maps as on `ukraine-regions`.
+  Natural Earth's admin-0 layer draws it in Russia (de facto control);
+  `--assign-admin1` moves the Crimea and Sevastopol admin-1 shapes into
+  Ukraine before the map is built.
+- **A country is called by its short English name**, and by the name it now
+  asks for where that changed: Czechia, Côte d'Ivoire, Cabo Verde,
+  Timor-Leste, each with the old name as an alias - the rule Kyiv and
+  Odesa already follow. Turkey stays Turkey, as on its own map.
+- **A capital is the one the country's constitution names**, several where
+  it names several (South Africa's three, Bolivia's two). Natural Earth
+  flags the seat of government or the largest city in five places; the
+  build swaps in Dodoma, Porto-Novo, Gitega, Naypyidaw and Yamoussoukro and
+  drops Dar es Salaam, Cotonou, Bujumbura, Yangon, Abidjan and
+  Johannesburg. Astana and Ngerulmud go by their current names. The
+  Oceania map stops at the date line, which leaves Samoa and Tonga off.
+- **A town has one name on every map it is on.** A map of several
+  countries reads each town's name from the field its own country's Towns
+  map reads (`LOCAL_NAME_FIELD`), so München is München on Germany and on
+  Central Europe. Belgium and Switzerland use Natural Earth's plain NAME,
+  since one language field would put Antwerpen in French or Genève in
+  German. Each town records its country in map.json, and its authored
+  sentences come from that country's file: 32 of Central Europe's 68 towns
+  arrive with their name-facts already written.
+- **The five parts of Europe** (owner's answer to Q1): West (France,
+  Benelux, the UK, Ireland), Central (Germany, Poland, Czechia, Austria,
+  Switzerland, Hungary, Slovakia, Slovenia), East (Ukraine, Belarus,
+  Moldova, Romania, Bulgaria, the Baltics, Russia west of 60° E), North
+  (the Nordics) and South (Iberia, Italy, the Balkans, Greece). A
+  per-country cap (`--max-per-country`) keeps one large country from filling
+  a part: Russia alone has more cities over 100 000 west of the Urals than
+  the rest of Eastern Europe.
+- **A continent is a catalog group like a country**, sorted among them by
+  name, until the zoomable world-map start screen replaces the list.
+
 ## Translating fact-checked the English (2026-09-23, FT-50)
 
 Every country file was translated by its own subagent, told to translate

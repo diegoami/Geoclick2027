@@ -1,0 +1,531 @@
+{
+	"troms": {
+		"kind": "city",
+		"population": 52436,
+		"populationRank": 42,
+		"region": "Troms",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"oulu": {
+		"kind": "city",
+		"population": 136752,
+		"populationRank": 15,
+		"region": "Northern Ostrobothnia",
+		"coastal": true,
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Probably from a Sámi word for flood water, or from a word for a river.",
+				"Built on tar: Finnish pine tar was shipped from here in barrels to caulk the world’s sailing fleets.",
+				"It later grew Nokia’s radio research, and it hosts the air guitar world championships every August."
+			],
+			"it": [
+				"Probabilmente da una parola sámi per l’acqua di piena, oppure da una parola che indica un fiume.",
+				"Costruita sul catrame: da qui il catrame di pino finlandese partiva in barili per calafatare le flotte a vela di tutto il mondo.",
+				"In seguito vi crebbe la ricerca radio di Nokia, e ogni agosto ospita i campionati mondiali di air guitar."
+			]
+		}
+	},
+	"reykjavik": {
+		"kind": "city",
+		"population": 166212,
+		"populationRank": 12,
+		"region": "Suðurnes",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "west"
+	},
+	"umea": {
+		"kind": "city",
+		"population": 78197,
+		"populationRank": 28,
+		"region": "Västerbotten",
+		"coastal": true,
+		"position": "east"
+	},
+	"trondheim": {
+		"kind": "city",
+		"population": 147139,
+		"populationRank": 14,
+		"region": "Sør-Trøndelag",
+		"coastal": true,
+		"position": "centre"
+	},
+	"vaasa": {
+		"kind": "city",
+		"population": 57014,
+		"populationRank": 39,
+		"region": "Western Finland",
+		"coastal": true,
+		"position": "east"
+	},
+	"kuopio": {
+		"kind": "city",
+		"population": 91900,
+		"populationRank": 23,
+		"region": "Eastern Finland",
+		"coastal": false,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Of uncertain origin, possibly from a personal name or from a word for a hollow.",
+				"Its kalakukko — fish and pork baked inside a rye loaf — has protected status.",
+				"Puijo tower above it looks out over the Kallavesi lake system in every direction."
+			],
+			"it": [
+				"Di origine incerta, forse da un nome di persona o da una parola che indica un avvallamento.",
+				"Il suo kalakukko, pesce e maiale cotti dentro una pagnotta di segale, è un prodotto a denominazione protetta.",
+				"Dalla torre di Puijo, che la sovrasta, lo sguardo abbraccia in ogni direzione il sistema lacustre del Kallavesi."
+			]
+		}
+	},
+	"joensuu": {
+		"kind": "city",
+		"population": 53388,
+		"populationRank": 41,
+		"region": "North Karelia",
+		"coastal": false,
+		"position": "east"
+	},
+	"sundsvall": {
+		"kind": "city",
+		"population": 73389,
+		"populationRank": 31,
+		"region": "Västernorrland",
+		"coastal": true,
+		"position": "east"
+	},
+	"jyvaskyla": {
+		"kind": "city",
+		"population": 98136,
+		"populationRank": 21,
+		"region": "Central Finland",
+		"coastal": false,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"\"Grain village\" — jyvä is a grain, kylä a village.",
+				"Alvar Aalto studied and built here, and the city holds more of his buildings than anywhere else.",
+				"Its rally has run since 1951 and has been a round of the World Rally Championship since 1973, on gravel roads that produce the sport’s biggest jumps."
+			],
+			"it": [
+				"\"Villaggio del grano\": jyvä significa chicco, kylä villaggio.",
+				"Alvar Aalto studiò e costruì qui, e la città conserva più edifici suoi di qualunque altro luogo.",
+				"Il suo rally si corre dal 1951 ed è una prova del Campionato del mondo dal 1973, su strade sterrate che regalano i salti più lunghi di questo sport."
+			]
+		}
+	},
+	"tampere": {
+		"kind": "city",
+		"population": 259279,
+		"populationRank": 7,
+		"region": "Pirkanmaa",
+		"coastal": false,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Probably from a Swedish or older word for the rapids the town was built on.",
+				"Built on the Tammerkoski rapids between two lakes, it was Finland’s industrial city — the Manchester of the north.",
+				"Lenin and Stalin met for the first time here in 1905, and the world’s only Lenin museum outside Russia ran in the building until 2024."
+			],
+			"it": [
+				"Probabilmente da una parola svedese, o più antica, per le rapide su cui sorse la città.",
+				"Costruita sulle rapide del Tammerkoski tra due laghi, fu la città industriale della Finlandia: la Manchester del nord.",
+				"Lenin e Stalin si incontrarono qui per la prima volta nel 1905, e l’unico museo di Lenin al mondo fuori dalla Russia ha avuto sede nell’edificio fino al 2024."
+			]
+		}
+	},
+	"pori": {
+		"kind": "city",
+		"population": 76772,
+		"populationRank": 29,
+		"region": "Satakunta",
+		"coastal": true,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"From Swedish Björneborg, \"bear fortress\" — Pori is the Finnish rendering of it.",
+				"Its jazz festival, running since 1966, is one of the oldest and largest in Europe.",
+				"Yyteri beach nearby is the longest sand beach in the Nordic countries."
+			],
+			"it": [
+				"Dallo svedese Björneborg, \"fortezza dell’orso\": Pori ne è la resa finlandese.",
+				"Il suo festival jazz, nato nel 1966, è uno dei più antichi e più grandi d’Europa.",
+				"La vicina spiaggia di Yyteri è la spiaggia di sabbia più lunga dei paesi nordici."
+			]
+		}
+	},
+	"lappeenranta": {
+		"kind": "city",
+		"population": 59276,
+		"populationRank": 38,
+		"region": "South Karelia",
+		"coastal": false,
+		"position": "east"
+	},
+	"lahti": {
+		"kind": "city",
+		"population": 98826,
+		"populationRank": 19,
+		"region": "Päijänne Tavastia",
+		"coastal": false,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Finnish for \"bay\" — the town sits at the end of one on Lake Vesijärvi.",
+				"Its ski jumps are Finland’s best known, and it has hosted the Nordic world championships seven times.",
+				"It was European Green Capital in 2021, having cleaned up a lake that industry had effectively killed."
+			],
+			"it": [
+				"In finlandese \"baia\": la città sorge in fondo a una baia del lago Vesijärvi.",
+				"I suoi trampolini sono i più noti della Finlandia, e la città ha ospitato sette volte i Mondiali di sci nordico.",
+				"Nel 2021 è stata Capitale verde europea, dopo aver risanato un lago che l’industria aveva di fatto ucciso."
+			]
+		}
+	},
+	"gavle": {
+		"kind": "city",
+		"population": 68635,
+		"populationRank": 34,
+		"region": "Gävleborg",
+		"coastal": true,
+		"position": "east"
+	},
+	"turku": {
+		"kind": "city",
+		"population": 175945,
+		"populationRank": 10,
+		"region": "Finland Proper",
+		"coastal": true,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"From an Old East Slavic word for a marketplace, torgu — the same root as the Russian torg.",
+				"The oldest city in Finland and its capital until 1812, with a cathedral begun in the 1280s.",
+				"The 1827 fire destroyed three quarters of it, the worst fire in Nordic history — but the capital had already moved to Helsinki in 1812."
+			],
+			"it": [
+				"Da una parola dell’antico slavo orientale per mercato, torgu: la stessa radice del russo torg.",
+				"La città più antica della Finlandia e sua capitale fino al 1812, con una cattedrale iniziata negli anni Ottanta del Duecento.",
+				"L’incendio del 1827 ne distrusse tre quarti, il peggiore della storia nordica; ma la capitale si era già spostata a Helsinki nel 1812."
+			]
+		}
+	},
+	"bergen": {
+		"kind": "city",
+		"population": 213585,
+		"populationRank": 9,
+		"region": "Hordaland",
+		"coastal": true,
+		"position": "centre"
+	},
+	"helsinki": {
+		"kind": "city",
+		"population": 1115000,
+		"populationRank": 2,
+		"population1950": 366000,
+		"region": "Southern Finland",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"From Helsinge, a parish name probably brought by settlers from Hälsingland in Sweden.",
+				"Founded in 1550 to rival Tallinn, it stayed a small town for 250 years until Russia made it the capital in 1812.",
+				"Its centre was rebuilt in neoclassical style to resemble St Petersburg, which is why Cold War films used it as a stand-in for Moscow."
+			],
+			"it": [
+				"Da Helsinge, nome di una parrocchia portato probabilmente da coloni venuti dall’Hälsingland, in Svezia.",
+				"Fondata nel 1550 per rivaleggiare con Tallinn, rimase una piccola città per 250 anni, finché la Russia non ne fece la capitale nel 1812.",
+				"Il centro fu ricostruito in stile neoclassico sul modello di San Pietroburgo, ed è per questo che i film della guerra fredda lo usavano come controfigura di Mosca."
+			]
+		}
+	},
+	"oslo": {
+		"kind": "city",
+		"population": 835000,
+		"populationRank": 4,
+		"population1950": 468000,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south"
+	},
+	"uppsala": {
+		"kind": "city",
+		"population": 133117,
+		"populationRank": 16,
+		"coastal": false,
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"\"Upper halls\" — the high seat of the old kings, as against a lower Sala downstream.",
+				"Gamla Uppsala's royal burial mounds are from the 500s, and the pagan temple beside them was described by a German chronicler in 1070.",
+				"Its university, 1477, is the oldest in Scandinavia, and Linnaeus taught here — his garden is still planted to his own plan."
+			],
+			"it": [
+				"\"Sale alte\": la sede elevata degli antichi re, in contrapposizione a una Sala più in basso, a valle.",
+				"I tumuli reali di Gamla Uppsala risalgono al VI secolo, e il tempio pagano che sorgeva accanto fu descritto da un cronista tedesco nel 1070.",
+				"La sua università, del 1477, è la più antica della Scandinavia, e qui insegnò Linneo: il suo giardino è ancora piantato secondo il disegno che ne fece lui stesso."
+			]
+		}
+	},
+	"drammen": {
+		"kind": "city",
+		"population": 90722,
+		"populationRank": 25,
+		"region": "Buskerud",
+		"coastal": true,
+		"position": "south"
+	},
+	"vasteras": {
+		"kind": "city",
+		"population": 107194,
+		"populationRank": 18,
+		"region": "Västmanland",
+		"coastal": false,
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"\"Western Aros\" — aros is a river mouth, so the name is the western river mouth, against Uppsala’s eastern one.",
+				"ASEA, which became ABB, was based here from 1890 and made the town an electrical engineering centre.",
+				"Its Anundshög is Sweden’s largest burial mound, with stone ship settings beside it."
+			],
+			"it": [
+				"\"Aros occidentale\": aros è una foce di fiume, quindi il nome significa la foce occidentale, in contrapposizione a quella orientale di Uppsala.",
+				"L’ASEA, poi diventata ABB, ebbe qui la sua sede dal 1890 e fece della città un centro dell’ingegneria elettrica.",
+				"Il suo Anundshög è il più grande tumulo funerario della Svezia, affiancato da navi di pietra."
+			]
+		}
+	},
+	"karlstad": {
+		"kind": "city",
+		"population": 74141,
+		"populationRank": 30,
+		"region": "Värmland",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"stockholm": {
+		"kind": "city",
+		"population": 1264000,
+		"populationRank": 1,
+		"population1950": 741000,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"\"Log islet\" — stock, a log, plus holme, an islet: the city began on a fortified island in 1252.",
+				"It is built on fourteen islands where Lake Mälaren meets the Baltic, and its archipelago has about 30,000 more.",
+				"The Vasa, a warship that sank on her maiden voyage in 1628, was raised in 1961 and is 98% original timber."
+			],
+			"it": [
+				"\"Isolotto del tronco\": stock è il tronco, holme l’isolotto, e la città nacque su un’isola fortificata nel 1252.",
+				"È costruita su quattordici isole dove il lago Mälaren incontra il Baltico, e il suo arcipelago ne conta altre 30.000 circa.",
+				"Il Vasa, nave da guerra affondata durante il viaggio inaugurale nel 1628, fu recuperato nel 1961 e il suo legno è originale al 98%."
+			]
+		}
+	},
+	"orebro": {
+		"kind": "city",
+		"population": 98573,
+		"populationRank": 20,
+		"region": "Orebro",
+		"coastal": false,
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"\"Gravel bridge\" — ör is gravel, bro a bridge: the ford over the Svartån where the town grew.",
+				"Its castle sits on an island in the middle of the town, and in 1810 the Riksdag here chose Bernadotte as crown prince, founding Sweden's present royal house.",
+				"It made most of Sweden's shoes until the 1960s, and its shoe museum is the national one."
+			],
+			"it": [
+				"\"Ponte di ghiaia\": ör è la ghiaia, bro il ponte, ed era il guado sullo Svartån intorno al quale crebbe la città.",
+				"Il suo castello sorge su un’isola in mezzo alla città, e qui nel 1810 il Riksdag scelse Bernadotte come principe ereditario, fondando l’attuale casa reale svedese.",
+				"Fino agli anni Sessanta produceva la maggior parte delle scarpe svedesi, e il suo museo della calzatura è quello nazionale."
+			]
+		}
+	},
+	"skien": {
+		"kind": "city",
+		"population": 73330,
+		"populationRank": 32,
+		"region": "Telemark",
+		"coastal": true,
+		"position": "south"
+	},
+	"stavanger": {
+		"kind": "city",
+		"population": 173132,
+		"populationRank": 11,
+		"region": "Rogaland",
+		"coastal": true,
+		"position": "south"
+	},
+	"norrkoping": {
+		"kind": "city",
+		"population": 88639,
+		"populationRank": 27,
+		"region": "Östergötland",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"linkoping": {
+		"kind": "city",
+		"population": 96732,
+		"populationRank": 22,
+		"region": "Östergötland",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"kristiansand": {
+		"kind": "city",
+		"population": 63814,
+		"populationRank": 36,
+		"region": "Vest-Agder",
+		"coastal": true,
+		"position": "south"
+	},
+	"jonkoping": {
+		"kind": "city",
+		"population": 89780,
+		"populationRank": 26,
+		"coastal": false,
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"From an old market place at the köping — a trading town — by the Junebäck stream.",
+				"It made the world's safety matches: the Jönköping factory perfected the separate striking surface in the 1840s.",
+				"It sits at the southern tip of Vättern, Sweden's second lake, which is so clean that its water needs little treatment to drink."
+			],
+			"it": [
+				"Da un antico luogo di mercato, il köping, ossia un borgo di commercio, presso il ruscello Junebäck.",
+				"Ha dato al mondo i fiammiferi di sicurezza: la fabbrica di Jönköping perfezionò la superficie di sfregamento separata negli anni Quaranta dell’Ottocento.",
+				"Sorge sulla punta meridionale del Vättern, il secondo lago della Svezia, così pulito che la sua acqua ha bisogno di pochi trattamenti per essere bevuta."
+			]
+		}
+	},
+	"boras": {
+		"kind": "city",
+		"population": 65008,
+		"populationRank": 35,
+		"region": "Västra Götaland",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"goteborg": {
+		"kind": "city",
+		"population": 537797,
+		"populationRank": 5,
+		"region": "Västra Götaland",
+		"coastal": true,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"\"Fortress of the Geats\" — Göta plus borg, founded in 1621 by Gustav II Adolf with Dutch engineers, which is why it has canals.",
+				"Volvo was founded here in 1927, and the name is Latin for \"I roll\".",
+				"Its Liseberg is the largest amusement park in Scandinavia, and the city holds Sweden’s biggest port."
+			],
+			"it": [
+				"\"Fortezza dei Geati\", da Göta più borg: fu fondata nel 1621 da Gustavo II Adolfo con ingegneri olandesi, ed è per questo che ha i canali.",
+				"Qui nel 1927 nacque la Volvo, il cui nome in latino significa \"io rotolo\".",
+				"Il suo Liseberg è il più grande parco divertimenti della Scandinavia, e la città ha il maggior porto della Svezia."
+			]
+		}
+	},
+	"aalborg": {
+		"kind": "city",
+		"population": 122219,
+		"populationRank": 17,
+		"region": "Nordjylland",
+		"coastal": true,
+		"position": "south"
+	},
+	"vaxjo": {
+		"kind": "city",
+		"population": 59600,
+		"populationRank": 37,
+		"region": "Kronoberg",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"halmstad": {
+		"kind": "city",
+		"population": 55657,
+		"populationRank": 40,
+		"region": "Halland",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"arhus": {
+		"kind": "city",
+		"population": 237551,
+		"populationRank": 8,
+		"region": "Midtjylland",
+		"coastal": true,
+		"position": "south"
+	},
+	"helsingborg": {
+		"kind": "city",
+		"population": 91304,
+		"populationRank": 24,
+		"region": "Skåne",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"vejle": {
+		"kind": "city",
+		"population": 51177,
+		"populationRank": 43,
+		"region": "Syddanmark",
+		"coastal": true,
+		"position": "south"
+	},
+	"k-benhavn": {
+		"kind": "city",
+		"population": 1085000,
+		"populationRank": 3,
+		"population1950": 1216000,
+		"region": "Hovedstaden",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"malmo": {
+		"kind": "city",
+		"population": 269349,
+		"populationRank": 6,
+		"region": "Skåne",
+		"coastal": true,
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Probably from malm, a sandy or gravelly ground, plus haug, a mound.",
+				"Danish until 1658, and now joined to Copenhagen by the Öresund bridge, which becomes a tunnel halfway across.",
+				"Its Turning Torso, twisting 90 degrees over 54 floors, was the tallest building in Scandinavia when finished."
+			],
+			"it": [
+				"Probabilmente da malm, terreno sabbioso o ghiaioso, più haug, un tumulo.",
+				"Danese fino al 1658, oggi è collegata a Copenaghen dal ponte dell’Öresund, che a metà percorso diventa un tunnel.",
+				"Il suo Turning Torso, che ruota di 90 gradi su 54 piani, al suo completamento era l’edificio più alto della Scandinavia."
+			]
+		}
+	},
+	"esbjerg": {
+		"kind": "city",
+		"population": 72205,
+		"populationRank": 33,
+		"region": "Syddanmark",
+		"coastal": true,
+		"position": "south"
+	},
+	"odense": {
+		"kind": "city",
+		"population": 158222,
+		"populationRank": 13,
+		"region": "Syddanmark",
+		"coastal": true,
+		"position": "south"
+	}
+}

@@ -35,7 +35,12 @@ pairs well with a canvas/map-heavy UI.
   server to run; ships as an app asset; works fully offline. Ideal for the
   local-install POC.
 - **Source data**: tiles built from **Natural Earth** (genuinely public
-  domain) via `tippecanoe`. OpenStreetMap extracts are the natural next step
+  domain) via `tippecanoe`. A map of several countries (#39) reads the
+  admin-0 layer as well: `build-map.ts --level=country` makes countries
+  the targets, `build-points-map.ts --countries/--continent` takes towns
+  from several, and the pure choices both make (what is a country, how
+  small is too small, whose name field a town reads) are
+  `data/scripts/multiCountry.ts`, unit-tested from `app/`. OpenStreetMap extracts are the natural next step
   for finer landmarks, but note OSM is **ODbL** (attribution + share-alike
   required) — not public domain.
 - **No always-on name labels**: `data/styles/base.json` deliberately has no

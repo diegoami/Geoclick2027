@@ -9,6 +9,7 @@ import { existsSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { coverageOf, interiorPoint, type AnyGeometry } from './factGeometry.js';
+import { sqlIn } from './multiCountry.js';
 
 export const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
 export const REPO_ROOT = path.resolve(SCRIPT_DIR, '..', '..');
@@ -16,6 +17,11 @@ export const LAKES_SHP = path.join(REPO_ROOT, 'data/source/ne_10m_lakes/ne_10m_l
 export const ADMIN1_SHP = path.join(
 	REPO_ROOT,
 	'data/source/ne_10m_admin_1_states_provinces/ne_10m_admin_1_states_provinces.shp'
+);
+// Countries, for the maps that span several of them (#39).
+export const ADMIN0_SHP = path.join(
+	REPO_ROOT,
+	'data/source/ne_10m_admin_0_countries/ne_10m_admin_0_countries.shp'
 );
 // The Terrain layer's sources (FT-33, docs/PLAN_V0.8.md).
 export const OCEAN_SHP = path.join(REPO_ROOT, 'data/source/ne_10m_ocean/ne_10m_ocean.shp');
@@ -169,6 +175,32 @@ export function selectCountryContext(country: string, outPath: string): void {
 		'name',
 		outPath,
 		ADMIN1_SHP
+	]);
+}
+
+// Land context for a map of several countries (#39): every country's outline
+// inside the box, clipped to it. A continent's cities need the borders
+// between countries rather than one country's admin-1 lines, and a
+// Countries map needs its neighbours - Europe without Turkey or Morocco
+// drawn in is a continent floating on sand. `exceptAdmins` leaves out the
+// targets themselves, which the targets layer already draws.
+export function selectAdmin0Context(
+	bbox: [number, number, number, number],
+	outPath: string,
+	exceptAdmins: string[] = []
+): void {
+	execFileSync('ogr2ogr', [
+		'-f',
+		'GeoJSON',
+		'-clipsrc',
+		...bbox.map(String),
+		...(exceptAdmins.length > 0 ? ['-where', `NOT (${sqlIn('ADMIN', exceptAdmins)})`] : []),
+		'-select',
+		'ADMIN',
+		'-nlt',
+		'MULTIPOLYGON',
+		outPath,
+		ADMIN0_SHP
 	]);
 }
 

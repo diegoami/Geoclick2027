@@ -48,6 +48,11 @@ fetch ne_10m_lakes \
 	"https://naturalearth.s3.amazonaws.com/10m_physical/ne_10m_lakes.zip"
 fetch ne_10m_populated_places \
 	"https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_populated_places.zip"
+# Countries, for the maps of a continent and of a part of Europe (#39):
+# the targets of a Countries map, the continent of a Capitals map, and the
+# land around both.
+fetch ne_10m_admin_0_countries \
+	"https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_countries.zip"
 
 # --- Terrain layer (FT-33) ---
 fetch ne_10m_ocean \

@@ -1,0 +1,1251 @@
+{
+	"id": "europe-cities-south",
+	"name": "Europe — Cities — South",
+	"country": "Europe",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "zagreb",
+			"name": "Zagreb",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Croatia",
+			"centroid": [
+				15.9999947,
+				45.8000067
+			],
+			"bbox": [
+				15.9999947,
+				45.8000067,
+				15.9999947,
+				45.8000067
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "milano",
+			"name": "Milano",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Italy",
+			"centroid": [
+				9.2030631,
+				45.4719211
+			],
+			"bbox": [
+				9.2030631,
+				45.4719211,
+				9.2030631,
+				45.4719211
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "verona",
+			"name": "Verona",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Italy",
+			"centroid": [
+				10.9900162,
+				45.4403904
+			],
+			"bbox": [
+				10.9900162,
+				45.4403904,
+				10.9900162,
+				45.4403904
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "rijeka",
+			"name": "Rijeka",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Croatia",
+			"centroid": [
+				14.4500118,
+				45.3299837
+			],
+			"bbox": [
+				14.4500118,
+				45.3299837,
+				14.4500118,
+				45.3299837
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "novi-sad",
+			"name": "Novi Sad",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Serbia",
+			"centroid": [
+				19.8499406,
+				45.2503762
+			],
+			"bbox": [
+				19.8499406,
+				45.2503762,
+				19.8499406,
+				45.2503762
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "torino",
+			"name": "Torino",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Italy",
+			"centroid": [
+				7.6680146,
+				45.072333
+			],
+			"bbox": [
+				7.6680146,
+				45.072333,
+				7.6680146,
+				45.072333
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "prijedor",
+			"name": "Prijedor",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Bosnia and Herzegovina",
+			"centroid": [
+				16.7000036,
+				44.9803927
+			],
+			"bbox": [
+				16.7000036,
+				44.9803927,
+				16.7000036,
+				44.9803927
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "belgrade",
+			"name": "Belgrade",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Serbia",
+			"centroid": [
+				20.4660448,
+				44.8205913
+			],
+			"bbox": [
+				20.4660448,
+				44.8205913,
+				20.4660448,
+				44.8205913
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "banja-luka",
+			"name": "Banja Luka",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Bosnia and Herzegovina",
+			"centroid": [
+				17.1799743,
+				44.7804049
+			],
+			"bbox": [
+				17.1799743,
+				44.7804049,
+				17.1799743,
+				44.7804049
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "tuzla",
+			"name": "Tuzla",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Bosnia and Herzegovina",
+			"centroid": [
+				18.6800378,
+				44.5504706
+			],
+			"bbox": [
+				18.6800378,
+				44.5504706,
+				18.6800378,
+				44.5504706
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "bologna",
+			"name": "Bologna",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Italy",
+			"centroid": [
+				11.3400207,
+				44.500422
+			],
+			"bbox": [
+				11.3400207,
+				44.500422,
+				11.3400207,
+				44.500422
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "genova",
+			"name": "Genova",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Italy",
+			"centroid": [
+				8.9300386,
+				44.4099882
+			],
+			"bbox": [
+				8.9300386,
+				44.4099882,
+				8.9300386,
+				44.4099882
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "zenica",
+			"name": "Zenica",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Bosnia and Herzegovina",
+			"centroid": [
+				17.9199808,
+				44.219974
+			],
+			"bbox": [
+				17.9199808,
+				44.219974,
+				17.9199808,
+				44.219974
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "kragujevac",
+			"name": "Kragujevac",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Serbia",
+			"centroid": [
+				20.9200044,
+				44.0199603
+			],
+			"bbox": [
+				20.9200044,
+				44.0199603,
+				20.9200044,
+				44.0199603
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "cacak",
+			"name": "Čačak",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Serbia",
+			"centroid": [
+				20.330118,
+				43.8897357
+			],
+			"bbox": [
+				20.330118,
+				43.8897357,
+				20.330118,
+				43.8897357
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "sarajevo",
+			"name": "Sarajevo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Bosnia and Herzegovina",
+			"centroid": [
+				18.3830017,
+				43.8500224
+			],
+			"bbox": [
+				18.3830017,
+				43.8500224,
+				18.3830017,
+				43.8500224
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "firenze",
+			"name": "Firenze",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Italy",
+			"centroid": [
+				11.2500004,
+				43.7800008
+			],
+			"bbox": [
+				11.2500004,
+				43.7800008,
+				11.2500004,
+				43.7800008
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "gijon",
+			"name": "Gijón",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Spain",
+			"centroid": [
+				-5.6700004,
+				43.5300161
+			],
+			"bbox": [
+				-5.6700004,
+				43.5300161,
+				-5.6700004,
+				43.5300161
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "split",
+			"name": "Split",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Croatia",
+			"centroid": [
+				16.4699918,
+				43.5204043
+			],
+			"bbox": [
+				16.4699918,
+				43.5204043,
+				16.4699918,
+				43.5204043
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "mostar",
+			"name": "Mostar",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Bosnia and Herzegovina",
+			"centroid": [
+				17.8200386,
+				43.3504922
+			],
+			"bbox": [
+				17.8200386,
+				43.3504922,
+				17.8200386,
+				43.3504922
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "nis",
+			"name": "Niš",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Serbia",
+			"centroid": [
+				21.8999963,
+				43.3304159
+			],
+			"bbox": [
+				21.8999963,
+				43.3304159,
+				21.8999963,
+				43.3304159
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "la-coruna",
+			"name": "La Coruña",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Spain",
+			"centroid": [
+				-8.4199876,
+				43.3299766
+			],
+			"bbox": [
+				-8.4199876,
+				43.3299766,
+				-8.4199876,
+				43.3299766
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "san-sebastian",
+			"name": "San Sebastián",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Spain",
+			"centroid": [
+				-1.9799931,
+				43.3203906
+			],
+			"bbox": [
+				-1.9799931,
+				43.3203906,
+				-1.9799931,
+				43.3203906
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "bilbao",
+			"name": "Bilbao",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Spain",
+			"centroid": [
+				-2.9299868,
+				43.2499815
+			],
+			"bbox": [
+				-2.9299868,
+				43.2499815,
+				-2.9299868,
+				43.2499815
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "pristina",
+			"name": "Pristina",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Kosovo",
+			"centroid": [
+				21.1659843,
+				42.6667096
+			],
+			"bbox": [
+				21.1659843,
+				42.6667096,
+				21.1659843,
+				42.6667096
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "peja",
+			"name": "Peja",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Kosovo",
+			"centroid": [
+				20.3107393,
+				42.6603276
+			],
+			"bbox": [
+				20.3107393,
+				42.6603276,
+				20.3107393,
+				42.6603276
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "podgorica",
+			"name": "Podgorica",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Montenegro",
+			"centroid": [
+				19.2663069,
+				42.4659725
+			],
+			"bbox": [
+				19.2663069,
+				42.4659725,
+				19.2663069,
+				42.4659725
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "pescara",
+			"name": "Pescara",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Italy",
+			"centroid": [
+				14.2186564,
+				42.4554305
+			],
+			"bbox": [
+				14.2186564,
+				42.4554305,
+				14.2186564,
+				42.4554305
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "prizren",
+			"name": "Prizren",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Kosovo",
+			"centroid": [
+				20.7500923,
+				42.2293203
+			],
+			"bbox": [
+				20.7500923,
+				42.2293203,
+				20.7500923,
+				42.2293203
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "vigo",
+			"name": "Vigo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Spain",
+			"centroid": [
+				-8.7299945,
+				42.2200185
+			],
+			"bbox": [
+				-8.7299945,
+				42.2200185,
+				-8.7299945,
+				42.2200185
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "shkoder",
+			"name": "Shkodër",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Albania",
+			"centroid": [
+				19.5188496,
+				42.0684516
+			],
+			"bbox": [
+				19.5188496,
+				42.0684516,
+				19.5188496,
+				42.0684516
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "tetovo",
+			"name": "Tetovo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "North Macedonia",
+			"centroid": [
+				20.9700789,
+				42.0092304
+			],
+			"bbox": [
+				20.9700789,
+				42.0092304,
+				20.9700789,
+				42.0092304
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "skopje",
+			"name": "Skopje",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "North Macedonia",
+			"centroid": [
+				21.4334615,
+				42.0000061
+			],
+			"bbox": [
+				21.4334615,
+				42.0000061,
+				21.4334615,
+				42.0000061
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "roma",
+			"name": "Roma",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Italy",
+			"centroid": [
+				12.4813126,
+				41.8979015
+			],
+			"bbox": [
+				12.4813126,
+				41.8979015,
+				12.4813126,
+				41.8979015
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "zaragoza",
+			"name": "Zaragoza",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Spain",
+			"centroid": [
+				-0.8899821,
+				41.6500016
+			],
+			"bbox": [
+				-0.8899821,
+				41.6500016,
+				-0.8899821,
+				41.6500016
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "braga",
+			"name": "Braga",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Portugal",
+			"centroid": [
+				-8.4213312,
+				41.5549945
+			],
+			"bbox": [
+				-8.4213312,
+				41.5549945,
+				-8.4213312,
+				41.5549945
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "barcelona",
+			"name": "Barcelona",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Spain",
+			"centroid": [
+				2.1814245,
+				41.3852454
+			],
+			"bbox": [
+				2.1814245,
+				41.3852454,
+				2.1814245,
+				41.3852454
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "tirana",
+			"name": "Tirana",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Albania",
+			"centroid": [
+				19.818883,
+				41.3275407
+			],
+			"bbox": [
+				19.818883,
+				41.3275407,
+				19.818883,
+				41.3275407
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "durres",
+			"name": "Durrës",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Albania",
+			"centroid": [
+				19.448208,
+				41.3177997
+			],
+			"bbox": [
+				19.448208,
+				41.3177997,
+				19.448208,
+				41.3177997
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "porto",
+			"name": "Porto",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Portugal",
+			"centroid": [
+				-8.6219471,
+				41.1519522
+			],
+			"bbox": [
+				-8.6219471,
+				41.1519522,
+				-8.6219471,
+				41.1519522
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "elbasan",
+			"name": "Elbasan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Albania",
+			"centroid": [
+				20.0838281,
+				41.1215068
+			],
+			"bbox": [
+				20.0838281,
+				41.1215068,
+				20.0838281,
+				41.1215068
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "bari",
+			"name": "Bari",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Italy",
+			"centroid": [
+				16.8727579,
+				41.1142204
+			],
+			"bbox": [
+				16.8727579,
+				41.1142204,
+				16.8727579,
+				41.1142204
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "napoli",
+			"name": "Napoli",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Italy",
+			"centroid": [
+				14.2430655,
+				40.8419711
+			],
+			"bbox": [
+				14.2430655,
+				40.8419711,
+				14.2430655,
+				40.8419711
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "thessaloniki",
+			"name": "Thessaloniki",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Greece",
+			"centroid": [
+				22.8830549,
+				40.6980522
+			],
+			"bbox": [
+				22.8830549,
+				40.6980522,
+				22.8830549,
+				40.6980522
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "salerno",
+			"name": "Salerno",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Italy",
+			"centroid": [
+				14.7699406,
+				40.6803967
+			],
+			"bbox": [
+				14.7699406,
+				40.6803967,
+				14.7699406,
+				40.6803967
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "madrid",
+			"name": "Madrid",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Spain",
+			"centroid": [
+				-3.6852975,
+				40.4019721
+			],
+			"bbox": [
+				-3.6852975,
+				40.4019721,
+				-3.6852975,
+				40.4019721
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "coimbra",
+			"name": "Coimbra",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Portugal",
+			"centroid": [
+				-8.4166803,
+				40.2003744
+			],
+			"bbox": [
+				-8.4166803,
+				40.2003744,
+				-8.4166803,
+				40.2003744
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "larissa",
+			"name": "Larissa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Greece",
+			"centroid": [
+				22.4200162,
+				39.6304092
+			],
+			"bbox": [
+				22.4200162,
+				39.6304092,
+				22.4200162,
+				39.6304092
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "palma-de-mallorca",
+			"name": "Palma de Mallorca",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Spain",
+			"centroid": [
+				2.654246,
+				39.5742627
+			],
+			"bbox": [
+				2.654246,
+				39.5742627,
+				2.654246,
+				39.5742627
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "valencia",
+			"name": "Valencia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Spain",
+			"centroid": [
+				-0.4019579,
+				39.4869634
+			],
+			"bbox": [
+				-0.4019579,
+				39.4869634,
+				-0.4019579,
+				39.4869634
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "volos",
+			"name": "Volos",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Greece",
+			"centroid": [
+				22.9500097,
+				39.3699599
+			],
+			"bbox": [
+				22.9500097,
+				39.3699599,
+				22.9500097,
+				39.3699599
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "cagliari",
+			"name": "Cagliari",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Italy",
+			"centroid": [
+				9.1039815,
+				39.2223979
+			],
+			"bbox": [
+				9.1039815,
+				39.2223979,
+				9.1039815,
+				39.2223979
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "lisboa",
+			"name": "Lisboa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Portugal",
+			"centroid": [
+				-9.1468122,
+				38.7246687
+			],
+			"bbox": [
+				-9.1468122,
+				38.7246687,
+				-9.1468122,
+				38.7246687
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "setubal",
+			"name": "Setúbal",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Portugal",
+			"centroid": [
+				-8.90001,
+				38.5299595
+			],
+			"bbox": [
+				-8.90001,
+				38.5299595,
+				-8.90001,
+				38.5299595
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "patra",
+			"name": "Patra",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Greece",
+			"centroid": [
+				21.7299808,
+				38.2300037
+			],
+			"bbox": [
+				21.7299808,
+				38.2300037,
+				21.7299808,
+				38.2300037
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "palermo",
+			"name": "Palermo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Italy",
+			"centroid": [
+				13.3480814,
+				38.1269689
+			],
+			"bbox": [
+				13.3480814,
+				38.1269689,
+				13.3480814,
+				38.1269689
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "athens",
+			"name": "Athens",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Greece",
+			"centroid": [
+				23.7313752,
+				37.9852721
+			],
+			"bbox": [
+				23.7313752,
+				37.9852721,
+				23.7313752,
+				37.9852721
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "murcia",
+			"name": "Murcia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Spain",
+			"centroid": [
+				-1.1299675,
+				37.9799931
+			],
+			"bbox": [
+				-1.1299675,
+				37.9799931,
+				-1.1299675,
+				37.9799931
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "catania",
+			"name": "Catania",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Italy",
+			"centroid": [
+				15.0799991,
+				37.4999707
+			],
+			"bbox": [
+				15.0799991,
+				37.4999707,
+				15.0799991,
+				37.4999707
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "sevilla",
+			"name": "Sevilla",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Spain",
+			"centroid": [
+				-5.9800074,
+				37.4050153
+			],
+			"bbox": [
+				-5.9800074,
+				37.4050153,
+				-5.9800074,
+				37.4050153
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "granada",
+			"name": "Granada",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Spain",
+			"centroid": [
+				-3.5850114,
+				37.1649783
+			],
+			"bbox": [
+				-3.5850114,
+				37.1649783,
+				-3.5850114,
+				37.1649783
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "malaga",
+			"name": "Málaga",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Spain",
+			"centroid": [
+				-4.4199992,
+				36.7204059
+			],
+			"bbox": [
+				-4.4199992,
+				36.7204059,
+				-4.4199992,
+				36.7204059
+			],
+			"colorIndex": 1
+		}
+	],
+	"tourOrder": [
+		"zagreb",
+		"milano",
+		"verona",
+		"rijeka",
+		"novi-sad",
+		"torino",
+		"prijedor",
+		"belgrade",
+		"banja-luka",
+		"tuzla",
+		"bologna",
+		"genova",
+		"zenica",
+		"kragujevac",
+		"cacak",
+		"sarajevo",
+		"firenze",
+		"gijon",
+		"split",
+		"mostar",
+		"nis",
+		"la-coruna",
+		"san-sebastian",
+		"bilbao",
+		"pristina",
+		"peja",
+		"podgorica",
+		"pescara",
+		"prizren",
+		"vigo",
+		"shkoder",
+		"tetovo",
+		"skopje",
+		"roma",
+		"zaragoza",
+		"braga",
+		"barcelona",
+		"tirana",
+		"durres",
+		"porto",
+		"elbasan",
+		"bari",
+		"napoli",
+		"thessaloniki",
+		"salerno",
+		"madrid",
+		"coimbra",
+		"larissa",
+		"palma-de-mallorca",
+		"valencia",
+		"volos",
+		"cagliari",
+		"lisboa",
+		"setubal",
+		"patra",
+		"palermo",
+		"athens",
+		"murcia",
+		"catania",
+		"sevilla",
+		"granada",
+		"malaga"
+	]
+}

@@ -1,0 +1,915 @@
+{
+	"kazakhstan": {
+		"kind": "region",
+		"borders": [
+			"China",
+			"Kyrgyzstan",
+			"Turkmenistan",
+			"Uzbekistan"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Almaty",
+			"nameDe": "Almaty",
+			"nameIt": "Almaty",
+			"population": 1209000
+		},
+		"peak": {
+			"name": "Pik Talghar",
+			"elevation": 4979
+		},
+		"position": "north"
+	},
+	"mongolia": {
+		"kind": "region",
+		"borders": [
+			"China"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ulaanbaatar",
+			"nameDe": "Ulaanbaatar",
+			"nameIt": "Ulan Bator",
+			"population": 885000
+		},
+		"peak": {
+			"name": "Munkh Khairkhan",
+			"elevation": 4231
+		},
+		"position": "north"
+	},
+	"georgia": {
+		"kind": "region",
+		"borders": [
+			"Armenia",
+			"Azerbaijan",
+			"Turkey"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tbilisi",
+			"nameDe": "Tiflis",
+			"nameIt": "Tbilisi",
+			"population": 1100000
+		},
+		"position": "north-west"
+	},
+	"uzbekistan": {
+		"kind": "region",
+		"borders": [
+			"Afghanistan",
+			"Kazakhstan",
+			"Kyrgyzstan",
+			"Tajikistan",
+			"Turkmenistan"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tashkent",
+			"nameDe": "Taschkent",
+			"nameIt": "Tashkent",
+			"population": 2184000
+		},
+		"peak": {
+			"name": "Ayrybaba",
+			"elevation": 3137
+		},
+		"position": "north-west"
+	},
+	"kyrgyzstan": {
+		"kind": "region",
+		"borders": [
+			"China",
+			"Kazakhstan",
+			"Tajikistan",
+			"Uzbekistan"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bishkek",
+			"nameDe": "Bischkek",
+			"nameIt": "Biškek",
+			"population": 837000
+		},
+		"peak": {
+			"name": "Pik Pobeda",
+			"elevation": 7439
+		},
+		"position": "north"
+	},
+	"north-korea": {
+		"kind": "region",
+		"borders": [
+			"China",
+			"South Korea"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Pyongyang",
+			"nameDe": "Pjöngjang",
+			"nameIt": "Pyongyang",
+			"population": 3300000
+		},
+		"position": "north-east"
+	},
+	"azerbaijan": {
+		"kind": "region",
+		"borders": [
+			"Armenia",
+			"Georgia",
+			"Iran",
+			"Turkey"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Baku",
+			"nameDe": "Baku",
+			"nameIt": "Baku",
+			"population": 2122300
+		},
+		"position": "north-west"
+	},
+	"armenia": {
+		"kind": "region",
+		"borders": [
+			"Azerbaijan",
+			"Georgia",
+			"Iran",
+			"Turkey"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Yerevan",
+			"nameDe": "Jerewan",
+			"nameIt": "Erevan",
+			"population": 1102000
+		},
+		"peak": {
+			"name": "Aragats Lerr",
+			"elevation": 4090
+		},
+		"position": "north-west"
+	},
+	"turkmenistan": {
+		"kind": "region",
+		"borders": [
+			"Afghanistan",
+			"Iran",
+			"Kazakhstan",
+			"Uzbekistan"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Ashgabat",
+			"nameDe": "Aşgabat",
+			"nameIt": "Aşgabat",
+			"population": 727700
+		},
+		"peak": {
+			"name": "Kuh-e Ruzeh",
+			"elevation": 2941
+		},
+		"position": "north-west"
+	},
+	"turkey": {
+		"kind": "region",
+		"borders": [
+			"Armenia",
+			"Azerbaijan",
+			"Georgia",
+			"Iran",
+			"Iraq",
+			"Syria"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Istanbul",
+			"nameDe": "Istanbul",
+			"nameIt": "Istanbul",
+			"population": 10061000
+		},
+		"peak": {
+			"name": "Mount Ararat",
+			"elevation": 5137
+		},
+		"position": "north-west"
+	},
+	"tajikistan": {
+		"kind": "region",
+		"borders": [
+			"Afghanistan",
+			"China",
+			"Kyrgyzstan",
+			"Uzbekistan"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Dushanbe",
+			"nameDe": "Duschanbe",
+			"nameIt": "Dušanbe",
+			"population": 1086244
+		},
+		"peak": {
+			"name": "Pik Imeni Ismail Samani",
+			"elevation": 7495
+		},
+		"position": "north"
+	},
+	"south-korea": {
+		"kind": "region",
+		"borders": [
+			"North Korea"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Seoul",
+			"nameDe": "Seoul",
+			"nameIt": "Seul",
+			"population": 9796000
+		},
+		"peak": {
+			"name": "Halla-san",
+			"elevation": 1950
+		},
+		"position": "north-east"
+	},
+	"china": {
+		"kind": "region",
+		"borders": [
+			"Afghanistan",
+			"Bhutan",
+			"India",
+			"Kazakhstan",
+			"Kyrgyzstan",
+			"Laos",
+			"Mongolia",
+			"Myanmar",
+			"Nepal",
+			"North Korea",
+			"Pakistan",
+			"Tajikistan",
+			"Vietnam"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Shanghai",
+			"nameDe": "Shanghai",
+			"nameIt": "Shanghai",
+			"population": 14987000
+		},
+		"peak": {
+			"name": "Mount Everest",
+			"elevation": 8848
+		},
+		"position": "north"
+	},
+	"northern-cyprus": {
+		"kind": "region",
+		"borders": [
+			"Cyprus"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Famagusta",
+			"nameDe": "Famagusta",
+			"nameIt": "Famagosta",
+			"population": 42526
+		},
+		"peak": {
+			"name": "Selvili Tepe",
+			"elevation": 1023
+		},
+		"position": "north-west"
+	},
+	"cyprus": {
+		"kind": "region",
+		"borders": [
+			"Northern Cyprus"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Nicosia",
+			"nameDe": "Nikosia",
+			"nameIt": "Nicosia",
+			"population": 224300
+		},
+		"peak": {
+			"name": "Olympus",
+			"elevation": 1951
+		},
+		"position": "north-west"
+	},
+	"japan": {
+		"kind": "region",
+		"coastal": true,
+		"largestCity": {
+			"name": "Tokyo",
+			"nameDe": "Tokio",
+			"nameIt": "Tokyo",
+			"population": 35676000
+		},
+		"peak": {
+			"name": "Fuji",
+			"elevation": 3776
+		},
+		"position": "north-east"
+	},
+	"syria": {
+		"kind": "region",
+		"borders": [
+			"Iraq",
+			"Israel",
+			"Jordan",
+			"Lebanon",
+			"Turkey"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Aleppo",
+			"nameDe": "Aleppo",
+			"nameIt": "Aleppo",
+			"population": 2738000
+		},
+		"peak": {
+			"name": "Jabal ash Shaykh",
+			"elevation": 2814
+		},
+		"position": "north-west"
+	},
+	"afghanistan": {
+		"kind": "region",
+		"borders": [
+			"China",
+			"Iran",
+			"Pakistan",
+			"Tajikistan",
+			"Turkmenistan",
+			"Uzbekistan"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kabul",
+			"nameDe": "Kabul",
+			"nameIt": "Kabul",
+			"population": 3277000
+		},
+		"peak": {
+			"name": "Nowshak",
+			"elevation": 7492
+		},
+		"position": "north"
+	},
+	"lebanon": {
+		"kind": "region",
+		"borders": [
+			"Israel",
+			"Syria"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Beirut",
+			"nameDe": "Beirut",
+			"nameIt": "Beirut",
+			"population": 1846000
+		},
+		"peak": {
+			"name": "Qurnat as Sawdā",
+			"elevation": 3088
+		},
+		"position": "north-west"
+	},
+	"iraq": {
+		"kind": "region",
+		"borders": [
+			"Iran",
+			"Jordan",
+			"Kuwait",
+			"Saudi Arabia",
+			"Syria",
+			"Turkey"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Baghdad",
+			"nameDe": "Bagdad",
+			"nameIt": "Baghdad",
+			"population": 5054000
+		},
+		"position": "west"
+	},
+	"iran": {
+		"kind": "region",
+		"borders": [
+			"Afghanistan",
+			"Armenia",
+			"Azerbaijan",
+			"Iraq",
+			"Pakistan",
+			"Turkey",
+			"Turkmenistan"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tehran",
+			"nameDe": "Teheran",
+			"nameIt": "Teheran",
+			"population": 7873000
+		},
+		"peak": {
+			"name": "Mount Damavand",
+			"elevation": 5610
+		},
+		"position": "west"
+	},
+	"palestine": {
+		"kind": "region",
+		"borders": [
+			"Israel",
+			"Jordan"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tel Aviv",
+			"nameDe": "Tel Aviv-Jaffa",
+			"nameIt": "Tel Aviv",
+			"population": 3112000
+		},
+		"peak": {
+			"name": "Har Meron",
+			"elevation": 1208
+		},
+		"position": "west"
+	},
+	"israel": {
+		"kind": "region",
+		"borders": [
+			"Jordan",
+			"Lebanon",
+			"Palestine",
+			"Syria"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tel Aviv",
+			"nameDe": "Tel Aviv-Jaffa",
+			"nameIt": "Tel Aviv",
+			"population": 3112000
+		},
+		"peak": {
+			"name": "Har Meron",
+			"elevation": 1208
+		},
+		"position": "west"
+	},
+	"jordan": {
+		"kind": "region",
+		"borders": [
+			"Iraq",
+			"Israel",
+			"Palestine",
+			"Saudi Arabia",
+			"Syria"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Amman",
+			"nameDe": "Amman",
+			"nameIt": "Amman",
+			"population": 1060000
+		},
+		"peak": {
+			"name": "Jabal Ramm",
+			"elevation": 1754
+		},
+		"position": "west"
+	},
+	"pakistan": {
+		"kind": "region",
+		"borders": [
+			"Afghanistan",
+			"China",
+			"India",
+			"Iran"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Karachi",
+			"nameDe": "Karatschi",
+			"nameIt": "Karachi",
+			"population": 12130000
+		},
+		"peak": {
+			"name": "K2",
+			"elevation": 8611
+		},
+		"position": "centre"
+	},
+	"kuwait": {
+		"kind": "region",
+		"borders": [
+			"Iraq",
+			"Saudi Arabia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Kuwait City",
+			"nameDe": "Kuwait",
+			"nameIt": "Al Kuwait",
+			"population": 2063000
+		},
+		"position": "west"
+	},
+	"nepal": {
+		"kind": "region",
+		"borders": [
+			"China",
+			"India"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kathmandu",
+			"nameDe": "Kathmandu",
+			"nameIt": "Katmandu",
+			"population": 895000
+		},
+		"peak": {
+			"name": "Dhaulagiri",
+			"elevation": 8172
+		},
+		"position": "centre"
+	},
+	"bhutan": {
+		"kind": "region",
+		"borders": [
+			"China",
+			"India"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Thimphu",
+			"nameDe": "Thimphu",
+			"nameIt": "Thimphu",
+			"population": 98676
+		},
+		"peak": {
+			"name": "Gangkar Punsum",
+			"elevation": 7570
+		},
+		"position": "centre"
+	},
+	"qatar": {
+		"kind": "region",
+		"borders": [
+			"Saudi Arabia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Doha",
+			"nameDe": "Doha",
+			"nameIt": "Doha",
+			"population": 1450000
+		},
+		"position": "west"
+	},
+	"united-arab-emirates": {
+		"kind": "region",
+		"borders": [
+			"Oman",
+			"Saudi Arabia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Dubai",
+			"nameDe": "Dubai",
+			"nameIt": "Dubai",
+			"population": 1379000
+		},
+		"peak": {
+			"name": "Jabal Yibir",
+			"elevation": 1527
+		},
+		"position": "west"
+	},
+	"saudi-arabia": {
+		"kind": "region",
+		"borders": [
+			"Iraq",
+			"Jordan",
+			"Kuwait",
+			"Oman",
+			"Qatar",
+			"United Arab Emirates",
+			"Yemen"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Riyadh",
+			"nameDe": "Riad",
+			"nameIt": "Riad",
+			"population": 4465000
+		},
+		"peak": {
+			"name": "Jabal Sawdā",
+			"elevation": 3000
+		},
+		"position": "west"
+	},
+	"bangladesh": {
+		"kind": "region",
+		"borders": [
+			"India",
+			"Myanmar"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Dhaka",
+			"nameDe": "Dhaka",
+			"nameIt": "Dacca",
+			"population": 12797394
+		},
+		"position": "centre"
+	},
+	"taiwan": {
+		"kind": "region",
+		"coastal": true,
+		"largestCity": {
+			"name": "Taipei",
+			"nameDe": "Taipeh",
+			"nameIt": "Taipei",
+			"population": 6900273
+		},
+		"peak": {
+			"name": "Yu Shan",
+			"elevation": 3952
+		},
+		"position": "east"
+	},
+	"oman": {
+		"kind": "region",
+		"borders": [
+			"Saudi Arabia",
+			"United Arab Emirates",
+			"Yemen"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Muscat",
+			"nameDe": "Maskat",
+			"nameIt": "Mascate",
+			"population": 734697
+		},
+		"peak": {
+			"name": "Jabal Shams",
+			"elevation": 3035
+		},
+		"position": "west"
+	},
+	"india": {
+		"kind": "region",
+		"borders": [
+			"Bangladesh",
+			"Bhutan",
+			"China",
+			"Myanmar",
+			"Nepal",
+			"Pakistan"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Mumbai",
+			"nameDe": "Mumbai",
+			"nameIt": "Mumbai",
+			"population": 18978000
+		},
+		"peak": {
+			"name": "Kanchenjunga",
+			"elevation": 8586
+		},
+		"position": "centre"
+	},
+	"myanmar": {
+		"kind": "region",
+		"borders": [
+			"Bangladesh",
+			"China",
+			"India",
+			"Laos",
+			"Thailand"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Yangon",
+			"nameDe": "Rangun",
+			"nameIt": "Yangon",
+			"population": 4088000
+		},
+		"peak": {
+			"name": "Hkakabo Razi",
+			"elevation": 5881
+		},
+		"position": "centre"
+	},
+	"laos": {
+		"kind": "region",
+		"borders": [
+			"Cambodia",
+			"China",
+			"Myanmar",
+			"Thailand",
+			"Vietnam"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Vientiane",
+			"nameDe": "Vientiane",
+			"nameIt": "Vientiane",
+			"population": 754000
+		},
+		"peak": {
+			"name": "Phou Bia",
+			"elevation": 2830
+		},
+		"position": "centre"
+	},
+	"vietnam": {
+		"kind": "region",
+		"borders": [
+			"Cambodia",
+			"China",
+			"Laos"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Ho Chi Minh City",
+			"nameDe": "Ho-Chi-Minh-Stadt",
+			"nameIt": "Ho Chi Minh",
+			"population": 5314000
+		},
+		"peak": {
+			"name": "Fan Si Pan",
+			"elevation": 3142
+		},
+		"position": "east"
+	},
+	"yemen": {
+		"kind": "region",
+		"borders": [
+			"Oman",
+			"Saudi Arabia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Sanaa",
+			"nameDe": "Sanaa",
+			"nameIt": "Sana'a",
+			"population": 2008000
+		},
+		"peak": {
+			"name": "Jabal an-Nabi Shu’aib",
+			"elevation": 3666
+		},
+		"position": "west"
+	},
+	"thailand": {
+		"kind": "region",
+		"borders": [
+			"Cambodia",
+			"Laos",
+			"Malaysia",
+			"Myanmar"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Bangkok",
+			"nameDe": "Bangkok",
+			"nameIt": "Bangkok",
+			"population": 6704000
+		},
+		"peak": {
+			"name": "Doi Inthanon",
+			"elevation": 2580
+		},
+		"position": "centre"
+	},
+	"cambodia": {
+		"kind": "region",
+		"borders": [
+			"Laos",
+			"Thailand",
+			"Vietnam"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Phnom Penh",
+			"nameDe": "Phnom Penh",
+			"nameIt": "Phnom Penh",
+			"population": 1466000
+		},
+		"peak": {
+			"name": "Phnom Aural",
+			"elevation": 1813
+		},
+		"position": "centre"
+	},
+	"philippines": {
+		"kind": "region",
+		"coastal": true,
+		"largestCity": {
+			"name": "Manila",
+			"nameDe": "Manila",
+			"nameIt": "Manila",
+			"population": 11100000
+		},
+		"peak": {
+			"name": "Mount Apo",
+			"elevation": 2954
+		},
+		"position": "east"
+	},
+	"sri-lanka": {
+		"kind": "region",
+		"coastal": true,
+		"largestCity": {
+			"name": "Jaffna",
+			"nameDe": "Jaffna",
+			"nameIt": "Jaffna",
+			"population": 250000
+		},
+		"peak": {
+			"name": "Pidurutalagala",
+			"elevation": 2524
+		},
+		"position": "south"
+	},
+	"brunei": {
+		"kind": "region",
+		"borders": [
+			"Malaysia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Bandar Seri Begawan",
+			"nameDe": "Bandar Seri Begawan",
+			"nameIt": "Bandar Seri Begawan",
+			"population": 296500
+		},
+		"position": "south-east"
+	},
+	"malaysia": {
+		"kind": "region",
+		"borders": [
+			"Brunei",
+			"Indonesia",
+			"Thailand"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "George Town",
+			"nameDe": "George Town",
+			"nameIt": "George Town",
+			"population": 2500000
+		},
+		"peak": {
+			"name": "Gunung Kinabalu",
+			"elevation": 4101
+		},
+		"position": "south-east"
+	},
+	"indonesia": {
+		"kind": "region",
+		"borders": [
+			"Malaysia",
+			"Timor-Leste"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Jakarta",
+			"nameDe": "Jakarta",
+			"nameIt": "Giacarta",
+			"population": 9125000
+		},
+		"peak": {
+			"name": "Puncak Jaya",
+			"elevation": 4884
+		},
+		"position": "south-east"
+	},
+	"timor-leste": {
+		"kind": "region",
+		"borders": [
+			"Indonesia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Dili",
+			"nameDe": "Dili",
+			"nameIt": "Dili",
+			"population": 234331
+		},
+		"peak": {
+			"name": "Tata Mailau",
+			"elevation": 2986
+		},
+		"position": "south-east"
+	}
+}

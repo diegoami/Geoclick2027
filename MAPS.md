@@ -811,6 +811,74 @@ max-count logic runs there instead, since min-count/max-count both
 need visibility into the full candidate pool to decide whether to
 reach below the threshold or truncate above it.
 
+### Continents and the parts of Europe (built 2026-09-24, #39)
+
+Seventeen maps that span several countries: each continent's Countries and
+Capitals, and the cities of five parts of Europe. The rules behind them are in
+DECISIONS.md, "Maps of several countries". They need one more download:
+`fetch-natural-earth.sh` now fetches `ne_10m_admin_0_countries`.
+
+**`build-map.ts --level=country`** makes whole countries the targets, from
+the admin-0 layer. `--country` names the group ("Europe"), and the countries
+come from `--continent`, `--subregion` or `--countries` (ADMIN names):
+
+- `--clip=lonMin,latMin,lonMax,latMax` or a WKT polygon cuts the shapes (the
+  `--lon`/`--lat` slice keeps or drops whole targets by their middle);
+- `--min-area=<km²>` drops what is too small to drop a slip on, after the clip;
+- `--assign-admin1="Crimea,Sevastopol:Ukraine"` moves admin-1 areas into
+  another country;
+- the countries around the map are drawn as `context`, as on a towns map.
+
+**`build-points-map.ts`** takes `--countries` (ADM0NAME list) or
+`--continent` in place of one country, plus `--capitals` (`Admin-0 capital`
+only), `--also=<names>` (capitals the source does not flag), and
+`--max-per-country=N`. The name field defaults to `local`: each town reads its
+own country's field (`LOCAL_NAME_FIELD` in `multiCountry.ts`). Towns record
+their `country` in map.json, and `build-facts.ts` takes their authored
+sentences from that country's file.
+
+```
+npx tsx data/scripts/build-map.ts --level=country --country=Europe --continent=Europe --clip=-25,34,60,72 --min-area=2500 --assign-admin1=Crimea,Sevastopol:Ukraine --out=data/maps/europe-countries --name="Europe — Countries"
+npx tsx data/scripts/build-map.ts --level=country --country=Africa --continent=Africa --clip=-26,-36,64,38 --min-area=2500 --out=data/maps/africa-countries --name="Africa — Countries"
+npx tsx data/scripts/build-map.ts --level=country --country=Asia --continent=Asia --clip=25,-12,150,56 --min-area=2500 --out=data/maps/asia-countries --name="Asia — Countries"
+npx tsx data/scripts/build-map.ts --level=country --country="North America" --continent="North America" --clip="POLYGON((-150 5,-50 5,-50 84,-170 84,-170 30,-150 30,-150 5))" --min-area=2500 --out=data/maps/north-america-countries --name="North America — Countries"
+npx tsx data/scripts/build-map.ts --level=country --country="South America" --continent="South America" --clip=-92,-56,-30,13 --min-area=2500 --out=data/maps/south-america-countries --name="South America — Countries"
+npx tsx data/scripts/build-map.ts --level=country --country=Oceania --continent=Oceania --clip=110,-50,180,0 --min-area=2500 --out=data/maps/oceania-countries --name="Oceania — Countries"
+
+npx tsx data/scripts/build-points-map.ts --country=Europe --continent=Europe --capitals --min-population=0 --exclude="Vatican City" --out=data/maps/europe-capitals --name="Europe — Capitals"
+npx tsx data/scripts/build-points-map.ts --country=Africa --continent=Africa --capitals --min-population=0 --also="Dodoma,Porto-Novo,Gitega" --exclude="Johannesburg,Abidjan,Dar es Salaam,Cotonou,Bujumbura" --out=data/maps/africa-capitals --name="Africa — Capitals"
+npx tsx data/scripts/build-points-map.ts --country=Asia --continent=Asia --capitals --min-population=0 --exclude=Yangon --out=data/maps/asia-capitals --name="Asia — Capitals"
+npx tsx data/scripts/build-points-map.ts --country="North America" --continent="North America" --capitals --min-population=0 --out=data/maps/north-america-capitals --name="North America — Capitals"
+npx tsx data/scripts/build-points-map.ts --country="South America" --continent="South America" --capitals --min-population=0 --out=data/maps/south-america-capitals --name="South America — Capitals"
+npx tsx data/scripts/build-points-map.ts --country=Oceania --continent=Oceania --capitals --min-population=0 --lon-min=110 --out=data/maps/oceania-capitals --name="Oceania — Capitals"
+
+npx tsx data/scripts/build-points-map.ts --country=Europe --countries="France,Belgium,Netherlands,Luxembourg,United Kingdom,Ireland" --lat-min=35 --lon-min=-25 --min-population=100000 --max-per-country=20 --out=data/maps/europe-cities-west --name="Europe — Cities — West"
+npx tsx data/scripts/build-points-map.ts --country=Europe --countries="Germany,Poland,Czechia,Austria,Switzerland,Hungary,Slovakia,Slovenia" --min-population=100000 --max-per-country=16 --out=data/maps/europe-cities-central --name="Europe — Cities — Central"
+npx tsx data/scripts/build-points-map.ts --country=Europe --countries="Ukraine,Belarus,Moldova,Romania,Bulgaria,Lithuania,Latvia,Estonia,Russia" --lon-max=60 --min-population=100000 --max-per-country=12 --out=data/maps/europe-cities-east --name="Europe — Cities — East"
+npx tsx data/scripts/build-points-map.ts --country=Europe --countries="Sweden,Norway,Denmark,Finland,Iceland" --lat-max=72 --lon-min=-25 --min-population=50000 --exclude=Bærum --out=data/maps/europe-cities-north --name="Europe — Cities — North"
+npx tsx data/scripts/build-points-map.ts --country=Europe --countries="Spain,Portugal,Italy,Greece,Albania,North Macedonia,Serbia,Montenegro,Bosnia and Herzegovina,Croatia,Kosovo,Malta" --lat-min=36 --lon-min=-10 --min-population=100000 --max-per-country=14 --exclude=Piraeus --out=data/maps/europe-cities-south --name="Europe — Cities — South"
+
+npx tsx data/scripts/build-facts.ts --map=<each of the above>
+```
+
+| Map | Targets | Map | Targets |
+|---|---|---|---|
+| europe-countries | 39 | europe-capitals | 44 |
+| africa-countries | 52 | africa-capitals | 54 |
+| asia-countries | 47 | asia-capitals | 47 |
+| north-america-countries | 16 | north-america-capitals | 23 |
+| south-america-countries | 12 | south-america-capitals | 13 |
+| oceania-countries | 6 | oceania-capitals | 11 |
+| europe-cities-west | 62 | europe-cities-central | 68 |
+| europe-cities-east | 67 | europe-cities-north | 43 |
+| europe-cities-south | 62 | | |
+
+Audited by hand: every name on all seventeen maps was read, and pairs of towns
+closer than 25 km were listed. Piraeus (5 km from Athens) and Bærum (a suburb
+of Oslo, not a town) were dropped; Brazzaville and Kinshasa, 9 km apart across
+the Congo, both stay as capitals. Fixups added to `build-points-map.ts`:
+Astana, Ngerulmud, Andorra la Vella, Plzeň, Panevėžys, Peja.
+
 ## The Terrain layer: `terrain.pmtiles` (FT-33, 2026-09-19)
 
 Every map has a **second** tileset beside its `tiles.pmtiles`, holding the

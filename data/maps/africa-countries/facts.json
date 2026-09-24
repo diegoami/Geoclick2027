@@ -1,0 +1,1082 @@
+{
+	"tunisia": {
+		"kind": "region",
+		"borders": [
+			"Algeria",
+			"Libya"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tunis",
+			"nameDe": "Tunis",
+			"nameIt": "Tunisi",
+			"population": 2412500
+		},
+		"peak": {
+			"name": "Jebel Chambi",
+			"elevation": 1544
+		},
+		"position": "north"
+	},
+	"morocco": {
+		"kind": "region",
+		"borders": [
+			"Algeria",
+			"Mauritania",
+			"Western Sahara"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Casablanca",
+			"nameDe": "Casablanca",
+			"nameIt": "Casablanca",
+			"population": 3181000
+		},
+		"peak": {
+			"name": "Jebel Toubkal",
+			"elevation": 4165
+		},
+		"position": "north-west"
+	},
+	"algeria": {
+		"kind": "region",
+		"borders": [
+			"Libya",
+			"Mali",
+			"Mauritania",
+			"Morocco",
+			"Niger",
+			"Tunisia",
+			"Western Sahara"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Algiers",
+			"nameDe": "Algier",
+			"nameIt": "Algeri",
+			"population": 3354000
+		},
+		"peak": {
+			"name": "Tahat",
+			"elevation": 2908
+		},
+		"position": "north"
+	},
+	"egypt": {
+		"kind": "region",
+		"borders": [
+			"Libya",
+			"Sudan"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Cairo",
+			"nameDe": "Kairo",
+			"nameIt": "Il Cairo",
+			"population": 11893000
+		},
+		"peak": {
+			"name": "Gebel Katherna",
+			"elevation": 2629
+		},
+		"position": "north-east"
+	},
+	"libya": {
+		"kind": "region",
+		"borders": [
+			"Algeria",
+			"Chad",
+			"Egypt",
+			"Niger",
+			"Sudan",
+			"Tunisia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tripoli",
+			"nameDe": "Tripolis",
+			"nameIt": "Tripoli",
+			"population": 2189000
+		},
+		"peak": {
+			"name": "Pic Bette",
+			"elevation": 2266
+		},
+		"position": "north"
+	},
+	"western-sahara": {
+		"kind": "region",
+		"borders": [
+			"Algeria",
+			"Mauritania",
+			"Morocco"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Bir Lehlou",
+			"nameDe": "Bir Lehlu",
+			"nameIt": "Bir Lehlu",
+			"population": 500
+		},
+		"position": "north-west"
+	},
+	"mauritania": {
+		"kind": "region",
+		"borders": [
+			"Algeria",
+			"Mali",
+			"Morocco",
+			"Senegal",
+			"Western Sahara"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Nouakchott",
+			"nameDe": "Nouakchott",
+			"nameIt": "Nouakchott",
+			"population": 742144
+		},
+		"peak": {
+			"name": "Kdeyyat ej Joul",
+			"elevation": 915
+		},
+		"position": "north-west"
+	},
+	"niger": {
+		"kind": "region",
+		"borders": [
+			"Algeria",
+			"Benin",
+			"Burkina Faso",
+			"Chad",
+			"Libya",
+			"Mali",
+			"Nigeria"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Niamey",
+			"nameDe": "Niamey",
+			"nameIt": "Niamey",
+			"population": 915000
+		},
+		"peak": {
+			"name": "Mont Bagzane",
+			"elevation": 2022
+		},
+		"position": "north"
+	},
+	"mali": {
+		"kind": "region",
+		"borders": [
+			"Algeria",
+			"Burkina Faso",
+			"Côte d'Ivoire",
+			"Guinea",
+			"Mauritania",
+			"Niger",
+			"Senegal"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bamako",
+			"nameDe": "Bamako",
+			"nameIt": "Bamako",
+			"population": 1494000
+		},
+		"peak": {
+			"name": "Hombori Tondo",
+			"elevation": 1155
+		},
+		"position": "north-west"
+	},
+	"cabo-verde": {
+		"kind": "region",
+		"coastal": true,
+		"largestCity": {
+			"name": "Praia",
+			"nameDe": "Praia",
+			"nameIt": "Praia",
+			"population": 113364
+		},
+		"peak": {
+			"name": "Pico de Cano",
+			"elevation": 2829
+		},
+		"position": "north-west"
+	},
+	"chad": {
+		"kind": "region",
+		"borders": [
+			"Cameroon",
+			"Central African Republic",
+			"Libya",
+			"Niger",
+			"Nigeria",
+			"Sudan"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "N'Djamena",
+			"nameDe": "N’Djamena",
+			"nameIt": "N’Djamena",
+			"population": 989000
+		},
+		"peak": {
+			"name": "Emi Koussi",
+			"elevation": 3415
+		},
+		"position": "north"
+	},
+	"sudan": {
+		"kind": "region",
+		"borders": [
+			"Central African Republic",
+			"Chad",
+			"Egypt",
+			"Eritrea",
+			"Ethiopia",
+			"Libya",
+			"South Sudan"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Khartoum",
+			"nameDe": "Khartum",
+			"nameIt": "Khartum",
+			"population": 4754000
+		},
+		"peak": {
+			"name": "Jabal Marrah",
+			"elevation": 3042
+		},
+		"position": "north-east"
+	},
+	"eritrea": {
+		"kind": "region",
+		"borders": [
+			"Djibouti",
+			"Ethiopia",
+			"Sudan"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Asmara",
+			"nameDe": "Asmara",
+			"nameIt": "Asmara",
+			"population": 620802
+		},
+		"peak": {
+			"name": "Soira",
+			"elevation": 3018
+		},
+		"position": "north-east"
+	},
+	"senegal": {
+		"kind": "region",
+		"borders": [
+			"Guinea",
+			"Guinea-Bissau",
+			"Mali",
+			"Mauritania",
+			"The Gambia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Dakar",
+			"nameDe": "Dakar",
+			"nameIt": "Dakar",
+			"population": 2604000
+		},
+		"position": "north-west"
+	},
+	"the-gambia": {
+		"kind": "region",
+		"borders": [
+			"Senegal"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Brikama",
+			"nameDe": "Brikama",
+			"nameIt": "Brikama",
+			"population": 195136
+		},
+		"position": "north-west"
+	},
+	"burkina-faso": {
+		"kind": "region",
+		"borders": [
+			"Benin",
+			"Côte d'Ivoire",
+			"Ghana",
+			"Mali",
+			"Niger",
+			"Togo"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ouagadougou",
+			"nameDe": "Ouagadougou",
+			"nameIt": "Ouagadougou",
+			"population": 1149000
+		},
+		"peak": {
+			"name": "Téna Kourou",
+			"elevation": 747
+		},
+		"position": "west"
+	},
+	"djibouti": {
+		"kind": "region",
+		"borders": [
+			"Eritrea",
+			"Ethiopia",
+			"Somaliland"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Djibouti",
+			"nameDe": "Dschibuti",
+			"nameIt": "Gibuti",
+			"population": 923000
+		},
+		"peak": {
+			"name": "Moussa Ali",
+			"elevation": 2021
+		},
+		"position": "east"
+	},
+	"guinea-bissau": {
+		"kind": "region",
+		"borders": [
+			"Guinea",
+			"Senegal"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Bissau",
+			"nameDe": "Bissau",
+			"nameIt": "Bissau",
+			"population": 403339
+		},
+		"position": "west"
+	},
+	"guinea": {
+		"kind": "region",
+		"borders": [
+			"Côte d'Ivoire",
+			"Guinea-Bissau",
+			"Liberia",
+			"Mali",
+			"Senegal",
+			"Sierra Leone"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Conakry",
+			"nameDe": "Conakry",
+			"nameIt": "Conakry",
+			"population": 1494000
+		},
+		"peak": {
+			"name": "Mount Richard-Molard",
+			"elevation": 1752
+		},
+		"position": "west"
+	},
+	"somaliland": {
+		"kind": "region",
+		"borders": [
+			"Djibouti",
+			"Ethiopia",
+			"Somalia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Hargeisa",
+			"nameDe": "Hargeysa",
+			"nameIt": "Hargheisa",
+			"population": 477876
+		},
+		"peak": {
+			"name": "Shimbiris",
+			"elevation": 2414
+		},
+		"position": "east"
+	},
+	"benin": {
+		"kind": "region",
+		"borders": [
+			"Burkina Faso",
+			"Niger",
+			"Nigeria",
+			"Togo"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Cotonou",
+			"nameDe": "Cotonou",
+			"nameIt": "Cotonou",
+			"population": 762000
+		},
+		"peak": {
+			"name": "Tanekas",
+			"elevation": 641
+		},
+		"position": "centre"
+	},
+	"ethiopia": {
+		"kind": "region",
+		"borders": [
+			"Djibouti",
+			"Eritrea",
+			"Kenya",
+			"Somalia",
+			"Somaliland",
+			"South Sudan",
+			"Sudan"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Addis Ababa",
+			"nameDe": "Addis Abeba",
+			"nameIt": "Addis Abeba",
+			"population": 3100000
+		},
+		"peak": {
+			"name": "Ras Dejen",
+			"elevation": 4533
+		},
+		"position": "east"
+	},
+	"nigeria": {
+		"kind": "region",
+		"borders": [
+			"Benin",
+			"Cameroon",
+			"Chad",
+			"Niger"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Lagos",
+			"nameDe": "Lagos",
+			"nameIt": "Lagos",
+			"population": 9466000
+		},
+		"peak": {
+			"name": "Chappal Wadi",
+			"elevation": 2419
+		},
+		"position": "centre"
+	},
+	"togo": {
+		"kind": "region",
+		"borders": [
+			"Benin",
+			"Burkina Faso",
+			"Ghana"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Lomé",
+			"nameDe": "Lomé",
+			"nameIt": "Lomé",
+			"population": 1452000
+		},
+		"peak": {
+			"name": "Mont Agou",
+			"elevation": 968
+		},
+		"position": "centre"
+	},
+	"sierra-leone": {
+		"kind": "region",
+		"borders": [
+			"Guinea",
+			"Liberia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Freetown",
+			"nameDe": "Freetown",
+			"nameIt": "Freetown",
+			"population": 827000
+		},
+		"peak": {
+			"name": "Loma Mansa",
+			"elevation": 1945
+		},
+		"position": "west"
+	},
+	"ghana": {
+		"kind": "region",
+		"borders": [
+			"Burkina Faso",
+			"Côte d'Ivoire",
+			"Togo"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Accra",
+			"nameDe": "Accra",
+			"nameIt": "Accra",
+			"population": 2121000
+		},
+		"peak": {
+			"name": "Mount Afadjoto",
+			"elevation": 885
+		},
+		"position": "west"
+	},
+	"south-sudan": {
+		"kind": "region",
+		"borders": [
+			"Central African Republic",
+			"Democratic Republic of the Congo",
+			"Ethiopia",
+			"Kenya",
+			"Sudan",
+			"Uganda"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Yei",
+			"nameDe": "Yei",
+			"nameIt": "Yei",
+			"population": 185000
+		},
+		"peak": {
+			"name": "Kinyeti",
+			"elevation": 3187
+		},
+		"position": "east"
+	},
+	"cote-d-ivoire": {
+		"kind": "region",
+		"borders": [
+			"Burkina Faso",
+			"Ghana",
+			"Guinea",
+			"Liberia",
+			"Mali"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Abidjan",
+			"nameDe": "Abidjan",
+			"nameIt": "Abidjan",
+			"population": 3802000
+		},
+		"position": "west"
+	},
+	"cameroon": {
+		"kind": "region",
+		"borders": [
+			"Central African Republic",
+			"Chad",
+			"Equatorial Guinea",
+			"Gabon",
+			"Nigeria",
+			"Republic of the Congo"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Douala",
+			"nameDe": "Duala",
+			"nameIt": "Douala",
+			"population": 1906000
+		},
+		"peak": {
+			"name": "Mont Cameroun",
+			"elevation": 4040
+		},
+		"position": "centre"
+	},
+	"central-african-republic": {
+		"kind": "region",
+		"borders": [
+			"Cameroon",
+			"Chad",
+			"Democratic Republic of the Congo",
+			"Republic of the Congo",
+			"South Sudan",
+			"Sudan"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bangui",
+			"nameDe": "Bangui",
+			"nameIt": "Bangui",
+			"population": 831925
+		},
+		"peak": {
+			"name": "Mont Ngaoui",
+			"elevation": 1410
+		},
+		"position": "centre"
+	},
+	"liberia": {
+		"kind": "region",
+		"borders": [
+			"Côte d'Ivoire",
+			"Guinea",
+			"Sierra Leone"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Monrovia",
+			"nameDe": "Monrovia",
+			"nameIt": "Monrovia",
+			"population": 1041000
+		},
+		"peak": {
+			"name": "Mount Wuteve",
+			"elevation": 1380
+		},
+		"position": "west"
+	},
+	"somalia": {
+		"kind": "region",
+		"borders": [
+			"Ethiopia",
+			"Kenya",
+			"Somaliland"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Mogadishu",
+			"nameDe": "Mogadischu",
+			"nameIt": "Mogadiscio",
+			"population": 1100000
+		},
+		"position": "east"
+	},
+	"equatorial-guinea": {
+		"kind": "region",
+		"borders": [
+			"Cameroon",
+			"Gabon"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Bata",
+			"nameDe": "Bata",
+			"nameIt": "Bata",
+			"population": 173046
+		},
+		"peak": {
+			"name": "Pico de Santa Isabel",
+			"elevation": 3008
+		},
+		"position": "centre"
+	},
+	"uganda": {
+		"kind": "region",
+		"borders": [
+			"Democratic Republic of the Congo",
+			"Kenya",
+			"Rwanda",
+			"South Sudan",
+			"Tanzania"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kampala",
+			"nameDe": "Kampala",
+			"nameIt": "Kampala",
+			"population": 1420000
+		},
+		"peak": {
+			"name": "Mount Stanley",
+			"elevation": 4979
+		},
+		"position": "east"
+	},
+	"kenya": {
+		"kind": "region",
+		"borders": [
+			"Ethiopia",
+			"Somalia",
+			"South Sudan",
+			"Tanzania",
+			"Uganda"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Nairobi",
+			"nameDe": "Nairobi",
+			"nameIt": "Nairobi",
+			"population": 3010000
+		},
+		"peak": {
+			"name": "Mount Kenya",
+			"elevation": 5199
+		},
+		"position": "east"
+	},
+	"republic-of-the-congo": {
+		"kind": "region",
+		"borders": [
+			"Angola",
+			"Cameroon",
+			"Central African Republic",
+			"Democratic Republic of the Congo",
+			"Gabon"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Brazzaville",
+			"nameDe": "Brazzaville",
+			"nameIt": "Brazzaville",
+			"population": 1355000
+		},
+		"peak": {
+			"name": "Mont Nabeba",
+			"elevation": 1020
+		},
+		"position": "centre"
+	},
+	"gabon": {
+		"kind": "region",
+		"borders": [
+			"Cameroon",
+			"Equatorial Guinea",
+			"Republic of the Congo"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Libreville",
+			"nameDe": "Libreville",
+			"nameIt": "Libreville",
+			"population": 578156
+		},
+		"peak": {
+			"name": "Mont Bengoué",
+			"elevation": 1070
+		},
+		"position": "centre"
+	},
+	"rwanda": {
+		"kind": "region",
+		"borders": [
+			"Burundi",
+			"Democratic Republic of the Congo",
+			"Tanzania",
+			"Uganda"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kigali",
+			"nameDe": "Kigali",
+			"nameIt": "Kigali",
+			"population": 860000
+		},
+		"peak": {
+			"name": "Volcan Karisimbi",
+			"elevation": 4519
+		},
+		"position": "east"
+	},
+	"burundi": {
+		"kind": "region",
+		"borders": [
+			"Democratic Republic of the Congo",
+			"Rwanda",
+			"Tanzania"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bujumbura",
+			"nameDe": "Bujumbura",
+			"nameIt": "Bujumbura",
+			"population": 331700
+		},
+		"peak": {
+			"name": "Mont Heha",
+			"elevation": 2670
+		},
+		"position": "east"
+	},
+	"democratic-republic-of-the-congo": {
+		"kind": "region",
+		"borders": [
+			"Angola",
+			"Burundi",
+			"Central African Republic",
+			"Republic of the Congo",
+			"Rwanda",
+			"South Sudan",
+			"Tanzania",
+			"Uganda",
+			"Zambia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Kinshasa",
+			"nameDe": "Kinshasa",
+			"nameIt": "Kinshasa",
+			"population": 7843000
+		},
+		"peak": {
+			"name": "Mont Mohi",
+			"elevation": 3480
+		},
+		"position": "centre"
+	},
+	"tanzania": {
+		"kind": "region",
+		"borders": [
+			"Burundi",
+			"Democratic Republic of the Congo",
+			"Kenya",
+			"Malawi",
+			"Mozambique",
+			"Rwanda",
+			"Uganda",
+			"Zambia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Dar es Salaam",
+			"nameDe": "Daressalam",
+			"nameIt": "Dar es Salaam",
+			"population": 2930000
+		},
+		"peak": {
+			"name": "Mount Kilimanjaro",
+			"elevation": 5895
+		},
+		"position": "east"
+	},
+	"angola": {
+		"kind": "region",
+		"borders": [
+			"Democratic Republic of the Congo",
+			"Namibia",
+			"Republic of the Congo",
+			"Zambia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Luanda",
+			"nameDe": "Luanda",
+			"nameIt": "Luanda",
+			"population": 5172900
+		},
+		"peak": {
+			"name": "Moro de Môco",
+			"elevation": 2620
+		},
+		"position": "south"
+	},
+	"zambia": {
+		"kind": "region",
+		"borders": [
+			"Angola",
+			"Botswana",
+			"Democratic Republic of the Congo",
+			"Malawi",
+			"Mozambique",
+			"Namibia",
+			"Tanzania",
+			"Zimbabwe"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Lusaka",
+			"nameDe": "Lusaka",
+			"nameIt": "Lusaka",
+			"population": 1328000
+		},
+		"peak": {
+			"name": "Sunzu",
+			"elevation": 2067
+		},
+		"position": "south-east"
+	},
+	"malawi": {
+		"kind": "region",
+		"borders": [
+			"Mozambique",
+			"Tanzania",
+			"Zambia"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Lilongwe",
+			"nameDe": "Lilongwe",
+			"nameIt": "Lilongwe",
+			"population": 646750
+		},
+		"peak": {
+			"name": "Sapitwa Peak",
+			"elevation": 3003
+		},
+		"position": "south-east"
+	},
+	"mozambique": {
+		"kind": "region",
+		"borders": [
+			"Eswatini",
+			"Malawi",
+			"South Africa",
+			"Tanzania",
+			"Zambia",
+			"Zimbabwe"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Maputo",
+			"nameDe": "Maputo",
+			"nameIt": "Maputo",
+			"population": 1446000
+		},
+		"peak": {
+			"name": "Monte Binga",
+			"elevation": 2436
+		},
+		"position": "south-east"
+	},
+	"madagascar": {
+		"kind": "region",
+		"coastal": true,
+		"largestCity": {
+			"name": "Antananarivo",
+			"nameDe": "Antananarivo",
+			"nameIt": "Antananarivo",
+			"population": 1697000
+		},
+		"peak": {
+			"name": "Maromokotro",
+			"elevation": 2876
+		},
+		"position": "south-east"
+	},
+	"zimbabwe": {
+		"kind": "region",
+		"borders": [
+			"Botswana",
+			"Mozambique",
+			"Namibia",
+			"South Africa",
+			"Zambia"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Harare",
+			"nameDe": "Harare",
+			"nameIt": "Harare",
+			"population": 1572000
+		},
+		"peak": {
+			"name": "Inyangani",
+			"elevation": 2592
+		},
+		"position": "south-east"
+	},
+	"botswana": {
+		"kind": "region",
+		"borders": [
+			"Namibia",
+			"South Africa",
+			"Zambia",
+			"Zimbabwe"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Gaborone",
+			"nameDe": "Gaborone",
+			"nameIt": "Gaborone",
+			"population": 208411
+		},
+		"peak": {
+			"name": "Monalanong Hill",
+			"elevation": 1494
+		},
+		"position": "south"
+	},
+	"namibia": {
+		"kind": "region",
+		"borders": [
+			"Angola",
+			"Botswana",
+			"South Africa",
+			"Zambia",
+			"Zimbabwe"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Windhoek",
+			"nameDe": "Windhoek",
+			"nameIt": "Windhoek",
+			"population": 268132
+		},
+		"peak": {
+			"name": "Brandberg",
+			"elevation": 2579
+		},
+		"position": "south"
+	},
+	"eswatini": {
+		"kind": "region",
+		"borders": [
+			"Mozambique",
+			"South Africa"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Manzini",
+			"nameDe": "Manzini",
+			"nameIt": "Manzini",
+			"population": 110537
+		},
+		"peak": {
+			"name": "Emlembe",
+			"elevation": 1862
+		},
+		"position": "south-east"
+	},
+	"south-africa": {
+		"kind": "region",
+		"borders": [
+			"Botswana",
+			"Eswatini",
+			"Lesotho",
+			"Mozambique",
+			"Namibia",
+			"Zimbabwe"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Johannesburg",
+			"nameDe": "Johannesburg",
+			"nameIt": "Johannesburg",
+			"population": 3435000
+		},
+		"peak": {
+			"name": "Kompasberg",
+			"elevation": 2504
+		},
+		"position": "south"
+	},
+	"lesotho": {
+		"kind": "region",
+		"borders": [
+			"South Africa"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Maseru",
+			"nameDe": "Maseru",
+			"nameIt": "Maseru",
+			"population": 361324
+		},
+		"peak": {
+			"name": "Thabana Ntlenyana",
+			"elevation": 3482
+		},
+		"position": "south-east"
+	}
+}

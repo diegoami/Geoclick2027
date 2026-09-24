@@ -1,0 +1,514 @@
+{
+	"tunis": {
+		"kind": "city",
+		"population": 2412500,
+		"populationRank": 10,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "north"
+	},
+	"algiers": {
+		"kind": "city",
+		"population": 3354000,
+		"populationRank": 5,
+		"population1950": 516000,
+		"region": "Alger",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "north"
+	},
+	"rabat": {
+		"kind": "city",
+		"population": 1705000,
+		"populationRank": 13,
+		"population1950": 145000,
+		"region": "Rabat - Salé - Zemmour - Zaer",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"tripoli": {
+		"kind": "city",
+		"population": 2189000,
+		"populationRank": 11,
+		"population1950": 106000,
+		"region": "Tajura' wa an Nawahi al Arba",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "north"
+	},
+	"cairo": {
+		"kind": "city",
+		"population": 11893000,
+		"populationRank": 1,
+		"population1950": 2494000,
+		"region": "Al Qahirah",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Al-Qahira, \"the victorious\", named in 969 for the planet Mars, which was rising when the Fatimids laid the foundations.",
+				"The largest city in Africa and the Arab world, and its Islamic quarter has more medieval monuments than any other city on earth.",
+				"Egyptians call it Masr — the same word as the country itself, because for most of history it effectively was."
+			],
+			"it": [
+				"Al-Qahira, \"la vittoriosa\", chiamata così nel 969 dal pianeta Marte, che stava sorgendo quando i Fatimidi ne posero le fondamenta.",
+				"La più grande città dell’Africa e del mondo arabo, e il suo quartiere islamico ha più monumenti medievali di qualunque altra città al mondo.",
+				"Gli egiziani la chiamano Masr, la stessa parola che indica il paese, perché per gran parte della storia di fatto lo era."
+			]
+		}
+	},
+	"nouakchott": {
+		"kind": "city",
+		"population": 742144,
+		"populationRank": 35,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"khartoum": {
+		"kind": "city",
+		"population": 4754000,
+		"populationRank": 4,
+		"population1950": 183000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"asmara": {
+		"kind": "city",
+		"population": 620802,
+		"populationRank": 37,
+		"region": "Anseba",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"praia": {
+		"kind": "city",
+		"population": 113364,
+		"populationRank": 50,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"dakar": {
+		"kind": "city",
+		"population": 2604000,
+		"populationRank": 9,
+		"population1950": 211000,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"niamey": {
+		"kind": "city",
+		"population": 915000,
+		"populationRank": 31,
+		"population1950": 24000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north"
+	},
+	"banjul": {
+		"kind": "city",
+		"population": 43094,
+		"populationRank": 53,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"bamako": {
+		"kind": "city",
+		"population": 1494000,
+		"populationRank": 18,
+		"population1950": 89000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "west"
+	},
+	"ouagadougou": {
+		"kind": "city",
+		"population": 1149000,
+		"populationRank": 26,
+		"population1950": 33000,
+		"region": "Kadiogo",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "west"
+	},
+	"n-djamena": {
+		"kind": "city",
+		"population": 989000,
+		"populationRank": 29,
+		"population1950": 22000,
+		"region": "Hadjer-Lamis",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "centre"
+	},
+	"bissau": {
+		"kind": "city",
+		"population": 403339,
+		"populationRank": 41,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "west"
+	},
+	"djibouti": {
+		"kind": "city",
+		"population": 923000,
+		"populationRank": 30,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "east"
+	},
+	"hargeisa": {
+		"kind": "city",
+		"population": 477876,
+		"populationRank": 39,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "east"
+	},
+	"conakry": {
+		"kind": "city",
+		"population": 1494000,
+		"populationRank": 19,
+		"population1950": 31000,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "west"
+	},
+	"abuja": {
+		"kind": "city",
+		"population": 1576000,
+		"populationRank": 16,
+		"population1950": 18000,
+		"region": "Federal Capital Territory",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named for an older town, now called Suleja, whose emir was called Abuja.",
+				"Built from nothing after 1976 as a neutral capital, and the government moved in 1991.",
+				"Aso Rock, a 400 m monolith, stands behind the presidential complex and gives it its name."
+			],
+			"it": [
+				"Prende il nome da una città più antica, oggi chiamata Suleja, il cui emiro si chiamava Abuja.",
+				"Costruita dal nulla dopo il 1976 come capitale neutrale; il governo vi si trasferì nel 1991.",
+				"L’Aso Rock, un monolite di 400 m, si erge alle spalle del complesso presidenziale e gli dà il nome."
+			]
+		}
+	},
+	"addis-ababa": {
+		"kind": "city",
+		"population": 3100000,
+		"populationRank": 7,
+		"population1950": 392000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "east"
+	},
+	"freetown": {
+		"kind": "city",
+		"population": 827000,
+		"populationRank": 34,
+		"population1950": 92000,
+		"region": "Western",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "west"
+	},
+	"yamoussoukro": {
+		"kind": "city",
+		"population": 206499,
+		"populationRank": 47,
+		"region": "Lacs",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "west"
+	},
+	"porto-novo": {
+		"kind": "city",
+		"population": 300000,
+		"populationRank": 43,
+		"region": "Ouémé",
+		"coastal": true,
+		"position": "centre"
+	},
+	"monrovia": {
+		"kind": "city",
+		"population": 1041000,
+		"populationRank": 28,
+		"population1950": 15000,
+		"region": "Montserrado",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "west"
+	},
+	"lome": {
+		"kind": "city",
+		"population": 1452000,
+		"populationRank": 20,
+		"population1950": 33000,
+		"region": "Maritime",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "centre"
+	},
+	"accra": {
+		"kind": "city",
+		"population": 2121000,
+		"populationRank": 12,
+		"population1950": 177000,
+		"region": "Greater Accra",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "west"
+	},
+	"bangui": {
+		"kind": "city",
+		"population": 831925,
+		"populationRank": 33,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "centre"
+	},
+	"yaounde": {
+		"kind": "city",
+		"population": 1611000,
+		"populationRank": 15,
+		"population1950": 32000,
+		"region": "Centre",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "centre"
+	},
+	"malabo": {
+		"kind": "city",
+		"population": 155963,
+		"populationRank": 48,
+		"region": "Bioko Norte",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "centre"
+	},
+	"mogadishu": {
+		"kind": "city",
+		"population": 1100000,
+		"populationRank": 27,
+		"population1950": 69000,
+		"region": "Banaadir",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "east"
+	},
+	"libreville": {
+		"kind": "city",
+		"population": 578156,
+		"populationRank": 38,
+		"region": "Estuaire",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "centre"
+	},
+	"sao-tome": {
+		"kind": "city",
+		"population": 88219,
+		"populationRank": 52,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "centre"
+	},
+	"kampala": {
+		"kind": "city",
+		"population": 1420000,
+		"populationRank": 22,
+		"population1950": 95000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "east"
+	},
+	"nairobi": {
+		"kind": "city",
+		"population": 3010000,
+		"populationRank": 8,
+		"population1950": 137000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "east"
+	},
+	"kigali": {
+		"kind": "city",
+		"population": 860000,
+		"populationRank": 32,
+		"population1950": 18000,
+		"region": "Kigali City",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "east"
+	},
+	"gitega": {
+		"kind": "city",
+		"population": 23167,
+		"populationRank": 54,
+		"region": "Muramvya",
+		"coastal": false,
+		"position": "east"
+	},
+	"brazzaville": {
+		"kind": "city",
+		"population": 1355000,
+		"populationRank": 23,
+		"population1950": 83000,
+		"region": "Pool",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "centre"
+	},
+	"kinshasa": {
+		"kind": "city",
+		"population": 7843000,
+		"populationRank": 2,
+		"population1950": 202000,
+		"region": "Kinshasa City",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "centre"
+	},
+	"dodoma": {
+		"kind": "city",
+		"population": 218269,
+		"populationRank": 45,
+		"coastal": false,
+		"position": "east"
+	},
+	"luanda": {
+		"kind": "city",
+		"population": 5172900,
+		"populationRank": 3,
+		"population1950": 138000,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "centre"
+	},
+	"moroni": {
+		"kind": "city",
+		"population": 128698,
+		"populationRank": 49,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"lilongwe": {
+		"kind": "city",
+		"population": 646750,
+		"populationRank": 36,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"lusaka": {
+		"kind": "city",
+		"population": 1328000,
+		"populationRank": 25,
+		"population1950": 31000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"harare": {
+		"kind": "city",
+		"population": 1572000,
+		"populationRank": 17,
+		"population1950": 143000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"antananarivo": {
+		"kind": "city",
+		"population": 1697000,
+		"populationRank": 14,
+		"population1950": 177000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"windhoek": {
+		"kind": "city",
+		"population": 268132,
+		"populationRank": 44,
+		"region": "Khomas",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south"
+	},
+	"gaborone": {
+		"kind": "city",
+		"population": 208411,
+		"populationRank": 46,
+		"region": "South-East",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"pretoria": {
+		"kind": "city",
+		"population": 1338000,
+		"populationRank": 24,
+		"population1950": 275000,
+		"region": "Gauteng",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"maputo": {
+		"kind": "city",
+		"population": 1446000,
+		"populationRank": 21,
+		"population1950": 92000,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"mbabane": {
+		"kind": "city",
+		"population": 90138,
+		"populationRank": 51,
+		"region": "Hhohho",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"bloemfontein": {
+		"kind": "city",
+		"population": 463064,
+		"populationRank": 40,
+		"region": "Orange Free State",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"maseru": {
+		"kind": "city",
+		"population": 361324,
+		"populationRank": 42,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"cape-town": {
+		"kind": "city",
+		"population": 3215000,
+		"populationRank": 6,
+		"population1950": 618000,
+		"region": "Western Cape",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south"
+	}
+}

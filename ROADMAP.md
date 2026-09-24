@@ -148,7 +148,18 @@ Check items off as they land; update "Status" as iterations complete.
   Known map an explicitly tapped name kept its earned colour instead of
   **Chosen**. Now an explicit tap is Chosen regardless of the streak, and the
   choice is **session-only** (resets on reopen; the FT-39 localStorage key
-  is removed on load). Ships in v0.10.1.
+  is removed on load). Ships in v0.11.0 (the owner folded v0.10.1 into it).
+- **Building 2026-09-24** (proposal
+  [#39](https://github.com/diegoami/Geoclick2027/issues/39), agreed the same
+  day): maps of several countries. **Batch A+B** (branch
+  `maps-continents`): the builders learn `--level=country` and several
+  countries at once, and 17 maps land - each continent's Countries and
+  Capitals, and the cities of five parts of Europe (80 maps in all). Next:
+  **C**, Germany's towns in five parts from Wikidata (CC0); **D**, admin-2 -
+  France's departments, Spain's provinces, Britain's counties, new European
+  countries from Natural Earth, and Germany's Kreise (BKG, dl-de/by-2-0),
+  the Netherlands' municipalities (CC0) and Poland's powiats (ODbL - to go
+  back to the owner) from geoBoundaries.
 - **Raised and decided 2026-09-20, unscoped**: six UX problems from one
   round of tablet play (`germany-towns-100k`) — the level-0 tray offering
   every name at once, slips losing their drag to the tablet's own

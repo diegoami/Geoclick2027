@@ -1,0 +1,160 @@
+{
+	"caracas": {
+		"kind": "city",
+		"population": 2985000,
+		"populationRank": 6,
+		"population1950": 694000,
+		"region": "Distrito Capital",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "north"
+	},
+	"georgetown": {
+		"kind": "city",
+		"population": 264350,
+		"populationRank": 11,
+		"region": "East Berbice-Corentyne",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "north"
+	},
+	"paramaribo": {
+		"kind": "city",
+		"population": 254169,
+		"populationRank": 12,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"bogota": {
+		"kind": "city",
+		"population": 7772000,
+		"populationRank": 3,
+		"population1950": 630000,
+		"region": "Bogota",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"From Bacatá, the Muisca capital — \"enclosure outside the farmland\"; the Spanish added Santa Fe and the two names competed for centuries.",
+				"At 2,640 m it is one of the highest capitals in the world, and its Gold Museum holds 55,000 pieces of pre-Hispanic goldwork.",
+				"Its Ciclovía closes 120 km of streets to cars every Sunday, a practice now copied in cities worldwide."
+			],
+			"it": [
+				"Da Bacatá, la capitale muisca, \"recinto fuori dai campi coltivati\"; gli spagnoli aggiunsero Santa Fe e i due nomi si fecero concorrenza per secoli.",
+				"A 2.640 m è una delle capitali più alte del mondo, e il suo Museo dell’Oro custodisce 55.000 pezzi di oreficeria preispanica.",
+				"La sua Ciclovía chiude alle auto 120 km di strade ogni domenica, un’usanza oggi copiata da città di tutto il mondo."
+			]
+		}
+	},
+	"quito": {
+		"kind": "city",
+		"population": 1701000,
+		"populationRank": 8,
+		"population1950": 206000,
+		"region": "Pichincha",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"lima": {
+		"kind": "city",
+		"population": 8012000,
+		"populationRank": 2,
+		"population1950": 1066000,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "west"
+	},
+	"brasilia": {
+		"kind": "city",
+		"population": 3716996,
+		"populationRank": 5,
+		"population1950": 36000,
+		"region": "Distrito Federal",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"The feminine Latin form of Brazil — a name proposed as early as 1822 for a capital that took 138 years to build.",
+				"Built in 41 months and inaugurated in 1960, designed by Lúcio Costa and Oscar Niemeyer.",
+				"It is the only city built in the twentieth century to be a UNESCO World Heritage site."
+			],
+			"it": [
+				"La forma latina femminile di Brasile: un nome proposto già nel 1822 per una capitale che avrebbe impiegato 138 anni a essere costruita.",
+				"Costruita in 41 mesi e inaugurata nel 1960, su progetto di Lúcio Costa e Oscar Niemeyer.",
+				"È l’unica città costruita nel Novecento a essere patrimonio mondiale dell’UNESCO."
+			]
+		}
+	},
+	"la-paz": {
+		"kind": "city",
+		"population": 1590000,
+		"populationRank": 9,
+		"population1950": 319000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "centre"
+	},
+	"sucre": {
+		"kind": "city",
+		"population": 224838,
+		"populationRank": 13,
+		"region": "Chuquisaca",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "centre"
+	},
+	"asuncion": {
+		"kind": "city",
+		"population": 1870000,
+		"populationRank": 7,
+		"population1950": 258000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"santiago": {
+		"kind": "city",
+		"population": 5720000,
+		"populationRank": 4,
+		"population1950": 1322000,
+		"region": "Región Metropolitana de Santiago",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"buenos-aires": {
+		"kind": "city",
+		"population": 12795000,
+		"populationRank": 1,
+		"population1950": 5098000,
+		"region": "Ciudad de Buenos Aires",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"The province around the capital, sharing its name but administered separately — the city is a district of its own.",
+				"The pampas here are some of the most fertile grassland on earth, and the beef and grain from them made Argentina briefly one of the world's richest countries.",
+				"The gaucho tradition comes from this plain, and Martín Fierro, the national poem, is about one."
+			],
+			"it": [
+				"La provincia intorno alla capitale, che ne condivide il nome ma è amministrata a parte: la città è un distretto a sé.",
+				"La pampa qui è tra le praterie più fertili della terra, e la carne e i cereali che ne venivano fecero per un breve periodo dell’Argentina uno dei paesi più ricchi del mondo.",
+				"La tradizione dei gauchos nasce da questa pianura, e il Martín Fierro, il poema nazionale, racconta di uno di loro."
+			]
+		}
+	},
+	"montevideo": {
+		"kind": "city",
+		"population": 1513000,
+		"populationRank": 10,
+		"population1950": 1212000,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south-east"
+	}
+}

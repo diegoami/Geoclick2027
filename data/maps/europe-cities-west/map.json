@@ -1,0 +1,1251 @@
+{
+	"id": "europe-cities-west",
+	"name": "Europe — Cities — West",
+	"country": "Europe",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "edinburgh",
+			"name": "Edinburgh",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "United Kingdom",
+			"centroid": [
+				-3.2190906,
+				55.9483279
+			],
+			"bbox": [
+				-3.2190906,
+				55.9483279,
+				-3.2190906,
+				55.9483279
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "glasgow",
+			"name": "Glasgow",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "United Kingdom",
+			"centroid": [
+				-4.239100528802634,
+				55.86226975799262
+			],
+			"bbox": [
+				-4.239100528802634,
+				55.86226975799262,
+				-4.239100528802634,
+				55.86226975799262
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "newcastle-upon-tyne",
+			"name": "Newcastle upon Tyne",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "United Kingdom",
+			"centroid": [
+				-1.61162548933458,
+				54.98974205316957
+			],
+			"bbox": [
+				-1.61162548933458,
+				54.98974205316957,
+				-1.61162548933458,
+				54.98974205316957
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "sunderland",
+			"name": "Sunderland",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "United Kingdom",
+			"centroid": [
+				-1.379881564518565,
+				54.903407084625925
+			],
+			"bbox": [
+				-1.379881564518565,
+				54.903407084625925,
+				-1.379881564518565,
+				54.903407084625925
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "belfast",
+			"name": "Belfast",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "United Kingdom",
+			"centroid": [
+				-5.928177644913072,
+				54.594245156841886
+			],
+			"bbox": [
+				-5.928177644913072,
+				54.594245156841886,
+				-5.928177644913072,
+				54.594245156841886
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "bradford",
+			"name": "Bradford",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "United Kingdom",
+			"centroid": [
+				-1.754464650200906,
+				53.79167546080204
+			],
+			"bbox": [
+				-1.754464650200906,
+				53.79167546080204,
+				-1.754464650200906,
+				53.79167546080204
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "leeds",
+			"name": "Leeds",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "United Kingdom",
+			"centroid": [
+				-1.551347711412841,
+				53.790016637752316
+			],
+			"bbox": [
+				-1.551347711412841,
+				53.790016637752316,
+				-1.551347711412841,
+				53.790016637752316
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "manchester",
+			"name": "Manchester",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "United Kingdom",
+			"centroid": [
+				-2.248684667159885,
+				53.47531992472453
+			],
+			"bbox": [
+				-2.248684667159885,
+				53.47531992472453,
+				-2.248684667159885,
+				53.47531992472453
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "liverpool",
+			"name": "Liverpool",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "United Kingdom",
+			"centroid": [
+				-2.961934009816594,
+				53.405068298036525
+			],
+			"bbox": [
+				-2.961934009816594,
+				53.405068298036525,
+				-2.961934009816594,
+				53.405068298036525
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "sheffield",
+			"name": "Sheffield",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "United Kingdom",
+			"centroid": [
+				-1.4999966,
+				53.3666767
+			],
+			"bbox": [
+				-1.4999966,
+				53.3666767,
+				-1.4999966,
+				53.3666767
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "dublin",
+			"name": "Dublin",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Ireland",
+			"centroid": [
+				-6.256979517281132,
+				53.34673124898314
+			],
+			"bbox": [
+				-6.256979517281132,
+				53.34673124898314,
+				-6.256979517281132,
+				53.34673124898314
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "leeuwarden",
+			"name": "Leeuwarden",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Netherlands",
+			"centroid": [
+				5.7833573,
+				53.2503788
+			],
+			"bbox": [
+				5.7833573,
+				53.2503788,
+				5.7833573,
+				53.2503788
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "groningen",
+			"name": "Groningen",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Netherlands",
+			"centroid": [
+				6.5800012,
+				53.2204065
+			],
+			"bbox": [
+				6.5800012,
+				53.2204065,
+				6.5800012,
+				53.2204065
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "nottingham",
+			"name": "Nottingham",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "United Kingdom",
+			"centroid": [
+				-1.165706334543335,
+				52.941084202004
+			],
+			"bbox": [
+				-1.165706334543335,
+				52.941084202004,
+				-1.165706334543335,
+				52.941084202004
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "leicester",
+			"name": "Leicester",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "United Kingdom",
+			"centroid": [
+				-1.1332489,
+				52.6299774
+			],
+			"bbox": [
+				-1.1332489,
+				52.6299774,
+				-1.1332489,
+				52.6299774
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "zwolle",
+			"name": "Zwolle",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Netherlands",
+			"centroid": [
+				6.0969965,
+				52.5240001
+			],
+			"bbox": [
+				6.0969965,
+				52.5240001,
+				6.0969965,
+				52.5240001
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "birmingham",
+			"name": "Birmingham",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "United Kingdom",
+			"centroid": [
+				-1.9219426,
+				52.4769198
+			],
+			"bbox": [
+				-1.9219426,
+				52.4769198,
+				-1.9219426,
+				52.4769198
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "haarlem",
+			"name": "Haarlem",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Netherlands",
+			"centroid": [
+				4.629991,
+				52.3804319
+			],
+			"bbox": [
+				4.629991,
+				52.3804319,
+				4.629991,
+				52.3804319
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "amsterdam",
+			"name": "Amsterdam",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Netherlands",
+			"centroid": [
+				4.9146943,
+				52.3519145
+			],
+			"bbox": [
+				4.9146943,
+				52.3519145,
+				4.9146943,
+				52.3519145
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "utrecht",
+			"name": "Utrecht",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Netherlands",
+			"centroid": [
+				5.1200386,
+				52.1003457
+			],
+			"bbox": [
+				5.1200386,
+				52.1003457,
+				5.1200386,
+				52.1003457
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "den-haag",
+			"name": "Den Haag",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Netherlands",
+			"centroid": [
+				4.2699613,
+				52.0800368
+			],
+			"bbox": [
+				4.2699613,
+				52.0800368,
+				4.2699613,
+				52.0800368
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "arnhem",
+			"name": "Arnhem",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Netherlands",
+			"centroid": [
+				5.9229996,
+				51.987996
+			],
+			"bbox": [
+				5.9229996,
+				51.987996,
+				5.9229996,
+				51.987996
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "rotterdam",
+			"name": "Rotterdam",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Netherlands",
+			"centroid": [
+				4.4780285,
+				51.921915
+			],
+			"bbox": [
+				4.4780285,
+				51.921915,
+				4.4780285,
+				51.921915
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "cork",
+			"name": "Cork",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Ireland",
+			"centroid": [
+				-8.465109738576434,
+				51.89283760162047
+			],
+			"bbox": [
+				-8.465109738576434,
+				51.89283760162047,
+				-8.465109738576434,
+				51.89283760162047
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "s-hertogenbosch",
+			"name": "'s-Hertogenbosch",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Netherlands",
+			"centroid": [
+				5.3166605,
+				51.6833371
+			],
+			"bbox": [
+				5.3166605,
+				51.6833371,
+				5.3166605,
+				51.6833371
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "southend-on-sea",
+			"name": "Southend-on-Sea",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "United Kingdom",
+			"centroid": [
+				0.7199971,
+				51.5500175
+			],
+			"bbox": [
+				0.7199971,
+				51.5500175,
+				0.7199971,
+				51.5500175
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "london",
+			"name": "London",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "United Kingdom",
+			"centroid": [
+				-0.1186677,
+				51.5019406
+			],
+			"bbox": [
+				-0.1186677,
+				51.5019406,
+				-0.1186677,
+				51.5019406
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "cardiff",
+			"name": "Cardiff",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "United Kingdom",
+			"centroid": [
+				-3.167598195527729,
+				51.48261904913091
+			],
+			"bbox": [
+				-3.167598195527729,
+				51.48261904913091,
+				-3.167598195527729,
+				51.48261904913091
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "bristol",
+			"name": "Bristol",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "United Kingdom",
+			"centroid": [
+				-2.5833155,
+				51.4499978
+			],
+			"bbox": [
+				-2.5833155,
+				51.4499978,
+				-2.5833155,
+				51.4499978
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "eindhoven",
+			"name": "Eindhoven",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Netherlands",
+			"centroid": [
+				5.5000154,
+				51.4299732
+			],
+			"bbox": [
+				5.5000154,
+				51.4299732,
+				5.5000154,
+				51.4299732
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "antwerpen",
+			"name": "Antwerpen",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Belgium",
+			"centroid": [
+				4.4130712,
+				51.2223194
+			],
+			"bbox": [
+				4.4130712,
+				51.2223194,
+				4.4130712,
+				51.2223194
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "brugge",
+			"name": "Brugge",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Belgium",
+			"centroid": [
+				3.2300248,
+				51.2203736
+			],
+			"bbox": [
+				3.2300248,
+				51.2203736,
+				3.2300248,
+				51.2203736
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "gent",
+			"name": "Gent",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Belgium",
+			"centroid": [
+				3.7000219,
+				51.0299976
+			],
+			"bbox": [
+				3.7000219,
+				51.0299976,
+				3.7000219,
+				51.0299976
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "maastricht",
+			"name": "Maastricht",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Netherlands",
+			"centroid": [
+				5.6770025,
+				50.8529971
+			],
+			"bbox": [
+				5.6770025,
+				50.8529971,
+				5.6770025,
+				50.8529971
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "brussels",
+			"name": "Brussels",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Belgium",
+			"centroid": [
+				4.3313707,
+				50.8352629
+			],
+			"bbox": [
+				4.3313707,
+				50.8352629,
+				4.3313707,
+				50.8352629
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "brighton",
+			"name": "Brighton",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "United Kingdom",
+			"centroid": [
+				-0.1699744,
+				50.8303457
+			],
+			"bbox": [
+				-0.1699744,
+				50.8303457,
+				-0.1699744,
+				50.8303457
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "portsmouth",
+			"name": "Portsmouth",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "United Kingdom",
+			"centroid": [
+				-1.0800222,
+				50.8003475
+			],
+			"bbox": [
+				-1.0800222,
+				50.8003475,
+				-1.0800222,
+				50.8003475
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "bournemouth",
+			"name": "Bournemouth",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "United Kingdom",
+			"centroid": [
+				-1.9000497,
+				50.7299901
+			],
+			"bbox": [
+				-1.9000497,
+				50.7299901,
+				-1.9000497,
+				50.7299901
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "lille",
+			"name": "Lille",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "France",
+			"centroid": [
+				3.0780622,
+				50.651915
+			],
+			"bbox": [
+				3.0780622,
+				50.651915,
+				3.0780622,
+				50.651915
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "liege",
+			"name": "Liège",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Belgium",
+			"centroid": [
+				5.5800105,
+				50.6299962
+			],
+			"bbox": [
+				5.5800105,
+				50.6299962,
+				5.5800105,
+				50.6299962
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "namur",
+			"name": "Namur",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Belgium",
+			"centroid": [
+				4.870028,
+				50.4703935
+			],
+			"bbox": [
+				4.870028,
+				50.4703935,
+				4.870028,
+				50.4703935
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "charleroi",
+			"name": "Charleroi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Belgium",
+			"centroid": [
+				4.450002,
+				50.4203965
+			],
+			"bbox": [
+				4.450002,
+				50.4203965,
+				4.450002,
+				50.4203965
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "luxembourg",
+			"name": "Luxembourg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Luxembourg",
+			"centroid": [
+				6.1300028,
+				49.6116604
+			],
+			"bbox": [
+				6.1300028,
+				49.6116604,
+				6.1300028,
+				49.6116604
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "le-havre",
+			"name": "Le Havre",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "France",
+			"centroid": [
+				0.1049701,
+				49.5049744
+			],
+			"bbox": [
+				0.1049701,
+				49.5049744,
+				0.1049701,
+				49.5049744
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "rouen",
+			"name": "Rouen",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "France",
+			"centroid": [
+				1.0799751,
+				49.4304053
+			],
+			"bbox": [
+				1.0799751,
+				49.4304053,
+				1.0799751,
+				49.4304053
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "metz",
+			"name": "Metz",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "France",
+			"centroid": [
+				6.1800256,
+				49.1203467
+			],
+			"bbox": [
+				6.1800256,
+				49.1203467,
+				6.1800256,
+				49.1203467
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "paris",
+			"name": "Paris",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "France",
+			"centroid": [
+				2.352992461539213,
+				48.85809231626911
+			],
+			"bbox": [
+				2.352992461539213,
+				48.85809231626911,
+				2.352992461539213,
+				48.85809231626911
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "nancy",
+			"name": "Nancy",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "France",
+			"centroid": [
+				6.2000244,
+				48.6836808
+			],
+			"bbox": [
+				6.2000244,
+				48.6836808,
+				6.2000244,
+				48.6836808
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "strasbourg",
+			"name": "Strasbourg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "France",
+			"centroid": [
+				7.7500073,
+				48.5799662
+			],
+			"bbox": [
+				7.7500073,
+				48.5799662,
+				7.7500073,
+				48.5799662
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "melun",
+			"name": "Melun",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "France",
+			"centroid": [
+				2.6666483,
+				48.5333024
+			],
+			"bbox": [
+				2.6666483,
+				48.5333024,
+				2.6666483,
+				48.5333024
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "tours",
+			"name": "Tours",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "France",
+			"centroid": [
+				0.6999467,
+				47.3803754
+			],
+			"bbox": [
+				0.6999467,
+				47.3803754,
+				0.6999467,
+				47.3803754
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "nantes",
+			"name": "Nantes",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "France",
+			"centroid": [
+				-1.5900169,
+				47.2103858
+			],
+			"bbox": [
+				-1.5900169,
+				47.2103858,
+				-1.5900169,
+				47.2103858
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "clermont-ferrand",
+			"name": "Clermont-Ferrand",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "France",
+			"centroid": [
+				3.0800081,
+				45.7799821
+			],
+			"bbox": [
+				3.0800081,
+				45.7799821,
+				3.0800081,
+				45.7799821
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "lyon",
+			"name": "Lyon",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "France",
+			"centroid": [
+				4.8280846,
+				45.7719544
+			],
+			"bbox": [
+				4.8280846,
+				45.7719544,
+				4.8280846,
+				45.7719544
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "saint-etienne",
+			"name": "Saint-Étienne",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "France",
+			"centroid": [
+				4.3800321,
+				45.4303911
+			],
+			"bbox": [
+				4.3800321,
+				45.4303911,
+				4.3800321,
+				45.4303911
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "grenoble",
+			"name": "Grenoble",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "France",
+			"centroid": [
+				5.720002,
+				45.1803805
+			],
+			"bbox": [
+				5.720002,
+				45.1803805,
+				5.720002,
+				45.1803805
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "bordeaux",
+			"name": "Bordeaux",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "France",
+			"centroid": [
+				-0.5969589,
+				44.8519589
+			],
+			"bbox": [
+				-0.5969589,
+				44.8519589,
+				-0.5969589,
+				44.8519589
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "nice",
+			"name": "Nice",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "France",
+			"centroid": [
+				7.2630781,
+				43.7169636
+			],
+			"bbox": [
+				7.2630781,
+				43.7169636,
+				7.2630781,
+				43.7169636
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "toulouse",
+			"name": "Toulouse",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "France",
+			"centroid": [
+				1.4479809,
+				43.6219048
+			],
+			"bbox": [
+				1.4479809,
+				43.6219048,
+				1.4479809,
+				43.6219048
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "montpellier",
+			"name": "Montpellier",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "France",
+			"centroid": [
+				3.8699857,
+				43.6103988
+			],
+			"bbox": [
+				3.8699857,
+				43.6103988,
+				3.8699857,
+				43.6103988
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "marseille",
+			"name": "Marseille",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "France",
+			"centroid": [
+				5.3730643,
+				43.2919249
+			],
+			"bbox": [
+				5.3730643,
+				43.2919249,
+				5.3730643,
+				43.2919249
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "toulon",
+			"name": "Toulon",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "France",
+			"centroid": [
+				5.9188216,
+				43.1341865
+			],
+			"bbox": [
+				5.9188216,
+				43.1341865,
+				5.9188216,
+				43.1341865
+			],
+			"colorIndex": 0
+		}
+	],
+	"tourOrder": [
+		"edinburgh",
+		"glasgow",
+		"newcastle-upon-tyne",
+		"sunderland",
+		"belfast",
+		"bradford",
+		"leeds",
+		"manchester",
+		"liverpool",
+		"sheffield",
+		"dublin",
+		"leeuwarden",
+		"groningen",
+		"nottingham",
+		"leicester",
+		"zwolle",
+		"birmingham",
+		"haarlem",
+		"amsterdam",
+		"utrecht",
+		"den-haag",
+		"arnhem",
+		"rotterdam",
+		"cork",
+		"s-hertogenbosch",
+		"southend-on-sea",
+		"london",
+		"cardiff",
+		"bristol",
+		"eindhoven",
+		"antwerpen",
+		"brugge",
+		"gent",
+		"maastricht",
+		"brussels",
+		"brighton",
+		"portsmouth",
+		"bournemouth",
+		"lille",
+		"liege",
+		"namur",
+		"charleroi",
+		"luxembourg",
+		"le-havre",
+		"rouen",
+		"metz",
+		"paris",
+		"nancy",
+		"strasbourg",
+		"melun",
+		"tours",
+		"nantes",
+		"clermont-ferrand",
+		"lyon",
+		"saint-etienne",
+		"grenoble",
+		"bordeaux",
+		"nice",
+		"toulouse",
+		"montpellier",
+		"marseille",
+		"toulon"
+	]
+}

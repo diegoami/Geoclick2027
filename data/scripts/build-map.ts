@@ -5,12 +5,18 @@
 //
 // Usage:
 //   npx tsx data/scripts/build-map.ts --country="Italy" --out=data/maps/italy-regions --type=region --name="Italy — Regions"
+//
+// With --level=country the targets are whole countries from the admin-0
+// layer instead (#39), chosen by --continent, --subregion or --countries,
+// and --country names the map's group ("Europe"):
+//   npx tsx data/scripts/build-map.ts --level=country --country="Europe" --continent=Europe --clip=-25,34,60,72 --min-area=2500 --out=data/maps/europe-countries --name="Europe — Countries"
 
 import { execFileSync } from 'node:child_process';
 import { mkdirSync, readFileSync, writeFileSync, rmSync } from 'node:fs';
 import path from 'node:path';
 import {
 	REPO_ROOT,
+	ADMIN0_SHP,
 	LAKES_SHP,
 	PHYSICAL_SHPS,
 	missingSources,
@@ -24,16 +30,29 @@ import {
 	cleanupPhysical,
 	padBbox,
 	pmtilesConvert,
-	crossesAntimeridian
+	crossesAntimeridian,
+	selectAdmin0Context
 } from './mapBuildUtils.js';
 import { colorizeMapDir } from './mapColors.js';
 import { spineMapDir } from './mapSpines.js';
 import { isUnbounded, parseBounds, withinBounds } from './placeSelection.js';
+import {
+	COUNTRY_TYPES,
+	COUNTRY_NAME_FIXUPS,
+	NOT_COUNTRIES,
+	parseList,
+	polygonAreaKm2,
+	sqlIn,
+	sqlString
+} from './multiCountry.js';
 
 const SOURCE_SHP = path.join(
 	REPO_ROOT,
 	'data/source/ne_10m_admin_1_states_provinces/ne_10m_admin_1_states_provinces.shp'
 );
+// The admin-0 fields a Countries map reads (#39).
+const COUNTRY_FIELDS = ['ADMIN', 'NAME_EN', 'TYPE', 'CONTINENT', 'SUBREGION'];
+// ...plus `alias`, which the builder adds for a renamed country.
 const BASE_FIELDS = [
 	'name',
 	'name_alt',
@@ -263,11 +282,100 @@ function boundsOf(geometry: Geometry): {
 	};
 }
 
+/**
+ * Moves admin-1 areas into another country's admin-0 shape, in place on
+ * `countriesPath`: the areas are erased from whatever currently covers
+ * them and the receiving country is dissolved together with them. The
+ * admin-1 and admin-0 layers share Natural Earth's borders, so the seam
+ * closes; -dissolve2 repairs the slivers where it would not.
+ */
+function reassignAdmin1(countriesPath: string, spec: string, workDir: string): void {
+	const [names, receiver] = spec.split(':');
+	const areaNames = parseList(names);
+	if (areaNames.length === 0 || !receiver) {
+		console.error('--assign-admin1 wants "Area,Area:Country".');
+		process.exit(1);
+	}
+	console.log(`      moving ${areaNames.join(', ')} into ${receiver}`);
+	const areasPath = path.join(workDir, '.tmp-assign.geojson');
+	const erasedPath = path.join(workDir, '.tmp-erased.geojson');
+	execFileSync('ogr2ogr', [
+		'-f',
+		'GeoJSON',
+		'-where',
+		sqlIn('name', areaNames),
+		'-select',
+		'name',
+		areasPath,
+		SOURCE_SHP
+	]);
+	const areas: AdminCollection = JSON.parse(readFileSync(areasPath, 'utf-8'));
+	if (areas.features.length !== areaNames.length) {
+		console.error(`--assign-admin1 found ${areas.features.length} of ${areaNames.length} areas.`);
+		process.exit(1);
+	}
+	const countries: AdminCollection = JSON.parse(readFileSync(countriesPath, 'utf-8'));
+	const receiving = countries.features.find((f) => f.properties.ADMIN === receiver);
+	if (!receiving) {
+		console.error(`--assign-admin1: "${receiver}" is not on this map.`);
+		process.exit(1);
+	}
+	for (const area of areas.features) area.properties = { ...receiving.properties };
+	writeFileSync(areasPath, JSON.stringify(areas));
+	execFileSync('npx', ['mapshaper', countriesPath, '-erase', areasPath, '-o', erasedPath], {
+		stdio: 'ignore'
+	});
+	execFileSync(
+		'npx',
+		[
+			'mapshaper',
+			'-i',
+			erasedPath,
+			areasPath,
+			'combine-files',
+			'-merge-layers',
+			'force',
+			'-dissolve2',
+			'ADMIN',
+			`copy-fields=${COUNTRY_FIELDS.filter((f) => f !== 'ADMIN').join(',')}`,
+			'-o',
+			countriesPath,
+			'force'
+		],
+		{ stdio: 'ignore' }
+	);
+	rmSync(areasPath);
+	rmSync(erasedPath);
+}
+
 async function main() {
 	const args = parseArgs(process.argv.slice(2));
 	const country = args.country;
 	const outDir = args.out;
-	const type = args.type ?? 'region';
+	// --level=country: whole countries from the admin-0 layer (#39), rather
+	// than one country's admin-1 regions. --country is then the map's group,
+	// e.g. "Europe", and the countries come from --continent, --subregion or
+	// --countries (Natural Earth's ADMIN names).
+	const countryLevel = args.level === 'country';
+	const continent = args.continent;
+	const subregion = args.subregion;
+	const countryList = parseList(args.countries);
+	// --clip keeps only the part of each shape inside a box
+	// ("lonMin,latMin,lonMax,latMax") or a WKT polygon: France without
+	// French Guiana, Russia west of the Urals. Unlike the --lon/--lat slice,
+	// which keeps or drops a whole target by its middle, this cuts shapes.
+	const clip = args.clip;
+	// --min-area drops a country smaller than this many km² after the clip -
+	// Monaco or Malta at a continent's zoom is too small to drop a slip on
+	// (#39, Q2). Their capitals stay on the Capitals maps.
+	const minArea = Number(args['min-area'] ?? 0);
+	// --assign-admin1="Crimea,Sevastopol:Ukraine" moves admin-1 areas from
+	// whichever country Natural Earth's admin-0 layer draws them in to the
+	// named one. Natural Earth draws Crimea in Russia (de facto control);
+	// this project gives it to Ukraine, as ukraine-regions already does
+	// (--extra-where above) and as the UN does.
+	const assignAdmin1 = args['assign-admin1'];
+	const type = args.type ?? (countryLevel ? 'country' : 'region');
 	const mapName = args.name ?? `${country} — ${type === 'state' ? 'States' : 'Regions'}`;
 	// Some countries' admin-1 features in Natural Earth are finer than the
 	// level we want (e.g. Italy's admin-1 is provinces, with regions only
@@ -302,13 +410,18 @@ async function main() {
 	// identically.
 	const bounds = parseBounds(args);
 
+	if (countryLevel && !continent && !subregion && countryList.length === 0) {
+		console.error('--level=country needs --continent, --subregion or --countries.');
+		process.exit(1);
+	}
 	if (!country || !outDir) {
 		console.error(
 			'Usage: build-map.ts --country="Italy" --out=data/maps/italy-regions [--type=region|state] [--name="Italy — Regions"] [--dissolve=region] [--exclude=Alaska,Hawaii] [--exclude-field=name] [--name-field=name] [--extra-where="name IN (\'Crimea\')"] [--lat-min=43.8] [--lon-min=-104 --lon-max=-87]'
 		);
 		process.exit(1);
 	}
-	const missing = missingSources([SOURCE_SHP, LAKES_SHP, ...PHYSICAL_SHPS]);
+	const sourceShp = countryLevel ? ADMIN0_SHP : SOURCE_SHP;
+	const missing = missingSources([sourceShp, LAKES_SHP, ...PHYSICAL_SHPS]);
 	if (missing.length > 0) {
 		console.error(
 			`Source shapefile(s) not found:\n  ${missing.join('\n  ')}\n` +
@@ -324,6 +437,7 @@ async function main() {
 	const simplifiedPath = path.join(absOutDir, '.tmp-simplified.geojson');
 	const labelsPath = path.join(absOutDir, '.tmp-labels.geojson');
 	const lakesPath = path.join(absOutDir, '.tmp-lakes.geojson');
+	const contextPath = path.join(absOutDir, '.tmp-context.geojson');
 	const physical = physicalPaths(absOutDir);
 	const mbtilesPath = path.join(absOutDir, '.tmp-tiles.mbtiles');
 	const pmtilesPath = path.join(absOutDir, 'tiles.pmtiles');
@@ -334,22 +448,68 @@ async function main() {
 	// needs (name-field/exclude-field default to 'name', already included).
 	const fields = Array.from(new Set([...BASE_FIELDS, nameField, excludeField]));
 
-	console.log(`[1/6] Filtering "${country}" from Natural Earth admin-1 dataset...`);
-	const whereClause =
-		`admin='${country}'` +
-		(exclude.length
-			? ` AND ${excludeField} NOT IN (${exclude.map((n) => `'${n}'`).join(',')})`
-			: '');
-	execFileSync('ogr2ogr', [
-		'-f',
-		'GeoJSON',
-		'-where',
-		whereClause,
-		'-select',
-		fields.join(','),
-		filteredPath,
-		SOURCE_SHP
-	]);
+	if (countryLevel) {
+		console.log(`[1/6] Filtering the countries of "${country}" from Natural Earth admin-0...`);
+		const where = [
+			sqlIn('TYPE', COUNTRY_TYPES),
+			`NOT (${sqlIn('ADMIN', [...NOT_COUNTRIES, ...exclude])})`,
+			...(continent ? [`CONTINENT = ${sqlString(continent)}`] : []),
+			...(subregion ? [`SUBREGION = ${sqlString(subregion)}`] : []),
+			...(countryList.length > 0 ? [sqlIn('ADMIN', countryList)] : [])
+		].join(' AND ');
+		const clipArgs = clip ? ['-clipsrc', ...(clip.includes('(') ? [clip] : clip.split(','))] : [];
+		execFileSync('ogr2ogr', [
+			'-f',
+			'GeoJSON',
+			'-where',
+			where,
+			...clipArgs,
+			'-nlt',
+			'MULTIPOLYGON',
+			'-select',
+			COUNTRY_FIELDS.join(','),
+			filteredPath,
+			sourceShp
+		]);
+		// Every later step reads `name`. NAME_EN is the short English name
+		// ("Czechia", "Democratic Republic of the Congo"); ADMIN is the
+		// fallback for the few rows without one.
+		if (assignAdmin1) reassignAdmin1(filteredPath, assignAdmin1, absOutDir);
+		const fc: AdminCollection = JSON.parse(readFileSync(filteredPath, 'utf-8'));
+		const kept: AdminFeature[] = [];
+		for (const feature of fc.features) {
+			const p = feature.properties;
+			const englishName = (p.NAME_EN || p.ADMIN) as string;
+			p.name = COUNTRY_NAME_FIXUPS[englishName] ?? englishName;
+			// The name it was renamed from stays a name the quiz accepts.
+			if (p.name !== englishName) p.alias = englishName;
+			const area = polygonAreaKm2(feature.geometry);
+			if (area < minArea) {
+				console.log(`      dropped ${p.name} (${Math.round(area)} km² < ${minArea})`);
+				continue;
+			}
+			kept.push(feature);
+		}
+		fc.features = kept;
+		writeFileSync(filteredPath, JSON.stringify(fc));
+	} else {
+		console.log(`[1/6] Filtering "${country}" from Natural Earth admin-1 dataset...`);
+		const whereClause =
+			`admin='${country}'` +
+			(exclude.length
+				? ` AND ${excludeField} NOT IN (${exclude.map((n) => `'${n}'`).join(',')})`
+				: '');
+		execFileSync('ogr2ogr', [
+			'-f',
+			'GeoJSON',
+			'-where',
+			whereClause,
+			'-select',
+			fields.join(','),
+			filteredPath,
+			SOURCE_SHP
+		]);
+	}
 
 	if (extraWhere) {
 		console.log(`[1b/6] Merging in extra features ("${extraWhere}")...`);
@@ -437,7 +597,7 @@ async function main() {
 			name: p.name as string,
 			type,
 			tier: 1,
-			aliases: [] as string[],
+			aliases: (p.alias ? [p.alias] : []) as string[],
 			centroid: center,
 			bbox,
 			...(wraps ? { crossesAntimeridian: true } : {})
@@ -488,6 +648,13 @@ async function main() {
 	// Sea, rivers and named terrain (FT-33) - off by default in the app,
 	// behind the map bar's Terrain button.
 	selectPhysical(padBbox(overallBboxOf(targets)), physical, padBbox(overallBboxOf(targets), 0.05));
+	// The countries around a Countries map, drawn as land but not asked
+	// (#39). Only for --level=country, so every admin-1 map's tiles are
+	// unchanged.
+	if (countryLevel) {
+		const targetAdmins = geojson.features.map((f) => f.properties.ADMIN as string);
+		selectAdmin0Context(padBbox(overallBboxOf(targets)), contextPath, targetAdmins);
+	}
 
 	console.log('[5/6] Building vector tiles (tippecanoe + pmtiles convert)...');
 	execFileSync('tippecanoe', [
@@ -504,7 +671,8 @@ async function main() {
 		'-L',
 		`labels:${labelsPath}`,
 		'-L',
-		`lakes:${lakesPath}`
+		`lakes:${lakesPath}`,
+		...(countryLevel ? ['-L', `context:${contextPath}`] : [])
 	]);
 	pmtilesConvert(mbtilesPath, pmtilesPath);
 	// Its own archive, fetched only when the player switches Terrain on.
@@ -515,6 +683,7 @@ async function main() {
 	rmSync(simplifiedPath);
 	rmSync(labelsPath);
 	rmSync(lakesPath);
+	if (countryLevel) rmSync(contextPath);
 	cleanupPhysical(physical);
 	rmSync(mbtilesPath);
 

@@ -1,0 +1,544 @@
+{
+	"reykjavik": {
+		"kind": "city",
+		"population": 166212,
+		"populationRank": 38,
+		"region": "Suðurnes",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"helsinki": {
+		"kind": "city",
+		"population": 1115000,
+		"populationRank": 19,
+		"population1950": 366000,
+		"region": "Southern Finland",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"From Helsinge, a parish name probably brought by settlers from Hälsingland in Sweden.",
+				"Founded in 1550 to rival Tallinn, it stayed a small town for 250 years until Russia made it the capital in 1812.",
+				"Its centre was rebuilt in neoclassical style to resemble St Petersburg, which is why Cold War films used it as a stand-in for Moscow."
+			],
+			"it": [
+				"Da Helsinge, nome di una parrocchia portato probabilmente da coloni venuti dall’Hälsingland, in Svezia.",
+				"Fondata nel 1550 per rivaleggiare con Tallinn, rimase una piccola città per 250 anni, finché la Russia non ne fece la capitale nel 1812.",
+				"Il centro fu ricostruito in stile neoclassico sul modello di San Pietroburgo, ed è per questo che i film della guerra fredda lo usavano come controfigura di Mosca."
+			]
+		}
+	},
+	"oslo": {
+		"kind": "city",
+		"population": 835000,
+		"populationRank": 25,
+		"population1950": 468000,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "north"
+	},
+	"tallinn": {
+		"kind": "city",
+		"population": 394024,
+		"populationRank": 34,
+		"region": "Harju",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"stockholm": {
+		"kind": "city",
+		"population": 1264000,
+		"populationRank": 16,
+		"population1950": 741000,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"\"Log islet\" — stock, a log, plus holme, an islet: the city began on a fortified island in 1252.",
+				"It is built on fourteen islands where Lake Mälaren meets the Baltic, and its archipelago has about 30,000 more.",
+				"The Vasa, a warship that sank on her maiden voyage in 1628, was raised in 1961 and is 98% original timber."
+			],
+			"it": [
+				"\"Isolotto del tronco\": stock è il tronco, holme l’isolotto, e la città nacque su un’isola fortificata nel 1252.",
+				"È costruita su quattordici isole dove il lago Mälaren incontra il Baltico, e il suo arcipelago ne conta altre 30.000 circa.",
+				"Il Vasa, nave da guerra affondata durante il viaggio inaugurale nel 1628, fu recuperato nel 1961 e il suo legno è originale al 98%."
+			]
+		}
+	},
+	"riga": {
+		"kind": "city",
+		"population": 742572,
+		"populationRank": 26,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"moscow": {
+		"kind": "city",
+		"population": 10452000,
+		"populationRank": 1,
+		"population1950": 5356000,
+		"region": "Moskva",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Named for the river, whose own name is probably Finno-Ugric or Baltic, perhaps meaning wet or marshy.",
+				"The capital since 1480, except for the two centuries when St Petersburg was.",
+				"Its metro stations were built as palaces for the people, with chandeliers and mosaics, some 84 m down."
+			],
+			"it": [
+				"Prende il nome dal fiume, il cui nome è probabilmente ugrofinnico o baltico, e forse significa umido o paludoso.",
+				"Capitale dal 1480, tranne per i due secoli in cui lo fu San Pietroburgo.",
+				"Le sue stazioni della metropolitana furono costruite come palazzi per il popolo, con lampadari e mosaici, alcune a 84 m di profondità."
+			]
+		}
+	},
+	"k-benhavn": {
+		"kind": "city",
+		"population": 1085000,
+		"populationRank": 21,
+		"population1950": 1216000,
+		"region": "Hovedstaden",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "north"
+	},
+	"vilnius": {
+		"kind": "city",
+		"population": 542366,
+		"populationRank": 30,
+		"region": "Vilniaus",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "east"
+	},
+	"minsk": {
+		"kind": "city",
+		"population": 1805000,
+		"populationRank": 12,
+		"population1950": 284000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "east"
+	},
+	"dublin": {
+		"kind": "city",
+		"population": 1059000,
+		"populationRank": 22,
+		"population1950": 626000,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "west"
+	},
+	"berlin": {
+		"kind": "city",
+		"population": 3406000,
+		"populationRank": 5,
+		"population1950": 3352000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Not the bear: it is most likely Slavic berl-, a swamp — the bear on the coat of arms is a pun that came later and stuck.",
+				"An island in Brandenburg, and its own state; the two voted on merging in 1996 and said no.",
+				"It has more museums than rainy days a year, and the Wall ran 155 km through and around it for 28 years."
+			],
+			"it": [
+				"Non viene dall’orso: molto probabilmente è lo slavo berl-, \"palude\"; l’orso dello stemma è un gioco di parole venuto dopo, che ha attecchito.",
+				"Un’isola dentro il Brandeburgo, e un Land a sé; i due votarono sulla fusione nel 1996, e dissero no.",
+				"Ha più musei che giorni di pioggia all’anno, e per 28 anni il Muro l’ha attraversata e circondata per 155 km."
+			]
+		}
+	},
+	"amsterdam": {
+		"kind": "city",
+		"population": 1031000,
+		"populationRank": 23,
+		"population1950": 851000,
+		"region": "Noord-Holland",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"\"Dam on the Amstel\" — a dam built about 1270, which is literally where the city and its name began.",
+				"It is built on millions of wooden piles driven into the marsh, and has 165 canals dug in the 1600s, a UNESCO site.",
+				"The Dutch East India Company, founded here in 1602, was the first company to issue tradable shares."
+			],
+			"it": [
+				"\"Diga sull’Amstel\": una diga costruita verso il 1270, ed è letteralmente lì che nacquero la città e il suo nome.",
+				"È costruita su milioni di pali di legno piantati nella palude e ha 165 canali scavati nel Seicento, patrimonio UNESCO.",
+				"La Compagnia olandese delle Indie orientali, fondata qui nel 1602, fu la prima società a emettere azioni negoziabili."
+			]
+		}
+	},
+	"warszawa": {
+		"kind": "city",
+		"population": 1707000,
+		"populationRank": 14,
+		"population1950": 768000,
+		"region": "Masovian",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"From a personal name, Warsz — the mermaid legend of Wars and Sawa is a later folk invention.",
+				"About 85% of the city was deliberately destroyed after the 1944 uprising and rebuilt from paintings and photographs.",
+				"That reconstruction is itself a UNESCO site, listed for the act of rebuilding rather than for the original."
+			],
+			"it": [
+				"Da un nome di persona, Warsz: la leggenda della sirena, di Wars e Sawa, è un’invenzione popolare successiva.",
+				"Circa l’85% della città fu distrutto deliberatamente dopo l’insurrezione del 1944 e ricostruito sulla base di dipinti e fotografie.",
+				"Quella ricostruzione è essa stessa patrimonio UNESCO, iscritta per l’atto del ricostruire e non per l’originale."
+			]
+		}
+	},
+	"london": {
+		"kind": "city",
+		"population": 8567000,
+		"populationRank": 3,
+		"population1950": 8361000,
+		"region": "Westminster",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Londinium is pre-Roman and unexplained; the best guess is a Brittonic name about the unfordable river.",
+				"It was the largest city in the world from about 1825 to 1925, and about 300 languages are spoken in it.",
+				"Its Underground, opened 1863, was the first in the world, and the 1666 fire destroyed 13,200 houses."
+			],
+			"it": [
+				"Londinium è preromano e senza spiegazione; l’ipotesi migliore è un nome brittonico legato al fiume che non si può guadare.",
+				"Fu la città più grande del mondo all’incirca dal 1825 al 1925, e vi si parlano circa 300 lingue.",
+				"La sua metropolitana, aperta nel 1863, fu la prima del mondo, e l’incendio del 1666 distrusse 13.200 case."
+			]
+		}
+	},
+	"brussels": {
+		"kind": "city",
+		"population": 1743000,
+		"populationRank": 13,
+		"population1950": 1415000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "centre"
+	},
+	"kyiv": {
+		"kind": "city",
+		"population": 2709000,
+		"populationRank": 9,
+		"population1950": 815000,
+		"region": "Kiev",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Named for Kyi, the eldest of three brothers who legend says founded the city with their sister Lybid.",
+				"The Kyivan Rus state here was the origin of both Ukraine and Russia, which is why the name carries the weight it does.",
+				"Its metro station Arsenalna is one of the deepest in the world at 105 m, dug through the cliffs above the Dnipro."
+			],
+			"it": [
+				"Prende il nome da Kyi, il maggiore di tre fratelli che secondo la leggenda fondarono la città insieme alla sorella Lybid.",
+				"Lo stato della Rus’ di Kyiv, nato qui, è all’origine sia dell’Ucraina sia della Russia: per questo il nome ha il peso che ha.",
+				"La sua stazione della metropolitana Arsenalna è una delle più profonde del mondo, a 105 m, scavata nelle alture sopra il Dnipro."
+			]
+		}
+	},
+	"prague": {
+		"kind": "city",
+		"population": 1162000,
+		"populationRank": 18,
+		"population1950": 935000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "centre"
+	},
+	"luxembourg": {
+		"kind": "city",
+		"population": 107260,
+		"populationRank": 40,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "centre"
+	},
+	"paris": {
+		"kind": "city",
+		"population": 9904000,
+		"populationRank": 2,
+		"population1950": 6522000,
+		"region": "Île-de-France",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"From the Parisii, the Gaulish tribe on the Île de la Cité; the Romans called it Lutetia.",
+				"The Eiffel Tower was built for the 1889 exposition and meant to be dismantled after twenty years.",
+				"Its catacombs hold the remains of about six million people, moved underground from overflowing cemeteries in 1786."
+			],
+			"it": [
+				"Dai Parisi, la tribù gallica dell’Île de la Cité; i Romani la chiamavano Lutetia.",
+				"La Torre Eiffel fu costruita per l’Esposizione del 1889 e doveva essere smontata dopo vent’anni.",
+				"Le sue catacombe custodiscono i resti di circa sei milioni di persone, trasferiti sottoterra nel 1786 da cimiteri ormai stracolmi."
+			]
+		}
+	},
+	"wien": {
+		"kind": "city",
+		"population": 2400000,
+		"populationRank": 10,
+		"population1950": 2086000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "centre"
+	},
+	"bratislava": {
+		"kind": "city",
+		"population": 423737,
+		"populationRank": 33,
+		"region": "Bratislavský",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "centre"
+	},
+	"budapest": {
+		"kind": "city",
+		"population": 1679000,
+		"populationRank": 15,
+		"population1950": 1618000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "east"
+	},
+	"vaduz": {
+		"kind": "city",
+		"population": 36281,
+		"populationRank": 43,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "centre"
+	},
+	"chisinau": {
+		"kind": "city",
+		"population": 688134,
+		"populationRank": 29,
+		"region": "Chisinau",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "east"
+	},
+	"bern": {
+		"kind": "city",
+		"population": 275329,
+		"populationRank": 37,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "centre"
+	},
+	"ljubljana": {
+		"kind": "city",
+		"population": 314807,
+		"populationRank": 36,
+		"region": "Osrednjeslovenska",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "centre"
+	},
+	"zagreb": {
+		"kind": "city",
+		"population": 722526,
+		"populationRank": 27,
+		"region": "Grad Zagreb",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "centre"
+	},
+	"belgrade": {
+		"kind": "city",
+		"population": 1099000,
+		"populationRank": 20,
+		"population1950": 411000,
+		"region": "Grad Beograd",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"bucharest": {
+		"kind": "city",
+		"population": 1942000,
+		"populationRank": 11,
+		"population1950": 652000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"san-marino": {
+		"kind": "city",
+		"population": 29579,
+		"populationRank": 44,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south"
+	},
+	"sarajevo": {
+		"kind": "city",
+		"population": 696731,
+		"populationRank": 28,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"monaco": {
+		"kind": "city",
+		"population": 36371,
+		"populationRank": 42,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south"
+	},
+	"sofia": {
+		"kind": "city",
+		"population": 1185000,
+		"populationRank": 17,
+		"population1950": 522000,
+		"region": "Grad Sofiya",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"pristina": {
+		"kind": "city",
+		"population": 465186,
+		"populationRank": 32,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"andorra-la-vella": {
+		"kind": "city",
+		"population": 53998,
+		"populationRank": 41,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south"
+	},
+	"podgorica": {
+		"kind": "city",
+		"population": 145850,
+		"populationRank": 39,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"skopje": {
+		"kind": "city",
+		"population": 494087,
+		"populationRank": 31,
+		"region": "Centar",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"roma": {
+		"kind": "city",
+		"population": 3339000,
+		"populationRank": 6,
+		"population1950": 1884000,
+		"region": "Lazio",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Legend says Romulus; more likely from Etruscan Ruma, a family name, or from an old word for the river.",
+				"It was the largest city in the world for about five centuries and the first to reach a million people.",
+				"Its historic centre, the Vatican and the extraterritorial properties are jointly a UNESCO site, and the Pantheon’s dome is still the largest unreinforced concrete dome ever built."
+			],
+			"it": [
+				"La leggenda dice Romolo; più probabilmente viene dall’etrusco Ruma, nome di famiglia, o da un’antica parola per il fiume.",
+				"Fu la città più grande del mondo per circa cinque secoli e la prima a raggiungere il milione di abitanti.",
+				"Il centro storico, il Vaticano e le proprietà extraterritoriali sono insieme patrimonio UNESCO, e la cupola del Pantheon è ancora la più grande cupola in calcestruzzo non armato mai costruita."
+			]
+		}
+	},
+	"tirana": {
+		"kind": "city",
+		"population": 895350,
+		"populationRank": 24,
+		"region": "Durrës",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"madrid": {
+		"kind": "city",
+		"population": 5567000,
+		"populationRank": 4,
+		"population1950": 1700000,
+		"region": "Comunidad de Madrid",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"From Arabic al-Majrit, \"source of water\" — the Moorish fortress was named for its streams, and the Christians kept the name.",
+				"A provincial town until Philip II moved the court here in 1561, chosen largely for sitting in the middle of the country.",
+				"At 650 m it is the highest capital in Europe, and the Prado holds the finest collection of Spanish painting anywhere."
+			],
+			"it": [
+				"Dall’arabo al-Majrit, \"sorgente d’acqua\": la fortezza moresca prese il nome dai suoi ruscelli, e i cristiani lo mantennero.",
+				"Una città di provincia finché Filippo II non vi trasferì la corte nel 1561, scegliendola soprattutto perché stava al centro del paese.",
+				"A 650 m è la capitale più alta d’Europa, e il Prado custodisce la più bella collezione di pittura spagnola al mondo."
+			]
+		}
+	},
+	"lisboa": {
+		"kind": "city",
+		"population": 2812000,
+		"populationRank": 8,
+		"population1950": 1304000,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"The oldest layer of all: probably Phoenician Alis Ubbo, \"safe harbour\", though the Romans preferred a legend about Ulysses founding it.",
+				"The 1755 earthquake, fire and tsunami killed tens of thousands and led to the first scientific study of an earthquake anywhere.",
+				"Its Belém tower and Jerónimos monastery were paid for with a 5% tax on the spices coming back from India."
+			],
+			"it": [
+				"Lo strato più antico di tutti: probabilmente il fenicio Alis Ubbo, \"porto sicuro\", anche se i Romani preferivano la leggenda che la voleva fondata da Ulisse.",
+				"Il terremoto, l’incendio e il maremoto del 1755 fecero decine di migliaia di morti e portarono al primo studio scientifico di un terremoto mai condotto al mondo.",
+				"La torre di Belém e il monastero dos Jerónimos furono pagati con una tassa del 5% sulle spezie che arrivavano dall’India."
+			]
+		}
+	},
+	"athens": {
+		"kind": "city",
+		"population": 3242000,
+		"populationRank": 7,
+		"population1950": 1347000,
+		"region": "Attiki",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"valletta": {
+		"kind": "city",
+		"population": 368250,
+		"populationRank": 35,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south"
+	}
+}

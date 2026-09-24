@@ -1,0 +1,1351 @@
+{
+	"id": "europe-cities-east",
+	"name": "Europe — Cities — East",
+	"country": "Europe",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "saint-petersburg",
+			"name": "Saint Petersburg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Russia",
+			"centroid": [
+				30.3140742,
+				59.9409604
+			],
+			"bbox": [
+				30.3140742,
+				59.9409604,
+				30.3140742,
+				59.9409604
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "tallinn",
+			"name": "Tallinn",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Estonia",
+			"centroid": [
+				24.7280407,
+				59.4338774
+			],
+			"bbox": [
+				24.7280407,
+				59.4338774,
+				24.7280407,
+				59.4338774
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "tartu",
+			"name": "Tartu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Estonia",
+			"centroid": [
+				26.7098836,
+				58.3839415
+			],
+			"bbox": [
+				26.7098836,
+				58.3839415,
+				26.7098836,
+				58.3839415
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "perm",
+			"name": "Perm",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Russia",
+			"centroid": [
+				56.2480468,
+				58.0019056
+			],
+			"bbox": [
+				56.2480468,
+				58.0019056,
+				56.2480468,
+				58.0019056
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "riga",
+			"name": "Riga",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Latvia",
+			"centroid": [
+				24.0999654,
+				56.9500238
+			],
+			"bbox": [
+				24.0999654,
+				56.9500238,
+				24.0999654,
+				56.9500238
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "nizhny-novgorod",
+			"name": "Nizhny Novgorod",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Russia",
+			"centroid": [
+				43.9981485,
+				56.3349531
+			],
+			"bbox": [
+				43.9981485,
+				56.3349531,
+				43.9981485,
+				56.3349531
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "siauliai",
+			"name": "Šiauliai",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Lithuania",
+			"centroid": [
+				23.3250256,
+				55.9386385
+			],
+			"bbox": [
+				23.3250256,
+				55.9386385,
+				23.3250256,
+				55.9386385
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "daugavpils",
+			"name": "Daugavpils",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Latvia",
+			"centroid": [
+				26.5099991,
+				55.8799599
+			],
+			"bbox": [
+				26.5099991,
+				55.8799599,
+				26.5099991,
+				55.8799599
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "moscow",
+			"name": "Moscow",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Russia",
+			"centroid": [
+				37.613577,
+				55.75411
+			],
+			"bbox": [
+				37.613577,
+				55.75411,
+				37.613577,
+				55.75411
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "kazan",
+			"name": "Kazan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Russia",
+			"centroid": [
+				49.1243989,
+				55.7518879
+			],
+			"bbox": [
+				49.1243989,
+				55.7518879,
+				49.1243989,
+				55.7518879
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "panevezys",
+			"name": "Panevėžys",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Lithuania",
+			"centroid": [
+				24.3700264,
+				55.7400202
+			],
+			"bbox": [
+				24.3700264,
+				55.7400202,
+				24.3700264,
+				55.7400202
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "klaipeda",
+			"name": "Klaipėda",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Lithuania",
+			"centroid": [
+				21.1199406,
+				55.720409
+			],
+			"bbox": [
+				21.1199406,
+				55.720409,
+				21.1199406,
+				55.720409
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "vitsyebsk",
+			"name": "Vitsyebsk",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Belarus",
+			"centroid": [
+				30.1853304,
+				55.1887101
+			],
+			"bbox": [
+				30.1853304,
+				55.1887101,
+				30.1853304,
+				55.1887101
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "kaunas",
+			"name": "Kaunas",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Lithuania",
+			"centroid": [
+				23.8800305,
+				54.9504043
+			],
+			"bbox": [
+				23.8800305,
+				54.9504043,
+				23.8800305,
+				54.9504043
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "ufa",
+			"name": "Ufa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Russia",
+			"centroid": [
+				56.0380854,
+				54.7919207
+			],
+			"bbox": [
+				56.0380854,
+				54.7919207,
+				56.0380854,
+				54.7919207
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "vilnius",
+			"name": "Vilnius",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Lithuania",
+			"centroid": [
+				25.3166353,
+				54.6833663
+			],
+			"bbox": [
+				25.3166353,
+				54.6833663,
+				25.3166353,
+				54.6833663
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "orsha",
+			"name": "Orsha",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Belarus",
+			"centroid": [
+				30.4215433,
+				54.5153146
+			],
+			"bbox": [
+				30.4215433,
+				54.5153146,
+				30.4215433,
+				54.5153146
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "barysaw",
+			"name": "Barysaw",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Belarus",
+			"centroid": [
+				28.4921521,
+				54.226004
+			],
+			"bbox": [
+				28.4921521,
+				54.226004,
+				28.4921521,
+				54.226004
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "minsk",
+			"name": "Minsk",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Belarus",
+			"centroid": [
+				27.5646813,
+				53.9019233
+			],
+			"bbox": [
+				27.5646813,
+				53.9019233,
+				27.5646813,
+				53.9019233
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "mahilyow",
+			"name": "Mahilyow",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Belarus",
+			"centroid": [
+				30.32465,
+				53.8985047
+			],
+			"bbox": [
+				30.32465,
+				53.8985047,
+				30.32465,
+				53.8985047
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "hrodna",
+			"name": "Hrodna",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Belarus",
+			"centroid": [
+				23.8340901,
+				53.6778721
+			],
+			"bbox": [
+				23.8340901,
+				53.6778721,
+				23.8340901,
+				53.6778721
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "tolyatti",
+			"name": "Tolyatti",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Russia",
+			"centroid": [
+				49.42006336630951,
+				53.50809356149513
+			],
+			"bbox": [
+				49.42006336630951,
+				53.50809356149513,
+				49.42006336630951,
+				53.50809356149513
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "samara",
+			"name": "Samara",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Russia",
+			"centroid": [
+				50.1493493,
+				53.1969534
+			],
+			"bbox": [
+				50.1493493,
+				53.1969534,
+				50.1493493,
+				53.1969534
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "baranavichy",
+			"name": "Baranavichy",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Belarus",
+			"centroid": [
+				26.0134403,
+				53.1368457
+			],
+			"bbox": [
+				26.0134403,
+				53.1368457,
+				26.0134403,
+				53.1368457
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "babruysk",
+			"name": "Babruysk",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Belarus",
+			"centroid": [
+				29.1927811,
+				53.1265621
+			],
+			"bbox": [
+				29.1927811,
+				53.1265621,
+				29.1927811,
+				53.1265621
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "homyel",
+			"name": "Homyel",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Belarus",
+			"centroid": [
+				31.0000093,
+				52.4300155
+			],
+			"bbox": [
+				31.0000093,
+				52.4300155,
+				31.0000093,
+				52.4300155
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "pinsk",
+			"name": "Pinsk",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Belarus",
+			"centroid": [
+				26.0940555,
+				52.1278634
+			],
+			"bbox": [
+				26.0940555,
+				52.1278634,
+				26.0940555,
+				52.1278634
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "brest",
+			"name": "Brest",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Belarus",
+			"centroid": [
+				23.6999898,
+				52.0999839
+			],
+			"bbox": [
+				23.6999898,
+				52.0999839,
+				23.6999898,
+				52.0999839
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "mazyr",
+			"name": "Mazyr",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Belarus",
+			"centroid": [
+				29.2721561,
+				52.0459562
+			],
+			"bbox": [
+				29.2721561,
+				52.0459562,
+				29.2721561,
+				52.0459562
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "voronezh",
+			"name": "Voronezh",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Russia",
+			"centroid": [
+				39.18684252206281,
+				51.66539025109858
+			],
+			"bbox": [
+				39.18684252206281,
+				51.66539025109858,
+				39.18684252206281,
+				51.66539025109858
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "saratov",
+			"name": "Saratov",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Russia",
+			"centroid": [
+				46.0280504,
+				51.5819357
+			],
+			"bbox": [
+				46.0280504,
+				51.5819357,
+				46.0280504,
+				51.5819357
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "kyiv",
+			"name": "Kyiv",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Ukraine",
+			"centroid": [
+				30.5146821,
+				50.4353132
+			],
+			"bbox": [
+				30.5146821,
+				50.4353132,
+				30.5146821,
+				50.4353132
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "kharkiv",
+			"name": "Kharkiv",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Ukraine",
+			"centroid": [
+				36.2480789,
+				50.0019288
+			],
+			"bbox": [
+				36.2480789,
+				50.0019288,
+				36.2480789,
+				50.0019288
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "lviv",
+			"name": "Lviv",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Ukraine",
+			"centroid": [
+				24.0299955,
+				49.8349801
+			],
+			"bbox": [
+				24.0299955,
+				49.8349801,
+				24.0299955,
+				49.8349801
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "khmelnytskyi",
+			"name": "Khmelnytskyi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Ukraine",
+			"centroid": [
+				27.0015454,
+				49.4249276
+			],
+			"bbox": [
+				27.0015454,
+				49.4249276,
+				27.0015454,
+				49.4249276
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "volgograd",
+			"name": "Volgograd",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Russia",
+			"centroid": [
+				44.4980146,
+				48.7119558
+			],
+			"bbox": [
+				44.4980146,
+				48.7119558,
+				44.4980146,
+				48.7119558
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "luhansk",
+			"name": "Luhansk",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Ukraine",
+			"centroid": [
+				39.3343843,
+				48.5697602
+			],
+			"bbox": [
+				39.3343843,
+				48.5697602,
+				39.3343843,
+				48.5697602
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "dnipro",
+			"name": "Dnipro",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Ukraine",
+			"centroid": [
+				34.9980777,
+				48.4819182
+			],
+			"bbox": [
+				34.9980777,
+				48.4819182,
+				34.9980777,
+				48.4819182
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "donetsk",
+			"name": "Donetsk",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Ukraine",
+			"centroid": [
+				37.8280342,
+				48.0019475
+			],
+			"bbox": [
+				37.8280342,
+				48.0019475,
+				37.8280342,
+				48.0019475
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "kryvyi-rih",
+			"name": "Kryvyi Rih",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Ukraine",
+			"centroid": [
+				33.3449825,
+				47.9283264
+			],
+			"bbox": [
+				33.3449825,
+				47.9283264,
+				33.3449825,
+				47.9283264
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "zaporizhzhia",
+			"name": "Zaporizhzhia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Ukraine",
+			"centroid": [
+				35.1748628,
+				47.859243
+			],
+			"bbox": [
+				35.1748628,
+				47.859243,
+				35.1748628,
+				47.859243
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "balti",
+			"name": "Bălți",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Moldova",
+			"centroid": [
+				27.9053145,
+				47.7590861
+			],
+			"bbox": [
+				27.9053145,
+				47.7590861,
+				27.9053145,
+				47.7590861
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "rostov-on-don",
+			"name": "Rostov-on-Don",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Russia",
+			"centroid": [
+				39.7107099,
+				47.2365937
+			],
+			"bbox": [
+				39.7107099,
+				47.2365937,
+				39.7107099,
+				47.2365937
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "iasi",
+			"name": "Iași",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Romania",
+			"centroid": [
+				27.5749471,
+				47.168347
+			],
+			"bbox": [
+				27.5749471,
+				47.168347,
+				27.5749471,
+				47.168347
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "mariupol",
+			"name": "Mariupol",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Ukraine",
+			"centroid": [
+				37.5561983,
+				47.0961808
+			],
+			"bbox": [
+				37.5561983,
+				47.0961808,
+				37.5561983,
+				47.0961808
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "oradea",
+			"name": "Oradea",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Romania",
+			"centroid": [
+				21.9199951,
+				47.0499821
+			],
+			"bbox": [
+				21.9199951,
+				47.0499821,
+				21.9199951,
+				47.0499821
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "chisinau",
+			"name": "Chișinău",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Moldova",
+			"centroid": [
+				28.8577111,
+				47.0050236
+			],
+			"bbox": [
+				28.8577111,
+				47.0050236,
+				28.8577111,
+				47.0050236
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "mykolaiv",
+			"name": "Mykolaiv",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Ukraine",
+			"centroid": [
+				31.984342,
+				46.9677391
+			],
+			"bbox": [
+				31.984342,
+				46.9677391,
+				31.984342,
+				46.9677391
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "tiraspol",
+			"name": "Tiraspol",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Moldova",
+			"centroid": [
+				29.639989,
+				46.8530949
+			],
+			"bbox": [
+				29.639989,
+				46.8530949,
+				29.639989,
+				46.8530949
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "cluj-napoca",
+			"name": "Cluj-Napoca",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Romania",
+			"centroid": [
+				23.5984456,
+				46.7884219
+			],
+			"bbox": [
+				23.5984456,
+				46.7884219,
+				23.5984456,
+				46.7884219
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "bacau",
+			"name": "Bacău",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Romania",
+			"centroid": [
+				26.9196382,
+				46.5784347
+			],
+			"bbox": [
+				26.9196382,
+				46.5784347,
+				26.9196382,
+				46.5784347
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "odesa",
+			"name": "Odesa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Ukraine",
+			"centroid": [
+				30.7080553,
+				46.4919622
+			],
+			"bbox": [
+				30.7080553,
+				46.4919622,
+				30.7080553,
+				46.4919622
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "timisoara",
+			"name": "Timișoara",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Romania",
+			"centroid": [
+				21.2234484,
+				45.7588206
+			],
+			"bbox": [
+				21.2234484,
+				45.7588206,
+				21.2234484,
+				45.7588206
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "brasov",
+			"name": "Brașov",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Romania",
+			"centroid": [
+				25.6071602,
+				45.6475354
+			],
+			"bbox": [
+				25.6071602,
+				45.6475354,
+				25.6071602,
+				45.6475354
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "galati",
+			"name": "Galați",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Romania",
+			"centroid": [
+				28.0458744,
+				45.4558934
+			],
+			"bbox": [
+				28.0458744,
+				45.4558934,
+				28.0458744,
+				45.4558934
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "braila",
+			"name": "Brăila",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Romania",
+			"centroid": [
+				27.9690035,
+				45.2919961
+			],
+			"bbox": [
+				27.9690035,
+				45.2919961,
+				27.9690035,
+				45.2919961
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "ploiesti",
+			"name": "Ploiești",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Romania",
+			"centroid": [
+				26.036488,
+				44.9469064
+			],
+			"bbox": [
+				26.036488,
+				44.9469064,
+				26.036488,
+				44.9469064
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "bucharest",
+			"name": "Bucharest",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Romania",
+			"centroid": [
+				26.0980008,
+				44.4353177
+			],
+			"bbox": [
+				26.0980008,
+				44.4353177,
+				26.0980008,
+				44.4353177
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "craiova",
+			"name": "Craiova",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Romania",
+			"centroid": [
+				23.8258736,
+				44.3262724
+			],
+			"bbox": [
+				23.8258736,
+				44.3262724,
+				23.8258736,
+				44.3262724
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "constanta",
+			"name": "Constanța",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Romania",
+			"centroid": [
+				28.6099743,
+				44.2026624
+			],
+			"bbox": [
+				28.6099743,
+				44.2026624,
+				28.6099743,
+				44.2026624
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "ruse",
+			"name": "Ruse",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Bulgaria",
+			"centroid": [
+				25.9733394,
+				43.8536914
+			],
+			"bbox": [
+				25.9733394,
+				43.8536914,
+				25.9733394,
+				43.8536914
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "pleven",
+			"name": "Pleven",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Bulgaria",
+			"centroid": [
+				24.6133707,
+				43.4237693
+			],
+			"bbox": [
+				24.6133707,
+				43.4237693,
+				24.6133707,
+				43.4237693
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "varna",
+			"name": "Varna",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Bulgaria",
+			"centroid": [
+				27.8952893,
+				43.2156425
+			],
+			"bbox": [
+				27.8952893,
+				43.2156425,
+				27.8952893,
+				43.2156425
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "sofia",
+			"name": "Sofia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Bulgaria",
+			"centroid": [
+				23.3147082,
+				42.6852953
+			],
+			"bbox": [
+				23.3147082,
+				42.6852953,
+				23.3147082,
+				42.6852953
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "burgas",
+			"name": "Burgas",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Bulgaria",
+			"centroid": [
+				27.4746431,
+				42.5146
+			],
+			"bbox": [
+				27.4746431,
+				42.5146,
+				27.4746431,
+				42.5146
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "stara-zagora",
+			"name": "Stara Zagora",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Bulgaria",
+			"centroid": [
+				25.6227148,
+				42.4231328
+			],
+			"bbox": [
+				25.6227148,
+				42.4231328,
+				25.6227148,
+				42.4231328
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "plovdiv",
+			"name": "Plovdiv",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Bulgaria",
+			"centroid": [
+				24.7539823,
+				42.1539761
+			],
+			"bbox": [
+				24.7539823,
+				42.1539761,
+				24.7539823,
+				42.1539761
+			],
+			"colorIndex": 0
+		}
+	],
+	"tourOrder": [
+		"saint-petersburg",
+		"tallinn",
+		"tartu",
+		"perm",
+		"riga",
+		"nizhny-novgorod",
+		"siauliai",
+		"daugavpils",
+		"moscow",
+		"kazan",
+		"panevezys",
+		"klaipeda",
+		"vitsyebsk",
+		"kaunas",
+		"ufa",
+		"vilnius",
+		"orsha",
+		"barysaw",
+		"minsk",
+		"mahilyow",
+		"hrodna",
+		"tolyatti",
+		"samara",
+		"baranavichy",
+		"babruysk",
+		"homyel",
+		"pinsk",
+		"brest",
+		"mazyr",
+		"voronezh",
+		"saratov",
+		"kyiv",
+		"kharkiv",
+		"lviv",
+		"khmelnytskyi",
+		"volgograd",
+		"luhansk",
+		"dnipro",
+		"donetsk",
+		"kryvyi-rih",
+		"zaporizhzhia",
+		"balti",
+		"rostov-on-don",
+		"iasi",
+		"mariupol",
+		"oradea",
+		"chisinau",
+		"mykolaiv",
+		"tiraspol",
+		"cluj-napoca",
+		"bacau",
+		"odesa",
+		"timisoara",
+		"brasov",
+		"galati",
+		"braila",
+		"ploiesti",
+		"bucharest",
+		"craiova",
+		"constanta",
+		"ruse",
+		"pleven",
+		"varna",
+		"sofia",
+		"burgas",
+		"stara-zagora",
+		"plovdiv"
+	]
+}

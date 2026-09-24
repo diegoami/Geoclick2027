@@ -1,0 +1,905 @@
+{
+	"zagreb": {
+		"kind": "city",
+		"population": 722526,
+		"populationRank": 20,
+		"region": "Grad Zagreb",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"milano": {
+		"kind": "city",
+		"population": 2945000,
+		"populationRank": 5,
+		"population1950": 1883000,
+		"region": "Lombardia",
+		"coastal": false,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"From Mediolanum, \"in the middle of the plain\" — medio plus a Celtic word for a plain.",
+				"Leonardo painted the Last Supper here, on a wall that has been deteriorating since he finished it in 1498.",
+				"It is Italy’s financial capital and one of the world’s four fashion capitals, and its Duomo took nearly six centuries to build."
+			],
+			"it": [
+				"Da Mediolanum, \"in mezzo alla pianura\": medio più una parola celtica che significa pianura.",
+				"Qui Leonardo dipinse il Cenacolo, su un muro che si deteriora da quando lo finì, nel 1498.",
+				"È la capitale finanziaria d’Italia e una delle quattro capitali mondiali della moda, e per costruire il suo Duomo ci sono voluti quasi sei secoli."
+			]
+		}
+	},
+	"verona": {
+		"kind": "city",
+		"population": 347459,
+		"populationRank": 36,
+		"region": "Veneto",
+		"coastal": false,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Of uncertain origin, possibly Etruscan or from a Celtic personal name.",
+				"Its Roman arena from 30 AD still stages opera to 15,000 people, and the city is a UNESCO site.",
+				"Shakespeare set Romeo and Juliet here without ever visiting; the balcony was added to a medieval house in the 1930s."
+			],
+			"it": [
+				"Di origine incerta, forse etrusca o da un nome personale celtico.",
+				"La sua Arena romana, del 30 d.C., ospita ancora l’opera davanti a 15.000 spettatori, e la città è patrimonio UNESCO.",
+				"Shakespeare vi ambientò Romeo e Giulietta senza esserci mai stato; il balcone fu aggiunto a una casa medievale negli anni Trenta del Novecento."
+			]
+		}
+	},
+	"rijeka": {
+		"kind": "city",
+		"population": 170992,
+		"populationRank": 46,
+		"region": "Primorsko-Goranska",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"novi-sad": {
+		"kind": "city",
+		"population": 225457,
+		"populationRank": 41,
+		"region": "Južno-Backi",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"torino": {
+		"kind": "city",
+		"population": 1652000,
+		"populationRank": 8,
+		"population1950": 1011000,
+		"region": "Piemonte",
+		"coastal": false,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"From Augusta Taurinorum — the Taurini were the local Celtic-Ligurian people, and the bull on the city arms is a pun on their name.",
+				"It was the first capital of united Italy, from 1861 to 1865, and Fiat was founded here in 1899.",
+				"Its Mole Antonelliana, built as a synagogue and now the film museum, was the tallest brick building in the world."
+			],
+			"it": [
+				"Da Augusta Taurinorum: i Taurini erano il popolo celto-ligure del luogo, e il toro dello stemma cittadino è un gioco di parole sul loro nome.",
+				"Fu la prima capitale dell’Italia unita, dal 1861 al 1865, e nel 1899 vi nacque la Fiat.",
+				"La sua Mole Antonelliana, nata come sinagoga e oggi sede del Museo del Cinema, era l’edificio in mattoni più alto del mondo."
+			]
+		}
+	},
+	"prijedor": {
+		"kind": "city",
+		"population": 104858,
+		"populationRank": 62,
+		"region": "Serbian Republic",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"belgrade": {
+		"kind": "city",
+		"population": 1099000,
+		"populationRank": 12,
+		"population1950": 411000,
+		"region": "Grad Beograd",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"banja-luka": {
+		"kind": "city",
+		"population": 221738,
+		"populationRank": 42,
+		"region": "Serbian Republic",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"tuzla": {
+		"kind": "city",
+		"population": 144334,
+		"populationRank": 54,
+		"coastal": false,
+		"position": "north-east"
+	},
+	"bologna": {
+		"kind": "city",
+		"population": 488172,
+		"populationRank": 28,
+		"region": "Emilia-Romagna",
+		"coastal": false,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"From Bononia, a Celtic Boii settlement Latinised — the Boii also named Bohemia.",
+				"Its university, founded 1088, is the oldest continuously operating one in the world.",
+				"It has about 38 km of arcaded porticoes, a UNESCO site, and is nicknamed la dotta, la grassa, la rossa — learned, fat and red."
+			],
+			"it": [
+				"Da Bononia, un centro celtico dei Boi poi latinizzato: i Boi diedero il nome anche alla Boemia.",
+				"La sua università, fondata nel 1088, è la più antica del mondo tra quelle in attività ininterrotta.",
+				"Ha circa 38 km di portici, patrimonio UNESCO, ed è soprannominata la dotta, la grassa, la rossa."
+			]
+		}
+	},
+	"genova": {
+		"kind": "city",
+		"population": 647497,
+		"populationRank": 24,
+		"region": "Liguria",
+		"coastal": true,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Possibly from a Ligurian root genu, a knee or a mouth — the bend of its harbour.",
+				"Columbus was born here, and the republic of Genoa ran a trading empire from Crimea to Gibraltar.",
+				"Its Rolli palaces are a UNESCO site, and pesto, focaccia and the jeans fabric named for Gênes all come from the city."
+			],
+			"it": [
+				"Forse dalla radice ligure genu, \"ginocchio\" o \"bocca\": la curva del suo porto.",
+				"Qui nacque Colombo, e la Repubblica di Genova resse un impero commerciale dalla Crimea a Gibilterra.",
+				"I palazzi dei Rolli sono patrimonio UNESCO, e dalla città vengono il pesto, la focaccia e il tessuto dei jeans, che prende il nome da Gênes."
+			]
+		}
+	},
+	"zenica": {
+		"kind": "city",
+		"population": 164423,
+		"populationRank": 49,
+		"region": "Zenica-Doboj",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"kragujevac": {
+		"kind": "city",
+		"population": 171197,
+		"populationRank": 45,
+		"region": "Šumadijski",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"cacak": {
+		"kind": "city",
+		"population": 170000,
+		"populationRank": 47,
+		"region": "Moravicki",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"sarajevo": {
+		"kind": "city",
+		"population": 696731,
+		"populationRank": 21,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"firenze": {
+		"kind": "city",
+		"population": 1500000,
+		"populationRank": 9,
+		"region": "Toscana",
+		"coastal": false,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"From Florentia, \"flourishing\" — a Roman colony of 59 BC for Caesar’s veterans.",
+				"The Renaissance began here: Brunelleschi’s dome, still the largest masonry dome in the world, was raised without a supporting framework.",
+				"Its dialect became standard Italian because Dante, Petrarch and Boccaccio all wrote in it."
+			],
+			"it": [
+				"Da Florentia, \"la fiorente\": colonia romana del 59 a.C. per i veterani di Cesare.",
+				"Qui è cominciato il Rinascimento: la cupola del Brunelleschi, ancora oggi la più grande cupola in muratura del mondo, fu innalzata senza centine.",
+				"Il suo dialetto è diventato l’italiano perché Dante, Petrarca e Boccaccio scrissero tutti in fiorentino."
+			]
+		}
+	},
+	"gijon": {
+		"kind": "city",
+		"population": 335972,
+		"populationRank": 37,
+		"region": "Principado de Asturias",
+		"coastal": true,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Probably from Latin saxum, a rock, through an older Gigia.",
+				"Asturias’s largest city and its industrial port, built on coal and steel.",
+				"Its Roman baths sit under the old fishermen’s quarter, Cimavilla, on the headland."
+			],
+			"it": [
+				"Probabilmente dal latino saxum, roccia, attraverso un più antico Gigia.",
+				"La città più grande delle Asturie e il suo porto industriale, cresciuto sul carbone e sull’acciaio.",
+				"Le sue terme romane si trovano sotto l’antico quartiere dei pescatori, Cimavilla, sul promontorio."
+			]
+		}
+	},
+	"split": {
+		"kind": "city",
+		"population": 214741,
+		"populationRank": 43,
+		"region": "Splitsko-Dalmatinska",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"mostar": {
+		"kind": "city",
+		"population": 163067,
+		"populationRank": 51,
+		"region": "Herzegovina-Neretva",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"nis": {
+		"kind": "city",
+		"population": 250000,
+		"populationRank": 40,
+		"region": "Nišavski",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"la-coruna": {
+		"kind": "city",
+		"population": 370610,
+		"populationRank": 34,
+		"region": "Galicia",
+		"coastal": true,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Of disputed origin, possibly from Latin columna, a column — fitting, given its tower.",
+				"The Tower of Hercules there is a working Roman lighthouse from the first century, the oldest still in use, and a UNESCO site.",
+				"The Spanish Armada sailed from here in 1588, and Drake attacked the town the next year."
+			],
+			"it": [
+				"Di origine discussa, forse dal latino columna, \"colonna\": un nome appropriato, vista la sua torre.",
+				"La Torre di Ercole è un faro romano del I secolo tuttora in funzione, il più antico ancora in uso, ed è patrimonio UNESCO.",
+				"L’Invincibile Armata salpò da qui nel 1588, e Drake attaccò la città l’anno dopo."
+			]
+		}
+	},
+	"san-sebastian": {
+		"kind": "city",
+		"population": 357468,
+		"populationRank": 35,
+		"region": "País Vasco",
+		"coastal": true,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"For St Sebastian; in Basque it is Donostia, which is the same saint’s name with the Basque \"don\" honorific.",
+				"It has more Michelin stars per head than almost anywhere in the world.",
+				"Its pintxos bars serve small plates left on the counter, and its film festival is Spain’s most important."
+			],
+			"it": [
+				"Da San Sebastiano; in basco è Donostia, lo stesso nome del santo con il titolo onorifico basco \"don\".",
+				"Ha più stelle Michelin per abitante di quasi ogni altro luogo al mondo.",
+				"Nei suoi bar di pintxos i piccoli piatti restano esposti sul bancone, e il suo festival del cinema è il più importante di Spagna."
+			]
+		}
+	},
+	"bilbao": {
+		"kind": "city",
+		"population": 875552,
+		"populationRank": 15,
+		"region": "País Vasco",
+		"coastal": true,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Of disputed origin, possibly from bi-albo, \"two sides\" of the river, in Basque.",
+				"The Guggenheim, opened 1997, turned a dying steel port into a destination, and the effect is named after the city.",
+				"Its estuary was so polluted it was biologically dead; salmon have returned since the cleanup."
+			],
+			"it": [
+				"Di origine discussa, forse dal basco bi-albo, i \"due lati\" del fiume.",
+				"Il Guggenheim, aperto nel 1997, ha fatto di un porto siderurgico morente una meta, e l’effetto porta il nome della città.",
+				"Il suo estuario era così inquinato da essere biologicamente morto; dopo il risanamento sono tornati i salmoni."
+			]
+		}
+	},
+	"pristina": {
+		"kind": "city",
+		"population": 465186,
+		"populationRank": 29,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "east"
+	},
+	"peja": {
+		"kind": "city",
+		"population": 105163,
+		"populationRank": 61,
+		"region": "Ðakovica",
+		"coastal": false,
+		"position": "east"
+	},
+	"podgorica": {
+		"kind": "city",
+		"population": 145850,
+		"populationRank": 53,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "east"
+	},
+	"pescara": {
+		"kind": "city",
+		"population": 314789,
+		"populationRank": 38,
+		"region": "Abruzzo",
+		"coastal": true,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"From Piscaria, \"abounding in fish\", the name of the river.",
+				"Gabriele d’Annunzio was born here, and the province was created in 1927 out of parts of two others.",
+				"It has the widest beach on the Adriatic and the largest port in Abruzzo."
+			],
+			"it": [
+				"Da Piscaria, \"ricca di pesci\", il nome del fiume.",
+				"Qui nacque Gabriele d’Annunzio, e la provincia fu creata nel 1927 con parti di altre due.",
+				"Ha la spiaggia più ampia dell’Adriatico e il porto più grande d’Abruzzo."
+			]
+		}
+	},
+	"prizren": {
+		"kind": "city",
+		"population": 171464,
+		"populationRank": 44,
+		"coastal": false,
+		"position": "east"
+	},
+	"vigo": {
+		"kind": "city",
+		"population": 378952,
+		"populationRank": 32,
+		"region": "Galicia",
+		"coastal": true,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"From Latin vicus, a village or settlement.",
+				"It lands more fish than any other port in Europe.",
+				"The Cíes islands off it are a national park, and Jules Verne had the Nautilus visit its bay."
+			],
+			"it": [
+				"Dal latino vicus, villaggio o insediamento.",
+				"Nessun altro porto d’Europa sbarca più pesce.",
+				"Le isole Cíes, al largo, sono un parco nazionale, e Giulio Verne fece entrare il Nautilus nella sua baia."
+			]
+		}
+	},
+	"shkoder": {
+		"kind": "city",
+		"population": 155767,
+		"populationRank": 52,
+		"coastal": false,
+		"position": "east"
+	},
+	"tetovo": {
+		"kind": "city",
+		"population": 119132,
+		"populationRank": 57,
+		"coastal": false,
+		"position": "east"
+	},
+	"skopje": {
+		"kind": "city",
+		"population": 494087,
+		"populationRank": 27,
+		"region": "Centar",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "east"
+	},
+	"roma": {
+		"kind": "city",
+		"population": 3339000,
+		"populationRank": 3,
+		"population1950": 1884000,
+		"region": "Lazio",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Legend says Romulus; more likely from Etruscan Ruma, a family name, or from an old word for the river.",
+				"It was the largest city in the world for about five centuries and the first to reach a million people.",
+				"Its historic centre, the Vatican and the extraterritorial properties are jointly a UNESCO site, and the Pantheon’s dome is still the largest unreinforced concrete dome ever built."
+			],
+			"it": [
+				"La leggenda dice Romolo; più probabilmente viene dall’etrusco Ruma, nome di famiglia, o da un’antica parola per il fiume.",
+				"Fu la città più grande del mondo per circa cinque secoli e la prima a raggiungere il milione di abitanti.",
+				"Il centro storico, il Vaticano e le proprietà extraterritoriali sono insieme patrimonio UNESCO, e la cupola del Pantheon è ancora la più grande cupola in calcestruzzo non armato mai costruita."
+			]
+		}
+	},
+	"zaragoza": {
+		"kind": "city",
+		"population": 649404,
+		"populationRank": 23,
+		"region": "Aragón",
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"From Caesaraugusta, founded by Augustus — the name worn down through Arabic Saraqusta.",
+				"Its basilica of El Pilar is the first church in the world dedicated to the Virgin, by tradition.",
+				"Goya was born in a village nearby and painted a dome in that basilica."
+			],
+			"it": [
+				"Da Caesaraugusta, fondata da Augusto: un nome consumato dal tempo passando per l’arabo Saraqusta.",
+				"La sua basilica del Pilar è, per tradizione, la prima chiesa al mondo dedicata alla Vergine.",
+				"Goya nacque in un villaggio vicino e dipinse una cupola di quella basilica."
+			]
+		}
+	},
+	"braga": {
+		"kind": "city",
+		"population": 826833,
+		"populationRank": 18,
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"From the Bracari, a Celtic people; Rome made it Bracara Augusta and it became the religious capital of the country.",
+				"Its archbishops outranked Lisbon's for centuries, and the saying goes that Braga prays while Porto works.",
+				"Bom Jesus do Monte above the town climbs a baroque staircase of nearly six hundred steps, and a water-counterweight funicular from 1882 still hauls those who decline."
+			],
+			"it": [
+				"Prende il nome dai Bracari, un popolo celtico; Roma ne fece Bracara Augusta, e divenne la capitale religiosa del paese.",
+				"Per secoli i suoi arcivescovi ebbero la precedenza su quelli di Lisbona, e come dice il proverbio, Braga prega mentre Porto lavora.",
+				"Al Bom Jesus do Monte, sopra la città, si sale per una scalinata barocca di quasi seicento gradini, e chi vi rinuncia ci arriva ancora con una funicolare a contrappeso d’acqua del 1882."
+			]
+		}
+	},
+	"barcelona": {
+		"kind": "city",
+		"population": 4920000,
+		"populationRank": 2,
+		"population1950": 1809000,
+		"region": "Cataluña",
+		"coastal": true,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Possibly from the Barcid family — Hamilcar Barca, Hannibal’s father — or from an Iberian name.",
+				"The Sagrada Família has been under construction since 1882 and is still unfinished.",
+				"Gaudí’s work here forms seven UNESCO-listed buildings, and the 1992 Olympics reopened the city to its seafront."
+			],
+			"it": [
+				"Forse dai Barcidi, la famiglia di Amilcare Barca, padre di Annibale, oppure da un nome iberico.",
+				"La Sagrada Família è in costruzione dal 1882 e non è ancora finita.",
+				"Qui sette edifici di Gaudí sono patrimonio UNESCO, e le Olimpiadi del 1992 hanno restituito alla città il suo lungomare."
+			]
+		}
+	},
+	"tirana": {
+		"kind": "city",
+		"population": 895350,
+		"populationRank": 14,
+		"region": "Durrës",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "east"
+	},
+	"durres": {
+		"kind": "city",
+		"population": 142432,
+		"populationRank": 55,
+		"coastal": true,
+		"position": "east"
+	},
+	"porto": {
+		"kind": "city",
+		"population": 1337000,
+		"populationRank": 10,
+		"population1950": 730000,
+		"coastal": true,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"From Portus Cale, the Roman harbour at the Douro mouth — the name of the town became the name of the country.",
+				"Port wine is named for it, though the wine is grown 100 km upriver and only aged in Vila Nova de Gaia across the water.",
+				"Its Luís I bridge was built in 1886 by a partner of Gustave Eiffel, and the Lello bookshop below it is claimed as an inspiration for Hogwarts."
+			],
+			"it": [
+				"Viene da Portus Cale, il porto romano alla foce del Douro: il nome della città è diventato quello del paese.",
+				"Il vino Porto prende il nome dalla città, anche se nasce 100 km più a monte e a Vila Nova de Gaia, sull’altra riva, viene solo messo a invecchiare.",
+				"Il suo ponte Luís I fu costruito nel 1886 da un socio di Gustave Eiffel, e la libreria Lello, più in basso, viene indicata come una delle ispirazioni di Hogwarts."
+			]
+		}
+	},
+	"elbasan": {
+		"kind": "city",
+		"population": 165010,
+		"populationRank": 48,
+		"coastal": false,
+		"position": "east"
+	},
+	"bari": {
+		"kind": "city",
+		"population": 500577,
+		"populationRank": 26,
+		"region": "Apulia",
+		"coastal": true,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"From Barium, of pre-Roman origin.",
+				"The relics of St Nicholas were stolen from Myra by Bari sailors in 1087 and brought here, making it a pilgrimage site for Orthodox Christians too.",
+				"Its old town women make orecchiette pasta by hand in the street, and the province is a major olive oil producer."
+			],
+			"it": [
+				"Da Barium, di origine preromana.",
+				"Le reliquie di san Nicola furono trafugate da Mira da marinai baresi nel 1087 e portate qui, facendone meta di pellegrinaggio anche per i cristiani ortodossi.",
+				"Nella città vecchia le donne fanno le orecchiette a mano per strada, e la provincia è una grande produttrice di olio d’oliva."
+			]
+		}
+	},
+	"napoli": {
+		"kind": "city",
+		"population": 2250000,
+		"populationRank": 7,
+		"population1950": 1498000,
+		"region": "Campania",
+		"coastal": true,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"From Greek Neapolis, \"new city\" — founded by Greeks around 600 BC, so the \"new\" city is 2,600 years old.",
+				"Vesuvius above it buried Pompeii and Herculaneum in 79 AD, and both are UNESCO sites.",
+				"Pizza was invented here, and Neapolitan pizza-making is on the UNESCO intangible heritage list."
+			],
+			"it": [
+				"Dal greco Neapolis, \"città nuova\": fondata dai Greci intorno al 600 a.C., la città \"nuova\" ha 2.600 anni.",
+				"Il Vesuvio, che la sovrasta, seppellì Pompei ed Ercolano nel 79 d.C., ed entrambe sono patrimonio UNESCO.",
+				"Qui è nata la pizza, e l’arte del pizzaiuolo napoletano è nella lista UNESCO del patrimonio immateriale."
+			]
+		}
+	},
+	"thessaloniki": {
+		"kind": "city",
+		"population": 828000,
+		"populationRank": 17,
+		"population1950": 292000,
+		"region": "Kentriki Makedonia",
+		"coastal": true,
+		"position": "east"
+	},
+	"salerno": {
+		"kind": "city",
+		"population": 954265,
+		"populationRank": 13,
+		"region": "Campania",
+		"coastal": true,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Probably from a pre-Roman root sal, salt or a river name.",
+				"Its medical school was the first in the Western world, active from the 800s, and admitted women.",
+				"The Amalfi Coast is in this province, a UNESCO site, and the Greek temples at Paestum are better preserved than most in Greece."
+			],
+			"it": [
+				"Probabilmente da una radice preromana sal, \"sale\", o da un nome di fiume.",
+				"La sua Scuola Medica fu la prima del mondo occidentale, attiva dal IX secolo, e ammetteva le donne.",
+				"La Costiera Amalfitana, patrimonio UNESCO, è in questa provincia, e i templi greci di Paestum sono meglio conservati di quasi tutti quelli in Grecia."
+			]
+		}
+	},
+	"madrid": {
+		"kind": "city",
+		"population": 5567000,
+		"populationRank": 1,
+		"population1950": 1700000,
+		"region": "Comunidad de Madrid",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"From Arabic al-Majrit, \"source of water\" — the Moorish fortress was named for its streams, and the Christians kept the name.",
+				"A provincial town until Philip II moved the court here in 1561, chosen largely for sitting in the middle of the country.",
+				"At 650 m it is the highest capital in Europe, and the Prado holds the finest collection of Spanish painting anywhere."
+			],
+			"it": [
+				"Dall’arabo al-Majrit, \"sorgente d’acqua\": la fortezza moresca prese il nome dai suoi ruscelli, e i cristiani lo mantennero.",
+				"Una città di provincia finché Filippo II non vi trasferì la corte nel 1561, scegliendola soprattutto perché stava al centro del paese.",
+				"A 650 m è la capitale più alta d’Europa, e il Prado custodisce la più bella collezione di pittura spagnola al mondo."
+			]
+		}
+	},
+	"coimbra": {
+		"kind": "city",
+		"population": 106582,
+		"populationRank": 60,
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"From Conimbriga, a Celtic hill fort nearby; briga means a fortified place, the same element as in many Iberian names.",
+				"Its university, founded in 1290, is one of the oldest in continuous operation anywhere, and its baroque library is kept free of insects by a colony of bats.",
+				"The capital of Portugal for over a century in the Middle Ages, before Lisbon took over."
+			],
+			"it": [
+				"Da Conimbriga, una fortezza celtica d’altura poco lontano; briga significa \"luogo fortificato\", lo stesso elemento di molti nomi iberici.",
+				"La sua università, fondata nel 1290, è una delle più antiche al mondo rimaste sempre in attività, e a tenere lontani gli insetti dalla sua biblioteca barocca è una colonia di pipistrelli.",
+				"Nel Medioevo fu la capitale del Portogallo per più di un secolo, prima che le subentrasse Lisbona."
+			]
+		}
+	},
+	"larissa": {
+		"kind": "city",
+		"population": 128758,
+		"populationRank": 56,
+		"region": "Thessalia",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"palma-de-mallorca": {
+		"kind": "city",
+		"population": 375773,
+		"populationRank": 33,
+		"region": "Islas Baleares",
+		"coastal": true,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Latin palma, a palm — and Mallorca is simply maior, the larger island, against Menorca the smaller.",
+				"Its cathedral has the largest Gothic rose window in the world, and Gaudí reworked the interior.",
+				"Chopin and George Sand spent a famously miserable winter in a monastery at Valldemossa nearby."
+			],
+			"it": [
+				"Dal latino palma, la palma: e Maiorca è semplicemente maior, l’isola più grande, di fronte a Minorca, la più piccola.",
+				"La sua cattedrale ha il rosone gotico più grande del mondo, e Gaudí ne rimaneggiò l’interno.",
+				"Chopin e George Sand trascorsero un inverno notoriamente infelice in un monastero di Valldemossa, poco lontano."
+			]
+		}
+	},
+	"valencia": {
+		"kind": "city",
+		"population": 808000,
+		"populationRank": 19,
+		"population1950": 506000,
+		"region": "Comunidad Valenciana",
+		"coastal": true,
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Latin valentia, \"strength\" or \"valour\" — a name Rome gave several towns.",
+				"Paella comes from its Albufera lagoon, cooked over orange wood with rabbit and beans.",
+				"Its Water Tribunal has met outside the cathedral every Thursday for a thousand years to settle irrigation disputes, and is UNESCO-listed."
+			],
+			"it": [
+				"Il latino valentia, \"forza\" o \"valore\": un nome che Roma diede a diverse città.",
+				"La paella nasce nella sua laguna, l’Albufera, e si cuoce su legna d’arancio con coniglio e fagioli.",
+				"Il suo Tribunale delle Acque si riunisce ogni giovedì davanti alla cattedrale da mille anni per dirimere le liti sull’irrigazione, ed è patrimonio UNESCO."
+			]
+		}
+	},
+	"volos": {
+		"kind": "city",
+		"population": 110632,
+		"populationRank": 59,
+		"region": "Thessalia",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"cagliari": {
+		"kind": "city",
+		"population": 291511,
+		"populationRank": 39,
+		"region": "Sardegna",
+		"coastal": true,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"From Karalis, probably Phoenician, meaning something like \"rocky place\".",
+				"Its Roman amphitheatre is cut directly into the rock of the hillside.",
+				"Flamingos breed in the salt pans inside the city limits, thousands of them, within sight of the apartment blocks."
+			],
+			"it": [
+				"Da Karalis, probabilmente fenicio, con un significato simile a \"luogo roccioso\".",
+				"Il suo anfiteatro romano è scavato direttamente nella roccia della collina.",
+				"I fenicotteri nidificano a migliaia nelle saline dentro i confini comunali, in vista dei condomini."
+			]
+		}
+	},
+	"lisboa": {
+		"kind": "city",
+		"population": 2812000,
+		"populationRank": 6,
+		"population1950": 1304000,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"The oldest layer of all: probably Phoenician Alis Ubbo, \"safe harbour\", though the Romans preferred a legend about Ulysses founding it.",
+				"The 1755 earthquake, fire and tsunami killed tens of thousands and led to the first scientific study of an earthquake anywhere.",
+				"Its Belém tower and Jerónimos monastery were paid for with a 5% tax on the spices coming back from India."
+			],
+			"it": [
+				"Lo strato più antico di tutti: probabilmente il fenicio Alis Ubbo, \"porto sicuro\", anche se i Romani preferivano la leggenda che la voleva fondata da Ulisse.",
+				"Il terremoto, l’incendio e il maremoto del 1755 fecero decine di migliaia di morti e portarono al primo studio scientifico di un terremoto mai condotto al mondo.",
+				"La torre di Belém e il monastero dos Jerónimos furono pagati con una tassa del 5% sulle spezie che arrivavano dall’India."
+			]
+		}
+	},
+	"setubal": {
+		"kind": "city",
+		"population": 117974,
+		"populationRank": 58,
+		"region": "Lisboa",
+		"coastal": true,
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Uncertain: possibly from Cetobriga, a Roman fish-salting town, with briga again the fortified place.",
+				"Its estuary holds a resident pod of bottlenose dolphins, one of very few in Europe.",
+				"The Arrábida hills beside it drop straight into the sea, and the moscatel grown on them is fortified like port."
+			],
+			"it": [
+				"Un’origine incerta: forse da Cetobriga, una città romana dove si salava il pesce, con briga ancora una volta \"luogo fortificato\".",
+				"Il suo estuario ospita un gruppo stanziale di tursiopi, uno dei pochissimi in Europa.",
+				"I colli dell’Arrábida, lì accanto, scendono a picco sul mare, e il moscatel dei loro pendii viene reso liquoroso come il Porto."
+			]
+		}
+	},
+	"patra": {
+		"kind": "city",
+		"population": 163360,
+		"populationRank": 50,
+		"region": "Dytiki Ellada",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"palermo": {
+		"kind": "city",
+		"population": 863000,
+		"populationRank": 16,
+		"population1950": 594000,
+		"region": "Sicily",
+		"coastal": true,
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"From Greek Panormos, \"all harbour\" — the whole bay is one.",
+				"It has been Phoenician, Greek, Roman, Byzantine, Arab, Norman, Swabian and Spanish, and its Arab-Norman buildings are a UNESCO site.",
+				"Its street markets still use Arabic-derived cries, and the Capuchin catacombs hold 8,000 mummified bodies."
+			],
+			"it": [
+				"Dal greco Panormos, \"tutto porto\": l’intera baia è un unico porto.",
+				"È stata fenicia, greca, romana, bizantina, araba, normanna, sveva e spagnola, e i suoi edifici arabo-normanni sono patrimonio UNESCO.",
+				"Nei suoi mercati di strada si sentono ancora grida di origine araba, e le catacombe dei Cappuccini custodiscono 8.000 corpi mummificati."
+			]
+		}
+	},
+	"athens": {
+		"kind": "city",
+		"population": 3242000,
+		"populationRank": 4,
+		"population1950": 1347000,
+		"region": "Attiki",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"murcia": {
+		"kind": "city",
+		"population": 406807,
+		"populationRank": 30,
+		"region": "Región de Murcia",
+		"coastal": false,
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Uncertain: possibly Latin myrtea, the myrtle, or murtia from the Arabic Mursiyah — the Moors founded the city in 825.",
+				"Its huerta is irrigated by canals the Moors dug eleven centuries ago, still running on the same gradients.",
+				"Called the orchard of Europe, it grows vegetables for half the continent from one of the driest places in it."
+			],
+			"it": [
+				"Origine incerta: forse il latino myrtea, il mirto, o murtia dall’arabo Mursiyah; furono i Mori a fondare la città, nell’825.",
+				"La sua huerta è irrigata da canali che i Mori scavarono undici secoli fa, e che scorrono ancora con le stesse pendenze.",
+				"Detta l’orto d’Europa, coltiva verdure per mezzo continente da una delle sue zone più aride."
+			]
+		}
+	},
+	"catania": {
+		"kind": "city",
+		"population": 674542,
+		"populationRank": 22,
+		"region": "Sicily",
+		"coastal": true,
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Possibly from Sicel katane, a grater or rough stone, for the lava field it is built on.",
+				"Etna has destroyed it repeatedly; after 1693 it was rebuilt in black-and-white baroque that is a UNESCO site.",
+				"Bellini was born here, and the city’s emblem is a Roman elephant carved in lava."
+			],
+			"it": [
+				"Forse dal siculo katane, \"grattugia\" o \"pietra ruvida\", per il campo di lava su cui è costruita.",
+				"L’Etna l’ha distrutta più volte; dopo il 1693 fu ricostruita in un barocco bianco e nero che è patrimonio UNESCO.",
+				"Qui nacque Bellini, e il simbolo della città è un elefante romano scolpito nella lava."
+			]
+		}
+	},
+	"sevilla": {
+		"kind": "city",
+		"population": 1212045,
+		"populationRank": 11,
+		"region": "Andalucía",
+		"coastal": false,
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"From Phoenician or Iberian Hisbaal, through Roman Hispalis and Arabic Ishbiliya.",
+				"It held a monopoly on trade with the Americas for two centuries, and Magellan’s expedition sailed from it.",
+				"Its cathedral is the largest Gothic church in the world and holds Columbus’s tomb."
+			],
+			"it": [
+				"Dal fenicio o iberico Hisbaal, attraverso la romana Hispalis e l’arabo Ishbiliya.",
+				"Per due secoli ebbe il monopolio del commercio con le Americhe, e da qui salpò la spedizione di Magellano.",
+				"La sua cattedrale è la più grande chiesa gotica del mondo e custodisce la tomba di Colombo."
+			]
+		}
+	},
+	"granada": {
+		"kind": "city",
+		"population": 388290,
+		"populationRank": 31,
+		"region": "Andalucía",
+		"coastal": false,
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Possibly from the pomegranate, granada, which is on its arms — or from an Arabic or Latin name.",
+				"The Alhambra above it was the last Moorish palace in Spain, surrendered in 1492.",
+				"The Sierra Nevada behind it has the southernmost ski resort in Europe, an hour from the coast."
+			],
+			"it": [
+				"Forse dal melograno, granada, che compare nel suo stemma, oppure da un nome arabo o latino.",
+				"L’Alhambra che la sovrasta fu l’ultimo palazzo moresco di Spagna, consegnato ai cristiani nel 1492.",
+				"La Sierra Nevada alle sue spalle ha la stazione sciistica più meridionale d’Europa, a un’ora dalla costa."
+			]
+		}
+	},
+	"malaga": {
+		"kind": "city",
+		"population": 550058,
+		"populationRank": 25,
+		"region": "Andalucía",
+		"coastal": true,
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"From Phoenician malaka, probably \"to salt\" — it was a fish-salting town.",
+				"Picasso was born here, and the museum of his work sits near the Roman theatre.",
+				"It is one of the oldest continuously inhabited cities in the world, founded about 770 BC."
+			],
+			"it": [
+				"Dal fenicio malaka, probabilmente \"salare\": era una città dove si salava il pesce.",
+				"Picasso nacque qui, e il museo dedicato alle sue opere sorge vicino al teatro romano.",
+				"È una delle città abitate ininterrottamente più antiche del mondo, fondata intorno al 770 a.C."
+			]
+		}
+	}
+}

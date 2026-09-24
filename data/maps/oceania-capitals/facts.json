@@ -1,0 +1,108 @@
+{
+	"ngerulmud": {
+		"kind": "city",
+		"population": 7026,
+		"populationRank": 9,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"majuro": {
+		"kind": "city",
+		"population": 25400,
+		"populationRank": 8,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"palikir": {
+		"kind": "city",
+		"population": 4645,
+		"populationRank": 11,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "north"
+	},
+	"tarawa": {
+		"kind": "city",
+		"population": 28802,
+		"populationRank": 7,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"funafuti": {
+		"kind": "city",
+		"population": 4749,
+		"populationRank": 10,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"honiara": {
+		"kind": "city",
+		"population": 76328,
+		"populationRank": 5,
+		"region": "Guadalcanal",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "centre"
+	},
+	"port-moresby": {
+		"kind": "city",
+		"population": 283733,
+		"populationRank": 3,
+		"region": "Central",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "west"
+	},
+	"port-vila": {
+		"kind": "city",
+		"population": 44040,
+		"populationRank": 6,
+		"region": "Shefa",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "east"
+	},
+	"suva": {
+		"kind": "city",
+		"population": 175399,
+		"populationRank": 4,
+		"region": "Central",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "east"
+	},
+	"canberra": {
+		"kind": "city",
+		"population": 327700,
+		"populationRank": 2,
+		"region": "Australian Capital Territory",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"From a Ngunnawal word, probably \"meeting place\".",
+				"Built as a compromise capital because Sydney and Melbourne could not agree, and designed by an American who won a competition.",
+				"Its street plan is a set of geometric axes aligned to the surrounding hills."
+			],
+			"it": [
+				"Da una parola ngunnawal, probabilmente \"luogo d’incontro\".",
+				"Costruita come capitale di compromesso perché Sydney e Melbourne non riuscivano ad accordarsi, e progettata da un americano che vinse un concorso.",
+				"La sua pianta stradale è un sistema di assi geometrici allineati alle colline circostanti."
+			]
+		}
+	},
+	"wellington": {
+		"kind": "city",
+		"population": 393400,
+		"populationRank": 1,
+		"region": "Manawatu-Wanganui",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south-east"
+	}
+}

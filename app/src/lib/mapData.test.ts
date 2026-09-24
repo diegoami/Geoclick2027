@@ -14,7 +14,7 @@ import {
 	listMapIds,
 	serializeMapIndex
 } from '../../../data/scripts/build-map-index';
-import { hooksForCountry, storedHooksFor } from '../../../data/scripts/factsHooks';
+import { authoredResolver, storedHooksFor } from '../../../data/scripts/factsHooks';
 import { mapGroups } from './mapCatalog';
 
 interface TargetLike {
@@ -201,10 +201,12 @@ describe('map data integrity - every committed map', () => {
 	// `npm run refresh-facts-hooks` - and forgetting the rebuild would leave
 	// the Italian written but never shown, with nothing else failing.
 	it.each(mapIds)('%s: ships the sentences its country file holds', (id) => {
-		const { country } = JSON.parse(
+		const { country, targets } = JSON.parse(
 			readFileSync(path.join(DEFAULT_MAPS_DIR, id, 'map.json'), 'utf8')
-		) as { country?: string };
-		const authored = hooksForCountry(country);
+		) as { country?: string; targets: { id: string; country?: string }[] };
+		// A town on a map of several countries (#39) carries its own country.
+		const hooksFor = authoredResolver(country);
+		const targetById = new Map(targets.map((t) => [t.id, t]));
 		const facts = JSON.parse(
 			readFileSync(path.join(DEFAULT_MAPS_DIR, id, 'facts.json'), 'utf8')
 		) as Record<string, { kind?: 'region' | 'city'; hooks?: unknown }>;
@@ -212,7 +214,9 @@ describe('map data integrity - every committed map', () => {
 			.filter(
 				([targetId, fact]) =>
 					JSON.stringify(fact.hooks) !==
-					JSON.stringify(storedHooksFor(authored[targetId], fact.kind))
+					JSON.stringify(
+						storedHooksFor(hooksFor(targetById.get(targetId) ?? { id: targetId }), fact.kind)
+					)
 			)
 			.map(([targetId]) => targetId);
 		expect(stale).toEqual([]);

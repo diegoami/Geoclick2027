@@ -1,0 +1,231 @@
+{
+	"id": "oceania-capitals",
+	"name": "Oceania — Capitals",
+	"country": "Oceania",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "ngerulmud",
+			"name": "Ngerulmud",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Palau",
+			"centroid": [
+				134.6265485,
+				7.4873962
+			],
+			"bbox": [
+				134.6265485,
+				7.4873962,
+				134.6265485,
+				7.4873962
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "majuro",
+			"name": "Majuro",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Marshall Islands",
+			"centroid": [
+				171.3800002,
+				7.1030043
+			],
+			"bbox": [
+				171.3800002,
+				7.1030043,
+				171.3800002,
+				7.1030043
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "palikir",
+			"name": "Palikir",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Federated States of Micronesia",
+			"centroid": [
+				158.1499743,
+				6.9166437
+			],
+			"bbox": [
+				158.1499743,
+				6.9166437,
+				158.1499743,
+				6.9166437
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "tarawa",
+			"name": "Tarawa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Kiribati",
+			"centroid": [
+				173.0175708,
+				1.3381875
+			],
+			"bbox": [
+				173.0175708,
+				1.3381875,
+				173.0175708,
+				1.3381875
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "funafuti",
+			"name": "Funafuti",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Tuvalu",
+			"centroid": [
+				179.2166471,
+				-8.516652
+			],
+			"bbox": [
+				179.2166471,
+				-8.516652,
+				179.2166471,
+				-8.516652
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "honiara",
+			"name": "Honiara",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Solomon Islands",
+			"centroid": [
+				159.9497657,
+				-9.4379943
+			],
+			"bbox": [
+				159.9497657,
+				-9.4379943,
+				159.9497657,
+				-9.4379943
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "port-moresby",
+			"name": "Port Moresby",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Papua New Guinea",
+			"centroid": [
+				147.1925036,
+				-9.4647078
+			],
+			"bbox": [
+				147.1925036,
+				-9.4647078,
+				147.1925036,
+				-9.4647078
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "port-vila",
+			"name": "Port Vila",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Vanuatu",
+			"centroid": [
+				168.3166406,
+				-17.7333504
+			],
+			"bbox": [
+				168.3166406,
+				-17.7333504,
+				168.3166406,
+				-17.7333504
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "suva",
+			"name": "Suva",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Fiji",
+			"centroid": [
+				178.4417073,
+				-18.1330159
+			],
+			"bbox": [
+				178.4417073,
+				-18.1330159,
+				178.4417073,
+				-18.1330159
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "canberra",
+			"name": "Canberra",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Australia",
+			"centroid": [
+				149.1290262,
+				-35.2830285
+			],
+			"bbox": [
+				149.1290262,
+				-35.2830285,
+				149.1290262,
+				-35.2830285
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "wellington",
+			"name": "Wellington",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "New Zealand",
+			"centroid": [
+				174.77720094690068,
+				-41.2920679923151
+			],
+			"bbox": [
+				174.77720094690068,
+				-41.2920679923151,
+				174.77720094690068,
+				-41.2920679923151
+			],
+			"colorIndex": 3
+		}
+	],
+	"tourOrder": [
+		"ngerulmud",
+		"majuro",
+		"palikir",
+		"tarawa",
+		"funafuti",
+		"honiara",
+		"port-moresby",
+		"port-vila",
+		"suva",
+		"canberra",
+		"wellington"
+	]
+}

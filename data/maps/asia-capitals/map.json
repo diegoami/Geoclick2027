@@ -1,0 +1,951 @@
+{
+	"id": "asia-capitals",
+	"name": "Asia — Capitals",
+	"country": "Asia",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "astana",
+			"name": "Astana",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Kazakhstan",
+			"centroid": [
+				71.4277742,
+				51.1811253
+			],
+			"bbox": [
+				71.4277742,
+				51.1811253,
+				71.4277742,
+				51.1811253
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "ulaanbaatar",
+			"name": "Ulaanbaatar",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Mongolia",
+			"centroid": [
+				106.9146699,
+				47.9186193
+			],
+			"bbox": [
+				106.9146699,
+				47.9186193,
+				106.9146699,
+				47.9186193
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "bishkek",
+			"name": "Bishkek",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Kyrgyzstan",
+			"centroid": [
+				74.5832584,
+				42.8750253
+			],
+			"bbox": [
+				74.5832584,
+				42.8750253,
+				74.5832584,
+				42.8750253
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "tbilisi",
+			"name": "Tbilisi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Georgia",
+			"centroid": [
+				44.7888496,
+				41.7269558
+			],
+			"bbox": [
+				44.7888496,
+				41.7269558,
+				44.7888496,
+				41.7269558
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "tashkent",
+			"name": "Tashkent",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Uzbekistan",
+			"centroid": [
+				69.26882294266261,
+				41.30382822156198
+			],
+			"bbox": [
+				69.26882294266261,
+				41.30382822156198,
+				69.26882294266261,
+				41.30382822156198
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "baku",
+			"name": "Baku",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Azerbaijan",
+			"centroid": [
+				49.8602713,
+				40.3972179
+			],
+			"bbox": [
+				49.8602713,
+				40.3972179,
+				49.8602713,
+				40.3972179
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "yerevan",
+			"name": "Yerevan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Armenia",
+			"centroid": [
+				44.5116055,
+				40.1830966
+			],
+			"bbox": [
+				44.5116055,
+				40.1830966,
+				44.5116055,
+				40.1830966
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "ankara",
+			"name": "Ankara",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Turkey",
+			"centroid": [
+				32.8624458,
+				39.9291844
+			],
+			"bbox": [
+				32.8624458,
+				39.9291844,
+				32.8624458,
+				39.9291844
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "beijing",
+			"name": "Beijing",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "China",
+			"centroid": [
+				116.39420089260611,
+				39.901720309862675
+			],
+			"bbox": [
+				116.39420089260611,
+				39.901720309862675,
+				116.39420089260611,
+				39.901720309862675
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "pyongyang",
+			"name": "Pyongyang",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "North Korea",
+			"centroid": [
+				125.7527449,
+				39.0213846
+			],
+			"bbox": [
+				125.7527449,
+				39.0213846,
+				125.7527449,
+				39.0213846
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "dushanbe",
+			"name": "Dushanbe",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Tajikistan",
+			"centroid": [
+				68.7738794,
+				38.5600352
+			],
+			"bbox": [
+				68.7738794,
+				38.5600352,
+				68.7738794,
+				38.5600352
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "ashgabat",
+			"name": "Ashgabat",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Turkmenistan",
+			"centroid": [
+				58.3832991,
+				37.9499949
+			],
+			"bbox": [
+				58.3832991,
+				37.9499949,
+				58.3832991,
+				37.9499949
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "seoul",
+			"name": "Seoul",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "South Korea",
+			"centroid": [
+				126.9977851,
+				37.568295
+			],
+			"bbox": [
+				126.9977851,
+				37.568295,
+				126.9977851,
+				37.568295
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "tokyo",
+			"name": "Tokyo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Japan",
+			"centroid": [
+				139.7494616,
+				35.6869628
+			],
+			"bbox": [
+				139.7494616,
+				35.6869628,
+				139.7494616,
+				35.6869628
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "tehran",
+			"name": "Tehran",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Iran",
+			"centroid": [
+				51.4223982,
+				35.6738886
+			],
+			"bbox": [
+				51.4223982,
+				35.6738886,
+				51.4223982,
+				35.6738886
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "nicosia",
+			"name": "Nicosia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Cyprus",
+			"centroid": [
+				33.3666349,
+				35.1666765
+			],
+			"bbox": [
+				33.3666349,
+				35.1666765,
+				33.3666349,
+				35.1666765
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "kabul",
+			"name": "Kabul",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Afghanistan",
+			"centroid": [
+				69.1813142,
+				34.5186361
+			],
+			"bbox": [
+				69.1813142,
+				34.5186361,
+				69.1813142,
+				34.5186361
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "beirut",
+			"name": "Beirut",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Lebanon",
+			"centroid": [
+				35.5077624,
+				33.873921
+			],
+			"bbox": [
+				35.5077624,
+				33.873921,
+				35.5077624,
+				33.873921
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "islamabad",
+			"name": "Islamabad",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Pakistan",
+			"centroid": [
+				73.08063017764825,
+				33.689368483707085
+			],
+			"bbox": [
+				73.08063017764825,
+				33.689368483707085,
+				73.08063017764825,
+				33.689368483707085
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "damascus",
+			"name": "Damascus",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Syria",
+			"centroid": [
+				36.29805,
+				33.5019799
+			],
+			"bbox": [
+				36.29805,
+				33.5019799,
+				36.29805,
+				33.5019799
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "baghdad",
+			"name": "Baghdad",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Iraq",
+			"centroid": [
+				44.3919229,
+				33.3405944
+			],
+			"bbox": [
+				44.3919229,
+				33.3405944,
+				44.3919229,
+				33.3405944
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "amman",
+			"name": "Amman",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Jordan",
+			"centroid": [
+				35.9313541,
+				31.9519711
+			],
+			"bbox": [
+				35.9313541,
+				31.9519711,
+				35.9313541,
+				31.9519711
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "jerusalem",
+			"name": "Jerusalem",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Israel",
+			"centroid": [
+				35.2066259,
+				31.7784078
+			],
+			"bbox": [
+				35.2066259,
+				31.7784078,
+				35.2066259,
+				31.7784078
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "kuwait-city",
+			"name": "Kuwait City",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Kuwait",
+			"centroid": [
+				47.9763553,
+				29.3716635
+			],
+			"bbox": [
+				47.9763553,
+				29.3716635,
+				47.9763553,
+				29.3716635
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "new-delhi",
+			"name": "New Delhi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "India",
+			"centroid": [
+				77.19998,
+				28.600023
+			],
+			"bbox": [
+				77.19998,
+				28.600023,
+				77.19998,
+				28.600023
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "kathmandu",
+			"name": "Kathmandu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Nepal",
+			"centroid": [
+				85.3146964,
+				27.7186378
+			],
+			"bbox": [
+				85.3146964,
+				27.7186378,
+				85.3146964,
+				27.7186378
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "thimphu",
+			"name": "Thimphu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Bhutan",
+			"centroid": [
+				89.639014,
+				27.4729859
+			],
+			"bbox": [
+				89.639014,
+				27.4729859,
+				89.639014,
+				27.4729859
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "manama",
+			"name": "Manama",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Bahrain",
+			"centroid": [
+				50.5830517,
+				26.2361363
+			],
+			"bbox": [
+				50.5830517,
+				26.2361363,
+				50.5830517,
+				26.2361363
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "doha",
+			"name": "Doha",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Qatar",
+			"centroid": [
+				51.5329679,
+				25.286556
+			],
+			"bbox": [
+				51.5329679,
+				25.286556,
+				51.5329679,
+				25.286556
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "taipei",
+			"name": "Taipei",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Taiwan",
+			"centroid": [
+				121.5683333,
+				25.0358333
+			],
+			"bbox": [
+				121.5683333,
+				25.0358333,
+				121.5683333,
+				25.0358333
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "riyadh",
+			"name": "Riyadh",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Saudi Arabia",
+			"centroid": [
+				46.720487024887696,
+				24.634497474837755
+			],
+			"bbox": [
+				46.720487024887696,
+				24.634497474837755,
+				46.720487024887696,
+				24.634497474837755
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "abu-dhabi",
+			"name": "Abu Dhabi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "United Arab Emirates",
+			"centroid": [
+				54.3665934,
+				24.4666836
+			],
+			"bbox": [
+				54.3665934,
+				24.4666836,
+				54.3665934,
+				24.4666836
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "dhaka",
+			"name": "Dhaka",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Bangladesh",
+			"centroid": [
+				90.4066336,
+				23.7250056
+			],
+			"bbox": [
+				90.4066336,
+				23.7250056,
+				90.4066336,
+				23.7250056
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "muscat",
+			"name": "Muscat",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Oman",
+			"centroid": [
+				58.37831058458708,
+				23.58517901476684
+			],
+			"bbox": [
+				58.37831058458708,
+				23.58517901476684,
+				58.37831058458708,
+				23.58517901476684
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "ha-noi",
+			"name": "Hà Nội",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Vietnam",
+			"centroid": [
+				105.8480683,
+				21.0352731
+			],
+			"bbox": [
+				105.8480683,
+				21.0352731,
+				105.8480683,
+				21.0352731
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "naypyidaw",
+			"name": "Naypyidaw",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Myanmar",
+			"centroid": [
+				96.1166727,
+				19.7685029
+			],
+			"bbox": [
+				96.1166727,
+				19.7685029,
+				96.1166727,
+				19.7685029
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "vientiane",
+			"name": "Vientiane",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Laos",
+			"centroid": [
+				102.59998,
+				17.9666927
+			],
+			"bbox": [
+				102.59998,
+				17.9666927,
+				102.59998,
+				17.9666927
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "sanaa",
+			"name": "Sanaa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Yemen",
+			"centroid": [
+				44.2046475,
+				15.3566792
+			],
+			"bbox": [
+				44.2046475,
+				15.3566792,
+				44.2046475,
+				15.3566792
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "manila",
+			"name": "Manila",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Philippines",
+			"centroid": [
+				120.9802713,
+				14.6061048
+			],
+			"bbox": [
+				120.9802713,
+				14.6061048,
+				120.9802713,
+				14.6061048
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "bangkok",
+			"name": "Bangkok",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Thailand",
+			"centroid": [
+				100.5146988,
+				13.7519451
+			],
+			"bbox": [
+				100.5146988,
+				13.7519451,
+				100.5146988,
+				13.7519451
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "phnom-penh",
+			"name": "Phnom Penh",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Cambodia",
+			"centroid": [
+				104.9146886,
+				11.551976
+			],
+			"bbox": [
+				104.9146886,
+				11.551976,
+				104.9146886,
+				11.551976
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "colombo",
+			"name": "Colombo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Sri Lanka",
+			"centroid": [
+				79.8577506,
+				6.9319658
+			],
+			"bbox": [
+				79.8577506,
+				6.9319658,
+				79.8577506,
+				6.9319658
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "bandar-seri-begawan",
+			"name": "Bandar Seri Begawan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Brunei",
+			"centroid": [
+				114.9332841,
+				4.8833311
+			],
+			"bbox": [
+				114.9332841,
+				4.8833311,
+				114.9332841,
+				4.8833311
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "kuala-lumpur",
+			"name": "Kuala Lumpur",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Malaysia",
+			"centroid": [
+				101.68869929106194,
+				3.13979694393525
+			],
+			"bbox": [
+				101.68869929106194,
+				3.13979694393525,
+				101.68869929106194,
+				3.13979694393525
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "singapore",
+			"name": "Singapore",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Singapore",
+			"centroid": [
+				103.8538748,
+				1.2949793
+			],
+			"bbox": [
+				103.8538748,
+				1.2949793,
+				103.8538748,
+				1.2949793
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "jakarta",
+			"name": "Jakarta",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Indonesia",
+			"centroid": [
+				106.8274918,
+				-6.1724718
+			],
+			"bbox": [
+				106.8274918,
+				-6.1724718,
+				106.8274918,
+				-6.1724718
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "dili",
+			"name": "Dili",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "East Timor",
+			"centroid": [
+				125.5794559,
+				-8.5593884
+			],
+			"bbox": [
+				125.5794559,
+				-8.5593884,
+				125.5794559,
+				-8.5593884
+			],
+			"colorIndex": 3
+		}
+	],
+	"tourOrder": [
+		"astana",
+		"ulaanbaatar",
+		"bishkek",
+		"tbilisi",
+		"tashkent",
+		"baku",
+		"yerevan",
+		"ankara",
+		"beijing",
+		"pyongyang",
+		"dushanbe",
+		"ashgabat",
+		"seoul",
+		"tokyo",
+		"tehran",
+		"nicosia",
+		"kabul",
+		"beirut",
+		"islamabad",
+		"damascus",
+		"baghdad",
+		"amman",
+		"jerusalem",
+		"kuwait-city",
+		"new-delhi",
+		"kathmandu",
+		"thimphu",
+		"manama",
+		"doha",
+		"taipei",
+		"riyadh",
+		"abu-dhabi",
+		"dhaka",
+		"muscat",
+		"ha-noi",
+		"naypyidaw",
+		"vientiane",
+		"sanaa",
+		"manila",
+		"bangkok",
+		"phnom-penh",
+		"colombo",
+		"bandar-seri-begawan",
+		"kuala-lumpur",
+		"singapore",
+		"jakarta",
+		"dili"
+	]
+}
