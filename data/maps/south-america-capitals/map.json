@@ -1,0 +1,271 @@
+{
+	"id": "south-america-capitals",
+	"name": "South America — Capitals",
+	"country": "South America",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "caracas",
+			"name": "Caracas",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Venezuela",
+			"centroid": [
+				-66.9189831,
+				10.5029444
+			],
+			"bbox": [
+				-66.9189831,
+				10.5029444,
+				-66.9189831,
+				10.5029444
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "georgetown",
+			"name": "Georgetown",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Guyana",
+			"centroid": [
+				-58.1670286,
+				6.8019737
+			],
+			"bbox": [
+				-58.1670286,
+				6.8019737,
+				-58.1670286,
+				6.8019737
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "paramaribo",
+			"name": "Paramaribo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Suriname",
+			"centroid": [
+				-55.1670309,
+				5.8350301
+			],
+			"bbox": [
+				-55.1670309,
+				5.8350301,
+				-55.1670309,
+				5.8350301
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "bogota",
+			"name": "Bogotá",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Colombia",
+			"centroid": [
+				-74.0852898,
+				4.5983694
+			],
+			"bbox": [
+				-74.0852898,
+				4.5983694,
+				-74.0852898,
+				4.5983694
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "quito",
+			"name": "Quito",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Ecuador",
+			"centroid": [
+				-78.501997,
+				-0.2130423
+			],
+			"bbox": [
+				-78.501997,
+				-0.2130423,
+				-78.501997,
+				-0.2130423
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "lima",
+			"name": "Lima",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Peru",
+			"centroid": [
+				-77.052008,
+				-12.0460668
+			],
+			"bbox": [
+				-77.052008,
+				-12.0460668,
+				-77.052008,
+				-12.0460668
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "brasilia",
+			"name": "Brasília",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Brazil",
+			"centroid": [
+				-47.9179981,
+				-15.7813944
+			],
+			"bbox": [
+				-47.9179981,
+				-15.7813944,
+				-47.9179981,
+				-15.7813944
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "la-paz",
+			"name": "La Paz",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Bolivia",
+			"centroid": [
+				-68.151931,
+				-16.4960278
+			],
+			"bbox": [
+				-68.151931,
+				-16.4960278,
+				-68.151931,
+				-16.4960278
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "sucre",
+			"name": "Sucre",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Bolivia",
+			"centroid": [
+				-65.2595156,
+				-19.0409708
+			],
+			"bbox": [
+				-65.2595156,
+				-19.0409708,
+				-65.2595156,
+				-19.0409708
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "asuncion",
+			"name": "Asunción",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Paraguay",
+			"centroid": [
+				-57.62583375528301,
+				-25.29067083610963
+			],
+			"bbox": [
+				-57.62583375528301,
+				-25.29067083610963,
+				-57.62583375528301,
+				-25.29067083610963
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "santiago",
+			"name": "Santiago",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Chile",
+			"centroid": [
+				-70.65050407285783,
+				-33.44020506918074
+			],
+			"bbox": [
+				-70.65050407285783,
+				-33.44020506918074,
+				-70.65050407285783,
+				-33.44020506918074
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "buenos-aires",
+			"name": "Buenos Aires",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Argentina",
+			"centroid": [
+				-58.43251268766426,
+				-34.61071459139255
+			],
+			"bbox": [
+				-58.43251268766426,
+				-34.61071459139255,
+				-58.43251268766426,
+				-34.61071459139255
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "montevideo",
+			"name": "Montevideo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Uruguay",
+			"centroid": [
+				-56.18682337831074,
+				-34.90537638970807
+			],
+			"bbox": [
+				-56.18682337831074,
+				-34.90537638970807,
+				-56.18682337831074,
+				-34.90537638970807
+			],
+			"colorIndex": 4
+		}
+	],
+	"tourOrder": [
+		"caracas",
+		"georgetown",
+		"paramaribo",
+		"bogota",
+		"quito",
+		"lima",
+		"brasilia",
+		"la-paz",
+		"sucre",
+		"asuncion",
+		"santiago",
+		"buenos-aires",
+		"montevideo"
+	]
+}

@@ -1,0 +1,210 @@
+{
+	"id": "oceania-countries",
+	"name": "Oceania — Countries",
+	"country": "Oceania",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "papua-new-guinea",
+			"name": "Papua New Guinea",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				148.39425,
+				-6.48485
+			],
+			"bbox": [
+				140.8492,
+				-11.6126,
+				155.9393,
+				-1.3571
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						141.1649,
+						-4.565
+					],
+					[
+						144.5497,
+						-7.1794
+					],
+					[
+						148.4736,
+						-8.9113
+					]
+				],
+				"aspect": 3.35
+			}
+		},
+		{
+			"id": "solomon-islands",
+			"name": "Solomon Islands",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				161.30505,
+				-9.224
+			],
+			"bbox": [
+				155.6745,
+				-11.845,
+				166.9356,
+				-6.603
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						159.6873,
+						-9.4747
+					],
+					[
+						160.1885,
+						-9.6428
+					],
+					[
+						160.7003,
+						-9.7763
+					]
+				],
+				"aspect": 3.01
+			}
+		},
+		{
+			"id": "vanuatu",
+			"name": "Vanuatu",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				168.19155,
+				-16.98065
+			],
+			"bbox": [
+				166.5226,
+				-20.2531,
+				169.8605,
+				-13.7082
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						166.5907,
+						-14.7622
+					],
+					[
+						166.7177,
+						-15.1853
+					],
+					[
+						167.0312,
+						-15.5072
+					]
+				],
+				"aspect": 4.15
+			}
+		},
+		{
+			"id": "fiji",
+			"name": "Fiji",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				178.6258,
+				-17.6533
+			],
+			"bbox": [
+				177.2516,
+				-19.1575,
+				180,
+				-16.1491
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "australia",
+			"name": "Australia",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				133.27499999999998,
+				-26.8888
+			],
+			"bbox": [
+				112.9194,
+				-43.629,
+				153.6306,
+				-10.1486
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						117.6009,
+						-25.9259
+					],
+					[
+						133.5296,
+						-20.5339
+					],
+					[
+						149.4583,
+						-29.0744
+					]
+				],
+				"aspect": 1.59
+			}
+		},
+		{
+			"id": "new-zealand",
+			"name": "New Zealand",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				172.51685,
+				-40.8129
+			],
+			"bbox": [
+				166.4694,
+				-47.2052,
+				178.5643,
+				-34.4206
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						168.2039,
+						-45.8357
+					],
+					[
+						170.9878,
+						-44.0027
+					],
+					[
+						173.1104,
+						-41.6883
+					]
+				],
+				"aspect": 3.16
+			}
+		}
+	],
+	"tourOrder": [
+		"papua-new-guinea",
+		"solomon-islands",
+		"vanuatu",
+		"fiji",
+		"australia",
+		"new-zealand"
+	]
+}

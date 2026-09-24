@@ -1,0 +1,503 @@
+{
+	"astana": {
+		"kind": "city",
+		"population": 345604,
+		"populationRank": 41,
+		"region": "Aqmola",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north"
+	},
+	"ulaanbaatar": {
+		"kind": "city",
+		"population": 885000,
+		"populationRank": 33,
+		"population1950": 70000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"bishkek": {
+		"kind": "city",
+		"population": 837000,
+		"populationRank": 34,
+		"population1950": 150000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north"
+	},
+	"tbilisi": {
+		"kind": "city",
+		"population": 1100000,
+		"populationRank": 27,
+		"population1950": 612000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"tashkent": {
+		"kind": "city",
+		"population": 2184000,
+		"populationRank": 18,
+		"population1950": 755000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north"
+	},
+	"baku": {
+		"kind": "city",
+		"population": 2122300,
+		"populationRank": 19,
+		"population1950": 897000,
+		"region": "Baki",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"yerevan": {
+		"kind": "city",
+		"population": 1102000,
+		"populationRank": 26,
+		"population1950": 341000,
+		"region": "Erevan",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"ankara": {
+		"kind": "city",
+		"population": 3716000,
+		"populationRank": 14,
+		"population1950": 281000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"From Ancyra, Greek for \"anchor\" — the Galatians or the Phrygians are said to have found one here, far from any sea.",
+				"Atatürk made it the capital in 1923 over Istanbul, deliberately choosing a small Anatolian town of 30,000 people.",
+				"The Angora goat, cat and rabbit are all named after it, and its mohair was a protected Ottoman export."
+			],
+			"it": [
+				"Da Ancyra, che in greco vuol dire \"àncora\": si dice che i Galati o i Frigi ne avessero trovata una qui, lontano da ogni mare.",
+				"Atatürk ne fece la capitale nel 1923 al posto di Istanbul, scegliendo di proposito una piccola città anatolica di 30.000 abitanti.",
+				"La capra, il gatto e il coniglio d’Angora prendono tutti il nome da qui, e il suo mohair era un’esportazione ottomana protetta."
+			]
+		}
+	},
+	"beijing": {
+		"kind": "city",
+		"population": 11106000,
+		"populationRank": 3,
+		"population1950": 4331000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"\"Northern capital\" — bei north, jing capital. Nanjing is the southern one, with the same second character.",
+				"It has been the capital, on and off, since Kublai Khan made it one in 1272.",
+				"The Forbidden City has 980 buildings and was closed to ordinary people for nearly 500 years."
+			],
+			"it": [
+				"\"Capitale del nord\": bei nord, jing capitale. Nanchino è quella del sud, con lo stesso secondo carattere.",
+				"È capitale, a fasi alterne, da quando Kublai Khan la rese tale nel 1272.",
+				"La Città Proibita conta 980 edifici e per quasi 500 anni restò chiusa alla gente comune."
+			]
+		}
+	},
+	"pyongyang": {
+		"kind": "city",
+		"population": 3300000,
+		"populationRank": 15,
+		"population1950": 516000,
+		"region": "P'yongyang",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"dushanbe": {
+		"kind": "city",
+		"population": 1086244,
+		"populationRank": 28,
+		"region": "Tadzhikistan Territories",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north"
+	},
+	"ashgabat": {
+		"kind": "city",
+		"population": 727700,
+		"populationRank": 38,
+		"region": "Ahal",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"seoul": {
+		"kind": "city",
+		"population": 9796000,
+		"populationRank": 5,
+		"population1950": 1021000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Unusual among Korean place names in being pure native Korean rather than Sino-Korean: seoul simply means \"capital\", so the city is called Capital.",
+				"It has been the capital since 1394, and about half of all South Koreans live in it or its surrounding region.",
+				"Its subway is one of the busiest and longest in the world, and the city was almost entirely rebuilt after the Korean War flattened it."
+			],
+			"it": [
+				"Caso raro tra i toponimi coreani, è un nome puramente coreano e non sino-coreano: seoul significa semplicemente \"capitale\", e la città si chiama quindi Capitale.",
+				"È la capitale dal 1394, e circa metà dei sudcoreani vive in città o nell’area che la circonda.",
+				"La sua metropolitana è tra le più trafficate e le più estese al mondo, e la città fu ricostruita quasi per intero dopo che la guerra di Corea l’aveva rasa al suolo."
+			]
+		}
+	},
+	"tokyo": {
+		"kind": "city",
+		"population": 35676000,
+		"populationRank": 1,
+		"population1950": 11275000,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"\"Eastern capital\" — renamed from Edo in 1868 when the emperor moved here from Kyōto, the old capital in the west.",
+				"Greater Tokyo is the largest metropolitan area in the world, about 37 million people.",
+				"Edo was already the world's largest city by 1720, with over a million people, and its fire brigades were organised by neighbourhood."
+			],
+			"it": [
+				"\"Capitale dell’est\": così fu ribattezzata Edo nel 1868, quando l’imperatore vi si trasferì da Kyoto, l’antica capitale a ovest.",
+				"La Grande Tokyo è l’area metropolitana più grande del mondo, con circa 37 milioni di abitanti.",
+				"Già nel 1720 Edo era la città più grande del mondo, con oltre un milione di abitanti, e i suoi pompieri erano organizzati per quartiere."
+			]
+		}
+	},
+	"tehran": {
+		"kind": "city",
+		"population": 7873000,
+		"populationRank": 7,
+		"population1950": 1041000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"nicosia": {
+		"kind": "city",
+		"population": 224300,
+		"populationRank": 45,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"kabul": {
+		"kind": "city",
+		"population": 3277000,
+		"populationRank": 16,
+		"population1950": 129000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north"
+	},
+	"beirut": {
+		"kind": "city",
+		"population": 1846000,
+		"populationRank": 22,
+		"population1950": 322000,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"islamabad": {
+		"kind": "city",
+		"population": 780000,
+		"populationRank": 35,
+		"population1950": 36000,
+		"region": "F.C.T.",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north"
+	},
+	"damascus": {
+		"kind": "city",
+		"population": 2466000,
+		"populationRank": 17,
+		"population1950": 367000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"baghdad": {
+		"kind": "city",
+		"population": 5054000,
+		"populationRank": 11,
+		"population1950": 579000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"amman": {
+		"kind": "city",
+		"population": 1060000,
+		"populationRank": 29,
+		"population1950": 90000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"jerusalem": {
+		"kind": "city",
+		"population": 1029300,
+		"populationRank": 30,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"kuwait-city": {
+		"kind": "city",
+		"population": 2063000,
+		"populationRank": 20,
+		"population1950": 63000,
+		"region": "Al Kuwayt",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "west"
+	},
+	"new-delhi": {
+		"kind": "city",
+		"population": 317797,
+		"populationRank": 42,
+		"region": "Delhi",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "centre"
+	},
+	"kathmandu": {
+		"kind": "city",
+		"population": 895000,
+		"populationRank": 32,
+		"population1950": 104000,
+		"region": "Bhaktapur",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "centre"
+	},
+	"thimphu": {
+		"kind": "city",
+		"population": 98676,
+		"populationRank": 47,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "centre"
+	},
+	"manama": {
+		"kind": "city",
+		"population": 563920,
+		"populationRank": 40,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "west"
+	},
+	"doha": {
+		"kind": "city",
+		"population": 1450000,
+		"populationRank": 24,
+		"region": "Ad Dawhah",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "west"
+	},
+	"taipei": {
+		"kind": "city",
+		"population": 6900273,
+		"populationRank": 8,
+		"population1950": 604000,
+		"region": "Taipei City",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "east"
+	},
+	"riyadh": {
+		"kind": "city",
+		"population": 4465000,
+		"populationRank": 12,
+		"population1950": 111000,
+		"region": "Ar Riyad",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "west"
+	},
+	"abu-dhabi": {
+		"kind": "city",
+		"population": 603492,
+		"populationRank": 39,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "west"
+	},
+	"dhaka": {
+		"kind": "city",
+		"population": 12797394,
+		"populationRank": 2,
+		"population1950": 336000,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "centre"
+	},
+	"muscat": {
+		"kind": "city",
+		"population": 734697,
+		"populationRank": 37,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "west"
+	},
+	"ha-noi": {
+		"kind": "city",
+		"population": 4378000,
+		"populationRank": 13,
+		"population1950": 280000,
+		"region": "Thái Nguyên",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"\"Inside the rivers\" — ha river, noi inside: the city sits in the bend of the Red River.",
+				"It has been a capital on and off since 1010, when a king saw a dragon rise and named it Thang Long, ascending dragon.",
+				"Its Temple of Literature, founded in 1070, was Vietnam's first university, and the names of its doctoral graduates are carved on stone tortoises."
+			],
+			"it": [
+				"\"Dentro i fiumi\" (ha fiume, noi dentro): la città sorge nell’ansa del fiume Rosso.",
+				"È stata capitale a fasi alterne dal 1010, quando un re vide levarsi un drago e la chiamò Thang Long, \"drago che si innalza\".",
+				"Il suo Tempio della Letteratura, fondato nel 1070, fu la prima università del Vietnam, e i nomi dei suoi dottori sono incisi su tartarughe di pietra."
+			]
+		}
+	},
+	"naypyidaw": {
+		"kind": "city",
+		"population": 930000,
+		"populationRank": 31,
+		"region": "Mandalay",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "centre"
+	},
+	"vientiane": {
+		"kind": "city",
+		"population": 754000,
+		"populationRank": 36,
+		"region": "Vientiane [prefecture]",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "centre"
+	},
+	"sanaa": {
+		"kind": "city",
+		"population": 2008000,
+		"populationRank": 21,
+		"population1950": 46000,
+		"region": "Amanat Al Asimah",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "west"
+	},
+	"manila": {
+		"kind": "city",
+		"population": 11100000,
+		"populationRank": 4,
+		"population1950": 1544000,
+		"region": "Metropolitan Manila",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "east"
+	},
+	"bangkok": {
+		"kind": "city",
+		"population": 6704000,
+		"populationRank": 9,
+		"population1950": 1360000,
+		"region": "Bangkok Metropolis",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "centre"
+	},
+	"phnom-penh": {
+		"kind": "city",
+		"population": 1466000,
+		"populationRank": 23,
+		"population1950": 364000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "east"
+	},
+	"colombo": {
+		"kind": "city",
+		"population": 217000,
+		"populationRank": 46,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south"
+	},
+	"bandar-seri-begawan": {
+		"kind": "city",
+		"population": 296500,
+		"populationRank": 43,
+		"region": "Brunei and Muara",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"kuala-lumpur": {
+		"kind": "city",
+		"population": 1448000,
+		"populationRank": 25,
+		"population1950": 208000,
+		"region": "Selangor",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south"
+	},
+	"singapore": {
+		"kind": "city",
+		"population": 5183700,
+		"populationRank": 10,
+		"population1950": 1016000,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south"
+	},
+	"jakarta": {
+		"kind": "city",
+		"population": 9125000,
+		"populationRank": 6,
+		"population1950": 1452000,
+		"region": "Jakarta Raya",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"From Jayakarta, \"complete victory\", given in 1527; the Dutch renamed it Batavia, and the name came back under the Japanese occupation in 1942.",
+				"It is sinking up to 25 cm a year in the north, faster than almost any other city.",
+				"That is why the capital is being moved to Borneo, a decision taken in 2019."
+			],
+			"it": [
+				"Da Jayakarta, \"vittoria completa\", nome dato nel 1527; gli olandesi la ribattezzarono Batavia, e il nome tornò con l’occupazione giapponese del 1942.",
+				"Nella parte nord sprofonda fino a 25 cm l’anno, più in fretta di quasi ogni altra città.",
+				"Per questo la capitale si sta trasferendo nel Borneo, una decisione presa nel 2019."
+			]
+		}
+	},
+	"dili": {
+		"kind": "city",
+		"population": 234331,
+		"populationRank": 44,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south-east"
+	}
+}

@@ -1,0 +1,248 @@
+{
+	"venezuela": {
+		"kind": "region",
+		"borders": [
+			"Brazil",
+			"Colombia",
+			"Guyana"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Caracas",
+			"nameDe": "Caracas",
+			"nameIt": "Caracas",
+			"population": 2985000
+		},
+		"peak": {
+			"name": "Pico Bolívar",
+			"elevation": 4980
+		},
+		"position": "north"
+	},
+	"guyana": {
+		"kind": "region",
+		"borders": [
+			"Brazil",
+			"Suriname",
+			"Venezuela"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Georgetown",
+			"nameDe": "Georgetown",
+			"nameIt": "Georgetown",
+			"population": 264350
+		},
+		"position": "north"
+	},
+	"colombia": {
+		"kind": "region",
+		"borders": [
+			"Brazil",
+			"Ecuador",
+			"Peru",
+			"Venezuela"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Bogota",
+			"nameDe": "Bogotá",
+			"nameIt": "Bogotà",
+			"population": 7772000
+		},
+		"peak": {
+			"name": "Pico Cristóbal Colón",
+			"elevation": 5775
+		},
+		"position": "north-west"
+	},
+	"suriname": {
+		"kind": "region",
+		"borders": [
+			"Brazil",
+			"Guyana"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Paramaribo",
+			"nameDe": "Paramaribo",
+			"nameIt": "Paramaribo",
+			"population": 254169
+		},
+		"peak": {
+			"name": "Julianatop",
+			"elevation": 1230
+		},
+		"position": "north"
+	},
+	"ecuador": {
+		"kind": "region",
+		"borders": [
+			"Colombia",
+			"Peru"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Guayaquil",
+			"nameDe": "Guayaquil",
+			"nameIt": "Guayaquil",
+			"population": 2514000
+		},
+		"peak": {
+			"name": "Chimborazo",
+			"elevation": 6267
+		},
+		"position": "north-west"
+	},
+	"peru": {
+		"kind": "region",
+		"borders": [
+			"Bolivia",
+			"Brazil",
+			"Chile",
+			"Colombia",
+			"Ecuador"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Lima",
+			"nameDe": "Lima",
+			"nameIt": "Lima",
+			"population": 8012000
+		},
+		"peak": {
+			"name": "Nevado Huascarán",
+			"elevation": 6768
+		},
+		"position": "north-west"
+	},
+	"brazil": {
+		"kind": "region",
+		"borders": [
+			"Argentina",
+			"Bolivia",
+			"Colombia",
+			"Guyana",
+			"Paraguay",
+			"Peru",
+			"Suriname",
+			"Uruguay",
+			"Venezuela"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "São Paulo",
+			"nameDe": "São Paulo",
+			"nameIt": "San Paolo",
+			"population": 18845000
+		},
+		"peak": {
+			"name": "Pico da Bandeira",
+			"elevation": 2890
+		},
+		"position": "centre"
+	},
+	"bolivia": {
+		"kind": "region",
+		"borders": [
+			"Argentina",
+			"Brazil",
+			"Chile",
+			"Paraguay",
+			"Peru"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Santa Cruz",
+			"nameDe": "Santa Cruz de la Sierra",
+			"nameIt": "Santa Cruz de la Sierra",
+			"population": 2102998
+		},
+		"peak": {
+			"name": "Nevado Sajama",
+			"elevation": 6542
+		},
+		"position": "centre"
+	},
+	"paraguay": {
+		"kind": "region",
+		"borders": [
+			"Argentina",
+			"Bolivia",
+			"Brazil"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Asunción",
+			"nameDe": "Asunción",
+			"nameIt": "Asunción",
+			"population": 1870000
+		},
+		"peak": {
+			"name": "Cerro Tres Kandú",
+			"elevation": 842
+		},
+		"position": "centre"
+	},
+	"uruguay": {
+		"kind": "region",
+		"borders": [
+			"Argentina",
+			"Brazil"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Montevideo",
+			"nameDe": "Montevideo",
+			"nameIt": "Montevideo",
+			"population": 1513000
+		},
+		"peak": {
+			"name": "Cerro Catedral",
+			"elevation": 514
+		},
+		"position": "centre"
+	},
+	"chile": {
+		"kind": "region",
+		"borders": [
+			"Argentina",
+			"Bolivia",
+			"Peru"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Santiago",
+			"nameDe": "Santiago de Chile",
+			"nameIt": "Santiago del Cile",
+			"population": 5720000
+		},
+		"peak": {
+			"name": "Aucanquilcha",
+			"elevation": 6176
+		},
+		"position": "south"
+	},
+	"argentina": {
+		"kind": "region",
+		"borders": [
+			"Bolivia",
+			"Brazil",
+			"Chile",
+			"Paraguay",
+			"Uruguay"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Buenos Aires",
+			"nameDe": "Buenos Aires",
+			"nameIt": "Buenos Aires",
+			"population": 12795000
+		},
+		"peak": {
+			"name": "Cerro Aconcagua",
+			"elevation": 6959
+		},
+		"position": "south"
+	}
+}

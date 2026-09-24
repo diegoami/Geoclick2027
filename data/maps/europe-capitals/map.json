@@ -1,0 +1,891 @@
+{
+	"id": "europe-capitals",
+	"name": "Europe — Capitals",
+	"country": "Europe",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "reykjavik",
+			"name": "Reykjavík",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Iceland",
+			"centroid": [
+				-21.936546009025054,
+				64.14345946317033
+			],
+			"bbox": [
+				-21.936546009025054,
+				64.14345946317033,
+				-21.936546009025054,
+				64.14345946317033
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "helsinki",
+			"name": "Helsinki",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Finland",
+			"centroid": [
+				24.932456915043964,
+				60.16380384948568
+			],
+			"bbox": [
+				24.932456915043964,
+				60.16380384948568,
+				24.932456915043964,
+				60.16380384948568
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "oslo",
+			"name": "Oslo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Norway",
+			"centroid": [
+				10.7480333,
+				59.9186361
+			],
+			"bbox": [
+				10.7480333,
+				59.9186361,
+				10.7480333,
+				59.9186361
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "tallinn",
+			"name": "Tallinn",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Estonia",
+			"centroid": [
+				24.7280407,
+				59.4338774
+			],
+			"bbox": [
+				24.7280407,
+				59.4338774,
+				24.7280407,
+				59.4338774
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "stockholm",
+			"name": "Stockholm",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Sweden",
+			"centroid": [
+				18.066300168534497,
+				59.324127204007475
+			],
+			"bbox": [
+				18.066300168534497,
+				59.324127204007475,
+				18.066300168534497,
+				59.324127204007475
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "riga",
+			"name": "Riga",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Latvia",
+			"centroid": [
+				24.0999654,
+				56.9500238
+			],
+			"bbox": [
+				24.0999654,
+				56.9500238,
+				24.0999654,
+				56.9500238
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "moscow",
+			"name": "Moscow",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Russia",
+			"centroid": [
+				37.613577,
+				55.75411
+			],
+			"bbox": [
+				37.613577,
+				55.75411,
+				37.613577,
+				55.75411
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "k-benhavn",
+			"name": "København",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Denmark",
+			"centroid": [
+				12.5615399,
+				55.68051
+			],
+			"bbox": [
+				12.5615399,
+				55.68051,
+				12.5615399,
+				55.68051
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "vilnius",
+			"name": "Vilnius",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Lithuania",
+			"centroid": [
+				25.3166353,
+				54.6833663
+			],
+			"bbox": [
+				25.3166353,
+				54.6833663,
+				25.3166353,
+				54.6833663
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "minsk",
+			"name": "Minsk",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Belarus",
+			"centroid": [
+				27.5646813,
+				53.9019233
+			],
+			"bbox": [
+				27.5646813,
+				53.9019233,
+				27.5646813,
+				53.9019233
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "dublin",
+			"name": "Dublin",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Ireland",
+			"centroid": [
+				-6.256979517281132,
+				53.34673124898314
+			],
+			"bbox": [
+				-6.256979517281132,
+				53.34673124898314,
+				-6.256979517281132,
+				53.34673124898314
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "berlin",
+			"name": "Berlin",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Germany",
+			"centroid": [
+				13.3996028,
+				52.5237645
+			],
+			"bbox": [
+				13.3996028,
+				52.5237645,
+				13.3996028,
+				52.5237645
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "amsterdam",
+			"name": "Amsterdam",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Netherlands",
+			"centroid": [
+				4.9146943,
+				52.3519145
+			],
+			"bbox": [
+				4.9146943,
+				52.3519145,
+				4.9146943,
+				52.3519145
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "warszawa",
+			"name": "Warszawa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Poland",
+			"centroid": [
+				21.005346737742283,
+				52.23087197353951
+			],
+			"bbox": [
+				21.005346737742283,
+				52.23087197353951,
+				21.005346737742283,
+				52.23087197353951
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "london",
+			"name": "London",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "United Kingdom",
+			"centroid": [
+				-0.1186677,
+				51.5019406
+			],
+			"bbox": [
+				-0.1186677,
+				51.5019406,
+				-0.1186677,
+				51.5019406
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "brussels",
+			"name": "Brussels",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Belgium",
+			"centroid": [
+				4.3313707,
+				50.8352629
+			],
+			"bbox": [
+				4.3313707,
+				50.8352629,
+				4.3313707,
+				50.8352629
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "kyiv",
+			"name": "Kyiv",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Ukraine",
+			"centroid": [
+				30.5146821,
+				50.4353132
+			],
+			"bbox": [
+				30.5146821,
+				50.4353132,
+				30.5146821,
+				50.4353132
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "prague",
+			"name": "Prague",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Czechia",
+			"centroid": [
+				14.422939486203868,
+				50.0869665373215
+			],
+			"bbox": [
+				14.422939486203868,
+				50.0869665373215,
+				14.422939486203868,
+				50.0869665373215
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "luxembourg",
+			"name": "Luxembourg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Luxembourg",
+			"centroid": [
+				6.1300028,
+				49.6116604
+			],
+			"bbox": [
+				6.1300028,
+				49.6116604,
+				6.1300028,
+				49.6116604
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "paris",
+			"name": "Paris",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "France",
+			"centroid": [
+				2.352992461539213,
+				48.85809231626911
+			],
+			"bbox": [
+				2.352992461539213,
+				48.85809231626911,
+				2.352992461539213,
+				48.85809231626911
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "wien",
+			"name": "Wien",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Austria",
+			"centroid": [
+				16.3646931,
+				48.2019611
+			],
+			"bbox": [
+				16.3646931,
+				48.2019611,
+				16.3646931,
+				48.2019611
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "bratislava",
+			"name": "Bratislava",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Slovakia",
+			"centroid": [
+				17.1169808,
+				48.1500183
+			],
+			"bbox": [
+				17.1169808,
+				48.1500183,
+				17.1169808,
+				48.1500183
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "budapest",
+			"name": "Budapest",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Hungary",
+			"centroid": [
+				19.0813748,
+				47.5019522
+			],
+			"bbox": [
+				19.0813748,
+				47.5019522,
+				19.0813748,
+				47.5019522
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "vaduz",
+			"name": "Vaduz",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Liechtenstein",
+			"centroid": [
+				9.5166695,
+				47.1337238
+			],
+			"bbox": [
+				9.5166695,
+				47.1337238,
+				9.5166695,
+				47.1337238
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "chisinau",
+			"name": "Chișinău",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Moldova",
+			"centroid": [
+				28.8577111,
+				47.0050236
+			],
+			"bbox": [
+				28.8577111,
+				47.0050236,
+				28.8577111,
+				47.0050236
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "bern",
+			"name": "Bern",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Switzerland",
+			"centroid": [
+				7.4669755,
+				46.9166828
+			],
+			"bbox": [
+				7.4669755,
+				46.9166828,
+				7.4669755,
+				46.9166828
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "ljubljana",
+			"name": "Ljubljana",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Slovenia",
+			"centroid": [
+				14.514969,
+				46.0552883
+			],
+			"bbox": [
+				14.514969,
+				46.0552883,
+				14.514969,
+				46.0552883
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "zagreb",
+			"name": "Zagreb",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Croatia",
+			"centroid": [
+				15.9999947,
+				45.8000067
+			],
+			"bbox": [
+				15.9999947,
+				45.8000067,
+				15.9999947,
+				45.8000067
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "belgrade",
+			"name": "Belgrade",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Serbia",
+			"centroid": [
+				20.4660448,
+				44.8205913
+			],
+			"bbox": [
+				20.4660448,
+				44.8205913,
+				20.4660448,
+				44.8205913
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "bucharest",
+			"name": "Bucharest",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Romania",
+			"centroid": [
+				26.0980008,
+				44.4353177
+			],
+			"bbox": [
+				26.0980008,
+				44.4353177,
+				26.0980008,
+				44.4353177
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "san-marino",
+			"name": "San Marino",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "San Marino",
+			"centroid": [
+				12.4417702,
+				43.9360958
+			],
+			"bbox": [
+				12.4417702,
+				43.9360958,
+				12.4417702,
+				43.9360958
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "sarajevo",
+			"name": "Sarajevo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Bosnia and Herzegovina",
+			"centroid": [
+				18.3830017,
+				43.8500224
+			],
+			"bbox": [
+				18.3830017,
+				43.8500224,
+				18.3830017,
+				43.8500224
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "monaco",
+			"name": "Monaco",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Monaco",
+			"centroid": [
+				7.4069132,
+				43.7396457
+			],
+			"bbox": [
+				7.4069132,
+				43.7396457,
+				7.4069132,
+				43.7396457
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "sofia",
+			"name": "Sofia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Bulgaria",
+			"centroid": [
+				23.3147082,
+				42.6852953
+			],
+			"bbox": [
+				23.3147082,
+				42.6852953,
+				23.3147082,
+				42.6852953
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "pristina",
+			"name": "Pristina",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Kosovo",
+			"centroid": [
+				21.1659843,
+				42.6667096
+			],
+			"bbox": [
+				21.1659843,
+				42.6667096,
+				21.1659843,
+				42.6667096
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "andorra-la-vella",
+			"name": "Andorra la Vella",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Andorra",
+			"centroid": [
+				1.526594255165481,
+				42.5107534941671
+			],
+			"bbox": [
+				1.526594255165481,
+				42.5107534941671,
+				1.526594255165481,
+				42.5107534941671
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "podgorica",
+			"name": "Podgorica",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Montenegro",
+			"centroid": [
+				19.2663069,
+				42.4659725
+			],
+			"bbox": [
+				19.2663069,
+				42.4659725,
+				19.2663069,
+				42.4659725
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "skopje",
+			"name": "Skopje",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "North Macedonia",
+			"centroid": [
+				21.4334615,
+				42.0000061
+			],
+			"bbox": [
+				21.4334615,
+				42.0000061,
+				21.4334615,
+				42.0000061
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "roma",
+			"name": "Roma",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Italy",
+			"centroid": [
+				12.4813126,
+				41.8979015
+			],
+			"bbox": [
+				12.4813126,
+				41.8979015,
+				12.4813126,
+				41.8979015
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "tirana",
+			"name": "Tirana",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Albania",
+			"centroid": [
+				19.818883,
+				41.3275407
+			],
+			"bbox": [
+				19.818883,
+				41.3275407,
+				19.818883,
+				41.3275407
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "madrid",
+			"name": "Madrid",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Spain",
+			"centroid": [
+				-3.6852975,
+				40.4019721
+			],
+			"bbox": [
+				-3.6852975,
+				40.4019721,
+				-3.6852975,
+				40.4019721
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "lisboa",
+			"name": "Lisboa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Portugal",
+			"centroid": [
+				-9.1468122,
+				38.7246687
+			],
+			"bbox": [
+				-9.1468122,
+				38.7246687,
+				-9.1468122,
+				38.7246687
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "athens",
+			"name": "Athens",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Greece",
+			"centroid": [
+				23.7313752,
+				37.9852721
+			],
+			"bbox": [
+				23.7313752,
+				37.9852721,
+				23.7313752,
+				37.9852721
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "valletta",
+			"name": "Valletta",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Malta",
+			"centroid": [
+				14.5147107,
+				35.8997325
+			],
+			"bbox": [
+				14.5147107,
+				35.8997325,
+				14.5147107,
+				35.8997325
+			],
+			"colorIndex": 1
+		}
+	],
+	"tourOrder": [
+		"reykjavik",
+		"helsinki",
+		"oslo",
+		"tallinn",
+		"stockholm",
+		"riga",
+		"moscow",
+		"k-benhavn",
+		"vilnius",
+		"minsk",
+		"dublin",
+		"berlin",
+		"amsterdam",
+		"warszawa",
+		"london",
+		"brussels",
+		"kyiv",
+		"prague",
+		"luxembourg",
+		"paris",
+		"wien",
+		"bratislava",
+		"budapest",
+		"vaduz",
+		"chisinau",
+		"bern",
+		"ljubljana",
+		"zagreb",
+		"belgrade",
+		"bucharest",
+		"san-marino",
+		"sarajevo",
+		"monaco",
+		"sofia",
+		"pristina",
+		"andorra-la-vella",
+		"podgorica",
+		"skopje",
+		"roma",
+		"tirana",
+		"madrid",
+		"lisboa",
+		"athens",
+		"valletta"
+	]
+}

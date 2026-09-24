@@ -2,7 +2,8 @@
 
 // 'county' added for Sweden's län - carried as metadata only, like every
 // other value here (confirmed nothing in app/ branches on TargetType).
-export type TargetType = 'region' | 'state' | 'province' | 'city' | 'county';
+// 'country' for the maps of a continent (#39), the same kind of metadata.
+export type TargetType = 'region' | 'state' | 'province' | 'city' | 'county' | 'country';
 
 export interface Target {
 	id: string;
@@ -10,6 +11,10 @@ export interface Target {
 	type: TargetType;
 	tier: number;
 	aliases: string[];
+	// The country a town is in, on a map of several countries (#39) - read
+	// by the facts builder to find the town's authored sentences. Absent on
+	// every single-country map.
+	country?: string;
 	centroid: [number, number];
 	// For a point target (type: 'city'), degenerate - the centroid repeated
 	// as both corners - rather than a separate nullable field, since a

@@ -1,0 +1,98 @@
+{
+	"papua-new-guinea": {
+		"kind": "region",
+		"borders": [
+			"Solomon Islands"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Port Moresby",
+			"nameDe": "Port Moresby",
+			"nameIt": "Port Moresby",
+			"population": 283733
+		},
+		"peak": {
+			"name": "Mount Wilhelm",
+			"elevation": 4509
+		},
+		"position": "north"
+	},
+	"solomon-islands": {
+		"kind": "region",
+		"borders": [
+			"Papua New Guinea"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Honiara",
+			"nameDe": "Honiara",
+			"nameIt": "Honiara",
+			"population": 76328
+		},
+		"peak": {
+			"name": "Mount Popomanaseu",
+			"elevation": 2335
+		},
+		"position": "north-east"
+	},
+	"vanuatu": {
+		"kind": "region",
+		"coastal": true,
+		"largestCity": {
+			"name": "Port Vila",
+			"nameDe": "Port Vila",
+			"nameIt": "Port Vila",
+			"population": 44040
+		},
+		"peak": {
+			"name": "Mount Tabwemasana",
+			"elevation": 1877
+		},
+		"position": "east"
+	},
+	"fiji": {
+		"kind": "region",
+		"coastal": true,
+		"largestCity": {
+			"name": "Suva",
+			"nameDe": "Suva",
+			"nameIt": "Suva",
+			"population": 175399
+		},
+		"peak": {
+			"name": "Tomanivi",
+			"elevation": 1323
+		},
+		"position": "east"
+	},
+	"australia": {
+		"kind": "region",
+		"coastal": true,
+		"largestCity": {
+			"name": "Sydney",
+			"nameDe": "Sydney",
+			"nameIt": "Sydney",
+			"population": 4630000
+		},
+		"peak": {
+			"name": "Mount Kosciuszko",
+			"elevation": 2228
+		},
+		"position": "west"
+	},
+	"new-zealand": {
+		"kind": "region",
+		"coastal": true,
+		"largestCity": {
+			"name": "Auckland",
+			"nameDe": "Auckland",
+			"nameIt": "Auckland",
+			"population": 1377200
+		},
+		"peak": {
+			"name": "Aoraki (Mount Cook)",
+			"elevation": 3754
+		},
+		"position": "south-east"
+	}
+}

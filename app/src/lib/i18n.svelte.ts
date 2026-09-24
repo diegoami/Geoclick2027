@@ -92,6 +92,11 @@ export type TranslationKey =
 	| 'mapType.citiesEast'
 	| 'mapType.citiesCenter'
 	| 'mapType.citiesWest'
+	| 'mapType.citiesNorth'
+	| 'mapType.citiesSouth'
+	| 'mapType.citiesCentral'
+	| 'mapType.countries'
+	| 'mapType.capitals'
 	| 'quiz.subtitle'
 	| 'quiz.closeAriaLabel'
 	| 'quiz.known'
@@ -218,6 +223,11 @@ const en: Dictionary = {
 	'mapType.citiesEast': 'Cities — East',
 	'mapType.citiesCenter': 'Cities — Center',
 	'mapType.citiesWest': 'Cities — West',
+	'mapType.citiesNorth': 'Cities — North',
+	'mapType.citiesSouth': 'Cities — South',
+	'mapType.citiesCentral': 'Cities — Central',
+	'mapType.countries': 'Countries',
+	'mapType.capitals': 'Capitals',
 
 	'quiz.subtitle': 'Drag each name onto its region — {placed} / {total} placed',
 	'quiz.closeAriaLabel': 'Close and view the map',
@@ -359,6 +369,11 @@ const de: Dictionary = {
 	'mapType.citiesEast': 'Städte — Osten',
 	'mapType.citiesCenter': 'Städte — Mitte',
 	'mapType.citiesWest': 'Städte — Westen',
+	'mapType.citiesNorth': 'Städte — Norden',
+	'mapType.citiesSouth': 'Städte — Süden',
+	'mapType.citiesCentral': 'Städte — Mitte',
+	'mapType.countries': 'Länder',
+	'mapType.capitals': 'Hauptstädte',
 
 	'quiz.subtitle': 'Ziehe jeden Namen auf seine Region — {placed} / {total} platziert',
 	'quiz.closeAriaLabel': 'Schließen und Karte ansehen',
@@ -500,6 +515,11 @@ const it: Dictionary = {
 	'mapType.citiesEast': 'Città — Est',
 	'mapType.citiesCenter': 'Città — Centro',
 	'mapType.citiesWest': 'Città — Ovest',
+	'mapType.citiesNorth': 'Città — Nord',
+	'mapType.citiesSouth': 'Città — Sud',
+	'mapType.citiesCentral': 'Città — Centro',
+	'mapType.countries': 'Paesi',
+	'mapType.capitals': 'Capitali',
 
 	'quiz.subtitle': 'Trascina ogni nome sulla sua regione — {placed} / {total} posizionati',
 	'quiz.closeAriaLabel': 'Chiudi e guarda la mappa',

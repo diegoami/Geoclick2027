@@ -1,0 +1,938 @@
+{
+	"gdynia": {
+		"kind": "city",
+		"population": 314664,
+		"populationRank": 40,
+		"region": "Pomeranian",
+		"coastal": true,
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"From an old Pomeranian name, probably from a personal name or a word for a marsh.",
+				"It was a fishing village until Poland, cut off from Gdańsk by the Free City arrangement, built a port here from 1926.",
+				"Within thirteen years it was the busiest port on the Baltic, which is why it looks entirely modernist."
+			],
+			"it": [
+				"Da un antico nome pomerano, probabilmente da un nome di persona o da una parola che indicava una palude.",
+				"Era un villaggio di pescatori finché la Polonia, tagliata fuori da Danzica dal regime di Città libera, non vi costruì un porto a partire dal 1926.",
+				"In tredici anni era diventata il porto più trafficato del Baltico, ed è per questo che ha un aspetto interamente modernista."
+			]
+		}
+	},
+	"gdansk": {
+		"kind": "city",
+		"population": 740000,
+		"populationRank": 23,
+		"region": "Pomeranian",
+		"coastal": true,
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"From the river Gdań, itself from an old Slavic root; the German form was Danzig.",
+				"The Second World War began here on 1 September 1939 with the shelling of Westerplatte.",
+				"Solidarity was founded in its shipyard in 1980, and that is where the end of communism in Europe started."
+			],
+			"it": [
+				"Dal fiume Gdań, a sua volta da un’antica radice slava; la forma tedesca era Danzig.",
+				"La seconda guerra mondiale cominciò qui il 1° settembre 1939, con il bombardamento di Westerplatte.",
+				"Solidarność nacque nel suo cantiere navale nel 1980, ed è lì che cominciò la fine del comunismo in Europa."
+			]
+		}
+	},
+	"hamburg": {
+		"kind": "city",
+		"population": 1757000,
+		"populationRank": 7,
+		"population1950": 1608000,
+		"coastal": false,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"From Hammaburg, a castle built in the early ninth century — hamma is a bend in a river, and the Elbe bends here.",
+				"Officially the Free and Hanseatic City: the Hanse's habits of independence are still in its name and in its number plates, HH.",
+				"It has more bridges than Venice, Amsterdam and London combined — around 2,500 of them, over canals and the harbour."
+			],
+			"it": [
+				"Da Hammaburg, un castello costruito all’inizio del IX secolo: hamma è l’ansa di un fiume, e qui l’Elba fa un’ansa.",
+				"Ufficialmente è la Libera e Anseatica Città: l’abitudine all’indipendenza dell’Hansa sopravvive nel nome e nelle targhe, HH.",
+				"Ha più ponti di Venezia, Amsterdam e Londra messe insieme: circa 2.500, sopra i canali e il porto."
+			]
+		}
+	},
+	"szczecin": {
+		"kind": "city",
+		"population": 407811,
+		"populationRank": 34,
+		"region": "West Pomeranian",
+		"coastal": false,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"From a Slavic root, possibly szczet, a bristle, or a personal name; German Stettin.",
+				"It is 12 km from Germany, was German until 1945, and is older than the Polish state.",
+				"Catherine the Great was born here, as Sophie of Anhalt-Zerbst, before marrying into the Russian throne."
+			],
+			"it": [
+				"Da una radice slava, forse szczet, \"setola\", o da un nome di persona; in tedesco Stettin.",
+				"Dista 12 km dalla Germania, è stata tedesca fino al 1945 ed è più antica dello Stato polacco.",
+				"Qui nacque Caterina la Grande, come Sofia di Anhalt-Zerbst, prima di sposare l’erede al trono russo."
+			]
+		}
+	},
+	"bia-ystok": {
+		"kind": "city",
+		"population": 291855,
+		"populationRank": 41,
+		"region": "Podlachian",
+		"coastal": false,
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"\"White slope\" or \"white stream\" — biały white, stok a slope or watercourse.",
+				"Ludwik Zamenhof was born here and invented Esperanto, partly because the town’s Poles, Jews, Germans and Russians could not talk to each other.",
+				"The Branicki Palace in it is called the Versailles of Podlasie."
+			],
+			"it": [
+				"\"Pendio bianco\" o \"ruscello bianco\": biały vuol dire bianco, stok pendio o corso d’acqua.",
+				"Qui nacque Ludwik Zamenhof, che inventò l’esperanto anche perché polacchi, ebrei, tedeschi e russi della città non riuscivano a capirsi.",
+				"Il Palazzo Branicki, in città, è chiamato la Versailles della Podlachia."
+			]
+		}
+	},
+	"bydgoszcz": {
+		"kind": "city",
+		"population": 366452,
+		"populationRank": 36,
+		"region": "Kuyavian-Pomeranian",
+		"coastal": false,
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"From a personal name, Bydgost, plus a possessive ending.",
+				"German as Bromberg for over a century; its canal of 1774 linked the Vistula and the Oder basins.",
+				"Its granary buildings on the Brda and the sculpture of a man on a tightrope over the river are the city’s emblem."
+			],
+			"it": [
+				"Da un nome di persona, Bydgost, più un suffisso possessivo.",
+				"Tedesca per oltre un secolo con il nome di Bromberg; il suo canale del 1774 collegò i bacini della Vistola e dell’Oder.",
+				"I granai sulla Brda e la scultura del funambolo sospeso sopra il fiume sono l’emblema della città."
+			]
+		}
+	},
+	"bremen": {
+		"kind": "city",
+		"population": 724909,
+		"populationRank": 25,
+		"coastal": false,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"From bremo, Old Saxon for \"edge\" — the town sat on the bank of the Weser where the ground rose above the marsh.",
+				"The smallest state, and a strange shape: it is two cities, Bremen and Bremerhaven, 60 km apart with Niedersachsen in between.",
+				"The Bremen Town Musicians of the fairy tale never actually reach Bremen, but the statue of them is the city’s best-known landmark."
+			],
+			"it": [
+				"Da bremo, \"orlo\" in antico sassone: la città sorgeva sulla riva del Weser, dove il terreno si alzava sopra la palude.",
+				"Il Land più piccolo, e dalla forma strana: sono due città, Brema e Bremerhaven, a 60 km l’una dall’altra, con la Bassa Sassonia in mezzo.",
+				"I musicanti di Brema della fiaba a Brema non ci arrivano mai, ma la loro statua è il monumento più noto della città."
+			]
+		}
+	},
+	"berlin": {
+		"kind": "city",
+		"population": 3406000,
+		"populationRank": 1,
+		"population1950": 3352000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Not the bear: it is most likely Slavic berl-, a swamp — the bear on the coat of arms is a pun that came later and stuck.",
+				"An island in Brandenburg, and its own state; the two voted on merging in 1996 and said no.",
+				"It has more museums than rainy days a year, and the Wall ran 155 km through and around it for 28 years."
+			],
+			"it": [
+				"Non viene dall’orso: molto probabilmente è lo slavo berl-, \"palude\"; l’orso dello stemma è un gioco di parole venuto dopo, che ha attecchito.",
+				"Un’isola dentro il Brandeburgo, e un Land a sé; i due votarono sulla fusione nel 1996, e dissero no.",
+				"Ha più musei che giorni di pioggia all’anno, e per 28 anni il Muro l’ha attraversata e circondata per 155 km."
+			]
+		}
+	},
+	"poznan": {
+		"kind": "city",
+		"population": 623997,
+		"populationRank": 30,
+		"region": "Greater Poland",
+		"coastal": false,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"From a personal name, Poznan, meaning roughly \"the known one\".",
+				"Poland began here: Mieszko I was baptised in 966 in this area, which is the founding date of the Polish state.",
+				"Two mechanical goats butt heads on its town hall clock every noon, a ritual since 1551."
+			],
+			"it": [
+				"Da un nome di persona, Poznan, che significa più o meno \"il conosciuto\".",
+				"La Polonia nacque qui: nel 966 Mieszko I fu battezzato in questa zona, e quella è la data di fondazione dello Stato polacco.",
+				"Ogni giorno a mezzogiorno due capre meccaniche si danno cornate sull’orologio del municipio: un rito che dura dal 1551."
+			]
+		}
+	},
+	"hannover": {
+		"kind": "city",
+		"population": 722490,
+		"populationRank": 26,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"\"High bank\" — hohes Ufer, the raised ground above the Leine.",
+				"Its electors became kings of Britain in 1714, so Britain and Hanover shared a monarch for 123 years.",
+				"Leibniz worked here for forty years as court librarian, and the city’s Herrenhausen gardens are baroque in the Dutch manner."
+			],
+			"it": [
+				"\"Riva alta\": hohes Ufer, il terreno rialzato sopra la Leine.",
+				"I suoi principi elettori divennero re di Gran Bretagna nel 1714, così Gran Bretagna e Hannover ebbero lo stesso sovrano per 123 anni.",
+				"Leibniz vi lavorò per quarant’anni come bibliotecario di corte, e i giardini di Herrenhausen sono barocchi alla maniera olandese."
+			]
+		}
+	},
+	"warszawa": {
+		"kind": "city",
+		"population": 1707000,
+		"populationRank": 9,
+		"population1950": 768000,
+		"region": "Masovian",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"From a personal name, Warsz — the mermaid legend of Wars and Sawa is a later folk invention.",
+				"About 85% of the city was deliberately destroyed after the 1944 uprising and rebuilt from paintings and photographs.",
+				"That reconstruction is itself a UNESCO site, listed for the act of rebuilding rather than for the original."
+			],
+			"it": [
+				"Da un nome di persona, Warsz: la leggenda della sirena, di Wars e Sawa, è un’invenzione popolare successiva.",
+				"Circa l’85% della città fu distrutto deliberatamente dopo l’insurrezione del 1944 e ricostruito sulla base di dipinti e fotografie.",
+				"Quella ricostruzione è essa stessa patrimonio UNESCO, iscritta per l’atto del ricostruire e non per l’originale."
+			]
+		}
+	},
+	"odz": {
+		"kind": "city",
+		"population": 758000,
+		"populationRank": 21,
+		"population1950": 608000,
+		"region": "Lódz",
+		"coastal": false,
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Łódź means \"boat\", and the coat of arms is one, though the city sits on no navigable river.",
+				"It grew from 800 people to 300,000 in a century on textiles, which is why it is laid out like Manchester.",
+				"Its Piotrkowska Street runs over 4 km, one of the longest commercial streets in Europe."
+			],
+			"it": [
+				"Łódź significa \"barca\", e lo stemma è proprio una barca, anche se la città non sorge su alcun fiume navigabile.",
+				"In un secolo passò da 800 a 300.000 abitanti grazie al tessile, ed è per questo che è disegnata come Manchester.",
+				"La sua via Piotrkowska corre per oltre 4 km: una delle vie commerciali più lunghe d’Europa."
+			]
+		}
+	},
+	"essen": {
+		"kind": "city",
+		"population": 1742135,
+		"populationRank": 8,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Of uncertain origin, possibly from a word for a forge or from asnithi, a meadow.",
+				"Krupp built its steel and armaments empire here, and the family villa has 269 rooms.",
+				"The Zollverein coal mine, called the most beautiful colliery in the world, is a UNESCO site."
+			],
+			"it": [
+				"Di origine incerta, forse da una parola per fucina o da asnithi, un prato.",
+				"Qui la Krupp costruì il suo impero dell’acciaio e delle armi, e la villa di famiglia ha 269 stanze.",
+				"La miniera di carbone dello Zollverein, detta la più bella miniera del mondo, è patrimonio UNESCO."
+			]
+		}
+	},
+	"duisburg": {
+		"kind": "city",
+		"population": 1276757,
+		"populationRank": 11,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"From an old word for a fortified place, duis being possibly a marsh or a hill.",
+				"It has the largest inland port in the world, where the Ruhr meets the Rhine.",
+				"Mercator, who invented the map projection every sailor used, lived and died here."
+			],
+			"it": [
+				"Da un’antica parola per luogo fortificato; duis forse indicava una palude o una collina.",
+				"Ha il più grande porto fluviale del mondo, dove la Ruhr incontra il Reno.",
+				"Qui visse e morì Mercatore, che inventò la proiezione cartografica usata da ogni navigatore."
+			]
+		}
+	},
+	"lublin": {
+		"kind": "city",
+		"population": 360044,
+		"populationRank": 37,
+		"coastal": false,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Probably from the personal name Lubla.",
+				"The Union of Lublin of 1569 joined Poland and Lithuania into one commonwealth for two centuries.",
+				"Majdanek on its edge was a Nazi camp captured almost intact in 1944, the first the world saw in full."
+			],
+			"it": [
+				"Probabilmente dal nome di persona Lubla.",
+				"L’Unione di Lublino del 1569 fece di Polonia e Lituania un’unica confederazione per due secoli.",
+				"Majdanek, alle porte della città, fu un campo nazista liberato quasi intatto nel 1944: il primo che il mondo vide per intero."
+			]
+		}
+	},
+	"wuppertal": {
+		"kind": "city",
+		"population": 776525,
+		"populationRank": 19,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"\"Wupper valley\" — a name invented in 1930 when several towns merged.",
+				"Its Schwebebahn, a suspended monorail hanging over the river, opened in 1901 and still runs.",
+				"An elephant fell out of it into the river in 1950 and survived; Friedrich Engels was born in the town."
+			],
+			"it": [
+				"\"Valle della Wupper\": un nome inventato nel 1930, quando diverse città si fusero.",
+				"La sua Schwebebahn, una monorotaia sospesa sopra il fiume, fu inaugurata nel 1901 e funziona ancora.",
+				"Nel 1950 un elefante cadde dalla monorotaia nel fiume e sopravvisse; Friedrich Engels nacque in questa città."
+			]
+		}
+	},
+	"dusseldorf": {
+		"kind": "city",
+		"population": 1220000,
+		"populationRank": 14,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"\"Village on the Düssel\" — dorf is a village, and the Düssel is a small tributary.",
+				"Its Königsallee is one of the most expensive shopping streets in Europe.",
+				"It has the largest Japanese community in Germany, and Kraftwerk invented electronic pop here in the 1970s."
+			],
+			"it": [
+				"\"Villaggio sulla Düssel\": dorf è villaggio, e la Düssel è un piccolo affluente.",
+				"La sua Königsallee è una delle vie commerciali più care d’Europa.",
+				"Ha la più grande comunità giapponese della Germania, e qui negli anni Settanta i Kraftwerk inventarono il pop elettronico."
+			]
+		}
+	},
+	"wroc-aw": {
+		"kind": "city",
+		"population": 634893,
+		"populationRank": 29,
+		"region": "Lower Silesian",
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"From Vratislav, a Bohemian duke — German Breslau is the same name worn differently.",
+				"It has been Polish, Bohemian, Austrian, Prussian and German before returning in 1945, and its population was almost wholly exchanged.",
+				"Over 600 small bronze dwarf figures are hidden around the city, a nod to an anti-communist protest movement."
+			],
+			"it": [
+				"Da Vratislav, un duca boemo: il tedesco Breslau è lo stesso nome, consumato in un altro modo.",
+				"È stata polacca, boema, austriaca, prussiana e tedesca prima di tornare polacca nel 1945, e la sua popolazione fu quasi del tutto sostituita.",
+				"Oltre 600 piccoli nani di bronzo sono nascosti per la città: un omaggio a un movimento di protesta anticomunista."
+			]
+		}
+	},
+	"koln": {
+		"kind": "city",
+		"population": 1004000,
+		"populationRank": 17,
+		"population1950": 598000,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"From Colonia Claudia Ara Agrippinensium — the Roman colony founded for Agrippina, who was born there.",
+				"Its cathedral took 632 years to build, from 1248 to 1880, and was then the tallest building in the world.",
+				"Eau de Cologne was invented here in 1709, which is why the city’s name is a perfume."
+			],
+			"it": [
+				"Da Colonia Claudia Ara Agrippinensium: la colonia romana fondata per Agrippina, che vi era nata.",
+				"La sua cattedrale richiese 632 anni di lavori, dal 1248 al 1880, e all’epoca era l’edificio più alto del mondo.",
+				"L’acqua di Colonia fu inventata qui nel 1709: ecco perché il nome della città è diventato un profumo."
+			]
+		}
+	},
+	"kielce": {
+		"kind": "city",
+		"population": 215733,
+		"populationRank": 50,
+		"region": "Swietokrzyskie",
+		"coastal": false,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Of uncertain origin, possibly from kieł or a personal name.",
+				"A pogrom here in 1946, after the war, killed 42 Jewish survivors and drove most of Poland’s remaining Jews to emigrate.",
+				"The Świętokrzyskie mountains around it are among the oldest in Europe."
+			],
+			"it": [
+				"Di origine incerta, forse da kieł o da un nome di persona.",
+				"Nel 1946, a guerra finita, un pogrom uccise qui 42 sopravvissuti ebrei e spinse gran parte degli ebrei rimasti in Polonia a emigrare.",
+				"I monti della Santa Croce, tutto intorno, sono tra i più antichi d’Europa."
+			]
+		}
+	},
+	"liberec": {
+		"kind": "city",
+		"population": 102175,
+		"populationRank": 67,
+		"region": "Liberecký",
+		"coastal": false,
+		"position": "centre"
+	},
+	"bonn": {
+		"kind": "city",
+		"population": 680543,
+		"populationRank": 27,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"From Latin Bonna, probably from a Celtic word for a foundation or a settlement.",
+				"It was the capital of West Germany from 1949 to 1990, chosen partly because it was small enough not to rival a reunified Berlin.",
+				"Beethoven was born here in 1770, and his birthplace is a museum."
+			],
+			"it": [
+				"Dal latino Bonna, probabilmente da una parola celtica per fondazione o insediamento.",
+				"Fu la capitale della Germania Ovest dal 1949 al 1990, scelta anche perché abbastanza piccola da non fare concorrenza a una Berlino riunificata.",
+				"Beethoven vi nacque nel 1770, e la sua casa natale è un museo."
+			]
+		}
+	},
+	"bytom": {
+		"kind": "city",
+		"population": 662247,
+		"populationRank": 28,
+		"region": "Silesian",
+		"coastal": false,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Probably from byt, a dwelling or existence — German Beuthen.",
+				"Coal and zinc were mined directly under the town, and parts of it have subsided visibly.",
+				"It is one of the oldest towns of Upper Silesia, with charter rights from 1254."
+			],
+			"it": [
+				"Probabilmente da byt, \"dimora\" o \"esistenza\": in tedesco Beuthen.",
+				"Carbone e zinco venivano estratti proprio sotto la città, e alcune sue parti sono visibilmente sprofondate.",
+				"È una delle città più antiche dell’Alta Slesia, con i diritti di città dal 1254."
+			]
+		}
+	},
+	"gliwice": {
+		"kind": "city",
+		"population": 507670,
+		"populationRank": 31,
+		"region": "Silesian",
+		"coastal": false,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Of uncertain Slavic origin — German Gleiwitz.",
+				"The Gleiwitz incident of 31 August 1939, a staged Polish attack on its radio tower, was the Nazi pretext for invading Poland.",
+				"That tower still stands and, at 111 m, is probably the tallest wooden structure in Europe."
+			],
+			"it": [
+				"Di incerta origine slava: in tedesco Gleiwitz.",
+				"L’incidente di Gleiwitz del 31 agosto 1939, un attacco polacco inscenato contro la sua torre radio, fu il pretesto nazista per invadere la Polonia.",
+				"Quella torre è ancora in piedi e, con i suoi 111 m, è probabilmente la struttura in legno più alta d’Europa."
+			]
+		}
+	},
+	"katowice": {
+		"kind": "city",
+		"population": 2746000,
+		"populationRank": 4,
+		"region": "Silesian",
+		"coastal": false,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Probably from kat, a hangman, or from a personal name Kat.",
+				"It sits over a coalfield so intensively worked that whole districts were built for miners.",
+				"Its Spodek arena of 1971, shaped like a flying saucer, is a landmark of Polish modernism."
+			],
+			"it": [
+				"Probabilmente da kat, \"boia\", o da un nome di persona, Kat.",
+				"Sorge su un bacino carbonifero sfruttato così intensamente che interi quartieri furono costruiti per i minatori.",
+				"Lo Spodek, la sua arena del 1971 a forma di disco volante, è un simbolo del modernismo polacco."
+			]
+		}
+	},
+	"frankfurt": {
+		"kind": "city",
+		"population": 2895000,
+		"populationRank": 3,
+		"region": "Hessen",
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"\"The ford of the Franks\" — a crossing of the Main used by the Frankish people.",
+				"Holy Roman Emperors were elected and later crowned here for six centuries.",
+				"Goethe was born in the city, and it now holds the European Central Bank and the world’s largest book fair."
+			],
+			"it": [
+				"\"Il guado dei Franchi\": un passaggio sul Meno usato dal popolo franco.",
+				"Per sei secoli qui furono eletti, e più tardi incoronati, gli imperatori del Sacro Romano Impero.",
+				"Goethe nacque in questa città, che oggi ospita la Banca centrale europea e la più grande fiera del libro del mondo."
+			]
+		}
+	},
+	"prague": {
+		"kind": "city",
+		"population": 1162000,
+		"populationRank": 15,
+		"population1950": 935000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "centre"
+	},
+	"krakow": {
+		"kind": "city",
+		"population": 756000,
+		"populationRank": 22,
+		"population1950": 339000,
+		"region": "Lesser Poland",
+		"coastal": false,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"From Krak, the legendary founder who, in the story, killed a dragon that lived under the castle hill.",
+				"It was Poland’s capital for five centuries and survived the war almost undamaged, unlike Warsaw.",
+				"A trumpeter plays from St Mary’s tower every hour and breaks off mid-note, for a trumpeter said to have been shot in the throat in 1241."
+			],
+			"it": [
+				"Da Krak, il fondatore leggendario che, secondo la storia, uccise un drago che viveva sotto la collina del castello.",
+				"Fu la capitale della Polonia per cinque secoli e, a differenza di Varsavia, attraversò la guerra quasi senza danni.",
+				"Ogni ora un trombettiere suona dalla torre di Santa Maria e si interrompe a metà di una nota, in ricordo di un trombettiere che, si dice, fu colpito alla gola nel 1241."
+			]
+		}
+	},
+	"pardubice": {
+		"kind": "city",
+		"population": 107064,
+		"populationRank": 65,
+		"region": "Královéhradecký",
+		"coastal": false,
+		"position": "centre"
+	},
+	"rzeszow": {
+		"kind": "city",
+		"population": 245686,
+		"populationRank": 47,
+		"region": "Subcarpathian",
+		"coastal": false,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"From a personal name, Rzech.",
+				"It has become Poland’s aviation centre, with an industrial cluster called Aviation Valley.",
+				"It is the closest large Polish city to Ukraine and became the main logistics hub for aid after 2022."
+			],
+			"it": [
+				"Da un nome di persona, Rzech.",
+				"È diventata il centro dell’aeronautica polacca, con un distretto industriale chiamato Aviation Valley.",
+				"È la grande città polacca più vicina all’Ucraina, e dopo il 2022 è diventata il principale snodo logistico per gli aiuti."
+			]
+		}
+	},
+	"ostrava": {
+		"kind": "city",
+		"population": 478963,
+		"populationRank": 32,
+		"region": "Moravskoslezský",
+		"coastal": false,
+		"position": "east"
+	},
+	"plzen": {
+		"kind": "city",
+		"population": 164180,
+		"populationRank": 55,
+		"region": "Karlovarský",
+		"coastal": false,
+		"position": "centre"
+	},
+	"olomouc": {
+		"kind": "city",
+		"population": 101268,
+		"populationRank": 68,
+		"region": "Moravskoslezský",
+		"coastal": false,
+		"position": "centre"
+	},
+	"mannheim": {
+		"kind": "city",
+		"population": 2362000,
+		"populationRank": 6,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"From a personal name, Manno, plus Heim, a home.",
+				"Its centre is laid out as a grid of numbered and lettered blocks rather than named streets — unique in Germany.",
+				"Karl Benz drove the first automobile here in 1886, and his wife then made the first long-distance drive from the town."
+			],
+			"it": [
+				"Da un nome di persona, Manno, più Heim, casa.",
+				"Il suo centro è una griglia di isolati indicati da lettere e numeri anziché vie con un nome: un caso unico in Germania.",
+				"Karl Benz vi guidò la prima automobile nel 1886, e poi sua moglie partì da qui per il primo viaggio a lunga distanza."
+			]
+		}
+	},
+	"nurnberg": {
+		"kind": "city",
+		"population": 737304,
+		"populationRank": 24,
+		"region": "Bayern",
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Probably \"rocky hill\" — from an old word nuor for rock, plus Berg.",
+				"Its Nazi rally grounds and then the post-war trials made the city’s name a byword for both.",
+				"The pocket watch, the first globe and the first recorded gingerbread guild all came from here."
+			],
+			"it": [
+				"Probabilmente \"colle roccioso\": da un’antica parola nuor, roccia, più Berg.",
+				"L’area dei raduni nazisti e poi i processi del dopoguerra hanno reso il nome della città sinonimo di entrambi.",
+				"L’orologio da tasca, il primo globo e la prima corporazione documentata di fornai di panpepato vengono tutti da qui."
+			]
+		}
+	},
+	"saarbrucken": {
+		"kind": "city",
+		"population": 770001,
+		"populationRank": 20,
+		"region": "Saarland",
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"\"Bridges over the Saar.\"",
+				"It has changed between France and Germany repeatedly, most recently returning in 1957.",
+				"Its Völklingen ironworks nearby is the only intact nineteenth-century ironworks in the world and a UNESCO site."
+			],
+			"it": [
+				"\"Ponti sulla Saar\".",
+				"È passata più volte dalla Francia alla Germania e viceversa, l’ultima volta tornando nel 1957.",
+				"Le vicine ferriere di Völklingen sono l’unico impianto siderurgico ottocentesco rimasto intatto al mondo, e sono patrimonio UNESCO."
+			]
+		}
+	},
+	"zlin": {
+		"kind": "city",
+		"population": 124610,
+		"populationRank": 59,
+		"region": "Kraj Vysocina",
+		"coastal": false,
+		"position": "east"
+	},
+	"brno": {
+		"kind": "city",
+		"population": 388277,
+		"populationRank": 35,
+		"region": "Kraj Vysocina",
+		"coastal": false,
+		"position": "centre"
+	},
+	"stuttgart": {
+		"kind": "city",
+		"population": 2944700,
+		"populationRank": 2,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"From Stuotgarten, \"stud garden\" — a horse stud founded about 950, which is why a horse is on the city arms.",
+				"Mercedes and Porsche both build here, and Karl Benz’s successors made the city the birthplace of the car.",
+				"It sits in a bowl of vineyards, and vines grow inside the city limits."
+			],
+			"it": [
+				"Da Stuotgarten, \"giardino delle giumente\": un allevamento di cavalli fondato intorno al 950, ed è per questo che nello stemma della città c’è un cavallo.",
+				"Mercedes e Porsche producono entrambe qui, e i successori di Karl Benz hanno fatto della città la culla dell’automobile.",
+				"Sorge in una conca di vigneti, e le viti crescono anche dentro i confini comunali."
+			]
+		}
+	},
+	"kosice": {
+		"kind": "city",
+		"population": 236563,
+		"populationRank": 48,
+		"region": "Košický",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"linz": {
+		"kind": "city",
+		"population": 349161,
+		"populationRank": 38,
+		"region": "Oberösterreich",
+		"coastal": false,
+		"position": "south"
+	},
+	"wien": {
+		"kind": "city",
+		"population": 2400000,
+		"populationRank": 5,
+		"population1950": 2086000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south"
+	},
+	"bratislava": {
+		"kind": "city",
+		"population": 423737,
+		"populationRank": 33,
+		"region": "Bratislavský",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south"
+	},
+	"munchen": {
+		"kind": "city",
+		"population": 1275000,
+		"populationRank": 12,
+		"population1950": 831000,
+		"region": "Bayern",
+		"coastal": false,
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"\"By the monks\" — Munichen, from a monastic settlement, which is why a monk is on the city arms.",
+				"Oktoberfest began as a royal wedding party in 1810 and now draws about six million people.",
+				"Its Englischer Garten is larger than Central Park, and surfers ride a standing wave on a stream inside it."
+			],
+			"it": [
+				"\"Presso i monaci\": Munichen, da un insediamento monastico, ed è per questo che nello stemma della città c’è un monaco.",
+				"L’Oktoberfest nacque nel 1810 come festa per un matrimonio reale e oggi richiama circa sei milioni di persone.",
+				"Il suo Englischer Garten è più grande di Central Park, e al suo interno i surfisti cavalcano un’onda stazionaria su un ruscello."
+			]
+		}
+	},
+	"miskolc": {
+		"kind": "city",
+		"population": 247757,
+		"populationRank": 46,
+		"region": "Borsod-Abaúj-Zemplén",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"nyiregyhaza": {
+		"kind": "city",
+		"population": 176880,
+		"populationRank": 54,
+		"region": "Szabolcs-Szatmár-Bereg",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"salzburg": {
+		"kind": "city",
+		"population": 206279,
+		"populationRank": 51,
+		"coastal": false,
+		"position": "south"
+	},
+	"gyor": {
+		"kind": "city",
+		"population": 136081,
+		"populationRank": 58,
+		"region": "Gyor-Moson-Sopron",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"basel": {
+		"kind": "city",
+		"population": 830000,
+		"populationRank": 18,
+		"region": "Basel-Stadt",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"debrecen": {
+		"kind": "city",
+		"population": 231286,
+		"populationRank": 49,
+		"region": "Hajdú-Bihar",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"budapest": {
+		"kind": "city",
+		"population": 1679000,
+		"populationRank": 10,
+		"population1950": 1618000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"zurich": {
+		"kind": "city",
+		"population": 1108000,
+		"populationRank": 16,
+		"population1950": 494000,
+		"coastal": false,
+		"position": "south-west"
+	},
+	"innsbruck": {
+		"kind": "city",
+		"population": 155214,
+		"populationRank": 56,
+		"region": "Tirol",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"szombathely": {
+		"kind": "city",
+		"population": 109518,
+		"populationRank": 62,
+		"region": "Vas",
+		"coastal": false,
+		"position": "south"
+	},
+	"szekesfehervar": {
+		"kind": "city",
+		"population": 144319,
+		"populationRank": 57,
+		"region": "Fejér",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"szolnok": {
+		"kind": "city",
+		"population": 109261,
+		"populationRank": 63,
+		"region": "Jász-Nagykun-Szolnok",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"graz": {
+		"kind": "city",
+		"population": 263234,
+		"populationRank": 44,
+		"region": "Steiermark",
+		"coastal": false,
+		"position": "south"
+	},
+	"luzern": {
+		"kind": "city",
+		"population": 250000,
+		"populationRank": 45,
+		"region": "Lucerne",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"bern": {
+		"kind": "city",
+		"population": 275329,
+		"populationRank": 42,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"kecskemet": {
+		"kind": "city",
+		"population": 113895,
+		"populationRank": 61,
+		"region": "Bács-Kiskun",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"maribor": {
+		"kind": "city",
+		"population": 114228,
+		"populationRank": 60,
+		"coastal": false,
+		"position": "south"
+	},
+	"lausanne": {
+		"kind": "city",
+		"population": 265702,
+		"populationRank": 43,
+		"region": "Vaud",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"kaposvar": {
+		"kind": "city",
+		"population": 108528,
+		"populationRank": 64,
+		"region": "Somogy",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"szeged": {
+		"kind": "city",
+		"population": 187765,
+		"populationRank": 52,
+		"region": "Csongrád",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"geneva": {
+		"kind": "city",
+		"population": 1240000,
+		"populationRank": 13,
+		"region": "Genève",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"pecs": {
+		"kind": "city",
+		"population": 186262,
+		"populationRank": 53,
+		"region": "Baranya",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"ljubljana": {
+		"kind": "city",
+		"population": 314807,
+		"populationRank": 39,
+		"region": "Osrednjeslovenska",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south"
+	},
+	"lugano": {
+		"kind": "city",
+		"population": 105388,
+		"populationRank": 66,
+		"region": "Ticino",
+		"coastal": false,
+		"position": "south-west"
+	}
+}

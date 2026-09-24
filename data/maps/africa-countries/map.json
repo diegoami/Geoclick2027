@@ -1,0 +1,1870 @@
+{
+	"id": "africa-countries",
+	"name": "Africa — Countries",
+	"country": "Africa",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "tunisia",
+			"name": "Tunisia",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.52195,
+				33.78215
+			],
+			"bbox": [
+				7.4798,
+				30.2289,
+				11.5641,
+				37.3354
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						9.6258,
+						36.6894
+					],
+					[
+						8.8504,
+						34.3791
+					],
+					[
+						9.9555,
+						32.0719
+					]
+				],
+				"aspect": 2.14
+			}
+		},
+		{
+			"id": "morocco",
+			"name": "Morocco",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-9.0306,
+				28.66925
+			],
+			"bbox": [
+				-17.0137,
+				21.42,
+				-1.0475,
+				35.9185
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						-15.3514,
+						22.865
+					],
+					[
+						-10.1652,
+						29.3448
+					],
+					[
+						-3.3404,
+						34.1593
+					]
+				],
+				"aspect": 7.72
+			}
+		},
+		{
+			"id": "algeria",
+			"name": "Algeria",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				1.64325,
+				28.037799999999997
+			],
+			"bbox": [
+				-8.6824,
+				18.9817,
+				11.9689,
+				37.0939
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						-4.2424,
+						27.5656
+					],
+					[
+						1.9673,
+						29.9793
+					],
+					[
+						8.177,
+						27.7173
+					]
+				],
+				"aspect": 0.78
+			}
+		},
+		{
+			"id": "egypt",
+			"name": "Egypt",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				30.791850000000004,
+				26.82545
+			],
+			"bbox": [
+				24.6883,
+				21.9944,
+				36.8954,
+				31.6565
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						25.8188,
+						26.7025
+					],
+					[
+						29.6548,
+						27.5669
+					],
+					[
+						33.4908,
+						25.3147
+					]
+				],
+				"aspect": 0.74
+			}
+		},
+		{
+			"id": "libya",
+			"name": "Libya",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.2187,
+				26.338649999999998
+			],
+			"bbox": [
+				9.2865,
+				19.4961,
+				25.1509,
+				33.1812
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						10.9615,
+						28.3547
+					],
+					[
+						17.4647,
+						27.226
+					],
+					[
+						23.9678,
+						26.0546
+					]
+				],
+				"aspect": 1.21
+			}
+		},
+		{
+			"id": "western-sahara",
+			"name": "Western Sahara",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-12.8905,
+				24.214199999999998
+			],
+			"bbox": [
+				-17.1002,
+				20.7669,
+				-8.6808,
+				27.6615
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						-13.9795,
+						21.5964
+					],
+					[
+						-13.4826,
+						23.2926
+					],
+					[
+						-12.2374,
+						24.4898
+					]
+				],
+				"aspect": 2.95
+			}
+		},
+		{
+			"id": "mauritania",
+			"name": "Mauritania",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-10.9514,
+				21.03015
+			],
+			"bbox": [
+				-17.0812,
+				14.7749,
+				-4.8216,
+				27.2854
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						-15.0783,
+						18.4771
+					],
+					[
+						-10.9494,
+						21.5206
+					],
+					[
+						-6.8206,
+						20.8451
+					]
+				],
+				"aspect": 0.74
+			}
+		},
+		{
+			"id": "niger",
+			"name": "Niger",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.05795,
+				17.6066
+			],
+			"bbox": [
+				0.1529,
+				11.6958,
+				15.963,
+				23.5174
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						5.555,
+						15.6441
+					],
+					[
+						10.7707,
+						16.6471
+					],
+					[
+						13.9343,
+						20.8144
+					]
+				],
+				"aspect": 1.25
+			}
+		},
+		{
+			"id": "mali",
+			"name": "Mali",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-4.01425,
+				17.57855
+			],
+			"bbox": [
+				-12.2641,
+				10.162,
+				4.2356,
+				24.9951
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "cabo-verde",
+			"name": "Cabo Verde",
+			"type": "country",
+			"tier": 1,
+			"aliases": [
+				"Cape Verde"
+			],
+			"centroid": [
+				-23.9976,
+				16.0063
+			],
+			"bbox": [
+				-25.3168,
+				14.816,
+				-22.6784,
+				17.1966
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						-23.745,
+						15.1172
+					],
+					[
+						-23.6286,
+						15.0801
+					],
+					[
+						-23.5123,
+						15.0163
+					]
+				],
+				"aspect": 0.94
+			}
+		},
+		{
+			"id": "chad",
+			"name": "Chad",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.7168,
+				15.451350000000001
+			],
+			"bbox": [
+				13.4492,
+				7.458,
+				23.9844,
+				23.4447
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						17.2929,
+						9.4326
+					],
+					[
+						20.0282,
+						15.1283
+					],
+					[
+						18.9925,
+						21.0932
+					]
+				],
+				"aspect": 1.52
+			}
+		},
+		{
+			"id": "sudan",
+			"name": "Sudan",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				30.2055,
+				15.438699999999999
+			],
+			"bbox": [
+				21.8094,
+				8.6893,
+				38.6016,
+				22.1881
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						24.4701,
+						15.1065
+					],
+					[
+						30.2055,
+						16.1278
+					],
+					[
+						35.941,
+						17.2664
+					]
+				],
+				"aspect": 0.95
+			}
+		},
+		{
+			"id": "eritrea",
+			"name": "Eritrea",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				39.77065,
+				15.1824
+			],
+			"bbox": [
+				36.4236,
+				12.36,
+				43.1177,
+				18.0048
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						37.2627,
+						16.4242
+					],
+					[
+						39.7924,
+						14.6834
+					],
+					[
+						42.443,
+						13.1074
+					]
+				],
+				"aspect": 9
+			}
+		},
+		{
+			"id": "senegal",
+			"name": "Senegal",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-14.3744,
+				14.4985
+			],
+			"bbox": [
+				-17.371,
+				12.3056,
+				-11.3778,
+				16.6914
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						-16.4336,
+						15.2293
+					],
+					[
+						-14.4673,
+						15.486
+					],
+					[
+						-12.5011,
+						13.9178
+					]
+				],
+				"aspect": 1.3
+			}
+		},
+		{
+			"id": "the-gambia",
+			"name": "The Gambia",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-15.3242,
+				13.442499999999999
+			],
+			"bbox": [
+				-16.8297,
+				13.065,
+				-13.8187,
+				13.82
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						-16.5966,
+						13.2948
+					],
+					[
+						-15.3429,
+						13.7132
+					],
+					[
+						-14.0476,
+						13.409
+					]
+				],
+				"aspect": 8.48
+			}
+		},
+		{
+			"id": "burkina-faso",
+			"name": "Burkina Faso",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.5661999999999998,
+				12.2359
+			],
+			"bbox": [
+				-5.5226,
+				9.3919,
+				2.3902,
+				15.0799
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						-4.7473,
+						10.6329
+					],
+					[
+						-2.515,
+						13.0895
+					],
+					[
+						0.6971,
+						12.9358
+					]
+				],
+				"aspect": 1.76
+			}
+		},
+		{
+			"id": "djibouti",
+			"name": "Djibouti",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				42.58025,
+				11.8246
+			],
+			"bbox": [
+				41.7491,
+				10.9413,
+				43.4114,
+				12.7079
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						42.0665,
+						11.1363
+					],
+					[
+						42.5396,
+						11.8249
+					],
+					[
+						43.1125,
+						12.4338
+					]
+				],
+				"aspect": 2.12
+			}
+		},
+		{
+			"id": "guinea-bissau",
+			"name": "Guinea-Bissau",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-15.1959,
+				11.82345
+			],
+			"bbox": [
+				-16.7284,
+				10.9675,
+				-13.6634,
+				12.6794
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						-16.0351,
+						12.1309
+					],
+					[
+						-15.0489,
+						11.7165
+					],
+					[
+						-14.1183,
+						12.201
+					]
+				],
+				"aspect": 1.77
+			}
+		},
+		{
+			"id": "guinea",
+			"name": "Guinea",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-11.385349999999999,
+				9.9557
+			],
+			"bbox": [
+				-15.0811,
+				7.238,
+				-7.6896,
+				12.6734
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						-13.8109,
+						11.2886
+					],
+					[
+						-10.6026,
+						11.5238
+					],
+					[
+						-8.4473,
+						9.2517
+					]
+				],
+				"aspect": 2.02
+			}
+		},
+		{
+			"id": "somaliland",
+			"name": "Somaliland",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				45.79315,
+				9.74225
+			],
+			"bbox": [
+				42.6472,
+				7.9966,
+				48.9391,
+				11.4879
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						43.478,
+						10.2603
+					],
+					[
+						45.8995,
+						8.8883
+					],
+					[
+						48.5096,
+						9.8975
+					]
+				],
+				"aspect": 2.05
+			}
+		},
+		{
+			"id": "benin",
+			"name": "Benin",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				2.3031,
+				9.30655
+			],
+			"bbox": [
+				0.7688,
+				6.2139,
+				3.8374,
+				12.3992
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						2.229,
+						6.8642
+					],
+					[
+						1.8504,
+						9.3878
+					],
+					[
+						2.7543,
+						11.7672
+					]
+				],
+				"aspect": 4.18
+			}
+		},
+		{
+			"id": "ethiopia",
+			"name": "Ethiopia",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				40.4845,
+				9.17095
+			],
+			"bbox": [
+				32.9898,
+				3.4624,
+				47.9792,
+				14.8795
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						35.2936,
+						8.9913
+					],
+					[
+						39.9752,
+						10.1341
+					],
+					[
+						44.6568,
+						6.8357
+					]
+				],
+				"aspect": 0.99
+			}
+		},
+		{
+			"id": "nigeria",
+			"name": "Nigeria",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.671050000000001,
+				9.07575
+			],
+			"bbox": [
+				2.6722,
+				4.2781,
+				14.6699,
+				13.8734
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						3.8723,
+						9.4462
+					],
+					[
+						8.2984,
+						8.1551
+					],
+					[
+						12.7245,
+						11.056
+					]
+				],
+				"aspect": 1.26
+			}
+		},
+		{
+			"id": "togo",
+			"name": "Togo",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				0.80815,
+				8.617750000000001
+			],
+			"bbox": [
+				-0.1661,
+				6.1005,
+				1.7824,
+				11.135
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						0.8285,
+						9.9382
+					],
+					[
+						1.1225,
+						8.2092
+					],
+					[
+						1.2077,
+						6.4389
+					]
+				],
+				"aspect": 3.43
+			}
+		},
+		{
+			"id": "sierra-leone",
+			"name": "Sierra Leone",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-11.79165,
+				8.4577
+			],
+			"bbox": [
+				-13.3011,
+				6.9194,
+				-10.2822,
+				9.996
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						-12.8296,
+						8.6463
+					],
+					[
+						-11.8412,
+						8.5557
+					],
+					[
+						-10.8528,
+						8.5365
+					]
+				],
+				"aspect": 0.75
+			}
+		},
+		{
+			"id": "ghana",
+			"name": "Ghana",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.03855,
+				7.93605
+			],
+			"bbox": [
+				-3.2625,
+				4.7371,
+				1.1854,
+				11.135
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						-1.6085,
+						5.3944
+					],
+					[
+						-0.5951,
+						7.9294
+					],
+					[
+						-1.3655,
+						10.515
+					]
+				],
+				"aspect": 1.62
+			}
+		},
+		{
+			"id": "south-sudan",
+			"name": "South Sudan",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				30.0261,
+				7.8532
+			],
+			"bbox": [
+				24.1314,
+				3.4902,
+				35.9208,
+				12.2162
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						25.6453,
+						8.298
+					],
+					[
+						29.8069,
+						6.479
+					],
+					[
+						33.9686,
+						7.1327
+					]
+				],
+				"aspect": 1.74
+			}
+		},
+		{
+			"id": "cote-d-ivoire",
+			"name": "Côte d'Ivoire",
+			"type": "country",
+			"tier": 1,
+			"aliases": [
+				"Ivory Coast"
+			],
+			"centroid": [
+				-5.5371999999999995,
+				7.5337
+			],
+			"bbox": [
+				-8.5681,
+				4.3441,
+				-2.5063,
+				10.7233
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						-7.5921,
+						7.5778
+					],
+					[
+						-5.4344,
+						7.4947
+					],
+					[
+						-3.2766,
+						7.7591
+					]
+				],
+				"aspect": 0.89
+			}
+		},
+		{
+			"id": "cameroon",
+			"name": "Cameroon",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.3509,
+				7.40795
+			],
+			"bbox": [
+				8.5051,
+				1.7348,
+				16.1967,
+				13.0811
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						9.7142,
+						4.5806
+					],
+					[
+						12.22,
+						4.9479
+					],
+					[
+						14.7257,
+						6.5439
+					]
+				],
+				"aspect": 1.05
+			}
+		},
+		{
+			"id": "central-african-republic",
+			"name": "Central African Republic",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.9195,
+				6.61865
+			],
+			"bbox": [
+				14.3977,
+				2.2365,
+				27.4413,
+				11.0008
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						15.575,
+						4.863
+					],
+					[
+						19.943,
+						7.9371
+					],
+					[
+						25.2348,
+						6.9561
+					]
+				],
+				"aspect": 2.35
+			}
+		},
+		{
+			"id": "liberia",
+			"name": "Liberia",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-9.4349,
+				6.43145
+			],
+			"bbox": [
+				-11.4762,
+				4.3528,
+				-7.3936,
+				8.5101
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						-10.4759,
+						7.6185
+					],
+					[
+						-9.2346,
+						6.3259
+					],
+					[
+						-7.9152,
+						5.1084
+					]
+				],
+				"aspect": 2.12
+			}
+		},
+		{
+			"id": "somalia",
+			"name": "Somalia",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				46.12905000000001,
+				5.1464
+			],
+			"bbox": [
+				40.9654,
+				-1.6963,
+				51.2927,
+				11.9891
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						41.4186,
+						0.787
+					],
+					[
+						47.0159,
+						4.5697
+					],
+					[
+						50.326,
+						10.3913
+					]
+				],
+				"aspect": 5.45
+			}
+		},
+		{
+			"id": "equatorial-guinea",
+			"name": "Equatorial Guinea",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.89325,
+				2.348
+			],
+			"bbox": [
+				8.4502,
+				0.9351,
+				11.3363,
+				3.7609
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						9.6946,
+						1.4874
+					],
+					[
+						10.4441,
+						1.6705
+					],
+					[
+						11.1935,
+						1.5718
+					]
+				],
+				"aspect": 1.3
+			}
+		},
+		{
+			"id": "uganda",
+			"name": "Uganda",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				32.26735,
+				1.3750499999999999
+			],
+			"bbox": [
+				29.556,
+				-1.4696,
+				34.9787,
+				4.2197
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						30.2555,
+						0.0798
+					],
+					[
+						32.1765,
+						1.6404
+					],
+					[
+						34.0975,
+						1.7752
+					]
+				],
+				"aspect": 0.82
+			}
+		},
+		{
+			"id": "kenya",
+			"name": "Kenya",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				37.8893,
+				0.1520999999999999
+			],
+			"bbox": [
+				33.8936,
+				-4.6775,
+				41.885,
+				4.9817
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						35.378,
+						1.3517
+					],
+					[
+						37.882,
+						-0.5756
+					],
+					[
+						40.386,
+						-0.0993
+					]
+				],
+				"aspect": 0.71
+			}
+		},
+		{
+			"id": "republic-of-the-congo",
+			"name": "Republic of the Congo",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.8782,
+				-0.6556499999999998
+			],
+			"bbox": [
+				11.114,
+				-5.0196,
+				18.6424,
+				3.7083
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						12.7652,
+						-4.1854
+					],
+					[
+						15.9761,
+						-1.1561
+					],
+					[
+						17.2979,
+						3.0505
+					]
+				],
+				"aspect": 3.77
+			}
+		},
+		{
+			"id": "gabon",
+			"name": "Gabon",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.649650000000001,
+				-0.80795
+			],
+			"bbox": [
+				8.8003,
+				-3.9369,
+				14.499,
+				2.321
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						9.717,
+						-1.2762
+					],
+					[
+						11.7459,
+						0.1158
+					],
+					[
+						13.7747,
+						-0.4399
+					]
+				],
+				"aspect": 0.98
+			}
+		},
+		{
+			"id": "rwanda",
+			"name": "Rwanda",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				29.8733,
+				-1.9436
+			],
+			"bbox": [
+				28.8588,
+				-2.8264,
+				30.8878,
+				-1.0608
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						29.3154,
+						-2.4089
+					],
+					[
+						29.8493,
+						-1.8055
+					],
+					[
+						30.654,
+						-1.6897
+					]
+				],
+				"aspect": 1.36
+			}
+		},
+		{
+			"id": "burundi",
+			"name": "Burundi",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				29.9238,
+				-3.3823499999999997
+			],
+			"bbox": [
+				29.0154,
+				-4.4616,
+				30.8322,
+				-2.3031
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						29.3441,
+						-3.6856
+					],
+					[
+						29.8419,
+						-3.6366
+					],
+					[
+						30.3398,
+						-3.1104
+					]
+				],
+				"aspect": 0.61
+			}
+		},
+		{
+			"id": "democratic-republic-of-the-congo",
+			"name": "Democratic Republic of the Congo",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				21.738999999999997,
+				-4.0413499999999996
+			],
+			"bbox": [
+				12.2105,
+				-13.4576,
+				31.2675,
+				5.3749
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						17.5413,
+						-2.295
+					],
+					[
+						22.9748,
+						-2.86
+					],
+					[
+						28.4084,
+						-3.0144
+					]
+				],
+				"aspect": 0.77
+			}
+		},
+		{
+			"id": "tanzania",
+			"name": "Tanzania",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.8852,
+				-6.366949999999999
+			],
+			"bbox": [
+				29.321,
+				-11.7313,
+				40.4494,
+				-1.0026
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						31.0849,
+						-4.9507
+					],
+					[
+						34.8857,
+						-5.4911
+					],
+					[
+						38.6865,
+						-8.3287
+					]
+				],
+				"aspect": 0.89
+			}
+		},
+		{
+			"id": "angola",
+			"name": "Angola",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.89885,
+				-11.211300000000001
+			],
+			"bbox": [
+				11.7366,
+				-18.0314,
+				24.0611,
+				-4.3912
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						13.9984,
+						-11.9766
+					],
+					[
+						17.6886,
+						-11.9802
+					],
+					[
+						21.3788,
+						-13.0396
+					]
+				],
+				"aspect": 0.67
+			}
+		},
+		{
+			"id": "zambia",
+			"name": "Zambia",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				27.82705,
+				-13.129950000000001
+			],
+			"bbox": [
+				21.9799,
+				-18.0658,
+				33.6742,
+				-8.1941
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						30.0439,
+						-12.3112
+					],
+					[
+						30.1433,
+						-9.824
+					],
+					[
+						30.9858,
+						-8.4763
+					]
+				],
+				"aspect": 0.51
+			}
+		},
+		{
+			"id": "malawi",
+			"name": "Malawi",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.31355,
+				-13.25775
+			],
+			"bbox": [
+				32.7228,
+				-17.1241,
+				35.9043,
+				-9.3914
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						33.9846,
+						-10.237
+					],
+					[
+						33.416,
+						-13.3169
+					],
+					[
+						35.2621,
+						-15.8263
+					]
+				],
+				"aspect": 4.3
+			}
+		},
+		{
+			"id": "mozambique",
+			"name": "Mozambique",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				35.5285,
+				-18.66755
+			],
+			"bbox": [
+				30.2145,
+				-26.8603,
+				40.8425,
+				-10.4748
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						32.3399,
+						-23.9034
+					],
+					[
+						35.1927,
+						-18.0891
+					],
+					[
+						38.0456,
+						-12.0756
+					]
+				],
+				"aspect": 3.66
+			}
+		},
+		{
+			"id": "madagascar",
+			"name": "Madagascar",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				46.8634,
+				-18.79215
+			],
+			"bbox": [
+				43.2229,
+				-25.5842,
+				50.5039,
+				-12.0001
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						45.425,
+						-24.2647
+					],
+					[
+						45.6961,
+						-19.1397
+					],
+					[
+						48.7887,
+						-14.7681
+					]
+				],
+				"aspect": 2.46
+			}
+		},
+		{
+			"id": "zimbabwe",
+			"name": "Zimbabwe",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				29.13055,
+				-19.006050000000002
+			],
+			"bbox": [
+				25.2261,
+				-22.3973,
+				33.035,
+				-15.6148
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						27.633,
+						-19.0287
+					],
+					[
+						29.9803,
+						-19.2121
+					],
+					[
+						32.3277,
+						-18.9788
+					]
+				],
+				"aspect": 0.76
+			}
+		},
+		{
+			"id": "botswana",
+			"name": "Botswana",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				24.6642,
+				-22.341549999999998
+			],
+			"bbox": [
+				19.9783,
+				-26.889,
+				29.3501,
+				-17.7941
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						20.846,
+						-22.9647
+					],
+					[
+						23.7856,
+						-21.2074
+					],
+					[
+						26.7252,
+						-22.0676
+					]
+				],
+				"aspect": 0.72
+			}
+		},
+		{
+			"id": "namibia",
+			"name": "Namibia",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.488699999999998,
+				-22.95525
+			],
+			"bbox": [
+				11.7176,
+				-28.9594,
+				25.2598,
+				-16.9511
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						16.2664,
+						-17.8737
+					],
+					[
+						18.2944,
+						-22.7751
+					],
+					[
+						17.6296,
+						-27.8602
+					]
+				],
+				"aspect": 1.94
+			}
+		},
+		{
+			"id": "eswatini",
+			"name": "Eswatini",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				31.45155,
+				-26.52995
+			],
+			"bbox": [
+				30.7857,
+				-27.3163,
+				32.1174,
+				-25.7436
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						31.0004,
+						-26.5526
+					],
+					[
+						31.4717,
+						-26.5295
+					],
+					[
+						31.943,
+						-26.6003
+					]
+				],
+				"aspect": 0.61
+			}
+		},
+		{
+			"id": "south-africa",
+			"name": "South Africa",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				24.6901,
+				-28.4698
+			],
+			"bbox": [
+				16.4871,
+				-34.8087,
+				32.8931,
+				-22.1309
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						19.4844,
+						-32.0121
+					],
+					[
+						26.0164,
+						-29.8467
+					],
+					[
+						30.135,
+						-24.6735
+					]
+				],
+				"aspect": 1.77
+			}
+		},
+		{
+			"id": "lesotho",
+			"name": "Lesotho",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				28.2254,
+				-29.62345
+			],
+			"bbox": [
+				27.0149,
+				-30.6497,
+				29.4359,
+				-28.5972
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						27.4693,
+						-29.8951
+					],
+					[
+						28.2628,
+						-29.438
+					],
+					[
+						29.0563,
+						-29.3799
+					]
+				],
+				"aspect": 0.92
+			}
+		}
+	],
+	"tourOrder": [
+		"tunisia",
+		"morocco",
+		"algeria",
+		"egypt",
+		"libya",
+		"western-sahara",
+		"mauritania",
+		"niger",
+		"mali",
+		"cabo-verde",
+		"chad",
+		"sudan",
+		"eritrea",
+		"senegal",
+		"the-gambia",
+		"burkina-faso",
+		"djibouti",
+		"guinea-bissau",
+		"guinea",
+		"somaliland",
+		"benin",
+		"ethiopia",
+		"nigeria",
+		"togo",
+		"sierra-leone",
+		"ghana",
+		"south-sudan",
+		"cote-d-ivoire",
+		"cameroon",
+		"central-african-republic",
+		"liberia",
+		"somalia",
+		"equatorial-guinea",
+		"uganda",
+		"kenya",
+		"republic-of-the-congo",
+		"gabon",
+		"rwanda",
+		"burundi",
+		"democratic-republic-of-the-congo",
+		"tanzania",
+		"angola",
+		"zambia",
+		"malawi",
+		"mozambique",
+		"madagascar",
+		"zimbabwe",
+		"botswana",
+		"namibia",
+		"eswatini",
+		"south-africa",
+		"lesotho"
+	]
+}

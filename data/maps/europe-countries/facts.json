@@ -1,0 +1,795 @@
+{
+	"finland": {
+		"kind": "region",
+		"borders": [
+			"Norway",
+			"Russia",
+			"Sweden"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Helsinki",
+			"nameDe": "Helsinki",
+			"nameIt": "Helsinki",
+			"population": 1115000
+		},
+		"peak": {
+			"name": "Ukko Koli",
+			"elevation": 347
+		},
+		"position": "north"
+	},
+	"iceland": {
+		"kind": "region",
+		"coastal": true,
+		"largestCity": {
+			"name": "Reykjavík",
+			"nameDe": "Reykjavík",
+			"nameIt": "Reykjavík",
+			"population": 166212
+		},
+		"peak": {
+			"name": "Hvannadalshnkur",
+			"elevation": 2110
+		},
+		"position": "north-west"
+	},
+	"norway": {
+		"kind": "region",
+		"borders": [
+			"Finland",
+			"Russia",
+			"Sweden"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Oslo",
+			"nameDe": "Oslo",
+			"nameIt": "Oslo",
+			"population": 835000
+		},
+		"peak": {
+			"name": "Galdhpiggen",
+			"elevation": 2469
+		},
+		"position": "north"
+	},
+	"sweden": {
+		"kind": "region",
+		"borders": [
+			"Denmark",
+			"Finland",
+			"Norway"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Stockholm",
+			"nameDe": "Stockholm",
+			"nameIt": "Stoccolma",
+			"population": 1264000
+		},
+		"peak": {
+			"name": "Kebnekaise",
+			"elevation": 2111
+		},
+		"position": "north"
+	},
+	"estonia": {
+		"kind": "region",
+		"borders": [
+			"Latvia",
+			"Russia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tallinn",
+			"nameDe": "Tallinn",
+			"nameIt": "Tallinn",
+			"population": 394024
+		},
+		"peak": {
+			"name": "Suur Munamagi",
+			"elevation": 318
+		},
+		"position": "centre"
+	},
+	"latvia": {
+		"kind": "region",
+		"borders": [
+			"Belarus",
+			"Estonia",
+			"Lithuania",
+			"Russia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Riga",
+			"nameDe": "Riga",
+			"nameIt": "Riga",
+			"population": 742572
+		},
+		"position": "centre"
+	},
+	"russia": {
+		"kind": "region",
+		"borders": [
+			"Belarus",
+			"Estonia",
+			"Finland",
+			"Latvia",
+			"Lithuania",
+			"Norway",
+			"Poland",
+			"Ukraine"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Moscow",
+			"nameDe": "Moskau",
+			"nameIt": "Mosca",
+			"population": 10452000
+		},
+		"peak": {
+			"name": "Gora Elbrus",
+			"elevation": 5642
+		},
+		"position": "east"
+	},
+	"denmark": {
+		"kind": "region",
+		"borders": [
+			"Germany",
+			"Sweden"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "København",
+			"nameDe": "Kopenhagen",
+			"nameIt": "Copenaghen",
+			"population": 1085000
+		},
+		"peak": {
+			"name": "Møllehøj",
+			"elevation": 171
+		},
+		"position": "centre"
+	},
+	"united-kingdom": {
+		"kind": "region",
+		"borders": [
+			"Ireland"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "London",
+			"nameDe": "London",
+			"nameIt": "Londra",
+			"population": 8567000
+		},
+		"peak": {
+			"name": "Ben Nevis",
+			"elevation": 1343
+		},
+		"position": "west"
+	},
+	"lithuania": {
+		"kind": "region",
+		"borders": [
+			"Belarus",
+			"Latvia",
+			"Poland",
+			"Russia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Vilnius",
+			"nameDe": "Vilnius",
+			"nameIt": "Vilnius",
+			"population": 542366
+		},
+		"position": "centre"
+	},
+	"belarus": {
+		"kind": "region",
+		"borders": [
+			"Latvia",
+			"Lithuania",
+			"Poland",
+			"Russia",
+			"Ukraine"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Minsk",
+			"nameDe": "Minsk",
+			"nameIt": "Minsk",
+			"population": 1805000
+		},
+		"peak": {
+			"name": "Dzyarzhynskaya",
+			"elevation": 346
+		},
+		"position": "centre"
+	},
+	"ireland": {
+		"kind": "region",
+		"borders": [
+			"United Kingdom"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Dublin",
+			"nameDe": "Dublin",
+			"nameIt": "Dublino",
+			"population": 1059000
+		},
+		"peak": {
+			"name": "Carrauntoohil",
+			"elevation": 1038
+		},
+		"position": "west"
+	},
+	"netherlands": {
+		"kind": "region",
+		"borders": [
+			"Belgium",
+			"Germany"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "The Hague",
+			"nameDe": "Den Haag",
+			"nameIt": "L'Aia",
+			"population": 1406000
+		},
+		"position": "centre"
+	},
+	"poland": {
+		"kind": "region",
+		"borders": [
+			"Belarus",
+			"Czechia",
+			"Germany",
+			"Lithuania",
+			"Russia",
+			"Slovakia",
+			"Ukraine"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Katowice",
+			"nameDe": "Katowice",
+			"nameIt": "Katowice",
+			"population": 2746000
+		},
+		"peak": {
+			"name": "Sněžka",
+			"elevation": 1603
+		},
+		"position": "centre"
+	},
+	"germany": {
+		"kind": "region",
+		"borders": [
+			"Austria",
+			"Belgium",
+			"Czechia",
+			"Denmark",
+			"France",
+			"Luxembourg",
+			"Netherlands",
+			"Poland",
+			"Switzerland"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Berlin",
+			"nameDe": "Berlin",
+			"nameIt": "Berlino",
+			"population": 3406000
+		},
+		"peak": {
+			"name": "Zugspitze",
+			"elevation": 2963
+		},
+		"position": "centre"
+	},
+	"belgium": {
+		"kind": "region",
+		"borders": [
+			"France",
+			"Germany",
+			"Luxembourg",
+			"Netherlands"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Brussels",
+			"nameDe": "Brüssel",
+			"nameIt": "Bruxelles",
+			"population": 1743000
+		},
+		"peak": {
+			"name": "Signal de Botrange",
+			"elevation": 694
+		},
+		"position": "centre"
+	},
+	"luxembourg": {
+		"kind": "region",
+		"borders": [
+			"Belgium",
+			"France",
+			"Germany"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Luxembourg",
+			"nameDe": "Luxemburg",
+			"nameIt": "Lussemburgo",
+			"population": 107260
+		},
+		"position": "centre"
+	},
+	"czechia": {
+		"kind": "region",
+		"borders": [
+			"Austria",
+			"Germany",
+			"Poland",
+			"Slovakia"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Prague",
+			"nameDe": "Prag",
+			"nameIt": "Praga",
+			"population": 1162000
+		},
+		"position": "centre"
+	},
+	"slovakia": {
+		"kind": "region",
+		"borders": [
+			"Austria",
+			"Czechia",
+			"Hungary",
+			"Poland",
+			"Ukraine"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bratislava",
+			"nameDe": "Bratislava",
+			"nameIt": "Bratislava",
+			"population": 423737
+		},
+		"peak": {
+			"name": "Gerlach",
+			"elevation": 2655
+		},
+		"position": "centre"
+	},
+	"ukraine": {
+		"kind": "region",
+		"borders": [
+			"Belarus",
+			"Hungary",
+			"Moldova",
+			"Poland",
+			"Romania",
+			"Russia",
+			"Slovakia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Moscow",
+			"nameDe": "Moskau",
+			"nameIt": "Mosca",
+			"population": 10452000
+		},
+		"peak": {
+			"name": "Gora Elbrus",
+			"elevation": 5642
+		},
+		"position": "centre"
+	},
+	"austria": {
+		"kind": "region",
+		"borders": [
+			"Czechia",
+			"Germany",
+			"Hungary",
+			"Italy",
+			"Slovakia",
+			"Slovenia",
+			"Switzerland"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Vienna",
+			"nameDe": "Wien",
+			"nameIt": "Vienna",
+			"population": 2400000
+		},
+		"peak": {
+			"name": "Grossglockner",
+			"elevation": 3798
+		},
+		"position": "centre"
+	},
+	"hungary": {
+		"kind": "region",
+		"borders": [
+			"Austria",
+			"Croatia",
+			"Romania",
+			"Serbia",
+			"Slovakia",
+			"Slovenia",
+			"Ukraine"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Budapest",
+			"nameDe": "Budapest",
+			"nameIt": "Budapest",
+			"population": 1679000
+		},
+		"peak": {
+			"name": "Kékes",
+			"elevation": 1015
+		},
+		"position": "south"
+	},
+	"moldova": {
+		"kind": "region",
+		"borders": [
+			"Romania",
+			"Ukraine"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Chișinău",
+			"nameDe": "Chișinău",
+			"nameIt": "Chișinău",
+			"population": 688134
+		},
+		"peak": {
+			"name": "Bălănești",
+			"elevation": 429
+		},
+		"position": "south"
+	},
+	"switzerland": {
+		"kind": "region",
+		"borders": [
+			"Austria",
+			"France",
+			"Germany",
+			"Italy"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Geneva",
+			"nameDe": "Genf",
+			"nameIt": "Ginevra",
+			"population": 1240000
+		},
+		"peak": {
+			"name": "Matterhorn",
+			"elevation": 4478
+		},
+		"position": "south"
+	},
+	"france": {
+		"kind": "region",
+		"borders": [
+			"Belgium",
+			"Germany",
+			"Italy",
+			"Luxembourg",
+			"Spain",
+			"Switzerland"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Paris",
+			"nameDe": "Paris",
+			"nameIt": "Parigi",
+			"population": 9904000
+		},
+		"peak": {
+			"name": "Mont Blanc",
+			"elevation": 4807
+		},
+		"position": "south-west"
+	},
+	"slovenia": {
+		"kind": "region",
+		"borders": [
+			"Austria",
+			"Croatia",
+			"Hungary",
+			"Italy"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Ljubljana",
+			"nameDe": "Ljubljana",
+			"nameIt": "Lubiana",
+			"population": 314807
+		},
+		"peak": {
+			"name": "Triglav",
+			"elevation": 2864
+		},
+		"position": "south"
+	},
+	"romania": {
+		"kind": "region",
+		"borders": [
+			"Bulgaria",
+			"Hungary",
+			"Moldova",
+			"Serbia",
+			"Ukraine"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Bucharest",
+			"nameDe": "Bukarest",
+			"nameIt": "Bucarest",
+			"population": 1942000
+		},
+		"peak": {
+			"name": "Moldoveanu",
+			"elevation": 2543
+		},
+		"position": "south"
+	},
+	"croatia": {
+		"kind": "region",
+		"borders": [
+			"Bosnia and Herzegovina",
+			"Hungary",
+			"Montenegro",
+			"Serbia",
+			"Slovenia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Zagreb",
+			"nameDe": "Zagreb",
+			"nameIt": "Zagabria",
+			"population": 722526
+		},
+		"position": "south"
+	},
+	"serbia": {
+		"kind": "region",
+		"borders": [
+			"Bosnia and Herzegovina",
+			"Bulgaria",
+			"Croatia",
+			"Hungary",
+			"Kosovo",
+			"Montenegro",
+			"North Macedonia",
+			"Romania"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Belgrade",
+			"nameDe": "Belgrad",
+			"nameIt": "Belgrado",
+			"population": 1099000
+		},
+		"peak": {
+			"name": "Midzor",
+			"elevation": 2168
+		},
+		"position": "south"
+	},
+	"bosnia-and-herzegovina": {
+		"kind": "region",
+		"borders": [
+			"Croatia",
+			"Montenegro",
+			"Serbia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Sarajevo",
+			"nameDe": "Sarajevo",
+			"nameIt": "Sarajevo",
+			"population": 696731
+		},
+		"peak": {
+			"name": "Troglav",
+			"elevation": 1913
+		},
+		"position": "south"
+	},
+	"bulgaria": {
+		"kind": "region",
+		"borders": [
+			"Greece",
+			"North Macedonia",
+			"Romania",
+			"Serbia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Sofia",
+			"nameDe": "Sofia",
+			"nameIt": "Sofia",
+			"population": 1185000
+		},
+		"peak": {
+			"name": "Musala",
+			"elevation": 2925
+		},
+		"position": "south"
+	},
+	"montenegro": {
+		"kind": "region",
+		"borders": [
+			"Albania",
+			"Bosnia and Herzegovina",
+			"Croatia",
+			"Kosovo",
+			"Serbia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Podgorica",
+			"nameDe": "Podgorica",
+			"nameIt": "Podgorica",
+			"population": 145850
+		},
+		"peak": {
+			"name": "Durmitor",
+			"elevation": 2522
+		},
+		"position": "south"
+	},
+	"kosovo": {
+		"kind": "region",
+		"borders": [
+			"Albania",
+			"Montenegro",
+			"North Macedonia",
+			"Serbia"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Pristina",
+			"nameDe": "Pristina",
+			"nameIt": "Pristina",
+			"population": 465186
+		},
+		"peak": {
+			"name": "Daravica",
+			"elevation": 2656
+		},
+		"position": "south"
+	},
+	"italy": {
+		"kind": "region",
+		"borders": [
+			"Austria",
+			"France",
+			"Slovenia",
+			"Switzerland"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Rome",
+			"nameDe": "Rom",
+			"nameIt": "Roma",
+			"population": 3339000
+		},
+		"peak": {
+			"name": "Monte Rosa",
+			"elevation": 4634
+		},
+		"position": "south"
+	},
+	"north-macedonia": {
+		"kind": "region",
+		"borders": [
+			"Albania",
+			"Bulgaria",
+			"Greece",
+			"Kosovo",
+			"Serbia"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Skopje",
+			"nameDe": "Skopje",
+			"nameIt": "Skopje",
+			"population": 494087
+		},
+		"position": "south"
+	},
+	"albania": {
+		"kind": "region",
+		"borders": [
+			"Greece",
+			"Kosovo",
+			"Montenegro",
+			"North Macedonia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tirana",
+			"nameDe": "Tirana",
+			"nameIt": "Tirana",
+			"population": 895350
+		},
+		"peak": {
+			"name": "Korab",
+			"elevation": 2764
+		},
+		"position": "south"
+	},
+	"spain": {
+		"kind": "region",
+		"borders": [
+			"France",
+			"Portugal"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Madrid",
+			"nameDe": "Madrid",
+			"nameIt": "Madrid",
+			"population": 5567000
+		},
+		"peak": {
+			"name": "Mulhacén",
+			"elevation": 3479
+		},
+		"position": "south-west"
+	},
+	"portugal": {
+		"kind": "region",
+		"borders": [
+			"Spain"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Madrid",
+			"nameDe": "Madrid",
+			"nameIt": "Madrid",
+			"population": 5567000
+		},
+		"peak": {
+			"name": "Mulhacén",
+			"elevation": 3479
+		},
+		"position": "south-west"
+	},
+	"greece": {
+		"kind": "region",
+		"borders": [
+			"Albania",
+			"Bulgaria",
+			"North Macedonia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Athens",
+			"nameDe": "Athen",
+			"nameIt": "Atene",
+			"population": 3242000
+		},
+		"peak": {
+			"name": "Mount Olympus",
+			"elevation": 2917
+		},
+		"position": "south"
+	}
+}

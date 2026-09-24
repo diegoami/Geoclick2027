@@ -1,0 +1,286 @@
+{
+	"canada": {
+		"kind": "region",
+		"borders": [
+			"United States"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Toronto",
+			"nameDe": "Toronto",
+			"nameIt": "Toronto",
+			"population": 5213000
+		},
+		"peak": {
+			"name": "Mount Logan",
+			"elevation": 5959
+		},
+		"position": "north"
+	},
+	"united-states": {
+		"kind": "region",
+		"borders": [
+			"Canada",
+			"Mexico"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "New York",
+			"nameDe": "New York City",
+			"nameIt": "New York",
+			"population": 19040000
+		},
+		"peak": {
+			"name": "Denali",
+			"elevation": 6194
+		},
+		"position": "centre"
+	},
+	"the-bahamas": {
+		"kind": "region",
+		"coastal": true,
+		"largestCity": {
+			"name": "Nassau",
+			"nameDe": "Nassau",
+			"nameIt": "Nassau",
+			"population": 227940
+		},
+		"peak": {
+			"name": "Mount Alvernia",
+			"elevation": 63
+		},
+		"position": "south-east"
+	},
+	"mexico": {
+		"kind": "region",
+		"borders": [
+			"Belize",
+			"Guatemala",
+			"United States"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Mexico City",
+			"nameDe": "Mexiko-Stadt",
+			"nameIt": "Città del Messico",
+			"population": 19028000
+		},
+		"peak": {
+			"name": "Pico de Orizaba",
+			"elevation": 5636
+		},
+		"position": "south"
+	},
+	"cuba": {
+		"kind": "region",
+		"coastal": true,
+		"largestCity": {
+			"name": "Havana",
+			"nameDe": "Havanna",
+			"nameIt": "L'Avana",
+			"population": 2174000
+		},
+		"peak": {
+			"name": "Pico Turquino",
+			"elevation": 1974
+		},
+		"position": "south-east"
+	},
+	"haiti": {
+		"kind": "region",
+		"borders": [
+			"Dominican Republic"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Port-au-Prince",
+			"nameDe": "Port-au-Prince",
+			"nameIt": "Port-au-Prince",
+			"population": 1998000
+		},
+		"peak": {
+			"name": "Pic la Selle",
+			"elevation": 2680
+		},
+		"position": "south-east"
+	},
+	"dominican-republic": {
+		"kind": "region",
+		"borders": [
+			"Haiti"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Santo Domingo",
+			"nameDe": "Santo Domingo",
+			"nameIt": "Santo Domingo",
+			"population": 2154000
+		},
+		"peak": {
+			"name": "Pico Duarte",
+			"elevation": 3098
+		},
+		"position": "south-east"
+	},
+	"jamaica": {
+		"kind": "region",
+		"coastal": true,
+		"largestCity": {
+			"name": "Kingston",
+			"nameDe": "Kingston",
+			"nameIt": "Kingston",
+			"population": 937700
+		},
+		"peak": {
+			"name": "Blue Mountain Peak",
+			"elevation": 2256
+		},
+		"position": "south-east"
+	},
+	"belize": {
+		"kind": "region",
+		"borders": [
+			"Guatemala",
+			"Mexico"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Belize City",
+			"nameDe": "Belize City",
+			"nameIt": "Belize City",
+			"population": 63028
+		},
+		"peak": {
+			"name": "Doyle's Delight",
+			"elevation": 1174
+		},
+		"position": "south-east"
+	},
+	"guatemala": {
+		"kind": "region",
+		"borders": [
+			"Belize",
+			"El Salvador",
+			"Honduras",
+			"Mexico"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Guatemala City",
+			"nameDe": "Guatemala-Stadt",
+			"nameIt": "Città del Guatemala",
+			"population": 1024000
+		},
+		"peak": {
+			"name": "Volcán Tajumulco",
+			"elevation": 4220
+		},
+		"position": "south-east"
+	},
+	"honduras": {
+		"kind": "region",
+		"borders": [
+			"El Salvador",
+			"Guatemala",
+			"Nicaragua"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tegucigalpa",
+			"nameDe": "Tegucigalpa",
+			"nameIt": "Tegucigalpa",
+			"population": 946000
+		},
+		"peak": {
+			"name": "Cerro Las Minas",
+			"elevation": 2849
+		},
+		"position": "south-east"
+	},
+	"el-salvador": {
+		"kind": "region",
+		"borders": [
+			"Guatemala",
+			"Honduras"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "San Salvador",
+			"nameDe": "San Salvador",
+			"nameIt": "San Salvador",
+			"population": 1433000
+		},
+		"peak": {
+			"name": "Cerro El Pital",
+			"elevation": 2730
+		},
+		"position": "south-east"
+	},
+	"nicaragua": {
+		"kind": "region",
+		"borders": [
+			"Costa Rica",
+			"Honduras"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Managua",
+			"nameDe": "Managua",
+			"nameIt": "Managua",
+			"population": 920000
+		},
+		"position": "south-east"
+	},
+	"trinidad-and-tobago": {
+		"kind": "region",
+		"coastal": true,
+		"largestCity": {
+			"name": "Port-of-Spain",
+			"nameDe": "Port of Spain",
+			"nameIt": "Port of Spain",
+			"population": 294934
+		},
+		"peak": {
+			"name": "Aripo Peak",
+			"elevation": 940
+		},
+		"position": "south-east"
+	},
+	"costa-rica": {
+		"kind": "region",
+		"borders": [
+			"Nicaragua",
+			"Panama"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "San José",
+			"nameDe": "San José",
+			"nameIt": "San José",
+			"population": 1284000
+		},
+		"peak": {
+			"name": "Cerro Chirripó",
+			"elevation": 3820
+		},
+		"position": "south-east"
+	},
+	"panama": {
+		"kind": "region",
+		"borders": [
+			"Costa Rica"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Panama City",
+			"nameDe": "Panama-Stadt",
+			"nameIt": "Panama",
+			"population": 1281000
+		},
+		"peak": {
+			"name": "Volcán Barú",
+			"elevation": 3475
+		},
+		"position": "south-east"
+	}
+}

@@ -11,6 +11,10 @@
 //
 // Usage:
 //   npx tsx data/scripts/build-points-map.ts --country="Italy" --out=data/maps/italy-towns-100k --name-field=NAME_IT --min-population=100000 --name="Italy — Towns"
+//
+// Several countries at once (#39): --countries (ADM0NAME list) or
+// --continent (admin-0's CONTINENT), with --country naming the map's group:
+//   npx tsx data/scripts/build-points-map.ts --country="Europe" --continent=Europe --capitals --out=data/maps/europe-capitals --name="Europe — Capitals"
 
 import { execFileSync } from 'node:child_process';
 import { mkdirSync, readFileSync, writeFileSync, rmSync } from 'node:fs';
@@ -30,8 +34,20 @@ import {
 	buildTerrainTileset,
 	cleanupPhysical,
 	padBbox,
-	pmtilesConvert
+	pmtilesConvert,
+	ADMIN0_SHP,
+	selectAdmin0Context
 } from './mapBuildUtils.js';
+import {
+	ALL_NAME_FIELDS,
+	COUNTRY_TYPES,
+	NOT_COUNTRIES,
+	capPerCountry,
+	localNameField,
+	parseList,
+	sqlIn,
+	sqlString
+} from './multiCountry.js';
 import { colorizeMapDir } from './mapColors.js';
 import { disambiguate, isUnbounded, parseBounds, withinBounds } from './placeSelection.js';
 
@@ -134,7 +150,18 @@ const NAME_FIXUPS: Record<string, Record<string, string>> = {
 	Indonesia: { Bandjarmasin: 'Banjarmasin', Pakalongan: 'Pekalongan' },
 	// Missing diacritic, confirmed against NAME_ES ("San Nicolás de los
 	// Arroyos" - kept short, same reasoning as Mexico's Puebla/León above).
-	Argentina: { 'San Nicolas': 'San Nicolás' }
+	Argentina: { 'San Nicolas': 'San Nicolás' },
+	// Found auditing the continent and Europe maps (#39). Two capitals by
+	// their current names: Astana was renamed Nur-Sultan in 2019 and back in
+	// 2022; Palau's government moved to Ngerulmud, in Melekeok state, in
+	// 2006. Andorra's capital is not the country's name. The rest are
+	// letters the source lost: Plzeň, Panevėžys, and Peja for Kosovo's Peć.
+	Kazakhstan: { 'Nur-Sultan': 'Astana' },
+	Palau: { Melekeok: 'Ngerulmud' },
+	Andorra: { Andorra: 'Andorra la Vella' },
+	Czechia: { Pizen: 'Plzeň' },
+	Lithuania: { Panevežys: 'Panevėžys' },
+	Kosovo: { Pec: 'Peja' }
 };
 
 // The slice of the populated-places export this script reads - ogr2ogr's
@@ -154,9 +181,57 @@ interface PlaceCollection {
 	features: PlaceFeature[];
 }
 
+/**
+ * The ADM0_A3 codes of the countries on a continent, read from the admin-0
+ * layer - populated places carry no continent of their own. The same
+ * country filter as a Countries map (multiCountry.ts), so a continent's
+ * Capitals map and its Countries map agree on what is a country.
+ */
+function countriesOnContinent(continent: string): string[] {
+	const out = execFileSync(
+		'ogr2ogr',
+		[
+			'-f',
+			'CSV',
+			'/vsistdout/',
+			'-where',
+			[
+				`CONTINENT = ${sqlString(continent)}`,
+				sqlIn('TYPE', COUNTRY_TYPES),
+				`NOT (${sqlIn('ADMIN', NOT_COUNTRIES)})`
+			].join(' AND '),
+			'-select',
+			'ADM0_A3',
+			ADMIN0_SHP
+		],
+		{ encoding: 'utf-8' }
+	);
+	return out
+		.split(/\r?\n/)
+		.slice(1)
+		.map((line) => line.trim().replace(/^"|"$/g, ''))
+		.filter(Boolean);
+}
+
 async function main() {
 	const args = parseArgs(process.argv.slice(2));
-	const country = args.country; // matches the dataset's ADM0NAME field
+	// One country's ADM0NAME - or, with --countries/--continent (#39), the
+	// map's group ("Europe"), written to map.json and never matched.
+	const country = args.country;
+	const countryList = parseList(args.countries);
+	const continent = args.continent;
+	const multiCountry = countryList.length > 0 || Boolean(continent);
+	// --capitals keeps national capitals only (Natural Earth's
+	// 'Admin-0 capital'); the population rules then apply to those.
+	const capitalsOnly = process.argv.includes('--capitals');
+	// --also=Dodoma,Porto-Novo: capitals by NAME that Natural Earth does not
+	// flag as 'Admin-0 capital' - it gives Tanzania Dar es Salaam and Benin
+	// Cotonou, the largest city and seat of government, where each country's
+	// own constitution names Dodoma and Porto-Novo (#39).
+	const also = parseList(args.also);
+	// --max-per-country=N: on a map of several countries, at most N places
+	// from any one, so Russia does not fill Eastern Europe (#39).
+	const maxPerCountry = args['max-per-country'] ? Number(args['max-per-country']) : Infinity;
 	const outDir = args.out;
 	const minPopulation = Number(args['min-population'] ?? 100000);
 	// Adaptive selection, added when the >100k-population threshold alone
@@ -178,7 +253,10 @@ async function main() {
 	// back to the plain NAME field (usually English) for any row where the
 	// localized one is empty, same spirit as build-map.ts's NAME_FIXUPS but
 	// using a field the dataset already provides instead of a manual table.
-	const nameField = args['name-field'] ?? 'NAME';
+	// --name-field=local reads each country's own field (multiCountry.ts's
+	// LOCAL_NAME_FIELD), so München is München on every map it is on. The
+	// default for a map of several countries.
+	const nameField = args['name-field'] ?? (multiCountry ? 'local' : 'NAME');
 	const mapName = args.name ?? `${country} — Towns`;
 	// --exclude=Belfast drops named features by their NAME field - e.g. a
 	// "Great Britain" towns map excluding Northern Ireland (part of the UK,
@@ -191,6 +269,9 @@ async function main() {
 	const bounds = parseBounds(args);
 
 	if (!country || !outDir) {
+		console.error(
+			'Several countries: --country="Europe" (the group) plus --countries=France,Belgium or --continent=Europe, with [--capitals] [--max-per-country=15] [--name-field=local].'
+		);
 		console.error(
 			'Usage: build-points-map.ts --country="Italy" --out=data/maps/italy-towns-100k [--name-field=NAME_IT] [--min-population=100000] [--min-count=5] [--max-count=50] [--name="Italy — Towns"] [--exclude=Belfast] [--lon-min=-104 --lon-max=-87] [--lat-min=41.3 --lat-max=43.8]'
 		);
@@ -219,6 +300,11 @@ async function main() {
 	const tourJsonPath = path.join(absOutDir, 'tour.json');
 
 	console.log(`[1/5] Filtering "${country}" from Natural Earth...`);
+	const continentA3 = continent ? countriesOnContinent(continent) : [];
+	if (continent && continentA3.length === 0) {
+		console.error(`No countries found on continent "${continent}".`);
+		process.exit(1);
+	}
 	// POP_MAX, deliberately, not POP_MIN or the POPxxxx yearly fields -
 	// checked all three against known-tricky rows before choosing: POP_MIN
 	// reads as flatly wrong for some capitals (Rome: 35,452 - a real bug in
@@ -237,9 +323,18 @@ async function main() {
 	// below the threshold or truncate above it. `POP_MAX > 0` just drops
 	// rows with missing/zero population data, which are meaningless for
 	// any of the three selection modes.
+	const countryClause = continent
+		? sqlIn('ADM0_A3', continentA3)
+		: countryList.length > 0
+			? sqlIn('ADM0NAME', countryList)
+			: `ADM0NAME='${country}'`;
 	const whereClause =
-		`ADM0NAME='${country}' AND POP_MAX > 0` +
-		(exclude.length ? ` AND NAME NOT IN (${exclude.map((n) => `'${n}'`).join(',')})` : '');
+		`${countryClause} AND POP_MAX > 0` +
+		(capitalsOnly
+			? ` AND (FEATURECLA = 'Admin-0 capital'${also.length ? ` OR ${sqlIn('NAME', also)}` : ''})`
+			: '') +
+		(exclude.length ? ` AND NOT (${sqlIn('NAME', exclude)})` : '');
+	const nameFields = nameField === 'local' ? ALL_NAME_FIELDS : [...new Set([nameField, 'NAME'])];
 	execFileSync('ogr2ogr', [
 		'-f',
 		'GeoJSON',
@@ -248,7 +343,7 @@ async function main() {
 		'-select',
 		// ADM1NAME rides along so two places of the same name can be told
 		// apart by the region they are in (FT-27).
-		`${nameField},NAME,ADM1NAME,POP_MAX`,
+		`${nameFields.join(',')},ADM0NAME,ADM1NAME,POP_MAX`,
 		filteredPath,
 		SOURCE_SHP
 	]);
@@ -284,11 +379,15 @@ async function main() {
 	// Truncate to the most populous places, for a country where the
 	// threshold alone would select far more than a curated quiz can
 	// reasonably use (e.g. China).
+	selectedFeatures = capPerCountry(
+		selectedFeatures,
+		(feature) => String(feature.properties.ADM0NAME),
+		maxPerCountry
+	);
 	if (selectedFeatures.length > maxCount) {
 		selectedFeatures = selectedFeatures.slice(0, maxCount);
 	}
 
-	const fixups = NAME_FIXUPS[country] ?? {};
 	// Two places of the same name would collide on the map's feature-state key
 	// (promoteId: 'name'), so each gets its region added and keeps the plain
 	// name as an alias - "Kansas City, Missouri" and "Kansas City, Kansas"
@@ -296,11 +395,17 @@ async function main() {
 	const named = disambiguate(
 		selectedFeatures.map((feature) => {
 			const p = feature.properties;
-			const rawName: string = (p[nameField] as string | null | undefined) || p.NAME;
+			const placeCountry = String(p.ADM0NAME);
+			const field = nameField === 'local' ? localNameField(placeCountry) : nameField;
+			const rawName: string = (p[field] as string | null | undefined) || p.NAME;
+			// A row's fixups are its own country's, whatever map it is on.
+			const fixups = NAME_FIXUPS[multiCountry ? placeCountry : country] ?? {};
 			return {
 				feature,
 				name: fixups[rawName] ?? rawName,
-				region: (p.ADM1NAME as string | null | undefined) || undefined
+				// On a map of several countries, two places of the same name
+				// are told apart by country: "Córdoba, Spain", not by province.
+				region: multiCountry ? placeCountry : (p.ADM1NAME as string | null | undefined) || undefined
 			};
 		})
 	);
@@ -312,6 +417,9 @@ async function main() {
 			type: 'city',
 			tier: 1,
 			aliases,
+			// Which country each town is in, on a map of several (#39) - the
+			// facts builder reads it to find the town's authored sentences.
+			...(multiCountry ? { country: String(feature.properties.ADM0NAME) } : {}),
 			centroid,
 			// Degenerate, not a real extent - a point target has no area.
 			// TourView branches on target.type before reading bbox for
@@ -382,7 +490,12 @@ async function main() {
 	// already show the whole country). Same admin-1 dataset build-map.ts
 	// uses for actual polygon targets, purely for visual context here. See
 	// MAPS.md's "Point-target implementation" section.
-	selectCountryContext(country, contextPath);
+	if (multiCountry) {
+		// Country outlines rather than one country's admin-1 lines (#39).
+		selectAdmin0Context(padBbox(overallBboxOf(targets)), contextPath);
+	} else {
+		selectCountryContext(country, contextPath);
+	}
 
 	console.log('[4/5] Building vector tiles (tippecanoe + pmtiles convert)...');
 	// --drop-rate=1: tippecanoe's default behavior thins out point features

@@ -43,7 +43,7 @@ import {
 	type Position2Words
 } from './factGeometry.js';
 import type { LangHooks } from './authoredHooks.js';
-import { hooksForCountry, withHooks } from './factsHooks.js';
+import { authoredResolver, withHooks } from './factsHooks.js';
 
 const MAPS_DIR = path.join(REPO_ROOT, 'data/maps');
 const COASTLINE_SHP = path.join(REPO_ROOT, 'data/source/ne_10m_coastline/ne_10m_coastline.shp');
@@ -127,7 +127,7 @@ function sourcesFor(bbox: Bbox) {
 		),
 		admin1: exportGeojson(
 			ADMIN1_SHP,
-			[...spat, '-select', 'name,type_en,name_local,region'],
+			[...spat, '-select', 'name,type_en,name_local,region,admin'],
 			tmp('adm1')
 		)
 	};
@@ -166,12 +166,17 @@ function terrainAt(point: Position, sources: Sources): string[] {
  * group's extent to the target's finds the right group whatever it is
  * called.
  */
-function rowsByTarget(targets: MapTarget[], rows: Feature[]): Map<string, Feature[]> {
+function rowsByTarget(
+	targets: MapTarget[],
+	rows: Feature[],
+	// A Countries map (#39) groups every admin-1 row by its country instead.
+	fields: readonly string[] = ['name', 'region']
+): Map<string, Feature[]> {
 	const groups = new Map<string, Feature[]>();
 	for (const row of rows) {
 		// Both the row's own name and the field a dissolve would have grouped
 		// on; whichever produced this map, one of them is the right grouping.
-		for (const field of ['name', 'region'] as const) {
+		for (const field of fields) {
 			const key = row.properties[field];
 			if (typeof key !== 'string' || key === '') continue;
 			const groupKey = `${field}:${key}`;
@@ -233,14 +238,21 @@ function factsForRegionMap(
 	borders: Map<string, Set<string>>
 ): Record<string, DerivedFact> {
 	const coast = coastIndex(sources.coast.map((f) => f.geometry));
-	const sourceRows = rowsByTarget(targets, sources.admin1);
+	const countryMap = targets[0]?.type === 'country';
+	const sourceRows = rowsByTarget(
+		targets,
+		sources.admin1,
+		countryMap ? ['admin'] : ['name', 'region']
+	);
 
 	const facts: Record<string, DerivedFact> = {};
 	for (const target of targets) {
 		const fact: DerivedFact = { kind: 'region' };
 		const rows = sourceRows.get(target.id) ?? [];
 		const shapes = rows.map((r) => r.geometry);
-		const row = rows.length === 1 ? rows[0] : undefined;
+		// A row's type and local name describe that admin-1 area, never a
+		// whole country, even one with a single row.
+		const row = rows.length === 1 && !countryMap ? rows[0] : undefined;
 
 		// Only for an undissolved target: "Province" is the right word for
 		// Torino, but the row's word for a piece of Piemonte is not the right
@@ -363,7 +375,7 @@ async function buildOne(mapId: string): Promise<number> {
 	const absOutDir = path.join(MAPS_DIR, mapId);
 	const map = JSON.parse(readFileSync(path.join(absOutDir, 'map.json'), 'utf8')) as {
 		country?: string;
-		targets: MapTarget[];
+		targets: (MapTarget & { country?: string })[];
 	};
 	const usable = map.targets.filter((t) => !t.crossesAntimeridian && !crossesAntimeridian(t.bbox));
 	const extent = overallBboxOf(usable.length > 0 ? usable : map.targets);
@@ -375,14 +387,14 @@ async function buildOne(mapId: string): Promise<number> {
 		: factsForRegionMap(map.targets, sources, extent, await adjacencyForMapDir(absOutDir));
 
 	// The authored name-facts, where a person has written any (FT-36).
-	const hooks = hooksForCountry(map.country);
+	const hooksFor = authoredResolver(map.country);
 
 	// Keys in the map's own target order, so a rebuild of an unchanged map
 	// produces an identical file - MAPS.md's reproducibility rule.
 	const ordered: Record<string, DerivedFact> = {};
 	for (const target of map.targets) {
 		// A kind-specific list wins over the catch-all (factsHooks.ts).
-		ordered[target.id] = withHooks(facts[target.id], hooks[target.id]);
+		ordered[target.id] = withHooks(facts[target.id], hooksFor(target));
 	}
 	writeFileSync(path.join(absOutDir, 'facts.json'), `${JSON.stringify(ordered, null, '\t')}\n`);
 	return Object.keys(ordered).length;

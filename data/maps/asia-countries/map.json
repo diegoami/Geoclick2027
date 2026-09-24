@@ -1,0 +1,1675 @@
+{
+	"id": "asia-countries",
+	"name": "Asia — Countries",
+	"country": "Asia",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "kazakhstan",
+			"name": "Kazakhstan",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				66.90155,
+				47.984899999999996
+			],
+			"bbox": [
+				46.4793,
+				40.5847,
+				87.3238,
+				55.3851
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						51.827,
+						47.9825
+					],
+					[
+						66.7468,
+						49.3694
+					],
+					[
+						81.7842,
+						48.428
+					]
+				],
+				"aspect": 2.21
+			}
+		},
+		{
+			"id": "mongolia",
+			"name": "Mongolia",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.83055,
+				46.8514
+			],
+			"bbox": [
+				87.7569,
+				41.5961,
+				119.9042,
+				52.1067
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						92.7004,
+						47.9262
+					],
+					[
+						103.0676,
+						45.423
+					],
+					[
+						113.8671,
+						47.0798
+					]
+				],
+				"aspect": 2.15
+			}
+		},
+		{
+			"id": "georgia",
+			"name": "Georgia",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				43.3404,
+				42.3103
+			],
+			"bbox": [
+				39.986,
+				41.0448,
+				46.6948,
+				43.5758
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						41.7585,
+						42.6819
+					],
+					[
+						43.5446,
+						41.7757
+					],
+					[
+						45.8123,
+						41.8182
+					]
+				],
+				"aspect": 2.13
+			}
+		},
+		{
+			"id": "uzbekistan",
+			"name": "Uzbekistan",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				64.5472,
+				41.3738
+			],
+			"bbox": [
+				55.9764,
+				37.1889,
+				73.118,
+				45.5587
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						57.2062,
+						44.0155
+					],
+					[
+						62.7108,
+						42.0974
+					],
+					[
+						67.9838,
+						39.7609
+					]
+				],
+				"aspect": 2.92
+			}
+		},
+		{
+			"id": "kyrgyzstan",
+			"name": "Kyrgyzstan",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				74.7414,
+				41.228300000000004
+			],
+			"bbox": [
+				69.2263,
+				39.2408,
+				80.2565,
+				43.2158
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						71.7065,
+						41.0007
+					],
+					[
+						75.0957,
+						41.9538
+					],
+					[
+						78.7837,
+						42.1258
+					]
+				],
+				"aspect": 2.65
+			}
+		},
+		{
+			"id": "north-korea",
+			"name": "North Korea",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				127.51335,
+				40.363600000000005
+			],
+			"bbox": [
+				124.37,
+				37.7312,
+				130.6567,
+				42.996
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						125.7928,
+						38.2118
+					],
+					[
+						126.4537,
+						40.5601
+					],
+					[
+						129.1448,
+						41.5724
+					]
+				],
+				"aspect": 2.48
+			}
+		},
+		{
+			"id": "azerbaijan",
+			"name": "Azerbaijan",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				47.55525,
+				40.1432
+			],
+			"bbox": [
+				44.7746,
+				38.396,
+				50.3359,
+				41.8904
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						45.8413,
+						40.5717
+					],
+					[
+						47.5122,
+						40.2759
+					],
+					[
+						49.1832,
+						40.2311
+					]
+				],
+				"aspect": 1.35
+			}
+		},
+		{
+			"id": "armenia",
+			"name": "Armenia",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				45.019149999999996,
+				40.0771
+			],
+			"bbox": [
+				43.4404,
+				38.8637,
+				46.5979,
+				41.2905
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						43.9477,
+						40.9617
+					],
+					[
+						44.8904,
+						40.4372
+					],
+					[
+						45.5954,
+						39.7239
+					]
+				],
+				"aspect": 1.88
+			}
+		},
+		{
+			"id": "turkmenistan",
+			"name": "Turkmenistan",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				59.54174999999999,
+				38.964200000000005
+			],
+			"bbox": [
+				52.4377,
+				35.1475,
+				66.6458,
+				42.7809
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						55.0722,
+						40.0965
+					],
+					[
+						60.377,
+						40.2525
+					],
+					[
+						63.8544,
+						37.1223
+					]
+				],
+				"aspect": 1.86
+			}
+		},
+		{
+			"id": "turkey",
+			"name": "Turkey",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				35.283,
+				38.9593
+			],
+			"bbox": [
+				25.759,
+				35.8198,
+				44.807,
+				42.0988
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						28.0312,
+						38.7688
+					],
+					[
+						35.4647,
+						39.1672
+					],
+					[
+						42.8917,
+						39.1354
+					]
+				],
+				"aspect": 2.65
+			}
+		},
+		{
+			"id": "tajikistan",
+			"name": "Tajikistan",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				71.27115,
+				38.8658
+			],
+			"bbox": [
+				67.3782,
+				36.6992,
+				75.1641,
+				41.0324
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						68.5612,
+						38.7952
+					],
+					[
+						71.4277,
+						38.4608
+					],
+					[
+						74.2554,
+						37.9888
+					]
+				],
+				"aspect": 2.64
+			}
+		},
+		{
+			"id": "south-korea",
+			"name": "South Korea",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				127.82915,
+				35.91235
+			],
+			"bbox": [
+				126.1157,
+				33.2004,
+				129.5426,
+				38.6243
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						126.9106,
+						36.4165
+					],
+					[
+						128.0625,
+						36.9232
+					],
+					[
+						129.2143,
+						36.5434
+					]
+				],
+				"aspect": 0.54
+			}
+		},
+		{
+			"id": "china",
+			"name": "China",
+			"type": "country",
+			"tier": 1,
+			"aliases": [
+				"People's Republic of China"
+			],
+			"centroid": [
+				104.18745000000001,
+				35.8805
+			],
+			"bbox": [
+				73.6023,
+				18.1932,
+				134.7726,
+				53.5678
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						81.075,
+						38.5491
+					],
+					[
+						98.9166,
+						33.8612
+					],
+					[
+						115.5075,
+						33.911
+					]
+				],
+				"aspect": 1.32
+			}
+		},
+		{
+			"id": "northern-cyprus",
+			"name": "Northern Cyprus",
+			"type": "country",
+			"tier": 1,
+			"aliases": [
+				"Turkish Republic of Northern Cyprus"
+			],
+			"centroid": [
+				33.683800000000005,
+				35.33755
+			],
+			"bbox": [
+				32.7948,
+				35.0316,
+				34.5728,
+				35.6435
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						33.0024,
+						35.2349
+					],
+					[
+						33.6545,
+						35.0976
+					],
+					[
+						34.191,
+						35.4257
+					]
+				],
+				"aspect": 5.07
+			}
+		},
+		{
+			"id": "cyprus",
+			"name": "Cyprus",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				33.01545,
+				34.914649999999995
+			],
+			"bbox": [
+				32.3294,
+				34.6513,
+				33.7015,
+				35.178
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						32.4689,
+						34.9082
+					],
+					[
+						32.9963,
+						34.8652
+					],
+					[
+						33.5192,
+						34.9375
+					]
+				],
+				"aspect": 2.04
+			}
+		},
+		{
+			"id": "japan",
+			"name": "Japan",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				134.76405,
+				34.8842
+			],
+			"bbox": [
+				123.7481,
+				24.2582,
+				145.78,
+				45.5102
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						134.2037,
+						34.4166
+					],
+					[
+						139.4757,
+						35.5471
+					],
+					[
+						141.6826,
+						39.4679
+					]
+				],
+				"aspect": 4.27
+			}
+		},
+		{
+			"id": "syria",
+			"name": "Syria",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				39.0574,
+				34.81155
+			],
+			"bbox": [
+				35.7576,
+				32.3168,
+				42.3572,
+				37.3063
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						36.393,
+						33.1735
+					],
+					[
+						37.7266,
+						35.5128
+					],
+					[
+						40.7487,
+						36.1021
+					]
+				],
+				"aspect": 1.65
+			}
+		},
+		{
+			"id": "afghanistan",
+			"name": "Afghanistan",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				67.68955,
+				33.93015
+			],
+			"bbox": [
+				60.4868,
+				29.3866,
+				74.8923,
+				38.4737
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						62.4611,
+						31.6017
+					],
+					[
+						65.9589,
+						34.3366
+					],
+					[
+						70.1938,
+						36.1819
+					]
+				],
+				"aspect": 1.44
+			}
+		},
+		{
+			"id": "lebanon",
+			"name": "Lebanon",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				35.85465000000001,
+				33.8535
+			],
+			"bbox": [
+				35.1052,
+				33.0572,
+				36.6041,
+				34.6498
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						35.385,
+						33.2343
+					],
+					[
+						35.8088,
+						33.8652
+					],
+					[
+						36.2832,
+						34.4661
+					]
+				],
+				"aspect": 3.11
+			}
+		},
+		{
+			"id": "iraq",
+			"name": "Iraq",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				43.65275,
+				33.218999999999994
+			],
+			"bbox": [
+				38.7745,
+				29.0631,
+				48.531,
+				37.3749
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						40.3108,
+						34.2763
+					],
+					[
+						43.6245,
+						34.3416
+					],
+					[
+						46.9383,
+						31.7415
+					]
+				],
+				"aspect": 1.03
+			}
+		},
+		{
+			"id": "iran",
+			"name": "Iran",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				53.66315,
+				32.41265
+			],
+			"bbox": [
+				44.0614,
+				25.0594,
+				63.2649,
+				39.7659
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						46.3606,
+						36.6236
+					],
+					[
+						55.2851,
+						34.0565
+					],
+					[
+						60.7151,
+						27.4249
+					]
+				],
+				"aspect": 2.4
+			}
+		},
+		{
+			"id": "palestine",
+			"name": "Palestine",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				34.886399999999995,
+				31.877000000000002
+			],
+			"bbox": [
+				34.2003,
+				31.2114,
+				35.5725,
+				32.5426
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						35.1465,
+						31.4535
+					],
+					[
+						35.3884,
+						31.9179
+					],
+					[
+						35.2522,
+						32.4126
+					]
+				],
+				"aspect": 2.16
+			}
+		},
+		{
+			"id": "israel",
+			"name": "Israel",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				35.06825,
+				31.48285
+			],
+			"bbox": [
+				34.2484,
+				29.559,
+				35.8881,
+				33.4067
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						34.9027,
+						30.0167
+					],
+					[
+						34.7656,
+						31.0333
+					],
+					[
+						34.856,
+						32.0029
+					]
+				],
+				"aspect": 4.47
+			}
+		},
+		{
+			"id": "jordan",
+			"name": "Jordan",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				37.1207,
+				31.28085
+			],
+			"bbox": [
+				34.9494,
+				29.19,
+				39.292,
+				33.3717
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						35.6996,
+						29.5279
+					],
+					[
+						36.2252,
+						31.702
+					],
+					[
+						38.5102,
+						32.6859
+					]
+				],
+				"aspect": 2.97
+			}
+		},
+		{
+			"id": "pakistan",
+			"name": "Pakistan",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				68.9467,
+				30.394149999999996
+			],
+			"bbox": [
+				60.8444,
+				23.7338,
+				77.049,
+				37.0545
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						65.2714,
+						26.7358
+					],
+					[
+						71.7559,
+						29.8429
+					],
+					[
+						74.2081,
+						35.8155
+					]
+				],
+				"aspect": 2.74
+			}
+		},
+		{
+			"id": "kuwait",
+			"name": "Kuwait",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				47.482600000000005,
+				29.315849999999998
+			],
+			"bbox": [
+				46.5324,
+				28.5335,
+				48.4328,
+				30.0982
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						46.9539,
+						29.6384
+					],
+					[
+						47.5475,
+						29.5211
+					],
+					[
+						48.1411,
+						28.9059
+					]
+				],
+				"aspect": 1.2
+			}
+		},
+		{
+			"id": "nepal",
+			"name": "Nepal",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				84.10275,
+				28.3838
+			],
+			"bbox": [
+				80.0364,
+				26.3533,
+				88.1691,
+				30.4143
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						80.9236,
+						29.4547
+					],
+					[
+						84.0228,
+						27.9812
+					],
+					[
+						87.3837,
+						27.0341
+					]
+				],
+				"aspect": 4
+			}
+		},
+		{
+			"id": "bhutan",
+			"name": "Bhutan",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				90.40745,
+				27.5231
+			],
+			"bbox": [
+				88.7301,
+				26.701,
+				92.0848,
+				28.3452
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						89.188,
+						27.3348
+					],
+					[
+						90.4979,
+						27.7695
+					],
+					[
+						91.7559,
+						27.1977
+					]
+				],
+				"aspect": 1.86
+			}
+		},
+		{
+			"id": "qatar",
+			"name": "Qatar",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				51.18375,
+				25.360149999999997
+			],
+			"bbox": [
+				50.751,
+				24.5602,
+				51.6165,
+				26.1601
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						51.1522,
+						24.7175
+					],
+					[
+						51.1602,
+						25.3363
+					],
+					[
+						51.2343,
+						25.9483
+					]
+				],
+				"aspect": 2.04
+			}
+		},
+		{
+			"id": "united-arab-emirates",
+			"name": "United Arab Emirates",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				53.976299999999995,
+				24.34095
+			],
+			"bbox": [
+				51.5693,
+				22.6209,
+				56.3833,
+				26.061
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						52.573,
+						23.1728
+					],
+					[
+						54.8941,
+						23.2645
+					],
+					[
+						56.2399,
+						24.9378
+					]
+				],
+				"aspect": 2.73
+			}
+		},
+		{
+			"id": "saudi-arabia",
+			"name": "Saudi Arabia",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				45.132149999999996,
+				24.244549999999997
+			],
+			"bbox": [
+				34.6267,
+				16.371,
+				55.6376,
+				32.1181
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						38.6587,
+						29.3461
+					],
+					[
+						43.3498,
+						22.2984
+					],
+					[
+						52.2741,
+						20.1919
+					]
+				],
+				"aspect": 1.88
+			}
+		},
+		{
+			"id": "bangladesh",
+			"name": "Bangladesh",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				90.33234999999999,
+				23.7872
+			],
+			"bbox": [
+				88.0218,
+				20.9957,
+				92.6429,
+				26.5787
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "taiwan",
+			"name": "Taiwan",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.9931,
+				23.59845
+			],
+			"bbox": [
+				120.0594,
+				21.9255,
+				121.9268,
+				25.2714
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						120.5948,
+						22.6905
+					],
+					[
+						120.8297,
+						23.8959
+					],
+					[
+						121.5156,
+						24.9504
+					]
+				],
+				"aspect": 2.38
+			}
+		},
+		{
+			"id": "oman",
+			"name": "Oman",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				55.9116,
+				21.476
+			],
+			"bbox": [
+				51.9786,
+				16.6424,
+				59.8446,
+				26.3096
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						53.4959,
+						17.8252
+					],
+					[
+						56.7659,
+						19.7487
+					],
+					[
+						57.7342,
+						23.156
+					]
+				],
+				"aspect": 2.35
+			}
+		},
+		{
+			"id": "india",
+			"name": "India",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				82.7594,
+				21.1482
+			],
+			"bbox": [
+				68.1637,
+				6.801,
+				97.3551,
+				35.4954
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						71.5664,
+						23.8602
+					],
+					[
+						79.1553,
+						20.2066
+					],
+					[
+						86.7442,
+						23.3108
+					]
+				],
+				"aspect": 1.2
+			}
+		},
+		{
+			"id": "myanmar",
+			"name": "Myanmar",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				96.67445000000001,
+				19.1954
+			],
+			"bbox": [
+				92.175,
+				9.8613,
+				101.1739,
+				28.5295
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						96.7213,
+						26.4835
+					],
+					[
+						95.8593,
+						22.0051
+					],
+					[
+						96.1469,
+						17.4354
+					]
+				],
+				"aspect": 2.61
+			}
+		},
+		{
+			"id": "laos",
+			"name": "Laos",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.87845,
+				18.2035
+			],
+			"bbox": [
+				100.0993,
+				13.9155,
+				107.6576,
+				22.4915
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						101.2269,
+						20.8386
+					],
+					[
+						104.3742,
+						18.3994
+					],
+					[
+						106.5788,
+						15.1501
+					]
+				],
+				"aspect": 4.18
+			}
+		},
+		{
+			"id": "vietnam",
+			"name": "Vietnam",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				105.79185000000001,
+				15.9418
+			],
+			"bbox": [
+				102.1187,
+				8.5656,
+				109.465,
+				23.318
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						105.9491,
+						22.9731
+					],
+					[
+						106.6324,
+						21.3603
+					],
+					[
+						105.5827,
+						19.3806
+					]
+				],
+				"aspect": 1.18
+			}
+		},
+		{
+			"id": "yemen",
+			"name": "Yemen",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				48.5843,
+				15.6503
+			],
+			"bbox": [
+				42.6717,
+				12.305,
+				54.4969,
+				18.9956
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						43.8106,
+						14.8422
+					],
+					[
+						47.8889,
+						15.7385
+					],
+					[
+						51.6777,
+						17.434
+					]
+				],
+				"aspect": 2.14
+			}
+		},
+		{
+			"id": "thailand",
+			"name": "Thailand",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				101.54455,
+				13.040799999999999
+			],
+			"bbox": [
+				97.4381,
+				5.6376,
+				105.651,
+				20.444
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						101.4927,
+						13.3116
+					],
+					[
+						102.4455,
+						16.4668
+					],
+					[
+						100.2221,
+						19.7401
+					]
+				],
+				"aspect": 1.83
+			}
+		},
+		{
+			"id": "cambodia",
+			"name": "Cambodia",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				104.9676,
+				12.562149999999999
+			],
+			"bbox": [
+				102.3282,
+				10.4197,
+				107.607,
+				14.7046
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						103.0312,
+						12.7353
+					],
+					[
+						105.0508,
+						12.0521
+					],
+					[
+						107.0705,
+						13.2614
+					]
+				],
+				"aspect": 1.24
+			}
+		},
+		{
+			"id": "philippines",
+			"name": "Philippines",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.7836,
+				12.23155
+			],
+			"bbox": [
+				116.9549,
+				5.0598,
+				126.6123,
+				19.4033
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						121.3457,
+						18.3098
+					],
+					[
+						120.9041,
+						16.1236
+					],
+					[
+						121.2895,
+						14.1095
+					]
+				],
+				"aspect": 2.63
+			}
+		},
+		{
+			"id": "sri-lanka",
+			"name": "Sri Lanka",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				80.82245,
+				7.87665
+			],
+			"bbox": [
+				79.7603,
+				5.9237,
+				81.8846,
+				9.8296
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						80.4086,
+						9.0194
+					],
+					[
+						80.7899,
+						7.7161
+					],
+					[
+						80.9051,
+						6.3612
+					]
+				],
+				"aspect": 1.56
+			}
+		},
+		{
+			"id": "brunei",
+			"name": "Brunei",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				114.6713,
+				4.53775
+			],
+			"bbox": [
+				113.9988,
+				4.0214,
+				115.3438,
+				5.0541
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "malaysia",
+			"name": "Malaysia",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				109.49664999999999,
+				4.1036
+			],
+			"bbox": [
+				99.719,
+				0.8514,
+				119.2743,
+				7.3558
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						110.7221,
+						1.3017
+					],
+					[
+						114.6109,
+						2.9298
+					],
+					[
+						117.6868,
+						5.7839
+					]
+				],
+				"aspect": 5.65
+			}
+		},
+		{
+			"id": "indonesia",
+			"name": "Indonesia",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				118.08725000000001,
+				-2.6357499999999994
+			],
+			"bbox": [
+				95.1973,
+				-10.9211,
+				140.9772,
+				5.6496
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						109.7363,
+						-1.2778
+					],
+					[
+						113.4817,
+						-1.9435
+					],
+					[
+						117.2271,
+						0.9858
+					]
+				],
+				"aspect": 1.64
+			}
+		},
+		{
+			"id": "timor-leste",
+			"name": "Timor-Leste",
+			"type": "country",
+			"tier": 1,
+			"aliases": [
+				"East Timor"
+			],
+			"centroid": [
+				125.6666,
+				-8.89885
+			],
+			"bbox": [
+				124.03,
+				-9.4887,
+				127.3032,
+				-8.309
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						125.1281,
+						-9.1147
+					],
+					[
+						126,
+						-8.6596
+					],
+					[
+						126.9753,
+						-8.5445
+					]
+				],
+				"aspect": 3.94
+			}
+		}
+	],
+	"tourOrder": [
+		"kazakhstan",
+		"mongolia",
+		"georgia",
+		"uzbekistan",
+		"kyrgyzstan",
+		"north-korea",
+		"azerbaijan",
+		"armenia",
+		"turkmenistan",
+		"turkey",
+		"tajikistan",
+		"south-korea",
+		"china",
+		"northern-cyprus",
+		"cyprus",
+		"japan",
+		"syria",
+		"afghanistan",
+		"lebanon",
+		"iraq",
+		"iran",
+		"palestine",
+		"israel",
+		"jordan",
+		"pakistan",
+		"kuwait",
+		"nepal",
+		"bhutan",
+		"qatar",
+		"united-arab-emirates",
+		"saudi-arabia",
+		"bangladesh",
+		"taiwan",
+		"oman",
+		"india",
+		"myanmar",
+		"laos",
+		"vietnam",
+		"yemen",
+		"thailand",
+		"cambodia",
+		"philippines",
+		"sri-lanka",
+		"brunei",
+		"malaysia",
+		"indonesia",
+		"timor-leste"
+	]
+}

@@ -1,0 +1,426 @@
+{
+	"id": "south-america-countries",
+	"name": "South America — Countries",
+	"country": "South America",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "venezuela",
+			"name": "Venezuela",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-66.5967,
+				6.42745
+			],
+			"bbox": [
+				-73.3778,
+				0.656,
+				-59.8156,
+				12.1989
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						-70.3961,
+						8.444
+					],
+					[
+						-66.3447,
+						5.48
+					],
+					[
+						-62.2933,
+						6.3782
+					]
+				],
+				"aspect": 1.36
+			}
+		},
+		{
+			"id": "guyana",
+			"name": "Guyana",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-58.9307,
+				4.87965
+			],
+			"bbox": [
+				-61.3796,
+				1.2013,
+				-56.4818,
+				8.558
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						-59.8441,
+						7.4026
+					],
+					[
+						-58.6284,
+						4.8613
+					],
+					[
+						-58.4037,
+						2.0483
+					]
+				],
+				"aspect": 2.04
+			}
+		},
+		{
+			"id": "colombia",
+			"name": "Colombia",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-72.93655000000001,
+				4.1144
+			],
+			"bbox": [
+				-78.998,
+				-4.2365,
+				-66.8751,
+				12.4653
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						-76.3477,
+						5.3368
+					],
+					[
+						-72.3961,
+						2.6564
+					],
+					[
+						-68.4445,
+						3.1645
+					]
+				],
+				"aspect": 0.85
+			}
+		},
+		{
+			"id": "suriname",
+			"name": "Suriname",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-56.02705,
+				3.9225499999999998
+			],
+			"bbox": [
+				-58.0677,
+				1.8335,
+				-53.9864,
+				6.0116
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						-57.4211,
+						4.1247
+					],
+					[
+						-56.0263,
+						4.1228
+					],
+					[
+						-54.6315,
+						4.1492
+					]
+				],
+				"aspect": 0.79
+			}
+		},
+		{
+			"id": "ecuador",
+			"name": "Ecuador",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-83.44794999999999,
+				-1.7729000000000001
+			],
+			"bbox": [
+				-91.6686,
+				-4.9801,
+				-75.2273,
+				1.4343
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						-80.2645,
+						-1.5476
+					],
+					[
+						-78.0519,
+						-1.6727
+					],
+					[
+						-75.8393,
+						-0.7295
+					]
+				],
+				"aspect": 1.33
+			}
+		},
+		{
+			"id": "peru",
+			"name": "Peru",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-75.01095,
+				-9.18505
+			],
+			"bbox": [
+				-81.3376,
+				-18.3377,
+				-68.6843,
+				-0.0324
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						-75.9675,
+						-3.6412
+					],
+					[
+						-75.9628,
+						-10.9302
+					],
+					[
+						-70.499,
+						-15.9416
+					]
+				],
+				"aspect": 2.32
+			}
+		},
+		{
+			"id": "brazil",
+			"name": "Brazil",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-54.388400000000004,
+				-14.236749999999999
+			],
+			"bbox": [
+				-73.9794,
+				-33.7407,
+				-34.7974,
+				5.2672
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						-67.7094,
+						-4.8974
+					],
+					[
+						-53.8251,
+						-15.9433
+					],
+					[
+						-39.9408,
+						-13.9346
+					]
+				],
+				"aspect": 1.38
+			}
+		},
+		{
+			"id": "bolivia",
+			"name": "Bolivia",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-63.6088,
+				-16.286949999999997
+			],
+			"bbox": [
+				-69.6665,
+				-22.8925,
+				-57.5511,
+				-9.6814
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						-68.1929,
+						-15.9968
+					],
+					[
+						-64.5666,
+						-17.5649
+					],
+					[
+						-60.9403,
+						-16.9531
+					]
+				],
+				"aspect": 0.69
+			}
+		},
+		{
+			"id": "paraguay",
+			"name": "Paraguay",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-58.44785,
+				-23.43365
+			],
+			"bbox": [
+				-62.6504,
+				-27.5806,
+				-54.2453,
+				-19.2867
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						-61.1911,
+						-20.5142
+					],
+					[
+						-57.9827,
+						-22.999
+					],
+					[
+						-55.8196,
+						-26.2493
+					]
+				],
+				"aspect": 2.16
+			}
+		},
+		{
+			"id": "uruguay",
+			"name": "Uruguay",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-55.78075,
+				-32.53595
+			],
+			"bbox": [
+				-58.4346,
+				-34.9699,
+				-53.1269,
+				-30.102
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						-57.7468,
+						-32.4718
+					],
+					[
+						-55.8625,
+						-32.6862
+					],
+					[
+						-53.9782,
+						-33.3546
+					]
+				],
+				"aspect": 0.84
+			}
+		},
+		{
+			"id": "chile",
+			"name": "Chile",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-71.06389999999999,
+				-36.589749999999995
+			],
+			"bbox": [
+				-75.707,
+				-55.6729,
+				-66.4208,
+				-17.5066
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "argentina",
+			"name": "Argentina",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-63.619699999999995,
+				-38.4217
+			],
+			"bbox": [
+				-73.5727,
+				-55.051,
+				-53.6667,
+				-21.7924
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						-70.6443,
+						-48.6816
+					],
+					[
+						-64.9508,
+						-38.5303
+					],
+					[
+						-62.6669,
+						-25.8775
+					]
+				],
+				"aspect": 3.28
+			}
+		}
+	],
+	"tourOrder": [
+		"venezuela",
+		"guyana",
+		"colombia",
+		"suriname",
+		"ecuador",
+		"peru",
+		"brazil",
+		"bolivia",
+		"paraguay",
+		"uruguay",
+		"chile",
+		"argentina"
+	]
+}

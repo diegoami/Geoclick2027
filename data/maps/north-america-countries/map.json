@@ -1,0 +1,521 @@
+{
+	"id": "north-america-countries",
+	"name": "North America — Countries",
+	"country": "North America",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "canada",
+			"name": "Canada",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-96.8111,
+				62.3928
+			],
+			"bbox": [
+				-141.0056,
+				41.6691,
+				-52.6166,
+				83.1165
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "united-states",
+			"name": "United States",
+			"type": "country",
+			"tier": 1,
+			"aliases": [
+				"United States of America"
+			],
+			"centroid": [
+				-118.48865,
+				48.23755
+			],
+			"bbox": [
+				-170,
+				25.1214,
+				-66.9773,
+				71.3537
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						-120.0165,
+						42.572
+					],
+					[
+						-100.5791,
+						39.5536
+					],
+					[
+						-80.934,
+						37.9516
+					]
+				],
+				"aspect": 1.73
+			}
+		},
+		{
+			"id": "the-bahamas",
+			"name": "The Bahamas",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-75.741,
+				23.925849999999997
+			],
+			"bbox": [
+				-78.727,
+				20.9245,
+				-72.755,
+				26.9272
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						-78.2059,
+						24.7532
+					],
+					[
+						-77.9947,
+						24.7823
+					],
+					[
+						-77.7835,
+						24.6273
+					]
+				],
+				"aspect": 0.62
+			}
+		},
+		{
+			"id": "mexico",
+			"name": "Mexico",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-102.54920000000001,
+				23.629550000000002
+			],
+			"bbox": [
+				-118.3568,
+				14.5463,
+				-86.7416,
+				32.7128
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "cuba",
+			"name": "Cuba",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-79.54345,
+				21.5147
+			],
+			"bbox": [
+				-84.9473,
+				19.8289,
+				-74.1396,
+				23.2005
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						-81.7086,
+						22.9019
+					],
+					[
+						-78.421,
+						21.6769
+					],
+					[
+						-75.2276,
+						20.1852
+					]
+				],
+				"aspect": 7.23
+			}
+		},
+		{
+			"id": "haiti",
+			"name": "Haiti",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-73.06415,
+				19.057850000000002
+			],
+			"bbox": [
+				-74.4892,
+				18.0259,
+				-71.6391,
+				20.0898
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "dominican-republic",
+			"name": "Dominican Republic",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-70.1675,
+				18.771250000000002
+			],
+			"bbox": [
+				-72.0009,
+				17.6048,
+				-68.3341,
+				19.9377
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						-71.4938,
+						18.84
+					],
+					[
+						-70.0559,
+						19.2742
+					],
+					[
+						-68.7104,
+						18.5413
+					]
+				],
+				"aspect": 2.12
+			}
+		},
+		{
+			"id": "jamaica",
+			"name": "Jamaica",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-77.26435000000001,
+				18.12005
+			],
+			"bbox": [
+				-78.3407,
+				17.7167,
+				-76.188,
+				18.5234
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						-78.1198,
+						18.306
+					],
+					[
+						-77.3023,
+						18.1073
+					],
+					[
+						-76.4605,
+						18.0473
+					]
+				],
+				"aspect": 3.2
+			}
+		},
+		{
+			"id": "belize",
+			"name": "Belize",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-88.66005000000001,
+				17.1892
+			],
+			"bbox": [
+				-89.2365,
+				15.8939,
+				-88.0836,
+				18.4845
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						-88.8833,
+						16.1917
+					],
+					[
+						-88.7789,
+						17.2384
+					],
+					[
+						-88.4274,
+						18.2275
+					]
+				],
+				"aspect": 2.73
+			}
+		},
+		{
+			"id": "guatemala",
+			"name": "Guatemala",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-90.2336,
+				15.7737
+			],
+			"bbox": [
+				-92.2463,
+				13.7314,
+				-88.2209,
+				17.816
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						-91.8752,
+						14.8194
+					],
+					[
+						-90.6162,
+						14.9934
+					],
+					[
+						-89.3573,
+						16.3304
+					]
+				],
+				"aspect": 1.13
+			}
+		},
+		{
+			"id": "honduras",
+			"name": "Honduras",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-86.246,
+				14.492550000000001
+			],
+			"bbox": [
+				-89.3616,
+				12.9806,
+				-83.1304,
+				16.0045
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						-88.7793,
+						14.6324
+					],
+					[
+						-86.5228,
+						14.5248
+					],
+					[
+						-84.4415,
+						15.3775
+					]
+				],
+				"aspect": 2.38
+			}
+		},
+		{
+			"id": "el-salvador",
+			"name": "El Salvador",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-88.9058,
+				13.800049999999999
+			],
+			"bbox": [
+				-90.099,
+				13.1586,
+				-87.7126,
+				14.4415
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						-89.7396,
+						13.9628
+					],
+					[
+						-88.8521,
+						13.7409
+					],
+					[
+						-87.9726,
+						13.4904
+					]
+				],
+				"aspect": 2.32
+			}
+		},
+		{
+			"id": "nicaragua",
+			"name": "Nicaragua",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-85.40805,
+				12.87455
+			],
+			"bbox": [
+				-87.6857,
+				10.7181,
+				-83.1304,
+				15.031
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						-86.4309,
+						12.6894
+					],
+					[
+						-85.0706,
+						12.344
+					],
+					[
+						-83.7103,
+						13.2724
+					]
+				],
+				"aspect": 0.89
+			}
+		},
+		{
+			"id": "trinidad-and-tobago",
+			"name": "Trinidad and Tobago",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-61.17005,
+				10.70075
+			],
+			"bbox": [
+				-61.817,
+				10.0578,
+				-60.5231,
+				11.3437
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						-61.4272,
+						10.426
+					],
+					[
+						-61.2502,
+						10.4313
+					],
+					[
+						-61.0732,
+						10.4696
+					]
+				],
+				"aspect": 0.48
+			}
+		},
+		{
+			"id": "costa-rica",
+			"name": "Costa Rica",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-84.24119999999999,
+				9.6223
+			],
+			"bbox": [
+				-85.9088,
+				8.0347,
+				-82.5736,
+				11.2099
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						-85.3433,
+						10.6256
+					],
+					[
+						-83.8122,
+						10.3874
+					],
+					[
+						-83.0457,
+						9.0646
+					]
+				],
+				"aspect": 2.43
+			}
+		},
+		{
+			"id": "panama",
+			"name": "Panama",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-80.1272,
+				8.420950000000001
+			],
+			"bbox": [
+				-83.0532,
+				7.2126,
+				-77.2012,
+				9.6293
+			],
+			"colorIndex": 2
+		}
+	],
+	"tourOrder": [
+		"canada",
+		"united-states",
+		"the-bahamas",
+		"mexico",
+		"cuba",
+		"haiti",
+		"dominican-republic",
+		"jamaica",
+		"belize",
+		"guatemala",
+		"honduras",
+		"el-salvador",
+		"nicaragua",
+		"trinidad-and-tobago",
+		"costa-rica",
+		"panama"
+	]
+}

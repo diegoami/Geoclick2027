@@ -1,0 +1,871 @@
+{
+	"id": "europe-cities-north",
+	"name": "Europe — Cities — North",
+	"country": "Europe",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "troms",
+			"name": "Tromsø",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Norway",
+			"centroid": [
+				18.9920252,
+				69.6350762
+			],
+			"bbox": [
+				18.9920252,
+				69.6350762,
+				18.9920252,
+				69.6350762
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "oulu",
+			"name": "Oulu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Finland",
+			"centroid": [
+				25.4700109,
+				64.9999976
+			],
+			"bbox": [
+				25.4700109,
+				64.9999976,
+				25.4700109,
+				64.9999976
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "reykjavik",
+			"name": "Reykjavík",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Iceland",
+			"centroid": [
+				-21.936546009025054,
+				64.14345946317033
+			],
+			"bbox": [
+				-21.936546009025054,
+				64.14345946317033,
+				-21.936546009025054,
+				64.14345946317033
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "umea",
+			"name": "Umeå",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Sweden",
+			"centroid": [
+				20.2399943,
+				63.8299915
+			],
+			"bbox": [
+				20.2399943,
+				63.8299915,
+				20.2399943,
+				63.8299915
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "trondheim",
+			"name": "Trondheim",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Norway",
+			"centroid": [
+				10.4166662,
+				63.4166575
+			],
+			"bbox": [
+				10.4166662,
+				63.4166575,
+				10.4166662,
+				63.4166575
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "vaasa",
+			"name": "Vaasa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Finland",
+			"centroid": [
+				21.6000146,
+				63.0999844
+			],
+			"bbox": [
+				21.6000146,
+				63.0999844,
+				21.6000146,
+				63.0999844
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "kuopio",
+			"name": "Kuopio",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Finland",
+			"centroid": [
+				27.6949397,
+				62.8942863
+			],
+			"bbox": [
+				27.6949397,
+				62.8942863,
+				27.6949397,
+				62.8942863
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "joensuu",
+			"name": "Joensuu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Finland",
+			"centroid": [
+				29.7666479,
+				62.599989
+			],
+			"bbox": [
+				29.7666479,
+				62.599989,
+				29.7666479,
+				62.599989
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "sundsvall",
+			"name": "Sundsvall",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Sweden",
+			"centroid": [
+				17.3166585,
+				62.4000529
+			],
+			"bbox": [
+				17.3166585,
+				62.4000529,
+				17.3166585,
+				62.4000529
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "jyvaskyla",
+			"name": "Jyväskylä",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Finland",
+			"centroid": [
+				25.7499939,
+				62.2603457
+			],
+			"bbox": [
+				25.7499939,
+				62.2603457,
+				25.7499939,
+				62.2603457
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "tampere",
+			"name": "Tampere",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Finland",
+			"centroid": [
+				23.7500126,
+				61.5000045
+			],
+			"bbox": [
+				23.7500126,
+				61.5000045,
+				23.7500126,
+				61.5000045
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "pori",
+			"name": "Pori",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Finland",
+			"centroid": [
+				21.7749393,
+				61.4788947
+			],
+			"bbox": [
+				21.7749393,
+				61.4788947,
+				21.7749393,
+				61.4788947
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "lappeenranta",
+			"name": "Lappeenranta",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Finland",
+			"centroid": [
+				28.1833337,
+				61.0670593
+			],
+			"bbox": [
+				28.1833337,
+				61.0670593,
+				28.1833337,
+				61.0670593
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "lahti",
+			"name": "Lahti",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Finland",
+			"centroid": [
+				25.6649344,
+				60.9938597
+			],
+			"bbox": [
+				25.6649344,
+				60.9938597,
+				25.6649344,
+				60.9938597
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "gavle",
+			"name": "Gävle",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Sweden",
+			"centroid": [
+				17.1666418,
+				60.6669804
+			],
+			"bbox": [
+				17.1666418,
+				60.6669804,
+				17.1666418,
+				60.6669804
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "turku",
+			"name": "Turku",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Finland",
+			"centroid": [
+				22.2549617,
+				60.4538668
+			],
+			"bbox": [
+				22.2549617,
+				60.4538668,
+				22.2549617,
+				60.4538668
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "bergen",
+			"name": "Bergen",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Norway",
+			"centroid": [
+				5.3245223,
+				60.3910024
+			],
+			"bbox": [
+				5.3245223,
+				60.3910024,
+				5.3245223,
+				60.3910024
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "helsinki",
+			"name": "Helsinki",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Finland",
+			"centroid": [
+				24.932456915043964,
+				60.16380384948568
+			],
+			"bbox": [
+				24.932456915043964,
+				60.16380384948568,
+				24.932456915043964,
+				60.16380384948568
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "oslo",
+			"name": "Oslo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Norway",
+			"centroid": [
+				10.7480333,
+				59.9186361
+			],
+			"bbox": [
+				10.7480333,
+				59.9186361,
+				10.7480333,
+				59.9186361
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "uppsala",
+			"name": "Uppsala",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Sweden",
+			"centroid": [
+				17.6399979,
+				59.8600529
+			],
+			"bbox": [
+				17.6399979,
+				59.8600529,
+				17.6399979,
+				59.8600529
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "drammen",
+			"name": "Drammen",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Norway",
+			"centroid": [
+				10.199231839963424,
+				59.738481129257444
+			],
+			"bbox": [
+				10.199231839963424,
+				59.738481129257444,
+				10.199231839963424,
+				59.738481129257444
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "vasteras",
+			"name": "Västerås",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Sweden",
+			"centroid": [
+				16.5576798129634,
+				59.60908375716462
+			],
+			"bbox": [
+				16.5576798129634,
+				59.60908375716462,
+				16.5576798129634,
+				59.60908375716462
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "karlstad",
+			"name": "Karlstad",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Sweden",
+			"centroid": [
+				13.4999406,
+				59.3671373
+			],
+			"bbox": [
+				13.4999406,
+				59.3671373,
+				13.4999406,
+				59.3671373
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "stockholm",
+			"name": "Stockholm",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Sweden",
+			"centroid": [
+				18.066300168534497,
+				59.324127204007475
+			],
+			"bbox": [
+				18.066300168534497,
+				59.324127204007475,
+				18.066300168534497,
+				59.324127204007475
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "orebro",
+			"name": "Örebro",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Sweden",
+			"centroid": [
+				15.2199906,
+				59.2803467
+			],
+			"bbox": [
+				15.2199906,
+				59.2803467,
+				15.2199906,
+				59.2803467
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "skien",
+			"name": "Skien",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Norway",
+			"centroid": [
+				9.6000236,
+				59.1999898
+			],
+			"bbox": [
+				9.6000236,
+				59.1999898,
+				9.6000236,
+				59.1999898
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "stavanger",
+			"name": "Stavanger",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Norway",
+			"centroid": [
+				5.6800044,
+				58.9700039
+			],
+			"bbox": [
+				5.6800044,
+				58.9700039,
+				5.6800044,
+				58.9700039
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "norrkoping",
+			"name": "Norrköping",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Sweden",
+			"centroid": [
+				16.1786918,
+				58.5954273
+			],
+			"bbox": [
+				16.1786918,
+				58.5954273,
+				16.1786918,
+				58.5954273
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "linkoping",
+			"name": "Linköping",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Sweden",
+			"centroid": [
+				15.6299397,
+				58.4100122
+			],
+			"bbox": [
+				15.6299397,
+				58.4100122,
+				15.6299397,
+				58.4100122
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "kristiansand",
+			"name": "Kristiansand",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Norway",
+			"centroid": [
+				7.97498387982654,
+				58.14561960901902
+			],
+			"bbox": [
+				7.97498387982654,
+				58.14561960901902,
+				7.97498387982654,
+				58.14561960901902
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "jonkoping",
+			"name": "Jönköping",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Sweden",
+			"centroid": [
+				14.1650162,
+				57.7713432
+			],
+			"bbox": [
+				14.1650162,
+				57.7713432,
+				14.1650162,
+				57.7713432
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "boras",
+			"name": "Borås",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Sweden",
+			"centroid": [
+				12.939247443030592,
+				57.717756121714984
+			],
+			"bbox": [
+				12.939247443030592,
+				57.717756121714984,
+				12.939247443030592,
+				57.717756121714984
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "goteborg",
+			"name": "Göteborg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Sweden",
+			"centroid": [
+				11.978630208072927,
+				57.709146768849784
+			],
+			"bbox": [
+				11.978630208072927,
+				57.709146768849784,
+				11.978630208072927,
+				57.709146768849784
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "aalborg",
+			"name": "Aalborg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Denmark",
+			"centroid": [
+				9.9165934,
+				57.0337138
+			],
+			"bbox": [
+				9.9165934,
+				57.0337138,
+				9.9165934,
+				57.0337138
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "vaxjo",
+			"name": "Växjö",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Sweden",
+			"centroid": [
+				14.8167077,
+				56.8836971
+			],
+			"bbox": [
+				14.8167077,
+				56.8836971,
+				14.8167077,
+				56.8836971
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "halmstad",
+			"name": "Halmstad",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Sweden",
+			"centroid": [
+				12.8555871,
+				56.6717721
+			],
+			"bbox": [
+				12.8555871,
+				56.6717721,
+				12.8555871,
+				56.6717721
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "arhus",
+			"name": "Århus",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Denmark",
+			"centroid": [
+				10.210684,
+				56.157204
+			],
+			"bbox": [
+				10.210684,
+				56.157204,
+				10.210684,
+				56.157204
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "helsingborg",
+			"name": "Helsingborg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Sweden",
+			"centroid": [
+				12.723269742553532,
+				56.041291180968074
+			],
+			"bbox": [
+				12.723269742553532,
+				56.041291180968074,
+				12.723269742553532,
+				56.041291180968074
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "vejle",
+			"name": "Vejle",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Denmark",
+			"centroid": [
+				9.5349965,
+				55.709001
+			],
+			"bbox": [
+				9.5349965,
+				55.709001,
+				9.5349965,
+				55.709001
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "k-benhavn",
+			"name": "København",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Denmark",
+			"centroid": [
+				12.5615399,
+				55.68051
+			],
+			"bbox": [
+				12.5615399,
+				55.68051,
+				12.5615399,
+				55.68051
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "malmo",
+			"name": "Malmö",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Sweden",
+			"centroid": [
+				13.023059685006762,
+				55.59942395416559
+			],
+			"bbox": [
+				13.023059685006762,
+				55.59942395416559,
+				13.023059685006762,
+				55.59942395416559
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "esbjerg",
+			"name": "Esbjerg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Denmark",
+			"centroid": [
+				8.4500162,
+				55.4670394
+			],
+			"bbox": [
+				8.4500162,
+				55.4670394,
+				8.4500162,
+				55.4670394
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "odense",
+			"name": "Odense",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"country": "Denmark",
+			"centroid": [
+				10.3833349,
+				55.4003768
+			],
+			"bbox": [
+				10.3833349,
+				55.4003768,
+				10.3833349,
+				55.4003768
+			],
+			"colorIndex": 5
+		}
+	],
+	"tourOrder": [
+		"troms",
+		"oulu",
+		"reykjavik",
+		"umea",
+		"trondheim",
+		"vaasa",
+		"kuopio",
+		"joensuu",
+		"sundsvall",
+		"jyvaskyla",
+		"tampere",
+		"pori",
+		"lappeenranta",
+		"lahti",
+		"gavle",
+		"turku",
+		"bergen",
+		"helsinki",
+		"oslo",
+		"uppsala",
+		"drammen",
+		"vasteras",
+		"karlstad",
+		"stockholm",
+		"orebro",
+		"skien",
+		"stavanger",
+		"norrkoping",
+		"linkoping",
+		"kristiansand",
+		"jonkoping",
+		"boras",
+		"goteborg",
+		"aalborg",
+		"vaxjo",
+		"halmstad",
+		"arhus",
+		"helsingborg",
+		"vejle",
+		"k-benhavn",
+		"malmo",
+		"esbjerg",
+		"odense"
+	]
+}

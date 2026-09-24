@@ -1,0 +1,822 @@
+{
+	"saint-petersburg": {
+		"kind": "city",
+		"population": 4553000,
+		"populationRank": 2,
+		"population1950": 2903000,
+		"region": "City of St. Petersburg",
+		"coastal": true,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Named by Peter the Great for his patron saint, in Dutch-German form because he admired the Dutch.",
+				"Built on marsh from 1703 at great cost in lives, and the capital for two centuries.",
+				"The siege of 1941–44 lasted 872 days and killed about a million civilians, mostly by starvation."
+			],
+			"it": [
+				"Pietro il Grande le diede il nome del suo santo patrono, in forma olandese-tedesca, perché ammirava gli Olandesi.",
+				"Costruita su una palude a partire dal 1703, a un grande costo in vite umane, fu capitale per due secoli.",
+				"L’assedio del 1941-44 durò 872 giorni e uccise circa un milione di civili, per lo più di fame."
+			]
+		}
+	},
+	"tallinn": {
+		"kind": "city",
+		"population": 394024,
+		"populationRank": 32,
+		"region": "Harju",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"tartu": {
+		"kind": "city",
+		"population": 101092,
+		"populationRank": 67,
+		"coastal": false,
+		"position": "north-west"
+	},
+	"perm": {
+		"kind": "city",
+		"population": 997000,
+		"populationRank": 14,
+		"population1950": 498000,
+		"region": "Perm'",
+		"coastal": false,
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"From a Finno-Ugric phrase, probably perä maa, \"the far land\", which the Russians took as the region's name.",
+				"The Permian geological period is named after it — the last period before the dinosaurs, defined from rocks here in 1841.",
+				"Kungur ice cave in the region has grottoes that stay frozen year-round."
+			],
+			"it": [
+				"Da un’espressione ugrofinnica, probabilmente perä maa, \"la terra lontana\", che i Russi presero come nome della regione.",
+				"Il periodo geologico Permiano prende il nome da qui: l’ultimo periodo prima dei dinosauri, definito nel 1841 a partire dalle rocce di questa zona.",
+				"La grotta di ghiaccio di Kungur, nella regione, ha grotte che restano gelate tutto l’anno."
+			]
+		}
+	},
+	"riga": {
+		"kind": "city",
+		"population": 742572,
+		"populationRank": 22,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"nizhny-novgorod": {
+		"kind": "city",
+		"population": 1278000,
+		"populationRank": 7,
+		"population1950": 796000,
+		"region": "Nizhegorod",
+		"coastal": false,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"\"Lower new town\" — lower than Novgorod, and downstream.",
+				"Its trade fair was the largest in the Russian Empire, and the city stands where the Oka meets the Volga.",
+				"Closed to foreigners in Soviet times under the name Gorky, which is why Sakharov was exiled here."
+			],
+			"it": [
+				"\"Città nuova di sotto\": più in basso di Novgorod, e a valle.",
+				"La sua fiera era la più grande dell’Impero russo, e la città sorge dove l’Oka confluisce nel Volga.",
+				"In epoca sovietica, col nome di Gorkij, era chiusa agli stranieri, ed è per questo che Sacharov vi fu mandato in esilio."
+			]
+		}
+	},
+	"siauliai": {
+		"kind": "city",
+		"population": 133528,
+		"populationRank": 61,
+		"coastal": false,
+		"position": "north-west"
+	},
+	"daugavpils": {
+		"kind": "city",
+		"population": 111564,
+		"populationRank": 66,
+		"coastal": false,
+		"position": "north-west"
+	},
+	"moscow": {
+		"kind": "city",
+		"population": 10452000,
+		"populationRank": 1,
+		"population1950": 5356000,
+		"region": "Moskva",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Named for the river, whose own name is probably Finno-Ugric or Baltic, perhaps meaning wet or marshy.",
+				"The capital since 1480, except for the two centuries when St Petersburg was.",
+				"Its metro stations were built as palaces for the people, with chandeliers and mosaics, some 84 m down."
+			],
+			"it": [
+				"Prende il nome dal fiume, il cui nome è probabilmente ugrofinnico o baltico, e forse significa umido o paludoso.",
+				"Capitale dal 1480, tranne per i due secoli in cui lo fu San Pietroburgo.",
+				"Le sue stazioni della metropolitana furono costruite come palazzi per il popolo, con lampadari e mosaici, alcune a 84 m di profondità."
+			]
+		}
+	},
+	"kazan": {
+		"kind": "city",
+		"population": 1115000,
+		"populationRank": 10,
+		"population1950": 514000,
+		"region": "Tatarstan",
+		"coastal": false,
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"From a Tatar word for a cauldron — a legend has one dropped in the river at the founding.",
+				"It was the capital of a khanate until Ivan the Terrible took it in 1552; its kremlin is a UNESCO site.",
+				"It calls itself Russia’s third capital, and its Qolşärif mosque and Orthodox cathedral stand inside the same walls."
+			],
+			"it": [
+				"Da una parola tatara che significa calderone: una leggenda racconta che ne cadde uno nel fiume al momento della fondazione.",
+				"Fu la capitale di un khanato finché Ivan il Terribile non la prese nel 1552; il suo cremlino è un sito UNESCO.",
+				"Si definisce la terza capitale della Russia, e la sua moschea Qolşärif e la cattedrale ortodossa sorgono dentro le stesse mura."
+			]
+		}
+	},
+	"panevezys": {
+		"kind": "city",
+		"population": 127405,
+		"populationRank": 63,
+		"region": "Panevezio",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"klaipeda": {
+		"kind": "city",
+		"population": 192307,
+		"populationRank": 53,
+		"region": "Klaipedos",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"vitsyebsk": {
+		"kind": "city",
+		"population": 342700,
+		"populationRank": 35,
+		"coastal": false,
+		"position": "north-west"
+	},
+	"kaunas": {
+		"kind": "city",
+		"population": 374643,
+		"populationRank": 33,
+		"region": "Kauno",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"ufa": {
+		"kind": "city",
+		"population": 1018000,
+		"populationRank": 13,
+		"population1950": 418000,
+		"region": "Bashkortostan",
+		"coastal": false,
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Possibly from a Bashkir word for dark water, or from a Turkic word for high ground.",
+				"The capital of Bashkortostan, and one of the most ethnically mixed large cities in Russia.",
+				"Its Salavat Yulaev statue, a Bashkir rebel on a rearing horse, is the largest equestrian statue in the country."
+			],
+			"it": [
+				"Forse da una parola baschira per acqua scura, o da una parola turca per altura.",
+				"La capitale del Bashkortostan, e una delle grandi città russe più mescolate dal punto di vista etnico.",
+				"La sua statua di Salavat Julaev, un ribelle baschiro su un cavallo impennato, è la più grande statua equestre del paese."
+			]
+		}
+	},
+	"vilnius": {
+		"kind": "city",
+		"population": 542366,
+		"populationRank": 26,
+		"region": "Vilniaus",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"orsha": {
+		"kind": "city",
+		"population": 135206,
+		"populationRank": 60,
+		"region": "Vitsyebsk",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"barysaw": {
+		"kind": "city",
+		"population": 155389,
+		"populationRank": 57,
+		"region": "Minsk",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"minsk": {
+		"kind": "city",
+		"population": 1805000,
+		"populationRank": 5,
+		"population1950": 284000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "west"
+	},
+	"mahilyow": {
+		"kind": "city",
+		"population": 369200,
+		"populationRank": 34,
+		"coastal": false,
+		"position": "west"
+	},
+	"hrodna": {
+		"kind": "city",
+		"population": 317365,
+		"populationRank": 38,
+		"coastal": false,
+		"position": "west"
+	},
+	"tolyatti": {
+		"kind": "city",
+		"population": 702879,
+		"populationRank": 23,
+		"region": "Samara",
+		"coastal": false,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Named in 1964 for Palmiro Togliatti, the Italian communist leader, who had just died.",
+				"That was not sentiment alone: Fiat built the AvtoVAZ plant here, which made the Lada.",
+				"The old town of Stavropol-on-Volga was flooded by a reservoir in 1955 and the city moved wholesale."
+			],
+			"it": [
+				"Chiamata così nel 1964 in onore di Palmiro Togliatti, il leader comunista italiano, appena morto.",
+				"Non fu solo per affetto: qui la Fiat costruì lo stabilimento AvtoVAZ, che produceva la Lada.",
+				"La vecchia città di Stavropol sul Volga fu sommersa da un bacino artificiale nel 1955, e la città si spostò in blocco."
+			]
+		}
+	},
+	"samara": {
+		"kind": "city",
+		"population": 1137000,
+		"populationRank": 9,
+		"population1950": 658000,
+		"coastal": false,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"From the Samara river, possibly from a Turkic or Iranian word for steppe river.",
+				"It was Kuybyshev in Soviet times and was the reserve capital in 1941: a bunker was dug for Stalin 37 m down, and he never used it.",
+				"The Zhiguli hills force the Volga into a great loop here, and Soviet rockets including Gagarin's were built in the city."
+			],
+			"it": [
+				"Dal fiume Samara, forse da una parola turca o iranica che significa fiume della steppa.",
+				"In epoca sovietica si chiamava Kujbyšev e nel 1941 fu la capitale di riserva: per Stalin fu scavato un bunker a 37 m di profondità, che lui non usò mai.",
+				"Qui i colli di Žiguli costringono il Volga a una grande ansa, e in città si costruivano i razzi sovietici, compreso quello di Gagarin."
+			]
+		}
+	},
+	"baranavichy": {
+		"kind": "city",
+		"population": 168772,
+		"populationRank": 55,
+		"region": "Brest",
+		"coastal": false,
+		"position": "west"
+	},
+	"babruysk": {
+		"kind": "city",
+		"population": 220517,
+		"populationRank": 48,
+		"region": "Mahilyow",
+		"coastal": false,
+		"position": "west"
+	},
+	"homyel": {
+		"kind": "city",
+		"population": 480951,
+		"populationRank": 29,
+		"region": "Homyel'",
+		"coastal": false,
+		"position": "west"
+	},
+	"pinsk": {
+		"kind": "city",
+		"population": 130777,
+		"populationRank": 62,
+		"region": "Brest",
+		"coastal": false,
+		"position": "west"
+	},
+	"brest": {
+		"kind": "city",
+		"population": 300715,
+		"populationRank": 46,
+		"coastal": false,
+		"position": "west"
+	},
+	"mazyr": {
+		"kind": "city",
+		"population": 112137,
+		"populationRank": 65,
+		"region": "Homyel'",
+		"coastal": false,
+		"position": "west"
+	},
+	"voronezh": {
+		"kind": "city",
+		"population": 844000,
+		"populationRank": 18,
+		"population1950": 332000,
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Of uncertain origin — possibly from a personal name or from voron, a raven.",
+				"Peter the Great built Russia's first navy here in 1695–96, on a river far from any sea, and sailed it down to the Don.",
+				"Its black earth is among the most fertile soil on earth; a cube of it was displayed at the 1900 Paris Exposition as a standard."
+			],
+			"it": [
+				"Di origine incerta: forse da un nome di persona, o da voron, corvo.",
+				"Nel 1695-96 Pietro il Grande vi costruì la prima flotta russa, su un fiume lontano da qualunque mare, e la fece scendere fino al Don.",
+				"La sua terra nera è tra i suoli più fertili del mondo; un cubo di questa terra fu esposto all’Esposizione di Parigi del 1900 come campione di riferimento."
+			]
+		}
+	},
+	"saratov": {
+		"kind": "city",
+		"population": 843000,
+		"populationRank": 19,
+		"population1950": 473000,
+		"coastal": false,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Probably from Turkic sary tau, \"yellow mountain\", for the hills above the Volga.",
+				"Gagarin landed in a field in this region in 1961 and was found by a farmer and her granddaughter, who thought he was an alien.",
+				"Chernyshevsky, whose novel What Is to Be Done? shaped a generation of revolutionaries, was born here."
+			],
+			"it": [
+				"Probabilmente dal turco sary tau, \"monte giallo\", per le colline sopra il Volga.",
+				"Nel 1961 Gagarin atterrò in un campo di questa regione e fu trovato da una contadina e da sua nipote, che lo presero per un alieno.",
+				"Černyševskij, il cui romanzo Che fare? formò una generazione di rivoluzionari, nacque qui."
+			]
+		}
+	},
+	"kyiv": {
+		"kind": "city",
+		"population": 2709000,
+		"populationRank": 3,
+		"population1950": 815000,
+		"region": "Kiev",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Named for Kyi, the eldest of three brothers who legend says founded the city with their sister Lybid.",
+				"The Kyivan Rus state here was the origin of both Ukraine and Russia, which is why the name carries the weight it does.",
+				"Its metro station Arsenalna is one of the deepest in the world at 105 m, dug through the cliffs above the Dnipro."
+			],
+			"it": [
+				"Prende il nome da Kyi, il maggiore di tre fratelli che secondo la leggenda fondarono la città insieme alla sorella Lybid.",
+				"Lo stato della Rus’ di Kyiv, nato qui, è all’origine sia dell’Ucraina sia della Russia: per questo il nome ha il peso che ha.",
+				"La sua stazione della metropolitana Arsenalna è una delle più profonde del mondo, a 105 m, scavata nelle alture sopra il Dnipro."
+			]
+		}
+	},
+	"kharkiv": {
+		"kind": "city",
+		"population": 1461000,
+		"populationRank": 6,
+		"population1950": 758000,
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named for the river Kharkiv, which may itself come from a semi-legendary Cossack founder called Kharko.",
+				"It was the capital of Soviet Ukraine until 1934, which is why it has the constructivist Derzhprom, one of the first skyscrapers in Europe.",
+				"Its Freedom Square is one of the largest city squares in Europe, and the region borders Russia for 300 km."
+			],
+			"it": [
+				"Prende il nome dal fiume Charkiv, che a sua volta potrebbe venire da un fondatore cosacco semileggendario di nome Charko.",
+				"Fu la capitale dell’Ucraina sovietica fino al 1934, ed è per questo che ha il Derzhprom costruttivista, uno dei primi grattacieli d’Europa.",
+				"La sua piazza della Libertà è tra le più grandi d’Europa, e la regione confina con la Russia per 300 km."
+			]
+		}
+	},
+	"lviv": {
+		"kind": "city",
+		"population": 803880,
+		"populationRank": 20,
+		"region": "L'viv",
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"\"Lev's city\" — King Danylo of Galicia founded it around 1250 and named it for his son Lev.",
+				"Austrian until 1918 and Polish until 1939, it is the most central-European city in Ukraine, down to the coffee houses.",
+				"It has more coffee houses per head than any Ukrainian city, and its Lychakiv cemetery is a Central European necropolis on the scale of Père Lachaise."
+			],
+			"it": [
+				"La \"città di Lev\": re Danylo di Galizia la fondò intorno al 1250 e le diede il nome del figlio Lev.",
+				"Austriaca fino al 1918 e polacca fino al 1939, è la città più mitteleuropea dell’Ucraina, fino ai suoi caffè.",
+				"Ha più caffè per abitante di qualunque altra città ucraina, e il suo cimitero di Lychakiv è una necropoli mitteleuropea delle dimensioni del Père-Lachaise."
+			]
+		}
+	},
+	"khmelnytskyi": {
+		"kind": "city",
+		"population": 398346,
+		"populationRank": 31,
+		"region": "Khmel'nyts'kyy",
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Renamed in 1954 for Bohdan Khmelnytskyi, the Cossack hetman; before that it was Proskuriv.",
+				"His 1648 uprising against Poland created a Cossack state and is the founding story of modern Ukraine.",
+				"Kamianets-Podilskyi here stands on an island of rock inside a river canyon, with a bridge to its castle across the gorge."
+			],
+			"it": [
+				"Ribattezzata nel 1954 in onore di Bohdan Khmelnytskyi, l’etmano cosacco; prima si chiamava Proskuriv.",
+				"La rivolta di Khmelnytskyi del 1648 contro la Polonia diede vita a uno stato cosacco, ed è il racconto fondativo dell’Ucraina moderna.",
+				"Qui Kamianets-Podilskyi sorge su un’isola di roccia dentro il canyon di un fiume, con un ponte che scavalca la gola fino al castello."
+			]
+		}
+	},
+	"volgograd": {
+		"kind": "city",
+		"population": 984000,
+		"populationRank": 17,
+		"population1950": 461000,
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"\"Volga town\" — it was Tsaritsyn, then Stalingrad, then renamed in 1961 during de-Stalinisation.",
+				"The battle here in 1942–43 was the bloodiest in history, with perhaps two million casualties, and turned the war.",
+				"The Motherland Calls statue on Mamayev Kurgan was the tallest in the world when built, at 85 m with the sword."
+			],
+			"it": [
+				"\"Città del Volga\": era Caricyn, poi Stalingrado, poi fu ribattezzata nel 1961, durante la destalinizzazione.",
+				"La battaglia combattuta qui nel 1942-43 fu la più sanguinosa della storia, con forse due milioni di perdite, e cambiò le sorti della guerra.",
+				"La statua della Madre Patria chiama, sul Mamaev Kurgan, era la più alta del mondo quando fu costruita: 85 m, spada compresa."
+			]
+		}
+	},
+	"luhansk": {
+		"kind": "city",
+		"population": 452000,
+		"populationRank": 30,
+		"region": "Luhans'k",
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"From the river Luhan, itself from luh, a water meadow.",
+				"Founded in 1795 around a British-built cannon foundry, to arm the Black Sea fleet.",
+				"Its steppe was some of the last unploughed grassland in Europe, protected in reserves since 1968."
+			],
+			"it": [
+				"Dal fiume Luhan, a sua volta da luh, prato golenale.",
+				"Fondata nel 1795 intorno a una fonderia di cannoni costruita dai britannici, per armare la flotta del Mar Nero.",
+				"La sua steppa era tra le ultime praterie mai arate d’Europa, protetta in riserve dal 1968."
+			]
+		}
+	},
+	"dnipro": {
+		"kind": "city",
+		"population": 1050000,
+		"populationRank": 12,
+		"population1950": 536000,
+		"region": "Dnipropetrovs'k",
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named for the river; the city dropped \"petrovsk\" in 2016, having been Dnipropetrovsk since 1926.",
+				"It was Katerynoslav first, \"Catherine’s glory\", founded by Potemkin for Catherine the Great.",
+				"Its Pivdenmash plant built Soviet ICBMs, and the city was closed to foreigners until 1987."
+			],
+			"it": [
+				"Prende il nome dal fiume; nel 2016 la città ha lasciato cadere \"petrovsk\", dopo essersi chiamata Dnipropetrovsk dal 1926.",
+				"In origine fu Katerynoslav, \"gloria di Caterina\", fondata da Potëmkin per Caterina la Grande.",
+				"Il suo stabilimento Pivdenmash costruiva i missili balistici intercontinentali sovietici, e la città fu chiusa agli stranieri fino al 1987."
+			]
+		}
+	},
+	"donetsk": {
+		"kind": "city",
+		"population": 988000,
+		"populationRank": 16,
+		"population1950": 585000,
+		"region": "Donets'k",
+		"coastal": false,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"From the Siverskyi Donets river; donets is a little Don.",
+				"Founded in 1869 by a Welsh ironmaster, John Hughes, and called Yuzivka — a Russian rendering of his name — for fifty years.",
+				"The region is honeycombed with mine workings, and the spoil heaps outside the city are its best-known skyline."
+			],
+			"it": [
+				"Dal fiume Siverskyi Donets; donets è un piccolo Don.",
+				"Fondata nel 1869 da un industriale gallese del ferro, John Hughes, e chiamata per cinquant’anni Yuzivka, una resa russa del suo nome.",
+				"La regione è crivellata di gallerie minerarie, e le colline di scorie alle porte della città sono il suo profilo più noto."
+			]
+		}
+	},
+	"kryvyi-rih": {
+		"kind": "city",
+		"population": 652380,
+		"populationRank": 25,
+		"region": "Dnipropetrovs'k",
+		"coastal": false,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"\"Crooked horn\" — kryvyi crooked, rih a horn or spit of land where two rivers meet.",
+				"It is the longest city in Europe, stretching over 120 km along its iron ore seam.",
+				"That seam is one of the largest iron deposits in the world, and Zelensky was born in the city."
+			],
+			"it": [
+				"\"Corno storto\": kryvyi è storto, rih è un corno o una lingua di terra dove due fiumi si incontrano.",
+				"È la città più lunga d’Europa: si estende per oltre 120 km lungo il suo filone di minerale di ferro.",
+				"Quel filone è uno dei più grandi giacimenti di ferro del mondo, e in città è nato Zelensky."
+			]
+		}
+	},
+	"zaporizhzhia": {
+		"kind": "city",
+		"population": 788000,
+		"populationRank": 21,
+		"population1950": 315000,
+		"region": "Zaporizhzhya",
+		"coastal": false,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"\"Beyond the rapids\" — za porohamy, the Dnipro cataracts the Cossack Sich sat below.",
+				"The rapids are gone, drowned by the 1932 DniproHES dam that made the reservoir.",
+				"Khortytsia, an island in the river here, was the Cossack Sich itself."
+			],
+			"it": [
+				"\"Oltre le rapide\": za porohamy, le cateratte del Dnipro sotto le quali stava la Sich cosacca.",
+				"Le rapide non ci sono più, sommerse dalla diga DniproHES del 1932 che creò il bacino.",
+				"Khortytsia, un’isola sul fiume proprio qui, era la Sich cosacca vera e propria."
+			]
+		}
+	},
+	"balti": {
+		"kind": "city",
+		"population": 151355,
+		"populationRank": 58,
+		"region": "Balti",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"rostov-on-don": {
+		"kind": "city",
+		"population": 1052000,
+		"populationRank": 11,
+		"population1950": 484000,
+		"region": "Rostov",
+		"coastal": false,
+		"position": "south"
+	},
+	"iasi": {
+		"kind": "city",
+		"population": 325914,
+		"populationRank": 37,
+		"region": "Iasi",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"mariupol": {
+		"kind": "city",
+		"population": 481626,
+		"populationRank": 28,
+		"region": "Donets'k",
+		"coastal": true,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"\"City of Mary\" — founded in 1778 for Greek Christians resettled from Crimea, who named it for an icon.",
+				"Those Greeks, the Rumeíka speakers, kept their language in villages around it into the twentieth century.",
+				"Its Azovstal works was one of the largest steel plants in Europe."
+			],
+			"it": [
+				"\"Città di Maria\": fondata nel 1778 per i cristiani greci trasferiti dalla Crimea, che la chiamarono così per un’icona.",
+				"Quei Greci, che parlavano il rumeíka, conservarono la loro lingua nei villaggi dei dintorni fin dentro il Novecento.",
+				"Le sue acciaierie Azovstal erano tra le più grandi d’Europa."
+			]
+		}
+	},
+	"oradea": {
+		"kind": "city",
+		"population": 213830,
+		"populationRank": 49,
+		"region": "Bihor",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"chisinau": {
+		"kind": "city",
+		"population": 688134,
+		"populationRank": 24,
+		"region": "Chisinau",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"mykolaiv": {
+		"kind": "city",
+		"population": 510840,
+		"populationRank": 27,
+		"region": "Mykolayiv",
+		"coastal": true,
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"For St Nicholas, patron of sailors: nearby Ochakiv fell to Russia on his feast day in 1788, and the shipyard was founded the next year.",
+				"Most of the Soviet Union’s aircraft carriers were built here, on a river 100 km from the sea.",
+				"Its astronomical observatory has been recording since 1821."
+			],
+			"it": [
+				"Prende il nome da San Nicola, patrono dei marinai: la vicina Očakiv cadde in mano russa nel giorno della sua festa, nel 1788, e il cantiere fu fondato l’anno dopo.",
+				"Qui fu costruita la maggior parte delle portaerei dell’Unione Sovietica, su un fiume a 100 km dal mare.",
+				"Il suo osservatorio astronomico è in attività dal 1821."
+			]
+		}
+	},
+	"tiraspol": {
+		"kind": "city",
+		"population": 157000,
+		"populationRank": 56,
+		"region": "Bender",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"cluj-napoca": {
+		"kind": "city",
+		"population": 316748,
+		"populationRank": 39,
+		"region": "Cluj",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"bacau": {
+		"kind": "city",
+		"population": 199668,
+		"populationRank": 51,
+		"region": "Bacau",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"odesa": {
+		"kind": "city",
+		"population": 991000,
+		"populationRank": 15,
+		"population1950": 532000,
+		"region": "Odessa",
+		"coastal": true,
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Named in 1795 after Odessos, a Greek colony thought to have stood nearby — it did not, but the name stayed.",
+				"A free port for forty years in the 1800s, which is why it filled with Greeks, Italians, Jews and Frenchmen and sounds unlike anywhere else in Ukraine.",
+				"The Potemkin Steps run 192 steps down to the port, built so that from the top only the landings show."
+			],
+			"it": [
+				"Chiamata così nel 1795 da Odessos, una colonia greca che si credeva sorgesse nei dintorni: non era così, ma il nome rimase.",
+				"Fu porto franco per quarant’anni nell’Ottocento: per questo si riempì di greci, italiani, ebrei e francesi, e ha una parlata che non somiglia a nessun’altra in Ucraina.",
+				"La scalinata Potëmkin scende al porto con 192 gradini, costruita in modo che dall’alto si vedano solo i pianerottoli."
+			]
+		}
+	},
+	"timisoara": {
+		"kind": "city",
+		"population": 315053,
+		"populationRank": 40,
+		"region": "Timis",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"brasov": {
+		"kind": "city",
+		"population": 311044,
+		"populationRank": 43,
+		"region": "Brasov",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"galati": {
+		"kind": "city",
+		"population": 311156,
+		"populationRank": 42,
+		"region": "Galati",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"braila": {
+		"kind": "city",
+		"population": 213569,
+		"populationRank": 50,
+		"region": "Braila",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"ploiesti": {
+		"kind": "city",
+		"population": 232542,
+		"populationRank": 47,
+		"region": "Prahova",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"bucharest": {
+		"kind": "city",
+		"population": 1942000,
+		"populationRank": 4,
+		"population1950": 652000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"craiova": {
+		"kind": "city",
+		"population": 304142,
+		"populationRank": 44,
+		"region": "Dolj",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"constanta": {
+		"kind": "city",
+		"population": 303399,
+		"populationRank": 45,
+		"region": "Constanta",
+		"coastal": true,
+		"position": "south-west"
+	},
+	"ruse": {
+		"kind": "city",
+		"population": 184270,
+		"populationRank": 54,
+		"coastal": false,
+		"position": "south-west"
+	},
+	"pleven": {
+		"kind": "city",
+		"population": 118675,
+		"populationRank": 64,
+		"coastal": false,
+		"position": "south-west"
+	},
+	"varna": {
+		"kind": "city",
+		"population": 312770,
+		"populationRank": 41,
+		"coastal": true,
+		"position": "south-west"
+	},
+	"sofia": {
+		"kind": "city",
+		"population": 1185000,
+		"populationRank": 8,
+		"population1950": 522000,
+		"region": "Grad Sofiya",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"burgas": {
+		"kind": "city",
+		"population": 195966,
+		"populationRank": 52,
+		"coastal": true,
+		"position": "south-west"
+	},
+	"stara-zagora": {
+		"kind": "city",
+		"population": 143431,
+		"populationRank": 59,
+		"coastal": false,
+		"position": "south-west"
+	},
+	"plovdiv": {
+		"kind": "city",
+		"population": 340494,
+		"populationRank": 36,
+		"coastal": false,
+		"position": "south-west"
+	}
+}

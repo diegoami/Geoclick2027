@@ -30,6 +30,24 @@ export function hooksForCountry(country: string | undefined): Record<string, Aut
 }
 
 /**
+ * The authored sentences for each target of one map. A target that names its
+ * own country - the towns of a map of several countries (#39), whose
+ * map.json country is "Europe" - takes them from that country's file, so
+ * München says the same thing on Central Europe as on Germany.
+ */
+export function authoredResolver(
+	mapCountry: string | undefined
+): (target: { id: string; country?: string }) => AuthoredHooks | undefined {
+	const byCountry = new Map<string, Record<string, AuthoredHooks>>();
+	const forCountry = (country: string | undefined) => {
+		const key = country ?? '';
+		if (!byCountry.has(key)) byCountry.set(key, hooksForCountry(country));
+		return byCountry.get(key)!;
+	};
+	return (target) => forCountry(target.country ?? mapCountry)[target.id];
+}
+
+/**
  * What goes into facts.json: the plain list when a place has English only,
  * the per-language object once a second language exists. Keeping the plain
  * list means a country nobody has translated stays byte-identical to its

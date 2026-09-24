@@ -30,11 +30,28 @@ interface CountryGroup {
 // +page.svelte so this module can also answer "what's map X called" for
 // the breadcrumb.
 export const mapGroups: CountryGroup[] = [
+	// A continent is a group like a country (#39): its Countries and
+	// Capitals maps, and for Europe its five parts' cities, sorted with the
+	// countries by name.
+	{
+		country: 'Africa',
+		maps: [
+			{ id: 'africa-capitals', labelKey: 'mapType.capitals' },
+			{ id: 'africa-countries', labelKey: 'mapType.countries' }
+		]
+	},
 	{
 		country: 'Argentina',
 		maps: [
 			{ id: 'argentina-regions', labelKey: 'mapType.regions' },
 			{ id: 'argentina-towns-100k', labelKey: 'mapType.towns' }
+		]
+	},
+	{
+		country: 'Asia',
+		maps: [
+			{ id: 'asia-capitals', labelKey: 'mapType.capitals' },
+			{ id: 'asia-countries', labelKey: 'mapType.countries' }
 		]
 	},
 	{
@@ -77,6 +94,18 @@ export const mapGroups: CountryGroup[] = [
 		maps: [
 			{ id: 'egypt-regions', labelKey: 'mapType.governorates' },
 			{ id: 'egypt-towns-100k', labelKey: 'mapType.towns' }
+		]
+	},
+	{
+		country: 'Europe',
+		maps: [
+			{ id: 'europe-capitals', labelKey: 'mapType.capitals' },
+			{ id: 'europe-cities-central', labelKey: 'mapType.citiesCentral' },
+			{ id: 'europe-cities-east', labelKey: 'mapType.citiesEast' },
+			{ id: 'europe-cities-north', labelKey: 'mapType.citiesNorth' },
+			{ id: 'europe-cities-south', labelKey: 'mapType.citiesSouth' },
+			{ id: 'europe-cities-west', labelKey: 'mapType.citiesWest' },
+			{ id: 'europe-countries', labelKey: 'mapType.countries' }
 		]
 	},
 	{
@@ -163,6 +192,20 @@ export const mapGroups: CountryGroup[] = [
 		]
 	},
 	{
+		country: 'North America',
+		maps: [
+			{ id: 'north-america-capitals', labelKey: 'mapType.capitals' },
+			{ id: 'north-america-countries', labelKey: 'mapType.countries' }
+		]
+	},
+	{
+		country: 'Oceania',
+		maps: [
+			{ id: 'oceania-capitals', labelKey: 'mapType.capitals' },
+			{ id: 'oceania-countries', labelKey: 'mapType.countries' }
+		]
+	},
+	{
 		country: 'Poland',
 		maps: [
 			{ id: 'poland-regions', labelKey: 'mapType.regions' },
@@ -181,6 +224,13 @@ export const mapGroups: CountryGroup[] = [
 		maps: [
 			{ id: 'russia-regions', labelKey: 'mapType.regions' },
 			{ id: 'russia-towns-100k', labelKey: 'mapType.towns' }
+		]
+	},
+	{
+		country: 'South America',
+		maps: [
+			{ id: 'south-america-capitals', labelKey: 'mapType.capitals' },
+			{ id: 'south-america-countries', labelKey: 'mapType.countries' }
 		]
 	},
 	{

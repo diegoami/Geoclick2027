@@ -1,0 +1,1400 @@
+{
+	"id": "europe-countries",
+	"name": "Europe — Countries",
+	"country": "Europe",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "finland",
+			"name": "Finland",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				26.09635,
+				64.98665
+			],
+			"bbox": [
+				20.6232,
+				59.898,
+				31.5695,
+				70.0753
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						25.2176,
+						61.1033
+					],
+					[
+						28.1821,
+						65.4149
+					],
+					[
+						26.5204,
+						69.2123
+					]
+				],
+				"aspect": 3.16
+			}
+		},
+		{
+			"id": "iceland",
+			"name": "Iceland",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-19.001,
+				64.96665
+			],
+			"bbox": [
+				-24.4818,
+				63.3967,
+				-13.5202,
+				66.5366
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						-21.6917,
+						65.0341
+					],
+					[
+						-18.1196,
+						64.4703
+					],
+					[
+						-14.5474,
+						65.3636
+					]
+				],
+				"aspect": 1.36
+			}
+		},
+		{
+			"id": "norway",
+			"name": "Norway",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.9745,
+				64.5962
+			],
+			"bbox": [
+				-9.1174,
+				58.0175,
+				31.0664,
+				71.1749
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						6.8855,
+						58.9072
+					],
+					[
+						8.7916,
+						61.0841
+					],
+					[
+						11.141,
+						62.9769
+					]
+				],
+				"aspect": 1.65
+			}
+		},
+		{
+			"id": "sweden",
+			"name": "Sweden",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.63565,
+				62.1909
+			],
+			"bbox": [
+				11.1082,
+				55.3454,
+				24.1631,
+				69.0364
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						14.2612,
+						57.5138
+					],
+					[
+						14.7679,
+						63.4959
+					],
+					[
+						21.1,
+						67.7907
+					]
+				],
+				"aspect": 3.89
+			}
+		},
+		{
+			"id": "estonia",
+			"name": "Estonia",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				25.02715,
+				58.5742
+			],
+			"bbox": [
+				21.8678,
+				57.5158,
+				28.1865,
+				59.6326
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						24.0458,
+						58.8297
+					],
+					[
+						25.5963,
+						58.7901
+					],
+					[
+						27.1467,
+						58.5209
+					]
+				],
+				"aspect": 0.97
+			}
+		},
+		{
+			"id": "latvia",
+			"name": "Latvia",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				24.59195,
+				56.86285
+			],
+			"bbox": [
+				20.9691,
+				55.667,
+				28.2148,
+				58.0587
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						21.5742,
+						56.8147
+					],
+					[
+						24.6446,
+						57.36
+					],
+					[
+						27.4913,
+						56.5278
+					]
+				],
+				"aspect": 2.52
+			}
+		},
+		{
+			"id": "russia",
+			"name": "Russia",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				39.80475,
+				56.59635
+			],
+			"bbox": [
+				19.6095,
+				41.1927,
+				60,
+				72
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						32.8986,
+						58.7028
+					],
+					[
+						45.2316,
+						55.9977
+					],
+					[
+						57.5645,
+						59.6285
+					]
+				],
+				"aspect": 0.71
+			}
+		},
+		{
+			"id": "denmark",
+			"name": "Denmark",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.620349999999998,
+				56.1727
+			],
+			"bbox": [
+				8.094,
+				54.6284,
+				15.1467,
+				57.717
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						9.093,
+						55.132
+					],
+					[
+						9.2461,
+						56.2828
+					],
+					[
+						10.1223,
+						57.3539
+					]
+				],
+				"aspect": 3.57
+			}
+		},
+		{
+			"id": "united-kingdom",
+			"name": "United Kingdom",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-3.1924,
+				55.3834
+			],
+			"bbox": [
+				-8.156,
+				49.9667,
+				1.7712,
+				60.8001
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						-4.4473,
+						57.8496
+					],
+					[
+						-2.6763,
+						54.6864
+					],
+					[
+						-1.032,
+						51.2334
+					]
+				],
+				"aspect": 3.55
+			}
+		},
+		{
+			"id": "lithuania",
+			"name": "Lithuania",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				23.9227,
+				55.16275
+			],
+			"bbox": [
+				21.0447,
+				53.8868,
+				26.8007,
+				56.4387
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						21.6201,
+						55.7654
+					],
+					[
+						23.744,
+						54.9415
+					],
+					[
+						25.8678,
+						55.2788
+					]
+				],
+				"aspect": 1.27
+			}
+		},
+		{
+			"id": "belarus",
+			"name": "Belarus",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				27.942549999999997,
+				53.700149999999994
+			],
+			"bbox": [
+				23.1656,
+				51.2435,
+				32.7195,
+				56.1568
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						24.6426,
+						53.1249
+					],
+					[
+						27.6456,
+						54.2307
+					],
+					[
+						30.6486,
+						53.6326
+					]
+				],
+				"aspect": 0.86
+			}
+		},
+		{
+			"id": "ireland",
+			"name": "Ireland",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-8.22315,
+				53.40925
+			],
+			"bbox": [
+				-10.4497,
+				51.4457,
+				-5.9966,
+				55.3728
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						-9.3359,
+						52.9143
+					],
+					[
+						-7.8805,
+						53.1464
+					],
+					[
+						-6.4252,
+						53.2204
+					]
+				],
+				"aspect": 0.82
+			}
+		},
+		{
+			"id": "netherlands",
+			"name": "Netherlands",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.272,
+				52.10525
+			],
+			"bbox": [
+				3.3494,
+				50.7499,
+				7.1946,
+				53.4606
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						5.0396,
+						51.5305
+					],
+					[
+						5.6116,
+						52.4596
+					],
+					[
+						6.6192,
+						53.2182
+					]
+				],
+				"aspect": 1.67
+			}
+		},
+		{
+			"id": "poland",
+			"name": "Poland",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				19.137349999999998,
+				51.91615
+			],
+			"bbox": [
+				14.1445,
+				48.994,
+				24.1302,
+				54.8383
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						15.4352,
+						52.6982
+					],
+					[
+						18.9831,
+						51.9993
+					],
+					[
+						22.531,
+						51.9306
+					]
+				],
+				"aspect": 0.9
+			}
+		},
+		{
+			"id": "germany",
+			"name": "Germany",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.44705,
+				51.10045
+			],
+			"bbox": [
+				5.8746,
+				47.295,
+				15.0195,
+				54.9059
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						7.06,
+						51.0015
+					],
+					[
+						10.2923,
+						50.5887
+					],
+					[
+						13.5246,
+						52.1184
+					]
+				],
+				"aspect": 0.68
+			}
+		},
+		{
+			"id": "belgium",
+			"name": "Belgium",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.42975,
+				50.490399999999994
+			],
+			"bbox": [
+				2.5218,
+				49.4952,
+				6.3377,
+				51.4856
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						3.0581,
+						51.0183
+					],
+					[
+						4.6864,
+						50.9818
+					],
+					[
+						5.6321,
+						50.1894
+					]
+				],
+				"aspect": 1.61
+			}
+		},
+		{
+			"id": "luxembourg",
+			"name": "Luxembourg",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.1075,
+				49.80345
+			],
+			"bbox": [
+				5.7149,
+				49.4413,
+				6.5001,
+				50.1656
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						5.9194,
+						50.0579
+					],
+					[
+						6.0993,
+						49.814
+					],
+					[
+						6.1568,
+						49.5462
+					]
+				],
+				"aspect": 1.71
+			}
+		},
+		{
+			"id": "czechia",
+			"name": "Czechia",
+			"type": "country",
+			"tier": 1,
+			"aliases": [
+				"Czech Republic"
+			],
+			"centroid": [
+				15.4564,
+				49.797349999999994
+			],
+			"bbox": [
+				12.0796,
+				48.5579,
+				18.8332,
+				51.0368
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						12.8962,
+						49.9415
+					],
+					[
+						15.3266,
+						49.8005
+					],
+					[
+						17.7058,
+						49.4409
+					]
+				],
+				"aspect": 1.94
+			}
+		},
+		{
+			"id": "slovakia",
+			"name": "Slovakia",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				19.692050000000002,
+				48.6759
+			],
+			"bbox": [
+				16.8445,
+				47.75,
+				22.5396,
+				49.6018
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						17.4678,
+						48.2896
+					],
+					[
+						19.5042,
+						48.9989
+					],
+					[
+						21.7981,
+						48.9147
+					]
+				],
+				"aspect": 2.71
+			}
+		},
+		{
+			"id": "ukraine",
+			"name": "Ukraine",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				31.14615,
+				48.37595
+			],
+			"bbox": [
+				22.1328,
+				44.383,
+				40.1595,
+				52.3689
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						24.4802,
+						49.9914
+					],
+					[
+						31.4473,
+						49.5715
+					],
+					[
+						38.0501,
+						48.0948
+					]
+				],
+				"aspect": 2.24
+			}
+		},
+		{
+			"id": "austria",
+			"name": "Austria",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.33475,
+				47.71315
+			],
+			"bbox": [
+				9.5212,
+				46.4184,
+				17.1483,
+				49.0079
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						12.0137,
+						47.1424
+					],
+					[
+						14.3149,
+						47.3895
+					],
+					[
+						16.4194,
+						48.1464
+					]
+				],
+				"aspect": 1.72
+			}
+		},
+		{
+			"id": "hungary",
+			"name": "Hungary",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				19.4858,
+				47.15615
+			],
+			"bbox": [
+				16.094,
+				45.7432,
+				22.8776,
+				48.5691
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						17.0747,
+						46.7856
+					],
+					[
+						19.6104,
+						46.745
+					],
+					[
+						21.5611,
+						47.8489
+					]
+				],
+				"aspect": 1.65
+			}
+		},
+		{
+			"id": "moldova",
+			"name": "Moldova",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				28.3495,
+				46.9671
+			],
+			"bbox": [
+				26.6179,
+				45.4618,
+				30.0811,
+				48.4724
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						27.6738,
+						48.2932
+					],
+					[
+						29.034,
+						47.4209
+					],
+					[
+						28.867,
+						46.0753
+					]
+				],
+				"aspect": 2.49
+			}
+		},
+		{
+			"id": "switzerland",
+			"name": "Switzerland",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.21255,
+				46.810950000000005
+			],
+			"bbox": [
+				5.9585,
+				45.8207,
+				10.4666,
+				47.8012
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						7.0116,
+						46.5624
+					],
+					[
+						8.2365,
+						47.0778
+					],
+					[
+						9.6267,
+						46.8812
+					]
+				],
+				"aspect": 1.26
+			}
+		},
+		{
+			"id": "france",
+			"name": "France",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				2.3880999999999997,
+				46.230000000000004
+			],
+			"bbox": [
+				-4.7834,
+				41.3725,
+				9.5596,
+				51.0875
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						-0.8773,
+						46.613
+					],
+					[
+						2.4722,
+						47.0956
+					],
+					[
+						5.8217,
+						46.3788
+					]
+				],
+				"aspect": 0.67
+			}
+		},
+		{
+			"id": "slovenia",
+			"name": "Slovenia",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.9403,
+				46.1438
+			],
+			"bbox": [
+				13.3653,
+				45.4236,
+				16.5153,
+				46.864
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						13.8555,
+						45.9491
+					],
+					[
+						15.0021,
+						45.9032
+					],
+					[
+						15.7639,
+						46.4884
+					]
+				],
+				"aspect": 1.56
+			}
+		},
+		{
+			"id": "romania",
+			"name": "Romania",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				24.95965,
+				45.956649999999996
+			],
+			"bbox": [
+				20.2428,
+				43.6543,
+				29.6765,
+				48.259
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						21.977,
+						46.0195
+					],
+					[
+						24.8131,
+						46.0414
+					],
+					[
+						27.6492,
+						45.8422
+					]
+				],
+				"aspect": 0.96
+			}
+		},
+		{
+			"id": "croatia",
+			"name": "Croatia",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.45205,
+				44.48165
+			],
+			"bbox": [
+				13.5134,
+				42.4163,
+				19.3907,
+				46.547
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						14.9699,
+						44.8776
+					],
+					[
+						16.8171,
+						46.2856
+					],
+					[
+						18.6643,
+						45.3387
+					]
+				],
+				"aspect": 2.79
+			}
+		},
+		{
+			"id": "serbia",
+			"name": "Serbia",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.9132,
+				44.20165
+			],
+			"bbox": [
+				18.845,
+				42.2349,
+				22.9814,
+				46.1684
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						19.6845,
+						45.7498
+					],
+					[
+						20.4096,
+						44.1151
+					],
+					[
+						22.1991,
+						42.9226
+					]
+				],
+				"aspect": 2.6
+			}
+		},
+		{
+			"id": "bosnia-and-herzegovina",
+			"name": "Bosnia and Herzegovina",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.6681,
+				43.919
+			],
+			"bbox": [
+				15.7173,
+				42.5592,
+				19.6189,
+				45.2788
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						16.4503,
+						44.5469
+					],
+					[
+						17.7293,
+						43.8393
+					],
+					[
+						19.0083,
+						44.0128
+					]
+				],
+				"aspect": 1.08
+			}
+		},
+		{
+			"id": "bulgaria",
+			"name": "Bulgaria",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				25.474249999999998,
+				42.733900000000006
+			],
+			"bbox": [
+				22.345,
+				41.2394,
+				28.6035,
+				44.2284
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						23.1306,
+						42.5177
+					],
+					[
+						25.392,
+						42.434
+					],
+					[
+						27.4358,
+						43.2618
+					]
+				],
+				"aspect": 1.4
+			}
+		},
+		{
+			"id": "montenegro",
+			"name": "Montenegro",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				19.3897,
+				42.6993
+			],
+			"bbox": [
+				18.434,
+				41.8524,
+				20.3454,
+				43.5462
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						18.6763,
+						42.7681
+					],
+					[
+						19.3037,
+						42.7668
+					],
+					[
+						19.9311,
+						42.8364
+					]
+				],
+				"aspect": 1
+			}
+		},
+		{
+			"id": "kosovo",
+			"name": "Kosovo",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.88175,
+				42.55355
+			],
+			"bbox": [
+				20.0248,
+				41.844,
+				21.7387,
+				43.2631
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						20.2968,
+						42.5358
+					],
+					[
+						20.8809,
+						42.6758
+					],
+					[
+						21.465,
+						42.5073
+					]
+				],
+				"aspect": 1.02
+			}
+		},
+		{
+			"id": "italy",
+			"name": "Italy",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.560049999999999,
+				41.872150000000005
+			],
+			"bbox": [
+				6.6027,
+				36.6591,
+				18.5174,
+				47.0852
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						8.9715,
+						45.8777
+					],
+					[
+						12.7693,
+						43.5165
+					],
+					[
+						15.7582,
+						40.5111
+					]
+				],
+				"aspect": 4
+			}
+		},
+		{
+			"id": "north-macedonia",
+			"name": "North Macedonia",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				21.7269,
+				41.59915
+			],
+			"bbox": [
+				20.4442,
+				40.8494,
+				23.0096,
+				42.3489
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						20.7069,
+						41.4387
+					],
+					[
+						21.6884,
+						41.6889
+					],
+					[
+						22.6698,
+						41.6801
+					]
+				],
+				"aspect": 1.22
+			}
+		},
+		{
+			"id": "albania",
+			"name": "Albania",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.15435,
+				41.14745
+			],
+			"bbox": [
+				19.272,
+				39.6401,
+				21.0367,
+				42.6548
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						19.8723,
+						42.2714
+					],
+					[
+						20.0778,
+						41.2595
+					],
+					[
+						20.1857,
+						40.2237
+					]
+				],
+				"aspect": 2.43
+			}
+		},
+		{
+			"id": "spain",
+			"name": "Spain",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-2.47185,
+				39.87455
+			],
+			"bbox": [
+				-9.251,
+				36.0065,
+				4.3073,
+				43.7426
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						-6.2343,
+						39.6987
+					],
+					[
+						-2.9803,
+						40.0457
+					],
+					[
+						0.2737,
+						41.0494
+					]
+				],
+				"aspect": 0.76
+			}
+		},
+		{
+			"id": "portugal",
+			"name": "Portugal",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-7.8488999999999995,
+				39.57765
+			],
+			"bbox": [
+				-9.4919,
+				37.0017,
+				-6.2059,
+				42.1536
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						-8.1097,
+						37.4856
+					],
+					[
+						-8.3677,
+						39.6056
+					],
+					[
+						-7.5167,
+						41.5665
+					]
+				],
+				"aspect": 2.83
+			}
+		},
+		{
+			"id": "greece",
+			"name": "Greece",
+			"type": "country",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				23.936349999999997,
+				38.3387
+			],
+			"bbox": [
+				19.6364,
+				34.9316,
+				28.2363,
+				41.7458
+			],
+			"colorIndex": 4
+		}
+	],
+	"tourOrder": [
+		"finland",
+		"iceland",
+		"norway",
+		"sweden",
+		"estonia",
+		"latvia",
+		"russia",
+		"denmark",
+		"united-kingdom",
+		"lithuania",
+		"belarus",
+		"ireland",
+		"netherlands",
+		"poland",
+		"germany",
+		"belgium",
+		"luxembourg",
+		"czechia",
+		"slovakia",
+		"ukraine",
+		"austria",
+		"hungary",
+		"moldova",
+		"switzerland",
+		"france",
+		"slovenia",
+		"romania",
+		"croatia",
+		"serbia",
+		"bosnia-and-herzegovina",
+		"bulgaria",
+		"montenegro",
+		"kosovo",
+		"italy",
+		"north-macedonia",
+		"albania",
+		"spain",
+		"portugal",
+		"greece"
+	]
+}

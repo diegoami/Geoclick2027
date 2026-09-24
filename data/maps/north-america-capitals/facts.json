@@ -1,0 +1,247 @@
+{
+	"ottawa": {
+		"kind": "city",
+		"population": 1145000,
+		"populationRank": 9,
+		"population1950": 282000,
+		"region": "Ontario",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"From the Algonquin adawe, \"to trade\" — the Ottawa river was a trading route.",
+				"Queen Victoria chose it as capital in 1857, partly because it was far from the American border.",
+				"Its Rideau Canal freezes into the world’s largest skating rink, 7.8 km long, and is a UNESCO site."
+			],
+			"it": [
+				"Dall’algonchino adawe, \"commerciare\": il fiume Ottawa era una via commerciale.",
+				"La regina Vittoria la scelse come capitale nel 1857, anche perché era lontana dal confine americano.",
+				"Il suo canale Rideau, ghiacciando, diventa la pista di pattinaggio più grande del mondo, lunga 7,8 km, ed è patrimonio UNESCO."
+			]
+		}
+	},
+	"washington-d-c": {
+		"kind": "city",
+		"population": 4338000,
+		"populationRank": 2,
+		"population1950": 1298000,
+		"region": "District of Columbia",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"George Washington chose the site but never called it after himself; the commissioners laying it out did, in 1791, and the District of Columbia is a Latin flourish for the same Columbus.",
+				"It is in no state on purpose: the founders did not want the capital beholden to one.",
+				"No building may rise above a limit set in 1910, which is why it stays low and the Capitol still dominates."
+			],
+			"it": [
+				"George Washington scelse il sito ma non gli diede mai il proprio nome; lo fecero nel 1791 i commissari incaricati di tracciarla, e District of Columbia è un vezzo latino per lo stesso Colombo.",
+				"Di proposito non appartiene a nessuno Stato: i fondatori non volevano una capitale in debito verso uno solo.",
+				"Nessun edificio può superare un limite fissato nel 1910: per questo la città resta bassa e il Campidoglio la domina ancora."
+			]
+		}
+	},
+	"nassau": {
+		"kind": "city",
+		"population": 227940,
+		"populationRank": 15,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "centre"
+	},
+	"havana": {
+		"kind": "city",
+		"population": 2174000,
+		"populationRank": 3,
+		"population1950": 1116000,
+		"region": "Ciudad de la Habana",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "centre"
+	},
+	"ciudad-de-mexico": {
+		"kind": "city",
+		"population": 19028000,
+		"populationRank": 1,
+		"population1950": 2883000,
+		"region": "Distrito Federal",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"From Mexica, the Aztecs’ own name for themselves — the city and the country share it.",
+				"It is built on the drained lake bed of Tenochtitlán and sinks up to 50 cm a year in places.",
+				"Its Zócalo is one of the largest city squares in the world, laid over the Aztec ceremonial precinct."
+			],
+			"it": [
+				"Da Mexica, il nome con cui gli Aztechi chiamavano sé stessi: la città e il paese lo condividono.",
+				"Sorge sul letto prosciugato del lago di Tenochtitlán e in certi punti sprofonda fino a 50 cm l’anno.",
+				"Il suo Zócalo è una delle piazze cittadine più grandi del mondo, e si stende sopra il recinto cerimoniale degli Aztechi."
+			]
+		}
+	},
+	"port-au-prince": {
+		"kind": "city",
+		"population": 1998000,
+		"populationRank": 5,
+		"population1950": 133000,
+		"region": "Ouest",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"santo-domingo": {
+		"kind": "city",
+		"population": 2154000,
+		"populationRank": 4,
+		"population1950": 219000,
+		"region": "Distrito Nacional",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"kingston": {
+		"kind": "city",
+		"population": 937700,
+		"populationRank": 12,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south"
+	},
+	"basseterre": {
+		"kind": "city",
+		"population": 21887,
+		"populationRank": 22,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"belmopan": {
+		"kind": "city",
+		"population": 15220,
+		"populationRank": 23,
+		"region": "Cayo",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"saint-john-s": {
+		"kind": "city",
+		"population": 35499,
+		"populationRank": 19,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"roseau": {
+		"kind": "city",
+		"population": 23336,
+		"populationRank": 21,
+		"region": "Saint George",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"guatemala-city": {
+		"kind": "city",
+		"population": 1024000,
+		"populationRank": 10,
+		"population1950": 287000,
+		"region": "Guatemala",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"tegucigalpa": {
+		"kind": "city",
+		"population": 946000,
+		"populationRank": 11,
+		"population1950": 73000,
+		"region": "Francisco Morazán",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"castries": {
+		"kind": "city",
+		"population": 37963,
+		"populationRank": 18,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"san-salvador": {
+		"kind": "city",
+		"population": 1433000,
+		"populationRank": 6,
+		"population1950": 194000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"kingstown": {
+		"kind": "city",
+		"population": 49485,
+		"populationRank": 17,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"bridgetown": {
+		"kind": "city",
+		"population": 191152,
+		"populationRank": 16,
+		"region": "Saint Michael",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"managua": {
+		"kind": "city",
+		"population": 920000,
+		"populationRank": 13,
+		"population1950": 110000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"saint-george-s": {
+		"kind": "city",
+		"population": 33734,
+		"populationRank": 20,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"port-of-spain": {
+		"kind": "city",
+		"population": 294934,
+		"populationRank": 14,
+		"region": "Port of Spain",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"san-jose": {
+		"kind": "city",
+		"population": 1284000,
+		"populationRank": 7,
+		"population1950": 148000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south"
+	},
+	"panama-city": {
+		"kind": "city",
+		"population": 1281000,
+		"populationRank": 8,
+		"population1950": 171000,
+		"region": "Panama",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south"
+	}
+}
