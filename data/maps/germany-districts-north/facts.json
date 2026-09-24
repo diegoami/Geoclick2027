@@ -1,0 +1,929 @@
+{
+	"flensburg": {
+		"kind": "region",
+		"borders": [
+			"Schleswig-Flensburg"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"nordfriesland": {
+		"kind": "region",
+		"borders": [
+			"Dithmarschen",
+			"Schleswig-Flensburg"
+		],
+		"coastal": true,
+		"position": "north-west"
+	},
+	"schleswig-flensburg": {
+		"kind": "region",
+		"borders": [
+			"Dithmarschen",
+			"Flensburg",
+			"Nordfriesland",
+			"Rendsburg-Eckernförde"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"kiel": {
+		"kind": "region",
+		"borders": [
+			"Plön",
+			"Rendsburg-Eckernförde"
+		],
+		"coastal": true,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"From Old Saxon kil, a wedge or narrow inlet — the fjord the city sits on.",
+				"The Kiel Canal here is the busiest artificial waterway in the world.",
+				"The German revolution of 1918 began with a sailors’ mutiny in its harbour, and Kieler Woche is the largest sailing event anywhere."
+			],
+			"it": [
+				"Dall’antico sassone kil, cuneo o insenatura stretta: il fiordo su cui sorge la città.",
+				"Qui passa il canale di Kiel, la via d’acqua artificiale più trafficata del mondo.",
+				"La rivoluzione tedesca del 1918 cominciò con un ammutinamento di marinai nel suo porto, e la Kieler Woche è la più grande manifestazione velica del mondo."
+			]
+		}
+	},
+	"vorpommern-rugen": {
+		"kind": "region",
+		"borders": [
+			"Landkreis Rostock",
+			"Mecklenburgische Seenplatte",
+			"Vorpommern-Greifswald"
+		],
+		"coastal": true,
+		"position": "north-east"
+	},
+	"rendsburg-eckernforde": {
+		"kind": "region",
+		"borders": [
+			"Dithmarschen",
+			"Kiel",
+			"Neumünster",
+			"Plön",
+			"Schleswig-Flensburg",
+			"Segeberg",
+			"Steinburg"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"plon": {
+		"kind": "region",
+		"borders": [
+			"Kiel",
+			"Neumünster",
+			"Ostholstein",
+			"Rendsburg-Eckernförde",
+			"Segeberg"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"ostholstein": {
+		"kind": "region",
+		"borders": [
+			"Lübeck",
+			"Plön",
+			"Segeberg",
+			"Stormarn"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"rostock": {
+		"kind": "region",
+		"borders": [
+			"Landkreis Rostock"
+		],
+		"coastal": true,
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"From Slavic rostok, \"the spreading of a river\" — the widening of the Warnow.",
+				"It was one of the leading Hanseatic towns, and its university of 1419 is the oldest on the Baltic.",
+				"It was the centre of East German shipbuilding and its sea trade."
+			],
+			"it": [
+				"Dallo slavo rostok, \"l’allargarsi di un fiume\": il punto in cui si allarga la Warnow.",
+				"Fu una delle principali città anseatiche, e la sua università, del 1419, è la più antica del Baltico.",
+				"Fu il centro della cantieristica navale della Germania Est e dei suoi commerci marittimi."
+			]
+		}
+	},
+	"dithmarschen": {
+		"kind": "region",
+		"borders": [
+			"Nordfriesland",
+			"Rendsburg-Eckernförde",
+			"Schleswig-Flensburg",
+			"Steinburg"
+		],
+		"coastal": true,
+		"position": "north-west"
+	},
+	"neumunster": {
+		"kind": "region",
+		"borders": [
+			"Plön",
+			"Rendsburg-Eckernförde",
+			"Segeberg"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"landkreis-rostock": {
+		"kind": "region",
+		"borders": [
+			"Ludwigslust-Parchim",
+			"Mecklenburgische Seenplatte",
+			"Nordwestmecklenburg",
+			"Rostock",
+			"Vorpommern-Rügen"
+		],
+		"coastal": true,
+		"position": "north-east"
+	},
+	"steinburg": {
+		"kind": "region",
+		"borders": [
+			"Dithmarschen",
+			"Pinneberg",
+			"Rendsburg-Eckernförde",
+			"Segeberg",
+			"Stade"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"lubeck": {
+		"kind": "region",
+		"borders": [
+			"Herzogtum Lauenburg",
+			"Nordwestmecklenburg",
+			"Ostholstein",
+			"Stormarn"
+		],
+		"coastal": true,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"From Slavic Liubice, \"the lovely one\".",
+				"It was the queen of the Hanseatic League, which it effectively led for two centuries, and its old town is a UNESCO site.",
+				"Marzipan was made famous here, and Thomas Mann set Buddenbrooks in his own family’s town."
+			],
+			"it": [
+				"Dallo slavo Liubice, \"la graziosa\".",
+				"Fu la regina della Lega anseatica, che di fatto guidò per due secoli, e il suo centro storico è patrimonio UNESCO.",
+				"Qui il marzapane divenne famoso, e Thomas Mann ambientò I Buddenbrook nella città della sua famiglia."
+			]
+		}
+	},
+	"segeberg": {
+		"kind": "region",
+		"borders": [
+			"Hamburg",
+			"Neumünster",
+			"Ostholstein",
+			"Pinneberg",
+			"Plön",
+			"Rendsburg-Eckernförde",
+			"Steinburg",
+			"Stormarn"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"pinneberg": {
+		"kind": "region",
+		"borders": [
+			"Hamburg",
+			"Segeberg",
+			"Stade",
+			"Steinburg"
+		],
+		"coastal": true,
+		"position": "north-west"
+	},
+	"nordwestmecklenburg": {
+		"kind": "region",
+		"borders": [
+			"Herzogtum Lauenburg",
+			"Landkreis Rostock",
+			"Lübeck",
+			"Ludwigslust-Parchim",
+			"Schwerin"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"vorpommern-greifswald": {
+		"kind": "region",
+		"borders": [
+			"Mecklenburgische Seenplatte",
+			"Vorpommern-Rügen"
+		],
+		"coastal": true,
+		"position": "east"
+	},
+	"stormarn": {
+		"kind": "region",
+		"borders": [
+			"Hamburg",
+			"Herzogtum Lauenburg",
+			"Lübeck",
+			"Ostholstein",
+			"Segeberg"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"schwerin": {
+		"kind": "region",
+		"borders": [
+			"Ludwigslust-Parchim",
+			"Nordwestmecklenburg"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"stade": {
+		"kind": "region",
+		"borders": [
+			"Cuxhaven",
+			"Hamburg",
+			"Harburg",
+			"Pinneberg",
+			"Rotenburg (Wümme)",
+			"Steinburg"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"herzogtum-lauenburg": {
+		"kind": "region",
+		"borders": [
+			"Hamburg",
+			"Harburg",
+			"Landkreis Lüneburg",
+			"Lübeck",
+			"Ludwigslust-Parchim",
+			"Nordwestmecklenburg",
+			"Stormarn"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"cuxhaven": {
+		"kind": "region",
+		"borders": [
+			"Bremerhaven",
+			"Osterholz",
+			"Rotenburg (Wümme)",
+			"Stade",
+			"Wesermarsch"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"mecklenburgische-seenplatte": {
+		"kind": "region",
+		"borders": [
+			"Landkreis Rostock",
+			"Ludwigslust-Parchim",
+			"Vorpommern-Greifswald",
+			"Vorpommern-Rügen"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"wittmund": {
+		"kind": "region",
+		"borders": [
+			"Aurich",
+			"Friesland",
+			"Leer"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"wilhelmshaven": {
+		"kind": "region",
+		"borders": [
+			"Friesland"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"hamburg": {
+		"kind": "region",
+		"borders": [
+			"Harburg",
+			"Herzogtum Lauenburg",
+			"Pinneberg",
+			"Segeberg",
+			"Stade",
+			"Stormarn"
+		],
+		"coastal": true,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"From Hammaburg, a castle built in the early ninth century — hamma is a bend in a river, and the Elbe bends here.",
+				"Officially the Free and Hanseatic City: the Hanse's habits of independence are still in its name and in its number plates, HH.",
+				"It has more bridges than Venice, Amsterdam and London combined — around 2,500 of them, over canals and the harbour."
+			],
+			"it": [
+				"Da Hammaburg, un castello costruito all’inizio del IX secolo: hamma è l’ansa di un fiume, e qui l’Elba fa un’ansa.",
+				"Ufficialmente è la Libera e Anseatica Città: l’abitudine all’indipendenza dell’Hansa sopravvive nel nome e nelle targhe, HH.",
+				"Ha più ponti di Venezia, Amsterdam e Londra messe insieme: circa 2.500, sopra i canali e il porto."
+			]
+		}
+	},
+	"bremerhaven": {
+		"kind": "region",
+		"borders": [
+			"Bremen",
+			"Cuxhaven",
+			"Wesermarsch"
+		],
+		"coastal": true,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"\"Bremen’s harbour\" — Bremen bought the land in 1827 because its own river had silted up.",
+				"About seven million emigrants left for America through this port, and a museum tells their story.",
+				"It handles more cars than almost any port in the world."
+			],
+			"it": [
+				"\"Il porto di Brema\": Brema comprò il terreno nel 1827 perché il suo fiume si era insabbiato.",
+				"Da questo porto partirono per l’America circa sette milioni di emigranti, e un museo ne racconta la storia.",
+				"Movimenta più automobili di quasi ogni altro porto del mondo."
+			]
+		}
+	},
+	"aurich": {
+		"kind": "region",
+		"borders": [
+			"Emden",
+			"Leer",
+			"Wittmund"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"friesland": {
+		"kind": "region",
+		"borders": [
+			"Ammerland",
+			"Leer",
+			"Wesermarsch",
+			"Wilhelmshaven",
+			"Wittmund"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"ludwigslust-parchim": {
+		"kind": "region",
+		"borders": [
+			"Herzogtum Lauenburg",
+			"Landkreis Lüneburg",
+			"Landkreis Rostock",
+			"Lüchow-Dannenberg",
+			"Mecklenburgische Seenplatte",
+			"Nordwestmecklenburg",
+			"Schwerin"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"emden": {
+		"kind": "region",
+		"borders": [
+			"Aurich",
+			"Leer"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"wesermarsch": {
+		"kind": "region",
+		"borders": [
+			"Ammerland",
+			"Bremen",
+			"Bremerhaven",
+			"Cuxhaven",
+			"Delmenhorst",
+			"Friesland",
+			"Landkreis Oldenburg",
+			"Oldenburg (Oldenburg)",
+			"Osterholz"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"leer": {
+		"kind": "region",
+		"borders": [
+			"Ammerland",
+			"Aurich",
+			"Cloppenburg",
+			"Emden",
+			"Emsland",
+			"Friesland",
+			"Wittmund"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"harburg": {
+		"kind": "region",
+		"borders": [
+			"Hamburg",
+			"Heidekreis",
+			"Herzogtum Lauenburg",
+			"Landkreis Lüneburg",
+			"Rotenburg (Wümme)",
+			"Stade"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"bremen": {
+		"kind": "region",
+		"borders": [
+			"Bremerhaven",
+			"Delmenhorst",
+			"Diepholz",
+			"Osterholz",
+			"Verden",
+			"Wesermarsch"
+		],
+		"coastal": true,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"From bremo, Old Saxon for \"edge\" — the town sat on the bank of the Weser where the ground rose above the marsh.",
+				"The smallest state, and a strange shape: it is two cities, Bremen and Bremerhaven, 60 km apart with Niedersachsen in between.",
+				"The Bremen Town Musicians of the fairy tale never actually reach Bremen, but the statue of them is the city’s best-known landmark."
+			],
+			"it": [
+				"Da bremo, \"orlo\" in antico sassone: la città sorgeva sulla riva del Weser, dove il terreno si alzava sopra la palude.",
+				"Il Land più piccolo, e dalla forma strana: sono due città, Brema e Bremerhaven, a 60 km l’una dall’altra, con la Bassa Sassonia in mezzo.",
+				"I musicanti di Brema della fiaba a Brema non ci arrivano mai, ma la loro statua è il monumento più noto della città."
+			]
+		}
+	},
+	"osterholz": {
+		"kind": "region",
+		"borders": [
+			"Bremen",
+			"Cuxhaven",
+			"Rotenburg (Wümme)",
+			"Verden",
+			"Wesermarsch"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"rotenburg-wumme": {
+		"kind": "region",
+		"borders": [
+			"Cuxhaven",
+			"Harburg",
+			"Heidekreis",
+			"Osterholz",
+			"Stade",
+			"Verden"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"landkreis-luneburg": {
+		"kind": "region",
+		"borders": [
+			"Harburg",
+			"Heidekreis",
+			"Herzogtum Lauenburg",
+			"Lüchow-Dannenberg",
+			"Ludwigslust-Parchim",
+			"Uelzen"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"ammerland": {
+		"kind": "region",
+		"borders": [
+			"Cloppenburg",
+			"Friesland",
+			"Landkreis Oldenburg",
+			"Leer",
+			"Oldenburg (Oldenburg)",
+			"Wesermarsch"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"oldenburg-oldenburg": {
+		"kind": "region",
+		"borders": [
+			"Ammerland",
+			"Landkreis Oldenburg",
+			"Wesermarsch"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"delmenhorst": {
+		"kind": "region",
+		"borders": [
+			"Bremen",
+			"Diepholz",
+			"Landkreis Oldenburg",
+			"Wesermarsch"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"luchow-dannenberg": {
+		"kind": "region",
+		"borders": [
+			"Landkreis Lüneburg",
+			"Ludwigslust-Parchim",
+			"Uelzen"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"landkreis-oldenburg": {
+		"kind": "region",
+		"borders": [
+			"Ammerland",
+			"Cloppenburg",
+			"Delmenhorst",
+			"Diepholz",
+			"Oldenburg (Oldenburg)",
+			"Vechta",
+			"Wesermarsch"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"uelzen": {
+		"kind": "region",
+		"borders": [
+			"Celle",
+			"Gifhorn",
+			"Heidekreis",
+			"Landkreis Lüneburg",
+			"Lüchow-Dannenberg"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"verden": {
+		"kind": "region",
+		"borders": [
+			"Bremen",
+			"Diepholz",
+			"Heidekreis",
+			"Nienburg (Weser)",
+			"Osterholz",
+			"Rotenburg (Wümme)"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"cloppenburg": {
+		"kind": "region",
+		"borders": [
+			"Ammerland",
+			"Emsland",
+			"Landkreis Oldenburg",
+			"Landkreis Osnabrück",
+			"Leer",
+			"Vechta"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"heidekreis": {
+		"kind": "region",
+		"borders": [
+			"Celle",
+			"Harburg",
+			"Landkreis Lüneburg",
+			"Nienburg (Weser)",
+			"Region Hannover",
+			"Rotenburg (Wümme)",
+			"Uelzen",
+			"Verden"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"diepholz": {
+		"kind": "region",
+		"borders": [
+			"Bremen",
+			"Delmenhorst",
+			"Landkreis Oldenburg",
+			"Landkreis Osnabrück",
+			"Nienburg (Weser)",
+			"Vechta",
+			"Verden"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"celle": {
+		"kind": "region",
+		"borders": [
+			"Gifhorn",
+			"Heidekreis",
+			"Region Hannover",
+			"Uelzen"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"emsland": {
+		"kind": "region",
+		"borders": [
+			"Cloppenburg",
+			"Grafschaft Bentheim",
+			"Landkreis Osnabrück",
+			"Leer"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"vechta": {
+		"kind": "region",
+		"borders": [
+			"Cloppenburg",
+			"Diepholz",
+			"Landkreis Oldenburg",
+			"Landkreis Osnabrück"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"nienburg-weser": {
+		"kind": "region",
+		"borders": [
+			"Diepholz",
+			"Heidekreis",
+			"Region Hannover",
+			"Schaumburg",
+			"Verden"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"gifhorn": {
+		"kind": "region",
+		"borders": [
+			"Braunschweig",
+			"Celle",
+			"Helmstedt",
+			"Peine",
+			"Region Hannover",
+			"Uelzen",
+			"Wolfsburg"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"grafschaft-bentheim": {
+		"kind": "region",
+		"borders": [
+			"Emsland"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"wolfsburg": {
+		"kind": "region",
+		"borders": [
+			"Gifhorn",
+			"Helmstedt"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"region-hannover": {
+		"kind": "region",
+		"borders": [
+			"Celle",
+			"Gifhorn",
+			"Hameln-Pyrmont",
+			"Heidekreis",
+			"Hildesheim",
+			"Nienburg (Weser)",
+			"Peine",
+			"Schaumburg"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"landkreis-osnabruck": {
+		"kind": "region",
+		"borders": [
+			"Cloppenburg",
+			"Diepholz",
+			"Emsland",
+			"Osnabrück",
+			"Vechta"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"peine": {
+		"kind": "region",
+		"borders": [
+			"Braunschweig",
+			"Gifhorn",
+			"Hildesheim",
+			"Region Hannover",
+			"Salzgitter"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"osnabruck": {
+		"kind": "region",
+		"borders": [
+			"Landkreis Osnabrück"
+		],
+		"coastal": false,
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"\"Bridge over the Hase\" — Osna is probably an older name for the river, plus Brücke.",
+				"Half of the Peace of Westphalia was negotiated here in 1648, the other half in Münster; it ended the Thirty Years’ War.",
+				"Erich Maria Remarque, who wrote All Quiet on the Western Front, was born in the town."
+			],
+			"it": [
+				"\"Ponte sulla Hase\": Osna è probabilmente un nome più antico del fiume, più Brücke.",
+				"Metà della pace di Vestfalia fu negoziata qui nel 1648, l’altra metà a Münster; mise fine alla guerra dei Trent’anni.",
+				"Erich Maria Remarque, autore di Niente di nuovo sul fronte occidentale, nacque in questa città."
+			]
+		}
+	},
+	"schaumburg": {
+		"kind": "region",
+		"borders": [
+			"Hameln-Pyrmont",
+			"Nienburg (Weser)",
+			"Region Hannover"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"braunschweig": {
+		"kind": "region",
+		"borders": [
+			"Gifhorn",
+			"Helmstedt",
+			"Peine",
+			"Salzgitter",
+			"Wolfenbüttel"
+		],
+		"coastal": false,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"\"Bruno’s settlement\" — the English call it Brunswick, which is the same name.",
+				"Henry the Lion made it his capital and put a bronze lion in the square in 1166, the first free-standing sculpture north of the Alps.",
+				"Gauss was born here and studied at its university, the oldest technical university in Germany."
+			],
+			"it": [
+				"\"L’insediamento di Bruno\": gli inglesi la chiamano Brunswick, ed è lo stesso nome.",
+				"Enrico il Leone ne fece la sua capitale e nel 1166 pose in piazza un leone di bronzo, la prima scultura a tutto tondo a nord delle Alpi.",
+				"Gauss vi nacque e studiò nella sua università, il più antico politecnico della Germania."
+			]
+		}
+	},
+	"helmstedt": {
+		"kind": "region",
+		"borders": [
+			"Braunschweig",
+			"Gifhorn",
+			"Wolfenbüttel",
+			"Wolfsburg"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"wolfenbuttel": {
+		"kind": "region",
+		"borders": [
+			"Braunschweig",
+			"Goslar",
+			"Helmstedt",
+			"Hildesheim",
+			"Salzgitter"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"salzgitter": {
+		"kind": "region",
+		"borders": [
+			"Braunschweig",
+			"Goslar",
+			"Hildesheim",
+			"Peine",
+			"Wolfenbüttel"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"hameln-pyrmont": {
+		"kind": "region",
+		"borders": [
+			"Hildesheim",
+			"Holzminden",
+			"Region Hannover",
+			"Schaumburg"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"hildesheim": {
+		"kind": "region",
+		"borders": [
+			"Goslar",
+			"Hameln-Pyrmont",
+			"Holzminden",
+			"Northeim",
+			"Peine",
+			"Region Hannover",
+			"Salzgitter",
+			"Wolfenbüttel"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"goslar": {
+		"kind": "region",
+		"borders": [
+			"Göttingen",
+			"Hildesheim",
+			"Northeim",
+			"Salzgitter",
+			"Wolfenbüttel"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"holzminden": {
+		"kind": "region",
+		"borders": [
+			"Hameln-Pyrmont",
+			"Hildesheim",
+			"Northeim"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"northeim": {
+		"kind": "region",
+		"borders": [
+			"Goslar",
+			"Göttingen",
+			"Hildesheim",
+			"Holzminden"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"gottingen": {
+		"kind": "region",
+		"borders": [
+			"Goslar",
+			"Northeim"
+		],
+		"coastal": false,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"From a village called Gutingi, \"by the stream of Gota\".",
+				"Its university has produced over forty Nobel laureates, and the Göttingen school effectively created modern mathematics and quantum physics.",
+				"The Göttingen Seven, professors dismissed in 1837 for protesting against a king, became a symbol of academic freedom."
+			],
+			"it": [
+				"Da un villaggio chiamato Gutingi, \"presso il ruscello di Gota\".",
+				"La sua università ha prodotto oltre quaranta premi Nobel, e la scuola di Gottinga ha di fatto creato la matematica moderna e la fisica quantistica.",
+				"I Sette di Gottinga, professori licenziati nel 1837 per aver protestato contro un re, divennero un simbolo della libertà accademica."
+			]
+		}
+	}
+}

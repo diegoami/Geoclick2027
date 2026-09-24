@@ -1,0 +1,792 @@
+{
+	"botosani": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Iași",
+			"Suceava"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Botoșani",
+			"nameDe": "Botoschan",
+			"nameIt": "Botoșani",
+			"population": 114783
+		},
+		"position": "north-east"
+	},
+	"satu-mare": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Bihor",
+			"Maramureș",
+			"Sălaj"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Satu Mare",
+			"nameDe": "Sathmar",
+			"nameIt": "Satu Mare",
+			"population": 112490
+		},
+		"position": "north-west"
+	},
+	"maramures": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Bistrița-Năsăud",
+			"Cluj",
+			"Sălaj",
+			"Satu Mare",
+			"Suceava"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Baia Mare",
+			"nameDe": "Baia Mare",
+			"nameIt": "Baia Mare",
+			"population": 136553
+		},
+		"position": "north"
+	},
+	"suceava": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Bistrița-Năsăud",
+			"Botoșani",
+			"Harghita",
+			"Iași",
+			"Maramureș",
+			"Mureș",
+			"Neamț"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Suceava",
+			"nameDe": "Suczawa",
+			"nameIt": "Suceava",
+			"population": 105796
+		},
+		"position": "north"
+	},
+	"iasi": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Botoșani",
+			"Neamț",
+			"Suceava",
+			"Vaslui"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Iași",
+			"nameDe": "Iași",
+			"nameIt": "Iași",
+			"population": 325914
+		},
+		"position": "north-east"
+	},
+	"bistrita-nasaud": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Cluj",
+			"Maramureș",
+			"Mureș",
+			"Suceava"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bistrița",
+			"nameDe": "Bistritz",
+			"nameIt": "Bistrița",
+			"population": 81318
+		},
+		"position": "north"
+	},
+	"salaj": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Bihor",
+			"Cluj",
+			"Maramureș",
+			"Satu Mare"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Zalău",
+			"nameDe": "Zillenmarkt",
+			"nameIt": "Zalău",
+			"population": 63232
+		},
+		"position": "north-west"
+	},
+	"bihor": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Alba",
+			"Arad",
+			"Cluj",
+			"Sălaj",
+			"Satu Mare"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Oradea",
+			"nameDe": "Oradea",
+			"nameIt": "Oradea",
+			"population": 213830
+		},
+		"position": "north-west"
+	},
+	"neamt": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Bacău",
+			"Harghita",
+			"Iași",
+			"Suceava",
+			"Vaslui"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Piatra-Neamt",
+			"nameDe": "Piatra Neamț",
+			"nameIt": "Piatra Neamț",
+			"population": 102688
+		},
+		"position": "north"
+	},
+	"cluj": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Alba",
+			"Bihor",
+			"Bistrița-Năsăud",
+			"Maramureș",
+			"Mureș",
+			"Sălaj"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Cluj-Napoca",
+			"nameDe": "Klausenburg",
+			"nameIt": "Cluj-Napoca",
+			"population": 316748
+		},
+		"position": "north"
+	},
+	"harghita": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Bacău",
+			"Brașov",
+			"Covasna",
+			"Mureș",
+			"Neamț",
+			"Suceava"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Miercurea Cuic",
+			"nameDe": "Szeklerburg",
+			"nameIt": "Miercurea Ciuc",
+			"population": 42029
+		},
+		"position": "centre"
+	},
+	"mures": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Alba",
+			"Bistrița-Năsăud",
+			"Brașov",
+			"Cluj",
+			"Harghita",
+			"Sibiu",
+			"Suceava"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tirgu Mures",
+			"nameDe": "Neumarkt am Mieresch",
+			"nameIt": "Târgu Mureș",
+			"population": 149433
+		},
+		"position": "centre"
+	},
+	"vaslui": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Bacău",
+			"Galați",
+			"Iași",
+			"Neamț",
+			"Vrancea"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Vaslui",
+			"nameDe": "Wassluy",
+			"nameIt": "Vaslui",
+			"population": 69225
+		},
+		"position": "east"
+	},
+	"bacau": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Covasna",
+			"Harghita",
+			"Neamț",
+			"Vaslui",
+			"Vrancea"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bacău",
+			"nameDe": "Barchau",
+			"nameIt": "Bacău",
+			"population": 199668
+		},
+		"position": "east"
+	},
+	"arad": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Alba",
+			"Bihor",
+			"Hunedoara",
+			"Timiș"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Arad",
+			"nameDe": "Arad",
+			"nameIt": "Arad",
+			"population": 169065
+		},
+		"position": "west"
+	},
+	"alba": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Arad",
+			"Bihor",
+			"Cluj",
+			"Hunedoara",
+			"Mureș",
+			"Sibiu",
+			"Vâlcea"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Alba Lulia",
+			"nameDe": "Alba Iulia",
+			"nameIt": "Alba Iulia",
+			"population": 66085
+		},
+		"position": "centre"
+	},
+	"covasna": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Bacău",
+			"Brașov",
+			"Buzău",
+			"Harghita",
+			"Vrancea"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Sfintu-Gheorghe",
+			"nameDe": "Sankt Georgen",
+			"nameIt": "Sfântu Gheorghe",
+			"population": 60677
+		},
+		"position": "centre"
+	},
+	"sibiu": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Alba",
+			"Argeș",
+			"Brașov",
+			"Mureș",
+			"Vâlcea"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Sibiu",
+			"nameDe": "Hermannstadt",
+			"nameIt": "Sibiu",
+			"population": 155565
+		},
+		"position": "centre"
+	},
+	"hunedoara": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Alba",
+			"Arad",
+			"Caraș-Severin",
+			"Gorj",
+			"Timiș",
+			"Vâlcea"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Deva",
+			"nameDe": "Deva",
+			"nameIt": "Deva",
+			"population": 67802
+		},
+		"position": "west"
+	},
+	"brasov": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Argeș",
+			"Buzău",
+			"Covasna",
+			"Dâmbovița",
+			"Harghita",
+			"Mureș",
+			"Prahova",
+			"Sibiu"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Brașov",
+			"nameDe": "Brașov",
+			"nameIt": "Brașov",
+			"population": 311044
+		},
+		"peak": {
+			"name": "Moldoveanu",
+			"elevation": 2543
+		},
+		"position": "centre"
+	},
+	"vrancea": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Bacău",
+			"Brăila",
+			"Buzău",
+			"Covasna",
+			"Galați",
+			"Vaslui"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Focșani",
+			"nameDe": "Fokschan",
+			"nameIt": "Focșani",
+			"population": 105112
+		},
+		"position": "east"
+	},
+	"galati": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Brăila",
+			"Tulcea",
+			"Vaslui",
+			"Vrancea"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Galați",
+			"nameDe": "Galatz",
+			"nameIt": "Galați",
+			"population": 311156
+		},
+		"position": "east"
+	},
+	"timis": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Arad",
+			"Caraș-Severin",
+			"Hunedoara"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Timișoara",
+			"nameDe": "Timisoara",
+			"nameIt": "Timișoara",
+			"population": 315053
+		},
+		"position": "west"
+	},
+	"buzau": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Brăila",
+			"Brașov",
+			"Covasna",
+			"Ialomița",
+			"Prahova",
+			"Vrancea"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Buzău",
+			"nameDe": "Buzau",
+			"nameIt": "Buzău",
+			"population": 130954
+		},
+		"position": "east"
+	},
+	"braila": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Buzău",
+			"Constanța",
+			"Galați",
+			"Ialomița",
+			"Tulcea",
+			"Vrancea"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Brăila",
+			"nameDe": "Brăila",
+			"nameIt": "Brăila",
+			"population": 213569
+		},
+		"position": "south-east"
+	},
+	"caras-severin": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Gorj",
+			"Hunedoara",
+			"Mehedinți",
+			"Timiș"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Reșița",
+			"nameDe": "Reschitz",
+			"nameIt": "Reșița",
+			"population": 83324
+		},
+		"position": "south-west"
+	},
+	"prahova": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Brașov",
+			"Buzău",
+			"Dâmbovița",
+			"Ialomița",
+			"Ilfov"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ploiești",
+			"nameDe": "Ploiești",
+			"nameIt": "Ploiești",
+			"population": 232542
+		},
+		"position": "south"
+	},
+	"tulcea": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Brăila",
+			"Constanța",
+			"Galați"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tulcea",
+			"nameDe": "Tulcea",
+			"nameIt": "Tulcea",
+			"population": 92475
+		},
+		"position": "south-east"
+	},
+	"valcea": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Alba",
+			"Argeș",
+			"Dolj",
+			"Gorj",
+			"Hunedoara",
+			"Olt",
+			"Sibiu"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Rimnicu Vilcea",
+			"nameDe": "Râmnicu Vâlcea",
+			"nameIt": "Râmnicu Vâlcea",
+			"population": 107558
+		},
+		"position": "south"
+	},
+	"arges": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Brașov",
+			"Dâmbovița",
+			"Olt",
+			"Sibiu",
+			"Teleorman",
+			"Vâlcea"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Pitești",
+			"nameDe": "Pitești",
+			"nameIt": "Pitești",
+			"population": 171021
+		},
+		"position": "south"
+	},
+	"gorj": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Caraș-Severin",
+			"Dolj",
+			"Hunedoara",
+			"Mehedinți",
+			"Vâlcea"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Târgu Jiu",
+			"nameDe": "Tergoschwyl",
+			"nameIt": "Târgu Jiu",
+			"population": 97179
+		},
+		"position": "south-west"
+	},
+	"dambovita": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Argeș",
+			"Brașov",
+			"Giurgiu",
+			"Ilfov",
+			"Prahova",
+			"Teleorman"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Târgoviște",
+			"nameDe": "Tergowisch",
+			"nameIt": "Târgoviște",
+			"population": 88435
+		},
+		"position": "south"
+	},
+	"ialomita": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Brăila",
+			"Buzău",
+			"Călărași",
+			"Constanța",
+			"Ilfov",
+			"Prahova"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Slobozia",
+			"nameDe": "Slobozia",
+			"nameIt": "Slobozia",
+			"population": 52693
+		},
+		"position": "south-east"
+	},
+	"mehedinti": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Caraș-Severin",
+			"Dolj",
+			"Gorj"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Drobeta-Turnu Severin",
+			"nameDe": "Turm Severin",
+			"nameIt": "Drobeta-Turnu Severin",
+			"population": 106578
+		},
+		"position": "south-west"
+	},
+	"ilfov": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Bucharest",
+			"Călărași",
+			"Dâmbovița",
+			"Giurgiu",
+			"Ialomița",
+			"Prahova"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"bucharest": {
+		"kind": "region",
+		"type": "City",
+		"borders": [
+			"Ilfov"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bucharest",
+			"nameDe": "Bukarest",
+			"nameIt": "Bucarest",
+			"population": 1942000
+		},
+		"position": "south"
+	},
+	"olt": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Argeș",
+			"Dolj",
+			"Teleorman",
+			"Vâlcea"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Slatina",
+			"nameDe": "Slatina",
+			"nameIt": "Slatina",
+			"population": 78988
+		},
+		"position": "south"
+	},
+	"calarasi": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Constanța",
+			"Giurgiu",
+			"Ialomița",
+			"Ilfov"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Călărași",
+			"nameDe": "Călărași",
+			"nameIt": "Călărași",
+			"population": 73224
+		},
+		"position": "south-east"
+	},
+	"constanta": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Brăila",
+			"Călărași",
+			"Ialomița",
+			"Tulcea"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Constanța",
+			"nameDe": "Konstanza",
+			"nameIt": "Costanza",
+			"population": 303399
+		},
+		"position": "south-east"
+	},
+	"dolj": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Gorj",
+			"Mehedinți",
+			"Olt",
+			"Vâlcea"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Craiova",
+			"nameDe": "Krajowa",
+			"nameIt": "Craiova",
+			"population": 304142
+		},
+		"position": "south"
+	},
+	"giurgiu": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Călărași",
+			"Dâmbovița",
+			"Ilfov",
+			"Teleorman"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Giurgiu",
+			"nameDe": "Giurgiu",
+			"nameIt": "Giurgiu",
+			"population": 69067
+		},
+		"position": "south"
+	},
+	"teleorman": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Argeș",
+			"Dâmbovița",
+			"Giurgiu",
+			"Olt"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Alexandria",
+			"nameDe": "Alexandria",
+			"nameIt": "Alexandria",
+			"population": 49346
+		},
+		"position": "south"
+	}
+}

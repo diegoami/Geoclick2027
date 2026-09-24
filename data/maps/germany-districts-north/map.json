@@ -1,0 +1,2568 @@
+{
+	"id": "germany-districts-north",
+	"name": "Germany — Districts — North",
+	"country": "Germany",
+	"attribution": "© GeoBasis-DE / BKG 2023, dl-de/by-2-0 (via geoBoundaries); Natural Earth (public domain), https://www.naturalearthdata.com",
+	"boundarySource": "data/source/geoboundaries/DEU-ADM3.geojson",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "flensburg",
+			"name": "Flensburg",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.4315,
+				54.79515
+			],
+			"bbox": [
+				9.3576,
+				54.7532,
+				9.5054,
+				54.8371
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						9.3863,
+						54.77
+					],
+					[
+						9.441,
+						54.7961
+					],
+					[
+						9.4957,
+						54.7971
+					]
+				],
+				"aspect": 0.9
+			}
+		},
+		{
+			"id": "nordfriesland",
+			"name": "Nordfriesland",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.80855,
+				54.650400000000005
+			],
+			"bbox": [
+				8.2899,
+				54.2635,
+				9.3272,
+				55.0373
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						8.9052,
+						54.8653
+					],
+					[
+						9.1674,
+						54.623
+					],
+					[
+						8.999,
+						54.3427
+					]
+				],
+				"aspect": 2.55
+			}
+		},
+		{
+			"id": "schleswig-flensburg",
+			"name": "Schleswig-Flensburg",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.55535,
+				54.58095
+			],
+			"bbox": [
+				9.0754,
+				54.2758,
+				10.0353,
+				54.8861
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						9.1727,
+						54.6378
+					],
+					[
+						9.5398,
+						54.5434
+					],
+					[
+						9.9068,
+						54.653
+					]
+				],
+				"aspect": 1.55
+			}
+		},
+		{
+			"id": "kiel",
+			"name": "Kiel",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.132100000000001,
+				54.34415
+			],
+			"bbox": [
+				10.0477,
+				54.2555,
+				10.2165,
+				54.4328
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						10.1278,
+						54.2702
+					],
+					[
+						10.1289,
+						54.3146
+					],
+					[
+						10.1461,
+						54.3576
+					]
+				],
+				"aspect": 1.18
+			}
+		},
+		{
+			"id": "vorpommern-rugen",
+			"name": "Vorpommern-Rügen",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.0165,
+				54.33085
+			],
+			"bbox": [
+				12.2855,
+				53.9768,
+				13.7475,
+				54.6849
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						12.5103,
+						54.1531
+					],
+					[
+						13.0689,
+						54.1533
+					],
+					[
+						13.4058,
+						54.3983
+					]
+				],
+				"aspect": 1.87
+			}
+		},
+		{
+			"id": "rendsburg-eckernforde",
+			"name": "Rendsburg-Eckernförde",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.7484,
+				54.32705
+			],
+			"bbox": [
+				9.3041,
+				54.0097,
+				10.1927,
+				54.6444
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						9.4957,
+						54.2238
+					],
+					[
+						9.761,
+						54.3244
+					],
+					[
+						10.0262,
+						54.2763
+					]
+				],
+				"aspect": 0.82
+			}
+		},
+		{
+			"id": "plon",
+			"name": "Plön",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.368649999999999,
+				54.24595
+			],
+			"bbox": [
+				10.0161,
+				54.0571,
+				10.7212,
+				54.4348
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						10.1724,
+						54.1957
+					],
+					[
+						10.4136,
+						54.3087
+					],
+					[
+						10.6547,
+						54.2864
+					]
+				],
+				"aspect": 1.34
+			}
+		},
+		{
+			"id": "ostholstein",
+			"name": "Ostholstein",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.8643,
+				54.2116
+			],
+			"bbox": [
+				10.4175,
+				53.8899,
+				11.3111,
+				54.5333
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						10.608,
+						53.9554
+					],
+					[
+						10.6805,
+						54.1851
+					],
+					[
+						11.0092,
+						54.3115
+					]
+				],
+				"aspect": 2.25
+			}
+		},
+		{
+			"id": "rostock",
+			"name": "Rostock",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.1461,
+				54.1479
+			],
+			"bbox": [
+				11.9985,
+				54.0511,
+				12.2937,
+				54.2447
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						12.094,
+						54.0746
+					],
+					[
+						12.1005,
+						54.1708
+					],
+					[
+						12.2297,
+						54.2267
+					]
+				],
+				"aspect": 2.63
+			}
+		},
+		{
+			"id": "dithmarschen",
+			"name": "Dithmarschen",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.1251,
+				54.1275
+			],
+			"bbox": [
+				8.8074,
+				53.8775,
+				9.4428,
+				54.3775
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						8.8736,
+						54.1659
+					],
+					[
+						9.1161,
+						54.085
+					],
+					[
+						9.3586,
+						54.1406
+					]
+				],
+				"aspect": 0.91
+			}
+		},
+		{
+			"id": "neumunster",
+			"name": "Neumünster",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.9908,
+				54.08485
+			],
+			"bbox": [
+				9.9257,
+				54.0218,
+				10.0559,
+				54.1479
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						9.9878,
+						54.0348
+					],
+					[
+						9.9721,
+						54.0831
+					],
+					[
+						9.9889,
+						54.1312
+					]
+				],
+				"aspect": 1.86
+			}
+		},
+		{
+			"id": "landkreis-rostock",
+			"name": "Landkreis Rostock",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.1889,
+				53.921350000000004
+			],
+			"bbox": [
+				11.5618,
+				53.5677,
+				12.816,
+				54.275
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						11.8735,
+						53.9477
+					],
+					[
+						12.2671,
+						53.8391
+					],
+					[
+						12.6607,
+						53.902
+					]
+				],
+				"aspect": 1.08
+			}
+		},
+		{
+			"id": "steinburg",
+			"name": "Steinburg",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.53135,
+				53.901300000000006
+			],
+			"bbox": [
+				9.1984,
+				53.7077,
+				9.8643,
+				54.0949
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						9.3053,
+						53.9236
+					],
+					[
+						9.5424,
+						53.8751
+					],
+					[
+						9.7795,
+						53.9607
+					]
+				],
+				"aspect": 1.11
+			}
+		},
+		{
+			"id": "lubeck",
+			"name": "Lübeck",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.73525,
+				53.8809
+			],
+			"bbox": [
+				10.5668,
+				53.7681,
+				10.9037,
+				53.9937
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						10.6167,
+						53.8052
+					],
+					[
+						10.7276,
+						53.8869
+					],
+					[
+						10.8674,
+						53.9517
+					]
+				],
+				"aspect": 3.61
+			}
+		},
+		{
+			"id": "segeberg",
+			"name": "Segeberg",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.154,
+				53.8793
+			],
+			"bbox": [
+				9.7514,
+				53.6509,
+				10.5566,
+				54.1077
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						9.9064,
+						53.8404
+					],
+					[
+						10.1211,
+						53.9447
+					],
+					[
+						10.389,
+						53.9991
+					]
+				],
+				"aspect": 1.34
+			}
+		},
+		{
+			"id": "pinneberg",
+			"name": "Pinneberg",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.9313,
+				53.87325
+			],
+			"bbox": [
+				7.8839,
+				53.5576,
+				9.9787,
+				54.1889
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						9.5615,
+						53.6795
+					],
+					[
+						9.7363,
+						53.7493
+					],
+					[
+						9.9112,
+						53.7197
+					]
+				],
+				"aspect": 0.89
+			}
+		},
+		{
+			"id": "nordwestmecklenburg",
+			"name": "Nordwestmecklenburg",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.279,
+				53.797250000000005
+			],
+			"bbox": [
+				10.7477,
+				53.5664,
+				11.8103,
+				54.0281
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						10.8661,
+						53.7831
+					],
+					[
+						11.2923,
+						53.7897
+					],
+					[
+						11.6822,
+						53.8922
+					]
+				],
+				"aspect": 1.88
+			}
+		},
+		{
+			"id": "vorpommern-greifswald",
+			"name": "Vorpommern-Greifswald",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.69965,
+				53.72415
+			],
+			"bbox": [
+				12.9869,
+				53.2548,
+				14.4124,
+				54.1935
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						13.3539,
+						54.0319
+					],
+					[
+						13.8125,
+						53.7996
+					],
+					[
+						14.1683,
+						53.515
+					]
+				],
+				"aspect": 2.32
+			}
+		},
+		{
+			"id": "stormarn",
+			"name": "Stormarn",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.3113,
+				53.7076
+			],
+			"bbox": [
+				10.0227,
+				53.4964,
+				10.5999,
+				53.9188
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						10.2459,
+						53.5299
+					],
+					[
+						10.2583,
+						53.73
+					],
+					[
+						10.4914,
+						53.8629
+					]
+				],
+				"aspect": 2.54
+			}
+		},
+		{
+			"id": "schwerin",
+			"name": "Schwerin",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.403500000000001,
+				53.616699999999994
+			],
+			"bbox": [
+				11.3016,
+				53.5466,
+				11.5054,
+				53.6868
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						11.3597,
+						53.6338
+					],
+					[
+						11.4205,
+						53.6059
+					],
+					[
+						11.4812,
+						53.6125
+					]
+				],
+				"aspect": 0.57
+			}
+		},
+		{
+			"id": "stade",
+			"name": "Stade",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.40095,
+				53.60265
+			],
+			"bbox": [
+				9.0185,
+				53.3376,
+				9.7834,
+				53.8677
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						9.3278,
+						53.6972
+					],
+					[
+						9.3737,
+						53.5245
+					],
+					[
+						9.6371,
+						53.428
+					]
+				],
+				"aspect": 1.35
+			}
+		},
+		{
+			"id": "herzogtum-lauenburg",
+			"name": "Herzogtum Lauenburg",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.5943,
+				53.58755
+			],
+			"bbox": [
+				10.2367,
+				53.3639,
+				10.9519,
+				53.8112
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						10.3525,
+						53.4747
+					],
+					[
+						10.6162,
+						53.6284
+					],
+					[
+						10.8798,
+						53.6437
+					]
+				],
+				"aspect": 1.39
+			}
+		},
+		{
+			"id": "cuxhaven",
+			"name": "Cuxhaven",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.891,
+				53.58645
+			],
+			"bbox": [
+				8.4834,
+				53.2812,
+				9.2986,
+				53.8917
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						8.5663,
+						53.6218
+					],
+					[
+						8.8666,
+						53.5803
+					],
+					[
+						9.1669,
+						53.7097
+					]
+				],
+				"aspect": 1.1
+			}
+		},
+		{
+			"id": "mecklenburgische-seenplatte",
+			"name": "Mecklenburgische Seenplatte",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.01665,
+				53.58495
+			],
+			"bbox": [
+				12.2751,
+				53.165,
+				13.7582,
+				54.0049
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						12.4256,
+						53.4549
+					],
+					[
+						12.993,
+						53.6549
+					],
+					[
+						13.5605,
+						53.5313
+					]
+				],
+				"aspect": 1.25
+			}
+		},
+		{
+			"id": "wittmund",
+			"name": "Wittmund",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.6929,
+				53.5722
+			],
+			"bbox": [
+				7.4153,
+				53.3629,
+				7.9705,
+				53.7815
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						7.5652,
+						53.6434
+					],
+					[
+						7.8021,
+						53.5852
+					],
+					[
+						7.8734,
+						53.4392
+					]
+				],
+				"aspect": 2.03
+			}
+		},
+		{
+			"id": "wilhelmshaven",
+			"name": "Wilhelmshaven",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.0851,
+				53.57
+			],
+			"bbox": [
+				8.0013,
+				53.5019,
+				8.1689,
+				53.6381
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						8.0557,
+						53.6222
+					],
+					[
+						8.0806,
+						53.5677
+					],
+					[
+						8.1164,
+						53.5153
+					]
+				],
+				"aspect": 1.78
+			}
+		},
+		{
+			"id": "hamburg",
+			"name": "Hamburg",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.01905,
+				53.567
+			],
+			"bbox": [
+				9.7301,
+				53.3966,
+				10.308,
+				53.7374
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						9.8057,
+						53.5148
+					],
+					[
+						10.0106,
+						53.6255
+					],
+					[
+						10.2155,
+						53.4821
+					]
+				],
+				"aspect": 1.31
+			}
+		},
+		{
+			"id": "bremerhaven",
+			"name": "Bremerhaven",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.56765,
+				53.5393
+			],
+			"bbox": [
+				8.4832,
+				53.4724,
+				8.6521,
+				53.6062
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						8.5115,
+						53.5697
+					],
+					[
+						8.5731,
+						53.5084
+					],
+					[
+						8.6348,
+						53.5351
+					]
+				],
+				"aspect": 1.1
+			}
+		},
+		{
+			"id": "aurich",
+			"name": "Aurich",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.40745,
+				53.52995
+			],
+			"bbox": [
+				6.9994,
+				53.3329,
+				7.8155,
+				53.727
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						7.0817,
+						53.4984
+					],
+					[
+						7.3948,
+						53.5511
+					],
+					[
+						7.708,
+						53.4249
+					]
+				],
+				"aspect": 1.81
+			}
+		},
+		{
+			"id": "friesland",
+			"name": "Friesland",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.0069,
+				53.51125
+			],
+			"bbox": [
+				7.8099,
+				53.3047,
+				8.2039,
+				53.7178
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						7.9232,
+						53.6846
+					],
+					[
+						7.9323,
+						53.5131
+					],
+					[
+						8.0647,
+						53.3601
+					]
+				],
+				"aspect": 2.92
+			}
+		},
+		{
+			"id": "ludwigslust-parchim",
+			"name": "Ludwigslust-Parchim",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.469899999999999,
+				53.4537
+			],
+			"bbox": [
+				10.595,
+				53.1103,
+				12.3448,
+				53.7971
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						10.8871,
+						53.3894
+					],
+					[
+						11.5376,
+						53.389
+					],
+					[
+						12.1292,
+						53.5579
+					]
+				],
+				"aspect": 1.65
+			}
+		},
+		{
+			"id": "emden",
+			"name": "Emden",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.15335,
+				53.366150000000005
+			],
+			"bbox": [
+				6.9994,
+				53.3236,
+				7.3073,
+				53.4087
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						7.0782,
+						53.3517
+					],
+					[
+						7.1808,
+						53.3789
+					],
+					[
+						7.2881,
+						53.3567
+					]
+				],
+				"aspect": 2.12
+			}
+		},
+		{
+			"id": "wesermarsch",
+			"name": "Wesermarsch",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.41335,
+				53.3561
+			],
+			"bbox": [
+				8.1718,
+				53.0993,
+				8.6549,
+				53.6129
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						8.3849,
+						53.5653
+					],
+					[
+						8.2961,
+						53.3497
+					],
+					[
+						8.4675,
+						53.1564
+					]
+				],
+				"aspect": 3.25
+			}
+		},
+		{
+			"id": "leer",
+			"name": "Leer",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.268000000000001,
+				53.3257
+			],
+			"bbox": [
+				6.6504,
+				53.0337,
+				7.8856,
+				53.6177
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						7.2541,
+						53.2225
+					],
+					[
+						7.5122,
+						53.1744
+					],
+					[
+						7.7703,
+						53.2747
+					]
+				],
+				"aspect": 1.26
+			}
+		},
+		{
+			"id": "harburg",
+			"name": "Harburg",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.01595,
+				53.31715
+			],
+			"bbox": [
+				9.5627,
+				53.129,
+				10.4692,
+				53.5053
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						9.6462,
+						53.3174
+					],
+					[
+						9.9076,
+						53.3164
+					],
+					[
+						10.1708,
+						53.2955
+					]
+				],
+				"aspect": 1.24
+			}
+		},
+		{
+			"id": "bremen",
+			"name": "Bremen",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.73475,
+				53.3013
+			],
+			"bbox": [
+				8.4853,
+				53.011,
+				8.9842,
+				53.5916
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						8.672,
+						53.1468
+					],
+					[
+						8.7915,
+						53.0928
+					],
+					[
+						8.9337,
+						53.0614
+					]
+				],
+				"aspect": 1.61
+			}
+		},
+		{
+			"id": "osterholz",
+			"name": "Osterholz",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.7761,
+				53.260400000000004
+			],
+			"bbox": [
+				8.4807,
+				53.1251,
+				9.0715,
+				53.3957
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						8.5244,
+						53.234
+					],
+					[
+						8.7584,
+						53.2983
+					],
+					[
+						8.9924,
+						53.2282
+					]
+				],
+				"aspect": 2.08
+			}
+		},
+		{
+			"id": "rotenburg-wumme",
+			"name": "Rotenburg (Wümme)",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.3142,
+				53.2549
+			],
+			"bbox": [
+				8.9107,
+				52.9174,
+				9.7177,
+				53.5924
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						9.0568,
+						53.4729
+					],
+					[
+						9.3219,
+						53.248
+					],
+					[
+						9.554,
+						53.0094
+					]
+				],
+				"aspect": 2.23
+			}
+		},
+		{
+			"id": "landkreis-luneburg",
+			"name": "Landkreis Lüneburg",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.61835,
+				53.2144
+			],
+			"bbox": [
+				10.0426,
+				53.043,
+				11.1941,
+				53.3858
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						10.167,
+						53.1637
+					],
+					[
+						10.5467,
+						53.3271
+					],
+					[
+						10.9865,
+						53.2541
+					]
+				],
+				"aspect": 2.66
+			}
+		},
+		{
+			"id": "ammerland",
+			"name": "Ammerland",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.00835,
+				53.2068
+			],
+			"bbox": [
+				7.7021,
+				53.0596,
+				8.3146,
+				53.354
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						7.8353,
+						53.2228
+					],
+					[
+						8.0362,
+						53.1776
+					],
+					[
+						8.237,
+						53.2479
+					]
+				],
+				"aspect": 1.05
+			}
+		},
+		{
+			"id": "oldenburg-oldenburg",
+			"name": "Oldenburg (Oldenburg)",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.2202,
+				53.1431
+			],
+			"bbox": [
+				8.1281,
+				53.0823,
+				8.3123,
+				53.2039
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						8.1624,
+						53.1487
+					],
+					[
+						8.2278,
+						53.1372
+					],
+					[
+						8.2932,
+						53.1546
+					]
+				],
+				"aspect": 0.88
+			}
+		},
+		{
+			"id": "delmenhorst",
+			"name": "Delmenhorst",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.64535,
+				53.047650000000004
+			],
+			"bbox": [
+				8.5793,
+				52.9864,
+				8.7114,
+				53.1089
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						8.6081,
+						53.0041
+					],
+					[
+						8.6578,
+						53.0381
+					],
+					[
+						8.6726,
+						53.0818
+					]
+				],
+				"aspect": 1.75
+			}
+		},
+		{
+			"id": "luchow-dannenberg",
+			"name": "Lüchow-Dannenberg",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.1763,
+				53.0398
+			],
+			"bbox": [
+				10.7548,
+				52.8522,
+				11.5978,
+				53.2274
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						10.8876,
+						53.0263
+					],
+					[
+						11.1641,
+						53.0401
+					],
+					[
+						11.4406,
+						52.9772
+					]
+				],
+				"aspect": 1.35
+			}
+		},
+		{
+			"id": "landkreis-oldenburg",
+			"name": "Landkreis Oldenburg",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.3724,
+				52.9824
+			],
+			"bbox": [
+				8.0508,
+				52.7996,
+				8.694,
+				53.1652
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						8.1532,
+						53.0033
+					],
+					[
+						8.3816,
+						53.0123
+					],
+					[
+						8.6099,
+						52.9398
+					]
+				],
+				"aspect": 1.03
+			}
+		},
+		{
+			"id": "uelzen",
+			"name": "Uelzen",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.5455,
+				52.9783
+			],
+			"bbox": [
+				10.1983,
+				52.7651,
+				10.8927,
+				53.1915
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						10.2879,
+						52.9834
+					],
+					[
+						10.5349,
+						53.005
+					],
+					[
+						10.7819,
+						52.9634
+					]
+				],
+				"aspect": 0.86
+			}
+		},
+		{
+			"id": "verden",
+			"name": "Verden",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.18335,
+				52.970699999999994
+			],
+			"bbox": [
+				8.9037,
+				52.7677,
+				9.463,
+				53.1737
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						9.0267,
+						53.0799
+					],
+					[
+						9.1298,
+						52.9419
+					],
+					[
+						9.3691,
+						52.8862
+					]
+				],
+				"aspect": 1.61
+			}
+		},
+		{
+			"id": "cloppenburg",
+			"name": "Cloppenburg",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.935350000000001,
+				52.930049999999994
+			],
+			"bbox": [
+				7.6119,
+				52.6774,
+				8.2588,
+				53.1827
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						7.7637,
+						53.1285
+					],
+					[
+						8.0137,
+						52.9573
+					],
+					[
+						7.9472,
+						52.7297
+					]
+				],
+				"aspect": 2
+			}
+		},
+		{
+			"id": "heidekreis",
+			"name": "Heidekreis",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.78125,
+				52.91074999999999
+			],
+			"bbox": [
+				9.3256,
+				52.602,
+				10.2369,
+				53.2195
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						9.5441,
+						52.7362
+					],
+					[
+						9.7474,
+						52.9291
+					],
+					[
+						9.9855,
+						53.105
+					]
+				],
+				"aspect": 1.69
+			}
+		},
+		{
+			"id": "diepholz",
+			"name": "Diepholz",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.704899999999999,
+				52.7443
+			],
+			"bbox": [
+				8.2938,
+				52.444,
+				9.116,
+				53.0446
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						8.4652,
+						52.5633
+					],
+					[
+						8.8172,
+						52.6808
+					],
+					[
+						8.887,
+						52.9223
+					]
+				],
+				"aspect": 1.48
+			}
+		},
+		{
+			"id": "celle",
+			"name": "Celle",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.0853,
+				52.71265
+			],
+			"bbox": [
+				9.7262,
+				52.4883,
+				10.4444,
+				52.937
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						9.8596,
+						52.7266
+					],
+					[
+						10.0936,
+						52.7286
+					],
+					[
+						10.3276,
+						52.6977
+					]
+				],
+				"aspect": 0.83
+			}
+		},
+		{
+			"id": "emsland",
+			"name": "Emsland",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.41575,
+				52.6978
+			],
+			"bbox": [
+				7.0062,
+				52.2803,
+				7.8253,
+				53.1153
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						7.4004,
+						52.4132
+					],
+					[
+						7.3418,
+						52.7243
+					],
+					[
+						7.4621,
+						53.0262
+					]
+				],
+				"aspect": 1.84
+			}
+		},
+		{
+			"id": "vechta",
+			"name": "Vechta",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.2456,
+				52.6556
+			],
+			"bbox": [
+				8.0182,
+				52.4329,
+				8.473,
+				52.8783
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						8.154,
+						52.4889
+					],
+					[
+						8.1457,
+						52.6792
+					],
+					[
+						8.356,
+						52.8189
+					]
+				],
+				"aspect": 2.16
+			}
+		},
+		{
+			"id": "nienburg-weser",
+			"name": "Nienburg (Weser)",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.11885,
+				52.64245
+			],
+			"bbox": [
+				8.703,
+				52.3879,
+				9.5347,
+				52.897
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						8.8098,
+						52.4479
+					],
+					[
+						9.1283,
+						52.5498
+					],
+					[
+						9.2879,
+						52.7362
+					]
+				],
+				"aspect": 1.97
+			}
+		},
+		{
+			"id": "gifhorn",
+			"name": "Gifhorn",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.6405,
+				52.5764
+			],
+			"bbox": [
+				10.2722,
+				52.3204,
+				11.0088,
+				52.8324
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						10.4098,
+						52.5473
+					],
+					[
+						10.6498,
+						52.6465
+					],
+					[
+						10.8898,
+						52.6057
+					]
+				],
+				"aspect": 0.9
+			}
+		},
+		{
+			"id": "grafschaft-bentheim",
+			"name": "Grafschaft Bentheim",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.0076,
+				52.4472
+			],
+			"bbox": [
+				6.6977,
+				52.2413,
+				7.3175,
+				52.6531
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						6.8172,
+						52.5982
+					],
+					[
+						7.1222,
+						52.5175
+					],
+					[
+						7.2086,
+						52.3235
+					]
+				],
+				"aspect": 2.16
+			}
+		},
+		{
+			"id": "wolfsburg",
+			"name": "Wolfsburg",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.768899999999999,
+				52.406
+			],
+			"bbox": [
+				10.6472,
+				52.3178,
+				10.8906,
+				52.4942
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						10.6808,
+						52.4203
+					],
+					[
+						10.7733,
+						52.4006
+					],
+					[
+						10.8657,
+						52.4133
+					]
+				],
+				"aspect": 0.95
+			}
+		},
+		{
+			"id": "region-hannover",
+			"name": "Region Hannover",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.76505,
+				52.39790000000001
+			],
+			"bbox": [
+				9.2382,
+				52.1311,
+				10.2919,
+				52.6647
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						9.4022,
+						52.4613
+					],
+					[
+						9.7328,
+						52.3509
+					],
+					[
+						10.0634,
+						52.4341
+					]
+				],
+				"aspect": 1.14
+			}
+		},
+		{
+			"id": "landkreis-osnabruck",
+			"name": "Landkreis Osnabrück",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.05845,
+				52.3724
+			],
+			"bbox": [
+				7.609,
+				52.0355,
+				8.5079,
+				52.7093
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						7.7568,
+						52.6139
+					],
+					[
+						8.1017,
+						52.4166
+					],
+					[
+						8.2954,
+						52.1554
+					]
+				],
+				"aspect": 2.39
+			}
+		},
+		{
+			"id": "peine",
+			"name": "Peine",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.21565,
+				52.311449999999994
+			],
+			"bbox": [
+				9.9985,
+				52.175,
+				10.4328,
+				52.4479
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						10.0947,
+						52.2974
+					],
+					[
+						10.2498,
+						52.3415
+					],
+					[
+						10.4048,
+						52.2947
+					]
+				],
+				"aspect": 1
+			}
+		},
+		{
+			"id": "osnabruck",
+			"name": "Osnabrück",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.055299999999999,
+				52.28135
+			],
+			"bbox": [
+				7.9322,
+				52.2239,
+				8.1784,
+				52.3388
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						7.9636,
+						52.2902
+					],
+					[
+						8.048,
+						52.2685
+					],
+					[
+						8.1325,
+						52.2712
+					]
+				],
+				"aspect": 1.24
+			}
+		},
+		{
+			"id": "schaumburg",
+			"name": "Schaumburg",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.2059,
+				52.276250000000005
+			],
+			"bbox": [
+				8.9635,
+				52.0978,
+				9.4483,
+				52.4547
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						9.0699,
+						52.2564
+					],
+					[
+						9.2219,
+						52.3332
+					],
+					[
+						9.3738,
+						52.3209
+					]
+				],
+				"aspect": 0.83
+			}
+		},
+		{
+			"id": "braunschweig",
+			"name": "Braunschweig",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.53355,
+				52.26945
+			],
+			"bbox": [
+				10.4241,
+				52.187,
+				10.643,
+				52.3519
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						10.445,
+						52.2694
+					],
+					[
+						10.5232,
+						52.2631
+					],
+					[
+						10.6014,
+						52.295
+					]
+				],
+				"aspect": 0.72
+			}
+		},
+		{
+			"id": "helmstedt",
+			"name": "Helmstedt",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.8433,
+				52.2599
+			],
+			"bbox": [
+				10.6094,
+				52.048,
+				11.0772,
+				52.4718
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						10.6446,
+						52.3413
+					],
+					[
+						10.8292,
+						52.2425
+					],
+					[
+						11.0137,
+						52.2521
+					]
+				],
+				"aspect": 1.71
+			}
+		},
+		{
+			"id": "wolfenbuttel",
+			"name": "Wolfenbüttel",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.532,
+				52.1398
+			],
+			"bbox": [
+				10.1752,
+				51.9763,
+				10.8888,
+				52.3033
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						10.4888,
+						52.0969
+					],
+					[
+						10.639,
+						52.174
+					],
+					[
+						10.7892,
+						52.1626
+					]
+				],
+				"aspect": 0.87
+			}
+		},
+		{
+			"id": "salzgitter",
+			"name": "Salzgitter",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.36975,
+				52.123400000000004
+			],
+			"bbox": [
+				10.233,
+				52.0253,
+				10.5065,
+				52.2215
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						10.2536,
+						52.1401
+					],
+					[
+						10.3608,
+						52.0753
+					],
+					[
+						10.468,
+						52.1684
+					]
+				],
+				"aspect": 1.74
+			}
+		},
+		{
+			"id": "hameln-pyrmont",
+			"name": "Hameln-Pyrmont",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.415099999999999,
+				52.09865
+			],
+			"bbox": [
+				9.1553,
+				51.923,
+				9.6749,
+				52.2743
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						9.2227,
+						52.0752
+					],
+					[
+						9.4145,
+						52.1364
+					],
+					[
+						9.6063,
+						52.0845
+					]
+				],
+				"aspect": 1
+			}
+		},
+		{
+			"id": "hildesheim",
+			"name": "Hildesheim",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.94315,
+				52.093450000000004
+			],
+			"bbox": [
+				9.6288,
+				51.8969,
+				10.2575,
+				52.29
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						9.7142,
+						52.0674
+					],
+					[
+						9.9358,
+						52.1179
+					],
+					[
+						10.1574,
+						52.0813
+					]
+				],
+				"aspect": 0.96
+			}
+		},
+		{
+			"id": "goslar",
+			"name": "Goslar",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.38345,
+				51.8473
+			],
+			"bbox": [
+				10.0655,
+				51.6384,
+				10.7014,
+				52.0562
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						10.147,
+						51.8948
+					],
+					[
+						10.3633,
+						51.9357
+					],
+					[
+						10.5796,
+						51.8484
+					]
+				],
+				"aspect": 1.09
+			}
+		},
+		{
+			"id": "holzminden",
+			"name": "Holzminden",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.6019,
+				51.8457
+			],
+			"bbox": [
+				9.3089,
+				51.6473,
+				9.8949,
+				52.0441
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						9.3825,
+						51.8873
+					],
+					[
+						9.5813,
+						51.861
+					],
+					[
+						9.7801,
+						51.9326
+					]
+				],
+				"aspect": 1.77
+			}
+		},
+		{
+			"id": "northeim",
+			"name": "Northeim",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.786999999999999,
+				51.7649
+			],
+			"bbox": [
+				9.4173,
+				51.582,
+				10.1567,
+				51.9478
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						9.6011,
+						51.7098
+					],
+					[
+						9.8333,
+						51.7582
+					],
+					[
+						10.0655,
+						51.7692
+					]
+				],
+				"aspect": 1.02
+			}
+		},
+		{
+			"id": "gottingen",
+			"name": "Göttingen",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.112850000000002,
+				51.5638
+			],
+			"bbox": [
+				9.5484,
+				51.2952,
+				10.6773,
+				51.8324
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						9.6443,
+						51.4085
+					],
+					[
+						10.0339,
+						51.5664
+					],
+					[
+						10.4563,
+						51.6857
+					]
+				],
+				"aspect": 2.82
+			}
+		}
+	],
+	"tourOrder": [
+		"flensburg",
+		"nordfriesland",
+		"schleswig-flensburg",
+		"kiel",
+		"vorpommern-rugen",
+		"rendsburg-eckernforde",
+		"plon",
+		"ostholstein",
+		"rostock",
+		"dithmarschen",
+		"neumunster",
+		"landkreis-rostock",
+		"steinburg",
+		"lubeck",
+		"segeberg",
+		"pinneberg",
+		"nordwestmecklenburg",
+		"vorpommern-greifswald",
+		"stormarn",
+		"schwerin",
+		"stade",
+		"herzogtum-lauenburg",
+		"cuxhaven",
+		"mecklenburgische-seenplatte",
+		"wittmund",
+		"wilhelmshaven",
+		"hamburg",
+		"bremerhaven",
+		"aurich",
+		"friesland",
+		"ludwigslust-parchim",
+		"emden",
+		"wesermarsch",
+		"leer",
+		"harburg",
+		"bremen",
+		"osterholz",
+		"rotenburg-wumme",
+		"landkreis-luneburg",
+		"ammerland",
+		"oldenburg-oldenburg",
+		"delmenhorst",
+		"luchow-dannenberg",
+		"landkreis-oldenburg",
+		"uelzen",
+		"verden",
+		"cloppenburg",
+		"heidekreis",
+		"diepholz",
+		"celle",
+		"emsland",
+		"vechta",
+		"nienburg-weser",
+		"gifhorn",
+		"grafschaft-bentheim",
+		"wolfsburg",
+		"region-hannover",
+		"landkreis-osnabruck",
+		"peine",
+		"osnabruck",
+		"schaumburg",
+		"braunschweig",
+		"helmstedt",
+		"wolfenbuttel",
+		"salzgitter",
+		"hameln-pyrmont",
+		"hildesheim",
+		"goslar",
+		"holzminden",
+		"northeim",
+		"gottingen"
+	]
+}

@@ -1,0 +1,1059 @@
+{
+	"oss": {
+		"kind": "region",
+		"borders": [
+			"'s-Hertogenbosch",
+			"Bernheze",
+			"Land van Cuijk",
+			"Maashorst"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"altena": {
+		"kind": "region",
+		"borders": [
+			"Drimmelen",
+			"Geertruidenberg",
+			"Heusden",
+			"Waalwijk"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"mook-en-middelaar": {
+		"kind": "region",
+		"borders": [
+			"Gennep",
+			"Land van Cuijk"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"s-hertogenbosch": {
+		"kind": "region",
+		"borders": [
+			"Bernheze",
+			"Heusden",
+			"Oss",
+			"Sint-Michielsgestel",
+			"Vught"
+		],
+		"coastal": false,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"\"The duke’s forest\" — a hunting wood of the Duke of Brabant; the Dutch shorten it to Den Bosch.",
+				"Hieronymus Bosch was born, lived and died here and took his name from the town.",
+				"Its Binnendieze river runs under the houses and streets and can be toured by boat."
+			],
+			"it": [
+				"\"Il bosco del duca\": una riserva di caccia del duca di Brabante; gli olandesi lo abbreviano in Den Bosch.",
+				"Hieronymus Bosch vi nacque, vi visse e vi morì, e prese il nome dalla città.",
+				"Il Binnendieze, il suo fiume, scorre sotto le case e le strade e si può percorrere in barca."
+			]
+		}
+	},
+	"drimmelen": {
+		"kind": "region",
+		"borders": [
+			"Altena",
+			"Breda",
+			"Geertruidenberg",
+			"Moerdijk",
+			"Oosterhout"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"geertruidenberg": {
+		"kind": "region",
+		"borders": [
+			"Altena",
+			"Dongen",
+			"Drimmelen",
+			"Oosterhout",
+			"Waalwijk"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"gennep": {
+		"kind": "region",
+		"borders": [
+			"Bergen (L)",
+			"Land van Cuijk",
+			"Mook en Middelaar"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"maashorst": {
+		"kind": "region",
+		"borders": [
+			"Bernheze",
+			"Boekel",
+			"Land van Cuijk",
+			"Meierijstad",
+			"Oss"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"heusden": {
+		"kind": "region",
+		"borders": [
+			"'s-Hertogenbosch",
+			"Altena",
+			"Loon op Zand",
+			"Tilburg",
+			"Vught",
+			"Waalwijk"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"waalwijk": {
+		"kind": "region",
+		"borders": [
+			"Altena",
+			"Dongen",
+			"Geertruidenberg",
+			"Heusden",
+			"Loon op Zand"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"bernheze": {
+		"kind": "region",
+		"borders": [
+			"'s-Hertogenbosch",
+			"Maashorst",
+			"Meierijstad",
+			"Oss",
+			"Sint-Michielsgestel"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"land-van-cuijk": {
+		"kind": "region",
+		"borders": [
+			"Bergen (L)",
+			"Boekel",
+			"Gemert-Bakel",
+			"Gennep",
+			"Maashorst",
+			"Mook en Middelaar",
+			"Oss",
+			"Venray"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"moerdijk": {
+		"kind": "region",
+		"borders": [
+			"Breda",
+			"Drimmelen",
+			"Etten-Leur",
+			"Halderberge",
+			"Steenbergen"
+		],
+		"coastal": true,
+		"position": "north-west"
+	},
+	"vught": {
+		"kind": "region",
+		"borders": [
+			"'s-Hertogenbosch",
+			"Boxtel",
+			"Heusden",
+			"Oisterwijk",
+			"Sint-Michielsgestel",
+			"Tilburg"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"sint-michielsgestel": {
+		"kind": "region",
+		"borders": [
+			"'s-Hertogenbosch",
+			"Bernheze",
+			"Boxtel",
+			"Meierijstad",
+			"Vught"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"dongen": {
+		"kind": "region",
+		"borders": [
+			"Geertruidenberg",
+			"Gilze en Rijen",
+			"Loon op Zand",
+			"Oosterhout",
+			"Tilburg",
+			"Waalwijk"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"loon-op-zand": {
+		"kind": "region",
+		"borders": [
+			"Dongen",
+			"Heusden",
+			"Tilburg",
+			"Waalwijk"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"oosterhout": {
+		"kind": "region",
+		"borders": [
+			"Breda",
+			"Dongen",
+			"Drimmelen",
+			"Geertruidenberg",
+			"Gilze en Rijen"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"boekel": {
+		"kind": "region",
+		"borders": [
+			"Gemert-Bakel",
+			"Land van Cuijk",
+			"Maashorst",
+			"Meierijstad"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"steenbergen": {
+		"kind": "region",
+		"borders": [
+			"Bergen op Zoom",
+			"Halderberge",
+			"Moerdijk",
+			"Roosendaal"
+		],
+		"coastal": true,
+		"position": "north-west"
+	},
+	"bergen-l": {
+		"kind": "region",
+		"borders": [
+			"Gennep",
+			"Horst aan de Maas",
+			"Land van Cuijk",
+			"Venlo",
+			"Venray"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"boxtel": {
+		"kind": "region",
+		"borders": [
+			"Best",
+			"Meierijstad",
+			"Oirschot",
+			"Oisterwijk",
+			"Sint-Michielsgestel",
+			"Vught"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"halderberge": {
+		"kind": "region",
+		"borders": [
+			"Etten-Leur",
+			"Moerdijk",
+			"Roosendaal",
+			"Rucphen",
+			"Steenbergen"
+		],
+		"coastal": true,
+		"position": "north-west"
+	},
+	"meierijstad": {
+		"kind": "region",
+		"borders": [
+			"Bernheze",
+			"Best",
+			"Boekel",
+			"Boxtel",
+			"Gemert-Bakel",
+			"Laarbeek",
+			"Maashorst",
+			"Nuenen, Gerwen en Nederwetten",
+			"Sint-Michielsgestel",
+			"Son en Breugel"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"tilburg": {
+		"kind": "region",
+		"borders": [
+			"Dongen",
+			"Gilze en Rijen",
+			"Goirle",
+			"Heusden",
+			"Hilvarenbeek",
+			"Loon op Zand",
+			"Oisterwijk",
+			"Vught"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"etten-leur": {
+		"kind": "region",
+		"borders": [
+			"Breda",
+			"Halderberge",
+			"Moerdijk",
+			"Rucphen",
+			"Zundert"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"gilze-en-rijen": {
+		"kind": "region",
+		"borders": [
+			"Alphen-Chaam",
+			"Breda",
+			"Dongen",
+			"Goirle",
+			"Oosterhout",
+			"Tilburg"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"breda": {
+		"kind": "region",
+		"borders": [
+			"Alphen-Chaam",
+			"Drimmelen",
+			"Etten-Leur",
+			"Gilze en Rijen",
+			"Moerdijk",
+			"Oosterhout",
+			"Zundert"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"oisterwijk": {
+		"kind": "region",
+		"borders": [
+			"Boxtel",
+			"Hilvarenbeek",
+			"Oirschot",
+			"Tilburg",
+			"Vught"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"gemert-bakel": {
+		"kind": "region",
+		"borders": [
+			"Boekel",
+			"Deurne",
+			"Helmond",
+			"Laarbeek",
+			"Land van Cuijk",
+			"Meierijstad",
+			"Venray"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"laarbeek": {
+		"kind": "region",
+		"borders": [
+			"Gemert-Bakel",
+			"Helmond",
+			"Meierijstad",
+			"Nuenen, Gerwen en Nederwetten"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"son-en-breugel": {
+		"kind": "region",
+		"borders": [
+			"Best",
+			"Eindhoven",
+			"Meierijstad",
+			"Nuenen, Gerwen en Nederwetten"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"rucphen": {
+		"kind": "region",
+		"borders": [
+			"Etten-Leur",
+			"Halderberge",
+			"Roosendaal",
+			"Zundert"
+		],
+		"coastal": true,
+		"position": "north-west"
+	},
+	"best": {
+		"kind": "region",
+		"borders": [
+			"Boxtel",
+			"Eindhoven",
+			"Meierijstad",
+			"Oirschot",
+			"Son en Breugel"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"roosendaal": {
+		"kind": "region",
+		"borders": [
+			"Bergen op Zoom",
+			"Halderberge",
+			"Rucphen",
+			"Steenbergen",
+			"Woensdrecht"
+		],
+		"coastal": true,
+		"position": "north-west"
+	},
+	"venray": {
+		"kind": "region",
+		"borders": [
+			"Bergen (L)",
+			"Deurne",
+			"Gemert-Bakel",
+			"Horst aan de Maas",
+			"Land van Cuijk"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"alphen-chaam": {
+		"kind": "region",
+		"borders": [
+			"Baarle-Nassau",
+			"Breda",
+			"Gilze en Rijen",
+			"Goirle"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"goirle": {
+		"kind": "region",
+		"borders": [
+			"Alphen-Chaam",
+			"Gilze en Rijen",
+			"Hilvarenbeek",
+			"Tilburg"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"bergen-op-zoom": {
+		"kind": "region",
+		"borders": [
+			"Roosendaal",
+			"Steenbergen",
+			"Woensdrecht"
+		],
+		"coastal": true,
+		"position": "north-west"
+	},
+	"oirschot": {
+		"kind": "region",
+		"borders": [
+			"Best",
+			"Bladel",
+			"Boxtel",
+			"Eersel",
+			"Eindhoven",
+			"Hilvarenbeek",
+			"Oisterwijk",
+			"Reusel-De Mierden"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"nuenen-gerwen-en-nederwetten": {
+		"kind": "region",
+		"borders": [
+			"Eindhoven",
+			"Geldrop-Mierlo",
+			"Helmond",
+			"Laarbeek",
+			"Meierijstad",
+			"Son en Breugel"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"zundert": {
+		"kind": "region",
+		"borders": [
+			"Breda",
+			"Etten-Leur",
+			"Rucphen"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"hilvarenbeek": {
+		"kind": "region",
+		"borders": [
+			"Bladel",
+			"Goirle",
+			"Oirschot",
+			"Oisterwijk",
+			"Reusel-De Mierden",
+			"Tilburg"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"helmond": {
+		"kind": "region",
+		"borders": [
+			"Asten",
+			"Deurne",
+			"Geldrop-Mierlo",
+			"Gemert-Bakel",
+			"Laarbeek",
+			"Nuenen, Gerwen en Nederwetten",
+			"Someren"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"horst-aan-de-maas": {
+		"kind": "region",
+		"borders": [
+			"Bergen (L)",
+			"Deurne",
+			"Peel en Maas",
+			"Venlo",
+			"Venray"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"eindhoven": {
+		"kind": "region",
+		"borders": [
+			"Best",
+			"Eersel",
+			"Geldrop-Mierlo",
+			"Heeze-Leende",
+			"Nuenen, Gerwen en Nederwetten",
+			"Oirschot",
+			"Son en Breugel",
+			"Veldhoven",
+			"Waalre"
+		],
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"From \"eind\", the end, plus hoven, courtyards — the farms at the end of the settlement.",
+				"Philips was founded here in 1891 and made the town: it built housing, a stadium and a football club, PSV, for its workers.",
+				"Its Strijp-S district, the old Philips factory quarter, is now a design campus, and Dutch Design Week is held in the city every October."
+			],
+			"it": [
+				"Da \"eind\", la fine, più hoven, corti: le fattorie in fondo all’insediamento.",
+				"La Philips nacque qui nel 1891 e fece la città: costruì per i suoi operai case, uno stadio e una squadra di calcio, il PSV.",
+				"Il suo quartiere Strijp-S, l’ex zona industriale della Philips, è oggi un campus del design, e ogni ottobre la città ospita la Dutch Design Week."
+			]
+		}
+	},
+	"baarle-nassau": {
+		"kind": "region",
+		"borders": [
+			"Alphen-Chaam"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"geldrop-mierlo": {
+		"kind": "region",
+		"borders": [
+			"Eindhoven",
+			"Heeze-Leende",
+			"Helmond",
+			"Nuenen, Gerwen en Nederwetten",
+			"Someren"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"deurne": {
+		"kind": "region",
+		"borders": [
+			"Asten",
+			"Gemert-Bakel",
+			"Helmond",
+			"Horst aan de Maas",
+			"Peel en Maas",
+			"Venray"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"veldhoven": {
+		"kind": "region",
+		"borders": [
+			"Bergeijk",
+			"Eersel",
+			"Eindhoven",
+			"Waalre"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"woensdrecht": {
+		"kind": "region",
+		"borders": [
+			"Bergen op Zoom",
+			"Roosendaal"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"venlo": {
+		"kind": "region",
+		"borders": [
+			"Beesel",
+			"Bergen (L)",
+			"Horst aan de Maas",
+			"Peel en Maas"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"eersel": {
+		"kind": "region",
+		"borders": [
+			"Bergeijk",
+			"Bladel",
+			"Eindhoven",
+			"Oirschot",
+			"Veldhoven"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"asten": {
+		"kind": "region",
+		"borders": [
+			"Deurne",
+			"Helmond",
+			"Nederweert",
+			"Peel en Maas",
+			"Someren"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"someren": {
+		"kind": "region",
+		"borders": [
+			"Asten",
+			"Cranendonck",
+			"Geldrop-Mierlo",
+			"Heeze-Leende",
+			"Helmond",
+			"Nederweert"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"waalre": {
+		"kind": "region",
+		"borders": [
+			"Eindhoven",
+			"Heeze-Leende",
+			"Valkenswaard",
+			"Veldhoven"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"reusel-de-mierden": {
+		"kind": "region",
+		"borders": [
+			"Bladel",
+			"Hilvarenbeek",
+			"Oirschot"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"bladel": {
+		"kind": "region",
+		"borders": [
+			"Bergeijk",
+			"Eersel",
+			"Hilvarenbeek",
+			"Oirschot",
+			"Reusel-De Mierden"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"heeze-leende": {
+		"kind": "region",
+		"borders": [
+			"Cranendonck",
+			"Eindhoven",
+			"Geldrop-Mierlo",
+			"Someren",
+			"Valkenswaard",
+			"Waalre"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"peel-en-maas": {
+		"kind": "region",
+		"borders": [
+			"Asten",
+			"Beesel",
+			"Deurne",
+			"Horst aan de Maas",
+			"Leudal",
+			"Nederweert",
+			"Venlo"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"bergeijk": {
+		"kind": "region",
+		"borders": [
+			"Bladel",
+			"Eersel",
+			"Valkenswaard",
+			"Veldhoven"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"valkenswaard": {
+		"kind": "region",
+		"borders": [
+			"Bergeijk",
+			"Heeze-Leende",
+			"Waalre"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"nederweert": {
+		"kind": "region",
+		"borders": [
+			"Asten",
+			"Cranendonck",
+			"Leudal",
+			"Peel en Maas",
+			"Someren",
+			"Weert"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"cranendonck": {
+		"kind": "region",
+		"borders": [
+			"Heeze-Leende",
+			"Nederweert",
+			"Someren",
+			"Weert"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"beesel": {
+		"kind": "region",
+		"borders": [
+			"Leudal",
+			"Peel en Maas",
+			"Roermond",
+			"Venlo"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"leudal": {
+		"kind": "region",
+		"borders": [
+			"Beesel",
+			"Maasgouw",
+			"Nederweert",
+			"Peel en Maas",
+			"Roermond",
+			"Weert"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"weert": {
+		"kind": "region",
+		"borders": [
+			"Cranendonck",
+			"Leudal",
+			"Nederweert"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"roermond": {
+		"kind": "region",
+		"borders": [
+			"Beesel",
+			"Leudal",
+			"Maasgouw",
+			"Roerdalen"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"maasgouw": {
+		"kind": "region",
+		"borders": [
+			"Echt-Susteren",
+			"Leudal",
+			"Roerdalen",
+			"Roermond"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"roerdalen": {
+		"kind": "region",
+		"borders": [
+			"Echt-Susteren",
+			"Maasgouw",
+			"Roermond"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"echt-susteren": {
+		"kind": "region",
+		"borders": [
+			"Maasgouw",
+			"Roerdalen",
+			"Sittard-Geleen"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"sittard-geleen": {
+		"kind": "region",
+		"borders": [
+			"Beek",
+			"Beekdaelen",
+			"Echt-Susteren",
+			"Stein"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"stein": {
+		"kind": "region",
+		"borders": [
+			"Beek",
+			"Meerssen",
+			"Sittard-Geleen"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"brunssum": {
+		"kind": "region",
+		"borders": [
+			"Beekdaelen",
+			"Heerlen",
+			"Landgraaf"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"beekdaelen": {
+		"kind": "region",
+		"borders": [
+			"Beek",
+			"Brunssum",
+			"Heerlen",
+			"Meerssen",
+			"Sittard-Geleen",
+			"Valkenburg aan de Geul",
+			"Voerendaal"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"beek": {
+		"kind": "region",
+		"borders": [
+			"Beekdaelen",
+			"Meerssen",
+			"Sittard-Geleen",
+			"Stein"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"meerssen": {
+		"kind": "region",
+		"borders": [
+			"Beek",
+			"Beekdaelen",
+			"Maastricht",
+			"Stein",
+			"Valkenburg aan de Geul"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"landgraaf": {
+		"kind": "region",
+		"borders": [
+			"Brunssum",
+			"Heerlen",
+			"Kerkrade"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"heerlen": {
+		"kind": "region",
+		"borders": [
+			"Beekdaelen",
+			"Brunssum",
+			"Kerkrade",
+			"Landgraaf",
+			"Simpelveld",
+			"Voerendaal"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"voerendaal": {
+		"kind": "region",
+		"borders": [
+			"Beekdaelen",
+			"Gulpen-Wittem",
+			"Heerlen",
+			"Simpelveld",
+			"Valkenburg aan de Geul"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"kerkrade": {
+		"kind": "region",
+		"borders": [
+			"Heerlen",
+			"Landgraaf"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"maastricht": {
+		"kind": "region",
+		"borders": [
+			"Eijsden-Margraten",
+			"Meerssen",
+			"Valkenburg aan de Geul"
+		],
+		"coastal": false,
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"From Latin Mosae Trajectum, \"the crossing of the Meuse\" — the Roman ford.",
+				"The treaty signed here in 1992 created the European Union and the euro.",
+				"Its marl caves were quarried for two thousand years and hold 20,000 wall inscriptions and a wartime hiding place for the Night Watch."
+			],
+			"it": [
+				"Dal latino Mosae Trajectum, \"il passaggio della Mosa\": il guado romano.",
+				"Il trattato firmato qui nel 1992 diede vita all’Unione europea e all’euro.",
+				"Le sue grotte di marna, sfruttate come cave per duemila anni, conservano 20.000 iscrizioni murali e il nascondiglio in cui in tempo di guerra fu custodita la Ronda di notte."
+			]
+		}
+	},
+	"valkenburg-aan-de-geul": {
+		"kind": "region",
+		"borders": [
+			"Beekdaelen",
+			"Eijsden-Margraten",
+			"Gulpen-Wittem",
+			"Maastricht",
+			"Meerssen",
+			"Voerendaal"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"simpelveld": {
+		"kind": "region",
+		"borders": [
+			"Gulpen-Wittem",
+			"Heerlen",
+			"Voerendaal"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"eijsden-margraten": {
+		"kind": "region",
+		"borders": [
+			"Gulpen-Wittem",
+			"Maastricht",
+			"Valkenburg aan de Geul"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"gulpen-wittem": {
+		"kind": "region",
+		"borders": [
+			"Eijsden-Margraten",
+			"Simpelveld",
+			"Vaals",
+			"Valkenburg aan de Geul",
+			"Voerendaal"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"vaals": {
+		"kind": "region",
+		"borders": [
+			"Gulpen-Wittem"
+		],
+		"coastal": false,
+		"position": "south-east"
+	}
+}

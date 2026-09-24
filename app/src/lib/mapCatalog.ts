@@ -13,10 +13,14 @@ import { t, type TranslationKey } from './i18n.svelte';
 // keeps this file from being able to accidentally reference an unrelated
 // key like 'nav.maps' as a map's labelKey.
 type MapTypeKey = Extract<TranslationKey, `mapType.${string}`>;
+// The part of the country a map covers, added to its type: "Districts —
+// North" (#39). One key per part rather than one per type-and-part pair.
+type MapPartKey = Extract<TranslationKey, `mapPart.${string}`>;
 
 interface MapEntry {
 	id: string;
 	labelKey: MapTypeKey;
+	partKey?: MapPartKey;
 }
 
 interface CountryGroup {
@@ -60,6 +64,10 @@ export const mapGroups: CountryGroup[] = [
 			{ id: 'australia-regions', labelKey: 'mapType.states' },
 			{ id: 'australia-towns-100k', labelKey: 'mapType.towns' }
 		]
+	},
+	{
+		country: 'Austria',
+		maps: [{ id: 'austria-states', labelKey: 'mapType.states' }]
 	},
 	{
 		country: 'Brazil',
@@ -119,7 +127,10 @@ export const mapGroups: CountryGroup[] = [
 		country: 'France',
 		maps: [
 			{ id: 'france-regions', labelKey: 'mapType.regions' },
-			{ id: 'france-towns-100k', labelKey: 'mapType.towns' }
+			{ id: 'france-towns-100k', labelKey: 'mapType.towns' },
+			{ id: 'france-departments', labelKey: 'mapType.departments' },
+			{ id: 'france-departments-north', labelKey: 'mapType.departments', partKey: 'mapPart.north' },
+			{ id: 'france-departments-south', labelKey: 'mapType.departments', partKey: 'mapPart.south' }
 		]
 	},
 	{
@@ -127,14 +138,41 @@ export const mapGroups: CountryGroup[] = [
 		maps: [
 			{ id: 'germany-states', labelKey: 'mapType.states' },
 			{ id: 'germany-towns-100k', labelKey: 'mapType.towns' },
-			// Six parts of the country by its states, 60 towns each, from
-			// Wikidata (#39, batch C).
-			{ id: 'germany-towns-center', labelKey: 'mapType.townsCenter' },
-			{ id: 'germany-towns-east', labelKey: 'mapType.townsEast' },
-			{ id: 'germany-towns-north', labelKey: 'mapType.townsNorth' },
-			{ id: 'germany-towns-southeast', labelKey: 'mapType.townsSouthEast' },
-			{ id: 'germany-towns-southwest', labelKey: 'mapType.townsSouthWest' },
-			{ id: 'germany-towns-west', labelKey: 'mapType.townsWest' }
+			// Six parts of the country by its states: 60 towns each from
+			// Wikidata (#39, batch C), and every Kreis from the BKG register
+			// (batch D).
+			{ id: 'germany-towns-center', labelKey: 'mapType.towns', partKey: 'mapPart.center' },
+			{ id: 'germany-towns-east', labelKey: 'mapType.towns', partKey: 'mapPart.east' },
+			{ id: 'germany-towns-north', labelKey: 'mapType.towns', partKey: 'mapPart.north' },
+			{ id: 'germany-towns-southeast', labelKey: 'mapType.towns', partKey: 'mapPart.southEast' },
+			{ id: 'germany-towns-southwest', labelKey: 'mapType.towns', partKey: 'mapPart.southWest' },
+			{ id: 'germany-towns-west', labelKey: 'mapType.towns', partKey: 'mapPart.west' },
+			{
+				id: 'germany-districts-center',
+				labelKey: 'mapType.germanDistricts',
+				partKey: 'mapPart.center'
+			},
+			{
+				id: 'germany-districts-east',
+				labelKey: 'mapType.germanDistricts',
+				partKey: 'mapPart.east'
+			},
+			{
+				id: 'germany-districts-north',
+				labelKey: 'mapType.germanDistricts',
+				partKey: 'mapPart.north'
+			},
+			{
+				id: 'germany-districts-southeast',
+				labelKey: 'mapType.germanDistricts',
+				partKey: 'mapPart.southEast'
+			},
+			{
+				id: 'germany-districts-southwest',
+				labelKey: 'mapType.germanDistricts',
+				partKey: 'mapPart.southWest'
+			},
+			{ id: 'germany-districts-west', labelKey: 'mapType.germanDistricts', partKey: 'mapPart.west' }
 		]
 	},
 	{
@@ -157,6 +195,10 @@ export const mapGroups: CountryGroup[] = [
 			{ id: 'indonesia-regions', labelKey: 'mapType.provinces' },
 			{ id: 'indonesia-towns-100k', labelKey: 'mapType.towns' }
 		]
+	},
+	{
+		country: 'Ireland',
+		maps: [{ id: 'ireland-counties', labelKey: 'mapType.counties' }]
 	},
 	{
 		country: 'Italy',
@@ -189,7 +231,32 @@ export const mapGroups: CountryGroup[] = [
 		country: 'Netherlands',
 		maps: [
 			{ id: 'netherlands-regions', labelKey: 'mapType.provinces' },
-			{ id: 'netherlands-towns-100k', labelKey: 'mapType.towns' }
+			{ id: 'netherlands-towns-100k', labelKey: 'mapType.towns' },
+			{
+				id: 'netherlands-municipalities-east',
+				labelKey: 'mapType.municipalities',
+				partKey: 'mapPart.east'
+			},
+			{
+				id: 'netherlands-municipalities-north',
+				labelKey: 'mapType.municipalities',
+				partKey: 'mapPart.north'
+			},
+			{
+				id: 'netherlands-municipalities-south',
+				labelKey: 'mapType.municipalities',
+				partKey: 'mapPart.south'
+			},
+			{
+				id: 'netherlands-municipalities-southwest',
+				labelKey: 'mapType.municipalities',
+				partKey: 'mapPart.southWest'
+			},
+			{
+				id: 'netherlands-municipalities-west',
+				labelKey: 'mapType.municipalities',
+				partKey: 'mapPart.west'
+			}
 		]
 	},
 	{
@@ -228,6 +295,10 @@ export const mapGroups: CountryGroup[] = [
 		]
 	},
 	{
+		country: 'Romania',
+		maps: [{ id: 'romania-counties', labelKey: 'mapType.romanianCounties' }]
+	},
+	{
 		country: 'Russia',
 		maps: [
 			{ id: 'russia-regions', labelKey: 'mapType.regions' },
@@ -252,7 +323,8 @@ export const mapGroups: CountryGroup[] = [
 		country: 'Spain',
 		maps: [
 			{ id: 'spain-regions', labelKey: 'mapType.regions' },
-			{ id: 'spain-towns-100k', labelKey: 'mapType.towns' }
+			{ id: 'spain-towns-100k', labelKey: 'mapType.towns' },
+			{ id: 'spain-provinces', labelKey: 'mapType.provinces' }
 		]
 	},
 	{
@@ -261,6 +333,10 @@ export const mapGroups: CountryGroup[] = [
 			{ id: 'sweden-regions', labelKey: 'mapType.regions' },
 			{ id: 'sweden-towns-100k', labelKey: 'mapType.towns' }
 		]
+	},
+	{
+		country: 'Switzerland',
+		maps: [{ id: 'switzerland-cantons', labelKey: 'mapType.cantons' }]
 	},
 	{
 		country: 'Turkey',
@@ -298,10 +374,16 @@ export const mapGroups: CountryGroup[] = [
 	}
 ];
 
-const mapIndex = new Map<string, { country: string; labelKey: MapTypeKey }>();
+/** A map's type, and the part of the country it covers if it is one of
+ * several: "Towns — North". Translated, so call it during render. */
+export function mapTypeLabel(entry: Pick<MapEntry, 'labelKey' | 'partKey'>): string {
+	return entry.partKey ? `${t(entry.labelKey)} — ${t(entry.partKey)}` : t(entry.labelKey);
+}
+
+const mapIndex = new Map<string, { country: string; entry: MapEntry }>();
 for (const group of mapGroups) {
 	for (const map of group.maps) {
-		mapIndex.set(map.id, { country: group.country, labelKey: map.labelKey });
+		mapIndex.set(map.id, { country: group.country, entry: map });
 	}
 }
 
@@ -320,5 +402,5 @@ export function isCatalogMap(mapId: string): boolean {
 export function mapDisplayName(mapId: string): string | undefined {
 	const meta = mapIndex.get(mapId);
 	if (!meta) return undefined;
-	return `${meta.country} — ${t(meta.labelKey)}`;
+	return `${meta.country} — ${mapTypeLabel(meta.entry)}`;
 }

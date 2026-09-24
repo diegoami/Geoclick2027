@@ -74,3 +74,25 @@ fetch ne_10m_geography_regions_elevation_points \
 # north of the Tropic of Cancer, Rovaniemi on the Arctic Circle.
 fetch ne_10m_geographic_lines \
 	"https://naturalearth.s3.amazonaws.com/10m_physical/ne_10m_geographic_lines.zip"
+
+# --- Admin-2 from geoBoundaries (#39, batch D) ---
+#
+# Natural Earth stops at admin-1 for Germany and the Netherlands. These are
+# geoBoundaries' copies of each country's own register, pinned to one
+# release commit so a rebuild reads the same shapes. Not public domain:
+# Germany's Kreise are © GeoBasis-DE / BKG under dl-de/by-2-0 (attribution),
+# the Dutch municipalities CC0 - DECISIONS.md, "Admin-2 from geoBoundaries".
+GEOBOUNDARIES="https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen"
+fetch_geojson() {
+	local name="$1" url="$2"
+	local out="$SOURCE_DIR/geoboundaries/$name.geojson"
+	if [ -f "$out" ]; then
+		echo "Already downloaded: $out"
+		return 0
+	fi
+	mkdir -p "$SOURCE_DIR/geoboundaries"
+	echo "Downloading $url"
+	curl -sL -o "$out" "$url"
+}
+fetch_geojson DEU-ADM3 "$GEOBOUNDARIES/DEU/ADM3/geoBoundaries-DEU-ADM3_simplified.geojson"
+fetch_geojson NLD-ADM2 "$GEOBOUNDARIES/NLD/ADM2/geoBoundaries-NLD-ADM2_simplified.geojson"

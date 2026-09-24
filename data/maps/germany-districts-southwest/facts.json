@@ -1,0 +1,576 @@
+{
+	"main-tauber-kreis": {
+		"kind": "region",
+		"borders": [
+			"Hohenlohekreis",
+			"Neckar-Odenwald-Kreis",
+			"Schwäbisch Hall"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"mannheim": {
+		"kind": "region",
+		"borders": [
+			"Heidelberg",
+			"Rhein-Neckar-Kreis"
+		],
+		"coastal": false,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"From a personal name, Manno, plus Heim, a home.",
+				"Its centre is laid out as a grid of numbered and lettered blocks rather than named streets — unique in Germany.",
+				"Karl Benz drove the first automobile here in 1886, and his wife then made the first long-distance drive from the town."
+			],
+			"it": [
+				"Da un nome di persona, Manno, più Heim, casa.",
+				"Il suo centro è una griglia di isolati indicati da lettere e numeri anziché vie con un nome: un caso unico in Germania.",
+				"Karl Benz vi guidò la prima automobile nel 1886, e poi sua moglie partì da qui per il primo viaggio a lunga distanza."
+			]
+		}
+	},
+	"neckar-odenwald-kreis": {
+		"kind": "region",
+		"borders": [
+			"Hohenlohekreis",
+			"Landkreis Heilbronn",
+			"Main-Tauber-Kreis",
+			"Rhein-Neckar-Kreis"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"heidelberg": {
+		"kind": "region",
+		"borders": [
+			"Mannheim",
+			"Rhein-Neckar-Kreis"
+		],
+		"coastal": false,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Possibly \"blueberry mountain\", from Heidelbeere, or from Heide, a heath.",
+				"Its university, founded 1386, is the oldest in Germany.",
+				"The jaw of Homo heidelbergensis was found nearby in 1907, and the town survived the war almost undamaged."
+			],
+			"it": [
+				"Forse \"monte dei mirtilli\", da Heidelbeere, oppure da Heide, brughiera.",
+				"La sua università, fondata nel 1386, è la più antica della Germania.",
+				"La mandibola dell’Homo heidelbergensis fu trovata qui vicino nel 1907, e la città uscì dalla guerra quasi intatta."
+			]
+		}
+	},
+	"rhein-neckar-kreis": {
+		"kind": "region",
+		"borders": [
+			"Heidelberg",
+			"Landkreis Heilbronn",
+			"Landkreis Karlsruhe",
+			"Mannheim",
+			"Neckar-Odenwald-Kreis"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"hohenlohekreis": {
+		"kind": "region",
+		"borders": [
+			"Landkreis Heilbronn",
+			"Main-Tauber-Kreis",
+			"Neckar-Odenwald-Kreis",
+			"Schwäbisch Hall"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"landkreis-heilbronn": {
+		"kind": "region",
+		"borders": [
+			"Enzkreis",
+			"Heilbronn",
+			"Hohenlohekreis",
+			"Landkreis Karlsruhe",
+			"Ludwigsburg",
+			"Neckar-Odenwald-Kreis",
+			"Rems-Murr-Kreis",
+			"Rhein-Neckar-Kreis",
+			"Schwäbisch Hall"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"schwabisch-hall": {
+		"kind": "region",
+		"borders": [
+			"Hohenlohekreis",
+			"Landkreis Heilbronn",
+			"Main-Tauber-Kreis",
+			"Ostalbkreis",
+			"Rems-Murr-Kreis"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"heilbronn": {
+		"kind": "region",
+		"borders": [
+			"Landkreis Heilbronn"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"landkreis-karlsruhe": {
+		"kind": "region",
+		"borders": [
+			"Calw",
+			"Enzkreis",
+			"Karlsruhe",
+			"Landkreis Heilbronn",
+			"Rastatt",
+			"Rhein-Neckar-Kreis"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"karlsruhe": {
+		"kind": "region",
+		"borders": [
+			"Landkreis Karlsruhe"
+		],
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"\"Karl’s rest\" — a margrave built a palace here in 1715 and named it for the peace he hoped to find.",
+				"The city fans out from that palace in 32 streets like a wheel, which is why it is called the fan city.",
+				"Germany’s federal constitutional court sits here, and Heinrich Hertz proved radio waves exist in its university."
+			],
+			"it": [
+				"\"Il riposo di Carlo\": nel 1715 un margravio vi costruì un palazzo e lo chiamò così per la pace che sperava di trovarvi.",
+				"La città si apre a ventaglio da quel palazzo con 32 strade, come i raggi di una ruota: per questo la chiamano la città a ventaglio.",
+				"Qui ha sede la Corte costituzionale federale tedesca, e Heinrich Hertz dimostrò l’esistenza delle onde radio nella sua università."
+			]
+		}
+	},
+	"enzkreis": {
+		"kind": "region",
+		"borders": [
+			"Böblingen",
+			"Calw",
+			"Landkreis Heilbronn",
+			"Landkreis Karlsruhe",
+			"Ludwigsburg",
+			"Pforzheim"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"rems-murr-kreis": {
+		"kind": "region",
+		"borders": [
+			"Esslingen",
+			"Göppingen",
+			"Landkreis Heilbronn",
+			"Ludwigsburg",
+			"Ostalbkreis",
+			"Schwäbisch Hall",
+			"Stuttgart"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"ludwigsburg": {
+		"kind": "region",
+		"borders": [
+			"Böblingen",
+			"Enzkreis",
+			"Landkreis Heilbronn",
+			"Rems-Murr-Kreis",
+			"Stuttgart"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"ostalbkreis": {
+		"kind": "region",
+		"borders": [
+			"Göppingen",
+			"Heidenheim",
+			"Rems-Murr-Kreis",
+			"Schwäbisch Hall"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"pforzheim": {
+		"kind": "region",
+		"borders": [
+			"Calw",
+			"Enzkreis"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"rastatt": {
+		"kind": "region",
+		"borders": [
+			"Baden-Baden",
+			"Calw",
+			"Freudenstadt",
+			"Landkreis Karlsruhe",
+			"Ortenaukreis"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"stuttgart": {
+		"kind": "region",
+		"borders": [
+			"Böblingen",
+			"Esslingen",
+			"Ludwigsburg",
+			"Rems-Murr-Kreis"
+		],
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"From Stuotgarten, \"stud garden\" — a horse stud founded about 950, which is why a horse is on the city arms.",
+				"Mercedes and Porsche both build here, and Karl Benz’s successors made the city the birthplace of the car.",
+				"It sits in a bowl of vineyards, and vines grow inside the city limits."
+			],
+			"it": [
+				"Da Stuotgarten, \"giardino delle giumente\": un allevamento di cavalli fondato intorno al 950, ed è per questo che nello stemma della città c’è un cavallo.",
+				"Mercedes e Porsche producono entrambe qui, e i successori di Karl Benz hanno fatto della città la culla dell’automobile.",
+				"Sorge in una conca di vigneti, e le viti crescono anche dentro i confini comunali."
+			]
+		}
+	},
+	"baden-baden": {
+		"kind": "region",
+		"borders": [
+			"Rastatt"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"boblingen": {
+		"kind": "region",
+		"borders": [
+			"Calw",
+			"Enzkreis",
+			"Esslingen",
+			"Landkreis Tübingen",
+			"Ludwigsburg",
+			"Reutlingen",
+			"Stuttgart"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"calw": {
+		"kind": "region",
+		"borders": [
+			"Böblingen",
+			"Enzkreis",
+			"Freudenstadt",
+			"Landkreis Karlsruhe",
+			"Landkreis Tübingen",
+			"Pforzheim",
+			"Rastatt"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"goppingen": {
+		"kind": "region",
+		"borders": [
+			"Alb-Donau-Kreis",
+			"Esslingen",
+			"Heidenheim",
+			"Ostalbkreis",
+			"Rems-Murr-Kreis",
+			"Reutlingen"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"esslingen": {
+		"kind": "region",
+		"borders": [
+			"Böblingen",
+			"Göppingen",
+			"Rems-Murr-Kreis",
+			"Reutlingen",
+			"Stuttgart"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"heidenheim": {
+		"kind": "region",
+		"borders": [
+			"Alb-Donau-Kreis",
+			"Göppingen",
+			"Ostalbkreis"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"landkreis-tubingen": {
+		"kind": "region",
+		"borders": [
+			"Böblingen",
+			"Calw",
+			"Freudenstadt",
+			"Reutlingen",
+			"Zollernalbkreis"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"freudenstadt": {
+		"kind": "region",
+		"borders": [
+			"Calw",
+			"Landkreis Tübingen",
+			"Ortenaukreis",
+			"Rastatt",
+			"Rottweil",
+			"Zollernalbkreis"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"ortenaukreis": {
+		"kind": "region",
+		"borders": [
+			"Emmendingen",
+			"Freudenstadt",
+			"Rastatt",
+			"Rottweil",
+			"Schwarzwald-Baar-Kreis"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"reutlingen": {
+		"kind": "region",
+		"borders": [
+			"Alb-Donau-Kreis",
+			"Biberach",
+			"Böblingen",
+			"Esslingen",
+			"Göppingen",
+			"Landkreis Tübingen",
+			"Sigmaringen",
+			"Zollernalbkreis"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"alb-donau-kreis": {
+		"kind": "region",
+		"borders": [
+			"Biberach",
+			"Göppingen",
+			"Heidenheim",
+			"Reutlingen",
+			"Ulm"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"ulm": {
+		"kind": "region",
+		"borders": [
+			"Alb-Donau-Kreis"
+		],
+		"coastal": false,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"From an old word for a damp place or a turning of the river.",
+				"Its Minster has the tallest church steeple in the world at 161.5 m, with 768 steps.",
+				"Einstein was born here, and a tailor tried to fly from the city wall over the Danube in 1811 and fell in."
+			],
+			"it": [
+				"Da un’antica parola per luogo umido o per un’ansa del fiume.",
+				"Il suo duomo ha il campanile più alto del mondo: 161,5 m, con 768 gradini.",
+				"Einstein nacque qui, e nel 1811 un sarto tentò di volare dalle mura della città sopra il Danubio e ci finì dentro."
+			]
+		}
+	},
+	"zollernalbkreis": {
+		"kind": "region",
+		"borders": [
+			"Freudenstadt",
+			"Landkreis Tübingen",
+			"Reutlingen",
+			"Rottweil",
+			"Sigmaringen",
+			"Tuttlingen"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"rottweil": {
+		"kind": "region",
+		"borders": [
+			"Freudenstadt",
+			"Ortenaukreis",
+			"Schwarzwald-Baar-Kreis",
+			"Tuttlingen",
+			"Zollernalbkreis"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"emmendingen": {
+		"kind": "region",
+		"borders": [
+			"Breisgau-Hochschwarzwald",
+			"Freiburg im Breisgau",
+			"Ortenaukreis",
+			"Schwarzwald-Baar-Kreis"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"biberach": {
+		"kind": "region",
+		"borders": [
+			"Alb-Donau-Kreis",
+			"Ravensburg",
+			"Reutlingen",
+			"Sigmaringen"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"sigmaringen": {
+		"kind": "region",
+		"borders": [
+			"Biberach",
+			"Bodenseekreis",
+			"Konstanz",
+			"Ravensburg",
+			"Reutlingen",
+			"Tuttlingen",
+			"Zollernalbkreis"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"tuttlingen": {
+		"kind": "region",
+		"borders": [
+			"Konstanz",
+			"Rottweil",
+			"Schwarzwald-Baar-Kreis",
+			"Sigmaringen",
+			"Zollernalbkreis"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"freiburg-im-breisgau": {
+		"kind": "region",
+		"borders": [
+			"Breisgau-Hochschwarzwald",
+			"Emmendingen"
+		],
+		"coastal": false,
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"\"Free town\" — founded in 1120 with a free market charter; Breisgau distinguishes it from other Freiburgs.",
+				"It is the sunniest city in Germany and a pioneer of solar power, with a whole district built to produce more energy than it uses.",
+				"Its Bächle, small water channels, run along the streets; local lore says stepping in one means you will marry a Freiburger."
+			],
+			"it": [
+				"\"Città libera\": fondata nel 1120 con un privilegio di libero mercato; \"in Brisgovia\" la distingue dalle altre Friburgo.",
+				"È la città più soleggiata della Germania e una pioniera dell’energia solare, con un intero quartiere costruito per produrre più energia di quanta ne consumi.",
+				"Lungo le sue strade corrono i Bächle, piccoli canali d’acqua; secondo la tradizione locale, chi ci mette un piede dentro sposerà un friburghese."
+			]
+		}
+	},
+	"schwarzwald-baar-kreis": {
+		"kind": "region",
+		"borders": [
+			"Breisgau-Hochschwarzwald",
+			"Emmendingen",
+			"Konstanz",
+			"Ortenaukreis",
+			"Rottweil",
+			"Tuttlingen",
+			"Waldshut"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"breisgau-hochschwarzwald": {
+		"kind": "region",
+		"borders": [
+			"Emmendingen",
+			"Freiburg im Breisgau",
+			"Lörrach",
+			"Schwarzwald-Baar-Kreis",
+			"Waldshut"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"ravensburg": {
+		"kind": "region",
+		"borders": [
+			"Biberach",
+			"Bodenseekreis",
+			"Sigmaringen"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"konstanz": {
+		"kind": "region",
+		"borders": [
+			"Bodenseekreis",
+			"Schwarzwald-Baar-Kreis",
+			"Sigmaringen",
+			"Tuttlingen"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"bodenseekreis": {
+		"kind": "region",
+		"borders": [
+			"Konstanz",
+			"Ravensburg",
+			"Sigmaringen"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"lorrach": {
+		"kind": "region",
+		"borders": [
+			"Breisgau-Hochschwarzwald",
+			"Waldshut"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"waldshut": {
+		"kind": "region",
+		"borders": [
+			"Breisgau-Hochschwarzwald",
+			"Lörrach",
+			"Schwarzwald-Baar-Kreis"
+		],
+		"coastal": false,
+		"position": "south-west"
+	}
+}

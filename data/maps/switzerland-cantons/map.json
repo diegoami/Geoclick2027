@@ -1,0 +1,913 @@
+{
+	"id": "switzerland-cantons",
+	"name": "Switzerland — Cantons",
+	"country": "Switzerland",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "schaffhausen",
+			"name": "Schaffhausen",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.62145,
+				47.72055
+			],
+			"bbox": [
+				8.391,
+				47.6399,
+				8.8519,
+				47.8012
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						8.4372,
+						47.7041
+					],
+					[
+						8.606,
+						47.7537
+					],
+					[
+						8.7658,
+						47.6975
+					]
+				],
+				"aspect": 2.42
+			}
+		},
+		{
+			"id": "basel-stadt",
+			"name": "Basel-Stadt",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.5839,
+				47.564949999999996
+			],
+			"bbox": [
+				7.5209,
+				47.5349,
+				7.6469,
+				47.595
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						7.5549,
+						47.5582
+					],
+					[
+						7.5985,
+						47.5543
+					],
+					[
+						7.6344,
+						47.5722
+					]
+				],
+				"aspect": 1.25
+			}
+		},
+		{
+			"id": "thurgau",
+			"name": "Thurgau",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.1708,
+				47.52945
+			],
+			"bbox": [
+				8.7885,
+				47.38,
+				9.5531,
+				47.6789
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						8.8585,
+						47.5646
+					],
+					[
+						9.134,
+						47.5778
+					],
+					[
+						9.4071,
+						47.5547
+					]
+				],
+				"aspect": 2.05
+			}
+		},
+		{
+			"id": "basel-landschaft",
+			"name": "Basel-Landschaft",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.6459,
+				47.463499999999996
+			],
+			"bbox": [
+				7.3369,
+				47.3636,
+				7.9549,
+				47.5634
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						7.4635,
+						47.4515
+					],
+					[
+						7.6824,
+						47.5066
+					],
+					[
+						7.8955,
+						47.4371
+					]
+				],
+				"aspect": 2.38
+			}
+		},
+		{
+			"id": "zurich",
+			"name": "Zürich",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.66085,
+				47.43085
+			],
+			"bbox": [
+				8.3526,
+				47.1654,
+				8.9691,
+				47.6963
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						8.4495,
+						47.4069
+					],
+					[
+						8.6521,
+						47.4516
+					],
+					[
+						8.8546,
+						47.4136
+					]
+				],
+				"aspect": 0.69
+			}
+		},
+		{
+			"id": "aargau",
+			"name": "Aargau",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.0742,
+				47.37905
+			],
+			"bbox": [
+				7.7273,
+				47.1423,
+				8.4211,
+				47.6158
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						8.0232,
+						47.43
+					],
+					[
+						8.1926,
+						47.4579
+					],
+					[
+						8.362,
+						47.3757
+					]
+				],
+				"aspect": 0.68
+			}
+		},
+		{
+			"id": "appenzell-ausserrhoden",
+			"name": "Appenzell Ausserrhoden",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.39725,
+				47.3607
+			],
+			"bbox": [
+				9.1861,
+				47.2531,
+				9.6084,
+				47.4683
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						9.2347,
+						47.3158
+					],
+					[
+						9.3643,
+						47.4084
+					],
+					[
+						9.5524,
+						47.4308
+					]
+				],
+				"aspect": 3.97
+			}
+		},
+		{
+			"id": "jura",
+			"name": "Jura",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.1985,
+				47.3307
+			],
+			"bbox": [
+				6.8381,
+				47.1651,
+				7.5589,
+				47.4963
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "appenzell-innerrhoden",
+			"name": "Appenzell Innerrhoden",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.3955,
+				47.32055
+			],
+			"bbox": [
+				9.3028,
+				47.2531,
+				9.4882,
+				47.388
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						9.3265,
+						47.3109
+					],
+					[
+						9.3902,
+						47.3191
+					],
+					[
+						9.4539,
+						47.32
+					]
+				],
+				"aspect": 0.76
+			}
+		},
+		{
+			"id": "solothurn",
+			"name": "Solothurn",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.68895,
+				47.2958
+			],
+			"bbox": [
+				7.3488,
+				47.1243,
+				8.0291,
+				47.4673
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						7.5883,
+						47.345
+					],
+					[
+						7.8481,
+						47.2907
+					],
+					[
+						7.9728,
+						47.3938
+					]
+				],
+				"aspect": 2.72
+			}
+		},
+		{
+			"id": "st-gallen",
+			"name": "St. Gallen",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.21285,
+				47.205349999999996
+			],
+			"bbox": [
+				8.7754,
+				46.8938,
+				9.6503,
+				47.5169
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						9.0135,
+						47.3093
+					],
+					[
+						9.2412,
+						47.1163
+					],
+					[
+						9.4689,
+						47.0716
+					]
+				],
+				"aspect": 0.89
+			}
+		},
+		{
+			"id": "zug",
+			"name": "Zug",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.544550000000001,
+				47.16645
+			],
+			"bbox": [
+				8.4056,
+				47.0874,
+				8.6835,
+				47.2455
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						8.4244,
+						47.1813
+					],
+					[
+						8.5316,
+						47.1432
+					],
+					[
+						8.6388,
+						47.1489
+					]
+				],
+				"aspect": 1.28
+			}
+		},
+		{
+			"id": "schwyz",
+			"name": "Schwyz",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.686399999999999,
+				47.056349999999995
+			],
+			"bbox": [
+				8.3877,
+				46.8921,
+				8.9851,
+				47.2206
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						8.5021,
+						47.0491
+					],
+					[
+						8.7138,
+						47.0244
+					],
+					[
+						8.9256,
+						47.1111
+					]
+				],
+				"aspect": 1.66
+			}
+		},
+		{
+			"id": "luzern",
+			"name": "Luzern",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.168700000000001,
+				47.0235
+			],
+			"bbox": [
+				7.8393,
+				46.7789,
+				8.4981,
+				47.2681
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						7.9215,
+						47.0492
+					],
+					[
+						8.1374,
+						47.0611
+					],
+					[
+						8.3533,
+						47.1209
+					]
+				],
+				"aspect": 1.09
+			}
+		},
+		{
+			"id": "neuchatel",
+			"name": "Neuchâtel",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.762549999999999,
+				47.0067
+			],
+			"bbox": [
+				6.4426,
+				46.8453,
+				7.0825,
+				47.1681
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						6.4923,
+						46.9001
+					],
+					[
+						6.7531,
+						46.9875
+					],
+					[
+						7.0137,
+						47.0751
+					]
+				],
+				"aspect": 4.03
+			}
+		},
+		{
+			"id": "glarus",
+			"name": "Glarus",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.0563,
+				46.992149999999995
+			],
+			"bbox": [
+				8.8717,
+				46.8154,
+				9.2409,
+				47.1689
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						8.962,
+						46.9812
+					],
+					[
+						9.0678,
+						47.0343
+					],
+					[
+						9.1737,
+						47.0181
+					]
+				],
+				"aspect": 0.52
+			}
+		},
+		{
+			"id": "nidwalden",
+			"name": "Nidwalden",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.394400000000001,
+				46.8865
+			],
+			"bbox": [
+				8.2271,
+				46.7751,
+				8.5617,
+				46.9979
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						8.3307,
+						46.918
+					],
+					[
+						8.4308,
+						46.9149
+					],
+					[
+						8.5309,
+						46.9693
+					]
+				],
+				"aspect": 1.06
+			}
+		},
+		{
+			"id": "obwalden",
+			"name": "Obwalden",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.25815,
+				46.865300000000005
+			],
+			"bbox": [
+				8.0437,
+				46.759,
+				8.4726,
+				46.9716
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						8.0862,
+						46.8391
+					],
+					[
+						8.1967,
+						46.8781
+					],
+					[
+						8.3072,
+						46.8633
+					]
+				],
+				"aspect": 0.74
+			}
+		},
+		{
+			"id": "bern",
+			"name": "Bern",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.648,
+				46.824799999999996
+			],
+			"bbox": [
+				6.8498,
+				46.3314,
+				8.4462,
+				47.3182
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						7.1553,
+						47.079
+					],
+					[
+						7.7222,
+						46.6785
+					],
+					[
+						8.2891,
+						46.6499
+					]
+				],
+				"aspect": 2.14
+			}
+		},
+		{
+			"id": "uri",
+			"name": "Uri",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.672450000000001,
+				46.75995
+			],
+			"bbox": [
+				8.4076,
+				46.5318,
+				8.9373,
+				46.9881
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						8.5025,
+						46.5959
+					],
+					[
+						8.5657,
+						46.7754
+					],
+					[
+						8.7432,
+						46.9071
+					]
+				],
+				"aspect": 1.79
+			}
+		},
+		{
+			"id": "fribourg",
+			"name": "Fribourg",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.07435,
+				46.72435
+			],
+			"bbox": [
+				6.766,
+				46.4445,
+				7.3827,
+				47.0042
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						6.9825,
+						46.5418
+					],
+					[
+						7.1721,
+						46.6923
+					],
+					[
+						7.1908,
+						46.8785
+					]
+				],
+				"aspect": 1.38
+			}
+		},
+		{
+			"id": "graubunden",
+			"name": "Graubünden",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.56005,
+				46.618449999999996
+			],
+			"bbox": [
+				8.6535,
+				46.173,
+				10.4666,
+				47.0639
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						8.9565,
+						46.6314
+					],
+					[
+						9.6448,
+						46.6208
+					],
+					[
+						10.3044,
+						46.7589
+					]
+				],
+				"aspect": 2.2
+			}
+		},
+		{
+			"id": "vaud",
+			"name": "Vaud",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.65925,
+				46.5898
+			],
+			"bbox": [
+				6.0642,
+				46.1899,
+				7.2543,
+				46.9897
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "valais",
+			"name": "Valais",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.61365,
+				46.268100000000004
+			],
+			"bbox": [
+				6.7504,
+				45.8805,
+				8.4769,
+				46.6557
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						6.9728,
+						46.1076
+					],
+					[
+						7.6532,
+						46.0583
+					],
+					[
+						8.1298,
+						46.3916
+					]
+				],
+				"aspect": 2.09
+			}
+		},
+		{
+			"id": "geneve",
+			"name": "Genève",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.11985,
+				46.2361
+			],
+			"bbox": [
+				5.9585,
+				46.1404,
+				6.2812,
+				46.3318
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						6.003,
+						46.1721
+					],
+					[
+						6.1401,
+						46.2005
+					],
+					[
+						6.212,
+						46.2858
+					]
+				],
+				"aspect": 1.77
+			}
+		},
+		{
+			"id": "ticino",
+			"name": "Ticino",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.77485,
+				46.22565
+			],
+			"bbox": [
+				8.3859,
+				45.8207,
+				9.1638,
+				46.6306
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						8.6693,
+						46.5339
+					],
+					[
+						8.8028,
+						46.2923
+					],
+					[
+						8.9372,
+						46.0499
+					]
+				],
+				"aspect": 1.33
+			}
+		}
+	],
+	"tourOrder": [
+		"schaffhausen",
+		"basel-stadt",
+		"thurgau",
+		"basel-landschaft",
+		"zurich",
+		"aargau",
+		"appenzell-ausserrhoden",
+		"jura",
+		"appenzell-innerrhoden",
+		"solothurn",
+		"st-gallen",
+		"zug",
+		"schwyz",
+		"luzern",
+		"neuchatel",
+		"glarus",
+		"nidwalden",
+		"obwalden",
+		"bern",
+		"uri",
+		"fribourg",
+		"graubunden",
+		"vaud",
+		"valais",
+		"geneve",
+		"ticino"
+	]
+}

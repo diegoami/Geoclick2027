@@ -13,7 +13,7 @@
 	import { t, tPlural } from '$lib/i18n.svelte';
 	import LanguageSwitcher from '$lib/LanguageSwitcher.svelte';
 	import KnownProgress from '$lib/KnownProgress.svelte';
-	import { mapDisplayName, mapGroups } from '$lib/mapCatalog';
+	import { mapDisplayName, mapGroups, mapTypeLabel } from '$lib/mapCatalog';
 	import { favouriteMaps, recentMaps } from '$lib/mapPrefs.svelte';
 	import FavouriteStar from '$lib/FavouriteStar.svelte';
 	import { RELEASES_URL, isNativeShell } from '$lib/platform';
@@ -52,7 +52,7 @@
 		filterGroups(
 			mapGroups.map((group) => ({
 				...group,
-				maps: group.maps.map((map) => ({ ...map, label: t(map.labelKey) }))
+				maps: group.maps.map((map) => ({ ...map, label: mapTypeLabel(map) }))
 			})),
 			query
 		)

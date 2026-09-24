@@ -1,0 +1,491 @@
+{
+	"schaffhausen": {
+		"kind": "region",
+		"type": "Canton",
+		"borders": [
+			"Thurgau",
+			"Zürich"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Schaffhausen",
+			"nameDe": "Schaffhausen",
+			"nameIt": "Sciaffusa",
+			"population": 33863
+		},
+		"position": "north"
+	},
+	"basel-stadt": {
+		"kind": "region",
+		"type": "Canton",
+		"borders": [
+			"Basel-Landschaft"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Basel",
+			"nameDe": "Basel",
+			"nameIt": "Basilea",
+			"population": 830000
+		},
+		"position": "north"
+	},
+	"thurgau": {
+		"kind": "region",
+		"type": "Canton",
+		"borders": [
+			"Schaffhausen",
+			"St. Gallen",
+			"Zürich"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Frauenfeld",
+			"nameDe": "Frauenfeld",
+			"nameIt": "Frauenfeld",
+			"population": 21979
+		},
+		"position": "north-east"
+	},
+	"basel-landschaft": {
+		"kind": "region",
+		"type": "Canton",
+		"borders": [
+			"Aargau",
+			"Basel-Stadt",
+			"Jura",
+			"Solothurn"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Liestal",
+			"nameDe": "Liestal",
+			"nameIt": "Liestal",
+			"population": 12832
+		},
+		"position": "north"
+	},
+	"zurich": {
+		"kind": "region",
+		"type": "Canton",
+		"borders": [
+			"Aargau",
+			"Schaffhausen",
+			"Schwyz",
+			"St. Gallen",
+			"Thurgau",
+			"Zug"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Zürich",
+			"nameDe": "Zürich",
+			"nameIt": "Zurigo",
+			"population": 1108000
+		},
+		"position": "north"
+	},
+	"aargau": {
+		"kind": "region",
+		"type": "Canton",
+		"borders": [
+			"Basel-Landschaft",
+			"Bern",
+			"Luzern",
+			"Solothurn",
+			"Zug",
+			"Zürich"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Aarau",
+			"nameDe": "Aarau",
+			"nameIt": "Aarau",
+			"population": 15501
+		},
+		"position": "north"
+	},
+	"appenzell-ausserrhoden": {
+		"kind": "region",
+		"type": "Canton",
+		"borders": [
+			"Appenzell Innerrhoden",
+			"St. Gallen"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Herisau",
+			"nameDe": "Herisau",
+			"nameIt": "Herisau",
+			"population": 15438
+		},
+		"position": "north-east"
+	},
+	"jura": {
+		"kind": "region",
+		"borders": [
+			"Basel-Landschaft",
+			"Bern",
+			"Neuchâtel",
+			"Solothurn"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Delémont",
+			"nameDe": "Delsberg",
+			"nameIt": "Delémont",
+			"population": 11315
+		},
+		"position": "north-west"
+	},
+	"appenzell-innerrhoden": {
+		"kind": "region",
+		"type": "Canton",
+		"borders": [
+			"Appenzell Ausserrhoden",
+			"St. Gallen"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Appenzell",
+			"nameDe": "Appenzell",
+			"nameIt": "Appenzell",
+			"population": 5649
+		},
+		"position": "north-east"
+	},
+	"solothurn": {
+		"kind": "region",
+		"type": "Canton",
+		"borders": [
+			"Aargau",
+			"Basel-Landschaft",
+			"Bern",
+			"Jura"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Solothurn",
+			"nameDe": "Solothurn",
+			"nameIt": "Soletta",
+			"population": 14853
+		},
+		"position": "north"
+	},
+	"st-gallen": {
+		"kind": "region",
+		"type": "Canton",
+		"borders": [
+			"Appenzell Ausserrhoden",
+			"Appenzell Innerrhoden",
+			"Glarus",
+			"Graubünden",
+			"Schwyz",
+			"Thurgau",
+			"Zürich"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Saint Gallen",
+			"nameDe": "St. Gallen",
+			"nameIt": "San Gallo",
+			"population": 70572
+		},
+		"position": "north-east"
+	},
+	"zug": {
+		"kind": "region",
+		"type": "Canton",
+		"borders": [
+			"Aargau",
+			"Luzern",
+			"Schwyz",
+			"Zürich"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Zug",
+			"nameDe": "Zug",
+			"nameIt": "Zugo",
+			"population": 23435
+		},
+		"position": "north"
+	},
+	"schwyz": {
+		"kind": "region",
+		"type": "Canton",
+		"borders": [
+			"Glarus",
+			"Luzern",
+			"Nidwalden",
+			"St. Gallen",
+			"Uri",
+			"Zug",
+			"Zürich"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Schwyz",
+			"nameDe": "Schwyz",
+			"nameIt": "Svitto",
+			"population": 14177
+		},
+		"position": "centre"
+	},
+	"luzern": {
+		"kind": "region",
+		"type": "Canton",
+		"borders": [
+			"Aargau",
+			"Bern",
+			"Nidwalden",
+			"Obwalden",
+			"Schwyz",
+			"Zug"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Luzern",
+			"nameDe": "Luzern",
+			"nameIt": "Lucerna",
+			"population": 250000
+		},
+		"position": "centre"
+	},
+	"neuchatel": {
+		"kind": "region",
+		"type": "Canton",
+		"borders": [
+			"Bern",
+			"Fribourg",
+			"Jura",
+			"Vaud"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Neuchâtel",
+			"nameDe": "Neuenburg",
+			"nameIt": "Neuchâtel",
+			"population": 31270
+		},
+		"position": "west"
+	},
+	"glarus": {
+		"kind": "region",
+		"type": "Canton",
+		"borders": [
+			"Graubünden",
+			"Schwyz",
+			"St. Gallen",
+			"Uri"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Glarus",
+			"nameDe": "Glarus",
+			"nameIt": "Glarona",
+			"population": 5681
+		},
+		"position": "east"
+	},
+	"nidwalden": {
+		"kind": "region",
+		"type": "Canton",
+		"borders": [
+			"Bern",
+			"Luzern",
+			"Obwalden",
+			"Schwyz",
+			"Uri"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Stans",
+			"nameDe": "Stans",
+			"nameIt": "Stans",
+			"population": 7475
+		},
+		"position": "centre"
+	},
+	"obwalden": {
+		"kind": "region",
+		"type": "Canton",
+		"borders": [
+			"Bern",
+			"Luzern",
+			"Nidwalden",
+			"Uri"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Sarnen",
+			"nameDe": "Sarnen",
+			"nameIt": "Sarnen",
+			"population": 9410
+		},
+		"position": "centre"
+	},
+	"bern": {
+		"kind": "region",
+		"type": "Canton",
+		"borders": [
+			"Aargau",
+			"Fribourg",
+			"Jura",
+			"Luzern",
+			"Neuchâtel",
+			"Nidwalden",
+			"Obwalden",
+			"Solothurn",
+			"Uri",
+			"Valais",
+			"Vaud"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bern",
+			"nameDe": "Bern",
+			"nameIt": "Berna",
+			"population": 275329
+		},
+		"peak": {
+			"name": "Finsteraarhorn",
+			"elevation": 4274
+		},
+		"position": "centre"
+	},
+	"uri": {
+		"kind": "region",
+		"type": "Canton",
+		"borders": [
+			"Bern",
+			"Glarus",
+			"Graubünden",
+			"Nidwalden",
+			"Obwalden",
+			"Schwyz",
+			"Ticino",
+			"Valais"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Altdorf",
+			"nameDe": "Altdorf",
+			"nameIt": "Altdorf",
+			"population": 8678
+		},
+		"position": "centre"
+	},
+	"fribourg": {
+		"kind": "region",
+		"type": "Canton",
+		"borders": [
+			"Bern",
+			"Neuchâtel",
+			"Vaud"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Fribourg",
+			"nameDe": "Freiburg im Üechtland",
+			"nameIt": "Friburgo",
+			"population": 32827
+		},
+		"position": "west"
+	},
+	"graubunden": {
+		"kind": "region",
+		"type": "Canton",
+		"borders": [
+			"Glarus",
+			"St. Gallen",
+			"Ticino",
+			"Uri"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Chur",
+			"nameDe": "Chur",
+			"nameIt": "Coira",
+			"population": 38293
+		},
+		"peak": {
+			"name": "Grauspitze",
+			"elevation": 2599
+		},
+		"position": "east"
+	},
+	"vaud": {
+		"kind": "region",
+		"type": "Canton",
+		"borders": [
+			"Bern",
+			"Fribourg",
+			"Genève",
+			"Neuchâtel",
+			"Valais"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Lausanne",
+			"nameDe": "Lausanne",
+			"nameIt": "Losanna",
+			"population": 265702
+		},
+		"position": "west"
+	},
+	"valais": {
+		"kind": "region",
+		"type": "Canton",
+		"borders": [
+			"Bern",
+			"Ticino",
+			"Uri",
+			"Vaud"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Sion",
+			"nameDe": "Sitten",
+			"nameIt": "Sion",
+			"population": 28045
+		},
+		"peak": {
+			"name": "Matterhorn",
+			"elevation": 4478
+		},
+		"position": "south"
+	},
+	"geneve": {
+		"kind": "region",
+		"type": "Canton",
+		"borders": [
+			"Vaud"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Geneva",
+			"nameDe": "Genf",
+			"nameIt": "Ginevra",
+			"population": 1240000
+		},
+		"position": "south-west"
+	},
+	"ticino": {
+		"kind": "region",
+		"type": "Canton",
+		"borders": [
+			"Graubünden",
+			"Uri",
+			"Valais"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Lugano",
+			"nameDe": "Lugano",
+			"nameIt": "Lugano",
+			"population": 105388
+		},
+		"position": "south"
+	}
+}

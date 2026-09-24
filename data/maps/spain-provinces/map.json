@@ -1,0 +1,1739 @@
+{
+	"id": "spain-provinces",
+	"name": "Spain — Provinces",
+	"country": "Spain",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "asturias",
+			"name": "Asturias",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-5.84035,
+				43.28885
+			],
+			"bbox": [
+				-7.1669,
+				42.9148,
+				-4.5138,
+				43.6629
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						-6.9063,
+						43.2941
+					],
+					[
+						-5.9986,
+						43.2732
+					],
+					[
+						-5.0943,
+						43.3256
+					]
+				],
+				"aspect": 2.43
+			}
+		},
+		{
+			"id": "bizkaia",
+			"name": "Bizkaia",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-2.91885,
+				43.23545
+			],
+			"bbox": [
+				-3.4309,
+				43.0206,
+				-2.4068,
+				43.4503
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						-3.3572,
+						43.2374
+					],
+					[
+						-2.9503,
+						43.2604
+					],
+					[
+						-2.5423,
+						43.2474
+					]
+				],
+				"aspect": 2.55
+			}
+		},
+		{
+			"id": "gipuzkoa",
+			"name": "Gipuzkoa",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-2.15435,
+				43.1476
+			],
+			"bbox": [
+				-2.559,
+				42.9001,
+				-1.7497,
+				43.3951
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						-2.4698,
+						43.0329
+					],
+					[
+						-2.149,
+						43.1582
+					],
+					[
+						-1.8487,
+						43.3075
+					]
+				],
+				"aspect": 2.11
+			}
+		},
+		{
+			"id": "a-coruna",
+			"name": "A Coruña",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-8.4736,
+				43.14135
+			],
+			"bbox": [
+				-9.251,
+				42.5512,
+				-7.6962,
+				43.7315
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						-8.945,
+						42.9208
+					],
+					[
+						-8.2094,
+						43.0513
+					],
+					[
+						-7.8941,
+						43.5409
+					]
+				],
+				"aspect": 1.73
+			}
+		},
+		{
+			"id": "cantabria",
+			"name": "Cantabria",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-3.99125,
+				43.139700000000005
+			],
+			"bbox": [
+				-4.8319,
+				42.7625,
+				-3.1506,
+				43.5169
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						-4.6694,
+						43.1402
+					],
+					[
+						-4.0155,
+						43.0841
+					],
+					[
+						-3.499,
+						43.3821
+					]
+				],
+				"aspect": 2.32
+			}
+		},
+		{
+			"id": "lugo",
+			"name": "Lugo",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-7.41405,
+				43.06685
+			],
+			"bbox": [
+				-7.9998,
+				42.4021,
+				-6.8283,
+				43.7316
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						-7.4808,
+						43.5605
+					],
+					[
+						-7.3938,
+						43.0546
+					],
+					[
+						-7.4522,
+						42.5414
+					]
+				],
+				"aspect": 1.57
+			}
+		},
+		{
+			"id": "alava",
+			"name": "Álava",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-2.7607,
+				42.831100000000006
+			],
+			"bbox": [
+				-3.2791,
+				42.4971,
+				-2.2423,
+				43.1651
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						-2.9891,
+						42.9221
+					],
+					[
+						-2.6001,
+						42.9092
+					],
+					[
+						-2.3867,
+						42.698
+					]
+				],
+				"aspect": 1.57
+			}
+		},
+		{
+			"id": "leon",
+			"name": "León",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-5.898949999999999,
+				42.63405
+			],
+			"bbox": [
+				-7.071,
+				42.0308,
+				-4.7269,
+				43.2373
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						-6.6914,
+						42.5811
+					],
+					[
+						-5.7858,
+						42.4494
+					],
+					[
+						-4.9905,
+						42.7883
+					]
+				],
+				"aspect": 1.53
+			}
+		},
+		{
+			"id": "navarra",
+			"name": "Navarra",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.57685,
+				42.60185
+			],
+			"bbox": [
+				-2.4087,
+				41.9089,
+				-0.745,
+				43.2948
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						-2.1968,
+						42.7521
+					],
+					[
+						-1.6301,
+						42.5656
+					],
+					[
+						-1.0633,
+						42.7792
+					]
+				],
+				"aspect": 1.2
+			}
+		},
+		{
+			"id": "palencia",
+			"name": "Palencia",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-4.47075,
+				42.409549999999996
+			],
+			"bbox": [
+				-5.027,
+				41.7682,
+				-3.9145,
+				43.0509
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						-4.5134,
+						42.9515
+					],
+					[
+						-4.778,
+						42.3915
+					],
+					[
+						-4.3722,
+						41.881
+					]
+				],
+				"aspect": 2.15
+			}
+		},
+		{
+			"id": "pontevedra",
+			"name": "Pontevedra",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-8.3895,
+				42.38005
+			],
+			"bbox": [
+				-8.8986,
+				41.9071,
+				-7.8804,
+				42.853
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						-8.6846,
+						42.074
+					],
+					[
+						-8.6198,
+						42.5255
+					],
+					[
+						-8.1098,
+						42.766
+					]
+				],
+				"aspect": 2.14
+			}
+		},
+		{
+			"id": "burgos",
+			"name": "Burgos",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-3.4617000000000004,
+				42.3287
+			],
+			"bbox": [
+				-4.2971,
+				41.4601,
+				-2.6263,
+				43.1973
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						-3.6146,
+						41.6873
+					],
+					[
+						-3.6903,
+						42.3722
+					],
+					[
+						-3.487,
+						43.0329
+					]
+				],
+				"aspect": 1.85
+			}
+		},
+		{
+			"id": "la-rioja",
+			"name": "La Rioja",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-2.4031000000000002,
+				42.2849
+			],
+			"bbox": [
+				-3.1204,
+				41.9257,
+				-1.6858,
+				42.6441
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						-2.9786,
+						42.3656
+					],
+					[
+						-2.4552,
+						42.2676
+					],
+					[
+						-1.9285,
+						42.1782
+					]
+				],
+				"aspect": 1.9
+			}
+		},
+		{
+			"id": "ourense",
+			"name": "Ourense",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-7.54885,
+				42.194599999999994
+			],
+			"bbox": [
+				-8.3423,
+				41.8107,
+				-6.7554,
+				42.5785
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						-8.1197,
+						42.2197
+					],
+					[
+						-7.5041,
+						42.025
+					],
+					[
+						-6.912,
+						42.2603
+					]
+				],
+				"aspect": 1.56
+			}
+		},
+		{
+			"id": "huesca",
+			"name": "Huesca",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.08050000000000002,
+				42.1348
+			],
+			"bbox": [
+				-0.9225,
+				41.3509,
+				0.7615,
+				42.9187
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						-0.7476,
+						42.3232
+					],
+					[
+						-0.0835,
+						41.9728
+					],
+					[
+						0.5806,
+						42.0952
+					]
+				],
+				"aspect": 0.9
+			}
+		},
+		{
+			"id": "girona",
+			"name": "Girona",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				2.51495,
+				42.069649999999996
+			],
+			"bbox": [
+				1.7122,
+				41.6456,
+				3.3177,
+				42.4937
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						2.1635,
+						42.2665
+					],
+					[
+						2.6435,
+						42.003
+					],
+					[
+						3.1234,
+						42.0812
+					]
+				],
+				"aspect": 1.14
+			}
+		},
+		{
+			"id": "lleida",
+			"name": "Lleida",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				1.0855000000000001,
+				42.0356
+			],
+			"bbox": [
+				0.3285,
+				41.2328,
+				1.8425,
+				42.8384
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						0.7316,
+						41.442
+					],
+					[
+						1.3286,
+						41.9231
+					],
+					[
+						1.1972,
+						42.5787
+					]
+				],
+				"aspect": 1.77
+			}
+		},
+		{
+			"id": "zaragoza",
+			"name": "Zaragoza",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.89445,
+				41.8447
+			],
+			"bbox": [
+				-2.1662,
+				40.9468,
+				0.3773,
+				42.7426
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						-1.9269,
+						41.3297
+					],
+					[
+						-1.0928,
+						42.147
+					],
+					[
+						-0.2588,
+						41.4714
+					]
+				],
+				"aspect": 1.42
+			}
+		},
+		{
+			"id": "barcelona",
+			"name": "Barcelona",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				2.0856000000000003,
+				41.74925
+			],
+			"bbox": [
+				1.3927,
+				41.1922,
+				2.7785,
+				42.3063
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						1.5585,
+						41.603
+					],
+					[
+						1.9549,
+						41.8325
+					],
+					[
+						2.3512,
+						41.778
+					]
+				],
+				"aspect": 0.73
+			}
+		},
+		{
+			"id": "valladolid",
+			"name": "Valladolid",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-4.6859,
+				41.7077
+			],
+			"bbox": [
+				-5.3912,
+				41.106,
+				-3.9806,
+				42.3094
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						-5.2088,
+						41.698
+					],
+					[
+						-4.7081,
+						41.4508
+					],
+					[
+						-4.2073,
+						41.5635
+					]
+				],
+				"aspect": 1.07
+			}
+		},
+		{
+			"id": "zamora",
+			"name": "Zamora",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-6.152150000000001,
+				41.6864
+			],
+			"bbox": [
+				-7.0247,
+				41.1199,
+				-5.2796,
+				42.2529
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						-6.7415,
+						42.0981
+					],
+					[
+						-5.9214,
+						41.907
+					],
+					[
+						-5.506,
+						41.3474
+					]
+				],
+				"aspect": 2.01
+			}
+		},
+		{
+			"id": "soria",
+			"name": "Soria",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-2.6745,
+				41.60265
+			],
+			"bbox": [
+				-3.5417,
+				41.0675,
+				-1.8073,
+				42.1378
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						-3.2088,
+						41.5884
+					],
+					[
+						-2.5931,
+						41.5876
+					],
+					[
+						-1.9774,
+						41.698
+					]
+				],
+				"aspect": 1.22
+			}
+		},
+		{
+			"id": "segovia",
+			"name": "Segovia",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-3.9563499999999996,
+				41.1083
+			],
+			"bbox": [
+				-4.7139,
+				40.6334,
+				-3.1988,
+				41.5832
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						-4.4361,
+						40.9176
+					],
+					[
+						-4.0912,
+						41.3025
+					],
+					[
+						-3.481,
+						41.4041
+					]
+				],
+				"aspect": 1.57
+			}
+		},
+		{
+			"id": "tarragona",
+			"name": "Tarragona",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				0.8987,
+				41.0506
+			],
+			"bbox": [
+				0.173,
+				40.5262,
+				1.6244,
+				41.575
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						0.3734,
+						40.748
+					],
+					[
+						0.6866,
+						41.2451
+					],
+					[
+						1.3929,
+						41.3704
+					]
+				],
+				"aspect": 2.41
+			}
+		},
+		{
+			"id": "salamanca",
+			"name": "Salamanca",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-6.01915,
+				40.774699999999996
+			],
+			"bbox": [
+				-6.9425,
+				40.2464,
+				-5.0958,
+				41.303
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						-6.7011,
+						40.7794
+					],
+					[
+						-6.0191,
+						40.785
+					],
+					[
+						-5.3372,
+						40.8664
+					]
+				],
+				"aspect": 1.23
+			}
+		},
+		{
+			"id": "guadalajara",
+			"name": "Guadalajara",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-2.5416,
+				40.7294
+			],
+			"bbox": [
+				-3.5458,
+				40.1576,
+				-1.5374,
+				41.3012
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						-3.2967,
+						40.8717
+					],
+					[
+						-2.5247,
+						40.7239
+					],
+					[
+						-1.7332,
+						40.822
+					]
+				],
+				"aspect": 1.92
+			}
+		},
+		{
+			"id": "avila",
+			"name": "Ávila",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-4.9445,
+				40.62505
+			],
+			"bbox": [
+				-5.7277,
+				40.0948,
+				-4.1613,
+				41.1553
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						-5.4388,
+						40.4269
+					],
+					[
+						-4.9682,
+						40.7173
+					],
+					[
+						-4.4975,
+						40.6647
+					]
+				],
+				"aspect": 0.95
+			}
+		},
+		{
+			"id": "teruel",
+			"name": "Teruel",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.7593,
+				40.615899999999996
+			],
+			"bbox": [
+				-1.8083,
+				39.8775,
+				0.2897,
+				41.3543
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						-1.4297,
+						40.5286
+					],
+					[
+						-0.857,
+						40.4717
+					],
+					[
+						-0.2843,
+						40.8321
+					]
+				],
+				"aspect": 0.81
+			}
+		},
+		{
+			"id": "madrid",
+			"name": "Madrid",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-3.82235,
+				40.576750000000004
+			],
+			"bbox": [
+				-4.5719,
+				39.9917,
+				-3.0728,
+				41.1618
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						-4.2445,
+						40.574
+					],
+					[
+						-3.7519,
+						40.6846
+					],
+					[
+						-3.2593,
+						40.4361
+					]
+				],
+				"aspect": 1.19
+			}
+		},
+		{
+			"id": "castellon",
+			"name": "Castellón",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.15764999999999996,
+				40.24765
+			],
+			"bbox": [
+				-0.8391,
+				39.7154,
+				0.5238,
+				40.7799
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						-0.5156,
+						39.8694
+					],
+					[
+						-0.0835,
+						40.1891
+					],
+					[
+						0.1787,
+						40.6012
+					]
+				],
+				"aspect": 1.86
+			}
+		},
+		{
+			"id": "cuenca",
+			"name": "Cuenca",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-2.1545,
+				39.942750000000004
+			],
+			"bbox": [
+				-3.1635,
+				39.2267,
+				-1.1455,
+				40.6588
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						-2.8481,
+						39.8368
+					],
+					[
+						-2.186,
+						40.0306
+					],
+					[
+						-1.524,
+						39.824
+					]
+				],
+				"aspect": 0.92
+			}
+		},
+		{
+			"id": "toledo",
+			"name": "Toledo",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-4.1495999999999995,
+				39.78385
+			],
+			"bbox": [
+				-5.391,
+				39.2597,
+				-2.9082,
+				40.308
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						-4.9947,
+						39.8701
+					],
+					[
+						-4.0888,
+						39.8525
+					],
+					[
+						-3.2162,
+						39.6712
+					]
+				],
+				"aspect": 1.84
+			}
+		},
+		{
+			"id": "caceres",
+			"name": "Cáceres",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-6.25085,
+				39.75455
+			],
+			"bbox": [
+				-7.5573,
+				39.0315,
+				-4.9444,
+				40.4776
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						-6.7706,
+						39.7925
+					],
+					[
+						-6.1282,
+						39.7411
+					],
+					[
+						-5.4857,
+						39.6962
+					]
+				],
+				"aspect": 0.84
+			}
+		},
+		{
+			"id": "illes-balears",
+			"name": "Illes Balears",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				2.75755,
+				39.465
+			],
+			"bbox": [
+				1.2122,
+				38.8624,
+				4.3029,
+				40.0676
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						2.5052,
+						39.6262
+					],
+					[
+						2.9294,
+						39.6196
+					],
+					[
+						3.3536,
+						39.604
+					]
+				],
+				"aspect": 1.99
+			}
+		},
+		{
+			"id": "valencia",
+			"name": "Valencia",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.7659999999999999,
+				39.421800000000005
+			],
+			"bbox": [
+				-1.501,
+				38.6938,
+				-0.031,
+				40.1498
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						-1.1853,
+						39.5267
+					],
+					[
+						-0.7636,
+						39.2468
+					],
+					[
+						-0.342,
+						39.2696
+					]
+				],
+				"aspect": 0.63
+			}
+		},
+		{
+			"id": "ciudad-real",
+			"name": "Ciudad Real",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-3.8409500000000003,
+				38.96385
+			],
+			"bbox": [
+				-5.0366,
+				38.3509,
+				-2.6453,
+				39.5768
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						-4.7084,
+						38.9809
+					],
+					[
+						-3.8679,
+						38.8188
+					],
+					[
+						-3.0194,
+						38.9546
+					]
+				],
+				"aspect": 1.35
+			}
+		},
+		{
+			"id": "albacete",
+			"name": "Albacete",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.8916499999999998,
+				38.72425
+			],
+			"bbox": [
+				-2.8798,
+				38.0265,
+				-0.9035,
+				39.422
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						-2.6343,
+						38.7702
+					],
+					[
+						-2.0137,
+						38.6177
+					],
+					[
+						-1.3931,
+						38.9299
+					]
+				],
+				"aspect": 0.99
+			}
+		},
+		{
+			"id": "badajoz",
+			"name": "Badajoz",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-6.02595,
+				38.6944
+			],
+			"bbox": [
+				-7.3592,
+				37.939,
+				-4.6927,
+				39.4498
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						-7.093,
+						38.6384
+					],
+					[
+						-6.1153,
+						38.4063
+					],
+					[
+						-5.1375,
+						38.9076
+					]
+				],
+				"aspect": 1.54
+			}
+		},
+		{
+			"id": "alicante",
+			"name": "Alicante",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.42400000000000004,
+				38.36435
+			],
+			"bbox": [
+				-1.0821,
+				37.8459,
+				0.2341,
+				38.8828
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						-0.9564,
+						38.0907
+					],
+					[
+						-0.7419,
+						38.6303
+					],
+					[
+						-0.084,
+						38.8317
+					]
+				],
+				"aspect": 2.6
+			}
+		},
+		{
+			"id": "murcia",
+			"name": "Murcia",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.5219,
+				38.06755
+			],
+			"bbox": [
+				-2.3385,
+				37.381,
+				-0.7053,
+				38.7541
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						-1.9857,
+						37.9007
+					],
+					[
+						-1.4944,
+						38.0421
+					],
+					[
+						-1.0031,
+						38.0676
+					]
+				],
+				"aspect": 0.83
+			}
+		},
+		{
+			"id": "jaen",
+			"name": "Jaén",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-3.36455,
+				37.9597
+			],
+			"bbox": [
+				-4.2843,
+				37.3863,
+				-2.4448,
+				38.5331
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						-4.0922,
+						37.8178
+					],
+					[
+						-3.3722,
+						38.0518
+					],
+					[
+						-2.637,
+						38.2537
+					]
+				],
+				"aspect": 1.49
+			}
+		},
+		{
+			"id": "cordoba",
+			"name": "Córdoba",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-4.7909500000000005,
+				37.957499999999996
+			],
+			"bbox": [
+				-5.581,
+				37.1866,
+				-4.0009,
+				38.7284
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						-5.2187,
+						38.4989
+					],
+					[
+						-4.7389,
+						37.9907
+					],
+					[
+						-4.4059,
+						37.4101
+					]
+				],
+				"aspect": 1.97
+			}
+		},
+		{
+			"id": "sevilla",
+			"name": "Sevilla",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-5.5611,
+				37.5152
+			],
+			"bbox": [
+				-6.469,
+				36.8421,
+				-4.6532,
+				38.1883
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						-6.2404,
+						37.408
+					],
+					[
+						-5.645,
+						37.6409
+					],
+					[
+						-5.0497,
+						37.4205
+					]
+				],
+				"aspect": 0.98
+			}
+		},
+		{
+			"id": "huelva",
+			"name": "Huelva",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-6.8284,
+				37.503299999999996
+			],
+			"bbox": [
+				-7.5297,
+				36.8082,
+				-6.1271,
+				38.1984
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						-7.3527,
+						37.6813
+					],
+					[
+						-6.8966,
+						37.7504
+					],
+					[
+						-6.4405,
+						37.4728
+					]
+				],
+				"aspect": 0.78
+			}
+		},
+		{
+			"id": "granada",
+			"name": "Granada",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-3.2649999999999997,
+				37.38805
+			],
+			"bbox": [
+				-4.3203,
+				36.6955,
+				-2.2097,
+				38.0806
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						-3.9752,
+						37.0267
+					],
+					[
+						-2.9933,
+						37.1877
+					],
+					[
+						-2.4584,
+						37.8721
+					]
+				],
+				"aspect": 2.86
+			}
+		},
+		{
+			"id": "almeria",
+			"name": "Almería",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-2.3849,
+				37.29805
+			],
+			"bbox": [
+				-3.1282,
+				36.6804,
+				-1.6416,
+				37.9157
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						-2.7832,
+						36.8318
+					],
+					[
+						-2.144,
+						37.0785
+					],
+					[
+						-1.9839,
+						37.6325
+					]
+				],
+				"aspect": 1.68
+			}
+		},
+		{
+			"id": "malaga",
+			"name": "Málaga",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-4.60655,
+				36.78735
+			],
+			"bbox": [
+				-5.4449,
+				36.2971,
+				-3.7682,
+				37.2776
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						-5.275,
+						36.5272
+					],
+					[
+						-4.8648,
+						36.8681
+					],
+					[
+						-4.3335,
+						36.9917
+					]
+				],
+				"aspect": 1.56
+			}
+		},
+		{
+			"id": "cadiz",
+			"name": "Cádiz",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-5.7607,
+				36.5231
+			],
+			"bbox": [
+				-6.4333,
+				36.0065,
+				-5.0881,
+				37.0397
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						-6.2243,
+						36.5134
+					],
+					[
+						-5.8014,
+						36.3849
+					],
+					[
+						-5.3784,
+						36.5829
+					]
+				],
+				"aspect": 1.02
+			}
+		}
+	],
+	"tourOrder": [
+		"asturias",
+		"bizkaia",
+		"gipuzkoa",
+		"a-coruna",
+		"cantabria",
+		"lugo",
+		"alava",
+		"leon",
+		"navarra",
+		"palencia",
+		"pontevedra",
+		"burgos",
+		"la-rioja",
+		"ourense",
+		"huesca",
+		"girona",
+		"lleida",
+		"zaragoza",
+		"barcelona",
+		"valladolid",
+		"zamora",
+		"soria",
+		"segovia",
+		"tarragona",
+		"salamanca",
+		"guadalajara",
+		"avila",
+		"teruel",
+		"madrid",
+		"castellon",
+		"cuenca",
+		"toledo",
+		"caceres",
+		"illes-balears",
+		"valencia",
+		"ciudad-real",
+		"albacete",
+		"badajoz",
+		"alicante",
+		"murcia",
+		"jaen",
+		"cordoba",
+		"sevilla",
+		"huelva",
+		"granada",
+		"almeria",
+		"malaga",
+		"cadiz"
+	]
+}

@@ -36,6 +36,8 @@ import {
 import { colorizeMapDir } from './mapColors.js';
 import { spineMapDir } from './mapSpines.js';
 import { isUnbounded, parseBounds, withinBounds } from './placeSelection.js';
+import { NAME_CLEANERS } from './admin2.js';
+import { interiorPoint, pointInPolygon, type AnyGeometry } from './factGeometry.js';
 import {
 	COUNTRY_TYPES,
 	COUNTRY_NAME_FIXUPS,
@@ -116,8 +118,47 @@ const NAME_FIXUPS: Record<string, Record<string, string>> = {
 		// Valencian Community contains a same-named Valencia *province*, so
 		// dropping the qualifier would collide with a possible future
 		// finer-level map the way it wouldn't for Navarra.
-		Valenciana: 'Comunidad Valenciana'
+		Valenciana: 'Comunidad Valenciana',
+		// The provinces (#39, batch D): the source has the Castilian exonyms
+		// where each province's only official name has been its own
+		// language's since the 1980s-90s - the rule Ourense already follows
+		// on spain-towns-100k. Castellón, Alicante and Valencia are
+		// co-official in both languages and keep the Castilian.
+		Lérida: 'Lleida',
+		Gerona: 'Girona',
+		Orense: 'Ourense',
+		'La Coruña': 'A Coruña',
+		Baleares: 'Illes Balears'
 	},
+	// Two typos among the 101 departments (#39, batch D).
+	France: { 'Haute-Rhin': 'Haut-Rhin', 'Seien-et-Marne': 'Seine-et-Marne' },
+	// Romania's counties come without their diacritics, in every name field
+	// the source has; restored from each county's own official name.
+	Romania: {
+		Timis: 'Timiș',
+		Mehedinti: 'Mehedinți',
+		Calarasi: 'Călărași',
+		Constanta: 'Constanța',
+		'Caras-Severin': 'Caraș-Severin',
+		Botosani: 'Botoșani',
+		Iasi: 'Iași',
+		Galati: 'Galați',
+		Maramures: 'Maramureș',
+		'Bistrita-Nasaud': 'Bistrița-Năsăud',
+		Salaj: 'Sălaj',
+		Dâmbovita: 'Dâmbovița',
+		Arges: 'Argeș',
+		Buzau: 'Buzău',
+		Brasov: 'Brașov',
+		Mures: 'Mureș',
+		Neamt: 'Neamț',
+		Bacau: 'Bacău',
+		Braila: 'Brăila',
+		Ialomita: 'Ialomița'
+	},
+	// Two cantons in English or in full, where every other one has the name
+	// it uses itself (Genève, Graubünden, Ticino).
+	Switzerland: { Lucerne: 'Luzern', 'Sankt Gallen': 'St. Gallen' },
 	// Poland's plain `name` field is English-translated ("Silesian", "Lesser
 	// Poland" - see --name-field=name_pl below), and `name_pl` itself is the
 	// full official form ("województwo śląskie"). Trimmed to the adjective
@@ -238,6 +279,17 @@ interface AdminFeature {
 interface AdminCollection {
 	type: 'FeatureCollection';
 	features: AdminFeature[];
+}
+
+/** Every vertex of a geometry, flattened. */
+function verticesOf(geometry: Geometry): [number, number][] {
+	const out: [number, number][] = [];
+	const walk = (coords: unknown): void => {
+		if (typeof (coords as number[])[0] === 'number') out.push(coords as [number, number]);
+		else for (const c of coords as unknown[]) walk(c);
+	};
+	walk(geometry.coordinates);
+	return out;
 }
 
 function boundsOf(geometry: Geometry): {
@@ -375,6 +427,34 @@ async function main() {
 	// this project gives it to Ukraine, as ukraine-regions already does
 	// (--extra-where above) and as the UN does.
 	const assignAdmin1 = args['assign-admin1'];
+	// --rename="Fingal=Dublin,Laoighis=Laois" renames features BEFORE the
+	// dissolve, so --dissolve=name can then merge pieces into one target:
+	// Ireland's 34 councils into its 26 counties (#39, batch D).
+	// --source=<geojson> builds from boundaries outside Natural Earth (#39,
+	// batch D): geoBoundaries' copy of a national register, for the admin-2
+	// levels Natural Earth does not have. Every feature in the file is a
+	// candidate; --source-name-field names the field to read (shapeName),
+	// --clean-names picks a cleaner from admin2.ts, and --attribution is the
+	// credit the source's licence requires, shown in the app's map
+	// attribution.
+	const source = args.source;
+	const sourceNameField = args['source-name-field'] ?? 'shapeName';
+	const cleanName = args['clean-names'] ? NAME_CLEANERS[args['clean-names']] : undefined;
+	if (args['clean-names'] && !cleanName) {
+		console.error(`Unknown --clean-names "${args['clean-names']}".`);
+		process.exit(1);
+	}
+	const attribution = args.attribution
+		? `${args.attribution}; Natural Earth (public domain), https://www.naturalearthdata.com`
+		: 'Natural Earth (public domain), https://www.naturalearthdata.com';
+	// --within=Bayern,Hessen keeps the targets whose interior point lies
+	// inside those admin-1 areas of --country, from Natural Earth - a
+	// register's districts carry no state, and a slice by state is how
+	// they are split into playable maps.
+	const within = parseList(args.within);
+	const renames = new Map(
+		parseList(args.rename).map((pair) => pair.split('=').map((s) => s.trim()) as [string, string])
+	);
 	const type = args.type ?? (countryLevel ? 'country' : 'region');
 	const mapName = args.name ?? `${country} — ${type === 'state' ? 'States' : 'Regions'}`;
 	// Some countries' admin-1 features in Natural Earth are finer than the
@@ -420,7 +500,11 @@ async function main() {
 		);
 		process.exit(1);
 	}
-	const sourceShp = countryLevel ? ADMIN0_SHP : SOURCE_SHP;
+	const sourceShp = countryLevel
+		? ADMIN0_SHP
+		: source
+			? path.resolve(REPO_ROOT, source)
+			: SOURCE_SHP;
 	const missing = missingSources([sourceShp, LAKES_SHP, ...PHYSICAL_SHPS]);
 	if (missing.length > 0) {
 		console.error(
@@ -492,6 +576,19 @@ async function main() {
 		}
 		fc.features = kept;
 		writeFileSync(filteredPath, JSON.stringify(fc));
+	} else if (source) {
+		console.log(`[1/6] Reading ${source}...`);
+		const fc: AdminCollection = JSON.parse(readFileSync(sourceShp, 'utf-8'));
+		fc.features = fc.features
+			.map((feature) => {
+				const raw = String(feature.properties[sourceNameField] ?? '');
+				// Only the name travels on; the register's own ids and codes
+				// would only bloat the tiles.
+				feature.properties = { name: cleanName ? cleanName(raw) : raw };
+				return feature;
+			})
+			.filter((feature) => !exclude.includes(feature.properties.name));
+		writeFileSync(filteredPath, JSON.stringify(fc));
 	} else {
 		console.log(`[1/6] Filtering "${country}" from Natural Earth admin-1 dataset...`);
 		const whereClause =
@@ -531,10 +628,22 @@ async function main() {
 		rmSync(extraPath);
 	}
 
+	if (renames.size > 0) {
+		const fc: AdminCollection = JSON.parse(readFileSync(filteredPath, 'utf-8'));
+		for (const feature of fc.features) {
+			const renamed = renames.get(feature.properties.name);
+			if (renamed) feature.properties.name = renamed;
+		}
+		writeFileSync(filteredPath, JSON.stringify(fc));
+	}
+
 	const mapshaperArgs = [filteredPath];
 	if (dissolveField) {
 		console.log(`[2/6] Dissolving by "${dissolveField}" and simplifying geometry (mapshaper)...`);
-		mapshaperArgs.push('-dissolve', dissolveField, '-rename-fields', `name=${dissolveField}`);
+		// Dissolving on name itself (after --rename) needs no rename, and
+		// mapshaper would read a bare 'name' as its own name= option.
+		if (dissolveField === 'name') mapshaperArgs.push('-dissolve', 'fields=name');
+		else mapshaperArgs.push('-dissolve', dissolveField, '-rename-fields', `name=${dissolveField}`);
 	} else {
 		console.log('[2/6] Simplifying geometry (mapshaper)...');
 	}
@@ -567,6 +676,51 @@ async function main() {
 	// here, before the tiles are written, so the tileset, the lakes and the
 	// country context that follow all describe the slice rather than the
 	// whole country.
+	if (within.length > 0) {
+		// Every admin-1 area of the country, so each target is given exactly
+		// one: the area its interior point is in, or - for an island or a
+		// stretch of coast that Natural Earth's coarser outline leaves out
+		// (the Wadden Islands) - the area with the nearest vertex. Then only
+		// the targets given one of --within's areas are kept.
+		const areasPath = path.join(absOutDir, '.tmp-within.geojson');
+		execFileSync('ogr2ogr', [
+			'-f',
+			'GeoJSON',
+			'-where',
+			`admin=${sqlString(country)}`,
+			'-select',
+			'name',
+			areasPath,
+			SOURCE_SHP
+		]);
+		const areas: AdminCollection = JSON.parse(readFileSync(areasPath, 'utf-8'));
+		rmSync(areasPath);
+		const missing = within.filter(
+			(name) => !areas.features.some((a) => a.properties.name === name)
+		);
+		if (missing.length > 0) {
+			console.error(`--within: no admin-1 area "${missing.join('", "')}" in ${country}.`);
+			process.exit(1);
+		}
+		const areaOf = (feature: AdminFeature): string => {
+			const point = interiorPoint(feature.geometry as AnyGeometry);
+			const inside = areas.features.find((area) =>
+				pointInPolygon(point, area.geometry as AnyGeometry)
+			);
+			if (inside) return inside.properties.name;
+			let best = { name: '', distance: Infinity };
+			for (const area of areas.features) {
+				for (const [lon, lat] of verticesOf(area.geometry)) {
+					const distance = (lon - point[0]) ** 2 + (lat - point[1]) ** 2;
+					if (distance < best.distance) best = { name: area.properties.name, distance };
+				}
+			}
+			return best.name;
+		};
+		const all = geojson.features.length;
+		geojson.features = geojson.features.filter((feature) => within.includes(areaOf(feature)));
+		console.log(`      within ${within.join(', ')} keeps ${geojson.features.length} of ${all}`);
+	}
 	if (!isUnbounded(bounds)) {
 		const all = geojson.features.length;
 		geojson.features = geojson.features.filter((feature) => {
@@ -609,7 +763,11 @@ async function main() {
 		id: path.basename(outDir),
 		name: mapName,
 		country,
-		attribution: 'Natural Earth (public domain), https://www.naturalearthdata.com',
+		attribution,
+		// Boundaries from outside Natural Earth: build-facts.ts then does not
+		// match targets to Natural Earth's admin-1 rows, which would describe
+		// a district as its whole state.
+		...(source ? { boundarySource: source } : {}),
 		tiles: 'tiles.pmtiles',
 		targets,
 		tourOrder: targets.map((t) => t.id)
@@ -664,7 +822,7 @@ async function main() {
 		'--minimum-zoom=0',
 		'--maximum-zoom=8',
 		`--name=${mapName}`,
-		'--attribution=Natural Earth (public domain)',
+		`--attribution=${args.attribution ? `${args.attribution}; ` : ''}Natural Earth (public domain)`,
 		'--generate-ids',
 		'-L',
 		`targets:${simplifiedPath}`,

@@ -1,0 +1,1562 @@
+{
+	"id": "germany-districts-southwest",
+	"name": "Germany — Districts — South-West",
+	"country": "Germany",
+	"attribution": "© GeoBasis-DE / BKG 2023, dl-de/by-2-0 (via geoBoundaries); Natural Earth (public domain), https://www.naturalearthdata.com",
+	"boundarySource": "data/source/geoboundaries/DEU-ADM3.geojson",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "main-tauber-kreis",
+			"name": "Main-Tauber-Kreis",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.737400000000001,
+				49.5755
+			],
+			"bbox": [
+				9.318,
+				49.3595,
+				10.1568,
+				49.7915
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						9.4798,
+						49.754
+					],
+					[
+						9.658,
+						49.5243
+					],
+					[
+						10.0065,
+						49.413
+					]
+				],
+				"aspect": 2.81
+			}
+		},
+		{
+			"id": "mannheim",
+			"name": "Mannheim",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.50505,
+				49.5004
+			],
+			"bbox": [
+				8.4224,
+				49.4113,
+				8.5877,
+				49.5895
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						8.4533,
+						49.5705
+					],
+					[
+						8.5107,
+						49.5035
+					],
+					[
+						8.5396,
+						49.429
+					]
+				],
+				"aspect": 2.35
+			}
+		},
+		{
+			"id": "neckar-odenwald-kreis",
+			"name": "Neckar-Odenwald-Kreis",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.270900000000001,
+				49.46875
+			],
+			"bbox": [
+				8.938,
+				49.274,
+				9.6038,
+				49.6635
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						9.0796,
+						49.3991
+					],
+					[
+						9.2711,
+						49.4979
+					],
+					[
+						9.4626,
+						49.5158
+					]
+				],
+				"aspect": 0.9
+			}
+		},
+		{
+			"id": "heidelberg",
+			"name": "Heidelberg",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.683599999999998,
+				49.4032
+			],
+			"bbox": [
+				8.5735,
+				49.3562,
+				8.7937,
+				49.4502
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						8.6361,
+						49.4035
+					],
+					[
+						8.7052,
+						49.3951
+					],
+					[
+						8.7742,
+						49.4128
+					]
+				],
+				"aspect": 1.14
+			}
+		},
+		{
+			"id": "rhein-neckar-kreis",
+			"name": "Rhein-Neckar-Kreis",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.76875,
+				49.40015
+			],
+			"bbox": [
+				8.4513,
+				49.1744,
+				9.0862,
+				49.6259
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "hohenlohekreis",
+			"name": "Hohenlohekreis",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.60195,
+				49.26935
+			],
+			"bbox": [
+				9.3483,
+				49.1086,
+				9.8556,
+				49.4301
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						9.4691,
+						49.1514
+					],
+					[
+						9.5897,
+						49.2675
+					],
+					[
+						9.7444,
+						49.3634
+					]
+				],
+				"aspect": 1.43
+			}
+		},
+		{
+			"id": "landkreis-heilbronn",
+			"name": "Landkreis Heilbronn",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.17185,
+				49.20445
+			],
+			"bbox": [
+				8.8162,
+				49.021,
+				9.5275,
+				49.3879
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						8.9292,
+						49.1166
+					],
+					[
+						9.1722,
+						49.1918
+					],
+					[
+						9.4152,
+						49.2669
+					]
+				],
+				"aspect": 1.92
+			}
+		},
+		{
+			"id": "schwabisch-hall",
+			"name": "Schwäbisch Hall",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.87885,
+				49.15705
+			],
+			"bbox": [
+				9.5009,
+				48.9189,
+				10.2568,
+				49.3952
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						9.6848,
+						49.0524
+					],
+					[
+						9.9015,
+						49.1901
+					],
+					[
+						10.1183,
+						49.2058
+					]
+				],
+				"aspect": 0.85
+			}
+		},
+		{
+			"id": "heilbronn",
+			"name": "Heilbronn",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.1769,
+				49.152
+			],
+			"bbox": [
+				9.0755,
+				49.0944,
+				9.2783,
+				49.2096
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						9.1186,
+						49.1945
+					],
+					[
+						9.1749,
+						49.1523
+					],
+					[
+						9.2461,
+						49.1214
+					]
+				],
+				"aspect": 2.24
+			}
+		},
+		{
+			"id": "landkreis-karlsruhe",
+			"name": "Landkreis Karlsruhe",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.575849999999999,
+				49.0549
+			],
+			"bbox": [
+				8.2606,
+				48.8198,
+				8.8911,
+				49.29
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						8.3796,
+						49.0861
+					],
+					[
+						8.5851,
+						49.1672
+					],
+					[
+						8.7906,
+						49.1192
+					]
+				],
+				"aspect": 1.16
+			}
+		},
+		{
+			"id": "karlsruhe",
+			"name": "Karlsruhe",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.3986,
+				49.0113
+			],
+			"bbox": [
+				8.2773,
+				48.9424,
+				8.5199,
+				49.0802
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						8.3169,
+						49.0288
+					],
+					[
+						8.4028,
+						49.0147
+					],
+					[
+						8.4887,
+						48.993
+					]
+				],
+				"aspect": 1.13
+			}
+		},
+		{
+			"id": "enzkreis",
+			"name": "Enzkreis",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.71035,
+				48.9183
+			],
+			"bbox": [
+				8.4754,
+				48.7778,
+				8.9453,
+				49.0588
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						8.5512,
+						48.9075
+					],
+					[
+						8.7181,
+						48.9741
+					],
+					[
+						8.8849,
+						48.9355
+					]
+				],
+				"aspect": 1.46
+			}
+		},
+		{
+			"id": "rems-murr-kreis",
+			"name": "Rems-Murr-Kreis",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.506499999999999,
+				48.91475
+			],
+			"bbox": [
+				9.2434,
+				48.7505,
+				9.7696,
+				49.079
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						9.3392,
+						48.8787
+					],
+					[
+						9.4977,
+						48.9433
+					],
+					[
+						9.6563,
+						48.9079
+					]
+				],
+				"aspect": 0.75
+			}
+		},
+		{
+			"id": "ludwigsburg",
+			"name": "Ludwigsburg",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.137699999999999,
+				48.9041
+			],
+			"bbox": [
+				8.876,
+				48.7566,
+				9.3994,
+				49.0516
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						8.9748,
+						48.929
+					],
+					[
+						9.146,
+						48.9175
+					],
+					[
+						9.3171,
+						48.9696
+					]
+				],
+				"aspect": 1.15
+			}
+		},
+		{
+			"id": "ostalbkreis",
+			"name": "Ostalbkreis",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.04185,
+				48.8874
+			],
+			"bbox": [
+				9.6266,
+				48.7147,
+				10.4571,
+				49.0601
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						9.8074,
+						48.8166
+					],
+					[
+						10.0745,
+						48.9293
+					],
+					[
+						10.3818,
+						48.8906
+					]
+				],
+				"aspect": 1.44
+			}
+		},
+		{
+			"id": "pforzheim",
+			"name": "Pforzheim",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.71335,
+				48.87405
+			],
+			"bbox": [
+				8.6317,
+				48.8199,
+				8.795,
+				48.9282
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						8.6584,
+						48.8765
+					],
+					[
+						8.7159,
+						48.8814
+					],
+					[
+						8.7733,
+						48.8662
+					]
+				],
+				"aspect": 0.91
+			}
+		},
+		{
+			"id": "rastatt",
+			"name": "Rastatt",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.2224,
+				48.78485
+			],
+			"bbox": [
+				7.9596,
+				48.5888,
+				8.4852,
+				48.9809
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "stuttgart",
+			"name": "Stuttgart",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.18485,
+				48.77765
+			],
+			"bbox": [
+				9.0561,
+				48.6923,
+				9.3136,
+				48.863
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						9.0872,
+						48.7652
+					],
+					[
+						9.1678,
+						48.7782
+					],
+					[
+						9.2485,
+						48.7852
+					]
+				],
+				"aspect": 0.82
+			}
+		},
+		{
+			"id": "baden-baden",
+			"name": "Baden-Baden",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.23375,
+				48.757549999999995
+			],
+			"bbox": [
+				8.1469,
+				48.6686,
+				8.3206,
+				48.8465
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						8.1974,
+						48.8168
+					],
+					[
+						8.227,
+						48.7507
+					],
+					[
+						8.2734,
+						48.6891
+					]
+				],
+				"aspect": 2.15
+			}
+		},
+		{
+			"id": "boblingen",
+			"name": "Böblingen",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.959299999999999,
+				48.6849
+			],
+			"bbox": [
+				8.7515,
+				48.5032,
+				9.1671,
+				48.8666
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						8.8046,
+						48.6116
+					],
+					[
+						8.9519,
+						48.7717
+					],
+					[
+						9.0992,
+						48.6985
+					]
+				],
+				"aspect": 0.96
+			}
+		},
+		{
+			"id": "calw",
+			"name": "Calw",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.621300000000002,
+				48.6607
+			],
+			"bbox": [
+				8.3794,
+				48.4841,
+				8.8632,
+				48.8373
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						8.4844,
+						48.7074
+					],
+					[
+						8.6358,
+						48.6432
+					],
+					[
+						8.7872,
+						48.6749
+					]
+				],
+				"aspect": 0.75
+			}
+		},
+		{
+			"id": "goppingen",
+			"name": "Göppingen",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.73975,
+				48.651849999999996
+			],
+			"bbox": [
+				9.487,
+				48.5226,
+				9.9925,
+				48.7811
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						9.5363,
+						48.6904
+					],
+					[
+						9.7158,
+						48.6209
+					],
+					[
+						9.8954,
+						48.6653
+					]
+				],
+				"aspect": 1.42
+			}
+		},
+		{
+			"id": "esslingen",
+			"name": "Esslingen",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.350349999999999,
+				48.64835
+			],
+			"bbox": [
+				9.1047,
+				48.5217,
+				9.596,
+				48.775
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						9.1981,
+						48.6547
+					],
+					[
+						9.366,
+						48.6872
+					],
+					[
+						9.534,
+						48.6133
+					]
+				],
+				"aspect": 1.07
+			}
+		},
+		{
+			"id": "heidenheim",
+			"name": "Heidenheim",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.20955,
+				48.64685
+			],
+			"bbox": [
+				9.9318,
+				48.5105,
+				10.4873,
+				48.7832
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						9.9961,
+						48.6636
+					],
+					[
+						10.1401,
+						48.6864
+					],
+					[
+						10.2842,
+						48.6204
+					]
+				],
+				"aspect": 1.04
+			}
+		},
+		{
+			"id": "landkreis-tubingen",
+			"name": "Landkreis Tübingen",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.9647,
+				48.48495
+			],
+			"bbox": [
+				8.7557,
+				48.3668,
+				9.1737,
+				48.6031
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						8.8344,
+						48.4681
+					],
+					[
+						8.9713,
+						48.4815
+					],
+					[
+						9.1082,
+						48.4907
+					]
+				],
+				"aspect": 0.9
+			}
+		},
+		{
+			"id": "freudenstadt",
+			"name": "Freudenstadt",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.5128,
+				48.4761
+			],
+			"bbox": [
+				8.211,
+				48.3127,
+				8.8146,
+				48.6395
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						8.2724,
+						48.4908
+					],
+					[
+						8.4944,
+						48.4758
+					],
+					[
+						8.7163,
+						48.4464
+					]
+				],
+				"aspect": 1.48
+			}
+		},
+		{
+			"id": "ortenaukreis",
+			"name": "Ortenaukreis",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.005600000000001,
+				48.438900000000004
+			],
+			"bbox": [
+				7.6807,
+				48.1592,
+				8.3305,
+				48.7186
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						7.7841,
+						48.4476
+					],
+					[
+						7.9962,
+						48.5007
+					],
+					[
+						8.2084,
+						48.4188
+					]
+				],
+				"aspect": 0.64
+			}
+		},
+		{
+			"id": "reutlingen",
+			"name": "Reutlingen",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.3767,
+				48.40025
+			],
+			"bbox": [
+				9.1146,
+				48.1963,
+				9.6388,
+				48.6042
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						9.1837,
+						48.4385
+					],
+					[
+						9.3693,
+						48.3492
+					],
+					[
+						9.5548,
+						48.3783
+					]
+				],
+				"aspect": 0.85
+			}
+		},
+		{
+			"id": "alb-donau-kreis",
+			"name": "Alb-Donau-Kreis",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.863800000000001,
+				48.38705
+			],
+			"bbox": [
+				9.4901,
+				48.1423,
+				10.2375,
+				48.6318
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						9.5874,
+						48.2858
+					],
+					[
+						9.863,
+						48.5055
+					],
+					[
+						10.1386,
+						48.5493
+					]
+				],
+				"aspect": 1.9
+			}
+		},
+		{
+			"id": "ulm",
+			"name": "Ulm",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.9403,
+				48.38695
+			],
+			"bbox": [
+				9.8479,
+				48.3109,
+				10.0327,
+				48.463
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						9.9286,
+						48.3416
+					],
+					[
+						9.9266,
+						48.4064
+					],
+					[
+						10.002,
+						48.4481
+					]
+				],
+				"aspect": 1.81
+			}
+		},
+		{
+			"id": "zollernalbkreis",
+			"name": "Zollernalbkreis",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.9361,
+				48.2618
+			],
+			"bbox": [
+				8.6596,
+				48.1073,
+				9.2126,
+				48.4163
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						8.7474,
+						48.2936
+					],
+					[
+						8.936,
+						48.2286
+					],
+					[
+						9.1246,
+						48.2842
+					]
+				],
+				"aspect": 1.1
+			}
+		},
+		{
+			"id": "rottweil",
+			"name": "Rottweil",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.514,
+				48.24015
+			],
+			"bbox": [
+				8.2768,
+				48.0747,
+				8.7512,
+				48.4056
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						8.3264,
+						48.2493
+					],
+					[
+						8.507,
+						48.2875
+					],
+					[
+						8.6876,
+						48.2173
+					]
+				],
+				"aspect": 1.51
+			}
+		},
+		{
+			"id": "emmendingen",
+			"name": "Emmendingen",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.88245,
+				48.134600000000006
+			],
+			"bbox": [
+				7.5773,
+				48.0093,
+				8.1876,
+				48.2599
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						7.6495,
+						48.178
+					],
+					[
+						7.8695,
+						48.1357
+					],
+					[
+						8.0977,
+						48.1392
+					]
+				],
+				"aspect": 2.01
+			}
+		},
+		{
+			"id": "biberach",
+			"name": "Biberach",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.7086,
+				48.11905
+			],
+			"bbox": [
+				9.2733,
+				47.9457,
+				10.1439,
+				48.2924
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						9.367,
+						48.1505
+					],
+					[
+						9.7239,
+						48.1099
+					],
+					[
+						10.0829,
+						48.0786
+					]
+				],
+				"aspect": 2.44
+			}
+		},
+		{
+			"id": "sigmaringen",
+			"name": "Sigmaringen",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.27935,
+				48.05305
+			],
+			"bbox": [
+				8.9538,
+				47.8216,
+				9.6049,
+				48.2845
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						9.0354,
+						48.0466
+					],
+					[
+						9.2481,
+						48.0446
+					],
+					[
+						9.4608,
+						47.9973
+					]
+				],
+				"aspect": 1.17
+			}
+		},
+		{
+			"id": "tuttlingen",
+			"name": "Tuttlingen",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.80425,
+				48.0176
+			],
+			"bbox": [
+				8.5871,
+				47.8525,
+				9.0214,
+				48.1827
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						8.669,
+						47.9913
+					],
+					[
+						8.8049,
+						48.0524
+					],
+					[
+						8.9407,
+						48.0263
+					]
+				],
+				"aspect": 0.69
+			}
+		},
+		{
+			"id": "freiburg-im-breisgau",
+			"name": "Freiburg im Breisgau",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.803,
+				47.98625
+			],
+			"bbox": [
+				7.6777,
+				47.9035,
+				7.9283,
+				48.069
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						7.6955,
+						48.0137
+					],
+					[
+						7.7991,
+						48.0278
+					],
+					[
+						7.9027,
+						47.9753
+					]
+				],
+				"aspect": 1.67
+			}
+		},
+		{
+			"id": "schwarzwald-baar-kreis",
+			"name": "Schwarzwald-Baar-Kreis",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.383949999999999,
+				47.977199999999996
+			],
+			"bbox": [
+				8.1099,
+				47.7705,
+				8.658,
+				48.1839
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						8.2292,
+						48.1208
+					],
+					[
+						8.4743,
+						48.0651
+					],
+					[
+						8.559,
+						47.9099
+					]
+				],
+				"aspect": 1.45
+			}
+		},
+		{
+			"id": "breisgau-hochschwarzwald",
+			"name": "Breisgau-Hochschwarzwald",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.9845,
+				47.929649999999995
+			],
+			"bbox": [
+				7.5298,
+				47.7436,
+				8.4392,
+				48.1157
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						7.5651,
+						47.7888
+					],
+					[
+						7.6886,
+						47.7914
+					],
+					[
+						7.8205,
+						47.873
+					]
+				],
+				"aspect": 0.92
+			}
+		},
+		{
+			"id": "ravensburg",
+			"name": "Ravensburg",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.7577,
+				47.802049999999994
+			],
+			"bbox": [
+				9.376,
+				47.6018,
+				10.1394,
+				48.0023
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						9.4546,
+						47.8855
+					],
+					[
+						9.7468,
+						47.7753
+					],
+					[
+						10.0389,
+						47.8299
+					]
+				],
+				"aspect": 1.38
+			}
+		},
+		{
+			"id": "konstanz",
+			"name": "Konstanz",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.9129,
+				47.795100000000005
+			],
+			"bbox": [
+				8.6139,
+				47.6522,
+				9.2119,
+				47.938
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						8.72,
+						47.8086
+					],
+					[
+						8.8755,
+						47.77
+					],
+					[
+						9.0309,
+						47.8317
+					]
+				],
+				"aspect": 1.03
+			}
+		},
+		{
+			"id": "bodenseekreis",
+			"name": "Bodenseekreis",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.405000000000001,
+				47.7332
+			],
+			"bbox": [
+				9.0657,
+				47.5843,
+				9.7443,
+				47.8821
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						9.158,
+						47.8296
+					],
+					[
+						9.402,
+						47.7335
+					],
+					[
+						9.6456,
+						47.6369
+					]
+				],
+				"aspect": 3.21
+			}
+		},
+		{
+			"id": "lorrach",
+			"name": "Lörrach",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.7683,
+				47.706050000000005
+			],
+			"bbox": [
+				7.5177,
+				47.5328,
+				8.0189,
+				47.8793
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						7.6145,
+						47.6348
+					],
+					[
+						7.8293,
+						47.6915
+					],
+					[
+						7.9466,
+						47.8217
+					]
+				],
+				"aspect": 1.7
+			}
+		},
+		{
+			"id": "waldshut",
+			"name": "Waldshut",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.241499999999998,
+				47.703
+			],
+			"bbox": [
+				7.8782,
+				47.5478,
+				8.6048,
+				47.8582
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						7.9459,
+						47.6512
+					],
+					[
+						8.1846,
+						47.7213
+					],
+					[
+						8.4233,
+						47.737
+					]
+				],
+				"aspect": 1.48
+			}
+		}
+	],
+	"tourOrder": [
+		"main-tauber-kreis",
+		"mannheim",
+		"neckar-odenwald-kreis",
+		"heidelberg",
+		"rhein-neckar-kreis",
+		"hohenlohekreis",
+		"landkreis-heilbronn",
+		"schwabisch-hall",
+		"heilbronn",
+		"landkreis-karlsruhe",
+		"karlsruhe",
+		"enzkreis",
+		"rems-murr-kreis",
+		"ludwigsburg",
+		"ostalbkreis",
+		"pforzheim",
+		"rastatt",
+		"stuttgart",
+		"baden-baden",
+		"boblingen",
+		"calw",
+		"goppingen",
+		"esslingen",
+		"heidenheim",
+		"landkreis-tubingen",
+		"freudenstadt",
+		"ortenaukreis",
+		"reutlingen",
+		"alb-donau-kreis",
+		"ulm",
+		"zollernalbkreis",
+		"rottweil",
+		"emmendingen",
+		"biberach",
+		"sigmaringen",
+		"tuttlingen",
+		"freiburg-im-breisgau",
+		"schwarzwald-baar-kreis",
+		"breisgau-hochschwarzwald",
+		"ravensburg",
+		"konstanz",
+		"bodenseekreis",
+		"lorrach",
+		"waldshut"
+	]
+}

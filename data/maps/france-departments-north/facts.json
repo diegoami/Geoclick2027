@@ -1,0 +1,800 @@
+{
+	"nord": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Aisne",
+			"Pas-de-Calais",
+			"Somme"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Lille",
+			"nameDe": "Lille",
+			"nameIt": "Lilla",
+			"population": 1044000
+		},
+		"position": "north"
+	},
+	"pas-de-calais": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Nord",
+			"Somme"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Calais",
+			"nameDe": "Calais",
+			"nameIt": "Calais",
+			"population": 92201
+		},
+		"position": "north"
+	},
+	"somme": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Aisne",
+			"Nord",
+			"Oise",
+			"Pas-de-Calais",
+			"Seine-Maritime"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Amiens",
+			"nameDe": "Amiens",
+			"nameIt": "Amiens",
+			"population": 143086
+		},
+		"position": "north"
+	},
+	"ardennes": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Aisne",
+			"Marne",
+			"Meuse"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"seine-maritime": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Eure",
+			"Oise",
+			"Somme"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Rouen",
+			"nameDe": "Rouen",
+			"nameIt": "Rouen",
+			"population": 532559
+		},
+		"position": "north"
+	},
+	"aisne": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Ardennes",
+			"Marne",
+			"Nord",
+			"Oise",
+			"Seine-et-Marne",
+			"Somme"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"oise": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Aisne",
+			"Eure",
+			"Seine-et-Marne",
+			"Seine-Maritime",
+			"Somme",
+			"Val-d'Oise"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"calvados": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Eure",
+			"Manche",
+			"Orne"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Caen",
+			"nameDe": "Caen",
+			"nameIt": "Caen",
+			"population": 190099
+		},
+		"position": "centre"
+	},
+	"manche": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Calvados",
+			"Ille-et-Vilaine",
+			"Mayenne",
+			"Orne"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Cherbourg",
+			"nameDe": "Cherbourg-Octeville",
+			"nameIt": "Cherbourg-Octeville",
+			"population": 60991
+		},
+		"position": "west"
+	},
+	"eure": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Calvados",
+			"Eure-et-Loir",
+			"Oise",
+			"Orne",
+			"Seine-Maritime",
+			"Val-d'Oise",
+			"Yvelines"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"val-d-oise": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Eure",
+			"Hauts-de-Seine",
+			"Oise",
+			"Seine-et-Marne",
+			"Seine-Saint-Denis",
+			"Yvelines"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"meuse": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Ardennes",
+			"Haute-Marne",
+			"Marne",
+			"Meurthe-et-Moselle",
+			"Vosges"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"moselle": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Bas-Rhin",
+			"Meurthe-et-Moselle",
+			"Vosges"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Metz",
+			"nameDe": "Metz",
+			"nameIt": "Metz",
+			"population": 409186
+		},
+		"position": "east"
+	},
+	"marne": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Aisne",
+			"Ardennes",
+			"Aube",
+			"Haute-Marne",
+			"Meuse",
+			"Seine-et-Marne"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Reims",
+			"nameDe": "Reims",
+			"nameIt": "Reims",
+			"population": 196565
+		},
+		"position": "east"
+	},
+	"meurthe-et-moselle": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Bas-Rhin",
+			"Meuse",
+			"Moselle",
+			"Vosges"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Nancy",
+			"nameDe": "Nancy",
+			"nameIt": "Nancy",
+			"population": 268976
+		},
+		"position": "east"
+	},
+	"seine-saint-denis": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Hauts-de-Seine",
+			"Paris",
+			"Seine-et-Marne",
+			"Val-d'Oise",
+			"Val-de-Marne"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"paris": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Hauts-de-Seine",
+			"Seine-Saint-Denis",
+			"Val-de-Marne"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Paris",
+			"nameDe": "Paris",
+			"nameIt": "Parigi",
+			"population": 9904000
+		},
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"From the Parisii, the Gaulish tribe on the Île de la Cité; the Romans called it Lutetia.",
+				"The Eiffel Tower was built for the 1889 exposition and meant to be dismantled after twenty years.",
+				"Its catacombs hold the remains of about six million people, moved underground from overflowing cemeteries in 1786."
+			],
+			"it": [
+				"Dai Parisi, la tribù gallica dell’Île de la Cité; i Romani la chiamavano Lutetia.",
+				"La Torre Eiffel fu costruita per l’Esposizione del 1889 e doveva essere smontata dopo vent’anni.",
+				"Le sue catacombe custodiscono i resti di circa sei milioni di persone, trasferiti sottoterra nel 1786 da cimiteri ormai stracolmi."
+			]
+		}
+	},
+	"hauts-de-seine": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Essonne",
+			"Paris",
+			"Seine-Saint-Denis",
+			"Val-d'Oise",
+			"Val-de-Marne",
+			"Yvelines"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"val-de-marne": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Essonne",
+			"Hauts-de-Seine",
+			"Paris",
+			"Seine-et-Marne",
+			"Seine-Saint-Denis"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"yvelines": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Essonne",
+			"Eure",
+			"Eure-et-Loir",
+			"Hauts-de-Seine",
+			"Val-d'Oise"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Versailles",
+			"nameDe": "Versailles",
+			"nameIt": "Versailles",
+			"population": 85416
+		},
+		"position": "centre"
+	},
+	"seine-et-marne": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Aisne",
+			"Aube",
+			"Essonne",
+			"Loiret",
+			"Marne",
+			"Oise",
+			"Seine-Saint-Denis",
+			"Val-d'Oise",
+			"Val-de-Marne",
+			"Yonne"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Melun",
+			"nameDe": "Melun",
+			"nameIt": "Melun",
+			"population": 249432
+		},
+		"position": "centre"
+	},
+	"bas-rhin": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Haut-Rhin",
+			"Meurthe-et-Moselle",
+			"Moselle",
+			"Vosges"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Strasbourg",
+			"nameDe": "Straßburg",
+			"nameIt": "Strasburgo",
+			"population": 439972
+		},
+		"position": "east"
+	},
+	"orne": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Calvados",
+			"Eure",
+			"Eure-et-Loir",
+			"Manche",
+			"Mayenne",
+			"Sarthe"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"essonne": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Eure-et-Loir",
+			"Hauts-de-Seine",
+			"Loiret",
+			"Seine-et-Marne",
+			"Val-de-Marne",
+			"Yvelines"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"cotes-d-armor": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Finistère",
+			"Ille-et-Vilaine",
+			"Morbihan"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "St.-Brieuc",
+			"nameDe": "Saint-Brieuc",
+			"nameIt": "Saint-Brieuc",
+			"population": 53223
+		},
+		"position": "west"
+	},
+	"eure-et-loir": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Essonne",
+			"Eure",
+			"Loir-et-Cher",
+			"Loiret",
+			"Orne",
+			"Sarthe",
+			"Yvelines"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"aube": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Côte-d'Or",
+			"Haute-Marne",
+			"Marne",
+			"Seine-et-Marne",
+			"Yonne"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Troyes",
+			"nameDe": "Troyes",
+			"nameIt": "Troyes",
+			"population": 61703
+		},
+		"position": "east"
+	},
+	"finistere": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Côtes-d'Armor",
+			"Morbihan"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Brest",
+			"nameDe": "Brest",
+			"nameIt": "Brest",
+			"population": 144899
+		},
+		"position": "west"
+	},
+	"ille-et-vilaine": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Côtes-d'Armor",
+			"Loire-Atlantique",
+			"Maine-et-Loire",
+			"Manche",
+			"Mayenne",
+			"Morbihan"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Rennes",
+			"nameDe": "Rennes",
+			"nameIt": "Rennes",
+			"population": 209375
+		},
+		"position": "west"
+	},
+	"vosges": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Bas-Rhin",
+			"Haut-Rhin",
+			"Haute-Marne",
+			"Haute-Saône",
+			"Meurthe-et-Moselle",
+			"Meuse",
+			"Moselle",
+			"Territoire de Belfort"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"haute-marne": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Aube",
+			"Côte-d'Or",
+			"Haute-Saône",
+			"Marne",
+			"Meuse",
+			"Vosges"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"mayenne": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Ille-et-Vilaine",
+			"Maine-et-Loire",
+			"Manche",
+			"Orne",
+			"Sarthe"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"sarthe": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Eure-et-Loir",
+			"Indre-et-Loire",
+			"Loir-et-Cher",
+			"Maine-et-Loire",
+			"Mayenne",
+			"Orne"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Le Mans",
+			"nameDe": "Le Mans",
+			"nameIt": "Le Mans",
+			"population": 144515
+		},
+		"position": "centre"
+	},
+	"loiret": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Cher",
+			"Essonne",
+			"Eure-et-Loir",
+			"Loir-et-Cher",
+			"Nièvre",
+			"Seine-et-Marne",
+			"Yonne"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Orléans",
+			"nameDe": "Orléans",
+			"nameIt": "Orléans",
+			"population": 217301
+		},
+		"position": "south"
+	},
+	"yonne": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Aube",
+			"Côte-d'Or",
+			"Loiret",
+			"Nièvre",
+			"Seine-et-Marne"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Auxerre",
+			"nameDe": "Auxerre",
+			"nameIt": "Auxerre",
+			"population": 41516
+		},
+		"position": "south"
+	},
+	"haut-rhin": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Bas-Rhin",
+			"Territoire de Belfort",
+			"Vosges"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Mulhouse",
+			"nameDe": "Mülhausen",
+			"nameIt": "Mulhouse",
+			"population": 215454
+		},
+		"position": "south-east"
+	},
+	"morbihan": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Côtes-d'Armor",
+			"Finistère",
+			"Ille-et-Vilaine",
+			"Loire-Atlantique"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Lorient",
+			"nameDe": "Lorient",
+			"nameIt": "Lorient",
+			"population": 84952
+		},
+		"position": "south-west"
+	},
+	"loir-et-cher": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Cher",
+			"Eure-et-Loir",
+			"Indre",
+			"Indre-et-Loire",
+			"Loiret",
+			"Sarthe"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"haute-saone": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Côte-d'Or",
+			"Doubs",
+			"Haute-Marne",
+			"Territoire de Belfort",
+			"Vosges"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"territoire-de-belfort": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Doubs",
+			"Haut-Rhin",
+			"Haute-Saône",
+			"Vosges"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"cote-d-or": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Aube",
+			"Haute-Marne",
+			"Haute-Saône",
+			"Nièvre",
+			"Yonne"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Dijon",
+			"nameDe": "Dijon",
+			"nameIt": "Digione",
+			"population": 169946
+		},
+		"position": "south-east"
+	},
+	"maine-et-loire": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Ille-et-Vilaine",
+			"Indre-et-Loire",
+			"Loire-Atlantique",
+			"Mayenne",
+			"Sarthe"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Angers",
+			"nameDe": "Angers",
+			"nameIt": "Angers",
+			"population": 188380
+		},
+		"position": "south-west"
+	},
+	"loire-atlantique": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Ille-et-Vilaine",
+			"Maine-et-Loire",
+			"Morbihan"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Nantes",
+			"nameDe": "Nantes",
+			"nameIt": "Nantes",
+			"population": 438537
+		},
+		"position": "south-west"
+	},
+	"indre-et-loire": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Indre",
+			"Loir-et-Cher",
+			"Maine-et-Loire",
+			"Sarthe"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tours",
+			"nameDe": "Tours",
+			"nameIt": "Tours",
+			"population": 236096
+		},
+		"position": "south"
+	},
+	"nievre": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Cher",
+			"Côte-d'Or",
+			"Loiret",
+			"Yonne"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Nevers",
+			"nameDe": "Nevers",
+			"nameIt": "Nevers",
+			"population": 45929
+		},
+		"position": "south"
+	},
+	"doubs": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Haute-Saône",
+			"Territoire de Belfort"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Besançon",
+			"nameDe": "Besançon",
+			"nameIt": "Besançon",
+			"population": 128426
+		},
+		"position": "south-east"
+	},
+	"cher": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Indre",
+			"Loir-et-Cher",
+			"Loiret",
+			"Nièvre"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bourges",
+			"nameDe": "Bourges",
+			"nameIt": "Bourges",
+			"population": 72340
+		},
+		"position": "south"
+	},
+	"indre": {
+		"kind": "region",
+		"type": "Metropolitan department",
+		"borders": [
+			"Cher",
+			"Indre-et-Loire",
+			"Loir-et-Cher"
+		],
+		"coastal": false,
+		"position": "south"
+	}
+}

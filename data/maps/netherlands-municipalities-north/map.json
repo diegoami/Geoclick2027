@@ -1,0 +1,1452 @@
+{
+	"id": "netherlands-municipalities-north",
+	"name": "Netherlands — Municipalities — North",
+	"country": "Netherlands",
+	"attribution": "Kadaster / CBS via geoBoundaries (CC0); Natural Earth (public domain), https://www.naturalearthdata.com",
+	"boundarySource": "data/source/geoboundaries/NLD-ADM2.geojson",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "schiermonnikoog",
+			"name": "Schiermonnikoog",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.22725,
+				53.4765
+			],
+			"bbox": [
+				6.0501,
+				53.4133,
+				6.4044,
+				53.5397
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						6.0873,
+						53.4606
+					],
+					[
+						6.2116,
+						53.4639
+					],
+					[
+						6.3272,
+						53.4868
+					]
+				],
+				"aspect": 1.6
+			}
+		},
+		{
+			"id": "het-hogeland",
+			"name": "Het Hogeland",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.5397,
+				53.4129
+			],
+			"bbox": [
+				6.1676,
+				53.2494,
+				6.9118,
+				53.5764
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						6.3071,
+						53.3943
+					],
+					[
+						6.541,
+						53.4461
+					],
+					[
+						6.7749,
+						53.4623
+					]
+				],
+				"aspect": 1.38
+			}
+		},
+		{
+			"id": "ameland",
+			"name": "Ameland",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.7789,
+				53.4063
+			],
+			"bbox": [
+				5.5529,
+				53.3187,
+				6.0049,
+				53.4939
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						5.6234,
+						53.4076
+					],
+					[
+						5.7921,
+						53.4439
+					],
+					[
+						5.9698,
+						53.454
+					]
+				],
+				"aspect": 2.68
+			}
+		},
+		{
+			"id": "noardeast-fryslan",
+			"name": "Noardeast-Fryslân",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.99485,
+				53.36805
+			],
+			"bbox": [
+				5.7027,
+				53.2435,
+				6.287,
+				53.4926
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						5.7579,
+						53.3541
+					],
+					[
+						6.0008,
+						53.4088
+					],
+					[
+						6.2249,
+						53.3296
+					]
+				],
+				"aspect": 2.29
+			}
+		},
+		{
+			"id": "eemsdelta",
+			"name": "Eemsdelta",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.86505,
+				53.3509
+			],
+			"bbox": [
+				6.5958,
+				53.2424,
+				7.1343,
+				53.4594
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						6.6746,
+						53.3514
+					],
+					[
+						6.9032,
+						53.375
+					],
+					[
+						7.0763,
+						53.2837
+					]
+				],
+				"aspect": 2.53
+			}
+		},
+		{
+			"id": "terschelling",
+			"name": "Terschelling",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.34995,
+				53.3436
+			],
+			"bbox": [
+				5.0871,
+				53.2156,
+				5.6128,
+				53.4716
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						5.2039,
+						53.3283
+					],
+					[
+						5.3913,
+						53.305
+					],
+					[
+						5.5786,
+						53.3812
+					]
+				],
+				"aspect": 1.13
+			}
+		},
+		{
+			"id": "dantumadiel",
+			"name": "Dantumadiel",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.9782,
+				53.27645
+			],
+			"bbox": [
+				5.8822,
+				53.2281,
+				6.0742,
+				53.3248
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						5.914,
+						53.2816
+					],
+					[
+						5.9823,
+						53.2669
+					],
+					[
+						6.0506,
+						53.2914
+					]
+				],
+				"aspect": 0.99
+			}
+		},
+		{
+			"id": "waadhoeke",
+			"name": "Waadhoeke",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.58835,
+				53.24605
+			],
+			"bbox": [
+				5.4321,
+				53.1241,
+				5.7446,
+				53.368
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						5.5017,
+						53.1963
+					],
+					[
+						5.6081,
+						53.2299
+					],
+					[
+						5.7145,
+						53.2593
+					]
+				],
+				"aspect": 0.71
+			}
+		},
+		{
+			"id": "oldambt",
+			"name": "Oldambt",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.06445,
+				53.2215
+			],
+			"bbox": [
+				6.9113,
+				53.1108,
+				7.2176,
+				53.3322
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						6.9515,
+						53.1872
+					],
+					[
+						7.0693,
+						53.1806
+					],
+					[
+						7.1871,
+						53.2418
+					]
+				],
+				"aspect": 1.02
+			}
+		},
+		{
+			"id": "westerkwartier",
+			"name": "Westerkwartier",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.3425,
+				53.21425
+			],
+			"bbox": [
+				6.1768,
+				53.0871,
+				6.5082,
+				53.3414
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						6.27,
+						53.1328
+					],
+					[
+						6.3163,
+						53.2301
+					],
+					[
+						6.4352,
+						53.3024
+					]
+				],
+				"aspect": 1.61
+			}
+		},
+		{
+			"id": "groningen",
+			"name": "Groningen",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.618,
+				53.2114
+			],
+			"bbox": [
+				6.4635,
+				53.1128,
+				6.7725,
+				53.31
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						6.5015,
+						53.2147
+					],
+					[
+						6.6028,
+						53.169
+					],
+					[
+						6.7041,
+						53.2688
+					]
+				],
+				"aspect": 1.23
+			}
+		},
+		{
+			"id": "achtkarspelen",
+			"name": "Achtkarspelen",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.1259999999999994,
+				53.2081
+			],
+			"bbox": [
+				6.0198,
+				53.1518,
+				6.2322,
+				53.2644
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						6.0808,
+						53.218
+					],
+					[
+						6.1498,
+						53.1984
+					],
+					[
+						6.2187,
+						53.2185
+					]
+				],
+				"aspect": 1.08
+			}
+		},
+		{
+			"id": "vlieland",
+			"name": "Vlieland",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.9908,
+				53.2051
+			],
+			"bbox": [
+				4.8184,
+				53.0871,
+				5.1632,
+				53.3231
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						4.904,
+						53.2296
+					],
+					[
+						5.0174,
+						53.2271
+					],
+					[
+						5.1308,
+						53.2178
+					]
+				],
+				"aspect": 0.96
+			}
+		},
+		{
+			"id": "tytsjerksteradiel",
+			"name": "Tytsjerksteradiel",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.9734,
+				53.199200000000005
+			],
+			"bbox": [
+				5.8322,
+				53.1216,
+				6.1146,
+				53.2768
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						5.8586,
+						53.2412
+					],
+					[
+						5.9422,
+						53.1745
+					],
+					[
+						6.0853,
+						53.1717
+					]
+				],
+				"aspect": 2.12
+			}
+		},
+		{
+			"id": "midden-groningen",
+			"name": "Midden-Groningen",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.8024000000000004,
+				53.18465
+			],
+			"bbox": [
+				6.6395,
+				53.071,
+				6.9653,
+				53.2983
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						6.7082,
+						53.1835
+					],
+					[
+						6.8019,
+						53.2042
+					],
+					[
+						6.8957,
+						53.2118
+					]
+				],
+				"aspect": 0.65
+			}
+		},
+		{
+			"id": "leeuwarden",
+			"name": "Leeuwarden",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.7904,
+				53.17085
+			],
+			"bbox": [
+				5.6373,
+				53.047,
+				5.9435,
+				53.2947
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						5.7852,
+						53.273
+					],
+					[
+						5.7722,
+						53.1802
+					],
+					[
+						5.821,
+						53.0912
+					]
+				],
+				"aspect": 2.51
+			}
+		},
+		{
+			"id": "harlingen",
+			"name": "Harlingen",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.29125,
+				53.126149999999996
+			],
+			"bbox": [
+				5.0958,
+				53.001,
+				5.4867,
+				53.2513
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						5.1548,
+						53.1304
+					],
+					[
+						5.2724,
+						53.1374
+					],
+					[
+						5.39,
+						53.1656
+					]
+				],
+				"aspect": 0.88
+			}
+		},
+		{
+			"id": "smallingerland",
+			"name": "Smallingerland",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.03015,
+				53.11515
+			],
+			"bbox": [
+				5.8746,
+				53.0708,
+				6.1857,
+				53.1595
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						5.9153,
+						53.0968
+					],
+					[
+						6.0441,
+						53.1066
+					],
+					[
+						6.1627,
+						53.1386
+					]
+				],
+				"aspect": 2.85
+			}
+		},
+		{
+			"id": "tynaarlo",
+			"name": "Tynaarlo",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.6284,
+				53.1115
+			],
+			"bbox": [
+				6.4803,
+				53.0261,
+				6.7765,
+				53.1969
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						6.5175,
+						53.1053
+					],
+					[
+						6.6229,
+						53.0837
+					],
+					[
+						6.7283,
+						53.093
+					]
+				],
+				"aspect": 1.89
+			}
+		},
+		{
+			"id": "noordenveld",
+			"name": "Noordenveld",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.42715,
+				53.0928
+			],
+			"bbox": [
+				6.3152,
+				52.9855,
+				6.5391,
+				53.2001
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						6.4342,
+						53.0125
+					],
+					[
+						6.4036,
+						53.1009
+					],
+					[
+						6.4807,
+						53.1777
+					]
+				],
+				"aspect": 2.05
+			}
+		},
+		{
+			"id": "veendam",
+			"name": "Veendam",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.8817,
+				53.0837
+			],
+			"bbox": [
+				6.8017,
+				53.0389,
+				6.9617,
+				53.1285
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						6.8212,
+						53.0911
+					],
+					[
+						6.8765,
+						53.0748
+					],
+					[
+						6.9319,
+						53.0903
+					]
+				],
+				"aspect": 0.88
+			}
+		},
+		{
+			"id": "pekela",
+			"name": "Pekela",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.96875,
+				53.064499999999995
+			],
+			"bbox": [
+				6.9077,
+				53.0139,
+				7.0298,
+				53.1151
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						6.9403,
+						53.0306
+					],
+					[
+						6.9668,
+						53.0686
+					],
+					[
+						7.0001,
+						53.1045
+					]
+				],
+				"aspect": 1.96
+			}
+		},
+		{
+			"id": "opsterland",
+			"name": "Opsterland",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.129849999999999,
+				53.0468
+			],
+			"bbox": [
+				5.9276,
+				52.9644,
+				6.3321,
+				53.1292
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						5.9946,
+						53.0034
+					],
+					[
+						6.1188,
+						53.0672
+					],
+					[
+						6.2746,
+						53.0916
+					]
+				],
+				"aspect": 2.44
+			}
+		},
+		{
+			"id": "heerenveen",
+			"name": "Heerenveen",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.0009,
+				52.998400000000004
+			],
+			"bbox": [
+				5.7964,
+				52.9117,
+				6.2054,
+				53.0851
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						5.8522,
+						53.0715
+					],
+					[
+						5.9179,
+						52.9148
+					],
+					[
+						6.1464,
+						52.9773
+					]
+				],
+				"aspect": 2.89
+			}
+		},
+		{
+			"id": "assen",
+			"name": "Assen",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.559699999999999,
+				52.9972
+			],
+			"bbox": [
+				6.4882,
+				52.9325,
+				6.6312,
+				53.0619
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						6.5298,
+						52.9514
+					],
+					[
+						6.5416,
+						53.0014
+					],
+					[
+						6.5802,
+						53.0462
+					]
+				],
+				"aspect": 1.47
+			}
+		},
+		{
+			"id": "westerwolde",
+			"name": "Westerwolde",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.1139,
+				52.99655
+			],
+			"bbox": [
+				7.0148,
+				52.8382,
+				7.213,
+				53.1549
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						7.0766,
+						52.8829
+					],
+					[
+						7.173,
+						53.0009
+					],
+					[
+						7.1095,
+						53.1262
+					]
+				],
+				"aspect": 3.16
+			}
+		},
+		{
+			"id": "stadskanaal",
+			"name": "Stadskanaal",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.97085,
+				52.995400000000004
+			],
+			"bbox": [
+				6.8613,
+				52.919,
+				7.0804,
+				53.0718
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						6.9162,
+						53.0081
+					],
+					[
+						6.9912,
+						52.9834
+					],
+					[
+						7.0661,
+						53.002
+					]
+				],
+				"aspect": 1.07
+			}
+		},
+		{
+			"id": "ooststellingwerf",
+			"name": "Ooststellingwerf",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.2562,
+				52.990849999999995
+			],
+			"bbox": [
+				6.0848,
+				52.9064,
+				6.4276,
+				53.0753
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						6.1688,
+						52.9715
+					],
+					[
+						6.2767,
+						53.0106
+					],
+					[
+						6.3846,
+						52.9873
+					]
+				],
+				"aspect": 1.08
+			}
+		},
+		{
+			"id": "aa-en-hunze",
+			"name": "Aa en Hunze",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.7486,
+				52.9815
+			],
+			"bbox": [
+				6.5615,
+				52.8682,
+				6.9357,
+				53.0948
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						6.6082,
+						52.9513
+					],
+					[
+						6.7301,
+						53.0101
+					],
+					[
+						6.8519,
+						53.024
+					]
+				],
+				"aspect": 1.2
+			}
+		},
+		{
+			"id": "sudwest-fryslan",
+			"name": "Súdwest-Fryslân",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.4678,
+				52.97435
+			],
+			"bbox": [
+				5.1642,
+				52.796,
+				5.7714,
+				53.1527
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						5.2431,
+						52.9392
+					],
+					[
+						5.4671,
+						53.0091
+					],
+					[
+						5.691,
+						53.0446
+					]
+				],
+				"aspect": 1.26
+			}
+		},
+		{
+			"id": "de-fryske-marren",
+			"name": "De Fryske Marren",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.6378,
+				52.9118
+			],
+			"bbox": [
+				5.3378,
+				52.7648,
+				5.9378,
+				53.0588
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						5.4367,
+						52.818
+					],
+					[
+						5.6895,
+						52.8539
+					],
+					[
+						5.8491,
+						52.9763
+					]
+				],
+				"aspect": 2.26
+			}
+		},
+		{
+			"id": "borger-odoorn",
+			"name": "Borger-Odoorn",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.8773,
+				52.899
+			],
+			"bbox": [
+				6.7277,
+				52.8046,
+				7.0269,
+				52.9934
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						6.7595,
+						52.9031
+					],
+					[
+						6.8732,
+						52.8947
+					],
+					[
+						6.987,
+						52.9153
+					]
+				],
+				"aspect": 0.96
+			}
+		},
+		{
+			"id": "weststellingwerf",
+			"name": "Weststellingwerf",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.0335,
+				52.8719
+			],
+			"bbox": [
+				5.8197,
+				52.8008,
+				6.2473,
+				52.943
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						5.8695,
+						52.8436
+					],
+					[
+						6.0284,
+						52.881
+					],
+					[
+						6.1931,
+						52.9086
+					]
+				],
+				"aspect": 2.77
+			}
+		},
+		{
+			"id": "midden-drenthe",
+			"name": "Midden-Drenthe",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.5441,
+				52.87055
+			],
+			"bbox": [
+				6.3596,
+				52.7357,
+				6.7286,
+				53.0054
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						6.4237,
+						52.9468
+					],
+					[
+						6.5505,
+						52.8829
+					],
+					[
+						6.6232,
+						52.7953
+					]
+				],
+				"aspect": 1.65
+			}
+		},
+		{
+			"id": "westerveld",
+			"name": "Westerveld",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.2999,
+				52.82715
+			],
+			"bbox": [
+				6.1198,
+				52.7293,
+				6.48,
+				52.925
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						6.1876,
+						52.8243
+					],
+					[
+						6.3105,
+						52.8645
+					],
+					[
+						6.4334,
+						52.8334
+					]
+				],
+				"aspect": 1.26
+			}
+		},
+		{
+			"id": "coevorden",
+			"name": "Coevorden",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.7247,
+				52.75325
+			],
+			"bbox": [
+				6.5875,
+				52.6278,
+				6.8619,
+				52.8787
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						6.6456,
+						52.7254
+					],
+					[
+						6.7279,
+						52.7578
+					],
+					[
+						6.8103,
+						52.7424
+					]
+				],
+				"aspect": 0.56
+			}
+		},
+		{
+			"id": "emmen",
+			"name": "Emmen",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.95955,
+				52.7529
+			],
+			"bbox": [
+				6.8264,
+				52.6328,
+				7.0927,
+				52.873
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						6.8601,
+						52.7363
+					],
+					[
+						6.9546,
+						52.7416
+					],
+					[
+						7.0492,
+						52.7598
+					]
+				],
+				"aspect": 0.55
+			}
+		},
+		{
+			"id": "hoogeveen",
+			"name": "Hoogeveen",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.518549999999999,
+				52.72755
+			],
+			"bbox": [
+				6.4072,
+				52.6545,
+				6.6299,
+				52.8006
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						6.4449,
+						52.7694
+					],
+					[
+						6.4937,
+						52.71
+					],
+					[
+						6.5963,
+						52.6874
+					]
+				],
+				"aspect": 1.67
+			}
+		},
+		{
+			"id": "meppel",
+			"name": "Meppel",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.2034,
+				52.72055
+			],
+			"bbox": [
+				6.1201,
+				52.668,
+				6.2867,
+				52.7731
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						6.1516,
+						52.7523
+					],
+					[
+						6.1757,
+						52.7031
+					],
+					[
+						6.2542,
+						52.6837
+					]
+				],
+				"aspect": 2.24
+			}
+		},
+		{
+			"id": "de-wolden",
+			"name": "De Wolden",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.37315,
+				52.705600000000004
+			],
+			"bbox": [
+				6.2169,
+				52.6122,
+				6.5294,
+				52.799
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						6.3,
+						52.7536
+					],
+					[
+						6.3672,
+						52.686
+					],
+					[
+						6.4717,
+						52.6379
+					]
+				],
+				"aspect": 1.64
+			}
+		}
+	],
+	"tourOrder": [
+		"schiermonnikoog",
+		"het-hogeland",
+		"ameland",
+		"noardeast-fryslan",
+		"eemsdelta",
+		"terschelling",
+		"dantumadiel",
+		"waadhoeke",
+		"oldambt",
+		"westerkwartier",
+		"groningen",
+		"achtkarspelen",
+		"vlieland",
+		"tytsjerksteradiel",
+		"midden-groningen",
+		"leeuwarden",
+		"harlingen",
+		"smallingerland",
+		"tynaarlo",
+		"noordenveld",
+		"veendam",
+		"pekela",
+		"opsterland",
+		"heerenveen",
+		"assen",
+		"westerwolde",
+		"stadskanaal",
+		"ooststellingwerf",
+		"aa-en-hunze",
+		"sudwest-fryslan",
+		"de-fryske-marren",
+		"borger-odoorn",
+		"weststellingwerf",
+		"midden-drenthe",
+		"westerveld",
+		"coevorden",
+		"emmen",
+		"hoogeveen",
+		"meppel",
+		"de-wolden"
+	]
+}

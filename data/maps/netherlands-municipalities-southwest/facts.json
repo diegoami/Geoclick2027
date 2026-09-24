@@ -1,0 +1,806 @@
+{
+	"hillegom": {
+		"kind": "region",
+		"borders": [
+			"Lisse",
+			"Noordwijk"
+		],
+		"coastal": true,
+		"position": "north-east"
+	},
+	"noordwijk": {
+		"kind": "region",
+		"borders": [
+			"Hillegom",
+			"Katwijk",
+			"Lisse",
+			"Teylingen"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"lisse": {
+		"kind": "region",
+		"borders": [
+			"Hillegom",
+			"Noordwijk",
+			"Teylingen"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"teylingen": {
+		"kind": "region",
+		"borders": [
+			"Kaag en Braassem",
+			"Katwijk",
+			"Leiden",
+			"Leiderdorp",
+			"Lisse",
+			"Noordwijk",
+			"Oegstgeest"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"kaag-en-braassem": {
+		"kind": "region",
+		"borders": [
+			"Alphen aan den Rijn",
+			"Leiderdorp",
+			"Nieuwkoop",
+			"Teylingen"
+		],
+		"coastal": true,
+		"position": "north-east"
+	},
+	"katwijk": {
+		"kind": "region",
+		"borders": [
+			"Leiden",
+			"Noordwijk",
+			"Oegstgeest",
+			"Teylingen",
+			"Wassenaar"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"oegstgeest": {
+		"kind": "region",
+		"borders": [
+			"Katwijk",
+			"Leiden",
+			"Teylingen"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"nieuwkoop": {
+		"kind": "region",
+		"borders": [
+			"Alphen aan den Rijn",
+			"Bodegraven-Reeuwijk",
+			"Kaag en Braassem"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"leiderdorp": {
+		"kind": "region",
+		"borders": [
+			"Alphen aan den Rijn",
+			"Kaag en Braassem",
+			"Leiden",
+			"Teylingen",
+			"Zoeterwoude"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"leiden": {
+		"kind": "region",
+		"borders": [
+			"Katwijk",
+			"Leiderdorp",
+			"Leidschendam-Voorburg",
+			"Oegstgeest",
+			"Teylingen",
+			"Voorschoten",
+			"Wassenaar",
+			"Zoeterwoude"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"wassenaar": {
+		"kind": "region",
+		"borders": [
+			"'s-Gravenhage",
+			"Katwijk",
+			"Leiden",
+			"Leidschendam-Voorburg",
+			"Voorschoten"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"voorschoten": {
+		"kind": "region",
+		"borders": [
+			"Leiden",
+			"Leidschendam-Voorburg",
+			"Wassenaar"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"zoeterwoude": {
+		"kind": "region",
+		"borders": [
+			"Alphen aan den Rijn",
+			"Leiden",
+			"Leiderdorp",
+			"Leidschendam-Voorburg",
+			"Zoetermeer"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"alphen-aan-den-rijn": {
+		"kind": "region",
+		"borders": [
+			"Bodegraven-Reeuwijk",
+			"Kaag en Braassem",
+			"Lansingerland",
+			"Leiderdorp",
+			"Nieuwkoop",
+			"Waddinxveen",
+			"Zoetermeer",
+			"Zoeterwoude",
+			"Zuidplas"
+		],
+		"coastal": true,
+		"position": "north-east"
+	},
+	"leidschendam-voorburg": {
+		"kind": "region",
+		"borders": [
+			"'s-Gravenhage",
+			"Leiden",
+			"Voorschoten",
+			"Wassenaar",
+			"Zoetermeer",
+			"Zoeterwoude"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"s-gravenhage": {
+		"kind": "region",
+		"borders": [
+			"Delft",
+			"Leidschendam-Voorburg",
+			"Pijnacker-Nootdorp",
+			"Rijswijk",
+			"Wassenaar",
+			"Westland",
+			"Zoetermeer"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"bodegraven-reeuwijk": {
+		"kind": "region",
+		"borders": [
+			"Alphen aan den Rijn",
+			"Gouda",
+			"Krimpenerwaard",
+			"Nieuwkoop",
+			"Waddinxveen"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"zoetermeer": {
+		"kind": "region",
+		"borders": [
+			"'s-Gravenhage",
+			"Alphen aan den Rijn",
+			"Lansingerland",
+			"Leidschendam-Voorburg",
+			"Pijnacker-Nootdorp",
+			"Zoeterwoude"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"waddinxveen": {
+		"kind": "region",
+		"borders": [
+			"Alphen aan den Rijn",
+			"Bodegraven-Reeuwijk",
+			"Gouda",
+			"Zuidplas"
+		],
+		"coastal": true,
+		"position": "north-east"
+	},
+	"rijswijk": {
+		"kind": "region",
+		"borders": [
+			"'s-Gravenhage",
+			"Delft",
+			"Midden-Delfland",
+			"Westland"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"gouda": {
+		"kind": "region",
+		"borders": [
+			"Bodegraven-Reeuwijk",
+			"Krimpenerwaard",
+			"Waddinxveen",
+			"Zuidplas"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"lansingerland": {
+		"kind": "region",
+		"borders": [
+			"Alphen aan den Rijn",
+			"Pijnacker-Nootdorp",
+			"Rotterdam",
+			"Zoetermeer",
+			"Zuidplas"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"pijnacker-nootdorp": {
+		"kind": "region",
+		"borders": [
+			"'s-Gravenhage",
+			"Delft",
+			"Lansingerland",
+			"Rotterdam",
+			"Zoetermeer"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"westland": {
+		"kind": "region",
+		"borders": [
+			"'s-Gravenhage",
+			"Maassluis",
+			"Midden-Delfland",
+			"Rijswijk",
+			"Rotterdam"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"zuidplas": {
+		"kind": "region",
+		"borders": [
+			"Alphen aan den Rijn",
+			"Capelle aan den IJssel",
+			"Gouda",
+			"Krimpenerwaard",
+			"Lansingerland",
+			"Rotterdam",
+			"Waddinxveen"
+		],
+		"coastal": true,
+		"position": "north-east"
+	},
+	"delft": {
+		"kind": "region",
+		"borders": [
+			"'s-Gravenhage",
+			"Midden-Delfland",
+			"Pijnacker-Nootdorp",
+			"Rijswijk",
+			"Rotterdam"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"midden-delfland": {
+		"kind": "region",
+		"borders": [
+			"Delft",
+			"Maassluis",
+			"Rijswijk",
+			"Rotterdam",
+			"Schiedam",
+			"Vlaardingen",
+			"Westland"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"krimpenerwaard": {
+		"kind": "region",
+		"borders": [
+			"Bodegraven-Reeuwijk",
+			"Capelle aan den IJssel",
+			"Gouda",
+			"Krimpen aan den IJssel",
+			"Molenlanden",
+			"Ridderkerk",
+			"Rotterdam",
+			"Zuidplas"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"capelle-aan-den-ijssel": {
+		"kind": "region",
+		"borders": [
+			"Krimpen aan den IJssel",
+			"Krimpenerwaard",
+			"Rotterdam",
+			"Zuidplas"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"schiedam": {
+		"kind": "region",
+		"borders": [
+			"Midden-Delfland",
+			"Rotterdam",
+			"Vlaardingen"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"vijfheerenlanden": {
+		"kind": "region",
+		"borders": [
+			"Molenlanden"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"maassluis": {
+		"kind": "region",
+		"borders": [
+			"Midden-Delfland",
+			"Rotterdam",
+			"Vlaardingen",
+			"Westland"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"rotterdam": {
+		"kind": "region",
+		"borders": [
+			"Albrandswaard",
+			"Barendrecht",
+			"Brielle",
+			"Capelle aan den IJssel",
+			"Delft",
+			"Krimpen aan den IJssel",
+			"Krimpenerwaard",
+			"Lansingerland",
+			"Maassluis",
+			"Midden-Delfland",
+			"Nissewaard",
+			"Pijnacker-Nootdorp",
+			"Ridderkerk",
+			"Schiedam",
+			"Vlaardingen",
+			"Westland",
+			"Westvoorne",
+			"Zuidplas"
+		],
+		"coastal": true,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"\"Dam on the Rotte\" — the same construction as Amsterdam, on a different river.",
+				"Its centre was flattened by bombing in May 1940, which is why it is the one Dutch city built in modern architecture.",
+				"It is Europe’s largest port and was the world’s busiest until 2004."
+			],
+			"it": [
+				"\"Diga sulla Rotte\": la stessa formazione di Amsterdam, su un altro fiume.",
+				"Il suo centro fu raso al suolo dai bombardamenti del maggio 1940, ed è per questo che è l’unica città olandese costruita in architettura moderna.",
+				"È il porto più grande d’Europa e fino al 2004 è stato il più trafficato del mondo."
+			]
+		}
+	},
+	"vlaardingen": {
+		"kind": "region",
+		"borders": [
+			"Maassluis",
+			"Midden-Delfland",
+			"Rotterdam",
+			"Schiedam"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"krimpen-aan-den-ijssel": {
+		"kind": "region",
+		"borders": [
+			"Capelle aan den IJssel",
+			"Krimpenerwaard",
+			"Ridderkerk",
+			"Rotterdam"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"molenlanden": {
+		"kind": "region",
+		"borders": [
+			"Alblasserdam",
+			"Gorinchem",
+			"Hardinxveld-Giessendam",
+			"Krimpenerwaard",
+			"Papendrecht",
+			"Ridderkerk",
+			"Sliedrecht",
+			"Vijfheerenlanden"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"brielle": {
+		"kind": "region",
+		"borders": [
+			"Hellevoetsluis",
+			"Nissewaard",
+			"Rotterdam",
+			"Westvoorne"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"westvoorne": {
+		"kind": "region",
+		"borders": [
+			"Brielle",
+			"Goeree-Overflakkee",
+			"Hellevoetsluis",
+			"Rotterdam"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"ridderkerk": {
+		"kind": "region",
+		"borders": [
+			"Alblasserdam",
+			"Barendrecht",
+			"Hendrik-Ido-Ambacht",
+			"Krimpen aan den IJssel",
+			"Krimpenerwaard",
+			"Molenlanden",
+			"Rotterdam",
+			"Zwijndrecht"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"alblasserdam": {
+		"kind": "region",
+		"borders": [
+			"Hendrik-Ido-Ambacht",
+			"Molenlanden",
+			"Papendrecht",
+			"Ridderkerk"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"albrandswaard": {
+		"kind": "region",
+		"borders": [
+			"Barendrecht",
+			"Hoeksche Waard",
+			"Nissewaard",
+			"Rotterdam"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"barendrecht": {
+		"kind": "region",
+		"borders": [
+			"Albrandswaard",
+			"Hoeksche Waard",
+			"Ridderkerk",
+			"Rotterdam",
+			"Zwijndrecht"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"hendrik-ido-ambacht": {
+		"kind": "region",
+		"borders": [
+			"Alblasserdam",
+			"Papendrecht",
+			"Ridderkerk",
+			"Zwijndrecht"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"gorinchem": {
+		"kind": "region",
+		"borders": [
+			"Hardinxveld-Giessendam",
+			"Molenlanden"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"hellevoetsluis": {
+		"kind": "region",
+		"borders": [
+			"Brielle",
+			"Goeree-Overflakkee",
+			"Nissewaard",
+			"Westvoorne"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"papendrecht": {
+		"kind": "region",
+		"borders": [
+			"Alblasserdam",
+			"Dordrecht",
+			"Hendrik-Ido-Ambacht",
+			"Molenlanden",
+			"Sliedrecht",
+			"Zwijndrecht"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"sliedrecht": {
+		"kind": "region",
+		"borders": [
+			"Dordrecht",
+			"Hardinxveld-Giessendam",
+			"Molenlanden",
+			"Papendrecht"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"hardinxveld-giessendam": {
+		"kind": "region",
+		"borders": [
+			"Dordrecht",
+			"Gorinchem",
+			"Molenlanden",
+			"Sliedrecht"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"nissewaard": {
+		"kind": "region",
+		"borders": [
+			"Albrandswaard",
+			"Brielle",
+			"Goeree-Overflakkee",
+			"Hellevoetsluis",
+			"Hoeksche Waard",
+			"Rotterdam"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"zwijndrecht": {
+		"kind": "region",
+		"borders": [
+			"Barendrecht",
+			"Dordrecht",
+			"Hendrik-Ido-Ambacht",
+			"Hoeksche Waard",
+			"Papendrecht",
+			"Ridderkerk"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"dordrecht": {
+		"kind": "region",
+		"borders": [
+			"Hardinxveld-Giessendam",
+			"Hoeksche Waard",
+			"Papendrecht",
+			"Sliedrecht",
+			"Zwijndrecht"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"hoeksche-waard": {
+		"kind": "region",
+		"borders": [
+			"Albrandswaard",
+			"Barendrecht",
+			"Dordrecht",
+			"Goeree-Overflakkee",
+			"Nissewaard",
+			"Zwijndrecht"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"goeree-overflakkee": {
+		"kind": "region",
+		"borders": [
+			"Hellevoetsluis",
+			"Hoeksche Waard",
+			"Nissewaard",
+			"Schouwen-Duiveland",
+			"Tholen",
+			"Westvoorne"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"schouwen-duiveland": {
+		"kind": "region",
+		"borders": [
+			"Goeree-Overflakkee",
+			"Noord-Beveland",
+			"Tholen",
+			"Veere"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"tholen": {
+		"kind": "region",
+		"borders": [
+			"Goeree-Overflakkee",
+			"Kapelle",
+			"Noord-Beveland",
+			"Reimerswaal",
+			"Schouwen-Duiveland"
+		],
+		"coastal": true,
+		"position": "south"
+	},
+	"noord-beveland": {
+		"kind": "region",
+		"borders": [
+			"Goes",
+			"Kapelle",
+			"Middelburg",
+			"Schouwen-Duiveland",
+			"Tholen",
+			"Veere"
+		],
+		"coastal": true,
+		"position": "south-west"
+	},
+	"veere": {
+		"kind": "region",
+		"borders": [
+			"Middelburg",
+			"Noord-Beveland",
+			"Schouwen-Duiveland",
+			"Vlissingen"
+		],
+		"coastal": true,
+		"position": "south-west"
+	},
+	"goes": {
+		"kind": "region",
+		"borders": [
+			"Borsele",
+			"Kapelle",
+			"Middelburg",
+			"Noord-Beveland"
+		],
+		"coastal": true,
+		"position": "south-west"
+	},
+	"middelburg": {
+		"kind": "region",
+		"borders": [
+			"Borsele",
+			"Goes",
+			"Noord-Beveland",
+			"Veere",
+			"Vlissingen"
+		],
+		"coastal": true,
+		"position": "south-west"
+	},
+	"kapelle": {
+		"kind": "region",
+		"borders": [
+			"Borsele",
+			"Goes",
+			"Noord-Beveland",
+			"Reimerswaal",
+			"Tholen"
+		],
+		"coastal": true,
+		"position": "south"
+	},
+	"vlissingen": {
+		"kind": "region",
+		"borders": [
+			"Borsele",
+			"Middelburg",
+			"Sluis",
+			"Terneuzen",
+			"Veere"
+		],
+		"coastal": true,
+		"position": "south-west"
+	},
+	"reimerswaal": {
+		"kind": "region",
+		"borders": [
+			"Borsele",
+			"Hulst",
+			"Kapelle",
+			"Tholen"
+		],
+		"coastal": true,
+		"position": "south"
+	},
+	"borsele": {
+		"kind": "region",
+		"borders": [
+			"Goes",
+			"Hulst",
+			"Kapelle",
+			"Middelburg",
+			"Reimerswaal",
+			"Terneuzen",
+			"Vlissingen"
+		],
+		"coastal": true,
+		"position": "south-west"
+	},
+	"hulst": {
+		"kind": "region",
+		"borders": [
+			"Borsele",
+			"Reimerswaal",
+			"Terneuzen"
+		],
+		"coastal": true,
+		"position": "south"
+	},
+	"sluis": {
+		"kind": "region",
+		"borders": [
+			"Terneuzen",
+			"Vlissingen"
+		],
+		"coastal": true,
+		"position": "south-west"
+	},
+	"terneuzen": {
+		"kind": "region",
+		"borders": [
+			"Borsele",
+			"Hulst",
+			"Sluis",
+			"Vlissingen"
+		],
+		"coastal": true,
+		"position": "south-west"
+	}
+}

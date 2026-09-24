@@ -920,6 +920,71 @@ npx tsx data/scripts/build-facts.ts --map=<each of the above>
 | germany-towns-southwest | 27 700 | 6.2 km |
 | germany-towns-southeast | 22 011 | 5.2 km |
 
+### Admin-2, and four new countries (built 2026-09-24, #39 batch D)
+
+The rules are in DECISIONS.md, "Admin-2 maps, and the first boundaries not in
+the public domain". `fetch-natural-earth.sh` now also fetches the two
+geoBoundaries files into `data/source/geoboundaries/`.
+
+New `build-map.ts` options:
+
+- `--rename="Fingal=Dublin,Laoighis=Laois"` renames before the dissolve, so
+  `--dissolve=name` can merge pieces into one target;
+- `--source=<geojson>` builds from a file outside Natural Earth, reading
+  `--source-name-field` (default `shapeName`) through `--clean-names`
+  (`admin2.ts`); `--attribution` is the credit its licence asks for, and
+  map.json records `boundarySource` so `build-facts.ts` does not describe a
+  district by its state's Natural Earth row;
+- `--within=<admin-1 names>` keeps the targets whose interior point is in
+  those areas of `--country` (nearest area for one that is in none).
+
+```
+FR=(--country=France --type=province "--exclude=Guyane française,Martinique,Guadeloupe,La Réunion,Mayotte")
+npx tsx data/scripts/build-map.ts "${FR[@]}" --out=data/maps/france-departments --name="France — Departments"
+npx tsx data/scripts/build-map.ts "${FR[@]}" --lat-min=46.8 --out=data/maps/france-departments-north --name="France — Departments — North"
+npx tsx data/scripts/build-map.ts "${FR[@]}" --lat-max=46.8 --out=data/maps/france-departments-south --name="France — Departments — South"
+npx tsx data/scripts/build-map.ts --country=Spain --type=province --exclude="Ceuta,Melilla,Santa Cruz de Tenerife,Las Palmas" --out=data/maps/spain-provinces --name="Spain — Provinces"
+npx tsx data/scripts/build-map.ts --country=Ireland --type=county --dissolve=name --rename="Fingal=Dublin,South Dublin=Dublin,Dún Laoghaire–Rathdown=Dublin,North Tipperary=Tipperary,South Tipperary=Tipperary,Laoighis=Laois" --out=data/maps/ireland-counties --name="Ireland — Counties"
+npx tsx data/scripts/build-map.ts --country=Switzerland --type=region --out=data/maps/switzerland-cantons --name="Switzerland — Cantons"
+npx tsx data/scripts/build-map.ts --country=Austria --type=state --out=data/maps/austria-states --name="Austria — States"
+npx tsx data/scripts/build-map.ts --country=Romania --type=county --out=data/maps/romania-counties --name="Romania — Counties"
+
+DE=(--country=Germany --type=county --source=data/source/geoboundaries/DEU-ADM3.geojson --clean-names=german-districts --dissolve=name "--attribution=© GeoBasis-DE / BKG 2023, dl-de/by-2-0 (via geoBoundaries)")
+npx tsx data/scripts/build-map.ts "${DE[@]}" --within="Schleswig-Holstein,Hamburg,Niedersachsen,Bremen,Mecklenburg-Vorpommern" --out=data/maps/germany-districts-north --name="Germany — Districts — North"
+npx tsx data/scripts/build-map.ts "${DE[@]}" --within="Nordrhein-Westfalen" --out=data/maps/germany-districts-west --name="Germany — Districts — West"
+npx tsx data/scripts/build-map.ts "${DE[@]}" --within="Hessen,Rheinland-Pfalz,Saarland" --out=data/maps/germany-districts-center --name="Germany — Districts — Center"
+npx tsx data/scripts/build-map.ts "${DE[@]}" --within="Berlin,Brandenburg,Sachsen,Sachsen-Anhalt,Thüringen" --out=data/maps/germany-districts-east --name="Germany — Districts — East"
+npx tsx data/scripts/build-map.ts "${DE[@]}" --within="Baden-Württemberg" --out=data/maps/germany-districts-southwest --name="Germany — Districts — South-West"
+npx tsx data/scripts/build-map.ts "${DE[@]}" --within="Bayern" --out=data/maps/germany-districts-southeast --name="Germany — Districts — South-East"
+
+NL=(--country=Netherlands --type=region --source=data/source/geoboundaries/NLD-ADM2.geojson --dissolve=name "--attribution=Kadaster / CBS via geoBoundaries (CC0)")
+npx tsx data/scripts/build-map.ts "${NL[@]}" --within="Groningen,Friesland,Drenthe" --out=data/maps/netherlands-municipalities-north --name="Netherlands — Municipalities — North"
+npx tsx data/scripts/build-map.ts "${NL[@]}" --within="Overijssel,Flevoland,Gelderland" --out=data/maps/netherlands-municipalities-east --name="Netherlands — Municipalities — East"
+npx tsx data/scripts/build-map.ts "${NL[@]}" --within="Noord-Holland,Utrecht" --out=data/maps/netherlands-municipalities-west --name="Netherlands — Municipalities — West"
+npx tsx data/scripts/build-map.ts "${NL[@]}" --within="Zuid-Holland,Zeeland" --out=data/maps/netherlands-municipalities-southwest --name="Netherlands — Municipalities — South-West"
+npx tsx data/scripts/build-map.ts "${NL[@]}" --within="Noord-Brabant,Limburg" --out=data/maps/netherlands-municipalities-south --name="Netherlands — Municipalities — South"
+
+npx tsx data/scripts/build-facts.ts --map=<each of the above>
+```
+
+| Map | Targets | Map | Targets |
+|---|---|---|---|
+| france-departments | 96 | germany-districts-north | 71 |
+| france-departments-north | 48 | germany-districts-west | 53 |
+| france-departments-south | 48 | germany-districts-center | 68 |
+| spain-provinces | 48 | germany-districts-east | 68 |
+| ireland-counties | 26 | germany-districts-southwest | 44 |
+| switzerland-cantons | 26 | germany-districts-southeast | 96 |
+| austria-states | 9 | netherlands-municipalities-north | 40 |
+| romania-counties | 42 | netherlands-municipalities-east | 82 |
+| | | netherlands-municipalities-west | 69 |
+| | | netherlands-municipalities-southwest | 66 |
+| | | netherlands-municipalities-south | 87 |
+
+Germany's six add up to its 400 Kreise and the Netherlands' five to its 344
+municipalities. `mapshaper -dissolve name` reads a bare `name` as its own
+`name=` option, so a dissolve on the name field passes `fields=name`.
+
 ## The Terrain layer: `terrain.pmtiles` (FT-33, 2026-09-19)
 
 Every map has a **second** tileset beside its `tiles.pmtiles`, holding the
