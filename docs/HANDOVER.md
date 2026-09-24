@@ -1,4 +1,4 @@
-# Handover — 2026-09-24, #36 and #37 merged; nothing waiting
+# Handover — 2026-09-24, #11 built (PR #38), then milestone v0.10.1
 
 For whoever picks Geoclick up next, whether a human or a fresh Claude
 session. It records where things stand, what's next, and what's easy to
@@ -23,8 +23,8 @@ before any work starts.
 | Remediation programme | Closed with v0.2.0 ([REMEDIATION_PLAN.md](REMEDIATION_PLAN.md)); its automerge exception went with it |
 | Feature programme | Closed with v0.5.0 ([FEATURE_PLAN.md](FEATURE_PLAN.md)) |
 | Since then | Per-release plans: [PLAN_V0.6.md](PLAN_V0.6.md) through [PLAN_V0.9.4.md](PLAN_V0.9.4.md), each with its own ledger; now [PLAN_V0.10.md](PLAN_V0.10.md) |
-| Next | **Nothing is waiting on the owner.** Pick the next task from the candidates below. **Merged 2026-09-24:** [PR #37](https://github.com/diegoami/Geoclick2027/pull/37) (on Explore, the name whose fact card is open always shows) and [PR #36](https://github.com/diegoami/Geoclick2027/pull/36) (#34: Explore's region fallback names in the stretched type; towns, Quiz and Overview keep their boxes; asked ink `rgb(150, 85, 20)`). Untapped small regions boxed in by curved names (Umbria, Friuli-Venezia Giulia) still hide at the country view by design, and appear when you zoom in. **Merged 2026-09-23 on the owner's OK:** [PR #33](https://github.com/diegoami/Geoclick2027/pull/33) (hardening batch FT-56/59/67/68; closed #7, #8, #32) and [PR #35](https://github.com/diegoami/Geoclick2027/pull/35) (Nunavut's spine by ground area). Gates pass on the merged `main`. Neither gets a release of its own; both ship with the next feature release, and that milestone reviews them. Other candidates: **#11** (an explicit tap is Chosen, session-only); **FT-51 German** (postponed until the Italian has been read); the **zoomable world-map start screen** (below). A leftover Cloudflare "Workers Builds" check fails on every PR, a dashboard job for the product owner. **Merges:** three times on 2026-09-23 the owner said "merged" while the PR was still open on GitHub, and Claude merged each on that OK with a merge commit. Check `gh pr view` before assuming |
-| After that | The next milestone is `v0.10.1` or `v0.11.0`, depending on what is picked: release prep PR → candidate → milestone issue → review → tag (docs/RELEASES.md, "The milestone") |
+| Next | **Waiting on the owner: the OK to merge [PR #38](https://github.com/diegoami/Geoclick2027/pull/38)** (#11: an explicit tap on Known is Chosen whatever the streak; the choice is session-only, in memory, and the FT-39 localStorage key is removed on load). Gates pass. **Then milestone v0.10.1** (owner's pick, 2026-09-24): release-prep PR (version bump via `scripts/sync-version.mjs`, CHANGELOG entry covering #33, #35, #36, #37, #38) → candidate → milestone issue → review prompt (docs/RELEASES.md, "The milestone"). **Merged 2026-09-24:** [PR #37](https://github.com/diegoami/Geoclick2027/pull/37) (on Explore, the name whose fact card is open always shows) and [PR #36](https://github.com/diegoami/Geoclick2027/pull/36) (#34: Explore's region fallback names in the stretched type; towns, Quiz and Overview keep their boxes; asked ink `rgb(150, 85, 20)`). Untapped small regions boxed in by curved names (Umbria, Friuli-Venezia Giulia) still hide at the country view by design, and appear when you zoom in. **Merged 2026-09-23 on the owner's OK:** [PR #33](https://github.com/diegoami/Geoclick2027/pull/33) (hardening batch FT-56/59/67/68; closed #7, #8, #32) and [PR #35](https://github.com/diegoami/Geoclick2027/pull/35) (Nunavut's spine by ground area). Gates pass on the merged `main`. Neither gets a release of its own; both ship with the next feature release, and that milestone reviews them. Other candidates: **FT-51 German** (postponed until the Italian has been read); the **zoomable world-map start screen** (below). A leftover Cloudflare "Workers Builds" check fails on every PR, a dashboard job for the product owner. **Merges:** three times on 2026-09-23 the owner said "merged" while the PR was still open on GitHub, and Claude merged each on that OK with a merge commit. Check `gh pr view` before assuming |
+| After that | Milestone `v0.10.1`: release prep PR → candidate → milestone issue → review → tag (docs/RELEASES.md, "The milestone") |
 | Also raised 2026-09-20 | **The start screen becomes a zoomable world map** — pick the country on the map, then the kind of quiz. The map list cannot be finalized as a list: the goal is a high number of maps, and `mapCatalog.ts` is already 31 countries and 66 maps. Favourites and Recent stay unchanged. Second item of the Iteration 8+ backlog, with the open questions listed there |
 
 Shipped since the v0.5.0 handover, in one paragraph each:
@@ -94,7 +94,7 @@ v0.10.0 installers were opened on a map in both shells.
 
 Suggested first message for the next session:
 
-> Read docs/HANDOVER.md, then issue #32 and my answers on it. Build the hardening batch on one branch.
+> Read docs/HANDOVER.md. PR #38 is merged; prepare milestone v0.10.1.
 
 Whatever comes next, the working rules stay (CLAUDE.md §3):
 
@@ -127,13 +127,13 @@ Whatever comes next, the working rules stay (CLAUDE.md §3):
 
 ## The open GitHub issues
 
-Three are open. Issues #1–#6 were fixed in v0.9.4 (FT-52 to FT-58).
+One is open (#11, fixed by PR #38 on merge). #7 and #8 closed with PR #33; #1–#6 were fixed in v0.9.4 (FT-52 to FT-58).
 
 | # | Task | What | Size | Scheduled |
 |---|---|---|---|---|
 | 7 | FT-56 | The integrity suite validates `tourOrder`, not the shipped `tour.json` | S | Hardening batch |
 | 8 | FT-59 | No component test crosses QuizView's persistence/resume seams | M | Hardening batch |
-| 11 | — | On the Known map an explicitly tapped name keeps its earned colour instead of **Chosen** | S | Backlog |
+| 11 | — | On the Known map an explicitly tapped name keeps its earned colour instead of **Chosen** | S | PR #38, v0.10.1 |
 
 - **#7 — no shipped tour is currently broken.** All 63 `tour.json` files
   were checked on 2026-09-20: correct `mapId`, steps a permutation of the
