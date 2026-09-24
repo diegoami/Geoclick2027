@@ -1,0 +1,492 @@
+{
+	"silistra": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "Силистра",
+		"borders": [
+			"Dobrich",
+			"Razgrad",
+			"Ruse",
+			"Shumen"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"vidin": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "Видин",
+		"borders": [
+			"Montana"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"ruse": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "Русенска",
+		"borders": [
+			"Razgrad",
+			"Silistra",
+			"Targovishte",
+			"Veliko Tarnovo"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ruse",
+			"nameDe": "Russe",
+			"nameIt": "Ruse",
+			"population": 184270
+		},
+		"position": "north"
+	},
+	"dobrich": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "Добрич",
+		"borders": [
+			"Shumen",
+			"Silistra",
+			"Varna"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Dobrich",
+			"nameDe": "Dobritsch",
+			"nameIt": "Dobrič",
+			"population": 94831
+		},
+		"position": "north-east"
+	},
+	"razgrad": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "Разград",
+		"borders": [
+			"Ruse",
+			"Shumen",
+			"Silistra",
+			"Targovishte"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Razgrad",
+			"nameDe": "Rasgrad",
+			"nameIt": "Razgrad",
+			"population": 38285
+		},
+		"position": "north-east"
+	},
+	"pleven": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "Плевенска",
+		"borders": [
+			"Lovech",
+			"Veliko Tarnovo",
+			"Vratsa"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Pleven",
+			"nameDe": "Plewen",
+			"nameIt": "Pleven",
+			"population": 118675
+		},
+		"position": "north"
+	},
+	"montana": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "Монтана",
+		"borders": [
+			"Sofia Province",
+			"Vidin",
+			"Vratsa"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Montana",
+			"nameDe": "Montana",
+			"nameIt": "Montana",
+			"population": 47445
+		},
+		"position": "north-west"
+	},
+	"vratsa": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "Враца",
+		"borders": [
+			"Lovech",
+			"Montana",
+			"Pleven",
+			"Sofia Province"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Vratsa",
+			"nameDe": "Wraza",
+			"nameIt": "Vraca",
+			"population": 71633
+		},
+		"position": "north-west"
+	},
+	"shumen": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "Шумен",
+		"borders": [
+			"Burgas",
+			"Dobrich",
+			"Razgrad",
+			"Silistra",
+			"Sliven",
+			"Targovishte",
+			"Varna"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Shumen",
+			"nameDe": "Schumen",
+			"nameIt": "Šumen",
+			"population": 87283
+		},
+		"position": "north-east"
+	},
+	"targovishte": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "Търговищка",
+		"borders": [
+			"Razgrad",
+			"Ruse",
+			"Shumen",
+			"Sliven",
+			"Veliko Tarnovo"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"veliko-tarnovo": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "Велико Търново",
+		"borders": [
+			"Gabrovo",
+			"Lovech",
+			"Pleven",
+			"Ruse",
+			"Sliven",
+			"Stara Zagora",
+			"Targovishte"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Turnovo",
+			"nameDe": "Weliko Tarnowo",
+			"nameIt": "Veliko Tărnovo",
+			"population": 53115
+		},
+		"position": "centre"
+	},
+	"varna": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "Варна",
+		"borders": [
+			"Burgas",
+			"Dobrich",
+			"Shumen"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Varna",
+			"nameDe": "Warna",
+			"nameIt": "Varna",
+			"population": 312770
+		},
+		"position": "east"
+	},
+	"lovech": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "Ловеч",
+		"borders": [
+			"Gabrovo",
+			"Pleven",
+			"Plovdiv",
+			"Sofia Province",
+			"Veliko Tarnovo",
+			"Vratsa"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Lovec",
+			"nameDe": "Lowetsch",
+			"nameIt": "Loveč",
+			"population": 42211
+		},
+		"peak": {
+			"name": "Botev",
+			"elevation": 2376
+		},
+		"position": "centre"
+	},
+	"gabrovo": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "Габрово",
+		"borders": [
+			"Lovech",
+			"Plovdiv",
+			"Stara Zagora",
+			"Veliko Tarnovo"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"sofia-city": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "София-град",
+		"borders": [
+			"Pernik",
+			"Sofia Province"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Sofia",
+			"nameDe": "Sofia",
+			"nameIt": "Sofia",
+			"population": 1185000
+		},
+		"position": "west"
+	},
+	"sofia-province": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "Sofija",
+		"borders": [
+			"Blagoevgrad",
+			"Kyustendil",
+			"Lovech",
+			"Montana",
+			"Pazardzhik",
+			"Pernik",
+			"Plovdiv",
+			"Sofia City",
+			"Vratsa"
+		],
+		"coastal": false,
+		"peak": {
+			"name": "Musala",
+			"elevation": 2925
+		},
+		"position": "west"
+	},
+	"pernik": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "Перник",
+		"borders": [
+			"Kyustendil",
+			"Sofia City",
+			"Sofia Province"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Pernik",
+			"nameDe": "Pernik",
+			"nameIt": "Pernik",
+			"population": 82467
+		},
+		"position": "west"
+	},
+	"sliven": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "Сливен",
+		"borders": [
+			"Burgas",
+			"Shumen",
+			"Stara Zagora",
+			"Targovishte",
+			"Veliko Tarnovo",
+			"Yambol"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Sliven",
+			"nameDe": "Sliwen",
+			"nameIt": "Sliven",
+			"population": 96368
+		},
+		"position": "centre"
+	},
+	"burgas": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "Бургас",
+		"borders": [
+			"Shumen",
+			"Sliven",
+			"Varna",
+			"Yambol"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Burgas",
+			"nameDe": "Burgas",
+			"nameIt": "Burgas",
+			"population": 195966
+		},
+		"position": "east"
+	},
+	"stara-zagora": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "Стара Загора",
+		"borders": [
+			"Gabrovo",
+			"Haskovo",
+			"Plovdiv",
+			"Sliven",
+			"Veliko Tarnovo",
+			"Yambol"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Stara Zagora",
+			"nameDe": "Stara Sagora",
+			"nameIt": "Stara Zagora",
+			"population": 143431
+		},
+		"position": "centre"
+	},
+	"kyustendil": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "Кюстендил",
+		"borders": [
+			"Blagoevgrad",
+			"Pernik",
+			"Sofia Province"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kyustendil",
+			"nameDe": "Kjustendil",
+			"nameIt": "Kjustendil",
+			"population": 51067
+		},
+		"position": "west"
+	},
+	"plovdiv": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "Пловдив",
+		"borders": [
+			"Gabrovo",
+			"Haskovo",
+			"Kardzhali",
+			"Lovech",
+			"Pazardzhik",
+			"Smolyan",
+			"Sofia Province",
+			"Stara Zagora"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Plovdiv",
+			"nameDe": "Plowdiw",
+			"nameIt": "Plovdiv",
+			"population": 340494
+		},
+		"position": "centre"
+	},
+	"yambol": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "Ямбол",
+		"borders": [
+			"Burgas",
+			"Haskovo",
+			"Sliven",
+			"Stara Zagora"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"pazardzhik": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "Пазарджик",
+		"borders": [
+			"Blagoevgrad",
+			"Plovdiv",
+			"Smolyan",
+			"Sofia Province"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"haskovo": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "Хасково",
+		"borders": [
+			"Kardzhali",
+			"Plovdiv",
+			"Stara Zagora",
+			"Yambol"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Khaskovo",
+			"nameDe": "Chaskowo",
+			"nameIt": "Haskovo",
+			"population": 79699
+		},
+		"position": "south"
+	},
+	"blagoevgrad": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "Благоевград",
+		"borders": [
+			"Kyustendil",
+			"Pazardzhik",
+			"Smolyan",
+			"Sofia Province"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"smolyan": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "Смолян",
+		"borders": [
+			"Blagoevgrad",
+			"Kardzhali",
+			"Pazardzhik",
+			"Plovdiv"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"kardzhali": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "Кърджалийска",
+		"borders": [
+			"Haskovo",
+			"Plovdiv",
+			"Smolyan"
+		],
+		"coastal": false,
+		"position": "south"
+	}
+}

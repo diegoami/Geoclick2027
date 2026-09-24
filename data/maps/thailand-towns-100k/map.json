@@ -1,0 +1,505 @@
+{
+	"id": "thailand-towns-100k",
+	"name": "Thailand — Towns",
+	"country": "Thailand",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "chiang-rai",
+			"name": "Chiang Rai",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				99.8264542,
+				19.9118712
+			],
+			"bbox": [
+				99.8264542,
+				19.9118712,
+				99.8264542,
+				19.9118712
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "chiang-mai",
+			"name": "Chiang Mai",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				98.9800459,
+				18.7999752
+			],
+			"bbox": [
+				98.9800459,
+				18.7999752,
+				98.9800459,
+				18.7999752
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "lampang",
+			"name": "Lampang",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				99.4812557,
+				18.2915566
+			],
+			"bbox": [
+				99.4812557,
+				18.2915566,
+				99.4812557,
+				18.2915566
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "nong-khai",
+			"name": "Nong Khai",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				102.747878,
+				17.8732617
+			],
+			"bbox": [
+				102.747878,
+				17.8732617,
+				102.747878,
+				17.8732617
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "udon-thani",
+			"name": "Udon Thani",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				102.7893225,
+				17.4047632
+			],
+			"bbox": [
+				102.7893225,
+				17.4047632,
+				102.7893225,
+				17.4047632
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "phitsanulok",
+			"name": "Phitsanulok",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				100.2728869,
+				16.8283126
+			],
+			"bbox": [
+				100.2728869,
+				16.8283126,
+				100.2728869,
+				16.8283126
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "khon-kaen",
+			"name": "Khon Kaen",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				102.8300435,
+				16.4200429
+			],
+			"bbox": [
+				102.8300435,
+				16.4200429,
+				102.8300435,
+				16.4200429
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "nakhon-sawan",
+			"name": "Nakhon Sawan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				100.0700052,
+				15.7000352
+			],
+			"bbox": [
+				100.0700052,
+				15.7000352,
+				100.0700052,
+				15.7000352
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "ubon-ratchathani",
+			"name": "Ubon Ratchathani",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				104.8300248,
+				15.2499593
+			],
+			"bbox": [
+				104.8300248,
+				15.2499593,
+				104.8300248,
+				15.2499593
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "nakhon-ratchasima",
+			"name": "Nakhon Ratchasima",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				102.1000105,
+				15.0000263
+			],
+			"bbox": [
+				102.1000105,
+				15.0000263,
+				102.1000105,
+				15.0000263
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "ayutthaya",
+			"name": "Ayutthaya",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				100.5684244,
+				14.3587993
+			],
+			"bbox": [
+				100.5684244,
+				14.3587993,
+				100.5684244,
+				14.3587993
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "pathum-thani",
+			"name": "Pathum Thani",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				100.5333361,
+				14.0171147
+			],
+			"bbox": [
+				100.5333361,
+				14.0171147,
+				100.5333361,
+				14.0171147
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "nonthaburi",
+			"name": "Nonthaburi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				100.4833134,
+				13.8336892
+			],
+			"bbox": [
+				100.4833134,
+				13.8336892,
+				100.4833134,
+				13.8336892
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "nakhon-pathom",
+			"name": "Nakhon Pathom",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				100.0639986,
+				13.8179971
+			],
+			"bbox": [
+				100.0639986,
+				13.8179971,
+				100.0639986,
+				13.8179971
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "bangkok",
+			"name": "Bangkok",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				100.5146988,
+				13.7519451
+			],
+			"bbox": [
+				100.5146988,
+				13.7519451,
+				100.5146988,
+				13.7519451
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "samut-prakan",
+			"name": "Samut Prakan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				100.6114709,
+				13.6069072
+			],
+			"bbox": [
+				100.6114709,
+				13.6069072,
+				100.6114709,
+				13.6069072
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "ratchaburi",
+			"name": "Ratchaburi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				99.821545,
+				13.5418982
+			],
+			"bbox": [
+				99.821545,
+				13.5418982,
+				99.821545,
+				13.5418982
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "chon-buri",
+			"name": "Chon Buri",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				100.9999743,
+				13.4004081
+			],
+			"bbox": [
+				100.9999743,
+				13.4004081,
+				100.9999743,
+				13.4004081
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "si-racha",
+			"name": "Si Racha",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				100.9286608,
+				13.1590275
+			],
+			"bbox": [
+				100.9286608,
+				13.1590275,
+				100.9286608,
+				13.1590275
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "surat-thani",
+			"name": "Surat Thani",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				99.3401273,
+				9.1500991
+			],
+			"bbox": [
+				99.3401273,
+				9.1500991,
+				99.3401273,
+				9.1500991
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "nakhon-si-thammarat",
+			"name": "Nakhon Si Thammarat",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				99.9700114,
+				8.3999898
+			],
+			"bbox": [
+				99.9700114,
+				8.3999898,
+				99.9700114,
+				8.3999898
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "phuket",
+			"name": "Phuket",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				98.3815295,
+				7.8765334
+			],
+			"bbox": [
+				98.3815295,
+				7.8765334,
+				98.3815295,
+				7.8765334
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "trang",
+			"name": "Trang",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				99.6080179,
+				7.5634001
+			],
+			"bbox": [
+				99.6080179,
+				7.5634001,
+				99.6080179,
+				7.5634001
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "hat-yai",
+			"name": "Hat Yai",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				100.4714278,
+				6.9964321
+			],
+			"bbox": [
+				100.4714278,
+				6.9964321,
+				100.4714278,
+				6.9964321
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "pattani",
+			"name": "Pattani",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				101.2500006,
+				6.864003
+			],
+			"bbox": [
+				101.2500006,
+				6.864003,
+				101.2500006,
+				6.864003
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "yala",
+			"name": "Yala",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				101.2850732,
+				6.5504903
+			],
+			"bbox": [
+				101.2850732,
+				6.5504903,
+				101.2850732,
+				6.5504903
+			],
+			"colorIndex": 5
+		}
+	],
+	"tourOrder": [
+		"chiang-rai",
+		"chiang-mai",
+		"lampang",
+		"nong-khai",
+		"udon-thani",
+		"phitsanulok",
+		"khon-kaen",
+		"nakhon-sawan",
+		"ubon-ratchathani",
+		"nakhon-ratchasima",
+		"ayutthaya",
+		"pathum-thani",
+		"nonthaburi",
+		"nakhon-pathom",
+		"bangkok",
+		"samut-prakan",
+		"ratchaburi",
+		"chon-buri",
+		"si-racha",
+		"surat-thani",
+		"nakhon-si-thammarat",
+		"phuket",
+		"trang",
+		"hat-yai",
+		"pattani",
+		"yala"
+	]
+}

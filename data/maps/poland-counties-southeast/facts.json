@@ -1,0 +1,746 @@
+{
+	"bia-a-podlaska": {
+		"kind": "region",
+		"borders": [
+			"powiat bialski"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"powiat-bialski": {
+		"kind": "region",
+		"borders": [
+			"Biała Podlaska",
+			"powiat łukowski",
+			"powiat parczewski",
+			"powiat radzyński",
+			"powiat włodawski"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"powiat-ukowski": {
+		"kind": "region",
+		"borders": [
+			"powiat bialski",
+			"powiat lubartowski",
+			"powiat radzyński",
+			"powiat rycki"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"powiat-radzynski": {
+		"kind": "region",
+		"borders": [
+			"powiat bialski",
+			"powiat lubartowski",
+			"powiat łukowski",
+			"powiat parczewski"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"powiat-rycki": {
+		"kind": "region",
+		"borders": [
+			"powiat lubartowski",
+			"powiat łukowski",
+			"powiat puławski"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"powiat-parczewski": {
+		"kind": "region",
+		"borders": [
+			"powiat bialski",
+			"powiat łęczyński",
+			"powiat lubartowski",
+			"powiat radzyński",
+			"powiat włodawski"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"powiat-lubartowski": {
+		"kind": "region",
+		"borders": [
+			"powiat łęczyński",
+			"powiat lubelski",
+			"powiat łukowski",
+			"powiat parczewski",
+			"powiat puławski",
+			"powiat radzyński",
+			"powiat rycki"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"powiat-w-odawski": {
+		"kind": "region",
+		"borders": [
+			"powiat bialski",
+			"powiat chełmski",
+			"powiat łęczyński",
+			"powiat parczewski"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"powiat-pu-awski": {
+		"kind": "region",
+		"borders": [
+			"powiat lubartowski",
+			"powiat lubelski",
+			"powiat opolski (Lubelskie)",
+			"powiat rycki"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"powiat-eczynski": {
+		"kind": "region",
+		"borders": [
+			"powiat chełmski",
+			"powiat lubartowski",
+			"powiat lubelski",
+			"powiat parczewski",
+			"powiat świdnicki (Lubelskie)",
+			"powiat włodawski"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"lublin": {
+		"kind": "region",
+		"borders": [
+			"powiat lubelski",
+			"powiat świdnicki (Lubelskie)"
+		],
+		"coastal": false,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Probably from the personal name Lubla.",
+				"The Union of Lublin of 1569 joined Poland and Lithuania into one commonwealth for two centuries.",
+				"Majdanek on its edge was a Nazi camp captured almost intact in 1944, the first the world saw in full."
+			],
+			"it": [
+				"Probabilmente dal nome di persona Lubla.",
+				"L’Unione di Lublino del 1569 fece di Polonia e Lituania un’unica confederazione per due secoli.",
+				"Majdanek, alle porte della città, fu un campo nazista liberato quasi intatto nel 1944: il primo che il mondo vide per intero."
+			]
+		}
+	},
+	"powiat-konecki": {
+		"kind": "region",
+		"borders": [
+			"powiat kielecki",
+			"powiat skarżyski",
+			"powiat włoszczowski"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"che-m": {
+		"kind": "region",
+		"borders": [
+			"powiat chełmski"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"powiat-opolski-lubelskie": {
+		"kind": "region",
+		"borders": [
+			"powiat kraśnicki",
+			"powiat lubelski",
+			"powiat opatowski",
+			"powiat puławski"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-lubelski": {
+		"kind": "region",
+		"borders": [
+			"Lublin",
+			"powiat biłgorajski",
+			"powiat janowski",
+			"powiat kraśnicki",
+			"powiat krasnostawski",
+			"powiat łęczyński",
+			"powiat lubartowski",
+			"powiat opolski (Lubelskie)",
+			"powiat puławski",
+			"powiat świdnicki (Lubelskie)"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-swidnicki-lubelskie": {
+		"kind": "region",
+		"borders": [
+			"Lublin",
+			"powiat chełmski",
+			"powiat krasnostawski",
+			"powiat łęczyński",
+			"powiat lubelski"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"powiat-che-mski": {
+		"kind": "region",
+		"borders": [
+			"Chełm",
+			"powiat hrubieszowski",
+			"powiat krasnostawski",
+			"powiat łęczyński",
+			"powiat świdnicki (Lubelskie)",
+			"powiat włodawski",
+			"powiat zamojski"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"powiat-skarzyski": {
+		"kind": "region",
+		"borders": [
+			"powiat kielecki",
+			"powiat konecki",
+			"powiat starachowicki"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"powiat-starachowicki": {
+		"kind": "region",
+		"borders": [
+			"powiat kielecki",
+			"powiat ostrowiecki",
+			"powiat skarżyski"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"powiat-krasnostawski": {
+		"kind": "region",
+		"borders": [
+			"powiat biłgorajski",
+			"powiat chełmski",
+			"powiat lubelski",
+			"powiat świdnicki (Lubelskie)",
+			"powiat zamojski"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"powiat-ostrowiecki": {
+		"kind": "region",
+		"borders": [
+			"powiat kielecki",
+			"powiat opatowski",
+			"powiat starachowicki"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-krasnicki": {
+		"kind": "region",
+		"borders": [
+			"powiat janowski",
+			"powiat lubelski",
+			"powiat opatowski",
+			"powiat opolski (Lubelskie)",
+			"powiat sandomierski",
+			"powiat stalowowolski"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-opatowski": {
+		"kind": "region",
+		"borders": [
+			"powiat kielecki",
+			"powiat kraśnicki",
+			"powiat opolski (Lubelskie)",
+			"powiat ostrowiecki",
+			"powiat sandomierski",
+			"powiat staszowski"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"kielce": {
+		"kind": "region",
+		"borders": [
+			"powiat kielecki"
+		],
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Of uncertain origin, possibly from kieł or a personal name.",
+				"A pogrom here in 1946, after the war, killed 42 Jewish survivors and drove most of Poland’s remaining Jews to emigrate.",
+				"The Świętokrzyskie mountains around it are among the oldest in Europe."
+			],
+			"it": [
+				"Di origine incerta, forse da kieł o da un nome di persona.",
+				"Nel 1946, a guerra finita, un pogrom uccise qui 42 sopravvissuti ebrei e spinse gran parte degli ebrei rimasti in Polonia a emigrare.",
+				"I monti della Santa Croce, tutto intorno, sono tra i più antichi d’Europa."
+			]
+		}
+	},
+	"powiat-w-oszczowski": {
+		"kind": "region",
+		"borders": [
+			"powiat jędrzejowski",
+			"powiat kielecki",
+			"powiat konecki"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"powiat-kielecki": {
+		"kind": "region",
+		"borders": [
+			"Kielce",
+			"powiat buski",
+			"powiat jędrzejowski",
+			"powiat konecki",
+			"powiat opatowski",
+			"powiat ostrowiecki",
+			"powiat pińczowski",
+			"powiat skarżyski",
+			"powiat starachowicki",
+			"powiat staszowski",
+			"powiat włoszczowski"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"powiat-janowski": {
+		"kind": "region",
+		"borders": [
+			"powiat biłgorajski",
+			"powiat kraśnicki",
+			"powiat lubelski",
+			"powiat niżański",
+			"powiat stalowowolski"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"zamosc": {
+		"kind": "region",
+		"borders": [
+			"powiat zamojski"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"powiat-hrubieszowski": {
+		"kind": "region",
+		"borders": [
+			"powiat chełmski",
+			"powiat tomaszowski (Lubelskie)",
+			"powiat zamojski"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"powiat-sandomierski": {
+		"kind": "region",
+		"borders": [
+			"powiat kraśnicki",
+			"powiat opatowski",
+			"powiat stalowowolski",
+			"powiat staszowski",
+			"powiat tarnobrzeski",
+			"Tarnobrzeg"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-zamojski": {
+		"kind": "region",
+		"borders": [
+			"powiat biłgorajski",
+			"powiat chełmski",
+			"powiat hrubieszowski",
+			"powiat krasnostawski",
+			"powiat tomaszowski (Lubelskie)",
+			"Zamość"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"powiat-jedrzejowski": {
+		"kind": "region",
+		"borders": [
+			"powiat kielecki",
+			"powiat pińczowski",
+			"powiat włoszczowski"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"powiat-stalowowolski": {
+		"kind": "region",
+		"borders": [
+			"powiat janowski",
+			"powiat kolbuszowski",
+			"powiat kraśnicki",
+			"powiat niżański",
+			"powiat sandomierski",
+			"powiat tarnobrzeski"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-bi-gorajski": {
+		"kind": "region",
+		"borders": [
+			"powiat janowski",
+			"powiat krasnostawski",
+			"powiat leżajski",
+			"powiat lubaczowski",
+			"powiat lubelski",
+			"powiat niżański",
+			"powiat przeworski",
+			"powiat tomaszowski (Lubelskie)",
+			"powiat zamojski"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"tarnobrzeg": {
+		"kind": "region",
+		"borders": [
+			"powiat sandomierski",
+			"powiat tarnobrzeski"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-tarnobrzeski": {
+		"kind": "region",
+		"borders": [
+			"powiat kolbuszowski",
+			"powiat mielecki",
+			"powiat sandomierski",
+			"powiat stalowowolski",
+			"powiat staszowski",
+			"Tarnobrzeg"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-staszowski": {
+		"kind": "region",
+		"borders": [
+			"powiat buski",
+			"powiat kielecki",
+			"powiat mielecki",
+			"powiat opatowski",
+			"powiat sandomierski",
+			"powiat tarnobrzeski"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-pinczowski": {
+		"kind": "region",
+		"borders": [
+			"powiat buski",
+			"powiat jędrzejowski",
+			"powiat kazimierski",
+			"powiat kielecki"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"powiat-tomaszowski-lubelskie": {
+		"kind": "region",
+		"borders": [
+			"powiat biłgorajski",
+			"powiat hrubieszowski",
+			"powiat lubaczowski",
+			"powiat zamojski"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"powiat-nizanski": {
+		"kind": "region",
+		"borders": [
+			"powiat biłgorajski",
+			"powiat janowski",
+			"powiat kolbuszowski",
+			"powiat leżajski",
+			"powiat rzeszowski",
+			"powiat stalowowolski"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-buski": {
+		"kind": "region",
+		"borders": [
+			"powiat kazimierski",
+			"powiat kielecki",
+			"powiat pińczowski",
+			"powiat staszowski"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"powiat-mielecki": {
+		"kind": "region",
+		"borders": [
+			"powiat dębicki",
+			"powiat kolbuszowski",
+			"powiat ropczycko-sędziszowski",
+			"powiat staszowski",
+			"powiat tarnobrzeski"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-kolbuszowski": {
+		"kind": "region",
+		"borders": [
+			"powiat mielecki",
+			"powiat niżański",
+			"powiat ropczycko-sędziszowski",
+			"powiat rzeszowski",
+			"powiat stalowowolski",
+			"powiat tarnobrzeski"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-kazimierski": {
+		"kind": "region",
+		"borders": [
+			"powiat buski",
+			"powiat pińczowski"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"powiat-lezajski": {
+		"kind": "region",
+		"borders": [
+			"powiat biłgorajski",
+			"powiat łańcucki",
+			"powiat niżański",
+			"powiat przeworski",
+			"powiat rzeszowski"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-lubaczowski": {
+		"kind": "region",
+		"borders": [
+			"powiat biłgorajski",
+			"powiat jarosławski",
+			"powiat przeworski",
+			"powiat tomaszowski (Lubelskie)"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"powiat-przeworski": {
+		"kind": "region",
+		"borders": [
+			"powiat biłgorajski",
+			"powiat jarosławski",
+			"powiat łańcucki",
+			"powiat leżajski",
+			"powiat lubaczowski",
+			"powiat przemyski",
+			"powiat rzeszowski"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"powiat-ancucki": {
+		"kind": "region",
+		"borders": [
+			"powiat leżajski",
+			"powiat przeworski",
+			"powiat rzeszowski"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"powiat-ropczycko-sedziszowski": {
+		"kind": "region",
+		"borders": [
+			"powiat dębicki",
+			"powiat kolbuszowski",
+			"powiat mielecki",
+			"powiat rzeszowski",
+			"powiat strzyżowski"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"powiat-rzeszowski": {
+		"kind": "region",
+		"borders": [
+			"powiat brzozowski",
+			"powiat kolbuszowski",
+			"powiat łańcucki",
+			"powiat leżajski",
+			"powiat niżański",
+			"powiat przemyski",
+			"powiat przeworski",
+			"powiat ropczycko-sędziszowski",
+			"powiat strzyżowski",
+			"Rzeszów"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"powiat-jaros-awski": {
+		"kind": "region",
+		"borders": [
+			"powiat lubaczowski",
+			"powiat przemyski",
+			"powiat przeworski"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"rzeszow": {
+		"kind": "region",
+		"borders": [
+			"powiat rzeszowski"
+		],
+		"coastal": false,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"From a personal name, Rzech.",
+				"It has become Poland’s aviation centre, with an industrial cluster called Aviation Valley.",
+				"It is the closest large Polish city to Ukraine and became the main logistics hub for aid after 2022."
+			],
+			"it": [
+				"Da un nome di persona, Rzech.",
+				"È diventata il centro dell’aeronautica polacca, con un distretto industriale chiamato Aviation Valley.",
+				"È la grande città polacca più vicina all’Ucraina, e dopo il 2022 è diventata il principale snodo logistico per gli aiuti."
+			]
+		}
+	},
+	"powiat-debicki": {
+		"kind": "region",
+		"borders": [
+			"powiat mielecki",
+			"powiat ropczycko-sędziszowski",
+			"powiat strzyżowski"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"powiat-strzyzowski": {
+		"kind": "region",
+		"borders": [
+			"powiat brzozowski",
+			"powiat dębicki",
+			"powiat krośnieński (Podkarpackie)",
+			"powiat ropczycko-sędziszowski",
+			"powiat rzeszowski"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"przemysl": {
+		"kind": "region",
+		"borders": [
+			"powiat przemyski"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"powiat-przemyski": {
+		"kind": "region",
+		"borders": [
+			"powiat bieszczadzki",
+			"powiat brzozowski",
+			"powiat jarosławski",
+			"powiat przeworski",
+			"powiat rzeszowski",
+			"powiat sanocki",
+			"Przemyśl"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"powiat-brzozowski": {
+		"kind": "region",
+		"borders": [
+			"powiat krośnieński (Podkarpackie)",
+			"powiat przemyski",
+			"powiat rzeszowski",
+			"powiat sanocki",
+			"powiat strzyżowski"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"krosno": {
+		"kind": "region",
+		"borders": [
+			"powiat krośnieński (Podkarpackie)"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"powiat-krosnienski-podkarpackie": {
+		"kind": "region",
+		"borders": [
+			"Krosno",
+			"powiat brzozowski",
+			"powiat sanocki",
+			"powiat strzyżowski"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"powiat-sanocki": {
+		"kind": "region",
+		"borders": [
+			"powiat bieszczadzki",
+			"powiat brzozowski",
+			"powiat krośnieński (Podkarpackie)",
+			"powiat leski",
+			"powiat przemyski"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"powiat-bieszczadzki": {
+		"kind": "region",
+		"borders": [
+			"powiat leski",
+			"powiat przemyski",
+			"powiat sanocki"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"powiat-leski": {
+		"kind": "region",
+		"borders": [
+			"powiat bieszczadzki",
+			"powiat sanocki"
+		],
+		"coastal": false,
+		"position": "south"
+	}
+}

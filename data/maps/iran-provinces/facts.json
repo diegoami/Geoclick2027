@@ -1,0 +1,628 @@
+{
+	"ardabil": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"East Azerbaijan",
+			"Gilan",
+			"Zanjan"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ardabil",
+			"nameDe": "Ardabil",
+			"nameIt": "Ardabil",
+			"population": 414603
+		},
+		"peak": {
+			"name": "Sabalon Kuh",
+			"elevation": 4814
+		},
+		"position": "north-west"
+	},
+	"east-azerbaijan": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Ardabil",
+			"West Azerbaijan",
+			"Zanjan"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tabriz",
+			"nameDe": "Täbris",
+			"nameIt": "Tabriz",
+			"population": 1413000
+		},
+		"position": "north-west"
+	},
+	"west-azerbaijan": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"East Azerbaijan",
+			"Kurdistan",
+			"Zanjan"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Urmia",
+			"nameDe": "Urmia",
+			"nameIt": "Urmia",
+			"population": 577307
+		},
+		"peak": {
+			"name": "Cheekha Dar",
+			"elevation": 3611
+		},
+		"position": "north-west"
+	},
+	"gilan": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Ardabil",
+			"Mazandaran",
+			"Qazvin",
+			"Zanjan"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Rasht",
+			"nameDe": "Rasht",
+			"nameIt": "Rasht",
+			"population": 594590
+		},
+		"position": "north-west"
+	},
+	"north-khorasan": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Golestan",
+			"Razavi Khorasan",
+			"Semnan"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bojnurd",
+			"nameDe": "Bodschnurd",
+			"nameIt": "Bojnurd",
+			"population": 208582
+		},
+		"position": "north-east"
+	},
+	"golestan": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Mazandaran",
+			"North Khorasan",
+			"Semnan"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Gorgan",
+			"nameDe": "Gorgan",
+			"nameIt": "Gorgan",
+			"population": 281023
+		},
+		"position": "north"
+	},
+	"zanjan": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Ardabil",
+			"East Azerbaijan",
+			"Gilan",
+			"Hamadan",
+			"Kurdistan",
+			"Qazvin",
+			"West Azerbaijan"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Zanjan",
+			"nameDe": "Zandschan",
+			"nameIt": "Zanjan",
+			"population": 357471
+		},
+		"position": "north-west"
+	},
+	"mazandaran": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Alborz",
+			"Gilan",
+			"Golestan",
+			"Qazvin",
+			"Semnan",
+			"Tehran"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Sari",
+			"nameDe": "Sāri",
+			"nameIt": "Sari",
+			"population": 271467
+		},
+		"peak": {
+			"name": "Mount Damavand",
+			"elevation": 5610
+		},
+		"position": "north"
+	},
+	"qazvin": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Alborz",
+			"Gilan",
+			"Hamadan",
+			"Markazi",
+			"Mazandaran",
+			"Zanjan"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Qazvin",
+			"nameDe": "Qazvin",
+			"nameIt": "Qazvin",
+			"population": 464551
+		},
+		"position": "north-west"
+	},
+	"alborz": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Markazi",
+			"Mazandaran",
+			"Qazvin",
+			"Tehran"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Karaj",
+			"nameDe": "Karadsch",
+			"nameIt": "Karaj",
+			"population": 1423000
+		},
+		"position": "north"
+	},
+	"semnan": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Golestan",
+			"Isfahan",
+			"Mazandaran",
+			"North Khorasan",
+			"Qom",
+			"Razavi Khorasan",
+			"Tehran",
+			"Yazd"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Shahrud",
+			"nameDe": "Schahrud",
+			"nameIt": "Shahrud",
+			"population": 131889
+		},
+		"position": "north"
+	},
+	"kurdistan": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Hamadan",
+			"Kermanshah",
+			"West Azerbaijan",
+			"Zanjan"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Sanandaj",
+			"nameDe": "Sanandadsch",
+			"nameIt": "Sanandaj",
+			"population": 349176
+		},
+		"position": "north-west"
+	},
+	"tehran": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Alborz",
+			"Markazi",
+			"Mazandaran",
+			"Qom",
+			"Semnan"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tehran",
+			"nameDe": "Teheran",
+			"nameIt": "Teheran",
+			"population": 7873000
+		},
+		"position": "north"
+	},
+	"razavi-khorasan": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"North Khorasan",
+			"Semnan",
+			"South Khorasan",
+			"Yazd"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Mashhad",
+			"nameDe": "Maschhad",
+			"nameIt": "Mashhad",
+			"population": 2469000
+		},
+		"peak": {
+			"name": "Kuh-e Siah Khvani",
+			"elevation": 3314
+		},
+		"position": "north-east"
+	},
+	"hamadan": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Kermanshah",
+			"Kurdistan",
+			"Lorestan",
+			"Markazi",
+			"Qazvin",
+			"Zanjan"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Hamadan",
+			"nameDe": "Hamadan",
+			"nameIt": "Hamadan",
+			"population": 528256
+		},
+		"position": "west"
+	},
+	"qom": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Isfahan",
+			"Markazi",
+			"Semnan",
+			"Tehran"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Qom",
+			"nameDe": "Ghom",
+			"nameIt": "Qom",
+			"population": 973000
+		},
+		"position": "centre"
+	},
+	"markazi": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Alborz",
+			"Hamadan",
+			"Isfahan",
+			"Lorestan",
+			"Qazvin",
+			"Qom",
+			"Tehran"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Arak",
+			"nameDe": "Arak",
+			"nameIt": "Arak",
+			"population": 503647
+		},
+		"position": "west"
+	},
+	"kermanshah": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Hamadan",
+			"Ilam",
+			"Kurdistan",
+			"Lorestan"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kermanshah",
+			"nameDe": "Kermānschāh",
+			"nameIt": "Kermanshah",
+			"population": 828313
+		},
+		"position": "west"
+	},
+	"lorestan": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Hamadan",
+			"Ilam",
+			"Isfahan",
+			"Kermanshah",
+			"Khuzestan",
+			"Markazi"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Khorramabad",
+			"nameDe": "Chorramabad",
+			"nameIt": "Khorramabad",
+			"population": 375198
+		},
+		"peak": {
+			"name": "Kuh-e Garin",
+			"elevation": 3630
+		},
+		"position": "west"
+	},
+	"ilam": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Kermanshah",
+			"Khuzestan",
+			"Lorestan"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ilam",
+			"nameDe": "Ilam",
+			"nameIt": "Ilam",
+			"population": 152894
+		},
+		"position": "west"
+	},
+	"isfahan": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Chaharmahal and Bakhtiari",
+			"Fars",
+			"Khuzestan",
+			"Kohgiluyeh and Boyer-Ahmad",
+			"Lorestan",
+			"Markazi",
+			"Qom",
+			"Semnan",
+			"Yazd"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Isfahan",
+			"nameDe": "Isfahan",
+			"nameIt": "Esfahan",
+			"population": 1628000
+		},
+		"peak": {
+			"name": "Kuh-e Dinar",
+			"elevation": 4409
+		},
+		"position": "centre"
+	},
+	"yazd": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Fars",
+			"Isfahan",
+			"Kerman",
+			"Razavi Khorasan",
+			"Semnan",
+			"South Khorasan"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Yazd",
+			"nameDe": "Yazd",
+			"nameIt": "Yazd",
+			"population": 477905
+		},
+		"peak": {
+			"name": "Kuh-e Nay Band",
+			"elevation": 2960
+		},
+		"position": "centre"
+	},
+	"south-khorasan": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Kerman",
+			"Razavi Khorasan",
+			"Sistan and Baluchestan",
+			"Yazd"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Birjand",
+			"nameDe": "Birdschand",
+			"nameIt": "Birjand",
+			"population": 324703
+		},
+		"position": "east"
+	},
+	"chaharmahal-and-bakhtiari": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Isfahan",
+			"Khuzestan",
+			"Kohgiluyeh and Boyer-Ahmad"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Shahrekord",
+			"nameDe": "Schahr-e Kord",
+			"nameIt": "Shahrekord",
+			"population": 129153
+		},
+		"peak": {
+			"name": "Zard Kuh",
+			"elevation": 4548
+		},
+		"position": "centre"
+	},
+	"khuzestan": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bushehr",
+			"Chaharmahal and Bakhtiari",
+			"Ilam",
+			"Isfahan",
+			"Kohgiluyeh and Boyer-Ahmad",
+			"Lorestan"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Ahvaz",
+			"nameDe": "Ahvaz",
+			"nameIt": "Ahvaz",
+			"population": 996000
+		},
+		"position": "west"
+	},
+	"kohgiluyeh-and-boyer-ahmad": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bushehr",
+			"Chaharmahal and Bakhtiari",
+			"Fars",
+			"Isfahan",
+			"Khuzestan"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Yasuj",
+			"nameDe": "Yasudsch",
+			"nameIt": "Yasuj",
+			"population": 96786
+		},
+		"position": "centre"
+	},
+	"fars": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bushehr",
+			"Hormozgan",
+			"Isfahan",
+			"Kerman",
+			"Kohgiluyeh and Boyer-Ahmad",
+			"Yazd"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Shiraz",
+			"nameDe": "Schiras",
+			"nameIt": "Shiraz",
+			"population": 1240000
+		},
+		"position": "south"
+	},
+	"kerman": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Fars",
+			"Hormozgan",
+			"Sistan and Baluchestan",
+			"South Khorasan",
+			"Yazd"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kerman",
+			"nameDe": "Kerman",
+			"nameIt": "Kerman",
+			"population": 577514
+		},
+		"peak": {
+			"name": "Kuh-e Hezar",
+			"elevation": 4465
+		},
+		"position": "south-east"
+	},
+	"bushehr": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Fars",
+			"Hormozgan",
+			"Khuzestan",
+			"Kohgiluyeh and Boyer-Ahmad"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Bandar-e Bushehr",
+			"nameDe": "Buschehr",
+			"nameIt": "Bushehr",
+			"population": 169060
+		},
+		"position": "south"
+	},
+	"sistan-and-baluchestan": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Hormozgan",
+			"Kerman",
+			"South Khorasan"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Zahedan",
+			"nameDe": "Zahedan",
+			"nameIt": "Zahedan",
+			"population": 598887
+		},
+		"peak": {
+			"name": "Kuh-e Taftan",
+			"elevation": 3941
+		},
+		"position": "south-east"
+	},
+	"hormozgan": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bushehr",
+			"Fars",
+			"Kerman",
+			"Sistan and Baluchestan"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Bandar-e-Abbas",
+			"nameDe": "Bandar Abbas",
+			"nameIt": "Bandar Abbas",
+			"population": 461499
+		},
+		"peak": {
+			"name": "Kuh-e Fareghan",
+			"elevation": 3240
+		},
+		"position": "south"
+	}
+}

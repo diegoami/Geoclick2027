@@ -1,0 +1,462 @@
+{
+	"id": "saudi-arabia-regions",
+	"name": "Saudi Arabia — Regions",
+	"country": "Saudi Arabia",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "al-jawf",
+			"name": "Al-Jawf",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				38.361,
+				29.94645
+			],
+			"bbox": [
+				34.8428,
+				28.1395,
+				41.8792,
+				31.7534
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						36.6142,
+						29.1391
+					],
+					[
+						38.8853,
+						29.7222
+					],
+					[
+						41.2037,
+						30.0886
+					]
+				],
+				"aspect": 2.23
+			}
+		},
+		{
+			"id": "northern-borders",
+			"name": "Northern Borders",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				42.1467,
+				29.82085
+			],
+			"bbox": [
+				37.8661,
+				27.5204,
+				46.4273,
+				32.1213
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "ha-il",
+			"name": "Ha'il",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				41.8995,
+				27.09215
+			],
+			"bbox": [
+				39.0001,
+				25.3164,
+				44.7989,
+				28.8679
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						40.0675,
+						27.0373
+					],
+					[
+						41.8105,
+						27.2713
+					],
+					[
+						43.5534,
+						27.8043
+					]
+				],
+				"aspect": 1.17
+			}
+		},
+		{
+			"id": "tabuk",
+			"name": "Tabuk",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				37.39615,
+				26.76195
+			],
+			"bbox": [
+				34.6267,
+				24.5396,
+				40.1656,
+				28.9843
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						35.1906,
+						27.7833
+					],
+					[
+						37.3101,
+						27.4257
+					],
+					[
+						39.4296,
+						27.067
+					]
+				],
+				"aspect": 2.72
+			}
+		},
+		{
+			"id": "qassim",
+			"name": "Qassim",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				43.11535,
+				25.95805
+			],
+			"bbox": [
+				41.4098,
+				24.6115,
+				44.8209,
+				27.3046
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						42.0828,
+						25.14
+					],
+					[
+						43.2558,
+						25.8119
+					],
+					[
+						44.1918,
+						26.7313
+					]
+				],
+				"aspect": 1.62
+			}
+		},
+		{
+			"id": "medina",
+			"name": "Medina",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				39.4602,
+				24.946550000000002
+			],
+			"bbox": [
+				36.8241,
+				22.4998,
+				42.0963,
+				27.3933
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						38.0071,
+						26.5082
+					],
+					[
+						39.2368,
+						24.7365
+					],
+					[
+						41.1481,
+						23.5607
+					]
+				],
+				"aspect": 1.74
+			}
+		},
+		{
+			"id": "riyadh",
+			"name": "Riyadh",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				45.1392,
+				23.394750000000002
+			],
+			"bbox": [
+				41.9793,
+				19.2569,
+				48.2991,
+				27.5326
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						43.745,
+						23.0066
+					],
+					[
+						45.7257,
+						23.5719
+					],
+					[
+						47.7065,
+						22.5831
+					]
+				],
+				"aspect": 0.52
+			}
+		},
+		{
+			"id": "eastern-province",
+			"name": "Eastern Province",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				50.31385,
+				23.0944
+			],
+			"bbox": [
+				44.9901,
+				17.0931,
+				55.6376,
+				29.0957
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						46.8745,
+						28.4287
+					],
+					[
+						48.8196,
+						23.8571
+					],
+					[
+						52.2368,
+						19.9532
+					]
+				],
+				"aspect": 3.41
+			}
+		},
+		{
+			"id": "mecca",
+			"name": "Mecca",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				41.155649999999994,
+				21.0352
+			],
+			"bbox": [
+				38.6438,
+				18.1211,
+				43.6675,
+				23.9493
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						39.4575,
+						21.7139
+					],
+					[
+						41.2988,
+						21.6598
+					],
+					[
+						43.1401,
+						21.9407
+					]
+				],
+				"aspect": 1.31
+			}
+		},
+		{
+			"id": "al-bahah",
+			"name": "Al-Bahah",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				41.4188,
+				20.05895
+			],
+			"bbox": [
+				40.8056,
+				19.3969,
+				42.032,
+				20.721
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						41.1349,
+						19.5948
+					],
+					[
+						41.2756,
+						20.1589
+					],
+					[
+						41.7755,
+						20.5
+					]
+				],
+				"aspect": 1.63
+			}
+		},
+		{
+			"id": "asir",
+			"name": "Asir",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				42.95025,
+				19.207349999999998
+			],
+			"bbox": [
+				41.3837,
+				17.4385,
+				44.5168,
+				20.9762
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						42.0587,
+						19.2242
+					],
+					[
+						43.0014,
+						19.1459
+					],
+					[
+						43.9441,
+						19.4719
+					]
+				],
+				"aspect": 0.65
+			}
+		},
+		{
+			"id": "najran",
+			"name": "Najran",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				45.691649999999996,
+				18.24405
+			],
+			"bbox": [
+				43.6382,
+				16.9568,
+				47.7451,
+				19.5313
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						44.0149,
+						18.1019
+					],
+					[
+						45.6318,
+						18.4183
+					],
+					[
+						47.2885,
+						18.3072
+					]
+				],
+				"aspect": 1.55
+			}
+		},
+		{
+			"id": "jazan",
+			"name": "Jazan",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				42.46955,
+				17.357799999999997
+			],
+			"bbox": [
+				41.5971,
+				16.4016,
+				43.342,
+				18.314
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						41.8111,
+						18.1376
+					],
+					[
+						42.771,
+						17.7258
+					],
+					[
+						43.0356,
+						16.745
+					]
+				],
+				"aspect": 3.67
+			}
+		}
+	],
+	"tourOrder": [
+		"al-jawf",
+		"northern-borders",
+		"ha-il",
+		"tabuk",
+		"qassim",
+		"medina",
+		"riyadh",
+		"eastern-province",
+		"mecca",
+		"al-bahah",
+		"asir",
+		"najran",
+		"jazan"
+	]
+}

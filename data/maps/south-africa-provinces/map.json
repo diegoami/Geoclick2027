@@ -1,0 +1,335 @@
+{
+	"id": "south-africa-provinces",
+	"name": "South Africa — Provinces",
+	"country": "South Africa",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "limpopo",
+			"name": "Limpopo",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				29.13025,
+				-23.7673
+			],
+			"bbox": [
+				26.404,
+				-25.4037,
+				31.8565,
+				-22.1309
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						27.3641,
+						-24.3463
+					],
+					[
+						29.2541,
+						-23.9188
+					],
+					[
+						31.027,
+						-23.1875
+					]
+				],
+				"aspect": 1.5
+			}
+		},
+		{
+			"id": "mpumalanga",
+			"name": "Mpumalanga",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				30.1237,
+				-25.7324
+			],
+			"bbox": [
+				28.2558,
+				-27.5018,
+				31.9916,
+				-23.963
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						29.2475,
+						-26.8092
+					],
+					[
+						30.5557,
+						-25.8044
+					],
+					[
+						31.6887,
+						-24.6241
+					]
+				],
+				"aspect": 2.17
+			}
+		},
+		{
+			"id": "gauteng",
+			"name": "Gauteng",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				28.08365,
+				-26.00425
+			],
+			"bbox": [
+				27.1913,
+				-26.8936,
+				28.976,
+				-25.1149
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						27.4669,
+						-26.322
+					],
+					[
+						28.0258,
+						-26.3111
+					],
+					[
+						28.5848,
+						-25.8182
+					]
+				],
+				"aspect": 1.09
+			}
+		},
+		{
+			"id": "north-west",
+			"name": "North West",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				25.4573,
+				-26.36405
+			],
+			"bbox": [
+				22.6209,
+				-28.0996,
+				28.2937,
+				-24.6285
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						23.8882,
+						-26.7581
+					],
+					[
+						25.728,
+						-26.9578
+					],
+					[
+						27.1265,
+						-25.7396
+					]
+				],
+				"aspect": 1.47
+			}
+		},
+		{
+			"id": "free-state",
+			"name": "Free State",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				27.056,
+				-28.70245
+			],
+			"bbox": [
+				24.3408,
+				-30.6806,
+				29.7712,
+				-26.7243
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						25.3652,
+						-29.9855
+					],
+					[
+						26.4972,
+						-28.0955
+					],
+					[
+						28.823,
+						-27.5071
+					]
+				],
+				"aspect": 1.82
+			}
+		},
+		{
+			"id": "northern-cape",
+			"name": "Northern Cape",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				21.004550000000002,
+				-28.85095
+			],
+			"bbox": [
+				16.4871,
+				-32.9369,
+				25.522,
+				-24.765
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						19.2262,
+						-29.9821
+					],
+					[
+						21.5758,
+						-28.74
+					],
+					[
+						23.9253,
+						-29.4203
+					]
+				],
+				"aspect": 0.75
+			}
+		},
+		{
+			"id": "kwazulu-natal",
+			"name": "KwaZulu-Natal",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				30.87605,
+				-28.9581
+			],
+			"bbox": [
+				28.859,
+				-31.0779,
+				32.8931,
+				-26.8383
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						29.7207,
+						-30.3091
+					],
+					[
+						30.194,
+						-28.2807
+					],
+					[
+						32.3335,
+						-27.3069
+					]
+				],
+				"aspect": 2.06
+			}
+		},
+		{
+			"id": "eastern-cape",
+			"name": "Eastern Cape",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				26.4706,
+				-32.078450000000004
+			],
+			"bbox": [
+				22.7452,
+				-34.1783,
+				30.196,
+				-29.9786
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						24.083,
+						-33.26
+					],
+					[
+						26.4106,
+						-32.1155
+					],
+					[
+						28.8211,
+						-31.0921
+					]
+				],
+				"aspect": 1.9
+			}
+		},
+		{
+			"id": "western-cape",
+			"name": "Western Cape",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.97435,
+				-32.639700000000005
+			],
+			"bbox": [
+				17.7671,
+				-34.8087,
+				24.1816,
+				-30.4707
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						18.5604,
+						-33.1109
+					],
+					[
+						20.5759,
+						-34.0854
+					],
+					[
+						22.5915,
+						-33.4495
+					]
+				],
+				"aspect": 1.55
+			}
+		}
+	],
+	"tourOrder": [
+		"limpopo",
+		"mpumalanga",
+		"gauteng",
+		"north-west",
+		"free-state",
+		"northern-cape",
+		"kwazulu-natal",
+		"eastern-cape",
+		"western-cape"
+	]
+}

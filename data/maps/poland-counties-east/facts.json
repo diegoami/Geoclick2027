@@ -1,0 +1,1005 @@
+{
+	"powiat-suwalski": {
+		"kind": "region",
+		"borders": [
+			"powiat augustowski",
+			"powiat sejneński",
+			"Suwałki"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"suwa-ki": {
+		"kind": "region",
+		"borders": [
+			"powiat suwalski"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"powiat-sejnenski": {
+		"kind": "region",
+		"borders": [
+			"powiat augustowski",
+			"powiat suwalski"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"powiat-augustowski": {
+		"kind": "region",
+		"borders": [
+			"powiat grajewski",
+			"powiat moniecki",
+			"powiat sejneński",
+			"powiat sokólski",
+			"powiat suwalski"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"powiat-grajewski": {
+		"kind": "region",
+		"borders": [
+			"powiat augustowski",
+			"powiat kolneński",
+			"powiat łomżyński",
+			"powiat moniecki"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"powiat-moniecki": {
+		"kind": "region",
+		"borders": [
+			"powiat augustowski",
+			"powiat białostocki",
+			"powiat grajewski",
+			"powiat łomżyński",
+			"powiat sokólski"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"powiat-sokolski": {
+		"kind": "region",
+		"borders": [
+			"powiat augustowski",
+			"powiat białostocki",
+			"powiat moniecki"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"powiat-kolnenski": {
+		"kind": "region",
+		"borders": [
+			"powiat grajewski",
+			"powiat łomżyński",
+			"powiat ostrołęcki"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"powiat-omzynski": {
+		"kind": "region",
+		"borders": [
+			"Łomża",
+			"powiat białostocki",
+			"powiat grajewski",
+			"powiat kolneński",
+			"powiat moniecki",
+			"powiat ostrołęcki",
+			"powiat ostrowski (Mazowieckie)",
+			"powiat zambrowski"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"omza": {
+		"kind": "region",
+		"borders": [
+			"powiat łomżyński"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"powiat-ostro-ecki": {
+		"kind": "region",
+		"borders": [
+			"Ostrołęka",
+			"powiat kolneński",
+			"powiat łomżyński",
+			"powiat makowski",
+			"powiat ostrowski (Mazowieckie)",
+			"powiat przasnyski",
+			"powiat wyszkowski"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"bia-ystok": {
+		"kind": "region",
+		"borders": [
+			"powiat białostocki"
+		],
+		"coastal": false,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"\"White slope\" or \"white stream\" — biały white, stok a slope or watercourse.",
+				"Ludwik Zamenhof was born here and invented Esperanto, partly because the town’s Poles, Jews, Germans and Russians could not talk to each other.",
+				"The Branicki Palace in it is called the Versailles of Podlasie."
+			],
+			"it": [
+				"\"Pendio bianco\" o \"ruscello bianco\": biały vuol dire bianco, stok pendio o corso d’acqua.",
+				"Qui nacque Ludwik Zamenhof, che inventò l’esperanto anche perché polacchi, ebrei, tedeschi e russi della città non riuscivano a capirsi.",
+				"Il Palazzo Branicki, in città, è chiamato la Versailles della Podlachia."
+			]
+		}
+	},
+	"powiat-bia-ostocki": {
+		"kind": "region",
+		"borders": [
+			"Białystok",
+			"powiat bielski (Podlaskie)",
+			"powiat hajnowski",
+			"powiat łomżyński",
+			"powiat moniecki",
+			"powiat sokólski",
+			"powiat wysokomazowiecki",
+			"powiat zambrowski"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"powiat-przasnyski": {
+		"kind": "region",
+		"borders": [
+			"powiat ciechanowski",
+			"powiat makowski",
+			"powiat mławski",
+			"powiat ostrołęcki"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"ostro-eka": {
+		"kind": "region",
+		"borders": [
+			"powiat ostrołęcki"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-m-awski": {
+		"kind": "region",
+		"borders": [
+			"powiat ciechanowski",
+			"powiat płoński",
+			"powiat przasnyski",
+			"powiat żuromiński"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-zambrowski": {
+		"kind": "region",
+		"borders": [
+			"powiat białostocki",
+			"powiat łomżyński",
+			"powiat ostrowski (Mazowieckie)",
+			"powiat wysokomazowiecki"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"powiat-zurominski": {
+		"kind": "region",
+		"borders": [
+			"powiat mławski",
+			"powiat płoński",
+			"powiat sierpecki"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"powiat-makowski": {
+		"kind": "region",
+		"borders": [
+			"powiat ciechanowski",
+			"powiat ostrołęcki",
+			"powiat przasnyski",
+			"powiat pułtuski",
+			"powiat wyszkowski"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-ciechanowski": {
+		"kind": "region",
+		"borders": [
+			"powiat makowski",
+			"powiat mławski",
+			"powiat płoński",
+			"powiat przasnyski",
+			"powiat pułtuski"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-wysokomazowiecki": {
+		"kind": "region",
+		"borders": [
+			"powiat białostocki",
+			"powiat bielski (Podlaskie)",
+			"powiat ostrowski (Mazowieckie)",
+			"powiat siemiatycki",
+			"powiat sokołowski",
+			"powiat zambrowski"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"powiat-sierpecki": {
+		"kind": "region",
+		"borders": [
+			"powiat płocki",
+			"powiat płoński",
+			"powiat żuromiński"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"powiat-ostrowski-mazowieckie": {
+		"kind": "region",
+		"borders": [
+			"powiat łomżyński",
+			"powiat ostrołęcki",
+			"powiat sokołowski",
+			"powiat węgrowski",
+			"powiat wysokomazowiecki",
+			"powiat wyszkowski",
+			"powiat zambrowski"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"powiat-bielski-podlaskie": {
+		"kind": "region",
+		"borders": [
+			"powiat białostocki",
+			"powiat hajnowski",
+			"powiat siemiatycki",
+			"powiat wysokomazowiecki"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"powiat-hajnowski": {
+		"kind": "region",
+		"borders": [
+			"powiat białostocki",
+			"powiat bielski (Podlaskie)",
+			"powiat siemiatycki"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"powiat-pu-tuski": {
+		"kind": "region",
+		"borders": [
+			"powiat ciechanowski",
+			"powiat legionowski",
+			"powiat makowski",
+			"powiat nowodworski (Mazowieckie)",
+			"powiat płoński",
+			"powiat wyszkowski"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-wyszkowski": {
+		"kind": "region",
+		"borders": [
+			"powiat legionowski",
+			"powiat makowski",
+			"powiat ostrołęcki",
+			"powiat ostrowski (Mazowieckie)",
+			"powiat pułtuski",
+			"powiat węgrowski",
+			"powiat wołomiński"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-p-onski": {
+		"kind": "region",
+		"borders": [
+			"powiat ciechanowski",
+			"powiat mławski",
+			"powiat nowodworski (Mazowieckie)",
+			"powiat płocki",
+			"powiat pułtuski",
+			"powiat sierpecki",
+			"powiat sochaczewski",
+			"powiat żuromiński"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-p-ocki": {
+		"kind": "region",
+		"borders": [
+			"Płock",
+			"powiat gostyniński",
+			"powiat płoński",
+			"powiat sierpecki",
+			"powiat sochaczewski"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"p-ock": {
+		"kind": "region",
+		"borders": [
+			"powiat płocki"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"powiat-soko-owski": {
+		"kind": "region",
+		"borders": [
+			"powiat ostrowski (Mazowieckie)",
+			"powiat siedlecki",
+			"powiat siemiatycki",
+			"powiat węgrowski",
+			"powiat wysokomazowiecki"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"powiat-siemiatycki": {
+		"kind": "region",
+		"borders": [
+			"powiat bielski (Podlaskie)",
+			"powiat hajnowski",
+			"powiat łosicki",
+			"powiat siedlecki",
+			"powiat sokołowski",
+			"powiat wysokomazowiecki"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"powiat-nowodworski-mazowieckie": {
+		"kind": "region",
+		"borders": [
+			"powiat legionowski",
+			"powiat płoński",
+			"powiat pułtuski",
+			"powiat sochaczewski",
+			"powiat warszawski zachodni"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-wegrowski": {
+		"kind": "region",
+		"borders": [
+			"powiat miński",
+			"powiat ostrowski (Mazowieckie)",
+			"powiat siedlecki",
+			"powiat sokołowski",
+			"powiat wołomiński",
+			"powiat wyszkowski"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-legionowski": {
+		"kind": "region",
+		"borders": [
+			"powiat nowodworski (Mazowieckie)",
+			"powiat pułtuski",
+			"powiat warszawski zachodni",
+			"powiat wołomiński",
+			"powiat wyszkowski",
+			"Warszawa"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-wo-ominski": {
+		"kind": "region",
+		"borders": [
+			"powiat legionowski",
+			"powiat miński",
+			"powiat węgrowski",
+			"powiat wyszkowski",
+			"Warszawa"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-gostyninski": {
+		"kind": "region",
+		"borders": [
+			"powiat kutnowski",
+			"powiat łowicki",
+			"powiat płocki",
+			"powiat sochaczewski"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"powiat-warszawski-zachodni": {
+		"kind": "region",
+		"borders": [
+			"powiat grodziski (Mazowieckie)",
+			"powiat legionowski",
+			"powiat nowodworski (Mazowieckie)",
+			"powiat pruszkowski",
+			"powiat sochaczewski",
+			"Warszawa"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-sochaczewski": {
+		"kind": "region",
+		"borders": [
+			"powiat gostyniński",
+			"powiat grodziski (Mazowieckie)",
+			"powiat łowicki",
+			"powiat nowodworski (Mazowieckie)",
+			"powiat płocki",
+			"powiat płoński",
+			"powiat skierniewicki",
+			"powiat warszawski zachodni",
+			"powiat żyrardowski"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-kutnowski": {
+		"kind": "region",
+		"borders": [
+			"powiat gostyniński",
+			"powiat łęczycki",
+			"powiat łowicki"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"warszawa": {
+		"kind": "region",
+		"borders": [
+			"powiat legionowski",
+			"powiat miński",
+			"powiat otwocki",
+			"powiat piaseczyński",
+			"powiat pruszkowski",
+			"powiat warszawski zachodni",
+			"powiat wołomiński"
+		],
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"From a personal name, Warsz — the mermaid legend of Wars and Sawa is a later folk invention.",
+				"About 85% of the city was deliberately destroyed after the 1944 uprising and rebuilt from paintings and photographs.",
+				"That reconstruction is itself a UNESCO site, listed for the act of rebuilding rather than for the original."
+			],
+			"it": [
+				"Da un nome di persona, Warsz: la leggenda della sirena, di Wars e Sawa, è un’invenzione popolare successiva.",
+				"Circa l’85% della città fu distrutto deliberatamente dopo l’insurrezione del 1944 e ricostruito sulla base di dipinti e fotografie.",
+				"Quella ricostruzione è essa stessa patrimonio UNESCO, iscritta per l’atto del ricostruire e non per l’originale."
+			]
+		}
+	},
+	"powiat-osicki": {
+		"kind": "region",
+		"borders": [
+			"powiat siedlecki",
+			"powiat siemiatycki"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"powiat-siedlecki": {
+		"kind": "region",
+		"borders": [
+			"powiat garwoliński",
+			"powiat łosicki",
+			"powiat miński",
+			"powiat siemiatycki",
+			"powiat sokołowski",
+			"powiat węgrowski",
+			"Siedlce"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"powiat-minski": {
+		"kind": "region",
+		"borders": [
+			"powiat garwoliński",
+			"powiat otwocki",
+			"powiat siedlecki",
+			"powiat węgrowski",
+			"powiat wołomiński",
+			"Warszawa"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"siedlce": {
+		"kind": "region",
+		"borders": [
+			"powiat siedlecki"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"powiat-owicki": {
+		"kind": "region",
+		"borders": [
+			"powiat brzeziński",
+			"powiat gostyniński",
+			"powiat kutnowski",
+			"powiat łęczycki",
+			"powiat skierniewicki",
+			"powiat sochaczewski",
+			"powiat zgierski"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"powiat-eczycki": {
+		"kind": "region",
+		"borders": [
+			"powiat kutnowski",
+			"powiat łowicki",
+			"powiat poddębicki",
+			"powiat zgierski"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"powiat-pruszkowski": {
+		"kind": "region",
+		"borders": [
+			"powiat grodziski (Mazowieckie)",
+			"powiat piaseczyński",
+			"powiat warszawski zachodni",
+			"Warszawa"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-grodziski-mazowieckie": {
+		"kind": "region",
+		"borders": [
+			"powiat grójecki",
+			"powiat piaseczyński",
+			"powiat pruszkowski",
+			"powiat sochaczewski",
+			"powiat warszawski zachodni",
+			"powiat żyrardowski"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-otwocki": {
+		"kind": "region",
+		"borders": [
+			"powiat garwoliński",
+			"powiat grójecki",
+			"powiat miński",
+			"powiat piaseczyński",
+			"Warszawa"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-piaseczynski": {
+		"kind": "region",
+		"borders": [
+			"powiat grodziski (Mazowieckie)",
+			"powiat grójecki",
+			"powiat otwocki",
+			"powiat pruszkowski",
+			"Warszawa"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"powiat-zyrardowski": {
+		"kind": "region",
+		"borders": [
+			"powiat grodziski (Mazowieckie)",
+			"powiat grójecki",
+			"powiat rawski",
+			"powiat skierniewicki",
+			"powiat sochaczewski"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"skierniewice": {
+		"kind": "region",
+		"borders": [
+			"powiat skierniewicki"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"powiat-skierniewicki": {
+		"kind": "region",
+		"borders": [
+			"powiat brzeziński",
+			"powiat łowicki",
+			"powiat rawski",
+			"powiat sochaczewski",
+			"powiat tomaszowski (Łódzkie)",
+			"powiat żyrardowski",
+			"Skierniewice"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"powiat-zgierski": {
+		"kind": "region",
+		"borders": [
+			"Łódź",
+			"powiat brzeziński",
+			"powiat łęczycki",
+			"powiat łódzki wschodni",
+			"powiat łowicki",
+			"powiat pabianicki",
+			"powiat poddębicki"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"powiat-poddebicki": {
+		"kind": "region",
+		"borders": [
+			"powiat łaski",
+			"powiat łęczycki",
+			"powiat pabianicki",
+			"powiat sieradzki",
+			"powiat zduńskowolski",
+			"powiat zgierski"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"powiat-brzezinski": {
+		"kind": "region",
+		"borders": [
+			"powiat łódzki wschodni",
+			"powiat łowicki",
+			"powiat skierniewicki",
+			"powiat tomaszowski (Łódzkie)",
+			"powiat zgierski"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"powiat-garwolinski": {
+		"kind": "region",
+		"borders": [
+			"powiat grójecki",
+			"powiat kozienicki",
+			"powiat miński",
+			"powiat otwocki",
+			"powiat siedlecki"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"odz": {
+		"kind": "region",
+		"borders": [
+			"powiat łódzki wschodni",
+			"powiat pabianicki",
+			"powiat zgierski"
+		],
+		"coastal": false,
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Łódź means \"boat\", and the coat of arms is one, though the city sits on no navigable river.",
+				"It grew from 800 people to 300,000 in a century on textiles, which is why it is laid out like Manchester.",
+				"Its Piotrkowska Street runs over 4 km, one of the longest commercial streets in Europe."
+			],
+			"it": [
+				"Łódź significa \"barca\", e lo stemma è proprio una barca, anche se la città non sorge su alcun fiume navigabile.",
+				"In un secolo passò da 800 a 300.000 abitanti grazie al tessile, ed è per questo che è disegnata come Manchester.",
+				"La sua via Piotrkowska corre per oltre 4 km: una delle vie commerciali più lunghe d’Europa."
+			]
+		}
+	},
+	"powiat-rawski": {
+		"kind": "region",
+		"borders": [
+			"powiat grójecki",
+			"powiat skierniewicki",
+			"powiat tomaszowski (Łódzkie)",
+			"powiat żyrardowski"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"powiat-grojecki": {
+		"kind": "region",
+		"borders": [
+			"powiat białobrzeski",
+			"powiat garwoliński",
+			"powiat grodziski (Mazowieckie)",
+			"powiat kozienicki",
+			"powiat otwocki",
+			"powiat piaseczyński",
+			"powiat przysuski",
+			"powiat rawski",
+			"powiat tomaszowski (Łódzkie)",
+			"powiat żyrardowski"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"powiat-odzki-wschodni": {
+		"kind": "region",
+		"borders": [
+			"Łódź",
+			"powiat brzeziński",
+			"powiat pabianicki",
+			"powiat piotrkowski",
+			"powiat tomaszowski (Łódzkie)",
+			"powiat zgierski"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"powiat-pabianicki": {
+		"kind": "region",
+		"borders": [
+			"Łódź",
+			"powiat bełchatowski",
+			"powiat łaski",
+			"powiat łódzki wschodni",
+			"powiat piotrkowski",
+			"powiat poddębicki",
+			"powiat zgierski"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"powiat-kozienicki": {
+		"kind": "region",
+		"borders": [
+			"powiat białobrzeski",
+			"powiat garwoliński",
+			"powiat grójecki",
+			"powiat radomski",
+			"powiat zwoleński"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"powiat-bia-obrzeski": {
+		"kind": "region",
+		"borders": [
+			"powiat grójecki",
+			"powiat kozienicki",
+			"powiat przysuski",
+			"powiat radomski"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"powiat-zdunskowolski": {
+		"kind": "region",
+		"borders": [
+			"powiat łaski",
+			"powiat poddębicki",
+			"powiat sieradzki"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"powiat-sieradzki": {
+		"kind": "region",
+		"borders": [
+			"powiat łaski",
+			"powiat poddębicki",
+			"powiat wieluński",
+			"powiat wieruszowski",
+			"powiat zduńskowolski"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"powiat-tomaszowski-odzkie": {
+		"kind": "region",
+		"borders": [
+			"powiat brzeziński",
+			"powiat grójecki",
+			"powiat łódzki wschodni",
+			"powiat opoczyński",
+			"powiat piotrkowski",
+			"powiat przysuski",
+			"powiat rawski",
+			"powiat skierniewicki"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"powiat-aski": {
+		"kind": "region",
+		"borders": [
+			"powiat bełchatowski",
+			"powiat pabianicki",
+			"powiat poddębicki",
+			"powiat sieradzki",
+			"powiat wieluński",
+			"powiat zduńskowolski"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"powiat-przysuski": {
+		"kind": "region",
+		"borders": [
+			"powiat białobrzeski",
+			"powiat grójecki",
+			"powiat opoczyński",
+			"powiat radomski",
+			"powiat szydłowiecki",
+			"powiat tomaszowski (Łódzkie)"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"radom": {
+		"kind": "region",
+		"borders": [
+			"powiat radomski"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"piotrkow-trybunalski": {
+		"kind": "region",
+		"borders": [
+			"powiat piotrkowski"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"powiat-opoczynski": {
+		"kind": "region",
+		"borders": [
+			"powiat piotrkowski",
+			"powiat przysuski",
+			"powiat radomszczański",
+			"powiat tomaszowski (Łódzkie)"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"powiat-piotrkowski": {
+		"kind": "region",
+		"borders": [
+			"Piotrków Trybunalski",
+			"powiat bełchatowski",
+			"powiat łódzki wschodni",
+			"powiat opoczyński",
+			"powiat pabianicki",
+			"powiat radomszczański",
+			"powiat tomaszowski (Łódzkie)"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"powiat-be-chatowski": {
+		"kind": "region",
+		"borders": [
+			"powiat łaski",
+			"powiat pabianicki",
+			"powiat pajęczański",
+			"powiat piotrkowski",
+			"powiat radomszczański",
+			"powiat wieluński"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"powiat-zwolenski": {
+		"kind": "region",
+		"borders": [
+			"powiat kozienicki",
+			"powiat lipski",
+			"powiat radomski"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"powiat-radomski": {
+		"kind": "region",
+		"borders": [
+			"powiat białobrzeski",
+			"powiat kozienicki",
+			"powiat lipski",
+			"powiat przysuski",
+			"powiat szydłowiecki",
+			"powiat zwoleński",
+			"Radom"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"powiat-wieruszowski": {
+		"kind": "region",
+		"borders": [
+			"powiat sieradzki",
+			"powiat wieluński"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"powiat-szyd-owiecki": {
+		"kind": "region",
+		"borders": [
+			"powiat przysuski",
+			"powiat radomski"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"powiat-wielunski": {
+		"kind": "region",
+		"borders": [
+			"powiat bełchatowski",
+			"powiat łaski",
+			"powiat pajęczański",
+			"powiat sieradzki",
+			"powiat wieruszowski"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"powiat-lipski": {
+		"kind": "region",
+		"borders": [
+			"powiat radomski",
+			"powiat zwoleński"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"powiat-pajeczanski": {
+		"kind": "region",
+		"borders": [
+			"powiat bełchatowski",
+			"powiat radomszczański",
+			"powiat wieluński"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"powiat-radomszczanski": {
+		"kind": "region",
+		"borders": [
+			"powiat bełchatowski",
+			"powiat opoczyński",
+			"powiat pajęczański",
+			"powiat piotrkowski"
+		],
+		"coastal": false,
+		"position": "south-west"
+	}
+}

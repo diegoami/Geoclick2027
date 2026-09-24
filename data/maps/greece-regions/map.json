@@ -1,0 +1,498 @@
+{
+	"id": "greece-regions",
+	"name": "Greece — Regions",
+	"country": "Greece",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "eastern-macedonia-and-thrace",
+			"name": "Eastern Macedonia and Thrace",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				25.1307,
+				41.07195
+			],
+			"bbox": [
+				23.6248,
+				40.3981,
+				26.6366,
+				41.7458
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						23.9471,
+						41.2794
+					],
+					[
+						25.211,
+						40.8634
+					],
+					[
+						26.4171,
+						41.3404
+					]
+				],
+				"aspect": 3.98
+			}
+		},
+		{
+			"id": "central-macedonia",
+			"name": "Central Macedonia",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				22.91045,
+				40.6616
+			],
+			"bbox": [
+				21.6992,
+				39.9233,
+				24.1217,
+				41.3999
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						22.0092,
+						40.6747
+					],
+					[
+						22.8368,
+						40.7544
+					],
+					[
+						23.6643,
+						40.8723
+					]
+				],
+				"aspect": 1.25
+			}
+		},
+		{
+			"id": "western-macedonia",
+			"name": "Western Macedonia",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				21.45535,
+				40.3664
+			],
+			"bbox": [
+				20.7396,
+				39.8048,
+				22.1711,
+				40.928
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						21.0466,
+						40.3314
+					],
+					[
+						21.476,
+						40.4502
+					],
+					[
+						21.9055,
+						40.255
+					]
+				],
+				"aspect": 0.64
+			}
+		},
+		{
+			"id": "mount-athos",
+			"name": "Mount Athos",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				24.1925,
+				40.25775
+			],
+			"bbox": [
+				24.0017,
+				40.1281,
+				24.3833,
+				40.3874
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						24.0434,
+						40.3478
+					],
+					[
+						24.2285,
+						40.305
+					],
+					[
+						24.3167,
+						40.1739
+					]
+				],
+				"aspect": 3.73
+			}
+		},
+		{
+			"id": "epirus",
+			"name": "Epirus",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.7632,
+				39.63835
+			],
+			"bbox": [
+				20.1413,
+				38.9501,
+				21.3851,
+				40.3266
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						20.3695,
+						39.6912
+					],
+					[
+						20.7408,
+						39.7404
+					],
+					[
+						21.1121,
+						39.5151
+					]
+				],
+				"aspect": 0.61
+			}
+		},
+		{
+			"id": "thessaly",
+			"name": "Thessaly",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				22.22635,
+				39.562200000000004
+			],
+			"bbox": [
+				21.1104,
+				38.957,
+				23.3423,
+				40.1674
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						21.3863,
+						39.4989
+					],
+					[
+						22.088,
+						39.7025
+					],
+					[
+						22.7898,
+						39.4545
+					]
+				],
+				"aspect": 1.29
+			}
+		},
+		{
+			"id": "north-aegean",
+			"name": "North Aegean",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				26.04645,
+				38.777699999999996
+			],
+			"bbox": [
+				25.0454,
+				37.5192,
+				27.0475,
+				40.0362
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						25.9757,
+						39.2578
+					],
+					[
+						26.3018,
+						39.2701
+					],
+					[
+						26.5228,
+						39.0767
+					]
+				],
+				"aspect": 2.1
+			}
+		},
+		{
+			"id": "ionian-islands",
+			"name": "Ionian Islands",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.2689,
+				38.738
+			],
+			"bbox": [
+				19.6364,
+				37.6515,
+				20.9014,
+				39.8245
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						20.4007,
+						38.2576
+					],
+					[
+						20.5675,
+						38.2744
+					],
+					[
+						20.7342,
+						38.1654
+					]
+				],
+				"aspect": 1.47
+			}
+		},
+		{
+			"id": "central-greece",
+			"name": "Central Greece",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				23.0194,
+				38.6078
+			],
+			"bbox": [
+				21.3623,
+				37.9719,
+				24.6765,
+				39.2437
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						21.6679,
+						39.0368
+					],
+					[
+						22.6524,
+						38.372
+					],
+					[
+						23.9491,
+						38.4569
+					]
+				],
+				"aspect": 4.29
+			}
+		},
+		{
+			"id": "western-greece",
+			"name": "Western Greece",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				21.55075,
+				38.26645
+			],
+			"bbox": [
+				20.7293,
+				37.379,
+				22.3722,
+				39.1539
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						21.3592,
+						37.8607
+					],
+					[
+						21.7649,
+						37.8662
+					],
+					[
+						22.1705,
+						38.0738
+					]
+				],
+				"aspect": 1.2
+			}
+		},
+		{
+			"id": "peloponnese",
+			"name": "Peloponnese",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				22.5047,
+				37.3031
+			],
+			"bbox": [
+				21.5676,
+				36.4432,
+				23.4418,
+				38.163
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "attica",
+			"name": "Attica",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				23.49355,
+				37.2432
+			],
+			"bbox": [
+				22.8997,
+				36.1448,
+				24.0874,
+				38.3416
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						23.6052,
+						38.0911
+					],
+					[
+						23.8216,
+						38.1527
+					],
+					[
+						24.0379,
+						38.0509
+					]
+				],
+				"aspect": 0.72
+			}
+		},
+		{
+			"id": "south-aegean",
+			"name": "South Aegean",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				26.25895,
+				36.74485
+			],
+			"bbox": [
+				24.2781,
+				35.4931,
+				28.2398,
+				37.9966
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						27.7782,
+						35.9663
+					],
+					[
+						27.895,
+						36.2115
+					],
+					[
+						28.1509,
+						36.3703
+					]
+				],
+				"aspect": 2.4
+			}
+		},
+		{
+			"id": "crete",
+			"name": "Crete",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				24.91965,
+				35.29275
+			],
+			"bbox": [
+				23.5182,
+				34.9316,
+				26.3211,
+				35.6539
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						23.7215,
+						35.412
+					],
+					[
+						24.6413,
+						35.2026
+					],
+					[
+						25.5881,
+						35.1273
+					]
+				],
+				"aspect": 4.71
+			}
+		}
+	],
+	"tourOrder": [
+		"eastern-macedonia-and-thrace",
+		"central-macedonia",
+		"western-macedonia",
+		"mount-athos",
+		"epirus",
+		"thessaly",
+		"north-aegean",
+		"ionian-islands",
+		"central-greece",
+		"western-greece",
+		"peloponnese",
+		"attica",
+		"south-aegean",
+		"crete"
+	]
+}

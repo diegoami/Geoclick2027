@@ -1,0 +1,973 @@
+{
+	"powiat-z-otowski": {
+		"kind": "region",
+		"borders": [
+			"powiat pilski"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"powiat-pilski": {
+		"kind": "region",
+		"borders": [
+			"powiat chodzieski",
+			"powiat czarnkowsko-trzcianecki",
+			"powiat wągrowiecki",
+			"powiat złotowski"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"powiat-chodzieski": {
+		"kind": "region",
+		"borders": [
+			"powiat czarnkowsko-trzcianecki",
+			"powiat obornicki",
+			"powiat pilski",
+			"powiat wągrowiecki"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"powiat-czarnkowsko-trzcianecki": {
+		"kind": "region",
+		"borders": [
+			"powiat chodzieski",
+			"powiat międzychodzki",
+			"powiat obornicki",
+			"powiat pilski",
+			"powiat strzelecko-drezdenecki",
+			"powiat szamotulski"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"powiat-strzelecko-drezdenecki": {
+		"kind": "region",
+		"borders": [
+			"powiat czarnkowsko-trzcianecki",
+			"powiat gorzowski",
+			"powiat międzychodzki",
+			"powiat międzyrzecki"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"powiat-wagrowiecki": {
+		"kind": "region",
+		"borders": [
+			"powiat chodzieski",
+			"powiat gnieźnieński",
+			"powiat obornicki",
+			"powiat pilski",
+			"powiat poznański"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"powiat-gorzowski": {
+		"kind": "region",
+		"borders": [
+			"Gorzów Wielkopolski",
+			"powiat międzyrzecki",
+			"powiat słubicki",
+			"powiat strzelecko-drezdenecki",
+			"powiat sulęciński"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"gorzow-wielkopolski": {
+		"kind": "region",
+		"borders": [
+			"powiat gorzowski"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"powiat-obornicki": {
+		"kind": "region",
+		"borders": [
+			"powiat chodzieski",
+			"powiat czarnkowsko-trzcianecki",
+			"powiat poznański",
+			"powiat szamotulski",
+			"powiat wągrowiecki"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"powiat-miedzychodzki": {
+		"kind": "region",
+		"borders": [
+			"powiat czarnkowsko-trzcianecki",
+			"powiat międzyrzecki",
+			"powiat nowotomyski",
+			"powiat strzelecko-drezdenecki",
+			"powiat szamotulski"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"powiat-szamotulski": {
+		"kind": "region",
+		"borders": [
+			"powiat czarnkowsko-trzcianecki",
+			"powiat międzychodzki",
+			"powiat nowotomyski",
+			"powiat obornicki",
+			"powiat poznański"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"powiat-gnieznienski": {
+		"kind": "region",
+		"borders": [
+			"powiat poznański",
+			"powiat słupecki",
+			"powiat wągrowiecki",
+			"powiat wrzesiński"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"powiat-miedzyrzecki": {
+		"kind": "region",
+		"borders": [
+			"powiat gorzowski",
+			"powiat międzychodzki",
+			"powiat nowotomyski",
+			"powiat strzelecko-drezdenecki",
+			"powiat sulęciński",
+			"powiat świebodziński"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"powiat-sulecinski": {
+		"kind": "region",
+		"borders": [
+			"powiat gorzowski",
+			"powiat krośnieński (Lubuskie)",
+			"powiat międzyrzecki",
+			"powiat słubicki",
+			"powiat świebodziński"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"powiat-poznanski": {
+		"kind": "region",
+		"borders": [
+			"powiat gnieźnieński",
+			"powiat grodziski (Wielkopolskie)",
+			"powiat kościański",
+			"powiat nowotomyski",
+			"powiat obornicki",
+			"powiat średzki (Wielkopolskie)",
+			"powiat śremski",
+			"powiat szamotulski",
+			"powiat wągrowiecki",
+			"powiat wrzesiński",
+			"Poznań"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"poznan": {
+		"kind": "region",
+		"borders": [
+			"powiat poznański"
+		],
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"From a personal name, Poznan, meaning roughly \"the known one\".",
+				"Poland began here: Mieszko I was baptised in 966 in this area, which is the founding date of the Polish state.",
+				"Two mechanical goats butt heads on its town hall clock every noon, a ritual since 1551."
+			],
+			"it": [
+				"Da un nome di persona, Poznan, che significa più o meno \"il conosciuto\".",
+				"La Polonia nacque qui: nel 966 Mieszko I fu battezzato in questa zona, e quella è la data di fondazione dello Stato polacco.",
+				"Ogni giorno a mezzogiorno due capre meccaniche si danno cornate sull’orologio del municipio: un rito che dura dal 1551."
+			]
+		}
+	},
+	"powiat-nowotomyski": {
+		"kind": "region",
+		"borders": [
+			"powiat grodziski (Wielkopolskie)",
+			"powiat międzychodzki",
+			"powiat międzyrzecki",
+			"powiat poznański",
+			"powiat świebodziński",
+			"powiat szamotulski",
+			"powiat wolsztyński",
+			"powiat zielonogórski"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-s-ubicki": {
+		"kind": "region",
+		"borders": [
+			"powiat gorzowski",
+			"powiat krośnieński (Lubuskie)",
+			"powiat sulęciński"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"powiat-s-upecki": {
+		"kind": "region",
+		"borders": [
+			"powiat gnieźnieński",
+			"powiat koniński",
+			"powiat pleszewski",
+			"powiat wrzesiński"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"powiat-koninski": {
+		"kind": "region",
+		"borders": [
+			"Konin",
+			"powiat kaliski",
+			"powiat kolski",
+			"powiat pleszewski",
+			"powiat słupecki",
+			"powiat turecki"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"konin": {
+		"kind": "region",
+		"borders": [
+			"powiat koniński"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"powiat-kolski": {
+		"kind": "region",
+		"borders": [
+			"powiat koniński",
+			"powiat turecki"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"powiat-wrzesinski": {
+		"kind": "region",
+		"borders": [
+			"powiat gnieźnieński",
+			"powiat jarociński",
+			"powiat pleszewski",
+			"powiat poznański",
+			"powiat słupecki",
+			"powiat średzki (Wielkopolskie)"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"powiat-swiebodzinski": {
+		"kind": "region",
+		"borders": [
+			"powiat krośnieński (Lubuskie)",
+			"powiat międzyrzecki",
+			"powiat nowotomyski",
+			"powiat sulęciński",
+			"powiat zielonogórski"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"powiat-sredzki-wielkopolskie": {
+		"kind": "region",
+		"borders": [
+			"powiat jarociński",
+			"powiat poznański",
+			"powiat śremski",
+			"powiat wrzesiński"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-grodziski-wielkopolskie": {
+		"kind": "region",
+		"borders": [
+			"powiat kościański",
+			"powiat nowotomyski",
+			"powiat poznański",
+			"powiat wolsztyński"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-wolsztynski": {
+		"kind": "region",
+		"borders": [
+			"powiat grodziski (Wielkopolskie)",
+			"powiat kościański",
+			"powiat leszczyński",
+			"powiat nowosolski",
+			"powiat nowotomyski",
+			"powiat wschowski",
+			"powiat zielonogórski"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-koscianski": {
+		"kind": "region",
+		"borders": [
+			"powiat gostyński",
+			"powiat grodziski (Wielkopolskie)",
+			"powiat leszczyński",
+			"powiat poznański",
+			"powiat śremski",
+			"powiat wolsztyński"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-sremski": {
+		"kind": "region",
+		"borders": [
+			"powiat gostyński",
+			"powiat jarociński",
+			"powiat kościański",
+			"powiat poznański",
+			"powiat średzki (Wielkopolskie)"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-jarocinski": {
+		"kind": "region",
+		"borders": [
+			"powiat gostyński",
+			"powiat krotoszyński",
+			"powiat pleszewski",
+			"powiat średzki (Wielkopolskie)",
+			"powiat śremski",
+			"powiat wrzesiński"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-krosnienski-lubuskie": {
+		"kind": "region",
+		"borders": [
+			"powiat słubicki",
+			"powiat sulęciński",
+			"powiat świebodziński",
+			"powiat żarski",
+			"powiat zielonogórski"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"powiat-turecki": {
+		"kind": "region",
+		"borders": [
+			"powiat kaliski",
+			"powiat kolski",
+			"powiat koniński"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"powiat-zielonogorski": {
+		"kind": "region",
+		"borders": [
+			"powiat krośnieński (Lubuskie)",
+			"powiat nowosolski",
+			"powiat nowotomyski",
+			"powiat świebodziński",
+			"powiat wolsztyński",
+			"powiat żagański",
+			"powiat żarski",
+			"Zielona Góra"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"zielona-gora": {
+		"kind": "region",
+		"borders": [
+			"powiat nowosolski",
+			"powiat zielonogórski"
+		],
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"\"Green mountain\" — German Grünberg, the same words.",
+				"It has grown wine since the thirteenth century, and holds a wine festival each September.",
+				"It was one of the few Silesian towns whose German population was not entirely displaced immediately in 1945."
+			],
+			"it": [
+				"\"Monte verde\": il tedesco Grünberg dice la stessa cosa, parola per parola.",
+				"Vi si produce vino dal Duecento, e ogni settembre ospita una festa del vino.",
+				"Fu una delle poche città slesiane la cui popolazione tedesca non venne espulsa del tutto subito, nel 1945."
+			]
+		}
+	},
+	"powiat-pleszewski": {
+		"kind": "region",
+		"borders": [
+			"Kalisz",
+			"powiat jarociński",
+			"powiat kaliski",
+			"powiat koniński",
+			"powiat krotoszyński",
+			"powiat ostrowski (Wielkopolskie)",
+			"powiat słupecki",
+			"powiat wrzesiński"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"powiat-leszczynski": {
+		"kind": "region",
+		"borders": [
+			"Leszno",
+			"powiat górowski",
+			"powiat gostyński",
+			"powiat kościański",
+			"powiat rawicki",
+			"powiat wolsztyński",
+			"powiat wschowski"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"leszno": {
+		"kind": "region",
+		"borders": [
+			"powiat leszczyński"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-gostynski": {
+		"kind": "region",
+		"borders": [
+			"powiat jarociński",
+			"powiat kościański",
+			"powiat krotoszyński",
+			"powiat leszczyński",
+			"powiat rawicki",
+			"powiat śremski"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-nowosolski": {
+		"kind": "region",
+		"borders": [
+			"powiat głogowski",
+			"powiat wolsztyński",
+			"powiat wschowski",
+			"powiat żagański",
+			"powiat zielonogórski",
+			"Zielona Góra"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"powiat-wschowski": {
+		"kind": "region",
+		"borders": [
+			"powiat głogowski",
+			"powiat górowski",
+			"powiat leszczyński",
+			"powiat nowosolski",
+			"powiat wolsztyński"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-kaliski": {
+		"kind": "region",
+		"borders": [
+			"Kalisz",
+			"powiat koniński",
+			"powiat ostrowski (Wielkopolskie)",
+			"powiat ostrzeszowski",
+			"powiat pleszewski",
+			"powiat turecki"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"kalisz": {
+		"kind": "region",
+		"borders": [
+			"powiat kaliski",
+			"powiat ostrowski (Wielkopolskie)",
+			"powiat pleszewski"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"powiat-krotoszynski": {
+		"kind": "region",
+		"borders": [
+			"powiat gostyński",
+			"powiat jarociński",
+			"powiat milicki",
+			"powiat ostrowski (Wielkopolskie)",
+			"powiat pleszewski",
+			"powiat rawicki"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-g-ogowski": {
+		"kind": "region",
+		"borders": [
+			"powiat górowski",
+			"powiat lubiński",
+			"powiat nowosolski",
+			"powiat polkowicki",
+			"powiat wschowski",
+			"powiat żagański"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-rawicki": {
+		"kind": "region",
+		"borders": [
+			"powiat górowski",
+			"powiat gostyński",
+			"powiat krotoszyński",
+			"powiat leszczyński",
+			"powiat milicki",
+			"powiat trzebnicki"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-gorowski": {
+		"kind": "region",
+		"borders": [
+			"powiat głogowski",
+			"powiat leszczyński",
+			"powiat lubiński",
+			"powiat rawicki",
+			"powiat trzebnicki",
+			"powiat wołowski",
+			"powiat wschowski"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-zarski": {
+		"kind": "region",
+		"borders": [
+			"powiat krośnieński (Lubuskie)",
+			"powiat żagański",
+			"powiat zgorzelecki",
+			"powiat zielonogórski"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"powiat-ostrowski-wielkopolskie": {
+		"kind": "region",
+		"borders": [
+			"Kalisz",
+			"powiat kaliski",
+			"powiat krotoszyński",
+			"powiat milicki",
+			"powiat oleśnicki",
+			"powiat ostrzeszowski",
+			"powiat pleszewski"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"powiat-zaganski": {
+		"kind": "region",
+		"borders": [
+			"powiat bolesławiecki",
+			"powiat głogowski",
+			"powiat nowosolski",
+			"powiat polkowicki",
+			"powiat żarski",
+			"powiat zgorzelecki",
+			"powiat zielonogórski"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"powiat-milicki": {
+		"kind": "region",
+		"borders": [
+			"powiat krotoszyński",
+			"powiat oleśnicki",
+			"powiat ostrowski (Wielkopolskie)",
+			"powiat rawicki",
+			"powiat trzebnicki"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-polkowicki": {
+		"kind": "region",
+		"borders": [
+			"powiat bolesławiecki",
+			"powiat głogowski",
+			"powiat legnicki",
+			"powiat lubiński",
+			"powiat żagański"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"powiat-lubinski": {
+		"kind": "region",
+		"borders": [
+			"powiat głogowski",
+			"powiat górowski",
+			"powiat legnicki",
+			"powiat polkowicki",
+			"powiat wołowski"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-ostrzeszowski": {
+		"kind": "region",
+		"borders": [
+			"powiat kaliski",
+			"powiat kępiński",
+			"powiat oleśnicki",
+			"powiat ostrowski (Wielkopolskie)"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"powiat-trzebnicki": {
+		"kind": "region",
+		"borders": [
+			"powiat górowski",
+			"powiat milicki",
+			"powiat oleśnicki",
+			"powiat rawicki",
+			"powiat średzki (Dolnośląskie)",
+			"powiat wołowski",
+			"powiat wrocławski",
+			"Wrocław"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-wo-owski": {
+		"kind": "region",
+		"borders": [
+			"powiat górowski",
+			"powiat legnicki",
+			"powiat lubiński",
+			"powiat średzki (Dolnośląskie)",
+			"powiat trzebnicki"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"powiat-boles-awiecki": {
+		"kind": "region",
+		"borders": [
+			"powiat legnicki",
+			"powiat lubański",
+			"powiat lwówecki",
+			"powiat polkowicki",
+			"powiat żagański",
+			"powiat zgorzelecki",
+			"powiat złotoryjski"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"powiat-olesnicki": {
+		"kind": "region",
+		"borders": [
+			"powiat kępiński",
+			"powiat milicki",
+			"powiat oławski",
+			"powiat ostrowski (Wielkopolskie)",
+			"powiat ostrzeszowski",
+			"powiat trzebnicki",
+			"powiat wrocławski"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"powiat-kepinski": {
+		"kind": "region",
+		"borders": [
+			"powiat oleśnicki",
+			"powiat ostrzeszowski"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"powiat-legnicki": {
+		"kind": "region",
+		"borders": [
+			"Legnica",
+			"powiat bolesławiecki",
+			"powiat jaworski",
+			"powiat lubiński",
+			"powiat polkowicki",
+			"powiat średzki (Dolnośląskie)",
+			"powiat wołowski",
+			"powiat złotoryjski"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"legnica": {
+		"kind": "region",
+		"borders": [
+			"powiat legnicki"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"powiat-zgorzelecki": {
+		"kind": "region",
+		"borders": [
+			"powiat bolesławiecki",
+			"powiat lubański",
+			"powiat żagański",
+			"powiat żarski"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"powiat-sredzki-dolnoslaskie": {
+		"kind": "region",
+		"borders": [
+			"powiat jaworski",
+			"powiat legnicki",
+			"powiat świdnicki (Dolnośląskie)",
+			"powiat trzebnicki",
+			"powiat wołowski",
+			"powiat wrocławski",
+			"Wrocław"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"wroc-aw": {
+		"kind": "region",
+		"borders": [
+			"powiat średzki (Dolnośląskie)",
+			"powiat trzebnicki",
+			"powiat wrocławski"
+		],
+		"coastal": false,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"From Vratislav, a Bohemian duke — German Breslau is the same name worn differently.",
+				"It has been Polish, Bohemian, Austrian, Prussian and German before returning in 1945, and its population was almost wholly exchanged.",
+				"Over 600 small bronze dwarf figures are hidden around the city, a nod to an anti-communist protest movement."
+			],
+			"it": [
+				"Da Vratislav, un duca boemo: il tedesco Breslau è lo stesso nome, consumato in un altro modo.",
+				"È stata polacca, boema, austriaca, prussiana e tedesca prima di tornare polacca nel 1945, e la sua popolazione fu quasi del tutto sostituita.",
+				"Oltre 600 piccoli nani di bronzo sono nascosti per la città: un omaggio a un movimento di protesta anticomunista."
+			]
+		}
+	},
+	"powiat-z-otoryjski": {
+		"kind": "region",
+		"borders": [
+			"powiat bolesławiecki",
+			"powiat jaworski",
+			"powiat jeleniogórski",
+			"powiat legnicki",
+			"powiat lwówecki"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"powiat-lubanski": {
+		"kind": "region",
+		"borders": [
+			"powiat bolesławiecki",
+			"powiat lwówecki",
+			"powiat zgorzelecki"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"powiat-wroc-awski": {
+		"kind": "region",
+		"borders": [
+			"powiat dzierżoniowski",
+			"powiat oławski",
+			"powiat oleśnicki",
+			"powiat średzki (Dolnośląskie)",
+			"powiat strzeliński",
+			"powiat świdnicki (Dolnośląskie)",
+			"powiat trzebnicki",
+			"Wrocław"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"powiat-lwowecki": {
+		"kind": "region",
+		"borders": [
+			"powiat bolesławiecki",
+			"powiat jeleniogórski",
+			"powiat lubański",
+			"powiat złotoryjski"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"powiat-jaworski": {
+		"kind": "region",
+		"borders": [
+			"powiat jeleniogórski",
+			"powiat kamiennogórski",
+			"powiat legnicki",
+			"powiat średzki (Dolnośląskie)",
+			"powiat świdnicki (Dolnośląskie)",
+			"powiat wałbrzyski",
+			"powiat złotoryjski"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"powiat-o-awski": {
+		"kind": "region",
+		"borders": [
+			"powiat oleśnicki",
+			"powiat strzeliński",
+			"powiat wrocławski"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"powiat-jeleniogorski": {
+		"kind": "region",
+		"borders": [
+			"Jelenia Góra",
+			"powiat jaworski",
+			"powiat kamiennogórski",
+			"powiat lwówecki",
+			"powiat złotoryjski"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"powiat-swidnicki-dolnoslaskie": {
+		"kind": "region",
+		"borders": [
+			"powiat dzierżoniowski",
+			"powiat jaworski",
+			"powiat średzki (Dolnośląskie)",
+			"powiat wałbrzyski",
+			"powiat wrocławski",
+			"Wałbrzych"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"jelenia-gora": {
+		"kind": "region",
+		"borders": [
+			"powiat jeleniogórski"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"wa-brzych": {
+		"kind": "region",
+		"borders": [
+			"powiat świdnicki (Dolnośląskie)",
+			"powiat wałbrzyski"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"powiat-strzelinski": {
+		"kind": "region",
+		"borders": [
+			"powiat dzierżoniowski",
+			"powiat oławski",
+			"powiat wrocławski",
+			"powiat ząbkowicki"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"powiat-wa-brzyski": {
+		"kind": "region",
+		"borders": [
+			"powiat dzierżoniowski",
+			"powiat jaworski",
+			"powiat kamiennogórski",
+			"powiat kłodzki",
+			"powiat świdnicki (Dolnośląskie)",
+			"Wałbrzych"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"powiat-kamiennogorski": {
+		"kind": "region",
+		"borders": [
+			"powiat jaworski",
+			"powiat jeleniogórski",
+			"powiat wałbrzyski"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"powiat-dzierzoniowski": {
+		"kind": "region",
+		"borders": [
+			"powiat kłodzki",
+			"powiat strzeliński",
+			"powiat świdnicki (Dolnośląskie)",
+			"powiat wałbrzyski",
+			"powiat wrocławski",
+			"powiat ząbkowicki"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"powiat-zabkowicki": {
+		"kind": "region",
+		"borders": [
+			"powiat dzierżoniowski",
+			"powiat kłodzki",
+			"powiat strzeliński"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"powiat-k-odzki": {
+		"kind": "region",
+		"borders": [
+			"powiat dzierżoniowski",
+			"powiat wałbrzyski",
+			"powiat ząbkowicki"
+		],
+		"coastal": false,
+		"position": "south"
+	}
+}

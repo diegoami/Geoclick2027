@@ -985,6 +985,74 @@ Germany's six add up to its 400 Kreise and the Netherlands' five to its 344
 municipalities. `mapshaper -dissolve name` reads a bare `name` as its own
 `name=` option, so a dissolve on the name field passes `fields=name`.
 
+### Poland's powiats, and eleven new countries (built 2026-09-24, #39 batch E)
+
+The rules are in DECISIONS.md, "Poland's powiats under ODbL, and eleven more
+countries". `fetch-natural-earth.sh` now also fetches `POL-ADM2`. The maps
+were built in the WSL clone with `PMTILES_BIN=$HOME/.local/bin/pmtiles`.
+
+New `build-map.ts` options:
+
+- `--disambiguate-by=<field>` gives a target whose name occurs twice in the
+  source its admin-1 area, named from `<field>` through the country's
+  `NAME_FIXUPS`: "powiat brzeski (Opolskie)". It is worked out over the whole
+  country before `--within`, so the suffix is the same on every part.
+- `--clip` now also cuts admin-1 maps (Chile, South Africa).
+- `--clean-names=polish-counties` (`admin2.ts`).
+
+```
+PL=(--country=Poland --type=county --source=data/source/geoboundaries/POL-ADM2.geojson --clean-names=polish-counties --disambiguate-by=name_pl "--attribution=© OpenStreetMap contributors, ODbL (via geoBoundaries)")
+npx tsx data/scripts/build-map.ts "${PL[@]}" --within="West Pomeranian,Pomeranian,Kuyavian-Pomeranian,Warmian-Masurian" --out=data/maps/poland-counties-north --name="Poland — Counties — North"
+npx tsx data/scripts/build-map.ts "${PL[@]}" --within="Lubusz,Greater Poland,Lower Silesian" --out=data/maps/poland-counties-west --name="Poland — Counties — West"
+npx tsx data/scripts/build-map.ts "${PL[@]}" --within="Masovian,Podlachian,Łódź" --out=data/maps/poland-counties-east --name="Poland — Counties — East"
+npx tsx data/scripts/build-map.ts "${PL[@]}" --within="Lublin,Subcarpathian,Świętokrzyskie" --out=data/maps/poland-counties-southeast --name="Poland — Counties — South-East"
+npx tsx data/scripts/build-map.ts "${PL[@]}" --within="Opole,Silesian,Lesser Poland" --out=data/maps/poland-counties-south --name="Poland — Counties — South"
+
+npx tsx data/scripts/build-map.ts --country=Belgium --type=province --out=data/maps/belgium-provinces --name="Belgium — Provinces"
+npx tsx data/scripts/build-map.ts --country="Czech Republic" --type=region --out=data/maps/czechia-regions --name="Czechia — Regions"
+npx tsx data/scripts/build-map.ts --country=Croatia --type=county --name-field=adm1_code --out=data/maps/croatia-counties --name="Croatia — Counties"
+npx tsx data/scripts/build-map.ts --country=Greece --type=region --out=data/maps/greece-regions --name="Greece — Regions"
+npx tsx data/scripts/build-map.ts --country=Bulgaria --type=province --out=data/maps/bulgaria-provinces --name="Bulgaria — Provinces"
+npx tsx data/scripts/build-map.ts --country=Chile --type=region --clip=-76,-56.5,-66,-17 --out=data/maps/chile-regions --name="Chile — Regions"
+npx tsx data/scripts/build-map.ts --country=Peru --type=region --out=data/maps/peru-regions --name="Peru — Regions"
+npx tsx data/scripts/build-map.ts --country="South Africa" --type=province --clip=16,-36,33.5,-22 --out=data/maps/south-africa-provinces --name="South Africa — Provinces"
+npx tsx data/scripts/build-map.ts --country=Iran --type=province --out=data/maps/iran-provinces --name="Iran — Provinces"
+npx tsx data/scripts/build-map.ts --country=Thailand --type=province --out=data/maps/thailand-provinces --name="Thailand — Provinces"
+npx tsx data/scripts/build-map.ts --country="Saudi Arabia" --type=region --out=data/maps/saudi-arabia-regions --name="Saudi Arabia — Regions"
+
+npx tsx data/scripts/build-points-map.ts --country=Chile --name-field=NAME_ES --min-population=100000 --out=data/maps/chile-towns-100k --name="Chile — Towns"
+npx tsx data/scripts/build-points-map.ts --country=Peru --name-field=NAME_ES --min-population=100000 --out=data/maps/peru-towns-100k --name="Peru — Towns"
+npx tsx data/scripts/build-points-map.ts --country="South Africa" --min-population=100000 --out=data/maps/south-africa-towns-100k --name="South Africa — Towns"
+npx tsx data/scripts/build-points-map.ts --country=Iran --min-population=100000 --out=data/maps/iran-towns-100k --name="Iran — Towns"
+npx tsx data/scripts/build-points-map.ts --country=Thailand --min-population=100000 --out=data/maps/thailand-towns-100k --name="Thailand — Towns"
+npx tsx data/scripts/build-points-map.ts --country="Saudi Arabia" --min-population=100000 --out=data/maps/saudi-arabia-towns-100k --name="Saudi Arabia — Towns"
+
+npx tsx data/scripts/build-facts.ts --map=<each of the above>
+npx tsx data/scripts/build-map-index.ts
+```
+
+| Map | Targets | Map | Targets |
+|---|---|---|---|
+| poland-counties-north | 85 | chile-regions | 16 |
+| poland-counties-west | 79 | chile-towns-100k | 24 |
+| poland-counties-east | 83 | peru-regions | 26 |
+| poland-counties-southeast | 62 | peru-towns-100k | 22 |
+| poland-counties-south | 71 | south-africa-provinces | 9 |
+| belgium-provinces | 11 | south-africa-towns-100k | 32 |
+| czechia-regions | 14 | iran-provinces | 31 |
+| croatia-counties | 21 | iran-towns-100k | 56 |
+| greece-regions | 14 | thailand-provinces | 77 |
+| bulgaria-provinces | 28 | thailand-towns-100k | 26 |
+| | | saudi-arabia-regions | 13 |
+| | | saudi-arabia-towns-100k | 22 |
+
+Poland's five add up to its 380 powiats. Rebuilt with the changed builders,
+`germany-districts-southeast`, `netherlands-municipalities-south`,
+`spain-provinces` and `europe-cities-central` come out byte-identical;
+`poland-regions` and `poland-towns-100k` differ from the committed tiles in
+the `.pmtiles` only, and identically with `main`'s builders - the WSL
+clone's tool versions, not this change.
+
 ## The Terrain layer: `terrain.pmtiles` (FT-33, 2026-09-19)
 
 Every map has a **second** tileset beside its `tiles.pmtiles`, holding the

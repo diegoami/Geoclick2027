@@ -1,0 +1,467 @@
+{
+	"id": "chile-towns-100k",
+	"name": "Chile — Towns",
+	"country": "Chile",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "arica",
+			"name": "Arica",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-70.2899838,
+				-18.500022
+			],
+			"bbox": [
+				-70.2899838,
+				-18.500022,
+				-70.2899838,
+				-18.500022
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "iquique",
+			"name": "Iquique",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-70.1299677,
+				-20.2499927
+			],
+			"bbox": [
+				-70.1299677,
+				-20.2499927,
+				-70.1299677,
+				-20.2499927
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "calama",
+			"name": "Calama",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-68.9199899,
+				-22.4500134
+			],
+			"bbox": [
+				-68.9199899,
+				-22.4500134,
+				-68.9199899,
+				-22.4500134
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "antofagasta",
+			"name": "Antofagasta",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-70.4000029,
+				-23.6499918
+			],
+			"bbox": [
+				-70.4000029,
+				-23.6499918,
+				-70.4000029,
+				-23.6499918
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "copiapo",
+			"name": "Copiapó",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-70.32995479284354,
+				-27.371778559189842
+			],
+			"bbox": [
+				-70.32995479284354,
+				-27.371778559189842,
+				-70.32995479284354,
+				-27.371778559189842
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "la-serena",
+			"name": "La Serena",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-71.2499768,
+				-29.8999979
+			],
+			"bbox": [
+				-71.2499768,
+				-29.8999979,
+				-71.2499768,
+				-29.8999979
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "coquimbo",
+			"name": "Coquimbo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-71.3436145,
+				-29.9529146
+			],
+			"bbox": [
+				-71.3436145,
+				-29.9529146,
+				-71.3436145,
+				-29.9529146
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "vina-del-mar",
+			"name": "Viña del Mar",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-71.55708337273282,
+				-33.02489773868034
+			],
+			"bbox": [
+				-71.55708337273282,
+				-33.02489773868034,
+				-71.55708337273282,
+				-33.02489773868034
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "valparaiso",
+			"name": "Valparaíso",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-71.61702619154609,
+				-33.04773936269631
+			],
+			"bbox": [
+				-71.61702619154609,
+				-33.04773936269631,
+				-71.61702619154609,
+				-33.04773936269631
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "santiago",
+			"name": "Santiago",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-70.65050407285783,
+				-33.44020506918074
+			],
+			"bbox": [
+				-70.65050407285783,
+				-33.44020506918074,
+				-70.65050407285783,
+				-33.44020506918074
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "san-antonio",
+			"name": "San Antonio",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-71.6099807,
+				-33.5995137
+			],
+			"bbox": [
+				-71.6099807,
+				-33.5995137,
+				-71.6099807,
+				-33.5995137
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "san-bernardo",
+			"name": "San Bernardo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-70.6999846,
+				-33.5999788
+			],
+			"bbox": [
+				-70.6999846,
+				-33.5999788,
+				-70.6999846,
+				-33.5999788
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "rancagua",
+			"name": "Rancagua",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-70.7399821,
+				-34.1700215
+			],
+			"bbox": [
+				-70.7399821,
+				-34.1700215,
+				-70.7399821,
+				-34.1700215
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "curico",
+			"name": "Curicó",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-71.2400291,
+				-34.9799979
+			],
+			"bbox": [
+				-71.2400291,
+				-34.9799979,
+				-71.2400291,
+				-34.9799979
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "talca",
+			"name": "Talca",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-71.6656369430057,
+				-35.43021009325654
+			],
+			"bbox": [
+				-71.6656369430057,
+				-35.43021009325654,
+				-71.6656369430057,
+				-35.43021009325654
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "chillan",
+			"name": "Chillán",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-72.11129119828513,
+				-36.606832344547854
+			],
+			"bbox": [
+				-72.11129119828513,
+				-36.606832344547854,
+				-72.11129119828513,
+				-36.606832344547854
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "talcahuano",
+			"name": "Talcahuano",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-73.1166588,
+				-36.7166878
+			],
+			"bbox": [
+				-73.1166588,
+				-36.7166878,
+				-73.1166588,
+				-36.7166878
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "concepcion",
+			"name": "Concepción",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-73.050022,
+				-36.8300142
+			],
+			"bbox": [
+				-73.050022,
+				-36.8300142,
+				-73.050022,
+				-36.8300142
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "los-angeles",
+			"name": "Los Ángeles",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-72.34692448268574,
+				-37.47974114915774
+			],
+			"bbox": [
+				-72.34692448268574,
+				-37.47974114915774,
+				-72.34692448268574,
+				-37.47974114915774
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "temuco",
+			"name": "Temuco",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-72.579999,
+				-38.7300016
+			],
+			"bbox": [
+				-72.579999,
+				-38.7300016,
+				-72.579999,
+				-38.7300016
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "valdivia",
+			"name": "Valdivia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-73.23311053054022,
+				-39.82165065113458
+			],
+			"bbox": [
+				-73.23311053054022,
+				-39.82165065113458,
+				-73.23311053054022,
+				-39.82165065113458
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "osorno",
+			"name": "Osorno",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-73.13066127645298,
+				-40.578707255179616
+			],
+			"bbox": [
+				-73.13066127645298,
+				-40.578707255179616,
+				-73.13066127645298,
+				-40.578707255179616
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "puerto-montt",
+			"name": "Puerto Montt",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-72.9299777,
+				-41.4699894
+			],
+			"bbox": [
+				-72.9299777,
+				-41.4699894,
+				-72.9299777,
+				-41.4699894
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "punta-arenas",
+			"name": "Punta Arenas",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-70.9399958,
+				-53.1649861
+			],
+			"bbox": [
+				-70.9399958,
+				-53.1649861,
+				-70.9399958,
+				-53.1649861
+			],
+			"colorIndex": 2
+		}
+	],
+	"tourOrder": [
+		"arica",
+		"iquique",
+		"calama",
+		"antofagasta",
+		"copiapo",
+		"la-serena",
+		"coquimbo",
+		"vina-del-mar",
+		"valparaiso",
+		"santiago",
+		"san-antonio",
+		"san-bernardo",
+		"rancagua",
+		"curico",
+		"talca",
+		"chillan",
+		"talcahuano",
+		"concepcion",
+		"los-angeles",
+		"temuco",
+		"valdivia",
+		"osorno",
+		"puerto-montt",
+		"punta-arenas"
+	]
+}

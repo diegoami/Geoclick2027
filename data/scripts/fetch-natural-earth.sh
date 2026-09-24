@@ -77,11 +77,13 @@ fetch ne_10m_geographic_lines \
 
 # --- Admin-2 from geoBoundaries (#39, batch D) ---
 #
-# Natural Earth stops at admin-1 for Germany and the Netherlands. These are
-# geoBoundaries' copies of each country's own register, pinned to one
-# release commit so a rebuild reads the same shapes. Not public domain:
-# Germany's Kreise are © GeoBasis-DE / BKG under dl-de/by-2-0 (attribution),
-# the Dutch municipalities CC0 - DECISIONS.md, "Admin-2 from geoBoundaries".
+# Natural Earth stops at admin-1 for Germany, the Netherlands and Poland.
+# These are geoBoundaries' copies of each country's own register (Poland's:
+# OpenStreetMap's), pinned to one release commit so a rebuild reads the same
+# shapes. Not public domain: Germany's Kreise are © GeoBasis-DE / BKG under
+# dl-de/by-2-0 (attribution), the Dutch municipalities CC0, Poland's powiats
+# © OpenStreetMap contributors under ODbL - DECISIONS.md, "Admin-2 from
+# geoBoundaries".
 GEOBOUNDARIES="https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen"
 fetch_geojson() {
 	local name="$1" url="$2"
@@ -96,3 +98,4 @@ fetch_geojson() {
 }
 fetch_geojson DEU-ADM3 "$GEOBOUNDARIES/DEU/ADM3/geoBoundaries-DEU-ADM3_simplified.geojson"
 fetch_geojson NLD-ADM2 "$GEOBOUNDARIES/NLD/ADM2/geoBoundaries-NLD-ADM2_simplified.geojson"
+fetch_geojson POL-ADM2 "$GEOBOUNDARIES/POL/ADM2/geoBoundaries-POL-ADM2_simplified.geojson"

@@ -1,0 +1,407 @@
+{
+	"id": "belgium-provinces",
+	"name": "Belgium — Provinces",
+	"country": "Belgium",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "antwerpen",
+			"name": "Antwerpen",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.7212,
+				51.24835
+			],
+			"bbox": [
+				4.182,
+				51.0111,
+				5.2604,
+				51.4856
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						4.385,
+						51.2301
+					],
+					[
+						4.7381,
+						51.2358
+					],
+					[
+						5.0912,
+						51.2339
+					]
+				],
+				"aspect": 1.05
+			}
+		},
+		{
+			"id": "oost-vlaanderen",
+			"name": "Oost-Vlaanderen",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				3.82335,
+				51.039249999999996
+			],
+			"bbox": [
+				3.3307,
+				50.7219,
+				4.316,
+				51.3566
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						3.5178,
+						50.9902
+					],
+					[
+						3.8535,
+						50.935
+					],
+					[
+						4.1892,
+						51.0826
+					]
+				],
+				"aspect": 0.9
+			}
+		},
+		{
+			"id": "west-vlaanderen",
+			"name": "West-Vlaanderen",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				2.9897,
+				51.03765
+			],
+			"bbox": [
+				2.5218,
+				50.7001,
+				3.4576,
+				51.3752
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						2.6757,
+						50.9688
+					],
+					[
+						3.0349,
+						51.0924
+					],
+					[
+						3.3941,
+						50.9992
+					]
+				],
+				"aspect": 0.91
+			}
+		},
+		{
+			"id": "limburg",
+			"name": "Limburg",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.4361,
+				50.99895
+			],
+			"bbox": [
+				4.9809,
+				50.7098,
+				5.8913,
+				51.2881
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						5.1672,
+						50.961
+					],
+					[
+						5.4257,
+						50.99
+					],
+					[
+						5.6841,
+						51.0332
+					]
+				],
+				"aspect": 0.72
+			}
+		},
+		{
+			"id": "vlaams-brabant",
+			"name": "Vlaams-Brabant",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.53335,
+				50.86505
+			],
+			"bbox": [
+				3.895,
+				50.692,
+				5.1717,
+				51.0381
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						4.1268,
+						50.8191
+					],
+					[
+						4.5631,
+						50.972
+					],
+					[
+						5.0528,
+						50.8604
+					]
+				],
+				"aspect": 2.44
+			}
+		},
+		{
+			"id": "brussels",
+			"name": "Brussels",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.38125,
+				50.838800000000006
+			],
+			"bbox": [
+				4.2828,
+				50.779,
+				4.4797,
+				50.8986
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						4.3125,
+						50.8288
+					],
+					[
+						4.3747,
+						50.8443
+					],
+					[
+						4.4368,
+						50.8221
+					]
+				],
+				"aspect": 0.88
+			}
+		},
+		{
+			"id": "brabant-wallon",
+			"name": "Brabant wallon",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.5594,
+				50.676050000000004
+			],
+			"bbox": [
+				4.0997,
+				50.5434,
+				5.0191,
+				50.8087
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						4.1679,
+						50.6498
+					],
+					[
+						4.5584,
+						50.6351
+					],
+					[
+						4.9265,
+						50.7154
+					]
+				],
+				"aspect": 3.22
+			}
+		},
+		{
+			"id": "liege",
+			"name": "Liège",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.66015,
+				50.4792
+			],
+			"bbox": [
+				4.9826,
+				50.1508,
+				6.3377,
+				50.8076
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						5.1805,
+						50.5986
+					],
+					[
+						5.7735,
+						50.6373
+					],
+					[
+						6.1886,
+						50.3696
+					]
+				],
+				"aspect": 1.88
+			}
+		},
+		{
+			"id": "hainaut",
+			"name": "Hainaut",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				3.7291,
+				50.35275
+			],
+			"bbox": [
+				2.8422,
+				49.9336,
+				4.616,
+				50.7719
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						3.4854,
+						50.6654
+					],
+					[
+						4.1345,
+						50.5766
+					],
+					[
+						4.4378,
+						50.1899
+					]
+				],
+				"aspect": 2.37
+			}
+		},
+		{
+			"id": "namur",
+			"name": "Namur",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.8658,
+				50.2188
+			],
+			"bbox": [
+				4.3389,
+				49.7942,
+				5.3927,
+				50.6434
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						4.4743,
+						50.1989
+					],
+					[
+						4.8334,
+						50.353
+					],
+					[
+						5.1926,
+						50.2869
+					]
+				],
+				"aspect": 0.95
+			}
+		},
+		{
+			"id": "luxembourg",
+			"name": "Luxembourg",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.495699999999999,
+				49.9606
+			],
+			"bbox": [
+				4.9684,
+				49.4952,
+				6.023,
+				50.426
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						5.139,
+						49.9075
+					],
+					[
+						5.5142,
+						49.897
+					],
+					[
+						5.8893,
+						50.118
+					]
+				],
+				"aspect": 0.85
+			}
+		}
+	],
+	"tourOrder": [
+		"antwerpen",
+		"oost-vlaanderen",
+		"west-vlaanderen",
+		"limburg",
+		"vlaams-brabant",
+		"brussels",
+		"brabant-wallon",
+		"liege",
+		"hainaut",
+		"namur",
+		"luxembourg"
+	]
+}

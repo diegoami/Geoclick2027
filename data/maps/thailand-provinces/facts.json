@@ -1,0 +1,1495 @@
+{
+	"chiang-rai": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดเชียงราย",
+		"borders": [
+			"Chiang Mai",
+			"Lampang",
+			"Phayao"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Chiang Rai",
+			"nameDe": "Chiang Rai",
+			"nameIt": "Chiang Rai",
+			"population": 117127
+		},
+		"position": "north-west"
+	},
+	"phayao": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดพะเยา",
+		"borders": [
+			"Chiang Rai",
+			"Lampang",
+			"Nan",
+			"Phrae"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Phayao",
+			"nameDe": "Phayao",
+			"nameIt": "Phayao",
+			"population": 21058
+		},
+		"position": "north-west"
+	},
+	"nan": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดน่าน",
+		"borders": [
+			"Phayao",
+			"Phrae",
+			"Uttaradit"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Nan",
+			"nameDe": "Nan",
+			"nameIt": "Nan",
+			"population": 82483
+		},
+		"position": "north"
+	},
+	"chiang-mai": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดเชียงใหม่",
+		"borders": [
+			"Chiang Rai",
+			"Lampang",
+			"Lamphun",
+			"Mae Hong Son",
+			"Tak"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Chiang Mai",
+			"nameDe": "Chiang Mai",
+			"nameIt": "Chiang Mai",
+			"population": 397211
+		},
+		"peak": {
+			"name": "Doi Inthanon",
+			"elevation": 2580
+		},
+		"position": "north-west"
+	},
+	"mae-hong-son": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดแม่ฮ่องสอน",
+		"borders": [
+			"Chiang Mai",
+			"Tak"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Mae Hong Son",
+			"nameDe": "Mae Hong Son",
+			"nameIt": "Mae Hong Son",
+			"population": 9109
+		},
+		"position": "north-west"
+	},
+	"lampang": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดลำปาง",
+		"borders": [
+			"Chiang Mai",
+			"Chiang Rai",
+			"Lamphun",
+			"Phayao",
+			"Phrae",
+			"Sukhothai",
+			"Tak"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Lampang",
+			"nameDe": "Lampang",
+			"nameIt": "Lampang",
+			"population": 204081
+		},
+		"position": "north-west"
+	},
+	"phrae": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดแพร่",
+		"borders": [
+			"Lampang",
+			"Nan",
+			"Phayao",
+			"Sukhothai",
+			"Uttaradit"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Phrae",
+			"nameDe": "Phrae",
+			"nameIt": "Phrae",
+			"population": 38538
+		},
+		"position": "north-west"
+	},
+	"bueng-kan": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดหนองคาย",
+		"borders": [
+			"Nakhon Phanom",
+			"Nong Khai",
+			"Sakon Nakhon"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"lamphun": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดลำพูน",
+		"borders": [
+			"Chiang Mai",
+			"Lampang",
+			"Tak"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Lamphun",
+			"nameDe": "Lamphun",
+			"nameIt": "Lamphun",
+			"population": 14030
+		},
+		"position": "north-west"
+	},
+	"nong-khai": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดหนองคาย",
+		"borders": [
+			"Bueng Kan",
+			"Loei",
+			"Sakon Nakhon",
+			"Udon Thani"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Nong Khai",
+			"nameDe": "Nong Khai",
+			"nameIt": "Nong Khai",
+			"population": 104505
+		},
+		"position": "north"
+	},
+	"uttaradit": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดอุตรดิตถ์",
+		"borders": [
+			"Nan",
+			"Phitsanulok",
+			"Phrae",
+			"Sukhothai"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Uttaradit",
+			"nameDe": "Uttaradit",
+			"nameIt": "Uttaradit",
+			"population": 76630
+		},
+		"position": "north"
+	},
+	"loei": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดเลย",
+		"borders": [
+			"Khon Kaen",
+			"Nong Bua Lam Phu",
+			"Nong Khai",
+			"Phetchabun",
+			"Phitsanulok",
+			"Udon Thani"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Loei",
+			"nameDe": "Loei",
+			"nameIt": "Loei",
+			"population": 35273
+		},
+		"position": "north"
+	},
+	"udon-thani": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดอุดรธานี",
+		"borders": [
+			"Kalasin",
+			"Khon Kaen",
+			"Loei",
+			"Nong Bua Lam Phu",
+			"Nong Khai",
+			"Sakon Nakhon"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Udon Thani",
+			"nameDe": "Udon Thani",
+			"nameIt": "Udon Thani",
+			"population": 247231
+		},
+		"position": "north"
+	},
+	"sakon-nakhon": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดสกลนคร",
+		"borders": [
+			"Bueng Kan",
+			"Kalasin",
+			"Mukdahan",
+			"Nakhon Phanom",
+			"Nong Khai",
+			"Udon Thani"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Sakhon Nakhon",
+			"nameDe": "Sakon Nakhon",
+			"nameIt": "Sakon Nakhon",
+			"population": 76237
+		},
+		"position": "north-east"
+	},
+	"nakhon-phanom": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดนครพนม",
+		"borders": [
+			"Bueng Kan",
+			"Mukdahan",
+			"Sakon Nakhon"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Nakhon Phanom",
+			"nameDe": "Nakhon Phanom",
+			"nameIt": "Nakhon Phanom",
+			"population": 55377
+		},
+		"position": "north-east"
+	},
+	"sukhothai": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดสุโขทัย",
+		"borders": [
+			"Kamphaeng Phet",
+			"Lampang",
+			"Phitsanulok",
+			"Phrae",
+			"Tak",
+			"Uttaradit"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Sukhothai",
+			"nameDe": "Sukhothai Thani",
+			"nameIt": "Sukhothai Thani",
+			"population": 10276
+		},
+		"position": "north-west"
+	},
+	"nong-bua-lam-phu": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดหนองบัวลำภู",
+		"borders": [
+			"Khon Kaen",
+			"Loei",
+			"Udon Thani"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"phitsanulok": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดพิษณุโลก",
+		"borders": [
+			"Kamphaeng Phet",
+			"Loei",
+			"Phetchabun",
+			"Phichit",
+			"Sukhothai",
+			"Uttaradit"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Phitsanulok",
+			"nameDe": "Phitsanulok",
+			"nameIt": "Phitsanulok",
+			"population": 164017
+		},
+		"position": "north"
+	},
+	"kalasin": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดกาฬสินธุ์",
+		"borders": [
+			"Khon Kaen",
+			"Maha Sarakham",
+			"Mukdahan",
+			"Roi Et",
+			"Sakon Nakhon",
+			"Udon Thani"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kalasin",
+			"nameDe": "Kalasin",
+			"nameIt": "Kalasin",
+			"population": 55102
+		},
+		"position": "north-east"
+	},
+	"mukdahan": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดมุกดาหาร",
+		"borders": [
+			"Amnat Charoen",
+			"Kalasin",
+			"Nakhon Phanom",
+			"Roi Et",
+			"Sakon Nakhon",
+			"Yasothon"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"tak": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดตาก",
+		"borders": [
+			"Chiang Mai",
+			"Kamphaeng Phet",
+			"Kanchanaburi",
+			"Lampang",
+			"Lamphun",
+			"Mae Hong Son",
+			"Nakhon Sawan",
+			"Sukhothai",
+			"Uthai Thani"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Mae Sot",
+			"nameDe": "Mae Sot",
+			"nameIt": "Mae Sot",
+			"population": 45781
+		},
+		"position": "north-west"
+	},
+	"khon-kaen": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดขอนแก่น",
+		"borders": [
+			"Buri Ram",
+			"Chaiyaphum",
+			"Kalasin",
+			"Loei",
+			"Maha Sarakham",
+			"Nakhon Ratchasima",
+			"Nong Bua Lam Phu",
+			"Phetchabun",
+			"Udon Thani"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Khon Kaen",
+			"nameDe": "Khon Kaen",
+			"nameIt": "Khon Kaen",
+			"population": 251056
+		},
+		"position": "north"
+	},
+	"kamphaeng-phet": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดกำแพงเพชร",
+		"borders": [
+			"Nakhon Sawan",
+			"Phichit",
+			"Phitsanulok",
+			"Sukhothai",
+			"Tak"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kamphaeng Phet",
+			"nameDe": "Kamphaeng Phet",
+			"nameIt": "Kamphaeng Phet",
+			"population": 58787
+		},
+		"position": "north-west"
+	},
+	"phichit": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดพิจิตร",
+		"borders": [
+			"Kamphaeng Phet",
+			"Nakhon Sawan",
+			"Phetchabun",
+			"Phitsanulok"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Phichit",
+			"nameDe": "Phichit",
+			"nameIt": "Phichit",
+			"population": 35760
+		},
+		"position": "north"
+	},
+	"phetchabun": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "อำเภอเมืองเพชรบูรณ์",
+		"borders": [
+			"Chaiyaphum",
+			"Khon Kaen",
+			"Loei",
+			"Lop Buri",
+			"Nakhon Ratchasima",
+			"Nakhon Sawan",
+			"Phichit",
+			"Phitsanulok"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Phetchabun",
+			"nameDe": "Phetchabun",
+			"nameIt": "Phetchabun",
+			"population": 50656
+		},
+		"position": "north"
+	},
+	"maha-sarakham": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดมหาสารคาม",
+		"borders": [
+			"Buri Ram",
+			"Kalasin",
+			"Khon Kaen",
+			"Roi Et",
+			"Surin"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Maha Sarakham",
+			"nameDe": "Maha Sarakham",
+			"nameIt": "Maha Sarakham",
+			"population": 51584
+		},
+		"position": "north-east"
+	},
+	"chaiyaphum": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดชัยนาท",
+		"borders": [
+			"Khon Kaen",
+			"Lop Buri",
+			"Nakhon Ratchasima",
+			"Phetchabun"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Chaiyaphum",
+			"nameDe": "Chaiyaphum",
+			"nameIt": "Chaiyaphum",
+			"population": 58350
+		},
+		"position": "north"
+	},
+	"roi-et": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ร้อยเอ็ด",
+		"borders": [
+			"Kalasin",
+			"Maha Sarakham",
+			"Mukdahan",
+			"Si Sa Ket",
+			"Surin",
+			"Yasothon"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Roi Et",
+			"nameDe": "Roi Et",
+			"nameIt": "Roi Et",
+			"population": 39328
+		},
+		"position": "north-east"
+	},
+	"amnat-charoen": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดอำนาจเจริญ",
+		"borders": [
+			"Mukdahan",
+			"Ubon Ratchathani",
+			"Yasothon"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"yasothon": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดยโสธร",
+		"borders": [
+			"Amnat Charoen",
+			"Mukdahan",
+			"Roi Et",
+			"Si Sa Ket",
+			"Ubon Ratchathani"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Yasothon",
+			"nameDe": "Yasothon",
+			"nameIt": "Yasothon",
+			"population": 21643
+		},
+		"position": "north-east"
+	},
+	"nakhon-sawan": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดนครสวรรค์",
+		"borders": [
+			"Chai Nat",
+			"Kamphaeng Phet",
+			"Lop Buri",
+			"Phetchabun",
+			"Phichit",
+			"Sing Buri",
+			"Tak",
+			"Uthai Thani"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Nakhon Sawan",
+			"nameDe": "Nakhon Sawan",
+			"nameIt": "Nakhon Sawan",
+			"population": 111915
+		},
+		"position": "north-west"
+	},
+	"uthai-thani": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดอุทัยธานี",
+		"borders": [
+			"Chai Nat",
+			"Kanchanaburi",
+			"Nakhon Sawan",
+			"Suphan Buri",
+			"Tak"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Uthai Thani",
+			"nameDe": "Uthai Thani",
+			"nameIt": "Uthai Thani",
+			"population": 22219
+		},
+		"position": "west"
+	},
+	"chai-nat": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดชัยนาท",
+		"borders": [
+			"Nakhon Sawan",
+			"Sing Buri",
+			"Suphan Buri",
+			"Uthai Thani"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Chainat",
+			"nameDe": "Chainat",
+			"nameIt": "Chainat",
+			"population": 15469
+		},
+		"position": "west"
+	},
+	"ubon-ratchathani": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดอุบลราชธานี",
+		"borders": [
+			"Amnat Charoen",
+			"Si Sa Ket",
+			"Yasothon"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ubon Ratchathani",
+			"nameDe": "Ubon Ratchathani",
+			"nameIt": "Ubon Ratchathani",
+			"population": 273893
+		},
+		"position": "east"
+	},
+	"lop-buri": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ลพบุรี",
+		"borders": [
+			"Ang Thong",
+			"Chaiyaphum",
+			"Nakhon Ratchasima",
+			"Nakhon Sawan",
+			"Phetchabun",
+			"Phra Nakhon Si Ayutthaya",
+			"Saraburi",
+			"Sing Buri"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Lop Buri",
+			"nameDe": "Lop Buri",
+			"nameIt": "Lopburi",
+			"population": 57761
+		},
+		"position": "centre"
+	},
+	"nakhon-ratchasima": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดนครราชสีมา",
+		"borders": [
+			"Buri Ram",
+			"Chaiyaphum",
+			"Khon Kaen",
+			"Lop Buri",
+			"Nakhon Nayok",
+			"Phetchabun",
+			"Prachin Buri",
+			"Sa Kaeo",
+			"Saraburi"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Nakhon Ratchasima",
+			"nameDe": "Nakhon Ratchasima",
+			"nameIt": "Nakhon Ratchasima",
+			"population": 334984
+		},
+		"position": "centre"
+	},
+	"si-sa-ket": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดศรีสะเกษ",
+		"borders": [
+			"Roi Et",
+			"Surin",
+			"Ubon Ratchathani",
+			"Yasothon"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Sisaket",
+			"nameDe": "Si Sa Ket",
+			"nameIt": "Sisaket",
+			"population": 44751
+		},
+		"position": "east"
+	},
+	"buri-ram": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดบุรีรัมย์",
+		"borders": [
+			"Khon Kaen",
+			"Maha Sarakham",
+			"Nakhon Ratchasima",
+			"Sa Kaeo",
+			"Surin"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Buriram",
+			"nameDe": "Buri Ram",
+			"nameIt": "Buriram",
+			"population": 47292
+		},
+		"position": "east"
+	},
+	"sing-buri": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดสิงห์บุรี",
+		"borders": [
+			"Ang Thong",
+			"Chai Nat",
+			"Lop Buri",
+			"Nakhon Sawan",
+			"Suphan Buri"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Sing Buri",
+			"nameDe": "Singburi",
+			"nameIt": "Singburi",
+			"population": 20046
+		},
+		"position": "centre"
+	},
+	"surin": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดสุรินทร์",
+		"borders": [
+			"Buri Ram",
+			"Maha Sarakham",
+			"Roi Et",
+			"Si Sa Ket"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Surin",
+			"nameDe": "Surin",
+			"nameIt": "Surin",
+			"population": 62536
+		},
+		"position": "east"
+	},
+	"kanchanaburi": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "อำเภอเมืองกาญจนบุรี",
+		"borders": [
+			"Nakhon Pathom",
+			"Ratchaburi",
+			"Suphan Buri",
+			"Tak",
+			"Uthai Thani"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kanchanaburi",
+			"nameDe": "Kanchanaburi",
+			"nameIt": "Kanchanaburi",
+			"population": 63699
+		},
+		"position": "west"
+	},
+	"ang-thong": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดอ่างทอง",
+		"borders": [
+			"Lop Buri",
+			"Phra Nakhon Si Ayutthaya",
+			"Sing Buri",
+			"Suphan Buri"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ang Thong",
+			"nameDe": "Ang Thong",
+			"nameIt": "Ang Thong",
+			"population": 13738
+		},
+		"position": "centre"
+	},
+	"suphan-buri": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดสุพรรณบุรี",
+		"borders": [
+			"Ang Thong",
+			"Chai Nat",
+			"Kanchanaburi",
+			"Nakhon Pathom",
+			"Phra Nakhon Si Ayutthaya",
+			"Sing Buri",
+			"Uthai Thani"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Supham Buri",
+			"nameDe": "Suphan Buri",
+			"nameIt": "Suphanburi",
+			"population": 53399
+		},
+		"position": "west"
+	},
+	"saraburi": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดสระบุรี",
+		"borders": [
+			"Lop Buri",
+			"Nakhon Nayok",
+			"Nakhon Ratchasima",
+			"Pathum Thani",
+			"Phra Nakhon Si Ayutthaya"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Saraburi",
+			"nameDe": "Saraburi",
+			"nameIt": "Saraburi",
+			"population": 70769
+		},
+		"position": "centre"
+	},
+	"phra-nakhon-si-ayutthaya": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดพระนครศรีอยุธยา",
+		"borders": [
+			"Ang Thong",
+			"Lop Buri",
+			"Nakhon Pathom",
+			"Nonthaburi",
+			"Pathum Thani",
+			"Saraburi",
+			"Suphan Buri"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ayutthaya",
+			"nameDe": "Phra Nakhon Si Ayutthaya",
+			"nameIt": "Ayutthaya",
+			"population": 145615
+		},
+		"position": "centre"
+	},
+	"nakhon-nayok": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดนครนายก",
+		"borders": [
+			"Bangkok",
+			"Chachoengsao",
+			"Nakhon Ratchasima",
+			"Pathum Thani",
+			"Prachin Buri",
+			"Saraburi"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Nakhon Nayok",
+			"nameDe": "Nakhon Nayok",
+			"nameIt": "Nakhon Nayok",
+			"population": 21309
+		},
+		"position": "centre"
+	},
+	"pathum-thani": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดปทุมธานี",
+		"borders": [
+			"Bangkok",
+			"Chachoengsao",
+			"Nakhon Nayok",
+			"Nonthaburi",
+			"Phra Nakhon Si Ayutthaya",
+			"Saraburi"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Pathum Thani",
+			"nameDe": "Pathum Thani",
+			"nameIt": "Pathum Thani",
+			"population": 154412
+		},
+		"position": "centre"
+	},
+	"prachin-buri": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดปราจีนบุรี",
+		"borders": [
+			"Chachoengsao",
+			"Nakhon Nayok",
+			"Nakhon Ratchasima",
+			"Sa Kaeo"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Prachin Buri",
+			"nameDe": "Prachin Buri",
+			"nameIt": "Prachinburi",
+			"population": 79757
+		},
+		"position": "centre"
+	},
+	"nonthaburi": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดนนทบุรี",
+		"borders": [
+			"Bangkok",
+			"Nakhon Pathom",
+			"Pathum Thani",
+			"Phra Nakhon Si Ayutthaya"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Nonthaburi",
+			"nameDe": "Nonthaburi",
+			"nameIt": "Nonthaburi",
+			"population": 258550
+		},
+		"position": "centre"
+	},
+	"nakhon-pathom": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "อำเภอเมืองนครปฐม",
+		"borders": [
+			"Bangkok",
+			"Kanchanaburi",
+			"Nonthaburi",
+			"Phra Nakhon Si Ayutthaya",
+			"Ratchaburi",
+			"Samut Sakhon",
+			"Suphan Buri"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Nakhon Pathom",
+			"nameDe": "Nakhon Pathom",
+			"nameIt": "Nakhon Pathom",
+			"population": 117927
+		},
+		"position": "west"
+	},
+	"bangkok": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดเชียงใหม่",
+		"borders": [
+			"Chachoengsao",
+			"Nakhon Nayok",
+			"Nakhon Pathom",
+			"Nonthaburi",
+			"Pathum Thani",
+			"Samut Prakan",
+			"Samut Sakhon"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Bangkok",
+			"nameDe": "Bangkok",
+			"nameIt": "Bangkok",
+			"population": 6704000
+		},
+		"position": "centre"
+	},
+	"sa-kaeo": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดสระแก้ว",
+		"borders": [
+			"Buri Ram",
+			"Chachoengsao",
+			"Chanthaburi",
+			"Nakhon Ratchasima",
+			"Prachin Buri"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Aranyaprathet",
+			"nameDe": "Aranyaprathet",
+			"nameIt": "Aranyaprathet",
+			"population": 22472
+		},
+		"position": "centre"
+	},
+	"samut-prakan": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดสมุทรปราการ",
+		"borders": [
+			"Bangkok",
+			"Chachoengsao"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Samut Prakan",
+			"nameDe": "Samut Prakan",
+			"nameIt": "Samut Prakan",
+			"population": 388920
+		},
+		"position": "centre"
+	},
+	"samut-sakhon": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดสมุทรสาคร",
+		"borders": [
+			"Bangkok",
+			"Nakhon Pathom",
+			"Ratchaburi",
+			"Samut Songkhram"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Samut Sakhon",
+			"nameDe": "Samut Sakhon",
+			"nameIt": "Samut Sakhon",
+			"population": 63498
+		},
+		"position": "centre"
+	},
+	"chachoengsao": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดฉะเชิงเทรา",
+		"borders": [
+			"Bangkok",
+			"Chanthaburi",
+			"Chon Buri",
+			"Nakhon Nayok",
+			"Pathum Thani",
+			"Prachin Buri",
+			"Sa Kaeo",
+			"Samut Prakan"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Chachoengsao",
+			"nameDe": "Chachoengsao",
+			"nameIt": "Chachoengsao",
+			"population": 49741
+		},
+		"position": "centre"
+	},
+	"ratchaburi": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดราชบุรี",
+		"borders": [
+			"Kanchanaburi",
+			"Nakhon Pathom",
+			"Phetchaburi",
+			"Samut Sakhon",
+			"Samut Songkhram"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ratchaburi",
+			"nameDe": "Ratchaburi",
+			"nameIt": "Ratchaburi",
+			"population": 106996
+		},
+		"position": "west"
+	},
+	"samut-songkhram": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดสมุทรสงคราม",
+		"borders": [
+			"Phetchaburi",
+			"Ratchaburi",
+			"Samut Sakhon"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Samut Songkhram",
+			"nameDe": "Samut Songkhram",
+			"nameIt": "Samut Songkhram",
+			"population": 35065
+		},
+		"position": "west"
+	},
+	"chon-buri": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดชลบุรี",
+		"borders": [
+			"Chachoengsao",
+			"Chanthaburi",
+			"Rayong"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Chon Buri",
+			"nameDe": "Chon Buri",
+			"nameIt": "Chonburi",
+			"population": 226618
+		},
+		"position": "centre"
+	},
+	"phetchaburi": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดเพชรบุรี",
+		"borders": [
+			"Prachuap Khiri Khan",
+			"Ratchaburi",
+			"Samut Songkhram"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Phetchaburi",
+			"nameDe": "Phetchaburi",
+			"nameIt": "Phetchaburi",
+			"population": 90497
+		},
+		"position": "west"
+	},
+	"rayong": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดระยอง",
+		"borders": [
+			"Chanthaburi",
+			"Chon Buri"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Rayong",
+			"nameDe": "Rayong",
+			"nameIt": "Rayong",
+			"population": 37035
+		},
+		"position": "centre"
+	},
+	"chanthaburi": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จันทบุรี",
+		"borders": [
+			"Chachoengsao",
+			"Chon Buri",
+			"Rayong",
+			"Sa Kaeo",
+			"Trat"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Chanthaburi",
+			"nameDe": "Chanthaburi",
+			"nameIt": "Chanthaburi",
+			"population": 99819
+		},
+		"position": "centre"
+	},
+	"trat": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดตราด",
+		"borders": [
+			"Chanthaburi"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Trat",
+			"nameDe": "Trat",
+			"nameIt": "Trat",
+			"population": 21590
+		},
+		"position": "centre"
+	},
+	"prachuap-khiri-khan": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดประจวบคีรีขันธ์",
+		"borders": [
+			"Chumphon",
+			"Phetchaburi"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Hua Hin",
+			"nameDe": "Hua Hin",
+			"nameIt": "Hua Hin",
+			"population": 50456
+		},
+		"position": "west"
+	},
+	"chumphon": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดชุมพร",
+		"borders": [
+			"Prachuap Khiri Khan",
+			"Ranong",
+			"Surat Thani"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Chumphon",
+			"nameDe": "Chumphon",
+			"nameIt": "Chumphon",
+			"population": 85686
+		},
+		"position": "south-west"
+	},
+	"ranong": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดระนอง",
+		"borders": [
+			"Chumphon",
+			"Phang Nga",
+			"Surat Thani"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Ranong",
+			"nameDe": "Ranong",
+			"nameIt": "Ranong",
+			"population": 24561
+		},
+		"position": "south-west"
+	},
+	"surat-thani": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดสุราษฎร์ธานี",
+		"borders": [
+			"Chumphon",
+			"Krabi",
+			"Nakhon Si Thammarat",
+			"Phang Nga",
+			"Ranong"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Surat Thani",
+			"nameDe": "Surat Thani",
+			"nameIt": "Surat Thani",
+			"population": 157627
+		},
+		"position": "south-west"
+	},
+	"phang-nga": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดพังงา",
+		"borders": [
+			"Krabi",
+			"Ranong",
+			"Surat Thani"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Phangnga",
+			"nameDe": "Phang-nga",
+			"nameIt": "Phang Nga",
+			"population": 9676
+		},
+		"position": "south-west"
+	},
+	"nakhon-si-thammarat": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดนครศรีธรรมราช",
+		"borders": [
+			"Krabi",
+			"Phatthalung",
+			"Songkhla",
+			"Surat Thani",
+			"Trang"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Nakhon Si Thammarat",
+			"nameDe": "Nakhon Si Thammarat",
+			"nameIt": "Nakhon Si Thammarat",
+			"population": 232335
+		},
+		"peak": {
+			"name": "Khao Luang",
+			"elevation": 1780
+		},
+		"position": "south-west"
+	},
+	"krabi": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดกระบี่",
+		"borders": [
+			"Nakhon Si Thammarat",
+			"Phang Nga",
+			"Surat Thani",
+			"Trang"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Krabi",
+			"nameDe": "Krabi",
+			"nameIt": "Krabi",
+			"population": 31219
+		},
+		"position": "south-west"
+	},
+	"phuket": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดภูเก็ต",
+		"coastal": true,
+		"largestCity": {
+			"name": "Phuket",
+			"nameDe": "Phuket",
+			"nameIt": "città di Phuket",
+			"population": 141618
+		},
+		"position": "south-west"
+	},
+	"trang": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดตรัง",
+		"borders": [
+			"Krabi",
+			"Nakhon Si Thammarat",
+			"Phatthalung",
+			"Satun",
+			"Songkhla"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Trang",
+			"nameDe": "Trang",
+			"nameIt": "Trang",
+			"population": 147820
+		},
+		"position": "south-west"
+	},
+	"phatthalung": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดพัทลุง",
+		"borders": [
+			"Nakhon Si Thammarat",
+			"Songkhla",
+			"Trang"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Phatthalung",
+			"nameDe": "Phatthalung",
+			"nameIt": "Phatthalung",
+			"population": 43522
+		},
+		"position": "south-west"
+	},
+	"songkhla": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดสงขลา",
+		"borders": [
+			"Nakhon Si Thammarat",
+			"Pattani",
+			"Phatthalung",
+			"Satun",
+			"Trang",
+			"Yala"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Hat Yai",
+			"nameDe": "Hat Yai",
+			"nameIt": "Hat Yai",
+			"population": 317954
+		},
+		"position": "south"
+	},
+	"satun": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดสตูล",
+		"borders": [
+			"Songkhla",
+			"Trang"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Satun",
+			"nameDe": "Satun",
+			"nameIt": "Satun",
+			"population": 34544
+		},
+		"position": "south-west"
+	},
+	"pattani": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดปัตตานี",
+		"borders": [
+			"Narathiwat",
+			"Songkhla",
+			"Yala"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Pattani",
+			"nameDe": "Pattani",
+			"nameIt": "Pattani",
+			"population": 150000
+		},
+		"position": "south"
+	},
+	"narathiwat": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดนราธิวาส",
+		"borders": [
+			"Pattani",
+			"Yala"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Narathiwat",
+			"nameDe": "Narathiwat",
+			"nameIt": "Narathiwat",
+			"population": 68112
+		},
+		"position": "south"
+	},
+	"yala": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "จังหวัดยะลา",
+		"borders": [
+			"Narathiwat",
+			"Pattani",
+			"Songkhla"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Yala",
+			"nameDe": "Yala",
+			"nameIt": "Yala",
+			"population": 148140
+		},
+		"position": "south"
+	}
+}

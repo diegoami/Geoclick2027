@@ -1,0 +1,241 @@
+{
+	"al-jawf": {
+		"kind": "region",
+		"borders": [
+			"Ha'il",
+			"Northern Borders",
+			"Tabuk"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Sakakah",
+			"nameDe": "Sakaka",
+			"nameIt": "Skaka",
+			"population": 128332
+		},
+		"position": "north-west"
+	},
+	"northern-borders": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Al-Jawf",
+			"Eastern Province",
+			"Ha'il",
+			"Riyadh"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Arar",
+			"nameDe": "Arar",
+			"nameIt": "'Ar'ar",
+			"population": 222016
+		},
+		"position": "north"
+	},
+	"ha-il": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Al-Jawf",
+			"Medina",
+			"Northern Borders",
+			"Qassim",
+			"Riyadh",
+			"Tabuk"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Hail",
+			"nameDe": "Ha'il",
+			"nameIt": "Ha'il",
+			"population": 385257
+		},
+		"position": "north"
+	},
+	"tabuk": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Al-Jawf",
+			"Ha'il",
+			"Medina"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tabuk",
+			"nameDe": "Tabuk",
+			"nameIt": "Tabuk",
+			"population": 547957
+		},
+		"peak": {
+			"name": "Jabal al Lawz",
+			"elevation": 2580
+		},
+		"position": "west"
+	},
+	"qassim": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Ha'il",
+			"Medina",
+			"Riyadh"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Buraydah",
+			"nameDe": "Buraida",
+			"nameIt": "Burayda",
+			"population": 398581
+		},
+		"position": "centre"
+	},
+	"medina": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Ha'il",
+			"Mecca",
+			"Qassim",
+			"Riyadh",
+			"Tabuk"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Medina",
+			"nameDe": "Medina",
+			"nameIt": "Medina",
+			"population": 1010000
+		},
+		"peak": {
+			"name": "Jebel Jar",
+			"elevation": 2300
+		},
+		"position": "west"
+	},
+	"riyadh": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Asir",
+			"Eastern Province",
+			"Ha'il",
+			"Mecca",
+			"Medina",
+			"Najran",
+			"Northern Borders",
+			"Qassim"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Riyadh",
+			"nameDe": "Riad",
+			"nameIt": "Riad",
+			"population": 4465000
+		},
+		"position": "centre"
+	},
+	"eastern-province": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Najran",
+			"Northern Borders",
+			"Riyadh"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Dammam",
+			"nameDe": "Dammam",
+			"nameIt": "Dammam",
+			"population": 2054710
+		},
+		"position": "east"
+	},
+	"mecca": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Al-Bahah",
+			"Asir",
+			"Jazan",
+			"Medina",
+			"Riyadh"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Jeddah",
+			"nameDe": "Dschidda",
+			"nameIt": "Gedda",
+			"population": 3012000
+		},
+		"position": "south-west"
+	},
+	"al-bahah": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Asir",
+			"Mecca"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"asir": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Al-Bahah",
+			"Jazan",
+			"Mecca",
+			"Najran",
+			"Riyadh"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Abha",
+			"nameDe": "Abha",
+			"nameIt": "Abha",
+			"population": 210886
+		},
+		"peak": {
+			"name": "Jabal Sawdā",
+			"elevation": 3000
+		},
+		"position": "south"
+	},
+	"najran": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Asir",
+			"Eastern Province",
+			"Riyadh"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Najran",
+			"nameDe": "Nadschran",
+			"nameIt": "Najran",
+			"population": 369609
+		},
+		"position": "south"
+	},
+	"jazan": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Asir",
+			"Mecca"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Jizan",
+			"nameDe": "Dschāzān",
+			"nameIt": "Jizan",
+			"population": 105198
+		},
+		"position": "south"
+	}
+}

@@ -16,6 +16,50 @@ Keep this updated the same way as the other docs: when a decision gets
 made, made explicitly to correct an earlier one, or gets revisited, add
 or amend an entry here as part of that change, not as an afterthought.
 
+## Poland's powiats under ODbL, and eleven more countries (2026-09-24, #39 batch E)
+
+- **Poland's 380 powiats come from OpenStreetMap** (owner's answer,
+  2026-09-24: yes to ODbL). What that asks: every map built from it says
+  "© OpenStreetMap contributors, ODbL", which the credit line added in
+  batch D already shows; and those five maps' boundaries, the one
+  derived database, stay under ODbL. It reaches nothing else - not the
+  app's code, not the other maps, not the facts.
+- **Names as Poles write them**: "powiat oleski", and a city with powiat
+  rights by its name. OpenStreetMap names eleven land powiats in English
+  after their seat ("Siedlce County", "Colberg County" for Kołobrzeg's),
+  so `admin2.ts` gives them their Polish names. Ten names occur twice in
+  Poland (a powiat brzeski in Opolskie and in Małopolskie), and a map id
+  comes from its name, so each of the twenty gets its voivodeship,
+  "powiat brzeski (Opolskie)", on every map it is on, not just where both
+  meet (`--disambiguate-by`).
+- **Five parts of 62-85**, by voivodeship, the way Germany's Kreise are
+  split: North (the four coastal and Kuyavian ones), West, East
+  (Mazowieckie, Podlaskie, Łódzkie), South-East, South.
+- **Eleven countries new to the app, from Natural Earth**, picked by the
+  owner's leave ("you are free to pick them") and by whether Natural
+  Earth's admin-1 layer is current: Belgium, Czechia, Croatia, Greece,
+  Bulgaria, Chile, Peru, South Africa, Iran, Thailand, Saudi Arabia. The
+  six with 20 or more towns over 100 000 also get a Towns map; Belgium,
+  Czechia, Croatia, Greece and Bulgaria have 3-8, too few for one.
+- **Not picked, and why:** Norway (Natural Earth still has the 21 counties
+  of before 2020), Morocco (the 16 regions of before 2015), Kenya (the
+  eight provinces of before 2013), Serbia (a district twice, names without
+  diacritics), Denmark (five regions).
+- **Names follow the rule of the rest:** a Latin-script country's own
+  language (West-Vlaanderen, Jihomoravský, Požeško-slavonska, Biobío),
+  English for Greek, Bulgarian, Persian, Thai and Arabic, as for Russia
+  and Ukraine. Two places that share a name are told apart the way their
+  own country does: Sofia City and Sofia Province, Lima Metropolitana and
+  Lima Provincias, Grad Zagreb and Zagrebačka. South Africa's towns take
+  the names of 2004-2021 (Gqeberha, Mthatha, Komani, Kariega).
+- **Croatia is named by code**, because Natural Earth's `name` calls
+  Požega-Slavonia by its neighbour's name and `name_en` gives the city of
+  Zagreb and Zagreb County the same one.
+- **No overseas pieces**: Chile without Easter Island and Juan Fernández
+  (both in Valparaíso), South Africa without the Prince Edward Islands
+  (in the Western Cape) - `--clip` now works on admin-1 maps too. Mount
+  Athos, self-governing and in no Greek region, stays a target.
+
 ## Admin-2 maps, and the first boundaries not in the public domain (2026-09-24, #39 batch D)
 
 - **Natural Earth first.** Its admin-1 layer is already one level finer
@@ -41,10 +85,11 @@ or amend an entry here as part of that change, not as an afterthought.
   own licence: Germany's 400 Kreise are the BKG's, **dl-de/by-2-0 -
   attribution required**; the 344 Dutch municipalities are **CC0**. The
   source files are pinned to one geoBoundaries release commit.
-- **Poland's powiats are not built.** geoBoundaries' copy is from
-  OpenStreetMap, **ODbL** - share-alike, not attribution only, which
-  would put the derived tiles under ODbL too. That is a different answer
-  from the one the owner gave, so it goes back to the owner.
+- **Poland's powiats were not built at first.** geoBoundaries' copy is
+  from OpenStreetMap, **ODbL** - share-alike, not attribution only, which
+  puts the derived tiles under ODbL too. That was a different question
+  from the one the owner had answered, so it went back to the owner, who
+  said yes the same day: see "Poland's powiats under ODbL" above.
 - **The map's credit is now shown.** The tileset always carried it, but the
   pmtiles source never passed it to MapLibre's attribution control, so no
   map ever showed "Natural Earth". Harmless for public-domain data, not for

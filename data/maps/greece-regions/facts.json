@@ -1,0 +1,230 @@
+{
+	"eastern-macedonia-and-thrace": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Ανατολική Μακεδονία και Θράκη",
+		"borders": [
+			"Central Macedonia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Kavala",
+			"nameDe": "Kavala",
+			"nameIt": "Kavala",
+			"population": 59240
+		},
+		"position": "north"
+	},
+	"central-macedonia": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Κεντρική Μακεδονία",
+		"borders": [
+			"Eastern Macedonia and Thrace",
+			"Mount Athos",
+			"Thessaly",
+			"Western Macedonia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Thessaloniki",
+			"nameDe": "Thessaloniki",
+			"nameIt": "Salonicco",
+			"population": 828000
+		},
+		"peak": {
+			"name": "Mount Olympus",
+			"elevation": 2917
+		},
+		"position": "north"
+	},
+	"western-macedonia": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Δυτικής Μακεδονίας",
+		"borders": [
+			"Central Macedonia",
+			"Epirus",
+			"Thessaly"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"mount-athos": {
+		"kind": "region",
+		"type": "Autonomous Monastic State",
+		"localName": "Όρος Άθως",
+		"borders": [
+			"Central Macedonia"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"epirus": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Ήπειρος",
+		"borders": [
+			"Central Greece",
+			"Thessaly",
+			"Western Greece",
+			"Western Macedonia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Ioanina",
+			"nameDe": "Ioannina",
+			"nameIt": "Giannina",
+			"population": 86304
+		},
+		"position": "north-west"
+	},
+	"thessaly": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Θεσσαλία",
+		"borders": [
+			"Central Greece",
+			"Central Macedonia",
+			"Epirus",
+			"Western Greece",
+			"Western Macedonia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Larissa",
+			"nameDe": "Larisa",
+			"nameIt": "Larissa",
+			"population": 128758
+		},
+		"position": "north-west"
+	},
+	"north-aegean": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Βορείου Αιγαίου",
+		"coastal": true,
+		"largestCity": {
+			"name": "Mitilini",
+			"nameDe": "Mytilini",
+			"nameIt": "Mitilene",
+			"population": 29328
+		},
+		"position": "east"
+	},
+	"ionian-islands": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Ιόνια νησιά",
+		"coastal": true,
+		"largestCity": {
+			"name": "Kerkira",
+			"nameDe": "Korfu",
+			"nameIt": "Corfù",
+			"population": 38517
+		},
+		"position": "west"
+	},
+	"central-greece": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Κεντρική Ελλάδα",
+		"borders": [
+			"Attica",
+			"Epirus",
+			"Thessaly",
+			"Western Greece"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Chalkida",
+			"nameDe": "Chalkida",
+			"nameIt": "Calcide",
+			"population": 71842
+		},
+		"position": "centre"
+	},
+	"western-greece": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Δυτικής Ελλάδος",
+		"borders": [
+			"Central Greece",
+			"Epirus",
+			"Peloponnese",
+			"Thessaly"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Patra",
+			"nameDe": "Patras",
+			"nameIt": "Patrasso",
+			"population": 163360
+		},
+		"position": "west"
+	},
+	"peloponnese": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "ΙΠελοπόννησος",
+		"borders": [
+			"Attica",
+			"Western Greece"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Kalamata",
+			"nameDe": "Kalamata",
+			"nameIt": "Calamata",
+			"population": 71823
+		},
+		"position": "centre"
+	},
+	"attica": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Αττική",
+		"borders": [
+			"Central Greece",
+			"Peloponnese"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Athens",
+			"nameDe": "Athen",
+			"nameIt": "Atene",
+			"population": 3242000
+		},
+		"position": "centre"
+	},
+	"south-aegean": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Νοτίου Αιγαίου",
+		"coastal": true,
+		"largestCity": {
+			"name": "Rodos",
+			"nameDe": "Rhodos",
+			"nameIt": "Rodi",
+			"population": 56969
+		},
+		"position": "south-east"
+	},
+	"crete": {
+		"kind": "region",
+		"type": "Region",
+		"localName": "Κρήτη",
+		"coastal": true,
+		"largestCity": {
+			"name": "Iraklio",
+			"nameDe": "Heraklion",
+			"nameIt": "Candia",
+			"population": 137154
+		},
+		"peak": {
+			"name": "Psiloritis",
+			"elevation": 2456
+		},
+		"position": "south"
+	}
+}

@@ -1,0 +1,619 @@
+{
+	"id": "south-africa-towns-100k",
+	"name": "South Africa — Towns",
+	"country": "South Africa",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "thohoyandou",
+			"name": "Thohoyandou",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				30.4800411,
+				-22.9500346
+			],
+			"bbox": [
+				30.4800411,
+				-22.9500346,
+				30.4800411,
+				-22.9500346
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "polokwane",
+			"name": "Polokwane",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				29.4500264,
+				-23.8900289
+			],
+			"bbox": [
+				29.4500264,
+				-23.8900289,
+				29.4500264,
+				-23.8900289
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "mbombela",
+			"name": "Mbombela",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				30.9800105,
+				-25.4696224
+			],
+			"bbox": [
+				30.9800105,
+				-25.4696224,
+				30.9800105,
+				-25.4696224
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "brits",
+			"name": "Brits",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				27.7799991,
+				-25.6296126
+			],
+			"bbox": [
+				27.7799991,
+				-25.6296126,
+				27.7799991,
+				-25.6296126
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "rustenburg",
+			"name": "Rustenburg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				27.2400321,
+				-25.6500248
+			],
+			"bbox": [
+				27.2400321,
+				-25.6500248,
+				27.2400321,
+				-25.6500248
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "pretoria",
+			"name": "Pretoria",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				28.2274832,
+				-25.7049747
+			],
+			"bbox": [
+				28.2274832,
+				-25.7049747,
+				28.2274832,
+				-25.7049747
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "middelburg",
+			"name": "Middelburg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				29.4700252,
+				-25.7596305
+			],
+			"bbox": [
+				29.4700252,
+				-25.7596305,
+				29.4700252,
+				-25.7596305
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "mahikeng",
+			"name": "Mahikeng",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				25.6100024,
+				-25.8300138
+			],
+			"bbox": [
+				25.6100024,
+				-25.8300138,
+				25.6100024,
+				-25.8300138
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "benoni",
+			"name": "Benoni",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				28.3279939,
+				-26.147635
+			],
+			"bbox": [
+				28.3279939,
+				-26.147635,
+				28.3279939,
+				-26.147635
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "johannesburg",
+			"name": "Johannesburg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				28.0280639,
+				-26.1680989
+			],
+			"bbox": [
+				28.0280639,
+				-26.1680989,
+				28.0280639,
+				-26.1680989
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "springs",
+			"name": "Springs",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				28.430037,
+				-26.2695735
+			],
+			"bbox": [
+				28.430037,
+				-26.2695735,
+				28.430037,
+				-26.2695735
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "bethal",
+			"name": "Bethal",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				29.4500264,
+				-26.469613
+			],
+			"bbox": [
+				29.4500264,
+				-26.469613,
+				29.4500264,
+				-26.469613
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "vereeniging",
+			"name": "Vereeniging",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				27.9580423,
+				-26.6476562
+			],
+			"bbox": [
+				27.9580423,
+				-26.6476562,
+				27.9580423,
+				-26.6476562
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "potchefstroom",
+			"name": "Potchefstroom",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				27.099989,
+				-26.6995731
+			],
+			"bbox": [
+				27.099989,
+				-26.6995731,
+				27.099989,
+				-26.6995731
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "klerksdorp",
+			"name": "Klerksdorp",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				26.6200183,
+				-26.8800272
+			],
+			"bbox": [
+				26.6200183,
+				-26.8800272,
+				26.6200183,
+				-26.8800272
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "kroonstad",
+			"name": "Kroonstad",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				27.2100081,
+				-27.6600313
+			],
+			"bbox": [
+				27.2100081,
+				-27.6600313,
+				27.2100081,
+				-27.6600313
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "vryheid",
+			"name": "Vryheid",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				30.7899963,
+				-27.7600252
+			],
+			"bbox": [
+				30.7899963,
+				-27.7600252,
+				30.7899963,
+				-27.7600252
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "welkom",
+			"name": "Welkom",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				26.7299857,
+				-27.9699866
+			],
+			"bbox": [
+				26.7299857,
+				-27.9699866,
+				26.7299857,
+				-27.9699866
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "kimberley",
+			"name": "Kimberley",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				24.770002,
+				-28.7468384
+			],
+			"bbox": [
+				24.770002,
+				-28.7468384,
+				24.770002,
+				-28.7468384
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "bloemfontein",
+			"name": "Bloemfontein",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				26.2299129,
+				-29.1199939
+			],
+			"bbox": [
+				26.2299129,
+				-29.1199939,
+				26.2299129,
+				-29.1199939
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "pietermaritzburg",
+			"name": "Pietermaritzburg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				30.3900207,
+				-29.6100415
+			],
+			"bbox": [
+				30.3900207,
+				-29.6100415,
+				30.3900207,
+				-29.6100415
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "durban",
+			"name": "Durban",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				31.01094366326237,
+				-29.86066234118211
+			],
+			"bbox": [
+				31.01094366326237,
+				-29.86066234118211,
+				31.01094366326237,
+				-29.86066234118211
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "mthatha",
+			"name": "Mthatha",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				28.790015,
+				-31.5799988
+			],
+			"bbox": [
+				28.790015,
+				-31.5799988,
+				28.790015,
+				-31.5799988
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "komani",
+			"name": "Komani",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				26.8800024,
+				-31.8996175
+			],
+			"bbox": [
+				26.8800024,
+				-31.8996175,
+				26.8800024,
+				-31.8996175
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "bhisho",
+			"name": "Bhisho",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				27.3899971,
+				-32.8699975
+			],
+			"bbox": [
+				27.3899971,
+				-32.8699975,
+				27.3899971,
+				-32.8699975
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "east-london",
+			"name": "East London",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				27.8700195,
+				-32.9700431
+			],
+			"bbox": [
+				27.8700195,
+				-32.9700431,
+				27.8700195,
+				-32.9700431
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "worcester",
+			"name": "Worcester",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				19.4399397,
+				-33.6400281
+			],
+			"bbox": [
+				19.4399397,
+				-33.6400281,
+				19.4399397,
+				-33.6400281
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "paarl",
+			"name": "Paarl",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.9600207,
+				-33.6995593
+			],
+			"bbox": [
+				18.9600207,
+				-33.6995593,
+				18.9600207,
+				-33.6995593
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "kariega",
+			"name": "Kariega",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				25.3900158,
+				-33.7596073
+			],
+			"bbox": [
+				25.3900158,
+				-33.7596073,
+				25.3900158,
+				-33.7596073
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "cape-town",
+			"name": "Cape Town",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.4330423,
+				-33.9180651
+			],
+			"bbox": [
+				18.4330423,
+				-33.9180651,
+				18.4330423,
+				-33.9180651
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "george",
+			"name": "George",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				22.4500402,
+				-33.950035
+			],
+			"bbox": [
+				22.4500402,
+				-33.950035,
+				22.4500402,
+				-33.950035
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "gqeberha",
+			"name": "Gqeberha",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				25.598083,
+				-33.9680879
+			],
+			"bbox": [
+				25.598083,
+				-33.9680879,
+				25.598083,
+				-33.9680879
+			],
+			"colorIndex": 2
+		}
+	],
+	"tourOrder": [
+		"thohoyandou",
+		"polokwane",
+		"mbombela",
+		"brits",
+		"rustenburg",
+		"pretoria",
+		"middelburg",
+		"mahikeng",
+		"benoni",
+		"johannesburg",
+		"springs",
+		"bethal",
+		"vereeniging",
+		"potchefstroom",
+		"klerksdorp",
+		"kroonstad",
+		"vryheid",
+		"welkom",
+		"kimberley",
+		"bloemfontein",
+		"pietermaritzburg",
+		"durban",
+		"mthatha",
+		"komani",
+		"bhisho",
+		"east-london",
+		"worcester",
+		"paarl",
+		"kariega",
+		"cape-town",
+		"george",
+		"gqeberha"
+	]
+}

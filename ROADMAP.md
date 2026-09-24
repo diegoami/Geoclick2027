@@ -163,9 +163,14 @@ Check items off as they land; update "Status" as iterations complete.
   counties from Natural Earth; Germany's 400 Kreise in six parts (BKG,
   dl-de/by-2-0) and the Netherlands' 344 municipalities in five (CC0) from
   geoBoundaries - 105 maps in all, and each map's credit is now shown.
-  **Waiting on the owner:** Poland's powiats (geoBoundaries' copy is OSM,
-  ODbL share-alike). **Not built:** Great Britain's counties and Hungary's
-  (Natural Earth's are out of date or broken; see DECISIONS.md).
+  All three merged 2026-09-24. **Batch E** (branch `maps-poland-powiats`):
+  Poland's 380 powiats in five parts from OpenStreetMap (the owner said yes
+  to ODbL), and eleven countries new to the app from Natural Earth -
+  Belgium, Czechia, Croatia, Greece, Bulgaria, Chile, Peru, South Africa,
+  Iran, Thailand, Saudi Arabia, the last six with a Towns map too - 127
+  maps in all. **Not built:** Great Britain's counties and Hungary's
+  (Natural Earth's are out of date or broken), Norway, Morocco, Kenya
+  (Natural Earth predates their reforms); see DECISIONS.md.
 - **Raised and decided 2026-09-20, unscoped**: six UX problems from one
   round of tablet play (`germany-towns-100k`) — the level-0 tray offering
   every name at once, slips losing their drag to the tablet's own

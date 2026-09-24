@@ -69,6 +69,41 @@ const NAME_FIXUPS: Record<string, Record<string, string>> = {
 	// Turkish dropped the circumflex from this city's name; its own
 	// municipality writes Elazığ. Hakkâri, also on this map, keeps its.
 	Turkey: { Elâzığ: 'Elazığ' },
+	// The capital by the name its own map uses; Cusco's official spelling.
+	Chile: { 'Santiago de Chile': 'Santiago' },
+	Peru: { Cuzco: 'Cusco' },
+	// South Africa renamed these towns between 2004 and 2021; Mmabatho is
+	// now part of Mahikeng, the North West's capital.
+	'South Africa': {
+		Umtata: 'Mthatha',
+		'Port Elizabeth': 'Gqeberha',
+		Uitenhage: 'Kariega',
+		Queenstown: 'Komani',
+		Mmabatho: 'Mahikeng'
+	},
+	// Iran's and Saudi Arabia's towns spelled as the provinces and regions
+	// of the same maps are: English, not a transliteration's.
+	Iran: {
+		Sabzewar: 'Sabzevar',
+		Qomsheh: 'Shahreza',
+		'Bandar-e Bushehr': 'Bushehr',
+		'Bandar-e-Abbas': 'Bandar Abbas',
+		'Marv Dasht': 'Marvdasht'
+	},
+	'Saudi Arabia': {
+		Makkah: 'Mecca',
+		Hail: "Ha'il",
+		'At Taif': 'Taif',
+		Jizan: 'Jazan',
+		Sakakah: 'Sakaka',
+		'Hafar al Batin': 'Hafar Al-Batin',
+		'Yanbu al Bahr': 'Yanbu',
+		'Al Jubayl': 'Jubail',
+		'Al-Qatif': 'Qatif',
+		'Al Mubarraz': 'Al-Mubarraz',
+		'Al Kharj': 'Al-Kharj',
+		'Al Hillah': 'Al-Hillah'
+	},
 	// NAME_VI gives the full administrative form - "Thành phố X" is "X city".
 	// A quiz slip wants the name, not the designation.
 	Vietnam: {

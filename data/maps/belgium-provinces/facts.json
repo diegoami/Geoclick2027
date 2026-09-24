@@ -1,0 +1,190 @@
+{
+	"antwerpen": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Limburg",
+			"Oost-Vlaanderen",
+			"Vlaams-Brabant"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Antwerpen",
+			"nameDe": "Antwerpen",
+			"nameIt": "Anversa",
+			"population": 920000
+		},
+		"position": "north"
+	},
+	"oost-vlaanderen": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Antwerpen",
+			"Hainaut",
+			"Vlaams-Brabant",
+			"West-Vlaanderen"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Gent",
+			"nameDe": "Gent",
+			"nameIt": "Gand",
+			"population": 444336
+		},
+		"position": "north"
+	},
+	"west-vlaanderen": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Hainaut",
+			"Oost-Vlaanderen"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Brugge",
+			"nameDe": "Brügge",
+			"nameIt": "Bruges",
+			"population": 146469
+		},
+		"position": "north-west"
+	},
+	"limburg": {
+		"kind": "region",
+		"borders": [
+			"Antwerpen",
+			"Liège",
+			"Vlaams-Brabant"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Maastricht",
+			"nameDe": "Maastricht",
+			"nameIt": "Maastricht",
+			"population": 122378
+		},
+		"position": "north-east"
+	},
+	"vlaams-brabant": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Antwerpen",
+			"Brabant wallon",
+			"Brussels",
+			"Hainaut",
+			"Liège",
+			"Limburg",
+			"Oost-Vlaanderen"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"brussels": {
+		"kind": "region",
+		"type": "Capital Region",
+		"borders": [
+			"Vlaams-Brabant"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Brussels",
+			"nameDe": "Brüssel",
+			"nameIt": "Bruxelles",
+			"population": 1743000
+		},
+		"position": "north"
+	},
+	"brabant-wallon": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Hainaut",
+			"Liège",
+			"Namur",
+			"Vlaams-Brabant"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"liege": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Brabant wallon",
+			"Limburg",
+			"Luxembourg",
+			"Namur",
+			"Vlaams-Brabant"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Liège",
+			"nameDe": "Lüttich",
+			"nameIt": "Liegi",
+			"population": 749110
+		},
+		"peak": {
+			"name": "Signal de Botrange",
+			"elevation": 694
+		},
+		"position": "east"
+	},
+	"hainaut": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Brabant wallon",
+			"Namur",
+			"Oost-Vlaanderen",
+			"Vlaams-Brabant",
+			"West-Vlaanderen"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Charleroi",
+			"nameDe": "Charleroi",
+			"nameIt": "Charleroi",
+			"population": 345367
+		},
+		"position": "west"
+	},
+	"namur": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Brabant wallon",
+			"Hainaut",
+			"Liège",
+			"Luxembourg"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Namur",
+			"nameDe": "Namur",
+			"nameIt": "Namur",
+			"population": 106284
+		},
+		"position": "centre"
+	},
+	"luxembourg": {
+		"kind": "region",
+		"borders": [
+			"Liège",
+			"Namur"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Luxembourg",
+			"nameDe": "Luxemburg",
+			"nameIt": "Lussemburgo",
+			"population": 107260
+		},
+		"peak": {
+			"name": "Buurgplaatz",
+			"elevation": 559
+		},
+		"position": "south-east"
+	}
+}

@@ -1,0 +1,238 @@
+{
+	"liberecky": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Královéhradecký",
+			"Středočeský",
+			"Ústecký"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Liberec",
+			"nameDe": "Liberec",
+			"nameIt": "Liberec",
+			"population": 102175
+		},
+		"position": "north"
+	},
+	"ustecky": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Karlovarský",
+			"Liberecký",
+			"Plzeňský",
+			"Středočeský"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Usti Nad Labem",
+			"nameDe": "Ústí nad Labem",
+			"nameIt": "Ústí nad Labem",
+			"population": 94105
+		},
+		"position": "north-west"
+	},
+	"kralovehradecky": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Liberecký",
+			"Pardubický",
+			"Středočeský"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Hradec Králové",
+			"nameDe": "Hradec Králové",
+			"nameIt": "Hradec Králové",
+			"population": 95195
+		},
+		"position": "north"
+	},
+	"karlovarsky": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Plzeňský",
+			"Ústecký"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"praha": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Středočeský"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Prague",
+			"nameDe": "Prag",
+			"nameIt": "Praga",
+			"population": 1162000
+		},
+		"position": "centre"
+	},
+	"stredocesky": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Jihočeský",
+			"Královéhradecký",
+			"Liberecký",
+			"Pardubický",
+			"Plzeňský",
+			"Praha",
+			"Ústecký",
+			"Vysočina"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"pardubicky": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Jihomoravský",
+			"Královéhradecký",
+			"Olomoucký",
+			"Středočeský",
+			"Vysočina"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Pardubice",
+			"nameDe": "Pardubice",
+			"nameIt": "Pardubice",
+			"population": 107064
+		},
+		"position": "centre"
+	},
+	"olomoucky": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Jihomoravský",
+			"Moravskoslezský",
+			"Pardubický",
+			"Zlínský"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Olomouc",
+			"nameDe": "Olmütz",
+			"nameIt": "Olomouc",
+			"population": 101268
+		},
+		"position": "east"
+	},
+	"moravskoslezsky": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Olomoucký",
+			"Zlínský"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ostrava",
+			"nameDe": "Ostrava",
+			"nameIt": "Ostrava",
+			"population": 478963
+		},
+		"position": "east"
+	},
+	"plzensky": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Jihočeský",
+			"Karlovarský",
+			"Středočeský",
+			"Ústecký"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Pizen",
+			"nameDe": "Pilsen",
+			"nameIt": "Plzeň",
+			"population": 164180
+		},
+		"position": "west"
+	},
+	"vysocina": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Jihočeský",
+			"Jihomoravský",
+			"Pardubický",
+			"Středočeský"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Jihlava",
+			"nameDe": "Jihlava",
+			"nameIt": "Jihlava",
+			"population": 53921
+		},
+		"position": "centre"
+	},
+	"zlinsky": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Jihomoravský",
+			"Moravskoslezský",
+			"Olomoucký"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Zlín",
+			"nameDe": "Zlín",
+			"nameIt": "Zlín",
+			"population": 124610
+		},
+		"position": "south-east"
+	},
+	"jihomoravsky": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Jihočeský",
+			"Olomoucký",
+			"Pardubický",
+			"Vysočina",
+			"Zlínský"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Brno",
+			"nameDe": "Brünn",
+			"nameIt": "Brno",
+			"population": 388277
+		},
+		"position": "south-east"
+	},
+	"jihocesky": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Jihomoravský",
+			"Plzeňský",
+			"Středočeský",
+			"Vysočina"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "České Budějovice",
+			"nameDe": "České Budějovice",
+			"nameIt": "České Budějovice",
+			"population": 98851
+		},
+		"position": "south"
+	}
+}
