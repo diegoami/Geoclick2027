@@ -46,7 +46,7 @@
 	// screen a map now opens on. Two things put a name on it: the clean
 	// streak the quiz keeps (FT-22 - a name placed right at least once, drawn
 	// as strongly as it is known), and a tap, which overrides that either way
-	// and sticks until it is tapped again. shownNames.ts holds the whole
+	// and sticks for the session (#11). shownNames.ts holds the whole
 	// rule; this component only draws what it is told.
 	//
 	// Plain Map, not SvelteMap: imperative bookkeeping for popup cleanup,

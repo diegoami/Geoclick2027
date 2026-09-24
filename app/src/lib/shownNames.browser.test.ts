@@ -1,7 +1,7 @@
-// Runs in the browser project (real Chromium): the chosen names have to
-// survive a reload, and that means real localStorage rather than a mock.
-// FT-39, docs/PLAN_V0.9.md.
-import { afterEach, beforeEach, describe, expect, it } from 'vitest';
+// Runs in the browser project (real Chromium): the chosen names must stay
+// out of real localStorage, and the key FT-39 used to write must go.
+// FT-39, docs/PLAN_V0.9.md; session-only since #11.
+import { afterEach, describe, expect, it } from 'vitest';
 import {
 	clearNameOverrides,
 	hasNameOverrides,
@@ -10,10 +10,15 @@ import {
 } from './mapPrefs.svelte';
 import { tapOverride, visibleTier } from './shownNames';
 
-const KEY = 'geoclick:shown-names:v1';
+const LEGACY_KEY = 'geoclick:shown-names:v1';
+const MAPS = ['italy-regions', 'italy-provinces', 'china-regions'];
 
-beforeEach(() => localStorage.removeItem(KEY));
-afterEach(() => localStorage.removeItem(KEY));
+// The overrides are module state that lives for the session, which here
+// means the whole test file - so each test cleans up after itself.
+afterEach(() => {
+	for (const map of MAPS) clearNameOverrides(map);
+	localStorage.removeItem(LEGACY_KEY);
+});
 
 describe('the names a player has chosen', () => {
 	it('starts with nothing chosen', () => {
@@ -21,13 +26,11 @@ describe('the names a player has chosen', () => {
 		expect(hasNameOverrides('italy-regions')).toBe(false);
 	});
 
-	it('remembers a choice, and writes it where a reload will find it', () => {
+	it('remembers a choice for the session, and writes nothing to storage', () => {
 		setNameOverride('italy-regions', 'piemonte', 'shown');
 		expect(nameOverride('italy-regions', 'piemonte')).toBe('shown');
-		// The point of the whole feature: still there tomorrow.
-		expect(JSON.parse(localStorage.getItem(KEY)!)).toEqual({
-			'italy-regions/piemonte': 'shown'
-		});
+		// #11: reopening the app shows what is known and nothing else.
+		expect(localStorage.getItem(LEGACY_KEY)).toBeNull();
 	});
 
 	it('keeps maps apart', () => {
@@ -44,16 +47,17 @@ describe('the names a player has chosen', () => {
 		expect(nameOverride('china-regions', 'yunnan')).toBe('shown');
 	});
 
-	it('ignores a stored value that makes no sense', () => {
-		// localStorage is editable by anyone with a console, and a bad value
-		// must not put an unreadable name on the map.
-		localStorage.setItem(KEY, '{"italy-regions/piemonte":"nonsense","a/b":42}');
-		expect(nameOverride('italy-regions', 'piemonte')).toBeUndefined();
-	});
-
-	it('survives a corrupt store entirely', () => {
-		localStorage.setItem(KEY, 'not json at all');
-		expect(() => nameOverride('italy-regions', 'piemonte')).not.toThrow();
+	it('ignores, and removes, a choice stored under the old rule', async () => {
+		// What an FT-39 build left behind. A fresh load of the module is a
+		// reopened app.
+		localStorage.setItem(LEGACY_KEY, '{"italy-regions/piemonte":"shown"}');
+		// A query string makes Vite evaluate the module again.
+		const fresh: typeof import('./mapPrefs.svelte') = await import(
+			// @ts-expect-error - the query is for Vite; TypeScript cannot resolve it
+			'./mapPrefs.svelte?reopened'
+		);
+		expect(fresh.nameOverride('italy-regions', 'piemonte')).toBeUndefined();
+		expect(localStorage.getItem(LEGACY_KEY)).toBeNull();
 	});
 });
 
@@ -77,13 +81,14 @@ describe('a tap, end to end', () => {
 		expect([visible('piemonte'), visible('lombardia')]).toEqual([true, false]);
 	});
 
-	it('hides a name the player already knows, and brings it back', () => {
-		// Decision 3: one rule for everything on the map.
+	it('hides a name the player already knows, and brings it back as Chosen', () => {
+		// Decision 3: one rule for everything on the map. #11: what a tap
+		// brings back is the player's choice, so it is drawn as Chosen.
 		const known = 3;
 		expect(visibleTier(known, nameOverride('italy-regions', 'toscana'))).toBe('known');
 		setNameOverride('italy-regions', 'toscana', tapOverride(known, undefined));
 		expect(visibleTier(known, nameOverride('italy-regions', 'toscana'))).toBeUndefined();
 		setNameOverride('italy-regions', 'toscana', tapOverride(known, 'hidden'));
-		expect(visibleTier(known, nameOverride('italy-regions', 'toscana'))).toBe('known');
+		expect(visibleTier(known, nameOverride('italy-regions', 'toscana'))).toBe('asked');
 	});
 });

@@ -4,12 +4,12 @@
 // Two inputs, one rule. What the player has EARNED is the clean streak the
 // quiz keeps (FT-22): a name placed right at least once is drawn, in three
 // strengths. What the player has CHOSEN is an override recorded by tapping
-// the place, kept per device in mapPrefs.svelte.ts.
+// the place, kept for the session in mapPrefs.svelte.ts (#11).
 //
 //   override            name is drawn
 //   ------------------  -----------------------------------------
 //   none                if cleanStreak >= 1, as it always was
-//   'shown'             always, at the "asked for" strength
+//   'shown'             always, as Chosen ('asked'), whatever the streak
 //   'hidden'            never, whatever the streak
 //
 // A tap writes whichever override contradicts what is on the screen right
@@ -35,19 +35,18 @@ export function earnedTier(cleanStreak: number): NameTier | undefined {
 /**
  * The strength a name is drawn at, taking the player's choice into account.
  *
- * A name the player asked for but has never placed is drawn at 'asked' -
- * full strength, because they asked for it. One they have earned keeps the
- * strength they earned, so the map still reads as a record of progress
- * underneath whatever has been pinned on top of it.
+ * A name the player tapped onto the map is drawn as Chosen ('asked'), even
+ * one they have already earned: an explicit tap outranks the streak
+ * (product owner, #11). The choice lasts for the session, so the earned
+ * strengths come back when the app is reopened.
  */
 export function visibleTier(
 	cleanStreak: number,
 	override: NameOverride | undefined
 ): NameTier | undefined {
 	if (override === 'hidden') return undefined;
-	const earned = earnedTier(cleanStreak);
-	if (override === 'shown') return earned ?? 'asked';
-	return earned;
+	if (override === 'shown') return 'asked';
+	return earnedTier(cleanStreak);
 }
 
 /** Whether a name is on the map at all. */
