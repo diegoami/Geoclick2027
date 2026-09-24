@@ -1,4 +1,4 @@
-# Handover — 2026-09-24, #11 built (PR #38), then milestone v0.10.1
+# Handover — 2026-09-24, maps of several countries: PRs #40–#42 await merge
 
 For whoever picks Geoclick up next, whether a human or a fresh Claude
 session. It records where things stand, what's next, and what's easy to
@@ -23,8 +23,8 @@ before any work starts.
 | Remediation programme | Closed with v0.2.0 ([REMEDIATION_PLAN.md](REMEDIATION_PLAN.md)); its automerge exception went with it |
 | Feature programme | Closed with v0.5.0 ([FEATURE_PLAN.md](FEATURE_PLAN.md)) |
 | Since then | Per-release plans: [PLAN_V0.6.md](PLAN_V0.6.md) through [PLAN_V0.9.4.md](PLAN_V0.9.4.md), each with its own ledger; now [PLAN_V0.10.md](PLAN_V0.10.md) |
-| Next | **Waiting on the owner: the OK to merge [PR #38](https://github.com/diegoami/Geoclick2027/pull/38)** (#11: an explicit tap on Known is Chosen whatever the streak; the choice is session-only, in memory, and the FT-39 localStorage key is removed on load). Gates pass. **Then milestone v0.10.1** (owner's pick, 2026-09-24): release-prep PR (version bump via `scripts/sync-version.mjs`, CHANGELOG entry covering #33, #35, #36, #37, #38) → candidate → milestone issue → review prompt (docs/RELEASES.md, "The milestone"). **Merged 2026-09-24:** [PR #37](https://github.com/diegoami/Geoclick2027/pull/37) (on Explore, the name whose fact card is open always shows) and [PR #36](https://github.com/diegoami/Geoclick2027/pull/36) (#34: Explore's region fallback names in the stretched type; towns, Quiz and Overview keep their boxes; asked ink `rgb(150, 85, 20)`). Untapped small regions boxed in by curved names (Umbria, Friuli-Venezia Giulia) still hide at the country view by design, and appear when you zoom in. **Merged 2026-09-23 on the owner's OK:** [PR #33](https://github.com/diegoami/Geoclick2027/pull/33) (hardening batch FT-56/59/67/68; closed #7, #8, #32) and [PR #35](https://github.com/diegoami/Geoclick2027/pull/35) (Nunavut's spine by ground area). Gates pass on the merged `main`. Neither gets a release of its own; both ship with the next feature release, and that milestone reviews them. Other candidates: **FT-51 German** (postponed until the Italian has been read); the **zoomable world-map start screen** (below). A leftover Cloudflare "Workers Builds" check fails on every PR, a dashboard job for the product owner. **Merges:** three times on 2026-09-23 the owner said "merged" while the PR was still open on GitHub, and Claude merged each on that OK with a merge commit. Check `gh pr view` before assuming |
-| After that | Milestone `v0.10.1`: release prep PR → candidate → milestone issue → review → tag (docs/RELEASES.md, "The milestone") |
+| Next | **Waiting on the owner: three stacked PRs for [#39](https://github.com/diegoami/Geoclick2027/issues/39) (maps of several countries), to merge in order** — [PR #40](https://github.com/diegoami/Geoclick2027/pull/40) (builder + 17 maps: continents' Countries and Capitals, Europe's five parts' cities), [PR #41](https://github.com/diegoami/Geoclick2027/pull/41) (Germany's towns in six parts from a committed Wikidata snapshot, `data/places/germany.geojson`), [PR #42](https://github.com/diegoami/Geoclick2027/pull/42) (admin-2: France, Spain, Ireland, Switzerland, Austria, Romania from Natural Earth; Germany's Kreise and the Netherlands' municipalities from geoBoundaries; every map now shows its credit). 63 → 105 maps; gates pass on each branch; five shipped maps rebuild byte-identical. **Open owner decision on #39:** Poland's powiats (only source is OSM, ODbL). Map builds run from a separate WSL clone, `~/geoclick-build` (Linux `node_modules`, `data/source` symlinked to the Windows checkout); the old `~/projects/Geoclick2027` WSL clone is 238 commits behind with local edits — leave it. **Merged 2026-09-24:** [PR #38](https://github.com/diegoami/Geoclick2027/pull/38) (#11: an explicit tap is Chosen, session-only) and, before it, #33/#35/#36/#37. The owner folded v0.10.1 into **v0.11.0**, which ships all of it. Other candidates: **FT-51 German**; the **zoomable world-map start screen** (more pressing at 105 maps). A leftover Cloudflare "Workers Builds" check fails on every PR, a dashboard job for the product owner. **Merges:** check `gh pr view` before assuming the owner merged |
+| After that | Milestone `v0.11.0`: release prep PR → candidate → milestone issue → review → tag (docs/RELEASES.md, "The milestone") |
 | Also raised 2026-09-20 | **The start screen becomes a zoomable world map** — pick the country on the map, then the kind of quiz. The map list cannot be finalized as a list: the goal is a high number of maps, and `mapCatalog.ts` is already 31 countries and 66 maps. Favourites and Recent stay unchanged. Second item of the Iteration 8+ backlog, with the open questions listed there |
 
 Shipped since the v0.5.0 handover, in one paragraph each:
@@ -94,7 +94,7 @@ v0.10.0 installers were opened on a map in both shells.
 
 Suggested first message for the next session:
 
-> Read docs/HANDOVER.md. PR #38 is merged; prepare milestone v0.10.1.
+> Read docs/HANDOVER.md. PRs #40–#42 are merged; prepare milestone v0.11.0.
 
 Whatever comes next, the working rules stay (CLAUDE.md §3):
 
@@ -127,16 +127,16 @@ Whatever comes next, the working rules stay (CLAUDE.md §3):
 
 ## The open GitHub issues
 
-One is open (#11, fixed by PR #38 on merge). #7 and #8 closed with PR #33; #1–#6 were fixed in v0.9.4 (FT-52 to FT-58).
+One is open: #39, the maps proposal (PRs #40–#42). #11 closed with PR #38, #7 and #8 with PR #33; #1–#6 were fixed in v0.9.4 (FT-52 to FT-58).
 
 | # | Task | What | Size | Scheduled |
 |---|---|---|---|---|
-| 11 | — | On the Known map an explicitly tapped name keeps its earned colour instead of **Chosen** | S | PR #38, v0.10.1 |
+| 39 | — | Proposal: continents, parts of Europe, denser Germany, admin-2 | L | PRs #40–#42; Poland waits on the owner |
 
-- **#11 was decided on 2026-09-22** — an explicit tap is Chosen regardless of
-  the streak, and the choice is **session-only** (it resets on reopen; this
-  changes FT-39's persisted override). Not started; `visibleTier` in
-  `shownNames.ts` is the place, and the reasoning is on the issue.
+- **#39 is built in three stacked PRs** (#40, #41, #42); the owner's answers
+  are on the issue, the rules in DECISIONS.md ("Maps of several countries",
+  "Germany's towns come from Wikidata", "Admin-2 maps..."), the commands in
+  MAPS.md. Poland's powiats wait on the owner (ODbL).
 
 ## Not verified, or still open
 
