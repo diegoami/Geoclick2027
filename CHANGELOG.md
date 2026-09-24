@@ -5,6 +5,87 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
+## v0.11.0 — 2026-09-24 — Twice the maps
+
+**The map list grows from 63 to 127 maps: whole continents, finer maps of the countries already here, and eleven countries new to the app, plus three fixes to how names show on the map.**
+
+Proposal #39 (batches A-E) and the hardening batch #32 (FT-56, FT-59, FT-67, FT-68). PRs #33, #35-#38, #40-#43.
+
+For players:
+
+- **Continents.** Each continent has a Countries map and a Capitals map:
+  Africa, Asia, Europe, North America, South America and Oceania. Europe's
+  cities come in five parts: North, West, Central, East and South.
+- **Finer maps of countries already in the app.** Germany's towns in six
+  parts, 60 towns each, and its 400 districts (Kreise) in six parts. France's
+  96 departments, whole and in two halves. Spain's provinces. The
+  Netherlands' 344 municipalities in five parts. Poland's 380 powiats in
+  five parts.
+- **Countries new to the app.** Ireland, Switzerland, Austria and Romania,
+  and eleven more: Belgium, Czechia, Croatia, Greece, Bulgaria, Chile, Peru,
+  South Africa, Iran, Thailand and Saudi Arabia. The last six have a Towns
+  map too.
+- **Every map says where its data comes from.** A line of small print along
+  the bottom edge names the source; on a narrow screen it is behind the (i).
+- **On the Known map, tapping a name marks it Chosen**, even a name you
+  already know, so a tap always shows. The choice lasts until you close the
+  app (#11).
+- **On Explore, a region's name that doesn't fit inside its shape** is now
+  written like the names that do: in the same capitals, with no box around
+  it (#34).
+- **On Explore, the name you just tapped always shows.** Before, a name like
+  Basilicata, squeezed between two others, opened its fact card but stayed
+  hidden.
+- **Nunavut's name is on its mainland**, not on Ellesmere Island.
+- **One Italian fact sentence is rewritten** (Sardegna's) to match the style
+  guide.
+
+Under the hood:
+
+- **Map builders:** `--level=country` builds maps of whole countries.
+  `--source` reads boundaries that don't come from Natural Earth. `--within`
+  splits a country by its states. `--disambiguate-by` tells apart two places
+  with the same name. `--clip` now also works on region maps.
+  `build-points-map.ts` builds maps with towns from several countries, and
+  reads the committed Wikidata snapshot of German towns
+  (`data/places/germany.geojson`).
+- **New data sources, and their licences:**
+  - Wikidata, for Germany's towns (CC0);
+  - geoBoundaries' copies of three national datasets: Germany's districts
+    (BKG, dl-de/by-2-0), the Dutch municipalities (CC0) and Poland's powiats
+    (OpenStreetMap, ODbL; the product owner accepted ODbL for this);
+  - `createMap` passes each map's `attribution` to MapLibre, so the credit
+    line shows.
+- **Spines** pick a region's largest part by its area on the ground, so
+  Mercator's stretching near the poles no longer skews the choice (#35).
+  `labelCollision.ts` adds `FOCUSED_CLASS`: the name whose fact card is
+  open always gets its place (#37).
+- **Known map:** `visibleTier` returns `asked` for any explicit tap. The
+  choices are in-memory `$state`, and the FT-39 localStorage key is removed
+  on load (#38).
+- **New tests (#33, closes #7 and #8):**
+  - FT-56 checks every map's `tour.json` against its `tourOrder`;
+  - FT-67 runs `houseStyle` on every authored Italian sentence;
+  - FT-68 tests `StretchedNames` on a scrolled page, for collisions and
+    hit-testing;
+  - FT-59 is a browser test of QuizView: grading, resuming a round, and the
+    round summary.
+
+Not in this release:
+
+- **FT-51, the facts in German**, is still postponed.
+- **The zoomable world map as the start screen.** It matters more now that
+  the list is 127 maps long.
+- **Maps not built:**
+  - Great Britain's and Hungary's counties: Natural Earth's are outdated or
+    broken.
+  - Norway, Morocco and Kenya: Natural Earth predates their recent reforms.
+  - Serbia: messy data.
+  - Denmark: only five regions.
+- **Same-name places share facts.** A district or province with the same
+  name as a town (Sevilla, the province) shows that town's fact sentences.
+  Separating them is authoring work in `data/facts/`.
+
 ## v0.10.0 — 2026-09-23 — The facts in Italian, and a calmer quiz
 
 **Every place's facts now read in Italian, and six things that got in the way of playing on a tablet are fixed.**
