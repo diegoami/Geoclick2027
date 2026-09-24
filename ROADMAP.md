@@ -170,7 +170,10 @@ Check items off as they land; update "Status" as iterations complete.
   Iran, Thailand, Saudi Arabia, the last six with a Towns map too - 127
   maps in all. **Not built:** Great Britain's counties and Hungary's
   (Natural Earth's are out of date or broken), Norway, Morocco, Kenya
-  (Natural Earth predates their reforms); see DECISIONS.md.
+  (Natural Earth predates their reforms); see DECISIONS.md. **Released as
+  v0.11.0 on 2026-09-24** (tag `133dbc8`, [Milestone v0.11.0](https://github.com/diegoami/Geoclick2027/issues/45):
+  one review round, AGREE, no issues). Next: facts for the new maps and the
+  Quiz labels in Explore's style, proposed as [#46](https://github.com/diegoami/Geoclick2027/issues/46).
 - **Raised and decided 2026-09-20, unscoped**: six UX problems from one
   round of tablet play (`germany-towns-100k`) — the level-0 tray offering
   every name at once, slips losing their drag to the tablet's own

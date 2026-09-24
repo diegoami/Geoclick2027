@@ -85,6 +85,27 @@ Not in this release:
 - **Same-name places share facts.** A district or province with the same
   name as a town (Sevilla, the province) shows that town's fact sentences.
   Separating them is authoring work in `data/facts/`.
+- **Facts for the new maps.** Of the places on the 64 new maps, 2 469 have
+  no authored sentences, only the generated ones (neighbours, coast, largest
+  city). The Quiz, Overview and Tour keep their boxed region labels, as
+  agreed on #34 (Q1). Both are proposed for v0.12 (#46).
+- **The credit line on a phone** opens expanded, and folds behind the (i)
+  only after the first touch on the map.
+
+What shipped, and what was tried:
+
+- **Review:** an independent model (DeepSeek V4 Pro, in OpenCode) reviewed
+  `v0.10.0..133dbc8` on [Milestone v0.11.0 (#45)](https://github.com/diegoami/Geoclick2027/issues/45):
+  round 1, AGREE, no issues, two nits for the next release. The tag sits on
+  exactly that commit.
+- **Beta:** `v0.11.0-beta.1` on `909fe78` (the candidate plus the version
+  only). A map drew in the installed Windows app and in the APK on the
+  emulator; the owner checked #36's boxless names on a tablet.
+- **Installers:** Windows `.msi` and `-setup.exe`, Android `.apk`, all
+  built from the `v0.11.0` tag. The `-setup.exe` (Poland — Counties —
+  South, Greece — Regions) and the APK (Poland — Counties — South,
+  installed over the beta, which kept its progress) were tried. The
+  `.msi` was built but not installed.
 
 ## v0.10.0 — 2026-09-23 — The facts in Italian, and a calmer quiz
 
