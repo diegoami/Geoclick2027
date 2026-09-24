@@ -23,7 +23,7 @@ before any work starts.
 | Remediation programme | Closed with v0.2.0 ([REMEDIATION_PLAN.md](REMEDIATION_PLAN.md)); its automerge exception went with it |
 | Feature programme | Closed with v0.5.0 ([FEATURE_PLAN.md](FEATURE_PLAN.md)) |
 | Since then | Per-release plans: [PLAN_V0.6.md](PLAN_V0.6.md) through [PLAN_V0.9.4.md](PLAN_V0.9.4.md), each with its own ledger; now [PLAN_V0.10.md](PLAN_V0.10.md) |
-| Next | **Waiting on the owner: three stacked PRs for [#39](https://github.com/diegoami/Geoclick2027/issues/39) (maps of several countries), to merge in order** — [PR #40](https://github.com/diegoami/Geoclick2027/pull/40) (builder + 17 maps: continents' Countries and Capitals, Europe's five parts' cities), [PR #41](https://github.com/diegoami/Geoclick2027/pull/41) (Germany's towns in six parts from a committed Wikidata snapshot, `data/places/germany.geojson`), [PR #42](https://github.com/diegoami/Geoclick2027/pull/42) (admin-2: France, Spain, Ireland, Switzerland, Austria, Romania from Natural Earth; Germany's Kreise and the Netherlands' municipalities from geoBoundaries; every map now shows its credit). 63 → 105 maps; gates pass on each branch; five shipped maps rebuild byte-identical. **Open owner decision on #39:** Poland's powiats (only source is OSM, ODbL). Map builds run from a separate WSL clone, `~/geoclick-build` (Linux `node_modules`, `data/source` symlinked to the Windows checkout); the old `~/projects/Geoclick2027` WSL clone is 238 commits behind with local edits — leave it. **Merged 2026-09-24:** [PR #38](https://github.com/diegoami/Geoclick2027/pull/38) (#11: an explicit tap is Chosen, session-only) and, before it, #33/#35/#36/#37. The owner folded v0.10.1 into **v0.11.0**, which ships all of it. Other candidates: **FT-51 German**; the **zoomable world-map start screen** (more pressing at 105 maps). A leftover Cloudflare "Workers Builds" check fails on every PR, a dashboard job for the product owner. **Merges:** check `gh pr view` before assuming the owner merged |
+| Next | **Waiting on the owner: [PR #43](https://github.com/diegoami/Geoclick2027/pull/43)** (branch `maps-poland-powiats`, #39 batch E): Poland's 380 powiats in five parts from OSM (ODbL, the owner's yes), and eleven countries new to the app from Natural Earth - Belgium, Czechia, Croatia, Greece, Bulgaria, Chile, Peru, South Africa, Iran, Thailand, Saudi Arabia (the last six with a Towns map). 105 → 127 maps; gates pass. **Merged 2026-09-24:** PRs #40–#42 (#39 batches A–D) and #38 (#11). Map builds run from a separate WSL clone, `~/geoclick-build`, now on `main` as of `a3f4068` (its earlier hand-copied edits are in two `git stash` entries, safe to drop); run them with `PATH=$HOME/.nvm/versions/node/v24.21.0/bin:$PATH PMTILES_BIN=$HOME/.local/bin/pmtiles` - a plain `wsl bash -c` finds Windows' node. The old `~/projects/Geoclick2027` WSL clone is 238 commits behind with local edits — leave it. The owner folded v0.10.1 into **v0.11.0**, which ships all of it. Other candidates: **FT-51 German**; the **zoomable world-map start screen** (more pressing at 127 maps). A leftover Cloudflare "Workers Builds" check fails on every PR, a dashboard job for the product owner. **Merges:** check `gh pr view` before assuming the owner merged |
 | After that | Milestone `v0.11.0`: release prep PR → candidate → milestone issue → review → tag (docs/RELEASES.md, "The milestone") |
 | Also raised 2026-09-20 | **The start screen becomes a zoomable world map** — pick the country on the map, then the kind of quiz. The map list cannot be finalized as a list: the goal is a high number of maps, and `mapCatalog.ts` is already 31 countries and 66 maps. Favourites and Recent stay unchanged. Second item of the Iteration 8+ backlog, with the open questions listed there |
 
@@ -127,16 +127,16 @@ Whatever comes next, the working rules stay (CLAUDE.md §3):
 
 ## The open GitHub issues
 
-One is open: #39, the maps proposal (PRs #40–#42). #11 closed with PR #38, #7 and #8 with PR #33; #1–#6 were fixed in v0.9.4 (FT-52 to FT-58).
+One is open: #39, the maps proposal (PRs #40–#42 merged, #43 open). #11 closed with PR #38, #7 and #8 with PR #33; #1–#6 were fixed in v0.9.4 (FT-52 to FT-58).
 
 | # | Task | What | Size | Scheduled |
 |---|---|---|---|---|
-| 39 | — | Proposal: continents, parts of Europe, denser Germany, admin-2 | L | PRs #40–#42; Poland waits on the owner |
+| 39 | — | Proposal: continents, parts of Europe, denser Germany, admin-2 | L | PRs #40–#42 merged; #43 (Poland, eleven countries) open |
 
-- **#39 is built in three stacked PRs** (#40, #41, #42); the owner's answers
-  are on the issue, the rules in DECISIONS.md ("Maps of several countries",
-  "Germany's towns come from Wikidata", "Admin-2 maps..."), the commands in
-  MAPS.md. Poland's powiats wait on the owner (ODbL).
+- **#39 is built in four PRs** (#40, #41, #42 merged; #43 open); the owner's
+  answers are on the issue, the rules in DECISIONS.md ("Maps of several
+  countries", "Germany's towns come from Wikidata", "Admin-2 maps...",
+  "Poland's powiats under ODbL..."), the commands in MAPS.md.
 
 ## Not verified, or still open
 
