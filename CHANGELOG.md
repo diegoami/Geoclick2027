@@ -5,6 +5,20 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
+## Unreleased
+
+For players:
+
+- **A button to clear the map.** Under the zoom buttons, the eye hides the
+  tabs, the map's name and the pills, so a round on a tablet has the whole
+  map. Press it again to bring them back. The choice lasts until you close
+  the app.
+- **The credit line and the version no longer cover the names** in the Quiz
+  or the Tour's buttons. On a phone the credit starts folded behind its (i).
+  The version now sits in the bottom-left corner.
+- **Switching Terrain off and on again keeps its names.** Before, the
+  mountains and seas came back without them.
+
 ## v0.11.0 — 2026-09-24 — Twice the maps
 
 **The map list grows from 63 to 127 maps: whole continents, finer maps of the countries already here, and eleven countries new to the app, plus three fixes to how names show on the map.**
