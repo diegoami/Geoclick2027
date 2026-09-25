@@ -48,7 +48,8 @@ So the same rules as FT-41, held more strictly:
   derivation is disputed, say so ("probably", "the derivation is
   contested"). Never pick the more colourful version.
 - **Nothing the card already shows**: not the neighbours, not the coast,
-  not the largest city.
+  not the largest city. The card also opens with the place's name
+  ("Crete — …"), so no sentence starts with it (found in FT-70).
 - **When unsure, leave it out.** Two solid sentences are better than three
   with a guess in them. The DoD's "three a place" is a target, and a place
   with fewer is reported, not padded.
@@ -194,7 +195,7 @@ entry.
 | Task  | State      | Merge  | Notes                                                                                                        |
 | ----- | ---------- | ------ | ------------------------------------------------------------------------------------------------------------ |
 | FT-69 | **merged** | PR #48 | countries read `world.json`; "Czech Republic" = "Czechia"; `world.json` holds only its `_note` so far        |
-| FT-70 | planned    | —      | Greece, 14 regions; 🧑 the voice gate                                                                        |
+| FT-70 | **in PR**  | —      | Greece, 14 regions, 42 + 42 sentences; in `v0.12.0-alpha.2`; 🧑 waiting for the owner’s reading              |
 | FT-71 | planned    | —      | 172 countries, one commit per continent                                                                      |
 | FT-72 | planned    | —      | 284 capitals and European cities, 160 new files                                                              |
 | FT-73 | planned    | —      | the 15 new countries, 539 places, one commit per file                                                        |
