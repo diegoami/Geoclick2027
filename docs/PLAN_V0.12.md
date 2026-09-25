@@ -48,7 +48,8 @@ So the same rules as FT-41, held more strictly:
   derivation is disputed, say so ("probably", "the derivation is
   contested"). Never pick the more colourful version.
 - **Nothing the card already shows**: not the neighbours, not the coast,
-  not the largest city.
+  not the largest city. The card also opens with the place's name
+  ("Crete — …"), so no sentence starts with it (found in FT-70).
 - **When unsure, leave it out.** Two solid sentences are better than three
   with a guess in them. The DoD's "three a place" is a target, and a place
   with fewer is reported, not padded.
