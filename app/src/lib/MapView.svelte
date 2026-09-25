@@ -23,6 +23,7 @@
 	import FactCard from './FactCard.svelte';
 	import { fetchFacts, placeFacts, type Facts } from './facts';
 	import { StretchedNames } from './stretchedNames';
+	import { publishBottomOverlay } from './mapBottomOverlay';
 
 	let { mapId }: { mapId: string } = $props();
 
@@ -131,6 +132,14 @@
 	 * button appears on the first tap and goes again when it is used.
 	 */
 	const showsClear = $derived(hasNameOverrides(mapId));
+
+	// The legend sits in the bottom-left corner, where the version badge is:
+	// it lifts the badge and the credit line above it, as the Quiz's tray
+	// does (mapBottomOverlay.ts).
+	let legendEl = $state<HTMLDivElement>();
+	$effect(() => {
+		if (legendEl) return publishBottomOverlay(legendEl);
+	});
 
 	/** Back to plain: the map shows what is known and nothing else. */
 	function clearChosen() {
@@ -280,7 +289,7 @@
 	<!-- What the strengths mean, and a way back to plain (FT-39). The Clear
 	     button only appears once there is something to clear. -->
 	{#if anyShown || showsClear}
-		<div class="legend">
+		<div class="legend" bind:this={legendEl}>
 			{#if anyShown}
 				<span class="swatch retention-asked">{t('known.chosen')}</span>
 				<span class="swatch retention-known">{t('retention.known')}</span>
