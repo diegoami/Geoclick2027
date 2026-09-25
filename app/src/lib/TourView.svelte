@@ -125,6 +125,12 @@
 		});
 		const [lon, lat] = target.centroid;
 		popup.setLngLat([lon, lat]).setText(target.name).addTo(map);
+		// One popup follows the tour from step to step, so the region style
+		// goes on and off with the target (FT-74): a town keeps its pill.
+		// After addTo, because MapLibre drops a class set before the popup
+		// has its element.
+		if (target.type === 'city') popup.removeClassName('geoclick-region-name');
+		else popup.addClassName('geoclick-region-name');
 		// The tour shows one name at a time, and that name is the whole point of
 		// the step: it outranks anything else on the map, and on a towns map it
 		// sits beside the dot rather than on it (FT-24).

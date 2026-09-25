@@ -409,7 +409,8 @@
 		targetId: string,
 		name: string,
 		centroid: [number, number],
-		revealed: boolean
+		revealed: boolean,
+		isTown: boolean
 	) {
 		if (!map) return;
 		map.setFeatureState(
@@ -420,7 +421,15 @@
 			closeButton: false,
 			closeOnClick: false,
 			anchor: 'center',
-			className: revealed ? 'geoclick-solved-popup revealed' : 'geoclick-solved-popup'
+			// A region's name without a box, as on Explore (FT-74); a town keeps
+			// its pill beside the dot.
+			className: [
+				'geoclick-solved-popup',
+				revealed && 'revealed',
+				!isTown && 'geoclick-region-name'
+			]
+				.filter(Boolean)
+				.join(' ')
 		})
 			.setLngLat(centroid)
 			.setText(name)
@@ -500,7 +509,7 @@
 			// belongs, so a mistake teaches the answer instead of buying two
 			// more guesses (FT-20).
 			if (revealed) flashWrongRegion(targetId, exactName);
-			markSolved(targetId, name, target.centroid, revealed);
+			markSolved(targetId, name, target.centroid, revealed, target.type === 'city');
 			// Every answer is graded, in every round (FT-26 - there are no
 			// ungraded practice rounds any more): clean is "good", a name that
 			// had to be shown is "again" (same-day repeat). "hard" (right, but
@@ -633,7 +642,13 @@
 			if (item.status === 'pending') continue;
 			const target = def.targets.find((t) => t.id === item.target.id);
 			if (!target) continue;
-			markSolved(target.id, target.name, target.centroid, item.status === 'revealed');
+			markSolved(
+				target.id,
+				target.name,
+				target.centroid,
+				item.status === 'revealed',
+				target.type === 'city'
+			);
 		}
 	}
 
