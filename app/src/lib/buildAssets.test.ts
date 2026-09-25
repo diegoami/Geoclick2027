@@ -127,10 +127,36 @@ describe('the build lifecycle', () => {
 // A scratch repo with commit A tracking a link at app/static/maps (the
 // pre-FT-58 shape) and commit B removing it and gitignoring it (FT-58). The
 // link entry is staged with `update-index`, so setup needs no OS symlinks.
+//
+// Git hands a hook GIT_DIR and friends, and the pre-push hook runs these
+// tests: inherited, they point every call below at the real repository
+// instead of the scratch one. From a worktree, that set core.bare and a test
+// [user] on the real .git/config (2026-09-25). So the calls drop them.
+const GIT_REPO_VARS = [
+	'GIT_DIR',
+	'GIT_WORK_TREE',
+	'GIT_INDEX_FILE',
+	'GIT_COMMON_DIR',
+	'GIT_OBJECT_DIRECTORY',
+	'GIT_ALTERNATE_OBJECT_DIRECTORIES',
+	'GIT_PREFIX'
+];
+function scratchGitEnv(): NodeJS.ProcessEnv {
+	const env = { ...process.env };
+	for (const name of GIT_REPO_VARS) delete env[name];
+	return env;
+}
+
 function scratchGitRepo() {
 	const repo = tempDir('geoclick-git-');
+	const env = scratchGitEnv();
 	const git = (...args: string[]) =>
-		execFileSync('git', args, { cwd: repo, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] });
+		execFileSync('git', args, {
+			cwd: repo,
+			env,
+			encoding: 'utf8',
+			stdio: ['ignore', 'pipe', 'ignore']
+		});
 
 	git('init', '-q');
 	git('config', 'user.email', 'test@example.com');
@@ -145,6 +171,7 @@ function scratchGitRepo() {
 	// Commit A: a tracked symlink, without asking the OS to create one.
 	const blob = execFileSync('git', ['hash-object', '-w', '--stdin'], {
 		cwd: repo,
+		env,
 		encoding: 'utf8',
 		input: '../../data/maps'
 	}).trim();
@@ -160,6 +187,26 @@ function scratchGitRepo() {
 
 	return { repo, old, git };
 }
+
+describe('the scratch repo, inside a git hook', () => {
+	it('leaves the repository named by an inherited GIT_DIR alone', () => {
+		const outer = tempDir('geoclick-outer-');
+		execFileSync('git', ['init', '-q'], { cwd: outer, env: scratchGitEnv(), stdio: 'ignore' });
+		const config = join(outer, '.git', 'config');
+		const before = readFileSync(config, 'utf8');
+
+		const saved = process.env.GIT_DIR;
+		process.env.GIT_DIR = join(outer, '.git');
+		try {
+			const { git } = scratchGitRepo();
+			expect(git('log', '--format=%s').trim().split('\n')).toEqual(['B', 'A']);
+		} finally {
+			if (saved === undefined) delete process.env.GIT_DIR;
+			else process.env.GIT_DIR = saved;
+		}
+		expect(readFileSync(config, 'utf8')).toBe(before);
+	});
+});
 
 describe('prepare-assets and a checkout over it (FT-58 regression)', () => {
 	// Git for Windows recurses through a Windows *junction* when it replaces
