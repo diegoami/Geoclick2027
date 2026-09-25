@@ -2,8 +2,191 @@
 	"_note": [
 		"Name-facts for Croatia (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences."
+		"of the same id, written later, never shows a town's sentences.",
+		"FT-73 added the twenty counties and the City of Zagreb, each as a \"region\" entry. Most counties are named for a town and a historic land; the Italian uses the Italian names of the Adriatic towns where Italians use them (Pola, Parenzo, Zara, Sebenico)."
 	],
+	"bjelovarsko-bilogorska": {
+		"region": {
+			"en": [
+				"Named for Bjelovar and the Bilogora hills; both names seem to begin with bijel, \"white\".",
+				"Bjelovar was laid out in 1756 as a garrison town of the Military Frontier, on a regular grid.",
+				"The thermal springs of Daruvar were known to the Romans as Aquae Balissae."
+			],
+			"it": [
+				"Prende il nome da Bjelovar e dalle colline della Bilogora; entrambi i nomi sembrano cominciare con bijel, \"bianco\".",
+				"Bjelovar fu tracciata nel 1756 come città di guarnigione della Frontiera militare, su una pianta regolare.",
+				"Le sorgenti termali di Daruvar erano note ai Romani come Aquae Balissae."
+			]
+		}
+	},
+	"brodsko-posavska": {
+		"region": {
+			"en": [
+				"Named for Slavonski Brod, brod meaning a ford, and for Posavina, \"the land along the Sava\".",
+				"The fortress of Brod, built in the 18th century against the Ottomans, is one of the largest in Croatia.",
+				"Ivana Brlić-Mažuranić, the author of Croatian Tales of Long Ago, lived in Slavonski Brod."
+			],
+			"it": [
+				"Prende il nome da Slavonski Brod, dove brod significa guado, e dalla Posavina, \"la terra lungo la Sava\".",
+				"La fortezza di Brod, costruita nel Settecento contro gli Ottomani, è una delle più grandi della Croazia.",
+				"Ivana Brlić-Mažuranić, l’autrice delle Fiabe croate di tanto tempo fa, visse a Slavonski Brod."
+			]
+		}
+	},
+	"dubrovacko-neretvanska": {
+		"region": {
+			"en": [
+				"Named for Dubrovnik, from dubrava, \"oak wood\", and for the river Neretva.",
+				"The Republic of Ragusa, a merchant state, kept its independence for centuries until Napoleon’s army ended it in 1808.",
+				"The walls of Ston, built to guard the republic’s salt pans, run for about 5 km over the hills."
+			],
+			"it": [
+				"Prende il nome da Dubrovnik, da dubrava, \"querceto\", e dal fiume Narenta.",
+				"La Repubblica di Ragusa, uno stato di mercanti, rimase indipendente per secoli finché l’esercito di Napoleone non la abolì nel 1808.",
+				"Le mura di Stagno, costruite per proteggere le saline della repubblica, corrono per circa 5 km sulle colline."
+			]
+		}
+	},
+	"grad-zagreb": {
+		"region": {
+			"en": [
+				"Grad means \"city\": the capital is a county in its own right.",
+				"Slavoljub Penkala patented a mechanical pencil here in 1906, and his factory made pens and pencils.",
+				"Its funicular, which climbs 66 m of track to the upper town, is one of the shortest in the world."
+			],
+			"it": [
+				"Grad significa \"città\": la capitale è una contea a sé.",
+				"Slavoljub Penkala brevettò qui una matita meccanica nel 1906, e la sua fabbrica produceva penne e matite.",
+				"La sua funicolare, che sale verso la città alta su 66 m di binario, è una delle più corte del mondo."
+			]
+		}
+	},
+	"istarska": {
+		"region": {
+			"en": [
+				"Named for the Histri, the people the Romans found here and conquered in 177 BC.",
+				"The Roman amphitheatre at Pula, of the 1st century AD, is one of the best preserved in the world.",
+				"The Euphrasian Basilica in Poreč keeps its 6th-century mosaics and is a UNESCO site."
+			],
+			"it": [
+				"Prende il nome dagli Istri, il popolo che i Romani trovarono qui e sottomisero nel 177 a.C.",
+				"L’anfiteatro romano di Pola, del I secolo d.C., è uno dei meglio conservati al mondo.",
+				"La Basilica Eufrasiana di Parenzo conserva i suoi mosaici del VI secolo ed è un sito UNESCO."
+			]
+		}
+	},
+	"karlovacka": {
+		"region": {
+			"en": [
+				"Named for Karlovac, a fortress founded in 1579 and named after Archduke Charles II of Austria.",
+				"Karlovac was built as a six-pointed star, where four rivers meet: the Kupa, the Korana, the Mrežnica and the Dobra.",
+				"At Rastoke, near Slunj, old watermills stand on the falls where the Slunjčica drops into the Korana."
+			],
+			"it": [
+				"Prende il nome da Karlovac, una fortezza fondata nel 1579 e chiamata così per l’arciduca Carlo II d’Austria.",
+				"Karlovac fu costruita a forma di stella a sei punte, dove si incontrano quattro fiumi: la Kupa, la Korana, la Mrežnica e la Dobra.",
+				"A Rastoke, vicino a Slunj, vecchi mulini ad acqua sorgono sulle cascate dove la Slunjčica precipita nella Korana."
+			]
+		}
+	},
+	"koprivnicko-krizevacka": {
+		"region": {
+			"en": [
+				"Named for two towns: Koprivnica, from kopriva, \"nettle\", and Križevci, from križ, \"cross\".",
+				"Podravka, a food company founded in Koprivnica in 1934, makes Vegeta, a seasoning sold around the world since 1959.",
+				"The village of Hlebine gave its name to a school of naive painting, begun by peasant painters in the 1930s."
+			],
+			"it": [
+				"Prende il nome da due città: Koprivnica, da kopriva, \"ortica\", e Križevci, da križ, \"croce\".",
+				"La Podravka, un’azienda alimentare fondata a Koprivnica nel 1934, produce la Vegeta, un condimento venduto in tutto il mondo dal 1959.",
+				"Il villaggio di Hlebine ha dato il nome a una scuola di pittura naïf, nata negli anni Trenta da pittori contadini."
+			]
+		}
+	},
+	"krapinsko-zagorska": {
+		"region": {
+			"en": [
+				"Named for Krapina and for Zagorje, \"the land beyond the hills\".",
+				"On a hill in Krapina, in 1899, Dragutin Gorjanović-Kramberger found the bones of dozens of Neanderthals.",
+				"Josip Broz Tito was born in the village of Kumrovec in 1892."
+			],
+			"it": [
+				"Prende il nome da Krapina e dallo Zagorje, \"la terra oltre le colline\".",
+				"Su una collina di Krapina, nel 1899, Dragutin Gorjanović-Kramberger trovò le ossa di decine di Neanderthal.",
+				"Josip Broz Tito nacque nel villaggio di Kumrovec nel 1892."
+			]
+		}
+	},
+	"licko-senjska": {
+		"region": {
+			"en": [
+				"Named for Lika, the upland that takes its name from the river Lika, and for the port of Senj.",
+				"The Plitvice Lakes, sixteen lakes stepped down a valley and joined by waterfalls, became a UNESCO site in 1979.",
+				"Nikola Tesla was born in the village of Smiljan in 1856."
+			],
+			"it": [
+				"Prende il nome dalla Lika, l’altopiano che prende il nome dal fiume Lika, e dal porto di Segna.",
+				"I laghi di Plitvice, sedici laghi a gradoni lungo una valle e uniti da cascate, sono un sito UNESCO dal 1979.",
+				"Nikola Tesla nacque nel villaggio di Smiljan nel 1856."
+			]
+		}
+	},
+	"me-imurska": {
+		"region": {
+			"en": [
+				"The name means \"between the Mura\", for the land between the Mura and the Drava.",
+				"It is the most densely populated of Croatia’s counties, after the City of Zagreb.",
+				"The castle of Čakovec was the seat of the Zrinski, one of Croatia’s great noble families, from the 16th century."
+			],
+			"it": [
+				"Il nome significa \"tra la Mura\", per la terra compresa fra la Mura e la Drava.",
+				"È la più densamente popolata delle contee croate, dopo la Città di Zagabria.",
+				"Il castello di Čakovec fu dal Cinquecento la sede degli Zrinski, una delle grandi famiglie nobili croate."
+			]
+		}
+	},
+	"osjecko-baranjska": {
+		"region": {
+			"en": [
+				"Named for Osijek, the Roman Mursa, and for Baranja, the corner of land between the Drava and the Danube.",
+				"Kopački rit, a floodplain where the Drava meets the Danube, is one of the largest river wetlands in Europe.",
+				"The cathedral of Đakovo was built for Bishop Josip Juraj Strossmayer between 1866 and 1882."
+			],
+			"it": [
+				"Prende il nome da Osijek, la romana Mursa, e dalla Baranja, l’angolo di terra fra la Drava e il Danubio.",
+				"Il Kopački rit, una piana alluvionale alla confluenza della Drava nel Danubio, è una delle più vaste zone umide fluviali d’Europa.",
+				"La cattedrale di Đakovo fu costruita per il vescovo Josip Juraj Strossmayer tra il 1866 e il 1882."
+			]
+		}
+	},
+	"pozesko-slavonska": {
+		"region": {
+			"en": [
+				"Named for Požega and for Slavonia, \"the land of the Slavs\".",
+				"The Romans called the valley of Požega Vallis Aurea, the \"golden valley\".",
+				"The wine cellar at Kutjevo goes back to a Cistercian abbey founded in 1232."
+			],
+			"it": [
+				"Prende il nome da Požega e dalla Slavonia, \"la terra degli Slavi\".",
+				"I Romani chiamavano la valle di Požega Vallis Aurea, la \"valle d’oro\".",
+				"La cantina di Kutjevo risale a un’abbazia cistercense fondata nel 1232."
+			]
+		}
+	},
+	"primorsko-goranska": {
+		"region": {
+			"en": [
+				"Named for Primorje, \"the littoral\", and for Gorski kotar, \"the mountain district\".",
+				"The Baška tablet, found on Krk, is one of the oldest inscriptions in Croatian, carved in Glagolitic letters around 1100.",
+				"Opatija became a fashionable resort of the Habsburg empire in the late 19th century."
+			],
+			"it": [
+				"Prende il nome dal Primorje, \"il litorale\", e dal Gorski kotar, \"il distretto montano\".",
+				"La lapide di Baška, trovata a Veglia, è una delle più antiche iscrizioni in croato, incisa in caratteri glagolitici intorno al 1100.",
+				"Abbazia divenne una stazione di villeggiatura alla moda dell’impero asburgico alla fine dell’Ottocento."
+			]
+		}
+	},
 	"rijeka": {
 		"city": {
 			"en": [
@@ -15,6 +198,34 @@
 				"\"Fiume\" in croato, come il suo nome italiano.",
 				"Nel 1919 il poeta Gabriele D’Annunzio la occupò con un gruppo di volontari.",
 				"Qui fu sviluppato il primo siluro, negli anni Sessanta dell’Ottocento."
+			]
+		}
+	},
+	"sibensko-kninska": {
+		"region": {
+			"en": [
+				"Named for Šibenik and for Knin, the seat of Croatia’s kings in the 11th century.",
+				"The cathedral of St James in Šibenik, built between 1431 and 1535 entirely of stone, is a UNESCO site.",
+				"In 1895 a power station on the Krka gave Šibenik electric street lights, one of the first alternating-current systems in the world."
+			],
+			"it": [
+				"Prende il nome da Sebenico e da Knin, la sede dei re di Croazia nell’XI secolo.",
+				"La cattedrale di San Giacomo a Sebenico, costruita tra il 1431 e il 1535 interamente in pietra, è un sito UNESCO.",
+				"Nel 1895 una centrale sul Krka diede a Sebenico l’illuminazione elettrica, uno dei primi sistemi a corrente alternata al mondo."
+			]
+		}
+	},
+	"sisacko-moslavacka": {
+		"region": {
+			"en": [
+				"Named for Sisak, the Roman Siscia, and for Moslavina, a land of low hills.",
+				"Two anniversaries fall on 22 June here: the victory over the Ottomans at Sisak in 1593, and the first Partisan unit, formed in a nearby forest in 1941.",
+				"Čigoč, in the Lonjsko polje floodplain, was named Europe’s first stork village in 1994, for the storks that nest on its roofs."
+			],
+			"it": [
+				"Prende il nome da Sisak, la romana Siscia, e dalla Moslavina, una terra di basse colline.",
+				"Qui il 22 giugno cadono due anniversari: la vittoria sugli Ottomani a Sisak nel 1593 e la prima unità partigiana, formata in un bosco vicino nel 1941.",
+				"Čigoč, nella piana alluvionale del Lonjsko polje, fu nominato nel 1994 primo villaggio europeo delle cicogne, per le cicogne che nidificano sui suoi tetti."
 			]
 		}
 	},
@@ -32,6 +243,74 @@
 			]
 		}
 	},
+	"splitsko-dalmatinska": {
+		"region": {
+			"en": [
+				"Named for Split and for Dalmatia, the land of the Delmatae, an Illyrian people whose name is perhaps linked to a word for sheep.",
+				"On Hvar, the fields of Stari Grad are still divided as Greek settlers laid them out in the 4th century BC.",
+				"The Sinjska alka, a tournament of horsemen tilting at a ring, has been held in Sinj since 1715 to mark a victory over the Ottomans."
+			],
+			"it": [
+				"Prende il nome da Spalato e dalla Dalmazia, la terra dei Dalmati, un popolo illirico il cui nome è forse legato a una parola per \"pecora\".",
+				"A Hvar, i campi di Stari Grad sono ancora divisi come li tracciarono i coloni greci nel IV secolo a.C.",
+				"La Sinjska alka, un torneo di cavalieri che infilano un anello con la lancia, si tiene a Sinj dal 1715 per ricordare una vittoria sugli Ottomani."
+			]
+		}
+	},
+	"varazdinska": {
+		"region": {
+			"en": [
+				"Named for Varaždin, a name of uncertain origin; the town was Croatia’s capital from 1767 until a great fire in 1776.",
+				"Trakošćan castle, on a wooded hill above its lake, is one of the most visited castles in Croatia.",
+				"The hot springs of Varaždinske Toplice were a Roman spa, Aquae Iasae."
+			],
+			"it": [
+				"Prende il nome da Varaždin, un nome di origine incerta; la città fu la capitale della Croazia dal 1767 fino a un grande incendio nel 1776.",
+				"Il castello di Trakošćan, su una collina boscosa sopra il suo lago, è uno dei più visitati della Croazia.",
+				"Le sorgenti calde di Varaždinske Toplice erano già terme romane, Aquae Iasae."
+			]
+		}
+	},
+	"viroviticko-podravska": {
+		"region": {
+			"en": [
+				"Named for Virovitica and for Podravina, \"the land along the Drava\".",
+				"Ružica grad, above Orahovica, is one of the largest medieval castles in Slavonia."
+			],
+			"it": [
+				"Prende il nome da Virovitica e dalla Podravina, \"la terra lungo la Drava\".",
+				"Ružica grad, sopra Orahovica, è uno dei più grandi castelli medievali della Slavonia."
+			]
+		}
+	},
+	"vukovarsko-srijemska": {
+		"region": {
+			"en": [
+				"Named for Vukovar, \"the fort on the Vuka\", and for Srijem, which keeps the name of the Roman city of Sirmium.",
+				"In 1991 Vukovar was besieged for 87 days and largely destroyed; its scarred water tower is kept as a memorial.",
+				"The Vučedol Dove, a clay vessel almost 5,000 years old, was found near Vukovar in 1938."
+			],
+			"it": [
+				"Prende il nome da Vukovar, \"la fortezza sulla Vuka\", e dal Srijem, che conserva il nome della città romana di Sirmium.",
+				"Nel 1991 Vukovar fu assediata per 87 giorni e in gran parte distrutta; la sua torre dell’acqua, segnata dai colpi, è conservata come memoriale.",
+				"La colomba di Vučedol, un vaso di argilla di quasi 5.000 anni, fu trovata vicino a Vukovar nel 1938."
+			]
+		}
+	},
+	"zadarska": {
+		"region": {
+			"en": [
+				"Named for Zadar, the Iader of the Romans, a name older than Rome whose meaning is unknown.",
+				"Zadar’s Sea Organ, built into the waterfront in 2005, plays notes pushed through its pipes by the waves.",
+				"Maraschino, a liqueur of marasca cherries, was made in Zadar by Luxardo from 1821 until the firm moved to Italy after the Second World War."
+			],
+			"it": [
+				"Prende il nome da Zara, la Iader dei Romani, un nome più antico di Roma di cui non si conosce il significato.",
+				"L’Organo marino di Zara, costruito nel lungomare nel 2005, suona le note che le onde spingono nelle sue canne.",
+				"Il maraschino, un liquore di marasche, fu prodotto a Zara dalla Luxardo dal 1821 finché l’azienda si trasferì in Italia dopo la Seconda guerra mondiale."
+			]
+		}
+	},
 	"zagreb": {
 		"city": {
 			"en": [
@@ -43,6 +322,20 @@
 				"Da dove venga il nome è incerto; un racconto popolare lo legge come \"dietro la collina\".",
 				"Nacque da due borghi in collina, Gradec e Kaptol, uniti nel 1850.",
 				"Il suo Museo delle relazioni interrotte espone oggetti rimasti da amori finiti."
+			]
+		}
+	},
+	"zagrebacka": {
+		"region": {
+			"en": [
+				"Named for Zagreb, although the city itself is a county of its own and not part of it.",
+				"Samobor is known across Croatia for its cream cake, the kremšnita.",
+				"The Turopolje pig, a rare spotted breed raised on oak-forest pastures, is named for the Turopolje plain here."
+			],
+			"it": [
+				"Prende il nome da Zagabria, anche se la città è una contea a sé e non ne fa parte.",
+				"Samobor è famosa in tutta la Croazia per il suo dolce alla crema, la kremšnita.",
+				"Il maiale di Turopolje, una rara razza pezzata allevata nei pascoli dei querceti, prende il nome dalla pianura di Turopolje."
 			]
 		}
 	}
