@@ -203,7 +203,7 @@ describe('map data integrity - every committed map', () => {
 	it.each(mapIds)('%s: ships the sentences its country file holds', (id) => {
 		const { country, targets } = JSON.parse(
 			readFileSync(path.join(DEFAULT_MAPS_DIR, id, 'map.json'), 'utf8')
-		) as { country?: string; targets: { id: string; country?: string }[] };
+		) as { country?: string; targets: { id: string; country?: string; type?: string }[] };
 		// A town on a map of several countries (#39) carries its own country.
 		const hooksFor = authoredResolver(country);
 		const targetById = new Map(targets.map((t) => [t.id, t]));

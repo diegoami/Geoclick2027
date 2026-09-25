@@ -23,28 +23,51 @@ export function hooksForCountry(country: string | undefined): Record<string, Aut
 	// The filename is the country as map.json spells it: "United States of
 	// America" is united-states-of-america.json. Naming it for the country
 	// rather than for a convenient short form is what makes the lookup need
-	// no table.
-	const file = path.join(REPO_ROOT, 'data/facts', `${slugify(country)}.json`);
+	// no table - save for the one country two maps spell two ways.
+	const file = path.join(REPO_ROOT, 'data/facts', factsFileFor(country));
 	if (!existsSync(file)) return {};
 	return parseAuthoredFile(JSON.parse(readFileSync(file, 'utf8')) as Record<string, unknown>);
+}
+
+/**
+ * A country map.json spells differently from the continent maps, and the
+ * spelling whose file it shares. `czechia-regions` is built from Natural
+ * Earth's admin-1 layer, which says "Czech Republic"; Europe's maps take the
+ * admin-0 layer's short name, "Czechia". One country, one file (FT-69).
+ */
+const SAME_FILE_AS: Record<string, string> = { 'Czech Republic': 'Czechia' };
+
+/**
+ * Where a whole country's sentences are, on a continent's Countries map
+ * (FT-69, #46): data/facts/world.json, keyed by the country's target id. A
+ * country's own file is about what is inside it.
+ */
+export const WORLD = 'World';
+
+/** The file in data/facts/ that holds a country's sentences. */
+export function factsFileFor(country: string): string {
+	return `${slugify(SAME_FILE_AS[country] ?? country)}.json`;
 }
 
 /**
  * The authored sentences for each target of one map. A target that names its
  * own country - the towns of a map of several countries (#39), whose
  * map.json country is "Europe" - takes them from that country's file, so
- * München says the same thing on Central Europe as on Germany.
+ * München says the same thing on Central Europe as on Germany. A country
+ * takes them from world.json.
  */
 export function authoredResolver(
-	mapCountry: string | undefined
-): (target: { id: string; country?: string }) => AuthoredHooks | undefined {
+	mapCountry: string | undefined,
+	load: (country: string | undefined) => Record<string, AuthoredHooks> = hooksForCountry
+): (target: { id: string; country?: string; type?: string }) => AuthoredHooks | undefined {
 	const byCountry = new Map<string, Record<string, AuthoredHooks>>();
 	const forCountry = (country: string | undefined) => {
 		const key = country ?? '';
-		if (!byCountry.has(key)) byCountry.set(key, hooksForCountry(country));
+		if (!byCountry.has(key)) byCountry.set(key, load(country));
 		return byCountry.get(key)!;
 	};
-	return (target) => forCountry(target.country ?? mapCountry)[target.id];
+	return (target) =>
+		forCountry(target.type === 'country' ? WORLD : (target.country ?? mapCountry))[target.id];
 }
 
 /**
