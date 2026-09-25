@@ -17,7 +17,19 @@
 			"name": "Ukko Koli",
 			"elevation": 347
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"The Finns call it Suomi, a name whose origin is still argued over.",
+				"It was part of Sweden for six centuries and a Russian grand duchy from 1809, until independence in 1917.",
+				"There are an estimated three million saunas for five and a half million people."
+			],
+			"it": [
+				"I finlandesi la chiamano Suomi, un nome di origine ancora discussa.",
+				"Fece parte della Svezia per sei secoli e fu granducato russo dal 1809, fino all’indipendenza nel 1917.",
+				"Si stimano tre milioni di saune per cinque milioni e mezzo di abitanti."
+			]
+		}
 	},
 	"iceland": {
 		"kind": "region",
@@ -32,7 +44,19 @@
 			"name": "Hvannadalshnkur",
 			"elevation": 2110
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"\"Ice land\": the old story is that a Viking settler named it after seeing a fjord full of drift ice.",
+				"The Althing, founded in 930, is one of the oldest parliaments in the world.",
+				"It sits on the Mid-Atlantic Ridge, where the North American and Eurasian plates pull apart."
+			],
+			"it": [
+				"\"Terra del ghiaccio\": secondo l’antico racconto, un colono vichingo la chiamò così vedendo un fiordo pieno di ghiaccio alla deriva.",
+				"L’Althing, fondato nel 930, è uno dei parlamenti più antichi del mondo.",
+				"Si trova sulla dorsale medio-atlantica, dove la placca nordamericana e quella euroasiatica si allontanano."
+			]
+		}
 	},
 	"norway": {
 		"kind": "region",
@@ -52,7 +76,19 @@
 			"name": "Galdhpiggen",
 			"elevation": 2469
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"\"The way north\": the sea route along its coast, Norðvegr in Old Norse.",
+				"Counting every fjord and island, its coast is about 100,000 km long.",
+				"The oil found in 1969 went into a state fund that is now the largest of its kind in the world."
+			],
+			"it": [
+				"\"La via del nord\": la rotta per mare lungo la sua costa, Norðvegr in norreno.",
+				"Contando ogni fiordo e ogni isola, la sua costa è lunga circa 100.000 km.",
+				"Il petrolio scoperto nel 1969 finì in un fondo di Stato che oggi è il più grande del suo genere al mondo."
+			]
+		}
 	},
 	"sweden": {
 		"kind": "region",
@@ -72,7 +108,19 @@
 			"name": "Kebnekaise",
 			"elevation": 2111
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Named for the Svear, the people around Lake Mälaren; Sverige is \"the realm of the Swedes\".",
+				"It has not been at war since 1814.",
+				"It switched from driving on the left to the right overnight, on 3 September 1967."
+			],
+			"it": [
+				"Prende il nome dagli Svear, il popolo intorno al lago Mälaren; Sverige è \"il regno degli svedesi\".",
+				"Non è in guerra dal 1814.",
+				"Passò dalla guida a sinistra a quella a destra in una notte, il 3 settembre 1967."
+			]
+		}
 	},
 	"estonia": {
 		"kind": "region",
@@ -91,7 +139,19 @@
 			"name": "Suur Munamagi",
 			"elevation": 318
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Probably from the Aesti, a people Tacitus placed on the Baltic, though his Aesti may have been Balts rather than the Estonians’ ancestors.",
+				"Its language is close to Finnish, not to the Baltic languages of Latvia and Lithuania.",
+				"In the Singing Revolution, from 1988, crowds of hundreds of thousands sang for independence, which came in 1991."
+			],
+			"it": [
+				"Probabilmente dagli Aesti, un popolo che Tacito collocava sul Baltico, anche se i suoi Aesti forse erano Balti e non gli antenati degli estoni.",
+				"La sua lingua è vicina al finlandese, non alle lingue baltiche di Lettonia e Lituania.",
+				"Nella Rivoluzione cantata, dal 1988, folle di centinaia di migliaia di persone cantarono per l’indipendenza, arrivata nel 1991."
+			]
+		}
 	},
 	"latvia": {
 		"kind": "region",
@@ -108,7 +168,19 @@
 			"nameIt": "Riga",
 			"population": 742572
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named for the Latgalians, one of the Baltic tribes that became the Latvians.",
+				"About a third of the buildings in central Riga are Art Nouveau, one of the largest such collections in the world.",
+				"Latvian and Lithuanian are the only two Baltic languages still spoken."
+			],
+			"it": [
+				"Prende il nome dai Latgalli, una delle tribù baltiche da cui nacquero i lettoni.",
+				"Circa un terzo degli edifici del centro di Riga è in stile liberty, una delle raccolte più grandi del mondo.",
+				"Il lettone e il lituano sono le sole due lingue baltiche ancora parlate."
+			]
+		}
 	},
 	"russia": {
 		"kind": "region",
@@ -133,7 +205,19 @@
 			"name": "Gora Elbrus",
 			"elevation": 5642
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"From the Rus’, a people probably of Norse origin who ruled Kyiv and Novgorod from the 9th century.",
+				"It spans eleven time zones, from Kaliningrad to Kamchatka.",
+				"Lake Baikal, in Siberia, holds about a fifth of the world’s unfrozen fresh surface water."
+			],
+			"it": [
+				"Dai Rus’, un popolo probabilmente di origine norrena che dal IX secolo governò Kiev e Novgorod.",
+				"Si estende su undici fusi orari, da Kaliningrad alla Kamčatka.",
+				"Il lago Bajkal, in Siberia, contiene circa un quinto dell’acqua dolce di superficie non ghiacciata del mondo."
+			]
+		}
 	},
 	"denmark": {
 		"kind": "region",
@@ -152,7 +236,19 @@
 			"name": "Møllehøj",
 			"elevation": 171
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Probably the \"march\", the borderland, of the Danes.",
+				"Its red flag with a white cross, the Dannebrog, is by tradition the oldest national flag still in use.",
+				"Greenland and the Faroe Islands belong to the Danish realm too, each governing itself."
+			],
+			"it": [
+				"Probabilmente la \"marca\", la terra di confine, dei Danesi.",
+				"La sua bandiera rossa con la croce bianca, il Dannebrog, è per tradizione la più antica bandiera nazionale ancora in uso.",
+				"Anche la Groenlandia e le Fær Øer fanno parte del regno danese, e ciascuna si governa da sé."
+			]
+		}
 	},
 	"united-kingdom": {
 		"kind": "region",
@@ -170,7 +266,19 @@
 			"name": "Ben Nevis",
 			"elevation": 1343
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Its full name is the United Kingdom of Great Britain and Northern Ireland; \"Great\" set Britain apart from Brittany.",
+				"Four nations, England, Scotland, Wales and Northern Ireland, under one crown; the union with Scotland dates from 1707.",
+				"It has no written constitution in a single document."
+			],
+			"it": [
+				"Il nome completo è Regno Unito di Gran Bretagna e Irlanda del Nord; \"Gran\" distingueva la Britannia dalla Bretagna.",
+				"Quattro nazioni, Inghilterra, Scozia, Galles e Irlanda del Nord, sotto una sola corona; l’unione con la Scozia è del 1707.",
+				"Non ha una costituzione scritta in un unico documento."
+			]
+		}
 	},
 	"lithuania": {
 		"kind": "region",
@@ -187,7 +295,19 @@
 			"nameIt": "Vilnius",
 			"population": 542366
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Where the name comes from is uncertain; one theory ties it to a small river, the Lietava.",
+				"It was the last country in Europe to become Christian, in 1387.",
+				"On 11 March 1990 it became the first Soviet republic to declare independence."
+			],
+			"it": [
+				"Da dove venga il nome è incerto; una teoria lo lega a un piccolo fiume, la Lietava.",
+				"Fu l’ultimo paese d’Europa a diventare cristiano, nel 1387.",
+				"L’11 marzo 1990 fu la prima repubblica sovietica a dichiarare l’indipendenza."
+			]
+		}
 	},
 	"belarus": {
 		"kind": "region",
@@ -209,7 +329,19 @@
 			"name": "Dzyarzhynskaya",
 			"elevation": 346
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"\"White Rus\": why white is argued over; one reading is \"free\", another an old custom of naming the west by a colour.",
+				"The Białowieża Forest, shared with Poland, is one of the last pieces of the forest that once covered the European plain, and home to its bison.",
+				"It lost about a quarter of its people in the Second World War, by most estimates."
+			],
+			"it": [
+				"\"Rus’ Bianca\": perché bianca è discusso; una lettura è \"libera\", un’altra un’antica usanza di indicare l’ovest con un colore.",
+				"La foresta di Białowieża, condivisa con la Polonia, è uno degli ultimi lembi della foresta che copriva la pianura europea, e ospita i suoi bisonti.",
+				"Nella Seconda guerra mondiale perse circa un quarto della popolazione, secondo la maggior parte delle stime."
+			]
+		}
 	},
 	"ireland": {
 		"kind": "region",
@@ -227,7 +359,19 @@
 			"name": "Carrauntoohil",
 			"elevation": 1038
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"From Ériu, a goddess of Irish myth, through the Irish Éire; the \"land\" is English.",
+				"The famine of 1845 to 1852 killed about a million people, and the island still has fewer people than it had before it.",
+				"The harp is its emblem, on its coins and its passports."
+			],
+			"it": [
+				"Da Ériu, una dea del mito irlandese, attraverso l’irlandese Éire; il \"land\" è inglese.",
+				"La carestia del 1845-1852 uccise circa un milione di persone, e l’isola ha ancora meno abitanti di prima.",
+				"L’arpa è il suo emblema, sulle monete e sui passaporti."
+			]
+		}
 	},
 	"netherlands": {
 		"kind": "region",
@@ -242,7 +386,19 @@
 			"nameIt": "L'Aia",
 			"population": 1406000
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"The \"low lands\": about a quarter of the country lies below sea level.",
+				"Holland is only two of its twelve provinces.",
+				"The Dutch East India Company, founded in 1602, is often called the first company whose shares were traded on an exchange."
+			],
+			"it": [
+				"Le \"terre basse\": circa un quarto del paese è sotto il livello del mare.",
+				"L’Olanda è solo due delle sue dodici province.",
+				"La Compagnia olandese delle Indie orientali, fondata nel 1602, è spesso considerata la prima società con azioni scambiate in borsa."
+			]
+		}
 	},
 	"poland": {
 		"kind": "region",
@@ -266,7 +422,19 @@
 			"name": "Sněžka",
 			"elevation": 1603
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named for the Polans, \"the people of the fields\", a Slavic tribe around Gniezno.",
+				"Its constitution of 3 May 1791 was the first of its kind in Europe, and the second in the world after the American one.",
+				"For 123 years, from 1795 to 1918, it was not on the map, divided between Russia, Prussia and Austria."
+			],
+			"it": [
+				"Prende il nome dai Polani, \"il popolo dei campi\", una tribù slava intorno a Gniezno.",
+				"La sua costituzione del 3 maggio 1791 fu la prima del genere in Europa, e la seconda al mondo dopo quella americana.",
+				"Per 123 anni, dal 1795 al 1918, non esistette sulla carta, divisa tra Russia, Prussia e Austria."
+			]
+		}
 	},
 	"germany": {
 		"kind": "region",
@@ -292,7 +460,19 @@
 			"name": "Zugspitze",
 			"elevation": 2963
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"The Romans called the land east of the Rhine Germania; the Germans say Deutschland, from an old word for \"the people\".",
+				"Each neighbour names it differently: Allemagne after the Alemanni, Niemcy in Polish, perhaps \"the mute ones\".",
+				"It was reunited on 3 October 1990, eleven months after the Berlin Wall fell."
+			],
+			"it": [
+				"I Romani chiamavano Germania la terra a est del Reno; i tedeschi dicono Deutschland, da un’antica parola per \"il popolo\".",
+				"Ogni vicino la chiama a modo suo: Allemagne dagli Alamanni, Niemcy in polacco, forse \"i muti\".",
+				"Fu riunificata il 3 ottobre 1990, undici mesi dopo la caduta del Muro di Berlino."
+			]
+		}
 	},
 	"belgium": {
 		"kind": "region",
@@ -313,7 +493,19 @@
 			"name": "Signal de Botrange",
 			"elevation": 694
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named for the Belgae, the people Julius Caesar called the bravest of all the Gauls.",
+				"Independent since 1830, when it broke away from the Netherlands.",
+				"It has three official languages, Dutch, French and German, and a government shaped around them."
+			],
+			"it": [
+				"Prende il nome dai Belgi, il popolo che Giulio Cesare definì il più valoroso di tutti i Galli.",
+				"Indipendente dal 1830, quando si staccò dai Paesi Bassi.",
+				"Ha tre lingue ufficiali, olandese, francese e tedesco, e uno Stato costruito intorno a loro."
+			]
+		}
 	},
 	"luxembourg": {
 		"kind": "region",
@@ -329,7 +521,19 @@
 			"nameIt": "Lussemburgo",
 			"population": 107260
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"From Lucilinburhuc, \"little castle\", the fort a count acquired in 963.",
+				"The last grand duchy in the world.",
+				"A founder of what became the European Union, and home to its Court of Justice."
+			],
+			"it": [
+				"Da Lucilinburhuc, \"piccolo castello\", la fortezza che un conte acquistò nel 963.",
+				"L’ultimo granducato del mondo.",
+				"Tra i fondatori di quella che divenne l’Unione europea, e sede della sua Corte di giustizia."
+			]
+		}
 	},
 	"czechia": {
 		"kind": "region",
@@ -346,7 +550,19 @@
 			"nameIt": "Praga",
 			"population": 1162000
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named for the Czechs, whose name legend traces to a forefather, Čech; its real origin is unknown.",
+				"Charles University in Prague, founded in 1348, is the oldest university in central Europe.",
+				"It separated from Slovakia peacefully on 1 January 1993, in what was called the Velvet Divorce."
+			],
+			"it": [
+				"Prende il nome dai cechi, che la leggenda fa discendere da un capostipite, Čech; l’origine vera non si conosce.",
+				"L’Università Carolina di Praga, fondata nel 1348, è la più antica dell’Europa centrale.",
+				"Si separò pacificamente dalla Slovacchia il 1º gennaio 1993, nel cosiddetto divorzio di velluto."
+			]
+		}
 	},
 	"slovakia": {
 		"kind": "region",
@@ -368,7 +584,19 @@
 			"name": "Gerlach",
 			"elevation": 2655
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named, like Slovenia, from the Slavs’ own word for themselves, probably from slovo, \"word\".",
+				"Bratislava was the city where the kings of Hungary were crowned, from 1563 to 1830.",
+				"It became independent in 1993, when Czechoslovakia split in two without a shot."
+			],
+			"it": [
+				"Prende il nome, come la Slovenia, dalla parola con cui gli Slavi chiamano sé stessi, probabilmente da slovo, \"parola\".",
+				"Bratislava fu la città in cui si incoronavano i re d’Ungheria, dal 1563 al 1830.",
+				"È indipendente dal 1993, quando la Cecoslovacchia si divise in due senza sparare un colpo."
+			]
+		}
 	},
 	"ukraine": {
 		"kind": "region",
@@ -392,7 +620,19 @@
 			"name": "Gora Elbrus",
 			"elevation": 5642
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"The name is usually read as \"borderland\", or, as many Ukrainians prefer, simply \"country\".",
+				"Kyiv was the capital of Kyivan Rus’, the medieval state to which Ukraine, Belarus and Russia all trace themselves.",
+				"Black earth, among the most fertile soils there are, covers about two thirds of it."
+			],
+			"it": [
+				"Il nome si legge di solito come \"terra di confine\", o, come preferiscono molti ucraini, semplicemente \"paese\".",
+				"Kiev era la capitale della Rus’ di Kiev, lo Stato medievale a cui si richiamano Ucraina, Bielorussia e Russia.",
+				"La terra nera, tra i suoli più fertili che esistano, ne copre circa due terzi."
+			]
+		}
 	},
 	"austria": {
 		"kind": "region",
@@ -416,7 +656,19 @@
 			"name": "Grossglockner",
 			"elevation": 3798
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"First written Ostarrîchi in a document of 996: the \"eastern realm\", the eastern edge of the German lands.",
+				"The Habsburgs ruled from Vienna for more than six centuries, until the empire broke up in 1918.",
+				"Vienna was home to Haydn, Mozart, Beethoven and Schubert, which is why it still calls itself the city of music."
+			],
+			"it": [
+				"Scritta per la prima volta Ostarrîchi in un documento del 996: il \"regno orientale\", il margine est delle terre tedesche.",
+				"Gli Asburgo governarono da Vienna per più di sei secoli, finché l’impero si dissolse nel 1918.",
+				"A Vienna vissero Haydn, Mozart, Beethoven e Schubert: per questo si chiama ancora la città della musica."
+			]
+		}
 	},
 	"hungary": {
 		"kind": "region",
@@ -440,7 +692,19 @@
 			"name": "Kékes",
 			"elevation": 1015
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"The name probably comes, through Slavic, from the Onogurs, a Turkic people; Hungarians call themselves Magyar.",
+				"Hungarian is a Uralic language, distantly related to Finnish and Estonian, not to any of its neighbours’ languages.",
+				"Ernő Rubik invented his cube in Budapest in 1974."
+			],
+			"it": [
+				"Il nome viene probabilmente, attraverso lo slavo, dagli Onoguri, un popolo turco; gli ungheresi si chiamano magiari.",
+				"L’ungherese è una lingua uralica, lontana parente del finlandese e dell’estone, e di nessuna lingua dei paesi vicini.",
+				"Ernő Rubik inventò il suo cubo a Budapest nel 1974."
+			]
+		}
 	},
 	"moldova": {
 		"kind": "region",
@@ -459,7 +723,19 @@
 			"name": "Bălănești",
 			"elevation": 429
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Named for the Moldova river, in today’s Romania, where the medieval principality began.",
+				"Its language is Romanian, and since 2023 its laws call it that.",
+				"The cellars of Mileștii Mici, dug into old limestone mines, hold what Guinness listed as the largest wine collection in the world."
+			],
+			"it": [
+				"Prende il nome dal fiume Moldova, nell’attuale Romania, dove nacque il principato medievale.",
+				"La sua lingua è il romeno, e dal 2023 anche le sue leggi la chiamano così.",
+				"Le cantine di Mileștii Mici, scavate in vecchie cave di calcare, custodiscono quella che il Guinness indicò come la più grande collezione di vini del mondo."
+			]
+		}
 	},
 	"switzerland": {
 		"kind": "region",
@@ -480,7 +756,19 @@
 			"name": "Matterhorn",
 			"elevation": 4478
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Named for Schwyz, one of the three cantons that swore the alliance of 1291.",
+				"It has four national languages: German, French, Italian and Romansh.",
+				"Its Latin name, Confoederatio Helvetica, after the Helvetii, is why its cars carry CH."
+			],
+			"it": [
+				"Prende il nome da Svitto, uno dei tre cantoni che giurarono l’alleanza del 1291.",
+				"Ha quattro lingue nazionali: tedesco, francese, italiano e romancio.",
+				"Il suo nome latino, Confoederatio Helvetica, dagli Elvezi, è il motivo della sigla CH sulle sue auto."
+			]
+		}
 	},
 	"france": {
 		"kind": "region",
@@ -503,7 +791,19 @@
 			"name": "Mont Blanc",
 			"elevation": 4807
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"From the Franks, a Germanic people whose king Clovis ruled Gaul around 500.",
+				"The metre was defined here in the 1790s, as one ten-millionth of the distance from the North Pole to the equator through Paris.",
+				"For decades it has been the most visited country in the world."
+			],
+			"it": [
+				"Dai Franchi, un popolo germanico il cui re Clodoveo governava la Gallia intorno al 500.",
+				"Il metro fu definito qui negli anni Novanta del Settecento: un decimilionesimo della distanza dal Polo Nord all’equatore passando per Parigi.",
+				"Da decenni è il paese più visitato del mondo."
+			]
+		}
 	},
 	"slovenia": {
 		"kind": "region",
@@ -524,7 +824,19 @@
 			"name": "Triglav",
 			"elevation": 2864
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Named for the Slavs, like Slovakia, and the two are often confused, flags included.",
+				"The caves of Postojna are home to the olm, a blind salamander that can live for a century.",
+				"It left Yugoslavia in 1991, after a war that lasted ten days."
+			],
+			"it": [
+				"Prende il nome dagli Slavi, come la Slovacchia, e le due vengono spesso confuse, bandiere comprese.",
+				"Le grotte di Postumia ospitano il proteo, una salamandra cieca che può vivere un secolo.",
+				"Lasciò la Iugoslavia nel 1991, dopo una guerra durata dieci giorni."
+			]
+		}
 	},
 	"romania": {
 		"kind": "region",
@@ -546,7 +858,19 @@
 			"name": "Moldoveanu",
 			"elevation": 2543
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"The name says Rome: the land of the Romans, and Romanian comes from Latin.",
+				"Bran Castle is sold as Dracula’s, though Vlad the Impaler probably never lived there.",
+				"The Palace of the Parliament in Bucharest is one of the largest administrative buildings in the world."
+			],
+			"it": [
+				"Il nome dice Roma: la terra dei Romani, e il romeno viene dal latino.",
+				"Il castello di Bran è venduto come quello di Dracula, anche se Vlad l’Impalatore probabilmente non ci visse mai.",
+				"Il Palazzo del Parlamento di Bucarest è uno degli edifici amministrativi più grandi del mondo."
+			]
+		}
 	},
 	"croatia": {
 		"kind": "region",
@@ -564,7 +888,19 @@
 			"nameIt": "Zagabria",
 			"population": 722526
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"From the Croats’ own name, Hrvati, whose origin is disputed; one theory takes it back to an Iranian word.",
+				"The necktie is named for Croatian soldiers in 17th-century France: cravate comes from Croate.",
+				"Dubrovnik was the independent Republic of Ragusa until Napoleon ended it in 1808."
+			],
+			"it": [
+				"Dal nome che i croati danno a sé stessi, Hrvati, di origine discussa; una teoria lo riconduce a una parola iranica.",
+				"La cravatta prende il nome dai soldati croati nella Francia del Seicento: cravate viene da Croate.",
+				"Dubrovnik fu la Repubblica di Ragusa, indipendente, finché Napoleone non vi pose fine nel 1808."
+			]
+		}
 	},
 	"serbia": {
 		"kind": "region",
@@ -589,7 +925,19 @@
 			"name": "Midzor",
 			"elevation": 2168
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"From the Serbs’ own name, Srbi, of uncertain origin, a Slavic people who settled the Balkans in the 7th century.",
+				"Nikola Tesla was a Serb, born in 1856 in what is now Croatia.",
+				"Belgrade, where the Sava meets the Danube, is said to have been fought over in more than a hundred wars."
+			],
+			"it": [
+				"Dal nome che i serbi danno a sé stessi, Srbi, di origine incerta: un popolo slavo che si stabilì nei Balcani nel VII secolo.",
+				"Nikola Tesla era serbo, nato nel 1856 in quella che oggi è la Croazia.",
+				"Si dice che per Belgrado, dove la Sava incontra il Danubio, si sia combattuto in più di cento guerre."
+			]
+		}
 	},
 	"bosnia-and-herzegovina": {
 		"kind": "region",
@@ -609,7 +957,19 @@
 			"name": "Troglav",
 			"elevation": 1913
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Bosnia is named for the Bosna river; Herzegovina for the herceg, the \"duke\", a title a 15th-century lord took.",
+				"The shots that killed Archduke Franz Ferdinand in Sarajevo in 1914 set off the First World War.",
+				"The Old Bridge of Mostar, built by the Ottomans in 1566, was destroyed in 1993 and rebuilt in 2004."
+			],
+			"it": [
+				"La Bosnia prende il nome dal fiume Bosna; l’Erzegovina dal herceg, il \"duca\", titolo assunto da un signore del XV secolo.",
+				"I colpi che uccisero l’arciduca Francesco Ferdinando a Sarajevo nel 1914 fecero scoppiare la Prima guerra mondiale.",
+				"Il Ponte Vecchio di Mostar, costruito dagli Ottomani nel 1566, fu distrutto nel 1993 e ricostruito nel 2004."
+			]
+		}
 	},
 	"bulgaria": {
 		"kind": "region",
@@ -630,7 +990,19 @@
 			"name": "Musala",
 			"elevation": 2925
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Named for the Bulgars, a Turkic people who came from the steppe in the 7th century and merged with the Slavs.",
+				"The Cyrillic alphabet took shape here, in the First Bulgarian Empire, in the 9th and 10th centuries.",
+				"A nod traditionally means no here, and a shake of the head means yes."
+			],
+			"it": [
+				"Prende il nome dai Bulgari, un popolo turco venuto dalla steppa nel VII secolo e fusosi con gli Slavi.",
+				"L’alfabeto cirillico prese forma qui, nel Primo impero bulgaro, tra il IX e il X secolo.",
+				"Per tradizione qui un cenno del capo vuol dire no, e scuotere la testa vuol dire sì."
+			]
+		}
 	},
 	"montenegro": {
 		"kind": "region",
@@ -652,7 +1024,19 @@
 			"name": "Durmitor",
 			"elevation": 2522
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"\"Black mountain\", from the Venetian name; in Montenegrin it is Crna Gora, which means the same.",
+				"Independent again since 2006, when a referendum ended its union with Serbia by a narrow majority.",
+				"The Bay of Kotor, often called Europe’s southernmost fjord, is really a drowned river canyon."
+			],
+			"it": [
+				"\"Montagna nera\", dal nome veneziano; in montenegrino è Crna Gora, che vuol dire lo stesso.",
+				"Di nuovo indipendente dal 2006, quando un referendum sciolse l’unione con la Serbia con una maggioranza di stretta misura.",
+				"Le Bocche di Cattaro, spesso chiamate il fiordo più meridionale d’Europa, sono in realtà un canyon fluviale sommerso."
+			]
+		}
 	},
 	"kosovo": {
 		"kind": "region",
@@ -673,7 +1057,19 @@
 			"name": "Daravica",
 			"elevation": 2656
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"From Serbian kos, \"blackbird\": Kosovo Polje is the Field of Blackbirds.",
+				"There, in 1389, Serbs fought the Ottomans in the battle that became the centre of Serbian national memory.",
+				"It declared independence from Serbia in 2008; about a hundred countries recognise it, and Serbia does not."
+			],
+			"it": [
+				"Dal serbo kos, \"merlo\": Kosovo Polje è la Piana dei Merli.",
+				"Qui, nel 1389, i serbi combatterono gli Ottomani nella battaglia divenuta il cuore della memoria nazionale serba.",
+				"Ha dichiarato l’indipendenza dalla Serbia nel 2008; la riconoscono circa cento paesi, la Serbia no."
+			]
+		}
 	},
 	"italy": {
 		"kind": "region",
@@ -694,7 +1090,19 @@
 			"name": "Monte Rosa",
 			"elevation": 4634
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Italia first named only the toe of the peninsula; the name may come from an Oscan word for \"land of young cattle\".",
+				"It became one kingdom only in 1861, and Rome joined it in 1870.",
+				"It has more UNESCO World Heritage Sites than almost any other country."
+			],
+			"it": [
+				"All’inizio Italia indicava solo la punta dello stivale; il nome potrebbe venire da una parola osca per \"terra dei vitelli\".",
+				"L’unità arrivò solo nel 1861, e Roma entrò nel regno nel 1870.",
+				"Ha più siti UNESCO patrimonio dell’umanità di quasi ogni altro paese."
+			]
+		}
 	},
 	"north-macedonia": {
 		"kind": "region",
@@ -712,7 +1120,19 @@
 			"nameIt": "Skopje",
 			"population": 494087
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Named for ancient Macedonia, whose northern part it holds; \"North\" was added in 2019, ending a 27-year dispute with Greece.",
+				"Lake Ohrid, shared with Albania, is one of the oldest lakes in the world, more than a million years old.",
+				"Mother Teresa was born in Skopje in 1910."
+			],
+			"it": [
+				"Prende il nome dall’antica Macedonia, di cui occupa la parte settentrionale; \"del Nord\" fu aggiunto nel 2019, chiudendo una disputa di 27 anni con la Grecia.",
+				"Il lago di Ocrida, condiviso con l’Albania, è uno dei laghi più antichi del mondo, con oltre un milione di anni.",
+				"Madre Teresa nacque a Skopje nel 1910."
+			]
+		}
 	},
 	"albania": {
 		"kind": "region",
@@ -733,7 +1153,19 @@
 			"name": "Korab",
 			"elevation": 2764
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Probably from the Albanoi, a tribe Ptolemy placed here in the 2nd century; Albanians themselves call it Shqipëria.",
+				"The black eagle on its flag goes back to Skanderbeg, who held off the Ottomans for 25 years in the 15th century.",
+				"Under Enver Hoxha it declared itself an atheist state in 1967 and covered the country in more than 170,000 concrete bunkers."
+			],
+			"it": [
+				"Probabilmente dagli Albanoi, una tribù che Tolomeo collocò qui nel II secolo; gli albanesi la chiamano Shqipëria.",
+				"L’aquila nera della bandiera risale a Scanderbeg, che nel XV secolo tenne testa agli Ottomani per 25 anni.",
+				"Sotto Enver Hoxha si dichiarò Stato ateo nel 1967 e riempì il paese di oltre 170.000 bunker di cemento."
+			]
+		}
 	},
 	"spain": {
 		"kind": "region",
@@ -752,7 +1184,19 @@
 			"name": "Mulhacén",
 			"elevation": 3479
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"From the Romans’ Hispania, a name perhaps Phoenician; one popular reading is \"land of rabbits\", but it is contested.",
+				"For nearly 800 years, from 711 to 1492, much of it was ruled by Muslims, as al-Andalus.",
+				"Castilian is one of its languages: Catalan, Galician and Basque are official in their own regions."
+			],
+			"it": [
+				"Dall’Hispania dei Romani, un nome forse fenicio; una lettura popolare è \"terra dei conigli\", ma è discussa.",
+				"Per quasi 800 anni, dal 711 al 1492, buona parte fu governata dai musulmani, come al-Andalus.",
+				"Il castigliano è una delle sue lingue: catalano, galiziano e basco sono ufficiali nelle loro regioni."
+			]
+		}
 	},
 	"portugal": {
 		"kind": "region",
@@ -770,7 +1214,19 @@
 			"name": "Mulhacén",
 			"elevation": 3479
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"From Portus Cale, the Roman port at the mouth of the Douro, where Porto stands.",
+				"Its border with Spain has hardly changed since 1297, one of the oldest in Europe.",
+				"Vasco da Gama reached India by sea from here in 1498."
+			],
+			"it": [
+				"Da Portus Cale, il porto romano alla foce del Douro, dove sorge Porto.",
+				"Il confine con la Spagna è quasi immutato dal 1297: uno dei più antichi d’Europa.",
+				"Da qui Vasco da Gama raggiunse l’India per mare nel 1498."
+			]
+		}
 	},
 	"greece": {
 		"kind": "region",
@@ -790,6 +1246,18 @@
 			"name": "Mount Olympus",
 			"elevation": 2917
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"The Greeks call it Hellas; Greece comes, through Latin, from the Graikoi, probably one of the first Greek peoples the Romans met.",
+				"Democracy, the word and the thing: Athens was run by the vote of its citizens from 508 BC.",
+				"It has about six thousand islands and islets, of which only around two hundred are lived on."
+			],
+			"it": [
+				"I greci la chiamano Hellas; Grecia viene, attraverso il latino, dai Graikoi, probabilmente uno dei primi popoli greci incontrati dai Romani.",
+				"La democrazia, la parola e la cosa: dal 508 a.C. Atene era governata dal voto dei suoi cittadini.",
+				"Ha circa seimila isole e isolotti, ma solo duecento circa sono abitati."
+			]
+		}
 	}
 }
