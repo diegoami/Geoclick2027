@@ -2,8 +2,347 @@
 	"_note": [
 		"Name-facts for Peru (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences."
+		"of the same id, written later, never shows a town's sentences.",
+		"FT-73 added the twenty-six regions (\"region\") and the towns of peru-towns-100k (\"city\"); eleven ids have both, each with its own sentences."
 	],
+	"amazonas": {
+		"region": {
+			"en": [
+				"Named for the Amazon, which the Spaniard Orellana named after the women warriors of Greek myth, whom he claimed to have fought.",
+				"Kuélap, a fortress of the Chachapoya people on a ridge, has walls up to 19 m high.",
+				"Gocta, one of the tallest waterfalls in the world at about 770 m, was little known outside its valley until 2006."
+			],
+			"it": [
+				"Prende il nome dal Rio delle Amazzoni, che lo spagnolo Orellana chiamò così per le donne guerriere del mito greco, che disse di aver combattuto.",
+				"Kuélap, una fortezza del popolo Chachapoya su un crinale, ha mura alte fino a 19 m.",
+				"Gocta, una delle cascate più alte del mondo con circa 770 m, era poco conosciuta fuori dalla sua valle fino al 2006."
+			]
+		}
+	},
+	"ancash": {
+		"region": {
+			"en": [
+				"Probably from Quechua anqash, \"blue\".",
+				"In the earthquake of 1970, an avalanche off Huascarán buried the town of Yungay.",
+				"Chavín de Huántar, a temple begun around 900 BC with a maze of stone galleries, is a UNESCO site."
+			],
+			"it": [
+				"Probabilmente dal quechua anqash, \"azzurro\".",
+				"Nel terremoto del 1970 una valanga staccatasi dall’Huascarán seppellì la città di Yungay.",
+				"Chavín de Huántar, un tempio iniziato intorno al 900 a.C. con un labirinto di gallerie di pietra, è un sito UNESCO."
+			]
+		}
+	},
+	"apurimac": {
+		"region": {
+			"en": [
+				"Named for the river Apurímac, often read as Quechua for \"the great speaker\".",
+				"The Apurímac carries the most distant source of the Amazon.",
+				"Choquequirao, an Inca site on a mountain spur, can still only be reached on foot."
+			],
+			"it": [
+				"Prende il nome dal fiume Apurímac, spesso interpretato come \"il grande oratore\" in quechua.",
+				"L’Apurímac porta le acque della sorgente più lontana del Rio delle Amazzoni.",
+				"Choquequirao, un sito inca su uno sperone di montagna, si raggiunge ancora solo a piedi."
+			]
+		}
+	},
+	"arequipa": {
+		"region": {
+			"en": [
+				"The origin of the name is disputed; a legend has an Inca telling his men \"ari, qhipay\", \"yes, stay\".",
+				"The Colca Canyon, where condors ride the air currents, is one of the deepest in the world.",
+				"In 1995 the frozen body of an Inca girl, sacrificed about 500 years ago, was found on the volcano Ampato."
+			],
+			"it": [
+				"L’origine del nome è discussa; secondo una leggenda un Inca disse ai suoi uomini \"ari, qhipay\", \"sì, restate\".",
+				"Il canyon del Colca, dove i condor sfruttano le correnti d’aria, è uno dei più profondi del mondo.",
+				"Nel 1995 sul vulcano Ampato fu trovato il corpo congelato di una ragazza inca, sacrificata circa 500 anni fa."
+			]
+		},
+		"city": {
+			"en": [
+				"The White City, built of sillar, a pale volcanic stone; its centre is a UNESCO site.",
+				"The convent of Santa Catalina, founded in 1579, is a walled town of its own inside the city.",
+				"The novelist Mario Vargas Llosa was born here in 1936."
+			],
+			"it": [
+				"La Città bianca, costruita in sillar, una pietra vulcanica chiara; il suo centro è un sito UNESCO.",
+				"Il convento di Santa Catalina, fondato nel 1579, è una cittadella murata dentro la città.",
+				"Qui nacque nel 1936 lo scrittore Mario Vargas Llosa."
+			]
+		}
+	},
+	"ayacucho": {
+		"region": {
+			"en": [
+				"Usually read as Quechua for \"corner of the dead\"; the city was called Huamanga until 1825.",
+				"The battle of Ayacucho, in 1824, ended Spanish rule in South America.",
+				"The Shining Path began its armed campaign here in 1980."
+			],
+			"it": [
+				"Interpretato di solito come \"angolo dei morti\" in quechua; la città si chiamò Huamanga fino al 1825.",
+				"La battaglia di Ayacucho, nel 1824, mise fine al dominio spagnolo in Sud America.",
+				"Sendero Luminoso cominciò qui la sua lotta armata nel 1980."
+			]
+		},
+		"city": {
+			"en": [
+				"Founded as Huamanga in 1540, it is known for its many colonial churches.",
+				"Its Holy Week is one of the most famous in Latin America."
+			],
+			"it": [
+				"Fondata come Huamanga nel 1540, è nota per le sue numerose chiese coloniali.",
+				"La sua Settimana santa è una delle più famose dell’America Latina."
+			]
+		}
+	},
+	"cajamarca": {
+		"region": {
+			"en": [
+				"A Quechua name, often read as \"town of frost\", though the derivation is uncertain.",
+				"Yanacocha, in its highlands, is one of the largest gold mines in South America."
+			],
+			"it": [
+				"Un nome quechua, spesso interpretato come \"città del gelo\", anche se l’etimologia è incerta.",
+				"Yanacocha, sui suoi altipiani, è una delle più grandi miniere d’oro del Sud America."
+			]
+		},
+		"city": {
+			"en": [
+				"Here, in 1532, Pizarro captured the Inca emperor Atahualpa.",
+				"To buy his freedom Atahualpa filled a room with gold and two more with silver, and was killed anyway."
+			],
+			"it": [
+				"Qui, nel 1532, Pizarro catturò l’imperatore inca Atahualpa.",
+				"Per riscattare la sua libertà Atahualpa riempì una stanza d’oro e altre due d’argento, e fu ucciso comunque."
+			]
+		}
+	},
+	"callao": {
+		"region": {
+			"en": [
+				"The smallest region of Peru: the port of Callao and the islands off it.",
+				"Lima’s international airport is in Callao, not in Lima."
+			],
+			"it": [
+				"La regione più piccola del Perù: il porto del Callao e le isole al largo.",
+				"L’aeroporto internazionale di Lima si trova nel Callao, non a Lima."
+			]
+		},
+		"city": {
+			"en": [
+				"The Real Felipe fortress was built in the 18th century to guard the port against pirates and enemy fleets.",
+				"On 2 May 1866 its guns fought off a Spanish squadron."
+			],
+			"it": [
+				"La fortezza del Real Felipe fu costruita nel Settecento per difendere il porto da pirati e flotte nemiche.",
+				"Il 2 maggio 1866 i suoi cannoni respinsero una squadra navale spagnola."
+			]
+		}
+	},
+	"cerro-de-pasco": {
+		"city": {
+			"en": [
+				"At about 4,300 m, one of the highest cities in the world.",
+				"An open-pit silver and zinc mine has eaten into the middle of the town."
+			],
+			"it": [
+				"A circa 4.300 m, una delle città più alte del mondo.",
+				"Una miniera a cielo aperto di argento e zinco si è mangiata il centro della città."
+			]
+		}
+	},
+	"chiclayo": {
+		"city": {
+			"en": [
+				"Robert Prevost, bishop of Chiclayo from 2015 to 2023, became Pope Leo XIV in 2025."
+			],
+			"it": [
+				"Robert Prevost, vescovo di Chiclayo dal 2015 al 2023, è diventato papa Leone XIV nel 2025."
+			]
+		}
+	},
+	"chimbote": {
+		"city": {
+			"en": [
+				"The fishmeal boom of the 1950s and 1960s made it one of the busiest fishing ports in the world."
+			],
+			"it": [
+				"Il boom della farina di pesce negli anni Cinquanta e Sessanta ne fece uno dei porti pescherecci più attivi del mondo."
+			]
+		}
+	},
+	"chincha-alta": {
+		"city": {
+			"en": [
+				"The heart of Afro-Peruvian music and dance."
+			],
+			"it": [
+				"Il cuore della musica e della danza afroperuviane."
+			]
+		}
+	},
+	"cusco": {
+		"region": {
+			"en": [
+				"Named for its city, the capital of the Inca.",
+				"Machu Picchu, an Inca estate on a mountain ridge, became known to the wider world through Hiram Bingham in 1911.",
+				"Ollantaytambo is still lived in on its Inca street plan."
+			],
+			"it": [
+				"Prende il nome dalla sua città, la capitale degli Inca.",
+				"Machu Picchu, una tenuta inca su un crinale di montagna, fu fatta conoscere al resto del mondo da Hiram Bingham nel 1911.",
+				"Ollantaytambo è ancora abitata secondo la sua pianta urbana inca."
+			]
+		},
+		"city": {
+			"en": [
+				"Quechua Qusqu, traditionally read as \"navel of the world\", though the derivation is disputed.",
+				"The Spanish built the church of Santo Domingo on the walls of the Qorikancha, the Inca temple of the Sun.",
+				"Every 24 June it stages Inti Raymi, the Inca festival of the Sun."
+			],
+			"it": [
+				"Il quechua Qusqu, tradizionalmente interpretato come \"ombelico del mondo\", anche se l’etimologia è discussa.",
+				"Gli Spagnoli costruirono la chiesa di Santo Domingo sulle mura del Qorikancha, il tempio inca del Sole.",
+				"Ogni 24 giugno vi si celebra l’Inti Raymi, la festa inca del Sole."
+			]
+		}
+	},
+	"huancavelica": {
+		"region": {
+			"en": [
+				"Named for its town, a name of uncertain origin.",
+				"Its Santa Bárbara mine supplied the mercury used to refine silver across the Spanish empire, and killed many of the forced labourers sent to it."
+			],
+			"it": [
+				"Prende il nome dalla sua città, un nome di origine incerta.",
+				"La sua miniera di Santa Bárbara forniva il mercurio usato per raffinare l’argento in tutto l’impero spagnolo, e uccise molti dei lavoratori forzati mandati a scavarla."
+			]
+		}
+	},
+	"huancayo": {
+		"city": {
+			"en": [
+				"The Central Railway from Lima, climbing across the Andes, ends here.",
+				"President Ramón Castilla signed the decree abolishing slavery in Peru here, in 1854."
+			],
+			"it": [
+				"Qui termina la Ferrovia centrale che da Lima attraversa le Ande.",
+				"Qui il presidente Ramón Castilla firmò il decreto che abolì la schiavitù in Perù, nel 1854."
+			]
+		}
+	},
+	"huanuco": {
+		"region": {
+			"en": [
+				"Named for its town, a name of uncertain origin.",
+				"At Kotosh, a temple of about 2000 BC is known for a relief of two crossed hands."
+			],
+			"it": [
+				"Prende il nome dalla sua città, un nome di origine incerta.",
+				"A Kotosh un tempio del 2000 a.C. circa è noto per un rilievo con due mani incrociate."
+			]
+		},
+		"city": {
+			"en": [
+				"Founded by the Spanish in 1539."
+			],
+			"it": [
+				"Fondata dagli Spagnoli nel 1539."
+			]
+		}
+	},
+	"ica": {
+		"region": {
+			"en": [
+				"Named for its town, a name of uncertain origin.",
+				"The Nazca Lines, figures scratched into the desert and best seen from the air, are a UNESCO site.",
+				"Pisco, the grape brandy, takes its name from the port of Pisco here."
+			],
+			"it": [
+				"Prende il nome dalla sua città, un nome di origine incerta.",
+				"Le linee di Nazca, figure tracciate nel deserto e visibili al meglio dall’alto, sono un sito UNESCO.",
+				"Il pisco, l’acquavite d’uva, prende il nome dal porto di Pisco."
+			]
+		},
+		"city": {
+			"en": [
+				"The oasis of Huacachina, a lagoon among sand dunes, is on its edge.",
+				"Its vineyards make wine and much of Peru’s pisco."
+			],
+			"it": [
+				"Alle sue porte si trova l’oasi di Huacachina, una laguna fra le dune di sabbia.",
+				"I suoi vigneti producono vino e buona parte del pisco peruviano."
+			]
+		}
+	},
+	"iquitos": {
+		"city": {
+			"en": [
+				"It is the largest city in the world that cannot be reached by road, only by river or by air.",
+				"The rubber boom of the late 19th century made it rich, and left it tiled mansions.",
+				"Its Iron House, shipped in pieces from Europe, is often said to be the work of Gustave Eiffel, though this is doubtful."
+			],
+			"it": [
+				"È la città più grande del mondo che non si può raggiungere su strada, ma solo per fiume o in aereo.",
+				"Il boom della gomma alla fine dell’Ottocento la rese ricca, e le lasciò palazzi rivestiti di piastrelle.",
+				"La sua Casa di ferro, spedita a pezzi dall’Europa, è spesso attribuita a Gustave Eiffel, ma l’attribuzione è dubbia."
+			]
+		}
+	},
+	"juliaca": {
+		"city": {
+			"en": [
+				"A market town of the altiplano, where the railways from Arequipa, Cusco and Puno meet."
+			],
+			"it": [
+				"Una città mercato dell’altopiano, dove si incontrano le ferrovie da Arequipa, Cusco e Puno."
+			]
+		}
+	},
+	"junin": {
+		"region": {
+			"en": [
+				"Named after the battle of Junín of 1824, fought beside the lake of the same name.",
+				"It was a cavalry battle of lances and sabres, said to have been fought without a shot.",
+				"The Central Railway from Lima climbs to about 4,800 m on its way here, one of the highest lines in the world."
+			],
+			"it": [
+				"Prende il nome dalla battaglia di Junín del 1824, combattuta presso il lago omonimo.",
+				"La battaglia fu combattuta dalla cavalleria con lance e sciabole, e si dice senza sparare un colpo.",
+				"La Ferrovia centrale da Lima sale fino a circa 4.800 m per arrivare qui, una delle linee più alte del mondo."
+			]
+		}
+	},
+	"la-libertad": {
+		"region": {
+			"en": [
+				"\"Freedom\": Trujillo declared its independence from Spain in December 1820, the first city in Peru to do so.",
+				"Chan Chan, the capital of the Chimú, is the largest adobe city in the Americas and a UNESCO site.",
+				"The Moche built the Huacas of the Sun and the Moon, two great adobe temples, before AD 800."
+			],
+			"it": [
+				"\"La libertà\": Trujillo dichiarò l’indipendenza dalla Spagna nel dicembre 1820, la prima città del Perù a farlo.",
+				"Chan Chan, la capitale dei Chimú, è la più grande città di mattoni crudi delle Americhe e un sito UNESCO.",
+				"I Moche costruirono le Huacas del Sole e della Luna, due grandi templi di mattoni crudi, prima dell’800 d.C."
+			]
+		}
+	},
+	"lambayeque": {
+		"region": {
+			"en": [
+				"Named for its town; legend tells of Naylamp, a lord who came by sea with a fleet of rafts and founded a dynasty.",
+				"The tomb of the Lord of Sipán, a Moche ruler buried with gold and silver, was found intact in 1987.",
+				"At Túcume, some 26 adobe pyramids rise from the plain."
+			],
+			"it": [
+				"Prende il nome dalla sua città; la leggenda narra di Naylamp, un signore giunto dal mare con una flotta di zattere che fondò una dinastia.",
+				"La tomba del Signore di Sipán, un sovrano moche sepolto con oro e argento, fu trovata intatta nel 1987.",
+				"A Túcume circa 26 piramidi di mattoni crudi si alzano dalla pianura."
+			]
+		}
+	},
 	"lima": {
 		"city": {
 			"en": [
@@ -15,6 +354,230 @@
 				"Francisco Pizarro la fondò nel 1535 come Città dei Re.",
 				"Qui non piove quasi mai, anche se una nebbia grigia di mare la copre per mesi.",
 				"La sua cattedrale custodisce la tomba di Francisco Pizarro."
+			]
+		}
+	},
+	"lima-metropolitana": {
+		"region": {
+			"en": [
+				"The capital, whose name comes from the river Rímac, Quechua for \"the one who speaks\", perhaps for an oracle on its banks.",
+				"About a third of all Peruvians live here.",
+				"Pachacamac, a temple city whose oracle drew pilgrims for over a thousand years before the Inca, is within its bounds."
+			],
+			"it": [
+				"La capitale, il cui nome viene dal fiume Rímac, in quechua \"colui che parla\", forse per un oracolo sulle sue rive.",
+				"Qui vive circa un terzo di tutti i peruviani.",
+				"Pachacamac, una città tempio il cui oracolo attirò pellegrini per oltre mille anni prima degli Inca, si trova entro i suoi confini."
+			]
+		}
+	},
+	"lima-provincias": {
+		"region": {
+			"en": [
+				"The region around the capital, without it; Lima comes from Rímac, the river, Quechua for \"the one who speaks\".",
+				"Caral, a city built around 2600 BC, is the oldest known in the Americas and a UNESCO site."
+			],
+			"it": [
+				"La regione intorno alla capitale, senza la capitale; Lima viene da Rímac, il fiume, in quechua \"colui che parla\".",
+				"Caral, una città costruita intorno al 2600 a.C., è la più antica conosciuta delle Americhe e un sito UNESCO."
+			]
+		}
+	},
+	"loreto": {
+		"region": {
+			"en": [
+				"Probably named for Our Lady of Loreto, the Italian shrine, through a mission of the same name.",
+				"The largest region of Peru, close to a third of the country, almost all of it rainforest.",
+				"The Amazon takes its name here, where the Marañón and the Ucayali meet."
+			],
+			"it": [
+				"Probabilmente prende il nome dalla Madonna di Loreto, il santuario italiano, attraverso una missione omonima.",
+				"La regione più vasta del Perù, quasi un terzo del paese, e quasi tutta foresta pluviale.",
+				"Il Rio delle Amazzoni prende il suo nome qui, dove si incontrano il Marañón e l’Ucayali."
+			]
+		}
+	},
+	"madre-de-dios": {
+		"region": {
+			"en": [
+				"Named for its river, the \"Mother of God\".",
+				"Part of the Manu National Park, one of the richest places on earth for plant and animal species, is here.",
+				"Illegal gold mining has cleared large stretches of its rainforest."
+			],
+			"it": [
+				"Prende il nome dal suo fiume, la \"Madre di Dio\".",
+				"Qui si trova parte del Parco nazionale del Manu, uno dei luoghi più ricchi al mondo di specie animali e vegetali.",
+				"L’estrazione illegale dell’oro ha distrutto ampi tratti della sua foresta pluviale."
+			]
+		}
+	},
+	"moquegua": {
+		"region": {
+			"en": [
+				"Named for its town, a name of uncertain origin.",
+				"The Cuajone copper mine is in its mountains."
+			],
+			"it": [
+				"Prende il nome dalla sua città, un nome di origine incerta.",
+				"La miniera di rame di Cuajone si trova sui suoi monti."
+			]
+		}
+	},
+	"pasco": {
+		"region": {
+			"en": [
+				"Named for Cerro de Pasco, its mining town.",
+				"Pozuzo was founded in 1859 by settlers from Austria and Germany, whose descendants still keep some of their customs."
+			],
+			"it": [
+				"Prende il nome da Cerro de Pasco, la sua città mineraria.",
+				"Pozuzo fu fondata nel 1859 da coloni austriaci e tedeschi, i cui discendenti conservano ancora alcune loro usanze."
+			]
+		}
+	},
+	"piura": {
+		"region": {
+			"en": [
+				"Named for its town, a name of uncertain origin.",
+				"The Vicús culture, known for its pottery, flourished here around the turn of the era."
+			],
+			"it": [
+				"Prende il nome dalla sua città, un nome di origine incerta.",
+				"La cultura Vicús, nota per le sue ceramiche, fiorì qui intorno all’inizio dell’era cristiana."
+			]
+		},
+		"city": {
+			"en": [
+				"Founded by Pizarro in 1532 as San Miguel, it was the first Spanish city in South America, later moved to its present site.",
+				"Miguel Grau, Peru’s great naval hero, was born here in 1834."
+			],
+			"it": [
+				"Fondata da Pizarro nel 1532 come San Miguel, fu la prima città spagnola del Sud America, poi spostata dove si trova oggi.",
+				"Qui nacque nel 1834 Miguel Grau, il grande eroe della marina peruviana."
+			]
+		}
+	},
+	"pucallpa": {
+		"city": {
+			"en": [
+				"From Quechua puka allpa, \"red earth\".",
+				"A river port on the Ucayali, and the end of the road across the Andes from Lima."
+			],
+			"it": [
+				"Dal quechua puka allpa, \"terra rossa\".",
+				"Un porto fluviale sull’Ucayali, e il capolinea della strada che da Lima attraversa le Ande."
+			]
+		}
+	},
+	"puno": {
+		"region": {
+			"en": [
+				"Named for its town, a name of uncertain origin.",
+				"Lake Titicaca, about 3,800 m up, is often called the highest navigable lake in the world.",
+				"The Uros live on floating islands they build from totora reeds."
+			],
+			"it": [
+				"Prende il nome dalla sua città, un nome di origine incerta.",
+				"Il lago Titicaca, a circa 3.800 m di quota, è spesso chiamato il lago navigabile più alto del mondo.",
+				"Gli Uros vivono su isole galleggianti che costruiscono con le canne di totora."
+			]
+		},
+		"city": {
+			"en": [
+				"Its festival of the Virgen de la Candelaria, every February, is on UNESCO’s list of intangible heritage.",
+				"It is often called Peru’s capital of folklore."
+			],
+			"it": [
+				"La sua festa della Virgen de la Candelaria, ogni febbraio, è nella lista UNESCO del patrimonio immateriale.",
+				"È spesso chiamata la capitale del folklore peruviano."
+			]
+		}
+	},
+	"san-martin": {
+		"region": {
+			"en": [
+				"Named for José de San Martín, the Argentine general who proclaimed Peru’s independence in 1821.",
+				"Moyobamba, founded in 1540, is one of the oldest Spanish towns in the Peruvian Amazon, and is known for its orchids."
+			],
+			"it": [
+				"Prende il nome da José de San Martín, il generale argentino che proclamò l’indipendenza del Perù nel 1821.",
+				"Moyobamba, fondata nel 1540, è una delle più antiche città spagnole dell’Amazzonia peruviana, ed è nota per le sue orchidee."
+			]
+		}
+	},
+	"sullana": {
+		"city": {
+			"en": [
+				"It lies on the river Chira, and serves as the market town of its valley."
+			],
+			"it": [
+				"Sorge sul fiume Chira, ed è la città mercato della sua valle."
+			]
+		}
+	},
+	"tacna": {
+		"region": {
+			"en": [
+				"Named for its town, a name of uncertain origin.",
+				"Chile held Tacna after the War of the Pacific; a treaty of 1929 gave it back to Peru, and Arica to Chile."
+			],
+			"it": [
+				"Prende il nome dalla sua città, un nome di origine incerta.",
+				"Il Cile tenne Tacna dopo la guerra del Pacifico; un trattato del 1929 la restituì al Perù, e diede Arica al Cile."
+			]
+		},
+		"city": {
+			"en": [
+				"Every 28 August, the day it returned to Peru in 1929, a great Peruvian flag is carried through its streets."
+			],
+			"it": [
+				"Ogni 28 agosto, il giorno del suo ritorno al Perù nel 1929, una grande bandiera peruviana viene portata per le sue strade."
+			]
+		}
+	},
+	"trujillo": {
+		"city": {
+			"en": [
+				"Founded in 1534 and named after Trujillo in Spain, Pizarro’s home town.",
+				"It holds Peru’s national contest of the marinera, the country’s courtship dance."
+			],
+			"it": [
+				"Fondata nel 1534 e chiamata come Trujillo, in Spagna, la città natale di Pizarro.",
+				"Qui si tiene il concorso nazionale di marinera, la danza di corteggiamento del Perù."
+			]
+		}
+	},
+	"tumbes": {
+		"region": {
+			"en": [
+				"Named for its town, a name of uncertain origin.",
+				"Its mangrove swamps, protected as a national sanctuary, are the only large ones in Peru.",
+				"At Zorritos, in 1863, one of the first oil wells in South America was drilled."
+			],
+			"it": [
+				"Prende il nome dalla sua città, un nome di origine incerta.",
+				"Le sue mangrovie, protette come santuario nazionale, sono le uniche estese del Perù.",
+				"A Zorritos, nel 1863, fu scavato uno dei primi pozzi di petrolio del Sud America."
+			]
+		},
+		"city": {
+			"en": [
+				"Pizarro’s men got their first sight of the Inca empire here, in 1528."
+			],
+			"it": [
+				"Qui gli uomini di Pizarro videro per la prima volta l’impero inca, nel 1528."
+			]
+		}
+	},
+	"ucayali": {
+		"region": {
+			"en": [
+				"Named for the river Ucayali, one of the two rivers that form the Amazon.",
+				"The Shipibo-Konibo people are known for the geometric patterns they paint and embroider on cloth and pottery."
+			],
+			"it": [
+				"Prende il nome dal fiume Ucayali, uno dei due fiumi che formano il Rio delle Amazzoni.",
+				"Il popolo Shipibo-Konibo è noto per i motivi geometrici che dipinge e ricama su tessuti e ceramiche."
 			]
 		}
 	}

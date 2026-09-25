@@ -12,7 +12,19 @@
 			"nameIt": "Tumbes",
 			"population": 109223
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Named for its town, a name of uncertain origin.",
+				"Its mangrove swamps, protected as a national sanctuary, are the only large ones in Peru.",
+				"At Zorritos, in 1863, one of the first oil wells in South America was drilled."
+			],
+			"it": [
+				"Prende il nome dalla sua città, un nome di origine incerta.",
+				"Le sue mangrovie, protette come santuario nazionale, sono le uniche estese del Perù.",
+				"A Zorritos, nel 1863, fu scavato uno dei primi pozzi di petrolio del Sud America."
+			]
+		}
 	},
 	"loreto": {
 		"kind": "region",
@@ -30,7 +42,19 @@
 			"nameIt": "Iquitos",
 			"population": 458729
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Probably named for Our Lady of Loreto, the Italian shrine, through a mission of the same name.",
+				"The largest region of Peru, close to a third of the country, almost all of it rainforest.",
+				"The Amazon takes its name here, where the Marañón and the Ucayali meet."
+			],
+			"it": [
+				"Probabilmente prende il nome dalla Madonna di Loreto, il santuario italiano, attraverso una missione omonima.",
+				"La regione più vasta del Perù, quasi un terzo del paese, e quasi tutta foresta pluviale.",
+				"Il Rio delle Amazzoni prende il suo nome qui, dove si incontrano il Marañón e l’Ucayali."
+			]
+		}
 	},
 	"amazonas": {
 		"kind": "region",
@@ -51,7 +75,19 @@
 			"name": "Cerro Maine Hanari",
 			"elevation": 860
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Named for the Amazon, which the Spaniard Orellana named after the women warriors of Greek myth, whom he claimed to have fought.",
+				"Kuélap, a fortress of the Chachapoya people on a ridge, has walls up to 19 m high.",
+				"Gocta, one of the tallest waterfalls in the world at about 770 m, was little known outside its valley until 2006."
+			],
+			"it": [
+				"Prende il nome dal Rio delle Amazzoni, che lo spagnolo Orellana chiamò così per le donne guerriere del mito greco, che disse di aver combattuto.",
+				"Kuélap, una fortezza del popolo Chachapoya su un crinale, ha mura alte fino a 19 m.",
+				"Gocta, una delle cascate più alte del mondo con circa 770 m, era poco conosciuta fuori dalla sua valle fino al 2006."
+			]
+		}
 	},
 	"piura": {
 		"kind": "region",
@@ -68,7 +104,17 @@
 			"nameIt": "Piura",
 			"population": 396932
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Named for its town, a name of uncertain origin.",
+				"The Vicús culture, known for its pottery, flourished here around the turn of the era."
+			],
+			"it": [
+				"Prende il nome dalla sua città, un nome di origine incerta.",
+				"La cultura Vicús, nota per le sue ceramiche, fiorì qui intorno all’inizio dell’era cristiana."
+			]
+		}
 	},
 	"cajamarca": {
 		"kind": "region",
@@ -86,7 +132,17 @@
 			"nameIt": "Cajamarca",
 			"population": 142665
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"A Quechua name, often read as \"town of frost\", though the derivation is uncertain.",
+				"Yanacocha, in its highlands, is one of the largest gold mines in South America."
+			],
+			"it": [
+				"Un nome quechua, spesso interpretato come \"città del gelo\", anche se l’etimologia è incerta.",
+				"Yanacocha, sui suoi altipiani, è una delle più grandi miniere d’oro del Sud America."
+			]
+		}
 	},
 	"lambayeque": {
 		"kind": "region",
@@ -103,7 +159,19 @@
 			"nameIt": "Chiclayo",
 			"population": 596792
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Named for its town; legend tells of Naylamp, a lord who came by sea with a fleet of rafts and founded a dynasty.",
+				"The tomb of the Lord of Sipán, a Moche ruler buried with gold and silver, was found intact in 1987.",
+				"At Túcume, some 26 adobe pyramids rise from the plain."
+			],
+			"it": [
+				"Prende il nome dalla sua città; la leggenda narra di Naylamp, un signore giunto dal mare con una flotta di zattere che fondò una dinastia.",
+				"La tomba del Signore di Sipán, un sovrano moche sepolto con oro e argento, fu trovata intatta nel 1987.",
+				"A Túcume circa 26 piramidi di mattoni crudi si alzano dalla pianura."
+			]
+		}
 	},
 	"san-martin": {
 		"kind": "region",
@@ -121,7 +189,17 @@
 			"nameIt": "Moyobamba",
 			"population": 47734
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named for José de San Martín, the Argentine general who proclaimed Peru’s independence in 1821.",
+				"Moyobamba, founded in 1540, is one of the oldest Spanish towns in the Peruvian Amazon, and is known for its orchids."
+			],
+			"it": [
+				"Prende il nome da José de San Martín, il generale argentino che proclamò l’indipendenza del Perù nel 1821.",
+				"Moyobamba, fondata nel 1540, è una delle più antiche città spagnole dell’Amazzonia peruviana, ed è nota per le sue orchidee."
+			]
+		}
 	},
 	"la-libertad": {
 		"kind": "region",
@@ -141,7 +219,19 @@
 			"nameIt": "Trujillo",
 			"population": 765171
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"\"Freedom\": Trujillo declared its independence from Spain in December 1820, the first city in Peru to do so.",
+				"Chan Chan, the capital of the Chimú, is the largest adobe city in the Americas and a UNESCO site.",
+				"The Moche built the Huacas of the Sun and the Moon, two great adobe temples, before AD 800."
+			],
+			"it": [
+				"\"La libertà\": Trujillo dichiarò l’indipendenza dalla Spagna nel dicembre 1820, la prima città del Perù a farlo.",
+				"Chan Chan, la capitale dei Chimú, è la più grande città di mattoni crudi delle Americhe e un sito UNESCO.",
+				"I Moche costruirono le Huacas del Sole e della Luna, due grandi templi di mattoni crudi, prima dell’800 d.C."
+			]
+		}
 	},
 	"ucayali": {
 		"kind": "region",
@@ -161,7 +251,17 @@
 			"nameIt": "Pucallpa",
 			"population": 310750
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named for the river Ucayali, one of the two rivers that form the Amazon.",
+				"The Shipibo-Konibo people are known for the geometric patterns they paint and embroider on cloth and pottery."
+			],
+			"it": [
+				"Prende il nome dal fiume Ucayali, uno dei due fiumi che formano il Rio delle Amazzoni.",
+				"Il popolo Shipibo-Konibo è noto per i motivi geometrici che dipinge e ricama su tessuti e ceramiche."
+			]
+		}
 	},
 	"ancash": {
 		"kind": "region",
@@ -182,7 +282,19 @@
 			"name": "Nevado Huascarán",
 			"elevation": 6768
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Probably from Quechua anqash, \"blue\".",
+				"In the earthquake of 1970, an avalanche off Huascarán buried the town of Yungay.",
+				"Chavín de Huántar, a temple begun around 900 BC with a maze of stone galleries, is a UNESCO site."
+			],
+			"it": [
+				"Probabilmente dal quechua anqash, \"azzurro\".",
+				"Nel terremoto del 1970 una valanga staccatasi dall’Huascarán seppellì la città di Yungay.",
+				"Chavín de Huántar, un tempio iniziato intorno al 900 a.C. con un labirinto di gallerie di pietra, è un sito UNESCO."
+			]
+		}
 	},
 	"huanuco": {
 		"kind": "region",
@@ -203,7 +315,17 @@
 			"nameIt": "Huánuco",
 			"population": 158145
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named for its town, a name of uncertain origin.",
+				"At Kotosh, a temple of about 2000 BC is known for a relief of two crossed hands."
+			],
+			"it": [
+				"Prende il nome dalla sua città, un nome di origine incerta.",
+				"A Kotosh un tempio del 2000 a.C. circa è noto per un rilievo con due mani incrociate."
+			]
+		}
 	},
 	"pasco": {
 		"kind": "region",
@@ -221,7 +343,17 @@
 			"nameIt": "Cerro de Pasco",
 			"population": 137232
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named for Cerro de Pasco, its mining town.",
+				"Pozuzo was founded in 1859 by settlers from Austria and Germany, whose descendants still keep some of their customs."
+			],
+			"it": [
+				"Prende il nome da Cerro de Pasco, la sua città mineraria.",
+				"Pozuzo fu fondata nel 1859 da coloni austriaci e tedeschi, i cui discendenti conservano ancora alcune loro usanze."
+			]
+		}
 	},
 	"madre-de-dios": {
 		"kind": "region",
@@ -238,7 +370,19 @@
 			"nameIt": "Puerto Maldonado",
 			"population": 67155
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Named for its river, the \"Mother of God\".",
+				"Part of the Manu National Park, one of the richest places on earth for plant and animal species, is here.",
+				"Illegal gold mining has cleared large stretches of its rainforest."
+			],
+			"it": [
+				"Prende il nome dal suo fiume, la \"Madre di Dio\".",
+				"Qui si trova parte del Parco nazionale del Manu, uno dei luoghi più ricchi al mondo di specie animali e vegetali.",
+				"L’estrazione illegale dell’oro ha distrutto ampi tratti della sua foresta pluviale."
+			]
+		}
 	},
 	"junin": {
 		"kind": "region",
@@ -258,7 +402,19 @@
 			"nameIt": "Huancayo",
 			"population": 412733
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named after the battle of Junín of 1824, fought beside the lake of the same name.",
+				"It was a cavalry battle of lances and sabres, said to have been fought without a shot.",
+				"The Central Railway from Lima climbs to about 4,800 m on its way here, one of the highest lines in the world."
+			],
+			"it": [
+				"Prende il nome dalla battaglia di Junín del 1824, combattuta presso il lago omonimo.",
+				"La battaglia fu combattuta dalla cavalleria con lance e sciabole, e si dice senza sparare un colpo.",
+				"La Ferrovia centrale da Lima sale fino a circa 4.800 m per arrivare qui, una delle linee più alte del mondo."
+			]
+		}
 	},
 	"lima-provincias": {
 		"kind": "region",
@@ -279,7 +435,17 @@
 			"nameIt": "Huaura",
 			"population": 40400
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"The region around the capital, without it; Lima comes from Rímac, the river, Quechua for \"the one who speaks\".",
+				"Caral, a city built around 2600 BC, is the oldest known in the Americas and a UNESCO site."
+			],
+			"it": [
+				"La regione intorno alla capitale, senza la capitale; Lima viene da Rímac, il fiume, in quechua \"colui che parla\".",
+				"Caral, una città costruita intorno al 2600 a.C., è la più antica conosciuta delle Americhe e un sito UNESCO."
+			]
+		}
 	},
 	"lima-metropolitana": {
 		"kind": "region",
@@ -295,7 +461,19 @@
 			"nameIt": "Lima",
 			"population": 8012000
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"The capital, whose name comes from the river Rímac, Quechua for \"the one who speaks\", perhaps for an oracle on its banks.",
+				"About a third of all Peruvians live here.",
+				"Pachacamac, a temple city whose oracle drew pilgrims for over a thousand years before the Inca, is within its bounds."
+			],
+			"it": [
+				"La capitale, il cui nome viene dal fiume Rímac, in quechua \"colui che parla\", forse per un oracolo sulle sue rive.",
+				"Qui vive circa un terzo di tutti i peruviani.",
+				"Pachacamac, una città tempio il cui oracolo attirò pellegrini per oltre mille anni prima degli Inca, si trova entro i suoi confini."
+			]
+		}
 	},
 	"callao": {
 		"kind": "region",
@@ -310,7 +488,17 @@
 			"nameIt": "Callao",
 			"population": 876877
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"The smallest region of Peru: the port of Callao and the islands off it.",
+				"Lima’s international airport is in Callao, not in Lima."
+			],
+			"it": [
+				"La regione più piccola del Perù: il porto del Callao e le isole al largo.",
+				"L’aeroporto internazionale di Lima si trova nel Callao, non a Lima."
+			]
+		}
 	},
 	"huancavelica": {
 		"kind": "region",
@@ -328,7 +516,17 @@
 			"nameIt": "Huancavelica",
 			"population": 44388
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Named for its town, a name of uncertain origin.",
+				"Its Santa Bárbara mine supplied the mercury used to refine silver across the Spanish empire, and killed many of the forced labourers sent to it."
+			],
+			"it": [
+				"Prende il nome dalla sua città, un nome di origine incerta.",
+				"La sua miniera di Santa Bárbara forniva il mercurio usato per raffinare l’argento in tutto l’impero spagnolo, e uccise molti dei lavoratori forzati mandati a scavarla."
+			]
+		}
 	},
 	"cusco": {
 		"kind": "region",
@@ -353,7 +551,19 @@
 			"name": "Nevado Auzangate",
 			"elevation": 6372
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Named for its city, the capital of the Inca.",
+				"Machu Picchu, an Inca estate on a mountain ridge, became known to the wider world through Hiram Bingham in 1911.",
+				"Ollantaytambo is still lived in on its Inca street plan."
+			],
+			"it": [
+				"Prende il nome dalla sua città, la capitale degli Inca.",
+				"Machu Picchu, una tenuta inca su un crinale di montagna, fu fatta conoscere al resto del mondo da Hiram Bingham nel 1911.",
+				"Ollantaytambo è ancora abitata secondo la sua pianta urbana inca."
+			]
+		}
 	},
 	"ayacucho": {
 		"kind": "region",
@@ -373,7 +583,19 @@
 			"nameIt": "Ayacucho",
 			"population": 166314
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Usually read as Quechua for \"corner of the dead\"; the city was called Huamanga until 1825.",
+				"The battle of Ayacucho, in 1824, ended Spanish rule in South America.",
+				"The Shining Path began its armed campaign here in 1980."
+			],
+			"it": [
+				"Interpretato di solito come \"angolo dei morti\" in quechua; la città si chiamò Huamanga fino al 1825.",
+				"La battaglia di Ayacucho, nel 1824, mise fine al dominio spagnolo in Sud America.",
+				"Sendero Luminoso cominciò qui la sua lotta armata nel 1980."
+			]
+		}
 	},
 	"apurimac": {
 		"kind": "region",
@@ -390,7 +612,19 @@
 			"nameIt": "Abancay",
 			"population": 55111
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Named for the river Apurímac, often read as Quechua for \"the great speaker\".",
+				"The Apurímac carries the most distant source of the Amazon.",
+				"Choquequirao, an Inca site on a mountain spur, can still only be reached on foot."
+			],
+			"it": [
+				"Prende il nome dal fiume Apurímac, spesso interpretato come \"il grande oratore\" in quechua.",
+				"L’Apurímac porta le acque della sorgente più lontana del Rio delle Amazzoni.",
+				"Choquequirao, un sito inca su uno sperone di montagna, si raggiunge ancora solo a piedi."
+			]
+		}
 	},
 	"ica": {
 		"kind": "region",
@@ -408,7 +642,19 @@
 			"nameIt": "Ica",
 			"population": 279420
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Named for its town, a name of uncertain origin.",
+				"The Nazca Lines, figures scratched into the desert and best seen from the air, are a UNESCO site.",
+				"Pisco, the grape brandy, takes its name from the port of Pisco here."
+			],
+			"it": [
+				"Prende il nome dalla sua città, un nome di origine incerta.",
+				"Le linee di Nazca, figure tracciate nel deserto e visibili al meglio dall’alto, sono un sito UNESCO.",
+				"Il pisco, l’acquavite d’uva, prende il nome dal porto di Pisco."
+			]
+		}
 	},
 	"puno": {
 		"kind": "region",
@@ -427,7 +673,19 @@
 			"nameIt": "Juliaca",
 			"population": 245675
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Named for its town, a name of uncertain origin.",
+				"Lake Titicaca, about 3,800 m up, is often called the highest navigable lake in the world.",
+				"The Uros live on floating islands they build from totora reeds."
+			],
+			"it": [
+				"Prende il nome dalla sua città, un nome di origine incerta.",
+				"Il lago Titicaca, a circa 3.800 m di quota, è spesso chiamato il lago navigabile più alto del mondo.",
+				"Gli Uros vivono su isole galleggianti che costruiscono con le canne di totora."
+			]
+		}
 	},
 	"arequipa": {
 		"kind": "region",
@@ -451,7 +709,19 @@
 			"name": "Nevado Coropuna",
 			"elevation": 6425
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"The origin of the name is disputed; a legend has an Inca telling his men \"ari, qhipay\", \"yes, stay\".",
+				"The Colca Canyon, where condors ride the air currents, is one of the deepest in the world.",
+				"In 1995 the frozen body of an Inca girl, sacrificed about 500 years ago, was found on the volcano Ampato."
+			],
+			"it": [
+				"L’origine del nome è discussa; secondo una leggenda un Inca disse ai suoi uomini \"ari, qhipay\", \"sì, restate\".",
+				"Il canyon del Colca, dove i condor sfruttano le correnti d’aria, è uno dei più profondi del mondo.",
+				"Nel 1995 sul vulcano Ampato fu trovato il corpo congelato di una ragazza inca, sacrificata circa 500 anni fa."
+			]
+		}
 	},
 	"moquegua": {
 		"kind": "region",
@@ -468,7 +738,17 @@
 			"nameIt": "Moquegua",
 			"population": 54517
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Named for its town, a name of uncertain origin.",
+				"The Cuajone copper mine is in its mountains."
+			],
+			"it": [
+				"Prende il nome dalla sua città, un nome di origine incerta.",
+				"La miniera di rame di Cuajone si trova sui suoi monti."
+			]
+		}
 	},
 	"tacna": {
 		"kind": "region",
@@ -484,6 +764,16 @@
 			"nameIt": "Tacna",
 			"population": 280098
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Named for its town, a name of uncertain origin.",
+				"Chile held Tacna after the War of the Pacific; a treaty of 1929 gave it back to Peru, and Arica to Chile."
+			],
+			"it": [
+				"Prende il nome dalla sua città, un nome di origine incerta.",
+				"Il Cile tenne Tacna dopo la guerra del Pacifico; un trattato del 1929 la restituì al Perù, e diede Arica al Cile."
+			]
+		}
 	}
 }

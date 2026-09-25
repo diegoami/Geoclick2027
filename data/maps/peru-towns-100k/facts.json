@@ -4,7 +4,15 @@
 		"population": 109223,
 		"populationRank": 22,
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Pizarro’s men got their first sight of the Inca empire here, in 1528."
+			],
+			"it": [
+				"Qui gli uomini di Pizarro videro per la prima volta l’impero inca, nel 1528."
+			]
+		}
 	},
 	"iquitos": {
 		"kind": "city",
@@ -12,7 +20,19 @@
 		"populationRank": 6,
 		"region": "Loreto",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"It is the largest city in the world that cannot be reached by road, only by river or by air.",
+				"The rubber boom of the late 19th century made it rich, and left it tiled mansions.",
+				"Its Iron House, shipped in pieces from Europe, is often said to be the work of Gustave Eiffel, though this is doubtful."
+			],
+			"it": [
+				"È la città più grande del mondo che non si può raggiungere su strada, ma solo per fiume o in aereo.",
+				"Il boom della gomma alla fine dell’Ottocento la rese ricca, e le lasciò palazzi rivestiti di piastrelle.",
+				"La sua Casa di ferro, spedita a pezzi dall’Europa, è spesso attribuita a Gustave Eiffel, ma l’attribuzione è dubbia."
+			]
+		}
 	},
 	"sullana": {
 		"kind": "city",
@@ -20,14 +40,32 @@
 		"populationRank": 16,
 		"region": "Piura",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"It lies on the river Chira, and serves as the market town of its valley."
+			],
+			"it": [
+				"Sorge sul fiume Chira, ed è la città mercato della sua valle."
+			]
+		}
 	},
 	"piura": {
 		"kind": "city",
 		"population": 396932,
 		"populationRank": 8,
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Founded by Pizarro in 1532 as San Miguel, it was the first Spanish city in South America, later moved to its present site.",
+				"Miguel Grau, Peru’s great naval hero, was born here in 1834."
+			],
+			"it": [
+				"Fondata da Pizarro nel 1532 come San Miguel, fu la prima città spagnola del Sud America, poi spostata dove si trova oggi.",
+				"Qui nacque nel 1834 Miguel Grau, il grande eroe della marina peruviana."
+			]
+		}
 	},
 	"chiclayo": {
 		"kind": "city",
@@ -35,14 +73,32 @@
 		"populationRank": 5,
 		"region": "Lambayeque",
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Robert Prevost, bishop of Chiclayo from 2015 to 2023, became Pope Leo XIV in 2025."
+			],
+			"it": [
+				"Robert Prevost, vescovo di Chiclayo dal 2015 al 2023, è diventato papa Leone XIV nel 2025."
+			]
+		}
 	},
 	"cajamarca": {
 		"kind": "city",
 		"population": 142665,
 		"populationRank": 19,
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Here, in 1532, Pizarro captured the Inca emperor Atahualpa.",
+				"To buy his freedom Atahualpa filled a room with gold and two more with silver, and was killed anyway."
+			],
+			"it": [
+				"Qui, nel 1532, Pizarro catturò l’imperatore inca Atahualpa.",
+				"Per riscattare la sua libertà Atahualpa riempì una stanza d’oro e altre due d’argento, e fu ucciso comunque."
+			]
+		}
 	},
 	"trujillo": {
 		"kind": "city",
@@ -50,7 +106,17 @@
 		"populationRank": 4,
 		"region": "La Libertad",
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Founded in 1534 and named after Trujillo in Spain, Pizarro’s home town.",
+				"It holds Peru’s national contest of the marinera, the country’s courtship dance."
+			],
+			"it": [
+				"Fondata nel 1534 e chiamata come Trujillo, in Spagna, la città natale di Pizarro.",
+				"Qui si tiene il concorso nazionale di marinera, la danza di corteggiamento del Perù."
+			]
+		}
 	},
 	"pucallpa": {
 		"kind": "city",
@@ -58,7 +124,17 @@
 		"populationRank": 11,
 		"region": "Ucayali",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"From Quechua puka allpa, \"red earth\".",
+				"A river port on the Ucayali, and the end of the road across the Andes from Lima."
+			],
+			"it": [
+				"Dal quechua puka allpa, \"terra rossa\".",
+				"Un porto fluviale sull’Ucayali, e il capolinea della strada che da Lima attraversa le Ande."
+			]
+		}
 	},
 	"chimbote": {
 		"kind": "city",
@@ -66,14 +142,30 @@
 		"populationRank": 10,
 		"region": "Ancash",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"The fishmeal boom of the 1950s and 1960s made it one of the busiest fishing ports in the world."
+			],
+			"it": [
+				"Il boom della farina di pesce negli anni Cinquanta e Sessanta ne fece uno dei porti pescherecci più attivi del mondo."
+			]
+		}
 	},
 	"huanuco": {
 		"kind": "city",
 		"population": 158145,
 		"populationRank": 17,
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Founded by the Spanish in 1539."
+			],
+			"it": [
+				"Fondata dagli Spagnoli nel 1539."
+			]
+		}
 	},
 	"cerro-de-pasco": {
 		"kind": "city",
@@ -81,7 +173,17 @@
 		"populationRank": 20,
 		"region": "Pasco",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"At about 4,300 m, one of the highest cities in the world.",
+				"An open-pit silver and zinc mine has eaten into the middle of the town."
+			],
+			"it": [
+				"A circa 4.300 m, una delle città più alte del mondo.",
+				"Una miniera a cielo aperto di argento e zinco si è mangiata il centro della città."
+			]
+		}
 	},
 	"lima": {
 		"kind": "city",
@@ -110,7 +212,17 @@
 		"populationRank": 2,
 		"region": "Lima",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"The Real Felipe fortress was built in the 18th century to guard the port against pirates and enemy fleets.",
+				"On 2 May 1866 its guns fought off a Spanish squadron."
+			],
+			"it": [
+				"La fortezza del Real Felipe fu costruita nel Settecento per difendere il porto da pirati e flotte nemiche.",
+				"Il 2 maggio 1866 i suoi cannoni respinsero una squadra navale spagnola."
+			]
+		}
 	},
 	"huancayo": {
 		"kind": "city",
@@ -118,14 +230,34 @@
 		"populationRank": 7,
 		"region": "Junín",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"The Central Railway from Lima, climbing across the Andes, ends here.",
+				"President Ramón Castilla signed the decree abolishing slavery in Peru here, in 1854."
+			],
+			"it": [
+				"Qui termina la Ferrovia centrale che da Lima attraversa le Ande.",
+				"Qui il presidente Ramón Castilla firmò il decreto che abolì la schiavitù in Perù, nel 1854."
+			]
+		}
 	},
 	"ayacucho": {
 		"kind": "city",
 		"population": 166314,
 		"populationRank": 15,
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Founded as Huamanga in 1540, it is known for its many colonial churches.",
+				"Its Holy Week is one of the most famous in Latin America."
+			],
+			"it": [
+				"Fondata come Huamanga nel 1540, è nota per le sue numerose chiese coloniali.",
+				"La sua Settimana santa è una delle più famose dell’America Latina."
+			]
+		}
 	},
 	"chincha-alta": {
 		"kind": "city",
@@ -133,21 +265,51 @@
 		"populationRank": 18,
 		"region": "Ica",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"The heart of Afro-Peruvian music and dance."
+			],
+			"it": [
+				"Il cuore della musica e della danza afroperuviane."
+			]
+		}
 	},
 	"cusco": {
 		"kind": "city",
 		"population": 361182,
 		"populationRank": 9,
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Quechua Qusqu, traditionally read as \"navel of the world\", though the derivation is disputed.",
+				"The Spanish built the church of Santo Domingo on the walls of the Qorikancha, the Inca temple of the Sun.",
+				"Every 24 June it stages Inti Raymi, the Inca festival of the Sun."
+			],
+			"it": [
+				"Il quechua Qusqu, tradizionalmente interpretato come \"ombelico del mondo\", anche se l’etimologia è discussa.",
+				"Gli Spagnoli costruirono la chiesa di Santo Domingo sulle mura del Qorikancha, il tempio inca del Sole.",
+				"Ogni 24 giugno vi si celebra l’Inti Raymi, la festa inca del Sole."
+			]
+		}
 	},
 	"ica": {
 		"kind": "city",
 		"population": 279420,
 		"populationRank": 13,
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"The oasis of Huacachina, a lagoon among sand dunes, is on its edge.",
+				"Its vineyards make wine and much of Peru’s pisco."
+			],
+			"it": [
+				"Alle sue porte si trova l’oasi di Huacachina, una laguna fra le dune di sabbia.",
+				"I suoi vigneti producono vino e buona parte del pisco peruviano."
+			]
+		}
 	},
 	"juliaca": {
 		"kind": "city",
@@ -155,7 +317,15 @@
 		"populationRank": 14,
 		"region": "Callao",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"A market town of the altiplano, where the railways from Arequipa, Cusco and Puno meet."
+			],
+			"it": [
+				"Una città mercato dell’altopiano, dove si incontrano le ferrovie da Arequipa, Cusco e Puno."
+			]
+		}
 	},
 	"puno": {
 		"kind": "city",
@@ -163,7 +333,17 @@
 		"populationRank": 21,
 		"region": "Callao",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Its festival of the Virgen de la Candelaria, every February, is on UNESCO’s list of intangible heritage.",
+				"It is often called Peru’s capital of folklore."
+			],
+			"it": [
+				"La sua festa della Virgen de la Candelaria, ogni febbraio, è nella lista UNESCO del patrimonio immateriale.",
+				"È spesso chiamata la capitale del folklore peruviano."
+			]
+		}
 	},
 	"arequipa": {
 		"kind": "city",
@@ -171,13 +351,33 @@
 		"populationRank": 3,
 		"population1950": 128000,
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"The White City, built of sillar, a pale volcanic stone; its centre is a UNESCO site.",
+				"The convent of Santa Catalina, founded in 1579, is a walled town of its own inside the city.",
+				"The novelist Mario Vargas Llosa was born here in 1936."
+			],
+			"it": [
+				"La Città bianca, costruita in sillar, una pietra vulcanica chiara; il suo centro è un sito UNESCO.",
+				"Il convento di Santa Catalina, fondato nel 1579, è una cittadella murata dentro la città.",
+				"Qui nacque nel 1936 lo scrittore Mario Vargas Llosa."
+			]
+		}
 	},
 	"tacna": {
 		"kind": "city",
 		"population": 280098,
 		"populationRank": 12,
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Every 28 August, the day it returned to Peru in 1929, a great Peruvian flag is carried through its streets."
+			],
+			"it": [
+				"Ogni 28 agosto, il giorno del suo ritorno al Perù nel 1929, una grande bandiera peruviana viene portata per le sue strade."
+			]
+		}
 	}
 }
