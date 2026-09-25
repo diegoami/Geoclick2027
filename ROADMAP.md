@@ -181,6 +181,12 @@ Check items off as they land; update "Status" as iterations complete.
   folded on a narrow screen; a button under the zoom control hides the map
   bar for the session. Merged 2026-09-25 (PR #47), after the owner tried
   `v0.12.0-alpha.1` on the tablet. Ships in v0.12, with #46.
+- **Planned 2026-09-25: v0.12.0** ([PLAN_V0.12.md](docs/PLAN_V0.12.md), #46
+  agreed): authored facts, English and Italian, for the continents'
+  countries and capitals (456 places) and the 15 new countries (539),
+  about 3 000 sentences a language, behind a voice gate (Greece, FT-70);
+  region names without a box in the Quiz, Overview and Tour (FT-74); the
+  two review nits (FT-75). Tier 3, the finer maps, is a later release.
 - **Raised and decided 2026-09-20, unscoped**: six UX problems from one
   round of tablet play (`germany-towns-100k`) — the level-0 tray offering
   every name at once, slips losing their drag to the tablet's own
