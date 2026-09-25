@@ -195,7 +195,7 @@ entry.
 | Task  | State      | Merge  | Notes                                                                                                        |
 | ----- | ---------- | ------ | ------------------------------------------------------------------------------------------------------------ |
 | FT-69 | **merged** | PR #48 | countries read `world.json`; "Czech Republic" = "Czechia"; `world.json` holds only its `_note` so far        |
-| FT-70 | **in PR**  | —      | Greece, 14 regions, 42 + 42 sentences; in `v0.12.0-alpha.2`; 🧑 waiting for the owner’s reading              |
+| FT-70 | **merged** | PR #49 | Greece, 14 regions, 42 + 42 sentences; 🧑 read and approved by the owner, 2026-09-25: the gate is passed     |
 | FT-71 | planned    | —      | 172 countries, one commit per continent                                                                      |
 | FT-72 | planned    | —      | 284 capitals and European cities, 160 new files                                                              |
 | FT-73 | planned    | —      | the 15 new countries, 539 places, one commit per file                                                        |
