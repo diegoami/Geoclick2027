@@ -13,7 +13,19 @@
 			"nameIt": "Skaka",
 			"population": 128332
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Arabic for \"the hollow\", for the low basin at its heart.",
+				"Dumat al-Jandal, its old oasis town, appears in Assyrian records as Adummatu, a capital of Arab queens.",
+				"Its farms grow millions of olive trees, among the largest olive plantations in the world."
+			],
+			"it": [
+				"In arabo \"la cavità\", per la depressione al suo centro.",
+				"Dumat al-Jandal, la sua antica città oasi, compare nei documenti assiri come Adummatu, una capitale di regine arabe.",
+				"Le sue aziende agricole coltivano milioni di olivi, tra le più grandi piantagioni di olivi del mondo."
+			]
+		}
 	},
 	"northern-borders": {
 		"kind": "region",
@@ -31,7 +43,17 @@
 			"nameIt": "'Ar'ar",
 			"population": 222016
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Named for its place on the kingdom’s northern frontier.",
+				"The Darb Zubaydah, a pilgrim road from Kufa to Mecca with wells and cisterns built under the Abbasids, crosses it."
+			],
+			"it": [
+				"Prende il nome dalla sua posizione sulla frontiera settentrionale del regno.",
+				"La attraversa il Darb Zubaydah, una via di pellegrinaggio da Kufa alla Mecca con pozzi e cisterne costruiti sotto gli Abbasidi."
+			]
+		}
 	},
 	"ha-il": {
 		"kind": "region",
@@ -51,7 +73,19 @@
 			"nameIt": "Ha'il",
 			"population": 385257
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Named for its town, a name of uncertain origin.",
+				"It was the seat of the Rashidi emirs, the great rivals of the House of Saud, until 1921.",
+				"The rock art of Jubbah and Shuwaymis, thousands of years old, is a UNESCO site."
+			],
+			"it": [
+				"Prende il nome dalla sua città, un nome di origine incerta.",
+				"Fu la sede degli emiri Rashidi, i grandi rivali della casa di Saud, fino al 1921.",
+				"Le incisioni rupestri di Jubbah e Shuwaymis, vecchie di migliaia di anni, sono un sito UNESCO."
+			]
+		}
 	},
 	"tabuk": {
 		"kind": "region",
@@ -72,7 +106,19 @@
 			"name": "Jabal al Lawz",
 			"elevation": 2580
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Named for its town, a name of uncertain origin.",
+				"NEOM, a new city and region planned from 2017, is being built on its coast.",
+				"Tombs cut into the rocks at al-Bad are traditionally linked to Madyan, the land of the prophet Shu’ayb."
+			],
+			"it": [
+				"Prende il nome dalla sua città, un nome di origine incerta.",
+				"NEOM, una nuova città e regione progettata dal 2017, è in costruzione sulla sua costa.",
+				"Le tombe scavate nella roccia ad al-Bad sono tradizionalmente legate a Madian, la terra del profeta Shu’ayb."
+			]
+		}
 	},
 	"qassim": {
 		"kind": "region",
@@ -89,7 +135,17 @@
 			"nameIt": "Burayda",
 			"population": 398581
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named for the old district of Qassim, a name of uncertain origin.",
+				"Pumped from deep underground, its water grows much of the kingdom’s wheat and dates."
+			],
+			"it": [
+				"Prende il nome dall’antico distretto del Qassim, un nome di origine incerta.",
+				"Pompata dalle profondità del sottosuolo, la sua acqua fa crescere buona parte del grano e dei datteri del regno."
+			]
+		}
 	},
 	"medina": {
 		"kind": "region",
@@ -112,7 +168,17 @@
 			"name": "Jebel Jar",
 			"elevation": 2300
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Named for its holy city.",
+				"Hegra, near al-Ula, with more than a hundred Nabataean tombs cut into the rock, was the kingdom’s first UNESCO site, in 2008."
+			],
+			"it": [
+				"Prende il nome dalla sua città santa.",
+				"Hegra, vicino ad al-Ula, con più di cento tombe nabatee scavate nella roccia, fu il primo sito UNESCO del regno, nel 2008."
+			]
+		}
 	},
 	"riyadh": {
 		"kind": "region",
@@ -134,7 +200,19 @@
 			"nameIt": "Riad",
 			"population": 4465000
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named for its city, \"the gardens\".",
+				"At-Turaif, in Diriyah, the mud-brick capital of the first Saudi state, is a UNESCO site.",
+				"The cliffs of the Tuwaiq escarpment drop so sharply that a viewpoint on them is called the Edge of the World."
+			],
+			"it": [
+				"Prende il nome dalla sua città, \"i giardini\".",
+				"At-Turaif, a Diriyah, la capitale in mattoni crudi del primo stato saudita, è un sito UNESCO.",
+				"Le pareti della scarpata del Tuwaiq precipitano così a picco che un belvedere su di esse è chiamato la Fine del mondo."
+			]
+		}
 	},
 	"eastern-province": {
 		"kind": "region",
@@ -151,7 +229,19 @@
 			"nameIt": "Dammam",
 			"population": 2054710
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Named for its place in the east of the kingdom.",
+				"Ghawar, the largest oil field in the world, lies under it.",
+				"The Al-Ahsa oasis, with more than two million date palms, is a UNESCO site."
+			],
+			"it": [
+				"Prende il nome dalla sua posizione nell’est del regno.",
+				"Nel suo sottosuolo si trova Ghawar, il più grande giacimento di petrolio del mondo.",
+				"L’oasi di Al-Ahsa, con più di due milioni di palme da dattero, è un sito UNESCO."
+			]
+		}
 	},
 	"mecca": {
 		"kind": "region",
@@ -170,7 +260,19 @@
 			"nameIt": "Gedda",
 			"population": 3012000
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Named for its holy city.",
+				"Each year the Hajj brings well over a million pilgrims to Mecca and the holy sites around it.",
+				"Near Taif was the fair of Ukaz, where Arab poets competed before Islam."
+			],
+			"it": [
+				"Prende il nome dalla sua città santa.",
+				"Ogni anno l’Hajj porta ben più di un milione di pellegrini alla Mecca e ai luoghi santi che la circondano.",
+				"Vicino a Taif si teneva la fiera di Ukaz, dove i poeti arabi gareggiavano prima dell’islam."
+			]
+		}
 	},
 	"al-bahah": {
 		"kind": "region",
@@ -180,7 +282,19 @@
 			"Mecca"
 		],
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Named for its town, a name of uncertain origin.",
+				"Dhi Ain, a village of stone houses on a white marble outcrop, is one of the kingdom’s best-known old villages.",
+				"Its highlands are covered in juniper forests."
+			],
+			"it": [
+				"Prende il nome dalla sua città, un nome di origine incerta.",
+				"Dhi Ain, un villaggio di case di pietra su uno sperone di marmo bianco, è uno dei villaggi antichi più noti del regno.",
+				"I suoi altipiani sono coperti da foreste di ginepro."
+			]
+		}
 	},
 	"asir": {
 		"kind": "region",
@@ -203,7 +317,19 @@
 			"name": "Jabal Sawdā",
 			"elevation": 3000
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"The name is often read as \"difficult\", for its mountains; the derivation is uncertain.",
+				"Al-Qatt al-Asiri, the painting of house interiors by women, is on UNESCO’s list of intangible heritage.",
+				"Rijal Almaa is a village of stone tower houses, with white-painted windows, on a mountain trade route."
+			],
+			"it": [
+				"Il nome è spesso interpretato come \"difficile\", per i suoi monti; l’etimologia è incerta.",
+				"L’al-Qatt al-Asiri, la pittura degli interni delle case fatta dalle donne, è nella lista UNESCO del patrimonio immateriale.",
+				"Rijal Almaa è un villaggio di case torre in pietra, con finestre dipinte di bianco, su un’antica via commerciale di montagna."
+			]
+		}
 	},
 	"najran": {
 		"kind": "region",
@@ -220,7 +346,19 @@
 			"nameIt": "Najran",
 			"population": 369609
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Named for its oasis town, a name of uncertain origin.",
+				"Its Christians were massacred around 523 by the king Dhu Nuwas, an event linked to the \"people of the ditch\" of the Quran.",
+				"The ruins of Al-Ukhdood, the ancient town, lie beside the modern one."
+			],
+			"it": [
+				"Prende il nome dalla sua città oasi, un nome di origine incerta.",
+				"I suoi cristiani furono massacrati intorno al 523 dal re Dhu Nuwas, un evento collegato al \"popolo del fossato\" del Corano.",
+				"Le rovine di Al-Ukhdood, la città antica, si trovano accanto a quella moderna."
+			]
+		}
 	},
 	"jazan": {
 		"kind": "region",
@@ -236,6 +374,18 @@
 			"nameIt": "Jizan",
 			"population": 105198
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Named for its port, a name of uncertain origin.",
+				"The Farasan Islands are a reserve for a rare gazelle found only there.",
+				"The growing of Khawlani coffee in its mountains is on UNESCO’s list of intangible heritage."
+			],
+			"it": [
+				"Prende il nome dal suo porto, un nome di origine incerta.",
+				"Le isole Farasan sono una riserva per una rara gazzella che vive solo lì.",
+				"La coltivazione del caffè khawlani sui suoi monti è nella lista UNESCO del patrimonio immateriale."
+			]
+		}
 	}
 }
