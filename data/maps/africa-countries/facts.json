@@ -16,7 +16,19 @@
 			"name": "Jebel Chambi",
 			"elevation": 1544
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Named for its capital, Tunis.",
+				"Carthage, whose ruins stand at the edge of Tunis, fought Rome in three wars.",
+				"Its revolution of 2010 and 2011 set off the Arab Spring."
+			],
+			"it": [
+				"Prende il nome dalla capitale, Tunisi.",
+				"Cartagine, le cui rovine sono alle porte di Tunisi, combatté tre guerre contro Roma.",
+				"La sua rivoluzione del 2010-2011 diede inizio alla primavera araba."
+			]
+		}
 	},
 	"morocco": {
 		"kind": "region",
@@ -36,7 +48,19 @@
 			"name": "Jebel Toubkal",
 			"elevation": 4165
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"From Marrakesh, through Spanish Marruecos; in Arabic it is al-Maghrib, \"the west\".",
+				"The University of al-Qarawiyyin in Fez, founded in 859, is often called the oldest university still working.",
+				"Only 14 km of sea separate it from Spain at the Strait of Gibraltar."
+			],
+			"it": [
+				"Da Marrakech, attraverso lo spagnolo Marruecos; in arabo è al-Maghrib, \"l’occidente\".",
+				"L’università di al-Qarawiyyin a Fès, fondata nell’859, è spesso considerata la più antica università ancora attiva.",
+				"Solo 14 km di mare lo separano dalla Spagna, allo stretto di Gibilterra."
+			]
+		}
 	},
 	"algeria": {
 		"kind": "region",
@@ -60,7 +84,19 @@
 			"name": "Tahat",
 			"elevation": 2908
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Named for its capital, Algiers, from Arabic al-Jazā’ir, \"the islands\", for the islets off its harbour.",
+				"The largest country in Africa since South Sudan split from Sudan in 2011.",
+				"More than four fifths of it is Sahara."
+			],
+			"it": [
+				"Prende il nome dalla capitale, Algeri, dall’arabo al-Jazā’ir, \"le isole\", per gli isolotti davanti al suo porto.",
+				"Il paese più grande dell’Africa da quando il Sudan del Sud si è separato dal Sudan nel 2011.",
+				"Più di quattro quinti del suo territorio sono Sahara."
+			]
+		}
 	},
 	"egypt": {
 		"kind": "region",
@@ -79,7 +115,19 @@
 			"name": "Gebel Katherna",
 			"elevation": 2629
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"From Greek Aigyptos, probably from Hut-ka-Ptah, \"house of the spirit of Ptah\", a name of Memphis; Egyptians call it Misr.",
+				"Almost all Egyptians live on the few hundredths of the land that line the Nile.",
+				"The Great Pyramid of Giza was the tallest building on earth for nearly four thousand years."
+			],
+			"it": [
+				"Dal greco Aigyptos, probabilmente da Hut-ka-Ptah, \"casa dello spirito di Ptah\", un nome di Menfi; gli egiziani lo chiamano Misr.",
+				"Quasi tutti gli egiziani vivono sulla piccola parte del territorio che costeggia il Nilo.",
+				"La Grande Piramide di Giza fu l’edificio più alto della Terra per quasi quattromila anni."
+			]
+		}
 	},
 	"libya": {
 		"kind": "region",
@@ -102,7 +150,19 @@
 			"name": "Pic Bette",
 			"elevation": 2266
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"From the Libu, a people the Egyptians knew west of the Nile; the Greeks used Libya for all of Africa they knew.",
+				"The Great Man-Made River pipes water from ancient aquifers under the Sahara to the coast.",
+				"Leptis Magna, birthplace of the emperor Septimius Severus, is one of the best-preserved Roman cities."
+			],
+			"it": [
+				"Dai Libu, un popolo che gli egizi conoscevano a ovest del Nilo; i Greci chiamavano Libia tutta l’Africa che conoscevano.",
+				"Il Grande fiume artificiale porta alla costa l’acqua di antiche falde sotto il Sahara.",
+				"Leptis Magna, città natale dell’imperatore Settimio Severo, è una delle città romane meglio conservate."
+			]
+		}
 	},
 	"western-sahara": {
 		"kind": "region",
@@ -118,7 +178,19 @@
 			"nameIt": "Bir Lehlu",
 			"population": 500
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"The western end of the Sahara, called Spanish Sahara until 1975.",
+				"Its status is disputed: most of it is administered by Morocco, and the Polisario Front claims it as the Sahrawi Republic.",
+				"A sand wall built by Morocco, some 2,700 km long, runs through it."
+			],
+			"it": [
+				"L’estremità occidentale del Sahara, chiamata Sahara spagnolo fino al 1975.",
+				"Il suo status è conteso: in gran parte è amministrato dal Marocco, e il Fronte Polisario lo rivendica come Repubblica Saharawi.",
+				"Lo attraversa un muro di sabbia costruito dal Marocco, lungo circa 2.700 km."
+			]
+		}
 	},
 	"mauritania": {
 		"kind": "region",
@@ -140,7 +212,19 @@
 			"name": "Kdeyyat ej Joul",
 			"elevation": 915
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"From Roman Mauretania, the land of the Mauri, the Moors, though that province lay farther north, in today’s Morocco and Algeria.",
+				"It abolished slavery only in 1981, the last country in the world to do so.",
+				"Its iron-ore trains, more than 2 km long, are among the longest in the world."
+			],
+			"it": [
+				"Dalla Mauretania romana, la terra dei Mauri, anche se quella provincia era più a nord, negli attuali Marocco e Algeria.",
+				"Abolì la schiavitù solo nel 1981, l’ultimo paese al mondo a farlo.",
+				"I suoi treni del minerale di ferro, lunghi più di 2 km, sono tra i più lunghi del mondo."
+			]
+		}
 	},
 	"niger": {
 		"kind": "region",
@@ -164,7 +248,19 @@
 			"name": "Mont Bagzane",
 			"elevation": 2022
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Named for the Niger river, whose own name is uncertain, perhaps from a Tuareg phrase meaning \"river of rivers\".",
+				"It has one of the highest birth rates in the world.",
+				"The Ténéré Tree, once the most isolated tree on earth, was knocked down by a lorry in 1973."
+			],
+			"it": [
+				"Prende il nome dal fiume Niger, il cui nome è incerto, forse da un’espressione tuareg che significa \"fiume dei fiumi\".",
+				"Ha uno dei tassi di natalità più alti del mondo.",
+				"L’Albero del Ténéré, un tempo l’albero più isolato della Terra, fu abbattuto da un camion nel 1973."
+			]
+		}
 	},
 	"mali": {
 		"kind": "region",
@@ -188,7 +284,19 @@
 			"name": "Hombori Tondo",
 			"elevation": 1155
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Named for the medieval Mali Empire; mali may mean \"hippopotamus\" in Mandinka.",
+				"Its emperor Mansa Musa, on pilgrimage to Mecca in 1324, gave away so much gold in Cairo that its price fell.",
+				"The libraries of Timbuktu keep hundreds of thousands of manuscripts, some from the 13th century."
+			],
+			"it": [
+				"Prende il nome dall’impero medievale del Mali; mali potrebbe voler dire \"ippopotamo\" in mandinka.",
+				"Il suo imperatore Mansa Musa, in pellegrinaggio alla Mecca nel 1324, regalò tanto oro al Cairo da farne scendere il prezzo.",
+				"Le biblioteche di Timbuctù custodiscono centinaia di migliaia di manoscritti, alcuni del XIII secolo."
+			]
+		}
 	},
 	"cabo-verde": {
 		"kind": "region",
@@ -203,7 +311,19 @@
 			"name": "Pico de Cano",
 			"elevation": 2829
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"\"Green cape\", from Cap-Vert in Senegal, across the sea, the westernmost point of mainland Africa; the islands themselves are mostly dry.",
+				"Nobody lived on the islands until the Portuguese arrived in the 15th century.",
+				"Cesária Évora, the \"barefoot diva\", took its morna around the world."
+			],
+			"it": [
+				"\"Capo verde\", da Cap-Vert in Senegal, al di là del mare, il punto più occidentale dell’Africa continentale; le isole sono quasi tutte aride.",
+				"Le isole erano disabitate finché non arrivarono i Portoghesi, nel XV secolo.",
+				"Cesária Évora, la \"diva scalza\", portò la sua morna in tutto il mondo."
+			]
+		}
 	},
 	"chad": {
 		"kind": "region",
@@ -226,7 +346,19 @@
 			"name": "Emi Koussi",
 			"elevation": 3415
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Named for Lake Chad, from a local word for a large expanse of water.",
+				"The lake has shrunk by about nine tenths since the 1960s.",
+				"Toumaï, a skull about seven million years old found here in 2001, is among the oldest known relatives of humans."
+			],
+			"it": [
+				"Prende il nome dal lago Ciad, da una parola locale che indica una grande distesa d’acqua.",
+				"Il lago si è ridotto di circa nove decimi dagli anni Sessanta.",
+				"Toumaï, un cranio di circa sette milioni di anni trovato qui nel 2001, è tra i più antichi parenti conosciuti dell’uomo."
+			]
+		}
 	},
 	"sudan": {
 		"kind": "region",
@@ -250,7 +382,19 @@
 			"name": "Jabal Marrah",
 			"elevation": 3042
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"From Arabic bilād as-sūdān, \"land of the black people\", once used for the whole belt south of the Sahara.",
+				"It has more pyramids than Egypt, at Meroë and other royal cemeteries of Nubia.",
+				"The Blue Nile and the White Nile meet at Khartoum."
+			],
+			"it": [
+				"Dall’arabo bilād as-sūdān, \"terra dei neri\", un tempo usato per tutta la fascia a sud del Sahara.",
+				"Ha più piramidi dell’Egitto, a Meroe e in altre necropoli reali della Nubia.",
+				"Il Nilo Azzurro e il Nilo Bianco si incontrano a Khartum."
+			]
+		}
 	},
 	"eritrea": {
 		"kind": "region",
@@ -270,7 +414,19 @@
 			"name": "Soira",
 			"elevation": 3018
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"From the Greek name of the Red Sea, Erythra Thalassa, given to the colony by the Italians in 1890.",
+				"Asmara, built largely by Italians in the 1930s, is a UNESCO site for its modernist architecture.",
+				"Independent from Ethiopia since 1993, after a war of thirty years."
+			],
+			"it": [
+				"Dal nome greco del Mar Rosso, Erythra Thalassa, dato alla colonia dagli italiani nel 1890.",
+				"Asmara, costruita in gran parte dagli italiani negli anni Trenta, è un sito UNESCO per la sua architettura modernista.",
+				"Indipendente dall’Etiopia dal 1993, dopo una guerra di trent’anni."
+			]
+		}
 	},
 	"senegal": {
 		"kind": "region",
@@ -288,7 +444,19 @@
 			"nameIt": "Dakar",
 			"population": 2604000
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Named for the Senegal river, whose name is of uncertain origin.",
+				"Dakar is the westernmost city of mainland Africa.",
+				"Its first president, Léopold Sédar Senghor, was a poet, and the first African elected to the Académie française."
+			],
+			"it": [
+				"Prende il nome dal fiume Senegal, il cui nome è di origine incerta.",
+				"Dakar è la città più occidentale dell’Africa continentale.",
+				"Il suo primo presidente, Léopold Sédar Senghor, era un poeta, e il primo africano eletto all’Académie française."
+			]
+		}
 	},
 	"the-gambia": {
 		"kind": "region",
@@ -302,7 +470,19 @@
 			"nameIt": "Brikama",
 			"population": 195136
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Named for the Gambia river, and \"The\" is officially part of the name.",
+				"The smallest country on the African mainland, a strip along both banks of its river.",
+				"A story has it that its borders follow how far British gunboats could fire from the river."
+			],
+			"it": [
+				"Prende il nome dal fiume Gambia, e l’articolo \"The\" fa ufficialmente parte del nome.",
+				"Il paese più piccolo dell’Africa continentale, una striscia lungo le due rive del suo fiume.",
+				"Si racconta che i suoi confini seguano la gittata delle cannoniere britanniche sul fiume."
+			]
+		}
 	},
 	"burkina-faso": {
 		"kind": "region",
@@ -325,7 +505,19 @@
 			"name": "Téna Kourou",
 			"elevation": 747
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"\"Land of upright people\", a name made of Mooré and Dyula words that Thomas Sankara chose in 1984; before, it was Upper Volta.",
+				"Its capital hosts FESPACO, Africa’s largest film festival, every two years since 1969.",
+				"Its people are the Burkinabè, a word taken from a third language, Fula."
+			],
+			"it": [
+				"\"Terra degli uomini integri\", un nome fatto di parole mooré e diula che Thomas Sankara scelse nel 1984; prima era l’Alto Volta.",
+				"La sua capitale ospita il FESPACO, il più grande festival del cinema africano, ogni due anni dal 1969.",
+				"I suoi abitanti sono i burkinabè, una parola presa da una terza lingua, il fula."
+			]
+		}
 	},
 	"djibouti": {
 		"kind": "region",
@@ -345,7 +537,19 @@
 			"name": "Moussa Ali",
 			"elevation": 2021
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"The country is named for its capital, and where that name comes from is uncertain.",
+				"Lake Assal, about 155 m below sea level, is the lowest point in Africa.",
+				"On the strait into the Red Sea, it hosts the military bases of the United States, France, China and others."
+			],
+			"it": [
+				"Il paese prende il nome dalla capitale, e da dove venga quel nome è incerto.",
+				"Il lago Assal, circa 155 m sotto il livello del mare, è il punto più basso dell’Africa.",
+				"Sullo stretto che porta al Mar Rosso, ospita basi militari di Stati Uniti, Francia, Cina e altri."
+			]
+		}
 	},
 	"guinea-bissau": {
 		"kind": "region",
@@ -360,7 +564,19 @@
 			"nameIt": "Bissau",
 			"population": 403339
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Guinea, with its capital’s name added to tell it apart from its larger neighbour.",
+				"The Bijagós islands off its coast are home to hippos that swim in the sea.",
+				"It won independence from Portugal in 1974, after a war led by Amílcar Cabral’s movement."
+			],
+			"it": [
+				"Guinea, con il nome della capitale aggiunto per distinguerla dal vicino più grande.",
+				"Le isole Bijagós, al largo della costa, ospitano ippopotami che nuotano in mare.",
+				"Conquistò l’indipendenza dal Portogallo nel 1974, dopo una guerra guidata dal movimento di Amílcar Cabral."
+			]
+		}
 	},
 	"guinea": {
 		"kind": "region",
@@ -383,7 +599,19 @@
 			"name": "Mount Richard-Molard",
 			"elevation": 1752
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"From the old European name for the West African coast, whose origin is disputed.",
+				"In 1958 it was the only French colony to vote against de Gaulle’s new community, and became independent at once.",
+				"The Niger, the Senegal and the Gambia all rise in its highlands."
+			],
+			"it": [
+				"Dall’antico nome europeo della costa dell’Africa occidentale, di origine discussa.",
+				"Nel 1958 fu l’unica colonia francese a votare contro la nuova comunità di de Gaulle, e divenne subito indipendente.",
+				"Il Niger, il Senegal e il Gambia nascono tutti nei suoi altopiani."
+			]
+		}
 	},
 	"somaliland": {
 		"kind": "region",
@@ -403,7 +631,19 @@
 			"name": "Shimbiris",
 			"elevation": 2414
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Named for the Somali people, as British Somaliland was before it.",
+				"It declared independence from Somalia in 1991 and has governed itself since, largely without international recognition.",
+				"The caves of Laas Geel hold painted cattle thousands of years old, among the finest rock art in Africa."
+			],
+			"it": [
+				"Prende il nome dal popolo somalo, come la Somalia britannica prima di esso.",
+				"Ha dichiarato l’indipendenza dalla Somalia nel 1991 e da allora si governa da sé, in gran parte senza riconoscimento internazionale.",
+				"Le grotte di Laas Geel conservano bovini dipinti di migliaia di anni fa, tra le pitture rupestri più belle dell’Africa."
+			]
+		}
 	},
 	"benin": {
 		"kind": "region",
@@ -424,7 +664,19 @@
 			"name": "Tanekas",
 			"elevation": 641
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named in 1975 for the Bight of Benin, the bay it faces, not for the old Kingdom of Benin, which lay in what is now Nigeria.",
+				"The kingdom of Dahomey, here, kept a regiment of women soldiers that Europeans called the Amazons.",
+				"Vodun, the religion from which Haitian vodou grew, has its own national holiday here, on 10 January."
+			],
+			"it": [
+				"Prese il nome nel 1975 dal golfo del Benin, su cui si affaccia, e non dall’antico regno del Benin, che si trovava nell’attuale Nigeria.",
+				"Il regno del Dahomey, qui, aveva un reggimento di donne soldato che gli europei chiamavano le Amazzoni.",
+				"Il vodun, la religione da cui nacque il vudù haitiano, qui ha una festa nazionale tutta sua, il 10 gennaio."
+			]
+		}
 	},
 	"ethiopia": {
 		"kind": "region",
@@ -448,7 +700,19 @@
 			"name": "Ras Dejen",
 			"elevation": 4533
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"From Greek Aithiops, \"burnt face\", the name the Greeks gave the peoples south of Egypt.",
+				"The only African country never colonised, apart from Italy’s occupation of 1936 to 1941.",
+				"Its calendar has thirteen months and runs seven to eight years behind the Gregorian one."
+			],
+			"it": [
+				"Dal greco Aithiops, \"volto bruciato\", il nome che i Greci davano ai popoli a sud dell’Egitto.",
+				"L’unico paese africano mai colonizzato, a parte l’occupazione italiana dal 1936 al 1941.",
+				"Il suo calendario ha tredici mesi ed è indietro di sette o otto anni rispetto a quello gregoriano."
+			]
+		}
 	},
 	"nigeria": {
 		"kind": "region",
@@ -469,7 +733,19 @@
 			"name": "Chappal Wadi",
 			"elevation": 2419
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Coined in 1897 by the journalist Flora Shaw, from the Niger river.",
+				"Africa’s most populous country, with more than 200 million people.",
+				"Nollywood makes more films a year than almost any other film industry in the world."
+			],
+			"it": [
+				"Coniato nel 1897 dalla giornalista Flora Shaw, dal fiume Niger.",
+				"Il paese più popoloso dell’Africa, con più di 200 milioni di abitanti.",
+				"Nollywood produce più film all’anno di quasi ogni altra industria cinematografica del mondo."
+			]
+		}
 	},
 	"togo": {
 		"kind": "region",
@@ -489,7 +765,19 @@
 			"name": "Mont Agou",
 			"elevation": 968
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"From Togodo, a lakeside village, a name often read in Ewe as \"beyond the water\".",
+				"A German colony until 1914, it was then divided between France and Britain.",
+				"Koutammakou, the land of the Batammariba and their fortress-like mud houses, is a UNESCO site."
+			],
+			"it": [
+				"Da Togodo, un villaggio sul lago, un nome spesso letto in ewe come \"al di là dell’acqua\".",
+				"Colonia tedesca fino al 1914, fu poi divisa tra Francia e Gran Bretagna.",
+				"Koutammakou, la terra dei Batammariba e delle loro case di fango simili a fortezze, è un sito UNESCO."
+			]
+		}
 	},
 	"sierra-leone": {
 		"kind": "region",
@@ -508,7 +796,19 @@
 			"name": "Loma Mansa",
 			"elevation": 1945
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"\"Lion mountains\", from the Portuguese navigator Pedro de Sintra in 1462, perhaps for the thunder rolling over its hills.",
+				"Freetown was founded in 1792 for freed slaves, many of them black loyalists from the American War of Independence.",
+				"Its war of the 1990s was fought largely over diamonds, the \"blood diamonds\"."
+			],
+			"it": [
+				"\"Monti del leone\", dal navigatore portoghese Pedro de Sintra nel 1462, forse per il tuono che rimbomba sulle sue colline.",
+				"Freetown fu fondata nel 1792 per schiavi liberati, molti dei quali lealisti neri della guerra d’indipendenza americana.",
+				"La sua guerra degli anni Novanta fu combattuta soprattutto per i diamanti, i \"diamanti insanguinati\"."
+			]
+		}
 	},
 	"ghana": {
 		"kind": "region",
@@ -528,7 +828,19 @@
 			"name": "Mount Afadjoto",
 			"elevation": 885
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Named in 1957 for the medieval empire of Ghana, which lay far to the north-west, in today’s Mali and Mauritania.",
+				"In 1957 it became the first colony south of the Sahara to win its independence.",
+				"Lake Volta, behind the Akosombo dam, is by area the largest reservoir in the world."
+			],
+			"it": [
+				"Prese il nome nel 1957 dall’impero medievale del Ghana, che si trovava molto più a nord-ovest, negli attuali Mali e Mauritania.",
+				"Nel 1957 fu la prima colonia a sud del Sahara a conquistare l’indipendenza.",
+				"Il lago Volta, dietro la diga di Akosombo, è per superficie il più grande bacino artificiale del mondo."
+			]
+		}
 	},
 	"south-sudan": {
 		"kind": "region",
@@ -551,7 +863,19 @@
 			"name": "Kinyeti",
 			"elevation": 3187
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"The south of Sudan, from which it split in 2011, becoming the world’s newest country.",
+				"The Sudd, on the White Nile, is one of the largest wetlands in the world.",
+				"Its vote for independence passed with nearly 99 per cent."
+			],
+			"it": [
+				"Il sud del Sudan, da cui si separò nel 2011, diventando il paese più giovane del mondo.",
+				"Il Sudd, sul Nilo Bianco, è una delle zone umide più grandi del mondo.",
+				"Il suo voto per l’indipendenza passò con quasi il 99 per cento."
+			]
+		}
 	},
 	"cote-d-ivoire": {
 		"kind": "region",
@@ -569,7 +893,19 @@
 			"nameIt": "Abidjan",
 			"population": 3802000
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"\"Ivory Coast\", the name European traders gave it for what they bought here; since 1985 it asks to be called Côte d’Ivoire in every language.",
+				"The largest producer of cocoa in the world.",
+				"The Basilica of Our Lady of Peace in Yamoussoukro is among the largest churches in the world."
+			],
+			"it": [
+				"\"Costa d’Avorio\", il nome che le diedero i mercanti europei per ciò che compravano qui; dal 1985 chiede di essere chiamata Côte d’Ivoire in ogni lingua.",
+				"Il più grande produttore di cacao del mondo.",
+				"La basilica di Nostra Signora della Pace a Yamoussoukro è tra le chiese più grandi del mondo."
+			]
+		}
 	},
 	"cameroon": {
 		"kind": "region",
@@ -592,7 +928,19 @@
 			"name": "Mont Cameroun",
 			"elevation": 4040
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"From Portuguese Rio dos Camarões, \"river of prawns\", for the shrimp in the Wouri estuary.",
+				"Often called \"Africa in miniature\", for having almost every landscape of the continent.",
+				"Its French- and English-speaking regions go back to its division between France and Britain after the First World War."
+			],
+			"it": [
+				"Dal portoghese Rio dos Camarões, \"fiume dei gamberi\", per i gamberetti dell’estuario del Wouri.",
+				"Spesso chiamato \"l’Africa in miniatura\", perché ha quasi tutti i paesaggi del continente.",
+				"Le sue regioni francofone e anglofone risalgono alla divisione tra Francia e Gran Bretagna dopo la Prima guerra mondiale."
+			]
+		}
 	},
 	"central-african-republic": {
 		"kind": "region",
@@ -615,7 +963,19 @@
 			"name": "Mont Ngaoui",
 			"elevation": 1410
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named for where it lies, in the middle of the continent; as a French colony it was Ubangi-Shari, after two rivers.",
+				"Its ruler Jean-Bédel Bokassa crowned himself emperor in 1977, in a ceremony modelled on Napoleon’s.",
+				"The forests of Dzanga-Sangha, in its south-west, shelter forest elephants and lowland gorillas."
+			],
+			"it": [
+				"Prende il nome da dove si trova, al centro del continente; da colonia francese era l’Ubangi-Shari, da due fiumi.",
+				"Il suo capo, Jean-Bédel Bokassa, si incoronò imperatore nel 1977, con una cerimonia sul modello di quella di Napoleone.",
+				"Le foreste di Dzanga-Sangha, a sud-ovest, ospitano elefanti di foresta e gorilla di pianura."
+			]
+		}
 	},
 	"liberia": {
 		"kind": "region",
@@ -635,7 +995,19 @@
 			"name": "Mount Wuteve",
 			"elevation": 1380
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"From Latin liber, \"free\": it was founded in 1822 as a home for freed slaves from the United States.",
+				"Its capital, Monrovia, is named for the American president James Monroe.",
+				"Ellen Johnson Sirleaf, elected in 2005, was the first woman elected head of state in Africa."
+			],
+			"it": [
+				"Dal latino liber, \"libero\": fu fondata nel 1822 come patria per gli schiavi liberati degli Stati Uniti.",
+				"La sua capitale, Monrovia, prende il nome dal presidente americano James Monroe.",
+				"Ellen Johnson Sirleaf, eletta nel 2005, fu la prima donna eletta capo di Stato in Africa."
+			]
+		}
 	},
 	"somalia": {
 		"kind": "region",
@@ -651,7 +1023,19 @@
 			"nameIt": "Mogadiscio",
 			"population": 1100000
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Named for the Somali people, whose own name is of uncertain origin.",
+				"It has the longest coastline of any country on the African mainland.",
+				"Poetry is so central to Somali life that travellers have called it a nation of poets."
+			],
+			"it": [
+				"Prende il nome dal popolo somalo, il cui nome è di origine incerta.",
+				"Ha la costa più lunga tra i paesi dell’Africa continentale.",
+				"La poesia è così centrale nella vita somala che i viaggiatori l’hanno chiamata una nazione di poeti."
+			]
+		}
 	},
 	"equatorial-guinea": {
 		"kind": "region",
@@ -670,7 +1054,19 @@
 			"name": "Pico de Santa Isabel",
 			"elevation": 3008
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Guinea, the old European name for the West African coast, and the equator, which runs between its mainland and its island of Annobón.",
+				"The only country in Africa with Spanish as an official language.",
+				"Its capital, Malabo, is on the island of Bioko, not on the mainland."
+			],
+			"it": [
+				"Guinea, l’antico nome europeo della costa dell’Africa occidentale, ed equatoriale per l’equatore, che passa tra la sua parte continentale e l’isola di Annobón.",
+				"L’unico paese africano con lo spagnolo come lingua ufficiale.",
+				"La sua capitale, Malabo, è sull’isola di Bioko, non sul continente."
+			]
+		}
 	},
 	"uganda": {
 		"kind": "region",
@@ -692,7 +1088,19 @@
 			"name": "Mount Stanley",
 			"elevation": 4979
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"From Buganda, the kingdom at its heart, through the Swahili form of the name.",
+				"At Jinja the Nile leaves Lake Victoria on its way to the Mediterranean.",
+				"About half the world’s mountain gorillas live here, in the forest of Bwindi."
+			],
+			"it": [
+				"Da Buganda, il regno al suo centro, attraverso la forma swahili del nome.",
+				"A Jinja il Nilo esce dal lago Vittoria per il suo viaggio verso il Mediterraneo.",
+				"Circa metà dei gorilla di montagna del mondo vive qui, nella foresta di Bwindi."
+			]
+		}
 	},
 	"kenya": {
 		"kind": "region",
@@ -714,7 +1122,19 @@
 			"name": "Mount Kenya",
 			"elevation": 5199
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Named for Mount Kenya, probably from a Kamba name meaning \"ostrich mountain\", perhaps for its black rock and white snow.",
+				"Fossils around Lake Turkana make it one of the richest places on earth for finding human ancestors.",
+				"Each year more than a million wildebeest cross from Tanzania’s Serengeti into its Maasai Mara."
+			],
+			"it": [
+				"Prende il nome dal monte Kenya, probabilmente da un nome kamba che significa \"monte dello struzzo\", forse per la roccia nera e la neve bianca.",
+				"I fossili intorno al lago Turkana ne fanno uno dei luoghi più ricchi della Terra per trovare antenati dell’uomo.",
+				"Ogni anno più di un milione di gnu passa dal Serengeti tanzaniano al suo Maasai Mara."
+			]
+		}
 	},
 	"republic-of-the-congo": {
 		"kind": "region",
@@ -736,7 +1156,19 @@
 			"name": "Mont Nabeba",
 			"elevation": 1020
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named, like its larger neighbour, for the Congo river; the two capitals, Brazzaville and Kinshasa, face each other across it.",
+				"Brazzaville is named for the explorer Pierre Savorgnan de Brazza.",
+				"From 1940 to 1943 Brazzaville was the capital of Free France."
+			],
+			"it": [
+				"Prende il nome, come il suo vicino più grande, dal fiume Congo; le due capitali, Brazzaville e Kinshasa, si fronteggiano sulle sue rive.",
+				"Brazzaville prende il nome dall’esploratore Pietro Savorgnan di Brazzà.",
+				"Dal 1940 al 1943 Brazzaville fu la capitale della Francia libera."
+			]
+		}
 	},
 	"gabon": {
 		"kind": "region",
@@ -756,7 +1188,19 @@
 			"name": "Mont Bengoué",
 			"elevation": 1070
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"From Portuguese gabão, a hooded cloak, which traders thought the estuary at Libreville looked like.",
+				"Forest covers close to nine tenths of it.",
+				"At Oklo, about two billion years ago, its uranium ran as natural nuclear reactors."
+			],
+			"it": [
+				"Dal portoghese gabão, un mantello con cappuccio, a cui i mercanti paragonarono l’estuario di Libreville.",
+				"La foresta ne copre quasi nove decimi.",
+				"A Oklo, circa due miliardi di anni fa, il suo uranio funzionò da reattore nucleare naturale."
+			]
+		}
 	},
 	"rwanda": {
 		"kind": "region",
@@ -777,7 +1221,19 @@
 			"name": "Volcan Karisimbi",
 			"elevation": 4519
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Named for the kingdom that grew here from the 15th century; it calls itself the land of a thousand hills.",
+				"About 800,000 people were killed in the genocide of 1994, in around a hundred days.",
+				"Women hold more than half the seats in its parliament, the highest share in the world."
+			],
+			"it": [
+				"Prende il nome dal regno che crebbe qui dal XV secolo; si definisce il paese delle mille colline.",
+				"Circa 800.000 persone furono uccise nel genocidio del 1994, in un centinaio di giorni.",
+				"Le donne occupano più della metà dei seggi del suo parlamento, la quota più alta del mondo."
+			]
+		}
 	},
 	"burundi": {
 		"kind": "region",
@@ -797,7 +1253,19 @@
 			"name": "Mont Heha",
 			"elevation": 2670
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Named for the old kingdom of Burundi, the country of the Rundi.",
+				"One of the most densely populated countries in Africa.",
+				"Lake Tanganyika, along its western edge, is the second deepest lake in the world."
+			],
+			"it": [
+				"Prende il nome dall’antico regno del Burundi, il paese dei Rundi.",
+				"Uno dei paesi più densamente popolati dell’Africa.",
+				"Il lago Tanganica, lungo il suo confine occidentale, è il secondo lago più profondo del mondo."
+			]
+		}
 	},
 	"democratic-republic-of-the-congo": {
 		"kind": "region",
@@ -823,7 +1291,19 @@
 			"name": "Mont Mohi",
 			"elevation": 3480
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named for the Congo river, and the river for the Kingdom of Kongo at its mouth.",
+				"King Leopold II of Belgium held it as his private property from 1885 to 1908.",
+				"The Congo is the deepest river in the world, more than 200 m in places."
+			],
+			"it": [
+				"Prende il nome dal fiume Congo, e il fiume dal regno del Kongo alla sua foce.",
+				"Il re Leopoldo II del Belgio lo possedette come proprietà privata dal 1885 al 1908.",
+				"Il Congo è il fiume più profondo del mondo, oltre 200 m in alcuni punti."
+			]
+		}
 	},
 	"tanzania": {
 		"kind": "region",
@@ -848,7 +1328,19 @@
 			"name": "Mount Kilimanjaro",
 			"elevation": 5895
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"A blend of Tanganyika and Zanzibar, which united in 1964.",
+				"At Olduvai Gorge the Leakeys found fossils and tools of some of the earliest humans.",
+				"Freddie Mercury was born in Zanzibar in 1946."
+			],
+			"it": [
+				"Una fusione di Tanganica e Zanzibar, che si unirono nel 1964.",
+				"Nella gola di Olduvai i Leakey trovarono fossili e utensili di alcuni dei primi esseri umani.",
+				"Freddie Mercury nacque a Zanzibar nel 1946."
+			]
+		}
 	},
 	"angola": {
 		"kind": "region",
@@ -869,7 +1361,19 @@
 			"name": "Moro de Môco",
 			"elevation": 2620
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"From ngola, the title of the kings of Ndongo, which the Portuguese took for the name of the land.",
+				"A Portuguese colony for four centuries, it became independent in 1975 and was then at civil war until 2002.",
+				"Luanda, founded by the Portuguese in 1576, is one of the oldest cities Europeans built south of the Sahara."
+			],
+			"it": [
+				"Da ngola, il titolo dei re di Ndongo, che i Portoghesi presero come nome del paese.",
+				"Colonia portoghese per quattro secoli, divenne indipendente nel 1975 e fu poi in guerra civile fino al 2002.",
+				"Luanda, fondata dai Portoghesi nel 1576, è una delle città più antiche costruite dagli europei a sud del Sahara."
+			]
+		}
 	},
 	"zambia": {
 		"kind": "region",
@@ -894,7 +1398,19 @@
 			"name": "Sunzu",
 			"elevation": 2067
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Named for the Zambezi river.",
+				"Victoria Falls, on the Zambezi, is Mosi-oa-Tunya in the local language, \"the smoke that thunders\".",
+				"One of Africa’s largest producers of copper, which runs its economy."
+			],
+			"it": [
+				"Prende il nome dal fiume Zambesi.",
+				"Le cascate Vittoria, sullo Zambesi, nella lingua locale sono Mosi-oa-Tunya, \"il fumo che tuona\".",
+				"Uno dei maggiori produttori di rame dell’Africa, che regge la sua economia."
+			]
+		}
 	},
 	"malawi": {
 		"kind": "region",
@@ -914,7 +1430,19 @@
 			"name": "Sapitwa Peak",
 			"elevation": 3003
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Probably from Maravi, an old kingdom of the region, a name often read as \"flames\".",
+				"Lake Malawi has more species of fish than any other lake in the world.",
+				"It calls itself the warm heart of Africa."
+			],
+			"it": [
+				"Probabilmente da Maravi, un antico regno della regione, un nome spesso letto come \"fiamme\".",
+				"Il lago Malawi ha più specie di pesci di qualunque altro lago del mondo.",
+				"Si definisce il cuore caldo dell’Africa."
+			]
+		}
 	},
 	"mozambique": {
 		"kind": "region",
@@ -937,7 +1465,19 @@
 			"name": "Monte Binga",
 			"elevation": 2436
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"From the Island of Mozambique, whose name may come from Mussa bin Bique, an Arab trader who lived there.",
+				"Its flag carries an AK-47, the only national flag with a modern rifle.",
+				"Portuguese until 1975, it was then at civil war until 1992."
+			],
+			"it": [
+				"Dall’isola di Mozambico, il cui nome potrebbe venire da Mussa bin Bique, un mercante arabo che vi abitava.",
+				"La sua bandiera porta un AK-47, l’unica bandiera nazionale con un fucile moderno.",
+				"Portoghese fino al 1975, fu poi in guerra civile fino al 1992."
+			]
+		}
 	},
 	"madagascar": {
 		"kind": "region",
@@ -952,7 +1492,19 @@
 			"name": "Maromokotro",
 			"elevation": 2876
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Probably through Marco Polo, who seems to have confused it with Mogadishu.",
+				"Its first settlers crossed the Indian Ocean from Borneo, and Malagasy is related to languages of Indonesia.",
+				"About nine in ten of its plants and animals live nowhere else, the lemurs among them."
+			],
+			"it": [
+				"Probabilmente attraverso Marco Polo, che sembra averlo confuso con Mogadiscio.",
+				"I suoi primi abitanti attraversarono l’oceano Indiano dal Borneo, e il malgascio è parente di lingue dell’Indonesia.",
+				"Circa nove su dieci delle sue piante e dei suoi animali non vivono in nessun altro luogo, lemuri compresi."
+			]
+		}
 	},
 	"zimbabwe": {
 		"kind": "region",
@@ -974,7 +1526,19 @@
 			"name": "Inyangani",
 			"elevation": 2592
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Named for Great Zimbabwe, the stone city of the 11th to 15th centuries, from dzimba dza mabwe, \"houses of stone\".",
+				"In 2008 prices doubled about every day, and it printed a 100-trillion-dollar note.",
+				"The Zimbabwe Bird on its flag is a soapstone carving found at Great Zimbabwe."
+			],
+			"it": [
+				"Prende il nome da Grande Zimbabwe, la città di pietra dell’XI-XV secolo, da dzimba dza mabwe, \"case di pietra\".",
+				"Nel 2008 i prezzi raddoppiavano quasi ogni giorno, e fu stampata una banconota da 100.000 miliardi di dollari.",
+				"L’uccello dello Zimbabwe sulla bandiera è una scultura in steatite trovata a Grande Zimbabwe."
+			]
+		}
 	},
 	"botswana": {
 		"kind": "region",
@@ -995,7 +1559,19 @@
 			"name": "Monalanong Hill",
 			"elevation": 1494
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"\"Land of the Tswana\", the people who make up most of its population.",
+				"Among the poorest countries in the world at independence in 1966, it grew rich on diamonds found the year after.",
+				"The Okavango never reaches the sea: it spreads out and vanishes into the Kalahari in one of the largest inland deltas in the world."
+			],
+			"it": [
+				"\"Terra dei Tswana\", il popolo che forma la maggior parte dei suoi abitanti.",
+				"Tra i paesi più poveri del mondo all’indipendenza, nel 1966, si arricchì con i diamanti scoperti l’anno dopo.",
+				"L’Okavango non arriva mai al mare: si allarga e scompare nel Kalahari, in uno dei più grandi delta interni del mondo."
+			]
+		}
 	},
 	"namibia": {
 		"kind": "region",
@@ -1017,7 +1593,19 @@
 			"name": "Brandberg",
 			"elevation": 2579
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Named for the Namib, a desert whose name means \"vast place\" in Nama.",
+				"The Namib is often called the oldest desert on earth, at least 55 million years old.",
+				"Some of its beetles drink the Atlantic fog that condenses on their backs."
+			],
+			"it": [
+				"Prende il nome dal Namib, un deserto il cui nome in nama vuol dire \"luogo vasto\".",
+				"Il Namib è spesso considerato il deserto più antico della Terra, con almeno 55 milioni di anni.",
+				"Alcuni dei suoi coleotteri bevono la nebbia atlantica che si condensa sul loro dorso."
+			]
+		}
 	},
 	"eswatini": {
 		"kind": "region",
@@ -1036,7 +1624,19 @@
 			"name": "Emlembe",
 			"elevation": 1862
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"\"Land of the Swazi\", named for the 19th-century king Mswati II; the present king renamed it from Swaziland in 2018.",
+				"One of the last absolute monarchies in the world.",
+				"Each year the Umhlanga, the reed dance, brings tens of thousands of young women to the royal residence."
+			],
+			"it": [
+				"\"Terra degli Swazi\", dal re Mswati II, dell’Ottocento; l’attuale re la ribattezzò così, al posto di Swaziland, nel 2018.",
+				"Una delle ultime monarchie assolute del mondo.",
+				"Ogni anno l’Umhlanga, la danza delle canne, porta decine di migliaia di ragazze alla residenza reale."
+			]
+		}
 	},
 	"south-africa": {
 		"kind": "region",
@@ -1059,7 +1659,19 @@
 			"name": "Kompasberg",
 			"elevation": 2504
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Named plainly for where it lies; it has twelve official languages, sign language among them.",
+				"It has three capitals: Pretoria for the government, Cape Town for parliament and Bloemfontein for the courts.",
+				"Nelson Mandela, freed in 1990 after 27 years in prison, became its first democratically elected president in 1994."
+			],
+			"it": [
+				"Prende il nome semplicemente da dove si trova; ha dodici lingue ufficiali, compresa la lingua dei segni.",
+				"Ha tre capitali: Pretoria per il governo, Città del Capo per il parlamento e Bloemfontein per i tribunali.",
+				"Nelson Mandela, liberato nel 1990 dopo 27 anni di carcere, divenne nel 1994 il suo primo presidente eletto democraticamente."
+			]
+		}
 	},
 	"lesotho": {
 		"kind": "region",
@@ -1077,6 +1689,18 @@
 			"name": "Thabana Ntlenyana",
 			"elevation": 3482
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"\"Land of the Sotho\", the people who speak Sesotho.",
+				"It is entirely surrounded by South Africa.",
+				"The only country whose whole territory lies more than 1,000 m above sea level."
+			],
+			"it": [
+				"\"Terra dei Sotho\", il popolo che parla il sesotho.",
+				"È interamente circondato dal Sudafrica.",
+				"L’unico paese il cui territorio sta tutto oltre i 1.000 m sul livello del mare."
+			]
+		}
 	}
 }
