@@ -275,5 +275,7 @@ trailered "Sonnet 5" up to 2026-09-13, then 274 trailered "Opus 5"; then 32
 trailered "DeepSeek V4.1 Flash" from 2026-09-21, with ChatGPT GPT-5.6 Luna
 (high) reviewing its PRs. On 2026-09-23 the implementing model became Claude
 Opus 5.5; the same day, reviews moved to an independent model at milestones,
-recorded on GitHub (§3a). The trailer was left stale once
-already — keep it current.
+recorded on GitHub (§3a). On 2026-09-25 the product owner handed FT-73 (the
+new countries' facts, docs/PLAN_V0.12.md) to Codex, whose commits carry its
+own trailer; everything else stays with Claude Opus 5.5. The trailer was left
+stale once already — keep it current.
