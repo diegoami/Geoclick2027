@@ -15,7 +15,19 @@
 			"name": "Mount Logan",
 			"elevation": 5959
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"From kanata, \"village\" in an Iroquoian language, which Jacques Cartier took for the name of the whole land in 1535.",
+				"It has the longest coastline of any country in the world.",
+				"By one count it holds more lakes than all the rest of the world together."
+			],
+			"it": [
+				"Da kanata, \"villaggio\" in una lingua irochese, che Jacques Cartier nel 1535 prese per il nome di tutta la terra.",
+				"Ha la costa più lunga di qualunque paese del mondo.",
+				"Secondo un conteggio ha più laghi di tutto il resto del mondo messo insieme."
+			]
+		}
 	},
 	"united-states": {
 		"kind": "region",
@@ -34,7 +46,19 @@
 			"name": "Denali",
 			"elevation": 6194
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"America comes from Amerigo Vespucci, the Florentine navigator whose name a German mapmaker put on the New World in 1507.",
+				"Alaska and Hawaii, the last of its fifty states, joined only in 1959.",
+				"Yellowstone, set up in 1872, was the first national park in the world."
+			],
+			"it": [
+				"America viene da Amerigo Vespucci, il navigatore fiorentino il cui nome un cartografo tedesco mise sul Nuovo Mondo nel 1507.",
+				"L’Alaska e le Hawaii, gli ultimi dei suoi cinquanta Stati, entrarono solo nel 1959.",
+				"Yellowstone, istituito nel 1872, fu il primo parco nazionale del mondo."
+			]
+		}
 	},
 	"the-bahamas": {
 		"kind": "region",
@@ -49,7 +73,19 @@
 			"name": "Mount Alvernia",
 			"elevation": 63
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Probably from Spanish baja mar, \"shallow sea\".",
+				"Columbus’s first landfall in 1492 was on one of its islands, probably the one now called San Salvador.",
+				"On the islet of Big Major Cay, pigs swim out to meet the boats."
+			],
+			"it": [
+				"Probabilmente dallo spagnolo baja mar, \"mare basso\".",
+				"Il primo approdo di Colombo, nel 1492, fu su una delle sue isole, probabilmente quella che oggi si chiama San Salvador.",
+				"Sull’isolotto di Big Major Cay i maiali nuotano incontro alle barche."
+			]
+		}
 	},
 	"mexico": {
 		"kind": "region",
@@ -69,7 +105,19 @@
 			"name": "Pico de Orizaba",
 			"elevation": 5636
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"From the Mexica, the people we call the Aztecs, whose city, Tenochtitlan, lies under Mexico City.",
+				"Maize, chillies and tomatoes were first grown here, and chocolate was first made here.",
+				"Mexico City, built on a drained lake, is sinking, in places by tens of centimetres a year."
+			],
+			"it": [
+				"Dai Mexica, il popolo che chiamiamo aztechi, la cui città, Tenochtitlan, si trova sotto Città del Messico.",
+				"Il mais, il peperoncino e il pomodoro furono coltivati per la prima volta qui, e qui nacque il cioccolato.",
+				"Città del Messico, costruita su un lago prosciugato, sprofonda, in alcuni punti di decine di centimetri all’anno."
+			]
+		}
 	},
 	"cuba": {
 		"kind": "region",
@@ -84,7 +132,19 @@
 			"name": "Pico Turquino",
 			"elevation": 1974
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Probably from a Taíno word, though what it meant is disputed.",
+				"Columbus landed here in 1492 and believed it was part of Asia.",
+				"The American cars of the 1950s still on its streets date from before the trade embargo of the early 1960s."
+			],
+			"it": [
+				"Probabilmente da una parola taíno, ma che cosa significasse è discusso.",
+				"Colombo sbarcò qui nel 1492 e credette che fosse parte dell’Asia.",
+				"Le auto americane degli anni Cinquanta ancora in strada risalgono a prima dell’embargo dei primi anni Sessanta."
+			]
+		}
 	},
 	"haiti": {
 		"kind": "region",
@@ -102,7 +162,19 @@
 			"name": "Pic la Selle",
 			"elevation": 2680
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"From the Taíno name of the island, often read as \"land of mountains\".",
+				"In 1804, after a revolt of enslaved people, it became the first independent state founded by former slaves.",
+				"The Citadelle Laferrière, on a mountaintop in its north, is the largest fortress in the Americas."
+			],
+			"it": [
+				"Dal nome taíno dell’isola, spesso letto come \"terra di montagne\".",
+				"Nel 1804, dopo una rivolta di schiavi, divenne il primo Stato indipendente fondato da ex schiavi.",
+				"La Citadelle Laferrière, su una vetta del nord, è la più grande fortezza delle Americhe."
+			]
+		}
 	},
 	"dominican-republic": {
 		"kind": "region",
@@ -120,7 +192,19 @@
 			"name": "Pico Duarte",
 			"elevation": 3098
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Named for its capital, Santo Domingo, and so for Saint Dominic.",
+				"Santo Domingo, founded in 1496, is the oldest city built by Europeans still standing in the Americas.",
+				"It shares the island of Hispaniola with Haiti."
+			],
+			"it": [
+				"Prende il nome dalla capitale, Santo Domingo, e quindi da san Domenico.",
+				"Santo Domingo, fondata nel 1496, è la più antica città costruita dagli europei ancora esistente nelle Americhe.",
+				"Divide l’isola di Hispaniola con Haiti."
+			]
+		}
 	},
 	"jamaica": {
 		"kind": "region",
@@ -135,7 +219,19 @@
 			"name": "Blue Mountain Peak",
 			"elevation": 2256
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"From the Taíno Xaymaca, often read as \"land of wood and water\".",
+				"Reggae was born here in the 1960s, and Bob Marley took it around the world.",
+				"Blue Mountain coffee is grown on the mountains of its east."
+			],
+			"it": [
+				"Dal taíno Xaymaca, spesso letto come \"terra di boschi e d’acqua\".",
+				"Il reggae nacque qui negli anni Sessanta, e Bob Marley lo portò in tutto il mondo.",
+				"Il caffè Blue Mountain cresce sulle montagne della sua parte orientale."
+			]
+		}
 	},
 	"belize": {
 		"kind": "region",
@@ -154,7 +250,19 @@
 			"name": "Doyle's Delight",
 			"elevation": 1174
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Where the name comes from is uncertain: perhaps from a Maya word for muddy water, perhaps from a Scottish buccaneer called Wallace.",
+				"The only country in Central America whose official language is English.",
+				"The Great Blue Hole, a sinkhole in its barrier reef, is more than 300 m across."
+			],
+			"it": [
+				"Da dove venga il nome è incerto: forse da una parola maya per l’acqua fangosa, forse da un bucaniere scozzese di nome Wallace.",
+				"L’unico paese dell’America centrale che ha l’inglese come lingua ufficiale.",
+				"Il Great Blue Hole, una dolina nella sua barriera corallina, è largo più di 300 m."
+			]
+		}
 	},
 	"guatemala": {
 		"kind": "region",
@@ -175,7 +283,19 @@
 			"name": "Volcán Tajumulco",
 			"elevation": 4220
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Probably from Nahuatl Quauhtlemallan, \"place of many trees\".",
+				"Tikal, in its northern jungle, was one of the greatest cities of the Maya.",
+				"More than twenty Mayan languages are still spoken here."
+			],
+			"it": [
+				"Probabilmente dal nahuatl Quauhtlemallan, \"luogo di molti alberi\".",
+				"Tikal, nella giungla del nord, fu una delle più grandi città dei Maya.",
+				"Qui si parlano ancora più di venti lingue maya."
+			]
+		}
 	},
 	"honduras": {
 		"kind": "region",
@@ -195,7 +315,19 @@
 			"name": "Cerro Las Minas",
 			"elevation": 2849
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Spanish for \"depths\", perhaps for the deep waters off its northern coast.",
+				"Copán, in its west, was a Maya city famous for its carved stone stelae.",
+				"The writer O. Henry coined \"banana republic\" about it in 1904."
+			],
+			"it": [
+				"In spagnolo \"profondità\", forse per le acque profonde davanti alla costa settentrionale.",
+				"Copán, a ovest, fu una città maya famosa per le sue stele di pietra scolpita.",
+				"Lo scrittore O. Henry coniò l’espressione \"repubblica delle banane\" pensando a questo paese, nel 1904."
+			]
+		}
 	},
 	"el-salvador": {
 		"kind": "region",
@@ -214,7 +346,19 @@
 			"name": "Cerro El Pital",
 			"elevation": 2730
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"\"The Saviour\", named for Christ.",
+				"The smallest country in Central America, and the only one with no Caribbean coast.",
+				"In 2021 it became the first country to make bitcoin legal tender."
+			],
+			"it": [
+				"\"Il Salvatore\", da Cristo.",
+				"Il paese più piccolo dell’America centrale, e l’unico senza una costa sui Caraibi.",
+				"Nel 2021 fu il primo paese a rendere il bitcoin moneta legale."
+			]
+		}
 	},
 	"nicaragua": {
 		"kind": "region",
@@ -229,7 +373,19 @@
 			"nameIt": "Managua",
 			"population": 920000
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Perhaps from Nicarao, a chief the Spanish met in 1522.",
+				"Lake Nicaragua is one of the few freshwater lakes with sharks, which swim up the river from the sea.",
+				"Rubén Darío, the poet who founded Spanish-language modernism, was born here."
+			],
+			"it": [
+				"Forse da Nicarao, un capo che gli spagnoli incontrarono nel 1522.",
+				"Il lago Nicaragua è uno dei pochi laghi d’acqua dolce con gli squali, che risalgono il fiume dal mare.",
+				"Qui nacque Rubén Darío, il poeta che fondò il modernismo di lingua spagnola."
+			]
+		}
 	},
 	"trinidad-and-tobago": {
 		"kind": "region",
@@ -244,7 +400,19 @@
 			"name": "Aripo Peak",
 			"elevation": 940
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Trinidad, \"Trinity\", was named by Columbus in 1498, it is said for three hills he saw from the sea.",
+				"The steelpan, made from oil drums, was invented here in the 20th century.",
+				"Its Pitch Lake is the largest natural deposit of asphalt in the world."
+			],
+			"it": [
+				"Trinidad, \"Trinità\", fu chiamata così da Colombo nel 1498, si dice per tre colline che vide dal mare.",
+				"Lo steelpan, fatto con i fusti del petrolio, fu inventato qui nel Novecento.",
+				"Il suo Pitch Lake è il più grande giacimento naturale di asfalto del mondo."
+			]
+		}
 	},
 	"costa-rica": {
 		"kind": "region",
@@ -263,7 +431,19 @@
 			"name": "Cerro Chirripó",
 			"elevation": 3820
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"\"Rich coast\", from the Spanish, perhaps for the gold its people wore when they arrived.",
+				"It abolished its army in 1948.",
+				"About a quarter of its land is protected in parks and reserves."
+			],
+			"it": [
+				"\"Costa ricca\", dallo spagnolo, forse per l’oro che portavano i suoi abitanti all’arrivo degli spagnoli.",
+				"Ha abolito l’esercito nel 1948.",
+				"Circa un quarto del suo territorio è protetto in parchi e riserve."
+			]
+		}
 	},
 	"panama": {
 		"kind": "region",
@@ -281,6 +461,18 @@
 			"name": "Volcán Barú",
 			"elevation": 3475
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Probably from a local word for \"abundance of fish\".",
+				"Its canal, opened in 1914, lets ships pass between the Atlantic and the Pacific.",
+				"Because the isthmus bends, there are places where the sun rises over the Pacific."
+			],
+			"it": [
+				"Probabilmente da una parola locale per \"abbondanza di pesci\".",
+				"Il suo canale, aperto nel 1914, permette alle navi di passare dall’Atlantico al Pacifico.",
+				"Poiché l’istmo è curvo, in alcuni punti il sole sorge sul Pacifico."
+			]
+		}
 	}
 }
