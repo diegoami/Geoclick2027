@@ -1,0 +1,45 @@
+{
+	"_note": [
+		"Name-facts for South Africa (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
+		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
+		"of the same id, written later, never shows a town's sentences."
+	],
+	"bloemfontein": {
+		"city": {
+			"en": [
+				"\"Fountain of flowers\".",
+				"J. R. R. Tolkien was born here in 1892."
+			],
+			"it": [
+				"\"Fontana di fiori\".",
+				"Qui nacque J. R. R. Tolkien, nel 1892."
+			]
+		}
+	},
+	"cape-town": {
+		"city": {
+			"en": [
+				"Founded in 1652 by the Dutch East India Company as a station to supply its ships.",
+				"Table Mountain, flat-topped, rises right behind it.",
+				"Nelson Mandela was held for 18 years on Robben Island, in its bay."
+			],
+			"it": [
+				"Fondata nel 1652 dalla Compagnia olandese delle Indie orientali come stazione di rifornimento per le sue navi.",
+				"La Table Mountain, dalla cima piatta, si alza proprio alle sue spalle.",
+				"Nelson Mandela fu rinchiuso per 18 anni a Robben Island, nella sua baia."
+			]
+		}
+	},
+	"pretoria": {
+		"city": {
+			"en": [
+				"Named for Andries Pretorius, a leader of the Voortrekkers.",
+				"Its jacaranda trees turn it purple every October."
+			],
+			"it": [
+				"Prende il nome da Andries Pretorius, un capo dei Voortrekker.",
+				"I suoi jacaranda la tingono di viola ogni ottobre."
+			]
+		}
+	}
+}

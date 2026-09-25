@@ -5,7 +5,17 @@
 		"populationRank": 10,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"It rose after the Arab conquest, when its great neighbour Carthage was left in ruins.",
+				"Its medina, with some 700 monuments, is a UNESCO site."
+			],
+			"it": [
+				"Crebbe dopo la conquista araba, quando la grande vicina Cartagine fu lasciata in rovina.",
+				"La sua medina, con circa 700 monumenti, è un sito UNESCO."
+			]
+		}
 	},
 	"algiers": {
 		"kind": "city",
@@ -15,7 +25,17 @@
 		"region": "Alger",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Called Alger la Blanche, \"Algiers the White\", for its white houses above the bay.",
+				"Its Casbah, the old town climbing the hill, is a UNESCO site."
+			],
+			"it": [
+				"Chiamata Alger la Blanche, \"Algeri la bianca\", per le case bianche sopra la baia.",
+				"La sua Casbah, la città vecchia che sale sulla collina, è un sito UNESCO."
+			]
+		}
 	},
 	"rabat": {
 		"kind": "city",
@@ -25,7 +45,19 @@
 		"region": "Rabat - Salé - Zemmour - Zaer",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"From ribat, a fortified monastery that stood here in the 12th century.",
+				"The Hassan Tower, the minaret of a mosque begun in 1195, was never finished.",
+				"It has been the capital only since 1912."
+			],
+			"it": [
+				"Da ribat, un monastero fortificato che sorgeva qui nel XII secolo.",
+				"La torre Hassan, il minareto di una moschea iniziata nel 1195, non fu mai finita.",
+				"È la capitale solo dal 1912."
+			]
+		}
 	},
 	"tripoli": {
 		"kind": "city",
@@ -35,7 +67,17 @@
 		"region": "Tajura' wa an Nawahi al Arba",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"From Greek Tripolis, \"three cities\": Oea, which it grew from, and Sabratha and Leptis Magna.",
+				"Its Red Castle has watched over the harbour since the Middle Ages."
+			],
+			"it": [
+				"Dal greco Tripolis, \"tre città\": Oea, da cui è nata, e Sabratha e Leptis Magna.",
+				"Il suo Castello rosso domina il porto dal Medioevo."
+			]
+		}
 	},
 	"cairo": {
 		"kind": "city",
@@ -65,7 +107,15 @@
 		"populationRank": 35,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"A small village until 1958, when it was chosen to be built up as the capital of the new country."
+			],
+			"it": [
+				"Un piccolo villaggio fino al 1958, quando fu scelto per diventare la capitale del nuovo paese."
+			]
+		}
 	},
 	"khartoum": {
 		"kind": "city",
@@ -74,7 +124,17 @@
 		"population1950": 183000,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Its name is often read as \"elephant’s trunk\", for the strip of land where the two Niles meet.",
+				"General Charles Gordon was killed here in 1885, at the end of the Mahdist siege."
+			],
+			"it": [
+				"Il nome si legge spesso come \"proboscide dell’elefante\", per la lingua di terra dove si incontrano i due Nili.",
+				"Qui fu ucciso il generale Charles Gordon nel 1885, alla fine dell’assedio mahdista."
+			]
+		}
 	},
 	"asmara": {
 		"kind": "city",
@@ -83,7 +143,17 @@
 		"region": "Anseba",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"The Fiat Tagliero garage, built in 1938, is shaped like an aeroplane with its wings stretched out.",
+				"Its name is often read as \"they made them unite\", for four villages that joined, though that is uncertain."
+			],
+			"it": [
+				"Il garage Fiat Tagliero, costruito nel 1938, ha la forma di un aereo con le ali spiegate.",
+				"Il nome si legge spesso come \"le fecero unire\", per quattro villaggi che si fusero, ma è incerto."
+			]
+		}
 	},
 	"praia": {
 		"kind": "city",
@@ -91,7 +161,17 @@
 		"populationRank": 50,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Portuguese for \"beach\".",
+				"Cidade Velha, nearby on the same island, was the first colonial town Europeans built in the tropics."
+			],
+			"it": [
+				"In portoghese \"spiaggia\".",
+				"Cidade Velha, qui vicino sulla stessa isola, fu la prima città coloniale costruita dagli europei ai tropici."
+			]
+		}
 	},
 	"dakar": {
 		"kind": "city",
@@ -100,7 +180,17 @@
 		"population1950": 211000,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"The finish line of the Paris–Dakar rally until 2007.",
+				"The island of Gorée, off its coast, is a UNESCO memorial to the Atlantic slave trade."
+			],
+			"it": [
+				"Il traguardo del rally Parigi-Dakar fino al 2007.",
+				"L’isola di Gorée, al largo della sua costa, è un luogo UNESCO della memoria della tratta atlantica."
+			]
+		}
 	},
 	"niamey": {
 		"kind": "city",
@@ -109,7 +199,15 @@
 		"population1950": 24000,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"A small village on the Niger until the French made it the capital of the colony in 1926."
+			],
+			"it": [
+				"Un piccolo villaggio sul Niger finché i francesi non ne fecero la capitale della colonia, nel 1926."
+			]
+		}
 	},
 	"banjul": {
 		"kind": "city",
@@ -117,7 +215,15 @@
 		"populationRank": 53,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Founded by the British in 1816 as Bathurst, on an island at the mouth of the river; it took its present name in 1973."
+			],
+			"it": [
+				"Fondata dagli inglesi nel 1816 come Bathurst, su un’isola alla foce del fiume; prese il nome attuale nel 1973."
+			]
+		}
 	},
 	"bamako": {
 		"kind": "city",
@@ -126,7 +232,15 @@
 		"population1950": 89000,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"The name is often read as \"crocodile river\" in Bambara, and three crocodiles are on its arms."
+			],
+			"it": [
+				"Il nome si legge spesso come \"fiume del coccodrillo\" in bambara, e sul suo stemma ci sono tre coccodrilli."
+			]
+		}
 	},
 	"ouagadougou": {
 		"kind": "city",
@@ -136,7 +250,15 @@
 		"region": "Kadiogo",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"The seat of the Mossi kings, the Moro Naba, whose weekly ceremony at the palace is still held."
+			],
+			"it": [
+				"La sede dei re mossi, i Moro Naba, la cui cerimonia settimanale al palazzo si tiene ancora."
+			]
+		}
 	},
 	"n-djamena": {
 		"kind": "city",
@@ -146,7 +268,15 @@
 		"region": "Hadjer-Lamis",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Called Fort-Lamy until 1973; the new name is Arabic for \"place of rest\"."
+			],
+			"it": [
+				"Si chiamò Fort-Lamy fino al 1973; il nuovo nome in arabo significa \"luogo di riposo\"."
+			]
+		}
 	},
 	"bissau": {
 		"kind": "city",
@@ -154,7 +284,15 @@
 		"populationRank": 41,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Founded by the Portuguese in 1687 as a fortified trading post."
+			],
+			"it": [
+				"Fondata dai portoghesi nel 1687 come stazione commerciale fortificata."
+			]
+		}
 	},
 	"djibouti": {
 		"kind": "city",
@@ -162,7 +300,15 @@
 		"populationRank": 30,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"A port built by the French from 1888, whose railway to Addis Ababa became Ethiopia’s road to the sea."
+			],
+			"it": [
+				"Un porto costruito dai francesi dal 1888, la cui ferrovia per Addis Abeba divenne lo sbocco al mare dell’Etiopia."
+			]
+		}
 	},
 	"hargeisa": {
 		"kind": "city",
@@ -170,7 +316,15 @@
 		"populationRank": 39,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Largely destroyed in the war of 1988, it has been rebuilt as the seat of Somaliland’s government."
+			],
+			"it": [
+				"In gran parte distrutta nella guerra del 1988, è stata ricostruita come sede del governo del Somaliland."
+			]
+		}
 	},
 	"conakry": {
 		"kind": "city",
@@ -179,7 +333,15 @@
 		"population1950": 31000,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"It began on Tombo, an island that was later joined to the Kaloum peninsula."
+			],
+			"it": [
+				"Nacque su Tombo, un’isola poi unita alla penisola di Kaloum."
+			]
+		}
 	},
 	"abuja": {
 		"kind": "city",
@@ -210,7 +372,19 @@
 		"population1950": 392000,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"\"New flower\", the name Empress Taytu gave it in 1886.",
+				"The African Union has its headquarters here.",
+				"At about 2,350 m it is one of the highest capitals in the world."
+			],
+			"it": [
+				"\"Nuovo fiore\", il nome che le diede l’imperatrice Taitù nel 1886.",
+				"Qui ha sede l’Unione africana.",
+				"A circa 2.350 m è una delle capitali più alte del mondo."
+			]
+		}
 	},
 	"freetown": {
 		"kind": "city",
@@ -220,7 +394,15 @@
 		"region": "Western",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Its great cotton tree, where the first freed settlers are said to have given thanks in 1792, stood until a storm brought it down in 2023."
+			],
+			"it": [
+				"Il suo grande albero del cotone, dove si dice che i primi coloni liberati avessero reso grazie nel 1792, rimase in piedi finché una tempesta non lo abbatté nel 2023."
+			]
+		}
 	},
 	"yamoussoukro": {
 		"kind": "city",
@@ -229,7 +411,15 @@
 		"region": "Lacs",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"The birthplace of the first president, Félix Houphouët-Boigny, who made it the capital in 1983."
+			],
+			"it": [
+				"Il luogo di nascita del primo presidente, Félix Houphouët-Boigny, che ne fece la capitale nel 1983."
+			]
+		}
 	},
 	"porto-novo": {
 		"kind": "city",
@@ -237,7 +427,15 @@
 		"populationRank": 43,
 		"region": "Ouémé",
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"\"New port\", a name the Portuguese gave it; it is the official capital, though the government sits mostly in Cotonou."
+			],
+			"it": [
+				"\"Porto nuovo\", un nome dato dai portoghesi; è la capitale ufficiale, anche se il governo siede per lo più a Cotonou."
+			]
+		}
 	},
 	"monrovia": {
 		"kind": "city",
@@ -247,7 +445,15 @@
 		"region": "Montserrado",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Providence Island, in its harbour, is where the first settlers from America landed in 1822."
+			],
+			"it": [
+				"L’isola di Providence, nel suo porto, è il luogo dove sbarcarono i primi coloni dall’America nel 1822."
+			]
+		}
 	},
 	"lome": {
 		"kind": "city",
@@ -257,7 +463,15 @@
 		"region": "Maritime",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its Grand Marché was ruled by the \"Nana Benz\", women cloth traders rich enough to be driven in Mercedes cars."
+			],
+			"it": [
+				"Il suo Grand Marché era dominato dalle \"Nana Benz\", commercianti di stoffe abbastanza ricche da girare in Mercedes."
+			]
+		}
 	},
 	"accra": {
 		"kind": "city",
@@ -267,7 +481,17 @@
 		"region": "Greater Accra",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"From an Akan word often read as \"ants\", for the anthills on its plain.",
+				"Kwame Nkrumah declared the country’s independence here in 1957."
+			],
+			"it": [
+				"Da una parola akan spesso letta come \"formiche\", per i formicai della sua pianura.",
+				"Qui Kwame Nkrumah proclamò l’indipendenza del paese nel 1957."
+			]
+		}
 	},
 	"bangui": {
 		"kind": "city",
@@ -275,7 +499,15 @@
 		"populationRank": 33,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named for the rapids of the Ubangi river at its edge."
+			],
+			"it": [
+				"Prende il nome dalle rapide del fiume Ubangi ai suoi margini."
+			]
+		}
 	},
 	"yaounde": {
 		"kind": "city",
@@ -285,7 +517,15 @@
 		"region": "Centre",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"It grew from a German post of 1889, on a ring of seven hills."
+			],
+			"it": [
+				"Nacque da un posto tedesco del 1889, su una corona di sette colli."
+			]
+		}
 	},
 	"malabo": {
 		"kind": "city",
@@ -294,7 +534,15 @@
 		"region": "Bioko Norte",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Called Santa Isabel until 1973."
+			],
+			"it": [
+				"Si chiamò Santa Isabel fino al 1973."
+			]
+		}
 	},
 	"mogadishu": {
 		"kind": "city",
@@ -304,7 +552,15 @@
 		"region": "Banaadir",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"One of the oldest trading cities of East Africa; Ibn Battuta found it rich when he visited in 1331."
+			],
+			"it": [
+				"Una delle più antiche città mercantili dell’Africa orientale; Ibn Battuta la trovò ricca quando la visitò nel 1331."
+			]
+		}
 	},
 	"libreville": {
 		"kind": "city",
@@ -313,7 +569,15 @@
 		"region": "Estuaire",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"\"Free town\", founded in 1849 for Africans freed from a captured slave ship."
+			],
+			"it": [
+				"\"Città libera\", fondata nel 1849 per africani liberati da una nave negriera catturata."
+			]
+		}
 	},
 	"sao-tome": {
 		"kind": "city",
@@ -321,7 +585,15 @@
 		"populationRank": 52,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named for Saint Thomas, on whose feast day, 21 December 1471, the Portuguese reached the island."
+			],
+			"it": [
+				"Prende il nome da san Tommaso, nel giorno della cui festa, il 21 dicembre 1471, i portoghesi raggiunsero l’isola."
+			]
+		}
 	},
 	"kampala": {
 		"kind": "city",
@@ -330,7 +602,17 @@
 		"population1950": 95000,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Its name is often read as \"hill of the impala\".",
+				"Like Rome, it was first built on seven hills."
+			],
+			"it": [
+				"Il nome si legge spesso come \"collina dell’impala\".",
+				"Come Roma, fu costruita dapprima su sette colli."
+			]
+		}
 	},
 	"nairobi": {
 		"kind": "city",
@@ -339,7 +621,17 @@
 		"population1950": 137000,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"From a Maasai phrase for \"cool water\".",
+				"A national park with lions and giraffes lies in sight of its tower blocks."
+			],
+			"it": [
+				"Da un’espressione masai che significa \"acqua fresca\".",
+				"Un parco nazionale con leoni e giraffe si trova in vista dei suoi grattacieli."
+			]
+		}
 	},
 	"kigali": {
 		"kind": "city",
@@ -349,7 +641,17 @@
 		"region": "Kigali City",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"The Kigali Genocide Memorial is the resting place of more than 250,000 victims of 1994.",
+				"Plastic bags have been banned here since 2008."
+			],
+			"it": [
+				"Il memoriale del genocidio di Kigali è il luogo di sepoltura di più di 250.000 vittime del 1994.",
+				"I sacchetti di plastica qui sono vietati dal 2008."
+			]
+		}
 	},
 	"gitega": {
 		"kind": "city",
@@ -357,7 +659,15 @@
 		"populationRank": 54,
 		"region": "Muramvya",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"The old royal town, it replaced Bujumbura as the capital in 2019."
+			],
+			"it": [
+				"L’antica città reale, nel 2019 ha preso il posto di Bujumbura come capitale."
+			]
+		}
 	},
 	"brazzaville": {
 		"kind": "city",
@@ -367,7 +677,15 @@
 		"region": "Pool",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its Basilica of Saint Anne, of 1949, is roofed in green tiles."
+			],
+			"it": [
+				"La sua basilica di Sant’Anna, del 1949, ha il tetto di tegole verdi."
+			]
+		}
 	},
 	"kinshasa": {
 		"kind": "city",
@@ -377,14 +695,34 @@
 		"region": "Kinshasa City",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Called Léopoldville until 1966.",
+				"With well over ten million people, it is one of the largest French-speaking cities in the world.",
+				"Muhammad Ali beat George Foreman here in 1974, in the Rumble in the Jungle."
+			],
+			"it": [
+				"Si chiamò Léopoldville fino al 1966.",
+				"Con ben più di dieci milioni di abitanti, è una delle più grandi città francofone del mondo.",
+				"Qui Muhammad Ali batté George Foreman nel 1974, nel Rumble in the Jungle."
+			]
+		}
 	},
 	"dodoma": {
 		"kind": "city",
 		"population": 218269,
 		"populationRank": 45,
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Chosen as the capital in 1973, though the government moved from Dar es Salaam only slowly, over decades."
+			],
+			"it": [
+				"Scelta come capitale nel 1973, anche se il governo si trasferì da Dar es Salaam solo lentamente, nel corso di decenni."
+			]
+		}
 	},
 	"luanda": {
 		"kind": "city",
@@ -393,7 +731,15 @@
 		"population1950": 138000,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"In the oil boom of the 2000s it was often named one of the most expensive cities in the world for foreigners."
+			],
+			"it": [
+				"Nel boom del petrolio degli anni Duemila era spesso indicata tra le città più care del mondo per gli stranieri."
+			]
+		}
 	},
 	"moroni": {
 		"kind": "city",
@@ -401,7 +747,15 @@
 		"populationRank": 49,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"It stands on Grande Comore, at the foot of the Karthala, one of the world’s largest active volcanoes."
+			],
+			"it": [
+				"Sorge sulla Grande Comore, ai piedi del Karthala, uno dei più grandi vulcani attivi del mondo."
+			]
+		}
 	},
 	"lilongwe": {
 		"kind": "city",
@@ -409,7 +763,15 @@
 		"populationRank": 36,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"The capital since 1975, planned as a garden city."
+			],
+			"it": [
+				"La capitale dal 1975, progettata come città giardino."
+			]
+		}
 	},
 	"lusaka": {
 		"kind": "city",
@@ -418,7 +780,15 @@
 		"population1950": 31000,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Named for a village headman, Lusaaka; it has been the capital since 1935."
+			],
+			"it": [
+				"Prende il nome da un capo villaggio, Lusaaka; è la capitale dal 1935."
+			]
+		}
 	},
 	"harare": {
 		"kind": "city",
@@ -427,7 +797,15 @@
 		"population1950": 143000,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Called Salisbury until 1982; the new name comes from a Shona chief, Neharawa."
+			],
+			"it": [
+				"Si chiamò Salisbury fino al 1982; il nuovo nome viene da un capo shona, Neharawa."
+			]
+		}
 	},
 	"antananarivo": {
 		"kind": "city",
@@ -436,7 +814,17 @@
 		"population1950": 177000,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"\"City of the thousand\", for the thousand soldiers said to have guarded it.",
+				"The Rova, the palace of its kings and queens, stands on its highest hill."
+			],
+			"it": [
+				"\"Città dei mille\", per i mille soldati che si dice la difendessero.",
+				"Il Rova, il palazzo dei suoi re e delle sue regine, sorge sulla collina più alta."
+			]
+		}
 	},
 	"windhoek": {
 		"kind": "city",
@@ -445,7 +833,17 @@
 		"region": "Khomas",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Afrikaans for \"windy corner\", though other readings exist.",
+				"The Christuskirche, of 1910, dates from the German colonial years."
+			],
+			"it": [
+				"In afrikaans \"angolo ventoso\", anche se esistono altre letture.",
+				"La Christuskirche, del 1910, risale agli anni della colonia tedesca."
+			]
+		}
 	},
 	"gaborone": {
 		"kind": "city",
@@ -454,7 +852,15 @@
 		"region": "South-East",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Named for Chief Gaborone; it was built as the capital just before independence in 1966."
+			],
+			"it": [
+				"Prende il nome dal capo Gaborone; fu costruita come capitale poco prima dell’indipendenza, nel 1966."
+			]
+		}
 	},
 	"pretoria": {
 		"kind": "city",
@@ -464,7 +870,17 @@
 		"region": "Gauteng",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Named for Andries Pretorius, a leader of the Voortrekkers.",
+				"Its jacaranda trees turn it purple every October."
+			],
+			"it": [
+				"Prende il nome da Andries Pretorius, un capo dei Voortrekker.",
+				"I suoi jacaranda la tingono di viola ogni ottobre."
+			]
+		}
 	},
 	"maputo": {
 		"kind": "city",
@@ -473,7 +889,15 @@
 		"population1950": 92000,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Called Lourenço Marques until 1976, after a Portuguese trader who explored its bay."
+			],
+			"it": [
+				"Si chiamò Lourenço Marques fino al 1976, dal nome di un mercante portoghese che esplorò la sua baia."
+			]
+		}
 	},
 	"mbabane": {
 		"kind": "city",
@@ -482,7 +906,15 @@
 		"region": "Hhohho",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"The capital for government; the royal and legislative capital is Lobamba."
+			],
+			"it": [
+				"La capitale del governo; la capitale reale e legislativa è Lobamba."
+			]
+		}
 	},
 	"bloemfontein": {
 		"kind": "city",
@@ -491,7 +923,17 @@
 		"region": "Orange Free State",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"\"Fountain of flowers\".",
+				"J. R. R. Tolkien was born here in 1892."
+			],
+			"it": [
+				"\"Fontana di fiori\".",
+				"Qui nacque J. R. R. Tolkien, nel 1892."
+			]
+		}
 	},
 	"maseru": {
 		"kind": "city",
@@ -499,7 +941,15 @@
 		"populationRank": 42,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"\"Red sandstones\" in Sesotho; it began as a British police camp in 1869."
+			],
+			"it": [
+				"\"Arenarie rosse\" in sesotho; nacque come accampamento della polizia britannica nel 1869."
+			]
+		}
 	},
 	"cape-town": {
 		"kind": "city",
@@ -509,6 +959,18 @@
 		"region": "Western Cape",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Founded in 1652 by the Dutch East India Company as a station to supply its ships.",
+				"Table Mountain, flat-topped, rises right behind it.",
+				"Nelson Mandela was held for 18 years on Robben Island, in its bay."
+			],
+			"it": [
+				"Fondata nel 1652 dalla Compagnia olandese delle Indie orientali come stazione di rifornimento per le sue navi.",
+				"La Table Mountain, dalla cima piatta, si alza proprio alle sue spalle.",
+				"Nelson Mandela fu rinchiuso per 18 anni a Robben Island, nella sua baia."
+			]
+		}
 	}
 }

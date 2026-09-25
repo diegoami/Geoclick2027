@@ -7,7 +7,17 @@
 		"region": "Distrito Capital",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Named for the Caracas people who lived in its valley.",
+				"Simón Bolívar was born here in 1783."
+			],
+			"it": [
+				"Prende il nome dai Caracas, il popolo che viveva nella sua valle.",
+				"Qui nacque Simón Bolívar, nel 1783."
+			]
+		}
 	},
 	"georgetown": {
 		"kind": "city",
@@ -16,7 +26,17 @@
 		"region": "East Berbice-Corentyne",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Named for King George III.",
+				"Its St George’s Cathedral is one of the tallest wooden churches in the world."
+			],
+			"it": [
+				"Prende il nome dal re Giorgio III.",
+				"La sua cattedrale di San Giorgio è una delle chiese di legno più alte del mondo."
+			]
+		}
 	},
 	"paramaribo": {
 		"kind": "city",
@@ -24,7 +44,17 @@
 		"populationRank": 12,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Its inner city of wooden Dutch colonial houses is a UNESCO site.",
+				"A mosque and a synagogue stand side by side on the same street."
+			],
+			"it": [
+				"Il suo centro di case coloniali olandesi in legno è un sito UNESCO.",
+				"Una moschea e una sinagoga sorgono una accanto all’altra sulla stessa strada."
+			]
+		}
 	},
 	"bogota": {
 		"kind": "city",
@@ -56,7 +86,17 @@
 		"region": "Pichincha",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"In 1978 its old centre was among the first places added to UNESCO’s World Heritage list.",
+				"At about 2,850 m it is one of the highest capitals in the world."
+			],
+			"it": [
+				"Nel 1978 il suo centro storico fu tra i primi luoghi inseriti nel patrimonio mondiale dell’UNESCO.",
+				"A circa 2.850 m è una delle capitali più alte del mondo."
+			]
+		}
 	},
 	"lima": {
 		"kind": "city",
@@ -65,7 +105,17 @@
 		"population1950": 1066000,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Francisco Pizarro founded it in 1535 as the City of Kings.",
+				"It hardly ever rains here, though a grey sea mist covers it for months."
+			],
+			"it": [
+				"Francisco Pizarro la fondò nel 1535 come Città dei Re.",
+				"Qui non piove quasi mai, anche se una nebbia grigia di mare la copre per mesi."
+			]
+		}
 	},
 	"brasilia": {
 		"kind": "city",
@@ -96,7 +146,15 @@
 		"population1950": 319000,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its cable-car network, Mi Teleférico, is the longest urban cable-car system in the world."
+			],
+			"it": [
+				"La sua rete di funivie, Mi Teleférico, è il più lungo sistema urbano di funivie del mondo."
+			]
+		}
 	},
 	"sucre": {
 		"kind": "city",
@@ -105,7 +163,17 @@
 		"region": "Chuquisaca",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Bolivia’s independence was declared here in 1825; the city is named for Antonio José de Sucre.",
+				"Its white colonial centre is a UNESCO site."
+			],
+			"it": [
+				"Qui fu proclamata l’indipendenza della Bolivia nel 1825; la città prende il nome da Antonio José de Sucre.",
+				"Il suo centro coloniale bianco è un sito UNESCO."
+			]
+		}
 	},
 	"asuncion": {
 		"kind": "city",
@@ -114,7 +182,15 @@
 		"population1950": 258000,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Founded on the feast of the Assumption, 15 August 1537."
+			],
+			"it": [
+				"Fondata nel giorno dell’Assunzione, il 15 agosto 1537."
+			]
+		}
 	},
 	"santiago": {
 		"kind": "city",
@@ -124,7 +200,17 @@
 		"region": "Región Metropolitana de Santiago",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Founded in 1541 by the Spanish conquistador Pedro de Valdivia.",
+				"The Andes rise straight behind it, snow-capped for much of the year."
+			],
+			"it": [
+				"Fondata nel 1541 dal conquistador spagnolo Pedro de Valdivia.",
+				"Le Ande si alzano subito alle sue spalle, innevate per buona parte dell’anno."
+			]
+		}
 	},
 	"buenos-aires": {
 		"kind": "city",
@@ -155,6 +241,14 @@
 		"population1950": 1212000,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Where the name comes from is disputed; one old reading is \"I see a mountain\", for the hill across its bay."
+			],
+			"it": [
+				"Da dove venga il nome è discusso; un’antica lettura è \"vedo un monte\", per la collina di fronte alla baia."
+			]
+		}
 	}
 }

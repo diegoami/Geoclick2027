@@ -5,7 +5,15 @@
 		"populationRank": 9,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"The capital since 2006, and one of the least populous capitals in the world."
+			],
+			"it": [
+				"La capitale dal 2006, e una delle capitali meno popolose del mondo."
+			]
+		}
 	},
 	"majuro": {
 		"kind": "city",
@@ -13,7 +21,15 @@
 		"populationRank": 8,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"An atoll whose land lies only a few metres above the sea."
+			],
+			"it": [
+				"Un atollo le cui terre sono solo pochi metri sopra il livello del mare."
+			]
+		}
 	},
 	"palikir": {
 		"kind": "city",
@@ -21,7 +37,15 @@
 		"populationRank": 11,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"On the island of Pohnpei, the capital since 1989."
+			],
+			"it": [
+				"Sull’isola di Pohnpei, la capitale dal 1989."
+			]
+		}
 	},
 	"tarawa": {
 		"kind": "city",
@@ -29,7 +53,15 @@
 		"populationRank": 7,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"The battle of Tarawa, in 1943, was one of the bloodiest of the Pacific War."
+			],
+			"it": [
+				"La battaglia di Tarawa, nel 1943, fu una delle più sanguinose della guerra del Pacifico."
+			]
+		}
 	},
 	"funafuti": {
 		"kind": "city",
@@ -37,7 +69,15 @@
 		"populationRank": 10,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"An atoll whose airstrip is also where people play football and sleep on hot nights."
+			],
+			"it": [
+				"Un atollo la cui pista d’atterraggio serve anche per giocare a calcio e per dormire nelle notti calde."
+			]
+		}
 	},
 	"honiara": {
 		"kind": "city",
@@ -46,7 +86,15 @@
 		"region": "Guadalcanal",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"It grew from an American base on Guadalcanal after the Second World War."
+			],
+			"it": [
+				"Nacque da una base americana su Guadalcanal dopo la Seconda guerra mondiale."
+			]
+		}
 	},
 	"port-moresby": {
 		"kind": "city",
@@ -55,7 +103,15 @@
 		"region": "Central",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Named in 1873 by Captain John Moresby for his father, Admiral Fairfax Moresby."
+			],
+			"it": [
+				"Chiamata così nel 1873 dal capitano John Moresby, in onore del padre, l’ammiraglio Fairfax Moresby."
+			]
+		}
 	},
 	"port-vila": {
 		"kind": "city",
@@ -64,7 +120,15 @@
 		"region": "Shefa",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Until 1980 it was the capital of a colony ruled jointly by Britain and France."
+			],
+			"it": [
+				"Fino al 1980 fu la capitale di una colonia governata insieme da Gran Bretagna e Francia."
+			]
+		}
 	},
 	"suva": {
 		"kind": "city",
@@ -73,7 +137,15 @@
 		"region": "Central",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"The capital since 1882, and one of the largest towns of the South Pacific islands."
+			],
+			"it": [
+				"La capitale dal 1882, e una delle città più grandi delle isole del Pacifico meridionale."
+			]
+		}
 	},
 	"canberra": {
 		"kind": "city",
@@ -103,6 +175,18 @@
 		"region": "Manawatu-Wanganui",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Named for the Duke of Wellington.",
+				"The southernmost capital of a sovereign state.",
+				"Known as Windy Wellington, for the gales through Cook Strait."
+			],
+			"it": [
+				"Prende il nome dal duca di Wellington.",
+				"La capitale di Stato sovrano più a sud del mondo.",
+				"Chiamata Windy Wellington, per le raffiche che attraversano lo stretto di Cook."
+			]
+		}
 	}
 }

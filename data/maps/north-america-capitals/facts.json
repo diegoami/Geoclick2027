@@ -49,7 +49,17 @@
 		"populationRank": 15,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named in 1695 for William III, of the house of Orange-Nassau.",
+				"Early in the 18th century it was a pirates’ republic, and Blackbeard lived here."
+			],
+			"it": [
+				"Prende il nome, dal 1695, da Guglielmo III, della casa di Orange-Nassau.",
+				"All’inizio del Settecento fu una repubblica di pirati, e qui visse Barbanera."
+			]
+		}
 	},
 	"havana": {
 		"kind": "city",
@@ -59,7 +69,17 @@
 		"region": "Ciudad de la Habana",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Founded on its present site in 1519.",
+				"Old Havana and its fortifications are a UNESCO site."
+			],
+			"it": [
+				"Fondata nel sito attuale nel 1519.",
+				"L’Avana vecchia e le sue fortificazioni sono un sito UNESCO."
+			]
+		}
 	},
 	"ciudad-de-mexico": {
 		"kind": "city",
@@ -91,7 +111,17 @@
 		"region": "Ouest",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Named for a French ship, Le Prince, that anchored in its bay.",
+				"An earthquake in 2010 destroyed much of it."
+			],
+			"it": [
+				"Prende il nome da una nave francese, Le Prince, che gettò l’ancora nella sua baia.",
+				"Un terremoto nel 2010 ne distrusse gran parte."
+			]
+		}
 	},
 	"santo-domingo": {
 		"kind": "city",
@@ -101,7 +131,15 @@
 		"region": "Distrito Nacional",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Its cathedral, finished in 1540, is the oldest in the Americas."
+			],
+			"it": [
+				"La sua cattedrale, terminata nel 1540, è la più antica delle Americhe."
+			]
+		}
 	},
 	"kingston": {
 		"kind": "city",
@@ -109,7 +147,15 @@
 		"populationRank": 12,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Founded in 1692, after an earthquake sank Port Royal, the pirates’ town across the harbour."
+			],
+			"it": [
+				"Fondata nel 1692, dopo che un terremoto fece sprofondare Port Royal, la città dei pirati dall’altra parte del porto."
+			]
+		}
 	},
 	"basseterre": {
 		"kind": "city",
@@ -117,7 +163,15 @@
 		"populationRank": 22,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"French for \"low land\"."
+			],
+			"it": [
+				"In francese \"terra bassa\"."
+			]
+		}
 	},
 	"belmopan": {
 		"kind": "city",
@@ -126,7 +180,15 @@
 		"region": "Cayo",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Built inland after Hurricane Hattie wrecked Belize City in 1961; it is one of the smallest capitals in the world."
+			],
+			"it": [
+				"Costruita all’interno dopo che l’uragano Hattie devastò Belize City nel 1961; è una delle capitali più piccole del mondo."
+			]
+		}
 	},
 	"saint-john-s": {
 		"kind": "city",
@@ -134,7 +196,15 @@
 		"populationRank": 19,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"The capital of Antigua, the island Columbus named for a church in Seville."
+			],
+			"it": [
+				"La capitale di Antigua, l’isola che Colombo chiamò come una chiesa di Siviglia."
+			]
+		}
 	},
 	"roseau": {
 		"kind": "city",
@@ -143,7 +213,15 @@
 		"region": "Saint George",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"French for \"reed\", for the reeds along its river."
+			],
+			"it": [
+				"In francese \"canna\", per le canne lungo il suo fiume."
+			]
+		}
 	},
 	"guatemala-city": {
 		"kind": "city",
@@ -153,7 +231,15 @@
 		"region": "Guatemala",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"The capital moved here after earthquakes destroyed Antigua Guatemala in 1773."
+			],
+			"it": [
+				"La capitale fu spostata qui dopo che i terremoti distrussero Antigua Guatemala nel 1773."
+			]
+		}
 	},
 	"tegucigalpa": {
 		"kind": "city",
@@ -163,7 +249,17 @@
 		"region": "Francisco Morazán",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"A name from Nahuatl, whose meaning is disputed.",
+				"Its airport, Toncontín, is known as one of the hardest in the world to land at."
+			],
+			"it": [
+				"Un nome nahuatl di significato discusso.",
+				"Il suo aeroporto, Toncontín, è noto come uno dei più difficili del mondo per l’atterraggio."
+			]
+		}
 	},
 	"castries": {
 		"kind": "city",
@@ -171,7 +267,15 @@
 		"populationRank": 18,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Named for a French minister of the navy, the Marquis de Castries."
+			],
+			"it": [
+				"Prende il nome da un ministro francese della marina, il marchese di Castries."
+			]
+		}
 	},
 	"san-salvador": {
 		"kind": "city",
@@ -180,7 +284,15 @@
 		"population1950": 194000,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Rebuilt many times after earthquakes, it lies below the San Salvador volcano."
+			],
+			"it": [
+				"Ricostruita molte volte dopo i terremoti, sorge ai piedi del vulcano di San Salvador."
+			]
+		}
 	},
 	"kingstown": {
 		"kind": "city",
@@ -188,7 +300,15 @@
 		"populationRank": 17,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Its botanic garden, of 1765, is the oldest in the Americas; Captain Bligh brought breadfruit trees to it."
+			],
+			"it": [
+				"Il suo orto botanico, del 1765, è il più antico delle Americhe; il capitano Bligh vi portò gli alberi del pane."
+			]
+		}
 	},
 	"bridgetown": {
 		"kind": "city",
@@ -197,7 +317,15 @@
 		"region": "Saint Michael",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Its old town and British garrison are a UNESCO site."
+			],
+			"it": [
+				"Il suo centro storico e la guarnigione britannica sono un sito UNESCO."
+			]
+		}
 	},
 	"managua": {
 		"kind": "city",
@@ -206,7 +334,17 @@
 		"population1950": 110000,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Made the capital in 1852 as a compromise between the rival cities of León and Granada.",
+				"An earthquake in 1972 destroyed its centre."
+			],
+			"it": [
+				"Fu fatta capitale nel 1852 come compromesso tra le città rivali di León e Granada.",
+				"Un terremoto nel 1972 ne distrusse il centro."
+			]
+		}
 	},
 	"saint-george-s": {
 		"kind": "city",
@@ -214,7 +352,15 @@
 		"populationRank": 20,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Its houses climb the hills around the Carenage, a horseshoe harbour."
+			],
+			"it": [
+				"Le sue case salgono sulle colline intorno al Carenage, un porto a ferro di cavallo."
+			]
+		}
 	},
 	"port-of-spain": {
 		"kind": "city",
@@ -223,7 +369,15 @@
 		"region": "Port of Spain",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Its carnival is the largest in the Caribbean."
+			],
+			"it": [
+				"Il suo carnevale è il più grande dei Caraibi."
+			]
+		}
 	},
 	"san-jose": {
 		"kind": "city",
@@ -232,7 +386,17 @@
 		"population1950": 148000,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"The capital since 1823.",
+				"In 1884 it was among the first cities in the world with electric street lighting."
+			],
+			"it": [
+				"La capitale dal 1823.",
+				"Nel 1884 fu tra le prime città al mondo con l’illuminazione stradale elettrica."
+			]
+		}
 	},
 	"panama-city": {
 		"kind": "city",
@@ -242,6 +406,16 @@
 		"region": "Panama",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Founded in 1519, the first European city on the Pacific coast of the Americas.",
+				"The pirate Henry Morgan sacked the old city in 1671, and it was rebuilt a few kilometres away."
+			],
+			"it": [
+				"Fondata nel 1519, la prima città europea sulla costa pacifica delle Americhe.",
+				"Il pirata Henry Morgan saccheggiò la città vecchia nel 1671, e fu ricostruita a qualche chilometro di distanza."
+			]
+		}
 	}
 }
