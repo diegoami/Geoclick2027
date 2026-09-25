@@ -18,6 +18,10 @@ For players:
   The version now sits in the bottom-left corner.
 - **Switching Terrain off and on again keeps its names.** Before, the
   mountains and seas came back without them.
+- **A region's name looks the same on every screen.** The Quiz, the
+  Overview and the Tour now write it like Explore does, in capitals with no
+  box. In the Quiz a name you placed is dark green and a name given away is
+  brown. Town names keep their boxes.
 
 ## v0.11.0 — 2026-09-24 — Twice the maps
 

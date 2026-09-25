@@ -145,13 +145,21 @@ pairs well with a canvas/map-heavy UI.
   **Every target on every map now has one** (v0.9.0, FT-41): 28 country
   files, 1 814 authored places, 5 448 sentences, covering all 2 235 targets
   across all 63 maps. **Three sentences each** is the floor everywhere -
-  two is a flip between two things, not a rotation.
+  two is a flip between two things, not a rotation. The 64 maps v0.11.0
+  added have almost none yet; v0.12 writes the continents and the 15 new
+  countries ([PLAN_V0.12.md](docs/PLAN_V0.12.md)).
 
   One file per country, not per map, is what makes that affordable: Italy's
   131 entries feed five maps, and the USA's 219 feed five more. Where one
   id means two different places on two maps - `new-york` the state and the
   city, `jilin` the province and the city - the entry splits into
   `{region, city}` and `build-facts.ts` picks by the target's kind.
+
+  Which file a target reads is `authoredResolver` (`factsHooks.ts`): the
+  map's country, or a town's own `country` on a map of several countries
+  (#39), or `data/facts/world.json` for a whole country on a continent's
+  Countries map (FT-69). `factsFileFor` names the file, and is where the one
+  country two maps spell two ways ("Czech Republic", "Czechia") is joined.
 
 - **The Known map is what a map opens on** (v0.9.0, FT-39), and a tap adds
   or removes a name, kept per map for the session in `mapPrefs.svelte.ts`

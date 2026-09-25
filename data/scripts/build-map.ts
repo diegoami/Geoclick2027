@@ -816,9 +816,13 @@ async function main() {
 			);
 			if (inside) return inside.properties.name;
 			let best = { name: '', distance: Infinity };
+			// On the ground, not in degrees: a degree of longitude shrinks with
+			// cos(latitude), and counting it as a degree of latitude could pick
+			// the next area over for a target far from every outline (#45).
+			const lonScale = Math.cos((point[1] * Math.PI) / 180);
 			for (const area of areas.features) {
 				for (const [lon, lat] of verticesOf(area.geometry)) {
-					const distance = (lon - point[0]) ** 2 + (lat - point[1]) ** 2;
+					const distance = ((lon - point[0]) * lonScale) ** 2 + (lat - point[1]) ** 2;
 					if (distance < best.distance) best = { name: area.properties.name, distance };
 				}
 			}
@@ -841,7 +845,7 @@ async function main() {
 			const names = geojson.features.map((f) => f.properties.name);
 			const twice = names.filter((n, i) => names.indexOf(n) !== i);
 			if (twice.length > 0) {
-				console.error(`--disambiguate: still named twice in one area: ${twice.join(', ')}`);
+				console.error(`--disambiguate-by: still named twice in one area: ${twice.join(', ')}`);
 				process.exit(1);
 			}
 		}

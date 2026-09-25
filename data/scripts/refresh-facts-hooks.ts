@@ -24,7 +24,7 @@ for (const id of ids) {
 	const dir = path.join(DEFAULT_MAPS_DIR, id);
 	const { country, targets } = JSON.parse(readFileSync(path.join(dir, 'map.json'), 'utf8')) as {
 		country?: string;
-		targets: { id: string; country?: string }[];
+		targets: { id: string; country?: string; type?: string }[];
 	};
 	const hooksFor = authoredResolver(country);
 	const targetById = new Map(targets.map((t) => [t.id, t]));
