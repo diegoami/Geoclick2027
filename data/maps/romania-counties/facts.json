@@ -13,7 +13,19 @@
 			"nameIt": "Botoșani",
 			"population": 114783
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Named for its town, a name of uncertain origin.",
+				"Mihai Eminescu, Romania’s national poet, was born in Botoșani in 1850.",
+				"The composer George Enescu was born in 1881 in a village here that now bears his name."
+			],
+			"it": [
+				"Prende il nome dalla sua città, un nome di origine incerta.",
+				"Mihai Eminescu, il poeta nazionale romeno, nacque a Botoșani nel 1850.",
+				"Il compositore George Enescu nacque nel 1881 in un villaggio della contea che oggi porta il suo nome."
+			]
+		}
 	},
 	"satu-mare": {
 		"kind": "region",
@@ -30,7 +42,17 @@
 			"nameIt": "Satu Mare",
 			"population": 112490
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"In Romanian the name reads as \"big village\", probably a reworking of the town’s Hungarian name, Szatmár.",
+				"In the 18th century the Károlyi counts brought in German Catholic settlers, the Satu Mare Swabians."
+			],
+			"it": [
+				"In romeno il nome si legge come \"villaggio grande\", probabilmente un adattamento del nome ungherese della città, Szatmár.",
+				"Nel Settecento i conti Károlyi vi fecero arrivare coloni tedeschi cattolici, gli svevi di Satu Mare."
+			]
+		}
 	},
 	"maramures": {
 		"kind": "region",
@@ -49,7 +71,19 @@
 			"nameIt": "Baia Mare",
 			"population": 136553
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"The origin of the name is uncertain.",
+				"Its wooden churches, with their tall shingled spires, are a UNESCO site.",
+				"In the Merry Cemetery at Săpânța, painted wooden crosses tell the lives of the dead in funny verse."
+			],
+			"it": [
+				"L’origine del nome è incerta.",
+				"Le sue chiese di legno, con alti campanili coperti di scandole, sono un sito UNESCO.",
+				"Nel Cimitero allegro di Săpânța, croci di legno dipinte raccontano la vita dei defunti in versi scherzosi."
+			]
+		}
 	},
 	"suceava": {
 		"kind": "region",
@@ -70,7 +104,19 @@
 			"nameIt": "Suceava",
 			"population": 105796
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Named for its town, a name possibly from Hungarian szűcs, \"furrier\"; the derivation is uncertain.",
+				"The town was the capital of Moldavia from 1388 until 1565.",
+				"The painted monasteries of Bukovina, covered in frescoes outside as well as in, are a UNESCO site."
+			],
+			"it": [
+				"Prende il nome dalla sua città, un nome forse dall’ungherese szűcs, \"pellicciaio\"; l’etimologia è incerta.",
+				"La città fu la capitale della Moldavia dal 1388 al 1565.",
+				"I monasteri dipinti della Bucovina, affrescati all’esterno oltre che all’interno, sono un sito UNESCO."
+			]
+		}
 	},
 	"iasi": {
 		"kind": "region",
@@ -88,7 +134,19 @@
 			"nameIt": "Iași",
 			"population": 325914
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Named for its city, a name sometimes traced to the Iazyges, a people of the steppe; the derivation is uncertain.",
+				"In the First World War, with Bucharest occupied, Iași served as Romania’s capital from 1916 to 1918.",
+				"The wines of Cotnari have been famous since the days of Stephen the Great."
+			],
+			"it": [
+				"Prende il nome dalla sua città, un nome talvolta fatto risalire agli Iazigi, un popolo della steppa; l’etimologia è incerta.",
+				"Nella Prima guerra mondiale, con Bucarest occupata, Iași fece da capitale della Romania dal 1916 al 1918.",
+				"I vini di Cotnari sono famosi fin dai tempi di Stefano il Grande."
+			]
+		}
 	},
 	"bistrita-nasaud": {
 		"kind": "region",
@@ -106,7 +164,19 @@
 			"nameIt": "Bistrița",
 			"population": 81318
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Bistrița is Slavic bystrica, \"the swift one\", a river name; the county adds the town of Năsăud.",
+				"Transylvanian Saxons settled the district in the 12th century, and called it Nösnerland.",
+				"In Bram Stoker’s Dracula, Jonathan Harker stops at Bistritz on his way to the Borgo Pass."
+			],
+			"it": [
+				"Bistrița è lo slavo bystrica, \"la veloce\", un nome di fiume; la contea aggiunge la città di Năsăud.",
+				"I Sassoni di Transilvania si stabilirono nel distretto nel XII secolo, e lo chiamarono Nösnerland.",
+				"Nel Dracula di Bram Stoker, Jonathan Harker fa tappa a Bistritz sulla strada per il passo di Borgo."
+			]
+		}
 	},
 	"salaj": {
 		"kind": "region",
@@ -124,7 +194,17 @@
 			"nameIt": "Zalău",
 			"population": 63232
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Named for the river Sălaj, Szilágy in Hungarian, a name of uncertain meaning.",
+				"Porolissum, near Zalău, was a Roman frontier town on the northern edge of Dacia."
+			],
+			"it": [
+				"Prende il nome dal fiume Sălaj, Szilágy in ungherese, un nome dal significato incerto.",
+				"Porolissum, vicino a Zalău, era una città di frontiera romana al margine settentrionale della Dacia."
+			]
+		}
 	},
 	"bihor": {
 		"kind": "region",
@@ -143,7 +223,19 @@
 			"nameIt": "Oradea",
 			"population": 213830
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Named for the old Hungarian county of Bihar, a name of uncertain origin.",
+				"The Bear Cave, found by quarrymen in 1975, holds the bones of cave bears that died there thousands of years ago.",
+				"A thermal lake near Băile Felix is the only home in Europe of a water lily left over from a warmer age."
+			],
+			"it": [
+				"Prende il nome dall’antica contea ungherese di Bihar, un nome di origine incerta.",
+				"La Grotta degli orsi, scoperta da cavatori nel 1975, conserva le ossa di orsi delle caverne morti lì migliaia di anni fa.",
+				"Un lago termale vicino a Băile Felix è l’unica dimora in Europa di una ninfea rimasta da un’epoca più calda."
+			]
+		}
 	},
 	"neamt": {
 		"kind": "region",
@@ -162,7 +254,19 @@
 			"nameIt": "Piatra Neamț",
 			"population": 102688
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"From Slavic němĭcĭ, \"Germans\", probably for the Teutonic Knights or for German settlers.",
+				"The storyteller Ion Creangă was born at Humulești in 1837 and wrote about his boyhood there.",
+				"The dam at Bicaz, finished in 1960, made Lake Izvorul Muntelui, one of the largest artificial lakes in Romania."
+			],
+			"it": [
+				"Dallo slavo němĭcĭ, \"tedeschi\", probabilmente per i Cavalieri teutonici o per coloni tedeschi.",
+				"Il narratore Ion Creangă nacque a Humulești nel 1837 e scrisse della sua infanzia lì.",
+				"La diga di Bicaz, finita nel 1960, ha creato il lago Izvorul Muntelui, uno dei più grandi laghi artificiali della Romania."
+			]
+		}
 	},
 	"cluj": {
 		"kind": "region",
@@ -182,7 +286,19 @@
 			"nameIt": "Cluj-Napoca",
 			"population": 316748
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Named for Cluj-Napoca, Kolozsvár in Hungarian; the name is probably from Latin clusium, \"enclosed place\", but this is contested.",
+				"The old salt mine at Turda now has a Ferris wheel and a boating lake deep underground.",
+				"Bánffy Castle at Bonțida is called the Versailles of Transylvania."
+			],
+			"it": [
+				"Prende il nome da Cluj-Napoca, Kolozsvár in ungherese; il nome viene probabilmente dal latino clusium, \"luogo chiuso\", ma è discusso.",
+				"La vecchia miniera di sale di Turda oggi ha una ruota panoramica e un laghetto con le barche nelle profondità della terra.",
+				"Il castello Bánffy di Bonțida è chiamato la Versailles della Transilvania."
+			]
+		}
 	},
 	"harghita": {
 		"kind": "region",
@@ -202,7 +318,19 @@
 			"nameIt": "Miercurea Ciuc",
 			"population": 42029
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named for the Harghita Mountains, a chain of extinct volcanoes; the name’s meaning is unknown.",
+				"Most of its people are Székely Hungarians.",
+				"Lake Saint Anne fills a volcanic crater, the only such lake in Romania."
+			],
+			"it": [
+				"Prende il nome dai monti Harghita, una catena di vulcani spenti; il significato del nome è sconosciuto.",
+				"La maggior parte dei suoi abitanti è costituita da Siculi ungheresi.",
+				"Il lago di Sant’Anna riempie un cratere vulcanico, l’unico lago di questo tipo in Romania."
+			]
+		}
 	},
 	"mures": {
 		"kind": "region",
@@ -223,7 +351,19 @@
 			"nameIt": "Târgu Mureș",
 			"population": 149433
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named for the river Mureș, the Marisus of the Romans.",
+				"The citadel of Sighișoara, a medieval town still lived in, is a UNESCO site.",
+				"By tradition Vlad the Impaler was born in Sighișoara, around 1431."
+			],
+			"it": [
+				"Prende il nome dal fiume Mureș, il Marisus dei Romani.",
+				"La cittadella di Sighișoara, una città medievale ancora abitata, è un sito UNESCO.",
+				"Secondo la tradizione Vlad l’Impalatore nacque a Sighișoara, intorno al 1431."
+			]
+		}
 	},
 	"vaslui": {
 		"kind": "region",
@@ -242,7 +382,17 @@
 			"nameIt": "Vaslui",
 			"population": 69225
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Named for its town, a name of uncertain origin.",
+				"At Vaslui in 1475, Stephen the Great of Moldavia defeated a much larger Ottoman army."
+			],
+			"it": [
+				"Prende il nome dalla sua città, un nome di origine incerta.",
+				"A Vaslui, nel 1475, Stefano il Grande di Moldavia sconfisse un esercito ottomano molto più numeroso."
+			]
+		}
 	},
 	"bacau": {
 		"kind": "region",
@@ -261,7 +411,17 @@
 			"nameIt": "Bacău",
 			"population": 199668
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Named for its town, a name whose origin is disputed.",
+				"The Csángós, Catholics who speak an old form of Hungarian, live in villages around Bacău."
+			],
+			"it": [
+				"Prende il nome dalla sua città, un nome di origine discussa.",
+				"I Csángó, cattolici che parlano un’antica forma di ungherese, vivono nei villaggi intorno a Bacău."
+			]
+		}
 	},
 	"arad": {
 		"kind": "region",
@@ -279,7 +439,17 @@
 			"nameIt": "Arad",
 			"population": 169065
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Named for its town, a name of uncertain origin.",
+				"Thirteen generals of the Hungarian revolution were executed at Arad on 6 October 1849, and Hungary still mourns them on that day."
+			],
+			"it": [
+				"Prende il nome dalla sua città, un nome di origine incerta.",
+				"Tredici generali della rivoluzione ungherese furono giustiziati ad Arad il 6 ottobre 1849, e l’Ungheria li ricorda ancora quel giorno."
+			]
+		}
 	},
 	"alba": {
 		"kind": "region",
@@ -300,7 +470,19 @@
 			"nameIt": "Alba Iulia",
 			"population": 66085
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named for Alba Iulia, the \"white castle\" of Gyula, a Hungarian chieftain; the Romans called the place Apulum.",
+				"The union of Transylvania with Romania was proclaimed at Alba Iulia on 1 December 1918, now Romania’s national day.",
+				"The Roman gold mines of Roșia Montană, with galleries cut by hand, became a UNESCO site in 2021."
+			],
+			"it": [
+				"Prende il nome da Alba Iulia, il \"castello bianco\" di Gyula, un capo ungherese; i Romani chiamavano il luogo Apulum.",
+				"L’unione della Transilvania alla Romania fu proclamata ad Alba Iulia il 1º dicembre 1918, oggi festa nazionale romena.",
+				"Le miniere d’oro romane di Roșia Montană, con gallerie scavate a mano, sono diventate un sito UNESCO nel 2021."
+			]
+		}
 	},
 	"covasna": {
 		"kind": "region",
@@ -319,7 +501,19 @@
 			"nameIt": "Sfântu Gheorghe",
 			"population": 60677
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named for its spa town, a name probably from Slavic kvas, \"sour\", for its mineral waters.",
+				"Most of its people are Székely Hungarians.",
+				"Its mofettes, vents of natural carbon dioxide, are used in spa treatments."
+			],
+			"it": [
+				"Prende il nome dalla sua città termale, un nome che viene probabilmente dallo slavo kvas, \"acido\", per le sue acque minerali.",
+				"La maggior parte dei suoi abitanti è costituita da Siculi ungheresi.",
+				"Le sue mofete, esalazioni naturali di anidride carbonica, si usano nelle cure termali."
+			]
+		}
 	},
 	"sibiu": {
 		"kind": "region",
@@ -338,7 +532,19 @@
 			"nameIt": "Sibiu",
 			"population": 155565
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"From Latin Cibinium, for the river Cibin; in German the town is Hermannstadt.",
+				"The Brukenthal Museum in Sibiu, opened in 1817, is one of the oldest museums in Europe.",
+				"In 2007 the town was a European Capital of Culture."
+			],
+			"it": [
+				"Dal latino Cibinium, per il fiume Cibin; in tedesco la città si chiama Hermannstadt.",
+				"Il Museo Brukenthal di Sibiu, aperto nel 1817, è uno dei più antichi musei d’Europa.",
+				"Nel 2007 la città fu Capitale europea della cultura."
+			]
+		}
 	},
 	"hunedoara": {
 		"kind": "region",
@@ -358,7 +564,19 @@
 			"nameIt": "Deva",
 			"population": 67802
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Named for Hunedoara, Hunyad in Hungarian, the town of the Hunyadi family.",
+				"Corvin Castle, rebuilt by John Hunyadi in the 15th century, is one of the largest Gothic castles in Europe.",
+				"Sarmizegetusa Regia, in the Orăștie Mountains, was the capital of the Dacians before the Roman conquest."
+			],
+			"it": [
+				"Prende il nome da Hunedoara, Hunyad in ungherese, la città della famiglia Hunyadi.",
+				"Il castello dei Corvino, ricostruito da Giovanni Hunyadi nel Quattrocento, è uno dei più grandi castelli gotici d’Europa.",
+				"Sarmizegetusa Regia, sui monti di Orăștie, era la capitale dei Daci prima della conquista romana."
+			]
+		}
 	},
 	"brasov": {
 		"kind": "region",
@@ -384,7 +602,19 @@
 			"name": "Moldoveanu",
 			"elevation": 2543
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named for its city, a name whose origin is disputed.",
+				"Bran Castle is sold to visitors as Dracula’s castle, though there is no evidence that Vlad the Impaler ever lived there.",
+				"The Saxon villages of Prejmer and Viscri are UNESCO sites for their fortified churches; King Charles III owns a house in Viscri."
+			],
+			"it": [
+				"Prende il nome dalla sua città, un nome di origine discussa.",
+				"Il castello di Bran è presentato ai visitatori come il castello di Dracula, anche se non ci sono prove che Vlad l’Impalatore vi abbia mai abitato.",
+				"I villaggi sassoni di Prejmer e Viscri sono siti UNESCO per le loro chiese fortificate; re Carlo III possiede una casa a Viscri."
+			]
+		}
 	},
 	"vrancea": {
 		"kind": "region",
@@ -404,7 +634,19 @@
 			"nameIt": "Focșani",
 			"population": 105112
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Named for the Vrancea Mountains, a name of uncertain origin.",
+				"Deep under its mountains lies the source of Romania’s strongest earthquakes, including the one of 1977.",
+				"At Mărășești, in 1917, the Romanian army stopped the German advance."
+			],
+			"it": [
+				"Prende il nome dai monti Vrancea, un nome di origine incerta.",
+				"Nelle profondità dei suoi monti si trova l’origine dei terremoti più forti della Romania, compreso quello del 1977.",
+				"A Mărășești, nel 1917, l’esercito romeno fermò l’avanzata tedesca."
+			]
+		}
 	},
 	"galati": {
 		"kind": "region",
@@ -422,7 +664,17 @@
 			"nameIt": "Galați",
 			"population": 311156
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Named for its city, a name of uncertain origin.",
+				"From 1856 the European Commission of the Danube, which ran shipping on the lower river, had its seat at Galați."
+			],
+			"it": [
+				"Prende il nome dalla sua città, un nome di origine incerta.",
+				"Dal 1856 la Commissione europea del Danubio, che regolava la navigazione sul basso corso del fiume, ebbe sede a Galați."
+			]
+		}
 	},
 	"timis": {
 		"kind": "region",
@@ -439,7 +691,19 @@
 			"nameIt": "Timișoara",
 			"population": 315053
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Named for the river Timiș, the Tibiscus of the Romans.",
+				"Johnny Weissmuller, Olympic swimmer and screen Tarzan, was born in 1904 at Freidorf, now part of Timișoara.",
+				"Herta Müller, who won the Nobel Prize for Literature in 2009, was born in the village of Nițchidorf in 1953."
+			],
+			"it": [
+				"Prende il nome dal fiume Timiș, il Tibiscus dei Romani.",
+				"Johnny Weissmuller, nuotatore olimpico e Tarzan del cinema, nacque nel 1904 a Freidorf, oggi parte di Timișoara.",
+				"Herta Müller, premio Nobel per la letteratura nel 2009, nacque nel villaggio di Nițchidorf nel 1953."
+			]
+		}
 	},
 	"buzau": {
 		"kind": "region",
@@ -459,7 +723,19 @@
 			"nameIt": "Buzău",
 			"population": 130954
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Named for the river Buzău, a name probably older than Romanian.",
+				"At Berca, small mud volcanoes bubble out of a bare grey landscape.",
+				"Amber is found around Colți, where a museum shows it."
+			],
+			"it": [
+				"Prende il nome dal fiume Buzău, un nome probabilmente più antico del romeno.",
+				"A Berca piccoli vulcani di fango gorgogliano in un paesaggio grigio e spoglio.",
+				"Intorno a Colți si trova l’ambra, che un museo del paese espone."
+			]
+		}
 	},
 	"braila": {
 		"kind": "region",
@@ -479,7 +755,17 @@
 			"nameIt": "Brăila",
 			"population": 213569
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Named for its town, a name of uncertain origin.",
+				"The Small Island of Brăila, a stretch of the Danube’s flooded forests and marshes, is a nature park."
+			],
+			"it": [
+				"Prende il nome dalla sua città, un nome di origine incerta.",
+				"La Piccola isola di Brăila, un tratto di boschi allagati e paludi del Danubio, è un parco naturale."
+			]
+		}
 	},
 	"caras-severin": {
 		"kind": "region",
@@ -497,7 +783,19 @@
 			"nameIt": "Reșița",
 			"population": 83324
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Named for the river Caraș and for Severin, an old Hungarian border province.",
+				"The ironworks of Reșița date from 1771, and in 1872 built the first steam locomotive made in what is now Romania.",
+				"The spa of Băile Herculane has been used since Roman times, and is named for Hercules."
+			],
+			"it": [
+				"Prende il nome dal fiume Caraș e da Severin, un’antica provincia di confine ungherese.",
+				"Le ferriere di Reșița risalgono al 1771, e nel 1872 vi fu costruita la prima locomotiva a vapore dell’attuale Romania.",
+				"Le terme di Băile Herculane sono in uso dall’epoca romana, e prendono il nome da Ercole."
+			]
+		}
 	},
 	"prahova": {
 		"kind": "region",
@@ -516,7 +814,19 @@
 			"nameIt": "Ploiești",
 			"population": 232542
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Named for the river Prahova, a name probably Slavic.",
+				"Peleș Castle at Sinaia, built for King Carol I from 1873, was one of the first castles in Europe with electric light.",
+				"Sinaia is named for its monastery, founded in 1695 by a nobleman who had made the pilgrimage to Mount Sinai."
+			],
+			"it": [
+				"Prende il nome dal fiume Prahova, un nome probabilmente slavo.",
+				"Il castello di Peleș a Sinaia, costruito per re Carol I dal 1873, fu uno dei primi castelli d’Europa con la luce elettrica.",
+				"Sinaia prende il nome dal suo monastero, fondato nel 1695 da un nobile che era stato in pellegrinaggio sul monte Sinai."
+			]
+		}
 	},
 	"tulcea": {
 		"kind": "region",
@@ -533,7 +843,19 @@
 			"nameIt": "Tulcea",
 			"population": 92475
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"The town was the Roman Aegyssus; the origin of its modern name is uncertain.",
+				"The Danube Delta, most of which lies here, is a UNESCO site and one of the largest reed beds in the world.",
+				"The Lipovans, Russian Old Believers who fled persecution in the 18th century, still fish in the delta."
+			],
+			"it": [
+				"La città era la romana Aegyssus; l’origine del nome moderno è incerta.",
+				"Il delta del Danubio, che si trova in gran parte qui, è un sito UNESCO e uno dei più vasti canneti del mondo.",
+				"I Lipoveni, Vecchi credenti russi fuggiti dalle persecuzioni nel Settecento, pescano ancora nel delta."
+			]
+		}
 	},
 	"valcea": {
 		"kind": "region",
@@ -554,7 +876,19 @@
 			"nameIt": "Râmnicu Vâlcea",
 			"population": 107558
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"The origin of the name is uncertain.",
+				"Horezu Monastery is a UNESCO site, and the pottery of Horezu is on UNESCO’s list of intangible heritage.",
+				"Mircea the Elder, prince of Wallachia, was buried in 1418 at Cozia Monastery, which he had founded."
+			],
+			"it": [
+				"L’origine del nome è incerta.",
+				"Il monastero di Horezu è un sito UNESCO, e la ceramica di Horezu è nella lista UNESCO del patrimonio immateriale.",
+				"Mircea il Vecchio, principe di Valacchia, fu sepolto nel 1418 nel monastero di Cozia, da lui fondato."
+			]
+		}
 	},
 	"arges": {
 		"kind": "region",
@@ -574,7 +908,19 @@
 			"nameIt": "Pitești",
 			"population": 171021
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Named for the river Argeș, perhaps the Ordessos of Herodotus.",
+				"By legend Master Manole, builder of the cathedral at Curtea de Argeș, walled his own wife into it so that it would stand.",
+				"Poienari, a fortress of Vlad the Impaler, is reached by some 1,480 steps."
+			],
+			"it": [
+				"Prende il nome dal fiume Argeș, forse l’Ordessos di Erodoto.",
+				"Secondo la leggenda Mastro Manole, costruttore della cattedrale di Curtea de Argeș, vi murò la propria moglie perché reggesse.",
+				"Poienari, una fortezza di Vlad l’Impalatore, si raggiunge con circa 1.480 gradini."
+			]
+		}
 	},
 	"gorj": {
 		"kind": "region",
@@ -593,7 +939,19 @@
 			"nameIt": "Târgu Jiu",
 			"population": 97179
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Probably \"the upper Jiu\", from a Slavic word for mountain, as Dolj is the lower.",
+				"Brâncuși’s Endless Column, Table of Silence and Gate of the Kiss, finished in 1938, stand in Târgu Jiu.",
+				"Tudor Vladimirescu, who led the rising of 1821 in Wallachia, was born in the village of Vladimir."
+			],
+			"it": [
+				"Probabilmente \"il Jiu alto\", da una parola slava per \"monte\", come il Dolj è quello basso.",
+				"La Colonna senza fine, la Tavola del silenzio e la Porta del bacio di Brâncuși, finite nel 1938, si trovano a Târgu Jiu.",
+				"Tudor Vladimirescu, che guidò la rivolta del 1821 in Valacchia, nacque nel villaggio di Vladimir."
+			]
+		}
 	},
 	"dambovita": {
 		"kind": "region",
@@ -613,7 +971,19 @@
 			"nameIt": "Târgoviște",
 			"population": 88435
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Named for the river Dâmbovița, probably from a Slavic word for oak.",
+				"Târgoviște was the capital of Wallachia for much of the 15th to 17th centuries.",
+				"Nicolae and Elena Ceaușescu were tried and shot at Târgoviște on 25 December 1989."
+			],
+			"it": [
+				"Prende il nome dal fiume Dâmbovița, probabilmente da una parola slava per \"quercia\".",
+				"Târgoviște fu la capitale della Valacchia per buona parte dei secoli dal XV al XVII.",
+				"Nicolae ed Elena Ceaușescu furono processati e fucilati a Târgoviște il 25 dicembre 1989."
+			]
+		}
 	},
 	"ialomita": {
 		"kind": "region",
@@ -633,7 +1003,17 @@
 			"nameIt": "Slobozia",
 			"population": 52693
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Named for the river Ialomița, a name of uncertain origin.",
+				"In 1951 the communist regime deported tens of thousands of people from the Banat to the Bărăgan steppe, much of it here."
+			],
+			"it": [
+				"Prende il nome dal fiume Ialomița, un nome di origine incerta.",
+				"Nel 1951 il regime comunista deportò decine di migliaia di persone dal Banato nella steppa del Bărăgan, in gran parte qui."
+			]
+		}
 	},
 	"mehedinti": {
 		"kind": "region",
@@ -650,7 +1030,19 @@
 			"nameIt": "Drobeta-Turnu Severin",
 			"population": 106578
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Probably named for Mehadia, an old fortress in the hills.",
+				"The Iron Gates dam, finished in 1972, drowned the island of Ada Kaleh and its Turkish town.",
+				"The face of Decebalus, the last Dacian king, was carved in the rock above the Danube between 1994 and 2004."
+			],
+			"it": [
+				"Probabilmente prende il nome da Mehadia, un’antica fortezza sulle colline.",
+				"La diga delle Porte di Ferro, terminata nel 1972, sommerse l’isola di Ada Kaleh e la sua cittadina turca.",
+				"Il volto di Decebalo, l’ultimo re dei Daci, fu scolpito nella roccia sopra il Danubio tra il 1994 e il 2004."
+			]
+		}
 	},
 	"ilfov": {
 		"kind": "region",
@@ -664,7 +1056,19 @@
 			"Prahova"
 		],
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Named for the small river Ilfov.",
+				"By tradition Vlad the Impaler is buried in the monastery on the island of Snagov.",
+				"Mogoșoaia Palace, built in 1702 for Prince Constantin Brâncoveanu, is a model of the style named after him."
+			],
+			"it": [
+				"Prende il nome dal piccolo fiume Ilfov.",
+				"Secondo la tradizione Vlad l’Impalatore è sepolto nel monastero sull’isola di Snagov.",
+				"Il palazzo di Mogoșoaia, costruito per il principe Constantin Brâncoveanu nel 1702, è un esempio dello stile che porta il suo nome."
+			]
+		}
 	},
 	"bucharest": {
 		"kind": "region",
@@ -679,7 +1083,19 @@
 			"nameIt": "Bucarest",
 			"population": 1942000
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Its name is linked by legend to a shepherd, Bucur, and by others to bucurie, \"joy\".",
+				"The capital is a municipality with the rank of a county, divided into six numbered sectors.",
+				"The Palace of the Parliament, begun under Ceaușescu in 1984, is one of the largest buildings in the world."
+			],
+			"it": [
+				"Il suo nome è legato dalla leggenda a un pastore, Bucur, e da altri a bucurie, \"gioia\".",
+				"La capitale è un municipio con rango di contea, diviso in sei settori numerati.",
+				"Il Palazzo del Parlamento, iniziato sotto Ceaușescu nel 1984, è uno degli edifici più grandi del mondo."
+			]
+		}
 	},
 	"olt": {
 		"kind": "region",
@@ -697,7 +1113,17 @@
 			"nameIt": "Slatina",
 			"population": 78988
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Named for the river Olt, the Alutus of the Romans.",
+				"Romula, near Reșca, was the largest Roman town in this part of Dacia."
+			],
+			"it": [
+				"Prende il nome dal fiume Olt, l’Alutus dei Romani.",
+				"Romula, vicino a Reșca, era la più grande città romana di questa parte della Dacia."
+			]
+		}
 	},
 	"calarasi": {
 		"kind": "region",
@@ -715,7 +1141,17 @@
 			"nameIt": "Călărași",
 			"population": 73224
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Named for the călărași, mounted messengers who were posted here.",
+				"The Gumelnița culture of the Copper Age is named for a settlement mound near Oltenița."
+			],
+			"it": [
+				"Prende il nome dai călărași, messaggeri a cavallo che vi erano di stanza.",
+				"La cultura di Gumelnița, dell’età del rame, prende il nome da un tell vicino a Oltenița."
+			]
+		}
 	},
 	"constanta": {
 		"kind": "region",
@@ -733,7 +1169,19 @@
 			"nameIt": "Costanza",
 			"population": 303399
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Most of Romania’s share of Dobruja, a name that comes from Dobrotitsa, a 14th-century ruler.",
+				"Histria, founded by Greek settlers around 630 BC, is the oldest town in Romania.",
+				"The Tropaeum Traiani at Adamclisi celebrates Trajan’s victory over the Dacians, in 109."
+			],
+			"it": [
+				"La maggior parte della Dobrugia romena, un nome che viene da Dobrotica, un signore del Trecento.",
+				"Histria, fondata da coloni greci intorno al 630 a.C., è la città più antica della Romania.",
+				"Il Tropaeum Traiani di Adamclisi celebra la vittoria di Traiano sui Daci, nel 109."
+			]
+		}
 	},
 	"dolj": {
 		"kind": "region",
@@ -751,7 +1199,17 @@
 			"nameIt": "Craiova",
 			"population": 304142
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Probably \"the lower Jiu\", from a Slavic word for low, as Gorj is the upper.",
+				"Craiova was for centuries the seat of the Great Ban, who governed Oltenia for the princes of Wallachia."
+			],
+			"it": [
+				"Probabilmente \"il Jiu basso\", da una parola slava per \"basso\", come il Gorj è quello alto.",
+				"Craiova fu per secoli la sede del Gran Bano, che governava l’Oltenia per i principi di Valacchia."
+			]
+		}
 	},
 	"giurgiu": {
 		"kind": "region",
@@ -769,7 +1227,17 @@
 			"nameIt": "Giurgiu",
 			"population": 69067
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Named for its town, where Genoese traders are said to have built a fort named after Saint George.",
+				"The first railway of the Romanian state, from Bucharest to Giurgiu on the Danube, opened in 1869."
+			],
+			"it": [
+				"Prende il nome dalla sua città, dove si dice che mercanti genovesi avessero costruito un forte dedicato a san Giorgio.",
+				"La prima ferrovia dello stato romeno, da Bucarest a Giurgiu sul Danubio, fu aperta nel 1869."
+			]
+		}
 	},
 	"teleorman": {
 		"kind": "region",
@@ -787,6 +1255,18 @@
 			"nameIt": "Alexandria",
 			"population": 49346
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"From Turkic deli orman, \"mad forest\", for the dense woods that once covered it.",
+				"Its county town, Alexandria, was founded in 1834 and named for Prince Alexandru Ghica.",
+				"In 1877 the Russian army crossed the Danube at Zimnicea to fight the Ottomans."
+			],
+			"it": [
+				"Dal turco deli orman, \"foresta pazza\", per i fitti boschi che un tempo la coprivano.",
+				"Il suo capoluogo, Alexandria, fu fondato nel 1834 e prende il nome dal principe Alexandru Ghica.",
+				"Nel 1877 l’esercito russo attraversò il Danubio a Zimnicea per combattere gli Ottomani."
+			]
+		}
 	}
 }

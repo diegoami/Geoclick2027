@@ -2,9 +2,36 @@
 	"_note": [
 		"Name-facts for Bulgaria (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences."
+		"of the same id, written later, never shows a town's sentences.",
+		"FT-73 added the twenty-eight provinces, each as a \"region\" entry beside the town of the same id; every province is named for its town, so the first sentence is about the town's name."
 	],
+	"blagoevgrad": {
+		"region": {
+			"en": [
+				"Named in 1950 for Dimitar Blagoev, the founder of Bulgaria’s socialist party; the town had been Gorna Dzhumaya.",
+				"Melnik, with a couple of hundred people, is Bulgaria’s smallest town, set among pillars of eroded sandstone.",
+				"The Pirin National Park has been a UNESCO site since 1983."
+			],
+			"it": [
+				"Prende il nome, dal 1950, da Dimitar Blagoev, il fondatore del partito socialista bulgaro; prima la città si chiamava Gorna Džumaja.",
+				"Melnik, con un paio di centinaia di abitanti, è la città più piccola della Bulgaria, circondata da pinnacoli di arenaria erosa.",
+				"Il Parco nazionale del Pirin è un sito UNESCO dal 1983."
+			]
+		}
+	},
 	"burgas": {
+		"region": {
+			"en": [
+				"Named for Burgas, a name probably from Latin burgus, a small fort.",
+				"The Roman general Lucullus carried off a bronze Apollo about 13 m high from Apollonia, now Sozopol, in 72 BC.",
+				"In a few villages of the Strandzha, the nestinari still dance barefoot on embers, a rite on UNESCO’s list of intangible heritage."
+			],
+			"it": [
+				"Prende il nome da Burgas, un nome che viene probabilmente dal latino burgus, un piccolo forte.",
+				"Il generale romano Lucullo portò via da Apollonia, oggi Sozopol, un Apollo di bronzo alto circa 13 m, nel 72 a.C.",
+				"In alcuni villaggi della Strandža i nestinari danzano ancora a piedi nudi sulle braci, un rito nella lista UNESCO del patrimonio immateriale."
+			]
+		},
 		"city": {
 			"en": [
 				"Perhaps from Latin burgus, a small fort.",
@@ -16,7 +43,141 @@
 			]
 		}
 	},
+	"dobrich": {
+		"region": {
+			"en": [
+				"Named for its town, which took the name of Dobrotitsa, a 14th-century ruler of this land; from 1949 to 1990 it was called Tolbukhin.",
+				"Southern Dobruja, most of which lies here, belonged to Romania from 1913 to 1940.",
+				"At Balchik, Queen Marie of Romania built a summer palace in the 1920s and 1930s."
+			],
+			"it": [
+				"Prende il nome dalla sua città, che porta il nome di Dobrotica, signore di queste terre nel Trecento; dal 1949 al 1990 si chiamò Tolbuchin.",
+				"La Dobrugia meridionale, che si trova in gran parte qui, appartenne alla Romania dal 1913 al 1940.",
+				"A Balčik la regina Maria di Romania fece costruire un palazzo estivo negli anni Venti e Trenta."
+			]
+		}
+	},
+	"gabrovo": {
+		"region": {
+			"en": [
+				"The name comes from gabar, the hornbeam tree.",
+				"The town is the butt of Bulgarian jokes about thrift, and has made the most of it with a House of Humour and Satire, opened in 1972.",
+				"The Etar open-air museum shows the crafts of the 19th century in working water-powered workshops."
+			],
+			"it": [
+				"Il nome viene da gabar, il carpino.",
+				"La città è la protagonista delle barzellette bulgare sulla tirchieria, e ne ha fatto un vanto con una Casa dell’umorismo e della satira, aperta nel 1972.",
+				"Il museo all’aperto di Etar mostra i mestieri dell’Ottocento in botteghe mosse dall’acqua ancora in funzione."
+			]
+		}
+	},
+	"haskovo": {
+		"region": {
+			"en": [
+				"From Turkish Hasköy, \"the crown’s village\".",
+				"A statue of the Virgin and Child on a hill above Haskovo, 32 m high, entered the Guinness book in 2005 as the tallest of its kind.",
+				"The Thracian tomb found at Alexandrovo in 2000 is painted with hunting scenes of the 4th century BC."
+			],
+			"it": [
+				"Dal turco Hasköy, \"il villaggio della corona\".",
+				"Una statua della Madonna col Bambino su una collina sopra Haskovo, alta 32 m, è entrata nel Guinness nel 2005 come la più alta del suo genere.",
+				"La tomba tracia scoperta ad Aleksandrovo nel 2000 è affrescata con scene di caccia del IV secolo a.C."
+			]
+		}
+	},
+	"kardzhali": {
+		"region": {
+			"en": [
+				"By tradition named for Kırca Ali, an Ottoman commander who settled here.",
+				"Perperikon, a Thracian sanctuary and later a fortress city cut into a rocky hill, has been dug since 2000.",
+				"Most of its people are Turkish by ethnicity, the largest share of any province in Bulgaria."
+			],
+			"it": [
+				"Secondo la tradizione prende il nome da Kırca Ali, un comandante ottomano che si stabilì qui.",
+				"Perperikon, un santuario tracio e poi una città fortificata scavata in una collina rocciosa, è in corso di scavo dal 2000.",
+				"La maggior parte dei suoi abitanti è di etnia turca, la quota più alta fra le province bulgare."
+			]
+		}
+	},
+	"kyustendil": {
+		"region": {
+			"en": [
+				"From Turkish Köstendil, \"the land of Konstantin\", for Constantine Dragaš, a 14th-century Serbian lord of the region.",
+				"The Romans called the town Pautalia, and used its hot springs.",
+				"The Rila Monastery, founded by the hermit John of Rila in the 10th century, is a UNESCO site."
+			],
+			"it": [
+				"Dal turco Köstendil, \"la terra di Costantino\", per Costantino Dragaš, signore serbo della regione nel Trecento.",
+				"I Romani chiamavano la città Pautalia, e ne usavano le sorgenti calde.",
+				"Il monastero di Rila, fondato dall’eremita Giovanni di Rila nel X secolo, è un sito UNESCO."
+			]
+		}
+	},
+	"lovech": {
+		"region": {
+			"en": [
+				"Named for its town, Lovech, a name of uncertain origin.",
+				"The revolutionary Vasil Levski was captured at the inn of Kakrina, near Lovech, in 1872.",
+				"The town’s covered bridge, first built by Kolyo Ficheto in 1874, burned in 1925; the one that stands today dates from 1981."
+			],
+			"it": [
+				"Prende il nome dalla sua città, Lovech, un nome di origine incerta.",
+				"Il rivoluzionario Vasil Levski fu catturato alla locanda di Kakrina, vicino a Lovech, nel 1872.",
+				"Il ponte coperto della città, costruito la prima volta da Kolyo Ficheto nel 1874, bruciò nel 1925; quello che si vede oggi è del 1981."
+			]
+		}
+	},
+	"montana": {
+		"region": {
+			"en": [
+				"Named for Castra ad Montanesium, a Roman fort; the town was Kutlovitsa, then Ferdinand, then Mihaylovgrad, and Montana only from 1993.",
+				"The Catholic merchants of Chiprovtsi led a rising against the Ottomans in 1688.",
+				"The carpets woven at Chiprovtsi are on UNESCO’s list of intangible heritage."
+			],
+			"it": [
+				"Prende il nome da Castra ad Montanesium, un forte romano; la città fu Kutlovica, poi Ferdinand, poi Michajlovgrad, e Montana solo dal 1993.",
+				"I mercanti cattolici di Čiprovci guidarono una rivolta contro gli Ottomani nel 1688.",
+				"I tappeti tessuti a Čiprovci sono nella lista UNESCO del patrimonio immateriale."
+			]
+		}
+	},
+	"pazardzhik": {
+		"region": {
+			"en": [
+				"From Turkish Tatar Pazarcık, \"the Tatars’ little market\", for the Tatars who founded the town in the 15th century.",
+				"At Batak, in 1876, many of the villagers were killed as the April Uprising was put down, news that stirred opinion across Europe."
+			],
+			"it": [
+				"Dal turco Tatar Pazarcık, \"il piccolo mercato dei Tatari\", per i Tatari che fondarono la città nel Quattrocento.",
+				"A Batak, nel 1876, molti degli abitanti furono uccisi durante la repressione della rivolta d’aprile, una notizia che scosse l’opinione pubblica europea."
+			]
+		}
+	},
+	"pernik": {
+		"region": {
+			"en": [
+				"The name is often linked to Perun, the Slavic god of thunder, but this is not certain.",
+				"It grew around coal mines worked by the state from 1891, and was called Dimitrovo from 1949 to 1962.",
+				"Its villages’ masked winter processions are on UNESCO’s list of intangible heritage, and Pernik holds a festival of them, Surva, every January."
+			],
+			"it": [
+				"Il nome è spesso collegato a Perun, il dio slavo del tuono, ma non è certo.",
+				"Crebbe intorno alle miniere di carbone gestite dallo stato dal 1891, e dal 1949 al 1962 si chiamò Dimitrovo.",
+				"Le processioni invernali in maschera dei suoi villaggi sono nella lista UNESCO del patrimonio immateriale, e ogni gennaio Pernik ne ospita un festival, il Surva."
+			]
+		}
+	},
 	"pleven": {
+		"region": {
+			"en": [
+				"Named for Pleven, which Western Europe knew as Plevna from the siege of 1877.",
+				"Near Gigen are the ruins of Oescus, where Constantine’s bridge across the Danube, opened in 328, came ashore."
+			],
+			"it": [
+				"Prende il nome da Pleven, che l’Europa occidentale conobbe come Plevna per l’assedio del 1877.",
+				"Vicino a Gigen si trovano le rovine di Oescus, dove approdava il ponte sul Danubio di Costantino, aperto nel 328."
+			]
+		},
 		"city": {
 			"en": [
 				"In 1877 Russian and Romanian armies besieged the Ottoman garrison here for five months.",
@@ -29,6 +190,18 @@
 		}
 	},
 	"plovdiv": {
+		"region": {
+			"en": [
+				"The name is a Slavic wearing-down of Pulpudeva, the Thracian form of the Greek Philippopolis.",
+				"The Bachkovo Monastery was founded in 1083 by Gregory Pakourianos, a Georgian general in Byzantine service.",
+				"Vasil Levski, the hero of Bulgaria’s struggle for freedom, was born in Karlovo in 1837."
+			],
+			"it": [
+				"Il nome è la forma slava, consumata dal tempo, di Pulpudeva, il nome tracio della greca Filippopoli.",
+				"Il monastero di Bačkovo fu fondato nel 1083 da Gregorio Pakourianos, un generale georgiano al servizio di Bisanzio.",
+				"Vasil Levski, l’eroe della lotta bulgara per la libertà, nacque a Karlovo nel 1837."
+			]
+		},
 		"city": {
 			"en": [
 				"The Greeks called it Philippopolis, \"city of Philip\", for Philip II of Macedon.",
@@ -42,7 +215,33 @@
 			]
 		}
 	},
+	"razgrad": {
+		"region": {
+			"en": [
+				"Named for Razgrad, a town that grew near the ruins of Roman Abritus; the origin of its own name is uncertain.",
+				"At Abritus, in 251, the emperor Decius was killed fighting the Goths, the first Roman emperor to die in battle against a foreign enemy.",
+				"The Thracian tomb at Sveshtari, with its carved women holding up the roof, is a UNESCO site."
+			],
+			"it": [
+				"Prende il nome da Razgrad, una città nata vicino alle rovine della romana Abritus; l’origine del suo nome è incerta.",
+				"Ad Abritus, nel 251, l’imperatore Decio morì combattendo contro i Goti, il primo imperatore romano caduto in battaglia contro un nemico straniero.",
+				"La tomba tracia di Sveštari, con le sue figure femminili scolpite che reggono il soffitto, è un sito UNESCO."
+			]
+		}
+	},
 	"ruse": {
+		"region": {
+			"en": [
+				"Named for Ruse, which the Ottomans called Rusçuk; the origin of the name is disputed.",
+				"The rock-hewn churches of Ivanovo, painted in the 13th and 14th centuries, are a UNESCO site.",
+				"Bulgaria’s first railway, from Ruse to Varna, opened in 1866."
+			],
+			"it": [
+				"Prende il nome da Ruse, che gli Ottomani chiamavano Rusçuk; l’origine del nome è discussa.",
+				"Le chiese rupestri di Ivanovo, affrescate nel XIII e XIV secolo, sono un sito UNESCO.",
+				"La prima ferrovia della Bulgaria, da Ruse a Varna, fu aperta nel 1866."
+			]
+		},
 		"city": {
 			"en": [
 				"On the Danube, facing Romania across the Friendship Bridge of 1954, for decades the only bridge between the two.",
@@ -51,6 +250,62 @@
 			"it": [
 				"Sul Danubio, di fronte alla Romania oltre il ponte dell’Amicizia del 1954, per decenni l’unico ponte tra i due paesi.",
 				"Qui nacque nel 1905 Elias Canetti, premio Nobel."
+			]
+		}
+	},
+	"shumen": {
+		"region": {
+			"en": [
+				"The name is sometimes linked to Slavic shuma, \"forest\", but its origin is uncertain.",
+				"The Madara Rider, a horseman carved into a cliff in the 8th century, is a UNESCO site.",
+				"Both the first capitals of Bulgaria are here: Pliska, from 681, and Preslav, from 893."
+			],
+			"it": [
+				"Il nome è talvolta collegato allo slavo shuma, \"bosco\", ma la sua origine è incerta.",
+				"Il Cavaliere di Madara, scolpito in una parete di roccia nell’VIII secolo, è un sito UNESCO.",
+				"Qui si trovano entrambe le prime capitali della Bulgaria: Pliska, dal 681, e Preslav, dall’893."
+			]
+		}
+	},
+	"silistra": {
+		"region": {
+			"en": [
+				"Named for its town, the Roman Durostorum, a name worn down over the centuries through Dristra to Silistra.",
+				"Srebarna, a lake where Dalmatian pelicans nest, has been a UNESCO site since 1983.",
+				"Early in the Crimean War, in 1854, the Ottoman garrison of Silistra held out against a Russian siege."
+			],
+			"it": [
+				"Prende il nome dalla sua città, la romana Durostorum, un nome consumato dai secoli passando per Dristra fino a Silistra.",
+				"Srebarna, un lago dove nidificano i pellicani ricci, è un sito UNESCO dal 1983.",
+				"All’inizio della guerra di Crimea, nel 1854, la guarnigione ottomana di Silistra resistette a un assedio russo."
+			]
+		}
+	},
+	"sliven": {
+		"region": {
+			"en": [
+				"The name is sometimes read as \"confluence\", but its origin is uncertain.",
+				"Known as the town of a hundred voivodes, for the rebel leaders it gave to the fight against the Ottomans.",
+				"The first factory in the Bulgarian lands, a woollen mill, was opened in Sliven in 1834 by Dobri Zhelyazkov."
+			],
+			"it": [
+				"Il nome è talvolta interpretato come \"confluenza\", ma la sua origine è incerta.",
+				"È detta la città dei cento voivoda, per i capi ribelli che diede alla lotta contro gli Ottomani.",
+				"La prima fabbrica delle terre bulgare, un lanificio, fu aperta a Sliven nel 1834 da Dobri Željazkov."
+			]
+		}
+	},
+	"smolyan": {
+		"region": {
+			"en": [
+				"Named for the Smolyani, a Slavic tribe that settled the Rhodopes in the early Middle Ages.",
+				"A Rhodope folk song sung by Valya Balkanska, from a village here, went into space in 1977 on the Voyager Golden Record.",
+				"At the Devil’s Throat cave, a river vanishes underground and falls in a waterfall inside the mountain."
+			],
+			"it": [
+				"Prende il nome dagli Smoljani, una tribù slava che si stabilì sui Rodopi nell’alto Medioevo.",
+				"Un canto popolare dei Rodopi interpretato da Valja Balkanska, nata in un villaggio della provincia, partì per lo spazio nel 1977 sul disco d’oro delle Voyager.",
+				"Nella grotta della Gola del Diavolo un fiume scompare sottoterra e precipita in una cascata dentro la montagna."
 			]
 		}
 	},
@@ -68,7 +323,47 @@
 			]
 		}
 	},
+	"sofia-city": {
+		"region": {
+			"en": [
+				"The capital as a province of its own; the name comes from its church of Saint Sophia, \"wisdom\", not from a woman.",
+				"The frescoes of the Boyana Church, painted in 1259, are a UNESCO site.",
+				"The Alexander Nevsky Cathedral, finished in 1912, honours the Russian soldiers who died in the war of 1877 and 1878."
+			],
+			"it": [
+				"La capitale come provincia a sé; il nome viene dalla sua chiesa di Santa Sofia, \"sapienza\", non da una donna.",
+				"Gli affreschi della chiesa di Bojana, dipinti nel 1259, sono un sito UNESCO.",
+				"La cattedrale di Aleksandr Nevskij, terminata nel 1912, onora i soldati russi caduti nella guerra del 1877 e 1878."
+			]
+		}
+	},
+	"sofia-province": {
+		"region": {
+			"en": [
+				"Named for Sofia, which is not part of it: the capital is a province of its own.",
+				"The April Uprising against the Ottomans broke out at Koprivshtitsa in 1876.",
+				"Borovets, begun as a royal hunting lodge in the 1890s, is Bulgaria’s oldest mountain resort."
+			],
+			"it": [
+				"Prende il nome da Sofia, che non ne fa parte: la capitale è una provincia a sé.",
+				"La rivolta d’aprile contro gli Ottomani scoppiò a Koprivštica nel 1876.",
+				"Borovec, nata come riserva di caccia reale negli anni Novanta dell’Ottocento, è la più antica stazione di montagna della Bulgaria."
+			]
+		}
+	},
 	"stara-zagora": {
+		"region": {
+			"en": [
+				"Named for its town; Stara Zagora means \"old Zagora\", and Zagora the land beyond the mountains.",
+				"Most of Bulgaria’s rose oil comes from the Valley of the Roses around Kazanlak.",
+				"The Thracian tomb of Kazanlak, painted in the 4th century BC, is a UNESCO site."
+			],
+			"it": [
+				"Prende il nome dalla sua città; Stara Zagora significa \"vecchia Zagora\", e Zagora è la terra oltre i monti.",
+				"Gran parte dell’olio di rosa bulgaro viene dalla Valle delle rose intorno a Kazanlak.",
+				"La tomba tracia di Kazanlak, affrescata nel IV secolo a.C., è un sito UNESCO."
+			]
+		},
 		"city": {
 			"en": [
 				"\"Old Zagora\", zagora meaning \"beyond the mountains\"; the Romans called it Augusta Traiana.",
@@ -80,7 +375,29 @@
 			]
 		}
 	},
+	"targovishte": {
+		"region": {
+			"en": [
+				"The name means \"marketplace\"; under the Ottomans it was Eski Cuma, \"old Friday\", for its Friday fair."
+			],
+			"it": [
+				"Il nome significa \"mercato\"; sotto gli Ottomani era Eski Cuma, \"vecchio venerdì\", per la sua fiera del venerdì."
+			]
+		}
+	},
 	"varna": {
+		"region": {
+			"en": [
+				"Named for Varna, a name whose origin is disputed; from 1949 to 1956 the city was called Stalin.",
+				"At the battle of Varna, in 1444, the Ottomans defeated a crusade and killed Władysław III, king of Poland and Hungary.",
+				"Pobiti Kamani, \"the planted stones\", is a field of natural stone columns in the sand, several metres high."
+			],
+			"it": [
+				"Prende il nome da Varna, un nome di origine discussa; dal 1949 al 1956 la città si chiamò Stalin.",
+				"Nella battaglia di Varna, nel 1444, gli Ottomani sconfissero una crociata e uccisero Ladislao III, re di Polonia e d’Ungheria.",
+				"Pobiti Kamani, \"le pietre piantate\", è un campo di colonne di pietra naturali che spuntano dalla sabbia, alte diversi metri."
+			]
+		},
 		"city": {
 			"en": [
 				"Ancient Odessos, founded by Greeks from Miletus.",
@@ -91,6 +408,62 @@
 				"L’antica Odessos, fondata da Greci di Mileto.",
 				"La sua necropoli, del 4500 a.C. circa, conteneva l’oro lavorato più antico mai trovato al mondo.",
 				"La Bulgaria la chiama la sua capitale del mare."
+			]
+		}
+	},
+	"veliko-tarnovo": {
+		"region": {
+			"en": [
+				"Veliko, \"great\", was added to Tarnovo’s name in 1965; Tarnovo itself is often traced to tran, \"thorn\".",
+				"Tarnovo was the capital of the Second Bulgarian Empire, from 1185 until the Ottomans took it in 1393.",
+				"Bulgaria’s first constitution was adopted in Tarnovo in 1879."
+			],
+			"it": [
+				"Veliko, \"grande\", fu aggiunto al nome di Tarnovo nel 1965; Tarnovo è spesso fatto risalire a tran, \"spina\".",
+				"Tarnovo fu la capitale del secondo impero bulgaro, dal 1185 finché gli Ottomani non la presero nel 1393.",
+				"La prima costituzione della Bulgaria fu adottata a Tarnovo nel 1879."
+			]
+		}
+	},
+	"vidin": {
+		"region": {
+			"en": [
+				"Named for its town, the Roman Bononia, which medieval Bulgarians called Bdin.",
+				"Baba Vida, on the Danube, is often called the only medieval castle in Bulgaria to survive whole.",
+				"The Tsardom of Vidin was the last Bulgarian state to fall to the Ottomans, in 1396."
+			],
+			"it": [
+				"Prende il nome dalla sua città, la romana Bononia, che i Bulgari del Medioevo chiamavano Bdin.",
+				"Baba Vida, sul Danubio, è spesso indicata come l’unico castello medievale della Bulgaria giunto intero fino a noi.",
+				"Lo zarato di Vidin fu l’ultimo stato bulgaro a cadere in mano ottomana, nel 1396."
+			]
+		}
+	},
+	"vratsa": {
+		"region": {
+			"en": [
+				"Probably from vrata, \"gate\", for the gorge where the town stands.",
+				"The Rogozen treasure, 165 Thracian silver vessels, was found by farmers digging in a garden in 1985 and 1986.",
+				"The poet Hristo Botev was killed in its mountains in 1876; on 2 June, at noon, sirens sound across Bulgaria in his memory."
+			],
+			"it": [
+				"Probabilmente da vrata, \"porta\", per la gola dove sorge la città.",
+				"Il tesoro di Rogozen, 165 vasi d’argento traci, fu trovato da contadini che scavavano in un orto nel 1985 e nel 1986.",
+				"Il poeta Hristo Botev fu ucciso sui suoi monti nel 1876; il 2 giugno, a mezzogiorno, le sirene suonano in tutta la Bulgaria in suo ricordo."
+			]
+		}
+	},
+	"yambol": {
+		"region": {
+			"en": [
+				"The name probably comes from Diampolis, as the Byzantines called the town.",
+				"Kabile, near Yambol, was a Thracian royal town before the Macedonians and then the Romans held it.",
+				"The town’s bezisten, a covered market of the 15th century, is one of the few left in Bulgaria."
+			],
+			"it": [
+				"Il nome viene probabilmente da Diampolis, come i Bizantini chiamavano la città.",
+				"Kabile, vicino a Jambol, fu una città regia tracia prima di passare ai Macedoni e poi ai Romani.",
+				"Il bezisten della città, un mercato coperto del Quattrocento, è uno dei pochi rimasti in Bulgaria."
 			]
 		}
 	}

@@ -2,9 +2,22 @@
 	"_note": [
 		"Name-facts for Belgium (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences."
+		"of the same id, written later, never shows a town's sentences.",
+		"FT-73 added the eleven provinces (Brussels counted as one), each as a \"region\" entry beside any town of the same id."
 	],
 	"antwerpen": {
+		"region": {
+			"en": [
+				"Named for its port city; under French rule, from 1795, it was the department of Deux-Nèthes, \"Two Nethes\", after two of its rivers.",
+				"Mechelen was the capital of the Low Countries in the early 16th century, when Margaret of Austria governed them from her court there.",
+				"In Geel, families have taken in people with mental illness as lodgers since the Middle Ages, a custom tied to the shrine of Saint Dymphna."
+			],
+			"it": [
+				"Prende il nome dalla sua città portuale; sotto il dominio francese, dal 1795, fu il dipartimento delle Deux-Nèthes, le \"Due Nete\", da due dei suoi fiumi.",
+				"Malines fu la capitale dei Paesi Bassi all’inizio del Cinquecento, quando Margherita d’Austria li governava dalla sua corte in città.",
+				"A Geel le famiglie accolgono in casa persone con malattie mentali fin dal Medioevo, un’usanza legata al santuario di santa Dinfna."
+			]
+		},
 		"city": {
 			"en": [
 				"Legend says the name means \"hand-throwing\", for a giant’s cut-off hand; it more probably means \"at the wharf\".",
@@ -15,6 +28,20 @@
 				"La leggenda dice che il nome significhi \"lancio della mano\", per la mano mozzata di un gigante; più probabilmente vuol dire \"presso l’approdo\".",
 				"La maggior parte dei diamanti grezzi del mondo passa per il suo mercato.",
 				"Qui visse e dipinse Rubens."
+			]
+		}
+	},
+	"brabant-wallon": {
+		"region": {
+			"en": [
+				"Walloon comes from an old Germanic word for foreigners, *walhaz, the same root as Wales and Wallachia.",
+				"The battle of Waterloo, in 1815, was fought mostly south of the town, which gave it its name because Wellington had his headquarters there.",
+				"Louvain-la-Neuve was built from scratch after 1968, when the university of Leuven split and its French-speaking half had to leave Flanders."
+			],
+			"it": [
+				"Vallone viene da un’antica parola germanica per gli stranieri, *walhaz, la stessa radice di Galles e Valacchia.",
+				"La battaglia di Waterloo, nel 1815, si combatté in gran parte a sud della cittadina, che le diede il nome perché Wellington vi aveva il quartier generale.",
+				"Louvain-la-Neuve fu costruita dal nulla dopo il 1968, quando l’università di Lovanio si divise e la sua metà francofona dovette lasciare le Fiandre."
 			]
 		}
 	},
@@ -33,6 +60,18 @@
 		}
 	},
 	"brussels": {
+		"region": {
+			"en": [
+				"The region takes its name from the city, Bruocsella in the oldest records, probably \"settlement in the marsh\".",
+				"One of Belgium’s three regions since 1989, officially bilingual in French and Dutch, though French is far more widely spoken.",
+				"The Atomium, built for the World’s Fair of 1958, is an iron crystal magnified 165 billion times."
+			],
+			"it": [
+				"La regione prende il nome dalla città, Bruocsella nei documenti più antichi, probabilmente \"insediamento nella palude\".",
+				"Una delle tre regioni del Belgio dal 1989, ufficialmente bilingue, francese e olandese, anche se il francese è di gran lunga il più parlato.",
+				"L’Atomium, costruito per l’Esposizione universale del 1958, è un cristallo di ferro ingrandito 165 miliardi di volte."
+			]
+		},
 		"city": {
 			"en": [
 				"From Bruocsella, \"settlement in the marsh\".",
@@ -72,7 +111,33 @@
 			]
 		}
 	},
+	"hainaut": {
+		"region": {
+			"en": [
+				"Named for the Haine, a small river that crosses it.",
+				"Vincent van Gogh worked as a preacher among the coal miners of the Borinage, around Mons, in 1879 and 1880, before he became a painter.",
+				"Childeric, king of the Franks and father of Clovis, was buried at Tournai; his grave was found by chance in 1653."
+			],
+			"it": [
+				"Prende il nome dalla Haine, un piccolo fiume che la attraversa.",
+				"Vincent van Gogh fu predicatore tra i minatori del Borinage, intorno a Mons, nel 1879 e nel 1880, prima di diventare pittore.",
+				"Childerico, re dei Franchi e padre di Clodoveo, fu sepolto a Tournai; la sua tomba fu ritrovata per caso nel 1653."
+			]
+		}
+	},
 	"liege": {
+		"region": {
+			"en": [
+				"Latin Leodium, a name of uncertain origin; the city spelled it Liége until 1946, when the accent was changed to match how it is said.",
+				"Its eastern cantons, around Eupen, were German until 1920 and still speak German, Belgium’s third official language.",
+				"The town of Spa, whose springs drew visitors from across Europe for centuries, gave English its word for a health resort."
+			],
+			"it": [
+				"In latino Leodium, un nome di origine incerta; la città si scrisse Liége fino al 1946, quando l’accento fu cambiato per adeguarlo alla pronuncia.",
+				"I suoi cantoni orientali, intorno a Eupen, furono tedeschi fino al 1920 e parlano ancora tedesco, la terza lingua ufficiale del Belgio.",
+				"La cittadina di Spa, le cui fonti attirarono per secoli visitatori da tutta Europa, ha dato all’inglese la parola per una stazione termale."
+			]
+		},
 		"city": {
 			"en": [
 				"For eight centuries the capital of a prince-bishopric, independent until 1795.",
@@ -84,7 +149,47 @@
 			]
 		}
 	},
+	"limburg": {
+		"region": {
+			"en": [
+				"Named for the old Duchy of Limburg, whose castle town, Limbourg on the Vesdre, is in fact in the province of Liège.",
+				"The coal found under it in 1901 brought miners from Italy, Turkey and beyond; the last pit closed in 1992.",
+				"Tongeren, often called Belgium’s oldest town, has a statue of Ambiorix, who led the Eburones against Caesar in 54 BC."
+			],
+			"it": [
+				"Prende il nome dall’antico ducato di Limburgo, il cui borgo fortificato, Limbourg sulla Vesdre, si trova in realtà nella provincia di Liegi.",
+				"Il carbone scoperto nel suo sottosuolo nel 1901 vi portò minatori dall’Italia, dalla Turchia e da altri paesi; l’ultima miniera chiuse nel 1992.",
+				"Tongeren, spesso detta la città più antica del Belgio, ha una statua di Ambiorige, che guidò gli Eburoni contro Cesare nel 54 a.C."
+			]
+		}
+	},
+	"luxembourg": {
+		"region": {
+			"en": [
+				"Named, like the grand duchy, for Lucilinburhuc, \"little castle\", the fort that grew into the city of Luxembourg.",
+				"Until 1839 it was part of the Grand Duchy of Luxembourg, which the Treaty of London cut in two, giving Belgium the larger, western half.",
+				"At Bastogne, besieged in December 1944, the American general McAuliffe answered a German demand to surrender with one word: \"Nuts!\""
+			],
+			"it": [
+				"Prende il nome, come il granducato, da Lucilinburhuc, \"piccolo castello\", la fortezza da cui nacque la città di Lussemburgo.",
+				"Fino al 1839 fece parte del Granducato di Lussemburgo, che il trattato di Londra divise in due, dando al Belgio la metà occidentale, la più grande.",
+				"A Bastogne, assediata nel dicembre 1944, il generale americano McAuliffe rispose alla richiesta tedesca di resa con una sola parola: \"Nuts!\", \"col cavolo!\"."
+			]
+		}
+	},
 	"namur": {
+		"region": {
+			"en": [
+				"The name comes from Latin Namurcum, probably of Celtic origin; what it meant is not known.",
+				"Adolphe Sax, who invented the saxophone, was born in Dinant in 1814.",
+				"At Han-sur-Lesse the river Lesse disappears underground, through caves that have drawn visitors since the 19th century."
+			],
+			"it": [
+				"Il nome viene dal latino Namurcum, probabilmente di origine celtica; che cosa significasse non si sa.",
+				"Adolphe Sax, l’inventore del sassofono, nacque a Dinant nel 1814.",
+				"A Han-sur-Lesse il fiume Lesse scompare sottoterra, attraverso grotte che attirano visitatori dall’Ottocento."
+			]
+		},
 		"city": {
 			"en": [
 				"Its citadel stands where the Sambre flows into the Meuse.",
@@ -93,6 +198,48 @@
 			"it": [
 				"La sua cittadella sorge dove la Sambre si getta nella Mosa.",
 				"La capitale della Vallonia."
+			]
+		}
+	},
+	"oost-vlaanderen": {
+		"region": {
+			"en": [
+				"The eastern half of old Flanders, a name that probably comes from an old Germanic word for flooded land; the derivation is uncertain.",
+				"Gerardus Mercator, whose projection is still used for sea charts and web maps, was born at Rupelmonde in 1512.",
+				"Oudenaarde’s weavers made tapestries for the courts of Europe in the 16th century, and the Tour of Flanders has finished there since 2012."
+			],
+			"it": [
+				"La metà orientale delle antiche Fiandre, un nome che viene probabilmente da un’antica parola germanica per una terra allagata; l’etimologia è incerta.",
+				"Gerardo Mercatore, la cui proiezione si usa ancora per le carte nautiche e le mappe sul web, nacque a Rupelmonde nel 1512.",
+				"Nel Cinquecento gli arazzieri di Oudenaarde tessevano per le corti d’Europa, e dal 2012 il Giro delle Fiandre si conclude lì."
+			]
+		}
+	},
+	"vlaams-brabant": {
+		"region": {
+			"en": [
+				"The name Brabant is often read as \"fallow district\", from old words for untilled land and for a region, but the derivation is uncertain.",
+				"It was created in 1995, when the old province of Brabant was split along the language border.",
+				"The university of Leuven, founded in 1425, was the first in the Low Countries."
+			],
+			"it": [
+				"Il nome Brabante è spesso interpretato come \"distretto incolto\", da antiche parole per la terra non coltivata e per la regione, ma l’etimologia è incerta.",
+				"Nacque nel 1995, quando l’antica provincia del Brabante fu divisa lungo il confine linguistico.",
+				"L’università di Lovanio, fondata nel 1425, fu la prima dei Paesi Bassi storici."
+			]
+		}
+	},
+	"west-vlaanderen": {
+		"region": {
+			"en": [
+				"The name Flanders first belonged to a small district around Bruges, the pagus Flandrensis of the early Middle Ages.",
+				"At the Menin Gate in Ypres, the Last Post has been sounded almost every evening since 1928, for the soldiers of the First World War with no known grave.",
+				"At Kortrijk in 1302, Flemish town militias beat the knights of France; 11 July, the day of the battle, is the Flemish holiday."
+			],
+			"it": [
+				"Il nome Fiandre apparteneva in origine a un piccolo distretto intorno a Bruges, il pagus Flandrensis dell’alto Medioevo.",
+				"Alla Porta di Menin, a Ypres, quasi ogni sera dal 1928 si suona il Last Post per i soldati della Prima guerra mondiale che non hanno una tomba nota.",
+				"A Courtrai, nel 1302, le milizie cittadine fiamminghe sconfissero i cavalieri francesi; l’11 luglio, il giorno della battaglia, è la festa delle Fiandre."
 			]
 		}
 	}

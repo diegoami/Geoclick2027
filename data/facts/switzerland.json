@@ -2,8 +2,51 @@
 	"_note": [
 		"Name-facts for Switzerland (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences."
+		"of the same id, written later, never shows a town's sentences.",
+		"FT-73 added the twenty-six cantons, each as a \"region\" entry beside the town of the same id (Zürich, Luzern, Bern); the Italian uses the Italian names of the cantons (Svitto, Grigioni, Vallese)."
 	],
+	"aargau": {
+		"region": {
+			"en": [
+				"\"The district of the Aare\", the river that crosses it.",
+				"Habsburg Castle, the seat from which the Habsburg family took its name, stands here.",
+				"The confederates took it from the Habsburgs in 1415; it became a canton of its own only in 1803."
+			],
+			"it": [
+				"\"Il distretto dell’Aare\", il fiume che lo attraversa.",
+				"Qui sorge il castello di Habsburg, la sede da cui la famiglia degli Asburgo prese il nome.",
+				"I confederati lo tolsero agli Asburgo nel 1415; divenne un cantone a sé solo nel 1803."
+			]
+		}
+	},
+	"appenzell-ausserrhoden": {
+		"region": {
+			"en": [
+				"Outer Rhodes; Appenzell is Latin abbatis cella, \"the abbot’s cell\", for the abbey of St Gallen that owned the land.",
+				"The Protestant half of Appenzell, it split from the Catholic half in 1597.",
+				"Its people voted to abolish their open-air assembly, the Landsgemeinde, in 1997."
+			],
+			"it": [
+				"Appenzello Esterno; Appenzello è il latino abbatis cella, \"la cella dell’abate\", per l’abbazia di San Gallo che possedeva queste terre.",
+				"La metà protestante dell’Appenzello, si separò dalla metà cattolica nel 1597.",
+				"I suoi abitanti votarono l’abolizione della loro assemblea all’aperto, la Landsgemeinde, nel 1997."
+			]
+		}
+	},
+	"appenzell-innerrhoden": {
+		"region": {
+			"en": [
+				"Inner Rhodes: the Rhodes were the old districts of Appenzell, and the inner ones stayed Catholic when the land split in 1597.",
+				"It was the last canton to let women vote, and only because the federal court ordered it to, in 1990.",
+				"Its citizens still meet in the square of Appenzell every April to vote by a show of hands."
+			],
+			"it": [
+				"Appenzello Interno: le Rhoden erano gli antichi distretti dell’Appenzello, e quelli interni rimasero cattolici quando la regione si divise nel 1597.",
+				"Fu l’ultimo cantone a dare il voto alle donne, e solo perché glielo impose il tribunale federale, nel 1990.",
+				"I suoi cittadini si riuniscono ancora ogni aprile nella piazza di Appenzello per votare per alzata di mano."
+			]
+		}
+	},
 	"basel": {
 		"city": {
 			"en": [
@@ -18,7 +61,47 @@
 			]
 		}
 	},
+	"basel-landschaft": {
+		"region": {
+			"en": [
+				"Basel Country: the countryside that broke away from the city of Basel in 1833.",
+				"Augusta Raurica, at Augst, is one of the best-preserved Roman towns north of the Alps.",
+				"At carnival, Liestal carries huge burning brooms through its old town in the Chienbäse parade."
+			],
+			"it": [
+				"Basilea Campagna: la campagna che si staccò dalla città di Basilea nel 1833.",
+				"Augusta Raurica, ad Augst, è una delle città romane meglio conservate a nord delle Alpi.",
+				"A carnevale, Liestal porta enormi scope in fiamme attraverso il centro storico nella sfilata del Chienbäse."
+			]
+		}
+	},
+	"basel-stadt": {
+		"region": {
+			"en": [
+				"Basel City: in 1833 the town and its countryside split into two half-cantons after a short civil war.",
+				"It is the smallest canton by area.",
+				"Its carnival begins at four in the morning with the Morgestraich, when the town’s lights go out and the drummers march; it is on UNESCO’s list."
+			],
+			"it": [
+				"Basilea Città: nel 1833 la città e la sua campagna si divisero in due semicantoni dopo una breve guerra civile.",
+				"È il cantone più piccolo per superficie.",
+				"Il suo carnevale comincia alle quattro del mattino con il Morgestraich, quando le luci della città si spengono e sfilano i tamburini; è nella lista UNESCO."
+			]
+		}
+	},
 	"bern": {
+		"region": {
+			"en": [
+				"The canton takes its name from its city, and its bear from the legend of how the city was named.",
+				"It speaks two languages: German, and French in the Bernese Jura; Biel/Bienne is bilingual down to its street signs.",
+				"Emmental cheese, with its holes, is named for the Emme valley here."
+			],
+			"it": [
+				"Il cantone prende il nome dalla sua città, e il suo orso dalla leggenda sul nome della città.",
+				"Parla due lingue: il tedesco, e il francese nel Giura bernese; Biel/Bienne è bilingue fino ai cartelli stradali.",
+				"L’Emmental, il formaggio con i buchi, prende il nome dalla valle dell’Emme."
+			]
+		},
 		"city": {
 			"en": [
 				"By legend its founder named it for the first animal he killed in the woods, a bear, and bears are still kept in the town.",
@@ -29,6 +112,20 @@
 				"Secondo la leggenda il fondatore le diede il nome del primo animale che uccise nei boschi, un orso, e in città si tengono ancora degli orsi.",
 				"Albert Einstein scrisse qui i suoi articoli del 1905.",
 				"Ufficialmente non è la capitale ma la \"città federale\"."
+			]
+		}
+	},
+	"fribourg": {
+		"region": {
+			"en": [
+				"\"Free town\": it was founded in 1157 by Berthold IV of Zähringen.",
+				"It lies across the language border, and its capital speaks both French and German.",
+				"Gruyère cheese is named for the little town of Gruyères."
+			],
+			"it": [
+				"\"Città libera\": fu fondata nel 1157 da Bertoldo IV di Zähringen.",
+				"Si trova a cavallo del confine linguistico, e il suo capoluogo parla sia francese sia tedesco.",
+				"Il formaggio Gruyère prende il nome dalla cittadina di Gruyères."
 			]
 		}
 	},
@@ -43,6 +140,62 @@
 				"Qui fu fondata la Croce Rossa, nel 1863.",
 				"Al CERN, alle sue porte, fu inventato il World Wide Web nel 1989.",
 				"Giovanni Calvino ne fece il cuore della Riforma protestante nel Cinquecento."
+			]
+		}
+	},
+	"geneve": {
+		"region": {
+			"en": [
+				"Genava in Caesar’s time, a Celtic name probably meaning a river mouth, where the Rhône leaves the lake.",
+				"It joined the Swiss Confederation only in 1815.",
+				"Every December the Escalade remembers the night in 1602 when the town beat off an attack by Savoy."
+			],
+			"it": [
+				"Genava ai tempi di Cesare, un nome celtico che probabilmente indica una foce, dove il Rodano esce dal lago.",
+				"Entrò nella Confederazione svizzera solo nel 1815.",
+				"Ogni dicembre l’Escalade ricorda la notte del 1602 in cui la città respinse un attacco dei Savoia."
+			]
+		}
+	},
+	"glarus": {
+		"region": {
+			"en": [
+				"The name is of uncertain origin; its flag shows Saint Fridolin, the monk said to have brought Christianity here.",
+				"Its citizens meet every May in the square of Glarus to vote by a show of hands.",
+				"In 2011 it merged its 25 municipalities into three."
+			],
+			"it": [
+				"Il nome è di origine incerta; la sua bandiera mostra san Fridolino, il monaco che vi avrebbe portato il cristianesimo.",
+				"I suoi cittadini si riuniscono ogni maggio nella piazza di Glarona per votare per alzata di mano.",
+				"Nel 2011 ha fuso i suoi 25 comuni in tre."
+			]
+		}
+	},
+	"graubunden": {
+		"region": {
+			"en": [
+				"Named for the Grey League, one of the three leagues that joined to form it.",
+				"The only canton with three official languages: German, Romansh and Italian.",
+				"The Swiss National Park, created in 1914, was the first national park in the Alps."
+			],
+			"it": [
+				"Prende il nome dalla Lega Grigia, una delle tre leghe che si unirono per formarlo.",
+				"L’unico cantone con tre lingue ufficiali: tedesco, romancio e italiano.",
+				"Il Parco nazionale svizzero, creato nel 1914, fu il primo parco nazionale delle Alpi."
+			]
+		}
+	},
+	"jura": {
+		"region": {
+			"en": [
+				"Named for the Jura mountains, a name probably from a Celtic word for forest.",
+				"The newest canton, split from Bern in 1979 after a long campaign and a series of votes.",
+				"Porrentruy was the seat of the prince-bishops of Basel from the 1520s until the French Revolution."
+			],
+			"it": [
+				"Prende il nome dai monti del Giura, un nome che viene probabilmente da una parola celtica per \"foresta\".",
+				"Il cantone più giovane, staccatosi da Berna nel 1979 dopo una lunga lotta e una serie di votazioni.",
+				"Porrentruy fu la sede dei principi vescovi di Basilea dagli anni Venti del Cinquecento fino alla Rivoluzione francese."
 			]
 		}
 	},
@@ -67,6 +220,18 @@
 		}
 	},
 	"luzern": {
+		"region": {
+			"en": [
+				"The origin of the name is uncertain; the story of a lantern, Latin lucerna, guiding boats is a legend.",
+				"In 1332 it became the first town to join the Confederation.",
+				"At Sempach, in 1386, the confederates defeated and killed Duke Leopold III of Austria."
+			],
+			"it": [
+				"L’origine del nome è incerta; la storia di una lanterna, in latino lucerna, che guidava le barche è una leggenda.",
+				"Nel 1332 fu la prima città a entrare nella Confederazione.",
+				"A Sempach, nel 1386, i confederati sconfissero e uccisero il duca Leopoldo III d’Austria."
+			]
+		},
 		"city": {
 			"en": [
 				"Its Chapel Bridge, of the 14th century, is often called the oldest covered wooden bridge in Europe.",
@@ -78,7 +243,201 @@
 			]
 		}
 	},
+	"neuchatel": {
+		"region": {
+			"en": [
+				"\"New castle\", for the castle built above the lake around 1000.",
+				"It was a Swiss canton and a principality of the King of Prussia at the same time, until 1848; Prussia gave up its claim in 1857.",
+				"Le Corbusier was born in the watchmaking town of La Chaux-de-Fonds in 1887."
+			],
+			"it": [
+				"\"Castello nuovo\", per il castello costruito sopra il lago intorno all’anno Mille.",
+				"Fu allo stesso tempo cantone svizzero e principato del re di Prussia fino al 1848; la Prussia rinunciò alle sue pretese nel 1857.",
+				"Le Corbusier nacque nel 1887 a La Chaux-de-Fonds, città di orologiai."
+			]
+		}
+	},
+	"nidwalden": {
+		"region": {
+			"en": [
+				"\"Below the forest\", one of the two halves of old Unterwalden.",
+				"In 1798 its people resisted the French invasion, and hundreds died when the French took Stans.",
+				"Pilatus has built aircraft at Stans since 1939."
+			],
+			"it": [
+				"\"Sotto il bosco\", una delle due metà dell’antico Unterwalden.",
+				"Nel 1798 i suoi abitanti resistettero all’invasione francese, e centinaia morirono quando i Francesi presero Stans.",
+				"La Pilatus costruisce aerei a Stans dal 1939."
+			]
+		}
+	},
+	"obwalden": {
+		"region": {
+			"en": [
+				"\"Above the forest\", the other half of old Unterwalden.",
+				"Niklaus von Flüe, the hermit who became Switzerland’s patron saint, lived at Flüeli-Ranft.",
+				"The White Book of Sarnen, written around 1470, holds the oldest known account of William Tell."
+			],
+			"it": [
+				"\"Sopra il bosco\", l’altra metà dell’antico Unterwalden.",
+				"Nicolao della Flüe, l’eremita divenuto patrono della Svizzera, visse a Flüeli-Ranft.",
+				"Il Libro bianco di Sarnen, scritto intorno al 1470, contiene il più antico racconto noto di Guglielmo Tell."
+			]
+		}
+	},
+	"schaffhausen": {
+		"region": {
+			"en": [
+				"Probably \"the boat houses\", where boats were unloaded before the Rhine Falls.",
+				"The Rhine Falls, just below the town, are the largest plain waterfall in Europe by volume of water.",
+				"On 1 April 1944 American bombers hit the town by mistake, killing about 40 people."
+			],
+			"it": [
+				"Probabilmente \"le case delle barche\", dove le barche venivano scaricate prima delle cascate del Reno.",
+				"Le cascate del Reno, poco sotto la città, sono le più grandi cascate di pianura d’Europa per portata d’acqua.",
+				"Il 1º aprile 1944 bombardieri americani colpirono la città per errore, uccidendo una quarantina di persone."
+			]
+		}
+	},
+	"schwyz": {
+		"region": {
+			"en": [
+				"It gave its name and its flag to the whole country: Schweiz, Switzerland.",
+				"The Federal Charter of 1291, the founding pact of the Confederation, is kept in its town of Schwyz.",
+				"Victorinox has made Swiss Army knives at Ibach since 1884."
+			],
+			"it": [
+				"Ha dato il nome e la bandiera all’intero paese: Schweiz, la Svizzera.",
+				"Il Patto federale del 1291, l’atto fondativo della Confederazione, è conservato nella sua città di Svitto.",
+				"La Victorinox produce coltellini svizzeri a Ibach dal 1884."
+			]
+		}
+	},
+	"solothurn": {
+		"region": {
+			"en": [
+				"From the Roman Salodurum, a name of Celtic origin.",
+				"The eleventh canton to join, in 1481, it loves the number: its cathedral has eleven altars and eleven bells.",
+				"From 1530 to 1792 it was the seat of the French ambassadors to the Swiss."
+			],
+			"it": [
+				"Dalla romana Salodurum, un nome di origine celtica.",
+				"Undicesimo cantone a entrare nella Confederazione, nel 1481, ama quel numero: la sua cattedrale ha undici altari e undici campane.",
+				"Dal 1530 al 1792 fu la sede degli ambasciatori di Francia presso gli svizzeri."
+			]
+		}
+	},
+	"st-gallen": {
+		"region": {
+			"en": [
+				"Named for Saint Gall, an Irish monk who built a hermitage here in 612.",
+				"The abbey that grew from it, with its library of medieval manuscripts, is a UNESCO site.",
+				"Its embroidery and lace have been sold to the fashion houses of Paris since the 19th century."
+			],
+			"it": [
+				"Prende il nome da san Gallo, un monaco irlandese che vi costruì un eremo nel 612.",
+				"L’abbazia che ne nacque, con la sua biblioteca di manoscritti medievali, è un sito UNESCO.",
+				"I suoi ricami e i suoi pizzi si vendono alle case di moda di Parigi dall’Ottocento."
+			]
+		}
+	},
+	"thurgau": {
+		"region": {
+			"en": [
+				"Named for the river Thur: a Gau was a district.",
+				"The Swiss confederates took it from the Habsburgs in 1460 and ruled it as a subject land until 1798.",
+				"Its apple orchards earned it the nickname Mostindien, \"cider India\"."
+			],
+			"it": [
+				"Prende il nome dal fiume Thur: un Gau era un distretto.",
+				"I confederati svizzeri lo tolsero agli Asburgo nel 1460 e lo governarono come baliaggio fino al 1798.",
+				"I suoi meleti gli sono valsi il soprannome di Mostindien, \"l’India del sidro\"."
+			]
+		}
+	},
+	"ticino": {
+		"region": {
+			"en": [
+				"Named for the river Ticino, which runs through it to Lake Maggiore.",
+				"The confederates took its valleys between the 15th and 16th centuries and ruled them as subject lands until 1798.",
+				"At Monte Verità, above Ascona, a colony of vegetarians, dancers and artists gathered from 1900."
+			],
+			"it": [
+				"Prende il nome dal fiume Ticino, che lo attraversa fino al Lago Maggiore.",
+				"I confederati conquistarono le sue valli tra il Quattrocento e il Cinquecento e le governarono come baliaggi fino al 1798.",
+				"Al Monte Verità, sopra Ascona, dal 1900 si riunì una colonia di vegetariani, danzatori e artisti."
+			]
+		}
+	},
+	"uri": {
+		"region": {
+			"en": [
+				"The name is often linked to the aurochs, the wild ox whose head is on its flag, but the derivation is uncertain.",
+				"In the legend, William Tell shot the apple from his son’s head at Altdorf.",
+				"The Gotthard Base Tunnel, opened in 2016 and 57 km long, begins at Erstfeld."
+			],
+			"it": [
+				"Il nome è spesso collegato all’uro, il bue selvatico la cui testa è sulla sua bandiera, ma l’etimologia è incerta.",
+				"Nella leggenda, Guglielmo Tell colpì la mela sulla testa del figlio ad Altdorf.",
+				"La galleria di base del San Gottardo, aperta nel 2016 e lunga 57 km, comincia a Erstfeld."
+			]
+		}
+	},
+	"valais": {
+		"region": {
+			"en": [
+				"From Latin vallis, \"valley\": the upper valley of the Rhône.",
+				"The Matterhorn was first climbed in 1865; four of the seven climbers fell to their deaths on the way down.",
+				"The monks of the Great St Bernard hospice bred the St Bernard dog to find travellers lost in the snow."
+			],
+			"it": [
+				"Dal latino vallis, \"valle\": l’alta valle del Rodano.",
+				"Il Cervino fu scalato per la prima volta nel 1865; quattro dei sette alpinisti morirono precipitando durante la discesa.",
+				"I monaci dell’ospizio del Gran San Bernardo allevarono il cane San Bernardo per ritrovare i viaggiatori dispersi nella neve."
+			]
+		}
+	},
+	"vaud": {
+		"region": {
+			"en": [
+				"The name, Waadt in German, is of uncertain origin; Bern ruled the land from 1536 until 1798.",
+				"The vineyard terraces of Lavaux, above Lake Geneva, are a UNESCO site.",
+				"Charlie Chaplin lived at Corsier-sur-Vevey from 1953 until his death, and is buried there."
+			],
+			"it": [
+				"Il nome, Waadt in tedesco, è di origine incerta; Berna governò queste terre dal 1536 al 1798.",
+				"I vigneti a terrazze di Lavaux, sopra il lago di Ginevra, sono un sito UNESCO.",
+				"Charlie Chaplin visse a Corsier-sur-Vevey dal 1953 fino alla morte, e vi è sepolto."
+			]
+		}
+	},
+	"zug": {
+		"region": {
+			"en": [
+				"Probably from a fishing word, Zug, a haul of the net.",
+				"Its low taxes have drawn so many companies, lately in cryptocurrency, that it is called Crypto Valley.",
+				"Its cherries go into kirsch and into the Zuger Kirschtorte, a cake soaked in it."
+			],
+			"it": [
+				"Probabilmente da una parola dei pescatori, Zug, una tirata di rete.",
+				"Le sue tasse basse hanno attirato così tante aziende, di recente nelle criptovalute, che lo chiamano Crypto Valley.",
+				"Le sue ciliegie finiscono nel kirsch e nella Zuger Kirschtorte, una torta imbevuta di questo liquore."
+			]
+		}
+	},
 	"zurich": {
+		"region": {
+			"en": [
+				"Named for its city, the Roman Turicum, a name probably older than the Romans.",
+				"It joined the Swiss Confederation in 1351.",
+				"More people live here than in any other canton, about one Swiss in six."
+			],
+			"it": [
+				"Prende il nome dalla sua città, la romana Turicum, un nome probabilmente più antico dei Romani.",
+				"Entrò nella Confederazione svizzera nel 1351.",
+				"Qui vive più gente che in qualsiasi altro cantone, circa uno svizzero su sei."
+			]
+		},
 		"city": {
 			"en": [
 				"Roman Turicum.",

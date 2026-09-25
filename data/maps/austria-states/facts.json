@@ -12,7 +12,19 @@
 			"nameIt": "Vienna",
 			"population": 2400000
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"The city-state takes its name from the Wien river, whose name is probably Celtic.",
+				"It became a state of its own in 1922, when it was separated from Lower Austria.",
+				"About 600 hectares of vineyards lie inside the city, with wine taverns, the Heurigen, to drink the wine in."
+			],
+			"it": [
+				"La città-stato prende il nome dal fiume Wien, il cui nome è probabilmente celtico.",
+				"Divenne un Land a sé nel 1922, quando fu separata dalla Bassa Austria.",
+				"Dentro la città si trovano circa 600 ettari di vigneti, con le osterie del vino, gli Heurigen, dove berlo."
+			]
+		}
 	},
 	"niederosterreich": {
 		"kind": "region",
@@ -30,7 +42,19 @@
 			"nameIt": "Wiener Neustadt",
 			"population": 82762
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"\"Lower Austria\", downstream on the Danube; the name Ostarrîchi, \"the eastern realm\", was first written in 996 for land here.",
+				"Vienna was its capital until 1986, when it chose St. Pölten instead.",
+				"The Wachau, a valley of vineyards and abbeys on the Danube, is a UNESCO site."
+			],
+			"it": [
+				"\"Bassa Austria\", a valle sul Danubio; il nome Ostarrîchi, \"il regno orientale\", fu scritto per la prima volta nel 996 per una terra di qui.",
+				"Vienna fu il suo capoluogo fino al 1986, quando al suo posto fu scelta St. Pölten.",
+				"La Wachau, una valle di vigneti e abbazie sul Danubio, è un sito UNESCO."
+			]
+		}
 	},
 	"oberosterreich": {
 		"kind": "region",
@@ -47,7 +71,19 @@
 			"nameIt": "Linz",
 			"population": 349161
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"\"Upper Austria\", upstream on the Danube; it was long called the land above the Enns.",
+				"Hallstatt, where salt has been mined since prehistory, gave its name to the Hallstatt culture of the early Iron Age.",
+				"The composer Anton Bruckner was born at Ansfelden in 1824 and is buried under the organ of St Florian’s abbey."
+			],
+			"it": [
+				"\"Alta Austria\", a monte sul Danubio; a lungo fu chiamata la terra sopra l’Enns.",
+				"Hallstatt, dove il sale si estrae dalla preistoria, ha dato il nome alla cultura di Hallstatt della prima età del ferro.",
+				"Il compositore Anton Bruckner nacque ad Ansfelden nel 1824 ed è sepolto sotto l’organo dell’abbazia di Sankt Florian."
+			]
+		}
 	},
 	"salzburg": {
 		"kind": "region",
@@ -65,7 +101,19 @@
 			"nameIt": "Salisburgo",
 			"population": 206279
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named for its city, the \"salt castle\"; the salt came from the mines at Hallein, which made its archbishops rich.",
+				"Silent Night was first sung at Oberndorf, on Christmas Eve 1818.",
+				"The Krimml Waterfalls, which drop about 380 m in three steps, are the highest in Austria."
+			],
+			"it": [
+				"Prende il nome dalla sua città, il \"castello del sale\"; il sale veniva dalle miniere di Hallein, che arricchirono i suoi arcivescovi.",
+				"Astro del ciel fu cantata per la prima volta a Oberndorf, la vigilia di Natale del 1818.",
+				"Le cascate di Krimml, che scendono di circa 380 m in tre salti, sono le più alte dell’Austria."
+			]
+		}
 	},
 	"burgenland": {
 		"kind": "region",
@@ -81,7 +129,19 @@
 			"nameIt": "Eisenstadt",
 			"population": 13165
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Named in 1919 for the Hungarian counties it came from, whose German names ended in -burg: Pressburg, Ödenburg, Wieselburg, Eisenburg.",
+				"It passed from Hungary to Austria in 1921, but Sopron, its natural capital, voted to stay Hungarian.",
+				"Joseph Haydn served the Esterházy princes of Eisenstadt for almost thirty years, and is buried in the town."
+			],
+			"it": [
+				"Prende il nome, dal 1919, dalle contee ungheresi da cui proviene, i cui nomi tedeschi finivano in -burg: Pressburg, Ödenburg, Wieselburg, Eisenburg.",
+				"Passò dall’Ungheria all’Austria nel 1921, ma Sopron, il suo capoluogo naturale, votò per restare ungherese.",
+				"Joseph Haydn servì i principi Esterházy di Eisenstadt per quasi trent’anni, ed è sepolto in città."
+			]
+		}
 	},
 	"steiermark": {
 		"kind": "region",
@@ -100,7 +160,19 @@
 			"nameIt": "Graz",
 			"population": 263234
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Named for the town of Steyr, the seat of the counts who first ruled it, though Steyr is now in Upper Austria.",
+				"The white Lipizzaner horses of Vienna’s Spanish Riding School are bred at Piber.",
+				"Its dark green pumpkin seed oil, Kürbiskernöl, has a protected name."
+			],
+			"it": [
+				"Prende il nome dalla città di Steyr, sede dei conti che per primi la governarono, anche se Steyr oggi è nell’Alta Austria.",
+				"I cavalli bianchi lipizzani della Scuola di equitazione spagnola di Vienna sono allevati a Piber.",
+				"Il suo olio di semi di zucca, il Kürbiskernöl, di un verde scurissimo, ha un nome protetto."
+			]
+		}
 	},
 	"vorarlberg": {
 		"kind": "region",
@@ -115,7 +187,19 @@
 			"nameIt": "Bregenz",
 			"population": 26928
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"\"In front of the Arlberg\", as seen from Innsbruck and Vienna.",
+				"In 1919 about four in five of its voters chose to join Switzerland, but the Swiss and the Allies said no.",
+				"The Bregenz Festival stages its operas on a floating stage on Lake Constance."
+			],
+			"it": [
+				"\"Davanti all’Arlberg\", visto da Innsbruck e da Vienna.",
+				"Nel 1919 circa quattro elettori su cinque scelsero di unirsi alla Svizzera, ma gli svizzeri e gli Alleati dissero di no.",
+				"Il Festival di Bregenz mette in scena le sue opere su un palco galleggiante sul lago di Costanza."
+			]
+		}
 	},
 	"tirol": {
 		"kind": "region",
@@ -132,7 +216,19 @@
 			"nameIt": "Innsbruck",
 			"population": 155214
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Named for Tirol Castle, near Merano, which is now in Italy.",
+				"The old land was split in 1919, when South Tyrol went to Italy.",
+				"Swarovski has cut crystal at Wattens since 1895."
+			],
+			"it": [
+				"Prende il nome da Castel Tirolo, vicino a Merano, che oggi è in Italia.",
+				"L’antica regione fu divisa nel 1919, quando l’Alto Adige passò all’Italia.",
+				"La Swarovski taglia cristalli a Wattens dal 1895."
+			]
+		}
 	},
 	"karnten": {
 		"kind": "region",
@@ -153,6 +249,18 @@
 			"name": "Grossglockner",
 			"elevation": 3798
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"The name is pre-Roman, perhaps Celtic, and its meaning is uncertain.",
+				"In a plebiscite of 1920, its south voted to stay in Austria rather than join the new Kingdom of Serbs, Croats and Slovenes; 10 October is still a holiday.",
+				"A Slovene-speaking minority lives in the south, and the argument over bilingual place signs was settled only in 2011."
+			],
+			"it": [
+				"Il nome è preromano, forse celtico, e il suo significato è incerto.",
+				"In un plebiscito del 1920 il sud votò per restare in Austria invece di unirsi al nuovo Regno dei Serbi, Croati e Sloveni; il 10 ottobre è ancora festa.",
+				"Nel sud vive una minoranza di lingua slovena, e la disputa sui cartelli bilingui fu risolta solo nel 2011."
+			]
+		}
 	}
 }
