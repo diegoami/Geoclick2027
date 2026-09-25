@@ -2,7 +2,8 @@
 	"_note": [
 		"Name-facts for Czechia (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences."
+		"of the same id, written later, never shows a town's sentences.",
+		"FT-73 added the fourteen regions (kraje), each as a \"region\" entry; Praha the region is a separate id from prague the town."
 	],
 	"brno": {
 		"city": {
@@ -18,6 +19,62 @@
 			]
 		}
 	},
+	"jihocesky": {
+		"region": {
+			"en": [
+				"South Bohemia; its capital, České Budějovice, is Budweis in German, the town that gave Budweiser its name.",
+				"Český Krumlov, a castle town in a loop of the Vltava, has been a UNESCO site since 1992.",
+				"Around Třeboň, fishponds dug in the 16th century still raise the carp that Czechs eat at Christmas."
+			],
+			"it": [
+				"Boemia meridionale; il suo capoluogo, České Budějovice, in tedesco si chiama Budweis, la città che ha dato il nome alla Budweiser.",
+				"Český Krumlov, una città con castello in un’ansa della Moldava, è un sito UNESCO dal 1992.",
+				"Intorno a Třeboň, gli stagni per i pesci scavati nel Cinquecento allevano ancora le carpe che i cechi mangiano a Natale."
+			]
+		}
+	},
+	"jihomoravsky": {
+		"region": {
+			"en": [
+				"South Moravia; Moravia takes its name from the river Morava, a name probably from an old word for water or marsh.",
+				"At Austerlitz, now Slavkov u Brna, Napoleon beat the Russian and Austrian emperors in 1805, in the Battle of the Three Emperors.",
+				"The Liechtensteins’ estate of Lednice and Valtice, some 280 km² of parks and follies, is a UNESCO site."
+			],
+			"it": [
+				"Moravia meridionale; la Moravia prende il nome dal fiume Morava, un nome che viene probabilmente da un’antica parola per l’acqua o la palude.",
+				"Ad Austerlitz, oggi Slavkov u Brna, Napoleone sconfisse gli imperatori di Russia e d’Austria nel 1805, nella battaglia dei tre imperatori.",
+				"La tenuta dei Liechtenstein a Lednice e Valtice, circa 280 km² di parchi e padiglioni, è un sito UNESCO."
+			]
+		}
+	},
+	"karlovarsky": {
+		"region": {
+			"en": [
+				"Named for Karlovy Vary, \"Charles’s hot springs\": by legend the emperor Charles IV found them while hunting, in the 14th century.",
+				"Karlovy Vary, Mariánské Lázně and Františkovy Lázně are on UNESCO’s list of the Great Spa Towns of Europe.",
+				"The silver coins struck at Jáchymov, Joachimsthalers, gave the thaler its name, and through it the dollar."
+			],
+			"it": [
+				"Prende il nome da Karlovy Vary, \"le terme di Carlo\": secondo la leggenda l’imperatore Carlo IV le scoprì durante una caccia, nel Trecento.",
+				"Karlovy Vary, Mariánské Lázně e Františkovy Lázně sono nella lista UNESCO delle grandi città termali d’Europa.",
+				"Le monete d’argento coniate a Jáchymov, i Joachimsthaler, diedero il nome al tallero, e attraverso questo al dollaro."
+			]
+		}
+	},
+	"kralovehradecky": {
+		"region": {
+			"en": [
+				"Named for Hradec Králové, \"the queen’s castle\", a town that from the 14th century belonged to the widowed queens of Bohemia.",
+				"At Königgrätz, near the town, Prussia defeated Austria in 1866 and took the lead in uniting Germany.",
+				"Karel Čapek, whose play R.U.R. gave the world the word robot, was born at Malé Svatoňovice in 1890."
+			],
+			"it": [
+				"Prende il nome da Hradec Králové, \"il castello della regina\", una città che dal Trecento apparteneva alle regine vedove di Boemia.",
+				"A Sadowa, vicino alla città, la Prussia sconfisse l’Austria nel 1866 e prese la guida dell’unificazione tedesca.",
+				"Karel Čapek, il cui dramma R.U.R. diede al mondo la parola robot, nacque a Malé Svatoňovice nel 1890."
+			]
+		}
+	},
 	"liberec": {
 		"city": {
 			"en": [
@@ -30,6 +87,34 @@
 			]
 		}
 	},
+	"liberecky": {
+		"region": {
+			"en": [
+				"Named for Liberec, whose Czech name probably grew out of the German one, Reichenberg.",
+				"Much of the Bohemian Paradise, a landscape of sandstone rock towns, lies here; in 1955 it became the country’s first protected landscape.",
+				"Jablonec nad Nisou has made glass beads and costume jewellery for export since the 19th century."
+			],
+			"it": [
+				"Prende il nome da Liberec, il cui nome ceco nacque probabilmente da quello tedesco, Reichenberg.",
+				"Qui si trova gran parte del Paradiso boemo, un paesaggio di città di roccia arenaria; nel 1955 fu la prima area paesaggistica protetta del paese.",
+				"Jablonec nad Nisou produce perle di vetro e bigiotteria per l’esportazione dall’Ottocento."
+			]
+		}
+	},
+	"moravskoslezsky": {
+		"region": {
+			"en": [
+				"Its name joins two lands: Moravia, named for the river Morava, and the Czech corner of Silesia.",
+				"Sigmund Freud was born in 1856 in Příbor, then called Freiberg.",
+				"At Kopřivnice, the works that became Tatra built one of central Europe’s first cars, the Präsident, in 1897."
+			],
+			"it": [
+				"Il suo nome unisce due terre: la Moravia, che prende il nome dal fiume Morava, e l’angolo ceco della Slesia.",
+				"Sigmund Freud nacque nel 1856 a Příbor, che allora si chiamava Freiberg.",
+				"A Kopřivnice, le officine che sarebbero diventate la Tatra costruirono nel 1897 una delle prime automobili dell’Europa centrale, la Präsident."
+			]
+		}
+	},
 	"olomouc": {
 		"city": {
 			"en": [
@@ -39,6 +124,20 @@
 			"it": [
 				"La sua colonna della Santissima Trinità, alta 35 m, è un sito UNESCO.",
 				"Qui Mozart, a undici anni, scrisse una sinfonia nel 1767."
+			]
+		}
+	},
+	"olomoucky": {
+		"region": {
+			"en": [
+				"Named for Olomouc, which a Renaissance legend said Julius Caesar had founded; the name is Slavic, and its meaning uncertain.",
+				"Olomoucké tvarůžky, a small and famously pungent ripened cheese, are made at Loštice.",
+				"At Gräfenberg, now Lázně Jeseník, Vincenz Priessnitz founded one of the first water-cure spas in the 1820s."
+			],
+			"it": [
+				"Prende il nome da Olomouc, che una leggenda rinascimentale diceva fondata da Giulio Cesare; il nome è slavo, e il suo significato incerto.",
+				"Gli Olomoucké tvarůžky, piccoli formaggi stagionati dall’odore famoso per la sua forza, si fanno a Loštice.",
+				"A Gräfenberg, oggi Lázně Jeseník, Vincenz Priessnitz fondò negli anni Venti dell’Ottocento uno dei primi centri di cura con l’acqua."
 			]
 		}
 	},
@@ -66,6 +165,20 @@
 			]
 		}
 	},
+	"pardubicky": {
+		"region": {
+			"en": [
+				"Named for its capital, Pardubice, a town known across the country for its gingerbread; the origin of its name is uncertain.",
+				"The composer Bohuslav Martinů was born in 1890 in the tower of Polička’s church, where his father was the watchman.",
+				"At Kladruby nad Labem, horses have been bred for the imperial court since 1579; the stud is a UNESCO site."
+			],
+			"it": [
+				"Prende il nome dal capoluogo, Pardubice, una città famosa in tutto il paese per il suo pan di zenzero; l’origine del nome è incerta.",
+				"Il compositore Bohuslav Martinů nacque nel 1890 nella torre della chiesa di Polička, dove il padre faceva il guardiano.",
+				"A Kladruby nad Labem si allevano cavalli per la corte imperiale dal 1579; la scuderia è un sito UNESCO."
+			]
+		}
+	},
 	"plzen": {
 		"city": {
 			"en": [
@@ -75,6 +188,20 @@
 			"it": [
 				"La Pilsner, la prima birra chiara a bassa fermentazione, fu prodotta qui nel 1842.",
 				"Le officine Škoda, fondate qui nell’Ottocento, producevano cannoni, motori e locomotive."
+			]
+		}
+	},
+	"plzensky": {
+		"region": {
+			"en": [
+				"Named for Plzeň, whose German name, Pilsen, gave the world the word pilsner.",
+				"The Chods, around Domažlice, guarded Bohemia’s western border for centuries in return for royal privileges.",
+				"Saint John of Nepomuk, thrown from Prague’s Charles Bridge in 1393 and now the patron of bridges, was born in Nepomuk."
+			],
+			"it": [
+				"Prende il nome da Plzeň, il cui nome tedesco, Pilsen, ha dato al mondo la parola pils.",
+				"I Chodi, intorno a Domažlice, sorvegliarono per secoli il confine occidentale della Boemia in cambio di privilegi reali.",
+				"San Giovanni Nepomuceno, gettato dal ponte Carlo di Praga nel 1393 e oggi patrono dei ponti, nacque a Nepomuk."
 			]
 		}
 	},
@@ -92,6 +219,62 @@
 			]
 		}
 	},
+	"praha": {
+		"region": {
+			"en": [
+				"The name probably comes from práh, \"threshold\", perhaps for a ford or rapids on the Vltava; the derivation is not certain.",
+				"A city and a region at once, whose mayor also does the job of a regional governor.",
+				"Its first defenestration, in 1419, set off the Hussite Wars; its second, in 1618, led to the Thirty Years’ War."
+			],
+			"it": [
+				"Il nome viene probabilmente da práh, \"soglia\", forse per un guado o delle rapide sulla Moldava; l’etimologia non è certa.",
+				"Una città e una regione allo stesso tempo, il cui sindaco fa anche da presidente della regione.",
+				"La sua prima defenestrazione, nel 1419, scatenò le guerre hussite; la seconda, nel 1618, portò alla guerra dei Trent’anni."
+			]
+		}
+	},
+	"stredocesky": {
+		"region": {
+			"en": [
+				"Central Bohemia; Bohemia is Latin Boiohaemum, \"home of the Boii\", a Celtic people who lived here before the Slavs.",
+				"Its regional offices are in Prague, although Prague is a region of its own and not part of it.",
+				"Karlštejn castle was built by the emperor Charles IV from 1348 to keep the crown jewels and the relics he collected."
+			],
+			"it": [
+				"Boemia centrale; Boemia è il latino Boiohaemum, \"patria dei Boi\", un popolo celtico che viveva qui prima degli Slavi.",
+				"I suoi uffici regionali sono a Praga, anche se Praga è una regione a sé e non ne fa parte.",
+				"Il castello di Karlštejn fu costruito dall’imperatore Carlo IV dal 1348 per custodire i gioielli della corona e le reliquie che collezionava."
+			]
+		}
+	},
+	"ustecky": {
+		"region": {
+			"en": [
+				"Named for Ústí nad Labem: ústí is a river mouth, here where the Bílina flows into the Elbe.",
+				"The old town of Most was pulled down in the 1970s for the coal beneath it; its Gothic church was moved 841 m on rails in 1975.",
+				"Pravčická brána, in Bohemian Switzerland, is the largest natural sandstone arch in Europe."
+			],
+			"it": [
+				"Prende il nome da Ústí nad Labem: ústí è la foce di un fiume, qui quella della Bílina nell’Elba.",
+				"Il centro storico di Most fu demolito negli anni Settanta per il carbone che c’era sotto; nel 1975 la sua chiesa gotica fu spostata di 841 m su rotaie.",
+				"La Pravčická brána, nella Svizzera boema, è il più grande arco naturale di arenaria d’Europa."
+			]
+		}
+	},
+	"vysocina": {
+		"region": {
+			"en": [
+				"\"The highlands\", for the Bohemian-Moravian Highlands; it was called the Jihlava region until 2001.",
+				"It has three UNESCO sites: the square of Telč, the Jewish quarter of Třebíč and Santini’s star-shaped church at Zelená Hora.",
+				"Gustav Mahler grew up in Jihlava, where his father ran a distillery."
+			],
+			"it": [
+				"\"Gli altipiani\", per l’Altopiano boemo-moravo; fino al 2001 si chiamava regione di Jihlava.",
+				"Ha tre siti UNESCO: la piazza di Telč, il quartiere ebraico di Třebíč e la chiesa a forma di stella di Santini a Zelená Hora.",
+				"Gustav Mahler crebbe a Jihlava, dove il padre gestiva una distilleria."
+			]
+		}
+	},
 	"zlin": {
 		"city": {
 			"en": [
@@ -101,6 +284,20 @@
 			"it": [
 				"La fabbrica di scarpe Baťa la ricostruì negli anni Venti e Trenta come città industriale modello.",
 				"Dal 1949 al 1990 si chiamò Gottwaldov."
+			]
+		}
+	},
+	"zlinsky": {
+		"region": {
+			"en": [
+				"Named for Zlín; its east is Moravian Wallachia, named not for Romania’s Wallachia but for the Vlach shepherds who settled its hills.",
+				"The archbishops’ palace and gardens at Kroměříž are a UNESCO site.",
+				"The open-air museum at Rožnov pod Radhoštěm, opened in 1925, is one of the oldest in central Europe."
+			],
+			"it": [
+				"Prende il nome da Zlín; la sua parte orientale è la Valacchia morava, che non deve il nome alla Valacchia romena ma ai pastori valacchi che ne popolarono le colline.",
+				"Il palazzo e i giardini degli arcivescovi a Kroměříž sono un sito UNESCO.",
+				"Il museo all’aperto di Rožnov pod Radhoštěm, aperto nel 1925, è uno dei più antichi dell’Europa centrale."
 			]
 		}
 	}
