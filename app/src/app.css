@@ -6,7 +6,8 @@
  * now the one copy.
  *
  * - .geoclick-popup: the target name in explore (MapView) and the tour
- *   (TourView).
+ *   (TourView). A region's name in any view adds .geoclick-region-name
+ *   (FT-74, further down).
  * - .geoclick-solved-popup: labels on solved targets in the quiz (QuizView) and
  *   the overview (OverviewView). Adding .revealed gives a quiz target that was
  *   given away after too many misses the muted gold label.
@@ -217,14 +218,17 @@
 	opacity: 1;
 	transform: scale(1.08);
 }
-/* A region's name that does not fit along its region (#34, Explore only): the
- * stretched name's smaller sibling - the same serif capitals, ink and halo,
- * set straight - rather than a box in another typeface, so the two read as one
- * system at two sizes, as an atlas sets big and small territories. The tier
- * sizes and strengths above still apply. Town names keep the pill beside
- * their dot (FT-24), and Quiz and Overview labels keep their boxes. Upright
- * serif, where terrain names are italic sans, keeps the two apart. */
-.geoclick-retention.geoclick-region-name .maplibregl-popup-content {
+/* A region's name set straight (#34 on Explore, FT-74 everywhere else): the
+ * stretched name's smaller sibling - the same serif capitals, ink and halo -
+ * rather than a box in another typeface, so the two read as one system at
+ * two sizes, as an atlas sets big and small territories. Explore's fallback
+ * names, and the Quiz's, Overview's and Tour's region names, all carry
+ * .geoclick-region-name; the tier sizes and strengths above still apply.
+ * Town names keep the pill beside their dot (FT-24). Upright serif, where
+ * terrain names are italic sans, keeps the two apart. The :is() keeps the
+ * weight the Explore-only selector had, above the tiers' own rules. */
+:is(.geoclick-retention, .geoclick-solved-popup, .geoclick-popup).geoclick-region-name
+	.maplibregl-popup-content {
 	padding: 0;
 	border-radius: 0;
 	background: none;
@@ -241,9 +245,15 @@
 	background: none;
 	color: rgb(150, 85, 20);
 }
+/* A Quiz name given away after too many misses: its brown box becomes brown
+ * ink, still apart from a name placed right (the green-grey above). */
+.geoclick-solved-popup.geoclick-region-name.revealed .maplibregl-popup-content {
+	color: rgb(120, 78, 28);
+}
 /* Magnified, it grows like any name; with no box to darken, a wider halo
  * keeps it clear of the map under it. */
-.geoclick-retention.geoclick-region-name .maplibregl-popup-content:is(.is-hovered, .is-magnified) {
+:is(.geoclick-retention, .geoclick-solved-popup, .geoclick-popup).geoclick-region-name
+	.maplibregl-popup-content:is(.is-hovered, .is-magnified) {
 	padding: 0;
 	background: none;
 	text-shadow:

@@ -332,6 +332,12 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   `rgb(150, 85, 20)` (about 5.8:1), in both forms, so an asked name is one
   colour however it is drawn. *The hit area lost the pill's padding*,
   accepted pending a tablet check.
+  **Superseded for the Quiz, Overview and Tour on 2026-09-25 (FT-74, #46
+  Q5):** after playing v0.11.0 on a tablet the product owner wanted a
+  region's name to look the same on every screen, so those three views now
+  set it the same way; towns still keep the pill. The Quiz's signal moves
+  from the box to the ink: a name placed right is the region green-grey, a
+  name given away is brown, `rgb(120, 78, 28)` (about 6.6:1 on white).
 - **Amended 2026-09-24: the name you just tapped always shows.** A
   stretched name is still a hard obstacle, and at the country view that hid
   small regions boxed in by curved neighbours: Basilicata between PUGLIA and
