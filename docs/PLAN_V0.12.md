@@ -191,12 +191,12 @@ entry.
 
 ## Progress ledger
 
-| Task  | State     | Merge | Notes                                                                     |
-| ----- | --------- | ----- | ------------------------------------------------------------------------- |
-| FT-69 | planned   | —     | countries read `world.json`; "Czech Republic" = "Czechia"                 |
-| FT-70 | **in PR** | —     | Greece, 14 regions, 42 + 42 sentences; 🧑 waiting for the owner’s reading |
-| FT-71 | planned   | —     | 172 countries, one commit per continent                                   |
-| FT-72 | planned   | —     | 284 capitals and European cities, 160 new files                           |
-| FT-73 | planned   | —     | the 15 new countries, 539 places, one commit per file                     |
-| FT-74 | planned   | —     | boxless region names in the Quiz, Overview and Tour                       |
-| FT-75 | planned   | —     | the two nits from #45                                                     |
+| Task  | State     | Merge | Notes                                                                                      |
+| ----- | --------- | ----- | ------------------------------------------------------------------------------------------ |
+| FT-69 | planned   | —     | countries read `world.json`; "Czech Republic" = "Czechia"                                  |
+| FT-70 | **in PR** | —     | Greece, 14 regions, 42 + 42 sentences; 🧑 waiting for the owner’s reading                  |
+| FT-71 | planned   | —     | 172 countries, one commit per continent                                                    |
+| FT-72 | planned   | —     | 284 capitals and European cities, 160 new files                                            |
+| FT-73 | planned   | —     | the 15 new countries, 539 places, one commit per file                                      |
+| FT-74 | **in PR** | —     | region names boxless in the Quiz, Overview and Tour; given-away ink brown; 🧑 tablet check |
+| FT-75 | planned   | —     | the two nits from #45                                                                      |

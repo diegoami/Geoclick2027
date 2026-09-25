@@ -111,7 +111,11 @@
 						// On the place itself: the collision pass moves it from there
 						// if it has to (FT-24).
 						anchor: 'center',
-						className: 'geoclick-solved-popup'
+						// A region's name without a box, as on Explore (FT-74).
+						className:
+							target.type === 'city'
+								? 'geoclick-solved-popup'
+								: 'geoclick-solved-popup geoclick-region-name'
 					})
 						.setLngLat(target.centroid)
 						.setText(target.name)
