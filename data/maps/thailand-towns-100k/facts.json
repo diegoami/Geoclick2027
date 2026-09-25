@@ -4,70 +4,158 @@
 		"population": 117127,
 		"populationRank": 23,
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"The Emerald Buddha, Thailand’s most sacred image, was found here in 1434 when lightning split a stupa.",
+				"The White Temple, Wat Rong Khun, was begun by the artist Chalermchai Kositpipat in 1997."
+			],
+			"it": [
+				"Il Buddha di smeraldo, l’immagine più sacra della Thailandia, fu trovato qui nel 1434 quando un fulmine spaccò uno stupa.",
+				"Il Tempio bianco, Wat Rong Khun, fu iniziato dall’artista Chalermchai Kositpipat nel 1997."
+			]
+		}
 	},
 	"chiang-mai": {
 		"kind": "city",
 		"population": 397211,
 		"populationRank": 2,
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"\"The new city\", founded in 1296 by King Mengrai.",
+				"Its old city is still a square ringed by a moat.",
+				"The temple of Doi Suthep looks down on it from its mountain."
+			],
+			"it": [
+				"\"La città nuova\", fondata nel 1296 dal re Mengrai.",
+				"La sua città vecchia è ancora un quadrato cinto da un fossato.",
+				"Il tempio del Doi Suthep la guarda dall’alto della sua montagna."
+			]
+		}
 	},
 	"lampang": {
 		"kind": "city",
 		"population": 204081,
 		"populationRank": 12,
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Horse-drawn carriages still carry people around the town."
+			],
+			"it": [
+				"Carrozze trainate da cavalli portano ancora la gente in giro per la città."
+			]
+		}
 	},
 	"nong-khai": {
 		"kind": "city",
 		"population": 104505,
 		"populationRank": 26,
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"The first Thai-Lao Friendship Bridge across the Mekong opened here in 1994.",
+				"Sala Keoku is a garden of giant concrete sculptures of gods and demons."
+			],
+			"it": [
+				"Qui fu aperto nel 1994 il primo Ponte dell’amicizia thai-lao sul Mekong.",
+				"Sala Keoku è un giardino di gigantesche sculture di cemento di dei e demoni."
+			]
+		}
 	},
 	"udon-thani": {
 		"kind": "city",
 		"population": 247231,
 		"populationRank": 9,
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"The United States flew from an air base here during the Vietnam War."
+			],
+			"it": [
+				"Durante la guerra del Vietnam gli Stati Uniti operavano da una base aerea qui."
+			]
+		}
 	},
 	"phitsanulok": {
 		"kind": "city",
 		"population": 164017,
 		"populationRank": 14,
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Its Phra Phuttha Chinnarat is often called the most beautiful Buddha image in Thailand."
+			],
+			"it": [
+				"Il suo Phra Phuttha Chinnarat è spesso considerato l’immagine del Buddha più bella della Thailandia."
+			]
+		}
 	},
 	"khon-kaen": {
 		"kind": "city",
 		"population": 251056,
 		"populationRank": 8,
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Its university, founded in 1964, was the first in the northeast."
+			],
+			"it": [
+				"La sua università, fondata nel 1964, fu la prima del nord-est."
+			]
+		}
 	},
 	"nakhon-sawan": {
 		"kind": "city",
 		"population": 111915,
 		"populationRank": 24,
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Its Chinese New Year parade, with dragons and lion dances, is one of the largest in Thailand."
+			],
+			"it": [
+				"La sua sfilata del capodanno cinese, con draghi e danze del leone, è una delle più grandi della Thailandia."
+			]
+		}
 	},
 	"ubon-ratchathani": {
 		"kind": "city",
 		"population": 273893,
 		"populationRank": 6,
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"At the start of Buddhist Lent it holds a festival of giant carved candles."
+			],
+			"it": [
+				"All’inizio della Quaresima buddista ospita una festa di enormi candele scolpite."
+			]
+		}
 	},
 	"nakhon-ratchasima": {
 		"kind": "city",
 		"population": 334984,
 		"populationRank": 4,
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Often called Korat; a statue in the town remembers Thao Suranari, who led its resistance to a Lao army in 1826."
+			],
+			"it": [
+				"Spesso chiamata Korat; una statua in città ricorda Thao Suranari, che guidò la resistenza contro un esercito lao nel 1826."
+			]
+		}
 	},
 	"ayutthaya": {
 		"kind": "city",
@@ -75,28 +163,62 @@
 		"populationRank": 20,
 		"region": "Phra Nakhon Si Ayutthaya",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its temples are a UNESCO site.",
+				"At Wat Mahathat, the head of a Buddha statue has been gripped by the roots of a fig tree."
+			],
+			"it": [
+				"I suoi templi sono un sito UNESCO.",
+				"A Wat Mahathat la testa di una statua del Buddha è stata avvolta dalle radici di un fico."
+			]
+		}
 	},
 	"pathum-thani": {
 		"kind": "city",
 		"population": 154412,
 		"populationRank": 16,
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Mon refugees from Burma settled here in the 17th and 18th centuries."
+			],
+			"it": [
+				"Rifugiati mon dalla Birmania si stabilirono qui nel Seicento e nel Settecento."
+			]
+		}
 	},
 	"nonthaburi": {
 		"kind": "city",
 		"population": 258550,
 		"populationRank": 7,
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Thailand’s Ministry of Public Health has its seat here."
+			],
+			"it": [
+				"Qui ha sede il Ministero della Salute pubblica thailandese."
+			]
+		}
 	},
 	"nakhon-pathom": {
 		"kind": "city",
 		"population": 117927,
 		"populationRank": 22,
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Its Phra Pathommachedi, about 120 m high, is one of the tallest stupas in the world."
+			],
+			"it": [
+				"Il suo Phra Pathommachedi, alto circa 120 m, è uno degli stupa più alti del mondo."
+			]
+		}
 	},
 	"bangkok": {
 		"kind": "city",
@@ -125,21 +247,47 @@
 		"population": 388920,
 		"populationRank": 3,
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"In 1893 French gunboats forced their way past its forts, in the Paknam incident.",
+				"The Erawan Museum is topped by a giant three-headed elephant."
+			],
+			"it": [
+				"Nel 1893 cannoniere francesi forzarono il passaggio davanti ai suoi forti, nell’incidente di Paknam.",
+				"L’Erawan Museum è sormontato da un gigantesco elefante a tre teste."
+			]
+		}
 	},
 	"ratchaburi": {
 		"kind": "city",
 		"population": 106996,
 		"populationRank": 25,
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"It is known for its glazed dragon jars."
+			],
+			"it": [
+				"È nota per le sue giare smaltate con i draghi."
+			]
+		}
 	},
 	"chon-buri": {
 		"kind": "city",
 		"population": 226618,
 		"populationRank": 11,
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Every October it holds buffalo races."
+			],
+			"it": [
+				"Ogni ottobre ospita corse di bufali."
+			]
+		}
 	},
 	"si-racha": {
 		"kind": "city",
@@ -147,35 +295,77 @@
 		"populationRank": 13,
 		"region": "Chon Buri",
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"The hot sauce sriracha takes its name from the town."
+			],
+			"it": [
+				"La salsa piccante sriracha prende il nome dalla città."
+			]
+		}
 	},
 	"surat-thani": {
 		"kind": "city",
 		"population": 157627,
 		"populationRank": 15,
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Its river, the Tapi, was named by King Vajiravudh after the Tapti of India."
+			],
+			"it": [
+				"Il suo fiume, il Tapi, fu chiamato così dal re Vajiravudh come il Tapti dell’India."
+			]
+		}
 	},
 	"nakhon-si-thammarat": {
 		"kind": "city",
 		"population": 232335,
 		"populationRank": 10,
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Its stupa, Wat Phra Mahathat, is one of the most revered in southern Thailand."
+			],
+			"it": [
+				"Il suo stupa, Wat Phra Mahathat, è uno dei più venerati della Thailandia meridionale."
+			]
+		}
 	},
 	"phuket": {
 		"kind": "city",
 		"population": 141618,
 		"populationRank": 21,
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Its old town keeps rows of Sino-Portuguese shophouses built in the tin boom.",
+				"Its vegetarian festival, held by the Chinese community every autumn, includes feats of self-piercing."
+			],
+			"it": [
+				"La sua città vecchia conserva file di case-bottega sino-portoghesi costruite nel boom dello stagno.",
+				"La sua festa vegetariana, celebrata ogni autunno dalla comunità cinese, comprende prove di autoperforazione."
+			]
+		}
 	},
 	"trang": {
 		"kind": "city",
 		"population": 147820,
 		"populationRank": 19,
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Thailand’s first rubber trees were planted near here, around 1899."
+			],
+			"it": [
+				"I primi alberi della gomma della Thailandia furono piantati qui vicino, intorno al 1899."
+			]
+		}
 	},
 	"hat-yai": {
 		"kind": "city",
@@ -183,20 +373,44 @@
 		"populationRank": 5,
 		"region": "Songkhla",
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"It grew in the 20th century around a railway junction."
+			],
+			"it": [
+				"Crebbe nel Novecento intorno a un nodo ferroviario."
+			]
+		}
 	},
 	"pattani": {
 		"kind": "city",
 		"population": 150000,
 		"populationRank": 17,
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"The Krue Se mosque, of brick, is said to have been left unfinished because of a curse."
+			],
+			"it": [
+				"Si dice che la moschea di Krue Se, in mattoni, sia rimasta incompiuta a causa di una maledizione."
+			]
+		}
 	},
 	"yala": {
 		"kind": "city",
 		"population": 148140,
 		"populationRank": 18,
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"A planned town, laid out in the 20th century."
+			],
+			"it": [
+				"Una città pianificata, tracciata nel Novecento."
+			]
+		}
 	}
 }
