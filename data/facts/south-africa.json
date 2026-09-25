@@ -2,8 +2,43 @@
 	"_note": [
 		"Name-facts for South Africa (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences."
+		"of the same id, written later, never shows a town's sentences.",
+		"FT-73 added the nine provinces (\"region\") and the towns of south-africa-towns-100k (\"city\"). Several towns were renamed after 1994; the sentences give the old name where it helps."
 	],
+	"benoni": {
+		"city": {
+			"en": [
+				"Hebrew for \"son of my sorrow\", from Genesis, chosen by a surveyor who found the land hard to map.",
+				"The actress Charlize Theron was born here in 1975."
+			],
+			"it": [
+				"In ebraico \"figlio del mio dolore\", dalla Genesi, scelto da un agrimensore che trovò difficile misurare quelle terre.",
+				"Qui nacque nel 1975 l’attrice Charlize Theron."
+			]
+		}
+	},
+	"bethal": {
+		"city": {
+			"en": [
+				"The name is said to join the names of two women, Elizabeth and Alida, wives of men who gave land for the town."
+			],
+			"it": [
+				"Si dice che il nome unisca quelli di due donne, Elizabeth e Alida, mogli degli uomini che donarono la terra per la città."
+			]
+		}
+	},
+	"bhisho": {
+		"city": {
+			"en": [
+				"Once the capital of Ciskei, a homeland under apartheid; it is now the seat of the Eastern Cape government.",
+				"In 1992 Ciskei soldiers shot dead 28 marchers of the ANC here."
+			],
+			"it": [
+				"Un tempo capitale del Ciskei, un homeland dell’apartheid; oggi è la sede del governo del Capo Orientale.",
+				"Nel 1992 i soldati del Ciskei uccisero qui 28 dimostranti dell’ANC."
+			]
+		}
+	},
 	"bloemfontein": {
 		"city": {
 			"en": [
@@ -15,6 +50,16 @@
 				"\"Fontana di fiori\".",
 				"Qui nacque J. R. R. Tolkien, nel 1892.",
 				"Qui ha sede la Corte suprema d’appello del paese."
+			]
+		}
+	},
+	"brits": {
+		"city": {
+			"en": [
+				"The Hartbeespoort Dam, finished in 1923, lies just to its south-east."
+			],
+			"it": [
+				"La diga di Hartbeespoort, terminata nel 1923, si trova poco a sud-est."
 			]
 		}
 	},
@@ -32,6 +77,342 @@
 			]
 		}
 	},
+	"durban": {
+		"city": {
+			"en": [
+				"Named for Sir Benjamin D’Urban, governor of the Cape Colony, in 1835.",
+				"It has one of the largest communities of Indian origin outside India.",
+				"Bunny chow, a hollowed loaf filled with curry, was invented here."
+			],
+			"it": [
+				"Prende il nome da Sir Benjamin D’Urban, governatore della Colonia del Capo, nel 1835.",
+				"Ha una delle più grandi comunità di origine indiana fuori dall’India.",
+				"Il bunny chow, una pagnotta svuotata e riempita di curry, è nato qui."
+			]
+		}
+	},
+	"east-london": {
+		"city": {
+			"en": [
+				"A river port at the mouth of the Buffalo.",
+				"In 1938 a coelacanth, a fish thought extinct for 66 million years, was caught off the town and identified here."
+			],
+			"it": [
+				"Un porto fluviale alla foce del Buffalo.",
+				"Nel 1938 un celacanto, un pesce ritenuto estinto da 66 milioni di anni, fu pescato al largo della città e riconosciuto qui."
+			]
+		}
+	},
+	"eastern-cape": {
+		"region": {
+			"en": [
+				"The eastern part of the old Cape Province, created in 1994 together with the former homelands of Transkei and Ciskei.",
+				"Nelson Mandela was born at Mvezo, a village here, in 1918.",
+				"For about a century, from 1779, the Xhosa fought nine frontier wars here against the colonists."
+			],
+			"it": [
+				"La parte orientale dell’antica Provincia del Capo, creata nel 1994 insieme agli ex homeland del Transkei e del Ciskei.",
+				"Nelson Mandela nacque nel 1918 a Mvezo, un villaggio della provincia.",
+				"Per circa un secolo, dal 1779, gli Xhosa combatterono qui nove guerre di frontiera contro i coloni."
+			]
+		}
+	},
+	"free-state": {
+		"region": {
+			"en": [
+				"From the Orange Free State, a Boer republic from 1854 to 1902, named for the Orange river.",
+				"The Orange river itself was named in the 1770s for the Dutch House of Orange.",
+				"The Vredefort crater, some two billion years old, is the largest known impact structure on Earth and a UNESCO site."
+			],
+			"it": [
+				"Dallo Stato Libero dell’Orange, una repubblica boera dal 1854 al 1902, che prendeva il nome dal fiume Orange.",
+				"Il fiume Orange stesso fu chiamato così negli anni Settanta del Settecento in onore della casa d’Orange olandese.",
+				"Il cratere di Vredefort, vecchio di circa due miliardi di anni, è la più grande struttura da impatto conosciuta sulla Terra e un sito UNESCO."
+			]
+		}
+	},
+	"gauteng": {
+		"region": {
+			"en": [
+				"Sesotho for \"place of gold\", for the gold of the Witwatersrand.",
+				"The smallest province by area, and the one with the most people.",
+				"The Cradle of Humankind, with the caves of Sterkfontein, has given up some of the oldest fossils of human ancestors, and is a UNESCO site."
+			],
+			"it": [
+				"In sesotho \"luogo dell’oro\", per l’oro del Witwatersrand.",
+				"La provincia più piccola per superficie, e la più popolosa.",
+				"La Culla dell’umanità, con le grotte di Sterkfontein, ha restituito alcuni dei più antichi fossili di antenati dell’uomo, ed è un sito UNESCO."
+			]
+		}
+	},
+	"george": {
+		"city": {
+			"en": [
+				"Named in 1811 for King George III.",
+				"It is the main town of the Garden Route."
+			],
+			"it": [
+				"Prende il nome, dal 1811, da re Giorgio III.",
+				"È la città principale della Garden Route."
+			]
+		}
+	},
+	"gqeberha": {
+		"city": {
+			"en": [
+				"The Xhosa name of the river that runs through it; the town was Port Elizabeth until 2021.",
+				"Rufane Donkin named Port Elizabeth in 1820 after his late wife.",
+				"British settlers who landed here in 1820 were among the first large groups of English speakers in South Africa."
+			],
+			"it": [
+				"Il nome xhosa del fiume che la attraversa; la città si chiamò Port Elizabeth fino al 2021.",
+				"Rufane Donkin la chiamò Port Elizabeth nel 1820 in memoria della moglie scomparsa.",
+				"I coloni britannici sbarcati qui nel 1820 furono tra i primi grandi gruppi di anglofoni in Sudafrica."
+			]
+		}
+	},
+	"johannesburg": {
+		"city": {
+			"en": [
+				"Probably named for two officials who were both called Johannes, though which ones is still argued.",
+				"It was founded in 1886, when gold was found on the Witwatersrand.",
+				"Vilakazi Street in Soweto was home to two Nobel Peace laureates, Nelson Mandela and Desmond Tutu."
+			],
+			"it": [
+				"Probabilmente prende il nome da due funzionari che si chiamavano entrambi Johannes, anche se su chi fossero si discute ancora.",
+				"Fu fondata nel 1886, quando fu scoperto l’oro sul Witwatersrand.",
+				"In Vilakazi Street, a Soweto, abitarono due premi Nobel per la pace, Nelson Mandela e Desmond Tutu."
+			]
+		}
+	},
+	"kariega": {
+		"city": {
+			"en": [
+				"Formerly Uitenhage, it took its new name in 2021.",
+				"Volkswagen has built cars here since 1951."
+			],
+			"it": [
+				"Un tempo Uitenhage, ha preso il nuovo nome nel 2021.",
+				"La Volkswagen vi costruisce automobili dal 1951."
+			]
+		}
+	},
+	"kimberley": {
+		"city": {
+			"en": [
+				"Named for Lord Kimberley, Britain’s colonial secretary, in 1873.",
+				"The Big Hole, a diamond mine dug largely by hand, is one of the largest hand-dug holes in the world.",
+				"In 1882 it became one of the first towns in the world with electric street lights."
+			],
+			"it": [
+				"Prende il nome da Lord Kimberley, ministro britannico delle colonie, nel 1873.",
+				"Il Big Hole, una miniera di diamanti scavata in gran parte a mano, è una delle più grandi buche scavate a mano del mondo.",
+				"Nel 1882 divenne una delle prime città al mondo con l’illuminazione stradale elettrica."
+			]
+		}
+	},
+	"klerksdorp": {
+		"city": {
+			"en": [
+				"Named for Jacob de Clercq, the area’s first magistrate.",
+				"Gold mining has shaped it since the 1880s."
+			],
+			"it": [
+				"Prende il nome da Jacob de Clercq, il primo magistrato della zona.",
+				"L’estrazione dell’oro l’ha plasmata dagli anni Ottanta dell’Ottocento."
+			]
+		}
+	},
+	"komani": {
+		"city": {
+			"en": [
+				"Formerly Queenstown, it now goes by its Xhosa name.",
+				"Its centre was laid out as a hexagon, so that it could be defended from the middle."
+			],
+			"it": [
+				"Un tempo Queenstown, oggi porta il suo nome xhosa.",
+				"Il suo centro fu tracciato a forma di esagono, per poterlo difendere dal mezzo."
+			]
+		}
+	},
+	"kroonstad": {
+		"city": {
+			"en": [
+				"In 1900, briefly, it was the capital of the Orange Free State as the British advanced."
+			],
+			"it": [
+				"Nel 1900, per breve tempo, fu la capitale dello Stato Libero dell’Orange mentre i Britannici avanzavano."
+			]
+		}
+	},
+	"kwazulu-natal": {
+		"region": {
+			"en": [
+				"KwaZulu is \"place of the Zulu\"; Natal is the name Vasco da Gama gave the coast when he sailed past on Christmas Day 1497.",
+				"At Isandlwana, in 1879, a Zulu army defeated a British force.",
+				"The uKhahlamba-Drakensberg Park, with thousands of San rock paintings, is a UNESCO site."
+			],
+			"it": [
+				"KwaZulu è il \"luogo degli Zulu\"; Natal è il nome che Vasco da Gama diede alla costa quando la costeggiò il giorno di Natale del 1497.",
+				"A Isandlwana, nel 1879, un esercito zulu sconfisse una forza britannica.",
+				"Il parco uKhahlamba-Drakensberg, con migliaia di pitture rupestri dei San, è un sito UNESCO."
+			]
+		}
+	},
+	"limpopo": {
+		"region": {
+			"en": [
+				"Named for the Limpopo river, a name of uncertain origin; until 2003 the province was called Northern Province.",
+				"Mapungubwe was the centre of a kingdom in the 13th century; a small golden rhinoceros was found in one of its graves.",
+				"The Balobedu people are led by a Rain Queen, Modjadji, believed to have the power to bring rain."
+			],
+			"it": [
+				"Prende il nome dal fiume Limpopo, un nome di origine incerta; fino al 2003 la provincia si chiamava Provincia del Nord.",
+				"Mapungubwe fu il centro di un regno nel XIII secolo; in una delle sue tombe fu trovato un piccolo rinoceronte d’oro.",
+				"Il popolo Balobedu è guidato da una Regina della pioggia, Modjadji, a cui si attribuisce il potere di portare la pioggia."
+			]
+		}
+	},
+	"mahikeng": {
+		"city": {
+			"en": [
+				"Tswana for \"place of stones\"; the British spelled it Mafeking.",
+				"During the Boer War it was besieged for 217 days; its defender, Robert Baden-Powell, later founded the Scouts.",
+				"The British governed the Bechuanaland Protectorate from here, outside its own borders, until 1965."
+			],
+			"it": [
+				"In tswana \"luogo delle pietre\"; i Britannici lo scrivevano Mafeking.",
+				"Durante la guerra anglo-boera fu assediata per 217 giorni; il suo difensore, Robert Baden-Powell, fondò poi gli Scout.",
+				"I Britannici governarono da qui il protettorato del Bechuanaland, fuori dai suoi confini, fino al 1965."
+			]
+		}
+	},
+	"mbombela": {
+		"city": {
+			"en": [
+				"Formerly Nelspruit, it took its Swazi name in the 2000s.",
+				"Its stadium for the 2010 World Cup holds up its roof with pillars shaped like giraffes."
+			],
+			"it": [
+				"Un tempo Nelspruit, ha preso il suo nome swazi negli anni Duemila.",
+				"Il suo stadio per i Mondiali del 2010 sorregge il tetto con piloni a forma di giraffa."
+			]
+		}
+	},
+	"middelburg": {
+		"city": {
+			"en": [
+				"\"Middle town\", said to be for its place halfway between Pretoria and Lydenburg."
+			],
+			"it": [
+				"\"Città di mezzo\", si dice per la sua posizione a metà strada fra Pretoria e Lydenburg."
+			]
+		}
+	},
+	"mpumalanga": {
+		"region": {
+			"en": [
+				"\"Where the sun rises\", for its place in the east of the country.",
+				"The southern half of the Kruger National Park, opened in 1926, is here.",
+				"The Barberton Makhonjwa Mountains hold some of the oldest rocks on Earth, about 3.5 billion years old, and are a UNESCO site."
+			],
+			"it": [
+				"\"Dove sorge il sole\", per la sua posizione nell’est del paese.",
+				"Qui si trova la metà meridionale del Parco nazionale Kruger, aperto nel 1926.",
+				"I monti Barberton Makhonjwa contengono alcune delle rocce più antiche della Terra, di circa 3,5 miliardi di anni, e sono un sito UNESCO."
+			]
+		}
+	},
+	"mthatha": {
+		"city": {
+			"en": [
+				"Formerly Umtata, it was the capital of Transkei, a homeland declared independent under apartheid.",
+				"A museum here is dedicated to Nelson Mandela, who was born in the district."
+			],
+			"it": [
+				"Un tempo Umtata, era la capitale del Transkei, un homeland dichiarato indipendente durante l’apartheid.",
+				"Qui un museo è dedicato a Nelson Mandela, nato nel distretto."
+			]
+		}
+	},
+	"north-west": {
+		"region": {
+			"en": [
+				"Named simply for its place on the map.",
+				"Much of it was Bophuthatswana, a homeland declared independent under apartheid and recognised by no other country.",
+				"The Pilanesberg game reserve lies inside the ring of an ancient extinct volcano."
+			],
+			"it": [
+				"Prende il nome semplicemente dalla sua posizione sulla carta.",
+				"Gran parte del suo territorio era il Bophuthatswana, un homeland dichiarato indipendente durante l’apartheid e non riconosciuto da nessun altro paese.",
+				"La riserva faunistica del Pilanesberg si trova dentro l’anello di un antico vulcano spento."
+			]
+		}
+	},
+	"northern-cape": {
+		"region": {
+			"en": [
+				"The northern part of the old Cape Province, which was split in three in 1994.",
+				"The largest province, with the fewest people.",
+				"After winter rains, the semi-desert of Namaqualand is covered with wild flowers."
+			],
+			"it": [
+				"La parte settentrionale dell’antica Provincia del Capo, divisa in tre nel 1994.",
+				"La provincia più vasta, e la meno popolata.",
+				"Dopo le piogge invernali il semideserto del Namaqualand si copre di fiori selvatici."
+			]
+		}
+	},
+	"paarl": {
+		"city": {
+			"en": [
+				"Dutch for \"pearl\", for the granite domes above the town that shine after rain.",
+				"The movement to write Afrikaans as a language of its own began here in 1875, and a monument to the language stands above the town.",
+				"Nelson Mandela walked free from the Victor Verster prison, near the town, in 1990."
+			],
+			"it": [
+				"In olandese \"perla\", per le cupole di granito sopra la città che brillano dopo la pioggia.",
+				"Il movimento per scrivere l’afrikaans come lingua a sé nacque qui nel 1875, e un monumento alla lingua sovrasta la città.",
+				"Nel 1990 Nelson Mandela uscì libero dalla prigione Victor Verster, vicino alla città."
+			]
+		}
+	},
+	"pietermaritzburg": {
+		"city": {
+			"en": [
+				"Named for two Voortrekker leaders, Piet Retief and Gerrit Maritz.",
+				"In 1893 the young Gandhi was thrown off a train at its station for sitting in a whites-only carriage.",
+				"The Comrades Marathon, about 90 km, has been run between it and Durban since 1921."
+			],
+			"it": [
+				"Prende il nome da due capi dei Voortrekker, Piet Retief e Gerrit Maritz.",
+				"Nel 1893 il giovane Gandhi fu fatto scendere da un treno nella sua stazione perché sedeva in una carrozza riservata ai bianchi.",
+				"La Comrades Marathon, di circa 90 km, si corre fra la città e Durban dal 1921."
+			]
+		}
+	},
+	"polokwane": {
+		"city": {
+			"en": [
+				"Sepedi for \"place of safety\"; it was called Pietersburg until the 2000s.",
+				"It hosted matches of the 2010 football World Cup."
+			],
+			"it": [
+				"In sepedi \"luogo di sicurezza\"; fino agli anni Duemila si chiamava Pietersburg.",
+				"Ha ospitato partite dei Mondiali di calcio del 2010."
+			]
+		}
+	},
+	"potchefstroom": {
+		"city": {
+			"en": [
+				"Founded in 1838, it was the first capital of the South African Republic, the Boer state north of the Vaal."
+			],
+			"it": [
+				"Fondata nel 1838, fu la prima capitale della Repubblica Sudafricana, lo stato boero a nord del Vaal."
+			]
+		}
+	},
 	"pretoria": {
 		"city": {
 			"en": [
@@ -43,6 +424,104 @@
 				"Prende il nome da Andries Pretorius, un capo dei Voortrekker.",
 				"I suoi jacaranda la tingono di viola ogni ottobre.",
 				"Nelson Mandela giurò come presidente ai suoi Union Buildings nel 1994."
+			]
+		}
+	},
+	"rustenburg": {
+		"city": {
+			"en": [
+				"Afrikaans for \"town of rest\".",
+				"It lies on the Bushveld Complex, the source of most of the world’s platinum.",
+				"Paul Kruger, president of the Boer republic, farmed at Boekenhoutfontein nearby."
+			],
+			"it": [
+				"In afrikaans \"città del riposo\".",
+				"Sorge sul Complesso del Bushveld, da cui viene gran parte del platino del mondo.",
+				"Paul Kruger, presidente della repubblica boera, aveva la sua fattoria a Boekenhoutfontein, poco lontano."
+			]
+		}
+	},
+	"springs": {
+		"city": {
+			"en": [
+				"Named for the springs of water found in the area.",
+				"A mining town of the East Rand, built on coal and then gold."
+			],
+			"it": [
+				"Prende il nome dalle sorgenti d’acqua trovate nella zona.",
+				"Una città mineraria dell’East Rand, cresciuta sul carbone e poi sull’oro."
+			]
+		}
+	},
+	"thohoyandou": {
+		"city": {
+			"en": [
+				"Venda for \"head of the elephant\".",
+				"It was the capital of Venda, a homeland declared independent under apartheid."
+			],
+			"it": [
+				"In venda \"testa dell’elefante\".",
+				"Era la capitale del Venda, un homeland dichiarato indipendente durante l’apartheid."
+			]
+		}
+	},
+	"vereeniging": {
+		"city": {
+			"en": [
+				"Dutch for \"union\", from the name of the coal company that founded it.",
+				"The peace that ended the Boer War in 1902 bears its name: the delegates met here, though it was signed in Pretoria.",
+				"At Sharpeville, nearby, police shot dead 69 protesters on 21 March 1960; the day is now Human Rights Day."
+			],
+			"it": [
+				"In olandese \"unione\", dal nome della compagnia carbonifera che la fondò.",
+				"La pace che nel 1902 mise fine alla guerra anglo-boera porta il suo nome: i delegati si riunirono qui, anche se fu firmata a Pretoria.",
+				"A Sharpeville, poco lontano, il 21 marzo 1960 la polizia uccise 69 manifestanti; quel giorno oggi è la Giornata dei diritti umani."
+			]
+		}
+	},
+	"vryheid": {
+		"city": {
+			"en": [
+				"Afrikaans for \"freedom\"; it was the capital of the New Republic, a small Boer state, from 1884 to 1888."
+			],
+			"it": [
+				"In afrikaans \"libertà\"; fu la capitale della Nuova Repubblica, un piccolo stato boero, dal 1884 al 1888."
+			]
+		}
+	},
+	"welkom": {
+		"city": {
+			"en": [
+				"Afrikaans for \"welcome\"; it was built from 1947 as a planned town for the Free State goldfields."
+			],
+			"it": [
+				"In afrikaans \"benvenuto\"; fu costruita dal 1947 come città pianificata per i giacimenti d’oro del Free State."
+			]
+		}
+	},
+	"western-cape": {
+		"region": {
+			"en": [
+				"Named for the Cape of Good Hope, so called by the king of Portugal after Bartolomeu Dias rounded it in 1488.",
+				"Its fynbos is the heart of the Cape Floral Kingdom, the smallest of the world’s six plant kingdoms and one of the richest.",
+				"The first wine at the Cape was pressed in 1659."
+			],
+			"it": [
+				"Prende il nome dal Capo di Buona Speranza, chiamato così dal re del Portogallo dopo che Bartolomeu Dias lo ebbe doppiato nel 1488.",
+				"Il suo fynbos è il cuore del Regno floristico del Capo, il più piccolo dei sei regni floristici del mondo e uno dei più ricchi.",
+				"Il primo vino del Capo fu spremuto nel 1659."
+			]
+		}
+	},
+	"worcester": {
+		"city": {
+			"en": [
+				"Named for the Marquess of Worcester, brother of the Cape governor Lord Charles Somerset.",
+				"It is the centre of a large wine and brandy region."
+			],
+			"it": [
+				"Prende il nome dal marchese di Worcester, fratello del governatore del Capo Lord Charles Somerset.",
+				"È il centro di una vasta regione di vino e brandy."
 			]
 		}
 	}
