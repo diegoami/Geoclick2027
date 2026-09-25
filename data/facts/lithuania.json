@@ -1,0 +1,67 @@
+{
+	"_note": [
+		"Name-facts for Lithuania (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
+		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
+		"of the same id, written later, never shows a town's sentences."
+	],
+	"kaunas": {
+		"city": {
+			"en": [
+				"It was the capital between the wars, from 1920 to 1939, while Vilnius was held by Poland.",
+				"In 1940 the Japanese consul Chiune Sugihara issued visas here that saved thousands of Jews."
+			],
+			"it": [
+				"Fu la capitale tra le due guerre, dal 1920 al 1939, mentre Vilnius era in mano alla Polonia.",
+				"Nel 1940 il console giapponese Chiune Sugihara rilasciò qui visti che salvarono migliaia di ebrei."
+			]
+		}
+	},
+	"klaipeda": {
+		"city": {
+			"en": [
+				"It was the German town of Memel until 1923.",
+				"The only seaport of Lithuania.",
+				"The ferry to the Curonian Spit, a strip of dunes almost 100 km long, leaves from here."
+			],
+			"it": [
+				"Fu la città tedesca di Memel fino al 1923.",
+				"L’unico porto marittimo della Lituania.",
+				"Da qui parte il traghetto per la penisola dei Curi, una striscia di dune lunga quasi 100 km."
+			]
+		}
+	},
+	"panevezys": {
+		"city": {
+			"en": [
+				"\"Along the Nevėžis\", its river."
+			],
+			"it": [
+				"\"Lungo il Nevėžis\", il suo fiume."
+			]
+		}
+	},
+	"siauliai": {
+		"city": {
+			"en": [
+				"The Hill of Crosses, with more than a hundred thousand crosses, stands just outside it."
+			],
+			"it": [
+				"Appena fuori città sorge la Collina delle croci, con più di centomila croci."
+			]
+		}
+	},
+	"vilnius": {
+		"city": {
+			"en": [
+				"Named for the Vilnia river.",
+				"Its baroque old town, one of the largest in Europe, is a UNESCO site.",
+				"Its district of Užupis declared itself a republic in 1997, with its own constitution."
+			],
+			"it": [
+				"Prende il nome dal fiume Vilnia.",
+				"Il suo centro barocco, uno dei più grandi d’Europa, è un sito UNESCO.",
+				"Il suo quartiere di Užupis si è dichiarato repubblica nel 1997, con una sua costituzione."
+			]
+		}
+	}
+}

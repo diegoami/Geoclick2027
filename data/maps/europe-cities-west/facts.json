@@ -84,7 +84,19 @@
 		"population": 450406,
 		"populationRank": 34,
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"From Irish Béal Feirste, \"mouth of the sandbank ford\".",
+				"The Titanic was built in its shipyards between 1909 and 1912.",
+				"The writer C. S. Lewis was born here in 1898."
+			],
+			"it": [
+				"Dall’irlandese Béal Feirste, \"foce del guado sul banco di sabbia\".",
+				"Il Titanic fu costruito nei suoi cantieri tra il 1909 e il 1912.",
+				"Qui nacque nel 1898 lo scrittore C. S. Lewis."
+			]
+		}
 	},
 	"bradford": {
 		"kind": "city",
@@ -195,7 +207,19 @@
 		"population1950": 626000,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"From Irish Dubh Linn, \"black pool\"; in Irish today it is mostly Baile Átha Cliath.",
+				"It began as a Viking settlement in 841.",
+				"The Book of Kells, an illuminated gospel of around 800, is kept at Trinity College."
+			],
+			"it": [
+				"Dall’irlandese Dubh Linn, \"stagno nero\"; oggi in irlandese si chiama per lo più Baile Átha Cliath.",
+				"Nacque come insediamento vichingo nell’841.",
+				"Il Libro di Kells, un vangelo miniato dell’800 circa, è custodito al Trinity College."
+			]
+		}
 	},
 	"leeuwarden": {
 		"kind": "city",
@@ -442,7 +466,17 @@
 		"population": 188907,
 		"populationRank": 54,
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"From Irish Corcach, \"marsh\".",
+				"The Titanic’s last port of call, in 1912, was Queenstown, now Cobh, in Cork harbour."
+			],
+			"it": [
+				"Dall’irlandese Corcach, \"palude\".",
+				"L’ultimo scalo del Titanic, nel 1912, fu Queenstown, oggi Cobh, nel porto di Cork."
+			]
+		}
 	},
 	"s-hertogenbosch": {
 		"kind": "city",
@@ -570,14 +604,38 @@
 		"population1950": 759000,
 		"region": "Antwerp",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Legend says the name means \"hand-throwing\", for a giant’s cut-off hand; it more probably means \"at the wharf\".",
+				"Most of the world’s rough diamonds pass through its trade.",
+				"Rubens lived and painted here."
+			],
+			"it": [
+				"La leggenda dice che il nome significhi \"lancio della mano\", per la mano mozzata di un gigante; più probabilmente vuol dire \"presso l’approdo\".",
+				"La maggior parte dei diamanti grezzi del mondo passa per il suo mercato.",
+				"Qui visse e dipinse Rubens."
+			]
+		}
 	},
 	"brugge": {
 		"kind": "city",
 		"population": 146469,
 		"populationRank": 55,
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Probably from an old Norse word for a landing stage.",
+				"In the 15th century one of the richest trading towns of northern Europe, until its channel to the sea silted up.",
+				"Its medieval centre is a UNESCO site."
+			],
+			"it": [
+				"Probabilmente da un’antica parola norrena per un approdo.",
+				"Nel Quattrocento una delle città mercantili più ricche del nord Europa, finché il suo canale verso il mare non si insabbiò.",
+				"Il suo centro medievale è un sito UNESCO."
+			]
+		}
 	},
 	"gent": {
 		"kind": "city",
@@ -585,7 +643,19 @@
 		"populationRank": 35,
 		"region": "East Flanders",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"From a Celtic word for a meeting of rivers, here the Scheldt and the Lys.",
+				"The emperor Charles V was born here in 1500.",
+				"The Ghent Altarpiece of the Van Eyck brothers, finished in 1432, is in its cathedral."
+			],
+			"it": [
+				"Da una parola celtica per la confluenza di due fiumi, qui la Schelda e la Lys.",
+				"Qui nacque l’imperatore Carlo V, nel 1500.",
+				"Il Polittico di Gand dei fratelli Van Eyck, terminato nel 1432, è nella sua cattedrale."
+			]
+		}
 	},
 	"maastricht": {
 		"kind": "city",
@@ -614,7 +684,19 @@
 		"population1950": 1415000,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"From Bruocsella, \"settlement in the marsh\".",
+				"The main institutions of the European Union and the headquarters of NATO are here.",
+				"The Manneken Pis, a fountain statue of a small boy, has more than a thousand costumes."
+			],
+			"it": [
+				"Da Bruocsella, \"insediamento nella palude\".",
+				"Qui hanno sede le principali istituzioni dell’Unione europea e il quartier generale della NATO.",
+				"Il Manneken Pis, la statua di una fontana a forma di bambino, ha più di mille costumi."
+			]
+		}
 	},
 	"brighton": {
 		"kind": "city",
@@ -701,21 +783,51 @@
 		"populationRank": 24,
 		"region": "Liege",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"For eight centuries the capital of a prince-bishopric, independent until 1795.",
+				"Georges Simenon, the creator of Maigret, was born here in 1903."
+			],
+			"it": [
+				"Per otto secoli capitale di un principato vescovile, indipendente fino al 1795.",
+				"Qui nacque nel 1903 Georges Simenon, il creatore di Maigret."
+			]
+		}
 	},
 	"namur": {
 		"kind": "city",
 		"population": 106284,
 		"populationRank": 62,
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Its citadel stands where the Sambre flows into the Meuse.",
+				"The capital of Wallonia."
+			],
+			"it": [
+				"La sua cittadella sorge dove la Sambre si getta nella Mosa.",
+				"La capitale della Vallonia."
+			]
+		}
 	},
 	"charleroi": {
 		"kind": "city",
 		"population": 345367,
 		"populationRank": 45,
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Named in 1666 for King Charles II of Spain: Charles-Roi.",
+				"The comic magazine Spirou was founded on its edge in 1938."
+			],
+			"it": [
+				"Prende il nome, dal 1666, dal re Carlo II di Spagna: Charles-Roi.",
+				"La rivista di fumetti Spirou nacque alle sue porte nel 1938."
+			]
+		}
 	},
 	"luxembourg": {
 		"kind": "city",
@@ -723,7 +835,19 @@
 		"populationRank": 61,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Its fortress made it the \"Gibraltar of the North\", and its old town is a UNESCO site.",
+				"The casemates of the Bock, tunnels cut into the rock, run for about 17 km.",
+				"With Brussels and Strasbourg, it is one of the three official seats of the European Union’s institutions."
+			],
+			"it": [
+				"La sua fortezza la rese la \"Gibilterra del Nord\", e il suo centro storico è un sito UNESCO.",
+				"Le casematte del Bock, gallerie scavate nella roccia, si estendono per circa 17 km.",
+				"Con Bruxelles e Strasburgo è una delle tre sedi ufficiali delle istituzioni dell’Unione europea."
+			]
+		}
 	},
 	"le-havre": {
 		"kind": "city",

@@ -5,7 +5,17 @@
 		"populationRank": 42,
 		"region": "Troms",
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Called the Paris of the North, and the starting point of many Arctic expeditions.",
+				"In 1928 Roald Amundsen flew from here on his last flight, and never came back."
+			],
+			"it": [
+				"Chiamata la Parigi del Nord, e punto di partenza di molte spedizioni artiche.",
+				"Nel 1928 Roald Amundsen partì da qui per il suo ultimo volo, e non tornò più."
+			]
+		}
 	},
 	"oulu": {
 		"kind": "city",
@@ -34,7 +44,19 @@
 		"region": "Suðurnes",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"\"Smoky bay\", for the steam of its hot springs.",
+				"The northernmost capital of a sovereign state.",
+				"Nearly all its houses are heated with water from under the ground."
+			],
+			"it": [
+				"\"Baia fumosa\", per il vapore delle sue sorgenti calde.",
+				"La capitale di Stato sovrano più a nord del mondo.",
+				"Quasi tutte le sue case sono riscaldate con acqua che viene dal sottosuolo."
+			]
+		}
 	},
 	"umea": {
 		"kind": "city",
@@ -42,7 +64,17 @@
 		"populationRank": 28,
 		"region": "Västerbotten",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Called the city of birches, for the trees planted after a fire in 1888.",
+				"It was a European Capital of Culture in 2014."
+			],
+			"it": [
+				"Chiamata la città delle betulle, per gli alberi piantati dopo un incendio nel 1888.",
+				"Fu Capitale europea della cultura nel 2014."
+			]
+		}
 	},
 	"trondheim": {
 		"kind": "city",
@@ -50,7 +82,17 @@
 		"populationRank": 14,
 		"region": "Sør-Trøndelag",
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"As Nidaros it was Norway’s capital in Viking times.",
+				"Its cathedral stands over the grave of Saint Olav, and is the northernmost medieval cathedral in the world."
+			],
+			"it": [
+				"Come Nidaros fu la capitale della Norvegia ai tempi dei vichinghi.",
+				"La sua cattedrale sorge sulla tomba di sant’Olav, ed è la cattedrale medievale più a nord del mondo."
+			]
+		}
 	},
 	"vaasa": {
 		"kind": "city",
@@ -58,7 +100,17 @@
 		"populationRank": 39,
 		"region": "Western Finland",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Named in 1606 for the Swedish royal house of Vasa.",
+				"It was the seat of the Finnish government in the civil war of 1918."
+			],
+			"it": [
+				"Prende il nome, dal 1606, dalla casa reale svedese dei Vasa.",
+				"Fu la sede del governo finlandese durante la guerra civile del 1918."
+			]
+		}
 	},
 	"kuopio": {
 		"kind": "city",
@@ -86,7 +138,15 @@
 		"populationRank": 41,
 		"region": "North Karelia",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"\"River mouth\", at the mouth of the Pielisjoki."
+			],
+			"it": [
+				"\"Foce del fiume\", alla foce del Pielisjoki."
+			]
+		}
 	},
 	"sundsvall": {
 		"kind": "city",
@@ -94,7 +154,15 @@
 		"populationRank": 31,
 		"region": "Västernorrland",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"After a great fire in 1888 it was rebuilt in stone, in a single burst of grand buildings."
+			],
+			"it": [
+				"Dopo un grande incendio nel 1888 fu ricostruita in pietra, con un’ondata di edifici grandiosi."
+			]
+		}
 	},
 	"jyvaskyla": {
 		"kind": "city",
@@ -162,7 +230,17 @@
 		"populationRank": 38,
 		"region": "South Karelia",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Its fortress once guarded the border between Sweden and Russia.",
+				"It lies on Lake Saimaa, the largest lake in Finland."
+			],
+			"it": [
+				"La sua fortezza sorvegliava un tempo il confine tra Svezia e Russia.",
+				"Si trova sul lago Saimaa, il più grande della Finlandia."
+			]
+		}
 	},
 	"lahti": {
 		"kind": "city",
@@ -190,7 +268,15 @@
 		"populationRank": 34,
 		"region": "Gävleborg",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Its giant straw goat, put up every Christmas since 1966, has been burned down many times."
+			],
+			"it": [
+				"La sua gigantesca capra di paglia, montata ogni Natale dal 1966, è stata bruciata molte volte."
+			]
+		}
 	},
 	"turku": {
 		"kind": "city",
@@ -218,7 +304,19 @@
 		"populationRank": 9,
 		"region": "Hordaland",
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Bryggen, its Hanseatic wharf, is a UNESCO site.",
+				"One of the rainiest cities in Europe.",
+				"The composer Edvard Grieg was born here in 1843."
+			],
+			"it": [
+				"Bryggen, il suo molo anseatico, è un sito UNESCO.",
+				"Una delle città più piovose d’Europa.",
+				"Qui nacque nel 1843 il compositore Edvard Grieg."
+			]
+		}
 	},
 	"helsinki": {
 		"kind": "city",
@@ -249,7 +347,19 @@
 		"population1950": 468000,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"From 1624 to 1925 it was called Christiania, for the Danish king Christian IV.",
+				"The Nobel Peace Prize is awarded here.",
+				"Edvard Munch’s The Scream is in its museums."
+			],
+			"it": [
+				"Dal 1624 al 1925 si chiamò Christiania, dal re danese Cristiano IV.",
+				"Qui si assegna il premio Nobel per la pace.",
+				"L’Urlo di Edvard Munch è nei suoi musei."
+			]
+		}
 	},
 	"uppsala": {
 		"kind": "city",
@@ -276,7 +386,15 @@
 		"populationRank": 25,
 		"region": "Buskerud",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Its road tunnel, the Spiral, climbs in six loops inside a hill to a lookout above the town."
+			],
+			"it": [
+				"La sua galleria stradale, la Spirale, sale in sei giri dentro una collina fino a un belvedere sopra la città."
+			]
+		}
 	},
 	"vasteras": {
 		"kind": "city",
@@ -304,7 +422,17 @@
 		"populationRank": 30,
 		"region": "Värmland",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Named in 1584 for Duke Charles, later King Charles IX.",
+				"The union of Sweden and Norway was ended by talks held here in 1905."
+			],
+			"it": [
+				"Prende il nome, dal 1584, dal duca Carlo, poi re Carlo IX.",
+				"L’unione tra Svezia e Norvegia fu sciolta con trattative tenute qui nel 1905."
+			]
+		}
 	},
 	"stockholm": {
 		"kind": "city",
@@ -353,7 +481,15 @@
 		"populationRank": 32,
 		"region": "Telemark",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Henrik Ibsen was born here in 1828."
+			],
+			"it": [
+				"Qui nacque Henrik Ibsen, nel 1828."
+			]
+		}
 	},
 	"stavanger": {
 		"kind": "city",
@@ -361,7 +497,17 @@
 		"populationRank": 11,
 		"region": "Rogaland",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Norway’s oil capital since the 1970s.",
+				"Preikestolen, a flat rock 600 m above a fjord, is close by."
+			],
+			"it": [
+				"La capitale norvegese del petrolio dagli anni Settanta.",
+				"Qui vicino si trova Preikestolen, una roccia piatta a 600 m sopra un fiordo."
+			]
+		}
 	},
 	"norrkoping": {
 		"kind": "city",
@@ -369,7 +515,15 @@
 		"populationRank": 27,
 		"region": "Östergötland",
 		"coastal": true,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Its old textile mills along the river make one of the best-kept industrial landscapes in Sweden."
+			],
+			"it": [
+				"Le sue vecchie fabbriche tessili lungo il fiume formano uno dei paesaggi industriali meglio conservati della Svezia."
+			]
+		}
 	},
 	"linkoping": {
 		"kind": "city",
@@ -377,7 +531,17 @@
 		"populationRank": 22,
 		"region": "Östergötland",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Saab builds its Gripen fighter jets here.",
+				"In 1600 several Swedish nobles were executed in its square, in what is called the Linköping Bloodbath."
+			],
+			"it": [
+				"Qui la Saab costruisce i suoi caccia Gripen.",
+				"Nel 1600 diversi nobili svedesi furono giustiziati nella sua piazza, nel cosiddetto bagno di sangue di Linköping."
+			]
+		}
 	},
 	"kristiansand": {
 		"kind": "city",
@@ -385,7 +549,15 @@
 		"populationRank": 36,
 		"region": "Vest-Agder",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Founded in 1641 by the Danish king Christian IV and named for him."
+			],
+			"it": [
+				"Fondata nel 1641 dal re danese Cristiano IV, che le diede il suo nome."
+			]
+		}
 	},
 	"jonkoping": {
 		"kind": "city",
@@ -412,7 +584,15 @@
 		"populationRank": 35,
 		"region": "Västra Götaland",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"For centuries a town of weavers and pedlars, and still Sweden’s textile town."
+			],
+			"it": [
+				"Per secoli una città di tessitori e venditori ambulanti, e ancora oggi la città svedese del tessile."
+			]
+		}
 	},
 	"goteborg": {
 		"kind": "city",
@@ -440,7 +620,17 @@
 		"populationRank": 17,
 		"region": "Nordjylland",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Across its fjord, the burial ground of Lindholm Høje has some 700 Viking graves.",
+				"Its name is on the best-known Danish akvavit, distilled here since 1846."
+			],
+			"it": [
+				"Oltre il fiordo, la necropoli di Lindholm Høje conta circa 700 tombe vichinghe.",
+				"Il suo nome è sull’akvavit danese più noto, distillato qui dal 1846."
+			]
+		}
 	},
 	"vaxjo": {
 		"kind": "city",
@@ -448,7 +638,15 @@
 		"populationRank": 37,
 		"region": "Kronoberg",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Its cathedral stands at the heart of the district of Småland, from which much of the 19th-century emigration to America set out."
+			],
+			"it": [
+				"La sua cattedrale sorge nel cuore dello Småland, da cui partì gran parte dell’emigrazione ottocentesca verso l’America."
+			]
+		}
 	},
 	"halmstad": {
 		"kind": "city",
@@ -456,7 +654,15 @@
 		"populationRank": 40,
 		"region": "Halland",
 		"coastal": true,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"It was Danish until 1645."
+			],
+			"it": [
+				"Fu danese fino al 1645."
+			]
+		}
 	},
 	"arhus": {
 		"kind": "city",
@@ -464,7 +670,17 @@
 		"populationRank": 8,
 		"region": "Midtjylland",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"From Old Danish Aros, \"river mouth\".",
+				"Its open-air museum, Den Gamle By, rebuilds a Danish town of past centuries house by house."
+			],
+			"it": [
+				"Dall’antico danese Aros, \"foce del fiume\".",
+				"Il suo museo all’aperto, Den Gamle By, ricostruisce casa per casa una città danese dei secoli passati."
+			]
+		}
 	},
 	"helsingborg": {
 		"kind": "city",
@@ -472,7 +688,17 @@
 		"populationRank": 24,
 		"region": "Skåne",
 		"coastal": true,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Only about 4 km of sea separate it from Helsingør in Denmark.",
+				"It was Danish until 1658."
+			],
+			"it": [
+				"Solo circa 4 km di mare la separano da Helsingør, in Danimarca.",
+				"Fu danese fino al 1658."
+			]
+		}
 	},
 	"vejle": {
 		"kind": "city",
@@ -480,7 +706,15 @@
 		"populationRank": 43,
 		"region": "Syddanmark",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"The Jelling stones, carved runestones of the 10th century often called Denmark’s birth certificate, stand close by."
+			],
+			"it": [
+				"Qui vicino si trovano le pietre di Jelling, pietre runiche del X secolo spesso chiamate il certificato di nascita della Danimarca."
+			]
+		}
 	},
 	"k-benhavn": {
 		"kind": "city",
@@ -490,7 +724,19 @@
 		"region": "Hovedstaden",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"\"Merchants’ harbour\".",
+				"The Little Mermaid, a statue of 1913, sits on its waterfront, after Hans Christian Andersen’s tale.",
+				"Tivoli Gardens, opened in 1843, is one of the oldest amusement parks in the world."
+			],
+			"it": [
+				"\"Porto dei mercanti\".",
+				"La Sirenetta, una statua del 1913, siede sul suo lungomare, dalla fiaba di Hans Christian Andersen.",
+				"I giardini di Tivoli, aperti nel 1843, sono uno dei parchi divertimento più antichi del mondo."
+			]
+		}
 	},
 	"malmo": {
 		"kind": "city",
@@ -518,7 +764,17 @@
 		"populationRank": 33,
 		"region": "Syddanmark",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Founded as a port in 1868, after Denmark had lost its southern harbours to Prussia.",
+				"The base of Denmark’s North Sea oil and offshore wind industries."
+			],
+			"it": [
+				"Fondata come porto nel 1868, dopo che la Danimarca aveva perso i porti del sud a favore della Prussia.",
+				"La base delle industrie danesi del petrolio del Mare del Nord e dell’eolico in mare."
+			]
+		}
 	},
 	"odense": {
 		"kind": "city",
@@ -526,6 +782,18 @@
 		"populationRank": 13,
 		"region": "Syddanmark",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"\"Odin’s shrine\".",
+				"Hans Christian Andersen was born here in 1805.",
+				"The composer Carl Nielsen grew up in a village nearby."
+			],
+			"it": [
+				"\"Il santuario di Odino\".",
+				"Qui nacque Hans Christian Andersen, nel 1805.",
+				"Il compositore Carl Nielsen crebbe in un villaggio qui vicino."
+			]
+		}
 	}
 }

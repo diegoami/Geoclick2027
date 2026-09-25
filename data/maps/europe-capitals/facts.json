@@ -6,7 +6,19 @@
 		"region": "Suðurnes",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"\"Smoky bay\", for the steam of its hot springs.",
+				"The northernmost capital of a sovereign state.",
+				"Nearly all its houses are heated with water from under the ground."
+			],
+			"it": [
+				"\"Baia fumosa\", per il vapore delle sue sorgenti calde.",
+				"La capitale di Stato sovrano più a nord del mondo.",
+				"Quasi tutte le sue case sono riscaldate con acqua che viene dal sottosuolo."
+			]
+		}
 	},
 	"helsinki": {
 		"kind": "city",
@@ -37,7 +49,19 @@
 		"population1950": 468000,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"From 1624 to 1925 it was called Christiania, for the Danish king Christian IV.",
+				"The Nobel Peace Prize is awarded here.",
+				"Edvard Munch’s The Scream is in its museums."
+			],
+			"it": [
+				"Dal 1624 al 1925 si chiamò Christiania, dal re danese Cristiano IV.",
+				"Qui si assegna il premio Nobel per la pace.",
+				"L’Urlo di Edvard Munch è nei suoi musei."
+			]
+		}
 	},
 	"tallinn": {
 		"kind": "city",
@@ -46,7 +70,19 @@
 		"region": "Harju",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Probably from taani linn, \"Danish town\", after the Danish conquest of 1219.",
+				"Its medieval old town is a UNESCO site.",
+				"Skype was built here by Estonian programmers."
+			],
+			"it": [
+				"Probabilmente da taani linn, \"città danese\", dopo la conquista danese del 1219.",
+				"Il suo centro medievale è un sito UNESCO.",
+				"Skype fu sviluppato qui da programmatori estoni."
+			]
+		}
 	},
 	"stockholm": {
 		"kind": "city",
@@ -75,7 +111,19 @@
 		"populationRank": 26,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Founded in 1201 by Bishop Albert of Buxhoeveden; the name perhaps comes from a small river.",
+				"It was one of the great towns of the Hanseatic League.",
+				"By local tradition the first decorated Christmas tree stood here, in 1510."
+			],
+			"it": [
+				"Fondata nel 1201 dal vescovo Alberto di Buxhoeveden; il nome viene forse da un piccolo fiume.",
+				"Fu una delle grandi città della Lega anseatica.",
+				"Secondo la tradizione locale qui fu addobbato il primo albero di Natale, nel 1510."
+			]
+		}
 	},
 	"moscow": {
 		"kind": "city",
@@ -107,7 +155,19 @@
 		"region": "Hovedstaden",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"\"Merchants’ harbour\".",
+				"The Little Mermaid, a statue of 1913, sits on its waterfront, after Hans Christian Andersen’s tale.",
+				"Tivoli Gardens, opened in 1843, is one of the oldest amusement parks in the world."
+			],
+			"it": [
+				"\"Porto dei mercanti\".",
+				"La Sirenetta, una statua del 1913, siede sul suo lungomare, dalla fiaba di Hans Christian Andersen.",
+				"I giardini di Tivoli, aperti nel 1843, sono uno dei parchi divertimento più antichi del mondo."
+			]
+		}
 	},
 	"vilnius": {
 		"kind": "city",
@@ -116,7 +176,19 @@
 		"region": "Vilniaus",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Named for the Vilnia river.",
+				"Its baroque old town, one of the largest in Europe, is a UNESCO site.",
+				"Its district of Užupis declared itself a republic in 1997, with its own constitution."
+			],
+			"it": [
+				"Prende il nome dal fiume Vilnia.",
+				"Il suo centro barocco, uno dei più grandi d’Europa, è un sito UNESCO.",
+				"Il suo quartiere di Užupis si è dichiarato repubblica nel 1997, con una sua costituzione."
+			]
+		}
 	},
 	"minsk": {
 		"kind": "city",
@@ -125,7 +197,19 @@
 		"population1950": 284000,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"First mentioned in 1067; the name probably comes from a small river.",
+				"Almost destroyed in the Second World War, it was rebuilt in the grand Soviet style of the 1950s.",
+				"It is the headquarters of the Commonwealth of Independent States, formed as the Soviet Union ended in 1991."
+			],
+			"it": [
+				"Citata per la prima volta nel 1067; il nome viene probabilmente da un piccolo fiume.",
+				"Quasi distrutta nella Seconda guerra mondiale, fu ricostruita nel grandioso stile sovietico degli anni Cinquanta.",
+				"È la sede della Comunità degli Stati indipendenti, nata alla fine dell’Unione Sovietica nel 1991."
+			]
+		}
 	},
 	"dublin": {
 		"kind": "city",
@@ -134,7 +218,19 @@
 		"population1950": 626000,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"From Irish Dubh Linn, \"black pool\"; in Irish today it is mostly Baile Átha Cliath.",
+				"It began as a Viking settlement in 841.",
+				"The Book of Kells, an illuminated gospel of around 800, is kept at Trinity College."
+			],
+			"it": [
+				"Dall’irlandese Dubh Linn, \"stagno nero\"; oggi in irlandese si chiama per lo più Baile Átha Cliath.",
+				"Nacque come insediamento vichingo nell’841.",
+				"Il Libro di Kells, un vangelo miniato dell’800 circa, è custodito al Trinity College."
+			]
+		}
 	},
 	"berlin": {
 		"kind": "city",
@@ -230,7 +326,19 @@
 		"population1950": 1415000,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"From Bruocsella, \"settlement in the marsh\".",
+				"The main institutions of the European Union and the headquarters of NATO are here.",
+				"The Manneken Pis, a fountain statue of a small boy, has more than a thousand costumes."
+			],
+			"it": [
+				"Da Bruocsella, \"insediamento nella palude\".",
+				"Qui hanno sede le principali istituzioni dell’Unione europea e il quartier generale della NATO.",
+				"Il Manneken Pis, la statua di una fontana a forma di bambino, ha più di mille costumi."
+			]
+		}
 	},
 	"kyiv": {
 		"kind": "city",
@@ -261,7 +369,19 @@
 		"population1950": 935000,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Praha probably comes from an old word for a threshold, or a ford across the Vltava.",
+				"Its castle is often called the largest ancient castle complex in the world.",
+				"Its astronomical clock, of 1410, is one of the oldest still working."
+			],
+			"it": [
+				"Praha viene probabilmente da un’antica parola per soglia, o per un guado della Moldava.",
+				"Il suo castello è spesso definito il più grande complesso di castelli antichi del mondo.",
+				"Il suo orologio astronomico, del 1410, è uno dei più antichi ancora in funzione."
+			]
+		}
 	},
 	"luxembourg": {
 		"kind": "city",
@@ -269,7 +389,19 @@
 		"populationRank": 40,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its fortress made it the \"Gibraltar of the North\", and its old town is a UNESCO site.",
+				"The casemates of the Bock, tunnels cut into the rock, run for about 17 km.",
+				"With Brussels and Strasbourg, it is one of the three official seats of the European Union’s institutions."
+			],
+			"it": [
+				"La sua fortezza la rese la \"Gibilterra del Nord\", e il suo centro storico è un sito UNESCO.",
+				"Le casematte del Bock, gallerie scavate nella roccia, si estendono per circa 17 km.",
+				"Con Bruxelles e Strasburgo è una delle tre sedi ufficiali delle istituzioni dell’Unione europea."
+			]
+		}
 	},
 	"paris": {
 		"kind": "city",
@@ -300,7 +432,19 @@
 		"population1950": 2086000,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named for the Wien river; the Romans had a camp here called Vindobona.",
+				"The Congress of Vienna, in 1814 and 1815, redrew the map of Europe after Napoleon.",
+				"Its coffee houses are on UNESCO’s list of intangible heritage."
+			],
+			"it": [
+				"Prende il nome dal fiume Wien; i Romani vi avevano un accampamento chiamato Vindobona.",
+				"Il Congresso di Vienna, nel 1814 e 1815, ridisegnò la carta d’Europa dopo Napoleone.",
+				"I suoi caffè sono nella lista UNESCO del patrimonio immateriale."
+			]
+		}
 	},
 	"bratislava": {
 		"kind": "city",
@@ -309,7 +453,19 @@
 		"region": "Bratislavský",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"It took its present name only in 1919; before, it was Pressburg in German and Pozsony in Hungarian.",
+				"The only capital that borders two other countries, Austria and Hungary.",
+				"Its castle, a white square block with four corner towers, looks down on the Danube."
+			],
+			"it": [
+				"Ha preso il nome attuale solo nel 1919; prima era Pressburg in tedesco e Pozsony in ungherese.",
+				"L’unica capitale che confina con due altri paesi, l’Austria e l’Ungheria.",
+				"Il suo castello, un blocco quadrato bianco con quattro torri agli angoli, domina il Danubio."
+			]
+		}
 	},
 	"budapest": {
 		"kind": "city",
@@ -318,7 +474,19 @@
 		"population1950": 1618000,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Buda and Pest, two towns across the Danube, joined with Óbuda in 1873.",
+				"Its underground railway of 1896 is the oldest in continental Europe.",
+				"More than a hundred hot springs feed its baths."
+			],
+			"it": [
+				"Buda e Pest, due città sulle rive opposte del Danubio, unite con Óbuda nel 1873.",
+				"La sua metropolitana del 1896 è la più antica dell’Europa continentale.",
+				"Più di cento sorgenti calde alimentano le sue terme."
+			]
+		}
 	},
 	"vaduz": {
 		"kind": "city",
@@ -326,7 +494,19 @@
 		"populationRank": 43,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"The prince of Liechtenstein lives in the castle above the town.",
+				"The capital of one of only two countries surrounded entirely by landlocked countries.",
+				"Its art museum, a black concrete cube opened in 2000, holds the state’s collections."
+			],
+			"it": [
+				"Il principe del Liechtenstein vive nel castello sopra la città.",
+				"La capitale di uno dei soli due paesi circondati interamente da paesi senza sbocco sul mare.",
+				"Il suo museo d’arte, un cubo di cemento nero aperto nel 2000, custodisce le collezioni dello Stato."
+			]
+		}
 	},
 	"chisinau": {
 		"kind": "city",
@@ -335,7 +515,19 @@
 		"region": "Chisinau",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"The name is often read as \"new spring\", from old Romanian words, though that is uncertain.",
+				"The poet Alexander Pushkin lived here in exile from 1820 to 1823.",
+				"Most of it was rebuilt after an earthquake in 1940 and the Second World War."
+			],
+			"it": [
+				"Il nome si legge spesso come \"sorgente nuova\", da antiche parole romene, ma è incerto.",
+				"Il poeta Aleksandr Puškin visse qui in esilio dal 1820 al 1823.",
+				"Fu in gran parte ricostruita dopo un terremoto nel 1940 e la Seconda guerra mondiale."
+			]
+		}
 	},
 	"bern": {
 		"kind": "city",
@@ -343,7 +535,19 @@
 		"populationRank": 37,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"By legend its founder named it for the first animal he killed in the woods, a bear, and bears are still kept in the town.",
+				"Albert Einstein wrote his papers of 1905 while living here.",
+				"Officially it is not the capital but the \"federal city\"."
+			],
+			"it": [
+				"Secondo la leggenda il fondatore le diede il nome del primo animale che uccise nei boschi, un orso, e in città si tengono ancora degli orsi.",
+				"Albert Einstein scrisse qui i suoi articoli del 1905.",
+				"Ufficialmente non è la capitale ma la \"città federale\"."
+			]
+		}
 	},
 	"ljubljana": {
 		"kind": "city",
@@ -352,7 +556,19 @@
 		"region": "Osrednjeslovenska",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Where the name comes from is disputed; a legend puts Jason and the Argonauts here, killing the dragon now on its arms.",
+				"The architect Jože Plečnik reshaped much of it between the wars.",
+				"It was European Green Capital in 2016."
+			],
+			"it": [
+				"Da dove venga il nome è discusso; una leggenda porta qui Giasone e gli Argonauti, che uccisero il drago oggi sul suo stemma.",
+				"L’architetto Jože Plečnik ne ridisegnò buona parte tra le due guerre.",
+				"Fu Capitale verde europea nel 2016."
+			]
+		}
 	},
 	"zagreb": {
 		"kind": "city",
@@ -361,7 +577,19 @@
 		"region": "Grad Zagreb",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Where the name comes from is uncertain; a folk story reads it as \"behind the hill\".",
+				"It grew from two hill towns, Gradec and Kaptol, joined in 1850.",
+				"Its Museum of Broken Relationships shows objects left behind by ended loves."
+			],
+			"it": [
+				"Da dove venga il nome è incerto; un racconto popolare lo legge come \"dietro la collina\".",
+				"Nacque da due borghi in collina, Gradec e Kaptol, uniti nel 1850.",
+				"Il suo Museo delle relazioni interrotte espone oggetti rimasti da amori finiti."
+			]
+		}
 	},
 	"belgrade": {
 		"kind": "city",
@@ -371,7 +599,19 @@
 		"region": "Grad Beograd",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Beograd, \"white city\".",
+				"It was the capital of Yugoslavia for most of the 20th century.",
+				"Its Kalemegdan fortress looks down on the meeting of the Sava and the Danube."
+			],
+			"it": [
+				"Beograd, \"città bianca\".",
+				"Fu la capitale della Iugoslavia per gran parte del Novecento.",
+				"La sua fortezza del Kalemegdan domina la confluenza tra la Sava e il Danubio."
+			]
+		}
 	},
 	"bucharest": {
 		"kind": "city",
@@ -380,7 +620,19 @@
 		"population1950": 652000,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"By legend named for a shepherd called Bucur.",
+				"Between the wars it was called Little Paris.",
+				"Its Romanian Athenaeum, a concert hall of 1888, was paid for largely by a public collection."
+			],
+			"it": [
+				"Secondo la leggenda prende il nome da un pastore di nome Bucur.",
+				"Tra le due guerre era chiamata la piccola Parigi.",
+				"Il suo Ateneo romeno, una sala da concerti del 1888, fu pagato in gran parte con una colletta pubblica."
+			]
+		}
 	},
 	"san-marino": {
 		"kind": "city",
@@ -388,7 +640,19 @@
 		"populationRank": 44,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Named for Saint Marinus, a stonemason who by tradition founded it in 301.",
+				"It claims to be the oldest surviving republic in the world.",
+				"Its three towers stand along the ridge of Monte Titano."
+			],
+			"it": [
+				"Prende il nome da san Marino, uno scalpellino che per tradizione la fondò nel 301.",
+				"Si considera la più antica repubblica esistente al mondo.",
+				"Le sue tre torri si allineano sul crinale del monte Titano."
+			]
+		}
 	},
 	"sarajevo": {
 		"kind": "city",
@@ -396,7 +660,19 @@
 		"populationRank": 28,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"From Turkish saray, \"palace\", and ova, \"field\": the plain in front of the governor’s palace.",
+				"It hosted the Winter Olympics in 1984.",
+				"Its siege, from 1992 to 1996, was the longest of a capital city in modern war."
+			],
+			"it": [
+				"Dal turco saray, \"palazzo\", e ova, \"campo\": la piana davanti al palazzo del governatore.",
+				"Ospitò le Olimpiadi invernali del 1984.",
+				"Il suo assedio, dal 1992 al 1996, fu il più lungo subito da una capitale nella guerra moderna."
+			]
+		}
 	},
 	"monaco": {
 		"kind": "city",
@@ -404,7 +680,19 @@
 		"populationRank": 42,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"From Greek Monoikos, \"dwelling alone\", a title of Heracles, who had a temple here.",
+				"The Grimaldi family has held it since 1297, when one of them took the rock dressed as a monk.",
+				"Its Grand Prix has been run through its streets since 1929."
+			],
+			"it": [
+				"Dal greco Monoikos, \"che abita da solo\", un epiteto di Eracle, che qui aveva un tempio.",
+				"La famiglia Grimaldi la tiene dal 1297, quando uno di loro prese la rocca travestito da frate.",
+				"Il suo Gran Premio si corre per le strade della città dal 1929."
+			]
+		}
 	},
 	"sofia": {
 		"kind": "city",
@@ -414,7 +702,19 @@
 		"region": "Grad Sofiya",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Named for its church of Saint Sophia, \"wisdom\"; the Romans called it Serdica.",
+				"It has been the capital since 1879.",
+				"The mountain of Vitosha rises right at its edge."
+			],
+			"it": [
+				"Prende il nome dalla chiesa di Santa Sofia, la \"sapienza\"; i Romani la chiamavano Serdica.",
+				"È la capitale dal 1879.",
+				"Il monte Vitoša si alza proprio ai suoi margini."
+			]
+		}
 	},
 	"pristina": {
 		"kind": "city",
@@ -422,7 +722,19 @@
 		"populationRank": 32,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Where the name comes from is disputed; one reading ties it to a Slavic word for a stream.",
+				"The NEWBORN monument, unveiled in 2008, is repainted every year.",
+				"Its National Library, a building of 1982 covered in 99 domes and a metal mesh, is often called one of the strangest in the world."
+			],
+			"it": [
+				"Da dove venga il nome è discusso; una lettura lo lega a una parola slava per ruscello.",
+				"Il monumento NEWBORN, inaugurato nel 2008, viene ridipinto ogni anno.",
+				"La sua Biblioteca nazionale, un edificio del 1982 coperto da 99 cupole e da una rete metallica, è spesso definita una delle più strane del mondo."
+			]
+		}
 	},
 	"andorra-la-vella": {
 		"kind": "city",
@@ -430,7 +742,19 @@
 		"populationRank": 41,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"\"Andorra the Old\", the oldest settlement of the valleys.",
+				"At about 1,023 m it is the highest capital city in Europe.",
+				"The Casa de la Vall, a 16th-century house, was the seat of its parliament for three centuries."
+			],
+			"it": [
+				"\"Andorra la Vecchia\", il più antico insediamento delle valli.",
+				"A circa 1.023 m è la capitale più alta d’Europa.",
+				"La Casa de la Vall, una casa del Cinquecento, fu la sede del suo parlamento per tre secoli."
+			]
+		}
 	},
 	"podgorica": {
 		"kind": "city",
@@ -438,7 +762,19 @@
 		"populationRank": 39,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"\"Under Gorica\", the small hill above it.",
+				"From 1946 to 1992 it was called Titograd.",
+				"The Millennium Bridge, a cable-stayed bridge of 2005, crosses the Morača in its centre."
+			],
+			"it": [
+				"\"Sotto la Gorica\", la collinetta che la sovrasta.",
+				"Dal 1946 al 1992 si chiamò Titograd.",
+				"Il ponte del Millennio, un ponte strallato del 2005, attraversa la Morača in pieno centro."
+			]
+		}
 	},
 	"skopje": {
 		"kind": "city",
@@ -447,7 +783,19 @@
 		"region": "Centar",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Roman Scupi.",
+				"An earthquake destroyed most of it in 1963, and the Japanese architect Kenzo Tange drew the plan for the new city.",
+				"Mother Teresa, born here, has a memorial house in the centre."
+			],
+			"it": [
+				"La romana Scupi.",
+				"Un terremoto la distrusse quasi del tutto nel 1963, e l’architetto giapponese Kenzo Tange disegnò il piano della città nuova.",
+				"Madre Teresa, nata qui, ha una casa della memoria in centro."
+			]
+		}
 	},
 	"roma": {
 		"kind": "city",
@@ -478,7 +826,19 @@
 		"region": "Durrës",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Where the name comes from is uncertain; it grew into a town after an Ottoman general, Sulejman Pasha, built a mosque and a bazaar here in 1614.",
+				"It has been the capital only since 1920.",
+				"From 2000 its mayor Edi Rama, a painter, had its grey communist blocks painted in bright colours."
+			],
+			"it": [
+				"Da dove venga il nome è incerto; divenne una città dopo che un generale ottomano, Sulejman Pascià, vi costruì una moschea e un bazar nel 1614.",
+				"È la capitale solo dal 1920.",
+				"Dal 2000 il suo sindaco Edi Rama, un pittore, fece dipingere a colori vivaci i grigi palazzi dell’epoca comunista."
+			]
+		}
 	},
 	"madrid": {
 		"kind": "city",
@@ -531,7 +891,19 @@
 		"region": "Attiki",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Named for the goddess Athena, who in the myth won the city from Poseidon with the gift of an olive tree.",
+				"The Parthenon was built on its Acropolis in the 440s and 430s BC.",
+				"It hosted the first modern Olympic Games, in 1896."
+			],
+			"it": [
+				"Prende il nome dalla dea Atena, che nel mito conquistò la città vincendo Poseidone con il dono di un olivo.",
+				"Il Partenone fu costruito sulla sua Acropoli tra il 440 e il 430 a.C. circa.",
+				"Ospitò i primi Giochi olimpici moderni, nel 1896."
+			]
+		}
 	},
 	"valletta": {
 		"kind": "city",
@@ -539,6 +911,18 @@
 		"populationRank": 35,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Named for Jean de Valette, grand master of the Knights of Saint John, who held Malta against the Ottomans in 1565.",
+				"One of the smallest capitals in the European Union.",
+				"Caravaggio’s Beheading of Saint John, the only work he signed, hangs in its co-cathedral."
+			],
+			"it": [
+				"Prende il nome da Jean de Valette, gran maestro dei Cavalieri di San Giovanni, che difese Malta dagli Ottomani nel 1565.",
+				"Una delle capitali più piccole dell’Unione europea.",
+				"La Decollazione di san Giovanni Battista di Caravaggio, l’unica opera che firmò, è nella sua concattedrale."
+			]
+		}
 	}
 }

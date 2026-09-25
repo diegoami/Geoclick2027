@@ -1,0 +1,33 @@
+{
+	"_note": [
+		"Name-facts for Estonia (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
+		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
+		"of the same id, written later, never shows a town's sentences."
+	],
+	"tallinn": {
+		"city": {
+			"en": [
+				"Probably from taani linn, \"Danish town\", after the Danish conquest of 1219.",
+				"Its medieval old town is a UNESCO site.",
+				"Skype was built here by Estonian programmers."
+			],
+			"it": [
+				"Probabilmente da taani linn, \"città danese\", dopo la conquista danese del 1219.",
+				"Il suo centro medievale è un sito UNESCO.",
+				"Skype fu sviluppato qui da programmatori estoni."
+			]
+		}
+	},
+	"tartu": {
+		"city": {
+			"en": [
+				"Its university was founded in 1632 by the Swedish king Gustavus Adolphus.",
+				"It calls itself the city of good thoughts."
+			],
+			"it": [
+				"La sua università fu fondata nel 1632 dal re di Svezia Gustavo Adolfo.",
+				"Si definisce la città dei buoni pensieri."
+			]
+		}
+	}
+}

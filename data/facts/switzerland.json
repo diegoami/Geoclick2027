@@ -1,0 +1,95 @@
+{
+	"_note": [
+		"Name-facts for Switzerland (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
+		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
+		"of the same id, written later, never shows a town's sentences."
+	],
+	"basel": {
+		"city": {
+			"en": [
+				"The Rhine turns north here, where Switzerland, France and Germany meet.",
+				"Its university, founded in 1460, is the oldest in Switzerland.",
+				"Art Basel, one of the world’s great art fairs, has been held here since 1970."
+			],
+			"it": [
+				"Qui il Reno piega verso nord, dove si incontrano Svizzera, Francia e Germania.",
+				"La sua università, fondata nel 1460, è la più antica della Svizzera.",
+				"Art Basel, una delle grandi fiere d’arte del mondo, si tiene qui dal 1970."
+			]
+		}
+	},
+	"bern": {
+		"city": {
+			"en": [
+				"By legend its founder named it for the first animal he killed in the woods, a bear, and bears are still kept in the town.",
+				"Albert Einstein wrote his papers of 1905 while living here.",
+				"Officially it is not the capital but the \"federal city\"."
+			],
+			"it": [
+				"Secondo la leggenda il fondatore le diede il nome del primo animale che uccise nei boschi, un orso, e in città si tengono ancora degli orsi.",
+				"Albert Einstein scrisse qui i suoi articoli del 1905.",
+				"Ufficialmente non è la capitale ma la \"città federale\"."
+			]
+		}
+	},
+	"geneva": {
+		"city": {
+			"en": [
+				"The Red Cross was founded here in 1863.",
+				"At CERN, on its edge, the World Wide Web was invented in 1989.",
+				"John Calvin made it the heart of the Protestant Reformation in the 16th century."
+			],
+			"it": [
+				"Qui fu fondata la Croce Rossa, nel 1863.",
+				"Al CERN, alle sue porte, fu inventato il World Wide Web nel 1989.",
+				"Giovanni Calvino ne fece il cuore della Riforma protestante nel Cinquecento."
+			]
+		}
+	},
+	"lausanne": {
+		"city": {
+			"en": [
+				"The International Olympic Committee has had its headquarters here since 1915."
+			],
+			"it": [
+				"Il Comitato olimpico internazionale ha sede qui dal 1915."
+			]
+		}
+	},
+	"lugano": {
+		"city": {
+			"en": [
+				"The largest Italian-speaking city outside Italy."
+			],
+			"it": [
+				"La più grande città di lingua italiana fuori dall’Italia."
+			]
+		}
+	},
+	"luzern": {
+		"city": {
+			"en": [
+				"Its Chapel Bridge, of the 14th century, is often called the oldest covered wooden bridge in Europe.",
+				"The Lion Monument, carved in the rock, remembers the Swiss Guards killed in Paris in 1792."
+			],
+			"it": [
+				"Il suo Ponte della Cappella, del Trecento, è spesso considerato il più antico ponte coperto in legno d’Europa.",
+				"Il Monumento al leone, scolpito nella roccia, ricorda le Guardie svizzere uccise a Parigi nel 1792."
+			]
+		}
+	},
+	"zurich": {
+		"city": {
+			"en": [
+				"Roman Turicum.",
+				"Huldrych Zwingli began the Swiss Reformation here in 1519.",
+				"The Dada movement was born at its Cabaret Voltaire in 1916."
+			],
+			"it": [
+				"La romana Turicum.",
+				"Qui Huldrych Zwingli avviò la Riforma svizzera nel 1519.",
+				"Il movimento dada nacque al suo Cabaret Voltaire nel 1916."
+			]
+		}
+	}
+}
