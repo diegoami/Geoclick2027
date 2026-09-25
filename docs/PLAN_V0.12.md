@@ -191,12 +191,12 @@ entry.
 
 ## Progress ledger
 
-| Task  | State     | Merge | Notes                                                                                      |
-| ----- | --------- | ----- | ------------------------------------------------------------------------------------------ |
-| FT-69 | planned   | —     | countries read `world.json`; "Czech Republic" = "Czechia"                                  |
-| FT-70 | planned   | —     | Greece, 14 regions; 🧑 the voice gate                                                      |
-| FT-71 | planned   | —     | 172 countries, one commit per continent                                                    |
-| FT-72 | planned   | —     | 284 capitals and European cities, 160 new files                                            |
-| FT-73 | planned   | —     | the 15 new countries, 539 places, one commit per file                                      |
-| FT-74 | **in PR** | —     | region names boxless in the Quiz, Overview and Tour; given-away ink brown; 🧑 tablet check |
-| FT-75 | planned   | —     | the two nits from #45                                                                      |
+| Task  | State      | Merge  | Notes                                                                                                        |
+| ----- | ---------- | ------ | ------------------------------------------------------------------------------------------------------------ |
+| FT-69 | **merged** | PR #48 | countries read `world.json`; "Czech Republic" = "Czechia"; `world.json` holds only its `_note` so far        |
+| FT-70 | planned    | —      | Greece, 14 regions; 🧑 the voice gate                                                                        |
+| FT-71 | planned    | —      | 172 countries, one commit per continent                                                                      |
+| FT-72 | planned    | —      | 284 capitals and European cities, 160 new files                                                              |
+| FT-73 | planned    | —      | the 15 new countries, 539 places, one commit per file                                                        |
+| FT-74 | **merged** | PR #51 | region names boxless in the Quiz, Overview and Tour; given-away ink brown; tried in `v0.12.0-alpha.2`        |
+| FT-75 | **merged** | PR #50 | distance on the ground; the message names `--disambiguate-by`; all 16 `--within` maps rebuild byte-identical |
