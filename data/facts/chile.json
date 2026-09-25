@@ -2,8 +2,393 @@
 	"_note": [
 		"Name-facts for Chile (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences."
+		"of the same id, written later, never shows a town's sentences.",
+		"FT-73 added the sixteen regions (\"region\") and the towns of chile-towns-100k (\"city\"); Antofagasta, Coquimbo and Valparaíso have both, each with its own sentences."
 	],
+	"antofagasta": {
+		"region": {
+			"en": [
+				"Named for its port city, a name whose origin is uncertain.",
+				"It was Bolivia’s coast until the War of the Pacific, which left Bolivia without a sea.",
+				"The ALMA radio telescope, 66 antennas on a plateau about 5,000 m high, is here."
+			],
+			"it": [
+				"Prende il nome dalla sua città portuale, un nome di origine incerta.",
+				"Era la costa della Bolivia fino alla guerra del Pacifico, che lasciò la Bolivia senza sbocco sul mare.",
+				"Qui si trova il radiotelescopio ALMA, 66 antenne su un altopiano a circa 5.000 m di quota."
+			]
+		},
+		"city": {
+			"en": [
+				"Founded as a Bolivian port, it was occupied by Chile in February 1879, the start of the War of the Pacific.",
+				"La Portada, a natural arch of rock standing in the sea, is just north of it."
+			],
+			"it": [
+				"Fondata come porto boliviano, fu occupata dal Cile nel febbraio 1879, all’inizio della guerra del Pacifico.",
+				"La Portada, un arco naturale di roccia che si alza dal mare, si trova poco a nord."
+			]
+		}
+	},
+	"arica": {
+		"city": {
+			"en": [
+				"It passed to Chile under the Treaty of Lima of 1929, while Tacna went back to Peru.",
+				"Its church of San Marcos, made of iron, is said to have been designed by Gustave Eiffel’s firm."
+			],
+			"it": [
+				"Passò al Cile con il trattato di Lima del 1929, mentre Tacna tornò al Perù.",
+				"Si dice che la sua chiesa di San Marcos, fatta di ferro, sia stata progettata dalla ditta di Gustave Eiffel."
+			]
+		}
+	},
+	"arica-y-parinacota": {
+		"region": {
+			"en": [
+				"Named for Arica and for Parinacota, Aymara for \"flamingo lake\".",
+				"It was split from Tarapacá in 2007.",
+				"The Chinchorro people mummified their dead from about 5000 BC, two thousand years before the Egyptians; their sites are a UNESCO site."
+			],
+			"it": [
+				"Prende il nome da Arica e da Parinacota, in aymara \"lago dei fenicotteri\".",
+				"Fu separata da Tarapacá nel 2007.",
+				"Il popolo Chinchorro mummificava i suoi morti dal 5000 a.C. circa, duemila anni prima degli Egizi; i loro siti sono patrimonio UNESCO."
+			]
+		}
+	},
+	"atacama": {
+		"region": {
+			"en": [
+				"Named for the Atacama Desert, a name of uncertain origin.",
+				"After rare rainy winters, the desert here bursts into flower: the desierto florido.",
+				"Chile’s first railway, from the port of Caldera to Copiapó, opened in 1851."
+			],
+			"it": [
+				"Prende il nome dal deserto di Atacama, un nome di origine incerta.",
+				"Dopo i rari inverni piovosi, qui il deserto si copre di fiori: il desierto florido.",
+				"La prima ferrovia del Cile, dal porto di Caldera a Copiapó, fu aperta nel 1851."
+			]
+		}
+	},
+	"aysen": {
+		"region": {
+			"en": [
+				"The origin of the name is disputed; the popular story that it is English \"ice end\" is probably a legend.",
+				"It has fewer people than any other region of Chile.",
+				"The Marble Caves of General Carrera Lake are hollowed out of marble by the water."
+			],
+			"it": [
+				"L’origine del nome è discussa; la storia diffusa che venga dall’inglese \"ice end\", \"fine del ghiaccio\", è probabilmente una leggenda.",
+				"Ha meno abitanti di qualsiasi altra regione del Cile.",
+				"Le Cattedrali di marmo del lago General Carrera sono state scavate dall’acqua nel marmo."
+			]
+		}
+	},
+	"biobio": {
+		"region": {
+			"en": [
+				"Named for the river Biobío, a Mapuche name whose meaning is disputed.",
+				"For about three centuries the Biobío was the frontier between Spanish Chile and the Mapuche.",
+				"The coal mines of Lota ran out under the sea; the last one closed in 1997."
+			],
+			"it": [
+				"Prende il nome dal fiume Biobío, un nome mapuche il cui significato è discusso.",
+				"Per circa tre secoli il Biobío fu la frontiera fra il Cile spagnolo e i Mapuche.",
+				"Le miniere di carbone di Lota si spingevano sotto il mare; l’ultima chiuse nel 1997."
+			]
+		}
+	},
+	"calama": {
+		"city": {
+			"en": [
+				"An oasis on the Loa, Chile’s longest river, in the Atacama Desert.",
+				"Chuquicamata, one of the largest open-pit mines in the world, is just to its north."
+			],
+			"it": [
+				"Un’oasi sul Loa, il fiume più lungo del Cile, nel deserto di Atacama.",
+				"Chuquicamata, una delle più grandi miniere a cielo aperto del mondo, si trova poco a nord."
+			]
+		}
+	},
+	"chillan": {
+		"city": {
+			"en": [
+				"Bernardo O’Higgins was born here in 1778, and the pianist Claudio Arrau in 1903.",
+				"After the earthquake of 1939, Mexico gave it a school, painted with murals by David Alfaro Siqueiros."
+			],
+			"it": [
+				"Qui nacquero Bernardo O’Higgins, nel 1778, e il pianista Claudio Arrau, nel 1903.",
+				"Dopo il terremoto del 1939 il Messico le donò una scuola, dipinta con murales di David Alfaro Siqueiros."
+			]
+		}
+	},
+	"concepcion": {
+		"city": {
+			"en": [
+				"Founded in 1550 by Pedro de Valdivia at Penco, it was moved to its present site after an earthquake in 1751.",
+				"Chile’s independence was proclaimed here on 1 January 1818."
+			],
+			"it": [
+				"Fondata nel 1550 da Pedro de Valdivia a Penco, fu spostata dove si trova oggi dopo un terremoto nel 1751.",
+				"Qui fu proclamata l’indipendenza del Cile, il 1º gennaio 1818."
+			]
+		}
+	},
+	"copiapo": {
+		"city": {
+			"en": [
+				"The silver strike at Chañarcillo, in 1832, made it rich.",
+				"In 2010, 33 miners trapped for 69 days in the San José mine nearby were brought up alive."
+			],
+			"it": [
+				"La scoperta dell’argento a Chañarcillo, nel 1832, la rese ricca.",
+				"Nel 2010, 33 minatori rimasti intrappolati per 69 giorni nella vicina miniera di San José furono riportati in superficie vivi."
+			]
+		}
+	},
+	"coquimbo": {
+		"region": {
+			"en": [
+				"Named for its port town, a name probably from a native language; its meaning is uncertain.",
+				"The poet Gabriela Mistral, Latin America’s first Nobel laureate in literature, in 1945, grew up in the Elqui valley.",
+				"Its clear skies drew some of the world’s great observatories, at Cerro Tololo and La Silla."
+			],
+			"it": [
+				"Prende il nome dalla sua città portuale, un nome probabilmente indigeno dal significato incerto.",
+				"La poetessa Gabriela Mistral, primo premio Nobel per la letteratura dell’America Latina, nel 1945, crebbe nella valle di Elqui.",
+				"I suoi cieli limpidi hanno attirato alcuni dei grandi osservatori del mondo, a Cerro Tololo e La Silla."
+			]
+		},
+		"city": {
+			"en": [
+				"It has grown together with La Serena into one urban area."
+			],
+			"it": [
+				"È cresciuta insieme a La Serena fino a formare un unico agglomerato urbano."
+			]
+		}
+	},
+	"curico": {
+		"city": {
+			"en": [
+				"The name is usually read as Mapuche for \"black water\".",
+				"It was founded in 1743."
+			],
+			"it": [
+				"Il nome è interpretato di solito come \"acqua nera\" in mapuche.",
+				"Fu fondata nel 1743."
+			]
+		}
+	},
+	"iquique": {
+		"city": {
+			"en": [
+				"In the naval battle of Iquique, on 21 May 1879, Captain Arturo Prat died boarding a Peruvian ironclad; the day is Chile’s Navy Day.",
+				"Its free-trade zone, opened in 1975, is one of the largest in South America."
+			],
+			"it": [
+				"Nella battaglia navale di Iquique, il 21 maggio 1879, il capitano Arturo Prat morì abbordando una corazzata peruviana; quel giorno è la festa della Marina cilena.",
+				"La sua zona franca, aperta nel 1975, è una delle più grandi del Sud America."
+			]
+		}
+	},
+	"la-araucania": {
+		"region": {
+			"en": [
+				"Named for the Araucanians, as the Spanish called the Mapuche.",
+				"Chile took the land by force between 1861 and 1883, in what it called the Pacification of Araucanía.",
+				"The monkey-puzzle tree, Araucaria araucana, is named after the region."
+			],
+			"it": [
+				"Prende il nome dagli Araucani, come gli Spagnoli chiamavano i Mapuche.",
+				"Il Cile conquistò queste terre con la forza tra il 1861 e il 1883, in quella che chiamò la Pacificazione dell’Araucanía.",
+				"L’araucaria, Araucaria araucana, prende il nome dalla regione."
+			]
+		}
+	},
+	"la-serena": {
+		"city": {
+			"en": [
+				"Founded in 1544, it is Chile’s second-oldest city, after Santiago.",
+				"The English buccaneer Bartholomew Sharp sacked it in 1680."
+			],
+			"it": [
+				"Fondata nel 1544, è la seconda città più antica del Cile, dopo Santiago.",
+				"Il bucaniere inglese Bartholomew Sharp la saccheggiò nel 1680."
+			]
+		}
+	},
+	"los-angeles": {
+		"city": {
+			"en": [
+				"Founded in 1739 as Santa María de los Ángeles, a Spanish frontier town."
+			],
+			"it": [
+				"Fondata nel 1739 come Santa María de los Ángeles, una cittadina spagnola di frontiera."
+			]
+		}
+	},
+	"los-lagos": {
+		"region": {
+			"en": [
+				"\"The lakes\", for the many lakes of its south.",
+				"The wooden churches of Chiloé, built by local carpenters, are a UNESCO site.",
+				"German settlers cleared the shores of Lake Llanquihue from the 1850s, and their towns still look it."
+			],
+			"it": [
+				"\"I laghi\", per i molti laghi del suo sud.",
+				"Le chiese di legno di Chiloé, costruite da carpentieri locali, sono un sito UNESCO.",
+				"Coloni tedeschi dissodarono le rive del lago Llanquihue dagli anni Cinquanta dell’Ottocento, e le loro cittadine lo mostrano ancora."
+			]
+		}
+	},
+	"los-rios": {
+		"region": {
+			"en": [
+				"\"The rivers\": it was split from Los Lagos in 2007.",
+				"After the earthquake of 1960, a landslide dammed Lake Riñihue, and workers dug for weeks to drain it before it could flood Valdivia."
+			],
+			"it": [
+				"\"I fiumi\": fu separata da Los Lagos nel 2007.",
+				"Dopo il terremoto del 1960 una frana sbarrò il lago Riñihue, e per settimane gli operai scavarono per svuotarlo prima che inondasse Valdivia."
+			]
+		}
+	},
+	"magallanes": {
+		"region": {
+			"en": [
+				"Named for Ferdinand Magellan, who sailed through the strait here in 1520.",
+				"Its full name adds \"and Chilean Antarctica\": it includes the slice of Antarctica that Chile claims.",
+				"The granite towers of Torres del Paine stand in its best-known national park."
+			],
+			"it": [
+				"Prende il nome da Ferdinando Magellano, che nel 1520 attraversò lo stretto che bagna queste terre.",
+				"Il suo nome completo aggiunge \"e dell’Antartide cilena\": comprende lo spicchio di Antartide rivendicato dal Cile.",
+				"Le torri di granito del Paine si trovano nel suo parco nazionale più famoso."
+			]
+		}
+	},
+	"maule": {
+		"region": {
+			"en": [
+				"Named for the river Maule, which roughly marked the southern edge of the Inca empire.",
+				"The earthquake of 27 February 2010, of magnitude 8.8, hit this region and Biobío hardest."
+			],
+			"it": [
+				"Prende il nome dal fiume Maule, che segnava più o meno il confine meridionale dell’impero inca.",
+				"Il terremoto del 27 febbraio 2010, di magnitudo 8,8, colpì più duramente questa regione e il Biobío."
+			]
+		}
+	},
+	"metropolitana-de-santiago": {
+		"region": {
+			"en": [
+				"The Metropolitan Region, named for Santiago, the capital, which bears the name of Saint James, patron of Spain.",
+				"About four Chileans in ten live here.",
+				"The Maipo valley, south of the capital, is one of Chile’s oldest wine regions."
+			],
+			"it": [
+				"La Regione metropolitana, che prende il nome da Santiago, la capitale, a sua volta intitolata a san Giacomo, patrono della Spagna.",
+				"Qui vivono circa quattro cileni su dieci.",
+				"La valle del Maipo, a sud della capitale, è una delle più antiche regioni vinicole del Cile."
+			]
+		}
+	},
+	"nuble": {
+		"region": {
+			"en": [
+				"Named for the river Ñuble; it became Chile’s newest region in 2018, split from Biobío.",
+				"The singer Violeta Parra was born here in 1917, probably at San Carlos."
+			],
+			"it": [
+				"Prende il nome dal fiume Ñuble; nel 2018 è diventata la regione più giovane del Cile, separata dal Biobío.",
+				"La cantante Violeta Parra nacque qui nel 1917, probabilmente a San Carlos."
+			]
+		}
+	},
+	"o-higgins": {
+		"region": {
+			"en": [
+				"Named for Bernardo O’Higgins, who led Chile to independence; his father was an Irish-born viceroy of Peru.",
+				"El Teniente, in its mountains, is the largest underground copper mine in the world.",
+				"Sewell, the mine’s old company town, built on a mountainside with stairs for streets, is a UNESCO site."
+			],
+			"it": [
+				"Prende il nome da Bernardo O’Higgins, che guidò il Cile all’indipendenza; suo padre era un viceré del Perù nato in Irlanda.",
+				"El Teniente, sui suoi monti, è la più grande miniera di rame sotterranea del mondo.",
+				"Sewell, la vecchia città aziendale della miniera, costruita su un fianco di montagna con scale al posto delle strade, è un sito UNESCO."
+			]
+		}
+	},
+	"osorno": {
+		"city": {
+			"en": [
+				"Founded in 1558, it took its name from Osorno in Spain.",
+				"German settlers from the 1850s made it a town of dairy farms and cattle."
+			],
+			"it": [
+				"Fondata nel 1558, prese il nome da Osorno, in Spagna.",
+				"I coloni tedeschi arrivati dagli anni Cinquanta dell’Ottocento ne fecero una città di caseifici e bestiame."
+			]
+		}
+	},
+	"puerto-montt": {
+		"city": {
+			"en": [
+				"Named for Manuel Montt, president of Chile when German settlers founded it in 1853.",
+				"The Carretera Austral, the road into Patagonia, begins here."
+			],
+			"it": [
+				"Prende il nome da Manuel Montt, presidente del Cile quando i coloni tedeschi la fondarono nel 1853.",
+				"Qui comincia la Carretera Austral, la strada verso la Patagonia."
+			]
+		}
+	},
+	"punta-arenas": {
+		"city": {
+			"en": [
+				"\"Sandy point\", a Spanish rendering of the name English sailors gave the place.",
+				"Before the Panama Canal opened in 1914, it was a great port for ships sailing the Strait of Magellan.",
+				"It is one of the southernmost cities in the world."
+			],
+			"it": [
+				"\"Punta sabbiosa\", la resa spagnola del nome che i navigatori inglesi diedero al luogo.",
+				"Prima dell’apertura del canale di Panama nel 1914, era un grande porto per le navi che attraversavano lo stretto di Magellano.",
+				"È una delle città più meridionali del mondo."
+			]
+		}
+	},
+	"rancagua": {
+		"city": {
+			"en": [
+				"In the Disaster of Rancagua, in 1814, Spanish royalists defeated the patriots of Bernardo O’Higgins.",
+				"The El Teniente copper mine is in the mountains above it."
+			],
+			"it": [
+				"Nel Disastro di Rancagua, nel 1814, i realisti spagnoli sconfissero i patrioti di Bernardo O’Higgins.",
+				"La miniera di rame di El Teniente si trova sui monti sopra la città."
+			]
+		}
+	},
+	"san-antonio": {
+		"city": {
+			"en": [
+				"It is one of the busiest ports in Chile."
+			],
+			"it": [
+				"È uno dei porti più trafficati del Cile."
+			]
+		}
+	},
+	"san-bernardo": {
+		"city": {
+			"en": [
+				"Founded in 1821 under Bernardo O’Higgins, it was named for his patron saint."
+			],
+			"it": [
+				"Fondata nel 1821 sotto Bernardo O’Higgins, prese il nome dal suo santo patrono."
+			]
+		}
+	},
 	"santiago": {
 		"city": {
 			"en": [
@@ -15,6 +400,108 @@
 				"Fondata nel 1541 dal conquistador spagnolo Pedro de Valdivia.",
 				"Le Ande si alzano subito alle sue spalle, innevate per buona parte dell’anno.",
 				"La sua Gran Torre Santiago è l’edificio più alto dell’America latina."
+			]
+		}
+	},
+	"talca": {
+		"city": {
+			"en": [
+				"Founded in 1742, it is where Bernardo O’Higgins is said to have signed Chile’s declaration of independence in 1818."
+			],
+			"it": [
+				"Fondata nel 1742, è qui che si dice Bernardo O’Higgins abbia firmato la dichiarazione d’indipendenza del Cile nel 1818."
+			]
+		}
+	},
+	"talcahuano": {
+		"city": {
+			"en": [
+				"The chief base of the Chilean navy.",
+				"The Huáscar, an ironclad captured from Peru in 1879, is kept here as a museum ship."
+			],
+			"it": [
+				"La principale base della marina cilena.",
+				"Qui è conservata come nave museo la Huáscar, una corazzata catturata al Perù nel 1879."
+			]
+		}
+	},
+	"tarapaca": {
+		"region": {
+			"en": [
+				"A name of uncertain origin, probably from a local Andean language.",
+				"It belonged to Peru until the War of the Pacific, and was ceded to Chile in 1883.",
+				"The saltpetre works of Humberstone and Santa Laura, abandoned ghost towns, are a UNESCO site."
+			],
+			"it": [
+				"Un nome di origine incerta, probabilmente da una lingua andina locale.",
+				"Apparteneva al Perù fino alla guerra del Pacifico, e fu ceduta al Cile nel 1883.",
+				"Le raffinerie di salnitro di Humberstone e Santa Laura, città fantasma abbandonate, sono un sito UNESCO."
+			]
+		}
+	},
+	"temuco": {
+		"city": {
+			"en": [
+				"The name is Mapuche, usually read as \"water of the temu tree\".",
+				"It was founded in 1881 as a fort, during Chile’s conquest of the Mapuche lands.",
+				"Pablo Neruda grew up here, and published his first poems here as a boy."
+			],
+			"it": [
+				"Il nome è mapuche, interpretato di solito come \"acqua dell’albero temu\".",
+				"Fu fondata nel 1881 come forte, durante la conquista cilena delle terre mapuche.",
+				"Qui crebbe Pablo Neruda, che da ragazzo vi pubblicò le sue prime poesie."
+			]
+		}
+	},
+	"valdivia": {
+		"city": {
+			"en": [
+				"Named for the conquistador Pedro de Valdivia, who founded it in 1552.",
+				"The earthquake of 22 May 1960, of magnitude 9.5, the strongest ever recorded, struck here.",
+				"German settlers who came from the 1840s brought breweries and trades that still mark the town."
+			],
+			"it": [
+				"Prende il nome dal conquistador Pedro de Valdivia, che la fondò nel 1552.",
+				"Il terremoto del 22 maggio 1960, di magnitudo 9,5, il più forte mai registrato, colpì qui.",
+				"I coloni tedeschi arrivati dagli anni Quaranta dell’Ottocento portarono birrifici e mestieri che segnano ancora la città."
+			]
+		}
+	},
+	"valparaiso": {
+		"region": {
+			"en": [
+				"Named for its port city; the region also takes in Easter Island, some 3,700 km out in the Pacific.",
+				"Alexander Selkirk, the model for Robinson Crusoe, was marooned on one of its Juan Fernández Islands from 1704 to 1709.",
+				"That island has been called Robinson Crusoe Island since 1966."
+			],
+			"it": [
+				"Prende il nome dalla sua città portuale; la regione comprende anche l’Isola di Pasqua, a circa 3.700 km nel Pacifico.",
+				"Alexander Selkirk, il modello di Robinson Crusoe, visse abbandonato su una delle sue isole Juan Fernández dal 1704 al 1709.",
+				"Quell’isola dal 1966 si chiama isola Robinson Crusoe."
+			]
+		},
+		"city": {
+			"en": [
+				"\"Paradise valley\", a name said to come from its founder’s home village in Spain.",
+				"Its hills are climbed by funiculars, the ascensores, the first of them opened in 1883; its old quarter is a UNESCO site.",
+				"Chile’s National Congress has sat here, not in Santiago, since 1990."
+			],
+			"it": [
+				"\"Valle del paradiso\", un nome che si dice venga dal villaggio natale del suo fondatore, in Spagna.",
+				"Le sue colline si salgono con le funicolari, gli ascensores, la prima aperta nel 1883; il suo centro storico è un sito UNESCO.",
+				"Il Congresso nazionale cileno ha sede qui, non a Santiago, dal 1990."
+			]
+		}
+	},
+	"vina-del-mar": {
+		"city": {
+			"en": [
+				"\"Vineyard of the sea\", for the colonial estate, with its vineyard, on which it was built.",
+				"Its international song festival, held since 1960, is one of the best known in Latin America."
+			],
+			"it": [
+				"\"Vigna del mare\", per la tenuta coloniale, con il suo vigneto, su cui fu costruita.",
+				"Il suo festival internazionale della canzone, che si tiene dal 1960, è uno dei più noti dell’America Latina."
 			]
 		}
 	}
