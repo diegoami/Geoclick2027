@@ -2,9 +2,64 @@
 	"_note": [
 		"Name-facts for Ireland (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences."
+		"of the same id, written later, never shows a town's sentences.",
+		"FT-73 added the twenty-six counties, each as a \"region\" entry beside the town of the same id (Dublin, Cork). Most county names are Irish, a few Norse; the English gives the Irish form and its sense."
 	],
+	"carlow": {
+		"region": {
+			"en": [
+				"From Irish Ceatharlach, whose meaning is uncertain; \"four lakes\" is a popular but doubtful reading.",
+				"It is the second smallest county in Ireland.",
+				"The capstone of the Brownshill Dolmen is thought to weigh about 100 tonnes, among the heaviest in Europe."
+			],
+			"it": [
+				"Dall’irlandese Ceatharlach, di significato incerto; \"quattro laghi\" è una lettura diffusa ma dubbia.",
+				"È la seconda contea più piccola d’Irlanda.",
+				"Si stima che la lastra di copertura del dolmen di Brownshill pesi circa 100 tonnellate, una delle più pesanti d’Europa."
+			]
+		}
+	},
+	"cavan": {
+		"region": {
+			"en": [
+				"From Irish An Cabhán, \"the hollow\".",
+				"The Shannon, Ireland’s longest river, rises here, at a spring called the Shannon Pot.",
+				"It is said to have 365 lakes, one for every day of the year."
+			],
+			"it": [
+				"Dall’irlandese An Cabhán, \"la conca\".",
+				"Qui nasce lo Shannon, il fiume più lungo d’Irlanda, da una sorgente chiamata Shannon Pot.",
+				"Si dice che abbia 365 laghi, uno per ogni giorno dell’anno."
+			]
+		}
+	},
+	"clare": {
+		"region": {
+			"en": [
+				"From Irish An Clár, \"the plank\" or \"the plain\", usually explained by a plank bridge over the Fergus; some link it instead to the Norman de Clares.",
+				"In the Burren, a plateau of bare limestone, Arctic, Alpine and Mediterranean flowers grow side by side.",
+				"The world’s first duty-free shop opened at Shannon Airport in 1947."
+			],
+			"it": [
+				"Dall’irlandese An Clár, \"l’asse\" o \"la piana\", spiegato di solito con un ponte di assi sul Fergus; altri lo collegano invece ai normanni de Clare.",
+				"Nel Burren, un altopiano di calcare nudo, fiori artici, alpini e mediterranei crescono uno accanto all’altro.",
+				"Il primo negozio duty-free del mondo aprì all’aeroporto di Shannon nel 1947."
+			]
+		}
+	},
 	"cork": {
+		"region": {
+			"en": [
+				"The county takes its name from the city, Corcach, \"marsh\".",
+				"It is the largest county in Ireland.",
+				"By tradition, kissing the Blarney Stone, set in the wall of Blarney Castle, gives the gift of eloquence."
+			],
+			"it": [
+				"La contea prende il nome dalla città, Corcach, \"palude\".",
+				"È la contea più grande d’Irlanda.",
+				"Per tradizione, baciare la pietra di Blarney, murata nel castello di Blarney, rende eloquenti."
+			]
+		},
 		"city": {
 			"en": [
 				"From Irish Corcach, \"marsh\".",
@@ -16,7 +71,33 @@
 			]
 		}
 	},
+	"donegal": {
+		"region": {
+			"en": [
+				"From Irish Dún na nGall, \"fort of the foreigners\", the foreigners probably being Vikings.",
+				"One of the three counties of Ulster left out of Northern Ireland at partition in 1921.",
+				"Tory Island, off its coast, still has a king, chosen by the islanders."
+			],
+			"it": [
+				"Dall’irlandese Dún na nGall, \"forte degli stranieri\", dove gli stranieri erano probabilmente i Vichinghi.",
+				"Una delle tre contee dell’Ulster rimaste fuori dall’Irlanda del Nord con la partizione del 1921.",
+				"L’isola di Tory, al largo della sua costa, ha ancora un re, scelto dagli isolani."
+			]
+		}
+	},
 	"dublin": {
+		"region": {
+			"en": [
+				"The county takes its name from the city, Dubh Linn, the \"black pool\".",
+				"Its county council was abolished in 1994 and replaced by three, Fingal, South Dublin and Dún Laoghaire–Rathdown, beside Dublin City.",
+				"Joyce’s Ulysses opens in the Martello tower at Sandycove, where Joyce himself had stayed in 1904."
+			],
+			"it": [
+				"La contea prende il nome dalla città, Dubh Linn, lo \"stagno nero\".",
+				"Il suo consiglio di contea fu abolito nel 1994 e sostituito da tre, Fingal, South Dublin e Dún Laoghaire-Rathdown, accanto a Dublin City.",
+				"L’Ulisse di Joyce comincia nella torre Martello di Sandycove, dove Joyce stesso aveva soggiornato nel 1904."
+			]
+		},
 		"city": {
 			"en": [
 				"From Irish Dubh Linn, \"black pool\"; in Irish today it is mostly Baile Átha Cliath.",
@@ -27,6 +108,286 @@
 				"Dall’irlandese Dubh Linn, \"stagno nero\"; oggi in irlandese si chiama per lo più Baile Átha Cliath.",
 				"Nacque come insediamento vichingo nell’841.",
 				"Il Libro di Kells, un vangelo miniato dell’800 circa, è custodito al Trinity College."
+			]
+		}
+	},
+	"galway": {
+		"region": {
+			"en": [
+				"Named for the town, Gaillimh, which took the old name of its river; what that meant is uncertain.",
+				"Its Gaeltacht, in Connemara and on the islands, is the largest Irish-speaking area in the country.",
+				"The Aran Islands gave their name to the cable-knit Aran sweater."
+			],
+			"it": [
+				"Prende il nome dalla città, Gaillimh, che prese l’antico nome del suo fiume; che cosa significasse è incerto.",
+				"Il suo Gaeltacht, nel Connemara e sulle isole, è la più vasta area di lingua irlandese del paese.",
+				"Le isole Aran hanno dato il nome al maglione Aran, lavorato a trecce."
+			]
+		}
+	},
+	"kerry": {
+		"region": {
+			"en": [
+				"From Irish Ciarraí, \"the people of Ciar\", a son of the legendary king Fergus.",
+				"Monks lived on Skellig Michael, a rock in the Atlantic, from the 6th century; it is a UNESCO site, and was a set for Star Wars.",
+				"The county has won more All-Ireland football titles than any other county."
+			],
+			"it": [
+				"Dall’irlandese Ciarraí, \"il popolo di Ciar\", figlio del leggendario re Fergus.",
+				"Sullo Skellig Michael, uno scoglio nell’Atlantico, vissero monaci dal VI secolo; è un sito UNESCO, ed è stato un set di Guerre stellari.",
+				"La contea ha vinto più titoli All-Ireland di calcio gaelico di qualsiasi altra contea."
+			]
+		}
+	},
+	"kildare": {
+		"region": {
+			"en": [
+				"From Irish Cill Dara, \"church of the oak\", for the monastery Saint Brigid founded here.",
+				"The Curragh, an open plain of grassland, is the home of Irish flat racing and of the Irish Derby.",
+				"Arthur Guinness brewed at Leixlip in the 1750s, before moving to St James’s Gate in Dublin."
+			],
+			"it": [
+				"Dall’irlandese Cill Dara, \"chiesa della quercia\", per il monastero che santa Brigida fondò qui.",
+				"Il Curragh, una vasta pianura erbosa, è la patria delle corse in piano irlandesi e dell’Irish Derby.",
+				"Arthur Guinness produceva birra a Leixlip negli anni Cinquanta del Settecento, prima di trasferirsi a St James’s Gate, a Dublino."
+			]
+		}
+	},
+	"kilkenny": {
+		"region": {
+			"en": [
+				"From Irish Cill Chainnigh, \"the church of Cainnech\", Saint Canice.",
+				"From 1642 to 1649 the Confederation of Kilkenny governed much of Catholic Ireland from here.",
+				"It has won more All-Ireland hurling titles than any other county."
+			],
+			"it": [
+				"Dall’irlandese Cill Chainnigh, \"la chiesa di Cainnech\", san Canizio.",
+				"Dal 1642 al 1649 la Confederazione di Kilkenny governò da qui gran parte dell’Irlanda cattolica.",
+				"Ha vinto più titoli All-Ireland di hurling di qualsiasi altra contea."
+			]
+		}
+	},
+	"laois": {
+		"region": {
+			"en": [
+				"Named for the Loígis, a people who held this land in early Ireland.",
+				"From 1556 until 1922 it was Queen’s County, for Queen Mary, and its county town, Portlaoise, was Maryborough.",
+				"The Rock of Dunamase, a ruined castle on a crag, came to the Norman Strongbow when he married Aoife of Leinster in 1170."
+			],
+			"it": [
+				"Prende il nome dai Loígis, un popolo che abitava queste terre nell’Irlanda antica.",
+				"Dal 1556 al 1922 fu la Queen’s County, la contea della regina, per la regina Maria, e il suo capoluogo, Portlaoise, si chiamava Maryborough.",
+				"La Rocca di Dunamase, un castello in rovina su uno sperone, passò al normanno Strongbow quando sposò Aoife di Leinster nel 1170."
+			]
+		}
+	},
+	"leitrim": {
+		"region": {
+			"en": [
+				"From Irish Liatroim, \"grey ridge\".",
+				"It has fewer people than any other county in the Republic.",
+				"The Shannon–Erne Waterway, reopened across it in 1994, joins Ireland’s two great river systems by boat."
+			],
+			"it": [
+				"Dall’irlandese Liatroim, \"crinale grigio\".",
+				"Ha meno abitanti di qualsiasi altra contea della Repubblica.",
+				"La via d’acqua Shannon-Erne, riaperta attraverso la contea nel 1994, unisce in barca i due grandi sistemi fluviali dell’Irlanda."
+			]
+		}
+	},
+	"limerick": {
+		"region": {
+			"en": [
+				"From Irish Luimneach, probably \"bare place\", once used of the land by the Shannon.",
+				"Why the five-line comic verse is called a limerick is not known for certain.",
+				"Irish coffee was first made at the flying-boat base at Foynes, around 1943, for passengers off a cold flight."
+			],
+			"it": [
+				"Dall’irlandese Luimneach, probabilmente \"luogo spoglio\", detto un tempo della terra lungo lo Shannon.",
+				"Perché la poesiola comica di cinque versi si chiami limerick non si sa con certezza.",
+				"L’Irish coffee fu preparato per la prima volta alla base degli idrovolanti di Foynes, intorno al 1943, per passeggeri scesi da un volo al freddo."
+			]
+		}
+	},
+	"longford": {
+		"region": {
+			"en": [
+				"From Irish An Longfort, \"the fortress\", a word first used for the ship camps of the Vikings.",
+				"The Corlea Trackway, an oak road laid across a bog, has been dated by its timbers to 148 BC.",
+				"The novelist Maria Edgeworth lived and wrote at Edgeworthstown for most of her life."
+			],
+			"it": [
+				"Dall’irlandese An Longfort, \"la fortezza\", una parola usata prima per gli accampamenti navali dei Vichinghi.",
+				"La Corlea Trackway, una strada di tronchi di quercia posata su una torbiera, è datata dal suo legname al 148 a.C.",
+				"La scrittrice Maria Edgeworth visse e scrisse a Edgeworthstown per gran parte della sua vita."
+			]
+		}
+	},
+	"louth": {
+		"region": {
+			"en": [
+				"Named for the village of Louth, whose Irish name, Lú, is often linked to the god Lugh.",
+				"It is the smallest county in Ireland.",
+				"The Cooley peninsula is the setting of the Táin, the epic in which Cú Chulainn holds off the army of Connacht alone."
+			],
+			"it": [
+				"Prende il nome dal villaggio di Louth, il cui nome irlandese, Lú, è spesso collegato al dio Lugh.",
+				"È la contea più piccola d’Irlanda.",
+				"La penisola di Cooley è lo scenario del Táin, l’epopea in cui Cú Chulainn tiene testa da solo all’esercito del Connacht."
+			]
+		}
+	},
+	"mayo": {
+		"region": {
+			"en": [
+				"From Irish Maigh Eo, \"plain of the yew trees\".",
+				"Captain Boycott, a land agent shunned by his neighbours near Lough Mask in 1880, gave English the verb to boycott.",
+				"The Céide Fields, stone-walled farm plots about 5,500 years old, lie preserved under the bog."
+			],
+			"it": [
+				"Dall’irlandese Maigh Eo, \"pianura dei tassi\".",
+				"Il capitano Boycott, un amministratore di terre isolato dai vicini presso il Lough Mask nel 1880, ha dato all’inglese il verbo \"boicottare\".",
+				"I Céide Fields, campi cintati da muri di pietra di circa 5.500 anni fa, si sono conservati sotto la torbiera."
+			]
+		}
+	},
+	"meath": {
+		"region": {
+			"en": [
+				"From Irish An Mhí, \"the middle\".",
+				"Newgrange, a passage tomb built around 3200 BC, is older than Stonehenge and the pyramids of Giza; the midwinter sunrise lights its chamber.",
+				"The Hill of Tara was the seat of the High Kings of Ireland."
+			],
+			"it": [
+				"Dall’irlandese An Mhí, \"il centro\".",
+				"Newgrange, una tomba a corridoio costruita intorno al 3200 a.C., è più antica di Stonehenge e delle piramidi di Giza; l’alba del solstizio d’inverno ne illumina la camera.",
+				"La collina di Tara era la sede degli alti re d’Irlanda."
+			]
+		}
+	},
+	"monaghan": {
+		"region": {
+			"en": [
+				"From Irish Muineachán, usually read as \"place of thickets\".",
+				"The poet Patrick Kavanagh was born at Inniskeen in 1904, and wrote about its small farms all his life.",
+				"Paul McCartney married Heather Mills at Castle Leslie, in Glaslough, in 2002."
+			],
+			"it": [
+				"Dall’irlandese Muineachán, interpretato di solito come \"luogo delle macchie\".",
+				"Il poeta Patrick Kavanagh nacque a Inniskeen nel 1904, e per tutta la vita scrisse delle sue piccole fattorie.",
+				"Paul McCartney sposò Heather Mills al castello di Leslie, a Glaslough, nel 2002."
+			]
+		}
+	},
+	"offaly": {
+		"region": {
+			"en": [
+				"From Uíbh Fhailí, \"the descendants of Failge\", the people of an old Irish kingdom.",
+				"From 1556 until 1922 it was King’s County, named for Philip II of Spain, husband of Queen Mary.",
+				"At Birr Castle, the Leviathan, built in 1845, was the largest telescope in the world for over 70 years."
+			],
+			"it": [
+				"Da Uíbh Fhailí, \"i discendenti di Failge\", il popolo di un antico regno irlandese.",
+				"Dal 1556 al 1922 fu la King’s County, la contea del re, per Filippo II di Spagna, marito della regina Maria.",
+				"Al castello di Birr il Leviatano, costruito nel 1845, fu per oltre 70 anni il telescopio più grande del mondo."
+			]
+		}
+	},
+	"roscommon": {
+		"region": {
+			"en": [
+				"From Irish Ros Comáin, \"Coman’s wood\", for Saint Coman, who founded a monastery here.",
+				"Rathcroghan was the royal seat of Connacht, where the legends place Queen Medb.",
+				"Douglas Hyde, the first President of Ireland, grew up at Frenchpark and is buried there."
+			],
+			"it": [
+				"Dall’irlandese Ros Comáin, \"il bosco di Coman\", per san Coman, che vi fondò un monastero.",
+				"Rathcroghan era la sede regale del Connacht, dove le leggende collocano la regina Medb.",
+				"Douglas Hyde, il primo presidente dell’Irlanda, crebbe a Frenchpark e vi è sepolto."
+			]
+		}
+	},
+	"sligo": {
+		"region": {
+			"en": [
+				"From Irish Sligeach, \"place of shells\".",
+				"W. B. Yeats is buried at Drumcliff, under Ben Bulben, as he asked in one of his last poems.",
+				"Carrowmore is one of the largest cemeteries of Stone Age tombs in Ireland."
+			],
+			"it": [
+				"Dall’irlandese Sligeach, \"luogo delle conchiglie\".",
+				"W. B. Yeats è sepolto a Drumcliff, sotto il Ben Bulben, come chiese in una delle sue ultime poesie.",
+				"Carrowmore è una delle più grandi necropoli di tombe dell’età della pietra in Irlanda."
+			]
+		}
+	},
+	"tipperary": {
+		"region": {
+			"en": [
+				"From Irish Tiobraid Árann, \"the well of Ára\".",
+				"The Rock of Cashel was the seat of the kings of Munster, who gave it to the Church in 1101.",
+				"The song It’s a Long Way to Tipperary, written in 1912, was sung by British soldiers marching in the First World War."
+			],
+			"it": [
+				"Dall’irlandese Tiobraid Árann, \"il pozzo di Ára\".",
+				"La Rocca di Cashel era la sede dei re del Munster, che la donarono alla Chiesa nel 1101.",
+				"La canzone It’s a Long Way to Tipperary, scritta nel 1912, era cantata dai soldati britannici in marcia nella Prima guerra mondiale."
+			]
+		}
+	},
+	"waterford": {
+		"region": {
+			"en": [
+				"From Old Norse Veðrafjǫrðr, perhaps \"the fjord of the rams\" or \"the windy fjord\".",
+				"Founded by Vikings in 914, Waterford is often called the oldest city in Ireland.",
+				"Its crystal has been made since 1783, with a long gap in the 19th and 20th centuries."
+			],
+			"it": [
+				"Dal norreno Veðrafjǫrðr, forse \"il fiordo dei montoni\" o \"il fiordo ventoso\".",
+				"Fondata dai Vichinghi nel 914, Waterford è spesso detta la città più antica d’Irlanda.",
+				"Il suo cristallo si produce dal 1783, con una lunga interruzione tra Ottocento e Novecento."
+			]
+		}
+	},
+	"westmeath": {
+		"region": {
+			"en": [
+				"The western part of the old kingdom of Mide, \"the middle\".",
+				"The Hill of Uisneach was held to be the centre of Ireland, where the land’s five provinces met.",
+				"At Belvedere, an 18th-century earl built the Jealous Wall, a fake ruin, to block his view of his brother’s house."
+			],
+			"it": [
+				"La parte occidentale dell’antico regno di Mide, \"il centro\".",
+				"La collina di Uisneach era considerata il centro dell’Irlanda, dove si incontravano le cinque province dell’isola.",
+				"A Belvedere, un conte del Settecento costruì il Jealous Wall, un finto rudere, per non vedere la casa del fratello."
+			]
+		}
+	},
+	"wexford": {
+		"region": {
+			"en": [
+				"From Old Norse Veisafjǫrðr, \"the inlet of the mudflats\"; in Irish it is Loch Garman.",
+				"The rising of 1798 was strongest here, and ended for the county’s rebels on Vinegar Hill.",
+				"John F. Kennedy visited his great-grandfather’s farm at Dunganstown in 1963."
+			],
+			"it": [
+				"Dal norreno Veisafjǫrðr, \"l’insenatura delle piane fangose\"; in irlandese è Loch Garman.",
+				"La rivolta del 1798 fu più forte qui, e per i ribelli della contea finì sulla collina di Vinegar Hill.",
+				"John F. Kennedy visitò nel 1963 la fattoria del bisnonno a Dunganstown."
+			]
+		}
+	},
+	"wicklow": {
+		"region": {
+			"en": [
+				"Probably from Old Norse, \"the Vikings’ meadow\"; in Irish it is Cill Mhantáin, \"Mantán’s church\".",
+				"Saint Kevin founded a monastery at Glendalough, in a valley of two lakes, in the 6th century.",
+				"The Military Road across its mountains was built after the rising of 1798, to hunt the rebels who hid there."
+			],
+			"it": [
+				"Probabilmente dal norreno, \"il prato dei Vichinghi\"; in irlandese è Cill Mhantáin, \"la chiesa di Mantán\".",
+				"San Kevin fondò un monastero a Glendalough, in una valle con due laghi, nel VI secolo.",
+				"La Military Road che attraversa i suoi monti fu costruita dopo la rivolta del 1798, per dare la caccia ai ribelli che vi si nascondevano."
 			]
 		}
 	}
