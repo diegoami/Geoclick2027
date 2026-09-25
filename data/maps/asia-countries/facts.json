@@ -18,7 +18,19 @@
 			"name": "Pik Talghar",
 			"elevation": 4979
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"\"Land of the Kazakhs\", a name often said to mean \"free\" or \"wanderer\".",
+				"The largest landlocked country in the world.",
+				"Baikonur, from which Yuri Gagarin flew in 1961, is still leased to Russia."
+			],
+			"it": [
+				"\"Terra dei kazaki\", un nome che si dice spesso significhi \"libero\" o \"vagabondo\".",
+				"Il paese senza sbocco sul mare più grande del mondo.",
+				"Baikonur, da cui partì Jurij Gagarin nel 1961, è ancora in affitto alla Russia."
+			]
+		}
 	},
 	"mongolia": {
 		"kind": "region",
@@ -36,7 +48,19 @@
 			"name": "Munkh Khairkhan",
 			"elevation": 4231
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"\"Land of the Mongols\".",
+				"Genghis Khan set out from here to build the largest empire of joined-up land in history.",
+				"The most thinly populated country in the world."
+			],
+			"it": [
+				"\"Terra dei mongoli\".",
+				"Da qui partì Gengis Khan per costruire il più grande impero territoriale continuo della storia.",
+				"Il paese meno densamente popolato del mondo."
+			]
+		}
 	},
 	"georgia": {
 		"kind": "region",
@@ -52,7 +76,19 @@
 			"nameIt": "Tbilisi",
 			"population": 1100000
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"The English name perhaps comes from the Persian gurj; Georgians call their country Sakartvelo.",
+				"Wine has been made here for about eight thousand years, the oldest evidence found anywhere.",
+				"It writes its language in an alphabet of its own, unlike any other."
+			],
+			"it": [
+				"Il nome inglese viene forse dal persiano gurj; i georgiani chiamano il loro paese Sakartvelo.",
+				"Qui si fa il vino da circa ottomila anni: le tracce più antiche trovate al mondo.",
+				"Scrive la sua lingua con un alfabeto tutto suo, diverso da ogni altro."
+			]
+		}
 	},
 	"uzbekistan": {
 		"kind": "region",
@@ -74,7 +110,19 @@
 			"name": "Ayrybaba",
 			"elevation": 3137
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"\"Land of the Uzbeks\", perhaps named for Özbeg, a khan of the Golden Horde.",
+				"One of only two countries in the world surrounded entirely by other landlocked countries.",
+				"Samarkand, on the Silk Road, was the capital of Timur, Tamerlane."
+			],
+			"it": [
+				"\"Terra degli uzbeki\", forse dal nome di Özbeg, un khan dell’Orda d’oro.",
+				"Uno dei due soli paesi al mondo circondati interamente da altri paesi senza sbocco sul mare.",
+				"Samarcanda, sulla Via della seta, fu la capitale di Timur, Tamerlano."
+			]
+		}
 	},
 	"kyrgyzstan": {
 		"kind": "region",
@@ -95,7 +143,19 @@
 			"name": "Pik Pobeda",
 			"elevation": 7439
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"\"Land of the Kyrgyz\", a name often read as \"forty tribes\", though that is disputed.",
+				"The Epic of Manas, recited from memory by bards, is one of the longest poems in the world.",
+				"Issyk-Kul, a lake high in the Tian Shan, is salty enough never to freeze."
+			],
+			"it": [
+				"\"Terra dei kirghisi\", un nome spesso letto come \"quaranta tribù\", ma è discusso.",
+				"L’Epopea di Manas, recitata a memoria dai cantori, è uno dei poemi più lunghi del mondo.",
+				"L’Issyk-Kul, un lago in alto nel Tian Shan, è abbastanza salato da non gelare mai."
+			]
+		}
 	},
 	"north-korea": {
 		"kind": "region",
@@ -110,7 +170,19 @@
 			"nameIt": "Pyongyang",
 			"population": 3300000
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Korea comes from Goryeo, a kingdom of 918 to 1392; the North calls the country Chosŏn.",
+				"The war of 1950 to 1953 with the South ended in an armistice, never in a peace treaty.",
+				"The Ryugyong Hotel in Pyongyang, a 105-storey pyramid begun in 1987, has never opened."
+			],
+			"it": [
+				"Corea viene da Goryeo, un regno del 918-1392; il Nord chiama il paese Chosŏn.",
+				"La guerra del 1950-1953 con il Sud finì con un armistizio, mai con un trattato di pace.",
+				"Il Ryugyong Hotel di Pyongyang, una piramide di 105 piani iniziata nel 1987, non ha mai aperto."
+			]
+		}
 	},
 	"azerbaijan": {
 		"kind": "region",
@@ -127,7 +199,19 @@
 			"nameIt": "Baku",
 			"population": 2122300
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Probably from Atropates, a Persian governor at the time of Alexander the Great, whose land was called Atropatene.",
+				"Around 1900 the oil fields of Baku produced about half of the world’s oil.",
+				"It has hundreds of mud volcanoes, more than any other country."
+			],
+			"it": [
+				"Probabilmente da Atropate, un governatore persiano ai tempi di Alessandro Magno, la cui terra si chiamava Atropatene.",
+				"Intorno al 1900 i pozzi di Baku producevano circa metà del petrolio del mondo.",
+				"Ha centinaia di vulcani di fango, più di qualunque altro paese."
+			]
+		}
 	},
 	"armenia": {
 		"kind": "region",
@@ -148,7 +232,19 @@
 			"name": "Aragats Lerr",
 			"elevation": 4090
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Armenians call it Hayastan, after Hayk, their legendary forefather.",
+				"By tradition it became the first state to make Christianity its religion, in 301.",
+				"Mount Ararat, its national symbol, stands across the border in Turkey."
+			],
+			"it": [
+				"Gli armeni la chiamano Hayastan, da Hayk, il loro capostipite leggendario.",
+				"Per tradizione fu il primo Stato a fare del cristianesimo la propria religione, nel 301.",
+				"Il monte Ararat, il suo simbolo nazionale, si trova oltre il confine, in Turchia."
+			]
+		}
 	},
 	"turkmenistan": {
 		"kind": "region",
@@ -169,7 +265,19 @@
 			"name": "Kuh-e Ruzeh",
 			"elevation": 2941
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"\"Land of the Turkmen\".",
+				"The Darvaza gas crater, the \"Gates of Hell\", has been burning since it was set alight, by most accounts in 1971.",
+				"Its capital, Ashgabat, holds the record for the most buildings clad in white marble."
+			],
+			"it": [
+				"\"Terra dei turkmeni\".",
+				"Il cratere di gas di Darvaza, le \"porte dell’inferno\", brucia da quando vi fu appiccato il fuoco, secondo i più nel 1971.",
+				"La sua capitale, Aşgabat, detiene il record degli edifici rivestiti di marmo bianco."
+			]
+		}
 	},
 	"turkey": {
 		"kind": "region",
@@ -192,7 +300,19 @@
 			"name": "Mount Ararat",
 			"elevation": 5137
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"\"Land of the Turks\"; since 2022 it asks to be called Türkiye.",
+				"Istanbul lies on two continents, on both shores of the Bosphorus.",
+				"Göbekli Tepe, built around 9500 BC, is some six thousand years older than Stonehenge."
+			],
+			"it": [
+				"\"Terra dei turchi\"; dal 2022 chiede di essere chiamata Türkiye.",
+				"Istanbul sta su due continenti, sulle due rive del Bosforo.",
+				"Göbekli Tepe, costruito intorno al 9500 a.C., è più antico di Stonehenge di circa seimila anni."
+			]
+		}
 	},
 	"tajikistan": {
 		"kind": "region",
@@ -213,7 +333,19 @@
 			"name": "Pik Imeni Ismail Samani",
 			"elevation": 7495
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"\"Land of the Tajiks\", who speak a form of Persian.",
+				"More than nine tenths of it is mountains.",
+				"The Pamirs, in its east, have been called the roof of the world."
+			],
+			"it": [
+				"\"Terra dei tagichi\", che parlano una forma di persiano.",
+				"Più di nove decimi del suo territorio sono montagne.",
+				"Il Pamir, a est, è stato chiamato il tetto del mondo."
+			]
+		}
 	},
 	"south-korea": {
 		"kind": "region",
@@ -231,7 +363,19 @@
 			"name": "Halla-san",
 			"elevation": 1950
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Korea comes from Goryeo, a kingdom of 918 to 1392; the South calls the country Hanguk.",
+				"Its alphabet, Hangul, was created in 1443 under King Sejong so that everyone could learn to read.",
+				"It went from one of the poorest countries in the world in the 1950s to one of the richest."
+			],
+			"it": [
+				"Corea viene da Goryeo, un regno del 918-1392; il Sud chiama il paese Hanguk.",
+				"Il suo alfabeto, l’hangul, fu creato nel 1443 sotto il re Sejong perché tutti potessero imparare a leggere.",
+				"Negli anni Cinquanta era uno dei paesi più poveri del mondo, oggi è tra i più ricchi."
+			]
+		}
 	},
 	"china": {
 		"kind": "region",
@@ -261,7 +405,19 @@
 			"name": "Mount Everest",
 			"elevation": 8848
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"The name probably comes from the Qin dynasty, which united the country in 221 BC; the Chinese call it Zhongguo, the \"middle kingdom\".",
+				"It keeps one time zone across a country about as wide as the continental United States.",
+				"Paper, printing, gunpowder and the compass were all first made here."
+			],
+			"it": [
+				"Il nome viene probabilmente dalla dinastia Qin, che unificò il paese nel 221 a.C.; i cinesi la chiamano Zhongguo, il \"regno di mezzo\".",
+				"Ha un solo fuso orario per un paese largo più o meno quanto gli Stati Uniti continentali.",
+				"La carta, la stampa, la polvere da sparo e la bussola furono inventate qui."
+			]
+		}
 	},
 	"northern-cyprus": {
 		"kind": "region",
@@ -279,7 +435,19 @@
 			"name": "Selvili Tepe",
 			"elevation": 1023
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"The northern part of the island, which declared itself a republic in 1983; only Turkey recognises it.",
+				"Varosha, once a resort of Famagusta, has been fenced off and empty since 1974.",
+				"A merchant ship that sank off Kyrenia around 300 BC is one of the oldest ever raised from the sea."
+			],
+			"it": [
+				"La parte settentrionale dell’isola, che si dichiarò repubblica nel 1983; la riconosce solo la Turchia.",
+				"Varosha, un tempo località balneare di Famagosta, è recintata e vuota dal 1974.",
+				"Una nave mercantile affondata al largo di Kyrenia intorno al 300 a.C. è una delle più antiche mai recuperate dal mare."
+			]
+		}
 	},
 	"cyprus": {
 		"kind": "region",
@@ -297,7 +465,19 @@
 			"name": "Olympus",
 			"elevation": 1951
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Copper takes its Latin name, cuprum, from the island, where it was mined in antiquity.",
+				"In Greek myth Aphrodite was born from the sea off its coast.",
+				"Since 1974 the island has been divided, and a UN buffer zone runs through the middle of Nicosia."
+			],
+			"it": [
+				"Il rame prende il nome latino, cuprum, dall’isola, dove lo si estraeva già nell’antichità.",
+				"Nel mito greco Afrodite nacque dal mare davanti alle sue coste.",
+				"Dal 1974 l’isola è divisa, e una zona cuscinetto dell’ONU attraversa il centro di Nicosia."
+			]
+		}
 	},
 	"japan": {
 		"kind": "region",
@@ -312,7 +492,19 @@
 			"name": "Fuji",
 			"elevation": 3776
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Nihon or Nippon, \"origin of the sun\"; Japan comes to English through Chinese and Malay forms of the same name.",
+				"A count made in 2023 found more than 14,000 islands.",
+				"Its imperial family is the oldest continuous hereditary monarchy in the world."
+			],
+			"it": [
+				"Nihon o Nippon, \"origine del sole\"; Giappone arriva a noi attraverso forme cinesi e malesi dello stesso nome.",
+				"Un conteggio del 2023 ha trovato più di 14.000 isole.",
+				"La sua famiglia imperiale è la più antica monarchia ereditaria ininterrotta del mondo."
+			]
+		}
 	},
 	"syria": {
 		"kind": "region",
@@ -334,7 +526,19 @@
 			"name": "Jabal ash Shaykh",
 			"elevation": 2814
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Probably from Assyria, through Greek.",
+				"Damascus and Aleppo are among the oldest continuously inhabited cities in the world.",
+				"Palmyra, a caravan city of the desert, ruled much of the Roman east under Queen Zenobia in the 3rd century."
+			],
+			"it": [
+				"Probabilmente dall’Assiria, attraverso il greco.",
+				"Damasco e Aleppo sono tra le città abitate ininterrottamente più antiche del mondo.",
+				"Palmira, città carovaniera del deserto, governò gran parte dell’oriente romano con la regina Zenobia nel III secolo."
+			]
+		}
 	},
 	"afghanistan": {
 		"kind": "region",
@@ -357,7 +561,19 @@
 			"name": "Nowshak",
 			"elevation": 7492
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"\"Land of the Afghans\", with the Persian ending -stan, \"place of\".",
+				"The Wakhan Corridor, a strip of mountains in its far north-east, reaches all the way to China.",
+				"The Buddhas of Bamiyan, carved into a cliff in the 6th century, were blown up in 2001."
+			],
+			"it": [
+				"\"Terra degli afghani\", con il suffisso persiano -stan, \"luogo di\".",
+				"Il corridoio del Wakhan, una striscia di montagne all’estremo nord-est, arriva fino alla Cina.",
+				"I Buddha di Bamiyan, scolpiti in una parete di roccia nel VI secolo, furono fatti saltare nel 2001."
+			]
+		}
 	},
 	"lebanon": {
 		"kind": "region",
@@ -376,7 +592,19 @@
 			"name": "Qurnat as Sawdā",
 			"elevation": 3088
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"From a Semitic root for \"white\", for the snow on its mountains.",
+				"Byblos, on its coast, gave the Greeks their word for book, and through it the Bible got its name.",
+				"The Phoenicians of its coast spread the alphabet from which the Greek and Latin ones came."
+			],
+			"it": [
+				"Da una radice semitica che significa \"bianco\", per la neve sui suoi monti.",
+				"Biblo, sulla sua costa, diede ai Greci la loro parola per libro, e da essa la Bibbia prese il nome.",
+				"I Fenici della sua costa diffusero l’alfabeto da cui nacquero quello greco e quello latino."
+			]
+		}
 	},
 	"iraq": {
 		"kind": "region",
@@ -395,7 +623,19 @@
 			"nameIt": "Baghdad",
 			"population": 5054000
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Where the name comes from is disputed: perhaps from the ancient city of Uruk, perhaps from an Arabic word for a river bank.",
+				"Mesopotamia, the land \"between the rivers\" Tigris and Euphrates, is where writing was invented, around 3200 BC.",
+				"The ruins of Babylon stand south of Baghdad, on the Euphrates."
+			],
+			"it": [
+				"Da dove venga il nome è discusso: forse dall’antica città di Uruk, forse da una parola araba per la riva di un fiume.",
+				"La Mesopotamia, la terra \"tra i fiumi\" Tigri ed Eufrate, è il luogo dove fu inventata la scrittura, intorno al 3200 a.C.",
+				"Le rovine di Babilonia sono a sud di Baghdad, sull’Eufrate."
+			]
+		}
 	},
 	"iran": {
 		"kind": "region",
@@ -419,7 +659,19 @@
 			"name": "Mount Damavand",
 			"elevation": 5610
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"\"Land of the Aryans\", the name it asked the world to use instead of Persia in 1935.",
+				"Its year begins at the spring equinox, with Nowruz.",
+				"Persepolis, the ceremonial capital of Darius and Xerxes, was burned by Alexander the Great in 330 BC."
+			],
+			"it": [
+				"\"Terra degli ariani\", il nome che nel 1935 chiese al mondo di usare al posto di Persia.",
+				"Il suo anno comincia all’equinozio di primavera, con il Nowruz.",
+				"Persepoli, la capitale cerimoniale di Dario e Serse, fu incendiata da Alessandro Magno nel 330 a.C."
+			]
+		}
 	},
 	"palestine": {
 		"kind": "region",
@@ -438,7 +690,19 @@
 			"name": "Har Meron",
 			"elevation": 1208
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"From Philistia, the land of the Philistines, through Greek and Latin.",
+				"Jericho is often called the oldest city in the world, lived in for more than ten thousand years.",
+				"It is made of two pieces of land, the West Bank and the Gaza Strip, with Israel between them."
+			],
+			"it": [
+				"Dalla Filistea, la terra dei Filistei, attraverso il greco e il latino.",
+				"Gerico è spesso considerata la città più antica del mondo, abitata da più di diecimila anni.",
+				"È formata da due territori, la Cisgiordania e la Striscia di Gaza, con Israele in mezzo."
+			]
+		}
 	},
 	"israel": {
 		"kind": "region",
@@ -459,7 +723,19 @@
 			"name": "Har Meron",
 			"elevation": 1208
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"From the name the Bible gives Jacob, Israel, usually read as \"he who strives with God\".",
+				"The shore of the Dead Sea, on its eastern edge, is the lowest place on land on earth.",
+				"Hebrew, not an everyday language for nearly two thousand years, was revived as a spoken tongue from the late 19th century."
+			],
+			"it": [
+				"Dal nome che la Bibbia dà a Giacobbe, Israele, letto di solito come \"colui che lotta con Dio\".",
+				"La riva del Mar Morto, sul suo lato orientale, è il punto più basso delle terre emerse.",
+				"L’ebraico, che non era una lingua quotidiana da quasi duemila anni, tornò a essere parlato dalla fine dell’Ottocento."
+			]
+		}
 	},
 	"jordan": {
 		"kind": "region",
@@ -481,7 +757,19 @@
 			"name": "Jabal Ramm",
 			"elevation": 1754
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Named for the Jordan river.",
+				"Petra, carved into rose-red rock by the Nabataeans, was almost unknown outside the region until a Swiss traveller reached it in 1812.",
+				"Its king belongs to the Hashemite family, which traces its line to the Prophet Muhammad."
+			],
+			"it": [
+				"Prende il nome dal fiume Giordano.",
+				"Petra, scolpita nella roccia rosa dai Nabatei, era quasi sconosciuta fuori dalla regione finché un viaggiatore svizzero non la raggiunse nel 1812.",
+				"Il suo re appartiene alla famiglia hascemita, che fa risalire la sua discendenza al profeta Maometto."
+			]
+		}
 	},
 	"pakistan": {
 		"kind": "region",
@@ -502,7 +790,19 @@
 			"name": "K2",
 			"elevation": 8611
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Coined in 1933 from the names of its lands, Punjab, Afghania, Kashmir, Sindh and Balochistan, and read too as \"land of the pure\".",
+				"Mohenjo-daro, one of the first cities in the world, was built here around 2500 BC.",
+				"It was created in 1947, when British India was partitioned."
+			],
+			"it": [
+				"Coniato nel 1933 dai nomi delle sue terre, Punjab, Afghania, Kashmir, Sindh e Belucistan, e letto anche come \"terra dei puri\".",
+				"Mohenjo-daro, una delle prime città del mondo, fu costruita qui intorno al 2500 a.C.",
+				"Nacque nel 1947, con la spartizione dell’India britannica."
+			]
+		}
 	},
 	"kuwait": {
 		"kind": "region",
@@ -517,7 +817,19 @@
 			"nameIt": "Al Kuwait",
 			"population": 2063000
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"A diminutive of Arabic kut, \"fortress\": \"the little fortress\".",
+				"Its dinar is the most valuable currency unit in the world.",
+				"Iraq invaded it in 1990, and it was freed in the Gulf War of 1991."
+			],
+			"it": [
+				"Un diminutivo dell’arabo kut, \"fortezza\": \"la piccola fortezza\".",
+				"Il suo dinaro è l’unità monetaria di maggior valore al mondo.",
+				"L’Iraq lo invase nel 1990, e fu liberato nella guerra del Golfo del 1991."
+			]
+		}
 	},
 	"nepal": {
 		"kind": "region",
@@ -536,7 +848,19 @@
 			"name": "Dhaulagiri",
 			"elevation": 8172
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Where its name comes from is uncertain; its flag is the only national flag that is not a rectangle.",
+				"Eight of the fourteen mountains in the world higher than 8,000 m are on its soil or its borders.",
+				"Lumbini, in its south, is by tradition where the Buddha was born."
+			],
+			"it": [
+				"Da dove venga il nome è incerto; la sua bandiera è l’unica bandiera nazionale che non sia un rettangolo.",
+				"Otto dei quattordici monti del mondo più alti di 8.000 m sono sul suo territorio o sui suoi confini.",
+				"Lumbini, nel sud, è per tradizione il luogo di nascita del Buddha."
+			]
+		}
 	},
 	"bhutan": {
 		"kind": "region",
@@ -555,7 +879,19 @@
 			"name": "Gangkar Punsum",
 			"elevation": 7570
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its people call it Druk Yul, \"land of the thunder dragon\".",
+				"It measures its progress by Gross National Happiness as well as by wealth.",
+				"Its forests take in more carbon than the country gives off."
+			],
+			"it": [
+				"I suoi abitanti lo chiamano Druk Yul, \"terra del drago del tuono\".",
+				"Misura il proprio progresso con la Felicità interna lorda, oltre che con la ricchezza.",
+				"Le sue foreste assorbono più carbonio di quanto il paese ne emetta."
+			]
+		}
 	},
 	"qatar": {
 		"kind": "region",
@@ -569,7 +905,19 @@
 			"nameIt": "Doha",
 			"population": 1450000
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Where the name comes from is uncertain; it may go back to a town the Roman writer Pliny mentioned on this coast.",
+				"It has some of the largest natural gas reserves in the world.",
+				"It hosted the football World Cup in 2022, the first in the Arab world."
+			],
+			"it": [
+				"Da dove venga il nome è incerto; potrebbe risalire a una città che lo scrittore romano Plinio citò su questa costa.",
+				"Ha alcune delle più grandi riserve di gas naturale del mondo.",
+				"Nel 2022 ha ospitato i Mondiali di calcio, i primi nel mondo arabo."
+			]
+		}
 	},
 	"united-arab-emirates": {
 		"kind": "region",
@@ -588,7 +936,19 @@
 			"name": "Jabal Yibir",
 			"elevation": 1527
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Seven emirates, which joined together in 1971 and 1972.",
+				"The Burj Khalifa in Dubai is the tallest building in the world.",
+				"In 2020 it sent a probe to Mars, the first Arab mission to another planet."
+			],
+			"it": [
+				"Sette emirati, che si unirono tra il 1971 e il 1972.",
+				"Il Burj Khalifa di Dubai è l’edificio più alto del mondo.",
+				"Nel 2020 ha mandato una sonda su Marte, la prima missione araba verso un altro pianeta."
+			]
+		}
 	},
 	"saudi-arabia": {
 		"kind": "region",
@@ -612,7 +972,19 @@
 			"name": "Jabal Sawdā",
 			"elevation": 3000
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Named in 1932 for the House of Saud, the dynasty that united it.",
+				"Mecca and Medina, the two holiest cities of Islam, are here.",
+				"It has no river that flows all year round."
+			],
+			"it": [
+				"Prende il nome, dal 1932, dalla casa di Saud, la dinastia che la unificò.",
+				"Qui si trovano La Mecca e Medina, le due città più sacre dell’islam.",
+				"Non ha nessun fiume che scorra tutto l’anno."
+			]
+		}
 	},
 	"bangladesh": {
 		"kind": "region",
@@ -627,7 +999,19 @@
 			"nameIt": "Dacca",
 			"population": 12797394
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"\"Country of the Bengalis\".",
+				"Its independence in 1971 grew out of a movement for the Bengali language; 21 February, its Language Martyrs’ Day, is now International Mother Language Day.",
+				"The Sundarbans, the largest mangrove forest in the world, are home to the Bengal tiger."
+			],
+			"it": [
+				"\"Paese dei bengalesi\".",
+				"La sua indipendenza, nel 1971, nacque da un movimento per la lingua bengalese; il 21 febbraio, giorno dei martiri della lingua, è oggi la Giornata internazionale della lingua madre.",
+				"Le Sundarbans, la più grande foresta di mangrovie del mondo, ospitano la tigre del Bengala."
+			]
+		}
 	},
 	"taiwan": {
 		"kind": "region",
@@ -642,7 +1026,19 @@
 			"name": "Yu Shan",
 			"elevation": 3952
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"The Portuguese called the island Formosa, \"beautiful\"; Taiwan may come from the name of a people of its south-west coast.",
+				"Taipei 101 was the tallest building in the world from 2004 to 2010.",
+				"It makes most of the world’s most advanced computer chips."
+			],
+			"it": [
+				"I portoghesi chiamarono l’isola Formosa, \"bella\"; Taiwan potrebbe venire dal nome di un popolo della sua costa sud-occidentale.",
+				"Il Taipei 101 fu l’edificio più alto del mondo dal 2004 al 2010.",
+				"Produce la maggior parte dei chip per computer più avanzati del mondo."
+			]
+		}
 	},
 	"oman": {
 		"kind": "region",
@@ -662,7 +1058,19 @@
 			"name": "Jabal Shams",
 			"elevation": 3035
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Where the name comes from is uncertain; one old explanation is a founder called Oman.",
+				"Frankincense, burned in the temples of the ancient world, still comes from the trees of its Dhofar region.",
+				"In the 19th century its sultans ruled Zanzibar and for a time made it their capital."
+			],
+			"it": [
+				"Da dove venga il nome è incerto; un’antica spiegazione è un fondatore chiamato Oman.",
+				"L’incenso, bruciato nei templi del mondo antico, viene ancora dagli alberi della sua regione del Dhofar.",
+				"Nell’Ottocento i suoi sultani governavano Zanzibar e per un periodo ne fecero la loro capitale."
+			]
+		}
 	},
 	"india": {
 		"kind": "region",
@@ -685,7 +1093,19 @@
 			"name": "Kanchenjunga",
 			"elevation": 8586
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"From the Indus river, through Persian and Greek; its constitution also calls it Bharat.",
+				"Since 2023 it has had more people than any other country.",
+				"The numerals the West calls Arabic, zero among them, came from India."
+			],
+			"it": [
+				"Dal fiume Indo, attraverso il persiano e il greco; la sua costituzione la chiama anche Bharat.",
+				"Dal 2023 è il paese più popoloso del mondo.",
+				"Le cifre che l’Occidente chiama arabe, zero compreso, vengono dall’India."
+			]
+		}
 	},
 	"myanmar": {
 		"kind": "region",
@@ -707,7 +1127,19 @@
 			"name": "Hkakabo Razi",
 			"elevation": 5881
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Burma and Myanmar are two forms of the name of the Bamar people, the spoken one and the written one.",
+				"The Shwedagon Pagoda in Yangon is covered in gold and, by tradition, holds relics of four Buddhas.",
+				"Bagan has more than two thousand Buddhist temples and pagodas on one plain."
+			],
+			"it": [
+				"Birmania e Myanmar sono due forme del nome del popolo bamar, quella parlata e quella scritta.",
+				"La pagoda Shwedagon di Yangon è rivestita d’oro e, per tradizione, custodisce reliquie di quattro Buddha.",
+				"Bagan ha più di duemila templi e pagode buddisti su un’unica pianura."
+			]
+		}
 	},
 	"laos": {
 		"kind": "region",
@@ -729,7 +1161,19 @@
 			"name": "Phou Bia",
 			"elevation": 2830
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its old kingdom was Lan Xang, the land of \"a million elephants\".",
+				"Counted per person, it is the most heavily bombed country in history, by the United States from 1964 to 1973.",
+				"Nobody is sure what the thousands of stone jars on the Plain of Jars were for."
+			],
+			"it": [
+				"Il suo antico regno era Lan Xang, la terra del \"milione di elefanti\".",
+				"In rapporto agli abitanti è il paese più bombardato della storia, dagli Stati Uniti tra il 1964 e il 1973.",
+				"Nessuno sa con certezza a cosa servissero le migliaia di giare di pietra della Piana delle Giare."
+			]
+		}
 	},
 	"vietnam": {
 		"kind": "region",
@@ -749,7 +1193,19 @@
 			"name": "Fan Si Pan",
 			"elevation": 3142
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Việt Nam, \"the Viet of the south\", a name the Chinese emperor accepted in 1804.",
+				"Ha Long Bay holds some 1,600 limestone islands and islets.",
+				"It is the second largest exporter of coffee in the world."
+			],
+			"it": [
+				"Việt Nam, \"i Viet del sud\", un nome che l’imperatore cinese accettò nel 1804.",
+				"La baia di Ha Long conta circa 1.600 isole e isolotti di calcare.",
+				"È il secondo esportatore di caffè del mondo."
+			]
+		}
 	},
 	"yemen": {
 		"kind": "region",
@@ -768,7 +1224,19 @@
 			"name": "Jabal an-Nabi Shu’aib",
 			"elevation": 3666
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Perhaps from yamin, \"the right hand\", which is the south for someone facing the rising sun.",
+				"The old city of Sana’a is built of tower houses of mud brick, some of them many storeys high.",
+				"Its island of Socotra has the dragon’s blood tree, found nowhere else."
+			],
+			"it": [
+				"Forse da yamin, \"la mano destra\", che è il sud per chi guarda il sole che sorge.",
+				"La città vecchia di Sana’a è fatta di case-torri di mattoni di fango, alcune alte molti piani.",
+				"La sua isola di Socotra ha l’albero del sangue di drago, che non cresce in nessun altro luogo."
+			]
+		}
 	},
 	"thailand": {
 		"kind": "region",
@@ -789,7 +1257,19 @@
 			"name": "Doi Inthanon",
 			"elevation": 2580
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"\"Land of the Thai\", a word often read as \"free\"; it was called Siam until 1939.",
+				"The only country in Southeast Asia never ruled by a European power.",
+				"Bangkok’s full ceremonial name is one of the longest place names in the world."
+			],
+			"it": [
+				"\"Terra dei thai\", una parola spesso letta come \"liberi\"; fino al 1939 si chiamava Siam.",
+				"L’unico paese del Sud-est asiatico mai governato da una potenza europea.",
+				"Il nome cerimoniale completo di Bangkok è uno dei nomi di luogo più lunghi del mondo."
+			]
+		}
 	},
 	"cambodia": {
 		"kind": "region",
@@ -809,7 +1289,19 @@
 			"name": "Phnom Aural",
 			"elevation": 1813
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"From Kambuja, \"the sons of Kambu\", a legendary sage the Khmer took as their ancestor.",
+				"Angkor Wat, built in the 12th century, is the largest religious monument in the world, and it is on the flag.",
+				"The Khmer Rouge killed between one and a half and two million people, about a quarter of the population, from 1975 to 1979."
+			],
+			"it": [
+				"Da Kambuja, \"i figli di Kambu\", un saggio leggendario che i khmer consideravano il loro antenato.",
+				"Angkor Wat, costruito nel XII secolo, è il più grande monumento religioso del mondo, ed è sulla bandiera.",
+				"Tra il 1975 e il 1979 i Khmer rossi uccisero da un milione e mezzo a due milioni di persone, circa un quarto della popolazione."
+			]
+		}
 	},
 	"philippines": {
 		"kind": "region",
@@ -824,7 +1316,19 @@
 			"name": "Mount Apo",
 			"elevation": 2954
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Named for Philip II of Spain, by the explorer Ruy López de Villalobos in 1543.",
+				"It is made of more than seven thousand islands.",
+				"Ferdinand Magellan was killed here, on Mactan, in 1521."
+			],
+			"it": [
+				"Prendono il nome da Filippo II di Spagna, dall’esploratore Ruy López de Villalobos nel 1543.",
+				"Sono formate da più di settemila isole.",
+				"Ferdinando Magellano fu ucciso qui, a Mactan, nel 1521."
+			]
+		}
 	},
 	"sri-lanka": {
 		"kind": "region",
@@ -839,7 +1343,19 @@
 			"name": "Pidurutalagala",
 			"elevation": 2524
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"From Sanskrit, \"the resplendent island\"; it was Ceylon until 1972.",
+				"Sirimavo Bandaranaike became the world’s first woman prime minister here, in 1960.",
+				"Its tea is still sold as Ceylon tea."
+			],
+			"it": [
+				"Dal sanscrito, \"l’isola splendente\"; fino al 1972 era Ceylon.",
+				"Sirimavo Bandaranaike divenne qui, nel 1960, la prima donna primo ministro del mondo.",
+				"Il suo tè si vende ancora come tè di Ceylon."
+			]
+		}
 	},
 	"brunei": {
 		"kind": "region",
@@ -853,7 +1369,19 @@
 			"nameIt": "Bandar Seri Begawan",
 			"population": 296500
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Its full name, Brunei Darussalam, adds an Arabic phrase meaning \"abode of peace\".",
+				"Its sultans have ruled for more than six centuries.",
+				"Kampong Ayer, a town of houses on stilts over the Brunei river, is said to have been lived in for a thousand years."
+			],
+			"it": [
+				"Il nome completo, Brunei Darussalam, aggiunge un’espressione araba che significa \"dimora della pace\".",
+				"I suoi sultani regnano da più di sei secoli.",
+				"Kampong Ayer, una città di case su palafitte sul fiume Brunei, sarebbe abitata da mille anni."
+			]
+		}
 	},
 	"malaysia": {
 		"kind": "region",
@@ -873,7 +1401,19 @@
 			"name": "Gunung Kinabalu",
 			"elevation": 4101
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"\"Land of the Malays\".",
+				"Its king is chosen in turn from nine hereditary rulers, for five years at a time.",
+				"The Petronas Towers in Kuala Lumpur were the tallest buildings in the world from 1998 to 2004."
+			],
+			"it": [
+				"\"Terra dei malesi\".",
+				"Il suo re viene scelto a turno fra nove sovrani ereditari, per cinque anni alla volta.",
+				"Le Torri Petronas di Kuala Lumpur furono gli edifici più alti del mondo dal 1998 al 2004."
+			]
+		}
 	},
 	"indonesia": {
 		"kind": "region",
@@ -892,7 +1432,19 @@
 			"name": "Puncak Jaya",
 			"elevation": 4884
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"\"The Indian islands\", from Greek Indos and nesos, a name coined in the 19th century.",
+				"It is made of more than 17,000 islands.",
+				"It has the largest Muslim population of any country."
+			],
+			"it": [
+				"\"Le isole indiane\", dal greco Indos e nesos, un nome coniato nell’Ottocento.",
+				"È formata da più di 17.000 isole.",
+				"Ha la popolazione musulmana più numerosa di qualunque paese."
+			]
+		}
 	},
 	"timor-leste": {
 		"kind": "region",
@@ -910,6 +1462,18 @@
 			"name": "Tata Mailau",
 			"elevation": 2986
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"From Malay timur, \"east\", and Portuguese leste, \"east\": the east east.",
+				"Independent since 2002, the first new state of the 21st century.",
+				"A Portuguese colony for about four centuries, it keeps Portuguese as an official language."
+			],
+			"it": [
+				"Dal malese timur, \"est\", e dal portoghese leste, \"est\": l’est dell’est.",
+				"Indipendente dal 2002, il primo nuovo Stato del XXI secolo.",
+				"Colonia portoghese per circa quattro secoli, ha ancora il portoghese come lingua ufficiale."
+			]
+		}
 	}
 }
