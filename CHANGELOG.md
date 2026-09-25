@@ -10,10 +10,14 @@ one entry per tagged version on `main`.
 For players:
 
 - **The new maps have fun facts.** Tap a country on any continent's
-  Countries map, or a capital or city on the continents' maps, and the card
-  now tells you where its name comes from and more, in English and Italian:
-  all 172 countries, 286 capitals and cities, and Greece's regions. The
-  regions and towns of the other new countries follow before this release.
+  Countries map, a capital or city on the continents' maps, or a region or
+  town of the 15 countries added in v0.11, and the card now tells you where
+  its name comes from and more, in English and Italian: all 172 countries,
+  286 capitals and cities, and the 537 regions and towns of Belgium,
+  Czechia, Croatia, Greece, Bulgaria, Chile, Peru, South Africa, Iran,
+  Thailand, Saudi Arabia, Ireland, Switzerland, Austria and Romania. A
+  province and its town of the same name now each have their own facts.
+  Smaller places get one or two facts rather than three.
 - **A button to clear the map.** Under the zoom buttons, the eye hides the
   tabs, the map's name and the pills, so a round on a tablet has the whole
   map. Press it again to bring them back. The choice lasts until you close
