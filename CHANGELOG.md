@@ -5,7 +5,11 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
-## Unreleased
+## v0.12.0 — 2026-09-25 — Facts for the new maps
+
+**The places added in v0.11 get their fun facts: every country, every capital and city on the continents' maps, and every region and town of the 15 new countries. Plus a button that clears the map, and the fixes from playing on a tablet.**
+
+Proposal #46 and [PLAN_V0.12.md](docs/PLAN_V0.12.md) (FT-69 to FT-75); the tablet fixes. PRs #47-#57, #59-#63.
 
 For players:
 
@@ -31,6 +35,52 @@ For players:
   Overview and the Tour now write it like Explore does, in capitals with no
   box. In the Quiz a name you placed is dark green and a name given away is
   brown. Town names keep their boxes.
+
+Under the hood:
+
+- **Where a place's facts come from (FT-69).** A country reads
+  `data/facts/world.json`, a town its own country's file, whatever map it
+  is on. "Czech Republic" and "Czechia" share one file (`factsFileFor`).
+- **A region and a town of the same name are kept apart.** An entry can
+  hold `region` and `city` lists, and each target reads the one of its own
+  kind (`storedHooksFor`). The new files use it from the start; Spain's
+  Sevilla still doesn't (tier 3).
+- **The authored facts:** `world.json`, `greece.json` and 160 new country
+  files. 172 countries, 286 towns, 537 regions and towns of the 15
+  countries, in English and Italian. All pass the Italian house-style lint
+  and the orphan lint.
+- **The map chrome:** `hideButtonsControl.svelte.ts` is a MapLibre control;
+  its state is per session and ignored while the tutorial runs.
+  `mapBottomOverlay.ts` publishes the height of the Quiz tray and the Tour
+  controls as CSS variables, which the credit line and the version badge
+  sit above. A phone folds the credit once it's drawn.
+- **Terrain names** are drawn again once the source is loaded and has
+  labels (`terrainLayer.ts`), not on the first `data` event.
+- **Region names:** the Quiz, Overview and Tour tag region popups
+  `geoclick-region-name`, the same rules as Explore (FT-74).
+- **Map builder nits from the v0.11.0 review (FT-75):** `--within`'s
+  nearest-area fallback measures distance on the ground (longitude scaled
+  by cos(latitude)); the error message names `--disambiguate-by`. The 16
+  `--within` maps rebuild byte-identical.
+- **A test that damaged the repository (#60).** `buildAssets.test.ts`'s
+  scratch git repo inherited the pre-push hook's `GIT_DIR`. Pushed from a
+  worktree, it set `core.bare` on the real `.git/config`. It now drops the
+  repository variables, and a test checks it.
+- **New tests:** `regionLabel.browser.test.ts` covers the Quiz, Overview
+  and Tour; terrain names after off and on; the map chrome; the facts
+  routing.
+
+Not in this release:
+
+- **FT-51, the facts in German**, is still postponed.
+- **Tier 3, the finer maps:** 1 474 places (Germany's towns and districts,
+  France's departments, the Dutch municipalities, Poland's powiats and
+  others) still show only the generated sentences. Sevilla, the province,
+  still shows Sevilla the city's facts.
+- **Thin places.** About 250 of the 523 new places have one or two facts
+  rather than three, and 44 regions have a fact that only says it is named
+  for its town. They are to be filled with tier 3.
+- **The world-map start screen**, agreed on #58, is v0.13.
 
 ## v0.11.0 — 2026-09-24 — Twice the maps
 
