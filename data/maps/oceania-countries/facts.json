@@ -15,7 +15,19 @@
 			"name": "Mount Wilhelm",
 			"elevation": 4509
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Papua perhaps from a Malay word for \"frizzy\"; New Guinea from a Spanish sailor who thought its people looked like those of Guinea in Africa.",
+				"More than 800 languages are spoken here, more than in any other country.",
+				"The bird of paradise on its flag lives in its forests."
+			],
+			"it": [
+				"Papua forse da una parola malese per \"crespo\"; Nuova Guinea da un marinaio spagnolo a cui i suoi abitanti ricordarono quelli della Guinea africana.",
+				"Qui si parlano più di 800 lingue, più che in qualunque altro paese.",
+				"L’uccello del paradiso della sua bandiera vive nelle sue foreste."
+			]
+		}
 	},
 	"solomon-islands": {
 		"kind": "region",
@@ -33,7 +45,19 @@
 			"name": "Mount Popomanaseu",
 			"elevation": 2335
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Named in 1568 by Álvaro de Mendaña, who hoped they held the riches of King Solomon.",
+				"Guadalcanal, one of its islands, gave its name to one of the great campaigns of the Pacific War, in 1942 and 1943.",
+				"On some islands shell money is still used, above all for the price of a bride."
+			],
+			"it": [
+				"Chiamate così nel 1568 da Álvaro de Mendaña, che sperava vi fossero le ricchezze di re Salomone.",
+				"Guadalcanal, una delle sue isole, diede il nome a una delle grandi campagne della guerra del Pacifico, nel 1942 e 1943.",
+				"In alcune isole si usa ancora la moneta di conchiglie, soprattutto per il prezzo della sposa."
+			]
+		}
 	},
 	"vanuatu": {
 		"kind": "region",
@@ -48,7 +72,19 @@
 			"name": "Mount Tabwemasana",
 			"elevation": 1877
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"A name taken at independence in 1980, often read as \"our land forever\"; before, it was the New Hebrides.",
+				"The land divers of Pentecost Island, who leap from towers with vines tied to their ankles, inspired the bungee jump.",
+				"More than a hundred languages are spoken by about 300,000 people, more per person than anywhere else."
+			],
+			"it": [
+				"Un nome scelto all’indipendenza, nel 1980, spesso letto come \"la nostra terra per sempre\"; prima erano le Nuove Ebridi.",
+				"I tuffatori di terra dell’isola di Pentecoste, che saltano da torri con liane legate alle caviglie, ispirarono il bungee jumping.",
+				"Circa 300.000 persone parlano più di cento lingue, più lingue per abitante che in qualunque altro luogo."
+			]
+		}
 	},
 	"fiji": {
 		"kind": "region",
@@ -63,7 +99,19 @@
 			"name": "Tomanivi",
 			"elevation": 1323
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"From the Tongan form of Viti, the islands’ own name.",
+				"It is made of more than three hundred islands.",
+				"Its rugby sevens team won its first Olympic medal, a gold, in 2016."
+			],
+			"it": [
+				"Dalla forma tongana di Viti, il nome che le isole danno a sé stesse.",
+				"Sono più di trecento isole.",
+				"La sua squadra di rugby a sette vinse la prima medaglia olimpica del paese, un oro, nel 2016."
+			]
+		}
 	},
 	"australia": {
 		"kind": "region",
@@ -78,7 +126,19 @@
 			"name": "Mount Kosciuszko",
 			"elevation": 2228
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"From Latin australis, \"southern\": the Terra Australis the old maps imagined before anyone had seen it.",
+				"The Great Barrier Reef, off its north-east coast, is the largest coral reef system in the world.",
+				"Canberra was built as a capital because neither Sydney nor Melbourne would let the other be it."
+			],
+			"it": [
+				"Dal latino australis, \"meridionale\": la Terra Australis che le vecchie carte immaginavano prima che qualcuno l’avesse vista.",
+				"La Grande barriera corallina, davanti alla costa nord-orientale, è il più grande sistema di barriere coralline del mondo.",
+				"Canberra fu costruita come capitale perché né Sydney né Melbourne volevano che lo diventasse l’altra."
+			]
+		}
 	},
 	"new-zealand": {
 		"kind": "region",
@@ -93,6 +153,18 @@
 			"name": "Aoraki (Mount Cook)",
 			"elevation": 3754
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Named by Dutch mapmakers for the province of Zeeland; its Māori name, Aotearoa, is often read as \"land of the long white cloud\".",
+				"In 1893 it became the first country where women won the vote in national elections.",
+				"People arrived only around 1300, among the last large lands on earth to be settled."
+			],
+			"it": [
+				"I cartografi olandesi le diedero il nome della provincia di Zelanda; il nome maori, Aotearoa, si legge spesso come \"terra della lunga nuvola bianca\".",
+				"Nel 1893 fu il primo paese in cui le donne ottennero il voto nelle elezioni nazionali.",
+				"L’uomo vi arrivò solo intorno al 1300: una delle ultime grandi terre del pianeta a essere abitata."
+			]
+		}
 	}
 }

@@ -17,7 +17,19 @@
 			"name": "Pico Bolívar",
 			"elevation": 4980
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"\"Little Venice\", for the houses on stilts the first explorers saw on Lake Maracaibo.",
+				"Angel Falls, the highest waterfall in the world, drops 979 m.",
+				"It has the largest proven oil reserves in the world."
+			],
+			"it": [
+				"\"Piccola Venezia\", per le case su palafitte che i primi esploratori videro sul lago di Maracaibo.",
+				"Il Salto Angel, la cascata più alta del mondo, cade da 979 m.",
+				"Ha le più grandi riserve accertate di petrolio del mondo."
+			]
+		}
 	},
 	"guyana": {
 		"kind": "region",
@@ -33,7 +45,19 @@
 			"nameIt": "Georgetown",
 			"population": 264350
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"From an Amerindian word often read as \"land of many waters\".",
+				"The only country in South America whose official language is English.",
+				"Kaieteur Falls drops more than four times as far as Niagara, in a single fall."
+			],
+			"it": [
+				"Da una parola amerindia spesso letta come \"terra di molte acque\".",
+				"L’unico paese del Sudamerica che ha l’inglese come lingua ufficiale.",
+				"Le cascate Kaieteur cadono da un’altezza più di quattro volte quella del Niagara, in un solo salto."
+			]
+		}
 	},
 	"colombia": {
 		"kind": "region",
@@ -54,7 +78,19 @@
 			"name": "Pico Cristóbal Colón",
 			"elevation": 5775
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Named for Christopher Columbus, who never set foot there.",
+				"It has more species of birds than any other country.",
+				"Gabriel García Márquez set One Hundred Years of Solitude in a town modelled on his native Aracataca."
+			],
+			"it": [
+				"Prende il nome da Cristoforo Colombo, che non vi mise mai piede.",
+				"Ha più specie di uccelli di qualunque altro paese.",
+				"Gabriel García Márquez ambientò Cent’anni di solitudine in un paese modellato sulla sua Aracataca."
+			]
+		}
 	},
 	"suriname": {
 		"kind": "region",
@@ -73,7 +109,19 @@
 			"name": "Julianatop",
 			"elevation": 1230
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Named for the Suriname river, perhaps after the Surinen, its early inhabitants.",
+				"In 1667 the Dutch kept it in a peace with England that left England New Amsterdam, now New York.",
+				"Forest covers more than nine tenths of it, one of the highest shares in the world."
+			],
+			"it": [
+				"Prende il nome dal fiume Suriname, forse dai Surinen, i suoi primi abitanti.",
+				"Nel 1667 gli olandesi lo tennero in una pace con l’Inghilterra che lasciò agli inglesi Nuova Amsterdam, oggi New York.",
+				"La foresta ne copre più di nove decimi, una delle quote più alte del mondo."
+			]
+		}
 	},
 	"ecuador": {
 		"kind": "region",
@@ -92,7 +140,19 @@
 			"name": "Chimborazo",
 			"elevation": 6267
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Spanish for \"equator\", which crosses it just north of Quito.",
+				"Its Galápagos Islands, visited by Darwin in 1835, helped him to his theory of evolution.",
+				"Because the earth bulges at the equator, the summit of Chimborazo is the point on its surface farthest from its centre."
+			],
+			"it": [
+				"In spagnolo \"equatore\", che lo attraversa appena a nord di Quito.",
+				"Le sue isole Galápagos, visitate da Darwin nel 1835, lo aiutarono ad arrivare alla teoria dell’evoluzione.",
+				"Poiché la Terra è rigonfia all’equatore, la cima del Chimborazo è il punto della sua superficie più lontano dal centro."
+			]
+		}
 	},
 	"peru": {
 		"kind": "region",
@@ -114,7 +174,19 @@
 			"name": "Nevado Huascarán",
 			"elevation": 6768
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Perhaps from Birú, the name of a chief or a river the Spanish came across on the coast further north.",
+				"Machu Picchu, the Inca city of the 15th century, was hardly known outside the region until 1911.",
+				"The potato was first grown in these Andes, and thousands of varieties are still grown here."
+			],
+			"it": [
+				"Forse da Birú, il nome di un capo o di un fiume che gli spagnoli incontrarono sulla costa più a nord.",
+				"Machu Picchu, la città inca del XV secolo, era quasi sconosciuta fuori dalla regione fino al 1911.",
+				"La patata fu coltivata per la prima volta su queste Ande, e qui se ne coltivano ancora migliaia di varietà."
+			]
+		}
 	},
 	"brazil": {
 		"kind": "region",
@@ -140,7 +212,19 @@
 			"name": "Pico da Bandeira",
 			"elevation": 2890
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"From brazilwood, a tree whose red dye the Portuguese traded; its own name comes from brasa, \"ember\".",
+				"The only country in the Americas whose main language is Portuguese.",
+				"The Amazon carries about a fifth of all the river water that reaches the oceans."
+			],
+			"it": [
+				"Dal legno brasile, un albero la cui tintura rossa i portoghesi commerciavano; il suo nome viene da brasa, \"brace\".",
+				"L’unico paese delle Americhe in cui la lingua principale è il portoghese.",
+				"Il Rio delle Amazzoni porta circa un quinto di tutta l’acqua fluviale che arriva agli oceani."
+			]
+		}
 	},
 	"bolivia": {
 		"kind": "region",
@@ -162,7 +246,19 @@
 			"name": "Nevado Sajama",
 			"elevation": 6542
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named for Simón Bolívar, who led its independence from Spain.",
+				"La Paz, the seat of government, is the highest capital in the world; Sucre is the constitutional one.",
+				"The Salar de Uyuni is the largest salt flat in the world."
+			],
+			"it": [
+				"Prende il nome da Simón Bolívar, che guidò la sua indipendenza dalla Spagna.",
+				"La Paz, sede del governo, è la capitale più alta del mondo; Sucre è quella costituzionale.",
+				"Il Salar de Uyuni è la più grande distesa di sale del mondo."
+			]
+		}
 	},
 	"paraguay": {
 		"kind": "region",
@@ -182,7 +278,19 @@
 			"name": "Cerro Tres Kandú",
 			"elevation": 842
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named for the Paraguay river, a Guaraní name whose meaning is disputed.",
+				"Most of its people speak Guaraní as well as Spanish, and both are official.",
+				"The Itaipú dam, on its border with Brazil, is one of the largest hydroelectric plants in the world."
+			],
+			"it": [
+				"Prende il nome dal fiume Paraguay, un nome guaraní di significato discusso.",
+				"La maggior parte dei suoi abitanti parla il guaraní oltre allo spagnolo, e sono ufficiali entrambi.",
+				"La diga di Itaipú, al confine con il Brasile, è una delle più grandi centrali idroelettriche del mondo."
+			]
+		}
 	},
 	"uruguay": {
 		"kind": "region",
@@ -201,7 +309,19 @@
 			"name": "Cerro Catedral",
 			"elevation": 514
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named for the Uruguay river, a Guaraní name whose meaning is disputed.",
+				"It hosted and won the first football World Cup, in 1930.",
+				"In 2013 it became the first country to make cannabis fully legal."
+			],
+			"it": [
+				"Prende il nome dal fiume Uruguay, un nome guaraní di significato discusso.",
+				"Ospitò e vinse i primi Mondiali di calcio, nel 1930.",
+				"Nel 2013 fu il primo paese a legalizzare del tutto la cannabis."
+			]
+		}
 	},
 	"chile": {
 		"kind": "region",
@@ -221,7 +341,19 @@
 			"name": "Aucanquilcha",
 			"elevation": 6176
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Where the name comes from is uncertain; one reading, from a native language, is \"where the land ends\".",
+				"About 4,300 km long and on average less than 200 km wide.",
+				"The Atacama, in its north, is the driest desert in the world outside the poles."
+			],
+			"it": [
+				"Da dove venga il nome è incerto; una lettura, da una lingua indigena, è \"dove finisce la terra\".",
+				"Lungo circa 4.300 km e largo in media meno di 200 km.",
+				"L’Atacama, al nord, è il deserto più arido del mondo fuori dai poli."
+			]
+		}
 	},
 	"argentina": {
 		"kind": "region",
@@ -243,6 +375,18 @@
 			"name": "Cerro Aconcagua",
 			"elevation": 6959
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"From Latin argentum, \"silver\", for the silver the Spanish hoped to find up the Río de la Plata.",
+				"Ushuaia, on Tierra del Fuego, calls itself the southernmost city in the world.",
+				"The tango was born in the port districts of Buenos Aires and Montevideo in the late 19th century."
+			],
+			"it": [
+				"Dal latino argentum, \"argento\", per l’argento che gli spagnoli speravano di trovare risalendo il Río de la Plata.",
+				"Ushuaia, nella Terra del Fuoco, si definisce la città più a sud del mondo.",
+				"Il tango nacque nei quartieri del porto di Buenos Aires e Montevideo alla fine dell’Ottocento."
+			]
+		}
 	}
 }

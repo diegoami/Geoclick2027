@@ -192,12 +192,12 @@ entry.
 
 ## Progress ledger
 
-| Task  | State           | Merge  | Notes                                                                                                        |
-| ----- | --------------- | ------ | ------------------------------------------------------------------------------------------------------------ |
-| FT-69 | **merged**      | PR #48 | countries read `world.json`; "Czech Republic" = "Czechia"; `world.json` holds only its `_note` so far        |
-| FT-70 | **merged**      | PR #49 | Greece, 14 regions, 42 + 42 sentences; 🧑 read and approved by the owner, 2026-09-25: the gate is passed     |
-| FT-71 | **in progress** | PR #52 | Europe (39) merged, 🧑 spot-checked; Africa (52) and Asia (47) in PR; the Americas and Oceania to go         |
-| FT-72 | planned         | —      | 284 capitals and European cities, 160 new files                                                              |
-| FT-73 | planned         | —      | the 15 new countries, 539 places, one commit per file                                                        |
-| FT-74 | **merged**      | PR #51 | region names boxless in the Quiz, Overview and Tour; given-away ink brown; tried in `v0.12.0-alpha.2`        |
-| FT-75 | **merged**      | PR #50 | distance on the ground; the message names `--disambiguate-by`; all 16 `--within` maps rebuild byte-identical |
+| Task  | State      | Merge  | Notes                                                                                                                       |
+| ----- | ---------- | ------ | --------------------------------------------------------------------------------------------------------------------------- |
+| FT-69 | **merged** | PR #48 | countries read `world.json`; "Czech Republic" = "Czechia"; `world.json` holds only its `_note` so far                       |
+| FT-70 | **merged** | PR #49 | Greece, 14 regions, 42 + 42 sentences; 🧑 read and approved by the owner, 2026-09-25: the gate is passed                    |
+| FT-71 | **in PR**  | PR #52 | all 172 written: Europe (39) merged and 🧑 spot-checked; Africa (#53), Asia (#54), the Americas and Oceania (stacked) in PR |
+| FT-72 | planned    | —      | 284 capitals and European cities, 160 new files                                                                             |
+| FT-73 | planned    | —      | the 15 new countries, 539 places, one commit per file                                                                       |
+| FT-74 | **merged** | PR #51 | region names boxless in the Quiz, Overview and Tour; given-away ink brown; tried in `v0.12.0-alpha.2`                       |
+| FT-75 | **merged** | PR #50 | distance on the ground; the message names `--disambiguate-by`; all 16 `--within` maps rebuild byte-identical                |
