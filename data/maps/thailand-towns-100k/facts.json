@@ -106,7 +106,19 @@
 		"region": "Bangkok Metropolis",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Thais call it Krung Thep, \"city of angels\".",
+				"The reclining Buddha of Wat Pho is 46 m long.",
+				"Its canals once led foreigners to call it the Venice of the East."
+			],
+			"it": [
+				"I thailandesi la chiamano Krung Thep, \"città degli angeli\".",
+				"Il Buddha sdraiato del Wat Pho è lungo 46 m.",
+				"I suoi canali portarono un tempo gli stranieri a chiamarla la Venezia d’Oriente."
+			]
+		}
 	},
 	"samut-prakan": {
 		"kind": "city",

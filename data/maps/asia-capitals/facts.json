@@ -6,7 +6,19 @@
 		"region": "Aqmola",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"\"Capital\" in Kazakh; it replaced Almaty in 1997 and has changed its name four times since the Soviet era.",
+				"Its Bayterek tower is meant to be a tree holding a golden egg.",
+				"It is one of the coldest capitals in the world."
+			],
+			"it": [
+				"\"Capitale\" in kazako; prese il posto di Almaty nel 1997 e dall’epoca sovietica ha cambiato nome quattro volte.",
+				"La sua torre Bayterek vuole essere un albero che regge un uovo d’oro.",
+				"È una delle capitali più fredde del mondo."
+			]
+		}
 	},
 	"ulaanbaatar": {
 		"kind": "city",
@@ -15,7 +27,19 @@
 		"population1950": 70000,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"\"Red hero\", a name given in 1924.",
+				"The coldest national capital in the world, by average temperature.",
+				"It began as a moving monastery town, and settled here only in 1778."
+			],
+			"it": [
+				"\"Eroe rosso\", un nome dato nel 1924.",
+				"La capitale nazionale più fredda del mondo, per temperatura media.",
+				"Nacque come città-monastero itinerante, e si stabilì qui solo nel 1778."
+			]
+		}
 	},
 	"bishkek": {
 		"kind": "city",
@@ -24,7 +48,19 @@
 		"population1950": 150000,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"In Soviet times, from 1926 to 1991, it was called Frunze, after a Red Army commander born here.",
+				"The Tian Shan mountains rise to the south, in sight of the city.",
+				"A statue of Manas, hero of the Kyrgyz epic, stands on its main square."
+			],
+			"it": [
+				"In epoca sovietica, dal 1926 al 1991, si chiamava Frunze, da un comandante dell’Armata rossa nato qui.",
+				"A sud si alzano i monti del Tian Shan, in vista della città.",
+				"Nella sua piazza principale c’è una statua di Manas, l’eroe dell’epopea kirghisa."
+			]
+		}
 	},
 	"tbilisi": {
 		"kind": "city",
@@ -33,7 +69,19 @@
 		"population1950": 612000,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"From tbili, \"warm\", for its sulphur springs.",
+				"By legend King Vakhtang founded it after his falcon fell into a hot spring while hunting.",
+				"Its old town mixes Georgian churches, a mosque and Persian-style bathhouses."
+			],
+			"it": [
+				"Da tbili, \"caldo\", per le sue sorgenti sulfuree.",
+				"Secondo la leggenda il re Vakhtang la fondò dopo che il suo falco cadde in una sorgente calda durante una caccia.",
+				"La sua città vecchia mescola chiese georgiane, una moschea e bagni in stile persiano."
+			]
+		}
 	},
 	"tashkent": {
 		"kind": "city",
@@ -42,7 +90,19 @@
 		"population1950": 755000,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"\"Stone city\".",
+				"Much of it was rebuilt after an earthquake in 1966.",
+				"Its metro, opened in 1977, was the first in Central Asia."
+			],
+			"it": [
+				"\"Città di pietra\".",
+				"Gran parte fu ricostruita dopo un terremoto nel 1966.",
+				"La sua metropolitana, aperta nel 1977, fu la prima dell’Asia centrale."
+			]
+		}
 	},
 	"baku": {
 		"kind": "city",
@@ -52,7 +112,19 @@
 		"region": "Baki",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"The name may come from a Persian phrase for \"wind-pounded city\".",
+				"Its walled old city, with the Maiden Tower, is a UNESCO site.",
+				"At about 28 m below sea level, it is the lowest capital in the world."
+			],
+			"it": [
+				"Il nome potrebbe venire da un’espressione persiana per \"città battuta dal vento\".",
+				"La sua città vecchia fortificata, con la Torre della Vergine, è un sito UNESCO.",
+				"A circa 28 m sotto il livello del mare è la capitale più bassa del mondo."
+			]
+		}
 	},
 	"yerevan": {
 		"kind": "city",
@@ -62,7 +134,19 @@
 		"region": "Erevan",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"It began as the fortress of Erebuni in 782 BC, 29 years before Rome by the traditional date.",
+				"Much of it is built of pink volcanic stone, which is why it is called the pink city.",
+				"Its Matenadaran keeps one of the richest collections of medieval manuscripts in the world."
+			],
+			"it": [
+				"Nacque come fortezza di Erebuni nel 782 a.C., 29 anni prima di Roma secondo la data tradizionale.",
+				"Gran parte è costruita in pietra vulcanica rosa, per questo è chiamata la città rosa.",
+				"Il suo Matenadaran custodisce una delle raccolte di manoscritti medievali più ricche del mondo."
+			]
+		}
 	},
 	"ankara": {
 		"kind": "city",
@@ -114,7 +198,19 @@
 		"region": "P'yongyang",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"\"Flat land\", on the plain of the Taedong river.",
+				"Its Juche Tower, 170 m high, was finished in 1982.",
+				"Only people approved by the state are allowed to live in it."
+			],
+			"it": [
+				"\"Terra piatta\", sulla pianura del fiume Taedong.",
+				"La sua Torre del Juche, alta 170 m, fu terminata nel 1982.",
+				"Solo le persone approvate dallo Stato possono viverci."
+			]
+		}
 	},
 	"dushanbe": {
 		"kind": "city",
@@ -123,7 +219,19 @@
 		"region": "Tadzhikistan Territories",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"\"Monday\" in Tajik, for the market held here on that day.",
+				"A village until 1924, it grew as the capital of Soviet Tajikistan.",
+				"Its flagpole, 165 m high, was for a time the tallest in the world."
+			],
+			"it": [
+				"\"Lunedì\" in tagico, per il mercato che si teneva qui quel giorno.",
+				"Un villaggio fino al 1924, crebbe come capitale del Tagikistan sovietico.",
+				"Il suo pennone, alto 165 m, fu per un periodo il più alto del mondo."
+			]
+		}
 	},
 	"ashgabat": {
 		"kind": "city",
@@ -132,7 +240,19 @@
 		"region": "Ahal",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"An earthquake flattened it in 1948, killing a large part of its people.",
+				"It lies at the edge of the Karakum desert, below the Kopet Dag mountains.",
+				"Its name is usually read as \"city of love\", from Persian."
+			],
+			"it": [
+				"Un terremoto la rase al suolo nel 1948, uccidendo gran parte dei suoi abitanti.",
+				"Si trova ai margini del deserto del Karakum, sotto i monti Kopet Dag.",
+				"Il nome si legge di solito come \"città dell’amore\", dal persiano."
+			]
+		}
 	},
 	"seoul": {
 		"kind": "city",
@@ -183,7 +303,19 @@
 		"population1950": 1041000,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"The capital since 1786, under the Qajar dynasty.",
+				"The Alborz mountains rise over its north, with ski slopes within an hour of the city.",
+				"The Azadi Tower, built in 1971, is the symbol of the city."
+			],
+			"it": [
+				"La capitale dal 1786, sotto la dinastia Qajar.",
+				"I monti Elburz si alzano sopra la sua parte nord, con piste da sci a un’ora dalla città.",
+				"La torre Azadi, costruita nel 1971, è il simbolo della città."
+			]
+		}
 	},
 	"nicosia": {
 		"kind": "city",
@@ -191,7 +323,19 @@
 		"populationRank": 45,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Its Venetian walls of the 16th century form a star with eleven bastions.",
+				"It is the largest city on the island.",
+				"Since 2008 Ledra Street, in its old town, has been a crossing point between the two sides."
+			],
+			"it": [
+				"Le sue mura veneziane del Cinquecento formano una stella con undici bastioni.",
+				"È la città più grande dell’isola.",
+				"Dal 2008 via Ledra, nella città vecchia, è un punto di passaggio tra le due parti."
+			]
+		}
 	},
 	"kabul": {
 		"kind": "city",
@@ -200,7 +344,19 @@
 		"population1950": 129000,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Babur, the founder of the Mughal empire, asked to be buried here, and his garden tomb still stands.",
+				"At about 1,800 m, it is one of the highest capitals in the world.",
+				"It lies in a valley among the mountains of the Hindu Kush."
+			],
+			"it": [
+				"Babur, il fondatore dell’impero Moghul, chiese di essere sepolto qui, e il suo giardino con la tomba esiste ancora.",
+				"A circa 1.800 m è una delle capitali più alte del mondo.",
+				"Si trova in una valle tra le montagne dell’Hindu Kush."
+			]
+		}
 	},
 	"beirut": {
 		"kind": "city",
@@ -209,7 +365,19 @@
 		"population1950": 322000,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"From an old word for \"wells\".",
+				"Its Roman school of law was one of the most famous of the empire.",
+				"Rebuilt after the civil war of 1975 to 1990, it lost much of its port area to an explosion in 2020."
+			],
+			"it": [
+				"Da un’antica parola per \"pozzi\".",
+				"La sua scuola romana di diritto fu una delle più famose dell’impero.",
+				"Ricostruita dopo la guerra civile del 1975-1990, perse gran parte della zona del porto in un’esplosione nel 2020."
+			]
+		}
 	},
 	"islamabad": {
 		"kind": "city",
@@ -219,7 +387,19 @@
 		"region": "F.C.T.",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Built in the 1960s as a new capital at the foot of the Margalla Hills.",
+				"Its Faisal Mosque, shaped like a desert tent, was for years the largest in the world.",
+				"Rawalpindi, its twin city, lies right next to it."
+			],
+			"it": [
+				"Costruita negli anni Sessanta come nuova capitale ai piedi delle colline Margalla.",
+				"La sua moschea Faisal, a forma di tenda del deserto, fu per anni la più grande del mondo.",
+				"Rawalpindi, la sua città gemella, è proprio accanto."
+			]
+		}
 	},
 	"damascus": {
 		"kind": "city",
@@ -228,7 +408,19 @@
 		"population1950": 367000,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"The Umayyad Mosque, built in the early 8th century, is one of the oldest great mosques in the world.",
+				"The Straight Street of the Acts of the Apostles still crosses its old city.",
+				"By tradition Saint Paul escaped from it by being let down from its walls in a basket."
+			],
+			"it": [
+				"La moschea degli Omayyadi, costruita all’inizio dell’VIII secolo, è una delle più antiche grandi moschee del mondo.",
+				"La Via Recta degli Atti degli Apostoli attraversa ancora la sua città vecchia.",
+				"Per tradizione san Paolo ne fuggì calato dalle mura in una cesta."
+			]
+		}
 	},
 	"baghdad": {
 		"kind": "city",
@@ -237,7 +429,19 @@
 		"population1950": 579000,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Founded in 762 by the caliph al-Mansur as a round city.",
+				"Its House of Wisdom was a great centre of learning in the Islamic golden age.",
+				"The Tigris flows through its centre."
+			],
+			"it": [
+				"Fondata nel 762 dal califfo al-Mansur come città rotonda.",
+				"La sua Casa della sapienza fu un grande centro di studi nell’età d’oro islamica.",
+				"Il Tigri scorre nel suo centro."
+			]
+		}
 	},
 	"amman": {
 		"kind": "city",
@@ -246,7 +450,19 @@
 		"population1950": 90000,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"The Rabbath Ammon of the Bible; the Greeks called it Philadelphia.",
+				"A Roman theatre for some 6,000 people is cut into a hill in its centre.",
+				"A small town until the 1920s, it grew once it became the capital of Transjordan."
+			],
+			"it": [
+				"La Rabbat Ammon della Bibbia; i Greci la chiamavano Filadelfia.",
+				"Un teatro romano per circa 6.000 persone è scavato in una collina in pieno centro.",
+				"Piccolo centro fino agli anni Venti, crebbe quando divenne la capitale della Transgiordania."
+			]
+		}
 	},
 	"jerusalem": {
 		"kind": "city",
@@ -254,7 +470,19 @@
 		"populationRank": 30,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"A city holy to Judaism, Christianity and Islam.",
+				"The walls of its Old City were built by the Ottoman sultan Suleiman the Magnificent in the 1530s.",
+				"Its status is one of the most disputed questions in the world."
+			],
+			"it": [
+				"Una città santa per l’ebraismo, il cristianesimo e l’islam.",
+				"Le mura della sua città vecchia furono costruite dal sultano ottomano Solimano il Magnifico negli anni Trenta del Cinquecento.",
+				"Il suo status è una delle questioni più contese del mondo."
+			]
+		}
 	},
 	"kuwait-city": {
 		"kind": "city",
@@ -264,7 +492,19 @@
 		"region": "Al Kuwayt",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Its Kuwait Towers, opened in 1979, have become the country’s emblem.",
+				"Its Grand Mosque is the largest in the country.",
+				"Most of Kuwait’s people live in and around it."
+			],
+			"it": [
+				"Le sue Kuwait Towers, inaugurate nel 1979, sono diventate l’emblema del paese.",
+				"La sua Grande moschea è la più grande del paese.",
+				"La maggior parte degli abitanti del Kuwait vive in città e dintorni."
+			]
+		}
 	},
 	"new-delhi": {
 		"kind": "city",
@@ -273,7 +513,19 @@
 		"region": "Delhi",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Planned by the architects Edwin Lutyens and Herbert Baker, and inaugurated in 1931.",
+				"India Gate remembers the Indian soldiers who died in the First World War.",
+				"The Rashtrapati Bhavan, the president’s palace, has some 340 rooms."
+			],
+			"it": [
+				"Progettata dagli architetti Edwin Lutyens e Herbert Baker, e inaugurata nel 1931.",
+				"L’India Gate ricorda i soldati indiani morti nella Prima guerra mondiale.",
+				"Il Rashtrapati Bhavan, il palazzo del presidente, ha circa 340 stanze."
+			]
+		}
 	},
 	"kathmandu": {
 		"kind": "city",
@@ -283,7 +535,19 @@
 		"region": "Bhaktapur",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"From Kasthamandap, a temple said to have been built from the wood of a single tree.",
+				"Its Durbar Square belongs to the valley’s UNESCO site.",
+				"Its Swayambhunath stupa, on a hill, is also called the monkey temple."
+			],
+			"it": [
+				"Da Kasthamandap, un tempio che si dice fosse costruito con il legno di un solo albero.",
+				"La sua piazza Durbar fa parte del sito UNESCO della valle.",
+				"Lo stupa di Swayambhunath, su una collina, è chiamato anche il tempio delle scimmie."
+			]
+		}
 	},
 	"thimphu": {
 		"kind": "city",
@@ -291,7 +555,19 @@
 		"populationRank": 47,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"A capital without traffic lights: police officers direct the traffic by hand.",
+				"It became the capital in 1961.",
+				"Buddha Dordenma, a statue 51 m high, looks over the valley."
+			],
+			"it": [
+				"Una capitale senza semafori: sono i vigili a dirigere il traffico a mano.",
+				"Divenne la capitale nel 1961.",
+				"Il Buddha Dordenma, una statua alta 51 m, domina la valle."
+			]
+		}
 	},
 	"manama": {
 		"kind": "city",
@@ -299,7 +575,19 @@
 		"populationRank": 40,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"\"Place of rest\".",
+				"Qal’at al-Bahrain, nearby, was the seat of ancient Dilmun and is a UNESCO site.",
+				"The Bahrain World Trade Center has three wind turbines between its two towers."
+			],
+			"it": [
+				"\"Luogo di riposo\".",
+				"Qal’at al-Bahrain, qui vicino, fu sede dell’antica Dilmun ed è un sito UNESCO.",
+				"Il Bahrain World Trade Center ha tre turbine eoliche tra le sue due torri."
+			]
+		}
 	},
 	"doha": {
 		"kind": "city",
@@ -308,7 +596,19 @@
 		"region": "Ad Dawhah",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"A village of pearl divers that grew rich on oil and gas.",
+				"Its Museum of Islamic Art was designed by I. M. Pei.",
+				"Its corniche runs for about 7 km around the bay."
+			],
+			"it": [
+				"Un villaggio di pescatori di perle arricchito dal petrolio e dal gas.",
+				"Il suo Museo di arte islamica è stato progettato da I. M. Pei.",
+				"Il suo lungomare corre per circa 7 km intorno alla baia."
+			]
+		}
 	},
 	"taipei": {
 		"kind": "city",
@@ -318,7 +618,19 @@
 		"region": "Taipei City",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"\"North Taiwan\".",
+				"Its National Palace Museum holds treasures that came from the imperial collections of Beijing.",
+				"Its night markets are among the busiest in Asia."
+			],
+			"it": [
+				"\"Taiwan del nord\".",
+				"Il suo Museo nazionale del palazzo custodisce tesori provenienti dalle collezioni imperiali di Pechino.",
+				"I suoi mercati notturni sono tra i più affollati dell’Asia."
+			]
+		}
 	},
 	"riyadh": {
 		"kind": "city",
@@ -328,7 +640,19 @@
 		"region": "Ar Riyad",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"\"The gardens\", for the oases where it grew.",
+				"The Masmak fortress, taken by Ibn Saud in 1902, marks the start of the modern kingdom.",
+				"The Kingdom Centre tower has a sky bridge near its top."
+			],
+			"it": [
+				"\"I giardini\", per le oasi dove nacque.",
+				"La fortezza di Masmak, presa da Ibn Saud nel 1902, segna l’inizio del regno moderno.",
+				"La torre del Kingdom Centre ha una passerella sospesa vicino alla cima."
+			]
+		}
 	},
 	"abu-dhabi": {
 		"kind": "city",
@@ -336,7 +660,19 @@
 		"populationRank": 39,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"\"Father of the gazelle\".",
+				"The Louvre Abu Dhabi opened in 2017 under a dome of latticed steel.",
+				"The Sheikh Zayed Grand Mosque has one of the largest carpets in the world."
+			],
+			"it": [
+				"\"Padre della gazzella\".",
+				"Il Louvre Abu Dhabi ha aperto nel 2017 sotto una cupola di acciaio traforato.",
+				"La Grande moschea dello sceicco Zayed ha uno dei tappeti più grandi del mondo."
+			]
+		}
 	},
 	"dhaka": {
 		"kind": "city",
@@ -345,7 +681,19 @@
 		"population1950": 336000,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Often called the rickshaw capital of the world.",
+				"Its parliament building, by the American architect Louis Kahn, was finished in 1982.",
+				"It is one of the most densely populated cities in the world."
+			],
+			"it": [
+				"Spesso chiamata la capitale mondiale dei risciò.",
+				"Il suo parlamento, dell’architetto americano Louis Kahn, fu terminato nel 1982.",
+				"È una delle città più densamente popolate del mondo."
+			]
+		}
 	},
 	"muscat": {
 		"kind": "city",
@@ -353,7 +701,19 @@
 		"populationRank": 37,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Two Portuguese forts of the 16th century, Jalali and Mirani, guard its old harbour.",
+				"Its Sultan Qaboos Grand Mosque was finished in 2001.",
+				"Its Royal Opera House, opened in 2011, was the first in the Gulf."
+			],
+			"it": [
+				"Due forti portoghesi del Cinquecento, Jalali e Mirani, sorvegliano il suo vecchio porto.",
+				"La sua Grande moschea del sultano Qabus fu terminata nel 2001.",
+				"La sua Royal Opera House, aperta nel 2011, fu la prima del Golfo."
+			]
+		}
 	},
 	"ha-noi": {
 		"kind": "city",
@@ -384,7 +744,19 @@
 		"region": "Mandalay",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Built from nothing and made the capital in 2005, it has motorways of up to twenty lanes that are almost empty.",
+				"Its name means \"abode of kings\".",
+				"Its Uppatasanti Pagoda is a copy of Yangon’s Shwedagon, only slightly lower."
+			],
+			"it": [
+				"Costruita dal nulla e fatta capitale nel 2005, ha autostrade fino a venti corsie quasi vuote.",
+				"Il suo nome significa \"dimora dei re\".",
+				"La sua pagoda Uppatasanti è una copia della Shwedagon di Yangon, solo un po’ più bassa."
+			]
+		}
 	},
 	"vientiane": {
 		"kind": "city",
@@ -393,7 +765,19 @@
 		"region": "Vientiane [prefecture]",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Often read as \"city of sandalwood\".",
+				"Pha That Luang, a golden stupa, is the national symbol.",
+				"It lies on the Mekong, facing Thailand across the river."
+			],
+			"it": [
+				"Si legge spesso come \"città del sandalo\".",
+				"Pha That Luang, uno stupa dorato, è il simbolo nazionale.",
+				"Si trova sul Mekong, di fronte alla Thailandia oltre il fiume."
+			]
+		}
 	},
 	"sanaa": {
 		"kind": "city",
@@ -403,7 +787,19 @@
 		"region": "Amanat Al Asimah",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"By tradition it was founded by Shem, a son of Noah.",
+				"At about 2,250 m, it is one of the highest capitals in the world.",
+				"Its Great Mosque is one of the oldest in the Islamic world."
+			],
+			"it": [
+				"Per tradizione fu fondata da Sem, uno dei figli di Noè.",
+				"A circa 2.250 m è una delle capitali più alte del mondo.",
+				"La sua Grande moschea è una delle più antiche del mondo islamico."
+			]
+		}
 	},
 	"manila": {
 		"kind": "city",
@@ -413,7 +809,19 @@
 		"region": "Metropolitan Manila",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"From may-nilad, \"where the nilad grows\", a shrub of its shores.",
+				"Intramuros, the walled city the Spanish built, is at its heart.",
+				"It is one of the most densely populated cities in the world."
+			],
+			"it": [
+				"Da may-nilad, \"dove cresce il nilad\", un arbusto delle sue rive.",
+				"Intramuros, la città murata costruita dagli spagnoli, è nel suo cuore.",
+				"È una delle città più densamente popolate del mondo."
+			]
+		}
 	},
 	"bangkok": {
 		"kind": "city",
@@ -423,7 +831,19 @@
 		"region": "Bangkok Metropolis",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Thais call it Krung Thep, \"city of angels\".",
+				"The reclining Buddha of Wat Pho is 46 m long.",
+				"Its canals once led foreigners to call it the Venice of the East."
+			],
+			"it": [
+				"I thailandesi la chiamano Krung Thep, \"città degli angeli\".",
+				"Il Buddha sdraiato del Wat Pho è lungo 46 m.",
+				"I suoi canali portarono un tempo gli stranieri a chiamarla la Venezia d’Oriente."
+			]
+		}
 	},
 	"phnom-penh": {
 		"kind": "city",
@@ -432,7 +852,19 @@
 		"population1950": 364000,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"\"Penh’s hill\", for a woman, Daun Penh, who by legend found statues of the Buddha in the river.",
+				"It stands where the Tonlé Sap river meets the Mekong.",
+				"The Khmer Rouge emptied it in 1975, driving its people into the countryside."
+			],
+			"it": [
+				"\"La collina di Penh\", da una donna, Daun Penh, che secondo la leggenda trovò statue del Buddha nel fiume.",
+				"Sorge dove il fiume Tonlé Sap incontra il Mekong.",
+				"I Khmer rossi la svuotarono nel 1975, cacciandone gli abitanti nelle campagne."
+			]
+		}
 	},
 	"colombo": {
 		"kind": "city",
@@ -440,7 +872,19 @@
 		"populationRank": 46,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Its commercial capital; the official capital is Sri Jayawardenepura Kotte, on its edge.",
+				"Its seaside park, Galle Face Green, dates from 1859.",
+				"Arab traders knew its harbour centuries before the Portuguese arrived in 1505."
+			],
+			"it": [
+				"La capitale commerciale; quella ufficiale è Sri Jayawardenepura Kotte, alle sue porte.",
+				"Il suo parco sul mare, Galle Face Green, risale al 1859.",
+				"I mercanti arabi conoscevano il suo porto secoli prima che arrivassero i portoghesi, nel 1505."
+			]
+		}
 	},
 	"bandar-seri-begawan": {
 		"kind": "city",
@@ -449,7 +893,19 @@
 		"region": "Brunei and Muara",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Named in 1970 in honour of the sultan’s father.",
+				"The gold-domed Omar Ali Saifuddien Mosque rises over a lagoon.",
+				"It stands on the Brunei river, facing the water village of Kampong Ayer."
+			],
+			"it": [
+				"Ha preso il nome nel 1970 in onore del padre del sultano.",
+				"La moschea Omar Ali Saifuddien, con la cupola d’oro, si alza su una laguna.",
+				"Sorge sul fiume Brunei, di fronte al villaggio sull’acqua di Kampong Ayer."
+			]
+		}
 	},
 	"kuala-lumpur": {
 		"kind": "city",
@@ -459,7 +915,19 @@
 		"region": "Selangor",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"\"Muddy confluence\", where two rivers meet.",
+				"It grew from a tin-mining camp of the 1850s.",
+				"The Batu Caves, just outside it, hold a Hindu shrine reached by 272 steps."
+			],
+			"it": [
+				"\"Confluenza fangosa\", dove si incontrano due fiumi.",
+				"Crebbe da un campo di minatori di stagno degli anni Cinquanta dell’Ottocento.",
+				"Le grotte di Batu, appena fuori città, ospitano un santuario indù raggiungibile con 272 gradini."
+			]
+		}
 	},
 	"singapore": {
 		"kind": "city",
@@ -468,7 +936,19 @@
 		"population1950": 1016000,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"From Sanskrit Singapura, \"lion city\", though no lions are known to have lived there.",
+				"Stamford Raffles founded a British trading post here in 1819.",
+				"It became independent in 1965, when it was expelled from Malaysia."
+			],
+			"it": [
+				"Dal sanscrito Singapura, \"città del leone\", anche se non risulta che vi abbiano mai vissuto leoni.",
+				"Stamford Raffles vi fondò un emporio britannico nel 1819.",
+				"Divenne indipendente nel 1965, quando fu espulsa dalla Malaysia."
+			]
+		}
 	},
 	"jakarta": {
 		"kind": "city",
@@ -498,6 +978,18 @@
 		"populationRank": 44,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Its statue of Cristo Rei, 27 m high, stands on a headland east of the town.",
+				"It was the capital of Portuguese Timor from 1769.",
+				"It lies on the north coast, facing the island of Atauro."
+			],
+			"it": [
+				"La sua statua del Cristo Rei, alta 27 m, sorge su un promontorio a est della città.",
+				"Fu la capitale di Timor portoghese dal 1769.",
+				"Si trova sulla costa nord, di fronte all’isola di Atauro."
+			]
+		}
 	}
 }

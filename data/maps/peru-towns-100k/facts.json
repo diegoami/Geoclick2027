@@ -90,7 +90,19 @@
 		"population1950": 1066000,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Francisco Pizarro founded it in 1535 as the City of Kings.",
+				"It hardly ever rains here, though a grey sea mist covers it for months.",
+				"Its cathedral holds the tomb of Francisco Pizarro."
+			],
+			"it": [
+				"Francisco Pizarro la fondò nel 1535 come Città dei Re.",
+				"Qui non piove quasi mai, anche se una nebbia grigia di mare la copre per mesi.",
+				"La sua cattedrale custodisce la tomba di Francisco Pizarro."
+			]
+		}
 	},
 	"callao": {
 		"kind": "city",

@@ -5,7 +5,19 @@
 		"populationRank": 9,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"The capital since 2006, and one of the least populous capitals in the world.",
+				"It is on Babeldaob, the largest island of Palau.",
+				"Its capitol building was modelled on the Capitol in Washington."
+			],
+			"it": [
+				"La capitale dal 2006, e una delle capitali meno popolose del mondo.",
+				"Si trova su Babeldaob, l’isola più grande di Palau.",
+				"Il suo palazzo del governo fu modellato sul Campidoglio di Washington."
+			]
+		}
 	},
 	"majuro": {
 		"kind": "city",
@@ -13,7 +25,19 @@
 		"populationRank": 8,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"An atoll whose land lies only a few metres above the sea.",
+				"The atoll is a ring of some sixty islets around a lagoon.",
+				"Its one road, running along the atoll, is about 50 km long."
+			],
+			"it": [
+				"Un atollo le cui terre sono solo pochi metri sopra il livello del mare.",
+				"L’atollo è un anello di una sessantina di isolotti intorno a una laguna.",
+				"La sua unica strada, che corre lungo l’atollo, è lunga circa 50 km."
+			]
+		}
 	},
 	"palikir": {
 		"kind": "city",
@@ -21,7 +45,19 @@
 		"populationRank": 11,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"On the island of Pohnpei, the capital since 1989.",
+				"Only a few thousand people live there.",
+				"Nan Madol, a city of stone islets built from the 12th century, is on the same island."
+			],
+			"it": [
+				"Sull’isola di Pohnpei, la capitale dal 1989.",
+				"Vi abitano solo poche migliaia di persone.",
+				"Nan Madol, una città di isolotti di pietra costruita dal XII secolo, si trova sulla stessa isola."
+			]
+		}
 	},
 	"tarawa": {
 		"kind": "city",
@@ -29,7 +65,19 @@
 		"populationRank": 7,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"The battle of Tarawa, in 1943, was one of the bloodiest of the Pacific War.",
+				"South Tarawa holds about half of the country’s people.",
+				"Kiribati is the only country that lies in all four hemispheres."
+			],
+			"it": [
+				"La battaglia di Tarawa, nel 1943, fu una delle più sanguinose della guerra del Pacifico.",
+				"South Tarawa ospita circa metà degli abitanti del paese.",
+				"Kiribati è l’unico paese che si trova in tutti e quattro gli emisferi."
+			]
+		}
 	},
 	"funafuti": {
 		"kind": "city",
@@ -37,7 +85,19 @@
 		"populationRank": 10,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"An atoll whose airstrip is also where people play football and sleep on hot nights.",
+				"Tuvalu’s internet domain, .tv, earns the country a large part of its income.",
+				"The atoll’s highest point is only about 4.5 m above the sea."
+			],
+			"it": [
+				"Un atollo la cui pista d’atterraggio serve anche per giocare a calcio e per dormire nelle notti calde.",
+				"Il dominio internet di Tuvalu, .tv, porta al paese buona parte delle sue entrate.",
+				"Il punto più alto dell’atollo è solo a circa 4,5 m sopra il mare."
+			]
+		}
 	},
 	"honiara": {
 		"kind": "city",
@@ -46,7 +106,19 @@
 		"region": "Guadalcanal",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"It grew from an American base on Guadalcanal after the Second World War.",
+				"It sits on the north coast of Guadalcanal.",
+				"Henderson Field, the airstrip fought over in 1942, is now its airport."
+			],
+			"it": [
+				"Nacque da una base americana su Guadalcanal dopo la Seconda guerra mondiale.",
+				"Si trova sulla costa nord di Guadalcanal.",
+				"Henderson Field, la pista contesa nel 1942, è oggi il suo aeroporto."
+			]
+		}
 	},
 	"port-moresby": {
 		"kind": "city",
@@ -55,7 +127,19 @@
 		"region": "Central",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Named in 1873 by Captain John Moresby for his father, Admiral Fairfax Moresby.",
+				"It lies on the Coral Sea.",
+				"It is one of the largest cities in the Pacific islands outside Australia and New Zealand."
+			],
+			"it": [
+				"Chiamata così nel 1873 dal capitano John Moresby, in onore del padre, l’ammiraglio Fairfax Moresby.",
+				"Si trova sul mar dei Coralli.",
+				"È una delle città più grandi delle isole del Pacifico, Australia e Nuova Zelanda escluse."
+			]
+		}
 	},
 	"port-vila": {
 		"kind": "city",
@@ -64,7 +148,19 @@
 		"region": "Shefa",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Until 1980 it was the capital of a colony ruled jointly by Britain and France.",
+				"It lies on a harbour on the island of Efate.",
+				"Cyclone Pam badly damaged it in 2015."
+			],
+			"it": [
+				"Fino al 1980 fu la capitale di una colonia governata insieme da Gran Bretagna e Francia.",
+				"Si trova su un porto dell’isola di Efate.",
+				"Il ciclone Pam la danneggiò gravemente nel 2015."
+			]
+		}
 	},
 	"suva": {
 		"kind": "city",
@@ -73,7 +169,19 @@
 		"region": "Central",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"The capital since 1882, and one of the largest towns of the South Pacific islands.",
+				"It lies on a peninsula on the south-east coast of Viti Levu.",
+				"The University of the South Pacific, founded here in 1968, serves twelve countries."
+			],
+			"it": [
+				"La capitale dal 1882, e una delle città più grandi delle isole del Pacifico meridionale.",
+				"Si trova su una penisola della costa sud-orientale di Viti Levu.",
+				"L’Università del Pacifico meridionale, fondata qui nel 1968, serve dodici paesi."
+			]
+		}
 	},
 	"canberra": {
 		"kind": "city",
@@ -103,6 +211,18 @@
 		"region": "Manawatu-Wanganui",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Named for the Duke of Wellington.",
+				"The southernmost capital of a sovereign state.",
+				"Known as Windy Wellington, for the gales through Cook Strait."
+			],
+			"it": [
+				"Prende il nome dal duca di Wellington.",
+				"La capitale di Stato sovrano più a sud del mondo.",
+				"Chiamata Windy Wellington, per le raffiche che attraversano lo stretto di Cook."
+			]
+		}
 	}
 }
