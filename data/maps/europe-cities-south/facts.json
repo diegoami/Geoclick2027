@@ -6,7 +6,19 @@
 		"region": "Grad Zagreb",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Where the name comes from is uncertain; a folk story reads it as \"behind the hill\".",
+				"It grew from two hill towns, Gradec and Kaptol, joined in 1850.",
+				"Its Museum of Broken Relationships shows objects left behind by ended loves."
+			],
+			"it": [
+				"Da dove venga il nome è incerto; un racconto popolare lo legge come \"dietro la collina\".",
+				"Nacque da due borghi in collina, Gradec e Kaptol, uniti nel 1850.",
+				"Il suo Museo delle relazioni interrotte espone oggetti rimasti da amori finiti."
+			]
+		}
 	},
 	"milano": {
 		"kind": "city",
@@ -55,7 +67,19 @@
 		"populationRank": 46,
 		"region": "Primorsko-Goranska",
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"\"River\" in Croatian, like its Italian name, Fiume.",
+				"In 1919 the poet Gabriele D’Annunzio seized it with a band of volunteers.",
+				"The first torpedo was developed here in the 1860s."
+			],
+			"it": [
+				"\"Fiume\" in croato, come il suo nome italiano.",
+				"Nel 1919 il poeta Gabriele D’Annunzio la occupò con un gruppo di volontari.",
+				"Qui fu sviluppato il primo siluro, negli anni Sessanta dell’Ottocento."
+			]
+		}
 	},
 	"novi-sad": {
 		"kind": "city",
@@ -63,7 +87,17 @@
 		"populationRank": 41,
 		"region": "Južno-Backi",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"\"New plantation\".",
+				"The EXIT music festival has been held in its Petrovaradin fortress since 2001."
+			],
+			"it": [
+				"\"Nuova piantagione\".",
+				"Il festival musicale EXIT si tiene dal 2001 nella sua fortezza di Petrovaradin."
+			]
+		}
 	},
 	"torino": {
 		"kind": "city",
@@ -92,7 +126,17 @@
 		"populationRank": 62,
 		"region": "Serbian Republic",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"A town on the Sana river, in the north-west.",
+				"In 1992 thousands of its Bosniak and Croat people were held in camps nearby, at Omarska and Trnopolje."
+			],
+			"it": [
+				"Una città sul fiume Sana, nel nord-ovest.",
+				"Nel 1992 migliaia dei suoi abitanti bosgnacchi e croati furono rinchiusi in campi qui vicino, a Omarska e Trnopolje."
+			]
+		}
 	},
 	"belgrade": {
 		"kind": "city",
@@ -102,7 +146,19 @@
 		"region": "Grad Beograd",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Beograd, \"white city\".",
+				"It was the capital of Yugoslavia for most of the 20th century.",
+				"Its Kalemegdan fortress looks down on the meeting of the Sava and the Danube."
+			],
+			"it": [
+				"Beograd, \"città bianca\".",
+				"Fu la capitale della Iugoslavia per gran parte del Novecento.",
+				"La sua fortezza del Kalemegdan domina la confluenza tra la Sava e il Danubio."
+			]
+		}
 	},
 	"banja-luka": {
 		"kind": "city",
@@ -110,14 +166,36 @@
 		"populationRank": 42,
 		"region": "Serbian Republic",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"The name is usually read as \"the ban’s meadow\", a ban being a governor.",
+				"The largest city of the Republika Srpska.",
+				"Its Ferhadija mosque, of 1579, was blown up in 1993 and rebuilt in 2016."
+			],
+			"it": [
+				"Il nome si legge di solito come \"il prato del bano\", il bano era un governatore.",
+				"La città più grande della Republika Srpska.",
+				"La sua moschea Ferhadija, del 1579, fu fatta saltare nel 1993 e ricostruita nel 2016."
+			]
+		}
 	},
 	"tuzla": {
 		"kind": "city",
 		"population": 144334,
 		"populationRank": 54,
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"From Turkish tuz, \"salt\": salt has been drawn from the ground here since ancient times.",
+				"Salt lakes, made in the middle of the town, are its beaches."
+			],
+			"it": [
+				"Dal turco tuz, \"sale\": qui si estrae il sale fin dall’antichità.",
+				"Laghi salati, creati in mezzo alla città, sono le sue spiagge."
+			]
+		}
 	},
 	"bologna": {
 		"kind": "city",
@@ -165,7 +243,15 @@
 		"populationRank": 49,
 		"region": "Zenica-Doboj",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Its steelworks, founded in 1892, were among the largest in Yugoslavia."
+			],
+			"it": [
+				"Le sue acciaierie, fondate nel 1892, erano tra le più grandi della Iugoslavia."
+			]
+		}
 	},
 	"kragujevac": {
 		"kind": "city",
@@ -173,7 +259,17 @@
 		"populationRank": 45,
 		"region": "Šumadijski",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"The first capital of modern Serbia, from 1818 to 1841.",
+				"The Zastava works here made the Yugo car."
+			],
+			"it": [
+				"La prima capitale della Serbia moderna, dal 1818 al 1841.",
+				"Qui le officine Zastava producevano l’automobile Yugo."
+			]
+		}
 	},
 	"cacak": {
 		"kind": "city",
@@ -181,7 +277,15 @@
 		"populationRank": 47,
 		"region": "Moravicki",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"A town on the Western Morava, in the region known for the Guča trumpet festival."
+			],
+			"it": [
+				"Una città sulla Morava occidentale, nella regione famosa per il festival delle trombe di Guča."
+			]
+		}
 	},
 	"sarajevo": {
 		"kind": "city",
@@ -189,7 +293,19 @@
 		"populationRank": 21,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"From Turkish saray, \"palace\", and ova, \"field\": the plain in front of the governor’s palace.",
+				"It hosted the Winter Olympics in 1984.",
+				"Its siege, from 1992 to 1996, was the longest of a capital city in modern war."
+			],
+			"it": [
+				"Dal turco saray, \"palazzo\", e ova, \"campo\": la piana davanti al palazzo del governatore.",
+				"Ospitò le Olimpiadi invernali del 1984.",
+				"Il suo assedio, dal 1992 al 1996, fu il più lungo subito da una capitale nella guerra moderna."
+			]
+		}
 	},
 	"firenze": {
 		"kind": "city",
@@ -237,7 +353,19 @@
 		"populationRank": 43,
 		"region": "Splitsko-Dalmatinska",
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Probably from Greek Aspalathos, the name of a shrub.",
+				"Its old town grew inside the palace the emperor Diocletian built around 300.",
+				"Its football club, Hajduk, is named for the highwaymen who fought the Ottomans."
+			],
+			"it": [
+				"Probabilmente dal greco Aspalathos, il nome di un arbusto.",
+				"La sua città vecchia nacque dentro il palazzo che l’imperatore Diocleziano costruì intorno al 300.",
+				"La sua squadra di calcio, l’Hajduk, prende il nome dai briganti che combatterono gli Ottomani."
+			]
+		}
 	},
 	"mostar": {
 		"kind": "city",
@@ -245,7 +373,17 @@
 		"populationRank": 51,
 		"region": "Herzegovina-Neretva",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"From mostari, \"bridge keepers\", the men who guarded its bridge over the Neretva.",
+				"Diving from the bridge, more than 20 m into the cold river, is a test of courage recorded since the 17th century."
+			],
+			"it": [
+				"Da mostari, \"guardiani del ponte\", gli uomini che sorvegliavano il ponte sulla Neretva.",
+				"Tuffarsi dal ponte, per oltre 20 m nel fiume gelido, è una prova di coraggio documentata dal Seicento."
+			]
+		}
 	},
 	"nis": {
 		"kind": "city",
@@ -253,7 +391,17 @@
 		"populationRank": 40,
 		"region": "Nišavski",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"The emperor Constantine the Great was born here.",
+				"Its Skull Tower was built by the Ottomans in 1809 from the skulls of Serbian rebels."
+			],
+			"it": [
+				"Qui nacque l’imperatore Costantino il Grande.",
+				"La sua Torre dei teschi fu costruita dagli Ottomani nel 1809 con i crani di ribelli serbi."
+			]
+		}
 	},
 	"la-coruna": {
 		"kind": "city",
@@ -321,7 +469,17 @@
 		"populationRank": 29,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Where the name comes from is disputed; one reading ties it to a Slavic word for a stream.",
+				"The NEWBORN monument, unveiled in 2008, is repainted every year."
+			],
+			"it": [
+				"Da dove venga il nome è discusso; una lettura lo lega a una parola slava per ruscello.",
+				"Il monumento NEWBORN, inaugurato nel 2008, viene ridipinto ogni anno."
+			]
+		}
 	},
 	"peja": {
 		"kind": "city",
@@ -329,7 +487,17 @@
 		"populationRank": 61,
 		"region": "Ðakovica",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"The Patriarchate of Peć, the old seat of the Serbian Orthodox patriarchs, is a UNESCO site.",
+				"The Rugova gorge climbs from the town into the mountains."
+			],
+			"it": [
+				"Il Patriarcato di Peć, antica sede dei patriarchi ortodossi serbi, è un sito UNESCO.",
+				"La gola di Rugova sale dalla città verso le montagne."
+			]
+		}
 	},
 	"podgorica": {
 		"kind": "city",
@@ -337,7 +505,17 @@
 		"populationRank": 53,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"\"Under Gorica\", the small hill above it.",
+				"From 1946 to 1992 it was called Titograd."
+			],
+			"it": [
+				"\"Sotto la Gorica\", la collinetta che la sovrasta.",
+				"Dal 1946 al 1992 si chiamò Titograd."
+			]
+		}
 	},
 	"pescara": {
 		"kind": "city",
@@ -364,7 +542,17 @@
 		"population": 171464,
 		"populationRank": 44,
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"In 1878 the League of Prizren, the start of the Albanian national movement, met here.",
+				"Its film festival, DokuFest, has shown documentaries every summer since 2002."
+			],
+			"it": [
+				"Nel 1878 qui si riunì la Lega di Prizren, l’inizio del movimento nazionale albanese.",
+				"Il suo festival del cinema, DokuFest, proietta documentari ogni estate dal 2002."
+			]
+		}
 	},
 	"vigo": {
 		"kind": "city",
@@ -391,14 +579,34 @@
 		"population": 155767,
 		"populationRank": 52,
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Ancient Scodra, capital of the last Illyrian king, Gentius, whom Rome defeated in 168 BC.",
+				"Rozafa castle, on the hill above it, has a legend of a young mother walled into its foundations.",
+				"Its lake is the largest in the Balkans."
+			],
+			"it": [
+				"L’antica Scodra, capitale dell’ultimo re illirico, Genzio, sconfitto da Roma nel 168 a.C.",
+				"Il castello di Rozafa, sulla collina sopra la città, ha la leggenda di una giovane madre murata nelle sue fondamenta.",
+				"Il suo lago è il più grande dei Balcani."
+			]
+		}
 	},
 	"tetovo": {
 		"kind": "city",
 		"population": 119132,
 		"populationRank": 57,
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Its Painted Mosque, of the 15th century, is covered inside and out with painted decoration."
+			],
+			"it": [
+				"La sua Moschea dipinta, del XV secolo, è decorata dentro e fuori con pitture."
+			]
+		}
 	},
 	"skopje": {
 		"kind": "city",
@@ -407,7 +615,19 @@
 		"region": "Centar",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Roman Scupi.",
+				"An earthquake destroyed most of it in 1963, and the Japanese architect Kenzo Tange drew the plan for the new city.",
+				"Mother Teresa, born here, has a memorial house in the centre."
+			],
+			"it": [
+				"La romana Scupi.",
+				"Un terremoto la distrusse quasi del tutto nel 1963, e l’architetto giapponese Kenzo Tange disegnò il piano della città nuova.",
+				"Madre Teresa, nata qui, ha una casa della memoria in centro."
+			]
+		}
 	},
 	"roma": {
 		"kind": "city",
@@ -498,14 +718,38 @@
 		"region": "Durrës",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Where the name comes from is uncertain; it grew into a town after an Ottoman general, Sulejman Pasha, built a mosque and a bazaar here in 1614.",
+				"It has been the capital only since 1920.",
+				"From 2000 its mayor Edi Rama, a painter, had its grey communist blocks painted in bright colours."
+			],
+			"it": [
+				"Da dove venga il nome è incerto; divenne una città dopo che un generale ottomano, Sulejman Pascià, vi costruì una moschea e un bazar nel 1614.",
+				"È la capitale solo dal 1920.",
+				"Dal 2000 il suo sindaco Edi Rama, un pittore, fece dipingere a colori vivaci i grigi palazzi dell’epoca comunista."
+			]
+		}
 	},
 	"durres": {
 		"kind": "city",
 		"population": 142432,
 		"populationRank": 55,
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Ancient Epidamnos, later Dyrrachium, founded by Greek colonists around 627 BC.",
+				"The Via Egnatia, the Roman road to Byzantium, began here.",
+				"Its Roman amphitheatre, one of the largest in the Balkans, was found again only in 1966, under houses."
+			],
+			"it": [
+				"L’antica Epidamno, poi Dyrrachium, fondata da coloni greci intorno al 627 a.C.",
+				"Da qui partiva la via Egnatia, la strada romana per Bisanzio.",
+				"Il suo anfiteatro romano, uno dei più grandi dei Balcani, fu ritrovato solo nel 1966, sotto le case."
+			]
+		}
 	},
 	"porto": {
 		"kind": "city",
@@ -532,7 +776,17 @@
 		"population": 165010,
 		"populationRank": 48,
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"It stands on the site of Roman Scampa, a station on the Via Egnatia.",
+				"Its fortress was built by the Ottoman sultan Mehmed II in 1466."
+			],
+			"it": [
+				"Sorge sul sito della romana Scampa, una stazione della via Egnatia.",
+				"La sua fortezza fu costruita dal sultano ottomano Maometto II nel 1466."
+			]
+		}
 	},
 	"bari": {
 		"kind": "city",
@@ -582,7 +836,19 @@
 		"population1950": 292000,
 		"region": "Kentriki Makedonia",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Named for Thessalonike, half-sister of Alexander the Great, by her husband Cassander around 315 BC.",
+				"Paul wrote two of his letters in the New Testament to its Christians.",
+				"Mustafa Kemal Atatürk was born here in 1881."
+			],
+			"it": [
+				"Prende il nome da Tessalonica, sorellastra di Alessandro Magno, per volere del marito Cassandro intorno al 315 a.C.",
+				"Paolo scrisse ai suoi cristiani due delle lettere del Nuovo Testamento.",
+				"Qui nacque Mustafa Kemal Atatürk, nel 1881."
+			]
+		}
 	},
 	"salerno": {
 		"kind": "city",
@@ -651,7 +917,17 @@
 		"populationRank": 56,
 		"region": "Thessalia",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"A name older than Greek, probably meaning \"citadel\".",
+				"By tradition Hippocrates, the father of medicine, died here."
+			],
+			"it": [
+				"Un nome più antico del greco, che probabilmente significa \"cittadella\".",
+				"Per tradizione qui morì Ippocrate, il padre della medicina."
+			]
+		}
 	},
 	"palma-de-mallorca": {
 		"kind": "city",
@@ -700,7 +976,17 @@
 		"populationRank": 59,
 		"region": "Thessalia",
 		"coastal": true,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Mount Pelion, home of the centaurs in Greek myth, rises above it.",
+				"The painter Giorgio de Chirico was born here in 1888."
+			],
+			"it": [
+				"Sopra la città si alza il monte Pelio, dimora dei centauri nel mito greco.",
+				"Qui nacque il pittore Giorgio de Chirico, nel 1888."
+			]
+		}
 	},
 	"cagliari": {
 		"kind": "city",
@@ -769,7 +1055,17 @@
 		"populationRank": 50,
 		"region": "Dytiki Ellada",
 		"coastal": true,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"By tradition Saint Andrew was martyred here, and his relics are in its cathedral.",
+				"Its carnival is the largest in Greece."
+			],
+			"it": [
+				"Per tradizione qui fu martirizzato sant’Andrea, e le sue reliquie sono nella cattedrale.",
+				"Il suo carnevale è il più grande della Grecia."
+			]
+		}
 	},
 	"palermo": {
 		"kind": "city",
@@ -800,7 +1096,19 @@
 		"region": "Attiki",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Named for the goddess Athena, who in the myth won the city from Poseidon with the gift of an olive tree.",
+				"The Parthenon was built on its Acropolis in the 440s and 430s BC.",
+				"It hosted the first modern Olympic Games, in 1896."
+			],
+			"it": [
+				"Prende il nome dalla dea Atena, che nel mito conquistò la città vincendo Poseidone con il dono di un olivo.",
+				"Il Partenone fu costruito sulla sua Acropoli tra il 440 e il 430 a.C. circa.",
+				"Ospitò i primi Giochi olimpici moderni, nel 1896."
+			]
+		}
 	},
 	"murcia": {
 		"kind": "city",

@@ -1,0 +1,33 @@
+{
+	"_note": [
+		"Name-facts for Ireland (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
+		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
+		"of the same id, written later, never shows a town's sentences."
+	],
+	"cork": {
+		"city": {
+			"en": [
+				"From Irish Corcach, \"marsh\".",
+				"The Titanic’s last port of call, in 1912, was Queenstown, now Cobh, in Cork harbour."
+			],
+			"it": [
+				"Dall’irlandese Corcach, \"palude\".",
+				"L’ultimo scalo del Titanic, nel 1912, fu Queenstown, oggi Cobh, nel porto di Cork."
+			]
+		}
+	},
+	"dublin": {
+		"city": {
+			"en": [
+				"From Irish Dubh Linn, \"black pool\"; in Irish today it is mostly Baile Átha Cliath.",
+				"It began as a Viking settlement in 841.",
+				"The Book of Kells, an illuminated gospel of around 800, is kept at Trinity College."
+			],
+			"it": [
+				"Dall’irlandese Dubh Linn, \"stagno nero\"; oggi in irlandese si chiama per lo più Baile Átha Cliath.",
+				"Nacque come insediamento vichingo nell’841.",
+				"Il Libro di Kells, un vangelo miniato dell’800 circa, è custodito al Trinity College."
+			]
+		}
+	}
+}

@@ -27,14 +27,36 @@
 		"region": "Harju",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Probably from taani linn, \"Danish town\", after the Danish conquest of 1219.",
+				"Its medieval old town is a UNESCO site.",
+				"Skype was built here by Estonian programmers."
+			],
+			"it": [
+				"Probabilmente da taani linn, \"città danese\", dopo la conquista danese del 1219.",
+				"Il suo centro medievale è un sito UNESCO.",
+				"Skype fu sviluppato qui da programmatori estoni."
+			]
+		}
 	},
 	"tartu": {
 		"kind": "city",
 		"population": 101092,
 		"populationRank": 67,
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Its university was founded in 1632 by the Swedish king Gustavus Adolphus.",
+				"It calls itself the city of good thoughts."
+			],
+			"it": [
+				"La sua università fu fondata nel 1632 dal re di Svezia Gustavo Adolfo.",
+				"Si definisce la città dei buoni pensieri."
+			]
+		}
 	},
 	"perm": {
 		"kind": "city",
@@ -63,7 +85,19 @@
 		"populationRank": 22,
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Founded in 1201 by Bishop Albert of Buxhoeveden; the name perhaps comes from a small river.",
+				"It was one of the great towns of the Hanseatic League.",
+				"By local tradition the first decorated Christmas tree stood here, in 1510."
+			],
+			"it": [
+				"Fondata nel 1201 dal vescovo Alberto di Buxhoeveden; il nome viene forse da un piccolo fiume.",
+				"Fu una delle grandi città della Lega anseatica.",
+				"Secondo la tradizione locale qui fu addobbato il primo albero di Natale, nel 1510."
+			]
+		}
 	},
 	"nizhny-novgorod": {
 		"kind": "city",
@@ -91,14 +125,32 @@
 		"population": 133528,
 		"populationRank": 61,
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"The Hill of Crosses, with more than a hundred thousand crosses, stands just outside it."
+			],
+			"it": [
+				"Appena fuori città sorge la Collina delle croci, con più di centomila croci."
+			]
+		}
 	},
 	"daugavpils": {
 		"kind": "city",
 		"population": 111564,
 		"populationRank": 66,
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"\"Castle on the Daugava\".",
+				"The painter Mark Rothko was born here in 1903."
+			],
+			"it": [
+				"\"Castello sulla Daugava\".",
+				"Qui nacque il pittore Mark Rothko, nel 1903."
+			]
+		}
 	},
 	"moscow": {
 		"kind": "city",
@@ -149,7 +201,15 @@
 		"populationRank": 63,
 		"region": "Panevezio",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"\"Along the Nevėžis\", its river."
+			],
+			"it": [
+				"\"Lungo il Nevėžis\", il suo fiume."
+			]
+		}
 	},
 	"klaipeda": {
 		"kind": "city",
@@ -157,14 +217,38 @@
 		"populationRank": 53,
 		"region": "Klaipedos",
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"It was the German town of Memel until 1923.",
+				"The only seaport of Lithuania.",
+				"The ferry to the Curonian Spit, a strip of dunes almost 100 km long, leaves from here."
+			],
+			"it": [
+				"Fu la città tedesca di Memel fino al 1923.",
+				"L’unico porto marittimo della Lituania.",
+				"Da qui parte il traghetto per la penisola dei Curi, una striscia di dune lunga quasi 100 km."
+			]
+		}
 	},
 	"vitsyebsk": {
 		"kind": "city",
 		"population": 342700,
 		"populationRank": 35,
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Named for the Vitba river, which meets the Western Dvina here.",
+				"Marc Chagall was born here in 1887 and painted its streets all his life.",
+				"Its Slavianski Bazaar festival has brought singers from across the Slavic world since 1992."
+			],
+			"it": [
+				"Prende il nome dal fiume Vitba, che qui confluisce nella Dvina occidentale.",
+				"Marc Chagall nacque qui nel 1887 e ne dipinse le strade per tutta la vita.",
+				"Il suo festival Slavianski Bazaar riunisce dal 1992 cantanti di tutto il mondo slavo."
+			]
+		}
 	},
 	"kaunas": {
 		"kind": "city",
@@ -172,7 +256,17 @@
 		"populationRank": 33,
 		"region": "Kauno",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"It was the capital between the wars, from 1920 to 1939, while Vilnius was held by Poland.",
+				"In 1940 the Japanese consul Chiune Sugihara issued visas here that saved thousands of Jews."
+			],
+			"it": [
+				"Fu la capitale tra le due guerre, dal 1920 al 1939, mentre Vilnius era in mano alla Polonia.",
+				"Nel 1940 il console giapponese Chiune Sugihara rilasciò qui visti che salvarono migliaia di ebrei."
+			]
+		}
 	},
 	"ufa": {
 		"kind": "city",
@@ -202,7 +296,19 @@
 		"region": "Vilniaus",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Named for the Vilnia river.",
+				"Its baroque old town, one of the largest in Europe, is a UNESCO site.",
+				"Its district of Užupis declared itself a republic in 1997, with its own constitution."
+			],
+			"it": [
+				"Prende il nome dal fiume Vilnia.",
+				"Il suo centro barocco, uno dei più grandi d’Europa, è un sito UNESCO.",
+				"Il suo quartiere di Užupis si è dichiarato repubblica nel 1997, con una sua costituzione."
+			]
+		}
 	},
 	"orsha": {
 		"kind": "city",
@@ -210,7 +316,17 @@
 		"populationRank": 60,
 		"region": "Vitsyebsk",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"An old town on the Dnieper, first mentioned in 1067.",
+				"In July 1941 the Soviet army first fired its Katyusha rocket launchers here."
+			],
+			"it": [
+				"Un’antica città sul Dnepr, citata per la prima volta nel 1067.",
+				"Nel luglio 1941 l’esercito sovietico usò qui per la prima volta i lanciarazzi Katjuša."
+			]
+		}
 	},
 	"barysaw": {
 		"kind": "city",
@@ -218,7 +334,17 @@
 		"populationRank": 57,
 		"region": "Minsk",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Named for Prince Barys of Polotsk, who by tradition founded it in 1102.",
+				"Napoleon’s army crossed the Berezina near here in 1812, in the disaster of the retreat from Moscow."
+			],
+			"it": [
+				"Prende il nome dal principe Barys di Polack, che per tradizione la fondò nel 1102.",
+				"L’esercito di Napoleone attraversò la Beresina qui vicino nel 1812, nel disastro della ritirata da Mosca."
+			]
+		}
 	},
 	"minsk": {
 		"kind": "city",
@@ -227,21 +353,49 @@
 		"population1950": 284000,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"First mentioned in 1067; the name probably comes from a small river.",
+				"Almost destroyed in the Second World War, it was rebuilt in the grand Soviet style of the 1950s."
+			],
+			"it": [
+				"Citata per la prima volta nel 1067; il nome viene probabilmente da un piccolo fiume.",
+				"Quasi distrutta nella Seconda guerra mondiale, fu ricostruita nel grandioso stile sovietico degli anni Cinquanta."
+			]
+		}
 	},
 	"mahilyow": {
 		"kind": "city",
 		"population": 369200,
 		"populationRank": 34,
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"In the First World War, from 1915, it was the headquarters of the Russian army and of Tsar Nicholas II."
+			],
+			"it": [
+				"Nella Prima guerra mondiale, dal 1915, fu il quartier generale dell’esercito russo e dello zar Nicola II."
+			]
+		}
 	},
 	"hrodna": {
 		"kind": "city",
 		"population": 317365,
 		"populationRank": 38,
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"One of the few towns of Belarus whose old centre came through the Second World War.",
+				"Stephen Báthory, king of Poland, died here in 1586."
+			],
+			"it": [
+				"Una delle poche città della Bielorussia il cui centro storico sopravvisse alla Seconda guerra mondiale.",
+				"Stefano Báthory, re di Polonia, morì qui nel 1586."
+			]
+		}
 	},
 	"tolyatti": {
 		"kind": "city",
@@ -289,7 +443,17 @@
 		"populationRank": 55,
 		"region": "Brest",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"It grew up around a railway junction built in the 1870s.",
+				"In 1914 and 1915 the Russian army had its headquarters here."
+			],
+			"it": [
+				"Crebbe intorno a un nodo ferroviario costruito negli anni Settanta dell’Ottocento.",
+				"Nel 1914 e 1915 l’esercito russo vi ebbe il suo quartier generale."
+			]
+		}
 	},
 	"babruysk": {
 		"kind": "city",
@@ -297,7 +461,17 @@
 		"populationRank": 48,
 		"region": "Mahilyow",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Probably named for the beavers, babry, of the Berezina.",
+				"Its fortress, built in the early 19th century, was one of the largest in the Russian Empire."
+			],
+			"it": [
+				"Probabilmente dai castori, babry, della Beresina.",
+				"La sua fortezza, costruita all’inizio dell’Ottocento, era una delle più grandi dell’impero russo."
+			]
+		}
 	},
 	"homyel": {
 		"kind": "city",
@@ -305,7 +479,17 @@
 		"populationRank": 29,
 		"region": "Homyel'",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Its palace above the Sozh was the seat of the Rumyantsev and later the Paskevich families.",
+				"Its region was the part of Belarus worst hit by the fallout from Chernobyl in 1986."
+			],
+			"it": [
+				"Il suo palazzo sulla Sož fu la residenza dei Rumjancev e poi dei Paskevič.",
+				"La sua regione fu la parte della Bielorussia più colpita dalla nube di Černobyl’ nel 1986."
+			]
+		}
 	},
 	"pinsk": {
 		"kind": "city",
@@ -313,14 +497,36 @@
 		"populationRank": 62,
 		"region": "Brest",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Named for the Pina river.",
+				"The centre of the Pripyat Marshes, one of the largest wetlands in Europe.",
+				"Chaim Weizmann, the first president of Israel, went to school here."
+			],
+			"it": [
+				"Prende il nome dal fiume Pina.",
+				"Il centro delle paludi del Pripjat’, una delle più grandi zone umide d’Europa.",
+				"Chaim Weizmann, il primo presidente di Israele, andò a scuola qui."
+			]
+		}
 	},
 	"brest": {
 		"kind": "city",
 		"population": 300715,
 		"populationRank": 46,
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"The treaty of Brest-Litovsk, signed here in 1918, took Russia out of the First World War.",
+				"Its fortress held out for weeks after the German invasion of June 1941."
+			],
+			"it": [
+				"Il trattato di Brest-Litovsk, firmato qui nel 1918, fece uscire la Russia dalla Prima guerra mondiale.",
+				"La sua fortezza resistette per settimane dopo l’invasione tedesca del giugno 1941."
+			]
+		}
 	},
 	"mazyr": {
 		"kind": "city",
@@ -328,7 +534,15 @@
 		"populationRank": 65,
 		"region": "Homyel'",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"A town on the high banks of the Pripyat, and home to one of the country’s two oil refineries."
+			],
+			"it": [
+				"Una città sulle rive alte del Pripjat’, e sede di una delle due raffinerie di petrolio del paese."
+			]
+		}
 	},
 	"voronezh": {
 		"kind": "city",
@@ -581,7 +795,15 @@
 		"populationRank": 58,
 		"region": "Balti",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"From Romanian bălți, \"marshes\", for the wet ground where it grew."
+			],
+			"it": [
+				"Dal romeno bălți, \"paludi\", per il terreno umido dove sorse."
+			]
+		}
 	},
 	"rostov-on-don": {
 		"kind": "city",
@@ -590,7 +812,17 @@
 		"population1950": 484000,
 		"region": "Rostov",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Named for Saint Dmitry of Rostov, with \"on-Don\" to tell it from the ancient Rostov near Moscow.",
+				"It is called the gateway to the Caucasus."
+			],
+			"it": [
+				"Prende il nome da san Dmitrij di Rostov, con \"sul Don\" per distinguerla dall’antica Rostov vicino a Mosca.",
+				"È chiamata la porta del Caucaso."
+			]
+		}
 	},
 	"iasi": {
 		"kind": "city",
@@ -598,7 +830,17 @@
 		"populationRank": 37,
 		"region": "Iasi",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"The capital of Moldavia from 1564 to 1859.",
+				"Romania’s first university was founded here, in 1860."
+			],
+			"it": [
+				"La capitale della Moldavia dal 1564 al 1859.",
+				"Qui fu fondata la prima università della Romania, nel 1860."
+			]
+		}
 	},
 	"mariupol": {
 		"kind": "city",
@@ -626,7 +868,15 @@
 		"populationRank": 49,
 		"region": "Bihor",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Many of its buildings are Art Nouveau, from the years before the First World War."
+			],
+			"it": [
+				"Molti dei suoi edifici sono in stile liberty, degli anni prima della Prima guerra mondiale."
+			]
+		}
 	},
 	"chisinau": {
 		"kind": "city",
@@ -635,7 +885,17 @@
 		"region": "Chisinau",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"The name is often read as \"new spring\", from old Romanian words, though that is uncertain.",
+				"The poet Alexander Pushkin lived here in exile from 1820 to 1823."
+			],
+			"it": [
+				"Il nome si legge spesso come \"sorgente nuova\", da antiche parole romene, ma è incerto.",
+				"Il poeta Aleksandr Puškin visse qui in esilio dal 1820 al 1823."
+			]
+		}
 	},
 	"mykolaiv": {
 		"kind": "city",
@@ -663,7 +923,17 @@
 		"populationRank": 56,
 		"region": "Bender",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"\"Town on the Tyras\", the Greek name of the Dniester, founded as a fortress in 1792.",
+				"The capital of Transnistria, a breakaway region that no member of the United Nations recognises."
+			],
+			"it": [
+				"\"Città sul Tyras\", il nome greco del Dnestr, fondata come fortezza nel 1792.",
+				"La capitale della Transnistria, una regione separatista che nessun membro delle Nazioni Unite riconosce."
+			]
+		}
 	},
 	"cluj-napoca": {
 		"kind": "city",
@@ -671,7 +941,17 @@
 		"populationRank": 39,
 		"region": "Cluj",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Its Roman name, Napoca, was added in 1974.",
+				"Matthias Corvinus, king of Hungary, was born here in 1443."
+			],
+			"it": [
+				"Il suo nome romano, Napoca, fu aggiunto nel 1974.",
+				"Qui nacque nel 1443 Mattia Corvino, re d’Ungheria."
+			]
+		}
 	},
 	"bacau": {
 		"kind": "city",
@@ -679,7 +959,15 @@
 		"populationRank": 51,
 		"region": "Bacau",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"The poet George Bacovia was born here in 1881."
+			],
+			"it": [
+				"Qui nacque nel 1881 il poeta George Bacovia."
+			]
+		}
 	},
 	"odesa": {
 		"kind": "city",
@@ -708,7 +996,17 @@
 		"populationRank": 40,
 		"region": "Timis",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"In 1884 it became the first city in continental Europe with electric street lighting.",
+				"The revolution of December 1989 that ended Ceaușescu’s rule began here."
+			],
+			"it": [
+				"Nel 1884 fu la prima città dell’Europa continentale con l’illuminazione stradale elettrica.",
+				"Qui cominciò la rivoluzione del dicembre 1989 che pose fine al regime di Ceaușescu."
+			]
+		}
 	},
 	"brasov": {
 		"kind": "city",
@@ -716,7 +1014,17 @@
 		"populationRank": 43,
 		"region": "Brasov",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Called Kronstadt in German, it was one of the Saxon towns of Transylvania.",
+				"Its Black Church is often called the largest Gothic church between Vienna and Istanbul."
+			],
+			"it": [
+				"Chiamata Kronstadt in tedesco, fu una delle città sassoni della Transilvania.",
+				"La sua Chiesa Nera è spesso definita la più grande chiesa gotica tra Vienna e Istanbul."
+			]
+		}
 	},
 	"galati": {
 		"kind": "city",
@@ -724,7 +1032,15 @@
 		"populationRank": 42,
 		"region": "Galati",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Romania’s largest port on the Danube, with shipyards and a great steelworks."
+			],
+			"it": [
+				"Il più grande porto romeno sul Danubio, con cantieri navali e una grande acciaieria."
+			]
+		}
 	},
 	"braila": {
 		"kind": "city",
@@ -732,7 +1048,15 @@
 		"populationRank": 50,
 		"region": "Braila",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"A Danube port; the writer Panait Istrati was born here in 1884."
+			],
+			"it": [
+				"Un porto sul Danubio; qui nacque nel 1884 lo scrittore Panait Istrati."
+			]
+		}
 	},
 	"ploiesti": {
 		"kind": "city",
@@ -740,7 +1064,15 @@
 		"populationRank": 47,
 		"region": "Prahova",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"The heart of Romania’s oil industry, which American bombers attacked in 1943."
+			],
+			"it": [
+				"Il cuore dell’industria petrolifera romena, che i bombardieri americani attaccarono nel 1943."
+			]
+		}
 	},
 	"bucharest": {
 		"kind": "city",
@@ -749,7 +1081,17 @@
 		"population1950": 652000,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"By legend named for a shepherd called Bucur.",
+				"Between the wars it was called Little Paris."
+			],
+			"it": [
+				"Secondo la leggenda prende il nome da un pastore di nome Bucur.",
+				"Tra le due guerre era chiamata la piccola Parigi."
+			]
+		}
 	},
 	"craiova": {
 		"kind": "city",
@@ -757,7 +1099,17 @@
 		"populationRank": 44,
 		"region": "Dolj",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"The name probably comes from a Slavic word for king.",
+				"The sculptor Constantin Brâncuși was born in the region and studied here."
+			],
+			"it": [
+				"Il nome viene probabilmente da una parola slava per re.",
+				"Lo scultore Constantin Brâncuși nacque nella regione e vi studiò."
+			]
+		}
 	},
 	"constanta": {
 		"kind": "city",
@@ -765,28 +1117,70 @@
 		"populationRank": 45,
 		"region": "Constanta",
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Named for Constantia, half-sister of the emperor Constantine; the Greeks called it Tomis.",
+				"The Roman poet Ovid died here in exile, around AD 17."
+			],
+			"it": [
+				"Prende il nome da Costanza, sorellastra dell’imperatore Costantino; i Greci la chiamavano Tomis.",
+				"Qui morì in esilio il poeta romano Ovidio, intorno al 17 d.C."
+			]
+		}
 	},
 	"ruse": {
 		"kind": "city",
 		"population": 184270,
 		"populationRank": 54,
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"On the Danube, facing Romania across the Friendship Bridge of 1954, for decades the only bridge between the two.",
+				"Elias Canetti, the Nobel laureate, was born here in 1905."
+			],
+			"it": [
+				"Sul Danubio, di fronte alla Romania oltre il ponte dell’Amicizia del 1954, per decenni l’unico ponte tra i due paesi.",
+				"Qui nacque nel 1905 Elias Canetti, premio Nobel."
+			]
+		}
 	},
 	"pleven": {
 		"kind": "city",
 		"population": 118675,
 		"populationRank": 64,
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"In 1877 Russian and Romanian armies besieged the Ottoman garrison here for five months.",
+				"A vast panorama painting in the town shows the siege."
+			],
+			"it": [
+				"Nel 1877 gli eserciti russo e romeno assediarono qui la guarnigione ottomana per cinque mesi.",
+				"Un grande dipinto panoramico in città mostra l’assedio."
+			]
+		}
 	},
 	"varna": {
 		"kind": "city",
 		"population": 312770,
 		"populationRank": 41,
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Ancient Odessos, founded by Greeks from Miletus.",
+				"Its necropolis, around 4500 BC, held the oldest worked gold yet found anywhere in the world.",
+				"Bulgaria calls it its sea capital."
+			],
+			"it": [
+				"L’antica Odessos, fondata da Greci di Mileto.",
+				"La sua necropoli, del 4500 a.C. circa, conteneva l’oro lavorato più antico mai trovato al mondo.",
+				"La Bulgaria la chiama la sua capitale del mare."
+			]
+		}
 	},
 	"sofia": {
 		"kind": "city",
@@ -796,27 +1190,71 @@
 		"region": "Grad Sofiya",
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Named for its church of Saint Sophia, \"wisdom\"; the Romans called it Serdica.",
+				"It has been the capital since 1879.",
+				"The mountain of Vitosha rises right at its edge."
+			],
+			"it": [
+				"Prende il nome dalla chiesa di Santa Sofia, la \"sapienza\"; i Romani la chiamavano Serdica.",
+				"È la capitale dal 1879.",
+				"Il monte Vitoša si alza proprio ai suoi margini."
+			]
+		}
 	},
 	"burgas": {
 		"kind": "city",
 		"population": 195966,
 		"populationRank": 52,
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Perhaps from Latin burgus, a small fort.",
+				"The lakes around it lie on one of Europe’s great routes for migrating birds."
+			],
+			"it": [
+				"Forse dal latino burgus, un piccolo forte.",
+				"I laghi intorno alla città sono su una delle grandi rotte europee degli uccelli migratori."
+			]
+		}
 	},
 	"stara-zagora": {
 		"kind": "city",
 		"population": 143431,
 		"populationRank": 59,
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"\"Old Zagora\", zagora meaning \"beyond the mountains\"; the Romans called it Augusta Traiana.",
+				"Two houses of about 6000 BC, among the best preserved of their age in Europe, are shown here."
+			],
+			"it": [
+				"\"Vecchia Zagora\", dove zagora vuol dire \"oltre i monti\"; i Romani la chiamavano Augusta Traiana.",
+				"Qui si vedono due case del 6000 a.C. circa, tra le meglio conservate della loro epoca in Europa."
+			]
+		}
 	},
 	"plovdiv": {
 		"kind": "city",
 		"population": 340494,
 		"populationRank": 36,
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"The Greeks called it Philippopolis, \"city of Philip\", for Philip II of Macedon.",
+				"One of the oldest continuously inhabited cities in Europe.",
+				"Its Roman theatre is still used for concerts."
+			],
+			"it": [
+				"I Greci la chiamavano Filippopoli, \"città di Filippo\", da Filippo II di Macedonia.",
+				"Una delle città abitate ininterrottamente più antiche d’Europa.",
+				"Il suo teatro romano si usa ancora per i concerti."
+			]
+		}
 	}
 }

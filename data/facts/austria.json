@@ -1,0 +1,77 @@
+{
+	"_note": [
+		"Name-facts for Austria (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
+		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
+		"of the same id, written later, never shows a town's sentences."
+	],
+	"graz": {
+		"city": {
+			"en": [
+				"From Slavic gradec, \"little castle\".",
+				"Its old town is one of the best preserved in central Europe, and a UNESCO site.",
+				"Arnold Schwarzenegger grew up in a village on its edge."
+			],
+			"it": [
+				"Dallo slavo gradec, \"piccolo castello\".",
+				"Il suo centro storico è uno dei meglio conservati dell’Europa centrale, e un sito UNESCO.",
+				"Arnold Schwarzenegger crebbe in un villaggio alle sue porte."
+			]
+		}
+	},
+	"innsbruck": {
+		"city": {
+			"en": [
+				"\"Bridge over the Inn\".",
+				"It hosted the Winter Olympics twice, in 1964 and 1976.",
+				"The Golden Roof, of more than 2,600 gilded copper tiles, was built for Emperor Maximilian I around 1500."
+			],
+			"it": [
+				"\"Ponte sull’Inn\".",
+				"Ha ospitato due volte le Olimpiadi invernali, nel 1964 e nel 1976.",
+				"Il Tettuccio d’oro, fatto di oltre 2.600 tegole di rame dorato, fu costruito per l’imperatore Massimiliano I intorno al 1500."
+			]
+		}
+	},
+	"linz": {
+		"city": {
+			"en": [
+				"Roman Lentia, a name perhaps from a Celtic word for a bend in the river.",
+				"Johannes Kepler lived here and published his Harmony of the World in 1619.",
+				"Its Ars Electronica festival, held since 1979, is one of the oldest festivals of media art."
+			],
+			"it": [
+				"La romana Lentia, un nome forse da una parola celtica per un’ansa del fiume.",
+				"Qui visse Giovanni Keplero, che vi pubblicò l’Armonia del mondo nel 1619.",
+				"Il suo festival Ars Electronica, che si tiene dal 1979, è uno dei più antichi festival di arte digitale."
+			]
+		}
+	},
+	"salzburg": {
+		"city": {
+			"en": [
+				"\"Salt castle\", for the salt carried down the Salzach.",
+				"Mozart was born here in 1756.",
+				"Ruled by its prince-archbishops until 1803, it became Austrian only in 1816."
+			],
+			"it": [
+				"\"Castello del sale\", per il sale trasportato lungo la Salzach.",
+				"Qui nacque Mozart, nel 1756.",
+				"Governata dai suoi principi arcivescovi fino al 1803, divenne austriaca solo nel 1816."
+			]
+		}
+	},
+	"wien": {
+		"city": {
+			"en": [
+				"Named for the Wien river; the Romans had a camp here called Vindobona.",
+				"The Congress of Vienna, in 1814 and 1815, redrew the map of Europe after Napoleon.",
+				"Its coffee houses are on UNESCO’s list of intangible heritage."
+			],
+			"it": [
+				"Prende il nome dal fiume Wien; i Romani vi avevano un accampamento chiamato Vindobona.",
+				"Il Congresso di Vienna, nel 1814 e 1815, ridisegnò la carta d’Europa dopo Napoleone.",
+				"I suoi caffè sono nella lista UNESCO del patrimonio immateriale."
+			]
+		}
+	}
+}
