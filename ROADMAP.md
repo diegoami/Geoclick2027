@@ -1629,8 +1629,10 @@ loop actually feels good. Candidates below, in rough priority order.
 
 - [ ] **The start screen becomes a zoomable world map, raised
       2026-09-20.** **Proposed 2026-09-25 as [#58](https://github.com/diegoami/Geoclick2027/issues/58)**
-      (v0.13: a world picker built by `build-map.ts --level=country`, a country
-      panel, the list kept one tap away; six open questions). The map list as it stands cannot be finalized — it is
+      (v0.13: a world picker built by `build-map.ts --level=country`; world →
+      continent → a panel of the country's maps; the list kept behind a Map /
+      List switch, one row per country with a listbox of its maps). **Agreed
+      2026-09-25**, the design in the issue's last comment. The map list as it stands cannot be finalized — it is
       a holding shape, not the design. `app/src/lib/mapCatalog.ts` is a
       hand-written catalog of 31 countries and 66 maps, rendered by
       `app/src/routes/+page.svelte` as alphabetical country groups, and it
