@@ -198,6 +198,6 @@ entry.
 | FT-70 | **merged** | PR #49       | Greece, 14 regions, 42 + 42 sentences; 🧑 read and approved by the owner, 2026-09-25: the gate is passed                                     |
 | FT-71 | **merged** | PRs #52–#55  | all 172 countries, 516 + 516 sentences; Europe 🧑 spot-checked                                                                               |
 | FT-72 | **merged** | PRs #56, #57 | 286 towns in 160 new country files, each a `city` entry; every capital (165) at three sentences, 94 small towns at one or two (owner’s call) |
-| FT-73 | **in PR**  | #59, #61, #62 | 523 places (349 regions, 174 towns; Greece and the capitals were done), 1 221 + 1 221 sentences; many towns and some regions at one or two, listed in each PR |
+| FT-73 | **merged** | PRs #59, #61–#63 | 523 places (349 regions, 174 towns; Greece and the capitals were done), 1 221 + 1 221 sentences; about 250 at one or two; #63 corrected three sentences of #61 |
 | FT-74 | **merged** | PR #51       | region names boxless in the Quiz, Overview and Tour; given-away ink brown; tried in `v0.12.0-alpha.2`                                        |
 | FT-75 | **merged** | PR #50       | distance on the ground; the message names `--disambiguate-by`; all 16 `--within` maps rebuild byte-identical                                 |
