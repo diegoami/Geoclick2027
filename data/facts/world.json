@@ -1,0 +1,8 @@
+{
+	"_note": [
+		"Name-facts for whole countries, on the continents' Countries maps (FT-69, docs/PLAN_V0.12.md).",
+		"Keyed by the country's target id (finland, czechia). A country's own file is about what is",
+		"inside it - its regions and towns - and a town on a continent map reads that file, not this one.",
+		"Same shape as every country file: { \"en\": [...], \"it\": [...] }, the name first, then the place."
+	]
+}
