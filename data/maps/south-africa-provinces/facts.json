@@ -14,7 +14,19 @@
 			"nameIt": "Thohoyandou",
 			"population": 269707
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Named for the Limpopo river, a name of uncertain origin; until 2003 the province was called Northern Province.",
+				"Mapungubwe was the centre of a kingdom in the 13th century; a small golden rhinoceros was found in one of its graves.",
+				"The Balobedu people are led by a Rain Queen, Modjadji, believed to have the power to bring rain."
+			],
+			"it": [
+				"Prende il nome dal fiume Limpopo, un nome di origine incerta; fino al 2003 la provincia si chiamava Provincia del Nord.",
+				"Mapungubwe fu il centro di un regno nel XIII secolo; in una delle sue tombe fu trovato un piccolo rinoceronte d’oro.",
+				"Il popolo Balobedu è guidato da una Regina della pioggia, Modjadji, a cui si attribuisce il potere di portare la pioggia."
+			]
+		}
 	},
 	"mpumalanga": {
 		"kind": "region",
@@ -36,7 +48,19 @@
 			"name": "Die Berg",
 			"elevation": 2331
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"\"Where the sun rises\", for its place in the east of the country.",
+				"The southern half of the Kruger National Park, opened in 1926, is here.",
+				"The Barberton Makhonjwa Mountains hold some of the oldest rocks on Earth, about 3.5 billion years old, and are a UNESCO site."
+			],
+			"it": [
+				"\"Dove sorge il sole\", per la sua posizione nell’est del paese.",
+				"Qui si trova la metà meridionale del Parco nazionale Kruger, aperto nel 1926.",
+				"I monti Barberton Makhonjwa contengono alcune delle rocce più antiche della Terra, di circa 3,5 miliardi di anni, e sono un sito UNESCO."
+			]
+		}
 	},
 	"gauteng": {
 		"kind": "region",
@@ -54,7 +78,19 @@
 			"nameIt": "Johannesburg",
 			"population": 3435000
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Sesotho for \"place of gold\", for the gold of the Witwatersrand.",
+				"The smallest province by area, and the one with the most people.",
+				"The Cradle of Humankind, with the caves of Sterkfontein, has given up some of the oldest fossils of human ancestors, and is a UNESCO site."
+			],
+			"it": [
+				"In sesotho \"luogo dell’oro\", per l’oro del Witwatersrand.",
+				"La provincia più piccola per superficie, e la più popolosa.",
+				"La Culla dell’umanità, con le grotte di Sterkfontein, ha restituito alcuni dei più antichi fossili di antenati dell’uomo, ed è un sito UNESCO."
+			]
+		}
 	},
 	"north-west": {
 		"kind": "region",
@@ -72,7 +108,19 @@
 			"nameIt": "Klerksdorp",
 			"population": 178921
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named simply for its place on the map.",
+				"Much of it was Bophuthatswana, a homeland declared independent under apartheid and recognised by no other country.",
+				"The Pilanesberg game reserve lies inside the ring of an ancient extinct volcano."
+			],
+			"it": [
+				"Prende il nome semplicemente dalla sua posizione sulla carta.",
+				"Gran parte del suo territorio era il Bophuthatswana, un homeland dichiarato indipendente durante l’apartheid e non riconosciuto da nessun altro paese.",
+				"La riserva faunistica del Pilanesberg si trova dentro l’anello di un antico vulcano spento."
+			]
+		}
 	},
 	"free-state": {
 		"kind": "region",
@@ -92,7 +140,19 @@
 			"nameIt": "Bloemfontein",
 			"population": 463064
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"From the Orange Free State, a Boer republic from 1854 to 1902, named for the Orange river.",
+				"The Orange river itself was named in the 1770s for the Dutch House of Orange.",
+				"The Vredefort crater, some two billion years old, is the largest known impact structure on Earth and a UNESCO site."
+			],
+			"it": [
+				"Dallo Stato Libero dell’Orange, una repubblica boera dal 1854 al 1902, che prendeva il nome dal fiume Orange.",
+				"Il fiume Orange stesso fu chiamato così negli anni Settanta del Settecento in onore della casa d’Orange olandese.",
+				"Il cratere di Vredefort, vecchio di circa due miliardi di anni, è la più grande struttura da impatto conosciuta sulla Terra e un sito UNESCO."
+			]
+		}
 	},
 	"northern-cape": {
 		"kind": "region",
@@ -114,7 +174,19 @@
 			"name": "Bokkeveldberg",
 			"elevation": 843
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"The northern part of the old Cape Province, which was split in three in 1994.",
+				"The largest province, with the fewest people.",
+				"After winter rains, the semi-desert of Namaqualand is covered with wild flowers."
+			],
+			"it": [
+				"La parte settentrionale dell’antica Provincia del Capo, divisa in tre nel 1994.",
+				"La provincia più vasta, e la meno popolata.",
+				"Dopo le piogge invernali il semideserto del Namaqualand si copre di fiori selvatici."
+			]
+		}
 	},
 	"kwazulu-natal": {
 		"kind": "region",
@@ -131,7 +203,19 @@
 			"nameIt": "Durban",
 			"population": 2729000
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"KwaZulu is \"place of the Zulu\"; Natal is the name Vasco da Gama gave the coast when he sailed past on Christmas Day 1497.",
+				"At Isandlwana, in 1879, a Zulu army defeated a British force.",
+				"The uKhahlamba-Drakensberg Park, with thousands of San rock paintings, is a UNESCO site."
+			],
+			"it": [
+				"KwaZulu è il \"luogo degli Zulu\"; Natal è il nome che Vasco da Gama diede alla costa quando la costeggiò il giorno di Natale del 1497.",
+				"A Isandlwana, nel 1879, un esercito zulu sconfisse una forza britannica.",
+				"Il parco uKhahlamba-Drakensberg, con migliaia di pitture rupestri dei San, è un sito UNESCO."
+			]
+		}
 	},
 	"eastern-cape": {
 		"kind": "region",
@@ -153,7 +237,19 @@
 			"name": "Kompasberg",
 			"elevation": 2504
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"The eastern part of the old Cape Province, created in 1994 together with the former homelands of Transkei and Ciskei.",
+				"Nelson Mandela was born at Mvezo, a village here, in 1918.",
+				"For about a century, from 1779, the Xhosa fought nine frontier wars here against the colonists."
+			],
+			"it": [
+				"La parte orientale dell’antica Provincia del Capo, creata nel 1994 insieme agli ex homeland del Transkei e del Ciskei.",
+				"Nelson Mandela nacque nel 1918 a Mvezo, un villaggio della provincia.",
+				"Per circa un secolo, dal 1779, gli Xhosa combatterono qui nove guerre di frontiera contro i coloni."
+			]
+		}
 	},
 	"western-cape": {
 		"kind": "region",
@@ -173,6 +269,18 @@
 			"name": "Seweweekspoort Peak",
 			"elevation": 2325
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Named for the Cape of Good Hope, so called by the king of Portugal after Bartolomeu Dias rounded it in 1488.",
+				"Its fynbos is the heart of the Cape Floral Kingdom, the smallest of the world’s six plant kingdoms and one of the richest.",
+				"The first wine at the Cape was pressed in 1659."
+			],
+			"it": [
+				"Prende il nome dal Capo di Buona Speranza, chiamato così dal re del Portogallo dopo che Bartolomeu Dias lo ebbe doppiato nel 1488.",
+				"Il suo fynbos è il cuore del Regno floristico del Capo, il più piccolo dei sei regni floristici del mondo e uno dei più ricchi.",
+				"Il primo vino del Capo fu spremuto nel 1659."
+			]
+		}
 	}
 }

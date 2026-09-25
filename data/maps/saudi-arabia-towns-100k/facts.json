@@ -5,7 +5,15 @@
 		"populationRank": 19,
 		"region": "Al Hudud ash Shamaliyah",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"It began in the 1950s as a pumping station on the Trans-Arabian Pipeline."
+			],
+			"it": [
+				"Nacque negli anni Cinquanta come stazione di pompaggio dell’oleodotto transarabico."
+			]
+		}
 	},
 	"sakaka": {
 		"kind": "city",
@@ -13,7 +21,15 @@
 		"populationRank": 21,
 		"region": "Al Jawf",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"The Rajajil, standing stone pillars thousands of years old, stand in groups on its edge."
+			],
+			"it": [
+				"I Rajajil, pilastri di pietra eretti migliaia di anni fa, stanno in gruppi alle sue porte."
+			]
+		}
 	},
 	"hafar-al-batin": {
 		"kind": "city",
@@ -21,21 +37,49 @@
 		"populationRank": 17,
 		"region": "Ash Sharqiyah",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Named for the wells dug in the Wadi al-Batin, on the old road from Iraq to the Gulf.",
+				"In 1990 and 1991 it was a staging ground for the coalition armies of the Gulf War."
+			],
+			"it": [
+				"Prende il nome dai pozzi scavati nel Wadi al-Batin, sull’antica strada fra l’Iraq e il Golfo.",
+				"Nel 1990 e nel 1991 fu una base di raccolta per gli eserciti della coalizione nella guerra del Golfo."
+			]
+		}
 	},
 	"tabuk": {
 		"kind": "city",
 		"population": 547957,
 		"populationRank": 9,
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"In 630 the Prophet Muhammad led an expedition here, the last of his campaigns.",
+				"Its station on the Hejaz Railway, built by the Ottomans, still stands."
+			],
+			"it": [
+				"Nel 630 il profeta Maometto guidò qui una spedizione, l’ultima delle sue campagne.",
+				"La sua stazione della Ferrovia dell’Hegiaz, costruita dagli Ottomani, è ancora in piedi."
+			]
+		}
 	},
 	"ha-il": {
 		"kind": "city",
 		"population": 385257,
 		"populationRank": 11,
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"The home of Hatim al-Tai, the pre-Islamic poet whose name still stands for generosity in Arabic."
+			],
+			"it": [
+				"La patria di Hatim al-Tai, il poeta preislamico il cui nome in arabo è ancora sinonimo di generosità."
+			]
+		}
 	},
 	"jubail": {
 		"kind": "city",
@@ -43,7 +87,17 @@
 		"populationRank": 18,
 		"region": "Ash Sharqiyah",
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Planned from 1975, it is one of the largest industrial cities in the world.",
+				"The ruins of a church of the 4th century were found near it in 1986."
+			],
+			"it": [
+				"Pianificata dal 1975, è una delle più grandi città industriali del mondo.",
+				"Le rovine di una chiesa del IV secolo furono trovate nelle vicinanze nel 1986."
+			]
+		}
 	},
 	"qatif": {
 		"kind": "city",
@@ -51,7 +105,15 @@
 		"populationRank": 13,
 		"region": "Ash Sharqiyah",
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"An old oasis town; nearby Tarout island has been lived on for about 5,000 years."
+			],
+			"it": [
+				"Un’antica città oasi; la vicina isola di Tarout è abitata da circa 5.000 anni."
+			]
+		}
 	},
 	"dammam": {
 		"kind": "city",
@@ -60,7 +122,15 @@
 		"population1950": 20000,
 		"region": "Ash Sharqiyah",
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"A well here, Dammam No. 7, the \"Prosperity Well\", struck the kingdom’s first commercial oil in 1938."
+			],
+			"it": [
+				"Un pozzo di qui, il Dammam n. 7, il \"Pozzo della prosperità\", trovò nel 1938 il primo petrolio commerciale del regno."
+			]
+		}
 	},
 	"buraydah": {
 		"kind": "city",
@@ -68,7 +138,15 @@
 		"populationRank": 10,
 		"region": "Al Quassim",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Its date festival fills one of the largest date markets in the world."
+			],
+			"it": [
+				"La sua festa dei datteri riempie uno dei più grandi mercati di datteri del mondo."
+			]
+		}
 	},
 	"al-mubarraz": {
 		"kind": "city",
@@ -76,7 +154,15 @@
 		"populationRank": 14,
 		"region": "Ash Sharqiyah",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"One of the two towns of the Al-Ahsa oasis, with Hofuf."
+			],
+			"it": [
+				"Una delle due città dell’oasi di Al-Ahsa, insieme a Hofuf."
+			]
+		}
 	},
 	"hofuf": {
 		"kind": "city",
@@ -84,7 +170,17 @@
 		"populationRank": 7,
 		"region": "Ash Sharqiyah",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"The Ottomans’ Ibrahim Palace, a fort with a mosque, stands in its old town.",
+				"The caves of Al-Qarah mountain, nearby, stay cool through the summer."
+			],
+			"it": [
+				"Il palazzo Ibrahim degli Ottomani, un forte con una moschea, sorge nella sua città vecchia.",
+				"Le grotte della montagna di Al-Qarah, poco lontano, restano fresche per tutta l’estate."
+			]
+		}
 	},
 	"riyadh": {
 		"kind": "city",
@@ -115,7 +211,19 @@
 		"population1950": 51000,
 		"region": "Al Madinah",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Al-Madina means \"the city\"; before Islam it was called Yathrib.",
+				"The Prophet Muhammad moved here from Mecca in 622, the year from which the Islamic calendar is counted.",
+				"The Prophet’s Mosque holds his tomb."
+			],
+			"it": [
+				"Al-Madina significa \"la città\"; prima dell’islam si chiamava Yathrib.",
+				"Il profeta Maometto vi si trasferì dalla Mecca nel 622, l’anno da cui si contano gli anni del calendario islamico.",
+				"La Moschea del Profeta custodisce la sua tomba."
+			]
+		}
 	},
 	"al-kharj": {
 		"kind": "city",
@@ -123,7 +231,15 @@
 		"populationRank": 15,
 		"region": "Ar Riyad",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"An oasis town, now one of the kingdom’s great dairy-farming areas."
+			],
+			"it": [
+				"Una città oasi, oggi una delle grandi zone di allevamento da latte del regno."
+			]
+		}
 	},
 	"yanbu": {
 		"kind": "city",
@@ -131,7 +247,17 @@
 		"populationRank": 16,
 		"region": "Al Madinah",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"An old port for pilgrims to Medina, it has also been a planned industrial city since 1975.",
+				"T. E. Lawrence used it as a base during the Arab Revolt of 1916 to 1918."
+			],
+			"it": [
+				"Antico porto dei pellegrini diretti a Medina, dal 1975 è anche una città industriale pianificata.",
+				"T. E. Lawrence la usò come base durante la rivolta araba dal 1916 al 1918."
+			]
+		}
 	},
 	"al-hillah": {
 		"kind": "city",
@@ -139,7 +265,15 @@
 		"populationRank": 8,
 		"region": "Ar Riyad",
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"The name means \"the settlement\" in Arabic."
+			],
+			"it": [
+				"Il nome significa \"l’insediamento\" in arabo."
+			]
+		}
 	},
 	"jeddah": {
 		"kind": "city",
@@ -148,7 +282,19 @@
 		"population1950": 119000,
 		"region": "Makkah",
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"The name is often read as \"grandmother\", for a tomb said to be Eve’s, or as \"seashore\"; the derivation is disputed.",
+				"Its old town, Al-Balad, with houses of coral stone, is a UNESCO site.",
+				"For centuries it has been the gateway for pilgrims arriving by sea for Mecca."
+			],
+			"it": [
+				"Il nome è spesso interpretato come \"nonna\", per una tomba che si dice sia di Eva, oppure come \"riva del mare\"; l’etimologia è discussa.",
+				"La sua città vecchia, Al-Balad, con case di pietra corallina, è un sito UNESCO.",
+				"Da secoli è la porta d’ingresso dei pellegrini che arrivano via mare per la Mecca."
+			]
+		}
 	},
 	"mecca": {
 		"kind": "city",
@@ -157,7 +303,19 @@
 		"population1950": 148000,
 		"region": "Makkah",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"The Prophet Muhammad was born here, around 570.",
+				"The Kaaba, at the centre of its Great Mosque, is the direction Muslims face in prayer.",
+				"Only Muslims may enter the city."
+			],
+			"it": [
+				"Qui nacque il profeta Maometto, intorno al 570.",
+				"La Kaaba, al centro della sua Grande Moschea, è la direzione verso cui i musulmani si rivolgono nella preghiera.",
+				"Solo i musulmani possono entrare in città."
+			]
+		}
 	},
 	"taif": {
 		"kind": "city",
@@ -165,7 +323,19 @@
 		"populationRank": 6,
 		"region": "Makkah",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Its roses are distilled into rose water and oil each spring.",
+				"High and cool, it has long been the summer seat of the government.",
+				"The Taif Agreement, agreed here in 1989, laid the ground for ending the Lebanese civil war."
+			],
+			"it": [
+				"Le sue rose vengono distillate ogni primavera in acqua e olio di rose.",
+				"Alta e fresca, è da tempo la sede estiva del governo.",
+				"L’accordo di Taif, concluso qui nel 1989, aprì la strada alla fine della guerra civile libanese."
+			]
+		}
 	},
 	"abha": {
 		"kind": "city",
@@ -173,14 +343,30 @@
 		"populationRank": 20,
 		"region": "`Asir",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"At about 2,200 m, it stays cool when the rest of the kingdom bakes."
+			],
+			"it": [
+				"A circa 2.200 m, resta fresca quando il resto del regno è rovente."
+			]
+		}
 	},
 	"najran": {
 		"kind": "city",
 		"population": 369609,
 		"populationRank": 12,
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Its old houses are mud-brick towers of several storeys."
+			],
+			"it": [
+				"Le sue vecchie case sono torri di mattoni crudi a più piani."
+			]
+		}
 	},
 	"jazan": {
 		"kind": "city",
@@ -188,6 +374,14 @@
 		"populationRank": 22,
 		"region": "Jizan",
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"A port, and the gateway to the Farasan Islands."
+			],
+			"it": [
+				"Un porto, e la porta d’accesso alle isole Farasan."
+			]
+		}
 	}
 }
