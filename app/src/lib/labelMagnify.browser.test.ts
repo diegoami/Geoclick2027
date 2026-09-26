@@ -67,6 +67,17 @@ describe('labels', () => {
 		const { toscana } = fixture();
 		expect(getComputedStyle(toscana).pointerEvents).toBe('none');
 	});
+
+	it("the Terrain layer's names take none either", () => {
+		const popup = document.createElement('div');
+		popup.className = 'maplibregl-popup geoclick-terrain-label geoclick-terrain-regions';
+		const content = document.createElement('div');
+		content.className = 'maplibregl-popup-content';
+		content.textContent = 'Balkan Pen.';
+		popup.append(content);
+		document.body.append(popup);
+		expect(getComputedStyle(content).pointerEvents).toBe('none');
+	});
 });
 
 describe('enableLabelMagnify', () => {

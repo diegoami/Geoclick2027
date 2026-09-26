@@ -143,6 +143,10 @@
 		0 0 3px #f0ead9,
 		0 0 3px #f0ead9;
 	white-space: nowrap;
+	/* No pointer input, like every other label (FT-18): a click on "Balkan
+	 * Pen." is a click on the country under it, and the cursor stays the
+	 * map's, not a text cursor. */
+	pointer-events: none;
 }
 .geoclick-terrain-label .maplibregl-popup-tip {
 	display: none;
