@@ -7,18 +7,14 @@ one entry per tagged version on `main`.
 
 ## Unreleased
 
+## v0.13.0 — 2026-09-26 — The world on the start screen
+
+**The start screen opens on a map of the world: tap a continent, then a country, and choose a map from its row. Place names follow your language, the tutorial starts on the new map, and the apps get an Exit button.**
+
+Proposal #58 (amended 2026-09-26) and #71; [PLAN_V0.13.md](docs/PLAN_V0.13.md) (FT-76 to FT-81). PRs #69, #70, #72-#76.
+
 For players:
 
-- **The tutorial starts on the world map:** choose Europe, then tap Italy,
-  then choose Regions from Italy's row - the way to every other map. It
-  shows the map even if you chose the list, and the list comes back after.
-  Fourteen steps now.
-- **Recent starts folded,** one line with its count, like a spoiler: tap
-  it to see the maps you played last. Favourites stay open.
-- **An Exit button** on the start screen, in the Android and Windows apps,
-  beside Tutorial. The web page has none, since a browser tab can't close
-  itself. The phone's back button still leaves from the world view, and
-  goes up one level everywhere else.
 - **A map of the world on the start screen, with the maps beside it.**
   The panel next to the map (under it on a phone) holds every map in
   sections: first the continents' own maps (Europe's Capitals, Countries and
@@ -33,6 +29,56 @@ For players:
   the start screen and remembers your choice. The list has the same
   sections as the panel, one row per country and continent (Germany's
   fourteen buttons are one row), and search filters it.
+- **The tutorial starts on the world map:** choose Europe, then tap Italy,
+  then choose Regions from Italy's row - the way to every other map. It
+  shows the map even if you chose the list, and the list comes back after.
+  Fourteen steps now.
+- **An Exit button** on the start screen, in the Android and Windows apps,
+  beside Tutorial. The web page has none, since a browser tab can't close
+  itself. The phone's back button still leaves from the world view, and
+  goes up one level everywhere else.
+- **Recent starts folded,** one line with its count, like a spoiler: tap
+  it to see the maps you played last. Favourites stay open.
+- **Place names in your language.** In Italian or German, the countries on
+  the continents' maps and on the new world map read Italia, Germania,
+  Deutschland, Spanien; so do the towns on the maps of several countries.
+  The Quiz, Overview, Tour and Explore all use them. A country's own maps
+  keep their names as before.
+
+Under the hood:
+
+- **The world picker (FT-76).** `data/scripts/build-picker.ts` builds
+  `data/maps/world-picker/`: the 172 countries of the six Countries maps,
+  each tagged with its continent, a dissolved `land` layer, and each
+  continent's view box; 531 KB of tiles. It is not a map of its own and is
+  not in the index. `worldPicker.test.ts` checks it holds exactly the
+  Countries maps' countries.
+- **Names by language (FT-81, #71).** `map.json` targets carry
+  `names: {en, it, de}` from Natural Earth, with fixups; `name` stays the
+  tile join key. `targetName()` picks the one for the language, and the
+  views relabel on a switch. 17 maps rebuilt, tiles unchanged. 42 towns
+  keep their usual name in some language (`TOWN_NAMES_NOT_SHOWN`): Odesa
+  not Odessa, no Italian "Nižnij Novgorod".
+- **The start screen (FT-77, FT-78).** `WorldPicker.svelte` (its own
+  MapLibre style, continent markers, country popups), `MapSections.svelte`
+  and `MapRows.svelte` (the sections and the rows with a `<select>`),
+  `catalogSections.ts` (the catalog by continent, from picker.json at build
+  time). The view and the Map / List choice are kept in `mapPrefs`.
+- **Bottom overlays (FT-80, #68).** `mapBottomOverlay.ts` keeps a set of
+  publishers; the largest lift wins and a cleanup removes only its own.
+- **Exit.** `exitApp()` in `platform.ts` closes the Tauri window
+  (`core:window:allow-close`) or calls Capacitor's `App.exitApp()`.
+- **The tutorial (FT-79)** has continent and country steps in
+  `tutorialMachine.ts`, with anchors `picker-<continent>` and a
+  pass-through marker over Italy. `docs/TUTORIAL.md` updated.
+
+Not in this release:
+
+- **The country rows in the list** still read in English ("Italy"), as
+  the catalog names them; the map's own labels follow the language.
+- **The user manual's tutorial table** has no Terrain row, and older copy
+  for the steps on the map.
+- **FT-51, the facts in German**, and tier 3 of the facts are still to do.
 
 ## v0.12.0 — 2026-09-25 — Facts for the new maps
 
