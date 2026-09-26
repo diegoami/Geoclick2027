@@ -16,7 +16,7 @@
 	import { mapDisplayName, mapGroups, mapTypeLabel } from '$lib/mapCatalog';
 	import { favouriteMaps, homeView, recentMaps, setHomeView } from '$lib/mapPrefs.svelte';
 	import FavouriteStar from '$lib/FavouriteStar.svelte';
-	import { RELEASES_URL, isNativeShell } from '$lib/platform';
+	import { RELEASES_URL, exitApp, isNativeShell } from '$lib/platform';
 	import TutorialButton from '$lib/TutorialButton.svelte';
 	import TutorialNudge from '$lib/TutorialNudge.svelte';
 	import WorldPicker from '$lib/WorldPicker.svelte';
@@ -64,6 +64,8 @@
 	// The download link is for web visitors only - pointless inside the desktop
 	// or Android app itself. Off until checked, so the apps never flash it.
 	let showDownload = $state(false);
+	// The Exit button is the apps' own, the other way round.
+	let isApp = $state(false);
 
 	// The Recent list lives in this device's storage, which the prerendered HTML
 	// can't see. Showing it only after mount keeps the first client render equal
@@ -74,7 +76,10 @@
 
 	onMount(() => {
 		mounted = true;
-		isNativeShell().then((native) => (showDownload = !native));
+		isNativeShell().then((native) => {
+			showDownload = !native;
+			isApp = native;
+		});
 	});
 
 	// Runs after mount, and again whenever the tutorial's sandbox starts or ends
@@ -113,6 +118,10 @@
 		<h1>Geoclick</h1>
 		<LanguageSwitcher />
 		<TutorialButton />
+		<!-- Only in the apps: a web page cannot close its own tab. -->
+		{#if isApp}
+			<button type="button" class="exit" onclick={() => exitApp()}>{t('home.exit')}</button>
+		{/if}
 	</div>
 	<p>{t('home.subtitle')}</p>
 	{#if showDownload}
@@ -196,32 +205,38 @@
 			{/if}
 
 			{#if recentMaps().length > 0}
-				<section class="shortcut-group">
-					<h2>
-						<svg viewBox="0 0 24 24" aria-hidden="true"
-							><circle
-								cx="12"
-								cy="12"
-								r="8.5"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-							/><path
-								d="M12 7.5V12l3 2"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-								stroke-linecap="round"
-							/></svg
-						>
-						{t('home.recent')}
-					</h2>
+				<!-- Folded by default, like a spoiler: the maps played last are a
+				     shortcut, not the start screen's first thing (owner, 2026-09-26). -->
+				<details class="shortcut-group recent">
+					<summary
+						><h2>
+							<svg viewBox="0 0 24 24" aria-hidden="true"
+								><circle
+									cx="12"
+									cy="12"
+									r="8.5"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								/><path
+									d="M12 7.5V12l3 2"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+								/></svg
+							>
+							{t('home.recent')}
+							<span class="count">({recentMaps().length})</span>
+							<span class="chevron" aria-hidden="true">▸</span>
+						</h2></summary
+					>
 					<ul>
 						{#each recentMaps() as mapId (mapId)}
 							{@render mapCard(mapId, mapDisplayName(mapId) ?? mapId)}
 						{/each}
 					</ul>
-				</section>
+				</details>
 			{/if}
 		</div>
 	{/if}
@@ -312,6 +327,26 @@
 		justify-content: center;
 		gap: 0.75rem;
 		flex-wrap: wrap;
+	}
+	/* Beside the Tutorial pill, in its shape, but quieter: it is the way out. */
+	.exit {
+		font-family: system-ui, sans-serif;
+		font-size: 0.7rem;
+		font-weight: 600;
+		line-height: 1.2;
+		padding: 0.2rem 0.55rem;
+		border-radius: 999px;
+		border: 1px solid rgba(44, 58, 51, 0.35);
+		background: #ffffff;
+		color: #2c3a33;
+		cursor: pointer;
+	}
+	.exit:hover {
+		background: #f2f2ee;
+	}
+	.exit:focus-visible {
+		outline: 2px solid #2c3a33;
+		outline-offset: 2px;
 	}
 	.header-row h1 {
 		margin: 0;
@@ -417,6 +452,30 @@
 		font-size: 1rem;
 		font-weight: 700;
 		color: #b5691f;
+	}
+	.recent summary {
+		list-style: none;
+		cursor: pointer;
+	}
+	.recent summary::-webkit-details-marker {
+		display: none;
+	}
+	.recent summary h2 {
+		margin: 0;
+	}
+	.recent[open] summary h2 {
+		margin-bottom: 0.6rem;
+	}
+	.recent .count {
+		font-weight: 400;
+		opacity: 0.75;
+	}
+	.recent .chevron {
+		margin-left: auto;
+		transition: transform 0.15s;
+	}
+	.recent[open] .chevron {
+		transform: rotate(90deg);
 	}
 	.shortcut-group h2 svg {
 		width: 1.1rem;
