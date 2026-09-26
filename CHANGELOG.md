@@ -82,6 +82,31 @@ Not in this release:
   for its town. They are to be filled with tier 3.
 - **The world-map start screen**, agreed on #58, is v0.13.
 
+What shipped, and what was tried:
+
+- **Review:** an independent model (GPT-6 Luna, in OpenCode) reviewed
+  [Milestone v0.12.0 (#65)](https://github.com/diegoami/Geoclick2027/issues/65)
+  in two rounds. Round 1: AGREE on `0874412`, no issues. The installer
+  check of `v0.12.0-beta.1` then found #66: the version badge covered
+  Explore's Known legend, a regression from #47. It was fixed in #67, and
+  the candidate moved to `3b8ad20`. Round 2: AGREE on `3b8ad20`, with one
+  SHOULD, #68 (two bottom-overlay publishers can clear each other's
+  variables). #68 can't happen in the app today and is left for v0.13. The
+  tag sits on exactly `3b8ad20`.
+- **Betas:** `v0.12.0-beta.1` (`2680bc3`) and `v0.12.0-beta.2`
+  (`5bae178`), each the candidate of its time plus the version only. Both
+  were tried on the Android emulator and in the installed Windows app. The
+  owner played #47 and FT-74 on a tablet as `v0.12.0-alpha.1` and
+  `-alpha.2`.
+- **Installers:** Windows `.msi` and `-setup.exe`, Android `.apk`, all
+  built from the `v0.12.0` tag. The APK was installed over beta.2 on the
+  emulator and kept its progress. Austria — States drew, Kärnten's facts
+  card showed, and the badge sat above the legend. The stable `-setup.exe`
+  waited on an installer dialog; beta.2's, with the same code, was tried
+  (Peru — Regions drew). The `.msi` was built but not installed.
+- **Not tried:** the owner's spot-checks of the new facts (FT-73) weren't
+  done before the tag.
+
 ## v0.11.0 — 2026-09-24 — Twice the maps
 
 **The map list grows from 63 to 127 maps: whole continents, finer maps of the countries already here, and eleven countries new to the app, plus three fixes to how names show on the map.**
