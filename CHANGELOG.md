@@ -9,6 +9,10 @@ one entry per tagged version on `main`.
 
 For players:
 
+- **An Exit button** on the start screen, in the Android and Windows apps,
+  beside Tutorial. The web page has none, since a browser tab can't close
+  itself. The phone's back button still leaves from the world view, and
+  goes up one level everywhere else.
 - **A map of the world on the start screen, with the maps beside it.**
   The panel next to the map (under it on a phone) holds every map in
   sections: first the continents' own maps (Europe's Capitals, Countries and
