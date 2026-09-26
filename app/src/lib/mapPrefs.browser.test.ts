@@ -8,6 +8,7 @@ import {
 	setUnrecordedMap,
 	pickerGoUp,
 	pickerView,
+	setPickerShown,
 	setPickerView,
 	homeView,
 	setHomeView
@@ -57,6 +58,7 @@ describe('Recent maps store', () => {
 
 describe("the start screen's view (FT-77)", () => {
 	it('is kept on the device, and the back button goes up from a continent', () => {
+		setPickerShown(true);
 		setPickerView('europe');
 		expect(pickerView()).toBe('europe');
 		expect(localStorage.getItem('geoclick:picker-view:v1')).toBe('europe');
@@ -64,6 +66,15 @@ describe("the start screen's view (FT-77)", () => {
 		expect(pickerView()).toBe('world');
 		// On the world, back leaves the app: nothing to go up to.
 		expect(pickerGoUp()).toBe(false);
+	});
+
+	it('the back button leaves when the map is not up, whatever continent is kept (#81)', () => {
+		// The list, or a map still loading: the player sees no continent.
+		setPickerShown(false);
+		setPickerView('europe');
+		expect(pickerGoUp()).toBe(false);
+		expect(pickerView()).toBe('europe');
+		setPickerView('world');
 	});
 });
 
