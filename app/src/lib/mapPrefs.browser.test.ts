@@ -8,7 +8,9 @@ import {
 	setUnrecordedMap,
 	pickerGoUp,
 	pickerView,
-	setPickerView
+	setPickerView,
+	homeView,
+	setHomeView
 } from './mapPrefs.svelte';
 
 const stored = () => JSON.parse(localStorage.getItem('geoclick:recent-maps:v1') ?? '[]');
@@ -62,5 +64,15 @@ describe("the start screen's view (FT-77)", () => {
 		expect(pickerView()).toBe('world');
 		// On the world, back leaves the app: nothing to go up to.
 		expect(pickerGoUp()).toBe(false);
+	});
+});
+
+describe('the start screen: map or list (FT-78)', () => {
+	it('is kept on the device', () => {
+		setHomeView('list');
+		expect(homeView()).toBe('list');
+		expect(localStorage.getItem('geoclick:home-view:v1')).toBe('list');
+		setHomeView('map');
+		expect(homeView()).toBe('map');
 	});
 });

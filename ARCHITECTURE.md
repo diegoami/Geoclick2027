@@ -111,6 +111,10 @@ pairs well with a canvas/map-heavy UI.
   country's own catalog groups, or its continent's), linked through each
   group's `pickerIdOf` (`mapCatalog.ts`). The panel renders the home page's
   own `mapCard` snippet, passed in as a prop.
+  The home page shows the picker or the list (FT-78), by `homeView()` in
+  `mapPrefs.svelte.ts`; the prerendered HTML is the list, and a running
+  tutorial forces it. The list is one row per catalog group with a
+  `<select>` of its maps and `groupProgress` (`homeProgress.ts`).
 
 - **A derived fact per target** (v0.8.0, FT-34). `data/scripts/build-facts.ts`
   writes `data/maps/<id>/facts.json` beside each `map.json` — structured

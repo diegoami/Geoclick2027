@@ -27,6 +27,10 @@ export type TranslationKey =
 	| 'nav.maps'
 	| 'nav.hideButtons'
 	| 'nav.showButtons'
+	| 'home.viewLabel'
+	| 'home.viewMap'
+	| 'home.viewList'
+	| 'home.chooseMap'
 	| 'picker.label'
 	| 'picker.world'
 	| 'picker.close'
@@ -183,6 +187,10 @@ const en: Dictionary = {
 	'nav.maps': 'Maps',
 	'nav.hideButtons': 'Hide the buttons',
 	'nav.showButtons': 'Show the buttons',
+	'home.viewLabel': 'Show the maps as',
+	'home.viewMap': 'Map',
+	'home.viewList': 'List',
+	'home.chooseMap': 'Choose a map…',
 	'picker.label': 'World map: choose a continent, then a country',
 	'picker.world': 'World',
 	'picker.close': 'Close',
@@ -356,6 +364,10 @@ const de: Dictionary = {
 	'nav.maps': 'Karten',
 	'nav.hideButtons': 'Schaltflächen ausblenden',
 	'nav.showButtons': 'Schaltflächen einblenden',
+	'home.viewLabel': 'Karten zeigen als',
+	'home.viewMap': 'Karte',
+	'home.viewList': 'Liste',
+	'home.chooseMap': 'Karte wählen…',
 	'picker.label': 'Weltkarte: wähle einen Kontinent, dann ein Land',
 	'picker.world': 'Welt',
 	'picker.close': 'Schließen',
@@ -531,6 +543,10 @@ const it: Dictionary = {
 	'nav.maps': 'Mappe',
 	'nav.hideButtons': 'Nascondi i pulsanti',
 	'nav.showButtons': 'Mostra i pulsanti',
+	'home.viewLabel': 'Mostra le mappe come',
+	'home.viewMap': 'Mappa',
+	'home.viewList': 'Elenco',
+	'home.chooseMap': 'Scegli una mappa…',
 	'picker.label': 'Mappa del mondo: scegli un continente, poi un paese',
 	'picker.world': 'Mondo',
 	'picker.close': 'Chiudi',

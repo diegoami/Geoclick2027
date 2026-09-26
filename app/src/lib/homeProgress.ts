@@ -60,3 +60,22 @@ export async function loadHomeProgress(
 
 	return { summaries, masteries };
 }
+
+/**
+ * How well a whole country (or continent) is known, for its row in the list
+ * (FT-78): the names known across its maps, over the names on them. Nothing
+ * until one name is known, like a map's own bar (FT-65).
+ */
+export function groupProgress(
+	mapIds: string[],
+	masteries: Record<string, Mastery | undefined>,
+	targetCount: (mapId: string) => number
+): { known: number; total: number } | undefined {
+	let known = 0;
+	let total = 0;
+	for (const id of mapIds) {
+		known += masteries[id]?.known ?? 0;
+		total += targetCount(id);
+	}
+	return known > 0 ? { known, total } : undefined;
+}

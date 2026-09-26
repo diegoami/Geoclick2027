@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { goto } from '$app/navigation';
 	import { resolve } from '$app/paths';
 	import mapIndex from '../../../data/maps/index.json';
 	import {
@@ -8,13 +9,13 @@
 		type SessionSummary
 	} from '$lib/progressRepository';
 	import { handSize } from '$lib/difficulty';
-	import { loadHomeProgress, type Mastery } from '$lib/homeProgress';
+	import { groupProgress, loadHomeProgress, type Mastery } from '$lib/homeProgress';
 	import { countMaps, filterGroups } from '$lib/mapSearch';
 	import { t, tPlural } from '$lib/i18n.svelte';
 	import LanguageSwitcher from '$lib/LanguageSwitcher.svelte';
 	import KnownProgress from '$lib/KnownProgress.svelte';
 	import { mapDisplayName, mapGroups, mapTypeLabel } from '$lib/mapCatalog';
-	import { favouriteMaps, recentMaps } from '$lib/mapPrefs.svelte';
+	import { favouriteMaps, homeView, recentMaps, setHomeView } from '$lib/mapPrefs.svelte';
 	import FavouriteStar from '$lib/FavouriteStar.svelte';
 	import { RELEASES_URL, isNativeShell } from '$lib/platform';
 	import TutorialButton from '$lib/TutorialButton.svelte';
@@ -69,6 +70,7 @@
 	// to that HTML (no hydration mismatch).
 	let mounted = $state(false);
 	const hasShortcuts = $derived(mounted && (favouriteMaps().length > 0 || recentMaps().length > 0));
+	const showMap = $derived(mounted && homeView() === 'map' && tutorialState().status === 'idle');
 
 	onMount(() => {
 		mounted = true;
@@ -224,62 +226,98 @@
 		</div>
 	{/if}
 
-	<!-- The world, then a continent, then a country's maps (FT-77, #58). The
-	     map runs in the browser only, so it comes after mount; the list below
-	     is what the prerendered page holds. -->
-	{#if mounted}
+	<!-- The map or the list (FT-78, #58), kept on the device. The prerendered
+	     page is the list; the map takes its place after mount when it is the
+	     choice. While a tutorial runs the list shows, since its first step
+	     points at Italy's row (FT-79 teaches the map). -->
+	<div class="view-switch" role="group" aria-label={t('home.viewLabel')}>
+		<button
+			type="button"
+			aria-pressed={showMap}
+			disabled={tutorialState().status !== 'idle'}
+			onclick={() => setHomeView('map')}>{t('home.viewMap')}</button
+		>
+		<button type="button" aria-pressed={!showMap} onclick={() => setHomeView('list')}
+			>{t('home.viewList')}</button
+		>
+	</div>
+
+	{#if showMap}
+		<!-- The world, then a continent, then a country's maps (FT-77). -->
 		<section class="picker-section">
 			<WorldPicker card={mapCard} />
 		</section>
-	{/if}
-	{#if hasShortcuts}
-		<h2 class="all-maps">{t('home.allMaps')}</h2>
-	{/if}
-
-	<!-- Searching is about the full list; Favourites and Recent are short by
-	     definition and stay where they are (FT-31). -->
-	<div class="search">
-		<label class="visually-hidden" for="map-search">{t('home.search')}</label>
-		<input
-			id="map-search"
-			type="search"
-			autocomplete="off"
-			placeholder={t('home.search')}
-			bind:value={query}
-			onkeydown={(e) => {
-				if (e.key === 'Escape') query = '';
-			}}
-		/>
+	{:else}
+		<!-- Searching is about the full list; Favourites and Recent are short by
+		     definition and stay where they are (FT-31). -->
+		<div class="search">
+			<label class="visually-hidden" for="map-search">{t('home.search')}</label>
+			<input
+				id="map-search"
+				type="search"
+				autocomplete="off"
+				placeholder={t('home.search')}
+				bind:value={query}
+				onkeydown={(e) => {
+					if (e.key === 'Escape') query = '';
+				}}
+			/>
+			{#if query}
+				<button class="clear" onclick={() => (query = '')}>{t('home.searchClear')}</button>
+			{/if}
+		</div>
 		{#if query}
-			<button class="clear" onclick={() => (query = '')}>{t('home.searchClear')}</button>
+			<p class="search-count" aria-live="polite">
+				{shownCount === 1
+					? t('home.searchOneResult')
+					: t('home.searchResults', { count: shownCount })}
+			</p>
 		{/if}
-	</div>
-	{#if query}
-		<p class="search-count" aria-live="polite">
-			{shownCount === 1
-				? t('home.searchOneResult')
-				: t('home.searchResults', { count: shownCount })}
-		</p>
-	{/if}
 
-	<div class="groups">
-		{#each shownGroups as group (group.country)}
-			<section class="country-group">
-				<h3>{group.country}</h3>
-				<ul>
-					{#each group.maps as map (map.id)}
-						<!-- The tutorial's first step points at this card, not at a copy of it in
-						     Favourites or Recent, which not everyone has (docs/TUTORIAL.md). -->
-						{@render mapCard(
-							map.id,
-							map.label,
-							map.id === TUTORIAL_MAP_ID ? 'home-map-card' : undefined
-						)}
-					{/each}
-				</ul>
-			</section>
-		{/each}
-	</div>
+		<!-- One row per country and per continent, its maps in a listbox that
+		     opens the one chosen (FT-78): Germany alone had fourteen buttons. -->
+		<ul class="groups">
+			{#each shownGroups as group (group.country)}
+				{@const selectId = `maps-${group.maps[0].id}`}
+				{@const progress = groupProgress(
+					group.maps.map((m) => m.id),
+					masteries,
+					(id) => targetIdsByMap.get(id)?.length ?? 0
+				)}
+				<!-- The tutorial's first step points at Italy's row, not at a copy
+				     in Favourites or Recent, which not everyone has (docs/TUTORIAL.md). -->
+				<li
+					class="group-row"
+					data-tutorial={group.maps.some((m) => m.id === TUTORIAL_MAP_ID)
+						? 'home-map-card'
+						: undefined}
+				>
+					<label class="group-name" for={selectId}>{group.country}</label>
+					{#if progress}
+						<span class="group-progress">
+							<KnownProgress
+								known={progress.known}
+								total={progress.total}
+								allKnown={progress.known === progress.total}
+							/>
+						</span>
+					{/if}
+					<select
+						id={selectId}
+						onchange={(e) => {
+							const mapId = e.currentTarget.value;
+							if (mapId) goto(resolve('/map/[mapId]', { mapId }));
+						}}
+					>
+						<option value="" selected>{t('home.chooseMap')}</option>
+						{#each group.maps as map (map.id)}
+							<option value={map.id}>{map.label}</option>
+						{/each}
+					</select>
+				</li>
+			{/each}
+		</ul>
+	{/if}
 </main>
 
 <style>
@@ -431,28 +469,62 @@
 	.shortcut-group .map-card a:hover {
 		background: #fbf4ec;
 	}
-	.all-maps {
-		margin: 0 0 1rem;
-		padding-bottom: 0.4rem;
-		border-bottom: 2px solid rgba(44, 58, 51, 0.25);
-		font-size: 1.15rem;
-		font-weight: 700;
-		color: #2c3a33;
-		text-align: left;
-	}
 	.groups {
 		display: flex;
 		flex-direction: column;
-		gap: 1.5rem;
+		gap: 0.5rem;
 		text-align: left;
 	}
-	.country-group h3 {
-		margin: 0 0 0.5rem;
-		font-size: 1rem;
+	.view-switch {
+		display: inline-flex;
+		margin: 0.5rem 0 1rem;
+		border: 1px solid rgba(44, 58, 51, 0.3);
+		border-radius: 999px;
+		overflow: hidden;
+	}
+	.view-switch button {
+		font: inherit;
+		font-size: 0.9rem;
+		padding: 0.35rem 1.1rem;
+		border: none;
+		background: rgba(255, 255, 255, 0.7);
+		color: #2c3a33;
+		cursor: pointer;
+	}
+	.view-switch button[aria-pressed='true'] {
+		background: #b06a2f;
+		color: #fff;
+	}
+	.view-switch button:disabled {
+		cursor: default;
+		opacity: 0.5;
+	}
+	.group-row {
+		display: grid;
+		grid-template-columns: 1fr auto;
+		align-items: center;
+		gap: 0.25rem 0.75rem;
+		padding: 0.55rem 0.75rem;
+		border: 1px solid #ccc;
+		border-radius: 0.5rem;
+		background: rgba(255, 255, 255, 0.55);
+	}
+	.group-name {
 		font-weight: 700;
 		color: #2c3a33;
-		border-bottom: 1px solid #e0e0e0;
-		padding-bottom: 0.25rem;
+	}
+	.group-progress {
+		grid-column: 1 / -1;
+		grid-row: 2;
+	}
+	.group-row select {
+		font: inherit;
+		font-size: 0.9rem;
+		max-width: 12rem;
+		padding: 0.3rem 0.4rem;
+		border: 1px solid #bbb;
+		border-radius: 0.4rem;
+		background: #fff;
 	}
 	ul {
 		list-style: none;
@@ -500,8 +572,8 @@
 		.groups {
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
-			column-gap: 2rem;
-			row-gap: 1.5rem;
+			column-gap: 1rem;
+			row-gap: 0.5rem;
 			align-items: start;
 		}
 	}

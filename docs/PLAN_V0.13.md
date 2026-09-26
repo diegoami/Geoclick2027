@@ -242,8 +242,8 @@ the panel and the back button are all things to feel on the device.
 | Task  | State   | Merge | Notes |
 | ----- | ------- | ----- | ----- |
 | FT-76 | **merged** | PR #70 | 172 countries, 446 KB of tiles (5%, z5), well under the 1.5 MB gate; ids and continents match the six Countries maps exactly |
-| FT-77 | in PR   | —     | on the home page above the list until FT-78's switch; picker gains a `land` layer (531 KB) |
-| FT-78 | planned | —     |       |
+| FT-77 | **merged** | PR #73 | on the home page above the list until FT-78's switch; picker gains a `land` layer (531 KB) |
+| FT-78 | in PR   | —     | a `<select>` per row; the tutorial's anchor moves to Italy's row, and a running tutorial shows the list until FT-79 |
 | FT-79 | planned | —     |       |
 | FT-80 | **merged** | PR #69 | #68: a set of publishers, the largest wins; a cleanup removes only its own |
 | FT-81 | in PR   | —     | #71: 17 maps and the picker rebuilt, tiles unchanged; `targetName()` in every view; 42 town names not shown |

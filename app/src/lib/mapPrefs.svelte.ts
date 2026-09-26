@@ -275,3 +275,37 @@ export function pickerGoUp(): boolean {
 	setPickerView('world');
 	return true;
 }
+
+// --- the start screen: the map or the list (FT-78, #58) ---
+//
+// The map by default; the list is one tap away and the choice is kept on the
+// device. The prerendered page is the list, and the map takes its place after
+// mount when it is the choice.
+
+const HOME_VIEW_KEY = 'geoclick:home-view:v1';
+export type HomeView = 'map' | 'list';
+
+function readHomeView(): HomeView {
+	if (typeof localStorage === 'undefined') return 'map';
+	try {
+		return localStorage.getItem(HOME_VIEW_KEY) === 'list' ? 'list' : 'map';
+	} catch {
+		return 'map';
+	}
+}
+
+let homeViewState = $state<HomeView>(readHomeView());
+
+export function homeView(): HomeView {
+	return homeViewState;
+}
+
+export function setHomeView(view: HomeView): void {
+	homeViewState = view;
+	if (typeof localStorage === 'undefined') return;
+	try {
+		localStorage.setItem(HOME_VIEW_KEY, view);
+	} catch {
+		// Full or blocked storage: the choice still holds for this session.
+	}
+}

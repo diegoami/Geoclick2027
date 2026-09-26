@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { loadHomeProgress } from './homeProgress';
+import { groupProgress, loadHomeProgress } from './homeProgress';
 import {
 	createInMemoryProgressRepository,
 	type CardState,
@@ -97,5 +97,22 @@ describe('loadHomeProgress', () => {
 			new Map([['italy-regions', ['piemonte']]])
 		);
 		expect(masteries['italy-regions']).toEqual({ known: 0, total: 1, level: 0 });
+	});
+});
+
+describe("groupProgress (a country's row, FT-78)", () => {
+	const counts: Record<string, number> = { a: 10, b: 20, c: 5 };
+	const count = (id: string) => counts[id] ?? 0;
+
+	it('adds the names known across its maps, over all their names', () => {
+		const masteries = {
+			a: { known: 4, total: 10, level: 0 as const },
+			b: { known: 6, total: 20, level: 0 as const }
+		};
+		expect(groupProgress(['a', 'b', 'c'], masteries, count)).toEqual({ known: 10, total: 35 });
+	});
+
+	it('says nothing until a name is known', () => {
+		expect(groupProgress(['a', 'c'], {}, count)).toBeUndefined();
 	});
 });
