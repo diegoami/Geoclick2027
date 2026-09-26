@@ -9,6 +9,8 @@ one entry per tagged version on `main`.
 
 For players:
 
+- **Recent starts folded,** one line with its count, like a spoiler: tap
+  it to see the maps you played last. Favourites stay open.
 - **An Exit button** on the start screen, in the Android and Windows apps,
   beside Tutorial. The web page has none, since a browser tab can't close
   itself. The phone's back button still leaves from the world view, and

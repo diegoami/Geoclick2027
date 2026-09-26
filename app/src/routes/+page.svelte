@@ -205,32 +205,38 @@
 			{/if}
 
 			{#if recentMaps().length > 0}
-				<section class="shortcut-group">
-					<h2>
-						<svg viewBox="0 0 24 24" aria-hidden="true"
-							><circle
-								cx="12"
-								cy="12"
-								r="8.5"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-							/><path
-								d="M12 7.5V12l3 2"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-								stroke-linecap="round"
-							/></svg
-						>
-						{t('home.recent')}
-					</h2>
+				<!-- Folded by default, like a spoiler: the maps played last are a
+				     shortcut, not the start screen's first thing (owner, 2026-09-26). -->
+				<details class="shortcut-group recent">
+					<summary
+						><h2>
+							<svg viewBox="0 0 24 24" aria-hidden="true"
+								><circle
+									cx="12"
+									cy="12"
+									r="8.5"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								/><path
+									d="M12 7.5V12l3 2"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+								/></svg
+							>
+							{t('home.recent')}
+							<span class="count">({recentMaps().length})</span>
+							<span class="chevron" aria-hidden="true">▸</span>
+						</h2></summary
+					>
 					<ul>
 						{#each recentMaps() as mapId (mapId)}
 							{@render mapCard(mapId, mapDisplayName(mapId) ?? mapId)}
 						{/each}
 					</ul>
-				</section>
+				</details>
 			{/if}
 		</div>
 	{/if}
@@ -446,6 +452,30 @@
 		font-size: 1rem;
 		font-weight: 700;
 		color: #b5691f;
+	}
+	.recent summary {
+		list-style: none;
+		cursor: pointer;
+	}
+	.recent summary::-webkit-details-marker {
+		display: none;
+	}
+	.recent summary h2 {
+		margin: 0;
+	}
+	.recent[open] summary h2 {
+		margin-bottom: 0.6rem;
+	}
+	.recent .count {
+		font-weight: 400;
+		opacity: 0.75;
+	}
+	.recent .chevron {
+		margin-left: auto;
+		transition: transform 0.15s;
+	}
+	.recent[open] .chevron {
+		transform: rotate(90deg);
 	}
 	.shortcut-group h2 svg {
 		width: 1.1rem;
