@@ -35,8 +35,7 @@
 				// On the start screen, a continent's view goes up to the world first.
 				if (target.kind === 'exit') {
 					if (!pickerGoUp()) App.exitApp();
-				}
-				else if (target.kind === 'home') goto(resolve('/'), { replaceState: true });
+				} else if (target.kind === 'home') goto(resolve('/'), { replaceState: true });
 				else goto(resolve('/map/[mapId]', { mapId: target.mapId }), { replaceState: true });
 			});
 			if (destroyed) handle.remove();
