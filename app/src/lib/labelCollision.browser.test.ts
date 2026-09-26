@@ -382,6 +382,28 @@ describe('stretched names as obstacles, off the page corner (FT-68)', () => {
 		container.append(popup);
 	};
 
+	it('a new language renames a stretched name in place (#71)', () => {
+		const { container, names } = offsetMap();
+		const text = () => container.querySelector('textPath')?.textContent;
+		expect(text()).toBe('TOSCANA');
+		names.set('toscana', {
+			name: 'Tuscany',
+			spine: {
+				curve: [
+					[100, 200],
+					[300, 200],
+					[500, 200]
+				],
+				aspect: 10
+			},
+			tier: 'known',
+			popup: { getElement: () => undefined }
+		});
+		expect(text()).toBe('TUSCANY');
+		expect(container.querySelectorAll('textPath')).toHaveLength(1);
+		names.destroy();
+	});
+
 	it('a pill label where a stretched name sits yields to it', async () => {
 		const { container, map, names } = offsetMap();
 		expect(container.getBoundingClientRect()).toMatchObject({ left: 170, top: 420 - 150 });

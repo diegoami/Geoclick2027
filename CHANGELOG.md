@@ -5,6 +5,17 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
+## Unreleased
+
+For players:
+
+- **Countries and capitals in your language.** With Italian or German
+  chosen, the continents' Countries maps say Francia or Frankreich, and the
+  Capitals maps and Europe's city maps say Mosca, Varsavia or Moskau,
+  Warschau. In English they read Rome and Warsaw. On the map, on the Quiz
+  slips and on the facts card; switching language renames what's already
+  on the map. A country's own maps keep their local names (Bayern, München).
+
 ## v0.12.0 — 2026-09-25 — Facts for the new maps
 
 **The places added in v0.11 get their fun facts: every country, every capital and city on the continents' maps, and every region and town of the 15 new countries. Plus a button that clears the map, and the fixes from playing on a tablet.**

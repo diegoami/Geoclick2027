@@ -15,6 +15,10 @@ export interface Target {
 	// by the facts builder to find the town's authored sentences. Absent on
 	// every single-country map.
 	country?: string;
+	// The name in the other languages, where it differs (#71): a country on
+	// a Countries map, a town on a map of several countries. `name` stays
+	// the key the tiles are joined on; read the shown name with targetName().
+	names?: Partial<Record<'en' | 'it' | 'de', string>>;
 	centroid: [number, number];
 	// For a point target (type: 'city'), degenerate - the centroid repeated
 	// as both corners - rather than a separate nullable field, since a

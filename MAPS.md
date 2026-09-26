@@ -879,6 +879,24 @@ of Oslo, not a town) were dropped; Brazzaville and Kinshasa, 9 km apart across
 the Congo, both stay as capitals. Fixups added to `build-points-map.ts`:
 Astana, Ngerulmud, Andorra la Vella, Plzeň, Panevėžys, Peja.
 
+### Names in each language (rebuilt 2026-09-26, FT-81, #71)
+
+The six Countries maps, the six Capitals maps, Europe's five city maps and
+the world picker were rebuilt with the same commands as above. Their
+map.json (and picker.json) gained `names: { en?, it?, de? }` where a place's
+name differs in that language. Every tileset came out byte-identical.
+
+- A country: admin-0 `NAME_IT` / `NAME_DE`, with
+  `COUNTRY_NAME_FIXUPS_BY_LANGUAGE` (multiCountry.ts). They're kept out of
+  the tiles.
+- A town, on a map of several countries only (`build-points-map.ts` with
+  `--continent` or `--countries`): populated places' `NAME_EN` / `NAME_IT` /
+  `NAME_DE`, less `TOWN_NAMES_NOT_SHOWN`. A town whose name the region was
+  added to ("Córdoba, Spain") gets none.
+- `targetName.test.ts` checks that no other map carries `names`, that no two
+  places on a map read the same in any language, and that the picker agrees
+  with the Countries maps.
+
 ### The world picker (built 2026-09-26, FT-76)
 
 The map the home screen opens on (v0.13, #58): the 172 countries of the six

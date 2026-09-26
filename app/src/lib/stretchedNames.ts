@@ -195,6 +195,11 @@ export class StretchedNames {
 			text.setAttribute('aria-hidden', 'true');
 			this.names.set(id, drawn);
 		} else {
+			// A new language renames it in place (#71), and it is measured again.
+			if (name.name !== drawn.name) {
+				drawn.textPath.textContent = name.name.toUpperCase();
+				drawn.widthAt1px = this.widthAt1px(name.name);
+			}
 			Object.assign(drawn, name);
 		}
 		for (const tier of ['known', 'nearly', 'seen', 'asked'] as const) {

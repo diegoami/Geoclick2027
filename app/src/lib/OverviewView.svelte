@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { onMount, onDestroy } from 'svelte';
+	import { onMount, onDestroy, untrack } from 'svelte';
+	import { getLanguage } from './i18n.svelte';
+	import { targetName } from './targetName';
 	import * as maplibregl from 'maplibre-gl';
 	import 'maplibre-gl/dist/maplibre-gl.css';
 	import { fetchMapDefAndStyle, createMap } from './geoclickMap';
@@ -35,6 +37,22 @@
 	// QuizView's solvedPopups.
 	// eslint-disable-next-line svelte/prefer-svelte-reactivity
 	const popups = new Map<string, maplibregl.Popup>();
+
+	// A new language renames every name on the map (#71), and the open card's.
+	$effect(() => {
+		const language = getLanguage();
+		untrack(() => {
+			for (const target of mapDef?.targets ?? []) {
+				const popup = popups.get(target.id);
+				const shown = targetName(target, language);
+				if (popup && popup.getElement()?.textContent !== shown) popup.setText(shown);
+			}
+		});
+	});
+	const askedName = $derived.by(() => {
+		const target = asked && mapDef?.targets.find((x) => x.id === asked?.id);
+		return target ? targetName(target) : asked?.name;
+	});
 
 	// Show or hide the Terrain layer as the preference changes (FT-33). An
 	// $effect rather than a call from the button: the button has no idea
@@ -118,7 +136,7 @@
 								: 'geoclick-solved-popup geoclick-region-name'
 					})
 						.setLngLat(target.centroid)
-						.setText(target.name)
+						.setText(targetName(target))
 						.addTo(map);
 					registerLabel(popup, {
 						priority: shares.get(target.id) ?? 0,
@@ -152,7 +170,7 @@
 	<div class="container" bind:this={container}></div>
 	{#if asked}
 		<FactCard
-			name={asked.name}
+			name={askedName ?? asked.name}
 			fact={facts[asked.id]}
 			origin={asked.origin}
 			extra={asked.extra}
