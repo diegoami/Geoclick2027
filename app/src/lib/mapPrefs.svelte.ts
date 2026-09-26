@@ -266,12 +266,22 @@ export function setPickerView(view: string): void {
 	}
 }
 
+// Whether the start screen's map is up, loaded, with its view checked
+// against the picker (WorldPicker sets it). The list, or a map not yet
+// loaded, has no continent to go up from.
+let pickerShown = false;
+
+export function setPickerShown(shown: boolean): void {
+	pickerShown = shown;
+}
+
 /**
  * The phone's back button on the start screen: from a continent up to the
- * world, and only then out of the app. True when it moved up.
+ * world, and only then out of the app. True when it moved up. A continent
+ * the player can't see - behind the list (#81) - is not one to go up from.
  */
 export function pickerGoUp(): boolean {
-	if (pickerViewState === 'world') return false;
+	if (!pickerShown || pickerViewState === 'world') return false;
 	setPickerView('world');
 	return true;
 }

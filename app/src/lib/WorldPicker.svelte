@@ -16,7 +16,7 @@
 	import { enableLabelCollision, registerLabel } from './labelCollision';
 	import type { Mastery } from './homeProgress';
 	import MapSections from './MapSections.svelte';
-	import { pickerView, setPickerView } from './mapPrefs.svelte';
+	import { pickerView, setPickerShown, setPickerView } from './mapPrefs.svelte';
 	import { targetName } from './targetName';
 	import { tutorialContinentChosen, tutorialCountryChosen, tutorialState } from './tutorial.svelte';
 	import { STEPS, TUTORIAL_CONTINENT, TUTORIAL_COUNTRY } from './tutorialMachine';
@@ -188,6 +188,10 @@
 				if (cancelled) return;
 				picker = loadedPicker;
 				const start = validView(loadedPicker, pickerView());
+				// A stored continent the picker no longer has is the world, in
+				// storage too, so the back button sees what the player sees (#81).
+				if (start !== pickerView()) setPickerView(start);
+				setPickerShown(true);
 				const [west, south, east, north] = boxOf(start);
 				map = new maplibregl.Map({
 					container,
@@ -356,6 +360,7 @@
 	});
 
 	onDestroy(() => {
+		setPickerShown(false);
 		clearLabels();
 		tutorialSpot?.remove();
 		stopCollision?.();
