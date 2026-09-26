@@ -12,7 +12,7 @@
 // home screen fits to, so "Europe" frames Europe rather than Europe plus
 // Siberia.
 //
-//   npx tsx data/scripts/build-picker.ts [--simplify=3%] [--max-zoom=5]
+//   npx tsx data/scripts/build-picker.ts [--simplify=5%] [--max-zoom=5]
 //
 // Writes data/maps/world-picker/tiles.pmtiles and picker.json.
 
@@ -80,7 +80,7 @@ interface Feature {
 
 function main(): void {
 	const args = parseArgs(process.argv.slice(2));
-	const simplify = args.simplify ?? '3%';
+	const simplify = args.simplify ?? '5%';
 	const maxZoom = Number(args['max-zoom'] ?? 5);
 	const missing = missingSources([ADMIN0_SHP]);
 	if (missing.length > 0) {
