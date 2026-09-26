@@ -72,7 +72,10 @@
 	// to that HTML (no hydration mismatch).
 	let mounted = $state(false);
 	const hasShortcuts = $derived(mounted && (favouriteMaps().length > 0 || recentMaps().length > 0));
-	const showMap = $derived(mounted && homeView() === 'map' && tutorialState().status === 'idle');
+	// The tutorial's first steps are on the map (FT-79), so it shows the map
+	// while one runs, without changing the player's choice.
+	const tutorialRuns = $derived(tutorialState().status !== 'idle');
+	const showMap = $derived(mounted && (homeView() === 'map' || tutorialRuns));
 
 	onMount(() => {
 		mounted = true;
@@ -243,17 +246,20 @@
 
 	<!-- The map or the list (FT-78, #58), kept on the device. The prerendered
 	     page is the list; the map takes its place after mount when it is the
-	     choice. While a tutorial runs the list shows, since its first step
-	     points at Italy's row (FT-79 teaches the map). -->
+	     choice. While a tutorial runs the map shows, since its first steps
+	     are on it (FT-79), and the switch waits. -->
 	<div class="view-switch" role="group" aria-label={t('home.viewLabel')}>
 		<button
 			type="button"
 			aria-pressed={showMap}
-			disabled={tutorialState().status !== 'idle'}
+			disabled={tutorialRuns}
 			onclick={() => setHomeView('map')}>{t('home.viewMap')}</button
 		>
-		<button type="button" aria-pressed={!showMap} onclick={() => setHomeView('list')}
-			>{t('home.viewList')}</button
+		<button
+			type="button"
+			aria-pressed={!showMap}
+			disabled={tutorialRuns}
+			onclick={() => setHomeView('list')}>{t('home.viewList')}</button
 		>
 	</div>
 

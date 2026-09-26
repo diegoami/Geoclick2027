@@ -23,7 +23,16 @@ Settled elsewhere, not reopened here (FEATURE_PLAN.md, product decisions):
 
 ## The flow at a glance
 
-> **Step 4, Terrain, was added in FT-43 (2026-09-19).** The layer shipped
+> **Steps 1 to 3, Europe, Italy and the map, came with FT-79 (2026-09-26).**
+> The start screen opens on a world map (FT-77, #58), so the tutorial now
+> takes the player the way they will find every map: the continent on the
+> world, the country on the continent, then the map in the country's row.
+> The page shows the map for these steps even when the player has chosen
+> the list, and goes back to the list after the tutorial. A player who opens
+> Italy — Regions some other way (Favourites, Recent) skips to step 4
+> rather than pausing. Step numbers below count from these three.
+>
+> **Step 6, Terrain, was added in FT-43 (2026-09-19).** The layer shipped
 > switched off in v0.8.0 and the product owner - who had asked for it - later
 > opened the Known map and asked why the landmarks and reliefs were missing
 > and whether they had been merged. They had. Turning it on by default fixed
@@ -31,25 +40,27 @@ Settled elsewhere, not reopened here (FEATURE_PLAN.md, product decisions):
 > at and that the button turns it off, which is what this step does.
 
 
-An intro card, twelve steps, and an outro card. The player does the real
+An intro card, fourteen steps, and an outro card. The player does the real
 thing at every action step; the tutorial waits for it and moves on by
-itself. Only the explanation step (11) has a Next button.
+itself. Only the explanation step (13) has a Next button.
 
 | # | Where | Highlights (`data-tutorial`) | Moves on when | What the player learns |
 |---|---|---|---|---|
 | Intro | home page | nothing (centred card) | Start | what's about to happen, and that nothing is saved |
-| 1 | home page | `home-map-card` (Italy's "Regions" card in the country list) | the route becomes `/map/italy-regions` | choosing a map |
-| 2 | the Known map | `map` (the map), `zoom-control` (the `+`/`−` buttons) | the player zooms or pans the map | zoom and pan, with mouse, touch or buttons |
-| 3 | the Known map | `map` | the player taps a region and its name lands on the map | **the map you build**: tap a name on, tap it off again |
-| 4 | the Known map | `terrain-toggle` (the Terrain button) | the player presses Terrain, either direction | **what is under the map**: sea, rivers and named ranges, on by default and switchable |
-| 5 | the Known map, then overview | `nav-overview`, then `map` | the route becomes `/map/italy-regions/overview` | names you earn appear on their own; Overview shows every name at once |
-| 6 | overview | `nav-quiz` | the route becomes `/map/italy-regions/quiz` | where the quiz is |
-| 7 | quiz | `slip-sicilia` (a name slip in the tray) | a correct drop, of any slip | drag a name onto its region |
-| 8 | quiz | `slip-sardegna` | a wrong drop, of any slip | what a mistake looks like |
-| 9 | quiz | `nav-overview` | the route becomes `/map/italy-regions/overview` | checking a region you're unsure of |
-| 10 | overview | `nav-quiz` | the route becomes `/map/italy-regions/quiz` | going back to the quiz |
-| 11 | quiz | `quiz-progress` (the "1 / 20 placed" line) | Next | solved regions stay solved; spaced repetition |
-| 12 | quiz | `nav-tour` | the route becomes `/map/italy-regions/tour` | Tour mode |
+| 1 | home page, world map | `picker-europe` (Europe's name on the world) | the map opens Europe | where the maps are: every one starts from the world |
+| 2 | home page, Europe | `picker-italy` (over Italy on the map) | a tap on Italy, which lights Italy's row | a country's maps are in its row |
+| 3 | home page, Europe | `home-map-card` (Italy's row, in the panel beside or below the map) | the route becomes `/map/italy-regions` | choosing a map from a row's list |
+| 4 | the Known map | `map` (the map), `zoom-control` (the `+`/`−` buttons) | the player zooms or pans the map | zoom and pan, with mouse, touch or buttons |
+| 5 | the Known map | `map` | the player taps a region and its name lands on the map | **the map you build**: tap a name on, tap it off again |
+| 6 | the Known map | `terrain-toggle` (the Terrain button) | the player presses Terrain, either direction | **what is under the map**: sea, rivers and named ranges, on by default and switchable |
+| 7 | the Known map, then overview | `nav-overview`, then `map` | the route becomes `/map/italy-regions/overview` | names you earn appear on their own; Overview shows every name at once |
+| 8 | overview | `nav-quiz` | the route becomes `/map/italy-regions/quiz` | where the quiz is |
+| 9 | quiz | `slip-sicilia` (a name slip in the tray) | a correct drop, of any slip | drag a name onto its region |
+| 10 | quiz | `slip-sardegna` | a wrong drop, of any slip | what a mistake looks like |
+| 11 | quiz | `nav-overview` | the route becomes `/map/italy-regions/overview` | checking a region you're unsure of |
+| 12 | overview | `nav-quiz` | the route becomes `/map/italy-regions/quiz` | going back to the quiz |
+| 13 | quiz | `quiz-progress` (the "1 / 20 placed" line) | Next | solved regions stay solved; spaced repetition |
+| 14 | quiz | `nav-tour` | the route becomes `/map/italy-regions/tour` | Tour mode |
 | Outro | tour | nothing (centred card) | Finish, or Replay | the star, and how to replay the tutorial |
 
 How this maps onto the original request (FEATURE_BACKLOG.md §3): 1 select
@@ -79,19 +90,40 @@ keyed by the translation key FT-11 will add.
 
 A centred card with no highlight. Start goes to step 1.
 
-### 1. Choose a map — home page
+### 1. Choose Europe — home page, the world
 
-> Let's start with a map. Open **Regions**, under Italy.
+> Every map starts from the world. Choose **Europe**.
 
-- **Highlight:** Italy's "Regions" card **in the country list**. If
-  Italy — Regions is also in Favourites or Recent, those copies aren't
-  highlighted: the country-list card is always there, so the step works
-  the same for everyone. The page scrolls the card into view.
-- **Moves on:** when the route becomes `/map/italy-regions/overview`,
-  whichever card was used (a Favourites or Recent copy works too).
+- **Setting:** the start screen's map, on the world whatever view was left
+  last (the tutorial sets it on entering the step). The Map / List switch is
+  disabled while the tutorial runs.
+- **Highlight:** Europe's name on the map, a button of its own.
+- **Moves on:** when the map opens Europe, however: the name, a tap on a
+  European country, or Europe's heading in the panel. Another continent is
+  a look around and doesn't count.
+
+### 2. Choose Italy — home page, Europe
+
+> Now click **Italy** on the map. Its row in the list lights up.
+
+(Touch: "Now tap **Italy** …".)
+
+- **Highlight:** a finger-sized ring over Italy (`picker-italy`), a marker
+  that lets clicks through: a country is no element of its own.
+- **Moves on:** a tap on Italy. Another country marks its own row and
+  doesn't count.
+
+### 3. Choose a map — home page, Europe
+
+> Italy's maps are in its row's list. Choose **Regions**.
+
+- **Highlight:** Italy's row in the panel, lit (the tutorial lights it
+  however the player reached the step). The overlay scrolls it into view.
+- **Moves on:** when the route becomes `/map/italy-regions`, whichever way
+  (a Favourites or Recent copy works too, from any of steps 1 to 3).
 - **Off-script:** opening any other map pauses the tutorial.
 
-### 2. Zoom and pan — overview
+### 4. Zoom and pan — overview
 
 Mouse and trackpad:
 
@@ -116,7 +148,7 @@ Touch screens:
 - **Which copy:** touch copy when `matchMedia('(hover: none)')` matches,
   which is phones and tablets. Otherwise the mouse copy.
 
-### 3. The map you build — the Known map
+### 5. The map you build — the Known map
 
 Mouse:
 
@@ -141,7 +173,7 @@ Touch:
   now opens here instead, and what the player needs to learn first is that
   a tap leaves a name behind.
 
-### 4. The overview — the Known map, then overview
+### 7. The overview — the Known map, then overview
 
 > Names you place right in the quiz appear here on their own, as strongly as
 > you know them. New to a map? **Overview** shows every name at once — open
@@ -157,14 +189,14 @@ Touch:
   once is what a newcomer needs. Decision 1 in docs/PLAN_V0.9.md.
 - **Back** from here returns to step 3 on the Known map.
 
-### 5. Open the quiz — overview
+### 8. Open the quiz — overview
 
 > Ready to test yourself for real? Open the **Quiz**.
 
 - **Highlight:** the Quiz tab.
 - **Moves on:** the route becomes `/map/italy-regions/quiz`.
 
-### 6. Place a name — quiz
+### 9. Place a name — quiz
 
 > Drag a name from the tray onto its region. Try **Sicilia**: the big
 > island off the toe of the boot.
@@ -181,7 +213,7 @@ Touch:
   Since FT-11 the quiz fits the map into the space above the tray, for
   every map, not only in the tutorial.
 
-### 7. Make a mistake — quiz
+### 10. Make a mistake — quiz
 
 > Now get one wrong on purpose: drop **Sardegna** anywhere on the
 > mainland. The region you hit flashes red, and Sardegna is shown where it
@@ -197,7 +229,7 @@ Touch:
 - **Why Sardegna on the mainland:** it's far from anything else, so the
   24px drop tolerance can't turn the drop into a correct one by accident.
 
-### 8. Check in the overview — quiz
+### 11. Check in the overview — quiz
 
 > Not sure where a region is? Look it up in the **overview**.
 
@@ -205,7 +237,7 @@ Touch:
 - **Moves on:** the route becomes `/map/italy-regions/overview`. On
   Android, the back button goes there too (FT-14), and that counts.
 
-### 9. Back to the quiz — overview
+### 12. Back to the quiz — overview
 
 > Found Sardegna? Go back to the **Quiz**.
 
@@ -216,7 +248,7 @@ Touch:
   the names still in the tray are the ones still to place - going out to
   the Overview and back does not restart the round.
 
-### 10. What counts as known — quiz
+### 13. What counts as known — quiz
 
 > The regions you placed are still marked. Place a name right three times
 > in a row and it counts as known — **Progress** shows how far you have
@@ -238,7 +270,7 @@ Touch:
   on each map". At 360px it ran to 7 lines in German (5 in English, 6 in
   Italian), so both went; the rest says the same in 4 lines or fewer.
 
-### 11. The tour — quiz
+### 14. The tour — quiz
 
 > Last one: the **Tour** flies you to each region in turn and shows its
 > name. Open it.
@@ -280,16 +312,16 @@ Touch:
 
 ### On every card
 
-- **Step counter:** "Step 3 of 11" on the numbered steps.
+- **Step counter:** "Step 3 of 14" on the numbered steps.
 - **Skip** (every card, and Esc on a keyboard) ends the tutorial straight
   away, with no confirmation: it's cheap to restart, and a confirmation
   would get in the way of a player who knows the app.
-- **Back** (steps 2 to 11) shows the previous step, and goes to its screen
+- **Back** (steps 2 to 14) shows the previous step, and goes to its screen
   if that's a different one. A step whose action is already done when it's
   shown (you're already on the quiz; a correct drop has already happened)
   shows **Next** instead of waiting. The tutorial remembers which actions
   happened: zoomed or panned, dropped correctly, dropped wrongly.
-- **Next** only on steps 3 and 10, and on any step whose action is already
+- **Next** only on step 13, and on any step whose action is already
   done (above).
 - **Focus:** each new card takes keyboard focus. Its buttons are reachable
   with Tab, and the card is announced as a dialog without trapping focus
@@ -299,7 +331,7 @@ Touch:
 
 Any route change that isn't the step's own screen or its target pauses
 the tutorial. Examples: opening another map, the map list, the progress map
-outside steps 3 to 5, or Tour before step 11.
+outside steps 4 to 7, or Tour before step 14.
 
 - The card is replaced by a small bar at the bottom of the screen:
   **"Tutorial paused"**, with **Resume** and **End tutorial**.
@@ -406,7 +438,9 @@ this at FT-09's review, 2026-09-14.
 | Anchor | Element | Notes |
 |---|---|---|
 | `tutorial-button` | the Tutorial button | home header and MapNav |
-| `home-map-card` | the `italy-regions` card in the country list | not the Favourites/Recent copies |
+| `picker-europe` (any `picker-<continent>`) | a continent's name on the start screen's world map | a MapLibre marker, set by WorldPicker |
+| `picker-italy` | a ring over Italy on the Europe view | only while a tutorial runs; `pointer-events: none` |
+| `home-map-card` | the row whose list holds `italy-regions`, in the map's panel or the list | not the Favourites/Recent copies |
 | `zoom-control` | MapLibre's `+`/`−` group | third-party DOM: `createMap` sets the attribute after `addControl` |
 | `nav-overview`, `nav-explore`, `nav-quiz`, `nav-tour` | MapNav's tabs | |
 | `slip-<targetId>` | each quiz slip | e.g. `slip-sicilia`, `slip-sardegna` |
@@ -458,7 +492,10 @@ mark that up in the strings.
 
 | Key | English | Deutsch | Italiano |
 |---|---|---|---|
-| `tutorial.step1` | Let's start with a map. Open **Regions**, under Italy. | Fangen wir mit einer Karte an. Öffne **Regionen** unter Italy. | Iniziamo con una mappa. Apri **Regioni**, sotto Italy. |
+| `tutorial.continent` | Every map starts from the world. Choose **Europe**. | Jede Karte beginnt bei der Welt. Wähle **Europa**. | Ogni mappa parte dal mondo. Scegli **Europa**. |
+| `tutorial.country` | Now click **Italy** on the map. Its row in the list lights up. | Klicke jetzt auf der Karte auf **Italien**. Seine Zeile in der Liste leuchtet auf. | Ora fai clic sull'**Italia** nella mappa. La sua riga nell'elenco si illumina. |
+| `tutorial.country.touch` | Now tap **Italy** on the map. Its row in the list lights up. | Tippe jetzt auf der Karte auf **Italien**. Seine Zeile in der Liste leuchtet auf. | Ora tocca l'**Italia** sulla mappa. La sua riga nell'elenco si illumina. |
+| `tutorial.step1` | Italy's maps are in its row's list. Choose **Regions**. | Italiens Karten stehen in der Auswahlliste seiner Zeile. Wähle **Regionen**. | Le mappe dell'Italia sono nell'elenco della sua riga. Scegli **Regioni**. |
 | `tutorial.step2` | Zoom with the mouse wheel or the **+** and **−** buttons, and drag the map to move around. Try it now. | Zoome mit dem Mausrad oder den Tasten **+** und **−**, und ziehe die Karte, um dich zu bewegen. Probier es aus. | Usa la rotellina del mouse o i pulsanti **+** e **−** per lo zoom, e trascina la mappa per spostarti. Prova ora. |
 | `tutorial.step2.touch` | Pinch to zoom, or use the **+** and **−** buttons, and drag with one finger to move around. Try it now. | Zoome mit zwei Fingern oder den Tasten **+** und **−**, und verschiebe die Karte mit einem Finger. Probier es aus. | Usa due dita o i pulsanti **+** e **−** per lo zoom, e trascina la mappa con un dito per spostarti. Prova ora. |
 | `tutorial.step3` | This is the **overview**, where every region shows its name. Hover over a name to enlarge it. | Das ist die **Übersicht**: Hier steht jede Region mit ihrem Namen. Fahre mit der Maus über einen Namen, um ihn zu vergrößern. | Questa è la **panoramica**, dove ogni regione mostra il suo nome. Passa il mouse su un nome per ingrandirlo. |
@@ -478,10 +515,10 @@ Notes on the copy:
 - The tab names match the app's own labels in each language: Overview /
   Übersicht / Panoramica, Explore / Erkunden / Esplora, Quiz, Tour. "Tray"
   follows the existing tray label (Namensablage, vassoio dei nomi).
-- Step 1 says "Regions, under Italy" because that's what the card says:
-  in the country list the card is labelled "Regions" under the heading
-  "Italy". Country names stay in English in every language (DECISIONS.md,
-  i18n), hence "unter Italy" and "sotto Italy".
+- Steps 2 and 3 name Italy in the player's language, as the map labels it
+  (#71); the row itself still reads "Italy", as the catalog names it. The
+  copy keys keep their old names (`tutorial.step1` is now step 3); the
+  counter comes from each step's position.
 - Italian avoids gendered forms: "Ti diamo il benvenuto" rather than
   "Benvenuto", "in prima persona" rather than "tu stesso".
 - Step 10 was shortened at FT-12 to fit four lines (see step 10 above).
@@ -491,7 +528,8 @@ Notes on the copy:
 ## Decided at the review (2026-09-14)
 
 - **Explore gets a step of its own**, rather than a sentence in
-  step 3. The tutorial is twelve steps since FT-43 added Terrain.
+  step 3. The tutorial is twelve steps since FT-43 added Terrain, fourteen
+  since FT-79's Europe and Italy.
 - **The sandbox covers Italy — Regions only**; every other map's progress
   stays live ([The sandbox](#the-sandbox)).
 - **The star is a tip in the outro**, not a step.

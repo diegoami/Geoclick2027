@@ -19,6 +19,8 @@ export type Advance =
 	| { kind: 'gesture' } // the player zoomed or panned the map
 	| { kind: 'reveal' } // a region's name shown in Explore
 	| { kind: 'terrain' } // the player pressed the Terrain button
+	| { kind: 'continent' } // the start screen's map opened TUTORIAL_CONTINENT
+	| { kind: 'country' } // a tap on TUTORIAL_COUNTRY on that continent
 	| { kind: 'drop'; correct: boolean }
 	| { kind: 'finish' }; // the outro
 
@@ -32,7 +34,7 @@ export interface Highlight {
 
 export interface Step {
 	id: string;
-	/** Numbered 1-11 in the card's counter; the intro and outro aren't. */
+	/** Numbered in the card's counter (1-14); the intro and outro aren't. */
 	numbered: boolean;
 	/** The screens this step belongs on; the first is where Resume and Back go. */
 	screens: Screen[];
@@ -46,6 +48,11 @@ export interface Step {
 
 const centred: Highlight = { dim: true };
 
+/** Where the start screen's map leads to the tutorial's map (FT-79): Europe,
+ * then Italy, then Italy's row - whose listbox holds Italy - Regions. */
+export const TUTORIAL_CONTINENT = 'europe';
+export const TUTORIAL_COUNTRY = 'italy';
+
 export const STEPS: Step[] = [
 	{
 		id: 'intro',
@@ -55,6 +62,27 @@ export const STEPS: Step[] = [
 		title: 'tutorial.intro.title',
 		copy: 'tutorial.intro.body',
 		highlight: { home: centred }
+	},
+	{
+		// The start screen opens on the world map (FT-77), so the way to a
+		// map is the way the player will find every other one: the continent,
+		// the country, then the map in its row (FT-79). The page shows the map
+		// for these steps even when the player has chosen the list.
+		id: 'choose-continent',
+		numbered: true,
+		screens: ['home'],
+		advance: { kind: 'continent' },
+		copy: 'tutorial.continent',
+		highlight: { home: { spot: `picker-${TUTORIAL_CONTINENT}`, dim: true } }
+	},
+	{
+		id: 'choose-country',
+		numbered: true,
+		screens: ['home'],
+		advance: { kind: 'country' },
+		copy: 'tutorial.country',
+		touchCopy: 'tutorial.country.touch',
+		highlight: { home: { spot: `picker-${TUTORIAL_COUNTRY}`, dim: true } }
 	},
 	{
 		id: 'choose-map',
@@ -200,6 +228,8 @@ export interface Done {
 	gesture: boolean;
 	reveal: boolean;
 	terrain: boolean;
+	continent: boolean;
+	country: boolean;
 	quizDone: boolean;
 	correctDrop: boolean;
 	wrongDrop: boolean;
@@ -223,6 +253,8 @@ export type TutorialEvent =
 	| { type: 'gesture' }
 	| { type: 'reveal' }
 	| { type: 'terrain' }
+	| { type: 'continent'; id: string } // the start screen's map opened a continent
+	| { type: 'country'; id: string } // a country tapped on a continent
 	| { type: 'quizDone' } // no slips left, so no further drop is possible
 	| { type: 'drop'; correct: boolean };
 
@@ -233,6 +265,8 @@ const noneDone: Done = {
 	gesture: false,
 	reveal: false,
 	terrain: false,
+	continent: false,
+	country: false,
 	quizDone: false,
 	correctDrop: false,
 	wrongDrop: false
@@ -257,6 +291,10 @@ export function isStepDone(state: TutorialState, index = state.step): boolean {
 			return state.done.reveal;
 		case 'terrain':
 			return state.done.terrain;
+		case 'continent':
+			return state.done.continent;
+		case 'country':
+			return state.done.country;
 		case 'drop':
 			// A finished quiz counts as done for either drop step. Without
 			// this, a player who places every region correctly can never make
@@ -274,7 +312,7 @@ export function showsNext(state: TutorialState): boolean {
 	return STEPS[state.step].advance.kind === 'next' || isStepDone(state);
 }
 
-/** The card's position in the counter, 1-12, or undefined for the intro and outro. */
+/** The card's position in the counter, 1-14, or undefined for the intro and outro. */
 export function stepNumber(index: number): number | undefined {
 	if (!STEPS[index].numbered) return undefined;
 	return STEPS.slice(0, index + 1).filter((s) => s.numbered).length;
@@ -314,9 +352,14 @@ export function transition(
 	if (event.type === 'route') {
 		const moved = { ...state, place: event.place };
 		if (state.status !== 'running') return { state: moved, effects: [] };
-		// The step's own target: move on.
-		if (step.advance.kind === 'route' && event.place === step.advance.to)
-			return { state: { ...moved, step: state.step + 1 }, effects: [] };
+		// The step's own target: move on. A player who finds the map without
+		// the start screen's map (the Europe and Italy steps) is on the step
+		// after it too.
+		let target = state.step;
+		while (['continent', 'country'].includes(STEPS[target].advance.kind)) target++;
+		const own = STEPS[target].advance;
+		if (own.kind === 'route' && event.place === own.to)
+			return { state: { ...moved, step: target + 1 }, effects: [] };
 		// Anywhere the step doesn't belong: pause until the player chooses.
 		if (!(step.screens as Place[]).includes(event.place))
 			return { state: { ...moved, status: 'paused' }, effects: [] };
@@ -355,6 +398,15 @@ export function transition(
 			return { state: { ...state, done: { ...state.done, quizDone: true } }, effects: [] };
 		}
 
+		case 'continent':
+		case 'country': {
+			// Only the tutorial's own continent and country count: Asia is a
+			// view, not the way to Italy.
+			const target = event.type === 'continent' ? TUTORIAL_CONTINENT : TUTORIAL_COUNTRY;
+			if (state.status === 'idle' || event.id !== target) return same;
+			return movedOn(state, event.type, { ...state.done, [event.type]: true });
+		}
+
 		case 'gesture':
 		case 'reveal':
 		case 'terrain':
@@ -364,17 +416,26 @@ export function transition(
 				event.type === 'drop'
 					? { ...state.done, [event.correct ? 'correctDrop' : 'wrongDrop']: true }
 					: { ...state.done, [event.type]: true };
-			const next = { ...state, done };
-			const matches =
-				event.type === 'drop'
-					? step.advance.kind === 'drop' && step.advance.correct === event.correct
-					: step.advance.kind === event.type;
-			const onScreen = (step.screens as Place[]).includes(state.place);
-			if (state.status === 'running' && matches && onScreen)
-				return { state: { ...next, step: state.step + 1 }, effects: [] };
-			return { state: next, effects: [] };
+			if (event.type !== 'drop') return movedOn(state, event.type, done);
+			const matches = step.advance.kind === 'drop' && step.advance.correct === event.correct;
+			return movedOn(state, matches ? 'drop' : undefined, done);
 		}
 	}
+}
+
+// An action recorded in `done`; it moves the step on when it is the step's
+// own, on one of the step's screens.
+function movedOn(
+	state: TutorialState,
+	kind: Advance['kind'] | undefined,
+	done: Done
+): { state: TutorialState; effects: Effect[] } {
+	const step = STEPS[state.step];
+	const next = { ...state, done };
+	const onScreen = (step.screens as Place[]).includes(state.place);
+	if (state.status === 'running' && step.advance.kind === kind && onScreen)
+		return { state: { ...next, step: state.step + 1 }, effects: [] };
+	return { state: next, effects: [] };
 }
 
 /** Which tutorial screen a path is, given the app's base path. */
