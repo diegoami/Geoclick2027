@@ -1,0 +1,2649 @@
+{
+	"id": "world-picker",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"continents": [
+		{
+			"id": "europe",
+			"name": "Europe",
+			"view": [
+				-25,
+				34,
+				60,
+				72
+			]
+		},
+		{
+			"id": "africa",
+			"name": "Africa",
+			"view": [
+				-26,
+				-36,
+				64,
+				38
+			]
+		},
+		{
+			"id": "asia",
+			"name": "Asia",
+			"view": [
+				25,
+				-12,
+				150,
+				56
+			]
+		},
+		{
+			"id": "north-america",
+			"name": "North America",
+			"view": [
+				-170,
+				5,
+				-50,
+				84
+			]
+		},
+		{
+			"id": "south-america",
+			"name": "South America",
+			"view": [
+				-92,
+				-56,
+				-30,
+				13
+			]
+		},
+		{
+			"id": "oceania",
+			"name": "Oceania",
+			"view": [
+				110,
+				-50,
+				180,
+				0
+			]
+		}
+	],
+	"countries": [
+		{
+			"id": "afghanistan",
+			"name": "Afghanistan",
+			"continent": "asia",
+			"bbox": [
+				60.487,
+				29.387,
+				74.892,
+				38.474
+			],
+			"centroid": [
+				67.69,
+				33.93
+			]
+		},
+		{
+			"id": "albania",
+			"name": "Albania",
+			"continent": "europe",
+			"bbox": [
+				19.272,
+				39.64,
+				21.037,
+				42.585
+			],
+			"centroid": [
+				20.155,
+				41.113
+			]
+		},
+		{
+			"id": "algeria",
+			"name": "Algeria",
+			"continent": "africa",
+			"bbox": [
+				-8.682,
+				18.982,
+				11.969,
+				37.083
+			],
+			"centroid": [
+				1.643,
+				28.033
+			]
+		},
+		{
+			"id": "angola",
+			"name": "Angola",
+			"continent": "africa",
+			"bbox": [
+				11.737,
+				-18.031,
+				24.061,
+				-4.391
+			],
+			"centroid": [
+				17.899,
+				-11.211
+			]
+		},
+		{
+			"id": "argentina",
+			"name": "Argentina",
+			"continent": "south-america",
+			"bbox": [
+				-73.573,
+				-55.051,
+				-53.667,
+				-21.792
+			],
+			"centroid": [
+				-63.62,
+				-38.421
+			]
+		},
+		{
+			"id": "armenia",
+			"name": "Armenia",
+			"continent": "asia",
+			"bbox": [
+				43.44,
+				38.864,
+				46.598,
+				41.29
+			],
+			"centroid": [
+				45.019,
+				40.077
+			]
+		},
+		{
+			"id": "australia",
+			"name": "Australia",
+			"continent": "oceania",
+			"bbox": [
+				112.965,
+				-43.629,
+				153.631,
+				-10.715
+			],
+			"centroid": [
+				133.298,
+				-27.172
+			]
+		},
+		{
+			"id": "austria",
+			"name": "Austria",
+			"continent": "europe",
+			"bbox": [
+				9.521,
+				46.418,
+				17.148,
+				49.008
+			],
+			"centroid": [
+				13.335,
+				47.713
+			]
+		},
+		{
+			"id": "azerbaijan",
+			"name": "Azerbaijan",
+			"continent": "asia",
+			"bbox": [
+				44.775,
+				38.396,
+				50.336,
+				41.89
+			],
+			"centroid": [
+				47.555,
+				40.143
+			]
+		},
+		{
+			"id": "bangladesh",
+			"name": "Bangladesh",
+			"continent": "asia",
+			"bbox": [
+				88.022,
+				20.996,
+				92.643,
+				26.415
+			],
+			"centroid": [
+				90.333,
+				23.706
+			]
+		},
+		{
+			"id": "belarus",
+			"name": "Belarus",
+			"continent": "europe",
+			"bbox": [
+				23.166,
+				51.305,
+				32.72,
+				56.142
+			],
+			"centroid": [
+				27.943,
+				53.724
+			]
+		},
+		{
+			"id": "belgium",
+			"name": "Belgium",
+			"continent": "europe",
+			"bbox": [
+				2.522,
+				49.495,
+				6.338,
+				51.486
+			],
+			"centroid": [
+				4.43,
+				50.491
+			]
+		},
+		{
+			"id": "belize",
+			"name": "Belize",
+			"continent": "north-america",
+			"bbox": [
+				-89.237,
+				15.894,
+				-88.092,
+				18.485
+			],
+			"centroid": [
+				-88.664,
+				17.19
+			]
+		},
+		{
+			"id": "benin",
+			"name": "Benin",
+			"continent": "africa",
+			"bbox": [
+				0.769,
+				6.214,
+				3.837,
+				12.399
+			],
+			"centroid": [
+				2.303,
+				9.307
+			]
+		},
+		{
+			"id": "bhutan",
+			"name": "Bhutan",
+			"continent": "asia",
+			"bbox": [
+				88.73,
+				26.701,
+				92.085,
+				28.335
+			],
+			"centroid": [
+				90.408,
+				27.518
+			]
+		},
+		{
+			"id": "bolivia",
+			"name": "Bolivia",
+			"continent": "south-america",
+			"bbox": [
+				-69.666,
+				-22.893,
+				-57.551,
+				-9.681
+			],
+			"centroid": [
+				-63.608,
+				-16.287
+			]
+		},
+		{
+			"id": "bosnia-and-herzegovina",
+			"name": "Bosnia and Herzegovina",
+			"continent": "europe",
+			"bbox": [
+				15.717,
+				42.559,
+				19.619,
+				45.279
+			],
+			"centroid": [
+				17.668,
+				43.919
+			]
+		},
+		{
+			"id": "botswana",
+			"name": "Botswana",
+			"continent": "africa",
+			"bbox": [
+				19.978,
+				-26.889,
+				29.35,
+				-17.794
+			],
+			"centroid": [
+				24.664,
+				-22.341
+			]
+		},
+		{
+			"id": "brazil",
+			"name": "Brazil",
+			"continent": "south-america",
+			"bbox": [
+				-73.979,
+				-33.741,
+				-34.797,
+				5.267
+			],
+			"centroid": [
+				-54.388,
+				-14.237
+			]
+		},
+		{
+			"id": "brunei",
+			"name": "Brunei",
+			"continent": "asia",
+			"bbox": [
+				113.999,
+				4.021,
+				115.324,
+				5.001
+			],
+			"centroid": [
+				114.661,
+				4.511
+			]
+		},
+		{
+			"id": "bulgaria",
+			"name": "Bulgaria",
+			"continent": "europe",
+			"bbox": [
+				22.345,
+				41.239,
+				28.604,
+				44.228
+			],
+			"centroid": [
+				25.475,
+				42.734
+			]
+		},
+		{
+			"id": "burkina-faso",
+			"name": "Burkina Faso",
+			"continent": "africa",
+			"bbox": [
+				-5.523,
+				9.392,
+				2.39,
+				15.08
+			],
+			"centroid": [
+				-1.566,
+				12.236
+			]
+		},
+		{
+			"id": "burundi",
+			"name": "Burundi",
+			"continent": "africa",
+			"bbox": [
+				29.015,
+				-4.462,
+				30.832,
+				-2.303
+			],
+			"centroid": [
+				29.924,
+				-3.382
+			]
+		},
+		{
+			"id": "cabo-verde",
+			"name": "Cabo Verde",
+			"continent": "africa",
+			"bbox": [
+				-25.317,
+				14.816,
+				-22.678,
+				17.197
+			],
+			"centroid": [
+				-23.646,
+				15.081
+			]
+		},
+		{
+			"id": "cambodia",
+			"name": "Cambodia",
+			"continent": "asia",
+			"bbox": [
+				102.328,
+				10.42,
+				107.607,
+				14.705
+			],
+			"centroid": [
+				104.968,
+				12.563
+			]
+		},
+		{
+			"id": "cameroon",
+			"name": "Cameroon",
+			"continent": "africa",
+			"bbox": [
+				8.505,
+				1.735,
+				16.197,
+				13.081
+			],
+			"centroid": [
+				12.351,
+				7.408
+			]
+		},
+		{
+			"id": "canada",
+			"name": "Canada",
+			"continent": "north-america",
+			"bbox": [
+				-141.006,
+				41.677,
+				-52.617,
+				83.117
+			],
+			"centroid": [
+				-96.811,
+				62.397
+			]
+		},
+		{
+			"id": "central-african-republic",
+			"name": "Central African Republic",
+			"continent": "africa",
+			"bbox": [
+				14.398,
+				2.236,
+				27.441,
+				11.001
+			],
+			"centroid": [
+				20.92,
+				6.619
+			]
+		},
+		{
+			"id": "chad",
+			"name": "Chad",
+			"continent": "africa",
+			"bbox": [
+				13.449,
+				7.458,
+				23.984,
+				23.445
+			],
+			"centroid": [
+				18.717,
+				15.452
+			]
+		},
+		{
+			"id": "chile",
+			"name": "Chile",
+			"continent": "south-america",
+			"bbox": [
+				-75.707,
+				-55.641,
+				-67.014,
+				-17.507
+			],
+			"centroid": [
+				-71.36,
+				-36.574
+			]
+		},
+		{
+			"id": "china",
+			"name": "China",
+			"continent": "asia",
+			"bbox": [
+				73.602,
+				18.193,
+				134.773,
+				53.568
+			],
+			"centroid": [
+				104.188,
+				35.881
+			]
+		},
+		{
+			"id": "colombia",
+			"name": "Colombia",
+			"continent": "south-america",
+			"bbox": [
+				-78.998,
+				-4.236,
+				-66.875,
+				12.465
+			],
+			"centroid": [
+				-72.936,
+				4.115
+			]
+		},
+		{
+			"id": "costa-rica",
+			"name": "Costa Rica",
+			"continent": "north-america",
+			"bbox": [
+				-85.862,
+				8.035,
+				-82.574,
+				11.196
+			],
+			"centroid": [
+				-84.218,
+				9.616
+			]
+		},
+		{
+			"id": "cote-d-ivoire",
+			"name": "Côte d'Ivoire",
+			"continent": "africa",
+			"bbox": [
+				-8.566,
+				4.344,
+				-2.506,
+				10.723
+			],
+			"centroid": [
+				-5.536,
+				7.534
+			]
+		},
+		{
+			"id": "croatia",
+			"name": "Croatia",
+			"continent": "europe",
+			"bbox": [
+				13.513,
+				42.416,
+				19.29,
+				46.547
+			],
+			"centroid": [
+				17.122,
+				45.629
+			]
+		},
+		{
+			"id": "cuba",
+			"name": "Cuba",
+			"continent": "north-america",
+			"bbox": [
+				-84.66,
+				19.856,
+				-74.142,
+				23.201
+			],
+			"centroid": [
+				-81.735,
+				22.829
+			]
+		},
+		{
+			"id": "cyprus",
+			"name": "Cyprus",
+			"continent": "asia",
+			"bbox": [
+				32.329,
+				34.651,
+				33.702,
+				35.178
+			],
+			"centroid": [
+				33.016,
+				34.915
+			]
+		},
+		{
+			"id": "czechia",
+			"name": "Czechia",
+			"continent": "europe",
+			"bbox": [
+				12.107,
+				48.558,
+				18.833,
+				51.017
+			],
+			"centroid": [
+				15.47,
+				49.788
+			]
+		},
+		{
+			"id": "democratic-republic-of-the-congo",
+			"name": "Democratic Republic of the Congo",
+			"continent": "africa",
+			"bbox": [
+				12.211,
+				-13.434,
+				31.267,
+				5.375
+			],
+			"centroid": [
+				21.739,
+				-4.029
+			]
+		},
+		{
+			"id": "denmark",
+			"name": "Denmark",
+			"continent": "europe",
+			"bbox": [
+				8.094,
+				54.628,
+				15.147,
+				57.591
+			],
+			"centroid": [
+				9.458,
+				56.274
+			]
+		},
+		{
+			"id": "djibouti",
+			"name": "Djibouti",
+			"continent": "africa",
+			"bbox": [
+				41.749,
+				10.971,
+				43.411,
+				12.708
+			],
+			"centroid": [
+				42.58,
+				11.84
+			]
+		},
+		{
+			"id": "dominican-republic",
+			"name": "Dominican Republic",
+			"continent": "north-america",
+			"bbox": [
+				-72.001,
+				17.605,
+				-68.356,
+				19.938
+			],
+			"centroid": [
+				-70.178,
+				18.772
+			]
+		},
+		{
+			"id": "ecuador",
+			"name": "Ecuador",
+			"continent": "south-america",
+			"bbox": [
+				-91.669,
+				-4.961,
+				-75.227,
+				1.434
+			],
+			"centroid": [
+				-78.152,
+				-1.408
+			]
+		},
+		{
+			"id": "egypt",
+			"name": "Egypt",
+			"continent": "africa",
+			"bbox": [
+				24.688,
+				21.994,
+				36.895,
+				31.656
+			],
+			"centroid": [
+				30.792,
+				26.825
+			]
+		},
+		{
+			"id": "el-salvador",
+			"name": "El Salvador",
+			"continent": "north-america",
+			"bbox": [
+				-90.099,
+				13.159,
+				-87.713,
+				14.415
+			],
+			"centroid": [
+				-88.906,
+				13.787
+			]
+		},
+		{
+			"id": "equatorial-guinea",
+			"name": "Equatorial Guinea",
+			"continent": "africa",
+			"bbox": [
+				8.45,
+				0.935,
+				11.336,
+				3.761
+			],
+			"centroid": [
+				10.383,
+				1.249
+			]
+		},
+		{
+			"id": "eritrea",
+			"name": "Eritrea",
+			"continent": "africa",
+			"bbox": [
+				36.424,
+				12.36,
+				43.118,
+				18.005
+			],
+			"centroid": [
+				39.771,
+				15.183
+			]
+		},
+		{
+			"id": "estonia",
+			"name": "Estonia",
+			"continent": "europe",
+			"bbox": [
+				21.868,
+				57.516,
+				28.186,
+				59.629
+			],
+			"centroid": [
+				25.027,
+				58.573
+			]
+		},
+		{
+			"id": "eswatini",
+			"name": "Eswatini",
+			"continent": "africa",
+			"bbox": [
+				30.786,
+				-27.316,
+				32.117,
+				-25.744
+			],
+			"centroid": [
+				31.452,
+				-26.53
+			]
+		},
+		{
+			"id": "ethiopia",
+			"name": "Ethiopia",
+			"continent": "africa",
+			"bbox": [
+				32.99,
+				3.462,
+				47.979,
+				14.88
+			],
+			"centroid": [
+				40.485,
+				9.171
+			]
+		},
+		{
+			"id": "fiji",
+			"name": "Fiji",
+			"continent": "oceania",
+			"bbox": [
+				177.252,
+				-18.248,
+				180,
+				-16.149
+			],
+			"centroid": [
+				177.995,
+				-18.015
+			]
+		},
+		{
+			"id": "finland",
+			"name": "Finland",
+			"continent": "europe",
+			"bbox": [
+				20.623,
+				59.898,
+				31.57,
+				70.075
+			],
+			"centroid": [
+				26.097,
+				64.987
+			]
+		},
+		{
+			"id": "france",
+			"name": "France",
+			"continent": "europe",
+			"bbox": [
+				-4.783,
+				41.441,
+				9.553,
+				51.088
+			],
+			"centroid": [
+				2.385,
+				46.265
+			]
+		},
+		{
+			"id": "gabon",
+			"name": "Gabon",
+			"continent": "africa",
+			"bbox": [
+				8.8,
+				-3.937,
+				14.499,
+				2.321
+			],
+			"centroid": [
+				11.65,
+				-0.808
+			]
+		},
+		{
+			"id": "georgia",
+			"name": "Georgia",
+			"continent": "asia",
+			"bbox": [
+				39.986,
+				41.045,
+				46.695,
+				43.576
+			],
+			"centroid": [
+				43.341,
+				42.311
+			]
+		},
+		{
+			"id": "germany",
+			"name": "Germany",
+			"continent": "europe",
+			"bbox": [
+				5.928,
+				47.302,
+				15.019,
+				54.906
+			],
+			"centroid": [
+				10.474,
+				51.104
+			]
+		},
+		{
+			"id": "ghana",
+			"name": "Ghana",
+			"continent": "africa",
+			"bbox": [
+				-3.263,
+				4.737,
+				1.185,
+				11.135
+			],
+			"centroid": [
+				-1.039,
+				7.936
+			]
+		},
+		{
+			"id": "greece",
+			"name": "Greece",
+			"continent": "europe",
+			"bbox": [
+				19.677,
+				34.932,
+				28.226,
+				41.713
+			],
+			"centroid": [
+				24.064,
+				40.96
+			]
+		},
+		{
+			"id": "guatemala",
+			"name": "Guatemala",
+			"continent": "north-america",
+			"bbox": [
+				-92.246,
+				13.731,
+				-88.221,
+				17.815
+			],
+			"centroid": [
+				-90.233,
+				15.773
+			]
+		},
+		{
+			"id": "guinea",
+			"name": "Guinea",
+			"continent": "africa",
+			"bbox": [
+				-15.021,
+				7.238,
+				-7.69,
+				12.673
+			],
+			"centroid": [
+				-11.547,
+				10.861
+			]
+		},
+		{
+			"id": "guinea-bissau",
+			"name": "Guinea-Bissau",
+			"continent": "africa",
+			"bbox": [
+				-16.728,
+				10.967,
+				-13.663,
+				12.679
+			],
+			"centroid": [
+				-15.195,
+				11.823
+			]
+		},
+		{
+			"id": "guyana",
+			"name": "Guyana",
+			"continent": "south-america",
+			"bbox": [
+				-61.38,
+				1.218,
+				-56.482,
+				8.558
+			],
+			"centroid": [
+				-58.931,
+				4.888
+			]
+		},
+		{
+			"id": "haiti",
+			"name": "Haiti",
+			"continent": "north-america",
+			"bbox": [
+				-74.489,
+				18.039,
+				-71.639,
+				19.944
+			],
+			"centroid": [
+				-72.535,
+				18.251
+			]
+		},
+		{
+			"id": "honduras",
+			"name": "Honduras",
+			"continent": "north-america",
+			"bbox": [
+				-89.362,
+				12.982,
+				-83.13,
+				15.988
+			],
+			"centroid": [
+				-86.246,
+				14.485
+			]
+		},
+		{
+			"id": "hungary",
+			"name": "Hungary",
+			"continent": "europe",
+			"bbox": [
+				16.094,
+				45.743,
+				22.878,
+				48.569
+			],
+			"centroid": [
+				19.486,
+				47.156
+			]
+		},
+		{
+			"id": "iceland",
+			"name": "Iceland",
+			"continent": "europe",
+			"bbox": [
+				-24.197,
+				63.397,
+				-13.527,
+				66.537
+			],
+			"centroid": [
+				-18.862,
+				64.967
+			]
+		},
+		{
+			"id": "india",
+			"name": "India",
+			"continent": "asia",
+			"bbox": [
+				68.164,
+				6.801,
+				97.334,
+				35.495
+			],
+			"centroid": [
+				82.749,
+				21.148
+			]
+		},
+		{
+			"id": "indonesia",
+			"name": "Indonesia",
+			"continent": "asia",
+			"bbox": [
+				95.197,
+				-10.921,
+				140.977,
+				5.65
+			],
+			"centroid": [
+				113.324,
+				0.126
+			]
+		},
+		{
+			"id": "iran",
+			"name": "Iran",
+			"continent": "asia",
+			"bbox": [
+				44.061,
+				25.059,
+				63.265,
+				39.766
+			],
+			"centroid": [
+				53.663,
+				32.413
+			]
+		},
+		{
+			"id": "iraq",
+			"name": "Iraq",
+			"continent": "asia",
+			"bbox": [
+				38.775,
+				29.063,
+				48.531,
+				37.375
+			],
+			"centroid": [
+				43.653,
+				33.219
+			]
+		},
+		{
+			"id": "ireland",
+			"name": "Ireland",
+			"continent": "europe",
+			"bbox": [
+				-10.276,
+				51.446,
+				-5.997,
+				55.373
+			],
+			"centroid": [
+				-8.136,
+				53.409
+			]
+		},
+		{
+			"id": "israel",
+			"name": "Israel",
+			"continent": "asia",
+			"bbox": [
+				34.248,
+				29.49,
+				35.888,
+				33.407
+			],
+			"centroid": [
+				34.832,
+				31.231
+			]
+		},
+		{
+			"id": "italy",
+			"name": "Italy",
+			"continent": "europe",
+			"bbox": [
+				6.603,
+				36.659,
+				18.517,
+				47.038
+			],
+			"centroid": [
+				12.56,
+				41.849
+			]
+		},
+		{
+			"id": "jamaica",
+			"name": "Jamaica",
+			"continent": "north-america",
+			"bbox": [
+				-78.341,
+				17.717,
+				-76.257,
+				18.519
+			],
+			"centroid": [
+				-77.299,
+				18.118
+			]
+		},
+		{
+			"id": "japan",
+			"name": "Japan",
+			"continent": "asia",
+			"bbox": [
+				127.731,
+				26.233,
+				145.78,
+				45.51
+			],
+			"centroid": [
+				136.755,
+				35.872
+			]
+		},
+		{
+			"id": "jordan",
+			"name": "Jordan",
+			"continent": "asia",
+			"bbox": [
+				34.949,
+				29.19,
+				39.292,
+				33.372
+			],
+			"centroid": [
+				37.121,
+				31.281
+			]
+		},
+		{
+			"id": "kazakhstan",
+			"name": "Kazakhstan",
+			"continent": "asia",
+			"bbox": [
+				46.479,
+				40.585,
+				87.324,
+				55.385
+			],
+			"centroid": [
+				66.902,
+				47.985
+			]
+		},
+		{
+			"id": "kenya",
+			"name": "Kenya",
+			"continent": "africa",
+			"bbox": [
+				33.894,
+				-4.678,
+				41.885,
+				4.982
+			],
+			"centroid": [
+				37.89,
+				0.152
+			]
+		},
+		{
+			"id": "kosovo",
+			"name": "Kosovo",
+			"continent": "europe",
+			"bbox": [
+				20.065,
+				41.873,
+				21.739,
+				43.185
+			],
+			"centroid": [
+				20.902,
+				42.529
+			]
+		},
+		{
+			"id": "kuwait",
+			"name": "Kuwait",
+			"continent": "asia",
+			"bbox": [
+				46.532,
+				28.534,
+				48.433,
+				30.098
+			],
+			"centroid": [
+				47.483,
+				29.316
+			]
+		},
+		{
+			"id": "kyrgyzstan",
+			"name": "Kyrgyzstan",
+			"continent": "asia",
+			"bbox": [
+				69.226,
+				39.241,
+				80.21,
+				43.216
+			],
+			"centroid": [
+				74.718,
+				41.229
+			]
+		},
+		{
+			"id": "laos",
+			"name": "Laos",
+			"continent": "asia",
+			"bbox": [
+				100.099,
+				13.915,
+				107.658,
+				22.446
+			],
+			"centroid": [
+				102.359,
+				20.55
+			]
+		},
+		{
+			"id": "latvia",
+			"name": "Latvia",
+			"continent": "europe",
+			"bbox": [
+				20.969,
+				55.667,
+				28.215,
+				58.059
+			],
+			"centroid": [
+				24.592,
+				56.863
+			]
+		},
+		{
+			"id": "lebanon",
+			"name": "Lebanon",
+			"continent": "asia",
+			"bbox": [
+				35.105,
+				33.087,
+				36.604,
+				34.65
+			],
+			"centroid": [
+				35.855,
+				33.869
+			]
+		},
+		{
+			"id": "lesotho",
+			"name": "Lesotho",
+			"continent": "africa",
+			"bbox": [
+				27.015,
+				-30.65,
+				29.436,
+				-28.597
+			],
+			"centroid": [
+				28.226,
+				-29.623
+			]
+		},
+		{
+			"id": "liberia",
+			"name": "Liberia",
+			"continent": "africa",
+			"bbox": [
+				-11.476,
+				4.353,
+				-7.394,
+				8.487
+			],
+			"centroid": [
+				-9.435,
+				6.42
+			]
+		},
+		{
+			"id": "libya",
+			"name": "Libya",
+			"continent": "africa",
+			"bbox": [
+				9.287,
+				19.496,
+				25.151,
+				33.181
+			],
+			"centroid": [
+				17.219,
+				26.338
+			]
+		},
+		{
+			"id": "lithuania",
+			"name": "Lithuania",
+			"continent": "europe",
+			"bbox": [
+				21.053,
+				53.887,
+				26.769,
+				56.439
+			],
+			"centroid": [
+				23.911,
+				55.163
+			]
+		},
+		{
+			"id": "luxembourg",
+			"name": "Luxembourg",
+			"continent": "europe",
+			"bbox": [
+				5.715,
+				49.441,
+				6.5,
+				50.166
+			],
+			"centroid": [
+				6.108,
+				49.804
+			]
+		},
+		{
+			"id": "madagascar",
+			"name": "Madagascar",
+			"continent": "africa",
+			"bbox": [
+				43.223,
+				-25.584,
+				50.504,
+				-12
+			],
+			"centroid": [
+				46.864,
+				-18.792
+			]
+		},
+		{
+			"id": "malawi",
+			"name": "Malawi",
+			"continent": "africa",
+			"bbox": [
+				32.723,
+				-17.124,
+				35.904,
+				-9.408
+			],
+			"centroid": [
+				34.314,
+				-13.266
+			]
+		},
+		{
+			"id": "malaysia",
+			"name": "Malaysia",
+			"continent": "asia",
+			"bbox": [
+				100.127,
+				0.851,
+				119.274,
+				7.356
+			],
+			"centroid": [
+				113.065,
+				2.297
+			]
+		},
+		{
+			"id": "mali",
+			"name": "Mali",
+			"continent": "africa",
+			"bbox": [
+				-12.264,
+				10.162,
+				4.236,
+				24.995
+			],
+			"centroid": [
+				-4.014,
+				17.579
+			]
+		},
+		{
+			"id": "mauritania",
+			"name": "Mauritania",
+			"continent": "africa",
+			"bbox": [
+				-17.081,
+				14.775,
+				-4.822,
+				27.285
+			],
+			"centroid": [
+				-10.951,
+				21.03
+			]
+		},
+		{
+			"id": "mexico",
+			"name": "Mexico",
+			"continent": "north-america",
+			"bbox": [
+				-117.125,
+				14.546,
+				-86.742,
+				32.713
+			],
+			"centroid": [
+				-101.934,
+				23.63
+			]
+		},
+		{
+			"id": "moldova",
+			"name": "Moldova",
+			"continent": "europe",
+			"bbox": [
+				26.618,
+				45.462,
+				30.081,
+				48.472
+			],
+			"centroid": [
+				28.35,
+				46.967
+			]
+		},
+		{
+			"id": "mongolia",
+			"name": "Mongolia",
+			"continent": "asia",
+			"bbox": [
+				87.757,
+				41.596,
+				119.904,
+				52.107
+			],
+			"centroid": [
+				103.831,
+				46.852
+			]
+		},
+		{
+			"id": "montenegro",
+			"name": "Montenegro",
+			"continent": "europe",
+			"bbox": [
+				18.437,
+				41.852,
+				20.345,
+				43.533
+			],
+			"centroid": [
+				19.391,
+				42.692
+			]
+		},
+		{
+			"id": "morocco",
+			"name": "Morocco",
+			"continent": "africa",
+			"bbox": [
+				-17.014,
+				21.42,
+				-1.048,
+				35.925
+			],
+			"centroid": [
+				-9.031,
+				28.673
+			]
+		},
+		{
+			"id": "mozambique",
+			"name": "Mozambique",
+			"continent": "africa",
+			"bbox": [
+				30.214,
+				-26.86,
+				40.843,
+				-10.475
+			],
+			"centroid": [
+				35.529,
+				-18.667
+			]
+		},
+		{
+			"id": "myanmar",
+			"name": "Myanmar",
+			"continent": "asia",
+			"bbox": [
+				92.175,
+				10.042,
+				101.159,
+				28.53
+			],
+			"centroid": [
+				96.667,
+				19.286
+			]
+		},
+		{
+			"id": "namibia",
+			"name": "Namibia",
+			"continent": "africa",
+			"bbox": [
+				11.718,
+				-28.959,
+				25.26,
+				-16.951
+			],
+			"centroid": [
+				18.489,
+				-22.955
+			]
+		},
+		{
+			"id": "nepal",
+			"name": "Nepal",
+			"continent": "asia",
+			"bbox": [
+				80.036,
+				26.353,
+				88.169,
+				30.414
+			],
+			"centroid": [
+				84.102,
+				28.384
+			]
+		},
+		{
+			"id": "netherlands",
+			"name": "Netherlands",
+			"continent": "europe",
+			"bbox": [
+				3.349,
+				50.75,
+				7.195,
+				53.461
+			],
+			"centroid": [
+				5.272,
+				52.106
+			]
+		},
+		{
+			"id": "new-zealand",
+			"name": "New Zealand",
+			"continent": "oceania",
+			"bbox": [
+				166.469,
+				-47.205,
+				178.564,
+				-34.551
+			],
+			"centroid": [
+				172.517,
+				-40.878
+			]
+		},
+		{
+			"id": "nicaragua",
+			"name": "Nicaragua",
+			"continent": "north-america",
+			"bbox": [
+				-87.647,
+				10.718,
+				-83.13,
+				15.031
+			],
+			"centroid": [
+				-85.388,
+				12.875
+			]
+		},
+		{
+			"id": "niger",
+			"name": "Niger",
+			"continent": "africa",
+			"bbox": [
+				0.153,
+				11.696,
+				15.963,
+				23.517
+			],
+			"centroid": [
+				8.058,
+				17.607
+			]
+		},
+		{
+			"id": "nigeria",
+			"name": "Nigeria",
+			"continent": "africa",
+			"bbox": [
+				2.672,
+				4.278,
+				14.67,
+				13.873
+			],
+			"centroid": [
+				8.671,
+				9.076
+			]
+		},
+		{
+			"id": "north-korea",
+			"name": "North Korea",
+			"continent": "asia",
+			"bbox": [
+				124.37,
+				37.738,
+				130.7,
+				42.996
+			],
+			"centroid": [
+				127.535,
+				40.367
+			]
+		},
+		{
+			"id": "north-macedonia",
+			"name": "North Macedonia",
+			"continent": "europe",
+			"bbox": [
+				20.444,
+				40.849,
+				23.01,
+				42.333
+			],
+			"centroid": [
+				21.727,
+				41.591
+			]
+		},
+		{
+			"id": "northern-cyprus",
+			"name": "Northern Cyprus",
+			"continent": "asia",
+			"bbox": [
+				32.795,
+				35.032,
+				34.573,
+				35.644
+			],
+			"centroid": [
+				33.684,
+				35.338
+			]
+		},
+		{
+			"id": "norway",
+			"name": "Norway",
+			"continent": "europe",
+			"bbox": [
+				4.964,
+				58.018,
+				31.063,
+				80.493
+			],
+			"centroid": [
+				9.127,
+				60.515
+			]
+		},
+		{
+			"id": "oman",
+			"name": "Oman",
+			"continent": "asia",
+			"bbox": [
+				51.979,
+				16.642,
+				59.845,
+				26.246
+			],
+			"centroid": [
+				55.912,
+				21.444
+			]
+		},
+		{
+			"id": "pakistan",
+			"name": "Pakistan",
+			"continent": "asia",
+			"bbox": [
+				60.844,
+				23.734,
+				77.049,
+				37.054
+			],
+			"centroid": [
+				68.947,
+				30.394
+			]
+		},
+		{
+			"id": "palestine",
+			"name": "Palestine",
+			"continent": "asia",
+			"bbox": [
+				34.2,
+				31.211,
+				35.561,
+				32.543
+			],
+			"centroid": [
+				35.263,
+				32.247
+			]
+		},
+		{
+			"id": "panama",
+			"name": "Panama",
+			"continent": "north-america",
+			"bbox": [
+				-83.053,
+				7.213,
+				-77.201,
+				9.629
+			],
+			"centroid": [
+				-80.127,
+				8.421
+			]
+		},
+		{
+			"id": "papua-new-guinea",
+			"name": "Papua New Guinea",
+			"continent": "oceania",
+			"bbox": [
+				140.849,
+				-11.589,
+				155.939,
+				-1.357
+			],
+			"centroid": [
+				143.997,
+				-7.041
+			]
+		},
+		{
+			"id": "paraguay",
+			"name": "Paraguay",
+			"continent": "south-america",
+			"bbox": [
+				-62.65,
+				-27.581,
+				-54.245,
+				-19.287
+			],
+			"centroid": [
+				-58.447,
+				-23.434
+			]
+		},
+		{
+			"id": "peru",
+			"name": "Peru",
+			"continent": "south-america",
+			"bbox": [
+				-81.338,
+				-18.338,
+				-68.684,
+				-0.043
+			],
+			"centroid": [
+				-75.011,
+				-9.19
+			]
+		},
+		{
+			"id": "philippines",
+			"name": "Philippines",
+			"continent": "asia",
+			"bbox": [
+				117.292,
+				5.076,
+				126.609,
+				18.643
+			],
+			"centroid": [
+				121.951,
+				11.86
+			]
+		},
+		{
+			"id": "poland",
+			"name": "Poland",
+			"continent": "europe",
+			"bbox": [
+				14.144,
+				49.046,
+				24.106,
+				54.838
+			],
+			"centroid": [
+				19.125,
+				51.942
+			]
+		},
+		{
+			"id": "portugal",
+			"name": "Portugal",
+			"continent": "europe",
+			"bbox": [
+				-9.492,
+				37.002,
+				-6.206,
+				42.154
+			],
+			"centroid": [
+				-7.849,
+				39.578
+			]
+		},
+		{
+			"id": "qatar",
+			"name": "Qatar",
+			"continent": "asia",
+			"bbox": [
+				50.751,
+				24.568,
+				51.617,
+				26.16
+			],
+			"centroid": [
+				51.184,
+				25.364
+			]
+		},
+		{
+			"id": "republic-of-the-congo",
+			"name": "Republic of the Congo",
+			"continent": "africa",
+			"bbox": [
+				11.114,
+				-5.02,
+				18.626,
+				3.708
+			],
+			"centroid": [
+				14.87,
+				-0.656
+			]
+		},
+		{
+			"id": "romania",
+			"name": "Romania",
+			"continent": "europe",
+			"bbox": [
+				20.243,
+				43.654,
+				29.659,
+				48.259
+			],
+			"centroid": [
+				24.951,
+				45.957
+			]
+		},
+		{
+			"id": "russia",
+			"name": "Russia",
+			"continent": "europe",
+			"bbox": [
+				19.61,
+				41.193,
+				180,
+				81.397
+			],
+			"centroid": [
+				99.805,
+				61.295
+			]
+		},
+		{
+			"id": "rwanda",
+			"name": "Rwanda",
+			"continent": "africa",
+			"bbox": [
+				28.859,
+				-2.826,
+				30.888,
+				-1.061
+			],
+			"centroid": [
+				29.874,
+				-1.943
+			]
+		},
+		{
+			"id": "saudi-arabia",
+			"name": "Saudi Arabia",
+			"continent": "asia",
+			"bbox": [
+				34.627,
+				16.371,
+				55.638,
+				32.118
+			],
+			"centroid": [
+				45.133,
+				24.245
+			]
+		},
+		{
+			"id": "senegal",
+			"name": "Senegal",
+			"continent": "africa",
+			"bbox": [
+				-17.371,
+				12.306,
+				-11.388,
+				16.643
+			],
+			"centroid": [
+				-14.379,
+				14.474
+			]
+		},
+		{
+			"id": "serbia",
+			"name": "Serbia",
+			"continent": "europe",
+			"bbox": [
+				18.845,
+				42.246,
+				22.935,
+				46.164
+			],
+			"centroid": [
+				20.89,
+				44.205
+			]
+		},
+		{
+			"id": "sierra-leone",
+			"name": "Sierra Leone",
+			"continent": "africa",
+			"bbox": [
+				-13.301,
+				6.919,
+				-10.282,
+				9.996
+			],
+			"centroid": [
+				-11.791,
+				8.458
+			]
+		},
+		{
+			"id": "slovakia",
+			"name": "Slovakia",
+			"continent": "europe",
+			"bbox": [
+				16.844,
+				47.75,
+				22.54,
+				49.602
+			],
+			"centroid": [
+				19.692,
+				48.676
+			]
+		},
+		{
+			"id": "slovenia",
+			"name": "Slovenia",
+			"continent": "europe",
+			"bbox": [
+				13.365,
+				45.424,
+				16.515,
+				46.864
+			],
+			"centroid": [
+				14.94,
+				46.144
+			]
+		},
+		{
+			"id": "solomon-islands",
+			"name": "Solomon Islands",
+			"continent": "oceania",
+			"bbox": [
+				156.461,
+				-11.845,
+				166.137,
+				-6.603
+			],
+			"centroid": [
+				160.052,
+				-9.515
+			]
+		},
+		{
+			"id": "somalia",
+			"name": "Somalia",
+			"continent": "africa",
+			"bbox": [
+				40.965,
+				-1.696,
+				51.293,
+				11.989
+			],
+			"centroid": [
+				46.129,
+				5.147
+			]
+		},
+		{
+			"id": "somaliland",
+			"name": "Somaliland",
+			"continent": "africa",
+			"bbox": [
+				42.7,
+				7.997,
+				48.939,
+				11.488
+			],
+			"centroid": [
+				45.82,
+				9.743
+			]
+		},
+		{
+			"id": "south-africa",
+			"name": "South Africa",
+			"continent": "africa",
+			"bbox": [
+				16.487,
+				-34.809,
+				32.893,
+				-22.131
+			],
+			"centroid": [
+				24.69,
+				-28.47
+			]
+		},
+		{
+			"id": "south-korea",
+			"name": "South Korea",
+			"continent": "asia",
+			"bbox": [
+				126.131,
+				33.2,
+				129.543,
+				38.624
+			],
+			"centroid": [
+				127.837,
+				35.912
+			]
+		},
+		{
+			"id": "south-sudan",
+			"name": "South Sudan",
+			"continent": "africa",
+			"bbox": [
+				24.131,
+				3.49,
+				35.921,
+				12.216
+			],
+			"centroid": [
+				30.026,
+				7.853
+			]
+		},
+		{
+			"id": "spain",
+			"name": "Spain",
+			"continent": "europe",
+			"bbox": [
+				-9.251,
+				36.006,
+				4.307,
+				43.743
+			],
+			"centroid": [
+				-2.472,
+				39.875
+			]
+		},
+		{
+			"id": "sri-lanka",
+			"name": "Sri Lanka",
+			"continent": "asia",
+			"bbox": [
+				79.764,
+				5.924,
+				81.885,
+				9.83
+			],
+			"centroid": [
+				80.825,
+				7.877
+			]
+		},
+		{
+			"id": "sudan",
+			"name": "Sudan",
+			"continent": "africa",
+			"bbox": [
+				21.809,
+				8.689,
+				38.602,
+				22.188
+			],
+			"centroid": [
+				30.206,
+				15.439
+			]
+		},
+		{
+			"id": "suriname",
+			"name": "Suriname",
+			"continent": "south-america",
+			"bbox": [
+				-58.068,
+				1.834,
+				-53.986,
+				6.012
+			],
+			"centroid": [
+				-56.027,
+				3.923
+			]
+		},
+		{
+			"id": "sweden",
+			"name": "Sweden",
+			"continent": "europe",
+			"bbox": [
+				11.108,
+				55.346,
+				24.163,
+				69.036
+			],
+			"centroid": [
+				19.322,
+				65.994
+			]
+		},
+		{
+			"id": "switzerland",
+			"name": "Switzerland",
+			"continent": "europe",
+			"bbox": [
+				6.064,
+				45.88,
+				10.454,
+				47.801
+			],
+			"centroid": [
+				8.259,
+				46.841
+			]
+		},
+		{
+			"id": "syria",
+			"name": "Syria",
+			"continent": "asia",
+			"bbox": [
+				35.758,
+				32.317,
+				42.357,
+				37.306
+			],
+			"centroid": [
+				39.058,
+				34.811
+			]
+		},
+		{
+			"id": "taiwan",
+			"name": "Taiwan",
+			"continent": "asia",
+			"bbox": [
+				120.059,
+				21.925,
+				121.927,
+				25.271
+			],
+			"centroid": [
+				120.993,
+				23.598
+			]
+		},
+		{
+			"id": "tajikistan",
+			"name": "Tajikistan",
+			"continent": "asia",
+			"bbox": [
+				67.378,
+				36.699,
+				75.164,
+				41.026
+			],
+			"centroid": [
+				71.271,
+				38.863
+			]
+		},
+		{
+			"id": "tanzania",
+			"name": "Tanzania",
+			"continent": "africa",
+			"bbox": [
+				29.321,
+				-11.731,
+				40.437,
+				-1.003
+			],
+			"centroid": [
+				34.879,
+				-6.367
+			]
+		},
+		{
+			"id": "thailand",
+			"name": "Thailand",
+			"continent": "asia",
+			"bbox": [
+				97.438,
+				5.638,
+				105.651,
+				20.444
+			],
+			"centroid": [
+				101.545,
+				13.041
+			]
+		},
+		{
+			"id": "the-bahamas",
+			"name": "The Bahamas",
+			"continent": "north-america",
+			"bbox": [
+				-78.608,
+				20.924,
+				-73.034,
+				26.909
+			],
+			"centroid": [
+				-78.057,
+				24.914
+			]
+		},
+		{
+			"id": "the-gambia",
+			"name": "The Gambia",
+			"continent": "africa",
+			"bbox": [
+				-16.83,
+				13.065,
+				-13.819,
+				13.82
+			],
+			"centroid": [
+				-15.324,
+				13.442
+			]
+		},
+		{
+			"id": "timor-leste",
+			"name": "Timor-Leste",
+			"continent": "asia",
+			"bbox": [
+				124.03,
+				-9.489,
+				127.303,
+				-8.309
+			],
+			"centroid": [
+				125.667,
+				-8.899
+			]
+		},
+		{
+			"id": "togo",
+			"name": "Togo",
+			"continent": "africa",
+			"bbox": [
+				-0.166,
+				6.1,
+				1.782,
+				11.135
+			],
+			"centroid": [
+				0.808,
+				8.618
+			]
+		},
+		{
+			"id": "trinidad-and-tobago",
+			"name": "Trinidad and Tobago",
+			"continent": "north-america",
+			"bbox": [
+				-61.712,
+				10.058,
+				-60.996,
+				10.803
+			],
+			"centroid": [
+				-61.354,
+				10.431
+			]
+		},
+		{
+			"id": "tunisia",
+			"name": "Tunisia",
+			"continent": "africa",
+			"bbox": [
+				7.48,
+				30.229,
+				11.564,
+				37.335
+			],
+			"centroid": [
+				9.522,
+				33.782
+			]
+		},
+		{
+			"id": "turkey",
+			"name": "Turkey",
+			"continent": "asia",
+			"bbox": [
+				26.044,
+				35.82,
+				44.807,
+				42.092
+			],
+			"centroid": [
+				35.426,
+				38.956
+			]
+		},
+		{
+			"id": "turkmenistan",
+			"name": "Turkmenistan",
+			"continent": "asia",
+			"bbox": [
+				52.438,
+				35.223,
+				66.646,
+				42.781
+			],
+			"centroid": [
+				59.542,
+				39.002
+			]
+		},
+		{
+			"id": "uganda",
+			"name": "Uganda",
+			"continent": "africa",
+			"bbox": [
+				29.556,
+				-1.47,
+				34.979,
+				4.22
+			],
+			"centroid": [
+				32.268,
+				1.375
+			]
+		},
+		{
+			"id": "ukraine",
+			"name": "Ukraine",
+			"continent": "europe",
+			"bbox": [
+				22.133,
+				44.383,
+				40.142,
+				52.369
+			],
+			"centroid": [
+				31.138,
+				48.376
+			]
+		},
+		{
+			"id": "united-arab-emirates",
+			"name": "United Arab Emirates",
+			"continent": "asia",
+			"bbox": [
+				51.569,
+				22.621,
+				56.383,
+				26.061
+			],
+			"centroid": [
+				53.696,
+				23.768
+			]
+		},
+		{
+			"id": "united-kingdom",
+			"name": "United Kingdom",
+			"continent": "europe",
+			"bbox": [
+				-8.156,
+				49.967,
+				1.771,
+				60.533
+			],
+			"centroid": [
+				-3.193,
+				55.25
+			]
+		},
+		{
+			"id": "united-states",
+			"name": "United States",
+			"continent": "north-america",
+			"bbox": [
+				-170,
+				25.121,
+				-66.977,
+				71.306
+			],
+			"centroid": [
+				-118.488,
+				48.213
+			]
+		},
+		{
+			"id": "uruguay",
+			"name": "Uruguay",
+			"continent": "south-america",
+			"bbox": [
+				-58.435,
+				-34.97,
+				-53.127,
+				-30.102
+			],
+			"centroid": [
+				-55.781,
+				-32.536
+			]
+		},
+		{
+			"id": "uzbekistan",
+			"name": "Uzbekistan",
+			"continent": "asia",
+			"bbox": [
+				55.977,
+				37.189,
+				73.118,
+				45.559
+			],
+			"centroid": [
+				64.548,
+				41.374
+			]
+		},
+		{
+			"id": "vanuatu",
+			"name": "Vanuatu",
+			"continent": "oceania",
+			"bbox": [
+				166.523,
+				-18.985,
+				169.328,
+				-14.635
+			],
+			"centroid": [
+				167.274,
+				-16.085
+			]
+		},
+		{
+			"id": "venezuela",
+			"name": "Venezuela",
+			"continent": "south-america",
+			"bbox": [
+				-73.378,
+				0.69,
+				-59.816,
+				12.199
+			],
+			"centroid": [
+				-66.597,
+				6.445
+			]
+		},
+		{
+			"id": "vietnam",
+			"name": "Vietnam",
+			"continent": "asia",
+			"bbox": [
+				102.119,
+				8.566,
+				109.465,
+				23.318
+			],
+			"centroid": [
+				105.092,
+				21.679
+			]
+		},
+		{
+			"id": "western-sahara",
+			"name": "Western Sahara",
+			"continent": "africa",
+			"bbox": [
+				-17.1,
+				20.767,
+				-8.681,
+				27.661
+			],
+			"centroid": [
+				-12.89,
+				24.214
+			]
+		},
+		{
+			"id": "yemen",
+			"name": "Yemen",
+			"continent": "asia",
+			"bbox": [
+				42.699,
+				12.305,
+				54.497,
+				18.996
+			],
+			"centroid": [
+				48.598,
+				15.651
+			]
+		},
+		{
+			"id": "zambia",
+			"name": "Zambia",
+			"continent": "africa",
+			"bbox": [
+				21.98,
+				-18.066,
+				33.674,
+				-8.194
+			],
+			"centroid": [
+				27.827,
+				-13.13
+			]
+		},
+		{
+			"id": "zimbabwe",
+			"name": "Zimbabwe",
+			"continent": "africa",
+			"bbox": [
+				25.226,
+				-22.397,
+				33.035,
+				-15.615
+			],
+			"centroid": [
+				29.13,
+				-19.006
+			]
+		}
+	]
+}
