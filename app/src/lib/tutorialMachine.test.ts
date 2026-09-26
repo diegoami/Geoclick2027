@@ -343,6 +343,18 @@ describe("the start screen's map in the tutorial (FT-79)", () => {
 		expect(id).toBe('zoom-pan');
 	});
 
+	it('a choice made before its step does not count for it (#80)', () => {
+		// The start screen's map restoring Europe while the intro shows.
+		const early = play([{ type: 'continent', id: 'europe' }], atIntro).state;
+		const atStep1 = play([{ type: 'next' }], early);
+		expect(atStep1.id).toBe('choose-continent');
+		expect(showsNext(atStep1.state)).toBe(false);
+		const italyEarly = play([{ type: 'country', id: 'italy' }], atContinent).state;
+		const atCountry = play([{ type: 'continent', id: 'europe' }], italyEarly);
+		expect(atCountry.id).toBe('choose-country');
+		expect(showsNext(atCountry.state)).toBe(false);
+	});
+
 	it('does nothing with no tutorial running', () => {
 		const idle = play([route('home'), { type: 'continent', id: 'europe' }]).state;
 		expect(idle).toEqual({ ...initialState, place: 'home' });
