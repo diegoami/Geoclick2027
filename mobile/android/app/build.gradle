@@ -18,8 +18,8 @@ android {
         applicationId "com.geoclick.mobile"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 130099
-        versionName "0.13.0"
+        versionCode 130051
+        versionName "0.13.0-beta.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
              // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
