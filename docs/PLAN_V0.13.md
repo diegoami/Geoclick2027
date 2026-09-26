@@ -3,7 +3,9 @@
 > **Agreed** on [#58](https://github.com/diegoami/Geoclick2027/issues/58),
 > 2026-09-25. The agreed design is the issue's last comment; this file holds
 > the tasks. Nothing is built yet. It also carries the one finding v0.12.0
-> left open, [#68](https://github.com/diegoami/Geoclick2027/issues/68).
+> left open, [#68](https://github.com/diegoami/Geoclick2027/issues/68), and
+> [#71](https://github.com/diegoami/Geoclick2027/issues/71) (place names in
+> the chosen language, agreed 2026-09-26) as FT-81.
 
 ## Why
 
@@ -183,6 +185,39 @@ tap it, and pick the kind of map.
   leaves B's values; stopping both clears them.
 - **DoD:** `Fixes #68`; gates green.
 
+### FT-81 — Place names in the chosen language (#71) · Medium · before FT-77
+
+- **Agreed on #71 (2026-09-26):** countries follow the chosen language
+  (Francia, Frankreich); on the **continent maps** (the six Capitals maps
+  and Europe's five city maps) towns do too (Mosca, Praga, Atene). A
+  country's own maps keep local town names, and regions keep their local
+  names everywhere. English, Italian and German.
+- **Do:**
+  - The builders write an optional `names: { it?, de? }` on a target whose
+    name differs in that language. Countries take Natural Earth's admin-0
+    `NAME_IT` / `NAME_DE`, towns on the continent maps the populated
+    places' `NAME_IT` / `NAME_DE`. Fixups where Natural Earth's form isn't
+    the short current one ("Repubblica Ceca" → "Cechia"; Cabo Verde,
+    Timor-Leste, Côte d'Ivoire checked in both languages).
+  - One app helper, `targetName(target, language)`, falling back to
+    `name`. It's used by every place that shows a target's name: labels
+    (`stretchedNames.ts` and the popups in `MapView`, `QuizView`,
+    `OverviewView`, `TourView`), the facts card title and the Quiz slips.
+    Labels redraw when the language changes.
+  - Rebuild the six Countries maps, the six Capitals maps, Europe's five
+    city maps and the world picker (`build-picker.ts` writes `names` too).
+  - DECISIONS.md: amend the #39 entry ("a country is called by its short
+    English name"; "a town has one name on every map it is on").
+- **Watch:** ids, progress, Favourites and the facts files don't change, and
+  neither do the names the facts sentences use. The Quiz is drag-and-drop,
+  so there's no typed answer to accept in several languages.
+- **Tests:** `targetName` falls back correctly; every country on the
+  Countries maps has an Italian and a German name; a switch of language
+  redraws a label (browser test); the region and country-Towns maps carry
+  no `names`.
+- **DoD:** gates green; 🧑 Europe — Countries and Europe — Capitals read in
+  Italian on the tablet.
+
 ## Out of scope
 
 - **Tier 3 facts** (1 474 places on the finer maps, and Sevilla the
@@ -196,8 +231,8 @@ tap it, and pick the kind of map.
 ## Order
 
 **FT-80 and FT-76 first** (independent, both small; FT-76's size gate
-decides whether the rest goes ahead as planned). **Then FT-77, then FT-78
-and FT-79.** An alpha after FT-77 for the tablet, since the map view,
+decides whether the rest goes ahead as planned). **Then FT-81** (#71: the
+picker's labels use its helper), **then FT-77, then FT-78 and FT-79.** An alpha after FT-77 for the tablet, since the map view,
 the panel and the back button are all things to feel on the device.
 
 **→ Release `v0.13.0`** per [RELEASES.md](RELEASES.md), "The milestone".
@@ -211,3 +246,4 @@ the panel and the back button are all things to feel on the device.
 | FT-78 | planned | —     |       |
 | FT-79 | planned | —     |       |
 | FT-80 | **merged** | PR #69 | #68: a set of publishers, the largest wins; a cleanup removes only its own |
+| FT-81 | planned | —     | #71 |
