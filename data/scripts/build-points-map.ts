@@ -41,7 +41,7 @@ import {
 import {
 	ALL_NAME_FIELDS,
 	LANGUAGE_NAME_FIELDS,
-	otherNames,
+	townNames,
 	COUNTRY_TYPES,
 	NOT_COUNTRIES,
 	capPerCountry,
@@ -507,7 +507,7 @@ async function main() {
 				if (!multiCountry || aliases.length > 0) return {};
 				const p = feature.properties;
 				const field = (f: string) => p[f] as string | null | undefined;
-				const names = otherNames(name, {
+				const names = townNames(name, {
 					en: field('NAME_EN'),
 					it: field('NAME_IT'),
 					de: field('NAME_DE')

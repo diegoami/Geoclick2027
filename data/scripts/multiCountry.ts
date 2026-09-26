@@ -151,6 +151,76 @@ export function otherNames(
 	return names;
 }
 
+/**
+ * A town's names in other languages that Natural Earth has but that are not
+ * shown (#71), by the town's name: the town keeps its own name in those
+ * languages instead. Found reading all 455 towns on the continent maps:
+ * - an old or wrong name (Nur-Sultan for Astana, Melekeok for Ngerulmud);
+ * - an English form the map's own rule turned away (Odessa for Odesa; the
+ *   Russian forms of Belarusian towns, Vitebsk for Vitsyebsk);
+ * - an Italian scholarly transliteration no one writes (Nižnij Novgorod,
+ *   Donec'k), where the English form reads as well; German's own forms
+ *   (Charkiw, Saporischschja) are the ones German uses, and stay;
+ * - a spelling that differs only in punctuation or form (Port of Spain,
+ *   Città di San Marino).
+ */
+export const TOWN_NAMES_NOT_SHOWN: Record<string, NameLanguage[]> = {
+	Astana: ['en', 'it', 'de'],
+	Ngerulmud: ['en', 'it', 'de'],
+	Tarawa: ['en', 'it', 'de'],
+	'Port-of-Spain': ['en', 'it', 'de'],
+	Odesa: ['en'],
+	'Washington, D.C.': ['en'],
+	Panevėžys: ['en'],
+	Hrodna: ['en'],
+	Vitsyebsk: ['en', 'it'],
+	Mahilyow: ['en', 'it'],
+	Homyel: ['en', 'it'],
+	Peja: ['en', 'it'],
+	'San Sebastián': ['en', 'de'],
+	"Saint George's": ['en', 'de'],
+	"N'Djamena": ['it', 'de'],
+	Hargeisa: ['it', 'de'],
+	"Saint John's": ['de'],
+	Timișoara: ['de'],
+	Larissa: ['de'],
+	'San Marino': ['it'],
+	Monaco: ['it'],
+	Sanaa: ['it'],
+	Bishkek: ['it'],
+	Dushanbe: ['it'],
+	Ashgabat: ['it'],
+	Perm: ['it'],
+	'Nizhny Novgorod': ['it'],
+	Kazan: ['it'],
+	Orsha: ['it'],
+	Barysaw: ['it'],
+	Baranavichy: ['it'],
+	Babruysk: ['it'],
+	Brest: ['it'],
+	Voronezh: ['it'],
+	Kharkiv: ['it'],
+	Khmelnytskyi: ['it'],
+	Luhansk: ['it'],
+	Donetsk: ['it'],
+	'Kryvyi Rih': ['it'],
+	Zaporizhzhia: ['it'],
+	Mariupol: ['it'],
+	Mykolaiv: ['it']
+};
+
+/** A town's names in English, Italian and German, less those not shown. */
+export function townNames(
+	name: string,
+	candidates: Partial<Record<NameLanguage, string | null | undefined>>
+): Partial<Record<NameLanguage, string>> {
+	const notShown = TOWN_NAMES_NOT_SHOWN[name] ?? [];
+	const kept = Object.fromEntries(
+		Object.entries(candidates).filter(([language]) => !notShown.includes(language as NameLanguage))
+	);
+	return otherNames(name, kept);
+}
+
 /** A country's Italian and German names, with the fixups applied. */
 export function countryNames(
 	name: string,
