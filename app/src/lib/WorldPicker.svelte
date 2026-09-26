@@ -172,6 +172,40 @@
 			?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
 	}
 
+	// A continent's name sits on the middle of its box, which on a phone can
+	// put North America's or Oceania's past the map's edge, or over Europe's
+	// (#79). Once the map settles, each name is nudged back inside, and below
+	// any name before it that it would cover - with `translate`, which adds to
+	// the transform MapLibre places the marker with.
+	function keepContinentsInside() {
+		if (!map || view !== 'world') return;
+		const bounds = container.getBoundingClientRect();
+		const margin = 4;
+		const placed: DOMRect[] = [];
+		for (const label of container.querySelectorAll<HTMLElement>('.picker-continent')) {
+			label.style.translate = '';
+			const box = label.getBoundingClientRect();
+			const dx =
+				Math.max(0, bounds.left + margin - box.left) -
+				Math.max(0, box.right - (bounds.right - margin));
+			let dy =
+				Math.max(0, bounds.top + margin - box.top) -
+				Math.max(0, box.bottom - (bounds.bottom - margin));
+			for (const other of placed) {
+				const left = box.left + dx;
+				const top = box.top + dy;
+				const overlaps =
+					left < other.right &&
+					left + box.width > other.left &&
+					top < other.bottom &&
+					top + box.height > other.top;
+				if (overlaps) dy = other.bottom + margin - box.top;
+			}
+			if (dx || dy) label.style.translate = `${dx}px ${dy}px`;
+			placed.push(new DOMRect(box.left + dx, box.top + dy, box.width, box.height));
+		}
+	}
+
 	onMount(() => {
 		let cancelled = false;
 		(async () => {
@@ -250,6 +284,7 @@
 					}
 					paint(start);
 					drawLabels(start);
+					keepContinentsInside();
 					loaded = true;
 				});
 				map.on('click', 'countries-fill', (e) => {
@@ -274,6 +309,8 @@
 				map.on('mouseleave', 'countries-fill', () => {
 					if (map) map.getCanvas().style.cursor = '';
 				});
+				// After a pan, a zoom, a resize or the fly back to the world.
+				map.on('moveend', keepContinentsInside);
 			} catch (e) {
 				error = e instanceof Error ? e.message : String(e);
 			}
@@ -345,7 +382,10 @@
 	$effect(() => {
 		const language = getLanguage();
 		if (!loaded) return;
-		untrack(() => drawLabels(view, language));
+		untrack(() => {
+			drawLabels(view, language);
+			keepContinentsInside();
+		});
 	});
 
 	onDestroy(() => {
