@@ -191,6 +191,11 @@ Check items off as they land; update "Status" as iterations complete.
   two review rounds, both AGREE; #66, found in the beta, fixed in #67; #68
   left for v0.13). Next: the world-map start screen, agreed as
   [#58](https://github.com/diegoami/Geoclick2027/issues/58) (FT-76 to FT-79).
+- **Planned 2026-09-26: v0.13.0** ([PLAN_V0.13.md](docs/PLAN_V0.13.md), #58
+  agreed): the app opens on a world map (world, then continent, then a
+  country's panel of maps), the list kept behind a Map / List switch with
+  one row and a listbox per country, and the tutorial's first steps on the
+  map. FT-76 (the picker map, size gate) to FT-79, plus FT-80 (#68).
 - **Raised and decided 2026-09-20, unscoped**: six UX problems from one
   round of tablet play (`germany-towns-100k`) — the level-0 tray offering
   every name at once, slips losing their drag to the tablet's own
