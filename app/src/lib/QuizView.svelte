@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onMount, onDestroy } from 'svelte';
+	import { onMount, onDestroy, untrack } from 'svelte';
 	import * as maplibregl from 'maplibre-gl';
 	import 'maplibre-gl/dist/maplibre-gl.css';
 	import { resolve } from '$app/paths';
@@ -10,7 +10,8 @@
 	import { mapFitPadding } from './mapFit';
 	import { resolveDrop } from './quizDrop';
 	import MapNav from './MapNav.svelte';
-	import { t, tPlural } from './i18n.svelte';
+	import { getLanguage, t, tPlural } from './i18n.svelte';
+	import { targetName } from './targetName';
 	import { mapDisplayName } from './mapCatalog';
 	import { tutorialDrop, tutorialQuizComplete, tutorialState } from './tutorial.svelte';
 	import { tutorialSlipIds } from './tutorialMachine';
@@ -214,6 +215,25 @@
 	// imperative side-table for cleanup on restart/destroy.
 	// eslint-disable-next-line svelte/prefer-svelte-reactivity
 	const solvedPopups = new Map<string, maplibregl.Popup>();
+
+	// What a slip, a placed name and the card SHOW (#71): the name in the
+	// player's language. Grading and feature state keep using the target's
+	// own `name`, the key its tiles are joined on.
+	const targetsById = $derived(new Map((mapDef?.targets ?? []).map((x) => [x.id, x])));
+	function shownName(targetId: string, fallback: string): string {
+		const target = targetsById.get(targetId);
+		return target ? targetName(target) : fallback;
+	}
+	// A new language renames the names already placed.
+	$effect(() => {
+		getLanguage();
+		untrack(() => {
+			for (const [id, popup] of solvedPopups) {
+				const shown = shownName(id, '');
+				if (shown && popup.getElement()?.textContent !== shown) popup.setText(shown);
+			}
+		});
+	});
 	// Counts up with every name placed, so the newest label outranks the ones
 	// already on the map when they fight for the same spot.
 	let labelPriority = 0;
@@ -432,7 +452,7 @@
 				.join(' ')
 		})
 			.setLngLat(centroid)
-			.setText(name)
+			.setText(shownName(targetId, name))
 			.addTo(map);
 		// When two names don't fit (FT-23), the one just placed wins: it is the
 		// answer to what the player did a moment ago - and a name shown after a
@@ -812,7 +832,7 @@
 	     full of names, and a paragraph here would be read by nobody. -->
 	{#if told && !complete}
 		<FactCard
-			name={told.name}
+			name={shownName(told.id, told.name)}
 			fact={facts[told.id]}
 			origin={told.origin}
 			extra={told.extra}
@@ -858,7 +878,7 @@
 						onpointerup={onSlipPointerUp}
 						onpointercancel={onSlipPointerCancel}
 					>
-						{item.target.name}
+						{shownName(item.target.id, item.target.name)}
 					</button>
 				{/each}
 			</div>

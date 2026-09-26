@@ -183,6 +183,39 @@ Raised by the product owner after playing `v0.11.0` on a tablet.
   the "Frankfurt" the older map and `data/facts/germany.json` use.
   `germany-towns-100k` itself is unchanged.
 
+## Place names in the chosen language (2026-09-26, #71)
+
+The product owner played Europe — Countries in Italian and read FRANCE,
+GERMANY, UNITED KINGDOM among Italian sea and mountain names. The #39 rule
+("a country is called by its short English name") was mine, not one of the
+owner's answers. The owner agreed the change on #71.
+
+- **Countries follow the chosen language**, in English, Italian and German.
+  Natural Earth's admin-0 `NAME_IT` / `NAME_DE` are used, with the English
+  rule's fixups (`COUNTRY_NAME_FIXUPS_BY_LANGUAGE`): the short current name
+  (Cechia, Stati Uniti), and the name a country asks for in every language
+  (Côte d'Ivoire, Cabo Verde, Timor-Leste).
+- **Towns follow it on maps of several countries only**: the six Capitals
+  maps and Europe's five city maps (Mosca, Varsavia; Moskau, Warschau; and
+  Rome, Warsaw in English). A country's own maps keep the local name, and
+  regions keep theirs everywhere (Bayern, Lombardia). On a map of several
+  countries a town is a foreign place, so it gets the reader's name for it.
+  On its own country's map it is at home, so it keeps the local one.
+- **Some of Natural Earth's names are not shown** (`TOWN_NAMES_NOT_SHOWN`):
+  - old ones (Nur-Sultan);
+  - English forms this project's rule turned away (Odessa; Vitebsk for
+    Vitsyebsk);
+  - Italian scholarly transliterations nobody writes (Nižnij Novgorod,
+    Donec'k), where the English form reads as well. German's own forms
+    (Charkiw) are what German uses, and stay.
+  All 455 towns were read to find these.
+- **`name` stays the key.** The tiles are joined on it (`promoteId`), and
+  ids, progress, Favourites and grading are unchanged. The other names live
+  in map.json as `names: { en?, it?, de? }` and never enter the tiles, so
+  every tileset rebuilt byte-identical. The app reads a shown name through
+  one helper, `targetName()`, and each view renames what's on the map when
+  the language changes.
+
 ## Maps of several countries (2026-09-24, #39)
 
 The product owner asked for continents, the parts of Europe, more of
@@ -218,6 +251,9 @@ first batch (continents and the parts of Europe) settled.
   asks for where that changed: Czechia, Côte d'Ivoire, Cabo Verde,
   Timor-Leste, each with the old name as an alias - the rule Kyiv and
   Odesa already follow. Turkey stays Turkey, as on its own map.
+  *Amended 2026-09-26 ([#71](https://github.com/diegoami/Geoclick2027/issues/71)):*
+  that is its English name. In Italian and German it is shown in that
+  language (Francia, Frankreich); see "Place names in the chosen language".
 - **A capital is the one the country's constitution names**, several where
   it names several (South Africa's three, Bolivia's two). Natural Earth
   flags the seat of government or the largest city in five places; the
@@ -232,7 +268,11 @@ first batch (continents and the parts of Europe) settled.
   since one language field would put Antwerpen in French or Genève in
   German. Each town records its country in map.json, and its authored
   sentences come from that country's file: 32 of Central Europe's 68 towns
-  arrive with their name-facts already written.
+  arrive with their name-facts already written. *Amended 2026-09-26
+  (#71):* this is still the town's `name`, its key, but a map of several
+  countries now shows it in the chosen language (München reads "Munich" in
+  English and "Monaco di Baviera" in Italian on Central Europe). A
+  country's own maps keep the local name.
 - **The five parts of Europe** (owner's answer to Q1): West (France,
   Benelux, the UK, Ireland), Central (Germany, Poland, Czechia, Austria,
   Switzerland, Hungary, Slovakia, Slovenia), East (Ukraine, Belarus,

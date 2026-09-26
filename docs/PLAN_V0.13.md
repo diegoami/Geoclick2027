@@ -246,4 +246,4 @@ the panel and the back button are all things to feel on the device.
 | FT-78 | planned | —     |       |
 | FT-79 | planned | —     |       |
 | FT-80 | **merged** | PR #69 | #68: a set of publishers, the largest wins; a cleanup removes only its own |
-| FT-81 | planned | —     | #71 |
+| FT-81 | in PR   | —     | #71: 17 maps and the picker rebuilt, tiles unchanged; `targetName()` in every view; 42 town names not shown |

@@ -103,6 +103,136 @@ export const COUNTRY_NAME_FIXUPS: Record<string, string> = {
 	'Turkish Republic of Northern Cyprus': 'Northern Cyprus'
 };
 
+/** The languages a place's name is shown in (#71), as the app's own. */
+export type NameLanguage = 'en' | 'it' | 'de';
+
+/**
+ * A country's name in Italian and German where Natural Earth's NAME_IT or
+ * NAME_DE is not the one to show (#71), keyed by the English name the map
+ * uses. The rule is English's (COUNTRY_NAME_FIXUPS): the short current name,
+ * and the name a country asks for where it asks for one in every language,
+ * as Côte d'Ivoire and Cabo Verde do.
+ */
+export const COUNTRY_NAME_FIXUPS_BY_LANGUAGE: Record<'it' | 'de', Record<string, string>> = {
+	it: {
+		Czechia: 'Cechia',
+		"Côte d'Ivoire": "Côte d'Ivoire",
+		'Cabo Verde': 'Cabo Verde',
+		'Timor-Leste': 'Timor-Leste',
+		'United States': 'Stati Uniti',
+		Myanmar: 'Myanmar',
+		Eswatini: 'Eswatini'
+	},
+	de: {
+		"Côte d'Ivoire": "Côte d'Ivoire",
+		'Cabo Verde': 'Cabo Verde',
+		'Timor-Leste': 'Timor-Leste',
+		China: 'China',
+		Taiwan: 'Taiwan',
+		Cyprus: 'Zypern',
+		'Northern Cyprus': 'Nordzypern'
+	}
+};
+
+/**
+ * A target's names in other languages (#71): each language's name, where
+ * there is one and it differs from `name`. Empty when there is nothing to
+ * add, so the builders write no `names` at all for such a target.
+ */
+export function otherNames(
+	name: string,
+	candidates: Partial<Record<NameLanguage, string | null | undefined>>
+): Partial<Record<NameLanguage, string>> {
+	const names: Partial<Record<NameLanguage, string>> = {};
+	for (const language of ['en', 'it', 'de'] as const) {
+		const value = candidates[language]?.trim();
+		if (value && value !== name) names[language] = value;
+	}
+	return names;
+}
+
+/**
+ * A town's names in other languages that Natural Earth has but that are not
+ * shown (#71), by the town's name: the town keeps its own name in those
+ * languages instead. Found reading all 455 towns on the continent maps:
+ * - an old or wrong name (Nur-Sultan for Astana, Melekeok for Ngerulmud);
+ * - an English form the map's own rule turned away (Odessa for Odesa; the
+ *   Russian forms of Belarusian towns, Vitebsk for Vitsyebsk);
+ * - an Italian scholarly transliteration no one writes (Nižnij Novgorod,
+ *   Donec'k), where the English form reads as well; German's own forms
+ *   (Charkiw, Saporischschja) are the ones German uses, and stay;
+ * - a spelling that differs only in punctuation or form (Port of Spain,
+ *   Città di San Marino).
+ */
+export const TOWN_NAMES_NOT_SHOWN: Record<string, NameLanguage[]> = {
+	Astana: ['en', 'it', 'de'],
+	Ngerulmud: ['en', 'it', 'de'],
+	Tarawa: ['en', 'it', 'de'],
+	'Port-of-Spain': ['en', 'it', 'de'],
+	Odesa: ['en'],
+	'Washington, D.C.': ['en'],
+	Panevėžys: ['en'],
+	Hrodna: ['en'],
+	Vitsyebsk: ['en', 'it'],
+	Mahilyow: ['en', 'it'],
+	Homyel: ['en', 'it'],
+	Peja: ['en', 'it'],
+	'San Sebastián': ['en', 'de'],
+	"Saint George's": ['en', 'de'],
+	"N'Djamena": ['it', 'de'],
+	Hargeisa: ['it', 'de'],
+	"Saint John's": ['de'],
+	Timișoara: ['de'],
+	Larissa: ['de'],
+	'San Marino': ['it'],
+	Monaco: ['it'],
+	Sanaa: ['it'],
+	Bishkek: ['it'],
+	Dushanbe: ['it'],
+	Ashgabat: ['it'],
+	Perm: ['it'],
+	'Nizhny Novgorod': ['it'],
+	Kazan: ['it'],
+	Orsha: ['it'],
+	Barysaw: ['it'],
+	Baranavichy: ['it'],
+	Babruysk: ['it'],
+	Brest: ['it'],
+	Voronezh: ['it'],
+	Kharkiv: ['it'],
+	Khmelnytskyi: ['it'],
+	Luhansk: ['it'],
+	Donetsk: ['it'],
+	'Kryvyi Rih': ['it'],
+	Zaporizhzhia: ['it'],
+	Mariupol: ['it'],
+	Mykolaiv: ['it']
+};
+
+/** A town's names in English, Italian and German, less those not shown. */
+export function townNames(
+	name: string,
+	candidates: Partial<Record<NameLanguage, string | null | undefined>>
+): Partial<Record<NameLanguage, string>> {
+	const notShown = TOWN_NAMES_NOT_SHOWN[name] ?? [];
+	const kept = Object.fromEntries(
+		Object.entries(candidates).filter(([language]) => !notShown.includes(language as NameLanguage))
+	);
+	return otherNames(name, kept);
+}
+
+/** A country's Italian and German names, with the fixups applied. */
+export function countryNames(
+	name: string,
+	nameIt: string | null | undefined,
+	nameDe: string | null | undefined
+): Partial<Record<NameLanguage, string>> {
+	return otherNames(name, {
+		it: COUNTRY_NAME_FIXUPS_BY_LANGUAGE.it[name] ?? nameIt,
+		de: COUNTRY_NAME_FIXUPS_BY_LANGUAGE.de[name] ?? nameDe
+	});
+}
+
 /**
  * Which populated-places name field to read for each country on a map of
  * several, so a city is called the same thing it is on that country's own
@@ -133,6 +263,9 @@ export const LOCAL_NAME_FIELD: Record<string, string> = {
 
 /** Every field LOCAL_NAME_FIELD can pick, plus NAME, for ogr2ogr's -select. */
 export const ALL_NAME_FIELDS = [...new Set(['NAME', ...Object.values(LOCAL_NAME_FIELD)])];
+
+/** The populated-places fields that name a town in each language (#71). */
+export const LANGUAGE_NAME_FIELDS = ['NAME_EN', 'NAME_IT', 'NAME_DE'];
 
 /** The name field for one place on a multi-country map. */
 export function localNameField(country: string): string {

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onMount, onDestroy } from 'svelte';
+	import { onMount, onDestroy, untrack } from 'svelte';
 	import * as maplibregl from 'maplibre-gl';
 	import 'maplibre-gl/dist/maplibre-gl.css';
 	import { fetchMapDefAndStyle, createMap } from './geoclickMap';
@@ -9,7 +9,8 @@
 	import MapNav from './MapNav.svelte';
 	import type { MapDefinition } from './mapDefinition';
 	import { mapDisplayName } from './mapCatalog';
-	import { t } from './i18n.svelte';
+	import { getLanguage, t } from './i18n.svelte';
+	import { targetName } from './targetName';
 	import { createProgressRepository } from './progressRepository';
 	import { tapOverride, visibleTier } from './shownNames';
 	import {
@@ -91,8 +92,15 @@
 					anchor: 'center'
 				})
 					.setLngLat(target.centroid)
-					.setText(target.name)
+					.setText(targetName(target))
 					.addTo(map);
+			// The language changed since it was drawn (#71): setText replaces the
+			// content element, so its focus mark is set again.
+			const shown = targetName(target);
+			if (existing && existing.getElement()?.textContent !== shown) {
+				existing.setText(shown);
+				markFocused(existing, target.id === untrack(() => asked?.id));
+			}
 			popup.addClassName('geoclick-solved-popup');
 			popup.addClassName('geoclick-retention');
 			// A region's name is set like its stretched one, in the atlas's
@@ -109,7 +117,7 @@
 			shownPopups.set(target.id, popup);
 			// Along the region where it fits; the popup is its fallback (FT-66).
 			if (target.spine)
-				stretched?.set(target.id, { name: target.name, spine: target.spine, tier, popup });
+				stretched?.set(target.id, { name: shown, spine: target.spine, tier, popup });
 		}
 		anyShown = drawn;
 	}
@@ -119,12 +127,7 @@
 	// the card closes, it competes like any other name again.
 	$effect(() => {
 		const focused = asked?.id;
-		for (const [id, popup] of shownPopups) {
-			popup
-				.getElement()
-				?.querySelector('.maplibregl-popup-content')
-				?.classList.toggle(FOCUSED_CLASS, id === focused);
-		}
+		for (const [id, popup] of shownPopups) markFocused(popup, id === focused);
 	});
 
 	/**
@@ -139,6 +142,27 @@
 	let legendEl = $state<HTMLDivElement>();
 	$effect(() => {
 		if (legendEl) return publishBottomOverlay(legendEl);
+	});
+
+	function markFocused(popup: maplibregl.Popup, focused: boolean) {
+		popup
+			.getElement()
+			?.querySelector('.maplibregl-popup-content')
+			?.classList.toggle(FOCUSED_CLASS, focused);
+	}
+
+	// A new language renames what is on the map (#71).
+	$effect(() => {
+		getLanguage();
+		untrack(() => {
+			if (mapDef) redrawNames(mapDef);
+		});
+	});
+
+	// The open card's name follows the language too.
+	const askedName = $derived.by(() => {
+		const target = asked && mapDef?.targets.find((x) => x.id === asked?.id);
+		return target ? targetName(target) : asked?.name;
 	});
 
 	/** Back to plain: the map shows what is known and nothing else. */
@@ -278,7 +302,7 @@
 	<div class="container" bind:this={container}></div>
 	{#if asked}
 		<FactCard
-			name={asked.name}
+			name={askedName ?? asked.name}
 			fact={facts[asked.id]}
 			origin={asked.origin}
 			extra={asked.extra}

@@ -45,6 +45,8 @@ import {
 	COUNTRY_TYPES,
 	COUNTRY_NAME_FIXUPS,
 	NOT_COUNTRIES,
+	countryNames,
+	type NameLanguage,
 	parseList,
 	polygonAreaKm2,
 	sqlIn,
@@ -532,6 +534,8 @@ async function main() {
 	const fields = Array.from(new Set([...BASE_FIELDS, nameField, excludeField]));
 	const clipArgs = clip ? ['-clipsrc', ...(clip.includes('(') ? [clip] : clip.split(','))] : [];
 
+	// A country's names in the other languages, by its name (#71).
+	const otherNamesOf = new Map<string, Partial<Record<NameLanguage, string>>>();
 	if (countryLevel) {
 		console.log(`[1/6] Filtering the countries of "${country}" from Natural Earth admin-0...`);
 		const where = [
@@ -566,6 +570,11 @@ async function main() {
 			p.name = COUNTRY_NAME_FIXUPS[englishName] ?? englishName;
 			// The name it was renamed from stays a name the quiz accepts.
 			if (p.name !== englishName) p.alias = englishName;
+			// Its names in Italian and German go to map.json, not the tiles (#71).
+			const names = countryNames(p.name, p.NAME_IT, p.NAME_DE);
+			if (Object.keys(names).length > 0) otherNamesOf.set(p.name, names);
+			delete p.NAME_IT;
+			delete p.NAME_DE;
 			const area = polygonAreaKm2(feature.geometry);
 			if (area < minArea) {
 				console.log(`      dropped ${p.name} (${Math.round(area)} km² < ${minArea})`);
@@ -779,6 +788,7 @@ async function main() {
 			type,
 			tier: 1,
 			aliases: (p.alias ? [p.alias] : []) as string[],
+			...(otherNamesOf.has(p.name) ? { names: otherNamesOf.get(p.name) } : {}),
 			centroid: center,
 			bbox,
 			...(wraps ? { crossesAntimeridian: true } : {})

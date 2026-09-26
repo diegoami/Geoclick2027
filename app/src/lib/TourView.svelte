@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onMount, onDestroy } from 'svelte';
+	import { onMount, onDestroy, untrack } from 'svelte';
 	import * as maplibregl from 'maplibre-gl';
 	import 'maplibre-gl/dist/maplibre-gl.css';
 	import { fetchMapDefAndStyle, createMap } from './geoclickMap';
@@ -8,7 +8,8 @@
 	import { terrainShown } from './mapPrefs.svelte';
 	import { mapFitPadding } from './mapFit';
 	import MapNav from './MapNav.svelte';
-	import { t } from './i18n.svelte';
+	import { getLanguage, t } from './i18n.svelte';
+	import { targetName } from './targetName';
 	import { mapDisplayName } from './mapCatalog';
 	import { fetchTour, type Tour } from './tour';
 	import { TOUR_SPEEDS, defaultTourSpeed } from './tourSpeed';
@@ -124,7 +125,7 @@
 			className: 'geoclick-popup'
 		});
 		const [lon, lat] = target.centroid;
-		popup.setLngLat([lon, lat]).setText(target.name).addTo(map);
+		popup.setLngLat([lon, lat]).setText(targetName(target)).addTo(map);
 		// One popup follows the tour from step to step, so the region style
 		// goes on and off with the target (FT-74): a town keeps its pill.
 		// After addTo, because MapLibre drops a class set before the popup
@@ -235,6 +236,14 @@
 		};
 	});
 
+	// A new language renames the step's name on the map (#71).
+	$effect(() => {
+		const language = getLanguage();
+		untrack(() => {
+			if (popup && currentTarget) popup.setText(targetName(currentTarget, language));
+		});
+	});
+
 	onDestroy(() => {
 		if (advanceTimer) clearTimeout(advanceTimer);
 		popup?.remove();
@@ -252,7 +261,7 @@
 		     the tour drives it, and it changes with every step. -->
 		{#if currentTarget}
 			<FactCard
-				name={currentTarget.name}
+				name={targetName(currentTarget)}
 				fact={facts[currentTarget.id]}
 				origin={tourFacts.origin}
 				extra={tourFacts.extra}

@@ -34,6 +34,8 @@ import {
 	COUNTRY_NAME_FIXUPS,
 	COUNTRY_TYPES,
 	NOT_COUNTRIES,
+	countryNames,
+	type NameLanguage,
 	polygonAreaKm2,
 	sqlIn,
 	sqlString
@@ -98,6 +100,8 @@ function main(): void {
 
 	console.log('[1/4] Filtering and clipping each continent as its Countries map does...');
 	const features: Feature[] = [];
+	// Each country's names in the other languages (#71), by id; not in the tiles.
+	const namesOf = new Map<string, Partial<Record<NameLanguage, string>>>();
 	for (const spec of CONTINENTS) {
 		const partPath = path.join(outDir, `.tmp-${slugify(spec.name)}.geojson`);
 		const where = [
@@ -132,6 +136,8 @@ function main(): void {
 			const name = COUNTRY_NAME_FIXUPS[englishName] ?? englishName;
 			if (polygonAreaKm2(feature.geometry) < MIN_AREA_KM2) continue;
 			// Only what the home screen reads travels into the tiles.
+			const names = countryNames(name, p.NAME_IT, p.NAME_DE);
+			if (Object.keys(names).length > 0) namesOf.set(slugify(name), names);
 			feature.properties = { id: slugify(name), name, continent: slugify(spec.name) };
 			features.push(feature);
 			kept++;
@@ -167,6 +173,7 @@ function main(): void {
 			id: f.properties.id,
 			name: f.properties.name,
 			continent: f.properties.continent,
+			...(namesOf.has(f.properties.id) ? { names: namesOf.get(f.properties.id) } : {}),
 			bbox: bbox.map((v) => Math.round(v * 1000) / 1000),
 			centroid: [Math.round(lon * 1000) / 1000, Math.round(lat * 1000) / 1000]
 		};
