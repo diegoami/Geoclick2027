@@ -101,6 +101,16 @@ pairs well with a canvas/map-heavy UI.
   `--map-bottom-overlay` and `--window-bottom-overlay` on the page root,
   which `app.css` (the map's bottom controls) and `VersionBadge.svelte`
   read. `createMap` also folds the compact credit on a narrow screen.
+- **The start screen's world map** (FT-77, #58). `WorldPicker.svelte` on
+  the home page is a MapLibre map of its own, not `createMap`. Its tiles are
+  `data/maps/world-picker/` (`build-picker.ts`), which has `land` and
+  `countries` layers and no `map.json`. The view (the world, or a continent
+  id) lives in `mapPrefs.svelte.ts` (`pickerView`, kept on the device).
+  `+layout.svelte`'s back button calls `pickerGoUp()` before leaving the
+  app. What a tap opens is decided in `worldPicker.ts` (`panelFor`: a
+  country's own catalog groups, or its continent's), linked through each
+  group's `pickerIdOf` (`mapCatalog.ts`). The panel renders the home page's
+  own `mapCard` snippet, passed in as a prop.
 
 - **A derived fact per target** (v0.8.0, FT-34). `data/scripts/build-facts.ts`
   writes `data/maps/<id>/facts.json` beside each `map.json` — structured

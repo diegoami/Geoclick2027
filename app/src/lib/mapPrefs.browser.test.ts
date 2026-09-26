@@ -1,7 +1,15 @@
 // Runs in the browser project: the store's state lives in module scope and
 // persists to a real localStorage.
 import { beforeEach, describe, expect, it } from 'vitest';
-import { RECENT_SHOWN, recentMaps, recordVisit, setUnrecordedMap } from './mapPrefs.svelte';
+import {
+	RECENT_SHOWN,
+	recentMaps,
+	recordVisit,
+	setUnrecordedMap,
+	pickerGoUp,
+	pickerView,
+	setPickerView
+} from './mapPrefs.svelte';
 
 const stored = () => JSON.parse(localStorage.getItem('geoclick:recent-maps:v1') ?? '[]');
 
@@ -42,5 +50,17 @@ describe('Recent maps store', () => {
 		expect(recentMaps()).toEqual(before);
 		recordVisit('usa-states');
 		expect(recentMaps()[0]).toBe('usa-states');
+	});
+});
+
+describe("the start screen's view (FT-77)", () => {
+	it('is kept on the device, and the back button goes up from a continent', () => {
+		setPickerView('europe');
+		expect(pickerView()).toBe('europe');
+		expect(localStorage.getItem('geoclick:picker-view:v1')).toBe('europe');
+		expect(pickerGoUp()).toBe(true);
+		expect(pickerView()).toBe('world');
+		// On the world, back leaves the app: nothing to go up to.
+		expect(pickerGoUp()).toBe(false);
 	});
 });

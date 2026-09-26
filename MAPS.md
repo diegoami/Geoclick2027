@@ -922,6 +922,12 @@ npx tsx data/scripts/build-picker.ts            # --simplify=5% --max-zoom=5
   read at continent zoom.
 - `worldPicker.test.ts` checks that the picker holds exactly the Countries
   maps' countries, each on the continent whose map lists it.
+- **The land underneath** (FT-77): a `land` layer, all of admin-0 unclipped
+  (to 60° S) and dissolved into one shape. Greenland, Antarctica and the
+  parts the clips cut away (French Guiana, Hawaii) would otherwise be holes.
+  mapshaper writes it with `geojson-type=FeatureCollection`, since with no
+  fields left it would write a GeometryCollection, which tippecanoe skips.
+  With it the tiles are **531 KB**.
 
 ### Germany's towns in six parts, from Wikidata (built 2026-09-24, #39 batch C)
 

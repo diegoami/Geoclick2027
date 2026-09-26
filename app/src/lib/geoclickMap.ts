@@ -61,7 +61,7 @@ export async function fetchMapDefAndStyle(
  * rather than done on an event: MapLibre marks the credit compact only once
  * its text has come in from the sources, and no map event lines up with it.
  */
-function foldCreditOnNarrowScreens(map: maplibregl.Map, container: HTMLElement): void {
+export function foldCreditOnNarrowScreens(map: maplibregl.Map, container: HTMLElement): void {
 	const credit = container.querySelector<HTMLElement>('.maplibregl-ctrl-attrib');
 	if (!credit) return;
 	const fold = () => {

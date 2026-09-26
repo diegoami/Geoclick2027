@@ -19,6 +19,7 @@
 	import { RELEASES_URL, isNativeShell } from '$lib/platform';
 	import TutorialButton from '$lib/TutorialButton.svelte';
 	import TutorialNudge from '$lib/TutorialNudge.svelte';
+	import WorldPicker from '$lib/WorldPicker.svelte';
 	import { showTutorialNudge } from '$lib/tutorialSeen.svelte';
 	import { TUTORIAL_MAP_ID, isTutorialSandboxActive } from '$lib/tutorialSandbox.svelte';
 	import { tutorialState } from '$lib/tutorial.svelte';
@@ -221,6 +222,17 @@
 				</section>
 			{/if}
 		</div>
+	{/if}
+
+	<!-- The world, then a continent, then a country's maps (FT-77, #58). The
+	     map runs in the browser only, so it comes after mount; the list below
+	     is what the prerendered page holds. -->
+	{#if mounted}
+		<section class="picker-section">
+			<WorldPicker card={mapCard} />
+		</section>
+	{/if}
+	{#if hasShortcuts}
 		<h2 class="all-maps">{t('home.allMaps')}</h2>
 	{/if}
 
@@ -286,6 +298,14 @@
 		margin: 4rem auto;
 		font-family: system-ui, sans-serif;
 		text-align: center;
+	}
+	/* Wider than the column of cards: a map of the world wants the width. */
+	.picker-section {
+		position: relative;
+		left: 50%;
+		width: min(calc(100vw - 2rem), 64rem);
+		transform: translateX(-50%);
+		margin: 1.5rem 0 2rem;
 	}
 	.header-row {
 		display: flex;

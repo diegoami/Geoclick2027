@@ -6,6 +6,7 @@ import { existsSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { DEFAULT_MAPS_DIR, listMapIds } from '../../../data/scripts/build-map-index';
+import { mapGroups, pickerIdOf } from './mapCatalog';
 
 interface Picker {
 	id: string;
@@ -76,5 +77,34 @@ describe('the world picker', () => {
 			expect(lat >= bbox[1] && lat <= bbox[3], id).toBe(true);
 			expect(lon >= bbox[0] && lon <= bbox[2], id).toBe(true);
 		}
+	});
+});
+
+describe("the start screen's choices (FT-77)", () => {
+	it('links every catalog group to a country or continent on the picker', () => {
+		const ids = new Set([...picker.countries.map((c) => c.id), ...continentIds]);
+		for (const group of mapGroups) expect(ids, group.country).toContain(pickerIdOf(group));
+		expect(pickerIdOf({ country: 'Great Britain', pickerId: 'united-kingdom' })).toBe(
+			'united-kingdom'
+		);
+	});
+
+	it("opens a country's own maps, and a country without maps its continent's", async () => {
+		const { panelFor } = await import('./worldPicker');
+		const loaded = picker as unknown as Parameters<typeof panelFor>[0];
+		const italy = panelFor(loaded, 'italy');
+		expect(italy?.continentInstead).toBe(false);
+		expect(italy?.groups.map((g) => g.country)).toEqual(['Italy']);
+		const belarus = panelFor(loaded, 'belarus');
+		expect(belarus?.continentInstead).toBe(true);
+		expect(belarus?.groups.map((g) => g.country)).toEqual(['Europe']);
+		expect(panelFor(loaded, 'atlantis')).toBeUndefined();
+	});
+
+	it('falls back to the world for a view the picker does not have', async () => {
+		const { validView } = await import('./worldPicker');
+		const loaded = picker as unknown as Parameters<typeof validView>[0];
+		expect(validView(loaded, 'asia')).toBe('asia');
+		expect(validView(loaded, 'lemuria')).toBe('world');
 	});
 });

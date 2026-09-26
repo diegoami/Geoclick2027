@@ -9,6 +9,12 @@ one entry per tagged version on `main`.
 
 For players:
 
+- **A map of the world on the start screen.** Tap a continent, then a
+  country, and its maps open in a panel beside the map (below it on a
+  phone), with their progress and stars. A country with no maps of its own
+  shows its continent's. The phone's back button goes from a continent
+  back to the world, and the start screen reopens where you left it. The
+  list is still there below the map.
 - **Countries and capitals in your language.** With Italian or German
   chosen, the continents' Countries maps say Francia or Frankreich, and the
   Capitals maps and Europe's city maps say Mosca, Varsavia or Moskau,
