@@ -27,6 +27,7 @@ export type TranslationKey =
 	| 'nav.maps'
 	| 'nav.hideButtons'
 	| 'nav.showButtons'
+	| 'home.exit'
 	| 'home.viewLabel'
 	| 'home.viewMap'
 	| 'home.viewList'
@@ -188,6 +189,7 @@ const en: Dictionary = {
 	'nav.maps': 'Maps',
 	'nav.hideButtons': 'Hide the buttons',
 	'nav.showButtons': 'Show the buttons',
+	'home.exit': 'Exit',
 	'home.viewLabel': 'Show the maps as',
 	'home.viewMap': 'Map',
 	'home.viewList': 'List',
@@ -366,6 +368,7 @@ const de: Dictionary = {
 	'nav.maps': 'Karten',
 	'nav.hideButtons': 'Schaltflächen ausblenden',
 	'nav.showButtons': 'Schaltflächen einblenden',
+	'home.exit': 'Beenden',
 	'home.viewLabel': 'Karten zeigen als',
 	'home.viewMap': 'Karte',
 	'home.viewList': 'Liste',
@@ -546,6 +549,7 @@ const it: Dictionary = {
 	'nav.maps': 'Mappe',
 	'nav.hideButtons': 'Nascondi i pulsanti',
 	'nav.showButtons': 'Mostra i pulsanti',
+	'home.exit': 'Esci',
 	'home.viewLabel': 'Mostra le mappe come',
 	'home.viewMap': 'Mappa',
 	'home.viewList': 'Elenco',

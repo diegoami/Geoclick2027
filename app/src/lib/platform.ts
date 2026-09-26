@@ -11,3 +11,22 @@ export async function isNativeShell(): Promise<boolean> {
 
 /** Latest installers, on the public releases-only repo (FT-08). */
 export const RELEASES_URL = 'https://github.com/diegoami/geoclick-releases/releases/latest';
+
+/**
+ * Leaves the app, from the start screen's Exit button: Android's own exit,
+ * or the desktop app's one window closed, which ends it. A web page cannot
+ * close its own tab, so the button is only shown in the apps.
+ */
+export async function exitApp(): Promise<void> {
+	const { isTauri } = await import('@tauri-apps/api/core');
+	if (isTauri()) {
+		const { getCurrentWindow } = await import('@tauri-apps/api/window');
+		await getCurrentWindow().close();
+		return;
+	}
+	const { Capacitor } = await import('@capacitor/core');
+	if (Capacitor.isNativePlatform()) {
+		const { App } = await import('@capacitor/app');
+		await App.exitApp();
+	}
+}
