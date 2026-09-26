@@ -98,6 +98,11 @@ tap it, and pick the kind of map.
     each of the 172 is on exactly one.
   - Islands whose `CONTINENT` is "Seven seas (open ocean)" (the Maldives,
     Mauritius…) go to the continent whose Countries map already holds them.
+  - *Done 2026-09-26:* each continent is filtered and clipped as its
+    Countries map is, so both points hold by construction. No
+    "Seven seas" country is on any Countries map, and each of the 172 is on
+    exactly one continent (`worldPicker.test.ts`). Size: 446 KB. Details in
+    MAPS.md, "The world picker".
 - **Tests:** the picker's `map.json` has 172 country targets, each with a
   continent among the six; no target is in two.
 - **DoD:** the build command in MAPS.md; the size measured and recorded in
@@ -201,7 +206,7 @@ the panel and the back button are all things to feel on the device.
 
 | Task  | State   | Merge | Notes |
 | ----- | ------- | ----- | ----- |
-| FT-76 | planned | —     |       |
+| FT-76 | in PR   | —     | 172 countries, 446 KB of tiles (5%, z5), well under the 1.5 MB gate; ids and continents match the six Countries maps exactly |
 | FT-77 | planned | —     |       |
 | FT-78 | planned | —     |       |
 | FT-79 | planned | —     |       |

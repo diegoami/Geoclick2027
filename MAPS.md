@@ -879,6 +879,32 @@ of Oslo, not a town) were dropped; Brazzaville and Kinshasa, 9 km apart across
 the Congo, both stay as capitals. Fixups added to `build-points-map.ts`:
 Astana, Ngerulmud, Andorra la Vella, Plzeň, Panevėžys, Peja.
 
+### The world picker (built 2026-09-26, FT-76)
+
+The map the home screen opens on (v0.13, #58): the 172 countries of the six
+Countries maps, each tagged with its continent. It is not a playable map. It
+writes `picker.json` beside its tiles instead of a `map.json`, so every scan
+for maps (the catalog test, `index.json`, the tour and terrain checks) skips
+it. There's no terrain, no facts and no tour.
+
+```
+npx tsx data/scripts/build-picker.ts            # --simplify=5% --max-zoom=5
+```
+
+- Each continent is filtered and clipped exactly as its Countries map is
+  (the six commands above), so France has no French Guiana, the USA no
+  Hawaii, and Crimea is Ukraine's. The one exception: Europe's clip is
+  widened to `-25,34,180,82`, so Russia is whole and the world view has no
+  hole where Siberia is.
+- `picker.json` gives each continent a `view`, its Countries map's box,
+  which the continent view fits to. Europe frames Europe, not all of Russia.
+- **Size, measured 2026-09-26** (tiles, 172 countries each time): 10%/z5
+  636 KB, **5%/z5 446 KB (chosen)**, 3%/z5 348 KB, 3%/z4 229 KB, 1.5%/z5
+  257 KB. At 5% Norway's coast, the Danish islands and the Aegean still
+  read at continent zoom.
+- `worldPicker.test.ts` checks that the picker holds exactly the Countries
+  maps' countries, each on the continent whose map lists it.
+
 ### Germany's towns in six parts, from Wikidata (built 2026-09-24, #39 batch C)
 
 Six maps of 60 towns each, by state; the reasoning is in DECISIONS.md,
