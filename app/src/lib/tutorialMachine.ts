@@ -401,9 +401,11 @@ export function transition(
 		case 'continent':
 		case 'country': {
 			// Only the tutorial's own continent and country count: Asia is a
-			// view, not the way to Italy.
+			// view, not the way to Italy. And only on their own step: Europe
+			// chosen before step 1 is not step 1 done (#80).
 			const target = event.type === 'continent' ? TUTORIAL_CONTINENT : TUTORIAL_COUNTRY;
-			if (state.status === 'idle' || event.id !== target) return same;
+			if (state.status === 'idle' || event.id !== target || step.advance.kind !== event.type)
+				return same;
 			return movedOn(state, event.type, { ...state.done, [event.type]: true });
 		}
 

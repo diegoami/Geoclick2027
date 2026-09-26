@@ -108,6 +108,14 @@
 		);
 	}
 
+	// A continent the player chose - its name, a country on the world, or its
+	// heading in the panel. Only these tell the tutorial (#80): a view restored
+	// from storage, or set by the tutorial itself, is no choice.
+	function chooseContinent(id: string) {
+		setPickerView(id);
+		tutorialContinentChosen(id);
+	}
+
 	function clearLabels() {
 		for (const label of labels) label.remove();
 		labels = [];
@@ -126,7 +134,7 @@
 				button.className = 'picker-continent';
 				button.textContent = continentName(continent.id);
 				button.dataset.tutorial = `picker-${continent.id}`;
-				button.addEventListener('click', () => setPickerView(continent.id));
+				button.addEventListener('click', () => chooseContinent(continent.id));
 				labels.push(
 					new maplibregl.Marker({ element: button })
 						.setLngLat([(west + east) / 2, (south + north) / 2])
@@ -262,7 +270,7 @@
 					if (!id || !continent) return;
 					// On the world, any country is a way into its continent; on a
 					// continent, only its own countries answer.
-					if (view === 'world') setPickerView(continent);
+					if (view === 'world') chooseContinent(continent);
 					else if (continent === view) {
 						markCountry(id);
 						tutorialCountryChosen(id);
@@ -295,7 +303,6 @@
 			paint(v);
 			fit(v, true);
 			drawLabels(v);
-			tutorialContinentChosen(v);
 		});
 	});
 
@@ -382,7 +389,7 @@
 			{highlight}
 			tutorialMapId={TUTORIAL_MAP_ID}
 			only={view === 'world' ? undefined : view}
-			onContinent={(id) => setPickerView(id)}
+			onContinent={chooseContinent}
 		/>
 	</aside>
 </div>
