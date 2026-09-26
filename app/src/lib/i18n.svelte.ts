@@ -27,6 +27,16 @@ export type TranslationKey =
 	| 'nav.maps'
 	| 'nav.hideButtons'
 	| 'nav.showButtons'
+	| 'picker.label'
+	| 'picker.world'
+	| 'picker.close'
+	| 'picker.noMaps'
+	| 'continent.europe'
+	| 'continent.africa'
+	| 'continent.asia'
+	| 'continent.north-america'
+	| 'continent.south-america'
+	| 'continent.oceania'
 	| 'nav.overview'
 	| 'nav.explore'
 	| 'retention.known'
@@ -173,6 +183,16 @@ const en: Dictionary = {
 	'nav.maps': 'Maps',
 	'nav.hideButtons': 'Hide the buttons',
 	'nav.showButtons': 'Show the buttons',
+	'picker.label': 'World map: choose a continent, then a country',
+	'picker.world': 'World',
+	'picker.close': 'Close',
+	'picker.noMaps': 'No maps of {country} yet: these are {continent}’s.',
+	'continent.europe': 'Europe',
+	'continent.africa': 'Africa',
+	'continent.asia': 'Asia',
+	'continent.north-america': 'North America',
+	'continent.south-america': 'South America',
+	'continent.oceania': 'Oceania',
 	'nav.overview': 'Overview',
 	'nav.explore': 'Known',
 	'retention.known': 'Known',
@@ -336,6 +356,16 @@ const de: Dictionary = {
 	'nav.maps': 'Karten',
 	'nav.hideButtons': 'Schaltflächen ausblenden',
 	'nav.showButtons': 'Schaltflächen einblenden',
+	'picker.label': 'Weltkarte: wähle einen Kontinent, dann ein Land',
+	'picker.world': 'Welt',
+	'picker.close': 'Schließen',
+	'picker.noMaps': 'Noch keine Karten von {country}: hier die von {continent}.',
+	'continent.europe': 'Europa',
+	'continent.africa': 'Afrika',
+	'continent.asia': 'Asien',
+	'continent.north-america': 'Nordamerika',
+	'continent.south-america': 'Südamerika',
+	'continent.oceania': 'Ozeanien',
 	'nav.overview': 'Übersicht',
 	'nav.explore': 'Gewusst',
 	'retention.known': 'Gewusst',
@@ -501,6 +531,16 @@ const it: Dictionary = {
 	'nav.maps': 'Mappe',
 	'nav.hideButtons': 'Nascondi i pulsanti',
 	'nav.showButtons': 'Mostra i pulsanti',
+	'picker.label': 'Mappa del mondo: scegli un continente, poi un paese',
+	'picker.world': 'Mondo',
+	'picker.close': 'Chiudi',
+	'picker.noMaps': 'Ancora nessuna mappa di {country}: ecco quelle dell’{continent}.',
+	'continent.europe': 'Europa',
+	'continent.africa': 'Africa',
+	'continent.asia': 'Asia',
+	'continent.north-america': 'America del Nord',
+	'continent.south-america': 'America del Sud',
+	'continent.oceania': 'Oceania',
 	'nav.overview': 'Panoramica',
 	'nav.explore': 'Conoscenza',
 	'retention.known': 'Sai',

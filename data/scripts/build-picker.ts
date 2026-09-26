@@ -97,6 +97,8 @@ function main(): void {
 	const mergedPath = path.join(outDir, '.tmp-merged.geojson');
 	const simplifiedPath = path.join(outDir, '.tmp-simplified.geojson');
 	const mbtilesPath = path.join(outDir, '.tmp.mbtiles');
+	const landRawPath = path.join(outDir, '.tmp-land-raw.geojson');
+	const landPath = path.join(outDir, '.tmp-land.geojson');
 
 	console.log('[1/4] Filtering and clipping each continent as its Countries map does...');
 	const features: Feature[] = [];
@@ -145,6 +147,43 @@ function main(): void {
 		console.log(`      ${spec.name}: ${kept}`);
 	}
 	writeFileSync(mergedPath, JSON.stringify({ type: 'FeatureCollection', features }));
+
+	// All the land, as one pale shape under the countries (FT-77): Greenland,
+	// Antarctica and the parts the continents' clips cut away (French Guiana,
+	// Hawaii) would otherwise be holes in the world view. Not tappable.
+	console.log('[1b/4] The land underneath...');
+	execFileSync('ogr2ogr', [
+		'-f',
+		'GeoJSON',
+		'-clipsrc',
+		'-180',
+		'-60',
+		'180',
+		'84',
+		'-nlt',
+		'MULTIPOLYGON',
+		'-select',
+		'ADMIN',
+		landRawPath,
+		ADMIN0_SHP
+	]);
+	execFileSync(
+		'npx',
+		[
+			'mapshaper',
+			landRawPath,
+			'-dissolve',
+			'-simplify',
+			simplify,
+			'keep-shapes',
+			'-clean',
+			'-o',
+			landPath,
+			'format=geojson',
+			'precision=0.001'
+		],
+		{ stdio: 'inherit' }
+	);
 
 	console.log(`[2/4] Simplifying to ${simplify} (mapshaper)...`);
 	execFileSync(
@@ -204,11 +243,15 @@ function main(): void {
 		'--generate-ids',
 		'--detect-shared-borders',
 		'-L',
+		`land:${landPath}`,
+		'-L',
 		`countries:${simplifiedPath}`
 	]);
 	pmtilesConvert(mbtilesPath, path.join(outDir, 'tiles.pmtiles'));
 	rmSync(mergedPath);
 	rmSync(simplifiedPath);
+	rmSync(landRawPath);
+	rmSync(landPath);
 	rmSync(mbtilesPath, { force: true });
 
 	const bytes = statSync(path.join(outDir, 'tiles.pmtiles')).size;

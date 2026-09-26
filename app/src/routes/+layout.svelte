@@ -3,6 +3,7 @@
 	import { onMount } from 'svelte';
 	import { afterNavigate, goto } from '$app/navigation';
 	import { resolve } from '$app/paths';
+	import { pickerGoUp } from '$lib/mapPrefs.svelte';
 	import favicon from '$lib/assets/favicon.svg';
 	import VersionBadge from '$lib/VersionBadge.svelte';
 	import TutorialOverlay from '$lib/TutorialOverlay.svelte';
@@ -31,7 +32,10 @@
 			const { App } = await import('@capacitor/app');
 			const handle = await App.addListener('backButton', () => {
 				const target = parentRoute(location.pathname, resolve('/').replace(/\/$/, ''));
-				if (target.kind === 'exit') App.exitApp();
+				// On the start screen, a continent's view goes up to the world first.
+				if (target.kind === 'exit') {
+					if (!pickerGoUp()) App.exitApp();
+				}
 				else if (target.kind === 'home') goto(resolve('/'), { replaceState: true });
 				else goto(resolve('/map/[mapId]', { mapId: target.mapId }), { replaceState: true });
 			});

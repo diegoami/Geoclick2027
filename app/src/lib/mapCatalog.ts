@@ -25,6 +25,9 @@ interface MapEntry {
 
 interface CountryGroup {
 	country: string;
+	/** The country or continent on the start screen's map (FT-77), where its
+	 * id is not simply the group's name made into an id (pickerIdOf). */
+	pickerId?: string;
 	maps: MapEntry[];
 }
 
@@ -200,6 +203,7 @@ export const mapGroups: CountryGroup[] = [
 	},
 	{
 		country: 'Great Britain',
+		pickerId: 'united-kingdom',
 		maps: [
 			{ id: 'great-britain-regions', labelKey: 'mapType.regions' },
 			{ id: 'great-britain-towns-100k', labelKey: 'mapType.towns' }
@@ -441,6 +445,7 @@ export const mapGroups: CountryGroup[] = [
 	},
 	{
 		country: 'USA',
+		pickerId: 'united-states',
 		maps: [
 			{ id: 'usa-states', labelKey: 'mapType.states' },
 			// "Cities", not "Towns": every entry is over 200 000 people, and the
@@ -490,4 +495,23 @@ export function mapDisplayName(mapId: string): string | undefined {
 	const meta = mapIndex.get(mapId);
 	if (!meta) return undefined;
 	return `${meta.country} — ${mapTypeLabel(meta.entry)}`;
+}
+
+/** A name made into an id, as the map builders make target ids. */
+function slugify(name: string): string {
+	return name
+		.normalize('NFD')
+		.replace(/[̀-ͯ]/g, '')
+		.toLowerCase()
+		.replace(/[^a-z0-9]+/g, '-')
+		.replace(/^-+|-+$/g, '');
+}
+
+/**
+ * The id of a group's country or continent on the start screen's map
+ * (FT-77, #58): "Italy" is `italy`, "Europe" is `europe`. The catalog names
+ * two groups differently from the map: "Great Britain" and "USA".
+ */
+export function pickerIdOf(group: Pick<CountryGroup, 'country' | 'pickerId'>): string {
+	return group.pickerId ?? slugify(group.country);
 }

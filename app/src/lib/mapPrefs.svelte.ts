@@ -232,3 +232,46 @@ export function hasNameOverrides(mapId: string): boolean {
 	const prefix = `${mapId}/`;
 	return Object.keys(overrides).some((key) => key.startsWith(prefix));
 }
+
+// --- the start screen's view (FT-77, #58) ---
+//
+// The world, or one continent by its id: where the start screen opens next
+// time is where the player left it. Kept on the device, like Terrain. An id
+// the picker no longer has falls back to the world (worldPicker.validView).
+
+const PICKER_VIEW_KEY = 'geoclick:picker-view:v1';
+
+function readPickerView(): string {
+	if (typeof localStorage === 'undefined') return 'world';
+	try {
+		return localStorage.getItem(PICKER_VIEW_KEY) || 'world';
+	} catch {
+		return 'world';
+	}
+}
+
+let pickerViewState = $state<string>(readPickerView());
+
+export function pickerView(): string {
+	return pickerViewState;
+}
+
+export function setPickerView(view: string): void {
+	pickerViewState = view;
+	if (typeof localStorage === 'undefined') return;
+	try {
+		localStorage.setItem(PICKER_VIEW_KEY, view);
+	} catch {
+		// Full or blocked storage: the view still holds for this session.
+	}
+}
+
+/**
+ * The phone's back button on the start screen: from a continent up to the
+ * world, and only then out of the app. True when it moved up.
+ */
+export function pickerGoUp(): boolean {
+	if (pickerViewState === 'world') return false;
+	setPickerView('world');
+	return true;
+}
