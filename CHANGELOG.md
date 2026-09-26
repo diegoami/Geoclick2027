@@ -86,6 +86,38 @@ Not in this release:
 - **The user manual's tutorial table** has no Terrain row, and older copy
   for the steps on the map.
 - **FT-51, the facts in German**, and tier 3 of the facts are still to do.
+- **#87** (SHOULD, from round 2): on Android, Back pressed while the start
+  screen's map is still loading goes up to the world instead of leaving.
+
+What shipped, and what was tried:
+
+- **Review:** an independent model (GPT-6 Luna, in OpenCode) reviewed
+  [Milestone v0.13.0 (#78)](https://github.com/diegoami/Geoclick2027/issues/78)
+  in two rounds.
+  - Round 1: BLOCK on `4c4404d`. #80 (MUST-FIX): a remembered Europe view
+    let the tutorial skip "Choose Europe"; fixed in #82. #81 (SHOULD): the
+    first Back press was lost for an unknown stored view; fixed in #83.
+  - The `v0.13.0-beta.1` device check found #79 (continent names cut off
+    on a phone), fixed in #84. The owner found #85 (Terrain names took the
+    pointer, there since v0.8), fixed in #86.
+  - The candidate moved to `de84072`. Round 2: AGREE, with one SHOULD,
+    #87, left for the next milestone. The tag sits on exactly `de84072`.
+- **Betas:** `v0.13.0-beta.1` (`c9059a8`) and `v0.13.0-beta.2`
+  (`e020886`), each the candidate of its time plus the version only.
+  - Both were tried on the Android emulator (1080×2400): the tutorial's
+    first steps on the map, and, on beta.2, #80, #79 and #81 fixed.
+  - Both were tried in the installed Windows app: the start map loads, a
+    map opens.
+  - The alphas (`-alpha.1` to `-alpha.4`) went to the owner. The owner
+    played FT-79 before it merged.
+- **Installers:** Windows `.msi` and `-setup.exe`, Android `.apk`, all
+  built from the `v0.13.0` tag.
+  - The stable `-setup.exe` installed silently on the first try, and the
+    app shows v0.13.0 and opens Italy – Regions.
+  - The `.msi` and the stable `.apk` were not installed; the APK's code is
+    beta.2's.
+  - The beta setups' silent installs stalled replacing an older version
+    and needed a second run, as in v0.12.0.
 
 ## v0.12.0 — 2026-09-25 — Facts for the new maps
 
