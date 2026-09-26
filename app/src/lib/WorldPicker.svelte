@@ -365,6 +365,12 @@
 	}
 	/* On a phone the panel goes under the map, and scrolls with the page. */
 	@media (max-width: 48rem) {
+		/* Smaller continent names, so all six fit a phone's world view. */
+		:global(.picker-continent) {
+			font-size: 0.65rem;
+			letter-spacing: 0.06em;
+			padding: 0.15rem 0.45rem;
+		}
 		.picker {
 			flex-direction: column;
 			height: auto;
