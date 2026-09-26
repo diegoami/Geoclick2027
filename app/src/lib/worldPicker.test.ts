@@ -89,16 +89,12 @@ describe("the start screen's choices (FT-77)", () => {
 		);
 	});
 
-	it("opens a country's own maps, and a country without maps its continent's", async () => {
-		const { panelFor } = await import('./worldPicker');
-		const loaded = picker as unknown as Parameters<typeof panelFor>[0];
-		const italy = panelFor(loaded, 'italy');
-		expect(italy?.continentInstead).toBe(false);
-		expect(italy?.groups.map((g) => g.country)).toEqual(['Italy']);
-		const belarus = panelFor(loaded, 'belarus');
-		expect(belarus?.continentInstead).toBe(true);
-		expect(belarus?.groups.map((g) => g.country)).toEqual(['Europe']);
-		expect(panelFor(loaded, 'atlantis')).toBeUndefined();
+	it('knows which countries have maps of their own', async () => {
+		const { hasMaps, groupsOf } = await import('./worldPicker');
+		expect(hasMaps('italy')).toBe(true);
+		expect(hasMaps('united-kingdom')).toBe(true);
+		expect(hasMaps('belarus')).toBe(false);
+		expect(groupsOf('europe').map((g) => g.country)).toEqual(['Europe']);
 	});
 
 	it('falls back to the world for a view the picker does not have', async () => {
@@ -106,5 +102,38 @@ describe("the start screen's choices (FT-77)", () => {
 		const loaded = picker as unknown as Parameters<typeof validView>[0];
 		expect(validView(loaded, 'asia')).toBe('asia');
 		expect(validView(loaded, 'lemuria')).toBe('world');
+	});
+});
+
+describe('the start screen in sections (#58, amended)', () => {
+	it('puts every catalog group on a continent', async () => {
+		const { continentOf } = await import('./catalogSections');
+		for (const group of mapGroups)
+			expect(continentIds, group.country).toContain(continentOf(group));
+	});
+
+	it("lists the six continents first, then each continent's countries by name", async () => {
+		const { continentGroups, countryGroupsOf, CONTINENT_IDS } = await import('./catalogSections');
+		expect(CONTINENT_IDS).toEqual(continentIds);
+		expect(continentGroups(mapGroups).map((g) => g.country)).toEqual([
+			'Europe',
+			'Africa',
+			'Asia',
+			'North America',
+			'South America',
+			'Oceania'
+		]);
+		const europe = countryGroupsOf('europe', mapGroups).map((g) => g.country);
+		expect(europe).toContain('Russia');
+		expect(europe).toContain('Great Britain');
+		expect(europe).not.toContain('Europe');
+		expect(europe).toEqual([...europe].sort((a, b) => a.localeCompare(b)));
+		// Every group lands in exactly one place: a continent's own, or one
+		// continent's countries.
+		const placed = [
+			...continentGroups(mapGroups),
+			...CONTINENT_IDS.flatMap((id) => countryGroupsOf(id, mapGroups))
+		];
+		expect(placed.length).toBe(mapGroups.length);
 	});
 });

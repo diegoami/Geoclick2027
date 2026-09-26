@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { goto } from '$app/navigation';
 	import { resolve } from '$app/paths';
 	import mapIndex from '../../../data/maps/index.json';
 	import {
@@ -9,7 +8,7 @@
 		type SessionSummary
 	} from '$lib/progressRepository';
 	import { handSize } from '$lib/difficulty';
-	import { groupProgress, loadHomeProgress, type Mastery } from '$lib/homeProgress';
+	import { loadHomeProgress, type Mastery } from '$lib/homeProgress';
 	import { countMaps, filterGroups } from '$lib/mapSearch';
 	import { t, tPlural } from '$lib/i18n.svelte';
 	import LanguageSwitcher from '$lib/LanguageSwitcher.svelte';
@@ -21,6 +20,7 @@
 	import TutorialButton from '$lib/TutorialButton.svelte';
 	import TutorialNudge from '$lib/TutorialNudge.svelte';
 	import WorldPicker from '$lib/WorldPicker.svelte';
+	import MapSections from '$lib/MapSections.svelte';
 	import { showTutorialNudge } from '$lib/tutorialSeen.svelte';
 	import { TUTORIAL_MAP_ID, isTutorialSandboxActive } from '$lib/tutorialSandbox.svelte';
 	import { tutorialState } from '$lib/tutorial.svelte';
@@ -50,15 +50,15 @@
 	// twenty-eight countries is too long a list to scroll through for one of
 	// them. Not persisted: a search is about this moment, not a setting.
 	let query = $state('');
-	const shownGroups = $derived(
-		filterGroups(
-			mapGroups.map((group) => ({
-				...group,
-				maps: group.maps.map((map) => ({ ...map, label: mapTypeLabel(map) }))
-			})),
-			query
-		)
+	// Every group with its maps' labels in the player's language.
+	const labelledGroups = $derived(
+		mapGroups.map((group) => ({
+			...group,
+			maps: group.maps.map((map) => ({ ...map, label: mapTypeLabel(map) }))
+		}))
 	);
+	const shownGroups = $derived(filterGroups(labelledGroups, query));
+	const targetCount = (mapId: string) => targetIdsByMap.get(mapId)?.length ?? 0;
 	const shownCount = $derived(countMaps(shownGroups));
 
 	// The download link is for web visitors only - pointless inside the desktop
@@ -245,7 +245,7 @@
 	{#if showMap}
 		<!-- The world, then a continent, then a country's maps (FT-77). -->
 		<section class="picker-section">
-			<WorldPicker card={mapCard} />
+			<WorldPicker groups={labelledGroups} {masteries} {targetCount} />
 		</section>
 	{:else}
 		<!-- Searching is about the full list; Favourites and Recent are short by
@@ -274,49 +274,10 @@
 			</p>
 		{/if}
 
-		<!-- One row per country and per continent, its maps in a listbox that
-		     opens the one chosen (FT-78): Germany alone had fourteen buttons. -->
-		<ul class="groups">
-			{#each shownGroups as group (group.country)}
-				{@const selectId = `maps-${group.maps[0].id}`}
-				{@const progress = groupProgress(
-					group.maps.map((m) => m.id),
-					masteries,
-					(id) => targetIdsByMap.get(id)?.length ?? 0
-				)}
-				<!-- The tutorial's first step points at Italy's row, not at a copy
-				     in Favourites or Recent, which not everyone has (docs/TUTORIAL.md). -->
-				<li
-					class="group-row"
-					data-tutorial={group.maps.some((m) => m.id === TUTORIAL_MAP_ID)
-						? 'home-map-card'
-						: undefined}
-				>
-					<label class="group-name" for={selectId}>{group.country}</label>
-					{#if progress}
-						<span class="group-progress">
-							<KnownProgress
-								known={progress.known}
-								total={progress.total}
-								allKnown={progress.known === progress.total}
-							/>
-						</span>
-					{/if}
-					<select
-						id={selectId}
-						onchange={(e) => {
-							const mapId = e.currentTarget.value;
-							if (mapId) goto(resolve('/map/[mapId]', { mapId }));
-						}}
-					>
-						<option value="" selected>{t('home.chooseMap')}</option>
-						{#each group.maps as map (map.id)}
-							<option value={map.id}>{map.label}</option>
-						{/each}
-					</select>
-				</li>
-			{/each}
-		</ul>
+		<!-- The same sections as the map's panel (#58): the continents' own maps,
+		     then each continent's countries, one row each with a listbox of its
+		     maps (FT-78). -->
+		<MapSections groups={shownGroups} {masteries} {targetCount} tutorialMapId={TUTORIAL_MAP_ID} />
 	{/if}
 </main>
 
@@ -469,12 +430,6 @@
 	.shortcut-group .map-card a:hover {
 		background: #fbf4ec;
 	}
-	.groups {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		text-align: left;
-	}
 	.view-switch {
 		display: inline-flex;
 		margin: 0.5rem 0 1rem;
@@ -498,33 +453,6 @@
 	.view-switch button:disabled {
 		cursor: default;
 		opacity: 0.5;
-	}
-	.group-row {
-		display: grid;
-		grid-template-columns: 1fr auto;
-		align-items: center;
-		gap: 0.25rem 0.75rem;
-		padding: 0.55rem 0.75rem;
-		border: 1px solid #ccc;
-		border-radius: 0.5rem;
-		background: rgba(255, 255, 255, 0.55);
-	}
-	.group-name {
-		font-weight: 700;
-		color: #2c3a33;
-	}
-	.group-progress {
-		grid-column: 1 / -1;
-		grid-row: 2;
-	}
-	.group-row select {
-		font: inherit;
-		font-size: 0.9rem;
-		max-width: 12rem;
-		padding: 0.3rem 0.4rem;
-		border: 1px solid #bbb;
-		border-radius: 0.4rem;
-		background: #fff;
 	}
 	ul {
 		list-style: none;
@@ -568,13 +496,6 @@
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
 			column-gap: 2rem;
-		}
-		.groups {
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-			column-gap: 1rem;
-			row-gap: 0.5rem;
-			align-items: start;
 		}
 	}
 </style>

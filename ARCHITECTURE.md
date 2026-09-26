@@ -107,14 +107,17 @@ pairs well with a canvas/map-heavy UI.
   `countries` layers and no `map.json`. The view (the world, or a continent
   id) lives in `mapPrefs.svelte.ts` (`pickerView`, kept on the device).
   `+layout.svelte`'s back button calls `pickerGoUp()` before leaving the
-  app. What a tap opens is decided in `worldPicker.ts` (`panelFor`: a
-  country's own catalog groups, or its continent's), linked through each
-  group's `pickerIdOf` (`mapCatalog.ts`). The panel renders the home page's
-  own `mapCard` snippet, passed in as a prop.
-  The home page shows the picker or the list (FT-78), by `homeView()` in
-  `mapPrefs.svelte.ts`; the prerendered HTML is the list, and a running
-  tutorial forces it. The list is one row per catalog group with a
-  `<select>` of its maps and `groupProgress` (`homeProgress.ts`).
+  app. Beside the map is the catalog in sections (`MapSections.svelte`,
+  #58 amended 2026-09-26): the six continents' own groups, then each
+  continent's countries, or one continent's alone when the map is on it.
+  `catalogSections.ts` groups them, reading each country's continent from
+  `picker.json`, which is bundled at build time. `MapRows.svelte` is one row
+  per catalog group: its name, `groupProgress` (`homeProgress.ts`) and a
+  `<select>` of its maps. A tap on a country marks its row, or its
+  continent's for a country with no maps (`hasMaps`, `worldPicker.ts`). The
+  home page shows the picker or the list by `homeView()` (FT-78). The list
+  is the same `MapSections`. The prerendered HTML is the list, and a
+  running tutorial forces it.
 
 - **A derived fact per target** (v0.8.0, FT-34). `data/scripts/build-facts.ts`
   writes `data/maps/<id>/facts.json` beside each `map.json` — structured
