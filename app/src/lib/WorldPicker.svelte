@@ -1,47 +1,61 @@
 <script lang="ts">
-	// The start screen's map (FT-77, #58). Two levels on one map: the world,
-	// where a tap on any country goes to its continent; and a continent, fitted
-	// to its Countries map's box, where a tap on a country opens a panel with
-	// its maps - or, for a country with none, its continent's. The panel is a
-	// side panel on a wide screen and a bottom sheet on a phone, and the map
-	// stays live beside it, so the next country is one tap away. The view left
-	// is where the start screen opens next time (mapPrefs).
-	//
-	// The panel's cards are the home page's own (`card`), so a map reads the
-	// same here as in the list: progress bar, star, one tap to open.
-	import { onDestroy, onMount, untrack, type Snippet } from 'svelte';
+	// The start screen's map (FT-77, #58, amended 2026-09-26). Two levels on
+	// one map: the world, where a tap on any country goes to its continent;
+	// and a continent, fitted to its Countries map's box. Beside it (below it
+	// on a phone) the panel holds the maps in sections: on the world, the
+	// continents' own maps and then a section per continent; on a continent,
+	// that continent's maps and its countries. A tap on a country marks its
+	// row - or, for a country with no maps, its continent's. The view left is
+	// where the start screen opens next time (mapPrefs).
+	import { onDestroy, onMount, tick, untrack } from 'svelte';
 	import * as maplibregl from 'maplibre-gl';
 	import 'maplibre-gl/dist/maplibre-gl.css';
 	import { getLanguage, t, type TranslationKey } from './i18n.svelte';
 	import { foldCreditOnNarrowScreens } from './geoclickMap';
 	import { enableLabelCollision, registerLabel } from './labelCollision';
-	import { mapTypeLabel } from './mapCatalog';
+	import type { Mastery } from './homeProgress';
+	import MapSections from './MapSections.svelte';
 	import { pickerView, setPickerView } from './mapPrefs.svelte';
 	import { targetName } from './targetName';
 	import {
 		WORLD_VIEW,
 		fetchPicker,
 		hasMaps,
-		panelFor,
 		validView,
 		type Box,
 		type Picker
 	} from './worldPicker';
 
-	let { card }: { card: Snippet<[string, string]> } = $props();
+	interface Row {
+		country: string;
+		pickerId?: string;
+		maps: { id: string; label: string }[];
+	}
+
+	let {
+		groups,
+		masteries,
+		targetCount
+	}: {
+		groups: Row[];
+		masteries: Record<string, Mastery | undefined>;
+		targetCount: (mapId: string) => number;
+	} = $props();
 
 	let container: HTMLDivElement;
 	let map: maplibregl.Map | undefined;
 	let picker = $state<Picker>();
 	let error = $state<string>();
 	let loaded = $state(false);
-	/** The country whose maps the panel shows, if it is open. */
-	let panelCountry = $state<string>();
+	let panelEl = $state<HTMLElement>();
+	/** The row a tap on the map marks, by its picker id. */
+	let highlight = $state<string>();
+	/** Said above the rows when a tapped country has no maps of its own. */
+	let note = $state<string>();
 	let labels: { remove(): void }[] = [];
 	let stopCollision: (() => void) | undefined;
 
 	const view = $derived(picker ? validView(picker, pickerView()) : 'world');
-	const panel = $derived(picker && panelCountry ? panelFor(picker, panelCountry) : undefined);
 
 	// One colour per continent for the countries with maps; the rest pale.
 	const CONTINENT_COLOURS: Record<string, string> = {
@@ -131,6 +145,25 @@
 			registerLabel(popup, { priority: (e - w) * (n - s) });
 			labels.push(popup);
 		}
+	}
+
+	// A country with maps marks its own row; one with none marks its
+	// continent's, since that is where it can be played.
+	async function markCountry(id: string) {
+		const country = picker?.countries.find((c) => c.id === id);
+		if (!country) return;
+		const own = hasMaps(id);
+		highlight = own ? id : country.continent;
+		note = own
+			? undefined
+			: t('picker.noMaps', {
+					country: targetName(country),
+					continent: continentName(country.continent)
+				});
+		await tick();
+		panelEl
+			?.querySelector(`[data-picker-id="${highlight}"]`)
+			?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
 	}
 
 	onMount(() => {
@@ -224,7 +257,7 @@
 					// On the world, any country is a way into its continent; on a
 					// continent, only its own countries answer.
 					if (view === 'world') setPickerView(continent);
-					else if (continent === view) panelCountry = id;
+					else if (continent === view) markCountry(id);
 				});
 				map.on('mouseenter', 'countries-fill', () => {
 					if (map) map.getCanvas().style.cursor = 'pointer';
@@ -242,12 +275,14 @@
 	});
 
 	// A new view - a tap, the World button, or the phone's back button through
-	// mapPrefs - flies there, closes the panel and redraws the names.
+	// mapPrefs - flies there, clears the mark and redraws the names.
 	$effect(() => {
 		const v = view;
 		if (!loaded) return;
 		untrack(() => {
-			panelCountry = undefined;
+			highlight = undefined;
+			note = undefined;
+			panelEl?.scrollTo({ top: 0 });
 			paint(v);
 			fit(v, true);
 			drawLabels(v);
@@ -269,62 +304,80 @@
 </script>
 
 <div class="picker" aria-label={t('picker.label')} role="region">
-	{#if error}
-		<p class="error">{error}</p>
-	{/if}
-	<div class="map" bind:this={container}></div>
-	{#if view !== 'world'}
-		<div class="where">
-			<button type="button" class="world" onclick={() => setPickerView('world')}>
-				← {t('picker.world')}
-			</button>
-			<span class="continent">{continentName(view)}</span>
-		</div>
-	{/if}
-	{#if panel}
-		<aside class="panel" aria-live="polite">
-			<header>
-				<h2>{targetName(panel.country)}</h2>
-				<button
-					type="button"
-					class="close"
-					aria-label={t('picker.close')}
-					onclick={() => (panelCountry = undefined)}>×</button
-				>
-			</header>
-			{#if panel.continentInstead}
-				<p class="instead">
-					{t('picker.noMaps', {
-						country: targetName(panel.country),
-						continent: continentName(panel.country.continent)
-					})}
-				</p>
-			{/if}
-			<ul>
-				{#each panel.groups as group (group.country)}
-					{#each group.maps as map (map.id)}
-						{@render card(map.id, mapTypeLabel(map))}
-					{/each}
-				{/each}
-			</ul>
-		</aside>
-	{/if}
+	<div class="stage">
+		{#if error}
+			<p class="error">{error}</p>
+		{/if}
+		<div class="map" bind:this={container}></div>
+		{#if view !== 'world'}
+			<div class="where">
+				<button type="button" class="world" onclick={() => setPickerView('world')}>
+					← {t('picker.world')}
+				</button>
+				<span class="continent">{continentName(view)}</span>
+			</div>
+		{/if}
+	</div>
+	<aside class="panel" bind:this={panelEl}>
+		{#if note}
+			<p class="note" aria-live="polite">{note}</p>
+		{/if}
+		<MapSections
+			{groups}
+			{masteries}
+			{targetCount}
+			{highlight}
+			only={view === 'world' ? undefined : view}
+			onContinent={(id) => setPickerView(id)}
+		/>
+	</aside>
 </div>
 
 <style>
 	.picker {
-		position: relative;
+		display: flex;
+		gap: 1rem;
 		height: min(70vh, 40rem);
-		min-height: 20rem;
+		min-height: 22rem;
+		text-align: left;
+	}
+	.stage {
+		position: relative;
+		flex: 1;
 		border-radius: 0.75rem;
 		overflow: hidden;
 		border: 1px solid rgba(17, 24, 21, 0.12);
 		background: #cfe2ea;
-		text-align: left;
 	}
 	.map {
 		position: absolute;
 		inset: 0;
+	}
+	.panel {
+		width: 22rem;
+		overflow-y: auto;
+		padding: 0.25rem 0.25rem 0.5rem;
+	}
+	.note {
+		margin: 0 0 0.75rem;
+		font-size: 0.9rem;
+		color: #5a5446;
+	}
+	/* On a phone the panel goes under the map, and scrolls with the page. */
+	@media (max-width: 48rem) {
+		.picker {
+			flex-direction: column;
+			height: auto;
+		}
+		.stage {
+			flex: none;
+			height: 60vh;
+			min-height: 18rem;
+		}
+		.panel {
+			width: auto;
+			overflow: visible;
+		}
 	}
 	.error {
 		position: absolute;
@@ -371,61 +424,5 @@
 		border-radius: 999px;
 		padding: 0.25rem 0.7rem;
 		cursor: pointer;
-	}
-	/* A side panel where there is room, a bottom sheet on a phone. */
-	.panel {
-		position: absolute;
-		z-index: 3;
-		top: 0.6rem;
-		right: 3.4rem;
-		bottom: 0.6rem;
-		width: min(20rem, 45%);
-		overflow-y: auto;
-		padding: 0.75rem;
-		background: rgba(255, 255, 255, 0.97);
-		border-radius: 0.75rem;
-		box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
-	}
-	@media (max-width: 40rem) {
-		.panel {
-			top: auto;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			width: auto;
-			max-height: 55%;
-			border-radius: 0.75rem 0.75rem 0 0;
-		}
-	}
-	.panel header {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: 0.5rem;
-	}
-	.panel h2 {
-		margin: 0;
-		font-size: 1.1rem;
-	}
-	.close {
-		font: inherit;
-		font-size: 1.4rem;
-		line-height: 1;
-		border: none;
-		background: none;
-		cursor: pointer;
-		padding: 0.2rem 0.4rem;
-	}
-	.instead {
-		margin: 0.4rem 0 0;
-		font-size: 0.9rem;
-		color: #5a5446;
-	}
-	.panel ul {
-		list-style: none;
-		margin: 0.6rem 0 0;
-		padding: 0;
-		display: grid;
-		gap: 0.5rem;
 	}
 </style>

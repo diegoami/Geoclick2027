@@ -4,9 +4,8 @@
 // Countries maps, each tagged with its continent, and each continent with
 // the box its view fits to.
 //
-// What a tap opens is decided here, away from MapLibre, so it can be tested:
-// a country with maps opens its own; a country with none opens its
-// continent's, since that is where it can be played.
+// Which countries have maps, and whether a stored view still exists, are
+// decided here, away from MapLibre, so they can be tested.
 import { asset } from '$app/paths';
 import { mapGroups, pickerIdOf } from './mapCatalog';
 import type { Target } from './mapDefinition';
@@ -71,22 +70,6 @@ export function groupsOf(pickerId: string): MapGroup[] {
 /** Whether a country has maps of its own. */
 export function hasMaps(countryId: string): boolean {
 	return groupsOf(countryId).length > 0;
-}
-
-/** What the panel shows for a country: its own maps, or its continent's. */
-export interface PanelContent {
-	country: PickerCountry;
-	groups: MapGroup[];
-	/** True when the country has no maps and these are its continent's. */
-	continentInstead: boolean;
-}
-
-export function panelFor(picker: Picker, countryId: string): PanelContent | undefined {
-	const country = picker.countries.find((c) => c.id === countryId);
-	if (!country) return undefined;
-	const own = groupsOf(country.id);
-	if (own.length > 0) return { country, groups: own, continentInstead: false };
-	return { country, groups: groupsOf(country.continent), continentInstead: true };
 }
 
 /** A view that names a continent the picker has, or the world. */
