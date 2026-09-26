@@ -715,7 +715,16 @@ export function selectPhysical(
 }
 
 // The admin-0 fields a Countries map reads (#39), and the world picker too.
-export const COUNTRY_FIELDS = ['ADMIN', 'NAME_EN', 'TYPE', 'CONTINENT', 'SUBREGION'];
+// NAME_IT and NAME_DE give a country its names in the other languages (#71).
+export const COUNTRY_FIELDS = [
+	'ADMIN',
+	'NAME_EN',
+	'NAME_IT',
+	'NAME_DE',
+	'TYPE',
+	'CONTINENT',
+	'SUBREGION'
+];
 
 interface FeatureBag {
 	type: 'FeatureCollection';

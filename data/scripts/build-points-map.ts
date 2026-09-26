@@ -40,6 +40,8 @@ import {
 } from './mapBuildUtils.js';
 import {
 	ALL_NAME_FIELDS,
+	LANGUAGE_NAME_FIELDS,
+	otherNames,
 	COUNTRY_TYPES,
 	NOT_COUNTRIES,
 	capPerCountry,
@@ -395,7 +397,10 @@ async function main() {
 			? ` AND (FEATURECLA = 'Admin-0 capital'${also.length ? ` OR ${sqlIn('NAME', also)}` : ''})`
 			: '') +
 		(exclude.length ? ` AND NOT (${sqlIn('NAME', exclude)})` : '');
-	const nameFields = nameField === 'local' ? ALL_NAME_FIELDS : [...new Set([nameField, 'NAME'])];
+	const nameFields =
+		nameField === 'local' ? [...ALL_NAME_FIELDS] : [...new Set([nameField, 'NAME'])];
+	// A map of several countries names each town in every language (#71).
+	if (multiCountry) nameFields.push(...LANGUAGE_NAME_FIELDS.filter((f) => !nameFields.includes(f)));
 	execFileSync('ogr2ogr', [
 		'-f',
 		'GeoJSON',
@@ -495,6 +500,20 @@ async function main() {
 			// Which country each town is in, on a map of several (#39) - the
 			// facts builder reads it to find the town's authored sentences.
 			...(multiCountry ? { country: String(feature.properties.ADM0NAME) } : {}),
+			// Its names in English, Italian and German (#71), on a map of several
+			// countries only: a country's own maps keep the local name. Not for a
+			// name the region was added to - "Córdoba, Spain" keeps one form.
+			...(() => {
+				if (!multiCountry || aliases.length > 0) return {};
+				const p = feature.properties;
+				const field = (f: string) => p[f] as string | null | undefined;
+				const names = otherNames(name, {
+					en: field('NAME_EN'),
+					it: field('NAME_IT'),
+					de: field('NAME_DE')
+				});
+				return Object.keys(names).length > 0 ? { names } : {};
+			})(),
 			centroid,
 			// Degenerate, not a real extent - a point target has no area.
 			// TourView branches on target.type before reading bbox for
