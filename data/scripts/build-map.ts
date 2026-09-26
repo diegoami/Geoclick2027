@@ -31,7 +31,10 @@ import {
 	padBbox,
 	pmtilesConvert,
 	crossesAntimeridian,
-	selectAdmin0Context
+	selectAdmin0Context,
+	boundsOf,
+	reassignAdmin1,
+	COUNTRY_FIELDS
 } from './mapBuildUtils.js';
 import { colorizeMapDir } from './mapColors.js';
 import { spineMapDir } from './mapSpines.js';
@@ -52,8 +55,6 @@ const SOURCE_SHP = path.join(
 	REPO_ROOT,
 	'data/source/ne_10m_admin_1_states_provinces/ne_10m_admin_1_states_provinces.shp'
 );
-// The admin-0 fields a Countries map reads (#39).
-const COUNTRY_FIELDS = ['ADMIN', 'NAME_EN', 'TYPE', 'CONTINENT', 'SUBREGION'];
 // ...plus `alias`, which the builder adds for a renamed country.
 const BASE_FIELDS = [
 	'name',
@@ -388,114 +389,6 @@ function verticesOf(geometry: Geometry): [number, number][] {
 	};
 	walk(geometry.coordinates);
 	return out;
-}
-
-function boundsOf(geometry: Geometry): {
-	bbox: [number, number, number, number];
-	center: [number, number];
-} {
-	const lons: number[] = [];
-	const lats: number[] = [];
-	const walk = (coords: unknown): void => {
-		if (typeof (coords as number[])[0] === 'number') {
-			const [lon, lat] = coords as unknown as [number, number];
-			lons.push(lon);
-			lats.push(lat);
-		} else {
-			for (const c of coords as unknown[]) walk(c);
-		}
-	};
-	walk(geometry.coordinates);
-
-	const minLat = Math.min(...lats);
-	const maxLat = Math.max(...lats);
-
-	// Antimeridian-crossing shapes (e.g. Alaska's Aleutians) have points on
-	// both sides of +/-180deg, so naive min/max spans the globe "the long
-	// way" and yields a nonsense centroid. Shift whichever side is smaller
-	// so the shape becomes numerically contiguous, then unwrap back.
-	let workingLons = lons;
-	if (Math.max(...lons) - Math.min(...lons) > 180) {
-		const shiftedPositive = lons.map((lon) => (lon > 0 ? lon - 360 : lon));
-		const shiftedNegative = lons.map((lon) => (lon < 0 ? lon + 360 : lon));
-		const spanPositive = Math.max(...shiftedPositive) - Math.min(...shiftedPositive);
-		const spanNegative = Math.max(...shiftedNegative) - Math.min(...shiftedNegative);
-		workingLons = spanPositive <= spanNegative ? shiftedPositive : shiftedNegative;
-	}
-	const wrap = (lon: number) => (lon < -180 ? lon + 360 : lon > 180 ? lon - 360 : lon);
-	const minWorking = Math.min(...workingLons);
-	const maxWorking = Math.max(...workingLons);
-
-	return {
-		bbox: [wrap(minWorking), minLat, wrap(maxWorking), maxLat],
-		center: [wrap((minWorking + maxWorking) / 2), (minLat + maxLat) / 2]
-	};
-}
-
-/**
- * Moves admin-1 areas into another country's admin-0 shape, in place on
- * `countriesPath`: the areas are erased from whatever currently covers
- * them and the receiving country is dissolved together with them. The
- * admin-1 and admin-0 layers share Natural Earth's borders, so the seam
- * closes; -dissolve2 repairs the slivers where it would not.
- */
-function reassignAdmin1(countriesPath: string, spec: string, workDir: string): void {
-	const [names, receiver] = spec.split(':');
-	const areaNames = parseList(names);
-	if (areaNames.length === 0 || !receiver) {
-		console.error('--assign-admin1 wants "Area,Area:Country".');
-		process.exit(1);
-	}
-	console.log(`      moving ${areaNames.join(', ')} into ${receiver}`);
-	const areasPath = path.join(workDir, '.tmp-assign.geojson');
-	const erasedPath = path.join(workDir, '.tmp-erased.geojson');
-	execFileSync('ogr2ogr', [
-		'-f',
-		'GeoJSON',
-		'-where',
-		sqlIn('name', areaNames),
-		'-select',
-		'name',
-		areasPath,
-		SOURCE_SHP
-	]);
-	const areas: AdminCollection = JSON.parse(readFileSync(areasPath, 'utf-8'));
-	if (areas.features.length !== areaNames.length) {
-		console.error(`--assign-admin1 found ${areas.features.length} of ${areaNames.length} areas.`);
-		process.exit(1);
-	}
-	const countries: AdminCollection = JSON.parse(readFileSync(countriesPath, 'utf-8'));
-	const receiving = countries.features.find((f) => f.properties.ADMIN === receiver);
-	if (!receiving) {
-		console.error(`--assign-admin1: "${receiver}" is not on this map.`);
-		process.exit(1);
-	}
-	for (const area of areas.features) area.properties = { ...receiving.properties };
-	writeFileSync(areasPath, JSON.stringify(areas));
-	execFileSync('npx', ['mapshaper', countriesPath, '-erase', areasPath, '-o', erasedPath], {
-		stdio: 'ignore'
-	});
-	execFileSync(
-		'npx',
-		[
-			'mapshaper',
-			'-i',
-			erasedPath,
-			areasPath,
-			'combine-files',
-			'-merge-layers',
-			'force',
-			'-dissolve2',
-			'ADMIN',
-			`copy-fields=${COUNTRY_FIELDS.filter((f) => f !== 'ADMIN').join(',')}`,
-			'-o',
-			countriesPath,
-			'force'
-		],
-		{ stdio: 'ignore' }
-	);
-	rmSync(areasPath);
-	rmSync(erasedPath);
 }
 
 async function main() {
