@@ -180,6 +180,9 @@ function main(): void {
 			'-o',
 			landPath,
 			'format=geojson',
+			// With no fields left, mapshaper would write a GeometryCollection,
+			// which tippecanoe does not read.
+			'geojson-type=FeatureCollection',
 			'precision=0.001'
 		],
 		{ stdio: 'inherit' }
