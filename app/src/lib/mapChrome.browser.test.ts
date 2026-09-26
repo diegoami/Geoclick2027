@@ -93,4 +93,24 @@ describe('the bottom overlay', () => {
 		stop();
 		host.remove();
 	});
+
+	it('keeps one panel’s lift when another goes, and clears when both have (#68)', () => {
+		const a = view('bottom: 0; height: 120px');
+		const b = view('bottom: 0; height: 80px');
+		const stopA = publishBottomOverlay(a.overlay);
+		const stopB = publishBottomOverlay(b.overlay);
+		expect(root.style.getPropertyValue(MAP_BOTTOM_VAR)).toBe('120px');
+
+		stopA();
+		expect(root.style.getPropertyValue(MAP_BOTTOM_VAR)).toBe('80px');
+		expect(root.style.getPropertyValue(WINDOW_BOTTOM_VAR)).toBe('80px');
+		stopA(); // a second call is harmless
+		expect(root.style.getPropertyValue(MAP_BOTTOM_VAR)).toBe('80px');
+
+		stopB();
+		expect(root.style.getPropertyValue(MAP_BOTTOM_VAR)).toBe('');
+		expect(root.style.getPropertyValue(WINDOW_BOTTOM_VAR)).toBe('');
+		a.host.remove();
+		b.host.remove();
+	});
 });

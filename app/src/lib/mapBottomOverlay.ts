@@ -17,24 +17,45 @@ export const WINDOW_BOTTOM_VAR = '--window-bottom-overlay';
  * above it - until the returned cleanup runs (an $effect's teardown).
  */
 export function publishBottomOverlay(el: HTMLElement): () => void {
-	const root = document.documentElement;
-	const publish = () => {
-		const top = el.getBoundingClientRect().top;
-		const viewBottom = (el.offsetParent ?? root).getBoundingClientRect().bottom;
-		root.style.setProperty(MAP_BOTTOM_VAR, `${Math.round(Math.max(0, viewBottom - top))}px`);
-		root.style.setProperty(
-			WINDOW_BOTTOM_VAR,
-			`${Math.round(Math.max(0, window.innerHeight - top))}px`
-		);
-	};
-	publish();
-	const observer = new ResizeObserver(publish);
+	publishers.add(el);
+	if (!observer) {
+		observer = new ResizeObserver(publishAll);
+		window.addEventListener('resize', publishAll);
+	}
 	observer.observe(el);
-	window.addEventListener('resize', publish);
+	publishAll();
 	return () => {
-		observer.disconnect();
-		window.removeEventListener('resize', publish);
+		if (!publishers.delete(el)) return;
+		observer?.unobserve(el);
+		if (publishers.size === 0) {
+			observer?.disconnect();
+			observer = undefined;
+			window.removeEventListener('resize', publishAll);
+		}
+		publishAll();
+	};
+}
+
+// Several panels may publish at once (#68): the largest of them wins, and
+// one going away leaves the others' values rather than clearing them.
+const publishers = new Set<HTMLElement>();
+let observer: ResizeObserver | undefined;
+
+function publishAll(): void {
+	const root = document.documentElement;
+	if (publishers.size === 0) {
 		root.style.removeProperty(MAP_BOTTOM_VAR);
 		root.style.removeProperty(WINDOW_BOTTOM_VAR);
-	};
+		return;
+	}
+	let mapBottom = 0;
+	let windowBottom = 0;
+	for (const el of publishers) {
+		const top = el.getBoundingClientRect().top;
+		const viewBottom = (el.offsetParent ?? root).getBoundingClientRect().bottom;
+		mapBottom = Math.max(mapBottom, viewBottom - top);
+		windowBottom = Math.max(windowBottom, window.innerHeight - top);
+	}
+	root.style.setProperty(MAP_BOTTOM_VAR, `${Math.round(mapBottom)}px`);
+	root.style.setProperty(WINDOW_BOTTOM_VAR, `${Math.round(windowBottom)}px`);
 }

@@ -205,4 +205,4 @@ the panel and the back button are all things to feel on the device.
 | FT-77 | planned | —     |       |
 | FT-78 | planned | —     |       |
 | FT-79 | planned | —     |       |
-| FT-80 | planned | —     | #68   |
+| FT-80 | in PR   | —     | #68: a set of publishers, the largest wins; a cleanup removes only its own |
