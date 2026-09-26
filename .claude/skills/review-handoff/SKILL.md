@@ -96,8 +96,9 @@ cannot see.
 KNOWN OWNER DECISIONS (not defects):
 - Deploys are stopped: a merge to main publishes nothing. Do not check or
   trigger the live site.
-- The Cloudflare "Workers Builds" check that fails on every PR is a leftover
-  dashboard job, not a gate. There is no GitHub CI; the gates run locally.
+- There is no GitHub CI; the gates run locally. Failed "Workers Builds"
+  checks on commits up to 2026-09-26 came from a Cloudflare project since
+  disconnected; they are not a gate.
 - Map data is rebuilt by data/scripts/*.ts under WSL2. Review the scripts,
   not their output in data/maps/.
 - <this milestone's own, or "none">
