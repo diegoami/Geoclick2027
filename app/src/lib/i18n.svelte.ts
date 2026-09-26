@@ -164,6 +164,9 @@ export type TranslationKey =
 	| 'tutorial.intro.body'
 	| 'tutorial.outro.title'
 	| 'tutorial.outro.body'
+	| 'tutorial.continent'
+	| 'tutorial.country'
+	| 'tutorial.country.touch'
 	| 'tutorial.step1'
 	| 'tutorial.step2'
 	| 'tutorial.step2.touch'
@@ -333,7 +336,10 @@ const en: Dictionary = {
 	'tutorial.outro.title': "You're all set",
 	'tutorial.outro.body':
 		'Pick any map and play. Tip: the star on a map keeps it at the top of your list. You can replay this tutorial any time with the Tutorial button.',
-	'tutorial.step1': "Let's start with a map. Open **Regions**, under Italy.",
+	'tutorial.continent': 'Every map starts from the world. Choose **Europe**.',
+	'tutorial.country': 'Now click **Italy** on the map. Its row in the list lights up.',
+	'tutorial.country.touch': 'Now tap **Italy** on the map. Its row in the list lights up.',
+	'tutorial.step1': "Italy's maps are in its row's list. Choose **Regions**.",
 	'tutorial.step2':
 		'Zoom with the mouse wheel or the **+** and **−** buttons, and drag the map to move around. Try it now.',
 	'tutorial.step2.touch':
@@ -514,7 +520,12 @@ const de: Dictionary = {
 	'tutorial.outro.title': 'Alles bereit',
 	'tutorial.outro.body':
 		'Wähle eine beliebige Karte und leg los. Tipp: Mit dem Stern bleibt eine Karte oben in deiner Liste. Du kannst dieses Tutorial jederzeit über die Schaltfläche „Tutorial“ wiederholen.',
-	'tutorial.step1': 'Fangen wir mit einer Karte an. Öffne **Regionen** unter Italy.',
+	'tutorial.continent': 'Jede Karte beginnt bei der Welt. Wähle **Europa**.',
+	'tutorial.country':
+		'Klicke jetzt auf der Karte auf **Italien**. Seine Zeile in der Liste leuchtet auf.',
+	'tutorial.country.touch':
+		'Tippe jetzt auf der Karte auf **Italien**. Seine Zeile in der Liste leuchtet auf.',
+	'tutorial.step1': 'Italiens Karten stehen in der Auswahlliste seiner Zeile. Wähle **Regionen**.',
 	'tutorial.step2':
 		'Zoome mit dem Mausrad oder den Tasten **+** und **−**, und ziehe die Karte, um dich zu bewegen. Probier es aus.',
 	'tutorial.step2.touch':
@@ -695,7 +706,12 @@ const it: Dictionary = {
 	'tutorial.outro.title': 'Tutto pronto',
 	'tutorial.outro.body':
 		"Scegli una mappa qualsiasi e gioca. Suggerimento: con la stella una mappa resta in cima all'elenco. Puoi rifare questo tutorial quando vuoi con il pulsante Tutorial.",
-	'tutorial.step1': 'Iniziamo con una mappa. Apri **Regioni**, sotto Italy.',
+	'tutorial.continent': 'Ogni mappa parte dal mondo. Scegli **Europa**.',
+	'tutorial.country':
+		"Ora fai clic sull'**Italia** nella mappa. La sua riga nell'elenco si illumina.",
+	'tutorial.country.touch':
+		"Ora tocca l'**Italia** sulla mappa. La sua riga nell'elenco si illumina.",
+	'tutorial.step1': "Le mappe dell'Italia sono nell'elenco della sua riga. Scegli **Regioni**.",
 	'tutorial.step2':
 		'Usa la rotellina del mouse o i pulsanti **+** e **−** per lo zoom, e trascina la mappa per spostarti. Prova ora.',
 	'tutorial.step2.touch':

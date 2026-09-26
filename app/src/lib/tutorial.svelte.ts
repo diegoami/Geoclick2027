@@ -132,3 +132,14 @@ export function tutorialTerrainToggled(): void {
 export function tutorialDrop(correct: boolean): void {
 	later({ type: 'drop', correct }, 700);
 }
+
+/** The start screen's map opened a continent (FT-79). */
+export function tutorialContinentChosen(id: string): void {
+	// Long enough for the map to fly there before the card points into it.
+	later({ type: 'continent', id }, 900);
+}
+
+/** A country was tapped on a continent of the start screen's map (FT-79). */
+export function tutorialCountryChosen(id: string): void {
+	later({ type: 'country', id }, 600);
+}

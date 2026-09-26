@@ -39,7 +39,7 @@ describe('TutorialOverlay', () => {
 	});
 
 	it('opens on the intro, then Start moves to step 1 and spotlights its element', async () => {
-		anchor('home-map-card');
+		anchor('picker-europe');
 		const screen = await render(TutorialOverlay);
 		dispatch({ type: 'start' });
 		expect(isTutorialSandboxActive()).toBe(true);
@@ -48,11 +48,11 @@ describe('TutorialOverlay', () => {
 			.toBeVisible();
 
 		await screen.getByRole('button', { name: 'Start' }).click();
-		await expect.poll(counter).toBe('Step 1 of 12');
-		expect(cardText()).toBe("Let's start with a map. Open Regions, under Italy.");
-		expect(dialog()!.querySelector('strong')?.textContent).toBe('Regions');
+		await expect.poll(counter).toBe('Step 1 of 14');
+		expect(cardText()).toBe('Every map starts from the world. Choose Europe.');
+		expect(dialog()!.querySelector('strong')?.textContent).toBe('Europe');
 		await expect.poll(spotlight).not.toBeNull();
-		// Step 1 waits for the map to be opened: no Next, no Back.
+		// Step 1 waits for Europe to be opened: no Next, no Back.
 		const labels = [...dialog()!.querySelectorAll('button')].map((b) => b.textContent?.trim());
 		expect(labels).toEqual(['Skip']);
 	});
@@ -61,17 +61,21 @@ describe('TutorialOverlay', () => {
 		await render(TutorialOverlay);
 		dispatch({ type: 'start' });
 		dispatch({ type: 'next' });
+		dispatch({ type: 'continent', id: 'europe' });
+		await expect.poll(counter).toBe('Step 2 of 14');
+		dispatch({ type: 'country', id: 'italy' });
+		await expect.poll(counter).toBe('Step 3 of 14');
 		// A map opens on its own screen now (FT-39), not on the Overview.
 		dispatch({ type: 'route', place: 'explore' });
-		await expect.poll(counter).toBe('Step 2 of 12');
+		await expect.poll(counter).toBe('Step 4 of 14');
 		dispatch({ type: 'gesture' });
-		await expect.poll(counter).toBe('Step 3 of 12');
-		// Step 3 waits for the player to tap a name onto the map, so there is
+		await expect.poll(counter).toBe('Step 5 of 14');
+		// Step 5 waits for the player to tap a name onto the map, so there is
 		// no Next to press until they have.
 		const labels = [...dialog()!.querySelectorAll('button')].map((b) => b.textContent?.trim());
 		expect(labels).toEqual(['Back', 'Skip']);
 		dispatch({ type: 'reveal' });
-		await expect.poll(counter).toBe('Step 4 of 12');
+		await expect.poll(counter).toBe('Step 6 of 14');
 	});
 
 	it('Back returns to the previous step, which offers Next once done', async () => {
@@ -80,9 +84,9 @@ describe('TutorialOverlay', () => {
 		dispatch({ type: 'next' });
 		dispatch({ type: 'route', place: 'explore' });
 		dispatch({ type: 'gesture' });
-		await expect.poll(counter).toBe('Step 3 of 12');
+		await expect.poll(counter).toBe('Step 5 of 14');
 		await screen.getByRole('button', { name: 'Back' }).click();
-		await expect.poll(counter).toBe('Step 2 of 12');
+		await expect.poll(counter).toBe('Step 4 of 14');
 		await expect.element(screen.getByRole('button', { name: 'Next' })).toBeVisible();
 	});
 
@@ -90,12 +94,31 @@ describe('TutorialOverlay', () => {
 		await render(TutorialOverlay);
 		dispatch({ type: 'start' });
 		dispatch({ type: 'next' });
-		await expect.poll(counter).toBe('Step 1 of 12');
+		await expect.poll(counter).toBe('Step 1 of 14');
 		await expect.poll(() => dialog()?.style.visibility).toBe('visible');
 		expect(spotlight()).toBeNull();
 
-		anchor('home-map-card');
+		anchor('picker-europe');
 		await expect.poll(spotlight).not.toBeNull();
+	});
+
+	it("spotlights Europe, then Italy, then Italy's row (FT-79)", async () => {
+		const spots = ['picker-europe', 'picker-italy', 'home-map-card'].map((name, i) => {
+			const el = anchor(name);
+			el.style.top = `${100 + i * 120}px`;
+			return el;
+		});
+		const spotTop = () => Math.round(spotlight()?.getBoundingClientRect().top ?? -1);
+		const near = (el: HTMLElement) => Math.abs(spotTop() - el.getBoundingClientRect().top) < 20;
+		await render(TutorialOverlay);
+		dispatch({ type: 'start' });
+		dispatch({ type: 'next' });
+		await expect.poll(() => near(spots[0])).toBe(true);
+		dispatch({ type: 'continent', id: 'europe' });
+		await expect.poll(() => near(spots[1])).toBe(true);
+		dispatch({ type: 'country', id: 'italy' });
+		await expect.poll(() => near(spots[2])).toBe(true);
+		expect(cardText()).toBe("Italy's maps are in its row's list. Choose Regions.");
 	});
 
 	it('pauses off-script, and Resume brings the card back', async () => {
@@ -109,7 +132,7 @@ describe('TutorialOverlay', () => {
 		// Back on the step's own screen first, so Resume needn't navigate.
 		dispatch({ type: 'route', place: 'home' });
 		await screen.getByRole('button', { name: 'Resume' }).click();
-		await expect.poll(counter).toBe('Step 1 of 12');
+		await expect.poll(counter).toBe('Step 1 of 14');
 	});
 
 	it('Skip and Esc end the tutorial and switch the sandbox off', async () => {

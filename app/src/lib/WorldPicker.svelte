@@ -6,7 +6,8 @@
 	// continents' own maps and then a section per continent; on a continent,
 	// that continent's maps and its countries. A tap on a country marks its
 	// row - or, for a country with no maps, its continent's. The view left is
-	// where the start screen opens next time (mapPrefs).
+	// where the start screen opens next time (mapPrefs). The tutorial's first
+	// steps (FT-79) walk this map: Europe, Italy, then Italy's row.
 	import { onDestroy, onMount, tick, untrack } from 'svelte';
 	import * as maplibregl from 'maplibre-gl';
 	import 'maplibre-gl/dist/maplibre-gl.css';
@@ -17,6 +18,9 @@
 	import MapSections from './MapSections.svelte';
 	import { pickerView, setPickerView } from './mapPrefs.svelte';
 	import { targetName } from './targetName';
+	import { tutorialContinentChosen, tutorialCountryChosen, tutorialState } from './tutorial.svelte';
+	import { STEPS, TUTORIAL_CONTINENT, TUTORIAL_COUNTRY } from './tutorialMachine';
+	import { TUTORIAL_MAP_ID } from './tutorialSandbox.svelte';
 	import {
 		WORLD_VIEW,
 		fetchPicker,
@@ -53,6 +57,7 @@
 	/** Said above the rows when a tapped country has no maps of its own. */
 	let note = $state<string>();
 	let labels: { remove(): void }[] = [];
+	let tutorialSpot: maplibregl.Marker | undefined;
 	let stopCollision: (() => void) | undefined;
 
 	const view = $derived(picker ? validView(picker, pickerView()) : 'world');
@@ -120,6 +125,7 @@
 				button.type = 'button';
 				button.className = 'picker-continent';
 				button.textContent = continentName(continent.id);
+				button.dataset.tutorial = `picker-${continent.id}`;
 				button.addEventListener('click', () => setPickerView(continent.id));
 				labels.push(
 					new maplibregl.Marker({ element: button })
@@ -257,7 +263,10 @@
 					// On the world, any country is a way into its continent; on a
 					// continent, only its own countries answer.
 					if (view === 'world') setPickerView(continent);
-					else if (continent === view) markCountry(id);
+					else if (continent === view) {
+						markCountry(id);
+						tutorialCountryChosen(id);
+					}
 				});
 				map.on('mouseenter', 'countries-fill', () => {
 					if (map) map.getCanvas().style.cursor = 'pointer';
@@ -286,6 +295,49 @@
 			paint(v);
 			fit(v, true);
 			drawLabels(v);
+			tutorialContinentChosen(v);
+		});
+	});
+
+	// The tutorial's step (FT-79) sets the view it points into: the world for
+	// Europe's name, Europe for Italy and Italy's row. Only on entering a step,
+	// so the player is free to wander within one.
+	const tutorialStep = $derived(
+		tutorialState().status === 'running' ? STEPS[tutorialState().step].id : undefined
+	);
+	$effect(() => {
+		const step = tutorialStep;
+		if (!loaded) return;
+		untrack(() => {
+			if (step === 'choose-continent') setPickerView('world');
+			else if (step === 'choose-country' || step === 'choose-map')
+				setPickerView(TUTORIAL_CONTINENT);
+		});
+	});
+
+	// Italy's row lit for the step that points at it, however the player got
+	// there. After the view's own effect, which clears the mark.
+	$effect(() => {
+		if (loaded && tutorialStep === 'choose-map' && view === TUTORIAL_CONTINENT)
+			untrack(() => markCountry(TUTORIAL_COUNTRY));
+	});
+
+	// A country is no element of its own, so the tutorial's spotlight on Italy
+	// is a marker the size of a finger over it, which lets clicks through.
+	$effect(() => {
+		const wanted =
+			loaded && tutorialState().status !== 'idle' && view === TUTORIAL_CONTINENT && picker;
+		untrack(() => {
+			tutorialSpot?.remove();
+			tutorialSpot = undefined;
+			const country = wanted && picker?.countries.find((c) => c.id === TUTORIAL_COUNTRY);
+			if (!map || !country) return;
+			const spot = document.createElement('div');
+			spot.className = 'picker-tutorial-spot';
+			spot.dataset.tutorial = `picker-${TUTORIAL_COUNTRY}`;
+			tutorialSpot = new maplibregl.Marker({ element: spot })
+				.setLngLat(country.centroid)
+				.addTo(map);
 		});
 	});
 
@@ -298,6 +350,7 @@
 
 	onDestroy(() => {
 		clearLabels();
+		tutorialSpot?.remove();
 		stopCollision?.();
 		map?.remove();
 	});
@@ -327,6 +380,7 @@
 			{masteries}
 			{targetCount}
 			{highlight}
+			tutorialMapId={TUTORIAL_MAP_ID}
 			only={view === 'world' ? undefined : view}
 			onContinent={(id) => setPickerView(id)}
 		/>
@@ -430,5 +484,12 @@
 		border-radius: 999px;
 		padding: 0.25rem 0.7rem;
 		cursor: pointer;
+	}
+	/* Only an anchor for the tutorial's spotlight (FT-79): nothing to see or click. */
+	:global(.picker-tutorial-spot) {
+		width: 3rem;
+		height: 3rem;
+		border-radius: 50%;
+		pointer-events: none;
 	}
 </style>

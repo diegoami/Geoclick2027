@@ -31,15 +31,16 @@ const route = (place: Place): TutorialEvent => ({ type: 'route', place });
 const atIntro = play([route('home'), { type: 'start' }]).state;
 
 describe('tutorial steps', () => {
-	it('has twelve numbered steps between the intro and the outro', () => {
-		// Twelve since FT-43 added the Terrain step. The counter the card
-		// shows is derived from NUMBERED_STEPS, so it follows on its own.
-		expect(NUMBERED_STEPS).toBe(12);
+	it('has fourteen numbered steps between the intro and the outro', () => {
+		// Twelve since FT-43 added the Terrain step, fourteen since FT-79's
+		// Europe and Italy. The counter the card shows is derived from
+		// NUMBERED_STEPS, so it follows on its own.
+		expect(NUMBERED_STEPS).toBe(14);
 		expect(STEPS[0].id).toBe('intro');
 		expect(STEPS.at(-1)!.id).toBe('outro');
 		expect(stepNumber(0)).toBeUndefined();
 		expect(stepNumber(1)).toBe(1);
-		expect(stepNumber(STEPS.length - 2)).toBe(12);
+		expect(stepNumber(STEPS.length - 2)).toBe(14);
 	});
 });
 
@@ -52,6 +53,8 @@ describe('tutorial machine', () => {
 			steps.push(STEPS[state.step].id);
 		};
 		run({ type: 'next' }); // Start
+		run({ type: 'continent', id: 'europe' }); // Europe on the world map
+		run({ type: 'country', id: 'italy' }); // Italy on Europe
 		run(route('explore')); // opened Italy - Regions, which lands on Known
 		run({ type: 'gesture' });
 		run({ type: 'reveal' }); // tapped a region: its name is on the map
@@ -65,6 +68,8 @@ describe('tutorial machine', () => {
 		run({ type: 'next' });
 		run(route('tour'));
 		expect(steps).toEqual([
+			'choose-continent',
+			'choose-country',
 			'choose-map',
 			'zoom-pan',
 			'tap-names',
@@ -299,5 +304,47 @@ describe('placeOf', () => {
 describe('tutorialSlipIds', () => {
 	it('names the slips the quiz steps spotlight (FT-60)', () => {
 		expect(tutorialSlipIds()).toEqual(['sicilia', 'sardegna']);
+	});
+});
+
+describe("the start screen's map in the tutorial (FT-79)", () => {
+	const atContinent = play([{ type: 'next' }], atIntro).state;
+
+	it('opens on Europe, then Italy, then the map in its row', () => {
+		expect(STEPS[atContinent.step].id).toBe('choose-continent');
+		expect(STEPS[atContinent.step].highlight.home?.spot).toBe('picker-europe');
+		const atCountry = play([{ type: 'continent', id: 'europe' }], atContinent);
+		expect(atCountry.id).toBe('choose-country');
+		expect(STEPS[atCountry.state.step].highlight.home?.spot).toBe('picker-italy');
+		const atMap = play([{ type: 'country', id: 'italy' }], atCountry.state);
+		expect(atMap.id).toBe('choose-map');
+		expect(STEPS[atMap.state.step].highlight.home?.spot).toBe('home-map-card');
+	});
+
+	it('another continent or country is a look around, not the step', () => {
+		const asia = play([{ type: 'continent', id: 'asia' }], atContinent);
+		expect(asia.id).toBe('choose-continent');
+		expect(showsNext(asia.state)).toBe(false);
+		const atCountry = play([{ type: 'continent', id: 'europe' }], atContinent).state;
+		expect(play([{ type: 'country', id: 'france' }], atCountry).id).toBe('choose-country');
+	});
+
+	it('Back from Italy returns to Europe, which offers Next', () => {
+		const atCountry = play([{ type: 'continent', id: 'europe' }], atContinent).state;
+		const back = play([{ type: 'back' }], atCountry);
+		expect(back.id).toBe('choose-continent');
+		expect(back.effects).toEqual([]);
+		expect(showsNext(back.state)).toBe(true);
+	});
+
+	it('opening Italy - Regions some other way skips ahead instead of pausing', () => {
+		const { state, id } = play([route('explore')], atContinent);
+		expect(state.status).toBe('running');
+		expect(id).toBe('zoom-pan');
+	});
+
+	it('does nothing with no tutorial running', () => {
+		const idle = play([route('home'), { type: 'continent', id: 'europe' }]).state;
+		expect(idle).toEqual({ ...initialState, place: 'home' });
 	});
 });

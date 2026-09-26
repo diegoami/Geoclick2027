@@ -622,7 +622,7 @@ begins; **Skip** closes it.
 
 ### What it looks like
 
-Each step is a white card with the step number ("Step 1 of 11"), a short
+Each step is a white card with the step number ("Step 1 of 14"), a short
 instruction, and buttons. The rest of the screen is dimmed, except for the
 thing the step is about, which is outlined in orange:
 
@@ -635,20 +635,23 @@ only there to draw the eye.
 
 | Step | Where | The card says (English) | Moves on when |
 |---|---|---|---|
-| 1 | home page | "Let's start with a map. Open **Regions**, under Italy." | you open Italy — Regions |
-| 2 | Overview | "Zoom with the mouse wheel or the **+** and **−** buttons, and drag the map to move around. Try it now." | you zoom or move the map |
-| 3 | Overview | "This is the **overview**, where every region shows its name. Hover over a name to enlarge it." | you press **Next** |
-| 4 | Overview, then Known | "**Known** shows how well you know this map: the names you have placed right, as strongly as you know them. Open it and click any region to see which one it is." | you click a region on the Known map |
-| 5 | Known | "Ready to test yourself for real? Open the **Quiz**." | you open the Quiz |
-| 6 | Quiz | "Drag a name from the tray onto its region. Try **Sicilia**: the big island off the toe of the boot." | you place any name correctly |
-| 7 | Quiz | "Now get one wrong on purpose: drop **Sardegna** anywhere on the mainland. The region you hit flashes red, and Sardegna is shown where it really is." | you make a wrong drop |
-| 8 | Quiz | "Not sure where a region is? Look it up in the **overview**." | you open the Overview |
-| 9 | Overview | "Found Sardegna? Go back to the **Quiz**." | you open the Quiz |
-| 10 | Quiz | "The regions you placed are still marked. Place a name right three times in a row and it counts as known — **Known** shows how far you have got." | you press **Next** |
-| 11 | Quiz | "Last one: the **Tour** flies you to each region in turn and shows its name. Open it." | you open the Tour |
+| 1 | home page, the world map | "Every map starts from the world. Choose **Europe**." | the map opens Europe |
+| 2 | home page, Europe | "Now click **Italy** on the map. Its row in the list lights up." | you click Italy |
+| 3 | home page, Europe | "Italy's maps are in its row's list. Choose **Regions**." | you open Italy — Regions |
+| 4 | Overview | "Zoom with the mouse wheel or the **+** and **−** buttons, and drag the map to move around. Try it now." | you zoom or move the map |
+| 5 | Overview | "This is the **overview**, where every region shows its name. Hover over a name to enlarge it." | you press **Next** |
+| 6 | Overview, then Known | "**Known** shows how well you know this map: the names you have placed right, as strongly as you know them. Open it and click any region to see which one it is." | you click a region on the Known map |
+| 7 | Known | "Ready to test yourself for real? Open the **Quiz**." | you open the Quiz |
+| 8 | Quiz | "Drag a name from the tray onto its region. Try **Sicilia**: the big island off the toe of the boot." | you place any name correctly |
+| 9 | Quiz | "Now get one wrong on purpose: drop **Sardegna** anywhere on the mainland. The region you hit flashes red, and Sardegna is shown where it really is." | you make a wrong drop |
+| 10 | Quiz | "Not sure where a region is? Look it up in the **overview**." | you open the Overview |
+| 11 | Overview | "Found Sardegna? Go back to the **Quiz**." | you open the Quiz |
+| 12 | Quiz | "The regions you placed are still marked. Place a name right three times in a row and it counts as known — **Known** shows how far you have got." | you press **Next** |
+| 13 | Quiz | "Last one: the **Tour** flies you to each region in turn and shows its name. Open it." | you open the Tour |
 
-On touch screens, steps 2, 3 and 4 say "pinch", "tap" and "drag with one
-finger" instead of mentioning the mouse.
+The first three steps show the map even if you chose the list; the list
+comes back after the tutorial. On touch screens the steps say "tap",
+"pinch" and "drag with one finger" instead of mentioning the mouse.
 
 Step 2 outlines the zoom buttons and waits for you to move the map:
 
