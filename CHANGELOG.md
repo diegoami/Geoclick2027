@@ -44,6 +44,9 @@ For players:
   Deutschland, Spanien; so do the towns on the maps of several countries.
   The Quiz, Overview, Tour and Explore all use them. A country's own maps
   keep their names as before.
+- **Terrain names no longer catch the mouse.** Hovering "Balkan Pen." showed
+  a text cursor, and a click on it didn't reach the country underneath
+  (#85, there since the Terrain names came in v0.8).
 
 Under the hood:
 
@@ -71,6 +74,10 @@ Under the hood:
 - **The tutorial (FT-79)** has continent and country steps in
   `tutorialMachine.ts`, with anchors `picker-<continent>` and a
   pass-through marker over Italy. `docs/TUTORIAL.md` updated.
+- **Fixes from the milestone review (#78):** only a player's own
+  continent choice moves the tutorial on (#80); Back leaves from a
+  continent the player can't see, behind the list or unknown (#81);
+  continent names are nudged inside the world map on a phone (#79).
 
 Not in this release:
 
