@@ -243,11 +243,12 @@ milestone is a release tag, reviewed before it is created".)
 ## 3b. Who works where (worktrees)
 
 **The main checkout `<project>/` is not an implementer's or a reviewer's
-workspace.** No implementer works, checks out a branch or commits there; no
-reviewer does either. A session opened there updates it (below) and plans,
-then moves into a worktree of its own. If the checkout is not on the default
-branch, or has uncommitted changes, leave it exactly as it is and tell the
-owner why: those may be someone's work in progress.
+workspace.** No implementer works, checks out a branch or commits there, and
+no reviewer does either — no `git checkout`, `git switch` or `gh pr
+checkout`. A session opened there updates it (below) and plans, then moves
+into a worktree of its own. If the checkout is not on the default branch, or
+has uncommitted changes, leave it exactly as it is and tell the owner why:
+those may be someone's work in progress.
 
 The names below stand for the real paths:
 
@@ -299,10 +300,10 @@ The names below stand for the real paths:
 **Cleaning up worktrees:**
 
 - **A session removes only worktrees it made**: the implementer its own after
-  the merge, if it is still running then; the reviewer its own once its
-  verdict is recorded. Leftovers are the owner's to clean up, with a tool
-  that proves each removal safe — a session does not guess which worktrees
-  are unused.
+  the merge, if it is still running then (`git worktree remove <path>`, and
+  its merged branch deleted); the reviewer its own once its verdict is
+  recorded. Leftovers are the owner's to clean up, with a tool that proves
+  each removal safe — a session does not guess which worktrees are unused.
 
 **Elsewhere:**
 
