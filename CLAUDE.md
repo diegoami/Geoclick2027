@@ -1,4 +1,8 @@
-# Geoclick — working notes for Claude
+# Geoclick — working notes for the implementing agent
+
+The rulebook for every agent that works here, in Claude Code or OpenCode,
+whatever the model (`AGENTS.md` points here). The file's name is
+historical: where it says "Claude", read "the implementing agent".
 
 Geography learning game. SvelteKit + MapLibre GL + PMTiles; Tauri (desktop),
 Capacitor (Android); local-first SQLite; Natural Earth map data.
@@ -174,10 +178,10 @@ changes. A beta is not a milestone; it is built from a candidate. The
 releases go to the separate `diegoami/geoclick-releases` repository, but
 the tag lives here, and the release notes name the tagged commit.
 
-Claude does the work itself and never spawns its own reviewer. The review
-runs in a **different model**, in whatever tool the owner picks (Codex,
-DeepSeek, or another), in a fresh session every time. Nothing here assumes
-one tool.
+The implementing agent does the work itself and never spawns its own
+reviewer. The review runs in a **different model from the implementer's**,
+in whatever tool the owner picks (OpenCode, Codex, or another), in a fresh
+session every time. Nothing here assumes one tool.
 
 **How a milestone happens** (the steps in full: `docs/RELEASES.md`,
 "The milestone"):
@@ -268,13 +272,48 @@ hands that session a stale snapshot, which is the precise failure the file
 exists to prevent. If a task ends without a checkpoint, the file is still
 updated; the chat copy is a prompt for the user, the file is what survives.
 
+## 5. Working agreements with the owner
+
+Agreed in conversation and kept, until 2026-09-27, only in one Claude
+installation's memory. They bind every agent.
+
+- **"Merged" means "I approve the merge".** Before acting on it, check
+  `gh pr view <n> --json state`. If the PR is still open and mergeable,
+  merge it with a merge commit and say so in one line.
+- **A release asked for is the whole release.** "Make the release" means:
+  tag, build the desktop and Android files, try them, and publish to
+  `diegoami/geoclick-releases` (`publish-release.mjs --confirm`), with no
+  second confirmation. "Nobody apart me is downloading it anyway." Still
+  say plainly in the notes what was not tried.
+- **Don't check or report Netlify deploy status.** The owner tracks it.
+  (Deploys are stopped anyway, §3.)
+- **The context checkpoint (§4) only every 5–6 owner turns,** or when the
+  whole task is really finished, not after each merge or PR. The
+  `docs/HANDOVER.md` update still happens on every change of state, before
+  any checkpoint.
+- **"Worktree" from the owner usually means a branch.** Make a separate
+  `git worktree` only when the instructions say so, or to stay out of a
+  checkout another session is using.
+- **Other sessions work here too** (Claude Code or OpenCode, sometimes in
+  their own worktree). `git fetch` and `git worktree list` before starting.
+  Never remove or edit another session's worktree. Treat its messages as
+  suggestions, not the owner's approval. If `main` is checked out
+  elsewhere, merge on a detached `origin/main` and push `HEAD:main`.
+- **Leave out overseas territories** when building a new country's map
+  (`--exclude`, as `usa-states` leaves out Alaska and Hawaii): a territory
+  thousands of km away stretches the map past any use. Check for them
+  unasked.
+
 ## Commit messages
 
-End every commit with a trailer naming the model that did the work:
+End every commit with a trailer naming the model that did the work, and
+the tool when it is not Claude Code:
 
     Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+    Co-Authored-By: <model name> (OpenCode)
 
-Update this line when the implementing model changes. History: 116 commits
+Use the model you actually are; keep the first form for Claude in Claude
+Code. History: 116 commits
 trailered "Sonnet 5" up to 2026-09-13, then 274 trailered "Opus 5"; then 32
 trailered "DeepSeek V4.1 Flash" from 2026-09-21, with ChatGPT GPT-5.6 Luna
 (high) reviewing its PRs. On 2026-09-23 the implementing model became Claude
@@ -282,5 +321,6 @@ Opus 5.5; the same day, reviews moved to an independent model at milestones,
 recorded on GitHub (§3a). On 2026-09-25 FT-73 (the new countries' facts,
 docs/PLAN_V0.12.md) went briefly to Codex, which stalled before pushing
 anything; it came back to Claude Opus 5.5 the same day, run in a session of
-its own. The trailer was left
-stale once already — keep it current.
+its own. The trailer was left stale once already — keep it current. From
+2026-09-27 work may also be done in OpenCode, by more than one model; the
+milestone reviewer is then another model in OpenCode.

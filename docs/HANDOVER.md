@@ -1,13 +1,14 @@
-# Handover — 2026-09-27, v0.13.0 released; FT-82 (start-screen toolbar, #91) in PR #92 with v0.14.0-alpha.1
+# Handover — 2026-09-27: v0.13.0 released, FT-82 merged; v0.14 not yet planned
 
-For whoever picks Geoclick up next, whether a human or a fresh Claude
-session. It records where things stand, what's next, and what's easy to
-get wrong. This is a snapshot; the living records are
+For whoever picks Geoclick up next: a human, or a fresh agent session in
+Claude Code or OpenCode, whatever the model. It records where things
+stand, what's next, and what's easy to get wrong. This is a snapshot; the living records are
 [ROADMAP.md](../ROADMAP.md) (status), [CHANGELOG.md](../CHANGELOG.md)
 (what shipped) and [DECISIONS.md](../DECISIONS.md) (why).
 
-**Read [CLAUDE.md](../CLAUDE.md) §0 first.** It sets a context budget: a
-canonical-source list, and a table of paths never to read, glob or grep.
+**Read [AGENTS.md](../AGENTS.md) and [CLAUDE.md](../CLAUDE.md) first.** §0
+sets a context budget: a canonical-source list, and a table of paths never
+to read, glob or grep. §5 holds the owner's working agreements.
 This repo is ~650 tracked files, 27 MB of generated map data and ~160k
 tokens of prose — reading it indiscriminately exhausts a context window
 before any work starts.
@@ -16,16 +17,14 @@ before any work starts.
 
 | | |
 |---|---|
-| `main` | clean, in sync with GitHub; all four gates pass (736 unit tests), checked 2026-09-23 |
-| Deploy | The product owner **stopped deploying** on 2026-09-22, so a `main` merge no longer triggers a live Netlify build. Merges still need the product owner's OK (CLAUDE.md §3) — that rule is a review gate, not the old cost gate |
-| Who works | **Claude Opus 5.5** implements, with no per-PR review. **A milestone is a release tag** on `main` (CLAUDE.md §3a, agreed on [#29](https://github.com/diegoami/Geoclick2027/issues/29), 2026-09-23): before the tag, Claude opens a milestone issue and gives the product owner a prompt for a **different model, any tool**; the reviewer opens GitHub issues and posts AGREE/BLOCK on the milestone issue; **the tag waits for it** and goes on exactly the reviewed SHA. PRs #10–#21 were DeepSeek V4.1 Flash, reviewed by ChatGPT GPT-5.6 Luna |
-| Latest release | **v0.13.0** (tag at `de84072`, 2026-09-26): "The world on the start screen" — the world-map start screen, names in your language, the tutorial on the map, Exit in the apps. [Milestone v0.13.0 (#78)](https://github.com/diegoami/Geoclick2027/issues/78): two rounds (BLOCK, AGREE). [Published](https://github.com/diegoami/geoclick-releases/releases/tag/v0.13.0); betas `v0.13.0-beta.1`, `-beta.2` |
-| Remediation programme | Closed with v0.2.0 ([REMEDIATION_PLAN.md](REMEDIATION_PLAN.md)); its automerge exception went with it |
-| Feature programme | Closed with v0.5.0 ([FEATURE_PLAN.md](FEATURE_PLAN.md)) |
-| Since then | Per-release plans: [PLAN_V0.6.md](PLAN_V0.6.md) through [PLAN_V0.9.4.md](PLAN_V0.9.4.md), each with its own ledger; now [PLAN_V0.10.md](PLAN_V0.10.md) |
-| Next | **Merged 2026-09-25: [PR #47](https://github.com/diegoami/Geoclick2027/pull/47)** (tablet-play fixes, tried by the owner on the tablet as `v0.12.0-alpha.1`); its bullets are in CHANGELOG `## Unreleased` for v0.12. **Next: v0.12, proposal [#46] agreed 2026-09-25** (every recommended answer: tiers 1+2, 3 sentences, `data/facts/world.json`, EN+IT, Quiz/Overview/Tour labels). The plan is [PLAN_V0.12.md](PLAN_V0.12.md) (FT-69 to FT-75). **Merged 2026-09-25:** [PR #48](https://github.com/diegoami/Geoclick2027/pull/48) (FT-69, `world.json` routing, one file for Czechia), [PR #50](https://github.com/diegoami/Geoclick2027/pull/50) (FT-75, the #45 nits) and [PR #51](https://github.com/diegoami/Geoclick2027/pull/51) (FT-74, boxless region names in Quiz/Overview/Tour). **Merged 2026-09-25:** [PR #49](https://github.com/diegoami/Geoclick2027/pull/49) (FT-70, Greece): **the owner read it, "Greece reads well": the voice gate is passed.** **FT-71 merged 2026-09-25** (PRs #52–#55): all 172 countries on the six Countries maps have three sentences in `data/facts/world.json`, English and Italian. **FT-72 merged 2026-09-25** (PRs #56, #57): all 286 towns on the continent maps, each a `city` entry in its country's file (160 new files); every capital at three sentences, 94 small European towns at one or two (owner's call). **FT-73 merged 2026-09-25:** [#59](https://github.com/diegoami/Geoclick2027/pull/59) (8 European countries' regions), [#61](https://github.com/diegoami/Geoclick2027/pull/61) (Chile, Peru) and [#62](https://github.com/diegoami/Geoclick2027/pull/62) (South Africa, Iran, Thailand, Saudi Arabia; ledger row, CHANGELOG bullet). 523 places, 1 221 + 1 221 sentences; every target on the 21 maps of the 15 countries has sentences. Claude checked all 200 sentences of #61 and about 200 of the rest: no errors, except three in #61 corrected in [#63](https://github.com/diegoami/Geoclick2027/pull/63) (Piura, Apurímac, Santiago; merged 2026-09-25). Thin by design: 93 places have one sentence, 118 have two; 44 are the filler "Named for its town, a name of uncertain origin", to replace in tier 3. The plan's owner spot-checks (after the 3rd and 9th file) are still to do. **v0.12.0 released 2026-09-26:** tag `v0.12.0` on `3b8ad2061a137542af374ebdfa653c2c1ece5e74`, [release](https://github.com/diegoami/geoclick-releases/releases/tag/v0.12.0) (`.msi`, `-setup.exe`, `.apk`), [Milestone #65](https://github.com/diegoami/Geoclick2027/issues/65) closed. Two review rounds (OpenCode, GPT-6 Luna), both AGREE; #66, found in the beta.1 installer check (the badge over Explore's legend), fixed in #67. CHANGELOG "What shipped" says what was tried; the stable `-setup.exe` waited on an installer dialog and the `.msi` was not installed. **Open for v0.13:** [#68](https://github.com/diegoami/Geoclick2027/issues/68) (SHOULD: `publishBottomOverlay` publishers can clear each other; unreachable today, fix with the start screen). The owner's FT-73 facts spot-checks were never done. **v0.13 is planned:** [PLAN_V0.13.md](PLAN_V0.13.md) (2026-09-26), from #58's agreed design: FT-76 the picker map (with a size gate, under ~1.5 MB), FT-77 world and continent views and the panel, FT-78 the list with listboxes and the Map / List switch, FT-79 the tutorial's first steps, FT-80 #68. **FT-80 and FT-76 merged 2026-09-26:** [#69](https://github.com/diegoami/Geoclick2027/pull/69) (FT-80, fixes #68: a set of bottom-overlay publishers) and [#70](https://github.com/diegoami/Geoclick2027/pull/70) (FT-76: `build-picker.ts`, `data/maps/world-picker/`, 172 countries, 446 KB, well under the gate). **Agreed 2026-09-26: [#71](https://github.com/diegoami/Geoclick2027/issues/71)**, place names in the chosen language (countries; towns on the continent maps only; EN/IT/DE), as **FT-81, merged 2026-09-26 ([PR #72](https://github.com/diegoami/Geoclick2027/pull/72))**. **FT-77 merged 2026-09-26 ([PR #73](https://github.com/diegoami/Geoclick2027/pull/73))**: the world map on the start screen. **FT-78 merged 2026-09-26 ([PR #74](https://github.com/diegoami/Geoclick2027/pull/74))**: the Map / List switch, and (the owner's amendment of #58, 2026-09-26) the drill-down in the panel: beside the map, the catalog in sections - the continents' own maps, then each continent's countries - and the list the same; a running tutorial shows the list until FT-79. Also merged 2026-09-25: [#60](https://github.com/diegoami/Geoclick2027/pull/60), which stops `buildAssets.test.ts` running git against the real repo when the pre-push hook runs from a worktree (it had set `core.bare = true` on the shared config). **Merged 2026-09-26: [PR #75](https://github.com/diegoami/Geoclick2027/pull/75)**: an Exit button on the start screen in the Android and Windows apps (`exitApp()`, Tauri `core:window:allow-close`), Recent folded by default, smaller continent names on phones; back-button rules reviewed, unchanged. Tried in `v0.13.0-alpha.1` on the emulator and Windows; `v0.13.0-alpha.3` published (alpha.2 tagged, never built). **FT-79 merged 2026-09-26 ([PR #76](https://github.com/diegoami/Geoclick2027/pull/76)):** the tutorial starts on the world map (Europe, Italy, then Regions from Italy's row; 14 steps; the map shows during a tutorial even when List is chosen), tried in the dev server; `v0.13.0-alpha.4` built from it. **The v0.13.0 milestone has started:** release prep merged ([PR #77](https://github.com/diegoami/Geoclick2027/pull/77)); **candidate `4c4404d993f2ed9a2e02e378e7fa02a5e256512b`**; [Milestone v0.13.0 (#78)](https://github.com/diegoami/Geoclick2027/issues/78) open, gates 4× PASS, 1 832 tests; review prompt given to the owner (2026-09-26), **the tag waits for the verdict**. `v0.13.0-beta.1` (on `c9059a8`) [published](https://github.com/diegoami/geoclick-releases/releases/tag/v0.13.0-beta.1); checked on the Android emulator (tutorial steps 1-4, a map opens) and on Windows (second `/S` install; the first stalled replacing the old version). Beta finding [#79](https://github.com/diegoami/Geoclick2027/issues/79) (SHOULD: North America / Oceania labels clipped on a phone), owner to decide fix-before-tag or v0.13.1. **Round 1 (GPT-6 Luna): BLOCK at `4c4404d`** — #80 MUST-FIX (a stored Europe view let the tutorial skip "Choose Europe"), fixed in [PR #82](https://github.com/diegoami/Geoclick2027/pull/82); #81 SHOULD (Back swallowed for an unknown stored view, or a continent behind the List), [PR #83](https://github.com/diegoami/Geoclick2027/pull/83); #79 in [PR #84](https://github.com/diegoami/Geoclick2027/pull/84). Also the owner's #85 (Terrain names take the pointer; pre-existing since FT-33), fixed in [PR #86](https://github.com/diegoami/Geoclick2027/pull/86). **All four merged 2026-09-26** (#82, #83, #84, #86) plus their CHANGELOG lines: **candidate `de840727744c04165bf077231072d7e98ecc8428`**, gates 4× PASS, 1 835 tests. `v0.13.0-beta.2` (on `e020886`) [published](https://github.com/diegoami/geoclick-releases/releases/tag/v0.13.0-beta.2), checked on the emulator (#80, #79, #81 confirmed fixed) and Windows (both silent installs hit the timeout; the second installed). **Round 2: AGREE on `de84072`** (GPT-6 Luna, OpenCode), one new SHOULD [#87](https://github.com/diegoami/Geoclick2027/issues/87) (Back while the picker's map is still loading), recommended for the next milestone. Pre-tag checks done on beta.2. **v0.13.0 released 2026-09-26:** tag `v0.13.0` on `de840727744c04165bf077231072d7e98ecc8428`, [release](https://github.com/diegoami/geoclick-releases/releases/tag/v0.13.0) (`.msi`, `-setup.exe`, `.apk`), #78 closed; CHANGELOG "What shipped" says what was tried. The Cloudflare "Workers Builds" project was disconnected by the owner (2026-09-26); old red checks stay (only the app can change them). **Open: [PR #88](https://github.com/diegoami/Geoclick2027/pull/88)** (process: the milestone reviewer fetches first and reviews in a fresh detached worktree of its own; branch `review-fetch-first`, worktree `../Geoclick2027-work/review-fetch-first`), reviewed at the owner's request: round 1 BLOCK at `0cede7e` (Codex, GPT-5; #89 MUST-FIX two "Before anything else", #90 SHOULD worktree path clash), both fixed in `b2bfed1`; round-2 prompt given. The owner merges after the verdict. **FT-82 in [PR #92](https://github.com/diegoami/Geoclick2027/pull/92), awaiting the owner (2026-09-27):** proposal [#91](https://github.com/diegoami/Geoclick2027/issues/91) (option B, recommended answers): the start screen's toolbar after the card games (`StartBar.svelte`), My maps (`/my-maps`, Favourites then Recent) and About (`/about`) as routes with `PageBar.svelte`. Tried in the dev server (phone, desktop) and as [`v0.14.0-alpha.1`](https://github.com/diegoami/geoclick-releases/releases/tag/v0.14.0-alpha.1) on the emulator. PR #88 (reviewer fetches first) is left to the owner. **Next after #92:** no plan yet for v0.14; open: #87 (SHOULD, Back while the picker's map loads: set `setPickerShown(true)` in the MapLibre `load` callback), the list's country rows in English, the manual's tutorial table. On AGREE: tag `v0.13.0` on `de84072`, package from the tag, publish, close #78. `main` takes only milestone fixes until the tag. Known staleness: the user manual's tutorial table has no Terrain row and older copy for the Known steps. **Agreed for v0.13 (2026-09-25):** [#58](https://github.com/diegoami/Geoclick2027/issues/58), the world-map start screen: opens on the map (world → continent → country panel; a country with no maps shows the continent's maps; the last view remembered), the list kept behind a Map / List switch with one row per country and a listbox of its maps that opens on choosing. FT-76 to FT-79; the agreed design is the issue's last comment. |
-| After that | Milestone `v0.11.0`: release prep PR → candidate → milestone issue → review → tag (docs/RELEASES.md, "The milestone") |
-| Also raised 2026-09-20 | **The start screen becomes a zoomable world map** — pick the country on the map, then the kind of quiz. The map list cannot be finalized as a list: the goal is a high number of maps, and `mapCatalog.ts` is already 31 countries and 66 maps. Favourites and Recent stay unchanged. Second item of the Iteration 8+ backlog, with the open questions listed there |
+| `main` | clean, in sync with GitHub, at the merge of PR #92 (`f0bf1c4`) plus docs; all four gates pass (about 1 840 tests), checked 2026-09-27 |
+| Deploy | The product owner **stopped deploying** on 2026-09-22, so a `main` merge no longer triggers a live Netlify build. Merges still need the product owner's OK (CLAUDE.md §3) |
+| Who works | **From 2026-09-27: OpenCode, with more than one model**; Claude Code before that (Claude Opus 5.5 from 2026-09-23). No per-PR review. **A milestone is a release tag** on `main` (CLAUDE.md §3a): a milestone issue, a review by **a different model from the implementer's, in OpenCode**, on GitHub; the tag waits for AGREE and goes on exactly the reviewed SHA. The review prompt template is `.claude/skills/review-handoff/SKILL.md` |
+| Latest release | **v0.13.0** (tag at `de84072`, 2026-09-26): "The world on the start screen". [Milestone #78](https://github.com/diegoami/Geoclick2027/issues/78), two rounds (BLOCK, then AGREE). [Published](https://github.com/diegoami/geoclick-releases/releases/tag/v0.13.0) |
+| Merged since v0.13.0 | [PR #88](https://github.com/diegoami/Geoclick2027/pull/88): the milestone reviewer fetches first and reviews in a fresh detached worktree of its own (CLAUDE.md §3a, the review-handoff template, RELEASES.md). [PR #92](https://github.com/diegoami/Geoclick2027/pull/92), **FT-82** (proposal [#91](https://github.com/diegoami/Geoclick2027/issues/91)): the start screen's toolbar after the owner's card games (`StartBar.svelte`), with My maps (`/my-maps`) and About (`/about`) as pages. Its player-facing bullets are in CHANGELOG `## Unreleased`; `v0.14.0-alpha.1` was built from it |
+| Plans | Per-release plans in `docs/PLAN_V0.6.md` … [PLAN_V0.13.md](PLAN_V0.13.md) (all v0.13 tasks merged). **No plan for v0.14 yet** |
+| Next | The owner chooses v0.14's scope. Open candidates: [#87](https://github.com/diegoami/Geoclick2027/issues/87) (SHOULD from the v0.13.0 review: Android Back while the start screen's map is still loading goes up instead of leaving; set `setPickerShown(true)` in the MapLibre `load` callback of `WorldPicker.svelte`); the list's country rows still in English (`MapRows.svelte`); the user manual's tutorial table (no Terrain row); the map screens' bar in the toolbar's style (#91, out of scope there); a bottom sheet for the panel on phones |
+| Programmes | Remediation closed with v0.2.0 ([REMEDIATION_PLAN.md](REMEDIATION_PLAN.md)); features with v0.5.0 ([FEATURE_PLAN.md](FEATURE_PLAN.md)) |
 
 Shipped since the v0.5.0 handover, in one paragraph each:
 
@@ -65,6 +64,16 @@ Shipped since the v0.5.0 handover, in one paragraph each:
   and FT-61 (tablet slips keep their drag against the text-selection
   gesture). The six FT-60 to FT-65 fixes come from one round of tablet play
   on 2026-09-20; each plan entry carries its decision.
+- **v0.11.0** — "Twice the maps": 63 → 127 maps (#39: the continents,
+  finer maps, 15 new countries).
+- **v0.12.0** — facts for the new maps (#46): every country, capital and
+  city on the continents' maps, and the 15 new countries' regions and
+  towns, in English and Italian; region names in Explore's style
+  everywhere.
+- **v0.13.0** — the world on the start screen (#58, #71): a world map,
+  then a continent, then a country's maps in a panel; a Map / List switch;
+  place names in the player's language; the tutorial starts on the map;
+  Exit in the apps.
 
 ## The one thing most worth not getting wrong
 
@@ -79,22 +88,9 @@ the generated one.
 
 ## How to resume
 
-**v0.10.0 shipped on 2026-09-23.** In it: **FT-48/FT-49**, **FT-62**, **FT-65**,
-**FT-61** and **FT-60** (PR #22, `8b75e1e`: `HAND_SIZES[0]` is 10, and while
-the tutorial runs its two spotlit slips are dealt first and any round left
-open on `italy-regions` is forgotten). **FT-63** (best-fit label
-placement) is merged (PR #23, `a0537d6`): a town's name has eight spots, each free one scored
-in pixels (room, reach, other towns' dots, the map's edge), and a stay bonus
-only while the map moves. Measured on germany-towns-100k: no name covers
-another town's dot, a pan moves no name, Duisburg goes west. The **FT-64**
-spike is decided (stretched names read), and **FT-66** is merged on it (PR
-#24, `4b8205a`). **FT-50** translated the other 27 countries (PR #25). **FT-51
-(German) is postponed.** The v0.9.4 installer smoke test is superseded: the
-v0.10.0 installers were opened on a map in both shells.
-
 Suggested first message for the next session:
 
-> Read docs/HANDOVER.md and docs/PLAN_V0.13.md. #75 is merged; start FT-79 (the tutorial's first steps on the map).
+> Read AGENTS.md, then docs/HANDOVER.md. v0.13.0 is released and FT-82 is merged; ask the owner what v0.14 should hold (the "Next" row lists the open candidates).
 
 Whatever comes next, the working rules stay (CLAUDE.md §3):
 
@@ -102,12 +98,13 @@ Whatever comes next, the working rules stay (CLAUDE.md §3):
 - **a milestone is a release tag (CLAUDE.md §3a): milestone issue, review
   prompt, the tag waits for AGREE and goes on exactly the reviewed SHA;
   when a review is in, reproduce each finding, fix (`Fixes #n`) or rebut it;**
-- commit trailer `Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>`;
+- a commit trailer naming the model (and the tool, if not Claude Code), as
+  CLAUDE.md "Commit messages" says;
 - `npm run gates -- --quiet` before pushing (the pre-push hook runs them
   anyway, and prints four PASS lines instead of flooding);
 - verify in a real browser, and try both installers before any release;
 - **ask the product owner before every merge and tag** — there is no
-  automerge exception any more. Publishing a release that he has already
+  automerge exception any more. Publishing a release the owner has already
   asked for does *not* need a second OK — "nobody apart me is downloading it
   anyway" — but still say plainly in the notes what was not verified;
 - previews go out as alpha or beta pre-releases (RELEASES.md).
@@ -122,21 +119,17 @@ Whatever comes next, the working rules stay (CLAUDE.md §3):
   building (`assembleRelease` plus `apksigner`) or by testing which fields
   are filled, without printing values.
 - **Creating anything public** needs an explicit OK, except publishing a
-  release he has already asked for (above). Alpha and beta pre-releases
+  release the owner has already asked for (above). Alpha and beta pre-releases
   count as releases (RELEASES.md, "Pre-releases").
 
 ## The open GitHub issues
 
-One is open: #46, the v0.12 proposal. #39 closed with v0.11.0 (PRs #40–#43). #11 closed with PR #38, #7 and #8 with PR #33; #1–#6 were fixed in v0.9.4 (FT-52 to FT-58).
-
-| # | Task | What | Size | Scheduled |
-|---|---|---|---|---|
-| 46 | — | Proposal: v0.12, facts for the new maps; Quiz labels in Explore's style | L | agreed 2026-09-25; [PLAN_V0.12.md](PLAN_V0.12.md), FT-69 next |
-
-- **#39 shipped in v0.11.0**, built in four PRs (#40–#43); the owner's
-  answers are on the issue, the rules in DECISIONS.md ("Maps of several
-  countries", "Germany's towns come from Wikidata", "Admin-2 maps...",
-  "Poland's powiats under ODbL..."), the commands in MAPS.md.
+| # | What | State |
+|---|---|---|
+| [87](https://github.com/diegoami/Geoclick2027/issues/87) | Android Back while the start screen's map is still loading (SHOULD, v0.13.0 round 2) | open, for v0.14 |
+| [91](https://github.com/diegoami/Geoclick2027/issues/91) | Proposal: the start screen's toolbar (FT-82) | implemented in PR #92; the owner may close it |
+| [58](https://github.com/diegoami/Geoclick2027/issues/58) | Proposal: the world-map start screen (v0.13) | shipped in v0.13.0; the owner may close it |
+| [46](https://github.com/diegoami/Geoclick2027/issues/46) | Proposal: v0.12, facts for the new maps | shipped in v0.12.0; the owner may close it |
 
 ## Not verified, or still open
 
@@ -168,11 +161,16 @@ One is open: #46, the v0.12 proposal. #39 closed with v0.11.0 (PRs #40–#43). #
   verified normally after a full `adb kill-server` fixed it.
 - Tap-to-magnify was tested with simulated touch and the emulator, not on
   a physical phone.
-- The Windows installers were never installed on this PC by an agent. The
-  built `app.exe` was tested over remote debugging.
-- On Android, the version badge (bottom-right) overlaps MapLibre's
-  attribution on map screens. Predates v0.3.0, not scheduled, small CSS
-  fix if wanted.
+- **The Windows `-setup.exe` installed silently (`/S`) often stalls** while
+  replacing an older version: it waits on the old uninstaller and times
+  out. A second run usually installs; so did v0.13.0's stable build on
+  its first run. The installed app is checked over remote debugging
+  (`WEBVIEW2_ADDITIONAL_BROWSER_ARGUMENTS=--remote-debugging-port=9333`).
+- **On the Android emulator, the first tap after `adb install`** can land on
+  Play Protect's "Checking info…" screen instead of the app. Tap again.
+- **A single browser-test file can fail to start on this Windows PC**:
+  Vitest's browser port (63315) falls in a range Windows reserves
+  (63289–63388). The full gates pass; a reboot usually clears the range.
 - The favourite star on Android: the emulator's accessibility dump showed
   it with no name and no pressed state (the language pills lose their
   state the same way, so it's probably the dump). Worth a TalkBack check.
@@ -238,8 +236,8 @@ One is open: #46, the v0.12 proposal. #39 closed with v0.11.0 (PRs #40–#43). #
 
 ## Coordination
 
-Another Claude session sometimes works in this repo, sometimes in its own
-git worktree. It has merged to `main` and edited planning docs, and it has
+Another agent session (Claude Code or OpenCode) sometimes works in this
+repo, sometimes in its own git worktree. It has merged to `main` and edited planning docs, and it has
 filed GitHub issues — one of which had a central fact backwards, so verify
 its claims against the code before acting on them. Before starting,
 `git fetch` and check `git worktree list`. Never remove or edit another
