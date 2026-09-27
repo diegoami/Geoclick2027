@@ -136,4 +136,14 @@ describe('the start screen in sections (#58, amended)', () => {
 		];
 		expect(placed.length).toBe(mapGroups.length);
 	});
+
+	it('resolves every country row to a picker country, so the row can be translated', async () => {
+		const { countryNameOf, CONTINENT_IDS } = await import('./catalogSections');
+		const pickerIds = new Set(picker.countries.map((c) => c.id));
+		for (const group of mapGroups) {
+			if (CONTINENT_IDS.includes(pickerIdOf(group))) continue;
+			expect(pickerIds, group.country).toContain(pickerIdOf(group));
+			expect(typeof countryNameOf(group), group.country).toBe('string');
+		}
+	});
 });

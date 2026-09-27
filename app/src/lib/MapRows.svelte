@@ -5,7 +5,7 @@
 	// alike. Germany's fourteen maps are one row.
 	import { goto } from '$app/navigation';
 	import { resolve } from '$app/paths';
-	import { isContinentGroup } from './catalogSections';
+	import { countryNameOf, isContinentGroup } from './catalogSections';
 	import { groupProgress, type Mastery } from './homeProgress';
 	import { t, type TranslationKey } from './i18n.svelte';
 	import KnownProgress from './KnownProgress.svelte';
@@ -33,10 +33,13 @@
 		tutorialMapId?: string;
 	} = $props();
 
-	// A continent's row reads in the player's language; a country's keeps
-	// the catalog's name, as its maps are named.
+	// A continent's row, and a country's, read in the player's language
+	// (FT-84): the picker's `names` for a country, the catalog's English
+	// where it has none.
 	const nameOf = (group: Row) =>
-		isContinentGroup(group) ? t(`continent.${pickerIdOf(group)}` as TranslationKey) : group.country;
+		isContinentGroup(group)
+			? t(`continent.${pickerIdOf(group)}` as TranslationKey)
+			: countryNameOf(group);
 </script>
 
 <ul class="rows">
