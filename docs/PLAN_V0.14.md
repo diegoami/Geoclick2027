@@ -98,4 +98,4 @@ describes what shipped.
 | ----- | ----- | ----- | ----- |
 | FT-83 | merged | 7ee11e1 | #87: `setPickerShown` into the map's `load` callback |
 | FT-84 | merged | 43eacaf | the picker's `names` in `MapRows` |
-| FT-85 | PR #98 open | — | the manual's §13 table and §14 country sentence |
+| FT-85 | merged | 433c5ac | the manual's §13 table and §14 country sentence |
