@@ -1,7 +1,14 @@
 # Reviews — an independent model, at milestones, on GitHub
 
-**The process lives in [CLAUDE.md §3a](../CLAUDE.md)** and the prompt
-template in [`.claude/skills/review-handoff/SKILL.md`](../.claude/skills/review-handoff/SKILL.md)
+> **History.** This records the review as it stood up to v0.13.0. From
+> 2026-09-27 the review starts from OpenCode: the reviewer's job is
+> `.opencode/agents/release-reviewer.md`, started with `/review-release`
+> (`AGENTS.md`, *Releases*); the `review-handoff` skill only fills in the
+> milestone issue, gives the owner the command and processes the verdict.
+
+**The process then lived in `CLAUDE.md` §3a (now `AGENTS.md`, *Releases*)** and
+the prompt template in
+[`.claude/skills/review-handoff/SKILL.md`](../.claude/skills/review-handoff/SKILL.md)
 (product owner, 2026-09-23, [#26](https://github.com/diegoami/Geoclick2027/issues/26),
 adapted from diegoami/discola-web; milestones redefined the same day,
 [#29](https://github.com/diegoami/Geoclick2027/issues/29)). In short: a

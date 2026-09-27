@@ -25,7 +25,7 @@ leaving it stale for the next person.
 3. [ROADMAP.md](ROADMAP.md) — what's been built, what's in progress, and
    what's next. Check the **Status** section at the top first to see where
    the project is right now.
-4. [CLAUDE.md](CLAUDE.md) — working conventions. Written for an AI
+4. [AGENTS.md](AGENTS.md) — working conventions. Written for an AI
    assistant collaborating on this repo, but every rule in it applies to
    any contributor, human or not. Deliberately short and rule-only — see
    **AI assistant scope** below for why, and where the reasoning went.
@@ -458,7 +458,7 @@ built.
 
 ## How work is expected to flow here
 
-This project is run with a PM/Developer split (see CLAUDE.md) — whoever's
+This project is run with a PM/Developer split (see AGENTS.md) — whoever's
 driving development doesn't just implement silently, they report back
 with concrete steps to verify a change before it's considered done. Carry
 that same discipline into any task you pick up:
@@ -487,7 +487,7 @@ that same discipline into any task you pick up:
 
 ## AI assistant scope
 
-Most of the development here is done by Claude, and `CLAUDE.md` is the
+Most of the development here is done by Claude, and `AGENTS.md` is the
 brief it works from. Two things about that file are worth knowing before
 you edit it:
 
@@ -497,12 +497,12 @@ you edit it:
   and short — see its own §0, which sets the budget and names the
   canonical source for each kind of file.
 - **Reasoning does not belong in it.** When a rule was learned the hard
-  way, the rule stays in `CLAUDE.md` and the story moves to
-  [DECISIONS.md](DECISIONS.md) under its own heading, which `CLAUDE.md`
+  way, the rule stays in `AGENTS.md` and the story moves to
+  [DECISIONS.md](DECISIONS.md) under its own heading, which `AGENTS.md`
   names. Three such entries were moved out on 2026-09-20 — "Two labelled
   test steps, not one", "Hand a dashboard problem back" and "Netlify
   build cost". If you find yourself adding a paragraph of justification
-  to `CLAUDE.md`, that is the signal: write it here or in DECISIONS.md
+  to `AGENTS.md`, that is the signal: write it here or in DECISIONS.md
   and leave a pointer.
 
 - **A session ends in `docs/HANDOVER.md`, not in the chat.** Claude
@@ -601,7 +601,7 @@ this one, and is read on demand rather than up front.
     `map.project(lngLat)` - the screen position of a place - which is how
     the label and framing checks in v0.6.0 were written.
 - **Commit messages end with** `Co-Authored-By: Claude Sonnet 5
-  <noreply@anthropic.com>` when Claude made the change — see CLAUDE.md.
+  <noreply@anthropic.com>` when Claude made the change — see AGENTS.md.
 
 ## Gotchas that have already cost real time
 

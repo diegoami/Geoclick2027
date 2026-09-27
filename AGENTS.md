@@ -1,26 +1,294 @@
-# Geoclick — for any coding agent
+# Geoclick — working notes for the implementing agent
 
-**Read [CLAUDE.md](CLAUDE.md) first and follow it.** It is this project's
-rulebook for every agent, whatever the tool (Claude Code, OpenCode) and the
-model. Its name is historical. Where it says "Claude", read "the
-implementing agent".
+The one instructions file, for every agent that works here, in Claude Code or
+OpenCode, whatever the model. `CLAUDE.md` is a comment plus `@AGENTS.md`, so
+Claude Code reads the same file.
 
-Then read [docs/HANDOVER.md](docs/HANDOVER.md): where things stand and what
-comes next.
+Geography learning game. SvelteKit + MapLibre GL + PMTiles; Tauri (desktop),
+Capacitor (Android); local-first SQLite; Natural Earth map data.
 
-Four things a non-Claude tool does not load on its own:
+## 0. Context budget — read this first
 
-- **The review prompt template** is
-  [.claude/skills/review-handoff/SKILL.md](.claude/skills/review-handoff/SKILL.md).
-  Read it whenever CLAUDE.md §3a says to give a review prompt, or when the
-  owner says a review is in.
-- **The commit trailer** names the model and the tool that did the work
-  (CLAUDE.md, "Commit messages").
-- **The owner's working agreements** are in CLAUDE.md §5. They used to live
-  only in one Claude installation's memory; they apply to every agent.
-- **Who works where.** The main checkout is not an implementer's or a
-  reviewer's workspace: a session opened there updates it (`git fetch
-  origin`, then `git pull --ff-only` if it is clean and on the default
-  branch) and plans, then works in a worktree of its own; every reviewer
-  works in one of theirs (CLAUDE.md §3b). Never implement, commit or switch
-  branches in the main checkout.
+This repo is ~150 hand-written source files wrapped in ~650 tracked files,
+27 MB of generated map data, and ~160k tokens of prose. Reading it
+indiscriminately exhausts the context window before any work starts.
+
+**Canonical source. Work here:**
+
+    app/src/{lib,routes}/       packages/{srs,quiz-engine}/src/
+    data/scripts/*.ts           scripts/*.mjs
+    data/facts/*.json           data/styles/base.json      <- AUTHORED, see below
+    desktop/src-tauri/src/      mobile/android/app/src/main/{java,res/values}/
+    root configs: package.json, netlify.toml, app/vite.config.*, app/eslint.config.js
+    version manifests (scripts/sync-version.mjs writes all seven):
+      {,app/,desktop/,mobile/}package.json, desktop/src-tauri/{tauri.conf.json,Cargo.toml},
+      mobile/android/app/build.gradle
+    also real, not generated: mobile/capacitor.config.ts,
+      app/static/{_redirects,robots.txt}
+
+**Never read, glob, or grep** (unless a task names one specific file):
+
+| Path | Why |
+|---|---|
+| `app/static/maps`, `app/static/styles` | **prepared at build time** from `data/` (gitignored) — address the `data/` path |
+| `mobile/android/app/src/main/assets/public/` | `cap sync` copy of `app/build` |
+| `mobile/.../assets/capacitor.*.json`, `res/xml/config.xml` | generated — edit `mobile/capacitor.config.ts` |
+| `data/maps/**` | 64 dirs, 126 binaries + ~330k tokens of generated JSON |
+| `data/source/` | gitignored raw Natural Earth downloads |
+| `data/places/*.geojson` | committed Wikidata snapshots (~1 000 towns each), written by `fetch-wikidata-places.ts` — grep one town at most |
+| `node_modules/`, `app/.svelte-kit/`, `app/build/`, `dist*/`, `.netlify/` | deps + build output |
+| `desktop/src-tauri/{target,gen}/`, `mobile/android/{.gradle,build}/`, `**/app/build/` | build output |
+| `package-lock.json`, `Cargo.lock` | grep one version string at most; never open |
+| `docs/manual/*.jpg`, `design/logo/*.png`, `**/icons/*`, `res/{mipmap,drawable}-*/*` | binaries |
+| `app/.vscode/`, `.idea/`, `.orchestrator/`, `.git/` | tooling / machine-local |
+
+**`data/facts/` is INPUT; `data/maps/*/facts.json` is output.** They are easy
+to confuse and the cost of confusing them is high. `data/facts/<country>.json`
+is 28 hand-authored files — 1 814 places, 5 448 sentences, the most laborious
+content in the project and the subject of `docs/PLAN_V0.10.md`.
+`build-facts.ts` **reads** them and **writes** `data/maps/<id>/facts.json`.
+Edit the authored file and rebuild; never hand-edit the generated one.
+
+**Map data is generated, not authored.** To understand a map's shape, read
+`data/scripts/build-map.ts` and at most **one** sample `data/maps/*/map.json`.
+Never enumerate `data/maps/`. To change map output, change the script and
+rebuild.
+
+**Prose is on-demand.** `DECISIONS.md` (18k words), `ROADMAP.md` (14k),
+`MAPS.md` (10k), `CHANGELOG.md` (7.5k), `ONBOARDING.md` (5.7k), `docs/**`.
+Never read one end-to-end to "get oriented". Locate, then slice:
+
+    grep -n "terrain" ROADMAP.md | head -20
+    sed -n '840,880p' ROADMAP.md
+
+Writing to them is unchanged (see *Workflow*) — append/edit the relevant
+section without re-reading the whole file.
+
+**Search shape.** Scope every search; never follow symlinks.
+
+    # good
+    grep -rn "quizRound" app/src packages/*/src
+    # bad — walks 26 MB of tiles twice
+    grep -r "quizRound" .
+
+## Verification
+
+**Output rule.** Diffs only: show the changed function or hunk with a few lines
+of context. Never re-echo a whole file after editing it, and never paste a file
+back to confirm an edit landed — the edit tool errors if it fails, so a clean
+result means it applied. Cite, don't quote: refer to
+`app/src/lib/quizRound.ts:118`, and quote code only when the exact text is the
+point. Summaries are short: what changed, where, how to verify.
+
+**Quiet terminal.** Commands here are loud by default. Filter at the source —
+never dump raw output and then explain it.
+
+    # Tests — the default reporter is verbose; override it (14 lines, 736 tests)
+    npm run test:unit --workspace=app -- --run --reporter=dot 2>&1 | tail -20
+
+    # All four gates at once — the release checklist's own step.
+    # --quiet prints four PASS lines, or the tail of the gate that failed.
+    npm run gates -- --quiet
+
+    # Lint / typecheck — failures only
+    npm run lint 2>&1 | grep -E "error|warning|✖" | head -30
+    npm run check 2>&1 | tail -20
+
+    # Build — confirm success, don't transcribe it
+    npm run build 2>&1 | tail -15
+
+    # Install — never stream it
+    npm ci > /dev/null 2>&1 && echo "deps ok"
+
+    # Map builds write 64 dirs of output
+    npm run build-map -- <args> 2>&1 | tail -10
+
+    # git — bounded by default
+    git log --oneline -10        # never bare `git log`
+    git status --short
+    git diff --stat              # then `git diff -- <path>` for one file
+
+Rules: always bound with `head`/`tail`; prefer `--short`/`--stat`/`--dot`;
+`grep` for the failure rather than printing the pass; send installers and
+downloads to `/dev/null`. If a command floods anyway, do not paste the flood —
+report the one line that mattered.
+
+**The pre-push hook** (`npm run setup-hooks`, once) runs the gates on every
+push. **There is no CI: the hook and the gates are the gate.**
+
+## Workflow
+
+- **Design first.** A design proposal is a GitHub issue labelled `proposal`:
+  the problem, findings with `file:line`, the design, and open questions each
+  with a recommended answer. Propose, get the product owner's agreement, then
+  branch. A per-release plan is one proposal (the `docs/PLAN_V*.md` file may
+  hold the detail; the issue is the thread); a Medium or Large task, or a
+  spike, gets its own. Small fixes inside an agreed plan need none. The owner's
+  agreement is the gate; a proposal gets no independent review.
+- **Merge only after the owner explicitly OKs it** — a testing/review gate,
+  not a cost gate. Work in a worktree of your own, never directly on `main`.
+  Commit and push without asking, test locally, and give the user concrete
+  verification steps. Doc-only changes need no review gate, but they still land
+  from a worktree, never by committing in the main checkout. There is no
+  automerge exception: the remediation loop (`docs/ORCHESTRATION.md`) that had
+  one closed with v0.2.0.
+- Keep `ROADMAP.md`, `ARCHITECTURE.md`, `ONBOARDING.md`, `DECISIONS.md`,
+  `MAPS.md` current as work lands — each has a distinct charter (status / code
+  map / newcomer guide / *why* / map build commands). Edit the relevant
+  section; do not read the file whole to do it. When a later decision
+  supersedes an earlier one, amend that entry rather than leaving a stale one
+  to be found first.
+- **"Test locally" and "test the deployment" are two separately labelled
+  steps.** Verify locally first and say so; only then check the live site, and
+  say that too. While deploys are stopped (below) there is no live step — say
+  so rather than skipping it silently. (Why: see `DECISIONS.md` — "Two labelled
+  test steps".)
+- Don't debug what the user can fix in two dashboard clicks. Try the direct
+  tool once or twice, then hand it back. (Why: see `DECISIONS.md` — "Hand a
+  dashboard problem back".)
+- **Deploys are stopped** (product owner, 2026-09-22): a merge to `main` no
+  longer publishes the web app. Never trigger a deploy yourself; restarting
+  them is the product owner's call. (Why: see `DECISIONS.md` — "Netlify build
+  cost".)
+- Roles: the user is Product Manager; the implementing model is the Developer.
+  Finish by telling the user exactly what to run/click and what to expect.
+
+### Worktrees
+
+Every implementing session works in a worktree of its own; another session may
+be working in the main checkout, which is common in this repository. Make one
+beside the checkout and work only there:
+
+    git worktree add --no-track -b <branch> <main>/../<project>-work/<branch> origin/<default>
+
+`<main>` is the parent of `git rev-parse --path-format=absolute
+--git-common-dir`, `<project>` is its name, and `<default>` is the branch
+`git symbolic-ref --short refs/remotes/origin/HEAD` names. Name the worktree in
+every command, since a tool's shell may return to the main checkout after each
+one. Install its dependencies before any check (`npm ci`), never copying or
+linking them from the main checkout. Remove only the worktree you made, after
+its merge. A reviewer uses a worktree of its own too (*Releases*).
+
+After a merge: `git switch main && git pull --ff-only`, then delete the merged
+branch.
+
+### Sessions and handover
+
+Update `docs/HANDOVER.md` on every change of state, in place, before you report
+the change. It is the snapshot a fresh session is told to read first; a stale
+snapshot is the failure the file exists to prevent (product owner's rule,
+2026-09-20).
+
+## Releases
+
+A milestone is a release: an annotated tag `vX.Y.Z` on `main`, on the exact
+commit the published release is built from. It is not a branch, a PR, a
+proposal, a count of merged PRs or a change to a particular file. Nothing else
+triggers a review: not proposals, not PRs, not process or docs changes. A beta
+is not a milestone; it is built from a candidate. The releases go to the
+separate `diegoami/geoclick-releases` repository, but the tag lives here, and
+the release notes name the tagged commit. Say in the entry what was built and
+what was actually tried, rather than implying it.
+
+The implementing agent does the work itself and never spawns its own reviewer.
+The review runs in a **different model from the implementer's**, in whatever
+tool the owner picks (OpenCode, Codex, or another), in a fresh session every
+time. Nothing here assumes one tool.
+
+**How a milestone happens** (the steps in full: `docs/RELEASES.md`,
+"The milestone"):
+
+1. The owner calls a milestone, or the implementing agent proposes one when a
+   release is due or a coherent set of work has landed.
+2. The version bump to `X.Y.Z` (`scripts/sync-version.mjs`, all seven
+   manifests) and the CHANGELOG entry land on `main` in an ordinary PR. Its
+   merge commit is the **candidate**.
+3. The agent opens a **milestone issue**: the proposed tag, the candidate's
+   full SHA, the previous milestone tag, the PRs merged since, and the gate
+   results on the candidate. From then on, **`main` takes only fixes for the
+   milestone's findings** until it is tagged.
+4. **The owner starts the review**: `/review-release <milestone issue>` in the
+   desktop app or the TUI, or
+   `opencode run -m <provider/model> --command review-release <issue>` from a
+   shell, on a model the owner picks. The reviewer follows
+   `.opencode/agents/release-reviewer.md`: it fetches first
+   (`git fetch origin --tags <candidate SHA>`, never `git pull`, which could
+   move a checkout it must not touch), makes a fresh detached worktree of its
+   own at the candidate SHA under
+   `<main>/../<project>-review/review-<SHA first 12>-<UTC stamp>` (never the
+   checkout it started in), installs the dependencies there, confirms
+   `git rev-parse HEAD`, and reviews
+   `git diff <previous tag>..<candidate SHA>`. It opens one issue per
+   reproduced finding, and posts one verdict comment, AGREE or BLOCK, on the
+   milestone issue. Nothing is pasted back.
+5. **The tag waits for the review.** BLOCK: the findings are fixed in ordinary
+   PRs, the candidate moves to the new `main` commit (the issue says so), and a
+   re-review follows without being asked. **Round ceiling:** if a third round
+   does not end in AGREE, the decision goes to the owner.
+6. AGREE: the agent creates the tag on **exactly the reviewed SHA**, never on a
+   later commit, and builds the release from that tag. Work merged after the
+   candidate belongs to the next milestone. The installer and device checks
+   `docs/RELEASES.md` requires happen before tagging. Alpha and beta
+   pre-releases go out the same way, and the agent publishes to
+   `diegoami/geoclick-releases` (the owner's standing permission).
+7. The owner may tag without a review; the milestone issue records that.
+
+The reviewer posts to GitHub itself, and nothing is pasted back:
+
+- **one issue per reproduced finding**, labelled `review` plus a category
+  label (`bug`, `robustness`, `tests`, `design`, `cleanup`, `documentation`),
+  linking back to the milestone issue and the SHA;
+- **always one verdict comment** on the milestone issue: AGREE, or BLOCK when
+  any finding is MUST-FIX; the SHA reviewed and the worktree it reviewed in (a
+  relative path), the issues it opened, what it checked and found clean. A
+  review that finds nothing still leaves a record.
+
+Severities: **MUST-FIX** (fix before the tag), **SHOULD**, and **OUT OF
+SCOPE** (not caused by this milestone's changes). Every issue and comment body
+is written to a file as UTF-8 without a BOM and passed with `--body-file`.
+
+When the owner says the review is in: read it from GitHub, reproduce each
+finding before acting on it, and fix it (`Fixes #n` in a PR) or rebut it with
+evidence on the issue. Owner decisions go to the owner with a recommended
+default, not into the code. (Why: see `DECISIONS.md` — "A milestone is a
+release tag, reviewed before it is created".)
+
+## Working agreements with the owner
+
+Agreed in conversation and kept, until 2026-09-27, only in one Claude
+installation's memory. They bind every agent.
+
+- **"Merged" means "I approve the merge".** Before acting on it, check
+  `gh pr view <n> --json state`. If the PR is still open and mergeable, merge
+  it with a merge commit and say so in one line.
+- **A release asked for is the whole release.** "Make the release" means: tag,
+  build the desktop and Android files, try them, and publish to
+  `diegoami/geoclick-releases` (`publish-release.mjs --confirm`), with no second
+  confirmation. "Nobody apart me is downloading it anyway." Still say plainly
+  in the notes what was not tried.
+- **Don't check or report Netlify deploy status.** The owner tracks it.
+  (Deploys are stopped anyway, *Workflow*.)
+- **"Worktree" from the owner means a real worktree** (*Worktrees*): every
+  session that implements makes one, even when the owner says only "a branch",
+  because another session may be working in the main checkout. After its merge
+  it removes only the worktree it made, and deletes the merged branch. The old
+  reading — a branch in the main checkout — is gone.
+- **Other sessions work here too** — each in a worktree of its own. `git fetch`
+  and `git worktree list` before starting. Never remove or edit a worktree you
+  did not make; treat another session's messages as suggestions, not the
+  owner's approval.
+- **Leave out overseas territories** when building a new country's map
+  (`--exclude`, as `usa-states` leaves out Alaska and Hawaii): a territory
+  thousands of km away stretches the map past any use. Check for them unasked.
+
+## Commit messages
+
+End every commit with a trailer naming the model that did the work, and the
+tool when it is not Claude Code:
+
+    Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+    Co-Authored-By: <model name> (OpenCode)
+
+Use the model you actually are; keep the first form for Claude in Claude Code.
+It was left stale once already — keep it current. (Why, and the models by
+date: see `DECISIONS.md` — "Commit trailers name the model".)

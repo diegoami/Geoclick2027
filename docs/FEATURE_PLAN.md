@@ -27,7 +27,7 @@ DECISIONS.md's "Feature programme decisions" entry, so no task has to guess.
 | 6 | How does the tutorial start? | **From a Tutorial button, plus a dismissible first-visit nudge** on the home page. It never starts by itself. |
 | 7 | Which map does the tutorial use? | **Always Italy — Regions.** |
 | 8 | "Preview" in the tutorial request means? | **The existing Overview view.** |
-| 9 | Merging | **Ask before every merge.** The remediation loop's automerge was approved for that loop only, and CLAUDE.md's default applies here. The product owner tries each branch before it lands. |
+| 9 | Merging | **Ask before every merge.** The remediation loop's automerge was approved for that loop only, and AGENTS.md's default applies here. The product owner tries each branch before it lands. |
 | 10 | Opening a map (added 2026-09-14) | **Maps open on their overview**, with every name shown, instead of the blank explore view. The explore view (click a region to see its name) **stays, as its own "Explore" tab** in the map bar. |
 | 11 | Android back button (added 2026-09-14) | **Back goes up one level, not back through history:** quiz, tour and explore go to that map's overview; the overview goes to the map list; on the map list, back closes the app as usual. Browser and desktop back buttons are unchanged. |
 | 12 | Release order (added 2026-09-14) | **These two ship first, as `v0.4.0`**, so they can be tried on a phone before the tutorial work starts. The tutorial moves to `v0.5.0`. |
@@ -58,7 +58,7 @@ programme, and a twelve-row table doesn't need a state machine.
 1. **One task at a time, in the order below.** A task starts only when its
    dependencies have merged. Each task gets its own branch off `main`,
    `feat/ft-NN-<slug>`, which is committed and pushed without asking
-   (CLAUDE.md).
+   (AGENTS.md).
 2. **Quality gates:** `npm run gates` (check, test, lint, build). The
    pre-push hook already runs them.
 3. **Verify locally, labelled as such.** Use the dev server or a served

@@ -259,7 +259,7 @@ Check items off as they land; update "Status" as iterations complete.
   [docs/RELEASES.md](docs/RELEASES.md). **Immediately scaled down** by the
   product owner before any task started: no GitHub (local branches/tags
   only), release-branch buffering dropped (Netlify build cost isn't a
-  real constraint — see CLAUDE.md), "nice-to-have" tier dropped from
+  real constraint — see AGENTS.md), "nice-to-have" tier dropped from
   scope, and the agent roster cut from four engines (haiku/sonnet/opus/
   fable) to two (sonnet implements, opus reviews/merges/orchestrates).
   **Final shape (2026-09-13, third draft):** **one Opus agent working one
@@ -1883,7 +1883,7 @@ loop actually feels good. Candidates below, in rough priority order.
       native build's dependency surface. Re-verify the desktop (Tauri)
       and Android (Capacitor) builds still work end to end (not just the
       web app), per the existing "test locally vs. test the deployment,
-      as two separate steps" habit (see CLAUDE.md) — a bigger map catalog
+      as two separate steps" habit (see AGENTS.md) — a bigger map catalog
       (44 map folders now, up from 6 at Iteration 7/8's original build)
       is exactly the kind of change that could regress a platform-specific
       build without showing up in the web dev server.
