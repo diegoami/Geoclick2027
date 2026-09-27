@@ -280,3 +280,115 @@
 .maplibregl-popup:has(> .maplibregl-popup-content.is-stretched) {
 	display: none;
 }
+
+/* The toolbar of the start screen and its pages (FT-82, #91), after the
+ * owner's card games (Discola's .topbar): one slim bar, actions as outline
+ * icons with their names in aria-label and title. The buttons are 44px, not
+ * the games' 38, because Geoclick is played on a tablet. */
+.gc-bar {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	min-height: 52px;
+	padding: 4px clamp(8px, 3vw, 1.5rem);
+	background: rgba(255, 255, 255, 0.72);
+	/* A floating bar inside the page's margin rather than edge to edge: the
+	 * map screens keep the browser's 8px body margin too. */
+	border: 1px solid rgba(17, 24, 21, 0.12);
+	border-radius: 12px;
+	box-shadow: 0 1px 6px rgba(17, 24, 21, 0.06);
+	font-family: system-ui, sans-serif;
+}
+.gc-bar .gc-wordmark {
+	margin: 0;
+	font-family: Georgia, 'Times New Roman', serif;
+	font-size: 1.3rem;
+	font-weight: 700;
+	letter-spacing: 0.02em;
+	line-height: 1;
+	color: #1c2b22;
+}
+.gc-tools {
+	display: flex;
+	align-items: center;
+	gap: 0.15rem;
+}
+.gc-bar .gc-tools:last-child {
+	margin-left: auto;
+}
+.gc-tool {
+	position: relative;
+	width: 44px;
+	height: 44px;
+	display: grid;
+	place-items: center;
+	padding: 0;
+	border: 0;
+	border-radius: 8px;
+	background: transparent;
+	color: #2c3a33;
+	text-decoration: none;
+	cursor: pointer;
+}
+.gc-tool:hover {
+	background: rgba(181, 105, 31, 0.12);
+}
+.gc-tool:focus-visible {
+	outline: 2px solid #b5691f;
+	outline-offset: -2px;
+}
+.gc-tool:disabled {
+	cursor: default;
+	opacity: 0.4;
+	background: transparent;
+}
+.gc-tool[aria-pressed='true'] {
+	background: #b06a2f;
+	color: #ffffff;
+}
+.gc-tool svg {
+	width: 22px;
+	height: 22px;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 1.7;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+/* A count on an icon: how many maps "My maps" holds. */
+.gc-tool .gc-count {
+	position: absolute;
+	top: 4px;
+	right: 2px;
+	min-width: 16px;
+	padding: 0 4px;
+	border-radius: 999px;
+	background: #b5691f;
+	color: #ffffff;
+	font-size: 0.65rem;
+	font-weight: 700;
+	line-height: 16px;
+}
+/* The Map / List pair reads as one control. */
+.gc-toggle {
+	display: flex;
+	padding: 2px;
+	border: 1px solid rgba(44, 58, 51, 0.25);
+	border-radius: 10px;
+}
+.gc-toggle .gc-tool {
+	width: 40px;
+	height: 40px;
+}
+/* On a phone the start screen's bar keeps its icons and drops the name, as
+ * the card games' start bar has none; it stays for screen readers. */
+@media (max-width: 30rem) {
+	.gc-bar .gc-wordmark.gc-narrow-hidden {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip-path: inset(50%);
+		white-space: nowrap;
+	}
+}

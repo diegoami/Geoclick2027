@@ -1,23 +1,14 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { resolve } from '$app/paths';
 	import mapIndex from '../../../data/maps/index.json';
-	import {
-		createProgressRepository,
-		type ProgressRepository,
-		type SessionSummary
-	} from '$lib/progressRepository';
-	import { handSize } from '$lib/difficulty';
+	import { createProgressRepository, type ProgressRepository } from '$lib/progressRepository';
 	import { loadHomeProgress, type Mastery } from '$lib/homeProgress';
 	import { countMaps, filterGroups } from '$lib/mapSearch';
-	import { t, tPlural } from '$lib/i18n.svelte';
-	import LanguageSwitcher from '$lib/LanguageSwitcher.svelte';
-	import KnownProgress from '$lib/KnownProgress.svelte';
-	import { mapDisplayName, mapGroups, mapTypeLabel } from '$lib/mapCatalog';
+	import { t } from '$lib/i18n.svelte';
+	import { mapGroups, mapTypeLabel } from '$lib/mapCatalog';
 	import { favouriteMaps, homeView, recentMaps, setHomeView } from '$lib/mapPrefs.svelte';
-	import FavouriteStar from '$lib/FavouriteStar.svelte';
-	import { RELEASES_URL, exitApp, isNativeShell } from '$lib/platform';
-	import TutorialButton from '$lib/TutorialButton.svelte';
+	import { isNativeShell } from '$lib/platform';
+	import StartBar from '$lib/StartBar.svelte';
 	import TutorialNudge from '$lib/TutorialNudge.svelte';
 	import WorldPicker from '$lib/WorldPicker.svelte';
 	import MapSections from '$lib/MapSections.svelte';
@@ -34,12 +25,6 @@
 	// (npm run build-map-index). Replaces 44 runtime fetches of whole map.json
 	// files (~484 KB) that the due counts below only needed the ids from.
 	const targetIdsByMap = new Map(mapIndex.map((entry) => [entry.id, entry.targetIds]));
-
-	// Last-session summaries and due state live in localStorage (Iteration
-	// 5/6), which isn't available during the prerendered build - read them
-	// after mount, same pattern as the rest of the app's client-only data
-	// fetching.
-	let lastSessions = $state<Record<string, SessionSummary | undefined>>({});
 
 	// How well each map is known (FT-26), read by loadHomeProgress. A map
 	// never played has no mastery at all and says nothing - it is a map to
@@ -61,17 +46,16 @@
 	const targetCount = (mapId: string) => targetIdsByMap.get(mapId)?.length ?? 0;
 	const shownCount = $derived(countMaps(shownGroups));
 
-	// The download link is for web visitors only - pointless inside the desktop
-	// or Android app itself. Off until checked, so the apps never flash it.
-	let showDownload = $state(false);
-	// The Exit button is the apps' own, the other way round.
+	// The Exit button is the apps' own: a web page cannot close its tab.
 	let isApp = $state(false);
 
 	// The Recent list lives in this device's storage, which the prerendered HTML
 	// can't see. Showing it only after mount keeps the first client render equal
 	// to that HTML (no hydration mismatch).
 	let mounted = $state(false);
-	const hasShortcuts = $derived(mounted && (favouriteMaps().length > 0 || recentMaps().length > 0));
+	// Favourites and Recent, now on My maps (FT-82): the toolbar's icon
+	// counts the maps there, each once.
+	const myMapsCount = $derived(mounted ? new Set([...favouriteMaps(), ...recentMaps()]).size : 0);
 	// The tutorial's first steps are on the map (FT-79), so it shows the map
 	// while one runs, without changing the player's choice.
 	const tutorialRuns = $derived(tutorialState().status !== 'idle');
@@ -80,7 +64,6 @@
 	onMount(() => {
 		mounted = true;
 		isNativeShell().then((native) => {
-			showDownload = !native;
 			isApp = native;
 		});
 	});
@@ -107,7 +90,6 @@
 				targetIdsByMap
 			);
 			if (stale) return;
-			lastSessions = progress.summaries;
 			masteries = progress.masteries;
 		})();
 		return () => {
@@ -116,161 +98,27 @@
 	});
 </script>
 
+<StartBar {showMap} switchDisabled={tutorialRuns} onView={setHomeView} {isApp} {myMapsCount} />
+
 <main>
-	<div class="header-row">
-		<h1>Geoclick</h1>
-		<LanguageSwitcher />
-		<TutorialButton />
-		<!-- Only in the apps: a web page cannot close its own tab. -->
-		{#if isApp}
-			<button type="button" class="exit" onclick={() => exitApp()}>{t('home.exit')}</button>
-		{/if}
-	</div>
-	<p>{t('home.subtitle')}</p>
-	{#if showDownload}
-		<p class="download">
-			{t('home.download.lead')}
-			<a href={RELEASES_URL} target="_blank" rel="external noopener">{t('home.download.link')}</a>
-		</p>
-	{/if}
 	<!-- First visit only, and never while a tutorial is running; after mount,
 	     since only the device knows (FT-12). -->
 	{#if mounted && showTutorialNudge() && tutorialState().status === 'idle'}
 		<TutorialNudge />
 	{/if}
 
-	{#snippet mapCard(mapId: string, label: string, anchor?: string)}
-		{@const summary = lastSessions[mapId]}
-		{@const mastery = masteries[mapId]}
-		<li class="map-card" data-tutorial={anchor}>
-			<!-- A map opens on Known (FT-39): the map you build by tapping names
-		     onto it. Overview, which labels everything at once, is a tab away. -->
-			<a href={resolve('/map/[mapId]', { mapId })}>
-				<span class="map-name">{label}</span>
-				{#if mastery}
-					<span class="mastery" class:all-known={mastery.known === mastery.total}>
-						<!-- A bar, not the number (FT-65); it renders nothing until the
-						     first name is known. -->
-						<KnownProgress
-							known={mastery.known}
-							total={mastery.total}
-							allKnown={mastery.known === mastery.total}
-						/>
-						<!-- The ladder, but only once the hand has started shrinking
-						     (FT-21): level 0's hand of ten is the default and there is
-						     nothing to explain (FT-60). -->
-						{#if mastery.level > 0}
-							· {tPlural('quiz.namesAtATime', handSize(mastery.level), {
-								count: handSize(mastery.level)
-							})}
-						{/if}
-					</span>
-				{/if}
-				{#if summary}
-					<span class="last-result">
-						{t('home.lastResult', { perfect: summary.perfect, total: summary.total })}
-						{#if summary.totalErrors > 0}
-							{tPlural('home.mistakeCount', summary.totalErrors, {
-								count: summary.totalErrors
-							})}
-						{/if}
-					</span>
-				{/if}
-			</a>
-			<!-- A sibling of the link, not inside it: two separate controls for
-			     keyboard and screen readers (FT-16). -->
-			<span class="card-star"><FavouriteStar {mapId} /></span>
-		</li>
-	{/snippet}
-
-	<!-- Favourites and Recent share one panel, set apart from the full list by
-	     its background and the "All maps" heading below (FT-17): as plain
-	     sections they read like two more countries. -->
-	{#if hasShortcuts}
-		<div class="shortcuts">
-			{#if favouriteMaps().length > 0}
-				<section class="shortcut-group">
-					<h2>
-						<svg viewBox="0 0 24 24" aria-hidden="true"
-							><path
-								d="M12 3.6l2.55 5.2 5.75.84-4.16 4.05.98 5.72L12 16.72l-5.12 2.69.98-5.72L3.7 9.64l5.75-.84z"
-								fill="currentColor"
-							/></svg
-						>
-						{t('home.favourites')}
-					</h2>
-					<ul>
-						{#each favouriteMaps() as mapId (mapId)}
-							{@render mapCard(mapId, mapDisplayName(mapId) ?? mapId)}
-						{/each}
-					</ul>
-				</section>
-			{/if}
-
-			{#if recentMaps().length > 0}
-				<!-- Folded by default, like a spoiler: the maps played last are a
-				     shortcut, not the start screen's first thing (owner, 2026-09-26). -->
-				<details class="shortcut-group recent">
-					<summary
-						><h2>
-							<svg viewBox="0 0 24 24" aria-hidden="true"
-								><circle
-									cx="12"
-									cy="12"
-									r="8.5"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-								/><path
-									d="M12 7.5V12l3 2"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-									stroke-linecap="round"
-								/></svg
-							>
-							{t('home.recent')}
-							<span class="count">({recentMaps().length})</span>
-							<span class="chevron" aria-hidden="true">▸</span>
-						</h2></summary
-					>
-					<ul>
-						{#each recentMaps() as mapId (mapId)}
-							{@render mapCard(mapId, mapDisplayName(mapId) ?? mapId)}
-						{/each}
-					</ul>
-				</details>
-			{/if}
-		</div>
-	{/if}
-
-	<!-- The map or the list (FT-78, #58), kept on the device. The prerendered
-	     page is the list; the map takes its place after mount when it is the
-	     choice. While a tutorial runs the map shows, since its first steps
-	     are on it (FT-79), and the switch waits. -->
-	<div class="view-switch" role="group" aria-label={t('home.viewLabel')}>
-		<button
-			type="button"
-			aria-pressed={showMap}
-			disabled={tutorialRuns}
-			onclick={() => setHomeView('map')}>{t('home.viewMap')}</button
-		>
-		<button
-			type="button"
-			aria-pressed={!showMap}
-			disabled={tutorialRuns}
-			onclick={() => setHomeView('list')}>{t('home.viewList')}</button
-		>
-	</div>
-
+	<!-- The map or the list (FT-78, #58), switched in the toolbar and kept on
+	     the device. The prerendered page is the list; the map takes its place
+	     after mount when it is the choice. While a tutorial runs the map
+	     shows, since its first steps are on it (FT-79), and the switch waits. -->
 	{#if showMap}
 		<!-- The world, then a continent, then a country's maps (FT-77). -->
 		<section class="picker-section">
 			<WorldPicker groups={labelledGroups} {masteries} {targetCount} />
 		</section>
 	{:else}
-		<!-- Searching is about the full list; Favourites and Recent are short by
-		     definition and stay where they are (FT-31). -->
+		<!-- Searching is about the full list (FT-31); Favourites and Recent are
+		     on My maps (FT-82). -->
 		<div class="search">
 			<label class="visually-hidden" for="map-search">{t('home.search')}</label>
 			<input
@@ -315,7 +163,8 @@
 	}
 	main {
 		max-width: 32rem;
-		margin: 4rem auto;
+		margin: 1.25rem auto 4rem;
+		padding: 0 1rem;
 		font-family: system-ui, sans-serif;
 		text-align: center;
 	}
@@ -326,68 +175,6 @@
 		width: min(calc(100vw - 2rem), 64rem);
 		transform: translateX(-50%);
 		margin: 1.5rem 0 2rem;
-	}
-	.header-row {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 0.75rem;
-		flex-wrap: wrap;
-	}
-	/* Beside the Tutorial pill, in its shape, but quieter: it is the way out. */
-	.exit {
-		font-family: system-ui, sans-serif;
-		font-size: 0.7rem;
-		font-weight: 600;
-		line-height: 1.2;
-		padding: 0.2rem 0.55rem;
-		border-radius: 999px;
-		border: 1px solid rgba(44, 58, 51, 0.35);
-		background: #ffffff;
-		color: #2c3a33;
-		cursor: pointer;
-	}
-	.exit:hover {
-		background: #f2f2ee;
-	}
-	.exit:focus-visible {
-		outline: 2px solid #2c3a33;
-		outline-offset: 2px;
-	}
-	.header-row h1 {
-		margin: 0;
-	}
-	.download {
-		margin-top: -0.5rem;
-		font-size: 0.9rem;
-		color: #4a5650;
-	}
-	/* Overrides the page's map-card link style below. */
-	.download a {
-		display: inline;
-		padding: 0;
-		border: none;
-		color: #b5691f;
-		text-decoration: underline;
-		text-underline-offset: 2px;
-	}
-	.download a:hover {
-		background: none;
-		text-decoration-thickness: 2px;
-	}
-	/* Favourites (FT-16) and Recent (FT-15): full-width sections above the
-	   country list, cards labelled with the full map name. */
-	.map-card {
-		position: relative;
-	}
-	/* Room on the right of every card for its favourite star. */
-	.map-card a {
-		padding-right: 3rem;
-	}
-	.card-star {
-		position: absolute;
-		top: 0.3rem;
-		right: 0.35rem;
 	}
 	/* The search box (FT-31): full width on a phone, comfortable to tap, and
 	   visually part of the "All maps" list rather than the page header. */
@@ -438,129 +225,9 @@
 		clip-path: inset(50%);
 		white-space: nowrap;
 	}
-	.shortcuts {
-		display: flex;
-		flex-direction: column;
-		gap: 1.25rem;
-		margin-bottom: 2rem;
-		padding: 1rem 1rem 1.1rem;
-		text-align: left;
-		background: rgba(255, 255, 255, 0.6);
-		border: 1px solid rgba(181, 105, 31, 0.28);
-		border-radius: 1rem;
-		box-shadow: 0 2px 10px rgba(17, 24, 21, 0.06);
-	}
-	.shortcut-group h2 {
-		display: flex;
-		align-items: center;
-		gap: 0.4rem;
-		margin: 0 0 0.6rem;
-		font-size: 1rem;
-		font-weight: 700;
-		color: #b5691f;
-	}
-	.recent summary {
-		list-style: none;
-		cursor: pointer;
-	}
-	.recent summary::-webkit-details-marker {
-		display: none;
-	}
-	.recent summary h2 {
-		margin: 0;
-	}
-	.recent[open] summary h2 {
-		margin-bottom: 0.6rem;
-	}
-	.recent .count {
-		font-weight: 400;
-		opacity: 0.75;
-	}
-	.recent .chevron {
-		margin-left: auto;
-		transition: transform 0.15s;
-	}
-	.recent[open] .chevron {
-		transform: rotate(90deg);
-	}
-	.shortcut-group h2 svg {
-		width: 1.1rem;
-		height: 1.1rem;
-	}
-	/* Opaque on the panel's lighter ground, so these cards stand out from the
-	   list's. */
-	.shortcut-group .map-card a {
-		background: #ffffff;
-	}
-	.shortcut-group .map-card a:hover {
-		background: #fbf4ec;
-	}
-	.view-switch {
-		display: inline-flex;
-		margin: 0.5rem 0 1rem;
-		border: 1px solid rgba(44, 58, 51, 0.3);
-		border-radius: 999px;
-		overflow: hidden;
-	}
-	.view-switch button {
-		font: inherit;
-		font-size: 0.9rem;
-		padding: 0.35rem 1.1rem;
-		border: none;
-		background: rgba(255, 255, 255, 0.7);
-		color: #2c3a33;
-		cursor: pointer;
-	}
-	.view-switch button[aria-pressed='true'] {
-		background: #b06a2f;
-		color: #fff;
-	}
-	.view-switch button:disabled {
-		cursor: default;
-		opacity: 0.5;
-	}
-	ul {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-	}
-	a {
-		display: flex;
-		flex-direction: column;
-		gap: 0.2rem;
-		padding: 0.6rem 1rem;
-		border: 1px solid #ccc;
-		border-radius: 0.5rem;
-		text-decoration: none;
-		color: inherit;
-	}
-	a:hover {
-		background: #f4f4f4;
-	}
-	.mastery {
-		font-size: 0.8rem;
-		font-weight: 600;
-		color: #b06a2f;
-	}
-	/* A map with nothing left to learn reads as done, not as work to do. */
-	.mastery.all-known {
-		color: #4a7c5c;
-	}
-	.last-result {
-		font-size: 0.8rem;
-		opacity: 0.7;
-	}
 	@media (min-width: 640px) {
 		main {
 			max-width: 46rem;
-		}
-		.shortcut-group ul {
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-			column-gap: 2rem;
 		}
 	}
 </style>
