@@ -5,7 +5,11 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
-## Unreleased
+## v0.14.0 — 2026-09-27 — The start screen's toolbar, and its rows in your language
+
+**The start screen gains the card games' toolbar — Map / List, My maps, language, tutorial, About and Exit. Its country rows now read in the language you chose, and Android's Back button waits for the world map to load.**
+
+Proposal #93; [PLAN_V0.14.md](docs/PLAN_V0.14.md) (FT-82 to FT-85). PRs #92, #96, #97, #98.
 
 For players:
 
@@ -18,6 +22,26 @@ For players:
   you played last. The star in the toolbar says how many there are.
 - **About** holds what used to sit under the title: what Geoclick is, the
   version, the credits and, on the web, the link to the apps.
+- **The start screen's country rows read in your language.** In Italian or
+  German the list says Germania, Regno Unito, Stati Uniti where the map
+  does, instead of the English Germany, Great Britain, USA. English is
+  unchanged.
+- **Android's Back button waits for the world map to load.** A slow — or
+  failed — load no longer swallows the first Back press; with no continent
+  on screen it leaves the app, as it should (#87).
+
+Under the hood:
+
+- **The start screen's rows read the world picker's own names**
+  (`catalogSections.countryNameOf`), so a country's row cannot disagree
+  with its label on the map (FT-84).
+- **`AGENTS.md` is the one instructions file, and release reviews start
+  from OpenCode.** `CLAUDE.md` is now a comment plus `@AGENTS.md`; the
+  milestone review runs from `.opencode/agents/release-reviewer.md` via
+  `/review-release`, on a model the owner picks (PR #95). No player-facing
+  change.
+- **The user manual's tutorial section matches the 14-step tutorial**, and
+  a test keeps the table in step with the machine (FT-85).
 
 ## v0.13.0 — 2026-09-26 — The world on the start screen
 
