@@ -96,6 +96,6 @@ describes what shipped.
 
 | Task  | State | Merge | Notes |
 | ----- | ----- | ----- | ----- |
-| FT-83 | not started | — | #87: `setPickerShown` into the map's `load` callback |
+| FT-83 | PR #96 open | — | #87: `setPickerShown` into the map's `load` callback |
 | FT-84 | not started | — | the picker's `names` in `MapRows` |
 | FT-85 | not started | — | the manual's §13 table and §14 country sentence |

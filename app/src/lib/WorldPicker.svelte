@@ -225,7 +225,6 @@
 				// A stored continent the picker no longer has is the world, in
 				// storage too, so the back button sees what the player sees (#81).
 				if (start !== pickerView()) setPickerView(start);
-				setPickerShown(true);
 				const [west, south, east, north] = boxOf(start);
 				map = new maplibregl.Map({
 					container,
@@ -298,6 +297,9 @@
 					drawLabels(start);
 					keepContinentsInside();
 					loaded = true;
+					// The map is up (#87): only now is there a continent to go
+					// up from, so Back during a slow or failed load exits.
+					setPickerShown(true);
 				});
 				map.on('click', 'countries-fill', (e) => {
 					// A continent's name is a button of its own: its click is not also

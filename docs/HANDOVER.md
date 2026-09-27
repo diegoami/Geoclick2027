@@ -1,4 +1,4 @@
-# Handover — 2026-09-27: v0.13.0 released, FT-82 merged; v0.14 proposed (#93); AGENTS.md folds in CLAUDE.md and release reviews start from OpenCode (PR #95 open)
+# Handover — 2026-09-27: v0.13.0 released, FT-82 merged; v0.14 agreed (#93); AGENTS.md is the one instructions file and release reviews start from OpenCode (PR #95 merged); FT-83 in PR #96
 
 For whoever picks Geoclick up next: a human, or a fresh agent session in
 Claude Code or OpenCode, whatever the model. It records where things
@@ -18,13 +18,13 @@ before any work starts.
 
 | | |
 |---|---|
-| `main` | clean, in sync with GitHub, at the merge of PR #94 (`2d76088`); all four gates pass (about 1 840 tests), checked 2026-09-27. **PR #95** (docs-only: `AGENTS.md` is the one instructions file, release reviews start from OpenCode) is open |
+| `main` | clean, in sync with GitHub, at the merge of PR #95 (`c73abb5`); all four gates pass (about 1 840 tests), checked 2026-09-27. **PR #96** (FT-83: #87, Back waits for the start screen's map) is open |
 | Deploy | The product owner **stopped deploying** on 2026-09-22, so a `main` merge no longer triggers a live Netlify build. Merges still need the product owner's OK (AGENTS.md, *Workflow*) |
 | Who works | **From 2026-09-27: OpenCode, with more than one model**; Claude Code before that (Claude Opus 5.5 from 2026-09-23). No per-PR review. **A milestone is a release tag** on `main` (AGENTS.md, *Releases*): a milestone issue, a review by **a different model from the implementer's, in OpenCode**, on GitHub; the tag waits for AGREE and goes on exactly the reviewed SHA. The review starts with `/review-release <issue>` (`opencode run -m <provider/model> --command review-release <issue>`); the reviewer's job is `.opencode/agents/release-reviewer.md`, and the `review-handoff` skill fills in the issue and processes the verdict. **`AGENTS.md` is the one instructions file**; `CLAUDE.md` is a comment plus `@AGENTS.md` |
 | Latest release | **v0.13.0** (tag at `de84072`, 2026-09-26): "The world on the start screen". [Milestone #78](https://github.com/diegoami/Geoclick2027/issues/78), two rounds (BLOCK, then AGREE). [Published](https://github.com/diegoami/geoclick-releases/releases/tag/v0.13.0) |
-| Merged since v0.13.0 | [PR #88](https://github.com/diegoami/Geoclick2027/pull/88): the milestone reviewer fetches first and reviews in a fresh detached worktree of its own (AGENTS.md, *Releases*; the `review-handoff` skill, RELEASES.md). [PR #92](https://github.com/diegoami/Geoclick2027/pull/92), **FT-82** (proposal [#91](https://github.com/diegoami/Geoclick2027/issues/91)): the start screen's toolbar after the owner's card games (`StartBar.svelte`), with My maps (`/my-maps`) and About (`/about`) as pages. Its player-facing bullets are in CHANGELOG `## Unreleased`; `v0.14.0-alpha.1` was built from it. [PR #94](https://github.com/diegoami/Geoclick2027/pull/94): process — implementers and reviewers each work in a worktree of their own, with the branch cleanup named |
-| Plans | Per-release plans in `docs/PLAN_V0.6.md` … [PLAN_V0.13.md](PLAN_V0.13.md) (all v0.13 tasks merged). **v0.14 proposed 2026-09-27 on [#93](https://github.com/diegoami/Geoclick2027/issues/93); [PLAN_V0.14.md](PLAN_V0.14.md) written (proposed, awaits the owner's agreement)** |
-| Next | **v0.14 scope agreed 2026-09-27: #87 plus the loose ends** — [#87](https://github.com/diegoami/Geoclick2027/issues/87) (SHOULD from the v0.13.0 review: Android Back while the start screen's map is still loading goes up instead of leaving; set `setPickerShown(true)` in the MapLibre `load` callback of `WorldPicker.svelte`); the list's country rows still in English (`MapRows.svelte`); the user manual's tutorial table (no Terrain row, stale Known copy). **Proposal [#93](https://github.com/diegoami/Geoclick2027/issues/93) opened and `docs/PLAN_V0.14.md` written 2026-09-27; next: the owner's agreement on #93's open questions, then build FT-83** (AGENTS.md, *Workflow*). Deferred: the map screens' bar in the toolbar's style, the panel as a bottom sheet on phones, FT-38 |
+| Merged since v0.13.0 | [PR #88](https://github.com/diegoami/Geoclick2027/pull/88): the milestone reviewer fetches first and reviews in a fresh detached worktree of its own (AGENTS.md, *Releases*; the `review-handoff` skill, RELEASES.md). [PR #92](https://github.com/diegoami/Geoclick2027/pull/92), **FT-82** (proposal [#91](https://github.com/diegoami/Geoclick2027/issues/91)): the start screen's toolbar after the owner's card games (`StartBar.svelte`), with My maps (`/my-maps`) and About (`/about`) as pages. Its player-facing bullets are in CHANGELOG `## Unreleased`; `v0.14.0-alpha.1` was built from it. [PR #94](https://github.com/diegoami/Geoclick2027/pull/94): process — implementers and reviewers each work in a worktree of their own, with the branch cleanup named. [PR #95](https://github.com/diegoami/Geoclick2027/pull/95): `AGENTS.md` is the one instructions file, and release reviews start from OpenCode (`/review-release`, `.opencode/agents/release-reviewer.md`) |
+| Plans | Per-release plans in `docs/PLAN_V0.6.md` … [PLAN_V0.13.md](PLAN_V0.13.md) (all v0.13 tasks merged). **v0.14 agreed 2026-09-27 on [#93](https://github.com/diegoami/Geoclick2027/issues/93); [PLAN_V0.14.md](PLAN_V0.14.md) holds the detail; #93's open questions take the recommended answers** |
+| Next | **v0.14: #87 plus the loose ends** (AGENTS.md, *Workflow*). **FT-83** (#87, Back waits for the start screen's map): [PR #96](https://github.com/diegoami/Geoclick2027/pull/96), awaiting the owner's OK. **FT-84** (the list's country rows in the player's language, `MapRows.svelte`) and **FT-85** (the user manual's tutorial table) follow, FT-85 last. Deferred: the map screens' bar in the toolbar's style, the panel as a bottom sheet on phones, FT-38 |
 | Programmes | Remediation closed with v0.2.0 ([REMEDIATION_PLAN.md](REMEDIATION_PLAN.md)); features with v0.5.0 ([FEATURE_PLAN.md](FEATURE_PLAN.md)) |
 
 Shipped since the v0.5.0 handover, in one paragraph each:
@@ -91,7 +91,7 @@ the generated one.
 
 Suggested first message for the next session:
 
-> Read AGENTS.md, then docs/HANDOVER.md. v0.14 is scoped to #87 plus the loose ends; proposal #93 is open, so get the owner's agreement on its open questions, then build FT-83.
+> Read AGENTS.md, then docs/HANDOVER.md. v0.14 is FT-83 (#87, in PR #96) then FT-84 and FT-85; proposal #93 is agreed and its open questions take the recommended answers.
 
 Whatever comes next, the working rules stay (AGENTS.md, *Workflow*):
 
