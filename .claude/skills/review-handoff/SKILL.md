@@ -93,10 +93,12 @@ CANDIDATE: main at <full sha>. Before anything else, in this order:
    <main> is the parent directory of
    git rev-parse --path-format=absolute --git-common-dir, <project> is
    <main>'s name, <id> is the first 12 characters of the SHA, and <stamp>
-   is the UTC time as YYYYMMDDTHHMMSSZ, so every run has its own. Remove no
+   is the UTC time as YYYYMMDDTHHMMSSZ. If that path already exists (two
+   runs in the same second), add -2, -3, ... until it does not. Remove no
    worktree you did not make.
 4. In that worktree, git rev-parse HEAD must equal <full sha> before you
    review. Every command from here on runs there.
+5. Then read that worktree's CLAUDE.md, as the paragraph on it below says.
 PREVIOUS MILESTONE: <previous tag>
 
 WHAT CHANGED since <previous tag>:
@@ -118,11 +120,11 @@ KNOWN OWNER DECISIONS (not defects):
   not their output in data/maps/.
 - <this milestone's own, or "none">
 
-Before anything else, read the repository's CLAUDE.md: section 0 lists the
-generated and binary paths you must not read (27 MB of map data, build
-output, lockfiles) and section 2 the quiet forms of every command. Its
-principles and rules are the standard. data/facts/*.json is authored input;
-data/maps/*/facts.json is generated from it.
+Once you are in your worktree (CANDIDATE, step 5), read its CLAUDE.md:
+section 0 lists the generated and binary paths you must not read (27 MB of
+map data, build output, lockfiles) and section 2 the quiet forms of every
+command. Its principles and rules are the standard. data/facts/*.json is
+authored input; data/maps/*/facts.json is generated from it.
 
 Run the gates yourself: `npm ci > /dev/null 2>&1`, then
 `npm run gates -- --quiet` (typecheck, unit tests, lint, build; four PASS
