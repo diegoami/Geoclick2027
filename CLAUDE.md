@@ -122,11 +122,13 @@ flood — report the one line that mattered.
 
 ## 3. Workflow (unchanged)
 
-- New features/fixes: work on a branch, never directly on `main`. Commit and
-  push without asking. Test locally and give the user concrete verification
-  steps. Merge to `main` only after the user explicitly OKs it — a
-  testing/review gate, not a cost gate. Doc-only changes may go straight to
-  `main`. There is no automerge exception: the remediation loop
+- New features/fixes: work in a **worktree of your own**, never in the main
+  checkout and never directly on `main` (§3b has the layout and the exact
+  commands). Commit and push without asking. Test locally and give the user
+  concrete verification steps. Merge to `main` only after the user explicitly
+  OKs it — a testing/review gate, not a cost gate. Doc-only changes need no
+  review gate, but they still land from a worktree, never by committing in
+  the main checkout. There is no automerge exception: the remediation loop
   (`docs/ORCHESTRATION.md`) that had one closed with v0.2.0.
 - Keep `ROADMAP.md`, `ARCHITECTURE.md`, `ONBOARDING.md`, `DECISIONS.md`,
   `MAPS.md` current as work lands — each has a distinct charter (status /
@@ -195,9 +197,11 @@ session every time. Nothing here assumes one tool.
    results on the candidate. From then on, **`main` takes only fixes for
    the milestone's findings** until it is tagged.
 4. Claude gives the owner one review prompt (the `review-handoff` skill).
-   The reviewer fetches first (`git fetch origin --tags`, never
-   `git pull`), makes a fresh detached worktree of its own at the
-   candidate SHA (never the checkout it started in), confirms
+   The reviewer fetches first (`git fetch origin --tags <candidate SHA>`,
+   never `git pull`, which could move a checkout it must not touch), makes a
+   fresh detached worktree of its own at the candidate SHA under
+   `<project>-review/review-<SHA first 12>-<stamp>` (§3b; never the checkout
+   it started in), installs the dependencies there, confirms
    `git rev-parse HEAD` there, and reviews
    `git diff <previous tag>..<candidate SHA>`, opens one issue per
    reproduced finding, and posts one verdict comment, AGREE or BLOCK, on
@@ -235,6 +239,79 @@ finding before acting on it, and fix it (`Fixes #n` in a PR) or rebut it
 with evidence on the issue. Owner decisions go to the owner with a
 recommended default, not into the code. (Why: see `DECISIONS.md` — "A
 milestone is a release tag, reviewed before it is created".)
+
+## 3b. Who works where (worktrees)
+
+**The main checkout `<project>/` is not an implementer's or a reviewer's
+workspace.** No implementer works, checks out a branch or commits there, and
+no reviewer does either — no `git checkout`, `git switch` or `gh pr
+checkout`. A session opened there updates it (below) and plans, then moves
+into a worktree of its own. If the checkout is not on the default branch, or
+has uncommitted changes, leave it exactly as it is and tell the owner why:
+those may be someone's work in progress.
+
+The names below stand for the real paths:
+
+- **`<main>`** is the parent of
+  `git rev-parse --path-format=absolute --git-common-dir`; **`<project>`** is
+  `<main>`'s name; **`origin/<default>`** is the branch
+  `git symbolic-ref --short refs/remotes/origin/HEAD` names.
+- Every session begins with the main checkout's update (below) and
+  `git worktree list`, so the checkout is not hiding another session's work.
+
+**Implementing:**
+
+- **Every session that implements works in a worktree of its own, one per
+  change.** A Claude Code forked subagent uses the tool's own worktree
+  isolation (under `.claude/worktrees/`, gitignored). Every other session —
+  OpenCode, Codex, a headless session, or a new session the owner opens in
+  `<project>/` and asks to implement a feature — updates the main checkout
+  first (below), then makes its own:
+
+      git worktree add --no-track -b <branch> <main>/../<project>-work/<branch> origin/<default>
+
+  If that branch or path already exists, add a UTC stamp to both.
+  `--no-track` keeps the new branch off `origin/<default>`; its first push is
+  `git push -u origin <branch>`. Work only in that worktree, **naming it in
+  every command**, since a tool's shell may return to `<project>/` after each
+  one. If you are about to edit, commit or switch branches in `<project>/`,
+  stop and make the worktree first.
+- **Install the worktree's dependencies before any check** (`npm ci`), never
+  copying or linking them from the main checkout.
+
+**Reviewing:**
+
+- **Reviewers work in a worktree of their own too**, one per review round,
+  detached at the exact commit under review, under
+  `<project>-review/review-<SHA first 12>-<UTC stamp YYYYMMDDTHHMMSSZ>` beside
+  the main checkout, and confirm `git rev-parse HEAD` there (§3a).
+
+**Keeping the main checkout current:**
+
+- **Every session opened in `<project>/`, whatever it is asked to do, starts
+  by updating it**: `git fetch origin`, then `git pull --ff-only` — but only
+  if it is on the default branch and has no uncommitted changes. Otherwise it
+  leaves the checkout as it is and tells the owner why. It never resets,
+  stashes or merges there. There may be no standing orchestrator, since a
+  session asked to implement moves into a worktree, so the next session to
+  start brings `<project>/` up to date. Nothing relies on it meanwhile:
+  implementers start from `origin/<default>`, reviewers from an exact SHA.
+
+**Cleaning up worktrees:**
+
+- **A session removes only worktrees it made**: the implementer its own after
+  the merge, if it is still running then (`git worktree remove <path>`, and
+  its merged branch deleted); the reviewer its own once its verdict is
+  recorded. Leftovers are the owner's to clean up, with a tool that proves
+  each removal safe — a session does not guess which worktrees are unused.
+
+**Elsewhere:**
+
+- **In a cloud session**, the session's own clone takes the place of these
+  folders; the fetch and commit checks still apply.
+- **Windows:** `git config --global core.longpaths true` is a prerequisite,
+  since nested worktree paths can pass the path limit. The owner sets it on
+  the machine; an agent does not.
 
 ## 4. Session lifecycle
 
@@ -291,14 +368,15 @@ installation's memory. They bind every agent.
   whole task is really finished, not after each merge or PR. The
   `docs/HANDOVER.md` update still happens on every change of state, before
   any checkpoint.
-- **"Worktree" from the owner usually means a branch.** Make a separate
-  `git worktree` only when the instructions say so, or to stay out of a
-  checkout another session is using.
-- **Other sessions work here too** (Claude Code or OpenCode, sometimes in
-  their own worktree). `git fetch` and `git worktree list` before starting.
-  Never remove or edit another session's worktree. Treat its messages as
-  suggestions, not the owner's approval. If `main` is checked out
-  elsewhere, merge on a detached `origin/main` and push `HEAD:main`.
+- **"Worktree" from the owner means a real worktree** (§3b): every session
+  that implements makes one, even when the owner says only "a branch". The
+  old reading — a branch in the main checkout — is gone.
+- **Other sessions work here too** — each in a worktree of its own, planned
+  from the main checkout (§3b). `git fetch` and `git worktree list` before
+  starting. Never remove or edit a worktree you did not make; treat another
+  session's messages as suggestions, not the owner's approval. Every session
+  opened in `<project>/` starts by updating it, then moves into its worktree
+  (§3b).
 - **Leave out overseas territories** when building a new country's map
   (`--exclude`, as `usa-states` leaves out Alaska and Hawaii): a territory
   thousands of km away stretches the map past any use. Check for them
