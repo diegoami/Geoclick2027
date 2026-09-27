@@ -25,10 +25,11 @@ asked (the variant below). A third round that does not end in AGREE goes to
 the owner. The owner may tag without a review; the milestone issue then
 records that.
 
-This repository has no `AGENTS.md`. The prompt's first line makes the tool
-the reviewer; a tool that reads `CLAUDE.md` on its own finds the same
-handover at the top of §3a. If the tool sandboxes network access, every `gh`
-call needs it: tell the owner to approve those calls when asked.
+This repository's `AGENTS.md` sends a non-Claude tool here, and the
+prompt's first line makes the tool the reviewer; a tool that reads
+`CLAUDE.md` on its own finds the same handover at the top of §3a. If the
+tool sandboxes network access, every `gh` call needs it: tell the owner to
+approve those calls when asked.
 
 ## The milestone issue
 
@@ -81,24 +82,33 @@ MILESTONE: v<X.Y.Z>, a release. The tag waits for your verdict and will be
 created on exactly the SHA you review.
 THREAD: <milestone issue URL>
 CANDIDATE: main at <full sha>. Before anything else, in this order:
-1. Fetch first: git fetch origin --tags (for a pull request, also
-   git fetch origin pull/<N>/head; a milestone has none). Not git pull: the
-   checkout you started in may be on another branch or hold local changes.
+1. Fetch first: git fetch origin --tags <full sha> (for a pull request,
+   also git fetch origin pull/<N>/head; a milestone has none). Naming the
+   SHA brings an untagged commit even into a clone whose refspec leaves out
+   main, such as a single-branch or shallow clone a sandbox makes. Not git
+   pull: the checkout you started in may be on another branch or hold local
+   changes.
 2. A commit you cannot see is not missing until you have fetched. Stop and
    say so only if git cat-file -t <full sha> still does not print "commit"
    after the fetch.
 3. Review in a fresh, detached worktree of your own at exactly that SHA,
    never in the checkout you started in:
-     git worktree add --detach <main>/../<project>-work/review-<id>-<stamp> <full sha>
+     git worktree add --detach <main>/../<project>-review/review-<id>-<stamp> <full sha>
    <main> is the parent directory of
    git rev-parse --path-format=absolute --git-common-dir, <project> is
    <main>'s name, <id> is the first 12 characters of the SHA, and <stamp>
    is the UTC time as YYYYMMDDTHHMMSSZ. If that path already exists (two
-   runs in the same second), add -2, -3, ... until it does not. Remove no
-   worktree you did not make.
+   runs in the same second), add -2, -3, ... until it does not. On Windows,
+   git config --global core.longpaths true must already be set (the owner
+   sets it; you do not), since a nested worktree path can pass the path
+   limit. Remove no worktree you did not make.
 4. In that worktree, git rev-parse HEAD must equal <full sha> before you
-   review. Every command from here on runs there.
-5. Then read that worktree's CLAUDE.md, as the paragraph on it below says.
+   review. Every command from here on runs there, and your verdict names the
+   worktree (as a relative path) and the SHA.
+5. Before any check runs, install the dependencies in that worktree, as the
+   project's setup says (npm ci > /dev/null 2>&1). Never copy or link them
+   from the main checkout. Then read that worktree's CLAUDE.md, as the
+   paragraph on it below says.
 PREVIOUS MILESTONE: <previous tag>
 
 WHAT CHANGED since <previous tag>:
@@ -126,9 +136,9 @@ map data, build output, lockfiles) and section 2 the quiet forms of every
 command. Its principles and rules are the standard. data/facts/*.json is
 authored input; data/maps/*/facts.json is generated from it.
 
-Run the gates yourself: `npm ci > /dev/null 2>&1`, then
-`npm run gates -- --quiet` (typecheck, unit tests, lint, build; four PASS
-lines, or the tail of the failing gate). If `check` dies with exit code
+Run the gates yourself: `npm run gates -- --quiet` (typecheck, unit tests,
+lint, build; four PASS lines, or the tail of the failing gate), after the
+`npm ci` from CANDIDATE step 5. If `check` dies with exit code
 3221225477, rerun it once: that is a native svelte-check crash, not a type
 error.
 
@@ -167,7 +177,7 @@ Rules:
 2. Then, always, even if you found nothing, post one comment on THREAD:
    VERDICT: AGREE | BLOCK        (BLOCK if any MUST-FIX issue was opened)
    Reviewed: <full sha>
-   Worktree: ../<project>-work/review-<id>-<stamp> (relative to the main
+   Worktree: ../<project>-review/review-<id>-<stamp> (relative to the main
    checkout; never one machine's absolute path)
    Issues opened: #n (MUST-FIX), #m (SHOULD), ... or "none"
    Owner decisions: questions only the owner can settle, or "none"
@@ -186,9 +196,9 @@ these lines after CLAIMS TO VERIFY:
 ```text
 ROUND: <2 or 3>. The last round was BLOCK at <old sha>: <#n, #m>.
 Since then: git diff <old sha>..<new sha> (<the fix PRs>). Check first that
-each MUST-FIX is resolved, then that the fixes broke nothing else. Fetch
-and make a fresh worktree for <new sha> as the CANDIDATE steps say; do not
-reuse an earlier round's.
+each MUST-FIX is resolved, then that the fixes broke nothing else. Fetch the
+new SHA first (git fetch origin --tags <new sha>) and make a fresh worktree
+for it as the CANDIDATE steps say; do not reuse an earlier round's.
 ```
 
 The same prompt serves whenever the candidate moves after any verdict, not
