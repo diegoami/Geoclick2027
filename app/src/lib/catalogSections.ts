@@ -6,12 +6,22 @@
 // continent whose Countries map lists it - bundled at build time like
 // data/maps/index.json, so the prerendered list is grouped too.
 import picker from '../../../data/maps/world-picker/picker.json';
+import { getLanguage, type Language } from './i18n.svelte';
 import { pickerIdOf } from './mapCatalog';
 
 /** The continents, in the picker's order (Europe first). */
 export const CONTINENT_IDS: string[] = picker.continents.map((c) => c.id);
 
 const continentOfCountry = new Map(picker.countries.map((c) => [c.id, c.continent]));
+
+// The picker's per-language country names, by picker id (#71, FT-84). Only
+// it/de are set; a country whose name is the same everywhere has none.
+const countryNames = new Map<string, Partial<Record<Language, string>>>(
+	(picker.countries as { id: string; names?: Partial<Record<Language, string>> }[]).map((c) => [
+		c.id,
+		c.names ?? {}
+	])
+);
 
 type Grouped = { country: string; pickerId?: string };
 
@@ -36,4 +46,11 @@ export function countryGroupsOf<G extends Grouped>(continent: string, groups: G[
 	return groups
 		.filter((g) => !isContinentGroup(g) && continentOf(g) === continent)
 		.sort((a, b) => a.country.localeCompare(b.country));
+}
+
+/** A country group's name in the player's language, or the catalog's English
+ * when the picker has none (FT-84). "Great Britain" and "USA" keep their
+ * catalog names, since the picker's `names` carries only it/de. */
+export function countryNameOf(group: Grouped): string {
+	return countryNames.get(pickerIdOf(group))?.[getLanguage()] ?? group.country;
 }

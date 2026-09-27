@@ -259,6 +259,13 @@ owner's answers. The owner agreed the change on #71.
   every tileset rebuilt byte-identical. The app reads a shown name through
   one helper, `targetName()`, and each view renames what's on the map when
   the language changes.
+- **The start screen's country rows follow it too (FT-84)**, from the world
+  picker's own `names` (`data/maps/world-picker/picker.json`, the same it/de
+  set), so the list reads Germania where the map does. The six continents'
+  rows already did, through `t('continent.<id>')`. English — and a country
+  whose name is the same in every language — keeps the catalog's name: the
+  picker carries no `en`, so "Great Britain" and "USA" stay as the catalog
+  has them.
 
 ## Maps of several countries (2026-09-24, #39)
 
