@@ -134,27 +134,23 @@ you use most.
 
 ![The home page with favourite and recent maps](manual/home.jpg)
 
-From top to bottom:
+From top to bottom (since v0.14; the screenshots in this section are older):
 
-- **"Geoclick"**, the title.
-- **EN · DE · IT**, three small pills next to the title: the language
-  switch. The current language is the dark pill. Clicking another one
-  switches the whole app at once (see [Languages](#14-languages)).
-- **Tutorial**, an orange-outlined pill with a question mark: starts the
-  [tutorial](#13-the-tutorial).
-- **"Pick a demo map to explore."**, a one-line welcome.
-- **"Prefer an app? Download for Windows or Android"**: a link to the
-  releases page. It only appears in the web version, not inside the apps.
-- **The Favourites and Recent panel**, a white-ish panel with a thin
-  orange border (see [Favourites and Recent](#12-favourites-and-recent)):
-  - **★ Favourites:** the maps you've starred, in the order you starred
-    them;
-  - **🕘 Recent:** the last five maps you opened, newest first.
-
-  The panel only appears once there is something in it.
-- **All maps**, a larger heading with a line under it, then every country
-  in alphabetical order, with its maps under it. When the panel isn't
-  shown, the country list starts right after the welcome line.
+- **The toolbar**, one bar of icons, as in the owner's card games. Each
+  icon's name shows when you hover it, and a screen reader reads it:
+  - **Geoclick**, the name, on the left (hidden on a narrow phone);
+  - **Map / List**, two icons side by side: the world map or the list
+    of every map. Your choice is kept;
+  - **★ My maps**: your Favourites, then your Recent maps, on a page of
+    their own, with a number on the star saying how many there are (see
+    [Favourites and Recent](#12-favourites-and-recent));
+  - **EN**: the language (see [Languages](#14-languages));
+  - **?**: starts the [tutorial](#13-the-tutorial);
+  - **ⓘ About**: what Geoclick is, the version, the credits, and in the
+    web version the link to download the apps;
+  - **Exit**: closes the app, in the Windows and Android apps only.
+- **The world map** with its panel of maps, or **the list**, whichever you
+  chose.
 - **The version badge**, in small grey type at the bottom-right corner of
   every screen: the version number and a short build code, for example
   `v0.5.0 · 160840e`. Useful when reporting a problem.
@@ -205,8 +201,8 @@ to what matches, with a count underneath:
 - It searches what you can see, so it follows the language you are in:
   in German, "Städte" finds the towns maps and "Gouvernements" finds Egypt.
 - **Clear**, or the Escape key, puts the whole list back.
-- Favourites and Recent stay where they are while you search — they are
-  short lists already.
+- Favourites and Recent are on My maps, not in the list, so a search never
+  hides them.
 
 ### The first visit
 

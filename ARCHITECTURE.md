@@ -101,6 +101,15 @@ pairs well with a canvas/map-heavy UI.
   `--map-bottom-overlay` and `--window-bottom-overlay` on the page root,
   which `app.css` (the map's bottom controls) and `VersionBadge.svelte`
   read. `createMap` also folds the compact credit on a narrow screen.
+- **The start screen's toolbar** (FT-82, #91). `StartBar.svelte` holds
+  everything that sat above the map, as icons in the owner's card games'
+  style: the Map / List toggle, My maps, `LanguageSwitcher`, the Tutorial
+  (`TutorialButton icon`), About and, in the apps, Exit. The bar's styles
+  are global in `app.css` (`.gc-bar`, `.gc-tool`) because the pages it
+  opens share them. My maps (`routes/my-maps`, Favourites then Recent as
+  `MapCard.svelte`s) and About (`routes/about`) are routes with a
+  `PageBar.svelte` (Back, and Escape): `backNavigation.ts` already sends
+  Android Back from any such route to `/`.
 - **The start screen's world map** (FT-77, #58). `WorldPicker.svelte` on
   the home page is a MapLibre map of its own, not `createMap`. Its tiles are
   `data/maps/world-picker/` (`build-picker.ts`), which has `land` and

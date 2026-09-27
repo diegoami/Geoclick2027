@@ -7,6 +7,18 @@ one entry per tagged version on `main`.
 
 ## Unreleased
 
+For players:
+
+- **The start screen has a toolbar, as in the card games.** Everything that
+  sat above the map is one bar of icons: Map / List, ★ My maps, the
+  language, the tutorial (?), About (ⓘ) and, in the apps, Exit. The map
+  starts right under it. Each icon's name shows on hover and is read out
+  by a screen reader.
+- **My maps** is a page of its own: your Favourites first, then the maps
+  you played last. The star in the toolbar says how many there are.
+- **About** holds what used to sit under the title: what Geoclick is, the
+  version, the credits and, on the web, the link to the apps.
+
 ## v0.13.0 — 2026-09-26 — The world on the start screen
 
 **The start screen opens on a map of the world: tap a continent, then a country, and choose a map from its row. Place names follow your language, the tutorial starts on the new map, and the apps get an Exit button.**

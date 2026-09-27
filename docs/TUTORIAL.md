@@ -437,7 +437,7 @@ this at FT-09's review, 2026-09-14.
 
 | Anchor | Element | Notes |
 |---|---|---|
-| `tutorial-button` | the Tutorial button | home header and MapNav |
+| `tutorial-button` | the Tutorial button | the start screen's toolbar (an icon, FT-82) and MapNav (the pill) |
 | `picker-europe` (any `picker-<continent>`) | a continent's name on the start screen's world map | a MapLibre marker, set by WorldPicker |
 | `picker-italy` | a ring over Italy on the Europe view | only while a tutorial runs; `pointer-events: none` |
 | `home-map-card` | the row whose list holds `italy-regions`, in the map's panel or the list | not the Favourites/Recent copies |

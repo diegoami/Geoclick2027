@@ -28,6 +28,14 @@ export type TranslationKey =
 	| 'nav.hideButtons'
 	| 'nav.showButtons'
 	| 'home.exit'
+	| 'home.toolbar'
+	| 'home.myMaps'
+	| 'home.about'
+	| 'home.back'
+	| 'myMaps.empty'
+	| 'about.tagline'
+	| 'about.version'
+	| 'about.credits'
 	| 'home.viewLabel'
 	| 'home.viewMap'
 	| 'home.viewList'
@@ -76,7 +84,6 @@ export type TranslationKey =
 	| 'known.clear'
 	| 'known.chosen'
 	| 'nav.loading'
-	| 'home.subtitle'
 	| 'home.recent'
 	| 'home.favourites'
 	| 'home.allMaps'
@@ -193,6 +200,16 @@ const en: Dictionary = {
 	'nav.hideButtons': 'Hide the buttons',
 	'nav.showButtons': 'Show the buttons',
 	'home.exit': 'Exit',
+	'home.toolbar': 'Geoclick',
+	'home.myMaps': 'My maps',
+	'home.about': 'About',
+	'home.back': 'Back',
+	'myMaps.empty':
+		'Your favourite maps and the ones you played last show up here. Tap the star on a map to keep it.',
+	'about.tagline': 'Learn the map by playing with it.',
+	'about.version': 'Version {version}, build {build}',
+	'about.credits':
+		'Map data from Natural Earth and Wikidata. Maps drawn with MapLibre and PMTiles.',
 	'home.viewLabel': 'Show the maps as',
 	'home.viewMap': 'Map',
 	'home.viewList': 'List',
@@ -242,7 +259,6 @@ const en: Dictionary = {
 	'known.chosen': 'Chosen',
 	'nav.loading': 'Loading…',
 
-	'home.subtitle': 'Pick a demo map to explore.',
 	'home.recent': 'Recent',
 	'home.favourites': 'Favourites',
 	'home.allMaps': 'All maps',
@@ -375,6 +391,16 @@ const de: Dictionary = {
 	'nav.hideButtons': 'Schaltflächen ausblenden',
 	'nav.showButtons': 'Schaltflächen einblenden',
 	'home.exit': 'Beenden',
+	'home.toolbar': 'Geoclick',
+	'home.myMaps': 'Meine Karten',
+	'home.about': 'Über Geoclick',
+	'home.back': 'Zurück',
+	'myMaps.empty':
+		'Hier erscheinen deine Lieblingskarten und die zuletzt gespielten. Tippe auf den Stern einer Karte, um sie zu behalten.',
+	'about.tagline': 'Lerne die Karte, indem du mit ihr spielst.',
+	'about.version': 'Version {version}, Build {build}',
+	'about.credits':
+		'Kartendaten von Natural Earth und Wikidata. Karten gezeichnet mit MapLibre und PMTiles.',
 	'home.viewLabel': 'Karten zeigen als',
 	'home.viewMap': 'Karte',
 	'home.viewList': 'Liste',
@@ -424,7 +450,6 @@ const de: Dictionary = {
 	'known.chosen': 'Gewählt',
 	'nav.loading': 'Lädt…',
 
-	'home.subtitle': 'Wähle eine Demokarte zum Erkunden.',
 	'home.recent': 'Zuletzt geöffnet',
 	'home.favourites': 'Favoriten',
 	'home.allMaps': 'Alle Karten',
@@ -561,6 +586,16 @@ const it: Dictionary = {
 	'nav.hideButtons': 'Nascondi i pulsanti',
 	'nav.showButtons': 'Mostra i pulsanti',
 	'home.exit': 'Esci',
+	'home.toolbar': 'Geoclick',
+	'home.myMaps': 'Le mie mappe',
+	'home.about': 'Informazioni',
+	'home.back': 'Indietro',
+	'myMaps.empty':
+		'Qui compaiono le tue mappe preferite e quelle giocate per ultime. Tocca la stella di una mappa per tenerla.',
+	'about.tagline': 'Impara la mappa giocandoci.',
+	'about.version': 'Versione {version}, build {build}',
+	'about.credits':
+		'Dati cartografici da Natural Earth e Wikidata. Mappe disegnate con MapLibre e PMTiles.',
 	'home.viewLabel': 'Mostra le mappe come',
 	'home.viewMap': 'Mappa',
 	'home.viewList': 'Elenco',
@@ -610,7 +645,6 @@ const it: Dictionary = {
 	'known.chosen': 'Scelto',
 	'nav.loading': 'Caricamento…',
 
-	'home.subtitle': 'Scegli una mappa demo da esplorare.',
 	'home.recent': 'Recenti',
 	'home.favourites': 'Preferiti',
 	'home.allMaps': 'Tutte le mappe',

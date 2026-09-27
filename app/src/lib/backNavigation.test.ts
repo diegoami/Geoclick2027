@@ -40,6 +40,9 @@ describe('parentRoute (Android back button)', () => {
 
 	it('sends anything unexpected to the map list', () => {
 		expect(parentRoute('/nonsense')).toEqual({ kind: 'home' });
+		// The start screen's toolbar pages (FT-82) go back to it.
+		expect(parentRoute('/my-maps')).toEqual({ kind: 'home' });
+		expect(parentRoute('/about/')).toEqual({ kind: 'home' });
 		expect(parentRoute('/map/a/b/c')).toEqual({ kind: 'home' });
 	});
 });
