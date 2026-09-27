@@ -6,15 +6,59 @@ For "what was built and how it was verified," see the relevant
 iteration in [ROADMAP.md](ROADMAP.md) or the system description in
 [ARCHITECTURE.md](ARCHITECTURE.md); this file exists so "why did we
 decide X" doesn't require digging through either. Workflow/process *rules*
-(how Claude works in this repo) live in [CLAUDE.md](CLAUDE.md), not here
+(how the implementing agent works in this repo) live in [AGENTS.md](AGENTS.md), not here
 — that file is read in full at the start of every session, so it states
 the rule and nothing else. Where a rule was learned the hard way, the
-story that justifies it lives here, under its own heading, and CLAUDE.md
+story that justifies it lives here, under its own heading, and AGENTS.md
 points at it by name.
 
 Keep this updated the same way as the other docs: when a decision gets
 made, made explicitly to correct an earlier one, or gets revisited, add
 or amend an entry here as part of that change, not as an afterthought.
+
+## AGENTS.md is the one instructions file, and reviews start from OpenCode (2026-09-27)
+
+- **One instructions file.** `CLAUDE.md`'s content moved into `AGENTS.md`, and
+  `CLAUDE.md` is now a comment plus `@AGENTS.md`. Claude Code reads `CLAUDE.md`
+  (which pulls in `AGENTS.md`); OpenCode and every other tool read `AGENTS.md`.
+  The reverse arrangement — `AGENTS.md` pointing at `CLAUDE.md`, plus the
+  "where it says Claude, read the implementing agent" translation — did not
+  survive: two files, one idea. diegoami/discola-web made the same migration
+  ([PR #72](https://github.com/diegoami/discola-web/pull/72)).
+- **Only releases are reviewed, and the review starts from OpenCode.** The
+  pasted `review-handoff` prompt is gone. The reviewer's job is written once in
+  `.opencode/agents/release-reviewer.md` (a `primary` agent with `edit: deny`
+  and `external_directory: allow`, so it can make its worktree beside the
+  checkout but cannot edit); the owner starts it with
+  `/review-release <milestone issue>` or
+  `opencode run -m <provider/model> --command review-release <issue>`. Neither
+  the command nor the agent sets a `model`, so the model the owner picks is the
+  one used. Skills stay in `.claude/skills/`, which OpenCode reads; the skill
+  now only fills in the milestone issue, gives the owner the command and
+  processes the verdict.
+- **Ad hoc worktrees.** An implementing session uses a worktree of its own while
+  another session may be working in the main checkout, which is common here.
+  After a merge, `git switch main && git pull --ff-only`, then delete the merged
+  branch. The old rules — every session updates the main checkout on start, and
+  the full worktree layout — are gone. Sessions update `docs/HANDOVER.md` on
+  every change of state; the chat checkpoint template and its 5–6 turn rhythm
+  are gone.
+
+## Commit trailers name the model (history, moved here 2026-09-27)
+
+- **Rule:** end every commit with a trailer naming the model that did the work,
+  and the tool when it is not Claude Code (`AGENTS.md`, *Commit messages*). It
+  was left stale once already — keep it current.
+- **History.** 116 commits trailered "Sonnet 5" up to 2026-09-13, then 274
+  trailered "Opus 5". 32 trailered "DeepSeek V4.1 Flash" from 2026-09-21, with
+  ChatGPT GPT-5.6 Luna (high) reviewing its PRs. On 2026-09-23 the implementing
+  model became Claude Opus 5.5; the same day, reviews moved to an independent
+  model at milestones, recorded on GitHub. On 2026-09-25 FT-73 (the new
+  countries' facts, `docs/PLAN_V0.12.md`) went briefly to Codex, which stalled
+  before pushing anything; it came back to Claude Opus 5.5 the same day, run in
+  a session of its own. From 2026-09-27 work may also be done in OpenCode, by
+  more than one model; the milestone reviewer is then another model in
+  OpenCode.
 
 ## Three fixes from tablet play after v0.11.0 (2026-09-24)
 
@@ -553,7 +597,7 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   this feature work" into hours of chasing a feature that was fine. A report
   that does not separate them cannot distinguish a broken feature from a
   broken deploy.
-- This rule was in `CLAUDE.md` with its story attached until issue #9 moved
+- This rule was in `AGENTS.md` with its story attached until issue #9 moved
   the story here; the rule itself stays there, pointing at this entry.
 
 ## Hand a dashboard problem back (2026-09-13, moved here 2026-09-20)
@@ -613,7 +657,7 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
 - **Adapted here:** a beta is a throwaway version-only commit on the
   candidate, so the candidate already carries `X.Y.Z` and the tested code is
   the reviewed code; `main` takes only the milestone's fixes while its issue
-  is open; the round ceiling lives in CLAUDE.md §3a (there is no
+  is open; the round ceiling lives in AGENTS.md, *Releases* (there is no
   PRINCIPLES.md); Claude keeps publishing (standing permission);
   `publish-release.mjs` refuses unless HEAD is the tag and names the
   tagged commit in the notes. Baseline: `v0.9.4` (`5387ff2`), already
@@ -628,8 +672,8 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   adapted from diegoami/discola-web; amends the first version of this
   entry, below). One issue per reproduced finding, labelled `review` plus a
   category; always one AGREE/BLOCK verdict comment naming the SHA; a
-  `Review:` line on every milestone PR. Process: CLAUDE.md §3a; prompt:
-  `.claude/skills/review-handoff/SKILL.md`.
+  `Review:` line on every milestone PR. Process: AGENTS.md, *Releases*;
+  reviewer: `.opencode/agents/release-reviewer.md`.
 - **Why GitHub and not a pasted report:** the first version handed the
   owner a prompt whose output was one Markdown report, pasted back into a
   Claude session. Findings then lived in a transcript: no issue to close
@@ -1272,7 +1316,7 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   button copy — around 35 distinct strings across five components. That's
   well under the scale where a library's build-step/plugin machinery,
   message-extraction tooling, or generated-types pipeline pays for
-  itself; CLAUDE.md's own guidance ("three similar lines is better than a
+  itself; AGENTS.md's own guidance ("three similar lines is better than a
   premature abstraction") points the same direction. A plain
   `Record<TranslationKey, string>` per language, with `TranslationKey` a
   union type (not `Record<string,string>`) so TypeScript itself catches a
@@ -1519,7 +1563,7 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   release-branch buffering.** The plan below built its whole release-branch
   structure around avoiding paid Netlify builds. The product owner then
   confirmed directly that build cost is not actually a constraint — see
-  CLAUDE.md's Workflow section, updated the same day. Task/feature branches
+  AGENTS.md's Workflow section, updated the same day. Task/feature branches
   now merge straight into `main` once approved, same as every other feature
   in this project's history; `docs/RELEASES.md` was rewritten accordingly
   rather than deleted, since tags and release notes are still wanted (see
@@ -1611,7 +1655,7 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   without a human reading the diff first. The compensations are the gates,
   the written DoD, `/code-review` on the two High-effort tasks, and every
   merge being one `git revert` away. Scoped to the remediation loop only —
-  CLAUDE.md's ask-before-merge rule still governs all other work.
+  AGENTS.md's ask-before-merge rule still governs all other work.
 - **Root `package.json` is the single source of truth for the version.** The
   repo had drifted to three different versions across seven files (`0.0.1`
   workspace, `0.1.0` Tauri/Cargo, `1.0` Android `versionName`);

@@ -1,5 +1,11 @@
 # Reviews — an independent model, at milestones, on GitHub
 
+> **History.** This records the review as it stood up to v0.13.0. From
+> 2026-09-27 the review starts from OpenCode: the reviewer's job is
+> `.opencode/agents/release-reviewer.md`, started with `/review-release`
+> (`AGENTS.md`, *Releases*); the `review-handoff` skill only fills in the
+> milestone issue, gives the owner the command and processes the verdict.
+
 **The process lives in [CLAUDE.md §3a](../CLAUDE.md)** and the prompt
 template in [`.claude/skills/review-handoff/SKILL.md`](../.claude/skills/review-handoff/SKILL.md)
 (product owner, 2026-09-23, [#26](https://github.com/diegoami/Geoclick2027/issues/26),

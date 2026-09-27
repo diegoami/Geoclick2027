@@ -7,7 +7,7 @@ The log itself: [`CHANGELOG.md`](../CHANGELOG.md).
 
 > **Third draft (2026-09-13).** Draft 1 built this whole document around one
 > constraint — a push to `main` costs a paid Netlify build — and invented
-> `release/*` branches to ration them. **That constraint is gone** (CLAUDE.md,
+> `release/*` branches to ration them. **That constraint is gone** (AGENTS.md,
 > confirmed by the product owner). Release *tracking* is still wanted, so it
 > stays, now local: an annotated git tag plus a `CHANGELOG.md` entry, no GitHub
 > Releases, no milestones, no release branches. Draft 3 changes only who does it
@@ -16,7 +16,7 @@ The log itself: [`CHANGELOG.md`](../CHANGELOG.md).
 >
 > **Fourth change (2026-09-23, [#26](https://github.com/diegoami/Geoclick2027/issues/26)),
 > amended the same day ([#29](https://github.com/diegoami/Geoclick2027/issues/29)).**
-> A release is a **milestone** (CLAUDE.md §3a): an annotated tag on `main`,
+> A release is a **milestone** (`AGENTS.md`, *Releases*): an annotated tag on `main`,
 > on exactly the commit an independent review agreed with, and the release
 > is built from that tag. The short-lived `release/X.Y.Z` PR of #26 was
 > dropped: its stable tag landed on a merge commit nobody had reviewed.
@@ -47,17 +47,20 @@ that explains it.
    gate results on a clean checkout of the candidate (the `review-handoff`
    skill has the full list). Until the tag, `main` takes only fixes for this
    milestone's findings.
-3. **Review.** Give the owner the review-handoff prompt: the reviewer
+3. **Review.** Start it from OpenCode, on a model the owner picks:
+   `/review-release <milestone issue>` in the desktop app or the TUI, or
+   `opencode run -m <provider/model> --command review-release <issue>` from a
+   shell. The reviewer follows `.opencode/agents/release-reviewer.md`: it
    fetches first (`git fetch origin --tags <candidate SHA>`, not `git pull`),
    works in a fresh detached worktree of its own at the candidate SHA, never
-   the checkout it started in (CLAUDE.md §3b; under
+   the checkout it started in (`AGENTS.md`, *Releases*; under
    `<project>-review/review-<SHA first 12>-<stamp>` beside the main
    checkout), installs the dependencies there before any check, and reviews
    `git diff <previous tag>..<candidate>`. Its verdict names that worktree,
    as a relative path, and the SHA. It posts AGREE or BLOCK on the milestone
    issue. **The tag waits.** On BLOCK the fixes land as ordinary PRs, the
-   candidate moves to the new `main` commit, and a re-review prompt follows
-   unasked; a third round without AGREE goes to the owner. The owner may also
+   candidate moves to the new `main` commit, and a re-review starts unasked;
+   a third round without AGREE goes to the owner. The owner may also
    tag without a review, and the issue records that.
 4. **Beta, if one is wanted** (it can run alongside the review). On a
    throwaway commit on top of the candidate, carrying only
@@ -78,7 +81,7 @@ that explains it.
 
 ## What counts as a batch
 
-CLAUDE.md asks for a tag "whenever a meaningful batch of work lands — not every
+AGENTS.md asks for a tag "whenever a meaningful batch of work lands — not every
 merge, but not left informal either." For this programme:
 
 **A batch is a completed wave.**
@@ -259,7 +262,7 @@ is the **only routine human gate left in the programme** — three times in tota
 3. Run all four gates on `main` from a clean checkout.
 4. Serve `app/build` locally and smoke-test: home page loads; one polygon map's
    quiz, tour and overview; one towns map's quiz. This is the **"test locally"**
-   half of CLAUDE.md's two-step rule, and it is labelled as such in the report.
+   half of AGENTS.md's two-step rule, and it is labelled as such in the report.
 5. Write the `CHANGELOG.md` entry (format below).
 6. **Ask the human to approve.** Wait. Tags are cheap; a tag on the wrong commit
    is not.
@@ -267,12 +270,12 @@ is the **only routine human gate left in the programme** — three times in tota
    `git tag -a v0.1.1 -m "v0.1.1 — <theme>"` and push the tag.
 8. **Do not watch or check the deploy.** The product owner tracks Netlify deploy
    status themselves (confirmed again when cutting v0.1.1). The **"test the
-   deployment"** half of CLAUDE.md's two-step rule is theirs; the loop's report
+   deployment"** half of AGENTS.md's two-step rule is theirs; the loop's report
    says plainly that the deploy was pushed and not checked. Only check the live
    site if the product owner asks for it for a specific release.
 
 Do **not** trigger a manual deploy at any point. If the git-triggered build looks
-stuck, that is the human's dashboard button, not an agent's problem (CLAUDE.md's
+stuck, that is the human's dashboard button, not an agent's problem (AGENTS.md's
 debugging-rabbit-holes rule).
 
 ## Build and publish the installers (from v0.3.0, FT-07/FT-08)
@@ -382,7 +385,7 @@ still does, which is what step 4 above is for.
 
 ## Doc maintenance at release time
 
-Per CLAUDE.md, docs are updated as part of the work, not afterwards — each task
+Per AGENTS.md, docs are updated as part of the work, not afterwards — each task
 already writes its own `DECISIONS.md` entry in its DoD. At release time the loop
 only:
 

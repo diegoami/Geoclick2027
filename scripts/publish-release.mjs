@@ -48,7 +48,7 @@ for (const line of readFileSync(path.join(dir, 'SHA256SUMS.txt'), 'utf8').trim()
 	if (actual !== hash) fail(`${name} does not match SHA256SUMS.txt - repackage.`);
 }
 
-// --- the tagged commit the release is built from (CLAUDE.md §3a) ---
+// --- the tagged commit the release is built from (AGENTS.md, Releases) ---
 const git = (a) => spawnSync('git', a, { cwd: ROOT, encoding: 'utf8' });
 const tagged = git(['rev-parse', '--verify', '--quiet', `${tag}^{commit}`]).stdout.trim();
 if (!tagged) fail(`there is no ${tag} tag here - tag the commit first, then package from it.`);
