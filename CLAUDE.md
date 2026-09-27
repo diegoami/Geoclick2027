@@ -191,7 +191,10 @@ one tool.
    results on the candidate. From then on, **`main` takes only fixes for
    the milestone's findings** until it is tagged.
 4. Claude gives the owner one review prompt (the `review-handoff` skill).
-   The reviewer checks out the candidate SHA and reviews
+   The reviewer fetches first (`git fetch origin --tags`, never
+   `git pull`), makes a fresh detached worktree of its own at the
+   candidate SHA (never the checkout it started in), confirms
+   `git rev-parse HEAD` there, and reviews
    `git diff <previous tag>..<candidate SHA>`, opens one issue per
    reproduced finding, and posts one verdict comment, AGREE or BLOCK, on
    the milestone issue.
@@ -213,7 +216,8 @@ The reviewer posts to GitHub itself, and nothing is pasted back:
   label (`bug`, `robustness`, `tests`, `design`, `cleanup`,
   `documentation`), linking back to the milestone issue and the SHA;
 - **always one verdict comment** on the milestone issue: AGREE, or BLOCK
-  when any finding is MUST-FIX; the SHA reviewed, the issues it opened,
+  when any finding is MUST-FIX; the SHA reviewed and the worktree it
+  reviewed in (a relative path), the issues it opened,
   what it checked and found clean. A review that finds nothing still
   leaves a record.
 

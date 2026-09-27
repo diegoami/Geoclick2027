@@ -80,8 +80,23 @@ against the code.
 MILESTONE: v<X.Y.Z>, a release. The tag waits for your verdict and will be
 created on exactly the SHA you review.
 THREAD: <milestone issue URL>
-CANDIDATE: main at <full sha>. Check out that SHA before you start, and stop
-and say so if you cannot.
+CANDIDATE: main at <full sha>. Before anything else, in this order:
+1. Fetch first: git fetch origin --tags (for a pull request, also
+   git fetch origin pull/<N>/head; a milestone has none). Not git pull: the
+   checkout you started in may be on another branch or hold local changes.
+2. A commit you cannot see is not missing until you have fetched. Stop and
+   say so only if git cat-file -t <full sha> still does not print "commit"
+   after the fetch.
+3. Review in a fresh, detached worktree of your own at exactly that SHA,
+   never in the checkout you started in:
+     git worktree add --detach <main>/../<project>-work/review-<id>-<stamp> <full sha>
+   <main> is the parent directory of
+   git rev-parse --path-format=absolute --git-common-dir, <project> is
+   <main>'s name, <id> is the first 12 characters of the SHA, and <stamp>
+   is the UTC time as YYYYMMDDTHHMMSSZ, so every run has its own. Remove no
+   worktree you did not make.
+4. In that worktree, git rev-parse HEAD must equal <full sha> before you
+   review. Every command from here on runs there.
 PREVIOUS MILESTONE: <previous tag>
 
 WHAT CHANGED since <previous tag>:
@@ -150,6 +165,8 @@ Rules:
 2. Then, always, even if you found nothing, post one comment on THREAD:
    VERDICT: AGREE | BLOCK        (BLOCK if any MUST-FIX issue was opened)
    Reviewed: <full sha>
+   Worktree: ../<project>-work/review-<id>-<stamp> (relative to the main
+   checkout; never one machine's absolute path)
    Issues opened: #n (MUST-FIX), #m (SHOULD), ... or "none"
    Owner decisions: questions only the owner can settle, or "none"
    Nits: one line each, or "none" (nits do not get issues)
@@ -167,7 +184,9 @@ these lines after CLAIMS TO VERIFY:
 ```text
 ROUND: <2 or 3>. The last round was BLOCK at <old sha>: <#n, #m>.
 Since then: git diff <old sha>..<new sha> (<the fix PRs>). Check first that
-each MUST-FIX is resolved, then that the fixes broke nothing else.
+each MUST-FIX is resolved, then that the fixes broke nothing else. Fetch
+and make a fresh worktree for <new sha> as the CANDIDATE steps say; do not
+reuse an earlier round's.
 ```
 
 The same prompt serves whenever the candidate moves after any verdict, not
