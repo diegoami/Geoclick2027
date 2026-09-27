@@ -1,4 +1,4 @@
-# Handover — 2026-09-27: v0.13.0 released, FT-82 merged; v0.14 proposed (#93); AGENTS.md folds in CLAUDE.md and release reviews start from OpenCode (this PR open)
+# Handover — 2026-09-27: v0.13.0 released, FT-82 merged; v0.14 proposed (#93); AGENTS.md folds in CLAUDE.md and release reviews start from OpenCode (PR #95 open)
 
 For whoever picks Geoclick up next: a human, or a fresh agent session in
 Claude Code or OpenCode, whatever the model. It records where things
@@ -18,7 +18,7 @@ before any work starts.
 
 | | |
 |---|---|
-| `main` | clean, in sync with GitHub, at the merge of PR #92 (`f0bf1c4`) plus docs; all four gates pass (about 1 840 tests), checked 2026-09-27 |
+| `main` | clean, in sync with GitHub, at the merge of PR #94 (`2d76088`); all four gates pass (about 1 840 tests), checked 2026-09-27. **PR #95** (docs-only: `AGENTS.md` is the one instructions file, release reviews start from OpenCode) is open |
 | Deploy | The product owner **stopped deploying** on 2026-09-22, so a `main` merge no longer triggers a live Netlify build. Merges still need the product owner's OK (AGENTS.md, *Workflow*) |
 | Who works | **From 2026-09-27: OpenCode, with more than one model**; Claude Code before that (Claude Opus 5.5 from 2026-09-23). No per-PR review. **A milestone is a release tag** on `main` (AGENTS.md, *Releases*): a milestone issue, a review by **a different model from the implementer's, in OpenCode**, on GitHub; the tag waits for AGREE and goes on exactly the reviewed SHA. The review starts with `/review-release <issue>` (`opencode run -m <provider/model> --command review-release <issue>`); the reviewer's job is `.opencode/agents/release-reviewer.md`, and the `review-handoff` skill fills in the issue and processes the verdict. **`AGENTS.md` is the one instructions file**; `CLAUDE.md` is a comment plus `@AGENTS.md` |
 | Latest release | **v0.13.0** (tag at `de84072`, 2026-09-26): "The world on the start screen". [Milestone #78](https://github.com/diegoami/Geoclick2027/issues/78), two rounds (BLOCK, then AGREE). [Published](https://github.com/diegoami/geoclick-releases/releases/tag/v0.13.0) |
