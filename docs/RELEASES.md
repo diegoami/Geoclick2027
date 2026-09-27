@@ -81,8 +81,9 @@ that explains it.
 
 ## What counts as a batch
 
-AGENTS.md asks for a tag "whenever a meaningful batch of work lands — not every
-merge, but not left informal either." For this programme:
+*Historical: this was the v0.1.x–v0.2.0 remediation loop's rule.* A tag was
+called when "a meaningful batch of work lands — not every merge, but not left
+informal either." For this programme:
 
 **A batch is a completed wave.**
 

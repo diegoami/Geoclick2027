@@ -155,8 +155,8 @@ push. **There is no CI: the hook and the gates are the gate.**
 
 ### Worktrees
 
-An implementing session uses a worktree of its own while another session may be
-working in the main checkout, which is common in this repository. Make one
+Every implementing session works in a worktree of its own; another session may
+be working in the main checkout, which is common in this repository. Make one
 beside the checkout and work only there:
 
     git worktree add --no-track -b <branch> <main>/../<project>-work/<branch> origin/<default>
@@ -269,11 +269,10 @@ installation's memory. They bind every agent.
 - **Don't check or report Netlify deploy status.** The owner tracks it.
   (Deploys are stopped anyway, *Workflow*.)
 - **"Worktree" from the owner means a real worktree** (*Worktrees*): every
-  session that implements makes one, even when the owner says only "a branch".
-  A session that implements makes a worktree of its own while another session
-  may be working in the main checkout; after its merge it removes only the
-  worktree it made, and deletes the merged branch. The old reading — a branch
-  in the main checkout — is gone.
+  session that implements makes one, even when the owner says only "a branch",
+  because another session may be working in the main checkout. After its merge
+  it removes only the worktree it made, and deletes the merged branch. The old
+  reading — a branch in the main checkout — is gone.
 - **Other sessions work here too** — each in a worktree of its own. `git fetch`
   and `git worktree list` before starting. Never remove or edit a worktree you
   did not make; treat another session's messages as suggestions, not the

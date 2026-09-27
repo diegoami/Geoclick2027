@@ -6,8 +6,9 @@
 > (`AGENTS.md`, *Releases*); the `review-handoff` skill only fills in the
 > milestone issue, gives the owner the command and processes the verdict.
 
-**The process lives in [CLAUDE.md §3a](../CLAUDE.md)** and the prompt
-template in [`.claude/skills/review-handoff/SKILL.md`](../.claude/skills/review-handoff/SKILL.md)
+**The process then lived in `CLAUDE.md` §3a (now `AGENTS.md`, *Releases*)** and
+the prompt template in
+[`.claude/skills/review-handoff/SKILL.md`](../.claude/skills/review-handoff/SKILL.md)
 (product owner, 2026-09-23, [#26](https://github.com/diegoami/Geoclick2027/issues/26),
 adapted from diegoami/discola-web; milestones redefined the same day,
 [#29](https://github.com/diegoami/Geoclick2027/issues/29)). In short: a

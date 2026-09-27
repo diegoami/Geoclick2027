@@ -19,6 +19,8 @@ Title `Milestone vX.Y.Z`, body passed with `--body-file`:
 - **Tag**: `vX.Y.Z` (the next in the existing scheme unless the owner says
   otherwise).
 - **Candidate**: the full SHA of `origin/main` after a fetch.
+- **Implementer**: the tool and model that did the work, so the owner can pick
+  a reviewer that implemented none of it.
 - **Previous milestone**: the last stable `vX.Y.Z` tag, with its commit.
 - **Merged since**: one line per PR
   (`git log --merges --oneline <prev>..<sha>`).
