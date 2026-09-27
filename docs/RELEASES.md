@@ -47,8 +47,11 @@ that explains it.
    gate results on a clean checkout of the candidate (the `review-handoff`
    skill has the full list). Until the tag, `main` takes only fixes for this
    milestone's findings.
-3. **Review.** Give the owner the review-handoff prompt: the reviewer checks
-   out the candidate and reviews `git diff <previous tag>..<candidate>`, and
+3. **Review.** Give the owner the review-handoff prompt: the reviewer
+   fetches first (`git fetch origin --tags`, not `git pull`), works in a
+   fresh detached worktree of its own at the candidate SHA, never the
+   checkout it started in, and reviews `git diff <previous tag>..<candidate>`.
+   Its verdict names that worktree, as a relative path, and the SHA. It
    posts AGREE or BLOCK on the milestone issue. **The tag waits.** On BLOCK
    the fixes land as ordinary PRs, the candidate moves to the new `main`
    commit, and a re-review prompt follows unasked; a third round without
