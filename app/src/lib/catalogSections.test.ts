@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it } from 'vitest';
 import { filterGroups } from './mapSearch';
-import { mapGroups, mapTypeLabel } from './mapCatalog';
+import { mapGroups, mapTypeLabel, pickerDefaultMapIdOf } from './mapCatalog';
 import {
 	countryGroupsOf,
 	countryNameOf,
@@ -43,5 +43,24 @@ describe('countryGroupsOf', () => {
 				);
 			}
 		}
+	});
+});
+
+describe('pickerDefaultMapIdOf', () => {
+	it('uses the configured administrative map even when it is not first alphabetically', () => {
+		const italy = mapGroups.find((group) => group.country === 'Italy')!;
+
+		expect(pickerDefaultMapIdOf(italy)).toBe('italy-regions');
+	});
+
+	it('falls back to the first available map, and returns undefined for an empty group', () => {
+		expect(pickerDefaultMapIdOf({ maps: [{ id: 'fallback-map' }] })).toBe('fallback-map');
+		expect(pickerDefaultMapIdOf({ maps: [] })).toBeUndefined();
+	});
+
+	it('ignores a stale configured id and keeps the available-map fallback', () => {
+		expect(
+			pickerDefaultMapIdOf({ pickerDefaultMapId: 'removed-map', maps: [{ id: 'fallback-map' }] })
+		).toBe('fallback-map');
 	});
 });

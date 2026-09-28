@@ -28,6 +28,8 @@ interface CountryGroup {
 	/** The country or continent on the start screen's map (FT-77), where its
 	 * id is not simply the group's name made into an id (pickerIdOf). */
 	pickerId?: string;
+	/** Override the first map in catalog order for a world-picker entry tap. */
+	pickerDefaultMapId?: string;
 	maps: MapEntry[];
 }
 
@@ -240,6 +242,8 @@ export const mapGroups: CountryGroup[] = [
 	},
 	{
 		country: 'Italy',
+		// On picker entry prefer the country's Regions map over the finer Provinces map.
+		pickerDefaultMapId: 'italy-regions',
 		maps: [
 			{ id: 'italy-provinces', labelKey: 'mapType.provinces' },
 			// 110 provinces is the densest map there is; in thirds each one is
@@ -514,4 +518,15 @@ function slugify(name: string): string {
  */
 export function pickerIdOf(group: Pick<CountryGroup, 'country' | 'pickerId'>): string {
 	return group.pickerId ?? slugify(group.country);
+}
+
+/** The world-picker entry destination: an explicit preference or first available map. */
+export function pickerDefaultMapIdOf(group: {
+	pickerDefaultMapId?: string;
+	maps: { id: string }[];
+}): string | undefined {
+	const preferred = group.pickerDefaultMapId;
+	return preferred && group.maps.some((map) => map.id === preferred)
+		? preferred
+		: group.maps[0]?.id;
 }

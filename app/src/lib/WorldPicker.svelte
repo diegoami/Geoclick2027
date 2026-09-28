@@ -11,11 +11,14 @@
 	import { onDestroy, onMount, tick, untrack } from 'svelte';
 	import * as maplibregl from 'maplibre-gl';
 	import 'maplibre-gl/dist/maplibre-gl.css';
+	import { goto } from '$app/navigation';
+	import { resolve } from '$app/paths';
 	import { getLanguage, t, type TranslationKey } from './i18n.svelte';
 	import { foldCreditOnNarrowScreens } from './geoclickMap';
 	import { enableLabelCollision, registerLabel } from './labelCollision';
 	import type { Mastery } from './homeProgress';
 	import MapSections from './MapSections.svelte';
+	import { pickerDefaultMapIdOf, pickerIdOf } from './mapCatalog';
 	import { pickerView, setPickerShown, setPickerView } from './mapPrefs.svelte';
 	import { targetName } from './targetName';
 	import { tutorialContinentChosen, tutorialCountryChosen, tutorialState } from './tutorial.svelte';
@@ -33,6 +36,7 @@
 	interface Row {
 		country: string;
 		pickerId?: string;
+		pickerDefaultMapId?: string;
 		maps: { id: string; label: string }[];
 	}
 
@@ -54,6 +58,8 @@
 	let panelEl = $state<HTMLElement>();
 	/** The row a tap on the map marks, by its picker id. */
 	let highlight = $state<string>();
+	/** A second tap on this country opens its picker-default map. */
+	let pendingCountryId = $state<string>();
 	/** Said above the rows when a tapped country has no maps of its own. */
 	let note = $state<string>();
 	let labels: { remove(): void }[] = [];
@@ -111,9 +117,19 @@
 	// A continent the player chose - its name, a country on the world, or its
 	// heading in the panel. Only these tell the tutorial (#80): a view restored
 	// from storage, or set by the tutorial itself, is no choice.
-	function chooseContinent(id: string) {
+	function chooseContinent(id: string, countryId?: string) {
+		pendingCountryId = countryId;
 		setPickerView(id);
 		tutorialContinentChosen(id);
+	}
+
+	function openCountryMap(id: string): boolean {
+		const group = groups.find((candidate) => pickerIdOf(candidate) === id);
+		const mapId = group && pickerDefaultMapIdOf(group);
+		if (!mapId) return false;
+		pendingCountryId = undefined;
+		void goto(resolve('/map/[mapId]/overview', { mapId }));
+		return true;
 	}
 
 	function clearLabels() {
@@ -228,6 +244,8 @@
 				const [west, south, east, north] = boxOf(start);
 				map = new maplibregl.Map({
 					container,
+					// Repeated taps select/open a country; keep zoom on the explicit controls or pinch.
+					doubleClickZoom: false,
 					bounds: [
 						[west, south],
 						[east, north]
@@ -311,9 +329,13 @@
 					if (!id || !continent) return;
 					// On the world, any country is a way into its continent; on a
 					// continent, only its own countries answer.
-					if (view === 'world') chooseContinent(continent);
-					else if (continent === view) {
-						markCountry(id);
+					if (view === 'world') {
+						chooseContinent(continent, id);
+					} else if (continent === view) {
+						const tutorialRunning = tutorialState().status !== 'idle';
+						if (!tutorialRunning && pendingCountryId === id && openCountryMap(id)) return;
+						pendingCountryId = tutorialRunning ? undefined : id;
+						void markCountry(id);
 						tutorialCountryChosen(id);
 					}
 				});
@@ -339,6 +361,7 @@
 	$effect(() => {
 		const v = view;
 		if (!loaded) return;
+		if (v === 'world') pendingCountryId = undefined;
 		untrack(() => {
 			highlight = undefined;
 			note = undefined;
@@ -359,10 +382,21 @@
 		const step = tutorialStep;
 		if (!loaded) return;
 		untrack(() => {
+			pendingCountryId = undefined;
 			if (step === 'choose-continent') setPickerView('world');
 			else if (step === 'choose-country' || step === 'choose-map')
 				setPickerView(TUTORIAL_CONTINENT);
 		});
+	});
+
+	// Carry the world tap's country selection through the continent zoom so its
+	// next tap opens that country's preferred map.
+	$effect(() => {
+		const v = view;
+		const selected = pendingCountryId;
+		if (!loaded || v === 'world' || !selected) return;
+		if (picker?.countries.some((country) => country.id === selected && country.continent === v))
+			void markCountry(selected);
 	});
 
 	// Italy's row lit for the step that points at it, however the player got

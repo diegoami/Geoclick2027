@@ -25,6 +25,7 @@ const STORAGE_KEY = 'geoclick:language:v1';
 // clicking around.
 export type TranslationKey =
 	| 'nav.maps'
+	| 'nav.switchMap'
 	| 'nav.hideButtons'
 	| 'nav.showButtons'
 	| 'home.exit'
@@ -197,6 +198,7 @@ type Dictionary = Record<TranslationKey, string>;
 const en: Dictionary = {
 	'lang.label': 'Language',
 	'nav.maps': 'Maps',
+	'nav.switchMap': 'Switch map',
 	'nav.hideButtons': 'Hide the buttons',
 	'nav.showButtons': 'Show the buttons',
 	'home.exit': 'Exit',
@@ -388,6 +390,7 @@ const en: Dictionary = {
 const de: Dictionary = {
 	'lang.label': 'Sprache',
 	'nav.maps': 'Karten',
+	'nav.switchMap': 'Karte wechseln',
 	'nav.hideButtons': 'Schaltflächen ausblenden',
 	'nav.showButtons': 'Schaltflächen einblenden',
 	'home.exit': 'Beenden',
@@ -583,6 +586,7 @@ const de: Dictionary = {
 const it: Dictionary = {
 	'lang.label': 'Lingua',
 	'nav.maps': 'Mappe',
+	'nav.switchMap': 'Cambia mappa',
 	'nav.hideButtons': 'Nascondi i pulsanti',
 	'nav.showButtons': 'Mostra i pulsanti',
 	'home.exit': 'Esci',
