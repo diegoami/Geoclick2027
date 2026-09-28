@@ -198,7 +198,7 @@ Check items off as they land; update "Status" as iterations complete.
   map. FT-76 (the picker map, size gate) to FT-79, plus FT-80 (#68).
 - **Released 2026-09-28: v0.14.0** ([PLAN_V0.14.md](docs/PLAN_V0.14.md), #93
   agreed; tag `8519881`, [Milestone v0.14.0](https://github.com/diegoami/Geoclick2027/issues/100): Round 1 BLOCK, Rounds 2–3 AGREE): PR #92's card-game toolbar, FT-83 Android Back after the world map loads, FT-84 translated country rows with displayed-name search and localized order (PRs #97, #104, #105, including continent aliases), and FT-85's manual update. The beta `v0.14.0-beta.1` and stable `v0.14.0` are published. Developer installed the Windows setup and Android APK and opened Egypt — Governorates; region boundaries drew in both. The owner reports the Android Back and tablet Italian/German row checks complete.
-- **Owner wishlist for a future release — unscoped, not approved work** (HANDOVER.md, “Owner wishlist for the next release”): on the world map, a second tap on a country/region should open its regions map, or another available map if it has no regions; after selecting a country, the player should be able to switch among its maps without returning to the list.
+- **Next-release proposal #110 — awaiting owner agreement** (HANDOVER.md, “Next-release proposal”): on the world map, a second tap on a country/region should open its regions map, or another available map if it has no regions; after selecting a country, the player should be able to switch among its maps without returning to the list.
 - **Raised and decided 2026-09-20, unscoped**: six UX problems from one
   round of tablet play (`germany-towns-100k`) — the level-0 tray offering
   every name at once, slips losing their drag to the tablet's own
