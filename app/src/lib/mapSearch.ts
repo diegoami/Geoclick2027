@@ -7,11 +7,10 @@
 // and it needs no new concepts: type a few letters, see what matches.
 //
 // What a query matches: the country's name as shown ("Germany", "South
-// Korea") and the map's own label ("States", "Cities — East"). Both are
-// what the player can see on the card, which is the only honest thing to
-// search. Matching ignores case and accents, so "espana" finds España's
-// entries and "cote" would find a Côte, and it matches anywhere in the
-// word, so "korea" finds South Korea.
+// Korea"), its English catalog name when translated, and the map's own label
+// ("States", "Cities — East"). Matching ignores case and accents, so
+// "espana" finds España's entries and "cote" would find a Côte, and it
+// matches anywhere in the word, so "korea" finds South Korea.
 
 /** One map as the list shows it: its id, and the label under its country. */
 export interface SearchableMap {
@@ -21,6 +20,7 @@ export interface SearchableMap {
 
 export interface SearchableGroup<T extends SearchableMap = SearchableMap> {
 	country: string;
+	countryAliases?: string[];
 	maps: T[];
 }
 
@@ -31,13 +31,18 @@ export function fold(text: string): string {
 
 /** Whether a query matches this country/label pair. An empty query matches
  * everything, which is what an untouched search box should do. */
-export function matches(query: string, country: string, label: string): boolean {
+export function matches(
+	query: string,
+	country: string,
+	label: string,
+	countryAliases: string[] = []
+): boolean {
 	const needle = fold(query);
 	if (!needle) return true;
-	const haystack = fold(`${country} ${label}`);
+	const haystacks = [country, ...countryAliases, label].map(fold);
 	// Every word has to appear somewhere, so "korea towns" narrows rather than
 	// widens - the way a player expects two words to work.
-	return needle.split(/\s+/).every((word) => haystack.includes(word));
+	return needle.split(/\s+/).every((word) => haystacks.some((text) => text.includes(word)));
 }
 
 /**
@@ -54,10 +59,10 @@ export function filterGroups<T extends SearchableMap>(
 	if (!needle) return groups;
 	const result: SearchableGroup<T>[] = [];
 	for (const group of groups) {
-		const wholeCountry = matches(query, group.country, '');
+		const wholeCountry = matches(query, group.country, '', group.countryAliases);
 		const maps = wholeCountry
 			? group.maps
-			: group.maps.filter((m) => matches(query, group.country, m.label));
+			: group.maps.filter((m) => matches(query, group.country, m.label, group.countryAliases));
 		if (maps.length > 0) result.push({ ...group, maps });
 	}
 	return result;

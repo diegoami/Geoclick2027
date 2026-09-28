@@ -45,7 +45,7 @@ export function continentGroups<G extends Grouped>(groups: G[]): G[] {
 export function countryGroupsOf<G extends Grouped>(continent: string, groups: G[]): G[] {
 	return groups
 		.filter((g) => !isContinentGroup(g) && continentOf(g) === continent)
-		.sort((a, b) => a.country.localeCompare(b.country));
+		.sort((a, b) => countryNameOf(a).localeCompare(countryNameOf(b), getLanguage()));
 }
 
 /** A country group's name in the player's language, or the catalog's English
