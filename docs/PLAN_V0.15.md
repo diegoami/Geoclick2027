@@ -7,71 +7,71 @@
 
 ## Why
 
-The world picker currently drills into a continent and only highlights a
-country; the player then has to choose its map from a list. Once a map is open,
-MapNav has no way to switch to another map in that country, so the player goes
-back to Maps. The owner asked for a second tap to enter the selected country and
-for sibling-map switching without returning to the list.
+The world picker currently requires a continent drill-down and then a separate
+map selection. Country selectors also begin with a “Choose map” placeholder,
+and maps are not consistently ordered from broad to specific. Once a map is
+open, MapNav has no way to switch to another map in that country, so the player
+goes back to Maps.
 
-Findings: `WorldPicker.svelte:304-318` (world click chooses a continent; a
-continent click only marks a country), `MapRows.svelte:69-79` (map choice only
-from a row select), `MapNav.svelte:53-149` (mode tabs and Maps link, no sibling
-selector), and `mapCatalog.ts:20-37, 242-252` (map groups have no preferred
-picker map; Italy's alphabetic list puts Provinces before Regions).
+Findings: `WorldPicker.svelte` (country clicks drill down instead of opening a
+map), `MapRows.svelte` (country selectors have a placeholder), `MapNav.svelte`
+(the map selector has a placeholder and omits the active map), and
+`mapCatalog.ts` (catalog arrays need a broad-to-specific country order; Italy
+currently puts Provinces before Regions).
 
 ## Design
 
-- On a world-map country tap, zoom to its continent and carry the country
-  selection into that view. A subsequent tap on the same country opens its
-  configured picker-default map. In a continent view, the first tap on a
-  different country selects/highlights it; a second tap opens its map. This is
-  a deliberate second selection, not a time-thresholded double-click.
-- Add optional `pickerDefaultMapId` metadata to map groups. Prefer the
-  administrative region map; when no explicit override exists, use the
-  catalog's first map as the fallback. Italy explicitly prefers
-  `italy-regions` over `italy-provinces`. A country with no maps keeps the
-  existing no-maps note and continent highlight.
-- Disable MapLibre's default double-click zoom on the picker so it cannot
-  consume the second tap. The zoom controls and touch pinch remain available.
-- Add a native, accessible sibling-map selector in MapNav for country maps only.
-  It navigates directly to the chosen map's Overview; mode tabs, direct routes,
-  favorites and Recent keep their existing behavior.
+- **Revised 2026-09-29:** a single tap on a mapped country opens its configured
+  broadest administrative map directly, without an intermediate continent
+  view. A country tapped from an already-open continent also opens on the first
+  tap. Countries without maps keep the existing notice/highlight; continent
+  labels and panel navigation still drill into a continent. Tutorial navigation
+  remains guided.
+- Keep optional `pickerDefaultMapId` metadata. Otherwise use the first map in
+  the country's deliberately ordered catalog list; Italy explicitly prefers
+  `italy-regions`.
+- Country map order is scope-based, not alphabetical: top-level administrative
+  map; zoomed/split maps at that level; smaller administrative divisions,
+  broad-to-narrow and adjacent to their split maps; full-country cities/towns;
+  city/town subsets; other map types last. Picker and in-map selectors share
+  the catalog order.
+- Remove the “Choose map” placeholder from country selectors. The in-map
+  selector lists every map for its country and shows the current map selected;
+  choosing another opens its Overview. The continent-row selector may retain
+  its placeholder. Preserve favorites, Recent, direct routes, and Back.
 
 ## Tasks
 
 ### FT-86 — open the preferred country map from the picker · Medium
 
-- **Do:** carry the selected country through the world-to-continent transition;
-  open its configured picker-default map on the next tap. Keep countries with
-  no map in the existing informational path. Add and validate the Italy
-  default-map override.
-- **Test:** browser interaction covers first tap (continent + highlight) and
-  second tap (Overview route), including the preferred map and the no-map
-  fallback. Unit tests validate configured defaults and catalog fallback.
+- **Do:** open a mapped country directly from the main picker on one tap.
+  Keep countries with no map in the existing informational path. Add and
+  validate the Italy default-map override and preserve guided tutorial flow.
+- **Test:** browser interaction covers one-tap Overview navigation and the
+  no-maps notice. Unit tests validate configured defaults and ordered fallback.
 - **DoD:** feature and tests merged; gates green; map access and tutorial
   behavior remain intact.
 
 ### FT-87 — switch sibling maps in MapNav · Small
 
-- **Do:** add the country-only sibling-map selector next to the map title in
-  MapNav, translated in English/German/Italian. A selection opens that map's
-  Overview without going back to Maps.
-- **Test:** browser component test checks visibility only when siblings exist,
-  the available options belong to the same country, and selection navigates to
-  the sibling Overview.
+- **Do:** remove the country selectors' “Choose map” placeholder; include the
+  current map as MapNav's selected option. Order all country options broad to
+  specific per the catalog tiers above. A selection opens that map's Overview.
+- **Test:** browser component tests cover no placeholder on country selectors,
+  current selection, same-country options, semantic order, and Overview
+  navigation. Check native keyboard access and narrow-phone fit.
 - **DoD:** feature and tests merged; gates green; selector is keyboard and
   screen-reader accessible and fits narrow phone widths.
 
 ## Out of scope
 
-- Adding maps or changing map data/catalog labels beyond the preferred-map
-  metadata.
+- Adding maps, changing source geometries, or changing catalog labels.
 - Animations, a map editor/self-serve map-authoring, SSO/sync, or other backlog
   items in ROADMAP.md. These require separate owner-approved scope.
 
 ## Progress ledger
 
-| Task  | State       | Merge | Notes                              |
-| ----- | ----------- | ----- | ---------------------------------- |
-| FT-86 | in progress |       | direct map entry and preferred map |
-| FT-87 | in progress |       | in-country map selector            |
+| Task  | State       | Merge | Notes                                         |
+| ----- | ----------- | ----- | --------------------------------------------- |
+| FT-86 | in progress |       | direct one-tap map entry and preferred map    |
+| FT-87 | in progress |       | placeholder-free, broad-to-specific selectors |

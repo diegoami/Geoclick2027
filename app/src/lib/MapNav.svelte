@@ -52,12 +52,10 @@
 	const currentGroup = $derived(
 		mapGroups.find((group) => group.maps.some((map) => map.id === mapId))
 	);
-	const siblingMaps = $derived(
-		currentGroup && !isContinentGroup(currentGroup)
-			? currentGroup.maps.filter((map) => map.id !== mapId)
-			: []
+	const countryMaps = $derived(
+		currentGroup && !isContinentGroup(currentGroup) ? currentGroup.maps : []
 	);
-	const showMapSwitcher = $derived(siblingMaps.length > 0);
+	const showMapSwitcher = $derived(countryMaps.length > 1);
 </script>
 
 <!-- Hidden by the button under the zoom control (hideButtonsControl). -->
@@ -160,15 +158,15 @@
 		{#if showMapSwitcher}
 			<select
 				class="map-switch"
+				value={mapId}
 				aria-label={t('nav.switchMap')}
 				onchange={(event) => {
 					const nextMapId = event.currentTarget.value;
 					if (nextMapId) goto(resolve('/map/[mapId]/overview', { mapId: nextMapId }));
 				}}
 			>
-				<option value="">{t('nav.switchMap')}</option>
-				{#each siblingMaps as sibling (sibling.id)}
-					<option value={sibling.id}>{mapTypeLabel(sibling)}</option>
+				{#each countryMaps as countryMap (countryMap.id)}
+					<option value={countryMap.id}>{mapTypeLabel(countryMap)}</option>
 				{/each}
 			</select>
 		{/if}

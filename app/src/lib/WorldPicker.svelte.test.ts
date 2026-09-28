@@ -111,7 +111,7 @@ vi.mock('./worldPicker', () => ({
 		v === 'world' || p.continents.some((c) => c.id === v) ? v : 'world'
 }));
 
-describe('WorldPicker (FT-83, #87)', () => {
+describe('WorldPicker (FT-83, FT-86, #87)', () => {
 	beforeEach(() => {
 		fake.state.load = undefined;
 		fake.state.countryClick = undefined;
@@ -136,7 +136,7 @@ describe('WorldPicker (FT-83, #87)', () => {
 		expect(pickerGoUp()).toBe(true);
 	});
 
-	it('carries a world country tap into the continent and opens its configured map on the next tap', async () => {
+	it('opens the configured country map on the first world-map tap', async () => {
 		setPickerView('world');
 		await render(WorldPicker, {
 			groups: [
@@ -163,19 +163,18 @@ describe('WorldPicker (FT-83, #87)', () => {
 				originalEvent: { target: { closest: () => null } }
 			});
 		tapItaly();
-		expect(gotoMock).not.toHaveBeenCalled();
-		await expect
-			.poll(() =>
-				document.querySelector('[data-picker-id="italy"]')?.classList.contains('highlight')
-			)
-			.toBe(true);
+		expect(gotoMock).toHaveBeenCalledWith('/map/italy-regions/overview');
+		expect(document.querySelector('.where')).toBeNull();
 
+		gotoMock.mockClear();
+		setPickerView('europe');
+		await expect.poll(() => document.querySelector('.continent')?.textContent).toBe('Europe');
 		tapItaly();
 		expect(gotoMock).toHaveBeenCalledWith('/map/italy-regions/overview');
 	});
 
 	it('keeps the no-maps notice for a country with no playable maps', async () => {
-		setPickerView('europe');
+		setPickerView('world');
 		await render(WorldPicker, { groups: [], masteries: {}, targetCount: () => 0 });
 		await expect.poll(() => fake.state.load !== undefined).toBe(true);
 		fake.state.load!();

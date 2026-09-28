@@ -38,4 +38,17 @@ describe('MapRows (FT-84)', () => {
 		await render(MapRows, { groups: rows, masteries: {}, targetCount: () => 0 });
 		expect(names()).toEqual(['Europe', 'Germany', 'Great Britain', 'Iran']);
 	});
+
+	it('omits the Choose map option for countries but retains it for continent rows', async () => {
+		await render(MapRows, {
+			groups: [group('Germany'), group('Europe', 'europe')],
+			masteries: {},
+			targetCount: () => 0
+		});
+
+		const germany = document.querySelector<HTMLSelectElement>('#maps-germany-regions')!;
+		const europe = document.querySelector<HTMLSelectElement>('#maps-europe-regions')!;
+		expect([...germany.options].map((option) => option.value)).toEqual(['germany-regions']);
+		expect([...europe.options].map((option) => option.value)).toEqual(['', 'europe-regions']);
+	});
 });

@@ -27,13 +27,14 @@ describe('MapNav sibling map selector', () => {
 		const selector = document.querySelector<HTMLSelectElement>('.map-switch');
 		expect(selector).not.toBeNull();
 		expect([...selector!.options].map((option) => option.value)).toEqual([
-			'',
+			'italy-regions',
+			'italy-provinces',
 			'italy-provinces-north',
 			'italy-provinces-center',
 			'italy-provinces-south',
-			'italy-regions',
 			'italy-towns-100k'
 		]);
+		expect(selector!.value).toBe('italy-provinces');
 
 		selector!.value = 'italy-regions';
 		selector!.dispatchEvent(new Event('change', { bubbles: true }));

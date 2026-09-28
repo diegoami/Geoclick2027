@@ -58,8 +58,8 @@
 	let panelEl = $state<HTMLElement>();
 	/** The row a tap on the map marks, by its picker id. */
 	let highlight = $state<string>();
-	/** A second tap on this country opens its picker-default map. */
-	let pendingCountryId = $state<string>();
+	/** Keep a country selected while the picker enters its continent. */
+	let countryToMark = $state<string>();
 	/** Said above the rows when a tapped country has no maps of its own. */
 	let note = $state<string>();
 	let labels: { remove(): void }[] = [];
@@ -118,7 +118,7 @@
 	// heading in the panel. Only these tell the tutorial (#80): a view restored
 	// from storage, or set by the tutorial itself, is no choice.
 	function chooseContinent(id: string, countryId?: string) {
-		pendingCountryId = countryId;
+		countryToMark = countryId;
 		setPickerView(id);
 		tutorialContinentChosen(id);
 	}
@@ -127,7 +127,7 @@
 		const group = groups.find((candidate) => pickerIdOf(candidate) === id);
 		const mapId = group && pickerDefaultMapIdOf(group);
 		if (!mapId) return false;
-		pendingCountryId = undefined;
+		countryToMark = undefined;
 		void goto(resolve('/map/[mapId]/overview', { mapId }));
 		return true;
 	}
@@ -244,7 +244,7 @@
 				const [west, south, east, north] = boxOf(start);
 				map = new maplibregl.Map({
 					container,
-					// Repeated taps select/open a country; keep zoom on the explicit controls or pinch.
+					// Country taps navigate immediately; avoid an extra double-click zoom.
 					doubleClickZoom: false,
 					bounds: [
 						[west, south],
@@ -327,14 +327,16 @@
 					const id = feature?.properties?.id as string | undefined;
 					const continent = feature?.properties?.continent as string | undefined;
 					if (!id || !continent) return;
-					// On the world, any country is a way into its continent; on a
-					// continent, only its own countries answer.
+					// A mapped country opens directly. A country without maps keeps
+					// the continent notice; clicks outside the current continent do nothing.
 					if (view === 'world') {
+						const tutorialRunning = tutorialState().status !== 'idle';
+						if (!tutorialRunning && openCountryMap(id)) return;
 						chooseContinent(continent, id);
 					} else if (continent === view) {
 						const tutorialRunning = tutorialState().status !== 'idle';
-						if (!tutorialRunning && pendingCountryId === id && openCountryMap(id)) return;
-						pendingCountryId = tutorialRunning ? undefined : id;
+						if (!tutorialRunning && openCountryMap(id)) return;
+						countryToMark = undefined;
 						void markCountry(id);
 						tutorialCountryChosen(id);
 					}
@@ -361,7 +363,7 @@
 	$effect(() => {
 		const v = view;
 		if (!loaded) return;
-		if (v === 'world') pendingCountryId = undefined;
+		if (v === 'world') countryToMark = undefined;
 		untrack(() => {
 			highlight = undefined;
 			note = undefined;
@@ -382,18 +384,18 @@
 		const step = tutorialStep;
 		if (!loaded) return;
 		untrack(() => {
-			pendingCountryId = undefined;
+			countryToMark = undefined;
 			if (step === 'choose-continent') setPickerView('world');
 			else if (step === 'choose-country' || step === 'choose-map')
 				setPickerView(TUTORIAL_CONTINENT);
 		});
 	});
 
-	// Carry the world tap's country selection through the continent zoom so its
-	// next tap opens that country's preferred map.
+	// Carry a no-map or tutorial country selection into its continent so the
+	// existing notice/highlight remains visible after the view changes.
 	$effect(() => {
 		const v = view;
-		const selected = pendingCountryId;
+		const selected = countryToMark;
 		if (!loaded || v === 'world' || !selected) return;
 		if (picker?.countries.some((country) => country.id === selected && country.continent === v))
 			void markCountry(selected);
