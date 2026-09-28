@@ -6,7 +6,7 @@
 	import { countMaps, filterGroups } from '$lib/mapSearch';
 	import { t } from '$lib/i18n.svelte';
 	import { mapGroups, mapTypeLabel } from '$lib/mapCatalog';
-	import { countryNameOf } from '$lib/catalogSections';
+	import { withRowNameSearchAliases } from '$lib/catalogSections';
 	import { favouriteMaps, homeView, recentMaps, setHomeView } from '$lib/mapPrefs.svelte';
 	import { isNativeShell } from '$lib/platform';
 	import StartBar from '$lib/StartBar.svelte';
@@ -38,9 +38,8 @@
 	let query = $state('');
 	// Every group with its maps' labels in the player's language.
 	const labelledGroups = $derived(
-		mapGroups.map((group) => ({
+		withRowNameSearchAliases(mapGroups).map((group) => ({
 			...group,
-			countryAliases: [countryNameOf(group)],
 			maps: group.maps.map((map) => ({ ...map, label: mapTypeLabel(map) }))
 		}))
 	);

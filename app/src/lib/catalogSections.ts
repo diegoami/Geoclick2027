@@ -6,7 +6,7 @@
 // continent whose Countries map lists it - bundled at build time like
 // data/maps/index.json, so the prerendered list is grouped too.
 import picker from '../../../data/maps/world-picker/picker.json';
-import { getLanguage, type Language } from './i18n.svelte';
+import { getLanguage, t, type Language, type TranslationKey } from './i18n.svelte';
 import { pickerIdOf } from './mapCatalog';
 
 /** The continents, in the picker's order (Europe first). */
@@ -53,4 +53,18 @@ export function countryGroupsOf<G extends Grouped>(continent: string, groups: G[
  * catalog names, since the picker's `names` carries only it/de. */
 export function countryNameOf(group: Grouped): string {
 	return countryNames.get(pickerIdOf(group))?.[getLanguage()] ?? group.country;
+}
+
+/** The exact name MapRows renders for a continent or country group. */
+export function rowNameOf(group: Grouped): string {
+	return isContinentGroup(group)
+		? t(`continent.${pickerIdOf(group)}` as TranslationKey)
+		: countryNameOf(group);
+}
+
+/** Add the row's displayed name as the group's localized search alias. */
+export function withRowNameSearchAliases<G extends Grouped>(
+	groups: G[]
+): (G & { countryAliases: string[] })[] {
+	return groups.map((group) => ({ ...group, countryAliases: [rowNameOf(group)] }));
 }
