@@ -1,6 +1,12 @@
 import { afterEach, describe, expect, it } from 'vitest';
-import { mapGroups } from './mapCatalog';
-import { countryGroupsOf, countryNameOf } from './catalogSections';
+import { filterGroups } from './mapSearch';
+import { mapGroups, mapTypeLabel } from './mapCatalog';
+import {
+	countryGroupsOf,
+	countryNameOf,
+	rowNameOf,
+	withRowNameSearchAliases
+} from './catalogSections';
 import { setLanguage } from './i18n.svelte';
 
 describe('countryGroupsOf', () => {
@@ -20,5 +26,22 @@ describe('countryGroupsOf', () => {
 
 		expect(names).toEqual([...names].sort((a, b) => a.localeCompare(b, 'de')));
 		expect(names.indexOf('Deutschland')).toBeLessThan(names.indexOf('Frankreich'));
+	});
+
+	it('uses each displayed row name as a searchable alias, including continents', () => {
+		for (const language of ['it', 'de'] as const) {
+			setLanguage(language);
+			const groups = withRowNameSearchAliases(mapGroups).map((group) => ({
+				...group,
+				maps: group.maps.map((map) => ({ ...map, label: mapTypeLabel(map) }))
+			}));
+
+			for (const group of groups) {
+				expect(group.countryAliases).toEqual([rowNameOf(group)]);
+				expect(filterGroups(groups, rowNameOf(group)).map((match) => match.country)).toContain(
+					group.country
+				);
+			}
+		}
 	});
 });
