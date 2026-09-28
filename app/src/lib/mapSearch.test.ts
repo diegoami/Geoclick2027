@@ -5,6 +5,7 @@ import { countMaps, filterGroups, fold, matches } from './mapSearch';
 const groups = [
 	{
 		country: 'Germany',
+		countryAliases: ['Germania', 'Deutschland'],
 		maps: [
 			{ id: 'germany-states', label: 'States' },
 			{ id: 'germany-towns-100k', label: 'Towns' }
@@ -19,6 +20,7 @@ const groups = [
 	},
 	{
 		country: 'Spain',
+		countryAliases: ['Spagna', 'Spanien'],
 		maps: [
 			{ id: 'spain-regions', label: 'Regions' },
 			{ id: 'spain-towns-100k', label: 'Towns' }
@@ -76,6 +78,12 @@ describe('filterGroups', () => {
 		const found = filterGroups(groups, 'korea');
 		expect(found).toHaveLength(1);
 		expect(found[0].maps).toHaveLength(2);
+	});
+
+	it('finds translated country names while keeping the English catalog name searchable', () => {
+		expect(filterGroups(groups, 'germania').map((g) => g.country)).toEqual(['Germany']);
+		expect(filterGroups(groups, 'germany').map((g) => g.country)).toEqual(['Germany']);
+		expect(filterGroups(groups, 'spagna').map((g) => g.country)).toEqual(['Spain']);
 	});
 
 	it('keeps only the matching maps of a country whose name does not', () => {
