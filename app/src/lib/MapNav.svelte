@@ -162,7 +162,7 @@
 				aria-label={t('nav.switchMap')}
 				onchange={(event) => {
 					const nextMapId = event.currentTarget.value;
-					if (nextMapId) goto(resolve('/map/[mapId]/overview', { mapId: nextMapId }));
+					if (nextMapId) goto(resolve('/map/[mapId]', { mapId: nextMapId }));
 				}}
 			>
 				{#each countryMaps as countryMap (countryMap.id)}

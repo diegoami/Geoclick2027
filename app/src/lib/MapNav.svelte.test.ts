@@ -17,7 +17,7 @@ describe('MapNav sibling map selector', () => {
 		setLanguage('en');
 	});
 
-	it('offers only maps from the current country and opens the selected map on Overview', async () => {
+	it('offers only maps from the current country and opens the selected map on Known', async () => {
 		await render(MapNav, {
 			mapId: 'italy-provinces',
 			mapName: 'Italy — Provinces',
@@ -38,7 +38,7 @@ describe('MapNav sibling map selector', () => {
 
 		selector!.value = 'italy-regions';
 		selector!.dispatchEvent(new Event('change', { bubbles: true }));
-		expect(gotoMock).toHaveBeenCalledWith('/map/italy-regions/overview');
+		expect(gotoMock).toHaveBeenCalledWith('/map/italy-regions');
 	});
 
 	it('does not show a sibling selector for a continent map', async () => {

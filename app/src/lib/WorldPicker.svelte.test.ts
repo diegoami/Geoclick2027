@@ -163,14 +163,14 @@ describe('WorldPicker (FT-83, FT-86, #87)', () => {
 				originalEvent: { target: { closest: () => null } }
 			});
 		tapItaly();
-		expect(gotoMock).toHaveBeenCalledWith('/map/italy-regions/overview');
+		expect(gotoMock).toHaveBeenCalledWith('/map/italy-regions');
 		expect(document.querySelector('.where')).toBeNull();
 
 		gotoMock.mockClear();
 		setPickerView('europe');
 		await expect.poll(() => document.querySelector('.continent')?.textContent).toBe('Europe');
 		tapItaly();
-		expect(gotoMock).toHaveBeenCalledWith('/map/italy-regions/overview');
+		expect(gotoMock).toHaveBeenCalledWith('/map/italy-regions');
 	});
 
 	it('keeps the no-maps notice for a country with no playable maps', async () => {

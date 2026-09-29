@@ -128,7 +128,7 @@
 		const mapId = group && pickerDefaultMapIdOf(group);
 		if (!mapId) return false;
 		countryToMark = undefined;
-		void goto(resolve('/map/[mapId]/overview', { mapId }));
+		void goto(resolve('/map/[mapId]', { mapId }));
 		return true;
 	}
 

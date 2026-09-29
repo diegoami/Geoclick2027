@@ -37,8 +37,9 @@ currently puts Provinces before Regions).
   the catalog order.
 - Remove the “Choose map” placeholder from country selectors. The in-map
   selector lists every map for its country and shows the current map selected;
-  choosing another opens its Overview. The continent-row selector may retain
-  its placeholder. Preserve favorites, Recent, direct routes, and Back.
+  choosing another opens Known at the base `/map/[mapId]` route. New country
+  map picks also open that route, not Overview. The continent-row selector may
+  retain its placeholder. Preserve favorites, Recent, direct routes, and Back.
 
 ## Tasks
 
@@ -47,7 +48,7 @@ currently puts Provinces before Regions).
 - **Do:** open a mapped country directly from the main picker on one tap.
   Keep countries with no map in the existing informational path. Add and
   validate the Italy default-map override and preserve guided tutorial flow.
-- **Test:** browser interaction covers one-tap Overview navigation and the
+- **Test:** browser interaction covers one-tap Known navigation and the
   no-maps notice. Unit tests validate configured defaults and ordered fallback.
 - **DoD:** feature and tests merged; gates green; map access and tutorial
   behavior remain intact.
@@ -56,10 +57,10 @@ currently puts Provinces before Regions).
 
 - **Do:** remove the country selectors' “Choose map” placeholder; include the
   current map as MapNav's selected option. Order all country options broad to
-  specific per the catalog tiers above. A selection opens that map's Overview.
+  specific per the catalog tiers above. A selection opens that map's Known screen.
 - **Test:** browser component tests cover no placeholder on country selectors,
-  current selection, same-country options, semantic order, and Overview
-  navigation. Check native keyboard access and narrow-phone fit.
+  current selection, same-country options, semantic order, and navigation to
+  Known. Check native keyboard access and narrow-phone fit.
 - **DoD:** feature and tests merged; gates green; selector is keyboard and
   screen-reader accessible and fits narrow phone widths.
 
