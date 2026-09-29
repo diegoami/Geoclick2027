@@ -10,11 +10,14 @@
 	// hand-duplicate Svelte markup when a shared component is exactly the
 	// right tool for it.
 	import { onMount } from 'svelte';
+	import { goto } from '$app/navigation';
 	import { resolve } from '$app/paths';
 	import type { Snippet } from 'svelte';
 	import { t } from './i18n.svelte';
+	import { isContinentGroup } from './catalogSections';
 	import LanguageSwitcher from './LanguageSwitcher.svelte';
 	import { mapNavHidden, recordVisit } from './mapPrefs.svelte';
+	import { mapGroups, mapTypeLabel } from './mapCatalog';
 	import FavouriteStar from './FavouriteStar.svelte';
 	import TutorialButton from './TutorialButton.svelte';
 	import TerrainButton from './TerrainButton.svelte';
@@ -46,6 +49,13 @@
 	// The tutorial points at the tabs and the pills, so they show while it
 	// runs even if the player had hidden them.
 	const hidden = $derived(mapNavHidden() && tutorialState().status === 'idle');
+	const currentGroup = $derived(
+		mapGroups.find((group) => group.maps.some((map) => map.id === mapId))
+	);
+	const countryMaps = $derived(
+		currentGroup && !isContinentGroup(currentGroup) ? currentGroup.maps : []
+	);
+	const showMapSwitcher = $derived(countryMaps.length > 1);
 </script>
 
 <!-- Hidden by the button under the zoom control (hideButtonsControl). -->
@@ -145,6 +155,21 @@
 	     already full at phone width (FT-13, FT-16). -->
 	<div class="map-title">
 		<span class="map-label">{mapName ?? t('nav.loading')}</span>
+		{#if showMapSwitcher}
+			<select
+				class="map-switch"
+				value={mapId}
+				aria-label={t('nav.switchMap')}
+				onchange={(event) => {
+					const nextMapId = event.currentTarget.value;
+					if (nextMapId) goto(resolve('/map/[mapId]', { mapId: nextMapId }));
+				}}
+			>
+				{#each countryMaps as countryMap (countryMap.id)}
+					<option value={countryMap.id}>{mapTypeLabel(countryMap)}</option>
+				{/each}
+			</select>
+		{/if}
 		<FavouriteStar {mapId} size="bar" />
 	</div>
 	{#if subtitle}
@@ -225,8 +250,20 @@
 	}
 	.map-title {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
 		gap: 0.4rem;
+	}
+	.map-switch {
+		max-width: min(12rem, 42vw);
+		min-height: 2rem;
+		padding: 0.2rem 0.45rem;
+		font: inherit;
+		font-size: 0.75rem;
+		color: #2e4037;
+		background: rgba(255, 255, 255, 0.9);
+		border: 1px solid rgba(17, 24, 21, 0.16);
+		border-radius: 0.4rem;
 	}
 	.map-label {
 		font-size: 0.75rem;

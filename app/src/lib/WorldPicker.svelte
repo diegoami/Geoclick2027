@@ -11,11 +11,14 @@
 	import { onDestroy, onMount, tick, untrack } from 'svelte';
 	import * as maplibregl from 'maplibre-gl';
 	import 'maplibre-gl/dist/maplibre-gl.css';
+	import { goto } from '$app/navigation';
+	import { resolve } from '$app/paths';
 	import { getLanguage, t, type TranslationKey } from './i18n.svelte';
 	import { foldCreditOnNarrowScreens } from './geoclickMap';
 	import { enableLabelCollision, registerLabel } from './labelCollision';
 	import type { Mastery } from './homeProgress';
 	import MapSections from './MapSections.svelte';
+	import { pickerDefaultMapIdOf, pickerIdOf } from './mapCatalog';
 	import { pickerView, setPickerShown, setPickerView } from './mapPrefs.svelte';
 	import { targetName } from './targetName';
 	import { tutorialContinentChosen, tutorialCountryChosen, tutorialState } from './tutorial.svelte';
@@ -33,6 +36,7 @@
 	interface Row {
 		country: string;
 		pickerId?: string;
+		pickerDefaultMapId?: string;
 		maps: { id: string; label: string }[];
 	}
 
@@ -54,6 +58,8 @@
 	let panelEl = $state<HTMLElement>();
 	/** The row a tap on the map marks, by its picker id. */
 	let highlight = $state<string>();
+	/** Keep a country selected while the picker enters its continent. */
+	let countryToMark = $state<string>();
 	/** Said above the rows when a tapped country has no maps of its own. */
 	let note = $state<string>();
 	let labels: { remove(): void }[] = [];
@@ -111,9 +117,19 @@
 	// A continent the player chose - its name, a country on the world, or its
 	// heading in the panel. Only these tell the tutorial (#80): a view restored
 	// from storage, or set by the tutorial itself, is no choice.
-	function chooseContinent(id: string) {
+	function chooseContinent(id: string, countryId?: string) {
+		countryToMark = countryId;
 		setPickerView(id);
 		tutorialContinentChosen(id);
+	}
+
+	function openCountryMap(id: string): boolean {
+		const group = groups.find((candidate) => pickerIdOf(candidate) === id);
+		const mapId = group && pickerDefaultMapIdOf(group);
+		if (!mapId) return false;
+		countryToMark = undefined;
+		void goto(resolve('/map/[mapId]', { mapId }));
+		return true;
 	}
 
 	function clearLabels() {
@@ -228,6 +244,8 @@
 				const [west, south, east, north] = boxOf(start);
 				map = new maplibregl.Map({
 					container,
+					// Country taps navigate immediately; avoid an extra double-click zoom.
+					doubleClickZoom: false,
 					bounds: [
 						[west, south],
 						[east, north]
@@ -309,11 +327,17 @@
 					const id = feature?.properties?.id as string | undefined;
 					const continent = feature?.properties?.continent as string | undefined;
 					if (!id || !continent) return;
-					// On the world, any country is a way into its continent; on a
-					// continent, only its own countries answer.
-					if (view === 'world') chooseContinent(continent);
-					else if (continent === view) {
-						markCountry(id);
+					// A mapped country opens directly. A country without maps keeps
+					// the continent notice; clicks outside the current continent do nothing.
+					if (view === 'world') {
+						const tutorialRunning = tutorialState().status !== 'idle';
+						if (!tutorialRunning && openCountryMap(id)) return;
+						chooseContinent(continent, id);
+					} else if (continent === view) {
+						const tutorialRunning = tutorialState().status !== 'idle';
+						if (!tutorialRunning && openCountryMap(id)) return;
+						countryToMark = undefined;
+						void markCountry(id);
 						tutorialCountryChosen(id);
 					}
 				});
@@ -339,6 +363,7 @@
 	$effect(() => {
 		const v = view;
 		if (!loaded) return;
+		if (v === 'world') countryToMark = undefined;
 		untrack(() => {
 			highlight = undefined;
 			note = undefined;
@@ -359,10 +384,21 @@
 		const step = tutorialStep;
 		if (!loaded) return;
 		untrack(() => {
+			countryToMark = undefined;
 			if (step === 'choose-continent') setPickerView('world');
 			else if (step === 'choose-country' || step === 'choose-map')
 				setPickerView(TUTORIAL_CONTINENT);
 		});
+	});
+
+	// Carry a no-map or tutorial country selection into its continent so the
+	// existing notice/highlight remains visible after the view changes.
+	$effect(() => {
+		const v = view;
+		const selected = countryToMark;
+		if (!loaded || v === 'world' || !selected) return;
+		if (picker?.countries.some((country) => country.id === selected && country.continent === v))
+			void markCountry(selected);
 	});
 
 	// Italy's row lit for the step that points at it, however the player got

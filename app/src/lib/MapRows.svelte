@@ -5,7 +5,7 @@
 	// alike. Germany's fourteen maps are one row.
 	import { goto } from '$app/navigation';
 	import { resolve } from '$app/paths';
-	import { rowNameOf } from './catalogSections';
+	import { isContinentGroup, rowNameOf } from './catalogSections';
 	import { groupProgress, type Mastery } from './homeProgress';
 	import { t } from './i18n.svelte';
 	import KnownProgress from './KnownProgress.svelte';
@@ -73,7 +73,9 @@
 					if (mapId) goto(resolve('/map/[mapId]', { mapId }));
 				}}
 			>
-				<option value="" selected>{t('home.chooseMap')}</option>
+				{#if isContinentGroup(group)}
+					<option value="" selected>{t('home.chooseMap')}</option>
+				{/if}
 				{#each group.maps as map (map.id)}
 					<option value={map.id}>{map.label}</option>
 				{/each}

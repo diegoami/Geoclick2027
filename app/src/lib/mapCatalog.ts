@@ -1,5 +1,5 @@
 // Single source of truth for "which country and map-type does this map id
-// belong to" - used by the home page (to build the grouped/alphabetized
+// belong to" - used by the home page (to build the grouped and ordered
 // list) and by every map-scoped view (to build a translated breadcrumb,
 // e.g. "Sweden — Towns") instead of reading the untranslatable English
 // `name` baked into each map's own map.json at build time. See
@@ -28,14 +28,16 @@ interface CountryGroup {
 	/** The country or continent on the start screen's map (FT-77), where its
 	 * id is not simply the group's name made into an id (pickerIdOf). */
 	pickerId?: string;
+	/** Override the first map in catalog order for a world-picker entry tap. */
+	pickerDefaultMapId?: string;
 	maps: MapEntry[];
 }
 
-// Alphabetical by country name, each country's own maps alphabetical by
-// their (untranslated) English label - matches DECISIONS.md's "Home page
-// map list" entry. Country order/grouping lives here now instead of
-// +page.svelte so this module can also answer "what's map X called" for
-// the breadcrumb.
+// Alphabetical by country name. Each country's maps are deliberately ordered
+// broad-to-specific for the picker and MapNav selectors; continent map order
+// remains curated. Country order/grouping lives here now instead of
+// +page.svelte so this module can also answer "what's map X called" for the
+// breadcrumb.
 export const mapGroups: CountryGroup[] = [
 	// A continent is a group like a country (#39): its Countries and
 	// Capitals maps, and for Europe its five parts' cities, sorted with the
@@ -153,26 +155,16 @@ export const mapGroups: CountryGroup[] = [
 		country: 'France',
 		maps: [
 			{ id: 'france-regions', labelKey: 'mapType.regions' },
-			{ id: 'france-towns-100k', labelKey: 'mapType.towns' },
 			{ id: 'france-departments', labelKey: 'mapType.departments' },
 			{ id: 'france-departments-north', labelKey: 'mapType.departments', partKey: 'mapPart.north' },
-			{ id: 'france-departments-south', labelKey: 'mapType.departments', partKey: 'mapPart.south' }
+			{ id: 'france-departments-south', labelKey: 'mapType.departments', partKey: 'mapPart.south' },
+			{ id: 'france-towns-100k', labelKey: 'mapType.towns' }
 		]
 	},
 	{
 		country: 'Germany',
 		maps: [
 			{ id: 'germany-states', labelKey: 'mapType.states' },
-			{ id: 'germany-towns-100k', labelKey: 'mapType.towns' },
-			// Six parts of the country by its states: 60 towns each from
-			// Wikidata (#39, batch C), and every Kreis from the BKG register
-			// (batch D).
-			{ id: 'germany-towns-center', labelKey: 'mapType.towns', partKey: 'mapPart.center' },
-			{ id: 'germany-towns-east', labelKey: 'mapType.towns', partKey: 'mapPart.east' },
-			{ id: 'germany-towns-north', labelKey: 'mapType.towns', partKey: 'mapPart.north' },
-			{ id: 'germany-towns-southeast', labelKey: 'mapType.towns', partKey: 'mapPart.southEast' },
-			{ id: 'germany-towns-southwest', labelKey: 'mapType.towns', partKey: 'mapPart.southWest' },
-			{ id: 'germany-towns-west', labelKey: 'mapType.towns', partKey: 'mapPart.west' },
 			{
 				id: 'germany-districts-center',
 				labelKey: 'mapType.germanDistricts',
@@ -198,7 +190,19 @@ export const mapGroups: CountryGroup[] = [
 				labelKey: 'mapType.germanDistricts',
 				partKey: 'mapPart.southWest'
 			},
-			{ id: 'germany-districts-west', labelKey: 'mapType.germanDistricts', partKey: 'mapPart.west' }
+			{
+				id: 'germany-districts-west',
+				labelKey: 'mapType.germanDistricts',
+				partKey: 'mapPart.west'
+			},
+			// Six country parts: 60 towns each from Wikidata (#39, batch C).
+			{ id: 'germany-towns-100k', labelKey: 'mapType.towns' },
+			{ id: 'germany-towns-center', labelKey: 'mapType.towns', partKey: 'mapPart.center' },
+			{ id: 'germany-towns-east', labelKey: 'mapType.towns', partKey: 'mapPart.east' },
+			{ id: 'germany-towns-north', labelKey: 'mapType.towns', partKey: 'mapPart.north' },
+			{ id: 'germany-towns-southeast', labelKey: 'mapType.towns', partKey: 'mapPart.southEast' },
+			{ id: 'germany-towns-southwest', labelKey: 'mapType.towns', partKey: 'mapPart.southWest' },
+			{ id: 'germany-towns-west', labelKey: 'mapType.towns', partKey: 'mapPart.west' }
 		]
 	},
 	{
@@ -240,14 +244,16 @@ export const mapGroups: CountryGroup[] = [
 	},
 	{
 		country: 'Italy',
+		// The largest administrative units are the Regions; Provinces are finer.
+		pickerDefaultMapId: 'italy-regions',
 		maps: [
+			{ id: 'italy-regions', labelKey: 'mapType.regions' },
 			{ id: 'italy-provinces', labelKey: 'mapType.provinces' },
 			// 110 provinces is the densest map there is; in thirds each one is
 			// readable at the zoom it opens at (FT-29).
 			{ id: 'italy-provinces-north', labelKey: 'mapType.provincesNorth' },
 			{ id: 'italy-provinces-center', labelKey: 'mapType.provincesCenter' },
 			{ id: 'italy-provinces-south', labelKey: 'mapType.provincesSouth' },
-			{ id: 'italy-regions', labelKey: 'mapType.regions' },
 			{ id: 'italy-towns-100k', labelKey: 'mapType.towns' }
 		]
 	},
@@ -269,7 +275,6 @@ export const mapGroups: CountryGroup[] = [
 		country: 'Netherlands',
 		maps: [
 			{ id: 'netherlands-regions', labelKey: 'mapType.provinces' },
-			{ id: 'netherlands-towns-100k', labelKey: 'mapType.towns' },
 			{
 				id: 'netherlands-municipalities-east',
 				labelKey: 'mapType.municipalities',
@@ -294,7 +299,8 @@ export const mapGroups: CountryGroup[] = [
 				id: 'netherlands-municipalities-west',
 				labelKey: 'mapType.municipalities',
 				partKey: 'mapPart.west'
-			}
+			},
+			{ id: 'netherlands-towns-100k', labelKey: 'mapType.towns' }
 		]
 	},
 	{
@@ -329,7 +335,6 @@ export const mapGroups: CountryGroup[] = [
 		country: 'Poland',
 		maps: [
 			{ id: 'poland-regions', labelKey: 'mapType.regions' },
-			{ id: 'poland-towns-100k', labelKey: 'mapType.towns' },
 			{
 				id: 'poland-counties-north',
 				labelKey: 'mapType.polishCounties',
@@ -354,7 +359,8 @@ export const mapGroups: CountryGroup[] = [
 				id: 'poland-counties-south',
 				labelKey: 'mapType.polishCounties',
 				partKey: 'mapPart.south'
-			}
+			},
+			{ id: 'poland-towns-100k', labelKey: 'mapType.towns' }
 		]
 	},
 	{
@@ -407,8 +413,8 @@ export const mapGroups: CountryGroup[] = [
 		country: 'Spain',
 		maps: [
 			{ id: 'spain-regions', labelKey: 'mapType.regions' },
-			{ id: 'spain-towns-100k', labelKey: 'mapType.towns' },
-			{ id: 'spain-provinces', labelKey: 'mapType.provinces' }
+			{ id: 'spain-provinces', labelKey: 'mapType.provinces' },
+			{ id: 'spain-towns-100k', labelKey: 'mapType.towns' }
 		]
 	},
 	{
@@ -514,4 +520,15 @@ function slugify(name: string): string {
  */
 export function pickerIdOf(group: Pick<CountryGroup, 'country' | 'pickerId'>): string {
 	return group.pickerId ?? slugify(group.country);
+}
+
+/** The world-picker entry destination: an explicit preference or first available map. */
+export function pickerDefaultMapIdOf(group: {
+	pickerDefaultMapId?: string;
+	maps: { id: string }[];
+}): string | undefined {
+	const preferred = group.pickerDefaultMapId;
+	return preferred && group.maps.some((map) => map.id === preferred)
+		? preferred
+		: group.maps[0]?.id;
 }
