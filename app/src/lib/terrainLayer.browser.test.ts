@@ -6,7 +6,7 @@ import { beforeEach, describe, expect, it } from 'vitest';
 import { tick } from 'svelte';
 import { render } from 'vitest-browser-svelte';
 import type * as maplibregl from 'maplibre-gl';
-import { getLanguage, setLanguage } from './i18n.svelte';
+import { getLanguage, setLanguage, type Language } from './i18n.svelte';
 import { TERRAIN_SOURCE, TerrainLayer } from './terrainLayer';
 import TerrainLanguageFixture from './terrainLanguage.fixture.svelte';
 
@@ -42,13 +42,12 @@ class FakePopup {
 
 // A MapLibre map reduced to the calls the terrain layer makes. `features` is
 // what the terrain archive's source layers would return.
-function fakeMap(features: Record<string, unknown[]>, imageLoadFails = false) {
+function fakeMap(features: Record<string, unknown[]>) {
 	const sources = new Set<string>();
 	const layers = new Set<string>();
 	const images = new Set<string>();
 	const visibility = new Map<string, string>();
 	const paintProperties = new Map<string, unknown>();
-	const loadedImageUrls: string[] = [];
 	const layerDefinitions = new Map<string, { id: string; [key: string]: unknown }>();
 	const map = {
 		isStyleLoaded: () => true,
@@ -61,11 +60,6 @@ function fakeMap(features: Record<string, unknown[]>, imageLoadFails = false) {
 		addLayer: (layer: { id: string; [key: string]: unknown }, beforeId?: string) => {
 			layers.add(layer.id);
 			layerDefinitions.set(layer.id, { ...layer, beforeId });
-		},
-		loadImage: async (url: string) => {
-			loadedImageUrls.push(url);
-			if (imageLoadFails) throw new Error('local image unavailable');
-			return { data: new Uint8Array(4) };
 		},
 		addImage: (id: string) => void images.add(id),
 		getPaintProperty: () => 0.55,
@@ -82,14 +76,12 @@ function fakeMap(features: Record<string, unknown[]>, imageLoadFails = false) {
 		images,
 		visibility,
 		paintProperties,
-		layerDefinitions,
-		loadedImageUrls
+		layerDefinitions
 	}) as unknown as maplibregl.Map & {
 		images: Set<string>;
 		visibility: Map<string, string>;
 		paintProperties: Map<string, unknown>;
 		layerDefinitions: Map<string, { id: string; [key: string]: unknown }>;
-		loadedImageUrls: string[];
 	};
 }
 
@@ -261,6 +253,21 @@ class TestTerrainLayer extends TerrainLayer {
 	}
 }
 
+/** A layer whose sea-chart art fails to load in one language, for the optional-art paths. */
+class FailingArtTerrainLayer extends TestTerrainLayer {
+	constructor(
+		map: maplibregl.Map,
+		mapId: string,
+		private failFor: Language
+	) {
+		super(map, mapId);
+	}
+	protected override loadSeaDecorationImage(language: Language): Promise<ImageData> {
+		if (language === this.failFor) return Promise.reject(new Error('art unavailable'));
+		return super.loadSeaDecorationImage(language);
+	}
+}
+
 const FEATURES = {
 	physical_labels: [
 		{
@@ -337,9 +344,6 @@ describe('terrain labels and the language', () => {
 		await expect
 			.poll(() => map.paintProperties.get('sea-chart-decoration.fill-pattern'))
 			.toBe('terrain-sea-chart-art-de');
-		expect(decodeURIComponent(map.loadedImageUrls.at(-1)!.split(',')[1]!)).toContain(
-			'Hier sind Drachen'
-		);
 
 		await layer.setVisible(false);
 		expect(map.visibility.get('sea-chart-decoration')).toBe('none');
@@ -348,8 +352,8 @@ describe('terrain labels and the language', () => {
 	});
 
 	it('keeps the regular Terrain layers if the optional decoration cannot load', async () => {
-		const map = fakeMap(FEATURES, true);
-		const layer = new TestTerrainLayer(map, 'test-map');
+		const map = fakeMap(FEATURES);
+		const layer = new FailingArtTerrainLayer(map, 'test-map', 'en');
 		await layer.setVisible(true);
 
 		expect(map.layerDefinitions.has('sea-chart-decoration')).toBe(false);
@@ -359,15 +363,7 @@ describe('terrain labels and the language', () => {
 
 	it('shows the antique pattern again after a failed load, once a later one succeeds (#120)', async () => {
 		const map = fakeMap(FEATURES);
-		const realLoad = map.loadImage;
-		let calls = 0;
-		map.loadImage = async (url: string) => {
-			calls += 1;
-			// The English load in `add()` succeeds; the German one fails.
-			if (calls === 2) throw new Error('local image unavailable');
-			return realLoad(url);
-		};
-		const layer = new TestTerrainLayer(map, 'test-map');
+		const layer = new FailingArtTerrainLayer(map, 'test-map', 'de');
 
 		await layer.setVisible(true);
 		setLanguage('de');

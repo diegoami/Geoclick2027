@@ -131,4 +131,20 @@ describe('country map order', () => {
 			'usa-cities-west'
 		]);
 	});
+
+	it("orders a continent's maps broad to specific: countries, capitals, then city splits", () => {
+		for (const [continent, prefix] of [
+			['Africa', 'africa'],
+			['Asia', 'asia'],
+			['North America', 'north-america'],
+			['Oceania', 'oceania'],
+			['South America', 'south-america']
+		] as const) {
+			expect(idsFor(continent)).toEqual([`${prefix}-countries`, `${prefix}-capitals`]);
+		}
+		const europe = idsFor('Europe');
+		expect(europe[0]).toBe('europe-countries');
+		expect(europe[1]).toBe('europe-capitals');
+		expect(europe.slice(2).every((id) => id.startsWith('europe-cities-'))).toBe(true);
+	});
 });

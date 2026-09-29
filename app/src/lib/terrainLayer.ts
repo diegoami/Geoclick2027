@@ -35,7 +35,7 @@ import { registerTilesArchive } from './pmtilesSource';
 import { registerLabel } from './labelCollision';
 import { isNativeShell } from './platform';
 import { getLanguage, type Language } from './i18n.svelte';
-import { seaChartPatternDataUrl, seaChartPatternImageId } from './seaChartPattern';
+import { loadSeaChartPattern, seaChartPatternImageId } from './seaChartPattern';
 
 export const TERRAIN_SOURCE = 'terrain';
 const SEA_DECORATION_LAYER = 'sea-chart-decoration';
@@ -383,7 +383,7 @@ export class TerrainLayer {
 		const imageId = seaChartPatternImageId(language);
 		try {
 			if (!this.map.hasImage(imageId)) {
-				const { data: image } = await this.map.loadImage(seaChartPatternDataUrl(language));
+				const image = await this.loadSeaDecorationImage(language);
 				if (!this.map.hasImage(imageId)) this.map.addImage(imageId, image, { pixelRatio: 1 });
 			}
 			// A later language choice or Terrain-off press wins over this load.
@@ -404,6 +404,15 @@ export class TerrainLayer {
 				this.seaDecorationHidden = true;
 			}
 		}
+	}
+
+	/**
+	 * The rasterised sea-chart art. A method rather than the imported function
+	 * directly, so a test can make the optional art fail and still see the
+	 * geographic Terrain layers survive.
+	 */
+	protected loadSeaDecorationImage(language: Language): Promise<ImageData> {
+		return loadSeaChartPattern(language);
 	}
 
 	/**
@@ -461,7 +470,7 @@ export class TerrainLayer {
 		let hasSeaDecoration = this.map.hasImage(imageId);
 		try {
 			if (!hasSeaDecoration) {
-				const { data: image } = await this.map.loadImage(seaChartPatternDataUrl(language));
+				const image = await this.loadSeaDecorationImage(language);
 				this.map.addImage(imageId, image, { pixelRatio: 1 });
 				hasSeaDecoration = true;
 			}

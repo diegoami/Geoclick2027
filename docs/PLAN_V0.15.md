@@ -37,7 +37,9 @@ currently puts Provinces before Regions). Proposal #112 also found
   map; zoomed/split maps at that level; smaller administrative divisions,
   broad-to-narrow and adjacent to their split maps; full-country cities/towns;
   city/town subsets; other map types last. Picker and in-map selectors share
-  the catalog order.
+  the catalog order. **Amended 2026-09-29 (owner):** a continent's maps follow
+  the same idea — the continent's Countries map first, then Capitals, then the
+  city splits.
 - Remove the “Choose map” placeholder from country selectors, and — owner
   decision 2026-09-29, superseding the earlier “continent rows may retain it”
   — from the continent selectors too, so every row starts uncommitted. The
