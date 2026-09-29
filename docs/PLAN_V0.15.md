@@ -102,4 +102,4 @@ currently puts Provinces before Regions). Proposal #112 also found
 | ----- | ----------- | ------- | --------------------------------------------- |
 | FT-86 | merged      | efb7027 | direct one-tap map entry and preferred map    |
 | FT-87 | merged      | efb7027 | placeholder-free, broad-to-specific selectors |
-| FT-88 | in progress |         | antique-cartography sea decoration            |
+| FT-88 | merged | 6bf9c2e | antique-cartography sea decoration            |
