@@ -137,6 +137,7 @@ export type TranslationKey =
 	| 'mapPart.west'
 	| 'mapPart.center'
 	| 'mapPart.southWest'
+	| 'mapArt.hereBeDragons'
 	| 'mapPart.southEast'
 	| 'quiz.subtitle'
 	| 'quiz.closeAriaLabel'
@@ -314,6 +315,7 @@ const en: Dictionary = {
 	'mapPart.west': 'West',
 	'mapPart.center': 'Center',
 	'mapPart.southWest': 'South-West',
+	'mapArt.hereBeDragons': 'Here be dragons',
 	'mapPart.southEast': 'South-East',
 
 	'quiz.subtitle': 'Drag each name onto its region — {placed} / {total} placed',
@@ -508,6 +510,7 @@ const de: Dictionary = {
 	'mapPart.west': 'Westen',
 	'mapPart.center': 'Mitte',
 	'mapPart.southWest': 'Südwesten',
+	'mapArt.hereBeDragons': 'Hier sind Drachen',
 	'mapPart.southEast': 'Südosten',
 
 	'quiz.subtitle': 'Ziehe jeden Namen auf seine Region — {placed} / {total} platziert',
@@ -704,6 +707,7 @@ const it: Dictionary = {
 	'mapPart.west': 'Ovest',
 	'mapPart.center': 'Centro',
 	'mapPart.southWest': 'Sud-ovest',
+	'mapArt.hereBeDragons': 'Qui ci sono i draghi',
 	'mapPart.southEast': 'Sud-est',
 
 	'quiz.subtitle': 'Trascina ogni nome sulla sua regione — {placed} / {total} posizionati',
@@ -833,6 +837,15 @@ function interpolate(template: string, params?: Record<string, string | number>)
 
 export function t(key: TranslationKey, params?: Record<string, string | number>): string {
 	return interpolate(dictionaries[currentLanguage][key], params);
+}
+
+/** Translate outside the active-language UI, e.g. into bundled map artwork. */
+export function tForLanguage(
+	key: TranslationKey,
+	language: Language,
+	params?: Record<string, string | number>
+): string {
+	return interpolate(dictionaries[language][key], params);
 }
 
 // Picks the `.one`/`.other` variant of a pair of keys sharing the same

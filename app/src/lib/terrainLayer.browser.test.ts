@@ -1,7 +1,7 @@
 // Runs in the browser project (real Chromium): the labels are DOM popups and
 // the language is module-scope state, so both the DOM and a real module
-// instance are part of what is under test. FT-53 (issue #3) and FT-54
-// (issue #2).
+// instance are part of what is under test. FT-53 (issue #3), FT-54
+// (issue #2), and FT-88 (proposal #112).
 import { beforeEach, describe, expect, it } from 'vitest';
 import { tick } from 'svelte';
 import { render } from 'vitest-browser-svelte';
@@ -42,24 +42,55 @@ class FakePopup {
 
 // A MapLibre map reduced to the calls the terrain layer makes. `features` is
 // what the terrain archive's source layers would return.
-function fakeMap(features: Record<string, unknown[]>) {
+function fakeMap(features: Record<string, unknown[]>, imageLoadFails = false) {
 	const sources = new Set<string>();
 	const layers = new Set<string>();
-	return {
+	const images = new Set<string>();
+	const visibility = new Map<string, string>();
+	const paintProperties = new Map<string, unknown>();
+	const loadedImageUrls: string[] = [];
+	const layerDefinitions = new Map<string, { id: string; [key: string]: unknown }>();
+	const map = {
 		isStyleLoaded: () => true,
 		isSourceLoaded: () => true,
 		getSource: (id: string) => (sources.has(id) ? {} : undefined),
 		addSource: (id: string) => void sources.add(id),
-		getLayer: (id: string) => (layers.has(id) ? {} : undefined),
-		addLayer: (layer: { id: string }) => void layers.add(layer.id),
+		getLayer: (id: string) =>
+			id === 'context-fill' || id === 'targets-fill' || layers.has(id) ? {} : undefined,
+		hasImage: (id: string) => images.has(id),
+		addLayer: (layer: { id: string; [key: string]: unknown }, beforeId?: string) => {
+			layers.add(layer.id);
+			layerDefinitions.set(layer.id, { ...layer, beforeId });
+		},
+		loadImage: async (url: string) => {
+			loadedImageUrls.push(url);
+			if (imageLoadFails) throw new Error('local image unavailable');
+			return { data: new Uint8Array(4) };
+		},
+		addImage: (id: string) => void images.add(id),
 		getPaintProperty: () => 0.55,
-		setPaintProperty: () => {},
-		setLayoutProperty: () => {},
+		setPaintProperty: (layer: string, property: string, value: unknown) =>
+			void paintProperties.set(`${layer}.${property}`, value),
+		setLayoutProperty: (id: string, _property: string, value: string) =>
+			void visibility.set(id, value),
 		querySourceFeatures: (_source: string, { sourceLayer }: { sourceLayer: string }) =>
 			features[sourceLayer] ?? [],
 		on: () => {},
 		off: () => {}
-	} as unknown as maplibregl.Map;
+	};
+	return Object.assign(map, {
+		images,
+		visibility,
+		paintProperties,
+		layerDefinitions,
+		loadedImageUrls
+	}) as unknown as maplibregl.Map & {
+		images: Set<string>;
+		visibility: Map<string, string>;
+		paintProperties: Map<string, unknown>;
+		layerDefinitions: Map<string, { id: string; [key: string]: unknown }>;
+		loadedImageUrls: string[];
+	};
 }
 
 // A map whose style is not ready yet, so `setVisible(true)` parks inside
@@ -67,6 +98,7 @@ function fakeMap(features: Record<string, unknown[]>) {
 // the load land, and the harness records what the layer then did.
 function loadingMap() {
 	const sources = new Set<string>();
+	const images = new Set<string>();
 	let addSourceCalls = 0;
 	const added: string[] = [];
 	const visibility = new Map<string, string>();
@@ -88,7 +120,10 @@ function loadingMap() {
 		// targets-fill is a real style layer the dimming touches; the terrain
 		// layers only exist once `add()` has run.
 		getLayer: (id: string) => (id === 'targets-fill' || added.includes(id) ? {} : undefined),
+		hasImage: (id: string) => images.has(id),
 		addLayer: (layer: { id: string }) => void added.push(layer.id),
+		loadImage: async () => ({ data: new Uint8Array(4) }),
+		addImage: (id: string) => void images.add(id),
 		getPaintProperty: () => 0.55,
 		setPaintProperty: (layer: string, _property: string, value: unknown) =>
 			void dims.push({ layer, value }),
@@ -124,6 +159,7 @@ function loadingMap() {
 // delivers the tiles - after the player may have switched Terrain off.
 function sourceLoadingMap() {
 	const added: string[] = [];
+	const images = new Set<string>();
 	const visibility = new Map<string, string>();
 	const dims: Array<{ layer: string; value: unknown }> = [];
 	const listeners = new Map<string, Set<(...args: unknown[]) => void>>();
@@ -133,7 +169,10 @@ function sourceLoadingMap() {
 		getSource: () => undefined,
 		addSource: () => {},
 		getLayer: (id: string) => (id === 'targets-fill' || added.includes(id) ? {} : undefined),
+		hasImage: (id: string) => images.has(id),
 		addLayer: (layer: { id: string }) => void added.push(layer.id),
+		loadImage: async () => ({ data: new Uint8Array(4) }),
+		addImage: (id: string) => void images.add(id),
 		getPaintProperty: () => 0.55,
 		setPaintProperty: (layer: string, _property: string, value: unknown) =>
 			void dims.push({ layer, value }),
@@ -166,6 +205,7 @@ function sourceLoadingMap() {
 // features until `emitTilesBack()` delivers them again.
 function tilesDroppedWhenHiddenMap() {
 	const added: string[] = [];
+	const images = new Set<string>();
 	const listeners = new Map<string, Set<(...args: unknown[]) => void>>();
 	let hasTiles = true;
 	const map = {
@@ -174,7 +214,10 @@ function tilesDroppedWhenHiddenMap() {
 		getSource: () => undefined,
 		addSource: () => {},
 		getLayer: (id: string) => (id === 'targets-fill' || added.includes(id) ? {} : undefined),
+		hasImage: (id: string) => images.has(id),
 		addLayer: (layer: { id: string }) => void added.push(layer.id),
+		loadImage: async () => ({ data: new Uint8Array(4) }),
+		addImage: (id: string) => void images.add(id),
 		getPaintProperty: () => 0.55,
 		setPaintProperty: () => {},
 		setLayoutProperty: (_id: string, _property: string, value: string) => {
@@ -272,6 +315,47 @@ describe('terrain labels and the language', () => {
 		layer.refreshLabels('it');
 		expect(layer.labels()).toEqual([]);
 	});
+
+	it('draws the antique pattern only in sea and follows the Terrain toggle', async () => {
+		const map = fakeMap(FEATURES);
+		const layer = new TestTerrainLayer(map, 'test-map');
+		await layer.setVisible(true);
+
+		expect(map.images.has('terrain-sea-chart-art-en')).toBe(true);
+		expect(map.layerDefinitions.get('sea-chart-decoration')).toMatchObject({
+			type: 'fill',
+			source: TERRAIN_SOURCE,
+			'source-layer': 'sea',
+			beforeId: 'context-fill',
+			paint: {
+				'fill-pattern': 'terrain-sea-chart-art-en',
+				'fill-opacity': 0.55
+			}
+		});
+		setLanguage('de');
+		layer.refreshLabels('de');
+		await expect
+			.poll(() => map.paintProperties.get('sea-chart-decoration.fill-pattern'))
+			.toBe('terrain-sea-chart-art-de');
+		expect(decodeURIComponent(map.loadedImageUrls.at(-1)!.split(',')[1]!)).toContain(
+			'Hier sind Drachen'
+		);
+
+		await layer.setVisible(false);
+		expect(map.visibility.get('sea-chart-decoration')).toBe('none');
+		await layer.setVisible(true);
+		expect(map.visibility.get('sea-chart-decoration')).toBe('visible');
+	});
+
+	it('keeps the regular Terrain layers if the optional decoration cannot load', async () => {
+		const map = fakeMap(FEATURES, true);
+		const layer = new TestTerrainLayer(map, 'test-map');
+		await layer.setVisible(true);
+
+		expect(map.layerDefinitions.has('sea-chart-decoration')).toBe(false);
+		expect(map.layerDefinitions.has('sea-fill')).toBe(true);
+		expect(layer.labels()).toEqual(['Alps', 'Mont Blanc 4,807 m']);
+	});
 });
 
 // FT-54, issue #2: terrain is on by default and its first load waits for the
@@ -292,8 +376,15 @@ describe('a toggle during the first load', () => {
 		await showing;
 
 		expect(harness.addSourceCalls()).toBe(1); // one addSource, not two
-		expect(harness.added).toHaveLength(5);
-		expect([...harness.visibility.values()]).toEqual(['none', 'none', 'none', 'none', 'none']);
+		expect(harness.added).toHaveLength(6);
+		expect([...harness.visibility.values()]).toEqual([
+			'none',
+			'none',
+			'none',
+			'none',
+			'none',
+			'none'
+		]);
 		expect(harness.dims).toEqual([]); // nothing left dimmed
 		expect(layer.labels()).toEqual([]); // and no names on the map
 	});

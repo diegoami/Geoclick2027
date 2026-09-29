@@ -1948,6 +1948,11 @@ answers:
 - **One setting for every map, not one per map.** A player who wants the sea
   wants it everywhere; having to switch it on again for each of 63 maps
   would be worse than no setting. Unchanged.
+- **Antique-map decoration belongs to Terrain (2026-09-29, FT-88).** Original,
+  bundled vector motifs live only in empty sea, below the geography and labels,
+  and follow the existing Terrain preference. No scanned map art or runtime
+  network asset; “Here be dragons” is rendered from localized English, German,
+  and Italian text without MapLibre's remote glyph server.
 - **Named features, not elevation shading.** What helps a mnemonic is a
   *name* — the Alps, the Adriatic, the Po — and Natural Earth already has
   1 047 named land features and 306 named marine ones, carrying German and

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 1024 1024">
+	<g fill="none" stroke="#627b7d" stroke-linecap="round" stroke-linejoin="round">
+		<!-- Fine wave hatching keeps the open sea from reading as blank paper. -->
+		<g stroke-width="2" opacity="0.34">
+			<path d="M28 320c24-16 48-16 72 0s48 16 72 0 48-16 72 0 48 16 72 0" />
+			<path d="M530 92c22-14 44-14 66 0s44 14 66 0 44-14 66 0 44 14 66 0" />
+			<path d="M430 912c24-16 48-16 72 0s48 16 72 0 48-16 72 0 48 16 72 0" />
+			<path d="M720 720c22-14 44-14 66 0s44 14 66 0 44-14 66 0" />
+			<path d="M52 790c20-13 40-13 60 0s40 13 60 0 40-13 60 0" />
+		</g>
+
+		<!-- An eight-point compass rose, drawn as original line art. -->
+		<g transform="translate(190 174)" stroke-width="4" opacity="0.52">
+			<circle r="72" />
+			<circle r="9" />
+			<path d="M0-60 9-9 60 0 9 9 0 60-9 9-60 0-9-9z" />
+			<path d="m0-60 0 60 60 0M60 0 0 0 0 60M0 60 0 0-60 0M-60 0 0 0 0-60" />
+			<path d="m-42-42 42 42 42 42M42-42 0 0-42 42" stroke-width="2" />
+		</g>
+
+		<!-- A sea dragon with curled tail, fins and a small wake. -->
+		<g transform="translate(630 405) rotate(-12)" stroke-width="5" opacity="0.56">
+			<path d="M-160 44c-24-43-6-94 42-117 44-21 91-1 93 35 2 34-43 51-70 28-18-16-8-43 13-45" />
+			<path d="M-117 2c26 37 57 60 100 63 45 3 79-23 111-14 26 8 42 37 64 39 22 2 42-19 62-41-6 36-30 76-66 83-33 7-57-22-83-26-37-7-76 34-130 27-42-5-80-33-104-70" />
+			<path d="m153 49 38-20-13 35 33 25-43-4-19 34-1-41-39-14 41-4z" />
+			<path d="m-35 61-34 37 5-52M37 69l13 45 22-42M102 69l39 29-46-9" />
+			<path d="m182 15 28-29 16 8-20 25M186 23l34-11 10 13-37 12" />
+			<circle cx="193" cy="3" r="3" fill="#627b7d" />
+			<path d="M-6-20c15-9 32-8 44 3M-12-7c16-7 34-5 45 6M-12 7c15-6 30-3 40 7" stroke-width="2" />
+		</g>
+		<g transform="translate(650 610)" fill="#765f48" stroke="none" opacity="0.52">
+			<path d="M-110 12h220" stroke="#765f48" stroke-width="2" />
+			<text
+				x="0"
+				y="0"
+				text-anchor="middle"
+				font-family="serif"
+				font-size="24"
+				font-style="italic"
+				letter-spacing="2"
+			>@@DRAGON_INSCRIPTION@@</text>
+		</g>
+
+		<!-- A small lateen-sailed ship sailing over the lower waves. -->
+		<g transform="translate(236 725)" stroke-width="4" opacity="0.5">
+			<path d="M-103 48h203l-31 39H-69z" />
+			<path d="M-10 46V-122M-7-111l-74 113h74M0-99 66 2H0" />
+			<path d="M-78 3c20 11 39 11 58 0M8 6c20 10 39 10 58 0" stroke-width="2" />
+			<path d="M-130 111c23-14 46-14 69 0s46 14 69 0 46-14 69 0 46 14 69 0" stroke-width="3" />
+			<path d="M-106 132c20-12 40-12 60 0s40 12 60 0 40-12 60 0 40 12 60 0" stroke-width="2" />
+		</g>
+	</g>
+</svg>

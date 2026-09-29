@@ -23,7 +23,11 @@ describe('My maps', () => {
 		await expect.element(recent).toBeVisible();
 		const order = favourites.element().compareDocumentPosition(recent.element());
 		expect(order & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
-		await expect.element(screen.getByRole('link', { name: /Italy — Regions/ })).toBeVisible();
+		const italyFavourite = favourites
+			.element()
+			.closest('section')
+			?.querySelector('a[href="/map/italy-regions"]');
+		expect(italyFavourite?.textContent).toContain('Italy — Regions');
 		await expect.element(screen.getByRole('link', { name: 'Back' })).toBeVisible();
 	});
 });

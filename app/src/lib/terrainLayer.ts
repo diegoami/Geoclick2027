@@ -8,14 +8,14 @@
 // session. With this on, Liguria is the one on the sea, Trentino is the one
 // against the Alps, and Lombardia is where the Po runs.
 //
-// Three things about the shape of this module, each of them deliberate:
+// Four things about the shape of this module, each of them deliberate:
 //
 //  1. It is added at RUNTIME, not declared in data/styles/base.json, and it
 //     comes from its own archive (terrain.pmtiles, not tiles.pmtiles).
 //     geoclickMap.ts pulls a whole archive into memory on desktop and
-//     Android - neither shell serves range requests - so a layer that is
-//     off by default must not be inside the tileset every map already
-//     loads. Nothing is fetched until the button is pressed the first time.
+//     Android - neither shell serves range requests - so it is not inside
+//     the tileset every map already loads. A player who turns Terrain off
+//     does not pay for this archive.
 //  2. The names are DOM popups through labelCollision.ts, not a MapLibre
 //     symbol layer, for the reason base.json's own note gives: the style's
 //     glyph URL points at a public font server, and the desktop and Android
@@ -24,16 +24,21 @@
 //     be declared in a style whose source does not exist yet - MapLibre
 //     rejects a layer with a missing source at style load. base.json's
 //     metadata note points here so the style file still tells the story.
+//  4. The antique sea-chart pattern is a bundled SVG, added only when Terrain
+//     is shown. It needs no glyph or network dependency and cannot intercept
+//     clicks because it is a fill beneath the playable targets.
 
 import * as maplibregl from 'maplibre-gl';
-import type { LayerSpecification } from 'maplibre-gl';
+import type { FillLayerSpecification, LayerSpecification } from 'maplibre-gl';
 import { asset } from '$app/paths';
 import { registerTilesArchive } from './pmtilesSource';
 import { registerLabel } from './labelCollision';
 import { isNativeShell } from './platform';
 import { getLanguage, type Language } from './i18n.svelte';
+import { seaChartPatternDataUrl, seaChartPatternImageId } from './seaChartPattern';
 
 export const TERRAIN_SOURCE = 'terrain';
+const SEA_DECORATION_LAYER = 'sea-chart-decoration';
 
 // Below every target layer: this is background, and the target fills are
 // translucent enough (0.55) to let it through. base.json's first layer id.
@@ -80,6 +85,13 @@ const LAYERS: LayerSpecification[] = [
 		source: TERRAIN_SOURCE,
 		'source-layer': 'sea',
 		paint: { 'fill-color': '#c5dcea', 'fill-opacity': 0.85 }
+	},
+	{
+		id: SEA_DECORATION_LAYER,
+		type: 'fill',
+		source: TERRAIN_SOURCE,
+		'source-layer': 'sea',
+		paint: { 'fill-pattern': seaChartPatternImageId('en'), 'fill-opacity': 0.55 }
 	},
 	{
 		id: 'terrain-fill',
@@ -198,6 +210,7 @@ function labelFor(properties: Record<string, unknown>, language: Language): stri
 export class TerrainLayer {
 	private popups: maplibregl.Popup[] = [];
 	private added = false;
+	private seaDecorationGeneration = 0;
 	/**
 	 * The latest visibility the button asked for (FT-53). Kept so a label
 	 * refresh cannot put names back on a layer the player has switched off.
@@ -281,9 +294,11 @@ export class TerrainLayer {
 				}
 			}
 			this.dimOverlyingLayers(true);
+			void this.updateSeaDecoration(getLanguage());
 			this.drawLabelsWhenSourceReady();
 			return;
 		}
+		this.seaDecorationGeneration++;
 		this.removeLabels();
 		this.clearSourceReady();
 		this.dimOverlyingLayers(false);
@@ -349,6 +364,29 @@ export class TerrainLayer {
 	refreshLabels(language: Language): void {
 		if (!this.visible || !this.added) return;
 		this.drawLabels(language);
+		void this.updateSeaDecoration(language);
+	}
+
+	/** Load the localized pattern and change only the non-interactive sea layer. */
+	private async updateSeaDecoration(language: Language): Promise<void> {
+		if (!this.visible || !this.added || !this.map.getLayer(SEA_DECORATION_LAYER)) return;
+		const generation = ++this.seaDecorationGeneration;
+		const imageId = seaChartPatternImageId(language);
+		try {
+			if (!this.map.hasImage(imageId)) {
+				const { data: image } = await this.map.loadImage(seaChartPatternDataUrl(language));
+				if (!this.map.hasImage(imageId)) this.map.addImage(imageId, image, { pixelRatio: 1 });
+			}
+			// A later language choice or Terrain-off press wins over this load.
+			if (generation !== this.seaDecorationGeneration || !this.visible) return;
+			this.map.setPaintProperty(SEA_DECORATION_LAYER, 'fill-pattern', imageId);
+		} catch {
+			// Leave the plain sea fill rather than showing an inscription in the
+			// wrong language or letting optional art affect gameplay.
+			if (generation === this.seaDecorationGeneration) {
+				this.map.setLayoutProperty(SEA_DECORATION_LAYER, 'visibility', 'none');
+			}
+		}
 	}
 
 	/**
@@ -399,9 +437,36 @@ export class TerrainLayer {
 		await this.whenStyleReady();
 		if (this.map.getSource(TERRAIN_SOURCE)) return;
 
+		// The art is local and decorative: if an older shell or a packaging
+		// mistake cannot load it, keep the geographic Terrain layers working.
+		const language = getLanguage();
+		const imageId = seaChartPatternImageId(language);
+		let hasSeaDecoration = this.map.hasImage(imageId);
+		try {
+			if (!hasSeaDecoration) {
+				const { data: image } = await this.map.loadImage(seaChartPatternDataUrl(language));
+				this.map.addImage(imageId, image, { pixelRatio: 1 });
+				hasSeaDecoration = true;
+			}
+		} catch {
+			// Sea art is optional; never let it break a map or the Terrain toggle.
+		}
+
 		this.map.addSource(TERRAIN_SOURCE, { type: 'vector', url: `pmtiles://${url}` });
 		const before = this.map.getLayer(BEFORE_LAYER) ? BEFORE_LAYER : undefined;
-		for (const layer of LAYERS) this.map.addLayer(layer, before);
+		for (const layer of LAYERS) {
+			if (layer.id === SEA_DECORATION_LAYER && !hasSeaDecoration) continue;
+			if (layer.id === SEA_DECORATION_LAYER) {
+				const fillLayer = layer as FillLayerSpecification;
+				this.map.addLayer(
+					{
+						...fillLayer,
+						paint: { ...fillLayer.paint, 'fill-pattern': imageId }
+					},
+					before
+				);
+			} else this.map.addLayer(layer, before);
+		}
 		this.added = true;
 
 		// The player may have switched Terrain off while the archive was
@@ -412,6 +477,7 @@ export class TerrainLayer {
 			return;
 		}
 		this.dimOverlyingLayers(true);
+		void this.updateSeaDecoration(getLanguage());
 
 		// The label points arrive with the tiles, so wait for the source
 		// before asking for them.
@@ -497,6 +563,7 @@ export class TerrainLayer {
 	}
 
 	destroy(): void {
+		this.seaDecorationGeneration++;
 		this.clearSourceReady();
 		this.removeLabels();
 	}

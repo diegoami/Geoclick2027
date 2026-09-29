@@ -1,9 +1,10 @@
-# v0.15.0 — direct map entry and in-country switching
+# v0.15.0 — direct map entry, in-country switching, and antique sea art
 
-> **Scope approved** by the owner on 2026-09-28 via proposal
-> [#110](https://github.com/diegoami/Geoclick2027/issues/110). This is one
-> connected start/map navigation feature. The proposal is the decision thread;
-> this plan holds the implementation tasks and ledger.
+> Navigation scope approved via proposal
+> [#110](https://github.com/diegoami/Geoclick2027/issues/110) on 2026-09-28;
+> antique sea art approved via [#112](https://github.com/diegoami/Geoclick2027/issues/112)
+> on 2026-09-29. These are the v0.15 feature set; the proposals are the decision
+> threads, and this plan holds implementation tasks and the ledger.
 
 ## Why
 
@@ -11,13 +12,15 @@ The world picker currently requires a continent drill-down and then a separate
 map selection. Country selectors also begin with a “Choose map” placeholder,
 and maps are not consistently ordered from broad to specific. Once a map is
 open, MapNav has no way to switch to another map in that country, so the player
-goes back to Maps.
+goes back to Maps. The shared Terrain sea is a uniform fill, leaving large
+empty areas around the geography visually blank.
 
 Findings: `WorldPicker.svelte` (country clicks drill down instead of opening a
 map), `MapRows.svelte` (country selectors have a placeholder), `MapNav.svelte`
 (the map selector has a placeholder and omits the active map), and
 `mapCatalog.ts` (catalog arrays need a broad-to-specific country order; Italy
-currently puts Provinces before Regions).
+currently puts Provinces before Regions). Proposal #112 also found
+`terrainLayer.ts:76-83` renders the sea as one flat fill.
 
 ## Design
 
@@ -40,6 +43,13 @@ currently puts Provinces before Regions).
   choosing another opens Known at the base `/map/[mapId]` route. New country
   map picks also open that route, not Overview. The continent-row selector may
   retain its placeholder. Preserve favorites, Recent, direct routes, and Back.
+- **Added 2026-09-29 via #112:** draw a subtle, original vector pattern of
+  antique-chart motifs (sea creature, ship, compass rose, and wave hatching)
+  over empty sea only. Bundle the art locally for offline use, keep it
+  non-interactive and beneath playable geography, and tie its visibility to the
+  existing Terrain preference/toggle. Include a short “Here be dragons”
+  inscription rendered from the player's English, German, or Italian locale;
+  do not use MapLibre's remote glyph server.
 
 ## Tasks
 
@@ -64,15 +74,32 @@ currently puts Provinces before Regions).
 - **DoD:** feature and tests merged; gates green; selector is keyboard and
   screen-reader accessible and fits narrow phone widths.
 
+### FT-88 — antique-cartography sea decoration · Medium
+
+- **Do:** add a low-contrast repeating vector pattern over the Terrain sea
+  polygons using original bundled artwork. It is visible with Terrain and
+  hidden by the existing Terrain toggle; geography, labels, and hit layers stay
+  unchanged. Its inscription is localized in the bundled SVG data, without
+  remote glyphs.
+- **Test:** browser-layer tests verify the pattern is added only on the `sea`
+  source layer, follows Terrain visibility, and gracefully falls back to the
+  plain sea fill if the local asset cannot load. Review desktop and phone
+  screenshots for scale, contrast, and placement.
+- **DoD:** all gates green; vector asset is bundled/offline; no map interaction
+  or target-label behavior changes.
+
 ## Out of scope
 
 - Adding maps, changing source geometries, or changing catalog labels.
+- Replacing the whole basemap, using unlicensed historical scans, or adding a
+  general theme/customization system.
 - Animations, a map editor/self-serve map-authoring, SSO/sync, or other backlog
   items in ROADMAP.md. These require separate owner-approved scope.
 
 ## Progress ledger
 
-| Task  | State       | Merge | Notes                                         |
-| ----- | ----------- | ----- | --------------------------------------------- |
-| FT-86 | merged | efb7027 | direct one-tap map entry and preferred map    |
-| FT-87 | merged | efb7027 | placeholder-free, broad-to-specific selectors |
+| Task  | State       | Merge   | Notes                                         |
+| ----- | ----------- | ------- | --------------------------------------------- |
+| FT-86 | merged      | efb7027 | direct one-tap map entry and preferred map    |
+| FT-87 | merged      | efb7027 | placeholder-free, broad-to-specific selectors |
+| FT-88 | in progress |         | antique-cartography sea decoration            |
