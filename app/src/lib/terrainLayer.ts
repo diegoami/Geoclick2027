@@ -14,8 +14,8 @@
 //     comes from its own archive (terrain.pmtiles, not tiles.pmtiles).
 //     geoclickMap.ts pulls a whole archive into memory on desktop and
 //     Android - neither shell serves range requests - so it is not inside
-//     the tileset every map already loads. A player who turns Terrain off
-//     does not pay for this archive.
+//     the tileset every map already loads. It is on by default (FT-43), so
+//     it loads with every map unless the player has turned Terrain off.
 //  2. The names are DOM popups through labelCollision.ts, not a MapLibre
 //     symbol layer, for the reason base.json's own note gives: the style's
 //     glyph URL points at a public font server, and the desktop and Android
@@ -212,6 +212,12 @@ export class TerrainLayer {
 	private added = false;
 	private seaDecorationGeneration = 0;
 	/**
+	 * Set when a sea-chart image failed to load and the layer was hidden, so
+	 * the next successful load shows it again without waiting for a Terrain
+	 * toggle (#120).
+	 */
+	private seaDecorationHidden = false;
+	/**
 	 * The latest visibility the button asked for (FT-53). Kept so a label
 	 * refresh cannot put names back on a layer the player has switched off.
 	 */
@@ -293,6 +299,9 @@ export class TerrainLayer {
 					this.map.setLayoutProperty(layer.id, 'visibility', 'visible');
 				}
 			}
+			// Turning Terrain on shows the decoration again too, so the next
+			// pattern load has nothing to restore (#120).
+			this.seaDecorationHidden = false;
 			this.dimOverlyingLayers(true);
 			void this.updateSeaDecoration(getLanguage());
 			this.drawLabelsWhenSourceReady();
@@ -379,12 +388,20 @@ export class TerrainLayer {
 			}
 			// A later language choice or Terrain-off press wins over this load.
 			if (generation !== this.seaDecorationGeneration || !this.visible) return;
+			// A failed earlier load hid the layer (below); show it again now
+			// that an image is in place, rather than making the player toggle
+			// Terrain to get the art back (#120).
+			if (this.seaDecorationHidden) {
+				this.map.setLayoutProperty(SEA_DECORATION_LAYER, 'visibility', 'visible');
+				this.seaDecorationHidden = false;
+			}
 			this.map.setPaintProperty(SEA_DECORATION_LAYER, 'fill-pattern', imageId);
 		} catch {
 			// Leave the plain sea fill rather than showing an inscription in the
 			// wrong language or letting optional art affect gameplay.
 			if (generation === this.seaDecorationGeneration) {
 				this.map.setLayoutProperty(SEA_DECORATION_LAYER, 'visibility', 'none');
+				this.seaDecorationHidden = true;
 			}
 		}
 	}

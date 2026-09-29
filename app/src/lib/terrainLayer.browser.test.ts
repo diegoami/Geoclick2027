@@ -356,6 +356,31 @@ describe('terrain labels and the language', () => {
 		expect(map.layerDefinitions.has('sea-fill')).toBe(true);
 		expect(layer.labels()).toEqual(['Alps', 'Mont Blanc 4,807 m']);
 	});
+
+	it('shows the antique pattern again after a failed load, once a later one succeeds (#120)', async () => {
+		const map = fakeMap(FEATURES);
+		const realLoad = map.loadImage;
+		let calls = 0;
+		map.loadImage = async (url: string) => {
+			calls += 1;
+			// The English load in `add()` succeeds; the German one fails.
+			if (calls === 2) throw new Error('local image unavailable');
+			return realLoad(url);
+		};
+		const layer = new TestTerrainLayer(map, 'test-map');
+
+		await layer.setVisible(true);
+		setLanguage('de');
+		layer.refreshLabels('de');
+		await expect.poll(() => map.visibility.get('sea-chart-decoration')).toBe('none');
+
+		setLanguage('en');
+		layer.refreshLabels('en');
+		await expect.poll(() => map.visibility.get('sea-chart-decoration')).toBe('visible');
+		expect(map.paintProperties.get('sea-chart-decoration.fill-pattern')).toBe(
+			'terrain-sea-chart-art-en'
+		);
+	});
 });
 
 // FT-54, issue #2: terrain is on by default and its first load waits for the
