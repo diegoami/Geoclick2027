@@ -45,8 +45,8 @@ export const mapGroups: CountryGroup[] = [
 	{
 		country: 'Africa',
 		maps: [
-			{ id: 'africa-capitals', labelKey: 'mapType.capitals' },
-			{ id: 'africa-countries', labelKey: 'mapType.countries' }
+			{ id: 'africa-countries', labelKey: 'mapType.countries' },
+			{ id: 'africa-capitals', labelKey: 'mapType.capitals' }
 		]
 	},
 	{
@@ -59,8 +59,8 @@ export const mapGroups: CountryGroup[] = [
 	{
 		country: 'Asia',
 		maps: [
-			{ id: 'asia-capitals', labelKey: 'mapType.capitals' },
-			{ id: 'asia-countries', labelKey: 'mapType.countries' }
+			{ id: 'asia-countries', labelKey: 'mapType.countries' },
+			{ id: 'asia-capitals', labelKey: 'mapType.capitals' }
 		]
 	},
 	{
@@ -135,13 +135,13 @@ export const mapGroups: CountryGroup[] = [
 	{
 		country: 'Europe',
 		maps: [
+			{ id: 'europe-countries', labelKey: 'mapType.countries' },
 			{ id: 'europe-capitals', labelKey: 'mapType.capitals' },
 			{ id: 'europe-cities-central', labelKey: 'mapType.citiesCentral' },
 			{ id: 'europe-cities-east', labelKey: 'mapType.citiesEast' },
 			{ id: 'europe-cities-north', labelKey: 'mapType.citiesNorth' },
 			{ id: 'europe-cities-south', labelKey: 'mapType.citiesSouth' },
-			{ id: 'europe-cities-west', labelKey: 'mapType.citiesWest' },
-			{ id: 'europe-countries', labelKey: 'mapType.countries' }
+			{ id: 'europe-cities-west', labelKey: 'mapType.citiesWest' }
 		]
 	},
 	{
@@ -313,15 +313,15 @@ export const mapGroups: CountryGroup[] = [
 	{
 		country: 'North America',
 		maps: [
-			{ id: 'north-america-capitals', labelKey: 'mapType.capitals' },
-			{ id: 'north-america-countries', labelKey: 'mapType.countries' }
+			{ id: 'north-america-countries', labelKey: 'mapType.countries' },
+			{ id: 'north-america-capitals', labelKey: 'mapType.capitals' }
 		]
 	},
 	{
 		country: 'Oceania',
 		maps: [
-			{ id: 'oceania-capitals', labelKey: 'mapType.capitals' },
-			{ id: 'oceania-countries', labelKey: 'mapType.countries' }
+			{ id: 'oceania-countries', labelKey: 'mapType.countries' },
+			{ id: 'oceania-capitals', labelKey: 'mapType.capitals' }
 		]
 	},
 	{
@@ -398,8 +398,8 @@ export const mapGroups: CountryGroup[] = [
 	{
 		country: 'South America',
 		maps: [
-			{ id: 'south-america-capitals', labelKey: 'mapType.capitals' },
-			{ id: 'south-america-countries', labelKey: 'mapType.countries' }
+			{ id: 'south-america-countries', labelKey: 'mapType.countries' },
+			{ id: 'south-america-capitals', labelKey: 'mapType.capitals' }
 		]
 	},
 	{
