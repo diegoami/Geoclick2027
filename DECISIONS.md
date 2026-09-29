@@ -1827,14 +1827,16 @@ answers:
   owner wants to try each branch first. Tasks that need the product owner
   (the logo pick, the Android signing key, creating the public repo,
   publishing) also stop at that step.
-- **Added 2026-09-14, before the tutorial:**
-  - Maps open on their overview, with every name shown. The
-    click-to-reveal explore view stays, as its own "Explore" tab.
+- **Added 2026-09-14, before the tutorial; amended 2026-09-29 after map testing:**
+  - A map picked from the home screen opens on Known (`/map/<id>`), where
+    names reveal on click and reflect learning progress. Overview remains a
+    separate view with every name shown. The owner changed the map-pick
+    destination from Overview to Known in v0.15 (proposal #110, PR #111).
   - Android's back button goes up one level instead of back through
-    history: map screens go to the overview, the overview goes to the
-    map list, and the list closes the app.
-  - Both ship first, as `v0.4.0` (FT-13, FT-14), so they can be tried on
-    a phone. The tutorial moves to `v0.5.0`.
+    history: Quiz, Tour and Overview go to Known; Known goes to the map list;
+    the list closes the app.
+  - The Known/Overview distinction shipped in `v0.4.0` (FT-13, FT-14) so it
+    could be tried on a phone. The tutorial moved to `v0.5.0`.
 - **Added 2026-09-14, for v0.5.0:**
   - A home page **Recent** section shows the 5 maps opened most recently,
     counting any view of a map.

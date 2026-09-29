@@ -74,5 +74,5 @@ currently puts Provinces before Regions).
 
 | Task  | State       | Merge | Notes                                         |
 | ----- | ----------- | ----- | --------------------------------------------- |
-| FT-86 | in progress |       | direct one-tap map entry and preferred map    |
-| FT-87 | in progress |       | placeholder-free, broad-to-specific selectors |
+| FT-86 | merged | efb7027 | direct one-tap map entry and preferred map    |
+| FT-87 | merged | efb7027 | placeholder-free, broad-to-specific selectors |
