@@ -5,6 +5,35 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
+## v0.15.0 — 2026-09-29 — Known maps and sea-chart art
+
+**Choose a country in one tap, switch maps without returning to the list, and explore the surrounding sea with subtle old-chart decorations.**
+
+Proposals #110 and #112; [PLAN_V0.15.md](docs/PLAN_V0.15.md) (FT-86 to FT-88). PRs #111 and #114.
+
+For players:
+
+- **One tap opens a country's map.** From the world map, tap a mapped country
+  once to open its broadest administrative map directly on Known. Countries
+  without maps keep their existing notice; continent labels still drill down.
+- **Country map choices are easier to scan.** Country selectors no longer
+  begin with “Choose map”: broad administrative maps come first, then focused
+  and smaller divisions, then cities/towns and their subsets. The in-map menu
+  shows the current map and switches to another map's Known view.
+- **The Terrain sea gets an old-chart touch.** Low-contrast sea creatures,
+  ships, a compass rose and wave hatching frame empty water, with “Here be
+  dragons” in English, German or Italian. The Terrain button hides or restores
+  the art.
+
+Under the hood:
+
+- **Map-pick ordering is explicit and language-independent.** Selectors share
+  the catalog's broad-to-specific order; Italy opens Regions before Provinces.
+- **Sea-chart art is bundled and local.** The SVG pattern is embedded in the
+  app, drawn only over the Terrain sea layer, below playable geography, and
+  needs neither a server image nor MapLibre's remote glyphs. If it cannot load,
+  the regular Terrain sea remains.
+
 ## v0.14.0 — 2026-09-27 — The start screen's toolbar, and its rows in your language
 
 **The start screen gains the card games' toolbar — Map / List, My maps, language, tutorial, About and Exit. Its country rows now read in the language you chose, and Android's Back button waits for the world map to load.**
