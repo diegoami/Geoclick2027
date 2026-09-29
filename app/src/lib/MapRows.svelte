@@ -5,9 +5,8 @@
 	// alike. Germany's fourteen maps are one row.
 	import { goto } from '$app/navigation';
 	import { resolve } from '$app/paths';
-	import { isContinentGroup, rowNameOf } from './catalogSections';
+	import { rowNameOf } from './catalogSections';
 	import { groupProgress, type Mastery } from './homeProgress';
-	import { t } from './i18n.svelte';
 	import KnownProgress from './KnownProgress.svelte';
 	import { pickerIdOf } from './mapCatalog';
 
@@ -38,14 +37,14 @@
 	// where it has none.
 	const nameOf = rowNameOf;
 
-	// A country's selector must start with nothing committed (#118). A native
-	// `<select>` with no `selected` option auto-selects its first one, and
-	// re-choosing the already-selected first option fires no `change` - so a
-	// country's default (broadest) map, and the tutorial's "Choose Regions"
-	// step, were unreachable from its row. Clearing the selection makes any
-	// pick a real change. A continent row keeps its own "Choose map" option.
-	function startUnselected(node: HTMLSelectElement, clear: boolean) {
-		if (clear) node.selectedIndex = -1;
+	// Every map selector starts with nothing committed (#118; continents too,
+	// owner decision 2026-09-29). A native `<select>` with no `selected` option
+	// auto-selects its first one, and re-choosing the already-selected first
+	// option fires no `change` - so a row's first map, and the tutorial's
+	// "Choose Regions" step, were unreachable from its row. Clearing the
+	// selection makes any pick a real change.
+	function startUnselected(node: HTMLSelectElement) {
+		node.selectedIndex = -1;
 	}
 </script>
 
@@ -78,15 +77,12 @@
 			{/if}
 			<select
 				id={selectId}
-				use:startUnselected={!isContinentGroup(group)}
+				use:startUnselected
 				onchange={(e) => {
 					const mapId = e.currentTarget.value;
 					if (mapId) goto(resolve('/map/[mapId]', { mapId }));
 				}}
 			>
-				{#if isContinentGroup(group)}
-					<option value="" selected>{t('home.chooseMap')}</option>
-				{/if}
 				{#each group.maps as map (map.id)}
 					<option value={map.id}>{map.label}</option>
 				{/each}
