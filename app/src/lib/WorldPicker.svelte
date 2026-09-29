@@ -1,13 +1,14 @@
 <script lang="ts">
-	// The start screen's map (FT-77, #58, amended 2026-09-26). Two levels on
-	// one map: the world, where a tap on any country goes to its continent;
-	// and a continent, fitted to its Countries map's box. Beside it (below it
-	// on a phone) the panel holds the maps in sections: on the world, the
-	// continents' own maps and then a section per continent; on a continent,
-	// that continent's maps and its countries. A tap on a country marks its
-	// row - or, for a country with no maps, its continent's. The view left is
-	// where the start screen opens next time (mapPrefs). The tutorial's first
-	// steps (FT-79) walk this map: Europe, Italy, then Italy's row.
+	// The start screen's map (FT-77, #58; revised 2026-09-29, proposal #110).
+	// Two levels on one map: the world, and a continent fitted to its Countries
+	// map's box. A tap on a mapped country opens its configured broadest map
+	// directly (openCountryMap); during the tutorial it marks the row instead
+	// (FT-79), and a country with no maps keeps the continent notice. Beside it
+	// (below it on a phone) the panel holds the maps in sections: on the world,
+	// the continents' own maps and then a section per continent; on a continent,
+	// that continent's maps and its countries. The view left is where the start
+	// screen opens next time (mapPrefs). The tutorial's first steps
+	// walk this map: Europe, Italy, then Italy's row.
 	import { onDestroy, onMount, tick, untrack } from 'svelte';
 	import * as maplibregl from 'maplibre-gl';
 	import 'maplibre-gl/dist/maplibre-gl.css';

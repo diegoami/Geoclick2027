@@ -1,9 +1,9 @@
 <script lang="ts">
 	// Shared top nav bar for every map-scoped view - the same buttons everywhere
-	// (Maps/Overview/Explore/Quiz/Tour) so you can jump directly between modes,
-	// with the current view shown as the active tab. A map opens on its
-	// Overview (FT-13); Explore (click a region to see its name) is the bare
-	// /map/<id> route, reached from here. Originally only
+	// (Maps/Known/Overview/Quiz/Tour) so you can jump directly between modes,
+	// with the current view shown as the active tab. The bare /map/<id> route is
+	// the Known screen (v0.15, proposal #110) and is where a map pick lands;
+	// Overview is a separate mode beside it. Originally only
 	// on MapView.svelte; pulled out into its own component once the same
 	// markup/CSS needed to be identical across four views - unlike the
 	// Tauri/Capacitor SQLite schemas (see DECISIONS.md), there's no reason to

@@ -1290,6 +1290,15 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   alphabetically by name, and each country's own maps alphabetically by
   label - both levels meet the stated minimum, the grouping is the part
   beyond it.
+  **Amended 2026-09-29 (v0.15.0, proposal
+  [#110](https://github.com/diegoami/Geoclick2027/issues/110)):** a
+  country's own maps are no longer alphabetical. They are ordered **broad
+  to specific** - the top-level administrative map; its zoomed/split maps;
+  the smaller divisions broad to narrow, each division's split maps
+  adjacent; full-country cities/towns; their subsets; other map types
+  last. The order lives in `app/src/lib/mapCatalog.ts` and is shared by
+  the picker and the in-map selector; the tiers are in
+  `docs/PLAN_V0.15.md`. Countries themselves stay alphabetical.
 - **A 2-column CSS grid above the existing 640px breakpoint, one column
   below it.** Reuses the breakpoint `MapNav.svelte` already established
   rather than inventing a new one. With 14 country groups (22 now), a single

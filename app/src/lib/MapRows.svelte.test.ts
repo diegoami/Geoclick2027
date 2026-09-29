@@ -2,8 +2,16 @@
 // player's language, from the picker's names, the same as the map. A country
 // the picker has no name for - and English, whose names it does not carry -
 // keeps the catalog's name.
-import { afterEach, describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import { render } from 'vitest-browser-svelte';
+
+const { gotoMock } = vi.hoisted(() => ({ gotoMock: vi.fn() }));
+vi.mock('$app/navigation', () => ({ goto: gotoMock }));
+vi.mock('$app/paths', () => ({
+	resolve: (route: string, params: Record<string, string> = {}) =>
+		Object.entries(params).reduce((path, [key, value]) => path.replace(`[${key}]`, value), route)
+}));
+
 import MapRows from './MapRows.svelte';
 import { setLanguage } from './i18n.svelte';
 
@@ -25,7 +33,10 @@ const rows = [
 const names = () => [...document.querySelectorAll('.name')].map((n) => n.textContent?.trim());
 
 describe('MapRows (FT-84)', () => {
-	afterEach(() => setLanguage('en'));
+	afterEach(() => {
+		gotoMock.mockClear();
+		setLanguage('en');
+	});
 
 	it("reads a country's row in the player's language, like the map", async () => {
 		setLanguage('it');
@@ -50,5 +61,22 @@ describe('MapRows (FT-84)', () => {
 		const europe = document.querySelector<HTMLSelectElement>('#maps-europe-regions')!;
 		expect([...germany.options].map((option) => option.value)).toEqual(['germany-regions']);
 		expect([...europe.options].map((option) => option.value)).toEqual(['', 'europe-regions']);
+	});
+
+	it("starts uncommitted so a country's default map can be chosen from its row (#118)", async () => {
+		await render(MapRows, {
+			groups: [group('Italy', 'italy')],
+			masteries: {},
+			targetCount: () => 0
+		});
+
+		const italy = document.querySelector<HTMLSelectElement>('#maps-italy-regions')!;
+		// Nothing is committed until the player picks; otherwise choosing the
+		// first option is not a change and the default map is unreachable.
+		expect(italy.selectedIndex).toBe(-1);
+
+		italy.value = 'italy-regions';
+		italy.dispatchEvent(new Event('change', { bubbles: true }));
+		expect(gotoMock).toHaveBeenCalledWith('/map/italy-regions');
 	});
 });

@@ -37,6 +37,16 @@
 	// (FT-84): the picker's `names` for a country, the catalog's English
 	// where it has none.
 	const nameOf = rowNameOf;
+
+	// A country's selector must start with nothing committed (#118). A native
+	// `<select>` with no `selected` option auto-selects its first one, and
+	// re-choosing the already-selected first option fires no `change` - so a
+	// country's default (broadest) map, and the tutorial's "Choose Regions"
+	// step, were unreachable from its row. Clearing the selection makes any
+	// pick a real change. A continent row keeps its own "Choose map" option.
+	function startUnselected(node: HTMLSelectElement, clear: boolean) {
+		if (clear) node.selectedIndex = -1;
+	}
 </script>
 
 <ul class="rows">
@@ -68,6 +78,7 @@
 			{/if}
 			<select
 				id={selectId}
+				use:startUnselected={!isContinentGroup(group)}
 				onchange={(e) => {
 					const mapId = e.currentTarget.value;
 					if (mapId) goto(resolve('/map/[mapId]', { mapId }));
