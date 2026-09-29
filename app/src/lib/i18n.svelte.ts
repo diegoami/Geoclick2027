@@ -40,7 +40,6 @@ export type TranslationKey =
 	| 'home.viewLabel'
 	| 'home.viewMap'
 	| 'home.viewList'
-	| 'home.chooseMap'
 	| 'picker.continents'
 	| 'picker.label'
 	| 'picker.world'
@@ -216,7 +215,6 @@ const en: Dictionary = {
 	'home.viewLabel': 'Show the maps as',
 	'home.viewMap': 'Map',
 	'home.viewList': 'List',
-	'home.chooseMap': 'Choose a map…',
 	'picker.continents': 'Continents',
 	'picker.label': 'World map: choose a continent, then a country',
 	'picker.world': 'World',
@@ -409,7 +407,6 @@ const de: Dictionary = {
 	'home.viewLabel': 'Karten zeigen als',
 	'home.viewMap': 'Karte',
 	'home.viewList': 'Liste',
-	'home.chooseMap': 'Karte wählen…',
 	'picker.continents': 'Kontinente',
 	'picker.label': 'Weltkarte: wähle einen Kontinent, dann ein Land',
 	'picker.world': 'Welt',
@@ -606,7 +603,6 @@ const it: Dictionary = {
 	'home.viewLabel': 'Mostra le mappe come',
 	'home.viewMap': 'Mappa',
 	'home.viewList': 'Elenco',
-	'home.chooseMap': 'Scegli una mappa…',
 	'picker.continents': 'Continenti',
 	'picker.label': 'Mappa del mondo: scegli un continente, poi un paese',
 	'picker.world': 'Mondo',

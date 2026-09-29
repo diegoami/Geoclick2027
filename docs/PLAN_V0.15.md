@@ -38,11 +38,13 @@ currently puts Provinces before Regions). Proposal #112 also found
   broad-to-narrow and adjacent to their split maps; full-country cities/towns;
   city/town subsets; other map types last. Picker and in-map selectors share
   the catalog order.
-- Remove the “Choose map” placeholder from country selectors. The in-map
-  selector lists every map for its country and shows the current map selected;
-  choosing another opens Known at the base `/map/[mapId]` route. New country
-  map picks also open that route, not Overview. The continent-row selector may
-  retain its placeholder. Preserve favorites, Recent, direct routes, and Back.
+- Remove the “Choose map” placeholder from country selectors, and — owner
+  decision 2026-09-29, superseding the earlier “continent rows may retain it”
+  — from the continent selectors too, so every row starts uncommitted. The
+  in-map selector lists every map for its country and shows the current map
+  selected; choosing another opens Known at the base `/map/[mapId]` route. New
+  map picks also open that route, not Overview. Preserve favorites, Recent,
+  direct routes, and Back.
 - **Added 2026-09-29 via #112:** draw a subtle, original vector pattern of
   antique-chart motifs (sea creature, ship, compass rose, and wave hatching)
   over empty sea only. Bundle the art locally for offline use, keep it
@@ -65,10 +67,12 @@ currently puts Provinces before Regions). Proposal #112 also found
 
 ### FT-87 — switch sibling maps in MapNav · Small
 
-- **Do:** remove the country selectors' “Choose map” placeholder; include the
+- **Do:** remove the “Choose map” placeholder from the country and continent
+  selectors; include the
   current map as MapNav's selected option. Order all country options broad to
   specific per the catalog tiers above. A selection opens that map's Known screen.
-- **Test:** browser component tests cover no placeholder on country selectors,
+- **Test:** browser component tests cover no placeholder on country and
+  continent selectors,
   current selection, same-country options, semantic order, and navigation to
   Known. Check native keyboard access and narrow-phone fit.
 - **DoD:** feature and tests merged; gates green; selector is keyboard and
