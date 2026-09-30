@@ -2486,4 +2486,5 @@ answers:
   in the Actions secret `OPENCODE_API_KEY`; never put it in the repository.
 - Fork PRs are skipped because GitHub does not expose repository secrets to
   their workflows. Milestone release reviews retain their separate, manually
-  started procedure in `AGENTS.md` and `docs/RELEASES.md`.
+  started procedure in `AGENTS.md` and `docs/RELEASES.md`. The project command
+  `/check-pr-reviews [PR number]` fetches current comments and workflow status.

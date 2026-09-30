@@ -138,8 +138,9 @@ the gate. The separate PR-review workflow is advisory only.
   updated. It posts or updates one PR comment; it does not submit a GitHub
   review, change files, run PR code, or merge. Fork PRs are skipped because
   GitHub withholds repository secrets. The owner still tests the branch and
-  explicitly OKs every merge. The milestone review remains a separate process
-  in *Releases* below.
+  explicitly OKs every merge. Use `/check-pr-reviews [PR number]` to fetch and
+  summarize the latest comments and workflow runs. The milestone review remains
+  a separate process in *Releases* below.
 - Keep `ROADMAP.md`, `ARCHITECTURE.md`, `ONBOARDING.md`, `DECISIONS.md`,
   `MAPS.md` current as work lands — each has a distinct charter (status / code
   map / newcomer guide / *why* / map build commands). Edit the relevant
