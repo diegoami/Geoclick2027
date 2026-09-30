@@ -181,12 +181,14 @@ its merge. A reviewer uses a worktree of its own too (*Releases*).
 After a merge: `git switch main && git pull --ff-only`, then delete the merged
 branch.
 
-### Sessions and handover
+### Project state
 
-Update `docs/HANDOVER.md` on every change of state, in place, before you report
-the change. It is the snapshot a fresh session is told to read first; a stale
-snapshot is the failure the file exists to prevent (product owner's rule,
-2026-09-20).
+Do not maintain a session handover or duplicate current status in a snapshot.
+Put durable project status in `ROADMAP.md`, release-task status in its plan,
+and decisions in `DECISIONS.md`; keep implementation details beside the code.
+At the start of a session, read this file, then consult the relevant living
+project document. Git history and PRs record completed work; the chat is not a
+source of durable project state.
 
 ## Releases
 

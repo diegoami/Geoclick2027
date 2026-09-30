@@ -1,7 +1,7 @@
 # v0.14.0 — #87 and the loose ends (planned 2026-09-27)
 
 > **Scope agreed** by the owner on 2026-09-27, recorded in
-> [docs/HANDOVER.md](HANDOVER.md)'s "Next" row: **#87 plus the two loose
+> The agreed scope was **#87 plus the two loose
 > ends v0.13.0 left** — the start screen's country rows in English, and the
 > user manual's tutorial section. Proposed on
 > [#93](https://github.com/diegoami/Geoclick2027/issues/93); the open

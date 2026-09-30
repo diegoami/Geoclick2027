@@ -12,23 +12,14 @@ leaving it stale for the next person.
 
 ## Read these first, in order
 
-0. [docs/HANDOVER.md](docs/HANDOVER.md) — **where things stand right
-   now**: the current release, what is blocked on what, what is not
-   verified, and the gotchas that have already cost someone a day. It is
-   a snapshot, rewritten at the end of a piece of work rather than
-   appended to, so it is short and current. Start here; the rest of this
-   list is reference.
-1. **This file** — orientation and how to work day to day.
-2. [ARCHITECTURE.md](ARCHITECTURE.md) — what the system is made of and why
+1. [AGENTS.md](AGENTS.md) — working rules and canonical source paths.
+2. **This file** — orientation and how to work day to day.
+3. [ARCHITECTURE.md](ARCHITECTURE.md) — what the system is made of and why
    (stack choices, domain model, hosting). Read the sections relevant to
    what you're touching, not necessarily cover to cover.
-3. [ROADMAP.md](ROADMAP.md) — what's been built, what's in progress, and
+4. [ROADMAP.md](ROADMAP.md) — what's been built, what's in progress, and
    what's next. Check the **Status** section at the top first to see where
    the project is right now.
-4. [AGENTS.md](AGENTS.md) — working conventions. Written for an AI
-   assistant collaborating on this repo, but every rule in it applies to
-   any contributor, human or not. Deliberately short and rule-only — see
-   **AI assistant scope** below for why, and where the reasoning went.
 5. [DECISIONS.md](DECISIONS.md) — *why* the product works the way it
    does, as a scannable list rather than scattered through iteration
    write-ups. Worth a skim before changing behavior that looks like it
@@ -505,11 +496,10 @@ you edit it:
   to `AGENTS.md`, that is the signal: write it here or in DECISIONS.md
   and leave a pointer.
 
-- **A session ends in `docs/HANDOVER.md`, not in the chat.** Claude
-  sessions are cleared, and the transcript goes with them. Whatever the
-  next person or session needs to know — what landed, what state the
-  branch is in, what the next action is — is written into that file
-  before the work is called done.
+- **Durable state belongs in its owning document.** Current project status is
+  in `ROADMAP.md`, release work in its plan, decisions in `DECISIONS.md`, and
+  implementation detail beside the code. Use Git history and PRs for completed
+  changes; do not copy session status into a separate handover snapshot.
 
 Everything else — how the build works, where data comes from, why the
 product behaves as it does — lives in the files listed at the top of

@@ -76,8 +76,8 @@ Check items off as they land; update "Status" as iterations complete.
   Wikidata landmark pass, is parked** — an unreliable SPARQL endpoint,
   unsettled product choices, and FT-45 has since removed the card slot it
   was written for. It is the one outstanding task of that programme;
-  revisit after the v0.10.0 language decisions (HANDOVER.md, "Not
-  verified, or still open").
+  revisit after the v0.10.0 language decisions (see the FT-38 entry in
+  `DECISIONS.md`).
 - **v0.9.0 shipped 2026-09-19** (tag `v0.9.0`):
   [docs/PLAN_V0.9.md](docs/PLAN_V0.9.md) — "the map you build yourself".
   All four tasks merged. The Known map is what a map opens on, and a tap
