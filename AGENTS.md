@@ -114,7 +114,8 @@ downloads to `/dev/null`. If a command floods anyway, do not paste the flood —
 report the one line that mattered.
 
 **The pre-push hook** (`npm run setup-hooks`, once) runs the gates on every
-push. **There is no CI: the hook and the gates are the gate.**
+push. **There is no CI for the release gates:** the hook and local gates are
+the gate. The separate PR-review workflow is advisory only.
 
 ## Workflow
 
@@ -132,6 +133,14 @@ push. **There is no CI: the hook and the gates are the gate.**
   from a worktree, never by committing in the main checkout. There is no
   automerge exception: the remediation loop (`docs/ORCHESTRATION.md`) that had
   one closed with v0.2.0.
+- **Pull requests receive an automatic advisory review** from OpenCode using
+  GLM-5.3-Flash (`.github/workflows/pr-review.yml`) when opened, reopened, or
+  updated. It posts or updates one PR comment; it does not submit a GitHub
+  review, change files, run PR code, or merge. Fork PRs are skipped because
+  GitHub withholds repository secrets. The owner still tests the branch and
+  explicitly OKs every merge. Use `/check-pr-reviews [PR number]` to fetch and
+  summarize the latest comments and workflow runs. The milestone review remains
+  a separate process in *Releases* below.
 - Keep `ROADMAP.md`, `ARCHITECTURE.md`, `ONBOARDING.md`, `DECISIONS.md`,
   `MAPS.md` current as work lands — each has a distinct charter (status / code
   map / newcomer guide / *why* / map build commands). Edit the relevant
