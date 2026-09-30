@@ -41,12 +41,12 @@ jobs:
           gh pr diff "$EVENT_PR" --repo "$GH_REPO" > "$RUNNER_TEMP/pr.diff"
           test -s "$RUNNER_TEMP/pr.diff"
 
-      - name: Confirm OpenCode Console credential
+      - name: Confirm OpenCode Go credential
         env:
-          OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
+          OPENCODE_GO_API_KEY: ${{ secrets.OPENCODE_GO_API_KEY }}
         run: |
-          if [[ -z "$OPENCODE_API_KEY" ]]; then
-            echo 'Missing repository secret OPENCODE_API_KEY. Add an OpenCode Console API key in Settings > Secrets and variables > Actions.' >&2
+          if [[ -z "$OPENCODE_GO_API_KEY" ]]; then
+            echo 'Missing repository secret OPENCODE_GO_API_KEY. Add an OpenCode Go API key in Settings > Secrets and variables > Actions.' >&2
             exit 1
           fi
 
@@ -55,7 +55,7 @@ jobs:
 
       - name: Review diff with GLM-5.3-Flash
         env:
-          OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
+          OPENCODE_GO_API_KEY: ${{ secrets.OPENCODE_GO_API_KEY }}
           PR_NUMBER: ${{ steps.pr.outputs.number }}
           PR_TITLE: ${{ steps.pr.outputs.title }}
           PR_URL: ${{ steps.pr.outputs.url }}
@@ -69,10 +69,10 @@ jobs:
             "$schema": "https://opencode.ai/config.json",
             "providers": {
               "geoclick-review": {
-                "name": "OpenCode Console (PR review)",
-                "env": ["OPENCODE_API_KEY"],
+                "name": "OpenCode Go (PR review)",
+                "env": ["OPENCODE_GO_API_KEY"],
                 "package": "@opencode/ai/providers/openai-compatible",
-                "settings": { "baseURL": "https://opencode.ai/zen/v1" },
+                "settings": { "baseURL": "https://opencode.ai/zen/go/v1" },
                 "models": {
                   "glm-5.3-flash": { "name": "GLM-5.3-Flash", "modelID": "glm-5.3-flash" }
                 }

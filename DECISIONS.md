@@ -2479,11 +2479,16 @@ answers:
   PR comment, refreshed when new commits arrive. It is not a GitHub approval
   and does not decide whether a change merges: the owner tests and explicitly
   OKs every merge.
+- **Amended 2026-09-30:** route GLM-5.3-Flash through OpenCode Go's
+  `https://opencode.ai/zen/go/v1` endpoint, using the repository Actions secret
+  `OPENCODE_GO_API_KEY`. This uses the Go plan's model allowance rather than
+  Console pay-as-you-go credits; if Go limits are exceeded, any balance
+  fallback follows the account's Go settings.
 - Use `pull_request_target` only to read the PR diff through GitHub's API; do
   not check out or execute PR code. Run OpenCode from a generated temporary
   configuration with all agent tools denied, so untrusted diff text cannot
   invoke shell, edit files, or access GitHub credentials. Keep the model key
-  in the Actions secret `OPENCODE_API_KEY`; never put it in the repository.
+  in the Actions secret `OPENCODE_GO_API_KEY`; never put it in the repository.
 - Fork PRs are skipped because GitHub does not expose repository secrets to
   their workflows. Milestone release reviews retain their separate, manually
   started procedure in `AGENTS.md` and `docs/RELEASES.md`. The project command
