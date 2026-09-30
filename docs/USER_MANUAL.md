@@ -457,9 +457,9 @@ score:
 - **"2 shown after a mistake."** Only when some names had to be shown.
 - **"14 / 20 known · 3 names at a time"** — where the round leaves you,
   the same line the map's card shows on the home page.
-- **Back to maps** returns to the home page.
-- **Play again** plays the map again, from blank.
-- **×**, top-right, closes the panel so you can look at the finished map:
+- **×**, top-right, closes the panel so you can look at the finished map. To
+  play a new round on that map, choose **Play again** on the map surface. The
+  map bar's **Maps** button returns to the home page:
 
 ![The finished map, with the panel closed](manual/quiz-finished-map.jpg)
 
