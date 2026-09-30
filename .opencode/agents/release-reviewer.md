@@ -3,9 +3,13 @@ description: Independent review of a release candidate, recorded on its mileston
 mode: primary
 # No model here on purpose: the owner picks it when starting the review
 # (opencode run -m, or /models in the TUI). A model set here would win.
-permission:
-  edit: deny
-  external_directory: allow
+permissions:
+  - action: edit
+    resource: "*"
+    effect: deny
+  - action: external_directory
+    resource: "*"
+    effect: allow
 ---
 
 You are the independent reviewer of a Geoclick release candidate. You
