@@ -67,6 +67,7 @@
 	let labels: { remove(): void }[] = [];
 	let countryLabelElements: Record<string, HTMLElement> = {};
 	let countryLabelPopups: Record<string, maplibregl.Popup> = {};
+	let pendingLabelReveal: { id: string; position: [number, number] } | undefined;
 	let tutorialSpot: maplibregl.Marker | undefined;
 	let stopCollision: (() => void) | undefined;
 
@@ -400,10 +401,15 @@
 					const continent = feature?.properties?.continent as string | undefined;
 					if (id && continent) {
 						if (view === 'world') {
+							pendingLabelReveal = { id, position: [e.lngLat.lng, e.lngLat.lat] };
 							chooseContinent(continent, id);
 							return;
 						}
-						if (continent !== view) return;
+						if (continent !== view) {
+							pendingLabelReveal = { id, position: [e.lngLat.lng, e.lngLat.lat] };
+							chooseContinent(continent, id);
+							return;
+						}
 						if (hasMaps(id)) {
 							revealCountryLabel(id, [e.lngLat.lng, e.lngLat.lat]);
 							return;
@@ -413,11 +419,15 @@
 						tutorialCountryChosen(id);
 						return;
 					}
-					// Any click outside a country polygon opens the current continent's
-					// Countries map; in world view use the nearest continent.
+					// In world view, an ocean click selects a continent view. From an
+					// continent view, it opens that continent's Countries map.
 					if (!e.lngLat) return;
-					const landContinent = view === 'world' ? continentAt(e.lngLat.lng, e.lngLat.lat) : view;
-					if (landContinent) openContinentMap(landContinent);
+					if (view === 'world') {
+						const continent = continentAt(e.lngLat.lng, e.lngLat.lat);
+						if (continent) chooseContinent(continent);
+					} else {
+						openContinentMap(view);
+					}
 				});
 				map.on('mouseenter', 'countries-fill', () => {
 					if (map) map.getCanvas().style.cursor = 'pointer';
@@ -449,6 +459,12 @@
 			paint(v);
 			fit(v, true);
 			drawLabels(v);
+			if (pendingLabelReveal) {
+				const { id, position } = pendingLabelReveal;
+				pendingLabelReveal = undefined;
+				if (picker?.countries.some((country) => country.id === id && country.continent === v))
+					revealCountryLabel(id, position);
+			}
 		});
 	});
 
