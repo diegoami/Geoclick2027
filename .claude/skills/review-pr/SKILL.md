@@ -33,25 +33,30 @@ GitHub rather than only to chat.
    that the review is optional, should use a model different from the
    implementer, and must run in a fresh session.
 3. Include a ready-to-paste command/prompt. It should direct the reviewer to
-   follow `.opencode/agents/pr-reviewer.md` (or run `/review-pr <number>` in a
-   fresh OpenCode session), create a detached worktree under the sibling
+   follow `.opencode/agents/pr-reviewer.md` (or run `/review-pr <number>
+   <exact worktree path>` in a fresh OpenCode session), create a detached worktree under the sibling
    `<project>-review` directory at the exact head SHA, verify `git rev-parse
    HEAD`, read `AGENTS.md`, and compare the PR diff against its base. Include
-   the exact worktree path and tell the reviewer to remove only its own
-   worktree when done.
+    the exact worktree path and tell the reviewer to remove only its own
+    worktree when done. Derive the main checkout from the parent of
+    `git rev-parse --path-format=absolute --git-common-dir`, not
+    `git rev-parse --show-toplevel` (which may identify another worktree).
 4. Ask the reviewer to report concrete, evidence-backed findings and post one
    neutral GitHub PR review comment, including an explicit clean result when
    there are no findings. The reviewer must not edit code, commit, push,
    approve, or request changes. If GitHub posting fails, it must return the
    complete review text and explain the failure.
 
-The handoff should include both an OpenCode start command and a standalone
-prompt for a fresh session in another tool. Fill in the PR number, URL, base
+The handoff should include an OpenCode start command and a standalone prompt
+for a fresh session in another tool. Fill in the PR number, URL, base
 branch/SHA, full head SHA, main-checkout path, and exact review-worktree path
-from live data; do not leave placeholders in the user's copy. The prompt should
-make the reviewer create the worktree (do not create it in the implementing
-session), compare the diff, post to GitHub, and clean up its own worktree. For
-example:
+from live data; do not leave placeholders in the user's copy. Derive the main
+checkout via the parent of `git rev-parse --path-format=absolute --git-common-dir`.
+Choose a unique path under its sibling `<project>-review` directory, named
+`review-pr-<number>-<head SHA first 12>-<UTC YYYYMMDDTHHMMSSZ>`; if it already
+exists, choose a new timestamp. Pass this exact path as the optional second
+argument to `/review-pr` so the reviewer agent and standalone prompt use the
+same path. Do not create the worktree in the implementing session. For example:
 
 ```text
 Review PR #<number>: <URL>, based on <base branch> at <base SHA>, head <full head SHA>.
@@ -59,7 +64,8 @@ This is an optional independent review; use a fresh session and a model differen
 from the implementer. Follow .opencode/agents/pr-reviewer.md. In PowerShell:
 
 Set-Location '<main-checkout>'
-git fetch origin
+git fetch origin <base branch>
+git fetch origin pull/<PR number>/head
 git worktree add --detach '<exact review-worktree path>' <full head SHA>
 Set-Location '<exact review-worktree path>'
 git rev-parse HEAD
@@ -78,13 +84,13 @@ In the OpenCode UI, the owner opens a new session in the repository checkout,
 chooses a model different from the implementer with `/models`, then runs:
 
 ```text
-/review-pr <PR number>
+/review-pr <PR number> "<exact review-worktree path>"
 ```
 
 From a shell, the equivalent fresh-session command is:
 
 ```powershell
-opencode run -m <provider/model> --command review-pr <PR number>
+opencode run -m <provider/model> --command review-pr <PR number> "<exact review-worktree path>"
 ```
 
 Do not run either command yourself unless the owner explicitly asks you to
