@@ -60,7 +60,7 @@ jobs:
       - name: Review diff with OpenCode Go model
         env:
           OPENCODE_GO_API_KEY: ${{ secrets.OPENCODE_GO_API_KEY }}
-          REVIEW_MODEL: ${{ inputs.review_model || vars.OPENCODE_GO_REVIEW_MODEL || 'kimi-k2.7-code' }}
+          REVIEW_MODEL: ${{ inputs.review_model || vars.OPENCODE_GO_REVIEW_MODEL || 'deepseek-v4.1-flash' }}
           PR_NUMBER: ${{ steps.pr.outputs.number }}
           PR_TITLE: ${{ steps.pr.outputs.title }}
           PR_URL: ${{ steps.pr.outputs.url }}
@@ -103,7 +103,7 @@ jobs:
           GH_REPO: ${{ github.repository }}
           PR_NUMBER: ${{ steps.pr.outputs.number }}
           HEAD_SHA: ${{ steps.pr.outputs.head }}
-          REVIEW_MODEL: ${{ inputs.review_model || vars.OPENCODE_GO_REVIEW_MODEL || 'kimi-k2.7-code' }}
+          REVIEW_MODEL: ${{ inputs.review_model || vars.OPENCODE_GO_REVIEW_MODEL || 'deepseek-v4.1-flash' }}
         run: |
           set -euo pipefail
           marker='<!-- opencode-pr-review -->'
