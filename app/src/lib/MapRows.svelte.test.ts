@@ -112,7 +112,7 @@ describe('MapRows (FT-84)', () => {
 		expect(gotoMock).toHaveBeenCalledWith('/map/italy-regions');
 	});
 
-	it('changing the combobox remembers the choice without navigating', async () => {
+	it('changing the combobox remembers and opens that map; the row button keeps opening it', async () => {
 		await render(MapRows, {
 			groups: [
 				{
@@ -129,13 +129,72 @@ describe('MapRows (FT-84)', () => {
 		});
 
 		const italy = document.querySelector<HTMLSelectElement>('#maps-italy-regions')!;
+		italy.dispatchEvent(
+			new PointerEvent('pointerdown', { bubbles: true, cancelable: true, button: 0 })
+		);
+		expect(gotoMock).not.toHaveBeenCalled();
 		italy.value = 'italy-provinces';
+		italy.dispatchEvent(new Event('input', { bubbles: true }));
+		expect(gotoMock).not.toHaveBeenCalled();
 		italy.dispatchEvent(new Event('change', { bubbles: true }));
 		expect(italy.value).toBe('italy-provinces');
-		expect(gotoMock).not.toHaveBeenCalled();
+		expect(gotoMock).toHaveBeenCalledTimes(1);
+		expect(gotoMock).toHaveBeenCalledWith('/map/italy-provinces');
 		expect(JSON.parse(localStorage.getItem(MAP_TYPE_SELECTIONS_KEY)!)).toEqual({
 			italy: 'italy-provinces'
 		});
+
+		gotoMock.mockClear();
+		document.querySelector<HTMLButtonElement>('.name')!.click();
+		expect(gotoMock).toHaveBeenCalledWith('/map/italy-provinces');
+	});
+
+	it('opens a single-option map on deliberate pointer activation, but not on focus alone', async () => {
+		await render(MapRows, {
+			groups: [{ country: 'Croatia', maps: [{ id: 'croatia-regions', label: 'Regions' }] }],
+			masteries: {},
+			targetCount: () => 0
+		});
+
+		const croatia = document.querySelector<HTMLSelectElement>('#maps-croatia-regions')!;
+		croatia.focus();
+		expect(gotoMock).not.toHaveBeenCalled();
+
+		const activation = new PointerEvent('pointerdown', {
+			bubbles: true,
+			cancelable: true,
+			button: 0
+		});
+		croatia.dispatchEvent(activation);
+		expect(activation.defaultPrevented).toBe(true);
+		expect(gotoMock).toHaveBeenCalledWith('/map/croatia-regions');
+	});
+
+	it('opens a single-option map on explicit keyboard activation, not arrow navigation', async () => {
+		await render(MapRows, {
+			groups: [{ country: 'Croatia', maps: [{ id: 'croatia-regions', label: 'Regions' }] }],
+			masteries: {},
+			targetCount: () => 0
+		});
+
+		const croatia = document.querySelector<HTMLSelectElement>('#maps-croatia-regions')!;
+		const arrow = new KeyboardEvent('keydown', {
+			key: 'ArrowDown',
+			bubbles: true,
+			cancelable: true
+		});
+		croatia.dispatchEvent(arrow);
+		expect(arrow.defaultPrevented).toBe(false);
+		expect(gotoMock).not.toHaveBeenCalled();
+
+		const activation = new KeyboardEvent('keydown', {
+			key: 'Enter',
+			bubbles: true,
+			cancelable: true
+		});
+		croatia.dispatchEvent(activation);
+		expect(activation.defaultPrevented).toBe(true);
+		expect(gotoMock).toHaveBeenCalledWith('/map/croatia-regions');
 	});
 
 	it('restores a manual choice from local storage', async () => {

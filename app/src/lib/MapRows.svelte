@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	// One row per country or continent (FT-78, #58): its name, how well its
-	// maps are known, a listbox to choose a map type, and a button that opens it.
+	// maps are known, a combobox to choose a map type, and a button for one-tap opening.
 	// The same rows in the start screen's panel and in the list, so both read
 	// alike. Germany's fourteen maps are one row.
 	import { goto } from '$app/navigation';
@@ -51,11 +51,30 @@
 		const key = pickerIdOf(group);
 		selections = { ...selections, [key]: mapId };
 		rememberMapTypeSelection(key, mapId);
+		openMap(mapId);
+	}
+
+	function openMap(mapId: string) {
+		if (mapId) goto(resolve('/map/[mapId]', { mapId }));
+	}
+
+	function openSingleMapOnPointer(group: Row, event: PointerEvent) {
+		if (group.maps.length !== 1 || event.button !== 0) return;
+		event.preventDefault();
+		openMap(group.maps[0].id);
+	}
+
+	function openSingleMapOnKey(group: Row, event: KeyboardEvent) {
+		if (group.maps.length !== 1) return;
+		const opensSelect =
+			['Enter', ' '].includes(event.key) || (event.altKey && event.key === 'ArrowDown');
+		if (!opensSelect) return;
+		event.preventDefault();
+		openMap(group.maps[0].id);
 	}
 
 	function openSelectedMap(group: Row) {
-		const mapId = selectedMap(group);
-		if (mapId) goto(resolve('/map/[mapId]', { mapId }));
+		openMap(selectedMap(group));
 	}
 
 	onMount(() => {
@@ -109,6 +128,8 @@
 				id={selectId}
 				value={selectedMap(group)}
 				aria-label={t('home.mapTypeFor', { name: nameOf(group) })}
+				onpointerdown={(e) => openSingleMapOnPointer(group, e)}
+				onkeydown={(e) => openSingleMapOnKey(group, e)}
 				onchange={(e) => {
 					chooseMapType(group, e.currentTarget.value);
 				}}
