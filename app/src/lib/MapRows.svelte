@@ -66,7 +66,9 @@
 
 	function openSingleMapOnKey(group: Row, event: KeyboardEvent) {
 		if (group.maps.length !== 1) return;
-		if (!['ArrowDown', 'ArrowUp', 'Enter', ' '].includes(event.key)) return;
+		const opensSelect =
+			['Enter', ' '].includes(event.key) || (event.altKey && event.key === 'ArrowDown');
+		if (!opensSelect) return;
 		event.preventDefault();
 		openMap(group.maps[0].id);
 	}

@@ -134,8 +134,11 @@ describe('MapRows (FT-84)', () => {
 		);
 		expect(gotoMock).not.toHaveBeenCalled();
 		italy.value = 'italy-provinces';
+		italy.dispatchEvent(new Event('input', { bubbles: true }));
+		expect(gotoMock).not.toHaveBeenCalled();
 		italy.dispatchEvent(new Event('change', { bubbles: true }));
 		expect(italy.value).toBe('italy-provinces');
+		expect(gotoMock).toHaveBeenCalledTimes(1);
 		expect(gotoMock).toHaveBeenCalledWith('/map/italy-provinces');
 		expect(JSON.parse(localStorage.getItem(MAP_TYPE_SELECTIONS_KEY)!)).toEqual({
 			italy: 'italy-provinces'
@@ -167,7 +170,7 @@ describe('MapRows (FT-84)', () => {
 		expect(gotoMock).toHaveBeenCalledWith('/map/croatia-regions');
 	});
 
-	it('opens a single-option map on keyboard activation', async () => {
+	it('opens a single-option map on explicit keyboard activation, not arrow navigation', async () => {
 		await render(MapRows, {
 			groups: [{ country: 'Croatia', maps: [{ id: 'croatia-regions', label: 'Regions' }] }],
 			masteries: {},
@@ -175,8 +178,17 @@ describe('MapRows (FT-84)', () => {
 		});
 
 		const croatia = document.querySelector<HTMLSelectElement>('#maps-croatia-regions')!;
-		const activation = new KeyboardEvent('keydown', {
+		const arrow = new KeyboardEvent('keydown', {
 			key: 'ArrowDown',
+			bubbles: true,
+			cancelable: true
+		});
+		croatia.dispatchEvent(arrow);
+		expect(arrow.defaultPrevented).toBe(false);
+		expect(gotoMock).not.toHaveBeenCalled();
+
+		const activation = new KeyboardEvent('keydown', {
+			key: 'Enter',
 			bubbles: true,
 			cancelable: true
 		});
