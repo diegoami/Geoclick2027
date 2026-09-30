@@ -5,6 +5,12 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
+## Unreleased
+
+- **Choose a map from its selection row.** The map-type selector starts on the
+  first listed option (or the player's saved choice); tapping the country or
+  continent name opens that selected map.
+
 ## v0.15.0 — 2026-09-29 — Known maps and sea-chart art
 
 **Choose a country in one tap, switch maps without returning to the list, and explore the surrounding sea with subtle old-chart decorations.**

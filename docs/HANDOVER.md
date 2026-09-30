@@ -1,4 +1,4 @@
-# Handover — 2026-09-30: v0.15.0 released; v0.16.0 implementation and per-PR review automation in progress
+# Handover — 2026-09-30: v0.15.0 released; v0.16.0 task 1 updated for review automation
 
 For whoever picks Geoclick up next: a human, or a fresh agent session in
 Claude Code or OpenCode, whatever the model. It records where things
@@ -18,13 +18,13 @@ before any work starts.
 
 | | |
 |---|---|
-| `main` | At last fetch, `origin/main` is `8158a36`, after PRs #127/#128 merged. The advisory review on PR #126 runs successfully and comments on the current head; the latest verdict is BLOCK with two SHOULD findings and no MUST-FIX. The Go-endpoint switch is in this separate worktree. |
+| `main` | At last fetch, `origin/main` is `2d62f05`, PR #129's merge. Review automation now uses OpenCode Go; the configured `OPENCODE_GO_API_KEY` works. PR #126 is being updated for the latest main; this worktree is on its branch. |
 | Deploy | Deploys remain stopped by the owner (2026-09-22). Do not inspect deploy status; the owner tracks it. |
-| Who works | **From 2026-09-27: OpenCode, with more than one model.** PR review automation is switching from OpenCode Console to the OpenCode Go endpoint. The repository secret `OPENCODE_GO_API_KEY` is now configured. Reviews are advisory comments only, never approvals or merges. Milestone review remains separate and manual. **`AGENTS.md` is the one instructions file**; `CLAUDE.md` is a comment plus `@AGENTS.md` |
+| Who works | **From 2026-09-27: OpenCode, with more than one model.** Automated PR reviews use OpenCode Go / GLM-5.3-Flash and post advisory comments only, never approvals or merges. The review command is `/check-pr-reviews [PR number]`. Milestone review remains separate and manual. **`AGENTS.md` is the one instructions file**; `CLAUDE.md` is a comment plus `@AGENTS.md` |
 | Latest stable | **v0.15.0** (tag `78dd0ce`, 2026-09-29): one-tap country entry, ordered map choices, in-map switching, and localized sea-chart art. [Milestone #117](https://github.com/diegoami/Geoclick2027/issues/117), AGREE. [Published](https://github.com/diegoami/geoclick-releases/releases/tag/v0.15.0); owner signed off. |
 | Merged since v0.13.0 | The v0.14/v0.15 work is recorded in `ROADMAP.md`. Recent relevant PRs: #121–#123 closed the v0.15 milestone findings; PR #123's merge `78dd0ce` is the v0.15.0 release tag. |
 | Plans | Per-release plans in `docs/PLAN_V0.6.md` … [PLAN_V0.15.md](PLAN_V0.15.md). v0.16.0's ten-task split is in [proposal #125](https://github.com/diegoami/Geoclick2027/issues/125) and `docs/PLAN_V0.16.md` on the implementation branch. |
-| Next | **v0.16.0** (owner-approved [proposal #125](https://github.com/diegoami/Geoclick2027/issues/125)): ten independent PR-sized tasks, tutorial audit last. Task 1 is [PR #126](https://github.com/diegoami/Geoclick2027/pull/126), mergeable after its conflicts were resolved; test it from its branch before merge. The `/check-pr-reviews [PR number]` command is in PR #128. This PR switches the reviewer endpoint to OpenCode Go. After it merges, rerun the workflow manually for #126 using the configured `OPENCODE_GO_API_KEY`. |
+| Next | **v0.16.0** (owner-approved [proposal #125](https://github.com/diegoami/Geoclick2027/issues/125)): ten independent PR-sized tasks, tutorial audit last. Task 1 is [PR #126](https://github.com/diegoami/Geoclick2027/pull/126). Resolve the latest-main `docs/HANDOVER.md` conflict in this worktree, push the merge commit, verify its Go review, then give the owner branch test commands. Owner test and explicit merge OK remain required. |
 | Programmes | Remediation closed with v0.2.0 ([REMEDIATION_PLAN.md](REMEDIATION_PLAN.md)); features with v0.5.0 ([FEATURE_PLAN.md](FEATURE_PLAN.md)) |
 
 Shipped since the v0.5.0 handover, in one paragraph each:

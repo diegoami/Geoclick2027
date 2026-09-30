@@ -438,6 +438,10 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   way a magnified one does, and competes normally again once the card closes.
   The owner rejected the alternative, curved names giving way to small
   regions: it would drop curved names exactly where the map is busiest.
+  **Amended 2026-09-30 (v0.16.0, proposal #125):** extend the spine-following
+  SVG labels to all four map views (Known, Overview, Quiz, Tour), preserving
+  each view's label states. Polygon regions without a usable spine keep the
+  popup fallback; towns remain point labels beside their dots.
 
 ## The v0.10.0 language decisions (2026-09-22, v0.10.0)
 
@@ -2472,6 +2476,35 @@ answers:
   (product owner, same day). The switch and the platform icon sets are
   FT-05.
 
+## v0.16.0 product decisions (2026-09-30, proposal #125)
+
+- **The first listed map is the default in every selection-row combobox.**
+  Keep a valid manual choice per country/continent row on this device. The
+  row's country/continent button opens the selected map; changing the
+  combobox chooses a type without navigating. A removed saved map falls back
+  to the first current option.
+- **The world picker opens a continent's Countries map from continent land
+  outside country features.** Country polygons retain precedence and open
+  their selected country map. Sea/background taps do nothing. A country can
+  be opened by tapping its polygon only while its collision-managed name is
+  visible; the selection list remains an alternate path.
+- **Map type choices inside a map are direct buttons on a second row, not a
+  title plus combobox.** The active type is marked; a choice opens that map's
+  Known view. Countries with one map do not need a redundant row.
+- **Quiz completion stays on the solved quiz map.** The result popup offers
+  Close only. An Again action is available on that map after closing; it
+  disappears when a new round starts or the map type changes.
+- **Towns maps need clearer land/background, boundary, and sea separation.**
+  Tune the point-map context treatment while preserving the region palette on
+  polygon maps; compare both Terrain states before settling the colors.
+- **Move the build/version badge to the top** so it no longer covers map
+  facts. **Tour controls use icons** for actions and stay clear of the fact
+  card; progress and speed remain discoverable.
+- **The chart SVG fills screen margins outside the map viewport**, not the
+  sea inside the MapLibre canvas. It stays local and non-interactive.
+- **The whole tutorial is audited and revised against current behavior.**
+  Update every stale step, supported language, and the manual; the visible
+  Skip action says "Exit tutorial". Keep Escape as a keyboard shortcut.
 ## Automatic pull-request reviews (2026-09-30)
 
 - The product owner asked for each PR to receive an automatic review from a
