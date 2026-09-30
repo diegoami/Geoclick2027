@@ -16,7 +16,7 @@ Keep this updated the same way as the other docs: when a decision gets
 made, made explicitly to correct an earlier one, or gets revisited, add
 or amend an entry here as part of that change, not as an afterthought.
 
-## AGENTS.md is the one instructions file, and reviews start from OpenCode (2026-09-27)
+## Instructions file and review process (2026-09-27, updated 2026-09-30)
 
 - **One instructions file.** `CLAUDE.md`'s content moved into `AGENTS.md`, and
   `CLAUDE.md` is now a comment plus `@AGENTS.md`. Claude Code reads `CLAUDE.md`
@@ -25,17 +25,20 @@ or amend an entry here as part of that change, not as an afterthought.
   "where it says Claude, read the implementing agent" translation — did not
   survive: two files, one idea. diegoami/discola-web made the same migration
   ([PR #72](https://github.com/diegoami/discola-web/pull/72)).
-- **Only releases are reviewed, and the review starts from OpenCode.** The
-  pasted `review-handoff` prompt is gone. The reviewer's job is written once in
+- **Formal milestone reviews are release-only; PR reviews are optional.** The
+  release review starts from OpenCode. The reviewer's job is written once in
   `.opencode/agents/release-reviewer.md` (a `primary` agent with `edit: deny`
   and `external_directory: allow`, so it can make its worktree beside the
   checkout but cannot edit); the owner starts it with
   `/review-release <milestone issue>` or
   `opencode run -m <provider/model> --command review-release <issue>`. Neither
   the command nor the agent sets a `model`, so the model the owner picks is the
-  one used. Skills stay in `.claude/skills/`, which OpenCode reads; the skill
-  now only fills in the milestone issue, gives the owner the command and
-  processes the verdict.
+  one used. Skills stay in `.claude/skills/`, which OpenCode reads. The
+  `review-handoff` skill prepares and processes milestone reviews. By owner
+  request, optional PR reviews use a separate `.opencode/agents/pr-reviewer.md`
+  and `/review-pr` command; the `review-pr` skill prepares the prompt and
+  processes findings. The PR reviewer posts a neutral review to the PR and
+  removes its own review worktree; this is not a merge approval or release gate.
 - **Ad hoc worktrees.** An implementing session uses a worktree of its own while
   another session may be working in the main checkout, which is common here.
   After a merge, `git switch main && git pull --ff-only`, then delete the merged

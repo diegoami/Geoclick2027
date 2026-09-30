@@ -1,12 +1,13 @@
 ---
 name: review-handoff
-description: Prepare a release for its independent review - open the milestone issue with everything the reviewer needs, and give the owner the one command that starts the review on a model of their choice. Use when a release is called or proposed, for the re-review after a BLOCK, and whenever the owner asks for a review. Also use when the owner says a review is in, to process it.
+description: Prepare and process independent release-milestone reviews only. Use when a milestone release is called or proposed, when a BLOCK requires re-review, or when the owner says a milestone review is in. For optional pull-request reviews, use review-pr instead.
 ---
 
 # Review handoff
 
-Only a release gets this review (`AGENTS.md`, *Releases*). A PR or a proposal
-doesn't: say how it was verified instead.
+This skill handles the formal release-milestone review (`AGENTS.md`, *Releases*).
+It does not handle optional PR reviews; use `.claude/skills/review-pr/SKILL.md`
+for those. Proposals and ordinary PRs do not trigger a release review.
 
 The reviewer's job is written once, in `.opencode/agents/release-reviewer.md`.
 It starts with no context and reads everything from the milestone issue, so the

@@ -168,8 +168,10 @@ the gate. The separate PR-review workflow is advisory only.
   diff with its base, and remove only that worktree when done. Request an
   evidence-backed review without code edits, commits, or pushes, and explicitly
   instruct the reviewer to post the result as a GitHub PR review, not only in
-  chat. If posting fails, the reviewer must return the complete review text
-  and explain the failure. Include the worktree path and prompt in the handoff.
+  chat. Point the prompt to `.opencode/agents/pr-reviewer.md` or `/review-pr`
+  so the reviewer follows the repository's full procedure. If posting fails,
+  the reviewer must return the complete review text and explain the failure.
+  Include the worktree path and prompt in the handoff.
 
 ### Worktrees
 
@@ -204,8 +206,9 @@ source of durable project state.
 A milestone is a release: an annotated tag `vX.Y.Z` on `main`, on the exact
 commit the published release is built from. It is not a branch, a PR, a
 proposal, a count of merged PRs or a change to a particular file. Nothing else
-triggers a review: not proposals, not PRs, not process or docs changes. A beta
-is not a milestone; it is built from a candidate. The releases go to the
+triggers the formal milestone review: not proposals, PRs, process or docs
+changes. Optional PR reviews are separate and owner-requested (see `review-pr`).
+A beta is not a milestone; it is built from a candidate. The releases go to the
 separate `diegoami/geoclick-releases` repository, but the tag lives here, and
 the release notes name the tagged commit. Say in the entry what was built and
 what was actually tried, rather than implying it.
@@ -227,7 +230,8 @@ time. Nothing here assumes one tool.
    full SHA, the previous milestone tag, the PRs merged since, and the gate
    results on the candidate. From then on, **`main` takes only fixes for the
    milestone's findings** until it is tagged.
-4. **The owner starts the review**: `/review-release <milestone issue>` in the
+4. **The owner starts the milestone review**:
+   `/review-release <milestone issue>` in the
    desktop app or the TUI, or
    `opencode run -m <provider/model> --command review-release <issue>` from a
    shell, on a model the owner picks. The reviewer follows
@@ -241,9 +245,10 @@ time. Nothing here assumes one tool.
    `git diff <previous tag>..<candidate SHA>`. It opens one issue per
    reproduced finding, and posts one verdict comment, AGREE or BLOCK, on the
    milestone issue. Nothing is pasted back.
-5. **The tag waits for the review.** BLOCK: the findings are fixed in ordinary
-   PRs, the candidate moves to the new `main` commit (the issue says so), and a
-   re-review follows without being asked. **Round ceiling:** if a third round
+5. **The tag waits for the milestone review.** BLOCK: the findings are fixed in
+   ordinary PRs, the candidate moves to the new `main` commit (the issue says
+   so), and a re-review follows without being asked. **Round ceiling:** if a
+   third round
    does not end in AGREE, the decision goes to the owner.
 6. AGREE: the agent creates the tag on **exactly the reviewed SHA**, never on a
    later commit, and builds the release from that tag. Work merged after the
@@ -267,11 +272,20 @@ Severities: **MUST-FIX** (fix before the tag), **SHOULD**, and **OUT OF
 SCOPE** (not caused by this milestone's changes). Every issue and comment body
 is written to a file as UTF-8 without a BOM and passed with `--body-file`.
 
-When the owner says the review is in: read it from GitHub, reproduce each
-finding before acting on it, and fix it (`Fixes #n` in a PR) or rebut it with
-evidence on the issue. Owner decisions go to the owner with a recommended
+When the owner says the milestone review is in: read it from GitHub, reproduce
+each finding before acting on it, and fix it (`Fixes #n` in a PR) or rebut it
+with evidence on the issue. Owner decisions go to the owner with a recommended
 default, not into the code. (Why: see `DECISIONS.md` — "A milestone is a
 release tag, reviewed before it is created".)
+
+### Optional PR reviews
+
+PR reviews are optional, separate from the release-milestone review, and only
+start at the owner's choice. Follow `.claude/skills/review-pr/SKILL.md`: the
+implementer prepares the prompt; a different model in a fresh session runs
+`.opencode/agents/pr-reviewer.md` via `/review-pr`. The reviewer posts one
+neutral review to the PR and removes only its own worktree. This is not a merge
+approval or release gate; findings stay in the PR thread, not milestone issues.
 
 ## Working agreements with the owner
 
