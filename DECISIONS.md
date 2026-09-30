@@ -2471,3 +2471,19 @@ answers:
 - **The web favicon switches to it too**, so all three shells match
   (product owner, same day). The switch and the platform icon sets are
   FT-05.
+
+## Automatic pull-request reviews (2026-09-30)
+
+- The product owner asked for each PR to receive an automatic review from a
+  different model; use OpenCode / GLM-5.3-Flash. The review posts one advisory
+  PR comment, refreshed when new commits arrive. It is not a GitHub approval
+  and does not decide whether a change merges: the owner tests and explicitly
+  OKs every merge.
+- Use `pull_request_target` only to read the PR diff through GitHub's API; do
+  not check out or execute PR code. Run OpenCode from a generated temporary
+  configuration with all agent tools denied, so untrusted diff text cannot
+  invoke shell, edit files, or access GitHub credentials. Keep the model key
+  in the Actions secret `OPENCODE_API_KEY`; never put it in the repository.
+- Fork PRs are skipped because GitHub does not expose repository secrets to
+  their workflows. Milestone release reviews retain their separate, manually
+  started procedure in `AGENTS.md` and `docs/RELEASES.md`.
