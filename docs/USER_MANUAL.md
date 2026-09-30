@@ -526,15 +526,14 @@ as soon as the screen opens:
 
 ![The tour, on its fourth stop: Valle d’Aosta](manual/tour.jpg)
 
-The controls, in a white bar at the bottom of the screen:
+The compact controls at the bottom of the screen use icons: a left arrow goes
+back one stop, play/pause starts or stops the tour, the circular arrow replays
+it from the beginning, and the right arrow skips to the next stop. Previous
+and next are disabled at the beginning and end. Each icon has a localized
+accessible name (and a tooltip on hover).
 
-- **‹ Prev** goes back one stop (greyed out on the first one).
-- **Pause** stops on the current place; it then reads **▶ Play** to carry
-  on. At the end of the tour it becomes **Replay**, which starts over.
-- **Next ›** skips to the next stop (greyed out once the tour has
-  finished).
-- **"2 / 20"**: the stop you're on, out of how many.
-- **1×**, a menu for the speed: 0.5×, 1×, 1.5×, 2× or 3×. A tour starts
+- **"2 / 20"** shows the stop you're on, out of how many.
+- The speed menu offers 0.5×, 0.75×, 1×, 1.5×, 2× and 3×. A tour starts
   at normal speed, except on very big maps (such as Italy's 110 provinces),
   where it starts faster, so that the whole tour takes about three minutes.
 

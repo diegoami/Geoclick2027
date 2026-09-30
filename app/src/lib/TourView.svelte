@@ -8,16 +8,17 @@
 	import { terrainShown } from './mapPrefs.svelte';
 	import { mapFitPadding } from './mapFit';
 	import MapNav from './MapNav.svelte';
-	import { getLanguage, t } from './i18n.svelte';
+	import { getLanguage } from './i18n.svelte';
 	import { targetName } from './targetName';
 	import { mapDisplayName } from './mapCatalog';
 	import { fetchTour, type Tour } from './tour';
-	import { TOUR_SPEEDS, defaultTourSpeed } from './tourSpeed';
+	import { defaultTourSpeed } from './tourSpeed';
 	import { DOT_CLEARANCE_PX, registerLabel } from './labelCollision';
 	import type { MapDefinition, Target } from './mapDefinition';
 	import FactCard from './FactCard.svelte';
 	import { publishBottomOverlay } from './mapBottomOverlay';
 	import { fetchFacts, placeFacts, type Facts, type PlaceFacts } from './facts';
+	import TourControls from './TourControls.svelte';
 
 	let { mapId }: { mapId: string } = $props();
 
@@ -264,29 +265,23 @@
 				fact={facts[currentTarget.id]}
 				origin={tourFacts.origin}
 				extra={tourFacts.extra}
-				bottom="4.25rem"
+				bottom="calc(var(--map-bottom-overlay, 4.25rem) + 0.75rem)"
 			/>
 		{/if}
 
 		{#if tour}
 			<div class="controls" data-map-overlay="bottom" bind:this={controlsEl}>
-				<button onclick={back} disabled={stepIndex === 0}>{t('tour.prev')}</button>
-				<button onclick={togglePlay}>
-					{#if finished}{t('tour.replay')}{:else if playing}{t('tour.pause')}{:else}{t(
-							'tour.play'
-						)}{/if}
-				</button>
-				<button onclick={advance} disabled={finished}>{t('tour.next')}</button>
-				<span class="progress">{stepIndex + 1} / {tour.steps.length}</span>
-				<select
-					class="speed"
-					value={speed}
-					onchange={(e) => setSpeed(Number(e.currentTarget.value))}
-				>
-					{#each TOUR_SPEEDS as s (s)}
-						<option value={s}>{s}×</option>
-					{/each}
-				</select>
+				<TourControls
+					{stepIndex}
+					stepCount={tour.steps.length}
+					{playing}
+					{finished}
+					{speed}
+					onback={back}
+					ontoggleplay={togglePlay}
+					onadvance={advance}
+					onsetspeed={setSpeed}
+				/>
 			</div>
 		{/if}
 	{/if}
@@ -309,44 +304,7 @@
 		left: 50%;
 		transform: translateX(-50%);
 		z-index: 1;
-		display: flex;
-		align-items: center;
-		gap: 0.5rem;
-		background: rgba(255, 255, 255, 0.9);
-		padding: 0.5rem 0.9rem;
-		border-radius: 2rem;
-		font-family: system-ui, sans-serif;
-		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-	}
-	.controls button {
-		border: none;
-		background: none;
-		font-size: 1.1rem;
-		cursor: pointer;
-		padding: 0.25rem 0.5rem;
-		border-radius: 0.5rem;
-	}
-	.controls button:disabled {
-		opacity: 0.35;
-		cursor: default;
-	}
-	.controls button:not(:disabled):hover {
-		background: rgba(0, 0, 0, 0.06);
-	}
-	.progress {
-		font-size: 0.85rem;
-		opacity: 0.7;
-		min-width: 3.5rem;
-		text-align: center;
-	}
-	.speed {
-		font-family: inherit;
-		font-size: 0.85rem;
-		border: none;
-		background: rgba(0, 0, 0, 0.06);
-		border-radius: 0.5rem;
-		padding: 0.25rem 0.4rem;
-		cursor: pointer;
+		max-width: calc(100% - 1rem);
 	}
 	.error {
 		padding: 1rem;
