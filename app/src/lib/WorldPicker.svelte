@@ -17,6 +17,7 @@
 	import { getLanguage, t, type TranslationKey } from './i18n.svelte';
 	import { foldCreditOnNarrowScreens } from './geoclickMap';
 	import { enableLabelCollision, registerLabel } from './labelCollision';
+	import { CROWDED_CLASS, MAGNIFIED_CLASS } from './labelMagnify';
 	import type { Mastery } from './homeProgress';
 	import MapSections from './MapSections.svelte';
 	import { pickerDefaultMapIdOf, pickerIdOf } from './mapCatalog';
@@ -65,6 +66,7 @@
 	let note = $state<string>();
 	let labels: { remove(): void }[] = [];
 	let countryLabelElements: Record<string, HTMLElement> = {};
+	let countryLabelPopups: Record<string, maplibregl.Popup> = {};
 	let tutorialSpot: maplibregl.Marker | undefined;
 	let stopCollision: (() => void) | undefined;
 
@@ -147,19 +149,17 @@
 		).id;
 	}
 
-	function openContinentMap(id: string): boolean {
-		const tutorialRunning = tutorialState().status !== 'idle';
-		if (tutorialRunning) {
-			chooseContinent(id);
-			return true;
-		}
-		return openCountryMap(id);
+	function chooseContinentFromLand(id: string): void {
+		// Open the continent's picker section first; its first map type is
+		// Countries, already selected unless the player chose another type.
+		chooseContinent(id);
 	}
 
 	function clearLabels() {
 		for (const label of labels) label.remove();
 		labels = [];
 		countryLabelElements = {};
+		countryLabelPopups = {};
 	}
 
 	// The world view names the continents, and a name is a way in too. A
@@ -199,15 +199,42 @@
 			const [w, s, e, n] = country.bbox;
 			// The bigger country keeps its name when two collide.
 			registerLabel(popup, { priority: (e - w) * (n - s) });
+			countryLabelPopups[country.id] = popup;
 			labels.push(popup);
 		}
 	}
 
-	// Country polygons remain tappable at every zoom, but direct entry is only
-	// offered for a country whose collision-managed name is actually visible.
+	// Country labels only open their map after the player taps the visible name.
 	function countryLabelVisible(id: string): boolean {
 		const label = countryLabelElements[id];
-		return !!label && !label.classList.contains('is-crowded');
+		return !!label && !label.classList.contains(CROWDED_CLASS);
+	}
+
+	function countryLabelAt(point: { x: number; y: number }): string | undefined {
+		if (!container) return;
+		const bounds = container.getBoundingClientRect();
+		return Object.entries(countryLabelElements).find(([id, label]) => {
+			if (!countryLabelVisible(id)) return false;
+			const rect = label.getBoundingClientRect();
+			return (
+				point.x >= rect.left - bounds.left &&
+				point.x <= rect.right - bounds.left &&
+				point.y >= rect.top - bounds.top &&
+				point.y <= rect.bottom - bounds.top
+			);
+		})?.[0];
+	}
+
+	function revealCountryLabel(id: string) {
+		const popup = countryLabelPopups[id];
+		const element = countryLabelElements[id];
+		if (!popup || !element || !map) return;
+		// Give a deliberately requested name first placement choice and make it
+		// visibly legible until this set of labels is redrawn for another view.
+		registerLabel(popup, { priority: Number.MAX_SAFE_INTEGER });
+		element.classList.remove(CROWDED_CLASS);
+		element.querySelector('.maplibregl-popup-content')?.classList.add(MAGNIFIED_CLASS);
+		map.resize();
 	}
 
 	// A country with maps marks its own row; one with none marks its
@@ -352,36 +379,51 @@
 					// up from, so Back during a slow or failed load exits.
 					setPickerShown(true);
 				});
-				map.on('click', 'countries-fill', (e) => {
-					// A continent's name is a button of its own: its click is not also
-					// a tap on the country under it, in the view it has just opened.
+				map.on('click', (e) => {
+					// A continent's name is a button of its own, not a map tap.
 					if ((e.originalEvent.target as Element | null)?.closest('.picker-continent')) return;
-					const feature = e.features?.[0];
+					// Labels are pointer-transparent so panning still works. Convert
+					// their map-container bounds to the click's map-relative point.
+					const labelId = countryLabelAt(e.point);
+					if (labelId) {
+						if (tutorialState().status === 'idle' && openCountryMap(labelId)) return;
+						void markCountry(labelId);
+						tutorialCountryChosen(labelId);
+						return;
+					}
+					const feature = map?.queryRenderedFeatures(e.point, { layers: ['countries-fill'] })[0];
 					const id = feature?.properties?.id as string | undefined;
 					const continent = feature?.properties?.continent as string | undefined;
-					if (!id || !continent) return;
-					// A mapped country opens directly only while its collision-managed
-					// label is visible. Otherwise the tap opens the continent's Countries map.
-					if (view === 'world') {
-						// Country names are not shown at world scale, so a country
-						// polygon there is not a country-selection target.
-						return;
-					} else if (continent === view) {
-						const tutorialRunning = tutorialState().status !== 'idle';
-						if (hasMaps(id) && !countryLabelVisible(id)) return;
-						if (!tutorialRunning && openCountryMap(id)) return;
+					if (id && continent) {
+						if (view === 'world') {
+							chooseContinent(continent, id);
+							return;
+						}
+						if (continent !== view) return;
+						if (hasMaps(id)) {
+							revealCountryLabel(id);
+							return;
+						}
 						countryToMark = undefined;
 						void markCountry(id);
 						tutorialCountryChosen(id);
+						return;
 					}
-				});
-				map.on('click', 'land', (e) => {
-					if (!e.lngLat || !picker) return;
-					// Country polygons sit above this broad land layer. Only treat a
-					// click as a continent-area tap when no country is under the point.
-					if (map?.queryRenderedFeatures(e.point, { layers: ['countries-fill'] }).length) return;
-					const continent = view === 'world' ? continentAt(e.lngLat.lng, e.lngLat.lat) : view;
-					if (continent) openContinentMap(continent);
+					// Select a continent from broad land only when no playable country
+					// is within 36 screen pixels of the tapped point.
+					if (!map?.queryRenderedFeatures(e.point, { layers: ['land'] }).length) return;
+					const radius = 36;
+					const nearby = map.queryRenderedFeatures(
+						[
+							[e.point.x - radius, e.point.y - radius],
+							[e.point.x + radius, e.point.y + radius]
+						],
+						{ layers: ['countries-fill'] }
+					);
+					if (nearby.some((country) => hasMaps(String(country.properties?.id ?? '')))) return;
+					if (!e.lngLat) return;
+					const landContinent = view === 'world' ? continentAt(e.lngLat.lng, e.lngLat.lat) : view;
+					if (landContinent) chooseContinentFromLand(landContinent);
 				});
 				map.on('mouseenter', 'countries-fill', () => {
 					if (map) map.getCanvas().style.cursor = 'pointer';

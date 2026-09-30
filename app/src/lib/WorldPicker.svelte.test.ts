@@ -13,8 +13,10 @@ import { pickerGoUp, setPickerShown, setPickerView } from './mapPrefs.svelte';
 const fake = vi.hoisted(() => {
 	const state = {
 		load: undefined as (() => void) | undefined,
-		countryClick: undefined as ((event: unknown) => void) | undefined,
-		landClick: undefined as ((event: unknown) => void) | undefined,
+		mapClick: undefined as ((event: unknown) => void) | undefined,
+		countryFeatures: [] as { properties: Record<string, string> }[],
+		nearbyCountryFeatures: [] as { properties: Record<string, string> }[],
+		landFeatures: [] as object[],
 		mapOptions: undefined as { doubleClickZoom?: boolean } | undefined,
 		countryLabel: undefined as HTMLElement | undefined
 	};
@@ -40,24 +42,23 @@ const fake = vi.hoisted(() => {
 	};
 	function createMap() {
 		const map = {
-			on: (
-				type: string,
-				layerOrCallback: string | ((event: unknown) => void),
-				callback?: (event: unknown) => void
-			) => {
+			on: (type: string, layerOrCallback: string | ((event: unknown) => void)) => {
 				if (type === 'load' && typeof layerOrCallback === 'function')
 					state.load = () => layerOrCallback(undefined);
-				if (type === 'click' && callback && layerOrCallback === 'countries-fill')
-					state.countryClick = callback;
-				if (type === 'click' && callback && layerOrCallback === 'land') state.landClick = callback;
+				if (type === 'click' && typeof layerOrCallback === 'function')
+					state.mapClick = layerOrCallback;
 				return map;
 			},
 			addControl: () => map,
 			setFeatureState: () => {},
-			queryRenderedFeatures: () => [],
+			queryRenderedFeatures: (query: unknown, options: { layers?: string[] }) => {
+				if (options.layers?.[0] === 'land') return state.landFeatures;
+				return Array.isArray(query) ? state.nearbyCountryFeatures : state.countryFeatures;
+			},
 			setPaintProperty: () => {},
 			fitBounds: () => map,
 			getCanvas: () => ({ style: {} }),
+			resize: () => map,
 			remove: () => {}
 		};
 		return map;
@@ -73,11 +74,16 @@ const fake = vi.hoisted(() => {
 	}
 	class Popup {
 		element = document.createElement('div');
+		content = document.createElement('div');
+		constructor() {
+			this.content.className = 'maplibregl-popup-content';
+			this.element.append(this.content);
+		}
 		setLngLat() {
 			return this;
 		}
 		setText(text: string) {
-			this.element.textContent = text;
+			this.content.textContent = text;
 			return this;
 		}
 		addTo() {
@@ -125,10 +131,13 @@ vi.mock('./worldPicker', () => ({
 describe('WorldPicker (FT-83, FT-86, #87)', () => {
 	beforeEach(() => {
 		fake.state.load = undefined;
-		fake.state.countryClick = undefined;
-		fake.state.landClick = undefined;
+		fake.state.mapClick = undefined;
+		fake.state.countryFeatures = [];
+		fake.state.nearbyCountryFeatures = [];
+		fake.state.landFeatures = [];
 		fake.state.mapOptions = undefined;
 		fake.state.countryLabel = undefined;
+		localStorage.removeItem('geoclick:map-type-selections:v1');
 		gotoMock.mockClear();
 		setPickerShown(false);
 		setPickerView('europe');
@@ -149,7 +158,7 @@ describe('WorldPicker (FT-83, FT-86, #87)', () => {
 		expect(pickerGoUp()).toBe(true);
 	});
 
-	it('opens a country only when its continent-view label is visible', async () => {
+	it('reveals a hidden country label on the first tap and opens it on the next', async () => {
 		setPickerView('world');
 		await render(WorldPicker, {
 			groups: [
@@ -168,28 +177,38 @@ describe('WorldPicker (FT-83, FT-86, #87)', () => {
 		await expect.poll(() => fake.state.load !== undefined).toBe(true);
 		expect(fake.state.mapOptions?.doubleClickZoom).toBe(false);
 		fake.state.load!();
-		await expect.poll(() => fake.state.countryClick !== undefined).toBe(true);
+		await expect.poll(() => fake.state.mapClick !== undefined).toBe(true);
 
-		const tapItaly = () =>
-			fake.state.countryClick!({
-				features: [{ properties: { id: 'italy', continent: 'europe' } }],
+		const tap = (point = { x: 10, y: 10 }) =>
+			fake.state.mapClick!({
+				point,
+				lngLat: { lng: 12, lat: 42 },
 				originalEvent: { target: { closest: () => null } }
 			});
-		tapItaly();
-		expect(gotoMock).not.toHaveBeenCalled();
-
-		gotoMock.mockClear();
 		setPickerView('europe');
 		await expect.poll(() => document.querySelector('.continent')?.textContent).toBe('Europe');
-		tapItaly();
-		expect(gotoMock).toHaveBeenCalledWith('/map/italy-regions');
-
-		gotoMock.mockClear();
+		fake.state.countryFeatures = [{ properties: { id: 'italy', continent: 'europe' } }];
 		fake.state.countryLabel?.classList.add('is-crowded');
-		tapItaly();
+		tap();
 		expect(gotoMock).not.toHaveBeenCalled();
+		expect(fake.state.countryLabel?.classList.contains('is-crowded')).toBe(false);
+		expect(
+			fake.state.countryLabel
+				?.querySelector('.maplibregl-popup-content')
+				?.classList.contains('is-magnified')
+		).toBe(true);
+
+		const mapBounds = document.querySelector('.map')!.getBoundingClientRect();
+		fake.state.countryLabel!.getBoundingClientRect = () =>
+			new DOMRect(mapBounds.left, mapBounds.top, mapBounds.width, mapBounds.height);
 		fake.state.countryLabel?.classList.remove('is-crowded');
-		gotoMock.mockClear();
+		fake.state.countryFeatures = [];
+		fake.state.mapClick!({
+			point: { x: 10, y: 10 },
+			lngLat: { lng: 12, lat: 42 },
+			originalEvent: { target: { closest: () => null } }
+		});
+		expect(gotoMock).toHaveBeenCalledWith('/map/italy-regions');
 	});
 
 	it('keeps the no-maps notice for a country with no playable maps', async () => {
@@ -197,10 +216,12 @@ describe('WorldPicker (FT-83, FT-86, #87)', () => {
 		await render(WorldPicker, { groups: [], masteries: {}, targetCount: () => 0 });
 		await expect.poll(() => fake.state.load !== undefined).toBe(true);
 		fake.state.load!();
-		await expect.poll(() => fake.state.countryClick !== undefined).toBe(true);
+		await expect.poll(() => fake.state.mapClick !== undefined).toBe(true);
 
-		fake.state.countryClick!({
-			features: [{ properties: { id: 'belarus', continent: 'europe' } }],
+		fake.state.countryFeatures = [{ properties: { id: 'belarus', continent: 'europe' } }];
+		fake.state.mapClick!({
+			point: { x: 10, y: 10 },
+			lngLat: { lng: 28, lat: 53 },
 			originalEvent: { target: { closest: () => null } }
 		});
 		await expect.poll(() => document.querySelector('.note')?.textContent).toContain('Belarus');
@@ -222,9 +243,26 @@ describe('WorldPicker (FT-83, FT-86, #87)', () => {
 		});
 		await expect.poll(() => fake.state.load !== undefined).toBe(true);
 		fake.state.load!();
-		await expect.poll(() => fake.state.landClick !== undefined).toBe(true);
+		await expect.poll(() => fake.state.mapClick !== undefined).toBe(true);
 
-		fake.state.landClick!({ point: { x: 10, y: 10 }, lngLat: { lng: 0, lat: 50 } });
-		expect(gotoMock).toHaveBeenCalledWith('/map/europe-countries');
+		fake.state.landFeatures = [{}];
+		fake.state.mapClick!({
+			point: { x: 10, y: 10 },
+			lngLat: { lng: 0, lat: 50 },
+			originalEvent: { target: { closest: () => null } }
+		});
+		await expect.poll(() => document.querySelector('.continent')?.textContent).toBe('Europe');
+		expect(document.querySelector('select')?.value).toBe('europe-countries');
+		expect(gotoMock).not.toHaveBeenCalled();
+
+		setPickerView('world');
+		await expect.poll(() => document.querySelector('.continent')).toBeNull();
+		fake.state.nearbyCountryFeatures = [{ properties: { id: 'italy', continent: 'europe' } }];
+		fake.state.mapClick!({
+			point: { x: 10, y: 10 },
+			lngLat: { lng: 0, lat: 50 },
+			originalEvent: { target: { closest: () => null } }
+		});
+		expect(document.querySelector('.continent')).toBeNull();
 	});
 });
