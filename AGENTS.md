@@ -159,8 +159,17 @@ the gate. The separate PR-review workflow is advisory only.
 - Roles: the user is Product Manager; the implementing model is the Developer.
   Finish by telling the user exactly what to run/click and what to expect.
 - Whenever a PR is handed to the owner for testing, include its direct GitHub
-  PR link and an exact copy-paste command to start that PR's local branch. End
-  the handoff with that command block.
+  PR link and a ready-to-paste prompt for an **optional independent review**
+  using a different model. Do not create a review worktree or start the review
+  unless the owner explicitly asks. The prompt must identify the PR and exact
+  head SHA, tell the reviewer to create its own detached worktree at that SHA
+  under the sibling `<project>-review` directory (with a `cd` to the main
+  checkout first), read `AGENTS.md`, compare the PR
+  diff with its base, and remove only that worktree when done. Request an
+  evidence-backed review without code edits, commits, or pushes, and explicitly
+  instruct the reviewer to post the result as a GitHub PR review, not only in
+  chat. If posting fails, the reviewer must return the complete review text
+  and explain the failure. Include the worktree path and prompt in the handoff.
 
 ### Worktrees
 
@@ -181,12 +190,14 @@ its merge. A reviewer uses a worktree of its own too (*Releases*).
 After a merge: `git switch main && git pull --ff-only`, then delete the merged
 branch.
 
-### Sessions and handover
+### Project state
 
-Update `docs/HANDOVER.md` on every change of state, in place, before you report
-the change. It is the snapshot a fresh session is told to read first; a stale
-snapshot is the failure the file exists to prevent (product owner's rule,
-2026-09-20).
+Do not maintain a session handover or duplicate current status in a snapshot.
+Put durable project status in `ROADMAP.md`, release-task status in its plan,
+and decisions in `DECISIONS.md`; keep implementation details beside the code.
+At the start of a session, read this file, then consult the relevant living
+project document. Git history and PRs record completed work; the chat is not a
+source of durable project state.
 
 ## Releases
 

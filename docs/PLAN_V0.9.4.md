@@ -35,7 +35,7 @@ internal one about which representation of a tour survives.
 ## What the review got right, and the three sharpenings
 
 The earlier issue from that session had a central fact backwards — hence
-the warning in HANDOVER.md to verify its claims before acting. This batch
+  the earlier project-status snapshot's warning to verify its claims before acting. This batch
 does not repeat that: every cited line number is real and every described
 behaviour reproduces by reading the code. Three claims still needed
 correcting, and each changes the work:
@@ -250,7 +250,7 @@ are still authoritative; this section is only scheduling.
   product decisions; this release does not touch `data/facts/`.
 - **FT-38, the Wikidata landmark pass.** Parked on the same decisions
   (DECISIONS.md, "FT-38 is parked, not superseded").
-- **The known-but-unscheduled items** in HANDOVER.md — the Android version
+- **The known-but-unscheduled items** in the earlier project-status snapshot — the Android version
   badge overlapping MapLibre's attribution, the unsigned Windows
   installers, `slugify`'s non-ASCII ids. None was raised by the review and
   none is made worse by it.

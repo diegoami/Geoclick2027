@@ -40,9 +40,23 @@ or amend an entry here as part of that change, not as an afterthought.
   another session may be working in the main checkout, which is common here.
   After a merge, `git switch main && git pull --ff-only`, then delete the merged
   branch. The old rules — every session updates the main checkout on start, and
-  the full worktree layout — are gone. Sessions update `docs/HANDOVER.md` on
-  every change of state; the chat checkpoint template and its 5–6 turn rhythm
-  are gone.
+  the full worktree layout — are gone. Session status is not duplicated in a
+  handover snapshot; the chat checkpoint template and its 5–6 turn rhythm are
+  gone.
+
+## Project state lives in its owning documents (2026-09-30)
+
+- **Decision:** remove `docs/HANDOVER.md` and stop requiring session-end
+  snapshots. Keep current status in `ROADMAP.md`, release-task status in the
+  relevant plan, decisions in this file, and implementation notes beside the
+  code. Git history and PRs record completed work.
+- **Why:** most of the handover duplicated facts already owned by those
+  documents, while its status could become stale and was still presented as
+  the first thing a new session should trust. Review also identified several
+  durable tooling gotchas that were not duplicated; those now live in
+  `ONBOARDING.md` and `MAPS.md`. With current information in its owning
+  documents, a separate snapshot was not worth maintaining; `AGENTS.md`
+  directs sessions to the living records.
 
 ## Commit trailers name the model (history, moved here 2026-09-27)
 
@@ -466,7 +480,7 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
 ## FT-38 is parked, not superseded (2026-09-20, FT-38)
 
 - **The Wikidata landmark pass stays open, blocked on the same product
-  decisions as v0.10.0.** HANDOVER.md had called it probably superseded by
+  decisions as v0.10.0.** An earlier project-status snapshot had called it probably superseded by
   the 5 448 authored sentences, on the grounds that both exist to give a
   place something memorable.
 - **That reasoning does not survive FT-45.** The rule set there is that the

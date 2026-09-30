@@ -12,23 +12,14 @@ leaving it stale for the next person.
 
 ## Read these first, in order
 
-0. [docs/HANDOVER.md](docs/HANDOVER.md) — **where things stand right
-   now**: the current release, what is blocked on what, what is not
-   verified, and the gotchas that have already cost someone a day. It is
-   a snapshot, rewritten at the end of a piece of work rather than
-   appended to, so it is short and current. Start here; the rest of this
-   list is reference.
-1. **This file** — orientation and how to work day to day.
-2. [ARCHITECTURE.md](ARCHITECTURE.md) — what the system is made of and why
+1. [AGENTS.md](AGENTS.md) — working rules and canonical source paths.
+2. **This file** — orientation and how to work day to day.
+3. [ARCHITECTURE.md](ARCHITECTURE.md) — what the system is made of and why
    (stack choices, domain model, hosting). Read the sections relevant to
    what you're touching, not necessarily cover to cover.
-3. [ROADMAP.md](ROADMAP.md) — what's been built, what's in progress, and
+4. [ROADMAP.md](ROADMAP.md) — what's been built, what's in progress, and
    what's next. Check the **Status** section at the top first to see where
    the project is right now.
-4. [AGENTS.md](AGENTS.md) — working conventions. Written for an AI
-   assistant collaborating on this repo, but every rule in it applies to
-   any contributor, human or not. Deliberately short and rule-only — see
-   **AI assistant scope** below for why, and where the reasoning went.
 5. [DECISIONS.md](DECISIONS.md) — *why* the product works the way it
    does, as a scannable list rather than scattered through iteration
    write-ups. Worth a skim before changing behavior that looks like it
@@ -505,11 +496,10 @@ you edit it:
   to `AGENTS.md`, that is the signal: write it here or in DECISIONS.md
   and leave a pointer.
 
-- **A session ends in `docs/HANDOVER.md`, not in the chat.** Claude
-  sessions are cleared, and the transcript goes with them. Whatever the
-  next person or session needs to know — what landed, what state the
-  branch is in, what the next action is — is written into that file
-  before the work is called done.
+- **Durable state belongs in its owning document.** Current project status is
+  in `ROADMAP.md`, release work in its plan, decisions in `DECISIONS.md`, and
+  implementation detail beside the code. Use Git history and PRs for completed
+  changes; do not copy session status into a separate handover snapshot.
 
 Everything else — how the build works, where data comes from, why the
 product behaves as it does — lives in the files listed at the top of
@@ -599,12 +589,28 @@ this one, and is read on demand rather than up front.
   - `window.__map` is the real MapLibre map of whichever map view is
     open, on the dev server only (`createMap`). Browser checks use it for
     `map.project(lngLat)` - the screen position of a place - which is how
-    the label and framing checks in v0.6.0 were written.
+    the label and framing checks in v0.6.0 were written. It is unavailable
+    in production; smoke tests there must measure the DOM or inspect page
+    screenshots instead.
 - **Commit messages end with** `Co-Authored-By: Claude Sonnet 5
   <noreply@anthropic.com>` when Claude made the change — see AGENTS.md.
 
 ## Gotchas that have already cost real time
 
+- **Do not build generated content with a bash heredoc.** Shell interpolation
+  can eat backticks, `${...}` and escapes such as `\d`, leaving broken content
+  that may not be noticed until much later. Write a small `.mjs` script in the
+  scratchpad and run it instead. `python - <<'EOF'` can hang on stdin here.
+- **A browser test can fail to start because its port is reserved by Windows.**
+  Vitest's browser port 63315 falls in Windows' reserved range 63289–63388.
+  The rest of the gates may pass; rebooting usually releases the range. If one
+  browser-test file fails at startup on this machine, retry before debugging
+  the test itself.
+- **MapLibre's `canvas.toDataURL()` is blank** because its canvas is not created
+  with `preserveDrawingBuffer`. To verify that a map rendered, take a page
+  screenshot and count distinct pixels instead of reading the canvas.
+- **Windows `cmd.exe` eats `^`.** Run Git commands without `shell: true`, and
+  invoke `gradlew.bat` by its absolute path.
 - **`app/static/maps` and `app/static/styles` are prepared at build time,
   not committed.** `app/scripts/prepare-assets.mjs` links or copies
   `data/maps` and `data/styles` there; `predev` and `prebuild` run it, and

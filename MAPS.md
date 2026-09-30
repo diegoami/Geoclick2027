@@ -11,6 +11,11 @@ Nothing about adding a map should depend on a one-off command run once
 outside the repo and not recorded anywhere — if a map exists, this file
 says how it was made.
 
+`data/styles/base.json` is an authored shared MapLibre style. **Do not
+re-serialise it with `JSON.stringify` or run a formatter over the whole
+file**: either can turn a small textual change into a very large diff. Make
+focused text edits instead.
+
 ## Pipeline
 
 ```
