@@ -22,6 +22,7 @@
 	import { tutorialExploreReveal } from './tutorial.svelte';
 	import { DOT_CLEARANCE_PX, FOCUSED_CLASS, areaShares, registerLabel } from './labelCollision';
 	import FactCard from './FactCard.svelte';
+	import ChartMapShell from './ChartMapShell.svelte';
 	import { fetchFacts, placeFacts, type Facts } from './facts';
 	import { StretchedNames } from './stretchedNames';
 	import { publishBottomOverlay } from './mapBottomOverlay';
@@ -292,13 +293,15 @@
 	});
 </script>
 
-<div class="map-view">
+<div class="map-view" data-map-fit-root>
 	{#if error}
 		<p class="error">{error}</p>
 	{:else}
 		<MapNav {mapId} mapName={mapDisplayName(mapId) ?? mapDef?.name} active="explore" />
 	{/if}
-	<div class="container" bind:this={container}></div>
+	<ChartMapShell>
+		<div class="container" bind:this={container}></div>
+	</ChartMapShell>
 	{#if asked}
 		<FactCard
 			name={askedName ?? asked.name}
@@ -334,11 +337,9 @@
 		width: 100%;
 		height: 100vh;
 	}
-	.container {
-		width: 100%;
-		height: 100%;
-	}
 	.error {
+		position: relative;
+		z-index: 2;
 		padding: 1rem;
 		font-family: system-ui, sans-serif;
 		color: #a33;

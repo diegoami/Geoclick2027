@@ -37,7 +37,11 @@ export interface FitPadding {
  */
 export function mapFitPadding(container: HTMLElement, extra: Partial<FitPadding> = {}): FitPadding {
 	const box = container.getBoundingClientRect();
-	const root = container.parentElement ?? container;
+	// The map can live inside a visual shell (the chart-art frame) while the
+	// view's furniture remains outside it. Measure from the owning view, not
+	// the immediate parent, so the frame cannot hide overlay bounds from fits.
+	const root =
+		container.closest<HTMLElement>('[data-map-fit-root]') ?? container.parentElement ?? container;
 	const padding: FitPadding = {
 		top: extra.top ?? 0,
 		right: extra.right ?? 0,

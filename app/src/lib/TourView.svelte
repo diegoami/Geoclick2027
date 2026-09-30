@@ -16,6 +16,7 @@
 	import { DOT_CLEARANCE_PX, registerLabel } from './labelCollision';
 	import type { MapDefinition, Target } from './mapDefinition';
 	import FactCard from './FactCard.svelte';
+	import ChartMapShell from './ChartMapShell.svelte';
 	import { publishBottomOverlay } from './mapBottomOverlay';
 	import { fetchFacts, placeFacts, type Facts, type PlaceFacts } from './facts';
 	import TourControls from './TourControls.svelte';
@@ -251,7 +252,7 @@
 	});
 </script>
 
-<div class="tour-view">
+<div class="tour-view" data-map-fit-root>
 	{#if error}
 		<p class="error">{error}</p>
 	{:else}
@@ -285,7 +286,9 @@
 			</div>
 		{/if}
 	{/if}
-	<div class="container" bind:this={container}></div>
+	<ChartMapShell>
+		<div class="container" bind:this={container}></div>
+	</ChartMapShell>
 </div>
 
 <style>
@@ -293,10 +296,6 @@
 		position: relative;
 		width: 100%;
 		height: 100vh;
-	}
-	.container {
-		width: 100%;
-		height: 100%;
 	}
 	.controls {
 		position: absolute;
@@ -307,6 +306,8 @@
 		max-width: calc(100% - 1rem);
 	}
 	.error {
+		position: relative;
+		z-index: 2;
 		padding: 1rem;
 		font-family: system-ui, sans-serif;
 		color: #a33;

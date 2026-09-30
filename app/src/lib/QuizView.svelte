@@ -18,6 +18,7 @@
 	import { DOT_CLEARANCE_PX, registerLabel } from './labelCollision';
 	import { forgetRound, rememberRound, roundInProgress } from './quizRound';
 	import FactCard from './FactCard.svelte';
+	import ChartMapShell from './ChartMapShell.svelte';
 	import { fetchFacts, placeFacts, type Facts } from './facts';
 	import {
 		createQuizSession,
@@ -755,7 +756,7 @@
 	});
 </script>
 
-<div class="quiz-view">
+<div class="quiz-view" data-map-fit-root>
 	{#if error}
 		<p class="error">{error}</p>
 	{:else}
@@ -827,7 +828,9 @@
 		>
 	{/if}
 
-	<div class="container" bind:this={container}></div>
+	<ChartMapShell>
+		<div class="container" bind:this={container}></div>
+	</ChartMapShell>
 
 	<!-- Above the tray, whose height the player can drag (FT-35). Two clauses
 	     rather than three: the map is already sharing this screen with a tray
@@ -896,10 +899,6 @@
 		width: 100%;
 		height: 100vh;
 		overflow: hidden;
-	}
-	.container {
-		width: 100%;
-		height: 100%;
 	}
 	.tray {
 		position: absolute;
@@ -1073,6 +1072,8 @@
 		z-index: 2;
 	}
 	.error {
+		position: relative;
+		z-index: 2;
 		padding: 1rem;
 		font-family: system-ui, sans-serif;
 		color: #a33;

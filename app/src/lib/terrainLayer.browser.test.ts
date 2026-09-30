@@ -6,7 +6,7 @@ import { beforeEach, describe, expect, it } from 'vitest';
 import { tick } from 'svelte';
 import { render } from 'vitest-browser-svelte';
 import type * as maplibregl from 'maplibre-gl';
-import { getLanguage, setLanguage, type Language } from './i18n.svelte';
+import { getLanguage, setLanguage } from './i18n.svelte';
 import { TERRAIN_SOURCE, TerrainLayer } from './terrainLayer';
 import TerrainLanguageFixture from './terrainLanguage.fixture.svelte';
 
@@ -253,21 +253,6 @@ class TestTerrainLayer extends TerrainLayer {
 	}
 }
 
-/** A layer whose sea-chart art fails to load in one language, for the optional-art paths. */
-class FailingArtTerrainLayer extends TestTerrainLayer {
-	constructor(
-		map: maplibregl.Map,
-		mapId: string,
-		private failFor: Language
-	) {
-		super(map, mapId);
-	}
-	protected override loadSeaDecorationImage(language: Language): Promise<ImageData> {
-		if (language === this.failFor) return Promise.reject(new Error('art unavailable'));
-		return super.loadSeaDecorationImage(language);
-	}
-}
-
 const FEATURES = {
 	physical_labels: [
 		{
@@ -323,59 +308,20 @@ describe('terrain labels and the language', () => {
 		expect(layer.labels()).toEqual([]);
 	});
 
-	it('draws the antique pattern only in sea and follows the Terrain toggle', async () => {
+	it('keeps the sea plain and does not add chart art to the map', async () => {
 		const map = fakeMap(FEATURES);
 		const layer = new TestTerrainLayer(map, 'test-map');
 		await layer.setVisible(true);
 
-		expect(map.images.has('terrain-sea-chart-art-en')).toBe(true);
-		expect(map.layerDefinitions.get('sea-chart-decoration')).toMatchObject({
-			type: 'fill',
-			source: TERRAIN_SOURCE,
-			'source-layer': 'sea',
-			beforeId: 'context-fill',
-			paint: {
-				'fill-pattern': 'terrain-sea-chart-art-en',
-				'fill-opacity': 0.55
-			}
-		});
-		setLanguage('de');
-		layer.refreshLabels('de');
-		await expect
-			.poll(() => map.paintProperties.get('sea-chart-decoration.fill-pattern'))
-			.toBe('terrain-sea-chart-art-de');
-
-		await layer.setVisible(false);
-		expect(map.visibility.get('sea-chart-decoration')).toBe('none');
-		await layer.setVisible(true);
-		expect(map.visibility.get('sea-chart-decoration')).toBe('visible');
-	});
-
-	it('keeps the regular Terrain layers if the optional decoration cannot load', async () => {
-		const map = fakeMap(FEATURES);
-		const layer = new FailingArtTerrainLayer(map, 'test-map', 'en');
-		await layer.setVisible(true);
-
 		expect(map.layerDefinitions.has('sea-chart-decoration')).toBe(false);
 		expect(map.layerDefinitions.has('sea-fill')).toBe(true);
-		expect(layer.labels()).toEqual(['Alps', 'Mont Blanc 4,807 m']);
-	});
-
-	it('shows the antique pattern again after a failed load, once a later one succeeds (#120)', async () => {
-		const map = fakeMap(FEATURES);
-		const layer = new FailingArtTerrainLayer(map, 'test-map', 'de');
-
-		await layer.setVisible(true);
 		setLanguage('de');
 		layer.refreshLabels('de');
-		await expect.poll(() => map.visibility.get('sea-chart-decoration')).toBe('none');
-
-		setLanguage('en');
-		layer.refreshLabels('en');
-		await expect.poll(() => map.visibility.get('sea-chart-decoration')).toBe('visible');
-		expect(map.paintProperties.get('sea-chart-decoration.fill-pattern')).toBe(
-			'terrain-sea-chart-art-en'
-		);
+		await layer.setVisible(false);
+		expect(map.visibility.get('sea-fill')).toBe('none');
+		await layer.setVisible(true);
+		expect(map.layerDefinitions.has('sea-chart-decoration')).toBe(false);
+		expect(map.visibility.get('sea-fill')).toBe('visible');
 	});
 });
 
@@ -397,15 +343,8 @@ describe('a toggle during the first load', () => {
 		await showing;
 
 		expect(harness.addSourceCalls()).toBe(1); // one addSource, not two
-		expect(harness.added).toHaveLength(6);
-		expect([...harness.visibility.values()]).toEqual([
-			'none',
-			'none',
-			'none',
-			'none',
-			'none',
-			'none'
-		]);
+		expect(harness.added).toHaveLength(5);
+		expect([...harness.visibility.values()]).toEqual(['none', 'none', 'none', 'none', 'none']);
 		expect(harness.dims).toEqual([]); // nothing left dimmed
 		expect(layer.labels()).toEqual([]); // and no names on the map
 	});

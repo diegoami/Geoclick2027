@@ -24,22 +24,18 @@
 //     be declared in a style whose source does not exist yet - MapLibre
 //     rejects a layer with a missing source at style load. base.json's
 //     metadata note points here so the style file still tells the story.
-//  4. The antique sea-chart pattern is a bundled SVG, added only when Terrain
-//     is shown. It needs no glyph or network dependency and cannot intercept
-//     clicks because it is a fill beneath the playable targets.
+//  4. The bundled sea-chart SVG is now used only as the shell filler outside
+//     MapLibre's viewport (v0.16 task 8), never painted over the playable sea.
 
 import * as maplibregl from 'maplibre-gl';
-import type { FillLayerSpecification, LayerSpecification } from 'maplibre-gl';
+import type { LayerSpecification } from 'maplibre-gl';
 import { asset } from '$app/paths';
 import { registerTilesArchive } from './pmtilesSource';
 import { registerLabel } from './labelCollision';
 import { isNativeShell } from './platform';
 import { getLanguage, type Language } from './i18n.svelte';
-import { loadSeaChartPattern, seaChartPatternImageId } from './seaChartPattern';
 
 export const TERRAIN_SOURCE = 'terrain';
-const SEA_DECORATION_LAYER = 'sea-chart-decoration';
-
 // Below every target layer: this is background, and the target fills are
 // translucent enough (0.55) to let it through. base.json's first layer id.
 const BEFORE_LAYER = 'context-fill';
@@ -85,13 +81,6 @@ const LAYERS: LayerSpecification[] = [
 		source: TERRAIN_SOURCE,
 		'source-layer': 'sea',
 		paint: { 'fill-color': '#c5dcea', 'fill-opacity': 0.85 }
-	},
-	{
-		id: SEA_DECORATION_LAYER,
-		type: 'fill',
-		source: TERRAIN_SOURCE,
-		'source-layer': 'sea',
-		paint: { 'fill-pattern': seaChartPatternImageId('en'), 'fill-opacity': 0.55 }
 	},
 	{
 		id: 'terrain-fill',
@@ -210,13 +199,6 @@ function labelFor(properties: Record<string, unknown>, language: Language): stri
 export class TerrainLayer {
 	private popups: maplibregl.Popup[] = [];
 	private added = false;
-	private seaDecorationGeneration = 0;
-	/**
-	 * Set when a sea-chart image failed to load and the layer was hidden, so
-	 * the next successful load shows it again without waiting for a Terrain
-	 * toggle (#120).
-	 */
-	private seaDecorationHidden = false;
 	/**
 	 * The latest visibility the button asked for (FT-53). Kept so a label
 	 * refresh cannot put names back on a layer the player has switched off.
@@ -299,15 +281,10 @@ export class TerrainLayer {
 					this.map.setLayoutProperty(layer.id, 'visibility', 'visible');
 				}
 			}
-			// Turning Terrain on shows the decoration again too, so the next
-			// pattern load has nothing to restore (#120).
-			this.seaDecorationHidden = false;
 			this.dimOverlyingLayers(true);
-			void this.updateSeaDecoration(getLanguage());
 			this.drawLabelsWhenSourceReady();
 			return;
 		}
-		this.seaDecorationGeneration++;
 		this.removeLabels();
 		this.clearSourceReady();
 		this.dimOverlyingLayers(false);
@@ -373,46 +350,6 @@ export class TerrainLayer {
 	refreshLabels(language: Language): void {
 		if (!this.visible || !this.added) return;
 		this.drawLabels(language);
-		void this.updateSeaDecoration(language);
-	}
-
-	/** Load the localized pattern and change only the non-interactive sea layer. */
-	private async updateSeaDecoration(language: Language): Promise<void> {
-		if (!this.visible || !this.added || !this.map.getLayer(SEA_DECORATION_LAYER)) return;
-		const generation = ++this.seaDecorationGeneration;
-		const imageId = seaChartPatternImageId(language);
-		try {
-			if (!this.map.hasImage(imageId)) {
-				const image = await this.loadSeaDecorationImage(language);
-				if (!this.map.hasImage(imageId)) this.map.addImage(imageId, image, { pixelRatio: 1 });
-			}
-			// A later language choice or Terrain-off press wins over this load.
-			if (generation !== this.seaDecorationGeneration || !this.visible) return;
-			// A failed earlier load hid the layer (below); show it again now
-			// that an image is in place, rather than making the player toggle
-			// Terrain to get the art back (#120).
-			if (this.seaDecorationHidden) {
-				this.map.setLayoutProperty(SEA_DECORATION_LAYER, 'visibility', 'visible');
-				this.seaDecorationHidden = false;
-			}
-			this.map.setPaintProperty(SEA_DECORATION_LAYER, 'fill-pattern', imageId);
-		} catch {
-			// Leave the plain sea fill rather than showing an inscription in the
-			// wrong language or letting optional art affect gameplay.
-			if (generation === this.seaDecorationGeneration) {
-				this.map.setLayoutProperty(SEA_DECORATION_LAYER, 'visibility', 'none');
-				this.seaDecorationHidden = true;
-			}
-		}
-	}
-
-	/**
-	 * The rasterised sea-chart art. A method rather than the imported function
-	 * directly, so a test can make the optional art fail and still see the
-	 * geographic Terrain layers survive.
-	 */
-	protected loadSeaDecorationImage(language: Language): Promise<ImageData> {
-		return loadSeaChartPattern(language);
 	}
 
 	/**
@@ -463,35 +400,10 @@ export class TerrainLayer {
 		await this.whenStyleReady();
 		if (this.map.getSource(TERRAIN_SOURCE)) return;
 
-		// The art is local and decorative: if an older shell or a packaging
-		// mistake cannot load it, keep the geographic Terrain layers working.
-		const language = getLanguage();
-		const imageId = seaChartPatternImageId(language);
-		let hasSeaDecoration = this.map.hasImage(imageId);
-		try {
-			if (!hasSeaDecoration) {
-				const image = await this.loadSeaDecorationImage(language);
-				this.map.addImage(imageId, image, { pixelRatio: 1 });
-				hasSeaDecoration = true;
-			}
-		} catch {
-			// Sea art is optional; never let it break a map or the Terrain toggle.
-		}
-
 		this.map.addSource(TERRAIN_SOURCE, { type: 'vector', url: `pmtiles://${url}` });
 		const before = this.map.getLayer(BEFORE_LAYER) ? BEFORE_LAYER : undefined;
 		for (const layer of LAYERS) {
-			if (layer.id === SEA_DECORATION_LAYER && !hasSeaDecoration) continue;
-			if (layer.id === SEA_DECORATION_LAYER) {
-				const fillLayer = layer as FillLayerSpecification;
-				this.map.addLayer(
-					{
-						...fillLayer,
-						paint: { ...fillLayer.paint, 'fill-pattern': imageId }
-					},
-					before
-				);
-			} else this.map.addLayer(layer, before);
+			this.map.addLayer(layer, before);
 		}
 		this.added = true;
 
@@ -503,7 +415,6 @@ export class TerrainLayer {
 			return;
 		}
 		this.dimOverlyingLayers(true);
-		void this.updateSeaDecoration(getLanguage());
 
 		// The label points arrive with the tiles, so wait for the source
 		// before asking for them.
@@ -589,7 +500,6 @@ export class TerrainLayer {
 	}
 
 	destroy(): void {
-		this.seaDecorationGeneration++;
 		this.clearSourceReady();
 		this.removeLabels();
 	}

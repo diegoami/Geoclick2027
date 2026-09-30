@@ -13,6 +13,7 @@
 	import { mapDisplayName } from './mapCatalog';
 	import { DOT_CLEARANCE_PX, areaShares, registerLabel } from './labelCollision';
 	import FactCard from './FactCard.svelte';
+	import ChartMapShell from './ChartMapShell.svelte';
 	import { fetchFacts, placeFacts, type Facts } from './facts';
 
 	let { mapId }: { mapId: string } = $props();
@@ -161,13 +162,15 @@
 	});
 </script>
 
-<div class="overview-view">
+<div class="overview-view" data-map-fit-root>
 	{#if error}
 		<p class="error">{error}</p>
 	{:else}
 		<MapNav {mapId} mapName={mapDisplayName(mapId) ?? mapDef?.name} active="overview" />
 	{/if}
-	<div class="container" bind:this={container}></div>
+	<ChartMapShell>
+		<div class="container" bind:this={container}></div>
+	</ChartMapShell>
 	{#if asked}
 		<FactCard
 			name={askedName ?? asked.name}
@@ -185,11 +188,9 @@
 		width: 100%;
 		height: 100vh;
 	}
-	.container {
-		width: 100%;
-		height: 100%;
-	}
 	.error {
+		position: relative;
+		z-index: 2;
 		padding: 1rem;
 		font-family: system-ui, sans-serif;
 		color: #a33;
