@@ -164,8 +164,10 @@ the gate. The separate PR-review workflow is advisory only.
   main checkout and use explicit paths. Offer to create the worktree directly
   in the current session instead of requiring the owner to run the command.
   Remind the owner to open a fresh session in that worktree using a different
-  model from the implementer for the review. End the PR handoff with the
-  command block.
+  model from the implementer for the review. Include a ready-to-paste review
+  prompt naming the PR and worktree; ask for a diff-based, evidence-backed
+  review and explicitly say not to edit, commit, or push. End the PR handoff
+  with the worktree command block.
 
 ### Worktrees
 
