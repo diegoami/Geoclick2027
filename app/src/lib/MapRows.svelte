@@ -58,6 +58,19 @@
 		if (mapId) goto(resolve('/map/[mapId]', { mapId }));
 	}
 
+	function openSingleMapOnPointer(group: Row, event: PointerEvent) {
+		if (group.maps.length !== 1 || event.button !== 0) return;
+		event.preventDefault();
+		openMap(group.maps[0].id);
+	}
+
+	function openSingleMapOnKey(group: Row, event: KeyboardEvent) {
+		if (group.maps.length !== 1) return;
+		if (!['ArrowDown', 'ArrowUp', 'Enter', ' '].includes(event.key)) return;
+		event.preventDefault();
+		openMap(group.maps[0].id);
+	}
+
 	function openSelectedMap(group: Row) {
 		openMap(selectedMap(group));
 	}
@@ -113,6 +126,8 @@
 				id={selectId}
 				value={selectedMap(group)}
 				aria-label={t('home.mapTypeFor', { name: nameOf(group) })}
+				onpointerdown={(e) => openSingleMapOnPointer(group, e)}
+				onkeydown={(e) => openSingleMapOnKey(group, e)}
 				onchange={(e) => {
 					chooseMapType(group, e.currentTarget.value);
 				}}

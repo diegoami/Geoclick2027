@@ -129,6 +129,10 @@ describe('MapRows (FT-84)', () => {
 		});
 
 		const italy = document.querySelector<HTMLSelectElement>('#maps-italy-regions')!;
+		italy.dispatchEvent(
+			new PointerEvent('pointerdown', { bubbles: true, cancelable: true, button: 0 })
+		);
+		expect(gotoMock).not.toHaveBeenCalled();
 		italy.value = 'italy-provinces';
 		italy.dispatchEvent(new Event('change', { bubbles: true }));
 		expect(italy.value).toBe('italy-provinces');
@@ -140,6 +144,45 @@ describe('MapRows (FT-84)', () => {
 		gotoMock.mockClear();
 		document.querySelector<HTMLButtonElement>('.name')!.click();
 		expect(gotoMock).toHaveBeenCalledWith('/map/italy-provinces');
+	});
+
+	it('opens a single-option map on deliberate pointer activation, but not on focus alone', async () => {
+		await render(MapRows, {
+			groups: [{ country: 'Croatia', maps: [{ id: 'croatia-regions', label: 'Regions' }] }],
+			masteries: {},
+			targetCount: () => 0
+		});
+
+		const croatia = document.querySelector<HTMLSelectElement>('#maps-croatia-regions')!;
+		croatia.focus();
+		expect(gotoMock).not.toHaveBeenCalled();
+
+		const activation = new PointerEvent('pointerdown', {
+			bubbles: true,
+			cancelable: true,
+			button: 0
+		});
+		croatia.dispatchEvent(activation);
+		expect(activation.defaultPrevented).toBe(true);
+		expect(gotoMock).toHaveBeenCalledWith('/map/croatia-regions');
+	});
+
+	it('opens a single-option map on keyboard activation', async () => {
+		await render(MapRows, {
+			groups: [{ country: 'Croatia', maps: [{ id: 'croatia-regions', label: 'Regions' }] }],
+			masteries: {},
+			targetCount: () => 0
+		});
+
+		const croatia = document.querySelector<HTMLSelectElement>('#maps-croatia-regions')!;
+		const activation = new KeyboardEvent('keydown', {
+			key: 'ArrowDown',
+			bubbles: true,
+			cancelable: true
+		});
+		croatia.dispatchEvent(activation);
+		expect(activation.defaultPrevented).toBe(true);
+		expect(gotoMock).toHaveBeenCalledWith('/map/croatia-regions');
 	});
 
 	it('restores a manual choice from local storage', async () => {
