@@ -164,10 +164,12 @@ the gate. The separate PR-review workflow is advisory only.
   main checkout and use explicit paths. Offer to create the worktree directly
   in the current session instead of requiring the owner to run the command.
   Remind the owner to open a fresh session in that worktree using a different
-  model from the implementer for the review. Include a ready-to-paste review
-  prompt naming the PR and worktree; ask for a diff-based, evidence-backed
-  review and explicitly say not to edit, commit, or push. End the PR handoff
-  with the worktree command block.
+  model from the implementer for the review. Include a ready-to-paste prompt
+  naming the PR and worktree; ask for a diff-based, evidence-backed review and
+  for the reviewer to submit its findings as a GitHub PR review (not only in
+  chat). The reviewer must not edit code, commit, or push. If it cannot post
+  the review, it should return the complete review text for the owner to post.
+  End the PR handoff with the worktree command block.
 
 ### Worktrees
 
