@@ -112,7 +112,7 @@ describe('MapRows (FT-84)', () => {
 		expect(gotoMock).toHaveBeenCalledWith('/map/italy-regions');
 	});
 
-	it('changing the combobox remembers the choice without navigating', async () => {
+	it('changing the combobox remembers and opens that map; the row button keeps opening it', async () => {
 		await render(MapRows, {
 			groups: [
 				{
@@ -132,10 +132,14 @@ describe('MapRows (FT-84)', () => {
 		italy.value = 'italy-provinces';
 		italy.dispatchEvent(new Event('change', { bubbles: true }));
 		expect(italy.value).toBe('italy-provinces');
-		expect(gotoMock).not.toHaveBeenCalled();
+		expect(gotoMock).toHaveBeenCalledWith('/map/italy-provinces');
 		expect(JSON.parse(localStorage.getItem(MAP_TYPE_SELECTIONS_KEY)!)).toEqual({
 			italy: 'italy-provinces'
 		});
+
+		gotoMock.mockClear();
+		document.querySelector<HTMLButtonElement>('.name')!.click();
+		expect(gotoMock).toHaveBeenCalledWith('/map/italy-provinces');
 	});
 
 	it('restores a manual choice from local storage', async () => {
