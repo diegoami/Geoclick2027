@@ -10,23 +10,28 @@ vi.mock('$app/paths', () => ({
 
 import MapNav from './MapNav.svelte';
 import { setLanguage } from './i18n.svelte';
+import { isContinentGroup } from './catalogSections';
+import { mapGroups } from './mapCatalog';
 
-describe('MapNav sibling map selector', () => {
+describe('MapNav sibling map buttons', () => {
 	afterEach(() => {
 		gotoMock.mockClear();
 		setLanguage('en');
 	});
 
-	it('offers only maps from the current country and opens the selected map on Known', async () => {
+	it('offers only maps from the current country and opens another map on Known', async () => {
 		await render(MapNav, {
 			mapId: 'italy-provinces',
 			mapName: 'Italy — Provinces',
 			active: 'overview'
 		});
 
-		const selector = document.querySelector<HTMLSelectElement>('.map-switch');
-		expect(selector).not.toBeNull();
-		expect([...selector!.options].map((option) => option.value)).toEqual([
+		const group = document.querySelector<HTMLDivElement>('.map-type-scroll[role="group"]');
+		expect(group).not.toBeNull();
+		expect(group).toHaveAttribute('aria-label', 'Map type for Italy');
+		expect(getComputedStyle(group!).overflowX).toBe('auto');
+		const buttons = [...group!.querySelectorAll<HTMLButtonElement>('.map-type-btn')];
+		expect(buttons.map((button) => button.dataset.mapId)).toEqual([
 			'italy-regions',
 			'italy-provinces',
 			'italy-provinces-north',
@@ -34,20 +39,47 @@ describe('MapNav sibling map selector', () => {
 			'italy-provinces-south',
 			'italy-towns-100k'
 		]);
-		expect(selector!.value).toBe('italy-provinces');
+		expect(buttons.map((button) => button.textContent?.trim())).toEqual([
+			'Regions',
+			'Provinces',
+			'Provinces — North',
+			'Provinces — Center',
+			'Provinces — South',
+			'Towns'
+		]);
+		expect(
+			buttons.find((button) => button.getAttribute('aria-pressed') === 'true')?.textContent
+		).toBe('Provinces');
+		expect(document.querySelector('.map-type-row .star')).not.toBeNull();
 
-		selector!.value = 'italy-regions';
-		selector!.dispatchEvent(new Event('change', { bubbles: true }));
+		buttons[0].click();
 		expect(gotoMock).toHaveBeenCalledWith('/map/italy-regions');
 	});
 
-	it('does not show a sibling selector for a continent map', async () => {
+	it('keeps the map title for a continent map', async () => {
 		await render(MapNav, {
 			mapId: 'europe-countries',
 			mapName: 'Europe — Countries',
 			active: 'overview'
 		});
 
-		expect(document.querySelector('.map-switch')).toBeNull();
+		expect(document.querySelector('.map-type-scroll')).toBeNull();
+		expect(document.querySelector('.map-label')?.textContent).toBe('Europe — Countries');
+	});
+
+	it('keeps the map title for a country with only one map', async () => {
+		const group = mapGroups.find(
+			(candidate) => !isContinentGroup(candidate) && candidate.maps.length === 1
+		);
+		expect(group).toBeDefined();
+		const onlyMap = group!.maps[0];
+		await render(MapNav, {
+			mapId: onlyMap.id,
+			mapName: `${group!.country} — ${onlyMap.labelKey}`,
+			active: 'explore'
+		});
+
+		expect(document.querySelector('.map-type-scroll')).toBeNull();
+		expect(document.querySelector('.map-label')).not.toBeNull();
 	});
 });

@@ -56,6 +56,18 @@
 		currentGroup && !isContinentGroup(currentGroup) ? currentGroup.maps : []
 	);
 	const showMapSwitcher = $derived(countryMaps.length > 1);
+	let mapTypeScroller = $state<HTMLDivElement | undefined>(undefined);
+
+	// Long map-type rows scroll on phones. Keep the current type in view when
+	// opening a map directly or switching to a type near the end of the list.
+	$effect(() => {
+		if (hidden || !mapTypeScroller) return;
+		const selectedMapId = mapId;
+		const selectedButton = [
+			...mapTypeScroller.querySelectorAll<HTMLButtonElement>('.map-type-btn')
+		].find((button) => button.dataset.mapId === selectedMapId);
+		selectedButton?.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+	});
 </script>
 
 <!-- Hidden by the button under the zoom control (hideButtonsControl). -->
@@ -151,26 +163,40 @@
 			<span class="nav-label">{t('nav.tour')}</span>
 		</a>
 	</div>
-	<!-- The favourite star sits by the map's name, not in the tab row, which is
-	     already full at phone width (FT-13, FT-16). -->
+	<!-- Keep the favourite star beside the map-type row/title, not in the tab
+	     row, which is already full at phone width (FT-13, FT-16). -->
 	<div class="map-title">
-		<span class="map-label">{mapName ?? t('nav.loading')}</span>
 		{#if showMapSwitcher}
-			<select
-				class="map-switch"
-				value={mapId}
-				aria-label={t('nav.switchMap')}
-				onchange={(event) => {
-					const nextMapId = event.currentTarget.value;
-					if (nextMapId) goto(resolve('/map/[mapId]', { mapId: nextMapId }));
-				}}
-			>
-				{#each countryMaps as countryMap (countryMap.id)}
-					<option value={countryMap.id}>{mapTypeLabel(countryMap)}</option>
-				{/each}
-			</select>
+			<div class="map-type-row">
+				<div
+					bind:this={mapTypeScroller}
+					class="map-type-scroll"
+					role="group"
+					aria-label={t('home.mapTypeFor', { name: currentGroup?.country ?? '' })}
+				>
+					{#each countryMaps as countryMap (countryMap.id)}
+						<button
+							type="button"
+							class="map-type-btn"
+							data-map-id={countryMap.id}
+							class:map-type-btn--active={countryMap.id === mapId}
+							aria-pressed={countryMap.id === mapId}
+							onclick={() => {
+								if (countryMap.id !== mapId) {
+									goto(resolve('/map/[mapId]', { mapId: countryMap.id }));
+								}
+							}}
+						>
+							{mapTypeLabel(countryMap)}
+						</button>
+					{/each}
+				</div>
+				<FavouriteStar {mapId} size="bar" />
+			</div>
+		{:else}
+			<span class="map-label">{mapName ?? t('nav.loading')}</span>
+			<FavouriteStar {mapId} size="bar" />
 		{/if}
-		<FavouriteStar {mapId} size="bar" />
 	</div>
 	{#if subtitle}
 		<span class="subtitle">{@render subtitle()}</span>
@@ -254,16 +280,45 @@
 		align-items: center;
 		gap: 0.4rem;
 	}
-	.map-switch {
-		max-width: min(12rem, 42vw);
+	.map-type-row {
+		display: flex;
+		align-items: center;
+		gap: 0.4rem;
+		width: 100%;
+		max-width: min(42rem, calc(100vw - 4.5rem));
+		min-width: 0;
+	}
+	.map-type-scroll {
+		display: flex;
+		flex: 1;
+		gap: 0.4rem;
+		min-width: 0;
+		overflow-x: auto;
+		overscroll-behavior-x: contain;
+		scrollbar-width: thin;
+	}
+	.map-type-btn {
+		flex: none;
 		min-height: 2rem;
-		padding: 0.2rem 0.45rem;
+		box-sizing: border-box;
+		padding: 0.3rem 0.6rem;
 		font: inherit;
 		font-size: 0.75rem;
 		color: #2e4037;
-		background: rgba(255, 255, 255, 0.9);
+		white-space: nowrap;
+		background: #ffffff;
 		border: 1px solid rgba(17, 24, 21, 0.16);
 		border-radius: 0.4rem;
+		cursor: pointer;
+	}
+	.map-type-btn--active {
+		color: #ffffff;
+		background: #b5691f;
+		border-color: #b5691f;
+	}
+	.map-type-btn:focus-visible {
+		outline: 2px solid #b5691f;
+		outline-offset: 2px;
 	}
 	.map-label {
 		font-size: 0.75rem;
