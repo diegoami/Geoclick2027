@@ -1,6 +1,7 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	// One row per country or continent (FT-78, #58): its name, how well its
-	// maps are known, and a listbox of its maps that opens the one chosen.
+	// maps are known, a listbox to choose a map type, and a button that opens it.
 	// The same rows in the start screen's panel and in the list, so both read
 	// alike. Germany's fourteen maps are one row.
 	import { goto } from '$app/navigation';
@@ -9,6 +10,8 @@
 	import { groupProgress, type Mastery } from './homeProgress';
 	import KnownProgress from './KnownProgress.svelte';
 	import { pickerIdOf } from './mapCatalog';
+	import { mapTypeSelectionOf, rememberMapTypeSelection } from './mapPrefs.svelte';
+	import { t } from './i18n.svelte';
 
 	interface Row {
 		country: string;
@@ -37,15 +40,40 @@
 	// where it has none.
 	const nameOf = rowNameOf;
 
-	// Every map selector starts with nothing committed (#118; continents too,
-	// owner decision 2026-09-29). A native `<select>` with no `selected` option
-	// auto-selects its first one, and re-choosing the already-selected first
-	// option fires no `change` - so a row's first map, and the tutorial's
-	// "Choose Regions" step, were unreachable from its row. Clearing the
-	// selection makes any pick a real change.
-	function startUnselected(node: HTMLSelectElement) {
-		node.selectedIndex = -1;
+	let selections = $state<Record<string, string>>({});
+
+	function selectedMap(group: Row): string {
+		const key = pickerIdOf(group);
+		return selections[key] ?? group.maps[0]?.id ?? '';
 	}
+
+	function chooseMapType(group: Row, mapId: string) {
+		const key = pickerIdOf(group);
+		selections = { ...selections, [key]: mapId };
+		rememberMapTypeSelection(key, mapId);
+	}
+
+	function openSelectedMap(group: Row) {
+		const mapId = selectedMap(group);
+		if (mapId) goto(resolve('/map/[mapId]', { mapId }));
+	}
+
+	onMount(() => {
+		selections = Object.fromEntries(
+			groups
+				.map((group) => {
+					const key = pickerIdOf(group);
+					return [
+						key,
+						mapTypeSelectionOf(
+							key,
+							group.maps.map((map) => map.id)
+						)
+					];
+				})
+				.filter((entry): entry is [string, string] => typeof entry[1] === 'string')
+		);
+	});
 </script>
 
 <ul class="rows">
@@ -65,7 +93,9 @@
 				? 'home-map-card'
 				: undefined}
 		>
-			<label class="name" for={selectId}>{nameOf(group)}</label>
+			<button class="name" type="button" onclick={() => openSelectedMap(group)}>
+				{nameOf(group)}
+			</button>
 			{#if progress}
 				<span class="progress">
 					<KnownProgress
@@ -77,10 +107,10 @@
 			{/if}
 			<select
 				id={selectId}
-				use:startUnselected
+				value={selectedMap(group)}
+				aria-label={t('home.mapTypeFor', { name: nameOf(group) })}
 				onchange={(e) => {
-					const mapId = e.currentTarget.value;
-					if (mapId) goto(resolve('/map/[mapId]', { mapId }));
+					chooseMapType(group, e.currentTarget.value);
 				}}
 			>
 				{#each group.maps as map (map.id)}
@@ -118,8 +148,17 @@
 		background: #fff8f0;
 	}
 	.name {
+		padding: 0;
+		border: 0;
+		background: transparent;
+		font: inherit;
+		text-align: left;
 		font-weight: 700;
 		color: #2c3a33;
+		cursor: pointer;
+	}
+	.name:hover {
+		text-decoration: underline;
 	}
 	.progress {
 		grid-column: 1 / -1;

@@ -87,6 +87,7 @@ export type TranslationKey =
 	| 'home.recent'
 	| 'home.favourites'
 	| 'home.allMaps'
+	| 'home.mapTypeFor'
 	| 'home.search'
 	| 'home.searchClear'
 	| 'home.searchResults'
@@ -263,6 +264,7 @@ const en: Dictionary = {
 	'home.recent': 'Recent',
 	'home.favourites': 'Favourites',
 	'home.allMaps': 'All maps',
+	'home.mapTypeFor': 'Map type for {name}',
 	'home.search': 'Search maps',
 	'home.searchClear': 'Clear',
 	'home.searchResults': '{count} maps',
@@ -455,6 +457,7 @@ const de: Dictionary = {
 	'home.recent': 'Zuletzt geöffnet',
 	'home.favourites': 'Favoriten',
 	'home.allMaps': 'Alle Karten',
+	'home.mapTypeFor': 'Kartentyp für {name}',
 	'home.search': 'Karten suchen',
 	'home.searchClear': 'Löschen',
 	'home.searchResults': '{count} Karten',
@@ -651,6 +654,7 @@ const it: Dictionary = {
 	'home.recent': 'Recenti',
 	'home.favourites': 'Preferiti',
 	'home.allMaps': 'Tutte le mappe',
+	'home.mapTypeFor': 'Tipo di mappa per {name}',
 	'home.search': 'Cerca mappe',
 	'home.searchClear': 'Cancella',
 	'home.searchResults': '{count} mappe',

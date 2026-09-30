@@ -7,6 +7,7 @@
 import { isCatalogMap } from './mapCatalog';
 
 const RECENT_KEY = 'geoclick:recent-maps:v1';
+const MAP_TYPE_SELECTIONS_KEY = 'geoclick:map-type-selections:v1';
 /** How many recent maps the home page shows (FEATURE_PLAN.md, decision 13). */
 export const RECENT_SHOWN = 5;
 // Stored a little longer than shown, so a map dropping out of the catalog
@@ -49,6 +50,60 @@ function writeIds(key: string, ids: string[]): void {
 		localStorage.setItem(key, JSON.stringify(ids));
 	} catch {
 		// Full or blocked storage: the list still works for this session.
+	}
+}
+
+/** A stored per-row map choice, back as a plain object; malformed storage is empty. */
+export function parseMapTypeSelections(raw: string | null): Record<string, string> {
+	if (!raw) return {};
+	try {
+		const value: unknown = JSON.parse(raw);
+		if (!value || typeof value !== 'object' || Array.isArray(value)) return {};
+		return Object.fromEntries(
+			Object.entries(value).filter(
+				(entry): entry is [string, string] => typeof entry[1] === 'string'
+			)
+		);
+	} catch {
+		return {};
+	}
+}
+
+/** A saved map is used only while it remains in this row; otherwise use its first map. */
+export function chosenMapType(
+	selections: Record<string, string>,
+	groupId: string,
+	mapIds: readonly string[]
+): string | undefined {
+	const saved = selections[groupId];
+	return saved && mapIds.includes(saved) ? saved : mapIds[0];
+}
+
+/** The row's remembered choice, or its first listed map when none is valid. */
+export function mapTypeSelectionOf(groupId: string, mapIds: readonly string[]): string | undefined {
+	if (typeof localStorage === 'undefined') return mapIds[0];
+	try {
+		return chosenMapType(
+			parseMapTypeSelections(localStorage.getItem(MAP_TYPE_SELECTIONS_KEY)),
+			groupId,
+			mapIds
+		);
+	} catch {
+		return mapIds[0];
+	}
+}
+
+/** Remember a player's explicit map choice per country/continent row. */
+export function rememberMapTypeSelection(groupId: string, mapId: string): void {
+	if (typeof localStorage === 'undefined') return;
+	try {
+		const selections = parseMapTypeSelections(localStorage.getItem(MAP_TYPE_SELECTIONS_KEY));
+		localStorage.setItem(
+			MAP_TYPE_SELECTIONS_KEY,
+			JSON.stringify({ ...selections, [groupId]: mapId })
+		);
+	} catch {
+		// Blocked/full storage should not stop choosing a map in this session.
 	}
 }
 

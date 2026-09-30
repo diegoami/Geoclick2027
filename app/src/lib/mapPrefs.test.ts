@@ -1,5 +1,11 @@
 import { describe, expect, it } from 'vitest';
-import { parseIdList, withToggled, withVisit } from './mapPrefs.svelte';
+import {
+	chosenMapType,
+	parseIdList,
+	parseMapTypeSelections,
+	withToggled,
+	withVisit
+} from './mapPrefs.svelte';
 
 describe('withVisit (Recent maps)', () => {
 	it('puts the visited map first', () => {
@@ -32,6 +38,24 @@ describe('parseIdList (stored value)', () => {
 			'italy-regions',
 			'usa-states'
 		]);
+	});
+});
+
+describe('map type selections', () => {
+	it('reads valid per-row choices and ignores malformed entries', () => {
+		expect(parseMapTypeSelections('{"italy":"italy-provinces","germany":4}')).toEqual({
+			italy: 'italy-provinces'
+		});
+		expect(parseMapTypeSelections('not json')).toEqual({});
+		expect(parseMapTypeSelections('[]')).toEqual({});
+	});
+
+	it('uses a valid manual choice or falls back to the first listed map', () => {
+		const maps = ['italy-regions', 'italy-provinces', 'italy-towns-100k'];
+		expect(chosenMapType({ italy: 'italy-provinces' }, 'italy', maps)).toBe('italy-provinces');
+		expect(chosenMapType({ italy: 'removed-map' }, 'italy', maps)).toBe('italy-regions');
+		expect(chosenMapType({}, 'italy', maps)).toBe('italy-regions');
+		expect(chosenMapType({}, 'italy', [])).toBeUndefined();
 	});
 });
 
