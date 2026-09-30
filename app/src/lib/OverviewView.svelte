@@ -13,6 +13,7 @@
 	import { mapDisplayName } from './mapCatalog';
 	import { DOT_CLEARANCE_PX, areaShares, registerLabel } from './labelCollision';
 	import FactCard from './FactCard.svelte';
+	import ChartMapShell from './ChartMapShell.svelte';
 	import { fetchFacts, placeFacts, type Facts } from './facts';
 
 	let { mapId }: { mapId: string } = $props();
@@ -167,7 +168,9 @@
 	{:else}
 		<MapNav {mapId} mapName={mapDisplayName(mapId) ?? mapDef?.name} active="overview" />
 	{/if}
-	<div class="container" bind:this={container}></div>
+	<ChartMapShell>
+		<div class="container" bind:this={container}></div>
+	</ChartMapShell>
 	{#if asked}
 		<FactCard
 			name={askedName ?? asked.name}

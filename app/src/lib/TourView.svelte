@@ -16,6 +16,7 @@
 	import { DOT_CLEARANCE_PX, registerLabel } from './labelCollision';
 	import type { MapDefinition, Target } from './mapDefinition';
 	import FactCard from './FactCard.svelte';
+	import ChartMapShell from './ChartMapShell.svelte';
 	import { publishBottomOverlay } from './mapBottomOverlay';
 	import { fetchFacts, placeFacts, type Facts, type PlaceFacts } from './facts';
 	import TourControls from './TourControls.svelte';
@@ -285,7 +286,9 @@
 			</div>
 		{/if}
 	{/if}
-	<div class="container" bind:this={container}></div>
+	<ChartMapShell>
+		<div class="container" bind:this={container}></div>
+	</ChartMapShell>
 </div>
 
 <style>

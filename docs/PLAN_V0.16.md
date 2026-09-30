@@ -43,8 +43,8 @@ by the product owner on 2026-09-30; scope addition [#140](https://github.com/die
 | 4 | Quiz completion Close and map-level Again action | Merged (PR #138) |
 | 5 | Towns-map land/border/sea contrast | Merged (PR #139) |
 | 6 | Version badge at the top | Merged (PR #141) |
-| 7 | Tour icon controls and non-overlapping fact card | In progress |
-| 8 | Chart SVG filler outside map viewport | Planned |
+| 7 | Tour icon controls and non-overlapping fact card | Merged (PR #143) |
+| 8 | Chart SVG filler outside map viewport | In progress |
 | 9 | Spine-following labels in all map views | Planned |
 | 10 | Open the selected map immediately when its map type is chosen | Merged (PR #142; approved proposal #140) |
 | 11 | Full tutorial audit, rewrite, translations, and manual | Planned; last |
