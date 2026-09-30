@@ -109,6 +109,7 @@ describe('committed map colours', () => {
 		const style = JSON.parse(
 			readFileSync(path.join(DEFAULT_MAPS_DIR, '..', 'styles', 'base.json'), 'utf8')
 		);
+		const expectedPalette = ['#5b9fc8', '#8b86d4', '#b87dc4', '#de7fa6', '#e58a73', '#97a3b2'];
 		for (const layerId of ['targets-fill', 'targets-circle']) {
 			const layer = style.layers.find((l: { id: string }) => l.id === layerId);
 			const colour = layer.paint[layerId === 'targets-fill' ? 'fill-color' : 'circle-color'];
@@ -117,7 +118,21 @@ describe('committed map colours', () => {
 			expect(match[1]).toEqual(['coalesce', ['feature-state', 'colorIndex'], -1]);
 			const slots = match.slice(2, -1).filter((_: unknown, i: number) => i % 2 === 0);
 			expect(slots).toEqual([...Array(PALETTE_SIZE).keys()]);
+			const colours = match.slice(2, -1).filter((_: unknown, i: number) => i % 2 === 1);
+			expect(colours).toEqual(expectedPalette);
 		}
+	});
+
+	it('gives towns maps distinct sea, land, and admin-border colors', () => {
+		const style = JSON.parse(
+			readFileSync(path.join(DEFAULT_MAPS_DIR, '..', 'styles', 'base.json'), 'utf8')
+		);
+		const layer = (id: string) => style.layers.find((l: { id: string }) => l.id === id);
+		expect(layer('background').paint['background-color']).toBe('#d3e5eb');
+		expect(layer('context-fill').paint['fill-color']).toBe('#f2eddf');
+		expect(layer('context-fill').paint['fill-opacity']).toBe(1);
+		expect(layer('context-outline').paint['line-color']).toBe('#81958d');
+		expect(layer('context-outline').paint['line-width']).toBe(0.8);
 	});
 });
 
