@@ -74,14 +74,14 @@ Remove only the worktree you created when finished:
 git worktree remove '<exact review-worktree path>'
 ```
 
-In OpenCode, the owner can start the command in a fresh session after choosing
-a different model:
+In the OpenCode UI, the owner opens a new session in the repository checkout,
+chooses a model different from the implementer with `/models`, then runs:
 
 ```text
 /review-pr <PR number>
 ```
 
-From a shell, the equivalent is:
+From a shell, the equivalent fresh-session command is:
 
 ```powershell
 opencode run -m <provider/model> --command review-pr <PR number>
