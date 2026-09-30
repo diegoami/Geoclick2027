@@ -41,8 +41,8 @@ preceding changes.
 | 2 | World-picker continent taps and visible-label country picking | Merged (PR #130) |
 | 3 | Direct in-map map-type button row | Merged (PR #137) |
 | 4 | Quiz completion Close and map-level Again action | Merged (PR #138) |
-| 5 | Towns-map land/border/sea contrast | In progress |
-| 6 | Version badge at the top | Planned |
+| 5 | Towns-map land/border/sea contrast | Merged (PR #139) |
+| 6 | Version badge at the top | In progress |
 | 7 | Tour icon controls and non-overlapping fact card | Planned |
 | 8 | Chart SVG filler outside map viewport | Planned |
 | 9 | Spine-following labels in all map views | Planned |

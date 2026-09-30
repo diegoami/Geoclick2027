@@ -136,9 +136,8 @@
 	 */
 	const showsClear = $derived(hasNameOverrides(mapId));
 
-	// The legend sits in the bottom-left corner, where the version badge is:
-	// it lifts the badge and the credit line above it, as the Quiz's tray
-	// does (mapBottomOverlay.ts).
+	// The legend sits in the bottom-left corner and lifts the credit line
+	// above it, as the Quiz's tray does (mapBottomOverlay.ts).
 	let legendEl = $state<HTMLDivElement>();
 	$effect(() => {
 		if (legendEl) return publishBottomOverlay(legendEl);
