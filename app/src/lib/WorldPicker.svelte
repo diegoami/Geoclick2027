@@ -588,10 +588,6 @@
 		border: 1px solid rgba(17, 24, 21, 0.12);
 		background: #cfe2ea;
 	}
-	.map {
-		position: absolute;
-		inset: 0;
-	}
 	.panel {
 		width: 22rem;
 		overflow-y: auto;

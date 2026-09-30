@@ -828,11 +828,9 @@
 		>
 	{/if}
 
-	{#if !error}
-		<ChartMapShell>
-			<div class="container" bind:this={container}></div>
-		</ChartMapShell>
-	{/if}
+	<ChartMapShell>
+		<div class="container" bind:this={container}></div>
+	</ChartMapShell>
 
 	<!-- Above the tray, whose height the player can drag (FT-35). Two clauses
 	     rather than three: the map is already sharing this screen with a tray
@@ -1074,6 +1072,8 @@
 		z-index: 2;
 	}
 	.error {
+		position: relative;
+		z-index: 2;
 		padding: 1rem;
 		font-family: system-ui, sans-serif;
 		color: #a33;

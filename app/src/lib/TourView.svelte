@@ -286,11 +286,9 @@
 			</div>
 		{/if}
 	{/if}
-	{#if !error}
-		<ChartMapShell>
-			<div class="container" bind:this={container}></div>
-		</ChartMapShell>
-	{/if}
+	<ChartMapShell>
+		<div class="container" bind:this={container}></div>
+	</ChartMapShell>
 </div>
 
 <style>
@@ -308,6 +306,8 @@
 		max-width: calc(100% - 1rem);
 	}
 	.error {
+		position: relative;
+		z-index: 2;
 		padding: 1rem;
 		font-family: system-ui, sans-serif;
 		color: #a33;

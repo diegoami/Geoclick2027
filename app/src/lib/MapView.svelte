@@ -299,11 +299,9 @@
 	{:else}
 		<MapNav {mapId} mapName={mapDisplayName(mapId) ?? mapDef?.name} active="explore" />
 	{/if}
-	{#if !error}
-		<ChartMapShell>
-			<div class="container" bind:this={container}></div>
-		</ChartMapShell>
-	{/if}
+	<ChartMapShell>
+		<div class="container" bind:this={container}></div>
+	</ChartMapShell>
 	{#if asked}
 		<FactCard
 			name={askedName ?? asked.name}
@@ -340,6 +338,8 @@
 		height: 100vh;
 	}
 	.error {
+		position: relative;
+		z-index: 2;
 		padding: 1rem;
 		font-family: system-ui, sans-serif;
 		color: #a33;
