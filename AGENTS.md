@@ -159,8 +159,13 @@ the gate. The separate PR-review workflow is advisory only.
 - Roles: the user is Product Manager; the implementing model is the Developer.
   Finish by telling the user exactly what to run/click and what to expect.
 - Whenever a PR is handed to the owner for testing, include its direct GitHub
-  PR link and an exact copy-paste command to start that PR's local branch. End
-  the handoff with that command block.
+  PR link and an exact copy-paste PowerShell command to create and enter a
+  separate review worktree for that PR. The command must start with `cd` to the
+  main checkout and use explicit paths. Offer to create the worktree directly
+  in the current session instead of requiring the owner to run the command.
+  Remind the owner to open a fresh session in that worktree using a different
+  model from the implementer for the review. End the PR handoff with the
+  command block.
 
 ### Worktrees
 
