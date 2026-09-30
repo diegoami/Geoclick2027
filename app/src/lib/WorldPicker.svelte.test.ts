@@ -14,7 +14,9 @@ const fake = vi.hoisted(() => {
 	const state = {
 		load: undefined as (() => void) | undefined,
 		countryClick: undefined as ((event: unknown) => void) | undefined,
-		mapOptions: undefined as { doubleClickZoom?: boolean } | undefined
+		landClick: undefined as ((event: unknown) => void) | undefined,
+		mapOptions: undefined as { doubleClickZoom?: boolean } | undefined,
+		countryLabel: undefined as HTMLElement | undefined
 	};
 	const picker = {
 		attribution: '',
@@ -45,11 +47,14 @@ const fake = vi.hoisted(() => {
 			) => {
 				if (type === 'load' && typeof layerOrCallback === 'function')
 					state.load = () => layerOrCallback(undefined);
-				if (type === 'click' && callback) state.countryClick = callback;
+				if (type === 'click' && callback && layerOrCallback === 'countries-fill')
+					state.countryClick = callback;
+				if (type === 'click' && callback && layerOrCallback === 'land') state.landClick = callback;
 				return map;
 			},
 			addControl: () => map,
 			setFeatureState: () => {},
+			queryRenderedFeatures: () => [],
 			setPaintProperty: () => {},
 			fitBounds: () => map,
 			getCanvas: () => ({ style: {} }),
@@ -67,14 +72,20 @@ const fake = vi.hoisted(() => {
 		remove() {}
 	}
 	class Popup {
+		element = document.createElement('div');
 		setLngLat() {
 			return this;
 		}
-		setText() {
+		setText(text: string) {
+			this.element.textContent = text;
 			return this;
 		}
 		addTo() {
+			fake.state.countryLabel = this.element;
 			return this;
+		}
+		getElement() {
+			return this.element;
 		}
 		remove() {}
 	}
@@ -115,7 +126,9 @@ describe('WorldPicker (FT-83, FT-86, #87)', () => {
 	beforeEach(() => {
 		fake.state.load = undefined;
 		fake.state.countryClick = undefined;
+		fake.state.landClick = undefined;
 		fake.state.mapOptions = undefined;
+		fake.state.countryLabel = undefined;
 		gotoMock.mockClear();
 		setPickerShown(false);
 		setPickerView('europe');
@@ -136,7 +149,7 @@ describe('WorldPicker (FT-83, FT-86, #87)', () => {
 		expect(pickerGoUp()).toBe(true);
 	});
 
-	it('opens the configured country map on the first world-map tap', async () => {
+	it('opens a country only when its continent-view label is visible', async () => {
 		setPickerView('world');
 		await render(WorldPicker, {
 			groups: [
@@ -163,18 +176,24 @@ describe('WorldPicker (FT-83, FT-86, #87)', () => {
 				originalEvent: { target: { closest: () => null } }
 			});
 		tapItaly();
-		expect(gotoMock).toHaveBeenCalledWith('/map/italy-regions');
-		expect(document.querySelector('.where')).toBeNull();
+		expect(gotoMock).not.toHaveBeenCalled();
 
 		gotoMock.mockClear();
 		setPickerView('europe');
 		await expect.poll(() => document.querySelector('.continent')?.textContent).toBe('Europe');
 		tapItaly();
 		expect(gotoMock).toHaveBeenCalledWith('/map/italy-regions');
+
+		gotoMock.mockClear();
+		fake.state.countryLabel?.classList.add('is-crowded');
+		tapItaly();
+		expect(gotoMock).not.toHaveBeenCalled();
+		fake.state.countryLabel?.classList.remove('is-crowded');
+		gotoMock.mockClear();
 	});
 
 	it('keeps the no-maps notice for a country with no playable maps', async () => {
-		setPickerView('world');
+		setPickerView('europe');
 		await render(WorldPicker, { groups: [], masteries: {}, targetCount: () => 0 });
 		await expect.poll(() => fake.state.load !== undefined).toBe(true);
 		fake.state.load!();
@@ -186,5 +205,26 @@ describe('WorldPicker (FT-83, FT-86, #87)', () => {
 		});
 		await expect.poll(() => document.querySelector('.note')?.textContent).toContain('Belarus');
 		expect(gotoMock).not.toHaveBeenCalled();
+	});
+
+	it('opens the nearest continent map when uncovered land is tapped', async () => {
+		setPickerView('world');
+		await render(WorldPicker, {
+			groups: [
+				{
+					country: 'Europe',
+					pickerId: 'europe',
+					maps: [{ id: 'europe-countries', label: 'Countries' }]
+				}
+			],
+			masteries: {},
+			targetCount: () => 0
+		});
+		await expect.poll(() => fake.state.load !== undefined).toBe(true);
+		fake.state.load!();
+		await expect.poll(() => fake.state.landClick !== undefined).toBe(true);
+
+		fake.state.landClick!({ point: { x: 10, y: 10 }, lngLat: { lng: 0, lat: 50 } });
+		expect(gotoMock).toHaveBeenCalledWith('/map/europe-countries');
 	});
 });

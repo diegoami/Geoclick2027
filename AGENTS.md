@@ -161,6 +161,9 @@ the gate. The separate PR-review workflow is advisory only.
   cost".)
 - Roles: the user is Product Manager; the implementing model is the Developer.
   Finish by telling the user exactly what to run/click and what to expect.
+- Whenever a PR is handed to the owner for testing, include its direct GitHub
+  PR link and an exact copy-paste command to start that PR's local branch. End
+  the handoff with that command block.
 
 ### Worktrees
 
