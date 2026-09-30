@@ -158,13 +158,16 @@ the gate. The separate PR-review workflow is advisory only.
   cost".)
 - Roles: the user is Product Manager; the implementing model is the Developer.
   Finish by telling the user exactly what to run/click and what to expect.
- - Whenever a PR is handed to the owner for testing, include its direct GitHub
-  PR link; an exact copy-paste PowerShell command, starting with `cd` to the
-  main checkout, to create and enter a local test worktree; and the actual
-  commands to install dependencies if needed and run the relevant local test.
-  State any URL or click path and what the owner should expect. For docs-only
-  changes, give the applicable verification command and say runtime tests do
-  not apply. End the handoff with the local test command block.
+- Whenever a PR is handed to the owner for testing, include its direct GitHub
+  PR link and the absolute path of the implementing worktree. By default, give
+  an exact copy-paste command starting with `cd` to that existing worktree;
+  don't create a duplicate test worktree. Use a separate test worktree only if
+  the implementing worktree is unavailable, still being edited, or the owner
+  asks for isolation. Include the actual commands to install dependencies only
+  if needed and run the relevant local test. State any URL or click path and
+  what the owner should expect. For docs-only changes, give the applicable
+  verification command and say runtime tests do not apply. End the handoff with
+  the local test command block.
 - Also include a ready-to-paste prompt for an **optional independent review**
   using a different model. Do not create a reviewer worktree or start the
   review unless the owner explicitly asks. The prompt must identify the PR and
