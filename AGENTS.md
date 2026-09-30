@@ -163,7 +163,8 @@ the gate. The separate PR-review workflow is advisory only.
   using a different model. Do not create a review worktree or start the review
   unless the owner explicitly asks. The prompt must identify the PR and exact
   head SHA, tell the reviewer to create its own detached worktree at that SHA
-  (with a `cd` to the main checkout first), read `AGENTS.md`, compare the PR
+  under the sibling `<project>-review` directory (with a `cd` to the main
+  checkout first), read `AGENTS.md`, compare the PR
   diff with its base, and remove only that worktree when done. Request an
   evidence-backed review without code edits, commits, or pushes, and explicitly
   instruct the reviewer to post the result as a GitHub PR review, not only in
