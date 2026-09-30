@@ -157,6 +157,8 @@ export type TranslationKey =
 	| 'tour.pause'
 	| 'tour.play'
 	| 'tour.next'
+	| 'tour.speed'
+	| 'tour.progress'
 	| 'tutorial.button'
 	| 'tutorial.start'
 	| 'tutorial.skip'
@@ -337,6 +339,8 @@ const en: Dictionary = {
 	'tour.pause': 'Pause',
 	'tour.play': '▶ Play',
 	'tour.next': 'Next ›',
+	'tour.speed': 'Tour speed',
+	'tour.progress': 'Step {current} of {total}',
 	'tutorial.button': 'Tutorial',
 	'tutorial.start': 'Start',
 	'tutorial.skip': 'Skip',
@@ -531,6 +535,8 @@ const de: Dictionary = {
 	'tour.pause': 'Pause',
 	'tour.play': '▶ Abspielen',
 	'tour.next': 'Weiter ›',
+	'tour.speed': 'Tourgeschwindigkeit',
+	'tour.progress': 'Schritt {current} von {total}',
 	'tutorial.button': 'Tutorial',
 	'tutorial.start': "Los geht's",
 	'tutorial.skip': 'Überspringen',
@@ -727,6 +733,8 @@ const it: Dictionary = {
 	'tour.pause': 'Pausa',
 	'tour.play': '▶ Riproduci',
 	'tour.next': 'Avanti ›',
+	'tour.speed': 'Velocità del tour',
+	'tour.progress': 'Passaggio {current} di {total}',
 	'tutorial.button': 'Tutorial',
 	'tutorial.start': 'Inizia',
 	'tutorial.skip': 'Salta',
