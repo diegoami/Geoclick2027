@@ -9,16 +9,21 @@ describe('ChartMapShell', () => {
 		setLanguage('en');
 		await render(ChartMapShell, {
 			children: createRawSnippet(() => ({
-				render: () => '<div class="container" data-testid="map-viewport"></div>'
+				render: () =>
+					'<div><div class="container" data-testid="map-viewport"></div><div class="map" data-testid="picker-viewport"></div></div>'
 			}))
 		});
 		const shell = document.querySelector<HTMLElement>('.chart-map-shell')!;
 		const viewport = document.querySelector<HTMLElement>('[data-testid="map-viewport"]')!;
+		const pickerViewport = document.querySelector<HTMLElement>('[data-testid="picker-viewport"]')!;
 
 		expect(getComputedStyle(shell).backgroundImage).toContain('data:image/svg+xml');
-		expect(getComputedStyle(viewport).position).toBe('absolute');
-		expect(getComputedStyle(viewport).inset).toBe('8px');
-		expect(getComputedStyle(viewport).overflow).toBe('hidden');
+		const inset = `${parseFloat(getComputedStyle(document.documentElement).fontSize) / 2}px`;
+		for (const mapViewport of [viewport, pickerViewport]) {
+			expect(getComputedStyle(mapViewport).position).toBe('absolute');
+			expect(getComputedStyle(mapViewport).inset).toBe(inset);
+			expect(getComputedStyle(mapViewport).overflow).toBe('hidden');
+		}
 
 		setLanguage('de');
 		await expect.poll(() => shell.getAttribute('style')).toContain('Hier%20sind%20Drachen');

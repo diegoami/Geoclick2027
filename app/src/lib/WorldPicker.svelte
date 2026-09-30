@@ -20,6 +20,7 @@
 	import { CROWDED_CLASS, MAGNIFIED_CLASS } from './labelMagnify';
 	import type { Mastery } from './homeProgress';
 	import MapSections from './MapSections.svelte';
+	import ChartMapShell from './ChartMapShell.svelte';
 	import { pickerDefaultMapIdOf, pickerIdOf } from './mapCatalog';
 	import { pickerView, setPickerShown, setPickerView } from './mapPrefs.svelte';
 	import { targetName } from './targetName';
@@ -543,7 +544,9 @@
 		{#if error}
 			<p class="error">{error}</p>
 		{/if}
-		<div class="map" bind:this={container}></div>
+		<ChartMapShell>
+			<div class="map" bind:this={container}></div>
+		</ChartMapShell>
 		{#if view !== 'world'}
 			<div class="where">
 				<button type="button" class="world" onclick={() => setPickerView('world')}>

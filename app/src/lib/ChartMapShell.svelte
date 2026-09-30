@@ -24,7 +24,8 @@
 			16rem 16rem;
 		background-repeat: no-repeat, repeat;
 	}
-	.chart-map-shell :global(.container) {
+	.chart-map-shell :global(.container),
+	.chart-map-shell :global(.map) {
 		position: absolute;
 		inset: 0.5rem;
 		width: auto;

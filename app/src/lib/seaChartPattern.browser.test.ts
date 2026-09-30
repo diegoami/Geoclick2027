@@ -13,4 +13,12 @@ describe('the bundled sea-chart pattern', () => {
 			expect(decodeURIComponent(dataUrl.split(',')[1]!)).toContain(inscription);
 		}
 	});
+
+	it('decodes as an SVG tile at its authored dimensions', async () => {
+		const image = new Image();
+		image.src = seaChartPatternDataUrl('en');
+		await image.decode();
+		expect(image.naturalWidth).toBe(512);
+		expect(image.naturalHeight).toBe(512);
+	});
 });

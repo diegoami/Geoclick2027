@@ -252,7 +252,7 @@
 	});
 </script>
 
-<div class="tour-view">
+<div class="tour-view" data-map-fit-root>
 	{#if error}
 		<p class="error">{error}</p>
 	{:else}
@@ -286,9 +286,11 @@
 			</div>
 		{/if}
 	{/if}
-	<ChartMapShell>
-		<div class="container" bind:this={container}></div>
-	</ChartMapShell>
+	{#if !error}
+		<ChartMapShell>
+			<div class="container" bind:this={container}></div>
+		</ChartMapShell>
+	{/if}
 </div>
 
 <style>
@@ -296,10 +298,6 @@
 		position: relative;
 		width: 100%;
 		height: 100vh;
-	}
-	.container {
-		width: 100%;
-		height: 100%;
 	}
 	.controls {
 		position: absolute;

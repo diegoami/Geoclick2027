@@ -1,11 +1,11 @@
 # Geoclick — Decisions
 
-A scannable log of *why* the project works the way it does — decisions
+A scannable log of _why_ the project works the way it does — decisions
 made along the way, with the reasoning, not the implementation detail.
 For "what was built and how it was verified," see the relevant
 iteration in [ROADMAP.md](ROADMAP.md) or the system description in
 [ARCHITECTURE.md](ARCHITECTURE.md); this file exists so "why did we
-decide X" doesn't require digging through either. Workflow/process *rules*
+decide X" doesn't require digging through either. Workflow/process _rules_
 (how the implementing agent works in this repo) live in [AGENTS.md](AGENTS.md), not here
 — that file is read in full at the start of every session, so it states
 the rule and nothing else. Where a rule was learned the hard way, the
@@ -72,7 +72,7 @@ or amend an entry here as part of that change, not as an afterthought.
 ## Commit trailers name the model (history, moved here 2026-09-27)
 
 - **Rule:** end every commit with a trailer naming the model that did the work,
-  and the tool when it is not Claude Code (`AGENTS.md`, *Commit messages*). It
+  and the tool when it is not Claude Code (`AGENTS.md`, _Commit messages_). It
   was left stale once already — keep it current.
 - **History.** 116 commits trailered "Sonnet 5" up to 2026-09-13, then 274
   trailered "Opus 5". 32 trailered "DeepSeek V4.1 Flash" from 2026-09-21, with
@@ -277,7 +277,7 @@ owner's answers. The owner agreed the change on #71.
   - Italian scholarly transliterations nobody writes (Nižnij Novgorod,
     Donec'k), where the English form reads as well. German's own forms
     (Charkiw) are what German uses, and stay.
-  All 455 towns were read to find these.
+    All 455 towns were read to find these.
 - **`name` stays the key.** The tiles are joined on it (`promoteId`), and
   ids, progress, Favourites and grading are unchanged. The other names live
   in map.json as `names: { en?, it?, de? }` and never enter the tiles, so
@@ -327,7 +327,7 @@ first batch (continents and the parts of Europe) settled.
   asks for where that changed: Czechia, Côte d'Ivoire, Cabo Verde,
   Timor-Leste, each with the old name as an alias - the rule Kyiv and
   Odesa already follow. Turkey stays Turkey, as on its own map.
-  *Amended 2026-09-26 ([#71](https://github.com/diegoami/Geoclick2027/issues/71)):*
+  _Amended 2026-09-26 ([#71](https://github.com/diegoami/Geoclick2027/issues/71)):_
   that is its English name. In Italian and German it is shown in that
   language (Francia, Frankreich); see "Place names in the chosen language".
 - **A capital is the one the country's constitution names**, several where
@@ -344,8 +344,8 @@ first batch (continents and the parts of Europe) settled.
   since one language field would put Antwerpen in French or Genève in
   German. Each town records its country in map.json, and its authored
   sentences come from that country's file: 32 of Central Europe's 68 towns
-  arrive with their name-facts already written. *Amended 2026-09-26
-  (#71):* this is still the town's `name`, its key, but a map of several
+  arrive with their name-facts already written. _Amended 2026-09-26
+  (#71):_ this is still the town's `name`, its key, but a map of several
   countries now shows it in the chosen language (München reads "Munich" in
   English and "Monaco di Baviera" in Italian on Central Europe). A
   country's own maps keep the local name.
@@ -363,7 +363,7 @@ first batch (continents and the parts of Europe) settled.
 ## Translating fact-checked the English (2026-09-23, FT-50)
 
 Every country file was translated by its own subagent, told to translate
-faithfully and to *report* any English sentence it thought was wrong. The
+faithfully and to _report_ any English sentence it thought was wrong. The
 reports were checked one by one and about 180 sentences were corrected, in
 both languages, each listed in its country's commit message.
 
@@ -424,15 +424,15 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   styling; the size floor moves to rem. Explore first; Quiz and Tour
   labels are a separate call. Medium, not Small.
 - **Built as FT-66 (2026-09-23), with three choices the spike left open.**
-  *Spines come from the committed tiles, not the source shapefile:*
+  _Spines come from the committed tiles, not the source shapefile:_
   `build-map.ts` needs the WSL2 toolchain, and rebuilding 32 maps' tiles
   to add a field would churn every tileset; the tiles already hold the
   geometry `mapColors.ts` reads, and a raster mask stitches a region's
-  tile-clipped pieces with no polygon union. *The size floor is the
-  popup's own, 0.8125 rem:* a stretched name never reads smaller than
+  tile-clipped pieces with no polygon union. _The size floor is the
+  popup's own, 0.8125 rem:_ a stretched name never reads smaller than
   the pill it replaces, which on a phone at the country view leaves
-  most names as pills - the intended hybrid. *A stretched name is a hard
-  obstacle to every popup except a magnified one*, which still always
+  most names as pills - the intended hybrid. _A stretched name is a hard
+  obstacle to every popup except a magnified one_, which still always
   gets its place; a magnified stretched name comes forward (full
   strength, 8 % larger) rather than growing out of its region.
 - **Amended 2026-09-23 ([#34](https://github.com/diegoami/Geoclick2027/issues/34)):
@@ -441,12 +441,12 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   product owner found the labels "kind of mixed". The size rule is unchanged,
   but on Explore a region's fallback name is now set like its stretched one:
   Georgia capitals, the same ink and halo, and no box, the way an atlas sets
-  a small territory. *Towns keep the pill* beside their dot (the owner's
+  a small territory. _Towns keep the pill_ beside their dot (the owner's
   call), and Quiz and Overview labels keep their boxes: those have no
   stretched names, and the green and gold boxes are a quiz signal of their
-  own. *The asked ink darkened* from the accent (4.2:1 on white) to
+  own. _The asked ink darkened_ from the accent (4.2:1 on white) to
   `rgb(150, 85, 20)` (about 5.8:1), in both forms, so an asked name is one
-  colour however it is drawn. *The hit area lost the pill's padding*,
+  colour however it is drawn. _The hit area lost the pill's padding_,
   accepted pending a tablet check.
   **Superseded for the Quiz, Overview and Tour on 2026-09-25 (FT-74, #46
   Q5):** after playing v0.11.0 on a tablet the product owner wanted a
@@ -511,7 +511,7 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   structured over prose so the derived half would be trilingual for free.
   The authored sentences are prose and need a human translator per
   language. If translating 5 448 of them proves expensive, templated
-  landmark facts get *more* attractive, not less — so the order matters:
+  landmark facts get _more_ attractive, not less — so the order matters:
   decide the languages first, then reconsider this.
 - **Closing it would have been the cheaper mistake.** A backlog item
   dismissed on a reason that does not hold is harder to recover than one
@@ -548,7 +548,7 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
 - **The reason is the rule for anything added here later**: "I can see
   myself if it is on the north or on the south." The map is already showing
   you where a place is. A sentence that repeats it puts words in front of
-  the thing they describe. What earns its place is what the map does *not*
+  the thing they describe. What earns its place is what the map does _not_
   show.
 - **So what survives is exactly that.** A region keeps its biggest city; a
   town keeps the region it belongs to and its rank by population. Nothing
@@ -603,21 +603,21 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   map's pan and the quiz's drag. A timer needs no gesture at all.
 - **The name-fact leads** (product owner, same day). It is the half he
   called the thing he had not seen in other programs, so if a player
-  reads only one line it should be that one. Note this is the *opposite*
+  reads only one line it should be that one. Note this is the _opposite_
   order to the large-screen card, where the derived line sits physically
   on top — that layout is FT-35's and is unchanged. The order only
   governs which comes first when they are shown one at a time.
 - **Anyone who has asked for less motion gets the whole card instead.**
   Text that changes under the reader is motion, so `prefers-reduced-
-  motion: reduce` turns the rotation off — and then showing one line
+motion: reduce` turns the rotation off — and then showing one line
   would simply hide half the content, so both are shown and the height is
   spent. Those players trade map area for completeness, which is the
   right way round for an accessibility fallback.
 - **The saving is real but smaller than "one line instead of two"
   sounds**: measured over five Italian regions, 29 px upright (3.4% of an
   850 px screen) and 22 px sideways (5.5% of a 400 px one). The reason is
-  that a name-fact is a whole sentence and wraps to two or three *visual*
-  lines at 400 px wide, so removing one *logical* line removes less than
+  that a name-fact is a whole sentence and wraps to two or three _visual_
+  lines at 400 px wide, so removing one _logical_ line removes less than
   half the card. Shortening the sentences for small screens, or clamping
   the visible text, would buy more; neither was in scope here.
 
@@ -693,7 +693,7 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
 - **Adapted here:** a beta is a throwaway version-only commit on the
   candidate, so the candidate already carries `X.Y.Z` and the tested code is
   the reviewed code; `main` takes only the milestone's fixes while its issue
-  is open; the round ceiling lives in AGENTS.md, *Releases* (there is no
+  is open; the round ceiling lives in AGENTS.md, _Releases_ (there is no
   PRINCIPLES.md); Claude keeps publishing (standing permission);
   `publish-release.mjs` refuses unless HEAD is the tag and names the
   tagged commit in the notes. Baseline: `v0.9.4` (`5387ff2`), already
@@ -701,14 +701,14 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
 
 ## An independent model reviews at milestones, on GitHub (2026-09-23, amended the same day)
 
-- *Amended by the entry above: milestones are now release tags only; the
-  release PR and the `Review:` line below are gone.*
+- _Amended by the entry above: milestones are now release tags only; the
+  release PR and the `Review:` line below are gone._
 - **The review is recorded on GitHub by the reviewer itself** (product
   owner, 2026-09-23, [#26](https://github.com/diegoami/Geoclick2027/issues/26),
   adapted from diegoami/discola-web; amends the first version of this
   entry, below). One issue per reproduced finding, labelled `review` plus a
   category; always one AGREE/BLOCK verdict comment naming the SHA; a
-  `Review:` line on every milestone PR. Process: AGENTS.md, *Releases*;
+  `Review:` line on every milestone PR. Process: AGENTS.md, _Releases_;
   reviewer: `.opencode/agents/release-reviewer.md`.
 - **Why GitHub and not a pasted report:** the first version handed the
   owner a prompt whose output was one Markdown report, pasted back into a
@@ -727,7 +727,7 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
 - **Releases gained a `release/X.Y.Z` PR** so a staged release has a
   thread and a SHA to review; the beta is packaged from its head, so the
   reviewer and the owner see the same build (docs/RELEASES.md).
-- *First version, same day:* **Claude works without a per-PR review; at
+- _First version, same day:_ **Claude works without a per-PR review; at
   milestones the product owner runs an independent model over the
   repository**, superseding the entry below it. What this buys back is
   the thing the fresh-Claude loop traded away: a second model's blind
@@ -737,7 +737,7 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
 
 ## Claude reviews its own PRs (2026-09-23, superseded the same day)
 
-- *Superseded by the entry above.* **Every task PR is reviewed by a fresh
+- _Superseded by the entry above._ **Every task PR is reviewed by a fresh
   Claude subagent**, replacing ChatGPT
   GPT-5.6 Luna (high), who had reviewed PRs #10–#21 under opencode. The
   product owner decided it when the implementing model changed to Claude
@@ -758,7 +758,7 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
 - **Drag-and-drop slip matching, not flashcard recognition/recall.** A
   set of name slips on the game area; drag one onto the region it names,
   drop to confirm. Chosen over an original flashcard-style design because
-  it's a more direct test of map knowledge (find the *shape*, not just
+  it's a more direct test of map knowledge (find the _shape_, not just
   recognize a name) and a clearer visual differentiator from Seterra. The
   two-directional flashcard idea isn't gone, just deferred — nothing
   about drag-to-match blocks adding it later as a second quiz mode. See
@@ -769,7 +769,7 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   differently from a real success (excluded from `scoreSession`'s
   `perfect` count, muted color rather than success-green). Reason: a
   slip you keep failing needs a way out, not an infinite retry loop.
-  *Amended 2026-09-18 (v0.6.0, FT-20): the threshold is **one** miss.*
+  _Amended 2026-09-18 (v0.6.0, FT-20): the threshold is **one** miss._
   Three tries made a mistake cheap, and nothing warned you before the
   third one gave the answer away (v0.5.0 product review, F9). Now a wrong
   drop ends that name's turn: the region that was hit flashes red, the
@@ -781,18 +781,18 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   `maplibregl.Popup`s, not a MapLibre symbol layer.** A feature-state-
   driven symbol layer was tried first (matching the pattern already used
   for fill color) and dropped: even with `text-allow-overlap`/`text-
-  ignore-placement` set, MapLibre's collision/placement system
+ignore-placement` set, MapLibre's collision/placement system
   unpredictably hid some labels regardless of opacity — confirmed
   directly via `queryRenderedFeatures` showing a label feature simply
   wasn't in the render results for one region while five others were
   fine.
-  *Amended 2026-09-18 (v0.6.0, FT-23): DOM popups had no collision
+  _Amended 2026-09-18 (v0.6.0, FT-23): DOM popups had no collision
   system at all, which is why a crowded map was unreadable. They now get
   one of their own, in JS — see "Names never overlap" below for what it
-  does and why it is still not a symbol layer.*
+  does and why it is still not a symbol layer._
 - **Drop hit-testing: exact-pixel for hover, a tolerance radius
   (`DROP_TOLERANCE_PX`, 24px) for the drop itself — and the tolerance
-  only ever helps the *correct* target land, never reattributes which
+  only ever helps the _correct_ target land, never reattributes which
   region a wrong drop hit.** Needed because small regions (Bremen,
   Saarland) can be only a couple of screen pixels wide at a normal zoom
   level — exact-pixel-only hit-testing made them nearly impossible to
@@ -804,7 +804,7 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   visually overlaps the bottom of the map container), or on empty map
   space (sea, gaps between regions) are all treated as "changed my
   mind" — no error recorded, no wrong-flash, slip just returns to the
-  tray. Landing on an actual *different* region still counts as wrong.
+  tray. Landing on an actual _different_ region still counts as wrong.
   This took three passes to get right (outside-the-page, then the tray-
   overlap case, then empty-space-inside-the-map) — each found by the
   user actually playing the quiz, not anticipated in advance.
@@ -822,7 +822,7 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   browser, keyed to nothing but that. Spaced repetition only needs
   somewhere to remember state across sessions on one device — it doesn't
   need a login. Accounts are a separate, later concern (Iteration 8+),
-  triggered only by wanting to sync progress *across* devices or a
+  triggered only by wanting to sync progress _across_ devices or a
   public leaderboard, not by spaced repetition itself. See
   ARCHITECTURE.md's Storage section.
 - **Iteration ordering: local persistence before spaced repetition**,
@@ -876,7 +876,7 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   forever and the card silently left the review pool, with nothing
   logged. Why a year rather than the review's alternative of 180 days:
   this is a geography game with a few dozen targets per map, not a
-  thousands-of-cards exam deck, so reviewing a *mastered* region once a
+  thousands-of-cards exam deck, so reviewing a _mastered_ region once a
   year costs the player almost nothing, and a year is the natural
   "do I still know this" horizon for place knowledge. The cap first
   bites at the 7th consecutive clean review (238 × 2.5 = 595 → 365), so
@@ -894,21 +894,21 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   and a card fumbled every other time slid to the 1.3 floor. +0.1 is
   SM-2's own adjustment for a perfect answer. The ceiling is the default
   on purpose — new cards start at the maximum, and ease exists to slow
-  down cards you *struggle* with, not to let a long clean streak compound
+  down cards you _struggle_ with, not to let a long clean streak compound
   intervals faster than the default rate (the interval cap above bounds
   those anyway). Net effect on a card fumbled every other review: it
   still loses ease, but at -0.05 per hard/good pair instead of -0.15,
   and a clean run brings it back. Together with the same-day "again"
   rule and three grades instead of SM-2's six, this makes the scheduler
-  SM-2-*derived*, not "classic SM-2" as the docs used to claim — fixed in
+  SM-2-_derived_, not "classic SM-2" as the docs used to claim — fixed in
   `packages/srs/src/index.ts` and ARCHITECTURE.md.
 - **Practice mode (Iteration 6) persists nothing — no SRS state and no
   last-session summary — and starts from a blank map.** It exists so replaying a
   mastered map is still possible once nothing's due, without that
   session silently perturbing the real review schedule, and without
   implying you already "know" everything by pre-marking it discovered
-  before you've actually re-tried it this round. *Amended by GC-020
-  (2026-09-13):* the code used to save the last-session summary for
+  before you've actually re-tried it this round. _Amended by GC-020
+  (2026-09-13):_ the code used to save the last-session summary for
   practice rounds too, contradicting "never writes back" — so a casual
   practice round silently replaced the home page's "Last: 18/20" record
   of the last real graded session. Resolved toward the rule rather than
@@ -916,8 +916,8 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   review schedule, and a practice score doesn't. Practice results are
   still shown on the score panel at the end of the round; they just
   aren't kept.
-  *Superseded 2026-09-18 (v0.6.0, FT-26): there is no practice mode any
-  more.* It existed because a due-only round could come up empty; rounds
+  _Superseded 2026-09-18 (v0.6.0, FT-26): there is no practice mode any
+  more._ It existed because a due-only round could come up empty; rounds
   now always cover the whole map, so replaying a mastered map is simply
   playing it, and every round is graded. See "The scheduler keeps running,
   out of sight" below.
@@ -934,8 +934,8 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   The same fix applies to practice mode's own "Play again": since
   practice never changes due-state, it now starts another practice round
   directly instead of re-running a due-check that can't have changed.
-  *Superseded 2026-09-18 (v0.6.0, FT-26): "Play again" is always accurate
-  now, because there is always the whole map to play again.* With it went
+  _Superseded 2026-09-18 (v0.6.0, FT-26): "Play again" is always accurate
+  now, because there is always the whole map to play again._ With it went
   "All caught up!", "Next review in N days" and the "Up to date!" screen -
   and with that screen, the empty-chip glitch the v0.5.0 review found
   (F13).
@@ -1098,7 +1098,7 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   tolerance radius itself) that weren't anticipated in the original
   design pass.
 - **A point map's drop tolerance requires the dragged target to be the
-  *closest* candidate to the drop point, not merely present within the
+  _closest_ candidate to the drop point, not merely present within the
   tolerance radius — polygon maps keep the simpler check.** Found by
   testing the Ruhr area directly: Essen and Duisburg render only ~22px
   apart on screen at the default zoom, inside the 30px point tolerance,
@@ -1124,7 +1124,7 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   match — and a lake extending past that box is fine to keep, not
   something to clip away. First cut still read as barely visible — fixed
   not by making the lake color more saturated (the first instinct) but by
-  lowering the *land* fill's opacity instead (`targets-fill` 0.85 → 0.6),
+  lowering the _land_ fill's opacity instead (`targets-fill` 0.85 → 0.6),
   on the user's suggestion. Lighter land contrasts against the lake blue
   better than a more saturated lake did against the land.
 - **An "Overview" view (all regions pre-labeled "discovered", no
@@ -1159,7 +1159,7 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
 - **Tauri wraps `app/build` completely unmodified — no separate
   desktop-only frontend code.** `desktop/src-tauri/tauri.conf.json`'s
   `beforeBuildCommand` just runs the existing `npm run build
-  --workspace=app`; the only new code is the Rust plugin registration
+--workspace=app`; the only new code is the Rust plugin registration
   (`desktop/src-tauri/src/lib.rs`) and one new `ProgressRepository`
   implementation (`app/src/lib/sqliteProgressRepository.ts`) picked at
   runtime by `createProgressRepository()`'s `isTauri()` check. Confirms
@@ -1174,7 +1174,7 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   with zero changes to the interface itself.
 - **Android packaging (Capacitor) reprioritized ahead of the GUI/UX
   evaluation too**, same reasoning as Tauri above — explicit user
-  request to have both real packaged shells (desktop *and* mobile) in
+  request to have both real packaged shells (desktop _and_ mobile) in
   hand before spending time on interface redesign, not just desktop
   alone. iOS stays a separate, later item regardless of this reordering:
   it hard-requires a Mac with Xcode, hardware this project doesn't have,
@@ -1186,7 +1186,7 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   ("Capacitor has no equivalent of Tauri's `migrations()`") stopped being
   true in GC-040: Android now has a real versioned migration list
   (`MIGRATIONS` in `capacitorMigrations.ts`, driven by `PRAGMA
-  user_version`). Before that it ran `CREATE TABLE IF NOT EXISTS` on every
+user_version`). Before that it ran `CREATE TABLE IF NOT EXISTS` on every
   open with no version at all — so the real risk the review found was
   never "two copies might drift", it was that the first schema change on
   Android had no mechanism to run exactly once per device.
@@ -1209,7 +1209,7 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
 - **PMTiles on Android: buffer the whole archive in memory rather than
   work around Capacitor's missing Range-request support.** Capacitor's
   Android WebView local asset server can't return real `206 Partial
-  Content` responses for arbitrary file types — a known, open upstream
+Content` responses for arbitrary file types — a known, open upstream
   issue (ionic-team/capacitor#7664) — so pmtiles' normal range-request
   `FetchSource` silently never gets real tile data on Android, even
   though the identical file renders correctly in the browser/Tauri
@@ -1220,7 +1220,7 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   once, play offline" pitch these demo maps were always built around).
   Chosen instead: since every demo map is well under 1MB, fetch each
   `.pmtiles` file once as an ordinary full `GET` (which Capacitor serves
-  fine — only *partial*-content responses are broken) and hand pmtiles a
+  fine — only _partial_-content responses are broken) and hand pmtiles a
   custom in-memory `Source` that serves its byte-range reads out of that
   buffer, via the library's own documented `Protocol.add()`/`.get()`
   pre-registration API. Scoped to native Capacitor only
@@ -1233,7 +1233,7 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
 
 - **Explored with the `design` skill before writing any implementation
   code.** Four directions (top nav, on-map labels, quiz tray, map colors)
-  were mocked up — the color options as *real live renders* of the actual
+  were mocked up — the color options as _real live renders_ of the actual
   app with paint properties swapped at runtime via `setPaintProperty`, not
   drawn approximations — and approved one at a time in a published canvas
   before any Svelte/style code changed. Caught a real problem this way
@@ -1354,7 +1354,7 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
 ## Internationalization (i18n)
 
 - **Hand-rolled dictionary + `t()`/`tPlural()` helper (`app/src/lib/
-  i18n.svelte.ts`), not a library (`sveltekit-i18n`, `typesafe-i18n`,
+i18n.svelte.ts`), not a library (`sveltekit-i18n`, `typesafe-i18n`,
   inlang/Paraglide).** Requested directly by the user (2026-09-12),
   alongside map-list reorganization and optional SSO. Scoped to the app's
   own UI chrome only — nav labels, home page text, quiz/tour status and
@@ -1383,7 +1383,7 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
 - **Map/target names are explicitly out of scope, on purpose.** Region
   and city names (Toscana, Bayern, Kyiv, ...) are real geographic proper
   nouns already localized per-country through `data/scripts/
-  build-map.ts`/`build-points-map.ts`'s `NAME_FIXUPS` tables and
+build-map.ts`/`build-points-map.ts`'s `NAME_FIXUPS` tables and
   `--name-field` — a separate, already-solved mechanism (see MAPS.md).
   Routing those through the UI dictionary would conflict with decisions
   already made per-country for reasons that have nothing to do with the
@@ -1398,7 +1398,7 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   need revisiting (a real plural-rules table) if a language with richer
   plural categories (e.g. Polish, Russian) were ever added.
 - **~~Three small text pills (EN/DE/IT)~~ one pill that opens a list.**
-  *Corrected 2026-09-19 (FT-43).* Three pills matched the muted small-pill
+  _Corrected 2026-09-19 (FT-43)._ Three pills matched the muted small-pill
   language from GUI/UX round 1, which is why they were chosen — but they
   cost a pill's width per language in a map bar that is already tight on a
   phone, so the control could not grow. The product owner's point: "it is
@@ -1417,7 +1417,7 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   click.
 - **Names are shown in their own language**, never translated — the
   convention every real switcher uses, so a language you cannot yet read is
-  still recognisable. The picker's own accessible name *is* translated
+  still recognisable. The picker's own accessible name _is_ translated
   (`lang.label`), which the three-pill version got wrong: it hardcoded
   `aria-label="Language"` in English.
 - Shown in two places: `MapNav.svelte` (present on every map-scoped view)
@@ -1440,7 +1440,7 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   of a cool one keeps the original design's actual intent (a plain
   backdrop, not a literal ocean) while looking more intentional than
   flat gray, and — checked directly, not assumed — makes the lakes
-  layer's blue read *more* clearly against a warm background than it
+  layer's blue read _more_ clearly against a warm background than it
   did against the old cool gray-blue one, not less. Also re-verified
   against `italy-provinces`' full 8-color categorical palette (every
   hash-derived land color, not just green) and a towns map's `context`
@@ -1486,7 +1486,7 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   hash-derived colors an unsolved region happens to have - directly
   matching the user's own suggested fix ("different level of
   saturation"). Circles kept a higher unsolved-state floor than fills
-  (0.65 vs 0.3) since a point marker's *only* visual footprint is its
+  (0.65 vs 0.3) since a point marker's _only_ visual footprint is its
   fill - dropping it as low as a polygon's would risk making an
   unsolved city hard to see/aim for, unlike a polygon target, which
   stays fully legible via its always-visible outline regardless of
@@ -1537,7 +1537,7 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   accepted because a revealed target also gets its name label.
 - **Kept in sync by the tooling, not by memory.** `build-map.ts` and
   `build-points-map.ts` colour a map as their last step. `npm run
-  build-map-colors` recolours every committed map (or one, with
+build-map-colors` recolours every committed map (or one, with
   `-- --map=<id>`) without touching the tiles. `app/src/lib/mapColors.test.ts`
   recomputes adjacency for all 44 maps from their tiles and fails on any
   same-coloured neighbours. It also fails if the style's number of palette
@@ -1690,8 +1690,8 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   agent. See [docs/ORCHESTRATION.md](docs/ORCHESTRATION.md).
 - **SUPERSEDED after GC-001: the human is no longer the per-task merge
   authority — the loop automerges.** Product owner, 2026-09-13, after
-  approving the first task: *"I think we need to change the behaviour to
-  automerge."* The loop now merges a task itself once all four gates are
+  approving the first task: _"I think we need to change the behaviour to
+  automerge."_ The loop now merges a task itself once all four gates are
   green and every DoD item is verified, and reports each merge in a short
   summary. It still stops for the three release tags (the product owner's
   only routine gate), for two failed attempts, for a DoD item it cannot
@@ -1720,7 +1720,7 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
 - **The version and a short build/commit identifier are shown on every
   screen** (`app/src/lib/VersionBadge.svelte`, bottom-right corner,
   injected at build time from `package.json` and `git rev-parse
-  --short HEAD`) — requested directly ("release number and build should
+--short HEAD`) — requested directly ("release number and build should
   be prominent in the application"), not left as something only visible
   by reading a file. `1.0.0` stays reserved for the real public-launch
   milestone (domain, app-store submission) per the SSO-deferral entry
@@ -1759,9 +1759,9 @@ no `.gitattributes` change, no file moved.
      the prepared `app/static/maps` path (a committed symlink when this was
      written; FT-58 makes the build prepare it, so a checkout no longer
      carries the link).
-  2. **Git LFS.** Two very different variants. *LFS for new/rebuilt
-     tilesets only* rewrites nothing — but also saves nothing on the
-     14.22 MB already in history, only on growth. *Migrating history*
+  2. **Git LFS.** Two very different variants. _LFS for new/rebuilt
+     tilesets only_ rewrites nothing — but also saves nothing on the
+     14.22 MB already in history, only on growth. _Migrating history_
      (`git lfs migrate import --everything`) rewrites every commit:
      every hash changes, `main` must be force-pushed, tags `v0.1.0` and
      `v0.1.1` move, every clone (and the parked
@@ -1774,7 +1774,7 @@ no `.gitattributes` change, no file moved.
      draws on; `git lfs` installed on every machine (Git for Windows
      bundles it; WSL and the Android build box need it too); and
      `.gitattributes` changing `*.pmtiles binary` to
-     `*.pmtiles filter=lfs diff=lfs merge=lfs -text`, still *after*
+     `*.pmtiles filter=lfs diff=lfs merge=lfs -text`, still _after_
      GC-001's catch-all. **The failure mode is nasty and familiar:** a
      checkout without LFS support gets ~130-byte text pointer files in
      place of the tilesets, and the app then shows labels but no
@@ -1915,7 +1915,7 @@ answers:
 - **A name you asked for is drawn in the accent colour**, not as a fourth
   strength of knowing. The three earned strengths keep meaning exactly what
   they meant; "I put this here" and "I learned this" are different claims
-  and the map should not blur them. *Amended 2026-09-24 (#11):* as built,
+  and the map should not blur them. _Amended 2026-09-24 (#11):_ as built,
   a tapped name the player had already earned kept its earned strength, so
   a tap looked like it did nothing. The product owner's rule: an explicit
   tap is **Chosen** whatever the streak - the tap is the newer and more
@@ -1924,7 +1924,7 @@ answers:
   are a view of a map, not a record of what the player knows. Storing them
   as progress would have meant a schema migration in both native backends,
   which a test holds to parity, to record something that is not progress.
-  *Amended 2026-09-24 (#11, product owner 2026-09-22):* the choices are now
+  _Amended 2026-09-24 (#11, product owner 2026-09-22):_ the choices are now
   **session-only**, in memory; reopening the app shows what is known and
   nothing else, and the old `geoclick:shown-names:v1` key is removed on
   load. With a tap always drawn as Chosen, a persisted choice would pin a
@@ -1967,8 +1967,8 @@ answers:
   anything that could help mnemonics". A region drawn with nothing around it
   has nothing to sit against, and a name with nothing to hang on is a name
   you re-learn every session.
-- **~~Off~~ ON by default, one setting for all 63 maps.** *Corrected
-  2026-09-19 (FT-43) — it shipped off and that was wrong.* The original
+- **~~Off~~ ON by default, one setting for all 63 maps.** _Corrected
+  2026-09-19 (FT-43) — it shipped off and that was wrong._ The original
   reasoning was that non-invasive was the ask, so a returning player's map
   should look exactly as it did until they pressed Terrain. What actually
   happened is that the product owner, who asked for the feature, opened the
@@ -1978,7 +1978,7 @@ answers:
   not non-invasive, it is invisible — and that is a worse failure than a map
   that changed appearance once. It is now on unless a player turns it off.
 - **The default flip does not override anyone.** The preference stores three
-  states, not two: `'1'` on, `'0'` off, and *absent* meaning never touched.
+  states, not two: `'1'` on, `'0'` off, and _absent_ meaning never touched.
   Only the absent case takes the new default, so a player who deliberately
   turned Terrain off stays off. Worth keeping in mind for any future default
   that flips: a two-state flag cannot tell "off" from "unset", and flipping
@@ -1986,13 +1986,14 @@ answers:
 - **One setting for every map, not one per map.** A player who wants the sea
   wants it everywhere; having to switch it on again for each of 63 maps
   would be worse than no setting. Unchanged.
-- **Antique-map decoration belongs to Terrain (2026-09-29, FT-88).** Original,
-  bundled vector motifs live only in empty sea, below the geography and labels,
-  and follow the existing Terrain preference. No scanned map art or runtime
-  network asset; “Here be dragons” is rendered from localized English, German,
-  and Italian text without MapLibre's remote glyph server.
+- **Chart art stays outside MapLibre (supersedes FT-88, 2026-09-30, v0.16 task 8).**
+  The bundled, localized SVG remains offline and original, but is now a subtle
+  shell filler around the four full-screen map tabs and the WorldPicker stage.
+  It is not painted over the sea or tied to the Terrain preference; MapLibre's
+  sea remains plain. “Here be dragons” continues to use localized English,
+  German, and Italian text without MapLibre's remote glyph server.
 - **Named features, not elevation shading.** What helps a mnemonic is a
-  *name* — the Alps, the Adriatic, the Po — and Natural Earth already has
+  _name_ — the Alps, the Adriatic, the Po — and Natural Earth already has
   1 047 named land features and 306 named marine ones, carrying German and
   Italian names, which is why the Terrain labels are trilingual without a
   word being translated by hand. Hypsometric shading would need a source
@@ -2105,8 +2106,8 @@ answers:
   help"_. He is right, and it is the sharper version of the whole feature's
   premise: the layer exists to give a name somewhere to hang, so a label
   pointing at the wrong place does the opposite of its job.
-- **Both had one cause**: the label went to the middle of the *clipped*
-  shape's *bounding box*. Neither half survives contact with real geography.
+- **Both had one cause**: the label went to the middle of the _clipped_
+  shape's _bounding box_. Neither half survives contact with real geography.
   The middle of a box is outside anything long or curved, and the middle of
   a clipped remnant is nowhere in particular. Labels are now placed at a
   point genuinely inside the feature, computed from its whole geometry.
@@ -2279,7 +2280,7 @@ answers:
   but 23 of those layouts drew fewer. Straying counts double so that a
   region's one-line step can never win back its cost in room: a region's
   name still leaves its middle only when the middle is taken. What sits
-  *under* a name - water, a region border - is not scored: the pass
+  _under_ a name - water, a region border - is not scored: the pass
   knows the labels and the dots, not the map's paint. The map's edge is
   the whole container, map bar included, so a name under the bar counts
   as on the map.
@@ -2318,9 +2319,9 @@ answers:
     given away, `rem` sizing that follows the browser's font-size
     setting. A symbol layer would have to reimplement all of it in
     expressions, and could not magnify a single label at all.
-  The pass itself is small: read every label's rectangle once per frame,
-  keep them in order of importance, hide the rest. See
-  `app/src/lib/labelCollision.ts`.
+    The pass itself is small: read every label's rectangle once per frame,
+    keep them in order of importance, hide the rest. See
+    `app/src/lib/labelCollision.ts`.
 
 ## The retention map replaces Explore (2026-09-18, FT-22)
 
@@ -2337,7 +2338,7 @@ answers:
   phones.
 - **On a map never played it is exactly the old Explore:** a blank map to
   test yourself against.
-- **The tab is called "Progress"** (DE *Fortschritt*, IT *Progressi*),
+- **The tab is called "Progress"** (DE _Fortschritt_, IT _Progressi_),
   with a three-swatch legend in the corner. The name is the product
   owner's call at review; "Known" / "Gewusst" / "Conoscenza" was the
   alternative.
@@ -2346,10 +2347,10 @@ answers:
 
 ## The tray offers fewer names as a map is learned (2026-09-18, FT-21)
 
-- **The quiz deals a *hand*, not the whole deck.** How many names the tray
+- **The quiz deals a _hand_, not the whole deck.** How many names the tray
   offers depends on how much of the map is known (names at a clean streak
   of 3 or more): under 25 % ten, from 25 % six, from 60 % three, from
-  85 % one. **Amended 2026-09-23 (FT-60):** under 25 % was *every name*
+  85 % one. **Amended 2026-09-23 (FT-60):** under 25 % was _every name_
   until the product owner capped it at ten — a new map laid its whole deck
   in the tray (49 slips on `germany-towns-100k`, 110 on `italy-provinces`),
   which on a tablet is a wall of slips rather than a hand. While a tutorial
@@ -2530,6 +2531,7 @@ answers:
 - **The whole tutorial is audited and revised against current behavior.**
   Update every stale step, supported language, and the manual; the visible
   Skip action says "Exit tutorial". Keep Escape as a keyboard shortcut.
+
 ## Automatic pull-request reviews (2026-09-30)
 
 - The product owner asked for each PR to receive an automatic review from a

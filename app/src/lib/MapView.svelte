@@ -293,15 +293,17 @@
 	});
 </script>
 
-<div class="map-view">
+<div class="map-view" data-map-fit-root>
 	{#if error}
 		<p class="error">{error}</p>
 	{:else}
 		<MapNav {mapId} mapName={mapDisplayName(mapId) ?? mapDef?.name} active="explore" />
 	{/if}
-	<ChartMapShell>
-		<div class="container" bind:this={container}></div>
-	</ChartMapShell>
+	{#if !error}
+		<ChartMapShell>
+			<div class="container" bind:this={container}></div>
+		</ChartMapShell>
+	{/if}
 	{#if asked}
 		<FactCard
 			name={askedName ?? asked.name}
@@ -336,10 +338,6 @@
 		position: relative;
 		width: 100%;
 		height: 100vh;
-	}
-	.container {
-		width: 100%;
-		height: 100%;
 	}
 	.error {
 		padding: 1rem;

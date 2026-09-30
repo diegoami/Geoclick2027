@@ -756,7 +756,7 @@
 	});
 </script>
 
-<div class="quiz-view">
+<div class="quiz-view" data-map-fit-root>
 	{#if error}
 		<p class="error">{error}</p>
 	{:else}
@@ -828,9 +828,11 @@
 		>
 	{/if}
 
-	<ChartMapShell>
-		<div class="container" bind:this={container}></div>
-	</ChartMapShell>
+	{#if !error}
+		<ChartMapShell>
+			<div class="container" bind:this={container}></div>
+		</ChartMapShell>
+	{/if}
 
 	<!-- Above the tray, whose height the player can drag (FT-35). Two clauses
 	     rather than three: the map is already sharing this screen with a tray
@@ -899,10 +901,6 @@
 		width: 100%;
 		height: 100vh;
 		overflow: hidden;
-	}
-	.container {
-		width: 100%;
-		height: 100%;
 	}
 	.tray {
 		position: absolute;
