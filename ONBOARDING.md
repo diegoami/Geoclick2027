@@ -589,12 +589,28 @@ this one, and is read on demand rather than up front.
   - `window.__map` is the real MapLibre map of whichever map view is
     open, on the dev server only (`createMap`). Browser checks use it for
     `map.project(lngLat)` - the screen position of a place - which is how
-    the label and framing checks in v0.6.0 were written.
+    the label and framing checks in v0.6.0 were written. It is unavailable
+    in production; smoke tests there must measure the DOM or inspect page
+    screenshots instead.
 - **Commit messages end with** `Co-Authored-By: Claude Sonnet 5
   <noreply@anthropic.com>` when Claude made the change — see AGENTS.md.
 
 ## Gotchas that have already cost real time
 
+- **Do not build generated content with a bash heredoc.** Shell interpolation
+  can eat backticks, `${...}` and escapes such as `\d`, leaving broken content
+  that may not be noticed until much later. Write a small `.mjs` script in the
+  scratchpad and run it instead. `python - <<'EOF'` can hang on stdin here.
+- **A browser test can fail to start because its port is reserved by Windows.**
+  Vitest's browser port 63315 falls in Windows' reserved range 63289–63388.
+  The rest of the gates may pass; rebooting usually releases the range. If one
+  browser-test file fails at startup on this machine, retry before debugging
+  the test itself.
+- **MapLibre's `canvas.toDataURL()` is blank** because its canvas is not created
+  with `preserveDrawingBuffer`. To verify that a map rendered, take a page
+  screenshot and count distinct pixels instead of reading the canvas.
+- **Windows `cmd.exe` eats `^`.** Run Git commands without `shell: true`, and
+  invoke `gradlew.bat` by its absolute path.
 - **`app/static/maps` and `app/static/styles` are prepared at build time,
   not committed.** `app/scripts/prepare-assets.mjs` links or copies
   `data/maps` and `data/styles` there; `predev` and `prebuild` run it, and

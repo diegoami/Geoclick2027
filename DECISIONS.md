@@ -50,10 +50,13 @@ or amend an entry here as part of that change, not as an afterthought.
   snapshots. Keep current status in `ROADMAP.md`, release-task status in the
   relevant plan, decisions in this file, and implementation notes beside the
   code. Git history and PRs record completed work.
-- **Why:** the handover duplicated facts already owned by those documents and
-  could become stale while still being presented as the first thing a new
-  session should trust. A snapshot was not worth that conflicting source of
-  truth; `AGENTS.md` already directs sessions to the project's living records.
+- **Why:** most of the handover duplicated facts already owned by those
+  documents, while its status could become stale and was still presented as
+  the first thing a new session should trust. Review also identified several
+  durable tooling gotchas that were not duplicated; those now live in
+  `ONBOARDING.md` and `MAPS.md`. With current information in its owning
+  documents, a separate snapshot was not worth maintaining; `AGENTS.md`
+  directs sessions to the living records.
 
 ## Commit trailers name the model (history, moved here 2026-09-27)
 

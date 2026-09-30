@@ -50,8 +50,8 @@ signatures, which breaks a search for who said what.
 
 ## Why an independent model
 
-The eight v0.9.4 issues were found by an outside review, and the earlier
-review that produced them had one central fact backwards (HANDOVER.md). A
+The eight v0.9.4 issues were found by an outside review, and an earlier
+project-status snapshot got one central fact backwards. A
 different model brings different blind spots, which a fresh Claude context
 cannot; independent verification — running the gates, reading the cited
 lines — stays Claude's job on every task regardless.
