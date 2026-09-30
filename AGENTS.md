@@ -159,17 +159,16 @@ the gate. The separate PR-review workflow is advisory only.
 - Roles: the user is Product Manager; the implementing model is the Developer.
   Finish by telling the user exactly what to run/click and what to expect.
 - Whenever a PR is handed to the owner for testing, include its direct GitHub
-  PR link and an exact copy-paste PowerShell command to create and enter a
-  separate review worktree for that PR. The command must start with `cd` to the
-  main checkout and use explicit paths. Offer to create the worktree directly
-  in the current session instead of requiring the owner to run the command.
-  Remind the owner to open a fresh session in that worktree using a different
-  model from the implementer for the review. Include a ready-to-paste prompt
-  naming the PR and worktree; ask for a diff-based, evidence-backed review and
-  for the reviewer to submit its findings as a GitHub PR review (not only in
-  chat). The reviewer must not edit code, commit, or push. If it cannot post
-  the review, it should return the complete review text for the owner to post.
-  End the PR handoff with the worktree command block.
+  PR link and a ready-to-paste prompt for an **optional independent review**
+  using a different model. Do not create a review worktree or start the review
+  unless the owner explicitly asks. The prompt must identify the PR and exact
+  head SHA, tell the reviewer to create its own detached worktree at that SHA
+  (with a `cd` to the main checkout first), read `AGENTS.md`, compare the PR
+  diff with its base, and remove only that worktree when done. Request an
+  evidence-backed review without code edits, commits, or pushes, and explicitly
+  instruct the reviewer to post the result as a GitHub PR review, not only in
+  chat. If posting fails, the reviewer must return the complete review text
+  and explain the failure. Include the worktree path and prompt in the handoff.
 
 ### Worktrees
 
