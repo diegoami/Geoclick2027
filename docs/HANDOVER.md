@@ -1,4 +1,4 @@
-# Handover — 2026-09-30: picker task 2 active; review workflow path fix pending
+# Handover — 2026-09-30: picker task 2 active; review provider error unresolved
 
 For whoever picks Geoclick up next: a human, or a fresh agent session in
 Claude Code or OpenCode, whatever the model. It records where things
@@ -18,13 +18,13 @@ before any work starts.
 
 | | |
 |---|---|
-| `main` | At last fetch, `origin/main` is `a1872c5`, PR #131's merge. PR #130 now reveals country labels at tap coordinates (including Russia in Europe) and opens the continent Countries map for any outside-polygon click, ocean included. Its local gates pass. The DeepSeek Go review workflow is failing before model invocation because jq runs outside its temporary config directory; PR #132 fixes the cwd. |
+| `main` | At last fetch, `origin/main` includes PR #132 (`02015b0`), fixing the review workflow's config-directory issue. PR #130 is still open at head `8e364fa`; local gates pass. DeepSeek reviews now get past setup and invoke the model but exit 1 after several minutes. The workflow currently hides captured stdout on failure; PR #133 adds bounded failure diagnostics so the provider error can be identified. |
 | Deploy | Deploys remain stopped by the owner (2026-09-22). Do not inspect deploy status; the owner tracks it. |
 | Who works | **From 2026-09-27: OpenCode, with more than one model.** Automated PR reviews use OpenCode Go and post advisory comments only, never approvals or merges. The model is selected by the Actions variable `OPENCODE_GO_REVIEW_MODEL` (default `deepseek-v4.1-flash`) or the manual `review_model` input. The review command is `/check-pr-reviews [PR number]`. Milestone review remains separate and manual. **`AGENTS.md` is the one instructions file**; `CLAUDE.md` is a comment plus `@AGENTS.md` |
 | Latest stable | **v0.15.0** (tag `78dd0ce`, 2026-09-29): one-tap country entry, ordered map choices, in-map switching, and localized sea-chart art. [Milestone #117](https://github.com/diegoami/Geoclick2027/issues/117), AGREE. [Published](https://github.com/diegoami/geoclick-releases/releases/tag/v0.15.0); owner signed off. |
 | Merged since v0.13.0 | The v0.14/v0.15 work is recorded in `ROADMAP.md`. Recent relevant PRs: #121–#123 closed the v0.15 milestone findings; PR #123's merge `78dd0ce` is the v0.15.0 release tag. |
 | Plans | Per-release plans in `docs/PLAN_V0.6.md` … [PLAN_V0.15.md](PLAN_V0.15.md). v0.16.0's ten-task split is in [proposal #125](https://github.com/diegoami/Geoclick2027/issues/125) and `docs/PLAN_V0.16.md` on the implementation branch. |
-| Next | The owner is testing [PR #130](https://github.com/diegoami/Geoclick2027/pull/130); task 2's latest requested behavior is implemented and all local gates pass. Test and explicitly approve its merge. Also review/merge PR #132 to restore the automatic DeepSeek review path; after that merge, rerun `/check-pr-reviews 130` and verify the comment is for the latest head. |
+| Next | The owner is testing [PR #130](https://github.com/diegoami/Geoclick2027/pull/130); task 2's latest requested behavior is implemented and all local gates pass. Test and explicitly approve its merge. Review PR #133 (bounded model-failure diagnostics), then rerun `/check-pr-reviews 130` and inspect the revealed provider error before deciding whether to change the model. |
 | Programmes | Remediation closed with v0.2.0 ([REMEDIATION_PLAN.md](REMEDIATION_PLAN.md)); features with v0.5.0 ([FEATURE_PLAN.md](FEATURE_PLAN.md)) |
 
 Shipped since the v0.5.0 handover, in one paragraph each:
