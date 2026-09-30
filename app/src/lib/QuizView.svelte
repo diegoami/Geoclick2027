@@ -181,8 +181,8 @@
 		}
 	});
 
-	// Lifts the map's credit line and the version badge above the tray, so
-	// they are not drawn over the names (mapBottomOverlay.ts).
+	// Lifts the map's credit line above the tray, so it is not drawn over the
+	// names (mapBottomOverlay.ts).
 	$effect(() => {
 		if (trayEl) return publishBottomOverlay(trayEl);
 	});

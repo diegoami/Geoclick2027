@@ -1,11 +1,13 @@
 // The two fixes from tablet play, 2026-09-24, around the map's own chrome:
 // the button under the zoom control that hides the map bar, and the credit
-// line and version badge lifted above whatever covers the bottom of the map.
+// line lifted above whatever covers the bottom of the map.
 import { afterEach, describe, expect, it } from 'vitest';
 import { flushSync } from 'svelte';
+import { render } from 'vitest-browser-svelte';
 import { HideButtonsControl } from './hideButtonsControl.svelte';
 import { mapNavHidden, setMapNavHidden } from './mapPrefs.svelte';
-import { MAP_BOTTOM_VAR, WINDOW_BOTTOM_VAR, publishBottomOverlay } from './mapBottomOverlay';
+import { MAP_BOTTOM_VAR, publishBottomOverlay } from './mapBottomOverlay';
+import VersionBadge from './VersionBadge.svelte';
 import { setLanguage } from './i18n.svelte';
 
 const nextFrame = () => new Promise((r) => requestAnimationFrame(() => r(undefined)));
@@ -73,7 +75,6 @@ describe('the bottom overlay', () => {
 		const { host, overlay } = view('bottom: 0; height: 120px');
 		const stop = publishBottomOverlay(overlay);
 		expect(root.style.getPropertyValue(MAP_BOTTOM_VAR)).toBe('120px');
-		expect(root.style.getPropertyValue(WINDOW_BOTTOM_VAR)).toBe('120px');
 
 		overlay.style.height = '200px'; // the player drags the tray up
 		await nextFrame();
@@ -82,7 +83,6 @@ describe('the bottom overlay', () => {
 
 		stop();
 		expect(root.style.getPropertyValue(MAP_BOTTOM_VAR)).toBe('');
-		expect(root.style.getPropertyValue(WINDOW_BOTTOM_VAR)).toBe('');
 		host.remove();
 	});
 
@@ -103,14 +103,33 @@ describe('the bottom overlay', () => {
 
 		stopA();
 		expect(root.style.getPropertyValue(MAP_BOTTOM_VAR)).toBe('80px');
-		expect(root.style.getPropertyValue(WINDOW_BOTTOM_VAR)).toBe('80px');
 		stopA(); // a second call is harmless
 		expect(root.style.getPropertyValue(MAP_BOTTOM_VAR)).toBe('80px');
 
 		stopB();
 		expect(root.style.getPropertyValue(MAP_BOTTOM_VAR)).toBe('');
-		expect(root.style.getPropertyValue(WINDOW_BOTTOM_VAR)).toBe('');
 		a.host.remove();
 		b.host.remove();
+	});
+});
+
+describe('the version badge', () => {
+	it('stays below top chrome, tracks its height, and leaves safe-area spacing', async () => {
+		const toolbar = document.createElement('header');
+		toolbar.className = 'gc-bar';
+		toolbar.style.cssText = 'position: fixed; top: 20px; height: 50px';
+		document.body.append(toolbar);
+		const { unmount } = await render(VersionBadge);
+		const badge = document.querySelector<HTMLElement>('.version-badge')!;
+
+		await expect.poll(() => Number.parseFloat(getComputedStyle(badge).top)).toBe(78);
+		expect(badge.style.top).toContain('env(safe-area-inset-top');
+		expect(getComputedStyle(badge).pointerEvents).toBe('none');
+
+		toolbar.style.height = '80px';
+		await expect.poll(() => Number.parseFloat(getComputedStyle(badge).top)).toBe(108);
+
+		unmount();
+		toolbar.remove();
 	});
 });

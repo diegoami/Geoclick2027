@@ -24,8 +24,7 @@
 	let container: HTMLDivElement;
 	// $state so the effect below runs once the controls render with the tour.
 	let controlsEl = $state<HTMLDivElement>();
-	// Lifts the map's credit line and the version badge above the controls
-	// (mapBottomOverlay.ts).
+	// Lifts the map's credit line above the controls (mapBottomOverlay.ts).
 	$effect(() => {
 		if (controlsEl) return publishBottomOverlay(controlsEl);
 	});
