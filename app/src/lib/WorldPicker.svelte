@@ -225,12 +225,14 @@
 		})?.[0];
 	}
 
-	function revealCountryLabel(id: string) {
+	function revealCountryLabel(id: string, position: [number, number]) {
 		const popup = countryLabelPopups[id];
 		const element = countryLabelElements[id];
 		if (!popup || !element || !map) return;
 		// Give a deliberately requested name first placement choice and make it
-		// visibly legible until this set of labels is redrawn for another view.
+		// visibly legible at the tapped location, including large countries whose
+		// canonical label anchor is outside the current continent view.
+		popup.setLngLat(position);
 		registerLabel(popup, { priority: Number.MAX_SAFE_INTEGER });
 		element.classList.remove(CROWDED_CLASS);
 		element.querySelector('.maplibregl-popup-content')?.classList.add(MAGNIFIED_CLASS);
@@ -304,7 +306,7 @@
 				const [west, south, east, north] = boxOf(start);
 				map = new maplibregl.Map({
 					container,
-					// Country taps navigate immediately; avoid an extra double-click zoom.
+					// Keep a double tap from zooming the map between label taps.
 					doubleClickZoom: false,
 					bounds: [
 						[west, south],
@@ -401,7 +403,7 @@
 						}
 						if (continent !== view) return;
 						if (hasMaps(id)) {
-							revealCountryLabel(id);
+							revealCountryLabel(id, [e.lngLat.lng, e.lngLat.lat]);
 							return;
 						}
 						countryToMark = undefined;
@@ -409,18 +411,8 @@
 						tutorialCountryChosen(id);
 						return;
 					}
-					// Select a continent from broad land only when no playable country
-					// is within 36 screen pixels of the tapped point.
-					if (!map?.queryRenderedFeatures(e.point, { layers: ['land'] }).length) return;
-					const radius = 36;
-					const nearby = map.queryRenderedFeatures(
-						[
-							[e.point.x - radius, e.point.y - radius],
-							[e.point.x + radius, e.point.y + radius]
-						],
-						{ layers: ['countries-fill'] }
-					);
-					if (nearby.some((country) => hasMaps(String(country.properties?.id ?? '')))) return;
+					// Every click outside a country polygon opens the current continent's
+					// picker section; in world view choose the nearest continent instead.
 					if (!e.lngLat) return;
 					const landContinent = view === 'world' ? continentAt(e.lngLat.lng, e.lngLat.lat) : view;
 					if (landContinent) chooseContinentFromLand(landContinent);

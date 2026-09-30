@@ -15,10 +15,9 @@ const fake = vi.hoisted(() => {
 		load: undefined as (() => void) | undefined,
 		mapClick: undefined as ((event: unknown) => void) | undefined,
 		countryFeatures: [] as { properties: Record<string, string> }[],
-		nearbyCountryFeatures: [] as { properties: Record<string, string> }[],
-		landFeatures: [] as object[],
 		mapOptions: undefined as { doubleClickZoom?: boolean } | undefined,
-		countryLabel: undefined as HTMLElement | undefined
+		countryLabels: {} as Record<string, HTMLElement>,
+		countryLabelPosition: undefined as [number, number] | undefined
 	};
 	const picker = {
 		attribution: '',
@@ -37,6 +36,13 @@ const fake = vi.hoisted(() => {
 				continent: 'europe',
 				centroid: [28, 53] as [number, number],
 				bbox: [23, 51, 33, 57] as [number, number, number, number]
+			},
+			{
+				id: 'russia',
+				name: 'Russia',
+				continent: 'europe',
+				centroid: [90, 60] as [number, number],
+				bbox: [20, 40, 180, 80] as [number, number, number, number]
 			}
 		]
 	};
@@ -51,10 +57,7 @@ const fake = vi.hoisted(() => {
 			},
 			addControl: () => map,
 			setFeatureState: () => {},
-			queryRenderedFeatures: (query: unknown, options: { layers?: string[] }) => {
-				if (options.layers?.[0] === 'land') return state.landFeatures;
-				return Array.isArray(query) ? state.nearbyCountryFeatures : state.countryFeatures;
-			},
+			queryRenderedFeatures: () => state.countryFeatures,
 			setPaintProperty: () => {},
 			fitBounds: () => map,
 			getCanvas: () => ({ style: {} }),
@@ -79,15 +82,16 @@ const fake = vi.hoisted(() => {
 			this.content.className = 'maplibregl-popup-content';
 			this.element.append(this.content);
 		}
-		setLngLat() {
+		setLngLat(position: [number, number]) {
+			fake.state.countryLabelPosition = position;
 			return this;
 		}
 		setText(text: string) {
 			this.content.textContent = text;
+			fake.state.countryLabels[text] = this.element;
 			return this;
 		}
 		addTo() {
-			fake.state.countryLabel = this.element;
 			return this;
 		}
 		getElement() {
@@ -123,7 +127,7 @@ vi.mock('./labelCollision', () => ({
 vi.mock('./worldPicker', () => ({
 	WORLD_VIEW: [-180, -60, 180, 75] as [number, number, number, number],
 	fetchPicker: async () => ({ picker: fake.picker, tilesUrl: 'test' }),
-	hasMaps: (id: string) => id === 'italy',
+	hasMaps: (id: string) => id === 'italy' || id === 'russia',
 	validView: (p: typeof fake.picker, v: string) =>
 		v === 'world' || p.continents.some((c) => c.id === v) ? v : 'world'
 }));
@@ -133,10 +137,9 @@ describe('WorldPicker (FT-83, FT-86, #87)', () => {
 		fake.state.load = undefined;
 		fake.state.mapClick = undefined;
 		fake.state.countryFeatures = [];
-		fake.state.nearbyCountryFeatures = [];
-		fake.state.landFeatures = [];
 		fake.state.mapOptions = undefined;
-		fake.state.countryLabel = undefined;
+		fake.state.countryLabels = {};
+		fake.state.countryLabelPosition = undefined;
 		localStorage.removeItem('geoclick:map-type-selections:v1');
 		gotoMock.mockClear();
 		setPickerShown(false);
@@ -158,7 +161,7 @@ describe('WorldPicker (FT-83, FT-86, #87)', () => {
 		expect(pickerGoUp()).toBe(true);
 	});
 
-	it('reveals a hidden country label on the first tap and opens it on the next', async () => {
+	it('reveals a hidden country label at the tap and opens it when tapped next', async () => {
 		setPickerView('world');
 		await render(WorldPicker, {
 			groups: [
@@ -182,26 +185,26 @@ describe('WorldPicker (FT-83, FT-86, #87)', () => {
 		const tap = (point = { x: 10, y: 10 }) =>
 			fake.state.mapClick!({
 				point,
-				lngLat: { lng: 12, lat: 42 },
+				lngLat: { lng: 22, lat: 55 },
 				originalEvent: { target: { closest: () => null } }
 			});
 		setPickerView('europe');
 		await expect.poll(() => document.querySelector('.continent')?.textContent).toBe('Europe');
 		fake.state.countryFeatures = [{ properties: { id: 'italy', continent: 'europe' } }];
-		fake.state.countryLabel?.classList.add('is-crowded');
+		const italyLabel = fake.state.countryLabels.Italy;
+		italyLabel.classList.add('is-crowded');
 		tap();
 		expect(gotoMock).not.toHaveBeenCalled();
-		expect(fake.state.countryLabel?.classList.contains('is-crowded')).toBe(false);
+		expect(fake.state.countryLabelPosition).toEqual([22, 55]);
+		expect(italyLabel.classList.contains('is-crowded')).toBe(false);
 		expect(
-			fake.state.countryLabel
-				?.querySelector('.maplibregl-popup-content')
-				?.classList.contains('is-magnified')
+			italyLabel.querySelector('.maplibregl-popup-content')?.classList.contains('is-magnified')
 		).toBe(true);
 
 		const mapBounds = document.querySelector('.map')!.getBoundingClientRect();
-		fake.state.countryLabel!.getBoundingClientRect = () =>
+		italyLabel.getBoundingClientRect = () =>
 			new DOMRect(mapBounds.left, mapBounds.top, mapBounds.width, mapBounds.height);
-		fake.state.countryLabel?.classList.remove('is-crowded');
+		italyLabel.classList.remove('is-crowded');
 		fake.state.countryFeatures = [];
 		fake.state.mapClick!({
 			point: { x: 10, y: 10 },
@@ -209,6 +212,45 @@ describe('WorldPicker (FT-83, FT-86, #87)', () => {
 			originalEvent: { target: { closest: () => null } }
 		});
 		expect(gotoMock).toHaveBeenCalledWith('/map/italy-regions');
+	});
+
+	it('reveals and opens Russia at its tapped location inside the Europe view', async () => {
+		await render(WorldPicker, {
+			groups: [
+				{
+					country: 'Russia',
+					pickerId: 'russia',
+					maps: [{ id: 'russia-regions', label: 'Regions' }]
+				}
+			],
+			masteries: {},
+			targetCount: () => 0
+		});
+		await expect.poll(() => fake.state.load !== undefined).toBe(true);
+		fake.state.load!();
+		await expect.poll(() => fake.state.mapClick !== undefined).toBe(true);
+
+		const russiaLabel = fake.state.countryLabels.Russia;
+		russiaLabel.classList.add('is-crowded');
+		fake.state.countryFeatures = [{ properties: { id: 'russia', continent: 'europe' } }];
+		fake.state.mapClick!({
+			point: { x: 10, y: 10 },
+			lngLat: { lng: 45, lat: 55 },
+			originalEvent: { target: { closest: () => null } }
+		});
+		expect(fake.state.countryLabelPosition).toEqual([45, 55]);
+		expect(russiaLabel.classList.contains('is-crowded')).toBe(false);
+
+		const mapBounds = document.querySelector('.map')!.getBoundingClientRect();
+		russiaLabel.getBoundingClientRect = () =>
+			new DOMRect(mapBounds.left, mapBounds.top, mapBounds.width, mapBounds.height);
+		fake.state.countryFeatures = [];
+		fake.state.mapClick!({
+			point: { x: 10, y: 10 },
+			lngLat: { lng: 45, lat: 55 },
+			originalEvent: { target: { closest: () => null } }
+		});
+		expect(gotoMock).toHaveBeenCalledWith('/map/russia-regions');
 	});
 
 	it('keeps the no-maps notice for a country with no playable maps', async () => {
@@ -228,7 +270,7 @@ describe('WorldPicker (FT-83, FT-86, #87)', () => {
 		expect(gotoMock).not.toHaveBeenCalled();
 	});
 
-	it('opens the nearest continent map when uncovered land is tapped', async () => {
+	it('opens the nearest continent section on any outside-country click, including ocean', async () => {
 		setPickerView('world');
 		await render(WorldPicker, {
 			groups: [
@@ -245,7 +287,6 @@ describe('WorldPicker (FT-83, FT-86, #87)', () => {
 		fake.state.load!();
 		await expect.poll(() => fake.state.mapClick !== undefined).toBe(true);
 
-		fake.state.landFeatures = [{}];
 		fake.state.mapClick!({
 			point: { x: 10, y: 10 },
 			lngLat: { lng: 0, lat: 50 },
@@ -257,12 +298,11 @@ describe('WorldPicker (FT-83, FT-86, #87)', () => {
 
 		setPickerView('world');
 		await expect.poll(() => document.querySelector('.continent')).toBeNull();
-		fake.state.nearbyCountryFeatures = [{ properties: { id: 'italy', continent: 'europe' } }];
 		fake.state.mapClick!({
 			point: { x: 10, y: 10 },
 			lngLat: { lng: 0, lat: 50 },
 			originalEvent: { target: { closest: () => null } }
 		});
-		expect(document.querySelector('.continent')).toBeNull();
+		await expect.poll(() => document.querySelector('.continent')?.textContent).toBe('Europe');
 	});
 });

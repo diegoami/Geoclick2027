@@ -2517,11 +2517,21 @@ answers:
   `OPENCODE_GO_API_KEY`. This uses the Go plan's model allowance rather than
   Console pay-as-you-go credits; if Go limits are exceeded, any balance
   fallback follows the account's Go settings.
+- **Amended 2026-09-30:** make the Go model switchable without editing workflow
+  code. `OPENCODE_GO_REVIEW_MODEL` is the repository Actions variable, with
+  `deepseek-v4.1-flash` as the default; a manual workflow run may override it
+  for that run. The GLM-5.3-Flash run on PR #130 failed after retries with an
+  upstream `server_error`, so use DeepSeek V4.1 Flash for the next attempt.
+  Choose IDs from the current OpenCode Go model list.
 - Use `pull_request_target` only to read the PR diff through GitHub's API; do
   not check out or execute PR code. Run OpenCode from a generated temporary
   configuration with all agent tools denied, so untrusted diff text cannot
   invoke shell, edit files, or access GitHub credentials. Keep the model key
   in the Actions secret `OPENCODE_GO_API_KEY`; never put it in the repository.
+  The model ID is configuration, not a credential, and belongs in the Actions
+  variable `OPENCODE_GO_REVIEW_MODEL` or the manual run's `review_model` input.
+  DeepSeek V4.1 Flash has separate peak/off-peak pricing and an OpenCode Go
+  allowance of $60/month; the live Go documentation is authoritative.
 - Fork PRs are skipped because GitHub does not expose repository secrets to
   their workflows. Milestone release reviews retain their separate, manually
   started procedure in `AGENTS.md` and `docs/RELEASES.md`. The project command
