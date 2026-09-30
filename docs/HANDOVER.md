@@ -1,4 +1,4 @@
-# Handover — 2026-09-30: v0.15.0 released; v0.16.0 task 1 updated for review automation
+# Handover — 2026-09-30: v0.16.0 task 2 active; PR-review model configurable
 
 For whoever picks Geoclick up next: a human, or a fresh agent session in
 Claude Code or OpenCode, whatever the model. It records where things
@@ -18,13 +18,13 @@ before any work starts.
 
 | | |
 |---|---|
-| `main` | At last fetch, `origin/main` is `2d62f05`, PR #129's merge. Review automation now uses OpenCode Go; the configured `OPENCODE_GO_API_KEY` works. PR #126 is being updated for the latest main; this worktree is on its branch. |
+| `main` | At last fetch, `origin/main` is `c08e858`, PR #126's merge. PR #130 contains v0.16 task 2; its local gates passed, but its automated GLM review failed with an upstream `server_error`. This separate worktree makes the Go review model configurable and defaults it to Kimi K2.7 Code. |
 | Deploy | Deploys remain stopped by the owner (2026-09-22). Do not inspect deploy status; the owner tracks it. |
-| Who works | **From 2026-09-27: OpenCode, with more than one model.** Automated PR reviews use OpenCode Go / GLM-5.3-Flash and post advisory comments only, never approvals or merges. The review command is `/check-pr-reviews [PR number]`. Milestone review remains separate and manual. **`AGENTS.md` is the one instructions file**; `CLAUDE.md` is a comment plus `@AGENTS.md` |
+| Who works | **From 2026-09-27: OpenCode, with more than one model.** Automated PR reviews use OpenCode Go and post advisory comments only, never approvals or merges. The model is selected by the Actions variable `OPENCODE_GO_REVIEW_MODEL` (default `kimi-k2.7-code`) or the manual `review_model` input. The review command is `/check-pr-reviews [PR number]`. Milestone review remains separate and manual. **`AGENTS.md` is the one instructions file**; `CLAUDE.md` is a comment plus `@AGENTS.md` |
 | Latest stable | **v0.15.0** (tag `78dd0ce`, 2026-09-29): one-tap country entry, ordered map choices, in-map switching, and localized sea-chart art. [Milestone #117](https://github.com/diegoami/Geoclick2027/issues/117), AGREE. [Published](https://github.com/diegoami/geoclick-releases/releases/tag/v0.15.0); owner signed off. |
 | Merged since v0.13.0 | The v0.14/v0.15 work is recorded in `ROADMAP.md`. Recent relevant PRs: #121–#123 closed the v0.15 milestone findings; PR #123's merge `78dd0ce` is the v0.15.0 release tag. |
 | Plans | Per-release plans in `docs/PLAN_V0.6.md` … [PLAN_V0.15.md](PLAN_V0.15.md). v0.16.0's ten-task split is in [proposal #125](https://github.com/diegoami/Geoclick2027/issues/125) and `docs/PLAN_V0.16.md` on the implementation branch. |
-| Next | **v0.16.0** (owner-approved [proposal #125](https://github.com/diegoami/Geoclick2027/issues/125)): ten independent PR-sized tasks, tutorial audit last. Task 1 is [PR #126](https://github.com/diegoami/Geoclick2027/pull/126). Resolve the latest-main `docs/HANDOVER.md` conflict in this worktree, push the merge commit, verify its Go review, then give the owner branch test commands. Owner test and explicit merge OK remain required. |
+| Next | The owner is testing [PR #130](https://github.com/diegoami/Geoclick2027/pull/130), v0.16 task 2. Its advisory review failed on GLM-5.3-Flash with an upstream server error. This worktree makes the model configurable; after its PR is tested and merged, rerun #130 on Kimi K2.7 Code (or a model chosen by the owner) and report that result. |
 | Programmes | Remediation closed with v0.2.0 ([REMEDIATION_PLAN.md](REMEDIATION_PLAN.md)); features with v0.5.0 ([FEATURE_PLAN.md](FEATURE_PLAN.md)) |
 
 Shipped since the v0.5.0 handover, in one paragraph each:
