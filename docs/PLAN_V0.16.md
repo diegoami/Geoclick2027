@@ -35,19 +35,19 @@ by the product owner on 2026-09-30; scope addition [#140](https://github.com/die
 
 ## Tasks
 
-| #   | Task                                                               | Status                                   |
-| --- | ------------------------------------------------------------------ | ---------------------------------------- |
-| 1   | Selection-row defaults, remembered choices, and open-by-row button | Merged (PR #126)                         |
-| 2   | World-picker continent taps and visible-label country picking      | Merged (PR #130)                         |
-| 3   | Direct in-map map-type button row                                  | Merged (PR #137)                         |
-| 4   | Quiz completion Close and map-level Again action                   | Merged (PR #138)                         |
-| 5   | Towns-map land/border/sea contrast                                 | Merged (PR #139)                         |
-| 6   | Version badge at the top                                           | Merged (PR #141)                         |
-| 7   | Tour icon controls and non-overlapping fact card                   | Merged (PR #143)                         |
-| 8   | Chart SVG filler outside map viewport                              | In progress                              |
-| 9   | Spine-following labels in all map views                            | Planned                                  |
-| 10  | Open the selected map immediately when its map type is chosen      | Merged (PR #142; approved proposal #140) |
-| 11  | Full tutorial audit, rewrite, translations, and manual             | Planned; last                            |
+| # | Task | Status |
+|---|---|---|
+| 1 | Selection-row defaults, remembered choices, and open-by-row button | Merged (PR #126) |
+| 2 | World-picker continent taps and visible-label country picking | Merged (PR #130) |
+| 3 | Direct in-map map-type button row | Merged (PR #137) |
+| 4 | Quiz completion Close and map-level Again action | Merged (PR #138) |
+| 5 | Towns-map land/border/sea contrast | Merged (PR #139) |
+| 6 | Version badge at the top | Merged (PR #141) |
+| 7 | Tour icon controls and non-overlapping fact card | Merged (PR #143) |
+| 8 | Chart SVG filler outside map viewport | In progress |
+| 9 | Spine-following labels in all map views | Planned |
+| 10 | Open the selected map immediately when its map type is chosen | Merged (PR #142; approved proposal #140) |
+| 11 | Full tutorial audit, rewrite, translations, and manual | Planned; last |
 
 Each task is independently testable and follows the implementation split in
 proposal #125. Any scope change returns to the proposal for owner agreement.
