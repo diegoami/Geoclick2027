@@ -149,7 +149,6 @@ export type TranslationKey =
 	| 'quiz.revealedNote'
 	| 'quiz.namesAtATime.one'
 	| 'quiz.namesAtATime.other'
-	| 'quiz.backToMaps'
 	| 'quiz.playAgain'
 	| 'quiz.resizeTrayAriaLabel'
 	| 'quiz.storageWarning'
@@ -328,7 +327,6 @@ const en: Dictionary = {
 	'quiz.revealedNote': '{count} shown after a mistake.',
 	'quiz.namesAtATime.one': 'one name at a time',
 	'quiz.namesAtATime.other': '{count} names at a time',
-	'quiz.backToMaps': 'Back to maps',
 	'quiz.playAgain': 'Play again',
 	'quiz.resizeTrayAriaLabel': 'Resize name tray',
 	'quiz.storageWarning':
@@ -523,7 +521,6 @@ const de: Dictionary = {
 	'quiz.revealedNote': '{count} nach einem Fehler gezeigt.',
 	'quiz.namesAtATime.one': 'ein Name auf einmal',
 	'quiz.namesAtATime.other': '{count} Namen auf einmal',
-	'quiz.backToMaps': 'Zurück zu den Karten',
 	'quiz.playAgain': 'Nochmal spielen',
 	'quiz.resizeTrayAriaLabel': 'Größe der Namensablage anpassen',
 	'quiz.storageWarning':
@@ -720,7 +717,6 @@ const it: Dictionary = {
 	'quiz.revealedNote': '{count} mostrati dopo un errore.',
 	'quiz.namesAtATime.one': 'un nome alla volta',
 	'quiz.namesAtATime.other': '{count} nomi alla volta',
-	'quiz.backToMaps': 'Torna alle mappe',
 	'quiz.playAgain': 'Gioca ancora',
 	'quiz.resizeTrayAriaLabel': 'Ridimensiona il vassoio dei nomi',
 	'quiz.storageWarning':
