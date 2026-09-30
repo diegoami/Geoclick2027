@@ -236,6 +236,8 @@ describe('QuizView (FT-59)', () => {
 		const screen = await mount();
 		await finish();
 		await expect.poll(() => saveSummary.mock.calls.length).toBe(1);
+		expect(screen.getByRole('button', { name: 'Close and view the map' })).toBeVisible();
+		expect(screen.container.querySelector('.score-panel-actions')).toBeNull();
 		expect(saveSummary).toHaveBeenCalledWith(MAP_ID, {
 			total: 16,
 			perfect: 16,
@@ -248,9 +250,13 @@ describe('QuizView (FT-59)', () => {
 		await new Promise((r) => setTimeout(r, 100));
 		expect(saveSummary).toHaveBeenCalledTimes(1);
 
-		// Play again is a new round, and its end is saved too.
+		// Closing leaves the solved map visible; Again is then available on
+		// the map and starts a fresh round.
+		await screen.getByRole('button', { name: 'Close and view the map' }).click();
+		expect(screen.container.querySelector('.score-panel')).toBeNull();
 		await screen.getByRole('button', { name: 'Play again' }).click();
 		await expect.poll(() => slipNames().length).toBe(10);
+		expect(screen.container.querySelector('.map-again')).toBeNull();
 		await finish();
 		await expect.poll(() => saveSummary.mock.calls.length).toBe(2);
 	});

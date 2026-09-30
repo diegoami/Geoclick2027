@@ -2,7 +2,6 @@
 	import { onMount, onDestroy, untrack } from 'svelte';
 	import * as maplibregl from 'maplibre-gl';
 	import 'maplibre-gl/dist/maplibre-gl.css';
-	import { resolve } from '$app/paths';
 	import { fetchMapDefAndStyle, createMap } from './geoclickMap';
 	import type { TerrainLayer } from './terrainLayer';
 	import { followTerrainLanguage } from './terrainLanguage.svelte';
@@ -817,12 +816,15 @@
 						{/if}
 					</p>
 				{/if}
-				<div class="score-panel-actions">
-					<a class="score-panel-button secondary" href={resolve('/')}>{t('quiz.backToMaps')}</a>
-					<button onclick={playAgain}>{t('quiz.playAgain')}</button>
-				</div>
 			</div>
 		{/if}
+	{/if}
+	{#if complete && scorePanelDismissed}
+		<button
+			class="map-again"
+			style="bottom: calc({trayHeightPx ?? trayMinPx}px + 1rem)"
+			onclick={playAgain}>{t('quiz.playAgain')}</button
+		>
 	{/if}
 
 	<div class="container" bind:this={container}></div>
@@ -1049,14 +1051,8 @@
 		font-size: 0.85rem;
 		opacity: 0.7;
 	}
-	.score-panel-actions {
-		display: flex;
-		justify-content: center;
-		gap: 0.5rem;
-		margin-top: 0.75rem;
-	}
 	.score-panel button,
-	.score-panel-button {
+	.map-again {
 		font-family: inherit;
 		font-size: 0.9rem;
 		font-weight: 600;
@@ -1068,13 +1064,10 @@
 		text-decoration: none;
 		cursor: pointer;
 	}
-	.score-panel > button {
-		margin-top: 0.75rem;
-	}
-	.score-panel-button.secondary {
-		background: transparent;
-		color: #5a9c6f;
-		border: 1px solid #5a9c6f;
+	.map-again {
+		position: absolute;
+		right: 1rem;
+		z-index: 2;
 	}
 	.error {
 		padding: 1rem;
