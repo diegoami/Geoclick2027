@@ -37,7 +37,7 @@ preceding changes.
 
 | # | Task | Status |
 |---|---|---|
-| 1 | Selection-row defaults, remembered choices, and open-by-row button | In progress (PR pending) |
+| 1 | Selection-row defaults, remembered choices, and open-by-row button | PR #126 open; awaiting owner test/merge |
 | 2 | World-picker continent taps and visible-label country picking | Planned |
 | 3 | Direct in-map map-type button row | Planned |
 | 4 | Quiz completion Close and map-level Again action | Planned |
