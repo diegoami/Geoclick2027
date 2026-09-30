@@ -419,15 +419,13 @@
 						tutorialCountryChosen(id);
 						return;
 					}
-					// In world view, an ocean click selects a continent view. From an
-					// continent view, it opens that continent's Countries map.
+					// An ocean click selects the nearest continent view when it is
+					// outside the current continent; otherwise open that continent's map.
 					if (!e.lngLat) return;
-					if (view === 'world') {
-						const continent = continentAt(e.lngLat.lng, e.lngLat.lat);
-						if (continent) chooseContinent(continent);
-					} else {
-						openContinentMap(view);
-					}
+					const nearestContinent = continentAt(e.lngLat.lng, e.lngLat.lat);
+					if (!nearestContinent) return;
+					if (view === 'world' || nearestContinent !== view) chooseContinent(nearestContinent);
+					else openContinentMap(view);
 				});
 				map.on('mouseenter', 'countries-fill', () => {
 					if (map) map.getCanvas().style.cursor = 'pointer';

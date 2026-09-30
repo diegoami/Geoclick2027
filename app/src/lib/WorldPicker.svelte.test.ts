@@ -283,7 +283,7 @@ describe('WorldPicker (FT-83, FT-86, #87)', () => {
 		expect(gotoMock).not.toHaveBeenCalled();
 	});
 
-	it('world ocean clicks enter the nearest continent view; continent ocean clicks open its map', async () => {
+	it('ocean clicks switch to a nearer continent view or open the current continent map', async () => {
 		setPickerView('world');
 		await render(WorldPicker, {
 			groups: [
@@ -312,6 +312,18 @@ describe('WorldPicker (FT-83, FT-86, #87)', () => {
 		expect(gotoMock).not.toHaveBeenCalled();
 
 		gotoMock.mockClear();
+		setPickerView('north-america');
+		await expect
+			.poll(() => document.querySelector('.continent')?.textContent)
+			.toBe('North America');
+		fake.state.mapClick!({
+			point: { x: 10, y: 10 },
+			lngLat: { lng: 0, lat: 50 },
+			originalEvent: { target: { closest: () => null } }
+		});
+		await expect.poll(() => document.querySelector('.continent')?.textContent).toBe('Europe');
+		expect(gotoMock).not.toHaveBeenCalled();
+
 		setPickerView('europe');
 		await expect.poll(() => document.querySelector('.continent')?.textContent).toBe('Europe');
 		fake.state.mapClick!({
