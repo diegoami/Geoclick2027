@@ -14,7 +14,6 @@
 	import { resolve } from '$app/paths';
 	import type { Snippet } from 'svelte';
 	import { t } from './i18n.svelte';
-	import { isContinentGroup } from './catalogSections';
 	import LanguageSwitcher from './LanguageSwitcher.svelte';
 	import { mapNavHidden, recordVisit } from './mapPrefs.svelte';
 	import { mapGroups, mapTypeLabel } from './mapCatalog';
@@ -52,10 +51,8 @@
 	const currentGroup = $derived(
 		mapGroups.find((group) => group.maps.some((map) => map.id === mapId))
 	);
-	const countryMaps = $derived(
-		currentGroup && !isContinentGroup(currentGroup) ? currentGroup.maps : []
-	);
-	const showMapSwitcher = $derived(countryMaps.length > 1);
+	const groupMaps = $derived(currentGroup?.maps ?? []);
+	const showMapSwitcher = $derived(groupMaps.length > 1);
 	let mapTypeScroller = $state<HTMLDivElement | undefined>(undefined);
 
 	// Long map-type rows scroll on phones. Keep the current type in view when
@@ -174,7 +171,7 @@
 					role="group"
 					aria-label={t('home.mapTypeFor', { name: currentGroup?.country ?? '' })}
 				>
-					{#each countryMaps as countryMap (countryMap.id)}
+					{#each groupMaps as countryMap (countryMap.id)}
 						<button
 							type="button"
 							class="map-type-btn"

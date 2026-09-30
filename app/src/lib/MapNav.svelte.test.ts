@@ -56,15 +56,33 @@ describe('MapNav sibling map buttons', () => {
 		expect(gotoMock).toHaveBeenCalledWith('/map/italy-regions');
 	});
 
-	it('keeps the map title for a continent map', async () => {
+	it('offers the continent maps as map-type buttons', async () => {
 		await render(MapNav, {
 			mapId: 'europe-countries',
 			mapName: 'Europe — Countries',
 			active: 'overview'
 		});
 
-		expect(document.querySelector('.map-type-scroll')).toBeNull();
-		expect(document.querySelector('.map-label')?.textContent).toBe('Europe — Countries');
+		const group = document.querySelector<HTMLDivElement>('.map-type-scroll[role="group"]');
+		expect(group).not.toBeNull();
+		expect(group).toHaveAttribute('aria-label', 'Map type for Europe');
+		const buttons = [...group!.querySelectorAll<HTMLButtonElement>('.map-type-btn')];
+		expect(buttons.map((button) => button.dataset.mapId)).toEqual([
+			'europe-countries',
+			'europe-capitals',
+			'europe-cities-central',
+			'europe-cities-east',
+			'europe-cities-north',
+			'europe-cities-south',
+			'europe-cities-west'
+		]);
+		expect(
+			buttons.find((button) => button.getAttribute('aria-pressed') === 'true')?.textContent
+		).toBe('Countries');
+		expect(document.querySelector('.map-label')).toBeNull();
+
+		buttons[1].click();
+		expect(gotoMock).toHaveBeenCalledWith('/map/europe-capitals');
 	});
 
 	it('keeps the map title for a country with only one map', async () => {
