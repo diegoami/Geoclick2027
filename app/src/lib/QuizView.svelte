@@ -871,6 +871,7 @@
 					{@const isDragging = dragging?.targetId === item.target.id}
 					<button
 						class="slip"
+						draggable="false"
 						data-tutorial="slip-{item.target.id}"
 						class:slip-dragging={isDragging}
 						class:wrong={wrongFlashId === item.target.id}
@@ -879,6 +880,7 @@
 						onpointermove={onSlipPointerMove}
 						onpointerup={onSlipPointerUp}
 						onpointercancel={onSlipPointerCancel}
+						ondragstart={(e) => e.preventDefault()}
 					>
 						{shownName(item.target.id, item.target.name)}
 					</button>
@@ -1066,7 +1068,8 @@
 	}
 	.map-again {
 		position: absolute;
-		right: 1rem;
+		left: 50%;
+		transform: translateX(-50%);
 		z-index: 2;
 	}
 	.error {

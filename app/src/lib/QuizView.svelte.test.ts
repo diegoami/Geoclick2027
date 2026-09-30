@@ -194,6 +194,15 @@ describe('QuizView (FT-59)', () => {
 
 	// The hand is dealt at random, so each test plays the names it was dealt:
 	// the first placed right, the second dropped on the first's region.
+	it('keeps quiz slips on the pointer-driven drag path, not native browser drag', async () => {
+		const screen = await mount();
+		const slip = screen.container.querySelector<HTMLButtonElement>('.slip')!;
+		expect(slip.draggable).toBe(false);
+		expect(slip.dispatchEvent(new Event('dragstart', { bubbles: true, cancelable: true }))).toBe(
+			false
+		);
+	});
+
 	it('grades a correct drop good, and a revealed one again with its fact card', async () => {
 		const screen = await mount();
 		const [right, wrong] = slipNames();
