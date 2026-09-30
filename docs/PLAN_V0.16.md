@@ -40,8 +40,8 @@ preceding changes.
 | 1 | Selection-row defaults, remembered choices, and open-by-row button | Merged (PR #126) |
 | 2 | World-picker continent taps and visible-label country picking | Merged (PR #130) |
 | 3 | Direct in-map map-type button row | Merged (PR #137) |
-| 4 | Quiz completion Close and map-level Again action | In progress |
-| 5 | Towns-map land/border/sea contrast | Planned |
+| 4 | Quiz completion Close and map-level Again action | Merged (PR #138) |
+| 5 | Towns-map land/border/sea contrast | In progress |
 | 6 | Version badge at the top | Planned |
 | 7 | Tour icon controls and non-overlapping fact card | Planned |
 | 8 | Chart SVG filler outside map viewport | Planned |
