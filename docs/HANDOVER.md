@@ -1,4 +1,4 @@
-# Handover — 2026-09-30: v0.16 task 2 revised per owner feedback
+# Handover — 2026-09-30: v0.16 task 2 merged; PR-review automation removed
 
 For whoever picks Geoclick up next: a human, or a fresh agent session in
 Claude Code or OpenCode, whatever the model. It records where things
@@ -18,13 +18,13 @@ before any work starts.
 
 | | |
 |---|---|
-| `main` | At last fetch, `origin/main` includes PR #132's review-workflow fix. PR #130 task 2 is being revised in `feat-v0.16-world-picker-taps`: from world view, country and ocean taps enter a continent view; a country tap from another continent switches views and reveals that country's label; tapping the label opens its map. Ocean taps switch to the nearest other continent view, or open Countries when nearest the current continent. Rerun all gates after the latest adjustment. |
+| `main` | At last fetch, `origin/main` includes PR #134, which removed the automated OpenCode PR-review workflow and `/check-pr-reviews` because the OpenCode Go model request kept failing. PR #130 task 2 is being revised in `feat-v0.16-world-picker-taps`: from world view, country and ocean taps enter a continent view; a country tap from another continent switches views and reveals that country's label; tapping the label opens its map. Ocean taps switch to the nearest other continent view, or open Countries when nearest the current continent. |
 | Deploy | Deploys remain stopped by the owner (2026-09-22). Do not inspect deploy status; the owner tracks it. |
-| Who works | **From 2026-09-27: OpenCode, with more than one model.** Automated PR reviews use OpenCode Go / DeepSeek V4.1 Flash by default and post advisory comments only, never approvals or merges. The model is configurable with `OPENCODE_GO_REVIEW_MODEL` or the manual `review_model` input. The review command is `/check-pr-reviews [PR number]`. Milestone review remains separate and manual. **`AGENTS.md` is the one instructions file**; `CLAUDE.md` is a comment plus `@AGENTS.md` |
+| Who works | **From 2026-09-27: OpenCode, with more than one model.** Automated PR reviews are disabled; the workflow and `/check-pr-reviews` command were removed because the provider failure is unresolved. The owner tests branches themselves and OKs every merge. Milestone review remains separate and manual. **`AGENTS.md` is the one instructions file**; `CLAUDE.md` is a comment plus `@AGENTS.md` |
 | Latest stable | **v0.15.0** (tag `78dd0ce`, 2026-09-29): one-tap country entry, ordered map choices, in-map switching, and localized sea-chart art. [Milestone #117](https://github.com/diegoami/Geoclick2027/issues/117), AGREE. [Published](https://github.com/diegoami/geoclick-releases/releases/tag/v0.15.0); owner signed off. |
 | Merged since v0.13.0 | The v0.14/v0.15 work is recorded in `ROADMAP.md`. Recent relevant PRs: #121–#123 closed the v0.15 milestone findings; PR #123's merge `78dd0ce` is the v0.15.0 release tag. |
 | Plans | Per-release plans in `docs/PLAN_V0.6.md` … [PLAN_V0.15.md](PLAN_V0.15.md). v0.16.0's ten-task split is in [proposal #125](https://github.com/diegoami/Geoclick2027/issues/125) and `docs/PLAN_V0.16.md` on the implementation branch. |
-| Next | The owner requested on PR #130 that world clicks (countries and oceans) enter a continent view, clicks on countries belonging to another continent switch to that view and reveal the label, and continent-view ocean clicks switch to another nearest continent view or open Countries if nearest the current continent. Country labels open their map when tapped; Russia must work from Europe. The owner is to test and explicitly approve #130. |
+| Next | Test and merge [PR #130](https://github.com/diegoami/Geoclick2027/pull/130) (owner reviewed; owner requested the merge). Then continue the v0.16.0 plan in `docs/PLAN_V0.16.md`; next task is the tutorial audit. Automated PR reviews can be reconsidered later if the owner wants to revisit the provider setup. |
 | Programmes | Remediation closed with v0.2.0 ([REMEDIATION_PLAN.md](REMEDIATION_PLAN.md)); features with v0.5.0 ([FEATURE_PLAN.md](FEATURE_PLAN.md)) |
 
 Shipped since the v0.5.0 handover, in one paragraph each:
