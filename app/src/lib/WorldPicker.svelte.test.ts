@@ -270,14 +270,17 @@ describe('WorldPicker (FT-83, FT-86, #87)', () => {
 		expect(gotoMock).not.toHaveBeenCalled();
 	});
 
-	it('opens the nearest continent section on any outside-country click, including ocean', async () => {
+	it('opens the nearest or current continent map on every outside-country click', async () => {
 		setPickerView('world');
 		await render(WorldPicker, {
 			groups: [
 				{
 					country: 'Europe',
 					pickerId: 'europe',
-					maps: [{ id: 'europe-countries', label: 'Countries' }]
+					maps: [
+						{ id: 'europe-countries', label: 'Countries' },
+						{ id: 'europe-capitals', label: 'Capitals' }
+					]
 				}
 			],
 			masteries: {},
@@ -292,17 +295,16 @@ describe('WorldPicker (FT-83, FT-86, #87)', () => {
 			lngLat: { lng: 0, lat: 50 },
 			originalEvent: { target: { closest: () => null } }
 		});
-		await expect.poll(() => document.querySelector('.continent')?.textContent).toBe('Europe');
-		expect(document.querySelector('select')?.value).toBe('europe-countries');
-		expect(gotoMock).not.toHaveBeenCalled();
+		expect(gotoMock).toHaveBeenCalledWith('/map/europe-countries');
 
-		setPickerView('world');
-		await expect.poll(() => document.querySelector('.continent')).toBeNull();
+		gotoMock.mockClear();
+		setPickerView('europe');
+		await expect.poll(() => document.querySelector('.continent')?.textContent).toBe('Europe');
 		fake.state.mapClick!({
 			point: { x: 10, y: 10 },
-			lngLat: { lng: 0, lat: 50 },
+			lngLat: { lng: 0, lat: 40 },
 			originalEvent: { target: { closest: () => null } }
 		});
-		await expect.poll(() => document.querySelector('.continent')?.textContent).toBe('Europe');
+		expect(gotoMock).toHaveBeenCalledWith('/map/europe-countries');
 	});
 });

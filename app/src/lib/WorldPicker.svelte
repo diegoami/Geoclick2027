@@ -149,10 +149,12 @@
 		).id;
 	}
 
-	function chooseContinentFromLand(id: string): void {
-		// Open the continent's picker section first; its first map type is
-		// Countries, already selected unless the player chose another type.
-		chooseContinent(id);
+	function openContinentMap(id: string): boolean {
+		if (tutorialState().status !== 'idle') {
+			chooseContinent(id);
+			return true;
+		}
+		return openCountryMap(id);
 	}
 
 	function clearLabels() {
@@ -411,11 +413,11 @@
 						tutorialCountryChosen(id);
 						return;
 					}
-					// Every click outside a country polygon opens the current continent's
-					// picker section; in world view choose the nearest continent instead.
+					// Any click outside a country polygon opens the current continent's
+					// Countries map; in world view use the nearest continent.
 					if (!e.lngLat) return;
 					const landContinent = view === 'world' ? continentAt(e.lngLat.lng, e.lngLat.lat) : view;
-					if (landContinent) chooseContinentFromLand(landContinent);
+					if (landContinent) openContinentMap(landContinent);
 				});
 				map.on('mouseenter', 'countries-fill', () => {
 					if (map) map.getCanvas().style.cursor = 'pointer';
