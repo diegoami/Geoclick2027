@@ -158,20 +158,24 @@ the gate. The separate PR-review workflow is advisory only.
   cost".)
 - Roles: the user is Product Manager; the implementing model is the Developer.
   Finish by telling the user exactly what to run/click and what to expect.
-- Whenever a PR is handed to the owner for testing, include its direct GitHub
-  PR link and a ready-to-paste prompt for an **optional independent review**
-  using a different model. Do not create a review worktree or start the review
-  unless the owner explicitly asks. The prompt must identify the PR and exact
-  head SHA, tell the reviewer to create its own detached worktree at that SHA
-  under the sibling `<project>-review` directory (with a `cd` to the main
-  checkout first), read `AGENTS.md`, compare the PR
-  diff with its base, and remove only that worktree when done. Request an
-  evidence-backed review without code edits, commits, or pushes, and explicitly
-  instruct the reviewer to post the result as a GitHub PR review, not only in
-  chat. Point the prompt to `.opencode/agents/pr-reviewer.md` or `/review-pr`
-  so the reviewer follows the repository's full procedure. If posting fails,
-  the reviewer must return the complete review text and explain the failure.
-  Include the worktree path and prompt in the handoff.
+ - Whenever a PR is handed to the owner for testing, include its direct GitHub
+  PR link; an exact copy-paste PowerShell command, starting with `cd` to the
+  main checkout, to create and enter a local test worktree; and the actual
+  commands to install dependencies if needed and run the relevant local test.
+  State any URL or click path and what the owner should expect. For docs-only
+  changes, give the applicable verification command and say runtime tests do
+  not apply. End the handoff with the local test command block.
+- Also include a ready-to-paste prompt for an **optional independent review**
+  using a different model. Do not create a reviewer worktree or start the
+  review unless the owner explicitly asks. The prompt must identify the PR and
+  exact head SHA, tell the reviewer to create its own detached worktree at that
+  SHA under the sibling `<project>-review` directory, read `AGENTS.md`, compare
+  the PR diff with its base, post the result as a GitHub PR review (not only in
+  chat), and remove only its own worktree. Point the prompt to
+  `.opencode/agents/pr-reviewer.md` or `/review-pr`. Request an evidence-backed
+  review without code edits, commits, or pushes. If posting fails, the reviewer
+  must return the complete review text and explain the failure. Include the
+  exact worktree path in the prompt.
 
 ### Worktrees
 

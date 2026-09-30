@@ -39,6 +39,11 @@ or amend an entry here as part of that change, not as an afterthought.
   and `/review-pr` command; the `review-pr` skill prepares the prompt and
   processes findings. The PR reviewer posts a neutral review to the PR and
   removes its own review worktree; this is not a merge approval or release gate.
+- **PR testing handoffs include how to test, not only how to check out.** At the
+  owner's request, every PR handoff gives the exact local worktree command,
+  dependency/setup and verification commands, and the URL or click path plus
+  expected result. A checkout command alone does not tell the owner how to
+  exercise the change.
 - **Ad hoc worktrees.** An implementing session uses a worktree of its own while
   another session may be working in the main checkout, which is common here.
   After a merge, `git switch main && git pull --ff-only`, then delete the merged
