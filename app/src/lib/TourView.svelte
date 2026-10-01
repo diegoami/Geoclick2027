@@ -20,6 +20,7 @@
 	import { publishBottomOverlay } from './mapBottomOverlay';
 	import { fetchFacts, placeFacts, type Facts, type PlaceFacts } from './facts';
 	import TourControls from './TourControls.svelte';
+	import { StretchedNames } from './stretchedNames';
 
 	let { mapId }: { mapId: string } = $props();
 
@@ -31,6 +32,7 @@
 		if (controlsEl) return publishBottomOverlay(controlsEl);
 	});
 	let map: maplibregl.Map | undefined;
+	let stretched: StretchedNames | undefined;
 	// Sea, rivers and named terrain (FT-33). The $effect below follows the
 	// map bar's Terrain button, which only writes the preference.
 	let terrain = $state<TerrainLayer | undefined>(undefined);
@@ -92,8 +94,10 @@
 		const target = mapDef.targets.find((t) => t.id === step.targetId);
 		if (!target) return;
 
+		const previousTargetId = currentTarget?.id;
 		clearHighlight(currentTarget?.name);
 		stepIndex = index;
+		if (previousTargetId && previousTargetId !== target.id) stretched?.delete(previousTargetId);
 		finished = false;
 		// A new stop is a new encounter with the place, so its name-fact moves
 		// on: a second run of the tour tells you something different.
@@ -140,6 +144,13 @@
 			priority: TOUR_NAME_PRIORITY,
 			beside: target.type === 'city' ? DOT_CLEARANCE_PX : undefined
 		});
+		if (target.spine && target.type !== 'city')
+			stretched?.set(target.id, {
+				name: targetName(target),
+				spine: target.spine,
+				tier: 'asked',
+				popup
+			});
 
 		scheduleAdvance(step.dwellMs);
 	}
@@ -223,6 +234,8 @@
 			speed = defaultTourSpeed(loadedTour.steps);
 
 			({ map, terrain } = createMap(container, loadedMapDef, style));
+			if (loadedMapDef.targets.some((target) => target.spine && target.type !== 'city'))
+				stretched = new StretchedNames(map);
 			map.once('load', () => {
 				if (cancelled) return;
 				playing = true;
@@ -241,13 +254,24 @@
 	$effect(() => {
 		const language = getLanguage();
 		untrack(() => {
-			if (popup && currentTarget) popup.setText(targetName(currentTarget, language));
+			if (popup && currentTarget) {
+				const shown = targetName(currentTarget, language);
+				popup.setText(shown);
+				if (currentTarget.spine && currentTarget.type !== 'city')
+					stretched?.set(currentTarget.id, {
+						name: shown,
+						spine: currentTarget.spine,
+						tier: 'asked',
+						popup
+					});
+			}
 		});
 	});
 
 	onDestroy(() => {
 		if (advanceTimer) clearTimeout(advanceTimer);
 		popup?.remove();
+		stretched?.destroy();
 		map?.remove();
 	});
 </script>

@@ -36,6 +36,7 @@
 		type ProgressRepository
 	} from './progressRepository';
 	import { rate, type CardState as SchedulerState, type Grade } from '@geoclick/srs';
+	import { StretchedNames } from './stretchedNames';
 
 	let { mapId }: { mapId: string } = $props();
 
@@ -52,6 +53,7 @@
 	let trayHandleRowEl = $state<HTMLDivElement>();
 	let traySlipsEl = $state<HTMLDivElement>();
 	let map: maplibregl.Map | undefined;
+	let stretched: StretchedNames | undefined;
 	// Sea, rivers and named terrain (FT-33). The $effect below follows the
 	// map bar's Terrain button, which only writes the preference.
 	let terrain = $state<TerrainLayer | undefined>(undefined);
@@ -231,12 +233,25 @@
 			for (const [id, popup] of solvedPopups) {
 				const shown = shownName(id, '');
 				if (shown && popup.getElement()?.textContent !== shown) popup.setText(shown);
+				const target = targetsById.get(id);
+				if (shown && target?.spine && target.type !== 'city')
+					stretched?.set(id, {
+						name: shown,
+						spine: target.spine,
+						tier: solvedTiers.get(id) ?? 'known',
+						popup
+					});
 			}
 		});
 	});
 	// Counts up with every name placed, so the newest label outranks the ones
 	// already on the map when they fight for the same spot.
 	let labelPriority = 0;
+	// The SVG labels have their own DOM, so preserve the answered vs revealed
+	// distinction when a language change redraws them.
+	// Plain Map: only read by an effect and clearAllVisuals, never the template.
+	// eslint-disable-next-line svelte/prefer-svelte-reactivity
+	const solvedTiers = new Map<string, 'known' | 'seen'>();
 
 	let complete = $derived(session ? isSessionComplete(session) : false);
 	let score = $derived(session ? scoreSession(session) : undefined);
@@ -468,6 +483,16 @@
 					: undefined
 		});
 		solvedPopups.set(targetId, popup);
+		const target = mapDef?.targets.find((t) => t.id === targetId);
+		const tier = revealed ? 'seen' : 'known';
+		solvedTiers.set(targetId, tier);
+		if (target?.spine && target.type !== 'city')
+			stretched?.set(targetId, {
+				name: shownName(targetId, name),
+				spine: target.spine,
+				tier,
+				popup
+			});
 
 		// Now that the name is on the map, say what the place is (FT-35), but
 		// only for a name the player could NOT place (FT-62): a correct drop
@@ -616,8 +641,12 @@
 				{ quizCorrect: false, quizRevealed: false, quizHover: false, quizWrong: false }
 			);
 		}
-		for (const popup of solvedPopups.values()) popup.remove();
+		for (const [id, popup] of solvedPopups) {
+			popup.remove();
+			stretched?.delete(id);
+		}
 		solvedPopups.clear();
+		solvedTiers.clear();
 		told = undefined;
 	}
 
@@ -712,6 +741,8 @@
 			mapDef = loadedMapDef;
 
 			({ map, terrain } = createMap(container, loadedMapDef, style));
+			if (loadedMapDef.targets.some((target) => target.spine && target.type !== 'city'))
+				stretched = new StretchedNames(map);
 			fetchFacts(mapId).then((loaded) => {
 				if (!cancelled) facts = loaded;
 			});
@@ -751,6 +782,7 @@
 		// setFeatureState would throw on it.
 		for (const timer of flashTimers) clearTimeout(timer);
 		flashTimers.clear();
+		stretched?.destroy();
 		map?.remove();
 		map = undefined;
 	});

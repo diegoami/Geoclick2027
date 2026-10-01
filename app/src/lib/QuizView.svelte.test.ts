@@ -33,6 +33,14 @@ const fake = vi.hoisted(() => {
 			aliases: [],
 			centroid: [left + 35, top + 35] as [number, number],
 			bbox: [left, top, left + 70, top + 70] as [number, number, number, number],
+			spine: {
+				curve: [
+					[left + 2, top + 35],
+					[left + 35, top + 30],
+					[left + 68, top + 35]
+				] as [[number, number], [number, number], [number, number]],
+				aspect: 1
+			},
 			colorIndex: i % 6
 		};
 	});
@@ -60,6 +68,7 @@ const fake = vi.hoisted(() => {
 		state.container = container;
 		const map = {
 			getContainer: () => container,
+			getCanvasContainer: () => container,
 			once: (type: string, fn: () => void) => {
 				if (type === 'load') queueMicrotask(fn);
 			},
@@ -222,6 +231,9 @@ describe('QuizView (FT-59)', () => {
 		});
 		expect(placedNames()).toEqual([right, wrong]);
 		expect(fake.state.container!.querySelector('.revealed')?.textContent).toBe(wrong);
+		expect(document.querySelector('.geoclick-stretched text.retention-seen')).not.toBeNull();
+		setLanguage('de');
+		expect(document.querySelector('.geoclick-stretched text.retention-seen')).not.toBeNull();
 		await expect.element(screen.getByText(`${wrong} is named after a river.`)).toBeVisible();
 	});
 
@@ -265,6 +277,7 @@ describe('QuizView (FT-59)', () => {
 		expect(screen.container.querySelector('.score-panel')).toBeNull();
 		await screen.getByRole('button', { name: 'Play again' }).click();
 		await expect.poll(() => slipNames().length).toBe(10);
+		expect(document.querySelectorAll('.geoclick-stretched text')).toHaveLength(0);
 		expect(screen.container.querySelector('.map-again')).toBeNull();
 		await finish();
 		await expect.poll(() => saveSummary.mock.calls.length).toBe(2);
