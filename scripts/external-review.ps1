@@ -19,7 +19,7 @@ param(
     [ValidateSet('pr', 'release')] [string] $Kind = 'pr',
     [string] $BriefFile,
     # Order matters. "model#variant" sets the reasoning variant.
-    [string[]] $Model = @('opencode/gpt-5.6-luna#high', 'opencode/glm-5.3-flash', 'opencode/deepseek-v4.1-flash'),
+    [string[]] $Model = @('opencode-go/gpt-5.6-luna#high', 'opencode-go/glm-5.3-flash', 'opencode-go/deepseek-v4.1-flash'),
     [string[]] $ExcludeModel = @(),
     [string] $Agent = 'external-reviewer',
     [string[]] $CopyFiles = @(),
