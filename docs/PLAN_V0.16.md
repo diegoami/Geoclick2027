@@ -5,8 +5,11 @@ by the product owner on 2026-09-30; scope additions [#140](https://github.com/di
 
 ## Agreed scope
 
-- Open a continent's main Countries map when tapping continent land outside a
-  country; country taps retain direct map entry.
+- Open a continent's main Countries map when tapping outside a country;
+  country taps retain direct map entry. As built (PR #130, kept by the owner on
+  #153): from the world view a country or sea tap enters the nearest continent;
+  inside a continent, sea nearest it opens its Countries map and sea nearest
+  another continent switches to that one.
 - On selection rows, default the map-type combobox to the first listed map
   unless the player has a remembered manual choice; the row's country or
   continent button opens the selected map.
@@ -51,7 +54,7 @@ by the product owner on 2026-09-30; scope additions [#140](https://github.com/di
 | 9 | Spine-following labels in all map views | Merged (PR #145) |
 | 10 | Open the selected map immediately when its map type is chosen | Merged (PR #142; approved proposal #140) |
 | 11 | Map-family land context and color separation | Merged (PR #147; approved proposal #146) |
-| 12 | Full tutorial audit, rewrite, translations, and manual | In progress; last |
+| 12 | Full tutorial audit, rewrite, translations, and manual | Merged (PR #148) |
 
 Each task is independently testable and follows the implementation split in
 proposal #125. Any scope change returns to the proposal for owner agreement.

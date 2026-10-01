@@ -13,6 +13,7 @@ vi.mock('$app/paths', () => ({
 }));
 
 import MapRows from './MapRows.svelte';
+import { endTutorialSandbox, startTutorialSandbox } from './tutorialSandbox.svelte';
 import { setLanguage } from './i18n.svelte';
 
 const group = (country: string, pickerId?: string) => ({
@@ -147,6 +148,31 @@ describe('MapRows (FT-84)', () => {
 		gotoMock.mockClear();
 		document.querySelector<HTMLButtonElement>('.name')!.click();
 		expect(gotoMock).toHaveBeenCalledWith('/map/italy-provinces');
+	});
+
+	it('ignores a remembered map type while the tutorial sandbox is active (#154)', async () => {
+		localStorage.setItem(MAP_TYPE_SELECTIONS_KEY, JSON.stringify({ italy: 'italy-provinces' }));
+		startTutorialSandbox();
+		try {
+			await render(MapRows, {
+				groups: [
+					{
+						country: 'Italy',
+						pickerId: 'italy',
+						maps: [
+							{ id: 'italy-regions', label: 'Regions' },
+							{ id: 'italy-provinces', label: 'Provinces' }
+						]
+					}
+				],
+				masteries: {},
+				targetCount: () => 0
+			});
+			document.querySelector<HTMLButtonElement>('.name')!.click();
+			expect(gotoMock).toHaveBeenCalledWith('/map/italy-regions');
+		} finally {
+			endTutorialSandbox();
+		}
 	});
 
 	it('opens a single-option map on deliberate pointer activation, but not on focus alone', async () => {

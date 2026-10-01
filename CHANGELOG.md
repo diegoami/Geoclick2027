@@ -13,10 +13,12 @@ Proposals #125, #140 and #146; [PLAN_V0.16.md](docs/PLAN_V0.16.md). PRs #130, #1
 
 For players:
 
-- **Open a continent from its land.** On the selection map, tapping continent
-  land outside any country opens that continent's Countries map; sea does
-  nothing. A country opens only by tapping its visible name, so crowded labels
-  never leave hidden countries pickable.
+- **Enter and open continents from the selection map.** From the world view,
+  tapping a country or the sea enters the nearest continent. Inside a
+  continent, tapping sea nearest that continent opens its Countries map;
+  sea nearest another continent switches to that one. A country opens only by
+  tapping its visible name, so crowded labels never leave hidden countries
+  pickable.
 - **Choose a map from its selection row.** The map-type selector starts on the
   first listed option (or your saved choice); tapping the country or continent
   name opens that map, and choosing a type opens it at once.
