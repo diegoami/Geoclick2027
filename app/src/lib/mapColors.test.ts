@@ -15,6 +15,8 @@ import {
 	pointAdjacency,
 	type Adjacency
 } from '../../../data/scripts/mapColors';
+import { CITY_CONTEXT_FILL, CITY_CONTEXT_OUTLINE, styleForMapFamily } from './mapFamilyStyle';
+import type { StyleSpecification } from 'maplibre-gl';
 
 interface TargetLike {
 	name: string;
@@ -133,6 +135,29 @@ describe('committed map colours', () => {
 		expect(layer('context-fill').paint['fill-opacity']).toBe(1);
 		expect(layer('context-outline').paint['line-color']).toBe('#81958d');
 		expect(layer('context-outline').paint['line-width']).toBe(0.8);
+		expect(layer('land-fill').paint['fill-color']).toBe('#e2ddd1');
+		expect(layer('land-outline').paint['line-color']).toBe('#a5a094');
+		expect(layer('targets-fill').paint['fill-opacity']).toContain(1);
+	});
+
+	it('uses a brighter mapped-country context only for city maps, leaving sea and surrounding land alone', () => {
+		const base = JSON.parse(
+			readFileSync(path.join(DEFAULT_MAPS_DIR, '..', 'styles', 'base.json'), 'utf8')
+		) as StyleSpecification;
+		const city = styleForMapFamily(base, { targets: [{ type: 'city' }] });
+		const cityLayer = (id: string) =>
+			city.layers.find((l) => l.id === id) as { paint: Record<string, unknown> };
+		expect(cityLayer('context-fill').paint['fill-color']).toBe(CITY_CONTEXT_FILL);
+		expect(cityLayer('context-outline').paint['line-color']).toBe(CITY_CONTEXT_OUTLINE);
+		expect(cityLayer('land-fill').paint['fill-color']).toBe('#e2ddd1');
+		expect(city.layers.find((l) => l.id === 'background')).toEqual(
+			base.layers.find((l) => l.id === 'background')
+		);
+		expect(styleForMapFamily(base, { targets: [{ type: 'province' }] })).toBe(base);
+		expect(styleForMapFamily(base, { targets: [{ type: 'city' }, { type: 'province' }] })).toBe(
+			base
+		);
+		expect(styleForMapFamily(base, { targets: [] })).toBe(base);
 	});
 });
 
