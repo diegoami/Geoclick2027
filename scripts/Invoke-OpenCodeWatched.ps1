@@ -7,7 +7,9 @@
   dataDir, stdout, stderr, text }. Exit code 0 when class is "ok", otherwise 4.
   Failure classes: ok, no-session, idle-timeout, total-timeout,
   exited-without-session, nonzero-exit, permission-rejected, default-agent,
-  cut-off, unknown-model, unknown-agent, no-executable.
+  cut-off, unknown-model, unknown-agent, no-executable, no-auth (neither an
+  auth.json nor a console login in the data dir). A cut-off run still returns
+  its text in result.json so the caller can post it flagged.
 
   Notes that cost a day to learn (see docs/EXTERNAL_REVIEW.md):
   - Starts the real opencode.exe, not the npm .cmd shim (the shim cannot carry
@@ -46,12 +48,26 @@ $stdinFile = Join-Path $OutDir 'stdin-empty.txt'
 $resultFile = Join-Path $OutDir 'result.json'
 [System.IO.File]::WriteAllText($stdinFile, '')
 
+$script:savedEnv = @{}
+foreach ($n in 'XDG_DATA_HOME', 'XDG_CACHE_HOME', 'XDG_STATE_HOME') { $script:savedEnv[$n] = [Environment]::GetEnvironmentVariable($n) }
+# One absolute path, however the override was given.
+$DataDir = [System.IO.Path]::GetFullPath($DataDir)
+$CacheDir = Join-Path (Split-Path -Parent $DataDir) 'cache'
+$StateDir = Join-Path (Split-Path -Parent $DataDir) 'state'
+
 $script:result = [ordered]@{
     class = 'ok'; detail = ''; exitCode = $null; session = $null; version = $null
     dataDir = $DataDir; stdout = $stdoutFile; stderr = $stderrFile; text = $null
 }
 
+function Restore-Env {
+    foreach ($n in 'XDG_DATA_HOME', 'XDG_CACHE_HOME', 'XDG_STATE_HOME') {
+        if ($null -eq $script:savedEnv[$n]) { Remove-Item "Env:$n" -ErrorAction SilentlyContinue } else { Set-Item "Env:$n" $script:savedEnv[$n] }
+    }
+}
+
 function Finish([string] $class, [string] $detail = '') {
+    Restore-Env
     $script:result.class = $class
     $script:result.detail = $detail
     ($script:result | ConvertTo-Json -Depth 4) | Set-Content -Encoding utf8NoBOM -Path $resultFile
@@ -104,7 +120,16 @@ if ((Test-Path $srcDb) -and ($RefreshData -or -not (Test-Path $dstDb))) {
     Write-Host 'watcher: seeded the review database from the default one'
 }
 $env:XDG_DATA_HOME = $DataDir
-Write-Host "watcher: data dir $DataDir"
+# Own cache and state too: the desktop app's must not be shared with, or
+# rewritten under, a 1.x CLI.
+New-Item -ItemType Directory -Force -Path $CacheDir, $StateDir | Out-Null
+$env:XDG_CACHE_HOME = $CacheDir
+$env:XDG_STATE_HOME = $StateDir
+Write-Host "watcher: data dir $DataDir (cache $CacheDir, state $StateDir)"
+# No API-key credentials and no console login (database) means nothing can run.
+if (-not (Test-Path $dstAuth) -and -not (Test-Path $dstDb)) {
+    Finish 'no-auth' "no auth.json and no login in $DataDir. Log in for this data dir: set XDG_DATA_HOME to it, then 'opencode auth login' (API keys) or 'opencode console login' (OpenCode Go)."
+}
 
 $versionText = (& $exe --version 2>&1 | Select-Object -First 1).ToString().Trim()
 $major = [int](($versionText -split '\.')[0] -replace '\D', '')
@@ -209,7 +234,7 @@ if ($export) {
     if ($assistant.Count) {
         $last = $assistant[-1]
         $text = (($last.parts | Where-Object { $_.type -eq 'text' } | ForEach-Object { $_.text }) -join "`n").Trim()
-        if ($last.info.finish -and $last.info.finish -ne 'stop') { Finish 'cut-off' "final message finish=$($last.info.finish)" }
+        if ($last.info.finish -and $last.info.finish -ne 'stop') { $script:result.text = $text; Finish 'cut-off' "final message finish=$($last.info.finish)" }
     }
 }
 if (-not $text) { Finish 'cut-off' 'no final assistant text in the session export' }

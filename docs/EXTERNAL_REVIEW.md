@@ -4,10 +4,56 @@
 a milestone candidate (`-Issue n -Kind release`) in a detached worktree and
 posts it as one GitHub comment. The model never writes to GitHub or git.
 
-Model chain, in order, moving on only after a failed run (an infrastructure failure or a malformed answer, never a verdict):
-GPT-5.6 Luna (high), GLM 5.3 Flash, DeepSeek V4.1 Flash. The implementer is
-left out (from `Co-Authored-By` trailers or a `model:<name>` label). If no
-model can run, nothing is posted and the script exits 3.
+Roles (owner's decision, 2026-10-02): reviewer **DeepSeek V4.1 Flash**
+(`opencode-go/deepseek-v4.1-flash`, effort `high`), then **Claude Opus**;
+implementer **Claude Sonnet**, then **GPT Luna**. One OpenCode model per role:
+a chain of several cheap models multiplies wasted attempts. Other models remain
+valid as an explicit `-Model`, but no default picks them. Effort is `high` for
+every variant, never `max`. The implementer's model never reviews its own PR
+(`Co-Authored-By` trailers or a `model:<name>` label); with no OpenCode
+reviewer left the script exits 3.
+
+Exit codes: `0` posted and acted on; `3` no OpenCode review (nothing posted:
+run the Opus reviewer as a subagent on the printed brief, in its own worktree);
+`4` posted but flagged, no label (read it and decide); `5` the PR head moved.
+
+**A review that can be read is never thrown away** (`scripts/ReviewParser.ps1`,
+`-SelfTest` runs 13 samples). Only a message with no header line anywhere (tool
+chatter, or nothing) is a failure. The header is found case-insensitively,
+inside Markdown, after any preamble; the verdict may be decorated, prefixed
+"Verdict:" or punctuated; the closing verdict is looked for in the last three
+non-empty lines; a one-line review is accepted. A review whose verdict cannot be
+read, or that has no closing verdict, is posted anyway with a first line
+`> Note from external-review.ps1: verdict unreadable` (or `may be cut off`), no
+label, exit 4. Closing keywords before `#n` are rewritten to `see #n` and logged.
+Failure classes: no-session, idle-timeout, total-timeout, exited-without-session,
+nonzero-exit, permission-rejected, default-agent, cut-off, unknown-model,
+unknown-agent, no-executable, no-auth, no-review. A cut-off run that left text is
+posted flagged, like any other doubtful review.
+`-FromFile <file>` pushes a saved message through the same parser; with
+`-DryRun` it prints what would be posted, the note line and the exit code.
+
+**OpenCode Go and the data directory.** Runs use their own `XDG_DATA_HOME`,
+`XDG_CACHE_HOME` and `XDG_STATE_HOME` (`%LOCALAPPDATA%\geoclick-opencode-review\{data,cache,state}`,
+restored afterwards). `auth.json` is copied, never read. Go is not an
+`opencode auth login` provider: it comes from `opencode console login` (a URL and
+a code approved in the browser), stored in that data directory's *database*, so
+each data directory needs its own login. The watcher seeds the database from the
+default one until you have logged in (`-RefreshData` re-copies). To log in:
+
+```powershell
+$env:XDG_DATA_HOME = "$env:LOCALAPPDATA\geoclick-opencode-review\data"
+$exe = "$env:APPDATA\npm\node_modules\opencode-ai\bin\opencode.exe"
+& $exe console login        # prints a URL and a code; approve in the browser
+& $exe console orgs
+& $exe models opencode-go   # about 29 models; add --refresh if none
+```
+
+Why one model: GLM-5.3 and GLM-5.3-Flash sometimes end their turn early in long
+implementer runs (a whole run of reading, then exit 0 with no commit); as
+reviewers they were cheap, but in this project GLM 5.3 Flash said AGREE where
+DeepSeek found a real MUST-FIX. Go's `gpt-6-luna` returned "Bad Request" in
+long agent loops, so it is not a default for long runs.
 
 Pitfalls the scripts handle: the 1.x CLI needs the `permission:` map syntax in
 agent frontmatter (the V2 list form is silently ignored); `opencode run` waits
