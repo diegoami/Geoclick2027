@@ -175,7 +175,10 @@ $script:result.exitCode = $proc.ExitCode
 
 $out = Strip-Ansi ((Get-Content $stdoutFile -Raw -ErrorAction SilentlyContinue) + "`n" + (Get-Content $stderrFile -Raw -ErrorAction SilentlyContinue))
 if ($out -match '(?m)^\s*!\s*permission requested: (.+?); auto-rejecting\s*$') { Finish 'permission-rejected' $Matches[1] }
-if ($out -match '(?i)falling back to (the )?default agent|agent .{0,80}not found') { Finish 'default-agent' 'the named agent was not used' }
+# OpenCode prints "> <agent> · <model>" when a run starts. A different agent
+# there means the name fell back to the default agent (full permissions).
+# Match the banner only: the model's own text must never trigger this.
+if ($out -match '(?m)^> (\S+) · ' -and $Matches[1] -ne $Agent) { Finish 'default-agent' "ran as '$($Matches[1])', not '$Agent'" }
 if (-not $session) { $session = Find-Session; if ($session) { $script:result.session = $session.id } }
 if (-not $session) { Finish 'exited-without-session' "exit code $($proc.ExitCode)" }
 if ($proc.ExitCode -ne 0) { Finish 'nonzero-exit' "exit code $($proc.ExitCode)" }
