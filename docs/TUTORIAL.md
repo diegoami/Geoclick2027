@@ -83,9 +83,9 @@ keyed by the translation key FT-11 will add.
 ### Intro — home page
 
 > **Welcome to Geoclick**
-> Learn the map by playing with it. This short tutorial takes about three
-> minutes and you'll try every part of the app yourself. Practice on Italy —
-> Regions is sandboxed and won't change your real progress.
+> Learn the map by playing. This three-minute tutorial introduces the app's
+> main features. Your practice on Italy — Regions won't change your real
+> progress.
 >
 > [Exit tutorial] [Start]
 
