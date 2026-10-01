@@ -2507,13 +2507,17 @@ answers:
 - **The first listed map is the default in every selection-row combobox.**
   Keep a valid manual choice per country/continent row on this device. The
   row's country/continent button opens the selected map; changing the
-  combobox chooses a type without navigating. A removed saved map falls back
-  to the first current option.
-- **The world picker opens a continent's Countries map from continent land
-  outside country features.** Country polygons retain precedence and open
-  their selected country map. Sea/background taps do nothing. A country can
-  be opened by tapping its polygon only while its collision-managed name is
-  visible; the selection list remains an alternate path.
+  combobox remembers the choice and opens that map at once (#140, PR #142;
+  this superseded the earlier "chooses without navigating"). A removed saved
+  map falls back to the first current option.
+- **The world picker enters continents from the sea, and opens countries
+  by their visible names.** As built (PR #130; the owner kept it on #153,
+  superseding "sea taps do nothing"): from the world view a country or sea
+  tap enters the nearest continent; inside a continent, sea nearest it opens
+  its Countries map and sea nearest another continent switches to that one.
+  A country opens only by tapping its collision-managed name while that name
+  is visible; tapping a mapped country's land reveals its name instead. The
+  selection list remains an alternate path.
 - **Map type choices inside a map are direct buttons on a second row, not a
   title plus combobox.** The active type is marked; a choice opens that map's
   Known view. Countries with one map do not need a redundant row.
@@ -2560,5 +2564,6 @@ answers:
   allowance of $60/month; the live Go documentation is authoritative.
 - Fork PRs are skipped because GitHub does not expose repository secrets to
   their workflows. Milestone release reviews retain their separate, manually
-  started procedure in `AGENTS.md` and `docs/RELEASES.md`. The project command
-  `/check-pr-reviews [PR number]` fetches current comments and workflow status.
+  started procedure in `AGENTS.md` and `docs/RELEASES.md`. (The
+  `/check-pr-reviews` command described here was removed with the workflow;
+  see `AGENTS.md`.)

@@ -5,9 +5,9 @@ by the product owner on 2026-09-30; scope additions [#140](https://github.com/di
 
 ## Agreed scope
 
-- Open a continent's main Countries map when tapping outside a country;
-  country taps retain direct map entry. As built (PR #130, kept by the owner on
-  #153): from the world view a country or sea tap enters the nearest continent;
+- Enter and open continents from the selection map. As built (PR #130, kept
+  by the owner on #153; the proposal's "sea does nothing" was superseded), and a
+  country opens only by tapping its visible name: from the world view a country or sea tap enters the nearest continent;
   inside a continent, sea nearest it opens its Countries map and sea nearest
   another continent switches to that one.
 - On selection rows, default the map-type combobox to the first listed map
