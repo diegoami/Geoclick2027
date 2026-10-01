@@ -11,6 +11,7 @@
 	import KnownProgress from './KnownProgress.svelte';
 	import { pickerIdOf } from './mapCatalog';
 	import { mapTypeSelectionOf, rememberMapTypeSelection } from './mapPrefs.svelte';
+	import { isTutorialSandboxActive } from './tutorialSandbox.svelte';
 	import { t } from './i18n.svelte';
 
 	interface Row {
@@ -44,13 +45,16 @@
 
 	function selectedMap(group: Row): string {
 		const key = pickerIdOf(group);
+		// The tutorial's highlighted route is the first listed map; a returning
+		// player's remembered choice must not redirect it (#154).
+		if (isTutorialSandboxActive()) return group.maps[0]?.id ?? '';
 		return selections[key] ?? group.maps[0]?.id ?? '';
 	}
 
 	function chooseMapType(group: Row, mapId: string) {
 		const key = pickerIdOf(group);
 		selections = { ...selections, [key]: mapId };
-		rememberMapTypeSelection(key, mapId);
+		if (!isTutorialSandboxActive()) rememberMapTypeSelection(key, mapId);
 		openMap(mapId);
 	}
 
