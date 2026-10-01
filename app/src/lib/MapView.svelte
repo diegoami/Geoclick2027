@@ -117,7 +117,7 @@
 			});
 			shownPopups.set(target.id, popup);
 			// Along the region where it fits; the popup is its fallback (FT-66).
-			if (target.spine)
+			if (target.spine && target.type !== 'city')
 				stretched?.set(target.id, { name: shown, spine: target.spine, tier, popup });
 		}
 		anyShown = drawn;

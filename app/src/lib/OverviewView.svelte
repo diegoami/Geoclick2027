@@ -15,11 +15,13 @@
 	import FactCard from './FactCard.svelte';
 	import ChartMapShell from './ChartMapShell.svelte';
 	import { fetchFacts, placeFacts, type Facts } from './facts';
+	import { StretchedNames } from './stretchedNames';
 
 	let { mapId }: { mapId: string } = $props();
 
 	let container: HTMLDivElement;
 	let map: maplibregl.Map | undefined;
+	let stretched: StretchedNames | undefined;
 	// Sea, rivers and named terrain (FT-33). The $effect below follows the
 	// map bar's Terrain button, which only writes the preference.
 	let terrain = $state<TerrainLayer | undefined>(undefined);
@@ -47,6 +49,8 @@
 				const popup = popups.get(target.id);
 				const shown = targetName(target, language);
 				if (popup && popup.getElement()?.textContent !== shown) popup.setText(shown);
+				if (popup && target.spine && target.type !== 'city')
+					stretched?.set(target.id, { name: shown, spine: target.spine, tier: 'known', popup });
 			}
 		});
 	});
@@ -81,6 +85,8 @@
 			mapDef = loadedMapDef;
 
 			({ map, terrain } = createMap(container, loadedMapDef, style));
+			if (loadedMapDef.targets.some((target) => target.spine && target.type !== 'city'))
+				stretched = new StretchedNames(map);
 			fetchFacts(mapId).then((loaded) => {
 				if (!cancelled) facts = loaded;
 			});
@@ -145,6 +151,13 @@
 						beside: target.type === 'city' ? DOT_CLEARANCE_PX : undefined
 					});
 					popups.set(target.id, popup);
+					if (target.spine && target.type !== 'city')
+						stretched?.set(target.id, {
+							name: targetName(target),
+							spine: target.spine,
+							tier: 'known',
+							popup
+						});
 				}
 			});
 		})().catch((e) => {
@@ -158,6 +171,7 @@
 
 	onDestroy(() => {
 		for (const popup of popups.values()) popup.remove();
+		stretched?.destroy();
 		map?.remove();
 	});
 </script>

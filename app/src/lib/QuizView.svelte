@@ -36,6 +36,7 @@
 		type ProgressRepository
 	} from './progressRepository';
 	import { rate, type CardState as SchedulerState, type Grade } from '@geoclick/srs';
+	import { StretchedNames } from './stretchedNames';
 
 	let { mapId }: { mapId: string } = $props();
 
@@ -52,6 +53,7 @@
 	let trayHandleRowEl = $state<HTMLDivElement>();
 	let traySlipsEl = $state<HTMLDivElement>();
 	let map: maplibregl.Map | undefined;
+	let stretched: StretchedNames | undefined;
 	// Sea, rivers and named terrain (FT-33). The $effect below follows the
 	// map bar's Terrain button, which only writes the preference.
 	let terrain = $state<TerrainLayer | undefined>(undefined);
@@ -231,6 +233,9 @@
 			for (const [id, popup] of solvedPopups) {
 				const shown = shownName(id, '');
 				if (shown && popup.getElement()?.textContent !== shown) popup.setText(shown);
+				const target = targetsById.get(id);
+				if (shown && target?.spine && target.type !== 'city')
+					stretched?.set(id, { name: shown, spine: target.spine, tier: 'known', popup });
 			}
 		});
 	});
@@ -468,6 +473,14 @@
 					: undefined
 		});
 		solvedPopups.set(targetId, popup);
+		const target = mapDef?.targets.find((t) => t.id === targetId);
+		if (target?.spine && target.type !== 'city')
+			stretched?.set(targetId, {
+				name: shownName(targetId, name),
+				spine: target.spine,
+				tier: revealed ? 'seen' : 'known',
+				popup
+			});
 
 		// Now that the name is on the map, say what the place is (FT-35), but
 		// only for a name the player could NOT place (FT-62): a correct drop
@@ -712,6 +725,8 @@
 			mapDef = loadedMapDef;
 
 			({ map, terrain } = createMap(container, loadedMapDef, style));
+			if (loadedMapDef.targets.some((target) => target.spine && target.type !== 'city'))
+				stretched = new StretchedNames(map);
 			fetchFacts(mapId).then((loaded) => {
 				if (!cancelled) facts = loaded;
 			});
@@ -751,6 +766,7 @@
 		// setFeatureState would throw on it.
 		for (const timer of flashTimers) clearTimeout(timer);
 		flashTimers.clear();
+		stretched?.destroy();
 		map?.remove();
 		map = undefined;
 	});
