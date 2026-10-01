@@ -1520,6 +1520,12 @@ countries, so that entire context uses the brighter city treatment.
 Ordinary polygon targets are opaque so their palette is not tinted by the
 sea color beneath them. Since `land` is baked into PMTiles, changing its
 selection requires rebuilding the map tiles as well as the style.
+For this change, `germany-states` and `germany-towns-100k` were rebuilt
+and checked in the local app with Terrain off: neighboring land reads as
+warm neutral land against the blue sea, while the towns map gives Germany
+its brighter country-context fill. The downloaded Natural Earth inputs
+remain in ignored `data/source/`; only the two updated `tiles.pmtiles`
+archives are committed.
 
 **Sequencing:** `italy-provinces` needed none of the above and shipped
 first. `italy-towns-100k`/`germany-towns-100k` needed all of it —
