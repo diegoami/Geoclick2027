@@ -5,11 +5,35 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
-## Unreleased
+## v0.16.0 — 2026-10-01 — Continent entry, tutorial, map labels and chrome
 
+**Open continents from their land, switch map types with buttons, read region names that follow the geography in every view, and a refreshed tutorial.**
+
+Proposals #125, #140 and #146; [PLAN_V0.16.md](docs/PLAN_V0.16.md). PRs #130, #137 to #139, #141 to #145, #147 and #148.
+
+For players:
+
+- **Open a continent from its land.** On the selection map, tapping continent
+  land outside any country opens that continent's Countries map; sea does
+  nothing. A country opens only by tapping its visible name, so crowded labels
+  never leave hidden countries pickable.
 - **Choose a map from its selection row.** The map-type selector starts on the
-  first listed option (or the player's saved choice); tapping the country or
-  continent name opens that selected map.
+  first listed option (or your saved choice); tapping the country or continent
+  name opens that map, and choosing a type opens it at once.
+- **Switch map types with buttons.** Inside a country's map, a second row of
+  buttons replaces the title menu.
+- **Region names follow the geography** in Known, Overview, Quiz and Tour,
+  not only Explore.
+- **Tour controls are icons** (back, play/pause, forward, replay) and no longer
+  sit under the fact card.
+- **Quiz completion.** The result popup only offers Close; the solved map stays
+  open with an Again button.
+- **Clearer towns maps.** Land, borders and sea are easier to tell apart, and
+  maps have land context colours by map family.
+- **Chart art fills the margins** around the map instead of covering its sea.
+- **The version badge sits at the top** so it no longer covers facts.
+- **Tutorial audited.** Every step revised for the current app in English,
+  German and Italian; Skip is now "Exit tutorial".
 
 ## v0.15.0 — 2026-09-29 — Known maps and sea-chart art
 
