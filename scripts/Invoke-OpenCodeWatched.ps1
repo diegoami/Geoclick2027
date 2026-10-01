@@ -32,10 +32,13 @@ param(
     [int] $IdleSeconds = 600,
     [int] $TotalSeconds = 3600,
     [string] $DataDir = (Join-Path $env:LOCALAPPDATA 'geoclick-opencode-review\data'),
-    [switch] $PrintArgs
+    [switch] $PrintArgs,
+    [switch] $RefreshData
 )
 
 $ErrorActionPreference = 'Stop'
+# opencode writes UTF-8; without this its output is decoded as the console code page (mojibake in posted reviews).
+[Console]::OutputEncoding = [System.Text.UTF8Encoding]::new($false)
 New-Item -ItemType Directory -Force -Path $OutDir | Out-Null
 $stdoutFile = Join-Path $OutDir 'stdout.txt'
 $stderrFile = Join-Path $OutDir 'stderr.txt'
@@ -85,6 +88,20 @@ $srcAuth = Join-Path $HOME '.local\share\opencode\auth.json'
 $dstAuth = Join-Path $ocData 'auth.json'
 if ((Test-Path $srcAuth) -and (-not (Test-Path $dstAuth) -or (Get-Item $srcAuth).LastWriteTime -gt (Get-Item $dstAuth).LastWriteTime)) {
     Copy-Item $srcAuth $dstAuth -Force
+}
+# The opencode-go subscription lives in the database (account state), not in
+# auth.json: without a copy of it this data dir lists no opencode-go models.
+# Copied once (or with -RefreshData), never read. If the desktop app has since
+# migrated the original to a newer schema, pass -RefreshData to re-copy.
+$srcDb = Join-Path $HOME '.local\share\opencode\opencode.db'
+$dstDb = Join-Path $ocData 'opencode.db'
+if ((Test-Path $srcDb) -and ($RefreshData -or -not (Test-Path $dstDb))) {
+    foreach ($suffix in '', '-wal', '-shm') {
+        $s = "$srcDb$suffix"; $d = "$dstDb$suffix"
+        if (Test-Path $d) { Remove-Item $d -Force -ErrorAction SilentlyContinue }
+        if (Test-Path $s) { Copy-Item $s $d -Force }
+    }
+    Write-Host 'watcher: seeded the review database from the default one'
 }
 $env:XDG_DATA_HOME = $DataDir
 Write-Host "watcher: data dir $DataDir"
