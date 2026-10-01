@@ -2567,3 +2567,13 @@ answers:
   started procedure in `AGENTS.md` and `docs/RELEASES.md`. (The
   `/check-pr-reviews` command described here was removed with the workflow;
   see `AGENTS.md`.)
+
+- **External review roles and parser policy (owner's decision,
+  2026-10-02).** Reviewer: DeepSeek V4.1 Flash (effort high), then Claude Opus.
+  Implementer: Claude Sonnet, then GPT Luna. One OpenCode model per role;
+  other models only by an explicit `-Model`. A readable review is never thrown
+  away: only "no header anywhere" falls back; an unreadable verdict or a cut-off
+  review is posted flagged, with no label, and the caller decides (exit 4).
+  See `docs/EXTERNAL_REVIEW.md`. This supersedes the three-model chain in
+  `scripts/external-review.ps1` as first built (Luna, GLM 5.3 Flash,
+  DeepSeek V4.1 Flash).

@@ -46,12 +46,26 @@ $stdinFile = Join-Path $OutDir 'stdin-empty.txt'
 $resultFile = Join-Path $OutDir 'result.json'
 [System.IO.File]::WriteAllText($stdinFile, '')
 
+$script:savedEnv = @{}
+foreach ($n in 'XDG_DATA_HOME', 'XDG_CACHE_HOME', 'XDG_STATE_HOME') { $script:savedEnv[$n] = [Environment]::GetEnvironmentVariable($n) }
+# One absolute path, however the override was given.
+$DataDir = [System.IO.Path]::GetFullPath($DataDir)
+$CacheDir = Join-Path (Split-Path -Parent $DataDir) 'cache'
+$StateDir = Join-Path (Split-Path -Parent $DataDir) 'state'
+
 $script:result = [ordered]@{
     class = 'ok'; detail = ''; exitCode = $null; session = $null; version = $null
     dataDir = $DataDir; stdout = $stdoutFile; stderr = $stderrFile; text = $null
 }
 
+function Restore-Env {
+    foreach ($n in 'XDG_DATA_HOME', 'XDG_CACHE_HOME', 'XDG_STATE_HOME') {
+        if ($null -eq $script:savedEnv[$n]) { Remove-Item "Env:$n" -ErrorAction SilentlyContinue } else { Set-Item "Env:$n" $script:savedEnv[$n] }
+    }
+}
+
 function Finish([string] $class, [string] $detail = '') {
+    Restore-Env
     $script:result.class = $class
     $script:result.detail = $detail
     ($script:result | ConvertTo-Json -Depth 4) | Set-Content -Encoding utf8NoBOM -Path $resultFile
@@ -104,7 +118,16 @@ if ((Test-Path $srcDb) -and ($RefreshData -or -not (Test-Path $dstDb))) {
     Write-Host 'watcher: seeded the review database from the default one'
 }
 $env:XDG_DATA_HOME = $DataDir
-Write-Host "watcher: data dir $DataDir"
+# Own cache and state too: the desktop app's must not be shared with, or
+# rewritten under, a 1.x CLI.
+New-Item -ItemType Directory -Force -Path $CacheDir, $StateDir | Out-Null
+$env:XDG_CACHE_HOME = $CacheDir
+$env:XDG_STATE_HOME = $StateDir
+Write-Host "watcher: data dir $DataDir (cache $CacheDir, state $StateDir)"
+# No API-key credentials and no console login (database) means nothing can run.
+if (-not (Test-Path $dstAuth) -and -not (Test-Path $dstDb)) {
+    Finish 'no-auth' "no auth.json and no login in $DataDir. Log in for this data dir: set XDG_DATA_HOME to it, then 'opencode auth login' (API keys) or 'opencode console login' (OpenCode Go)."
+}
 
 $versionText = (& $exe --version 2>&1 | Select-Object -First 1).ToString().Trim()
 $major = [int](($versionText -split '\.')[0] -replace '\D', '')

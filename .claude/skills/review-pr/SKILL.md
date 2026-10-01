@@ -27,10 +27,11 @@ GitHub rather than only to chat.
 ## Run it with the script (preferred)
 
 `pwsh scripts/external-review.ps1 -Pr <n>` reviews the PR head in a detached
-worktree and posts one comment. Models, in order, only on an infrastructure
-failure: GPT-5.6 Luna (high), GLM 5.3 Flash, DeepSeek V4.1 Flash; the
-implementer is left out. Run it in the background; relay every finding. Exit 3
-means nothing ran: use the manual prompt below. See `docs/EXTERNAL_REVIEW.md`.
+worktree and posts one comment. The reviewer is DeepSeek V4.1 Flash (effort
+high), then Claude Opus (owner, 2026-10-02); the implementer is left out. Run it
+in the background; relay every finding. Exit 3 = no OpenCode review: run the
+Opus reviewer as a subagent on the printed brief. Exit 4 = posted but flagged,
+no label: read it and decide. See `docs/EXTERNAL_REVIEW.md`.
 
 ## Prepare the optional review prompt (manual route)
 
