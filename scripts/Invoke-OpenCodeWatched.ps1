@@ -163,7 +163,7 @@ while (-not $proc.HasExited) {
         Stop-Tree $proc.Id; Finish 'idle-timeout' "session did not advance for $IdleSeconds s"
     }
     $tail = Strip-Ansi ((Get-Content $stdoutFile -Raw -ErrorAction SilentlyContinue) + (Get-Content $stderrFile -Raw -ErrorAction SilentlyContinue))
-    if ($tail -match 'permission requested: (.+?); auto-rejecting') {
+    if ($tail -match '(?m)^\s*!\s*permission requested: (.+?); auto-rejecting\s*$') {
         # The rejection ends the run; give it a moment to exit, then stop it.
         Start-Sleep -Seconds 3
         if (-not $proc.HasExited) { Stop-Tree $proc.Id }
@@ -174,7 +174,7 @@ $proc.WaitForExit()
 $script:result.exitCode = $proc.ExitCode
 
 $out = Strip-Ansi ((Get-Content $stdoutFile -Raw -ErrorAction SilentlyContinue) + "`n" + (Get-Content $stderrFile -Raw -ErrorAction SilentlyContinue))
-if ($out -match 'permission requested: (.+?); auto-rejecting') { Finish 'permission-rejected' $Matches[1] }
+if ($out -match '(?m)^\s*!\s*permission requested: (.+?); auto-rejecting\s*$') { Finish 'permission-rejected' $Matches[1] }
 if ($out -match '(?i)falling back to (the )?default agent|agent .{0,80}not found') { Finish 'default-agent' 'the named agent was not used' }
 if (-not $session) { $session = Find-Session; if ($session) { $script:result.session = $session.id } }
 if (-not $session) { Finish 'exited-without-session' "exit code $($proc.ExitCode)" }

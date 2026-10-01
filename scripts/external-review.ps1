@@ -153,7 +153,7 @@ try {
     foreach ($m in $chain) {
         $prior = if ($failures.Count) { '; ' + ($failures -join '; ') } else { '' }
         $header = "$(if ($Kind -eq 'pr') { 'PR review' } else { 'Release review' }) ($($m.Name)$prior)"
-        $out = if ($DryRun) { Join-Path $repo "rendered/ext-review-dry-$token" } else { Join-Path $wt "rendered/run-$($m.Name -replace '\W','')" }
+        $out = if ($DryRun) { Join-Path $repo "rendered/ext-review-dry-$token" } else { Join-Path $repo "rendered/ext-review/$Kind$subject-$token/$($m.Name -replace '\W','')" }
         New-Item -ItemType Directory -Force -Path $out | Out-Null
         $brief = Join-Path $out 'brief.md'
         New-Brief $header $brief
