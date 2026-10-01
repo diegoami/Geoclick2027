@@ -24,7 +24,15 @@ GitHub rather than only to chat.
 - This matches release review: `review-handoff` is the implementing-side skill;
   `/review-release` invokes the independent `release-reviewer` agent.
 
-## Prepare the optional review prompt
+## Run it with the script (preferred)
+
+`pwsh scripts/external-review.ps1 -Pr <n>` reviews the PR head in a detached
+worktree and posts one comment. Models, in order, only on an infrastructure
+failure: GPT-5.6 Luna (high), GLM 5.3 Flash, DeepSeek V4.1 Flash; the
+implementer is left out. Run it in the background; relay every finding. Exit 3
+means nothing ran: use the manual prompt below. See `docs/EXTERNAL_REVIEW.md`.
+
+## Prepare the optional review prompt (manual route)
 
 1. Read the PR's current metadata from GitHub; don't guess the number, URL,
    state, base branch, or head SHA. Use `gh pr view <number> --json url,state,
