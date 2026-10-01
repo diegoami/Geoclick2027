@@ -37,6 +37,8 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
+# opencode writes UTF-8; without this its output is decoded as the console code page (mojibake in posted reviews).
+[Console]::OutputEncoding = [System.Text.UTF8Encoding]::new($false)
 New-Item -ItemType Directory -Force -Path $OutDir | Out-Null
 $stdoutFile = Join-Path $OutDir 'stdout.txt'
 $stderrFile = Join-Path $OutDir 'stderr.txt'

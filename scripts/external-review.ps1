@@ -143,11 +143,14 @@ function Validate-Review([string] $text, [string] $header, [string[]] $verdicts)
         }
         return $null
     }
-    if ($lines[0].Trim() -ne $header) { return $null }
-    $verdict = $lines[1].Trim()
+    # Blank lines between the header, the verdict and the body are harmless.
+    $nb = @($lines | Where-Object { $_.Trim() })
+    if ($nb.Count -lt 3 -or $nb[0].Trim() -ne $header) { return $null }
+    $verdict = $nb[1].Trim()
     if ($verdicts -notcontains $verdict) { return $null }
-    if ($lines[-1].Trim() -ne $verdict) { return $null }
-    return $t
+    if ($nb[-1].Trim() -ne $verdict) { return $null }
+    $body = ($nb[2..($nb.Count - 2)] -join "`n")
+    return "$header`n$verdict`n`n$body`n`n$verdict"
 }
 
 $verdictSet = if ($Kind -eq 'pr') { @('approve after named fixes', 'approve', 'rework', 'user decision') } else { @('AGREE', 'BLOCK') }
