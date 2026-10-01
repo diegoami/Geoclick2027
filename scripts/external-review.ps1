@@ -90,6 +90,11 @@ if (-not $DryRun) {
     & git -C $repo fetch -q origin 2>$null
     & git -C $repo worktree add -q --detach $wt $headSha
     if ((& git -C $wt rev-parse HEAD) -ne $headSha) { throw "worktree is not at $headSha" }
+    # The reviewer's own definition comes from the trusted checkout this script
+    # runs from, never from the PR head: the PR may predate it, or edit it.
+    $trusted = Join-Path (Split-Path -Parent $here) ".opencode/agents/$Agent.md"
+    New-Item -ItemType Directory -Force -Path "$wt/.opencode/agents" | Out-Null
+    Copy-Item $trusted "$wt/.opencode/agents/$Agent.md" -Force
     foreach ($f in $CopyFiles) { Copy-Item (Join-Path $repo $f) (Join-Path $wt $f) -Force }
     New-Item -ItemType Directory -Force -Path "$wt/rendered" | Out-Null
 }
