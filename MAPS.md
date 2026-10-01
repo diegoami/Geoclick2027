@@ -1513,8 +1513,10 @@ map extent and excluding the mapped country. The style draws this as
 quiet land beneath the blue sea background; it does not participate in
 target interaction. The existing `context` layer remains the mapped
 country's admin-1 geometry on towns maps and neighboring countries on
-Countries maps. `geoclickMap.ts` gives only city maps' mapped-country
-context a brighter fill, while the neighboring-land color stays muted.
+Countries maps. On single-country city maps, `geoclickMap.ts` gives the
+mapped-country context a brighter fill while nearby land stays muted. On
+multi-country city maps, the context layer contains the surrounding
+countries, so that entire context uses the brighter city treatment.
 Ordinary polygon targets are opaque so their palette is not tinted by the
 sea color beneath them. Since `land` is baked into PMTiles, changing its
 selection requires rebuilding the map tiles as well as the style.

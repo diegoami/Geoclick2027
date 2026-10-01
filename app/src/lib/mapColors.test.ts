@@ -154,6 +154,10 @@ describe('committed map colours', () => {
 			base.layers.find((l) => l.id === 'background')
 		);
 		expect(styleForMapFamily(base, { targets: [{ type: 'province' }] })).toBe(base);
+		expect(styleForMapFamily(base, { targets: [{ type: 'city' }, { type: 'province' }] })).toBe(
+			base
+		);
+		expect(styleForMapFamily(base, { targets: [] })).toBe(base);
 	});
 });
 

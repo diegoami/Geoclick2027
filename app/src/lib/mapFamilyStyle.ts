@@ -10,7 +10,8 @@ export function styleForMapFamily(
 	style: StyleSpecification,
 	mapDef: { targets: readonly Pick<Target, 'type'>[] }
 ): StyleSpecification {
-	if (mapDef.targets[0]?.type !== 'city') return style;
+	if (mapDef.targets.length === 0 || !mapDef.targets.every((target) => target.type === 'city'))
+		return style;
 
 	return {
 		...style,
