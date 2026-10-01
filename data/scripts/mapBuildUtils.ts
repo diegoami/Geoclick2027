@@ -178,12 +178,12 @@ export function selectCountryContext(country: string, outPath: string): void {
 	]);
 }
 
-// Land context for a map of several countries (#39): every country's outline
-// inside the box, clipped to it. A continent's cities need the borders
-// between countries rather than one country's admin-1 lines, and a
-// Countries map needs its neighbours - Europe without Turkey or Morocco
-// drawn in is a continent floating on sand. `exceptAdmins` leaves out the
-// targets themselves, which the targets layer already draws.
+// Land context from nearby admin-0 polygons, clipped to the box. A region
+// map uses it to distinguish neighboring land from sea; maps of several
+// countries use it for country outlines (a continent's cities need these
+// rather than one country's admin-1 lines, and a Countries map needs its
+// neighbours). `exceptAdmins` leaves out the mapped/target countries, which
+// the targets or context layer already draws.
 export function selectAdmin0Context(
 	bbox: [number, number, number, number],
 	outPath: string,

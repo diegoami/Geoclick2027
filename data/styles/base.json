@@ -21,6 +21,26 @@
 			}
 		},
 		{
+			"id": "land-fill",
+			"type": "fill",
+			"source": "targets",
+			"source-layer": "land",
+			"paint": {
+				"fill-color": "#e2ddd1",
+				"fill-opacity": 1
+			}
+		},
+		{
+			"id": "land-outline",
+			"type": "line",
+			"source": "targets",
+			"source-layer": "land",
+			"paint": {
+				"line-color": "#a5a094",
+				"line-width": 0.6
+			}
+		},
+		{
 			"id": "context-fill",
 			"type": "fill",
 			"source": "targets",
@@ -93,7 +113,7 @@
 					0.85,
 					["boolean", ["feature-state", "highlighted"], false],
 					0.85,
-					0.55
+					1
 				]
 			}
 		},

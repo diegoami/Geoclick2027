@@ -506,7 +506,7 @@ async function main() {
 		: source
 			? path.resolve(REPO_ROOT, source)
 			: SOURCE_SHP;
-	const missing = missingSources([sourceShp, LAKES_SHP, ...PHYSICAL_SHPS]);
+	const missing = missingSources([sourceShp, ADMIN0_SHP, LAKES_SHP, ...PHYSICAL_SHPS]);
 	if (missing.length > 0) {
 		console.error(
 			`Source shapefile(s) not found:\n  ${missing.join('\n  ')}\n` +
@@ -523,6 +523,7 @@ async function main() {
 	const labelsPath = path.join(absOutDir, '.tmp-labels.geojson');
 	const lakesPath = path.join(absOutDir, '.tmp-lakes.geojson');
 	const contextPath = path.join(absOutDir, '.tmp-context.geojson');
+	const landPath = path.join(absOutDir, '.tmp-land.geojson');
 	const physical = physicalPaths(absOutDir);
 	const mbtilesPath = path.join(absOutDir, '.tmp-tiles.mbtiles');
 	const pmtilesPath = path.join(absOutDir, 'tiles.pmtiles');
@@ -843,12 +844,14 @@ async function main() {
 	// Sea, rivers and named terrain (FT-33) - off by default in the app,
 	// behind the map bar's Terrain button.
 	selectPhysical(padBbox(overallBboxOf(targets)), physical, padBbox(overallBboxOf(targets), 0.05));
-	// The countries around a Countries map, drawn as land but not asked
-	// (#39). Only for --level=country, so every admin-1 map's tiles are
-	// unchanged.
+	// Countries around a Countries map are non-target context (#39). An
+	// admin-1 map instead needs nearby land outside its own country: without
+	// that geometry the sea background reads as water around landlocked maps.
 	if (countryLevel) {
 		const targetAdmins = geojson.features.map((f) => f.properties.ADMIN as string);
 		selectAdmin0Context(padBbox(overallBboxOf(targets)), contextPath, targetAdmins);
+	} else {
+		selectAdmin0Context(padBbox(overallBboxOf(targets)), landPath, [country]);
 	}
 
 	console.log('[5/6] Building vector tiles (tippecanoe + pmtiles convert)...');
@@ -867,11 +870,15 @@ async function main() {
 		`labels:${labelsPath}`,
 		'-L',
 		`lakes:${lakesPath}`,
-		...(countryLevel ? ['-L', `context:${contextPath}`] : [])
+		...(countryLevel ? ['-L', `context:${contextPath}`] : ['-L', `land:${landPath}`])
 	]);
 	pmtilesConvert(mbtilesPath, pmtilesPath);
 	// Its own archive, fetched only when the player switches Terrain on.
-	buildTerrainTileset(physical, { absOutDir, mapName, bbox: padBbox(overallBboxOf(targets)) });
+	buildTerrainTileset(physical, {
+		absOutDir,
+		mapName,
+		bbox: padBbox(overallBboxOf(targets))
+	});
 
 	console.log('[6/6] Cleaning up...');
 	rmSync(filteredPath);
@@ -879,6 +886,7 @@ async function main() {
 	rmSync(labelsPath);
 	rmSync(lakesPath);
 	if (countryLevel) rmSync(contextPath);
+	else rmSync(landPath);
 	cleanupPhysical(physical);
 	rmSync(mbtilesPath);
 

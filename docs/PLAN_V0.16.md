@@ -1,7 +1,7 @@
 # v0.16.0 - Map selection, map readability, and tutorial refresh
 
 Proposal [#125](https://github.com/diegoami/Geoclick2027/issues/125), approved
-by the product owner on 2026-09-30; scope addition [#140](https://github.com/diegoami/Geoclick2027/issues/140), approved on 2026-09-30. Each task below is a separate PR, with its own tests and gates. Recommended answers to all proposal questions were accepted. The tutorial task is last so its audit reflects the UI after the preceding changes.
+by the product owner on 2026-09-30; scope additions [#140](https://github.com/diegoami/Geoclick2027/issues/140), approved on 2026-09-30, and [#146](https://github.com/diegoami/Geoclick2027/issues/146), approved on 2026-10-01. Each task below is a separate PR, with its own tests and gates. Recommended answers to all proposal questions were accepted. The tutorial task is last so its audit reflects the UI after the preceding changes.
 
 ## Agreed scope
 
@@ -22,6 +22,9 @@ by the product owner on 2026-09-30; scope addition [#140](https://github.com/die
   changes.
 - Improve towns-map land, border, and sea contrast without changing polygon
   region colors.
+- Distinguish sea from surrounding land, use quiet surrounding land on region
+  maps and a more vivid national context on city maps, and avoid tinting the
+  region palette with the sea color.
 - Move the version/build badge from bottom to top; keep Tour controls clear of
   the fact card and use icons for actions.
 - Show the bundled chart SVG as non-interactive filler outside MapLibre viewports
@@ -45,9 +48,10 @@ by the product owner on 2026-09-30; scope addition [#140](https://github.com/die
 | 6 | Version badge at the top | Merged (PR #141) |
 | 7 | Tour icon controls and non-overlapping fact card | Merged (PR #143) |
 | 8 | Chart SVG filler outside map viewport | Merged (PR #144) |
-| 9 | Spine-following labels in all map views | In progress |
+| 9 | Spine-following labels in all map views | Merged (PR #145) |
 | 10 | Open the selected map immediately when its map type is chosen | Merged (PR #142; approved proposal #140) |
-| 11 | Full tutorial audit, rewrite, translations, and manual | Planned; last |
+| 11 | Map-family land context and color separation | In progress (approved proposal #146) |
+| 12 | Full tutorial audit, rewrite, translations, and manual | Planned; last |
 
 Each task is independently testable and follows the implementation split in
 proposal #125. Any scope change returns to the proposal for owner agreement.

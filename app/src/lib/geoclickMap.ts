@@ -13,6 +13,7 @@ import { TerrainLayer } from './terrainLayer';
 import { HideButtonsControl } from './hideButtonsControl.svelte';
 import { tutorialMapGesture } from './tutorial.svelte';
 import { ensurePmtilesProtocol, registerTilesArchive } from './pmtilesSource';
+import { styleForMapFamily } from './mapFamilyStyle';
 
 export async function fetchMapDefAndStyle(
 	mapId: string
@@ -50,7 +51,7 @@ export async function fetchMapDefAndStyle(
 			}
 		}
 	};
-	return { mapDef, style };
+	return { mapDef, style: styleForMapFamily(style, mapDef) };
 }
 
 /**

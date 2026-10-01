@@ -1506,6 +1506,19 @@ open questions:**
   admin-1 borders behind the markers, and `germany-states` (a polygon
   map) renders unchanged with no console errors.
 
+**Land context and family colors (v0.16, proposal #146):** admin-1 maps
+and single-country towns maps now carry a separate `land` source-layer
+made from nearby Natural Earth admin-0 polygons, clipped to the padded
+map extent and excluding the mapped country. The style draws this as
+quiet land beneath the blue sea background; it does not participate in
+target interaction. The existing `context` layer remains the mapped
+country's admin-1 geometry on towns maps and neighboring countries on
+Countries maps. `geoclickMap.ts` gives only city maps' mapped-country
+context a brighter fill, while the neighboring-land color stays muted.
+Ordinary polygon targets are opaque so their palette is not tinted by the
+sea color beneath them. Since `land` is baked into PMTiles, changing its
+selection requires rebuilding the map tiles as well as the style.
+
 **Sequencing:** `italy-provinces` needed none of the above and shipped
 first. `italy-towns-100k`/`germany-towns-100k` needed all of it —
 `build-points-map.ts`, the `targets-circle` style layer, the

@@ -339,7 +339,7 @@ async function main() {
 		);
 		process.exit(1);
 	}
-	const missing = missingSources([sourcePath, LAKES_SHP, ...PHYSICAL_SHPS]);
+	const missing = missingSources([sourcePath, ADMIN0_SHP, LAKES_SHP, ...PHYSICAL_SHPS]);
 	if (missing.length > 0) {
 		console.error(
 			`Source shapefile(s) not found:\n  ${missing.join('\n  ')}\n` +
@@ -355,6 +355,7 @@ async function main() {
 	const targetsPath = path.join(absOutDir, '.tmp-targets.geojson');
 	const lakesPath = path.join(absOutDir, '.tmp-lakes.geojson');
 	const contextPath = path.join(absOutDir, '.tmp-context.geojson');
+	const landPath = path.join(absOutDir, '.tmp-land.geojson');
 	const physical = physicalPaths(absOutDir);
 	const mbtilesPath = path.join(absOutDir, '.tmp-tiles.mbtiles');
 	const pmtilesPath = path.join(absOutDir, 'tiles.pmtiles');
@@ -592,6 +593,9 @@ async function main() {
 		selectAdmin0Context(padBbox(overallBboxOf(targets)), contextPath);
 	} else {
 		selectCountryContext(country, contextPath);
+		// Separate the mapped country's context (colored for city maps) from
+		// neighboring land, which stays subdued and distinct from the sea.
+		selectAdmin0Context(padBbox(overallBboxOf(targets)), landPath, [country]);
 	}
 
 	console.log('[4/5] Building vector tiles (tippecanoe + pmtiles convert)...');
@@ -620,17 +624,23 @@ async function main() {
 		'-L',
 		`lakes:${lakesPath}`,
 		'-L',
-		`context:${contextPath}`
+		`context:${contextPath}`,
+		...(multiCountry ? [] : ['-L', `land:${landPath}`])
 	]);
 	pmtilesConvert(mbtilesPath, pmtilesPath);
 	// Its own archive, fetched only when the player switches Terrain on.
-	buildTerrainTileset(physical, { absOutDir, mapName, bbox: padBbox(overallBboxOf(targets)) });
+	buildTerrainTileset(physical, {
+		absOutDir,
+		mapName,
+		bbox: padBbox(overallBboxOf(targets))
+	});
 
 	console.log('[5/5] Cleaning up...');
 	rmSync(filteredPath);
 	rmSync(targetsPath);
 	rmSync(lakesPath);
 	rmSync(contextPath);
+	if (!multiCountry) rmSync(landPath);
 	cleanupPhysical(physical);
 	rmSync(mbtilesPath);
 
