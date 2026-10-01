@@ -7,7 +7,9 @@
   dataDir, stdout, stderr, text }. Exit code 0 when class is "ok", otherwise 4.
   Failure classes: ok, no-session, idle-timeout, total-timeout,
   exited-without-session, nonzero-exit, permission-rejected, default-agent,
-  cut-off, unknown-model, unknown-agent, no-executable.
+  cut-off, unknown-model, unknown-agent, no-executable, no-auth (neither an
+  auth.json nor a console login in the data dir). A cut-off run still returns
+  its text in result.json so the caller can post it flagged.
 
   Notes that cost a day to learn (see docs/EXTERNAL_REVIEW.md):
   - Starts the real opencode.exe, not the npm .cmd shim (the shim cannot carry
@@ -232,7 +234,7 @@ if ($export) {
     if ($assistant.Count) {
         $last = $assistant[-1]
         $text = (($last.parts | Where-Object { $_.type -eq 'text' } | ForEach-Object { $_.text }) -join "`n").Trim()
-        if ($last.info.finish -and $last.info.finish -ne 'stop') { Finish 'cut-off' "final message finish=$($last.info.finish)" }
+        if ($last.info.finish -and $last.info.finish -ne 'stop') { $script:result.text = $text; Finish 'cut-off' "final message finish=$($last.info.finish)" }
     }
 }
 if (-not $text) { Finish 'cut-off' 'no final assistant text in the session export' }

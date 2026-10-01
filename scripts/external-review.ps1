@@ -24,6 +24,11 @@
   -FromFile <file> runs a saved model message through the same parser, so a
   review already paid for is never thrown away.
   -SelfTest runs the parser's sample outputs and exits.
+
+  Watcher failure classes the caller sees: no-session, idle-timeout,
+  total-timeout, exited-without-session, nonzero-exit, permission-rejected,
+  default-agent, cut-off, unknown-model, unknown-agent, no-executable, no-auth,
+  and no-review (no header line anywhere in a run that otherwise succeeded).
 #>
 param(
     [int] $Pr,
@@ -102,7 +107,8 @@ if (-not $chain.Count) { Unavailable 'every model in the chain is excluded' }
 # --- worktree --------------------------------------------------------------------
 $review = "$repo-review"
 $wt = "$review/$Kind$subject-review-$token"
-if (-not $DryRun) {
+$makeWorktree = -not $DryRun -and -not $FromFile   # -FromFile needs no worktree
+if ($makeWorktree) {
     New-Item -ItemType Directory -Force -Path $review | Out-Null
     & git -C $repo fetch -q origin 2>$null
     & git -C $repo worktree add -q --detach $wt $headSha
@@ -115,7 +121,7 @@ if (-not $DryRun) {
     foreach ($f in $CopyFiles) { Copy-Item (Join-Path $repo $f) (Join-Path $wt $f) -Force }
     New-Item -ItemType Directory -Force -Path "$wt/rendered" | Out-Null
 }
-$work = if ($DryRun) { $repo } else { $wt }
+$work = if ($makeWorktree) { $wt } else { $repo }
 
 function New-Brief([string] $header, [string] $path) {
     $verdicts = if ($Kind -eq 'pr') { 'approve | approve after named fixes | rework | user decision' } else { 'AGREE | BLOCK (BLOCK if any finding is MUST-FIX)' }
@@ -215,7 +221,13 @@ try {
         $result = Get-Content (Join-Path $out 'result.json') -Raw | ConvertFrom-Json
         $class = $result.class
         $parsed = $null
-        if ($class -eq 'ok') {
+        if ($class -eq 'cut-off' -and $result.text) {
+            # The run ended early but left text: never throw a readable review away.
+            $parsed = Read-Review -Text $result.text -Header $header -Verdicts $verdictSet
+            if ($parsed.Status -eq 'ok') { $parsed.Status = 'cut-off'; $parsed.Note = 'may be cut off' }
+            if ($parsed.Status -ne 'none') { $class = 'ok' }
+        }
+        if ($class -eq 'ok' -and -not $parsed) {
             $parsed = Read-Review -Text $result.text -Header $header -Verdicts $verdictSet
             if ($parsed.Status -eq 'none') { $class = 'no-review'; $result.detail = 'no header line anywhere in the final message' }
         }
@@ -231,7 +243,7 @@ try {
         break
     }
 } finally {
-    if (-not $DryRun) {
+    if ($makeWorktree) {
         & git -C $repo worktree remove --force $wt 2>&1 | Out-Null
         Write-Host "worktree removed: $wt"
     }

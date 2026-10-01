@@ -7,7 +7,7 @@
   cannot be read, or that looks cut off, is still posted, flagged, with no
   label, and the caller decides.
 
-  Read-Review returns { Status; Verdict; Text; Note; Rewrites } with Status one of
+  Read-Review returns { Status; Verdict; Text; Note } with Status one of
     ok                 header, verdict and closing verdict all read
     verdict-unreadable header found, verdict not in the allowed set (or opening
                        and closing verdicts disagree)
@@ -38,7 +38,7 @@ function Read-Review {
         [string] $Header,            # the header this run asked for (used for the posted copy)
         [string[]] $Verdicts
     )
-    $r = [pscustomobject]@{ Status = 'none'; Verdict = $null; Text = $null; Note = $null; Rewrites = 0 }
+    $r = [pscustomobject]@{ Status = 'none'; Verdict = $null; Text = $null; Note = $null }
     if (-not $Text) { return $r }
     $t = ($Text -replace "`r`n", "`n").Trim()
     $lines = @($t -split "`n")

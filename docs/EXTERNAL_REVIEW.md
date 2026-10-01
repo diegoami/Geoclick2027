@@ -26,6 +26,10 @@ non-empty lines; a one-line review is accepted. A review whose verdict cannot be
 read, or that has no closing verdict, is posted anyway with a first line
 `> Note from external-review.ps1: verdict unreadable` (or `may be cut off`), no
 label, exit 4. Closing keywords before `#n` are rewritten to `see #n` and logged.
+Failure classes: no-session, idle-timeout, total-timeout, exited-without-session,
+nonzero-exit, permission-rejected, default-agent, cut-off, unknown-model,
+unknown-agent, no-executable, no-auth, no-review. A cut-off run that left text is
+posted flagged, like any other doubtful review.
 `-FromFile <file>` pushes a saved message through the same parser; with
 `-DryRun` it prints what would be posted, the note line and the exit code.
 
