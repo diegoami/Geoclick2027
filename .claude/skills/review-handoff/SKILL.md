@@ -57,7 +57,18 @@ Standing owner decisions:
 
 Make sure the `review` label exists (`gh label list`).
 
-## Give the owner the command
+## Run it with the script (preferred)
+
+`pwsh scripts/external-review.ps1 -Issue <n> -Kind release` runs the review in
+a detached worktree and posts one verdict comment on the milestone issue. Models,
+in order, only on an infrastructure failure: GPT-5.6 Luna (high), GLM 5.3 Flash,
+DeepSeek V4.1 Flash; the implementer is left out. Run it in the background and
+watch the log. Exit 3 means nothing ran and nothing was posted: record why and
+give the owner the manual command below. The model never opens finding issues;
+reproduce each finding it lists and open the issues yourself. See
+`docs/EXTERNAL_REVIEW.md`.
+
+## Give the owner the command (manual route)
 
 Pick a reviewer model that implemented none of the release. Then, from the main
 checkout, start it in a fresh session:
