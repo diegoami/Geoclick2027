@@ -235,13 +235,23 @@
 				if (shown && popup.getElement()?.textContent !== shown) popup.setText(shown);
 				const target = targetsById.get(id);
 				if (shown && target?.spine && target.type !== 'city')
-					stretched?.set(id, { name: shown, spine: target.spine, tier: 'known', popup });
+					stretched?.set(id, {
+						name: shown,
+						spine: target.spine,
+						tier: solvedTiers.get(id) ?? 'known',
+						popup
+					});
 			}
 		});
 	});
 	// Counts up with every name placed, so the newest label outranks the ones
 	// already on the map when they fight for the same spot.
 	let labelPriority = 0;
+	// The SVG labels have their own DOM, so preserve the answered vs revealed
+	// distinction when a language change redraws them.
+	// Plain Map: only read by an effect and clearAllVisuals, never the template.
+	// eslint-disable-next-line svelte/prefer-svelte-reactivity
+	const solvedTiers = new Map<string, 'known' | 'seen'>();
 
 	let complete = $derived(session ? isSessionComplete(session) : false);
 	let score = $derived(session ? scoreSession(session) : undefined);
@@ -474,11 +484,13 @@
 		});
 		solvedPopups.set(targetId, popup);
 		const target = mapDef?.targets.find((t) => t.id === targetId);
+		const tier = revealed ? 'seen' : 'known';
+		solvedTiers.set(targetId, tier);
 		if (target?.spine && target.type !== 'city')
 			stretched?.set(targetId, {
 				name: shownName(targetId, name),
 				spine: target.spine,
-				tier: revealed ? 'seen' : 'known',
+				tier,
 				popup
 			});
 
@@ -629,8 +641,12 @@
 				{ quizCorrect: false, quizRevealed: false, quizHover: false, quizWrong: false }
 			);
 		}
-		for (const popup of solvedPopups.values()) popup.remove();
+		for (const [id, popup] of solvedPopups) {
+			popup.remove();
+			stretched?.delete(id);
+		}
 		solvedPopups.clear();
+		solvedTiers.clear();
 		told = undefined;
 	}
 
