@@ -621,7 +621,7 @@ Each step is a white card with the step number ("Step 1 of 14"), a short
 instruction, and buttons. The rest of the screen is dimmed, except for the
 thing the step is about, which is outlined in orange:
 
-![Step 1: the Italy — Regions card is highlighted](manual/tutorial-step1.jpg)
+![Italy's map-selection row highlighted during the tutorial](manual/tutorial-step1.jpg)
 
 Everything on the screen still works during the tutorial; the dimming is
 only there to draw the eye.
