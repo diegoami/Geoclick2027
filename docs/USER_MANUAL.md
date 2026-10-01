@@ -596,9 +596,10 @@ you to do the real thing on the real screens, and waits until you have.
 It always uses Italy — Regions, takes about three minutes, and works in
 English, German and Italian.
 
-**Nothing you do in the tutorial counts.** Its quiz uses a separate,
-temporary record, so your real progress on Italy — Regions (and on every
-other map) is untouched, and Italy — Regions doesn't land in Recent.
+**The tutorial's practice on Italy — Regions doesn't change your real
+progress.** Its quiz uses a separate, temporary record, and Italy — Regions
+doesn't land in Recent. If you leave the tutorial and play another map while
+it is paused, that map behaves normally and records your progress.
 
 ### Starting it
 
@@ -610,10 +611,9 @@ It opens with a welcome card:
 
 ![The tutorial's welcome card](manual/tutorial-intro.jpg)
 
-"Welcome to Geoclick. Learn the map by playing with it. This short
-tutorial takes about three minutes and you'll try every part of the app
-yourself. Nothing you do in it counts towards your progress." **Start**
-begins; **Skip** closes it.
+"Welcome to Geoclick. Learn the map by playing. This three-minute tutorial
+introduces the app's main features. Your practice on Italy — Regions won't
+change your real progress." **Start** begins; **Exit tutorial** closes it.
 
 ### What it looks like
 
@@ -632,12 +632,12 @@ only there to draw the eye.
 |---|---|---|---|
 | 1 | home page, the world map | "Every map starts from the world. Choose **Europe**." | the map opens Europe |
 | 2 | home page, Europe | "Now click **Italy** on the map. Its row in the list lights up." | you click Italy |
-| 3 | home page, Europe | "Italy's maps are in its row's list. Choose **Regions**." | you open Italy — Regions |
+| 3 | home page, Europe | "Choose **Regions** in Italy's row to open that map." | you open Italy — Regions |
 | 4 | the Known map | "Zoom with the mouse wheel or the **+** and **−** buttons, and drag the map to move around. Try it now." | you zoom or move the map |
 | 5 | the Known map | "This is **Known**, the map you build. Click a region to put its name on the map — it stays there. Click it again to take it off, so you choose which names to study." | you click a region and its name lands on the map |
-| 6 | the Known map | "The sea, the rivers and the mountains behind the map are the **Terrain** layer — the Alps, the Apennines, the Adriatic. They are on so a region has something to sit against. Press **Terrain** to switch them off, and again to bring them back." | you press **Terrain**, either direction |
+| 6 | the Known map | "**Terrain** adds geographic detail behind the map, including rivers, mountain ranges and the sea overlay. The land and sea remain distinct when Terrain is off. Press **Terrain** to hide or show this extra detail." | you press **Terrain**, either direction |
 | 7 | the Known map, then overview | "Names you place right in the quiz appear here on their own, as strongly as you know them. New to a map? **Overview** shows every name at once — open it." | you open the Overview |
-| 8 | overview | "Ready to test yourself for real? Open the **Quiz**." | you open the Quiz |
+| 8 | overview | "Ready for a quiz? Open the **Quiz**." | you open the Quiz |
 | 9 | quiz | "Drag a name from the tray onto its region. Try **Sicilia**: the big island off the toe of the boot." | you place any name correctly |
 | 10 | quiz | "Now get one wrong on purpose: drag **any** name onto a region it does not belong to — **Sardegna** onto the mainland, say. The region you hit flashes red, and the name is shown where it really belongs." | you make a wrong drop |
 | 11 | quiz | "Not sure where a region is? Look it up in the **overview**." | you open the Overview |
@@ -687,11 +687,11 @@ Tutorial button." **Finish** ends the tutorial and leaves you on the tour;
 
 ### The buttons on the cards
 
-- **Next** only appears on the two explanation steps (3 and 10), and on
-  a step whose action you've already done.
+- **Next** appears on the explanation step (13) and on a step whose
+  required action you've already done.
 - **Back** goes to the previous step, and to its screen if that's
   somewhere else.
-- **Skip** ends the tutorial at once. The **Esc** key does the same.
+- **Exit tutorial** ends the tutorial at once. The **Esc** key does the same.
 
 ### Wandering off
 

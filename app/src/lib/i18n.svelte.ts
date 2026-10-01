@@ -343,7 +343,7 @@ const en: Dictionary = {
 	'tour.progress': 'Step {current} of {total}',
 	'tutorial.button': 'Tutorial',
 	'tutorial.start': 'Start',
-	'tutorial.skip': 'Skip',
+	'tutorial.skip': 'Exit tutorial',
 	'tutorial.back': 'Back',
 	'tutorial.next': 'Next',
 	'tutorial.finish': 'Finish',
@@ -354,14 +354,14 @@ const en: Dictionary = {
 	'tutorial.end': 'End tutorial',
 	'tutorial.intro.title': 'Welcome to Geoclick',
 	'tutorial.intro.body':
-		"Learn the map by playing with it. This short tutorial takes about three minutes and you'll try every part of the app yourself. Nothing you do in it counts towards your progress.",
+		"Learn the map by playing. This three-minute tutorial introduces the app's main features. Your practice on Italy — Regions won't change your real progress.",
 	'tutorial.outro.title': "You're all set",
 	'tutorial.outro.body':
 		'Pick any map and play. Tip: the star on a map keeps it at the top of your list. You can replay this tutorial any time with the Tutorial button.',
 	'tutorial.continent': 'Every map starts from the world. Choose **Europe**.',
 	'tutorial.country': 'Now click **Italy** on the map. Its row in the list lights up.',
 	'tutorial.country.touch': 'Now tap **Italy** on the map. Its row in the list lights up.',
-	'tutorial.step1': "Italy's maps are in its row's list. Choose **Regions**.",
+	'tutorial.step1': "Choose **Regions** in Italy's row to open that map.",
 	'tutorial.step2':
 		'Zoom with the mouse wheel or the **+** and **−** buttons, and drag the map to move around. Try it now.',
 	'tutorial.step2.touch':
@@ -371,14 +371,14 @@ const en: Dictionary = {
 	'tutorial.step3.touch':
 		'This is **Known**, the map you build. Tap a region to put its name on the map — it stays there. Tap it again to take it off, so you choose which names to study.',
 	'tutorial.terrain':
-		'The sea, the rivers and the mountains behind the map are the **Terrain** layer — the Alps, the Apennines, the Adriatic. They are on so a region has something to sit against. Press **Terrain** to switch them off, and again to bring them back.',
+		'**Terrain** adds geographic detail behind the map, including rivers, mountain ranges and the sea overlay. The land and sea remain distinct when Terrain is off. Press **Terrain** to hide or show this extra detail.',
 	'tutorial.terrain.touch':
-		'The sea, the rivers and the mountains behind the map are the **Terrain** layer — the Alps, the Apennines, the Adriatic. They are on so a region has something to sit against. Tap **Terrain** to switch them off, and again to bring them back.',
+		'**Terrain** adds geographic detail behind the map, including rivers, mountain ranges and the sea overlay. The land and sea remain distinct when Terrain is off. Tap **Terrain** to hide or show this extra detail.',
 	'tutorial.step4':
 		'Names you place right in the quiz appear here on their own, as strongly as you know them. New to a map? **Overview** shows every name at once — open it.',
 	'tutorial.step4.touch':
 		'Names you place right in the quiz appear here on their own, as strongly as you know them. New to a map? **Overview** shows every name at once — open it.',
-	'tutorial.step5': 'Ready to test yourself for real? Open the **Quiz**.',
+	'tutorial.step5': 'Ready for a quiz? Open the **Quiz**.',
 	'tutorial.step6':
 		'Drag a name from the tray onto its region. Try **Sicilia**: the big island off the toe of the boot.',
 	'tutorial.step7':
@@ -539,7 +539,7 @@ const de: Dictionary = {
 	'tour.progress': 'Schritt {current} von {total}',
 	'tutorial.button': 'Tutorial',
 	'tutorial.start': "Los geht's",
-	'tutorial.skip': 'Überspringen',
+	'tutorial.skip': 'Tutorial beenden',
 	'tutorial.back': 'Zurück',
 	'tutorial.next': 'Weiter',
 	'tutorial.finish': 'Fertig',
@@ -550,7 +550,7 @@ const de: Dictionary = {
 	'tutorial.end': 'Tutorial beenden',
 	'tutorial.intro.title': 'Willkommen bei Geoclick',
 	'tutorial.intro.body':
-		'Lerne die Karte, indem du mit ihr spielst. Dieses kurze Tutorial dauert etwa drei Minuten, und du probierst jeden Teil der App selbst aus. Was du dabei machst, zählt nicht für deinen Fortschritt.',
+		'Lerne die Karte spielend kennen. In etwa drei Minuten zeigt dir das Tutorial die wichtigsten Funktionen. Dein Üben auf Italien — Regionen verändert deinen echten Lernfortschritt nicht.',
 	'tutorial.outro.title': 'Alles bereit',
 	'tutorial.outro.body':
 		'Wähle eine beliebige Karte und leg los. Tipp: Mit dem Stern bleibt eine Karte oben in deiner Liste. Du kannst dieses Tutorial jederzeit über die Schaltfläche „Tutorial“ wiederholen.',
@@ -559,7 +559,7 @@ const de: Dictionary = {
 		'Klicke jetzt auf der Karte auf **Italien**. Seine Zeile in der Liste leuchtet auf.',
 	'tutorial.country.touch':
 		'Tippe jetzt auf der Karte auf **Italien**. Seine Zeile in der Liste leuchtet auf.',
-	'tutorial.step1': 'Italiens Karten stehen in der Auswahlliste seiner Zeile. Wähle **Regionen**.',
+	'tutorial.step1': 'Wähle **Regionen** in Italiens Zeile, um diese Karte zu öffnen.',
 	'tutorial.step2':
 		'Zoome mit dem Mausrad oder den Tasten **+** und **−**, und ziehe die Karte, um dich zu bewegen. Probier es aus.',
 	'tutorial.step2.touch':
@@ -569,14 +569,14 @@ const de: Dictionary = {
 	'tutorial.step3.touch':
 		'Das ist **Gewusst**, deine eigene Karte. Tippe auf eine Region, um ihren Namen daraufzusetzen — er bleibt dort stehen. Noch einmal tippen nimmt ihn wieder weg: So wählst du selbst, welche Namen du lernen willst.',
 	'tutorial.terrain':
-		'Das Meer, die Flüsse und die Berge hinter der Karte sind die Ebene **Gelände** — die Alpen, der Apennin, die Adria. Sie sind an, damit eine Region etwas hat, wogegen sie sich abhebt. Drücke **Gelände**, um sie auszuschalten, und noch einmal, um sie zurückzuholen.',
+		'**Gelände** ergänzt geografische Details hinter der Karte, darunter Flüsse, Gebirge und die Meeresdarstellung. Land und Meer bleiben auch ohne Gelände unterscheidbar. Drücke auf **Gelände**, um diese Details ein- oder auszublenden.',
 	'tutorial.terrain.touch':
-		'Das Meer, die Flüsse und die Berge hinter der Karte sind die Ebene **Gelände** — die Alpen, der Apennin, die Adria. Sie sind an, damit eine Region etwas hat, wogegen sie sich abhebt. Tippe auf **Gelände**, um sie auszuschalten, und noch einmal, um sie zurückzuholen.',
+		'**Gelände** ergänzt geografische Details hinter der Karte, darunter Flüsse, Gebirge und die Meeresdarstellung. Land und Meer bleiben auch ohne Gelände unterscheidbar. Tippe auf **Gelände**, um diese Details ein- oder auszublenden.',
 	'tutorial.step4':
 		'Namen, die du im Quiz richtig platzierst, erscheinen hier von selbst — so deutlich, wie du sie kennst. Neu auf einer Karte? Die **Übersicht** zeigt alle Namen auf einmal. Öffne sie.',
 	'tutorial.step4.touch':
 		'Namen, die du im Quiz richtig platzierst, erscheinen hier von selbst — so deutlich, wie du sie kennst. Neu auf einer Karte? Die **Übersicht** zeigt alle Namen auf einmal. Öffne sie.',
-	'tutorial.step5': 'Bereit für den echten Test? Öffne das **Quiz**.',
+	'tutorial.step5': 'Bereit für ein Quiz? Öffne das **Quiz**.',
 	'tutorial.step6':
 		'Ziehe einen Namen aus der Ablage auf seine Region. Versuch es mit **Sicilia**, der großen Insel vor der Stiefelspitze.',
 	'tutorial.step7':
@@ -737,7 +737,7 @@ const it: Dictionary = {
 	'tour.progress': 'Passaggio {current} di {total}',
 	'tutorial.button': 'Tutorial',
 	'tutorial.start': 'Inizia',
-	'tutorial.skip': 'Salta',
+	'tutorial.skip': 'Esci dal tutorial',
 	'tutorial.back': 'Indietro',
 	'tutorial.next': 'Avanti',
 	'tutorial.finish': 'Fine',
@@ -748,7 +748,7 @@ const it: Dictionary = {
 	'tutorial.end': 'Termina il tutorial',
 	'tutorial.intro.title': 'Ti diamo il benvenuto in Geoclick',
 	'tutorial.intro.body':
-		"Impara la mappa giocandoci. Questo breve tutorial dura circa tre minuti e proverai in prima persona ogni parte dell'app. Quello che fai qui non conta per i tuoi progressi.",
+		"Impara la mappa giocando. In circa tre minuti il tutorial ti mostra le funzioni principali. L'esercitazione su Italia — Regioni non modifica i tuoi progressi reali.",
 	'tutorial.outro.title': 'Tutto pronto',
 	'tutorial.outro.body':
 		"Scegli una mappa qualsiasi e gioca. Suggerimento: con la stella una mappa resta in cima all'elenco. Puoi rifare questo tutorial quando vuoi con il pulsante Tutorial.",
@@ -757,7 +757,7 @@ const it: Dictionary = {
 		"Ora fai clic sull'**Italia** nella mappa. La sua riga nell'elenco si illumina.",
 	'tutorial.country.touch':
 		"Ora tocca l'**Italia** sulla mappa. La sua riga nell'elenco si illumina.",
-	'tutorial.step1': "Le mappe dell'Italia sono nell'elenco della sua riga. Scegli **Regioni**.",
+	'tutorial.step1': "Scegli **Regioni** nella riga dell'Italia per aprire questa mappa.",
 	'tutorial.step2':
 		'Usa la rotellina del mouse o i pulsanti **+** e **−** per lo zoom, e trascina la mappa per spostarti. Prova ora.',
 	'tutorial.step2.touch':
@@ -767,14 +767,14 @@ const it: Dictionary = {
 	'tutorial.step3.touch':
 		'Questa è **Conoscenza**, la mappa che costruisci tu. Tocca una regione per mettere il suo nome sulla mappa: resta lì. Toccala di nuovo per toglierlo — scegli tu quali nomi studiare.',
 	'tutorial.terrain':
-		"Il mare, i fiumi e le montagne dietro la mappa sono il livello **Rilievo** — le Alpi, gli Appennini, l'Adriatico. Sono attivi così una regione ha qualcosa su cui appoggiarsi. Premi **Rilievo** per spegnerli, e di nuovo per riaccenderli.",
+		'**Rilievo** aggiunge dettagli geografici dietro la mappa, tra cui fiumi, catene montuose e la rappresentazione del mare. Terra e mare restano distinti anche quando Rilievo è disattivato. Premi **Rilievo** per nascondere o mostrare questi dettagli.',
 	'tutorial.terrain.touch':
-		"Il mare, i fiumi e le montagne dietro la mappa sono il livello **Rilievo** — le Alpi, gli Appennini, l'Adriatico. Sono attivi così una regione ha qualcosa su cui appoggiarsi. Tocca **Rilievo** per spegnerli, e di nuovo per riaccenderli.",
+		'**Rilievo** aggiunge dettagli geografici dietro la mappa, tra cui fiumi, catene montuose e la rappresentazione del mare. Terra e mare restano distinti anche quando Rilievo è disattivato. Tocca **Rilievo** per nascondere o mostrare questi dettagli.',
 	'tutorial.step4':
 		'I nomi che indovini nel quiz compaiono qui da soli, con la forza con cui li sai. Mappa nuova? La **Panoramica** mostra tutti i nomi insieme: aprila.',
 	'tutorial.step4.touch':
 		'I nomi che indovini nel quiz compaiono qui da soli, con la forza con cui li sai. Mappa nuova? La **Panoramica** mostra tutti i nomi insieme: aprila.',
-	'tutorial.step5': 'Ora la prova vera: apri il **Quiz**.',
+	'tutorial.step5': 'Vuoi fare un quiz? Apri il **Quiz**.',
 	'tutorial.step6':
 		"Trascina un nome dal vassoio sulla sua regione. Prova con **Sicilia**, l'isola grande davanti alla punta dello stivale.",
 	'tutorial.step7':

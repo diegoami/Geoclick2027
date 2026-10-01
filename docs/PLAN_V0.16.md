@@ -33,8 +33,8 @@ by the product owner on 2026-09-30; scope additions [#140](https://github.com/di
   towns remain point labels and regions without usable spines use the popup
   fallback.
 - Thoroughly audit and revise every tutorial step against current behavior,
-  all supported languages, and the user manual. The visible Skip action says
-  "Exit tutorial"; Escape remains a keyboard shortcut.
+  all supported languages, and the user manual. The visible exit action is
+  labelled "Exit tutorial"; Escape remains a keyboard shortcut.
 
 ## Tasks
 
@@ -50,8 +50,8 @@ by the product owner on 2026-09-30; scope additions [#140](https://github.com/di
 | 8 | Chart SVG filler outside map viewport | Merged (PR #144) |
 | 9 | Spine-following labels in all map views | Merged (PR #145) |
 | 10 | Open the selected map immediately when its map type is chosen | Merged (PR #142; approved proposal #140) |
-| 11 | Map-family land context and color separation | In progress (approved proposal #146) |
-| 12 | Full tutorial audit, rewrite, translations, and manual | Planned; last |
+| 11 | Map-family land context and color separation | Merged (PR #147; approved proposal #146) |
+| 12 | Full tutorial audit, rewrite, translations, and manual | In progress; last |
 
 Each task is independently testable and follows the implementation split in
 proposal #125. Any scope change returns to the proposal for owner agreement.

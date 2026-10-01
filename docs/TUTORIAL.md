@@ -1,9 +1,9 @@
 # Geoclick — Tutorial script and interaction spec (FT-09)
 
-The script for the in-app tutorial, written before any of it is built.
-FT-10 (sandbox), FT-11 (engine, overlay, steps) and FT-12 (first-visit
-nudge, three-language walkthrough) build exactly what's here; if one of
-them needs to change the script, change this file first.
+The script and interaction notes for the in-app tutorial. The shipped copy
+lives in `app/src/lib/i18n.svelte.ts`; the step order and transitions live
+in `app/src/lib/tutorialMachine.ts`. Keep this document and the user manual
+aligned with those sources.
 
 **Status: approved by the product owner, 2026-09-14.** The answers from
 the review are listed at the end. The wording can still be tuned once
@@ -42,17 +42,18 @@ Settled elsewhere, not reopened here (FEATURE_PLAN.md, product decisions):
 
 An intro card, fourteen steps, and an outro card. The player does the real
 thing at every action step; the tutorial waits for it and moves on by
-itself. Only the explanation step (13) has a Next button.
+itself. The explanation step (13) has a Next button; steps whose required
+action has already happened also offer Next.
 
 | # | Where | Highlights (`data-tutorial`) | Moves on when | What the player learns |
 |---|---|---|---|---|
-| Intro | home page | nothing (centred card) | Start | what's about to happen, and that nothing is saved |
+| Intro | home page | nothing (centred card) | Start | what's about to happen; Italy — Regions practice is sandboxed |
 | 1 | home page, world map | `picker-europe` (Europe's name on the world) | the map opens Europe | where the maps are: every one starts from the world |
 | 2 | home page, Europe | `picker-italy` (over Italy on the map) | a tap on Italy, which lights Italy's row | a country's maps are in its row |
-| 3 | home page, Europe | `home-map-card` (Italy's row, in the panel beside or below the map) | the route becomes `/map/italy-regions` | choosing a map from a row's list |
-| 4 | the Known map | `map` (the map), `zoom-control` (the `+`/`−` buttons) | the player zooms or pans the map | zoom and pan, with mouse, touch or buttons |
+| 3 | home page, Europe | `home-map-card` (Italy's row, in the panel beside or below the map) | the route becomes `/map/italy-regions` | choosing Regions in Italy's row opens that map |
+| 4 | Known map | `map` (the map), `zoom-control` (the `+`/`−` buttons) | the player zooms or pans the map | zoom and pan, with mouse, touch or buttons |
 | 5 | the Known map | `map` | the player taps a region and its name lands on the map | **the map you build**: tap a name on, tap it off again |
-| 6 | the Known map | `terrain-toggle` (the Terrain button) | the player presses Terrain, either direction | **what is under the map**: sea, rivers and named ranges, on by default and switchable |
+| 6 | the Known map | `terrain-toggle` (the Terrain button) | the player presses Terrain, either direction | Terrain's geographic detail; land and sea stay distinct when it is off |
 | 7 | the Known map, then overview | `nav-overview`, then `map` | the route becomes `/map/italy-regions/overview` | names you earn appear on their own; Overview shows every name at once |
 | 8 | overview | `nav-quiz` | the route becomes `/map/italy-regions/quiz` | where the quiz is |
 | 9 | quiz | `slip-sicilia` (a name slip in the tray) | a correct drop, of any slip | drag a name onto its region |
@@ -83,10 +84,10 @@ keyed by the translation key FT-11 will add.
 
 > **Welcome to Geoclick**
 > Learn the map by playing with it. This short tutorial takes about three
-> minutes and you'll try every part of the app yourself. Nothing you do in
-> it counts towards your progress.
+> minutes and you'll try every part of the app yourself. Practice on Italy —
+> Regions is sandboxed and won't change your real progress.
 >
-> [Skip] [Start]
+> [Exit tutorial] [Start]
 
 A centred card with no highlight. Start goes to step 1.
 
@@ -115,7 +116,7 @@ A centred card with no highlight. Start goes to step 1.
 
 ### 3. Choose a map — home page, Europe
 
-> Italy's maps are in its row's list. Choose **Regions**.
+> Choose **Regions** in Italy's row to open that map.
 
 - **Highlight:** Italy's row in the panel, lit (the tutorial lights it
   however the player reached the step). The overlay scrolls it into view.
@@ -123,7 +124,7 @@ A centred card with no highlight. Start goes to step 1.
   (a Favourites or Recent copy works too, from any of steps 1 to 3).
 - **Off-script:** opening any other map pauses the tutorial.
 
-### 4. Zoom and pan — overview
+### 4. Zoom and pan — Known map
 
 Mouse and trackpad:
 
@@ -191,7 +192,7 @@ Touch:
 
 ### 8. Open the quiz — overview
 
-> Ready to test yourself for real? Open the **Quiz**.
+> Ready for a quiz? Open the **Quiz**.
 
 - **Highlight:** the Quiz tab.
 - **Moves on:** the route becomes `/map/italy-regions/quiz`.
@@ -313,7 +314,7 @@ Touch:
 ### On every card
 
 - **Step counter:** "Step 3 of 14" on the numbered steps.
-- **Skip** (every card, and Esc on a keyboard) ends the tutorial straight
+- **Exit tutorial** (every card, and Esc on a keyboard) ends the tutorial straight
   away, with no confirmation: it's cheap to restart, and a confirmation
   would get in the way of a player who knows the app.
 - **Back** (steps 2 to 14) shows the previous step, and goes to its screen
@@ -337,13 +338,14 @@ outside steps 4 to 7, or Tour before step 14.
   **"Tutorial paused"**, with **Resume** and **End tutorial**.
 - **Resume** goes back to the current step's screen and shows its card.
   Actions already done still count.
-- **End tutorial** is the same as Skip.
+- **End tutorial** ends the tutorial too; Escape is the keyboard shortcut for
+  the card's **Exit tutorial** action.
 - The bar stays until one of the two is chosen; the tutorial never resumes
   by itself.
 
 ### Ending
 
-Skip, End tutorial and Finish all:
+Exit tutorial, End tutorial and Finish all:
 
 - discard the sandbox and switch the progress repository back to the real
   one (FT-10);
@@ -469,7 +471,7 @@ mark that up in the strings.
 |---|---|---|---|
 | `tutorial.button` | Tutorial | Tutorial | Tutorial |
 | `tutorial.start` | Start | Los geht's | Inizia |
-| `tutorial.skip` | Skip | Überspringen | Salta |
+| `tutorial.skip` | Exit tutorial | Tutorial beenden | Esci dal tutorial |
 | `tutorial.back` | Back | Zurück | Indietro |
 | `tutorial.next` | Next | Weiter | Avanti |
 | `tutorial.finish` | Finish | Fertig | Fine |
@@ -484,7 +486,7 @@ mark that up in the strings.
 | Key | English | Deutsch | Italiano |
 |---|---|---|---|
 | `tutorial.intro.title` | Welcome to Geoclick | Willkommen bei Geoclick | Ti diamo il benvenuto in Geoclick |
-| `tutorial.intro.body` | Learn the map by playing with it. This short tutorial takes about three minutes and you'll try every part of the app yourself. Nothing you do in it counts towards your progress. | Lerne die Karte, indem du mit ihr spielst. Dieses kurze Tutorial dauert etwa drei Minuten, und du probierst jeden Teil der App selbst aus. Was du dabei machst, zählt nicht für deinen Fortschritt. | Impara la mappa giocandoci. Questo breve tutorial dura circa tre minuti e proverai in prima persona ogni parte dell'app. Quello che fai qui non conta per i tuoi progressi. |
+| `tutorial.intro.body` | Learn the map by playing. This three-minute tutorial introduces the app's main features. Your practice on Italy — Regions won't change your real progress. | Lerne die Karte spielend kennen. In etwa drei Minuten zeigt dir das Tutorial die wichtigsten Funktionen. Dein Üben auf Italien — Regionen verändert deinen echten Lernfortschritt nicht. | Impara la mappa giocando. In circa tre minuti il tutorial ti mostra le funzioni principali. L'esercitazione su Italia — Regioni non modifica i tuoi progressi reali. |
 | `tutorial.outro.title` | You're all set | Alles bereit | Tutto pronto |
 | `tutorial.outro.body` | Pick any map and play. Tip: the star on a map keeps it at the top of your list. You can replay this tutorial any time with the Tutorial button. | Wähle eine beliebige Karte und leg los. Tipp: Mit dem Stern bleibt eine Karte oben in deiner Liste. Du kannst dieses Tutorial jederzeit über die Schaltfläche „Tutorial“ wiederholen. | Scegli una mappa qualsiasi e gioca. Suggerimento: con la stella una mappa resta in cima all'elenco. Puoi rifare questo tutorial quando vuoi con il pulsante Tutorial. |
 
@@ -495,19 +497,21 @@ mark that up in the strings.
 | `tutorial.continent` | Every map starts from the world. Choose **Europe**. | Jede Karte beginnt bei der Welt. Wähle **Europa**. | Ogni mappa parte dal mondo. Scegli **Europa**. |
 | `tutorial.country` | Now click **Italy** on the map. Its row in the list lights up. | Klicke jetzt auf der Karte auf **Italien**. Seine Zeile in der Liste leuchtet auf. | Ora fai clic sull'**Italia** nella mappa. La sua riga nell'elenco si illumina. |
 | `tutorial.country.touch` | Now tap **Italy** on the map. Its row in the list lights up. | Tippe jetzt auf der Karte auf **Italien**. Seine Zeile in der Liste leuchtet auf. | Ora tocca l'**Italia** sulla mappa. La sua riga nell'elenco si illumina. |
-| `tutorial.step1` | Italy's maps are in its row's list. Choose **Regions**. | Italiens Karten stehen in der Auswahlliste seiner Zeile. Wähle **Regionen**. | Le mappe dell'Italia sono nell'elenco della sua riga. Scegli **Regioni**. |
+| `tutorial.step1` | Choose **Regions** in Italy's row to open that map. | Wähle **Regionen** in Italiens Zeile, um diese Karte zu öffnen. | Scegli **Regioni** nella riga dell'Italia per aprire questa mappa. |
 | `tutorial.step2` | Zoom with the mouse wheel or the **+** and **−** buttons, and drag the map to move around. Try it now. | Zoome mit dem Mausrad oder den Tasten **+** und **−**, und ziehe die Karte, um dich zu bewegen. Probier es aus. | Usa la rotellina del mouse o i pulsanti **+** e **−** per lo zoom, e trascina la mappa per spostarti. Prova ora. |
 | `tutorial.step2.touch` | Pinch to zoom, or use the **+** and **−** buttons, and drag with one finger to move around. Try it now. | Zoome mit zwei Fingern oder den Tasten **+** und **−**, und verschiebe die Karte mit einem Finger. Probier es aus. | Usa due dita o i pulsanti **+** e **−** per lo zoom, e trascina la mappa con un dito per spostarti. Prova ora. |
-| `tutorial.step3` | This is the **overview**, where every region shows its name. Hover over a name to enlarge it. | Das ist die **Übersicht**: Hier steht jede Region mit ihrem Namen. Fahre mit der Maus über einen Namen, um ihn zu vergrößern. | Questa è la **panoramica**, dove ogni regione mostra il suo nome. Passa il mouse su un nome per ingrandirlo. |
-| `tutorial.step3.touch` | This is the **overview**, where every region shows its name. Tap a name to enlarge it. | Das ist die **Übersicht**: Hier steht jede Region mit ihrem Namen. Tippe auf einen Namen, um ihn zu vergrößern. | Questa è la **panoramica**, dove ogni regione mostra il suo nome. Tocca un nome per ingrandirlo. |
-| `tutorial.step4` | **Progress** shows how well you know this map: the names you have placed right, as strongly as you know them. Open it and click any region to see which one it is. | **Fortschritt** zeigt, wie gut du diese Karte kennst: die Namen, die du richtig platziert hast, so deutlich, wie du sie kennst. Öffne es und klicke auf eine Region, um zu sehen, welche es ist. | **Progressi** mostra quanto conosci questa mappa: i nomi che hai posizionato bene, con la forza con cui li sai. Aprilo e clicca una regione per scoprire qual è. |
-| `tutorial.step4.touch` | **Explore** hides the names, so you can test yourself. Open it and tap any region to see which one it is. | **Erkunden** blendet die Namen aus, damit du dich selbst testen kannst. Öffne es und tippe auf eine Region, um zu sehen, welche es ist. | **Esplora** nasconde i nomi, così puoi metterti alla prova. Aprilo e tocca una regione per scoprire qual è. |
-| `tutorial.step5` | Ready to test yourself for real? Open the **Quiz**. | Bereit für den echten Test? Öffne das **Quiz**. | Ora la prova vera: apri il **Quiz**. |
+| `tutorial.step3` | This is **Known**, the map you build. Click a region to put its name on the map — it stays there. Click it again to take it off, so you choose which names to study. | Das ist **Gewusst**, deine eigene Karte. Klicke auf eine Region, um ihren Namen daraufzusetzen — er bleibt dort stehen. Noch einmal klicken nimmt ihn wieder weg: So wählst du selbst, welche Namen du lernen willst. | Questa è **Conoscenza**, la mappa che costruisci tu. Clicca una regione per mettere il suo nome sulla mappa: resta lì. Cliccala di nuovo per toglierlo — scegli tu quali nomi studiare. |
+| `tutorial.step3.touch` | This is **Known**, the map you build. Tap a region to put its name on the map — it stays there. Tap it again to take it off, so you choose which names to study. | Das ist **Gewusst**, deine eigene Karte. Tippe auf eine Region, um ihren Namen daraufzusetzen — er bleibt dort stehen. Noch einmal tippen nimmt ihn wieder weg: So wählst du selbst, welche Namen du lernen willst. | Questa è **Conoscenza**, la mappa che costruisci tu. Tocca una regione per mettere il suo nome sulla mappa: resta lì. Toccala di nuovo per toglierlo — scegli tu quali nomi studiare. |
+| `tutorial.terrain` | **Terrain** adds geographic detail behind the map, including rivers, mountain ranges and the sea overlay. The land and sea remain distinct when Terrain is off. Press **Terrain** to hide or show this extra detail. | **Gelände** ergänzt geografische Details hinter der Karte, darunter Flüsse, Gebirge und die Meeresdarstellung. Land und Meer bleiben auch ohne Gelände unterscheidbar. Drücke auf **Gelände**, um diese Details ein- oder auszublenden. | **Rilievo** aggiunge dettagli geografici dietro la mappa, tra cui fiumi, catene montuose e la rappresentazione del mare. Terra e mare restano distinti anche quando Rilievo è disattivato. Premi **Rilievo** per nascondere o mostrare questi dettagli. |
+| `tutorial.terrain.touch` | **Terrain** adds geographic detail behind the map, including rivers, mountain ranges and the sea overlay. The land and sea remain distinct when Terrain is off. Tap **Terrain** to hide or show this extra detail. | **Gelände** ergänzt geografische Details hinter der Karte, darunter Flüsse, Gebirge und die Meeresdarstellung. Land und Meer bleiben auch ohne Gelände unterscheidbar. Tippe auf **Gelände**, um diese Details ein- oder auszublenden. | **Rilievo** aggiunge dettagli geografici dietro la mappa, tra cui fiumi, catene montuose e la rappresentazione del mare. Terra e mare restano distinti anche quando Rilievo è disattivato. Tocca **Rilievo** per nascondere o mostrare questi dettagli. |
+| `tutorial.step4` | Names you place right in the quiz appear here on their own, as strongly as you know them. New to a map? **Overview** shows every name at once — open it. | Namen, die du im Quiz richtig platzierst, erscheinen hier von selbst — so deutlich, wie du sie kennst. Neu auf einer Karte? Die **Übersicht** zeigt alle Namen auf einmal. Öffne sie. | I nomi che indovini nel quiz compaiono qui da soli, con la forza con cui li sai. Mappa nuova? La **Panoramica** mostra tutti i nomi insieme: aprila. |
+| `tutorial.step4.touch` | Names you place right in the quiz appear here on their own, as strongly as you know them. New to a map? **Overview** shows every name at once — open it. | Namen, die du im Quiz richtig platzierst, erscheinen hier von selbst — so deutlich, wie du sie kennst. Neu auf einer Karte? Die **Übersicht** zeigt alle Namen auf einmal. Öffne sie. | I nomi che indovini nel quiz compaiono qui da soli, con la forza con cui li sai. Mappa nuova? La **Panoramica** mostra tutti i nomi insieme: aprila. |
+| `tutorial.step5` | Ready for a quiz? Open the **Quiz**. | Bereit für ein Quiz? Öffne das **Quiz**. | Vuoi fare un quiz? Apri il **Quiz**. |
 | `tutorial.step6` | Drag a name from the tray onto its region. Try **Sicilia**: the big island off the toe of the boot. | Ziehe einen Namen aus der Ablage auf seine Region. Versuch es mit **Sicilia**, der großen Insel vor der Stiefelspitze. | Trascina un nome dal vassoio sulla sua regione. Prova con **Sicilia**, l'isola grande davanti alla punta dello stivale. |
-| `tutorial.step7` | Now get one wrong on purpose: drop **Sardegna** anywhere on the mainland. The region you hit flashes red, and Sardegna is shown where it really is. | Jetzt ein Fehler mit Absicht: Lege **Sardegna** irgendwo auf dem Festland ab. Die getroffene Region blinkt rot, und Sardegna wird dort gezeigt, wo sie wirklich liegt. | Ora sbaglia apposta: lascia **Sardegna** in un punto qualsiasi della penisola. La regione che hai toccato lampeggia in rosso e Sardegna viene mostrata dove si trova davvero. |
+| `tutorial.step7` | Now get one wrong on purpose: drag **any** name onto a region it does not belong to — **Sardegna** onto the mainland, say. The region you hit flashes red, and the name is shown where it really belongs. | Jetzt ein Fehler mit Absicht: Zieh **irgendeinen** Namen auf eine Region, zu der er nicht gehört — zum Beispiel **Sardegna** aufs Festland. Die getroffene Region blinkt rot, und der Name wird dort gezeigt, wo er wirklich hingehört. | Ora sbaglia apposta: trascina **un nome qualsiasi** su una regione a cui non appartiene — per esempio **Sardegna** sulla penisola. La regione che hai toccato lampeggia in rosso e il nome viene mostrato dove si trova davvero. |
 | `tutorial.step8` | Not sure where a region is? Look it up in the **overview**. | Nicht sicher, wo eine Region liegt? Schau in der **Übersicht** nach. | Non sai dov'è una regione? Controlla nella **panoramica**. |
 | `tutorial.step9` | Found Sardegna? Go back to the **Quiz**. | Sardegna gefunden? Dann zurück zum **Quiz**. | Trovata la Sardegna? Torna al **Quiz**. |
-| `tutorial.step10` | The regions you placed are still marked. Each comes back for review later: sooner if it gave you trouble, less often once you know it. | Deine platzierten Regionen sind noch markiert. Jede kommt später zur Wiederholung zurück: früher, wenn sie dir schwerfiel, seltener, wenn du sie kannst. | Le regioni che hai posizionato restano segnate. Ognuna torna più avanti per un ripasso: prima se ti ha messo in difficoltà, più di rado quando la conosci. |
+| `tutorial.step10` | The regions you placed are still marked. Place a name right three times in a row and it counts as known — **Known** shows how far you have got. | Deine platzierten Regionen sind noch markiert. Dreimal hintereinander richtig, und ein Name gilt als gewusst — **Gewusst** zeigt, wie weit du bist. | Le regioni che hai posizionato restano segnate. Tre volte di fila giuste e un nome conta come imparato — **Conoscenza** mostra a che punto sei. |
 | `tutorial.step11` | Last one: the **Tour** flies you to each region in turn and shows its name. Open it. | Zum Schluss die **Tour**: Sie fliegt dich nacheinander zu jeder Region und zeigt ihren Namen. Öffne sie. | Per finire, il **Tour**: ti porta da una regione all'altra e ne mostra il nome. Aprilo. |
 
 Notes on the copy:

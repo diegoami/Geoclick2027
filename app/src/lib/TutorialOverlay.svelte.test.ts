@@ -54,7 +54,7 @@ describe('TutorialOverlay', () => {
 		await expect.poll(spotlight).not.toBeNull();
 		// Step 1 waits for Europe to be opened: no Next, no Back.
 		const labels = [...dialog()!.querySelectorAll('button')].map((b) => b.textContent?.trim());
-		expect(labels).toEqual(['Skip']);
+		expect(labels).toEqual(['Exit tutorial']);
 	});
 
 	it('moves on with the player: a route change advances an action step', async () => {
@@ -73,7 +73,7 @@ describe('TutorialOverlay', () => {
 		// Step 5 waits for the player to tap a name onto the map, so there is
 		// no Next to press until they have.
 		const labels = [...dialog()!.querySelectorAll('button')].map((b) => b.textContent?.trim());
-		expect(labels).toEqual(['Back', 'Skip']);
+		expect(labels).toEqual(['Back', 'Exit tutorial']);
 		dispatch({ type: 'reveal' });
 		await expect.poll(counter).toBe('Step 6 of 14');
 	});
@@ -118,7 +118,7 @@ describe('TutorialOverlay', () => {
 		await expect.poll(() => near(spots[1])).toBe(true);
 		dispatch({ type: 'country', id: 'italy' });
 		await expect.poll(() => near(spots[2])).toBe(true);
-		expect(cardText()).toBe("Italy's maps are in its row's list. Choose Regions.");
+		expect(cardText()).toBe("Choose Regions in Italy's row to open that map.");
 	});
 
 	it('pauses off-script, and Resume brings the card back', async () => {
@@ -135,10 +135,10 @@ describe('TutorialOverlay', () => {
 		await expect.poll(counter).toBe('Step 1 of 14');
 	});
 
-	it('Skip and Esc end the tutorial and switch the sandbox off', async () => {
+	it('Exit tutorial and Esc end the tutorial and switch the sandbox off', async () => {
 		const screen = await render(TutorialOverlay);
 		dispatch({ type: 'start' });
-		await screen.getByRole('button', { name: 'Skip' }).click();
+		await screen.getByRole('button', { name: 'Exit tutorial' }).click();
 		await expect.poll(dialog).toBeNull();
 		expect(tutorialState().status).toBe('idle');
 		expect(isTutorialSandboxActive()).toBe(false);
@@ -157,5 +157,13 @@ describe('TutorialOverlay', () => {
 			.element(screen.getByRole('heading', { name: 'Willkommen bei Geoclick' }))
 			.toBeVisible();
 		await expect.element(screen.getByRole('button', { name: "Los geht's" })).toBeVisible();
+		await expect.element(screen.getByRole('button', { name: 'Tutorial beenden' })).toBeVisible();
+	});
+
+	it('uses the Italian exit label', async () => {
+		setLanguage('it');
+		const screen = await render(TutorialOverlay);
+		dispatch({ type: 'start' });
+		await expect.element(screen.getByRole('button', { name: 'Esci dal tutorial' })).toBeVisible();
 	});
 });
