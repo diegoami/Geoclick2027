@@ -57,7 +57,7 @@
 				5.3245223,
 				60.3910024
 			],
-			"colorIndex": 2
+			"colorIndex": 1
 		},
 		{
 			"id": "oslo",
@@ -78,24 +78,6 @@
 			"colorIndex": 2
 		},
 		{
-			"id": "b-rum",
-			"name": "Bærum",
-			"type": "city",
-			"tier": 1,
-			"aliases": [],
-			"centroid": [
-				11.3472365,
-				59.9134861
-			],
-			"bbox": [
-				11.3472365,
-				59.9134861,
-				11.3472365,
-				59.9134861
-			],
-			"colorIndex": 3
-		},
-		{
 			"id": "drammen",
 			"name": "Drammen",
 			"type": "city",
@@ -111,7 +93,7 @@
 				10.199231839963424,
 				59.738481129257444
 			],
-			"colorIndex": 4
+			"colorIndex": 3
 		},
 		{
 			"id": "skien",
@@ -129,7 +111,7 @@
 				9.6000236,
 				59.1999898
 			],
-			"colorIndex": 5
+			"colorIndex": 4
 		},
 		{
 			"id": "stavanger",
@@ -147,7 +129,7 @@
 				5.6800044,
 				58.9700039
 			],
-			"colorIndex": 1
+			"colorIndex": 0
 		},
 		{
 			"id": "kristiansand",
@@ -165,7 +147,7 @@
 				7.97498387982654,
 				58.14561960901902
 			],
-			"colorIndex": 0
+			"colorIndex": 5
 		}
 	],
 	"tourOrder": [
@@ -173,7 +155,6 @@
 		"trondheim",
 		"bergen",
 		"oslo",
-		"b-rum",
 		"drammen",
 		"skien",
 		"stavanger",

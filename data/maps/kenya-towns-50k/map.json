@@ -21,7 +21,7 @@
 				34.9899467,
 				1.0304655
 			],
-			"colorIndex": 4
+			"colorIndex": 3
 		},
 		{
 			"id": "bungoma",
@@ -39,7 +39,7 @@
 				34.5599987,
 				0.5703902
 			],
-			"colorIndex": 3
+			"colorIndex": 0
 		},
 		{
 			"id": "eldoret",
@@ -75,7 +75,7 @@
 				34.7300142,
 				0.2904073
 			],
-			"colorIndex": 2
+			"colorIndex": 4
 		},
 		{
 			"id": "kisumu",
@@ -93,7 +93,7 @@
 				34.750013,
 				-0.0900346
 			],
-			"colorIndex": 0
+			"colorIndex": 1
 		},
 		{
 			"id": "nakuru",
@@ -111,7 +111,7 @@
 				36.0699841,
 				-0.2799971
 			],
-			"colorIndex": 3
+			"colorIndex": 2
 		},
 		{
 			"id": "kericho",
@@ -129,25 +129,7 @@
 				35.2800065,
 				-0.3595788
 			],
-			"colorIndex": 5
-		},
-		{
-			"id": "kendu-bay",
-			"name": "Kendu Bay",
-			"type": "city",
-			"tier": 1,
-			"aliases": [],
-			"centroid": [
-				34.6399939,
-				-0.3595788
-			],
-			"bbox": [
-				34.6399939,
-				-0.3595788,
-				34.6399939,
-				-0.3595788
-			],
-			"colorIndex": 1
+			"colorIndex": 3
 		},
 		{
 			"id": "nyeri",
@@ -202,24 +184,6 @@
 				-0.5195691
 			],
 			"colorIndex": 3
-		},
-		{
-			"id": "sotik",
-			"name": "Sotik",
-			"type": "city",
-			"tier": 1,
-			"aliases": [],
-			"centroid": [
-				35.1200162,
-				-0.6795593
-			],
-			"bbox": [
-				35.1200162,
-				-0.6795593,
-				35.1200162,
-				-0.6795593
-			],
-			"colorIndex": 4
 		},
 		{
 			"id": "thika",
@@ -338,11 +302,9 @@
 		"kisumu",
 		"nakuru",
 		"kericho",
-		"kendu-bay",
 		"nyeri",
 		"garissa",
 		"embu",
-		"sotik",
 		"thika",
 		"nairobi",
 		"machakos",

@@ -21,27 +21,13 @@
 			]
 		}
 	},
-	"arhus": {
+	"aarhus": {
 		"kind": "city",
 		"population": 237551,
 		"populationRank": 2,
 		"region": "Midtjylland",
 		"coastal": true,
-		"position": "centre",
-		"hooks": {
-			"en": [
-				"From Old Danish Aros, \"river mouth\".",
-				"Its open-air museum, Den Gamle By, rebuilds a Danish town of past centuries house by house."
-			],
-			"it": [
-				"Dall’antico danese Aros, \"foce del fiume\".",
-				"Il suo museo all’aperto, Den Gamle By, ricostruisce casa per casa una città danese dei secoli passati."
-			],
-			"de": [
-				"Vom altdänischen Aros, „Flussmündung“.",
-				"Ihr Freilichtmuseum Den Gamle By baut eine dänische Stadt vergangener Jahrhunderte Haus für Haus nach."
-			]
-		}
+		"position": "centre"
 	},
 	"vejle": {
 		"kind": "city",
@@ -62,7 +48,7 @@
 			]
 		}
 	},
-	"k-benhavn": {
+	"copenhagen": {
 		"kind": "city",
 		"population": 1085000,
 		"populationRank": 1,
@@ -70,24 +56,7 @@
 		"region": "Hovedstaden",
 		"capitalOf": "country",
 		"coastal": true,
-		"position": "south-east",
-		"hooks": {
-			"en": [
-				"\"Merchants’ harbour\".",
-				"The Little Mermaid, a statue of 1913, sits on its waterfront, after Hans Christian Andersen’s tale.",
-				"Tivoli Gardens, opened in 1843, is one of the oldest amusement parks in the world."
-			],
-			"it": [
-				"\"Porto dei mercanti\".",
-				"La Sirenetta, una statua del 1913, siede sul suo lungomare, dalla fiaba di Hans Christian Andersen.",
-				"I giardini di Tivoli, aperti nel 1843, sono uno dei parchi divertimento più antichi del mondo."
-			],
-			"de": [
-				"„Hafen der Kaufleute“.",
-				"Die Kleine Meerjungfrau, eine Statue von 1913, sitzt an ihrem Ufer, nach dem Märchen von Hans Christian Andersen.",
-				"Der Vergnügungspark Tivoli, 1843 eröffnet, ist einer der ältesten der Welt."
-			]
-		}
+		"position": "south-east"
 	},
 	"esbjerg": {
 		"kind": "city",

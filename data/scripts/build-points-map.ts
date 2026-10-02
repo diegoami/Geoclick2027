@@ -87,6 +87,7 @@ const NAME_FIXUPS: Record<string, Record<string, string>> = {
 	// typoed for Kazakhstan (Oostanay, Mangyshlak is Aktau since 1992) and the
 	// Philippines (Ormac), and its Danish names ignore the English ones.
 	Kazakhstan: {
+		'Nur-Sultan': 'Astana',
 		Oostanay: 'Kostanay',
 		Mangyshlak: 'Aktau',
 		Rudniy: 'Rudny',
@@ -213,7 +214,6 @@ const NAME_FIXUPS: Record<string, Record<string, string>> = {
 	// 2022; Palau's government moved to Ngerulmud, in Melekeok state, in
 	// 2006. Andorra's capital is not the country's name. The rest are
 	// letters the source lost: Plzeň, Panevėžys, and Peja for Kosovo's Peć.
-	Kazakhstan: { 'Nur-Sultan': 'Astana' },
 	Palau: { Melekeok: 'Ngerulmud' },
 	Andorra: { Andorra: 'Andorra la Vella' },
 	Czechia: { Pizen: 'Plzeň' },

@@ -21,25 +21,7 @@
 				174.3229708,
 				-35.7255711
 			],
-			"colorIndex": 0
-		},
-		{
-			"id": "north-shore",
-			"name": "North Shore",
-			"type": "city",
-			"tier": 1,
-			"aliases": [],
-			"centroid": [
-				174.7758388,
-				-36.7912685
-			],
-			"bbox": [
-				174.7758388,
-				-36.7912685,
-				174.7758388,
-				-36.7912685
-			],
-			"colorIndex": 2
+			"colorIndex": 1
 		},
 		{
 			"id": "auckland",
@@ -57,43 +39,7 @@
 				174.763027,
 				-36.8480549
 			],
-			"colorIndex": 3
-		},
-		{
-			"id": "waitakere",
-			"name": "Waitakere",
-			"type": "city",
-			"tier": 1,
-			"aliases": [],
-			"centroid": [
-				174.5542788,
-				-36.8524493
-			],
-			"bbox": [
-				174.5542788,
-				-36.8524493,
-				174.5542788,
-				-36.8524493
-			],
-			"colorIndex": 1
-		},
-		{
-			"id": "manukau",
-			"name": "Manukau",
-			"type": "city",
-			"tier": 1,
-			"aliases": [],
-			"centroid": [
-				174.8849708,
-				-36.9999702
-			],
-			"bbox": [
-				174.8849708,
-				-36.9999702,
-				174.8849708,
-				-36.9999702
-			],
-			"colorIndex": 4
+			"colorIndex": 2
 		},
 		{
 			"id": "tauranga",
@@ -111,7 +57,7 @@
 				176.1536294,
 				-37.6964164
 			],
-			"colorIndex": 5
+			"colorIndex": 0
 		},
 		{
 			"id": "hamilton",
@@ -129,7 +75,7 @@
 				175.2895781,
 				-37.7782694
 			],
-			"colorIndex": 0
+			"colorIndex": 5
 		},
 		{
 			"id": "rotorua",
@@ -147,7 +93,7 @@
 				176.2482631,
 				-38.1317379
 			],
-			"colorIndex": 1
+			"colorIndex": 2
 		},
 		{
 			"id": "new-plymouth",
@@ -165,7 +111,7 @@
 				174.0748125,
 				-39.0556393
 			],
-			"colorIndex": 2
+			"colorIndex": 4
 		},
 		{
 			"id": "napier",
@@ -183,7 +129,7 @@
 				176.926451,
 				-39.4900014
 			],
-			"colorIndex": 2
+			"colorIndex": 0
 		},
 		{
 			"id": "hastings",
@@ -201,7 +147,7 @@
 				176.8367996,
 				-39.6382031
 			],
-			"colorIndex": 4
+			"colorIndex": 3
 		},
 		{
 			"id": "palmerston-north",
@@ -219,7 +165,7 @@
 				175.6072108,
 				-40.352691
 			],
-			"colorIndex": 3
+			"colorIndex": 2
 		},
 		{
 			"id": "porirua",
@@ -237,7 +183,7 @@
 				174.8523534,
 				-41.121892
 			],
-			"colorIndex": 5
+			"colorIndex": 1
 		},
 		{
 			"id": "lower-hutt",
@@ -255,7 +201,7 @@
 				174.9123119,
 				-41.2037449
 			],
-			"colorIndex": 0
+			"colorIndex": 3
 		},
 		{
 			"id": "wellington",
@@ -273,7 +219,7 @@
 				174.77720094690068,
 				-41.2920679923151
 			],
-			"colorIndex": 4
+			"colorIndex": 0
 		},
 		{
 			"id": "nelson",
@@ -291,7 +237,7 @@
 				173.247448,
 				-41.2925917
 			],
-			"colorIndex": 1
+			"colorIndex": 4
 		},
 		{
 			"id": "christchurch",
@@ -309,7 +255,7 @@
 				172.6300232,
 				-43.5350216
 			],
-			"colorIndex": 3
+			"colorIndex": 5
 		},
 		{
 			"id": "dunedin",
@@ -327,15 +273,12 @@
 				170.4910157,
 				-45.8854231
 			],
-			"colorIndex": 5
+			"colorIndex": 1
 		}
 	],
 	"tourOrder": [
 		"whangarei",
-		"north-shore",
 		"auckland",
-		"waitakere",
-		"manukau",
 		"tauranga",
 		"hamilton",
 		"rotorua",
