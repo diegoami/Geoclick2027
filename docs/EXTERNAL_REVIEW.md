@@ -66,6 +66,20 @@ started instead of the npm shim.
 
 ## Snags we hit (Windows, OpenCode CLI 1.18.33)
 
+- **The reviewer never types its worktree's path (2026-10-02, learned in
+  harness_imperial#15, applies here).** An agent told to pass `git -C
+  <worktree>` mistyped a 90-character path (one extra character); OpenCode
+  auto-rejected it as `external_directory`, which ends `opencode run`, and the
+  review was lost in 17 s. The script already starts OpenCode inside the
+  worktree (`--dir`), so the rule bought nothing. The brief now gives only the
+  worktree's name, never its path, and the agent runs git as it is, without
+  `-C`. What `-C` was for is covered by the tree proof, the reviewer's first
+  tool call: top level (must end in the worktree name), HEAD (must be the
+  commit named) and `git diff --name-only <base>...HEAD` (must not be empty);
+  otherwise the whole message is "wrong tree". `scripts/ReviewerBrief.ps1`
+  builds the brief and `external-review.ps1 -SelfTest` checks that neither the
+  brief nor the agent file asks for `git -C` or a path. The `git -C * push|commit|stash|worktree` deny
+  rules stay as a safeguard.
 - **Agent permissions.** The 1.x CLI reads a `permission:` map in agent
   frontmatter. The V2 list form (`permissions:` with action/resource/effect)
   is silently ignored, so an agent that looks read-only can edit. Check with

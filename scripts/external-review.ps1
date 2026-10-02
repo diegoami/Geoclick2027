@@ -23,7 +23,7 @@
   with -FromFile, what would be posted, the note line and the exit code.
   -FromFile <file> runs a saved model message through the same parser, so a
   review already paid for is never thrown away.
-  -SelfTest runs the parser's sample outputs and exits.
+  -SelfTest runs the parser's sample outputs and the brief/agent checks, and exits.
 
   Watcher failure classes the caller sees: no-session, idle-timeout,
   total-timeout, exited-without-session, nonzero-exit, permission-rejected,
@@ -60,7 +60,12 @@ $here = Split-Path -Parent $MyInvocation.MyCommand.Path
 $repo = (& git -C $here rev-parse --path-format=absolute --git-common-dir | Split-Path -Parent) -replace '\\', '/'
 $watcher = Join-Path $here 'Invoke-OpenCodeWatched.ps1'
 . (Join-Path $here 'ReviewParser.ps1')
-if ($SelfTest) { exit (Invoke-ReviewParserSelfTest) }
+. (Join-Path $here 'ReviewerBrief.ps1')
+if ($SelfTest) {
+    $failed = [int]@(Invoke-ReviewParserSelfTest)[-1]
+    $failed += [int]@(Invoke-ReviewerBriefSelfTest -AgentFile (Join-Path (Split-Path -Parent $here) '.opencode/agents/external-reviewer.md'))[-1]
+    exit $failed
+}
 $token = [guid]::NewGuid().ToString('N').Substring(0, 6)
 if ($Issue -and -not $Pr -and -not $PSBoundParameters.ContainsKey('Kind')) { $Kind = 'release' }
 $subject = if ($Kind -eq 'pr') { $Pr } else { $Issue }
@@ -133,29 +138,9 @@ $work = if ($makeWorktree) { $wt } else { $repo }
 
 function New-Brief([string] $header, [string] $path) {
     $verdicts = if ($Kind -eq 'pr') { 'approve | approve after named fixes | rework | user decision' } else { 'AGREE | BLOCK (BLOCK if any finding is MUST-FIX)' }
-    $body = @"
-# Brief
-
-Header line (use it EXACTLY as line 1 of your final message): $header
-
-Reviewing: $Kind. Base: $baseRef ($baseSha). Head: $headSha.
-Your working directory is a detached worktree at the head: $wt
-Diff to review: git diff $baseSha...$headSha
-
-Allowed verdicts (line 2, and again alone as the very last line): $verdicts
-
-Stay inside your worktree. Do not read or write any path outside it. Do not
-read half the repository: the contract below is pasted so you do not have to
-look for it. Verify its claims against the code.
-
-## Contract
-
-$contract
-
-## Extra instructions from the caller
-
-$(if ($BriefFile) { Get-Content $BriefFile -Raw } else { 'None. Follow your agent instructions.' })
-"@
+    $extra = if ($BriefFile) { Get-Content $BriefFile -Raw } else { 'None. Follow your agent instructions.' }
+    $body = Get-ReviewerBrief -Header $header -Kind $Kind -BaseRef $baseRef -BaseSha $baseSha -HeadSha $headSha `
+        -WorktreeLeaf (Split-Path -Leaf $wt) -Verdicts $verdicts -Contract $contract -Extra $extra
     [System.IO.File]::WriteAllText($path, $body, [System.Text.UTF8Encoding]::new($false))
 }
 

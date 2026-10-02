@@ -46,7 +46,10 @@ never run `git push`, `commit`, `stash` or `worktree`. You also never write to
 GitHub: no comments, reviews, issues or labels. The script that started you is
 the only writer and posts your final message.
 
-- Pass `git -C <worktree>` explicitly when you use git.
+- Your working directory IS the worktree. Run git there as it is, without `-C`,
+  and never type the worktree's path: a mistyped path is refused as an external
+  directory, which ends the whole run. The tree proof below is what tells you
+  that you are in the right tree.
 - Never touch a path outside the worktree: not TEMP, not `~`, not another
   checkout, and do not copy the tree elsewhere. Write scratch files inside the
   worktree in a git-ignored folder, `rendered/`.
@@ -55,9 +58,13 @@ the only writer and posts your final message.
 - Read `AGENTS.md` first. Install dependencies in this worktree only when a
   check you chose needs them.
 
-Start by printing a "where I reviewed" block: `git rev-parse --show-toplevel`,
-`git rev-parse HEAD`, and `git diff --name-only <base>...HEAD` using the base
-named in the brief. Print it again at the top of your review.
+Your FIRST tool call is the tree proof, in one command: `git rev-parse
+--show-toplevel`, `git rev-parse HEAD` and `git diff --name-only <base>...HEAD`
+using the base named in the brief. The top level must end in the worktree name
+the brief gives, HEAD must be the commit it names, and the diff must not be
+empty. If any of these is wrong, your whole final message is "wrong tree" and
+the reason; stop. Otherwise print the same block again at the top of your
+review as "where I reviewed".
 
 ## What a review is
 
