@@ -244,3 +244,53 @@ describe('MapRows (FT-84)', () => {
 		);
 	});
 });
+
+describe('MapRows: advanced maps (v0.17)', () => {
+	afterEach(() => localStorage.removeItem(MAP_TYPE_SELECTIONS_KEY));
+
+	it('lists the advanced maps after a disabled separator line', async () => {
+		await render(MapRows, {
+			groups: [
+				{
+					country: 'Germany',
+					maps: [
+						{ id: 'germany-states', label: 'States' },
+						{ id: 'germany-towns-100k', label: 'Towns' },
+						{ id: 'germany-districts-east', label: 'Districts — East', advanced: true },
+						{ id: 'germany-towns-east', label: 'Towns — East', advanced: true }
+					]
+				}
+			],
+			masteries: {},
+			targetCount: () => 0
+		});
+		const options = [...document.querySelectorAll<HTMLOptionElement>('select option')];
+		expect(options.map((o) => o.textContent?.trim())).toEqual([
+			'States',
+			'Towns',
+			'──────',
+			'Districts — East',
+			'Towns — East'
+		]);
+		expect(options[2].disabled).toBe(true);
+	});
+
+	it('draws no separator for a country without advanced maps', async () => {
+		await render(MapRows, {
+			groups: [
+				{
+					country: 'Peru',
+					maps: [
+						{ id: 'peru-regions', label: 'Regions' },
+						{ id: 'peru-towns-100k', label: 'Towns' }
+					]
+				}
+			],
+			masteries: {},
+			targetCount: () => 0
+		});
+		expect(
+			[...document.querySelectorAll('select option')].some((o) => o.textContent === '──────')
+		).toBe(false);
+	});
+});

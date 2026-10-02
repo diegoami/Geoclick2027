@@ -69,32 +69,35 @@ describe('country map order', () => {
 	const idsFor = (country: string) =>
 		mapGroups.find((group) => group.country === country)!.maps.map((m) => m.id);
 
-	it('orders administrative scope before cities and groups focused maps with their scale', () => {
+	it('lists the standard maps first, then the advanced ones, whole nation before parts', () => {
 		expect(idsFor('Italy')).toEqual([
 			'italy-regions',
+			'italy-towns-100k',
 			'italy-provinces',
 			'italy-provinces-north',
 			'italy-provinces-center',
-			'italy-provinces-south',
-			'italy-towns-100k'
+			'italy-provinces-south'
 		]);
 		expect(idsFor('France')).toEqual([
 			'france-regions',
+			'france-towns-100k',
 			'france-departments',
 			'france-departments-north',
-			'france-departments-south',
-			'france-towns-100k'
+			'france-departments-south'
 		]);
-		expect(idsFor('Spain')).toEqual(['spain-regions', 'spain-provinces', 'spain-towns-100k']);
+		expect(idsFor('Spain')).toEqual(['spain-regions', 'spain-towns-100k', 'spain-provinces']);
 	});
 
-	it('puts Germany district maps before full-country and focused town maps', () => {
-		const ids = idsFor('Germany');
-		const townsIndex = ids.indexOf('germany-towns-100k');
-		expect(ids[0]).toBe('germany-states');
-		expect(ids.slice(1, townsIndex).every((id) => id.startsWith('germany-districts-'))).toBe(true);
-		expect(ids.slice(townsIndex)).toEqual([
+	it('puts Germany’s whole-nation maps first, then the district and towns parts', () => {
+		expect(idsFor('Germany')).toEqual([
+			'germany-states',
 			'germany-towns-100k',
+			'germany-districts-center',
+			'germany-districts-east',
+			'germany-districts-north',
+			'germany-districts-southeast',
+			'germany-districts-southwest',
+			'germany-districts-west',
 			'germany-towns-center',
 			'germany-towns-east',
 			'germany-towns-north',
@@ -104,24 +107,24 @@ describe('country map order', () => {
 		]);
 	});
 
-	it('places municipal and county divisions before towns and keeps city subsets last', () => {
+	it('puts the municipal and county parts after the standard maps', () => {
 		expect(idsFor('Netherlands')).toEqual([
 			'netherlands-regions',
+			'netherlands-towns-100k',
 			'netherlands-municipalities-east',
 			'netherlands-municipalities-north',
 			'netherlands-municipalities-south',
 			'netherlands-municipalities-southwest',
-			'netherlands-municipalities-west',
-			'netherlands-towns-100k'
+			'netherlands-municipalities-west'
 		]);
 		expect(idsFor('Poland')).toEqual([
 			'poland-regions',
+			'poland-towns-100k',
 			'poland-counties-north',
 			'poland-counties-west',
 			'poland-counties-east',
 			'poland-counties-southeast',
-			'poland-counties-south',
-			'poland-towns-100k'
+			'poland-counties-south'
 		]);
 		expect(idsFor('USA')).toEqual([
 			'usa-states',

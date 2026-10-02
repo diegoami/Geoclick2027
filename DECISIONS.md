@@ -2577,3 +2577,20 @@ answers:
   See `docs/EXTERNAL_REVIEW.md`. This supersedes the three-model chain in
   `scripts/external-review.ps1` as first built (Luna, GLM 5.3 Flash,
   DeepSeek V4.1 Flash).
+
+## Advanced maps: small divisions after a line (2026-10-02, #162, #163)
+
+The owner wanted the finer divisions (Kreise, powiaty, departments,
+municipalities, Italy's and Spain's provinces) and the slices of the towns maps
+out of the way: "I would hide those little divisions". `MapEntry` in
+`app/src/lib/mapCatalog.ts` has an explicit `advanced` flag, not a rule from the
+label, because `mapType.provinces` is the main level in the Netherlands and
+Canada and a detail level in Italy and Spain. Within a country the catalog keeps
+standard maps first, then advanced ones, and whole-nation maps before maps of a
+part (`partKey`); `mapCatalog.test.ts` checks both and lists the flagged ids.
+The start screen's combobox draws a disabled `──────` option before the advanced
+maps (`MapRows.svelte`); the in-map row (`MapNav.svelte`) shows the standard
+maps plus the open map if it is advanced, so an advanced map is reached from
+the start screen only. Italy's province slices and the USA's city slices moved
+from their own label keys to type + `partKey`; the rendered labels are
+identical in English, German and Italian (tested).

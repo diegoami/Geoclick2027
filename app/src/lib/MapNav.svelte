@@ -51,7 +51,11 @@
 	const currentGroup = $derived(
 		mapGroups.find((group) => group.maps.some((map) => map.id === mapId))
 	);
-	const groupMaps = $derived(currentGroup?.maps ?? []);
+	// Small divisions and slices stay on the start screen's list; the row here
+	// shows the standard maps, plus the open map if it is one of the others.
+	const groupMaps = $derived(
+		(currentGroup?.maps ?? []).filter((map) => !map.advanced || map.id === mapId)
+	);
 	const showMapSwitcher = $derived(groupMaps.length > 1);
 	let mapTypeScroller = $state<HTMLDivElement | undefined>(undefined);
 

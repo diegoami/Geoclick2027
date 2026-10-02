@@ -17,7 +17,7 @@
 	interface Row {
 		country: string;
 		pickerId?: string;
-		maps: { id: string; label: string }[];
+		maps: { id: string; label: string; advanced?: boolean }[];
 	}
 
 	let {
@@ -138,7 +138,14 @@
 					chooseMapType(group, e.currentTarget.value);
 				}}
 			>
-				{#each group.maps as map (map.id)}
+				<!-- Standard maps first; small divisions and slices after a line (v0.17). -->
+				{#each group.maps.filter((m) => !m.advanced) as map (map.id)}
+					<option value={map.id}>{map.label}</option>
+				{/each}
+				{#if group.maps.some((m) => m.advanced) && group.maps.some((m) => !m.advanced)}
+					<option disabled value="">──────</option>
+				{/if}
+				{#each group.maps.filter((m) => m.advanced) as map (map.id)}
 					<option value={map.id}>{map.label}</option>
 				{/each}
 			</select>
