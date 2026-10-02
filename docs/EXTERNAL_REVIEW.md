@@ -5,8 +5,12 @@ a milestone candidate (`-Issue n -Kind release`) in a detached worktree and
 posts it as one GitHub comment. The model never writes to GitHub or git.
 
 Roles (owner's decision, 2026-10-02): reviewer **DeepSeek V4.1 Flash**
-(`opencode-go/deepseek-v4.1-flash`, effort `high`), then **Claude Opus**;
-implementer **Claude Sonnet**, then **GPT Luna**. One OpenCode model per role:
+(`opencode-go/deepseek-v4.1-flash`, effort `high`), then **Claude Opus**.
+Later the same day the owner switched the default OpenCode reviewer to **GPT
+Luna** (`openai/gpt-5.6-luna#high`). The default is the one line in
+`.opencode/reviewer-model`; change it with the `switch-reviewer` skill, or pass
+`-Model` for one run. Implementer
+**Claude Sonnet**, then **GPT Luna**. One OpenCode model per role:
 a chain of several cheap models multiplies wasted attempts. Other models remain
 valid as an explicit `-Model`, but no default picks them. Effort is `high` for
 every variant, never `max`. The implementer's model never reviews its own PR
