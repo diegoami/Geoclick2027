@@ -37,7 +37,7 @@ param(
     [string] $BriefFile,
     # "model#variant" sets the reasoning variant: high, never max. One OpenCode
     # model per role: more entries multiply wasted paid attempts.
-    [string[]] $Model = @('opencode-go/deepseek-v4.1-flash#high'),
+    [string[]] $Model = @(),
     [string[]] $ExcludeModel = @(),
     [string] $Agent = 'external-reviewer',
     [string[]] $CopyFiles = @(),
@@ -48,6 +48,14 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
+
+# No -Model: the reviewer named in .opencode/reviewer-model (one line,
+# "provider/model#variant"), set with the switch-reviewer skill.
+if (-not $Model -or $Model.Count -eq 0) {
+    $cfg = Join-Path (Split-Path -Parent $PSScriptRoot) '.opencode/reviewer-model'
+    $line = if (Test-Path $cfg) { (Get-Content $cfg | Where-Object { $_.Trim() -and -not $_.StartsWith('#') } | Select-Object -First 1) } else { $null }
+    $Model = @(if ($line) { $line.Trim() } else { 'opencode-go/deepseek-v4.1-flash#high' })
+}
 $here = Split-Path -Parent $MyInvocation.MyCommand.Path
 $repo = (& git -C $here rev-parse --path-format=absolute --git-common-dir | Split-Path -Parent) -replace '\\', '/'
 $watcher = Join-Path $here 'Invoke-OpenCodeWatched.ps1'
