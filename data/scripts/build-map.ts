@@ -224,6 +224,71 @@ const NAME_FIXUPS: Record<string, Record<string, string>> = {
 	},
 	// Sofia is two provinces: the capital's own and the one around it.
 	Bulgaria: { 'Grad Sofiya': 'Sofia City', Sofia: 'Sofia Province' },
+	// The maps of #163 (v0.17). Kazakhstan, Serbia and the Philippines come
+	// from geoBoundaries, whose names carry the register's noun ("Pavlodar
+	// Region", "Bor District"): redundant on a map of nothing else, so dropped
+	// (#182), except where the bare name is another target's ("Almaty Region"
+	// beside the city of Almaty). Serbia's lose their diacritics in the
+	// source; New Zealand's four unitary authorities and Venezuela's Vargas,
+	// renamed La Guaira in 2019, are the names people use.
+	Kazakhstan: {
+		'Pavlodar Region': 'Pavlodar',
+		'Jambyl Region': 'Jambyl',
+		'Kostanay Region': 'Kostanay',
+		'Mangystau Region': 'Mangystau',
+		'Karaganda Region': 'Karaganda',
+		'Kyzylorda Region': 'Kyzylorda',
+		'East Kazakhstan Region': 'East Kazakhstan',
+		'Aktobe Region': 'Aktobe',
+		'Atyrau Region': 'Atyrau',
+		'South Kazakhstan Region': 'South Kazakhstan',
+		'Akmola Region': 'Akmola',
+		'North Kazakhstan Region': 'North Kazakhstan',
+		'West Kazakhstan Region': 'West Kazakhstan'
+	},
+	Serbia: {
+		'Syrmia District': 'Syrmia',
+		'South Banat District': 'South Banat',
+		'North Banat District': 'North Banat',
+		'Central Banat District': 'Central Banat',
+		'North Backa District': 'North Bačka',
+		'West Backa District': 'West Bačka',
+		'South Backa District': 'South Bačka',
+		'Bor District': 'Bor',
+		'Macva District': 'Mačva',
+		'Pcinja District': 'Pčinja',
+		'Kolubara District': 'Kolubara',
+		'Podunavlje District': 'Podunavlje',
+		'Branicevo District': 'Braničevo',
+		'Sumadija District': 'Šumadija',
+		'Pomoravlje District': 'Pomoravlje',
+		'Moravica District': 'Moravica',
+		'Zajecar District': 'Zaječar',
+		'Zlatibor District': 'Zlatibor',
+		'Raska District': 'Raška',
+		'Pirot District': 'Pirot',
+		'Jablanica District': 'Jablanica',
+		'Toplica District': 'Toplica',
+		'Nisava District': 'Nišava',
+		'Rasina District': 'Rasina'
+	},
+	Philippines: {
+		ARMM: 'BARMM',
+		CAR: 'Cordillera',
+		NCR: 'Metro Manila',
+		Calabarzon: 'CALABARZON',
+		Mimaropa: 'MIMAROPA',
+		Soccsksargen: 'SOCCSKSARGEN'
+	},
+	'New Zealand': {
+		'Gisborne District': 'Gisborne',
+		'Marlborough District': 'Marlborough',
+		'Nelson City': 'Nelson',
+		'Tasman District': 'Tasman',
+		'Manawatu-Wanganui': 'Manawatū-Whanganui'
+	},
+	Venezuela: { Vargas: 'La Guaira' },
+	Denmark: { 'Sjaælland': 'Sjælland' },
 	// Chile's regions by the short names Chileans use; Biobío is the
 	// official spelling since 2018.
 	Chile: {
