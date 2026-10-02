@@ -6,8 +6,8 @@
 	"tiles": "tiles.pmtiles",
 	"targets": [
 		{
-			"id": "petropavlovsk",
-			"name": "Petropavlovsk",
+			"id": "petropavl",
+			"name": "Petropavl",
 			"type": "city",
 			"tier": 1,
 			"aliases": [],
@@ -21,7 +21,7 @@
 				69.220002,
 				54.8799951
 			],
-			"colorIndex": 1
+			"colorIndex": 0
 		},
 		{
 			"id": "kokshetau",
@@ -39,11 +39,11 @@
 				69.4199898,
 				53.2999882
 			],
-			"colorIndex": 2
+			"colorIndex": 1
 		},
 		{
-			"id": "oostanay",
-			"name": "Oostanay",
+			"id": "kostanay",
+			"name": "Kostanay",
 			"type": "city",
 			"tier": 1,
 			"aliases": [],
@@ -57,11 +57,11 @@
 				63.628302,
 				53.2208974
 			],
-			"colorIndex": 4
+			"colorIndex": 3
 		},
 		{
-			"id": "rudniy",
-			"name": "Rudniy",
+			"id": "rudny",
+			"name": "Rudny",
 			"type": "city",
 			"tier": 1,
 			"aliases": [],
@@ -75,7 +75,7 @@
 				63.1300378,
 				52.9526968
 			],
-			"colorIndex": 3
+			"colorIndex": 2
 		},
 		{
 			"id": "pavlodar",
@@ -129,7 +129,7 @@
 				51.3349955,
 				51.2711198
 			],
-			"colorIndex": 0
+			"colorIndex": 5
 		},
 		{
 			"id": "astana",
@@ -147,7 +147,7 @@
 				71.4277742,
 				51.1811253
 			],
-			"colorIndex": 0
+			"colorIndex": 5
 		},
 		{
 			"id": "semey",
@@ -168,8 +168,8 @@
 			"colorIndex": 0
 		},
 		{
-			"id": "aqtobe",
-			"name": "Aqtobe",
+			"id": "aktobe",
+			"name": "Aktobe",
 			"type": "city",
 			"tier": 1,
 			"aliases": [],
@@ -183,7 +183,7 @@
 				57.1699882,
 				50.2800175
 			],
-			"colorIndex": 5
+			"colorIndex": 4
 		},
 		{
 			"id": "temirtau",
@@ -222,8 +222,8 @@
 			"colorIndex": 2
 		},
 		{
-			"id": "qaraghandy",
-			"name": "Qaraghandy",
+			"id": "karaganda",
+			"name": "Karaganda",
 			"type": "city",
 			"tier": 1,
 			"aliases": [],
@@ -237,11 +237,11 @@
 				73.1150097,
 				49.884977
 			],
-			"colorIndex": 5
+			"colorIndex": 0
 		},
 		{
-			"id": "zhezqazghan",
-			"name": "Zhezqazghan",
+			"id": "zhezkazgan",
+			"name": "Zhezkazgan",
 			"type": "city",
 			"tier": 1,
 			"aliases": [],
@@ -255,7 +255,7 @@
 				67.770013,
 				47.7799892
 			],
-			"colorIndex": 3
+			"colorIndex": 5
 		},
 		{
 			"id": "atyrau",
@@ -273,7 +273,7 @@
 				51.9200244,
 				47.1126915
 			],
-			"colorIndex": 2
+			"colorIndex": 0
 		},
 		{
 			"id": "qyzylorda",
@@ -294,8 +294,8 @@
 			"colorIndex": 4
 		},
 		{
-			"id": "mangyshlak",
-			"name": "Mangyshlak",
+			"id": "aktau",
+			"name": "Aktau",
 			"type": "city",
 			"tier": 1,
 			"aliases": [],
@@ -327,7 +327,7 @@
 				76.9130903,
 				43.3269357
 			],
-			"colorIndex": 1
+			"colorIndex": 3
 		},
 		{
 			"id": "taraz",
@@ -345,7 +345,7 @@
 				71.3649873,
 				42.899977
 			],
-			"colorIndex": 5
+			"colorIndex": 1
 		},
 		{
 			"id": "shymkent",
@@ -363,27 +363,27 @@
 				69.5950179,
 				42.3200124
 			],
-			"colorIndex": 0
+			"colorIndex": 2
 		}
 	],
 	"tourOrder": [
-		"petropavlovsk",
+		"petropavl",
 		"kokshetau",
-		"oostanay",
-		"rudniy",
+		"kostanay",
+		"rudny",
 		"pavlodar",
 		"ekibastuz",
 		"oral",
 		"astana",
 		"semey",
-		"aqtobe",
+		"aktobe",
 		"temirtau",
 		"oskemen",
-		"qaraghandy",
-		"zhezqazghan",
+		"karaganda",
+		"zhezkazgan",
 		"atyrau",
 		"qyzylorda",
-		"mangyshlak",
+		"aktau",
 		"almaty",
 		"taraz",
 		"shymkent"

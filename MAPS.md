@@ -1114,6 +1114,51 @@ Poland's five add up to its 380 powiats. Rebuilt with the changed builders,
 the `.pmtiles` only, and identically with `main`'s builders - the WSL
 clone's tool versions, not this change.
 
+### Eight new countries (built 2026-10-02, v0.17, #163)
+
+Denmark, Kazakhstan, Kenya, New Zealand, Norway, the Philippines, Serbia and
+Venezuela. Built in the WSL clone (`PMTILES_BIN=$HOME/.local/bin/pmtiles`).
+geoBoundaries (pinned commit, `fetch-natural-earth.sh`) where Natural Earth is
+out of date or missing: Kenya (47 counties, public domain), Kazakhstan (16
+regions, 2017 borders: no Abai, Jetisu, Ulytau, Turkistan; ODbL), Norway (11
+counties, the 2020-23 set with Viken; CC BY 4.0), Serbia (25 districts, ODbL),
+the Philippines (17 regions, and 87 provinces as an advanced map; CC BY 3.0
+IGO). Natural Earth for Denmark (5 regions), New Zealand (16 regions, without
+the Chatham Islands, Tokelau and the sub-Antarctic islands) and Venezuela (24
+states, without the Dependencias Federales and the Guayana Esequiba strip,
+`--exclude-field=adm1_code`). Names go through `NAME_FIXUPS` (register nouns
+dropped, #182).
+
+```
+G=data/source/geoboundaries
+npx tsx data/scripts/build-map.ts --country=Kenya --type=county --source=$G/KEN-ADM1.geojson "--attribution=RCMRD GeoPortal, public domain (via geoBoundaries)" --out=data/maps/kenya-counties --name="Kenya — Counties"
+npx tsx data/scripts/build-map.ts --country=Kazakhstan --type=region --source=$G/KAZ-ADM1.geojson "--attribution=© OpenStreetMap contributors, ODbL (via geoBoundaries)" --out=data/maps/kazakhstan-regions --name="Kazakhstan — Regions"
+npx tsx data/scripts/build-map.ts --country=Norway --type=county --source=$G/NOR-ADM1.geojson "--attribution=© Kartverket, CC BY 4.0 (via geoBoundaries)" --out=data/maps/norway-counties --name="Norway — Counties"
+npx tsx data/scripts/build-map.ts --country=Serbia --type=district --source=$G/SRB-ADM1.geojson "--attribution=© OpenStreetMap contributors, ODbL (via geoBoundaries)" --out=data/maps/serbia-districts --name="Serbia — Districts"
+npx tsx data/scripts/build-map.ts --country=Philippines --type=region --source=$G/PHL-ADM1.geojson "--attribution=NAMRIA, PSA, OCHA Philippines, CC BY 3.0 IGO (via geoBoundaries)" --out=data/maps/philippines-regions --name="Philippines — Regions"
+npx tsx data/scripts/build-map.ts --country=Philippines --type=province --source=$G/PHL-ADM2.geojson "--attribution=NAMRIA, PSA, OCHA Philippines, CC BY 3.0 IGO (via geoBoundaries)" --out=data/maps/philippines-provinces --name="Philippines — Provinces"
+npx tsx data/scripts/build-map.ts --country="New Zealand" --type=region --exclude="Auckland Islands,Campbell Islands,Antipodes Islands,Chatham Islands Territory,Kermadec Islands,Tokelau,The Snares,Three Kings Islands" --out=data/maps/new-zealand-regions --name="New Zealand — Regions"
+npx tsx data/scripts/build-map.ts --country=Venezuela --type=state --exclude-field=adm1_code --exclude="VEN-44,VEN+99?" --out=data/maps/venezuela-states --name="Venezuela — States"
+npx tsx data/scripts/build-map.ts --country=Denmark --type=region --out=data/maps/denmark-regions --name="Denmark — Regions"
+
+npx tsx data/scripts/build-points-map.ts --country=Philippines --min-population=100000 --out=data/maps/philippines-towns-100k --name="Philippines — Towns"
+npx tsx data/scripts/build-points-map.ts --country=Kazakhstan --min-population=100000 --out=data/maps/kazakhstan-towns-100k --name="Kazakhstan — Towns"
+npx tsx data/scripts/build-points-map.ts --country=Venezuela --min-population=100000 --out=data/maps/venezuela-towns-100k --name="Venezuela — Towns"
+# Natural Earth lists too few towns over 100 000 in these (4-7), so 50 000:
+npx tsx data/scripts/build-points-map.ts --country=Kenya --min-population=50000 --exclude="Kendu Bay,Sotik" --out=data/maps/kenya-towns-50k --name="Kenya — Towns"
+npx tsx data/scripts/build-points-map.ts --country="New Zealand" --min-population=50000 --exclude="North Shore,Waitakere,Manukau" --out=data/maps/new-zealand-towns-50k --name="New Zealand — Towns"
+npx tsx data/scripts/build-points-map.ts --country=Norway --min-population=50000 --exclude="Bærum" --out=data/maps/norway-towns-50k --name="Norway — Towns"
+npx tsx data/scripts/build-points-map.ts --country=Denmark --min-population=50000 --out=data/maps/denmark-towns-50k --name="Denmark — Towns"
+npx tsx data/scripts/build-points-map.ts --country=Serbia --min-population=50000 --out=data/maps/serbia-towns-50k --name="Serbia — Towns"
+```
+
+Targets: kenya-counties 47, kazakhstan-regions 16, norway-counties 11,
+serbia-districts 25, philippines-regions 17, philippines-provinces 87,
+new-zealand-regions 16, venezuela-states 24, denmark-regions 5; towns 31
+(Philippines), 20 (Kazakhstan), 31 (Venezuela), 16 (Kenya), 15 (New Zealand),
+8 (Norway), 6 (Denmark), 7 (Serbia). Not done: German/Italian facts for these
+(v0.18), and towns from Wikidata where Natural Earth is thin.
+
 ## The Terrain layer: `terrain.pmtiles` (FT-33, 2026-09-19)
 
 Every map has a **second** tileset beside its `tiles.pmtiles`, holding the

@@ -288,7 +288,7 @@ const NAME_FIXUPS: Record<string, Record<string, string>> = {
 		'Manawatu-Wanganui': 'Manawatū-Whanganui'
 	},
 	Venezuela: { Vargas: 'La Guaira' },
-	Denmark: { 'Sjaælland': 'Sjælland' },
+	Denmark: { Sjaælland: 'Sjælland' },
 	// Chile's regions by the short names Chileans use; Biobío is the
 	// official spelling since 2018.
 	Chile: {
