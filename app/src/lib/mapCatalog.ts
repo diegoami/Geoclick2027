@@ -21,6 +21,11 @@ interface MapEntry {
 	id: string;
 	labelKey: MapTypeKey;
 	partKey?: MapPartKey;
+	/** A small division (Kreise, powiaty, departments, municipalities,
+	 * provinces) or a slice of a towns map: listed after a separator on the
+	 * start screen and left out of the in-map row (v0.17, #162). The catalog
+	 * keeps standard maps first, then advanced ones, whole nation before parts. */
+	advanced?: boolean;
 }
 
 interface CountryGroup {
@@ -155,54 +160,100 @@ export const mapGroups: CountryGroup[] = [
 		country: 'France',
 		maps: [
 			{ id: 'france-regions', labelKey: 'mapType.regions' },
-			{ id: 'france-departments', labelKey: 'mapType.departments' },
-			{ id: 'france-departments-north', labelKey: 'mapType.departments', partKey: 'mapPart.north' },
-			{ id: 'france-departments-south', labelKey: 'mapType.departments', partKey: 'mapPart.south' },
-			{ id: 'france-towns-100k', labelKey: 'mapType.towns' }
+			{ id: 'france-towns-100k', labelKey: 'mapType.towns' },
+			{ id: 'france-departments', labelKey: 'mapType.departments', advanced: true },
+			{
+				id: 'france-departments-north',
+				labelKey: 'mapType.departments',
+				partKey: 'mapPart.north',
+				advanced: true
+			},
+			{
+				id: 'france-departments-south',
+				labelKey: 'mapType.departments',
+				partKey: 'mapPart.south',
+				advanced: true
+			}
 		]
 	},
 	{
 		country: 'Germany',
 		maps: [
 			{ id: 'germany-states', labelKey: 'mapType.states' },
+			{ id: 'germany-towns-100k', labelKey: 'mapType.towns' },
 			{
 				id: 'germany-districts-center',
 				labelKey: 'mapType.germanDistricts',
-				partKey: 'mapPart.center'
+				partKey: 'mapPart.center',
+				advanced: true
 			},
 			{
 				id: 'germany-districts-east',
 				labelKey: 'mapType.germanDistricts',
-				partKey: 'mapPart.east'
+				partKey: 'mapPart.east',
+				advanced: true
 			},
 			{
 				id: 'germany-districts-north',
 				labelKey: 'mapType.germanDistricts',
-				partKey: 'mapPart.north'
+				partKey: 'mapPart.north',
+				advanced: true
 			},
 			{
 				id: 'germany-districts-southeast',
 				labelKey: 'mapType.germanDistricts',
-				partKey: 'mapPart.southEast'
+				partKey: 'mapPart.southEast',
+				advanced: true
 			},
 			{
 				id: 'germany-districts-southwest',
 				labelKey: 'mapType.germanDistricts',
-				partKey: 'mapPart.southWest'
+				partKey: 'mapPart.southWest',
+				advanced: true
 			},
 			{
 				id: 'germany-districts-west',
 				labelKey: 'mapType.germanDistricts',
-				partKey: 'mapPart.west'
+				partKey: 'mapPart.west',
+				advanced: true
 			},
 			// Six country parts: 60 towns each from Wikidata (#39, batch C).
-			{ id: 'germany-towns-100k', labelKey: 'mapType.towns' },
-			{ id: 'germany-towns-center', labelKey: 'mapType.towns', partKey: 'mapPart.center' },
-			{ id: 'germany-towns-east', labelKey: 'mapType.towns', partKey: 'mapPart.east' },
-			{ id: 'germany-towns-north', labelKey: 'mapType.towns', partKey: 'mapPart.north' },
-			{ id: 'germany-towns-southeast', labelKey: 'mapType.towns', partKey: 'mapPart.southEast' },
-			{ id: 'germany-towns-southwest', labelKey: 'mapType.towns', partKey: 'mapPart.southWest' },
-			{ id: 'germany-towns-west', labelKey: 'mapType.towns', partKey: 'mapPart.west' }
+			{
+				id: 'germany-towns-center',
+				labelKey: 'mapType.towns',
+				partKey: 'mapPart.center',
+				advanced: true
+			},
+			{
+				id: 'germany-towns-east',
+				labelKey: 'mapType.towns',
+				partKey: 'mapPart.east',
+				advanced: true
+			},
+			{
+				id: 'germany-towns-north',
+				labelKey: 'mapType.towns',
+				partKey: 'mapPart.north',
+				advanced: true
+			},
+			{
+				id: 'germany-towns-southeast',
+				labelKey: 'mapType.towns',
+				partKey: 'mapPart.southEast',
+				advanced: true
+			},
+			{
+				id: 'germany-towns-southwest',
+				labelKey: 'mapType.towns',
+				partKey: 'mapPart.southWest',
+				advanced: true
+			},
+			{
+				id: 'germany-towns-west',
+				labelKey: 'mapType.towns',
+				partKey: 'mapPart.west',
+				advanced: true
+			}
 		]
 	},
 	{
@@ -248,13 +299,28 @@ export const mapGroups: CountryGroup[] = [
 		pickerDefaultMapId: 'italy-regions',
 		maps: [
 			{ id: 'italy-regions', labelKey: 'mapType.regions' },
-			{ id: 'italy-provinces', labelKey: 'mapType.provinces' },
+			{ id: 'italy-towns-100k', labelKey: 'mapType.towns' },
+			{ id: 'italy-provinces', labelKey: 'mapType.provinces', advanced: true },
 			// 110 provinces is the densest map there is; in thirds each one is
 			// readable at the zoom it opens at (FT-29).
-			{ id: 'italy-provinces-north', labelKey: 'mapType.provincesNorth' },
-			{ id: 'italy-provinces-center', labelKey: 'mapType.provincesCenter' },
-			{ id: 'italy-provinces-south', labelKey: 'mapType.provincesSouth' },
-			{ id: 'italy-towns-100k', labelKey: 'mapType.towns' }
+			{
+				id: 'italy-provinces-north',
+				labelKey: 'mapType.provinces',
+				partKey: 'mapPart.north',
+				advanced: true
+			},
+			{
+				id: 'italy-provinces-center',
+				labelKey: 'mapType.provinces',
+				partKey: 'mapPart.center',
+				advanced: true
+			},
+			{
+				id: 'italy-provinces-south',
+				labelKey: 'mapType.provinces',
+				partKey: 'mapPart.south',
+				advanced: true
+			}
 		]
 	},
 	{
@@ -275,32 +341,37 @@ export const mapGroups: CountryGroup[] = [
 		country: 'Netherlands',
 		maps: [
 			{ id: 'netherlands-regions', labelKey: 'mapType.provinces' },
+			{ id: 'netherlands-towns-100k', labelKey: 'mapType.towns' },
 			{
 				id: 'netherlands-municipalities-east',
 				labelKey: 'mapType.municipalities',
+				advanced: true,
 				partKey: 'mapPart.east'
 			},
 			{
 				id: 'netherlands-municipalities-north',
 				labelKey: 'mapType.municipalities',
+				advanced: true,
 				partKey: 'mapPart.north'
 			},
 			{
 				id: 'netherlands-municipalities-south',
 				labelKey: 'mapType.municipalities',
+				advanced: true,
 				partKey: 'mapPart.south'
 			},
 			{
 				id: 'netherlands-municipalities-southwest',
 				labelKey: 'mapType.municipalities',
+				advanced: true,
 				partKey: 'mapPart.southWest'
 			},
 			{
 				id: 'netherlands-municipalities-west',
 				labelKey: 'mapType.municipalities',
+				advanced: true,
 				partKey: 'mapPart.west'
-			},
-			{ id: 'netherlands-towns-100k', labelKey: 'mapType.towns' }
+			}
 		]
 	},
 	{
@@ -335,32 +406,37 @@ export const mapGroups: CountryGroup[] = [
 		country: 'Poland',
 		maps: [
 			{ id: 'poland-regions', labelKey: 'mapType.regions' },
+			{ id: 'poland-towns-100k', labelKey: 'mapType.towns' },
 			{
 				id: 'poland-counties-north',
 				labelKey: 'mapType.polishCounties',
+				advanced: true,
 				partKey: 'mapPart.north'
 			},
 			{
 				id: 'poland-counties-west',
 				labelKey: 'mapType.polishCounties',
+				advanced: true,
 				partKey: 'mapPart.west'
 			},
 			{
 				id: 'poland-counties-east',
 				labelKey: 'mapType.polishCounties',
+				advanced: true,
 				partKey: 'mapPart.east'
 			},
 			{
 				id: 'poland-counties-southeast',
 				labelKey: 'mapType.polishCounties',
+				advanced: true,
 				partKey: 'mapPart.southEast'
 			},
 			{
 				id: 'poland-counties-south',
 				labelKey: 'mapType.polishCounties',
+				advanced: true,
 				partKey: 'mapPart.south'
-			},
-			{ id: 'poland-towns-100k', labelKey: 'mapType.towns' }
+			}
 		]
 	},
 	{
@@ -413,8 +489,8 @@ export const mapGroups: CountryGroup[] = [
 		country: 'Spain',
 		maps: [
 			{ id: 'spain-regions', labelKey: 'mapType.regions' },
-			{ id: 'spain-provinces', labelKey: 'mapType.provinces' },
-			{ id: 'spain-towns-100k', labelKey: 'mapType.towns' }
+			{ id: 'spain-towns-100k', labelKey: 'mapType.towns' },
+			{ id: 'spain-provinces', labelKey: 'mapType.provinces', advanced: true }
 		]
 	},
 	{
@@ -458,9 +534,24 @@ export const mapGroups: CountryGroup[] = [
 			// slices are there because one map of 281 cities would be both too
 			// long and, around New York, too crowded to play (FT-28).
 			{ id: 'usa-cities', labelKey: 'mapType.cities' },
-			{ id: 'usa-cities-east', labelKey: 'mapType.citiesEast' },
-			{ id: 'usa-cities-center', labelKey: 'mapType.citiesCenter' },
-			{ id: 'usa-cities-west', labelKey: 'mapType.citiesWest' }
+			{
+				id: 'usa-cities-east',
+				labelKey: 'mapType.cities',
+				partKey: 'mapPart.east',
+				advanced: true
+			},
+			{
+				id: 'usa-cities-center',
+				labelKey: 'mapType.cities',
+				partKey: 'mapPart.center',
+				advanced: true
+			},
+			{
+				id: 'usa-cities-west',
+				labelKey: 'mapType.cities',
+				partKey: 'mapPart.west',
+				advanced: true
+			}
 		]
 	},
 	{

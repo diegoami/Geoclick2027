@@ -31,21 +31,17 @@ describe('MapNav sibling map buttons', () => {
 		expect(group).toHaveAttribute('aria-label', 'Map type for Italy');
 		expect(getComputedStyle(group!).overflowX).toBe('auto');
 		const buttons = [...group!.querySelectorAll<HTMLButtonElement>('.map-type-btn')];
+		// The open map is an advanced one, so it is listed with the standard maps;
+		// the other provinces maps are not (v0.17).
 		expect(buttons.map((button) => button.dataset.mapId)).toEqual([
 			'italy-regions',
-			'italy-provinces',
-			'italy-provinces-north',
-			'italy-provinces-center',
-			'italy-provinces-south',
-			'italy-towns-100k'
+			'italy-towns-100k',
+			'italy-provinces'
 		]);
 		expect(buttons.map((button) => button.textContent?.trim())).toEqual([
 			'Regions',
-			'Provinces',
-			'Provinces — North',
-			'Provinces — Center',
-			'Provinces — South',
-			'Towns'
+			'Towns',
+			'Provinces'
 		]);
 		expect(
 			buttons.find((button) => button.getAttribute('aria-pressed') === 'true')?.textContent
@@ -54,6 +50,20 @@ describe('MapNav sibling map buttons', () => {
 
 		buttons[0].click();
 		expect(gotoMock).toHaveBeenCalledWith('/map/italy-regions');
+	});
+
+	it('leaves the advanced maps out of the row while a standard map is open', async () => {
+		await render(MapNav, {
+			mapId: 'germany-states',
+			mapName: 'Germany — States',
+			active: 'overview'
+		});
+
+		const buttons = [...document.querySelectorAll<HTMLButtonElement>('.map-type-btn')];
+		expect(buttons.map((button) => button.dataset.mapId)).toEqual([
+			'germany-states',
+			'germany-towns-100k'
+		]);
 	});
 
 	it('offers the continent maps as map-type buttons', async () => {
