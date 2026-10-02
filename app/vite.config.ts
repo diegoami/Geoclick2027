@@ -72,6 +72,13 @@ export default defineConfig({
 	],
 	test: {
 		expect: { requireAssertions: true },
+		// Vitest's 5 s default is not enough on a loaded machine: tests that
+		// import the whole map catalogue (worldPicker.test.ts, mapColors.test.ts)
+		// took longer than that while three test runs shared a CPU, and so did
+		// the pre-push hook next to a review in the background (the "flaky test
+		// gate"). A generous limit still catches a real hang.
+		testTimeout: 30_000,
+		hookTimeout: 30_000,
 		projects: [
 			{
 				// Component tests (`*.svelte.test.ts`) in a real headless Chromium
@@ -95,6 +102,8 @@ export default defineConfig({
 				test: {
 					name: 'server',
 					environment: 'node',
+					testTimeout: 30_000,
+					hookTimeout: 30_000,
 					include: ['src/**/*.{test,spec}.{js,ts}'],
 					exclude: ['src/**/*.svelte.{test,spec}.{js,ts}', 'src/**/*.browser.{test,spec}.{js,ts}']
 				}
