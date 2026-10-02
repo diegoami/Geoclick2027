@@ -50,11 +50,15 @@ function Invoke-ReviewerBriefSelfTest {
     $checks = @(
         @{ n = 'brief has no "git -C"';            ok = ($brief -notmatch 'git\s+-C') },
         @{ n = 'brief names no full worktree path'; ok = ($brief -notmatch '[A-Za-z]:[\\/]|/Users/|-review/') },
-        @{ n = 'brief demands the tree proof';      ok = ($brief -match 'rev-parse --show-toplevel' -and $brief -match 'wrong\s+tree') }
+        @{ n = 'brief demands the tree proof, in order'; ok = ($brief -match '(?s)FIRST tool call.*rev-parse --show-toplevel.*rev-parse HEAD.*diff --name-only ' + ('a' * 40) + '\.\.\.HEAD.*wrong\s+tree') },
+        @{ n = 'brief says an empty diff is wrong';      ok = ($brief -match 'must\s+not\s+be\s+empty') }
     )
+    $script = Get-Content (Join-Path $PSScriptRoot 'external-review.ps1') -Raw
+    $checks += @{ n = 'external-review.ps1 builds the brief with Get-ReviewerBrief'; ok = ($script -match 'Get-ReviewerBrief -Header' -and $script -match 'WorktreeLeaf \(Split-Path -Leaf \$wt\)') }
     $text = Get-Content $AgentFile -Raw
     $body = ($text -split '(?m)^---\s*$', 3)[2]
     $checks += @{ n = 'agent body has no "git -C"';       ok = ($body -notmatch 'git\s+-C') }
+    $checks += @{ n = 'agent body makes the tree proof the first call and stops on mismatch'; ok = ($body -match 'FIRST tool call' -and $body -match 'wrong tree' -and $body -match 'must not be\s+empty') }
     $checks += @{ n = 'agent body forbids typing the path'; ok = ($body -match 'never type') }
     $checks += @{ n = 'agent deny rules for git -C stay';   ok = ($text -match '"git -C \* push\*": deny') }
     foreach ($c in $checks) {
