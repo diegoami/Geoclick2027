@@ -18,7 +18,9 @@ const EUROPE_PARTS = ['west', 'central', 'east', 'north', 'south'];
 // The maps of several countries: the only ones whose places change name.
 const NAMED_MAPS = new Set([
 	...CONTINENTS.flatMap((c) => [`${c}-countries`, `${c}-capitals`]),
-	...EUROPE_PARTS.map((p) => `europe-cities-${p}`)
+	...EUROPE_PARTS.map((p) => `europe-cities-${p}`),
+	// Their label drops the "powiat " their name keeps for the tiles (#182).
+	...['east', 'north', 'south', 'southeast', 'west'].map((p) => `poland-counties-${p}`)
 ]);
 
 describe('targetName', () => {

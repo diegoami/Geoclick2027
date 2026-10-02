@@ -75,6 +75,16 @@ const POLISH_COUNTIES: Record<string, string> = {
 	Krakow: 'Kraków'
 };
 
+/**
+ * What a player reads for a Polish county: "oleski" for "powiat oleski", and
+ * "brzeski (Opolskie)" where the name occurs twice. The prefix is redundant on
+ * a map of nothing but powiats; the target's `name` keeps it, because the tiles
+ * join on it, and the label goes to `names` (#182).
+ */
+export function polishCountyLabel(name: string): string {
+	return name.replace(/^powiat /, '');
+}
+
 /** The name cleaners a --clean-names flag can pick. */
 export const NAME_CLEANERS: Record<string, (raw: string) => string> = {
 	'german-districts': germanDistrictName,

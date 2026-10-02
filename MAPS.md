@@ -1055,6 +1055,12 @@ New `build-map.ts` options:
 - `--clip` now also cuts admin-1 maps (Chile, South Africa).
 - `--clean-names=polish-counties` (`admin2.ts`).
 
+Reader-facing names (#182): a powiat's `name` ("powiat oleski") stays as it is,
+because the tiles join on it, but `names` carries "oleski" so the redundant
+prefix never shows. `build-map.ts` writes `names` for `--clean-names=polish-counties`;
+`npx tsx data/scripts/label-polish-counties.ts` patched the five committed
+`map.json` files without rebuilding any tile.
+
 ```
 PL=(--country=Poland --type=county --source=data/source/geoboundaries/POL-ADM2.geojson --clean-names=polish-counties --disambiguate-by=name_pl "--attribution=© OpenStreetMap contributors, ODbL (via geoBoundaries)")
 npx tsx data/scripts/build-map.ts "${PL[@]}" --within="West Pomeranian,Pomeranian,Kuyavian-Pomeranian,Warmian-Masurian" --out=data/maps/poland-counties-north --name="Poland — Counties — North"
