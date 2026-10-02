@@ -83,6 +83,20 @@ const NAME_FIXUPS: Record<string, Record<string, string>> = {
 		Queenstown: 'Komani',
 		Mmabatho: 'Mahikeng'
 	},
+	// The maps of v0.17 (#163): Natural Earth's English names are dated or
+	// typoed for Kazakhstan (Oostanay, Mangyshlak is Aktau since 1992) and the
+	// Philippines (Ormac), and its Danish names ignore the English ones.
+	Kazakhstan: {
+		Oostanay: 'Kostanay',
+		Mangyshlak: 'Aktau',
+		Rudniy: 'Rudny',
+		Petropavlovsk: 'Petropavl',
+		Aqtobe: 'Aktobe',
+		Qaraghandy: 'Karaganda',
+		Zhezqazghan: 'Zhezkazgan'
+	},
+	Philippines: { Ormac: 'Ormoc', 'Pasay City': 'Pasay', Roxas: 'Roxas City' },
+	Denmark: { Århus: 'Aarhus', København: 'Copenhagen' },
 	// Iran's and Saudi Arabia's towns spelled as the provinces and regions
 	// of the same maps are: English, not a transliteration's.
 	Iran: {

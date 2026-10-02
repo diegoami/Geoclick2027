@@ -1,0 +1,111 @@
+{
+	"troms-og-finnmark": {
+		"kind": "region",
+		"borders": [
+			"Nordland"
+		],
+		"coastal": true,
+		"position": "north-east"
+	},
+	"nordland": {
+		"kind": "region",
+		"borders": [
+			"Troms og Finnmark",
+			"Trøndelag"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"tr-ndelag": {
+		"kind": "region",
+		"borders": [
+			"Innlandet",
+			"Møre og Romsdal",
+			"Nordland"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"m-re-og-romsdal": {
+		"kind": "region",
+		"borders": [
+			"Innlandet",
+			"Trøndelag",
+			"Vestland"
+		],
+		"coastal": true,
+		"position": "west"
+	},
+	"innlandet": {
+		"kind": "region",
+		"borders": [
+			"Møre og Romsdal",
+			"Trøndelag",
+			"Vestland",
+			"Viken"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"vestland": {
+		"kind": "region",
+		"borders": [
+			"Innlandet",
+			"Møre og Romsdal",
+			"Rogaland",
+			"Vestfold og Telemark",
+			"Viken"
+		],
+		"coastal": true,
+		"position": "south-west"
+	},
+	"viken": {
+		"kind": "region",
+		"borders": [
+			"Innlandet",
+			"Oslo",
+			"Vestfold og Telemark",
+			"Vestland"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"oslo": {
+		"kind": "region",
+		"borders": [
+			"Viken"
+		],
+		"coastal": true,
+		"position": "south-west"
+	},
+	"vestfold-og-telemark": {
+		"kind": "region",
+		"borders": [
+			"Agder",
+			"Rogaland",
+			"Vestland",
+			"Viken"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"rogaland": {
+		"kind": "region",
+		"borders": [
+			"Agder",
+			"Vestfold og Telemark",
+			"Vestland"
+		],
+		"coastal": true,
+		"position": "south-west"
+	},
+	"agder": {
+		"kind": "region",
+		"borders": [
+			"Rogaland",
+			"Vestfold og Telemark"
+		],
+		"coastal": false,
+		"position": "south-west"
+	}
+}

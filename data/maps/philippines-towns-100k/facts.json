@@ -1,0 +1,263 @@
+{
+	"laoag": {
+		"kind": "city",
+		"population": 207048,
+		"populationRank": 23,
+		"region": "Ilocos Norte",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"tuguegarao": {
+		"kind": "city",
+		"population": 115105,
+		"populationRank": 30,
+		"region": "Cagayan",
+		"coastal": false,
+		"position": "north"
+	},
+	"baguio": {
+		"kind": "city",
+		"population": 447824,
+		"populationRank": 11,
+		"region": "Benguet",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"dagupan": {
+		"kind": "city",
+		"population": 163676,
+		"populationRank": 27,
+		"region": "Pangasinan",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"cabanatuan": {
+		"kind": "city",
+		"population": 220250,
+		"populationRank": 22,
+		"region": "Nueva Ecija",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"tarlac": {
+		"kind": "city",
+		"population": 183930,
+		"populationRank": 25,
+		"coastal": false,
+		"position": "north-west"
+	},
+	"angeles": {
+		"kind": "city",
+		"population": 314493,
+		"populationRank": 16,
+		"region": "Pampanga",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"olongapo": {
+		"kind": "city",
+		"population": 304388,
+		"populationRank": 17,
+		"region": "Zambales",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"quezon-city": {
+		"kind": "city",
+		"population": 2761720,
+		"populationRank": 2,
+		"region": "Metropolitan Manila",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"manila": {
+		"kind": "city",
+		"population": 11100000,
+		"populationRank": 1,
+		"population1950": 1544000,
+		"region": "Metropolitan Manila",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"From may-nilad, \"where the nilad grows\", a shrub of its shores.",
+				"Intramuros, the walled city the Spanish built, is at its heart.",
+				"It is one of the most densely populated cities in the world."
+			],
+			"it": [
+				"Da may-nilad, \"dove cresce il nilad\", un arbusto delle sue rive.",
+				"Intramuros, la città murata costruita dagli spagnoli, è nel suo cuore.",
+				"È una delle città più densamente popolate del mondo."
+			]
+		}
+	},
+	"pasay-city": {
+		"kind": "city",
+		"population": 403064,
+		"populationRank": 13,
+		"region": "Metropolitan Manila",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"san-pablo": {
+		"kind": "city",
+		"population": 240830,
+		"populationRank": 21,
+		"region": "Laguna",
+		"coastal": false,
+		"position": "centre"
+	},
+	"batangas": {
+		"kind": "city",
+		"population": 424508,
+		"populationRank": 12,
+		"coastal": true,
+		"position": "west"
+	},
+	"naga": {
+		"kind": "city",
+		"population": 741635,
+		"populationRank": 9,
+		"region": "Camarines Sur",
+		"coastal": true,
+		"position": "centre"
+	},
+	"legazpi": {
+		"kind": "city",
+		"population": 320081,
+		"populationRank": 15,
+		"region": "Albay",
+		"coastal": true,
+		"position": "east"
+	},
+	"roxas": {
+		"kind": "city",
+		"population": 102688,
+		"populationRank": 31,
+		"region": "Capiz",
+		"coastal": true,
+		"position": "centre"
+	},
+	"tacloban": {
+		"kind": "city",
+		"population": 280006,
+		"populationRank": 19,
+		"region": "Leyte",
+		"coastal": true,
+		"position": "east"
+	},
+	"ormac": {
+		"kind": "city",
+		"population": 167584,
+		"populationRank": 26,
+		"region": "Leyte",
+		"coastal": true,
+		"position": "east"
+	},
+	"cadiz": {
+		"kind": "city",
+		"population": 283157,
+		"populationRank": 18,
+		"region": "Negros Occidental",
+		"coastal": true,
+		"position": "centre"
+	},
+	"iloilo": {
+		"kind": "city",
+		"population": 387681,
+		"populationRank": 14,
+		"coastal": true,
+		"position": "centre"
+	},
+	"bacolod": {
+		"kind": "city",
+		"population": 949354,
+		"populationRank": 6,
+		"region": "Negros Occidental",
+		"coastal": true,
+		"position": "centre"
+	},
+	"cebu": {
+		"kind": "city",
+		"population": 815000,
+		"populationRank": 7,
+		"population1950": 178000,
+		"coastal": true,
+		"position": "east"
+	},
+	"puerto-princesa": {
+		"kind": "city",
+		"population": 157144,
+		"populationRank": 29,
+		"region": "Palawan",
+		"coastal": true,
+		"position": "south-west"
+	},
+	"butuan": {
+		"kind": "city",
+		"population": 190557,
+		"populationRank": 24,
+		"region": "Agusan del Norte",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"cagayan-de-oro": {
+		"kind": "city",
+		"population": 1121561,
+		"populationRank": 4,
+		"region": "Misamis Oriental",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"iligan": {
+		"kind": "city",
+		"population": 464599,
+		"populationRank": 10,
+		"region": "Lanao del Norte",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"pagadian": {
+		"kind": "city",
+		"population": 159590,
+		"populationRank": 28,
+		"region": "Zamboanga Del Sur",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"cotabato": {
+		"kind": "city",
+		"population": 279519,
+		"populationRank": 20,
+		"region": "Shariff Kabunsuan",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"davao": {
+		"kind": "city",
+		"population": 1402000,
+		"populationRank": 3,
+		"population1950": 124000,
+		"region": "Davao Del Sur",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"zamboanga": {
+		"kind": "city",
+		"population": 773000,
+		"populationRank": 8,
+		"population1950": 107000,
+		"region": "Zamboanga del Sur",
+		"coastal": true,
+		"position": "south"
+	},
+	"general-santos": {
+		"kind": "city",
+		"population": 950530,
+		"populationRank": 5,
+		"region": "South Cotabato",
+		"coastal": true,
+		"position": "south-east"
+	}
+}

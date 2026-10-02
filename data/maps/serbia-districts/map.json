@@ -1,0 +1,912 @@
+{
+	"id": "serbia-districts",
+	"name": "Serbia — Districts",
+	"country": "Serbia",
+	"attribution": "© OpenStreetMap contributors, ODbL (via geoBoundaries); Natural Earth (public domain), https://www.naturalearthdata.com",
+	"boundarySource": "data/source/geoboundaries/SRB-ADM1.geojson",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "north-backa",
+			"name": "North Bačka",
+			"type": "district",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				19.59015,
+				45.8995
+			],
+			"bbox": [
+				19.2816,
+				45.6111,
+				19.8987,
+				46.1879
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						19.396,
+						45.9429
+					],
+					[
+						19.5895,
+						45.8876
+					],
+					[
+						19.7829,
+						45.9347
+					]
+				],
+				"aspect": 0.64
+			}
+		},
+		{
+			"id": "north-banat",
+			"name": "North Banat",
+			"type": "district",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.2255,
+				45.889399999999995
+			],
+			"bbox": [
+				19.7886,
+				45.602,
+				20.6624,
+				46.1768
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						19.9124,
+						46.035
+					],
+					[
+						20.2116,
+						45.8901
+					],
+					[
+						20.5242,
+						45.7586
+					]
+				],
+				"aspect": 1.67
+			}
+		},
+		{
+			"id": "west-backa",
+			"name": "West Bačka",
+			"type": "district",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				19.2222,
+				45.731449999999995
+			],
+			"bbox": [
+				18.8276,
+				45.4229,
+				19.6168,
+				46.04
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						18.9532,
+						45.7734
+					],
+					[
+						19.223,
+						45.7239
+					],
+					[
+						19.4928,
+						45.6347
+					]
+				],
+				"aspect": 0.87
+			}
+		},
+		{
+			"id": "south-backa",
+			"name": "South Bačka",
+			"type": "district",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				19.6406,
+				45.44885
+			],
+			"bbox": [
+				18.97,
+				45.1345,
+				20.3112,
+				45.7632
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						19.1854,
+						45.3081
+					],
+					[
+						19.6616,
+						45.477
+					],
+					[
+						20.1378,
+						45.3991
+					]
+				],
+				"aspect": 1.78
+			}
+		},
+		{
+			"id": "central-banat",
+			"name": "Central Banat",
+			"type": "district",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.5261,
+				45.434200000000004
+			],
+			"bbox": [
+				20.0351,
+				45.0743,
+				21.0171,
+				45.7941
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						20.1645,
+						45.5166
+					],
+					[
+						20.4823,
+						45.362
+					],
+					[
+						20.8001,
+						45.4216
+					]
+				],
+				"aspect": 0.94
+			}
+		},
+		{
+			"id": "south-banat",
+			"name": "South Banat",
+			"type": "district",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.98225,
+				44.9958
+			],
+			"bbox": [
+				20.4117,
+				44.6597,
+				21.5528,
+				45.3319
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						20.5556,
+						45.0285
+					],
+					[
+						20.9294,
+						44.9259
+					],
+					[
+						21.3032,
+						45.0465
+					]
+				],
+				"aspect": 1.04
+			}
+		},
+		{
+			"id": "syrmia",
+			"name": "Syrmia",
+			"type": "district",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				19.675,
+				44.926
+			],
+			"bbox": [
+				18.9924,
+				44.6444,
+				20.3576,
+				45.2076
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						19.2056,
+						45.0697
+					],
+					[
+						19.6951,
+						44.9464
+					],
+					[
+						20.2109,
+						44.9598
+					]
+				],
+				"aspect": 2.68
+			}
+		},
+		{
+			"id": "belgrade",
+			"name": "Belgrade",
+			"type": "district",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.4196,
+				44.67945
+			],
+			"bbox": [
+				19.9834,
+				44.2632,
+				20.8558,
+				45.0957
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						20.1717,
+						44.6845
+					],
+					[
+						20.4327,
+						44.7311
+					],
+					[
+						20.6938,
+						44.5996
+					]
+				],
+				"aspect": 0.7
+			}
+		},
+		{
+			"id": "macva",
+			"name": "Mačva",
+			"type": "district",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				19.5433,
+				44.513149999999996
+			],
+			"bbox": [
+				19.1028,
+				44.097,
+				19.9838,
+				44.9293
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						19.1898,
+						44.4787
+					],
+					[
+						19.5028,
+						44.6817
+					],
+					[
+						19.8158,
+						44.6707
+					]
+				],
+				"aspect": 1.01
+			}
+		},
+		{
+			"id": "podunavlje",
+			"name": "Podunavlje",
+			"type": "district",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.96145,
+				44.472049999999996
+			],
+			"bbox": [
+				20.7455,
+				44.2226,
+				21.1774,
+				44.7215
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						20.9414,
+						44.6319
+					],
+					[
+						20.9442,
+						44.4493
+					],
+					[
+						21.0203,
+						44.2746
+					]
+				],
+				"aspect": 1.56
+			}
+		},
+		{
+			"id": "branicevo",
+			"name": "Braničevo",
+			"type": "district",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				21.51545,
+				44.4524
+			],
+			"bbox": [
+				21.0217,
+				44.0821,
+				22.0092,
+				44.8227
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						21.2038,
+						44.5574
+					],
+					[
+						21.5002,
+						44.4951
+					],
+					[
+						21.7966,
+						44.3608
+					]
+				],
+				"aspect": 0.77
+			}
+		},
+		{
+			"id": "kolubara",
+			"name": "Kolubara",
+			"type": "district",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				19.942500000000003,
+				44.33265
+			],
+			"bbox": [
+				19.4477,
+				44.0764,
+				20.4373,
+				44.5889
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						19.5726,
+						44.303
+					],
+					[
+						19.8969,
+						44.3461
+					],
+					[
+						20.2211,
+						44.2922
+					]
+				],
+				"aspect": 1.46
+			}
+		},
+		{
+			"id": "bor",
+			"name": "Bor",
+			"type": "district",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				22.272199999999998,
+				44.3084
+			],
+			"bbox": [
+				21.7805,
+				43.9056,
+				22.7639,
+				44.7112
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						21.9618,
+						44.2558
+					],
+					[
+						22.2578,
+						44.3882
+					],
+					[
+						22.5537,
+						44.3174
+					]
+				],
+				"aspect": 0.82
+			}
+		},
+		{
+			"id": "sumadija",
+			"name": "Šumadija",
+			"type": "district",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.7905,
+				44.11805
+			],
+			"bbox": [
+				20.3993,
+				43.7955,
+				21.1817,
+				44.4406
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						20.4985,
+						44.2406
+					],
+					[
+						20.7648,
+						44.0409
+					],
+					[
+						21.0311,
+						44.0247
+					]
+				],
+				"aspect": 0.92
+			}
+		},
+		{
+			"id": "pomoravlje",
+			"name": "Pomoravlje",
+			"type": "district",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				21.37525,
+				44.024649999999994
+			],
+			"bbox": [
+				20.9278,
+				43.7328,
+				21.8227,
+				44.3165
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						21.0964,
+						43.9453
+					],
+					[
+						21.3891,
+						44.0668
+					],
+					[
+						21.6819,
+						43.9861
+					]
+				],
+				"aspect": 1.08
+			}
+		},
+		{
+			"id": "moravica",
+			"name": "Moravica",
+			"type": "district",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.28585,
+				43.7702
+			],
+			"bbox": [
+				19.9159,
+				43.2742,
+				20.6558,
+				44.2662
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						20.2129,
+						43.3973
+					],
+					[
+						20.276,
+						43.759
+					],
+					[
+						20.3979,
+						44.1108
+					]
+				],
+				"aspect": 2.6
+			}
+		},
+		{
+			"id": "zajecar",
+			"name": "Zaječar",
+			"type": "district",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				22.1629,
+				43.7631
+			],
+			"bbox": [
+				21.6588,
+				43.3391,
+				22.667,
+				44.1871
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						21.7567,
+						43.8037
+					],
+					[
+						22.0993,
+						43.8325
+					],
+					[
+						22.442,
+						43.6236
+					]
+				],
+				"aspect": 1.17
+			}
+		},
+		{
+			"id": "zlatibor",
+			"name": "Zlatibor",
+			"type": "district",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				19.76065,
+				43.5865
+			],
+			"bbox": [
+				19.2239,
+				43.0077,
+				20.2974,
+				44.1653
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						19.7831,
+						43.9915
+					],
+					[
+						19.592,
+						43.5594
+					],
+					[
+						19.9337,
+						43.1849
+					]
+				],
+				"aspect": 1.73
+			}
+		},
+		{
+			"id": "rasina",
+			"name": "Rasina",
+			"type": "district",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				21.176699999999997,
+				43.47175
+			],
+			"bbox": [
+				20.7782,
+				43.1475,
+				21.5752,
+				43.796
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						20.9074,
+						43.4091
+					],
+					[
+						21.2015,
+						43.614
+					],
+					[
+						21.4957,
+						43.6141
+					]
+				],
+				"aspect": 1.07
+			}
+		},
+		{
+			"id": "nisava",
+			"name": "Nišava",
+			"type": "district",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				21.9132,
+				43.44055
+			],
+			"bbox": [
+				21.4834,
+				43.0624,
+				22.343,
+				43.8187
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						21.5771,
+						43.7206
+					],
+					[
+						21.7066,
+						43.4152
+					],
+					[
+						22.0711,
+						43.2648
+					]
+				],
+				"aspect": 2.15
+			}
+		},
+		{
+			"id": "raska",
+			"name": "Raška",
+			"type": "district",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.51515,
+				43.35685
+			],
+			"bbox": [
+				20.0598,
+				42.8326,
+				20.9705,
+				43.8811
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						20.3286,
+						42.9956
+					],
+					[
+						20.6201,
+						43.3482
+					],
+					[
+						20.7285,
+						43.7493
+					]
+				],
+				"aspect": 2.49
+			}
+		},
+		{
+			"id": "toplica",
+			"name": "Toplica",
+			"type": "district",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				21.3736,
+				43.13715
+			],
+			"bbox": [
+				20.9264,
+				42.8728,
+				21.8208,
+				43.4015
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						21.0436,
+						43.1892
+					],
+					[
+						21.3739,
+						43.1209
+					],
+					[
+						21.7042,
+						43.1903
+					]
+				],
+				"aspect": 1.53
+			}
+		},
+		{
+			"id": "pirot",
+			"name": "Pirot",
+			"type": "district",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				22.5594,
+				43.13635
+			],
+			"bbox": [
+				22.1131,
+				42.87,
+				23.0057,
+				43.4027
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						22.3046,
+						43.1733
+					],
+					[
+						22.5729,
+						43.0782
+					],
+					[
+						22.8412,
+						43.1626
+					]
+				],
+				"aspect": 0.84
+			}
+		},
+		{
+			"id": "jablanica",
+			"name": "Jablanica",
+			"type": "district",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				21.9576,
+				42.9261
+			],
+			"bbox": [
+				21.3984,
+				42.6855,
+				22.5168,
+				43.1667
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						21.5275,
+						42.8675
+					],
+					[
+						21.894,
+						43.0315
+					],
+					[
+						22.2946,
+						42.9257
+					]
+				],
+				"aspect": 1.67
+			}
+		},
+		{
+			"id": "pcinja",
+			"name": "Pčinja",
+			"type": "district",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				22.04375,
+				42.533249999999995
+			],
+			"bbox": [
+				21.5282,
+				42.2339,
+				22.5593,
+				42.8326
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						21.7214,
+						42.4706
+					],
+					[
+						22.0601,
+						42.6353
+					],
+					[
+						22.3988,
+						42.5604
+					]
+				],
+				"aspect": 1.06
+			}
+		}
+	],
+	"tourOrder": [
+		"north-backa",
+		"north-banat",
+		"west-backa",
+		"south-backa",
+		"central-banat",
+		"south-banat",
+		"syrmia",
+		"belgrade",
+		"macva",
+		"podunavlje",
+		"branicevo",
+		"kolubara",
+		"bor",
+		"sumadija",
+		"pomoravlje",
+		"moravica",
+		"zajecar",
+		"zlatibor",
+		"rasina",
+		"nisava",
+		"raska",
+		"toplica",
+		"pirot",
+		"jablanica",
+		"pcinja"
+	]
+}

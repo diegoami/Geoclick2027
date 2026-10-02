@@ -1,0 +1,144 @@
+{
+	"id": "serbia-towns-50k",
+	"name": "Serbia — Towns",
+	"country": "Serbia",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "subotica",
+			"name": "Subotica",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				19.6800284,
+				46.0700161
+			],
+			"bbox": [
+				19.6800284,
+				46.0700161,
+				19.6800284,
+				46.0700161
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "zrenjanin",
+			"name": "Zrenjanin",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.3994677,
+				45.3786371
+			],
+			"bbox": [
+				20.3994677,
+				45.3786371,
+				20.3994677,
+				45.3786371
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "novi-sad",
+			"name": "Novi Sad",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				19.8499406,
+				45.2503762
+			],
+			"bbox": [
+				19.8499406,
+				45.2503762,
+				19.8499406,
+				45.2503762
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "belgrade",
+			"name": "Belgrade",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.4660448,
+				44.8205913
+			],
+			"bbox": [
+				20.4660448,
+				44.8205913,
+				20.4660448,
+				44.8205913
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "kragujevac",
+			"name": "Kragujevac",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.9200044,
+				44.0199603
+			],
+			"bbox": [
+				20.9200044,
+				44.0199603,
+				20.9200044,
+				44.0199603
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "cacak",
+			"name": "Čačak",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.330118,
+				43.8897357
+			],
+			"bbox": [
+				20.330118,
+				43.8897357,
+				20.330118,
+				43.8897357
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "nis",
+			"name": "Niš",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				21.8999963,
+				43.3304159
+			],
+			"bbox": [
+				21.8999963,
+				43.3304159,
+				21.8999963,
+				43.3304159
+			],
+			"colorIndex": 5
+		}
+	],
+	"tourOrder": [
+		"subotica",
+		"zrenjanin",
+		"novi-sad",
+		"belgrade",
+		"kragujevac",
+		"cacak",
+		"nis"
+	]
+}

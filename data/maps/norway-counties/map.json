@@ -1,0 +1,408 @@
+{
+	"id": "norway-counties",
+	"name": "Norway — Counties",
+	"country": "Norway",
+	"attribution": "© Kartverket, CC BY 4.0 (via geoBoundaries); Natural Earth (public domain), https://www.naturalearthdata.com",
+	"boundarySource": "data/source/geoboundaries/NOR-ADM1.geojson",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "troms-og-finnmark",
+			"name": "Troms og Finnmark",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				23.33345,
+				69.77074999999999
+			],
+			"bbox": [
+				15.6084,
+				68.356,
+				31.0585,
+				71.1855
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						21.2151,
+						69.2993
+					],
+					[
+						25.482,
+						69.767
+					],
+					[
+						29.5648,
+						70.3947
+					]
+				],
+				"aspect": 4.11
+			}
+		},
+		{
+			"id": "nordland",
+			"name": "Nordland",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.94725,
+				67.13374999999999
+			],
+			"bbox": [
+				11.7431,
+				64.9395,
+				18.1514,
+				69.328
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						13.2443,
+						65.3579
+					],
+					[
+						14.3763,
+						66.558
+					],
+					[
+						15.983,
+						67.6074
+					]
+				],
+				"aspect": 3.69
+			}
+		},
+		{
+			"id": "tr-ndelag",
+			"name": "Trøndelag",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.2417,
+				63.702349999999996
+			],
+			"bbox": [
+				8.1577,
+				62.2557,
+				14.3257,
+				65.149
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						9.7916,
+						62.6075
+					],
+					[
+						11.7345,
+						63.7012
+					],
+					[
+						13.2473,
+						64.8772
+					]
+				],
+				"aspect": 3.79
+			}
+		},
+		{
+			"id": "m-re-og-romsdal",
+			"name": "Møre og Romsdal",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.35385,
+				62.700450000000004
+			],
+			"bbox": [
+				5.3429,
+				61.9233,
+				9.3648,
+				63.4776
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						6.4983,
+						62.1785
+					],
+					[
+						7.8442,
+						62.4127
+					],
+					[
+						8.9254,
+						62.8511
+					]
+				],
+				"aspect": 3.04
+			}
+		},
+		{
+			"id": "innlandet",
+			"name": "Innlandet",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.10665,
+				61.26885
+			],
+			"bbox": [
+				7.3425,
+				59.8408,
+				12.8708,
+				62.6969
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						8.5428,
+						61.6036
+					],
+					[
+						10.2823,
+						61.7712
+					],
+					[
+						12.0218,
+						61.1514
+					]
+				],
+				"aspect": 0.81
+			}
+		},
+		{
+			"id": "vestland",
+			"name": "Vestland",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.4823,
+				60.8459
+			],
+			"bbox": [
+				4.6425,
+				59.4756,
+				8.3221,
+				62.2162
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						5.4819,
+						61.2686
+					],
+					[
+						6.6674,
+						60.868
+					],
+					[
+						7.8529,
+						61.0186
+					]
+				],
+				"aspect": 1.6
+			}
+		},
+		{
+			"id": "viken",
+			"name": "Viken",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.68935,
+				59.984300000000005
+			],
+			"bbox": [
+				7.4388,
+				58.8769,
+				11.9399,
+				61.0917
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						8.0557,
+						60.6287
+					],
+					[
+						10.02,
+						60.2293
+					],
+					[
+						11.5748,
+						59.5163
+					]
+				],
+				"aspect": 2.67
+			}
+		},
+		{
+			"id": "oslo",
+			"name": "Oslo",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.7203,
+				59.971599999999995
+			],
+			"bbox": [
+				10.4892,
+				59.8093,
+				10.9514,
+				60.1339
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						10.624,
+						60.0978
+					],
+					[
+						10.7453,
+						59.9733
+					],
+					[
+						10.8746,
+						59.8502
+					]
+				],
+				"aspect": 2.34
+			}
+		},
+		{
+			"id": "vestfold-og-telemark",
+			"name": "Vestfold og Telemark",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.80995,
+				59.47985
+			],
+			"bbox": [
+				7.0963,
+				58.7714,
+				10.5236,
+				60.1883
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						7.6931,
+						59.977
+					],
+					[
+						8.4761,
+						59.3036
+					],
+					[
+						9.9851,
+						59.1787
+					]
+				],
+				"aspect": 1.79
+			}
+		},
+		{
+			"id": "rogaland",
+			"name": "Rogaland",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.034649999999999,
+				59.0613
+			],
+			"bbox": [
+				4.8546,
+				58.278,
+				7.2147,
+				59.8446
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						6.1233,
+						58.4628
+					],
+					[
+						6.2051,
+						59.0912
+					],
+					[
+						6.6707,
+						59.6827
+					]
+				],
+				"aspect": 3.35
+			}
+		},
+		{
+			"id": "agder",
+			"name": "Agder",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.87365,
+				58.823750000000004
+			],
+			"bbox": [
+				6.3812,
+				57.9748,
+				9.3661,
+				59.6727
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						6.7778,
+						58.7593
+					],
+					[
+						7.7861,
+						58.7376
+					],
+					[
+						8.7945,
+						58.5715
+					]
+				],
+				"aspect": 1.14
+			}
+		}
+	],
+	"tourOrder": [
+		"troms-og-finnmark",
+		"nordland",
+		"tr-ndelag",
+		"m-re-og-romsdal",
+		"innlandet",
+		"vestland",
+		"viken",
+		"oslo",
+		"vestfold-og-telemark",
+		"rogaland",
+		"agder"
+	]
+}

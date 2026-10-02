@@ -131,6 +131,13 @@ export const mapGroups: CountryGroup[] = [
 		maps: [{ id: 'czechia-regions', labelKey: 'mapType.regions' }]
 	},
 	{
+		country: 'Denmark',
+		maps: [
+			{ id: 'denmark-regions', labelKey: 'mapType.regions' },
+			{ id: 'denmark-towns-50k', labelKey: 'mapType.towns' }
+		]
+	},
+	{
 		country: 'Egypt',
 		maps: [
 			{ id: 'egypt-regions', labelKey: 'mapType.governorates' },
@@ -331,6 +338,20 @@ export const mapGroups: CountryGroup[] = [
 		]
 	},
 	{
+		country: 'Kazakhstan',
+		maps: [
+			{ id: 'kazakhstan-regions', labelKey: 'mapType.regions' },
+			{ id: 'kazakhstan-towns-100k', labelKey: 'mapType.towns' }
+		]
+	},
+	{
+		country: 'Kenya',
+		maps: [
+			{ id: 'kenya-counties', labelKey: 'mapType.counties' },
+			{ id: 'kenya-towns-50k', labelKey: 'mapType.towns' }
+		]
+	},
+	{
 		country: 'Mexico',
 		maps: [
 			{ id: 'mexico-regions', labelKey: 'mapType.states' },
@@ -375,6 +396,13 @@ export const mapGroups: CountryGroup[] = [
 		]
 	},
 	{
+		country: 'New Zealand',
+		maps: [
+			{ id: 'new-zealand-regions', labelKey: 'mapType.regions' },
+			{ id: 'new-zealand-towns-50k', labelKey: 'mapType.towns' }
+		]
+	},
+	{
 		country: 'Nigeria',
 		maps: [
 			{ id: 'nigeria-regions', labelKey: 'mapType.states' },
@@ -389,6 +417,13 @@ export const mapGroups: CountryGroup[] = [
 		]
 	},
 	{
+		country: 'Norway',
+		maps: [
+			{ id: 'norway-counties', labelKey: 'mapType.counties' },
+			{ id: 'norway-towns-50k', labelKey: 'mapType.towns' }
+		]
+	},
+	{
 		country: 'Oceania',
 		maps: [
 			{ id: 'oceania-countries', labelKey: 'mapType.countries' },
@@ -400,6 +435,14 @@ export const mapGroups: CountryGroup[] = [
 		maps: [
 			{ id: 'peru-regions', labelKey: 'mapType.regions' },
 			{ id: 'peru-towns-100k', labelKey: 'mapType.towns' }
+		]
+	},
+	{
+		country: 'Philippines',
+		maps: [
+			{ id: 'philippines-regions', labelKey: 'mapType.regions' },
+			{ id: 'philippines-towns-100k', labelKey: 'mapType.towns' },
+			{ id: 'philippines-provinces', labelKey: 'mapType.provinces', advanced: true }
 		]
 	},
 	{
@@ -462,6 +505,13 @@ export const mapGroups: CountryGroup[] = [
 		maps: [
 			{ id: 'saudi-arabia-regions', labelKey: 'mapType.regions' },
 			{ id: 'saudi-arabia-towns-100k', labelKey: 'mapType.towns' }
+		]
+	},
+	{
+		country: 'Serbia',
+		maps: [
+			{ id: 'serbia-districts', labelKey: 'mapType.districts' },
+			{ id: 'serbia-towns-50k', labelKey: 'mapType.towns' }
 		]
 	},
 	{
@@ -552,6 +602,13 @@ export const mapGroups: CountryGroup[] = [
 				partKey: 'mapPart.west',
 				advanced: true
 			}
+		]
+	},
+	{
+		country: 'Venezuela',
+		maps: [
+			{ id: 'venezuela-states', labelKey: 'mapType.states' },
+			{ id: 'venezuela-towns-100k', labelKey: 'mapType.towns' }
 		]
 	},
 	{

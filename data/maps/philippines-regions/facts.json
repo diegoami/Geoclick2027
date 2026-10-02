@@ -1,0 +1,155 @@
+{
+	"cagayan-valley": {
+		"kind": "region",
+		"borders": [
+			"Central Luzon",
+			"Cordillera",
+			"Ilocos Region"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"cordillera": {
+		"kind": "region",
+		"borders": [
+			"Cagayan Valley",
+			"Ilocos Region"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"ilocos-region": {
+		"kind": "region",
+		"borders": [
+			"Cagayan Valley",
+			"Central Luzon",
+			"Cordillera"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"central-luzon": {
+		"kind": "region",
+		"borders": [
+			"Cagayan Valley",
+			"CALABARZON",
+			"Ilocos Region",
+			"Metro Manila"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"metro-manila": {
+		"kind": "region",
+		"borders": [
+			"CALABARZON",
+			"Central Luzon"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"calabarzon": {
+		"kind": "region",
+		"borders": [
+			"Bicol Region",
+			"Central Luzon",
+			"Metro Manila"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"bicol-region": {
+		"kind": "region",
+		"borders": [
+			"CALABARZON"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"eastern-visayas": {
+		"kind": "region",
+		"coastal": true,
+		"position": "east"
+	},
+	"mimaropa": {
+		"kind": "region",
+		"coastal": true,
+		"position": "west"
+	},
+	"western-visayas": {
+		"kind": "region",
+		"borders": [
+			"Central Visayas"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"central-visayas": {
+		"kind": "region",
+		"borders": [
+			"Western Visayas"
+		],
+		"coastal": true,
+		"position": "east"
+	},
+	"caraga": {
+		"kind": "region",
+		"borders": [
+			"Davao Region",
+			"Northern Mindanao"
+		],
+		"coastal": true,
+		"position": "south-east"
+	},
+	"northern-mindanao": {
+		"kind": "region",
+		"borders": [
+			"BARMM",
+			"Caraga",
+			"Davao Region",
+			"SOCCSKSARGEN",
+			"Zamboanga Peninsula"
+		],
+		"coastal": true,
+		"position": "south-east"
+	},
+	"zamboanga-peninsula": {
+		"kind": "region",
+		"borders": [
+			"BARMM",
+			"Northern Mindanao"
+		],
+		"coastal": true,
+		"position": "south"
+	},
+	"davao-region": {
+		"kind": "region",
+		"borders": [
+			"Caraga",
+			"Northern Mindanao",
+			"SOCCSKSARGEN"
+		],
+		"coastal": true,
+		"position": "south-east"
+	},
+	"soccsksargen": {
+		"kind": "region",
+		"borders": [
+			"BARMM",
+			"Davao Region",
+			"Northern Mindanao"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"barmm": {
+		"kind": "region",
+		"borders": [
+			"Northern Mindanao",
+			"SOCCSKSARGEN",
+			"Zamboanga Peninsula"
+		],
+		"coastal": true,
+		"position": "south"
+	}
+}

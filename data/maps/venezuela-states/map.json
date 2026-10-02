@@ -1,0 +1,858 @@
+{
+	"id": "venezuela-states",
+	"name": "Venezuela — States",
+	"country": "Venezuela",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "falcon",
+			"name": "Falcón",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-69.77234999999999,
+				11.251850000000001
+			],
+			"bbox": [
+				-71.282,
+				10.3048,
+				-68.2627,
+				12.1989
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						-70.8668,
+						10.7695
+					],
+					[
+						-69.7512,
+						11.2869
+					],
+					[
+						-68.5775,
+						11.0073
+					]
+				],
+				"aspect": 2.94
+			}
+		},
+		{
+			"id": "nueva-esparta",
+			"name": "Nueva Esparta",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-64.101,
+				11.00195
+			],
+			"bbox": [
+				-64.4086,
+				10.8685,
+				-63.7934,
+				11.1354
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						-64.3439,
+						11.0257
+					],
+					[
+						-64.0993,
+						10.922
+					],
+					[
+						-63.8561,
+						11.0227
+					]
+				],
+				"aspect": 3.62
+			}
+		},
+		{
+			"id": "la-guaira",
+			"name": "La Guaira",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-66.8527,
+				10.516300000000001
+			],
+			"bbox": [
+				-67.3918,
+				10.3999,
+				-66.3136,
+				10.6327
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						-67.303,
+						10.4764
+					],
+					[
+						-66.8748,
+						10.6135
+					],
+					[
+						-66.424,
+						10.5904
+					]
+				],
+				"aspect": 10.11
+			}
+		},
+		{
+			"id": "distrito-capital",
+			"name": "Distrito Capital",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-67.0135,
+				10.48475
+			],
+			"bbox": [
+				-67.1532,
+				10.3945,
+				-66.8738,
+				10.575
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						-67.0841,
+						10.4265
+					],
+					[
+						-66.9881,
+						10.4625
+					],
+					[
+						-66.9037,
+						10.5213
+					]
+				],
+				"aspect": 1.84
+			}
+		},
+		{
+			"id": "sucre",
+			"name": "Sucre",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-63.249300000000005,
+				10.41965
+			],
+			"bbox": [
+				-64.5361,
+				10.0793,
+				-61.9625,
+				10.76
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "yaracuy",
+			"name": "Yaracuy",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-68.7396,
+				10.293050000000001
+			],
+			"bbox": [
+				-69.2275,
+				9.8532,
+				-68.2517,
+				10.7329
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						-68.9611,
+						10.2651
+					],
+					[
+						-68.6947,
+						10.3665
+					],
+					[
+						-68.4282,
+						10.3076
+					]
+				],
+				"aspect": 0.7
+			}
+		},
+		{
+			"id": "miranda",
+			"name": "Miranda",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-66.32300000000001,
+				10.2792
+			],
+			"bbox": [
+				-67.2202,
+				9.9289,
+				-65.4258,
+				10.6295
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						-67.0064,
+						10.2384
+					],
+					[
+						-66.3368,
+						10.3819
+					],
+					[
+						-65.7254,
+						10.0834
+					]
+				],
+				"aspect": 2.35
+			}
+		},
+		{
+			"id": "carabobo",
+			"name": "Carabobo",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-67.977,
+				10.21105
+			],
+			"bbox": [
+				-68.4199,
+				9.827,
+				-67.5341,
+				10.5951
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						-68.3207,
+						10.4159
+					],
+					[
+						-68.038,
+						10.1681
+					],
+					[
+						-67.7239,
+						9.9603
+					]
+				],
+				"aspect": 1.46
+			}
+		},
+		{
+			"id": "zulia",
+			"name": "Zulia",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-72.00954999999999,
+				10.0891
+			],
+			"bbox": [
+				-73.3778,
+				8.3827,
+				-70.6413,
+				11.7955
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						-72.2063,
+						8.6976
+					],
+					[
+						-72.729,
+						9.8726
+					],
+					[
+						-72.1452,
+						10.9741
+					]
+				],
+				"aspect": 2.18
+			}
+		},
+		{
+			"id": "lara",
+			"name": "Lara",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-69.86685,
+				10.0802
+			],
+			"bbox": [
+				-70.8482,
+				9.3957,
+				-68.8855,
+				10.7647
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						-70.537,
+						10.2314
+					],
+					[
+						-69.8662,
+						9.9543
+					],
+					[
+						-69.1953,
+						10.3113
+					]
+				],
+				"aspect": 1.38
+			}
+		},
+		{
+			"id": "aragua",
+			"name": "Aragua",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-67.20665,
+				9.9683
+			],
+			"bbox": [
+				-67.8692,
+				9.3935,
+				-66.5441,
+				10.5431
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						-67.6916,
+						10.4028
+					],
+					[
+						-67.1137,
+						10.0682
+					],
+					[
+						-66.6496,
+						9.5931
+					]
+				],
+				"aspect": 3.82
+			}
+		},
+		{
+			"id": "trujillo",
+			"name": "Trujillo",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-70.55595,
+				9.49345
+			],
+			"bbox": [
+				-71.0902,
+				8.9553,
+				-70.0217,
+				10.0316
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						-70.8282,
+						9.3576
+					],
+					[
+						-70.5087,
+						9.541
+					],
+					[
+						-70.1892,
+						9.4218
+					]
+				],
+				"aspect": 0.75
+			}
+		},
+		{
+			"id": "monagas",
+			"name": "Monagas",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-63.0368,
+				9.34925
+			],
+			"bbox": [
+				-64.061,
+				8.3857,
+				-62.0126,
+				10.3128
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						-63.7236,
+						9.9493
+					],
+					[
+						-62.8919,
+						9.5253
+					],
+					[
+						-62.4169,
+						8.7231
+					]
+				],
+				"aspect": 1.78
+			}
+		},
+		{
+			"id": "cojedes",
+			"name": "Cojedes",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-68.36935,
+				9.3308
+			],
+			"bbox": [
+				-68.9808,
+				8.5385,
+				-67.7579,
+				10.1231
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						-68.7544,
+						9.5264
+					],
+					[
+						-68.3868,
+						9.2063
+					],
+					[
+						-68.0193,
+						9.2343
+					]
+				],
+				"aspect": 0.56
+			}
+		},
+		{
+			"id": "anzoategui",
+			"name": "Anzoátegui",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-64.19120000000001,
+				8.95605
+			],
+			"bbox": [
+				-65.6966,
+				7.6598,
+				-62.6858,
+				10.2523
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						-65.3122,
+						9.3956
+					],
+					[
+						-64.2839,
+						8.9352
+					],
+					[
+						-63.2555,
+						8.5534
+					]
+				],
+				"aspect": 1.85
+			}
+		},
+		{
+			"id": "portuguesa",
+			"name": "Portuguesa",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-69.378,
+				8.9474
+			],
+			"bbox": [
+				-70.1825,
+				8.1125,
+				-68.5735,
+				9.7823
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						-69.9699,
+						9.1411
+					],
+					[
+						-69.3562,
+						9.2643
+					],
+					[
+						-68.7424,
+						8.8282
+					]
+				],
+				"aspect": 1.24
+			}
+		},
+		{
+			"id": "delta-amacuro",
+			"name": "Delta Amacuro",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-61.2066,
+				8.888349999999999
+			],
+			"bbox": [
+				-62.5976,
+				7.757,
+				-59.8156,
+				10.0197
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						-62.1516,
+						9.726
+					],
+					[
+						-61.8343,
+						9.1704
+					],
+					[
+						-61.352,
+						8.8022
+					]
+				],
+				"aspect": 1.15
+			}
+		},
+		{
+			"id": "guarico",
+			"name": "Guárico",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-66.4132,
+				8.833499999999999
+			],
+			"bbox": [
+				-68.0365,
+				7.6484,
+				-64.7899,
+				10.0186
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						-67.6222,
+						8.9536
+					],
+					[
+						-66.5132,
+						8.6005
+					],
+					[
+						-65.4042,
+						8.8699
+					]
+				],
+				"aspect": 1.1
+			}
+		},
+		{
+			"id": "merida",
+			"name": "Mérida",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-71.2398,
+				8.511199999999999
+			],
+			"bbox": [
+				-71.9449,
+				7.6845,
+				-70.5347,
+				9.3379
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						-71.5669,
+						8.1203
+					],
+					[
+						-71.3083,
+						8.6292
+					],
+					[
+						-70.9099,
+						9.0463
+					]
+				],
+				"aspect": 1.71
+			}
+		},
+		{
+			"id": "barinas",
+			"name": "Barinas",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-69.69290000000001,
+				8.15495
+			],
+			"bbox": [
+				-71.8416,
+				7.2874,
+				-67.5442,
+				9.0225
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						-71.2441,
+						7.7357
+					],
+					[
+						-70.285,
+						8.529
+					],
+					[
+						-69.1881,
+						8.3254
+					]
+				],
+				"aspect": 2.46
+			}
+		},
+		{
+			"id": "tachira",
+			"name": "Táchira",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-71.93535,
+				7.9932
+			],
+			"bbox": [
+				-72.4878,
+				7.375,
+				-71.3829,
+				8.6114
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						-72.3796,
+						7.8856
+					],
+					[
+						-71.9895,
+						8.0382
+					],
+					[
+						-71.5994,
+						7.8199
+					]
+				],
+				"aspect": 1.03
+			}
+		},
+		{
+			"id": "apure",
+			"name": "Apure",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-69.36295,
+				7.07825
+			],
+			"bbox": [
+				-72.3958,
+				6.0807,
+				-66.3301,
+				8.0758
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						-70.1242,
+						7.253
+					],
+					[
+						-68.4883,
+						6.8334
+					],
+					[
+						-66.8513,
+						7.3474
+					]
+				],
+				"aspect": 1.92
+			}
+		},
+		{
+			"id": "bolivar",
+			"name": "Bolívar",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-63.86215,
+				6.0044
+			],
+			"bbox": [
+				-67.4563,
+				3.5608,
+				-60.268,
+				8.448
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						-66.5463,
+						6.7802
+					],
+					[
+						-64.1064,
+						5.6767
+					],
+					[
+						-61.6665,
+						6.3097
+					]
+				],
+				"aspect": 1.26
+			}
+		},
+		{
+			"id": "amazonas",
+			"name": "Amazonas",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-65.61315,
+				3.4246
+			],
+			"bbox": [
+				-67.8537,
+				0.656,
+				-63.3726,
+				6.1932
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						-66.6861,
+						5.3119
+					],
+					[
+						-66.0818,
+						3.3964
+					],
+					[
+						-65.1787,
+						1.5994
+					]
+				],
+				"aspect": 1.29
+			}
+		}
+	],
+	"tourOrder": [
+		"falcon",
+		"nueva-esparta",
+		"la-guaira",
+		"distrito-capital",
+		"sucre",
+		"yaracuy",
+		"miranda",
+		"carabobo",
+		"zulia",
+		"lara",
+		"aragua",
+		"trujillo",
+		"monagas",
+		"cojedes",
+		"anzoategui",
+		"portuguesa",
+		"delta-amacuro",
+		"guarico",
+		"merida",
+		"barinas",
+		"tachira",
+		"apure",
+		"bolivar",
+		"amazonas"
+	]
+}

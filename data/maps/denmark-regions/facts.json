@@ -1,0 +1,82 @@
+{
+	"nordjylland": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Midtjylland"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Aalborg",
+			"nameDe": "Aalborg",
+			"nameIt": "Aalborg",
+			"population": 122219
+		},
+		"position": "north-west"
+	},
+	"midtjylland": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Nordjylland",
+			"Syddanmark"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Århus",
+			"nameDe": "Aarhus",
+			"nameIt": "Aarhus",
+			"population": 237551
+		},
+		"peak": {
+			"name": "Møllehøj",
+			"elevation": 171
+		},
+		"position": "west"
+	},
+	"hovedstaden": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Sjælland"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "København",
+			"nameDe": "Kopenhagen",
+			"nameIt": "Copenaghen",
+			"population": 1085000
+		},
+		"position": "south-east"
+	},
+	"syddanmark": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Midtjylland"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Odense",
+			"nameDe": "Odense",
+			"nameIt": "Odense",
+			"population": 158222
+		},
+		"position": "south-west"
+	},
+	"sj-lland": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Hovedstaden"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Roskilde",
+			"nameDe": "Roskilde",
+			"nameIt": "Roskilde",
+			"population": 44285
+		},
+		"position": "south"
+	}
+}

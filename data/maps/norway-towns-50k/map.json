@@ -1,0 +1,182 @@
+{
+	"id": "norway-towns-50k",
+	"name": "Norway — Towns",
+	"country": "Norway",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "troms",
+			"name": "Tromsø",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.9920252,
+				69.6350762
+			],
+			"bbox": [
+				18.9920252,
+				69.6350762,
+				18.9920252,
+				69.6350762
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "trondheim",
+			"name": "Trondheim",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.4166662,
+				63.4166575
+			],
+			"bbox": [
+				10.4166662,
+				63.4166575,
+				10.4166662,
+				63.4166575
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "bergen",
+			"name": "Bergen",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.3245223,
+				60.3910024
+			],
+			"bbox": [
+				5.3245223,
+				60.3910024,
+				5.3245223,
+				60.3910024
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "oslo",
+			"name": "Oslo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.7480333,
+				59.9186361
+			],
+			"bbox": [
+				10.7480333,
+				59.9186361,
+				10.7480333,
+				59.9186361
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "b-rum",
+			"name": "Bærum",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.3472365,
+				59.9134861
+			],
+			"bbox": [
+				11.3472365,
+				59.9134861,
+				11.3472365,
+				59.9134861
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "drammen",
+			"name": "Drammen",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.199231839963424,
+				59.738481129257444
+			],
+			"bbox": [
+				10.199231839963424,
+				59.738481129257444,
+				10.199231839963424,
+				59.738481129257444
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "skien",
+			"name": "Skien",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.6000236,
+				59.1999898
+			],
+			"bbox": [
+				9.6000236,
+				59.1999898,
+				9.6000236,
+				59.1999898
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "stavanger",
+			"name": "Stavanger",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.6800044,
+				58.9700039
+			],
+			"bbox": [
+				5.6800044,
+				58.9700039,
+				5.6800044,
+				58.9700039
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "kristiansand",
+			"name": "Kristiansand",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.97498387982654,
+				58.14561960901902
+			],
+			"bbox": [
+				7.97498387982654,
+				58.14561960901902,
+				7.97498387982654,
+				58.14561960901902
+			],
+			"colorIndex": 0
+		}
+	],
+	"tourOrder": [
+		"troms",
+		"trondheim",
+		"bergen",
+		"oslo",
+		"b-rum",
+		"drammen",
+		"skien",
+		"stavanger",
+		"kristiansand"
+	]
+}

@@ -1,0 +1,158 @@
+{
+	"whangarei": {
+		"kind": "city",
+		"population": 52200,
+		"populationRank": 18,
+		"region": "Northland",
+		"coastal": true,
+		"position": "north"
+	},
+	"north-shore": {
+		"kind": "city",
+		"population": 205605,
+		"populationRank": 6,
+		"region": "Auckland",
+		"coastal": true,
+		"position": "north"
+	},
+	"auckland": {
+		"kind": "city",
+		"population": 1377200,
+		"populationRank": 1,
+		"population1950": 319000,
+		"coastal": true,
+		"position": "north"
+	},
+	"waitakere": {
+		"kind": "city",
+		"population": 208100,
+		"populationRank": 5,
+		"region": "Auckland",
+		"coastal": true,
+		"position": "north"
+	},
+	"manukau": {
+		"kind": "city",
+		"population": 375600,
+		"populationRank": 3,
+		"region": "Auckland",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"tauranga": {
+		"kind": "city",
+		"population": 121500,
+		"populationRank": 8,
+		"region": "Bay of Plenty",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"hamilton": {
+		"kind": "city",
+		"population": 148200,
+		"populationRank": 7,
+		"region": "Waikato",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"rotorua": {
+		"kind": "city",
+		"population": 56200,
+		"populationRank": 15,
+		"region": "Auckland",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"new-plymouth": {
+		"kind": "city",
+		"population": 52500,
+		"populationRank": 16,
+		"region": "Taranaki",
+		"coastal": true,
+		"position": "north"
+	},
+	"napier": {
+		"kind": "city",
+		"population": 57800,
+		"populationRank": 14,
+		"region": "Gisborne",
+		"coastal": true,
+		"position": "east"
+	},
+	"hastings": {
+		"kind": "city",
+		"population": 66100,
+		"populationRank": 12,
+		"region": "Gisborne",
+		"coastal": true,
+		"position": "east"
+	},
+	"palmerston-north": {
+		"kind": "city",
+		"population": 82400,
+		"populationRank": 11,
+		"region": "Manawatu-Wanganui",
+		"coastal": false,
+		"position": "east"
+	},
+	"porirua": {
+		"kind": "city",
+		"population": 52500,
+		"populationRank": 17,
+		"region": "Wellington",
+		"coastal": true,
+		"position": "east"
+	},
+	"lower-hutt": {
+		"kind": "city",
+		"population": 102400,
+		"populationRank": 10,
+		"region": "Wellington",
+		"coastal": true,
+		"position": "east"
+	},
+	"wellington": {
+		"kind": "city",
+		"population": 393400,
+		"populationRank": 2,
+		"region": "Manawatu-Wanganui",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named for the Duke of Wellington.",
+				"The southernmost capital of a sovereign state.",
+				"Known as Windy Wellington, for the gales through Cook Strait."
+			],
+			"it": [
+				"Prende il nome dal duca di Wellington.",
+				"La capitale di Stato sovrano più a sud del mondo.",
+				"Chiamata Windy Wellington, per le raffiche che attraversano lo stretto di Cook."
+			]
+		}
+	},
+	"nelson": {
+		"kind": "city",
+		"population": 60800,
+		"populationRank": 13,
+		"coastal": true,
+		"position": "centre"
+	},
+	"christchurch": {
+		"kind": "city",
+		"population": 363200,
+		"populationRank": 4,
+		"region": "Canterbury",
+		"coastal": true,
+		"position": "south-west"
+	},
+	"dunedin": {
+		"kind": "city",
+		"population": 117700,
+		"populationRank": 9,
+		"region": "Otago",
+		"coastal": true,
+		"position": "south-west"
+	}
+}

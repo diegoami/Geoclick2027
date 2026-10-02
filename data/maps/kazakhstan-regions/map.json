@@ -1,0 +1,588 @@
+{
+	"id": "kazakhstan-regions",
+	"name": "Kazakhstan — Regions",
+	"country": "Kazakhstan",
+	"attribution": "© OpenStreetMap contributors, ODbL (via geoBoundaries); Natural Earth (public domain), https://www.naturalearthdata.com",
+	"boundarySource": "data/source/geoboundaries/KAZ-ADM1.geojson",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "north-kazakhstan",
+			"name": "North Kazakhstan",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				69.99905,
+				53.8234
+			],
+			"bbox": [
+				65.9631,
+				52.207,
+				74.035,
+				55.4398
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						66.7867,
+						53.5181
+					],
+					[
+						69.7937,
+						55.0952
+					],
+					[
+						72.9457,
+						53.3476
+					]
+				],
+				"aspect": 2
+			}
+		},
+		{
+			"id": "pavlodar",
+			"name": "Pavlodar",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				76.37245,
+				52.2238
+			],
+			"bbox": [
+				73.4058,
+				50.0296,
+				79.3391,
+				54.418
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						74.334,
+						52.2601
+					],
+					[
+						76.2716,
+						52.256
+					],
+					[
+						78.2092,
+						51.976
+					]
+				],
+				"aspect": 0.75
+			}
+		},
+		{
+			"id": "akmola",
+			"name": "Akmola",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				69.8062,
+				51.860299999999995
+			],
+			"bbox": [
+				65.3524,
+				50.0413,
+				74.26,
+				53.6793
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						66.568,
+						51.3906
+					],
+					[
+						69.8145,
+						52.0604
+					],
+					[
+						73.2414,
+						51.9868
+					]
+				],
+				"aspect": 1.95
+			}
+		},
+		{
+			"id": "kostanay",
+			"name": "Kostanay",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				64.04685,
+				51.44365
+			],
+			"bbox": [
+				60.0017,
+				48.1703,
+				68.092,
+				54.717
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						63.6719,
+						53.7171
+					],
+					[
+						63.0728,
+						51.4517
+					],
+					[
+						65.099,
+						49.3697
+					]
+				],
+				"aspect": 1.52
+			}
+		},
+		{
+			"id": "astana",
+			"name": "Astana",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				71.42205,
+				51.13365
+			],
+			"bbox": [
+				71.2222,
+				51.0007,
+				71.6219,
+				51.2666
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						71.2634,
+						51.1419
+					],
+					[
+						71.4225,
+						51.1212
+					],
+					[
+						71.5817,
+						51.1509
+					]
+				],
+				"aspect": 0.87
+			}
+		},
+		{
+			"id": "west-kazakhstan",
+			"name": "West Kazakhstan",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				50.51795,
+				49.8319
+			],
+			"bbox": [
+				46.4922,
+				47.9205,
+				54.5437,
+				51.7433
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						47.9631,
+						48.9708
+					],
+					[
+						50.7079,
+						49.8124
+					],
+					[
+						53.4319,
+						50.6669
+					]
+				],
+				"aspect": 1.53
+			}
+		},
+		{
+			"id": "karaganda",
+			"name": "Karaganda",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				70.32365,
+				48.6537
+			],
+			"bbox": [
+				62.9501,
+				45.9999,
+				77.6972,
+				51.3075
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						65.3887,
+						47.5689
+					],
+					[
+						70.4325,
+						48.4761
+					],
+					[
+						75.6766,
+						48.5631
+					]
+				],
+				"aspect": 1.66
+			}
+		},
+		{
+			"id": "east-kazakhstan",
+			"name": "East Kazakhstan",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				81.9435,
+				48.6219
+			],
+			"bbox": [
+				76.59,
+				45.5351,
+				87.297,
+				51.7087
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						77.9346,
+						48.8511
+					],
+					[
+						81.4456,
+						49.0192
+					],
+					[
+						84.9565,
+						48.5739
+					]
+				],
+				"aspect": 1.19
+			}
+		},
+		{
+			"id": "aktobe",
+			"name": "Aktobe",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				58.953849999999996,
+				48.21985
+			],
+			"bbox": [
+				53.6305,
+				45.1772,
+				64.2772,
+				51.2625
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						55.2569,
+						48.574
+					],
+					[
+						58.458,
+						47.8073
+					],
+					[
+						61.659,
+						49.0828
+					]
+				],
+				"aspect": 1.07
+			}
+		},
+		{
+			"id": "atyrau",
+			"name": "Atyrau",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				51.758250000000004,
+				47.6262
+			],
+			"bbox": [
+				47.0499,
+				46.0121,
+				56.4666,
+				49.2403
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						49.044,
+						47.2122
+					],
+					[
+						51.7928,
+						48.2476
+					],
+					[
+						54.4892,
+						47.531
+					]
+				],
+				"aspect": 2.25
+			}
+		},
+		{
+			"id": "kyzylorda",
+			"name": "Kyzylorda",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				63.54545,
+				45.075199999999995
+			],
+			"bbox": [
+				59.0306,
+				42.3227,
+				68.0603,
+				47.8277
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						60.3643,
+						46.3211
+					],
+					[
+						63.7927,
+						45.3439
+					],
+					[
+						66.959,
+						43.9793
+					]
+				],
+				"aspect": 1.77
+			}
+		},
+		{
+			"id": "almaty-region",
+			"name": "Almaty Region",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				78.15485,
+				44.77585
+			],
+			"bbox": [
+				73.722,
+				42.2208,
+				82.5877,
+				47.3309
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						74.817,
+						45.2798
+					],
+					[
+						77.6033,
+						44.6763
+					],
+					[
+						80.3897,
+						44.8934
+					]
+				],
+				"aspect": 1.06
+			}
+		},
+		{
+			"id": "jambyl",
+			"name": "Jambyl",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				72.4453,
+				44.1637
+			],
+			"bbox": [
+				69.0671,
+				42.3201,
+				75.8235,
+				46.0073
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						70.1008,
+						44.5032
+					],
+					[
+						72.1319,
+						44.349
+					],
+					[
+						74.163,
+						44.2172
+					]
+				],
+				"aspect": 0.89
+			}
+		},
+		{
+			"id": "mangystau",
+			"name": "Mangystau",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				53.4915,
+				43.885850000000005
+			],
+			"bbox": [
+				50.2389,
+				41.2516,
+				56.7441,
+				46.5201
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						51.6469,
+						43.8977
+					],
+					[
+						53.6861,
+						43.2316
+					],
+					[
+						55.7253,
+						43.9834
+					]
+				],
+				"aspect": 1.11
+			}
+		},
+		{
+			"id": "south-kazakhstan",
+			"name": "South Kazakhstan",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				68.44120000000001,
+				43.2888
+			],
+			"bbox": [
+				65.9987,
+				40.5771,
+				70.8837,
+				46.0005
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						67.9688,
+						41.5273
+					],
+					[
+						69.4893,
+						43.5706
+					],
+					[
+						68.2676,
+						45.6645
+					]
+				],
+				"aspect": 2.51
+			}
+		},
+		{
+			"id": "almaty",
+			"name": "Almaty",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				76.90775,
+				43.19855
+			],
+			"bbox": [
+				76.7383,
+				43.0341,
+				77.0772,
+				43.363
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						76.8622,
+						43.3201
+					],
+					[
+						76.9271,
+						43.2009
+					],
+					[
+						77.0133,
+						43.0891
+					]
+				],
+				"aspect": 1.43
+			}
+		}
+	],
+	"tourOrder": [
+		"north-kazakhstan",
+		"pavlodar",
+		"akmola",
+		"kostanay",
+		"astana",
+		"west-kazakhstan",
+		"karaganda",
+		"east-kazakhstan",
+		"aktobe",
+		"atyrau",
+		"kyzylorda",
+		"almaty-region",
+		"jambyl",
+		"mangystau",
+		"south-kazakhstan",
+		"almaty"
+	]
+}

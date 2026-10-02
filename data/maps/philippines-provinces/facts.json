@@ -1,0 +1,857 @@
+{
+	"batanes": {
+		"kind": "region",
+		"coastal": true,
+		"position": "north"
+	},
+	"cagayan": {
+		"kind": "region",
+		"borders": [
+			"Apayao",
+			"Ilocos Norte",
+			"Isabela",
+			"Kalinga"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"ilocos-norte": {
+		"kind": "region",
+		"borders": [
+			"Abra",
+			"Apayao",
+			"Cagayan",
+			"Ilocos Sur"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"apayao": {
+		"kind": "region",
+		"borders": [
+			"Abra",
+			"Cagayan",
+			"Ilocos Norte",
+			"Kalinga"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"abra": {
+		"kind": "region",
+		"borders": [
+			"Apayao",
+			"Ilocos Norte",
+			"Ilocos Sur",
+			"Kalinga",
+			"Mountain Province"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"kalinga": {
+		"kind": "region",
+		"borders": [
+			"Abra",
+			"Apayao",
+			"Cagayan",
+			"Isabela",
+			"Mountain Province"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"ilocos-sur": {
+		"kind": "region",
+		"borders": [
+			"Abra",
+			"Benguet",
+			"Ilocos Norte",
+			"La Union",
+			"Mountain Province"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"mountain-province": {
+		"kind": "region",
+		"borders": [
+			"Abra",
+			"Benguet",
+			"Ifugao",
+			"Ilocos Sur",
+			"Isabela",
+			"Kalinga"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"isabela": {
+		"kind": "region",
+		"borders": [
+			"Aurora",
+			"Cagayan",
+			"Ifugao",
+			"Kalinga",
+			"Mountain Province",
+			"Nueva Vizcaya",
+			"Quirino"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"ifugao": {
+		"kind": "region",
+		"borders": [
+			"Benguet",
+			"Isabela",
+			"Mountain Province",
+			"Nueva Vizcaya"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"la-union": {
+		"kind": "region",
+		"borders": [
+			"Benguet",
+			"Ilocos Sur",
+			"Pangasinan"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"benguet": {
+		"kind": "region",
+		"borders": [
+			"Ifugao",
+			"Ilocos Sur",
+			"La Union",
+			"Mountain Province",
+			"Nueva Vizcaya",
+			"Pangasinan"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"quirino": {
+		"kind": "region",
+		"borders": [
+			"Aurora",
+			"Isabela",
+			"Nueva Vizcaya"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"nueva-vizcaya": {
+		"kind": "region",
+		"borders": [
+			"Aurora",
+			"Benguet",
+			"Ifugao",
+			"Isabela",
+			"Nueva Ecija",
+			"Pangasinan",
+			"Quirino"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"pangasinan": {
+		"kind": "region",
+		"borders": [
+			"Benguet",
+			"La Union",
+			"Nueva Ecija",
+			"Nueva Vizcaya",
+			"Tarlac",
+			"Zambales"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"aurora": {
+		"kind": "region",
+		"borders": [
+			"Bulacan",
+			"Isabela",
+			"Nueva Ecija",
+			"Nueva Vizcaya",
+			"Quezon",
+			"Quirino"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"nueva-ecija": {
+		"kind": "region",
+		"borders": [
+			"Aurora",
+			"Bulacan",
+			"Nueva Vizcaya",
+			"Pampanga",
+			"Pangasinan",
+			"Tarlac"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"tarlac": {
+		"kind": "region",
+		"borders": [
+			"Nueva Ecija",
+			"Pampanga",
+			"Pangasinan",
+			"Zambales"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"zambales": {
+		"kind": "region",
+		"borders": [
+			"Bataan",
+			"Pampanga",
+			"Pangasinan",
+			"Tarlac"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"pampanga": {
+		"kind": "region",
+		"borders": [
+			"Bataan",
+			"Bulacan",
+			"Nueva Ecija",
+			"Tarlac",
+			"Zambales"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"bulacan": {
+		"kind": "region",
+		"borders": [
+			"Aurora",
+			"NCR, Second District",
+			"NCR, Third District",
+			"Nueva Ecija",
+			"Pampanga",
+			"Quezon",
+			"Rizal"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"ncr-third-district": {
+		"kind": "region",
+		"borders": [
+			"Bulacan",
+			"NCR, City of Manila, First District",
+			"NCR, Second District",
+			"Rizal"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"bataan": {
+		"kind": "region",
+		"borders": [
+			"Pampanga",
+			"Zambales"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"ncr-second-district": {
+		"kind": "region",
+		"borders": [
+			"Bulacan",
+			"NCR, City of Manila, First District",
+			"NCR, Fourth District",
+			"NCR, Third District",
+			"Rizal"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"ncr-city-of-manila-first-district": {
+		"kind": "region",
+		"borders": [
+			"NCR, Fourth District",
+			"NCR, Second District",
+			"NCR, Third District"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"rizal": {
+		"kind": "region",
+		"borders": [
+			"Bulacan",
+			"Laguna",
+			"NCR, Fourth District",
+			"NCR, Second District",
+			"NCR, Third District",
+			"Quezon"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"ncr-fourth-district": {
+		"kind": "region",
+		"borders": [
+			"Cavite",
+			"Laguna",
+			"NCR, City of Manila, First District",
+			"NCR, Second District",
+			"Rizal"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"laguna": {
+		"kind": "region",
+		"borders": [
+			"Batangas",
+			"Cavite",
+			"NCR, Fourth District",
+			"Quezon",
+			"Rizal"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"cavite": {
+		"kind": "region",
+		"borders": [
+			"Batangas",
+			"Laguna",
+			"NCR, Fourth District"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"quezon": {
+		"kind": "region",
+		"borders": [
+			"Aurora",
+			"Batangas",
+			"Bulacan",
+			"Camarines Norte",
+			"Camarines Sur",
+			"Laguna",
+			"Rizal"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"camarines-norte": {
+		"kind": "region",
+		"borders": [
+			"Camarines Sur",
+			"Quezon"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"batangas": {
+		"kind": "region",
+		"borders": [
+			"Cavite",
+			"Laguna",
+			"Quezon"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"catanduanes": {
+		"kind": "region",
+		"coastal": true,
+		"position": "east"
+	},
+	"camarines-sur": {
+		"kind": "region",
+		"borders": [
+			"Albay",
+			"Camarines Norte",
+			"Quezon"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"marinduque": {
+		"kind": "region",
+		"coastal": true,
+		"position": "centre"
+	},
+	"albay": {
+		"kind": "region",
+		"borders": [
+			"Camarines Sur",
+			"Sorsogon"
+		],
+		"coastal": true,
+		"position": "east"
+	},
+	"occidental-mindoro": {
+		"kind": "region",
+		"borders": [
+			"Oriental Mindoro"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"oriental-mindoro": {
+		"kind": "region",
+		"borders": [
+			"Occidental Mindoro"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"sorsogon": {
+		"kind": "region",
+		"borders": [
+			"Albay"
+		],
+		"coastal": true,
+		"position": "east"
+	},
+	"romblon": {
+		"kind": "region",
+		"coastal": true,
+		"position": "centre"
+	},
+	"masbate": {
+		"kind": "region",
+		"coastal": true,
+		"position": "east"
+	},
+	"northern-samar": {
+		"kind": "region",
+		"borders": [
+			"Eastern Samar",
+			"Samar"
+		],
+		"coastal": true,
+		"position": "east"
+	},
+	"samar": {
+		"kind": "region",
+		"borders": [
+			"Eastern Samar",
+			"Leyte",
+			"Northern Samar"
+		],
+		"coastal": true,
+		"position": "east"
+	},
+	"biliran": {
+		"kind": "region",
+		"coastal": true,
+		"position": "east"
+	},
+	"aklan": {
+		"kind": "region",
+		"borders": [
+			"Antique",
+			"Capiz"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"eastern-samar": {
+		"kind": "region",
+		"borders": [
+			"Northern Samar",
+			"Samar"
+		],
+		"coastal": true,
+		"position": "east"
+	},
+	"capiz": {
+		"kind": "region",
+		"borders": [
+			"Aklan",
+			"Antique",
+			"Iloilo"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"antique": {
+		"kind": "region",
+		"borders": [
+			"Aklan",
+			"Capiz",
+			"Iloilo"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"iloilo": {
+		"kind": "region",
+		"borders": [
+			"Antique",
+			"Capiz",
+			"Guimaras"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"leyte": {
+		"kind": "region",
+		"borders": [
+			"Samar",
+			"Southern Leyte"
+		],
+		"coastal": true,
+		"position": "east"
+	},
+	"guimaras": {
+		"kind": "region",
+		"borders": [
+			"Iloilo"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"cebu": {
+		"kind": "region",
+		"coastal": true,
+		"position": "east"
+	},
+	"southern-leyte": {
+		"kind": "region",
+		"borders": [
+			"Leyte"
+		],
+		"coastal": true,
+		"position": "east"
+	},
+	"negros-occidental": {
+		"kind": "region",
+		"borders": [
+			"Negros Oriental"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"dinagat-islands": {
+		"kind": "region",
+		"borders": [
+			"Surigao del Norte"
+		],
+		"coastal": true,
+		"position": "east"
+	},
+	"palawan": {
+		"kind": "region",
+		"coastal": true,
+		"position": "west"
+	},
+	"bohol": {
+		"kind": "region",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"negros-oriental": {
+		"kind": "region",
+		"borders": [
+			"Negros Occidental"
+		],
+		"coastal": true,
+		"position": "south"
+	},
+	"surigao-del-norte": {
+		"kind": "region",
+		"borders": [
+			"Agusan del Norte",
+			"Dinagat Islands",
+			"Surigao del Sur"
+		],
+		"coastal": true,
+		"position": "south-east"
+	},
+	"siquijor": {
+		"kind": "region",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"camiguin": {
+		"kind": "region",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"agusan-del-norte": {
+		"kind": "region",
+		"borders": [
+			"Agusan del Sur",
+			"Misamis Oriental",
+			"Surigao del Norte",
+			"Surigao del Sur"
+		],
+		"coastal": true,
+		"position": "south-east"
+	},
+	"surigao-del-sur": {
+		"kind": "region",
+		"borders": [
+			"Agusan del Norte",
+			"Agusan del Sur",
+			"Davao Oriental",
+			"Surigao del Norte"
+		],
+		"coastal": true,
+		"position": "south-east"
+	},
+	"misamis-oriental": {
+		"kind": "region",
+		"borders": [
+			"Agusan del Norte",
+			"Agusan del Sur",
+			"Bukidnon",
+			"Lanao del Norte"
+		],
+		"coastal": true,
+		"position": "south-east"
+	},
+	"agusan-del-sur": {
+		"kind": "region",
+		"borders": [
+			"Agusan del Norte",
+			"Bukidnon",
+			"Compostela Valley",
+			"Davao del Norte",
+			"Davao Oriental",
+			"Misamis Oriental",
+			"Surigao del Sur"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"misamis-occidental": {
+		"kind": "region",
+		"borders": [
+			"Zamboanga del Norte",
+			"Zamboanga del Sur"
+		],
+		"coastal": true,
+		"position": "south-east"
+	},
+	"lanao-del-norte": {
+		"kind": "region",
+		"borders": [
+			"Bukidnon",
+			"Lanao del Sur",
+			"Misamis Oriental",
+			"Zamboanga del Sur"
+		],
+		"coastal": true,
+		"position": "south-east"
+	},
+	"bukidnon": {
+		"kind": "region",
+		"borders": [
+			"Agusan del Sur",
+			"Cotabato",
+			"Davao del Norte",
+			"Davao del Sur",
+			"Lanao del Norte",
+			"Lanao del Sur",
+			"Misamis Oriental"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"zamboanga-del-norte": {
+		"kind": "region",
+		"borders": [
+			"Misamis Occidental",
+			"Zamboanga del Sur",
+			"Zamboanga Sibugay"
+		],
+		"coastal": true,
+		"position": "south"
+	},
+	"lanao-del-sur": {
+		"kind": "region",
+		"borders": [
+			"Bukidnon",
+			"Cotabato",
+			"Lanao del Norte",
+			"Maguindanao"
+		],
+		"coastal": true,
+		"position": "south-east"
+	},
+	"zamboanga-sibugay": {
+		"kind": "region",
+		"borders": [
+			"Zamboanga del Norte",
+			"Zamboanga del Sur"
+		],
+		"coastal": true,
+		"position": "south"
+	},
+	"zamboanga-del-sur": {
+		"kind": "region",
+		"borders": [
+			"Lanao del Norte",
+			"Misamis Occidental",
+			"Zamboanga del Norte",
+			"Zamboanga Sibugay"
+		],
+		"coastal": true,
+		"position": "south"
+	},
+	"compostela-valley": {
+		"kind": "region",
+		"borders": [
+			"Agusan del Sur",
+			"Davao del Norte",
+			"Davao Oriental"
+		],
+		"coastal": true,
+		"position": "south-east"
+	},
+	"davao-del-norte": {
+		"kind": "region",
+		"borders": [
+			"Agusan del Sur",
+			"Bukidnon",
+			"Compostela Valley",
+			"Davao del Sur"
+		],
+		"coastal": true,
+		"position": "south-east"
+	},
+	"cotabato-city": {
+		"kind": "region",
+		"borders": [
+			"Maguindanao"
+		],
+		"coastal": true,
+		"position": "south-east"
+	},
+	"cotabato": {
+		"kind": "region",
+		"borders": [
+			"Bukidnon",
+			"Davao del Sur",
+			"Lanao del Sur",
+			"Maguindanao",
+			"Sultan Kudarat"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"davao-oriental": {
+		"kind": "region",
+		"borders": [
+			"Agusan del Sur",
+			"Compostela Valley",
+			"Surigao del Sur"
+		],
+		"coastal": true,
+		"position": "south-east"
+	},
+	"maguindanao": {
+		"kind": "region",
+		"borders": [
+			"Cotabato",
+			"Cotabato City",
+			"Lanao del Sur",
+			"South Cotabato",
+			"Sultan Kudarat"
+		],
+		"coastal": true,
+		"position": "south-east"
+	},
+	"davao-del-sur": {
+		"kind": "region",
+		"borders": [
+			"Bukidnon",
+			"Cotabato",
+			"Davao del Norte",
+			"Davao Occidental",
+			"Sarangani",
+			"South Cotabato",
+			"Sultan Kudarat"
+		],
+		"coastal": true,
+		"position": "south-east"
+	},
+	"city-of-isabela": {
+		"kind": "region",
+		"borders": [
+			"Basilan"
+		],
+		"coastal": true,
+		"position": "south"
+	},
+	"basilan": {
+		"kind": "region",
+		"borders": [
+			"City of Isabela"
+		],
+		"coastal": true,
+		"position": "south"
+	},
+	"sultan-kudarat": {
+		"kind": "region",
+		"borders": [
+			"Cotabato",
+			"Davao del Sur",
+			"Maguindanao",
+			"Sarangani",
+			"South Cotabato"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"south-cotabato": {
+		"kind": "region",
+		"borders": [
+			"Davao del Sur",
+			"Maguindanao",
+			"Sarangani",
+			"Sultan Kudarat"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"sarangani": {
+		"kind": "region",
+		"borders": [
+			"Davao del Sur",
+			"Davao Occidental",
+			"South Cotabato",
+			"Sultan Kudarat"
+		],
+		"coastal": true,
+		"position": "south-east"
+	},
+	"davao-occidental": {
+		"kind": "region",
+		"borders": [
+			"Davao del Sur",
+			"Sarangani"
+		],
+		"coastal": true,
+		"position": "south-east"
+	},
+	"sulu": {
+		"kind": "region",
+		"coastal": true,
+		"position": "south"
+	},
+	"tawi-tawi": {
+		"kind": "region",
+		"coastal": false,
+		"position": "south-west"
+	}
+}

@@ -1,0 +1,266 @@
+{
+	"punto-fijo": {
+		"kind": "city",
+		"population": 234736,
+		"populationRank": 19,
+		"region": "Falcón",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"coro": {
+		"kind": "city",
+		"population": 195227,
+		"populationRank": 22,
+		"region": "Falcón",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"porlamar": {
+		"kind": "city",
+		"population": 196934,
+		"populationRank": 21,
+		"region": "Nueva Esparta",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"maracaibo": {
+		"kind": "city",
+		"population": 2072000,
+		"populationRank": 2,
+		"population1950": 282000,
+		"region": "Zulia",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"carupano": {
+		"kind": "city",
+		"population": 126293,
+		"populationRank": 28,
+		"region": "Sucre",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"maiquetia": {
+		"kind": "city",
+		"population": 315442,
+		"populationRank": 15,
+		"region": "Vargas",
+		"coastal": true,
+		"position": "north"
+	},
+	"caracas": {
+		"kind": "city",
+		"population": 2985000,
+		"populationRank": 1,
+		"population1950": 694000,
+		"region": "Distrito Capital",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Named for the Caracas people who lived in its valley.",
+				"Simón Bolívar was born here in 1783.",
+				"The Ávila mountain separates it from the Caribbean."
+			],
+			"it": [
+				"Prende il nome dai Caracas, il popolo che viveva nella sua valle.",
+				"Qui nacque Simón Bolívar, nel 1783.",
+				"Il monte Ávila la separa dal mar dei Caraibi."
+			]
+		}
+	},
+	"puerto-cabello": {
+		"kind": "city",
+		"population": 174000,
+		"populationRank": 24,
+		"region": "Carabobo",
+		"coastal": true,
+		"position": "north"
+	},
+	"cumana": {
+		"kind": "city",
+		"population": 317603,
+		"populationRank": 14,
+		"region": "Sucre",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"cabimas": {
+		"kind": "city",
+		"population": 441094,
+		"populationRank": 9,
+		"region": "Trujillo",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"los-teques": {
+		"kind": "city",
+		"population": 303470,
+		"populationRank": 16,
+		"region": "Distrito Capital",
+		"coastal": true,
+		"position": "north"
+	},
+	"maracay": {
+		"kind": "city",
+		"population": 1007000,
+		"populationRank": 5,
+		"population1950": 58000,
+		"region": "Aragua",
+		"coastal": false,
+		"position": "centre"
+	},
+	"valencia": {
+		"kind": "city",
+		"population": 1770000,
+		"populationRank": 3,
+		"population1950": 126000,
+		"region": "Carabobo",
+		"coastal": false,
+		"position": "centre"
+	},
+	"carora": {
+		"kind": "city",
+		"population": 149711,
+		"populationRank": 27,
+		"region": "Lara",
+		"coastal": false,
+		"position": "west"
+	},
+	"puerto-la-cruz": {
+		"kind": "city",
+		"population": 546616,
+		"populationRank": 8,
+		"region": "Anzoátegui",
+		"coastal": true,
+		"position": "east"
+	},
+	"barcelona": {
+		"kind": "city",
+		"population": 600954,
+		"populationRank": 7,
+		"region": "Anzoátegui",
+		"coastal": true,
+		"position": "east"
+	},
+	"ocumare-del-tuy": {
+		"kind": "city",
+		"population": 166072,
+		"populationRank": 25,
+		"region": "Miranda",
+		"coastal": false,
+		"position": "centre"
+	},
+	"barquisimeto": {
+		"kind": "city",
+		"population": 1116000,
+		"populationRank": 4,
+		"population1950": 127000,
+		"region": "Lara",
+		"coastal": false,
+		"position": "west"
+	},
+	"maturin": {
+		"kind": "city",
+		"population": 410972,
+		"populationRank": 11,
+		"region": "Monagas",
+		"coastal": false,
+		"position": "east"
+	},
+	"acarigua": {
+		"kind": "city",
+		"population": 260921,
+		"populationRank": 18,
+		"region": "Portuguesa",
+		"coastal": false,
+		"position": "west"
+	},
+	"anaco": {
+		"kind": "city",
+		"population": 117596,
+		"populationRank": 30,
+		"region": "Anzoátegui",
+		"coastal": false,
+		"position": "east"
+	},
+	"valera": {
+		"kind": "city",
+		"population": 191167,
+		"populationRank": 23,
+		"region": "Trujillo",
+		"coastal": false,
+		"position": "west"
+	},
+	"guanare": {
+		"kind": "city",
+		"population": 151642,
+		"populationRank": 26,
+		"region": "Portuguesa",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"calabozo": {
+		"kind": "city",
+		"population": 117132,
+		"populationRank": 31,
+		"region": "Guárico",
+		"coastal": false,
+		"position": "south"
+	},
+	"el-tigre": {
+		"kind": "city",
+		"population": 197440,
+		"populationRank": 20,
+		"region": "Anzoátegui",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"barinas": {
+		"kind": "city",
+		"population": 284289,
+		"populationRank": 17,
+		"coastal": false,
+		"position": "south-west"
+	},
+	"merida": {
+		"kind": "city",
+		"population": 345489,
+		"populationRank": 12,
+		"coastal": false,
+		"position": "south-west"
+	},
+	"ciudad-guayana": {
+		"kind": "city",
+		"population": 746535,
+		"populationRank": 6,
+		"region": "Bolívar",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"ciudad-bolivar": {
+		"kind": "city",
+		"population": 338000,
+		"populationRank": 13,
+		"region": "Bolívar",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"san-fernando-de-apure": {
+		"kind": "city",
+		"population": 122701,
+		"populationRank": 29,
+		"region": "Apure",
+		"coastal": false,
+		"position": "south"
+	},
+	"san-cristobal": {
+		"kind": "city",
+		"population": 438798,
+		"populationRank": 10,
+		"region": "Táchira",
+		"coastal": false,
+		"position": "south-west"
+	}
+}
