@@ -39,7 +39,7 @@ import {
 import { colorizeMapDir } from './mapColors.js';
 import { spineMapDir } from './mapSpines.js';
 import { isUnbounded, parseBounds, withinBounds } from './placeSelection.js';
-import { NAME_CLEANERS } from './admin2.js';
+import { NAME_CLEANERS, polishCountyLabel } from './admin2.js';
 import { interiorPoint, pointInPolygon, type AnyGeometry } from './factGeometry.js';
 import {
 	COUNTRY_TYPES,
@@ -391,6 +391,12 @@ function verticesOf(geometry: Geometry): [number, number][] {
 	};
 	walk(geometry.coordinates);
 	return out;
+}
+
+/** A powiat's label in every language: the same, without "powiat " (#182). */
+function polishCountyNames(name: string): Partial<Record<NameLanguage, string>> {
+	const label = polishCountyLabel(name);
+	return { en: label, it: label, de: label };
 }
 
 async function main() {
@@ -790,6 +796,9 @@ async function main() {
 			tier: 1,
 			aliases: (p.alias ? [p.alias] : []) as string[],
 			...(otherNamesOf.has(p.name) ? { names: otherNamesOf.get(p.name) } : {}),
+			...(args['clean-names'] === 'polish-counties' && p.name.startsWith('powiat ')
+				? { names: polishCountyNames(p.name) }
+				: {}),
 			centroid: center,
 			bbox,
 			...(wraps ? { crossesAntimeridian: true } : {})

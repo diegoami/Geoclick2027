@@ -1,7 +1,14 @@
 // Germany's districts and Poland's powiats as a player names them (#39). Imported from
 // data/scripts the way placeSelection.test.ts does.
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
-import { germanDistrictName, NAME_CLEANERS, polishCountyName } from '../../../data/scripts/admin2';
+import {
+	germanDistrictName,
+	NAME_CLEANERS,
+	polishCountyLabel,
+	polishCountyName
+} from '../../../data/scripts/admin2';
 
 describe('germanDistrictName', () => {
 	it('calls a city that is its own district by the city', () => {
@@ -54,5 +61,28 @@ describe('polishCountyName', () => {
 
 	it('is the cleaner --clean-names=polish-counties picks', () => {
 		expect(NAME_CLEANERS['polish-counties']).toBe(polishCountyName);
+	});
+});
+
+describe('polishCountyLabel', () => {
+	it('drops the redundant "powiat", keeping the area that tells two apart', () => {
+		expect(polishCountyLabel('powiat oleski')).toBe('oleski');
+		expect(polishCountyLabel('powiat brzeski (Opolskie)')).toBe('brzeski (Opolskie)');
+		expect(polishCountyLabel('Rybnik')).toBe('Rybnik');
+	});
+
+	it('is what every Polish county map shows, while name stays the tile key', () => {
+		const dirs = ['east', 'north', 'south', 'southeast', 'west'];
+		for (const dir of dirs) {
+			const file = join(__dirname, `../../../data/maps/poland-counties-${dir}/map.json`);
+			const targets: { name: string; names?: Record<string, string> }[] = JSON.parse(
+				readFileSync(file, 'utf-8')
+			).targets;
+			for (const target of targets.filter((t) => t.name.startsWith('powiat '))) {
+				expect(target.names?.en).toBe(polishCountyLabel(target.name));
+				expect(target.names?.de).toBe(target.names?.en);
+				expect(target.names?.it).toBe(target.names?.en);
+			}
+		}
 	});
 });
