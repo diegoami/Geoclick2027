@@ -1,16 +1,16 @@
 ---
 name: review-pr
-description: Prepare and process optional independent reviews of GitHub pull requests. Use whenever handing a PR to the owner, when asked for a PR review prompt, or when the owner says a PR review is in. This is separate from release-milestone review; use review-handoff for releases.
+description: Run and process the required review of each code PR by another model family. Use whenever handing a PR to the owner, when asked for a PR review prompt, or when the owner says a PR review is in. This is separate from release-milestone review; use review-handoff for releases.
 ---
 
 # PR review handoff and follow-up
 
-PR reviews are optional and the owner chooses whether to start one. The
-implementing session must not create a reviewer worktree or start a reviewer
-unless explicitly asked. When a PR is handed to the owner, always include a
-ready-to-paste optional review prompt that tells a different model to create
-and clean up its own worktree, review the exact PR diff, and post the result to
-GitHub rather than only to chat.
+Every code PR is reviewed by another model family before it is handed to the
+owner (owner, 2026-10-04): the implementing session runs the script below and
+relays the outcome. Doc-only PRs need no review. When the script cannot review
+a PR that Claude implemented (exit 3), the handoff carries a ready-to-paste
+prompt for a manual review by another family instead; that review starts only
+when the owner asks.
 
 ## Who runs what
 
@@ -28,10 +28,11 @@ GitHub rather than only to chat.
 
 `pwsh scripts/external-review.ps1 -Pr <n>` reviews the PR head in a detached
 worktree and posts one comment. The reviewer is DeepSeek V4.1 Flash (effort
-high), then Claude Opus (owner, 2026-10-02); the implementer is left out. Run it
-in the background; relay every finding. Exit 3 = no OpenCode review: run the
-Opus reviewer as a subagent on the printed brief. Exit 4 = posted but flagged,
-no label: read it and decide. See `docs/EXTERNAL_REVIEW.md`.
+high, owner, 2026-10-04), never of the implementer's family. Run it in the
+background; relay every finding. Exit 3 = no OpenCode review: on a PR Claude
+implemented, tell the owner (no Claude reviewer); on one another family
+implemented, run the Opus reviewer as a subagent on the printed brief. Exit 4 =
+posted but flagged, no label: read it and decide. See `docs/EXTERNAL_REVIEW.md`.
 
 ## Prepare the optional review prompt (manual route)
 

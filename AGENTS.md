@@ -133,11 +133,16 @@ the gate. The separate PR-review workflow is advisory only.
   from a worktree, never by committing in the main checkout. There is no
   automerge exception: the remediation loop (`docs/ORCHESTRATION.md`) that had
   one closed with v0.2.0.
-- **Automated PR reviews are currently disabled.** The OpenCode PR-review
-  workflow and its `/check-pr-reviews` command were removed while the provider
-  failure is unresolved. The owner still tests the branch and explicitly OKs
-  every merge. The milestone review remains a separate process in *Releases*
-  below.
+- **Every code PR is reviewed by another model family** (owner, 2026-10-04)
+  before it is handed to the owner: `pwsh scripts/external-review.ps1 -Pr <n>`
+  from the Windows checkout, in the background. The reviewer is DeepSeek V4.1
+  Flash (`.opencode/reviewer-model`), never of the implementer's family. On
+  exit 3 (no OpenCode review), a PR that Claude implemented goes to the owner:
+  no Claude reviewer reviews Claude's work; only a PR another family
+  implemented may fall back to the Claude Opus reviewer. Doc-only changes need
+  no review. The review does not replace the owner's test and explicit OK. The
+  GitHub Actions PR-review workflow stays removed; the milestone review remains
+  a separate process in *Releases* below.
 - Keep `ROADMAP.md`, `ARCHITECTURE.md`, `ONBOARDING.md`, `DECISIONS.md`,
   `MAPS.md` current as work lands — each has a distinct charter (status / code
   map / newcomer guide / *why* / map build commands). Edit the relevant
@@ -168,9 +173,11 @@ the gate. The separate PR-review workflow is advisory only.
   what the owner should expect. For docs-only changes, give the applicable
   verification command and say runtime tests do not apply. End the handoff with
   the local test command block.
-- Also include a ready-to-paste prompt for an **optional independent review**
-  using a different model. Do not create a reviewer worktree or start the
-  review unless the owner explicitly asks. The prompt must identify the PR and
+- Also include the review's outcome: the posted comment's link, its verdict and
+  every finding. When the script could not review (exit 3 on a PR Claude
+  implemented), include instead a ready-to-paste prompt for a manual review by
+  another model family; do not create a reviewer worktree or start that review
+  unless the owner explicitly asks. The prompt must identify the PR and
   exact head SHA, tell the reviewer to create its own detached worktree at that
   SHA under the sibling `<project>-review` directory, read `AGENTS.md`, compare
   the PR diff with its base, post the result as a GitHub PR review (not only in
@@ -214,14 +221,14 @@ A milestone is a release: an annotated tag `vX.Y.Z` on `main`, on the exact
 commit the published release is built from. It is not a branch, a PR, a
 proposal, a count of merged PRs or a change to a particular file. Nothing else
 triggers the formal milestone review: not proposals, PRs, process or docs
-changes. Optional PR reviews are separate and owner-requested (see `review-pr`).
+changes. PR reviews are a separate process (see `review-pr`).
 A beta is not a milestone; it is built from a candidate. The releases go to the
 separate `diegoami/geoclick-releases` repository, but the tag lives here, and
 the release notes name the tagged commit. Say in the entry what was built and
 what was actually tried, rather than implying it.
 
 The implementing agent does the work itself and never spawns its own reviewer.
-The review runs in a **different model from the implementer's**, in whatever
+The review runs in a **different model family from the implementer's**, in whatever
 tool the owner picks (OpenCode, Codex, or another), in a fresh session every
 time. Nothing here assumes one tool.
 
@@ -285,14 +292,15 @@ with evidence on the issue. Owner decisions go to the owner with a recommended
 default, not into the code. (Why: see `DECISIONS.md` — "A milestone is a
 release tag, reviewed before it is created".)
 
-### Optional PR reviews
+### PR reviews
 
-PR reviews are optional, separate from the release-milestone review, and only
-start at the owner's choice. Follow `.claude/skills/review-pr/SKILL.md`: the
-implementer prepares the prompt; a different model in a fresh session runs
-`.opencode/agents/pr-reviewer.md` via `/review-pr`. The reviewer posts one
-neutral review to the PR and removes only its own worktree. This is not a merge
-approval or release gate; findings stay in the PR thread, not milestone issues.
+Every code PR is reviewed by another model family before the owner tests it,
+separately from the release-milestone review. Follow
+`.claude/skills/review-pr/SKILL.md`: the implementing session runs
+`scripts/external-review.ps1`, which posts one review comment; the manual route
+(`/review-pr` in a fresh session of another family) is for when the script
+cannot review. The review informs the owner's decision and does not replace it;
+findings stay in the PR thread, not milestone issues.
 
 ## Working agreements with the owner
 

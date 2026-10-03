@@ -7,7 +7,10 @@ posts it as one GitHub comment. The model never writes to GitHub or git.
 Roles (owner's decision, 2026-10-02): reviewer **DeepSeek V4.1 Flash**
 (`opencode-go/deepseek-v4.1-flash`, effort `high`), then **Claude Opus**.
 Later the same day the owner switched the default OpenCode reviewer to **GPT
-Luna** (`openai/gpt-5.6-luna#high`). The default is the one line in
+Luna** (`openai/gpt-5.6-luna#high`), and on 2026-10-04 back to **DeepSeek V4.1
+Flash**, with a rule: the reviewer is of **another model family** than the
+implementer, and a PR that Claude implemented never falls back to a Claude
+reviewer. The default is the one line in
 `.opencode/reviewer-model`; change it with the `switch-reviewer` skill, or pass
 `-Model` for one run. Implementer
 **Claude Sonnet**, then **GPT Luna**. One OpenCode model per role:
@@ -17,8 +20,9 @@ every variant, never `max`. The implementer's model never reviews its own PR
 (`Co-Authored-By` trailers or a `model:<name>` label); with no OpenCode
 reviewer left the script exits 3.
 
-Exit codes: `0` posted and acted on; `3` no OpenCode review (nothing posted:
-run the Opus reviewer as a subagent on the printed brief, in its own worktree);
+Exit codes: `0` posted and acted on; `3` no OpenCode review (nothing posted;
+when Claude implemented the PR, tell the owner; otherwise run the Opus reviewer
+as a subagent on the printed brief, in its own worktree);
 `4` posted but flagged, no label (read it and decide); `5` the PR head moved.
 
 **A review that can be read is never thrown away** (`scripts/ReviewParser.ps1`,

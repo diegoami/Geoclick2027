@@ -39,6 +39,14 @@ or amend an entry here as part of that change, not as an afterthought.
   and `/review-pr` command; the `review-pr` skill prepares the prompt and
   processes findings. The PR reviewer posts a neutral review to the PR and
   removes its own review worktree; this is not a merge approval or release gate.
+  **Amended 2026-10-04 (owner):** every code PR is reviewed by another model
+  family before it is handed to the owner, through
+  `scripts/external-review.ps1` with DeepSeek V4.1 Flash; a PR Claude
+  implemented never falls back to a Claude reviewer (exit 3 goes to the owner).
+  Doc-only PRs need no review, and the owner's explicit OK still decides every
+  merge. Why: a reviewer of the implementer's family repeats its misreadings
+  (harness_imperial L3), and in this project GLM-5.3 Flash said AGREE where
+  DeepSeek found a real MUST-FIX.
 - **PR testing handoffs point to the ready worktree and say how to test.** At
   the owner's request, prefer the existing implementing worktree over
   instructing the owner to create a duplicate. Give its absolute path and exact
