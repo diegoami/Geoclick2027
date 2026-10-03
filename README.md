@@ -13,7 +13,7 @@ in your browser.
 
 **Windows or Android app:** installers are on the public
 [releases page](https://github.com/diegoami/geoclick-releases/releases/latest)
-(this source repository is private). How they're built and published:
+(repository: [geoclick-releases](https://github.com/diegoami/geoclick-releases)). How they're built and published:
 [docs/RELEASES.md](docs/RELEASES.md).
 
 **How it works, screen by screen:** the [user manual](docs/USER_MANUAL.md)
