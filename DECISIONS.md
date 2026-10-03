@@ -2614,3 +2614,9 @@ remembered on the device (`geoclick:seen-detailed:v1`) and counts as a normal
 map from then on: it sits above the line in a country's list and in the map
 bar's type row, without the tick.
 
+**Amended (2026-10-03, owner, v0.18, #190):** a detailed map that is in the
+map bar because it was opened carries a large red X that forgets it
+(`forgetDetailed`): it returns behind the line, in the bar and in the list.
+No X on the open map, and none while the "Show detailed maps" tick shows every
+detailed map (unticking is how those go).
+
