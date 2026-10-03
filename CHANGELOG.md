@@ -5,6 +5,43 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
+## v0.17.0 — 2026-10-03 — German facts, eight new countries, detailed maps
+
+**Facts in German for all of Europe and four big countries outside it, eight new countries, 50k towns maps for Germany and Italy, and small divisions kept behind a "Show detailed maps" tick.**
+
+Proposal #163 (thread #162); #182. PRs #164 to #181 and #183 to #187.
+
+For players:
+
+- **German facts** for every European country and for China, the USA, Brazil
+  and India. The rest of the world follows in v0.18.
+- **Eight new countries**, each with a main map and a towns map: Denmark,
+  Kazakhstan, Kenya, New Zealand, Norway, the Philippines (also its 87
+  provinces), Serbia and Venezuela. Overseas territories are left out.
+- **Towns of 50 000 and up** for Germany (190) and Italy (132), each also in
+  north, centre and south parts.
+- **Detailed maps are tucked away.** Districts, provinces, municipalities, the
+  parts of a country and the 50k towns maps sit below a line in a country's
+  list. In a map's type bar a "Show detailed maps" tick adds them, and a
+  detailed map you have opened stays among the normal ones. The type bar wraps
+  instead of scrolling.
+- **Standard maps come first** in every country's list, whole nations before
+  their parts.
+- **Polish counties read "oleski"**, not "powiat oleski".
+
+For the project:
+
+- The OpenCode reviewer is GPT Luna by default, with a `switch-reviewer`
+  skill; it no longer types its own worktree path (#174).
+- Flaky test gate fixed: two tests that load the whole map catalogue
+  exceeded Vitest's 5 s default under load (#177).
+
+Not done, and said plainly: Kazakhstan's borders are the 2017 ones (16
+regions), Norway's the 2020-23 set (11 counties); Denmark's and Norway's towns
+maps have only 6 and 8 towns because Natural Earth is thin there; none of the
+new maps has German or Italian authored facts yet; the German thirds are
+uneven (North Rhine-Westphalia alone is 76 towns).
+
 ## v0.16.0 — 2026-10-01 — Continent entry, tutorial, map labels and chrome
 
 **Open continents from their land, switch map types with buttons, read region names that follow the geography in every view, and a refreshed tutorial.**
