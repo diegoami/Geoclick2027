@@ -9,9 +9,10 @@ export async function isNativeShell(): Promise<boolean> {
 	return Capacitor.isNativePlatform();
 }
 
-/** Latest installers, on the public releases-only repo (FT-08). */
+/** The source repository and the public releases-only repo (FT-08). */
 export const SOURCE_URL = 'https://github.com/diegoami/Geoclick2027';
 export const RELEASES_REPO_URL = 'https://github.com/diegoami/geoclick-releases';
+/** Latest installers. */
 export const RELEASES_URL = 'https://github.com/diegoami/geoclick-releases/releases/latest';
 
 /**

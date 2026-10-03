@@ -7,6 +7,8 @@ learned keeps being worth playing. 63 maps across 28 countries, in
 English, German and Italian. Portfolio project — see
 [ARCHITECTURE.md](ARCHITECTURE.md) for the full pitch.
 
+Created by Diego Amicabile.
+
 **Play it:** <https://geoclick.netlify.app/> — the live web
 app, built from `main`. No install or account needed; progress is kept
 in your browser.
