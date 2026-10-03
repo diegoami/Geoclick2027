@@ -12,7 +12,7 @@ import MapNav from './MapNav.svelte';
 import { setLanguage } from './i18n.svelte';
 import { isContinentGroup } from './catalogSections';
 import { mapGroups } from './mapCatalog';
-import { recordVisit, setDetailedMapsShown } from './mapPrefs.svelte';
+import { isSeenDetailed, recordVisit, setDetailedMapsShown } from './mapPrefs.svelte';
 
 describe('MapNav sibling map buttons', () => {
 	afterEach(() => {
@@ -159,5 +159,39 @@ describe('MapNav sibling map buttons', () => {
 			(b) => b.dataset.mapId
 		);
 		expect(ids).toEqual(['germany-states', 'germany-towns-100k', 'germany-districts-north']);
+	});
+
+	it('puts a detailed map away again with its X', async () => {
+		recordVisit('germany-districts-west');
+		await render(MapNav, {
+			mapId: 'germany-states',
+			mapName: 'Germany — States',
+			active: 'overview'
+		});
+		const ids = () =>
+			[...document.querySelectorAll<HTMLButtonElement>('.map-type-btn')].map(
+				(b) => b.dataset.mapId
+			);
+		expect(ids()).toContain('germany-districts-west');
+		// Only the maps that are there because they were opened carry an X.
+		const x = document.querySelector<HTMLButtonElement>(
+			'[data-forget-id="germany-districts-west"]'
+		);
+		expect(x).not.toBeNull();
+		expect(document.querySelector('[data-forget-id="germany-states"]')).toBeNull();
+		x!.click();
+		await vi.waitFor(() => expect(ids()).not.toContain('germany-districts-west'));
+		expect(isSeenDetailed('germany-districts-west')).toBe(false);
+	});
+
+	it('shows no X while the tick shows every detailed map', async () => {
+		recordVisit('germany-districts-west');
+		setDetailedMapsShown(true);
+		await render(MapNav, {
+			mapId: 'germany-states',
+			mapName: 'Germany — States',
+			active: 'overview'
+		});
+		expect(document.querySelector('.map-type-x')).toBeNull();
 	});
 });

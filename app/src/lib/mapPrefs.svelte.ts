@@ -127,6 +127,12 @@ export function isSeenDetailed(mapId: string): boolean {
 	return seenDetailed.includes(mapId);
 }
 
+/** Take a detailed map back out of the normal maps: it goes behind the line again. */
+export function forgetDetailed(mapId: string): void {
+	seenDetailed = seenDetailed.filter((id) => id !== mapId);
+	writeIds(SEEN_DETAILED_KEY, seenDetailed);
+}
+
 /** Called when a map view opens (MapNav). Unknown ids are ignored. */
 export function recordVisit(mapId: string): void {
 	if (!isCatalogMap(mapId)) return;

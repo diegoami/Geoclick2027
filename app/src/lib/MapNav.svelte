@@ -17,6 +17,7 @@
 	import LanguageSwitcher from './LanguageSwitcher.svelte';
 	import {
 		detailedMapsShown,
+		forgetDetailed,
 		isSeenDetailed,
 		mapNavHidden,
 		recordVisit,
@@ -172,20 +173,34 @@
 					aria-label={t('home.mapTypeFor', { name: currentGroup?.country ?? '' })}
 				>
 					{#each groupMaps as countryMap (countryMap.id)}
-						<button
-							type="button"
-							class="map-type-btn"
-							data-map-id={countryMap.id}
-							class:map-type-btn--active={countryMap.id === mapId}
-							aria-pressed={countryMap.id === mapId}
-							onclick={() => {
-								if (countryMap.id !== mapId) {
-									goto(resolve('/map/[mapId]', { mapId: countryMap.id }));
-								}
-							}}
-						>
-							{mapTypeLabel(countryMap)}
-						</button>
+						<span class="map-type-chip">
+							<button
+								type="button"
+								class="map-type-btn"
+								data-map-id={countryMap.id}
+								class:map-type-btn--active={countryMap.id === mapId}
+								aria-pressed={countryMap.id === mapId}
+								onclick={() => {
+									if (countryMap.id !== mapId) {
+										goto(resolve('/map/[mapId]', { mapId: countryMap.id }));
+									}
+								}}
+							>
+								{mapTypeLabel(countryMap)}
+							</button>
+							<!-- A detailed map there because it was opened can be put away again
+						     (v0.18). Not on the open map, nor when the tick shows them all. -->
+							{#if countryMap.advanced && isSeenDetailed(countryMap.id) && !detailedMapsShown() && countryMap.id !== mapId}
+								<button
+									type="button"
+									class="map-type-x"
+									data-forget-id={countryMap.id}
+									aria-label={t('nav.hideDetailedMap', { name: mapTypeLabel(countryMap) })}
+									title={t('nav.hideDetailedMap', { name: mapTypeLabel(countryMap) })}
+									onclick={() => forgetDetailed(countryMap.id)}>✕</button
+								>
+							{/if}
+						</span>
 					{/each}
 				</div>
 				<FavouriteStar {mapId} size="bar" />
@@ -315,6 +330,31 @@
 		padding: 0.2rem 0.55rem;
 		border-radius: 0.4rem;
 		cursor: pointer;
+	}
+	.map-type-chip {
+		display: inline-flex;
+		flex: none;
+		align-items: stretch;
+	}
+	/* Big and red on purpose: putting a detailed map away must be easy to find. */
+	.map-type-x {
+		min-width: 2rem;
+		min-height: 2rem;
+		margin-left: 0.15rem;
+		padding: 0 0.5rem;
+		font: inherit;
+		font-size: 1rem;
+		font-weight: 700;
+		line-height: 1;
+		color: #ffffff;
+		background: #b3261e;
+		border: 1px solid #b3261e;
+		border-radius: 0.4rem;
+		cursor: pointer;
+	}
+	.map-type-x:focus-visible {
+		outline: 2px solid #b3261e;
+		outline-offset: 2px;
 	}
 	.map-type-btn {
 		flex: none;

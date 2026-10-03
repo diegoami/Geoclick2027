@@ -85,6 +85,7 @@ export type TranslationKey =
 	| 'known.chosen'
 	| 'nav.loading'
 	| 'nav.detailedMaps'
+	| 'nav.hideDetailedMap'
 	| 'home.recent'
 	| 'home.favourites'
 	| 'home.allMaps'
@@ -264,6 +265,7 @@ const en: Dictionary = {
 	'known.chosen': 'Chosen',
 	'nav.loading': 'Loading…',
 	'nav.detailedMaps': 'Show detailed maps',
+	'nav.hideDetailedMap': 'Hide {name}',
 
 	'home.recent': 'Recent',
 	'home.favourites': 'Favourites',
@@ -460,6 +462,7 @@ const de: Dictionary = {
 	'known.chosen': 'Gewählt',
 	'nav.loading': 'Lädt…',
 	'nav.detailedMaps': 'Detaillierte Karten anzeigen',
+	'nav.hideDetailedMap': '{name} ausblenden',
 
 	'home.recent': 'Zuletzt geöffnet',
 	'home.favourites': 'Favoriten',
@@ -660,6 +663,7 @@ const it: Dictionary = {
 	'known.chosen': 'Scelto',
 	'nav.loading': 'Caricamento…',
 	'nav.detailedMaps': 'Mostra le mappe dettagliate',
+	'nav.hideDetailedMap': 'Nascondi {name}',
 
 	'home.recent': 'Recenti',
 	'home.favourites': 'Preferiti',
