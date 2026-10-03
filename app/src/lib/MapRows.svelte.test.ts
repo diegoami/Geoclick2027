@@ -15,6 +15,7 @@ vi.mock('$app/paths', () => ({
 import MapRows from './MapRows.svelte';
 import { endTutorialSandbox, startTutorialSandbox } from './tutorialSandbox.svelte';
 import { setLanguage } from './i18n.svelte';
+import { recordVisit } from './mapPrefs.svelte';
 
 const group = (country: string, pickerId?: string) => ({
 	country,
@@ -292,5 +293,34 @@ describe('MapRows: advanced maps (v0.17)', () => {
 		expect(
 			[...document.querySelectorAll('select option')].some((o) => o.textContent === '──────')
 		).toBe(false);
+	});
+});
+
+describe('MapRows: a detailed map the player has opened (v0.17)', () => {
+	it('moves in among the normal maps, above the line', async () => {
+		recordVisit('germany-districts-east');
+		await render(MapRows, {
+			groups: [
+				{
+					country: 'Germany',
+					maps: [
+						{ id: 'germany-states', label: 'States' },
+						{ id: 'germany-towns-100k', label: 'Towns' },
+						{ id: 'germany-districts-east', label: 'Districts — East', advanced: true },
+						{ id: 'germany-towns-east', label: 'Towns — East', advanced: true }
+					]
+				}
+			],
+			masteries: {},
+			targetCount: () => 0
+		});
+		const options = [...document.querySelectorAll<HTMLOptionElement>('select option')];
+		expect(options.map((o) => o.textContent?.trim())).toEqual([
+			'States',
+			'Towns',
+			'Districts — East',
+			'──────',
+			'Towns — East'
+		]);
 	});
 });

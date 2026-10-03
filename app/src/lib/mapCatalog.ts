@@ -683,6 +683,11 @@ export function isCatalogMap(mapId: string): boolean {
 	return mapIndex.has(mapId);
 }
 
+/** Whether a catalog map is one of the advanced (detailed) ones. */
+export function isAdvancedMap(mapId: string): boolean {
+	return mapIndex.get(mapId)?.entry.advanced === true;
+}
+
 export function mapDisplayName(mapId: string): string | undefined {
 	const meta = mapIndex.get(mapId);
 	if (!meta) return undefined;
