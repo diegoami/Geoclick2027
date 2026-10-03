@@ -37,6 +37,9 @@ export type TranslationKey =
 	| 'about.tagline'
 	| 'about.version'
 	| 'about.credits'
+	| 'about.author'
+	| 'about.sourceLink'
+	| 'about.releasesLink'
 	| 'home.viewLabel'
 	| 'home.viewMap'
 	| 'home.viewList'
@@ -217,6 +220,9 @@ const en: Dictionary = {
 	'about.version': 'Version {version}, build {build}',
 	'about.credits':
 		'Map data from Natural Earth and Wikidata. Maps drawn with MapLibre and PMTiles.',
+	'about.author': 'Created by Diego Amicabile.',
+	'about.sourceLink': 'Source code',
+	'about.releasesLink': 'Releases',
 	'home.viewLabel': 'Show the maps as',
 	'home.viewMap': 'Map',
 	'home.viewList': 'List',
@@ -414,6 +420,9 @@ const de: Dictionary = {
 	'about.version': 'Version {version}, Build {build}',
 	'about.credits':
 		'Kartendaten von Natural Earth und Wikidata. Karten gezeichnet mit MapLibre und PMTiles.',
+	'about.author': 'Von Diego Amicabile.',
+	'about.sourceLink': 'Quellcode',
+	'about.releasesLink': 'Veröffentlichungen',
 	'home.viewLabel': 'Karten zeigen als',
 	'home.viewMap': 'Karte',
 	'home.viewList': 'Liste',
@@ -615,6 +624,9 @@ const it: Dictionary = {
 	'about.version': 'Versione {version}, build {build}',
 	'about.credits':
 		'Dati cartografici da Natural Earth e Wikidata. Mappe disegnate con MapLibre e PMTiles.',
+	'about.author': 'Di Diego Amicabile.',
+	'about.sourceLink': 'Codice sorgente',
+	'about.releasesLink': 'Versioni',
 	'home.viewLabel': 'Mostra le mappe come',
 	'home.viewMap': 'Mappa',
 	'home.viewList': 'Elenco',
