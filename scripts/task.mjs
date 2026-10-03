@@ -739,6 +739,26 @@ function listeningPorts() {
 // together emit ~100 KB, most of it the names of 683 passing tests, which
 // buries the one line that matters when something fails. Piped output is held
 // in memory and only the tail of a FAILING gate is ever printed.
+// A failing gate's whole output goes to rendered/gates-last-failure.log (git-
+// ignored), because the tail is not always where the cause is: the test gate
+// failed twice in v0.17 with no failing test in the tail, and the cause was
+// never found (#190). The lines that look like failures are listed beside it.
+function saveFailure(gateName, output) {
+	try {
+		const dir = path.join(REPO_ROOT, 'rendered');
+		mkdirSync(dir, { recursive: true });
+		const file = path.join(dir, 'gates-last-failure.log');
+		writeFileSync(file, `gate: ${gateName}\n\n${output}`);
+		const suspects = output
+			.split(/\r?\n/)
+			.filter((line) => /\bFAIL\b|Error:|Timeout|timed out|✗|×/.test(line))
+			.slice(0, 15);
+		return { logFile: path.relative(REPO_ROOT, file), suspects };
+	} catch {
+		return {};
+	}
+}
+
 function runGateSet(quiet, tailChars = 4000) {
 	const results = [];
 	let failed = null;
@@ -766,7 +786,10 @@ function runGateSet(quiet, tailChars = 4000) {
 			...(res.error ? { error: res.error.message } : {}),
 			ms: Date.now() - started,
 			...(quiet && !ok
-				? { output: `${res.stdout ?? ''}${res.stderr ?? ''}`.slice(-tailChars) }
+				? {
+						output: `${res.stdout ?? ''}${res.stderr ?? ''}`.slice(-tailChars),
+						...saveFailure(gate.name, `${res.stdout ?? ''}${res.stderr ?? ''}`)
+					}
 				: {})
 		});
 		if (!ok) {
@@ -788,6 +811,10 @@ function cmdGates(asJson, quiet = false) {
 			const failed = verdict.results.at(-1);
 			console.log(`\n--- ${verdict.failedGate} output (tail) ---`);
 			console.log(failed?.output?.trimEnd() ?? '(no output captured)');
+			if (failed?.logFile) {
+				console.log(`\n--- full output: ${failed.logFile} ---`);
+				if (failed.suspects?.length) console.log(failed.suspects.join('\n'));
+			}
 		}
 		console.log('\n--- summary ---');
 		for (const r of verdict.results) console.log(`  ${r.ok ? 'PASS' : 'FAIL'}  ${r.gate}  (${r.ms}ms)`);

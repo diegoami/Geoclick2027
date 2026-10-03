@@ -89,6 +89,8 @@ never dump raw output and then explain it.
     # All four gates at once — the release checklist's own step.
     # --quiet prints four PASS lines, or the tail of the gate that failed.
     npm run gates -- --quiet
+    # a failing gate also leaves its whole output in rendered/gates-last-failure.log
+    # (git-ignored), with the FAIL/Error lines listed; read that, not a guess.
 
     # Lint / typecheck — failures only
     npm run lint 2>&1 | grep -E "error|warning|✖" | head -30
