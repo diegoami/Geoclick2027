@@ -1,0 +1,3093 @@
+{
+	"id": "philippines-provinces",
+	"name": "Philippines — Provinces",
+	"country": "Philippines",
+	"attribution": "NAMRIA, PSA, OCHA Philippines, CC BY 3.0 IGO (via geoBoundaries); Natural Earth (public domain), https://www.naturalearthdata.com",
+	"boundarySource": "data/source/geoboundaries/PHL-ADM2.geojson",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "batanes",
+			"name": "Batanes",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.9091,
+				20.549100000000003
+			],
+			"bbox": [
+				121.783,
+				20.262,
+				122.0352,
+				20.8362
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						121.8043,
+						20.7062
+					],
+					[
+						121.8474,
+						20.7548
+					],
+					[
+						121.8581,
+						20.817
+					]
+				],
+				"aspect": 2.52
+			}
+		},
+		{
+			"id": "cagayan",
+			"name": "Cagayan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.64814999999999,
+				18.537149999999997
+			],
+			"bbox": [
+				120.9587,
+				17.5005,
+				122.3376,
+				19.5738
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						121.5035,
+						17.9337
+					],
+					[
+						121.8417,
+						17.8125
+					],
+					[
+						122.1799,
+						18.0002
+					]
+				],
+				"aspect": 0.83
+			}
+		},
+		{
+			"id": "ilocos-norte",
+			"name": "Ilocos Norte",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.70815,
+				18.216450000000002
+			],
+			"bbox": [
+				120.4398,
+				17.786,
+				120.9765,
+				18.6469
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						120.6238,
+						17.9217
+					],
+					[
+						120.7781,
+						18.212
+					],
+					[
+						120.8158,
+						18.5353
+					]
+				],
+				"aspect": 1.86
+			}
+		},
+		{
+			"id": "apayao",
+			"name": "Apayao",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.2031,
+				18.08985
+			],
+			"bbox": [
+				120.9167,
+				17.6359,
+				121.4895,
+				18.5438
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						121.1163,
+						18.4524
+					],
+					[
+						121.2221,
+						18.107
+					],
+					[
+						121.2232,
+						17.7448
+					]
+				],
+				"aspect": 2.12
+			}
+		},
+		{
+			"id": "abra",
+			"name": "Abra",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.79255,
+				17.56445
+			],
+			"bbox": [
+				120.4682,
+				17.1553,
+				121.1169,
+				17.9736
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						120.5916,
+						17.5413
+					],
+					[
+						120.8202,
+						17.5019
+					],
+					[
+						121.0488,
+						17.6716
+					]
+				],
+				"aspect": 0.72
+			}
+		},
+		{
+			"id": "kalinga",
+			"name": "Kalinga",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.27955,
+				17.431350000000002
+			],
+			"bbox": [
+				120.9119,
+				17.1695,
+				121.6472,
+				17.6932
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						121.0303,
+						17.3635
+					],
+					[
+						121.2908,
+						17.4825
+					],
+					[
+						121.5514,
+						17.4592
+					]
+				],
+				"aspect": 1.32
+			}
+		},
+		{
+			"id": "ilocos-sur",
+			"name": "Ilocos Sur",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.5782,
+				17.28625
+			],
+			"bbox": [
+				120.344,
+				16.6698,
+				120.8124,
+				17.9027
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						120.486,
+						17.4215
+					],
+					[
+						120.5967,
+						17.1664
+					],
+					[
+						120.6196,
+						16.8956
+					]
+				],
+				"aspect": 2.23
+			}
+		},
+		{
+			"id": "mountain-province",
+			"name": "Mountain Province",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.16755,
+				17.05715
+			],
+			"bbox": [
+				120.7676,
+				16.8211,
+				121.5675,
+				17.2932
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						120.8267,
+						17.0115
+					],
+					[
+						121.1477,
+						17.1514
+					],
+					[
+						121.4995,
+						17.176
+					]
+				],
+				"aspect": 3.12
+			}
+		},
+		{
+			"id": "isabela",
+			"name": "Isabela",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.931,
+				16.98885
+			],
+			"bbox": [
+				121.3363,
+				16.3932,
+				122.5257,
+				17.5845
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						121.6285,
+						16.9728
+					],
+					[
+						121.986,
+						17.0399
+					],
+					[
+						122.3436,
+						16.9912
+					]
+				],
+				"aspect": 0.65
+			}
+		},
+		{
+			"id": "ifugao",
+			"name": "Ifugao",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.23225,
+				16.8245
+			],
+			"bbox": [
+				120.893,
+				16.5695,
+				121.5715,
+				17.0795
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						120.9404,
+						16.6944
+					],
+					[
+						121.1939,
+						16.884
+					],
+					[
+						121.5008,
+						16.9759
+					]
+				],
+				"aspect": 2.28
+			}
+		},
+		{
+			"id": "la-union",
+			"name": "La Union",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.4322,
+				16.5628
+			],
+			"bbox": [
+				120.2993,
+				16.2047,
+				120.5651,
+				16.9209
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						120.4322,
+						16.2584
+					],
+					[
+						120.375,
+						16.564
+					],
+					[
+						120.4588,
+						16.8637
+					]
+				],
+				"aspect": 3.87
+			}
+		},
+		{
+			"id": "benguet",
+			"name": "Benguet",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.68705,
+				16.553449999999998
+			],
+			"bbox": [
+				120.4446,
+				16.1803,
+				120.9295,
+				16.9266
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						120.6313,
+						16.2599
+					],
+					[
+						120.7156,
+						16.5493
+					],
+					[
+						120.7585,
+						16.8466
+					]
+				],
+				"aspect": 1.88
+			}
+		},
+		{
+			"id": "quirino",
+			"name": "Quirino",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.6722,
+				16.284
+			],
+			"bbox": [
+				121.2856,
+				15.9266,
+				122.0588,
+				16.6414
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						121.3832,
+						16.0963
+					],
+					[
+						121.6363,
+						16.3504
+					],
+					[
+						121.8894,
+						16.3711
+					]
+				],
+				"aspect": 1.78
+			}
+		},
+		{
+			"id": "nueva-vizcaya",
+			"name": "Nueva Vizcaya",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.1449,
+				16.25395
+			],
+			"bbox": [
+				120.769,
+				15.7544,
+				121.5208,
+				16.7535
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						120.9081,
+						16.3644
+					],
+					[
+						121.1325,
+						16.2988
+					],
+					[
+						121.3568,
+						16.3564
+					]
+				],
+				"aspect": 0.84
+			}
+		},
+		{
+			"id": "pangasinan",
+			"name": "Pangasinan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.3352,
+				16.0222
+			],
+			"bbox": [
+				119.7499,
+				15.6178,
+				120.9205,
+				16.4266
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						119.833,
+						16.0811
+					],
+					[
+						120.289,
+						15.8114
+					],
+					[
+						120.7986,
+						15.9867
+					]
+				],
+				"aspect": 2.58
+			}
+		},
+		{
+			"id": "aurora",
+			"name": "Aurora",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.7595,
+				15.752849999999999
+			],
+			"bbox": [
+				121.2848,
+				14.9964,
+				122.2342,
+				16.5093
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						121.3855,
+						15.5072
+					],
+					[
+						121.5745,
+						16.0905
+					],
+					[
+						122.1514,
+						16.3992
+					]
+				],
+				"aspect": 7.18
+			}
+		},
+		{
+			"id": "nueva-ecija",
+			"name": "Nueva Ecija",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.99680000000001,
+				15.6582
+			],
+			"bbox": [
+				120.6151,
+				15.1784,
+				121.3785,
+				16.138
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						120.8063,
+						15.6116
+					],
+					[
+						121.0552,
+						15.7493
+					],
+					[
+						121.304,
+						15.657
+					]
+				],
+				"aspect": 0.67
+			}
+		},
+		{
+			"id": "tarlac",
+			"name": "Tarlac",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.46340000000001,
+				15.51475
+			],
+			"bbox": [
+				120.1652,
+				15.1671,
+				120.7616,
+				15.8624
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						120.2455,
+						15.4318
+					],
+					[
+						120.4741,
+						15.5337
+					],
+					[
+						120.7026,
+						15.4728
+					]
+				],
+				"aspect": 0.87
+			}
+		},
+		{
+			"id": "zambales",
+			"name": "Zambales",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.16659999999999,
+				15.3061
+			],
+			"bbox": [
+				119.8719,
+				14.7381,
+				120.4613,
+				15.8741
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						120.025,
+						15.7527
+					],
+					[
+						120.11,
+						15.3148
+					],
+					[
+						120.267,
+						14.8942
+					]
+				],
+				"aspect": 3.17
+			}
+		},
+		{
+			"id": "pampanga",
+			"name": "Pampanga",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.65379999999999,
+				15.022849999999998
+			],
+			"bbox": [
+				120.3561,
+				14.7679,
+				120.9515,
+				15.2778
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						120.467,
+						15.0613
+					],
+					[
+						120.6625,
+						15.001
+					],
+					[
+						120.8579,
+						15.0988
+					]
+				],
+				"aspect": 1.11
+			}
+		},
+		{
+			"id": "bulacan",
+			"name": "Bulacan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.01755,
+				14.98035
+			],
+			"bbox": [
+				120.6872,
+				14.6885,
+				121.3479,
+				15.2722
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						120.8341,
+						14.8766
+					],
+					[
+						121.0683,
+						15.072
+					],
+					[
+						121.3025,
+						15.0503
+					]
+				],
+				"aspect": 1.18
+			}
+		},
+		{
+			"id": "ncr-third-district",
+			"name": "NCR, Third District",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.00309999999999,
+				14.7093
+			],
+			"bbox": [
+				120.9065,
+				14.6339,
+				121.0997,
+				14.7847
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						120.955,
+						14.6676
+					],
+					[
+						120.9985,
+						14.7289
+					],
+					[
+						121.0638,
+						14.7679
+					]
+				],
+				"aspect": 2.81
+			}
+		},
+		{
+			"id": "bataan",
+			"name": "Bataan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.42985,
+				14.66875
+			],
+			"bbox": [
+				120.2482,
+				14.4162,
+				120.6115,
+				14.9213
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						120.4174,
+						14.8447
+					],
+					[
+						120.4206,
+						14.6439
+					],
+					[
+						120.5283,
+						14.4709
+					]
+				],
+				"aspect": 1.96
+			}
+		},
+		{
+			"id": "ncr-second-district",
+			"name": "NCR, Second District",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.0624,
+				14.6486
+			],
+			"bbox": [
+				120.9899,
+				14.532,
+				121.1349,
+				14.7652
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						121.062,
+						14.5741
+					],
+					[
+						121.0487,
+						14.6545
+					],
+					[
+						121.0808,
+						14.7298
+					]
+				],
+				"aspect": 1.61
+			}
+		},
+		{
+			"id": "ncr-city-of-manila-first-district",
+			"name": "NCR, City of Manila, First District",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.9887,
+				14.5983
+			],
+			"bbox": [
+				120.9578,
+				14.5601,
+				121.0196,
+				14.6365
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						120.9633,
+						14.6096
+					],
+					[
+						120.9883,
+						14.5968
+					],
+					[
+						121.0133,
+						14.59
+					]
+				],
+				"aspect": 0.88
+			}
+		},
+		{
+			"id": "rizal",
+			"name": "Rizal",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.274,
+				14.56055
+			],
+			"bbox": [
+				121.0969,
+				14.2863,
+				121.4511,
+				14.8348
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						121.1529,
+						14.6596
+					],
+					[
+						121.269,
+						14.6721
+					],
+					[
+						121.3851,
+						14.5767
+					]
+				],
+				"aspect": 0.66
+			}
+		},
+		{
+			"id": "ncr-fourth-district",
+			"name": "NCR, Fourth District",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.0369,
+				14.4656
+			],
+			"bbox": [
+				120.9699,
+				14.3518,
+				121.1039,
+				14.5794
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						121.0238,
+						14.388
+					],
+					[
+						121.0062,
+						14.4734
+					],
+					[
+						121.0403,
+						14.5533
+					]
+				],
+				"aspect": 2.12
+			}
+		},
+		{
+			"id": "laguna",
+			"name": "Laguna",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.3209,
+				14.27935
+			],
+			"bbox": [
+				121.0073,
+				13.9635,
+				121.6345,
+				14.5952
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						121.2361,
+						14.0719
+					],
+					[
+						121.3998,
+						14.1576
+					],
+					[
+						121.5635,
+						14.3189
+					]
+				],
+				"aspect": 1.28
+			}
+		},
+		{
+			"id": "cavite",
+			"name": "Cavite",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.8169,
+				14.27545
+			],
+			"bbox": [
+				120.5636,
+				14.0754,
+				121.0702,
+				14.4755
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						120.7165,
+						14.2105
+					],
+					[
+						120.8645,
+						14.2768
+					],
+					[
+						121.0125,
+						14.2686
+					]
+				],
+				"aspect": 1
+			}
+		},
+		{
+			"id": "quezon",
+			"name": "Quezon",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				122.01485,
+				14.190750000000001
+			],
+			"bbox": [
+				121.2372,
+				13.1646,
+				122.7925,
+				15.2169
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						121.5334,
+						14.0002
+					],
+					[
+						122.4877,
+						14.008
+					],
+					[
+						122.5961,
+						13.2933
+					]
+				],
+				"aspect": 6.5
+			}
+		},
+		{
+			"id": "camarines-norte",
+			"name": "Camarines Norte",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				122.69655,
+				14.090900000000001
+			],
+			"bbox": [
+				122.2986,
+				13.8376,
+				123.0945,
+				14.3442
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						122.4421,
+						14.2252
+					],
+					[
+						122.7965,
+						14.2355
+					],
+					[
+						123.034,
+						13.9658
+					]
+				],
+				"aspect": 2.91
+			}
+		},
+		{
+			"id": "batangas",
+			"name": "Batangas",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.02420000000001,
+				13.87645
+			],
+			"bbox": [
+				120.5789,
+				13.5264,
+				121.4695,
+				14.2265
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						120.6771,
+						14.0408
+					],
+					[
+						121.0695,
+						13.9947
+					],
+					[
+						121.3323,
+						13.7084
+					]
+				],
+				"aspect": 2.61
+			}
+		},
+		{
+			"id": "catanduanes",
+			"name": "Catanduanes",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				124.22225,
+				13.808250000000001
+			],
+			"bbox": [
+				124.0233,
+				13.5166,
+				124.4212,
+				14.0999
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						124.2129,
+						13.6247
+					],
+					[
+						124.3215,
+						13.8166
+					],
+					[
+						124.2349,
+						14.0201
+					]
+				],
+				"aspect": 1.5
+			}
+		},
+		{
+			"id": "camarines-sur",
+			"name": "Camarines Sur",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				123.2602,
+				13.66605
+			],
+			"bbox": [
+				122.5509,
+				13.2585,
+				123.9695,
+				14.0736
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						122.7411,
+						13.9058
+					],
+					[
+						123.1856,
+						13.3924
+					],
+					[
+						123.7932,
+						13.8083
+					]
+				],
+				"aspect": 4.03
+			}
+		},
+		{
+			"id": "marinduque",
+			"name": "Marinduque",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.9795,
+				13.385
+			],
+			"bbox": [
+				121.8113,
+				13.1993,
+				122.1477,
+				13.5707
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						121.8438,
+						13.4239
+					],
+					[
+						121.9624,
+						13.3516
+					],
+					[
+						122.081,
+						13.3901
+					]
+				],
+				"aspect": 0.86
+			}
+		},
+		{
+			"id": "albay",
+			"name": "Albay",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				123.7493,
+				13.25445
+			],
+			"bbox": [
+				123.2813,
+				12.9862,
+				124.2173,
+				13.5227
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						123.3388,
+						13.1476
+					],
+					[
+						123.5247,
+						13.2369
+					],
+					[
+						123.7107,
+						13.2413
+					]
+				],
+				"aspect": 1.04
+			}
+		},
+		{
+			"id": "occidental-mindoro",
+			"name": "Occidental Mindoro",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.64165,
+				13.0261
+			],
+			"bbox": [
+				120.022,
+				12.1531,
+				121.2613,
+				13.8991
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						120.5031,
+						13.4651
+					],
+					[
+						121.0972,
+						13.0662
+					],
+					[
+						121.1496,
+						12.3572
+					]
+				],
+				"aspect": 4.32
+			}
+		},
+		{
+			"id": "oriental-mindoro",
+			"name": "Oriental Mindoro",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.17955,
+				12.86715
+			],
+			"bbox": [
+				120.8007,
+				12.2078,
+				121.5584,
+				13.5265
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						121.0796,
+						13.388
+					],
+					[
+						121.4915,
+						13.0091
+					],
+					[
+						121.4464,
+						12.4673
+					]
+				],
+				"aspect": 3.64
+			}
+		},
+		{
+			"id": "sorsogon",
+			"name": "Sorsogon",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				123.8403,
+				12.82685
+			],
+			"bbox": [
+				123.4823,
+				12.5328,
+				124.1983,
+				13.1209
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						123.5785,
+						12.9612
+					],
+					[
+						123.8517,
+						12.8548
+					],
+					[
+						124.1249,
+						12.7483
+					]
+				],
+				"aspect": 3.5
+			}
+		},
+		{
+			"id": "romblon",
+			"name": "Romblon",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				122.1919,
+				12.4972
+			],
+			"bbox": [
+				121.6855,
+				12.0314,
+				122.6983,
+				12.963
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						122.0045,
+						12.2757
+					],
+					[
+						122.0402,
+						12.459
+					],
+					[
+						122.1022,
+						12.6367
+					]
+				],
+				"aspect": 3.26
+			}
+		},
+		{
+			"id": "masbate",
+			"name": "Masbate",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				123.50215,
+				12.43995
+			],
+			"bbox": [
+				122.931,
+				11.7207,
+				124.0733,
+				13.1592
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						123.2651,
+						12.3616
+					],
+					[
+						123.6704,
+						12.1893
+					],
+					[
+						124.0084,
+						11.9137
+					]
+				],
+				"aspect": 3.87
+			}
+		},
+		{
+			"id": "northern-samar",
+			"name": "Northern Samar",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				124.72865,
+				12.417000000000002
+			],
+			"bbox": [
+				124.1331,
+				12.1376,
+				125.3242,
+				12.6964
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						124.3762,
+						12.4331
+					],
+					[
+						124.7943,
+						12.3352
+					],
+					[
+						125.2161,
+						12.4263
+					]
+				],
+				"aspect": 3.05
+			}
+		},
+		{
+			"id": "samar",
+			"name": "Samar",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				124.7294,
+				11.71355
+			],
+			"bbox": [
+				124.1497,
+				11.0861,
+				125.3091,
+				12.341
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						124.6506,
+						12.2786
+					],
+					[
+						125.1465,
+						11.9588
+					],
+					[
+						125.2008,
+						11.3896
+					]
+				],
+				"aspect": 3.59
+			}
+		},
+		{
+			"id": "biliran",
+			"name": "Biliran",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				124.45555,
+				11.64
+			],
+			"bbox": [
+				124.2941,
+				11.4627,
+				124.617,
+				11.8173
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						124.414,
+						11.6735
+					],
+					[
+						124.4781,
+						11.5821
+					],
+					[
+						124.5557,
+						11.5018
+					]
+				],
+				"aspect": 1.39
+			}
+		},
+		{
+			"id": "aklan",
+			"name": "Aklan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				122.2105,
+				11.6251
+			],
+			"bbox": [
+				121.8436,
+				11.312,
+				122.5774,
+				11.9382
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						122.1856,
+						11.809
+					],
+					[
+						122.2155,
+						11.5653
+					],
+					[
+						122.3885,
+						11.4511
+					]
+				],
+				"aspect": 1.54
+			}
+		},
+		{
+			"id": "eastern-samar",
+			"name": "Eastern Samar",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				125.48179999999999,
+				11.51875
+			],
+			"bbox": [
+				125.1254,
+				10.6879,
+				125.8382,
+				12.3496
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						125.3086,
+						12.1789
+					],
+					[
+						125.3252,
+						11.6818
+					],
+					[
+						125.4369,
+						11.1991
+					]
+				],
+				"aspect": 3.52
+			}
+		},
+		{
+			"id": "capiz",
+			"name": "Capiz",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				122.64875,
+				11.372
+			],
+			"bbox": [
+				122.1999,
+				11.1335,
+				123.0976,
+				11.6105
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						122.2514,
+						11.2438
+					],
+					[
+						122.5384,
+						11.3733
+					],
+					[
+						122.8473,
+						11.4267
+					]
+				],
+				"aspect": 2.18
+			}
+		},
+		{
+			"id": "antique",
+			"name": "Antique",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.83605,
+				11.26975
+			],
+			"bbox": [
+				121.3484,
+				10.4137,
+				122.3237,
+				12.1258
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						121.9475,
+						10.5005
+					],
+					[
+						122.2297,
+						10.9366
+					],
+					[
+						122.1151,
+						11.3845
+					]
+				],
+				"aspect": 5.53
+			}
+		},
+		{
+			"id": "iloilo",
+			"name": "Iloilo",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				122.6849,
+				11.033249999999999
+			],
+			"bbox": [
+				122.013,
+				10.4668,
+				123.3568,
+				11.5997
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						122.1766,
+						10.6882
+					],
+					[
+						122.6338,
+						11.047
+					],
+					[
+						123.1215,
+						11.3651
+					]
+				],
+				"aspect": 4.89
+			}
+		},
+		{
+			"id": "leyte",
+			"name": "Leyte",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				124.72980000000001,
+				10.8747
+			],
+			"bbox": [
+				124.2857,
+				10.1859,
+				125.1739,
+				11.5635
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						124.4917,
+						11.3461
+					],
+					[
+						124.9304,
+						11.0371
+					],
+					[
+						124.961,
+						10.5544
+					]
+				],
+				"aspect": 2.61
+			}
+		},
+		{
+			"id": "guimaras",
+			"name": "Guimaras",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				122.60130000000001,
+				10.57965
+			],
+			"bbox": [
+				122.4769,
+				10.4051,
+				122.7257,
+				10.7542
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						122.5468,
+						10.4595
+					],
+					[
+						122.627,
+						10.5741
+					],
+					[
+						122.6778,
+						10.7039
+					]
+				],
+				"aspect": 1.89
+			}
+		},
+		{
+			"id": "cebu",
+			"name": "Cebu",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				123.9303,
+				10.382850000000001
+			],
+			"bbox": [
+				123.2964,
+				9.4129,
+				124.5642,
+				11.3528
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						123.3507,
+						9.6089
+					],
+					[
+						123.7195,
+						10.2269
+					],
+					[
+						123.9982,
+						10.8851
+					]
+				],
+				"aspect": 8.11
+			}
+		},
+		{
+			"id": "southern-leyte",
+			"name": "Southern Leyte",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				125.02475,
+				10.256350000000001
+			],
+			"bbox": [
+				124.7539,
+				9.912,
+				125.2956,
+				10.6007
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "negros-occidental",
+			"name": "Negros Occidental",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				122.97415000000001,
+				10.223600000000001
+			],
+			"bbox": [
+				122.3801,
+				9.4442,
+				123.5682,
+				11.003
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						122.564,
+						9.6673
+					],
+					[
+						122.9705,
+						10.2319
+					],
+					[
+						123.3085,
+						10.8378
+					]
+				],
+				"aspect": 3.73
+			}
+		},
+		{
+			"id": "dinagat-islands",
+			"name": "Dinagat Islands",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				125.58465000000001,
+				10.16245
+			],
+			"bbox": [
+				125.4633,
+				9.8533,
+				125.706,
+				10.4716
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						125.6211,
+						10.3923
+					],
+					[
+						125.5302,
+						10.1825
+					],
+					[
+						125.6367,
+						9.9867
+					]
+				],
+				"aspect": 3.23
+			}
+		},
+		{
+			"id": "palawan",
+			"name": "Palawan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				119.00995,
+				10.07015
+			],
+			"bbox": [
+				116.9433,
+				7.8107,
+				121.0766,
+				12.3296
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						118.9568,
+						10.1205
+					],
+					[
+						119.3964,
+						10.2897
+					],
+					[
+						119.4995,
+						10.7627
+					]
+				],
+				"aspect": 2.82
+			}
+		},
+		{
+			"id": "bohol",
+			"name": "Bohol",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				124.17869999999999,
+				9.8758
+			],
+			"bbox": [
+				123.7419,
+				9.5451,
+				124.6155,
+				10.2065
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						123.915,
+						9.7636
+					],
+					[
+						124.2019,
+						9.8962
+					],
+					[
+						124.4888,
+						9.9106
+					]
+				],
+				"aspect": 1.36
+			}
+		},
+		{
+			"id": "negros-oriental",
+			"name": "Negros Oriental",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				122.9624,
+				9.739
+			],
+			"bbox": [
+				122.5889,
+				9.0384,
+				123.3359,
+				10.4396
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						123.0201,
+						9.1873
+					],
+					[
+						122.8574,
+						9.8061
+					],
+					[
+						123.2515,
+						10.3261
+					]
+				],
+				"aspect": 4.66
+			}
+		},
+		{
+			"id": "surigao-del-norte",
+			"name": "Surigao del Norte",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				125.77745,
+				9.6911
+			],
+			"bbox": [
+				125.391,
+				9.326,
+				126.1639,
+				10.0562
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						125.4371,
+						9.7228
+					],
+					[
+						125.574,
+						9.5306
+					],
+					[
+						125.7977,
+						9.4563
+					]
+				],
+				"aspect": 2.59
+			}
+		},
+		{
+			"id": "siquijor",
+			"name": "Siquijor",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				123.57695,
+				9.1978
+			],
+			"bbox": [
+				123.4519,
+				9.0947,
+				123.702,
+				9.3009
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						123.4852,
+						9.1832
+					],
+					[
+						123.5706,
+						9.1708
+					],
+					[
+						123.656,
+						9.195
+					]
+				],
+				"aspect": 1.37
+			}
+		},
+		{
+			"id": "camiguin",
+			"name": "Camiguin",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				124.72014999999999,
+				9.16965
+			],
+			"bbox": [
+				124.634,
+				9.0815,
+				124.8063,
+				9.2578
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						124.652,
+						9.1907
+					],
+					[
+						124.7182,
+						9.1902
+					],
+					[
+						124.7843,
+						9.1372
+					]
+				],
+				"aspect": 1
+			}
+		},
+		{
+			"id": "agusan-del-norte",
+			"name": "Agusan del Norte",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				125.4876,
+				9.0822
+			],
+			"bbox": [
+				125.2077,
+				8.6986,
+				125.7675,
+				9.4658
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						125.3858,
+						8.78
+					],
+					[
+						125.6693,
+						9.0166
+					],
+					[
+						125.6598,
+						9.3822
+					]
+				],
+				"aspect": 2.73
+			}
+		},
+		{
+			"id": "surigao-del-sur",
+			"name": "Surigao del Sur",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				126.0989,
+				8.7077
+			],
+			"bbox": [
+				125.7449,
+				7.9188,
+				126.4529,
+				9.4966
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						125.8704,
+						9.3047
+					],
+					[
+						126.1069,
+						9.0503
+					],
+					[
+						126.1437,
+						8.7307
+					]
+				],
+				"aspect": 1.97
+			}
+		},
+		{
+			"id": "misamis-oriental",
+			"name": "Misamis Oriental",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				124.75045,
+				8.6269
+			],
+			"bbox": [
+				124.2475,
+				8.1601,
+				125.2534,
+				9.0937
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						124.7891,
+						8.6433
+					],
+					[
+						124.9405,
+						8.8379
+					],
+					[
+						125.2463,
+						8.8005
+					]
+				],
+				"aspect": 2.02
+			}
+		},
+		{
+			"id": "agusan-del-sur",
+			"name": "Agusan del Sur",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				125.71705,
+				8.58045
+			],
+			"bbox": [
+				125.1711,
+				7.9309,
+				126.263,
+				9.23
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						125.3433,
+						8.4575
+					],
+					[
+						125.7156,
+						8.565
+					],
+					[
+						126.088,
+						8.3189
+					]
+				],
+				"aspect": 1.04
+			}
+		},
+		{
+			"id": "misamis-occidental",
+			"name": "Misamis Occidental",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				123.7114,
+				8.3416
+			],
+			"bbox": [
+				123.5538,
+				8.0131,
+				123.869,
+				8.6701
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						123.6476,
+						8.5853
+					],
+					[
+						123.7545,
+						8.3391
+					],
+					[
+						123.6787,
+						8.0824
+					]
+				],
+				"aspect": 1.84
+			}
+		},
+		{
+			"id": "lanao-del-norte",
+			"name": "Lanao del Norte",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				124.09440000000001,
+				8.0143
+			],
+			"bbox": [
+				123.6217,
+				7.6965,
+				124.5671,
+				8.3321
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						123.7778,
+						7.8334
+					],
+					[
+						124.0495,
+						8.1281
+					],
+					[
+						124.4375,
+						8.2397
+					]
+				],
+				"aspect": 3.55
+			}
+		},
+		{
+			"id": "bukidnon",
+			"name": "Bukidnon",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				124.96985000000001,
+				8.00695
+			],
+			"bbox": [
+				124.4989,
+				7.4046,
+				125.4408,
+				8.6093
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						124.6579,
+						8.0897
+					],
+					[
+						124.9896,
+						7.997
+					],
+					[
+						125.3213,
+						7.9845
+					]
+				],
+				"aspect": 0.61
+			}
+		},
+		{
+			"id": "zamboanga-del-norte",
+			"name": "Zamboanga del Norte",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				122.73814999999999,
+				7.933249999999999
+			],
+			"bbox": [
+				121.9097,
+				7.139,
+				123.5666,
+				8.7275
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "lanao-del-sur",
+			"name": "Lanao del Sur",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				124.33845,
+				7.78515
+			],
+			"bbox": [
+				123.8512,
+				7.412,
+				124.8257,
+				8.1583
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						124.0612,
+						7.7445
+					],
+					[
+						124.3543,
+						7.9169
+					],
+					[
+						124.6474,
+						7.8106
+					]
+				],
+				"aspect": 1.17
+			}
+		},
+		{
+			"id": "zamboanga-sibugay",
+			"name": "Zamboanga Sibugay",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				122.68315,
+				7.61845
+			],
+			"bbox": [
+				122.2594,
+				7.2843,
+				123.1069,
+				7.9526
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						122.3329,
+						7.7269
+					],
+					[
+						122.6655,
+						7.8906
+					],
+					[
+						123.0211,
+						7.7286
+					]
+				],
+				"aspect": 3.28
+			}
+		},
+		{
+			"id": "zamboanga-del-sur",
+			"name": "Zamboanga del Sur",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				122.78049999999999,
+				7.5799
+			],
+			"bbox": [
+				121.8975,
+				6.8893,
+				123.6635,
+				8.2705
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						123.1209,
+						7.8446
+					],
+					[
+						123.3242,
+						7.8402
+					],
+					[
+						123.5276,
+						8.0291
+					]
+				],
+				"aspect": 0.78
+			}
+		},
+		{
+			"id": "compostela-valley",
+			"name": "Compostela Valley",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				125.98185000000001,
+				7.537100000000001
+			],
+			"bbox": [
+				125.6583,
+				7.0742,
+				126.3054,
+				8
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						125.9246,
+						7.9068
+					],
+					[
+						126.1635,
+						7.6009
+					],
+					[
+						126.0687,
+						7.2069
+					]
+				],
+				"aspect": 1.65
+			}
+		},
+		{
+			"id": "davao-del-norte",
+			"name": "Davao del Norte",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				125.6243,
+				7.4488
+			],
+			"bbox": [
+				125.3094,
+				6.8944,
+				125.9392,
+				8.0032
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						125.4983,
+						7.9302
+					],
+					[
+						125.6796,
+						7.6708
+					],
+					[
+						125.7109,
+						7.3565
+					]
+				],
+				"aspect": 1.98
+			}
+		},
+		{
+			"id": "cotabato-city",
+			"name": "Cotabato City",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				124.23685,
+				7.216200000000001
+			],
+			"bbox": [
+				124.1713,
+				7.1597,
+				124.3024,
+				7.2727
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						124.198,
+						7.2375
+					],
+					[
+						124.2306,
+						7.2075
+					],
+					[
+						124.2645,
+						7.1791
+					]
+				],
+				"aspect": 1.91
+			}
+		},
+		{
+			"id": "cotabato",
+			"name": "Cotabato",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				124.8159,
+				7.1827000000000005
+			],
+			"bbox": [
+				124.3391,
+				6.7271,
+				125.2927,
+				7.6383
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						124.5489,
+						7.3338
+					],
+					[
+						124.8614,
+						7.0888
+					],
+					[
+						125.174,
+						7.1415
+					]
+				],
+				"aspect": 0.99
+			}
+		},
+		{
+			"id": "davao-oriental",
+			"name": "Davao Oriental",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				126.27459999999999,
+				7.1431000000000004
+			],
+			"bbox": [
+				125.9442,
+				6.2841,
+				126.605,
+				8.0021
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "maguindanao",
+			"name": "Maguindanao",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				124.4808,
+				7.12265
+			],
+			"bbox": [
+				123.9539,
+				6.607,
+				125.0077,
+				7.6383
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						124.0391,
+						7.0645
+					],
+					[
+						124.2841,
+						7.1093
+					],
+					[
+						124.5291,
+						6.9208
+					]
+				],
+				"aspect": 1.16
+			}
+		},
+		{
+			"id": "davao-del-sur",
+			"name": "Davao del Sur",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				125.36365,
+				6.9982500000000005
+			],
+			"bbox": [
+				125.0468,
+				6.4311,
+				125.6805,
+				7.5654
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						125.188,
+						6.5417
+					],
+					[
+						125.4287,
+						6.9731
+					],
+					[
+						125.4189,
+						7.4667
+					]
+				],
+				"aspect": 3.09
+			}
+		},
+		{
+			"id": "city-of-isabela",
+			"name": "City of Isabela",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.9838,
+				6.659549999999999
+			],
+			"bbox": [
+				121.9163,
+				6.564,
+				122.0513,
+				6.7551
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						121.9408,
+						6.6362
+					],
+					[
+						121.9838,
+						6.6341
+					],
+					[
+						122.0267,
+						6.6591
+					]
+				],
+				"aspect": 0.56
+			}
+		},
+		{
+			"id": "basilan",
+			"name": "Basilan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.95575,
+				6.5171
+			],
+			"bbox": [
+				121.5836,
+				6.2851,
+				122.3279,
+				6.7491
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						121.8485,
+						6.559
+					],
+					[
+						122.0293,
+						6.492
+					],
+					[
+						122.21,
+						6.5975
+					]
+				],
+				"aspect": 2.22
+			}
+		},
+		{
+			"id": "sultan-kudarat",
+			"name": "Sultan Kudarat",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				124.5609,
+				6.50145
+			],
+			"bbox": [
+				124.0163,
+				6.1148,
+				125.1055,
+				6.8881
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						124.1334,
+						6.4405
+					],
+					[
+						124.4523,
+						6.4679
+					],
+					[
+						124.6953,
+						6.7326
+					]
+				],
+				"aspect": 1.68
+			}
+		},
+		{
+			"id": "south-cotabato",
+			"name": "South Cotabato",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				124.8235,
+				6.3102
+			],
+			"bbox": [
+				124.3883,
+				5.9553,
+				125.2587,
+				6.6651
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						124.5267,
+						6.2652
+					],
+					[
+						124.8361,
+						6.3778
+					],
+					[
+						125.1454,
+						6.1954
+					]
+				],
+				"aspect": 1.24
+			}
+		},
+		{
+			"id": "sarangani",
+			"name": "Sarangani",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				124.9513,
+				6.046250000000001
+			],
+			"bbox": [
+				124.364,
+				5.5686,
+				125.5386,
+				6.5239
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						125.2875,
+						6.3953
+					],
+					[
+						125.4692,
+						6.0743
+					],
+					[
+						125.3294,
+						5.7283
+					]
+				],
+				"aspect": 2.58
+			}
+		},
+		{
+			"id": "davao-occidental",
+			"name": "Davao Occidental",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				125.51605,
+				5.99865
+			],
+			"bbox": [
+				125.317,
+				5.367,
+				125.7151,
+				6.6303
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						125.5133,
+						5.7208
+					],
+					[
+						125.6986,
+						6.0973
+					],
+					[
+						125.5132,
+						6.4902
+					]
+				],
+				"aspect": 4.24
+			}
+		},
+		{
+			"id": "sulu",
+			"name": "Sulu",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.0159,
+				5.95615
+			],
+			"bbox": [
+				120.0899,
+				5.4749,
+				121.9419,
+				6.4374
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						120.9076,
+						5.9561
+					],
+					[
+						121.036,
+						6.0146
+					],
+					[
+						121.1591,
+						5.9916
+					]
+				],
+				"aspect": 1.59
+			}
+		},
+		{
+			"id": "tawi-tawi",
+			"name": "Tawi-Tawi",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				119.46875,
+				5.8456
+			],
+			"bbox": [
+				118.427,
+				4.6421,
+				120.5105,
+				7.0491
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						119.8078,
+						5.0741
+					],
+					[
+						120.0015,
+						5.2006
+					],
+					[
+						120.2266,
+						5.2532
+					]
+				],
+				"aspect": 4.64
+			}
+		}
+	],
+	"tourOrder": [
+		"batanes",
+		"cagayan",
+		"ilocos-norte",
+		"apayao",
+		"abra",
+		"kalinga",
+		"ilocos-sur",
+		"mountain-province",
+		"isabela",
+		"ifugao",
+		"la-union",
+		"benguet",
+		"quirino",
+		"nueva-vizcaya",
+		"pangasinan",
+		"aurora",
+		"nueva-ecija",
+		"tarlac",
+		"zambales",
+		"pampanga",
+		"bulacan",
+		"ncr-third-district",
+		"bataan",
+		"ncr-second-district",
+		"ncr-city-of-manila-first-district",
+		"rizal",
+		"ncr-fourth-district",
+		"laguna",
+		"cavite",
+		"quezon",
+		"camarines-norte",
+		"batangas",
+		"catanduanes",
+		"camarines-sur",
+		"marinduque",
+		"albay",
+		"occidental-mindoro",
+		"oriental-mindoro",
+		"sorsogon",
+		"romblon",
+		"masbate",
+		"northern-samar",
+		"samar",
+		"biliran",
+		"aklan",
+		"eastern-samar",
+		"capiz",
+		"antique",
+		"iloilo",
+		"leyte",
+		"guimaras",
+		"cebu",
+		"southern-leyte",
+		"negros-occidental",
+		"dinagat-islands",
+		"palawan",
+		"bohol",
+		"negros-oriental",
+		"surigao-del-norte",
+		"siquijor",
+		"camiguin",
+		"agusan-del-norte",
+		"surigao-del-sur",
+		"misamis-oriental",
+		"agusan-del-sur",
+		"misamis-occidental",
+		"lanao-del-norte",
+		"bukidnon",
+		"zamboanga-del-norte",
+		"lanao-del-sur",
+		"zamboanga-sibugay",
+		"zamboanga-del-sur",
+		"compostela-valley",
+		"davao-del-norte",
+		"cotabato-city",
+		"cotabato",
+		"davao-oriental",
+		"maguindanao",
+		"davao-del-sur",
+		"city-of-isabela",
+		"basilan",
+		"sultan-kudarat",
+		"south-cotabato",
+		"sarangani",
+		"davao-occidental",
+		"sulu",
+		"tawi-tawi"
+	]
+}

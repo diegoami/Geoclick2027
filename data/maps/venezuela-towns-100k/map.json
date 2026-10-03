@@ -1,0 +1,600 @@
+{
+	"id": "venezuela-towns-100k",
+	"name": "Venezuela — Towns",
+	"country": "Venezuela",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "punto-fijo",
+			"name": "Punto Fijo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-70.2100145,
+				11.7199939
+			],
+			"bbox": [
+				-70.2100145,
+				11.7199939,
+				-70.2100145,
+				11.7199939
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "coro",
+			"name": "Coro",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-69.6799952,
+				11.4200122
+			],
+			"bbox": [
+				-69.6799952,
+				11.4200122,
+				-69.6799952,
+				11.4200122
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "porlamar",
+			"name": "Porlamar",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-63.8499893,
+				10.9603762
+			],
+			"bbox": [
+				-63.8499893,
+				10.9603762,
+				-63.8499893,
+				10.9603762
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "maracaibo",
+			"name": "Maracaibo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-71.6619235,
+				10.7319227
+			],
+			"bbox": [
+				-71.6619235,
+				10.7319227,
+				-71.6619235,
+				10.7319227
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "carupano",
+			"name": "Carúpano",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-63.2300013,
+				10.6700063
+			],
+			"bbox": [
+				-63.2300013,
+				10.6700063,
+				-63.2300013,
+				10.6700063
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "maiquetia",
+			"name": "Maiquetía",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-66.9699797,
+				10.6003982
+			],
+			"bbox": [
+				-66.9699797,
+				10.6003982,
+				-66.9699797,
+				10.6003982
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "caracas",
+			"name": "Caracas",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-66.9189831,
+				10.5029444
+			],
+			"bbox": [
+				-66.9189831,
+				10.5029444,
+				-66.9189831,
+				10.5029444
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "puerto-cabello",
+			"name": "Puerto Cabello",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-68.00652938505468,
+				10.459714496602153
+			],
+			"bbox": [
+				-68.00652938505468,
+				10.459714496602153,
+				-68.00652938505468,
+				10.459714496602153
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "cumana",
+			"name": "Cumaná",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-64.1800208,
+				10.4499939
+			],
+			"bbox": [
+				-64.1800208,
+				10.4499939,
+				-64.1800208,
+				10.4499939
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "cabimas",
+			"name": "Cabimas",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-71.4499905,
+				10.4299951
+			],
+			"bbox": [
+				-71.4499905,
+				10.4299951,
+				-71.4499905,
+				10.4299951
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "los-teques",
+			"name": "Los Teques",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-67.0200283,
+				10.4199699
+			],
+			"bbox": [
+				-67.0200283,
+				10.4199699,
+				-67.0200283,
+				10.4199699
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "maracay",
+			"name": "Maracay",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-67.597753,
+				10.2488256
+			],
+			"bbox": [
+				-67.597753,
+				10.2488256,
+				-67.597753,
+				10.2488256
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "valencia",
+			"name": "Valencia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-67.9819673,
+				10.2319274
+			],
+			"bbox": [
+				-67.9819673,
+				10.2319274,
+				-67.9819673,
+				10.2319274
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "carora",
+			"name": "Carora",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-70.0799966,
+				10.1899839
+			],
+			"bbox": [
+				-70.0799966,
+				10.1899839,
+				-70.0799966,
+				10.1899839
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "puerto-la-cruz",
+			"name": "Puerto la Cruz",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-64.6800161,
+				10.1699593
+			],
+			"bbox": [
+				-64.6800161,
+				10.1699593,
+				-64.6800161,
+				10.1699593
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "barcelona",
+			"name": "Barcelona",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-64.7200137,
+				10.1303752
+			],
+			"bbox": [
+				-64.7200137,
+				10.1303752,
+				-64.7200137,
+				10.1303752
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "ocumare-del-tuy",
+			"name": "Ocumare del Tuy",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-66.7799913,
+				10.1199882
+			],
+			"bbox": [
+				-66.7799913,
+				10.1199882,
+				-66.7799913,
+				10.1199882
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "barquisimeto",
+			"name": "Barquisimeto",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-69.3019125,
+				10.0519384
+			],
+			"bbox": [
+				-69.3019125,
+				10.0519384,
+				-69.3019125,
+				10.0519384
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "maturin",
+			"name": "Maturín",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-63.1700308,
+				9.7499591
+			],
+			"bbox": [
+				-63.1700308,
+				9.7499591,
+				-63.1700308,
+				9.7499591
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "acarigua",
+			"name": "Acarigua",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-69.2000245,
+				9.5803829
+			],
+			"bbox": [
+				-69.2000245,
+				9.5803829,
+				-69.2000245,
+				9.5803829
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "anaco",
+			"name": "Anaco",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-64.4600037,
+				9.4400039
+			],
+			"bbox": [
+				-64.4600037,
+				9.4400039,
+				-64.4600037,
+				9.4400039
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "valera",
+			"name": "Valera",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-70.6200153,
+				9.3199595
+			],
+			"bbox": [
+				-70.6200153,
+				9.3199595,
+				-70.6200153,
+				9.3199595
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "guanare",
+			"name": "Guanare",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-69.7500167,
+				9.049976
+			],
+			"bbox": [
+				-69.7500167,
+				9.049976,
+				-69.7500167,
+				9.049976
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "calabozo",
+			"name": "Calabozo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-67.4399768,
+				8.9303967
+			],
+			"bbox": [
+				-67.4399768,
+				8.9303967,
+				-67.4399768,
+				8.9303967
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "el-tigre",
+			"name": "El Tigre",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-64.2600159,
+				8.8903475
+			],
+			"bbox": [
+				-64.2600159,
+				8.8903475,
+				-64.2600159,
+				8.8903475
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "barinas",
+			"name": "Barinas",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-70.250012,
+				8.5999776
+			],
+			"bbox": [
+				-70.250012,
+				8.5999776,
+				-70.250012,
+				8.5999776
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "merida",
+			"name": "Mérida",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-71.18252189086121,
+				8.569520453572299
+			],
+			"bbox": [
+				-71.18252189086121,
+				8.569520453572299,
+				-71.18252189086121,
+				8.569520453572299
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "ciudad-guayana",
+			"name": "Ciudad Guayana",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-62.6199868,
+				8.3700175
+			],
+			"bbox": [
+				-62.6199868,
+				8.3700175,
+				-62.6199868,
+				8.3700175
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "ciudad-bolivar",
+			"name": "Ciudad Bolívar",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-63.6000045,
+				8.0999823
+			],
+			"bbox": [
+				-63.6000045,
+				8.0999823,
+				-63.6000045,
+				8.0999823
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "san-fernando-de-apure",
+			"name": "San Fernando de Apure",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-67.4699492,
+				7.8999945
+			],
+			"bbox": [
+				-67.4699492,
+				7.8999945,
+				-67.4699492,
+				7.8999945
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "san-cristobal",
+			"name": "San Cristóbal",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-72.2499675,
+				7.7700025
+			],
+			"bbox": [
+				-72.2499675,
+				7.7700025,
+				-72.2499675,
+				7.7700025
+			],
+			"colorIndex": 2
+		}
+	],
+	"tourOrder": [
+		"punto-fijo",
+		"coro",
+		"porlamar",
+		"maracaibo",
+		"carupano",
+		"maiquetia",
+		"caracas",
+		"puerto-cabello",
+		"cumana",
+		"cabimas",
+		"los-teques",
+		"maracay",
+		"valencia",
+		"carora",
+		"puerto-la-cruz",
+		"barcelona",
+		"ocumare-del-tuy",
+		"barquisimeto",
+		"maturin",
+		"acarigua",
+		"anaco",
+		"valera",
+		"guanare",
+		"calabozo",
+		"el-tigre",
+		"barinas",
+		"merida",
+		"ciudad-guayana",
+		"ciudad-bolivar",
+		"san-fernando-de-apure",
+		"san-cristobal"
+	]
+}

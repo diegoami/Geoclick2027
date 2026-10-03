@@ -1,0 +1,130 @@
+{
+	"subotica": {
+		"kind": "city",
+		"population": 100000,
+		"populationRank": 6,
+		"region": "Severno-Backi",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"zrenjanin": {
+		"kind": "city",
+		"population": 64053,
+		"populationRank": 7,
+		"region": "Srednje-Banatski",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"novi-sad": {
+		"kind": "city",
+		"population": 225457,
+		"populationRank": 3,
+		"region": "Južno-Backi",
+		"coastal": false,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"\"New plantation\".",
+				"The EXIT music festival has been held in its Petrovaradin fortress since 2001."
+			],
+			"it": [
+				"\"Nuova piantagione\".",
+				"Il festival musicale EXIT si tiene dal 2001 nella sua fortezza di Petrovaradin."
+			],
+			"de": [
+				"„Neue Pflanzung“.",
+				"Das Musikfestival EXIT findet seit 2001 in ihrer Festung Petrovaradin statt."
+			]
+		}
+	},
+	"belgrade": {
+		"kind": "city",
+		"population": 1099000,
+		"populationRank": 1,
+		"population1950": 411000,
+		"region": "Grad Beograd",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Beograd, \"white city\".",
+				"It was the capital of Yugoslavia for most of the 20th century.",
+				"Its Kalemegdan fortress looks down on the meeting of the Sava and the Danube."
+			],
+			"it": [
+				"Beograd, \"città bianca\".",
+				"Fu la capitale della Iugoslavia per gran parte del Novecento.",
+				"La sua fortezza del Kalemegdan domina la confluenza tra la Sava e il Danubio."
+			],
+			"de": [
+				"Beograd, „weiße Stadt“.",
+				"Sie war den größten Teil des 20. Jahrhunderts die Hauptstadt Jugoslawiens.",
+				"Ihre Festung Kalemegdan blickt auf den Zusammenfluss von Save und Donau hinab."
+			]
+		}
+	},
+	"kragujevac": {
+		"kind": "city",
+		"population": 171197,
+		"populationRank": 4,
+		"region": "Šumadijski",
+		"coastal": false,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"The first capital of modern Serbia, from 1818 to 1841.",
+				"The Zastava works here made the Yugo car."
+			],
+			"it": [
+				"La prima capitale della Serbia moderna, dal 1818 al 1841.",
+				"Qui le officine Zastava producevano l’automobile Yugo."
+			],
+			"de": [
+				"Die erste Hauptstadt des modernen Serbiens, von 1818 bis 1841.",
+				"Die Zastava-Werke hier bauten das Auto Yugo."
+			]
+		}
+	},
+	"cacak": {
+		"kind": "city",
+		"population": 170000,
+		"populationRank": 5,
+		"region": "Moravicki",
+		"coastal": false,
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"A town on the Western Morava, in the region known for the Guča trumpet festival."
+			],
+			"it": [
+				"Una città sulla Morava occidentale, nella regione famosa per il festival delle trombe di Guča."
+			],
+			"de": [
+				"Eine Stadt an der Westlichen Morava, in der Region, die für das Trompetenfestival von Guča bekannt ist."
+			]
+		}
+	},
+	"nis": {
+		"kind": "city",
+		"population": 250000,
+		"populationRank": 2,
+		"region": "Nišavski",
+		"coastal": false,
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"The emperor Constantine the Great was born here.",
+				"Its Skull Tower was built by the Ottomans in 1809 from the skulls of Serbian rebels."
+			],
+			"it": [
+				"Qui nacque l’imperatore Costantino il Grande.",
+				"La sua Torre dei teschi fu costruita dagli Ottomani nel 1809 con i crani di ribelli serbi."
+			],
+			"de": [
+				"Kaiser Konstantin der Große wurde hier geboren.",
+				"Ihr Schädelturm wurde 1809 von den Osmanen aus den Schädeln serbischer Aufständischer gebaut."
+			]
+		}
+	}
+}

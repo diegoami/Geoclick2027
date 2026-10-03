@@ -1,0 +1,172 @@
+{
+	"petropavl": {
+		"kind": "city",
+		"population": 228238,
+		"populationRank": 12,
+		"region": "North Kazakhstan",
+		"coastal": false,
+		"position": "north"
+	},
+	"kokshetau": {
+		"kind": "city",
+		"population": 128873,
+		"populationRank": 17,
+		"region": "Aqmola",
+		"coastal": false,
+		"position": "north"
+	},
+	"kostanay": {
+		"kind": "city",
+		"population": 236901,
+		"populationRank": 11,
+		"region": "Qostanay",
+		"coastal": false,
+		"position": "north"
+	},
+	"rudny": {
+		"kind": "city",
+		"population": 124000,
+		"populationRank": 19,
+		"region": "Qostanay",
+		"coastal": false,
+		"position": "north"
+	},
+	"pavlodar": {
+		"kind": "city",
+		"population": 329002,
+		"populationRank": 6,
+		"coastal": false,
+		"position": "north-east"
+	},
+	"ekibastuz": {
+		"kind": "city",
+		"population": 127868,
+		"populationRank": 18,
+		"region": "Pavlodar",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"oral": {
+		"kind": "city",
+		"population": 209788,
+		"populationRank": 13,
+		"region": "West Kazakhstan",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"astana": {
+		"kind": "city",
+		"population": 345604,
+		"populationRank": 5,
+		"region": "Aqmola",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"\"Capital\" in Kazakh; it replaced Almaty in 1997 and has changed its name four times since the Soviet era.",
+				"Its Bayterek tower is meant to be a tree holding a golden egg.",
+				"It is one of the coldest capitals in the world."
+			],
+			"it": [
+				"\"Capitale\" in kazako; prese il posto di Almaty nel 1997 e dall’epoca sovietica ha cambiato nome quattro volte.",
+				"La sua torre Bayterek vuole essere un albero che regge un uovo d’oro.",
+				"È una delle capitali più fredde del mondo."
+			]
+		}
+	},
+	"semey": {
+		"kind": "city",
+		"population": 311353,
+		"populationRank": 8,
+		"region": "East Kazakhstan",
+		"coastal": false,
+		"position": "east"
+	},
+	"aktobe": {
+		"kind": "city",
+		"population": 262457,
+		"populationRank": 10,
+		"region": "Aqtöbe",
+		"coastal": false,
+		"position": "west"
+	},
+	"temirtau": {
+		"kind": "city",
+		"population": 170600,
+		"populationRank": 15,
+		"region": "Qaraghandy",
+		"coastal": false,
+		"position": "east"
+	},
+	"oskemen": {
+		"kind": "city",
+		"population": 319067,
+		"populationRank": 7,
+		"region": "East Kazakhstan",
+		"coastal": false,
+		"position": "east"
+	},
+	"karaganda": {
+		"kind": "city",
+		"population": 451800,
+		"populationRank": 3,
+		"region": "Qaraghandy",
+		"coastal": false,
+		"position": "east"
+	},
+	"zhezkazgan": {
+		"kind": "city",
+		"population": 104357,
+		"populationRank": 20,
+		"region": "Qaraghandy",
+		"coastal": false,
+		"position": "centre"
+	},
+	"atyrau": {
+		"kind": "city",
+		"population": 182753,
+		"populationRank": 14,
+		"coastal": false,
+		"position": "west"
+	},
+	"qyzylorda": {
+		"kind": "city",
+		"population": 300000,
+		"populationRank": 9,
+		"coastal": false,
+		"position": "south"
+	},
+	"aktau": {
+		"kind": "city",
+		"population": 147443,
+		"populationRank": 16,
+		"region": "Mangghystau",
+		"coastal": true,
+		"position": "south-west"
+	},
+	"almaty": {
+		"kind": "city",
+		"population": 1209000,
+		"populationRank": 1,
+		"population1950": 354000,
+		"coastal": false,
+		"position": "south-east"
+	},
+	"taraz": {
+		"kind": "city",
+		"population": 358153,
+		"populationRank": 4,
+		"region": "Zhambyl",
+		"coastal": false,
+		"position": "south"
+	},
+	"shymkent": {
+		"kind": "city",
+		"population": 465392,
+		"populationRank": 2,
+		"region": "South Kazakhstan",
+		"coastal": false,
+		"position": "south"
+	}
+}

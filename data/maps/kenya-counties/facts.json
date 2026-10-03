@@ -1,0 +1,573 @@
+{
+	"mandera": {
+		"kind": "region",
+		"borders": [
+			"Wajir"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"turkana": {
+		"kind": "region",
+		"borders": [
+			"Baringo",
+			"Marsabit",
+			"Samburu",
+			"West Pokot"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"marsabit": {
+		"kind": "region",
+		"borders": [
+			"Isiolo",
+			"Samburu",
+			"Turkana",
+			"Wajir"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"wajir": {
+		"kind": "region",
+		"borders": [
+			"Garissa",
+			"Isiolo",
+			"Mandera",
+			"Marsabit"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"west-pokot": {
+		"kind": "region",
+		"borders": [
+			"Baringo",
+			"Elgeyo-Marakwet",
+			"Trans Nzoia",
+			"Turkana"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"samburu": {
+		"kind": "region",
+		"borders": [
+			"Baringo",
+			"Isiolo",
+			"Laikipia",
+			"Marsabit",
+			"Turkana"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"trans-nzoia": {
+		"kind": "region",
+		"borders": [
+			"Bungoma",
+			"Elgeyo-Marakwet",
+			"Kakamega",
+			"Uasin Gishu",
+			"West Pokot"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"isiolo": {
+		"kind": "region",
+		"borders": [
+			"Garissa",
+			"Kitui",
+			"Laikipia",
+			"Marsabit",
+			"Meru",
+			"Samburu",
+			"Tana River",
+			"Wajir"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"bungoma": {
+		"kind": "region",
+		"borders": [
+			"Busia",
+			"Kakamega",
+			"Trans Nzoia"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"elgeyo-marakwet": {
+		"kind": "region",
+		"borders": [
+			"Baringo",
+			"Trans Nzoia",
+			"Uasin Gishu",
+			"West Pokot"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"baringo": {
+		"kind": "region",
+		"borders": [
+			"Elgeyo-Marakwet",
+			"Kericho",
+			"Laikipia",
+			"Nakuru",
+			"Samburu",
+			"Turkana",
+			"Uasin Gishu",
+			"West Pokot"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"kakamega": {
+		"kind": "region",
+		"borders": [
+			"Bungoma",
+			"Busia",
+			"Nandi",
+			"Siaya",
+			"Trans Nzoia",
+			"Uasin Gishu",
+			"Vihiga"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"uasin-gishu": {
+		"kind": "region",
+		"borders": [
+			"Baringo",
+			"Elgeyo-Marakwet",
+			"Kakamega",
+			"Kericho",
+			"Nandi",
+			"Trans Nzoia"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"busia": {
+		"kind": "region",
+		"borders": [
+			"Bungoma",
+			"Kakamega",
+			"Siaya"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"laikipia": {
+		"kind": "region",
+		"borders": [
+			"Baringo",
+			"Isiolo",
+			"Meru",
+			"Nakuru",
+			"Nyandarua",
+			"Nyeri",
+			"Samburu"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"meru": {
+		"kind": "region",
+		"borders": [
+			"Embu",
+			"Isiolo",
+			"Kirinyaga",
+			"Kitui",
+			"Laikipia",
+			"Nyeri",
+			"Tharaka"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"nandi": {
+		"kind": "region",
+		"borders": [
+			"Kakamega",
+			"Kericho",
+			"Kisumu",
+			"Uasin Gishu",
+			"Vihiga"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"vihiga": {
+		"kind": "region",
+		"borders": [
+			"Kakamega",
+			"Kisumu",
+			"Nandi",
+			"Siaya"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"siaya": {
+		"kind": "region",
+		"borders": [
+			"Busia",
+			"Homa Bay",
+			"Kakamega",
+			"Kisumu",
+			"Vihiga"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"tharaka": {
+		"kind": "region",
+		"borders": [
+			"Embu",
+			"Kirinyaga",
+			"Kitui",
+			"Meru",
+			"Nyeri"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"kisumu": {
+		"kind": "region",
+		"borders": [
+			"Homa Bay",
+			"Kericho",
+			"Nandi",
+			"Siaya",
+			"Vihiga"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"kericho": {
+		"kind": "region",
+		"borders": [
+			"Baringo",
+			"Bomet",
+			"Homa Bay",
+			"Kisumu",
+			"Nakuru",
+			"Nandi",
+			"Nyamira",
+			"Uasin Gishu"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"nyeri": {
+		"kind": "region",
+		"borders": [
+			"Embu",
+			"Kirinyaga",
+			"Laikipia",
+			"Meru",
+			"Murang'a",
+			"Nyandarua",
+			"Tharaka"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"nyandarua": {
+		"kind": "region",
+		"borders": [
+			"Kiambu",
+			"Laikipia",
+			"Murang'a",
+			"Nakuru",
+			"Nyeri"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"nakuru": {
+		"kind": "region",
+		"borders": [
+			"Baringo",
+			"Bomet",
+			"Kajiado",
+			"Kericho",
+			"Kiambu",
+			"Laikipia",
+			"Narok",
+			"Nyandarua"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"kirinyaga": {
+		"kind": "region",
+		"borders": [
+			"Embu",
+			"Meru",
+			"Murang'a",
+			"Nyeri",
+			"Tharaka"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"garissa": {
+		"kind": "region",
+		"borders": [
+			"Isiolo",
+			"Lamu",
+			"Tana River",
+			"Wajir"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"embu": {
+		"kind": "region",
+		"borders": [
+			"Kirinyaga",
+			"Kitui",
+			"Machakos",
+			"Meru",
+			"Murang'a",
+			"Nyeri",
+			"Tharaka"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"homa-bay": {
+		"kind": "region",
+		"borders": [
+			"Kericho",
+			"Kisii",
+			"Kisumu",
+			"Migori",
+			"Nyamira",
+			"Siaya"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"nyamira": {
+		"kind": "region",
+		"borders": [
+			"Bomet",
+			"Homa Bay",
+			"Kericho",
+			"Kisii",
+			"Narok"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"bomet": {
+		"kind": "region",
+		"borders": [
+			"Kericho",
+			"Kisii",
+			"Nakuru",
+			"Narok",
+			"Nyamira"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"kisii": {
+		"kind": "region",
+		"borders": [
+			"Bomet",
+			"Homa Bay",
+			"Migori",
+			"Narok",
+			"Nyamira"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"murang-a": {
+		"kind": "region",
+		"borders": [
+			"Embu",
+			"Kiambu",
+			"Kirinyaga",
+			"Machakos",
+			"Nyandarua",
+			"Nyeri"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"migori": {
+		"kind": "region",
+		"borders": [
+			"Homa Bay",
+			"Kisii",
+			"Narok"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"kiambu": {
+		"kind": "region",
+		"borders": [
+			"Kajiado",
+			"Machakos",
+			"Murang'a",
+			"Nairobi",
+			"Nakuru",
+			"Nyandarua"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"machakos": {
+		"kind": "region",
+		"borders": [
+			"Embu",
+			"Kajiado",
+			"Kiambu",
+			"Kitui",
+			"Makueni",
+			"Murang'a",
+			"Nairobi"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"narok": {
+		"kind": "region",
+		"borders": [
+			"Bomet",
+			"Kajiado",
+			"Kisii",
+			"Migori",
+			"Nakuru",
+			"Nyamira"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"nairobi": {
+		"kind": "region",
+		"borders": [
+			"Kajiado",
+			"Kiambu",
+			"Machakos"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"tana-river": {
+		"kind": "region",
+		"borders": [
+			"Garissa",
+			"Isiolo",
+			"Kilifi",
+			"Kitui",
+			"Lamu",
+			"Taita Taveta"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"kitui": {
+		"kind": "region",
+		"borders": [
+			"Embu",
+			"Isiolo",
+			"Machakos",
+			"Makueni",
+			"Meru",
+			"Taita Taveta",
+			"Tana River",
+			"Tharaka"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"lamu": {
+		"kind": "region",
+		"borders": [
+			"Garissa",
+			"Tana River"
+		],
+		"coastal": true,
+		"position": "south-east"
+	},
+	"kajiado": {
+		"kind": "region",
+		"borders": [
+			"Kiambu",
+			"Machakos",
+			"Makueni",
+			"Nairobi",
+			"Nakuru",
+			"Narok",
+			"Taita Taveta"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"makueni": {
+		"kind": "region",
+		"borders": [
+			"Kajiado",
+			"Kitui",
+			"Machakos",
+			"Taita Taveta"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"kilifi": {
+		"kind": "region",
+		"borders": [
+			"Kwale",
+			"Mombasa",
+			"Taita Taveta",
+			"Tana River"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"taita-taveta": {
+		"kind": "region",
+		"borders": [
+			"Kajiado",
+			"Kilifi",
+			"Kitui",
+			"Kwale",
+			"Makueni",
+			"Tana River"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"mombasa": {
+		"kind": "region",
+		"borders": [
+			"Kilifi",
+			"Kwale"
+		],
+		"coastal": true,
+		"position": "south-east"
+	},
+	"kwale": {
+		"kind": "region",
+		"borders": [
+			"Kilifi",
+			"Mombasa",
+			"Taita Taveta"
+		],
+		"coastal": false,
+		"position": "south"
+	}
+}

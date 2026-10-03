@@ -1,0 +1,191 @@
+{
+	"id": "denmark-regions",
+	"name": "Denmark — Regions",
+	"country": "Denmark",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "nordjylland",
+			"name": "Nordjylland",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.70635,
+				57.13805
+			],
+			"bbox": [
+				8.2704,
+				56.5591,
+				11.1423,
+				57.717
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						9.4817,
+						56.7334
+					],
+					[
+						10.0666,
+						56.9836
+					],
+					[
+						10.2895,
+						57.5001
+					]
+				],
+				"aspect": 1.62
+			}
+		},
+		{
+			"id": "midtjylland",
+			"name": "Midtjylland",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.5353,
+				56.238749999999996
+			],
+			"bbox": [
+				8.1065,
+				55.6745,
+				10.9641,
+				56.803
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						8.3701,
+						56.2666
+					],
+					[
+						9.37,
+						56.1688
+					],
+					[
+						10.3433,
+						56.2991
+					]
+				],
+				"aspect": 1.36
+			}
+		},
+		{
+			"id": "hovedstaden",
+			"name": "Hovedstaden",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.5029,
+				55.56015
+			],
+			"bbox": [
+				11.8544,
+				54.9916,
+				15.1514,
+				56.1287
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						12.2501,
+						56.0707
+					],
+					[
+						12.3087,
+						55.8646
+					],
+					[
+						12.3991,
+						55.6611
+					]
+				],
+				"aspect": 1.54
+			}
+		},
+		{
+			"id": "syddanmark",
+			"name": "Syddanmark",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.474499999999999,
+				55.34155
+			],
+			"bbox": [
+				8.094,
+				54.7448,
+				10.855,
+				55.9383
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						8.5033,
+						55.4945
+					],
+					[
+						8.9991,
+						55.2937
+					],
+					[
+						9.4949,
+						55.3634
+					]
+				],
+				"aspect": 0.58
+			}
+		},
+		{
+			"id": "sj-lland",
+			"name": "Sjælland",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.76175,
+				55.2859
+			],
+			"bbox": [
+				11.0188,
+				54.6284,
+				12.5047,
+				55.9434
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						11.4594,
+						55.7583
+					],
+					[
+						11.6825,
+						55.4831
+					],
+					[
+						11.9888,
+						55.2236
+					]
+				],
+				"aspect": 1.11
+			}
+		}
+	],
+	"tourOrder": [
+		"nordjylland",
+		"midtjylland",
+		"hovedstaden",
+		"syddanmark",
+		"sj-lland"
+	]
+}

@@ -1,0 +1,573 @@
+{
+	"id": "philippines-regions",
+	"name": "Philippines — Regions",
+	"country": "Philippines",
+	"attribution": "NAMRIA, PSA, OCHA Philippines, CC BY 3.0 IGO (via geoBoundaries); Natural Earth (public domain), https://www.naturalearthdata.com",
+	"boundarySource": "data/source/geoboundaries/PHL-ADM1.geojson",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "cagayan-valley",
+			"name": "Cagayan Valley",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.64735,
+				18.301650000000002
+			],
+			"bbox": [
+				120.769,
+				15.7671,
+				122.5257,
+				20.8362
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						121.4918,
+						16.1971
+					],
+					[
+						122.1937,
+						17.0602
+					],
+					[
+						121.9354,
+						18.0989
+					]
+				],
+				"aspect": 2.35
+			}
+		},
+		{
+			"id": "cordillera",
+			"name": "Cordillera",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.04589999999999,
+				17.36205
+			],
+			"bbox": [
+				120.4446,
+				16.1803,
+				121.6472,
+				18.5438
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						120.7573,
+						16.4129
+					],
+					[
+						121.2319,
+						17.3055
+					],
+					[
+						121.127,
+						18.2956
+					]
+				],
+				"aspect": 2.95
+			}
+		},
+		{
+			"id": "ilocos-region",
+			"name": "Ilocos Region",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				120.3632,
+				17.13235
+			],
+			"bbox": [
+				119.7499,
+				15.6178,
+				120.9765,
+				18.6469
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						120.2964,
+						15.7693
+					],
+					[
+						120.5054,
+						16.4647
+					],
+					[
+						120.569,
+						17.1822
+					]
+				],
+				"aspect": 6.05
+			}
+		},
+		{
+			"id": "central-luzon",
+			"name": "Central Luzon",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.05305,
+				15.46275
+			],
+			"bbox": [
+				119.8719,
+				14.4162,
+				122.2342,
+				16.5093
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						120.204,
+						14.9887
+					],
+					[
+						120.7299,
+						15.285
+					],
+					[
+						121.219,
+						15.63
+					]
+				],
+				"aspect": 1.12
+			}
+		},
+		{
+			"id": "metro-manila",
+			"name": "Metro Manila",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.02074999999999,
+				14.5693
+			],
+			"bbox": [
+				120.9065,
+				14.3539,
+				121.135,
+				14.7847
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						121.0212,
+						14.4369
+					],
+					[
+						121.031,
+						14.5899
+					],
+					[
+						121.0465,
+						14.7425
+					]
+				],
+				"aspect": 2.48
+			}
+		},
+		{
+			"id": "calabarzon",
+			"name": "CALABARZON",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.67805,
+				14.190750000000001
+			],
+			"bbox": [
+				120.5636,
+				13.1646,
+				122.7925,
+				15.2169
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "bicol-region",
+			"name": "Bicol Region",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				123.3599,
+				13.03245
+			],
+			"bbox": [
+				122.2986,
+				11.7207,
+				124.4212,
+				14.3442
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						122.5439,
+						14.2081
+					],
+					[
+						123.2765,
+						13.762
+					],
+					[
+						123.7084,
+						13.0322
+					]
+				],
+				"aspect": 4.53
+			}
+		},
+		{
+			"id": "eastern-visayas",
+			"name": "Eastern Visayas",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				124.9204,
+				11.304200000000002
+			],
+			"bbox": [
+				124.0026,
+				9.912,
+				125.8382,
+				12.6964
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						124.6756,
+						12.4344
+					],
+					[
+						125.3014,
+						12.0151
+					],
+					[
+						125.3606,
+						11.2512
+					]
+				],
+				"aspect": 2.3
+			}
+		},
+		{
+			"id": "mimaropa",
+			"name": "MIMAROPA",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				119.82079999999999,
+				10.8549
+			],
+			"bbox": [
+				116.9433,
+				7.8107,
+				122.6983,
+				13.8991
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						118.9525,
+						10.1159
+					],
+					[
+						119.3916,
+						10.2775
+					],
+					[
+						119.4618,
+						10.7728
+					]
+				],
+				"aspect": 3.08
+			}
+		},
+		{
+			"id": "western-visayas",
+			"name": "Western Visayas",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				122.45830000000001,
+				10.785
+			],
+			"bbox": [
+				121.3484,
+				9.4442,
+				123.5682,
+				12.1258
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						122.0603,
+						11.0582
+					],
+					[
+						122.5418,
+						11.2571
+					],
+					[
+						123.0232,
+						11.2644
+					]
+				],
+				"aspect": 1.15
+			}
+		},
+		{
+			"id": "central-visayas",
+			"name": "Central Visayas",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				123.6022,
+				10.195599999999999
+			],
+			"bbox": [
+				122.5889,
+				9.0384,
+				124.6155,
+				11.3528
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						123.0189,
+						9.1901
+					],
+					[
+						122.8572,
+						9.8087
+					],
+					[
+						123.2529,
+						10.3293
+					]
+				],
+				"aspect": 4.45
+			}
+		},
+		{
+			"id": "caraga",
+			"name": "Caraga",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				125.812,
+				9.1952
+			],
+			"bbox": [
+				125.1711,
+				7.9188,
+				126.4529,
+				10.4716
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						125.7515,
+						9.4281
+					],
+					[
+						125.6479,
+						8.7264
+					],
+					[
+						125.9444,
+						8.1083
+					]
+				],
+				"aspect": 1.44
+			}
+		},
+		{
+			"id": "northern-mindanao",
+			"name": "Northern Mindanao",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				124.49754999999999,
+				8.331199999999999
+			],
+			"bbox": [
+				123.5538,
+				7.4046,
+				125.4413,
+				9.2578
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						124.3477,
+						8.2872
+					],
+					[
+						124.8439,
+						8.3126
+					],
+					[
+						125.3401,
+						7.9532
+					]
+				],
+				"aspect": 1.34
+			}
+		},
+		{
+			"id": "zamboanga-peninsula",
+			"name": "Zamboanga Peninsula",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				122.78049999999999,
+				7.64575
+			],
+			"bbox": [
+				121.8975,
+				6.564,
+				123.6635,
+				8.7275
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "davao-region",
+			"name": "Davao Region",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				125.8259,
+				6.6851
+			],
+			"bbox": [
+				125.0468,
+				5.367,
+				126.605,
+				8.0032
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "soccsksargen",
+			"name": "SOCCSKSARGEN",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				124.77745,
+				6.6034500000000005
+			],
+			"bbox": [
+				124.0163,
+				5.5686,
+				125.5386,
+				7.6383
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						124.1757,
+						6.4025
+					],
+					[
+						124.7776,
+						6.5351
+					],
+					[
+						125.3795,
+						6.3265
+					]
+				],
+				"aspect": 1.75
+			}
+		},
+		{
+			"id": "barmm",
+			"name": "BARMM",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				121.71735000000001,
+				6.402800000000001
+			],
+			"bbox": [
+				118.427,
+				4.6421,
+				125.0077,
+				8.1635
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						124.2348,
+						7.1412
+					],
+					[
+						124.0007,
+						6.8775
+					],
+					[
+						124.332,
+						6.6782
+					]
+				],
+				"aspect": 0.92
+			}
+		}
+	],
+	"tourOrder": [
+		"cagayan-valley",
+		"cordillera",
+		"ilocos-region",
+		"central-luzon",
+		"metro-manila",
+		"calabarzon",
+		"bicol-region",
+		"eastern-visayas",
+		"mimaropa",
+		"western-visayas",
+		"central-visayas",
+		"caraga",
+		"northern-mindanao",
+		"zamboanga-peninsula",
+		"davao-region",
+		"soccsksargen",
+		"barmm"
+	]
+}

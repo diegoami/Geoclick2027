@@ -1,0 +1,447 @@
+{
+	"falcon": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Lara",
+			"Yaracuy",
+			"Zulia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Punto Fijo",
+			"nameDe": "Punto Fijo",
+			"nameIt": "Punto Fijo",
+			"population": 234736
+		},
+		"position": "north-west"
+	},
+	"nueva-esparta": {
+		"kind": "region",
+		"type": "State",
+		"coastal": true,
+		"largestCity": {
+			"name": "Porlamar",
+			"nameDe": "Porlamar",
+			"nameIt": "Porlamar",
+			"population": 196934
+		},
+		"peak": {
+			"name": "Cerro El Copey",
+			"elevation": 957
+		},
+		"position": "north-east"
+	},
+	"la-guaira": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Aragua",
+			"Distrito Capital",
+			"Miranda"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Maiquetía",
+			"nameDe": "Maiquetía",
+			"nameIt": "Maiquetía",
+			"population": 315442
+		},
+		"position": "north"
+	},
+	"distrito-capital": {
+		"kind": "region",
+		"type": "Capital District",
+		"borders": [
+			"La Guaira",
+			"Miranda"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Caracas",
+			"nameDe": "Caracas",
+			"nameIt": "Caracas",
+			"population": 2985000
+		},
+		"position": "north"
+	},
+	"sucre": {
+		"kind": "region",
+		"borders": [
+			"Anzoátegui",
+			"Monagas"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Cumaná",
+			"nameDe": "Cumaná",
+			"nameIt": "Cumaná",
+			"population": 317603
+		},
+		"position": "north-east"
+	},
+	"yaracuy": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Carabobo",
+			"Cojedes",
+			"Falcón",
+			"Lara"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "San Felipe",
+			"nameDe": "San Felipe",
+			"nameIt": "San Felipe",
+			"population": 76766
+		},
+		"position": "north"
+	},
+	"miranda": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Anzoátegui",
+			"Aragua",
+			"Distrito Capital",
+			"Guárico",
+			"La Guaira"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Ocumare del Tuy",
+			"nameDe": "Ocumare del Tuy",
+			"nameIt": "Ocumare del Tuy",
+			"population": 166072
+		},
+		"peak": {
+			"name": "Pico Naiguatá",
+			"elevation": 2765
+		},
+		"position": "north"
+	},
+	"carabobo": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Aragua",
+			"Cojedes",
+			"Guárico",
+			"Yaracuy"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Valencia",
+			"nameDe": "Valencia",
+			"nameIt": "Valencia",
+			"population": 1770000
+		},
+		"position": "north"
+	},
+	"zulia": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Falcón",
+			"Lara",
+			"Mérida",
+			"Táchira",
+			"Trujillo"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Maracaibo",
+			"nameDe": "Maracaibo",
+			"nameIt": "Maracaibo",
+			"population": 2072000
+		},
+		"position": "north-west"
+	},
+	"lara": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Cojedes",
+			"Falcón",
+			"Portuguesa",
+			"Trujillo",
+			"Yaracuy",
+			"Zulia"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Barquisimeto",
+			"nameDe": "Barquisimeto",
+			"nameIt": "Barquisimeto",
+			"population": 1116000
+		},
+		"position": "north-west"
+	},
+	"aragua": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Carabobo",
+			"Guárico",
+			"La Guaira",
+			"Miranda"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Maracay",
+			"nameDe": "Maracay",
+			"nameIt": "Maracay",
+			"population": 1007000
+		},
+		"position": "north"
+	},
+	"trujillo": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Barinas",
+			"Lara",
+			"Mérida",
+			"Portuguesa",
+			"Zulia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Valera",
+			"nameDe": "Valera",
+			"nameIt": "Valera",
+			"population": 191167
+		},
+		"position": "north-west"
+	},
+	"monagas": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Anzoátegui",
+			"Bolívar",
+			"Delta Amacuro",
+			"Sucre"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Maturín",
+			"nameDe": "Maturín",
+			"nameIt": "Maturín",
+			"population": 410972
+		},
+		"position": "north-east"
+	},
+	"cojedes": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Barinas",
+			"Carabobo",
+			"Guárico",
+			"Lara",
+			"Portuguesa",
+			"Yaracuy"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "San Carlos",
+			"nameDe": "San Carlos",
+			"nameIt": "San Carlos",
+			"population": 77192
+		},
+		"position": "north"
+	},
+	"anzoategui": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Bolívar",
+			"Guárico",
+			"Miranda",
+			"Monagas",
+			"Sucre"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Barcelona",
+			"nameDe": "Barcelona",
+			"nameIt": "Barcelona",
+			"population": 600954
+		},
+		"position": "north-east"
+	},
+	"portuguesa": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Barinas",
+			"Cojedes",
+			"Lara",
+			"Trujillo"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Acarigua",
+			"nameDe": "Acarigua",
+			"nameIt": "Acarigua",
+			"population": 260921
+		},
+		"position": "north-west"
+	},
+	"delta-amacuro": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Bolívar",
+			"Monagas"
+		],
+		"coastal": true,
+		"position": "north-east"
+	},
+	"guarico": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Anzoátegui",
+			"Apure",
+			"Aragua",
+			"Barinas",
+			"Bolívar",
+			"Carabobo",
+			"Cojedes",
+			"Miranda"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Calabozo",
+			"nameDe": "Calabozo",
+			"nameIt": "Calabozo",
+			"population": 117132
+		},
+		"position": "north"
+	},
+	"merida": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Barinas",
+			"Táchira",
+			"Trujillo",
+			"Zulia"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Mérida",
+			"nameDe": "Mérida",
+			"nameIt": "Mérida",
+			"population": 345489
+		},
+		"peak": {
+			"name": "Pico Bolívar",
+			"elevation": 4980
+		},
+		"position": "north-west"
+	},
+	"barinas": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Apure",
+			"Cojedes",
+			"Guárico",
+			"Mérida",
+			"Portuguesa",
+			"Táchira",
+			"Trujillo"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Barinas",
+			"nameDe": "Barinas",
+			"nameIt": "Barinas",
+			"population": 284289
+		},
+		"position": "west"
+	},
+	"tachira": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Apure",
+			"Barinas",
+			"Mérida",
+			"Zulia"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "San Cristóbal",
+			"nameDe": "San Cristóbal",
+			"nameIt": "San Cristóbal",
+			"population": 438798
+		},
+		"position": "west"
+	},
+	"apure": {
+		"kind": "region",
+		"type": "State",
+		"borders": [
+			"Amazonas",
+			"Barinas",
+			"Bolívar",
+			"Guárico",
+			"Táchira"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "San Fernando de Apure",
+			"nameDe": "San Fernando de Apure",
+			"nameIt": "San Fernando de Apure",
+			"population": 122701
+		},
+		"position": "west"
+	},
+	"bolivar": {
+		"kind": "region",
+		"borders": [
+			"Amazonas",
+			"Anzoátegui",
+			"Apure",
+			"Delta Amacuro",
+			"Guárico",
+			"Monagas"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Ciudad Guayana",
+			"nameDe": "Ciudad Guayana",
+			"nameIt": "Ciudad Guayana",
+			"population": 746535
+		},
+		"peak": {
+			"name": "Mount Roraima",
+			"elevation": 2772
+		},
+		"position": "east"
+	},
+	"amazonas": {
+		"kind": "region",
+		"borders": [
+			"Apure",
+			"Bolívar"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Puerto Ayacucho",
+			"nameDe": "Puerto Ayacucho",
+			"nameIt": "Puerto Ayacucho",
+			"population": 52526
+		},
+		"peak": {
+			"name": "Pico da Neblina",
+			"elevation": 3014
+		},
+		"position": "south"
+	}
+}

@@ -1,0 +1,170 @@
+{
+	"north-kazakhstan": {
+		"kind": "region",
+		"borders": [
+			"Akmola",
+			"Kostanay",
+			"Pavlodar"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"pavlodar": {
+		"kind": "region",
+		"borders": [
+			"Akmola",
+			"East Kazakhstan",
+			"Karaganda",
+			"North Kazakhstan"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"akmola": {
+		"kind": "region",
+		"borders": [
+			"Astana",
+			"Karaganda",
+			"Kostanay",
+			"North Kazakhstan",
+			"Pavlodar"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"kostanay": {
+		"kind": "region",
+		"borders": [
+			"Akmola",
+			"Aktobe",
+			"Karaganda",
+			"North Kazakhstan"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"astana": {
+		"kind": "region",
+		"borders": [
+			"Akmola"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"west-kazakhstan": {
+		"kind": "region",
+		"borders": [
+			"Aktobe",
+			"Atyrau"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"karaganda": {
+		"kind": "region",
+		"borders": [
+			"Akmola",
+			"Aktobe",
+			"Almaty Region",
+			"East Kazakhstan",
+			"Jambyl",
+			"Kostanay",
+			"Kyzylorda",
+			"Pavlodar",
+			"South Kazakhstan"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"east-kazakhstan": {
+		"kind": "region",
+		"borders": [
+			"Almaty Region",
+			"Karaganda",
+			"Pavlodar"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"aktobe": {
+		"kind": "region",
+		"borders": [
+			"Atyrau",
+			"Karaganda",
+			"Kostanay",
+			"Kyzylorda",
+			"Mangystau",
+			"West Kazakhstan"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"atyrau": {
+		"kind": "region",
+		"borders": [
+			"Aktobe",
+			"Mangystau",
+			"West Kazakhstan"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"kyzylorda": {
+		"kind": "region",
+		"borders": [
+			"Aktobe",
+			"Karaganda",
+			"South Kazakhstan"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"almaty-region": {
+		"kind": "region",
+		"borders": [
+			"Almaty",
+			"East Kazakhstan",
+			"Jambyl",
+			"Karaganda"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"jambyl": {
+		"kind": "region",
+		"borders": [
+			"Almaty Region",
+			"Karaganda",
+			"South Kazakhstan"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"mangystau": {
+		"kind": "region",
+		"borders": [
+			"Aktobe",
+			"Atyrau"
+		],
+		"coastal": false,
+		"position": "south-west"
+	},
+	"south-kazakhstan": {
+		"kind": "region",
+		"borders": [
+			"Jambyl",
+			"Karaganda",
+			"Kyzylorda"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"almaty": {
+		"kind": "region",
+		"borders": [
+			"Almaty Region"
+		],
+		"coastal": false,
+		"position": "south-east"
+	}
+}

@@ -99,3 +99,15 @@ fetch_geojson() {
 fetch_geojson DEU-ADM3 "$GEOBOUNDARIES/DEU/ADM3/geoBoundaries-DEU-ADM3_simplified.geojson"
 fetch_geojson NLD-ADM2 "$GEOBOUNDARIES/NLD/ADM2/geoBoundaries-NLD-ADM2_simplified.geojson"
 fetch_geojson POL-ADM2 "$GEOBOUNDARIES/POL/ADM2/geoBoundaries-POL-ADM2_simplified.geojson"
+
+# The maps of v0.17 (#163): geoBoundaries ADM1 where Natural Earth is out of
+# date (Norway, Kazakhstan) or missing (Serbia, Kenya), and the Philippines at
+# both levels. Licences: Kenya public domain; Kazakhstan and Serbia ODbL
+# (OpenStreetMap); Norway CC BY 4.0 (Kartverket); the Philippines CC BY 3.0 IGO
+# (NAMRIA, PSA, OCHA).
+fetch_geojson KEN-ADM1 "$GEOBOUNDARIES/KEN/ADM1/geoBoundaries-KEN-ADM1_simplified.geojson"
+fetch_geojson KAZ-ADM1 "$GEOBOUNDARIES/KAZ/ADM1/geoBoundaries-KAZ-ADM1_simplified.geojson"
+fetch_geojson NOR-ADM1 "$GEOBOUNDARIES/NOR/ADM1/geoBoundaries-NOR-ADM1_simplified.geojson"
+fetch_geojson SRB-ADM1 "$GEOBOUNDARIES/SRB/ADM1/geoBoundaries-SRB-ADM1_simplified.geojson"
+fetch_geojson PHL-ADM1 "$GEOBOUNDARIES/PHL/ADM1/geoBoundaries-PHL-ADM1_simplified.geojson"
+fetch_geojson PHL-ADM2 "$GEOBOUNDARIES/PHL/ADM2/geoBoundaries-PHL-ADM2_simplified.geojson"

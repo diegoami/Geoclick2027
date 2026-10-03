@@ -1,0 +1,108 @@
+{
+	"aalborg": {
+		"kind": "city",
+		"population": 122219,
+		"populationRank": 4,
+		"region": "Nordjylland",
+		"coastal": true,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Across its fjord, the burial ground of Lindholm Høje has some 700 Viking graves.",
+				"Its name is on the best-known Danish akvavit, distilled here since 1846."
+			],
+			"it": [
+				"Oltre il fiordo, la necropoli di Lindholm Høje conta circa 700 tombe vichinghe.",
+				"Il suo nome è sull’akvavit danese più noto, distillato qui dal 1846."
+			],
+			"de": [
+				"Auf der anderen Seite ihres Fjords hat das Gräberfeld Lindholm Høje rund 700 Wikingergräber.",
+				"Ihr Name steht auf dem bekanntesten dänischen Aquavit, der hier seit 1846 destilliert wird."
+			]
+		}
+	},
+	"aarhus": {
+		"kind": "city",
+		"population": 237551,
+		"populationRank": 2,
+		"region": "Midtjylland",
+		"coastal": true,
+		"position": "centre"
+	},
+	"vejle": {
+		"kind": "city",
+		"population": 51177,
+		"populationRank": 6,
+		"region": "Syddanmark",
+		"coastal": true,
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"The Jelling stones, carved runestones of the 10th century often called Denmark’s birth certificate, stand close by."
+			],
+			"it": [
+				"Qui vicino si trovano le pietre di Jelling, pietre runiche del X secolo spesso chiamate il certificato di nascita della Danimarca."
+			],
+			"de": [
+				"Die Jellingsteine, im 10. Jahrhundert gemeißelte Runensteine, die oft Dänemarks Geburtsurkunde genannt werden, stehen in der Nähe."
+			]
+		}
+	},
+	"copenhagen": {
+		"kind": "city",
+		"population": 1085000,
+		"populationRank": 1,
+		"population1950": 1216000,
+		"region": "Hovedstaden",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"esbjerg": {
+		"kind": "city",
+		"population": 72205,
+		"populationRank": 5,
+		"region": "Syddanmark",
+		"coastal": true,
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Founded as a port in 1868, after Denmark had lost its southern harbours to Prussia.",
+				"The base of Denmark’s North Sea oil and offshore wind industries."
+			],
+			"it": [
+				"Fondata come porto nel 1868, dopo che la Danimarca aveva perso i porti del sud a favore della Prussia.",
+				"La base delle industrie danesi del petrolio del Mare del Nord e dell’eolico in mare."
+			],
+			"de": [
+				"Als Hafen 1868 gegründet, nachdem Dänemark seine südlichen Häfen an Preußen verloren hatte.",
+				"Die Basis von Dänemarks Nordsee-Öl- und Offshore-Windindustrie."
+			]
+		}
+	},
+	"odense": {
+		"kind": "city",
+		"population": 158222,
+		"populationRank": 3,
+		"region": "Syddanmark",
+		"coastal": true,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"\"Odin’s shrine\".",
+				"Hans Christian Andersen was born here in 1805.",
+				"The composer Carl Nielsen grew up in a village nearby."
+			],
+			"it": [
+				"\"Il santuario di Odino\".",
+				"Qui nacque Hans Christian Andersen, nel 1805.",
+				"Il compositore Carl Nielsen crebbe in un villaggio qui vicino."
+			],
+			"de": [
+				"„Odins Heiligtum“.",
+				"Hans Christian Andersen wurde hier 1805 geboren.",
+				"Der Komponist Carl Nielsen wuchs in einem nahen Dorf auf."
+			]
+		}
+	}
+}

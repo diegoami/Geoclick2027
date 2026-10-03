@@ -67,6 +67,7 @@ describe('the catalog order', () => {
 				'poland-counties-south',
 				'poland-counties-southeast',
 				'poland-counties-west',
+				'philippines-provinces',
 				'spain-provinces',
 				'usa-cities-center',
 				'usa-cities-east',

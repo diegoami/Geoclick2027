@@ -1,0 +1,282 @@
+{
+	"northland": {
+		"kind": "region",
+		"type": "Regional Council",
+		"borders": [
+			"Auckland"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Whangarei",
+			"nameDe": "Whangarei",
+			"nameIt": "Whangārei",
+			"population": 52200
+		},
+		"position": "north"
+	},
+	"auckland": {
+		"kind": "region",
+		"type": "Unitary Authority",
+		"borders": [
+			"Northland",
+			"Waikato"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Auckland",
+			"nameDe": "Auckland",
+			"nameIt": "Auckland",
+			"population": 1377200
+		},
+		"position": "north-east"
+	},
+	"waikato": {
+		"kind": "region",
+		"type": "Regional Council",
+		"borders": [
+			"Auckland",
+			"Bay of Plenty",
+			"Hawke's Bay",
+			"Manawatū-Whanganui",
+			"Taranaki"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Hamilton",
+			"nameDe": "Hamilton",
+			"nameIt": "Hamilton",
+			"population": 148200
+		},
+		"position": "north-east"
+	},
+	"bay-of-plenty": {
+		"kind": "region",
+		"type": "Regional Council",
+		"borders": [
+			"Gisborne",
+			"Hawke's Bay",
+			"Waikato"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tauranga",
+			"nameDe": "Tauranga",
+			"nameIt": "Tauranga",
+			"population": 121500
+		},
+		"position": "north-east"
+	},
+	"gisborne": {
+		"kind": "region",
+		"type": "Unitary Authority",
+		"borders": [
+			"Bay of Plenty",
+			"Hawke's Bay"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Gisborne",
+			"nameDe": "Gisborne",
+			"nameIt": "Gisborne",
+			"population": 34300
+		},
+		"position": "north-east"
+	},
+	"taranaki": {
+		"kind": "region",
+		"type": "Regional Council",
+		"borders": [
+			"Manawatū-Whanganui",
+			"Waikato"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "New Plymouth",
+			"nameDe": "New Plymouth",
+			"nameIt": "New Plymouth",
+			"population": 52500
+		},
+		"peak": {
+			"name": "Mount Taranaki",
+			"elevation": 2518
+		},
+		"position": "centre"
+	},
+	"hawke-s-bay": {
+		"kind": "region",
+		"type": "Regional Council",
+		"borders": [
+			"Bay of Plenty",
+			"Gisborne",
+			"Manawatū-Whanganui",
+			"Waikato"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Hastings",
+			"nameDe": "Hastings",
+			"nameIt": "Hastings",
+			"population": 66100
+		},
+		"position": "east"
+	},
+	"manawatu-whanganui": {
+		"kind": "region",
+		"type": "Regional Council",
+		"borders": [
+			"Hawke's Bay",
+			"Taranaki",
+			"Waikato",
+			"Wellington"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Palmerston North",
+			"nameDe": "Palmerston North",
+			"nameIt": "Palmerston North",
+			"population": 82400
+		},
+		"peak": {
+			"name": "Mount Ruapehu",
+			"elevation": 2797
+		},
+		"position": "east"
+	},
+	"wellington": {
+		"kind": "region",
+		"type": "Regional Council",
+		"borders": [
+			"Manawatū-Whanganui"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Wellington",
+			"nameDe": "Wellington",
+			"nameIt": "Wellington",
+			"population": 393400
+		},
+		"position": "east"
+	},
+	"nelson": {
+		"kind": "region",
+		"type": "Unitary Authority",
+		"borders": [
+			"Marlborough",
+			"Tasman"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Nelson",
+			"nameDe": "Nelson",
+			"nameIt": "Nelson",
+			"population": 60800
+		},
+		"position": "centre"
+	},
+	"tasman": {
+		"kind": "region",
+		"type": "Unitary Authority",
+		"borders": [
+			"Canterbury",
+			"Marlborough",
+			"Nelson",
+			"West Coast"
+		],
+		"coastal": true,
+		"position": "centre"
+	},
+	"marlborough": {
+		"kind": "region",
+		"type": "Unitary Authority",
+		"borders": [
+			"Canterbury",
+			"Nelson",
+			"Tasman"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Blenheim",
+			"nameDe": "Blenheim",
+			"nameIt": "Blenheim",
+			"population": 30300
+		},
+		"position": "centre"
+	},
+	"west-coast": {
+		"kind": "region",
+		"type": "Regional Council",
+		"borders": [
+			"Canterbury",
+			"Otago",
+			"Southland",
+			"Tasman"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Greymouth",
+			"nameDe": "Greymouth",
+			"nameIt": "Greymouth",
+			"population": 10100
+		},
+		"position": "west"
+	},
+	"canterbury": {
+		"kind": "region",
+		"type": "Regional Council",
+		"borders": [
+			"Marlborough",
+			"Otago",
+			"Tasman",
+			"West Coast"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Christchurch",
+			"nameDe": "Christchurch",
+			"nameIt": "Christchurch",
+			"population": 363200
+		},
+		"peak": {
+			"name": "Aoraki (Mount Cook)",
+			"elevation": 3754
+		},
+		"position": "south"
+	},
+	"otago": {
+		"kind": "region",
+		"type": "Regional Council",
+		"borders": [
+			"Canterbury",
+			"Southland",
+			"West Coast"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Dunedin",
+			"nameDe": "Dunedin",
+			"nameIt": "Dunedin",
+			"population": 117700
+		},
+		"position": "south-west"
+	},
+	"southland": {
+		"kind": "region",
+		"type": "Regional Council",
+		"borders": [
+			"Otago",
+			"West Coast"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Invercargill",
+			"nameDe": "Invercargill",
+			"nameIt": "Invercargill",
+			"population": 49200
+		},
+		"peak": {
+			"name": "Mount Anglem",
+			"elevation": 980
+		},
+		"position": "south-west"
+	}
+}

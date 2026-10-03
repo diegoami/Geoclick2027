@@ -1,0 +1,283 @@
+{
+	"north-backa": {
+		"kind": "region",
+		"borders": [
+			"North Banat",
+			"South Bačka",
+			"West Bačka"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"north-banat": {
+		"kind": "region",
+		"borders": [
+			"Central Banat",
+			"North Bačka",
+			"South Bačka"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"west-backa": {
+		"kind": "region",
+		"borders": [
+			"North Bačka",
+			"South Bačka"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"south-backa": {
+		"kind": "region",
+		"borders": [
+			"Central Banat",
+			"North Bačka",
+			"North Banat",
+			"Syrmia",
+			"West Bačka"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"central-banat": {
+		"kind": "region",
+		"borders": [
+			"Belgrade",
+			"North Banat",
+			"South Bačka",
+			"South Banat",
+			"Syrmia"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"south-banat": {
+		"kind": "region",
+		"borders": [
+			"Belgrade",
+			"Braničevo",
+			"Central Banat",
+			"Podunavlje"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"syrmia": {
+		"kind": "region",
+		"borders": [
+			"Belgrade",
+			"Central Banat",
+			"Mačva",
+			"South Bačka"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"belgrade": {
+		"kind": "region",
+		"borders": [
+			"Central Banat",
+			"Kolubara",
+			"Mačva",
+			"Podunavlje",
+			"South Banat",
+			"Šumadija",
+			"Syrmia"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"macva": {
+		"kind": "region",
+		"borders": [
+			"Belgrade",
+			"Kolubara",
+			"Syrmia",
+			"Zlatibor"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"podunavlje": {
+		"kind": "region",
+		"borders": [
+			"Belgrade",
+			"Braničevo",
+			"Pomoravlje",
+			"South Banat",
+			"Šumadija"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"branicevo": {
+		"kind": "region",
+		"borders": [
+			"Bor",
+			"Podunavlje",
+			"Pomoravlje",
+			"South Banat"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"kolubara": {
+		"kind": "region",
+		"borders": [
+			"Belgrade",
+			"Mačva",
+			"Moravica",
+			"Šumadija",
+			"Zlatibor"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"bor": {
+		"kind": "region",
+		"borders": [
+			"Braničevo",
+			"Pomoravlje",
+			"Zaječar"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"sumadija": {
+		"kind": "region",
+		"borders": [
+			"Belgrade",
+			"Kolubara",
+			"Moravica",
+			"Podunavlje",
+			"Pomoravlje",
+			"Raška"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"pomoravlje": {
+		"kind": "region",
+		"borders": [
+			"Bor",
+			"Braničevo",
+			"Nišava",
+			"Podunavlje",
+			"Rasina",
+			"Raška",
+			"Šumadija",
+			"Zaječar"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"moravica": {
+		"kind": "region",
+		"borders": [
+			"Kolubara",
+			"Raška",
+			"Šumadija",
+			"Zlatibor"
+		],
+		"coastal": false,
+		"position": "centre"
+	},
+	"zajecar": {
+		"kind": "region",
+		"borders": [
+			"Bor",
+			"Nišava",
+			"Pirot",
+			"Pomoravlje"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"zlatibor": {
+		"kind": "region",
+		"borders": [
+			"Kolubara",
+			"Mačva",
+			"Moravica",
+			"Raška"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"rasina": {
+		"kind": "region",
+		"borders": [
+			"Nišava",
+			"Pomoravlje",
+			"Raška",
+			"Toplica"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"nisava": {
+		"kind": "region",
+		"borders": [
+			"Jablanica",
+			"Pirot",
+			"Pomoravlje",
+			"Rasina",
+			"Toplica",
+			"Zaječar"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"raska": {
+		"kind": "region",
+		"borders": [
+			"Moravica",
+			"Pomoravlje",
+			"Rasina",
+			"Šumadija",
+			"Zlatibor"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"toplica": {
+		"kind": "region",
+		"borders": [
+			"Jablanica",
+			"Nišava",
+			"Rasina"
+		],
+		"coastal": false,
+		"position": "south"
+	},
+	"pirot": {
+		"kind": "region",
+		"borders": [
+			"Jablanica",
+			"Nišava",
+			"Zaječar"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"jablanica": {
+		"kind": "region",
+		"borders": [
+			"Nišava",
+			"Pčinja",
+			"Pirot",
+			"Toplica"
+		],
+		"coastal": false,
+		"position": "south-east"
+	},
+	"pcinja": {
+		"kind": "region",
+		"borders": [
+			"Jablanica"
+		],
+		"coastal": false,
+		"position": "south-east"
+	}
+}

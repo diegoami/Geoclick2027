@@ -1,0 +1,296 @@
+{
+	"id": "new-zealand-towns-50k",
+	"name": "New Zealand — Towns",
+	"country": "New Zealand",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "whangarei",
+			"name": "Whangarei",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				174.3229708,
+				-35.7255711
+			],
+			"bbox": [
+				174.3229708,
+				-35.7255711,
+				174.3229708,
+				-35.7255711
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "auckland",
+			"name": "Auckland",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				174.763027,
+				-36.8480549
+			],
+			"bbox": [
+				174.763027,
+				-36.8480549,
+				174.763027,
+				-36.8480549
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "tauranga",
+			"name": "Tauranga",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				176.1536294,
+				-37.6964164
+			],
+			"bbox": [
+				176.1536294,
+				-37.6964164,
+				176.1536294,
+				-37.6964164
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "hamilton",
+			"name": "Hamilton",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				175.2895781,
+				-37.7782694
+			],
+			"bbox": [
+				175.2895781,
+				-37.7782694,
+				175.2895781,
+				-37.7782694
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "rotorua",
+			"name": "Rotorua",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				176.2482631,
+				-38.1317379
+			],
+			"bbox": [
+				176.2482631,
+				-38.1317379,
+				176.2482631,
+				-38.1317379
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "new-plymouth",
+			"name": "New Plymouth",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				174.0748125,
+				-39.0556393
+			],
+			"bbox": [
+				174.0748125,
+				-39.0556393,
+				174.0748125,
+				-39.0556393
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "napier",
+			"name": "Napier",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				176.926451,
+				-39.4900014
+			],
+			"bbox": [
+				176.926451,
+				-39.4900014,
+				176.926451,
+				-39.4900014
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "hastings",
+			"name": "Hastings",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				176.8367996,
+				-39.6382031
+			],
+			"bbox": [
+				176.8367996,
+				-39.6382031,
+				176.8367996,
+				-39.6382031
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "palmerston-north",
+			"name": "Palmerston North",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				175.6072108,
+				-40.352691
+			],
+			"bbox": [
+				175.6072108,
+				-40.352691,
+				175.6072108,
+				-40.352691
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "porirua",
+			"name": "Porirua",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				174.8523534,
+				-41.121892
+			],
+			"bbox": [
+				174.8523534,
+				-41.121892,
+				174.8523534,
+				-41.121892
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "lower-hutt",
+			"name": "Lower Hutt",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				174.9123119,
+				-41.2037449
+			],
+			"bbox": [
+				174.9123119,
+				-41.2037449,
+				174.9123119,
+				-41.2037449
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "wellington",
+			"name": "Wellington",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				174.77720094690068,
+				-41.2920679923151
+			],
+			"bbox": [
+				174.77720094690068,
+				-41.2920679923151,
+				174.77720094690068,
+				-41.2920679923151
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "nelson",
+			"name": "Nelson",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				173.247448,
+				-41.2925917
+			],
+			"bbox": [
+				173.247448,
+				-41.2925917,
+				173.247448,
+				-41.2925917
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "christchurch",
+			"name": "Christchurch",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				172.6300232,
+				-43.5350216
+			],
+			"bbox": [
+				172.6300232,
+				-43.5350216,
+				172.6300232,
+				-43.5350216
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "dunedin",
+			"name": "Dunedin",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				170.4910157,
+				-45.8854231
+			],
+			"bbox": [
+				170.4910157,
+				-45.8854231,
+				170.4910157,
+				-45.8854231
+			],
+			"colorIndex": 1
+		}
+	],
+	"tourOrder": [
+		"whangarei",
+		"auckland",
+		"tauranga",
+		"hamilton",
+		"rotorua",
+		"new-plymouth",
+		"napier",
+		"hastings",
+		"palmerston-north",
+		"porirua",
+		"lower-hutt",
+		"wellington",
+		"nelson",
+		"christchurch",
+		"dunedin"
+	]
+}

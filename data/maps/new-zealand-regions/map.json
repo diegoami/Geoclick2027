@@ -1,0 +1,587 @@
+{
+	"id": "new-zealand-regions",
+	"name": "New Zealand — Regions",
+	"country": "New Zealand",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "northland",
+			"name": "Northland",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				173.66515,
+				-35.41005
+			],
+			"bbox": [
+				172.6741,
+				-36.3995,
+				174.6562,
+				-34.4206
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						173.384,
+						-35.1035
+					],
+					[
+						174.0367,
+						-35.5294
+					],
+					[
+						174.4032,
+						-36.1359
+					]
+				],
+				"aspect": 2.04
+			}
+		},
+		{
+			"id": "auckland",
+			"name": "Auckland",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				174.87815,
+				-36.70585
+			],
+			"bbox": [
+				174.2179,
+				-37.2938,
+				175.5384,
+				-36.1179
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						174.4933,
+						-36.3138
+					],
+					[
+						174.7105,
+						-36.7336
+					],
+					[
+						174.9277,
+						-37.1511
+					]
+				],
+				"aspect": 3.09
+			}
+		},
+		{
+			"id": "waikato",
+			"name": "Waikato",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				175.5515,
+				-37.885999999999996
+			],
+			"bbox": [
+				174.6176,
+				-39.2973,
+				176.4854,
+				-36.4747
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						175.2654,
+						-37.3141
+					],
+					[
+						175.3478,
+						-38.209
+					],
+					[
+						176.0486,
+						-39.0015
+					]
+				],
+				"aspect": 2.1
+			}
+		},
+		{
+			"id": "bay-of-plenty",
+			"name": "Bay of Plenty",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				176.94325,
+				-38.1789
+			],
+			"bbox": [
+				175.8092,
+				-38.9891,
+				178.0773,
+				-37.3687
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						176.0412,
+						-37.8555
+					],
+					[
+						176.9289,
+						-38.7361
+					],
+					[
+						177.8165,
+						-37.9452
+					]
+				],
+				"aspect": 2.75
+			}
+		},
+		{
+			"id": "gisborne",
+			"name": "Gisborne",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				177.86855,
+				-38.25605
+			],
+			"bbox": [
+				177.1728,
+				-38.9607,
+				178.5643,
+				-37.5514
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						177.5938,
+						-38.7212
+					],
+					[
+						178.0475,
+						-38.2689
+					],
+					[
+						178.2715,
+						-37.7181
+					]
+				],
+				"aspect": 2.6
+			}
+		},
+		{
+			"id": "taranaki",
+			"name": "Taranaki",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				174.3852,
+				-39.283249999999995
+			],
+			"bbox": [
+				173.7776,
+				-39.8591,
+				174.9928,
+				-38.7074
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						173.9029,
+						-39.2765
+					],
+					[
+						174.365,
+						-39.1945
+					],
+					[
+						174.8271,
+						-39.4558
+					]
+				],
+				"aspect": 1.18
+			}
+		},
+		{
+			"id": "hawke-s-bay",
+			"name": "Hawke's Bay",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				177.04035,
+				-39.51195
+			],
+			"bbox": [
+				176.0818,
+				-40.4541,
+				177.9989,
+				-38.5698
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						176.3851,
+						-40.0344
+					],
+					[
+						176.4,
+						-39.2249
+					],
+					[
+						177.2262,
+						-38.7248
+					]
+				],
+				"aspect": 2.16
+			}
+		},
+		{
+			"id": "manawatu-whanganui",
+			"name": "Manawatū-Whanganui",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				175.67405000000002,
+				-39.62885
+			],
+			"bbox": [
+				174.7184,
+				-40.7731,
+				176.6297,
+				-38.4846
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						175.1715,
+						-38.8134
+					],
+					[
+						175.4779,
+						-39.7068
+					],
+					[
+						175.9165,
+						-40.5568
+					]
+				],
+				"aspect": 2.19
+			}
+		},
+		{
+			"id": "wellington",
+			"name": "Wellington",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				175.4787,
+				-41.14405
+			],
+			"bbox": [
+				174.6094,
+				-41.6137,
+				176.348,
+				-40.6744
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						174.9854,
+						-41.1286
+					],
+					[
+						175.5317,
+						-41.2182
+					],
+					[
+						176.0781,
+						-40.9166
+					]
+				],
+				"aspect": 1.17
+			}
+		},
+		{
+			"id": "nelson",
+			"name": "Nelson",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				173.38774999999998,
+				-41.22215
+			],
+			"bbox": [
+				173.185,
+				-41.3886,
+				173.5905,
+				-41.0557
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						173.2658,
+						-41.3401
+					],
+					[
+						173.4116,
+						-41.2402
+					],
+					[
+						173.5303,
+						-41.1214
+					]
+				],
+				"aspect": 3.09
+			}
+		},
+		{
+			"id": "tasman",
+			"name": "Tasman",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				172.6747,
+				-41.411100000000005
+			],
+			"bbox": [
+				172.0641,
+				-42.3125,
+				173.2853,
+				-40.5097
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						172.4241,
+						-42.0827
+					],
+					[
+						172.9686,
+						-41.5222
+					],
+					[
+						172.7311,
+						-40.8694
+					]
+				],
+				"aspect": 2.36
+			}
+		},
+		{
+			"id": "marlborough",
+			"name": "Marlborough",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				173.49635,
+				-41.6188
+			],
+			"bbox": [
+				172.7063,
+				-42.4713,
+				174.2864,
+				-40.7663
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						172.9429,
+						-42.1864
+					],
+					[
+						173.6477,
+						-41.778
+					],
+					[
+						173.9931,
+						-41.1603
+					]
+				],
+				"aspect": 2.42
+			}
+		},
+		{
+			"id": "west-coast",
+			"name": "West Coast",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				170.41315,
+				-42.6338
+			],
+			"bbox": [
+				168.1367,
+				-44.49,
+				172.6896,
+				-40.7776
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						168.7479,
+						-44.1127
+					],
+					[
+						171.3572,
+						-43.3244
+					],
+					[
+						172.3,
+						-41.3225
+					]
+				],
+				"aspect": 11.37
+			}
+		},
+		{
+			"id": "canterbury",
+			"name": "Canterbury",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				171.81435,
+				-43.48825
+			],
+			"bbox": [
+				169.547,
+				-45.0604,
+				174.0817,
+				-41.9161
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						170.2061,
+						-44.4571
+					],
+					[
+						171.5328,
+						-43.592
+					],
+					[
+						172.8475,
+						-42.7045
+					]
+				],
+				"aspect": 2.41
+			}
+		},
+		{
+			"id": "otago",
+			"name": "Otago",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				169.6493,
+				-45.3181
+			],
+			"bbox": [
+				168.1261,
+				-46.6607,
+				171.1725,
+				-43.9755
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						168.4341,
+						-44.8319
+					],
+					[
+						169.56,
+						-45.5849
+					],
+					[
+						170.6858,
+						-45.5764
+					]
+				],
+				"aspect": 1.35
+			}
+		},
+		{
+			"id": "southland",
+			"name": "Southland",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				167.84660000000002,
+				-45.7354
+			],
+			"bbox": [
+				166.4694,
+				-47.2052,
+				169.2238,
+				-44.2656
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						167.0021,
+						-45.4419
+					],
+					[
+						167.9812,
+						-45.3561
+					],
+					[
+						168.9602,
+						-45.9277
+					]
+				],
+				"aspect": 1.04
+			}
+		}
+	],
+	"tourOrder": [
+		"northland",
+		"auckland",
+		"waikato",
+		"bay-of-plenty",
+		"gisborne",
+		"taranaki",
+		"hawke-s-bay",
+		"manawatu-whanganui",
+		"wellington",
+		"nelson",
+		"tasman",
+		"marlborough",
+		"west-coast",
+		"canterbury",
+		"otago",
+		"southland"
+	]
+}

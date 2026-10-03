@@ -1,0 +1,125 @@
+{
+	"id": "denmark-towns-50k",
+	"name": "Denmark — Towns",
+	"country": "Denmark",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "aalborg",
+			"name": "Aalborg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.9165934,
+				57.0337138
+			],
+			"bbox": [
+				9.9165934,
+				57.0337138,
+				9.9165934,
+				57.0337138
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "aarhus",
+			"name": "Aarhus",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.210684,
+				56.157204
+			],
+			"bbox": [
+				10.210684,
+				56.157204,
+				10.210684,
+				56.157204
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "vejle",
+			"name": "Vejle",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.5349965,
+				55.709001
+			],
+			"bbox": [
+				9.5349965,
+				55.709001,
+				9.5349965,
+				55.709001
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "copenhagen",
+			"name": "Copenhagen",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.5615399,
+				55.68051
+			],
+			"bbox": [
+				12.5615399,
+				55.68051,
+				12.5615399,
+				55.68051
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "esbjerg",
+			"name": "Esbjerg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.4500162,
+				55.4670394
+			],
+			"bbox": [
+				8.4500162,
+				55.4670394,
+				8.4500162,
+				55.4670394
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "odense",
+			"name": "Odense",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.3833349,
+				55.4003768
+			],
+			"bbox": [
+				10.3833349,
+				55.4003768,
+				10.3833349,
+				55.4003768
+			],
+			"colorIndex": 1
+		}
+	],
+	"tourOrder": [
+		"aalborg",
+		"aarhus",
+		"vejle",
+		"copenhagen",
+		"esbjerg",
+		"odense"
+	]
+}
