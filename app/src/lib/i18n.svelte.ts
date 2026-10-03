@@ -106,6 +106,7 @@ export type TranslationKey =
 	| 'home.mistakeCount.other'
 	| 'mapType.regions'
 	| 'mapType.towns'
+	| 'mapType.towns50k'
 	| 'mapType.states'
 	| 'mapType.provinces'
 	| 'mapType.provincesNorth'
@@ -285,6 +286,7 @@ const en: Dictionary = {
 
 	'mapType.regions': 'Regions',
 	'mapType.towns': 'Towns',
+	'mapType.towns50k': 'Towns 50k+',
 	'mapType.states': 'States',
 	'mapType.provinces': 'Provinces',
 	'mapType.provincesNorth': 'Provinces — North',
@@ -479,6 +481,7 @@ const de: Dictionary = {
 
 	'mapType.regions': 'Regionen',
 	'mapType.towns': 'Städte',
+	'mapType.towns50k': 'Städte 50k+',
 	'mapType.states': 'Staaten',
 	'mapType.provinces': 'Provinzen',
 	'mapType.provincesNorth': 'Provinzen — Norden',
@@ -677,6 +680,7 @@ const it: Dictionary = {
 
 	'mapType.regions': 'Regioni',
 	'mapType.towns': 'Città',
+	'mapType.towns50k': 'Città 50k+',
 	'mapType.states': 'Stati',
 	'mapType.provinces': 'Province',
 	'mapType.provincesNorth': 'Province — Nord',

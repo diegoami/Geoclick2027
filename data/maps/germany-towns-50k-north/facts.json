@@ -1,0 +1,765 @@
+{
+	"flensburg": {
+		"kind": "city",
+		"population": 95568,
+		"populationRank": 25,
+		"region": "Schleswig-Holstein",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"kiel": {
+		"kind": "city",
+		"population": 251842,
+		"populationRank": 8,
+		"region": "Schleswig-Holstein",
+		"coastal": true,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"From Old Saxon kil, a wedge or narrow inlet — the fjord the city sits on.",
+				"The Kiel Canal here is the busiest artificial waterway in the world.",
+				"The German revolution of 1918 began with a sailors’ mutiny in its harbour, and Kieler Woche is the largest sailing event anywhere."
+			],
+			"it": [
+				"Dall’antico sassone kil, cuneo o insenatura stretta: il fiordo su cui sorge la città.",
+				"Qui passa il canale di Kiel, la via d’acqua artificiale più trafficata del mondo.",
+				"La rivoluzione tedesca del 1918 cominciò con un ammutinamento di marinai nel suo porto, e la Kieler Woche è la più grande manifestazione velica del mondo."
+			],
+			"de": [
+				"Vom altsächsischen kil, „Keil“ oder schmale Bucht – die Förde, an der die Stadt liegt.",
+				"Hier liegt die Einfahrt des Nord-Ostsee-Kanals, der meistbefahrenen künstlichen Wasserstraße der Welt.",
+				"Die deutsche Revolution von 1918 begann mit einer Matrosenmeuterei in ihrem Hafen, und die Kieler Woche ist das größte Segelereignis überhaupt."
+			]
+		}
+	},
+	"stralsund": {
+		"kind": "city",
+		"population": 55481,
+		"populationRank": 46,
+		"region": "Mecklenburg-Vorpommern",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"rostock": {
+		"kind": "city",
+		"population": 204929,
+		"populationRank": 14,
+		"region": "Mecklenburg-Vorpommern",
+		"coastal": true,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"From Slavic rostok, \"the spreading of a river\" — the widening of the Warnow.",
+				"It was one of the leading Hanseatic towns, and its university of 1419 is the oldest on the Baltic.",
+				"It was the centre of East German shipbuilding and its sea trade."
+			],
+			"it": [
+				"Dallo slavo rostok, \"l’allargarsi di un fiume\": il punto in cui si allarga la Warnow.",
+				"Fu una delle principali città anseatiche, e la sua università, del 1419, è la più antica del Baltico.",
+				"Fu il centro della cantieristica navale della Germania Est e dei suoi commerci marittimi."
+			],
+			"de": [
+				"Vom slawischen rostok, „das Auseinanderfließen eines Flusses“ – die Verbreiterung der Warnow.",
+				"Sie war eine der führenden Hansestädte, und ihre Universität von 1419 ist die älteste im Ostseeraum.",
+				"Sie war das Zentrum des DDR-Schiffbaus und des Seehandels."
+			]
+		}
+	},
+	"greifswald": {
+		"kind": "city",
+		"population": 56154,
+		"populationRank": 45,
+		"region": "Mecklenburg-Vorpommern",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"neumunster": {
+		"kind": "city",
+		"population": 80145,
+		"populationRank": 31,
+		"region": "Schleswig-Holstein",
+		"coastal": false,
+		"position": "north"
+	},
+	"lubeck": {
+		"kind": "city",
+		"population": 217061,
+		"populationRank": 13,
+		"region": "Schleswig-Holstein",
+		"coastal": true,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"From Slavic Liubice, \"the lovely one\".",
+				"It was the queen of the Hanseatic League, which it effectively led for two centuries, and its old town is a UNESCO site.",
+				"Marzipan was made famous here, and Thomas Mann set Buddenbrooks in his own family’s town."
+			],
+			"it": [
+				"Dallo slavo Liubice, \"la graziosa\".",
+				"Fu la regina della Lega anseatica, che di fatto guidò per due secoli, e il suo centro storico è patrimonio UNESCO.",
+				"Qui il marzapane divenne famoso, e Thomas Mann ambientò I Buddenbrook nella città della sua famiglia."
+			],
+			"de": [
+				"Vom slawischen Liubice, „die Liebliche“.",
+				"Sie war die Königin der Hanse, die sie zwei Jahrhunderte lang faktisch anführte, und ihre Altstadt ist UNESCO-Welterbe.",
+				"Hier wurde das Marzipan berühmt, und Thomas Mann ließ die Buddenbrooks in der Stadt seiner eigenen Familie spielen."
+			]
+		}
+	},
+	"elmshorn": {
+		"kind": "city",
+		"population": 51375,
+		"populationRank": 50,
+		"region": "Schleswig-Holstein",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"norderstedt": {
+		"kind": "city",
+		"population": 83196,
+		"populationRank": 29,
+		"region": "Schleswig-Holstein",
+		"coastal": false,
+		"position": "north"
+	},
+	"schwerin": {
+		"kind": "city",
+		"population": 97922,
+		"populationRank": 24,
+		"region": "Mecklenburg-Vorpommern",
+		"coastal": false,
+		"position": "north"
+	},
+	"neubrandenburg": {
+		"kind": "city",
+		"population": 59494,
+		"populationRank": 40,
+		"region": "Mecklenburg-Vorpommern",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"hamburg": {
+		"kind": "city",
+		"population": 1869473,
+		"populationRank": 2,
+		"coastal": false,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"From Hammaburg, a castle built in the early ninth century — hamma is a bend in a river, and the Elbe bends here.",
+				"Officially the Free and Hanseatic City: the Hanse's habits of independence are still in its name and in its number plates, HH.",
+				"It has more bridges than Venice, Amsterdam and London combined — around 2,500 of them, over canals and the harbour."
+			],
+			"it": [
+				"Da Hammaburg, un castello costruito all’inizio del IX secolo: hamma è l’ansa di un fiume, e qui l’Elba fa un’ansa.",
+				"Ufficialmente è la Libera e Anseatica Città: l’abitudine all’indipendenza dell’Hansa sopravvive nel nome e nelle targhe, HH.",
+				"Ha più ponti di Venezia, Amsterdam e Londra messe insieme: circa 2.500, sopra i canali e il porto."
+			],
+			"de": [
+				"Von Hammaburg, einer Burg aus dem frühen neunten Jahrhundert – hamma bedeutet Flussbiegung, und die Elbe macht hier eine.",
+				"Offiziell die Freie und Hansestadt: Der Unabhängigkeitssinn der Hanse steckt noch im Namen und im Autokennzeichen HH.",
+				"Es hat mehr Brücken als Venedig, Amsterdam und London zusammen – rund 2.500, über Kanäle und den Hafen."
+			]
+		}
+	},
+	"bremerhaven": {
+		"kind": "city",
+		"population": 118502,
+		"populationRank": 20,
+		"region": "Bremen",
+		"coastal": true,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"\"Bremen’s harbour\" — Bremen bought the land in 1827 because its own river had silted up.",
+				"About seven million emigrants left for America through this port, and a museum tells their story.",
+				"It handles more cars than almost any port in the world."
+			],
+			"it": [
+				"\"Il porto di Brema\": Brema comprò il terreno nel 1827 perché il suo fiume si era insabbiato.",
+				"Da questo porto partirono per l’America circa sette milioni di emigranti, e un museo ne racconta la storia.",
+				"Movimenta più automobili di quasi ogni altro porto del mondo."
+			],
+			"de": [
+				"„Bremens Hafen“ – Bremen kaufte das Land 1827, weil sein eigener Fluss versandet war.",
+				"Rund sieben Millionen Auswanderer verließen über diesen Hafen das Land Richtung Amerika, und ein Museum erzählt ihre Geschichte.",
+				"Hier werden mehr Autos umgeschlagen als in fast jedem anderen Hafen der Welt."
+			]
+		}
+	},
+	"wilhelmshaven": {
+		"kind": "city",
+		"population": 75324,
+		"populationRank": 32,
+		"region": "Niedersachsen",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"luneburg": {
+		"kind": "city",
+		"population": 74502,
+		"populationRank": 34,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "centre"
+	},
+	"oldenburg": {
+		"kind": "city",
+		"population": 177055,
+		"populationRank": 16,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"\"Old fortress\" — a castle on the Hunte.",
+				"Its grand dukes stayed neutral long enough to keep the town out of most German wars.",
+				"It has one of the highest shares of cyclists in Germany, and its horse breed is known worldwide."
+			],
+			"it": [
+				"\"Vecchia fortezza\": un castello sulla Hunte.",
+				"I suoi granduchi rimasero neutrali abbastanza a lungo da tenere la città fuori dalla maggior parte delle guerre tedesche.",
+				"Ha una delle quote di ciclisti più alte della Germania, e la sua razza di cavalli è nota in tutto il mondo."
+			],
+			"de": [
+				"„Alte Burg“ – eine Burg an der Hunte.",
+				"Seine Großherzöge blieben lange genug neutral, um die Stadt aus den meisten deutschen Kriegen herauszuhalten.",
+				"Sie hat einen der höchsten Radfahreranteile Deutschlands, und die hier gezüchtete Pferderasse ist weltweit bekannt."
+			]
+		}
+	},
+	"bremen": {
+		"kind": "city",
+		"population": 588413,
+		"populationRank": 4,
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"From bremo, Old Saxon for \"edge\" — the town sat on the bank of the Weser where the ground rose above the marsh.",
+				"The smallest state, and a strange shape: it is two cities, Bremen and Bremerhaven, 60 km apart with Niedersachsen in between.",
+				"The Bremen Town Musicians of the fairy tale never actually reach Bremen, but the statue of them is the city’s best-known landmark."
+			],
+			"it": [
+				"Da bremo, \"orlo\" in antico sassone: la città sorgeva sulla riva del Weser, dove il terreno si alzava sopra la palude.",
+				"Il Land più piccolo, e dalla forma strana: sono due città, Brema e Bremerhaven, a 60 km l’una dall’altra, con la Bassa Sassonia in mezzo.",
+				"I musicanti di Brema della fiaba a Brema non ci arrivano mai, ma la loro statua è il monumento più noto della città."
+			],
+			"de": [
+				"Von bremo, altsächsisch für „Rand“ – die Stadt lag am Weserufer, wo das Land aus der Marsch aufstieg.",
+				"Das kleinste Bundesland und von seltsamer Gestalt: Es besteht aus zwei Städten, Bremen und Bremerhaven, 60 km voneinander entfernt, mit Niedersachsen dazwischen.",
+				"Die Bremer Stadtmusikanten aus dem Märchen kommen nie in Bremen an, doch ihre Statue ist das bekannteste Wahrzeichen der Stadt."
+			]
+		}
+	},
+	"delmenhorst": {
+		"kind": "city",
+		"population": 81274,
+		"populationRank": 30,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "west"
+	},
+	"celle": {
+		"kind": "city",
+		"population": 66930,
+		"populationRank": 36,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "centre"
+	},
+	"lingen": {
+		"kind": "city",
+		"population": 56539,
+		"populationRank": 44,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "west"
+	},
+	"berlin": {
+		"kind": "city",
+		"population": 3913644,
+		"populationRank": 1,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Not the bear: it is most likely Slavic berl-, a swamp — the bear on the coat of arms is a pun that came later and stuck.",
+				"An island in Brandenburg, and its own state; the two voted on merging in 1996 and said no.",
+				"It has more museums than rainy days a year, and the Wall ran 155 km through and around it for 28 years."
+			],
+			"it": [
+				"Non viene dall’orso: molto probabilmente è lo slavo berl-, \"palude\"; l’orso dello stemma è un gioco di parole venuto dopo, che ha attecchito.",
+				"Un’isola dentro il Brandeburgo, e un Land a sé; i due votarono sulla fusione nel 1996, e dissero no.",
+				"Ha più musei che giorni di pioggia all’anno, e per 28 anni il Muro l’ha attraversata e circondata per 155 km."
+			],
+			"de": [
+				"Nicht der Bär: Wahrscheinlich steckt slawisch berl- darin, „Sumpf“ – der Bär im Wappen ist ein Wortspiel, das erst später kam und blieb.",
+				"Eine Insel in Brandenburg und doch ein eigenes Land; 1996 stimmten beide über eine Fusion ab und sagten Nein.",
+				"Es hat mehr Museen, als das Jahr Regentage hat, und die Mauer verlief 28 Jahre lang auf 155 km durch und um die Stadt."
+			]
+		}
+	},
+	"langenhagen": {
+		"kind": "city",
+		"population": 54059,
+		"populationRank": 48,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "centre"
+	},
+	"nordhorn": {
+		"kind": "city",
+		"population": 57372,
+		"populationRank": 42,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "west"
+	},
+	"wolfsburg": {
+		"kind": "city",
+		"population": 129813,
+		"populationRank": 19,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "centre"
+	},
+	"garbsen": {
+		"kind": "city",
+		"population": 60007,
+		"populationRank": 39,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "west"
+	},
+	"brandenburg-an-der-havel": {
+		"kind": "city",
+		"population": 73945,
+		"populationRank": 35,
+		"region": "Brandenburg",
+		"coastal": false,
+		"position": "east"
+	},
+	"potsdam": {
+		"kind": "city",
+		"population": 185137,
+		"populationRank": 15,
+		"region": "Brandenburg",
+		"coastal": false,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"From Slavic Poztupimi, probably \"beneath the oaks\".",
+				"Frederick the Great built Sanssouci here as his summer retreat; its palaces and parks are a UNESCO site.",
+				"The 1945 conference that divided post-war Europe was held at Cecilienhof in the town."
+			],
+			"it": [
+				"Dallo slavo Poztupimi, probabilmente \"sotto le querce\".",
+				"Federico il Grande vi costruì Sanssouci come residenza estiva; i suoi palazzi e parchi sono patrimonio UNESCO.",
+				"La conferenza del 1945 che divise l’Europa del dopoguerra si tenne in città, al Cecilienhof."
+			],
+			"de": [
+				"Vom slawischen Poztupimi, wahrscheinlich „unter den Eichen“.",
+				"Friedrich der Große ließ hier Sanssouci als Sommersitz bauen; seine Schlösser und Parks sind UNESCO-Welterbe.",
+				"Die Konferenz von 1945, die das Nachkriegseuropa aufteilte, fand im Schloss Cecilienhof in der Stadt statt."
+			]
+		}
+	},
+	"hannover": {
+		"kind": "city",
+		"population": 522803,
+		"populationRank": 6,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"\"High bank\" — hohes Ufer, the raised ground above the Leine.",
+				"Its electors became kings of Britain in 1714, so Britain and Hanover shared a monarch for 123 years.",
+				"Leibniz worked here for forty years as court librarian, and the city’s Herrenhausen gardens are baroque in the Dutch manner."
+			],
+			"it": [
+				"\"Riva alta\": hohes Ufer, il terreno rialzato sopra la Leine.",
+				"I suoi principi elettori divennero re di Gran Bretagna nel 1714, così Gran Bretagna e Hannover ebbero lo stesso sovrano per 123 anni.",
+				"Leibniz vi lavorò per quarant’anni come bibliotecario di corte, e i giardini di Herrenhausen sono barocchi alla maniera olandese."
+			],
+			"de": [
+				"„Am hohen Ufer“ – dem erhöhten Gelände über der Leine.",
+				"Seine Kurfürsten wurden 1714 Könige von Großbritannien, sodass Großbritannien und Hannover 123 Jahre lang einen Monarchen teilten.",
+				"Leibniz arbeitete vierzig Jahre lang als Hofbibliothekar hier, und die Herrenhäuser Gärten der Stadt sind barock nach niederländischer Art."
+			]
+		}
+	},
+	"frankfurt-oder": {
+		"kind": "city",
+		"population": 56586,
+		"populationRank": 43,
+		"region": "Brandenburg",
+		"coastal": false,
+		"position": "east"
+	},
+	"peine": {
+		"kind": "city",
+		"population": 51005,
+		"populationRank": 51,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "centre"
+	},
+	"osnabruck": {
+		"kind": "city",
+		"population": 166257,
+		"populationRank": 17,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"\"Bridge over the Hase\" — Osna is probably an older name for the river, plus Brücke.",
+				"Half of the Peace of Westphalia was negotiated here in 1648, the other half in Münster; it ended the Thirty Years’ War.",
+				"Erich Maria Remarque, who wrote All Quiet on the Western Front, was born in the town."
+			],
+			"it": [
+				"\"Ponte sulla Hase\": Osna è probabilmente un nome più antico del fiume, più Brücke.",
+				"Metà della pace di Vestfalia fu negoziata qui nel 1648, l’altra metà a Münster; mise fine alla guerra dei Trent’anni.",
+				"Erich Maria Remarque, autore di Niente di nuovo sul fronte occidentale, nacque in questa città."
+			],
+			"de": [
+				"„Brücke über die Hase“ – Osna ist wahrscheinlich ein älterer Name des Flusses, dazu Brücke.",
+				"Die eine Hälfte des Westfälischen Friedens wurde hier 1648 ausgehandelt, die andere in Münster; er beendete den Dreißigjährigen Krieg.",
+				"Erich Maria Remarque, der „Im Westen nichts Neues“ schrieb, wurde in der Stadt geboren."
+			]
+		}
+	},
+	"braunschweig": {
+		"kind": "city",
+		"population": 252811,
+		"populationRank": 7,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"\"Bruno’s settlement\" — the English call it Brunswick, which is the same name.",
+				"Henry the Lion made it his capital and put a bronze lion in the square in 1166, the first free-standing sculpture north of the Alps.",
+				"Gauss was born here and studied at its university, the oldest technical university in Germany."
+			],
+			"it": [
+				"\"L’insediamento di Bruno\": gli inglesi la chiamano Brunswick, ed è lo stesso nome.",
+				"Enrico il Leone ne fece la sua capitale e nel 1166 pose in piazza un leone di bronzo, la prima scultura a tutto tondo a nord delle Alpi.",
+				"Gauss vi nacque e studiò nella sua università, il più antico politecnico della Germania."
+			],
+			"de": [
+				"„Brunos Siedlung“ – die Engländer sagen Brunswick, was derselbe Name ist.",
+				"Heinrich der Löwe machte sie zu seiner Hauptstadt und stellte 1166 einen Bronzelöwen auf den Platz, die erste frei stehende Skulptur nördlich der Alpen.",
+				"Gauß wurde hier geboren und studierte an ihrer Universität, der ältesten Technischen Universität Deutschlands."
+			]
+		}
+	},
+	"wolfenbuttel": {
+		"kind": "city",
+		"population": 52511,
+		"populationRank": 49,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "centre"
+	},
+	"salzgitter": {
+		"kind": "city",
+		"population": 104433,
+		"populationRank": 22,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "centre"
+	},
+	"hildesheim": {
+		"kind": "city",
+		"population": 98207,
+		"populationRank": 23,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "centre"
+	},
+	"magdeburg": {
+		"kind": "city",
+		"population": 244494,
+		"populationRank": 10,
+		"region": "Sachsen-Anhalt",
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"\"Mighty fortress\" or \"maidens’ fortress\" — magd can mean either, and the maiden is on the city arms.",
+				"Otto von Guericke, its mayor, proved the force of a vacuum in 1654 with two copper hemispheres that sixteen horses could not pull apart.",
+				"The city was destroyed in 1631 in one of the worst atrocities of the Thirty Years’ War, and \"magdeburgisation\" became a word for total destruction."
+			],
+			"it": [
+				"\"Fortezza potente\" o \"fortezza delle fanciulle\": magd può voler dire l’una o l’altra cosa, e la fanciulla è nello stemma della città.",
+				"Otto von Guericke, il suo borgomastro, dimostrò nel 1654 la forza del vuoto con due emisferi di rame che sedici cavalli non riuscirono a separare.",
+				"Nel 1631 la città fu distrutta in una delle peggiori atrocità della guerra dei Trent’anni, e \"magdeburghizzazione\" divenne sinonimo di distruzione totale."
+			],
+			"de": [
+				"„Mächtige Burg“ oder „Burg der Jungfrauen“ – magd kann beides heißen, und die Jungfrau ist im Stadtwappen.",
+				"Otto von Guericke, ihr Bürgermeister, bewies 1654 mit zwei Kupferhalbkugeln, die sechzehn Pferde nicht auseinanderziehen konnten, die Kraft des Vakuums.",
+				"Die Stadt wurde 1631 in einer der schlimmsten Gräueltaten des Dreißigjährigen Krieges zerstört, und „magdeburgisieren“ wurde zum Wort für totale Vernichtung."
+			]
+		}
+	},
+	"hameln": {
+		"kind": "city",
+		"population": 58152,
+		"populationRank": 41,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "west"
+	},
+	"dessau-ro-lau": {
+		"kind": "city",
+		"population": 75035,
+		"populationRank": 33,
+		"region": "Sachsen-Anhalt",
+		"coastal": false,
+		"position": "south"
+	},
+	"cottbus": {
+		"kind": "city",
+		"population": 95140,
+		"populationRank": 27,
+		"region": "Brandenburg",
+		"coastal": false,
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"From a Slavic personal name, Chotibud.",
+				"It is the cultural centre of the Sorbs, a Slavic people with their own language, and signs are bilingual.",
+				"Its Branitz park was landscaped by Prince Pückler, who is buried under an earth pyramid in a lake there."
+			],
+			"it": [
+				"Da un nome di persona slavo, Chotibud.",
+				"È il centro culturale dei Sorbi, un popolo slavo con una lingua propria, e i cartelli sono bilingui.",
+				"Il suo parco di Branitz fu disegnato dal principe Pückler, che vi è sepolto sotto una piramide di terra in mezzo a un lago."
+			],
+			"de": [
+				"Von einem slawischen Personennamen, Chotibud.",
+				"Es ist das kulturelle Zentrum der Sorben, eines slawischen Volkes mit eigener Sprache, und die Schilder sind zweisprachig.",
+				"Der Branitzer Park wurde von Fürst Pückler angelegt, der dort unter einer Erdpyramide in einem See begraben liegt."
+			]
+		}
+	},
+	"gottingen": {
+		"kind": "city",
+		"population": 130521,
+		"populationRank": 18,
+		"region": "Niedersachsen",
+		"coastal": false,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"From a village called Gutingi, \"by the stream of Gota\".",
+				"Its university has produced over forty Nobel laureates, and the Göttingen school effectively created modern mathematics and quantum physics.",
+				"The Göttingen Seven, professors dismissed in 1837 for protesting against a king, became a symbol of academic freedom."
+			],
+			"it": [
+				"Da un villaggio chiamato Gutingi, \"presso il ruscello di Gota\".",
+				"La sua università ha prodotto oltre quaranta premi Nobel, e la scuola di Gottinga ha di fatto creato la matematica moderna e la fisica quantistica.",
+				"I Sette di Gottinga, professori licenziati nel 1837 per aver protestato contro un re, divennero un simbolo della libertà accademica."
+			],
+			"de": [
+				"Von einem Dorf namens Gutingi, „am Bach der Gota“.",
+				"Seine Universität hat über vierzig Nobelpreisträger hervorgebracht, und die Göttinger Schule hat die moderne Mathematik und Quantenphysik gewissermaßen erst geschaffen.",
+				"Die Göttinger Sieben, 1837 entlassene Professoren, die gegen einen König protestiert hatten, wurden zum Symbol der akademischen Freiheit."
+			]
+		}
+	},
+	"halle-saale": {
+		"kind": "city",
+		"population": 226186,
+		"populationRank": 11,
+		"region": "Sachsen-Anhalt",
+		"coastal": false,
+		"position": "south"
+	},
+	"leipzig": {
+		"kind": "city",
+		"population": 633592,
+		"populationRank": 3,
+		"region": "Sachsen",
+		"coastal": false,
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"From Slavic Lipsk, \"place of lime trees\".",
+				"Bach was cantor at the Thomaskirche for 27 years and is buried in it.",
+				"The Monday demonstrations that brought down East Germany began at its Nikolaikirche in 1989."
+			],
+			"it": [
+				"Dallo slavo Lipsk, \"luogo dei tigli\".",
+				"Bach fu Kantor alla Thomaskirche per 27 anni, e vi è sepolto.",
+				"Le manifestazioni del lunedì che fecero cadere la Germania Est partirono nel 1989 dalla sua Nikolaikirche."
+			],
+			"de": [
+				"Vom slawischen Lipsk, „Ort der Linden“.",
+				"Bach war 27 Jahre lang Thomaskantor und liegt in der Thomaskirche begraben.",
+				"Die Montagsdemonstrationen, die die DDR zu Fall brachten, begannen 1989 an ihrer Nikolaikirche."
+			]
+		}
+	},
+	"gorlitz": {
+		"kind": "city",
+		"population": 55065,
+		"populationRank": 47,
+		"region": "Sachsen",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"dresden": {
+		"kind": "city",
+		"population": 562764,
+		"populationRank": 5,
+		"region": "Sachsen",
+		"coastal": false,
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"From Sorbian Drežďany, \"people of the riverside forest\".",
+				"It was firebombed in February 1945, and its Frauenkirche was rebuilt from the rubble stone by numbered stone, finishing in 2005.",
+				"Its Green Vault holds the largest treasure collection in Europe, and European porcelain was invented in the city in 1708."
+			],
+			"it": [
+				"Dal sorabo Drežďany, \"gente del bosco sul fiume\".",
+				"Nel febbraio 1945 fu colpita da bombardamenti incendiari, e la sua Frauenkirche fu ricostruita dalle macerie, pietra per pietra, ognuna numerata: i lavori finirono nel 2005.",
+				"La sua Volta Verde custodisce la più grande collezione di tesori d’Europa, e la porcellana europea fu inventata in città nel 1708."
+			],
+			"de": [
+				"Vom sorbischen Drežďany, „Leute des Uferwaldes“.",
+				"Im Februar 1945 wurde die Stadt durch Brandbomben zerstört, und ihre Frauenkirche wurde aus den Trümmern Stein für nummerierten Stein wieder aufgebaut, bis 2005.",
+				"Ihr Grünes Gewölbe birgt die größte Schatzsammlung Europas, und das europäische Porzellan wurde 1708 in der Stadt erfunden."
+			]
+		}
+	},
+	"weimar": {
+		"kind": "city",
+		"population": 65566,
+		"populationRank": 37,
+		"region": "Thüringen",
+		"coastal": false,
+		"position": "south"
+	},
+	"erfurt": {
+		"kind": "city",
+		"population": 217159,
+		"populationRank": 12,
+		"region": "Thüringen",
+		"coastal": false,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"From an older name meaning the ford across the Erpf or a muddy ford.",
+				"Luther was a monk here, and its Krämerbrücke is the longest inhabited bridge in Europe, with shops on it since 1325.",
+				"Its Old Synagogue is the oldest standing in Europe, and a UNESCO site."
+			],
+			"it": [
+				"Da un nome più antico che significa il guado sull’Erpf, o un guado fangoso.",
+				"Lutero vi fu monaco, e il suo Krämerbrücke è il ponte abitato più lungo d’Europa, con botteghe sopra fin dal 1325.",
+				"La sua Sinagoga Vecchia è la più antica ancora in piedi in Europa, ed è patrimonio UNESCO."
+			],
+			"de": [
+				"Von einem älteren Namen, der die Furt über die Erpf oder eine schlammige Furt bedeutet.",
+				"Luther war hier Mönch, und die Krämerbrücke ist die längste bewohnte Brücke Europas, mit Läden darauf seit 1325.",
+				"Ihre Alte Synagoge ist die älteste erhaltene Europas und UNESCO-Welterbe."
+			]
+		}
+	},
+	"jena": {
+		"kind": "city",
+		"population": 109353,
+		"populationRank": 21,
+		"region": "Thüringen",
+		"coastal": false,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"From a Slavic or Germanic word, possibly for a narrow place.",
+				"Carl Zeiss and Ernst Abbe built modern optics here; Abbe also introduced the eight-hour day.",
+				"Hegel finished the Phenomenology of Spirit in the town as Napoleon’s army arrived to fight the battle of Jena in 1806."
+			],
+			"it": [
+				"Da una parola slava o germanica che forse indicava un luogo stretto.",
+				"Carl Zeiss ed Ernst Abbe qui crearono l’ottica moderna; Abbe introdusse anche la giornata di otto ore.",
+				"Hegel terminò qui la Fenomenologia dello spirito proprio mentre arrivava l’esercito di Napoleone, per la battaglia di Jena del 1806."
+			],
+			"de": [
+				"Von einem slawischen oder germanischen Wort, möglicherweise für eine enge Stelle.",
+				"Carl Zeiss und Ernst Abbe schufen hier die moderne Optik; Abbe führte auch den Achtstundentag ein.",
+				"Hegel vollendete in der Stadt die Phänomenologie des Geistes, als Napoleons Heer zur Schlacht bei Jena 1806 anrückte."
+			]
+		}
+	},
+	"gera": {
+		"kind": "city",
+		"population": 95162,
+		"populationRank": 26,
+		"region": "Thüringen",
+		"coastal": false,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Named for the river Gera, a name of Germanic or older origin.",
+				"It was a centre of East German uranium mining through the Wismut company, which was kept secret for decades.",
+				"Otto Dix, whose paintings of the First World War are among the most unflinching made, was born here."
+			],
+			"it": [
+				"Prende il nome dal fiume Gera, un nome di origine germanica o ancora più antica.",
+				"Fu un centro dell’estrazione di uranio della Germania Est, attraverso la società Wismut, tenuta segreta per decenni.",
+				"Qui nacque Otto Dix, i cui dipinti della Prima guerra mondiale sono tra i più crudi mai realizzati."
+			],
+			"de": [
+				"Benannt nach dem Fluss Gera, einem Namen germanischen oder älteren Ursprungs.",
+				"Es war ein Zentrum des DDR-Uranbergbaus durch die Wismut, die jahrzehntelang geheim gehalten wurde.",
+				"Otto Dix, dessen Bilder vom Ersten Weltkrieg zu den schonungslosesten überhaupt gehören, wurde hier geboren."
+			]
+		}
+	},
+	"chemnitz": {
+		"kind": "city",
+		"population": 247252,
+		"populationRank": 9,
+		"region": "Sachsen",
+		"coastal": false,
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"From Sorbian kamjenica, \"stony brook\".",
+				"It was Karl-Marx-Stadt from 1953 to 1990 and still has a 7 m bronze Marx head in the centre.",
+				"It was the most industrialised German city per head around 1900, called the Saxon Manchester."
+			],
+			"it": [
+				"Dal sorabo kamjenica, \"ruscello sassoso\".",
+				"Dal 1953 al 1990 si chiamò Karl-Marx-Stadt, e in centro ha ancora una testa di Marx in bronzo alta 7 m.",
+				"Intorno al 1900 era la città tedesca più industrializzata per abitante, e la chiamavano la Manchester sassone."
+			],
+			"de": [
+				"Vom sorbischen kamjenica, „steiniger Bach“.",
+				"Von 1953 bis 1990 hieß es Karl-Marx-Stadt und hat im Zentrum noch immer einen 7 m hohen Marx-Kopf aus Bronze.",
+				"Um 1900 war es pro Kopf die am stärksten industrialisierte deutsche Stadt, das „sächsische Manchester“."
+			]
+		}
+	},
+	"zwickau": {
+		"kind": "city",
+		"population": 86405,
+		"populationRank": 28,
+		"region": "Sachsen",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"plauen": {
+		"kind": "city",
+		"population": 64893,
+		"populationRank": 38,
+		"region": "Sachsen",
+		"coastal": false,
+		"position": "south"
+	}
+}

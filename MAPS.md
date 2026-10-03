@@ -975,6 +975,37 @@ npx tsx data/scripts/build-facts.ts --map=<each of the above>
 | germany-towns-southwest | 27 700 | 6.2 km |
 | germany-towns-southeast | 22 011 | 5.2 km |
 
+### Towns of 50 000 and up: Germany and Italy (built 2026-10-03, v0.17, #163)
+
+All eight are advanced maps (shown with "Show detailed maps"). Wikidata, as
+for the six German parts above; `fetch-wikidata-places.ts` now also does Italy:
+the comuni (instances of Q747074) with an ISTAT code (P635), the region taken
+from the first three digits of the code (the province, numbered alphabetically
+by region), names in Italian. `data/places/italy.geojson` is the snapshot
+(199 comuni of 40 000 and up).
+
+```
+npx tsx data/scripts/fetch-wikidata-places.ts --country=italy --min-population=40000
+G=(--country=Germany --source=data/places/germany.geojson --min-population=50000 --min-spacing=5)
+I=(--country=Italy --source=data/places/italy.geojson --min-population=50000 --min-spacing=5)
+npx tsx data/scripts/build-points-map.ts "${G[@]}" --out=data/maps/germany-towns-50k --name="Germany — Towns 50k+"
+npx tsx data/scripts/build-points-map.ts "${G[@]}" --admin1="Schleswig-Holstein,Hamburg,Niedersachsen,Bremen,Mecklenburg-Vorpommern,Brandenburg,Berlin,Sachsen-Anhalt,Sachsen,Thüringen" --out=data/maps/germany-towns-50k-north --name="Germany — Towns 50k+ — North"
+npx tsx data/scripts/build-points-map.ts "${G[@]}" --admin1="Nordrhein-Westfalen" --out=data/maps/germany-towns-50k-center --name="Germany — Towns 50k+ — Center"
+npx tsx data/scripts/build-points-map.ts "${G[@]}" --admin1="Hessen,Rheinland-Pfalz,Saarland,Baden-Württemberg,Bayern" --out=data/maps/germany-towns-50k-south --name="Germany — Towns 50k+ — South"
+npx tsx data/scripts/build-points-map.ts "${I[@]}" --out=data/maps/italy-towns-50k --name="Italy — Towns 50k+"
+npx tsx data/scripts/build-points-map.ts "${I[@]}" --admin1="Piemonte,Valle d'Aosta,Lombardia,Liguria,Trentino-Alto Adige,Veneto,Friuli-Venezia Giulia,Emilia-Romagna" --out=data/maps/italy-towns-50k-north --name="Italy — Towns 50k+ — North"
+npx tsx data/scripts/build-points-map.ts "${I[@]}" --admin1="Toscana,Umbria,Marche,Lazio,Abruzzo" --out=data/maps/italy-towns-50k-center --name="Italy — Towns 50k+ — Center"
+npx tsx data/scripts/build-points-map.ts "${I[@]}" --admin1="Molise,Campania,Puglia,Basilicata,Calabria,Sicilia,Sardegna" --out=data/maps/italy-towns-50k-south --name="Italy — Towns 50k+ — South"
+```
+
+| Map | Towns |
+|---|---|
+| germany-towns-50k | 190 (north 51, center = North Rhine-Westphalia 76, south 63) |
+| italy-towns-50k | 132 (north 46, center 32, south incl. islands 54) |
+
+Germany's thirds are by state and uneven because North Rhine-Westphalia alone
+has 76 towns over 50 000; "south" holds Hesse and Rhineland-Palatinate.
+
 ### Admin-2, and four new countries (built 2026-09-24, #39 batch D)
 
 The rules are in DECISIONS.md, "Admin-2 maps, and the first boundaries not in

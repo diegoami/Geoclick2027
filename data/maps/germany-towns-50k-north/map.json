@@ -1,0 +1,981 @@
+{
+	"id": "germany-towns-50k-north",
+	"name": "Germany — Towns 50k+ — North",
+	"country": "Germany",
+	"attribution": "Wikidata (CC0), https://www.wikidata.org; Natural Earth (public domain), https://www.naturalearthdata.com",
+	"placesSource": "data/places/germany.geojson",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "flensburg",
+			"name": "Flensburg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.43667,
+				54.78194
+			],
+			"bbox": [
+				9.43667,
+				54.78194,
+				9.43667,
+				54.78194
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "kiel",
+			"name": "Kiel",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.13944,
+				54.32333
+			],
+			"bbox": [
+				10.13944,
+				54.32333,
+				10.13944,
+				54.32333
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "stralsund",
+			"name": "Stralsund",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.08194,
+				54.30917
+			],
+			"bbox": [
+				13.08194,
+				54.30917,
+				13.08194,
+				54.30917
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "rostock",
+			"name": "Rostock",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.13333,
+				54.08333
+			],
+			"bbox": [
+				12.13333,
+				54.08333,
+				12.13333,
+				54.08333
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "greifswald",
+			"name": "Greifswald",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.38333,
+				54.08333
+			],
+			"bbox": [
+				13.38333,
+				54.08333,
+				13.38333,
+				54.08333
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "neumunster",
+			"name": "Neumünster",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.99,
+				54.07139
+			],
+			"bbox": [
+				9.99,
+				54.07139,
+				9.99,
+				54.07139
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "lubeck",
+			"name": "Lübeck",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.68639,
+				53.86972
+			],
+			"bbox": [
+				10.68639,
+				53.86972,
+				10.68639,
+				53.86972
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "elmshorn",
+			"name": "Elmshorn",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.65361,
+				53.75472
+			],
+			"bbox": [
+				9.65361,
+				53.75472,
+				9.65361,
+				53.75472
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "norderstedt",
+			"name": "Norderstedt",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.01028,
+				53.70639
+			],
+			"bbox": [
+				10.01028,
+				53.70639,
+				10.01028,
+				53.70639
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "schwerin",
+			"name": "Schwerin",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.415,
+				53.62889
+			],
+			"bbox": [
+				11.415,
+				53.62889,
+				11.415,
+				53.62889
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "neubrandenburg",
+			"name": "Neubrandenburg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.26083,
+				53.55694
+			],
+			"bbox": [
+				13.26083,
+				53.55694,
+				13.26083,
+				53.55694
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "hamburg",
+			"name": "Hamburg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10,
+				53.55
+			],
+			"bbox": [
+				10,
+				53.55,
+				10,
+				53.55
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "bremerhaven",
+			"name": "Bremerhaven",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.58333,
+				53.55
+			],
+			"bbox": [
+				8.58333,
+				53.55,
+				8.58333,
+				53.55
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "wilhelmshaven",
+			"name": "Wilhelmshaven",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.10556,
+				53.52861
+			],
+			"bbox": [
+				8.10556,
+				53.52861,
+				8.10556,
+				53.52861
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "luneburg",
+			"name": "Lüneburg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.41444,
+				53.2525
+			],
+			"bbox": [
+				10.41444,
+				53.2525,
+				10.41444,
+				53.2525
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "oldenburg",
+			"name": "Oldenburg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.21389,
+				53.14389
+			],
+			"bbox": [
+				8.21389,
+				53.14389,
+				8.21389,
+				53.14389
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "bremen",
+			"name": "Bremen",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.80722,
+				53.07583
+			],
+			"bbox": [
+				8.80722,
+				53.07583,
+				8.80722,
+				53.07583
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "delmenhorst",
+			"name": "Delmenhorst",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.63167,
+				53.05056
+			],
+			"bbox": [
+				8.63167,
+				53.05056,
+				8.63167,
+				53.05056
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "celle",
+			"name": "Celle",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.0825,
+				52.62556
+			],
+			"bbox": [
+				10.0825,
+				52.62556,
+				10.0825,
+				52.62556
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "lingen",
+			"name": "Lingen",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.31722,
+				52.52333
+			],
+			"bbox": [
+				7.31722,
+				52.52333,
+				7.31722,
+				52.52333
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "berlin",
+			"name": "Berlin",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.38333,
+				52.51667
+			],
+			"bbox": [
+				13.38333,
+				52.51667,
+				13.38333,
+				52.51667
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "langenhagen",
+			"name": "Langenhagen",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.74,
+				52.43944
+			],
+			"bbox": [
+				9.74,
+				52.43944,
+				9.74,
+				52.43944
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "nordhorn",
+			"name": "Nordhorn",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.06667,
+				52.43333
+			],
+			"bbox": [
+				7.06667,
+				52.43333,
+				7.06667,
+				52.43333
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "wolfsburg",
+			"name": "Wolfsburg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.78722,
+				52.42306
+			],
+			"bbox": [
+				10.78722,
+				52.42306,
+				10.78722,
+				52.42306
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "garbsen",
+			"name": "Garbsen",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.59806,
+				52.41833
+			],
+			"bbox": [
+				9.59806,
+				52.41833,
+				9.59806,
+				52.41833
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "brandenburg-an-der-havel",
+			"name": "Brandenburg an der Havel",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.55408,
+				52.41414
+			],
+			"bbox": [
+				12.55408,
+				52.41414,
+				12.55408,
+				52.41414
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "potsdam",
+			"name": "Potsdam",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.05914,
+				52.40093
+			],
+			"bbox": [
+				13.05914,
+				52.40093,
+				13.05914,
+				52.40093
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "hannover",
+			"name": "Hannover",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.73861,
+				52.37444
+			],
+			"bbox": [
+				9.73861,
+				52.37444,
+				9.73861,
+				52.37444
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "frankfurt-oder",
+			"name": "Frankfurt (Oder)",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.55167,
+				52.34208
+			],
+			"bbox": [
+				14.55167,
+				52.34208,
+				14.55167,
+				52.34208
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "peine",
+			"name": "Peine",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.23361,
+				52.32028
+			],
+			"bbox": [
+				10.23361,
+				52.32028,
+				10.23361,
+				52.32028
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "osnabruck",
+			"name": "Osnabrück",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.04306,
+				52.27889
+			],
+			"bbox": [
+				8.04306,
+				52.27889,
+				8.04306,
+				52.27889
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "braunschweig",
+			"name": "Braunschweig",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.52111,
+				52.26917
+			],
+			"bbox": [
+				10.52111,
+				52.26917,
+				10.52111,
+				52.26917
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "wolfenbuttel",
+			"name": "Wolfenbüttel",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.53694,
+				52.16222
+			],
+			"bbox": [
+				10.53694,
+				52.16222,
+				10.53694,
+				52.16222
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "salzgitter",
+			"name": "Salzgitter",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.35931,
+				52.15028
+			],
+			"bbox": [
+				10.35931,
+				52.15028,
+				10.35931,
+				52.15028
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "hildesheim",
+			"name": "Hildesheim",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.95,
+				52.15
+			],
+			"bbox": [
+				9.95,
+				52.15,
+				9.95,
+				52.15
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "magdeburg",
+			"name": "Magdeburg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.63996,
+				52.13159
+			],
+			"bbox": [
+				11.63996,
+				52.13159,
+				11.63996,
+				52.13159
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "hameln",
+			"name": "Hameln",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.36,
+				52.10306
+			],
+			"bbox": [
+				9.36,
+				52.10306,
+				9.36,
+				52.10306
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "dessau-ro-lau",
+			"name": "Dessau-Roßlau",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.23333,
+				51.83333
+			],
+			"bbox": [
+				12.23333,
+				51.83333,
+				12.23333,
+				51.83333
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "cottbus",
+			"name": "Cottbus",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.33186,
+				51.76081
+			],
+			"bbox": [
+				14.33186,
+				51.76081,
+				14.33186,
+				51.76081
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "gottingen",
+			"name": "Göttingen",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.93556,
+				51.53389
+			],
+			"bbox": [
+				9.93556,
+				51.53389,
+				9.93556,
+				51.53389
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "halle-saale",
+			"name": "Halle (Saale)",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.96972,
+				51.48278
+			],
+			"bbox": [
+				11.96972,
+				51.48278,
+				11.96972,
+				51.48278
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "leipzig",
+			"name": "Leipzig",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.37473,
+				51.34063
+			],
+			"bbox": [
+				12.37473,
+				51.34063,
+				12.37473,
+				51.34063
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "gorlitz",
+			"name": "Görlitz",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.99102,
+				51.15632
+			],
+			"bbox": [
+				14.99102,
+				51.15632,
+				14.99102,
+				51.15632
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "dresden",
+			"name": "Dresden",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.73814,
+				51.04933
+			],
+			"bbox": [
+				13.73814,
+				51.04933,
+				13.73814,
+				51.04933
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "weimar",
+			"name": "Weimar",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.32944,
+				50.98111
+			],
+			"bbox": [
+				11.32944,
+				50.98111,
+				11.32944,
+				50.98111
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "erfurt",
+			"name": "Erfurt",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.02889,
+				50.97806
+			],
+			"bbox": [
+				11.02889,
+				50.97806,
+				11.02889,
+				50.97806
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "jena",
+			"name": "Jena",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.58639,
+				50.92722
+			],
+			"bbox": [
+				11.58639,
+				50.92722,
+				11.58639,
+				50.92722
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "gera",
+			"name": "Gera",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.08242,
+				50.87818
+			],
+			"bbox": [
+				12.08242,
+				50.87818,
+				12.08242,
+				50.87818
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "chemnitz",
+			"name": "Chemnitz",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.91891,
+				50.83235
+			],
+			"bbox": [
+				12.91891,
+				50.83235,
+				12.91891,
+				50.83235
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "zwickau",
+			"name": "Zwickau",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.49611,
+				50.71889
+			],
+			"bbox": [
+				12.49611,
+				50.71889,
+				12.49611,
+				50.71889
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "plauen",
+			"name": "Plauen",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.13833,
+				50.495
+			],
+			"bbox": [
+				12.13833,
+				50.495,
+				12.13833,
+				50.495
+			],
+			"colorIndex": 2
+		}
+	],
+	"tourOrder": [
+		"flensburg",
+		"kiel",
+		"stralsund",
+		"rostock",
+		"greifswald",
+		"neumunster",
+		"lubeck",
+		"elmshorn",
+		"norderstedt",
+		"schwerin",
+		"neubrandenburg",
+		"hamburg",
+		"bremerhaven",
+		"wilhelmshaven",
+		"luneburg",
+		"oldenburg",
+		"bremen",
+		"delmenhorst",
+		"celle",
+		"lingen",
+		"berlin",
+		"langenhagen",
+		"nordhorn",
+		"wolfsburg",
+		"garbsen",
+		"brandenburg-an-der-havel",
+		"potsdam",
+		"hannover",
+		"frankfurt-oder",
+		"peine",
+		"osnabruck",
+		"braunschweig",
+		"wolfenbuttel",
+		"salzgitter",
+		"hildesheim",
+		"magdeburg",
+		"hameln",
+		"dessau-ro-lau",
+		"cottbus",
+		"gottingen",
+		"halle-saale",
+		"leipzig",
+		"gorlitz",
+		"dresden",
+		"weimar",
+		"erfurt",
+		"jena",
+		"gera",
+		"chemnitz",
+		"zwickau",
+		"plauen"
+	]
+}

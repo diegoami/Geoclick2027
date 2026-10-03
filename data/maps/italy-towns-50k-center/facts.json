@@ -1,0 +1,565 @@
+{
+	"carrara": {
+		"kind": "city",
+		"population": 59905,
+		"populationRank": 24,
+		"region": "Toscana",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"massa": {
+		"kind": "city",
+		"population": 66160,
+		"populationRank": 19,
+		"region": "Toscana",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"pistoia": {
+		"kind": "city",
+		"population": 88990,
+		"populationRank": 12,
+		"region": "Toscana",
+		"coastal": false,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"From Pistoriae, possibly from pistor, a baker.",
+				"The pistol is said by one theory to be named after the town, which made small firearms.",
+				"Its nurseries grow a large share of Europe’s ornamental plants, and the cathedral has a silver altar worked on for two centuries."
+			],
+			"it": [
+				"Da Pistoriae, forse da pistor, \"fornaio\".",
+				"Secondo una teoria la pistola prende il nome dalla città, che fabbricava piccole armi da fuoco.",
+				"I suoi vivai coltivano gran parte delle piante ornamentali d’Europa, e il duomo ha un altare d’argento a cui si lavorò per due secoli."
+			],
+			"de": [
+				"Von Pistoriae, möglicherweise von pistor, einem Bäcker.",
+				"Einer Theorie zufolge soll die Pistole nach der Stadt benannt sein, die kleine Feuerwaffen herstellte.",
+				"Ihre Baumschulen ziehen einen großen Teil der Zierpflanzen Europas, und der Dom hat einen silbernen Altar, an dem zwei Jahrhunderte lang gearbeitet wurde."
+			]
+		}
+	},
+	"pesaro": {
+		"kind": "city",
+		"population": 95376,
+		"populationRank": 11,
+		"region": "Marche",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"prato": {
+		"kind": "city",
+		"population": 195736,
+		"populationRank": 3,
+		"region": "Toscana",
+		"coastal": false,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Italian for \"meadow\" — the field the town grew on.",
+				"It has been a textile city since the Middle Ages and pioneered recycling wool from rags.",
+				"It has one of the largest Chinese communities in Europe, working in its garment trade, and was made a province only in 1992."
+			],
+			"it": [
+				"Il nome dice tutto: il prato su cui la città è cresciuta.",
+				"È città tessile fin dal Medioevo e fu pioniera nel recupero della lana dagli stracci.",
+				"Ha una delle più grandi comunità cinesi d’Europa, impiegata nell’abbigliamento, ed è diventata provincia solo nel 1992."
+			],
+			"de": [
+				"Italienisch für „Wiese“ – das Feld, auf dem die Stadt entstand.",
+				"Sie ist seit dem Mittelalter eine Textilstadt und leistete Pionierarbeit beim Recycling von Wolle aus Lumpen.",
+				"Sie hat eine der größten chinesischen Gemeinden Europas, die in der Bekleidungsbranche arbeitet, und wurde erst 1992 zur Provinz."
+			]
+		}
+	},
+	"viareggio": {
+		"kind": "city",
+		"population": 60579,
+		"populationRank": 22,
+		"region": "Toscana",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"lucca": {
+		"kind": "city",
+		"population": 88798,
+		"populationRank": 13,
+		"region": "Toscana",
+		"coastal": false,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Probably from Ligurian luk, a marshy place, or a Celtic word for a wood.",
+				"Its Renaissance walls survive completely intact and are now a tree-lined park circling the city.",
+				"It was an independent republic for nearly five centuries, and Puccini was born here."
+			],
+			"it": [
+				"Probabilmente dal ligure luk, \"luogo paludoso\", o da una parola celtica per bosco.",
+				"Le sue mura rinascimentali sono giunte intatte fino a noi e oggi sono un parco alberato che corre tutt’intorno alla città.",
+				"Fu una repubblica indipendente per quasi cinque secoli, e qui nacque Puccini."
+			],
+			"de": [
+				"Wahrscheinlich vom ligurischen luk, einem sumpfigen Ort, oder von einem keltischen Wort für einen Wald.",
+				"Ihre Renaissance-Stadtmauern sind vollständig erhalten und heute ein baumbestandener Park rund um die Stadt.",
+				"Sie war fast fünf Jahrhunderte lang eine unabhängige Republik, und Puccini wurde hier geboren."
+			]
+		}
+	},
+	"fano": {
+		"kind": "city",
+		"population": 59909,
+		"populationRank": 23,
+		"region": "Marche",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"firenze": {
+		"kind": "city",
+		"population": 360930,
+		"populationRank": 2,
+		"region": "Toscana",
+		"coastal": false,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"From Florentia, \"flourishing\" — a Roman colony of 59 BC for Caesar’s veterans.",
+				"The Renaissance began here: Brunelleschi’s dome, still the largest masonry dome in the world, was raised without a supporting framework.",
+				"Its dialect became standard Italian because Dante, Petrarch and Boccaccio all wrote in it."
+			],
+			"it": [
+				"Da Florentia, \"la fiorente\": colonia romana del 59 a.C. per i veterani di Cesare.",
+				"Qui è cominciato il Rinascimento: la cupola del Brunelleschi, ancora oggi la più grande cupola in muratura del mondo, fu innalzata senza centine.",
+				"Il suo dialetto è diventato l’italiano perché Dante, Petrarca e Boccaccio scrissero tutti in fiorentino."
+			],
+			"de": [
+				"Von Florentia, „blühend“ – eine römische Kolonie von 59 v. Chr. für Caesars Veteranen.",
+				"Die Renaissance begann hier: Brunelleschis Kuppel, noch immer die größte gemauerte Kuppel der Welt, wurde ohne tragendes Gerüst errichtet.",
+				"Ihr Dialekt wurde zum Standarditalienisch, weil Dante, Petrarca und Boccaccio alle darin schrieben."
+			]
+		}
+	},
+	"pisa": {
+		"kind": "city",
+		"population": 88737,
+		"populationRank": 14,
+		"region": "Toscana",
+		"coastal": true,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Probably from a Ligurian or Greek word for a river mouth or marshy ground.",
+				"Its tower began leaning before the third storey was finished, because the ground is soft on one side; it took 199 years to build.",
+				"Pisa was a maritime republic that once rivalled Genoa, and Galileo was born here."
+			],
+			"it": [
+				"Probabilmente da una parola ligure o greca per una foce di fiume o un terreno paludoso.",
+				"La sua torre cominciò a pendere prima che fosse finito il terzo piano, perché da un lato il terreno è cedevole; per costruirla ci vollero 199 anni.",
+				"Pisa fu una repubblica marinara che un tempo rivaleggiava con Genova, e qui nacque Galileo."
+			],
+			"de": [
+				"Wahrscheinlich von einem ligurischen oder griechischen Wort für eine Flussmündung oder sumpfigen Boden.",
+				"Ihr Turm begann zu neigen, bevor das dritte Geschoss fertig war, weil der Boden auf einer Seite weich ist; der Bau dauerte 199 Jahre.",
+				"Pisa war eine Seerepublik, die einst mit Genua rivalisierte, und Galilei wurde hier geboren."
+			]
+		}
+	},
+	"ancona": {
+		"kind": "city",
+		"population": 98356,
+		"populationRank": 9,
+		"region": "Marche",
+		"coastal": true,
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"From Greek ankon, \"elbow\" — the shape of its promontory; it was founded by Greeks from Syracuse.",
+				"Its harbour is the only one on the Adriatic coast that faces east, so the sun both rises and sets over the sea.",
+				"Trajan’s arch of 115 AD still stands on the quay, built to thank him for paying for the port."
+			],
+			"it": [
+				"Dal greco ankon, \"gomito\", la forma del suo promontorio; la fondarono Greci venuti da Siracusa.",
+				"Il suo porto è l’unico della costa adriatica rivolto a est, così il sole vi sorge e vi tramonta sul mare.",
+				"L’arco di Traiano del 115 d.C. è ancora in piedi sulla banchina, eretto per ringraziarlo di aver finanziato il porto."
+			],
+			"de": [
+				"Vom griechischen ankon, „Ellbogen“ – die Form ihrer Landzunge; sie wurde von Griechen aus Syrakus gegründet.",
+				"Ihr Hafen ist der einzige an der Adriaküste, der nach Osten blickt, sodass die Sonne über dem Meer sowohl auf- als auch untergeht.",
+				"Trajans Bogen von 115 n. Chr. steht noch am Kai, errichtet, um ihm für die Finanzierung des Hafens zu danken."
+			]
+		}
+	},
+	"livorno": {
+		"kind": "city",
+		"population": 152914,
+		"populationRank": 5,
+		"region": "Toscana",
+		"coastal": true,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Of uncertain origin; the English called it Leghorn, which is why the chicken breed is named that.",
+				"The Medici made it a free port in 1591 with a law guaranteeing religious tolerance, which drew Jews, Greeks, Armenians and Protestants.",
+				"Modigliani and Mascagni were both born here, and its Venezia quarter is cut through by canals."
+			],
+			"it": [
+				"Di origine incerta; gli inglesi la chiamavano Leghorn, ed è per questo che la razza di galline porta quel nome.",
+				"I Medici ne fecero un porto franco nel 1591, con una legge che garantiva la tolleranza religiosa e che attirò ebrei, greci, armeni e protestanti.",
+				"Modigliani e Mascagni nacquero entrambi qui, e il suo quartiere della Venezia è attraversato da canali."
+			],
+			"de": [
+				"Von ungewisser Herkunft; die Engländer nannten sie Leghorn, woher die gleichnamige Hühnerrasse ihren Namen hat.",
+				"Die Medici machten sie 1591 mit einem Gesetz, das religiöse Toleranz garantierte, zum Freihafen, was Juden, Griechen, Armenier und Protestanten anzog.",
+				"Modigliani und Mascagni wurden beide hier geboren, und ihr Viertel Venezia wird von Kanälen durchzogen."
+			]
+		}
+	},
+	"arezzo": {
+		"kind": "city",
+		"population": 96260,
+		"populationRank": 10,
+		"region": "Toscana",
+		"coastal": false,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"From Arretium, an Etruscan city and one of the twelve of their league.",
+				"Piero della Francesca painted the Legend of the True Cross here, one of the great fresco cycles.",
+				"Guido of Arezzo invented the modern musical staff and the do-re-mi naming of notes around 1025."
+			],
+			"it": [
+				"Da Arretium, città etrusca e una delle dodici della loro lega.",
+				"Piero della Francesca vi dipinse la Leggenda della Vera Croce, uno dei grandi cicli di affreschi.",
+				"Guido d’Arezzo inventò intorno al 1025 il pentagramma moderno e il do-re-mi per dare il nome alle note."
+			],
+			"de": [
+				"Von Arretium, einer etruskischen Stadt und einer der zwölf ihres Bundes.",
+				"Piero della Francesca malte hier die Legende vom Wahren Kreuz, einen der großen Freskenzyklen.",
+				"Guido von Arezzo erfand um 1025 das moderne Notenliniensystem und die Benennung der Töne mit do-re-mi."
+			]
+		}
+	},
+	"siena": {
+		"kind": "city",
+		"population": 52812,
+		"populationRank": 29,
+		"region": "Toscana",
+		"coastal": false,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Possibly from the Etruscan Saina family or from the Senones, a Gaulish tribe.",
+				"Its Palio, a bareback horse race around the Piazza del Campo, is run twice a summer between city wards and lasts about ninety seconds.",
+				"The whole historic centre is a UNESCO site, and burnt sienna pigment is named for the local earth."
+			],
+			"it": [
+				"Forse dalla famiglia etrusca dei Saina o dai Senoni, una tribù gallica.",
+				"Il suo Palio, corso con i cavalli montati a pelo intorno a Piazza del Campo, si disputa due volte ogni estate tra le contrade e dura circa novanta secondi.",
+				"Tutto il centro storico è patrimonio UNESCO, e il pigmento terra di Siena bruciata prende il nome dalla terra del luogo."
+			],
+			"de": [
+				"Möglicherweise von der etruskischen Familie Saina oder von den Senonen, einem gallischen Stamm.",
+				"Ihr Palio, ein Pferderennen ohne Sattel rund um die Piazza del Campo, wird im Sommer zweimal zwischen den Stadtvierteln ausgetragen und dauert etwa neunzig Sekunden.",
+				"Das gesamte historische Zentrum ist eine UNESCO-Stätte, und das Pigment Terra di Siena (gebrannte Siena) ist nach der Erde der Gegend benannt."
+			]
+		}
+	},
+	"perugia": {
+		"kind": "city",
+		"population": 161748,
+		"populationRank": 4,
+		"region": "Umbria",
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"From Perusia, an Etruscan city; the name is pre-Roman and not explained.",
+				"Its Etruscan arch is still the main gate, and the university for foreigners has taught Italian to the world since 1921.",
+				"Perugina makes Baci chocolates here, and the Umbria Jazz festival is one of Europe’s largest."
+			],
+			"it": [
+				"Da Perusia, città etrusca; il nome è preromano e resta senza spiegazione.",
+				"Il suo arco etrusco è ancora la porta principale, e l’Università per Stranieri insegna l’italiano al mondo dal 1921.",
+				"La Perugina vi produce i Baci, e Umbria Jazz è uno dei festival più grandi d’Europa."
+			],
+			"de": [
+				"Von Perusia, einer etruskischen Stadt; der Name ist vorrömisch und ungeklärt.",
+				"Ihr etruskischer Bogen ist noch immer das Haupttor, und die Universität für Ausländer lehrt der Welt seit 1921 Italienisch.",
+				"Perugina stellt hier die Baci-Pralinen her, und das Festival Umbria Jazz ist eines der größten Europas."
+			]
+		}
+	},
+	"foligno": {
+		"kind": "city",
+		"population": 55226,
+		"populationRank": 26,
+		"region": "Umbria",
+		"coastal": false,
+		"position": "centre"
+	},
+	"grosseto": {
+		"kind": "city",
+		"population": 81321,
+		"populationRank": 16,
+		"region": "Toscana",
+		"coastal": true,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Probably from a diminutive of grosso, or from a family name.",
+				"The Maremma around it was malarial marsh until it was drained in the 1800s and 1930s.",
+				"Its butteri are mounted cattle herders who once beat Buffalo Bill’s cowboys in a contest when his show came to Rome."
+			],
+			"it": [
+				"Probabilmente da un diminutivo di grosso, o da un nome di famiglia.",
+				"La Maremma che la circonda fu palude malarica finché non venne bonificata, nell’Ottocento e negli anni Trenta.",
+				"I suoi butteri una volta sconfissero in gara i cowboy di Buffalo Bill, quando il suo spettacolo arrivò a Roma."
+			],
+			"de": [
+				"Wahrscheinlich von einer Verkleinerungsform von grosso oder von einem Familiennamen.",
+				"Die Maremma darum herum war Malariasumpf, bis sie im 19. Jahrhundert und in den 1930er-Jahren trockengelegt wurde.",
+				"Ihre Butteri sind berittene Rinderhirten, die einst Buffalo Bills Cowboys in einem Wettbewerb schlugen, als seine Show nach Rom kam."
+			]
+		}
+	},
+	"teramo": {
+		"kind": "city",
+		"population": 51548,
+		"populationRank": 32,
+		"region": "Abruzzo",
+		"coastal": false,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"From Interamnia, \"between the rivers\" — it sits between two.",
+				"The Gran Sasso is in this province, with the Calderone, the southernmost glacier in Europe.",
+				"A physics laboratory sits under the mountain, shielded by 1,400 m of rock, where neutrinos are detected."
+			],
+			"it": [
+				"Da Interamnia, \"tra i fiumi\": la città sorge proprio tra due corsi d’acqua.",
+				"In questa provincia c’è il Gran Sasso, con il Calderone, il ghiacciaio più meridionale d’Europa.",
+				"Sotto la montagna c’è un laboratorio di fisica, schermato da 1.400 m di roccia, dove si rilevano i neutrini."
+			],
+			"de": [
+				"Von Interamnia, „zwischen den Flüssen“ – sie liegt zwischen zweien.",
+				"Das Gran Sasso liegt in dieser Provinz, mit dem Calderone, dem südlichsten Gletscher Europas.",
+				"Unter dem Berg liegt ein Physiklabor, durch 1.400 m Fels abgeschirmt, in dem Neutrinos nachgewiesen werden."
+			]
+		}
+	},
+	"terni": {
+		"kind": "city",
+		"population": 106370,
+		"populationRank": 8,
+		"region": "Umbria",
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Also from Interamna, \"between rivers\" — the same name as Teramo, differently worn down.",
+				"St Valentine was its bishop and is buried here, which makes the town the origin of Valentine’s Day.",
+				"The Marmore falls nearby are 165 m and entirely artificial, cut by a Roman consul in 271 BC to drain a marsh."
+			],
+			"it": [
+				"Anche Terni viene da Interamna, \"tra i fiumi\": lo stesso nome di Teramo, consumato dal tempo in un altro modo.",
+				"San Valentino ne fu vescovo ed è sepolto qui: per questo la festa degli innamorati nasce in questa città.",
+				"La vicina cascata delle Marmore, alta 165 m, è interamente artificiale: la aprì un console romano nel 271 a.C. per prosciugare una palude."
+			],
+			"de": [
+				"Ebenfalls von Interamna, „zwischen den Flüssen“ – derselbe Name wie Teramo, nur anders abgeschliffen.",
+				"Der heilige Valentin war ihr Bischof und ist hier begraben, was die Stadt zum Ursprung des Valentinstags macht.",
+				"Die nahen Marmore-Fälle sind 165 m hoch und völlig künstlich, 271 v. Chr. von einem römischen Konsul angelegt, um einen Sumpf zu entwässern."
+			]
+		}
+	},
+	"montesilvano": {
+		"kind": "city",
+		"population": 53275,
+		"populationRank": 28,
+		"region": "Abruzzo",
+		"coastal": true,
+		"position": "east"
+	},
+	"pescara": {
+		"kind": "city",
+		"population": 118657,
+		"populationRank": 7,
+		"region": "Abruzzo",
+		"coastal": true,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"From Piscaria, \"abounding in fish\", the name of the river.",
+				"Gabriele d’Annunzio was born here, and the province was created in 1927 out of parts of two others.",
+				"It has the widest beach on the Adriatic and the largest port in Abruzzo."
+			],
+			"it": [
+				"Da Piscaria, \"ricca di pesci\", il nome del fiume.",
+				"Qui nacque Gabriele d’Annunzio, e la provincia fu creata nel 1927 con parti di altre due.",
+				"Ha la spiaggia più ampia dell’Adriatico e il porto più grande d’Abruzzo."
+			],
+			"de": [
+				"Von Piscaria, „fischreich“, dem Namen des Flusses.",
+				"Gabriele d’Annunzio wurde hier geboren, und die Provinz wurde 1927 aus Teilen zweier anderer geschaffen.",
+				"Sie hat den breitesten Strand an der Adria und den größten Hafen der Abruzzen."
+			]
+		}
+	},
+	"viterbo": {
+		"kind": "city",
+		"population": 65949,
+		"populationRank": 20,
+		"region": "Lazio",
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Possibly from Vetus Urbs, \"old city\", or from a pre-Roman name.",
+				"It was the papal seat in the 1200s, and the word conclave comes from an incident here: the citizens locked the cardinals in and removed the roof to hurry them along.",
+				"Its San Pellegrino quarter is one of the best-preserved medieval districts in Italy."
+			],
+			"it": [
+				"Forse da Vetus Urbs, \"città vecchia\", o da un nome preromano.",
+				"Nel Duecento fu sede papale, e la parola conclave nasce da un episodio avvenuto qui: i cittadini chiusero a chiave i cardinali e scoperchiarono il tetto per spingerli a sbrigarsi.",
+				"Il suo quartiere di San Pellegrino è uno dei quartieri medievali meglio conservati d’Italia."
+			],
+			"de": [
+				"Möglicherweise von Vetus Urbs, „alte Stadt“, oder von einem vorrömischen Namen.",
+				"Sie war im 13. Jahrhundert Papstsitz, und das Wort Konklave stammt von einem Vorfall hier: Die Bürger sperrten die Kardinäle ein und deckten das Dach ab, um sie zur Eile anzutreiben.",
+				"Ihr Viertel San Pellegrino ist eines der besterhaltenen mittelalterlichen Viertel Italiens."
+			]
+		}
+	},
+	"l-aquila": {
+		"kind": "city",
+		"population": 70344,
+		"populationRank": 18,
+		"region": "Abruzzo",
+		"coastal": false,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"\"The eagle\" — founded in 1254 and named for the imperial eagle, or for the 99 castles whose people came together to build it.",
+				"The city has 99 of everything by tradition: its fountain has 99 spouts and its bell tolls 99 times each night.",
+				"The 2009 earthquake killed 309 people and emptied the centre for years; restoration is still under way."
+			],
+			"it": [
+				"Fondata nel 1254, deve il nome all’aquila imperiale, oppure ai 99 castelli i cui abitanti si riunirono per costruirla.",
+				"Per tradizione la città ha 99 di tutto: la sua fontana ha 99 cannelle e la sua campana suona 99 rintocchi ogni sera.",
+				"Il terremoto del 2009 uccise 309 persone e svuotò il centro per anni; la ricostruzione è ancora in corso."
+			],
+			"de": [
+				"„Der Adler“ – 1254 gegründet und nach dem kaiserlichen Adler benannt oder nach den 99 Burgen, deren Bewohner sich zusammentaten, um sie zu bauen.",
+				"Die Stadt hat der Überlieferung nach von allem 99: Ihr Brunnen hat 99 Wasserspeier, und ihre Glocke schlägt jede Nacht 99-mal.",
+				"Das Erdbeben von 2009 tötete 309 Menschen und leerte das Zentrum für Jahre; die Wiederherstellung ist noch im Gange."
+			]
+		}
+	},
+	"civitavecchia": {
+		"kind": "city",
+		"population": 51653,
+		"populationRank": 31,
+		"region": "Lazio",
+		"coastal": true,
+		"position": "south"
+	},
+	"tivoli": {
+		"kind": "city",
+		"population": 54916,
+		"populationRank": 27,
+		"region": "Lazio",
+		"coastal": false,
+		"position": "south"
+	},
+	"roma": {
+		"kind": "city",
+		"population": 2748109,
+		"populationRank": 1,
+		"region": "Lazio",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Legend says Romulus; more likely from Etruscan Ruma, a family name, or from an old word for the river.",
+				"It was the largest city in the world for about five centuries and the first to reach a million people.",
+				"Its historic centre, the Vatican and the extraterritorial properties are jointly a UNESCO site, and the Pantheon’s dome is still the largest unreinforced concrete dome ever built."
+			],
+			"it": [
+				"La leggenda dice Romolo; più probabilmente viene dall’etrusco Ruma, nome di famiglia, o da un’antica parola per il fiume.",
+				"Fu la città più grande del mondo per circa cinque secoli e la prima a raggiungere il milione di abitanti.",
+				"Il centro storico, il Vaticano e le proprietà extraterritoriali sono insieme patrimonio UNESCO, e la cupola del Pantheon è ancora la più grande cupola in calcestruzzo non armato mai costruita."
+			],
+			"de": [
+				"Die Sage sagt Romulus; wahrscheinlicher kommt er vom etruskischen Ruma, einem Familiennamen, oder von einem alten Wort für den Fluss.",
+				"Es war etwa fünf Jahrhunderte lang die größte Stadt der Welt und die erste, die eine Million Einwohner erreichte.",
+				"Das historische Zentrum, der Vatikan und die exterritorialen Besitzungen bilden zusammen eine UNESCO-Stätte, und die Kuppel des Pantheons ist noch immer die größte unbewehrte Betonkuppel, die je gebaut wurde."
+			]
+		}
+	},
+	"fiumicino": {
+		"kind": "city",
+		"population": 81426,
+		"populationRank": 15,
+		"region": "Lazio",
+		"coastal": true,
+		"position": "south"
+	},
+	"pomezia": {
+		"kind": "city",
+		"population": 64119,
+		"populationRank": 21,
+		"region": "Lazio",
+		"coastal": true,
+		"position": "south"
+	},
+	"velletri": {
+		"kind": "city",
+		"population": 52528,
+		"populationRank": 30,
+		"region": "Lazio",
+		"coastal": false,
+		"position": "south"
+	},
+	"aprilia": {
+		"kind": "city",
+		"population": 74126,
+		"populationRank": 17,
+		"region": "Lazio",
+		"coastal": true,
+		"position": "south"
+	},
+	"latina": {
+		"kind": "city",
+		"population": 127564,
+		"populationRank": 6,
+		"region": "Lazio",
+		"coastal": true,
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Named in 1932 for Latium; it was Littoria under Fascism and renamed in 1945.",
+				"The city was built from nothing on the drained Pontine marshes, malarial swamp since antiquity.",
+				"Its rationalist architecture makes it one of the clearest examples of 1930s Italian town planning."
+			],
+			"it": [
+				"Chiamata così nel 1932 dal nome del Lazio; sotto il fascismo era Littoria, e fu ribattezzata nel 1945.",
+				"La città fu costruita dal nulla sulle paludi pontine bonificate, acquitrini malarici fin dall’antichità.",
+				"La sua architettura razionalista ne fa uno degli esempi più chiari dell’urbanistica italiana degli anni Trenta."
+			],
+			"de": [
+				"1932 nach Latium benannt; unter dem Faschismus hieß sie Littoria und wurde 1945 umbenannt.",
+				"Die Stadt wurde aus dem Nichts in den trockengelegten Pontinischen Sümpfen gebaut, seit der Antike ein Malariasumpf.",
+				"Ihre rationalistische Architektur macht sie zu einem der deutlichsten Beispiele italienischer Stadtplanung der 1930er-Jahre."
+			]
+		}
+	},
+	"anzio": {
+		"kind": "city",
+		"population": 58949,
+		"populationRank": 25,
+		"region": "Lazio",
+		"coastal": true,
+		"position": "south"
+	}
+}

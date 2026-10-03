@@ -1,0 +1,886 @@
+{
+	"id": "italy-towns-50k-north",
+	"name": "Italy — Towns 50k+ — North",
+	"country": "Italy",
+	"attribution": "Wikidata (CC0), https://www.wikidata.org; Natural Earth (public domain), https://www.naturalearthdata.com",
+	"placesSource": "data/places/italy.geojson",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "bolzano",
+			"name": "Bolzano",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.35478,
+				46.49811
+			],
+			"bbox": [
+				11.35478,
+				46.49811,
+				11.35478,
+				46.49811
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "trento",
+			"name": "Trento",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.11667,
+				46.06667
+			],
+			"bbox": [
+				11.11667,
+				46.06667,
+				11.11667,
+				46.06667
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "udine",
+			"name": "Udine",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.23333,
+				46.06667
+			],
+			"bbox": [
+				13.23333,
+				46.06667,
+				13.23333,
+				46.06667
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "pordenone",
+			"name": "Pordenone",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.6563,
+				45.9626
+			],
+			"bbox": [
+				12.6563,
+				45.9626,
+				12.6563,
+				45.9626
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "varese",
+			"name": "Varese",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.83333,
+				45.81667
+			],
+			"bbox": [
+				8.83333,
+				45.81667,
+				8.83333,
+				45.81667
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "como",
+			"name": "Como",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.08614,
+				45.81025
+			],
+			"bbox": [
+				9.08614,
+				45.81025,
+				9.08614,
+				45.81025
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "bergamo",
+			"name": "Bergamo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.67,
+				45.695
+			],
+			"bbox": [
+				9.67,
+				45.695,
+				9.67,
+				45.695
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "treviso",
+			"name": "Treviso",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.24556,
+				45.66583
+			],
+			"bbox": [
+				12.24556,
+				45.66583,
+				12.24556,
+				45.66583
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "gallarate",
+			"name": "Gallarate",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.7914,
+				45.6649
+			],
+			"bbox": [
+				8.7914,
+				45.6649,
+				8.7914,
+				45.6649
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "trieste",
+			"name": "Trieste",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.77028,
+				45.65028
+			],
+			"bbox": [
+				13.77028,
+				45.65028,
+				13.77028,
+				45.65028
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "busto-arsizio",
+			"name": "Busto Arsizio",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.8518,
+				45.61196
+			],
+			"bbox": [
+				8.8518,
+				45.61196,
+				8.8518,
+				45.61196
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "monza",
+			"name": "Monza",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.27361,
+				45.58361
+			],
+			"bbox": [
+				9.27361,
+				45.58361,
+				9.27361,
+				45.58361
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "vicenza",
+			"name": "Vicenza",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.55,
+				45.55
+			],
+			"bbox": [
+				11.55,
+				45.55,
+				11.55,
+				45.55
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "brescia",
+			"name": "Brescia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.22028,
+				45.53889
+			],
+			"bbox": [
+				10.22028,
+				45.53889,
+				10.22028,
+				45.53889
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "sesto-san-giovanni",
+			"name": "Sesto San Giovanni",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.23333,
+				45.53333
+			],
+			"bbox": [
+				9.23333,
+				45.53333,
+				9.23333,
+				45.53333
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "rho",
+			"name": "Rho",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.03333,
+				45.53333
+			],
+			"bbox": [
+				9.03333,
+				45.53333,
+				9.03333,
+				45.53333
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "milano",
+			"name": "Milano",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.19,
+				45.46694
+			],
+			"bbox": [
+				9.19,
+				45.46694,
+				9.19,
+				45.46694
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "novara",
+			"name": "Novara",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.62,
+				45.45
+			],
+			"bbox": [
+				8.62,
+				45.45,
+				8.62,
+				45.45
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "venezia",
+			"name": "Venezia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.33194,
+				45.43972
+			],
+			"bbox": [
+				12.33194,
+				45.43972,
+				12.33194,
+				45.43972
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "verona",
+			"name": "Verona",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.99278,
+				45.43861
+			],
+			"bbox": [
+				10.99278,
+				45.43861,
+				10.99278,
+				45.43861
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "padova",
+			"name": "Padova",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.87333,
+				45.40778
+			],
+			"bbox": [
+				11.87333,
+				45.40778,
+				11.87333,
+				45.40778
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "vigevano",
+			"name": "Vigevano",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.86667,
+				45.31667
+			],
+			"bbox": [
+				8.86667,
+				45.31667,
+				8.86667,
+				45.31667
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "pavia",
+			"name": "Pavia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.155,
+				45.18528
+			],
+			"bbox": [
+				9.155,
+				45.18528,
+				9.155,
+				45.18528
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "cremona",
+			"name": "Cremona",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.02472,
+				45.13333
+			],
+			"bbox": [
+				10.02472,
+				45.13333,
+				10.02472,
+				45.13333
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "torino",
+			"name": "Torino",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.67611,
+				45.07917
+			],
+			"bbox": [
+				7.67611,
+				45.07917,
+				7.67611,
+				45.07917
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "piacenza",
+			"name": "Piacenza",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.7,
+				45.05
+			],
+			"bbox": [
+				9.7,
+				45.05,
+				9.7,
+				45.05
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "moncalieri",
+			"name": "Moncalieri",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.68475,
+				45.00046
+			],
+			"bbox": [
+				7.68475,
+				45.00046,
+				7.68475,
+				45.00046
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "alessandria",
+			"name": "Alessandria",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.62,
+				44.91333
+			],
+			"bbox": [
+				8.62,
+				44.91333,
+				8.62,
+				44.91333
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "asti",
+			"name": "Asti",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.20694,
+				44.9
+			],
+			"bbox": [
+				8.20694,
+				44.9,
+				8.20694,
+				44.9
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "ferrara",
+			"name": "Ferrara",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.6175,
+				44.83917
+			],
+			"bbox": [
+				11.6175,
+				44.83917,
+				11.6175,
+				44.83917
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "parma",
+			"name": "Parma",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.328,
+				44.80147
+			],
+			"bbox": [
+				10.328,
+				44.80147,
+				10.328,
+				44.80147
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "carpi",
+			"name": "Carpi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.885,
+				44.78333
+			],
+			"bbox": [
+				10.885,
+				44.78333,
+				10.885,
+				44.78333
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "reggio-emilia",
+			"name": "Reggio Emilia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.63333,
+				44.7
+			],
+			"bbox": [
+				10.63333,
+				44.7,
+				10.63333,
+				44.7
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "modena",
+			"name": "Modena",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.92572,
+				44.64582
+			],
+			"bbox": [
+				10.92572,
+				44.64582,
+				10.92572,
+				44.64582
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "bologna",
+			"name": "Bologna",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.34278,
+				44.49389
+			],
+			"bbox": [
+				11.34278,
+				44.49389,
+				11.34278,
+				44.49389
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "ravenna",
+			"name": "Ravenna",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.20167,
+				44.41611
+			],
+			"bbox": [
+				12.20167,
+				44.41611,
+				12.20167,
+				44.41611
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "genova",
+			"name": "Genova",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.93389,
+				44.40722
+			],
+			"bbox": [
+				8.93389,
+				44.40722,
+				8.93389,
+				44.40722
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "cuneo",
+			"name": "Cuneo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.55,
+				44.38333
+			],
+			"bbox": [
+				7.55,
+				44.38333,
+				7.55,
+				44.38333
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "imola",
+			"name": "Imola",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.71472,
+				44.35306
+			],
+			"bbox": [
+				11.71472,
+				44.35306,
+				11.71472,
+				44.35306
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "savona",
+			"name": "Savona",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.48111,
+				44.30806
+			],
+			"bbox": [
+				8.48111,
+				44.30806,
+				8.48111,
+				44.30806
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "faenza",
+			"name": "Faenza",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.88333,
+				44.28556
+			],
+			"bbox": [
+				11.88333,
+				44.28556,
+				11.88333,
+				44.28556
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "forli",
+			"name": "Forlì",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.04139,
+				44.22278
+			],
+			"bbox": [
+				12.04139,
+				44.22278,
+				12.04139,
+				44.22278
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "cesena",
+			"name": "Cesena",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.23333,
+				44.13333
+			],
+			"bbox": [
+				12.23333,
+				44.13333,
+				12.23333,
+				44.13333
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "la-spezia",
+			"name": "La Spezia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.82888,
+				44.10804
+			],
+			"bbox": [
+				9.82888,
+				44.10804,
+				9.82888,
+				44.10804
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "rimini",
+			"name": "Rimini",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.56833,
+				44.05944
+			],
+			"bbox": [
+				12.56833,
+				44.05944,
+				12.56833,
+				44.05944
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "sanremo",
+			"name": "Sanremo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.775,
+				43.8175
+			],
+			"bbox": [
+				7.775,
+				43.8175,
+				7.775,
+				43.8175
+			],
+			"colorIndex": 0
+		}
+	],
+	"tourOrder": [
+		"bolzano",
+		"trento",
+		"udine",
+		"pordenone",
+		"varese",
+		"como",
+		"bergamo",
+		"treviso",
+		"gallarate",
+		"trieste",
+		"busto-arsizio",
+		"monza",
+		"vicenza",
+		"brescia",
+		"sesto-san-giovanni",
+		"rho",
+		"milano",
+		"novara",
+		"venezia",
+		"verona",
+		"padova",
+		"vigevano",
+		"pavia",
+		"cremona",
+		"torino",
+		"piacenza",
+		"moncalieri",
+		"alessandria",
+		"asti",
+		"ferrara",
+		"parma",
+		"carpi",
+		"reggio-emilia",
+		"modena",
+		"bologna",
+		"ravenna",
+		"genova",
+		"cuneo",
+		"imola",
+		"savona",
+		"faenza",
+		"forli",
+		"cesena",
+		"la-spezia",
+		"rimini",
+		"sanremo"
+	]
+}

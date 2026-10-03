@@ -1,0 +1,2520 @@
+{
+	"id": "italy-towns-50k",
+	"name": "Italy — Towns 50k+",
+	"country": "Italy",
+	"attribution": "Wikidata (CC0), https://www.wikidata.org; Natural Earth (public domain), https://www.naturalearthdata.com",
+	"placesSource": "data/places/italy.geojson",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "bolzano",
+			"name": "Bolzano",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.35478,
+				46.49811
+			],
+			"bbox": [
+				11.35478,
+				46.49811,
+				11.35478,
+				46.49811
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "trento",
+			"name": "Trento",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.11667,
+				46.06667
+			],
+			"bbox": [
+				11.11667,
+				46.06667,
+				11.11667,
+				46.06667
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "udine",
+			"name": "Udine",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.23333,
+				46.06667
+			],
+			"bbox": [
+				13.23333,
+				46.06667,
+				13.23333,
+				46.06667
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "pordenone",
+			"name": "Pordenone",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.6563,
+				45.9626
+			],
+			"bbox": [
+				12.6563,
+				45.9626,
+				12.6563,
+				45.9626
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "varese",
+			"name": "Varese",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.83333,
+				45.81667
+			],
+			"bbox": [
+				8.83333,
+				45.81667,
+				8.83333,
+				45.81667
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "como",
+			"name": "Como",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.08614,
+				45.81025
+			],
+			"bbox": [
+				9.08614,
+				45.81025,
+				9.08614,
+				45.81025
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "bergamo",
+			"name": "Bergamo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.67,
+				45.695
+			],
+			"bbox": [
+				9.67,
+				45.695,
+				9.67,
+				45.695
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "treviso",
+			"name": "Treviso",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.24556,
+				45.66583
+			],
+			"bbox": [
+				12.24556,
+				45.66583,
+				12.24556,
+				45.66583
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "gallarate",
+			"name": "Gallarate",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.7914,
+				45.6649
+			],
+			"bbox": [
+				8.7914,
+				45.6649,
+				8.7914,
+				45.6649
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "trieste",
+			"name": "Trieste",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.77028,
+				45.65028
+			],
+			"bbox": [
+				13.77028,
+				45.65028,
+				13.77028,
+				45.65028
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "busto-arsizio",
+			"name": "Busto Arsizio",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.8518,
+				45.61196
+			],
+			"bbox": [
+				8.8518,
+				45.61196,
+				8.8518,
+				45.61196
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "monza",
+			"name": "Monza",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.27361,
+				45.58361
+			],
+			"bbox": [
+				9.27361,
+				45.58361,
+				9.27361,
+				45.58361
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "vicenza",
+			"name": "Vicenza",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.55,
+				45.55
+			],
+			"bbox": [
+				11.55,
+				45.55,
+				11.55,
+				45.55
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "brescia",
+			"name": "Brescia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.22028,
+				45.53889
+			],
+			"bbox": [
+				10.22028,
+				45.53889,
+				10.22028,
+				45.53889
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "sesto-san-giovanni",
+			"name": "Sesto San Giovanni",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.23333,
+				45.53333
+			],
+			"bbox": [
+				9.23333,
+				45.53333,
+				9.23333,
+				45.53333
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "rho",
+			"name": "Rho",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.03333,
+				45.53333
+			],
+			"bbox": [
+				9.03333,
+				45.53333,
+				9.03333,
+				45.53333
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "milano",
+			"name": "Milano",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.19,
+				45.46694
+			],
+			"bbox": [
+				9.19,
+				45.46694,
+				9.19,
+				45.46694
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "novara",
+			"name": "Novara",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.62,
+				45.45
+			],
+			"bbox": [
+				8.62,
+				45.45,
+				8.62,
+				45.45
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "venezia",
+			"name": "Venezia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.33194,
+				45.43972
+			],
+			"bbox": [
+				12.33194,
+				45.43972,
+				12.33194,
+				45.43972
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "verona",
+			"name": "Verona",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.99278,
+				45.43861
+			],
+			"bbox": [
+				10.99278,
+				45.43861,
+				10.99278,
+				45.43861
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "padova",
+			"name": "Padova",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.87333,
+				45.40778
+			],
+			"bbox": [
+				11.87333,
+				45.40778,
+				11.87333,
+				45.40778
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "vigevano",
+			"name": "Vigevano",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.86667,
+				45.31667
+			],
+			"bbox": [
+				8.86667,
+				45.31667,
+				8.86667,
+				45.31667
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "pavia",
+			"name": "Pavia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.155,
+				45.18528
+			],
+			"bbox": [
+				9.155,
+				45.18528,
+				9.155,
+				45.18528
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "cremona",
+			"name": "Cremona",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.02472,
+				45.13333
+			],
+			"bbox": [
+				10.02472,
+				45.13333,
+				10.02472,
+				45.13333
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "torino",
+			"name": "Torino",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.67611,
+				45.07917
+			],
+			"bbox": [
+				7.67611,
+				45.07917,
+				7.67611,
+				45.07917
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "piacenza",
+			"name": "Piacenza",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.7,
+				45.05
+			],
+			"bbox": [
+				9.7,
+				45.05,
+				9.7,
+				45.05
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "moncalieri",
+			"name": "Moncalieri",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.68475,
+				45.00046
+			],
+			"bbox": [
+				7.68475,
+				45.00046,
+				7.68475,
+				45.00046
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "alessandria",
+			"name": "Alessandria",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.62,
+				44.91333
+			],
+			"bbox": [
+				8.62,
+				44.91333,
+				8.62,
+				44.91333
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "asti",
+			"name": "Asti",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.20694,
+				44.9
+			],
+			"bbox": [
+				8.20694,
+				44.9,
+				8.20694,
+				44.9
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "ferrara",
+			"name": "Ferrara",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.6175,
+				44.83917
+			],
+			"bbox": [
+				11.6175,
+				44.83917,
+				11.6175,
+				44.83917
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "parma",
+			"name": "Parma",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.328,
+				44.80147
+			],
+			"bbox": [
+				10.328,
+				44.80147,
+				10.328,
+				44.80147
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "carpi",
+			"name": "Carpi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.885,
+				44.78333
+			],
+			"bbox": [
+				10.885,
+				44.78333,
+				10.885,
+				44.78333
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "reggio-emilia",
+			"name": "Reggio Emilia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.63333,
+				44.7
+			],
+			"bbox": [
+				10.63333,
+				44.7,
+				10.63333,
+				44.7
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "modena",
+			"name": "Modena",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.92572,
+				44.64582
+			],
+			"bbox": [
+				10.92572,
+				44.64582,
+				10.92572,
+				44.64582
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "bologna",
+			"name": "Bologna",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.34278,
+				44.49389
+			],
+			"bbox": [
+				11.34278,
+				44.49389,
+				11.34278,
+				44.49389
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "ravenna",
+			"name": "Ravenna",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.20167,
+				44.41611
+			],
+			"bbox": [
+				12.20167,
+				44.41611,
+				12.20167,
+				44.41611
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "genova",
+			"name": "Genova",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.93389,
+				44.40722
+			],
+			"bbox": [
+				8.93389,
+				44.40722,
+				8.93389,
+				44.40722
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "cuneo",
+			"name": "Cuneo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.55,
+				44.38333
+			],
+			"bbox": [
+				7.55,
+				44.38333,
+				7.55,
+				44.38333
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "imola",
+			"name": "Imola",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.71472,
+				44.35306
+			],
+			"bbox": [
+				11.71472,
+				44.35306,
+				11.71472,
+				44.35306
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "savona",
+			"name": "Savona",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.48111,
+				44.30806
+			],
+			"bbox": [
+				8.48111,
+				44.30806,
+				8.48111,
+				44.30806
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "faenza",
+			"name": "Faenza",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.88333,
+				44.28556
+			],
+			"bbox": [
+				11.88333,
+				44.28556,
+				11.88333,
+				44.28556
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "forli",
+			"name": "Forlì",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.04139,
+				44.22278
+			],
+			"bbox": [
+				12.04139,
+				44.22278,
+				12.04139,
+				44.22278
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "cesena",
+			"name": "Cesena",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.23333,
+				44.13333
+			],
+			"bbox": [
+				12.23333,
+				44.13333,
+				12.23333,
+				44.13333
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "la-spezia",
+			"name": "La Spezia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.82888,
+				44.10804
+			],
+			"bbox": [
+				9.82888,
+				44.10804,
+				9.82888,
+				44.10804
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "carrara",
+			"name": "Carrara",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.1,
+				44.08333
+			],
+			"bbox": [
+				10.1,
+				44.08333,
+				10.1,
+				44.08333
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "rimini",
+			"name": "Rimini",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.56833,
+				44.05944
+			],
+			"bbox": [
+				12.56833,
+				44.05944,
+				12.56833,
+				44.05944
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "massa",
+			"name": "Massa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.13333,
+				44.03333
+			],
+			"bbox": [
+				10.13333,
+				44.03333,
+				10.13333,
+				44.03333
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "pistoia",
+			"name": "Pistoia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.91667,
+				43.93333
+			],
+			"bbox": [
+				10.91667,
+				43.93333,
+				10.91667,
+				43.93333
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "pesaro",
+			"name": "Pesaro",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.9133,
+				43.91015
+			],
+			"bbox": [
+				12.9133,
+				43.91015,
+				12.9133,
+				43.91015
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "prato",
+			"name": "Prato",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.09656,
+				43.88081
+			],
+			"bbox": [
+				11.09656,
+				43.88081,
+				11.09656,
+				43.88081
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "viareggio",
+			"name": "Viareggio",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.25061,
+				43.86724
+			],
+			"bbox": [
+				10.25061,
+				43.86724,
+				10.25061,
+				43.86724
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "lucca",
+			"name": "Lucca",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.51667,
+				43.85
+			],
+			"bbox": [
+				10.51667,
+				43.85,
+				10.51667,
+				43.85
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "fano",
+			"name": "Fano",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.01361,
+				43.8425
+			],
+			"bbox": [
+				13.01361,
+				43.8425,
+				13.01361,
+				43.8425
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "sanremo",
+			"name": "Sanremo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.775,
+				43.8175
+			],
+			"bbox": [
+				7.775,
+				43.8175,
+				7.775,
+				43.8175
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "firenze",
+			"name": "Firenze",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.25417,
+				43.77139
+			],
+			"bbox": [
+				11.25417,
+				43.77139,
+				11.25417,
+				43.77139
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "pisa",
+			"name": "Pisa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.4,
+				43.71667
+			],
+			"bbox": [
+				10.4,
+				43.71667,
+				10.4,
+				43.71667
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "ancona",
+			"name": "Ancona",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.51667,
+				43.61667
+			],
+			"bbox": [
+				13.51667,
+				43.61667,
+				13.51667,
+				43.61667
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "livorno",
+			"name": "Livorno",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				10.31667,
+				43.55
+			],
+			"bbox": [
+				10.31667,
+				43.55,
+				10.31667,
+				43.55
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "arezzo",
+			"name": "Arezzo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.87806,
+				43.46306
+			],
+			"bbox": [
+				11.87806,
+				43.46306,
+				11.87806,
+				43.46306
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "siena",
+			"name": "Siena",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.33139,
+				43.31833
+			],
+			"bbox": [
+				11.33139,
+				43.31833,
+				11.33139,
+				43.31833
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "perugia",
+			"name": "Perugia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.38855,
+				43.11192
+			],
+			"bbox": [
+				12.38855,
+				43.11192,
+				12.38855,
+				43.11192
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "foligno",
+			"name": "Foligno",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.70328,
+				42.95576
+			],
+			"bbox": [
+				12.70328,
+				42.95576,
+				12.70328,
+				42.95576
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "grosseto",
+			"name": "Grosseto",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.10889,
+				42.77222
+			],
+			"bbox": [
+				11.10889,
+				42.77222,
+				11.10889,
+				42.77222
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "teramo",
+			"name": "Teramo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.70391,
+				42.65885
+			],
+			"bbox": [
+				13.70391,
+				42.65885,
+				13.70391,
+				42.65885
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "terni",
+			"name": "Terni",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.64678,
+				42.56077
+			],
+			"bbox": [
+				12.64678,
+				42.56077,
+				12.64678,
+				42.56077
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "montesilvano",
+			"name": "Montesilvano",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.13729,
+				42.51185
+			],
+			"bbox": [
+				14.13729,
+				42.51185,
+				14.13729,
+				42.51185
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "pescara",
+			"name": "Pescara",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.21419,
+				42.46428
+			],
+			"bbox": [
+				14.21419,
+				42.46428,
+				14.21419,
+				42.46428
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "viterbo",
+			"name": "Viterbo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.10417,
+				42.41861
+			],
+			"bbox": [
+				12.10417,
+				42.41861,
+				12.10417,
+				42.41861
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "l-aquila",
+			"name": "L'Aquila",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.39199,
+				42.35401
+			],
+			"bbox": [
+				13.39199,
+				42.35401,
+				13.39199,
+				42.35401
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "civitavecchia",
+			"name": "Civitavecchia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.8,
+				42.1
+			],
+			"bbox": [
+				11.8,
+				42.1,
+				11.8,
+				42.1
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "tivoli",
+			"name": "Tivoli",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.8,
+				41.96667
+			],
+			"bbox": [
+				12.8,
+				41.96667,
+				12.8,
+				41.96667
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "roma",
+			"name": "Roma",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.48278,
+				41.89306
+			],
+			"bbox": [
+				12.48278,
+				41.89306,
+				12.48278,
+				41.89306
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "fiumicino",
+			"name": "Fiumicino",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.23333,
+				41.76667
+			],
+			"bbox": [
+				12.23333,
+				41.76667,
+				12.23333,
+				41.76667
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "pomezia",
+			"name": "Pomezia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.50208,
+				41.66931
+			],
+			"bbox": [
+				12.50208,
+				41.66931,
+				12.50208,
+				41.66931
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "velletri",
+			"name": "Velletri",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.78333,
+				41.66667
+			],
+			"bbox": [
+				12.78333,
+				41.66667,
+				12.78333,
+				41.66667
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "manfredonia",
+			"name": "Manfredonia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.91667,
+				41.63333
+			],
+			"bbox": [
+				15.91667,
+				41.63333,
+				15.91667,
+				41.63333
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "aprilia",
+			"name": "Aprilia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.65,
+				41.58333
+			],
+			"bbox": [
+				12.65,
+				41.58333,
+				12.65,
+				41.58333
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "latina",
+			"name": "Latina",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.90361,
+				41.46722
+			],
+			"bbox": [
+				12.90361,
+				41.46722,
+				12.90361,
+				41.46722
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "foggia",
+			"name": "Foggia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.55188,
+				41.45845
+			],
+			"bbox": [
+				15.55188,
+				41.45845,
+				15.55188,
+				41.45845
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "anzio",
+			"name": "Anzio",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.62833,
+				41.44722
+			],
+			"bbox": [
+				12.62833,
+				41.44722,
+				12.62833,
+				41.44722
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "barletta",
+			"name": "Barletta",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.28333,
+				41.31667
+			],
+			"bbox": [
+				16.28333,
+				41.31667,
+				16.28333,
+				41.31667
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "cerignola",
+			"name": "Cerignola",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.9,
+				41.26667
+			],
+			"bbox": [
+				15.9,
+				41.26667,
+				15.9,
+				41.26667
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "trani",
+			"name": "Trani",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.41667,
+				41.26667
+			],
+			"bbox": [
+				16.41667,
+				41.26667,
+				16.41667,
+				41.26667
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "bisceglie",
+			"name": "Bisceglie",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.50206,
+				41.24093
+			],
+			"bbox": [
+				16.50206,
+				41.24093,
+				16.50206,
+				41.24093
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "andria",
+			"name": "Andria",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.30833,
+				41.23167
+			],
+			"bbox": [
+				16.30833,
+				41.23167,
+				16.30833,
+				41.23167
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "molfetta",
+			"name": "Molfetta",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.6,
+				41.2
+			],
+			"bbox": [
+				16.6,
+				41.2,
+				16.6,
+				41.2
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "benevento",
+			"name": "Benevento",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.78333,
+				41.13333
+			],
+			"bbox": [
+				14.78333,
+				41.13333,
+				14.78333,
+				41.13333
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "bari",
+			"name": "Bari",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.86667,
+				41.12528
+			],
+			"bbox": [
+				16.86667,
+				41.12528,
+				16.86667,
+				41.12528
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "bitonto",
+			"name": "Bitonto",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.69167,
+				41.10833
+			],
+			"bbox": [
+				16.69167,
+				41.10833,
+				16.69167,
+				41.10833
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "caserta",
+			"name": "Caserta",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.33333,
+				41.06667
+			],
+			"bbox": [
+				14.33333,
+				41.06667,
+				14.33333,
+				41.06667
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "acerra",
+			"name": "Acerra",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.37123,
+				40.94609
+			],
+			"bbox": [
+				14.37123,
+				40.94609,
+				14.37123,
+				40.94609
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "giugliano-in-campania",
+			"name": "Giugliano in Campania",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.20108,
+				40.92835
+			],
+			"bbox": [
+				14.20108,
+				40.92835,
+				14.20108,
+				40.92835
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "avellino",
+			"name": "Avellino",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.78972,
+				40.91528
+			],
+			"bbox": [
+				14.78972,
+				40.91528,
+				14.78972,
+				40.91528
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "casoria",
+			"name": "Casoria",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.3,
+				40.9
+			],
+			"bbox": [
+				14.3,
+				40.9,
+				14.3,
+				40.9
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "napoli",
+			"name": "Napoli",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.24861,
+				40.83583
+			],
+			"bbox": [
+				14.24861,
+				40.83583,
+				14.24861,
+				40.83583
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "pozzuoli",
+			"name": "Pozzuoli",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.12222,
+				40.82306
+			],
+			"bbox": [
+				14.12222,
+				40.82306,
+				14.12222,
+				40.82306
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "portici",
+			"name": "Portici",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.34111,
+				40.81972
+			],
+			"bbox": [
+				14.34111,
+				40.81972,
+				14.34111,
+				40.81972
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "altamura",
+			"name": "Altamura",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.55,
+				40.81667
+			],
+			"bbox": [
+				16.55,
+				40.81667,
+				16.55,
+				40.81667
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "torre-del-greco",
+			"name": "Torre del Greco",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.39528,
+				40.78528
+			],
+			"bbox": [
+				14.39528,
+				40.78528,
+				14.39528,
+				40.78528
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "sassari",
+			"name": "Sassari",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.55917,
+				40.72667
+			],
+			"bbox": [
+				8.55917,
+				40.72667,
+				8.55917,
+				40.72667
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "cava-de-tirreni",
+			"name": "Cava de' Tirreni",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.70556,
+				40.70083
+			],
+			"bbox": [
+				14.70556,
+				40.70083,
+				14.70556,
+				40.70083
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "castellammare-di-stabia",
+			"name": "Castellammare di Stabia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.48028,
+				40.69472
+			],
+			"bbox": [
+				14.48028,
+				40.69472,
+				14.48028,
+				40.69472
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "salerno",
+			"name": "Salerno",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.75944,
+				40.68056
+			],
+			"bbox": [
+				14.75944,
+				40.68056,
+				14.75944,
+				40.68056
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "matera",
+			"name": "Matera",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.6,
+				40.66667
+			],
+			"bbox": [
+				16.6,
+				40.66667,
+				16.6,
+				40.66667
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "brindisi",
+			"name": "Brindisi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.94583,
+				40.63833
+			],
+			"bbox": [
+				17.94583,
+				40.63833,
+				17.94583,
+				40.63833
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "potenza",
+			"name": "Potenza",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.8,
+				40.63333
+			],
+			"bbox": [
+				15.8,
+				40.63333,
+				15.8,
+				40.63333
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "taranto",
+			"name": "Taranto",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.24306,
+				40.47111
+			],
+			"bbox": [
+				17.24306,
+				40.47111,
+				17.24306,
+				40.47111
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "lecce",
+			"name": "Lecce",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.16914,
+				40.35201
+			],
+			"bbox": [
+				18.16914,
+				40.35201,
+				18.16914,
+				40.35201
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "calimera",
+			"name": "Calimera",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.28333,
+				40.25
+			],
+			"bbox": [
+				18.28333,
+				40.25,
+				18.28333,
+				40.25
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "corigliano-rossano",
+			"name": "Corigliano-Rossano",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.57648,
+				39.5838
+			],
+			"bbox": [
+				16.57648,
+				39.5838,
+				16.57648,
+				39.5838
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "cosenza",
+			"name": "Cosenza",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.25,
+				39.3
+			],
+			"bbox": [
+				16.25,
+				39.3,
+				16.25,
+				39.3
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "quartu-sant-elena",
+			"name": "Quartu Sant'Elena",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.18392,
+				39.24135
+			],
+			"bbox": [
+				9.18392,
+				39.24135,
+				9.18392,
+				39.24135
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "cagliari",
+			"name": "Cagliari",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.11667,
+				39.21667
+			],
+			"bbox": [
+				9.11667,
+				39.21667,
+				9.11667,
+				39.21667
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "crotone",
+			"name": "Crotone",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.11667,
+				39.08333
+			],
+			"bbox": [
+				17.11667,
+				39.08333,
+				17.11667,
+				39.08333
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "lamezia-terme",
+			"name": "Lamezia Terme",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.3,
+				38.96667
+			],
+			"bbox": [
+				16.3,
+				38.96667,
+				16.3,
+				38.96667
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "catanzaro",
+			"name": "Catanzaro",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.5875,
+				38.91
+			],
+			"bbox": [
+				16.5875,
+				38.91,
+				16.5875,
+				38.91
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "messina",
+			"name": "Messina",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.55417,
+				38.19361
+			],
+			"bbox": [
+				15.55417,
+				38.19361,
+				15.55417,
+				38.19361
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "palermo",
+			"name": "Palermo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.36126,
+				38.11566
+			],
+			"bbox": [
+				13.36126,
+				38.11566,
+				13.36126,
+				38.11566
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "reggio-calabria",
+			"name": "Reggio Calabria",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.65,
+				38.11444
+			],
+			"bbox": [
+				15.65,
+				38.11444,
+				15.65,
+				38.11444
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "bagheria",
+			"name": "Bagheria",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.5,
+				38.08333
+			],
+			"bbox": [
+				13.5,
+				38.08333,
+				13.5,
+				38.08333
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "trapani",
+			"name": "Trapani",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.515,
+				38.0175
+			],
+			"bbox": [
+				12.515,
+				38.0175,
+				12.515,
+				38.0175
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "marsala",
+			"name": "Marsala",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.43417,
+				37.79806
+			],
+			"bbox": [
+				12.43417,
+				37.79806,
+				12.43417,
+				37.79806
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "mazara-del-vallo",
+			"name": "Mazara del Vallo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				12.58751,
+				37.65166
+			],
+			"bbox": [
+				12.58751,
+				37.65166,
+				12.58751,
+				37.65166
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "acireale",
+			"name": "Acireale",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.16556,
+				37.6125
+			],
+			"bbox": [
+				15.16556,
+				37.6125,
+				15.16556,
+				37.6125
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "catania",
+			"name": "Catania",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.08727,
+				37.50267
+			],
+			"bbox": [
+				15.08727,
+				37.50267,
+				15.08727,
+				37.50267
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "caltanissetta",
+			"name": "Caltanissetta",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.06244,
+				37.49147
+			],
+			"bbox": [
+				14.06244,
+				37.49147,
+				14.06244,
+				37.49147
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "agrigento",
+			"name": "Agrigento",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.575,
+				37.3125
+			],
+			"bbox": [
+				13.575,
+				37.3125,
+				13.575,
+				37.3125
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "siracusa",
+			"name": "Siracusa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.2875,
+				37.06917
+			],
+			"bbox": [
+				15.2875,
+				37.06917,
+				15.2875,
+				37.06917
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "gela",
+			"name": "Gela",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.25,
+				37.06667
+			],
+			"bbox": [
+				14.25,
+				37.06667,
+				14.25,
+				37.06667
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "vittoria",
+			"name": "Vittoria",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.53333,
+				36.95
+			],
+			"bbox": [
+				14.53333,
+				36.95,
+				14.53333,
+				36.95
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "ragusa",
+			"name": "Ragusa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.73056,
+				36.925
+			],
+			"bbox": [
+				14.73056,
+				36.925,
+				14.73056,
+				36.925
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "modica",
+			"name": "Modica",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.76139,
+				36.86722
+			],
+			"bbox": [
+				14.76139,
+				36.86722,
+				14.76139,
+				36.86722
+			],
+			"colorIndex": 5
+		}
+	],
+	"tourOrder": [
+		"bolzano",
+		"trento",
+		"udine",
+		"pordenone",
+		"varese",
+		"como",
+		"bergamo",
+		"treviso",
+		"gallarate",
+		"trieste",
+		"busto-arsizio",
+		"monza",
+		"vicenza",
+		"brescia",
+		"sesto-san-giovanni",
+		"rho",
+		"milano",
+		"novara",
+		"venezia",
+		"verona",
+		"padova",
+		"vigevano",
+		"pavia",
+		"cremona",
+		"torino",
+		"piacenza",
+		"moncalieri",
+		"alessandria",
+		"asti",
+		"ferrara",
+		"parma",
+		"carpi",
+		"reggio-emilia",
+		"modena",
+		"bologna",
+		"ravenna",
+		"genova",
+		"cuneo",
+		"imola",
+		"savona",
+		"faenza",
+		"forli",
+		"cesena",
+		"la-spezia",
+		"carrara",
+		"rimini",
+		"massa",
+		"pistoia",
+		"pesaro",
+		"prato",
+		"viareggio",
+		"lucca",
+		"fano",
+		"sanremo",
+		"firenze",
+		"pisa",
+		"ancona",
+		"livorno",
+		"arezzo",
+		"siena",
+		"perugia",
+		"foligno",
+		"grosseto",
+		"teramo",
+		"terni",
+		"montesilvano",
+		"pescara",
+		"viterbo",
+		"l-aquila",
+		"civitavecchia",
+		"tivoli",
+		"roma",
+		"fiumicino",
+		"pomezia",
+		"velletri",
+		"manfredonia",
+		"aprilia",
+		"latina",
+		"foggia",
+		"anzio",
+		"barletta",
+		"cerignola",
+		"trani",
+		"bisceglie",
+		"andria",
+		"molfetta",
+		"benevento",
+		"bari",
+		"bitonto",
+		"caserta",
+		"acerra",
+		"giugliano-in-campania",
+		"avellino",
+		"casoria",
+		"napoli",
+		"pozzuoli",
+		"portici",
+		"altamura",
+		"torre-del-greco",
+		"sassari",
+		"cava-de-tirreni",
+		"castellammare-di-stabia",
+		"salerno",
+		"matera",
+		"brindisi",
+		"potenza",
+		"taranto",
+		"lecce",
+		"calimera",
+		"corigliano-rossano",
+		"cosenza",
+		"quartu-sant-elena",
+		"cagliari",
+		"crotone",
+		"lamezia-terme",
+		"catanzaro",
+		"messina",
+		"palermo",
+		"reggio-calabria",
+		"bagheria",
+		"trapani",
+		"marsala",
+		"mazara-del-vallo",
+		"acireale",
+		"catania",
+		"caltanissetta",
+		"agrigento",
+		"siracusa",
+		"gela",
+		"vittoria",
+		"ragusa",
+		"modica"
+	]
+}
