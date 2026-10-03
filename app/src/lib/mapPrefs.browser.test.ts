@@ -4,6 +4,7 @@ import { beforeEach, describe, expect, it } from 'vitest';
 import {
 	RECENT_SHOWN,
 	recentMaps,
+	isSeenDetailed,
 	recordVisit,
 	setUnrecordedMap,
 	pickerGoUp,
@@ -85,5 +86,18 @@ describe('the start screen: map or list (FT-78)', () => {
 		expect(localStorage.getItem('geoclick:home-view:v1')).toBe('list');
 		setHomeView('map');
 		expect(homeView()).toBe('map');
+	});
+});
+
+describe('Detailed maps the player has opened', () => {
+	it('remembers an advanced map once it has been opened, and only that one', () => {
+		expect(isSeenDetailed('spain-provinces')).toBe(false);
+		recordVisit('spain-regions');
+		expect(isSeenDetailed('spain-regions')).toBe(false);
+		recordVisit('spain-provinces');
+		expect(isSeenDetailed('spain-provinces')).toBe(true);
+		expect(JSON.parse(localStorage.getItem('geoclick:seen-detailed:v1') ?? '[]')).toContain(
+			'spain-provinces'
+		);
 	});
 });

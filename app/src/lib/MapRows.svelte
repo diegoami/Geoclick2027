@@ -10,7 +10,7 @@
 	import { groupProgress, type Mastery } from './homeProgress';
 	import KnownProgress from './KnownProgress.svelte';
 	import { pickerIdOf } from './mapCatalog';
-	import { mapTypeSelectionOf, rememberMapTypeSelection } from './mapPrefs.svelte';
+	import { isSeenDetailed, mapTypeSelectionOf, rememberMapTypeSelection } from './mapPrefs.svelte';
 	import { isTutorialSandboxActive } from './tutorialSandbox.svelte';
 	import { t } from './i18n.svelte';
 
@@ -40,6 +40,10 @@
 	// (FT-84): the picker's `names` for a country, the catalog's English
 	// where it has none.
 	const nameOf = rowNameOf;
+
+	// Still behind the line: detailed, and not yet opened by this player.
+	const isDetailed = (map: { id: string; advanced?: boolean }) =>
+		map.advanced === true && !isSeenDetailed(map.id);
 
 	let selections = $state<Record<string, string>>({});
 
@@ -138,14 +142,15 @@
 					chooseMapType(group, e.currentTarget.value);
 				}}
 			>
-				<!-- Standard maps first; small divisions and slices after a line (v0.17). -->
-				{#each group.maps.filter((m) => !m.advanced) as map (map.id)}
+				<!-- Standard maps first, and the detailed ones the player has opened; the
+				     rest of the detailed maps after a line (v0.17). -->
+				{#each group.maps.filter((m) => !isDetailed(m)) as map (map.id)}
 					<option value={map.id}>{map.label}</option>
 				{/each}
-				{#if group.maps.some((m) => m.advanced) && group.maps.some((m) => !m.advanced)}
+				{#if group.maps.some(isDetailed) && group.maps.some((m) => !isDetailed(m))}
 					<option disabled value="">──────</option>
 				{/if}
-				{#each group.maps.filter((m) => m.advanced) as map (map.id)}
+				{#each group.maps.filter(isDetailed) as map (map.id)}
 					<option value={map.id}>{map.label}</option>
 				{/each}
 			</select>

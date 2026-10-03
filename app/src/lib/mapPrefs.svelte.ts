@@ -4,7 +4,7 @@
 // not in the ProgressRepository / SQLite, and it isn't synced anywhere. The
 // lists are $state, so the home page updates as soon as they change.
 
-import { isCatalogMap } from './mapCatalog';
+import { isAdvancedMap, isCatalogMap } from './mapCatalog';
 
 const RECENT_KEY = 'geoclick:recent-maps:v1';
 const MAP_TYPE_SELECTIONS_KEY = 'geoclick:map-type-selections:v1';
@@ -117,9 +117,25 @@ export function setUnrecordedMap(mapId: string | undefined): void {
 	unrecordedMap = mapId;
 }
 
+// A detailed map the player has opened stays among the normal ones: in a
+// country's list and in the map bar's type row (v0.17, owner, 2026-10-03).
+const SEEN_DETAILED_KEY = 'geoclick:seen-detailed:v1';
+let seenDetailed = $state<string[]>(readIds(SEEN_DETAILED_KEY));
+
+/** Whether the player has opened this detailed map before. */
+export function isSeenDetailed(mapId: string): boolean {
+	return seenDetailed.includes(mapId);
+}
+
 /** Called when a map view opens (MapNav). Unknown ids are ignored. */
 export function recordVisit(mapId: string): void {
-	if (mapId === unrecordedMap || !isCatalogMap(mapId)) return;
+	if (!isCatalogMap(mapId)) return;
+	// Remembered even for the tutorial's map, which is never an advanced one.
+	if (isAdvancedMap(mapId) && !seenDetailed.includes(mapId)) {
+		seenDetailed = [...seenDetailed, mapId];
+		writeIds(SEEN_DETAILED_KEY, seenDetailed);
+	}
+	if (mapId === unrecordedMap) return;
 	recent = withVisit(recent, mapId);
 	writeIds(RECENT_KEY, recent);
 }

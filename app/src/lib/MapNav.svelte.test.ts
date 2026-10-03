@@ -12,7 +12,7 @@ import MapNav from './MapNav.svelte';
 import { setLanguage } from './i18n.svelte';
 import { isContinentGroup } from './catalogSections';
 import { mapGroups } from './mapCatalog';
-import { setDetailedMapsShown } from './mapPrefs.svelte';
+import { recordVisit, setDetailedMapsShown } from './mapPrefs.svelte';
 
 describe('MapNav sibling map buttons', () => {
 	afterEach(() => {
@@ -146,5 +146,18 @@ describe('MapNav sibling map buttons', () => {
 			active: 'overview'
 		});
 		expect(document.querySelector('.detailed-toggle')).toBeNull();
+	});
+
+	it('keeps a detailed map in the row once the player has opened it', async () => {
+		recordVisit('germany-districts-north');
+		await render(MapNav, {
+			mapId: 'germany-states',
+			mapName: 'Germany — States',
+			active: 'overview'
+		});
+		const ids = [...document.querySelectorAll<HTMLButtonElement>('.map-type-btn')].map(
+			(b) => b.dataset.mapId
+		);
+		expect(ids).toEqual(['germany-states', 'germany-towns-100k', 'germany-districts-north']);
 	});
 });

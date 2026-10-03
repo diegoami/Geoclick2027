@@ -17,6 +17,7 @@
 	import LanguageSwitcher from './LanguageSwitcher.svelte';
 	import {
 		detailedMapsShown,
+		isSeenDetailed,
 		mapNavHidden,
 		recordVisit,
 		setDetailedMapsShown
@@ -57,11 +58,11 @@
 		mapGroups.find((group) => group.maps.some((map) => map.id === mapId))
 	);
 	// Small divisions and slices are in the row only when the player ticks
-	// "Show detailed maps" - or when one of them is the open map.
+	// "Show detailed maps" - or when the player has opened it before.
 	const hasDetailed = $derived((currentGroup?.maps ?? []).some((map) => map.advanced));
 	const groupMaps = $derived(
 		(currentGroup?.maps ?? []).filter(
-			(map) => !map.advanced || detailedMapsShown() || map.id === mapId
+			(map) => !map.advanced || detailedMapsShown() || isSeenDetailed(map.id) || map.id === mapId
 		)
 	);
 	const showMapSwitcher = $derived(groupMaps.length > 1);

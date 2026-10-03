@@ -2601,3 +2601,8 @@ maps" tick under it adds the advanced ones (remembered on the device, off by
 default); the open map is always in the row. The row also wraps onto a second
 line instead of scrolling, so a row that fits the screen has no scrollbar.
 
+**Amended (2026-10-03, owner):** a detailed map the player has opened is
+remembered on the device (`geoclick:seen-detailed:v1`) and counts as a normal
+map from then on: it sits above the line in a country's list and in the map
+bar's type row, without the tick.
+
