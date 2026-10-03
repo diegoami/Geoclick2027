@@ -2594,3 +2594,10 @@ maps plus the open map if it is advanced, so an advanced map is reached from
 the start screen only. Italy's province slices and the USA's city slices moved
 from their own label keys to type + `partKey`; the rendered labels are
 identical in English, German and Italian (tested).
+
+**Amended (2026-10-03, owner):** every map type must be reachable from the map
+views. The map bar's type row shows the standard maps, and a "Show detailed
+maps" tick under it adds the advanced ones (remembered on the device, off by
+default); the open map is always in the row. The row also wraps onto a second
+line instead of scrolling, so a row that fits the screen has no scrollbar.
+

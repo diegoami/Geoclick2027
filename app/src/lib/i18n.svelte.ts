@@ -84,6 +84,7 @@ export type TranslationKey =
 	| 'known.clear'
 	| 'known.chosen'
 	| 'nav.loading'
+	| 'nav.detailedMaps'
 	| 'home.recent'
 	| 'home.favourites'
 	| 'home.allMaps'
@@ -261,6 +262,7 @@ const en: Dictionary = {
 	'known.clear': 'Clear',
 	'known.chosen': 'Chosen',
 	'nav.loading': 'Loading…',
+	'nav.detailedMaps': 'Show detailed maps',
 
 	'home.recent': 'Recent',
 	'home.favourites': 'Favourites',
@@ -455,6 +457,7 @@ const de: Dictionary = {
 	'known.clear': 'Zurücksetzen',
 	'known.chosen': 'Gewählt',
 	'nav.loading': 'Lädt…',
+	'nav.detailedMaps': 'Detaillierte Karten anzeigen',
 
 	'home.recent': 'Zuletzt geöffnet',
 	'home.favourites': 'Favoriten',
@@ -653,6 +656,7 @@ const it: Dictionary = {
 	'known.clear': 'Azzera',
 	'known.chosen': 'Scelto',
 	'nav.loading': 'Caricamento…',
+	'nav.detailedMaps': 'Mostra le mappe dettagliate',
 
 	'home.recent': 'Recenti',
 	'home.favourites': 'Preferiti',
