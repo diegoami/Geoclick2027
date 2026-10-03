@@ -5,7 +5,7 @@
 	import { onMount } from 'svelte';
 	import { t } from '$lib/i18n.svelte';
 	import PageBar from '$lib/PageBar.svelte';
-	import { RELEASES_URL, isNativeShell } from '$lib/platform';
+	import { RELEASES_REPO_URL, RELEASES_URL, SOURCE_URL, isNativeShell } from '$lib/platform';
 
 	// For web visitors only - pointless inside the desktop or Android app.
 	// Off until checked, so the apps never flash it.
@@ -29,6 +29,13 @@
 		</p>
 	{/if}
 	<p class="version">{t('about.version', { version: __APP_VERSION__, build: __BUILD_SHA__ })}</p>
+	<p class="author">{t('about.author')}</p>
+	<p class="repos">
+		<a href={SOURCE_URL} target="_blank" rel="external noopener">{t('about.sourceLink')}</a>
+		·
+		<a href={RELEASES_REPO_URL} target="_blank" rel="external noopener">{t('about.releasesLink')}</a
+		>
+	</p>
 	<p class="credits">{t('about.credits')}</p>
 </main>
 
@@ -62,6 +69,12 @@
 		font-family: ui-monospace, monospace;
 		font-size: 0.85rem;
 		color: #4a5650;
+	}
+	.author {
+		font-size: 1rem;
+	}
+	.repos {
+		font-size: 0.95rem;
 	}
 	.credits {
 		font-size: 0.85rem;
