@@ -15,7 +15,12 @@
 	import type { Snippet } from 'svelte';
 	import { t } from './i18n.svelte';
 	import LanguageSwitcher from './LanguageSwitcher.svelte';
-	import { mapNavHidden, recordVisit } from './mapPrefs.svelte';
+	import {
+		detailedMapsShown,
+		mapNavHidden,
+		recordVisit,
+		setDetailedMapsShown
+	} from './mapPrefs.svelte';
 	import { mapGroups, mapTypeLabel } from './mapCatalog';
 	import FavouriteStar from './FavouriteStar.svelte';
 	import TutorialButton from './TutorialButton.svelte';
@@ -51,24 +56,15 @@
 	const currentGroup = $derived(
 		mapGroups.find((group) => group.maps.some((map) => map.id === mapId))
 	);
-	// Small divisions and slices stay on the start screen's list; the row here
-	// shows the standard maps, plus the open map if it is one of the others.
+	// Small divisions and slices are in the row only when the player ticks
+	// "Show detailed maps" - or when one of them is the open map.
+	const hasDetailed = $derived((currentGroup?.maps ?? []).some((map) => map.advanced));
 	const groupMaps = $derived(
-		(currentGroup?.maps ?? []).filter((map) => !map.advanced || map.id === mapId)
+		(currentGroup?.maps ?? []).filter(
+			(map) => !map.advanced || detailedMapsShown() || map.id === mapId
+		)
 	);
 	const showMapSwitcher = $derived(groupMaps.length > 1);
-	let mapTypeScroller = $state<HTMLDivElement | undefined>(undefined);
-
-	// Long map-type rows scroll on phones. Keep the current type in view when
-	// opening a map directly or switching to a type near the end of the list.
-	$effect(() => {
-		if (hidden || !mapTypeScroller) return;
-		const selectedMapId = mapId;
-		const selectedButton = [
-			...mapTypeScroller.querySelectorAll<HTMLButtonElement>('.map-type-btn')
-		].find((button) => button.dataset.mapId === selectedMapId);
-		selectedButton?.scrollIntoView({ block: 'nearest', inline: 'nearest' });
-	});
 </script>
 
 <!-- Hidden by the button under the zoom control (hideButtonsControl). -->
@@ -170,7 +166,6 @@
 		{#if showMapSwitcher}
 			<div class="map-type-row">
 				<div
-					bind:this={mapTypeScroller}
 					class="map-type-scroll"
 					role="group"
 					aria-label={t('home.mapTypeFor', { name: currentGroup?.country ?? '' })}
@@ -194,6 +189,16 @@
 				</div>
 				<FavouriteStar {mapId} size="bar" />
 			</div>
+			{#if hasDetailed}
+				<label class="detailed-toggle">
+					<input
+						type="checkbox"
+						checked={detailedMapsShown()}
+						onchange={(event) => setDetailedMapsShown(event.currentTarget.checked)}
+					/>
+					{t('nav.detailedMaps')}
+				</label>
+			{/if}
 		{:else}
 			<span class="map-label">{mapName ?? t('nav.loading')}</span>
 			<FavouriteStar {mapId} size="bar" />
@@ -286,7 +291,7 @@
 		align-items: center;
 		gap: 0.4rem;
 		width: 100%;
-		max-width: min(42rem, calc(100vw - 4.5rem));
+		max-width: min(60rem, calc(100vw - 4.5rem));
 		min-width: 0;
 	}
 	.map-type-scroll {
@@ -294,9 +299,21 @@
 		flex: 1;
 		gap: 0.4rem;
 		min-width: 0;
-		overflow-x: auto;
-		overscroll-behavior-x: contain;
-		scrollbar-width: thin;
+		/* Wraps rather than scrolls: a row that fits the screen never gets a
+		   scrollbar, and a long one takes a second line. */
+		flex-wrap: wrap;
+	}
+	.detailed-toggle {
+		display: flex;
+		align-items: center;
+		gap: 0.4rem;
+		font-family: system-ui, sans-serif;
+		font-size: 0.75rem;
+		color: #2e4037;
+		background: rgba(255, 255, 255, 0.85);
+		padding: 0.2rem 0.55rem;
+		border-radius: 0.4rem;
+		cursor: pointer;
 	}
 	.map-type-btn {
 		flex: none;

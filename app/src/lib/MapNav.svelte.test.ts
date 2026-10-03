@@ -12,11 +12,13 @@ import MapNav from './MapNav.svelte';
 import { setLanguage } from './i18n.svelte';
 import { isContinentGroup } from './catalogSections';
 import { mapGroups } from './mapCatalog';
+import { setDetailedMapsShown } from './mapPrefs.svelte';
 
 describe('MapNav sibling map buttons', () => {
 	afterEach(() => {
 		gotoMock.mockClear();
 		setLanguage('en');
+		setDetailedMapsShown(false);
 	});
 
 	it('offers only maps from the current country and opens another map on Known', async () => {
@@ -29,7 +31,9 @@ describe('MapNav sibling map buttons', () => {
 		const group = document.querySelector<HTMLDivElement>('.map-type-scroll[role="group"]');
 		expect(group).not.toBeNull();
 		expect(group).toHaveAttribute('aria-label', 'Map type for Italy');
-		expect(getComputedStyle(group!).overflowX).toBe('auto');
+		// Wraps instead of scrolling, so a row that fits never has a scrollbar.
+		expect(getComputedStyle(group!).overflowX).toBe('visible');
+		expect(getComputedStyle(group!).flexWrap).toBe('wrap');
 		const buttons = [...group!.querySelectorAll<HTMLButtonElement>('.map-type-btn')];
 		// The open map is an advanced one, so it is listed with the standard maps;
 		// the other provinces maps are not (v0.17).
@@ -109,5 +113,38 @@ describe('MapNav sibling map buttons', () => {
 
 		expect(document.querySelector('.map-type-scroll')).toBeNull();
 		expect(document.querySelector('.map-label')).not.toBeNull();
+	});
+
+	it('shows the detailed maps once "Show detailed maps" is ticked', async () => {
+		await render(MapNav, {
+			mapId: 'germany-states',
+			mapName: 'Germany — States',
+			active: 'overview'
+		});
+		const ids = () =>
+			[...document.querySelectorAll<HTMLButtonElement>('.map-type-btn')].map(
+				(b) => b.dataset.mapId
+			);
+		expect(ids()).toEqual(['germany-states', 'germany-towns-100k']);
+
+		const box = document.querySelector<HTMLInputElement>('.detailed-toggle input');
+		expect(box).not.toBeNull();
+		expect(box!.checked).toBe(false);
+		box!.click();
+		await vi.waitFor(() => expect(ids().length).toBeGreaterThan(2));
+		expect(ids()).toContain('germany-districts-north');
+		expect(ids()).toContain('germany-towns-center');
+
+		box!.click();
+		await vi.waitFor(() => expect(ids()).toEqual(['germany-states', 'germany-towns-100k']));
+	});
+
+	it('has no toggle for a country without detailed maps', async () => {
+		await render(MapNav, {
+			mapId: 'chile-regions',
+			mapName: 'Chile — Regions',
+			active: 'overview'
+		});
+		expect(document.querySelector('.detailed-toggle')).toBeNull();
 	});
 });

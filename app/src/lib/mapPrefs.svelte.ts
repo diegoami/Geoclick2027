@@ -208,6 +208,31 @@ export function setTerrainShown(shown: boolean): void {
 	}
 }
 
+// --- detailed maps in the map bar (v0.17, #162) ---
+//
+// The small divisions and slices (districts, provinces, the parts of a
+// country) are left out of a map's own type row unless the player ticks
+// "Show detailed maps". One setting for every map, remembered on this device,
+// off until ticked.
+
+const DETAILED_MAPS_KEY = 'geoclick:detailed-maps:v1';
+
+let detailedMaps = $state<boolean>(readFlag(DETAILED_MAPS_KEY, false));
+
+export function detailedMapsShown(): boolean {
+	return detailedMaps;
+}
+
+export function setDetailedMapsShown(shown: boolean): void {
+	detailedMaps = shown;
+	if (typeof localStorage === 'undefined') return;
+	try {
+		localStorage.setItem(DETAILED_MAPS_KEY, shown ? '1' : '0');
+	} catch {
+		// Full or blocked storage: the setting still holds for this session.
+	}
+}
+
 // --- the map's buttons, hidden (tablet play, 2026-09-24) ---
 //
 // The button under the zoom control hides the map bar - the view tabs, the
