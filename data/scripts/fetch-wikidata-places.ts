@@ -32,6 +32,12 @@ interface CountrySpec {
 	keyProperty: string;
 	/** Admin-1 name by key prefix. */
 	admin1ByPrefix: Record<string, string>;
+	/** How many leading characters of the key name the area (default 2). */
+	prefixLength?: number;
+	/** Only items of this class (Q747074, comune of Italy), when set. */
+	instanceOf?: string;
+	/** The language whose label is the town's NAME (a town needs one). */
+	nameLanguage: 'de' | 'it';
 }
 
 // The first two digits of a German municipality key are its state.
@@ -40,6 +46,7 @@ const COUNTRIES: Record<string, CountrySpec> = {
 		adm0: 'Germany',
 		capitalQid: 'Q64',
 		keyProperty: 'P439',
+		nameLanguage: 'de',
 		admin1ByPrefix: {
 			'01': 'Schleswig-Holstein',
 			'02': 'Hamburg',
@@ -58,8 +65,50 @@ const COUNTRIES: Record<string, CountrySpec> = {
 			'15': 'Sachsen-Anhalt',
 			'16': 'Thüringen'
 		}
+	},
+	// Italy's comuni, by ISTAT code (P635): its first three digits number the
+	// province, alphabetically by region (the codes of the 2016-2017
+	// provinces; Sardinia's later ones, 111 and 112, are listed too).
+	italy: {
+		adm0: 'Italy',
+		capitalQid: 'Q220',
+		keyProperty: 'P635',
+		prefixLength: 3,
+		instanceOf: 'Q747074',
+		nameLanguage: 'it',
+		admin1ByPrefix: italianRegions()
 	}
 };
+
+function italianRegions(): Record<string, string> {
+	const ranges: [string, number[]][] = [
+		['Piemonte', [1, 2, 3, 4, 5, 6, 96, 103]],
+		["Valle d'Aosta", [7]],
+		['Liguria', [8, 9, 10, 11]],
+		['Lombardia', [12, 13, 14, 15, 16, 17, 18, 19, 20, 97, 98, 108]],
+		['Trentino-Alto Adige', [21, 22]],
+		['Veneto', [23, 24, 25, 26, 27, 28, 29]],
+		['Friuli-Venezia Giulia', [30, 31, 32, 93]],
+		['Emilia-Romagna', [33, 34, 35, 36, 37, 38, 39, 40, 99]],
+		['Marche', [41, 42, 43, 44, 109]],
+		['Toscana', [45, 46, 47, 48, 49, 50, 51, 52, 53, 100]],
+		['Umbria', [54, 55]],
+		['Lazio', [56, 57, 58, 59, 60]],
+		['Campania', [61, 62, 63, 64, 65]],
+		['Abruzzo', [66, 67, 68, 69]],
+		['Molise', [70, 94]],
+		['Puglia', [71, 72, 73, 74, 75, 110]],
+		['Basilicata', [76, 77]],
+		['Calabria', [78, 79, 80, 101, 102]],
+		['Sicilia', [81, 82, 83, 84, 85, 86, 87, 88, 89]],
+		['Sardegna', [90, 91, 92, 95, 104, 105, 106, 107, 111, 112]]
+	];
+	const out: Record<string, string> = {};
+	for (const [region, codes] of ranges) {
+		for (const code of codes) out[String(code).padStart(3, '0')] = region;
+	}
+	return out;
+}
 
 interface Binding {
 	[name: string]: { value: string } | undefined;
@@ -75,6 +124,7 @@ function townsQuery(spec: CountrySpec, minPopulation: number): string {
 	return `
 SELECT ?item ?key ?coord ?de ?en ?it WHERE {
   ?item wdt:${spec.keyProperty} ?key ; wdt:P1082 ?best ; wdt:P625 ?coord .
+  ${spec.instanceOf ? `?item wdt:P31 wd:${spec.instanceOf} .` : ''}
   FILTER(?best >= ${minPopulation})
   FILTER NOT EXISTS { ?item wdt:P576 ?dissolved }
   OPTIONAL { ?item rdfs:label ?de FILTER(LANG(?de) = "de") }
@@ -128,7 +178,7 @@ interface Town {
 	date: string;
 	lon: number;
 	lat: number;
-	de: string;
+	de?: string;
 	en?: string;
 	it?: string;
 }
@@ -147,7 +197,7 @@ async function main() {
 	for (const b of await sparql(townsQuery(spec, minPopulation))) {
 		const qid = qidOf(b);
 		const match = /Point\(([-\d.]+) ([-\d.]+)\)/.exec(b.coord!.value);
-		if (towns.has(qid) || !match || !b.de) continue;
+		if (towns.has(qid) || !match || !b[spec.nameLanguage]) continue;
 		towns.set(qid, {
 			qid,
 			key: b.key!.value,
@@ -155,7 +205,7 @@ async function main() {
 			date: '',
 			lon: Number(Number(match[1]).toFixed(5)),
 			lat: Number(Number(match[2]).toFixed(5)),
-			de: b.de.value,
+			de: b.de?.value,
 			en: b.en?.value,
 			it: b.it?.value
 		});
@@ -174,22 +224,26 @@ async function main() {
 		}
 	}
 
+	const prefix = (t: Town) => t.key.slice(0, spec.prefixLength ?? 2);
+	// The name in the country's own language, the others falling back to it.
+	const nameOf = (t: Town) => t[spec.nameLanguage] as string;
+
 	const features = [...towns.values()]
-		.filter((t) => t.population >= minPopulation && spec.admin1ByPrefix[t.key.slice(0, 2)])
+		.filter((t) => t.population >= minPopulation && spec.admin1ByPrefix[prefix(t)])
 		.sort((a, b) => b.population - a.population || a.qid.localeCompare(b.qid))
 		.map((t) => ({
 			type: 'Feature',
 			properties: {
-				NAME: t.de,
-				NAME_DE: t.de,
-				NAME_EN: t.en ?? t.de,
-				NAME_IT: t.it ?? t.de,
+				NAME: nameOf(t),
+				NAME_DE: t.de ?? nameOf(t),
+				NAME_EN: t.en ?? nameOf(t),
+				NAME_IT: t.it ?? nameOf(t),
 				POP_MAX: t.population,
 				POP_YEAR: t.date.slice(0, 4),
 				POP1950: null,
 				ADM0CAP: t.qid === spec.capitalQid ? 1 : 0,
 				ADM0NAME: spec.adm0,
-				ADM1NAME: spec.admin1ByPrefix[t.key.slice(0, 2)],
+				ADM1NAME: spec.admin1ByPrefix[prefix(t)],
 				WIKIDATA: t.qid
 			},
 			geometry: { type: 'Point', coordinates: [t.lon, t.lat] }

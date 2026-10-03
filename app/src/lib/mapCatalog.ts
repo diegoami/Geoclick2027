@@ -188,6 +188,7 @@ export const mapGroups: CountryGroup[] = [
 		maps: [
 			{ id: 'germany-states', labelKey: 'mapType.states' },
 			{ id: 'germany-towns-100k', labelKey: 'mapType.towns' },
+			{ id: 'germany-towns-50k', labelKey: 'mapType.towns50k', advanced: true },
 			{
 				id: 'germany-districts-center',
 				labelKey: 'mapType.germanDistricts',
@@ -260,6 +261,24 @@ export const mapGroups: CountryGroup[] = [
 				labelKey: 'mapType.towns',
 				partKey: 'mapPart.west',
 				advanced: true
+			},
+			{
+				id: 'germany-towns-50k-north',
+				labelKey: 'mapType.towns50k',
+				partKey: 'mapPart.north',
+				advanced: true
+			},
+			{
+				id: 'germany-towns-50k-center',
+				labelKey: 'mapType.towns50k',
+				partKey: 'mapPart.center',
+				advanced: true
+			},
+			{
+				id: 'germany-towns-50k-south',
+				labelKey: 'mapType.towns50k',
+				partKey: 'mapPart.south',
+				advanced: true
 			}
 		]
 	},
@@ -308,6 +327,7 @@ export const mapGroups: CountryGroup[] = [
 			{ id: 'italy-regions', labelKey: 'mapType.regions' },
 			{ id: 'italy-towns-100k', labelKey: 'mapType.towns' },
 			{ id: 'italy-provinces', labelKey: 'mapType.provinces', advanced: true },
+			{ id: 'italy-towns-50k', labelKey: 'mapType.towns50k', advanced: true },
 			// 110 provinces is the densest map there is; in thirds each one is
 			// readable at the zoom it opens at (FT-29).
 			{
@@ -325,6 +345,24 @@ export const mapGroups: CountryGroup[] = [
 			{
 				id: 'italy-provinces-south',
 				labelKey: 'mapType.provinces',
+				partKey: 'mapPart.south',
+				advanced: true
+			},
+			{
+				id: 'italy-towns-50k-north',
+				labelKey: 'mapType.towns50k',
+				partKey: 'mapPart.north',
+				advanced: true
+			},
+			{
+				id: 'italy-towns-50k-center',
+				labelKey: 'mapType.towns50k',
+				partKey: 'mapPart.center',
+				advanced: true
+			},
+			{
+				id: 'italy-towns-50k-south',
+				labelKey: 'mapType.towns50k',
 				partKey: 'mapPart.south',
 				advanced: true
 			}

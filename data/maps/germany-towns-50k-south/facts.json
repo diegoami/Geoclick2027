@@ -1,0 +1,829 @@
+{
+	"kassel": {
+		"kind": "city",
+		"population": 196799,
+		"populationRank": 11,
+		"region": "Hessen",
+		"coastal": false,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"From Castellum Cattorum, a Roman-era fort of the Chatti — the same tribe that named Hessen.",
+				"The Brothers Grimm collected their tales here, and the town’s museum is devoted to them.",
+				"It holds documenta, the world’s most important contemporary art exhibition, every five years."
+			],
+			"it": [
+				"Da Castellum Cattorum, un forte d’epoca romana dei Catti: la stessa tribù che ha dato il nome all’Assia.",
+				"I fratelli Grimm raccolsero qui le loro fiabe, e il museo della città è dedicato a loro.",
+				"Ospita ogni cinque anni documenta, la più importante mostra d’arte contemporanea del mondo."
+			],
+			"de": [
+				"Von Castellum Cattorum, einem Kastell der Chatten aus römischer Zeit – desselben Stammes, der Hessen den Namen gab.",
+				"Die Brüder Grimm sammelten hier ihre Märchen, und das Museum der Stadt ist ihnen gewidmet.",
+				"Hier findet alle fünf Jahre die documenta statt, die weltweit wichtigste Ausstellung zeitgenössischer Kunst."
+			]
+		}
+	},
+	"marburg": {
+		"kind": "city",
+		"population": 73571,
+		"populationRank": 37,
+		"region": "Hessen",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"gie-en": {
+		"kind": "city",
+		"population": 88544,
+		"populationRank": 33,
+		"region": "Hessen",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"wetzlar": {
+		"kind": "city",
+		"population": 54865,
+		"populationRank": 54,
+		"region": "Hessen",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"fulda": {
+		"kind": "city",
+		"population": 65755,
+		"populationRank": 45,
+		"region": "Hessen",
+		"coastal": false,
+		"position": "north"
+	},
+	"neuwied": {
+		"kind": "city",
+		"population": 67201,
+		"populationRank": 42,
+		"region": "Rheinland-Pfalz",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"koblenz": {
+		"kind": "city",
+		"population": 113020,
+		"populationRank": 25,
+		"region": "Rheinland-Pfalz",
+		"coastal": false,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"From Latin confluentes, \"the flowing together\" — the Rhine meets the Moselle here.",
+				"That corner, the Deutsches Eck, has carried a huge equestrian monument since 1897.",
+				"The Ehrenbreitstein fortress opposite is one of the largest in Europe, and the valley is a UNESCO site."
+			],
+			"it": [
+				"Dal latino confluentes, \"il confluire\": qui il Reno incontra la Mosella.",
+				"Quell’angolo, il Deutsches Eck, porta dal 1897 un enorme monumento equestre.",
+				"La fortezza di Ehrenbreitstein, sull’altra sponda, è una delle più grandi d’Europa, e la valle è patrimonio UNESCO."
+			],
+			"de": [
+				"Vom lateinischen confluentes, „das Zusammenfließen“ – hier trifft der Rhein auf die Mosel.",
+				"An dieser Ecke, dem Deutschen Eck, steht seit 1897 ein riesiges Reiterdenkmal.",
+				"Die gegenüberliegende Festung Ehrenbreitstein ist eine der größten Europas, und das Tal ist UNESCO-Welterbe."
+			]
+		}
+	},
+	"bad-homburg-vor-der-hohe": {
+		"kind": "city",
+		"population": 56938,
+		"populationRank": 53,
+		"region": "Hessen",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"hanau": {
+		"kind": "city",
+		"population": 98582,
+		"populationRank": 28,
+		"region": "Hessen",
+		"coastal": false,
+		"position": "north"
+	},
+	"frankfurt": {
+		"kind": "city",
+		"population": 760656,
+		"populationRank": 2,
+		"region": "Hessen",
+		"coastal": false,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"\"The ford of the Franks\" — a crossing of the Main used by the Frankish people.",
+				"Holy Roman Emperors were elected and later crowned here for six centuries.",
+				"Goethe was born in the city, and it now holds the European Central Bank and the world’s largest book fair."
+			],
+			"it": [
+				"\"Il guado dei Franchi\": un passaggio sul Meno usato dal popolo franco.",
+				"Per sei secoli qui furono eletti, e più tardi incoronati, gli imperatori del Sacro Romano Impero.",
+				"Goethe nacque in questa città, che oggi ospita la Banca centrale europea e la più grande fiera del libro del mondo."
+			],
+			"de": [
+				"„Furt der Franken“ – eine Mainüberquerung, die das Volk der Franken nutzte.",
+				"Römisch-deutsche Kaiser wurden hier sechs Jahrhunderte lang gewählt und später gekrönt.",
+				"Goethe wurde in der Stadt geboren, und heute sitzen hier die Europäische Zentralbank und die größte Buchmesse der Welt."
+			]
+		}
+	},
+	"offenbach-am-main": {
+		"kind": "city",
+		"population": 133195,
+		"populationRank": 19,
+		"region": "Hessen",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"wiesbaden": {
+		"kind": "city",
+		"population": 288584,
+		"populationRank": 8,
+		"region": "Hessen",
+		"coastal": false,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"\"Meadow baths\" — Wiesen meadows, Baden baths, for its 26 hot springs.",
+				"It was one of Europe’s grandest spa towns, with more millionaires per head than anywhere in Germany by 1900.",
+				"Dostoevsky gambled away everything he had in its casino, which produced The Gambler."
+			],
+			"it": [
+				"\"Bagni del prato\": Wiesen, prati, e Baden, bagni, per le sue 26 sorgenti calde.",
+				"Fu una delle stazioni termali più sfarzose d’Europa, e nel 1900 aveva più milionari per abitante di qualsiasi altro luogo della Germania.",
+				"Dostoevskij perse tutto ciò che aveva nel suo casinò, e ne nacque Il giocatore."
+			],
+			"de": [
+				"„Bäder in den Wiesen“ – Wiesen für Wiesen, Baden für Bäder, nach seinen 26 heißen Quellen.",
+				"Es war eine der prächtigsten Kurstädte Europas, um 1900 mit mehr Millionären pro Kopf als irgendwo sonst in Deutschland.",
+				"Dostojewski verspielte in ihrem Casino alles, was er hatte – daraus entstand „Der Spieler“."
+			]
+		}
+	},
+	"schweinfurt": {
+		"kind": "city",
+		"population": 54539,
+		"populationRank": 55,
+		"region": "Bayern",
+		"coastal": false,
+		"position": "centre"
+	},
+	"mainz": {
+		"kind": "city",
+		"population": 223888,
+		"populationRank": 10,
+		"region": "Rheinland-Pfalz",
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"From Roman Mogontiacum, named for the Celtic god Mogons.",
+				"Gutenberg printed the first European book with movable type here around 1450.",
+				"Its carnival is one of Germany’s three biggest, and its cathedral has stood for over a thousand years."
+			],
+			"it": [
+				"Dalla romana Mogontiacum, che prende il nome dal dio celtico Mogons.",
+				"Qui, intorno al 1450, Gutenberg stampò il primo libro europeo a caratteri mobili.",
+				"Il suo carnevale è uno dei tre più grandi della Germania, e il suo duomo è in piedi da più di mille anni."
+			],
+			"de": [
+				"Vom römischen Mogontiacum, benannt nach dem keltischen Gott Mogons.",
+				"Gutenberg druckte hier um 1450 das erste Buch Europas mit beweglichen Lettern.",
+				"Sein Karneval gehört zu den drei größten Deutschlands, und sein Dom steht seit über tausend Jahren."
+			]
+		}
+	},
+	"russelsheim-am-main": {
+		"kind": "city",
+		"population": 66028,
+		"populationRank": 43,
+		"region": "Hessen",
+		"coastal": false,
+		"position": "west"
+	},
+	"aschaffenburg": {
+		"kind": "city",
+		"population": 73326,
+		"populationRank": 38,
+		"region": "Bayern",
+		"coastal": false,
+		"position": "centre"
+	},
+	"bayreuth": {
+		"kind": "city",
+		"population": 72919,
+		"populationRank": 39,
+		"region": "Bayern",
+		"coastal": false,
+		"position": "east"
+	},
+	"bamberg": {
+		"kind": "city",
+		"population": 77218,
+		"populationRank": 36,
+		"region": "Bayern",
+		"coastal": false,
+		"position": "centre"
+	},
+	"darmstadt": {
+		"kind": "city",
+		"population": 168253,
+		"populationRank": 13,
+		"region": "Hessen",
+		"coastal": false,
+		"position": "west"
+	},
+	"bad-kreuznach": {
+		"kind": "city",
+		"population": 54347,
+		"populationRank": 56,
+		"region": "Rheinland-Pfalz",
+		"coastal": false,
+		"position": "west"
+	},
+	"wurzburg": {
+		"kind": "city",
+		"population": 133753,
+		"populationRank": 18,
+		"region": "Bayern",
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"From an older name, possibly from a word for a herb or a hill, plus Burg.",
+				"Its Residenz is one of the finest baroque palaces in Europe, with a Tiepolo ceiling that is the largest fresco in the world, and a UNESCO site.",
+				"Röntgen discovered X-rays in its university in 1895."
+			],
+			"it": [
+				"Da un nome più antico, forse da una parola per un’erba o per una collina, più Burg.",
+				"La sua Residenz è uno dei più bei palazzi barocchi d’Europa, con un soffitto del Tiepolo che è il più grande affresco del mondo, ed è patrimonio UNESCO.",
+				"Röntgen scoprì i raggi X nella sua università nel 1895."
+			],
+			"de": [
+				"Von einem älteren Namen, möglicherweise von einem Wort für ein Kraut oder einen Hügel, plus Burg.",
+				"Ihre Residenz ist eines der schönsten Barockschlösser Europas, mit einem Deckenfresko von Tiepolo, dem größten der Welt, und UNESCO-Welterbe.",
+				"Röntgen entdeckte 1895 an ihrer Universität die Röntgenstrahlen."
+			]
+		}
+	},
+	"trier": {
+		"kind": "city",
+		"population": 105054,
+		"populationRank": 26,
+		"region": "Rheinland-Pfalz",
+		"coastal": false,
+		"position": "west"
+	},
+	"worms": {
+		"kind": "city",
+		"population": 86921,
+		"populationRank": 34,
+		"region": "Rheinland-Pfalz",
+		"coastal": false,
+		"position": "west"
+	},
+	"erlangen": {
+		"kind": "city",
+		"population": 116450,
+		"populationRank": 24,
+		"region": "Bayern",
+		"coastal": false,
+		"position": "centre"
+	},
+	"mannheim": {
+		"kind": "city",
+		"population": 319536,
+		"populationRank": 5,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"From a personal name, Manno, plus Heim, a home.",
+				"Its centre is laid out as a grid of numbered and lettered blocks rather than named streets — unique in Germany.",
+				"Karl Benz drove the first automobile here in 1886, and his wife then made the first long-distance drive from the town."
+			],
+			"it": [
+				"Da un nome di persona, Manno, più Heim, casa.",
+				"Il suo centro è una griglia di isolati indicati da lettere e numeri anziché vie con un nome: un caso unico in Germania.",
+				"Karl Benz vi guidò la prima automobile nel 1886, e poi sua moglie partì da qui per il primo viaggio a lunga distanza."
+			],
+			"de": [
+				"Von einem Personennamen, Manno, plus Heim, ein Zuhause.",
+				"Die Innenstadt ist als Raster aus nummerierten und mit Buchstaben bezeichneten Quadraten statt aus benannten Straßen angelegt – einzigartig in Deutschland.",
+				"Karl Benz fuhr hier 1886 das erste Automobil, und seine Frau unternahm dann von der Stadt aus die erste Fernfahrt."
+			]
+		}
+	},
+	"furth": {
+		"kind": "city",
+		"population": 131344,
+		"populationRank": 21,
+		"region": "Bayern",
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"German for \"ford\" — the crossing of the Rednitz.",
+				"Germany’s first railway ran from here to Nuremberg in 1835.",
+				"Henry Kissinger was born in the town, and it had one of Bavaria’s largest Jewish communities."
+			],
+			"it": [
+				"\"Guado\" in tedesco: l’attraversamento della Rednitz.",
+				"Da qui partiva la prima ferrovia della Germania, che nel 1835 la collegò a Norimberga.",
+				"Henry Kissinger nacque in questa città, che ebbe una delle maggiori comunità ebraiche della Baviera."
+			],
+			"de": [
+				"Schlicht „Furt“ – der Übergang über die Rednitz.",
+				"Hier fuhr 1835 die erste Eisenbahn Deutschlands, nach Nürnberg.",
+				"Henry Kissinger wurde in der Stadt geboren, und sie hatte eine der größten jüdischen Gemeinden Bayerns."
+			]
+		}
+	},
+	"nurnberg": {
+		"kind": "city",
+		"population": 531159,
+		"populationRank": 4,
+		"region": "Bayern",
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Probably \"rocky hill\" — from an old word nuor for rock, plus Berg.",
+				"Its Nazi rally grounds and then the post-war trials made the city’s name a byword for both.",
+				"The pocket watch, the first globe and the first recorded gingerbread guild all came from here."
+			],
+			"it": [
+				"Probabilmente \"colle roccioso\": da un’antica parola nuor, roccia, più Berg.",
+				"L’area dei raduni nazisti e poi i processi del dopoguerra hanno reso il nome della città sinonimo di entrambi.",
+				"L’orologio da tasca, il primo globo e la prima corporazione documentata di fornai di panpepato vengono tutti da qui."
+			],
+			"de": [
+				"Wahrscheinlich „felsiger Hügel“ – von einem alten Wort nuor für Fels plus Berg.",
+				"Das Reichsparteitagsgelände der Nationalsozialisten und danach die Prozesse der Nachkriegszeit haben den Namen der Stadt zum Inbegriff für beides gemacht.",
+				"Die Taschenuhr, der erste Globus und die erste belegte Lebkuchenzunft stammen alle von hier."
+			]
+		}
+	},
+	"kaiserslautern": {
+		"kind": "city",
+		"population": 100247,
+		"populationRank": 27,
+		"region": "Rheinland-Pfalz",
+		"coastal": false,
+		"position": "west"
+	},
+	"heidelberg": {
+		"kind": "city",
+		"population": 156092,
+		"populationRank": 14,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Possibly \"blueberry mountain\", from Heidelbeere, or from Heide, a heath.",
+				"Its university, founded 1386, is the oldest in Germany.",
+				"The jaw of Homo heidelbergensis was found nearby in 1907, and the town survived the war almost undamaged."
+			],
+			"it": [
+				"Forse \"monte dei mirtilli\", da Heidelbeere, oppure da Heide, brughiera.",
+				"La sua università, fondata nel 1386, è la più antica della Germania.",
+				"La mandibola dell’Homo heidelbergensis fu trovata qui vicino nel 1907, e la città uscì dalla guerra quasi intatta."
+			],
+			"de": [
+				"Möglicherweise „Heidelbeerberg“, von Heidelbeere, oder von Heide, einem Heideland.",
+				"Seine 1386 gegründete Universität ist die älteste Deutschlands.",
+				"Der Kiefer des Homo heidelbergensis wurde 1907 in der Nähe gefunden, und die Stadt überstand den Krieg fast unbeschädigt."
+			]
+		}
+	},
+	"neustadt-an-der-weinstra-e": {
+		"kind": "city",
+		"population": 52882,
+		"populationRank": 58,
+		"region": "Rheinland-Pfalz",
+		"coastal": false,
+		"position": "west"
+	},
+	"saarbrucken": {
+		"kind": "city",
+		"population": 182859,
+		"populationRank": 12,
+		"region": "Saarland",
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"\"Bridges over the Saar.\"",
+				"It has changed between France and Germany repeatedly, most recently returning in 1957.",
+				"Its Völklingen ironworks nearby is the only intact nineteenth-century ironworks in the world and a UNESCO site."
+			],
+			"it": [
+				"\"Ponti sulla Saar\".",
+				"È passata più volte dalla Francia alla Germania e viceversa, l’ultima volta tornando nel 1957.",
+				"Le vicine ferriere di Völklingen sono l’unico impianto siderurgico ottocentesco rimasto intatto al mondo, e sono patrimonio UNESCO."
+			],
+			"de": [
+				"„Brücken über die Saar“.",
+				"Es wechselte wiederholt zwischen Frankreich und Deutschland, zuletzt 1957 zurück.",
+				"Die nahe Völklinger Hütte ist das einzige vollständig erhaltene Eisenwerk des 19. Jahrhunderts auf der Welt und UNESCO-Welterbe."
+			]
+		}
+	},
+	"heilbronn": {
+		"kind": "city",
+		"population": 132516,
+		"populationRank": 20,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "centre"
+	},
+	"karlsruhe": {
+		"kind": "city",
+		"population": 309247,
+		"populationRank": 6,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"\"Karl’s rest\" — a margrave built a palace here in 1715 and named it for the peace he hoped to find.",
+				"The city fans out from that palace in 32 streets like a wheel, which is why it is called the fan city.",
+				"Germany’s federal constitutional court sits here, and Heinrich Hertz proved radio waves exist in its university."
+			],
+			"it": [
+				"\"Il riposo di Carlo\": nel 1715 un margravio vi costruì un palazzo e lo chiamò così per la pace che sperava di trovarvi.",
+				"La città si apre a ventaglio da quel palazzo con 32 strade, come i raggi di una ruota: per questo la chiamano la città a ventaglio.",
+				"Qui ha sede la Corte costituzionale federale tedesca, e Heinrich Hertz dimostrò l’esistenza delle onde radio nella sua università."
+			],
+			"de": [
+				"„Karls Ruhe“ – ein Markgraf ließ hier 1715 ein Schloss bauen und benannte es nach dem Frieden, den er zu finden hoffte.",
+				"Die Stadt fächert sich vom Schloss in 32 Straßen wie ein Rad auf, weshalb sie Fächerstadt heißt.",
+				"Hier sitzt das Bundesverfassungsgericht, und Heinrich Hertz wies an der Universität die Existenz der Radiowellen nach."
+			]
+		}
+	},
+	"regensburg": {
+		"kind": "city",
+		"population": 151517,
+		"populationRank": 15,
+		"region": "Bayern",
+		"coastal": false,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"\"Fortress on the Regen\" — the river that joins the Danube here.",
+				"Its Stone Bridge of 1146 was the only Danube crossing for 800 km and made the town rich; the old town is a UNESCO site.",
+				"The Imperial Diet sat here permanently from 1663 to 1806, effectively making it the empire’s parliament."
+			],
+			"it": [
+				"\"Fortezza sul Regen\": il fiume che qui confluisce nel Danubio.",
+				"Il suo Ponte di pietra del 1146 fu per 800 km l’unico attraversamento del Danubio e fece ricca la città; il centro storico è patrimonio UNESCO.",
+				"La Dieta imperiale vi sedette stabilmente dal 1663 al 1806, facendone di fatto il parlamento dell’impero."
+			],
+			"de": [
+				"„Burg am Regen“ – dem Fluss, der hier in die Donau mündet.",
+				"Ihre Steinerne Brücke von 1146 war 800 km lang der einzige Donauübergang und machte die Stadt reich; die Altstadt ist UNESCO-Welterbe.",
+				"Der Reichstag tagte hier von 1663 bis 1806 ununterbrochen und war damit faktisch das Parlament des Reiches."
+			]
+		}
+	},
+	"ludwigsburg": {
+		"kind": "city",
+		"population": 93002,
+		"populationRank": 30,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "centre"
+	},
+	"pforzheim": {
+		"kind": "city",
+		"population": 134422,
+		"populationRank": 17,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "west"
+	},
+	"rastatt": {
+		"kind": "city",
+		"population": 50753,
+		"populationRank": 61,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "west"
+	},
+	"waiblingen": {
+		"kind": "city",
+		"population": 57186,
+		"populationRank": 51,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south"
+	},
+	"schwabisch-gmund": {
+		"kind": "city",
+		"population": 63930,
+		"populationRank": 46,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south"
+	},
+	"stuttgart": {
+		"kind": "city",
+		"population": 609365,
+		"populationRank": 3,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"From Stuotgarten, \"stud garden\" — a horse stud founded about 950, which is why a horse is on the city arms.",
+				"Mercedes and Porsche both build here, and Karl Benz’s successors made the city the birthplace of the car.",
+				"It sits in a bowl of vineyards, and vines grow inside the city limits."
+			],
+			"it": [
+				"Da Stuotgarten, \"giardino delle giumente\": un allevamento di cavalli fondato intorno al 950, ed è per questo che nello stemma della città c’è un cavallo.",
+				"Mercedes e Porsche producono entrambe qui, e i successori di Karl Benz hanno fatto della città la culla dell’automobile.",
+				"Sorge in una conca di vigneti, e le viti crescono anche dentro i confini comunali."
+			],
+			"de": [
+				"Von Stuotgarten, „Stutengarten“ – ein um 950 gegründetes Gestüt, weshalb ein Pferd im Stadtwappen steht.",
+				"Mercedes und Porsche bauen beide hier, und Karl Benz’ Nachfolger machten die Stadt zur Wiege des Autos.",
+				"Sie liegt in einem Kessel aus Weinbergen, und innerhalb der Stadtgrenzen wächst Wein."
+			]
+		}
+	},
+	"ingolstadt": {
+		"kind": "city",
+		"population": 140799,
+		"populationRank": 16,
+		"region": "Bayern",
+		"coastal": false,
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"\"The place of Ingold’s people.\"",
+				"Mary Shelley had Frankenstein study at its university and build his creature in the town.",
+				"Audi has been based here since 1949, and its Bavarian purity law for beer was proclaimed in the town in 1516."
+			],
+			"it": [
+				"\"Il luogo della gente di Ingold\".",
+				"Mary Shelley fece studiare Frankenstein nella sua università e gli fece costruire qui la sua creatura.",
+				"L’Audi ha sede qui dal 1949, e la legge bavarese sulla purezza della birra fu proclamata in questa città nel 1516."
+			],
+			"de": [
+				"„Die Stätte von Ingolds Leuten“.",
+				"Mary Shelley ließ Frankenstein an ihrer Universität studieren und in der Stadt sein Geschöpf erschaffen.",
+				"Audi hat seinen Sitz seit 1949 hier, und das bayerische Reinheitsgebot für Bier wurde 1516 in der Stadt verkündet."
+			]
+		}
+	},
+	"baden-baden": {
+		"kind": "city",
+		"population": 56952,
+		"populationRank": 52,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"esslingen-am-neckar": {
+		"kind": "city",
+		"population": 95419,
+		"populationRank": 29,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south"
+	},
+	"sindelfingen": {
+		"kind": "city",
+		"population": 61428,
+		"populationRank": 49,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south"
+	},
+	"goppingen": {
+		"kind": "city",
+		"population": 58678,
+		"populationRank": 50,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south"
+	},
+	"heidenheim-an-der-brenz": {
+		"kind": "city",
+		"population": 50612,
+		"populationRank": 62,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south"
+	},
+	"passau": {
+		"kind": "city",
+		"population": 53523,
+		"populationRank": 57,
+		"region": "Bayern",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"landshut": {
+		"kind": "city",
+		"population": 71922,
+		"populationRank": 40,
+		"region": "Bayern",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"tubingen": {
+		"kind": "city",
+		"population": 92607,
+		"populationRank": 31,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south"
+	},
+	"reutlingen": {
+		"kind": "city",
+		"population": 119040,
+		"populationRank": 23,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south"
+	},
+	"offenburg": {
+		"kind": "city",
+		"population": 63437,
+		"populationRank": 47,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"ulm": {
+		"kind": "city",
+		"population": 130288,
+		"populationRank": 22,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"From an old word for a damp place or a turning of the river.",
+				"Its Minster has the tallest church steeple in the world at 161.5 m, with 768 steps.",
+				"Einstein was born here, and a tailor tried to fly from the city wall over the Danube in 1811 and fell in."
+			],
+			"it": [
+				"Da un’antica parola per luogo umido o per un’ansa del fiume.",
+				"Il suo duomo ha il campanile più alto del mondo: 161,5 m, con 768 gradini.",
+				"Einstein nacque qui, e nel 1811 un sarto tentò di volare dalle mura della città sopra il Danubio e ci finì dentro."
+			],
+			"de": [
+				"Von einem alten Wort für eine feuchte Stelle oder eine Flusswindung.",
+				"Das Münster hat mit 161,5 m den höchsten Kirchturm der Welt, mit 768 Stufen.",
+				"Einstein wurde hier geboren, und ein Schneider versuchte 1811, von der Stadtmauer über die Donau zu fliegen, und stürzte hinein."
+			]
+		}
+	},
+	"augsburg": {
+		"kind": "city",
+		"population": 301786,
+		"populationRank": 7,
+		"region": "Bayern",
+		"coastal": false,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"From Augusta Vindelicorum, founded by Augustus in 15 BC — one of Germany’s oldest cities.",
+				"The Fuggerei here, built in 1521, is the oldest social housing in the world still in use; rent is one Rhenish guilder a year, about 88 cents.",
+				"Its water management system is a UNESCO site, and the 1555 Peace of Augsburg let each prince choose his realm’s religion."
+			],
+			"it": [
+				"Da Augusta Vindelicorum, fondata da Augusto nel 15 a.C.: una delle città più antiche della Germania.",
+				"La Fuggerei, costruita qui nel 1521, è il più antico complesso di case popolari al mondo ancora abitato; l’affitto è un fiorino renano all’anno, circa 88 centesimi.",
+				"Il suo sistema di gestione delle acque è patrimonio UNESCO, e la pace di Augusta del 1555 lasciò a ogni principe la scelta della religione dei suoi domini."
+			],
+			"de": [
+				"Von Augusta Vindelicorum, 15 v. Chr. von Augustus gegründet – eine der ältesten Städte Deutschlands.",
+				"Die 1521 erbaute Fuggerei ist die älteste noch genutzte Sozialsiedlung der Welt; die Miete beträgt einen rheinischen Gulden im Jahr, etwa 88 Cent.",
+				"Das Wassermanagement-System der Stadt ist UNESCO-Welterbe, und der Augsburger Religionsfriede von 1555 ließ jeden Fürsten die Religion seines Landes wählen."
+			]
+		}
+	},
+	"lahr-schwarzwald": {
+		"kind": "city",
+		"population": 51208,
+		"populationRank": 60,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"munchen": {
+		"kind": "city",
+		"population": 1505036,
+		"populationRank": 1,
+		"region": "Bayern",
+		"coastal": false,
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"\"By the monks\" — Munichen, from a monastic settlement, which is why a monk is on the city arms.",
+				"Oktoberfest began as a royal wedding party in 1810 and now draws about six million people.",
+				"Its Englischer Garten is larger than Central Park, and surfers ride a standing wave on a stream inside it."
+			],
+			"it": [
+				"\"Presso i monaci\": Munichen, da un insediamento monastico, ed è per questo che nello stemma della città c’è un monaco.",
+				"L’Oktoberfest nacque nel 1810 come festa per un matrimonio reale e oggi richiama circa sei milioni di persone.",
+				"Il suo Englischer Garten è più grande di Central Park, e al suo interno i surfisti cavalcano un’onda stazionaria su un ruscello."
+			],
+			"de": [
+				"„Bei den Mönchen“ – Munichen, von einer Mönchssiedlung, weshalb ein Mönch im Stadtwappen steht.",
+				"Das Oktoberfest begann 1810 als königliche Hochzeitsfeier und zieht heute etwa sechs Millionen Menschen an.",
+				"Sein Englischer Garten ist größer als der Central Park, und Surfer reiten darin auf einer stehenden Welle in einem Bach."
+			]
+		}
+	},
+	"villingen-schwenningen": {
+		"kind": "city",
+		"population": 89766,
+		"populationRank": 32,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"freiburg-im-breisgau": {
+		"kind": "city",
+		"population": 238299,
+		"populationRank": 9,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"\"Free town\" — founded in 1120 with a free market charter; Breisgau distinguishes it from other Freiburgs.",
+				"It is the sunniest city in Germany and a pioneer of solar power, with a whole district built to produce more energy than it uses.",
+				"Its Bächle, small water channels, run along the streets; local lore says stepping in one means you will marry a Freiburger."
+			],
+			"it": [
+				"\"Città libera\": fondata nel 1120 con un privilegio di libero mercato; \"in Brisgovia\" la distingue dalle altre Friburgo.",
+				"È la città più soleggiata della Germania e una pioniera dell’energia solare, con un intero quartiere costruito per produrre più energia di quanta ne consumi.",
+				"Lungo le sue strade corrono i Bächle, piccoli canali d’acqua; secondo la tradizione locale, chi ci mette un piede dentro sposerà un friburghese."
+			],
+			"de": [
+				"„Freie Stadt“ – 1120 mit einem freien Marktprivileg gegründet; „im Breisgau“ unterscheidet sie von anderen Freiburgs.",
+				"Sie ist die sonnenreichste Stadt Deutschlands und eine Pionierin der Solarenergie, mit einem ganzen Stadtteil, der mehr Energie erzeugt, als er verbraucht.",
+				"Durch ihre Straßen laufen die Bächle, kleine Wasserrinnen; nach der Stadtlegende heiratet man einen Freiburger oder eine Freiburgerin, wenn man in eines tritt."
+			]
+		}
+	},
+	"rosenheim": {
+		"kind": "city",
+		"population": 65808,
+		"populationRank": 44,
+		"region": "Bayern",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"ravensburg": {
+		"kind": "city",
+		"population": 50549,
+		"populationRank": 63,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south"
+	},
+	"kempten": {
+		"kind": "city",
+		"population": 67916,
+		"populationRank": 41,
+		"region": "Bayern",
+		"coastal": false,
+		"position": "south"
+	},
+	"konstanz": {
+		"kind": "city",
+		"population": 86691,
+		"populationRank": 35,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south"
+	},
+	"friedrichshafen": {
+		"kind": "city",
+		"population": 62781,
+		"populationRank": 48,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south"
+	},
+	"lorrach": {
+		"kind": "city",
+		"population": 51274,
+		"populationRank": 59,
+		"region": "Baden-Württemberg",
+		"coastal": false,
+		"position": "south-west"
+	}
+}

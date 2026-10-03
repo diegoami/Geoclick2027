@@ -1,0 +1,763 @@
+{
+	"minden": {
+		"kind": "city",
+		"population": 83598,
+		"populationRank": 37,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"rheine": {
+		"kind": "city",
+		"population": 77209,
+		"populationRank": 40,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "north"
+	},
+	"ibbenburen": {
+		"kind": "city",
+		"population": 51596,
+		"populationRank": 73,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "north"
+	},
+	"gronau": {
+		"kind": "city",
+		"population": 50349,
+		"populationRank": 76,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "north"
+	},
+	"bad-oeynhausen": {
+		"kind": "city",
+		"population": 50515,
+		"populationRank": 75,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"herford": {
+		"kind": "city",
+		"population": 67074,
+		"populationRank": 50,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"bad-salzuflen": {
+		"kind": "city",
+		"population": 53807,
+		"populationRank": 67,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"bielefeld": {
+		"kind": "city",
+		"population": 331419,
+		"populationRank": 8,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"\"Bare field\" — biel is from an old word for an axe or a bare place.",
+				"A long-running German internet joke insists the city does not exist; the council once offered a million euros for proof.",
+				"Dr. Oetker, the baking-powder and frozen-pizza company, was founded and is based here."
+			],
+			"it": [
+				"\"Campo spoglio\": biel viene da un’antica parola per ascia o per luogo spoglio.",
+				"Un vecchio scherzo della rete tedesca sostiene che la città non esista; il comune arrivò a offrire un milione di euro a chi ne avesse fornito la prova.",
+				"Qui è nata e ha sede la Dr. Oetker, l’azienda del lievito per dolci e delle pizze surgelate."
+			],
+			"de": [
+				"„Kahles Feld“ – biel kommt von einem alten Wort für Beil oder für eine kahle Stelle.",
+				"Ein langlebiger deutscher Internetscherz behauptet, die Stadt gebe es gar nicht; die Stadt bot einmal eine Million Euro für einen Beweis.",
+				"Dr. Oetker, der Hersteller von Backpulver und Tiefkühlpizza, wurde hier gegründet und hat hier seinen Sitz."
+			]
+		}
+	},
+	"munster": {
+		"kind": "city",
+		"population": 306368,
+		"populationRank": 10,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"From monasterium, a monastery — the same root as the English \"minster\".",
+				"The other half of the Peace of Westphalia was signed here in 1648.",
+				"It has more bicycles than people and is Germany’s cycling capital; the Anabaptist commune that seized the town in 1534 ended with three cages hung from a church tower, which are still there."
+			],
+			"it": [
+				"Da monasterium, monastero: la stessa radice dell’inglese \"minster\".",
+				"L’altra metà della pace di Vestfalia fu firmata qui nel 1648.",
+				"Ha più biciclette che abitanti ed è la capitale tedesca della bicicletta; la comune anabattista che prese la città nel 1534 finì con tre gabbie appese alla torre di una chiesa, dove sono ancora."
+			],
+			"de": [
+				"Von monasterium, „Kloster“ – dieselbe Wurzel wie im englischen „minster“.",
+				"Die andere Hälfte des Westfälischen Friedens wurde hier 1648 unterzeichnet.",
+				"Es hat mehr Fahrräder als Einwohner und ist Deutschlands Fahrradhauptstadt; die Täufergemeinde, die 1534 die Stadt an sich riss, endete mit drei Käfigen am Kirchturm, die dort noch heute hängen."
+			]
+		}
+	},
+	"detmold": {
+		"kind": "city",
+		"population": 74438,
+		"populationRank": 45,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"gutersloh": {
+		"kind": "city",
+		"population": 99854,
+		"populationRank": 30,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"bocholt": {
+		"kind": "city",
+		"population": 73048,
+		"populationRank": 46,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"kleve": {
+		"kind": "city",
+		"population": 53094,
+		"populationRank": 68,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"ahlen": {
+		"kind": "city",
+		"population": 52387,
+		"populationRank": 70,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "north"
+	},
+	"paderborn": {
+		"kind": "city",
+		"population": 155906,
+		"populationRank": 22,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "east"
+	},
+	"hamm": {
+		"kind": "city",
+		"population": 179108,
+		"populationRank": 17,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "centre"
+	},
+	"marl": {
+		"kind": "city",
+		"population": 86899,
+		"populationRank": 35,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "centre"
+	},
+	"lippstadt": {
+		"kind": "city",
+		"population": 72804,
+		"populationRank": 47,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "east"
+	},
+	"dorsten": {
+		"kind": "city",
+		"population": 74783,
+		"populationRank": 43,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "west"
+	},
+	"wesel": {
+		"kind": "city",
+		"population": 60717,
+		"populationRank": 57,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "west"
+	},
+	"recklinghausen": {
+		"kind": "city",
+		"population": 114851,
+		"populationRank": 25,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "centre"
+	},
+	"lunen": {
+		"kind": "city",
+		"population": 85844,
+		"populationRank": 36,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "centre"
+	},
+	"gladbeck": {
+		"kind": "city",
+		"population": 75647,
+		"populationRank": 42,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "west"
+	},
+	"dinslaken": {
+		"kind": "city",
+		"population": 66869,
+		"populationRank": 51,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "west"
+	},
+	"castrop-rauxel": {
+		"kind": "city",
+		"population": 72353,
+		"populationRank": 48,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "centre"
+	},
+	"herne": {
+		"kind": "city",
+		"population": 156266,
+		"populationRank": 21,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "centre"
+	},
+	"unna": {
+		"kind": "city",
+		"population": 57961,
+		"populationRank": 60,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "centre"
+	},
+	"bottrop": {
+		"kind": "city",
+		"population": 118482,
+		"populationRank": 24,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "west"
+	},
+	"dortmund": {
+		"kind": "city",
+		"population": 600880,
+		"populationRank": 3,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"From Throtmanni, an older name of uncertain meaning.",
+				"It was a Hanseatic town, then coal and steel; the last pit closed in 1987 and the last furnace in 2001.",
+				"Its stadium has the largest standing terrace in European football, holding about 25,000."
+			],
+			"it": [
+				"Da Throtmanni, un nome più antico dal significato incerto.",
+				"Fu città anseatica, poi carbone e acciaio; l’ultima miniera chiuse nel 1987, l’ultimo altoforno nel 2001.",
+				"Il suo stadio ha la più grande tribuna per spettatori in piedi del calcio europeo: circa 25.000 persone."
+			],
+			"de": [
+				"Von Throtmanni, einem älteren Namen von ungewisser Bedeutung.",
+				"Es war eine Hansestadt, dann Kohle und Stahl; die letzte Zeche schloss 1987, der letzte Hochofen 2001.",
+				"Sein Stadion hat die größte Stehplatztribüne im europäischen Fußball, mit rund 25.000 Plätzen."
+			]
+		}
+	},
+	"gelsenkirchen": {
+		"kind": "city",
+		"population": 266199,
+		"populationRank": 12,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "centre"
+	},
+	"bochum": {
+		"kind": "city",
+		"population": 358880,
+		"populationRank": 6,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "centre"
+	},
+	"oberhausen": {
+		"kind": "city",
+		"population": 213178,
+		"populationRank": 15,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "west"
+	},
+	"moers": {
+		"kind": "city",
+		"population": 101298,
+		"populationRank": 29,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "west"
+	},
+	"essen": {
+		"kind": "city",
+		"population": 573618,
+		"populationRank": 4,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Of uncertain origin, possibly from a word for a forge or from asnithi, a meadow.",
+				"Krupp built its steel and armaments empire here, and the family villa has 269 rooms.",
+				"The Zollverein coal mine, called the most beautiful colliery in the world, is a UNESCO site."
+			],
+			"it": [
+				"Di origine incerta, forse da una parola per fucina o da asnithi, un prato.",
+				"Qui la Krupp costruì il suo impero dell’acciaio e delle armi, e la villa di famiglia ha 269 stanze.",
+				"La miniera di carbone dello Zollverein, detta la più bella miniera del mondo, è patrimonio UNESCO."
+			],
+			"de": [
+				"Von ungewisser Herkunft, möglicherweise von einem Wort für Esse oder von asnithi, Wiese.",
+				"Krupp baute hier sein Stahl- und Rüstungsimperium auf, und die Familienvilla hat 269 Zimmer.",
+				"Die Zeche Zollverein, „die schönste Zeche der Welt“ genannt, ist UNESCO-Welterbe."
+			]
+		}
+	},
+	"witten": {
+		"kind": "city",
+		"population": 91474,
+		"populationRank": 32,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "centre"
+	},
+	"menden-sauerland": {
+		"kind": "city",
+		"population": 52121,
+		"populationRank": 71,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "centre"
+	},
+	"duisburg": {
+		"kind": "city",
+		"population": 500810,
+		"populationRank": 5,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"From an old word for a fortified place, duis being possibly a marsh or a hill.",
+				"It has the largest inland port in the world, where the Ruhr meets the Rhine.",
+				"Mercator, who invented the map projection every sailor used, lived and died here."
+			],
+			"it": [
+				"Da un’antica parola per luogo fortificato; duis forse indicava una palude o una collina.",
+				"Ha il più grande porto fluviale del mondo, dove la Ruhr incontra il Reno.",
+				"Qui visse e morì Mercatore, che inventò la proiezione cartografica usata da ogni navigatore."
+			],
+			"de": [
+				"Von einem alten Wort für einen befestigten Ort; duis bedeutet möglicherweise Sumpf oder Hügel.",
+				"Hier liegt der größte Binnenhafen der Welt, dort, wo die Ruhr in den Rhein mündet.",
+				"Mercator, der die Kartenprojektion erfand, die jeder Seemann benutzte, lebte und starb hier."
+			]
+		}
+	},
+	"mulheim-an-der-ruhr": {
+		"kind": "city",
+		"population": 171674,
+		"populationRank": 18,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "west"
+	},
+	"hattingen": {
+		"kind": "city",
+		"population": 52969,
+		"populationRank": 69,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "centre"
+	},
+	"arnsberg": {
+		"kind": "city",
+		"population": 74479,
+		"populationRank": 44,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "east"
+	},
+	"iserlohn": {
+		"kind": "city",
+		"population": 91317,
+		"populationRank": 33,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "centre"
+	},
+	"hagen": {
+		"kind": "city",
+		"population": 189983,
+		"populationRank": 16,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "centre"
+	},
+	"velbert": {
+		"kind": "city",
+		"population": 82166,
+		"populationRank": 38,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "centre"
+	},
+	"krefeld": {
+		"kind": "city",
+		"population": 230738,
+		"populationRank": 14,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "west"
+	},
+	"ratingen": {
+		"kind": "city",
+		"population": 88914,
+		"populationRank": 34,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "west"
+	},
+	"wuppertal": {
+		"kind": "city",
+		"population": 357243,
+		"populationRank": 7,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"\"Wupper valley\" — a name invented in 1930 when several towns merged.",
+				"Its Schwebebahn, a suspended monorail hanging over the river, opened in 1901 and still runs.",
+				"An elephant fell out of it into the river in 1950 and survived; Friedrich Engels was born in the town."
+			],
+			"it": [
+				"\"Valle della Wupper\": un nome inventato nel 1930, quando diverse città si fusero.",
+				"La sua Schwebebahn, una monorotaia sospesa sopra il fiume, fu inaugurata nel 1901 e funziona ancora.",
+				"Nel 1950 un elefante cadde dalla monorotaia nel fiume e sopravvisse; Friedrich Engels nacque in questa città."
+			],
+			"de": [
+				"„Tal der Wupper“ – ein Name, der 1930 erfunden wurde, als mehrere Städte zusammengelegt wurden.",
+				"Ihre Schwebebahn, eine über dem Fluss hängende Einschienenbahn, wurde 1901 eröffnet und fährt noch heute.",
+				"1950 fiel ein Elefant aus ihr in den Fluss und überlebte; Friedrich Engels wurde in der Stadt geboren."
+			]
+		}
+	},
+	"meerbusch": {
+		"kind": "city",
+		"population": 56947,
+		"populationRank": 63,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "west"
+	},
+	"viersen": {
+		"kind": "city",
+		"population": 78227,
+		"populationRank": 39,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "west"
+	},
+	"dusseldorf": {
+		"kind": "city",
+		"population": 619444,
+		"populationRank": 2,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"\"Village on the Düssel\" — dorf is a village, and the Düssel is a small tributary.",
+				"Its Königsallee is one of the most expensive shopping streets in Europe.",
+				"It has the largest Japanese community in Germany, and Kraftwerk invented electronic pop here in the 1970s."
+			],
+			"it": [
+				"\"Villaggio sulla Düssel\": dorf è villaggio, e la Düssel è un piccolo affluente.",
+				"La sua Königsallee è una delle vie commerciali più care d’Europa.",
+				"Ha la più grande comunità giapponese della Germania, e qui negli anni Settanta i Kraftwerk inventarono il pop elettronico."
+			],
+			"de": [
+				"„Dorf an der Düssel“ – dorf ist ein Dorf, und die Düssel ein kleiner Nebenfluss.",
+				"Ihre Königsallee ist eine der teuersten Einkaufsstraßen Europas.",
+				"Hier lebt die größte japanische Gemeinde Deutschlands, und Kraftwerk erfand hier in den 1970er-Jahren den elektronischen Pop."
+			]
+		}
+	},
+	"ludenscheid": {
+		"kind": "city",
+		"population": 70810,
+		"populationRank": 49,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "centre"
+	},
+	"neuss": {
+		"kind": "city",
+		"population": 153767,
+		"populationRank": 23,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"monchengladbach": {
+		"kind": "city",
+		"population": 267176,
+		"populationRank": 11,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"remscheid": {
+		"kind": "city",
+		"population": 113333,
+		"populationRank": 26,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "south"
+	},
+	"solingen": {
+		"kind": "city",
+		"population": 164621,
+		"populationRank": 20,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "south"
+	},
+	"hilden": {
+		"kind": "city",
+		"population": 54859,
+		"populationRank": 66,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"langenfeld": {
+		"kind": "city",
+		"population": 59821,
+		"populationRank": 59,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"dormagen": {
+		"kind": "city",
+		"population": 63619,
+		"populationRank": 54,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"grevenbroich": {
+		"kind": "city",
+		"population": 65605,
+		"populationRank": 53,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"leverkusen": {
+		"kind": "city",
+		"population": 168299,
+		"populationRank": 19,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"gummersbach": {
+		"kind": "city",
+		"population": 51332,
+		"populationRank": 74,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "south"
+	},
+	"pulheim": {
+		"kind": "city",
+		"population": 55979,
+		"populationRank": 65,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"bergisch-gladbach": {
+		"kind": "city",
+		"population": 111174,
+		"populationRank": 27,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "south"
+	},
+	"bergheim": {
+		"kind": "city",
+		"population": 61976,
+		"populationRank": 55,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"koln": {
+		"kind": "city",
+		"population": 1025523,
+		"populationRank": 1,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"From Colonia Claudia Ara Agrippinensium — the Roman colony founded for Agrippina, who was born there.",
+				"Its cathedral took 632 years to build, from 1248 to 1880, and was then the tallest building in the world.",
+				"Eau de Cologne was invented here in 1709, which is why the city’s name is a perfume."
+			],
+			"it": [
+				"Da Colonia Claudia Ara Agrippinensium: la colonia romana fondata per Agrippina, che vi era nata.",
+				"La sua cattedrale richiese 632 anni di lavori, dal 1248 al 1880, e all’epoca era l’edificio più alto del mondo.",
+				"L’acqua di Colonia fu inventata qui nel 1709: ecco perché il nome della città è diventato un profumo."
+			],
+			"de": [
+				"Von Colonia Claudia Ara Agrippinensium – der römischen Kolonie, die für Agrippina gegründet wurde, die dort geboren wurde.",
+				"Sein Dom brauchte 632 Jahre bis zur Vollendung, von 1248 bis 1880, und war dann das höchste Gebäude der Welt.",
+				"Hier wurde 1709 das Kölnisch Wasser erfunden, weshalb der Name der Stadt ein Parfüm ist."
+			]
+		}
+	},
+	"frechen": {
+		"kind": "city",
+		"population": 51927,
+		"populationRank": 72,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"hurth": {
+		"kind": "city",
+		"population": 61732,
+		"populationRank": 56,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"siegen": {
+		"kind": "city",
+		"population": 102450,
+		"populationRank": 28,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"kerpen": {
+		"kind": "city",
+		"population": 66377,
+		"populationRank": 52,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"eschweiler": {
+		"kind": "city",
+		"population": 57573,
+		"populationRank": 62,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"troisdorf": {
+		"kind": "city",
+		"population": 75742,
+		"populationRank": 41,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "south"
+	},
+	"duren": {
+		"kind": "city",
+		"population": 94539,
+		"populationRank": 31,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"aachen": {
+		"kind": "city",
+		"population": 263703,
+		"populationRank": 13,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"sankt-augustin": {
+		"kind": "city",
+		"population": 56033,
+		"populationRank": 64,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "south"
+	},
+	"stolberg": {
+		"kind": "city",
+		"population": 57678,
+		"populationRank": 61,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"bonn": {
+		"kind": "city",
+		"population": 323587,
+		"populationRank": 9,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"From Latin Bonna, probably from a Celtic word for a foundation or a settlement.",
+				"It was the capital of West Germany from 1949 to 1990, chosen partly because it was small enough not to rival a reunified Berlin.",
+				"Beethoven was born here in 1770, and his birthplace is a museum."
+			],
+			"it": [
+				"Dal latino Bonna, probabilmente da una parola celtica per fondazione o insediamento.",
+				"Fu la capitale della Germania Ovest dal 1949 al 1990, scelta anche perché abbastanza piccola da non fare concorrenza a una Berlino riunificata.",
+				"Beethoven vi nacque nel 1770, e la sua casa natale è un museo."
+			],
+			"de": [
+				"Vom lateinischen Bonna, wahrscheinlich von einem keltischen Wort für Gründung oder Siedlung.",
+				"Von 1949 bis 1990 war es die Hauptstadt Westdeutschlands, unter anderem gewählt, weil es zu klein war, um einem wiedervereinigten Berlin Konkurrenz zu machen.",
+				"Beethoven wurde 1770 hier geboren, und sein Geburtshaus ist ein Museum."
+			]
+		}
+	},
+	"euskirchen": {
+		"kind": "city",
+		"population": 59977,
+		"populationRank": 58,
+		"region": "Nordrhein-Westfalen",
+		"coastal": false,
+		"position": "south-west"
+	}
+}

@@ -74,9 +74,13 @@ describe('country map order', () => {
 			'italy-regions',
 			'italy-towns-100k',
 			'italy-provinces',
+			'italy-towns-50k',
 			'italy-provinces-north',
 			'italy-provinces-center',
-			'italy-provinces-south'
+			'italy-provinces-south',
+			'italy-towns-50k-north',
+			'italy-towns-50k-center',
+			'italy-towns-50k-south'
 		]);
 		expect(idsFor('France')).toEqual([
 			'france-regions',
@@ -92,6 +96,7 @@ describe('country map order', () => {
 		expect(idsFor('Germany')).toEqual([
 			'germany-states',
 			'germany-towns-100k',
+			'germany-towns-50k',
 			'germany-districts-center',
 			'germany-districts-east',
 			'germany-districts-north',
@@ -103,7 +108,10 @@ describe('country map order', () => {
 			'germany-towns-north',
 			'germany-towns-southeast',
 			'germany-towns-southwest',
-			'germany-towns-west'
+			'germany-towns-west',
+			'germany-towns-50k-north',
+			'germany-towns-50k-center',
+			'germany-towns-50k-south'
 		]);
 	});
 
