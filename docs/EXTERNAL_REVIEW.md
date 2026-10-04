@@ -4,6 +4,16 @@
 a milestone candidate (`-Issue n -Kind release`) in a detached worktree and
 posts it as one GitHub comment. The model never writes to GitHub or git.
 
+**What blocks (owner, 2026-10-04).** Every brief carries a "Blocking means"
+section (`scripts/ReviewerBrief.ps1`). A harness replay showed why: a reviewer
+found three bypasses of the guard under review, proved each live, rated them all
+"not blocking" and approved, because its prompt never said what makes a finding
+blocking. Now a failed claim in the PR body, a proven way past what the PR
+protects (its `Protects:` line), forbidden or unasked behaviour in a touched
+file, or one of the project items blocks; a proven bypass is never "follow-up
+hardening". When a review approves with non-blocking findings, the implementer
+reads them before the handoff and treats a proven bypass as rework.
+
 Roles (owner's decision, 2026-10-02): reviewer **DeepSeek V4.1 Flash**
 (`opencode-go/deepseek-v4.1-flash`, effort `high`), then **Claude Opus**.
 Later the same day the owner switched the default OpenCode reviewer to **GPT

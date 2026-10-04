@@ -34,6 +34,19 @@ implemented, tell the owner (no Claude reviewer); on one another family
 implemented, run the Opus reviewer as a subagent on the printed brief. Exit 4 =
 posted but flagged, no label: read it and decide. See `docs/EXTERNAL_REVIEW.md`.
 
+**Write the PR body for the brief.** The PR body is the contract the reviewer is
+given. It says in one line what the change protects: `Protects: <the gate, data
+invariant, test, rule or file this change exists to guard>`. The brief's
+"Blocking means" section (`scripts/ReviewerBrief.ps1`) names that line: a
+proved way past it is blocking, never "follow-up hardening". When a change guards
+something (anything whose failure lets a wrong result or a forbidden action
+through), the body lists the forbidden results the guard must stop.
+
+**Read the non-blocking findings before handing over.** A review that approves
+while marking findings non-blocking is not done until you have read them. If one
+is a proven way past what `Protects:` names, treat the review as rework: say so
+on the PR, fix it, and run the review again.
+
 ## Prepare the optional review prompt (manual route)
 
 1. Read the PR's current metadata from GitHub; don't guess the number, URL,

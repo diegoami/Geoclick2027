@@ -36,6 +36,31 @@ look for it. Verify its claims against the code.
 
 $Contract
 
+## Blocking means
+
+Blocking means (any one is enough; a blocking finding means rework, never approve):
+1. A claim in the contract above fails, or cannot be run as written: a step it
+   tells the owner to take, a test or gate it says passes, a number it states.
+2. What this change protects can be got past. The contract's "Protects:" line
+   names it (a gate, a data invariant, a test, a rule such as "version numbers
+   change only in the release PR", an attribution a licence requires). If there
+   is no such line, take what the contract says the change exists to guarantee.
+   A bypass you proved is blocking, even when it looks like an edge case. Do not
+   rate it "follow-up hardening" or "outside the threat model" unless the
+   contract says so; if it does, quote the line.
+3. Behaviour the contract forbids, or behaviour nobody asked for, inside a file
+   the change touches.
+4. Project items, each blocking: npm run gates fails or was not run; generated
+   output (data/maps/*/facts.json, app/static/maps, app/static/manual) edited by
+   hand instead of rebuilt; a version number changed outside the release PR; a
+   test that still passes with the behaviour it names deleted; map data without
+   the attribution its licence needs; a status or decision written into a
+   document that the code does not bear out.
+Not blocking: wording, style, and defects in code the change did not touch. File
+those as follow-ups.
+When unsure, rate it blocking and say why. An approve with a proven bypass is the
+costliest mistake a review can make.
+
 ## Extra instructions from the caller
 
 $Extra
@@ -51,6 +76,7 @@ function Invoke-ReviewerBriefSelfTest {
         @{ n = 'brief has no "git -C"';            ok = ($brief -notmatch 'git\s+-C') },
         @{ n = 'brief names no full worktree path'; ok = ($brief -notmatch '[A-Za-z]:[\\/]|/Users/|-review/') },
         @{ n = 'brief demands the tree proof, in order'; ok = ($brief -match '(?s)FIRST tool call.*rev-parse --show-toplevel.*rev-parse HEAD.*diff --name-only ' + ('a' * 40) + '\.\.\.HEAD.*wrong\s+tree') },
+        @{ n = 'brief says what blocking means, and that a proven bypass is blocking'; ok = ($brief -match 'Blocking means' -and $brief -match 'proved is blocking' -and $brief -match 'Protects:') },
         @{ n = 'brief says an empty diff is wrong';      ok = ($brief -match 'must\s+not\s+be\s+empty') }
     )
     $script = Get-Content (Join-Path $PSScriptRoot 'external-review.ps1') -Raw
