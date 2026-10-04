@@ -566,8 +566,8 @@ closes the card; on the tour it changes by itself at each stop.
 The **Terrain** button, next to the language menu, shows or hides the landscape
 behind the map. It is on by default. With it on, you see the sea, the rivers and
 the named seas, ranges, deserts and peaks around the map, with their heights, in
-your language; empty stretches of sea carry old sea-chart decorations. Turning
-it off leaves just the map, with land and sea still told apart.
+your language. Turning it off leaves just the map, with land and sea still told
+apart.
 
 ![Terrain off](manual/terrain-off.jpg)
 
@@ -792,8 +792,10 @@ The apps are the same game as the website, packaged to install:
   out.
 - **Where the data comes from.** Natural Earth, a free public-domain world map,
   for most borders, and geoBoundaries (CC0 or open licences, credited on each
-  map) where Natural Earth is out of date or missing. Towns and some facts come
-  from Wikidata. Each map's own small print says what it uses.
+  map) where Natural Earth is out of date or missing. Most towns come from
+  Natural Earth's list of populated places; the towns of 50 000 and up on the
+  detailed maps, and some facts, come from Wikidata. Each map's own small print
+  says what it uses.
 
 ## 21. Questions and answers
 
