@@ -10,6 +10,15 @@ function Get-ModelFamilies([string] $text) {
     @($script:ModelFamilies.Keys | Where-Object { $text -match "(?i)$($script:ModelFamilies[$_])" })
 }
 
+# True when $id is named literally in $exclude (-ExcludeModel, model: labels) or
+# shares a family with anything in it (trailers, labels).
+function Test-ModelExcluded([string] $id, [string[]] $exclude) {
+    $exclude = @($exclude | Where-Object { $_ })
+    if ($exclude | Where-Object { $id -match [regex]::Escape($_) }) { return $true }
+    $families = @($exclude | ForEach-Object { Get-ModelFamilies $_ })
+    return [bool](@(Get-ModelFamilies $id) | Where-Object { $families -contains $_ })
+}
+
 function Invoke-ReviewerFamilySelfTest {
     $failed = 0
     function Check([string] $name, [bool] $ok) {
@@ -24,5 +33,10 @@ function Invoke-ReviewerFamilySelfTest {
     Check 'deepseek is only deepseek' (((Get-ModelFamilies 'opencode-go/deepseek-v4.1-flash') -join ',') -eq 'deepseek')
     Check 'Claude Sonnet is claude' ((Get-ModelFamilies 'Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>') -contains 'claude')
     Check 'console is not sol' (-not ((Get-ModelFamilies 'console') -contains 'openai'))
+    Check 'an unknown model named in -ExcludeModel is excluded' (Test-ModelExcluded 'google/gemini-3.1-pro' @('google/gemini-3.1-pro'))
+    Check 'an unknown model:gemini label excludes it' (Test-ModelExcluded 'google/gemini-3.1-pro' @('gemini'))
+    Check 'a Luna implementer excludes Sol' (Test-ModelExcluded 'openai/gpt-6.1-sol' @('Co-Authored-By: GPT-6 Luna (OpenCode)'))
+    Check 'a Luna implementer leaves GLM' (-not (Test-ModelExcluded 'zai-coding-plan/glm-5.3-flash' @('luna')))
+    Check 'no exclusions excludes nothing' (-not (Test-ModelExcluded 'openai/gpt-6.1-sol' @()))
     return $script:failed
 }

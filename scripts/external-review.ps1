@@ -109,11 +109,10 @@ if (-not $DryRun) {
     $trailers = (& git -C $repo log "$baseSha..$headSha" --format=%b 2>$null) -join "`n"
     $exclude += @($trailers -split "`n" | Where-Object { $_ -match '(?i)^Co-Authored-By:' })
 }
-$implementerFamilies = @($exclude | Where-Object { $_ } | ForEach-Object { Get-ModelFamilies $_ })
 $chain = @()
 foreach ($entry in $Model) {
     $id, $variant = $entry -split '#', 2
-    if (@(Get-ModelFamilies $id) | Where-Object { $implementerFamilies -contains $_ }) {
+    if (Test-ModelExcluded $id $exclude) {
         Write-Host "skipping ${id}: it implemented (or is excluded from) this change"; continue
     }
     $chain += [pscustomobject]@{ Id = $id; Variant = $variant; Name = Display $id }
