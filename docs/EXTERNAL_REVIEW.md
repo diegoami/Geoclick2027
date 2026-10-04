@@ -14,6 +14,14 @@ file, or one of the project items blocks; a proven bypass is never "follow-up
 hardening". When a review approves with non-blocking findings, the implementer
 reads them before the handoff and treats a proven bypass as rework.
 
+**One review, every blocker (owner, 2026-10-04).** Every brief also carries a "Report
+every blocking finding in this one review" section: finish the whole diff, report all
+blocking findings together, say "Final pass done" before the verdict, and never approve
+after running out of time or context. A reviewer that gives one blocker per round costs
+a round per finding; if one still does after two rounds, the implementer goes through the
+whole diff for the same class of problem before the next review and notes the pattern in
+`docs/reviews/MODEL_TRIALS.md`.
+
 Roles (owner's decision, 2026-10-02): reviewer **DeepSeek V4.1 Flash**
 (`opencode-go/deepseek-v4.1-flash`, effort `high`), then **Claude Opus**.
 Later the same day the owner switched the default OpenCode reviewer to **GPT
