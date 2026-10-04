@@ -396,6 +396,9 @@ only:
 - confirms `ONBOARDING.md`'s gotchas are current (GC-001, GC-002, GC-003 and
   GC-040 all change what a new contributor needs to know),
 - writes the `CHANGELOG.md` entry,
+- reruns `npm run manual-shots` (Playwright; starts its own dev server) so the
+  user manual's pictures show this release, and commits what changed in
+  `docs/manual/`,
 - confirms the progress ledger in `REMEDIATION_PLAN.md` matches what actually
   merged, and fills in the release row (tag + date).
 
