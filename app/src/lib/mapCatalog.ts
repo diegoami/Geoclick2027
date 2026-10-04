@@ -80,6 +80,13 @@ export const mapGroups: CountryGroup[] = [
 		maps: [{ id: 'austria-states', labelKey: 'mapType.states' }]
 	},
 	{
+		country: 'Bangladesh',
+		maps: [
+			{ id: 'bangladesh-divisions', labelKey: 'mapType.divisions' },
+			{ id: 'bangladesh-towns-100k', labelKey: 'mapType.towns' }
+		]
+	},
+	{
 		country: 'Belgium',
 		maps: [{ id: 'belgium-provinces', labelKey: 'mapType.provinces' }]
 	},
@@ -387,6 +394,13 @@ export const mapGroups: CountryGroup[] = [
 		maps: [
 			{ id: 'kenya-counties', labelKey: 'mapType.counties' },
 			{ id: 'kenya-towns-50k', labelKey: 'mapType.towns' }
+		]
+	},
+	{
+		country: 'Malaysia',
+		maps: [
+			{ id: 'malaysia-states', labelKey: 'mapType.states' },
+			{ id: 'malaysia-towns-100k', labelKey: 'mapType.towns' }
 		]
 	},
 	{

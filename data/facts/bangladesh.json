@@ -2,7 +2,8 @@
 	"_note": [
 		"Name-facts for Bangladesh (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences."
+		"of the same id, written later, never shows a town's sentences.",
+		"v0.18 added the eight divisions, each as a \"region\" entry (en, it, de), beside the city of the same id (Dhaka)."
 	],
 	"dhaka": {
 		"city": {
@@ -20,6 +21,156 @@
 				"Oft die Rikscha-Hauptstadt der Welt genannt.",
 				"Sein Parlamentsgebäude des amerikanischen Architekten Louis Kahn wurde 1982 fertiggestellt.",
 				"Dhaka ist eine der am dichtesten besiedelten Städte der Welt."
+			]
+		},
+		"region": {
+			"en": [
+				"The origin of the name is disputed; one explanation is the dhak tree, another the goddess Dhakeshwari.",
+				"Its fine muslin was famous across the world; jamdani, the patterned weave, is on UNESCO’s intangible heritage list.",
+				"Dhaka became the capital of Mughal Bengal in 1610, under the name Jahangirnagar."
+			],
+			"it": [
+				"L’origine del nome è discussa; una spiegazione indica l’albero dhak, un’altra la dea Dhakeshwari.",
+				"La sua mussola finissima era famosa in tutto il mondo; il jamdani, il tessuto operato, è nella lista UNESCO del patrimonio immateriale.",
+				"Dacca divenne capitale del Bengala mogol nel 1610, con il nome di Jahangirnagar."
+			],
+			"de": [
+				"Die Herkunft des Namens ist umstritten; eine Erklärung nennt den Dhak-Baum, eine andere die Göttin Dhakeshwari.",
+				"Sein feiner Musselin war in der ganzen Welt berühmt; Jamdani, das gemusterte Gewebe, steht auf der UNESCO-Liste des immateriellen Kulturerbes.",
+				"Dhaka wurde 1610 unter dem Namen Jahangirnagar Hauptstadt Bengalens unter den Moguln."
+			]
+		}
+	},
+	"barishal": {
+		"region": {
+			"en": [
+				"Spelled Barisal until 2018, when it was changed to Barishal to match how it is pronounced.",
+				"Its many canals and rivers earned it the nickname \"Venice of the East\".",
+				"Kuakata, on its coast, is a beach said to offer both the sunrise and the sunset over the sea."
+			],
+			"it": [
+				"Si scriveva Barisal fino al 2018, quando fu cambiato in Barishal per avvicinarsi alla pronuncia.",
+				"I suoi numerosi canali e fiumi le hanno dato il soprannome di \"Venezia d’Oriente\".",
+				"Sulla sua costa, Kuakata è una spiaggia da cui si dice si possano vedere sia l’alba sia il tramonto sul mare."
+			],
+			"de": [
+				"Bis 2018 Barisal geschrieben, dann an die Aussprache angepasst zu Barishal.",
+				"Seine vielen Kanäle und Flüsse brachten ihm den Beinamen „Venedig des Ostens“ ein.",
+				"An seiner Küste liegt Kuakata, ein Strand, von dem aus man angeblich sowohl den Sonnenaufgang als auch den Sonnenuntergang über dem Meer sehen kann."
+			]
+		}
+	},
+	"chattogram": {
+		"region": {
+			"en": [
+				"Spelled Chittagong until 2018, when it was changed to Chattogram; the origin of the name is disputed.",
+				"Its port is the busiest seaport in Bangladesh.",
+				"Cox’s Bazar, on its coast, claims the longest unbroken natural sea beach in the world, about 120 km."
+			],
+			"it": [
+				"Si scriveva Chittagong fino al 2018, quando fu cambiato in Chattogram; l’origine del nome è discussa.",
+				"Il suo porto è il più trafficato del Bangladesh.",
+				"Cox’s Bazar, sulla sua costa, vanta la spiaggia marina naturale ininterrotta più lunga del mondo, circa 120 km."
+			],
+			"de": [
+				"Bis 2018 Chittagong geschrieben, dann zu Chattogram geändert; die Herkunft des Namens ist umstritten.",
+				"Sein Hafen ist der verkehrsreichste Seehafen Bangladeschs.",
+				"Cox’s Bazar an seiner Küste beansprucht den längsten ununterbrochenen natürlichen Meeresstrand der Welt, etwa 120 km."
+			]
+		}
+	},
+	"khulna": {
+		"region": {
+			"en": [
+				"Most of the Sundarbans, whose name probably means \"beautiful forest\", lies in this division.",
+				"That mangrove forest, the largest in the world, shelters one of the biggest populations of the Bengal tiger.",
+				"At Bagerhat stands the Sixty Dome Mosque, built in the 15th century by Khan Jahan Ali."
+			],
+			"it": [
+				"Gran parte delle Sundarbans, il cui nome significa probabilmente \"bella foresta\", si trova in questa divisione.",
+				"Questa foresta di mangrovie, la più grande del mondo, ospita una delle maggiori popolazioni di tigre del Bengala.",
+				"A Bagerhat sorge la moschea dalle Sessanta Cupole, costruita nel XV secolo da Khan Jahan Ali."
+			],
+			"de": [
+				"Der größte Teil der Sundarbans, deren Name wahrscheinlich „schöner Wald“ bedeutet, liegt in dieser Division.",
+				"Dieser Mangrovenwald, der größte der Welt, beherbergt eine der größten Populationen des Bengalischen Tigers.",
+				"In Bagerhat steht die Sechzig-Kuppel-Moschee, im 15. Jahrhundert von Khan Jahan Ali erbaut."
+			]
+		}
+	},
+	"mymensingh": {
+		"region": {
+			"en": [
+				"The name is the British spelling of Momenshahi; the origin of that older name is disputed.",
+				"The newest of Bangladesh’s divisions, split from Dhaka in 2015.",
+				"The Mymensingh Ballads, folk poems collected here in the early 20th century, are among the best-known works of Bengali folk literature."
+			],
+			"it": [
+				"Il nome è la grafia britannica di Momenshahi; l’origine di quest’ultimo è discussa.",
+				"È la più recente delle divisioni del Bangladesh, staccata da Dacca nel 2015.",
+				"Le Ballate di Mymensingh, canti popolari raccolti qui all’inizio del Novecento, sono tra le opere più note della letteratura popolare bengalese."
+			],
+			"de": [
+				"Der Name ist die britische Schreibweise von Momenshahi; die Herkunft dieses älteren Namens ist umstritten.",
+				"Sie ist die jüngste Division Bangladeschs, 2015 von Dhaka abgetrennt.",
+				"Die Mymensingh-Balladen, Volkslieder, die hier Anfang des 20. Jahrhunderts gesammelt wurden, gehören zu den bekanntesten Werken der bengalischen Volksliteratur."
+			]
+		}
+	},
+	"rajshahi": {
+		"region": {
+			"en": [
+				"Usually read as raj, \"kingdom\", plus shahi, \"royal\".",
+				"In this division stand the ruins of Paharpur Vihara, an 8th-century Buddhist monastery and a World Heritage Site.",
+				"It is known for its mangoes and its silk."
+			],
+			"it": [
+				"Di solito letto come raj, \"regno\", più shahi, \"regale\".",
+				"In questa divisione sorgono i resti del Paharpur Vihara, un monastero buddhista dell’VIII secolo, Patrimonio dell’Umanità.",
+				"È nota per i suoi manghi e per la sua seta."
+			],
+			"de": [
+				"Meist gedeutet als raj, „Königreich“, plus shahi, „königlich“.",
+				"In dieser Division stehen die Ruinen des Paharpur Vihara, eines buddhistischen Klosters aus dem 8. Jahrhundert und Welterbe.",
+				"Sie ist bekannt für ihre Mangos und ihre Seide."
+			]
+		}
+	},
+	"rangpur": {
+		"region": {
+			"en": [
+				"Its name is often explained as \"town of colour\", from the Persian rang, but the origin is uncertain.",
+				"A division since 2010, it takes in the far north of the country, up to Banglabandha, the northernmost point of Bangladesh.",
+				"Begum Rokeya, a pioneer of education for Muslim girls, was born in Pairaband, in this division, in 1880."
+			],
+			"it": [
+				"Il suo nome è spesso spiegato come \"città del colore\", dal persiano rang, ma l’origine è incerta.",
+				"Divisione dal 2010, comprende l’estremo nord del paese, fino a Banglabandha, il punto più settentrionale del Bangladesh.",
+				"Begum Rokeya, pioniera dell’istruzione delle ragazze musulmane, nacque nel 1880 a Pairaband, in questa divisione."
+			],
+			"de": [
+				"Sein Name wird oft als „Stadt der Farbe“ erklärt, vom persischen rang, doch die Herkunft ist ungewiss.",
+				"Seit 2010 eine Division, umfasst sie den äußersten Norden des Landes bis Banglabandha, den nördlichsten Punkt Bangladeschs.",
+				"Begum Rokeya, eine Pionierin der Bildung muslimischer Mädchen, wurde 1880 in Pairaband in dieser Division geboren."
+			]
+		}
+	},
+	"sylhet": {
+		"region": {
+			"en": [
+				"Usually traced to Srihatta, Sanskrit for \"fine market\".",
+				"Tea gardens cover its hills; Sreemangal is called the tea capital of Bangladesh.",
+				"Most British Bangladeshis trace their families to Sylhet."
+			],
+			"it": [
+				"Di solito ricondotto a Srihatta, in sanscrito \"bel mercato\".",
+				"Le piantagioni di tè coprono le sue colline; Sreemangal è detta la capitale del tè del Bangladesh.",
+				"Gran parte dei bangladesi britannici ha famiglie originarie del Sylhet."
+			],
+			"de": [
+				"Meist auf Srihatta zurückgeführt, Sanskrit für „schöner Markt“.",
+				"Teegärten bedecken seine Hügel; Sreemangal gilt als Teehauptstadt Bangladeschs.",
+				"Die meisten britischen Bangladescher haben Wurzeln in Sylhet."
 			]
 		}
 	}

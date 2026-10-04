@@ -1,0 +1,239 @@
+{
+	"kota-baharu": {
+		"kind": "city",
+		"population": 505583,
+		"populationRank": 10,
+		"region": "Kelantan",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"alor-setar": {
+		"kind": "city",
+		"population": 336475,
+		"populationRank": 17,
+		"region": "Kedah",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"kota-kinabalu": {
+		"kind": "city",
+		"population": 527671,
+		"populationRank": 9,
+		"region": "Sabah",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"sandakan": {
+		"kind": "city",
+		"population": 392288,
+		"populationRank": 12,
+		"region": "Sabah",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"sungai-petani": {
+		"kind": "city",
+		"population": 358499,
+		"populationRank": 15,
+		"region": "Kedah",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"butterworth": {
+		"kind": "city",
+		"population": 821652,
+		"populationRank": 5,
+		"region": "Pulau Pinang",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"george-town": {
+		"kind": "city",
+		"population": 2500000,
+		"populationRank": 1,
+		"region": "Pulau Pinang",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"kuala-terengganu": {
+		"kind": "city",
+		"population": 350210,
+		"populationRank": 16,
+		"region": "Trengganu",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"lahad-datu": {
+		"kind": "city",
+		"population": 105622,
+		"populationRank": 26,
+		"region": "Sabah",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"taiping": {
+		"kind": "city",
+		"population": 237095,
+		"populationRank": 19,
+		"region": "Perak",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"ipoh": {
+		"kind": "city",
+		"population": 673318,
+		"populationRank": 7,
+		"region": "Perak",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"miri": {
+		"kind": "city",
+		"population": 228212,
+		"populationRank": 20,
+		"region": "Sarawak",
+		"coastal": true,
+		"position": "east"
+	},
+	"tawau": {
+		"kind": "city",
+		"population": 306462,
+		"populationRank": 18,
+		"region": "Sabah",
+		"coastal": true,
+		"position": "east"
+	},
+	"teluk-intan": {
+		"kind": "city",
+		"population": 101659,
+		"populationRank": 27,
+		"region": "Perak",
+		"coastal": false,
+		"position": "west"
+	},
+	"kuantan": {
+		"kind": "city",
+		"population": 366229,
+		"populationRank": 14,
+		"region": "Pahang",
+		"coastal": true,
+		"position": "west"
+	},
+	"bintulu": {
+		"kind": "city",
+		"population": 151617,
+		"populationRank": 25,
+		"region": "Sarawak",
+		"coastal": true,
+		"position": "east"
+	},
+	"kuala-lumpur": {
+		"kind": "city",
+		"population": 1448000,
+		"populationRank": 2,
+		"population1950": 208000,
+		"region": "Selangor",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"\"Muddy confluence\", where two rivers meet.",
+				"It grew from a tin-mining camp of the 1850s.",
+				"The Batu Caves, just outside it, hold a Hindu shrine reached by 272 steps."
+			],
+			"it": [
+				"\"Confluenza fangosa\", dove si incontrano due fiumi.",
+				"Crebbe da un campo di minatori di stagno degli anni Cinquanta dell’Ottocento.",
+				"Le grotte di Batu, appena fuori città, ospitano un santuario indù raggiungibile con 272 gradini."
+			],
+			"de": [
+				"„Schlammiger Zusammenfluss“, wo zwei Flüsse zusammentreffen.",
+				"Sie ging aus einem Zinnbergbaulager der 1850er-Jahre hervor.",
+				"Die Batu-Höhlen, unmittelbar außerhalb der Stadt, bergen einen hinduistischen Schrein, der über 272 Stufen erreicht wird."
+			]
+		}
+	},
+	"shah-alam": {
+		"kind": "city",
+		"population": 481654,
+		"populationRank": 11,
+		"region": "Selangor",
+		"coastal": false,
+		"position": "west"
+	},
+	"kelang": {
+		"kind": "city",
+		"population": 956000,
+		"populationRank": 3,
+		"population1950": 42000,
+		"region": "Selangor",
+		"coastal": true,
+		"position": "west"
+	},
+	"seremban": {
+		"kind": "city",
+		"population": 372917,
+		"populationRank": 13,
+		"region": "Negeri Sembilan",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"sibu": {
+		"kind": "city",
+		"population": 203832,
+		"populationRank": 21,
+		"region": "Sarawak",
+		"coastal": false,
+		"position": "south"
+	},
+	"malacca": {
+		"kind": "city",
+		"population": 788706,
+		"populationRank": 6,
+		"region": "Melaka",
+		"coastal": true,
+		"position": "south-west"
+	},
+	"keluang": {
+		"kind": "city",
+		"population": 169828,
+		"populationRank": 24,
+		"region": "Johor",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"muar": {
+		"kind": "city",
+		"population": 191346,
+		"populationRank": 23,
+		"region": "Johor",
+		"coastal": true,
+		"position": "south-west"
+	},
+	"batu-pahat": {
+		"kind": "city",
+		"population": 199619,
+		"populationRank": 22,
+		"region": "Johor",
+		"coastal": true,
+		"position": "south-west"
+	},
+	"kuching": {
+		"kind": "city",
+		"population": 570407,
+		"populationRank": 8,
+		"region": "Sarawak",
+		"coastal": true,
+		"position": "south"
+	},
+	"johor-bahru": {
+		"kind": "city",
+		"population": 875000,
+		"populationRank": 4,
+		"population1950": 47000,
+		"region": "Johor",
+		"coastal": true,
+		"position": "south-west"
+	}
+}

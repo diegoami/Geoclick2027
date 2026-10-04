@@ -357,6 +357,46 @@
 		]
 	},
 	{
+		"id": "bangladesh-divisions",
+		"country": "Bangladesh",
+		"targetCount": 8,
+		"targetType": "division",
+		"targetIds": [
+			"rangpur",
+			"mymensingh",
+			"sylhet",
+			"rajshahi",
+			"dhaka",
+			"khulna",
+			"chattogram",
+			"barishal"
+		]
+	},
+	{
+		"id": "bangladesh-towns-100k",
+		"country": "Bangladesh",
+		"targetCount": 16,
+		"targetType": "city",
+		"targetIds": [
+			"saidpur",
+			"rangpur",
+			"sylhet",
+			"jamalpur",
+			"mymensingh",
+			"nawabganj",
+			"rajshahi",
+			"tangail",
+			"pabna",
+			"dhaka",
+			"narayanganj",
+			"comilla",
+			"jashore",
+			"khulna",
+			"barishal",
+			"chattogram"
+		]
+	},
+	{
 		"id": "belgium-provinces",
 		"country": "Belgium",
 		"targetCount": 11,
@@ -4368,6 +4408,65 @@
 			"malindi",
 			"kilifi",
 			"mombasa"
+		]
+	},
+	{
+		"id": "malaysia-states",
+		"country": "Malaysia",
+		"targetCount": 16,
+		"targetType": "state",
+		"targetIds": [
+			"perlis",
+			"kedah",
+			"sabah",
+			"kelantan",
+			"penang",
+			"labuan",
+			"terengganu",
+			"perak",
+			"pahang",
+			"selangor",
+			"kuala-lumpur",
+			"putrajaya",
+			"sarawak",
+			"negeri-sembilan",
+			"malacca",
+			"johor"
+		]
+	},
+	{
+		"id": "malaysia-towns-100k",
+		"country": "Malaysia",
+		"targetCount": 27,
+		"targetType": "city",
+		"targetIds": [
+			"kota-baharu",
+			"alor-setar",
+			"kota-kinabalu",
+			"sandakan",
+			"sungai-petani",
+			"butterworth",
+			"george-town",
+			"kuala-terengganu",
+			"lahad-datu",
+			"taiping",
+			"ipoh",
+			"miri",
+			"tawau",
+			"teluk-intan",
+			"kuantan",
+			"bintulu",
+			"kuala-lumpur",
+			"shah-alam",
+			"kelang",
+			"seremban",
+			"sibu",
+			"malacca",
+			"keluang",
+			"muar",
+			"batu-pahat",
+			"kuching",
+			"johor-bahru"
 		]
 	},
 	{

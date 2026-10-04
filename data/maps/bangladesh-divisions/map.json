@@ -1,0 +1,300 @@
+{
+	"id": "bangladesh-divisions",
+	"name": "Bangladesh — Divisions",
+	"country": "Bangladesh",
+	"attribution": "geoBoundaries (via Wikimedia Commons), CC0; Natural Earth (public domain), https://www.naturalearthdata.com",
+	"boundarySource": "data/source/geoboundaries/BGD-ADM1.geojson",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "rangpur",
+			"name": "Rangpur",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				88.97425,
+				25.73655
+			],
+			"bbox": [
+				88.0813,
+				25.0288,
+				89.8672,
+				26.4443
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						88.3814,
+						26.073
+					],
+					[
+						89.0557,
+						25.7886
+					],
+					[
+						89.6732,
+						25.4132
+					]
+				],
+				"aspect": 1.65
+			}
+		},
+		{
+			"id": "mymensingh",
+			"name": "Mymensingh",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				90.42755,
+				24.8375
+			],
+			"bbox": [
+				89.6612,
+				24.2841,
+				91.1939,
+				25.3909
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						89.8414,
+						25.093
+					],
+					[
+						90.3263,
+						24.7276
+					],
+					[
+						90.9598,
+						24.7437
+					]
+				],
+				"aspect": 1.76
+			}
+		},
+		{
+			"id": "sylhet",
+			"name": "Sylhet",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				91.71690000000001,
+				24.60985
+			],
+			"bbox": [
+				90.9773,
+				24.0035,
+				92.4565,
+				25.2162
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						91.2522,
+						24.6992
+					],
+					[
+						91.7166,
+						24.5537
+					],
+					[
+						92.181,
+						24.8133
+					]
+				],
+				"aspect": 0.89
+			}
+		},
+		{
+			"id": "rajshahi",
+			"name": "Rajshahi",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				88.9195,
+				24.517400000000002
+			],
+			"bbox": [
+				88.0208,
+				23.765,
+				89.8182,
+				25.2698
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						88.3639,
+						24.7553
+					],
+					[
+						89.003,
+						24.7069
+					],
+					[
+						89.6421,
+						24.3773
+					]
+				],
+				"aspect": 1.07
+			}
+		},
+		{
+			"id": "dhaka",
+			"name": "Dhaka",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				90.2458,
+				23.7849
+			],
+			"bbox": [
+				89.2553,
+				22.8344,
+				91.2363,
+				24.7354
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						89.6974,
+						23.649
+					],
+					[
+						90.4026,
+						23.6504
+					],
+					[
+						91.1078,
+						24.2704
+					]
+				],
+				"aspect": 1.53
+			}
+		},
+		{
+			"id": "khulna",
+			"name": "Khulna",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				89.26575,
+				22.943150000000003
+			],
+			"bbox": [
+				88.5732,
+				21.6978,
+				89.9583,
+				24.1885
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						88.9275,
+						23.8123
+					],
+					[
+						89.4662,
+						22.9659
+					],
+					[
+						89.5309,
+						21.9815
+					]
+				],
+				"aspect": 2.48
+			}
+		},
+		{
+			"id": "chattogram",
+			"name": "Chattogram",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				91.61865,
+				22.608150000000002
+			],
+			"bbox": [
+				90.5898,
+				20.9727,
+				92.6475,
+				24.2436
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						90.8445,
+						23.5802
+					],
+					[
+						92.1278,
+						22.9448
+					],
+					[
+						92.38,
+						21.7059
+					]
+				],
+				"aspect": 3.22
+			}
+		},
+		{
+			"id": "barishal",
+			"name": "Barishal",
+			"type": "division",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				90.3949,
+				22.4068
+			],
+			"bbox": [
+				89.8987,
+				21.7868,
+				90.8911,
+				23.0268
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						90.1618,
+						21.9572
+					],
+					[
+						90.2798,
+						22.4293
+					],
+					[
+						90.3046,
+						22.9118
+					]
+				],
+				"aspect": 1.69
+			}
+		}
+	],
+	"tourOrder": [
+		"rangpur",
+		"mymensingh",
+		"sylhet",
+		"rajshahi",
+		"dhaka",
+		"khulna",
+		"chattogram",
+		"barishal"
+	]
+}

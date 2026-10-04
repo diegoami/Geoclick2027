@@ -2,7 +2,8 @@
 	"_note": [
 		"Name-facts for Malaysia (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences."
+		"of the same id, written later, never shows a town's sentences.",
+		"v0.18 added the thirteen states and three federal territories, each as a \"region\" entry (en, it, de), beside the city of the same id (Kuala Lumpur)."
 	],
 	"kuala-lumpur": {
 		"city": {
@@ -20,6 +21,308 @@
 				"„Schlammiger Zusammenfluss“, wo zwei Flüsse zusammentreffen.",
 				"Sie ging aus einem Zinnbergbaulager der 1850er-Jahre hervor.",
 				"Die Batu-Höhlen, unmittelbar außerhalb der Stadt, bergen einen hinduistischen Schrein, der über 272 Stufen erreicht wird."
+			]
+		},
+		"region": {
+			"en": [
+				"\"Muddy confluence\" in Malay, where the Klang and Gombak rivers meet.",
+				"The Petronas Towers, 452 m high, were the tallest buildings in the world from 1998 to 2004.",
+				"A federal territory since 1974, it belongs to no state; it was taken out of Selangor."
+			],
+			"it": [
+				"\"Confluenza fangosa\" in malese, dove si incontrano i fiumi Klang e Gombak.",
+				"Le Torri Petronas, alte 452 m, furono gli edifici più alti del mondo dal 1998 al 2004.",
+				"Territorio federale dal 1974, non appartiene ad alcuno Stato: fu ricavato dal Selangor."
+			],
+			"de": [
+				"„Schlammiger Zusammenfluss“ auf Malaiisch, dort, wo sich die Flüsse Klang und Gombak treffen.",
+				"Die Petronas Towers, 452 m hoch, waren von 1998 bis 2004 die höchsten Gebäude der Welt.",
+				"Seit 1974 ein Bundesterritorium, gehört es zu keinem Bundesstaat; es wurde aus Selangor herausgelöst."
+			]
+		}
+	},
+	"johor": {
+		"region": {
+			"en": [
+				"From the Arabic jauhar, \"jewel\", by way of Malay.",
+				"Tanjung Piai, the southernmost point of mainland Asia, lies on its coast.",
+				"Its sultanate was founded in 1528 by a son of the last sultan of Malacca, who had fled the Portuguese."
+			],
+			"it": [
+				"Dall’arabo jauhar, \"gioiello\", attraverso il malese.",
+				"Sulla sua costa si trova Tanjung Piai, il punto più meridionale dell’Asia continentale.",
+				"Il suo sultanato fu fondato nel 1528 da un figlio dell’ultimo sultano di Malacca, fuggito davanti ai portoghesi."
+			],
+			"de": [
+				"Vom arabischen jauhar, „Juwel“, über das Malaiische.",
+				"An seiner Küste liegt Tanjung Piai, der südlichste Punkt des asiatischen Festlands.",
+				"Sein Sultanat gründete 1528 ein Sohn des letzten Sultans von Malakka, der vor den Portugiesen geflohen war."
+			]
+		}
+	},
+	"kedah": {
+		"region": {
+			"en": [
+				"The origin of the name is disputed; one explanation is the Sanskrit kataha, \"cauldron\".",
+				"Called the rice bowl of Malaysia, for the paddy fields that fill its plains.",
+				"Langkawi, an archipelago of about a hundred islands, belongs to Kedah."
+			],
+			"it": [
+				"L’origine del nome è discussa; una spiegazione lo fa risalire al sanscrito kataha, \"caldaia\".",
+				"È detto la ciotola di riso della Malaysia, per le risaie che riempiono le sue pianure.",
+				"Langkawi, un arcipelago di un centinaio di isole, appartiene al Kedah."
+			],
+			"de": [
+				"Die Herkunft des Namens ist umstritten; eine Erklärung führt ihn auf das Sanskritwort kataha, „Kessel“, zurück.",
+				"Als Reisschüssel Malaysias bekannt, wegen der Reisfelder, die seine Ebenen füllen.",
+				"Langkawi, eine Inselgruppe aus rund hundert Inseln, gehört zu Kedah."
+			]
+		}
+	},
+	"kelantan": {
+		"region": {
+			"en": [
+				"The origin of the name is uncertain; one explanation links it to gelam, a kind of paperbark tree.",
+				"Shadow-puppet theatre and giant spinning tops are among the old Malay pastimes still kept up here.",
+				"It passed from Siamese to British influence in 1909, together with Kedah, Perlis and Terengganu."
+			],
+			"it": [
+				"L’origine del nome è incerta; una spiegazione lo collega a gelam, una specie di melaleuca.",
+				"Il teatro delle ombre e le grandi trottole sono tra gli antichi passatempi malesi ancora coltivati qui.",
+				"Nel 1909 passò dall’influenza siamese a quella britannica, insieme a Kedah, Perlis e Terengganu."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss; eine Erklärung bringt ihn mit gelam in Verbindung, dem Kajeputbaum.",
+				"Schattenspieltheater und riesige Kreisel gehören zu den alten malaiischen Zeitvertreiben, die hier noch gepflegt werden.",
+				"1909 ging es zusammen mit Kedah, Perlis und Terengganu aus dem siamesischen in den britischen Einflussbereich über."
+			]
+		}
+	},
+	"labuan": {
+		"region": {
+			"en": [
+				"From the Malay labuhan, \"anchorage\".",
+				"Japanese forces in northern Borneo surrendered here in September 1945.",
+				"A federal territory since 1984, when Sabah handed it over, and an international offshore financial centre."
+			],
+			"it": [
+				"Dal malese labuhan, \"ancoraggio\".",
+				"Qui, nel settembre 1945, si arresero le forze giapponesi del Borneo settentrionale.",
+				"Territorio federale dal 1984, quando il Sabah lo cedette, e centro finanziario offshore internazionale."
+			],
+			"de": [
+				"Vom malaiischen labuhan, „Ankerplatz“.",
+				"Hier ergaben sich im September 1945 die japanischen Truppen in Nordborneo.",
+				"Seit 1984, als Sabah die Insel abtrat, ein Bundesterritorium und ein internationales Offshore-Finanzzentrum."
+			]
+		}
+	},
+	"malacca": {
+		"region": {
+			"en": [
+				"By legend, Parameswara named it after the melaka tree under which he rested when he founded the city.",
+				"The Portuguese took it in 1511, the Dutch in 1641 and the British in the 19th century.",
+				"With George Town, its old centre has been a World Heritage Site since 2008."
+			],
+			"it": [
+				"Secondo la leggenda, Parameswara le diede il nome dell’albero di melaka sotto cui si riposò quando fondò la città.",
+				"I portoghesi la presero nel 1511, gli olandesi nel 1641 e gli inglesi nell’Ottocento.",
+				"Insieme a George Town, il suo centro storico è Patrimonio dell’Umanità dal 2008."
+			],
+			"de": [
+				"Der Legende nach nannte Parameswara sie nach dem Melaka-Baum, unter dem er bei der Gründung der Stadt rastete.",
+				"Die Portugiesen nahmen sie 1511 ein, die Niederländer 1641 und die Briten im 19. Jahrhundert.",
+				"Zusammen mit George Town ist ihre Altstadt seit 2008 Welterbe."
+			]
+		}
+	},
+	"negeri-sembilan": {
+		"region": {
+			"en": [
+				"Malay for \"nine states\", after the nine small chiefdoms that once formed it.",
+				"Minangkabau settlers from Sumatra brought the custom of inheriting through the mother’s line, still practised here.",
+				"Its ruler is elected by four of its chiefs, rather than succeeding by birth."
+			],
+			"it": [
+				"In malese \"nove Stati\", dai nove piccoli territori che un tempo lo formavano.",
+				"I coloni minangkabau di Sumatra vi portarono l’uso di ereditare per linea materna, ancora praticato.",
+				"Il suo sovrano è eletto da quattro dei suoi capi, invece di succedere per nascita."
+			],
+			"de": [
+				"Malaiisch für „neun Staaten“, nach den neun kleinen Herrschaftsgebieten, aus denen es einst bestand.",
+				"Minangkabau-Siedler aus Sumatra brachten den Brauch mit, über die Mutterlinie zu erben; er wird noch gepflegt.",
+				"Sein Herrscher wird von vier seiner Häuptlinge gewählt, statt durch Geburt nachzufolgen."
+			]
+		}
+	},
+	"pahang": {
+		"region": {
+			"en": [
+				"The origin of the name is disputed; one explanation is the mahang, a tree of the peninsula’s forests.",
+				"The largest state of Peninsular Malaysia, and one of the least densely populated.",
+				"Its national park, Taman Negara, protects a rainforest said to be more than 130 million years old."
+			],
+			"it": [
+				"L’origine del nome è discussa; una spiegazione indica il mahang, un albero delle foreste della penisola.",
+				"È lo Stato più grande della Malaysia peninsulare e uno dei meno densamente popolati.",
+				"Il suo parco nazionale, Taman Negara, protegge una foresta pluviale che si dice abbia più di 130 milioni di anni."
+			],
+			"de": [
+				"Die Herkunft des Namens ist umstritten; eine Erklärung nennt den Mahang, einen Baum der Wälder der Halbinsel.",
+				"Er ist der größte Bundesstaat Westmalaysias und einer der am dünnsten besiedelten.",
+				"Sein Nationalpark Taman Negara schützt einen Regenwald, der angeblich mehr als 130 Millionen Jahre alt ist."
+			]
+		}
+	},
+	"penang": {
+		"region": {
+			"en": [
+				"From the Malay pinang, the areca palm; Pulau Pinang means \"areca-nut island\".",
+				"Francis Light of the East India Company founded George Town here in 1786.",
+				"The state is an island and a strip of mainland, Seberang Perai, joined by bridges."
+			],
+			"it": [
+				"Dal malese pinang, la palma di areca; Pulau Pinang significa \"isola della noce di areca\".",
+				"Francis Light, della Compagnia delle Indie Orientali, vi fondò George Town nel 1786.",
+				"Lo Stato è formato da un’isola e da una striscia di terraferma, Seberang Perai, collegate da ponti."
+			],
+			"de": [
+				"Vom malaiischen pinang, der Betelnusspalme; Pulau Pinang bedeutet „Betelnussinsel“.",
+				"Francis Light von der Ostindienkompanie gründete hier 1786 George Town.",
+				"Der Staat besteht aus einer Insel und einem Streifen Festland, Seberang Perai, die durch Brücken verbunden sind."
+			]
+		}
+	},
+	"perak": {
+		"region": {
+			"en": [
+				"\"Silver\" in Malay, perhaps for the silvery sheen of the tin that made the state rich.",
+				"The Kinta Valley was once among the richest tin fields in the world.",
+				"The Pangkor Treaty of 1874, signed off its coast, gave Britain a resident at the sultan’s court and began the residential system in the Malay states."
+			],
+			"it": [
+				"\"Argento\" in malese, forse per il riflesso argenteo dello stagno che rese ricco lo Stato.",
+				"La valle del Kinta fu un tempo tra i più ricchi giacimenti di stagno del mondo.",
+				"Il trattato di Pangkor del 1874, firmato al largo della sua costa, diede alla Gran Bretagna un residente presso il sultano e avviò il sistema dei residenti negli Stati malesi."
+			],
+			"de": [
+				"„Silber“ auf Malaiisch, vielleicht wegen des silbrigen Glanzes des Zinns, das den Staat reich machte.",
+				"Das Kinta-Tal war einst eines der reichsten Zinnfelder der Welt.",
+				"Der Vertrag von Pangkor von 1874, vor seiner Küste unterzeichnet, gab Großbritannien einen Residenten am Hof des Sultans und begründete das Residentensystem in den malaiischen Staaten."
+			]
+		}
+	},
+	"perlis": {
+		"region": {
+			"en": [
+				"Its formal name is Perlis Indera Kayangan, roughly \"celestial abode\".",
+				"The smallest state of Malaysia, at about 800 km².",
+				"Padang Besar, on its border with Thailand, has a station where Malaysian and Thai trains meet."
+			],
+			"it": [
+				"Il suo nome formale è Perlis Indera Kayangan, all’incirca \"dimora celeste\".",
+				"È lo Stato più piccolo della Malaysia, con circa 800 km².",
+				"A Padang Besar, al confine con la Thailandia, c’è una stazione dove si incontrano i treni malesi e thailandesi."
+			],
+			"de": [
+				"Sein förmlicher Name ist Perlis Indera Kayangan, ungefähr „himmlische Wohnstätte“.",
+				"Er ist der kleinste Bundesstaat Malaysias, mit etwa 800 km².",
+				"In Padang Besar an der Grenze zu Thailand gibt es einen Bahnhof, an dem sich malaysische und thailändische Züge treffen."
+			]
+		}
+	},
+	"putrajaya": {
+		"region": {
+			"en": [
+				"Named for Tunku Abdul Rahman Putra, the first prime minister: putra, \"prince\", and jaya, \"success\".",
+				"A planned city, built from the mid-1990s on former plantation land, to which the government moved from Kuala Lumpur.",
+				"Taken out of Selangor, it became a federal territory in 2001."
+			],
+			"it": [
+				"Prende il nome da Tunku Abdul Rahman Putra, il primo primo ministro: putra, \"principe\", e jaya, \"successo\".",
+				"È una città pianificata, costruita dalla metà degli anni Novanta su ex terreni di piantagione, dove il governo si trasferì da Kuala Lumpur.",
+				"Sottratta al Selangor, divenne territorio federale nel 2001."
+			],
+			"de": [
+				"Benannt nach Tunku Abdul Rahman Putra, dem ersten Premierminister: putra, „Prinz“, und jaya, „Erfolg“.",
+				"Eine Planstadt, seit Mitte der 1990er-Jahre auf ehemaligem Plantagenland gebaut, in die die Regierung von Kuala Lumpur umzog.",
+				"Aus Selangor herausgelöst, wurde sie 2001 ein Bundesterritorium."
+			]
+		}
+	},
+	"sabah": {
+		"region": {
+			"en": [
+				"The origin of the name is uncertain; one explanation is saba, a kind of banana traded from Brunei.",
+				"Mount Kinabalu, 4,095 m, is the highest mountain in Malaysia.",
+				"Called the \"Land Below the Wind\", because it lies south of the typhoon belt."
+			],
+			"it": [
+				"L’origine del nome è incerta; una spiegazione indica saba, una varietà di banana commerciata da Brunei.",
+				"Il monte Kinabalu, 4.095 m, è la montagna più alta della Malaysia.",
+				"È detto la \"terra sotto il vento\", perché si trova a sud della fascia dei tifoni."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss; eine Erklärung nennt saba, eine von Brunei aus gehandelte Bananensorte.",
+				"Der Mount Kinabalu, 4.095 m hoch, ist der höchste Berg Malaysias.",
+				"Man nennt es das „Land unter dem Wind“, weil es südlich des Taifungürtels liegt."
+			]
+		}
+	},
+	"sarawak": {
+		"region": {
+			"en": [
+				"Probably from the Malay word for antimony, which was mined here.",
+				"The English adventurer James Brooke became its Rajah in 1841, and his family ruled it until 1946.",
+				"Its Mulu caves hold the Sarawak Chamber, the largest known cave chamber in the world by area."
+			],
+			"it": [
+				"Probabilmente dalla parola malese per l’antimonio, che vi si estraeva.",
+				"L’avventuriero inglese James Brooke ne divenne Rajah nel 1841 e la sua famiglia lo governò fino al 1946.",
+				"Le grotte di Mulu racchiudono la Sarawak Chamber, la più grande sala sotterranea conosciuta al mondo per superficie."
+			],
+			"de": [
+				"Wahrscheinlich vom malaiischen Wort für Antimon, das hier abgebaut wurde.",
+				"Der englische Abenteurer James Brooke wurde 1841 sein Rajah, und seine Familie herrschte bis 1946.",
+				"In den Mulu-Höhlen liegt die Sarawak Chamber, die nach der Fläche größte bekannte Höhlenkammer der Welt."
+			]
+		}
+	},
+	"selangor": {
+		"region": {
+			"en": [
+				"Nobody agrees on where its name comes from.",
+				"The most populous state of Malaysia, and the one with the largest economy.",
+				"Port Klang, its main port, is the busiest in the country."
+			],
+			"it": [
+				"Nessuno concorda sull’origine del suo nome.",
+				"È lo Stato più popoloso della Malaysia e quello con l’economia più grande.",
+				"Port Klang, il suo porto principale, è il più trafficato del paese."
+			],
+			"de": [
+				"Über die Herkunft seines Namens ist man sich nicht einig.",
+				"Er ist der bevölkerungsreichste Bundesstaat Malaysias und der mit der größten Wirtschaftsleistung.",
+				"Port Klang, sein Haupthafen, ist der verkehrsreichste des Landes."
+			]
+		}
+	},
+	"terengganu": {
+		"region": {
+			"en": [
+				"By legend from terang ganu, \"bright rainbow\", seen by hunters on a river.",
+				"A stone found here, inscribed in Jawi and dated by most readings to 1303, is the oldest known Malay text in Arabic script.",
+				"Lake Kenyir, made in the 1980s by damming a river, is said to be the largest artificial lake in Southeast Asia."
+			],
+			"it": [
+				"Per la leggenda da terang ganu, \"arcobaleno luminoso\", visto da dei cacciatori su un fiume.",
+				"Una pietra trovata qui, incisa in scrittura jawi e datata dalla maggior parte delle letture al 1303, è il più antico testo malese noto in caratteri arabi.",
+				"Il lago Kenyir, nato negli anni Ottanta dallo sbarramento di un fiume, si dice sia il più grande lago artificiale del Sud-est asiatico."
+			],
+			"de": [
+				"Der Legende nach von terang ganu, „heller Regenbogen“, den Jäger an einem Fluss sahen.",
+				"Ein hier gefundener Stein mit einer Inschrift in Jawi-Schrift, nach den meisten Lesungen auf 1303 datiert, ist der älteste bekannte malaiische Text in arabischer Schrift.",
+				"Der Kenyir-See, in den 1980er-Jahren durch die Aufstauung eines Flusses entstanden, soll der größte Stausee Südostasiens sein."
 			]
 		}
 	}
