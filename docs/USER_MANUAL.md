@@ -499,7 +499,7 @@ A place counts as **known** at a streak of three. That one number drives
 everything you see:
 
 - the map's card on the home page ("14 / 20 known");
-- the [progress map](#7-progress-what-you-know-so-far), where a known name
+- the [progress map](#7-known-what-you-know-so-far), where a known name
   is written at full strength, a streak of two more lightly, and a streak
   of one faintly;
 - how many names the quiz offers at a time (see
