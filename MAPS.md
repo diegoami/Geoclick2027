@@ -1222,12 +1222,13 @@ Gilgit-Baltistan; geoBoundaries ADM1 of 2019, public domain, after the tribal
 areas joined Khyber Pakhtunkhwa in 2018, which Natural Earth still shows as
 FATA) and Towns (35 at 100 000).
 
-Known limits, said plainly: Algeria has had 69 wilayas since 2021 (58 from
-2019), and neither Natural Earth nor geoBoundaries has the new ones. The
-2026-10-04 spike tried OpenStreetMap through Overpass, which does carry most of
-them (DZ-49 to DZ-65 and DZ-69), but three of the eleven wilayas of 2021 have no
-ISO tag there, the public instances time out on country-sized requests and the
-result is a moving target, so the 48 stay. The same finding holds for the newer
+Known limits, said plainly: Algeria now has 69 wilayas (the eleven added in
+2025, on top of the 58 of 2019, which came after the 48 of this map), and neither
+Natural Earth nor geoBoundaries has the new ones. The 2026-10-04 spike tried
+OpenStreetMap through Overpass, which carries some of the newer wilayas under
+codes outside ISO 3166-2 (that standard defines only 58), but the public
+instances time out on country-sized requests, the result is a moving target and
+the set was incomplete when tried, so the 48 stay. The same finding holds for the newer
 borders of Kazakhstan (20 regions since 2022) and Norway (15 counties since
 2024) and for Ethiopia (12 regions and 2 chartered cities since 2023): none is
 rebuilt in v0.19. Pakistan's map draws Azad Kashmir and Gilgit-Baltistan as
