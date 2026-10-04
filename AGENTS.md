@@ -304,6 +304,12 @@ separately from the release-milestone review. Follow
 cannot review. The review informs the owner's decision and does not replace it;
 findings stay in the PR thread, not milestone issues.
 
+A PR body says in one line what the change protects ("Protects: ..."), and the
+brief's "Blocking means" section (scripts/ReviewerBrief.ps1) refers to it. When
+a review approves with findings marked non-blocking, read them before handing
+the PR over: if one is a proven way past what "Protects:" names, treat the review
+as rework, say so on the PR, and fix it first.
+
 ## Working agreements with the owner
 
 Agreed in conversation and kept, until 2026-09-27, only in one Claude
