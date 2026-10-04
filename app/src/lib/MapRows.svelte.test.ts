@@ -244,6 +244,28 @@ describe('MapRows (FT-84)', () => {
 			'italy-provinces'
 		);
 	});
+
+	it('falls back to the first listed map when a search filters the remembered one out', async () => {
+		localStorage.setItem(MAP_TYPE_SELECTIONS_KEY, JSON.stringify({ italy: 'italy-regions' }));
+		const maps = [
+			{ id: 'italy-regions', label: 'Regions' },
+			{ id: 'italy-towns-100k', label: 'Towns' }
+		];
+		const props = (shown: typeof maps) => ({
+			groups: [{ country: 'Italy', pickerId: 'italy', maps: shown }],
+			masteries: {},
+			targetCount: () => 0
+		});
+		const { rerender } = await render(MapRows, props(maps));
+		expect(document.querySelector<HTMLSelectElement>('#maps-italy-regions')!.value).toBe(
+			'italy-regions'
+		);
+		// The search box narrows the list after the page has loaded.
+		await rerender(props([maps[1]]));
+		const select = document.querySelector<HTMLSelectElement>('#maps-italy-towns-100k')!;
+		expect(select.value).toBe('italy-towns-100k');
+		expect(select.selectedOptions[0]?.text).toBe('Towns');
+	});
 });
 
 describe('MapRows: advanced maps (v0.17)', () => {

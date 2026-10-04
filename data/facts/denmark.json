@@ -2,7 +2,8 @@
 	"_note": [
 		"Name-facts for Denmark (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences."
+		"of the same id, written later, never shows a town's sentences.",
+		"v0.19 added the five regions, each as a \"region\" entry (en, it, de)."
 	],
 	"aalborg": {
 		"city": {
@@ -100,6 +101,104 @@
 			],
 			"de": [
 				"Die Jellingsteine, im 10. Jahrhundert gemeißelte Runensteine, die oft Dänemarks Geburtsurkunde genannt werden, stehen in der Nähe."
+			]
+		}
+	},
+	"hovedstaden": {
+		"region": {
+			"en": [
+				"Danish for \"the capital\": the region around Copenhagen.",
+				"Bornholm, an island far out in the Baltic and closer to Sweden than to Copenhagen, belongs to it.",
+				"Kronborg Castle in Helsingør, the Elsinore of Shakespeare’s Hamlet, is a World Heritage Site."
+			],
+			"it": [
+				"In danese \"la capitale\": la regione intorno a Copenaghen.",
+				"Bornholm, un’isola al largo nel Baltico e più vicina alla Svezia che a Copenaghen, ne fa parte.",
+				"Il castello di Kronborg a Helsingør, l’Elsinore dell’Amleto di Shakespeare, è Patrimonio dell’Umanità."
+			],
+			"de": [
+				"Dänisch für „die Hauptstadt“: die Region rund um Kopenhagen.",
+				"Bornholm, eine Insel weit draußen in der Ostsee und näher an Schweden als an Kopenhagen, gehört dazu.",
+				"Schloss Kronborg in Helsingør, das Elsinore von Shakespeares Hamlet, ist Welterbe."
+			]
+		}
+	},
+	"midtjylland": {
+		"region": {
+			"en": [
+				"Danish for \"Central Jutland\"; Jutland is named for the Jutes, the people who once lived on the peninsula.",
+				"Aarhus, its main city and the second largest in Denmark, was European Capital of Culture in 2017.",
+				"Møllehøj, about 171 m, is usually named as the highest natural point in Denmark and lies here."
+			],
+			"it": [
+				"In danese \"Giutlandia centrale\"; la Giutlandia prende il nome dagli Juti, il popolo che un tempo abitava la penisola.",
+				"Aarhus, il suo centro principale e la seconda città della Danimarca, fu Capitale europea della cultura nel 2017.",
+				"Il Møllehøj, circa 171 m, è di solito indicato come il punto naturale più alto della Danimarca e si trova qui."
+			],
+			"de": [
+				"Dänisch für „Mitteljütland“; Jütland ist nach den Jüten benannt, dem Volk, das einst auf der Halbinsel lebte.",
+				"Aarhus, das Hauptzentrum und die zweitgrößte Stadt Dänemarks, war 2017 Kulturhauptstadt Europas.",
+				"Der Møllehøj, etwa 171 m, gilt meist als höchster natürlicher Punkt Dänemarks und liegt hier."
+			]
+		}
+	},
+	"nordjylland": {
+		"region": {
+			"en": [
+				"\"North Jutland\": the northern part of the Jutland peninsula, named for the Jutes.",
+				"At Grenen, the sandy tip of Skagen, the waves of the Skagerrak and the Kattegat meet, and visitors like to stand with a foot in each.",
+				"A storm flood in 1825 broke through to the Limfjord and made the north of Jutland an island, Vendsyssel-Thy."
+			],
+			"it": [
+				"\"Giutlandia settentrionale\": la parte nord della penisola dello Jutland, che prende il nome dagli Juti.",
+				"A Grenen, la punta sabbiosa di Skagen, si incontrano le onde dello Skagerrak e del Kattegat, e i visitatori amano mettere un piede in ciascuno.",
+				"Una mareggiata nel 1825 aprì un varco verso il Limfjord e rese il nord della Giutlandia un’isola, Vendsyssel-Thy."
+			],
+			"de": [
+				"„Nordjütland“: der Nordteil der Halbinsel Jütland, benannt nach den Jüten.",
+				"An der sandigen Spitze von Skagen, Grenen, treffen die Wellen von Skagerrak und Kattegat aufeinander, und Besucher stellen sich gern mit je einem Fuß in beide.",
+				"Eine Sturmflut brach 1825 zum Limfjord durch und machte den Norden Jütlands zu einer Insel, Vendsyssel-Thy."
+			]
+		}
+	},
+	"sj-lland": {
+		"region": {
+			"en": [
+				"The origin of the name is uncertain; one old explanation is \"sea land\".",
+				"Zealand is the largest island of Denmark; Copenhagen stands on it, but forms part of Hovedstaden.",
+				"Roskilde Cathedral, where Danish monarchs have been buried for centuries, is a World Heritage Site.",
+				"Møns Klint, on the island of Møn, is a chalk cliff rising more than 100 m out of the sea."
+			],
+			"it": [
+				"L’origine del nome è incerta; una vecchia spiegazione lo legge come \"terra del mare\".",
+				"La Selandia è la più grande isola della Danimarca; vi sorge Copenaghen, che però fa parte dell’Hovedstaden.",
+				"La cattedrale di Roskilde, dove i monarchi danesi sono sepolti da secoli, è Patrimonio dell’Umanità.",
+				"Møns Klint, sull’isola di Møn, è una scogliera di gesso che sale per oltre 100 m dal mare."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss; eine alte Erklärung deutet ihn als „Meerland“.",
+				"Seeland ist die größte Insel Dänemarks; Kopenhagen liegt darauf, gehört aber zur Region Hovedstaden.",
+				"Der Dom zu Roskilde, in dem seit Jahrhunderten dänische Monarchen beigesetzt werden, ist Welterbe.",
+				"Møns Klint auf der Insel Møn ist eine Kreideklippe, die über 100 m aus dem Meer ragt."
+			]
+		}
+	},
+	"syddanmark": {
+		"region": {
+			"en": [
+				"Danish for \"Southern Denmark\": the south of the country, with the island of Funen and southern Jutland.",
+				"Ribe, founded around the year 700, is the oldest town in Denmark.",
+				"Lego was founded in 1932 in Billund, a small town in this region."
+			],
+			"it": [
+				"In danese \"Danimarca meridionale\": il sud del paese, con l’isola di Fionia e la Giutlandia meridionale.",
+				"Ribe, fondata intorno all’anno 700, è la città più antica della Danimarca.",
+				"La Lego fu fondata nel 1932 a Billund, una cittadina di questa regione."
+			],
+			"de": [
+				"Dänisch für „Süddänemark“: der Süden des Landes mit der Insel Fünen und Südjütland.",
+				"Ribe, um das Jahr 700 gegründet, ist die älteste Stadt Dänemarks.",
+				"Lego wurde 1932 in Billund gegründet, einer Kleinstadt in dieser Region."
 			]
 		}
 	}
