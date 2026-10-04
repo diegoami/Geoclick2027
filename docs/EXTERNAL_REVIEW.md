@@ -27,7 +27,9 @@ now holds a chain, one model per line, tried in order: **GPT Sol**
 (`openai/gpt-6.1-sol#high`), then **GLM 5.3 Flash**
 (`zai-coding-plan/glm-5.3-flash#high`, the Z.AI Coding Plan). Both are
 non-Claude, so a Claude-implemented PR is reviewed again. The history below is
-kept for the reasoning.
+kept for the reasoning. The implementer's whole *family* is excluded from the
+chain (`scripts/ReviewerFamily.ps1`): a Luna or Sol implementation skips Sol and
+goes to GLM; the self-test covers trailers and `model:` labels.
 
 Roles (owner's decision, 2026-10-02): reviewer **DeepSeek V4.1 Flash**
 (`opencode-go/deepseek-v4.1-flash`, effort `high`), then **Claude Opus**.

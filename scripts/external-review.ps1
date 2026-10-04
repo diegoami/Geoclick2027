@@ -61,9 +61,11 @@ $repo = (& git -C $here rev-parse --path-format=absolute --git-common-dir | Spli
 $watcher = Join-Path $here 'Invoke-OpenCodeWatched.ps1'
 . (Join-Path $here 'ReviewParser.ps1')
 . (Join-Path $here 'ReviewerBrief.ps1')
+. (Join-Path $here 'ReviewerFamily.ps1')
 if ($SelfTest) {
     $failed = [int]@(Invoke-ReviewParserSelfTest)[-1]
     $failed += [int]@(Invoke-ReviewerBriefSelfTest -AgentFile (Join-Path (Split-Path -Parent $here) '.opencode/agents/external-reviewer.md'))[-1]
+    $failed += [int]@(Invoke-ReviewerFamilySelfTest)[-1]
     exit $failed
 }
 $token = [guid]::NewGuid().ToString('N').Substring(0, 6)
@@ -71,7 +73,7 @@ if ($Issue -and -not $Pr -and -not $PSBoundParameters.ContainsKey('Kind')) { $Ki
 $subject = if ($Kind -eq 'pr') { $Pr } else { $Issue }
 if (-not $subject) { throw 'Give -Pr <n> (a PR) or -Issue <n> -Kind release (a milestone issue).' }
 
-$display = @{ 'luna' = 'Luna'; 'glm' = 'GLM 5.3 Flash'; 'deepseek' = 'DeepSeek V4.1 Flash' }
+$display = @{ 'luna' = 'Luna'; 'sol' = 'GPT Sol'; 'glm' = 'GLM 5.3 Flash'; 'deepseek' = 'DeepSeek V4.1 Flash' }
 function Display([string] $id) {
     foreach ($k in $display.Keys) { if ($id -match $k) { return $display[$k] } }
     return $id
@@ -105,12 +107,13 @@ foreach ($l in $prLabels) { if ($l -like 'model:*') { $exclude += $l.Substring(6
 if (-not $DryRun) {
     & git -C $repo fetch -q origin $(if ($Kind -eq 'pr') { "pull/$Pr/head" } else { 'main' }) --tags 2>$null
     $trailers = (& git -C $repo log "$baseSha..$headSha" --format=%b 2>$null) -join "`n"
-    foreach ($m in $display.Keys) { if ($trailers -match "(?im)^Co-Authored-By:.*$m") { $exclude += $m } }
+    $exclude += @($trailers -split "`n" | Where-Object { $_ -match '(?i)^Co-Authored-By:' })
 }
+$implementerFamilies = @($exclude | Where-Object { $_ } | ForEach-Object { Get-ModelFamilies $_ })
 $chain = @()
 foreach ($entry in $Model) {
     $id, $variant = $entry -split '#', 2
-    if ($exclude | Where-Object { $_ -and $id -match [regex]::Escape($_) }) {
+    if (@(Get-ModelFamilies $id) | Where-Object { $implementerFamilies -contains $_ }) {
         Write-Host "skipping ${id}: it implemented (or is excluded from) this change"; continue
     }
     $chain += [pscustomobject]@{ Id = $id; Variant = $variant; Name = Display $id }
