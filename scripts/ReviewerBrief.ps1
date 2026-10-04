@@ -38,7 +38,7 @@ $Contract
 
 ## Blocking means
 
-Blocking means (any one is enough; a blocking finding means rework, never approve):
+Blocking means (any one is enough; a blocking finding means rework in a PR review and BLOCK in a milestone review, never approve or AGREE):
 1. A claim in the contract above fails, or cannot be run as written: a step it
    tells the owner to take, a test or gate it says passes, a number it states.
 2. What this change protects can be got past. The contract's "Protects:" line
