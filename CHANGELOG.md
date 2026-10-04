@@ -5,6 +5,39 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
+## v0.18.0 — 2026-10-04 — German everywhere, a red X, Malaysia and Bangladesh
+
+**Every authored fact now has a German version, a detailed map can be hidden again with a red X, two new countries arrive with facts in three languages, and the About page names the author.**
+
+Proposal #190 (thread #163). PRs #191 to #203, #205 and #206.
+
+For players:
+
+- **German facts for the whole world**: all 172 countries, the 121 capitals
+  and every remaining country file (3 460 sentences), reviewed in nine batches.
+  Swiss German uses ss, not ß.
+- **A red X hides a detailed map again.** A detailed map you have opened sits
+  among the normal ones; the X on its button in the map bar sends it back
+  behind "Show detailed maps".
+- **Malaysia** (13 states, Kuala Lumpur, Putrajaya, Labuan, and 27 towns) and
+  **Bangladesh** (8 divisions and 16 towns), each state, territory and
+  division with three facts in English, Italian and German.
+- **About** names the author and links the source and releases repositories.
+
+For the project:
+
+- `npm run gates -- --quiet` keeps a failing gate's whole output in
+  `rendered/gates-last-failure.log` (#192).
+- Every code PR is now reviewed by another model family before the owner
+  tests it, DeepSeek V4.1 Flash by default (#203). The German batches were
+  reviewed by Claude Opus; the code PRs after the change by DeepSeek.
+
+Not done, and said plainly: the towns maps for Denmark, Norway and Serbia
+are still thin, and Kazakhstan's and Norway's borders are still the 2017 and
+2020-23 sets (moved to v0.19). The eight maps of v0.17 and all towns maps have
+no authored facts yet. Ethiopia was left out: no source yet shows its present
+regions. The user manual in the app is proposal #204, v0.19.
+
 ## v0.17.0 — 2026-10-03 — German facts, eight new countries, detailed maps
 
 **Facts in German for all of Europe and four big countries outside it, eight new countries, 50k towns maps for Germany and Italy, and small divisions kept behind a "Show detailed maps" tick.**
