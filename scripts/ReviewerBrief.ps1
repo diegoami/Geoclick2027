@@ -61,6 +61,22 @@ those as follow-ups.
 When unsure, rate it blocking and say why. An approve with a proven bypass is the
 costliest mistake a review can make.
 
+## Report every blocking finding in this one review
+
+This review is your only pass before the author fixes. Do not stop at the first blocking
+finding: finish reading the whole diff and the task file, check every Done-when line and
+every item under "Blocking means", and report all blocking findings together.
+
+- Before you write the verdict, make one last pass over the full diff for anything you have
+  not yet rated, and say "Final pass done" as the last line before the verdict.
+- Number the findings R1, R2, ... in order of severity. A finding you held back because an
+  earlier one was already blocking is a review defect: if two problems share a cause, list
+  both and say so.
+- Do not rely on a later round. The author fixes everything you list, and the next review
+  checks those fixes and new code only, not anything you saw but did not report.
+- If you ran out of time or context before covering the whole diff, say which files or
+  sections you did not cover. Do not approve in that case.
+
 ## Extra instructions from the caller
 
 $Extra
@@ -77,6 +93,7 @@ function Invoke-ReviewerBriefSelfTest {
         @{ n = 'brief names no full worktree path'; ok = ($brief -notmatch '[A-Za-z]:[\\/]|/Users/|-review/') },
         @{ n = 'brief demands the tree proof, in order'; ok = ($brief -match '(?s)FIRST tool call.*rev-parse --show-toplevel.*rev-parse HEAD.*diff --name-only ' + ('a' * 40) + '\.\.\.HEAD.*wrong\s+tree') },
         @{ n = 'brief says what blocking means, and that a proven bypass is blocking'; ok = ($brief -match 'Blocking means' -and $brief -match 'proved is blocking' -and $brief -match 'Protects:') },
+        @{ n = 'brief asks for every blocking finding in one pass, with a final pass'; ok = ($brief -match 'Report every blocking finding in this one review' -and $brief -match 'Final pass done') },
         @{ n = 'brief says an empty diff is wrong';      ok = ($brief -match 'must\s+not\s+be\s+empty') }
     )
     $script = Get-Content (Join-Path $PSScriptRoot 'external-review.ps1') -Raw

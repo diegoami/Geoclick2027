@@ -2,7 +2,8 @@
 	"_note": [
 		"Name-facts for Serbia (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences."
+		"of the same id, written later, never shows a town's sentences.",
+		"v0.19 added the 25 districts, each as a \"region\" entry (en, it, de); Belgrade sits beside the city of the same id."
 	],
 	"belgrade": {
 		"city": {
@@ -20,6 +21,23 @@
 				"Beograd, „weiße Stadt“.",
 				"Sie war den größten Teil des 20. Jahrhunderts die Hauptstadt Jugoslawiens.",
 				"Ihre Festung Kalemegdan blickt auf den Zusammenfluss von Save und Donau hinab."
+			]
+		},
+		"region": {
+			"en": [
+				"Beograd means \"white city\"; the City of Belgrade is a district of its own, where the Sava joins the Danube.",
+				"About a quarter of Serbia’s people live here.",
+				"Zemun, on the north bank of the Sava, belonged to Austria-Hungary until 1918, while Belgrade across the river was Serbian."
+			],
+			"it": [
+				"Beograd significa \"città bianca\"; la Città di Belgrado è un distretto a sé, dove la Sava si getta nel Danubio.",
+				"Qui vive circa un quarto della popolazione serba.",
+				"Zemun, sulla riva settentrionale della Sava, appartenne all’Austria-Ungheria fino al 1918, mentre Belgrado, al di là del fiume, era serba."
+			],
+			"de": [
+				"Beograd bedeutet „weiße Stadt“; die Stadt Belgrad ist ein eigener Bezirk, dort, wo die Save in die Donau mündet.",
+				"Etwa ein Viertel der Menschen Serbiens lebt hier.",
+				"Zemun am Nordufer der Save gehörte bis 1918 zu Österreich-Ungarn, während Belgrad auf der anderen Seite serbisch war."
 			]
 		}
 	},
@@ -81,6 +99,462 @@
 			"de": [
 				"„Neue Pflanzung“.",
 				"Das Musikfestival EXIT findet seit 2001 in ihrer Festung Petrovaradin statt."
+			]
+		}
+	},
+	"north-backa": {
+		"region": {
+			"en": [
+				"Bačka is the plain between the Danube and the Tisza, and takes its name from the old town of Bač.",
+				"Subotica, its seat, has some of Serbia’s finest Art Nouveau buildings, including its town hall.",
+				"It borders Hungary, and Hungarian is widely spoken here."
+			],
+			"it": [
+				"La Bačka è la pianura tra il Danubio e il Tibisco e prende il nome dall’antica città di Bač.",
+				"Subotica, il capoluogo, ha alcuni dei più bei edifici Liberty della Serbia, tra cui il municipio.",
+				"Confina con l’Ungheria e qui si parla molto l’ungherese."
+			],
+			"de": [
+				"Die Batschka ist die Ebene zwischen Donau und Theiß und trägt ihren Namen nach der alten Stadt Bač.",
+				"Subotica, der Verwaltungssitz, hat einige der schönsten Jugendstilbauten Serbiens, darunter das Rathaus.",
+				"Der Bezirk grenzt an Ungarn, und hier wird viel Ungarisch gesprochen."
+			]
+		}
+	},
+	"north-banat": {
+		"region": {
+			"en": [
+				"Banat comes from ban, the title of a medieval governor: the land a ban ruled.",
+				"Every winter hundreds of long-eared owls roost in the trees of Kikinda, the district’s seat.",
+				"It lies on the flat, fertile Pannonian plain."
+			],
+			"it": [
+				"Banat deriva da ban, il titolo di un governatore medievale: la terra governata da un ban.",
+				"Ogni inverno centinaia di gufi comuni si radunano sugli alberi di Kikinda, il capoluogo.",
+				"Si trova sulla piatta e fertile pianura pannonica."
+			],
+			"de": [
+				"Banat kommt von ban, dem Titel eines mittelalterlichen Statthalters: das Land, das ein Ban regierte.",
+				"Jeden Winter sitzen Hunderte Waldohreulen in den Bäumen von Kikinda, dem Verwaltungssitz.",
+				"Es liegt in der flachen, fruchtbaren Pannonischen Tiefebene."
+			]
+		}
+	},
+	"west-backa": {
+		"region": {
+			"en": [
+				"The western part of Bačka, named for the old town of Bač.",
+				"The Danube forms its western border with Croatia.",
+				"Gornje Podunavlje, a wet forest on the Danube’s floodplain, is a protected Ramsar wetland."
+			],
+			"it": [
+				"La parte occidentale della Bačka, che prende il nome dall’antica città di Bač.",
+				"Il Danubio ne forma il confine occidentale con la Croazia.",
+				"Gornje Podunavlje, una foresta umida nella piana alluvionale del Danubio, è una zona umida protetta Ramsar."
+			],
+			"de": [
+				"Der westliche Teil der Batschka, benannt nach der alten Stadt Bač.",
+				"Die Donau bildet seine Westgrenze zu Kroatien.",
+				"Gornje Podunavlje, ein Auwald in der Überschwemmungsebene der Donau, ist ein geschütztes Ramsar-Feuchtgebiet."
+			]
+		}
+	},
+	"south-backa": {
+		"region": {
+			"en": [
+				"The southern part of Bačka, named for the old town of Bač, whose medieval fortress still stands here.",
+				"Its seat, Novi Sad, is the capital of Vojvodina and the second largest city in Serbia.",
+				"All three Danube bridges of Novi Sad were destroyed in 1999 and rebuilt."
+			],
+			"it": [
+				"La parte meridionale della Bačka, che prende il nome dall’antica città di Bač, la cui fortezza medievale sorge ancora qui.",
+				"Il capoluogo, Novi Sad, è la capitale della Voivodina e la seconda città della Serbia.",
+				"Tutti e tre i ponti sul Danubio di Novi Sad furono distrutti nel 1999 e ricostruiti."
+			],
+			"de": [
+				"Der südliche Teil der Batschka, benannt nach der alten Stadt Bač, deren mittelalterliche Festung hier noch steht.",
+				"Der Verwaltungssitz Novi Sad ist die Hauptstadt der Wojwodina und die zweitgrößte Stadt Serbiens.",
+				"Alle drei Donaubrücken von Novi Sad wurden 1999 zerstört und wieder aufgebaut."
+			]
+		}
+	},
+	"central-banat": {
+		"region": {
+			"en": [
+				"Banat comes from ban, the title of a medieval governor; this is its central part.",
+				"Its seat, Zrenjanin, was called Veliki Bečkerek until 1935, then Petrovgrad, and took its present name, for the partisan Žarko Zrenjanin, in 1946.",
+				"Carska Bara, an old river meander near Zrenjanin, is a wetland rich in birds."
+			],
+			"it": [
+				"Banat deriva da ban, il titolo di un governatore medievale; questa è la sua parte centrale.",
+				"Il capoluogo, Zrenjanin, si chiamò Veliki Bečkerek fino al 1935, poi Petrovgrad, e nel 1946 prese il nome attuale, in onore del partigiano Žarko Zrenjanin.",
+				"Carska Bara, un antico meandro fluviale vicino a Zrenjanin, è una zona umida ricca di uccelli."
+			],
+			"de": [
+				"Banat kommt von ban, dem Titel eines mittelalterlichen Statthalters; dies ist sein mittlerer Teil.",
+				"Der Verwaltungssitz Zrenjanin hieß bis 1935 Veliki Bečkerek, dann Petrovgrad, und erhielt 1946 seinen heutigen Namen nach dem Partisanen Žarko Zrenjanin.",
+				"Carska Bara, ein alter Flussmäander bei Zrenjanin, ist ein vogelreiches Feuchtgebiet."
+			]
+		}
+	},
+	"south-banat": {
+		"region": {
+			"en": [
+				"Banat comes from ban, the title of a medieval governor; this is its southern part, on the Romanian border.",
+				"Deliblato Sands, one of the largest inland sand areas in Europe, spreads across it.",
+				"Its seat, Pančevo, lies just across the Danube from Belgrade."
+			],
+			"it": [
+				"Banat deriva da ban, il titolo di un governatore medievale; questa è la sua parte meridionale, al confine con la Romania.",
+				"Vi si stendono le Sabbie di Deliblato, una delle più grandi aree sabbiose interne d’Europa.",
+				"Il capoluogo, Pančevo, si trova appena al di là del Danubio rispetto a Belgrado."
+			],
+			"de": [
+				"Banat kommt von ban, dem Titel eines mittelalterlichen Statthalters; dies ist sein Südteil an der rumänischen Grenze.",
+				"Hier breitet sich die Deliblatska peščara aus, eines der größten Binnensandgebiete Europas.",
+				"Der Verwaltungssitz Pančevo liegt gleich jenseits der Donau von Belgrad."
+			]
+		}
+	},
+	"syrmia": {
+		"region": {
+			"en": [
+				"Named for Sirmium, the Roman city on the site of today’s Sremska Mitrovica.",
+				"Sirmium was one of the capitals of the Roman Empire and the birthplace of several emperors.",
+				"Fruška Gora, Serbia’s first national park, has some sixteen medieval monasteries."
+			],
+			"it": [
+				"Prende il nome da Sirmio, la città romana sul sito dell’odierna Sremska Mitrovica.",
+				"Sirmio fu una delle capitali dell’Impero romano e la città natale di diversi imperatori.",
+				"Fruška Gora, il primo parco nazionale della Serbia, ospita una sedicina di monasteri medievali."
+			],
+			"de": [
+				"Benannt nach Sirmium, der römischen Stadt am Ort des heutigen Sremska Mitrovica.",
+				"Sirmium war eine der Hauptstädte des Römischen Reiches und der Geburtsort mehrerer Kaiser.",
+				"Die Fruška Gora, Serbiens erster Nationalpark, hat rund sechzehn mittelalterliche Klöster."
+			]
+		}
+	},
+	"macva": {
+		"region": {
+			"en": [
+				"The origin of the name is uncertain; it also named a medieval Hungarian banate.",
+				"On Mount Cer in 1914 the Serbian army won the first Allied victory of the First World War.",
+				"Vuk Karadžić, who reformed the Serbian written language, was born near Loznica in 1787."
+			],
+			"it": [
+				"L’origine del nome è incerta; designò anche un banato ungherese medievale.",
+				"Sul monte Cer, nel 1914, l’esercito serbo ottenne la prima vittoria alleata della prima guerra mondiale.",
+				"Vuk Karadžić, che riformò la lingua scritta serba, nacque nel 1787 vicino a Loznica."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss; er bezeichnete auch ein mittelalterliches ungarisches Banat.",
+				"Am Berg Cer errang das serbische Heer 1914 den ersten Sieg der Alliierten im Ersten Weltkrieg.",
+				"Vuk Karadžić, der die serbische Schriftsprache reformierte, wurde 1787 bei Loznica geboren."
+			]
+		}
+	},
+	"podunavlje": {
+		"region": {
+			"en": [
+				"Podunavlje means \"along the Danube\".",
+				"Smederevo Fortress, built in 1428-30 by Despot Đurađ Branković, is among the largest fortresses on flat ground in Europe.",
+				"Smederevo was the capital of the Serbian Despotate from 1430 until the Ottomans took it in 1459."
+			],
+			"it": [
+				"Podunavlje significa \"lungo il Danubio\".",
+				"La fortezza di Smederevo, costruita nel 1428-30 dal despota Đurađ Branković, è tra le più grandi d’Europa costruite in pianura.",
+				"Smederevo fu la capitale del Despotato serbo dal 1430 fino alla conquista ottomana del 1459."
+			],
+			"de": [
+				"Podunavlje bedeutet „entlang der Donau“.",
+				"Die Festung von Smederevo, 1428-30 vom Despoten Đurađ Branković erbaut, gehört zu den größten Festungen Europas auf ebenem Gelände.",
+				"Smederevo war von 1430 bis zur osmanischen Eroberung 1459 die Hauptstadt des serbischen Despotats."
+			]
+		}
+	},
+	"branicevo": {
+		"region": {
+			"en": [
+				"Named for the medieval town of Braničevo, a fortress and bishopric on the Danube.",
+				"Viminacium, near Kostolac, was a Roman legionary camp and the capital of the province of Moesia Superior.",
+				"Golubac Fortress guards the Danube at the entrance to the Iron Gates gorge."
+			],
+			"it": [
+				"Prende il nome dall’antica città di Braničevo, una fortezza e sede vescovile sul Danubio.",
+				"Viminacium, vicino a Kostolac, era un accampamento legionario romano e la capitale della provincia della Mesia Superiore.",
+				"La fortezza di Golubac sorveglia il Danubio all’ingresso della gola delle Porte di Ferro."
+			],
+			"de": [
+				"Benannt nach der mittelalterlichen Stadt Braničevo, einer Festung und einem Bischofssitz an der Donau.",
+				"Viminacium bei Kostolac war ein römisches Legionslager und die Hauptstadt der Provinz Moesia superior.",
+				"Die Festung Golubac bewacht die Donau am Eingang der Schlucht des Eisernen Tors."
+			]
+		}
+	},
+	"kolubara": {
+		"region": {
+			"en": [
+				"Named for the Kolubara river, a tributary of the Sava.",
+				"The Battle of Kolubara in late 1914 was a Serbian victory over Austria-Hungary at a desperate moment of the war.",
+				"Its coal basin supplies the lignite that fuels much of Serbia’s electricity."
+			],
+			"it": [
+				"Prende il nome dal fiume Kolubara, affluente della Sava.",
+				"La battaglia della Kolubara, alla fine del 1914, fu una vittoria serba sull’Austria-Ungheria in un momento disperato della guerra.",
+				"Il suo bacino carbonifero fornisce la lignite che alimenta gran parte dell’elettricità serba."
+			],
+			"de": [
+				"Benannt nach dem Fluss Kolubara, einem Nebenfluss der Save.",
+				"Die Schlacht an der Kolubara Ende 1914 war ein serbischer Sieg über Österreich-Ungarn in einem verzweifelten Moment des Krieges.",
+				"Sein Kohlebecken liefert die Braunkohle, mit der ein großer Teil des serbischen Stroms erzeugt wird."
+			]
+		}
+	},
+	"bor": {
+		"region": {
+			"en": [
+				"Bor means \"pine\" in Serbian.",
+				"Copper has been mined at Bor since 1904, and its mine is among the largest in Europe.",
+				"The district borders both Romania and Bulgaria."
+			],
+			"it": [
+				"Bor significa \"pino\" in serbo.",
+				"A Bor si estrae rame dal 1904 e la sua miniera è tra le più grandi d’Europa.",
+				"Il distretto confina sia con la Romania sia con la Bulgaria."
+			],
+			"de": [
+				"Bor bedeutet auf Serbisch „Kiefer“.",
+				"In Bor wird seit 1904 Kupfer abgebaut, und die Mine gehört zu den größten Europas.",
+				"Der Bezirk grenzt sowohl an Rumänien als auch an Bulgarien."
+			]
+		}
+	},
+	"sumadija": {
+		"region": {
+			"en": [
+				"From šuma, \"forest\": it was once covered in oak woods.",
+				"The First Serbian Uprising of 1804 began here, in the village of Orašac.",
+				"Oplenac, near Topola, has the mausoleum of the Karađorđević dynasty."
+			],
+			"it": [
+				"Da šuma, \"foresta\": un tempo era coperta di boschi di querce.",
+				"La prima insurrezione serba del 1804 iniziò qui, nel villaggio di Orašac.",
+				"A Oplenac, vicino a Topola, si trova il mausoleo della dinastia Karađorđević."
+			],
+			"de": [
+				"Von šuma, „Wald“: es war einst von Eichenwäldern bedeckt.",
+				"Der Erste Serbische Aufstand von 1804 begann hier, im Dorf Orašac.",
+				"In Oplenac bei Topola steht das Mausoleum der Dynastie Karađorđević."
+			]
+		}
+	},
+	"pomoravlje": {
+		"region": {
+			"en": [
+				"Pomoravlje means \"along the Morava\", here the Great Morava.",
+				"Manasija Monastery, a walled monastery built in the 1410s by Despot Stefan Lazarević, has fine medieval frescoes.",
+				"The Resava Cave near Despotovac is one of Serbia’s best-known caves."
+			],
+			"it": [
+				"Pomoravlje significa \"lungo la Morava\", qui la Grande Morava.",
+				"Il monastero di Manasija, un monastero fortificato costruito negli anni 1410 dal despota Stefan Lazarević, conserva begli affreschi medievali.",
+				"La grotta di Resava, vicino a Despotovac, è una delle grotte più note della Serbia."
+			],
+			"de": [
+				"Pomoravlje bedeutet „entlang der Morava“, hier der Großen Morava.",
+				"Das Kloster Manasija, ein ummauertes Kloster, das der Despot Stefan Lazarević in den 1410er-Jahren erbauen ließ, birgt schöne mittelalterliche Fresken.",
+				"Die Resava-Höhle bei Despotovac ist eine der bekanntesten Höhlen Serbiens."
+			]
+		}
+	},
+	"moravica": {
+		"region": {
+			"en": [
+				"Named for the Moravica river, which joins the West Morava.",
+				"The Ovčar-Kablar gorge, with its many monasteries, is called the Serbian Holy Mountain.",
+				"The trumpet festival of Guča, a gathering of brass bands, is held here every August."
+			],
+			"it": [
+				"Prende il nome dal fiume Moravica, che si getta nella Morava Occidentale.",
+				"La gola di Ovčar-Kablar, con i suoi molti monasteri, è chiamata la Santa Montagna serba.",
+				"Il festival delle trombe di Guča, un raduno di bande di ottoni, si tiene qui ogni agosto."
+			],
+			"de": [
+				"Benannt nach dem Fluss Moravica, der in die Westmorava mündet.",
+				"Die Schlucht Ovčar-Kablar mit ihren vielen Klöstern wird der serbische Heilige Berg genannt.",
+				"Das Trompetenfestival von Guča, ein Treffen von Blaskapellen, findet hier jeden August statt."
+			]
+		}
+	},
+	"zajecar": {
+		"region": {
+			"en": [
+				"Zaječar probably comes from zec, \"hare\".",
+				"Felix Romuliana, the palace the emperor Galerius built near Gamzigrad around 300, is a World Heritage Site.",
+				"Stara Planina, the Balkan Mountains, rise along its border with Bulgaria."
+			],
+			"it": [
+				"Zaječar deriva probabilmente da zec, \"lepre\".",
+				"Felix Romuliana, il palazzo che l’imperatore Galerio fece costruire vicino a Gamzigrad intorno al 300, è Patrimonio dell’Umanità.",
+				"La Stara Planina, i monti Balcani, si alzano lungo il confine con la Bulgaria."
+			],
+			"de": [
+				"Zaječar kommt wahrscheinlich von zec, „Hase“.",
+				"Felix Romuliana, der Palast, den Kaiser Galerius um 300 bei Gamzigrad erbauen ließ, ist Welterbe.",
+				"Die Stara Planina, das Balkangebirge, erhebt sich entlang der Grenze zu Bulgarien."
+			]
+		}
+	},
+	"zlatibor": {
+		"region": {
+			"en": [
+				"Named for the Zlatibor mountains, from zlatni bor, \"golden pine\".",
+				"The Šargan Eight, a narrow-gauge tourist railway, loops through the hills in the shape of an 8.",
+				"A small house stands on a rock in the Drina near Bajina Bašta, built there in 1968."
+			],
+			"it": [
+				"Prende il nome dai monti Zlatibor, da zlatni bor, \"pino d’oro\".",
+				"La Šargan Eight, una ferrovia turistica a scartamento ridotto, serpeggia tra le colline a forma di 8.",
+				"Una casetta sorge su una roccia nella Drina vicino a Bajina Bašta, costruita lì nel 1968."
+			],
+			"de": [
+				"Benannt nach dem Zlatibor-Gebirge, von zlatni bor, „goldene Kiefer“.",
+				"Die Šargan-Acht, eine schmalspurige Touristenbahn, windet sich in Form einer 8 durch die Hügel.",
+				"Auf einem Felsen in der Drina bei Bajina Bašta steht ein kleines Haus, das dort 1968 gebaut wurde."
+			]
+		}
+	},
+	"rasina": {
+		"region": {
+			"en": [
+				"Named for the Rasina river.",
+				"Kruševac was the capital of Prince Lazar, who led the Serbs at the Battle of Kosovo in 1389.",
+				"The Župa area around Aleksandrovac is one of Serbia’s wine regions."
+			],
+			"it": [
+				"Prende il nome dal fiume Rasina.",
+				"Kruševac fu la capitale del principe Lazar, che guidò i serbi nella battaglia del Kosovo nel 1389.",
+				"La zona della Župa intorno ad Aleksandrovac è una delle regioni vinicole della Serbia."
+			],
+			"de": [
+				"Benannt nach dem Fluss Rasina.",
+				"Kruševac war die Hauptstadt des Fürsten Lazar, der die Serben 1389 in der Schlacht auf dem Amselfeld anführte.",
+				"Das Gebiet der Župa um Aleksandrovac ist eine der Weinregionen Serbiens."
+			]
+		}
+	},
+	"nisava": {
+		"region": {
+			"en": [
+				"Named for the Nišava river, a tributary of the South Morava.",
+				"Niš lies at a crossroads where the routes from Belgrade to Istanbul and from the Aegean to central Europe meet.",
+				"Mediana, a Roman residence of the 4th century at Niš, has mosaics and baths."
+			],
+			"it": [
+				"Prende il nome dal fiume Nišava, affluente della Morava Meridionale.",
+				"Niš sorge a un crocevia dove si incontrano le vie da Belgrado a Istanbul e dall’Egeo all’Europa centrale.",
+				"Mediana, una residenza romana del IV secolo a Niš, conserva mosaici e terme."
+			],
+			"de": [
+				"Benannt nach dem Fluss Nišava, einem Nebenfluss der Südmorava.",
+				"Niš liegt an einem Kreuzungspunkt, wo sich die Wege von Belgrad nach Istanbul und von der Ägäis nach Mitteleuropa treffen.",
+				"Mediana, eine römische Residenz des 4. Jahrhunderts in Niš, hat Mosaiken und Bäder."
+			]
+		}
+	},
+	"raska": {
+		"region": {
+			"en": [
+				"Named for the Raška river and the medieval Serbian land of Raška, the cradle of the Nemanjić kingdom.",
+				"Studenica Monastery, founded in the 1190s by Stefan Nemanja, is a World Heritage Site.",
+				"Kopaonik, Serbia’s largest ski resort, lies on the edge of the district."
+			],
+			"it": [
+				"Prende il nome dal fiume Raška e dall’omonima terra serba medievale, culla del regno dei Nemanjić.",
+				"Il monastero di Studenica, fondato negli anni 1190 da Stefan Nemanja, è Patrimonio dell’Umanità.",
+				"Kopaonik, la maggiore stazione sciistica della Serbia, si trova al margine del distretto."
+			],
+			"de": [
+				"Benannt nach dem Fluss Raška und dem mittelalterlichen serbischen Land Raška, der Wiege des Reiches der Nemanjiden.",
+				"Das Kloster Studenica, in den 1190er-Jahren von Stefan Nemanja gegründet, ist Welterbe.",
+				"Der Kopaonik, Serbiens größtes Skigebiet, liegt am Rand des Bezirks."
+			]
+		}
+	},
+	"toplica": {
+		"region": {
+			"en": [
+				"Named for the Toplica river; toplo means \"warm\".",
+				"The Toplica Uprising of 1917 against the Bulgarian occupation began here.",
+				"Prolom Banja, in the district, is a spa known for its mineral springs."
+			],
+			"it": [
+				"Prende il nome dal fiume Toplica; toplo significa \"caldo\".",
+				"La rivolta della Toplica del 1917 contro l’occupazione bulgara iniziò qui.",
+				"Prolom Banja, nel distretto, è una stazione termale nota per le sue acque minerali."
+			],
+			"de": [
+				"Benannt nach dem Fluss Toplica; toplo bedeutet „warm“.",
+				"Der Toplica-Aufstand von 1917 gegen die bulgarische Besatzung begann hier.",
+				"Prolom Banja im Bezirk ist ein Kurort, der für seine Mineralquellen bekannt ist."
+			]
+		}
+	},
+	"pirot": {
+		"region": {
+			"en": [
+				"The origin of the name is uncertain; one explanation is the Slavic pir, a kind of wheat.",
+				"Pirot’s kilims, woven rugs with bold geometric patterns, are on UNESCO’s list of intangible heritage.",
+				"The district lies on the border with Bulgaria, on the route to Sofia."
+			],
+			"it": [
+				"L’origine del nome è incerta; una spiegazione è lo slavo pir, un tipo di grano.",
+				"I kilim di Pirot, tappeti tessuti con decorazioni geometriche decise, sono nella lista UNESCO del patrimonio immateriale.",
+				"Il distretto si trova al confine con la Bulgaria, sulla via per Sofia."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss; eine Erklärung ist das slawische pir, eine Weizenart.",
+				"Die Kelims von Pirot, gewebte Teppiche mit kräftigen geometrischen Mustern, stehen auf der UNESCO-Liste des immateriellen Kulturerbes.",
+				"Der Bezirk liegt an der Grenze zu Bulgarien, an der Strecke nach Sofia."
+			]
+		}
+	},
+	"jablanica": {
+		"region": {
+			"en": [
+				"Named for the Jablanica river; jablan means \"poplar\".",
+				"Leskovac holds a grill festival, the Roštiljijada, every year at the end of summer.",
+				"Leskovac was once nicknamed the Manchester of Serbia for its textile industry."
+			],
+			"it": [
+				"Prende il nome dal fiume Jablanica; jablan significa \"pioppo\".",
+				"Leskovac ospita ogni anno, a fine estate, un festival della griglia, la Roštiljijada.",
+				"Leskovac fu un tempo soprannominata la Manchester della Serbia per la sua industria tessile."
+			],
+			"de": [
+				"Benannt nach dem Fluss Jablanica; jablan bedeutet „Pappel“.",
+				"In Leskovac findet jedes Jahr am Ende des Sommers ein Grillfestival statt, die Roštiljijada.",
+				"Leskovac wurde wegen seiner Textilindustrie einst das Manchester Serbiens genannt."
+			]
+		}
+	},
+	"pcinja": {
+		"region": {
+			"en": [
+				"Named for the Pčinja river.",
+				"Vranje, its seat, is the home town of the writer Bora Stanković, whose stories evoke old Vranje.",
+				"The district borders North Macedonia, in Serbia’s far south."
+			],
+			"it": [
+				"Prende il nome dal fiume Pčinja.",
+				"Vranje, il capoluogo, è la città dello scrittore Bora Stanković, i cui racconti evocano la vecchia Vranje.",
+				"Il distretto confina con la Macedonia del Nord, nell’estremo sud della Serbia."
+			],
+			"de": [
+				"Benannt nach dem Fluss Pčinja.",
+				"Vranje, der Verwaltungssitz, ist die Heimatstadt des Schriftstellers Bora Stanković, dessen Erzählungen das alte Vranje beschwören.",
+				"Der Bezirk grenzt an Nordmazedonien, im äußersten Süden Serbiens."
 			]
 		}
 	}
