@@ -1190,7 +1190,7 @@ new-zealand-regions 16, venezuela-states 24, denmark-regions 5; towns 31
 8 (Norway), 6 (Denmark), 7 (Serbia). Not done: German/Italian facts for these
 (v0.18), and towns from Wikidata where Natural Earth is thin.
 
-### Malaysia and Bangladesh (built 2026-10-04, v0.18, #204)
+### Malaysia and Bangladesh (built 2026-10-04, v0.18, #190, PR #206)
 
 Malaysia — States (16: thirteen states, Kuala Lumpur, Putrajaya and Labuan;
 Natural Earth, public domain) and Bangladesh — Divisions (8, including
