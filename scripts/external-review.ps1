@@ -49,12 +49,12 @@ param(
 
 $ErrorActionPreference = 'Stop'
 
-# No -Model: the reviewer named in .opencode/reviewer-model (one line,
-# "provider/model#variant"), set with the switch-reviewer skill.
+# No -Model: the reviewer named in .opencode/reviewer-model (one model per line,
+# "provider/model#variant", tried in order), set with the switch-reviewer skill.
 if (-not $Model -or $Model.Count -eq 0) {
     $cfg = Join-Path (Split-Path -Parent $PSScriptRoot) '.opencode/reviewer-model'
-    $line = if (Test-Path $cfg) { (Get-Content $cfg | Where-Object { $_.Trim() -and -not $_.StartsWith('#') } | Select-Object -First 1) } else { $null }
-    $Model = @(if ($line) { $line.Trim() } else { 'opencode-go/deepseek-v4.1-flash#high' })
+    $lines = if (Test-Path $cfg) { @(Get-Content $cfg | Where-Object { $_.Trim() -and -not $_.StartsWith('#') } | ForEach-Object { $_.Trim() }) } else { @() }
+    $Model = if ($lines.Count) { $lines } else { @('opencode-go/deepseek-v4.1-flash#high') }
 }
 $here = Split-Path -Parent $MyInvocation.MyCommand.Path
 $repo = (& git -C $here rev-parse --path-format=absolute --git-common-dir | Split-Path -Parent) -replace '\\', '/'
