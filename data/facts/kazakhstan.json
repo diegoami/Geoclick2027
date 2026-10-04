@@ -2,7 +2,8 @@
 	"_note": [
 		"Name-facts for Kazakhstan (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences."
+		"of the same id, written later, never shows a town's sentences.",
+		"v0.19 added the 16 regions of 2017 (the set the map shows), each as a \"region\" entry (en, it, de); Astana sits beside the city of the same id. South Kazakhstan was renamed Turkistan Region in 2018."
 	],
 	"astana": {
 		"city": {
@@ -20,6 +21,308 @@
 				"„Hauptstadt“ auf Kasachisch; sie löste 1997 Almaty ab und hat seit der Sowjetzeit viermal ihren Namen gewechselt.",
 				"Ihr Turm Baiterek soll einen Baum darstellen, der ein goldenes Ei hält.",
 				"Sie ist eine der kältesten Hauptstädte der Welt."
+			]
+		},
+		"region": {
+			"en": [
+				"Astana is a city with the status of a region of its own, like Almaty.",
+				"A new city centre was laid out from 1998 on the Ishim river, to a plan by the Japanese architect Kisho Kurokawa.",
+				"Khan Shatyr, a transparent tent 150 m high, holds a shopping centre with an indoor beach."
+			],
+			"it": [
+				"Astana è una città con lo status di regione a sé, come Almaty.",
+				"Dal 1998 un nuovo centro cittadino fu tracciato sul fiume Išim, su un piano dell’architetto giapponese Kisho Kurokawa.",
+				"Khan Shatyr, una tenda trasparente alta 150 m, ospita un centro commerciale con una spiaggia al coperto."
+			],
+			"de": [
+				"Astana ist eine Stadt mit dem Status einer eigenen Region, wie Almaty.",
+				"Ab 1998 wurde am Ischim ein neues Stadtzentrum nach einem Plan des japanischen Architekten Kisho Kurokawa angelegt.",
+				"Khan Shatyr, ein durchsichtiges Zelt von 150 m Höhe, beherbergt ein Einkaufszentrum mit einem Strand in der Halle."
+			]
+		}
+	},
+	"north-kazakhstan": {
+		"region": {
+			"en": [
+				"Named for its place in the north of the country, on the border with Russia.",
+				"In the 1950s the Soviet Virgin Lands campaign ploughed up its steppe for wheat.",
+				"Its grain belt still makes Kazakhstan one of the world’s big wheat exporters."
+			],
+			"it": [
+				"Prende il nome dalla sua posizione nel nord del paese, al confine con la Russia.",
+				"Negli anni Cinquanta la campagna sovietica delle Terre Vergini arò la sua steppa per coltivare grano.",
+				"La sua cintura cerealicola fa ancora del Kazakistan uno dei grandi esportatori mondiali di grano."
+			],
+			"de": [
+				"Benannt nach seiner Lage im Norden des Landes, an der Grenze zu Russland.",
+				"In den 1950er-Jahren pflügte die sowjetische Neulandkampagne seine Steppe für den Weizenanbau um.",
+				"Sein Getreidegürtel macht Kasachstan noch heute zu einem der großen Weizenexporteure der Welt."
+			]
+		}
+	},
+	"pavlodar": {
+		"region": {
+			"en": [
+				"The city’s name joins Pavel and dar, \"gift\": it was named in 1861 for a son of Tsar Alexander II.",
+				"The Irtysh river flows through the region on its way from the Altai to Siberia.",
+				"At Ekibastuz, a power station has one of the tallest chimneys in the world, about 420 m."
+			],
+			"it": [
+				"Il nome della città unisce Pavel e dar, \"dono\": fu dato nel 1861 in onore di un figlio dello zar Alessandro II.",
+				"Il fiume Irtyš attraversa la regione dall’Altaj verso la Siberia.",
+				"A Ekibastuz una centrale elettrica ha uno dei camini più alti del mondo, circa 420 m."
+			],
+			"de": [
+				"Der Name der Stadt verbindet Pawel und dar, „Geschenk“: Sie wurde 1861 nach einem Sohn von Zar Alexander II. benannt.",
+				"Der Irtysch fließt vom Altai nach Sibirien durch die Region.",
+				"In Ekibastus hat ein Kraftwerk einen der höchsten Schornsteine der Welt, etwa 420 m."
+			]
+		}
+	},
+	"akmola": {
+		"region": {
+			"en": [
+				"From Kazakh ak mola, usually translated \"white tomb\" or \"white shrine\"; it was also the old name of Astana.",
+				"The region surrounds the capital, Astana, which has a region’s status of its own.",
+				"Burabay, a resort of lakes and granite hills, is sometimes called the Switzerland of Kazakhstan."
+			],
+			"it": [
+				"Dal kazako ak mola, di solito tradotto \"tomba bianca\" o \"santuario bianco\"; era anche l’antico nome di Astana.",
+				"La regione circonda la capitale, Astana, che ha lo status di regione a sé.",
+				"Burabay, una località di laghi e colline di granito, è detta talvolta la Svizzera del Kazakistan."
+			],
+			"de": [
+				"Vom kasachischen ak mola, meist mit „weißes Grab“ oder „weißer Schrein“ übersetzt; so hieß früher auch Astana.",
+				"Die Region umgibt die Hauptstadt Astana, die den Status einer eigenen Region hat.",
+				"Burabai, ein Urlaubsort mit Seen und Granithügeln, wird manchmal die Schweiz Kasachstans genannt."
+			]
+		}
+	},
+	"kostanay": {
+		"region": {
+			"en": [
+				"Its city was founded in 1879 as a Russian settlement and has been Kostanay (Kustanay) since 1893.",
+				"Rudny, in the region, is a mining town built on a huge iron-ore deposit.",
+				"Naurzum Nature Reserve, with Korgalzhyn, is part of a World Heritage site of steppe and lakes."
+			],
+			"it": [
+				"La sua città fu fondata nel 1879 come insediamento russo e si chiama Kostanay (Kustanaj) dal 1893.",
+				"Rudny, nella regione, è una città mineraria costruita su un enorme giacimento di ferro.",
+				"La riserva naturale di Naurzum, insieme a Korgalzhyn, fa parte di un sito Patrimonio dell’Umanità di steppa e laghi."
+			],
+			"de": [
+				"Die Stadt wurde 1879 als russische Siedlung gegründet und heißt seit 1893 Kostanai (Kustanai).",
+				"Rudny in der Region ist eine Bergbaustadt auf einer riesigen Eisenerzlagerstätte.",
+				"Das Naturreservat Naurzum gehört zusammen mit Korgalschyn zu einem Welterbe aus Steppe und Seen."
+			]
+		}
+	},
+	"west-kazakhstan": {
+		"region": {
+			"en": [
+				"Named for its place in the west of the country, on the border with Russia.",
+				"The Ural river, which flows through the city of Oral, is a traditional boundary between Europe and Asia.",
+				"The Karachaganak field is one of the largest gas and condensate fields in the world."
+			],
+			"it": [
+				"Prende il nome dalla sua posizione nell’ovest del paese, al confine con la Russia.",
+				"Il fiume Ural, che attraversa la città di Oral, è un confine tradizionale tra Europa e Asia.",
+				"Il giacimento di Karačaganak è uno dei maggiori giacimenti di gas e condensato del mondo."
+			],
+			"de": [
+				"Benannt nach seiner Lage im Westen des Landes, an der Grenze zu Russland.",
+				"Der Ural, der durch die Stadt Oral fließt, gilt traditionell als Grenze zwischen Europa und Asien.",
+				"Das Feld Karatschaganak ist eines der größten Gas- und Kondensatfelder der Welt."
+			]
+		}
+	},
+	"karaganda": {
+		"region": {
+			"en": [
+				"Named for karagan, a thorny steppe shrub; Karaganda means \"place of karagan\".",
+				"Its coalfield made the city a centre of Soviet mining and heavy industry.",
+				"The Karlag, one of the largest camps of the Gulag, once held tens of thousands of prisoners on its steppe."
+			],
+			"it": [
+				"Prende il nome dal karagan, un arbusto spinoso della steppa; Karaganda significa \"luogo del karagan\".",
+				"Il suo bacino carbonifero fece della città un centro dell’industria mineraria e pesante sovietica.",
+				"Il Karlag, uno dei maggiori campi del Gulag, tenne un tempo decine di migliaia di prigionieri nella sua steppa."
+			],
+			"de": [
+				"Benannt nach dem Karagan, einem dornigen Steppenstrauch; Karaganda bedeutet „Ort des Karagan“.",
+				"Sein Kohlerevier machte die Stadt zu einem Zentrum des sowjetischen Bergbaus und der Schwerindustrie.",
+				"Das Karlag, eines der größten Lager des Gulag, hielt einst Zehntausende Häftlinge in seiner Steppe fest."
+			]
+		}
+	},
+	"east-kazakhstan": {
+		"region": {
+			"en": [
+				"Named for its place in the east of the country, where Kazakhstan meets Russia, China and the Altai.",
+				"Mount Belukha, the highest peak of the Altai, rises on the border with Russia.",
+				"From 1949 to 1989 the Soviet Union tested nuclear weapons at the Semipalatinsk Test Site in the region."
+			],
+			"it": [
+				"Prende il nome dalla sua posizione nell’est del paese, dove il Kazakistan incontra la Russia, la Cina e l’Altaj.",
+				"Il monte Belucha, la cima più alta dell’Altaj, si alza al confine con la Russia.",
+				"Dal 1949 al 1989 l’Unione Sovietica collaudò armi nucleari nel poligono di Semipalatinsk, nella regione."
+			],
+			"de": [
+				"Benannt nach seiner Lage im Osten des Landes, wo Kasachstan an Russland, China und den Altai grenzt.",
+				"Der Belucha, der höchste Gipfel des Altai, erhebt sich an der Grenze zu Russland.",
+				"Von 1949 bis 1989 testete die Sowjetunion im Gebiet Atomwaffen auf dem Testgelände von Semipalatinsk."
+			]
+		}
+	},
+	"aktobe": {
+		"region": {
+			"en": [
+				"Aktobe means \"white hill\" in Kazakh.",
+				"The region has one of the world’s great chromite deposits, used to make stainless steel.",
+				"It lies in the west of the country, between the Ural mountains and the Mugodzhar hills."
+			],
+			"it": [
+				"Aktobe significa \"collina bianca\" in kazako.",
+				"La regione ha uno dei grandi giacimenti mondiali di cromite, usata per fare l’acciaio inossidabile.",
+				"Si trova nell’ovest del paese, tra gli Urali e i monti Mugodžary."
+			],
+			"de": [
+				"Aktobe bedeutet auf Kasachisch „weißer Hügel“.",
+				"Die Region hat eine der großen Chromitlagerstätten der Welt; Chromit wird für rostfreien Stahl gebraucht.",
+				"Sie liegt im Westen des Landes, zwischen dem Ural und den Mugodscharbergen."
+			]
+		}
+	},
+	"atyrau": {
+		"region": {
+			"en": [
+				"Atyrau comes from Kazakh atyrau, \"river mouth\": the city lies where the Ural river reaches the Caspian.",
+				"Its Tengiz field is one of the largest oil fields in the world.",
+				"The city of Atyrau stands on both sides of the Ural river, so it lies partly in Europe and partly in Asia."
+			],
+			"it": [
+				"Atyrau viene dal kazako atyrau, \"foce di fiume\": la città sorge dove il fiume Ural raggiunge il Caspio.",
+				"Il suo giacimento di Tengiz è uno dei maggiori giacimenti petroliferi del mondo.",
+				"La città di Atyrau sorge su entrambe le rive del fiume Ural, quindi si trova in parte in Europa e in parte in Asia."
+			],
+			"de": [
+				"Atyrau kommt vom kasachischen atyrau, „Flussmündung“: Die Stadt liegt dort, wo der Ural das Kaspische Meer erreicht.",
+				"Das Feld Tengis ist eines der größten Ölfelder der Welt.",
+				"Die Stadt Atyrau liegt zu beiden Seiten des Ural und damit teils in Europa, teils in Asien."
+			]
+		}
+	},
+	"kyzylorda": {
+		"region": {
+			"en": [
+				"Kyzylorda means \"red capital\": it was the capital of the Kazakh republic from 1925 to 1929.",
+				"The Baikonur Cosmodrome, from which Yuri Gagarin was launched in 1961, lies in the region.",
+				"The Syr Darya runs through it towards the Aral Sea, which has largely dried up."
+			],
+			"it": [
+				"Kyzylorda significa \"capitale rossa\": fu la capitale della repubblica kazaka dal 1925 al 1929.",
+				"Nella regione si trova il cosmodromo di Bajkonur, da cui fu lanciato Jurij Gagarin nel 1961.",
+				"Il Syr Darya la attraversa verso il lago d’Aral, in gran parte prosciugato."
+			],
+			"de": [
+				"Kysylorda bedeutet „rote Hauptstadt“: Es war von 1925 bis 1929 die Hauptstadt der Kasachischen Republik.",
+				"In der Region liegt das Kosmodrom Baikonur, von dem 1961 Juri Gagarin gestartet wurde.",
+				"Der Syrdarja fließt hindurch in Richtung Aralsee, der weitgehend ausgetrocknet ist."
+			]
+		}
+	},
+	"almaty-region": {
+		"region": {
+			"en": [
+				"Named for Almaty, whose name is usually explained as \"place of apples\".",
+				"Charyn Canyon, a gorge of red rock, is sometimes compared with the Grand Canyon.",
+				"The ancestor of the cultivated apple, Malus sieversii, still grows wild in the Tian Shan foothills."
+			],
+			"it": [
+				"Prende il nome da Almaty, il cui nome è di solito spiegato come \"luogo delle mele\".",
+				"Il canyon di Charyn, una gola di roccia rossa, è talvolta paragonato al Grand Canyon.",
+				"L’antenato del melo coltivato, Malus sieversii, cresce ancora allo stato selvatico ai piedi del Tien Shan."
+			],
+			"de": [
+				"Benannt nach Almaty, dessen Name meist als „Ort der Äpfel“ erklärt wird.",
+				"Der Scharyn-Canyon, eine Schlucht aus rotem Fels, wird manchmal mit dem Grand Canyon verglichen.",
+				"Der Vorfahr des Kulturapfels, Malus sieversii, wächst in den Vorbergen des Tian Shan noch wild."
+			]
+		}
+	},
+	"jambyl": {
+		"region": {
+			"en": [
+				"Named for Jambyl Jabayev, a Kazakh akyn, or bard, who lived to be nearly a hundred.",
+				"Near its main city, Taraz, the battle of Talas in 751 set Arab and Chinese armies against each other.",
+				"The Aisha Bibi mausoleum near Taraz is famous for its carved brick patterns."
+			],
+			"it": [
+				"Prende il nome da Jambyl Jabayev, un akyn kazako, cioè un bardo, vissuto quasi cent’anni.",
+				"Vicino al suo centro principale, Taraz, la battaglia del Talas nel 751 oppose eserciti arabi e cinesi.",
+				"Il mausoleo di Aisha Bibi, vicino a Taraz, è famoso per i suoi motivi scolpiti nel mattone."
+			],
+			"de": [
+				"Benannt nach Dschambul Dschabajew, einem kasachischen Akyn, also Barden, der fast hundert Jahre alt wurde.",
+				"Nahe der Hauptstadt der Region, Taras, standen sich 751 in der Schlacht am Talas arabische und chinesische Heere gegenüber.",
+				"Das Aisha-Bibi-Mausoleum bei Taras ist für seine geschnitzten Ziegelmuster berühmt."
+			]
+		}
+	},
+	"mangystau": {
+		"region": {
+			"en": [
+				"The name is often explained as \"a thousand winter quarters\"; the origin is uncertain.",
+				"The Karagiye depression, about 132 m below sea level, is the lowest point in Kazakhstan.",
+				"The Valley of Balls has round stones, some of them huge, lying on the desert floor."
+			],
+			"it": [
+				"Il nome è spesso spiegato come \"mille quartieri invernali\"; l’origine è incerta.",
+				"La depressione di Karagiye, circa 132 m sotto il livello del mare, è il punto più basso del Kazakistan.",
+				"Nella Valle delle Sfere pietre rotonde, alcune enormi, giacciono sul fondo del deserto."
+			],
+			"de": [
+				"Der Name wird oft als „tausend Winterlager“ erklärt; die Herkunft ist ungewiss.",
+				"Die Senke von Karagije, etwa 132 m unter dem Meeresspiegel, ist der tiefste Punkt Kasachstans.",
+				"Im Tal der Kugeln liegen runde Steine, einige davon riesig, auf dem Wüstenboden."
+			]
+		}
+	},
+	"south-kazakhstan": {
+		"region": {
+			"en": [
+				"Named for its place in the south; it was renamed Turkistan Region in 2018.",
+				"The mausoleum of Khoja Ahmed Yasawi in Turkistan, begun by Timur in 1389, is a World Heritage Site.",
+				"Shymkent, its biggest city, became a city with the status of a region in 2018."
+			],
+			"it": [
+				"Prende il nome dalla sua posizione nel sud; nel 2018 è stata rinominata regione del Turkestan.",
+				"Il mausoleo di Khoja Ahmed Yasawi a Turkistan, iniziato da Tamerlano nel 1389, è Patrimonio dell’Umanità.",
+				"Shymkent, la sua città più grande, è diventata nel 2018 una città con lo status di regione."
+			],
+			"de": [
+				"Benannt nach seiner Lage im Süden; 2018 wurde es in Gebiet Turkestan umbenannt.",
+				"Das Mausoleum von Khoja Ahmed Yasawi in Turkestan, 1389 von Timur begonnen, ist Welterbe.",
+				"Schymkent, die größte Stadt, wurde 2018 zu einer Stadt mit dem Status einer Region."
+			]
+		}
+	},
+	"almaty": {
+		"region": {
+			"en": [
+				"Almaty is a city with the status of a region of its own; its name is usually explained as \"place of apples\".",
+				"It was the capital of Kazakhstan until 1997, when the capital moved to Astana.",
+				"The Medeu ice rink, high in the mountains above the city, is among the highest in the world."
+			],
+			"it": [
+				"Almaty è una città con lo status di regione a sé; il suo nome è di solito spiegato come \"luogo delle mele\".",
+				"Fu la capitale del Kazakistan fino al 1997, quando la capitale passò ad Astana.",
+				"La pista di pattinaggio di Medeu, in alto sui monti sopra la città, è tra le più alte del mondo."
+			],
+			"de": [
+				"Almaty ist eine Stadt mit dem Status einer eigenen Region; ihr Name wird meist als „Ort der Äpfel“ erklärt.",
+				"Es war bis 1997 die Hauptstadt Kasachstans, dann zog die Hauptstadt nach Astana.",
+				"Die Eisbahn von Medeo, hoch in den Bergen über der Stadt, gehört zu den höchstgelegenen der Welt."
 			]
 		}
 	}
