@@ -347,7 +347,7 @@ Tapping a place also opens its fact card (see [Facts](#12-facts-and-name-origins
 ## 8. Quiz: drag the names onto the map
 
 The quiz is the game. The map is shown in colour without names, and the names to
-place are in a **tray** along the bottom of the screen, in alphabetical order (in English).
+place are in a **tray** along the bottom of the screen, in a fixed, roughly alphabetical order.
 Here the quiz on Denmark's five regions, at the start:
 
 ![The quiz at the start: five names in the tray](manual/quiz-start.jpg)
@@ -516,8 +516,8 @@ Nothing is scored. The map can still be zoomed and moved during the tour.
 ## 11. Towns maps
 
 A towns map is about cities rather than regions: the towns and cities of roughly
-100 000 inhabitants or more (50 000 on some countries, a selection of the
-biggest on the largest). Each town is a **dot**, and the country's regions are
+100 000 inhabitants or more (50 000 on some countries, as few as 20 000 on some
+detailed maps, a selection of the biggest on the largest). Each town is a **dot**, and the country's regions are
 drawn faintly underneath for reference.
 
 The Overview names every town. A town's name sits **beside** its dot, never on
@@ -689,8 +689,10 @@ What changes and what doesn't:
 - **Translated:** every button, heading and message, the tutorial, the kind of
   map ("Regions" / "Regionen" / "Regioni", "Towns" / "Städte" / "Città"), the
   facts and name origins of every place, the terrain names (Alps / Alpen / Alpi),
-  and the names of countries and of the towns on the maps of several countries:
-  Italy is "Italien" in German and "Italia" in Italian.
+  and the names of countries on the start screen and on the continents' maps, and of
+  the towns on the maps of several countries: Italy is "Italien" in German and
+  "Italia" in Italian. The title of a country's own map keeps the English country
+  name ("Italy — Regioni").
 - **Not translated:** the regions of a country's own maps keep their names in
   the country's own language (Toscana, Bayern, Île-de-France), which is how they
   appear on local maps.
