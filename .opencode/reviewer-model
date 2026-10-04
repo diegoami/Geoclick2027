@@ -1,3 +1,4 @@
-# The OpenCode reviewer for scripts/external-review.ps1 when no -Model is given.
-# One line: provider/model#variant. Change it with the switch-reviewer skill.
-opencode-go/deepseek-v4.1-flash#high
+# The OpenCode reviewer chain for scripts/external-review.ps1 when no -Model is given.
+# One model per line, tried in order: provider/model#variant. Change it with the switch-reviewer skill.
+openai/gpt-6.1-sol#high
+zai-coding-plan/glm-5.3-flash#high

@@ -49,21 +49,23 @@ param(
 
 $ErrorActionPreference = 'Stop'
 
-# No -Model: the reviewer named in .opencode/reviewer-model (one line,
-# "provider/model#variant"), set with the switch-reviewer skill.
+# No -Model: the reviewer named in .opencode/reviewer-model (one model per line,
+# "provider/model#variant", tried in order), set with the switch-reviewer skill.
 if (-not $Model -or $Model.Count -eq 0) {
     $cfg = Join-Path (Split-Path -Parent $PSScriptRoot) '.opencode/reviewer-model'
-    $line = if (Test-Path $cfg) { (Get-Content $cfg | Where-Object { $_.Trim() -and -not $_.StartsWith('#') } | Select-Object -First 1) } else { $null }
-    $Model = @(if ($line) { $line.Trim() } else { 'opencode-go/deepseek-v4.1-flash#high' })
+    $lines = if (Test-Path $cfg) { @(Get-Content $cfg | Where-Object { $_.Trim() -and -not $_.StartsWith('#') } | ForEach-Object { $_.Trim() }) } else { @() }
+    $Model = if ($lines.Count) { $lines } else { @('opencode-go/deepseek-v4.1-flash#high') }
 }
 $here = Split-Path -Parent $MyInvocation.MyCommand.Path
 $repo = (& git -C $here rev-parse --path-format=absolute --git-common-dir | Split-Path -Parent) -replace '\\', '/'
 $watcher = Join-Path $here 'Invoke-OpenCodeWatched.ps1'
 . (Join-Path $here 'ReviewParser.ps1')
 . (Join-Path $here 'ReviewerBrief.ps1')
+. (Join-Path $here 'ReviewerFamily.ps1')
 if ($SelfTest) {
     $failed = [int]@(Invoke-ReviewParserSelfTest)[-1]
     $failed += [int]@(Invoke-ReviewerBriefSelfTest -AgentFile (Join-Path (Split-Path -Parent $here) '.opencode/agents/external-reviewer.md'))[-1]
+    $failed += [int]@(Invoke-ReviewerFamilySelfTest)[-1]
     exit $failed
 }
 $token = [guid]::NewGuid().ToString('N').Substring(0, 6)
@@ -71,7 +73,7 @@ if ($Issue -and -not $Pr -and -not $PSBoundParameters.ContainsKey('Kind')) { $Ki
 $subject = if ($Kind -eq 'pr') { $Pr } else { $Issue }
 if (-not $subject) { throw 'Give -Pr <n> (a PR) or -Issue <n> -Kind release (a milestone issue).' }
 
-$display = @{ 'luna' = 'Luna'; 'glm' = 'GLM 5.3 Flash'; 'deepseek' = 'DeepSeek V4.1 Flash' }
+$display = @{ 'luna' = 'Luna'; 'sol' = 'GPT Sol'; 'glm' = 'GLM 5.3 Flash'; 'deepseek' = 'DeepSeek V4.1 Flash' }
 function Display([string] $id) {
     foreach ($k in $display.Keys) { if ($id -match $k) { return $display[$k] } }
     return $id
@@ -105,12 +107,12 @@ foreach ($l in $prLabels) { if ($l -like 'model:*') { $exclude += $l.Substring(6
 if (-not $DryRun) {
     & git -C $repo fetch -q origin $(if ($Kind -eq 'pr') { "pull/$Pr/head" } else { 'main' }) --tags 2>$null
     $trailers = (& git -C $repo log "$baseSha..$headSha" --format=%b 2>$null) -join "`n"
-    foreach ($m in $display.Keys) { if ($trailers -match "(?im)^Co-Authored-By:.*$m") { $exclude += $m } }
+    $exclude += @($trailers -split "`n" | Where-Object { $_ -match '(?i)^Co-Authored-By:' })
 }
 $chain = @()
 foreach ($entry in $Model) {
     $id, $variant = $entry -split '#', 2
-    if ($exclude | Where-Object { $_ -and $id -match [regex]::Escape($_) }) {
+    if (Test-ModelExcluded $id $exclude) {
         Write-Host "skipping ${id}: it implemented (or is excluded from) this change"; continue
     }
     $chain += [pscustomobject]@{ Id = $id; Variant = $variant; Name = Display $id }
