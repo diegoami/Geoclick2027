@@ -1,0 +1,73 @@
+{
+	"gilgit-baltistan": {
+		"kind": "region",
+		"borders": [
+			"Azad Kashmir",
+			"Khyber Pakhtunkhwa"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"khyber-pakhtunkhwa": {
+		"kind": "region",
+		"borders": [
+			"Azad Kashmir",
+			"Balochistan",
+			"Gilgit-Baltistan",
+			"Islamabad Capital Territory",
+			"Punjab"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"azad-kashmir": {
+		"kind": "region",
+		"borders": [
+			"Gilgit-Baltistan",
+			"Khyber Pakhtunkhwa",
+			"Punjab"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"islamabad-capital-territory": {
+		"kind": "region",
+		"borders": [
+			"Khyber Pakhtunkhwa",
+			"Punjab"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"punjab": {
+		"kind": "region",
+		"borders": [
+			"Azad Kashmir",
+			"Balochistan",
+			"Islamabad Capital Territory",
+			"Khyber Pakhtunkhwa",
+			"Sindh"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"balochistan": {
+		"kind": "region",
+		"borders": [
+			"Khyber Pakhtunkhwa",
+			"Punjab",
+			"Sindh"
+		],
+		"coastal": false,
+		"position": "west"
+	},
+	"sindh": {
+		"kind": "region",
+		"borders": [
+			"Balochistan",
+			"Punjab"
+		],
+		"coastal": false,
+		"position": "south"
+	}
+}

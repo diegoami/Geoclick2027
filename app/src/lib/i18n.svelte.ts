@@ -122,6 +122,7 @@ export type TranslationKey =
 	| 'mapType.provincesSouth'
 	| 'mapType.prefectures'
 	| 'mapType.divisions'
+	| 'mapType.wilayas'
 	| 'mapType.districts'
 	| 'mapType.governorates'
 	| 'mapType.cities'
@@ -311,6 +312,7 @@ const en: Dictionary = {
 	'mapType.provincesSouth': 'Provinces — South',
 	'mapType.prefectures': 'Prefectures',
 	'mapType.divisions': 'Divisions',
+	'mapType.wilayas': 'Wilayas',
 	'mapType.districts': 'Districts',
 	'mapType.governorates': 'Governorates',
 	'mapType.cities': 'Cities',
@@ -515,6 +517,7 @@ const de: Dictionary = {
 	'mapType.provincesSouth': 'Provinzen — Süden',
 	'mapType.prefectures': 'Präfekturen',
 	'mapType.divisions': 'Divisionen',
+	'mapType.wilayas': 'Wilayas',
 	'mapType.districts': 'Bezirke',
 	'mapType.governorates': 'Gouvernements',
 	'mapType.cities': 'Städte',
@@ -723,6 +726,7 @@ const it: Dictionary = {
 	'mapType.provincesSouth': 'Province — Sud',
 	'mapType.prefectures': 'Prefetture',
 	'mapType.divisions': 'Divisioni',
+	'mapType.wilayas': 'Wilaya',
 	'mapType.districts': 'Distretti',
 	'mapType.governorates': 'Governatorati',
 	'mapType.cities': 'Città',

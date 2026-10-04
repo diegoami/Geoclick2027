@@ -251,6 +251,10 @@ const NAME_FIXUPS: Record<string, Record<string, string>> = {
 	// Barisal for the 2018 spellings Natural Earth's towns use. Malaysia's Penang and Malacca
 	// are the English names for Pulau Pinang and Melaka.
 	Bangladesh: { Rajshani: 'Rajshahi', Chittagong: 'Chattogram', Barisal: 'Barishal' },
+	// The maps of v0.19: Natural Earth drops the accents and spells Algiers in
+	// French. Pakistan's units come from geoBoundaries as they are.
+	Algeria: { Alger: 'Algiers', 'Oum el Bouaghi': 'Oum El Bouaghi' },
+	Ecuador: { Sucumbios: 'Sucumbíos', Manabi: 'Manabí', Bolivar: 'Bolívar', 'Los Rios': 'Los Ríos' },
 	Malaysia: { 'Pulau Pinang': 'Penang', Melaka: 'Malacca' },
 	Serbia: {
 		'Syrmia District': 'Syrmia',

@@ -1,0 +1,310 @@
+{
+	"gilgit": {
+		"kind": "city",
+		"population": 216760,
+		"populationRank": 31,
+		"region": "Northern Areas",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"saidu-sharif": {
+		"kind": "city",
+		"population": 1860310,
+		"populationRank": 4,
+		"region": "N.W.F.P.",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"mardan": {
+		"kind": "city",
+		"population": 300424,
+		"populationRank": 25,
+		"region": "N.W.F.P.",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"abbottabad": {
+		"kind": "city",
+		"population": 1183647,
+		"populationRank": 10,
+		"region": "N.W.F.P.",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"peshawar": {
+		"kind": "city",
+		"population": 1303000,
+		"populationRank": 9,
+		"population1950": 153000,
+		"region": "N.W.F.P.",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"islamabad": {
+		"kind": "city",
+		"population": 780000,
+		"populationRank": 11,
+		"population1950": 36000,
+		"region": "F.C.T.",
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Built in the 1960s as a new capital at the foot of the Margalla Hills.",
+				"Its Faisal Mosque, shaped like a desert tent, was for years the largest in the world.",
+				"Rawalpindi, its twin city, lies right next to it."
+			],
+			"it": [
+				"Costruita negli anni Sessanta come nuova capitale ai piedi delle colline Margalla.",
+				"La sua moschea Faisal, a forma di tenda del deserto, fu per anni la più grande del mondo.",
+				"Rawalpindi, la sua città gemella, è proprio accanto."
+			],
+			"de": [
+				"In den 1960er-Jahren als neue Hauptstadt am Fuß der Margalla-Hügel gebaut.",
+				"Ihre Faisal-Moschee, die wie ein Wüstenzelt geformt ist, war jahrelang die größte der Welt.",
+				"Rawalpindi, ihre Zwillingsstadt, liegt unmittelbar neben ihr."
+			]
+		}
+	},
+	"kohat": {
+		"kind": "city",
+		"population": 343027,
+		"populationRank": 22,
+		"region": "N.W.F.P.",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"rawalpindi": {
+		"kind": "city",
+		"population": 1858000,
+		"populationRank": 5,
+		"population1950": 233000,
+		"region": "Punjab",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"bannu": {
+		"kind": "city",
+		"population": 622419,
+		"populationRank": 13,
+		"region": "N.W.F.P.",
+		"coastal": false,
+		"position": "north"
+	},
+	"gujrat": {
+		"kind": "city",
+		"population": 301506,
+		"populationRank": 24,
+		"region": "Punjab",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"sialkot": {
+		"kind": "city",
+		"population": 477396,
+		"populationRank": 16,
+		"region": "Punjab",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"gujranwala": {
+		"kind": "city",
+		"population": 1513000,
+		"populationRank": 7,
+		"population1950": 118000,
+		"region": "Punjab",
+		"coastal": false,
+		"position": "east"
+	},
+	"sargodha": {
+		"kind": "city",
+		"population": 542603,
+		"populationRank": 15,
+		"region": "Punjab",
+		"coastal": false,
+		"position": "east"
+	},
+	"dera-ismail-khan": {
+		"kind": "city",
+		"population": 101616,
+		"populationRank": 35,
+		"region": "N.W.F.P.",
+		"coastal": false,
+		"position": "east"
+	},
+	"sheikhupura": {
+		"kind": "city",
+		"population": 361303,
+		"populationRank": 19,
+		"region": "Punjab",
+		"coastal": false,
+		"position": "east"
+	},
+	"chiniot": {
+		"kind": "city",
+		"population": 201781,
+		"populationRank": 32,
+		"region": "Punjab",
+		"coastal": false,
+		"position": "east"
+	},
+	"lahore": {
+		"kind": "city",
+		"population": 6577000,
+		"populationRank": 2,
+		"population1950": 836000,
+		"region": "Punjab",
+		"coastal": false,
+		"position": "east"
+	},
+	"faisalabad": {
+		"kind": "city",
+		"population": 2617000,
+		"populationRank": 3,
+		"population1950": 168000,
+		"region": "Punjab",
+		"coastal": false,
+		"position": "east"
+	},
+	"jhang": {
+		"kind": "city",
+		"population": 341210,
+		"populationRank": 23,
+		"region": "Punjab",
+		"coastal": false,
+		"position": "east"
+	},
+	"kasur": {
+		"kind": "city",
+		"population": 290643,
+		"populationRank": 26,
+		"region": "Punjab",
+		"coastal": false,
+		"position": "east"
+	},
+	"okara": {
+		"kind": "city",
+		"population": 223648,
+		"populationRank": 30,
+		"region": "Punjab",
+		"coastal": false,
+		"position": "east"
+	},
+	"sahiwal": {
+		"kind": "city",
+		"population": 235695,
+		"populationRank": 28,
+		"region": "Punjab",
+		"coastal": false,
+		"position": "east"
+	},
+	"quetta": {
+		"kind": "city",
+		"population": 768000,
+		"populationRank": 12,
+		"population1950": 83000,
+		"region": "Baluchistan",
+		"coastal": false,
+		"position": "centre"
+	},
+	"multan": {
+		"kind": "city",
+		"population": 1522000,
+		"populationRank": 6,
+		"population1950": 186000,
+		"region": "Punjab",
+		"coastal": false,
+		"position": "east"
+	},
+	"dera-ghazi-khan": {
+		"kind": "city",
+		"population": 236093,
+		"populationRank": 27,
+		"region": "Punjab",
+		"coastal": false,
+		"position": "centre"
+	},
+	"bahawalpur": {
+		"kind": "city",
+		"population": 552607,
+		"populationRank": 14,
+		"region": "Punjab",
+		"coastal": false,
+		"position": "east"
+	},
+	"rahim-yar-khan": {
+		"kind": "city",
+		"population": 353203,
+		"populationRank": 21,
+		"region": "Punjab",
+		"coastal": false,
+		"position": "south"
+	},
+	"sadiqabad": {
+		"kind": "city",
+		"population": 189876,
+		"populationRank": 33,
+		"region": "Punjab",
+		"coastal": false,
+		"position": "south"
+	},
+	"sukkur": {
+		"kind": "city",
+		"population": 417767,
+		"populationRank": 17,
+		"region": "Sind",
+		"coastal": false,
+		"position": "south"
+	},
+	"larkana": {
+		"kind": "city",
+		"population": 364033,
+		"populationRank": 18,
+		"region": "Sind",
+		"coastal": false,
+		"position": "south"
+	},
+	"nawabshah": {
+		"kind": "city",
+		"population": 229504,
+		"populationRank": 29,
+		"region": "Sind",
+		"coastal": false,
+		"position": "south"
+	},
+	"turbat": {
+		"kind": "city",
+		"population": 147791,
+		"populationRank": 34,
+		"region": "Baluchistan",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"mirpur-khas": {
+		"kind": "city",
+		"population": 356435,
+		"populationRank": 20,
+		"region": "Sind",
+		"coastal": false,
+		"position": "south"
+	},
+	"hyderabad": {
+		"kind": "city",
+		"population": 1459000,
+		"populationRank": 8,
+		"population1950": 232000,
+		"region": "Sind",
+		"coastal": false,
+		"position": "south"
+	},
+	"karachi": {
+		"kind": "city",
+		"population": 12130000,
+		"populationRank": 1,
+		"population1950": 1055000,
+		"region": "Sind",
+		"coastal": true,
+		"position": "south"
+	}
+}

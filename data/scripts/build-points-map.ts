@@ -98,6 +98,18 @@ const NAME_FIXUPS: Record<string, Record<string, string>> = {
 	},
 	Philippines: { Ormac: 'Ormoc', 'Pasay City': 'Pasay', Roxas: 'Roxas City' },
 	Denmark: { Århus: 'Aarhus', København: 'Copenhagen' },
+	// v0.19: Natural Earth's spellings of Algerian and Pakistani towns.
+	Algeria: {
+		Tiarat: 'Tiaret',
+		Tlimcen: 'Tlemcen',
+		'Tizi-Ouzou': 'Tizi Ouzou',
+		Bouïra: 'Bouira',
+		'Oum el Bouaghi': 'Oum El Bouaghi',
+		"M'sila": "M'Sila",
+		'Sidi bel Abbes': 'Sidi Bel Abbès',
+		Ghardaia: 'Ghardaïa'
+	},
+	Pakistan: { Sialkote: 'Sialkot', Saidu: 'Saidu Sharif', 'Sheikhu Pura': 'Sheikhupura' },
 	// Iran's and Saudi Arabia's towns spelled as the provinces and regions
 	// of the same maps are: English, not a transliteration's.
 	Iran: {

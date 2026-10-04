@@ -1,0 +1,268 @@
+{
+	"annaba": {
+		"kind": "city",
+		"population": 503524,
+		"populationRank": 5,
+		"coastal": true,
+		"position": "north-east"
+	},
+	"skikda": {
+		"kind": "city",
+		"population": 225181,
+		"populationRank": 11,
+		"coastal": true,
+		"position": "north-east"
+	},
+	"jijel": {
+		"kind": "city",
+		"population": 148000,
+		"populationRank": 21,
+		"coastal": true,
+		"position": "north-east"
+	},
+	"algiers": {
+		"kind": "city",
+		"population": 3354000,
+		"populationRank": 1,
+		"population1950": 516000,
+		"region": "Alger",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Called Alger la Blanche, \"Algiers the White\", for its white houses above the bay.",
+				"Its Casbah, the old town climbing the hill, is a UNESCO site.",
+				"The Monument of the Martyrs, three concrete palm leaves of 1982, marks twenty years of independence."
+			],
+			"it": [
+				"Chiamata Alger la Blanche, \"Algeri la bianca\", per le case bianche sopra la baia.",
+				"La sua Casbah, la città vecchia che sale sulla collina, è un sito UNESCO.",
+				"Il Monumento ai martiri, tre foglie di palma in cemento del 1982, celebra i vent’anni dell’indipendenza."
+			],
+			"de": [
+				"Alger la Blanche genannt, „Algier die Weiße“, nach seinen weißen Häusern über der Bucht.",
+				"Seine Kasbah, die am Hang hinaufsteigende Altstadt, ist ein UNESCO-Welterbe.",
+				"Das Märtyrerdenkmal, drei Palmwedel aus Beton von 1982, markiert zwanzig Jahre Unabhängigkeit."
+			]
+		}
+	},
+	"bejaia": {
+		"kind": "city",
+		"population": 384937,
+		"populationRank": 7,
+		"coastal": true,
+		"position": "north-east"
+	},
+	"tizi-ouzou": {
+		"kind": "city",
+		"population": 144000,
+		"populationRank": 23,
+		"coastal": false,
+		"position": "north"
+	},
+	"guelma": {
+		"kind": "city",
+		"population": 123590,
+		"populationRank": 30,
+		"coastal": false,
+		"position": "north-east"
+	},
+	"blida": {
+		"kind": "city",
+		"population": 511348,
+		"populationRank": 4,
+		"coastal": false,
+		"position": "north"
+	},
+	"bouira": {
+		"kind": "city",
+		"population": 110144,
+		"populationRank": 32,
+		"coastal": false,
+		"position": "north"
+	},
+	"constantine": {
+		"kind": "city",
+		"population": 605179,
+		"populationRank": 3,
+		"coastal": false,
+		"position": "north-east"
+	},
+	"souk-ahras": {
+		"kind": "city",
+		"population": 134947,
+		"populationRank": 27,
+		"coastal": false,
+		"position": "north-east"
+	},
+	"medea": {
+		"kind": "city",
+		"population": 147707,
+		"populationRank": 22,
+		"coastal": false,
+		"position": "north"
+	},
+	"setif": {
+		"kind": "city",
+		"population": 274744,
+		"populationRank": 9,
+		"region": "SZtif",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"chlef": {
+		"kind": "city",
+		"population": 449167,
+		"populationRank": 6,
+		"coastal": false,
+		"position": "north"
+	},
+	"bordj-bou-arreridj": {
+		"kind": "city",
+		"population": 140000,
+		"populationRank": 26,
+		"region": "Bordj Bou Arreridj",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"mostaganem": {
+		"kind": "city",
+		"population": 188354,
+		"populationRank": 14,
+		"coastal": true,
+		"position": "north-west"
+	},
+	"oum-el-bouaghi": {
+		"kind": "city",
+		"population": 100821,
+		"populationRank": 34,
+		"region": "Oum el Bouaghi",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"oran": {
+		"kind": "city",
+		"population": 798000,
+		"populationRank": 2,
+		"population1950": 269000,
+		"coastal": true,
+		"position": "north-west"
+	},
+	"m-sila": {
+		"kind": "city",
+		"population": 150000,
+		"populationRank": 20,
+		"coastal": false,
+		"position": "north"
+	},
+	"batna": {
+		"kind": "city",
+		"population": 280798,
+		"populationRank": 8,
+		"coastal": false,
+		"position": "north-east"
+	},
+	"tebessa": {
+		"kind": "city",
+		"population": 171742,
+		"populationRank": 18,
+		"region": "TZbessa",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"mascara": {
+		"kind": "city",
+		"population": 108230,
+		"populationRank": 33,
+		"coastal": false,
+		"position": "north-west"
+	},
+	"tiaret": {
+		"kind": "city",
+		"population": 184195,
+		"populationRank": 15,
+		"coastal": false,
+		"position": "north"
+	},
+	"sidi-bel-abbes": {
+		"kind": "city",
+		"population": 208604,
+		"populationRank": 12,
+		"coastal": false,
+		"position": "north-west"
+	},
+	"tlemcen": {
+		"kind": "city",
+		"population": 229777,
+		"populationRank": 10,
+		"coastal": false,
+		"position": "west"
+	},
+	"biskra": {
+		"kind": "city",
+		"population": 202103,
+		"populationRank": 13,
+		"coastal": false,
+		"position": "east"
+	},
+	"saida": {
+		"kind": "city",
+		"population": 142213,
+		"populationRank": 25,
+		"coastal": false,
+		"position": "west"
+	},
+	"djelfa": {
+		"kind": "city",
+		"population": 170901,
+		"populationRank": 19,
+		"coastal": false,
+		"position": "centre"
+	},
+	"laghouat": {
+		"kind": "city",
+		"population": 113872,
+		"populationRank": 31,
+		"coastal": false,
+		"position": "centre"
+	},
+	"el-oued": {
+		"kind": "city",
+		"population": 177497,
+		"populationRank": 16,
+		"region": "Biskra",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"touggourt": {
+		"kind": "city",
+		"population": 133954,
+		"populationRank": 28,
+		"region": "Ouargla",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"ghardaia": {
+		"kind": "city",
+		"population": 125480,
+		"populationRank": 29,
+		"region": "Ghardaaa",
+		"coastal": false,
+		"position": "south"
+	},
+	"ouargla": {
+		"kind": "city",
+		"population": 176271,
+		"populationRank": 17,
+		"coastal": false,
+		"position": "south-east"
+	},
+	"bechar": {
+		"kind": "city",
+		"population": 143382,
+		"populationRank": 24,
+		"coastal": false,
+		"position": "south-west"
+	}
+}

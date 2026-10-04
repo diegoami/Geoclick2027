@@ -1,0 +1,420 @@
+{
+	"carchi": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Esmeraldas",
+			"Imbabura",
+			"Sucumbíos"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tulcán",
+			"nameDe": "Tulcán",
+			"nameIt": "Tulcán",
+			"population": 83000
+		},
+		"position": "north"
+	},
+	"esmeraldas": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Carchi",
+			"Imbabura",
+			"Manabí",
+			"Pichincha",
+			"Santo Domingo de los Tsáchilas"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Esmeraldas",
+			"nameDe": "Esmeraldas",
+			"nameIt": "Esmeraldas",
+			"population": 173101
+		},
+		"position": "north-west"
+	},
+	"imbabura": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Carchi",
+			"Esmeraldas",
+			"Pichincha",
+			"Sucumbíos"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ibarra",
+			"nameDe": "Ibarra",
+			"nameIt": "Ibarra",
+			"population": 146741
+		},
+		"position": "north"
+	},
+	"sucumbios": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Carchi",
+			"Imbabura",
+			"Orellana",
+			"Pichincha",
+			"Tungurahua"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"pichincha": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Cotopaxi",
+			"Esmeraldas",
+			"Imbabura",
+			"Santo Domingo de los Tsáchilas",
+			"Sucumbíos",
+			"Tungurahua"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Quito",
+			"nameDe": "Quito",
+			"nameIt": "Quito",
+			"population": 1701000
+		},
+		"position": "north"
+	},
+	"santo-domingo-de-los-tsachilas": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Cotopaxi",
+			"Esmeraldas",
+			"Los Ríos",
+			"Manabí",
+			"Pichincha"
+		],
+		"coastal": false,
+		"position": "north-west"
+	},
+	"tungurahua": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Cotopaxi",
+			"Napo",
+			"Orellana",
+			"Pastaza",
+			"Pichincha",
+			"Sucumbíos"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tena",
+			"nameDe": "Tena",
+			"nameIt": "Tena",
+			"population": 31126
+		},
+		"position": "north"
+	},
+	"manabi": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Esmeraldas",
+			"Guayas",
+			"Los Ríos",
+			"Santa Elena",
+			"Santo Domingo de los Tsáchilas"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Portoviejo",
+			"nameDe": "Portoviejo",
+			"nameIt": "Portoviejo",
+			"population": 213601
+		},
+		"position": "west"
+	},
+	"cotopaxi": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bolívar",
+			"Los Ríos",
+			"Napo",
+			"Pichincha",
+			"Santo Domingo de los Tsáchilas",
+			"Tungurahua"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Latacunga",
+			"nameDe": "Latacunga",
+			"nameIt": "Latacunga",
+			"population": 94972
+		},
+		"position": "centre"
+	},
+	"orellana": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Pastaza",
+			"Sucumbíos",
+			"Tungurahua"
+		],
+		"coastal": false,
+		"position": "east"
+	},
+	"napo": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bolívar",
+			"Chimborazo",
+			"Cotopaxi",
+			"Morona Santiago",
+			"Pastaza",
+			"Tungurahua"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ambato",
+			"nameDe": "Ambato",
+			"nameIt": "Ambato",
+			"population": 281425
+		},
+		"position": "centre"
+	},
+	"los-rios": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bolívar",
+			"Cotopaxi",
+			"Guayas",
+			"Manabí",
+			"Santo Domingo de los Tsáchilas"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Babahoyo",
+			"nameDe": "Babahoyo",
+			"nameIt": "Babahoyo",
+			"population": 76279
+		},
+		"position": "west"
+	},
+	"bolivar": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Cañar",
+			"Chimborazo",
+			"Cotopaxi",
+			"Guayas",
+			"Los Ríos",
+			"Napo"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Guaranda",
+			"nameDe": "Guaranda",
+			"nameIt": "Guaranda",
+			"population": 27866
+		},
+		"position": "west"
+	},
+	"pastaza": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Morona Santiago",
+			"Napo",
+			"Orellana",
+			"Tungurahua"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Puyo",
+			"nameDe": "Puyo",
+			"nameIt": "Puyo",
+			"population": 24881
+		},
+		"position": "east"
+	},
+	"chimborazo": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bolívar",
+			"Cañar",
+			"Guayas",
+			"Morona Santiago",
+			"Napo"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Riobamba",
+			"nameDe": "Riobamba",
+			"nameIt": "Riobamba",
+			"population": 172464
+		},
+		"peak": {
+			"name": "Chimborazo",
+			"elevation": 6267
+		},
+		"position": "centre"
+	},
+	"guayas": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Azuay",
+			"Bolívar",
+			"Cañar",
+			"Chimborazo",
+			"El Oro",
+			"Los Ríos",
+			"Manabí",
+			"Santa Elena"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Guayaquil",
+			"nameDe": "Guayaquil",
+			"nameIt": "Guayaquil",
+			"population": 2514000
+		},
+		"position": "west"
+	},
+	"santa-elena": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Guayas",
+			"Manabí"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Salinas",
+			"nameDe": "Salinas",
+			"nameIt": "Salinas",
+			"population": 43862
+		},
+		"position": "west"
+	},
+	"morona-santiago": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Azuay",
+			"Cañar",
+			"Chimborazo",
+			"Napo",
+			"Pastaza",
+			"Zamora Chinchipe"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Macas",
+			"nameDe": "Macas",
+			"nameIt": "Macas",
+			"population": 23687
+		},
+		"position": "centre"
+	},
+	"canar": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Azuay",
+			"Bolívar",
+			"Chimborazo",
+			"Guayas",
+			"Morona Santiago"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Azogues",
+			"nameDe": "Azogues",
+			"nameIt": "Azogues",
+			"population": 69087
+		},
+		"position": "centre"
+	},
+	"azuay": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Cañar",
+			"El Oro",
+			"Guayas",
+			"Loja",
+			"Morona Santiago",
+			"Zamora Chinchipe"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Cuenca",
+			"nameDe": "Cuenca",
+			"nameIt": "Cuenca",
+			"population": 286878
+		},
+		"position": "south-west"
+	},
+	"el-oro": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Azuay",
+			"Guayas",
+			"Loja"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Machala",
+			"nameDe": "Machala",
+			"nameIt": "Machala",
+			"population": 213034
+		},
+		"position": "south-west"
+	},
+	"loja": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Azuay",
+			"El Oro",
+			"Zamora Chinchipe"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Loja",
+			"nameDe": "Loja",
+			"nameIt": "Loja",
+			"population": 126368
+		},
+		"position": "south-west"
+	},
+	"zamora-chinchipe": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Azuay",
+			"Loja",
+			"Morona Santiago"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Zamora",
+			"nameDe": "Zamora",
+			"nameIt": "Zamora",
+			"population": 15276
+		},
+		"position": "south"
+	}
+}

@@ -4,7 +4,7 @@
 // other value here (confirmed nothing in app/ branches on TargetType).
 // 'country' for the maps of a continent (#39), the same kind of metadata.
 export type TargetType =
-	'region' | 'division' | 'state' | 'province' | 'city' | 'county' | 'country';
+	'region' | 'division' | 'wilaya' | 'state' | 'province' | 'city' | 'county' | 'country';
 
 export interface Target {
 	id: string;

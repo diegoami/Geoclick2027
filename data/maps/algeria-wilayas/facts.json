@@ -1,0 +1,911 @@
+{
+	"annaba": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية عنابة",
+		"borders": [
+			"El Tarf",
+			"Guelma",
+			"Skikda"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Annaba",
+			"nameDe": "Annaba",
+			"nameIt": "Annaba",
+			"population": 503524
+		},
+		"position": "north-east"
+	},
+	"skikda": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "سكيكدة",
+		"borders": [
+			"Annaba",
+			"Constantine",
+			"Guelma",
+			"Jijel",
+			"Mila"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Skikda",
+			"nameDe": "Skikda",
+			"nameIt": "Skikda",
+			"population": 225181
+		},
+		"position": "north-east"
+	},
+	"boumerdes": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية بومرداس",
+		"borders": [
+			"Algiers",
+			"Blida",
+			"Bouira",
+			"Tizi Ouzou"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"algiers": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية الجزائر",
+		"borders": [
+			"Blida",
+			"Boumerdès",
+			"Tipaza"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Algiers",
+			"nameDe": "Algier",
+			"nameIt": "Algeri",
+			"population": 3354000
+		},
+		"position": "north"
+	},
+	"jijel": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية جيجل",
+		"borders": [
+			"Béjaïa",
+			"Mila",
+			"Sétif",
+			"Skikda"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Jijel",
+			"nameDe": "Jijel",
+			"nameIt": "Jijel",
+			"population": 148000
+		},
+		"position": "north-east"
+	},
+	"el-tarf": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية الطارف",
+		"borders": [
+			"Annaba",
+			"Guelma",
+			"Souk Ahras"
+		],
+		"coastal": true,
+		"position": "north-east"
+	},
+	"tizi-ouzou": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية غليزان",
+		"borders": [
+			"Béjaïa",
+			"Bouira",
+			"Boumerdès"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tizi-Ouzou",
+			"nameDe": "Tizi Ouzou",
+			"nameIt": "Tizi Ouzou",
+			"population": 144000
+		},
+		"position": "north"
+	},
+	"tipaza": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية تيبازة",
+		"borders": [
+			"Aïn Defla",
+			"Algiers",
+			"Blida",
+			"Chlef"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"bejaia": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "بجاية",
+		"borders": [
+			"Bordj Bou Arréridj",
+			"Bouira",
+			"Jijel",
+			"Sétif",
+			"Tizi Ouzou"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Béjaïa",
+			"nameDe": "Bejaia",
+			"nameIt": "Béjaïa",
+			"population": 384937
+		},
+		"position": "north"
+	},
+	"blida": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "البليدة",
+		"borders": [
+			"Aïn Defla",
+			"Algiers",
+			"Bouira",
+			"Boumerdès",
+			"Médéa",
+			"Tipaza"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Blida",
+			"nameDe": "Blida",
+			"nameIt": "Blida",
+			"population": 511348
+		},
+		"position": "north"
+	},
+	"guelma": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية قالمة",
+		"borders": [
+			"Annaba",
+			"Constantine",
+			"El Tarf",
+			"Oum El Bouaghi",
+			"Skikda",
+			"Souk Ahras"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Guelma",
+			"nameDe": "Guelma",
+			"nameIt": "Guelma",
+			"population": 123590
+		},
+		"position": "north-east"
+	},
+	"constantine": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "قسنطينة",
+		"borders": [
+			"Guelma",
+			"Mila",
+			"Oum El Bouaghi",
+			"Skikda"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Constantine",
+			"nameDe": "Constantine",
+			"nameIt": "Costantina",
+			"population": 605179
+		},
+		"position": "north-east"
+	},
+	"bouira": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية البويرة",
+		"borders": [
+			"Béjaïa",
+			"Blida",
+			"Bordj Bou Arréridj",
+			"Boumerdès",
+			"M'Sila",
+			"Médéa",
+			"Tizi Ouzou"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bouïra",
+			"nameDe": "Bouira",
+			"nameIt": "Bouira",
+			"population": 110144
+		},
+		"peak": {
+			"name": "Lalla Khedidja",
+			"elevation": 2308
+		},
+		"position": "north"
+	},
+	"mila": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية ميلة",
+		"borders": [
+			"Batna",
+			"Constantine",
+			"Jijel",
+			"Oum El Bouaghi",
+			"Sétif",
+			"Skikda"
+		],
+		"coastal": false,
+		"position": "north-east"
+	},
+	"chlef": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية الشلف",
+		"borders": [
+			"Aïn Defla",
+			"Mostaganem",
+			"Relizane",
+			"Tipaza",
+			"Tissemsilt"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Chlef",
+			"nameDe": "Ech Cheliff",
+			"nameIt": "Chlef",
+			"population": 449167
+		},
+		"position": "north"
+	},
+	"souk-ahras": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية سوق أهراس",
+		"borders": [
+			"El Tarf",
+			"Guelma",
+			"Oum El Bouaghi",
+			"Tébessa"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Souk Ahras",
+			"nameDe": "Souq Ahras",
+			"nameIt": "Souk Ahras",
+			"population": 134947
+		},
+		"position": "north-east"
+	},
+	"ain-defla": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية عين الدفلى",
+		"borders": [
+			"Blida",
+			"Chlef",
+			"Médéa",
+			"Tipaza",
+			"Tissemsilt"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"setif": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية سطيف",
+		"borders": [
+			"Batna",
+			"Béjaïa",
+			"Bordj Bou Arréridj",
+			"Jijel",
+			"M'Sila",
+			"Mila"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Sétif",
+			"nameDe": "Sétif",
+			"nameIt": "Sétif",
+			"population": 274744
+		},
+		"position": "north-east"
+	},
+	"bordj-bou-arreridj": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية برج بوعريريج",
+		"borders": [
+			"Béjaïa",
+			"Bouira",
+			"M'Sila",
+			"Sétif"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bordj Bou Arréridj",
+			"nameDe": "Bordj Bou Arreridj",
+			"nameIt": "Bordj Bou Arreridj",
+			"population": 140000
+		},
+		"position": "north"
+	},
+	"mostaganem": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية مستغانم",
+		"borders": [
+			"Chlef",
+			"Mascara",
+			"Oran",
+			"Relizane"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Mostaganem",
+			"nameDe": "Mostaganem",
+			"nameIt": "Mostaganem",
+			"population": 188354
+		},
+		"position": "north"
+	},
+	"medea": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية المدية",
+		"borders": [
+			"Aïn Defla",
+			"Blida",
+			"Bouira",
+			"Djelfa",
+			"M'Sila",
+			"Tiaret",
+			"Tissemsilt"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Médéa",
+			"nameDe": "Medea",
+			"nameIt": "Médéa",
+			"population": 147707
+		},
+		"position": "north"
+	},
+	"relizane": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية غليزان",
+		"borders": [
+			"Chlef",
+			"Mascara",
+			"Mostaganem",
+			"Tiaret",
+			"Tissemsilt"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"oum-el-bouaghi": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية أم البواقي",
+		"borders": [
+			"Batna",
+			"Constantine",
+			"Guelma",
+			"Khenchela",
+			"Mila",
+			"Souk Ahras",
+			"Tébessa"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Oum el Bouaghi",
+			"nameDe": "Oum el Bouaghi",
+			"nameIt": "Oum el-Bouaghi",
+			"population": 100821
+		},
+		"position": "north-east"
+	},
+	"tissemsilt": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية تسمسيلت",
+		"borders": [
+			"Aïn Defla",
+			"Chlef",
+			"Médéa",
+			"Relizane",
+			"Tiaret"
+		],
+		"coastal": false,
+		"position": "north"
+	},
+	"oran": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية وهران",
+		"borders": [
+			"Aïn Témouchent",
+			"Mascara",
+			"Mostaganem",
+			"Sidi Bel Abbès"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Oran",
+			"nameDe": "Oran",
+			"nameIt": "Orano",
+			"population": 798000
+		},
+		"position": "north"
+	},
+	"mascara": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية معسكر",
+		"borders": [
+			"Mostaganem",
+			"Oran",
+			"Relizane",
+			"Saïda",
+			"Sidi Bel Abbès",
+			"Tiaret"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Mascara",
+			"nameDe": "Muaskar",
+			"nameIt": "Mascara",
+			"population": 108230
+		},
+		"position": "north"
+	},
+	"ain-temouchent": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية عين تموشنت",
+		"borders": [
+			"Oran",
+			"Sidi Bel Abbès",
+			"Tlemcen"
+		],
+		"coastal": true,
+		"position": "north"
+	},
+	"batna": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية باتنة",
+		"borders": [
+			"Biskra",
+			"Khenchela",
+			"M'Sila",
+			"Mila",
+			"Oum El Bouaghi",
+			"Sétif"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Batna",
+			"nameDe": "Batna",
+			"nameIt": "Batna",
+			"population": 280798
+		},
+		"position": "north-east"
+	},
+	"m-sila": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية المسيلة",
+		"borders": [
+			"Batna",
+			"Biskra",
+			"Bordj Bou Arréridj",
+			"Bouira",
+			"Djelfa",
+			"Médéa",
+			"Sétif"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "M'sila",
+			"nameDe": "M'Sila",
+			"nameIt": "M'Sila",
+			"population": 150000
+		},
+		"position": "north"
+	},
+	"tebessa": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية تبسة",
+		"borders": [
+			"El Oued",
+			"Khenchela",
+			"Oum El Bouaghi",
+			"Souk Ahras"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tébessa",
+			"nameDe": "Tebessa",
+			"nameIt": "Tébessa",
+			"population": 171742
+		},
+		"position": "north-east"
+	},
+	"khenchela": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية خنشلة",
+		"borders": [
+			"Batna",
+			"Biskra",
+			"El Oued",
+			"Oum El Bouaghi",
+			"Tébessa"
+		],
+		"coastal": false,
+		"peak": {
+			"name": "Djebel Chelia",
+			"elevation": 2326
+		},
+		"position": "north-east"
+	},
+	"tiaret": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية تيارت",
+		"borders": [
+			"Djelfa",
+			"El Bayadh",
+			"Laghouat",
+			"Mascara",
+			"Médéa",
+			"Relizane",
+			"Saïda",
+			"Tissemsilt"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tiarat",
+			"nameDe": "Tiaret",
+			"nameIt": "Tiaret",
+			"population": 184195
+		},
+		"position": "north"
+	},
+	"sidi-bel-abbes": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية سيدي بلعباس",
+		"borders": [
+			"Aïn Témouchent",
+			"Mascara",
+			"Naâma",
+			"Oran",
+			"Saïda",
+			"Tlemcen"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Sidi bel Abbes",
+			"nameDe": "Sidi bel Abbès",
+			"nameIt": "Sidi Bel Abbes",
+			"population": 208604
+		},
+		"position": "north"
+	},
+	"tlemcen": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "تلمسان",
+		"borders": [
+			"Aïn Témouchent",
+			"Naâma",
+			"Sidi Bel Abbès"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tlimcen",
+			"nameDe": "Tlemcen",
+			"nameIt": "Tlemcen",
+			"population": 229777
+		},
+		"position": "north"
+	},
+	"saida": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية سعيدة",
+		"borders": [
+			"El Bayadh",
+			"Mascara",
+			"Naâma",
+			"Sidi Bel Abbès",
+			"Tiaret"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Saïda",
+			"nameDe": "Saida",
+			"nameIt": "Saida",
+			"population": 142213
+		},
+		"position": "north"
+	},
+	"biskra": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية بسكرة",
+		"borders": [
+			"Batna",
+			"Djelfa",
+			"El Oued",
+			"Khenchela",
+			"M'Sila"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Biskra",
+			"nameDe": "Biskra",
+			"nameIt": "Biskra",
+			"population": 202103
+		},
+		"position": "north-east"
+	},
+	"djelfa": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية الجلفة",
+		"borders": [
+			"Biskra",
+			"El Oued",
+			"Ghardaïa",
+			"Laghouat",
+			"M'Sila",
+			"Médéa",
+			"Ouargla",
+			"Tiaret"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Djelfa",
+			"nameDe": "El Djelfa",
+			"nameIt": "Djelfa",
+			"population": 170901
+		},
+		"position": "north"
+	},
+	"laghouat": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية الأغواط",
+		"borders": [
+			"Djelfa",
+			"El Bayadh",
+			"Ghardaïa",
+			"Tiaret"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Laghouat",
+			"nameDe": "Laghouat",
+			"nameIt": "Laghouat",
+			"population": 113872
+		},
+		"position": "north"
+	},
+	"el-oued": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Biskra",
+			"Djelfa",
+			"Khenchela",
+			"Ouargla",
+			"Tébessa"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "El Oued",
+			"nameDe": "El Oued",
+			"nameIt": "El Oued",
+			"population": 177497
+		},
+		"position": "north-east"
+	},
+	"naama": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية النعامة",
+		"borders": [
+			"Béchar",
+			"El Bayadh",
+			"Saïda",
+			"Sidi Bel Abbès",
+			"Tlemcen"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Sefra",
+			"nameDe": "Aïn Séfra",
+			"nameIt": "Aïn Séfra",
+			"population": 63420
+		},
+		"position": "north"
+	},
+	"el-bayadh": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية البيض",
+		"borders": [
+			"Adrar",
+			"Béchar",
+			"Ghardaïa",
+			"Laghouat",
+			"Naâma",
+			"Saïda",
+			"Tiaret"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "El Bayadh",
+			"nameDe": "El Bayadh",
+			"nameIt": "El Bayadh",
+			"population": 67413
+		},
+		"position": "north"
+	},
+	"ghardaia": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية غرداية",
+		"borders": [
+			"Adrar",
+			"Djelfa",
+			"El Bayadh",
+			"Laghouat",
+			"Ouargla",
+			"Tamanghasset"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ghardaia",
+			"nameDe": "Ghardaia",
+			"nameIt": "Ghardaïa",
+			"population": 125480
+		},
+		"position": "centre"
+	},
+	"ouargla": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ورقلة",
+		"borders": [
+			"Djelfa",
+			"El Oued",
+			"Ghardaïa",
+			"Illizi",
+			"Tamanghasset"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ouargla",
+			"nameDe": "Ouargla",
+			"nameIt": "Ouargla",
+			"population": 176271
+		},
+		"position": "east"
+	},
+	"bechar": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية بشار",
+		"borders": [
+			"Adrar",
+			"El Bayadh",
+			"Naâma",
+			"Tindouf"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Béchar",
+			"nameDe": "Bechar",
+			"nameIt": "Béchar",
+			"population": 143382
+		},
+		"position": "west"
+	},
+	"tindouf": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية تندوف",
+		"borders": [
+			"Adrar",
+			"Béchar"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tindouf",
+			"nameDe": "Tindouf",
+			"nameIt": "Tindouf",
+			"population": 18270
+		},
+		"position": "west"
+	},
+	"illizi": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية اليزي",
+		"borders": [
+			"Ouargla",
+			"Tamanghasset"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Illizi",
+			"nameDe": "Illizi",
+			"nameIt": "Illizi",
+			"population": 7957
+		},
+		"position": "east"
+	},
+	"adrar": {
+		"kind": "region",
+		"borders": [
+			"Béchar",
+			"El Bayadh",
+			"Ghardaïa",
+			"Tamanghasset",
+			"Tindouf"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Adrar",
+			"nameDe": "Adrar",
+			"nameIt": "Adrar",
+			"population": 56910
+		},
+		"position": "centre"
+	},
+	"tamanghasset": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية تمنراست",
+		"borders": [
+			"Adrar",
+			"Ghardaïa",
+			"Illizi",
+			"Ouargla"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Arak",
+			"nameDe": "Arak",
+			"nameIt": "Arak",
+			"population": 423251
+		},
+		"peak": {
+			"name": "Tahat",
+			"elevation": 2908
+		},
+		"position": "south-east"
+	}
+}

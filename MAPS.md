@@ -1211,6 +1211,38 @@ npx tsx data/scripts/build-points-map.ts --country=Malaysia --min-population=100
 npx tsx data/scripts/build-points-map.ts --country=Bangladesh --min-population=100000 --out=data/maps/bangladesh-towns-100k --name="Bangladesh — Towns"
 ```
 
+### Algeria, Ecuador and Pakistan (built 2026-10-04, v0.19, #209)
+
+Chosen by the owner. **Algeria — Wilayas** (48, Natural Earth, public domain)
+and Towns (34 at 100 000; "Arak" excluded, a stray entry); **Ecuador —
+Provinces** (23, Natural Earth, without the Galápagos, 1 000 km out in the
+Pacific: the overseas-territories rule) and Towns (17 at 50 000); **Pakistan —
+Provinces** (7: four provinces, Islamabad Capital Territory, Azad Kashmir and
+Gilgit-Baltistan; geoBoundaries ADM1 of 2019, public domain, after the tribal
+areas joined Khyber Pakhtunkhwa in 2018, which Natural Earth still shows as
+FATA) and Towns (35 at 100 000).
+
+Known limits, said plainly: Algeria has had 69 wilayas since 2021 (58 from
+2019), and neither Natural Earth nor geoBoundaries has the new ones. The
+2026-10-04 spike tried OpenStreetMap through Overpass, which does carry most of
+them (DZ-49 to DZ-65 and DZ-69), but three of the eleven wilayas of 2021 have no
+ISO tag there, the public instances time out on country-sized requests and the
+result is a moving target, so the 48 stay. The same finding holds for the newer
+borders of Kazakhstan (20 regions since 2022) and Norway (15 counties since
+2024) and for Ethiopia (12 regions and 2 chartered cities since 2023): none is
+rebuilt in v0.19. Pakistan's map draws Azad Kashmir and Gilgit-Baltistan as
+the areas Pakistan administers; the lines in Kashmir are disputed and the
+sources draw the de facto ones.
+
+```
+npx tsx data/scripts/build-map.ts --country=Algeria --type=wilaya --out=data/maps/algeria-wilayas --name="Algeria — Wilayas"
+npx tsx data/scripts/build-map.ts --country=Ecuador --type=province --exclude="Galápagos" --out=data/maps/ecuador-provinces --name="Ecuador — Provinces"
+npx tsx data/scripts/build-map.ts --country=Pakistan --type=province --source=data/source/geoboundaries/PAK-ADM1.geojson "--attribution=geoBoundaries, public domain" --out=data/maps/pakistan-provinces --name="Pakistan — Provinces"
+npx tsx data/scripts/build-points-map.ts --country=Algeria --min-population=100000 --exclude="Arak" --out=data/maps/algeria-towns-100k --name="Algeria — Towns"
+npx tsx data/scripts/build-points-map.ts --country=Ecuador --min-population=50000 --out=data/maps/ecuador-towns-50k --name="Ecuador — Towns"
+npx tsx data/scripts/build-points-map.ts --country=Pakistan --min-population=100000 --out=data/maps/pakistan-towns-100k --name="Pakistan — Towns"
+```
+
 ## The Terrain layer: `terrain.pmtiles` (FT-33, 2026-09-19)
 
 Every map has a **second** tileset beside its `tiles.pmtiles`, holding the

@@ -1,0 +1,676 @@
+{
+	"id": "pakistan-towns-100k",
+	"name": "Pakistan — Towns",
+	"country": "Pakistan",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "gilgit",
+			"name": "Gilgit",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				74.300002,
+				35.9170958
+			],
+			"bbox": [
+				74.300002,
+				35.9170958,
+				74.300002,
+				35.9170958
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "saidu-sharif",
+			"name": "Saidu Sharif",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				72.3499918,
+				34.7500352
+			],
+			"bbox": [
+				72.3499918,
+				34.7500352,
+				72.3499918,
+				34.7500352
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "mardan",
+			"name": "Mardan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				72.0399849,
+				34.2000429
+			],
+			"bbox": [
+				72.0399849,
+				34.2000429,
+				72.0399849,
+				34.2000429
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "abbottabad",
+			"name": "Abbottabad",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				73.1995007,
+				34.1495034
+			],
+			"bbox": [
+				73.1995007,
+				34.1495034,
+				73.1995007,
+				34.1495034
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "peshawar",
+			"name": "Peshawar",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				71.5330569,
+				34.006962
+			],
+			"bbox": [
+				71.5330569,
+				34.006962,
+				71.5330569,
+				34.006962
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "islamabad",
+			"name": "Islamabad",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				73.08063017764825,
+				33.689368483707085
+			],
+			"bbox": [
+				73.08063017764825,
+				33.689368483707085,
+				73.08063017764825,
+				33.689368483707085
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "kohat",
+			"name": "Kohat",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				71.4326835,
+				33.6026892
+			],
+			"bbox": [
+				71.4326835,
+				33.6026892,
+				71.4326835,
+				33.6026892
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "rawalpindi",
+			"name": "Rawalpindi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				73.06750207299349,
+				33.59100229452351
+			],
+			"bbox": [
+				73.06750207299349,
+				33.59100229452351,
+				73.06750207299349,
+				33.59100229452351
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "bannu",
+			"name": "Bannu",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				70.5985742,
+				32.9889799
+			],
+			"bbox": [
+				70.5985742,
+				32.9889799,
+				70.5985742,
+				32.9889799
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "gujrat",
+			"name": "Gujrat",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				74.0800154,
+				32.5799868
+			],
+			"bbox": [
+				74.0800154,
+				32.5799868,
+				74.0800154,
+				32.5799868
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "sialkot",
+			"name": "Sialkot",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				74.5600378,
+				32.5200163
+			],
+			"bbox": [
+				74.5600378,
+				32.5200163,
+				74.5600378,
+				32.5200163
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "gujranwala",
+			"name": "Gujranwala",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				74.1830761,
+				32.1623717
+			],
+			"bbox": [
+				74.1830761,
+				32.1623717,
+				74.1830761,
+				32.1623717
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "sargodha",
+			"name": "Sargodha",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				72.6749849,
+				32.0853658
+			],
+			"bbox": [
+				72.6749849,
+				32.0853658,
+				72.6749849,
+				32.0853658
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "dera-ismail-khan",
+			"name": "Dera Ismail Khan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				70.8985559,
+				31.828999
+			],
+			"bbox": [
+				70.8985559,
+				31.828999,
+				70.8985559,
+				31.828999
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "sheikhupura",
+			"name": "Sheikhupura",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				73.9899951,
+				31.7199876
+			],
+			"bbox": [
+				73.9899951,
+				31.7199876,
+				73.9899951,
+				31.7199876
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "chiniot",
+			"name": "Chiniot",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				72.9799792,
+				31.7199876
+			],
+			"bbox": [
+				72.9799792,
+				31.7199876,
+				72.9799792,
+				31.7199876
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "lahore",
+			"name": "Lahore",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				74.3480789,
+				31.5619174
+			],
+			"bbox": [
+				74.3480789,
+				31.5619174,
+				74.3480789,
+				31.5619174
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "faisalabad",
+			"name": "Faisalabad",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				73.1080513,
+				31.4119266
+			],
+			"bbox": [
+				73.1080513,
+				31.4119266,
+				73.1080513,
+				31.4119266
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "jhang",
+			"name": "Jhang",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				72.3249804,
+				31.2803762
+			],
+			"bbox": [
+				72.3249804,
+				31.2803762,
+				72.3249804,
+				31.2803762
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "kasur",
+			"name": "Kasur",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				74.4550313,
+				31.1253727
+			],
+			"bbox": [
+				74.4550313,
+				31.1253727,
+				74.4550313,
+				31.1253727
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "okara",
+			"name": "Okara",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				73.450028,
+				30.8104049
+			],
+			"bbox": [
+				73.450028,
+				30.8104049,
+				73.450028,
+				30.8104049
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "sahiwal",
+			"name": "Sahiwal",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				73.1118058,
+				30.6717312
+			],
+			"bbox": [
+				73.1118058,
+				30.6717312,
+				73.1118058,
+				30.6717312
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "quetta",
+			"name": "Quetta",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				67.023048,
+				30.2219475
+			],
+			"bbox": [
+				67.023048,
+				30.2219475,
+				67.023048,
+				30.2219475
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "multan",
+			"name": "Multan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				71.4530618,
+				30.2019229
+			],
+			"bbox": [
+				71.4530618,
+				30.2019229,
+				71.4530618,
+				30.2019229
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "dera-ghazi-khan",
+			"name": "Dera Ghazi Khan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				70.6350577,
+				30.060399
+			],
+			"bbox": [
+				70.6350577,
+				30.060399,
+				70.6350577,
+				30.060399
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "bahawalpur",
+			"name": "Bahawalpur",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				71.6749943,
+				29.3899748
+			],
+			"bbox": [
+				71.6749943,
+				29.3899748,
+				71.6749943,
+				29.3899748
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "rahim-yar-khan",
+			"name": "Rahim Yar Khan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				70.2951818,
+				28.4202407
+			],
+			"bbox": [
+				70.2951818,
+				28.4202407,
+				70.2951818,
+				28.4202407
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "sadiqabad",
+			"name": "Sadiqabad",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				70.1302307,
+				28.3006356
+			],
+			"bbox": [
+				70.1302307,
+				28.3006356,
+				70.1302307,
+				28.3006356
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "sukkur",
+			"name": "Sukkur",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				68.8485518,
+				27.7135655
+			],
+			"bbox": [
+				68.8485518,
+				27.7135655,
+				68.8485518,
+				27.7135655
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "larkana",
+			"name": "Larkana",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				68.2067822,
+				27.561766
+			],
+			"bbox": [
+				68.2067822,
+				27.561766,
+				68.2067822,
+				27.561766
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "nawabshah",
+			"name": "Nawabshah",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				68.4000004,
+				26.245438
+			],
+			"bbox": [
+				68.4000004,
+				26.245438,
+				68.4000004,
+				26.245438
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "turbat",
+			"name": "Turbat",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				63.0717985,
+				25.9917843
+			],
+			"bbox": [
+				63.0717985,
+				25.9917843,
+				63.0717985,
+				25.9917843
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "mirpur-khas",
+			"name": "Mirpur Khas",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				69.0117976,
+				25.5317865
+			],
+			"bbox": [
+				69.0117976,
+				25.5317865,
+				69.0117976,
+				25.5317865
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "hyderabad",
+			"name": "Hyderabad",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				68.3730431,
+				25.3819329
+			],
+			"bbox": [
+				68.3730431,
+				25.3819329,
+				68.3730431,
+				25.3819329
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "karachi",
+			"name": "Karachi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				66.9880631,
+				24.8719381
+			],
+			"bbox": [
+				66.9880631,
+				24.8719381,
+				66.9880631,
+				24.8719381
+			],
+			"colorIndex": 2
+		}
+	],
+	"tourOrder": [
+		"gilgit",
+		"saidu-sharif",
+		"mardan",
+		"abbottabad",
+		"peshawar",
+		"islamabad",
+		"kohat",
+		"rawalpindi",
+		"bannu",
+		"gujrat",
+		"sialkot",
+		"gujranwala",
+		"sargodha",
+		"dera-ismail-khan",
+		"sheikhupura",
+		"chiniot",
+		"lahore",
+		"faisalabad",
+		"jhang",
+		"kasur",
+		"okara",
+		"sahiwal",
+		"quetta",
+		"multan",
+		"dera-ghazi-khan",
+		"bahawalpur",
+		"rahim-yar-khan",
+		"sadiqabad",
+		"sukkur",
+		"larkana",
+		"nawabshah",
+		"turbat",
+		"mirpur-khas",
+		"hyderabad",
+		"karachi"
+	]
+}
