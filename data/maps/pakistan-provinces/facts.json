@@ -6,7 +6,24 @@
 			"Khyber Pakhtunkhwa"
 		],
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Named for its two parts, Gilgit and Baltistan.",
+				"K2, 8,611 m, the second highest mountain on Earth, rises in its Karakoram range.",
+				"Pakistan administers it, and the borders in the region are disputed."
+			],
+			"it": [
+				"Prende il nome dalle sue due parti, Gilgit e Baltistan.",
+				"Il K2, 8.611 m, la seconda montagna più alta della Terra, si alza nella sua catena del Karakorum.",
+				"Il Pakistan lo amministra, e i confini nella regione sono contesi."
+			],
+			"de": [
+				"Benannt nach seinen beiden Teilen, Gilgit und Baltistan.",
+				"Der K2, 8.611 m, der zweithöchste Berg der Erde, erhebt sich in seinem Karakorum.",
+				"Pakistan verwaltet es, und die Grenzen in der Region sind umstritten."
+			]
+		}
 	},
 	"khyber-pakhtunkhwa": {
 		"kind": "region",
@@ -18,7 +35,24 @@
 			"Punjab"
 		],
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"The name joins the Khyber Pass and Pakhtunkhwa, the land of the Pakhtuns; until 2010 the province was called the North-West Frontier Province.",
+				"The Khyber Pass, which links Pakistan with Afghanistan, has been a trade and invasion route for thousands of years.",
+				"Peshawar, its capital, is one of the oldest cities in South Asia that is still lived in."
+			],
+			"it": [
+				"Il nome unisce il passo Khyber e Pakhtunkhwa, la terra dei Pashtun; fino al 2010 la provincia si chiamava Provincia della Frontiera di Nord-Ovest.",
+				"Il passo Khyber, che collega il Pakistan all’Afghanistan, è da millenni una via di commercio e di invasione.",
+				"Peshawar, il capoluogo, è una delle più antiche città dell’Asia meridionale ancora abitate."
+			],
+			"de": [
+				"Der Name verbindet den Khyber-Pass und Pakhtunkhwa, das Land der Paschtunen; bis 2010 hieß die Provinz Nordwestliche Grenzprovinz.",
+				"Der Khyber-Pass, der Pakistan mit Afghanistan verbindet, ist seit Jahrtausenden eine Handels- und Invasionsroute.",
+				"Peschawar, die Hauptstadt, ist eine der ältesten noch bewohnten Städte Südasiens."
+			]
+		}
 	},
 	"azad-kashmir": {
 		"kind": "region",
@@ -28,7 +62,24 @@
 			"Punjab"
 		],
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Azad Kashmir means \"Free Kashmir\"; its official name is Azad Jammu and Kashmir.",
+				"Pakistan administers it, and the borders in the region are disputed.",
+				"The earthquake of 2005, centred near its capital Muzaffarabad, killed tens of thousands of people."
+			],
+			"it": [
+				"Azad Kashmir significa \"Kashmir libero\"; il suo nome ufficiale è Azad Jammu e Kashmir.",
+				"Il Pakistan lo amministra, e i confini nella regione sono contesi.",
+				"Il terremoto del 2005, con epicentro vicino alla capitale Muzaffarabad, uccise decine di migliaia di persone."
+			],
+			"de": [
+				"Azad Kashmir bedeutet „Freies Kaschmir“; sein offizieller Name ist Azad Jammu und Kaschmir.",
+				"Pakistan verwaltet es, und die Grenzen in der Region sind umstritten.",
+				"Das Erdbeben von 2005 mit Zentrum nahe der Hauptstadt Muzaffarabad tötete Zehntausende Menschen."
+			]
+		}
 	},
 	"islamabad-capital-territory": {
 		"kind": "region",
@@ -37,7 +88,24 @@
 			"Punjab"
 		],
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Islamabad means \"city of Islam\"; it was founded in the 1960s as the new capital of Pakistan.",
+				"It was planned by the Greek architect Constantinos Doxiadis, in a grid of sectors at the foot of the Margalla Hills.",
+				"It replaced Karachi as the capital."
+			],
+			"it": [
+				"Islamabad significa \"città dell’Islam\"; fu fondata negli anni Sessanta come nuova capitale del Pakistan.",
+				"Fu progettata dall’architetto greco Constantinos Doxiadis, in una griglia di settori ai piedi delle colline Margalla.",
+				"Sostituì Karachi come capitale."
+			],
+			"de": [
+				"Islamabad bedeutet „Stadt des Islam“; es wurde in den 1960er-Jahren als neue Hauptstadt Pakistans gegründet.",
+				"Es wurde vom griechischen Architekten Constantinos Doxiadis in einem Raster von Sektoren am Fuß der Margalla-Berge geplant.",
+				"Es löste Karatschi als Hauptstadt ab."
+			]
+		}
 	},
 	"punjab": {
 		"kind": "region",
@@ -49,7 +117,24 @@
 			"Sindh"
 		],
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"From the Persian panj, \"five\", and ab, \"water\": the land of five rivers.",
+				"It is the most populous province of Pakistan, with more than half of its people.",
+				"Lahore, its capital, has the Badshahi Mosque and the fort built by the Mughal emperors."
+			],
+			"it": [
+				"Dal persiano panj, \"cinque\", e ab, \"acqua\": la terra dei cinque fiumi.",
+				"È la provincia più popolosa del Pakistan, con più della metà dei suoi abitanti.",
+				"Lahore, il capoluogo, ha la moschea Badshahi e il forte costruito dagli imperatori moghul."
+			],
+			"de": [
+				"Vom persischen panj, „fünf“, und ab, „Wasser“: das Land der fünf Flüsse.",
+				"Es ist die bevölkerungsreichste Provinz Pakistans, mit mehr als der Hälfte seiner Menschen.",
+				"Lahore, die Hauptstadt, hat die Badshahi-Moschee und das von den Mogulkaisern erbaute Fort."
+			]
+		}
 	},
 	"balochistan": {
 		"kind": "region",
@@ -59,7 +144,24 @@
 			"Sindh"
 		],
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"The land of the Baloch, the people who live in it.",
+				"It is the largest province of Pakistan, nearly half of the country, but the least densely populated.",
+				"Gwadar, on its coast, has a deep-water port built with Chinese help."
+			],
+			"it": [
+				"La terra dei Baloch, il popolo che vi abita.",
+				"È la maggiore provincia del Pakistan, quasi la metà del paese, ma la meno densamente popolata.",
+				"Gwadar, sulla sua costa, ha un porto in acque profonde costruito con l’aiuto della Cina."
+			],
+			"de": [
+				"Das Land der Belutschen, des Volkes, das dort lebt.",
+				"Es ist die größte Provinz Pakistans, fast die Hälfte des Landes, aber die am dünnsten besiedelte.",
+				"Gwadar an seiner Küste hat einen Tiefwasserhafen, der mit chinesischer Hilfe gebaut wurde."
+			]
+		}
 	},
 	"sindh": {
 		"kind": "region",
@@ -68,6 +170,23 @@
 			"Punjab"
 		],
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"From Sindhu, the old Sanskrit name of the Indus, the river that runs through the province.",
+				"Mohenjo-daro, a city of the Indus Valley civilisation about 4,500 years old, is a World Heritage Site.",
+				"Karachi, the largest city of Pakistan, is its capital and main port."
+			],
+			"it": [
+				"Da Sindhu, l’antico nome sanscrito dell’Indo, il fiume che attraversa la provincia.",
+				"Mohenjo-daro, una città della civiltà della valle dell’Indo di circa 4.500 anni fa, è Patrimonio dell’Umanità.",
+				"Karachi, la maggiore città del Pakistan, è il suo capoluogo e porto principale."
+			],
+			"de": [
+				"Von Sindhu, dem alten Sanskritnamen des Indus, des Flusses, der durch die Provinz fließt.",
+				"Mohenjo-Daro, eine rund 4.500 Jahre alte Stadt der Indus-Kultur, ist Welterbe.",
+				"Karatschi, die größte Stadt Pakistans, ist ihre Hauptstadt und ihr Haupthafen."
+			]
+		}
 	}
 }

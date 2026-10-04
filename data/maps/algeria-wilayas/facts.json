@@ -15,7 +15,24 @@
 			"nameIt": "Annaba",
 			"population": 503524
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Annaba probably comes from the Arabic for the jujube tree, whose fruit grows nearby.",
+				"Saint Augustine was bishop of Hippo Regius, the Roman town whose ruins lie beside Annaba.",
+				"Its steelworks at El Hadjar are among the largest in Africa."
+			],
+			"it": [
+				"Annaba deriva probabilmente dall’arabo per il giuggiolo, i cui frutti crescono nei dintorni.",
+				"Sant’Agostino fu vescovo di Ippona, la città romana le cui rovine si trovano accanto ad Annaba.",
+				"Le sue acciaierie di El Hadjar sono tra le maggiori dell’Africa."
+			],
+			"de": [
+				"Annaba kommt wahrscheinlich vom arabischen Wort für den Jujubenbaum, dessen Früchte in der Nähe wachsen.",
+				"Der heilige Augustinus war Bischof von Hippo Regius, der römischen Stadt, deren Ruinen neben Annaba liegen.",
+				"Sein Stahlwerk in El Hadjar gehört zu den größten Afrikas."
+			]
+		}
 	},
 	"skikda": {
 		"kind": "region",
@@ -35,7 +52,24 @@
 			"nameIt": "Skikda",
 			"population": 225181
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Skikda was called Philippeville, for the French king Louis-Philippe, until Algeria became independent in 1962.",
+				"The Romans called the town Rusicade, and a theatre of theirs still stands.",
+				"Its port is a hub for gas and oil, with one of the country’s main liquefied natural gas plants."
+			],
+			"it": [
+				"Skikda si chiamò Philippeville, dal re francese Luigi Filippo, fino all’indipendenza dell’Algeria nel 1962.",
+				"I romani chiamavano la città Rusicade, e un loro teatro è ancora in piedi.",
+				"Il suo porto è un nodo del gas e del petrolio, con uno dei principali impianti di gas naturale liquefatto del paese."
+			],
+			"de": [
+				"Skikda hieß bis zur Unabhängigkeit Algeriens 1962 Philippeville, nach dem französischen König Louis-Philippe.",
+				"Die Römer nannten die Stadt Rusicade, und eines ihrer Theater steht noch.",
+				"Sein Hafen ist ein Knotenpunkt für Gas und Öl, mit einer der wichtigsten Flüssiggasanlagen des Landes."
+			]
+		}
 	},
 	"boumerdes": {
 		"kind": "region",
@@ -48,7 +82,24 @@
 			"Tizi Ouzou"
 		],
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"The origin of the name is uncertain.",
+				"A strong earthquake struck the region in May 2003 and killed more than two thousand people.",
+				"It lies on the coast east of Algiers, part of the capital’s wider area."
+			],
+			"it": [
+				"L’origine del nome è incerta.",
+				"Un forte terremoto colpì la regione nel maggio 2003 e uccise più di duemila persone.",
+				"Si trova sulla costa a est di Algeri, parte dell’area più ampia della capitale."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss.",
+				"Im Mai 2003 traf ein starkes Erdbeben die Region und tötete mehr als zweitausend Menschen.",
+				"Es liegt an der Küste östlich von Algier, im weiteren Umland der Hauptstadt."
+			]
+		}
 	},
 	"algiers": {
 		"kind": "region",
@@ -66,7 +117,24 @@
 			"nameIt": "Algeri",
 			"population": 3354000
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Algiers comes from the Arabic al-Jazā’ir, \"the islands\", for the islets that once lay off its harbour.",
+				"The Casbah, the old hillside town, is a World Heritage Site.",
+				"The Great Mosque of Algiers has a minaret about 265 m high, among the tallest in the world."
+			],
+			"it": [
+				"Algeri deriva dall’arabo al-Jazā’ir, \"le isole\", per gli isolotti che un tempo sorgevano davanti al suo porto.",
+				"La Casbah, la città vecchia sulla collina, è Patrimonio dell’Umanità.",
+				"La Grande Moschea di Algeri ha un minareto alto circa 265 m, tra i più alti del mondo."
+			],
+			"de": [
+				"Algier kommt vom arabischen al-Jazā’ir, „die Inseln“, nach den Inselchen, die einst vor seinem Hafen lagen.",
+				"Die Kasbah, die alte Stadt am Hang, ist Welterbe.",
+				"Die Große Moschee von Algier hat ein etwa 265 m hohes Minarett, eines der höchsten der Welt."
+			]
+		}
 	},
 	"jijel": {
 		"kind": "region",
@@ -85,7 +153,24 @@
 			"nameIt": "Jijel",
 			"population": 148000
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Jijel comes from the Roman name of the town, Igilgili.",
+				"Taza National Park, with cliffs, caves and forest above the sea, lies in the province.",
+				"The coast of Jijel is one of the most scenic in Algeria."
+			],
+			"it": [
+				"Jijel deriva dal nome romano della città, Igilgili.",
+				"Il Parco nazionale di Taza, con scogliere, grotte e foreste sopra il mare, si trova nella provincia.",
+				"La costa di Jijel è una delle più belle dell’Algeria."
+			],
+			"de": [
+				"Jijel kommt vom römischen Namen der Stadt, Igilgili.",
+				"Der Nationalpark Taza mit Klippen, Höhlen und Wald über dem Meer liegt in der Provinz.",
+				"Die Küste von Jijel gehört zu den schönsten Algeriens."
+			]
+		}
 	},
 	"el-tarf": {
 		"kind": "region",
@@ -97,7 +182,24 @@
 			"Souk Ahras"
 		],
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"El Tarf means \"the edge\" in Arabic: the province lies at the far north-east of the country.",
+				"El Kala National Park is a biosphere reserve with lakes, forest and coast.",
+				"Lake Tonga, in the park, is a wetland of international importance for birds."
+			],
+			"it": [
+				"El Tarf significa \"il margine\" in arabo: la provincia si trova all’estremo nord-est del paese.",
+				"Il Parco nazionale di El Kala è una riserva della biosfera con laghi, foreste e costa.",
+				"Il lago Tonga, nel parco, è una zona umida di importanza internazionale per gli uccelli."
+			],
+			"de": [
+				"El Tarf bedeutet auf Arabisch „der Rand“: Die Provinz liegt im äußersten Nordosten des Landes.",
+				"Der Nationalpark El Kala ist ein Biosphärenreservat mit Seen, Wald und Küste.",
+				"Der Tonga-See im Park ist ein Feuchtgebiet von internationaler Bedeutung für Vögel."
+			]
+		}
 	},
 	"tizi-ouzou": {
 		"kind": "region",
@@ -115,7 +217,24 @@
 			"nameIt": "Tizi Ouzou",
 			"population": 144000
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Tizi Ouzou comes from Berber: tizi means \"pass\" and ouzou \"broom\", the plant.",
+				"It is the heart of Kabylia, where many people speak Kabyle, a Berber language.",
+				"The Djurdjura mountains rise to over 2,300 m on its southern edge."
+			],
+			"it": [
+				"Tizi Ouzou viene dal berbero: tizi significa \"passo\" e ouzou \"ginestra\", la pianta.",
+				"È il cuore della Cabilia, dove molti parlano il cabilo, una lingua berbera.",
+				"I monti Djurdjura si alzano oltre i 2.300 m sul suo margine meridionale."
+			],
+			"de": [
+				"Tizi Ouzou kommt aus dem Berberischen: tizi bedeutet „Pass“ und ouzou „Ginster“, die Pflanze.",
+				"Es ist das Herz der Kabylei, wo viele Kabylisch sprechen, eine Berbersprache.",
+				"Das Djurdjura-Gebirge erhebt sich an seinem Südrand auf über 2.300 m."
+			]
+		}
 	},
 	"tipaza": {
 		"kind": "region",
@@ -128,7 +247,24 @@
 			"Chlef"
 		],
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"The origin of the name is uncertain; it is an ancient name used by Phoenicians and Romans.",
+				"The ruins of Roman Tipasa, on a cliff above the sea, are a World Heritage Site.",
+				"The Royal Mausoleum of Mauretania, a huge round tomb of the 1st century BC, stands on a hill nearby."
+			],
+			"it": [
+				"L’origine del nome è incerta; è un nome antico usato da fenici e romani.",
+				"Le rovine della Tipasa romana, su una scogliera sopra il mare, sono Patrimonio dell’Umanità.",
+				"Il Mausoleo reale di Mauretania, un’enorme tomba rotonda del I secolo a.C., sorge su una collina vicina."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss; es ist ein alter Name, den schon Phönizier und Römer benutzten.",
+				"Die Ruinen des römischen Tipasa auf einer Klippe über dem Meer sind Welterbe.",
+				"Das Königliche Mausoleum von Mauretanien, ein riesiges rundes Grab aus dem 1. Jahrhundert v. Chr., steht auf einem nahen Hügel."
+			]
+		}
 	},
 	"bejaia": {
 		"kind": "region",
@@ -148,7 +284,24 @@
 			"nameIt": "Béjaïa",
 			"population": 384937
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Béjaïa comes from the Berber Bgayet; the Romans called the town Saldae.",
+				"In the 11th century it was the capital of the Hammadid dynasty and a major port.",
+				"Gouraya National Park lies on the cliffs above the town."
+			],
+			"it": [
+				"Béjaïa deriva dal berbero Bgayet; i romani chiamavano la città Saldae.",
+				"Nell’XI secolo fu la capitale della dinastia hammadide e un grande porto.",
+				"Il Parco nazionale di Gouraya sorge sulle scogliere sopra la città."
+			],
+			"de": [
+				"Béjaïa kommt vom berberischen Bgayet; die Römer nannten die Stadt Saldae.",
+				"Im 11. Jahrhundert war es die Hauptstadt der Hammadiden und ein bedeutender Hafen.",
+				"Der Nationalpark Gouraya liegt auf den Klippen über der Stadt."
+			]
+		}
 	},
 	"blida": {
 		"kind": "region",
@@ -169,7 +322,24 @@
 			"nameIt": "Blida",
 			"population": 511348
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Blida comes from boulaïda, a little town; it is known as the city of roses.",
+				"Chréa National Park, in the Blidean Atlas above the city, has cedar forests and a ski area.",
+				"It lies on the fertile Mitidja plain, south-west of Algiers."
+			],
+			"it": [
+				"Blida deriva da boulaïda, \"cittadina\"; è nota come la città delle rose.",
+				"Il Parco nazionale di Chréa, nell’Atlante di Blida sopra la città, ha foreste di cedri e una stazione sciistica.",
+				"Sorge sulla fertile pianura della Mitidja, a sud-ovest di Algeri."
+			],
+			"de": [
+				"Blida kommt von boulaïda, „Städtchen“; es ist als Stadt der Rosen bekannt.",
+				"Der Nationalpark Chréa im Blida-Atlas über der Stadt hat Zedernwälder und ein Skigebiet.",
+				"Es liegt in der fruchtbaren Mitidja-Ebene südwestlich von Algier."
+			]
+		}
 	},
 	"guelma": {
 		"kind": "region",
@@ -190,7 +360,24 @@
 			"nameIt": "Guelma",
 			"population": 123590
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Guelma comes from the Roman name of the town, Calama.",
+				"Its Roman theatre, with room for several thousand, is still used for shows.",
+				"Hammam Debagh, nearby, has some of the hottest springs in the world, near boiling."
+			],
+			"it": [
+				"Guelma deriva dal nome romano della città, Calama.",
+				"Il suo teatro romano, con posto per alcune migliaia di spettatori, è ancora usato per gli spettacoli.",
+				"Hammam Debagh, nelle vicinanze, ha alcune delle sorgenti più calde del mondo, quasi bollenti."
+			],
+			"de": [
+				"Guelma kommt vom römischen Namen der Stadt, Calama.",
+				"Sein römisches Theater mit Platz für einige tausend Zuschauer wird noch für Aufführungen genutzt.",
+				"Hammam Debagh in der Nähe hat einige der heißesten Quellen der Welt, fast kochend."
+			]
+		}
 	},
 	"constantine": {
 		"kind": "region",
@@ -209,7 +396,24 @@
 			"nameIt": "Costantina",
 			"population": 605179
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Named for the Roman emperor Constantine, who rebuilt the ancient town of Cirta in the 4th century.",
+				"Constantine is called the city of bridges, for the many bridges that cross its gorge.",
+				"The old town stands on a rock plateau, nearly surrounded by the deep gorge of the Rhumel."
+			],
+			"it": [
+				"Prende il nome dall’imperatore romano Costantino, che nel IV secolo ricostruì l’antica città di Cirta.",
+				"Costantina è detta la città dei ponti, per i molti ponti che attraversano la sua gola.",
+				"La città vecchia sorge su un altopiano roccioso, quasi circondato dalla profonda gola del Rhumel."
+			],
+			"de": [
+				"Benannt nach dem römischen Kaiser Konstantin, der im 4. Jahrhundert die antike Stadt Cirta wiederaufbauen ließ.",
+				"Constantine heißt die Stadt der Brücken, wegen der vielen Brücken über ihre Schlucht.",
+				"Die Altstadt steht auf einem Felsplateau, fast ganz von der tiefen Schlucht des Rhumel umgeben."
+			]
+		}
 	},
 	"bouira": {
 		"kind": "region",
@@ -235,7 +439,24 @@
 			"name": "Lalla Khedidja",
 			"elevation": 2308
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"The origin of the name is uncertain; one explanation is the Arabic for \"small well\".",
+				"It lies south of the Djurdjura mountains, whose high slopes are a ski area.",
+				"The province links Kabylia with the high plains to the south."
+			],
+			"it": [
+				"L’origine del nome è incerta; una spiegazione è l’arabo per \"piccolo pozzo\".",
+				"Si trova a sud dei monti Djurdjura, i cui alti pendii sono una zona sciistica.",
+				"La provincia collega la Cabilia con gli altopiani a sud."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss; eine Erklärung ist das arabische Wort für „kleiner Brunnen“.",
+				"Es liegt südlich des Djurdjura-Gebirges, dessen hohe Hänge ein Skigebiet sind.",
+				"Die Provinz verbindet die Kabylei mit den Hochebenen im Süden."
+			]
+		}
 	},
 	"mila": {
 		"kind": "region",
@@ -250,7 +471,24 @@
 			"Skikda"
 		],
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Mila comes from the Roman name of the town, Milevum.",
+				"The Sidi Ghanem mosque, from the 7th century, is said to be the oldest in Algeria.",
+				"The Beni Haroun dam, one of the largest in the country, lies in the province."
+			],
+			"it": [
+				"Mila deriva dal nome romano della città, Milevum.",
+				"La moschea di Sidi Ghanem, del VII secolo, si dice sia la più antica dell’Algeria.",
+				"La diga di Beni Haroun, una delle maggiori del paese, si trova nella provincia."
+			],
+			"de": [
+				"Mila kommt vom römischen Namen der Stadt, Milevum.",
+				"Die Moschee von Sidi Ghanem aus dem 7. Jahrhundert soll die älteste Algeriens sein.",
+				"Der Beni-Haroun-Staudamm, einer der größten des Landes, liegt in der Provinz."
+			]
+		}
 	},
 	"chlef": {
 		"kind": "region",
@@ -270,7 +508,24 @@
 			"nameIt": "Chlef",
 			"population": 449167
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Chlef is named for the Chelif, Algeria’s longest river, which flows through the province.",
+				"The town was called Orléansville under the French and El Asnam from 1962 until 1981.",
+				"A strong earthquake in 1980 destroyed much of the town."
+			],
+			"it": [
+				"Chlef prende il nome dallo Chelif, il fiume più lungo dell’Algeria, che attraversa la provincia.",
+				"La città si chiamò Orléansville sotto i francesi e El Asnam dal 1962 al 1981.",
+				"Un forte terremoto nel 1980 distrusse gran parte della città."
+			],
+			"de": [
+				"Chlef ist nach dem Chelif benannt, Algeriens längstem Fluss, der durch die Provinz fließt.",
+				"Die Stadt hieß unter den Franzosen Orléansville und von 1962 bis 1981 El Asnam.",
+				"Ein starkes Erdbeben zerstörte 1980 einen großen Teil der Stadt."
+			]
+		}
 	},
 	"souk-ahras": {
 		"kind": "region",
@@ -289,7 +544,24 @@
 			"nameIt": "Souk Ahras",
 			"population": 134947
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Souk Ahras is usually explained as \"market of the lions\", though the origin is debated.",
+				"Saint Augustine was born in 354 in Thagaste, the Roman town on the site of today’s Souk Ahras.",
+				"The province borders Tunisia."
+			],
+			"it": [
+				"Souk Ahras è di solito spiegato come \"mercato dei leoni\", anche se l’origine è discussa.",
+				"Sant’Agostino nacque nel 354 a Tagaste, la città romana sul sito dell’odierna Souk Ahras.",
+				"La provincia confina con la Tunisia."
+			],
+			"de": [
+				"Souk Ahras wird meist als „Markt der Löwen“ erklärt, doch die Herkunft ist umstritten.",
+				"Der heilige Augustinus wurde 354 in Thagaste geboren, der römischen Stadt am Ort des heutigen Souk Ahras.",
+				"Die Provinz grenzt an Tunesien."
+			]
+		}
 	},
 	"ain-defla": {
 		"kind": "region",
@@ -303,7 +575,24 @@
 			"Tissemsilt"
 		],
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Aïn Defla means \"spring of the oleander\": aïn is \"spring\" and defla the oleander.",
+				"Khemis Miliana, on the Chelif plain, is its main town.",
+				"The province is one of the main potato-growing areas of Algeria."
+			],
+			"it": [
+				"Aïn Defla significa \"sorgente dell’oleandro\": aïn è \"sorgente\" e defla l’oleandro.",
+				"Khemis Miliana, sulla piana dello Chelif, è il suo centro principale.",
+				"La provincia è una delle principali zone di coltivazione delle patate dell’Algeria."
+			],
+			"de": [
+				"Aïn Defla bedeutet „Quelle des Oleanders“: aïn ist „Quelle“ und defla der Oleander.",
+				"Khemis Miliana in der Chelif-Ebene ist der Hauptort.",
+				"Die Provinz ist eines der wichtigsten Kartoffelanbaugebiete Algeriens."
+			]
+		}
 	},
 	"setif": {
 		"kind": "region",
@@ -324,7 +613,24 @@
 			"nameIt": "Sétif",
 			"population": 274744
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Sétif comes from the Roman name of the town, Sitifis.",
+				"The fountain of Aïn el Fouara, in the middle of the town, is its best-known monument.",
+				"It stands on the high plains, at about 1,100 m, a farming country of wheat and barley."
+			],
+			"it": [
+				"Sétif deriva dal nome romano della città, Sitifis.",
+				"La fontana di Aïn el Fouara, in mezzo alla città, è il suo monumento più noto.",
+				"Sorge sugli altopiani, a circa 1.100 m, un paese agricolo di grano e orzo."
+			],
+			"de": [
+				"Sétif kommt vom römischen Namen der Stadt, Sitifis.",
+				"Der Brunnen von Aïn el Fouara mitten in der Stadt ist ihr bekanntestes Denkmal.",
+				"Sie liegt auf der Hochebene, auf etwa 1.100 m, einem Bauernland für Weizen und Gerste."
+			]
+		}
 	},
 	"bordj-bou-arreridj": {
 		"kind": "region",
@@ -343,7 +649,24 @@
 			"nameIt": "Bordj Bou Arreridj",
 			"population": 140000
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Bordj means \"fort\": the town grew around the Ottoman fort of Bou Arréridj.",
+				"It is the home of Condor, one of Algeria’s biggest electronics makers.",
+				"The province lies on the high plains between Kabylia and Sétif."
+			],
+			"it": [
+				"Bordj significa \"forte\": la città crebbe intorno al forte ottomano di Bou Arréridj.",
+				"Qui ha sede la Condor, uno dei maggiori produttori di elettronica dell’Algeria.",
+				"La provincia si trova sugli altopiani tra la Cabilia e Sétif."
+			],
+			"de": [
+				"Bordj bedeutet „Fort“: Die Stadt wuchs um das osmanische Fort von Bou Arréridj.",
+				"Hier hat Condor seinen Sitz, einer der größten Elektronikhersteller Algeriens.",
+				"Die Provinz liegt auf der Hochebene zwischen der Kabylei und Sétif."
+			]
+		}
 	},
 	"mostaganem": {
 		"kind": "region",
@@ -362,7 +685,24 @@
 			"nameIt": "Mostaganem",
 			"population": 188354
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"The origin of the name is uncertain.",
+				"Mostaganem lies on the Mediterranean coast, east of Oran, with beaches such as Salamandre.",
+				"The province is a farming country known for its citrus fruit and vegetables."
+			],
+			"it": [
+				"L’origine del nome è incerta.",
+				"Mostaganem si trova sulla costa mediterranea, a est di Orano, con spiagge come Salamandre.",
+				"La provincia è un paese agricolo noto per gli agrumi e gli ortaggi."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss.",
+				"Mostaganem liegt an der Mittelmeerküste östlich von Oran, mit Stränden wie Salamandre.",
+				"Die Provinz ist ein Bauernland, das für Zitrusfrüchte und Gemüse bekannt ist."
+			]
+		}
 	},
 	"medea": {
 		"kind": "region",
@@ -384,7 +724,24 @@
 			"nameIt": "Médéa",
 			"population": 147707
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"The origin of the name is uncertain; the Romans called the town Lambdia.",
+				"Médéa stands at about 900 m on a plateau of the Tell Atlas, south of Algiers.",
+				"The province is a fruit-growing area, known for its grapes and apples."
+			],
+			"it": [
+				"L’origine del nome è incerta; i romani chiamavano la città Lambdia.",
+				"Médéa sorge a circa 900 m su un altopiano dell’Atlante Telliano, a sud di Algeri.",
+				"La provincia è una zona frutticola, nota per l’uva e le mele."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss; die Römer nannten die Stadt Lambdia.",
+				"Médéa liegt auf etwa 900 m auf einer Hochfläche des Tellatlas, südlich von Algier.",
+				"Die Provinz ist ein Obstanbaugebiet, bekannt für Trauben und Äpfel."
+			]
+		}
 	},
 	"relizane": {
 		"kind": "region",
@@ -398,7 +755,24 @@
 			"Tissemsilt"
 		],
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"The origin of the name is uncertain.",
+				"The province lies in the Chelif valley, a farming country of cereals and citrus fruit.",
+				"The Mina river flows through it towards the Chelif."
+			],
+			"it": [
+				"L’origine del nome è incerta.",
+				"La provincia si trova nella valle dello Chelif, un paese agricolo di cereali e agrumi.",
+				"Il fiume Mina la attraversa verso lo Chelif."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss.",
+				"Die Provinz liegt im Chelif-Tal, einem Bauernland für Getreide und Zitrusfrüchte.",
+				"Der Fluss Mina fließt hindurch zum Chelif."
+			]
+		}
 	},
 	"oum-el-bouaghi": {
 		"kind": "region",
@@ -420,7 +794,24 @@
 			"nameIt": "Oum el-Bouaghi",
 			"population": 100821
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Oum El Bouaghi means \"mother of the Bouaghi\", after a local tribe or place; the French called the town Canrobert.",
+				"It lies on the high plains, a land of wheat and salt lakes.",
+				"The Garaet Ezzemoul salt lake, in the province, is a wetland for flamingos and other birds."
+			],
+			"it": [
+				"Oum El Bouaghi significa \"madre dei Bouaghi\", da una tribù o un luogo locale; i francesi chiamavano la città Canrobert.",
+				"Si trova sugli altopiani, terra di grano e di laghi salati.",
+				"Il lago salato di Garaet Ezzemoul, nella provincia, è una zona umida per fenicotteri e altri uccelli."
+			],
+			"de": [
+				"Oum El Bouaghi bedeutet „Mutter der Bouaghi“, nach einem örtlichen Stamm oder Ort; die Franzosen nannten die Stadt Canrobert.",
+				"Es liegt auf der Hochebene, einem Land aus Weizen und Salzseen.",
+				"Der Salzsee Garaet Ezzemoul in der Provinz ist ein Feuchtgebiet für Flamingos und andere Vögel."
+			]
+		}
 	},
 	"tissemsilt": {
 		"kind": "region",
@@ -434,7 +825,24 @@
 			"Tiaret"
 		],
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Tissemsilt is a Berber name whose meaning is uncertain.",
+				"Theniet El Had National Park, in the province, protects one of the finest cedar forests in Algeria.",
+				"The Ouarsenis massif rises above the province, nearly 2,000 m high."
+			],
+			"it": [
+				"Tissemsilt è un nome berbero il cui significato è incerto.",
+				"Il Parco nazionale di Theniet El Had, nella provincia, protegge una delle più belle foreste di cedri dell’Algeria.",
+				"Il massiccio dell’Ouarsenis si alza sopra la provincia, a quasi 2.000 m."
+			],
+			"de": [
+				"Tissemsilt ist ein berberischer Name, dessen Bedeutung ungewiss ist.",
+				"Der Nationalpark Theniet El Had in der Provinz schützt einen der schönsten Zedernwälder Algeriens.",
+				"Das Ouarsenis-Massiv erhebt sich über der Provinz, fast 2.000 m hoch."
+			]
+		}
 	},
 	"oran": {
 		"kind": "region",
@@ -453,7 +861,24 @@
 			"nameIt": "Orano",
 			"population": 798000
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Oran comes from the Arabic Wahran, which a legend explains as \"two lions\".",
+				"Oran is the birthplace of raï, a popular music that sings of daily life.",
+				"The fort of Santa Cruz stands on the mountain above the city, a legacy of Spanish rule."
+			],
+			"it": [
+				"Orano deriva dall’arabo Wahran, che una leggenda spiega come \"due leoni\".",
+				"Orano è la patria del raï, una musica popolare che canta la vita quotidiana.",
+				"Il forte di Santa Cruz sorge sul monte sopra la città, un’eredità del dominio spagnolo."
+			],
+			"de": [
+				"Oran kommt vom arabischen Wahran, das eine Legende als „zwei Löwen“ erklärt.",
+				"Oran ist die Heimat des Raï, einer Popmusik, die vom Alltag singt.",
+				"Das Fort Santa Cruz steht auf dem Berg über der Stadt, ein Erbe der spanischen Herrschaft."
+			]
+		}
 	},
 	"mascara": {
 		"kind": "region",
@@ -474,7 +899,24 @@
 			"nameIt": "Mascara",
 			"population": 108230
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Mascara is usually explained as \"mother of soldiers\" in Arabic, though the origin is debated.",
+				"Emir Abdelkader, who led the resistance to the French conquest, was born near Mascara in 1808.",
+				"The hills around the town produce red wine."
+			],
+			"it": [
+				"Mascara è di solito spiegata come \"madre dei soldati\" in arabo, anche se l’origine è discussa.",
+				"L’emiro Abd el-Kader, che guidò la resistenza alla conquista francese, nacque vicino a Mascara nel 1808.",
+				"Le colline intorno alla città producono vino rosso."
+			],
+			"de": [
+				"Mascara wird meist als „Mutter der Soldaten“ auf Arabisch erklärt, doch die Herkunft ist umstritten.",
+				"Emir Abd el-Kader, der den Widerstand gegen die französische Eroberung anführte, wurde 1808 bei Mascara geboren.",
+				"Die Hügel um die Stadt liefern Rotwein."
+			]
+		}
 	},
 	"ain-temouchent": {
 		"kind": "region",
@@ -486,7 +928,24 @@
 			"Tlemcen"
 		],
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Aïn Témouchent means \"spring of Témouchent\": aïn is \"spring\".",
+				"Rachgoun, a small island off its coast, has the remains of an ancient Phoenician port.",
+				"Beni Saf, on the coast, is a fishing and mining port."
+			],
+			"it": [
+				"Aïn Témouchent significa \"sorgente di Témouchent\": aïn è \"sorgente\".",
+				"Rachgoun, una piccola isola al largo della costa, conserva i resti di un antico porto fenicio.",
+				"Beni Saf, sulla costa, è un porto di pesca e di miniere."
+			],
+			"de": [
+				"Aïn Témouchent bedeutet „Quelle von Témouchent“: aïn ist „Quelle“.",
+				"Rachgoun, eine kleine Insel vor der Küste, hat die Reste eines antiken phönizischen Hafens.",
+				"Beni Saf an der Küste ist ein Fischerei- und Bergbauhafen."
+			]
+		}
 	},
 	"batna": {
 		"kind": "region",
@@ -507,7 +966,24 @@
 			"nameIt": "Batna",
 			"population": 280798
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Batna is popularly explained as \"spend the night\", from the camp the French built there in 1844.",
+				"The Roman city of Timgad, laid out on a grid around the year 100, is a World Heritage Site.",
+				"The Aurès mountains rise in the province, the home of the Chaoui Berbers."
+			],
+			"it": [
+				"Batna è spiegata popolarmente come \"passare la notte\", dall’accampamento che i francesi vi costruirono nel 1844.",
+				"La città romana di Timgad, tracciata a scacchiera intorno all’anno 100, è Patrimonio dell’Umanità.",
+				"Nella provincia si alzano i monti Aurès, patria dei berberi Chaoui."
+			],
+			"de": [
+				"Batna wird volkstümlich als „die Nacht verbringen“ erklärt, nach dem Lager, das die Franzosen dort 1844 errichteten.",
+				"Die römische Stadt Timgad, um das Jahr 100 schachbrettartig angelegt, ist Welterbe.",
+				"In der Provinz erheben sich die Aurès-Berge, die Heimat der Chaoui-Berber."
+			]
+		}
 	},
 	"m-sila": {
 		"kind": "region",
@@ -529,7 +1005,24 @@
 			"nameIt": "M'Sila",
 			"population": 150000
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"M’Sila comes from the Arabic for a watercourse, a path where water runs.",
+				"Qal’at Bani Hammad, the ruined capital of the Hammadid dynasty, is a World Heritage Site.",
+				"The Chott el Hodna, a huge salt lake, lies in the province."
+			],
+			"it": [
+				"M’Sila deriva dall’arabo per un corso d’acqua, un sentiero in cui scorre l’acqua.",
+				"Qal’at Bani Hammad, la capitale in rovina della dinastia hammadide, è Patrimonio dell’Umanità.",
+				"Lo Chott el Hodna, un enorme lago salato, si trova nella provincia."
+			],
+			"de": [
+				"M’Sila kommt vom arabischen Wort für einen Wasserlauf, einen Pfad, auf dem Wasser fließt.",
+				"Qal’at Bani Hammad, die Ruinenhauptstadt der Hammadiden, ist Welterbe.",
+				"Der Chott el Hodna, ein riesiger Salzsee, liegt in der Provinz."
+			]
+		}
 	},
 	"tebessa": {
 		"kind": "region",
@@ -548,7 +1041,24 @@
 			"nameIt": "Tébessa",
 			"population": 171742
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Tébessa comes from the Roman name of the town, Theveste.",
+				"Its Roman arch, built for the emperor Caracalla, still stands at one of the town gates.",
+				"The province borders Tunisia and has phosphate mines."
+			],
+			"it": [
+				"Tébessa deriva dal nome romano della città, Theveste.",
+				"Il suo arco romano, costruito per l’imperatore Caracalla, sorge ancora a una delle porte della città.",
+				"La provincia confina con la Tunisia e ha miniere di fosfati."
+			],
+			"de": [
+				"Tébessa kommt vom römischen Namen der Stadt, Theveste.",
+				"Sein römischer Bogen, für Kaiser Caracalla errichtet, steht noch an einem der Stadttore.",
+				"Die Provinz grenzt an Tunesien und hat Phosphatminen."
+			]
+		}
 	},
 	"khenchela": {
 		"kind": "region",
@@ -566,7 +1076,24 @@
 			"name": "Djebel Chelia",
 			"elevation": 2326
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Khenchela probably comes from a Berber word; the Romans called the town Mascula.",
+				"Mount Chélia, 2,328 m, the highest peak of the Aurès, rises in the province.",
+				"Many people here speak Chaoui, a Berber language."
+			],
+			"it": [
+				"Khenchela deriva probabilmente da una parola berbera; i romani chiamavano la città Mascula.",
+				"Nella provincia si alza il monte Chélia, 2.328 m, la vetta più alta degli Aurès.",
+				"Qui molti parlano lo chaoui, una lingua berbera."
+			],
+			"de": [
+				"Khenchela stammt wahrscheinlich von einem berberischen Wort; die Römer nannten die Stadt Mascula.",
+				"In der Provinz erhebt sich der Chélia, 2.328 m, der höchste Gipfel der Aurès.",
+				"Viele Menschen sprechen hier Chaoui, eine Berbersprache."
+			]
+		}
 	},
 	"tiaret": {
 		"kind": "region",
@@ -589,7 +1116,24 @@
 			"nameIt": "Tiaret",
 			"population": 184195
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Tiaret comes from the Berber tihert, \"lioness\"; the old town of Tahert was the capital of the Rustamid dynasty.",
+				"Tiaret is known for its horse stud, which breeds Arabian-Barb horses.",
+				"It stands on the high plains, at about 1,000 m, where the climate is cold in winter."
+			],
+			"it": [
+				"Tiaret deriva dal berbero tihert, \"leonessa\"; l’antica Tahert fu la capitale della dinastia rustemide.",
+				"Tiaret è nota per il suo allevamento di cavalli, che alleva cavalli arabo-berberi.",
+				"Sorge sugli altopiani, a circa 1.000 m, dove l’inverno è freddo."
+			],
+			"de": [
+				"Tiaret kommt vom berberischen tihert, „Löwin“; das alte Tahert war die Hauptstadt der Rustamiden.",
+				"Tiaret ist für sein Gestüt bekannt, in dem Araber-Berber-Pferde gezüchtet werden.",
+				"Es liegt auf der Hochebene, auf etwa 1.000 m, wo es im Winter kalt ist."
+			]
+		}
 	},
 	"sidi-bel-abbes": {
 		"kind": "region",
@@ -610,7 +1154,24 @@
 			"nameIt": "Sidi Bel Abbes",
 			"population": 208604
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Named for Sidi Bel Abbès, a Muslim saint whose tomb stands in the town.",
+				"The French Foreign Legion had its headquarters here until 1962.",
+				"The town was laid out by the French in a regular grid, with walls and gates."
+			],
+			"it": [
+				"Prende il nome da Sidi Bel Abbès, un santo musulmano la cui tomba sorge in città.",
+				"La Legione straniera francese ebbe qui il suo quartier generale fino al 1962.",
+				"La città fu tracciata dai francesi in una griglia regolare, con mura e porte."
+			],
+			"de": [
+				"Benannt nach Sidi Bel Abbès, einem muslimischen Heiligen, dessen Grab in der Stadt steht.",
+				"Die französische Fremdenlegion hatte hier bis 1962 ihr Hauptquartier.",
+				"Die Stadt wurde von den Franzosen in einem regelmäßigen Raster mit Mauern und Toren angelegt."
+			]
+		}
 	},
 	"tlemcen": {
 		"kind": "region",
@@ -628,7 +1189,24 @@
 			"nameIt": "Tlemcen",
 			"population": 229777
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"The origin of the name is debated; Tlemcen comes from a Berber word, perhaps for springs.",
+				"The Great Mosque, founded in 1082 by the Almoravids, is one of the oldest in Algeria.",
+				"Tlemcen is known for its Andalusian music, brought by refugees from Spain."
+			],
+			"it": [
+				"L’origine del nome è discussa; Tlemcen deriva da una parola berbera, forse per \"sorgenti\".",
+				"La Grande Moschea, fondata nel 1082 dagli almoravidi, è una delle più antiche dell’Algeria.",
+				"Tlemcen è nota per la sua musica andalusa, portata dai profughi dalla Spagna."
+			],
+			"de": [
+				"Die Herkunft des Namens ist umstritten; Tlemcen kommt von einem berberischen Wort, vielleicht für Quellen.",
+				"Die Große Moschee, 1082 von den Almoraviden gegründet, ist eine der ältesten Algeriens.",
+				"Tlemcen ist für seine andalusische Musik bekannt, die Flüchtlinge aus Spanien brachten."
+			]
+		}
 	},
 	"saida": {
 		"kind": "region",
@@ -648,7 +1226,24 @@
 			"nameIt": "Saida",
 			"population": 142213
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Saïda probably comes from the Arabic saïd, \"happy\"; the origin is uncertain.",
+				"The province lies on the high plains, where alfa grass, used for paper, grows wild.",
+				"Hammam Rabbi, in the province, is a spa with hot springs."
+			],
+			"it": [
+				"Saïda deriva probabilmente dall’arabo saïd, \"felice\"; l’origine è incerta.",
+				"La provincia si trova sugli altopiani, dove cresce spontaneo l’alfa, usato per la carta.",
+				"Hammam Rabbi, nella provincia, è una località termale con sorgenti calde."
+			],
+			"de": [
+				"Saïda kommt wahrscheinlich vom arabischen saïd, „glücklich“; die Herkunft ist ungewiss.",
+				"Die Provinz liegt auf der Hochebene, wo wild das Alfagras wächst, das für Papier genutzt wird.",
+				"Hammam Rabbi in der Provinz ist ein Kurort mit heißen Quellen."
+			]
+		}
 	},
 	"biskra": {
 		"kind": "region",
@@ -668,7 +1263,24 @@
 			"nameIt": "Biskra",
 			"population": 202103
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Biskra comes from the Roman name of the town, Vescera.",
+				"It is called the gateway to the Sahara and the queen of the Zibans, the palm oases of the region.",
+				"Its date palms produce Deglet Nour, a prized date exported around the world."
+			],
+			"it": [
+				"Biskra deriva dal nome romano della città, Vescera.",
+				"È detta la porta del Sahara e la regina dei Ziban, le oasi di palme della regione.",
+				"Le sue palme da dattero producono il Deglet Nour, un dattero pregiato esportato in tutto il mondo."
+			],
+			"de": [
+				"Biskra kommt vom römischen Namen der Stadt, Vescera.",
+				"Es wird das Tor zur Sahara und die Königin der Ziban genannt, der Palmenoasen der Region.",
+				"Seine Dattelpalmen liefern Deglet Nour, eine begehrte Dattel, die in die ganze Welt exportiert wird."
+			]
+		}
 	},
 	"djelfa": {
 		"kind": "region",
@@ -691,7 +1303,24 @@
 			"nameIt": "Djelfa",
 			"population": 170901
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"The origin of the name is uncertain.",
+				"Djelfa is one of Algeria’s main sheep-raising areas, on the steppe of the high plains.",
+				"The Ouled Naïl, a tribe of the region, are known for their traditional dance and dress."
+			],
+			"it": [
+				"L’origine del nome è incerta.",
+				"Djelfa è una delle principali zone di allevamento ovino dell’Algeria, sulla steppa degli altopiani.",
+				"Gli Ouled Naïl, una tribù della regione, sono noti per la loro danza e il loro costume tradizionali."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss.",
+				"Djelfa ist eines der wichtigsten Schafzuchtgebiete Algeriens, in der Steppe der Hochebene.",
+				"Die Ouled Naïl, ein Stamm der Region, sind für ihren traditionellen Tanz und ihre Tracht bekannt."
+			]
+		}
 	},
 	"laghouat": {
 		"kind": "region",
@@ -710,7 +1339,24 @@
 			"nameIt": "Laghouat",
 			"population": 113872
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Laghouat probably comes from the Arabic for \"the oases\".",
+				"It is known as the gateway to the Sahara, with palm groves around the town.",
+				"The French took it in 1852 after a siege."
+			],
+			"it": [
+				"Laghouat deriva probabilmente dall’arabo per \"le oasi\".",
+				"È nota come la porta del Sahara, con palmeti intorno alla città.",
+				"I francesi la presero nel 1852 dopo un assedio."
+			],
+			"de": [
+				"Laghouat kommt wahrscheinlich vom arabischen Wort für „die Oasen“.",
+				"Es ist als Tor zur Sahara bekannt, mit Palmenhainen rund um die Stadt.",
+				"Die Franzosen nahmen es 1852 nach einer Belagerung ein."
+			]
+		}
 	},
 	"el-oued": {
 		"kind": "region",
@@ -729,7 +1375,24 @@
 			"nameIt": "El Oued",
 			"population": 177497
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"El Oued means \"the valley\" in Arabic (wadi).",
+				"It is called the city of a thousand domes, for the domed roofs of its sand-coloured houses.",
+				"It lies in the Souf region, in the Grand Erg Oriental, a sea of dunes where date palms grow in pits."
+			],
+			"it": [
+				"El Oued significa \"la valle\" in arabo (wadi).",
+				"È detta la città dei mille cupole, per i tetti a cupola delle sue case color sabbia.",
+				"Si trova nella regione del Souf, nel Grande Erg Orientale, un mare di dune dove le palme da dattero crescono in fosse."
+			],
+			"de": [
+				"El Oued bedeutet auf Arabisch „das Tal“ (wadi).",
+				"Es heißt die Stadt der tausend Kuppeln, nach den Kuppeldächern seiner sandfarbenen Häuser.",
+				"Es liegt in der Region Souf im Großen Östlichen Erg, einem Dünenmeer, in dem Dattelpalmen in Gruben wachsen."
+			]
+		}
 	},
 	"naama": {
 		"kind": "region",
@@ -749,7 +1412,24 @@
 			"nameIt": "Aïn Séfra",
 			"population": 63420
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Naâma means \"ostrich\" in Arabic.",
+				"It lies in the Ksour Mountains, where old fortified villages stand among the rocks.",
+				"Aïn Sefra, in the province, is a town known for its dunes right beside the houses."
+			],
+			"it": [
+				"Naâma significa \"struzzo\" in arabo.",
+				"Si trova nei monti dei Ksour, dove antichi villaggi fortificati sorgono tra le rocce.",
+				"Aïn Sefra, nella provincia, è una città nota per le sue dune accanto alle case."
+			],
+			"de": [
+				"Naâma bedeutet auf Arabisch „Strauß“.",
+				"Es liegt im Ksour-Gebirge, wo alte befestigte Dörfer zwischen den Felsen stehen.",
+				"Aïn Sefra in der Provinz ist eine Stadt, die für ihre Dünen unmittelbar neben den Häusern bekannt ist."
+			]
+		}
 	},
 	"el-bayadh": {
 		"kind": "region",
@@ -771,7 +1451,24 @@
 			"nameIt": "El Bayadh",
 			"population": 67413
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"El Bayadh means \"the white\" in Arabic.",
+				"The province lies on the high plains, a land of steppe and sheep.",
+				"Its rocks in the Saharan Atlas carry ancient engravings of animals."
+			],
+			"it": [
+				"El Bayadh significa \"la bianca\" in arabo.",
+				"La provincia si trova sugli altopiani, una terra di steppa e di pecore.",
+				"Le sue rocce nell’Atlante sahariano portano antiche incisioni di animali."
+			],
+			"de": [
+				"El Bayadh bedeutet auf Arabisch „die Weiße“.",
+				"Die Provinz liegt auf der Hochebene, einem Land aus Steppe und Schafen.",
+				"Seine Felsen im Saharaatlas tragen uralte Tiergravuren."
+			]
+		}
 	},
 	"ghardaia": {
 		"kind": "region",
@@ -792,7 +1489,24 @@
 			"nameIt": "Ghardaïa",
 			"population": 125480
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Ghardaïa probably comes from a Berber name meaning \"little cave\"; the origin is uncertain.",
+				"The M’zab Valley, with its five fortified towns built from the 11th century, is a World Heritage Site.",
+				"The Mozabites who live there belong to the Ibadi branch of Islam and speak a Berber language."
+			],
+			"it": [
+				"Ghardaïa deriva probabilmente da un nome berbero che significa \"piccola grotta\"; l’origine è incerta.",
+				"La valle del M’zab, con le sue cinque città fortificate costruite dall’XI secolo, è Patrimonio dell’Umanità.",
+				"I mozabiti che vi abitano appartengono al ramo ibadita dell’islam e parlano una lingua berbera."
+			],
+			"de": [
+				"Ghardaïa kommt wahrscheinlich von einem berberischen Namen, der „kleine Höhle“ bedeutet; die Herkunft ist ungewiss.",
+				"Das M’zab-Tal mit seinen fünf befestigten, ab dem 11. Jahrhundert erbauten Städten ist Welterbe.",
+				"Die dort lebenden Mozabiten gehören dem ibaditischen Zweig des Islam an und sprechen eine Berbersprache."
+			]
+		}
 	},
 	"ouargla": {
 		"kind": "region",
@@ -812,7 +1526,24 @@
 			"nameIt": "Ouargla",
 			"population": 176271
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"The origin of the name is uncertain; it is an old Berber name.",
+				"The Hassi Messaoud oilfield, found in 1956, is one of the biggest in Africa.",
+				"The town is an oasis of palm groves in the northern Sahara."
+			],
+			"it": [
+				"L’origine del nome è incerta; è un antico nome berbero.",
+				"Il giacimento petrolifero di Hassi Messaoud, scoperto nel 1956, è tra i maggiori dell’Africa.",
+				"La città è un’oasi di palmeti nel Sahara settentrionale."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss; es ist ein alter berberischer Name.",
+				"Das 1956 entdeckte Ölfeld Hassi Messaoud ist eines der größten Afrikas.",
+				"Die Stadt ist eine Oase aus Palmenhainen in der nördlichen Sahara."
+			]
+		}
 	},
 	"bechar": {
 		"kind": "region",
@@ -831,7 +1562,24 @@
 			"nameIt": "Béchar",
 			"population": 143382
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"The French called the town Colomb-Béchar, until 1962.",
+				"Taghit, in the province, lies beside the high dunes of the Grand Erg Occidental.",
+				"Béchar is a main town of the south-west Sahara, near the Moroccan border."
+			],
+			"it": [
+				"I francesi chiamavano la città Colomb-Béchar, fino al 1962.",
+				"Taghit, nella provincia, sorge accanto alle alte dune del Grande Erg Occidentale.",
+				"Béchar è un centro importante del Sahara sud-occidentale, vicino al confine marocchino."
+			],
+			"de": [
+				"Die Franzosen nannten die Stadt bis 1962 Colomb-Béchar.",
+				"Taghit in der Provinz liegt neben den hohen Dünen des Großen Westlichen Erg.",
+				"Béchar ist ein Hauptort der südwestlichen Sahara, nahe der marokkanischen Grenze."
+			]
+		}
 	},
 	"tindouf": {
 		"kind": "region",
@@ -848,7 +1596,24 @@
 			"nameIt": "Tindouf",
 			"population": 18270
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"The origin of the name is uncertain; Tindouf is a Berber name.",
+				"It is the far south-western corner of Algeria, in the Sahara, on the border with Western Sahara and Mauritania.",
+				"The Gara Djebilet iron-ore deposit, one of the biggest in the world, lies in the province."
+			],
+			"it": [
+				"L’origine del nome è incerta; Tindouf è un nome berbero.",
+				"È l’estremo angolo sud-occidentale dell’Algeria, nel Sahara, al confine con il Sahara Occidentale e la Mauritania.",
+				"Il giacimento di ferro di Gara Djebilet, uno dei maggiori del mondo, si trova nella provincia."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss; Tindouf ist ein berberischer Name.",
+				"Es ist die äußerste Südwestecke Algeriens, in der Sahara, an der Grenze zu Westsahara und Mauretanien.",
+				"Die Eisenerzlagerstätte Gara Djebilet, eine der größten der Welt, liegt in der Provinz."
+			]
+		}
 	},
 	"illizi": {
 		"kind": "region",
@@ -865,7 +1630,24 @@
 			"nameIt": "Illizi",
 			"population": 7957
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"The French called the town Fort Polignac until 1962; the origin of Illizi is uncertain.",
+				"Tassili n’Ajjer, a plateau of sandstone towers in the province, is a World Heritage Site with thousands of rock paintings.",
+				"The In Amenas gas field lies in the province."
+			],
+			"it": [
+				"I francesi chiamavano la città Fort Polignac fino al 1962; l’origine di Illizi è incerta.",
+				"Il Tassili n’Ajjer, un altopiano di torri di arenaria nella provincia, è Patrimonio dell’Umanità con migliaia di pitture rupestri.",
+				"Nella provincia si trova il giacimento di gas di In Amenas."
+			],
+			"de": [
+				"Die Franzosen nannten die Stadt bis 1962 Fort Polignac; die Herkunft von Illizi ist ungewiss.",
+				"Das Tassili n’Ajjer, ein Plateau mit Sandsteintürmen in der Provinz, ist Welterbe mit Tausenden von Felsmalereien.",
+				"In der Provinz liegt das Gasfeld In Amenas."
+			]
+		}
 	},
 	"adrar": {
 		"kind": "region",
@@ -883,7 +1665,24 @@
 			"nameIt": "Adrar",
 			"population": 56910
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Adrar means \"mountain\" in Berber.",
+				"Old underground channels called foggaras bring water to the palm oases of the province.",
+				"Timimoun, with its red-clay buildings, lies in the region of the Gourara oases."
+			],
+			"it": [
+				"Adrar significa \"montagna\" in berbero.",
+				"Antichi canali sotterranei detti foggara portano l’acqua alle oasi di palme della provincia.",
+				"Timimoun, con i suoi edifici di argilla rossa, si trova nella regione delle oasi del Gourara."
+			],
+			"de": [
+				"Adrar bedeutet auf Berberisch „Berg“.",
+				"Alte unterirdische Kanäle, Foggaras genannt, bringen Wasser zu den Palmenoasen der Provinz.",
+				"Timimoun mit seinen Lehmbauten aus rotem Ton liegt in der Region der Gourara-Oasen."
+			]
+		}
 	},
 	"tamanghasset": {
 		"kind": "region",
@@ -906,6 +1705,23 @@
 			"name": "Tahat",
 			"elevation": 2908
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"The origin of the name is uncertain; Tamanrasset is a Tuareg name.",
+				"Mount Tahat, 2,908 m, the highest point in Algeria, rises in the Hoggar mountains.",
+				"The hermit Charles de Foucauld lived in the Hoggar and was killed in 1916."
+			],
+			"it": [
+				"L’origine del nome è incerta; Tamanrasset è un nome tuareg.",
+				"Il monte Tahat, 2.908 m, il punto più alto dell’Algeria, si alza nei monti dell’Hoggar.",
+				"L’eremita Charles de Foucauld visse nell’Hoggar e fu ucciso nel 1916."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss; Tamanrasset ist ein Tuareg-Name.",
+				"Der Tahat, 2.908 m, der höchste Punkt Algeriens, erhebt sich im Hoggar-Gebirge.",
+				"Der Einsiedler Charles de Foucauld lebte im Hoggar und wurde 1916 getötet."
+			]
+		}
 	}
 }

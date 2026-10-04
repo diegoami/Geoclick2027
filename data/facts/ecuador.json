@@ -2,7 +2,8 @@
 	"_note": [
 		"Name-facts for Ecuador (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences."
+		"of the same id, written later, never shows a town's sentences.",
+		"v0.19 added the 23 provinces of the map (the Galapagos are left out), each as a \"region\" entry (en, it, de)."
 	],
 	"quito": {
 		"city": {
@@ -20,6 +21,443 @@
 				"1978 gehörte ihr Altstadtzentrum zu den ersten Orten, die in die UNESCO-Welterbeliste aufgenommen wurden.",
 				"Auf etwa 2.850 m Höhe ist Quito eine der höchstgelegenen Hauptstädte der Welt.",
 				"Die Stadt liegt unterhalb des Vulkans Pichincha, der zuletzt 1999 ausbrach."
+			]
+		}
+	},
+	"carchi": {
+		"region": {
+			"en": [
+				"The origin of the name is uncertain; Carchi is the northern province, on the border with Colombia.",
+				"The cemetery of Tulcán is famous for its cypress hedges, clipped into arches and figures.",
+				"The El Ángel reserve, high in the páramo, is home to the frailejón, a plant with silvery leaves."
+			],
+			"it": [
+				"L’origine del nome è incerta; il Carchi è la provincia settentrionale, al confine con la Colombia.",
+				"Il cimitero di Tulcán è famoso per le sue siepi di cipresso, potate in archi e figure.",
+				"La riserva di El Ángel, in alto nel páramo, ospita il frailejón, una pianta dalle foglie argentate."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss; Carchi ist die nördliche Provinz an der Grenze zu Kolumbien.",
+				"Der Friedhof von Tulcán ist für seine Zypressenhecken berühmt, die zu Bögen und Figuren geschnitten sind.",
+				"Das Reservat El Ángel hoch im Páramo beherbergt den Frailejón, eine Pflanze mit silbrigen Blättern."
+			]
+		}
+	},
+	"esmeraldas": {
+		"region": {
+			"en": [
+				"Spanish for \"emeralds\": the explorers found emeralds worn by the people of this coast.",
+				"The province has a large Afro-Ecuadorian population and the marimba music of the coast.",
+				"On the island of La Tolita, the ancient Tumaco-La Tolita people made fine gold work and figurines."
+			],
+			"it": [
+				"In spagnolo \"smeraldi\": gli esploratori trovarono smeraldi portati dagli abitanti di questa costa.",
+				"La provincia ha una grande popolazione afroecuadoriana e la musica di marimba della costa.",
+				"Sull’isola di La Tolita l’antico popolo Tumaco-La Tolita realizzò raffinati lavori in oro e statuette."
+			],
+			"de": [
+				"Spanisch für „Smaragde“: Die Entdecker fanden Smaragde, die die Menschen dieser Küste trugen.",
+				"Die Provinz hat eine große afroecuadorianische Bevölkerung und die Marimba-Musik der Küste.",
+				"Auf der Insel La Tolita fertigte das alte Volk der Tumaco-La Tolita feine Goldarbeiten und Figuren."
+			]
+		}
+	},
+	"imbabura": {
+		"region": {
+			"en": [
+				"Named for the Imbabura volcano, 4,609 m high, which the local people regard as a protective mountain.",
+				"It is called the province of lakes: Cuicocha and San Pablo lie at the foot of the volcanoes.",
+				"Otavalo has a famous Saturday market of textiles and crafts."
+			],
+			"it": [
+				"Prende il nome dal vulcano Imbabura, alto 4.609 m, che gli abitanti considerano una montagna protettrice.",
+				"È detta la provincia dei laghi: Cuicocha e San Pablo si trovano ai piedi dei vulcani.",
+				"Otavalo ha un famoso mercato del sabato di tessuti e artigianato."
+			],
+			"de": [
+				"Benannt nach dem Vulkan Imbabura, 4.609 m hoch, den die Einheimischen als Schutzberg betrachten.",
+				"Sie heißt die Provinz der Seen: Cuicocha und San Pablo liegen am Fuß der Vulkane.",
+				"Otavalo hat einen berühmten Samstagsmarkt für Textilien und Kunsthandwerk."
+			]
+		}
+	},
+	"sucumbios": {
+		"region": {
+			"en": [
+				"The origin of the name is uncertain; Sucumbíos lies in the Amazon lowlands in the north-east.",
+				"Oil was found at Lago Agrio in 1967, and the town was named after Sour Lake, Texas, where the oil company came from.",
+				"The Cuyabeno Wildlife Reserve protects flooded forest and many animals."
+			],
+			"it": [
+				"L’origine del nome è incerta; il Sucumbíos si trova nelle pianure amazzoniche del nord-est.",
+				"Il petrolio fu scoperto a Lago Agrio nel 1967, e la città prese il nome da Sour Lake, in Texas, di dove veniva la compagnia petrolifera.",
+				"La Riserva faunistica di Cuyabeno protegge la foresta allagata e molti animali."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss; Sucumbíos liegt im Amazonas-Tiefland im Nordosten.",
+				"1967 wurde bei Lago Agrio Öl gefunden, und die Stadt erhielt ihren Namen nach Sour Lake in Texas, woher die Ölgesellschaft kam.",
+				"Das Tierreservat Cuyabeno schützt überfluteten Wald und viele Tiere."
+			]
+		}
+	},
+	"pichincha": {
+		"region": {
+			"en": [
+				"Named for the Pichincha volcano, which rises above Quito; the origin of the name is uncertain.",
+				"On the slopes of Pichincha, in 1822, Sucre won the battle that freed Quito from Spanish rule.",
+				"The Middle of the World monument stands near the line of the Equator, north of Quito."
+			],
+			"it": [
+				"Prende il nome dal vulcano Pichincha, che si alza sopra Quito; l’origine del nome è incerta.",
+				"Sulle pendici del Pichincha, nel 1822, Sucre vinse la battaglia che liberò Quito dal dominio spagnolo.",
+				"Il monumento alla Mitad del Mundo sorge vicino alla linea dell’Equatore, a nord di Quito."
+			],
+			"de": [
+				"Benannt nach dem Vulkan Pichincha, der sich über Quito erhebt; die Herkunft des Namens ist ungewiss.",
+				"An den Hängen des Pichincha gewann Sucre 1822 die Schlacht, die Quito von der spanischen Herrschaft befreite.",
+				"Das Denkmal Mitad del Mundo steht nahe der Äquatorlinie, nördlich von Quito."
+			]
+		}
+	},
+	"santo-domingo-de-los-tsachilas": {
+		"region": {
+			"en": [
+				"Named for its city, Santo Domingo, and for the Tsáchila, the people who live in the province.",
+				"The Tsáchila are known as the Colorados, \"the reds\", for the red paint they put on their hair.",
+				"It became a province of its own in 2007, taken out of Pichincha."
+			],
+			"it": [
+				"Prende il nome dalla sua città, Santo Domingo, e dai Tsáchila, il popolo che vive nella provincia.",
+				"I Tsáchila sono noti come i Colorados, \"i rossi\", per la tintura rossa che si mettono sui capelli.",
+				"Divenne una provincia a sé nel 2007, staccata dal Pichincha."
+			],
+			"de": [
+				"Benannt nach seiner Stadt Santo Domingo und nach den Tsáchila, dem Volk, das in der Provinz lebt.",
+				"Die Tsáchila sind als Colorados bekannt, „die Roten“, wegen der roten Farbe, die sie in ihr Haar auftragen.",
+				"2007 wurde sie eine eigene Provinz, aus Pichincha herausgelöst."
+			]
+		}
+	},
+	"tungurahua": {
+		"region": {
+			"en": [
+				"Tungurahua comes from Quichua and is usually explained as \"throat of fire\", for the volcano.",
+				"The volcano Tungurahua was in eruption on and off from 1999 to 2016.",
+				"Ambato holds a festival of flowers and fruits each year in the carnival season."
+			],
+			"it": [
+				"Tungurahua viene dal quichua e di solito è spiegato come \"gola di fuoco\", per il vulcano.",
+				"Il vulcano Tungurahua fu in eruzione a più riprese dal 1999 al 2016.",
+				"Ambato tiene ogni anno, nel periodo di carnevale, una festa dei fiori e della frutta."
+			],
+			"de": [
+				"Tungurahua stammt aus dem Quichua und wird meist als „Kehle des Feuers“ erklärt, nach dem Vulkan.",
+				"Der Vulkan Tungurahua war von 1999 bis 2016 immer wieder in Ausbruch.",
+				"In Ambato findet jedes Jahr zur Karnevalszeit ein Fest der Blumen und Früchte statt."
+			]
+		}
+	},
+	"manabi": {
+		"region": {
+			"en": [
+				"The origin of the name is uncertain; Manabí is the coastal province north of Guayaquil.",
+				"The \"Panama\" hat is woven from toquilla straw in Montecristi, in the province.",
+				"Isla de la Plata, in Machalilla National Park, is called the poor man’s Galápagos for its birds."
+			],
+			"it": [
+				"L’origine del nome è incerta; il Manabí è la provincia costiera a nord di Guayaquil.",
+				"Il cappello \"Panama\" è intrecciato con paglia toquilla a Montecristi, nella provincia.",
+				"L’Isla de la Plata, nel Parco nazionale di Machalilla, è detta le Galápagos dei poveri per i suoi uccelli."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss; Manabí ist die Küstenprovinz nördlich von Guayaquil.",
+				"Der „Panamahut“ wird in Montecristi in der Provinz aus Toquilla-Stroh geflochten.",
+				"Die Isla de la Plata im Nationalpark Machalilla wird wegen ihrer Vögel die Galápagos der Armen genannt."
+			]
+		}
+	},
+	"cotopaxi": {
+		"region": {
+			"en": [
+				"The origin of the name is disputed; it is often explained as \"neck of the moon\" in Quichua.",
+				"Cotopaxi, 5,897 m, is one of the highest active volcanoes in the world.",
+				"The crater lake of Quilotoa, a bright green, lies in the province."
+			],
+			"it": [
+				"L’origine del nome è discussa; spesso è spiegato come \"collo della luna\" in quichua.",
+				"Il Cotopaxi, 5.897 m, è uno dei vulcani attivi più alti del mondo.",
+				"Nella provincia si trova il lago di cratere di Quilotoa, di un verde brillante."
+			],
+			"de": [
+				"Die Herkunft des Namens ist umstritten; er wird oft als „Hals des Mondes“ auf Quichua erklärt.",
+				"Der Cotopaxi, 5.897 m, ist einer der höchsten aktiven Vulkane der Welt.",
+				"In der Provinz liegt der leuchtend grüne Kratersee Quilotoa."
+			]
+		}
+	},
+	"orellana": {
+		"region": {
+			"en": [
+				"Named for Francisco de Orellana, who in 1541-42 sailed the whole Amazon from the Andes to the Atlantic.",
+				"Yasuní National Park, one of the most species-rich places on Earth, lies in the province.",
+				"The Waorani people live in the forest of the park."
+			],
+			"it": [
+				"Prende il nome da Francisco de Orellana, che nel 1541-42 navigò l’intero Rio delle Amazzoni dalle Ande all’Atlantico.",
+				"Nella provincia si trova il Parco nazionale Yasuní, uno dei luoghi più ricchi di specie della Terra.",
+				"Il popolo dei Waorani vive nella foresta del parco."
+			],
+			"de": [
+				"Benannt nach Francisco de Orellana, der 1541-42 den ganzen Amazonas von den Anden bis zum Atlantik befuhr.",
+				"In der Provinz liegt der Yasuní-Nationalpark, einer der artenreichsten Orte der Erde.",
+				"Das Volk der Waorani lebt im Wald des Parks."
+			]
+		}
+	},
+	"napo": {
+		"region": {
+			"en": [
+				"Named for the Napo river, which flows from the Andes to the Amazon.",
+				"Tena, its capital, is a base for rafting and canoeing on the rivers of the rainforest.",
+				"The Sumaco volcano rises from the jungle in the province."
+			],
+			"it": [
+				"Prende il nome dal fiume Napo, che scorre dalle Ande al Rio delle Amazzoni.",
+				"Tena, il capoluogo, è una base per il rafting e le discese in canoa sui fiumi della foresta pluviale.",
+				"Il vulcano Sumaco si alza dalla giungla nella provincia."
+			],
+			"de": [
+				"Benannt nach dem Fluss Napo, der von den Anden zum Amazonas fließt.",
+				"Tena, die Hauptstadt, ist ein Standort für Rafting und Kanufahrten auf den Flüssen des Regenwalds.",
+				"Der Vulkan Sumaco erhebt sich in der Provinz aus dem Dschungel."
+			]
+		}
+	},
+	"los-rios": {
+		"region": {
+			"en": [
+				"Spanish for \"the rivers\": the province is crossed by many rivers of the coastal plain.",
+				"Its fertile fields grow cacao, bananas and rice.",
+				"Babahoyo, its capital, floods easily in the rainy season."
+			],
+			"it": [
+				"In spagnolo \"i fiumi\": la provincia è attraversata da molti fiumi della pianura costiera.",
+				"I suoi campi fertili producono cacao, banane e riso.",
+				"Babahoyo, il capoluogo, si allaga facilmente nella stagione delle piogge."
+			],
+			"de": [
+				"Spanisch für „die Flüsse“: Die Provinz wird von vielen Flüssen der Küstenebene durchzogen.",
+				"Auf ihren fruchtbaren Feldern wachsen Kakao, Bananen und Reis.",
+				"Babahoyo, die Hauptstadt, wird in der Regenzeit leicht überschwemmt."
+			]
+		}
+	},
+	"bolivar": {
+		"region": {
+			"en": [
+				"Named for Simón Bolívar, the Liberator.",
+				"Guaranda, its capital, is called the city of seven hills.",
+				"The cooperative of Salinas de Guaranda is known for its cheese and chocolate."
+			],
+			"it": [
+				"Prende il nome da Simón Bolívar, il Libertador.",
+				"Guaranda, il capoluogo, è detta la città dei sette colli.",
+				"La cooperativa di Salinas de Guaranda è nota per il suo formaggio e il suo cioccolato."
+			],
+			"de": [
+				"Benannt nach Simón Bolívar, dem Befreier.",
+				"Guaranda, die Hauptstadt, wird die Stadt der sieben Hügel genannt.",
+				"Die Genossenschaft von Salinas de Guaranda ist für ihren Käse und ihre Schokolade bekannt."
+			]
+		}
+	},
+	"pastaza": {
+		"region": {
+			"en": [
+				"Named for the Pastaza river, which flows from the Andes into the Amazon basin.",
+				"It is the largest province of Ecuador, and mostly covered by rainforest.",
+				"Kichwa, Shuar, Achuar and Waorani peoples live in its forest."
+			],
+			"it": [
+				"Prende il nome dal fiume Pastaza, che scorre dalle Ande nel bacino amazzonico.",
+				"È la più grande provincia dell’Ecuador, in gran parte coperta di foresta pluviale.",
+				"Nella sua foresta vivono popoli kichwa, shuar, achuar e waorani."
+			],
+			"de": [
+				"Benannt nach dem Fluss Pastaza, der von den Anden ins Amazonasbecken fließt.",
+				"Sie ist die größte Provinz Ecuadors und zum großen Teil von Regenwald bedeckt.",
+				"In ihrem Wald leben die Völker der Kichwa, Shuar, Achuar und Waorani."
+			]
+		}
+	},
+	"chimborazo": {
+		"region": {
+			"en": [
+				"The origin of the name is disputed; Chimborazo is the name of the volcano, in Quichua.",
+				"Chimborazo, 6,263 m, is the highest mountain in Ecuador, and its summit is the farthest point from the centre of the Earth.",
+				"The Devil’s Nose railway at Alausí climbs a sheer rock wall in zigzags."
+			],
+			"it": [
+				"L’origine del nome è discussa; Chimborazo è il nome del vulcano, in quichua.",
+				"Il Chimborazo, 6.263 m, è la montagna più alta dell’Ecuador e la sua cima è il punto più lontano dal centro della Terra.",
+				"La ferrovia del Naso del Diavolo, ad Alausí, sale a zigzag una parete rocciosa a picco."
+			],
+			"de": [
+				"Die Herkunft des Namens ist umstritten; Chimborazo ist der Name des Vulkans, auf Quichua.",
+				"Der Chimborazo, 6.263 m, ist der höchste Berg Ecuadors, und sein Gipfel ist der vom Erdmittelpunkt am weitesten entfernte Punkt.",
+				"Die Bahn der Teufelsnase bei Alausí erklimmt im Zickzack eine senkrechte Felswand."
+			]
+		}
+	},
+	"guayas": {
+		"region": {
+			"en": [
+				"Named for the Guayas river, the biggest river that flows into the Pacific on the coast of South America.",
+				"Guayaquil, the largest city of Ecuador, is its main port.",
+				"The river Guayas and its estuary form a wide basin of rice fields and cacao and banana plantations."
+			],
+			"it": [
+				"Prende il nome dal fiume Guayas, il maggiore fiume che sfocia nel Pacifico sulla costa del Sud America.",
+				"Guayaquil, la maggiore città dell’Ecuador, è il suo porto principale.",
+				"Il fiume Guayas e il suo estuario formano un ampio bacino di risaie e piantagioni di cacao e banane."
+			],
+			"de": [
+				"Benannt nach dem Fluss Guayas, dem größten Fluss, der an der Küste Südamerikas in den Pazifik mündet.",
+				"Guayaquil, die größte Stadt Ecuadors, ist sein Haupthafen.",
+				"Der Fluss Guayas und sein Mündungsgebiet bilden ein weites Becken aus Reisfeldern sowie Kakao- und Bananenplantagen."
+			]
+		}
+	},
+	"santa-elena": {
+		"region": {
+			"en": [
+				"Named for Saint Helena; the province is the Santa Elena peninsula, west of Guayaquil.",
+				"It became a province in 2007, taken out of Guayas.",
+				"The Valdivia culture made some of the earliest pottery in the Americas here, over 5,000 years ago."
+			],
+			"it": [
+				"Prende il nome da sant’Elena; la provincia è la penisola di Santa Elena, a ovest di Guayaquil.",
+				"Divenne una provincia nel 2007, staccata dal Guayas.",
+				"Qui la cultura Valdivia realizzò una delle più antiche ceramiche delle Americhe, oltre 5.000 anni fa."
+			],
+			"de": [
+				"Benannt nach der heiligen Helena; die Provinz ist die Halbinsel Santa Elena, westlich von Guayaquil.",
+				"2007 wurde sie eine Provinz, aus Guayas herausgelöst.",
+				"Die Valdivia-Kultur schuf hier vor über 5.000 Jahren eine der frühesten Keramiken Amerikas."
+			]
+		}
+	},
+	"morona-santiago": {
+		"region": {
+			"en": [
+				"Named for the Morona and Santiago rivers, which flow to the Amazon.",
+				"Sangay National Park, a World Heritage Site, has a volcano that is almost always active.",
+				"The Shuar people live in the forest of the province."
+			],
+			"it": [
+				"Prende il nome dai fiumi Morona e Santiago, che scorrono verso il Rio delle Amazzoni.",
+				"Il Parco nazionale Sangay, Patrimonio dell’Umanità, ha un vulcano quasi sempre attivo.",
+				"Il popolo degli Shuar vive nella foresta della provincia."
+			],
+			"de": [
+				"Benannt nach den Flüssen Morona und Santiago, die zum Amazonas fließen.",
+				"Der Nationalpark Sangay, Welterbe, hat einen Vulkan, der fast immer aktiv ist.",
+				"Das Volk der Shuar lebt im Wald der Provinz."
+			]
+		}
+	},
+	"canar": {
+		"region": {
+			"en": [
+				"Named for the Cañari, the people who lived here before the Incas.",
+				"Ingapirca, with the Temple of the Sun, is the largest Inca site in Ecuador.",
+				"Azogues, its capital, stands in the highlands of the south."
+			],
+			"it": [
+				"Prende il nome dai Cañari, il popolo che viveva qui prima degli inca.",
+				"Ingapirca, con il Tempio del Sole, è il maggior sito inca dell’Ecuador.",
+				"Azogues, il capoluogo, sorge sugli altopiani del sud."
+			],
+			"de": [
+				"Benannt nach den Cañari, dem Volk, das hier vor den Inka lebte.",
+				"Ingapirca mit dem Sonnentempel ist die größte Inkastätte Ecuadors.",
+				"Azogues, die Hauptstadt, liegt im Hochland des Südens."
+			]
+		}
+	},
+	"azuay": {
+		"region": {
+			"en": [
+				"The origin of the name is uncertain; Azuay is a Cañari name.",
+				"The historic centre of Cuenca, its capital, is a World Heritage Site.",
+				"Cajas National Park, above Cuenca, has hundreds of lakes in the páramo."
+			],
+			"it": [
+				"L’origine del nome è incerta; Azuay è un nome cañari.",
+				"Il centro storico di Cuenca, il capoluogo, è Patrimonio dell’Umanità.",
+				"Il Parco nazionale Cajas, sopra Cuenca, ha centinaia di laghi nel páramo."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss; Azuay ist ein Cañari-Name.",
+				"Das historische Zentrum von Cuenca, der Hauptstadt, ist Welterbe.",
+				"Der Nationalpark Cajas über Cuenca hat Hunderte von Seen im Páramo."
+			]
+		}
+	},
+	"el-oro": {
+		"region": {
+			"en": [
+				"Spanish for \"the gold\": the province is named for the gold of the Zaruma mines.",
+				"Machala, its capital, is called the banana capital of the world.",
+				"Zaruma is an old mining town of steep streets and wooden houses."
+			],
+			"it": [
+				"In spagnolo \"l’oro\": la provincia prende il nome dall’oro delle miniere di Zaruma.",
+				"Machala, il capoluogo, è detta la capitale mondiale della banana.",
+				"Zaruma è una vecchia città mineraria di strade ripide e case di legno."
+			],
+			"de": [
+				"Spanisch für „das Gold“: Die Provinz ist nach dem Gold der Minen von Zaruma benannt.",
+				"Machala, die Hauptstadt, wird die Bananenhauptstadt der Welt genannt.",
+				"Zaruma ist eine alte Bergbaustadt mit steilen Straßen und Holzhäusern."
+			]
+		}
+	},
+	"loja": {
+		"region": {
+			"en": [
+				"Named for Loja in Andalusia, Spain, the home town of some of the first settlers.",
+				"The city of Loja is called the musical capital of Ecuador.",
+				"Podocarpus National Park, with cloud forest, lies on its edge."
+			],
+			"it": [
+				"Prende il nome da Loja in Andalusia, in Spagna, la città natale di alcuni dei primi coloni.",
+				"La città di Loja è detta la capitale musicale dell’Ecuador.",
+				"Il Parco nazionale Podocarpus, con foresta nebulosa, si trova ai suoi margini."
+			],
+			"de": [
+				"Benannt nach Loja in Andalusien in Spanien, der Heimatstadt einiger der ersten Siedler.",
+				"Die Stadt Loja wird die Musikhauptstadt Ecuadors genannt.",
+				"Der Nationalpark Podocarpus mit Nebelwald liegt an ihrem Rand."
+			]
+		}
+	},
+	"zamora-chinchipe": {
+		"region": {
+			"en": [
+				"Named for the town of Zamora, after Zamora in Spain, and for the Chinchipe river.",
+				"At Santa Ana-La Florida, archaeologists found the oldest known use of cacao, about 5,300 years ago.",
+				"Podocarpus National Park spreads over part of the province."
+			],
+			"it": [
+				"Prende il nome dalla città di Zamora, da Zamora in Spagna, e dal fiume Chinchipe.",
+				"A Santa Ana-La Florida gli archeologi trovarono il più antico uso conosciuto del cacao, circa 5.300 anni fa.",
+				"Il Parco nazionale Podocarpus si estende su una parte della provincia."
+			],
+			"de": [
+				"Benannt nach der Stadt Zamora, nach Zamora in Spanien, und nach dem Fluss Chinchipe.",
+				"Bei Santa Ana-La Florida fanden Archäologen die älteste bekannte Nutzung von Kakao, vor rund 5.300 Jahren.",
+				"Der Nationalpark Podocarpus erstreckt sich über einen Teil der Provinz."
 			]
 		}
 	}

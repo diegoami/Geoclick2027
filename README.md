@@ -3,7 +3,7 @@
 A geography-learning game: pick a map, take a guided tour, then quiz
 yourself by dragging each name onto the place it belongs. The better you
 know a map, the fewer names it offers you at a time — so a map you have
-learned keeps being worth playing. 156 maps across 53 countries (and the six continents), in
+learned keeps being worth playing. 164 maps across 57 countries (and the six continents), in
 English, German and Italian. Portfolio project — see
 [ARCHITECTURE.md](ARCHITECTURE.md) for the full pitch.
 
