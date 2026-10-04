@@ -1,0 +1,444 @@
+{
+	"id": "morocco-regions",
+	"name": "Morocco — Regions",
+	"country": "Morocco",
+	"attribution": "© OpenStreetMap contributors, ODbL (via geoBoundaries); Natural Earth (public domain), https://www.naturalearthdata.com",
+	"boundarySource": "data/source/geoboundaries/MAR-ADM1.geojson",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "tangier-tetouan-al-hoceima",
+			"name": "Tangier-Tetouan-Al Hoceima",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-5.0248,
+				35.21515
+			],
+			"bbox": [
+				-6.2434,
+				34.5159,
+				-3.8062,
+				35.9144
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						-5.8954,
+						35.4365
+					],
+					[
+						-5.1114,
+						34.8469
+					],
+					[
+						-4.043,
+						34.9805
+					]
+				],
+				"aspect": 2.76
+			}
+		},
+		{
+			"id": "rabat-sale-kenitra",
+			"name": "Rabat-Salé-Kénitra",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-6.2206,
+				34.08625
+			],
+			"bbox": [
+				-7.126,
+				33.157,
+				-5.3152,
+				35.0155
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						-6.5418,
+						33.5892
+					],
+					[
+						-6.0488,
+						34.1231
+					],
+					[
+						-5.8903,
+						34.7736
+					]
+				],
+				"aspect": 1.5
+			}
+		},
+		{
+			"id": "fes-meknes",
+			"name": "Fès-Meknès",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-4.395,
+				33.74795
+			],
+			"bbox": [
+				-5.8831,
+				32.6084,
+				-2.9069,
+				34.8875
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						-5.504,
+						33.7943
+					],
+					[
+						-4.487,
+						34.0432
+					],
+					[
+						-3.4699,
+						33.4808
+					]
+				],
+				"aspect": 1.08
+			}
+		},
+		{
+			"id": "oriental",
+			"name": "Oriental",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-2.5549500000000003,
+				33.545249999999996
+			],
+			"bbox": [
+				-4.1096,
+				31.7136,
+				-1.0003,
+				35.3769
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						-3.0078,
+						35.024
+					],
+					[
+						-2.5173,
+						33.7145
+					],
+					[
+						-2.4284,
+						32.3258
+					]
+				],
+				"aspect": 1.74
+			}
+		},
+		{
+			"id": "casablanca-settat",
+			"name": "Casablanca-Settat",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-7.9081,
+				33.07555
+			],
+			"bbox": [
+				-9.0593,
+				32.3193,
+				-6.7569,
+				33.8318
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						-8.6599,
+						32.7707
+					],
+					[
+						-7.7073,
+						32.8188
+					],
+					[
+						-7.0272,
+						33.3811
+					]
+				],
+				"aspect": 1.87
+			}
+		},
+		{
+			"id": "beni-mellal-khenifra",
+			"name": "Béni Mellal-Khénifra",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-6.2799,
+				32.41175
+			],
+			"bbox": [
+				-7.3186,
+				31.3433,
+				-5.2412,
+				33.4802
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						-6.8343,
+						31.5862
+					],
+					[
+						-6.4656,
+						32.4357
+					],
+					[
+						-5.7755,
+						33.1191
+					]
+				],
+				"aspect": 1.63
+			}
+		},
+		{
+			"id": "marrakech-safi",
+			"name": "Marrakech-Safi",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-8.42735,
+				31.796
+			],
+			"bbox": [
+				-9.8419,
+				30.7914,
+				-7.0128,
+				32.8006
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						-9.5581,
+						31.4158
+					],
+					[
+						-8.5144,
+						31.839
+					],
+					[
+						-7.4707,
+						31.8528
+					]
+				],
+				"aspect": 1.18
+			}
+		},
+		{
+			"id": "draa-tafilalet",
+			"name": "Drâa-Tafilalet",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-5.4544,
+				31.279899999999998
+			],
+			"bbox": [
+				-7.7524,
+				29.4766,
+				-3.1564,
+				33.0832
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						-6.8148,
+						30.4771
+					],
+					[
+						-4.9755,
+						30.794
+					],
+					[
+						-4.1134,
+						32.2124
+					]
+				],
+				"aspect": 1.47
+			}
+		},
+		{
+			"id": "souss-massa",
+			"name": "Souss-Massa",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-8.200050000000001,
+				29.73685
+			],
+			"bbox": [
+				-10.0098,
+				28.3111,
+				-6.3903,
+				31.1626
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						-9.4221,
+						29.9598
+					],
+					[
+						-8.0876,
+						29.8141
+					],
+					[
+						-6.7531,
+						29.9861
+					]
+				],
+				"aspect": 1.58
+			}
+		},
+		{
+			"id": "guelmim-oued-noun",
+			"name": "Guelmim-Oued Noun",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-10.2247,
+				28.38335
+			],
+			"bbox": [
+				-11.7819,
+				27.1361,
+				-8.6675,
+				29.6306
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						-11.1812,
+						28.4578
+					],
+					[
+						-10.0321,
+						28.802
+					],
+					[
+						-8.883,
+						28.177
+					]
+				],
+				"aspect": 1.48
+			}
+		},
+		{
+			"id": "laayoune-sakia-el-hamra",
+			"name": "Laâyoune-Sakia El Hamra",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-11.7858,
+				26.29645
+			],
+			"bbox": [
+				-14.9049,
+				24.3833,
+				-8.6667,
+				28.2096
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						-14.167,
+						25.1723
+					],
+					[
+						-12.3078,
+						27.1662
+					],
+					[
+						-9.4187,
+						27.1122
+					]
+				],
+				"aspect": 2.29
+			}
+		},
+		{
+			"id": "dakhla-oued-ed-dahab",
+			"name": "Dakhla-Oued Ed-Dahab",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-14.53245,
+				22.881050000000002
+			],
+			"bbox": [
+				-17.0649,
+				21.0789,
+				-12,
+				24.6832
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						-16.1333,
+						22.4108
+					],
+					[
+						-14.6108,
+						23.0475
+					],
+					[
+						-13.0883,
+						23.1051
+					]
+				],
+				"aspect": 0.91
+			}
+		}
+	],
+	"tourOrder": [
+		"tangier-tetouan-al-hoceima",
+		"rabat-sale-kenitra",
+		"fes-meknes",
+		"oriental",
+		"casablanca-settat",
+		"beni-mellal-khenifra",
+		"marrakech-safi",
+		"draa-tafilalet",
+		"souss-massa",
+		"guelmim-oued-noun",
+		"laayoune-sakia-el-hamra",
+		"dakhla-oued-ed-dahab"
+	]
+}

@@ -1,48 +1,22 @@
 {
-	"_note": [
-		"Name-facts for Algeria (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
-		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences.",
-		"v0.19 added the 48 wilayas of the map (the pre-2019 set), each as a \"region\" entry (en, it, de); Algeria has 69 wilayas since 2025."
-	],
-	"algiers": {
-		"city": {
-			"en": [
-				"Called Alger la Blanche, \"Algiers the White\", for its white houses above the bay.",
-				"Its Casbah, the old town climbing the hill, is a UNESCO site.",
-				"The Monument of the Martyrs, three concrete palm leaves of 1982, marks twenty years of independence."
-			],
-			"it": [
-				"Chiamata Alger la Blanche, \"Algeri la bianca\", per le case bianche sopra la baia.",
-				"La sua Casbah, la città vecchia che sale sulla collina, è un sito UNESCO.",
-				"Il Monumento ai martiri, tre foglie di palma in cemento del 1982, celebra i vent’anni dell’indipendenza."
-			],
-			"de": [
-				"Alger la Blanche genannt, „Algier die Weiße“, nach seinen weißen Häusern über der Bucht.",
-				"Seine Kasbah, die am Hang hinaufsteigende Altstadt, ist ein UNESCO-Welterbe.",
-				"Das Märtyrerdenkmal, drei Palmwedel aus Beton von 1982, markiert zwanzig Jahre Unabhängigkeit."
-			]
-		},
-		"region": {
-			"en": [
-				"Algiers comes from the Arabic al-Jazā’ir, \"the islands\", for the islets that once lay off its harbour.",
-				"The Casbah, the old hillside town, is a World Heritage Site.",
-				"The Great Mosque of Algiers has a minaret about 265 m high, among the tallest in the world."
-			],
-			"it": [
-				"Algeri deriva dall’arabo al-Jazā’ir, \"le isole\", per gli isolotti che un tempo sorgevano davanti al suo porto.",
-				"La Casbah, la città vecchia sulla collina, è Patrimonio dell’Umanità.",
-				"La Grande Moschea di Algeri ha un minareto alto circa 265 m, tra i più alti del mondo."
-			],
-			"de": [
-				"Algier kommt vom arabischen al-Jazā’ir, „die Inseln“, nach den Inselchen, die einst vor seinem Hafen lagen.",
-				"Die Kasbah, die alte Stadt am Hang, ist Welterbe.",
-				"Die Große Moschee von Algier hat ein etwa 265 m hohes Minarett, eines der höchsten der Welt."
-			]
-		}
-	},
 	"annaba": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية عنابة",
+		"borders": [
+			"El Tarf",
+			"Guelma",
+			"Skikda"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Annaba",
+			"nameDe": "Annaba",
+			"nameIt": "Annaba",
+			"population": 503524
+		},
+		"position": "north-east",
+		"hooks": {
 			"en": [
 				"Annaba probably comes from the Arabic for the jujube tree, whose fruit grows nearby.",
 				"Saint Augustine was bishop of Hippo Regius, the Roman town whose ruins lie beside Annaba.",
@@ -61,7 +35,25 @@
 		}
 	},
 	"skikda": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "سكيكدة",
+		"borders": [
+			"Annaba",
+			"Constantine",
+			"Guelma",
+			"Jijel",
+			"Mila"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Skikda",
+			"nameDe": "Skikda",
+			"nameIt": "Skikda",
+			"population": 225181
+		},
+		"position": "north-east",
+		"hooks": {
 			"en": [
 				"Skikda was called Philippeville, for the French king Louis-Philippe, until Algeria became independent in 1962.",
 				"The Romans called the town Rusicade, and a theatre of theirs still stands.",
@@ -80,7 +72,18 @@
 		}
 	},
 	"boumerdes": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية بومرداس",
+		"borders": [
+			"Algiers",
+			"Blida",
+			"Bouira",
+			"Tizi Ouzou"
+		],
+		"coastal": true,
+		"position": "north",
+		"hooks": {
 			"en": [
 				"The origin of the name is uncertain.",
 				"A strong earthquake struck the region in May 2003 and killed more than two thousand people.",
@@ -98,8 +101,60 @@
 			]
 		}
 	},
+	"algiers": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية الجزائر",
+		"borders": [
+			"Blida",
+			"Boumerdès",
+			"Tipaza"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Algiers",
+			"nameDe": "Algier",
+			"nameIt": "Algeri",
+			"population": 3354000
+		},
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Algiers comes from the Arabic al-Jazā’ir, \"the islands\", for the islets that once lay off its harbour.",
+				"The Casbah, the old hillside town, is a World Heritage Site.",
+				"The Great Mosque of Algiers has a minaret about 265 m high, among the tallest in the world."
+			],
+			"it": [
+				"Algeri deriva dall’arabo al-Jazā’ir, \"le isole\", per gli isolotti che un tempo sorgevano davanti al suo porto.",
+				"La Casbah, la città vecchia sulla collina, è Patrimonio dell’Umanità.",
+				"La Grande Moschea di Algeri ha un minareto alto circa 265 m, tra i più alti del mondo."
+			],
+			"de": [
+				"Algier kommt vom arabischen al-Jazā’ir, „die Inseln“, nach den Inselchen, die einst vor seinem Hafen lagen.",
+				"Die Kasbah, die alte Stadt am Hang, ist Welterbe.",
+				"Die Große Moschee von Algier hat ein etwa 265 m hohes Minarett, eines der höchsten der Welt."
+			]
+		}
+	},
 	"jijel": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية جيجل",
+		"borders": [
+			"Béjaïa",
+			"Mila",
+			"Sétif",
+			"Skikda"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Jijel",
+			"nameDe": "Jijel",
+			"nameIt": "Jijel",
+			"population": 148000
+		},
+		"position": "north-east",
+		"hooks": {
 			"en": [
 				"Jijel comes from the Roman name of the town, Igilgili.",
 				"Taza National Park, with cliffs, caves and forest above the sea, lies in the province.",
@@ -118,7 +173,17 @@
 		}
 	},
 	"el-tarf": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية الطارف",
+		"borders": [
+			"Annaba",
+			"Guelma",
+			"Souk Ahras"
+		],
+		"coastal": true,
+		"position": "north-east",
+		"hooks": {
 			"en": [
 				"El Tarf means \"the edge\" in Arabic: the province lies at the far north-east of the country.",
 				"El Kala National Park is a biosphere reserve with lakes, forest and coast.",
@@ -137,7 +202,23 @@
 		}
 	},
 	"tizi-ouzou": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية غليزان",
+		"borders": [
+			"Béjaïa",
+			"Bouira",
+			"Boumerdès"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tizi-Ouzou",
+			"nameDe": "Tizi Ouzou",
+			"nameIt": "Tizi Ouzou",
+			"population": 144000
+		},
+		"position": "north",
+		"hooks": {
 			"en": [
 				"Tizi Ouzou comes from Berber: tizi means \"pass\" and ouzou \"broom\", the plant.",
 				"It is the heart of Kabylia, where many people speak Kabyle, a Berber language.",
@@ -156,7 +237,18 @@
 		}
 	},
 	"tipaza": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية تيبازة",
+		"borders": [
+			"Aïn Defla",
+			"Algiers",
+			"Blida",
+			"Chlef"
+		],
+		"coastal": true,
+		"position": "north",
+		"hooks": {
 			"en": [
 				"The origin of the name is uncertain; it is an ancient name used by Phoenicians and Romans.",
 				"The ruins of Roman Tipasa, on a cliff above the sea, are a World Heritage Site.",
@@ -175,7 +267,25 @@
 		}
 	},
 	"bejaia": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "بجاية",
+		"borders": [
+			"Bordj Bou Arréridj",
+			"Bouira",
+			"Jijel",
+			"Sétif",
+			"Tizi Ouzou"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Béjaïa",
+			"nameDe": "Bejaia",
+			"nameIt": "Béjaïa",
+			"population": 384937
+		},
+		"position": "north",
+		"hooks": {
 			"en": [
 				"Béjaïa comes from the Berber Bgayet; the Romans called the town Saldae.",
 				"In the 11th century it was the capital of the Hammadid dynasty and a major port.",
@@ -194,7 +304,26 @@
 		}
 	},
 	"blida": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "البليدة",
+		"borders": [
+			"Aïn Defla",
+			"Algiers",
+			"Bouira",
+			"Boumerdès",
+			"Médéa",
+			"Tipaza"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Blida",
+			"nameDe": "Blida",
+			"nameIt": "Blida",
+			"population": 511348
+		},
+		"position": "north",
+		"hooks": {
 			"en": [
 				"Blida comes from boulaïda, a little town; it is known as the city of roses.",
 				"Chréa National Park, in the Blidean Atlas above the city, has cedar forests and a ski area.",
@@ -213,7 +342,26 @@
 		}
 	},
 	"guelma": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية قالمة",
+		"borders": [
+			"Annaba",
+			"Constantine",
+			"El Tarf",
+			"Oum El Bouaghi",
+			"Skikda",
+			"Souk Ahras"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Guelma",
+			"nameDe": "Guelma",
+			"nameIt": "Guelma",
+			"population": 123590
+		},
+		"position": "north-east",
+		"hooks": {
 			"en": [
 				"Guelma comes from the Roman name of the town, Calama.",
 				"Its Roman theatre, with room for several thousand, is still used for shows.",
@@ -232,7 +380,24 @@
 		}
 	},
 	"constantine": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "قسنطينة",
+		"borders": [
+			"Guelma",
+			"Mila",
+			"Oum El Bouaghi",
+			"Skikda"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Constantine",
+			"nameDe": "Constantine",
+			"nameIt": "Costantina",
+			"population": 605179
+		},
+		"position": "north-east",
+		"hooks": {
 			"en": [
 				"Named for the Roman emperor Constantine, who rebuilt the ancient town of Cirta in the 4th century.",
 				"Constantine is called the city of bridges, for the many bridges that cross its gorge.",
@@ -251,7 +416,31 @@
 		}
 	},
 	"bouira": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية البويرة",
+		"borders": [
+			"Béjaïa",
+			"Blida",
+			"Bordj Bou Arréridj",
+			"Boumerdès",
+			"M'Sila",
+			"Médéa",
+			"Tizi Ouzou"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bouïra",
+			"nameDe": "Bouira",
+			"nameIt": "Bouira",
+			"population": 110144
+		},
+		"peak": {
+			"name": "Lalla Khedidja",
+			"elevation": 2308
+		},
+		"position": "north",
+		"hooks": {
 			"en": [
 				"The origin of the name is uncertain; one explanation is the Arabic for \"small well\".",
 				"It lies south of the Djurdjura mountains, whose high slopes are a ski area.",
@@ -270,7 +459,20 @@
 		}
 	},
 	"mila": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية ميلة",
+		"borders": [
+			"Batna",
+			"Constantine",
+			"Jijel",
+			"Oum El Bouaghi",
+			"Sétif",
+			"Skikda"
+		],
+		"coastal": false,
+		"position": "north-east",
+		"hooks": {
 			"en": [
 				"Mila comes from the Roman name of the town, Milevum.",
 				"The Sidi Ghanem mosque, from the 7th century, is said to be the oldest in Algeria.",
@@ -289,7 +491,25 @@
 		}
 	},
 	"chlef": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية الشلف",
+		"borders": [
+			"Aïn Defla",
+			"Mostaganem",
+			"Relizane",
+			"Tipaza",
+			"Tissemsilt"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Chlef",
+			"nameDe": "Ech Cheliff",
+			"nameIt": "Chlef",
+			"population": 449167
+		},
+		"position": "north",
+		"hooks": {
 			"en": [
 				"Chlef is named for the Chelif, Algeria’s longest river, which flows through the province.",
 				"The town was called Orléansville under the French and El Asnam from 1962 until 1981.",
@@ -308,7 +528,24 @@
 		}
 	},
 	"souk-ahras": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية سوق أهراس",
+		"borders": [
+			"El Tarf",
+			"Guelma",
+			"Oum El Bouaghi",
+			"Tébessa"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Souk Ahras",
+			"nameDe": "Souq Ahras",
+			"nameIt": "Souk Ahras",
+			"population": 134947
+		},
+		"position": "north-east",
+		"hooks": {
 			"en": [
 				"Souk Ahras is usually explained as \"market of the lions\", though the origin is debated.",
 				"Saint Augustine was born in 354 in Thagaste, the Roman town on the site of today’s Souk Ahras.",
@@ -327,7 +564,19 @@
 		}
 	},
 	"ain-defla": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية عين الدفلى",
+		"borders": [
+			"Blida",
+			"Chlef",
+			"Médéa",
+			"Tipaza",
+			"Tissemsilt"
+		],
+		"coastal": false,
+		"position": "north",
+		"hooks": {
 			"en": [
 				"Aïn Defla means \"spring of the oleander\": aïn is \"spring\" and defla the oleander.",
 				"Khemis Miliana, on the Chelif plain, is its main town.",
@@ -346,7 +595,26 @@
 		}
 	},
 	"setif": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية سطيف",
+		"borders": [
+			"Batna",
+			"Béjaïa",
+			"Bordj Bou Arréridj",
+			"Jijel",
+			"M'Sila",
+			"Mila"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Sétif",
+			"nameDe": "Sétif",
+			"nameIt": "Sétif",
+			"population": 274744
+		},
+		"position": "north-east",
+		"hooks": {
 			"en": [
 				"Sétif comes from the Roman name of the town, Sitifis.",
 				"The fountain of Aïn el Fouara, in the middle of the town, is its best-known monument.",
@@ -365,7 +633,24 @@
 		}
 	},
 	"bordj-bou-arreridj": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية برج بوعريريج",
+		"borders": [
+			"Béjaïa",
+			"Bouira",
+			"M'Sila",
+			"Sétif"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bordj Bou Arréridj",
+			"nameDe": "Bordj Bou Arreridj",
+			"nameIt": "Bordj Bou Arreridj",
+			"population": 140000
+		},
+		"position": "north",
+		"hooks": {
 			"en": [
 				"Bordj means \"fort\": the town grew around the Ottoman fort of Bou Arréridj.",
 				"It is the home of Condor, one of Algeria’s biggest electronics makers.",
@@ -384,7 +669,24 @@
 		}
 	},
 	"mostaganem": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية مستغانم",
+		"borders": [
+			"Chlef",
+			"Mascara",
+			"Oran",
+			"Relizane"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Mostaganem",
+			"nameDe": "Mostaganem",
+			"nameIt": "Mostaganem",
+			"population": 188354
+		},
+		"position": "north",
+		"hooks": {
 			"en": [
 				"The origin of the name is uncertain.",
 				"Mostaganem lies on the Mediterranean coast, east of Oran, with beaches such as Salamandre.",
@@ -403,7 +705,27 @@
 		}
 	},
 	"medea": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية المدية",
+		"borders": [
+			"Aïn Defla",
+			"Blida",
+			"Bouira",
+			"Djelfa",
+			"M'Sila",
+			"Tiaret",
+			"Tissemsilt"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Médéa",
+			"nameDe": "Medea",
+			"nameIt": "Médéa",
+			"population": 147707
+		},
+		"position": "north",
+		"hooks": {
 			"en": [
 				"The origin of the name is uncertain; the Romans called the town Lambdia.",
 				"Médéa stands at about 900 m on a plateau of the Tell Atlas, south of Algiers.",
@@ -422,7 +744,19 @@
 		}
 	},
 	"relizane": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية غليزان",
+		"borders": [
+			"Chlef",
+			"Mascara",
+			"Mostaganem",
+			"Tiaret",
+			"Tissemsilt"
+		],
+		"coastal": false,
+		"position": "north",
+		"hooks": {
 			"en": [
 				"The origin of the name is uncertain.",
 				"The province lies in the Chelif valley, a farming country of cereals and citrus fruit.",
@@ -441,7 +775,27 @@
 		}
 	},
 	"oum-el-bouaghi": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية أم البواقي",
+		"borders": [
+			"Batna",
+			"Constantine",
+			"Guelma",
+			"Khenchela",
+			"Mila",
+			"Souk Ahras",
+			"Tébessa"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Oum el Bouaghi",
+			"nameDe": "Oum el Bouaghi",
+			"nameIt": "Oum el-Bouaghi",
+			"population": 100821
+		},
+		"position": "north-east",
+		"hooks": {
 			"en": [
 				"Oum El Bouaghi means \"mother of the Bouaghi\", after a local tribe or place; the French called the town Canrobert.",
 				"It lies on the high plains, a land of wheat and salt lakes.",
@@ -460,7 +814,19 @@
 		}
 	},
 	"tissemsilt": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية تسمسيلت",
+		"borders": [
+			"Aïn Defla",
+			"Chlef",
+			"Médéa",
+			"Relizane",
+			"Tiaret"
+		],
+		"coastal": false,
+		"position": "north",
+		"hooks": {
 			"en": [
 				"Tissemsilt is a Berber name whose meaning is uncertain.",
 				"Theniet El Had National Park, in the province, protects one of the finest cedar forests in Algeria.",
@@ -479,7 +845,24 @@
 		}
 	},
 	"oran": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية وهران",
+		"borders": [
+			"Aïn Témouchent",
+			"Mascara",
+			"Mostaganem",
+			"Sidi Bel Abbès"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Oran",
+			"nameDe": "Oran",
+			"nameIt": "Orano",
+			"population": 798000
+		},
+		"position": "north",
+		"hooks": {
 			"en": [
 				"Oran comes from the Arabic Wahran, which a legend explains as \"two lions\".",
 				"Oran is the birthplace of raï, a popular music that sings of daily life.",
@@ -498,7 +881,26 @@
 		}
 	},
 	"mascara": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية معسكر",
+		"borders": [
+			"Mostaganem",
+			"Oran",
+			"Relizane",
+			"Saïda",
+			"Sidi Bel Abbès",
+			"Tiaret"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Mascara",
+			"nameDe": "Muaskar",
+			"nameIt": "Mascara",
+			"population": 108230
+		},
+		"position": "north",
+		"hooks": {
 			"en": [
 				"Mascara is usually explained as \"mother of soldiers\" in Arabic, though the origin is debated.",
 				"Emir Abdelkader, who led the resistance to the French conquest, was born near Mascara in 1808.",
@@ -517,7 +919,17 @@
 		}
 	},
 	"ain-temouchent": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية عين تموشنت",
+		"borders": [
+			"Oran",
+			"Sidi Bel Abbès",
+			"Tlemcen"
+		],
+		"coastal": true,
+		"position": "north",
+		"hooks": {
 			"en": [
 				"Aïn Témouchent means \"spring of Témouchent\": aïn is \"spring\".",
 				"Rachgoun, a small island off its coast, has the remains of an ancient Phoenician port.",
@@ -536,7 +948,26 @@
 		}
 	},
 	"batna": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية باتنة",
+		"borders": [
+			"Biskra",
+			"Khenchela",
+			"M'Sila",
+			"Mila",
+			"Oum El Bouaghi",
+			"Sétif"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Batna",
+			"nameDe": "Batna",
+			"nameIt": "Batna",
+			"population": 280798
+		},
+		"position": "north-east",
+		"hooks": {
 			"en": [
 				"Batna is popularly explained as \"spend the night\", from the camp the French built there in 1844.",
 				"The Roman city of Timgad, laid out on a grid around the year 100, is a World Heritage Site.",
@@ -555,7 +986,27 @@
 		}
 	},
 	"m-sila": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية المسيلة",
+		"borders": [
+			"Batna",
+			"Biskra",
+			"Bordj Bou Arréridj",
+			"Bouira",
+			"Djelfa",
+			"Médéa",
+			"Sétif"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "M'sila",
+			"nameDe": "M'Sila",
+			"nameIt": "M'Sila",
+			"population": 150000
+		},
+		"position": "north",
+		"hooks": {
 			"en": [
 				"M’Sila comes from the Arabic for a watercourse, a path where water runs.",
 				"Qal’at Bani Hammad, the ruined capital of the Hammadid dynasty, is a World Heritage Site.",
@@ -574,7 +1025,24 @@
 		}
 	},
 	"tebessa": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية تبسة",
+		"borders": [
+			"El Oued",
+			"Khenchela",
+			"Oum El Bouaghi",
+			"Souk Ahras"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tébessa",
+			"nameDe": "Tebessa",
+			"nameIt": "Tébessa",
+			"population": 171742
+		},
+		"position": "north-east",
+		"hooks": {
 			"en": [
 				"Tébessa comes from the Roman name of the town, Theveste.",
 				"Its Roman arch, built for the emperor Caracalla, still stands at one of the town gates.",
@@ -593,7 +1061,23 @@
 		}
 	},
 	"khenchela": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية خنشلة",
+		"borders": [
+			"Batna",
+			"Biskra",
+			"El Oued",
+			"Oum El Bouaghi",
+			"Tébessa"
+		],
+		"coastal": false,
+		"peak": {
+			"name": "Djebel Chelia",
+			"elevation": 2326
+		},
+		"position": "north-east",
+		"hooks": {
 			"en": [
 				"Khenchela probably comes from a Berber word; the Romans called the town Mascula.",
 				"Mount Chélia, 2,328 m, the highest peak of the Aurès, rises in the province.",
@@ -612,7 +1096,28 @@
 		}
 	},
 	"tiaret": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية تيارت",
+		"borders": [
+			"Djelfa",
+			"El Bayadh",
+			"Laghouat",
+			"Mascara",
+			"Médéa",
+			"Relizane",
+			"Saïda",
+			"Tissemsilt"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tiarat",
+			"nameDe": "Tiaret",
+			"nameIt": "Tiaret",
+			"population": 184195
+		},
+		"position": "north",
+		"hooks": {
 			"en": [
 				"Tiaret comes from the Berber tihert, \"lioness\"; the old town of Tahert was the capital of the Rustamid dynasty.",
 				"Tiaret is known for its horse stud, which breeds Arabian-Barb horses.",
@@ -631,7 +1136,26 @@
 		}
 	},
 	"sidi-bel-abbes": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية سيدي بلعباس",
+		"borders": [
+			"Aïn Témouchent",
+			"Mascara",
+			"Naâma",
+			"Oran",
+			"Saïda",
+			"Tlemcen"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Sidi bel Abbes",
+			"nameDe": "Sidi bel Abbès",
+			"nameIt": "Sidi Bel Abbes",
+			"population": 208604
+		},
+		"position": "north",
+		"hooks": {
 			"en": [
 				"Named for Sidi Bel Abbès, a Muslim saint whose tomb stands in the town.",
 				"The French Foreign Legion had its headquarters here until 1962.",
@@ -650,7 +1174,23 @@
 		}
 	},
 	"tlemcen": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "تلمسان",
+		"borders": [
+			"Aïn Témouchent",
+			"Naâma",
+			"Sidi Bel Abbès"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tlimcen",
+			"nameDe": "Tlemcen",
+			"nameIt": "Tlemcen",
+			"population": 229777
+		},
+		"position": "north",
+		"hooks": {
 			"en": [
 				"The origin of the name is debated; Tlemcen comes from a Berber word, perhaps for springs.",
 				"The Great Mosque, founded in 1082 by the Almoravids, is one of the oldest in Algeria.",
@@ -669,7 +1209,25 @@
 		}
 	},
 	"saida": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية سعيدة",
+		"borders": [
+			"El Bayadh",
+			"Mascara",
+			"Naâma",
+			"Sidi Bel Abbès",
+			"Tiaret"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Saïda",
+			"nameDe": "Saida",
+			"nameIt": "Saida",
+			"population": 142213
+		},
+		"position": "north",
+		"hooks": {
 			"en": [
 				"Saïda probably comes from the Arabic saïd, \"happy\"; the origin is uncertain.",
 				"The province lies on the high plains, where alfa grass, used for paper, grows wild.",
@@ -688,7 +1246,25 @@
 		}
 	},
 	"biskra": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية بسكرة",
+		"borders": [
+			"Batna",
+			"Djelfa",
+			"El Oued",
+			"Khenchela",
+			"M'Sila"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Biskra",
+			"nameDe": "Biskra",
+			"nameIt": "Biskra",
+			"population": 202103
+		},
+		"position": "north-east",
+		"hooks": {
 			"en": [
 				"Biskra comes from the Roman name of the town, Vescera.",
 				"It is called the gateway to the Sahara and the queen of the Zibans, the palm oases of the region.",
@@ -707,7 +1283,28 @@
 		}
 	},
 	"djelfa": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية الجلفة",
+		"borders": [
+			"Biskra",
+			"El Oued",
+			"Ghardaïa",
+			"Laghouat",
+			"M'Sila",
+			"Médéa",
+			"Ouargla",
+			"Tiaret"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Djelfa",
+			"nameDe": "El Djelfa",
+			"nameIt": "Djelfa",
+			"population": 170901
+		},
+		"position": "north",
+		"hooks": {
 			"en": [
 				"The origin of the name is uncertain.",
 				"Djelfa is one of Algeria’s main sheep-raising areas, on the steppe of the high plains.",
@@ -726,7 +1323,24 @@
 		}
 	},
 	"laghouat": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية الأغواط",
+		"borders": [
+			"Djelfa",
+			"El Bayadh",
+			"Ghardaïa",
+			"Tiaret"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Laghouat",
+			"nameDe": "Laghouat",
+			"nameIt": "Laghouat",
+			"population": 113872
+		},
+		"position": "north",
+		"hooks": {
 			"en": [
 				"Laghouat probably comes from the Arabic for \"the oases\".",
 				"It is known as the gateway to the Sahara, with palm groves around the town.",
@@ -745,7 +1359,24 @@
 		}
 	},
 	"el-oued": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Biskra",
+			"Djelfa",
+			"Khenchela",
+			"Ouargla",
+			"Tébessa"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "El Oued",
+			"nameDe": "El Oued",
+			"nameIt": "El Oued",
+			"population": 177497
+		},
+		"position": "north-east",
+		"hooks": {
 			"en": [
 				"El Oued means \"the valley\" in Arabic (wadi).",
 				"It is called the city of a thousand domes, for the domed roofs of its sand-coloured houses.",
@@ -764,7 +1395,25 @@
 		}
 	},
 	"naama": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية النعامة",
+		"borders": [
+			"Béchar",
+			"El Bayadh",
+			"Saïda",
+			"Sidi Bel Abbès",
+			"Tlemcen"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Sefra",
+			"nameDe": "Aïn Séfra",
+			"nameIt": "Aïn Séfra",
+			"population": 63420
+		},
+		"position": "north",
+		"hooks": {
 			"en": [
 				"Naâma means \"ostrich\" in Arabic.",
 				"It lies in the Ksour Mountains, where old fortified villages stand among the rocks.",
@@ -783,7 +1432,27 @@
 		}
 	},
 	"el-bayadh": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية البيض",
+		"borders": [
+			"Adrar",
+			"Béchar",
+			"Ghardaïa",
+			"Laghouat",
+			"Naâma",
+			"Saïda",
+			"Tiaret"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "El Bayadh",
+			"nameDe": "El Bayadh",
+			"nameIt": "El Bayadh",
+			"population": 67413
+		},
+		"position": "north",
+		"hooks": {
 			"en": [
 				"El Bayadh means \"the white\" in Arabic.",
 				"The province lies on the high plains, a land of steppe and sheep.",
@@ -802,7 +1471,26 @@
 		}
 	},
 	"ghardaia": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية غرداية",
+		"borders": [
+			"Adrar",
+			"Djelfa",
+			"El Bayadh",
+			"Laghouat",
+			"Ouargla",
+			"Tamanghasset"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ghardaia",
+			"nameDe": "Ghardaia",
+			"nameIt": "Ghardaïa",
+			"population": 125480
+		},
+		"position": "centre",
+		"hooks": {
 			"en": [
 				"Ghardaïa probably comes from a Berber name meaning \"little cave\"; the origin is uncertain.",
 				"The M’zab Valley, with its five fortified towns built from the 11th century, is a World Heritage Site.",
@@ -821,7 +1509,25 @@
 		}
 	},
 	"ouargla": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ورقلة",
+		"borders": [
+			"Djelfa",
+			"El Oued",
+			"Ghardaïa",
+			"Illizi",
+			"Tamanghasset"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ouargla",
+			"nameDe": "Ouargla",
+			"nameIt": "Ouargla",
+			"population": 176271
+		},
+		"position": "east",
+		"hooks": {
 			"en": [
 				"The origin of the name is uncertain; it is an old Berber name.",
 				"The Hassi Messaoud oilfield, found in 1956, is one of the biggest in Africa.",
@@ -840,7 +1546,24 @@
 		}
 	},
 	"bechar": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية بشار",
+		"borders": [
+			"Adrar",
+			"El Bayadh",
+			"Naâma",
+			"Tindouf"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Béchar",
+			"nameDe": "Bechar",
+			"nameIt": "Béchar",
+			"population": 143382
+		},
+		"position": "west",
+		"hooks": {
 			"en": [
 				"The French called the town Colomb-Béchar, until 1962.",
 				"Taghit, in the province, lies beside the high dunes of the Grand Erg Occidental.",
@@ -859,7 +1582,22 @@
 		}
 	},
 	"tindouf": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية تندوف",
+		"borders": [
+			"Adrar",
+			"Béchar"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tindouf",
+			"nameDe": "Tindouf",
+			"nameIt": "Tindouf",
+			"population": 18270
+		},
+		"position": "west",
+		"hooks": {
 			"en": [
 				"The origin of the name is uncertain; Tindouf is a Berber name.",
 				"It is the far south-western corner of Algeria, in the Sahara, on the border with Western Sahara and Mauritania.",
@@ -878,7 +1616,22 @@
 		}
 	},
 	"illizi": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية اليزي",
+		"borders": [
+			"Ouargla",
+			"Tamanghasset"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Illizi",
+			"nameDe": "Illizi",
+			"nameIt": "Illizi",
+			"population": 7957
+		},
+		"position": "east",
+		"hooks": {
 			"en": [
 				"The French called the town Fort Polignac until 1962; the origin of Illizi is uncertain.",
 				"Tassili n’Ajjer, a plateau of sandstone towers in the province, is a World Heritage Site with thousands of rock paintings.",
@@ -897,7 +1650,23 @@
 		}
 	},
 	"adrar": {
-		"region": {
+		"kind": "region",
+		"borders": [
+			"Béchar",
+			"El Bayadh",
+			"Ghardaïa",
+			"Tamanghasset",
+			"Tindouf"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Adrar",
+			"nameDe": "Adrar",
+			"nameIt": "Adrar",
+			"population": 56910
+		},
+		"position": "centre",
+		"hooks": {
 			"en": [
 				"Adrar means \"mountain\" in Berber.",
 				"Old underground channels called foggaras bring water to the palm oases of the province.",
@@ -916,7 +1685,28 @@
 		}
 	},
 	"tamanghasset": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"localName": "ولاية تمنراست",
+		"borders": [
+			"Adrar",
+			"Ghardaïa",
+			"Illizi",
+			"Ouargla"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Arak",
+			"nameDe": "Arak",
+			"nameIt": "Arak",
+			"population": 423251
+		},
+		"peak": {
+			"name": "Tahat",
+			"elevation": 2908
+		},
+		"position": "south-east",
+		"hooks": {
 			"en": [
 				"The origin of the name is uncertain; Tamanrasset is a Tuareg name.",
 				"Mount Tahat, 2,908 m, the highest point in Algeria, rises in the Hoggar mountains.",

@@ -115,3 +115,14 @@ fetch_geojson PHL-ADM2 "$GEOBOUNDARIES/PHL/ADM2/geoBoundaries-PHL-ADM2_simplifie
 # Bangladesh (v0.18): the eight divisions, Mymensingh included (Natural Earth has
 # seven). CC0 / public domain.
 fetch_geojson BGD-ADM1 "$GEOBOUNDARIES/BGD/ADM1/geoBoundaries-BGD-ADM1_simplified.geojson"
+
+# Pakistan (v0.19): the seven provinces and territories after the 2018 merger of
+# the tribal areas into Khyber Pakhtunkhwa (Natural Earth still has FATA).
+# Public domain. It draws Azad Kashmir and Gilgit-Baltistan as administered by
+# Pakistan; the lines there are disputed (MAPS.md).
+fetch_geojson PAK-ADM1 "$GEOBOUNDARIES/PAK/ADM1/geoBoundaries-PAK-ADM1_simplified.geojson"
+
+# Morocco (v0.19): the twelve regions of 2015, from OpenStreetMap through
+# geoBoundaries (ODbL). The two southern regions lie in Western Sahara, which
+# Morocco administers in part and whose status is disputed (MAPS.md).
+fetch_geojson MAR-ADM1 "$GEOBOUNDARIES/MAR/ADM1/geoBoundaries-MAR-ADM1_simplified.geojson"

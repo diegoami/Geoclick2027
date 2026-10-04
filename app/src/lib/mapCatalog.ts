@@ -55,6 +55,13 @@ export const mapGroups: CountryGroup[] = [
 		]
 	},
 	{
+		country: 'Algeria',
+		maps: [
+			{ id: 'algeria-wilayas', labelKey: 'mapType.wilayas' },
+			{ id: 'algeria-towns-100k', labelKey: 'mapType.towns' }
+		]
+	},
+	{
 		country: 'Argentina',
 		maps: [
 			{ id: 'argentina-regions', labelKey: 'mapType.regions' },
@@ -142,6 +149,13 @@ export const mapGroups: CountryGroup[] = [
 		maps: [
 			{ id: 'denmark-regions', labelKey: 'mapType.regions' },
 			{ id: 'denmark-towns-50k', labelKey: 'mapType.towns' }
+		]
+	},
+	{
+		country: 'Ecuador',
+		maps: [
+			{ id: 'ecuador-provinces', labelKey: 'mapType.provinces' },
+			{ id: 'ecuador-towns-50k', labelKey: 'mapType.towns' }
 		]
 	},
 	{
@@ -411,6 +425,13 @@ export const mapGroups: CountryGroup[] = [
 		]
 	},
 	{
+		country: 'Morocco',
+		maps: [
+			{ id: 'morocco-regions', labelKey: 'mapType.regions' },
+			{ id: 'morocco-towns-100k', labelKey: 'mapType.towns' }
+		]
+	},
+	{
 		country: 'Netherlands',
 		maps: [
 			{ id: 'netherlands-regions', labelKey: 'mapType.provinces' },
@@ -480,6 +501,13 @@ export const mapGroups: CountryGroup[] = [
 		maps: [
 			{ id: 'oceania-countries', labelKey: 'mapType.countries' },
 			{ id: 'oceania-capitals', labelKey: 'mapType.capitals' }
+		]
+	},
+	{
+		country: 'Pakistan',
+		maps: [
+			{ id: 'pakistan-provinces', labelKey: 'mapType.provinces' },
+			{ id: 'pakistan-towns-100k', labelKey: 'mapType.towns' }
 		]
 	},
 	{

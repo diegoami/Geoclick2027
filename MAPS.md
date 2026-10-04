@@ -1211,6 +1211,64 @@ npx tsx data/scripts/build-points-map.ts --country=Malaysia --min-population=100
 npx tsx data/scripts/build-points-map.ts --country=Bangladesh --min-population=100000 --out=data/maps/bangladesh-towns-100k --name="Bangladesh — Towns"
 ```
 
+### Algeria, Ecuador and Pakistan (built 2026-10-04, v0.19, #209)
+
+Chosen by the owner. **Algeria — Wilayas** (48, Natural Earth, public domain)
+and Towns (34 at 100 000; "Arak" excluded, a stray entry); **Ecuador —
+Provinces** (23, Natural Earth, without the Galápagos, 1 000 km out in the
+Pacific: the overseas-territories rule) and Towns (17 at 50 000); **Pakistan —
+Provinces** (7: four provinces, Islamabad Capital Territory, Azad Kashmir and
+Gilgit-Baltistan; geoBoundaries ADM1 of 2019, public domain, after the tribal
+areas joined Khyber Pakhtunkhwa in 2018, which Natural Earth still shows as
+FATA) and Towns (35 at 100 000).
+
+Known limits, said plainly: Algeria now has 69 wilayas (the eleven added in
+2025, on top of the 58 of 2019, which came after the 48 of this map), and neither
+Natural Earth nor geoBoundaries has the new ones. The 2026-10-04 spike tried
+OpenStreetMap through Overpass, which carries some of the newer wilayas under
+codes outside ISO 3166-2 (that standard defines only 58), but the public
+instances time out on country-sized requests, the result is a moving target and
+the set was incomplete when tried, so the 48 stay. The same finding holds for the newer
+borders of Kazakhstan (20 regions since 2022) and Norway (15 counties since
+2024) and for Ethiopia (12 regions and 2 chartered cities since 2023): none is
+rebuilt in v0.19. Pakistan's map draws Azad Kashmir and Gilgit-Baltistan as
+the areas Pakistan administers; the lines in Kashmir are disputed and the
+sources draw the de facto ones.
+
+```
+npx tsx data/scripts/build-map.ts --country=Algeria --type=wilaya --out=data/maps/algeria-wilayas --name="Algeria — Wilayas"
+npx tsx data/scripts/build-map.ts --country=Ecuador --type=province --exclude="Galápagos" --out=data/maps/ecuador-provinces --name="Ecuador — Provinces"
+npx tsx data/scripts/build-map.ts --country=Pakistan --type=province --source=data/source/geoboundaries/PAK-ADM1.geojson "--attribution=geoBoundaries, public domain" --out=data/maps/pakistan-provinces --name="Pakistan — Provinces"
+npx tsx data/scripts/build-points-map.ts --country=Algeria --min-population=100000 --exclude="Arak" --out=data/maps/algeria-towns-100k --name="Algeria — Towns"
+npx tsx data/scripts/build-points-map.ts --country=Ecuador --min-population=50000 --out=data/maps/ecuador-towns-50k --name="Ecuador — Towns"
+npx tsx data/scripts/build-points-map.ts --country=Pakistan --min-population=100000 --out=data/maps/pakistan-towns-100k --name="Pakistan — Towns"
+```
+
+### Morocco (built 2026-10-04, v0.19, #209)
+
+**Morocco — Regions** (12, the regions of 2015; geoBoundaries ADM1 of 2017, from
+OpenStreetMap, ODbL, attribution "© OpenStreetMap contributors, ODbL (via
+geoBoundaries)"; Natural Earth still has the sixteen regions before 2015) and
+Towns (18 at 100 000, Natural Earth). Chosen by the owner, with a notice about
+Western Sahara.
+
+**Western Sahara, said plainly.** Two of the twelve regions, Laâyoune-Sakia El
+Hamra and Dakhla-Oued Ed-Dahab, lie in Western Sahara, a territory whose status is
+disputed: Morocco administers most of it, the Polisario Front (the Sahrawi Arab
+Democratic Republic it proclaimed) claims all of it, and the United Nations lists
+it as a non-self-governing territory. The map draws the two regions as the source
+draws them: covering the whole of Western Sahara as Morocco claims it, up to the
+borders with Algeria and Mauritania, including the part east of the sand wall that
+the Polisario Front controls. That is Morocco's claim, not a statement on the
+dispute; the sentences about the two regions say so in neutral words. Showing only
+the area Morocco controls would need the line of the sand wall, which none of the
+sources has; the choice is the owner's (#209) and is recorded here.
+
+```
+npx tsx data/scripts/build-map.ts --country=Morocco --type=region --source=data/source/geoboundaries/MAR-ADM1.geojson "--attribution=© OpenStreetMap contributors, ODbL (via geoBoundaries)" --out=data/maps/morocco-regions --name="Morocco — Regions"
+npx tsx data/scripts/build-points-map.ts --country=Morocco --min-population=100000 --out=data/maps/morocco-towns-100k --name="Morocco — Towns"
+```
+
 ## The Terrain layer: `terrain.pmtiles` (FT-33, 2026-09-19)
 
 Every map has a **second** tileset beside its `tiles.pmtiles`, holding the

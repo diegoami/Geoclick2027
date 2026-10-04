@@ -1,0 +1,334 @@
+{
+	"id": "ecuador-towns-50k",
+	"name": "Ecuador — Towns",
+	"country": "Ecuador",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "esmeraldas",
+			"name": "Esmeraldas",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-79.6699797,
+				0.9304199
+			],
+			"bbox": [
+				-79.6699797,
+				0.9304199,
+				-79.6699797,
+				0.9304199
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "tulcan",
+			"name": "Tulcán",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-77.7320005,
+				0.821997
+			],
+			"bbox": [
+				-77.7320005,
+				0.821997,
+				-77.7320005,
+				0.821997
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "ibarra",
+			"name": "Ibarra",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-78.1299962,
+				0.3603772
+			],
+			"bbox": [
+				-78.1299962,
+				0.3603772,
+				-78.1299962,
+				0.3603772
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "quito",
+			"name": "Quito",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-78.501997,
+				-0.2130423
+			],
+			"bbox": [
+				-78.501997,
+				-0.2130423,
+				-78.501997,
+				-0.2130423
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "sangolqui",
+			"name": "Sangolquí",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-78.4599502,
+				-0.3100211
+			],
+			"bbox": [
+				-78.4599502,
+				-0.3100211,
+				-78.4599502,
+				-0.3100211
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "latacunga",
+			"name": "Latacunga",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-78.6099669,
+				-0.9295699
+			],
+			"bbox": [
+				-78.6099669,
+				-0.9295699,
+				-78.6099669,
+				-0.9295699
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "manta",
+			"name": "Manta",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-80.7299667,
+				-0.9800061
+			],
+			"bbox": [
+				-80.7299667,
+				-0.9800061,
+				-80.7299667,
+				-0.9800061
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "portoviejo",
+			"name": "Portoviejo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-80.4599832,
+				-1.0600012
+			],
+			"bbox": [
+				-80.4599832,
+				-1.0600012,
+				-80.4599832,
+				-1.0600012
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "ambato",
+			"name": "Ambato",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-78.6199921,
+				-1.2696008
+			],
+			"bbox": [
+				-78.6199921,
+				-1.2696008,
+				-78.6199921,
+				-1.2696008
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "riobamba",
+			"name": "Riobamba",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-78.650042,
+				-1.6700415
+			],
+			"bbox": [
+				-78.650042,
+				-1.6700415,
+				-78.650042,
+				-1.6700415
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "babahoyo",
+			"name": "Babahoyo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-79.5400135,
+				-1.7995943
+			],
+			"bbox": [
+				-79.5400135,
+				-1.7995943,
+				-79.5400135,
+				-1.7995943
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "milagro",
+			"name": "Milagro",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-79.599984,
+				-2.1796228
+			],
+			"bbox": [
+				-79.599984,
+				-2.1796228,
+				-79.599984,
+				-2.1796228
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "guayaquil",
+			"name": "Guayaquil",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-79.9219878,
+				-2.2180879
+			],
+			"bbox": [
+				-79.9219878,
+				-2.2180879,
+				-79.9219878,
+				-2.2180879
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "azogues",
+			"name": "Azogues",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-78.8400304,
+				-2.740002
+			],
+			"bbox": [
+				-78.8400304,
+				-2.740002,
+				-78.8400304,
+				-2.740002
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "cuenca",
+			"name": "Cuenca",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-78.9999948,
+				-2.8999922
+			],
+			"bbox": [
+				-78.9999948,
+				-2.8999922,
+				-78.9999948,
+				-2.8999922
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "machala",
+			"name": "Machala",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-79.9599878,
+				-3.260022
+			],
+			"bbox": [
+				-79.9599878,
+				-3.260022,
+				-79.9599878,
+				-3.260022
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "loja",
+			"name": "Loja",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-79.2100078,
+				-3.9900032
+			],
+			"bbox": [
+				-79.2100078,
+				-3.9900032,
+				-79.2100078,
+				-3.9900032
+			],
+			"colorIndex": 1
+		}
+	],
+	"tourOrder": [
+		"esmeraldas",
+		"tulcan",
+		"ibarra",
+		"quito",
+		"sangolqui",
+		"latacunga",
+		"manta",
+		"portoviejo",
+		"ambato",
+		"riobamba",
+		"babahoyo",
+		"milagro",
+		"guayaquil",
+		"azogues",
+		"cuenca",
+		"machala",
+		"loja"
+	]
+}

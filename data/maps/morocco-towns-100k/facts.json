@@ -1,0 +1,168 @@
+{
+	"tangier": {
+		"kind": "city",
+		"population": 750060,
+		"populationRank": 6,
+		"region": "Tanger - Tétouan",
+		"coastal": true,
+		"position": "north"
+	},
+	"larache": {
+		"kind": "city",
+		"population": 120082,
+		"populationRank": 17,
+		"region": "Tanger - Tétouan",
+		"coastal": true,
+		"position": "north"
+	},
+	"ksar-el-kebir": {
+		"kind": "city",
+		"population": 306600,
+		"populationRank": 11,
+		"region": "Tanger - Tétouan",
+		"coastal": false,
+		"position": "north"
+	},
+	"oujda": {
+		"kind": "city",
+		"population": 409391,
+		"populationRank": 9,
+		"region": "Oriental",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"kenitra": {
+		"kind": "city",
+		"population": 551786,
+		"populationRank": 8,
+		"region": "Gharb - Chrarda - Béni Hssen",
+		"coastal": true,
+		"position": "north"
+	},
+	"taza": {
+		"kind": "city",
+		"population": 199633,
+		"populationRank": 13,
+		"region": "Taza - Al Hoceima - Taounate",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"fez": {
+		"kind": "city",
+		"population": 1002000,
+		"populationRank": 3,
+		"population1950": 165000,
+		"region": "Fès - Boulemane",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"rabat": {
+		"kind": "city",
+		"population": 1705000,
+		"populationRank": 2,
+		"population1950": 145000,
+		"region": "Rabat - Salé - Zemmour - Zaer",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"From ribat, a fortified monastery that stood here in the 12th century.",
+				"The Hassan Tower, the minaret of a mosque begun in 1195, was never finished.",
+				"It has been the capital only since 1912."
+			],
+			"it": [
+				"Da ribat, un monastero fortificato che sorgeva qui nel XII secolo.",
+				"La torre Hassan, il minareto di una moschea iniziata nel 1195, non fu mai finita.",
+				"È la capitale solo dal 1912."
+			],
+			"de": [
+				"Von ribat, einem befestigten Kloster, das hier im 12. Jahrhundert stand.",
+				"Der Hassan-Turm, das Minarett einer 1195 begonnenen Moschee, wurde nie vollendet.",
+				"Sie ist erst seit 1912 die Hauptstadt."
+			]
+		}
+	},
+	"meknes": {
+		"kind": "city",
+		"population": 697628,
+		"populationRank": 7,
+		"region": "Meknès - Tafilalet",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"casablanca": {
+		"kind": "city",
+		"population": 3181000,
+		"populationRank": 1,
+		"population1950": 625000,
+		"region": "Grand Casablanca",
+		"coastal": true,
+		"position": "north"
+	},
+	"el-jadida": {
+		"kind": "city",
+		"population": 180470,
+		"populationRank": 15,
+		"region": "Doukkala - Abda",
+		"coastal": true,
+		"position": "north"
+	},
+	"settat": {
+		"kind": "city",
+		"population": 161748,
+		"populationRank": 16,
+		"region": "Chaouia - Ouardigha",
+		"coastal": false,
+		"position": "north"
+	},
+	"safi": {
+		"kind": "city",
+		"population": 353476,
+		"populationRank": 10,
+		"region": "Doukkala - Abda",
+		"coastal": true,
+		"position": "centre"
+	},
+	"er-rachidia": {
+		"kind": "city",
+		"population": 228489,
+		"populationRank": 12,
+		"region": "Mekncs - Tafilalet",
+		"coastal": false,
+		"position": "east"
+	},
+	"marrakesh": {
+		"kind": "city",
+		"population": 872000,
+		"populationRank": 4,
+		"population1950": 209000,
+		"region": "Marrakech - Tensift - Al Haouz",
+		"coastal": false,
+		"position": "centre"
+	},
+	"agadir": {
+		"kind": "city",
+		"population": 825467,
+		"populationRank": 5,
+		"region": "Souss - Massa - Draâ",
+		"coastal": true,
+		"position": "west"
+	},
+	"goulimine": {
+		"kind": "city",
+		"population": 115267,
+		"populationRank": 18,
+		"region": "Guelmim - Es-Semara",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"laayoune": {
+		"kind": "city",
+		"population": 188084,
+		"populationRank": 14,
+		"region": "Laâyoune - Boujdour - Sakia El Hamra",
+		"coastal": false,
+		"position": "south-west"
+	}
+}

@@ -1,31 +1,14 @@
 {
-	"_note": [
-		"Name-facts for Morocco (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
-		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences.",
-		"v0.19 added the 12 regions of 2015, each as a \"region\" entry (en, it, de). The two southern regions lie in Western Sahara, drawn as the area Morocco administers; their sentences say the territory is disputed, in neutral words."
-	],
-	"rabat": {
-		"city": {
-			"en": [
-				"From ribat, a fortified monastery that stood here in the 12th century.",
-				"The Hassan Tower, the minaret of a mosque begun in 1195, was never finished.",
-				"It has been the capital only since 1912."
-			],
-			"it": [
-				"Da ribat, un monastero fortificato che sorgeva qui nel XII secolo.",
-				"La torre Hassan, il minareto di una moschea iniziata nel 1195, non fu mai finita.",
-				"È la capitale solo dal 1912."
-			],
-			"de": [
-				"Von ribat, einem befestigten Kloster, das hier im 12. Jahrhundert stand.",
-				"Der Hassan-Turm, das Minarett einer 1195 begonnenen Moschee, wurde nie vollendet.",
-				"Sie ist erst seit 1912 die Hauptstadt."
-			]
-		}
-	},
 	"tangier-tetouan-al-hoceima": {
-		"region": {
+		"kind": "region",
+		"borders": [
+			"Fès-Meknès",
+			"Oriental",
+			"Rabat-Salé-Kénitra"
+		],
+		"coastal": true,
+		"position": "north-east",
+		"hooks": {
 			"en": [
 				"Named for its three main cities; Tangier comes from the ancient name Tingis.",
 				"The Strait of Gibraltar is only about 14 km wide here, and Spain can be seen across it on a clear day.",
@@ -44,7 +27,16 @@
 		}
 	},
 	"rabat-sale-kenitra": {
-		"region": {
+		"kind": "region",
+		"borders": [
+			"Béni Mellal-Khénifra",
+			"Casablanca-Settat",
+			"Fès-Meknès",
+			"Tangier-Tetouan-Al Hoceima"
+		],
+		"coastal": false,
+		"position": "north-east",
+		"hooks": {
 			"en": [
 				"Rabat comes from the Arabic ribat, a fortified monastery or camp.",
 				"It has been the capital since the French protectorate made it so in 1912.",
@@ -63,7 +55,17 @@
 		}
 	},
 	"fes-meknes": {
-		"region": {
+		"kind": "region",
+		"borders": [
+			"Béni Mellal-Khénifra",
+			"Drâa-Tafilalet",
+			"Oriental",
+			"Rabat-Salé-Kénitra",
+			"Tangier-Tetouan-Al Hoceima"
+		],
+		"coastal": false,
+		"position": "north-east",
+		"hooks": {
 			"en": [
 				"The origin of the name Fez is uncertain; a legend says it comes from a pickaxe found when the city was founded.",
 				"The University of al-Qarawiyyin in Fez, founded in 859, is claimed to be the oldest still working in the world.",
@@ -82,7 +84,15 @@
 		}
 	},
 	"oriental": {
-		"region": {
+		"kind": "region",
+		"borders": [
+			"Drâa-Tafilalet",
+			"Fès-Meknès",
+			"Tangier-Tetouan-Al Hoceima"
+		],
+		"coastal": false,
+		"position": "north-east",
+		"hooks": {
 			"en": [
 				"Oriental means \"eastern\": the region lies in the north-east of Morocco, on the border with Algeria.",
 				"The land border with Algeria has been closed since 1994.",
@@ -101,7 +111,15 @@
 		}
 	},
 	"casablanca-settat": {
-		"region": {
+		"kind": "region",
+		"borders": [
+			"Béni Mellal-Khénifra",
+			"Marrakech-Safi",
+			"Rabat-Salé-Kénitra"
+		],
+		"coastal": false,
+		"position": "north",
+		"hooks": {
 			"en": [
 				"Casablanca means \"white house\", from the Portuguese Casa Branca.",
 				"The Hassan II Mosque, built partly over the sea, has a minaret about 210 m high, among the tallest in the world.",
@@ -120,7 +138,17 @@
 		}
 	},
 	"beni-mellal-khenifra": {
-		"region": {
+		"kind": "region",
+		"borders": [
+			"Casablanca-Settat",
+			"Drâa-Tafilalet",
+			"Fès-Meknès",
+			"Marrakech-Safi",
+			"Rabat-Salé-Kénitra"
+		],
+		"coastal": false,
+		"position": "north-east",
+		"hooks": {
 			"en": [
 				"Beni Mellal means \"sons of Mellal\": beni means \"sons of\".",
 				"The Ouzoud Falls, about 110 m high, plunge into a gorge of the Middle Atlas.",
@@ -139,7 +167,16 @@
 		}
 	},
 	"marrakech-safi": {
-		"region": {
+		"kind": "region",
+		"borders": [
+			"Béni Mellal-Khénifra",
+			"Casablanca-Settat",
+			"Drâa-Tafilalet",
+			"Souss-Massa"
+		],
+		"coastal": false,
+		"position": "north",
+		"hooks": {
 			"en": [
 				"Marrakech is probably the origin of the name Morocco, from a Berber phrase usually explained as \"land of God\".",
 				"The Jemaa el-Fna square, with its storytellers and musicians, is on UNESCO’s list of intangible heritage.",
@@ -158,7 +195,17 @@
 		}
 	},
 	"draa-tafilalet": {
-		"region": {
+		"kind": "region",
+		"borders": [
+			"Béni Mellal-Khénifra",
+			"Fès-Meknès",
+			"Marrakech-Safi",
+			"Oriental",
+			"Souss-Massa"
+		],
+		"coastal": false,
+		"position": "north-east",
+		"hooks": {
 			"en": [
 				"Named for the Drâa valley and the oasis of Tafilalet, in the south-east of Morocco.",
 				"The Aït Benhaddou, a fortified village of red clay, is a World Heritage Site and the setting of many films.",
@@ -177,7 +224,15 @@
 		}
 	},
 	"souss-massa": {
-		"region": {
+		"kind": "region",
+		"borders": [
+			"Drâa-Tafilalet",
+			"Guelmim-Oued Noun",
+			"Marrakech-Safi"
+		],
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
 			"en": [
 				"Named for the Souss river and the Massa river, in the south-west of Morocco.",
 				"Argan trees grow almost nowhere else in the world; their oil is a speciality of the region.",
@@ -196,7 +251,14 @@
 		}
 	},
 	"guelmim-oued-noun": {
-		"region": {
+		"kind": "region",
+		"borders": [
+			"Laâyoune-Sakia El Hamra",
+			"Souss-Massa"
+		],
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
 			"en": [
 				"Named for the town of Guelmim and the Noun river; Guelmim is known as the gateway to the desert.",
 				"Sidi Ifni, on the coast, belonged to Spain until 1969.",
@@ -215,7 +277,14 @@
 		}
 	},
 	"laayoune-sakia-el-hamra": {
-		"region": {
+		"kind": "region",
+		"borders": [
+			"Dakhla-Oued Ed-Dahab",
+			"Guelmim-Oued Noun"
+		],
+		"coastal": false,
+		"position": "west",
+		"hooks": {
 			"en": [
 				"Laâyoune means \"the springs\" in Arabic, and Sakia El Hamra \"the red channel\", the name of a dry river valley.",
 				"The region lies in Western Sahara. Western Sahara is a disputed territory: Morocco administers most of it, the Polisario Front, which proclaimed the Sahrawi Arab Democratic Republic, claims all of it, and the United Nations lists it as a non-self-governing territory. The map draws it as Morocco claims it, up to the borders with Algeria and Mauritania.",
@@ -234,7 +303,13 @@
 		}
 	},
 	"dakhla-oued-ed-dahab": {
-		"region": {
+		"kind": "region",
+		"borders": [
+			"Laâyoune-Sakia El Hamra"
+		],
+		"coastal": false,
+		"position": "south-west",
+		"hooks": {
 			"en": [
 				"Oued Ed-Dahab means \"river of gold\" in Arabic; the Spanish called the area Río de Oro.",
 				"The region lies in Western Sahara. Western Sahara is a disputed territory: Morocco administers most of it, the Polisario Front, which proclaimed the Sahrawi Arab Democratic Republic, claims all of it, and the United Nations lists it as a non-self-governing territory. The map draws it as Morocco claims it, up to the borders with Algeria and Mauritania.",

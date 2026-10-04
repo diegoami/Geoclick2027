@@ -1,31 +1,21 @@
 {
-	"_note": [
-		"Name-facts for Ecuador (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
-		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences.",
-		"v0.19 added the 23 provinces of the map (the Galapagos are left out), each as a \"region\" entry (en, it, de)."
-	],
-	"quito": {
-		"city": {
-			"en": [
-				"In 1978 its old centre was among the first places added to UNESCO’s World Heritage list.",
-				"At about 2,850 m it is one of the highest capitals in the world.",
-				"It lies below the Pichincha volcano, which last erupted in 1999."
-			],
-			"it": [
-				"Nel 1978 il suo centro storico fu tra i primi luoghi inseriti nel patrimonio mondiale dell’UNESCO.",
-				"A circa 2.850 m è una delle capitali più alte del mondo.",
-				"Sorge sotto il vulcano Pichincha, che eruttò l’ultima volta nel 1999."
-			],
-			"de": [
-				"1978 gehörte ihr Altstadtzentrum zu den ersten Orten, die in die UNESCO-Welterbeliste aufgenommen wurden.",
-				"Auf etwa 2.850 m Höhe ist Quito eine der höchstgelegenen Hauptstädte der Welt.",
-				"Die Stadt liegt unterhalb des Vulkans Pichincha, der zuletzt 1999 ausbrach."
-			]
-		}
-	},
 	"carchi": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Esmeraldas",
+			"Imbabura",
+			"Sucumbíos"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tulcán",
+			"nameDe": "Tulcán",
+			"nameIt": "Tulcán",
+			"population": 83000
+		},
+		"position": "north",
+		"hooks": {
 			"en": [
 				"The origin of the name is uncertain; Carchi is the northern province, on the border with Colombia.",
 				"The cemetery of Tulcán is famous for its cypress hedges, clipped into arches and figures.",
@@ -44,7 +34,24 @@
 		}
 	},
 	"esmeraldas": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Carchi",
+			"Imbabura",
+			"Manabí",
+			"Pichincha",
+			"Santo Domingo de los Tsáchilas"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Esmeraldas",
+			"nameDe": "Esmeraldas",
+			"nameIt": "Esmeraldas",
+			"population": 173101
+		},
+		"position": "north-west",
+		"hooks": {
 			"en": [
 				"Spanish for \"emeralds\": the explorers found emeralds worn by the people of this coast.",
 				"The province has a large Afro-Ecuadorian population and the marimba music of the coast.",
@@ -63,7 +70,23 @@
 		}
 	},
 	"imbabura": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Carchi",
+			"Esmeraldas",
+			"Pichincha",
+			"Sucumbíos"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ibarra",
+			"nameDe": "Ibarra",
+			"nameIt": "Ibarra",
+			"population": 146741
+		},
+		"position": "north",
+		"hooks": {
 			"en": [
 				"Named for the Imbabura volcano, 4,609 m high, which the local people regard as a protective mountain.",
 				"It is called the province of lakes: Cuicocha and San Pablo lie at the foot of the volcanoes.",
@@ -82,7 +105,18 @@
 		}
 	},
 	"sucumbios": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Carchi",
+			"Imbabura",
+			"Orellana",
+			"Pichincha",
+			"Tungurahua"
+		],
+		"coastal": false,
+		"position": "north-east",
+		"hooks": {
 			"en": [
 				"The origin of the name is uncertain; Sucumbíos lies in the Amazon lowlands in the north-east.",
 				"Oil was found at Lago Agrio in 1967, and the town was named after Sour Lake, Texas, where the oil company came from.",
@@ -101,7 +135,25 @@
 		}
 	},
 	"pichincha": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Cotopaxi",
+			"Esmeraldas",
+			"Imbabura",
+			"Santo Domingo de los Tsáchilas",
+			"Sucumbíos",
+			"Tungurahua"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Quito",
+			"nameDe": "Quito",
+			"nameIt": "Quito",
+			"population": 1701000
+		},
+		"position": "north",
+		"hooks": {
 			"en": [
 				"Named for the Pichincha volcano, which rises above Quito; the origin of the name is uncertain.",
 				"On the slopes of Pichincha, in 1822, Sucre won the battle that freed Quito from Spanish rule.",
@@ -120,7 +172,18 @@
 		}
 	},
 	"santo-domingo-de-los-tsachilas": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Cotopaxi",
+			"Esmeraldas",
+			"Los Ríos",
+			"Manabí",
+			"Pichincha"
+		],
+		"coastal": false,
+		"position": "north-west",
+		"hooks": {
 			"en": [
 				"Named for its city, Santo Domingo, and for the Tsáchila, the people who live in the province.",
 				"The Tsáchila are known as the Colorados, \"the reds\", for the red paint they put on their hair.",
@@ -139,7 +202,25 @@
 		}
 	},
 	"tungurahua": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Cotopaxi",
+			"Napo",
+			"Orellana",
+			"Pastaza",
+			"Pichincha",
+			"Sucumbíos"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tena",
+			"nameDe": "Tena",
+			"nameIt": "Tena",
+			"population": 31126
+		},
+		"position": "north",
+		"hooks": {
 			"en": [
 				"Tungurahua comes from Quichua and is usually explained as \"throat of fire\", for the volcano.",
 				"The volcano Tungurahua was in eruption on and off from 1999 to 2016.",
@@ -158,7 +239,24 @@
 		}
 	},
 	"manabi": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Esmeraldas",
+			"Guayas",
+			"Los Ríos",
+			"Santa Elena",
+			"Santo Domingo de los Tsáchilas"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Portoviejo",
+			"nameDe": "Portoviejo",
+			"nameIt": "Portoviejo",
+			"population": 213601
+		},
+		"position": "west",
+		"hooks": {
 			"en": [
 				"The origin of the name is uncertain; Manabí is the coastal province north of Guayaquil.",
 				"The \"Panama\" hat is woven from toquilla straw in Montecristi, in the province.",
@@ -177,7 +275,25 @@
 		}
 	},
 	"cotopaxi": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bolívar",
+			"Los Ríos",
+			"Napo",
+			"Pichincha",
+			"Santo Domingo de los Tsáchilas",
+			"Tungurahua"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Latacunga",
+			"nameDe": "Latacunga",
+			"nameIt": "Latacunga",
+			"population": 94972
+		},
+		"position": "centre",
+		"hooks": {
 			"en": [
 				"The origin of the name is disputed; it is often explained as \"neck of the moon\" in Quichua.",
 				"Cotopaxi, 5,897 m, is one of the highest active volcanoes in the world.",
@@ -196,7 +312,16 @@
 		}
 	},
 	"orellana": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Pastaza",
+			"Sucumbíos",
+			"Tungurahua"
+		],
+		"coastal": false,
+		"position": "east",
+		"hooks": {
 			"en": [
 				"Named for Francisco de Orellana, who in 1541-42 sailed the whole Amazon from the Andes to the Atlantic.",
 				"Yasuní National Park, one of the most species-rich places on Earth, lies in the province.",
@@ -215,7 +340,25 @@
 		}
 	},
 	"napo": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bolívar",
+			"Chimborazo",
+			"Cotopaxi",
+			"Morona Santiago",
+			"Pastaza",
+			"Tungurahua"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Ambato",
+			"nameDe": "Ambato",
+			"nameIt": "Ambato",
+			"population": 281425
+		},
+		"position": "centre",
+		"hooks": {
 			"en": [
 				"Named for the Napo river, which flows from the Andes to the Amazon.",
 				"Tena, its capital, is a base for rafting and canoeing on the rivers of the rainforest.",
@@ -234,7 +377,24 @@
 		}
 	},
 	"los-rios": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bolívar",
+			"Cotopaxi",
+			"Guayas",
+			"Manabí",
+			"Santo Domingo de los Tsáchilas"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Babahoyo",
+			"nameDe": "Babahoyo",
+			"nameIt": "Babahoyo",
+			"population": 76279
+		},
+		"position": "west",
+		"hooks": {
 			"en": [
 				"Spanish for \"the rivers\": the province is crossed by many rivers of the coastal plain.",
 				"Its fertile fields grow cacao, bananas and rice.",
@@ -253,7 +413,25 @@
 		}
 	},
 	"bolivar": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Cañar",
+			"Chimborazo",
+			"Cotopaxi",
+			"Guayas",
+			"Los Ríos",
+			"Napo"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Guaranda",
+			"nameDe": "Guaranda",
+			"nameIt": "Guaranda",
+			"population": 27866
+		},
+		"position": "west",
+		"hooks": {
 			"en": [
 				"Named for Simón Bolívar, the Liberator.",
 				"Guaranda, its capital, is called the city of seven hills.",
@@ -272,7 +450,23 @@
 		}
 	},
 	"pastaza": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Morona Santiago",
+			"Napo",
+			"Orellana",
+			"Tungurahua"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Puyo",
+			"nameDe": "Puyo",
+			"nameIt": "Puyo",
+			"population": 24881
+		},
+		"position": "east",
+		"hooks": {
 			"en": [
 				"Named for the Pastaza river, which flows from the Andes into the Amazon basin.",
 				"It is the largest province of Ecuador, and mostly covered by rainforest.",
@@ -291,7 +485,28 @@
 		}
 	},
 	"chimborazo": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Bolívar",
+			"Cañar",
+			"Guayas",
+			"Morona Santiago",
+			"Napo"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Riobamba",
+			"nameDe": "Riobamba",
+			"nameIt": "Riobamba",
+			"population": 172464
+		},
+		"peak": {
+			"name": "Chimborazo",
+			"elevation": 6267
+		},
+		"position": "centre",
+		"hooks": {
 			"en": [
 				"The origin of the name is disputed; Chimborazo is the name of the volcano, in Quichua.",
 				"Chimborazo, 6,263 m, is the highest mountain in Ecuador, and its summit is the farthest point from the centre of the Earth.",
@@ -310,7 +525,27 @@
 		}
 	},
 	"guayas": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Azuay",
+			"Bolívar",
+			"Cañar",
+			"Chimborazo",
+			"El Oro",
+			"Los Ríos",
+			"Manabí",
+			"Santa Elena"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Guayaquil",
+			"nameDe": "Guayaquil",
+			"nameIt": "Guayaquil",
+			"population": 2514000
+		},
+		"position": "west",
+		"hooks": {
 			"en": [
 				"Named for the Guayas river, the biggest river that flows into the Pacific on the coast of South America.",
 				"Guayaquil, the largest city of Ecuador, is its main port.",
@@ -329,7 +564,21 @@
 		}
 	},
 	"santa-elena": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Guayas",
+			"Manabí"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Salinas",
+			"nameDe": "Salinas",
+			"nameIt": "Salinas",
+			"population": 43862
+		},
+		"position": "west",
+		"hooks": {
 			"en": [
 				"Named for Saint Helena; the province is the Santa Elena peninsula, west of Guayaquil.",
 				"It became a province in 2007, taken out of Guayas.",
@@ -348,7 +597,25 @@
 		}
 	},
 	"morona-santiago": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Azuay",
+			"Cañar",
+			"Chimborazo",
+			"Napo",
+			"Pastaza",
+			"Zamora Chinchipe"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Macas",
+			"nameDe": "Macas",
+			"nameIt": "Macas",
+			"population": 23687
+		},
+		"position": "centre",
+		"hooks": {
 			"en": [
 				"Named for the Morona and Santiago rivers, which flow to the Amazon.",
 				"Sangay National Park, a World Heritage Site, has a volcano that is almost always active.",
@@ -367,7 +634,24 @@
 		}
 	},
 	"canar": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Azuay",
+			"Bolívar",
+			"Chimborazo",
+			"Guayas",
+			"Morona Santiago"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Azogues",
+			"nameDe": "Azogues",
+			"nameIt": "Azogues",
+			"population": 69087
+		},
+		"position": "centre",
+		"hooks": {
 			"en": [
 				"Named for the Cañari, the people who lived here before the Incas.",
 				"Ingapirca, with the Temple of the Sun, is the largest Inca site in Ecuador.",
@@ -386,7 +670,25 @@
 		}
 	},
 	"azuay": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Cañar",
+			"El Oro",
+			"Guayas",
+			"Loja",
+			"Morona Santiago",
+			"Zamora Chinchipe"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Cuenca",
+			"nameDe": "Cuenca",
+			"nameIt": "Cuenca",
+			"population": 286878
+		},
+		"position": "south-west",
+		"hooks": {
 			"en": [
 				"The origin of the name is uncertain; Azuay is a Cañari name.",
 				"The historic centre of Cuenca, its capital, is a World Heritage Site.",
@@ -405,7 +707,22 @@
 		}
 	},
 	"el-oro": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Azuay",
+			"Guayas",
+			"Loja"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Machala",
+			"nameDe": "Machala",
+			"nameIt": "Machala",
+			"population": 213034
+		},
+		"position": "south-west",
+		"hooks": {
 			"en": [
 				"Spanish for \"the gold\": the province is named for the gold of the Zaruma mines.",
 				"Machala, its capital, is called the banana capital of the world.",
@@ -424,7 +741,22 @@
 		}
 	},
 	"loja": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Azuay",
+			"El Oro",
+			"Zamora Chinchipe"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Loja",
+			"nameDe": "Loja",
+			"nameIt": "Loja",
+			"population": 126368
+		},
+		"position": "south-west",
+		"hooks": {
 			"en": [
 				"Named for Loja in Andalusia, Spain, the home town of some of the first settlers.",
 				"The city of Loja is called the musical capital of Ecuador.",
@@ -443,7 +775,22 @@
 		}
 	},
 	"zamora-chinchipe": {
-		"region": {
+		"kind": "region",
+		"type": "Province",
+		"borders": [
+			"Azuay",
+			"Loja",
+			"Morona Santiago"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Zamora",
+			"nameDe": "Zamora",
+			"nameIt": "Zamora",
+			"population": 15276
+		},
+		"position": "south",
+		"hooks": {
 			"en": [
 				"Named for the town of Zamora, after Zamora in Spain, and for the Chinchipe river.",
 				"At Santa Ana-La Florida, archaeologists found the oldest known use of cacao, about 5,300 years ago.",
