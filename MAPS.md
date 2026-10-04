@@ -1244,6 +1244,30 @@ npx tsx data/scripts/build-points-map.ts --country=Ecuador --min-population=5000
 npx tsx data/scripts/build-points-map.ts --country=Pakistan --min-population=100000 --out=data/maps/pakistan-towns-100k --name="Pakistan — Towns"
 ```
 
+### Morocco (built 2026-10-04, v0.19, #209)
+
+**Morocco — Regions** (12, the regions of 2015; geoBoundaries ADM1 of 2017, from
+OpenStreetMap, ODbL, attribution "© OpenStreetMap contributors, ODbL (via
+geoBoundaries)"; Natural Earth still has the sixteen regions before 2015) and
+Towns (18 at 100 000, Natural Earth). Chosen by the owner, with a notice about
+Western Sahara.
+
+**Western Sahara, said plainly.** Two of the twelve regions, Laâyoune-Sakia El
+Hamra and Dakhla-Oued Ed-Dahab, lie in Western Sahara, a territory whose status is
+disputed: Morocco administers most of it, the Polisario Front (the Sahrawi Arab
+Democratic Republic it proclaimed) claims all of it, and the United Nations lists
+it as a non-self-governing territory. The map draws the two regions as the area
+Morocco administers, which is how the source draws them, and nothing is drawn
+for the part east of the sand wall that the Polisario Front controls. This is not
+a statement on the dispute; the sentences about the two regions say so in neutral
+words, and the same note will have to be kept if the map is rebuilt from another
+source.
+
+```
+npx tsx data/scripts/build-map.ts --country=Morocco --type=region --source=data/source/geoboundaries/MAR-ADM1.geojson "--attribution=© OpenStreetMap contributors, ODbL (via geoBoundaries)" --out=data/maps/morocco-regions --name="Morocco — Regions"
+npx tsx data/scripts/build-points-map.ts --country=Morocco --min-population=100000 --out=data/maps/morocco-towns-100k --name="Morocco — Towns"
+```
+
 ## The Terrain layer: `terrain.pmtiles` (FT-33, 2026-09-19)
 
 Every map has a **second** tileset beside its `tiles.pmtiles`, holding the

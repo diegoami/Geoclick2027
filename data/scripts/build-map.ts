@@ -254,6 +254,9 @@ const NAME_FIXUPS: Record<string, Record<string, string>> = {
 	// The maps of v0.19: Natural Earth drops the accents and spells Algiers in
 	// French. Pakistan's units come from geoBoundaries as they are.
 	Algeria: { Alger: 'Algiers', 'Oum el Bouaghi': 'Oum El Bouaghi' },
+	// Morocco's twelve regions come from geoBoundaries (Natural Earth has the
+	// sixteen before 2015); two are given their French accents back.
+	Morocco: { 'Fez-Meknes': 'Fès-Meknès', 'Rabat-Salé-Kenitra': 'Rabat-Salé-Kénitra' },
 	Ecuador: { Sucumbios: 'Sucumbíos', Manabi: 'Manabí', Bolivar: 'Bolívar', 'Los Rios': 'Los Ríos' },
 	Malaysia: { 'Pulau Pinang': 'Penang', Melaka: 'Malacca' },
 	Serbia: {
