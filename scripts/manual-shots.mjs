@@ -47,13 +47,20 @@ function cards(mapId, streaks) {
 		}))
 		.filter((c) => c.cleanStreak > 0);
 }
-function seedFor({ progress = true, tutorialSeen = true, extra = {} } = {}) {
+function seedFor({ progress = true, tutorialSeen = true, firstVisit = false, extra = {} } = {}) {
 	const store = {
 		'geoclick:language:v1': 'en',
-		'geoclick:favourite-maps:v1': JSON.stringify(['italy-regions', 'germany-states']),
-		'geoclick:recent-maps:v1': JSON.stringify(['italy-regions', 'japan-regions', 'germany-states']),
 		...extra
 	};
+	// A first visit has no favourites and no recent maps, so no badge on the star.
+	if (!firstVisit) {
+		store['geoclick:favourite-maps:v1'] = JSON.stringify(['italy-regions', 'germany-states']);
+		store['geoclick:recent-maps:v1'] = JSON.stringify([
+			'italy-regions',
+			'japan-regions',
+			'germany-states'
+		]);
+	}
 	if (tutorialSeen) store['geoclick:tutorial-seen:v1'] = '1';
 	if (progress) {
 		// Italy: 14 of 20 known, a spread of lighter and fainter names.
@@ -151,7 +158,11 @@ try {
 		await p.getByPlaceholder('Search maps').fill('towns');
 		await sleep(800);
 	});
-	await shot('home-first-visit', { seed: { tutorialSeen: false, progress: false } }, null);
+	await shot(
+		'home-first-visit',
+		{ seed: { tutorialSeen: false, progress: false, firstVisit: true } },
+		null
+	);
 	await shot('my-maps', { path: '/my-maps' }, null);
 	await shot('about', { path: '/about' }, null);
 
@@ -254,7 +265,7 @@ try {
 	});
 	await shot(
 		'tutorial',
-		{ path: '/', seed: { tutorialSeen: false, progress: false } },
+		{ path: '/', seed: { tutorialSeen: false, progress: false, firstVisit: true } },
 		async (p) => {
 			await p.getByRole('button', { name: /Start the tutorial/i }).click();
 			await sleep(2500);
