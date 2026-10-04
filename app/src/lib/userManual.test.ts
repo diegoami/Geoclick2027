@@ -6,6 +6,7 @@ import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { describe, expect, it } from 'vitest';
 import { tForLanguage, type TranslationKey } from './i18n.svelte';
+import { mapGroups } from './mapCatalog';
 import { NUMBERED_STEPS } from './tutorialMachine';
 
 const repo = (path: string) => fileURLToPath(new URL(`../../../${path}`, import.meta.url));
@@ -60,6 +61,20 @@ describe('the user manual: what it says about the app (#204)', () => {
 			expect(Number(maps)).toBe(index.length);
 			expect(Number(nations)).toBe(countries.size);
 		}
+	});
+
+	it('lists the countries by the names the start screen uses', () => {
+		const continents = new Set([
+			'Africa',
+			'Asia',
+			'Europe',
+			'North America',
+			'South America',
+			'Oceania'
+		]);
+		const names = mapGroups.map((g) => g.country).filter((c) => !continents.has(c));
+		const missing = names.filter((name) => !manual.includes(name));
+		expect(missing).toEqual([]);
 	});
 
 	it('uses the words that are on the buttons', () => {

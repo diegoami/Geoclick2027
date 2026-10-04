@@ -626,9 +626,11 @@ It opens with a welcome card:
 ### What it looks like
 
 Each step is a white card with the step number ("Step 1 of 14"), a short
-instruction, and buttons. The rest of the screen is dimmed, except for the thing
-the step is about, which is outlined in orange. Everything on the screen still
-works during the tutorial; the dimming is only there to draw the eye.
+instruction, and buttons. On most steps the rest of the screen is dimmed, except
+for the thing the step is about, which is outlined in orange; a few steps only
+point at a control without dimming. The screen keeps working during the tutorial
+(the Map / List switch on the start screen is the exception, so that the map
+stays in view), and the dimming is only there to draw the eye.
 
 ### The steps
 
@@ -774,7 +776,7 @@ The apps are the same game as the website, packaged to install:
   Europe's cities also come in five parts (north, south, east, west and centre).
 - **Countries.** 53 countries have maps of their own: Argentina, Australia,
   Austria, Bangladesh, Belgium, Brazil, Bulgaria, Canada, Chile, China, Colombia,
-  Croatia, Czech Republic, Denmark, Egypt, Finland, France, Germany, Great Britain, Greece,
+  Croatia, Czechia, Denmark, Egypt, Finland, France, Germany, Great Britain, Greece,
   India, Indonesia, Iran, Ireland, Italy, Japan, Kazakhstan, Kenya, Malaysia,
   Mexico, Netherlands, New Zealand, Nigeria, Norway, Peru, Philippines, Poland,
   Portugal, Romania, Russia, Saudi Arabia, Serbia, South Africa, South Korea,
@@ -803,7 +805,7 @@ The apps are the same game as the website, packaged to install:
 ## 21. Questions and answers
 
 **Can I lose my progress?** Only by clearing the browser's data for the site, or
-uninstalling the Android app. There's no way to lose it by playing: the tutorial
+by removing the app together with its data. There's no way to lose it by playing: the tutorial
 doesn't touch it, and a round you leave changes only the names you actually
 placed.
 
