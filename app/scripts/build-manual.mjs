@@ -41,6 +41,15 @@ export function slug(text) {
 		.replace(/\s/g, '-');
 }
 
+/** Escapes a value for use inside a double-quoted HTML attribute. */
+function esc(value) {
+	return String(value)
+		.replace(/&/g, '&amp;')
+		.replace(/"/g, '&quot;')
+		.replace(/</g, '&lt;')
+		.replace(/>/g, '&gt;');
+}
+
 const images = new Set();
 
 const marked = new Marked({
@@ -53,12 +62,12 @@ const marked = new Marked({
 		image({ href, title, text }) {
 			const file = basename(href);
 			images.add(href);
-			const t = title ? ` title="${title}"` : '';
-			return `<img src="/manual/img/${file}" alt="${text}"${t} loading="lazy" />`;
+			const t = title ? ` title="${esc(title)}"` : '';
+			return `<img src="/manual/img/${file}" alt="${esc(text)}"${t} loading="lazy" />`;
 		},
 		link({ href, title, tokens }) {
 			const inner = this.parser.parseInline(tokens);
-			const t = title ? ` title="${title}"` : '';
+			const t = title ? ` title="${esc(title)}"` : '';
 			if (href.startsWith('#')) return `<a href="${href}"${t}>${inner}</a>`;
 			if (/^[a-z][a-z0-9+.-]*:/i.test(href)) {
 				return `<a href="${href}"${t} target="_blank" rel="external noopener">${inner}</a>`;

@@ -54,6 +54,19 @@ describe('build-manual', () => {
 		expect(html).toContain('href="#top"');
 	});
 
+	it('keeps quotes in alt text and titles from breaking the attribute', () => {
+		const { html } = build('![Searching for "cities"](manual/home.jpg "A tip")\n', ['home.jpg']);
+		expect(html).toContain('alt="Searching for &quot;cities&quot;"');
+		expect(html).toContain('title="A tip"');
+	});
+
+	it('sends a link to a repository file to GitHub, relative to the manual', () => {
+		const { html } = build('[the readme](../README.md#top)\n');
+		expect(html).toMatch(
+			/href="https:\/\/github\.com\/diegoami\/Geoclick2027\/blob\/main\/[^"]*README\.md#top"/
+		);
+	});
+
 	it('leaves no broken anchor in the real manual', () => {
 		const dir = mkdtempSync(join(tmpdir(), 'gc-manual-real-'));
 		dirs.push(dir);
