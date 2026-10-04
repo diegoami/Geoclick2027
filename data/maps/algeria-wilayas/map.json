@@ -1,0 +1,1739 @@
+{
+	"id": "algeria-wilayas",
+	"name": "Algeria — Wilayas",
+	"country": "Algeria",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "annaba",
+			"name": "Annaba",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.51825,
+				36.85505
+			],
+			"bbox": [
+				7.2627,
+				36.6341,
+				7.7738,
+				37.076
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						7.342,
+						36.9272
+					],
+					[
+						7.5094,
+						36.8051
+					],
+					[
+						7.6767,
+						36.8116
+					]
+				],
+				"aspect": 0.78
+			}
+		},
+		{
+			"id": "skikda",
+			"name": "Skikda",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.816,
+				36.7634
+			],
+			"bbox": [
+				6.2478,
+				36.4329,
+				7.3842,
+				37.0939
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						6.3562,
+						36.8866
+					],
+					[
+						6.7491,
+						36.6432
+					],
+					[
+						7.2293,
+						36.7361
+					]
+				],
+				"aspect": 1.81
+			}
+		},
+		{
+			"id": "boumerdes",
+			"name": "Boumerdès",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				3.6064,
+				36.76025
+			],
+			"bbox": [
+				3.1733,
+				36.6076,
+				4.0395,
+				36.9129
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						3.2636,
+						36.749
+					],
+					[
+						3.627,
+						36.6923
+					],
+					[
+						3.96,
+						36.8216
+					]
+				],
+				"aspect": 4.32
+			}
+		},
+		{
+			"id": "algiers",
+			"name": "Algiers",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				3.1073500000000003,
+				36.75005
+			],
+			"bbox": [
+				2.9849,
+				36.6851,
+				3.2298,
+				36.815
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						3.0126,
+						36.7775
+					],
+					[
+						3.0856,
+						36.7234
+					],
+					[
+						3.1855,
+						36.7128
+					]
+				],
+				"aspect": 2.6
+			}
+		},
+		{
+			"id": "jijel",
+			"name": "Jijel",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.9427,
+				36.729699999999994
+			],
+			"bbox": [
+				5.428,
+				36.5241,
+				6.4574,
+				36.9353
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						5.569,
+						36.6293
+					],
+					[
+						5.9259,
+						36.7561
+					],
+					[
+						6.3139,
+						36.744
+					]
+				],
+				"aspect": 2.33
+			}
+		},
+		{
+			"id": "el-tarf",
+			"name": "El Tarf",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.07365,
+				36.72125
+			],
+			"bbox": [
+				7.6497,
+				36.4844,
+				8.4976,
+				36.9581
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						7.7605,
+						36.7241
+					],
+					[
+						8.0736,
+						36.6397
+					],
+					[
+						8.3867,
+						36.7912
+					]
+				],
+				"aspect": 1.39
+			}
+		},
+		{
+			"id": "tizi-ouzou",
+			"name": "Tizi Ouzou",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.1909,
+				36.6848
+			],
+			"bbox": [
+				3.7337,
+				36.4727,
+				4.6481,
+				36.8969
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						3.9102,
+						36.5767
+					],
+					[
+						4.2288,
+						36.6871
+					],
+					[
+						4.5551,
+						36.7814
+					]
+				],
+				"aspect": 1.58
+			}
+		},
+		{
+			"id": "tipaza",
+			"name": "Tipaza",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				2.33645,
+				36.6126
+			],
+			"bbox": [
+				1.6478,
+				36.4102,
+				3.0251,
+				36.815
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						1.7873,
+						36.4963
+					],
+					[
+						2.3956,
+						36.4469
+					],
+					[
+						2.919,
+						36.7055
+					]
+				],
+				"aspect": 6.75
+			}
+		},
+		{
+			"id": "bejaia",
+			"name": "Béjaïa",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.9159500000000005,
+				36.566950000000006
+			],
+			"bbox": [
+				4.3564,
+				36.2385,
+				5.4755,
+				36.8954
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						4.4535,
+						36.3209
+					],
+					[
+						4.7445,
+						36.8326
+					],
+					[
+						5.3547,
+						36.5769
+					]
+				],
+				"aspect": 2.53
+			}
+		},
+		{
+			"id": "blida",
+			"name": "Blida",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				2.99315,
+				36.5317
+			],
+			"bbox": [
+				2.4763,
+				36.3533,
+				3.51,
+				36.7101
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						2.6525,
+						36.4313
+					],
+					[
+						3.0061,
+						36.536
+					],
+					[
+						3.3664,
+						36.6243
+					]
+				],
+				"aspect": 2.56
+			}
+		},
+		{
+			"id": "guelma",
+			"name": "Guelma",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.462949999999999,
+				36.384299999999996
+			],
+			"bbox": [
+				6.938,
+				36.0425,
+				7.9879,
+				36.7261
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						7.0982,
+						36.3115
+					],
+					[
+						7.4136,
+						36.4732
+					],
+					[
+						7.729,
+						36.4503
+					]
+				],
+				"aspect": 1.07
+			}
+		},
+		{
+			"id": "constantine",
+			"name": "Constantine",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.697150000000001,
+				36.359750000000005
+			],
+			"bbox": [
+				6.3487,
+				36.1116,
+				7.0456,
+				36.6079
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						6.483,
+						36.3543
+					],
+					[
+						6.7299,
+						36.4124
+					],
+					[
+						6.9768,
+						36.2796
+					]
+				],
+				"aspect": 1.21
+			}
+		},
+		{
+			"id": "bouira",
+			"name": "Bouira",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				3.82695,
+				36.2753
+			],
+			"bbox": [
+				3.283,
+				35.862,
+				4.3709,
+				36.6886
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						3.5835,
+						36.3099
+					],
+					[
+						3.9104,
+						36.114
+					],
+					[
+						4.2374,
+						36.1713
+					]
+				],
+				"aspect": 0.87
+			}
+		},
+		{
+			"id": "mila",
+			"name": "Mila",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.1267499999999995,
+				36.262249999999995
+			],
+			"bbox": [
+				5.7372,
+				35.9004,
+				6.5163,
+				36.6241
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						5.9055,
+						36.3467
+					],
+					[
+						6.1398,
+						36.2166
+					],
+					[
+						6.3742,
+						36.2679
+					]
+				],
+				"aspect": 0.57
+			}
+		},
+		{
+			"id": "chlef",
+			"name": "Chlef",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				1.2084,
+				36.1944
+			],
+			"bbox": [
+				0.7041,
+				35.8416,
+				1.7127,
+				36.5472
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						0.9499,
+						36.2575
+					],
+					[
+						1.2399,
+						36.2087
+					],
+					[
+						1.5299,
+						36.2164
+					]
+				],
+				"aspect": 0.86
+			}
+		},
+		{
+			"id": "souk-ahras",
+			"name": "Souk Ahras",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.83755,
+				36.161500000000004
+			],
+			"bbox": [
+				7.3259,
+				35.831,
+				8.3492,
+				36.492
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						7.4716,
+						36.0128
+					],
+					[
+						7.9178,
+						36.0737
+					],
+					[
+						8.2136,
+						36.3458
+					]
+				],
+				"aspect": 1.76
+			}
+		},
+		{
+			"id": "ain-defla",
+			"name": "Aïn Defla",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				2.1103,
+				36.151849999999996
+			],
+			"bbox": [
+				1.5595,
+				35.8605,
+				2.6611,
+				36.4432
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						1.6661,
+						36.2123
+					],
+					[
+						2.0423,
+						36.0967
+					],
+					[
+						2.4186,
+						36.1948
+					]
+				],
+				"aspect": 1.15
+			}
+		},
+		{
+			"id": "setif",
+			"name": "Sétif",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.3922,
+				36.11175
+			],
+			"bbox": [
+				4.8011,
+				35.6329,
+				5.9833,
+				36.5906
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						5.1644,
+						36.0665
+					],
+					[
+						5.5048,
+						36.1133
+					],
+					[
+						5.8453,
+						36.192
+					]
+				],
+				"aspect": 0.78
+			}
+		},
+		{
+			"id": "bordj-bou-arreridj",
+			"name": "Bordj Bou Arréridj",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.6638,
+				36.0785
+			],
+			"bbox": [
+				4.0843,
+				35.7773,
+				5.2433,
+				36.3797
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						4.2827,
+						36.1366
+					],
+					[
+						4.699,
+						36.0885
+					],
+					[
+						5.1171,
+						36.0547
+					]
+				],
+				"aspect": 1.56
+			}
+		},
+		{
+			"id": "mostaganem",
+			"name": "Mostaganem",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				0.31299999999999994,
+				36.016850000000005
+			],
+			"bbox": [
+				-0.1144,
+				35.6959,
+				0.7404,
+				36.3378
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						0.0952,
+						35.777
+					],
+					[
+						0.3639,
+						36.0019
+					],
+					[
+						0.6265,
+						36.231
+					]
+				],
+				"aspect": 2.58
+			}
+		},
+		{
+			"id": "medea",
+			"name": "Médéa",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				2.8933,
+				35.964650000000006
+			],
+			"bbox": [
+				2.1582,
+				35.4391,
+				3.6284,
+				36.4902
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						2.3571,
+						35.6093
+					],
+					[
+						2.8272,
+						36.0038
+					],
+					[
+						3.4475,
+						36.2249
+					]
+				],
+				"aspect": 2
+			}
+		},
+		{
+			"id": "relizane",
+			"name": "Relizane",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				0.8205,
+				35.82055
+			],
+			"bbox": [
+				0.2294,
+				35.4435,
+				1.4116,
+				36.1976
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						0.3833,
+						35.6831
+					],
+					[
+						0.8029,
+						35.899
+					],
+					[
+						1.2225,
+						35.7882
+					]
+				],
+				"aspect": 1.54
+			}
+		},
+		{
+			"id": "oum-el-bouaghi",
+			"name": "Oum El Bouaghi",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.00755,
+				35.8196
+			],
+			"bbox": [
+				6.1492,
+				35.4478,
+				7.8659,
+				36.1914
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						6.5294,
+						35.9917
+					],
+					[
+						7.1214,
+						35.8658
+					],
+					[
+						7.69,
+						35.6791
+					]
+				],
+				"aspect": 2.35
+			}
+		},
+		{
+			"id": "tissemsilt",
+			"name": "Tissemsilt",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				1.7787,
+				35.777249999999995
+			],
+			"bbox": [
+				1.2456,
+				35.5505,
+				2.3118,
+				36.004
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						1.4524,
+						35.7908
+					],
+					[
+						1.7921,
+						35.6991
+					],
+					[
+						2.1403,
+						35.7466
+					]
+				],
+				"aspect": 1.67
+			}
+		},
+		{
+			"id": "oran",
+			"name": "Oran",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.61005,
+				35.6195
+			],
+			"bbox": [
+				-1.1064,
+				35.332,
+				-0.1137,
+				35.907
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						-0.964,
+						35.5598
+					],
+					[
+						-0.5438,
+						35.5486
+					],
+					[
+						-0.2678,
+						35.8102
+					]
+				],
+				"aspect": 2.4
+			}
+		},
+		{
+			"id": "mascara",
+			"name": "Mascara",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				0.14125,
+				35.40265
+			],
+			"bbox": [
+				-0.5454,
+				35.0215,
+				0.8279,
+				35.7838
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						-0.3001,
+						35.5704
+					],
+					[
+						0.0805,
+						35.3439
+					],
+					[
+						0.526,
+						35.2685
+					]
+				],
+				"aspect": 1.44
+			}
+		},
+		{
+			"id": "ain-temouchent",
+			"name": "Aïn Témouchent",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.01545,
+				35.3553
+			],
+			"bbox": [
+				-1.362,
+				35.0874,
+				-0.6689,
+				35.6232
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						-1.2915,
+						35.3139
+					],
+					[
+						-1.0257,
+						35.3266
+					],
+					[
+						-0.7598,
+						35.3635
+					]
+				],
+				"aspect": 1.77
+			}
+		},
+		{
+			"id": "batna",
+			"name": "Batna",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.77305,
+				35.34715
+			],
+			"bbox": [
+				4.777,
+				34.7785,
+				6.7691,
+				35.9158
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						5.0957,
+						35.281
+					],
+					[
+						5.8133,
+						35.5562
+					],
+					[
+						6.5997,
+						35.5003
+					]
+				],
+				"aspect": 2.19
+			}
+		},
+		{
+			"id": "m-sila",
+			"name": "M'Sila",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.3796,
+				35.13065
+			],
+			"bbox": [
+				3.3795,
+				34.2322,
+				5.3797,
+				36.0291
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						3.7402,
+						35.2708
+					],
+					[
+						4.284,
+						35.1658
+					],
+					[
+						4.8278,
+						35.4634
+					]
+				],
+				"aspect": 0.8
+			}
+		},
+		{
+			"id": "tebessa",
+			"name": "Tébessa",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.78355,
+				35.0398
+			],
+			"bbox": [
+				7.1358,
+				34.1083,
+				8.4313,
+				35.9713
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						7.4266,
+						34.2329
+					],
+					[
+						7.917,
+						34.9725
+					],
+					[
+						8.0892,
+						35.795
+					]
+				],
+				"aspect": 3.26
+			}
+		},
+		{
+			"id": "khenchela",
+			"name": "Khenchela",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.02845,
+				34.922250000000005
+			],
+			"bbox": [
+				6.5121,
+				34.1606,
+				7.5448,
+				35.6839
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						7.0031,
+						34.3657
+					],
+					[
+						6.9127,
+						34.9498
+					],
+					[
+						7.0507,
+						35.5241
+					]
+				],
+				"aspect": 1.82
+			}
+		},
+		{
+			"id": "tiaret",
+			"name": "Tiaret",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				1.5482,
+				34.87935
+			],
+			"bbox": [
+				0.4922,
+				34.0689,
+				2.6042,
+				35.6898
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						0.8839,
+						34.9325
+					],
+					[
+						1.5477,
+						34.8171
+					],
+					[
+						2.2115,
+						35.098
+					]
+				],
+				"aspect": 0.9
+			}
+		},
+		{
+			"id": "sidi-bel-abbes",
+			"name": "Sidi Bel Abbès",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.5961500000000001,
+				34.81355
+			],
+			"bbox": [
+				-1.1204,
+				34.2151,
+				-0.0719,
+				35.412
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						-0.6378,
+						34.3289
+					],
+					[
+						-0.4709,
+						34.8024
+					],
+					[
+						-0.5695,
+						35.2878
+					]
+				],
+				"aspect": 1.73
+			}
+		},
+		{
+			"id": "tlemcen",
+			"name": "Tlemcen",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.4775,
+				34.70595
+			],
+			"bbox": [
+				-2.1938,
+				34.092,
+				-0.7612,
+				35.3199
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						-1.7179,
+						34.6941
+					],
+					[
+						-1.3471,
+						34.7558
+					],
+					[
+						-0.9762,
+						34.6875
+					]
+				],
+				"aspect": 0.62
+			}
+		},
+		{
+			"id": "saida",
+			"name": "Saïda",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				0.18369999999999997,
+				34.524950000000004
+			],
+			"bbox": [
+				-0.4889,
+				33.927,
+				0.8563,
+				35.1229
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						-0.2787,
+						34.3158
+					],
+					[
+						0.161,
+						34.7091
+					],
+					[
+						0.6007,
+						34.7546
+					]
+				],
+				"aspect": 0.91
+			}
+		},
+		{
+			"id": "biskra",
+			"name": "Biskra",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.4726,
+				34.4303
+			],
+			"bbox": [
+				4.1957,
+				33.5727,
+				6.7495,
+				35.2879
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						4.4972,
+						34.0819
+					],
+					[
+						5.2193,
+						34.7911
+					],
+					[
+						6.338,
+						34.7702
+					]
+				],
+				"aspect": 2.22
+			}
+		},
+		{
+			"id": "djelfa",
+			"name": "Djelfa",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				3.7037500000000003,
+				34.30545
+			],
+			"bbox": [
+				2.2857,
+				32.8408,
+				5.1218,
+				35.7701
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						2.8971,
+						35.2641
+					],
+					[
+						3.347,
+						33.9828
+					],
+					[
+						4.7346,
+						33.2609
+					]
+				],
+				"aspect": 2.98
+			}
+		},
+		{
+			"id": "laghouat",
+			"name": "Laghouat",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				2.7561999999999998,
+				33.69445
+			],
+			"bbox": [
+				1.3362,
+				32.696,
+				4.1762,
+				34.6929
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						1.9087,
+						34.258
+					],
+					[
+						2.4492,
+						33.3622
+					],
+					[
+						3.6018,
+						33.083
+					]
+				],
+				"aspect": 1.9
+			}
+		},
+		{
+			"id": "el-oued",
+			"name": "El Oued",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.03565,
+				33.24955
+			],
+			"bbox": [
+				5.008,
+				32.0002,
+				9.0633,
+				34.4989
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						5.8001,
+						34.0264
+					],
+					[
+						7.2516,
+						33.4054
+					],
+					[
+						7.9886,
+						32.1452
+					]
+				],
+				"aspect": 2.19
+			}
+		},
+		{
+			"id": "naama",
+			"name": "Naâma",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.8163499999999999,
+				33.21055
+			],
+			"bbox": [
+				-1.7187,
+				32.11,
+				0.086,
+				34.3111
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						-1.477,
+						33.4986
+					],
+					[
+						-0.7869,
+						33.0665
+					],
+					[
+						-0.0967,
+						33.1885
+					]
+				],
+				"aspect": 0.66
+			}
+		},
+		{
+			"id": "el-bayadh",
+			"name": "El Bayadh",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				0.9711000000000001,
+				32.57345
+			],
+			"bbox": [
+				-0.4011,
+				30.7087,
+				2.3433,
+				34.4382
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						0.6029,
+						31.3021
+					],
+					[
+						1.5339,
+						32.5611
+					],
+					[
+						0.959,
+						33.9437
+					]
+				],
+				"aspect": 1.55
+			}
+		},
+		{
+			"id": "ghardaia",
+			"name": "Ghardaïa",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				3.4608499999999998,
+				31.033
+			],
+			"bbox": [
+				1.9434,
+				29.0364,
+				4.9783,
+				33.0296
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						2.7638,
+						29.4888
+					],
+					[
+						2.6597,
+						31.3253
+					],
+					[
+						3.9078,
+						32.7924
+					]
+				],
+				"aspect": 2.18
+			}
+		},
+		{
+			"id": "ouargla",
+			"name": "Ouargla",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.2528500000000005,
+				30.9519
+			],
+			"bbox": [
+				2.986,
+				28.4619,
+				9.5197,
+				33.4419
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						4.2687,
+						30.4084
+					],
+					[
+						6.5755,
+						31.2663
+					],
+					[
+						8.8822,
+						30.5711
+					]
+				],
+				"aspect": 1.19
+			}
+		},
+		{
+			"id": "bechar",
+			"name": "Béchar",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-2.80085,
+				30.26725
+			],
+			"bbox": [
+				-6.0008,
+				28.2072,
+				0.3991,
+				32.3273
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						-5.0169,
+						28.9954
+					],
+					[
+						-2.7215,
+						29.8411
+					],
+					[
+						-0.7552,
+						31.1431
+					]
+				],
+				"aspect": 1.7
+			}
+		},
+		{
+			"id": "tindouf",
+			"name": "Tindouf",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-5.8283499999999995,
+				27.544
+			],
+			"bbox": [
+				-8.6824,
+				25.5089,
+				-2.9743,
+				29.5791
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						-8.2777,
+						28.1886
+					],
+					[
+						-6.0941,
+						27.3308
+					],
+					[
+						-3.9105,
+						27.3439
+					]
+				],
+				"aspect": 1.59
+			}
+		},
+		{
+			"id": "illizi",
+			"name": "Illizi",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.7629,
+				27.01145
+			],
+			"bbox": [
+				5.8157,
+				24.0001,
+				11.7101,
+				30.0228
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						8.0156,
+						29.0691
+					],
+					[
+						7.3307,
+						26.3376
+					],
+					[
+						9.2769,
+						24.1447
+					]
+				],
+				"aspect": 1.68
+			}
+		},
+		{
+			"id": "adrar",
+			"name": "Adrar",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.9356000000000002,
+				25.31775
+			],
+			"bbox": [
+				-5.6615,
+				18.9769,
+				3.7903,
+				31.6586
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						-3.3911,
+						24.5253
+					],
+					[
+						-0.9558,
+						25.127
+					],
+					[
+						1.4795,
+						27.813
+					]
+				],
+				"aspect": 0.79
+			}
+		},
+		{
+			"id": "tamanghasset",
+			"name": "Tamanghasset",
+			"type": "wilaya",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.39715,
+				24.09215
+			],
+			"bbox": [
+				0.8254,
+				19.0608,
+				11.9689,
+				29.1235
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						1.8374,
+						25.0801
+					],
+					[
+						5.187,
+						23.9357
+					],
+					[
+						8.5367,
+						22.4825
+					]
+				],
+				"aspect": 0.96
+			}
+		}
+	],
+	"tourOrder": [
+		"annaba",
+		"skikda",
+		"boumerdes",
+		"algiers",
+		"jijel",
+		"el-tarf",
+		"tizi-ouzou",
+		"tipaza",
+		"bejaia",
+		"blida",
+		"guelma",
+		"constantine",
+		"bouira",
+		"mila",
+		"chlef",
+		"souk-ahras",
+		"ain-defla",
+		"setif",
+		"bordj-bou-arreridj",
+		"mostaganem",
+		"medea",
+		"relizane",
+		"oum-el-bouaghi",
+		"tissemsilt",
+		"oran",
+		"mascara",
+		"ain-temouchent",
+		"batna",
+		"m-sila",
+		"tebessa",
+		"khenchela",
+		"tiaret",
+		"sidi-bel-abbes",
+		"tlemcen",
+		"saida",
+		"biskra",
+		"djelfa",
+		"laghouat",
+		"el-oued",
+		"naama",
+		"el-bayadh",
+		"ghardaia",
+		"ouargla",
+		"bechar",
+		"tindouf",
+		"illizi",
+		"adrar",
+		"tamanghasset"
+	]
+}

@@ -1,0 +1,657 @@
+{
+	"id": "algeria-towns-100k",
+	"name": "Algeria — Towns",
+	"country": "Algeria",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "annaba",
+			"name": "Annaba",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.7599808,
+				36.9200061
+			],
+			"bbox": [
+				7.7599808,
+				36.9200061,
+				7.7599808,
+				36.9200061
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "skikda",
+			"name": "Skikda",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.8999816,
+				36.880422
+			],
+			"bbox": [
+				6.8999816,
+				36.880422,
+				6.8999816,
+				36.880422
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "jijel",
+			"name": "Jijel",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.7660036,
+				36.821997
+			],
+			"bbox": [
+				5.7660036,
+				36.821997,
+				5.7660036,
+				36.821997
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "algiers",
+			"name": "Algiers",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				3.0486067,
+				36.7650107
+			],
+			"bbox": [
+				3.0486067,
+				36.7650107,
+				3.0486067,
+				36.7650107
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "bejaia",
+			"name": "Béjaïa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.0700158,
+				36.7603776
+			],
+			"bbox": [
+				5.0700158,
+				36.7603776,
+				5.0700158,
+				36.7603776
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "tizi-ouzou",
+			"name": "Tizi Ouzou",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.0461444,
+				36.7117101
+			],
+			"bbox": [
+				4.0461444,
+				36.7117101,
+				4.0461444,
+				36.7117101
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "guelma",
+			"name": "Guelma",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.4279975,
+				36.4660021
+			],
+			"bbox": [
+				7.4279975,
+				36.4660021,
+				7.4279975,
+				36.4660021
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "blida",
+			"name": "Blida",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				2.8299975,
+				36.4203467
+			],
+			"bbox": [
+				2.8299975,
+				36.4203467,
+				2.8299975,
+				36.4203467
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "bouira",
+			"name": "Bouira",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				3.9000097,
+				36.3804783
+			],
+			"bbox": [
+				3.9000097,
+				36.3804783,
+				3.9000097,
+				36.3804783
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "constantine",
+			"name": "Constantine",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.5999483,
+				36.3599886
+			],
+			"bbox": [
+				6.5999483,
+				36.3599886,
+				6.5999483,
+				36.3599886
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "souk-ahras",
+			"name": "Souk Ahras",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.9499951,
+				36.2903805
+			],
+			"bbox": [
+				7.9499951,
+				36.2903805,
+				7.9499951,
+				36.2903805
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "medea",
+			"name": "Médéa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				2.7700012,
+				36.2704075
+			],
+			"bbox": [
+				2.7700012,
+				36.2704075,
+				2.7700012,
+				36.2704075
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "setif",
+			"name": "Sétif",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.3999698,
+				36.1800255
+			],
+			"bbox": [
+				5.3999698,
+				36.1800255,
+				5.3999698,
+				36.1800255
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "chlef",
+			"name": "Chlef",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				1.3199605,
+				36.1704136
+			],
+			"bbox": [
+				1.3199605,
+				36.1704136,
+				1.3199605,
+				36.1704136
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "bordj-bou-arreridj",
+			"name": "Bordj Bou Arréridj",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.7646624,
+				36.0777088
+			],
+			"bbox": [
+				4.7646624,
+				36.0777088,
+				4.7646624,
+				36.0777088
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "mostaganem",
+			"name": "Mostaganem",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				0.0899839,
+				35.940376
+			],
+			"bbox": [
+				0.0899839,
+				35.940376,
+				0.0899839,
+				35.940376
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "oum-el-bouaghi",
+			"name": "Oum El Bouaghi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.1499965,
+				35.8499972
+			],
+			"bbox": [
+				7.1499965,
+				35.8499972,
+				7.1499965,
+				35.8499972
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "oran",
+			"name": "Oran",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.6219186,
+				35.7119483
+			],
+			"bbox": [
+				-0.6219186,
+				35.7119483,
+				-0.6219186,
+				35.7119483
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "m-sila",
+			"name": "M'Sila",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.5450006,
+				35.7000031
+			],
+			"bbox": [
+				4.5450006,
+				35.7000031,
+				4.5450006,
+				35.7000031
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "batna",
+			"name": "Batna",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.1700004,
+				35.5699593
+			],
+			"bbox": [
+				6.1700004,
+				35.5699593,
+				6.1700004,
+				35.5699593
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "tebessa",
+			"name": "Tébessa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.1200105,
+				35.4104342
+			],
+			"bbox": [
+				8.1200105,
+				35.4104342,
+				8.1200105,
+				35.4104342
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "mascara",
+			"name": "Mascara",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				0.1400325,
+				35.400409
+			],
+			"bbox": [
+				0.1400325,
+				35.400409,
+				0.1400325,
+				35.400409
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "tiaret",
+			"name": "Tiaret",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				1.3199605,
+				35.380436
+			],
+			"bbox": [
+				1.3199605,
+				35.380436,
+				1.3199605,
+				35.380436
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "sidi-bel-abbes",
+			"name": "Sidi Bel Abbès",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-0.6399716,
+				35.1903443
+			],
+			"bbox": [
+				-0.6399716,
+				35.1903443,
+				-0.6399716,
+				35.1903443
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "tlemcen",
+			"name": "Tlemcen",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.3200076,
+				34.8904142
+			],
+			"bbox": [
+				-1.3200076,
+				34.8904142,
+				-1.3200076,
+				34.8904142
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "biskra",
+			"name": "Biskra",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.7300272,
+				34.8599768
+			],
+			"bbox": [
+				5.7300272,
+				34.8599768,
+				5.7300272,
+				34.8599768
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "saida",
+			"name": "Saïda",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				0.1400325,
+				34.8403915
+			],
+			"bbox": [
+				0.1400325,
+				34.8403915,
+				0.1400325,
+				34.8403915
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "djelfa",
+			"name": "Djelfa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				3.2500236,
+				34.6799878
+			],
+			"bbox": [
+				3.2500236,
+				34.6799878,
+				3.2500236,
+				34.6799878
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "laghouat",
+			"name": "Laghouat",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				2.8800203,
+				33.8099892
+			],
+			"bbox": [
+				2.8800203,
+				33.8099892,
+				2.8800203,
+				33.8099892
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "el-oued",
+			"name": "El Oued",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.8599841,
+				33.3704037
+			],
+			"bbox": [
+				6.8599841,
+				33.3704037,
+				6.8599841,
+				33.3704037
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "touggourt",
+			"name": "Touggourt",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.0599812,
+				33.0999809
+			],
+			"bbox": [
+				6.0599812,
+				33.0999809,
+				6.0599812,
+				33.0999809
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "ghardaia",
+			"name": "Ghardaïa",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				3.6699979,
+				32.4899923
+			],
+			"bbox": [
+				3.6699979,
+				32.4899923,
+				3.6699979,
+				32.4899923
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "ouargla",
+			"name": "Ouargla",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.3400252,
+				31.9699724
+			],
+			"bbox": [
+				5.3400252,
+				31.9699724,
+				5.3400252,
+				31.9699724
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "bechar",
+			"name": "Béchar",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-2.2300037,
+				31.6111054
+			],
+			"bbox": [
+				-2.2300037,
+				31.6111054,
+				-2.2300037,
+				31.6111054
+			],
+			"colorIndex": 4
+		}
+	],
+	"tourOrder": [
+		"annaba",
+		"skikda",
+		"jijel",
+		"algiers",
+		"bejaia",
+		"tizi-ouzou",
+		"guelma",
+		"blida",
+		"bouira",
+		"constantine",
+		"souk-ahras",
+		"medea",
+		"setif",
+		"chlef",
+		"bordj-bou-arreridj",
+		"mostaganem",
+		"oum-el-bouaghi",
+		"oran",
+		"m-sila",
+		"batna",
+		"tebessa",
+		"mascara",
+		"tiaret",
+		"sidi-bel-abbes",
+		"tlemcen",
+		"biskra",
+		"saida",
+		"djelfa",
+		"laghouat",
+		"el-oued",
+		"touggourt",
+		"ghardaia",
+		"ouargla",
+		"bechar"
+	]
+}

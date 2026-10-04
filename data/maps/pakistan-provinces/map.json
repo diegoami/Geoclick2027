@@ -1,0 +1,247 @@
+{
+	"id": "pakistan-provinces",
+	"name": "Pakistan — Provinces",
+	"country": "Pakistan",
+	"attribution": "geoBoundaries, public domain; Natural Earth (public domain), https://www.naturalearthdata.com",
+	"boundarySource": "data/source/geoboundaries/PAK-ADM1.geojson",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "gilgit-baltistan",
+			"name": "Gilgit-Baltistan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				75.145,
+				35.784400000000005
+			],
+			"bbox": [
+				72.5401,
+				34.5795,
+				77.7499,
+				36.9893
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						73.1457,
+						36.2629
+					],
+					[
+						75.0317,
+						36.0633
+					],
+					[
+						76.5643,
+						35.1205
+					]
+				],
+				"aspect": 2.1
+			}
+		},
+		{
+			"id": "khyber-pakhtunkhwa",
+			"name": "Khyber Pakhtunkhwa",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				71.6833,
+				33.96395
+			],
+			"bbox": [
+				69.2515,
+				31.0704,
+				74.1151,
+				36.8575
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						70.041,
+						31.9798
+					],
+					[
+						71.8062,
+						33.8849
+					],
+					[
+						72.9609,
+						36.0352
+					]
+				],
+				"aspect": 3.44
+			}
+		},
+		{
+			"id": "azad-kashmir",
+			"name": "Azad Kashmir",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				74.44579999999999,
+				33.9415
+			],
+			"bbox": [
+				73.3969,
+				32.7977,
+				75.4947,
+				35.0853
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "islamabad-capital-territory",
+			"name": "Islamabad Capital Territory",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				73.07765,
+				33.65235
+			],
+			"bbox": [
+				72.8853,
+				33.4937,
+				73.27,
+				33.811
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						72.9701,
+						33.7014
+					],
+					[
+						73.0962,
+						33.6397
+					],
+					[
+						73.2223,
+						33.6787
+					]
+				],
+				"aspect": 1.06
+			}
+		},
+		{
+			"id": "punjab",
+			"name": "Punjab",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				72.39615,
+				30.885599999999997
+			],
+			"bbox": [
+				69.4033,
+				27.709,
+				75.389,
+				34.0622
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						70.6252,
+						28.6199
+					],
+					[
+						72.2642,
+						30.6523
+					],
+					[
+						73.3735,
+						32.8865
+					]
+				],
+				"aspect": 1.71
+			}
+		},
+		{
+			"id": "balochistan",
+			"name": "Balochistan",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				65.56455,
+				28.448999999999998
+			],
+			"bbox": [
+				60.8769,
+				24.9142,
+				70.2522,
+				31.9838
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						62.9284,
+						25.9621
+					],
+					[
+						66.3359,
+						28.3068
+					],
+					[
+						69.347,
+						31.0131
+					]
+				],
+				"aspect": 2.83
+			}
+		},
+		{
+			"id": "sindh",
+			"name": "Sindh",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				68.87379999999999,
+				26.105800000000002
+			],
+			"bbox": [
+				66.6899,
+				23.741,
+				71.0577,
+				28.4706
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						67.5421,
+						26.0821
+					],
+					[
+						69.0142,
+						26.4878
+					],
+					[
+						70.4863,
+						25.6247
+					]
+				],
+				"aspect": 0.65
+			}
+		}
+	],
+	"tourOrder": [
+		"gilgit-baltistan",
+		"khyber-pakhtunkhwa",
+		"azad-kashmir",
+		"islamabad-capital-territory",
+		"punjab",
+		"balochistan",
+		"sindh"
+	]
+}

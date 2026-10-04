@@ -1,0 +1,353 @@
+{
+	"id": "morocco-towns-100k",
+	"name": "Morocco — Towns",
+	"country": "Morocco",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "tangier",
+			"name": "Tangier",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-5.806197897901798,
+				35.77592490288572
+			],
+			"bbox": [
+				-5.806197897901798,
+				35.77592490288572,
+				-5.806197897901798,
+				35.77592490288572
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "larache",
+			"name": "Larache",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-6.1600222,
+				35.2004212
+			],
+			"bbox": [
+				-6.1600222,
+				35.2004212,
+				-6.1600222,
+				35.2004212
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "ksar-el-kebir",
+			"name": "Ksar El Kebir",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-5.9099858,
+				35.0203805
+			],
+			"bbox": [
+				-5.9099858,
+				35.0203805,
+				-5.9099858,
+				35.0203805
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "oujda",
+			"name": "Oujda",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-1.9099716,
+				34.690013
+			],
+			"bbox": [
+				-1.9099716,
+				34.690013,
+				-1.9099716,
+				34.690013
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "kenitra",
+			"name": "Kenitra",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-6.5799966,
+				34.2704004
+			],
+			"bbox": [
+				-6.5799966,
+				34.2704004,
+				-6.5799966,
+				34.2704004
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "taza",
+			"name": "Taza",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-4.019972,
+				34.2203776
+			],
+			"bbox": [
+				-4.019972,
+				34.2203776,
+				-4.019972,
+				34.2203776
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "fez",
+			"name": "Fez",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-5.0023231,
+				34.0565455
+			],
+			"bbox": [
+				-5.0023231,
+				34.0565455,
+				-5.0023231,
+				34.0565455
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "rabat",
+			"name": "Rabat",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-6.8364082,
+				34.0253073
+			],
+			"bbox": [
+				-6.8364082,
+				34.0253073,
+				-6.8364082,
+				34.0253073
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "meknes",
+			"name": "Meknes",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-5.5599813,
+				33.900423
+			],
+			"bbox": [
+				-5.5599813,
+				33.900423,
+				-5.5599813,
+				33.900423
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "casablanca",
+			"name": "Casablanca",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-7.6183133,
+				33.6019221
+			],
+			"bbox": [
+				-7.6183133,
+				33.6019221,
+				-7.6183133,
+				33.6019221
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "el-jadida",
+			"name": "El Jadida",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-8.5099821,
+				33.2603587
+			],
+			"bbox": [
+				-8.5099821,
+				33.2603587,
+				-8.5099821,
+				33.2603587
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "settat",
+			"name": "Settat",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-7.6200106,
+				33.0104256
+			],
+			"bbox": [
+				-7.6200106,
+				33.0104256,
+				-7.6200106,
+				33.0104256
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "safi",
+			"name": "Safi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-9.2399893,
+				32.3199768
+			],
+			"bbox": [
+				-9.2399893,
+				32.3199768,
+				-9.2399893,
+				32.3199768
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "er-rachidia",
+			"name": "Er Rachidia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-4.4499716,
+				31.9404134
+			],
+			"bbox": [
+				-4.4499716,
+				31.9404134,
+				-4.4499716,
+				31.9404134
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "marrakesh",
+			"name": "Marrakesh",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-8.0019333,
+				31.631939
+			],
+			"bbox": [
+				-8.0019333,
+				31.631939,
+				-8.0019333,
+				31.631939
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "agadir",
+			"name": "Agadir",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-9.6200436,
+				30.4399882
+			],
+			"bbox": [
+				-9.6200436,
+				30.4399882,
+				-9.6200436,
+				30.4399882
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "goulimine",
+			"name": "Goulimine",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-10.0700161,
+				28.979974
+			],
+			"bbox": [
+				-10.0700161,
+				28.979974,
+				-10.0700161,
+				28.979974
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "laayoune",
+			"name": "Laayoune",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-13.2000059,
+				27.1499823
+			],
+			"bbox": [
+				-13.2000059,
+				27.1499823,
+				-13.2000059,
+				27.1499823
+			],
+			"colorIndex": 1
+		}
+	],
+	"tourOrder": [
+		"tangier",
+		"larache",
+		"ksar-el-kebir",
+		"oujda",
+		"kenitra",
+		"taza",
+		"fez",
+		"rabat",
+		"meknes",
+		"casablanca",
+		"el-jadida",
+		"settat",
+		"safi",
+		"er-rachidia",
+		"marrakesh",
+		"agadir",
+		"goulimine",
+		"laayoune"
+	]
+}
