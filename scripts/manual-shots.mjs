@@ -164,7 +164,6 @@ try {
 		null
 	);
 	await shot('my-maps', { path: '/my-maps' }, null);
-	await shot('about', { path: '/about' }, null);
 
 	// A map screen: Known (the opening screen), Overview, Tour.
 	await shot('known', { path: '/map/italy-regions' }, null);
