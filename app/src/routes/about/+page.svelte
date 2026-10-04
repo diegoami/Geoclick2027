@@ -5,6 +5,7 @@
 	import { onMount } from 'svelte';
 	import { t } from '$lib/i18n.svelte';
 	import PageBar from '$lib/PageBar.svelte';
+	import { resolve } from '$app/paths';
 	import { RELEASES_REPO_URL, RELEASES_URL, SOURCE_URL, isNativeShell } from '$lib/platform';
 
 	// For web visitors only - pointless inside the desktop or Android app.
@@ -29,6 +30,7 @@
 		</p>
 	{/if}
 	<p class="version">{t('about.version', { version: __APP_VERSION__, build: __BUILD_SHA__ })}</p>
+	<p class="manual"><a href={resolve('/manual')}>{t('about.manual')}</a></p>
 	<p class="author">{t('about.author')}</p>
 	<p class="repos">
 		<a href={SOURCE_URL} target="_blank" rel="external noopener">{t('about.sourceLink')}</a>
@@ -69,6 +71,9 @@
 		font-family: ui-monospace, monospace;
 		font-size: 0.85rem;
 		color: #4a5650;
+	}
+	.manual {
+		font-size: 1.05rem;
 	}
 	.author {
 		font-size: 1rem;

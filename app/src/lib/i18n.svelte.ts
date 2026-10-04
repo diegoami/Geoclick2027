@@ -40,6 +40,9 @@ export type TranslationKey =
 	| 'about.author'
 	| 'about.sourceLink'
 	| 'about.releasesLink'
+	| 'about.manual'
+	| 'manual.englishOnly'
+	| 'manual.loadFailed'
 	| 'home.viewLabel'
 	| 'home.viewMap'
 	| 'home.viewList'
@@ -224,6 +227,9 @@ const en: Dictionary = {
 	'about.author': 'Created by Diego Amicabile.',
 	'about.sourceLink': 'Source code',
 	'about.releasesLink': 'Releases',
+	'about.manual': 'User manual',
+	'manual.englishOnly': 'The manual is only in English for now.',
+	'manual.loadFailed': 'The manual could not be loaded.',
 	'home.viewLabel': 'Show the maps as',
 	'home.viewMap': 'Map',
 	'home.viewList': 'List',
@@ -425,6 +431,9 @@ const de: Dictionary = {
 	'about.author': 'Von Diego Amicabile.',
 	'about.sourceLink': 'Quellcode',
 	'about.releasesLink': 'Veröffentlichungen',
+	'about.manual': 'Handbuch',
+	'manual.englishOnly': 'Das Handbuch gibt es vorerst nur auf Englisch.',
+	'manual.loadFailed': 'Das Handbuch konnte nicht geladen werden.',
 	'home.viewLabel': 'Karten zeigen als',
 	'home.viewMap': 'Karte',
 	'home.viewList': 'Liste',
@@ -630,6 +639,9 @@ const it: Dictionary = {
 	'about.author': 'Di Diego Amicabile.',
 	'about.sourceLink': 'Codice sorgente',
 	'about.releasesLink': 'Versioni',
+	'about.manual': 'Manuale',
+	'manual.englishOnly': 'Per ora il manuale è solo in inglese.',
+	'manual.loadFailed': 'Impossibile caricare il manuale.',
 	'home.viewLabel': 'Mostra le mappe come',
 	'home.viewMap': 'Mappa',
 	'home.viewList': 'Elenco',
