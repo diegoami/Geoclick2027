@@ -670,8 +670,8 @@ again.
 
 ### Wandering off
 
-If you go somewhere the step didn't ask for (another map, the list of maps, a
-different tab), the tutorial pauses. The card is replaced by a small bar at the
+If you go somewhere the step didn't ask for (another map, a different tab), the
+tutorial pauses. The card is replaced by a small bar at the
 bottom of the screen:
 
 - **Resume** takes you back to where the step is and shows its card again.
@@ -690,7 +690,7 @@ What changes and what doesn't:
 
 - **Translated:** every button, heading and message, the tutorial, the kind of
   map ("Regions" / "Regionen" / "Regioni", "Towns" / "Städte" / "Città"), the
-  facts and name origins of every place, the terrain names (Alps / Alpen / Alpi),
+  facts and name origins of the places that have them, the terrain names (Alps / Alpen / Alpi),
   and the names of countries on the start screen and on the continents' maps, and of
   the towns on the maps of several countries: Italy is "Italien" in German and
   "Italia" in Italian. The title of a country's own map keeps the English country
