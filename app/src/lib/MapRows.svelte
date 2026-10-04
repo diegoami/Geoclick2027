@@ -52,7 +52,11 @@
 		// The tutorial's highlighted route is the first listed map; a returning
 		// player's remembered choice must not redirect it (#154).
 		if (isTutorialSandboxActive()) return group.maps[0]?.id ?? '';
-		return selections[key] ?? group.maps[0]?.id ?? '';
+		// A search can leave the row with only some of its maps ("towns"); a
+		// remembered choice that is no longer on offer would leave the menu blank.
+		const chosen = selections[key];
+		if (chosen && group.maps.some((map) => map.id === chosen)) return chosen;
+		return group.maps[0]?.id ?? '';
 	}
 
 	function chooseMapType(group: Row, mapId: string) {
