@@ -249,8 +249,7 @@ const NAME_FIXUPS: Record<string, Record<string, string>> = {
 	// Bangladesh's divisions come from geoBoundaries (Natural Earth predates
 	// Mymensingh, 2015), which misspells Rajshahi and has the old Chittagong and
 	// Barisal for the 2018 spellings Natural Earth's towns use. Malaysia's Penang and Malacca
-	// are the English names for Pulau Pinang and Melaka; the official names stay
-	// answers the quiz accepts (the alias).
+	// are the English names for Pulau Pinang and Melaka.
 	Bangladesh: { Rajshani: 'Rajshahi', Chittagong: 'Chattogram', Barisal: 'Barishal' },
 	Malaysia: { 'Pulau Pinang': 'Penang', Melaka: 'Malacca' },
 	Serbia: {

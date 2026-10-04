@@ -1201,7 +1201,7 @@ that was split into four regions in 2020-23. Built in the WSL clone.
 `NAME_FIXUPS`: Penang and Malacca for Pulau Pinang and Melaka, Rajshahi for
 the source's "Rajshani", and Chattogram and Barishal (the 2018 spellings,
 which Natural Earth's towns already use) for Chittagong and Barisal; the old
-names remain accepted answers (the alias). Authored facts, English, Italian
+names are not kept as aliases (nothing reads `aliases` at run time). Authored facts, English, Italian
 and German, for all 24 states, territories and divisions.
 
 ```

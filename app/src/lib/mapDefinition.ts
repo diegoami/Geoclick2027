@@ -3,7 +3,8 @@
 // 'county' added for Sweden's län - carried as metadata only, like every
 // other value here (confirmed nothing in app/ branches on TargetType).
 // 'country' for the maps of a continent (#39), the same kind of metadata.
-export type TargetType = 'region' | 'state' | 'province' | 'city' | 'county' | 'country';
+export type TargetType =
+	'region' | 'division' | 'state' | 'province' | 'city' | 'county' | 'country';
 
 export interface Target {
 	id: string;
