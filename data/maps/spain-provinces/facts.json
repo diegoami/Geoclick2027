@@ -49,7 +49,24 @@
 			"nameIt": "Bilbao",
 			"population": 875552
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Bizkaia is the Basque name, Vizcaya the Spanish one; the origin of the name is uncertain.",
+				"Gernika, the old Basque capital of law-giving under its oak tree, was bombed in 1937, an event Picasso painted.",
+				"The Vizcaya Bridge, a transporter bridge opened in 1893, is a World Heritage Site."
+			],
+			"it": [
+				"Bizkaia è il nome basco, Vizcaya quello spagnolo; l’origine del nome è incerta.",
+				"Gernika, la vecchia capitale basca delle leggi sotto la sua quercia, fu bombardata nel 1937, un fatto che Picasso dipinse.",
+				"Il ponte di Vizcaya, un ponte trasportatore aperto nel 1893, è Patrimonio dell’Umanità."
+			],
+			"de": [
+				"Bizkaia ist der baskische Name, Vizcaya der spanische; die Herkunft des Namens ist ungewiss.",
+				"Gernika, die alte baskische Stätte der Rechtsprechung unter ihrer Eiche, wurde 1937 bombardiert, ein Ereignis, das Picasso malte.",
+				"Die Vizcaya-Brücke, eine 1893 eröffnete Schwebefähre, ist Welterbe."
+			]
+		}
 	},
 	"gipuzkoa": {
 		"kind": "region",
@@ -66,7 +83,24 @@
 			"nameIt": "San Sebastián",
 			"population": 357468
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Gipuzkoa is the Basque name, Guipúzcoa the Spanish one; the origin of the name is uncertain.",
+				"It is the smallest province of mainland Spain, but crowded with famous restaurants.",
+				"San Sebastián has the shell-shaped bay of La Concha and is famous for its pintxos."
+			],
+			"it": [
+				"Gipuzkoa è il nome basco, Guipúzcoa quello spagnolo; l’origine del nome è incerta.",
+				"È la più piccola provincia della Spagna continentale, ma piena di ristoranti famosi.",
+				"San Sebastián ha la baia a forma di conchiglia della Concha ed è famosa per i suoi pintxos."
+			],
+			"de": [
+				"Gipuzkoa ist der baskische Name, Guipúzcoa der spanische; die Herkunft des Namens ist ungewiss.",
+				"Es ist die kleinste Provinz des spanischen Festlands, aber voller berühmter Restaurants.",
+				"San Sebastián hat die muschelförmige Bucht La Concha und ist für seine Pintxos berühmt."
+			]
+		}
 	},
 	"a-coruna": {
 		"kind": "region",
@@ -82,7 +116,24 @@
 			"nameIt": "La Coruña",
 			"population": 370610
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"A Coruña is the Galician name; the origin of the name is disputed.",
+				"The Tower of Hercules, a Roman lighthouse of the 2nd century that still works, is a World Heritage Site.",
+				"Santiago de Compostela, the end of the Camino, the pilgrim route, lies in this province."
+			],
+			"it": [
+				"A Coruña è il nome galiziano; l’origine del nome è discussa.",
+				"La Torre di Ercole, un faro romano del II secolo ancora in funzione, è Patrimonio dell’Umanità.",
+				"Santiago di Compostela, la meta del Cammino, il percorso dei pellegrini, si trova in questa provincia."
+			],
+			"de": [
+				"A Coruña ist der galicische Name; die Herkunft des Namens ist umstritten.",
+				"Der Herkulesturm, ein noch immer arbeitender römischer Leuchtturm aus dem 2. Jahrhundert, ist Welterbe.",
+				"Santiago de Compostela, das Ziel des Jakobswegs, liegt in dieser Provinz."
+			]
+		}
 	},
 	"cantabria": {
 		"kind": "region",
@@ -131,7 +182,24 @@
 			"Pontevedra"
 		],
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"From the Latin Lucus Augusti, \"grove of Augustus\", the name the Romans gave the town.",
+				"Its Roman walls, about 2 km long and still complete, are a World Heritage Site.",
+				"The Camino Primitivo, the oldest route of the Camino de Santiago, passes through it."
+			],
+			"it": [
+				"Dal latino Lucus Augusti, \"bosco di Augusto\", il nome che i romani diedero alla città.",
+				"Le sue mura romane, lunghe circa 2 km e ancora intatte, sono Patrimonio dell’Umanità.",
+				"Il Cammino Primitivo, il più antico percorso del Cammino di Santiago, la attraversa."
+			],
+			"de": [
+				"Vom lateinischen Lucus Augusti, „Hain des Augustus“, dem Namen, den die Römer der Stadt gaben.",
+				"Ihre römische Stadtmauer, etwa 2 km lang und noch vollständig, ist Welterbe.",
+				"Der Camino Primitivo, die älteste Route des Jakobswegs, führt hindurch."
+			]
+		}
 	},
 	"alava": {
 		"kind": "region",
@@ -150,7 +218,24 @@
 			"nameIt": "Vitoria",
 			"population": 224578
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Álava is the Spanish name, Araba the Basque one; the origin of the name is uncertain.",
+				"Vitoria-Gasteiz, its capital, is also the seat of the government of the Basque Country.",
+				"The salt valley of Añana has been producing salt for thousands of years."
+			],
+			"it": [
+				"Álava è il nome spagnolo, Araba quello basco; l’origine del nome è incerta.",
+				"Vitoria-Gasteiz, il capoluogo, è anche la sede del governo dei Paesi Baschi.",
+				"La valle salina di Añana produce sale da migliaia di anni."
+			],
+			"de": [
+				"Álava ist der spanische Name, Araba der baskische; die Herkunft des Namens ist ungewiss.",
+				"Vitoria-Gasteiz, die Hauptstadt, ist zugleich Sitz der Regierung des Baskenlandes.",
+				"Das Salztal von Añana liefert seit Jahrtausenden Salz."
+			]
+		}
 	},
 	"leon": {
 		"kind": "region",
@@ -240,7 +325,24 @@
 			"Valladolid"
 		],
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"From the Latin Pallantia, the name of an old town of the Vaccaei, a Celtic-Iberian people.",
+				"The statue of Christ on the Otero hill is about 30 m high, one of the largest in Spain.",
+				"The province has one of the biggest collections of Romanesque churches in Europe."
+			],
+			"it": [
+				"Dal latino Pallantia, il nome di un’antica città dei Vaccei, un popolo celtiberico.",
+				"La statua di Cristo sul colle dell’Otero è alta circa 30 m, una delle maggiori della Spagna.",
+				"La provincia ha una delle maggiori raccolte di chiese romaniche d’Europa."
+			],
+			"de": [
+				"Vom lateinischen Pallantia, dem Namen einer alten Stadt der Vaccäer, eines keltiberischen Volkes.",
+				"Die Christusstatue auf dem Hügel Otero ist etwa 30 m hoch, eine der größten Spaniens.",
+				"Die Provinz besitzt eine der größten Sammlungen romanischer Kirchen in Europa."
+			]
+		}
 	},
 	"pontevedra": {
 		"kind": "region",
@@ -257,7 +359,24 @@
 			"nameIt": "Vigo",
 			"population": 378952
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"From the Latin pons vetus, \"old bridge\", for the Roman bridge over the Lérez river.",
+				"The Rías Baixas, long sea inlets, give their name to the albariño white wine grown here.",
+				"The Cíes Islands, off Vigo, belong to a national park with some of Spain’s finest beaches."
+			],
+			"it": [
+				"Dal latino pons vetus, \"ponte vecchio\", per il ponte romano sul fiume Lérez.",
+				"Le Rías Baixas, lunghe insenature marine, danno il nome al vino bianco albariño qui coltivato.",
+				"Le isole Cíes, davanti a Vigo, fanno parte di un parco nazionale con alcune delle più belle spiagge della Spagna."
+			],
+			"de": [
+				"Vom lateinischen pons vetus, „alte Brücke“, nach der römischen Brücke über den Fluss Lérez.",
+				"Die Rías Baixas, lange Meeresbuchten, geben dem hier angebauten Weißwein Albariño den Namen.",
+				"Die Cíes-Inseln vor Vigo gehören zu einem Nationalpark mit einigen der schönsten Strände Spaniens."
+			]
+		}
 	},
 	"burgos": {
 		"kind": "region",
@@ -386,7 +505,24 @@
 			"name": "Pico de Aneto",
 			"elevation": 3404
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"From the Latin Osca, which came from the Iberian name of the town.",
+				"Aneto, 3,404 m, the highest peak of the Pyrenees, rises in the province.",
+				"Ordesa and Monte Perdido National Park is a deep valley of cliffs and waterfalls."
+			],
+			"it": [
+				"Dal latino Osca, che veniva dal nome iberico della città.",
+				"Nella provincia si alza l’Aneto, 3.404 m, la vetta più alta dei Pirenei.",
+				"Il Parco nazionale di Ordesa e Monte Perdido è una valle profonda di pareti rocciose e cascate."
+			],
+			"de": [
+				"Vom lateinischen Osca, das auf den iberischen Namen der Stadt zurückging.",
+				"In der Provinz erhebt sich der Aneto, 3.404 m, der höchste Gipfel der Pyrenäen.",
+				"Der Nationalpark Ordesa und Monte Perdido ist ein tiefes Tal aus Felswänden und Wasserfällen."
+			]
+		}
 	},
 	"girona": {
 		"kind": "region",
@@ -396,7 +532,24 @@
 			"Lleida"
 		],
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"From the Latin Gerunda, which came from an Iberian name.",
+				"The Costa Brava, \"wild coast\", with its rocky coves, lies in this province.",
+				"Salvador Dalí was born in Figueres, where his theatre-museum now stands."
+			],
+			"it": [
+				"Dal latino Gerunda, che veniva da un nome iberico.",
+				"In questa provincia si trova la Costa Brava, la \"costa selvaggia\", con le sue calette rocciose.",
+				"Salvador Dalí nacque a Figueres, dove oggi sorge il suo teatro-museo."
+			],
+			"de": [
+				"Vom lateinischen Gerunda, das auf einen iberischen Namen zurückging.",
+				"In dieser Provinz liegt die Costa Brava, die „wilde Küste“, mit ihren felsigen Buchten.",
+				"Salvador Dalí wurde in Figueres geboren, wo heute sein Theater-Museum steht."
+			]
+		}
 	},
 	"lleida": {
 		"kind": "region",
@@ -409,7 +562,24 @@
 			"Zaragoza"
 		],
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"From the Latin Ilerda, the town where Caesar defeated the armies of Pompey in 49 BC.",
+				"Aigüestortes i Estany de Sant Maurici is Catalonia’s only national park, in the Pyrenees.",
+				"The irrigated plain around the city is one of the main fruit-growing areas of Spain."
+			],
+			"it": [
+				"Dal latino Ilerda, la città dove Cesare sconfisse gli eserciti di Pompeo nel 49 a.C.",
+				"Aigüestortes i Estany de Sant Maurici è l’unico parco nazionale della Catalogna, nei Pirenei.",
+				"La pianura irrigua intorno alla città è una delle principali zone frutticole della Spagna."
+			],
+			"de": [
+				"Vom lateinischen Ilerda, der Stadt, in der Caesar 49 v. Chr. die Heere des Pompeius besiegte.",
+				"Aigüestortes i Estany de Sant Maurici ist Kataloniens einziger Nationalpark, in den Pyrenäen.",
+				"Die bewässerte Ebene um die Stadt ist eines der wichtigsten Obstanbaugebiete Spaniens."
+			]
+		}
 	},
 	"zaragoza": {
 		"kind": "region",
@@ -532,7 +702,24 @@
 			"Valladolid"
 		],
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"The origin of the name is disputed; it probably comes from Arabic.",
+				"The city has a remarkable number of Romanesque churches, more than twenty.",
+				"Lake Sanabria is the biggest glacial lake in the Iberian Peninsula."
+			],
+			"it": [
+				"L’origine del nome è discussa; probabilmente viene dall’arabo.",
+				"La città ha un numero notevole di chiese romaniche, più di venti.",
+				"Il lago di Sanabria è il più grande lago glaciale della penisola iberica."
+			],
+			"de": [
+				"Die Herkunft des Namens ist umstritten; er stammt wahrscheinlich aus dem Arabischen.",
+				"Die Stadt besitzt eine bemerkenswerte Zahl romanischer Kirchen, mehr als zwanzig.",
+				"Der Lago de Sanabria ist der größte Gletschersee der Iberischen Halbinsel."
+			]
+		}
 	},
 	"soria": {
 		"kind": "region",
@@ -549,7 +736,24 @@
 			"name": "Moncayo",
 			"elevation": 2313
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"The origin of the name is uncertain.",
+				"Numantia, a Celtiberian town near Soria, held out against Rome for years until it fell in 133 BC.",
+				"Soria is one of the least densely populated provinces in Europe."
+			],
+			"it": [
+				"L’origine del nome è incerta.",
+				"Numanzia, una città celtiberica vicino a Soria, resistette a lungo a Roma prima di cadere nel 133 a.C.",
+				"Soria è una delle province meno densamente popolate d’Europa."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss.",
+				"Numantia, eine keltiberische Stadt bei Soria, trotzte Rom lange, bis sie 133 v. Chr. fiel.",
+				"Soria ist eine der am dünnsten besiedelten Provinzen Europas."
+			]
+		}
 	},
 	"segovia": {
 		"kind": "region",
@@ -563,7 +767,24 @@
 			"Valladolid"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"The origin of the name is uncertain; it is thought to be Celtic.",
+				"The Roman aqueduct, with its two tiers of granite arches, still crosses the old town.",
+				"The Alcázar, a castle on a rock, is said to have inspired the fairy-tale castles of Disney."
+			],
+			"it": [
+				"L’origine del nome è incerta; si pensa sia celtica.",
+				"L’acquedotto romano, con i suoi due ordini di arcate di granito, attraversa ancora il centro storico.",
+				"L’Alcázar, un castello su una roccia, avrebbe ispirato i castelli da fiaba di Disney."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss; man hält ihn für keltisch.",
+				"Das römische Aquädukt mit seinen zwei Reihen von Granitbögen durchquert noch heute die Altstadt.",
+				"Der Alcázar, eine Burg auf einem Felsen, soll die Märchenschlösser von Disney inspiriert haben."
+			]
+		}
 	},
 	"tarragona": {
 		"kind": "region",
@@ -654,7 +875,24 @@
 			"nameIt": "Guadalajara",
 			"population": 72850
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"From the Arabic wadi al-hijara, \"river of stones\" or \"valley of stones\".",
+				"The Palace of the Infantado, a 15th-century palace with a patterned stone front, stands in the city.",
+				"The Alcarria region, in the province, is known for its honey."
+			],
+			"it": [
+				"Dall’arabo wadi al-hijara, \"fiume di pietre\" o \"valle di pietre\".",
+				"Il Palazzo dell’Infantado, un palazzo del XV secolo con la facciata di pietra decorata, sorge in città.",
+				"La regione dell’Alcarria, nella provincia, è nota per il suo miele."
+			],
+			"de": [
+				"Vom arabischen wadi al-hijara, „Fluss der Steine“ oder „Tal der Steine“.",
+				"Der Palast des Infantado, ein Palast des 15. Jahrhunderts mit gemusterter Steinfassade, steht in der Stadt.",
+				"Die Region Alcarria in der Provinz ist für ihren Honig bekannt."
+			]
+		}
 	},
 	"avila": {
 		"kind": "region",
@@ -672,7 +910,24 @@
 			"name": "Pico de Almanzor",
 			"elevation": 2592
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"The origin of the name is uncertain.",
+				"Its medieval walls, about 2.5 km long with 88 towers, are almost complete and a World Heritage Site.",
+				"At about 1,100 m, it is the highest provincial capital in Spain."
+			],
+			"it": [
+				"L’origine del nome è incerta.",
+				"Le sue mura medievali, lunghe circa 2,5 km con 88 torri, sono quasi complete e Patrimonio dell’Umanità.",
+				"A circa 1.100 m è il capoluogo di provincia più alto della Spagna."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss.",
+				"Seine mittelalterliche Stadtmauer, rund 2,5 km lang mit 88 Türmen, ist fast vollständig erhalten und Welterbe.",
+				"Mit etwa 1.100 m ist es die höchstgelegene Provinzhauptstadt Spaniens."
+			]
+		}
 	},
 	"teruel": {
 		"kind": "region",
@@ -686,7 +941,24 @@
 			"Zaragoza"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"The origin of the name is uncertain.",
+				"Its Mudéjar towers, in brick and glazed tile, are a World Heritage Site.",
+				"The Lovers of Teruel, Diego and Isabel, are the subject of a medieval love legend told in the city."
+			],
+			"it": [
+				"L’origine del nome è incerta.",
+				"Le sue torri mudéjar, in mattoni e piastrelle smaltate, sono Patrimonio dell’Umanità.",
+				"Gli Amanti di Teruel, Diego e Isabel, sono i protagonisti di una leggenda d’amore medievale raccontata in città."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss.",
+				"Seine Mudéjar-Türme aus Backstein und glasierten Fliesen sind Welterbe.",
+				"Die Liebenden von Teruel, Diego und Isabel, sind die Helden einer mittelalterlichen Liebeslegende, die in der Stadt erzählt wird."
+			]
+		}
 	},
 	"madrid": {
 		"kind": "region",
@@ -739,7 +1011,24 @@
 			"nameIt": "Castellón de la Plana",
 			"population": 180610
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"From castellón, \"little castle\"; the province is named for its capital, Castellón de la Plana.",
+				"Peñíscola, a town on a rock in the sea, was the home of the antipope Benedict XIII, Papa Luna.",
+				"Its coastal plain grows many of the oranges of the Valencian region."
+			],
+			"it": [
+				"Da castellón, \"piccolo castello\"; la provincia prende il nome dal suo capoluogo, Castellón de la Plana.",
+				"Peñíscola, una cittadina su una roccia nel mare, fu la dimora dell’antipapa Benedetto XIII, Papa Luna.",
+				"La sua pianura costiera produce molte delle arance della regione valenciana."
+			],
+			"de": [
+				"Von castellón, „kleine Burg“; die Provinz ist nach ihrer Hauptstadt Castellón de la Plana benannt.",
+				"Peñíscola, eine Stadt auf einem Felsen im Meer, war der Wohnsitz des Gegenpapstes Benedikt XIII., Papa Luna.",
+				"Auf der Küstenebene wachsen viele der Orangen der Region Valencia."
+			]
+		}
 	},
 	"cuenca": {
 		"kind": "region",
@@ -754,7 +1043,24 @@
 			"Valencia"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Cuenca means \"basin\" or \"bowl\" in Spanish, for its place between two river gorges.",
+				"Its Hanging Houses cling to the edge of a cliff above the Huécar gorge.",
+				"The Enchanted City nearby has limestone rocks carved by wind and water into strange shapes."
+			],
+			"it": [
+				"Cuenca significa \"bacino\" o \"conca\" in spagnolo, per la sua posizione tra due gole fluviali.",
+				"Le sue Case Sospese si aggrappano al bordo di una rupe sopra la gola dell’Huécar.",
+				"La vicina Città Incantata ha rocce calcaree scolpite da vento e acqua in forme bizzarre."
+			],
+			"de": [
+				"Cuenca bedeutet auf Spanisch „Becken“ oder „Mulde“, nach seiner Lage zwischen zwei Flussschluchten.",
+				"Seine Hängenden Häuser klammern sich an den Rand einer Felswand über der Huécar-Schlucht.",
+				"Die nahe Verzauberte Stadt hat Kalksteinfelsen, die Wind und Wasser zu seltsamen Formen geschnitten haben."
+			]
+		}
 	},
 	"toledo": {
 		"kind": "region",
@@ -774,7 +1080,24 @@
 			"nameIt": "Toledo",
 			"population": 74632
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"From the Latin Toletum, the name the Romans gave the town.",
+				"Toledo was the capital of Spain until the court moved to Madrid in 1561.",
+				"Jews, Christians and Muslims lived side by side in the medieval city, and its steel swords were famous."
+			],
+			"it": [
+				"Dal latino Toletum, il nome che i romani diedero alla città.",
+				"Toledo fu la capitale della Spagna finché la corte non si trasferì a Madrid nel 1561.",
+				"Nella città medievale ebrei, cristiani e musulmani vivevano fianco a fianco, e le sue spade d’acciaio erano famose."
+			],
+			"de": [
+				"Vom lateinischen Toletum, dem Namen, den die Römer der Stadt gaben.",
+				"Toledo war die Hauptstadt Spaniens, bis der Hof 1561 nach Madrid zog.",
+				"In der mittelalterlichen Stadt lebten Juden, Christen und Muslime Seite an Seite, und ihre Stahlschwerter waren berühmt."
+			]
+		}
 	},
 	"caceres": {
 		"kind": "region",
@@ -787,7 +1110,24 @@
 			"Toledo"
 		],
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"The origin of the name is uncertain; it may go back to the Roman Castra Caecilia.",
+				"Its medieval old town, with towers and noble houses, is a World Heritage Site.",
+				"Trujillo, in the province, is the birthplace of Francisco Pizarro, who conquered Peru."
+			],
+			"it": [
+				"L’origine del nome è incerta; potrebbe risalire alla romana Castra Caecilia.",
+				"Il suo centro storico medievale, con torri e case nobiliari, è Patrimonio dell’Umanità.",
+				"Trujillo, nella provincia, è la città natale di Francisco Pizarro, il conquistatore del Perù."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss; er könnte auf das römische Castra Caecilia zurückgehen.",
+				"Seine mittelalterliche Altstadt mit Türmen und Adelshäusern ist Welterbe.",
+				"Trujillo in der Provinz ist die Geburtsstadt von Francisco Pizarro, dem Eroberer Perus."
+			]
+		}
 	},
 	"illes-balears": {
 		"kind": "region",
@@ -803,7 +1143,24 @@
 			"name": "Puig Mayor",
 			"elevation": 1445
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"From the Greek balearis, \"slinger\": the islanders were famous for throwing stones with slings.",
+				"The Balearics are Mallorca, Menorca, Ibiza and Formentera.",
+				"The old walled town of Ibiza, Dalt Vila, is a World Heritage Site."
+			],
+			"it": [
+				"Dal greco balearis, \"frombolieri\": gli isolani erano famosi per lanciare pietre con la fionda.",
+				"Le Baleari sono Maiorca, Minorca, Ibiza e Formentera.",
+				"La città vecchia fortificata di Ibiza, Dalt Vila, è Patrimonio dell’Umanità."
+			],
+			"de": [
+				"Vom griechischen balearis, „Schleuderer“: Die Inselbewohner waren dafür berühmt, Steine mit Schleudern zu werfen.",
+				"Die Balearen sind Mallorca, Menorca, Ibiza und Formentera.",
+				"Die ummauerte Altstadt von Ibiza, Dalt Vila, ist Welterbe."
+			]
+		}
 	},
 	"valencia": {
 		"kind": "region",
@@ -854,7 +1211,24 @@
 			"Toledo"
 		],
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Ciudad Real means \"royal city\": it was founded by King Alfonso X in 1255.",
+				"The windmills of Campo de Criptana are the ones Don Quixote is said to have fought.",
+				"The mercury mines of Almadén produced much of the world’s mercury for centuries, and are a World Heritage Site."
+			],
+			"it": [
+				"Ciudad Real significa \"città reale\": fu fondata dal re Alfonso X nel 1255.",
+				"I mulini a vento di Campo de Criptana sono quelli contro cui si dice che combatté Don Chisciotte.",
+				"Le miniere di mercurio di Almadén produssero per secoli gran parte del mercurio del mondo e sono Patrimonio dell’Umanità."
+			],
+			"de": [
+				"Ciudad Real bedeutet „königliche Stadt“: Sie wurde 1255 von König Alfons X. gegründet.",
+				"Die Windmühlen von Campo de Criptana sind die, gegen die Don Quijote gekämpft haben soll.",
+				"Die Quecksilberminen von Almadén lieferten jahrhundertelang einen großen Teil des Quecksilbers der Welt und sind Welterbe."
+			]
+		}
 	},
 	"albacete": {
 		"kind": "region",
