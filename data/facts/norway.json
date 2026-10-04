@@ -2,7 +2,8 @@
 	"_note": [
 		"Name-facts for Norway (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences."
+		"of the same id, written later, never shows a town's sentences.",
+		"v0.19 added the eleven counties of 2020-23 (the set the map shows), each as a \"region\" entry (en, it, de); Oslo sits beside the city of the same id. Facts about the 2020 mergers say that Viken, Troms og Finnmark and Vestfold og Telemark were split again in 2024."
 	],
 	"bergen": {
 		"city": {
@@ -66,6 +67,23 @@
 				"Hier wird der Friedensnobelpreis verliehen.",
 				"Edvard Munchs „Der Schrei“ hängt in ihren Museen."
 			]
+		},
+		"region": {
+			"en": [
+				"Oslo is a county of its own as well as the capital’s municipality; the origin of the name is disputed, one reading being \"meadow of the gods\".",
+				"Vigeland Park holds more than 200 sculptures by a single artist, Gustav Vigeland.",
+				"The Holmenkollen ski jump, on a hill above the city, has been rebuilt many times since 1892."
+			],
+			"it": [
+				"Oslo è una contea a sé e anche il comune della capitale; l’origine del nome è discussa, una lettura è \"prato degli dei\".",
+				"Il parco Vigeland ospita oltre 200 sculture di un solo artista, Gustav Vigeland.",
+				"Il trampolino di Holmenkollen, su una collina sopra la città, è stato ricostruito più volte dal 1892."
+			],
+			"de": [
+				"Oslo ist eine eigene Provinz und zugleich die Hauptstadtgemeinde; die Herkunft des Namens ist umstritten, eine Lesart ist „Wiese der Götter“.",
+				"Der Vigeland-Park zeigt über 200 Skulpturen eines einzigen Künstlers, Gustav Vigeland.",
+				"Die Holmenkollen-Schanze auf einem Hügel über der Stadt wurde seit 1892 mehrfach neu gebaut."
+			]
 		}
 	},
 	"skien": {
@@ -126,6 +144,196 @@
 			"de": [
 				"Als Nidaros war sie in der Wikingerzeit die Hauptstadt Norwegens.",
 				"Ihre Kathedrale steht über dem Grab des heiligen Olav und ist die nördlichste mittelalterliche Kathedrale der Welt."
+			]
+		}
+	},
+	"troms-og-finnmark": {
+		"region": {
+			"en": [
+				"Two counties, Troms and Finnmark, joined in 2020 and separated again in 2024; Finnmark means \"the Sámi march\".",
+				"The North Cape, on the island of Magerøya, is often called Europe’s northernmost point (nearby Knivskjellodden reaches a little farther north).",
+				"In winter the northern lights are seen here on many clear nights."
+			],
+			"it": [
+				"Due contee, Troms e Finnmark, unite nel 2020 e di nuovo separate nel 2024; Finnmark significa \"la marca dei Sami\".",
+				"Capo Nord, sull’isola di Magerøya, è spesso detto il punto più settentrionale d’Europa (il vicino Knivskjellodden arriva un po’ più a nord).",
+				"In inverno l’aurora boreale si vede qui in molte notti serene."
+			],
+			"de": [
+				"Zwei Provinzen, Troms und Finnmark, wurden 2020 vereint und 2024 wieder getrennt; Finnmark bedeutet „Mark der Samen“.",
+				"Das Nordkap auf der Insel Magerøya gilt oft als nördlichster Punkt Europas (das nahe Knivskjellodden reicht etwas weiter nach Norden).",
+				"Im Winter sind hier in vielen klaren Nächten Polarlichter zu sehen."
+			]
+		}
+	},
+	"nordland": {
+		"region": {
+			"en": [
+				"\"Land of the North\", though it lies in the middle of the country’s long coast.",
+				"The Arctic Circle crosses it, and the Lofoten islands rise from the sea off its coast.",
+				"At Saltstraumen, near Bodø, one of the strongest tidal currents in the world races through a narrow strait."
+			],
+			"it": [
+				"\"Terra del Nord\", benché sia a metà della lunga costa del paese.",
+				"Lo attraversa il Circolo polare artico e al largo della sua costa sorgono dal mare le isole Lofoten.",
+				"A Saltstraumen, vicino a Bodø, una delle correnti di marea più forti del mondo corre attraverso uno stretto canale."
+			],
+			"de": [
+				"„Land des Nordens“, obwohl es mitten an der langen Küste des Landes liegt.",
+				"Der Polarkreis verläuft hindurch, und vor seiner Küste ragen die Lofoten aus dem Meer.",
+				"Bei Saltstraumen nahe Bodø strömt eine der stärksten Gezeitenströmungen der Welt durch eine enge Meerenge."
+			]
+		}
+	},
+	"tr-ndelag": {
+		"region": {
+			"en": [
+				"Named for the Trønders, its people; North and South Trøndelag joined into one county in 2018.",
+				"The old mining town of Røros, which dug copper for 333 years until 1977, is a World Heritage Site.",
+				"Near Trondheim airport is a village called Hell, whose railway station is famous for the sign \"Gods Expedition\"."
+			],
+			"it": [
+				"Prende il nome dai Trønder, i suoi abitanti; il Nord e il Sør-Trøndelag furono riuniti in un’unica contea nel 2018.",
+				"L’antica città mineraria di Røros, dove si estrasse rame per 333 anni fino al 1977, è Patrimonio dell’Umanità.",
+				"Vicino all’aeroporto di Trondheim c’è un villaggio chiamato Hell, la cui stazione è famosa per il cartello \"Gods Expedition\"."
+			],
+			"de": [
+				"Benannt nach den Trøndern, seinen Bewohnern; Nord- und Sør-Trøndelag wurden 2018 zu einer Provinz vereint.",
+				"Die alte Bergbaustadt Røros, in der 333 Jahre lang bis 1977 Kupfer abgebaut wurde, ist Welterbe.",
+				"Nahe dem Flughafen von Trondheim liegt ein Dorf namens Hell, dessen Bahnhof für das Schild „Gods Expedition“ berühmt ist."
+			]
+		}
+	},
+	"m-re-og-romsdal": {
+		"region": {
+			"en": [
+				"Møre is an old name for this stretch of coast and Romsdal is the valley behind it; the origin of Møre is disputed.",
+				"The Geirangerfjord, a World Heritage Site with waterfalls falling straight into it, is here.",
+				"Ålesund was rebuilt in the Art Nouveau style after a fire destroyed it in 1904."
+			],
+			"it": [
+				"Møre è un antico nome di questo tratto di costa e Romsdal è la valle alle sue spalle; l’origine di Møre è discussa.",
+				"Qui si trova il Geirangerfjord, Patrimonio dell’Umanità, con cascate che si tuffano direttamente nel fiordo.",
+				"Ålesund fu ricostruita in stile Liberty dopo che un incendio la distrusse nel 1904."
+			],
+			"de": [
+				"Møre ist ein alter Name dieses Küstenstrichs und Romsdal das Tal dahinter; die Herkunft von Møre ist umstritten.",
+				"Hier liegt der Geirangerfjord, Welterbe, in den Wasserfälle direkt hinabstürzen.",
+				"Ålesund wurde nach einem Brand 1904 im Jugendstil wiederaufgebaut."
+			]
+		}
+	},
+	"innlandet": {
+		"region": {
+			"en": [
+				"Norwegian for \"the Inland\": the only county of Norway with no coast, formed in 2020 from Hedmark and Oppland.",
+				"Galdhøpiggen, 2,469 m, the highest mountain in Norway and in northern Europe, rises in the Jotunheimen range.",
+				"Lillehammer hosted the 1994 Winter Olympics, and Mjøsa, Norway’s largest lake, lies here."
+			],
+			"it": [
+				"In norvegese \"l’entroterra\": è l’unica contea norvegese senza costa, nata nel 2020 da Hedmark e Oppland.",
+				"Il Galdhøpiggen, 2.469 m, la montagna più alta della Norvegia e dell’Europa settentrionale, si alza nel massiccio dello Jotunheimen.",
+				"Lillehammer ospitò le Olimpiadi invernali del 1994 e qui si trova il Mjøsa, il lago più grande della Norvegia."
+			],
+			"de": [
+				"Norwegisch für „das Landesinnere“: die einzige norwegische Provinz ohne Küste, 2020 aus Hedmark und Oppland entstanden.",
+				"Der Galdhøpiggen, 2.469 m, der höchste Berg Norwegens und Nordeuropas, ragt im Jotunheimen auf.",
+				"Lillehammer richtete 1994 die Olympischen Winterspiele aus, und hier liegt der Mjøsa, Norwegens größter See."
+			]
+		}
+	},
+	"vestland": {
+		"region": {
+			"en": [
+				"\"West Land\": formed in 2020 from Hordaland and Sogn og Fjordane.",
+				"The Sognefjord, 205 km long, is the longest fjord in Norway.",
+				"The Nærøyfjord, an arm of the Sognefjord, is a World Heritage Site and in places only 250 m wide."
+			],
+			"it": [
+				"\"Terra dell’Ovest\": nata nel 2020 da Hordaland e Sogn og Fjordane.",
+				"Il Sognefjord, lungo 205 km, è il fiordo più lungo della Norvegia.",
+				"Il Nærøyfjord, un braccio del Sognefjord, è Patrimonio dell’Umanità e in certi punti è largo solo 250 m."
+			],
+			"de": [
+				"„Westland“: 2020 aus Hordaland und Sogn og Fjordane entstanden.",
+				"Der Sognefjord, 205 km lang, ist der längste Fjord Norwegens.",
+				"Der Nærøyfjord, ein Arm des Sognefjords, ist Welterbe und stellenweise nur 250 m breit."
+			]
+		}
+	},
+	"viken": {
+		"region": {
+			"en": [
+				"Viken means \"the bay\" or \"the inlet\", the shore of the Oslofjord; one theory ties it to the word Viking.",
+				"It was formed in 2020 from Akershus, Buskerud and Østfold, and split into them again in 2024.",
+				"It surrounds Oslo, which is a county of its own."
+			],
+			"it": [
+				"Viken significa \"la baia\" o \"l’insenatura\", la riva dell’Oslofjord; una teoria lo collega alla parola Vichingo.",
+				"Fu creata nel 2020 da Akershus, Buskerud e Østfold e divisa di nuovo in esse nel 2024.",
+				"Circonda Oslo, che è una contea a sé."
+			],
+			"de": [
+				"Viken bedeutet „die Bucht“, das Ufer des Oslofjords; eine Theorie bringt es mit dem Wort Wikinger in Verbindung.",
+				"Es wurde 2020 aus Akershus, Buskerud und Østfold gebildet und 2024 wieder in sie geteilt.",
+				"Es umschließt Oslo, das eine eigene Provinz ist."
+			]
+		}
+	},
+	"vestfold-og-telemark": {
+		"region": {
+			"en": [
+				"Two counties, Vestfold and Telemark, joined in 2020 and separated again in 2024.",
+				"The telemark turn, a skiing technique with the heel free, is named for Telemark, where it was developed.",
+				"The Gokstad ship, a Viking ship from about the year 900, was found in a burial mound near Sandefjord in 1880."
+			],
+			"it": [
+				"Due contee, Vestfold e Telemark, unite nel 2020 e separate di nuovo nel 2024.",
+				"Il telemark, una tecnica di sci a tallone libero, prende il nome dal Telemark, dove fu sviluppata.",
+				"La nave di Gokstad, una nave vichinga del 900 circa, fu trovata nel 1880 in un tumulo funerario vicino a Sandefjord."
+			],
+			"de": [
+				"Zwei Provinzen, Vestfold und Telemark, wurden 2020 vereint und 2024 wieder getrennt.",
+				"Der Telemark-Schwung, eine Skitechnik mit freier Ferse, ist nach Telemark benannt, wo er entwickelt wurde.",
+				"Das Gokstad-Schiff, ein Wikingerschiff aus der Zeit um 900, wurde 1880 in einem Grabhügel bei Sandefjord gefunden."
+			]
+		}
+	},
+	"rogaland": {
+		"region": {
+			"en": [
+				"Named for the Rygir, an old people of this coast; the name means \"land of the Rygir\".",
+				"Preikestolen, the Pulpit Rock, is a flat cliff top 604 m above the Lysefjord.",
+				"Stavanger became Norway’s oil capital after oil was found in the North Sea in 1969."
+			],
+			"it": [
+				"Prende il nome dai Rygir, un antico popolo di questa costa; significa \"terra dei Rygir\".",
+				"Preikestolen, il Pulpito, è una cima piatta di roccia a 604 m sopra il Lysefjord.",
+				"Stavanger divenne la capitale petrolifera della Norvegia dopo la scoperta del petrolio nel Mare del Nord nel 1969."
+			],
+			"de": [
+				"Benannt nach den Rygir, einem alten Volk dieser Küste; der Name bedeutet „Land der Rygir“.",
+				"Der Preikestolen, die Predigtstuhl genannte Felskanzel, ragt 604 m über dem Lysefjord auf.",
+				"Stavanger wurde zur Ölhauptstadt Norwegens, nachdem 1969 in der Nordsee Öl gefunden worden war."
+			]
+		}
+	},
+	"agder": {
+		"region": {
+			"en": [
+				"Named for the old Agder people; the root of the name is uncertain. Formed in 2020 from Aust-Agder and Vest-Agder.",
+				"Lindesnes, with Norway’s oldest lighthouse, first lit in 1655, is the southernmost point of the Norwegian mainland.",
+				"The Sørlandet coast is known for its white wooden towns and its skerries."
+			],
+			"it": [
+				"Prende il nome dagli antichi Agder; la radice del nome è incerta. Creata nel 2020 da Aust-Agder e Vest-Agder.",
+				"Lindesnes, con il faro più antico della Norvegia, acceso per la prima volta nel 1655, è il punto più meridionale della terraferma norvegese.",
+				"La costa del Sørlandet è nota per le cittadine di legno bianco e per gli scogli."
+			],
+			"de": [
+				"Benannt nach dem alten Volk der Agder; die Wurzel des Namens ist ungewiss. 2020 aus Aust-Agder und Vest-Agder entstanden.",
+				"Lindesnes mit Norwegens ältestem Leuchtturm, 1655 erstmals entzündet, ist der südlichste Punkt des norwegischen Festlands.",
+				"Die Küste des Sørlandet ist für ihre weißen Holzstädtchen und Schären bekannt."
 			]
 		}
 	}
