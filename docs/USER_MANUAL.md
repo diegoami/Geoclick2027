@@ -311,7 +311,7 @@ to what you have earned. Your choices last for the sitting: when the app is
 reopened, the map shows what you know and nothing else.
 
 Putting a name on the map also opens the place's **fact card**, with its name and
-something about it (if it has one; taking a name off closes the card):
+something about it (if there is anything to show; taking a name off closes the card):
 
 ![Tapping Sicilia puts its name on the map and opens its fact card](manual/known-fact.jpg)
 
@@ -320,8 +320,9 @@ what you actually know. Nothing here is scored. On a towns map, tap a town's dot
 
 ## 7. Overview: see every name
 
-Every region (or town) has its name written on it, in white on a dark green
-label. This is the screen to study from. Nothing is scored here.
+Every region is painted the same green and has its name written on it, in dark
+letters with a pale halo; on a towns map each town's name is white on a dark green
+label beside its dot. This is the screen to study from. Nothing is scored here.
 
 ![Overview: every region named](manual/overview.jpg)
 
@@ -543,15 +544,16 @@ Most places have a few sentences of their own, in your language. The first is
 usually about the **name**: where the word comes from, who it is named after, what
 it meant. Hiroshima is "wide island"; Lombardia is named for the Longobards, the
 "long-beards"; Chicago is a word for wild garlic. Where an origin is disputed, the
-sentence says so. A few newer maps (and most of their towns) do not have their
-sentences yet; for such a place no card opens.
+sentence says so. Some places, mostly on newer maps and their towns, have no
+sentences yet; for them the card shows only what the map itself can tell (see
+below), or does not open at all.
 
 A **fact card** opens at the bottom of the screen:
 
 - when you **tap a place** in Known or the Overview;
 - **after a wrong drop** in the quiz, so it can never give an answer away (it
   stays until your next drop; a correct drop opens no card);
-- at every **stop of the tour**.
+- at every **stop of the tour**, where there is something to show.
 
 The card shows the name's origin, another sentence about the place, and a line
 worked out from the map: for a region, its biggest city; for a town, the region it
@@ -561,7 +563,7 @@ closes the card; on the tour it changes by itself at each stop.
 
 ## 13. Terrain
 
-The **Terrain** button in the map bar's second row shows or hides the landscape
+The **Terrain** button, next to the language menu, shows or hides the landscape
 behind the map. It is on by default. With it on, you see the sea, the rivers and
 the named seas, ranges, deserts and peaks around the map, with their heights, in
 your language; empty stretches of sea carry old sea-chart decorations. Turning
@@ -580,7 +582,7 @@ Press the **★** in the start screen's toolbar. The page holds two lists:
 
 - **Favourites (★):** every map you've starred. Star a map with the star on its
   card here, or with the star at the end of the type row on any map screen. Click
-  a filled star to unstar it. Favourites stay in the order you starred them.
+  a filled star to unstar it.
 - **Recent (🕘):** the last five maps you opened, newest first. Opening a map on
   any of its screens counts, and opening one again moves it to the top. A map can
   be in both lists.
