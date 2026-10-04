@@ -1256,12 +1256,13 @@ Western Sahara.
 Hamra and Dakhla-Oued Ed-Dahab, lie in Western Sahara, a territory whose status is
 disputed: Morocco administers most of it, the Polisario Front (the Sahrawi Arab
 Democratic Republic it proclaimed) claims all of it, and the United Nations lists
-it as a non-self-governing territory. The map draws the two regions as the area
-Morocco administers, which is how the source draws them, and nothing is drawn
-for the part east of the sand wall that the Polisario Front controls. This is not
-a statement on the dispute; the sentences about the two regions say so in neutral
-words, and the same note will have to be kept if the map is rebuilt from another
-source.
+it as a non-self-governing territory. The map draws the two regions as the source
+draws them: covering the whole of Western Sahara as Morocco claims it, up to the
+borders with Algeria and Mauritania, including the part east of the sand wall that
+the Polisario Front controls. That is Morocco's claim, not a statement on the
+dispute; the sentences about the two regions say so in neutral words. Showing only
+the area Morocco controls would need the line of the sand wall, which none of the
+sources has; the choice is the owner's (#209) and is recorded here.
 
 ```
 npx tsx data/scripts/build-map.ts --country=Morocco --type=region --source=data/source/geoboundaries/MAR-ADM1.geojson "--attribution=© OpenStreetMap contributors, ODbL (via geoBoundaries)" --out=data/maps/morocco-regions --name="Morocco — Regions"
