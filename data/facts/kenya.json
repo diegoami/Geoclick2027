@@ -2,7 +2,8 @@
 	"_note": [
 		"Name-facts for Kenya (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences."
+		"of the same id, written later, never shows a town's sentences.",
+		"v0.19 added the 47 counties, each as a \"region\" entry (en, it, de); Nairobi sits beside the city of the same id."
 	],
 	"nairobi": {
 		"city": {
@@ -20,6 +21,897 @@
 				"Von einer Wendung der Maasai für „kühles Wasser“.",
 				"Ein Nationalpark mit Löwen und Giraffen liegt in Sichtweite ihrer Hochhäuser.",
 				"Sie entstand 1899 als Depot an der Eisenbahn von Mombasa nach Uganda."
+			]
+		},
+		"region": {
+			"en": [
+				"From a Maasai phrase for \"cool water\"; Nairobi is a county on its own, the only one made up almost entirely of a city.",
+				"With about four million people it is the most populous of Kenya’s 47 counties.",
+				"The United Nations Environment Programme has its headquarters here, the UN’s main base in Africa."
+			],
+			"it": [
+				"Da una frase masai per \"acqua fresca\"; Nairobi è una contea a sé, l’unica formata quasi interamente da una città.",
+				"Con circa quattro milioni di abitanti è la più popolosa delle 47 contee del Kenya.",
+				"Qui ha sede il Programma delle Nazioni Unite per l’ambiente, la principale base dell’ONU in Africa."
+			],
+			"de": [
+				"Aus einer Massai-Wendung für „kühles Wasser“; Nairobi ist ein eigenes County, das einzige, das fast ganz aus einer Stadt besteht.",
+				"Mit rund vier Millionen Einwohnern ist es das bevölkerungsreichste der 47 Countys Kenias.",
+				"Hier hat das Umweltprogramm der Vereinten Nationen seinen Sitz, die wichtigste UN-Basis in Afrika."
+			]
+		}
+	},
+	"mandera": {
+		"region": {
+			"en": [
+				"The origin of the name is uncertain.",
+				"It lies in the north-east corner of Kenya, where the borders with Ethiopia and Somalia meet.",
+				"Most people here are Somali herders of camels, goats and cattle."
+			],
+			"it": [
+				"L’origine del nome è incerta.",
+				"Si trova nell’angolo nord-orientale del Kenya, dove si incontrano i confini con l’Etiopia e la Somalia.",
+				"La maggior parte degli abitanti sono pastori somali di cammelli, capre e bovini."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss.",
+				"Es liegt in der Nordostecke Kenias, wo die Grenzen zu Äthiopien und Somalia zusammentreffen.",
+				"Die meisten Menschen hier sind somalische Hirten mit Kamelen, Ziegen und Rindern."
+			]
+		}
+	},
+	"turkana": {
+		"region": {
+			"en": [
+				"Named for the Turkana people, who herd livestock in the dry lands around Lake Turkana.",
+				"Lake Turkana, called the Jade Sea for its colour, is the largest permanent desert lake in the world.",
+				"Near its shore the skeleton of Turkana Boy, a young Homo erectus about 1.6 million years old, was found in 1984."
+			],
+			"it": [
+				"Prende il nome dai Turkana, che allevano il bestiame nelle terre aride intorno al lago Turkana.",
+				"Il lago Turkana, detto il Mare di Giada per il suo colore, è il più grande lago desertico permanente del mondo.",
+				"Vicino alla sua riva, nel 1984, fu trovato lo scheletro del Ragazzo del Turkana, un giovane Homo erectus di circa 1,6 milioni di anni."
+			],
+			"de": [
+				"Benannt nach den Turkana, die in den trockenen Gebieten um den Turkana-See ihr Vieh weiden.",
+				"Der Turkana-See, wegen seiner Farbe das Jademeer genannt, ist der größte ständige Wüstensee der Welt.",
+				"Nahe seinem Ufer wurde 1984 das Skelett des Turkana-Jungen gefunden, eines jungen Homo erectus von etwa 1,6 Millionen Jahren."
+			]
+		}
+	},
+	"marsabit": {
+		"region": {
+			"en": [
+				"The origin of the name is uncertain.",
+				"Mount Marsabit, an extinct volcano, rises from the desert as an island of forest, with crater lakes.",
+				"The Chalbi Desert, one of the hottest places in Kenya, lies to its north."
+			],
+			"it": [
+				"L’origine del nome è incerta.",
+				"Il monte Marsabit, un vulcano spento, si alza dal deserto come un’isola di foresta, con laghi di cratere.",
+				"Il deserto di Chalbi, uno dei luoghi più caldi del Kenya, si trova a nord."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss.",
+				"Der Marsabit, ein erloschener Vulkan, erhebt sich als Waldinsel mit Kraterseen aus der Wüste.",
+				"Die Chalbi-Wüste, einer der heißesten Orte Kenias, liegt nördlich davon."
+			]
+		}
+	},
+	"wajir": {
+		"region": {
+			"en": [
+				"The origin of the name is uncertain.",
+				"Wajir is one of the driest counties in Kenya, where camels are the main livestock.",
+				"Its people are mostly Somali, and its wells are some of the most important places in the county."
+			],
+			"it": [
+				"L’origine del nome è incerta.",
+				"Wajir è una delle contee più aride del Kenya, dove i cammelli sono il principale bestiame.",
+				"I suoi abitanti sono in maggioranza somali e i suoi pozzi sono tra i luoghi più importanti della contea."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss.",
+				"Wajir ist einer der trockensten Countys Kenias, wo Kamele das wichtigste Vieh sind.",
+				"Seine Bewohner sind überwiegend Somali, und seine Brunnen gehören zu den wichtigsten Orten des Countys."
+			]
+		}
+	},
+	"west-pokot": {
+		"region": {
+			"en": [
+				"Named for the Pokot people, herders and farmers of the Rift Valley and the Cherangani Hills.",
+				"In 1952-53 Jomo Kenyatta and five others were tried for their role in the Mau Mau uprising at Kapenguria, the county’s town.",
+				"The Cherangani Hills rise on its eastern side."
+			],
+			"it": [
+				"Prende il nome dai Pokot, pastori e contadini della Rift Valley e delle colline Cherangani.",
+				"Nel 1952-53 Jomo Kenyatta e altri cinque furono processati per il loro ruolo nella rivolta dei Mau Mau a Kapenguria, la città della contea.",
+				"Le colline Cherangani si alzano sul suo lato orientale."
+			],
+			"de": [
+				"Benannt nach den Pokot, Hirten und Bauern des Rift Valley und der Cherangani-Berge.",
+				"1952-53 wurden in Kapenguria, dem Hauptort des Countys, Jomo Kenyatta und fünf andere wegen ihrer Rolle im Mau-Mau-Aufstand vor Gericht gestellt.",
+				"Die Cherangani-Berge erheben sich an seiner Ostseite."
+			]
+		}
+	},
+	"samburu": {
+		"region": {
+			"en": [
+				"Named for the Samburu people, close relatives of the Maasai.",
+				"Samburu National Reserve, on the Ewaso Ng’iro river, is home to species found mainly in the north, such as the Grevy’s zebra and the reticulated giraffe.",
+				"Samburu warriors are known for their beaded jewellery and red cloth."
+			],
+			"it": [
+				"Prende il nome dai Samburu, stretti parenti dei Masai.",
+				"La riserva nazionale di Samburu, sul fiume Ewaso Ng’iro, ospita specie diffuse soprattutto nel nord, come la zebra di Grevy e la giraffa reticolata.",
+				"I guerrieri samburu sono noti per i gioielli di perline e le stoffe rosse."
+			],
+			"de": [
+				"Benannt nach den Samburu, nahen Verwandten der Massai.",
+				"Das Samburu-Nationalreservat am Ewaso Ng’iro beherbergt vor allem im Norden verbreitete Arten wie das Grevyzebra und die Netzgiraffe.",
+				"Samburu-Krieger sind für ihren Perlenschmuck und ihre roten Tücher bekannt."
+			]
+		}
+	},
+	"trans-nzoia": {
+		"region": {
+			"en": [
+				"Trans Nzoia means \"across the Nzoia\": the county lies beyond the Nzoia river.",
+				"Its fertile highlands make it one of Kenya’s main maize-growing areas.",
+				"Saiwa Swamp National Park, the smallest in Kenya, protects the sitatunga, an antelope that lives in water."
+			],
+			"it": [
+				"Trans Nzoia significa \"al di là del Nzoia\": la contea si trova oltre il fiume Nzoia.",
+				"I suoi fertili altopiani ne fanno una delle principali zone di coltivazione del mais del Kenya.",
+				"Il Parco nazionale della palude di Saiwa, il più piccolo del Kenya, protegge il sitatunga, un’antilope che vive nell’acqua."
+			],
+			"de": [
+				"Trans Nzoia bedeutet „jenseits des Nzoia“: Das County liegt jenseits des Flusses Nzoia.",
+				"Sein fruchtbares Hochland macht es zu einem der wichtigsten Maisanbaugebiete Kenias.",
+				"Der Saiwa-Sumpf-Nationalpark, der kleinste Kenias, schützt die Sitatunga, eine im Wasser lebende Antilope."
+			]
+		}
+	},
+	"isiolo": {
+		"region": {
+			"en": [
+				"The origin of the name is uncertain.",
+				"Isiolo is the gateway to northern Kenya, where the roads to Marsabit and Wajir part.",
+				"Buffalo Springs and Shaba reserves, beside Samburu, share the Ewaso Ng’iro river."
+			],
+			"it": [
+				"L’origine del nome è incerta.",
+				"Isiolo è la porta del nord del Kenya, dove si separano le strade per Marsabit e Wajir.",
+				"Le riserve di Buffalo Springs e Shaba, accanto a Samburu, condividono il fiume Ewaso Ng’iro."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss.",
+				"Isiolo ist das Tor zum Norden Kenias, wo sich die Straßen nach Marsabit und Wajir trennen.",
+				"Die Reservate Buffalo Springs und Shaba neben Samburu teilen sich den Fluss Ewaso Ng’iro."
+			]
+		}
+	},
+	"bungoma": {
+		"region": {
+			"en": [
+				"The origin of the name is uncertain; the county is the home of the Bukusu, one of the Luhya peoples.",
+				"Mount Elgon, an extinct volcano on the Ugandan border, rises on its north-western side.",
+				"The Bukusu are known for the circumcision ceremonies they hold every two years."
+			],
+			"it": [
+				"L’origine del nome è incerta; la contea è la patria dei Bukusu, uno dei popoli luhya.",
+				"Il monte Elgon, un vulcano spento al confine con l’Uganda, si alza sul suo lato nord-occidentale.",
+				"I Bukusu sono noti per le cerimonie di circoncisione che tengono ogni due anni."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss; das County ist die Heimat der Bukusu, eines der Luhya-Völker.",
+				"Der Mount Elgon, ein erloschener Vulkan an der Grenze zu Uganda, erhebt sich an seiner Nordwestseite.",
+				"Die Bukusu sind für ihre Beschneidungsfeiern bekannt, die sie alle zwei Jahre abhalten."
+			]
+		}
+	},
+	"elgeyo-marakwet": {
+		"region": {
+			"en": [
+				"Named for the Elgeyo and Marakwet peoples, two of the Kalenjin.",
+				"The Elgeyo Escarpment, a wall more than 1,000 m high, drops into the Kerio Valley.",
+				"Iten, high on the plateau, is known as a home of champions, where many long-distance runners train."
+			],
+			"it": [
+				"Prende il nome dagli Elgeyo e dai Marakwet, due popoli kalenjin.",
+				"L’escarpata di Elgeyo, una parete alta più di 1.000 m, scende nella valle del Kerio.",
+				"Iten, in alto sull’altopiano, è nota come casa dei campioni, dove si allenano molti fondisti."
+			],
+			"de": [
+				"Benannt nach den Elgeyo und den Marakwet, zwei Völkern der Kalenjin.",
+				"Die Elgeyo-Steilstufe, eine mehr als 1.000 m hohe Wand, fällt ins Kerio-Tal ab.",
+				"Iten, hoch auf dem Plateau, gilt als Heimat der Champions, wo viele Langstreckenläufer trainieren."
+			]
+		}
+	},
+	"baringo": {
+		"region": {
+			"en": [
+				"Baringo is thought to come from a Maasai word for a lake.",
+				"Lake Baringo is one of the few freshwater lakes of the Rift Valley, with hippos and crocodiles.",
+				"Lake Bogoria, to its south, has hot springs, geysers and flocks of flamingos."
+			],
+			"it": [
+				"Baringo deriva forse da una parola masai per \"lago\".",
+				"Il lago Baringo è uno dei pochi laghi d’acqua dolce della Rift Valley, con ippopotami e coccodrilli.",
+				"Il lago Bogoria, a sud, ha sorgenti calde, geyser e stormi di fenicotteri."
+			],
+			"de": [
+				"Baringo stammt vermutlich von einem Massai-Wort für „See“.",
+				"Der Baringo-See ist einer der wenigen Süßwasserseen des Rift Valley, mit Flusspferden und Krokodilen.",
+				"Der Bogoria-See im Süden hat heiße Quellen, Geysire und Scharen von Flamingos."
+			]
+		}
+	},
+	"kakamega": {
+		"region": {
+			"en": [
+				"The origin of the name is uncertain; Kakamega is the home of many of the Luhya people.",
+				"Kakamega Forest is the last remnant in Kenya of the rainforest that once stretched across Africa to the Atlantic.",
+				"A gold rush in the 1930s brought thousands of prospectors to the area."
+			],
+			"it": [
+				"L’origine del nome è incerta; Kakamega è la patria di molti Luhya.",
+				"La foresta di Kakamega è l’ultimo resto in Kenya della foresta pluviale che un tempo si estendeva attraverso l’Africa fino all’Atlantico.",
+				"Una corsa all’oro negli anni 1930 portò migliaia di cercatori nella zona."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss; Kakamega ist die Heimat vieler Luhya.",
+				"Der Kakamega-Wald ist Kenias letzter Rest des Regenwalds, der sich einst quer durch Afrika bis zum Atlantik erstreckte.",
+				"Ein Goldrausch in den 1930er-Jahren lockte Tausende Schürfer in die Gegend."
+			]
+		}
+	},
+	"uasin-gishu": {
+		"region": {
+			"en": [
+				"Named for the Uasin Gishu, a Maasai section who lived on the plateau.",
+				"Eldoret, its main city, stands at about 2,100 m and is a base for many of Kenya’s long-distance runners.",
+				"The plateau is farmed for wheat and maize."
+			],
+			"it": [
+				"Prende il nome dagli Uasin Gishu, una sezione dei Masai che viveva sull’altopiano.",
+				"Eldoret, la città principale, sorge a circa 2.100 m ed è una base per molti fondisti del Kenya.",
+				"Sull’altopiano si coltivano grano e mais."
+			],
+			"de": [
+				"Benannt nach den Uasin Gishu, einer Gruppe der Massai, die auf dem Plateau lebte.",
+				"Eldoret, die Hauptstadt, liegt auf etwa 2.100 m und ist ein Stützpunkt vieler kenianischer Langstreckenläufer.",
+				"Auf dem Plateau werden Weizen und Mais angebaut."
+			]
+		}
+	},
+	"busia": {
+		"region": {
+			"en": [
+				"The origin of the name is uncertain.",
+				"Busia town is split by the border: one half is in Kenya and the other in Uganda.",
+				"The county has a shore on Lake Victoria."
+			],
+			"it": [
+				"L’origine del nome è incerta.",
+				"La città di Busia è divisa dal confine: una metà è in Kenya e l’altra in Uganda.",
+				"La contea ha una riva sul lago Vittoria."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss.",
+				"Die Stadt Busia wird von der Grenze geteilt: eine Hälfte liegt in Kenia, die andere in Uganda.",
+				"Das County hat ein Ufer am Victoriasee."
+			]
+		}
+	},
+	"laikipia": {
+		"region": {
+			"en": [
+				"Named for the Laikipiak, a Maasai section who lived on the plateau.",
+				"The Equator crosses the county at Nanyuki, in the shadow of Mount Kenya.",
+				"Ol Pejeta Conservancy is home to the last two northern white rhinoceroses in the world."
+			],
+			"it": [
+				"Prende il nome dai Laikipiak, una sezione dei Masai che viveva sull’altopiano.",
+				"L’Equatore attraversa la contea a Nanyuki, all’ombra del monte Kenya.",
+				"L’Ol Pejeta Conservancy ospita gli ultimi due rinoceronti bianchi settentrionali del mondo."
+			],
+			"de": [
+				"Benannt nach den Laikipiak, einer Gruppe der Massai, die auf dem Plateau lebte.",
+				"Der Äquator quert das County bei Nanyuki, im Schatten des Mount Kenya.",
+				"Im Ol Pejeta Conservancy leben die letzten beiden Nördlichen Breitmaulnashörner der Welt."
+			]
+		}
+	},
+	"meru": {
+		"region": {
+			"en": [
+				"Named for the Meru people, who farm the fertile slopes of Mount Kenya.",
+				"Meru National Park is where Joy Adamson released the lioness Elsa of Born Free.",
+				"The county is the main source of miraa, a leaf chewed as a stimulant."
+			],
+			"it": [
+				"Prende il nome dai Meru, che coltivano i fertili pendii del monte Kenya.",
+				"Il Parco nazionale di Meru è dove Joy Adamson liberò la leonessa Elsa di Nata libera.",
+				"La contea è la principale fonte di miraa, una foglia che si mastica come stimolante."
+			],
+			"de": [
+				"Benannt nach den Meru, die die fruchtbaren Hänge des Mount Kenya bewirtschaften.",
+				"Im Meru-Nationalpark ließ Joy Adamson die Löwin Elsa aus Frei geboren frei.",
+				"Das County ist die Hauptquelle von Miraa, einem Blatt, das als Aufputschmittel gekaut wird."
+			]
+		}
+	},
+	"nandi": {
+		"region": {
+			"en": [
+				"Named for the Nandi people, one of the Kalenjin.",
+				"Koitalel Arap Samoei, the Nandi leader who resisted the British railway, was killed in 1905.",
+				"The Nandi Hills are one of Kenya’s main tea-growing areas."
+			],
+			"it": [
+				"Prende il nome dai Nandi, uno dei popoli kalenjin.",
+				"Koitalel Arap Samoei, il capo nandi che resistette alla ferrovia britannica, fu ucciso nel 1905.",
+				"Le colline Nandi sono una delle principali zone di coltivazione del tè del Kenya."
+			],
+			"de": [
+				"Benannt nach den Nandi, einem der Kalenjin-Völker.",
+				"Koitalel Arap Samoei, der Nandi-Anführer, der sich der britischen Eisenbahn widersetzte, wurde 1905 getötet.",
+				"Die Nandi Hills sind eines der wichtigsten Teeanbaugebiete Kenias."
+			]
+		}
+	},
+	"vihiga": {
+		"region": {
+			"en": [
+				"The origin of the name is uncertain; the county is the home of the Maragoli and other Luhya.",
+				"It is one of the smallest counties in Kenya, and one of the most densely populated in the countryside.",
+				"The Kaimosi forest on its edge is a remnant of the rainforest of Kakamega."
+			],
+			"it": [
+				"L’origine del nome è incerta; la contea è la patria dei Maragoli e di altri Luhya.",
+				"È una delle contee più piccole del Kenya e una delle più densamente popolate in campagna.",
+				"La foresta di Kaimosi, al suo margine, è un resto della foresta pluviale di Kakamega."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss; das County ist die Heimat der Maragoli und anderer Luhya.",
+				"Es ist eines der kleinsten Countys Kenias und auf dem Land eines der am dichtesten besiedelten.",
+				"Der Kaimosi-Wald an seinem Rand ist ein Rest des Regenwalds von Kakamega."
+			]
+		}
+	},
+	"siaya": {
+		"region": {
+			"en": [
+				"The origin of the name is uncertain; the county is home to many Luo.",
+				"Barack Obama’s father was born in Nyang’oma Kogelo, a village in the county.",
+				"It has a shore on Lake Victoria and a wetland, Yala Swamp, beside it."
+			],
+			"it": [
+				"L’origine del nome è incerta; la contea è la patria di molti Luo.",
+				"Il padre di Barack Obama nacque a Nyang’oma Kogelo, un villaggio della contea.",
+				"Ha una riva sul lago Vittoria e, accanto, una zona umida, la palude di Yala."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss; das County ist die Heimat vieler Luo.",
+				"Barack Obamas Vater wurde in Nyang’oma Kogelo geboren, einem Dorf im County.",
+				"Es hat ein Ufer am Victoriasee und daneben ein Feuchtgebiet, den Yala-Sumpf."
+			]
+		}
+	},
+	"tharaka": {
+		"region": {
+			"en": [
+				"Tharaka-Nithi is named for the Tharaka people and the Nithi river.",
+				"Its western part climbs the slopes of Mount Kenya, while the east is dry lowland.",
+				"The forests of Mount Kenya, part of a World Heritage Site, cover its upper slopes."
+			],
+			"it": [
+				"Tharaka-Nithi prende il nome dal popolo Tharaka e dal fiume Nithi.",
+				"La sua parte occidentale sale sui pendii del monte Kenya, mentre l’est è una pianura arida.",
+				"Le foreste del monte Kenya, parte di un sito Patrimonio dell’Umanità, ne coprono i pendii alti."
+			],
+			"de": [
+				"Tharaka-Nithi ist nach dem Volk der Tharaka und dem Fluss Nithi benannt.",
+				"Sein Westteil steigt an den Hängen des Mount Kenya hinauf, während der Osten trockenes Tiefland ist.",
+				"Die Wälder des Mount Kenya, Teil eines Welterbes, bedecken seine oberen Hänge."
+			]
+		}
+	},
+	"kisumu": {
+		"region": {
+			"en": [
+				"From the Luo kisuma, \"a place of barter\": the town grew as a market on the lake.",
+				"Kisumu is Kenya’s main port on Lake Victoria and its third largest city.",
+				"The Kisumu Impala Sanctuary on the shore is a small park for impalas, zebras and hippos."
+			],
+			"it": [
+				"Dal luo kisuma, \"luogo di scambio\": la città crebbe come mercato sul lago.",
+				"Kisumu è il principale porto del Kenya sul lago Vittoria e la sua terza città.",
+				"Il Kisumu Impala Sanctuary, sulla riva, è un piccolo parco per impala, zebre e ippopotami."
+			],
+			"de": [
+				"Vom Luo kisuma, „Ort des Tauschhandels“: Die Stadt wuchs als Markt am See.",
+				"Kisumu ist Kenias wichtigster Hafen am Victoriasee und seine drittgrößte Stadt.",
+				"Das Kisumu Impala Sanctuary am Ufer ist ein kleiner Park für Impalas, Zebras und Flusspferde."
+			]
+		}
+	},
+	"kericho": {
+		"region": {
+			"en": [
+				"The origin of the name is uncertain; Kericho is the home of the Kipsigis people.",
+				"Its tea estates, with rain all year round, produce a large share of Kenya’s tea.",
+				"Kenya is one of the world’s biggest exporters of black tea."
+			],
+			"it": [
+				"L’origine del nome è incerta; Kericho è la patria dei Kipsigis.",
+				"Le sue piantagioni di tè, con piogge tutto l’anno, producono una buona parte del tè del Kenya.",
+				"Il Kenya è uno dei maggiori esportatori mondiali di tè nero."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss; Kericho ist die Heimat der Kipsigis.",
+				"Seine Teeplantagen mit Regen das ganze Jahr liefern einen großen Teil des kenianischen Tees.",
+				"Kenia ist einer der größten Exporteure von Schwarztee der Welt."
+			]
+		}
+	},
+	"nyeri": {
+		"region": {
+			"en": [
+				"The origin of the name is uncertain; Nyeri is a Kikuyu town on the slopes of Mount Kenya.",
+				"At the Treetops lodge in the Aberdare forest, Princess Elizabeth learned in 1952 that she had become queen.",
+				"Robert Baden-Powell, the founder of the Scouts, is buried at Nyeri."
+			],
+			"it": [
+				"L’origine del nome è incerta; Nyeri è una città kikuyu sulle pendici del monte Kenya.",
+				"Al Treetops Lodge, nella foresta degli Aberdare, la principessa Elisabetta seppe nel 1952 di essere diventata regina.",
+				"Robert Baden-Powell, il fondatore degli scout, è sepolto a Nyeri."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss; Nyeri ist eine Kikuyu-Stadt an den Hängen des Mount Kenya.",
+				"In der Treetops Lodge im Aberdare-Wald erfuhr Prinzessin Elisabeth 1952, dass sie Königin geworden war.",
+				"Robert Baden-Powell, der Gründer der Pfadfinder, ist in Nyeri begraben."
+			]
+		}
+	},
+	"nyandarua": {
+		"region": {
+			"en": [
+				"Nyandarua is the Kikuyu name of the Aberdare Range and means \"drying hide\", for the shape of the mountains.",
+				"The Aberdare Range rises to about 4,000 m and is a national park.",
+				"The cool highlands are good for potatoes and dairy farming."
+			],
+			"it": [
+				"Nyandarua è il nome kikuyu della catena degli Aberdare e significa \"pelle che si asciuga\", per la forma delle montagne.",
+				"La catena degli Aberdare si alza fino a circa 4.000 m ed è un parco nazionale.",
+				"Gli altopiani freschi sono adatti alle patate e all’allevamento da latte."
+			],
+			"de": [
+				"Nyandarua ist der Kikuyu-Name der Aberdare-Kette und bedeutet „trocknende Haut“, nach der Form der Berge.",
+				"Die Aberdare-Kette erhebt sich bis auf etwa 4.000 m und ist ein Nationalpark.",
+				"Das kühle Hochland eignet sich für Kartoffeln und Milchwirtschaft."
+			]
+		}
+	},
+	"nakuru": {
+		"region": {
+			"en": [
+				"Nakuru is said to mean \"dusty place\" in Maasai.",
+				"Lake Nakuru National Park is famous for flamingos and rhinos.",
+				"The Menengai Crater, a huge volcanic caldera, rises over the city."
+			],
+			"it": [
+				"Nakuru significa, si dice, \"luogo polveroso\" in masai.",
+				"Il Parco nazionale del lago Nakuru è famoso per fenicotteri e rinoceronti.",
+				"Il cratere Menengai, un’enorme caldera vulcanica, si alza sopra la città."
+			],
+			"de": [
+				"Nakuru soll auf Massai „staubiger Ort“ bedeuten.",
+				"Der Lake-Nakuru-Nationalpark ist für Flamingos und Nashörner berühmt.",
+				"Der Menengai-Krater, eine riesige vulkanische Caldera, erhebt sich über der Stadt."
+			]
+		}
+	},
+	"kirinyaga": {
+		"region": {
+			"en": [
+				"Kirinyaga is the Kikuyu name of Mount Kenya, often explained as \"mountain of whiteness\".",
+				"Mount Kenya, 5,199 m, is the second highest mountain in Africa.",
+				"The Mwea irrigation scheme grows most of Kenya’s rice."
+			],
+			"it": [
+				"Kirinyaga è il nome kikuyu del monte Kenya, spesso spiegato come \"montagna della bianchezza\".",
+				"Il monte Kenya, 5.199 m, è la seconda montagna più alta dell’Africa.",
+				"Il sistema di irrigazione di Mwea produce gran parte del riso del Kenya."
+			],
+			"de": [
+				"Kirinyaga ist der Kikuyu-Name des Mount Kenya, oft als „Berg der Weiße“ erklärt.",
+				"Der Mount Kenya, 5.199 m, ist der zweithöchste Berg Afrikas.",
+				"Die Bewässerungsanlage von Mwea erzeugt den Großteil des kenianischen Reises."
+			]
+		}
+	},
+	"garissa": {
+		"region": {
+			"en": [
+				"The origin of the name is uncertain; Garissa is mostly home to Somali people.",
+				"The Tana River, the longest in Kenya, flows through it.",
+				"Dadaab, in the county, has been one of the largest refugee camp complexes in the world."
+			],
+			"it": [
+				"L’origine del nome è incerta; Garissa è abitata soprattutto da somali.",
+				"Il fiume Tana, il più lungo del Kenya, la attraversa.",
+				"Dadaab, nella contea, è stato uno dei maggiori complessi di campi profughi del mondo."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss; Garissa ist überwiegend von Somali bewohnt.",
+				"Der Tana, der längste Fluss Kenias, fließt hindurch.",
+				"Dadaab im County war einer der größten Flüchtlingslagerkomplexe der Welt."
+			]
+		}
+	},
+	"embu": {
+		"region": {
+			"en": [
+				"Named for the Embu people, close relatives of the Kikuyu and Meru.",
+				"The county climbs from coffee farms on the slopes of Mount Kenya down to the Tana river.",
+				"The dams at Masinga, Kamburu and Kiambere on the Tana provide much of Kenya’s hydroelectric power."
+			],
+			"it": [
+				"Prende il nome dagli Embu, stretti parenti dei Kikuyu e dei Meru.",
+				"La contea scende dalle piantagioni di caffè sulle pendici del monte Kenya fino al fiume Tana.",
+				"Le dighe di Masinga, Kamburu e Kiambere sul Tana forniscono gran parte dell’energia idroelettrica del Kenya."
+			],
+			"de": [
+				"Benannt nach den Embu, nahen Verwandten der Kikuyu und der Meru.",
+				"Das County steigt von Kaffeefarmen an den Hängen des Mount Kenya bis zum Tana hinab.",
+				"Die Staudämme von Masinga, Kamburu und Kiambere am Tana liefern einen großen Teil des kenianischen Wasserkraftstroms."
+			]
+		}
+	},
+	"homa-bay": {
+		"region": {
+			"en": [
+				"The origin of the name is uncertain; the county lies on the Winam Gulf of Lake Victoria.",
+				"On Rusinga Island, Mary Leakey found a skull of the early ape Proconsul in 1948.",
+				"Ruma National Park protects the rare roan antelope."
+			],
+			"it": [
+				"L’origine del nome è incerta; la contea si affaccia sul golfo di Winam del lago Vittoria.",
+				"Sull’isola di Rusinga, nel 1948, Mary Leakey trovò un cranio di Proconsul, un’antica scimmia.",
+				"Il Parco nazionale di Ruma protegge la rara antilope roana."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss; das County liegt am Winam-Golf des Victoriasees.",
+				"Auf der Insel Rusinga fand Mary Leakey 1948 einen Schädel des frühen Menschenaffen Proconsul.",
+				"Der Ruma-Nationalpark schützt die seltene Pferdeantilope."
+			]
+		}
+	},
+	"nyamira": {
+		"region": {
+			"en": [
+				"The origin of the name is uncertain; Nyamira lies in the hills of the Gusii people.",
+				"It is a densely farmed county, with tea and bananas on the slopes.",
+				"It was split off from Kisii County, the neighbour it still shares its people and language with."
+			],
+			"it": [
+				"L’origine del nome è incerta; Nyamira si trova sulle colline dei Gusii.",
+				"È una contea coltivata in modo intensivo, con tè e banane sui pendii.",
+				"Fu separata dalla contea di Kisii, la vicina con cui condivide ancora popolo e lingua."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss; Nyamira liegt in den Hügeln der Gusii.",
+				"Es ist ein dicht bewirtschaftetes County, mit Tee und Bananen an den Hängen.",
+				"Es wurde vom County Kisii abgetrennt, dem Nachbarn, mit dem es Volk und Sprache teilt."
+			]
+		}
+	},
+	"bomet": {
+		"region": {
+			"en": [
+				"The origin of the name is uncertain; Bomet is the home of the Kipsigis people.",
+				"Its green hills are covered with tea and dairy farms.",
+				"It lies between the Mau Forest and the Maasai Mara plains."
+			],
+			"it": [
+				"L’origine del nome è incerta; Bomet è la patria dei Kipsigis.",
+				"Le sue verdi colline sono coperte di piantagioni di tè e fattorie da latte.",
+				"Si trova tra la foresta Mau e le pianure del Masai Mara."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss; Bomet ist die Heimat der Kipsigis.",
+				"Seine grünen Hügel sind mit Teeplantagen und Milchfarmen bedeckt.",
+				"Es liegt zwischen dem Mau-Wald und den Ebenen der Maasai Mara."
+			]
+		}
+	},
+	"kisii": {
+		"region": {
+			"en": [
+				"Named for the Kisii town and the Abagusii, or Gusii, people.",
+				"The soapstone of Tabaka is carved into bowls and figures sold across Kenya.",
+				"It is one of the most densely populated rural counties in Kenya."
+			],
+			"it": [
+				"Prende il nome dalla città di Kisii e dagli Abagusii, o Gusii.",
+				"La pietra ollare di Tabaka è scolpita in ciotole e figure vendute in tutto il Kenya.",
+				"È una delle contee rurali più densamente popolate del Kenya."
+			],
+			"de": [
+				"Benannt nach der Stadt Kisii und den Abagusii, auch Gusii genannt.",
+				"Der Speckstein von Tabaka wird zu Schalen und Figuren geschnitzt, die in ganz Kenia verkauft werden.",
+				"Es ist eines der am dichtesten besiedelten ländlichen Countys Kenias."
+			]
+		}
+	},
+	"murang-a": {
+		"region": {
+			"en": [
+				"In Kikuyu tradition Murang’a is the cradle of the people: the first Kikuyu couple, Gikuyu and Mumbi, are said to have settled here.",
+				"The Mukurwe wa Nyagathanga is the sacred site linked with that legend.",
+				"Its slopes below the Aberdares grow coffee and tea."
+			],
+			"it": [
+				"Nella tradizione kikuyu Murang’a è la culla del popolo: qui si sarebbe stabilita la prima coppia kikuyu, Gikuyu e Mumbi.",
+				"Il Mukurwe wa Nyagathanga è il luogo sacro legato a quella leggenda.",
+				"I suoi pendii sotto gli Aberdare producono caffè e tè."
+			],
+			"de": [
+				"In der Überlieferung der Kikuyu ist Murang’a die Wiege des Volkes: Hier soll sich das erste Kikuyu-Paar, Gikuyu und Mumbi, niedergelassen haben.",
+				"Der Mukurwe wa Nyagathanga ist der mit dieser Legende verbundene heilige Ort.",
+				"Seine Hänge unterhalb der Aberdares bringen Kaffee und Tee hervor."
+			]
+		}
+	},
+	"migori": {
+		"region": {
+			"en": [
+				"Named for the Migori river.",
+				"Gold is mined in the hills of the county.",
+				"It lies on the border with Tanzania, near Lake Victoria."
+			],
+			"it": [
+				"Prende il nome dal fiume Migori.",
+				"Nelle colline della contea si estrae oro.",
+				"Si trova al confine con la Tanzania, vicino al lago Vittoria."
+			],
+			"de": [
+				"Benannt nach dem Fluss Migori.",
+				"In den Hügeln des Countys wird Gold abgebaut.",
+				"Es liegt an der Grenze zu Tansania, nahe dem Victoriasee."
+			]
+		}
+	},
+	"kiambu": {
+		"region": {
+			"en": [
+				"The origin of the name is uncertain; Kiambu is the home of many Kikuyu.",
+				"The county surrounds Nairobi to the north and west, and many of its people commute to the capital.",
+				"At Thika, factories can fruit and the region grows pineapples."
+			],
+			"it": [
+				"L’origine del nome è incerta; Kiambu è la patria di molti Kikuyu.",
+				"La contea circonda Nairobi a nord e a ovest, e molti suoi abitanti fanno i pendolari verso la capitale.",
+				"A Thika le fabbriche mettono in scatola la frutta e la regione coltiva ananas."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss; Kiambu ist die Heimat vieler Kikuyu.",
+				"Das County umgibt Nairobi im Norden und Westen, und viele seiner Bewohner pendeln in die Hauptstadt.",
+				"In Thika füllen Fabriken Obst in Dosen, und die Region baut Ananas an."
+			]
+		}
+	},
+	"machakos": {
+		"region": {
+			"en": [
+				"Named for Masaku, a Kamba leader: Machakos means \"Masaku’s place\".",
+				"The Kamba of the county are famous for their wood carvings.",
+				"Konza Technology City is being built on its plains, south of Nairobi."
+			],
+			"it": [
+				"Prende il nome da Masaku, un capo kamba: Machakos significa \"il luogo di Masaku\".",
+				"I Kamba della contea sono famosi per le loro sculture in legno.",
+				"Sulle sue pianure, a sud di Nairobi, si sta costruendo la Konza Technology City."
+			],
+			"de": [
+				"Benannt nach Masaku, einem Anführer der Kamba: Machakos bedeutet „Masakus Ort“.",
+				"Die Kamba des Countys sind für ihre Holzschnitzereien berühmt.",
+				"Auf seinen Ebenen südlich von Nairobi entsteht die Konza Technology City."
+			]
+		}
+	},
+	"narok": {
+		"region": {
+			"en": [
+				"Named for the Narok river; in Maasai the name means \"black water\".",
+				"The Maasai Mara, one of the world’s great wildlife reserves, lies in the county.",
+				"Each year, wildebeest herds cross the Mara river in the Great Migration."
+			],
+			"it": [
+				"Prende il nome dal fiume Narok; in masai il nome significa \"acqua nera\".",
+				"Il Masai Mara, una delle grandi riserve faunistiche del mondo, si trova nella contea.",
+				"Ogni anno le mandrie di gnu attraversano il fiume Mara nella Grande Migrazione."
+			],
+			"de": [
+				"Benannt nach dem Fluss Narok; auf Massai bedeutet der Name „schwarzes Wasser“.",
+				"Die Maasai Mara, eines der großen Tierreservate der Welt, liegt im County.",
+				"Jedes Jahr durchqueren Gnuherden den Fluss Mara in der Großen Wanderung."
+			]
+		}
+	},
+	"tana-river": {
+		"region": {
+			"en": [
+				"Named for the Tana, the longest river in Kenya, which flows through the county to the Indian Ocean.",
+				"The Tana River Primate Reserve protects two rare monkeys, the red colobus and the crested mangabey.",
+				"The river’s delta is a wetland of forests, lakes and mangroves."
+			],
+			"it": [
+				"Prende il nome dal Tana, il fiume più lungo del Kenya, che attraversa la contea verso l’Oceano Indiano.",
+				"La Tana River Primate Reserve protegge due rare scimmie, il colobo rosso e il mangabey crestato.",
+				"Il delta del fiume è una zona umida di foreste, laghi e mangrovie."
+			],
+			"de": [
+				"Benannt nach dem Tana, dem längsten Fluss Kenias, der durch das County zum Indischen Ozean fließt.",
+				"Das Tana River Primate Reserve schützt zwei seltene Affen, den Roten Stummelaffen und den Haubenmangaben.",
+				"Das Delta des Flusses ist ein Feuchtgebiet aus Wäldern, Seen und Mangroven."
+			]
+		}
+	},
+	"kitui": {
+		"region": {
+			"en": [
+				"Kitui is said to mean \"a place where iron goods are made\", after the Kamba blacksmiths.",
+				"The Kamba of the county are famed as traders and craftspeople.",
+				"The Mui basin holds Kenya’s largest known coal deposits."
+			],
+			"it": [
+				"Kitui significherebbe \"luogo dove si fanno oggetti di ferro\", dai fabbri kamba.",
+				"I Kamba della contea sono famosi come commercianti e artigiani.",
+				"Il bacino di Mui contiene i maggiori giacimenti di carbone conosciuti del Kenya."
+			],
+			"de": [
+				"Kitui soll „Ort, an dem Eisenwaren hergestellt werden“ bedeuten, nach den Kamba-Schmieden.",
+				"Die Kamba des Countys sind als Händler und Handwerker berühmt.",
+				"Das Mui-Becken birgt die größten bekannten Kohlevorkommen Kenias."
+			]
+		}
+	},
+	"lamu": {
+		"region": {
+			"en": [
+				"The origin of the name is uncertain.",
+				"Lamu Old Town, a Swahili trading town, is a World Heritage Site and the oldest continuously lived-in Swahili town in East Africa.",
+				"There are almost no cars on Lamu island: people walk, or travel by donkey and dhow."
+			],
+			"it": [
+				"L’origine del nome è incerta.",
+				"La città vecchia di Lamu, una città commerciale swahili, è Patrimonio dell’Umanità e la più antica città swahili abitata senza interruzione dell’Africa orientale.",
+				"Sull’isola di Lamu non ci sono quasi automobili: ci si sposta a piedi, in groppa a un asino o in dhow."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss.",
+				"Die Altstadt von Lamu, eine Suaheli-Handelsstadt, ist Welterbe und die älteste ununterbrochen bewohnte Suaheli-Stadt Ostafrikas.",
+				"Auf der Insel Lamu gibt es fast keine Autos: Man geht zu Fuß oder reist mit Esel und Dhau."
+			]
+		}
+	},
+	"kajiado": {
+		"region": {
+			"en": [
+				"Kajiado probably comes from a Maasai word meaning \"the long river\".",
+				"Amboseli National Park, in the county, has elephants walking before Mount Kilimanjaro.",
+				"The Maasai who live here herd cattle across its dry plains."
+			],
+			"it": [
+				"Kajiado deriva probabilmente da una parola masai che significa \"il lungo fiume\".",
+				"Il Parco nazionale di Amboseli, nella contea, ha elefanti che camminano davanti al Kilimangiaro.",
+				"I Masai che vivono qui portano il bestiame al pascolo sulle sue pianure aride."
+			],
+			"de": [
+				"Kajiado stammt wahrscheinlich von einem Massai-Wort für „der lange Fluss“.",
+				"Der Amboseli-Nationalpark im County zeigt Elefanten, die vor dem Kilimandscharo laufen.",
+				"Die Massai, die hier leben, treiben ihr Vieh über die trockenen Ebenen."
+			]
+		}
+	},
+	"makueni": {
+		"region": {
+			"en": [
+				"The origin of the name is uncertain; Makueni is the home of the Kamba.",
+				"The Sikh temple at Makindu, built in 1926 beside the Mombasa road, welcomes travellers.",
+				"The county is known for its mangoes."
+			],
+			"it": [
+				"L’origine del nome è incerta; Makueni è la patria dei Kamba.",
+				"Il tempio sikh di Makindu, costruito nel 1926 accanto alla strada di Mombasa, accoglie i viaggiatori.",
+				"La contea è nota per i suoi manghi."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss; Makueni ist die Heimat der Kamba.",
+				"Der Sikh-Tempel von Makindu, 1926 neben der Straße nach Mombasa erbaut, empfängt Reisende.",
+				"Das County ist für seine Mangos bekannt."
+			]
+		}
+	},
+	"kilifi": {
+		"region": {
+			"en": [
+				"The origin of the name is uncertain; Kilifi lies on the coast north of Mombasa.",
+				"Gedi, a ruined Swahili town hidden in the forest, was lived in from the 13th to the 17th century.",
+				"Malindi, in the county, is where Vasco da Gama was welcomed in 1498, on his way to India."
+			],
+			"it": [
+				"L’origine del nome è incerta; Kilifi si trova sulla costa a nord di Mombasa.",
+				"Gedi, una città swahili in rovina nascosta nella foresta, fu abitata dal XIII al XVII secolo.",
+				"Malindi, nella contea, è dove Vasco da Gama fu accolto nel 1498, mentre andava in India."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss; Kilifi liegt an der Küste nördlich von Mombasa.",
+				"Gedi, eine im Wald verborgene Suaheli-Ruinenstadt, war vom 13. bis zum 17. Jahrhundert bewohnt.",
+				"In Malindi im County wurde Vasco da Gama 1498 auf dem Weg nach Indien empfangen."
+			]
+		}
+	},
+	"taita-taveta": {
+		"region": {
+			"en": [
+				"Named for the Taita and Taveta peoples.",
+				"Tsavo East and Tsavo West, two of the biggest national parks in Kenya, lie partly in the county.",
+				"The man-eating lions of Tsavo killed dozens of railway workers in 1898."
+			],
+			"it": [
+				"Prende il nome dai popoli Taita e Taveta.",
+				"Tsavo Est e Tsavo Ovest, due dei maggiori parchi nazionali del Kenya, si trovano in parte nella contea.",
+				"I leoni mangiatori di uomini dello Tsavo uccisero decine di operai della ferrovia nel 1898."
+			],
+			"de": [
+				"Benannt nach den Taita und den Taveta.",
+				"Tsavo East und Tsavo West, zwei der größten Nationalparks Kenias, liegen teils im County.",
+				"Die menschenfressenden Löwen von Tsavo töteten 1898 Dutzende Eisenbahnarbeiter."
+			]
+		}
+	},
+	"mombasa": {
+		"region": {
+			"en": [
+				"The origin of the name is uncertain; the Swahili also call the island Kisiwa cha Mvita, the \"island of war\".",
+				"Fort Jesus, built by the Portuguese in 1593-96, is a World Heritage Site.",
+				"Mombasa is the main port of Kenya and of much of East Africa."
+			],
+			"it": [
+				"L’origine del nome è incerta; gli swahili chiamano l’isola anche Kisiwa cha Mvita, l’\"isola della guerra\".",
+				"Forte Gesù, costruito dai portoghesi nel 1593-96, è Patrimonio dell’Umanità.",
+				"Mombasa è il principale porto del Kenya e di gran parte dell’Africa orientale."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss; die Suaheli nennen die Insel auch Kisiwa cha Mvita, die „Insel des Krieges“.",
+				"Fort Jesus, 1593-96 von den Portugiesen erbaut, ist Welterbe.",
+				"Mombasa ist der wichtigste Hafen Kenias und eines großen Teils Ostafrikas."
+			]
+		}
+	},
+	"kwale": {
+		"region": {
+			"en": [
+				"The origin of the name is uncertain; Kwale lies on the coast south of Mombasa.",
+				"Diani Beach, with its white sand, is one of the best-known beaches in East Africa.",
+				"The kaya forests of the Mijikenda, sacred groves hidden in the coastal hills, are a World Heritage Site."
+			],
+			"it": [
+				"L’origine del nome è incerta; Kwale si trova sulla costa a sud di Mombasa.",
+				"Diani Beach, con la sua sabbia bianca, è una delle spiagge più note dell’Africa orientale.",
+				"Le foreste kaya dei Mijikenda, boschi sacri nascosti nelle colline costiere, sono Patrimonio dell’Umanità."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss; Kwale liegt an der Küste südlich von Mombasa.",
+				"Der Diani Beach mit seinem weißen Sand ist einer der bekanntesten Strände Ostafrikas.",
+				"Die Kaya-Wälder der Mijikenda, heilige Haine in den Küstenhügeln, sind Welterbe."
 			]
 		}
 	}
