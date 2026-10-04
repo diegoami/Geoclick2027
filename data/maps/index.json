@@ -4721,6 +4721,52 @@
 		]
 	},
 	{
+		"id": "morocco-regions",
+		"country": "Morocco",
+		"targetCount": 12,
+		"targetType": "region",
+		"targetIds": [
+			"tangier-tetouan-al-hoceima",
+			"rabat-sale-kenitra",
+			"fes-meknes",
+			"oriental",
+			"casablanca-settat",
+			"beni-mellal-khenifra",
+			"marrakech-safi",
+			"draa-tafilalet",
+			"souss-massa",
+			"guelmim-oued-noun",
+			"laayoune-sakia-el-hamra",
+			"dakhla-oued-ed-dahab"
+		]
+	},
+	{
+		"id": "morocco-towns-100k",
+		"country": "Morocco",
+		"targetCount": 18,
+		"targetType": "city",
+		"targetIds": [
+			"tangier",
+			"larache",
+			"ksar-el-kebir",
+			"oujda",
+			"kenitra",
+			"taza",
+			"fez",
+			"rabat",
+			"meknes",
+			"casablanca",
+			"el-jadida",
+			"settat",
+			"safi",
+			"er-rachidia",
+			"marrakesh",
+			"agadir",
+			"goulimine",
+			"laayoune"
+		]
+	},
+	{
 		"id": "netherlands-municipalities-east",
 		"country": "Netherlands",
 		"targetCount": 82,

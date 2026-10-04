@@ -425,6 +425,13 @@ export const mapGroups: CountryGroup[] = [
 		]
 	},
 	{
+		country: 'Morocco',
+		maps: [
+			{ id: 'morocco-regions', labelKey: 'mapType.regions' },
+			{ id: 'morocco-towns-100k', labelKey: 'mapType.towns' }
+		]
+	},
+	{
 		country: 'Netherlands',
 		maps: [
 			{ id: 'netherlands-regions', labelKey: 'mapType.provinces' },

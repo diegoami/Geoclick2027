@@ -121,3 +121,8 @@ fetch_geojson BGD-ADM1 "$GEOBOUNDARIES/BGD/ADM1/geoBoundaries-BGD-ADM1_simplifie
 # Public domain. It draws Azad Kashmir and Gilgit-Baltistan as administered by
 # Pakistan; the lines there are disputed (MAPS.md).
 fetch_geojson PAK-ADM1 "$GEOBOUNDARIES/PAK/ADM1/geoBoundaries-PAK-ADM1_simplified.geojson"
+
+# Morocco (v0.19): the twelve regions of 2015, from OpenStreetMap through
+# geoBoundaries (ODbL). The two southern regions lie in Western Sahara, which
+# Morocco administers in part and whose status is disputed (MAPS.md).
+fetch_geojson MAR-ADM1 "$GEOBOUNDARIES/MAR/ADM1/geoBoundaries-MAR-ADM1_simplified.geojson"
