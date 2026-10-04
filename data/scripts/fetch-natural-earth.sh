@@ -111,3 +111,7 @@ fetch_geojson NOR-ADM1 "$GEOBOUNDARIES/NOR/ADM1/geoBoundaries-NOR-ADM1_simplifie
 fetch_geojson SRB-ADM1 "$GEOBOUNDARIES/SRB/ADM1/geoBoundaries-SRB-ADM1_simplified.geojson"
 fetch_geojson PHL-ADM1 "$GEOBOUNDARIES/PHL/ADM1/geoBoundaries-PHL-ADM1_simplified.geojson"
 fetch_geojson PHL-ADM2 "$GEOBOUNDARIES/PHL/ADM2/geoBoundaries-PHL-ADM2_simplified.geojson"
+
+# Bangladesh (v0.18): the eight divisions, Mymensingh included (Natural Earth has
+# seven). CC0 / public domain.
+fetch_geojson BGD-ADM1 "$GEOBOUNDARIES/BGD/ADM1/geoBoundaries-BGD-ADM1_simplified.geojson"

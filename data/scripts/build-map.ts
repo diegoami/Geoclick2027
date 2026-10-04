@@ -246,6 +246,12 @@ const NAME_FIXUPS: Record<string, Record<string, string>> = {
 		'North Kazakhstan Region': 'North Kazakhstan',
 		'West Kazakhstan Region': 'West Kazakhstan'
 	},
+	// Bangladesh's divisions come from geoBoundaries (Natural Earth predates
+	// Mymensingh, 2015), which misspells Rajshahi and has the old Chittagong and
+	// Barisal for the 2018 spellings Natural Earth's towns use. Malaysia's Penang and Malacca
+	// are the English names for Pulau Pinang and Melaka.
+	Bangladesh: { Rajshani: 'Rajshahi', Chittagong: 'Chattogram', Barisal: 'Barishal' },
+	Malaysia: { 'Pulau Pinang': 'Penang', Melaka: 'Malacca' },
 	Serbia: {
 		'Syrmia District': 'Syrmia',
 		'South Banat District': 'South Banat',

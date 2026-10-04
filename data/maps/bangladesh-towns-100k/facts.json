@@ -1,0 +1,148 @@
+{
+	"saidpur": {
+		"kind": "city",
+		"population": 232209,
+		"populationRank": 10,
+		"region": "Rajshahi",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"rangpur": {
+		"kind": "city",
+		"population": 285564,
+		"populationRank": 7,
+		"region": "Rajshahi",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"sylhet": {
+		"kind": "city",
+		"population": 237000,
+		"populationRank": 9,
+		"coastal": false,
+		"position": "north-east"
+	},
+	"jamalpur": {
+		"kind": "city",
+		"population": 167900,
+		"populationRank": 14,
+		"region": "Dhaka",
+		"coastal": false,
+		"position": "north"
+	},
+	"mymensingh": {
+		"kind": "city",
+		"population": 330126,
+		"populationRank": 6,
+		"region": "Dhaka",
+		"coastal": false,
+		"position": "north"
+	},
+	"nawabganj": {
+		"kind": "city",
+		"population": 142361,
+		"populationRank": 15,
+		"region": "Rajshahi",
+		"coastal": false,
+		"position": "west"
+	},
+	"rajshahi": {
+		"kind": "city",
+		"population": 810000,
+		"populationRank": 4,
+		"population1950": 39000,
+		"coastal": false,
+		"position": "west"
+	},
+	"tangail": {
+		"kind": "city",
+		"population": 180144,
+		"populationRank": 13,
+		"region": "Dhaka",
+		"coastal": false,
+		"position": "centre"
+	},
+	"pabna": {
+		"kind": "city",
+		"population": 137888,
+		"populationRank": 16,
+		"region": "Rajshahi",
+		"coastal": false,
+		"position": "west"
+	},
+	"dhaka": {
+		"kind": "city",
+		"population": 12797394,
+		"populationRank": 1,
+		"population1950": 336000,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Often called the rickshaw capital of the world.",
+				"Its parliament building, by the American architect Louis Kahn, was finished in 1982.",
+				"It is one of the most densely populated cities in the world."
+			],
+			"it": [
+				"Spesso chiamata la capitale mondiale dei risciò.",
+				"Il suo parlamento, dell’architetto americano Louis Kahn, fu terminato nel 1982.",
+				"È una delle città più densamente popolate del mondo."
+			],
+			"de": [
+				"Oft die Rikscha-Hauptstadt der Welt genannt.",
+				"Sein Parlamentsgebäude des amerikanischen Architekten Louis Kahn wurde 1982 fertiggestellt.",
+				"Dhaka ist eine der am dichtesten besiedelten Städte der Welt."
+			]
+		}
+	},
+	"narayanganj": {
+		"kind": "city",
+		"population": 223622,
+		"populationRank": 11,
+		"region": "Dhaka",
+		"coastal": true,
+		"position": "centre"
+	},
+	"comilla": {
+		"kind": "city",
+		"population": 389411,
+		"populationRank": 5,
+		"region": "Chittagong",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"jashore": {
+		"kind": "city",
+		"population": 243987,
+		"populationRank": 8,
+		"region": "Khulna",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"khulna": {
+		"kind": "city",
+		"population": 1553000,
+		"populationRank": 3,
+		"population1950": 41000,
+		"coastal": false,
+		"position": "south"
+	},
+	"barishal": {
+		"kind": "city",
+		"population": 202242,
+		"populationRank": 12,
+		"region": "Barisal",
+		"coastal": true,
+		"position": "south"
+	},
+	"chattogram": {
+		"kind": "city",
+		"population": 4529000,
+		"populationRank": 2,
+		"population1950": 289000,
+		"region": "Chittagong",
+		"coastal": true,
+		"position": "south-east"
+	}
+}

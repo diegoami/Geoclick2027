@@ -1,0 +1,587 @@
+{
+	"id": "malaysia-states",
+	"name": "Malaysia — States",
+	"country": "Malaysia",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "perlis",
+			"name": "Perlis",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				100.2525,
+				6.4778
+			],
+			"bbox": [
+				100.1273,
+				6.2605,
+				100.3777,
+				6.6951
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						100.2135,
+						6.344
+					],
+					[
+						100.2795,
+						6.5016
+					],
+					[
+						100.2234,
+						6.6636
+					]
+				],
+				"aspect": 1.84
+			}
+		},
+		{
+			"id": "kedah",
+			"name": "Kedah",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				100.40665,
+				5.80385
+			],
+			"bbox": [
+				99.719,
+				5.0809,
+				101.0943,
+				6.5268
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						100.5343,
+						6.3617
+					],
+					[
+						100.7962,
+						5.9143
+					],
+					[
+						100.678,
+						5.4169
+					]
+				],
+				"aspect": 1.54
+			}
+		},
+		{
+			"id": "sabah",
+			"name": "Sabah",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				117.31694999999999,
+				5.7443
+			],
+			"bbox": [
+				115.3596,
+				4.1459,
+				119.2743,
+				7.3427
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						115.8507,
+						5.178
+					],
+					[
+						117.1351,
+						5.789
+					],
+					[
+						118.4195,
+						5.1725
+					]
+				],
+				"aspect": 1.48
+			}
+		},
+		{
+			"id": "kelantan",
+			"name": "Kelantan",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				102.01984999999999,
+				5.41245
+			],
+			"bbox": [
+				101.3791,
+				4.5674,
+				102.6606,
+				6.2575
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						101.765,
+						4.6779
+					],
+					[
+						102.2158,
+						5.2864
+					],
+					[
+						102.1798,
+						6.0401
+					]
+				],
+				"aspect": 2.06
+			}
+		},
+		{
+			"id": "penang",
+			"name": "Penang",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				100.37610000000001,
+				5.3446
+			],
+			"bbox": [
+				100.1931,
+				5.1202,
+				100.5591,
+				5.569
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						100.4341,
+						5.5321
+					],
+					[
+						100.4845,
+						5.352
+					],
+					[
+						100.4852,
+						5.1649
+					]
+				],
+				"aspect": 2.57
+			}
+		},
+		{
+			"id": "labuan",
+			"name": "Labuan",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				115.2101,
+				5.31625
+			],
+			"bbox": [
+				115.1609,
+				5.267,
+				115.2593,
+				5.3655
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						115.1802,
+						5.298
+					],
+					[
+						115.2139,
+						5.3253
+					],
+					[
+						115.2477,
+						5.3225
+					]
+				],
+				"aspect": 0.91
+			}
+		},
+		{
+			"id": "terengganu",
+			"name": "Terengganu",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				102.94025,
+				4.89145
+			],
+			"bbox": [
+				102.3863,
+				3.9281,
+				103.4942,
+				5.8548
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						102.5643,
+						5.5683
+					],
+					[
+						103.0354,
+						4.9879
+					],
+					[
+						103.2649,
+						4.2808
+					]
+				],
+				"aspect": 2.38
+			}
+		},
+		{
+			"id": "perak",
+			"name": "Perak",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				101.0589,
+				4.7895
+			],
+			"bbox": [
+				100.3645,
+				3.6727,
+				101.7533,
+				5.9063
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						101.0757,
+						3.9268
+					],
+					[
+						100.7668,
+						4.8583
+					],
+					[
+						101.3139,
+						5.6986
+					]
+				],
+				"aspect": 2.21
+			}
+		},
+		{
+			"id": "pahang",
+			"name": "Pahang",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				102.49115,
+				3.6087999999999996
+			],
+			"bbox": [
+				101.342,
+				2.4492,
+				103.6403,
+				4.7684
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						101.869,
+						4.4061
+					],
+					[
+						102.6722,
+						3.7634
+					],
+					[
+						103.2374,
+						2.8997
+					]
+				],
+				"aspect": 1.65
+			}
+		},
+		{
+			"id": "selangor",
+			"name": "Selangor",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				101.40254999999999,
+				3.22875
+			],
+			"bbox": [
+				100.8406,
+				2.5958,
+				101.9645,
+				3.8617
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						101.3362,
+						3.638
+					],
+					[
+						101.617,
+						3.2714
+					],
+					[
+						101.6782,
+						2.7832
+					]
+				],
+				"aspect": 1.91
+			}
+		},
+		{
+			"id": "kuala-lumpur",
+			"name": "Kuala Lumpur",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				101.69274999999999,
+				3.11795
+			],
+			"bbox": [
+				101.6224,
+				3.0298,
+				101.7631,
+				3.2061
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						101.6543,
+						3.1435
+					],
+					[
+						101.7004,
+						3.1133
+					],
+					[
+						101.7464,
+						3.1272
+					]
+				],
+				"aspect": 0.71
+			}
+		},
+		{
+			"id": "putrajaya",
+			"name": "Putrajaya",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				101.70215,
+				2.92015
+			],
+			"bbox": [
+				101.6739,
+				2.8742,
+				101.7304,
+				2.9661
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						101.6785,
+						2.9235
+					],
+					[
+						101.6972,
+						2.9142
+					],
+					[
+						101.7158,
+						2.9229
+					]
+				],
+				"aspect": 0.71
+			}
+		},
+		{
+			"id": "sarawak",
+			"name": "Sarawak",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				112.6019,
+				2.90685
+			],
+			"bbox": [
+				109.5284,
+				0.8514,
+				115.6754,
+				4.9623
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						111.467,
+						1.7876
+					],
+					[
+						113.6701,
+						2.0667
+					],
+					[
+						115.0621,
+						3.8209
+					]
+				],
+				"aspect": 2.62
+			}
+		},
+		{
+			"id": "negeri-sembilan",
+			"name": "Negeri Sembilan",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				102.21289999999999,
+				2.82595
+			],
+			"bbox": [
+				101.7212,
+				2.3913,
+				102.7046,
+				3.2606
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						101.8513,
+						2.7341
+					],
+					[
+						102.2141,
+						2.9136
+					],
+					[
+						102.5768,
+						2.7452
+					]
+				],
+				"aspect": 1.15
+			}
+		},
+		{
+			"id": "malacca",
+			"name": "Malacca",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				102.29395,
+				2.2923999999999998
+			],
+			"bbox": [
+				101.9885,
+				2.093,
+				102.5994,
+				2.4918
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						102.1045,
+						2.3804
+					],
+					[
+						102.2937,
+						2.3057
+					],
+					[
+						102.4829,
+						2.2946
+					]
+				],
+				"aspect": 1.32
+			}
+		},
+		{
+			"id": "johor",
+			"name": "Johor",
+			"type": "state",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				103.3918,
+				2.06445
+			],
+			"bbox": [
+				102.4889,
+				1.2899,
+				104.2947,
+				2.839
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						102.688,
+						2.3902
+					],
+					[
+						103.4092,
+						2.1104
+					],
+					[
+						104.0277,
+						1.6503
+					]
+				],
+				"aspect": 1.82
+			}
+		}
+	],
+	"tourOrder": [
+		"perlis",
+		"kedah",
+		"sabah",
+		"kelantan",
+		"penang",
+		"labuan",
+		"terengganu",
+		"perak",
+		"pahang",
+		"selangor",
+		"kuala-lumpur",
+		"putrajaya",
+		"sarawak",
+		"negeri-sembilan",
+		"malacca",
+		"johor"
+	]
+}

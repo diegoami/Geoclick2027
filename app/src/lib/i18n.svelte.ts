@@ -118,6 +118,7 @@ export type TranslationKey =
 	| 'mapType.provincesCenter'
 	| 'mapType.provincesSouth'
 	| 'mapType.prefectures'
+	| 'mapType.divisions'
 	| 'mapType.districts'
 	| 'mapType.governorates'
 	| 'mapType.cities'
@@ -303,6 +304,7 @@ const en: Dictionary = {
 	'mapType.provincesCenter': 'Provinces — Center',
 	'mapType.provincesSouth': 'Provinces — South',
 	'mapType.prefectures': 'Prefectures',
+	'mapType.divisions': 'Divisions',
 	'mapType.districts': 'Districts',
 	'mapType.governorates': 'Governorates',
 	'mapType.cities': 'Cities',
@@ -503,6 +505,7 @@ const de: Dictionary = {
 	'mapType.provincesCenter': 'Provinzen — Mitte',
 	'mapType.provincesSouth': 'Provinzen — Süden',
 	'mapType.prefectures': 'Präfekturen',
+	'mapType.divisions': 'Divisionen',
 	'mapType.districts': 'Bezirke',
 	'mapType.governorates': 'Gouvernements',
 	'mapType.cities': 'Städte',
@@ -707,6 +710,7 @@ const it: Dictionary = {
 	'mapType.provincesCenter': 'Province — Centro',
 	'mapType.provincesSouth': 'Province — Sud',
 	'mapType.prefectures': 'Prefetture',
+	'mapType.divisions': 'Divisioni',
 	'mapType.districts': 'Distretti',
 	'mapType.governorates': 'Governatorati',
 	'mapType.cities': 'Città',

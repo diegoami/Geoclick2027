@@ -1190,6 +1190,27 @@ new-zealand-regions 16, venezuela-states 24, denmark-regions 5; towns 31
 8 (Norway), 6 (Denmark), 7 (Serbia). Not done: German/Italian facts for these
 (v0.18), and towns from Wikidata where Natural Earth is thin.
 
+### Malaysia and Bangladesh (built 2026-10-04, v0.18, #204)
+
+Malaysia — States (16: thirteen states, Kuala Lumpur, Putrajaya and Labuan;
+Natural Earth, public domain) and Bangladesh — Divisions (8, including
+Mymensingh of 2015, which Natural Earth lacks; geoBoundaries ADM1, CC0), each
+with a Towns map at 100 000 (27 and 16 towns). Ethiopia was considered and
+left out: both Natural Earth and geoBoundaries still show the single SNNPR
+that was split into four regions in 2020-23. Built in the WSL clone.
+`NAME_FIXUPS`: Penang and Malacca for Pulau Pinang and Melaka, Rajshahi for
+the source's "Rajshani", and Chattogram and Barishal (the 2018 spellings,
+which Natural Earth's towns already use) for Chittagong and Barisal; the old
+names are not kept as aliases (nothing reads `aliases` at run time). Authored facts, English, Italian
+and German, for all 24 states, territories and divisions.
+
+```
+npx tsx data/scripts/build-map.ts --country=Malaysia --type=state --out=data/maps/malaysia-states --name="Malaysia — States"
+npx tsx data/scripts/build-map.ts --country=Bangladesh --type=division --source=data/source/geoboundaries/BGD-ADM1.geojson "--attribution=geoBoundaries (via Wikimedia Commons), CC0" --out=data/maps/bangladesh-divisions --name="Bangladesh — Divisions"
+npx tsx data/scripts/build-points-map.ts --country=Malaysia --min-population=100000 --out=data/maps/malaysia-towns-100k --name="Malaysia — Towns"
+npx tsx data/scripts/build-points-map.ts --country=Bangladesh --min-population=100000 --out=data/maps/bangladesh-towns-100k --name="Bangladesh — Towns"
+```
+
 ## The Terrain layer: `terrain.pmtiles` (FT-33, 2026-09-19)
 
 Every map has a **second** tileset beside its `tiles.pmtiles`, holding the
