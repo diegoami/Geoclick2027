@@ -7,7 +7,24 @@
 			"Ilocos Region"
 		],
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Named for the Cagayan River, the longest in the Philippines.",
+				"Batanes, the country’s northernmost province, with stone houses built to withstand typhoons, belongs to the region.",
+				"In Callao Cave near Peñablanca a foot bone about 67,000 years old, the oldest human fossil found in the Philippines, was discovered in 2007."
+			],
+			"it": [
+				"Prende il nome dal fiume Cagayan, il più lungo delle Filippine.",
+				"Batanes, la provincia più settentrionale del paese, con case di pietra costruite per resistere ai tifoni, fa parte della regione.",
+				"Nella grotta di Callao, vicino a Peñablanca, nel 2007 fu scoperto un osso del piede di circa 67.000 anni, il più antico fossile umano trovato nelle Filippine."
+			],
+			"de": [
+				"Benannt nach dem Cagayan, dem längsten Fluss der Philippinen.",
+				"Batanes, die nördlichste Provinz des Landes, mit Steinhäusern, die Taifunen standhalten sollen, gehört zur Region.",
+				"In der Callao-Höhle bei Peñablanca wurde 2007 ein rund 67.000 Jahre alter Fußknochen entdeckt, das älteste auf den Philippinen gefundene menschliche Fossil."
+			]
+		}
 	},
 	"cordillera": {
 		"kind": "region",
@@ -16,7 +33,24 @@
 			"Ilocos Region"
 		],
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Spanish for \"mountain range\": the region covers the Cordillera Central of northern Luzon.",
+				"The rice terraces of Banaue, cut into the hills over some 2,000 years, are a World Heritage Site.",
+				"Baguio, the cool \"summer capital\" of the Philippines, lies here."
+			],
+			"it": [
+				"In spagnolo \"catena montuosa\": la regione copre la Cordillera Central del nord di Luzon.",
+				"Le terrazze di riso di Banaue, scavate nelle colline nel corso di circa 2.000 anni, sono Patrimonio dell’Umanità.",
+				"Qui si trova Baguio, la fresca \"capitale estiva\" delle Filippine."
+			],
+			"de": [
+				"Spanisch für „Gebirgskette“: die Region umfasst die Cordillera Central im Norden von Luzon.",
+				"Die Reisterrassen von Banaue, im Lauf von etwa 2.000 Jahren in die Hügel gegraben, sind Welterbe.",
+				"Hier liegt Baguio, die kühle „Sommerhauptstadt“ der Philippinen."
+			]
+		}
 	},
 	"ilocos-region": {
 		"kind": "region",
@@ -26,7 +60,24 @@
 			"Cordillera"
 		],
 		"coastal": true,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Usually explained as i-looc, \"people of the lowland\" or \"of the cove\".",
+				"Vigan is one of the best-preserved Spanish colonial towns in Asia, with cobbled streets, and a World Heritage Site.",
+				"A line of tall white wind turbines stands on the coast at Bangui."
+			],
+			"it": [
+				"Di solito spiegato come i-looc, \"gente della pianura\" o \"della baia\".",
+				"Vigan è una delle città coloniali spagnole meglio conservate dell’Asia, con strade acciottolate, ed è Patrimonio dell’Umanità.",
+				"Sulla costa di Bangui si allinea una fila di alte turbine eoliche bianche."
+			],
+			"de": [
+				"Meist als i-looc erklärt, „Leute der Niederung“ oder „der Bucht“.",
+				"Vigan ist eine der am besten erhaltenen spanischen Kolonialstädte Asiens, mit Kopfsteinpflaster, und Welterbe.",
+				"An der Küste von Bangui steht eine Reihe hoher weißer Windräder."
+			]
+		}
 	},
 	"central-luzon": {
 		"kind": "region",
@@ -37,7 +88,24 @@
 			"Metro Manila"
 		],
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Named for its place in the middle of Luzon, the biggest island of the Philippines.",
+				"It grows so much rice that it is called the rice granary of the Philippines.",
+				"Mount Pinatubo, whose eruption in June 1991 was one of the largest of the 20th century, rises in its west."
+			],
+			"it": [
+				"Prende il nome dalla sua posizione al centro di Luzon, la maggiore isola delle Filippine.",
+				"Produce tanto riso da essere chiamata il granaio di riso delle Filippine.",
+				"Nel suo ovest si alza il monte Pinatubo, la cui eruzione del giugno 1991 fu una delle maggiori del Novecento."
+			],
+			"de": [
+				"Benannt nach ihrer Lage in der Mitte von Luzon, der größten Insel der Philippinen.",
+				"Hier wird so viel Reis angebaut, dass die Region Reiskammer der Philippinen genannt wird.",
+				"Im Westen erhebt sich der Pinatubo, dessen Ausbruch im Juni 1991 einer der größten des 20. Jahrhunderts war."
+			]
+		}
 	},
 	"metro-manila": {
 		"kind": "region",
@@ -46,7 +114,24 @@
 			"Central Luzon"
 		],
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Metro Manila, the National Capital Region, is made of sixteen cities and one municipality, Pateros.",
+				"About 13 million people live in it, in one of the most crowded urban areas in the world.",
+				"Its streets are famous for jeepneys, long colourful buses made from old American military jeeps."
+			],
+			"it": [
+				"Metro Manila, la Regione della Capitale Nazionale, è formata da sedici città e da un comune, Pateros.",
+				"Vi vivono circa 13 milioni di persone, in una delle aree urbane più affollate del mondo.",
+				"Le sue strade sono famose per i jeepney, lunghi autobus colorati ricavati da vecchie jeep militari americane."
+			],
+			"de": [
+				"Metro Manila, die Nationale Hauptstadtregion, besteht aus sechzehn Städten und einer Gemeinde, Pateros.",
+				"Rund 13 Millionen Menschen leben hier, in einem der am dichtesten besiedelten Stadtgebiete der Welt.",
+				"Ihre Straßen sind berühmt für die Jeepneys, lange bunte Busse, die aus alten amerikanischen Militärjeeps gebaut wurden."
+			]
+		}
 	},
 	"calabarzon": {
 		"kind": "region",
@@ -56,7 +141,24 @@
 			"Metro Manila"
 		],
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"An acronym of its five provinces: Cavite, Laguna, Batangas, Rizal and Quezon.",
+				"Taal Volcano, one of the smallest active volcanoes in the world, sits on an island in a lake in Batangas.",
+				"José Rizal, the national hero, was born in 1861 in Calamba, Laguna."
+			],
+			"it": [
+				"Un acronimo delle sue cinque province: Cavite, Laguna, Batangas, Rizal e Quezon.",
+				"Il vulcano Taal, uno dei più piccoli vulcani attivi del mondo, sorge su un’isola in un lago nel Batangas.",
+				"José Rizal, l’eroe nazionale, nacque nel 1861 a Calamba, nella Laguna."
+			],
+			"de": [
+				"Ein Kürzel aus den fünf Provinzen: Cavite, Laguna, Batangas, Rizal und Quezon.",
+				"Der Vulkan Taal, einer der kleinsten aktiven Vulkane der Welt, liegt auf einer Insel in einem See in Batangas.",
+				"José Rizal, der Nationalheld, wurde 1861 in Calamba in Laguna geboren."
+			]
+		}
 	},
 	"bicol-region": {
 		"kind": "region",
@@ -64,17 +166,68 @@
 			"CALABARZON"
 		],
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named for the Bicol River and its people; the root of the name is uncertain.",
+				"Mayon Volcano, an almost perfect cone, is the region’s best-known sight.",
+				"Bicolano cooking is hot: dishes with chilli and coconut milk, such as laing, are its trademark."
+			],
+			"it": [
+				"Prende il nome dal fiume Bicol e dalla sua gente; la radice del nome è incerta.",
+				"Il vulcano Mayon, un cono quasi perfetto, è il paesaggio più noto della regione.",
+				"La cucina bicolana è piccante: piatti con peperoncino e latte di cocco, come il laing, sono il suo marchio."
+			],
+			"de": [
+				"Benannt nach dem Fluss Bicol und seinen Bewohnern; die Wurzel des Namens ist ungewiss.",
+				"Der Vulkan Mayon, ein fast perfekter Kegel, ist die bekannteste Sehenswürdigkeit der Region.",
+				"Die Küche der Bicol ist scharf: Gerichte mit Chili und Kokosmilch, wie das Laing, sind ihr Markenzeichen."
+			]
+		}
 	},
 	"eastern-visayas": {
 		"kind": "region",
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"The Visayas are probably named for Srivijaya, an old maritime empire, but the link is disputed.",
+				"General MacArthur returned to the Philippines on the island of Leyte in October 1944.",
+				"The San Juanico Bridge, about 2 km long, joins Leyte and Samar and is among the longest bridges over seawater in the country."
+			],
+			"it": [
+				"Le Visayas prendono forse il nome da Srivijaya, un antico impero marittimo, ma il legame è discusso.",
+				"Il generale MacArthur tornò nelle Filippine sull’isola di Leyte nell’ottobre 1944.",
+				"Il ponte di San Juanico, lungo circa 2 km, collega Leyte e Samar ed è tra i ponti più lunghi del paese sul mare."
+			],
+			"de": [
+				"Die Visayas sind wahrscheinlich nach Srivijaya benannt, einem alten Seereich, doch die Verbindung ist umstritten.",
+				"General MacArthur kehrte im Oktober 1944 auf der Insel Leyte auf die Philippinen zurück.",
+				"Die San-Juanico-Brücke, rund 2 km lang, verbindet Leyte und Samar und gehört zu den längsten Brücken des Landes über Meerwasser."
+			]
+		}
 	},
 	"mimaropa": {
 		"kind": "region",
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"An acronym of its provinces: Mindoro (Occidental and Oriental), Marinduque, Romblon and Palawan.",
+				"The Puerto Princesa Underground River in Palawan, a river that runs through a cave to the sea, is a World Heritage Site.",
+				"Tubbataha Reefs, in the Sulu Sea, are a World Heritage marine park."
+			],
+			"it": [
+				"Un acronimo delle sue province: Mindoro (Occidentale e Orientale), Marinduque, Romblon e Palawan.",
+				"Il fiume sotterraneo di Puerto Princesa, a Palawan, un fiume che scorre in una grotta fino al mare, è Patrimonio dell’Umanità.",
+				"Le barriere coralline di Tubbataha, nel mare di Sulu, sono un parco marino Patrimonio dell’Umanità."
+			],
+			"de": [
+				"Ein Kürzel aus seinen Provinzen: Mindoro (Occidental und Oriental), Marinduque, Romblon und Palawan.",
+				"Der Unterirdische Fluss von Puerto Princesa auf Palawan, ein Fluss, der durch eine Höhle bis zum Meer fließt, ist Welterbe.",
+				"Die Tubbataha-Riffe in der Sulusee sind ein Meeresnationalpark und Welterbe."
+			]
+		}
 	},
 	"western-visayas": {
 		"kind": "region",
@@ -82,7 +235,24 @@
 			"Central Visayas"
 		],
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"The Visayas are probably named for Srivijaya, an old maritime empire, but the link is disputed.",
+				"Boracay, a small island with a long white beach, is one of the Philippines’ best-known resorts.",
+				"The Ati-Atihan festival in Kalibo, with painted faces and drums, is held every January."
+			],
+			"it": [
+				"Le Visayas prendono forse il nome da Srivijaya, un antico impero marittimo, ma il legame è discusso.",
+				"Boracay, una piccola isola con una lunga spiaggia bianca, è una delle località turistiche più note delle Filippine.",
+				"Il festival Ati-Atihan di Kalibo, con volti dipinti e tamburi, si tiene ogni gennaio."
+			],
+			"de": [
+				"Die Visayas sind wahrscheinlich nach Srivijaya benannt, einem alten Seereich, doch die Verbindung ist umstritten.",
+				"Boracay, eine kleine Insel mit langem weißem Strand, ist eines der bekanntesten Urlaubsziele der Philippinen.",
+				"Das Ati-Atihan-Fest in Kalibo, mit bemalten Gesichtern und Trommeln, findet jeden Januar statt."
+			]
+		}
 	},
 	"central-visayas": {
 		"kind": "region",
@@ -90,7 +260,24 @@
 			"Western Visayas"
 		],
 		"coastal": true,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"The Visayas are probably named for Srivijaya, an old maritime empire, but the link is disputed.",
+				"On the island of Mactan, off Cebu, the explorer Ferdinand Magellan was killed in 1521.",
+				"The Chocolate Hills of Bohol, over a thousand grass-covered mounds, turn brown in the dry season."
+			],
+			"it": [
+				"Le Visayas prendono forse il nome da Srivijaya, un antico impero marittimo, ma il legame è discusso.",
+				"Sull’isola di Mactan, davanti a Cebu, l’esploratore Ferdinando Magellano fu ucciso nel 1521.",
+				"Le Colline di Cioccolato di Bohol, oltre mille rilievi coperti d’erba, diventano marroni nella stagione secca."
+			],
+			"de": [
+				"Die Visayas sind wahrscheinlich nach Srivijaya benannt, einem alten Seereich, doch die Verbindung ist umstritten.",
+				"Auf der Insel Mactan vor Cebu wurde der Entdecker Ferdinand Magellan 1521 getötet.",
+				"Die Chocolate Hills auf Bohol, über tausend grasbewachsene Hügel, färben sich in der Trockenzeit braun."
+			]
+		}
 	},
 	"caraga": {
 		"kind": "region",
@@ -99,7 +286,24 @@
 			"Northern Mindanao"
 		],
 		"coastal": true,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"The origin of the name is uncertain.",
+				"Siargao, an island shaped like a teardrop, is famous for its surfing at Cloud 9.",
+				"The Agusan Marsh, a huge wetland, shelters crocodiles and many birds."
+			],
+			"it": [
+				"L’origine del nome è incerta.",
+				"Siargao, un’isola a forma di goccia, è famosa per il surf a Cloud 9.",
+				"La palude di Agusan, un’immensa zona umida, ospita coccodrilli e molti uccelli."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss.",
+				"Siargao, eine tropfenförmige Insel, ist für das Surfen am Cloud 9 berühmt.",
+				"Der Agusan-Sumpf, ein riesiges Feuchtgebiet, bietet Krokodilen und vielen Vögeln Zuflucht."
+			]
+		}
 	},
 	"northern-mindanao": {
 		"kind": "region",
@@ -111,7 +315,24 @@
 			"Zamboanga Peninsula"
 		],
 		"coastal": true,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Named for its place in the north of Mindanao, the second largest island of the Philippines.",
+				"Camiguin, a small island in the region, has seven volcanoes.",
+				"Bukidnon, in the highlands, grows pineapples on one of the largest plantations in the country."
+			],
+			"it": [
+				"Prende il nome dalla sua posizione nel nord di Mindanao, la seconda isola delle Filippine per estensione.",
+				"Camiguin, una piccola isola della regione, ha sette vulcani.",
+				"Il Bukidnon, sull’altopiano, coltiva ananas in una delle maggiori piantagioni del paese."
+			],
+			"de": [
+				"Benannt nach ihrer Lage im Norden von Mindanao, der zweitgrößten Insel der Philippinen.",
+				"Camiguin, eine kleine Insel der Region, hat sieben Vulkane.",
+				"Bukidnon im Hochland baut Ananas auf einer der größten Plantagen des Landes an."
+			]
+		}
 	},
 	"zamboanga-peninsula": {
 		"kind": "region",
@@ -120,7 +341,24 @@
 			"Northern Mindanao"
 		],
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Zamboanga may come from Sama words: one explanation is \"mooring place\".",
+				"Zamboanga City speaks Chavacano, a creole language based on Spanish.",
+				"Great Santa Cruz Island, off Zamboanga City, has a beach of pink sand."
+			],
+			"it": [
+				"Zamboanga potrebbe derivare da parole sama: una spiegazione è \"luogo di ormeggio\".",
+				"A Zamboanga si parla il chavacano, una lingua creola basata sullo spagnolo.",
+				"La Great Santa Cruz Island, al largo di Zamboanga, ha una spiaggia di sabbia rosa."
+			],
+			"de": [
+				"Zamboanga kommt vielleicht von Wörtern des Sama: eine Erklärung ist „Anlegeplatz“.",
+				"In Zamboanga City spricht man Chavacano, eine auf dem Spanischen beruhende Kreolsprache.",
+				"Great Santa Cruz Island vor Zamboanga City hat einen Strand mit rosa Sand."
+			]
+		}
 	},
 	"davao-region": {
 		"kind": "region",
@@ -130,7 +368,24 @@
 			"SOCCSKSARGEN"
 		],
 		"coastal": true,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"The origin of the name is uncertain; one explanation is the Bagobo word for the river.",
+				"Mount Apo, 2,954 m, is the highest mountain in the Philippines.",
+				"The region is home to the Philippine eagle, the national bird, and to the durian, the fruit people love or hate for its smell."
+			],
+			"it": [
+				"L’origine del nome è incerta; una spiegazione è la parola bagobo per il fiume.",
+				"Il monte Apo, 2.954 m, è la montagna più alta delle Filippine.",
+				"Nella regione vivono l’aquila filippina, l’uccello nazionale, e il durian, il frutto che si ama o si odia per il suo odore."
+			],
+			"de": [
+				"Die Herkunft des Namens ist ungewiss; eine Erklärung ist das Bagobo-Wort für den Fluss.",
+				"Der Mount Apo, 2.954 m, ist der höchste Berg der Philippinen.",
+				"In der Region leben der Philippinenadler, der Nationalvogel, und die Durian, die Frucht, die man wegen ihres Geruchs liebt oder hasst."
+			]
+		}
 	},
 	"soccsksargen": {
 		"kind": "region",
@@ -140,7 +395,24 @@
 			"Northern Mindanao"
 		],
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"An acronym of South Cotabato, Cotabato, Sultan Kudarat, Sarangani and General Santos.",
+				"General Santos is called the tuna capital of the Philippines.",
+				"The T’boli people of Lake Sebu weave t’nalak, a cloth woven from abaca fibre."
+			],
+			"it": [
+				"Un acronimo di South Cotabato, Cotabato, Sultan Kudarat, Sarangani e General Santos.",
+				"General Santos è detta la capitale del tonno delle Filippine.",
+				"I T’boli del lago Sebu tessono il t’nalak, un tessuto di fibra di abacà."
+			],
+			"de": [
+				"Ein Kürzel aus South Cotabato, Cotabato, Sultan Kudarat, Sarangani und General Santos.",
+				"General Santos wird die Thunfischhauptstadt der Philippinen genannt.",
+				"Die T’boli am Lake Sebu weben t’nalak, ein Tuch aus Abacá-Fasern."
+			]
+		}
 	},
 	"barmm": {
 		"kind": "region",
@@ -150,6 +422,23 @@
 			"Zamboanga Peninsula"
 		],
 		"coastal": true,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Short for the Bangsamoro Autonomous Region in Muslim Mindanao; Bangsamoro means \"Moro nation\".",
+				"It was created in 2019, after a vote, to replace the older Autonomous Region in Muslim Mindanao.",
+				"Tawi-Tawi, its chain of islands near Borneo, is the southernmost province of the Philippines."
+			],
+			"it": [
+				"Abbreviazione di Regione autonoma Bangsamoro nel Mindanao musulmano; Bangsamoro significa \"nazione moro\".",
+				"Fu creata nel 2019, dopo un voto, al posto della precedente Regione autonoma nel Mindanao musulmano.",
+				"Il Tawi-Tawi, la sua catena di isole vicino al Borneo, è la provincia più meridionale delle Filippine."
+			],
+			"de": [
+				"Kurzform für die Autonome Region Bangsamoro im muslimischen Mindanao; Bangsamoro bedeutet „Moro-Nation“.",
+				"Sie wurde 2019 nach einer Abstimmung geschaffen und löste die ältere Autonome Region im muslimischen Mindanao ab.",
+				"Tawi-Tawi, die Inselkette nahe Borneo, ist die südlichste Provinz der Philippinen."
+			]
+		}
 	}
 }
