@@ -331,13 +331,14 @@ line above or below its place, or is stretched along the region where it fits.
 Only when nothing is free is it left out, the way an atlas does, rather than
 printing two names on top of each other. When two names want the same spot, the
 larger region keeps its name. Nothing is lost: **zoom in** and the names that
-were left out appear as room is made for them. Names stay the same size on
-screen at every zoom level; they're pinned to the middle of their region.
+were left out appear as room is made for them. A region's name is drawn along
+the region's long direction where that fits, and then it grows or shrinks as you
+zoom; the others keep their size on screen.
 
 **Enlarging a name:** names are small so that they fit, but any one of them can
 be enlarged. With a mouse, point at it; on a touch screen, tap it (tap it
-again, or tap anywhere else, to shrink it back). The name grows to about one and
-a half times its size, darkens, and sits on top of its neighbours:
+again, or tap anywhere else, to shrink it back). The name grows and rises above its
+neighbours:
 
 ![Overview: pointing at Toscana enlarges it](manual/overview-magnified.jpg)
 
@@ -346,7 +347,7 @@ Tapping a place also opens its fact card (see [Facts](#12-facts-and-name-origins
 ## 8. Quiz: drag the names onto the map
 
 The quiz is the game. The map is shown in colour without names, and the names to
-place are in a **tray** along the bottom of the screen, in alphabetical order.
+place are in a **tray** along the bottom of the screen, in alphabetical order (in English).
 Here the quiz on Denmark's five regions, at the start:
 
 ![The quiz at the start: five names in the tray](manual/quiz-start.jpg)
@@ -520,8 +521,8 @@ biggest on the largest). Each town is a **dot**, and the country's regions are
 drawn faintly underneath for reference.
 
 The Overview names every town. A town's name sits **beside** its dot, never on
-top of it, taking the first free side (right, left, above or below), so the dot
-you are looking for is always visible:
+top of it, in the best free spot next to it, so the dot you are looking for is
+always visible:
 
 ![Italy — Towns, Overview](manual/towns-overview.jpg)
 
@@ -565,8 +566,8 @@ closes the card; on the tour it changes by itself at each stop.
 
 The **Terrain** button, next to the language menu, shows or hides the landscape
 behind the map. It is on by default. With it on, you see the sea, the rivers and
-the named seas, ranges, deserts and peaks around the map, with their heights, in
-your language. Turning it off leaves just the map, with land and sea still told
+the named seas, ranges, deserts and peaks around the map, and the heights of the
+peaks, in your language. Turning it off leaves just the map, with land and sea still told
 apart.
 
 ![Terrain off](manual/terrain-off.jpg)
@@ -771,12 +772,12 @@ The apps are the same game as the website, packaged to install:
   Europe's cities also come in five parts (north, south, east, west and centre).
 - **Countries.** 53 countries have maps of their own: Argentina, Australia,
   Austria, Bangladesh, Belgium, Brazil, Bulgaria, Canada, Chile, China, Colombia,
-  Croatia, Czech Republic, Denmark, Egypt, Finland, France, Germany, Greece,
+  Croatia, Czech Republic, Denmark, Egypt, Finland, France, Germany, Great Britain, Greece,
   India, Indonesia, Iran, Ireland, Italy, Japan, Kazakhstan, Kenya, Malaysia,
   Mexico, Netherlands, New Zealand, Nigeria, Norway, Peru, Philippines, Poland,
   Portugal, Romania, Russia, Saudi Arabia, Serbia, South Africa, South Korea,
-  Spain, Sweden, Switzerland, Thailand, Turkey, Ukraine, United Kingdom, United
-  States of America, Venezuela and Vietnam. Most have **regions** (states,
+  Spain, Sweden, Switzerland, Thailand, Turkey, Ukraine, USA,
+  Venezuela and Vietnam (as the start screen lists them in English). Most have **regions** (states,
   provinces, prefectures…) and **towns**.
 - **Detailed maps** (behind the *Show detailed maps* tick): Germany's districts
   and its towns of 50 000 and up, Italy's 110 provinces (also in north, centre and
