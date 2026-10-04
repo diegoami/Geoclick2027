@@ -12,7 +12,24 @@
 			"nameIt": "Whangārei",
 			"population": 52200
 		},
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Named for its place in the far north of the North Island.",
+				"The Treaty of Waitangi, between Māori chiefs and the British Crown, was signed at Waitangi in 1840.",
+				"Tāne Mahuta, the largest known living kauri tree, stands in Waipoua Forest."
+			],
+			"it": [
+				"Prende il nome dalla sua posizione nell’estremo nord dell’Isola del Nord.",
+				"Il Trattato di Waitangi, tra i capi māori e la Corona britannica, fu firmato a Waitangi nel 1840.",
+				"Tāne Mahuta, il più grande albero kauri vivente conosciuto, sorge nella foresta di Waipoua."
+			],
+			"de": [
+				"Benannt nach seiner Lage im äußersten Norden der Nordinsel.",
+				"Der Vertrag von Waitangi zwischen Māori-Häuptlingen und der britischen Krone wurde 1840 in Waitangi unterzeichnet.",
+				"Tāne Mahuta, der größte bekannte lebende Kauri-Baum, steht im Waipoua-Wald."
+			]
+		}
 	},
 	"auckland": {
 		"kind": "region",
@@ -28,7 +45,24 @@
 			"nameIt": "Auckland",
 			"population": 1377200
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Named for the Earl of Auckland, a friend of the first governor, William Hobson.",
+				"The city lies on a narrow isthmus between two harbours, the Waitematā and the Manukau.",
+				"It is built on a field of about fifty small volcanoes."
+			],
+			"it": [
+				"Prende il nome dal conte di Auckland, amico del primo governatore, William Hobson.",
+				"La città sorge su uno stretto istmo tra due porti, il Waitematā e il Manukau.",
+				"È costruita su un campo di una cinquantina di piccoli vulcani."
+			],
+			"de": [
+				"Benannt nach dem Earl of Auckland, einem Freund des ersten Gouverneurs William Hobson.",
+				"Die Stadt liegt auf einer schmalen Landenge zwischen zwei Häfen, dem Waitematā und dem Manukau.",
+				"Sie steht auf einem Feld aus rund fünfzig kleinen Vulkanen."
+			]
+		}
 	},
 	"waikato": {
 		"kind": "region",
@@ -47,7 +81,24 @@
 			"nameIt": "Hamilton",
 			"population": 148200
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"The name means \"flowing water\": the Waikato is the longest river in New Zealand.",
+				"The Hobbiton movie set, built for The Lord of the Rings, stands on a farm near Matamata.",
+				"The Waitomo Caves are lit by thousands of glowworms."
+			],
+			"it": [
+				"Il nome significa \"acqua che scorre\": il Waikato è il fiume più lungo della Nuova Zelanda.",
+				"Il set cinematografico di Hobbiton, costruito per Il Signore degli Anelli, sorge in una fattoria vicino a Matamata.",
+				"Le grotte di Waitomo sono illuminate da migliaia di lucciole."
+			],
+			"de": [
+				"Der Name bedeutet „fließendes Wasser“: Der Waikato ist der längste Fluss Neuseelands.",
+				"Das Filmdorf Hobbiton, für Der Herr der Ringe gebaut, steht auf einer Farm bei Matamata.",
+				"Die Waitomo-Höhlen werden von Tausenden Glühwürmchen erhellt."
+			]
+		}
 	},
 	"bay-of-plenty": {
 		"kind": "region",
@@ -64,7 +115,24 @@
 			"nameIt": "Tauranga",
 			"population": 121500
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Captain Cook named the bay in 1769 for the plentiful food he found on its shores.",
+				"Te Puke calls itself the kiwifruit capital of the world.",
+				"Whakaari, or White Island, off the coast, is an active volcano."
+			],
+			"it": [
+				"Il capitano Cook diede il nome alla baia nel 1769 per il cibo abbondante trovato sulle sue rive.",
+				"Te Puke si definisce la capitale mondiale del kiwi.",
+				"Whakaari, o White Island, al largo della costa, è un vulcano attivo."
+			],
+			"de": [
+				"Kapitän Cook benannte die Bucht 1769 nach der reichlichen Nahrung, die er an ihren Ufern fand.",
+				"Te Puke nennt sich die Kiwi-Hauptstadt der Welt.",
+				"Whakaari oder White Island vor der Küste ist ein aktiver Vulkan."
+			]
+		}
 	},
 	"gisborne": {
 		"kind": "region",
@@ -80,7 +148,24 @@
 			"nameIt": "Gisborne",
 			"population": 34300
 		},
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Named for William Gisborne, a colonial official of the 1870s.",
+				"Captain Cook first landed in New Zealand near here in 1769.",
+				"It is one of the first places in the world to see the sun rise each day, since it lies close to the date line."
+			],
+			"it": [
+				"Prende il nome da William Gisborne, un funzionario coloniale degli anni 1870.",
+				"Il capitano Cook sbarcò per la prima volta in Nuova Zelanda vicino a qui nel 1769.",
+				"È uno dei primi luoghi al mondo a vedere sorgere il sole ogni giorno, perché è vicino alla linea del cambiamento di data."
+			],
+			"de": [
+				"Benannt nach William Gisborne, einem Kolonialbeamten der 1870er-Jahre.",
+				"Kapitän Cook ging 1769 in der Nähe erstmals in Neuseeland an Land.",
+				"Es gehört zu den ersten Orten der Welt, an denen jeden Tag die Sonne aufgeht, da es nahe der Datumsgrenze liegt."
+			]
+		}
 	},
 	"taranaki": {
 		"kind": "region",
@@ -100,7 +185,24 @@
 			"name": "Mount Taranaki",
 			"elevation": 2518
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"From the Māori name of the mountain, Taranaki, which Captain Cook called Mount Egmont in 1770.",
+				"Mount Taranaki is an almost perfect volcanic cone, 2,518 m high.",
+				"It stood in for Mount Fuji in the film The Last Samurai."
+			],
+			"it": [
+				"Dal nome māori della montagna, Taranaki, che il capitano Cook chiamò monte Egmont nel 1770.",
+				"Il monte Taranaki è un cono vulcanico quasi perfetto, alto 2.518 m.",
+				"Ha fatto da controfigura al monte Fuji nel film L’ultimo samurai."
+			],
+			"de": [
+				"Vom Māori-Namen des Berges, Taranaki, den Kapitän Cook 1770 Mount Egmont nannte.",
+				"Der Mount Taranaki ist ein fast perfekter Vulkankegel von 2.518 m Höhe.",
+				"Im Film Der letzte Samurai stand er für den Fuji."
+			]
+		}
 	},
 	"hawke-s-bay": {
 		"kind": "region",
@@ -118,7 +220,24 @@
 			"nameIt": "Hastings",
 			"population": 66100
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Named for Hawke Bay, which Captain Cook named in 1769 for Admiral Edward Hawke.",
+				"Napier was rebuilt in the Art Deco style after an earthquake destroyed it in 1931.",
+				"It is one of New Zealand’s main wine regions."
+			],
+			"it": [
+				"Prende il nome dalla baia di Hawke, che il capitano Cook chiamò nel 1769 in onore dell’ammiraglio Edward Hawke.",
+				"Napier fu ricostruita in stile Art Déco dopo che un terremoto la distrusse nel 1931.",
+				"È una delle principali regioni vinicole della Nuova Zelanda."
+			],
+			"de": [
+				"Benannt nach der Hawke Bay, die Kapitän Cook 1769 nach Admiral Edward Hawke benannte.",
+				"Napier wurde nach einem Erdbeben, das die Stadt 1931 zerstörte, im Art-déco-Stil wiederaufgebaut.",
+				"Es ist eine der wichtigsten Weinregionen Neuseelands."
+			]
+		}
 	},
 	"manawatu-whanganui": {
 		"kind": "region",
@@ -140,7 +259,24 @@
 			"name": "Mount Ruapehu",
 			"elevation": 2797
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Named for the Manawatū and Whanganui rivers.",
+				"In 2017 the Whanganui River became the first river in the world to be given the legal rights of a person.",
+				"Mount Ruapehu, 2,797 m, the highest mountain of the North Island, is a volcano that rises in the region."
+			],
+			"it": [
+				"Prende il nome dai fiumi Manawatū e Whanganui.",
+				"Nel 2017 il fiume Whanganui è diventato il primo fiume al mondo a ricevere i diritti legali di una persona.",
+				"Nella regione si alza il monte Ruapehu, 2.797 m, la montagna più alta dell’Isola del Nord, un vulcano."
+			],
+			"de": [
+				"Benannt nach den Flüssen Manawatū und Whanganui.",
+				"2017 erhielt der Whanganui als erster Fluss der Welt die Rechte einer Person.",
+				"In der Region erhebt sich der Mount Ruapehu, 2.797 m, der höchste Berg der Nordinsel, ein Vulkan."
+			]
+		}
 	},
 	"wellington": {
 		"kind": "region",
@@ -155,7 +291,24 @@
 			"nameIt": "Wellington",
 			"population": 393400
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Named for the Duke of Wellington, the victor of Waterloo, like its main city.",
+				"The region lies at the foot of the North Island, from the capital to the farms and vineyards of the Wairarapa.",
+				"Te Papa, New Zealand’s national museum, stands on the Wellington waterfront."
+			],
+			"it": [
+				"Prende il nome dal duca di Wellington, il vincitore di Waterloo, come la sua città principale.",
+				"La regione si trova ai piedi dell’Isola del Nord, dalla capitale alle fattorie e ai vigneti del Wairarapa.",
+				"Te Papa, il museo nazionale della Nuova Zelanda, sorge sul lungomare di Wellington."
+			],
+			"de": [
+				"Benannt nach dem Herzog von Wellington, dem Sieger von Waterloo, wie ihre größte Stadt.",
+				"Die Region liegt am Fuß der Nordinsel, von der Hauptstadt bis zu den Farmen und Weinbergen des Wairarapa.",
+				"Te Papa, das Nationalmuseum Neuseelands, steht am Hafen von Wellington."
+			]
+		}
 	},
 	"nelson": {
 		"kind": "region",
@@ -171,7 +324,24 @@
 			"nameIt": "Nelson",
 			"population": 60800
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named for Admiral Horatio Nelson, as many early settlements were.",
+				"It claims to be one of the sunniest places in New Zealand.",
+				"The World of WearableArt, a show of costumes as art, began here in 1987."
+			],
+			"it": [
+				"Prende il nome dall’ammiraglio Horatio Nelson, come molti dei primi insediamenti.",
+				"Si vanta di essere uno dei luoghi più soleggiati della Nuova Zelanda.",
+				"Il World of WearableArt, una mostra di costumi come opere d’arte, è nato qui nel 1987."
+			],
+			"de": [
+				"Benannt nach Admiral Horatio Nelson, wie viele frühe Siedlungen.",
+				"Es rühmt sich, einer der sonnigsten Orte Neuseelands zu sein.",
+				"Die World of WearableArt, eine Schau von Kostümen als Kunst, begann hier 1987."
+			]
+		}
 	},
 	"tasman": {
 		"kind": "region",
@@ -183,7 +353,24 @@
 			"West Coast"
 		],
 		"coastal": true,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named for Abel Tasman, the Dutch explorer who sighted New Zealand in 1642.",
+				"Abel Tasman National Park, with golden beaches and clear bays, is the smallest national park in the country.",
+				"Farewell Spit, a long curved sandbank, is the longest sand spit in New Zealand."
+			],
+			"it": [
+				"Prende il nome da Abel Tasman, l’esploratore olandese che avvistò la Nuova Zelanda nel 1642.",
+				"Il Parco nazionale Abel Tasman, con spiagge dorate e baie limpide, è il più piccolo parco nazionale del paese.",
+				"Farewell Spit, un lungo banco di sabbia ricurvo, è la più lunga lingua di sabbia della Nuova Zelanda."
+			],
+			"de": [
+				"Benannt nach Abel Tasman, dem niederländischen Entdecker, der Neuseeland 1642 sichtete.",
+				"Der Abel-Tasman-Nationalpark mit goldenen Stränden und klaren Buchten ist der kleinste Nationalpark des Landes.",
+				"Farewell Spit, eine lange gekrümmte Sandbank, ist die längste Sandzunge Neuseelands."
+			]
+		}
 	},
 	"marlborough": {
 		"kind": "region",
@@ -200,7 +387,24 @@
 			"nameIt": "Blenheim",
 			"population": 30300
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named for the Duke of Marlborough.",
+				"The Marlborough Sounds are a maze of drowned valleys at the top of the South Island.",
+				"Marlborough is by far New Zealand’s biggest wine region and is known for its Sauvignon Blanc."
+			],
+			"it": [
+				"Prende il nome dal duca di Marlborough.",
+				"I Marlborough Sounds sono un labirinto di valli sommerse all’estremità settentrionale dell’Isola del Sud.",
+				"Marlborough è di gran lunga la maggiore regione vinicola della Nuova Zelanda ed è nota per il suo Sauvignon Blanc."
+			],
+			"de": [
+				"Benannt nach dem Herzog von Marlborough.",
+				"Die Marlborough Sounds sind ein Labyrinth ertrunkener Täler an der Spitze der Südinsel.",
+				"Marlborough ist mit Abstand das größte Weinbaugebiet Neuseelands und für seinen Sauvignon Blanc bekannt."
+			]
+		}
 	},
 	"west-coast": {
 		"kind": "region",
@@ -218,7 +422,24 @@
 			"nameIt": "Greymouth",
 			"population": 10100
 		},
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Named for its position along the western coast of the South Island.",
+				"The Franz Josef and Fox glaciers flow down almost to the rainforest near the sea.",
+				"The gold rush of the 1860s brought thousands of diggers to the region."
+			],
+			"it": [
+				"Prende il nome dalla sua posizione lungo la costa occidentale dell’Isola del Sud.",
+				"I ghiacciai Franz Josef e Fox scendono quasi fino alla foresta pluviale vicino al mare.",
+				"La corsa all’oro degli anni 1860 portò migliaia di cercatori nella regione."
+			],
+			"de": [
+				"Benannt nach seiner Lage an der Westküste der Südinsel.",
+				"Der Franz-Josef- und der Fox-Gletscher fließen fast bis in den Regenwald nahe dem Meer hinab.",
+				"Der Goldrausch der 1860er-Jahre brachte Tausende Goldgräber in die Region."
+			]
+		}
 	},
 	"canterbury": {
 		"kind": "region",
@@ -240,7 +461,24 @@
 			"name": "Aoraki (Mount Cook)",
 			"elevation": 3754
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Named for Canterbury in England: the settlers who founded Christchurch in 1850 came from the Church of England.",
+				"Aoraki, or Mount Cook, 3,724 m, the highest mountain in New Zealand, rises in the Southern Alps.",
+				"Earthquakes in 2010 and 2011 badly damaged Christchurch, its main city."
+			],
+			"it": [
+				"Prende il nome da Canterbury in Inghilterra: i coloni che fondarono Christchurch nel 1850 appartenevano alla Chiesa anglicana.",
+				"Aoraki, o monte Cook, 3.724 m, la montagna più alta della Nuova Zelanda, si alza nelle Alpi meridionali.",
+				"I terremoti del 2010 e del 2011 danneggiarono gravemente Christchurch, la sua città principale."
+			],
+			"de": [
+				"Benannt nach Canterbury in England: Die Siedler, die 1850 Christchurch gründeten, gehörten der anglikanischen Kirche an.",
+				"Aoraki oder Mount Cook, 3.724 m, der höchste Berg Neuseelands, erhebt sich in den Neuseeländischen Alpen.",
+				"Erdbeben 2010 und 2011 beschädigten Christchurch, die Hauptstadt der Region, schwer."
+			]
+		}
 	},
 	"otago": {
 		"kind": "region",
@@ -257,7 +495,24 @@
 			"nameIt": "Dunedin",
 			"population": 117700
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"From Māori Ōtākou; the region was settled in 1848 by Scots of the Free Church, who founded Dunedin, the \"Edinburgh of the South\".",
+				"The Otago Peninsula has a breeding colony of royal albatrosses at Taiaroa Head.",
+				"Queenstown, on Lake Wakatipu, is the country’s adventure-sports capital."
+			],
+			"it": [
+				"Dal māori Ōtākou; la regione fu colonizzata nel 1848 da scozzesi della Chiesa Libera, che fondarono Dunedin, l’\"Edimburgo del Sud\".",
+				"La penisola di Otago ha una colonia riproduttiva di albatros reali a Taiaroa Head.",
+				"Queenstown, sul lago Wakatipu, è la capitale degli sport avventurosi del paese."
+			],
+			"de": [
+				"Vom Māori Ōtākou; die Region wurde 1848 von Schotten der Freikirche besiedelt, die Dunedin gründeten, das „Edinburgh des Südens“.",
+				"Auf der Otago-Halbinsel brütet bei Taiaroa Head eine Kolonie von Königsalbatrossen.",
+				"Queenstown am Lake Wakatipu ist die Hauptstadt der Abenteuersportarten des Landes."
+			]
+		}
 	},
 	"southland": {
 		"kind": "region",
@@ -277,6 +532,23 @@
 			"name": "Mount Anglem",
 			"elevation": 980
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Named for its place at the southern end of the South Island.",
+				"Fiordland, with Milford Sound, one of the wettest places in the country, lies largely within the region.",
+				"Stewart Island, or Rakiura, \"glowing skies\", offers a chance to see wild kiwi in daylight."
+			],
+			"it": [
+				"Prende il nome dalla sua posizione all’estremità meridionale dell’Isola del Sud.",
+				"Il Fiordland, con il Milford Sound, uno dei luoghi più piovosi del paese, si trova in gran parte nella regione.",
+				"L’isola Stewart, o Rakiura, \"cieli luminosi\", offre la possibilità di vedere kiwi selvatici alla luce del giorno."
+			],
+			"de": [
+				"Benannt nach seiner Lage am Südende der Südinsel.",
+				"Fiordland mit dem Milford Sound, einem der regenreichsten Orte des Landes, liegt zum großen Teil in der Region.",
+				"Auf Stewart Island oder Rakiura, „leuchtende Himmel“, kann man wilde Kiwis auch bei Tageslicht sehen."
+			]
+		}
 	}
 }
