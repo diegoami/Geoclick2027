@@ -63,8 +63,8 @@ and capitals of a continent are.
 - **It remembers what you know.** Place a name right three times in a row with
   no mistake and it counts as known; one mistake and that name starts again.
   The better you know a map, the fewer names its quiz offers at a time.
-- **Every place has something to say.** A name's origin, where it is, what is
-  special about it: see [Facts and name origins](#12-facts-and-name-origins).
+- **Most places have something to say.** A name's origin and something about
+  the place: see [Facts and name origins](#12-facts-and-name-origins).
 - **Three languages:** English, German and Italian, for the buttons and for
   the facts.
 - **No account, no sign-up.** Everything is kept on the device you play on.
@@ -311,7 +311,7 @@ to what you have earned. Your choices last for the sitting: when the app is
 reopened, the map shows what you know and nothing else.
 
 Putting a name on the map also opens the place's **fact card**, with its name and
-something about it (taking a name off closes the card):
+something about it (if it has one; taking a name off closes the card):
 
 ![Tapping Sicilia puts its name on the map and opens its fact card](manual/known-fact.jpg)
 
@@ -493,7 +493,7 @@ What is kept is kept per device: see [Your data and privacy](#19-your-data-and-p
 
 The tour flies over the map on its own, one place at a time, roughly from north
 to south. At each stop it zooms in, lights the place up in orange, and shows its
-name and a fact about it, then moves on after a few seconds. It starts playing as
+name and, where it has one, a fact about it, then moves on after a few seconds. It starts playing as
 soon as the screen opens:
 
 ![The tour, at one of its stops](manual/tour.jpg)
@@ -539,11 +539,12 @@ a million, and three slices at 200 000: East, Center and West.
 
 ## 12. Facts and name origins
 
-Every place on every map has a few sentences of its own, in your language. The
-first is usually about the **name**: where the word comes from, who it is named
-after, what it meant. Hiroshima is "wide island"; Lombardia is named for the
-Longobards, the "long-beards"; Chicago is a word for wild garlic. Where an
-origin is disputed, the sentence says so.
+Most places have a few sentences of their own, in your language. The first is
+usually about the **name**: where the word comes from, who it is named after, what
+it meant. Hiroshima is "wide island"; Lombardia is named for the Longobards, the
+"long-beards"; Chicago is a word for wild garlic. Where an origin is disputed, the
+sentence says so. A few newer maps (and most of their towns) do not have their
+sentences yet; for such a place no card opens.
 
 A **fact card** opens at the bottom of the screen:
 
@@ -552,11 +553,11 @@ A **fact card** opens at the bottom of the screen:
   stays until your next drop; a correct drop opens no card);
 - at every **stop of the tour**.
 
-The card also has a line worked out from the map itself: where the place is,
-whether it has a coast, what range it lies in, its biggest city, its highest
-point, who it borders. It shows a different sentence each time you meet a place. In Known, the
-Overview and the Quiz, **×** closes the card; on the tour it changes by itself at
-each stop.
+The card shows the name's origin, another sentence about the place, and a line
+worked out from the map: for a region, its biggest city; for a town, the region it
+is in and its rank by population on that map. The origin stays the same; the other
+sentence changes from visit to visit. In Known, the Overview and the Quiz, **×**
+closes the card; on the tour it changes by itself at each stop.
 
 ## 13. Terrain
 
