@@ -104,8 +104,8 @@ The Android app fills the phone screen, under the phone's own status bar:
 - On every map screen, a row of buttons at the top (the *map bar*) switches
   between **Known**, **Overview**, **Quiz** and **Tour** for that map, or goes
   back to the start screen (**Maps**).
-- **My maps** (your favourites and recent maps), **About** and the **user
-  manual** open from the start screen's toolbar.
+- **My maps** (your favourites and recent maps) and **About** open from the
+  start screen's toolbar; the **user manual** opens from About.
 - The **tutorial** can be started from the start screen or from any map screen,
   and it takes you through the main screens in turn.
 
@@ -114,8 +114,8 @@ for the Italy — Regions quiz, so a screen can be bookmarked or shared as a lin
 
 ## 4. The start screen
 
-This is the first screen. It opens on a map of the world, with the continents
-named on it, and a panel of maps beside it.
+This is the first screen. It opens on a map of the world (or on the continent you
+left it on), with the continents named on it, and a panel of maps beside it.
 
 ![The start screen: the world map and the continents](manual/home-map.jpg)
 
@@ -310,8 +310,8 @@ button appears in the legend while you have made choices, and puts the map back
 to what you have earned. Your choices last for the sitting: when the app is
 reopened, the map shows what you know and nothing else.
 
-Every tap also opens the place's **fact card**, with its name and something
-about it:
+Putting a name on the map also opens the place's **fact card**, with its name and
+something about it (taking a name off closes the card):
 
 ![Tapping Sicilia puts its name on the map and opens its fact card](manual/known-fact.jpg)
 
@@ -499,15 +499,15 @@ soon as the screen opens:
 ![The tour, at one of its stops](manual/tour.jpg)
 
 The compact controls at the bottom of the screen use icons: a left arrow goes
-back one stop, play/pause starts or stops the tour, the circular arrow replays it
-from the beginning, and the right arrow skips to the next stop. Previous and next
-are disabled at the beginning and end. Each icon has an accessible name (and a
-tooltip on hover).
+back one stop, the play/pause button starts or stops the tour (when the tour is
+over it becomes a circular arrow that replays it from the beginning), and the
+right arrow skips to the next stop. Previous and next are disabled at the
+beginning and end. Each icon has an accessible name (and a tooltip on hover).
 
-- **"Step 2 of 20"** shows the stop you're on, out of how many.
-- The speed menu offers 0.5×, 0.75×, 1×, 1.5×, 2× and 3×. A tour starts at
-  normal speed, except on very big maps, where it starts faster, so that the
-  whole tour takes about three minutes.
+- **"3 / 20"** shows the stop you're on, out of how many.
+- The speed menu offers 0.5×, 0.75×, 1×, 1.5×, 2× and 3×. A tour starts at 0.75×,
+  which gives each stop about four seconds, except on very big maps, where it
+  starts faster so that the whole tour takes about three minutes.
 
 Nothing is scored. The map can still be zoomed and moved during the tour.
 
@@ -548,14 +548,15 @@ origin is disputed, the sentence says so.
 A **fact card** opens at the bottom of the screen:
 
 - when you **tap a place** in Known or the Overview;
-- **after you drop a name** in the quiz, so it can never give an answer away
-  (after a mistake it stays until your next drop);
+- **after a wrong drop** in the quiz, so it can never give an answer away (it
+  stays until your next drop; a correct drop opens no card);
 - at every **stop of the tour**.
 
 The card also has a line worked out from the map itself: where the place is,
 whether it has a coast, what range it lies in, its biggest city, its highest
-point, who it borders. It shows a different sentence each time you meet a place.
-**×** closes it.
+point, who it borders. It shows a different sentence each time you meet a place. In Known, the
+Overview and the Quiz, **×** closes the card; on the tour it changes by itself at
+each stop.
 
 ## 13. Terrain
 
@@ -702,8 +703,7 @@ the width of the screen:
 
 ![Known on a phone](manual/phone-known.jpg)
 
-On a phone, the fact card shows one line at a time. The quiz tray starts at up to
-about a third of the screen, and scrolls:
+The quiz tray starts at up to about a third of the screen, and scrolls:
 
 ![The quiz on a phone](manual/phone-quiz.jpg)
 
@@ -721,7 +721,8 @@ through every screen you've visited:
 
 - from a map's Quiz, Overview or Tour, back to that map's Known screen;
 - from a map's Known screen, back to the start screen;
-- from the start screen, it closes the app.
+- from the start screen, it first goes from a continent back up to the world,
+  and from the world it closes the app.
 
 In a web browser on a phone, the browser's own back button works as in any
 website.

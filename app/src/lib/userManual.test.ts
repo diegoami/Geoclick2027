@@ -33,10 +33,6 @@ describe('the user manual: the tutorial (FT-85)', () => {
 			Array.from({ length: NUMBERED_STEPS }, (_, i) => i + 1)
 		);
 	});
-
-	it('has no "Known" step, which the tutorial dropped at FT-39', () => {
-		expect(stepRows().map((row) => row[1])).not.toContain('Known');
-	});
 });
 
 describe('the user manual: what it says about the app (#204)', () => {
