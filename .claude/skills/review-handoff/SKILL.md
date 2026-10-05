@@ -61,8 +61,8 @@ Make sure the `review` label exists (`gh label list`).
 
 `pwsh scripts/external-review.ps1 -Issue <n> -Kind release` runs the review in
 a detached worktree and posts one verdict comment on the milestone issue. The
-reviewer is DeepSeek V4.1 Flash (effort high), then Claude Opus (owner,
-2026-10-02); the implementer is left out. Run it in the background and watch
+reviewer chain is GPT-5.6 Luna, then GLM 5.3 Flash (effort high, owner,
+2026-10-05); the implementer's family is left out. Run it in the background and watch
 the log. Exit 3 = no OpenCode review (nothing posted): run the Opus reviewer
 as a subagent on the printed brief in your own worktree. Exit 4 = posted but
 flagged ("verdict unreadable" / "may be cut off"), no label: read it and decide.

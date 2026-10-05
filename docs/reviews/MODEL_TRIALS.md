@@ -2,8 +2,16 @@
 
 A short record of patterns seen with the external reviewers, so that the choice of
 reviewer and the shape of the brief rest on evidence. Newest first. The reviewer is
-DeepSeek V4.1 Flash by default (`.opencode/reviewer-model`); the implementer is
+GPT-5.6 Luna by default (`.opencode/reviewer-model`); the implementer is
 Claude, so a Claude reviewer is never used on Claude's work.
+
+## 2026-10-05: reviewer chain moved to GPT-5.6 Luna, then GLM 5.3 Flash
+
+Owner adopted harness_imperial L50 (check quota before choosing a model) and L51
+(the light OpenAI reviewer is GPT-5.6 Luna on its own pool, not GPT-6 Luna, never
+a Go Luna). Earlier the same week GPT Sol reviewed PR #228 in three rounds, each a
+real blocking finding about implementer exclusion; the default is now the lighter
+Luna and Sol is kept for explicit heavy runs at effort `medium`.
 
 ## 2026-10-04: DeepSeek V4.1 Flash on the user manual rewrite (PR #213)
 

@@ -1,4 +1,5 @@
 # The OpenCode reviewer chain for scripts/external-review.ps1 when no -Model is given.
 # One model per line, tried in order: provider/model#variant. Change it with the switch-reviewer skill.
-openai/gpt-6.1-sol#high
+# Check quota first (docs/environment.md); light reviewer = GPT-5.6 Luna (L51), never GPT-6 Luna or a Go Luna.
+openai/gpt-5.6-luna#high
 zai-coding-plan/glm-5.3-flash#high

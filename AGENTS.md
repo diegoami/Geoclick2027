@@ -137,14 +137,29 @@ the gate. The separate PR-review workflow is advisory only.
   one closed with v0.2.0.
 - **Every code PR is reviewed by another model family** (owner, 2026-10-04)
   before it is handed to the owner: `pwsh scripts/external-review.ps1 -Pr <n>`
-  from the Windows checkout, in the background. The reviewer is DeepSeek V4.1
-  Flash (`.opencode/reviewer-model`), never of the implementer's family. On
+  from the Windows checkout, in the background. The reviewer chain is GPT-5.6
+  Luna, then GLM 5.3 Flash (`.opencode/reviewer-model`), never of the
+  implementer's family. On
   exit 3 (no OpenCode review), a PR that Claude implemented goes to the owner:
   no Claude reviewer reviews Claude's work; only a PR another family
   implemented may fall back to the Claude Opus reviewer. Doc-only changes need
   no review. The review does not replace the owner's test and explicit OK. The
   GitHub Actions PR-review workflow stays removed; the milestone review remains
   a separate process in *Releases* below.
+- **Choosing a model** (harness_imperial L50, L51; quota section in
+  `docs/environment.md`). Before choosing, recommending or delegating to a model
+  (an OpenCode implementer or reviewer, a Claude agent or subagent), check its
+  provider's quota: `curl -s localhost:8765/avoid`. An `exhausted` provider is
+  not used until usable again: take the next model of the chain whose provider
+  has quota, pass it explicitly (`-Model`, `opencode -m`), and say so in the PR
+  body ("GLM skipped: zai exhausted until 21:40; reviewed by Luna"). Where the
+  service is absent, go on and count a usage-limit error as `exhausted`. Model
+  ids come from `opencode models <provider>`, never memory. The light OpenAI
+  model, and the default reviewer, is GPT-5.6 Luna on the direct OpenAI route:
+  `openai/gpt-5.6-luna`, effort `high` (its own weekly pool). Not GPT-6 Luna
+  (`openai/gpt-6-luna`, which shares Sol's pool), and never a Luna on OpenCode
+  Go (`opencode-go/...`: a proxy returns `Bad Request` in long agent loops).
+  Heavy models run at effort `medium`, or lighter when medium is not needed.
 - Keep `ROADMAP.md`, `ARCHITECTURE.md`, `ONBOARDING.md`, `DECISIONS.md`,
   `MAPS.md` current as work lands — each has a distinct charter (status / code
   map / newcomer guide / *why* / map build commands). Edit the relevant
