@@ -54,7 +54,7 @@ $ErrorActionPreference = 'Stop'
 if (-not $Model -or $Model.Count -eq 0) {
     $cfg = Join-Path (Split-Path -Parent $PSScriptRoot) '.opencode/reviewer-model'
     $lines = if (Test-Path $cfg) { @(Get-Content $cfg | Where-Object { $_.Trim() -and -not $_.StartsWith('#') } | ForEach-Object { $_.Trim() }) } else { @() }
-    $Model = if ($lines.Count) { $lines } else { @('opencode-go/deepseek-v4.1-flash#high') }
+    $Model = if ($lines.Count) { $lines } else { @('openai/gpt-5.6-luna#high') }
 }
 $here = Split-Path -Parent $MyInvocation.MyCommand.Path
 $repo = (& git -C $here rev-parse --path-format=absolute --git-common-dir | Split-Path -Parent) -replace '\\', '/'
@@ -112,6 +112,9 @@ if (-not $DryRun) {
 $chain = @()
 foreach ($entry in $Model) {
     $id, $variant = $entry -split '#', 2
+    if ($id -match '^opencode-go/.*luna') {
+        Write-Host "skipping ${id}: a Luna on OpenCode Go returns Bad Request in long loops"; continue
+    }
     if (Test-ModelExcluded $id $exclude) {
         Write-Host "skipping ${id}: it implemented (or is excluded from) this change"; continue
     }

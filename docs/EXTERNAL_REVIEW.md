@@ -22,6 +22,13 @@ a round per finding; if one still does after two rounds, the implementer goes th
 whole diff for the same class of problem before the next review and notes the pattern in
 `docs/reviews/MODEL_TRIALS.md`.
 
+**2026-10-05 (owner, harness_imperial L50/L51):** the default chain is now
+**GPT-5.6 Luna** (`openai/gpt-5.6-luna#high`, its own weekly pool), then **GLM
+5.3 Flash**. Sol is the heavy model, for an explicit `-Model`, at effort
+`medium`. Quota is checked before choosing (`docs/environment.md`); a skipped
+provider is named in the PR body. GPT-6 Luna and any Luna on OpenCode Go are
+never used (`external-review.ps1` skips the latter).
+
 **2026-10-04 (owner):** DeepSeek credits are gone. `.opencode/reviewer-model`
 now holds a chain, one model per line, tried in order: **GPT Sol**
 (`openai/gpt-6.1-sol#high`), then **GLM 5.3 Flash**
