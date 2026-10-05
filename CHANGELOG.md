@@ -5,6 +5,45 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
+## v0.19.0 — 2026-10-05 — A user manual, facts for the new maps, four more countries
+
+**The app now has a user manual, the maps added in v0.17 have authored facts in three languages, and Algeria, Ecuador, Morocco and Pakistan arrive with facts of their own.**
+
+Proposal #209 (thread #190). PRs #210 to #229.
+
+For players:
+
+- **A user manual** at `/manual`, linked from About: every screen and button,
+  with 26 screenshots, in English. German and Italian follow.
+- **Facts for the maps of the v0.17 countries**: Denmark, Norway, Serbia, the
+  Philippines, Kazakhstan, New Zealand, Venezuela and Kenya (161 places), and
+  Spain's 22 missing provinces, each with three sentences in English, Italian
+  and German.
+- **Four new countries**, each with a main map and a towns map and facts in
+  three languages: Algeria (48 wilayas), Ecuador (23 provinces),
+  Morocco (12 regions) and Pakistan (7 provinces and territories). That makes
+  164 maps across 57 countries.
+- **Western Sahara and Kashmir are drawn as the sources draw them**, with a
+  neutral notice on the map and in each region's facts; MAPS.md says plainly
+  how each case is handled.
+- Search no longer blanks the map-type menus (#214).
+
+For the project:
+
+- Review briefs say what is blocking and ask for every blocking finding in one
+  pass (#211, #225).
+- The default reviewer chain is now GPT-5.6 Luna, then GLM 5.3 Flash, with a
+  quota check before any model is chosen (#228, #229). Reviewers of this
+  release's code PRs were DeepSeek V4.1 Flash, GPT Sol and GLM 5.3 Flash.
+
+Not done, and said plainly: the towns maps for Denmark, Norway and Serbia are
+still thin, Kazakhstan's and Norway's borders are still the older sets,
+Algeria's map shows the 48 wilayas rather than the 69 of 2025, and the
+detailed and towns maps have no authored facts yet. The manual is English
+only. Pakistan shows Azad Kashmir and Gilgit-Baltistan as areas Pakistan
+administers, and Morocco draws all of Western Sahara as Morocco claims it;
+both are marked as disputed.
+
 ## v0.18.0 — 2026-10-04 — German everywhere, a red X, Malaysia and Bangladesh
 
 **Every authored fact now has a German version, a detailed map can be hidden again with a red X, two new countries arrive with facts in three languages, and the About page names the author.**

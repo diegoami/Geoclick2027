@@ -5,7 +5,7 @@ installing or running it. Every screen is shown with a screenshot, and every
 button, label and message is explained: what it looks like, what it does, and
 what the player sees in return. Geoclick is made by Diego Amicabile.
 
-It describes **Geoclick v0.18.0** (4 October 2026).
+It describes **Geoclick v0.19.0** (5 October 2026).
 
 The screenshots come from the web version, on a laptop-sized window and on a
 phone-sized screen, and are made by a script (`npm run manual-shots`) that is
@@ -135,7 +135,7 @@ and a screen reader reads it:
 - **Exit**: closes the app, in the Windows and Android apps only.
 
 **The version badge**, in small grey type at the top left, shows the version
-number and a short build code, for example `v0.18.0 · d858a67`. It is useful
+number and a short build code, for example `v0.19.0 · d858a67`. It is useful
 when reporting a problem.
 
 ### Choosing a map on the world map
@@ -840,7 +840,7 @@ opened earlier. The X puts it back behind the tick.
 one-time offer box itself doesn't come back.
 
 **Which version do I have?** Look at the grey badge at the top left of any screen,
-or at the About page, for example `v0.18.0 · d858a67`.
+or at the About page, for example `v0.19.0 · d858a67`.
 
 **Windows says the installer is from an unknown publisher.** It isn't
 code-signed; choose *More info*, then *Run anyway*.
