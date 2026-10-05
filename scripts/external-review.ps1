@@ -15,8 +15,8 @@
   label applied: the caller reads it and decides; 5 the PR head moved during the
   review (nothing posted).
 
-  Roles (owner, 2026-10-02): reviewer DeepSeek V4.1 Flash (effort high), then
-  Claude Opus (the caller, on exit 3). Implementer: Claude Sonnet, then GPT Luna.
+  Roles (owner, 2026-10-05): reviewer chain GPT-5.6 Luna, then GLM 5.3 Flash
+  (effort high), then Claude Opus (the caller, on exit 3, never for Claude's work). Implementer: Claude Sonnet, then GPT Luna.
   Other models stay valid as an explicit -Model, but no default picks them.
 
   -DryRun never runs a model (so it costs nothing): it prints the arguments, or,

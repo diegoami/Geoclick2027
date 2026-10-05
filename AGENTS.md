@@ -137,8 +137,9 @@ the gate. The separate PR-review workflow is advisory only.
   one closed with v0.2.0.
 - **Every code PR is reviewed by another model family** (owner, 2026-10-04)
   before it is handed to the owner: `pwsh scripts/external-review.ps1 -Pr <n>`
-  from the Windows checkout, in the background. The reviewer is DeepSeek V4.1
-  Flash (`.opencode/reviewer-model`), never of the implementer's family. On
+  from the Windows checkout, in the background. The reviewer chain is GPT-5.6
+  Luna, then GLM 5.3 Flash (`.opencode/reviewer-model`), never of the
+  implementer's family. On
   exit 3 (no OpenCode review), a PR that Claude implemented goes to the owner:
   no Claude reviewer reviews Claude's work; only a PR another family
   implemented may fall back to the Claude Opus reviewer. Doc-only changes need

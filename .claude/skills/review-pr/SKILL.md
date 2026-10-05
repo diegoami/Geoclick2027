@@ -27,8 +27,8 @@ when the owner asks.
 ## Run it with the script (preferred)
 
 `pwsh scripts/external-review.ps1 -Pr <n>` reviews the PR head in a detached
-worktree and posts one comment. The reviewer is DeepSeek V4.1 Flash (effort
-high, owner, 2026-10-04), never of the implementer's family. Run it in the
+worktree and posts one comment. The reviewer chain is GPT-5.6 Luna, then GLM
+5.3 Flash (effort high, owner, 2026-10-05), never of the implementer's family. Run it in the
 background; relay every finding. Exit 3 = no OpenCode review: on a PR Claude
 implemented, tell the owner (no Claude reviewer); on one another family
 implemented, run the Opus reviewer as a subagent on the printed brief. Exit 4 =
