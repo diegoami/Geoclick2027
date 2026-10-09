@@ -44,6 +44,7 @@ import {
 } from './factGeometry.js';
 import type { LangHooks } from './authoredHooks.js';
 import { authoredResolver, withHooks } from './factsHooks.js';
+import { fixTownName } from './townNameFixups.js';
 
 const MAPS_DIR = path.join(REPO_ROOT, 'data/maps');
 const COASTLINE_SHP = path.join(REPO_ROOT, 'data/source/ne_10m_coastline/ne_10m_coastline.shp');
@@ -288,7 +289,8 @@ function factsForRegionMap(
 				.sort((a, b) => Number(b.properties.POP_MAX) - Number(a.properties.POP_MAX));
 			if (towns[0]) {
 				fact.largestCity = {
-					name: String(towns[0].properties.NAME),
+					// The towns maps' spelling (#227): Tiaret, not Tiarat.
+					name: fixTownName(String(towns[0].properties.ADM0NAME), String(towns[0].properties.NAME)),
 					// The same trilingual trick the Terrain labels use: the source
 					// already carries the names, so nothing has to be translated.
 					nameDe: asName(towns[0].properties.NAME_DE),
