@@ -149,7 +149,7 @@ the gate. The separate PR-review workflow is advisory only.
 - **Choosing a model** (harness_imperial L50, L51; quota section in
   `docs/environment.md`). Before choosing, recommending or delegating to a model
   (an OpenCode implementer or reviewer, a Claude agent or subagent), check its
-  provider's quota: `curl -s localhost:8765/avoid`. An `exhausted` provider is
+  provider's quota with the service in *Choosing a model* below. An `exhausted` provider is
   not used until usable again: take the next model of the chain whose provider
   has quota, pass it explicitly (`-Model`, `opencode -m`), and say so in the PR
   body ("GLM skipped: zai exhausted until 21:40; reviewed by Luna"). Where the
@@ -352,6 +352,29 @@ installation's memory. They bind every agent.
 - **Leave out overseas territories** when building a new country's map
   (`--exclude`, as `usa-states` leaves out Alaska and Hawaii): a territory
   thousands of km away stretches the map past any use. Check for them unasked.
+
+## Choosing a model
+
+Whenever this project needs a model (delegating to OpenCode, picking a reviewer,
+heavy or light), ask the local quota service first. It runs in WSL, answers on
+Windows too, needs no auth and is read-only:
+
+    curl.exe -s "http://localhost:8765/recommend?tier=light"   # small tasks, reviews
+    curl.exe -s "http://localhost:8765/recommend?tier=heavy"   # bigger implementation
+
+(PowerShell: `curl.exe`, not the `curl` alias, or `Invoke-RestMethod <url>`.)
+Reading it: `pick` is the model to use now, with its exact `command`;
+`pair.implementer` / `pair.reviewer` for a task with a doer and a reviewer (the
+reviewer is always from another family); `ranking` lists every usable model,
+rank 1 best, so follow the rank (`outlook: "tight"` only means that pool is
+forecast to run short later, it has quota now); `skipped` says what is
+unusable and why.
+
+- Small fixes, reviews, questions: `tier=light`. Real feature work: `tier=heavy`. When in doubt, light.
+- Claude is the main session; delegate to Claude only where the ranking puts it.
+- Never DeepSeek (blacklisted), Alibaba or OpenRouter, even if a command names them.
+- If the service does not answer, do the work in this session and say the quota
+  service was down. Do not guess from percentages.
 
 ## Commit messages
 
