@@ -1,0 +1,261 @@
+{
+	"schaffhausen": {
+		"kind": "city",
+		"population": 33863,
+		"populationRank": 11,
+		"coastal": false,
+		"position": "north-east"
+	},
+	"basel": {
+		"kind": "city",
+		"population": 830000,
+		"populationRank": 3,
+		"region": "Basel-Stadt",
+		"coastal": false,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"The Rhine turns north here, where Switzerland, France and Germany meet.",
+				"Its university, founded in 1460, is the oldest in Switzerland.",
+				"Art Basel, one of the world’s great art fairs, has been held here since 1970."
+			],
+			"it": [
+				"Qui il Reno piega verso nord, dove si incontrano Svizzera, Francia e Germania.",
+				"La sua università, fondata nel 1460, è la più antica della Svizzera.",
+				"Art Basel, una delle grandi fiere d’arte del mondo, si tiene qui dal 1970."
+			],
+			"de": [
+				"Hier biegt der Rhein nach Norden ab, wo die Schweiz, Frankreich und Deutschland zusammenstossen.",
+				"Ihre 1460 gegründete Universität ist die älteste der Schweiz.",
+				"Die Art Basel, eine der grossen Kunstmessen der Welt, findet hier seit 1970 statt."
+			]
+		}
+	},
+	"frauenfeld": {
+		"kind": "city",
+		"population": 21979,
+		"populationRank": 16,
+		"region": "Thurgau",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"saint-gallen": {
+		"kind": "city",
+		"population": 70572,
+		"populationRank": 9,
+		"region": "Sankt Gallen",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"aarau": {
+		"kind": "city",
+		"population": 15501,
+		"populationRank": 18,
+		"region": "Aargau",
+		"coastal": false,
+		"position": "north"
+	},
+	"herisau": {
+		"kind": "city",
+		"population": 15438,
+		"populationRank": 19,
+		"region": "Appenzell Ausserrhoden",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"zurich": {
+		"kind": "city",
+		"population": 1108000,
+		"populationRank": 2,
+		"population1950": 494000,
+		"coastal": false,
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Roman Turicum.",
+				"Huldrych Zwingli began the Swiss Reformation here in 1519.",
+				"The Dada movement was born at its Cabaret Voltaire in 1916."
+			],
+			"it": [
+				"La romana Turicum.",
+				"Qui Huldrych Zwingli avviò la Riforma svizzera nel 1519.",
+				"Il movimento dada nacque al suo Cabaret Voltaire nel 1916."
+			],
+			"de": [
+				"Das römische Turicum.",
+				"Huldrych Zwingli begann hier 1519 die Schweizer Reformation.",
+				"Die Dada-Bewegung entstand 1916 in ihrem Cabaret Voltaire."
+			]
+		}
+	},
+	"solothurn": {
+		"kind": "city",
+		"population": 14853,
+		"populationRank": 20,
+		"coastal": false,
+		"position": "north"
+	},
+	"zug": {
+		"kind": "city",
+		"population": 23435,
+		"populationRank": 15,
+		"coastal": false,
+		"position": "north-east"
+	},
+	"biel": {
+		"kind": "city",
+		"population": 78708,
+		"populationRank": 8,
+		"region": "Bern",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"luzern": {
+		"kind": "city",
+		"population": 250000,
+		"populationRank": 6,
+		"region": "Lucerne",
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its Chapel Bridge, of the 14th century, is often called the oldest covered wooden bridge in Europe.",
+				"The Lion Monument, carved in the rock, remembers the Swiss Guards killed in Paris in 1792."
+			],
+			"it": [
+				"Il suo Ponte della Cappella, del Trecento, è spesso considerato il più antico ponte coperto in legno d’Europa.",
+				"Il Monumento al leone, scolpito nella roccia, ricorda le Guardie svizzere uccise a Parigi nel 1792."
+			],
+			"de": [
+				"Ihre Kapellbrücke aus dem 14. Jahrhundert gilt oft als die älteste gedeckte Holzbrücke Europas.",
+				"Das in den Fels gehauene Löwendenkmal erinnert an die 1792 in Paris getöteten Schweizergardisten."
+			]
+		}
+	},
+	"neuchatel": {
+		"kind": "city",
+		"population": 31270,
+		"populationRank": 13,
+		"coastal": false,
+		"position": "west"
+	},
+	"bern": {
+		"kind": "city",
+		"population": 275329,
+		"populationRank": 4,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"By legend its founder named it for the first animal he killed in the woods, a bear, and bears are still kept in the town.",
+				"Albert Einstein wrote his papers of 1905 while living here.",
+				"Officially it is not the capital but the \"federal city\"."
+			],
+			"it": [
+				"Secondo la leggenda il fondatore le diede il nome del primo animale che uccise nei boschi, un orso, e in città si tengono ancora degli orsi.",
+				"Albert Einstein scrisse qui i suoi articoli del 1905.",
+				"Ufficialmente non è la capitale ma la \"città federale\"."
+			],
+			"de": [
+				"Der Legende nach nannte ihr Gründer sie nach dem ersten Tier, das er im Wald erlegte, einem Bären, und noch heute werden in der Stadt Bären gehalten.",
+				"Albert Einstein schrieb seine Arbeiten von 1905, während er hier lebte.",
+				"Offiziell ist sie nicht die Hauptstadt, sondern die „Bundesstadt“."
+			]
+		}
+	},
+	"chur": {
+		"kind": "city",
+		"population": 38293,
+		"populationRank": 10,
+		"region": "Graubünden",
+		"coastal": false,
+		"position": "east"
+	},
+	"fribourg": {
+		"kind": "city",
+		"population": 32827,
+		"populationRank": 12,
+		"coastal": false,
+		"position": "west"
+	},
+	"lausanne": {
+		"kind": "city",
+		"population": 265702,
+		"populationRank": 5,
+		"region": "Vaud",
+		"coastal": false,
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"The International Olympic Committee has had its headquarters here since 1915."
+			],
+			"it": [
+				"Il Comitato olimpico internazionale ha sede qui dal 1915."
+			],
+			"de": [
+				"Das Internationale Olympische Komitee hat hier seit 1915 seinen Sitz."
+			]
+		}
+	},
+	"sion": {
+		"kind": "city",
+		"population": 28045,
+		"populationRank": 14,
+		"region": "Valais",
+		"coastal": false,
+		"position": "south"
+	},
+	"geneva": {
+		"kind": "city",
+		"population": 1240000,
+		"populationRank": 1,
+		"region": "Genève",
+		"coastal": false,
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"The Red Cross was founded here in 1863.",
+				"At CERN, on its edge, the World Wide Web was invented in 1989.",
+				"John Calvin made it the heart of the Protestant Reformation in the 16th century."
+			],
+			"it": [
+				"Qui fu fondata la Croce Rossa, nel 1863.",
+				"Al CERN, alle sue porte, fu inventato il World Wide Web nel 1989.",
+				"Giovanni Calvino ne fece il cuore della Riforma protestante nel Cinquecento."
+			],
+			"de": [
+				"Das Rote Kreuz wurde hier 1863 gegründet.",
+				"Am CERN am Stadtrand wurde 1989 das World Wide Web erfunden.",
+				"Johannes Calvin machte sie im 16. Jahrhundert zum Herzen der protestantischen Reformation."
+			]
+		}
+	},
+	"bellinzona": {
+		"kind": "city",
+		"population": 16572,
+		"populationRank": 17,
+		"region": "Ticino",
+		"coastal": false,
+		"position": "south-east"
+	},
+	"lugano": {
+		"kind": "city",
+		"population": 105388,
+		"populationRank": 7,
+		"region": "Ticino",
+		"coastal": false,
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"The largest Italian-speaking city outside Italy."
+			],
+			"it": [
+				"La più grande città di lingua italiana fuori dall’Italia."
+			],
+			"de": [
+				"Die grösste italienischsprachige Stadt ausserhalb Italiens."
+			]
+		}
+	}
+}

@@ -1,0 +1,239 @@
+{
+	"id": "czechia-towns-50k",
+	"name": "Czechia — Towns",
+	"country": "Czechia",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "liberec",
+			"name": "Liberec",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.0799991,
+				50.7999599
+			],
+			"bbox": [
+				15.0799991,
+				50.7999599,
+				15.0799991,
+				50.7999599
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "usti-nad-labem",
+			"name": "Usti Nad Labem",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.0810046,
+				50.6629982
+			],
+			"bbox": [
+				14.0810046,
+				50.6629982,
+				14.0810046,
+				50.6629982
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "hradec-kralove",
+			"name": "Hradec Králové",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.8120015,
+				50.2059962
+			],
+			"bbox": [
+				15.8120015,
+				50.2059962,
+				15.8120015,
+				50.2059962
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "prague",
+			"name": "Prague",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.422939486203868,
+				50.0869665373215
+			],
+			"bbox": [
+				14.422939486203868,
+				50.0869665373215,
+				14.422939486203868,
+				50.0869665373215
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "pardubice",
+			"name": "Pardubice",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.7600093,
+				50.0404197
+			],
+			"bbox": [
+				15.7600093,
+				50.0404197,
+				15.7600093,
+				50.0404197
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "ostrava",
+			"name": "Ostrava",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.2499865,
+				49.830355
+			],
+			"bbox": [
+				18.2499865,
+				49.830355,
+				18.2499865,
+				49.830355
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "plzen",
+			"name": "Plzeň",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.3600008,
+				49.740438
+			],
+			"bbox": [
+				13.3600008,
+				49.740438,
+				13.3600008,
+				49.740438
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "olomouc",
+			"name": "Olomouc",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.256795794370266,
+				49.58666133426005
+			],
+			"bbox": [
+				17.256795794370266,
+				49.58666133426005,
+				17.256795794370266,
+				49.58666133426005
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "jihlava",
+			"name": "Jihlava",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.5833276,
+				49.4003813
+			],
+			"bbox": [
+				15.5833276,
+				49.4003813,
+				15.5833276,
+				49.4003813
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "zlin",
+			"name": "Zlín",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.6500232,
+				49.2304175
+			],
+			"bbox": [
+				17.6500232,
+				49.2304175,
+				17.6500232,
+				49.2304175
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "brno",
+			"name": "Brno",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.6099833,
+				49.2003935
+			],
+			"bbox": [
+				16.6099833,
+				49.2003935,
+				16.6099833,
+				49.2003935
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "ceske-budejovice",
+			"name": "České Budějovice",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.460037,
+				48.9800193
+			],
+			"bbox": [
+				14.460037,
+				48.9800193,
+				14.460037,
+				48.9800193
+			],
+			"colorIndex": 4
+		}
+	],
+	"tourOrder": [
+		"liberec",
+		"usti-nad-labem",
+		"hradec-kralove",
+		"prague",
+		"pardubice",
+		"ostrava",
+		"plzen",
+		"olomouc",
+		"jihlava",
+		"zlin",
+		"brno",
+		"ceske-budejovice"
+	]
+}

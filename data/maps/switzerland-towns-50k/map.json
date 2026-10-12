@@ -1,0 +1,391 @@
+{
+	"id": "switzerland-towns-50k",
+	"name": "Switzerland — Towns",
+	"country": "Switzerland",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "schaffhausen",
+			"name": "Schaffhausen",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.6329985,
+				47.7060031
+			],
+			"bbox": [
+				8.6329985,
+				47.7060031,
+				8.6329985,
+				47.7060031
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "basel",
+			"name": "Basel",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.590017,
+				47.580389
+			],
+			"bbox": [
+				7.590017,
+				47.580389,
+				7.590017,
+				47.580389
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "frauenfeld",
+			"name": "Frauenfeld",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.904888469310368,
+				47.55261942265613
+			],
+			"bbox": [
+				8.904888469310368,
+				47.55261942265613,
+				8.904888469310368,
+				47.55261942265613
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "saint-gallen",
+			"name": "Saint Gallen",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.3619986,
+				47.4229981
+			],
+			"bbox": [
+				9.3619986,
+				47.4229981,
+				9.3619986,
+				47.4229981
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "aarau",
+			"name": "Aarau",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.0340036,
+				47.3900041
+			],
+			"bbox": [
+				8.0340036,
+				47.3900041,
+				8.0340036,
+				47.3900041
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "herisau",
+			"name": "Herisau",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.2833025,
+				47.383299
+			],
+			"bbox": [
+				9.2833025,
+				47.383299,
+				9.2833025,
+				47.383299
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "zurich",
+			"name": "Zürich",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.5480643,
+				47.3819337
+			],
+			"bbox": [
+				8.5480643,
+				47.3819337,
+				8.5480643,
+				47.3819337
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "solothurn",
+			"name": "Solothurn",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.5369966,
+				47.2120021
+			],
+			"bbox": [
+				7.5369966,
+				47.2120021,
+				7.5369966,
+				47.2120021
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "zug",
+			"name": "Zug",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.4870006,
+				47.178999
+			],
+			"bbox": [
+				8.4870006,
+				47.178999,
+				8.4870006,
+				47.178999
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "biel",
+			"name": "Biel",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.2500378,
+				47.16659
+			],
+			"bbox": [
+				7.2500378,
+				47.16659,
+				7.2500378,
+				47.16659
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "luzern",
+			"name": "Luzern",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.2800008,
+				47.0504214
+			],
+			"bbox": [
+				8.2800008,
+				47.0504214,
+				8.2800008,
+				47.0504214
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "neuchatel",
+			"name": "Neuchâtel",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.9229986,
+				46.9989991
+			],
+			"bbox": [
+				6.9229986,
+				46.9989991,
+				6.9229986,
+				46.9989991
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "bern",
+			"name": "Bern",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.4669755,
+				46.9166828
+			],
+			"bbox": [
+				7.4669755,
+				46.9166828,
+				7.4669755,
+				46.9166828
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "chur",
+			"name": "Chur",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.5000297,
+				46.8500202
+			],
+			"bbox": [
+				9.5000297,
+				46.8500202,
+				9.5000297,
+				46.8500202
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "fribourg",
+			"name": "Fribourg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.1499965,
+				46.8000001
+			],
+			"bbox": [
+				7.1499965,
+				46.8000001,
+				7.1499965,
+				46.8000001
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "lausanne",
+			"name": "Lausanne",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.6500227,
+				46.5304273
+			],
+			"bbox": [
+				6.6500227,
+				46.5304273,
+				6.6500227,
+				46.5304273
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "sion",
+			"name": "Sion",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				7.3539995,
+				46.239003
+			],
+			"bbox": [
+				7.3539995,
+				46.239003,
+				7.3539995,
+				46.239003
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "geneva",
+			"name": "Geneva",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				6.140028,
+				46.2100075
+			],
+			"bbox": [
+				6.140028,
+				46.2100075,
+				6.140028,
+				46.2100075
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "bellinzona",
+			"name": "Bellinzona",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.0199986,
+				46.1970001
+			],
+			"bbox": [
+				9.0199986,
+				46.1970001,
+				9.0199986,
+				46.1970001
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "lugano",
+			"name": "Lugano",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				8.9666772,
+				46.0003821
+			],
+			"bbox": [
+				8.9666772,
+				46.0003821,
+				8.9666772,
+				46.0003821
+			],
+			"colorIndex": 4
+		}
+	],
+	"tourOrder": [
+		"schaffhausen",
+		"basel",
+		"frauenfeld",
+		"saint-gallen",
+		"aarau",
+		"herisau",
+		"zurich",
+		"solothurn",
+		"zug",
+		"biel",
+		"luzern",
+		"neuchatel",
+		"bern",
+		"chur",
+		"fribourg",
+		"lausanne",
+		"sion",
+		"geneva",
+		"bellinzona",
+		"lugano"
+	]
+}

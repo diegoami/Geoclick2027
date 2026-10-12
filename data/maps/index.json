@@ -455,6 +455,23 @@
 		]
 	},
 	{
+		"id": "austria-towns-50k",
+		"country": "Austria",
+		"targetCount": 9,
+		"targetType": "city",
+		"targetIds": [
+			"linz",
+			"vienna",
+			"eisenstadt",
+			"wiener-neustadt",
+			"salzburg",
+			"bregenz",
+			"innsbruck",
+			"graz",
+			"klagenfurt"
+		]
+	},
+	{
 		"id": "bangladesh-divisions",
 		"country": "Bangladesh",
 		"targetCount": 8,
@@ -511,6 +528,24 @@
 			"hainaut",
 			"namur",
 			"luxembourg"
+		]
+	},
+	{
+		"id": "belgium-towns-50k",
+		"country": "Belgium",
+		"targetCount": 10,
+		"targetType": "city",
+		"targetIds": [
+			"antwerpen",
+			"brugge",
+			"gent",
+			"hasselt",
+			"brussels",
+			"liege",
+			"namur",
+			"mons",
+			"charleroi",
+			"arlon"
 		]
 	},
 	{
@@ -638,6 +673,32 @@
 			"blagoevgrad",
 			"smolyan",
 			"kardzhali"
+		]
+	},
+	{
+		"id": "bulgaria-towns-50k",
+		"country": "Bulgaria",
+		"targetCount": 18,
+		"targetType": "city",
+		"targetIds": [
+			"ruse",
+			"dobrich",
+			"razgrad",
+			"pleven",
+			"montana",
+			"shumen",
+			"varna",
+			"vratsa",
+			"lovec",
+			"turnovo",
+			"sofia",
+			"sliven",
+			"pernik",
+			"burgas",
+			"stara-zagora",
+			"kyustendil",
+			"plovdiv",
+			"khaskovo"
 		]
 	},
 	{
@@ -961,6 +1022,24 @@
 		]
 	},
 	{
+		"id": "croatia-towns-50k",
+		"country": "Croatia",
+		"targetCount": 10,
+		"targetType": "city",
+		"targetIds": [
+			"zagreb",
+			"osijek",
+			"karlovac",
+			"rijeka",
+			"slavonski-brod",
+			"pula",
+			"zadar",
+			"sibenik",
+			"split",
+			"dubrovnik"
+		]
+	},
+	{
 		"id": "czechia-regions",
 		"country": "Czech Republic",
 		"targetCount": 14,
@@ -980,6 +1059,26 @@
 			"zlinsky",
 			"jihomoravsky",
 			"jihocesky"
+		]
+	},
+	{
+		"id": "czechia-towns-50k",
+		"country": "Czechia",
+		"targetCount": 12,
+		"targetType": "city",
+		"targetIds": [
+			"liberec",
+			"usti-nad-labem",
+			"hradec-kralove",
+			"prague",
+			"pardubice",
+			"ostrava",
+			"plzen",
+			"olomouc",
+			"jihlava",
+			"zlin",
+			"brno",
+			"ceske-budejovice"
 		]
 	},
 	{
@@ -3344,6 +3443,34 @@
 		]
 	},
 	{
+		"id": "greece-towns-50k",
+		"country": "Greece",
+		"targetCount": 20,
+		"targetType": "city",
+		"targetIds": [
+			"xanthi",
+			"komatini",
+			"seres",
+			"kavala",
+			"alexandroupoli",
+			"thessaloniki",
+			"katerini",
+			"ioanina",
+			"larissa",
+			"volos",
+			"lamia",
+			"agrinio",
+			"chalkida",
+			"patra",
+			"athens",
+			"piraeus",
+			"kalamata",
+			"rodos",
+			"hania",
+			"iraklio"
+		]
+	},
+	{
 		"id": "india-regions",
 		"country": "India",
 		"targetCount": 36,
@@ -3677,6 +3804,29 @@
 			"wexford",
 			"waterford",
 			"kerry",
+			"cork"
+		]
+	},
+	{
+		"id": "ireland-towns-50k",
+		"country": "Ireland",
+		"targetCount": 15,
+		"targetType": "city",
+		"targetIds": [
+			"donegal",
+			"sligo",
+			"muineachan",
+			"dundalk",
+			"drogheda",
+			"ros-comain",
+			"dublin",
+			"galway",
+			"shannon",
+			"limerick",
+			"kilkenny",
+			"tralee",
+			"waterford",
+			"killarney",
 			"cork"
 		]
 	},
@@ -6308,6 +6458,53 @@
 		]
 	},
 	{
+		"id": "romania-towns-50k",
+		"country": "Romania",
+		"targetCount": 39,
+		"targetType": "city",
+		"targetIds": [
+			"satu-mare",
+			"botosani",
+			"baia-mare",
+			"suceava",
+			"zalau",
+			"iasi",
+			"bistrita",
+			"oradea",
+			"piatra-neamt",
+			"cluj-napoca",
+			"vaslui",
+			"bacau",
+			"tirgu-mures",
+			"arad",
+			"alba-lulia",
+			"deva",
+			"sfintu-gheorghe",
+			"sibiu",
+			"timisoara",
+			"focsani",
+			"brasov",
+			"galati",
+			"resita",
+			"braila",
+			"tulcea",
+			"buzau",
+			"rimnicu-vilcea",
+			"targu-jiu",
+			"ploiesti",
+			"targoviste",
+			"pitesti",
+			"drobeta-turnu-severin",
+			"slobozia",
+			"bucharest",
+			"slatina",
+			"craiova",
+			"calarasi",
+			"constanta",
+			"giurgiu"
+		]
+	},
+	{
 		"id": "russia-regions",
 		"country": "Russia",
 		"targetCount": 83,
@@ -6912,6 +7109,34 @@
 			"valais",
 			"geneve",
 			"ticino"
+		]
+	},
+	{
+		"id": "switzerland-towns-50k",
+		"country": "Switzerland",
+		"targetCount": 20,
+		"targetType": "city",
+		"targetIds": [
+			"schaffhausen",
+			"basel",
+			"frauenfeld",
+			"saint-gallen",
+			"aarau",
+			"herisau",
+			"zurich",
+			"solothurn",
+			"zug",
+			"biel",
+			"luzern",
+			"neuchatel",
+			"bern",
+			"chur",
+			"fribourg",
+			"lausanne",
+			"sion",
+			"geneva",
+			"bellinzona",
+			"lugano"
 		]
 	},
 	{
