@@ -1251,24 +1251,25 @@ Belgium, Bulgaria, Croatia, Czechia, Greece, Ireland, Romania, Switzerland.
 Built at 50 000 population with `--min-count=20 --max-count=60`:
 
 ```
-npx tsx data/scripts/build-points-map.ts --country="Switzerland" --out=data/maps/switzerland-towns-50k --name="Switzerland — Towns"
-npx tsx data/scripts/build-points-map.ts --country="Greece" --out=data/maps/greece-towns-50k --name="Greece — Towns"
-npx tsx data/scripts/build-points-map.ts --country="Romania" --out=data/maps/romania-towns-50k --name="Romania — Towns"
-npx tsx data/scripts/build-points-map.ts --country="Austria" --out=data/maps/austria-towns-50k --name="Austria — Towns"
-npx tsx data/scripts/build-points-map.ts --country="Belgium" --exclude="Saint-Denis,Le Morne-Rouge,Pointe-à-Pitre,Fort-de-France" --out=data/maps/belgium-towns-50k --name="Belgium — Towns"
-npx tsx data/scripts/build-points-map.ts --country="Bulgaria" --out=data/maps/bulgaria-towns-50k --name="Bulgaria — Towns"
-npx tsx data/scripts/build-points-map.ts --country="Croatia" --out=data/maps/croatia-towns-50k --name="Croatia — Towns"
-npx tsx data/scripts/build-points-map.ts --country="Czechia" --out=data/maps/czechia-towns-50k --name="Czechia — Towns"
-npx tsx data/scripts/build-points-map.ts --country="Ireland" --out=data/maps/ireland-towns-50k --name="Ireland — Towns"
+npx tsx data/scripts/build-points-map.ts --country="Switzerland" --out=data/maps/switzerland-towns-50k --name="Switzerland — Towns" --min-population=50000 --min-count=20 --max-count=60
+npx tsx data/scripts/build-points-map.ts --country="Greece" --out=data/maps/greece-towns-50k --name="Greece — Towns" --min-population=50000 --min-count=20 --max-count=60
+npx tsx data/scripts/build-points-map.ts --country="Romania" --out=data/maps/romania-towns-50k --name="Romania — Towns" --min-population=50000 --min-count=20 --max-count=60
+npx tsx data/scripts/build-points-map.ts --country="Austria" --out=data/maps/austria-towns-50k --name="Austria — Towns" --min-population=50000 --min-count=20 --max-count=60
+npx tsx data/scripts/build-points-map.ts --country="Belgium" --exclude="Saint-Denis,Le Morne-Rouge,Pointe-à-Pitre,Fort-de-France" --out=data/maps/belgium-towns-50k --name="Belgium — Towns" --min-population=50000 --min-count=20 --max-count=60
+npx tsx data/scripts/build-points-map.ts --country="Bulgaria" --out=data/maps/bulgaria-towns-50k --name="Bulgaria — Towns" --min-population=50000 --min-count=20 --max-count=60
+npx tsx data/scripts/build-points-map.ts --country="Croatia" --out=data/maps/croatia-towns-50k --name="Croatia — Towns" --min-population=50000 --min-count=20 --max-count=60
+npx tsx data/scripts/build-points-map.ts --country="Czechia" --out=data/maps/czechia-towns-50k --name="Czechia — Towns" --min-population=50000 --min-count=20 --max-count=60
+npx tsx data/scripts/build-points-map.ts --country="Ireland" --out=data/maps/ireland-towns-50k --name="Ireland — Towns" --min-population=50000 --min-count=20 --max-count=60
 ```
 
 Belgium excludes the Caribbean municipalities (Brussels, Flanders, Wallonia
 only) per the overseas-territories rule.
 
-**Counts.** Three countries hit the 20 floor: Switzerland 20, Greece 20,
-Romania 39. The other six came in below it because Natural Earth has no more
-places in those countries at that threshold: Austria 9, Belgium 10, Bulgaria
-18, Croatia 10, Czechia 12, Ireland 15. They are deferred to **v0.21** with
+**Counts.** Three countries reached the 20 floor: Switzerland 20, Greece 20,
+Romania 39 (Romania’s 39 is the natural selection at 50 000; the floor was
+not applied). The other six came in below it because Natural Earth has no
+more places in those countries at that threshold: Austria 9, Belgium 10,
+Bulgaria 18, Croatia 10, Czechia 12, Ireland 15. They are deferred to **v0.21** with
 a Wikidata CountrySpec, the same way Germany and Italy already use
 (`#39` batch C, `data/scripts/fetch-wikidata-places.ts`).
 
