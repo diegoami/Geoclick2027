@@ -532,7 +532,7 @@ Other candidates considered, not pursued further once Netlify worked:
   off, not instead of it.
 
 **Status**: deployed and verified — all three demo maps (as of Iteration 3.5;
-173 maps across 58 countries ship today (v0.20 added nine towns maps; the previous count was 164 across 51), click-to-highlight,
+173 maps across 57 countries ship today (v0.20 added nine towns maps; the previous count was 164 across 57), click-to-highlight,
 and tour mode all confirmed working against the live Netlify URL (not
 just a successful build). See ROADMAP.md's Iteration 3.5 for the full
 story, Cloudflare included.
