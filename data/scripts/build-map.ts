@@ -887,11 +887,7 @@ async function main() {
 	const mapDefinition = {
 		id: path.basename(outDir),
 		name: mapName,
-		// The catalog and the start screen use the short form (Czechia, not
-		// Czech Republic), so the index's `country` field does too. The
-		// filter above still queries Natural Earth by its own spelling
-		// because `COUNTRY_NAME_FIXUPS` only rewrites the output.
-		country: COUNTRY_NAME_FIXUPS[country] ?? country,
+		country,
 		attribution,
 		// Boundaries from outside Natural Earth: build-facts.ts then does not
 		// match targets to Natural Earth's admin-1 rows, which would describe

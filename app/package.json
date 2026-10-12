@@ -16,7 +16,7 @@
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write .",
 		"test:unit": "vitest",
-		"test": "npm run test:unit -- --run --reporter=verbose"
+		"test": "node -e \"process.env.HOST='127.0.0.1'; require('child_process').spawnSync('npx', ['vitest','--run','--reporter=verbose'], {stdio:'inherit', env:process.env})\""
 	},
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",
