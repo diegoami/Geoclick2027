@@ -5,6 +5,25 @@ day-to-day build log and [`DECISIONS.md`](DECISIONS.md) for the reasoning
 behind product/design choices — this file is the release-facing summary,
 one entry per tagged version on `main`.
 
+## v0.20.0 — 2026-10-15 — Nine more towns maps, a fact-box spelling fix
+
+**Towns maps arrive for nine countries that previously had only their main map, and the fact box for every country spells the largest city the way the towns map does.**
+
+Proposal #232. PRs #234, #235.
+
+For players:
+
+- **Nine new towns maps**, at 50 000 population with a target of 20–60 places per map: Austria, Belgium, Bulgaria, Croatia, Czechia, Greece, Ireland, Romania and Switzerland. That makes **173 maps across 58 countries**. Belgium excludes the Caribbean municipalities (Brussels, Flanders and Wallonia only), per the overseas-territories rule.
+- **The fact box for every country spells the largest city the way the towns map does**: Tiaret (Algeria), Odesa (Ukraine), and 13 others. The fix reads from the shared `NAME_FIXUPS` table the towns map already uses (#227, #234).
+
+For the project:
+
+- The build's test wrapper now treats a non-zero Vitest exit or any failed test suite as a failure, not just failed test cases (Luna's review of #235).
+- The wrapper resolves the vitest binary from the repo root's hoisted `node_modules`, not the workspace's local one, so the gate is green on Windows again (Luna's review of #235).
+- The wrapper's JSON output is excluded from prettier via `/rendered/` in `app/.prettierignore`, mirroring the rule eslint gets from `includeIgnoreFile` (#235).
+
+Not done, and said plainly: six of the new towns maps came in below the 20-target floor because Natural Earth has no more places in those countries at 50 000 (Austria 9, Belgium 10, Bulgaria 18, Croatia 10, Czechia 12, Ireland 15); they move to v0.21 with a Wikidata CountrySpec ([#236](https://github.com/diegoami/Geoclick2027/issues/236)). The Denmark/Norway/Serbia "thin" towns maps and the German/Italian manual are also in v0.21 (proposal #204, #236). No facts for the new maps yet; maps without authored facts still show the no-facts notice. The `AGENTS.md` "28 files" line was not corrected in this release; the actual count is 189.
+
 ## v0.19.0 — 2026-10-05 — A user manual, facts for the new maps, four more countries
 
 **The app now has a user manual, the maps added in v0.17 have authored facts in three languages, and Algeria, Ecuador, Morocco and Pakistan arrive with facts of their own.**

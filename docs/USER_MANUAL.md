@@ -5,7 +5,7 @@ installing or running it. Every screen is shown with a screenshot, and every
 button, label and message is explained: what it looks like, what it does, and
 what the player sees in return. Geoclick is made by Diego Amicabile.
 
-It describes **Geoclick v0.19.0** (5 October 2026).
+It describes **Geoclick v0.20.0** (15 October 2026).
 
 The screenshots come from the web version, on a laptop-sized window and on a
 phone-sized screen, and are made by a script (`npm run manual-shots`) that is
