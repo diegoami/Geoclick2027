@@ -1,0 +1,296 @@
+{
+	"id": "ireland-towns-50k",
+	"name": "Ireland — Towns",
+	"country": "Ireland",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "donegal",
+			"name": "Donegal",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-8.1166728,
+				54.6500092
+			],
+			"bbox": [
+				-8.1166728,
+				54.6500092,
+				-8.1166728,
+				54.6500092
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "sligo",
+			"name": "Sligo",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-8.4833171,
+				54.267061
+			],
+			"bbox": [
+				-8.4833171,
+				54.267061,
+				-8.4833171,
+				54.267061
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "muineachan",
+			"name": "Muineachan",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-6.9666667,
+				54.25
+			],
+			"bbox": [
+				-6.9666667,
+				54.25,
+				-6.9666667,
+				54.25
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "dundalk",
+			"name": "Dundalk",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-6.395592071318646,
+				53.99979607515591
+			],
+			"bbox": [
+				-6.395592071318646,
+				53.99979607515591,
+				-6.395592071318646,
+				53.99979607515591
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "drogheda",
+			"name": "Drogheda",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-6.350462402562247,
+				53.70888678916407
+			],
+			"bbox": [
+				-6.350462402562247,
+				53.70888678916407,
+				-6.350462402562247,
+				53.70888678916407
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "ros-comain",
+			"name": "Ros Comain",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-8.1833333,
+				53.6333333
+			],
+			"bbox": [
+				-8.1833333,
+				53.6333333,
+				-8.1833333,
+				53.6333333
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "dublin",
+			"name": "Dublin",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-6.256979517281132,
+				53.34673124898314
+			],
+			"bbox": [
+				-6.256979517281132,
+				53.34673124898314,
+				-6.256979517281132,
+				53.34673124898314
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "galway",
+			"name": "Galway",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-9.0488123,
+				53.272393
+			],
+			"bbox": [
+				-9.0488123,
+				53.272393,
+				-9.0488123,
+				53.272393
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "shannon",
+			"name": "Shannon",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-8.8641466,
+				52.7038489
+			],
+			"bbox": [
+				-8.8641466,
+				52.7038489,
+				-8.8641466,
+				52.7038489
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "limerick",
+			"name": "Limerick",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-8.6230502,
+				52.664704
+			],
+			"bbox": [
+				-8.6230502,
+				52.664704,
+				-8.6230502,
+				52.664704
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "kilkenny",
+			"name": "Kilkenny",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-7.2522553,
+				52.6545496
+			],
+			"bbox": [
+				-7.2522553,
+				52.6545496,
+				-7.2522553,
+				52.6545496
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "tralee",
+			"name": "Tralee",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-9.7166527,
+				52.2666921
+			],
+			"bbox": [
+				-9.7166527,
+				52.2666921,
+				-9.7166527,
+				52.2666921
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "waterford",
+			"name": "Waterford",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-7.1119279,
+				52.2582947
+			],
+			"bbox": [
+				-7.1119279,
+				52.2582947,
+				-7.1119279,
+				52.2582947
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "killarney",
+			"name": "Killarney",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-9.5166649,
+				52.0504004
+			],
+			"bbox": [
+				-9.5166649,
+				52.0504004,
+				-9.5166649,
+				52.0504004
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "cork",
+			"name": "Cork",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-8.465109738576434,
+				51.89283760162047
+			],
+			"bbox": [
+				-8.465109738576434,
+				51.89283760162047,
+				-8.465109738576434,
+				51.89283760162047
+			],
+			"colorIndex": 4
+		}
+	],
+	"tourOrder": [
+		"donegal",
+		"sligo",
+		"muineachan",
+		"dundalk",
+		"drogheda",
+		"ros-comain",
+		"dublin",
+		"galway",
+		"shannon",
+		"limerick",
+		"kilkenny",
+		"tralee",
+		"waterford",
+		"killarney",
+		"cork"
+	]
+}

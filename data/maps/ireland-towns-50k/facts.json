@@ -1,0 +1,148 @@
+{
+	"donegal": {
+		"kind": "city",
+		"population": 2513,
+		"populationRank": 15,
+		"coastal": true,
+		"position": "north"
+	},
+	"sligo": {
+		"kind": "city",
+		"population": 20228,
+		"populationRank": 10,
+		"coastal": true,
+		"position": "north"
+	},
+	"muineachan": {
+		"kind": "city",
+		"population": 5937,
+		"populationRank": 13,
+		"region": "Monaghan",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"dundalk": {
+		"kind": "city",
+		"population": 38884,
+		"populationRank": 6,
+		"region": "Louth",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"drogheda": {
+		"kind": "city",
+		"population": 36533,
+		"populationRank": 7,
+		"region": "Louth",
+		"coastal": true,
+		"position": "east"
+	},
+	"ros-comain": {
+		"kind": "city",
+		"population": 4860,
+		"populationRank": 14,
+		"region": "Roscommon",
+		"coastal": false,
+		"position": "centre"
+	},
+	"dublin": {
+		"kind": "city",
+		"population": 1059000,
+		"populationRank": 1,
+		"population1950": 626000,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"From Irish Dubh Linn, \"black pool\"; in Irish today it is mostly Baile Átha Cliath.",
+				"It began as a Viking settlement in 841.",
+				"The Book of Kells, an illuminated gospel of around 800, is kept at Trinity College."
+			],
+			"it": [
+				"Dall’irlandese Dubh Linn, \"stagno nero\"; oggi in irlandese si chiama per lo più Baile Átha Cliath.",
+				"Nacque come insediamento vichingo nell’841.",
+				"Il Libro di Kells, un vangelo miniato dell’800 circa, è custodito al Trinity College."
+			],
+			"de": [
+				"Vom irischen Dubh Linn, „schwarzer Teich“; auf Irisch heißt sie heute meist Baile Átha Cliath.",
+				"Sie begann 841 als Wikingersiedlung.",
+				"Das Book of Kells, ein illuminiertes Evangeliar von etwa 800, wird am Trinity College aufbewahrt."
+			]
+		}
+	},
+	"galway": {
+		"kind": "city",
+		"population": 75594,
+		"populationRank": 4,
+		"coastal": true,
+		"position": "west"
+	},
+	"shannon": {
+		"kind": "city",
+		"population": 8781,
+		"populationRank": 12,
+		"region": "Clare",
+		"coastal": true,
+		"position": "south-west"
+	},
+	"limerick": {
+		"kind": "city",
+		"population": 90054,
+		"populationRank": 3,
+		"coastal": true,
+		"position": "south-west"
+	},
+	"kilkenny": {
+		"kind": "city",
+		"population": 21589,
+		"populationRank": 9,
+		"coastal": false,
+		"position": "south-east"
+	},
+	"tralee": {
+		"kind": "city",
+		"population": 26384,
+		"populationRank": 8,
+		"region": "Kerry",
+		"coastal": true,
+		"position": "south-west"
+	},
+	"waterford": {
+		"kind": "city",
+		"population": 49275,
+		"populationRank": 5,
+		"region": "Kilkenny",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"killarney": {
+		"kind": "city",
+		"population": 11902,
+		"populationRank": 11,
+		"region": "Kerry",
+		"coastal": false,
+		"position": "south-west"
+	},
+	"cork": {
+		"kind": "city",
+		"population": 188907,
+		"populationRank": 2,
+		"coastal": true,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"From Irish Corcach, \"marsh\".",
+				"The Titanic’s last port of call, in 1912, was Queenstown, now Cobh, in Cork harbour."
+			],
+			"it": [
+				"Dall’irlandese Corcach, \"palude\".",
+				"L’ultimo scalo del Titanic, nel 1912, fu Queenstown, oggi Cobh, nel porto di Cork."
+			],
+			"de": [
+				"Vom irischen Corcach, „Sumpf“.",
+				"Der letzte Anlaufhafen der Titanic war 1912 Queenstown, heute Cobh, im Hafen von Cork."
+			]
+		}
+	}
+}

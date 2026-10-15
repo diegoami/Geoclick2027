@@ -1,0 +1,190 @@
+{
+	"antwerpen": {
+		"kind": "city",
+		"population": 920000,
+		"populationRank": 2,
+		"population1950": 759000,
+		"region": "Antwerp",
+		"coastal": true,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Legend says the name means \"hand-throwing\", for a giant’s cut-off hand; it more probably means \"at the wharf\".",
+				"Most of the world’s rough diamonds pass through its trade.",
+				"Rubens lived and painted here."
+			],
+			"it": [
+				"La leggenda dice che il nome significhi \"lancio della mano\", per la mano mozzata di un gigante; più probabilmente vuol dire \"presso l’approdo\".",
+				"La maggior parte dei diamanti grezzi del mondo passa per il suo mercato.",
+				"Qui visse e dipinse Rubens."
+			],
+			"de": [
+				"Der Legende nach bedeutet der Name „Handwerfen“, nach der abgeschlagenen Hand eines Riesen; wahrscheinlicher heißt er „am Kai“.",
+				"Der größte Teil der Rohdiamanten der Welt läuft durch ihren Handel.",
+				"Rubens lebte und malte hier."
+			]
+		}
+	},
+	"brugge": {
+		"kind": "city",
+		"population": 146469,
+		"populationRank": 6,
+		"coastal": true,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Probably from an old Norse word for a landing stage.",
+				"In the 15th century one of the richest trading towns of northern Europe, until its channel to the sea silted up.",
+				"Its medieval centre is a UNESCO site."
+			],
+			"it": [
+				"Probabilmente da un’antica parola norrena per un approdo.",
+				"Nel Quattrocento una delle città mercantili più ricche del nord Europa, finché il suo canale verso il mare non si insabbiò.",
+				"Il suo centro medievale è un sito UNESCO."
+			],
+			"de": [
+				"Wahrscheinlich von einem altnordischen Wort für eine Landungsbrücke.",
+				"Im 15. Jahrhundert eine der reichsten Handelsstädte Nordeuropas, bis ihr Kanal zum Meer versandete.",
+				"Ihr mittelalterliches Zentrum ist UNESCO-Welterbe."
+			]
+		}
+	},
+	"gent": {
+		"kind": "city",
+		"population": 444336,
+		"populationRank": 4,
+		"region": "East Flanders",
+		"coastal": false,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"From a Celtic word for a meeting of rivers, here the Scheldt and the Lys.",
+				"The emperor Charles V was born here in 1500.",
+				"The Ghent Altarpiece of the Van Eyck brothers, finished in 1432, is in its cathedral."
+			],
+			"it": [
+				"Da una parola celtica per la confluenza di due fiumi, qui la Schelda e la Lys.",
+				"Qui nacque l’imperatore Carlo V, nel 1500.",
+				"Il Polittico di Gand dei fratelli Van Eyck, terminato nel 1432, è nella sua cattedrale."
+			],
+			"de": [
+				"Von einem keltischen Wort für einen Zusammenfluss, hier von Schelde und Leie.",
+				"Kaiser Karl V. wurde hier 1500 geboren.",
+				"Der Genter Altar der Brüder van Eyck, 1432 vollendet, steht in ihrer Kathedrale."
+			]
+		}
+	},
+	"hasselt": {
+		"kind": "city",
+		"population": 69222,
+		"populationRank": 9,
+		"region": "Limburg",
+		"coastal": false,
+		"position": "north-east"
+	},
+	"brussels": {
+		"kind": "city",
+		"population": 1743000,
+		"populationRank": 1,
+		"population1950": 1415000,
+		"capitalOf": "country",
+		"coastal": false,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"From Bruocsella, \"settlement in the marsh\".",
+				"The main institutions of the European Union and the headquarters of NATO are here.",
+				"The Manneken Pis, a fountain statue of a small boy, has more than a thousand costumes."
+			],
+			"it": [
+				"Da Bruocsella, \"insediamento nella palude\".",
+				"Qui hanno sede le principali istituzioni dell’Unione europea e il quartier generale della NATO.",
+				"Il Manneken Pis, la statua di una fontana a forma di bambino, ha più di mille costumi."
+			],
+			"de": [
+				"Von Bruocsella, „Siedlung im Sumpf“.",
+				"Die wichtigsten Institutionen der Europäischen Union und das Hauptquartier der NATO sind hier.",
+				"Das Manneken Pis, eine Brunnenfigur eines kleinen Jungen, besitzt mehr als tausend Kostüme."
+			]
+		}
+	},
+	"liege": {
+		"kind": "city",
+		"population": 749110,
+		"populationRank": 3,
+		"region": "Liege",
+		"coastal": false,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"For eight centuries the capital of a prince-bishopric, independent until 1795.",
+				"Georges Simenon, the creator of Maigret, was born here in 1903."
+			],
+			"it": [
+				"Per otto secoli capitale di un principato vescovile, indipendente fino al 1795.",
+				"Qui nacque nel 1903 Georges Simenon, il creatore di Maigret."
+			],
+			"de": [
+				"Acht Jahrhunderte lang die Hauptstadt eines Fürstbistums, unabhängig bis 1795.",
+				"Georges Simenon, der Schöpfer von Maigret, wurde hier 1903 geboren."
+			]
+		}
+	},
+	"namur": {
+		"kind": "city",
+		"population": 106284,
+		"populationRank": 7,
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its citadel stands where the Sambre flows into the Meuse.",
+				"The capital of Wallonia."
+			],
+			"it": [
+				"La sua cittadella sorge dove la Sambre si getta nella Mosa.",
+				"La capitale della Vallonia."
+			],
+			"de": [
+				"Ihre Zitadelle steht dort, wo die Sambre in die Maas mündet.",
+				"Die Hauptstadt Walloniens."
+			]
+		}
+	},
+	"mons": {
+		"kind": "city",
+		"population": 91277,
+		"populationRank": 8,
+		"region": "Hainaut",
+		"coastal": false,
+		"position": "west"
+	},
+	"charleroi": {
+		"kind": "city",
+		"population": 345367,
+		"populationRank": 5,
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named in 1666 for King Charles II of Spain: Charles-Roi.",
+				"The comic magazine Spirou was founded on its edge in 1938."
+			],
+			"it": [
+				"Prende il nome, dal 1666, dal re Carlo II di Spagna: Charles-Roi.",
+				"La rivista di fumetti Spirou nacque alle sue porte nel 1938."
+			],
+			"de": [
+				"1666 nach König Karl II. von Spanien benannt: Charles-Roi.",
+				"Das Comicmagazin Spirou wurde 1938 an ihrem Rand gegründet."
+			]
+		}
+	},
+	"arlon": {
+		"kind": "city",
+		"population": 26179,
+		"populationRank": 10,
+		"coastal": false,
+		"position": "south-east"
+	}
+}

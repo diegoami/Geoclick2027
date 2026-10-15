@@ -1,0 +1,241 @@
+{
+	"xanthi": {
+		"kind": "city",
+		"population": 50570,
+		"populationRank": 18,
+		"region": "Anatoliki Makedonia kai Thraki",
+		"coastal": false,
+		"position": "north"
+	},
+	"komatini": {
+		"kind": "city",
+		"population": 45631,
+		"populationRank": 20,
+		"region": "Anatoliki Makedonia kai Thraki",
+		"coastal": false,
+		"position": "north"
+	},
+	"seres": {
+		"kind": "city",
+		"population": 55886,
+		"populationRank": 15,
+		"region": "Kentriki Makedonia",
+		"coastal": false,
+		"position": "north"
+	},
+	"kavala": {
+		"kind": "city",
+		"population": 59240,
+		"populationRank": 13,
+		"region": "Anatoliki Makedonia kai Thraki",
+		"coastal": true,
+		"position": "north"
+	},
+	"alexandroupoli": {
+		"kind": "city",
+		"population": 52979,
+		"populationRank": 17,
+		"region": "Anatoliki Makedonia kai Thraki",
+		"coastal": true,
+		"position": "north-east"
+	},
+	"thessaloniki": {
+		"kind": "city",
+		"population": 828000,
+		"populationRank": 2,
+		"population1950": 292000,
+		"region": "Kentriki Makedonia",
+		"coastal": true,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Named for Thessalonike, half-sister of Alexander the Great, by her husband Cassander around 315 BC.",
+				"Paul wrote two of his letters in the New Testament to its Christians.",
+				"Mustafa Kemal Atatürk was born here in 1881."
+			],
+			"it": [
+				"Prende il nome da Tessalonica, sorellastra di Alessandro Magno, per volere del marito Cassandro intorno al 315 a.C.",
+				"Paolo scrisse ai suoi cristiani due delle lettere del Nuovo Testamento.",
+				"Qui nacque Mustafa Kemal Atatürk, nel 1881."
+			],
+			"de": [
+				"Um 315 v. Chr. von ihrem Mann Kassander nach Thessalonike benannt, der Halbschwester Alexanders des Großen.",
+				"Paulus schrieb zwei seiner Briefe im Neuen Testament an ihre Christen.",
+				"Mustafa Kemal Atatürk wurde 1881 hier geboren."
+			]
+		}
+	},
+	"katerini": {
+		"kind": "city",
+		"population": 53293,
+		"populationRank": 16,
+		"region": "Kentriki Makedonia",
+		"coastal": true,
+		"position": "north-west"
+	},
+	"ioanina": {
+		"kind": "city",
+		"population": 86304,
+		"populationRank": 8,
+		"region": "Ipeiros",
+		"coastal": false,
+		"position": "north-west"
+	},
+	"larissa": {
+		"kind": "city",
+		"population": 128758,
+		"populationRank": 6,
+		"region": "Thessalia",
+		"coastal": false,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"A name older than Greek, probably meaning \"citadel\".",
+				"By tradition Hippocrates, the father of medicine, died here."
+			],
+			"it": [
+				"Un nome più antico del greco, che probabilmente significa \"cittadella\".",
+				"Per tradizione qui morì Ippocrate, il padre della medicina."
+			],
+			"de": [
+				"Ein Name, der älter ist als das Griechische, wahrscheinlich mit der Bedeutung „Zitadelle“.",
+				"Der Überlieferung nach starb hier Hippokrates, der Vater der Medizin."
+			]
+		}
+	},
+	"volos": {
+		"kind": "city",
+		"population": 110632,
+		"populationRank": 7,
+		"region": "Thessalia",
+		"coastal": true,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Mount Pelion, home of the centaurs in Greek myth, rises above it.",
+				"The painter Giorgio de Chirico was born here in 1888."
+			],
+			"it": [
+				"Sopra la città si alza il monte Pelio, dimora dei centauri nel mito greco.",
+				"Qui nacque il pittore Giorgio de Chirico, nel 1888."
+			],
+			"de": [
+				"Der Pelion, in der griechischen Sage die Heimat der Kentauren, erhebt sich über ihr.",
+				"Der Maler Giorgio de Chirico wurde 1888 hier geboren."
+			]
+		}
+	},
+	"lamia": {
+		"kind": "city",
+		"population": 47246,
+		"populationRank": 19,
+		"region": "Stereá Elláda",
+		"coastal": true,
+		"position": "west"
+	},
+	"agrinio": {
+		"kind": "city",
+		"population": 75233,
+		"populationRank": 10,
+		"region": "Dytiki Ellada",
+		"coastal": true,
+		"position": "west"
+	},
+	"chalkida": {
+		"kind": "city",
+		"population": 71842,
+		"populationRank": 11,
+		"region": "Stereá Elláda",
+		"coastal": true,
+		"position": "centre"
+	},
+	"patra": {
+		"kind": "city",
+		"population": 163360,
+		"populationRank": 4,
+		"region": "Dytiki Ellada",
+		"coastal": true,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"By tradition Saint Andrew was martyred here, and his relics are in its cathedral.",
+				"Its carnival is the largest in Greece."
+			],
+			"it": [
+				"Per tradizione qui fu martirizzato sant’Andrea, e le sue reliquie sono nella cattedrale.",
+				"Il suo carnevale è il più grande della Grecia."
+			],
+			"de": [
+				"Der Überlieferung nach erlitt hier der heilige Andreas das Martyrium, und seine Reliquien liegen in ihrer Kathedrale.",
+				"Ihr Karneval ist der größte Griechenlands."
+			]
+		}
+	},
+	"athens": {
+		"kind": "city",
+		"population": 3242000,
+		"populationRank": 1,
+		"population1950": 1347000,
+		"region": "Attiki",
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Named for the goddess Athena, who in the myth won the city from Poseidon with the gift of an olive tree.",
+				"The Parthenon was built on its Acropolis in the 440s and 430s BC.",
+				"It hosted the first modern Olympic Games, in 1896."
+			],
+			"it": [
+				"Prende il nome dalla dea Atena, che nel mito conquistò la città vincendo Poseidone con il dono di un olivo.",
+				"Il Partenone fu costruito sulla sua Acropoli tra il 440 e il 430 a.C. circa.",
+				"Ospitò i primi Giochi olimpici moderni, nel 1896."
+			],
+			"de": [
+				"Nach der Göttin Athene benannt, die der Sage nach die Stadt mit dem Geschenk eines Olivenbaums von Poseidon gewann.",
+				"Der Parthenon wurde in den 440er- und 430er-Jahren v. Chr. auf der Akropolis gebaut.",
+				"Sie richtete 1896 die ersten Olympischen Spiele der Neuzeit aus."
+			]
+		}
+	},
+	"piraeus": {
+		"kind": "city",
+		"population": 466065,
+		"populationRank": 3,
+		"region": "Attiki",
+		"coastal": true,
+		"position": "centre"
+	},
+	"kalamata": {
+		"kind": "city",
+		"population": 71823,
+		"populationRank": 12,
+		"region": "Peloponnisos",
+		"coastal": true,
+		"position": "south-west"
+	},
+	"rodos": {
+		"kind": "city",
+		"population": 56969,
+		"populationRank": 14,
+		"region": "Notio Aigaio",
+		"coastal": true,
+		"position": "south-east"
+	},
+	"hania": {
+		"kind": "city",
+		"population": 78728,
+		"populationRank": 9,
+		"region": "Kriti",
+		"coastal": true,
+		"position": "south"
+	},
+	"iraklio": {
+		"kind": "city",
+		"population": 137154,
+		"populationRank": 5,
+		"region": "Kriti",
+		"coastal": true,
+		"position": "south"
+	}
+}

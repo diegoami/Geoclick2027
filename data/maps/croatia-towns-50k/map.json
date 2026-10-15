@@ -1,0 +1,201 @@
+{
+	"id": "croatia-towns-50k",
+	"name": "Croatia — Towns",
+	"country": "Croatia",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "zagreb",
+			"name": "Zagreb",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.9999947,
+				45.8000067
+			],
+			"bbox": [
+				15.9999947,
+				45.8000067,
+				15.9999947,
+				45.8000067
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "osijek",
+			"name": "Osijek",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.6800378,
+				45.5503837
+			],
+			"bbox": [
+				18.6800378,
+				45.5503837,
+				18.6800378,
+				45.5503837
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "karlovac",
+			"name": "Karlovac",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.5477742,
+				45.4872093
+			],
+			"bbox": [
+				15.5477742,
+				45.4872093,
+				15.5477742,
+				45.4872093
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "rijeka",
+			"name": "Rijeka",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.4500118,
+				45.3299837
+			],
+			"bbox": [
+				14.4500118,
+				45.3299837,
+				14.4500118,
+				45.3299837
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "slavonski-brod",
+			"name": "Slavonski Brod",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.0155822,
+				45.1602783
+			],
+			"bbox": [
+				18.0155822,
+				45.1602783,
+				18.0155822,
+				45.1602783
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "pula",
+			"name": "Pula",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.8480847,
+				44.8687199
+			],
+			"bbox": [
+				13.8480847,
+				44.8687199,
+				13.8480847,
+				44.8687199
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "zadar",
+			"name": "Zadar",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.2622619,
+				44.1201351
+			],
+			"bbox": [
+				15.2622619,
+				44.1201351,
+				15.2622619,
+				44.1201351
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "sibenik",
+			"name": "Šibenik",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.9058333,
+				43.7272222
+			],
+			"bbox": [
+				15.9058333,
+				43.7272222,
+				15.9058333,
+				43.7272222
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "split",
+			"name": "Split",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.4699918,
+				43.5204043
+			],
+			"bbox": [
+				16.4699918,
+				43.5204043,
+				16.4699918,
+				43.5204043
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "dubrovnik",
+			"name": "Dubrovnik",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.0913916,
+				42.6609477
+			],
+			"bbox": [
+				18.0913916,
+				42.6609477,
+				18.0913916,
+				42.6609477
+			],
+			"colorIndex": 3
+		}
+	],
+	"tourOrder": [
+		"zagreb",
+		"osijek",
+		"karlovac",
+		"rijeka",
+		"slavonski-brod",
+		"pula",
+		"zadar",
+		"sibenik",
+		"split",
+		"dubrovnik"
+	]
+}

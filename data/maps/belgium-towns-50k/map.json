@@ -1,0 +1,201 @@
+{
+	"id": "belgium-towns-50k",
+	"name": "Belgium — Towns",
+	"country": "Belgium",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "antwerpen",
+			"name": "Antwerpen",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.4130712,
+				51.2223194
+			],
+			"bbox": [
+				4.4130712,
+				51.2223194,
+				4.4130712,
+				51.2223194
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "brugge",
+			"name": "Brugge",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				3.2300248,
+				51.2203736
+			],
+			"bbox": [
+				3.2300248,
+				51.2203736,
+				3.2300248,
+				51.2203736
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "gent",
+			"name": "Gent",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				3.7000219,
+				51.0299976
+			],
+			"bbox": [
+				3.7000219,
+				51.0299976,
+				3.7000219,
+				51.0299976
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "hasselt",
+			"name": "Hasselt",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.338536386219118,
+				50.92883816466403
+			],
+			"bbox": [
+				5.338536386219118,
+				50.92883816466403,
+				5.338536386219118,
+				50.92883816466403
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "brussels",
+			"name": "Brussels",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.3313707,
+				50.8352629
+			],
+			"bbox": [
+				4.3313707,
+				50.8352629,
+				4.3313707,
+				50.8352629
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "liege",
+			"name": "Liège",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.5800105,
+				50.6299962
+			],
+			"bbox": [
+				5.5800105,
+				50.6299962,
+				5.5800105,
+				50.6299962
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "namur",
+			"name": "Namur",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.870028,
+				50.4703935
+			],
+			"bbox": [
+				4.870028,
+				50.4703935,
+				4.870028,
+				50.4703935
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "mons",
+			"name": "Mons",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				3.9390036,
+				50.4459991
+			],
+			"bbox": [
+				3.9390036,
+				50.4459991,
+				3.9390036,
+				50.4459991
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "charleroi",
+			"name": "Charleroi",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				4.450002,
+				50.4203965
+			],
+			"bbox": [
+				4.450002,
+				50.4203965,
+				4.450002,
+				50.4203965
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "arlon",
+			"name": "Arlon",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				5.8167005,
+				49.6833031
+			],
+			"bbox": [
+				5.8167005,
+				49.6833031,
+				5.8167005,
+				49.6833031
+			],
+			"colorIndex": 3
+		}
+	],
+	"tourOrder": [
+		"antwerpen",
+		"brugge",
+		"gent",
+		"hasselt",
+		"brussels",
+		"liege",
+		"namur",
+		"mons",
+		"charleroi",
+		"arlon"
+	]
+}

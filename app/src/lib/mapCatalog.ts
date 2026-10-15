@@ -84,7 +84,10 @@ export const mapGroups: CountryGroup[] = [
 	},
 	{
 		country: 'Austria',
-		maps: [{ id: 'austria-states', labelKey: 'mapType.states' }]
+		maps: [
+			{ id: 'austria-states', labelKey: 'mapType.states' },
+			{ id: 'austria-towns-50k', labelKey: 'mapType.towns' }
+		]
 	},
 	{
 		country: 'Bangladesh',
@@ -95,7 +98,10 @@ export const mapGroups: CountryGroup[] = [
 	},
 	{
 		country: 'Belgium',
-		maps: [{ id: 'belgium-provinces', labelKey: 'mapType.provinces' }]
+		maps: [
+			{ id: 'belgium-provinces', labelKey: 'mapType.provinces' },
+			{ id: 'belgium-towns-50k', labelKey: 'mapType.towns' }
+		]
 	},
 	{
 		country: 'Brazil',
@@ -106,7 +112,10 @@ export const mapGroups: CountryGroup[] = [
 	},
 	{
 		country: 'Bulgaria',
-		maps: [{ id: 'bulgaria-provinces', labelKey: 'mapType.provinces' }]
+		maps: [
+			{ id: 'bulgaria-provinces', labelKey: 'mapType.provinces' },
+			{ id: 'bulgaria-towns-50k', labelKey: 'mapType.towns' }
+		]
 	},
 	{
 		country: 'Canada',
@@ -138,11 +147,17 @@ export const mapGroups: CountryGroup[] = [
 	},
 	{
 		country: 'Croatia',
-		maps: [{ id: 'croatia-counties', labelKey: 'mapType.croatianCounties' }]
+		maps: [
+			{ id: 'croatia-counties', labelKey: 'mapType.croatianCounties' },
+			{ id: 'croatia-towns-50k', labelKey: 'mapType.towns' }
+		]
 	},
 	{
 		country: 'Czechia',
-		maps: [{ id: 'czechia-regions', labelKey: 'mapType.regions' }]
+		maps: [
+			{ id: 'czechia-regions', labelKey: 'mapType.regions' },
+			{ id: 'czechia-towns-50k', labelKey: 'mapType.towns' }
+		]
 	},
 	{
 		country: 'Denmark',
@@ -313,7 +328,10 @@ export const mapGroups: CountryGroup[] = [
 	},
 	{
 		country: 'Greece',
-		maps: [{ id: 'greece-regions', labelKey: 'mapType.regions' }]
+		maps: [
+			{ id: 'greece-regions', labelKey: 'mapType.regions' },
+			{ id: 'greece-towns-50k', labelKey: 'mapType.towns' }
+		]
 	},
 	{
 		country: 'India',
@@ -338,7 +356,10 @@ export const mapGroups: CountryGroup[] = [
 	},
 	{
 		country: 'Ireland',
-		maps: [{ id: 'ireland-counties', labelKey: 'mapType.counties' }]
+		maps: [
+			{ id: 'ireland-counties', labelKey: 'mapType.counties' },
+			{ id: 'ireland-towns-50k', labelKey: 'mapType.towns' }
+		]
 	},
 	{
 		country: 'Italy',
@@ -571,7 +592,10 @@ export const mapGroups: CountryGroup[] = [
 	},
 	{
 		country: 'Romania',
-		maps: [{ id: 'romania-counties', labelKey: 'mapType.romanianCounties' }]
+		maps: [
+			{ id: 'romania-counties', labelKey: 'mapType.romanianCounties' },
+			{ id: 'romania-towns-50k', labelKey: 'mapType.towns' }
+		]
 	},
 	{
 		country: 'Russia',
@@ -632,7 +656,10 @@ export const mapGroups: CountryGroup[] = [
 	},
 	{
 		country: 'Switzerland',
-		maps: [{ id: 'switzerland-cantons', labelKey: 'mapType.cantons' }]
+		maps: [
+			{ id: 'switzerland-cantons', labelKey: 'mapType.cantons' },
+			{ id: 'switzerland-towns-50k', labelKey: 'mapType.towns' }
+		]
 	},
 	{
 		country: 'Thailand',

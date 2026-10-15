@@ -1,0 +1,182 @@
+{
+	"id": "austria-towns-50k",
+	"name": "Austria — Towns",
+	"country": "Austria",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "linz",
+			"name": "Linz",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.2887813,
+				48.3192328
+			],
+			"bbox": [
+				14.2887813,
+				48.3192328,
+				14.2887813,
+				48.3192328
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "vienna",
+			"name": "Vienna",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.3646931,
+				48.2019611
+			],
+			"bbox": [
+				16.3646931,
+				48.2019611,
+				16.3646931,
+				48.2019611
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "eisenstadt",
+			"name": "Eisenstadt",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.5332975,
+				47.8332991
+			],
+			"bbox": [
+				16.5332975,
+				47.8332991,
+				16.5332975,
+				47.8332991
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "wiener-neustadt",
+			"name": "Wiener Neustadt",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.2499536,
+				47.8159819
+			],
+			"bbox": [
+				16.2499536,
+				47.8159819,
+				16.2499536,
+				47.8159819
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "salzburg",
+			"name": "Salzburg",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				13.0400203,
+				47.8104783
+			],
+			"bbox": [
+				13.0400203,
+				47.8104783,
+				13.0400203,
+				47.8104783
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "bregenz",
+			"name": "Bregenz",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.7667016,
+				47.5166971
+			],
+			"bbox": [
+				9.7667016,
+				47.5166971,
+				9.7667016,
+				47.5166971
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "innsbruck",
+			"name": "Innsbruck",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				11.4099906,
+				47.2804073
+			],
+			"bbox": [
+				11.4099906,
+				47.2804073,
+				11.4099906,
+				47.2804073
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "graz",
+			"name": "Graz",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				15.4100048,
+				47.0777582
+			],
+			"bbox": [
+				15.4100048,
+				47.0777582,
+				15.4100048,
+				47.0777582
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "klagenfurt",
+			"name": "Klagenfurt",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				14.3100203,
+				46.6203443
+			],
+			"bbox": [
+				14.3100203,
+				46.6203443,
+				14.3100203,
+				46.6203443
+			],
+			"colorIndex": 5
+		}
+	],
+	"tourOrder": [
+		"linz",
+		"vienna",
+		"eisenstadt",
+		"wiener-neustadt",
+		"salzburg",
+		"bregenz",
+		"innsbruck",
+		"graz",
+		"klagenfurt"
+	]
+}
