@@ -16,7 +16,7 @@
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write .",
 		"test:unit": "vitest",
-		"test": "node -e \"process.env.HOST='127.0.0.1'; const fs=require('fs'),path=require('path'),{spawnSync}=require('child_process'); const isWin=process.platform==='win32'; const out=path.join(process.cwd(),'rendered','vitest.json'); try{fs.mkdirSync(path.dirname(out),{recursive:true})}catch{}; try{fs.unlinkSync(out)}catch{}; const cmd=isWin?path.join('node_modules','.bin','vitest.cmd'):path.join('node_modules','.bin','vitest'); const r=spawnSync(cmd,['--run','--reporter=json','--outputFile='+out],{stdio:'inherit',env:process.env,shell:isWin}); let rc=1; try{const j=JSON.parse(fs.readFileSync(out,'utf8')); rc=j.numFailedTests>0?1:0}catch{} process.exit(rc)\""
+		"test": "node -e \"process.env.HOST='127.0.0.1'; const fs=require('fs'),path=require('path'),{spawnSync}=require('child_process'); const isWin=process.platform==='win32'; const out=path.join(process.cwd(),'rendered','vitest.json'); try{fs.mkdirSync(path.dirname(out),{recursive:true})}catch{}; try{fs.unlinkSync(out)}catch{}; const cmd=isWin?path.join('..','node_modules','.bin','vitest.cmd'):path.join('..','node_modules','.bin','vitest'); const r=spawnSync(cmd,['--run','--reporter=json','--outputFile='+out],{stdio:'inherit',env:process.env,shell:isWin}); let rc=1; try{const j=JSON.parse(fs.readFileSync(out,'utf8')); rc=j.numFailedTests>0?1:0}catch{} process.exit(rc)\""
 	},
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",

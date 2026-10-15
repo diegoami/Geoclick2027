@@ -10,8 +10,6 @@ vi.mock('$app/paths', () => ({
 
 import MapNav from './MapNav.svelte';
 import { setLanguage } from './i18n.svelte';
-import { isContinentGroup } from './catalogSections';
-import { mapGroups } from './mapCatalog';
 import { isSeenDetailed, recordVisit, setDetailedMapsShown } from './mapPrefs.svelte';
 
 describe('MapNav sibling map buttons', () => {
@@ -99,15 +97,14 @@ describe('MapNav sibling map buttons', () => {
 		expect(gotoMock).toHaveBeenCalledWith('/map/europe-capitals');
 	});
 
-	it('keeps the map title for a country with only one map', async () => {
-		const group = mapGroups.find(
-			(candidate) => !isContinentGroup(candidate) && candidate.maps.length === 1
-		);
-		expect(group).toBeDefined();
-		const onlyMap = group!.maps[0];
+	it('keeps the map title when the country has no map switcher', async () => {
+		// After v0.20 every catalog country has 2+ maps, so the no-switcher
+		// branch in MapNav.svelte is reached when the rendered mapId does not
+		// match any group (mapGroups.find returns undefined). Guard the
+		// {:else} path the same way the previous one-map fixture did.
 		await render(MapNav, {
-			mapId: onlyMap.id,
-			mapName: `${group!.country} — ${onlyMap.labelKey}`,
+			mapId: 'synthetic-no-switcher',
+			mapName: 'Atlantis — Regions',
 			active: 'explore'
 		});
 

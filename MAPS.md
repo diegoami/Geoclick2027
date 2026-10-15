@@ -1265,12 +1265,13 @@ npx tsx data/scripts/build-points-map.ts --country="Ireland" --out=data/maps/ire
 Belgium excludes the Caribbean municipalities (Brussels, Flanders, Wallonia
 only) per the overseas-territories rule.
 
-**Counts.** Three countries reached the 20 floor: Switzerland 20, Greece 20,
-Romania 39 (Romania’s 39 is the natural selection at 50 000; the floor was
-not applied). The other six came in below it because Natural Earth has no
-more places in those countries at that threshold: Austria 9, Belgium 10,
-Bulgaria 18, Croatia 10, Czechia 12, Ireland 15. They are deferred to **v0.21** with
-a Wikidata CountrySpec, the same way Germany and Italy already use
+**Counts.** Three countries cleared the 20 floor: Switzerland 20 and Greece 20
+hit the floor exactly; Romania’s 39 is the natural selection at 50 000 and
+already exceeds the floor without filling. The other six came in below it
+because Natural Earth has no more places in those countries at that
+threshold: Austria 9, Belgium 10, Bulgaria 18, Croatia 10, Czechia 12,
+Ireland 15. They are deferred to **v0.21** with a Wikidata CountrySpec, the
+same way Germany and Italy already use
 (`#39` batch C, `data/scripts/fetch-wikidata-places.ts`).
 
 ### Morocco (built 2026-10-04, v0.19, #209)
