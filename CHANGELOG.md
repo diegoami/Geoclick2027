@@ -1296,7 +1296,7 @@ For players:
   with the pin, instead of a white one.
 - **The desktop and Android apps can be downloaded by anyone.** The home
   page links to the public
-  [releases page](https://github.com/diegoami/geoclick-releases/releases/latest):
+  [releases page](https://github.com/diegoami/Geoclick2027/releases/latest):
   a Windows installer (`-setup.exe` or `.msi`) and an Android `.apk`.
 
 Under the hood:
@@ -1309,9 +1309,10 @@ Under the hood:
 - `scripts/package-release.mjs` builds the installers from a release tag
   into `dist-release/`, with checksums. Android's version code now rises
   with every release, so phones see updates as updates (FT-07).
-- `scripts/publish-release.mjs` uploads them to
-  `diegoami/geoclick-releases`, a public repo holding only a README and
-  the releases. It is a dry run unless given `--confirm` (FT-08).
+- `scripts/publish-release.mjs` originally uploaded them to a separate
+  public downloads repository holding only a README and releases (FT-08).
+  For v1.0 the owner moved downloads into the public source repository,
+  `diegoami/Geoclick2027`. Publishing is a dry run unless given `--confirm`.
 - The README links to the live web app (FT-01).
 - `*.browser.test.ts` runs plain-TypeScript tests that need a real DOM in
   Chromium.
