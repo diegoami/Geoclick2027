@@ -302,7 +302,8 @@ Check items off as they land; update "Status" as iterations complete.
   **v0.3.0 (FT-01 to FT-08):** label size and magnify-on-hover/tap (the
   planned Normal/Large switch was replaced at review), the pin logo on
   every shell, Android release signing, and a packaging script. Installers
-  are published to the public `diegoami/Geoclick2027` repo. v0.3.1
+  were published to the historical public download repository (downloads move to
+  Geoclick2027 for v1.0). v0.3.1
   fixed empty maps in the desktop app. **Next, v0.4.0 (added 2026-09-14):**
   maps open on their overview, with an Explore tab, and Android back goes up
   a level (FT-13, FT-14). Then the tutorial, as v0.5.0 (FT-09 to FT-12).

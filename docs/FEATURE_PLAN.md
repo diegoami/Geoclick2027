@@ -702,7 +702,7 @@ Update this table as tasks merge. Commit hashes are the merge commits.
 
 | Release | State | Tag | Date |
 |---|---|---|---|
-| `v0.3.0` | **cut** | `v0.3.0` → `abafcbb` | 2026-09-13 — installers published to diegoami/Geoclick2027 (APK signed with the release key) |
+| `v0.3.0` | **cut** | `v0.3.0` → `abafcbb` | 2026-09-13 — installers published to the historical download repository (downloads move to Geoclick2027 for v1.0) (APK signed with the release key) |
 | `v0.3.1` | **cut** (hotfix) | `v0.3.1` → `fd04733` | 2026-09-13 — desktop app opened maps empty in v0.3.0 (Tauri ignores Range requests; tiles now loaded whole). Installers published; v0.3.0 notes carry a warning |
 | `v0.4.0-alpha.1` | **pre-release** (alpha) | `v0.4.0-alpha.1` → `a8b1d49` (FT-14 + main, never merged) | 2026-09-14 — setup.exe + APK as a GitHub pre-release (downloads move to Geoclick2027 for v1.0); for the product owner's phone test of FT-13/FT-14 |
 | `v0.4.0` | **cut** | `v0.4.0` → `441f57b` | 2026-09-14 — stable, latest in the historical download repo (downloads move to Geoclick2027 for v1.0) (setup.exe, .msi, APK); same app code as alpha.1, which the product owner tried on Windows and Android |

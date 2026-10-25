@@ -88,7 +88,7 @@ dist-release/migration-backup (ignored). Use --backup-dir to retain an export
 outside a worktree that will eventually be removed. Keep that export after
 retirement. The tool refuses conflicting metadata and never overwrites assets.
 It verifies canonical destination tags against local tags, audits original
-SHA256SUMS.txt, then downloads copied assets and compares SHA-256. Historical checksum discrepancies block copying by default. After reviewing backup-verification.json, --preserve-stale-checksums permits copying original bytes only when they match GitHub asset digests; copied release notes list the discrepancy and actual hashes. Original SHA256SUMS.txt files are preserved verbatim.
+SHA256SUMS.txt, then downloads copied assets and compares SHA-256. Historical checksum discrepancies block copying by default. After reviewing backup-verification.json, --preserve-stale-checksums permits only the exact tag/asset/hash discrepancies recorded in the reviewed complete backup report, with matching GitHub asset digests; copied release notes list the discrepancy and actual hashes. Original SHA256SUMS.txt files are preserved verbatim.
 
 GitHub cannot preserve original release publication timestamps on creation.
 Original timestamps remain in the backup and copied notes. Original release
@@ -102,8 +102,10 @@ part of the migration tool. Old external URLs will stop working after deletion.
 
 ## itch.io and final verification
 
-Follow #240: determine usable portrait/landscape sizes, test 640x480 and 480x720,
-record the chosen embed size, keep fullscreen under player control, and test
+Owner resolution update (2026-10-25), superseding the earlier #240 baseline:
+target **1280x800** for desktop/itch.io and check **1024x768** as a lower bound.
+640x480 is not a release requirement. Check phones/tablets separately, record
+the chosen embed size, keep fullscreen under player control, and test
 the extracted ZIP rather than just source. Upload only through an available
 authorized route to diegoami/geoclick. Do not claim an upload or phone test
 without evidence.

@@ -3,8 +3,8 @@
 // --confirm copies missing releases/assets; --verify-only checks every byte.
 // Retirement is a separate owner-approved step after link updates have landed.
 import { spawnSync } from 'node:child_process';
-import { createHash } from 'node:crypto';
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { createHash, randomUUID } from 'node:crypto';
+import { existsSync, mkdirSync, readFileSync, writeFileSync, linkSync, unlinkSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
@@ -73,7 +73,12 @@ export function verifyMetadata(source, destination, discrepancies = []) {
 		throw new Error('Asset inventory differs: ' + source.tag_name);
 }
 
-export function auditChecksums(assets, load, sums, preserveStale = false) {
+export function auditChecksums(
+	assets,
+	load,
+	sums,
+	{ preserveStale = false, approved = [], inventoryOnly = false } = {}
+) {
 	const hashes = {},
 		discrepancies = [];
 	for (const asset of assets) {
@@ -82,17 +87,35 @@ export function auditChecksums(assets, load, sums, preserveStale = false) {
 		if (asset.name !== 'SHA256SUMS.txt' && !sums.has(asset.name))
 			throw new Error('Asset has no source checksum: ' + asset.name);
 		if (sums.has(asset.name) && sums.get(asset.name) !== actual) {
-			if (!preserveStale || asset.digest !== 'sha256:' + actual)
+			const reviewed = approved.some(
+				(entry) =>
+					entry.name === asset.name &&
+					entry.published === sums.get(asset.name) &&
+					entry.actual === actual
+			);
+			if ((!inventoryOnly && (!preserveStale || !reviewed)) || asset.digest !== 'sha256:' + actual)
 				throw new Error(
 					'Checksum mismatch: ' +
 						asset.name +
-						'; preserve only with a matching GitHub digest and --preserve-stale-checksums'
+						'; preserve only a reviewed backup discrepancy with a matching GitHub digest and --preserve-stale-checksums'
 				);
 			discrepancies.push({ name: asset.name, published: sums.get(asset.name), actual });
 		}
 		hashes[asset.name] = actual;
 	}
 	return { hashes, discrepancies };
+}
+
+export function writeBackup(file, bytes) {
+	const temporary = file + '.partial-' + randomUUID();
+	try {
+		writeFileSync(temporary, bytes, { flag: 'wx' });
+		// A same-directory hard link publishes a complete file atomically and
+		// refuses to replace an existing backup, including a concurrent writer.
+		linkSync(temporary, file);
+	} finally {
+		if (existsSync(temporary)) unlinkSync(temporary);
+	}
 }
 
 function gh(args, binary = false) {
@@ -214,6 +237,23 @@ export async function main(argv = process.argv.slice(2)) {
 	} else save(inventoryPath, source);
 	const repoPath = path.join(backup, 'source-repository.json');
 	if (!existsSync(repoPath)) save(repoPath, api('repos/' + SOURCE));
+	let reviewedBackup;
+	if (preserveStale && mode !== '--backup-only') {
+		const reportPath = path.join(backup, 'backup-verification.json');
+		if (!existsSync(reportPath)) throw new Error('Review a complete --backup-only report first');
+		reviewedBackup = JSON.parse(readFileSync(reportPath, 'utf8'));
+		if (
+			reviewedBackup.source !== SOURCE ||
+			reviewedBackup.destination !== DESTINATION ||
+			reviewedBackup.latest !== latest ||
+			reviewedBackup.releases.length !== source.length ||
+			source.some(
+				(release) =>
+					reviewedBackup.releases.filter((row) => row.tag === release.tag_name).length !== 1
+			)
+		)
+			throw new Error('Backup discrepancy report does not cover this source inventory');
+	}
 	const report = {
 		source: SOURCE,
 		destination: DESTINATION,
@@ -231,7 +271,7 @@ export async function main(argv = process.argv.slice(2)) {
 				if (mode === '--verify-only') throw new Error('Missing backup asset: ' + file);
 				const bytes = download(SOURCE, asset);
 				checkBytes(asset, bytes);
-				writeFileSync(file, bytes, { flag: 'wx' });
+				writeBackup(file, bytes);
 			}
 			checkBytes(asset, readFileSync(file));
 		}
@@ -245,7 +285,11 @@ export async function main(argv = process.argv.slice(2)) {
 			release.assets,
 			(name) => readFileSync(path.join(dir, name)),
 			sums,
-			mode === '--backup-only' || preserveStale
+			{
+				preserveStale,
+				approved: reviewedBackup?.releases.find((row) => row.tag === tag)?.discrepancies ?? [],
+				inventoryOnly: mode === '--backup-only'
+			}
 		);
 		if (discrepancies.length)
 			console.log('Historical checksum discrepancies in ' + tag + ': ' + discrepancies.length);
@@ -321,6 +365,11 @@ export async function main(argv = process.argv.slice(2)) {
 		gh(['release', 'edit', latest, '--repo', DESTINATION, '--latest']);
 	if (!unexpected.length && api('repos/' + DESTINATION + '/releases/latest').tag_name !== latest)
 		throw new Error('Latest release does not match source');
+	if (unexpected.length)
+		console.log(
+			'Latest left unchanged: destination contains stable releases outside the source inventory: ' +
+				unexpected.map((release) => release.tag_name).join(', ')
+		);
 	report.verifiedAt = new Date().toISOString();
 	save(path.join(backup, 'verification.json'), report);
 	console.log('Verified all historical releases and their bytes. Old repository remains intact.');

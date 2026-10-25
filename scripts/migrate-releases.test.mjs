@@ -1,6 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { mkdtempSync, readFileSync, readdirSync, unlinkSync, rmdirSync } from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
 import {
+	writeBackup,
 	safeName,
 	sha256,
 	checksums,
@@ -82,12 +86,28 @@ test('a resumable copy refuses missing, extra, or conflicting release metadata',
 
 test('stale historical checksums require explicit preservation and a matching GitHub digest', () => {
 	const sums = new Map([[asset.name, '0'.repeat(64)]]);
-	assert.throws(() => auditChecksums([asset], () => bytes, sums), /Checksum mismatch/);
+	const approval = {
+		preserveStale: true,
+		approved: [{ name: asset.name, published: '0'.repeat(64), actual: hash }]
+	};
 	assert.throws(
-		() => auditChecksums([{ ...asset, digest: null }], () => bytes, sums, true),
+		() => auditChecksums([asset], () => bytes, sums, { preserveStale: true }),
 		/Checksum mismatch/
 	);
-	const result = auditChecksums([asset], () => bytes, sums, true);
+	assert.throws(
+		() =>
+			auditChecksums([asset], () => bytes, sums, {
+				...approval,
+				approved: [{ ...approval.approved[0], actual: '1'.repeat(64) }]
+			}),
+		/Checksum mismatch/
+	);
+	assert.throws(() => auditChecksums([asset], () => bytes, sums), /Checksum mismatch/);
+	assert.throws(
+		() => auditChecksums([{ ...asset, digest: null }], () => bytes, sums, approval),
+		/Checksum mismatch/
+	);
+	const result = auditChecksums([asset], () => bytes, sums, approval);
 	assert.equal(result.discrepancies.length, 1);
 	assert.equal(result.hashes[asset.name], hash);
 	assert.ok(migratedBody(original, result.discrepancies).includes(hash));
@@ -99,4 +119,19 @@ test('stale historical checksums require explicit preservation and a matching Gi
 			result.discrepancies
 		)
 	);
+});
+
+test('atomic backup publication cannot overwrite existing bytes and leaves no partial file', () => {
+	const dir = mkdtempSync(path.join(os.tmpdir(), 'geoclick-migration-test-'));
+	const file = path.join(dir, 'installer.exe');
+	try {
+		writeBackup(file, bytes);
+		assert.deepEqual(readFileSync(file), bytes);
+		assert.throws(() => writeBackup(file, Buffer.from('changed')));
+		assert.deepEqual(readFileSync(file), bytes);
+		assert.deepEqual(readdirSync(dir), ['installer.exe']);
+	} finally {
+		for (const name of readdirSync(dir)) unlinkSync(path.join(dir, name));
+		rmdirSync(dir);
+	}
 });
