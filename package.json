@@ -13,7 +13,7 @@
 	"scripts": {
 		"dev": "npm run dev --workspace=app",
 		"build": "npm run build --workspaces --if-present",
-		"test": "npm run test --workspaces --if-present",
+		"test": "node --test scripts/migrate-releases.test.mjs && npm run test --workspaces --if-present",
 		"check": "npm run check --workspaces --if-present && tsc -p data/tsconfig.json",
 		"lint": "npm run lint --workspace=app && prettier --config app/prettier.config.js --check data/scripts && eslint --config app/eslint.config.js data/scripts",
 		"format": "npm run format --workspace=app && prettier --config app/prettier.config.js --write data/scripts",

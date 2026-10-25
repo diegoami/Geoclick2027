@@ -19,7 +19,7 @@ DECISIONS.md's "Feature programme decisions" entry, so no task has to guess.
 
 | # | Question | Decision |
 |---|---|---|
-| 1 | Where do public desktop/Android downloads live, given the source repo is private? | **A separate public "releases-only" GitHub repo.** Installers are attached to its Releases, so anyone can download without logging in, the source stays private, and nothing is committed to git. The main repo stays private; going public stays tied to the 1.0 launch. |
+| 1 | Where do public desktop/Android downloads live, given the source repo is private? | **Superseded 2026-10-25:** source is public; downloads now belong to the source repository. See [PLAN_V1.0.md](PLAN_V1.0.md). Release binaries remain outside Git history. |
 | 2 | How are the installers built? | **Manually on the local machine, following a checklist.** No CI for now. |
 | 3 | Who designs the logo? | **Claude drafts 2-3 candidates** and the product owner picks or redirects. Generating the platform icon sets from the chosen one is a normal task. |
 | 4 | Text size: what scales, and how many sizes? | **Names on the map: magnify on demand.** Hover on desktop (FT-02), tap on touch screens (FT-03), with no persistent size setting. *Revised at FT-02's review; the original answer was a Normal/Large switch for map labels and quiz slips.* |
@@ -87,7 +87,7 @@ programme, and a twelve-row table doesn't need a state machine.
    and publish the installers" section to it, used from `v0.3.0` onwards.
 
 Versioning follows RELEASES.md: a batch that adds features bumps the minor
-version. `1.0.0` stays reserved for the public launch.
+version. The owner selected `1.0.0` for the public distribution and country expansion on 2026-10-25; see [PLAN_V1.0.md](PLAN_V1.0.md).
 
 | Release | Tasks | Theme |
 |---|---|---|
@@ -288,9 +288,9 @@ Effort: **Low** is under an hour or so, **Medium** is a focused session,
 
 ### FT-08 — Public releases repo + download link · Medium · deps: FT-01, FT-05, FT-07
 
-- 🧑 **Product owner:** approves creating the public repo
-  `diegoami/geoclick-releases`, which is outward-facing, at the moment it
-  happens, via `gh repo create --public` or by the product owner directly.
+- **Historical task, amended 2026-10-25:** the public-download repository was
+  created for FT-08. Downloads now move to the public source repository;
+  see [PLAN_V1.0.md](PLAN_V1.0.md). Do not create another repository.
 - **Do:**
   - **The releases repo's README:** what Geoclick is, a link to the web
     app, and honest install notes:
@@ -301,11 +301,11 @@ Effort: **Low** is under an hour or so, **Medium** is a focused session,
     - there is no auto-update.
   - Extend `scripts/package-release.mjs` (or a sibling script) with a
     `--publish` step: `gh release create vX.Y.Z --repo
-    diegoami/geoclick-releases <files> --notes-file <player-facing part
+    diegoami/Geoclick2027 <files> --notes-file <player-facing part
     of the CHANGELOG entry>`. It is never run without the product owner's
     OK (🧑 per release).
   - **Web home page:** a small "Download for Windows / Android" link to
-    `https://github.com/diegoami/geoclick-releases/releases/latest`. Show
+    `https://github.com/diegoami/Geoclick2027/releases/latest`. Show
     it only on the web build, not inside the desktop or Android apps
     (use the `isTauri()` / `Capacitor.isNativePlatform()` checks
     `progressRepository.ts` already uses). Link text goes in all three
@@ -688,7 +688,7 @@ Update this table as tasks merge. Commit hashes are the merge commits.
 | FT-05 | **released** | `bf49643` | v0.3.0 | one generator script for all icons; checked in built exe + installer, emulator (drawer, launch screen) and favicon; Start menu/taskbar not seen (same .ico) |
 | FT-06 | **released** | `6de2d98` | v0.3.0 | signing setup verified with throwaway keys (unsigned without, signed via env or properties); 🧑 real keystore pending, needed before FT-07's dry run |
 | FT-07 | **released** | `8e6120e` | v0.3.0 | package-release.mjs dry run: .msi 17.0 MB, -setup.exe 15.8 MB, APK 24.5 MB + SHA256SUMS (throwaway key, output deleted); Android versionCode now tracks the version (1 → 200) |
-| FT-08 | **released** | `e5aa02d` | v0.3.0 | 🧑 public repo created (diegoami/geoclick-releases, README only); web-only download link EN/DE/IT; publish script dry-runs unless --confirm; first publish = v0.3.0 |
+| FT-08 | **released** | `e5aa02d` | v0.3.0 | 🧑 public download repo created (historical; downloads move to Geoclick2027 for v1.0); web-only download link EN/DE/IT; publish script dry-runs unless --confirm; first publish = v0.3.0 |
 | FT-13 | **released** | `d74ebb4` | v0.4.0 | maps open on the overview; Explore tab; tab row clear of the zoom control (360-1024px, EN/DE/IT); native shells checked with FT-14 |
 | FT-14 | **released** | `88f7950` | v0.4.0 | back goes up a level (emulator: quiz/tour/explore → overview → list → exit); tried by the product owner on their phone via v0.4.0-alpha.1 |
 | FT-15 | **released** | `608937a` | v0.5.0 | Recent section (5 newest, any map view counts, device-local); browser-checked at 1280/400px; desktop (CDP) + Android (emulator) checked in v0.5.0-alpha.1 |
@@ -702,11 +702,11 @@ Update this table as tasks merge. Commit hashes are the merge commits.
 
 | Release | State | Tag | Date |
 |---|---|---|---|
-| `v0.3.0` | **cut** | `v0.3.0` → `abafcbb` | 2026-09-13 — installers published to diegoami/geoclick-releases (APK signed with the release key) |
+| `v0.3.0` | **cut** | `v0.3.0` → `abafcbb` | 2026-09-13 — installers published to diegoami/Geoclick2027 (APK signed with the release key) |
 | `v0.3.1` | **cut** (hotfix) | `v0.3.1` → `fd04733` | 2026-09-13 — desktop app opened maps empty in v0.3.0 (Tauri ignores Range requests; tiles now loaded whole). Installers published; v0.3.0 notes carry a warning |
-| `v0.4.0-alpha.1` | **pre-release** (alpha) | `v0.4.0-alpha.1` → `a8b1d49` (FT-14 + main, never merged) | 2026-09-14 — setup.exe + APK on geoclick-releases as a GitHub pre-release; for the product owner's phone test of FT-13/FT-14 |
-| `v0.4.0` | **cut** | `v0.4.0` → `441f57b` | 2026-09-14 — stable, latest on geoclick-releases (setup.exe, .msi, APK); same app code as alpha.1, which the product owner tried on Windows and Android |
-| `v0.5.0-alpha.1` | **pre-release** (alpha) | `v0.5.0-alpha.1` → `b9793c0` (version bump on main `ea84ab5`, never merged) | 2026-09-14 — setup.exe + APK on geoclick-releases as a GitHub pre-release; FT-15 + FT-16 for the product owner to try. Checked: desktop over CDP, APK updating 0.4.0 on the emulator (40099 → 50001) |
+| `v0.4.0-alpha.1` | **pre-release** (alpha) | `v0.4.0-alpha.1` → `a8b1d49` (FT-14 + main, never merged) | 2026-09-14 — setup.exe + APK as a GitHub pre-release (downloads move to Geoclick2027 for v1.0); for the product owner's phone test of FT-13/FT-14 |
+| `v0.4.0` | **cut** | `v0.4.0` → `441f57b` | 2026-09-14 — stable, latest in the historical download repo (downloads move to Geoclick2027 for v1.0) (setup.exe, .msi, APK); same app code as alpha.1, which the product owner tried on Windows and Android |
+| `v0.5.0-alpha.1` | **pre-release** (alpha) | `v0.5.0-alpha.1` → `b9793c0` (version bump on main `ea84ab5`, never merged) | 2026-09-14 — setup.exe + APK as a GitHub pre-release (downloads move to Geoclick2027 for v1.0); FT-15 + FT-16 for the product owner to try. Checked: desktop over CDP, APK updating 0.4.0 on the emulator (40099 → 50001) |
 | `v0.5.0-beta.1` | **built, not published** | `v0.5.0-beta.1` → `e703d2a` | 2026-09-14 — setup.exe + APK built and tested (desktop over CDP, emulator update 50001 → 50051, whole tutorial by touch); held back because a drag starting on a name label didn't pan the map (FT-18). Superseded by beta.2 |
-| `v0.5.0-beta.2` | **pre-release** (beta) | `v0.5.0-beta.2` → `fe9fc29` | 2026-09-14 — setup.exe + APK on geoclick-releases as a GitHub pre-release: everything for v0.5.0 incl. FT-18. Checked: fresh-clone gates, served build, desktop over CDP (drag from a label pans, hover magnifies), emulator update 50051 → 50052 (finger-drag from a label pans, tap magnifies). Waiting for the product owner's test |
-| `v0.5.0` | **cut** | `v0.5.0` → `c0b3c2e` | 2026-09-14 — stable, latest on geoclick-releases (.msi, setup.exe, APK 50099); tried by the product owner as beta.2 on their phone. Checked: fresh-clone gates, served build, desktop map draws, APK updates over beta.2 |
+| `v0.5.0-beta.2` | **pre-release** (beta) | `v0.5.0-beta.2` → `fe9fc29` | 2026-09-14 — setup.exe + APK as a GitHub pre-release (downloads move to Geoclick2027 for v1.0): everything for v0.5.0 incl. FT-18. Checked: fresh-clone gates, served build, desktop over CDP (drag from a label pans, hover magnifies), emulator update 50051 → 50052 (finger-drag from a label pans, tap magnifies). Waiting for the product owner's test |
+| `v0.5.0` | **cut** | `v0.5.0` → `c0b3c2e` | 2026-09-14 — stable, latest in the historical download repo (downloads move to Geoclick2027 for v1.0) (.msi, setup.exe, APK 50099); tried by the product owner as beta.2 on their phone. Checked: fresh-clone gates, served build, desktop map draws, APK updates over beta.2 |

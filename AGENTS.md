@@ -240,7 +240,7 @@ proposal, a count of merged PRs or a change to a particular file. Nothing else
 triggers the formal milestone review: not proposals, PRs, process or docs
 changes. PR reviews are a separate process (see `review-pr`).
 A beta is not a milestone; it is built from a candidate. The releases go to the
-separate `diegoami/geoclick-releases` repository, but the tag lives here, and
+public `diegoami/Geoclick2027` source repository, where the tag also lives, and
 the release notes name the tagged commit. Say in the entry what was built and
 what was actually tried, rather than implying it.
 
@@ -286,7 +286,7 @@ time. Nothing here assumes one tool.
    candidate belongs to the next milestone. The installer and device checks
    `docs/RELEASES.md` requires happen before tagging. Alpha and beta
    pre-releases go out the same way, and the agent publishes to
-   `diegoami/geoclick-releases` (the owner's standing permission).
+   `diegoami/Geoclick2027` (the owner's standing permission).
 7. The owner may tag without a review; the milestone issue records that.
 
 The reviewer posts to GitHub itself, and nothing is pasted back:
@@ -335,7 +335,7 @@ installation's memory. They bind every agent.
   it with a merge commit and say so in one line.
 - **A release asked for is the whole release.** "Make the release" means: tag,
   build the desktop and Android files, try them, and publish to
-  `diegoami/geoclick-releases` (`publish-release.mjs --confirm`), with no second
+  `diegoami/Geoclick2027` (`publish-release.mjs --confirm`), with no second
   confirmation. "Nobody apart me is downloading it anyway." Still say plainly
   in the notes what was not tried.
 - **Don't check or report Netlify deploy status.** The owner tracks it.

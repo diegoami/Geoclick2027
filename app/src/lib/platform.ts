@@ -9,11 +9,12 @@ export async function isNativeShell(): Promise<boolean> {
 	return Capacitor.isNativePlatform();
 }
 
-/** The source repository and the public releases-only repo (FT-08). */
+/** Public source, downloads and itch.io page. */
 export const SOURCE_URL = 'https://github.com/diegoami/Geoclick2027';
-export const RELEASES_REPO_URL = 'https://github.com/diegoami/geoclick-releases';
+export const RELEASES_REPO_URL = SOURCE_URL;
 /** Latest installers. */
-export const RELEASES_URL = 'https://github.com/diegoami/geoclick-releases/releases/latest';
+export const RELEASES_URL = SOURCE_URL + '/releases/latest';
+export const ITCH_URL = 'https://diegoami.itch.io/geoclick';
 
 /**
  * Leaves the app, from the start screen's Exit button: Android's own exit,
