@@ -1681,9 +1681,9 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   "whenever someone remembers" is how the project went eight iterations
   without a tag. Waves 0+1 → `v0.1.1`, wave 2 → `v0.1.2`, waves 3+4 +
   programme close → `v0.2.0` (the shape shifted in draft 3 when the restored
-  nice-to-haves added waves 3 and 4). `1.0.0` stays reserved for the real public launch (see the
-  SSO-deferral entry), so the closing milestone is a MINOR bump under that
-  ceiling: "known issues from the Sept 13 review resolved".
+  nice-to-haves added waves 3 and 4). `1.0.0` was reserved at the time; the owner selected it for the public
+  distribution and country expansion on 2026-10-25 (feature decisions below).
+  The historical closing milestone was a MINOR bump: "known issues from the Sept 13 review resolved".
 - **REVERSED same day: the "nice-to-have / low value" tier (`#20`–`#30`) is
   back in.** Draft 2 dropped it ("let us focus on the necessary things, no
   nice to have things"); the owner then restored it conditionally — see the
@@ -1730,9 +1730,8 @@ real zooms, desktop and phone. Branch `spike/ft-64-stretched-names`
   injected at build time from `package.json` and `git rev-parse
   --short HEAD`) — requested directly ("release number and build should
   be prominent in the application"), not left as something only visible
-  by reading a file. `1.0.0` stays reserved for the real public-launch
-  milestone (domain, app-store submission) per the SSO-deferral entry
-  above; `0.1.0` is deliberately a low number for "first tracked release,"
+  by reading a file. `1.0.0` was reserved at the time; this was superseded by the owner on
+  2026-10-25 (feature decisions below); `0.1.0` is deliberately a low number for "first tracked release,"
   not a claim of feature-completeness.
 
 ## PMTiles storage: stay in plain git for now (ADR, 2026-09-13)
@@ -1831,19 +1830,18 @@ twelve-task programme, `docs/FEATURE_PLAN.md`. Before planning, every
 product question the backlog flagged was put to the product owner. The
 answers:
 
-- **Downloads live in a separate public "releases-only" GitHub repo**, and
-  the source repo stays private. GitHub release files on a private repo
-  need a login with repo access, so a public release needs a public repo.
-  The backlog had suggested static files on the Netlify site, but that was
-  rejected on size. The current installers (18 MB `.msi`, 17 MB
-  `-setup.exe`, 27 MB `.apk`) would be committed to git on every release,
-  about 60 MB a time. That would pass GC-080's 100 MB "revisit storage"
-  threshold within two releases. A releases repo keeps the binaries out of
-  git entirely. Making the source public stays tied to the 1.0 launch.
-  The repo is `diegoami/geoclick-releases` (FT-08). Its front page comes
-  from `docs/releases-repo/README.md`, and `scripts/publish-release.mjs`
-  uploads each release there, only with `--confirm` and the product
-  owner's OK.
+- **Downloads live in the public source repository**, amended by the owner
+  on 2026-10-25 ([proposal #241](https://github.com/diegoami/Geoclick2027/issues/241)).
+  Source and releases now share `diegoami/Geoclick2027`; release assets stay
+  outside Git history. The previous separate public-download repository was
+  needed while source was private. Migrate all historical releases and verify
+  every asset before retiring it. Keep original metadata and an asset backup;
+  GitHub cannot preserve publication timestamps or redirect deleted asset URLs.
+  Installation instructions now belong to the root README. Publishing still
+  requires an existing pushed tag, matching packaged commit, and `--confirm`.
+  The owner selected **1.0.0** for this public distribution and 22-country
+  expansion, superseding the earlier reservation for domain/app-store work.
+  itch.io page: <https://diegoami.itch.io/geoclick>.
 - **Installers are built manually**, on the local machine with a
   checklist and script. No CI for now.
 - **Claude drafts 2-3 logo candidates**, and the product owner picks one.

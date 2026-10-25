@@ -77,7 +77,7 @@ and capitals of a continent are.
 - **In a web browser:** open https://geoclick.netlify.app/. Nothing to
   install; it works in any recent browser, on a computer or a phone.
 - **Windows and Android apps:** download them from the public releases page,
-  https://github.com/diegoami/geoclick-releases/releases/latest. The web
+  https://github.com/diegoami/Geoclick2027/releases/latest. The web
   version's About page links there too ("Download for Windows or Android").
   - **Windows:** run the `-setup.exe` file (or the `.msi`). Windows SmartScreen
     warns about an "unknown publisher", because the installer isn't

@@ -1,5 +1,7 @@
 # Geoclick — Roadmap
 
+- **v1.0.0 in preparation (2026-10-25):** owner-approved release consolidation, itch.io references and 22-country expansion. Scope and batch status: [PLAN_V1.0.md](docs/PLAN_V1.0.md), [proposal #241](https://github.com/diegoami/Geoclick2027/issues/241). No 1.0 tag or publication yet.
+
 Self-contained iterations toward the desktop POC described in
 [ARCHITECTURE.md](ARCHITECTURE.md). Each iteration should leave the repo in
 a working, demo-able state so work can resume cleanly from any point.
@@ -198,7 +200,7 @@ Check items off as they land; update "Status" as iterations complete.
   map. FT-76 (the picker map, size gate) to FT-79, plus FT-80 (#68).
 - **Released 2026-09-28: v0.14.0** ([PLAN_V0.14.md](docs/PLAN_V0.14.md), #93
   agreed; tag `8519881`, [Milestone v0.14.0](https://github.com/diegoami/Geoclick2027/issues/100): Round 1 BLOCK, Rounds 2–3 AGREE): PR #92's card-game toolbar, FT-83 Android Back after the world map loads, FT-84 translated country rows with displayed-name search and localized order (PRs #97, #104, #105, including continent aliases), and FT-85's manual update. The beta `v0.14.0-beta.1` and stable `v0.14.0` are published. Developer installed the Windows setup and Android APK and opened Egypt — Governorates; region boundaries drew in both. The owner reports the Android Back and tablet Italian/German row checks complete.
-- **Released 2026-09-29: v0.15.0** ([PLAN_V0.15.md](docs/PLAN_V0.15.md); tag `78dd0ce`, [Milestone #117](https://github.com/diegoami/Geoclick2027/issues/117)): one-tap country entry, broad-to-specific country selectors, in-map map switching, and localized sea-chart art. After the AGREE review at `ad0c401`, PRs #122/#123 fixed continent selection defaults and chart ordering/rendering. Gates passed on the tagged commit; Windows and Android installers were installed and map rendering/order/art checked. Release published to [geoclick-releases](https://github.com/diegoami/geoclick-releases/releases/tag/v0.15.0); owner signed off.
+- **Released 2026-09-29: v0.15.0** ([PLAN_V0.15.md](docs/PLAN_V0.15.md); tag `78dd0ce`, [Milestone #117](https://github.com/diegoami/Geoclick2027/issues/117)): one-tap country entry, broad-to-specific country selectors, in-map map switching, and localized sea-chart art. After the AGREE review at `ad0c401`, PRs #122/#123 fixed continent selection defaults and chart ordering/rendering. Gates passed on the tagged commit; Windows and Android installers were installed and map rendering/order/art checked. Release published to [Geoclick releases](https://github.com/diegoami/Geoclick2027/releases/tag/v0.15.0); owner signed off.
 - **v0.20.0 candidate, 2026-10-15** (proposal [#232](https://github.com/diegoami/Geoclick2027/issues/232); PRs #234, #235): nine new towns maps (Austria, Belgium, Bulgaria, Croatia, Czechia, Greece, Ireland, Romania, Switzerland; 173 maps across 58 countries) and the fact-box largest-city spelling fix (#227, #234). Thin towns rebuilds (Denmark, Norway, Serbia), the `AGENTS.md` count drift, and the German/Italian manual translation move to v0.21 ([#204](https://github.com/diegoami/Geoclick2027/issues/204), [#236](https://github.com/diegoami/Geoclick2027/issues/236)). The milestone issue records the review and the tag.
 - **v0.19.0 candidate, 2026-10-05** (proposal [#209](https://github.com/diegoami/Geoclick2027/issues/209); PRs #210 to #229): the in-app user manual, facts for the v0.17 maps and Spain, Algeria, Ecuador, Morocco and Pakistan, 164 maps across 57 countries, the Luna-then-GLM reviewer chain. Thin towns maps, newer borders and German and Italian manual move to v0.20 ([#227](https://github.com/diegoami/Geoclick2027/issues/227)). The milestone issue records the review and the tag.
 - **v0.18.0 candidate, 2026-10-04** (proposal [#190](https://github.com/diegoami/Geoclick2027/issues/190); PRs #191 to #203, #205, #206): German facts for every authored file, the red X on detailed maps, Malaysia and Bangladesh with facts, the author credit, the gate-failure log. Thin towns maps and newer borders move to v0.19. The milestone issue records the review and the tag.
@@ -278,7 +280,7 @@ Check items off as they land; update "Status" as iterations complete.
   assigned; only the already-proven worktree spike stays dropped. 3 local
   tags: `v0.1.1` and `v0.1.2` as fix batches, `v0.2.0` as the closing
   milestone the product owner ships ("known issues from the Sept 13 review
-  resolved"; `1.0.0` stays reserved for the real public launch). Progress is
+  resolved"; `1.0.0` was then reserved; the owner selected it for the 2026-10-25 public-release plan). Progress is
   trackable in the **committed ledger table** in `docs/REMEDIATION_PLAN.md`
   (the `.orchestrator/state/*.json` files are gitignored machine state).
   Zombie hygiene is an explicit requirement: `node scripts/task.mjs doctor`
@@ -300,7 +302,8 @@ Check items off as they land; update "Status" as iterations complete.
   **v0.3.0 (FT-01 to FT-08):** label size and magnify-on-hover/tap (the
   planned Normal/Large switch was replaced at review), the pin logo on
   every shell, Android release signing, and a packaging script. Installers
-  are published to the public `diegoami/geoclick-releases` repo. v0.3.1
+  were published to the historical public download repository (downloads move to
+  Geoclick2027 for v1.0). v0.3.1
   fixed empty maps in the desktop app. **Next, v0.4.0 (added 2026-09-14):**
   maps open on their overview, with an Explore tab, and Android back goes up
   a level (FT-13, FT-14). Then the tutorial, as v0.5.0 (FT-09 to FT-12).

@@ -115,17 +115,17 @@ nobody says anything.
 
 ## Versioning
 
-**Scheme: `0.MINOR.PATCH`.** Current baseline is `v0.1.0`, tagged 2026-09-13.
+**Historical remediation scheme: `0.MINOR.PATCH`.** Current baseline is `v0.1.0`, tagged 2026-09-13.
 
 - **`PATCH` — one remediation batch.** Nothing in this programme adds user-facing
   capability; every task fixes a known defect or a latent one. That is what a
   patch release is. `v0.1.1`, `v0.1.2`.
 - **`MINOR` — a milestone.** Bumped once here, at the end, for "the review is
   closed out": `v0.2.0`.
-- **`1.0.0` is reserved and this programme does not touch it.** `DECISIONS.md`'s
-  "SSO/cross-device sync deferred" entry identifies the real 1.0: domain
-  purchased, app-store submission, the product presented as finished. Fixing a
-  review's findings is not that, however thoroughly it is done.
+- **Historical reservation, superseded 2026-10-25:** the owner selected **1.0.0**
+  for the country expansion and consolidated public release
+  ([PLAN_V1.0.md](PLAN_V1.0.md)). The earlier remediation programme did not
+  use this number; the former domain/app-store prerequisites no longer apply.
 
 ### Why the closing milestone is `v0.2.0`
 
@@ -185,7 +185,7 @@ or beta pre-release, and clearly marked so.**
 | **stable** | the product owner has tried it (the "Cutting a release" checklist below) | `X.Y.Z` | both |
 
 - **Published as GitHub pre-releases** on
-  [`diegoami/geoclick-releases`](https://github.com/diegoami/geoclick-releases):
+  [`diegoami/Geoclick2027`](https://github.com/diegoami/Geoclick2027):
   - `publish-release.mjs` adds `--prerelease`, puts "(alpha)" or "(beta)"
     in the title, and opens the notes with a warning banner;
   - GitHub never marks a pre-release as "latest", so the website's
@@ -349,11 +349,12 @@ There is no CI (FEATURE_PLAN.md, decision 2).
    - it builds the release notes from the player-facing part of the
      version's `CHANGELOG.md` entry;
    - it shows exactly what it would upload to
-     [`diegoami/geoclick-releases`](https://github.com/diegoami/geoclick-releases).
+     [`diegoami/Geoclick2027`](https://github.com/diegoami/Geoclick2027).
 
-   Only `--confirm` creates the GitHub Release. The public repo's front
-   page is kept in `docs/releases-repo/README.md`. When that file changes,
-   copy it over to the releases repo.
+   Only `--confirm` creates the GitHub Release. The tag must already exist
+   on the public source repository at the packaged commit (`--verify-tag`).
+   Installation instructions live in the root `README.md`.
+   Release notes also link to <https://diegoami.itch.io/geoclick>.
 4. **Say what shipped** in the release's `CHANGELOG.md` entry: which
    installers, and any shell that was not rebuilt.
 

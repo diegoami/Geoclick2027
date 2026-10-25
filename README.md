@@ -9,18 +9,42 @@ English, German and Italian. Portfolio project — see
 
 Created by Diego Amicabile.
 
+**itch.io:** <https://diegoami.itch.io/geoclick>.
+
 **Play it:** <https://geoclick.netlify.app/> — the live web
 app, built from `main`. No install or account needed; progress is kept
 in your browser.
 
 **Windows or Android app:** installers are on the public
-[releases page](https://github.com/diegoami/geoclick-releases/releases/latest)
-(repository: [geoclick-releases](https://github.com/diegoami/geoclick-releases)). How they're built and published:
+[releases page](https://github.com/diegoami/Geoclick2027/releases/latest)
+in this source repository. How they're built and published:
 [docs/RELEASES.md](docs/RELEASES.md).
 
 **How it works, screen by screen:** the [user manual](docs/USER_MANUAL.md)
 explains every screen and button with screenshots, for readers who won't
 run it.
+
+## Download
+
+Get the version marked **Latest** from [Releases](https://github.com/diegoami/Geoclick2027/releases/latest).
+
+| Platform | File |
+| --- | --- |
+| Windows 10/11 | `Geoclick-X.Y.Z-windows-x64-setup.exe` (recommended), or `-windows-x64.msi` |
+| Android 7+ | `Geoclick-X.Y.Z-android.apk` |
+
+Windows installers are unsigned. If SmartScreen appears, choose **More info → Run anyway**.
+On Android, download the APK, allow your browser/file manager to **install unknown apps**,
+and open it to install. Install a new version over the old one to keep local progress.
+Very old Android builds used a different signing key; see [the signing-key history](docs/RELEASES.md)
+before uninstalling, which clears progress.
+
+Each release includes SHA256SUMS.txt. Compare its entry with
+certutil -hashfile <file> SHA256 on Windows or sha256sum <file> elsewhere.
+Alpha and beta releases are for testing; the Latest link selects a stable release.
+The apps do not update automatically. Historical v0.7.0 Windows checksum entries
+are stale; its migrated release notes give verified hashes while preserving the
+original files.
 
 ## Quick start (browser)
 

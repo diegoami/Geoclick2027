@@ -6,7 +6,13 @@
 	import { t } from '$lib/i18n.svelte';
 	import PageBar from '$lib/PageBar.svelte';
 	import { resolve } from '$app/paths';
-	import { RELEASES_REPO_URL, RELEASES_URL, SOURCE_URL, isNativeShell } from '$lib/platform';
+	import {
+		ITCH_URL,
+		RELEASES_REPO_URL,
+		RELEASES_URL,
+		SOURCE_URL,
+		isNativeShell
+	} from '$lib/platform';
 
 	// For web visitors only - pointless inside the desktop or Android app.
 	// Off until checked, so the apps never flash it.
@@ -33,6 +39,8 @@
 	<p class="manual"><a href={resolve('/manual')}>{t('about.manual')}</a></p>
 	<p class="author">{t('about.author')}</p>
 	<p class="repos">
+		<a href={ITCH_URL} target="_blank" rel="external noopener">itch.io</a>
+		·
 		<a href={SOURCE_URL} target="_blank" rel="external noopener">{t('about.sourceLink')}</a>
 		·
 		<a href={RELEASES_REPO_URL} target="_blank" rel="external noopener">{t('about.releasesLink')}</a
