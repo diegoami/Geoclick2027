@@ -1,0 +1,279 @@
+{
+	"vestfir-ir": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Norðurland vestra",
+			"Vesturland"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Ísafjörður",
+			"nameDe": "Ísafjörður",
+			"nameIt": "Ísafjörður",
+			"population": 2534
+		},
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Vestfirðir means “west fjords”.",
+				"Hornstrandir shelters Iceland’s native Arctic foxes.",
+				"Seabirds breed on the cliffs of Látrabjarg."
+			],
+			"it": [
+				"Vestfirðir significa “fiordi occidentali”.",
+				"Hornstrandir ospita le volpi artiche native dell’Islanda.",
+				"Gli uccelli marini nidificano sulle scogliere di Látrabjarg."
+			],
+			"de": [
+				"Vestfirðir bedeutet „Westfjorde“.",
+				"Hornstrandir bietet Islands heimischen Polarfüchsen Schutz.",
+				"An den Klippen von Látrabjarg brüten Seevögel."
+			]
+		}
+	},
+	"nor-urland-eystra": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Austurland",
+			"Norðurland vestra",
+			"Suðurland"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Akureyri",
+			"nameDe": "Akureyri",
+			"nameIt": "Akureyri",
+			"population": 16563
+		},
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Norðurland eystra means “northeastern land”.",
+				"Mývatn’s name means “midge lake”.",
+				"Its pseudocraters formed when hot lava crossed wet ground."
+			],
+			"it": [
+				"Norðurland eystra significa “terra nordorientale”.",
+				"Il nome Mývatn significa “lago dei moscerini”.",
+				"I suoi pseudocrateri si formarono quando la lava bollente attraversò un terreno umido."
+			],
+			"de": [
+				"Norðurland eystra bedeutet „nordöstliches Land“.",
+				"Der Name Mývatn bedeutet „Mückensee“.",
+				"Seine Pseudokrater entstanden, als heiße Lava über nassen Boden floss."
+			]
+		}
+	},
+	"nor-urland-vestra": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Norðurland eystra",
+			"Suðurland",
+			"Vestfirðir",
+			"Vesturland"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Sauðárkrókur",
+			"nameDe": "Sauðárkrókur",
+			"nameIt": "Sauðárkrókur",
+			"population": 2682
+		},
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Norðurland vestra means “northwestern land”.",
+				"Skagafjörður’s heritage is closely tied to Icelandic horses.",
+				"Glaumbær preserves traditional turf farm buildings."
+			],
+			"it": [
+				"Norðurland vestra significa “terra nordoccidentale”.",
+				"La tradizione di Skagafjörður è strettamente legata ai cavalli islandesi.",
+				"Glaumbær conserva le tradizionali costruzioni rurali in torba."
+			],
+			"de": [
+				"Norðurland vestra bedeutet „nordwestliches Land“.",
+				"Das Erbe von Skagafjörður ist eng mit Islandpferden verbunden.",
+				"In Glaumbær sind traditionelle Torfbauten eines Bauernhofs erhalten."
+			]
+		}
+	},
+	"austurland": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Norðurland eystra",
+			"Suðurland"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Egilsstaðir",
+			"nameDe": "Egilsstaðir",
+			"nameIt": "Egilsstaðir",
+			"population": 2265
+		},
+		"peak": {
+			"name": "Hvannadalshnkur",
+			"elevation": 2110
+		},
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Austurland means “eastern land”.",
+				"Fáskrúðsfjörður’s street signs also appear in French.",
+				"Its restored French hospital tells the fishermen’s story."
+			],
+			"it": [
+				"Austurland significa “terra orientale”.",
+				"A Fáskrúðsfjörður i cartelli stradali sono anche in francese.",
+				"Il suo ospedale francese restaurato racconta la storia dei pescatori."
+			],
+			"de": [
+				"Austurland bedeutet „östliches Land“.",
+				"In Fáskrúðsfjörður sind Straßenschilder auch auf Französisch beschriftet.",
+				"Das restaurierte französische Krankenhaus erzählt die Geschichte der Fischer."
+			]
+		}
+	},
+	"vesturland": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Höfuðborgarsvæðið",
+			"Norðurland vestra",
+			"Suðurland",
+			"Vestfirðir"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Borgarnes",
+			"nameDe": "Borgarnes",
+			"nameIt": "Borgarnes",
+			"population": 1783
+		},
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Vesturland means “western land”.",
+				"Snæfellsjökull inspired Jules Verne’s journey into the Earth.",
+				"Borgarnes’s Settlement Centre brings Egils saga to life."
+			],
+			"it": [
+				"Vesturland significa “terra occidentale”.",
+				"Snæfellsjökull ispirò il viaggio di Jules Verne al centro della Terra.",
+				"Il Centro della Colonizzazione di Borgarnes dà vita alla Saga di Egill."
+			],
+			"de": [
+				"Vesturland bedeutet „westliches Land“.",
+				"Snæfellsjökull inspirierte Jules Vernes Reise ins Erdinnere.",
+				"Das Landnahmezentrum in Borgarnes erweckt die Egils saga zum Leben."
+			]
+		}
+	},
+	"hofu-borgarsv-i": {
+		"kind": "region",
+		"borders": [
+			"Suðurland",
+			"Suðurnes",
+			"Vesturland"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Reykjavík",
+			"nameDe": "Reykjavík",
+			"nameIt": "Reykjavík",
+			"population": 166212
+		},
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Höfuðborgarsvæðið means “the capital area”.",
+				"Reykjavík became a UNESCO City of Literature in 2011.",
+				"Harpa won the Mies van der Rohe architecture prize in 2013."
+			],
+			"it": [
+				"Höfuðborgarsvæðið significa “l’area della capitale”.",
+				"Reykjavík divenne Città della Letteratura UNESCO nel 2011.",
+				"Harpa vinse il premio di architettura Mies van der Rohe nel 2013."
+			],
+			"de": [
+				"Höfuðborgarsvæðið bedeutet „das Hauptstadtgebiet“.",
+				"Reykjavík wurde 2011 UNESCO-Literaturstadt.",
+				"Harpa gewann 2013 den Mies-van-der-Rohe-Architekturpreis."
+			]
+		}
+	},
+	"su-urland": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Austurland",
+			"Höfuðborgarsvæðið",
+			"Norðurland eystra",
+			"Norðurland vestra",
+			"Suðurnes",
+			"Vesturland"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Selfoss",
+			"nameDe": "Selfoss",
+			"nameIt": "Selfoss",
+			"population": 6275
+		},
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Suðurland means “southern land”.",
+				"The Alþingi first assembled at Þingvellir in 930.",
+				"Heimaey’s 1973 eruption forced an overnight evacuation."
+			],
+			"it": [
+				"Suðurland significa “terra meridionale”.",
+				"L’Alþingi si riunì per la prima volta a Þingvellir nel 930.",
+				"L’eruzione del 1973 a Heimaey impose un’evacuazione notturna."
+			],
+			"de": [
+				"Suðurland bedeutet „südliches Land“.",
+				"Das Alþingi trat 930 erstmals in Þingvellir zusammen.",
+				"Der Ausbruch auf Heimaey 1973 erzwang eine nächtliche Evakuierung."
+			]
+		}
+	},
+	"su-urnes": {
+		"kind": "region",
+		"type": "Independent Town",
+		"borders": [
+			"Höfuðborgarsvæðið",
+			"Suðurland"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Keflavík",
+			"nameDe": "Keflavík",
+			"nameIt": "Keflavík",
+			"population": 7930
+		},
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Suðurnes means “southern headlands”.",
+				"Water discharged from Svartsengi’s power station created the Blue Lagoon.",
+				"Here the North American and Eurasian plates pull apart."
+			],
+			"it": [
+				"Suðurnes significa “promontori meridionali”.",
+				"L’acqua scaricata dalla centrale di Svartsengi creò la Laguna Blu.",
+				"Qui le placche nordamericana ed eurasiatica si allontanano."
+			],
+			"de": [
+				"Suðurnes bedeutet „südliche Landzungen“.",
+				"Abgeleitetes Wasser des Kraftwerks Svartsengi schuf die Blaue Lagune.",
+				"Hier driften die nordamerikanische und die eurasische Platte auseinander."
+			]
+		}
+	}
+}

@@ -1,0 +1,757 @@
+{
+	"id": "hungary-counties",
+	"name": "Hungary — Counties",
+	"country": "Hungary",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"boundaryRenames": {
+		"Sopron": "Győr-Moson-Sopron",
+		"Szeged": "Csongrád-Csanád",
+		"Salgótarján": "Nógrád",
+		"Szolnok": "Jász-Nagykun-Szolnok",
+		"Érd": "Pest",
+		"Eger": "Heves",
+		"Miskolc": "Borsod-Abaúj-Zemplén",
+		"Hódmezôvásárhely": "Csongrád-Csanád",
+		"Dunaújváros": "Fejér",
+		"Kecskemét": "Bács-Kiskun",
+		"Tatabánya": "Komárom-Esztergom",
+		"Gyôr": "Győr-Moson-Sopron",
+		"Szombathely": "Vas",
+		"Zalaegerszeg": "Zala",
+		"Nagykanizsa": "Zala",
+		"Kaposvár": "Somogy",
+		"Pécs": "Baranya",
+		"Szekszárd": "Tolna",
+		"Székesfehérvár": "Fejér",
+		"Békéscsaba": "Békés",
+		"Debrecen": "Hajdú-Bihar",
+		"Nyíregyháza": "Szabolcs-Szatmár-Bereg",
+		"Gyor-Moson-Sopron": "Győr-Moson-Sopron",
+		"Csongrád": "Csongrád-Csanád"
+	},
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "borsod-abauj-zemplen",
+			"name": "Borsod-Abaúj-Zemplén",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				21.098300000000002,
+				48.1207
+			],
+			"bbox": [
+				20.0383,
+				47.6723,
+				22.1583,
+				48.5691
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						20.421,
+						48.1677
+					],
+					[
+						21.0005,
+						48.0696
+					],
+					[
+						21.5799,
+						48.3425
+					]
+				],
+				"aspect": 1.51
+			}
+		},
+		{
+			"id": "szabolcs-szatmar-bereg",
+			"name": "Szabolcs-Szatmár-Bereg",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				21.987650000000002,
+				47.992850000000004
+			],
+			"bbox": [
+				21.1137,
+				47.5822,
+				22.8616,
+				48.4035
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						21.5499,
+						47.9799
+					],
+					[
+						22.124,
+						48.0301
+					],
+					[
+						22.697,
+						47.9661
+					]
+				],
+				"aspect": 1.54
+			}
+		},
+		{
+			"id": "nograd",
+			"name": "Nógrád",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				19.51475,
+				47.966499999999996
+			],
+			"bbox": [
+				18.9336,
+				47.706,
+				20.0959,
+				48.227
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						19.0274,
+						47.9618
+					],
+					[
+						19.5004,
+						47.8851
+					],
+					[
+						19.885,
+						48.0744
+					]
+				],
+				"aspect": 2.31
+			}
+		},
+		{
+			"id": "heves",
+			"name": "Heves",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.1774,
+				47.790549999999996
+			],
+			"bbox": [
+				19.5807,
+				47.4297,
+				20.7741,
+				48.1514
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						19.7338,
+						47.8517
+					],
+					[
+						20.1556,
+						47.9229
+					],
+					[
+						20.5774,
+						47.7224
+					]
+				],
+				"aspect": 1.51
+			}
+		},
+		{
+			"id": "gyor-moson-sopron",
+			"name": "Győr-Moson-Sopron",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.22065,
+				47.70935
+			],
+			"bbox": [
+				16.5578,
+				47.3984,
+				17.8835,
+				48.0203
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						16.7762,
+						47.5802
+					],
+					[
+						17.2827,
+						47.772
+					],
+					[
+						17.7892,
+						47.6365
+					]
+				],
+				"aspect": 1.93
+			}
+		},
+		{
+			"id": "komarom-esztergom",
+			"name": "Komárom-Esztergom",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.402,
+				47.5873
+			],
+			"bbox": [
+				17.8825,
+				47.3424,
+				18.9215,
+				47.8322
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						17.9666,
+						47.5272
+					],
+					[
+						18.375,
+						47.6479
+					],
+					[
+						18.8052,
+						47.7283
+					]
+				],
+				"aspect": 2.23
+			}
+		},
+		{
+			"id": "pest",
+			"name": "Pest",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				19.4157,
+				47.4999
+			],
+			"bbox": [
+				18.685,
+				46.9455,
+				20.1464,
+				48.0543
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						18.9012,
+						47.9104
+					],
+					[
+						19.2444,
+						47.3745
+					],
+					[
+						19.9458,
+						47.0536
+					]
+				],
+				"aspect": 3.63
+			}
+		},
+		{
+			"id": "budapest",
+			"name": "Budapest",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				19.128149999999998,
+				47.4835
+			],
+			"bbox": [
+				18.9296,
+				47.3602,
+				19.3267,
+				47.6068
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						18.967,
+						47.4834
+					],
+					[
+						19.0977,
+						47.4752
+					],
+					[
+						19.2283,
+						47.4747
+					]
+				],
+				"aspect": 0.81
+			}
+		},
+		{
+			"id": "hajdu-bihar",
+			"name": "Hajdú-Bihar",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				21.4867,
+				47.45065
+			],
+			"bbox": [
+				20.8192,
+				46.9408,
+				22.1542,
+				47.9605
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						21.068,
+						47.5459
+					],
+					[
+						21.4882,
+						47.3545
+					],
+					[
+						21.9084,
+						47.436
+					]
+				],
+				"aspect": 0.75
+			}
+		},
+		{
+			"id": "jasz-nagykun-szolnok",
+			"name": "Jász-Nagykun-Szolnok",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.35135,
+				47.221900000000005
+			],
+			"bbox": [
+				19.6748,
+				46.7644,
+				21.0279,
+				47.6794
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						20.0119,
+						47.2266
+					],
+					[
+						20.4559,
+						47.0812
+					],
+					[
+						20.9,
+						47.2258
+					]
+				],
+				"aspect": 1.02
+			}
+		},
+		{
+			"id": "fejer",
+			"name": "Fejér",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.535600000000002,
+				47.13465
+			],
+			"bbox": [
+				18.1032,
+				46.7074,
+				18.968,
+				47.5619
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						18.2419,
+						47.1103
+					],
+					[
+						18.5476,
+						47.1908
+					],
+					[
+						18.8533,
+						47.0716
+					]
+				],
+				"aspect": 0.6
+			}
+		},
+		{
+			"id": "vas",
+			"name": "Vas",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.68975,
+				47.07535
+			],
+			"bbox": [
+				16.1591,
+				46.6965,
+				17.2204,
+				47.4542
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						16.3608,
+						46.8748
+					],
+					[
+						16.6459,
+						47.1671
+					],
+					[
+						17.101,
+						47.3367
+					]
+				],
+				"aspect": 2.2
+			}
+		},
+		{
+			"id": "veszprem",
+			"name": "Veszprém",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.6627,
+				47.0597
+			],
+			"bbox": [
+				17.098,
+				46.6646,
+				18.2274,
+				47.4548
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						17.2106,
+						47
+					],
+					[
+						17.6274,
+						47.2115
+					],
+					[
+						18.0443,
+						47.1508
+					]
+				],
+				"aspect": 0.9
+			}
+		},
+		{
+			"id": "bekes",
+			"name": "Békés",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				21.0336,
+				46.73605
+			],
+			"bbox": [
+				20.4187,
+				46.2361,
+				21.6485,
+				47.236
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						20.6471,
+						46.6593
+					],
+					[
+						21.0334,
+						46.7462
+					],
+					[
+						21.4196,
+						46.8199
+					]
+				],
+				"aspect": 0.69
+			}
+		},
+		{
+			"id": "zala",
+			"name": "Zala",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				16.793300000000002,
+				46.67945
+			],
+			"bbox": [
+				16.3662,
+				46.3121,
+				17.2204,
+				47.0468
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						16.5043,
+						46.6826
+					],
+					[
+						16.8075,
+						46.6532
+					],
+					[
+						17.1107,
+						46.696
+					]
+				],
+				"aspect": 0.76
+			}
+		},
+		{
+			"id": "bacs-kiskun",
+			"name": "Bács-Kiskun",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				19.466099999999997,
+				46.5286
+			],
+			"bbox": [
+				18.7858,
+				45.9056,
+				20.1464,
+				47.1516
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						19.1215,
+						46.0969
+					],
+					[
+						19.3901,
+						46.5114
+					],
+					[
+						19.5462,
+						46.9522
+					]
+				],
+				"aspect": 1.43
+			}
+		},
+		{
+			"id": "tolna",
+			"name": "Tolna",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.519849999999998,
+				46.47405
+			],
+			"bbox": [
+				18.0379,
+				46.0997,
+				19.0018,
+				46.8484
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						18.1337,
+						46.5863
+					],
+					[
+						18.4895,
+						46.5078
+					],
+					[
+						18.8453,
+						46.4134
+					]
+				],
+				"aspect": 0.98
+			}
+		},
+		{
+			"id": "csongrad-csanad",
+			"name": "Csongrád-Csanád",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.22025,
+				46.47055
+			],
+			"bbox": [
+				19.6531,
+				46.1378,
+				20.7874,
+				46.8033
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						19.9293,
+						46.4048
+					],
+					[
+						20.2393,
+						46.5293
+					],
+					[
+						20.5493,
+						46.4489
+					]
+				],
+				"aspect": 0.68
+			}
+		},
+		{
+			"id": "somogy",
+			"name": "Somogy",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.548650000000002,
+				46.41205
+			],
+			"bbox": [
+				16.8793,
+				45.8521,
+				18.218,
+				46.972
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						17.2914,
+						46.1665
+					],
+					[
+						17.5982,
+						46.5157
+					],
+					[
+						18.0044,
+						46.8134
+					]
+				],
+				"aspect": 1.62
+			}
+		},
+		{
+			"id": "baranya",
+			"name": "Baranya",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.2347,
+				46.0774
+			],
+			"bbox": [
+				17.617,
+				45.7432,
+				18.8524,
+				46.4116
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						17.7402,
+						46.0129
+					],
+					[
+						18.1962,
+						46.1355
+					],
+					[
+						18.6522,
+						45.9963
+					]
+				],
+				"aspect": 1.3
+			}
+		}
+	],
+	"tourOrder": [
+		"borsod-abauj-zemplen",
+		"szabolcs-szatmar-bereg",
+		"nograd",
+		"heves",
+		"gyor-moson-sopron",
+		"komarom-esztergom",
+		"pest",
+		"budapest",
+		"hajdu-bihar",
+		"jasz-nagykun-szolnok",
+		"fejer",
+		"vas",
+		"veszprem",
+		"bekes",
+		"zala",
+		"bacs-kiskun",
+		"tolna",
+		"csongrad-csanad",
+		"somogy",
+		"baranya"
+	]
+}

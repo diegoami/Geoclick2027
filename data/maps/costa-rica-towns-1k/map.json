@@ -1,0 +1,258 @@
+{
+	"id": "costa-rica-towns-1k",
+	"name": "Costa Rica — Towns",
+	"country": "Costa Rica",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "la-cruz",
+			"name": "La Cruz",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-85.6300035,
+				11.0704212
+			],
+			"bbox": [
+				-85.6300035,
+				11.0704212,
+				-85.6300035,
+				11.0704212
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "liberia",
+			"name": "Liberia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-85.433323,
+				10.6337553
+			],
+			"bbox": [
+				-85.433323,
+				10.6337553,
+				-85.433323,
+				10.6337553
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "canas",
+			"name": "Cañas",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-85.10001,
+				10.4299951
+			],
+			"bbox": [
+				-85.10001,
+				10.4299951,
+				-85.10001,
+				10.4299951
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "quesada",
+			"name": "Quesada",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-84.4399728,
+				10.3304922
+			],
+			"bbox": [
+				-84.4399728,
+				10.3304922,
+				-84.4399728,
+				10.3304922
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "alajuela",
+			"name": "Alajuela",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-84.2300373,
+				10.0200202
+			],
+			"bbox": [
+				-84.2300373,
+				10.0200202,
+				-84.2300373,
+				10.0200202
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "limon",
+			"name": "Limón",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-83.0333403,
+				10.0000214
+			],
+			"bbox": [
+				-83.0333403,
+				10.0000214,
+				-83.0333403,
+				10.0000214
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "heredia",
+			"name": "Heredia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-84.1200025,
+				9.991998
+			],
+			"bbox": [
+				-84.1200025,
+				9.991998,
+				-84.1200025,
+				9.991998
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "puntarenas",
+			"name": "Puntarenas",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-84.8335895,
+				9.9701641
+			],
+			"bbox": [
+				-84.8335895,
+				9.9701641,
+				-84.8335895,
+				9.9701641
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "san-jose",
+			"name": "San José",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-84.07881396964633,
+				9.930370727948475
+			],
+			"bbox": [
+				-84.07881396964633,
+				9.930370727948475,
+				-84.07881396964633,
+				9.930370727948475
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "cartago",
+			"name": "Cartago",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-83.9299781,
+				9.8699776
+			],
+			"bbox": [
+				-83.9299781,
+				9.8699776,
+				-83.9299781,
+				9.8699776
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "sixaola",
+			"name": "Sixaola",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-82.6199805,
+				9.5203866
+			],
+			"bbox": [
+				-82.6199805,
+				9.5203866,
+				-82.6199805,
+				9.5203866
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "ciudad-cortes",
+			"name": "Ciudad Cortés",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-83.5300025,
+				8.9603691
+			],
+			"bbox": [
+				-83.5300025,
+				8.9603691,
+				-83.5300025,
+				8.9603691
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "golfito",
+			"name": "Golfito",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-83.149974,
+				8.6500263
+			],
+			"bbox": [
+				-83.149974,
+				8.6500263,
+				-83.149974,
+				8.6500263
+			],
+			"colorIndex": 5
+		}
+	],
+	"tourOrder": [
+		"la-cruz",
+		"liberia",
+		"canas",
+		"quesada",
+		"alajuela",
+		"limon",
+		"heredia",
+		"puntarenas",
+		"san-jose",
+		"cartago",
+		"sixaola",
+		"ciudad-cortes",
+		"golfito"
+	]
+}

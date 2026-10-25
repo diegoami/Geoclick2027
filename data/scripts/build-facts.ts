@@ -1,3 +1,4 @@
+import { applyBoundaryRenames } from './boundaryRenames.js';
 // Builds data/maps/<id>/facts.json - the derived half of the fact box
 // (FT-34, docs/PLAN_V0.8.md).
 //
@@ -380,6 +381,8 @@ async function buildOne(mapId: string): Promise<number> {
 		country?: string;
 		placesSource?: string;
 		boundarySource?: string;
+		boundaryFacts?: boolean;
+		boundaryRenames?: Record<string, string>;
 		targets: (MapTarget & { country?: string })[];
 	};
 	const usable = map.targets.filter((t) => !t.crossesAntimeridian && !crossesAntimeridian(t.bbox));
@@ -391,6 +394,31 @@ async function buildOne(mapId: string): Promise<number> {
 		map.placesSource ? path.join(REPO_ROOT, map.placesSource) : undefined
 	);
 
+	// Prepared external snapshots may supply canonical name/admin properties.
+	// Use their actual geometry for area/coast/city facts rather than old admin-1.
+	if (map.boundaryFacts) {
+		if (!map.boundarySource) throw new Error('boundaryFacts requires boundarySource');
+		const external = JSON.parse(readFileSync(path.join(REPO_ROOT, map.boundarySource), 'utf8')) as {
+			features: Feature<AnyGeometry & { type: string }>[];
+		};
+		if (
+			!Array.isArray(external.features) ||
+			!external.features.length ||
+			external.features.some(
+				(feature) =>
+					feature.properties.admin !== map.country ||
+					typeof feature.properties.name !== 'string' ||
+					!['Polygon', 'MultiPolygon'].includes(feature.geometry.type)
+			)
+		)
+			throw new Error('Boundary fact source must contain named polygons for this country');
+		sources.admin1 = external.features;
+	}
+
+	// Match the same unions used by --rename + --dissolve=name. Without this,
+	// county-right cities can disappear from their merged county's facts.
+	if (map.boundaryRenames)
+		sources.admin1 = applyBoundaryRenames(sources.admin1, map.country, map.boundaryRenames);
 	const isCityMap = map.targets[0]?.type === 'city';
 	const facts = isCityMap
 		? factsForCityMap(map.targets, sources, extent)
@@ -399,7 +427,7 @@ async function buildOne(mapId: string): Promise<number> {
 				sources,
 				extent,
 				await adjacencyForMapDir(absOutDir),
-				!map.boundarySource
+				!map.boundarySource || !!map.boundaryFacts
 			);
 
 	// The authored name-facts, where a person has written any (FT-36).

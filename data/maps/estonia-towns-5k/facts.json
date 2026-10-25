@@ -1,0 +1,174 @@
+{
+	"maardu": {
+		"kind": "city",
+		"population": 17017,
+		"populationRank": 7,
+		"coastal": true,
+		"position": "north"
+	},
+	"tallinn": {
+		"kind": "city",
+		"population": 457572,
+		"populationRank": 1,
+		"capitalOf": "country",
+		"coastal": true,
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Probably from taani linn, \"Danish town\", after the Danish conquest of 1219.",
+				"Its medieval old town is a UNESCO site.",
+				"Skype was built here by Estonian programmers."
+			],
+			"it": [
+				"Probabilmente da taani linn, \"città danese\", dopo la conquista danese del 1219.",
+				"Il suo centro medievale è un sito UNESCO.",
+				"Skype fu sviluppato qui da programmatori estoni."
+			],
+			"de": [
+				"Wahrscheinlich von taani linn, „dänische Stadt“, nach der dänischen Eroberung von 1219.",
+				"Ihre mittelalterliche Altstadt ist eine UNESCO-Stätte.",
+				"Skype wurde hier von estnischen Programmierern entwickelt."
+			]
+		}
+	},
+	"kohtla-jarve": {
+		"kind": "city",
+		"population": 33434,
+		"populationRank": 5,
+		"coastal": true,
+		"position": "north-east"
+	},
+	"sillamae": {
+		"kind": "city",
+		"population": 12352,
+		"populationRank": 10,
+		"coastal": true,
+		"position": "north-east"
+	},
+	"narva": {
+		"kind": "city",
+		"population": 53360,
+		"populationRank": 3,
+		"coastal": true,
+		"position": "north-east"
+	},
+	"johvi": {
+		"kind": "city",
+		"population": 10880,
+		"populationRank": 14,
+		"coastal": true,
+		"position": "north-east"
+	},
+	"rakvere": {
+		"kind": "city",
+		"population": 15695,
+		"populationRank": 8,
+		"coastal": false,
+		"position": "north-east"
+	},
+	"saue": {
+		"kind": "city",
+		"population": 6227,
+		"populationRank": 17,
+		"coastal": true,
+		"position": "north"
+	},
+	"keila": {
+		"kind": "city",
+		"population": 10964,
+		"populationRank": 13,
+		"coastal": true,
+		"position": "north"
+	},
+	"tapa": {
+		"kind": "city",
+		"population": 5492,
+		"populationRank": 20,
+		"coastal": false,
+		"position": "north"
+	},
+	"haapsalu": {
+		"kind": "city",
+		"population": 9812,
+		"populationRank": 15,
+		"coastal": true,
+		"position": "north-west"
+	},
+	"paide": {
+		"kind": "city",
+		"population": 8073,
+		"populationRank": 16,
+		"coastal": false,
+		"position": "centre"
+	},
+	"parnu": {
+		"kind": "city",
+		"population": 41520,
+		"populationRank": 4,
+		"coastal": true,
+		"position": "centre"
+	},
+	"tartu": {
+		"kind": "city",
+		"population": 97759,
+		"populationRank": 2,
+		"coastal": false,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Its university was founded in 1632 by the Swedish king Gustavus Adolphus.",
+				"It calls itself the city of good thoughts."
+			],
+			"it": [
+				"La sua università fu fondata nel 1632 dal re di Svezia Gustavo Adolfo.",
+				"Si definisce la città dei buoni pensieri."
+			],
+			"de": [
+				"Ihre Universität wurde 1632 vom schwedischen König Gustav Adolf gegründet.",
+				"Sie nennt sich die Stadt der guten Gedanken."
+			]
+		}
+	},
+	"viljandi": {
+		"kind": "city",
+		"population": 17255,
+		"populationRank": 6,
+		"coastal": false,
+		"position": "centre"
+	},
+	"kuressaare": {
+		"kind": "city",
+		"population": 13185,
+		"populationRank": 9,
+		"coastal": true,
+		"position": "south-west"
+	},
+	"elva": {
+		"kind": "city",
+		"population": 5692,
+		"populationRank": 18,
+		"coastal": false,
+		"position": "south-east"
+	},
+	"polva": {
+		"kind": "city",
+		"population": 5498,
+		"populationRank": 19,
+		"coastal": false,
+		"position": "south-east"
+	},
+	"voru": {
+		"kind": "city",
+		"population": 12112,
+		"populationRank": 12,
+		"coastal": false,
+		"position": "south-east"
+	},
+	"valga": {
+		"kind": "city",
+		"population": 12173,
+		"populationRank": 11,
+		"coastal": false,
+		"position": "south"
+	}
+}

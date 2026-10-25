@@ -8,12 +8,12 @@ This plan records work still to land; it is not a claim that 1.0.0 is released.
 
 | Batch | Status | Deliverable |
 | --- | --- | --- |
-| Distribution | Migration verified; [PR #242](https://github.com/diegoami/Geoclick2027/pull/242) awaiting owner merge | Verified migration of 39 releases into Geoclick2027; links and publisher updated |
-| Boundary and target audit | Pending | Licensed, reproducible sources and suitable map types for 22 countries |
-| Maps | Pending | Administrative maps and towns/urban maps; generated through the existing pipeline |
-| Facts | Pending | Facts for added targets in English, German, and Italian; existing target gaps audited |
+| Distribution | Complete; [PR #242](https://github.com/diegoami/Geoclick2027/pull/242) merged | Verified migration of 39 releases into Geoclick2027; links and publisher updated |
+| Boundary and target audit | In progress; first six countries audited | Licensed, reproducible sources and suitable map types for 22 countries |
+| Maps | First twelve generated and registered; unfinished and unreviewed | Administrative maps and towns/urban maps; generated through the existing pipeline |
+| Facts | Five first-batch countries complete in EN/DE/IT; Estonia has 34 sets left | Facts for added targets in English, German, and Italian; existing target gaps audited |
 | Content completion | Pending | Deferred thin towns maps and German/Italian manual checked against agreed scope |
-| itch.io | Pending | #240 viewport baseline, ZIP verification, smoke tests and guarded upload |
+| itch.io | Developer prepares package/assets; owner handles page and upload | #240 viewport baseline, ZIP smoke test, screenshots, cover, descriptions, tags and local listing preview |
 | Release preparation | Pending | Seven manifests and lockfile entries at 1.0.0; accurate CHANGELOG; gates |
 | Milestone and publication | Pending | Owner-approved merge, milestone review, installers tried, exact tag and publication |
 | Retirement | Pending | Delete old release repository only after migration verification and merged replacement links |
@@ -83,7 +83,7 @@ original metadata, a Git mirror, issue metadata, every asset, the reviewed
 backup report and final-github-audit.json. Exactly two original v0.7.0 Windows
 checksum entries are stale; copied notes disclose their verified hashes while
 the original manifest and installers remain unchanged. The old repository is
-still intact. Replacement links and publisher changes await PR #242 merge.
+still intact. Replacement links and publisher changes landed in PR #242 (merge d296ac3).
 This is migration of historical versions, not publication of v1.0.0.
 
 Run from the implementing worktree after fetching tags:
@@ -114,12 +114,11 @@ part of the migration tool. Old external URLs will stop working after deletion.
 
 ## itch.io and final verification
 
-Owner resolution update (2026-10-25), superseding the earlier #240 baseline:
+Implementation target following the owner rejecting 640x480 (2026-10-25), superseding the earlier #240 baseline:
 target **1280x800** for desktop/itch.io and check **1024x768** as a lower bound.
 640x480 is not a release requirement. Check phones/tablets separately, record
 the chosen embed size, keep fullscreen under player control, and test
-the extracted ZIP rather than just source. Upload only through an available
-authorized route to diegoami/geoclick. Do not claim an upload or phone test
+the extracted ZIP rather than just source. The owner handles itch.io navigation, page changes and upload. Do not claim an upload or phone test
 without evidence.
 
 Label local tests separately from deployment testing. Local browser checks,
@@ -161,3 +160,54 @@ these need newer data or a different geographic level before map building.
 | CRI | 2017 | 7 | Open Data Commons Open Database License 1.0 |
 
 Metadata endpoint: https://www.geoboundaries.org/api/current/gbOpen/ISO/ADM1/ (replace ISO).
+
+## itch.io asset handoff (owner request, 2026-10-25)
+
+Do not navigate to itch.io or edit its page: the owner will do that.
+Prepare an upload-ready local pack containing authentic final-build screenshots,
+a cover using existing branding, short and full descriptions, suggested tags,
+platform/control/language details, installation notes and a local listing preview.
+Supply the tested HTML5 package and relevant installer references/files for the
+owner to upload. Final screenshots must reflect the actual 1.0.0 build and its
+contents; candidate previews must be identified as such. No invented counts,
+reviews, awards, unsupported platforms or simulated gameplay screenshots.
+
+
+## Country-expansion checkpoint (2026-10-25)
+
+Paused at the owner's request. Branch: maps/v1.0-country-expansion.
+Worktree: C:/Users/diego/projects/Geoclick2027-work/maps-v1.0-country-expansion.
+This is unfinished work, with no code PR or external review yet.
+
+Hungary, Slovakia, Estonia, Lithuania, Iceland and Costa Rica have twelve
+registered maps adding 170 targets: 185 maps, 63 country groups plus six
+continents. The index has 64 country labels because Natural Earth uses both
+Czech Republic and Czechia.
+
+Hungary, Slovakia, Lithuania, Iceland and Costa Rica have at least three authored
+sentences per new target in English, Italian and German. Estonia still needs
+34 sets: all 15 counties and 19 towns; Tallinn already has a complete set.
+Generated hooks were refreshed from completed authored inputs, including shared
+continent targets. The other 16 approved countries are not implemented.
+
+Next: finish Estonia's authored facts; refresh hooks; verify complete target
+coverage and facts in all three languages; inspect maps and desktop resolution;
+then continue the remaining countries. Finish documentation, local gates and
+external-family code review before handing a PR to the owner.
+
+Windows is canonical. A preserved Linux build mirror with its own dependencies,
+raw sources and tile tools is at
+/home/diego/projects/Geoclick2027-build/v1.0-connected-20261025.
+Overlay committed tracked branch files before rebuilding; never copy Windows
+node_modules. MAPS.md records the batch commands.
+
+Version remains 0.20.0. No 1.0.0 bump, candidate, milestone review, tag,
+installers, publication or itch.io asset pack exists yet. The old releases
+repository still exists; its verified backup and migrated releases are preserved.
+The owner handles itch.io navigation and upload; the developer still owes the
+asset pack above. No deployment was tested (deploys remain stopped).
+The Geoclick dev server is stopped; resume on port 5187 with --strictPort,
+because 5173 belongs to another game.
+
+Checkpoint local verification: check, tests, lint and build all passed through
+npm run gates -- --quiet. Visual/browser and installer checks remain pending.

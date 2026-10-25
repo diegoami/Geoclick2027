@@ -2,7 +2,8 @@
 	"_note": [
 		"Name-facts for Slovakia (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences."
+		"of the same id, written later, never shows a town's sentences.",
+		"v1.0 adds region/town facts in English, Italian and German; _sources records checking references by target and kind."
 	],
 	"bratislava": {
 		"city": {
@@ -26,16 +27,605 @@
 	"kosice": {
 		"city": {
 			"en": [
-				"Its Cathedral of Saint Elisabeth is the largest church in Slovakia.",
-				"It was a European Capital of Culture in 2013."
+				"Cassovia was its medieval Latin name.",
+				"An early royal coat-of-arms grant dates from 1369.",
+				"Saint Elisabeth’s cathedral became its great Gothic landmark."
 			],
 			"it": [
-				"La sua cattedrale di Santa Elisabetta è la chiesa più grande della Slovacchia.",
-				"Fu Capitale europea della cultura nel 2013."
+				"Cassovia era il suo nome latino medievale.",
+				"Una delle prime concessioni reali di stemma risale al 1369.",
+				"La cattedrale di Sant’Elisabetta divenne il suo grande simbolo gotico."
 			],
 			"de": [
-				"Ihr Dom der heiligen Elisabeth ist die größte Kirche der Slowakei.",
-				"Sie war 2013 Europäische Kulturhauptstadt."
+				"Cassovia war der mittelalterliche lateinische Name.",
+				"Eine frühe königliche Wappenverleihung stammt von 1369.",
+				"Der Elisabethdom wurde zum großen gotischen Wahrzeichen."
+			]
+		}
+	},
+	"_sources": {
+		"zilinsky:region": [
+			"https://slovakia.travel/en/zilina-administrative-region",
+			"https://en.wikipedia.org/wiki/Orava_Castle"
+		],
+		"presovsky:region": [
+			"https://slovakia.travel/en/presov-administrative-region"
+		],
+		"trenciansky:region": [
+			"https://slovakia.travel/en/trencin-administrative-region"
+		],
+		"kosicky:region": [
+			"https://slovakia.travel/en/kosice-administrative-region",
+			"https://en.wikipedia.org/wiki/Caves_of_Aggtelek_Karst_and_Slovak_Karst"
+		],
+		"banskobystricky:region": [
+			"https://slovakia.travel/en/banska-bystrica-administrative-region",
+			"https://en.wikipedia.org/wiki/Bansk%C3%A1_Bystrica"
+		],
+		"bratislavsky:region": [
+			"https://slovakia.travel/en/bratislava-administrative-region"
+		],
+		"trnavsky:region": [
+			"https://slovakia.travel/en/trnava-administrative-region",
+			"https://en.wikipedia.org/wiki/Trnava"
+		],
+		"nitriansky:region": [
+			"https://slovakia.travel/en/nitra-administrative-region"
+		],
+		"bardejov:city": [
+			"https://www.bardejov.sk/images/stories/mestsky_urad/strateg_a_rozvoj_dokumenty_mesta/koncepcie/manazment_plan_sk.pdf",
+			"https://en.wikipedia.org/wiki/Bardejov"
+		],
+		"zilina:city": [
+			"https://zilina.sk/zilina-na-historickych-fotografiach/",
+			"https://slovakia.travel/en/zilina"
+		],
+		"povazska-bystrica:city": [
+			"https://en.wikipedia.org/wiki/Pova%C5%BEsk%C3%A1_Bystrica"
+		],
+		"liptovsky-mikulas:city": [
+			"https://en.wikipedia.org/wiki/Liptovsk%C3%BD_Mikul%C3%A1%C5%A1"
+		],
+		"martin:city": [
+			"https://en.wikipedia.org/wiki/Martin%2C_Slovakia"
+		],
+		"poprad:city": [
+			"https://en.wikipedia.org/wiki/Poprad"
+		],
+		"presov:city": [
+			"https://en.wikipedia.org/wiki/Pre%C5%A1ov"
+		],
+		"spisska-nova-ves:city": [
+			"https://en.wikipedia.org/wiki/Spi%C5%A1sk%C3%A1_Nov%C3%A1_Ves"
+		],
+		"trencin:city": [
+			"https://trencin.sk/pre-obcanov/o-meste/historia-mesta/historia-trencina/"
+		],
+		"prievidza:city": [
+			"https://www.juls.savba.sk/ediela/sr/1972/2/sr1972-2-lq.pdf",
+			"https://en.wikipedia.org/wiki/Prievidza"
+		],
+		"michalovce:city": [
+			"https://en.wikipedia.org/wiki/Michalovce"
+		],
+		"banska-bystrica:city": [
+			"https://en.wikipedia.org/wiki/Bansk%C3%A1_Bystrica"
+		],
+		"kosice:city": [
+			"https://slovakia.travel/en/places-to-go/the-best-of-slovakia/kosice"
+		],
+		"zvolen:city": [
+			"https://en.wikipedia.org/wiki/Zvolen"
+		],
+		"trnava:city": [
+			"https://en.wikipedia.org/wiki/Trnava"
+		],
+		"nitra:city": [
+			"https://en.wikipedia.org/wiki/Nitra"
+		],
+		"levice:city": [
+			"https://reginazapad.stvr.sk/relacie-a-rubriky/aktualne-rubriky/ulickami-stareho-mesta/362167/ulica-kalmana-kittenbergera-v-leviciach",
+			"https://en.wikipedia.org/wiki/Levice"
+		],
+		"nove-zamky:city": [
+			"https://en.wikipedia.org/wiki/Nov%C3%A9_Z%C3%A1mky"
+		],
+		"komarno:city": [
+			"https://en.wikipedia.org/wiki/Kom%C3%A1rno",
+			"https://slovakia.travel/en/nitra-administrative-region"
+		]
+	},
+	"zilinsky": {
+		"region": {
+			"en": [
+				"Žilinský is the regional adjective formed from Žilina.",
+				"Vlkolínec preserves a traditional village of wooden houses.",
+				"Orava Castle appeared in the 1922 film Nosferatu."
+			],
+			"it": [
+				"Žilinský è l’aggettivo regionale formato da Žilina.",
+				"Vlkolínec conserva un villaggio tradizionale di case in legno.",
+				"Il castello di Orava apparve nel film Nosferatu del 1922."
+			],
+			"de": [
+				"Žilinský ist das von Žilina gebildete regionale Adjektiv.",
+				"Vlkolínec bewahrt ein traditionelles Dorf aus Holzhäusern.",
+				"Die Arwaburg war im Film Nosferatu von 1922 zu sehen."
+			]
+		}
+	},
+	"presovsky": {
+		"region": {
+			"en": [
+				"The name is the adjective belonging to Prešov.",
+				"Levoča preserves the carved wooden altar of Master Paul.",
+				"Its Carpathian wooden churches include UNESCO-protected examples."
+			],
+			"it": [
+				"Il nome è l’aggettivo riferito a Prešov.",
+				"Levoča conserva l’altare ligneo scolpito dal Maestro Paolo.",
+				"Tra le sue chiese lignee dei Carpazi ve ne sono alcune tutelate dall’UNESCO."
+			],
+			"de": [
+				"Der Name ist das zu Prešov gehörende Adjektiv.",
+				"Levoča bewahrt den geschnitzten Holzaltar von Meister Paul.",
+				"Zu den karpatischen Holzkirchen gehören UNESCO-geschützte Beispiele."
+			]
+		}
+	},
+	"trenciansky": {
+		"region": {
+			"en": [
+				"Named after Trenčín, whose castle dominates its historic centre.",
+				"A Roman inscription survives beneath that castle.",
+				"Bojnice Castle was remodelled in a romantic medieval style."
+			],
+			"it": [
+				"Prende il nome da Trenčín, il cui castello domina il centro storico.",
+				"Sotto quel castello si conserva un’iscrizione romana.",
+				"Il castello di Bojnice fu trasformato in uno stile medievale romantico."
+			],
+			"de": [
+				"Benannt nach Trenčín, dessen Burg die Altstadt beherrscht.",
+				"Unter dieser Burg ist eine römische Inschrift erhalten.",
+				"Schloss Bojnice wurde im romantischen Mittelalterstil umgestaltet."
+			]
+		}
+	},
+	"kosicky": {
+		"region": {
+			"en": [
+				"Košický is the regional form of the name Košice.",
+				"Its Slovak Karst caves share a World Heritage site with Hungary.",
+				"Tokaj’s wine tradition continues along the Hungarian border."
+			],
+			"it": [
+				"Košický è la forma regionale del nome Košice.",
+				"Le grotte del Carso slovacco condividono un sito UNESCO con l’Ungheria.",
+				"La tradizione vinicola del Tokaj continua lungo il confine ungherese."
+			],
+			"de": [
+				"Košický ist die regionale Form des Namens Košice.",
+				"Die Höhlen des Slowakischen Karsts teilen eine Welterbestätte mit Ungarn.",
+				"Die Tokajer Weintradition reicht entlang der ungarischen Grenze."
+			]
+		}
+	},
+	"banskobystricky": {
+		"region": {
+			"en": [
+				"It takes its name from the mining town Banská Bystrica.",
+				"Banská Štiavnica preserves a UNESCO-listed mining landscape.",
+				"Banská Bystrica became the centre of the 1944 Slovak National Uprising."
+			],
+			"it": [
+				"Prende il nome dalla città mineraria di Banská Bystrica.",
+				"Banská Štiavnica conserva un paesaggio minerario riconosciuto dall’UNESCO.",
+				"Banská Bystrica divenne il centro dell’Insurrezione nazionale slovacca del 1944."
+			],
+			"de": [
+				"Die Region ist nach der Bergbaustadt Banská Bystrica benannt.",
+				"Banská Štiavnica bewahrt eine zum UNESCO-Welterbe gehörende Bergbaulandschaft.",
+				"Banská Bystrica wurde 1944 zum Zentrum des Slowakischen Nationalaufstands."
+			]
+		}
+	},
+	"bratislavsky": {
+		"region": {
+			"en": [
+				"Bratislavský is the adjective formed from Bratislava.",
+				"Devín Castle overlooks the Danube–Morava confluence.",
+				"Modra’s majolica workshops preserve a long pottery tradition."
+			],
+			"it": [
+				"Bratislavský è l’aggettivo formato da Bratislava.",
+				"Il castello di Devín domina la confluenza tra Danubio e Morava.",
+				"Le botteghe di maiolica di Modra conservano una lunga tradizione ceramica."
+			],
+			"de": [
+				"Bratislavský ist das von Bratislava gebildete Adjektiv.",
+				"Burg Devín überblickt den Zusammenfluss von Donau und March.",
+				"Modras Majolikawerkstätten bewahren eine lange Töpfertradition."
+			]
+		}
+	},
+	"trnavsky": {
+		"region": {
+			"en": [
+				"The name belongs to Trnava and its surrounding region.",
+				"Trnava’s many churches earned it the nickname “Little Rome”.",
+				"Piešťany’s spa heritage grew around warm mineral springs."
+			],
+			"it": [
+				"Il nome si riferisce a Trnava e alla regione circostante.",
+				"Le numerose chiese valsero a Trnava il soprannome di “Piccola Roma”.",
+				"La tradizione termale di Piešťany nacque intorno alle sorgenti minerali calde."
+			],
+			"de": [
+				"Der Name bezeichnet Trnava und seine umgebende Region.",
+				"Die vielen Kirchen brachten Trnava den Beinamen „Kleines Rom“ ein.",
+				"Piešťanys Badetradition entstand um warme Mineralquellen."
+			]
+		}
+	},
+	"nitriansky": {
+		"region": {
+			"en": [
+				"The region takes its name from Nitra.",
+				"Mlyňany’s arboretum collects trees from many parts of the world.",
+				"Rock-cut dwellings survive at Brhlovce."
+			],
+			"it": [
+				"La regione prende il nome da Nitra.",
+				"L’arboreto di Mlyňany raccoglie alberi di molte parti del mondo.",
+				"A Brhlovce si conservano abitazioni scavate nella roccia."
+			],
+			"de": [
+				"Die Region ist nach Nitra benannt.",
+				"Das Arboretum Mlyňany sammelt Bäume aus vielen Teilen der Welt.",
+				"In Brhlovce sind Felsenwohnungen erhalten."
+			]
+		}
+	},
+	"bardejov": {
+		"city": {
+			"en": [
+				"Its historic German name was Bartfeld.",
+				"Its medieval town centre joined the World Heritage List in 2000.",
+				"Saint Aegidius’s basilica preserves Gothic winged altars."
+			],
+			"it": [
+				"Il suo nome storico tedesco era Bartfeld.",
+				"Il centro medievale entrò nel Patrimonio mondiale nel 2000.",
+				"La basilica di Sant’Egidio conserva altari gotici a sportelli."
+			],
+			"de": [
+				"Der historische deutsche Name lautet Bartfeld.",
+				"Die mittelalterliche Altstadt wurde 2000 Welterbe.",
+				"Die Ägidiusbasilika bewahrt gotische Flügelaltäre."
+			]
+		}
+	},
+	"zilina": {
+		"city": {
+			"en": [
+				"A 1208 document calls the area terra de Selinan.",
+				"Arcaded houses frame Mariánske Square.",
+				"Budatín Castle presents the region’s wireworking tradition."
+			],
+			"it": [
+				"Un documento del 1208 chiama la zona terra de Selinan.",
+				"Case porticate incorniciano piazza Mariánske.",
+				"Il castello di Budatín presenta la tradizione regionale della lavorazione del filo metallico."
+			],
+			"de": [
+				"Ein Dokument von 1208 nennt die Gegend terra de Selinan.",
+				"Arkadenhäuser rahmen den Mariánske-Platz ein.",
+				"Burg Budatín zeigt die regionale Tradition der Drahtverarbeitung."
+			]
+		}
+	},
+	"povazska-bystrica": {
+		"city": {
+			"en": [
+				"Považská identifies this Bystrica with the Váh valley.",
+				"The medieval Považský Castle survives as ruins above the valley.",
+				"Its factories became known for Manet motorcycles and scooters."
+			],
+			"it": [
+				"Považská collega questa Bystrica alla valle del Váh.",
+				"Del castello medievale di Považský restano le rovine sopra la valle.",
+				"Le sue fabbriche divennero note per le motociclette e gli scooter Manet."
+			],
+			"de": [
+				"Považská ordnet dieses Bystrica dem Waagtal zu.",
+				"Die mittelalterliche Burg Považský ist als Ruine über dem Tal erhalten.",
+				"Die Fabriken wurden für Motorräder und Motorroller von Manet bekannt."
+			]
+		}
+	},
+	"liptovsky-mikulas": {
+		"city": {
+			"en": [
+				"Mikuláš is Nicholas; Liptovský identifies the Liptov region.",
+				"A museum remembers the poet Janko Kráľ.",
+				"The outlaw Jánošík’s trial was held here in 1713."
+			],
+			"it": [
+				"Mikuláš è Nicola; Liptovský identifica la regione di Liptov.",
+				"Un museo ricorda il poeta Janko Kráľ.",
+				"Qui si svolse nel 1713 il processo al fuorilegge Jánošík."
+			],
+			"de": [
+				"Mikuláš bedeutet Nikolaus; Liptovský bezeichnet die Region Liptau.",
+				"Ein Museum erinnert an den Dichter Janko Kráľ.",
+				"Hier fand 1713 der Prozess gegen den Räuber Jánošík statt."
+			]
+		}
+	},
+	"martin": {
+		"city": {
+			"en": [
+				"The town takes its name from Saint Martin.",
+				"Matica slovenská was founded here in 1863.",
+				"Its National Cemetery holds leading Slovak writers and artists."
+			],
+			"it": [
+				"La cittadina prende il nome da San Martino.",
+				"Qui fu fondata Matica slovenská nel 1863.",
+				"Il Cimitero Nazionale ospita importanti scrittori e artisti slovacchi."
+			],
+			"de": [
+				"Die Stadt ist nach dem heiligen Martin benannt.",
+				"Hier wurde 1863 Matica slovenská gegründet.",
+				"Auf dem Nationalfriedhof ruhen bedeutende slowakische Schriftsteller und Künstler."
+			]
+		}
+	},
+	"poprad": {
+		"city": {
+			"en": [
+				"The town and river share the name Poprad.",
+				"Railways helped make it a gateway to the Tatras.",
+				"Its Spišská Sobota quarter preserves a historic market square."
+			],
+			"it": [
+				"La cittadina e il fiume condividono il nome Poprad.",
+				"Le ferrovie contribuirono a farne una porta d’accesso ai Tatra.",
+				"Il quartiere di Spišská Sobota conserva una storica piazza del mercato."
+			],
+			"de": [
+				"Stadt und Fluss tragen denselben Namen Poprad.",
+				"Die Eisenbahn machte den Ort zu einem Tor zur Tatra.",
+				"Das Viertel Spišská Sobota bewahrt einen historischen Marktplatz."
+			]
+		}
+	},
+	"presov": {
+		"city": {
+			"en": [
+				"Eperjes, its Hungarian name, evokes strawberries.",
+				"Renaissance houses line its historic centre.",
+				"Solivar preserves a historic salt-production complex."
+			],
+			"it": [
+				"Eperjes, il suo nome ungherese, richiama le fragole.",
+				"Case rinascimentali fiancheggiano il centro storico.",
+				"Solivar conserva uno storico complesso per la produzione del sale."
+			],
+			"de": [
+				"Der ungarische Name Eperjes erinnert an Erdbeeren.",
+				"Renaissancehäuser prägen das historische Zentrum.",
+				"Solivar bewahrt eine historische Anlage zur Salzgewinnung."
+			]
+		}
+	},
+	"spisska-nova-ves": {
+		"city": {
+			"en": [
+				"Its name means “new village in Spiš”.",
+				"Its church tower rises about 87 metres.",
+				"It is a gateway to the Slovak Paradise gorges."
+			],
+			"it": [
+				"Il nome significa “villaggio nuovo nello Spiš”.",
+				"Il campanile della sua chiesa raggiunge circa 87 metri.",
+				"È una porta d’accesso alle gole del Paradiso Slovacco."
+			],
+			"de": [
+				"Der Name bedeutet „neues Dorf in der Zips“.",
+				"Der Kirchturm ist etwa 87 Meter hoch.",
+				"Der Ort ist ein Tor zu den Schluchten des Slowakischen Paradieses."
+			]
+		}
+	},
+	"trencin": {
+		"city": {
+			"en": [
+				"Laugaricio was the Roman name associated with this site.",
+				"A castle-rock inscription recalls a Roman legion’s stay in 179–180.",
+				"Matúš Čák made its castle a medieval power centre."
+			],
+			"it": [
+				"Laugaricio era il nome romano associato a questo luogo.",
+				"Un’iscrizione sulla roccia del castello ricorda una legione romana nel 179–180.",
+				"Matúš Čák fece del castello un centro di potere medievale."
+			],
+			"de": [
+				"Mit diesem Ort ist der römische Name Laugaricio verbunden.",
+				"Eine Inschrift am Burgfelsen erinnert an eine römische Legion im Winter 179–180.",
+				"Matúš Čák machte die Burg zu einem mittelalterlichen Machtzentrum."
+			]
+		}
+	},
+	"prievidza": {
+		"city": {
+			"en": [
+				"Its medieval name appears as Preuigan.",
+				"The Piarist church is celebrated for its Baroque interior.",
+				"Nearby Bojnice Castle was rebuilt in a romantic medieval style."
+			],
+			"it": [
+				"Il suo nome medievale compare come Preuigan.",
+				"La chiesa degli Scolopi è celebre per l’interno barocco.",
+				"Il vicino castello di Bojnice fu ricostruito in uno stile medievale romantico."
+			],
+			"de": [
+				"Der mittelalterliche Name ist als Preuigan überliefert.",
+				"Die Piaristenkirche ist für ihr barockes Inneres bekannt.",
+				"Das nahe Schloss Bojnice wurde im romantischen Mittelalterstil umgebaut."
+			]
+		}
+	},
+	"michalovce": {
+		"city": {
+			"en": [
+				"The name comes from Michal, the personal name Michael.",
+				"The Zemplínska šírava reservoir became a holiday landmark nearby.",
+				"The Zemplín Museum occupies the Sztáray family’s former manor."
+			],
+			"it": [
+				"Il nome viene da Michal, il nome personale Michele.",
+				"Il bacino di Zemplínska šírava divenne un luogo di villeggiatura vicino alla città.",
+				"Il Museo dello Zemplín occupa l’antica residenza della famiglia Sztáray."
+			],
+			"de": [
+				"Der Name stammt vom Personennamen Michal, also Michael.",
+				"Der Stausee Zemplínska šírava wurde zum nahen Ausflugsziel.",
+				"Das Zemplín-Museum befindet sich im früheren Herrenhaus der Familie Sztáray."
+			]
+		}
+	},
+	"banska-bystrica": {
+		"city": {
+			"en": [
+				"Banská means “mining”; Bystrica recalls a swift stream.",
+				"Copper mining brought it wealth in the Middle Ages.",
+				"The 1944 Slovak National Uprising was centred here."
+			],
+			"it": [
+				"Banská significa “mineraria”; Bystrica richiama un corso d’acqua rapido.",
+				"Le miniere di rame le portarono ricchezza nel Medioevo.",
+				"Qui ebbe il suo centro l’Insurrezione nazionale slovacca del 1944."
+			],
+			"de": [
+				"Banská bedeutet „Bergbau-“; Bystrica erinnert an einen raschen Bach.",
+				"Kupferbergbau brachte der Stadt im Mittelalter Wohlstand.",
+				"Hier lag 1944 das Zentrum des Slowakischen Nationalaufstands."
+			]
+		}
+	},
+	"zvolen": {
+		"city": {
+			"en": [
+				"Altsohl is its historic German name.",
+				"Its royal castle echoes a medieval Italian palace.",
+				"Pustý hrad’s ruins belong to an older hilltop castle."
+			],
+			"it": [
+				"Altsohl è il suo nome storico tedesco.",
+				"Il castello reale richiama un palazzo italiano medievale.",
+				"Le rovine di Pustý hrad appartengono a un castello collinare più antico."
+			],
+			"de": [
+				"Altsohl ist der historische deutsche Name.",
+				"Das Königsschloss erinnert an einen mittelalterlichen italienischen Palast.",
+				"Die Ruinen von Pustý hrad gehören zu einer älteren Höhenburg."
+			]
+		}
+	},
+	"trnava": {
+		"city": {
+			"en": [
+				"Its name is linked to the Trnávka stream and thorny vegetation.",
+				"Its many churches earned it the nickname “Little Rome”.",
+				"A university was founded here in 1635."
+			],
+			"it": [
+				"Il nome è legato al torrente Trnávka e alla vegetazione spinosa.",
+				"Le numerose chiese le valsero il soprannome di “Piccola Roma”.",
+				"Qui fu fondata un’università nel 1635."
+			],
+			"de": [
+				"Der Name ist mit dem Bach Trnávka und dorniger Vegetation verbunden.",
+				"Die vielen Kirchen brachten den Beinamen „Kleines Rom“ ein.",
+				"Hier wurde 1635 eine Universität gegründet."
+			]
+		}
+	},
+	"nitra": {
+		"city": {
+			"en": [
+				"The city and river share the old name Nitra.",
+				"Pribina’s ninth-century church marks its early Christian history.",
+				"Its castle combines fortifications with a cathedral."
+			],
+			"it": [
+				"La città e il fiume condividono l’antico nome Nitra.",
+				"La chiesa di Pribina del IX secolo segna la sua prima storia cristiana.",
+				"Il castello unisce fortificazioni e cattedrale."
+			],
+			"de": [
+				"Stadt und Fluss teilen den alten Namen Nitra.",
+				"Pribinas Kirche aus dem 9. Jahrhundert steht für die frühe christliche Geschichte.",
+				"Die Burg verbindet Befestigungen mit einer Kathedrale."
+			]
+		}
+	},
+	"levice": {
+		"city": {
+			"en": [
+				"Leua is an early written form of its name.",
+				"Its castle now houses the Tekov Museum.",
+				"Imperial troops defeated an Ottoman army here in 1664."
+			],
+			"it": [
+				"Leua è una delle prime forme scritte del suo nome.",
+				"Il castello ospita oggi il Museo del Tekov.",
+				"Qui le truppe imperiali sconfissero un esercito ottomano nel 1664."
+			],
+			"de": [
+				"Leua ist eine frühe schriftliche Form des Namens.",
+				"Die Burg beherbergt heute das Tekov-Museum.",
+				"Kaiserliche Truppen besiegten hier 1664 ein osmanisches Heer."
+			]
+		}
+	},
+	"nove-zamky": {
+		"city": {
+			"en": [
+				"Its name literally means “new castles”.",
+				"It grew around a star-shaped anti-Ottoman fortress.",
+				"Avant-garde artist Lajos Kassák was born here."
+			],
+			"it": [
+				"Il nome significa letteralmente “castelli nuovi”.",
+				"Crebbe intorno a una fortezza a stella contro gli Ottomani.",
+				"Qui nacque l’artista d’avanguardia Lajos Kassák."
+			],
+			"de": [
+				"Der Name bedeutet wörtlich „neue Burgen“.",
+				"Die Stadt wuchs um eine sternförmige Festung gegen die Osmanen.",
+				"Hier wurde der Avantgardekünstler Lajos Kassák geboren."
+			]
+		}
+	},
+	"komarno": {
+		"city": {
+			"en": [
+				"Komárom is its traditional Hungarian name.",
+				"Fortifications protected the Danube–Váh confluence.",
+				"Europe Square brings together buildings in many national styles."
+			],
+			"it": [
+				"Komárom è il suo nome tradizionale ungherese.",
+				"Le fortificazioni proteggevano la confluenza tra Danubio e Váh.",
+				"La Piazza d’Europa riunisce edifici in molti stili nazionali."
+			],
+			"de": [
+				"Komárom ist der traditionelle ungarische Name.",
+				"Festungen schützten den Zusammenfluss von Donau und Waag.",
+				"Der Europaplatz vereint Gebäude in vielen nationalen Baustilen."
 			]
 		}
 	}

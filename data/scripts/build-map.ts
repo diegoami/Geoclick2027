@@ -522,9 +522,10 @@ async function main() {
 		console.error(`Unknown --clean-names "${args['clean-names']}".`);
 		process.exit(1);
 	}
-	const attribution = args.attribution
+	let attribution = args.attribution
 		? `${args.attribution}; Natural Earth (public domain), https://www.naturalearthdata.com`
 		: 'Natural Earth (public domain), https://www.naturalearthdata.com';
+	if (args['places-source']) attribution += '; Wikidata (CC0), https://www.wikidata.org';
 	// --within=Bayern,Hessen keeps the targets whose interior point lies
 	// inside those admin-1 areas of --country, from Natural Earth - a
 	// register's districts carry no state, and a slice by state is how
@@ -893,6 +894,12 @@ async function main() {
 		// match targets to Natural Earth's admin-1 rows, which would describe
 		// a district as its whole state.
 		...(source ? { boundarySource: source } : {}),
+		...(args['places-source'] ? { placesSource: args['places-source'] } : {}),
+		...(source && args['boundary-facts'] === 'true' ? { boundaryFacts: true } : {}),
+		// Keep custom name-based dissolves reproducible for derived facts too.
+		...(!source && !countryLevel && dissolveField === 'name' && renames.size
+			? { boundaryRenames: Object.fromEntries(renames) }
+			: {}),
 		tiles: 'tiles.pmtiles',
 		targets,
 		tourOrder: targets.map((t) => t.id)

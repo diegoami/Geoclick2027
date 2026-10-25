@@ -1,0 +1,392 @@
+{
+	"id": "slovakia-towns-10k",
+	"name": "Slovakia — Towns",
+	"country": "Slovakia",
+	"attribution": "Wikidata (CC0), https://www.wikidata.org; Natural Earth (public domain), https://www.naturalearthdata.com",
+	"placesSource": "data/places/slovakia.geojson",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "bardejov",
+			"name": "Bardejov",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				21.2756031,
+				49.2926871
+			],
+			"bbox": [
+				21.2756031,
+				49.2926871,
+				21.2756031,
+				49.2926871
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "zilina",
+			"name": "Žilina",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.733333333,
+				49.216666666
+			],
+			"bbox": [
+				18.733333333,
+				49.216666666,
+				18.733333333,
+				49.216666666
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "povazska-bystrica",
+			"name": "Považská Bystrica",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.45,
+				49.116666666
+			],
+			"bbox": [
+				18.45,
+				49.116666666,
+				18.45,
+				49.116666666
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "liptovsky-mikulas",
+			"name": "Liptovský Mikuláš",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				19.618055555,
+				49.081111111
+			],
+			"bbox": [
+				19.618055555,
+				49.081111111,
+				19.618055555,
+				49.081111111
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "martin",
+			"name": "Martin",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.921388888,
+				49.063611111
+			],
+			"bbox": [
+				18.921388888,
+				49.063611111,
+				18.921388888,
+				49.063611111
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "poprad",
+			"name": "Poprad",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.3,
+				49.05
+			],
+			"bbox": [
+				20.3,
+				49.05,
+				20.3,
+				49.05
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "presov",
+			"name": "Prešov",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				21.233333333,
+				49
+			],
+			"bbox": [
+				21.233333333,
+				49,
+				21.233333333,
+				49
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "spisska-nova-ves",
+			"name": "Spišská Nová Ves",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				20.566666666,
+				48.95
+			],
+			"bbox": [
+				20.566666666,
+				48.95,
+				20.566666666,
+				48.95
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "trencin",
+			"name": "Trenčín",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.040555555,
+				48.894166666
+			],
+			"bbox": [
+				18.040555555,
+				48.894166666,
+				18.040555555,
+				48.894166666
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "prievidza",
+			"name": "Prievidza",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.624166666,
+				48.771388888
+			],
+			"bbox": [
+				18.624166666,
+				48.771388888,
+				18.624166666,
+				48.771388888
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "michalovce",
+			"name": "Michalovce",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				21.918333333,
+				48.7575
+			],
+			"bbox": [
+				21.918333333,
+				48.7575,
+				21.918333333,
+				48.7575
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "banska-bystrica",
+			"name": "Banská Bystrica",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				19.145277777,
+				48.735277777
+			],
+			"bbox": [
+				19.145277777,
+				48.735277777,
+				19.145277777,
+				48.735277777
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "kosice",
+			"name": "Košice",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				21.25,
+				48.716666666
+			],
+			"bbox": [
+				21.25,
+				48.716666666,
+				21.25,
+				48.716666666
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "zvolen",
+			"name": "Zvolen",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				19.1247135,
+				48.5782517
+			],
+			"bbox": [
+				19.1247135,
+				48.5782517,
+				19.1247135,
+				48.5782517
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "trnava",
+			"name": "Trnava",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.586211111,
+				48.37775
+			],
+			"bbox": [
+				17.586211111,
+				48.37775,
+				17.586211111,
+				48.37775
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "nitra",
+			"name": "Nitra",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.0875,
+				48.314722222
+			],
+			"bbox": [
+				18.0875,
+				48.314722222,
+				18.0875,
+				48.314722222
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "levice",
+			"name": "Levice",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.606944444,
+				48.213611111
+			],
+			"bbox": [
+				18.606944444,
+				48.213611111,
+				18.606944444,
+				48.213611111
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "bratislava",
+			"name": "Bratislava",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				17.1093063,
+				48.1516988
+			],
+			"bbox": [
+				17.1093063,
+				48.1516988,
+				17.1093063,
+				48.1516988
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "nove-zamky",
+			"name": "Nové Zámky",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.1632228,
+				47.9859797
+			],
+			"bbox": [
+				18.1632228,
+				47.9859797,
+				18.1632228,
+				47.9859797
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "komarno",
+			"name": "Komárno",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				18.128333333,
+				47.763333333
+			],
+			"bbox": [
+				18.128333333,
+				47.763333333,
+				18.128333333,
+				47.763333333
+			],
+			"colorIndex": 5
+		}
+	],
+	"tourOrder": [
+		"bardejov",
+		"zilina",
+		"povazska-bystrica",
+		"liptovsky-mikulas",
+		"martin",
+		"poprad",
+		"presov",
+		"spisska-nova-ves",
+		"trencin",
+		"prievidza",
+		"michalovce",
+		"banska-bystrica",
+		"kosice",
+		"zvolen",
+		"trnava",
+		"nitra",
+		"levice",
+		"bratislava",
+		"nove-zamky",
+		"komarno"
+	]
+}

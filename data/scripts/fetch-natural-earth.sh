@@ -46,6 +46,9 @@ fetch ne_10m_admin_1_states_provinces \
 	"https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_1_states_provinces.zip"
 fetch ne_10m_lakes \
 	"https://naturalearth.s3.amazonaws.com/10m_physical/ne_10m_lakes.zip"
+# build-facts.ts uses a coastline independently of the ocean context layer.
+fetch ne_10m_coastline \
+	"https://naturalearth.s3.amazonaws.com/10m_physical/ne_10m_coastline.zip"
 fetch ne_10m_populated_places \
 	"https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_populated_places.zip"
 # Countries, for the maps of a continent and of a part of Europe (#39):

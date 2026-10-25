@@ -146,6 +146,13 @@ export const mapGroups: CountryGroup[] = [
 		]
 	},
 	{
+		country: 'Costa Rica',
+		maps: [
+			{ id: 'costa-rica-provinces', labelKey: 'mapType.provinces' },
+			{ id: 'costa-rica-towns-1k', labelKey: 'mapType.towns' }
+		]
+	},
+	{
 		country: 'Croatia',
 		maps: [
 			{ id: 'croatia-counties', labelKey: 'mapType.croatianCounties' },
@@ -178,6 +185,13 @@ export const mapGroups: CountryGroup[] = [
 		maps: [
 			{ id: 'egypt-regions', labelKey: 'mapType.governorates' },
 			{ id: 'egypt-towns-100k', labelKey: 'mapType.towns' }
+		]
+	},
+	{
+		country: 'Estonia',
+		maps: [
+			{ id: 'estonia-counties', labelKey: 'mapType.counties' },
+			{ id: 'estonia-towns-5k', labelKey: 'mapType.towns' }
 		]
 	},
 	{
@@ -334,6 +348,20 @@ export const mapGroups: CountryGroup[] = [
 		]
 	},
 	{
+		country: 'Hungary',
+		maps: [
+			{ id: 'hungary-counties', labelKey: 'mapType.counties' },
+			{ id: 'hungary-towns-10k', labelKey: 'mapType.towns' }
+		]
+	},
+	{
+		country: 'Iceland',
+		maps: [
+			{ id: 'iceland-regions', labelKey: 'mapType.regions' },
+			{ id: 'iceland-towns-1k', labelKey: 'mapType.towns' }
+		]
+	},
+	{
 		country: 'India',
 		maps: [
 			{ id: 'india-regions', labelKey: 'mapType.states' },
@@ -429,6 +457,13 @@ export const mapGroups: CountryGroup[] = [
 		maps: [
 			{ id: 'kenya-counties', labelKey: 'mapType.counties' },
 			{ id: 'kenya-towns-50k', labelKey: 'mapType.towns' }
+		]
+	},
+	{
+		country: 'Lithuania',
+		maps: [
+			{ id: 'lithuania-counties', labelKey: 'mapType.counties' },
+			{ id: 'lithuania-towns-10k', labelKey: 'mapType.towns' }
 		]
 	},
 	{
@@ -616,6 +651,13 @@ export const mapGroups: CountryGroup[] = [
 		maps: [
 			{ id: 'serbia-districts', labelKey: 'mapType.districts' },
 			{ id: 'serbia-towns-50k', labelKey: 'mapType.towns' }
+		]
+	},
+	{
+		country: 'Slovakia',
+		maps: [
+			{ id: 'slovakia-regions', labelKey: 'mapType.regions' },
+			{ id: 'slovakia-towns-10k', labelKey: 'mapType.towns' }
 		]
 	},
 	{

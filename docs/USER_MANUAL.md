@@ -47,7 +47,7 @@ Geoclick is a game for learning geography: where a country's regions, states
 or provinces are, where its main towns and cities are, and where the countries
 and capitals of a continent are.
 
-- **173 maps across 58 countries and the six continents.** Most countries have
+- **185 maps across 64 countries and the six continents.** Most countries have
   two maps: its regions (called states, provinces, prefectures or districts,
   depending on the country) and its larger towns. Some also have finer, more
   detailed maps. See [The maps](#20-the-maps).
@@ -770,16 +770,16 @@ The apps are the same game as the website, packaged to install:
 
 ## 20. The maps
 
-173 maps across 58 countries and the six continents.
+185 maps across 64 countries and the six continents.
 
 - **Continents.** Each continent has a **Countries** map and a **Capitals** map.
   Europe's cities also come in five parts (north, south, east, west and centre).
-- **Countries.** 58 countries have maps of their own: Algeria, Argentina, Australia,
+- **Countries.** 63 country groups have maps of their own: Algeria, Argentina, Australia,
   Austria, Bangladesh, Belgium, Brazil, Bulgaria, Canada, Chile, China, Colombia,
-  Croatia, Czechia, Denmark, Ecuador, Egypt, Finland, France, Germany, Great Britain, Greece,
-  India, Indonesia, Iran, Ireland, Italy, Japan, Kazakhstan, Kenya, Malaysia,
+  Costa Rica, Croatia, Czechia, Denmark, Ecuador, Egypt, Estonia, Finland, France, Germany, Great Britain, Greece, Hungary, Iceland,
+  India, Indonesia, Iran, Ireland, Italy, Japan, Kazakhstan, Kenya, Lithuania, Malaysia,
   Mexico, Morocco, Netherlands, New Zealand, Nigeria, Norway, Pakistan, Peru, Philippines, Poland,
-  Portugal, Romania, Russia, Saudi Arabia, Serbia, South Africa, South Korea,
+  Portugal, Romania, Russia, Saudi Arabia, Serbia, Slovakia, South Africa, South Korea,
   Spain, Sweden, Switzerland, Thailand, Turkey, Ukraine, USA,
   Venezuela and Vietnam (as the start screen lists them in English). Most have **regions** (states,
   provinces, prefectures…) and **towns**.

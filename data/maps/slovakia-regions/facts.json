@@ -1,0 +1,266 @@
+{
+	"zilinsky": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Banskobystrický",
+			"Prešovský",
+			"Trenčiansky"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Žilina",
+			"nameDe": "Žilina",
+			"nameIt": "Žilina",
+			"population": 87625
+		},
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Žilinský is the regional adjective formed from Žilina.",
+				"Vlkolínec preserves a traditional village of wooden houses.",
+				"Orava Castle appeared in the 1922 film Nosferatu."
+			],
+			"it": [
+				"Žilinský è l’aggettivo regionale formato da Žilina.",
+				"Vlkolínec conserva un villaggio tradizionale di case in legno.",
+				"Il castello di Orava apparve nel film Nosferatu del 1922."
+			],
+			"de": [
+				"Žilinský ist das von Žilina gebildete regionale Adjektiv.",
+				"Vlkolínec bewahrt ein traditionelles Dorf aus Holzhäusern.",
+				"Die Arwaburg war im Film Nosferatu von 1922 zu sehen."
+			]
+		}
+	},
+	"presovsky": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Banskobystrický",
+			"Košický",
+			"Žilinský"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Prešov",
+			"nameDe": "Prešov",
+			"nameIt": "Prešov",
+			"population": 94718
+		},
+		"peak": {
+			"name": "Gerlach",
+			"elevation": 2655
+		},
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"The name is the adjective belonging to Prešov.",
+				"Levoča preserves the carved wooden altar of Master Paul.",
+				"Its Carpathian wooden churches include UNESCO-protected examples."
+			],
+			"it": [
+				"Il nome è l’aggettivo riferito a Prešov.",
+				"Levoča conserva l’altare ligneo scolpito dal Maestro Paolo.",
+				"Tra le sue chiese lignee dei Carpazi ve ne sono alcune tutelate dall’UNESCO."
+			],
+			"de": [
+				"Der Name ist das zu Prešov gehörende Adjektiv.",
+				"Levoča bewahrt den geschnitzten Holzaltar von Meister Paul.",
+				"Zu den karpatischen Holzkirchen gehören UNESCO-geschützte Beispiele."
+			]
+		}
+	},
+	"trenciansky": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Banskobystrický",
+			"Nitriansky",
+			"Trnavský",
+			"Žilinský"
+		],
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Named after Trenčín, whose castle dominates its historic centre.",
+				"A Roman inscription survives beneath that castle.",
+				"Bojnice Castle was remodelled in a romantic medieval style."
+			],
+			"it": [
+				"Prende il nome da Trenčín, il cui castello domina il centro storico.",
+				"Sotto quel castello si conserva un’iscrizione romana.",
+				"Il castello di Bojnice fu trasformato in uno stile medievale romantico."
+			],
+			"de": [
+				"Benannt nach Trenčín, dessen Burg die Altstadt beherrscht.",
+				"Unter dieser Burg ist eine römische Inschrift erhalten.",
+				"Schloss Bojnice wurde im romantischen Mittelalterstil umgestaltet."
+			]
+		}
+	},
+	"kosicky": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Banskobystrický",
+			"Prešovský"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Košice",
+			"nameDe": "Košice",
+			"nameIt": "Košice",
+			"population": 236563
+		},
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Košický is the regional form of the name Košice.",
+				"Its Slovak Karst caves share a World Heritage site with Hungary.",
+				"Tokaj’s wine tradition continues along the Hungarian border."
+			],
+			"it": [
+				"Košický è la forma regionale del nome Košice.",
+				"Le grotte del Carso slovacco condividono un sito UNESCO con l’Ungheria.",
+				"La tradizione vinicola del Tokaj continua lungo il confine ungherese."
+			],
+			"de": [
+				"Košický ist die regionale Form des Namens Košice.",
+				"Die Höhlen des Slowakischen Karsts teilen eine Welterbestätte mit Ungarn.",
+				"Die Tokajer Weintradition reicht entlang der ungarischen Grenze."
+			]
+		}
+	},
+	"banskobystricky": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Košický",
+			"Nitriansky",
+			"Prešovský",
+			"Trenčiansky",
+			"Žilinský"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Banská Bystrica",
+			"nameDe": "Banská Bystrica",
+			"nameIt": "Banská Bystrica",
+			"population": 82336
+		},
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"It takes its name from the mining town Banská Bystrica.",
+				"Banská Štiavnica preserves a UNESCO-listed mining landscape.",
+				"Banská Bystrica became the centre of the 1944 Slovak National Uprising."
+			],
+			"it": [
+				"Prende il nome dalla città mineraria di Banská Bystrica.",
+				"Banská Štiavnica conserva un paesaggio minerario riconosciuto dall’UNESCO.",
+				"Banská Bystrica divenne il centro dell’Insurrezione nazionale slovacca del 1944."
+			],
+			"de": [
+				"Die Region ist nach der Bergbaustadt Banská Bystrica benannt.",
+				"Banská Štiavnica bewahrt eine zum UNESCO-Welterbe gehörende Bergbaulandschaft.",
+				"Banská Bystrica wurde 1944 zum Zentrum des Slowakischen Nationalaufstands."
+			]
+		}
+	},
+	"bratislavsky": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Trnavský"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Bratislava",
+			"nameDe": "Bratislava",
+			"nameIt": "Bratislava",
+			"population": 423737
+		},
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Bratislavský is the adjective formed from Bratislava.",
+				"Devín Castle overlooks the Danube–Morava confluence.",
+				"Modra’s majolica workshops preserve a long pottery tradition."
+			],
+			"it": [
+				"Bratislavský è l’aggettivo formato da Bratislava.",
+				"Il castello di Devín domina la confluenza tra Danubio e Morava.",
+				"Le botteghe di maiolica di Modra conservano una lunga tradizione ceramica."
+			],
+			"de": [
+				"Bratislavský ist das von Bratislava gebildete Adjektiv.",
+				"Burg Devín überblickt den Zusammenfluss von Donau und March.",
+				"Modras Majolikawerkstätten bewahren eine lange Töpfertradition."
+			]
+		}
+	},
+	"trnavsky": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Bratislavský",
+			"Nitriansky",
+			"Trenčiansky"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Trnava",
+			"nameDe": "Trnava",
+			"nameIt": "Trnava",
+			"population": 69785
+		},
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"The name belongs to Trnava and its surrounding region.",
+				"Trnava’s many churches earned it the nickname “Little Rome”.",
+				"Piešťany’s spa heritage grew around warm mineral springs."
+			],
+			"it": [
+				"Il nome si riferisce a Trnava e alla regione circostante.",
+				"Le numerose chiese valsero a Trnava il soprannome di “Piccola Roma”.",
+				"La tradizione termale di Piešťany nacque intorno alle sorgenti minerali calde."
+			],
+			"de": [
+				"Der Name bezeichnet Trnava und seine umgebende Region.",
+				"Die vielen Kirchen brachten Trnava den Beinamen „Kleines Rom“ ein.",
+				"Piešťanys Badetradition entstand um warme Mineralquellen."
+			]
+		}
+	},
+	"nitriansky": {
+		"kind": "region",
+		"type": "Region",
+		"borders": [
+			"Banskobystrický",
+			"Trenčiansky",
+			"Trnavský"
+		],
+		"coastal": false,
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"The region takes its name from Nitra.",
+				"Mlyňany’s arboretum collects trees from many parts of the world.",
+				"Rock-cut dwellings survive at Brhlovce."
+			],
+			"it": [
+				"La regione prende il nome da Nitra.",
+				"L’arboreto di Mlyňany raccoglie alberi di molte parti del mondo.",
+				"A Brhlovce si conservano abitazioni scavate nella roccia."
+			],
+			"de": [
+				"Die Region ist nach Nitra benannt.",
+				"Das Arboretum Mlyňany sammelt Bäume aus vielen Teilen der Welt.",
+				"In Brhlovce sind Felsenwohnungen erhalten."
+			]
+		}
+	}
+}

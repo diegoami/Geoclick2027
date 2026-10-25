@@ -1,0 +1,318 @@
+{
+	"telsiu": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Klaipėdos",
+			"Šiaulių",
+			"Tauragės"
+		],
+		"coastal": false,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Telšių means “of Telšiai”, the county’s namesake.",
+				"Samogitian traditions give the region a distinct cultural identity.",
+				"The Ogiński estate at Plungė supported a lively musical tradition."
+			],
+			"it": [
+				"Telšių significa “di Telšiai”, la città che dà il nome alla contea.",
+				"Le tradizioni samogizie danno alla regione una precisa identità culturale.",
+				"La tenuta Ogiński di Plungė sostenne una vivace tradizione musicale."
+			],
+			"de": [
+				"Telšių bedeutet „von Telšiai“, der namensgebenden Stadt.",
+				"Samogitische Traditionen geben der Region eine eigene kulturelle Identität.",
+				"Das Gut Ogiński in Plungė förderte eine lebendige Musiktradition."
+			]
+		}
+	},
+	"siauliu": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Kauno",
+			"Panevėžio",
+			"Tauragės",
+			"Telšių"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Šiauliai",
+			"nameDe": "Šiauliai",
+			"nameIt": "Šiauliai",
+			"population": 133528
+		},
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Šiaulių is the “of Šiauliai” form of the city’s name.",
+				"The Hill of Crosses became a landscape of faith and remembrance.",
+				"Chaim Frenkel’s villa recalls the local leather industry."
+			],
+			"it": [
+				"Šiaulių è la forma “di Šiauliai” del nome cittadino.",
+				"La Collina delle Croci divenne un paesaggio di fede e memoria.",
+				"La villa di Chaim Frenkel ricorda l’industria locale del cuoio."
+			],
+			"de": [
+				"Šiaulių ist die Form „von Šiauliai“ des Stadtnamens.",
+				"Der Berg der Kreuze wurde zu einer Landschaft des Glaubens und Gedenkens.",
+				"Chaim Frenkels Villa erinnert an die örtliche Lederindustrie."
+			]
+		}
+	},
+	"panevezio": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Kauno",
+			"Šiaulių",
+			"Utenos",
+			"Vilniaus"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Panevėžys",
+			"nameDe": "Panevėžys",
+			"nameIt": "Panevėžys",
+			"population": 127405
+		},
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Panevėžio means “of Panevėžys”.",
+				"Biržai’s castle recalls the powerful Radvila family.",
+				"Rokiškis preserves a manor and rich wood-carving traditions."
+			],
+			"it": [
+				"Panevėžio significa “di Panevėžys”.",
+				"Il castello di Biržai ricorda la potente famiglia Radvila.",
+				"Rokiškis conserva una residenza nobiliare e una ricca tradizione d’intaglio del legno."
+			],
+			"de": [
+				"Panevėžio bedeutet „von Panevėžys“.",
+				"Die Burg von Biržai erinnert an die mächtige Familie Radvila.",
+				"Rokiškis bewahrt ein Herrenhaus und reiche Holzschnitztraditionen."
+			]
+		}
+	},
+	"klaipedos": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Tauragės",
+			"Telšių"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Klaipėda",
+			"nameDe": "Klaipėda",
+			"nameIt": "Klaipėda",
+			"population": 192307
+		},
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Klaipėdos means “of Klaipėda”.",
+				"The Curonian Spit’s dunes share a World Heritage site across the border.",
+				"Palanga’s manor became a museum of amber."
+			],
+			"it": [
+				"Klaipėdos significa “di Klaipėda”.",
+				"Le dune della Penisola dei Curi formano un sito UNESCO transfrontaliero.",
+				"La residenza di Palanga divenne un museo dell’ambra."
+			],
+			"de": [
+				"Klaipėdos bedeutet „von Klaipėda“.",
+				"Die Dünen der Kurischen Nehrung bilden eine grenzüberschreitende Welterbestätte.",
+				"Das Herrenhaus von Palanga wurde zum Bernsteinmuseum."
+			]
+		}
+	},
+	"utenos": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Panevėžio",
+			"Vilniaus"
+		],
+		"coastal": false,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Utenos means “of Utena”.",
+				"Aukštaitija National Park preserves lake-studded forests.",
+				"Stripeikiai’s museum tells the story of traditional beekeeping."
+			],
+			"it": [
+				"Utenos significa “di Utena”.",
+				"Il Parco nazionale dell’Aukštaitija conserva foreste punteggiate di laghi.",
+				"Il museo di Stripeikiai racconta la tradizione dell’apicoltura."
+			],
+			"de": [
+				"Utenos bedeutet „von Utena“.",
+				"Der Nationalpark Aukštaitija bewahrt seenreiche Wälder.",
+				"Das Museum in Stripeikiai erzählt von traditioneller Imkerei."
+			]
+		}
+	},
+	"taurages": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Kauno",
+			"Klaipėdos",
+			"Marijampolės",
+			"Šiaulių",
+			"Telšių"
+		],
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Tauragės is the “of Tauragė” form of the name.",
+				"Rambynas hill preserves old Baltic cultural traditions.",
+				"Panemunė and Raudonė castles stand above the Nemunas."
+			],
+			"it": [
+				"Tauragės è la forma “di Tauragė” del nome.",
+				"Il colle Rambynas conserva antiche tradizioni culturali baltiche.",
+				"I castelli di Panemunė e Raudonė sorgono sopra il Nemunas."
+			],
+			"de": [
+				"Tauragės ist die Form „von Tauragė“ des Namens.",
+				"Der Hügel Rambynas bewahrt alte baltische Kulturtraditionen.",
+				"Die Schlösser Panemunė und Raudonė stehen über der Memel."
+			]
+		}
+	},
+	"kauno": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Alytaus",
+			"Marijampolės",
+			"Panevėžio",
+			"Šiaulių",
+			"Tauragės",
+			"Vilniaus"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Kaunas",
+			"nameDe": "Kaunas",
+			"nameIt": "Kaunas",
+			"population": 374643
+		},
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Kauno means “of Kaunas”.",
+				"Kaunas served as Lithuania’s interwar temporary capital.",
+				"Pažaislis preserves a celebrated Baroque monastery."
+			],
+			"it": [
+				"Kauno significa “di Kaunas”.",
+				"Kaunas fu capitale provvisoria della Lituania tra le due guerre.",
+				"Pažaislis conserva un celebre monastero barocco."
+			],
+			"de": [
+				"Kauno bedeutet „von Kaunas“.",
+				"Kaunas war Litauens provisorische Hauptstadt der Zwischenkriegszeit.",
+				"Pažaislis bewahrt ein bekanntes Barockkloster."
+			]
+		}
+	},
+	"vilniaus": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Alytaus",
+			"Kauno",
+			"Panevėžio",
+			"Utenos"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Vilnius",
+			"nameDe": "Vilnius",
+			"nameIt": "Vilnius",
+			"population": 542366
+		},
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Vilniaus means “of Vilnius”.",
+				"Vilnius’s historic centre became World Heritage in 1994.",
+				"Kernavė’s hillforts preserve traces of early Lithuanian history."
+			],
+			"it": [
+				"Vilniaus significa “di Vilnius”.",
+				"Il centro storico di Vilnius divenne Patrimonio mondiale nel 1994.",
+				"I colli fortificati di Kernavė conservano tracce della prima storia lituana."
+			],
+			"de": [
+				"Vilniaus bedeutet „von Vilnius“.",
+				"Die Altstadt von Vilnius wurde 1994 Welterbe.",
+				"Kernavės Burgberge bewahren Spuren der frühen litauischen Geschichte."
+			]
+		}
+	},
+	"marijampoles": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Alytaus",
+			"Kauno",
+			"Tauragės"
+		],
+		"coastal": false,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Marijampolės means “of Marijampolė”.",
+				"Sūduva’s folk culture is strongly represented here.",
+				"Kudirkos Naumiestis remembers Vincas Kudirka, author of the national anthem."
+			],
+			"it": [
+				"Marijampolės significa “di Marijampolė”.",
+				"La cultura popolare della Sūduva è fortemente rappresentata qui.",
+				"Kudirkos Naumiestis ricorda Vincas Kudirka, autore dell’inno nazionale."
+			],
+			"de": [
+				"Marijampolės bedeutet „von Marijampolė“.",
+				"Die Volkskultur der Sūduva ist hier stark vertreten.",
+				"Kudirkos Naumiestis erinnert an Vincas Kudirka, den Autor der Nationalhymne."
+			]
+		}
+	},
+	"alytaus": {
+		"kind": "region",
+		"type": "County",
+		"borders": [
+			"Kauno",
+			"Marijampolės",
+			"Vilniaus"
+		],
+		"coastal": false,
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Alytaus means “of Alytus”.",
+				"Dzūkija’s forests support a long mushroom-gathering tradition.",
+				"Druskininkai grew as a mineral-spring spa town."
+			],
+			"it": [
+				"Alytaus significa “di Alytus”.",
+				"Le foreste della Dzūkija sostengono una lunga tradizione di raccolta dei funghi.",
+				"Druskininkai si sviluppò come cittadina termale dalle sorgenti minerali."
+			],
+			"de": [
+				"Alytaus bedeutet „von Alytus“.",
+				"Dzūkijas Wälder tragen eine lange Tradition des Pilzesammelns.",
+				"Druskininkai entwickelte sich zum Kurort an Mineralquellen."
+			]
+		}
+	}
+}

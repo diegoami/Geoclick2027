@@ -1727,3 +1727,51 @@ first. `italy-towns-100k`/`germany-towns-100k` needed all of it —
 hit-testing/camera-framing changes, and the two fixes found only by
 actually testing the built maps (tippecanoe's zoom-dependent dropping,
 the dense-cluster tolerance bug) — real work, not a footnote.
+
+
+### v1.0 first country batch
+
+Draft implementation tracked in docs/PLAN_V1.0.md. On Linux with GDAL 3.12.2,
+tippecanoe 2.53.0 and PMTiles CLI 1.31.2, from the repository root:
+
+    export PMTILES_BIN="$PWD/.toolchain/pmtiles"
+    node --import tsx data/scripts/build-v1-country-maps.ts
+
+Optional: append --country=estonia (or another batch country).
+
+| Country | Administrative map (targets) | Towns map (targets) |
+| --- | --- | --- |
+| Hungary | hungary-counties (20) | hungary-towns-10k (20) |
+| Slovakia | slovakia-regions (8) | slovakia-towns-10k (20) |
+| Estonia | estonia-counties (15) | estonia-towns-5k (20) |
+| Lithuania | lithuania-counties (10) | lithuania-towns-10k (20) |
+| Iceland | iceland-regions (8) | iceland-towns-1k (9) |
+| Costa Rica | costa-rica-provinces (7) | costa-rica-towns-1k (13) |
+
+The batch forces terrain regeneration when bounds change. Hungary dissolves
+43 Natural Earth units into 19 counties plus Budapest; Iceland merges Reykjavik
+into the capital region, yielding eight regions. boundaryRenames metadata lets
+derived facts use the same unions, retaining cities such as Szeged.
+
+Estonia uses data/boundaries/estonia-counties-2026-09-02.geojson from the
+Estonian Land and Spatial Development Board, with provider/date attribution
+and unrestricted-use terms preserved. Explicitly refetch with:
+
+    node --import tsx data/scripts/fetch-estonia-counties.ts
+
+Source ZIP SHA256:
+b8862ad2217e3efbb4db3dd95f2d0e32cb2d0ca6b7c3c9447d9c87fb43d0abd9.
+A changed upstream ZIP requires deliberate review. A point check places Lihula
+in Parnu after the 2017 transfer, not Laane. boundaryFacts enables derived facts
+from named source polygons. placesSource selects the town snapshot for regional
+facts. The batch checks Kuressaare, Parnu, Reykjavik and Szeged explicitly.
+
+Slovakia, Estonia and Lithuania have committed CC0 Wikidata town snapshots,
+reproducible through data/scripts/fetch-v1-towns.ts. Population selection uses
+the latest dated non-future statement, even when lower than an older value.
+Petrzalka is excluded as a Bratislava borough rather than an independent town.
+Costa Rica uses Natural Earth towns at 1,000 population; bounds exclude Cocos.
+
+After editing authored data/facts files, refresh generated hooks:
+
+    node --import tsx data/scripts/refresh-facts-hooks.ts

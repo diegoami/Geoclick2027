@@ -1,0 +1,303 @@
+{
+	"id": "iceland-regions",
+	"name": "Iceland — Regions",
+	"country": "Iceland",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"boundaryRenames": {
+		"Reykjavík": "Höfuðborgarsvæðið",
+		"Höfuðborgarsvæði": "Höfuðborgarsvæðið"
+	},
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "vestfir-ir",
+			"name": "Vestfirðir",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-22.762050000000002,
+				65.71969999999999
+			],
+			"bbox": [
+				-24.5399,
+				64.9724,
+				-20.9842,
+				66.467
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						-23.7587,
+						65.816
+					],
+					[
+						-22.5478,
+						66.0262
+					],
+					[
+						-21.3368,
+						65.7619
+					]
+				],
+				"aspect": 1.76
+			}
+		},
+		{
+			"id": "nor-urland-eystra",
+			"name": "Norðurland eystra",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-16.84475,
+				65.5043
+			],
+			"bbox": [
+				-19.0788,
+				64.472,
+				-14.6107,
+				66.5366
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						-18.5343,
+						65.2141
+					],
+					[
+						-17.1967,
+						65.2197
+					],
+					[
+						-15.8592,
+						65.7579
+					]
+				],
+				"aspect": 0.85
+			}
+		},
+		{
+			"id": "nor-urland-vestra",
+			"name": "Norðurland vestra",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-19.735750000000003,
+				65.45515
+			],
+			"bbox": [
+				-21.1199,
+				64.7523,
+				-18.3516,
+				66.158
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						-20.9101,
+						65.3475
+					],
+					[
+						-19.7751,
+						65.5419
+					],
+					[
+						-18.6401,
+						65.2832
+					]
+				],
+				"aspect": 1.24
+			}
+		},
+		{
+			"id": "austurland",
+			"name": "Austurland",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-15.452950000000001,
+				64.87965
+			],
+			"bbox": [
+				-17.3857,
+				63.773,
+				-13.5202,
+				65.9863
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						-16.6559,
+						64.148
+					],
+					[
+						-15.2207,
+						64.7756
+					],
+					[
+						-14.4737,
+						65.5716
+					]
+				],
+				"aspect": 1.92
+			}
+		},
+		{
+			"id": "vesturland",
+			"name": "Vesturland",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-21.9345,
+				64.87535
+			],
+			"bbox": [
+				-24.06,
+				64.2973,
+				-19.809,
+				65.4534
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						-23.6084,
+						64.914
+					],
+					[
+						-21.9771,
+						64.7937
+					],
+					[
+						-20.3231,
+						64.7242
+					]
+				],
+				"aspect": 4.22
+			}
+		},
+		{
+			"id": "hofu-borgarsv-i",
+			"name": "Höfuðborgarsvæðið",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-21.636699999999998,
+				64.1978
+			],
+			"bbox": [
+				-22.1242,
+				64,
+				-21.1492,
+				64.3956
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						-21.8663,
+						64.0173
+					],
+					[
+						-21.644,
+						64.1896
+					],
+					[
+						-21.4236,
+						64.3614
+					]
+				],
+				"aspect": 2.36
+			}
+		},
+		{
+			"id": "su-urland",
+			"name": "Suðurland",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-19.4043,
+				64.13865
+			],
+			"bbox": [
+				-21.932,
+				63.3967,
+				-16.8766,
+				64.8806
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						-20.8018,
+						64.157
+					],
+					[
+						-19.1549,
+						64.0779
+					],
+					[
+						-17.508,
+						64.2262
+					]
+				],
+				"aspect": 1.17
+			}
+		},
+		{
+			"id": "su-urnes",
+			"name": "Suðurnes",
+			"type": "region",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-22.1946,
+				63.94584999999999
+			],
+			"bbox": [
+				-22.7368,
+				63.8212,
+				-21.6524,
+				64.0705
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						-22.6586,
+						63.9283
+					],
+					[
+						-22.2573,
+						63.9265
+					],
+					[
+						-21.8572,
+						63.94
+					]
+				],
+				"aspect": 2.19
+			}
+		}
+	],
+	"tourOrder": [
+		"vestfir-ir",
+		"nor-urland-eystra",
+		"nor-urland-vestra",
+		"austurland",
+		"vesturland",
+		"hofu-borgarsv-i",
+		"su-urland",
+		"su-urnes"
+	]
+}

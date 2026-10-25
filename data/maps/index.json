@@ -993,6 +993,42 @@
 		]
 	},
 	{
+		"id": "costa-rica-provinces",
+		"country": "Costa Rica",
+		"targetCount": 7,
+		"targetType": "province",
+		"targetIds": [
+			"guanacaste",
+			"alajuela",
+			"heredia",
+			"limon",
+			"cartago",
+			"san-jose",
+			"puntarenas"
+		]
+	},
+	{
+		"id": "costa-rica-towns-1k",
+		"country": "Costa Rica",
+		"targetCount": 13,
+		"targetType": "city",
+		"targetIds": [
+			"la-cruz",
+			"liberia",
+			"canas",
+			"quesada",
+			"alajuela",
+			"limon",
+			"heredia",
+			"puntarenas",
+			"san-jose",
+			"cartago",
+			"sixaola",
+			"ciudad-cortes",
+			"golfito"
+		]
+	},
+	{
 		"id": "croatia-counties",
 		"country": "Croatia",
 		"targetCount": 21,
@@ -1235,6 +1271,57 @@
 			"luxor",
 			"kom-ombo",
 			"aswan"
+		]
+	},
+	{
+		"id": "estonia-counties",
+		"country": "Estonia",
+		"targetCount": 15,
+		"targetType": "county",
+		"targetIds": [
+			"harju",
+			"laane-viru",
+			"ida-viru",
+			"laane",
+			"rapla",
+			"jarva",
+			"hiiu",
+			"jogeva",
+			"tartu",
+			"viljandi",
+			"parnu",
+			"saare",
+			"polva",
+			"valga",
+			"voru"
+		]
+	},
+	{
+		"id": "estonia-towns-5k",
+		"country": "Estonia",
+		"targetCount": 20,
+		"targetType": "city",
+		"targetIds": [
+			"maardu",
+			"tallinn",
+			"kohtla-jarve",
+			"sillamae",
+			"narva",
+			"johvi",
+			"rakvere",
+			"saue",
+			"keila",
+			"tapa",
+			"haapsalu",
+			"paide",
+			"parnu",
+			"tartu",
+			"viljandi",
+			"kuressaare",
+			"elva",
+			"polva",
+			"voru",
+			"valga"
 		]
 	},
 	{
@@ -3471,6 +3558,95 @@
 		]
 	},
 	{
+		"id": "hungary-counties",
+		"country": "Hungary",
+		"targetCount": 20,
+		"targetType": "county",
+		"targetIds": [
+			"borsod-abauj-zemplen",
+			"szabolcs-szatmar-bereg",
+			"nograd",
+			"heves",
+			"gyor-moson-sopron",
+			"komarom-esztergom",
+			"pest",
+			"budapest",
+			"hajdu-bihar",
+			"jasz-nagykun-szolnok",
+			"fejer",
+			"vas",
+			"veszprem",
+			"bekes",
+			"zala",
+			"bacs-kiskun",
+			"tolna",
+			"csongrad-csanad",
+			"somogy",
+			"baranya"
+		]
+	},
+	{
+		"id": "hungary-towns-10k",
+		"country": "Hungary",
+		"targetCount": 20,
+		"targetType": "city",
+		"targetIds": [
+			"salgotarjan",
+			"miskolc",
+			"nyiregyhaza",
+			"eger",
+			"vac",
+			"gyor",
+			"tatabanya",
+			"debrecen",
+			"budapest",
+			"szombathely",
+			"szekesfehervar",
+			"szolnok",
+			"veszprem",
+			"kecskemet",
+			"zalaegerszeg",
+			"bekescsaba",
+			"kaposvar",
+			"szekszard",
+			"szeged",
+			"pecs"
+		]
+	},
+	{
+		"id": "iceland-regions",
+		"country": "Iceland",
+		"targetCount": 8,
+		"targetType": "region",
+		"targetIds": [
+			"vestfir-ir",
+			"nor-urland-eystra",
+			"nor-urland-vestra",
+			"austurland",
+			"vesturland",
+			"hofu-borgarsv-i",
+			"su-urland",
+			"su-urnes"
+		]
+	},
+	{
+		"id": "iceland-towns-1k",
+		"country": "Iceland",
+		"targetCount": 9,
+		"targetType": "city",
+		"targetIds": [
+			"isafjor-ur",
+			"sau-arkrokur",
+			"akureyri",
+			"egilssta-ir",
+			"borgarnes",
+			"hofn",
+			"reykjavik",
+			"keflavik",
+			"selfoss"
+		]
+	},
+	{
 		"id": "india-regions",
 		"country": "India",
 		"targetCount": 36,
@@ -4712,6 +4888,52 @@
 			"malindi",
 			"kilifi",
 			"mombasa"
+		]
+	},
+	{
+		"id": "lithuania-counties",
+		"country": "Lithuania",
+		"targetCount": 10,
+		"targetType": "county",
+		"targetIds": [
+			"telsiu",
+			"siauliu",
+			"panevezio",
+			"klaipedos",
+			"utenos",
+			"taurages",
+			"kauno",
+			"vilniaus",
+			"marijampoles",
+			"alytaus"
+		]
+	},
+	{
+		"id": "lithuania-towns-10k",
+		"country": "Lithuania",
+		"targetCount": 20,
+		"targetType": "city",
+		"targetIds": [
+			"mazeikiai",
+			"telsiai",
+			"siauliai",
+			"palanga",
+			"plunge",
+			"kretinga",
+			"panevezys",
+			"klaipeda",
+			"gargzdai",
+			"visaginas",
+			"utena",
+			"silute",
+			"kedainiai",
+			"ukmerge",
+			"taurage",
+			"jonava",
+			"kaunas",
+			"vilnius",
+			"marijampole",
+			"alytus"
 		]
 	},
 	{
@@ -6750,6 +6972,50 @@
 			"kragujevac",
 			"cacak",
 			"nis"
+		]
+	},
+	{
+		"id": "slovakia-regions",
+		"country": "Slovakia",
+		"targetCount": 8,
+		"targetType": "region",
+		"targetIds": [
+			"zilinsky",
+			"presovsky",
+			"trenciansky",
+			"kosicky",
+			"banskobystricky",
+			"bratislavsky",
+			"trnavsky",
+			"nitriansky"
+		]
+	},
+	{
+		"id": "slovakia-towns-10k",
+		"country": "Slovakia",
+		"targetCount": 20,
+		"targetType": "city",
+		"targetIds": [
+			"bardejov",
+			"zilina",
+			"povazska-bystrica",
+			"liptovsky-mikulas",
+			"martin",
+			"poprad",
+			"presov",
+			"spisska-nova-ves",
+			"trencin",
+			"prievidza",
+			"michalovce",
+			"banska-bystrica",
+			"kosice",
+			"zvolen",
+			"trnava",
+			"nitra",
+			"levice",
+			"bratislava",
+			"nove-zamky",
+			"komarno"
 		]
 	},
 	{

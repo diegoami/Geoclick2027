@@ -1,0 +1,263 @@
+{
+	"id": "costa-rica-provinces",
+	"name": "Costa Rica — Provinces",
+	"country": "Costa Rica",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "guanacaste",
+			"name": "Guanacaste",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-85.3364,
+				10.46735
+			],
+			"bbox": [
+				-85.9088,
+				9.7248,
+				-84.764,
+				11.2099
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						-85.7591,
+						10.3641
+					],
+					[
+						-85.3541,
+						10.5116
+					],
+					[
+						-84.9491,
+						10.3665
+					]
+				],
+				"aspect": 1.26
+			}
+		},
+		{
+			"id": "alajuela",
+			"name": "Alajuela",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-84.7976,
+				10.44745
+			],
+			"bbox": [
+				-85.4375,
+				9.8245,
+				-84.1577,
+				11.0704
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						-85.1381,
+						10.8987
+					],
+					[
+						-84.3149,
+						10.8547
+					],
+					[
+						-84.384,
+						10.0602
+					]
+				],
+				"aspect": 1.82
+			}
+		},
+		{
+			"id": "heredia",
+			"name": "Heredia",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-83.95185000000001,
+				10.367
+			],
+			"bbox": [
+				-84.2,
+				9.9456,
+				-83.7037,
+				10.7884
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						-84.0397,
+						10.1984
+					],
+					[
+						-84.0202,
+						10.4563
+					],
+					[
+						-83.9515,
+						10.7034
+					]
+				],
+				"aspect": 1.61
+			}
+		},
+		{
+			"id": "limon",
+			"name": "Limón",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-83.25815,
+				9.98675
+			],
+			"bbox": [
+				-83.9427,
+				9.0706,
+				-82.5736,
+				10.9029
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						-83.7337,
+						10.5651
+					],
+					[
+						-83.4027,
+						9.999
+					],
+					[
+						-83.0408,
+						9.451
+					]
+				],
+				"aspect": 3
+			}
+		},
+		{
+			"id": "cartago",
+			"name": "Cartago",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-83.70235,
+				9.8019
+			],
+			"bbox": [
+				-84.0688,
+				9.4676,
+				-83.3359,
+				10.1362
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						-83.9276,
+						9.8667
+					],
+					[
+						-83.6681,
+						9.7185
+					],
+					[
+						-83.4085,
+						9.8158
+					]
+				],
+				"aspect": 1.15
+			}
+		},
+		{
+			"id": "san-jose",
+			"name": "San José",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-84.01035,
+				9.63255
+			],
+			"bbox": [
+				-84.5913,
+				9.0661,
+				-83.4294,
+				10.199
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						-84.4506,
+						9.8234
+					],
+					[
+						-83.8639,
+						9.7182
+					],
+					[
+						-83.5651,
+						9.2258
+					]
+				],
+				"aspect": 3.74
+			}
+		},
+		{
+			"id": "puntarenas",
+			"name": "Puntarenas",
+			"type": "province",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-84.00465,
+				9.3152
+			],
+			"bbox": [
+				-85.2899,
+				8.3151,
+				-82.7194,
+				10.3153
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						-83.5886,
+						8.9633
+					],
+					[
+						-83.2731,
+						9.0652
+					],
+					[
+						-82.9577,
+						8.868
+					]
+				],
+				"aspect": 0.89
+			}
+		}
+	],
+	"tourOrder": [
+		"guanacaste",
+		"alajuela",
+		"heredia",
+		"limon",
+		"cartago",
+		"san-jose",
+		"puntarenas"
+	]
+}

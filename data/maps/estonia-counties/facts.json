@@ -1,0 +1,241 @@
+{
+	"harju": {
+		"kind": "region",
+		"borders": [
+			"Järva",
+			"Lääne",
+			"Lääne-Viru",
+			"Rapla"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Tallinn",
+			"nameDe": "Tallinn",
+			"nameIt": "Tallinn",
+			"population": 457572
+		},
+		"position": "north"
+	},
+	"laane-viru": {
+		"kind": "region",
+		"borders": [
+			"Harju",
+			"Ida-Viru",
+			"Järva",
+			"Jõgeva"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Rakvere",
+			"nameDe": "Rakvere",
+			"nameIt": "Rakvere",
+			"population": 15695
+		},
+		"position": "north-east"
+	},
+	"ida-viru": {
+		"kind": "region",
+		"borders": [
+			"Jõgeva",
+			"Lääne-Viru"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Narva",
+			"nameDe": "Narwa",
+			"nameIt": "Narva",
+			"population": 53360
+		},
+		"position": "north-east"
+	},
+	"laane": {
+		"kind": "region",
+		"borders": [
+			"Harju",
+			"Pärnu",
+			"Rapla"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Haapsalu",
+			"nameDe": "Haapsalu",
+			"nameIt": "Haapsalu",
+			"population": 9812
+		},
+		"position": "north-west"
+	},
+	"rapla": {
+		"kind": "region",
+		"borders": [
+			"Harju",
+			"Järva",
+			"Lääne",
+			"Pärnu"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Rapla",
+			"nameDe": "Rapla",
+			"nameIt": "Rapla",
+			"population": 5355
+		},
+		"position": "centre"
+	},
+	"jarva": {
+		"kind": "region",
+		"borders": [
+			"Harju",
+			"Jõgeva",
+			"Lääne-Viru",
+			"Pärnu",
+			"Rapla",
+			"Viljandi"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Paide",
+			"nameDe": "Paide",
+			"nameIt": "Paide",
+			"population": 8073
+		},
+		"position": "centre"
+	},
+	"hiiu": {
+		"kind": "region",
+		"coastal": true,
+		"position": "west"
+	},
+	"jogeva": {
+		"kind": "region",
+		"borders": [
+			"Ida-Viru",
+			"Järva",
+			"Lääne-Viru",
+			"Tartu",
+			"Viljandi"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Jõgeva",
+			"nameDe": "Jõgeva",
+			"nameIt": "Jõgeva",
+			"population": 5112
+		},
+		"position": "east"
+	},
+	"tartu": {
+		"kind": "region",
+		"borders": [
+			"Jõgeva",
+			"Põlva",
+			"Valga",
+			"Viljandi"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Tartu",
+			"nameDe": "Tartu",
+			"nameIt": "Tartu",
+			"population": 97759
+		},
+		"position": "east"
+	},
+	"viljandi": {
+		"kind": "region",
+		"borders": [
+			"Järva",
+			"Jõgeva",
+			"Pärnu",
+			"Tartu",
+			"Valga"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Viljandi",
+			"nameDe": "Viljandi",
+			"nameIt": "Viljandi",
+			"population": 17255
+		},
+		"position": "centre"
+	},
+	"parnu": {
+		"kind": "region",
+		"borders": [
+			"Järva",
+			"Lääne",
+			"Rapla",
+			"Viljandi"
+		],
+		"coastal": true,
+		"largestCity": {
+			"name": "Pärnu",
+			"nameDe": "Pärnu",
+			"nameIt": "Pärnu",
+			"population": 41520
+		},
+		"position": "centre"
+	},
+	"saare": {
+		"kind": "region",
+		"coastal": true,
+		"largestCity": {
+			"name": "Kuressaare",
+			"nameDe": "Kuressaare",
+			"nameIt": "Kuressaare",
+			"population": 13185
+		},
+		"position": "west"
+	},
+	"polva": {
+		"kind": "region",
+		"borders": [
+			"Tartu",
+			"Valga",
+			"Võru"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Põlva",
+			"nameDe": "Põlva",
+			"nameIt": "Põlva",
+			"population": 5498
+		},
+		"position": "south-east"
+	},
+	"valga": {
+		"kind": "region",
+		"borders": [
+			"Põlva",
+			"Tartu",
+			"Viljandi",
+			"Võru"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Valga",
+			"nameDe": "Valga",
+			"nameIt": "Valga",
+			"population": 12173
+		},
+		"position": "south-east"
+	},
+	"voru": {
+		"kind": "region",
+		"borders": [
+			"Põlva",
+			"Valga"
+		],
+		"coastal": false,
+		"largestCity": {
+			"name": "Võru",
+			"nameDe": "Võru",
+			"nameIt": "Võru",
+			"population": 12112
+		},
+		"peak": {
+			"name": "Suur Munamagi",
+			"elevation": 318
+		},
+		"position": "south-east"
+	}
+}

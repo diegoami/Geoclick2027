@@ -2,21 +2,25 @@
 	"_note": [
 		"Name-facts for Lithuania (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences."
+		"of the same id, written later, never shows a town's sentences.",
+		"v1.0 adds region/town facts in English, Italian and German; _sources records checking references by target and kind."
 	],
 	"kaunas": {
 		"city": {
 			"en": [
-				"It was the capital between the wars, from 1920 to 1939, while Vilnius was held by Poland.",
-				"In 1940 the Japanese consul Chiune Sugihara issued visas here that saved thousands of Jews."
+				"Kovno is an older form used in many foreign records.",
+				"It served as Lithuania’s temporary capital between the world wars.",
+				"Its modernist architecture became World Heritage in 2023."
 			],
 			"it": [
-				"Fu la capitale tra le due guerre, dal 1920 al 1939, mentre Vilnius era in mano alla Polonia.",
-				"Nel 1940 il console giapponese Chiune Sugihara rilasciò qui visti che salvarono migliaia di ebrei."
+				"Kovno è una forma più antica usata in molti documenti stranieri.",
+				"Fu capitale provvisoria della Lituania tra le due guerre mondiali.",
+				"La sua architettura modernista divenne Patrimonio mondiale nel 2023."
 			],
 			"de": [
-				"Sie war zwischen den Kriegen, von 1920 bis 1939, die Hauptstadt, während Vilnius unter polnischer Herrschaft stand.",
-				"1940 stellte der japanische Konsul Chiune Sugihara hier Visa aus, die Tausende von Juden retteten."
+				"Kovno ist eine ältere Form in vielen fremdsprachigen Quellen.",
+				"Zwischen den Weltkriegen war die Stadt Litauens provisorische Hauptstadt.",
+				"Die modernistische Architektur wurde 2023 Welterbe."
 			]
 		}
 	},
@@ -42,26 +46,38 @@
 	"panevezys": {
 		"city": {
 			"en": [
-				"\"Along the Nevėžis\", its river."
+				"The name points to the banks of the Nevėžis River.",
+				"Director Juozas Miltinis gave it a distinctive theatre tradition.",
+				"A narrow-gauge railway preserves part of its industrial heritage."
 			],
 			"it": [
-				"\"Lungo il Nevėžis\", il suo fiume."
+				"Il nome richiama le rive del fiume Nevėžis.",
+				"Il regista Juozas Miltinis le diede una particolare tradizione teatrale.",
+				"Una ferrovia a scartamento ridotto conserva parte del suo patrimonio industriale."
 			],
 			"de": [
-				"„Entlang der Nevėžis“, ihres Flusses."
+				"Der Name verweist auf die Ufer des Flusses Nevėžis.",
+				"Regisseur Juozas Miltinis prägte eine eigene Theatertradition.",
+				"Eine Schmalspurbahn bewahrt einen Teil des industriellen Erbes."
 			]
 		}
 	},
 	"siauliai": {
 		"city": {
 			"en": [
-				"The Hill of Crosses, with more than a hundred thousand crosses, stands just outside it."
+				"The nickname “Sun City” recalls the Battle of Saulė.",
+				"The nearby Hill of Crosses became a place of remembrance.",
+				"A bicycle museum records its cycle-making heritage."
 			],
 			"it": [
-				"Appena fuori città sorge la Collina delle croci, con più di centomila croci."
+				"Il soprannome “Città del Sole” ricorda la battaglia di Saulė.",
+				"La vicina Collina delle Croci divenne un luogo della memoria.",
+				"Un museo della bicicletta racconta la tradizione produttiva cittadina."
 			],
 			"de": [
-				"Der Berg der Kreuze mit mehr als hunderttausend Kreuzen liegt unmittelbar vor der Stadt."
+				"Der Beiname „Sonnenstadt“ erinnert an die Schlacht von Saule.",
+				"Der nahe Berg der Kreuze wurde zum Ort des Gedenkens.",
+				"Ein Fahrradmuseum erzählt von der Fahrradherstellung."
 			]
 		}
 	},
@@ -81,6 +97,595 @@
 				"Nach dem Fluss Vilnia benannt.",
 				"Ihre barocke Altstadt, eine der größten Europas, ist eine UNESCO-Stätte.",
 				"Ihr Stadtteil Užupis erklärte sich 1997 zur Republik, mit eigener Verfassung."
+			]
+		}
+	},
+	"_sources": {
+		"telsiu:region": [
+			"https://en.wikipedia.org/wiki/Tel%C5%A1iai_County",
+			"https://en.wikipedia.org/wiki/Plung%C4%97"
+		],
+		"siauliu:region": [
+			"https://en.wikipedia.org/wiki/%C5%A0iauliai_County",
+			"https://en.wikipedia.org/wiki/Hill_of_Crosses",
+			"https://en.wikipedia.org/wiki/%C5%A0iauliai"
+		],
+		"panevezio:region": [
+			"https://en.wikipedia.org/wiki/Panev%C4%97%C5%BEys_County",
+			"https://en.wikipedia.org/wiki/Bir%C5%BEai_Castle",
+			"https://en.wikipedia.org/wiki/Roki%C5%A1kis"
+		],
+		"klaipedos:region": [
+			"https://en.wikipedia.org/wiki/Klaip%C4%97da_County",
+			"https://whc.unesco.org/en/list/994/",
+			"https://en.wikipedia.org/wiki/Palanga_Amber_Museum"
+		],
+		"utenos:region": [
+			"https://en.wikipedia.org/wiki/Utena_County",
+			"https://en.wikipedia.org/wiki/Auk%C5%A1taitija_National_Park",
+			"https://en.wikipedia.org/wiki/Lithuanian_Museum_of_Ancient_Beekeeping"
+		],
+		"taurages:region": [
+			"https://en.wikipedia.org/wiki/Taurag%C4%97_County",
+			"https://en.wikipedia.org/wiki/Rambynas",
+			"https://en.wikipedia.org/wiki/Panemun%C4%97_Castle"
+		],
+		"kauno:region": [
+			"https://en.wikipedia.org/wiki/Kaunas_County",
+			"https://whc.unesco.org/en/list/1661",
+			"https://en.wikipedia.org/wiki/Pa%C5%BEaislis_Monastery"
+		],
+		"vilniaus:region": [
+			"https://en.wikipedia.org/wiki/Vilnius_County",
+			"https://whc.unesco.org/en/list/541/",
+			"https://en.wikipedia.org/wiki/Kernav%C4%97"
+		],
+		"marijampoles:region": [
+			"https://en.wikipedia.org/wiki/Marijampol%C4%97_County",
+			"https://en.wikipedia.org/wiki/Kudirkos_Naumiestis"
+		],
+		"alytaus:region": [
+			"https://en.wikipedia.org/wiki/Alytus_County",
+			"https://en.wikipedia.org/wiki/Dz%C5%ABkija_National_Park",
+			"https://en.wikipedia.org/wiki/Druskininkai"
+		],
+		"mazeikiai:city": [
+			"https://melc.lnb.lt/img/cms/E_leidiniai/skenuoti/Zinkevicius-Zigmas_Senosios-Lietuvos-valstybes-vardynas.pdf",
+			"https://www.mazeikiai.lt/uploads/main/documents/files/veiklos-sritys/projektai-ir-programos/turizmo-leidiniai/mazeikiu-krasto-zenklai_en.pdf",
+			"https://www.vle.lt/straipsnis/mazeikiai/"
+		],
+		"telsiai:city": [
+			"https://en.wikipedia.org/wiki/Tel%C5%A1iai"
+		],
+		"siauliai:city": [
+			"https://en.wikipedia.org/wiki/%C5%A0iauliai",
+			"https://en.wikipedia.org/wiki/Hill_of_Crosses"
+		],
+		"palanga:city": [
+			"https://en.wikipedia.org/wiki/Palanga",
+			"https://en.wikipedia.org/wiki/Palanga_Amber_Museum"
+		],
+		"plunge:city": [
+			"https://en.wikipedia.org/wiki/Plung%C4%97"
+		],
+		"kretinga:city": [
+			"https://en.wikipedia.org/wiki/Kretinga",
+			"https://de.wikipedia.org/wiki/Kretinga"
+		],
+		"panevezys:city": [
+			"https://en.wikipedia.org/wiki/Panev%C4%97%C5%BEys"
+		],
+		"gargzdai:city": [
+			"https://en.wikipedia.org/wiki/Garg%C5%BEdai"
+		],
+		"visaginas:city": [
+			"https://en.wikipedia.org/wiki/Visaginas",
+			"https://en.wikipedia.org/wiki/Ignalina_Nuclear_Power_Plant"
+		],
+		"utena:city": [
+			"https://en.wikipedia.org/wiki/Utena%2C_Lithuania"
+		],
+		"silute:city": [
+			"https://en.wikipedia.org/wiki/%C5%A0ilut%C4%97"
+		],
+		"kedainiai:city": [
+			"https://en.wikipedia.org/wiki/K%C4%97dainiai"
+		],
+		"ukmerge:city": [
+			"https://en.wikipedia.org/wiki/Ukmerg%C4%97"
+		],
+		"taurage:city": [
+			"https://en.wikipedia.org/wiki/Taurag%C4%97"
+		],
+		"jonava:city": [
+			"https://www.vle.lt/straipsnis/jonava/",
+			"https://en.wikipedia.org/wiki/Jonava"
+		],
+		"kaunas:city": [
+			"https://whc.unesco.org/en/list/1661",
+			"https://en.wikipedia.org/wiki/Kaunas"
+		],
+		"marijampole:city": [
+			"https://en.wikipedia.org/wiki/Marijampol%C4%97"
+		],
+		"alytus:city": [
+			"https://alytus.lt/uploads/documents/files/LT/savivaldybes-administracija/administracine-informacija/kalbos%20taisyklingumas/Alytaus%20vardo%20kilm%C4%97%20ir%20kir%C4%8Diavimas_%20%C4%AEsid%C4%97m%C4%97tino%20kir%C4%8D_%20AM%20vietovard%C5%BEiai_PDF%202013%2012%2017.pdf",
+			"https://www.alytusinfo.lt/data/ckfinder/files/Alytaus%20krastas_ENG_WEB.pdf",
+			"https://en.wikipedia.org/wiki/Alytus"
+		]
+	},
+	"telsiu": {
+		"region": {
+			"en": [
+				"Telšių means “of Telšiai”, the county’s namesake.",
+				"Samogitian traditions give the region a distinct cultural identity.",
+				"The Ogiński estate at Plungė supported a lively musical tradition."
+			],
+			"it": [
+				"Telšių significa “di Telšiai”, la città che dà il nome alla contea.",
+				"Le tradizioni samogizie danno alla regione una precisa identità culturale.",
+				"La tenuta Ogiński di Plungė sostenne una vivace tradizione musicale."
+			],
+			"de": [
+				"Telšių bedeutet „von Telšiai“, der namensgebenden Stadt.",
+				"Samogitische Traditionen geben der Region eine eigene kulturelle Identität.",
+				"Das Gut Ogiński in Plungė förderte eine lebendige Musiktradition."
+			]
+		}
+	},
+	"siauliu": {
+		"region": {
+			"en": [
+				"Šiaulių is the “of Šiauliai” form of the city’s name.",
+				"The Hill of Crosses became a landscape of faith and remembrance.",
+				"Chaim Frenkel’s villa recalls the local leather industry."
+			],
+			"it": [
+				"Šiaulių è la forma “di Šiauliai” del nome cittadino.",
+				"La Collina delle Croci divenne un paesaggio di fede e memoria.",
+				"La villa di Chaim Frenkel ricorda l’industria locale del cuoio."
+			],
+			"de": [
+				"Šiaulių ist die Form „von Šiauliai“ des Stadtnamens.",
+				"Der Berg der Kreuze wurde zu einer Landschaft des Glaubens und Gedenkens.",
+				"Chaim Frenkels Villa erinnert an die örtliche Lederindustrie."
+			]
+		}
+	},
+	"panevezio": {
+		"region": {
+			"en": [
+				"Panevėžio means “of Panevėžys”.",
+				"Biržai’s castle recalls the powerful Radvila family.",
+				"Rokiškis preserves a manor and rich wood-carving traditions."
+			],
+			"it": [
+				"Panevėžio significa “di Panevėžys”.",
+				"Il castello di Biržai ricorda la potente famiglia Radvila.",
+				"Rokiškis conserva una residenza nobiliare e una ricca tradizione d’intaglio del legno."
+			],
+			"de": [
+				"Panevėžio bedeutet „von Panevėžys“.",
+				"Die Burg von Biržai erinnert an die mächtige Familie Radvila.",
+				"Rokiškis bewahrt ein Herrenhaus und reiche Holzschnitztraditionen."
+			]
+		}
+	},
+	"klaipedos": {
+		"region": {
+			"en": [
+				"Klaipėdos means “of Klaipėda”.",
+				"The Curonian Spit’s dunes share a World Heritage site across the border.",
+				"Palanga’s manor became a museum of amber."
+			],
+			"it": [
+				"Klaipėdos significa “di Klaipėda”.",
+				"Le dune della Penisola dei Curi formano un sito UNESCO transfrontaliero.",
+				"La residenza di Palanga divenne un museo dell’ambra."
+			],
+			"de": [
+				"Klaipėdos bedeutet „von Klaipėda“.",
+				"Die Dünen der Kurischen Nehrung bilden eine grenzüberschreitende Welterbestätte.",
+				"Das Herrenhaus von Palanga wurde zum Bernsteinmuseum."
+			]
+		}
+	},
+	"utenos": {
+		"region": {
+			"en": [
+				"Utenos means “of Utena”.",
+				"Aukštaitija National Park preserves lake-studded forests.",
+				"Stripeikiai’s museum tells the story of traditional beekeeping."
+			],
+			"it": [
+				"Utenos significa “di Utena”.",
+				"Il Parco nazionale dell’Aukštaitija conserva foreste punteggiate di laghi.",
+				"Il museo di Stripeikiai racconta la tradizione dell’apicoltura."
+			],
+			"de": [
+				"Utenos bedeutet „von Utena“.",
+				"Der Nationalpark Aukštaitija bewahrt seenreiche Wälder.",
+				"Das Museum in Stripeikiai erzählt von traditioneller Imkerei."
+			]
+		}
+	},
+	"taurages": {
+		"region": {
+			"en": [
+				"Tauragės is the “of Tauragė” form of the name.",
+				"Rambynas hill preserves old Baltic cultural traditions.",
+				"Panemunė and Raudonė castles stand above the Nemunas."
+			],
+			"it": [
+				"Tauragės è la forma “di Tauragė” del nome.",
+				"Il colle Rambynas conserva antiche tradizioni culturali baltiche.",
+				"I castelli di Panemunė e Raudonė sorgono sopra il Nemunas."
+			],
+			"de": [
+				"Tauragės ist die Form „von Tauragė“ des Namens.",
+				"Der Hügel Rambynas bewahrt alte baltische Kulturtraditionen.",
+				"Die Schlösser Panemunė und Raudonė stehen über der Memel."
+			]
+		}
+	},
+	"kauno": {
+		"region": {
+			"en": [
+				"Kauno means “of Kaunas”.",
+				"Kaunas served as Lithuania’s interwar temporary capital.",
+				"Pažaislis preserves a celebrated Baroque monastery."
+			],
+			"it": [
+				"Kauno significa “di Kaunas”.",
+				"Kaunas fu capitale provvisoria della Lituania tra le due guerre.",
+				"Pažaislis conserva un celebre monastero barocco."
+			],
+			"de": [
+				"Kauno bedeutet „von Kaunas“.",
+				"Kaunas war Litauens provisorische Hauptstadt der Zwischenkriegszeit.",
+				"Pažaislis bewahrt ein bekanntes Barockkloster."
+			]
+		}
+	},
+	"vilniaus": {
+		"region": {
+			"en": [
+				"Vilniaus means “of Vilnius”.",
+				"Vilnius’s historic centre became World Heritage in 1994.",
+				"Kernavė’s hillforts preserve traces of early Lithuanian history."
+			],
+			"it": [
+				"Vilniaus significa “di Vilnius”.",
+				"Il centro storico di Vilnius divenne Patrimonio mondiale nel 1994.",
+				"I colli fortificati di Kernavė conservano tracce della prima storia lituana."
+			],
+			"de": [
+				"Vilniaus bedeutet „von Vilnius“.",
+				"Die Altstadt von Vilnius wurde 1994 Welterbe.",
+				"Kernavės Burgberge bewahren Spuren der frühen litauischen Geschichte."
+			]
+		}
+	},
+	"marijampoles": {
+		"region": {
+			"en": [
+				"Marijampolės means “of Marijampolė”.",
+				"Sūduva’s folk culture is strongly represented here.",
+				"Kudirkos Naumiestis remembers Vincas Kudirka, author of the national anthem."
+			],
+			"it": [
+				"Marijampolės significa “di Marijampolė”.",
+				"La cultura popolare della Sūduva è fortemente rappresentata qui.",
+				"Kudirkos Naumiestis ricorda Vincas Kudirka, autore dell’inno nazionale."
+			],
+			"de": [
+				"Marijampolės bedeutet „von Marijampolė“.",
+				"Die Volkskultur der Sūduva ist hier stark vertreten.",
+				"Kudirkos Naumiestis erinnert an Vincas Kudirka, den Autor der Nationalhymne."
+			]
+		}
+	},
+	"alytaus": {
+		"region": {
+			"en": [
+				"Alytaus means “of Alytus”.",
+				"Dzūkija’s forests support a long mushroom-gathering tradition.",
+				"Druskininkai grew as a mineral-spring spa town."
+			],
+			"it": [
+				"Alytaus significa “di Alytus”.",
+				"Le foreste della Dzūkija sostengono una lunga tradizione di raccolta dei funghi.",
+				"Druskininkai si sviluppò come cittadina termale dalle sorgenti minerali."
+			],
+			"de": [
+				"Alytaus bedeutet „von Alytus“.",
+				"Dzūkijas Wälder tragen eine lange Tradition des Pilzesammelns.",
+				"Druskininkai entwickelte sich zum Kurort an Mineralquellen."
+			]
+		}
+	},
+	"mazeikiai": {
+		"city": {
+			"en": [
+				"Its name is linked to the old personal name Mažeika.",
+				"Railway junctions drove its nineteenth-century growth.",
+				"A nearby oil refinery made it a major industrial centre."
+			],
+			"it": [
+				"Il nome è legato all’antico nome personale Mažeika.",
+				"I nodi ferroviari ne trainarono la crescita nell’Ottocento.",
+				"Una vicina raffineria di petrolio ne fece un importante centro industriale."
+			],
+			"de": [
+				"Der Name ist mit dem alten Personennamen Mažeika verbunden.",
+				"Eisenbahnknoten trieben das Wachstum im 19. Jahrhundert an.",
+				"Eine nahe Ölraffinerie machte es zum bedeutenden Industriestandort."
+			]
+		}
+	},
+	"telsiai": {
+		"city": {
+			"en": [
+				"Its name is linked to the Telšė stream.",
+				"It is regarded as a capital of Samogitian culture.",
+				"Its cathedral is known for an unusual two-storey altar."
+			],
+			"it": [
+				"Il nome è legato al torrente Telšė.",
+				"È considerata una capitale della cultura samogizia.",
+				"La cattedrale è nota per un insolito altare su due piani."
+			],
+			"de": [
+				"Der Name ist mit dem Bach Telšė verbunden.",
+				"Die Stadt gilt als Zentrum der samogitischen Kultur.",
+				"Die Kathedrale ist für einen ungewöhnlichen zweigeschossigen Altar bekannt."
+			]
+		}
+	},
+	"palanga": {
+		"city": {
+			"en": [
+				"Polangen was its historical German name.",
+				"The Tiškevičius palace houses a museum of amber.",
+				"Its seaside pier became one of the town’s symbols."
+			],
+			"it": [
+				"Polangen era il suo nome storico tedesco.",
+				"Il palazzo Tiškevičius ospita un museo dell’ambra.",
+				"Il pontile sul mare divenne uno dei simboli della cittadina."
+			],
+			"de": [
+				"Polangen war der historische deutsche Name.",
+				"Das Schloss Tiškevičius beherbergt ein Bernsteinmuseum.",
+				"Die Seebrücke wurde zu einem Wahrzeichen des Ortes."
+			]
+		}
+	},
+	"plunge": {
+		"city": {
+			"en": [
+				"Płungiany is its historical Polish name.",
+				"Young Čiurlionis trained with the orchestra at the Ogiński estate.",
+				"The Ogiński palace now houses the Samogitian Art Museum."
+			],
+			"it": [
+				"Płungiany è il suo nome storico polacco.",
+				"Il giovane Čiurlionis si formò con l’orchestra della tenuta Ogiński.",
+				"Il palazzo Ogiński ospita oggi il Museo d’Arte Samogizia."
+			],
+			"de": [
+				"Płungiany ist der historische polnische Name.",
+				"Der junge Čiurlionis lernte beim Orchester auf dem Gut Ogiński.",
+				"Das Schloss Ogiński beherbergt heute das Samogitische Kunstmuseum."
+			]
+		}
+	},
+	"kretinga": {
+		"city": {
+			"en": [
+				"Crottingen is one historic German form of its name.",
+				"Jan Karol Chodkiewicz founded its Franciscan monastery.",
+				"The manor’s glass-roofed winter garden became a landmark."
+			],
+			"it": [
+				"Crottingen è una forma storica tedesca del nome.",
+				"Jan Karol Chodkiewicz fondò il monastero francescano.",
+				"Il giardino d’inverno vetrato della residenza nobiliare divenne un simbolo."
+			],
+			"de": [
+				"Crottingen ist eine historische deutsche Namensform.",
+				"Jan Karol Chodkiewicz gründete das Franziskanerkloster.",
+				"Der verglaste Wintergarten des Herrenhauses wurde zum Wahrzeichen."
+			]
+		}
+	},
+	"gargzdai": {
+		"city": {
+			"en": [
+				"The name is linked to gargždas, a word for gravel.",
+				"It developed beside the old East Prussian border.",
+				"Its museum traces the history of the Klaipėda district."
+			],
+			"it": [
+				"Il nome è legato a gargždas, una parola per ghiaia.",
+				"Si sviluppò accanto all’antico confine della Prussia Orientale.",
+				"Il museo ripercorre la storia del distretto di Klaipėda."
+			],
+			"de": [
+				"Der Name ist mit gargždas, einem Wort für Kies, verbunden.",
+				"Die Stadt entwickelte sich an der früheren ostpreußischen Grenze.",
+				"Das Museum erzählt die Geschichte des Bezirks Klaipėda."
+			]
+		}
+	},
+	"visaginas": {
+		"city": {
+			"en": [
+				"Founded as Sniečkus, it took the name Visaginas in 1992.",
+				"It was built for workers at the Ignalina nuclear power plant.",
+				"The plant’s reactors closed in 2004 and 2009."
+			],
+			"it": [
+				"Fondata come Sniečkus, prese il nome Visaginas nel 1992.",
+				"Fu costruita per i lavoratori della centrale nucleare di Ignalina.",
+				"I reattori della centrale chiusero nel 2004 e nel 2009."
+			],
+			"de": [
+				"Als Sniečkus gegründet, erhielt die Stadt 1992 den Namen Visaginas.",
+				"Sie wurde für Beschäftigte des Kernkraftwerks Ignalina gebaut.",
+				"Die Reaktoren des Kraftwerks wurden 2004 und 2009 stillgelegt."
+			]
+		}
+	},
+	"utena": {
+		"city": {
+			"en": [
+				"Its name most likely comes from an old local water-name.",
+				"An old post station recalls the age of horse-drawn travel.",
+				"Knitwear manufacturing helped its twentieth-century industrial growth."
+			],
+			"it": [
+				"Il nome deriva probabilmente da un antico nome d’acqua locale.",
+				"Un’antica stazione postale ricorda l’epoca dei viaggi a cavallo.",
+				"La produzione di maglieria contribuì alla crescita industriale nel Novecento."
+			],
+			"de": [
+				"Der Name stammt wahrscheinlich von einem alten örtlichen Gewässernamen.",
+				"Eine alte Poststation erinnert an Reisen mit Pferden.",
+				"Die Strickwarenherstellung förderte das industrielle Wachstum im 20. Jahrhundert."
+			]
+		}
+	},
+	"silute": {
+		"city": {
+			"en": [
+				"Its old German name Heidekrug means “heath inn”.",
+				"Writer Hermann Sudermann was born nearby at Macikai.",
+				"The Nemunas delta makes the area an important bird habitat."
+			],
+			"it": [
+				"Il vecchio nome tedesco Heidekrug significa “locanda della brughiera”.",
+				"Lo scrittore Hermann Sudermann nacque nella vicina Macikai.",
+				"Il delta del Nemunas rende la zona un importante habitat per gli uccelli."
+			],
+			"de": [
+				"Der alte Name Heidekrug bezeichnet eine Heideschenke.",
+				"Der Schriftsteller Hermann Sudermann wurde im nahen Macikai geboren.",
+				"Das Memeldelta macht die Gegend zum wichtigen Lebensraum für Vögel."
+			]
+		}
+	},
+	"kedainiai": {
+		"city": {
+			"en": [
+				"Kiejdany is its historical Polish name.",
+				"The Radvila family fostered its Reformed Christian tradition.",
+				"Scottish merchants helped shape its seventeenth-century town life."
+			],
+			"it": [
+				"Kiejdany è il suo nome storico polacco.",
+				"La famiglia Radvila favorì la tradizione cristiana riformata.",
+				"I mercanti scozzesi contribuirono alla vita cittadina del Seicento."
+			],
+			"de": [
+				"Kiejdany ist der historische polnische Name.",
+				"Die Familie Radvila förderte die reformierte christliche Tradition.",
+				"Schottische Kaufleute prägten das Stadtleben im 17. Jahrhundert mit."
+			]
+		}
+	},
+	"ukmerge": {
+		"city": {
+			"en": [
+				"Vilkmergė is an older form of its name.",
+				"An old castle mound rises beside the Šventoji.",
+				"Its historic centre retains many wooden houses."
+			],
+			"it": [
+				"Vilkmergė è una forma più antica del nome.",
+				"Un antico colle fortificato sorge accanto alla Šventoji.",
+				"Il centro storico conserva molte case in legno."
+			],
+			"de": [
+				"Vilkmergė ist eine ältere Form des Namens.",
+				"Ein alter Burgberg erhebt sich an der Šventoji.",
+				"Die Altstadt bewahrt viele Holzhäuser."
+			]
+		}
+	},
+	"taurage": {
+		"city": {
+			"en": [
+				"The name joins tauras, “aurochs”, with ragas, “horn”.",
+				"The Convention of Tauroggen was signed nearby in 1812.",
+				"Its nineteenth-century customs complex resembles a small castle."
+			],
+			"it": [
+				"Il nome unisce tauras, “uro”, a ragas, “corno”.",
+				"La Convenzione di Tauroggen fu firmata nei dintorni nel 1812.",
+				"Il complesso doganale ottocentesco ricorda un piccolo castello."
+			],
+			"de": [
+				"Der Name verbindet tauras, „Auerochse“, mit ragas, „Horn“.",
+				"Die Konvention von Tauroggen wurde 1812 in der Nähe geschlossen.",
+				"Der Zollkomplex aus dem 19. Jahrhundert ähnelt einer kleinen Burg."
+			]
+		}
+	},
+	"jonava": {
+		"city": {
+			"en": [
+				"The name honours Jonas, the Lithuanian form of John.",
+				"Fertiliser production shaped its modern industrial growth.",
+				"It grew at a crossing of the Neris River."
+			],
+			"it": [
+				"Il nome ricorda Jonas, la forma lituana di Giovanni.",
+				"La produzione di fertilizzanti ne segnò la crescita industriale moderna.",
+				"Si sviluppò presso un attraversamento del fiume Neris."
+			],
+			"de": [
+				"Der Name ehrt Jonas, die litauische Form von Johannes.",
+				"Düngemittelproduktion prägte das moderne industrielle Wachstum.",
+				"Die Stadt wuchs an einem Übergang über die Neris."
+			]
+		}
+	},
+	"marijampole": {
+		"city": {
+			"en": [
+				"Its name joins Mary with polis, the Greek word for city.",
+				"Soviet authorities called it Kapsukas from 1955 to 1989.",
+				"It became a cultural centre of Sūduva, also called Suvalkija."
+			],
+			"it": [
+				"Il nome unisce Maria a polis, la parola greca per città.",
+				"Le autorità sovietiche la chiamarono Kapsukas dal 1955 al 1989.",
+				"Divenne un centro culturale della Sūduva, detta anche Suvalkija."
+			],
+			"de": [
+				"Der Name verbindet Maria mit polis, dem griechischen Wort für Stadt.",
+				"Die sowjetischen Behörden nannten sie von 1955 bis 1989 Kapsukas.",
+				"Die Stadt wurde zum Kulturzentrum der Sūduva, auch Suvalkija genannt."
+			]
+		}
+	},
+	"alytus": {
+		"city": {
+			"en": [
+				"Its name is probably connected with the Alytupis stream.",
+				"The Nemunas divided it into historically different halves.",
+				"The White Rose footbridge recalls the flower in its coat of arms."
+			],
+			"it": [
+				"Il nome è probabilmente collegato al torrente Alytupis.",
+				"Il Nemunas la divise in due parti dalla storia diversa.",
+				"La passerella della Rosa Bianca richiama il fiore dello stemma cittadino."
+			],
+			"de": [
+				"Der Name hängt wahrscheinlich mit dem Bach Alytupis zusammen.",
+				"Die Memel teilte die Stadt in historisch unterschiedliche Hälften.",
+				"Die Fußgängerbrücke Weiße Rose erinnert an die Blume im Stadtwappen."
 			]
 		}
 	}

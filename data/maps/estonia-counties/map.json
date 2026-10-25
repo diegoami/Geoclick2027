@@ -1,0 +1,537 @@
+{
+	"id": "estonia-counties",
+	"name": "Estonia — Counties",
+	"country": "Estonia",
+	"attribution": "Administrative and settlement units: Estonian Land and Spatial Development Board, snapshot 2026-09-02; unrestricted use with attribution; Natural Earth (public domain), https://www.naturalearthdata.com; Wikidata (CC0), https://www.wikidata.org",
+	"boundarySource": "data/boundaries/estonia-counties-2026-09-02.geojson",
+	"placesSource": "data/places/estonia.geojson",
+	"boundaryFacts": true,
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "harju",
+			"name": "Harju",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				24.842950000000002,
+				59.32585
+			],
+			"bbox": [
+				23.7308,
+				58.9945,
+				25.9551,
+				59.6572
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						23.9659,
+						59.2176
+					],
+					[
+						24.8752,
+						59.2691
+					],
+					[
+						25.7503,
+						59.4019
+					]
+				],
+				"aspect": 3.19
+			}
+		},
+		{
+			"id": "laane-viru",
+			"name": "Lääne-Viru",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				26.24875,
+				59.2526
+			],
+			"bbox": [
+				25.5364,
+				58.8809,
+				26.9611,
+				59.6243
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						25.9697,
+						59.3668
+					],
+					[
+						26.3575,
+						59.1873
+					],
+					[
+						26.7453,
+						59.198
+					]
+				],
+				"aspect": 0.67
+			}
+		},
+		{
+			"id": "ida-viru",
+			"name": "Ida-Viru",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				27.4556,
+				59.220699999999994
+			],
+			"bbox": [
+				26.7023,
+				58.9723,
+				28.2089,
+				59.4691
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						26.9816,
+						59.24
+					],
+					[
+						27.3911,
+						59.1827
+					],
+					[
+						27.8006,
+						59.2392
+					]
+				],
+				"aspect": 1
+			}
+		},
+		{
+			"id": "laane",
+			"name": "Lääne",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				23.65455,
+				58.981449999999995
+			],
+			"bbox": [
+				23.1169,
+				58.716,
+				24.1922,
+				59.2469
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						23.5865,
+						59.0814
+					],
+					[
+						23.8179,
+						58.9434
+					],
+					[
+						24.0494,
+						58.9198
+					]
+				],
+				"aspect": 0.59
+			}
+		},
+		{
+			"id": "rapla",
+			"name": "Rapla",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				24.702399999999997,
+				58.9422
+			],
+			"bbox": [
+				24.0708,
+				58.66,
+				25.334,
+				59.2244
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						24.2629,
+						58.8589
+					],
+					[
+						24.6403,
+						59.0024
+					],
+					[
+						25.0177,
+						58.9589
+					]
+				],
+				"aspect": 0.93
+			}
+		},
+		{
+			"id": "jarva",
+			"name": "Järva",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				25.606650000000002,
+				58.9381
+			],
+			"bbox": [
+				25.0445,
+				58.6068,
+				26.1688,
+				59.2694
+			],
+			"colorIndex": 3,
+			"spine": {
+				"curve": [
+					[
+						25.3197,
+						58.822
+					],
+					[
+						25.6567,
+						58.9858
+					],
+					[
+						25.9938,
+						58.9825
+					]
+				],
+				"aspect": 0.74
+			}
+		},
+		{
+			"id": "hiiu",
+			"name": "Hiiu",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				22.557650000000002,
+				58.889700000000005
+			],
+			"bbox": [
+				22.0468,
+				58.6873,
+				23.0685,
+				59.0921
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						22.4511,
+						58.8669
+					],
+					[
+						22.7163,
+						58.9001
+					],
+					[
+						22.9816,
+						58.8997
+					]
+				],
+				"aspect": 1.43
+			}
+		},
+		{
+			"id": "jogeva",
+			"name": "Jõgeva",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				26.4515,
+				58.76975
+			],
+			"bbox": [
+				25.7594,
+				58.4722,
+				27.1436,
+				59.0673
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						26.0229,
+						58.6372
+					],
+					[
+						26.557,
+						58.7285
+					],
+					[
+						26.9478,
+						58.9434
+					]
+				],
+				"aspect": 1.81
+			}
+		},
+		{
+			"id": "tartu",
+			"name": "Tartu",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				26.79495,
+				58.399249999999995
+			],
+			"bbox": [
+				26.0577,
+				58.0288,
+				27.5322,
+				58.7697
+			],
+			"colorIndex": 2,
+			"spine": {
+				"curve": [
+					[
+						26.239,
+						58.249
+					],
+					[
+						26.7535,
+						58.3693
+					],
+					[
+						27.1569,
+						58.5672
+					]
+				],
+				"aspect": 1.38
+			}
+		},
+		{
+			"id": "viljandi",
+			"name": "Viljandi",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				25.579250000000002,
+				58.3228
+			],
+			"bbox": [
+				24.9719,
+				57.9559,
+				26.1866,
+				58.6897
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						25.1933,
+						58.3621
+					],
+					[
+						25.5415,
+						58.2683
+					],
+					[
+						25.8897,
+						58.3501
+					]
+				],
+				"aspect": 0.63
+			}
+		},
+		{
+			"id": "parnu",
+			"name": "Pärnu",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				24.4015,
+				58.322599999999994
+			],
+			"bbox": [
+				23.4965,
+				57.8717,
+				25.3065,
+				58.7735
+			],
+			"colorIndex": 1,
+			"spine": {
+				"curve": [
+					[
+						23.7309,
+						58.5793
+					],
+					[
+						24.3739,
+						58.4551
+					],
+					[
+						25.0169,
+						58.3198
+					]
+				],
+				"aspect": 1.61
+			}
+		},
+		{
+			"id": "saare",
+			"name": "Saare",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				22.615000000000002,
+				58.23325
+			],
+			"bbox": [
+				21.8288,
+				57.7822,
+				23.4012,
+				58.6843
+			],
+			"colorIndex": 0,
+			"spine": {
+				"curve": [
+					[
+						22.0534,
+						58.2821
+					],
+					[
+						22.5065,
+						58.4183
+					],
+					[
+						23.0041,
+						58.5187
+					]
+				],
+				"aspect": 1.8
+			}
+		},
+		{
+			"id": "polva",
+			"name": "Põlva",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				27.06135,
+				58.151700000000005
+			],
+			"bbox": [
+				26.5681,
+				57.8975,
+				27.5546,
+				58.4059
+			],
+			"colorIndex": 4,
+			"spine": {
+				"curve": [
+					[
+						26.6681,
+						58.0461
+					],
+					[
+						27.0454,
+						58.0792
+					],
+					[
+						27.4226,
+						58.1167
+					]
+				],
+				"aspect": 1.32
+			}
+		},
+		{
+			"id": "valga",
+			"name": "Valga",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				26.10265,
+				57.8671
+			],
+			"bbox": [
+				25.5804,
+				57.5722,
+				26.6249,
+				58.162
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "voru",
+			"name": "Võru",
+			"type": "county",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				27.10055,
+				57.80745
+			],
+			"bbox": [
+				26.3845,
+				57.5139,
+				27.8166,
+				58.101
+			],
+			"colorIndex": 5,
+			"spine": {
+				"curve": [
+					[
+						26.529,
+						57.7407
+					],
+					[
+						27.1193,
+						57.6891
+					],
+					[
+						27.5658,
+						57.9032
+					]
+				],
+				"aspect": 1.72
+			}
+		}
+	],
+	"tourOrder": [
+		"harju",
+		"laane-viru",
+		"ida-viru",
+		"laane",
+		"rapla",
+		"jarva",
+		"hiiu",
+		"jogeva",
+		"tartu",
+		"viljandi",
+		"parnu",
+		"saare",
+		"polva",
+		"valga",
+		"voru"
+	]
+}

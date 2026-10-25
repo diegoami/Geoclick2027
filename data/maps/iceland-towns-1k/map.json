@@ -1,0 +1,182 @@
+{
+	"id": "iceland-towns-1k",
+	"name": "Iceland — Towns",
+	"country": "Iceland",
+	"attribution": "Natural Earth (public domain), https://www.naturalearthdata.com",
+	"tiles": "tiles.pmtiles",
+	"targets": [
+		{
+			"id": "isafjor-ur",
+			"name": "Ísafjörður",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-23.1499671,
+				66.0833165
+			],
+			"bbox": [
+				-23.1499671,
+				66.0833165,
+				-23.1499671,
+				66.0833165
+			],
+			"colorIndex": 4
+		},
+		{
+			"id": "sau-arkrokur",
+			"name": "Sauðárkrókur",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-19.6389928,
+				65.746412
+			],
+			"bbox": [
+				-19.6389928,
+				65.746412,
+				-19.6389928,
+				65.746412
+			],
+			"colorIndex": 5
+		},
+		{
+			"id": "akureyri",
+			"name": "Akureyri",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-18.1000169,
+				65.6665719
+			],
+			"bbox": [
+				-18.1000169,
+				65.6665719,
+				-18.1000169,
+				65.6665719
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "egilssta-ir",
+			"name": "Egilsstaðir",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-14.3949976,
+				65.2674231
+			],
+			"bbox": [
+				-14.3949976,
+				65.2674231,
+				-14.3949976,
+				65.2674231
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "borgarnes",
+			"name": "Borgarnes",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-21.8623222,
+				64.5695028
+			],
+			"bbox": [
+				-21.8623222,
+				64.5695028,
+				-21.8623222,
+				64.5695028
+			],
+			"colorIndex": 3
+		},
+		{
+			"id": "hofn",
+			"name": "Höfn",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-15.2138595,
+				64.2723151
+			],
+			"bbox": [
+				-15.2138595,
+				64.2723151,
+				-15.2138595,
+				64.2723151
+			],
+			"colorIndex": 0
+		},
+		{
+			"id": "reykjavik",
+			"name": "Reykjavík",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-21.936546009025054,
+				64.14345946317033
+			],
+			"bbox": [
+				-21.936546009025054,
+				64.14345946317033,
+				-21.936546009025054,
+				64.14345946317033
+			],
+			"colorIndex": 1
+		},
+		{
+			"id": "keflavik",
+			"name": "Keflavík",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-22.5665918,
+				64.0166467
+			],
+			"bbox": [
+				-22.5665918,
+				64.0166467,
+				-22.5665918,
+				64.0166467
+			],
+			"colorIndex": 2
+		},
+		{
+			"id": "selfoss",
+			"name": "Selfoss",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				-20.996946,
+				63.9334219
+			],
+			"bbox": [
+				-20.996946,
+				63.9334219,
+				-20.996946,
+				63.9334219
+			],
+			"colorIndex": 0
+		}
+	],
+	"tourOrder": [
+		"isafjor-ur",
+		"sau-arkrokur",
+		"akureyri",
+		"egilssta-ir",
+		"borgarnes",
+		"hofn",
+		"reykjavik",
+		"keflavik",
+		"selfoss"
+	]
+}

@@ -1,0 +1,675 @@
+{
+	"type": "FeatureCollection",
+	"source": "Wikidata (CC0)",
+	"fetchedAt": "2026-10-25T19:45:51.885Z",
+	"query": "SELECT DISTINCT ?item ?coord ?name ?en ?it ?de ?population ?date ?capital WHERE {\n  ?country wdt:P298 \"LTU\" .\n  ?item wdt:P17 ?country; wdt:P1082 ?best; wdt:P625 ?coord; wdt:P31 ?kind .\n  VALUES ?base { wd:Q515 wd:Q3957 }\n  ?kind wdt:P279* ?base .\n  FILTER(?best >= 10000)\n  FILTER NOT EXISTS { ?item wdt:P576 ?dissolved }\n  ?item p:P1082 ?statement .\n  ?statement ps:P1082 ?population; wikibase:rank ?rank .\n  FILTER(?rank != wikibase:DeprecatedRank)\n  OPTIONAL { ?statement pq:P585 ?date }\n  FILTER(!BOUND(?date) || (?date >= \"2011-01-01T00:00:00Z\"^^xsd:dateTime && ?date <= NOW()))\n  OPTIONAL { ?item rdfs:label ?name FILTER(LANG(?name)=\"lt\") }\n  OPTIONAL { ?item rdfs:label ?en FILTER(LANG(?en)=\"en\") }\n  OPTIONAL { ?item rdfs:label ?it FILTER(LANG(?it)=\"it\") }\n  OPTIONAL { ?item rdfs:label ?de FILTER(LANG(?de)=\"de\") }\n  BIND(EXISTS { ?country wdt:P36 ?item } AS ?capital)\n} ORDER BY ?item DESC(?date) DESC(?population) LIMIT 10000",
+	"features": [
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					24.05,
+					54.4
+				]
+			},
+			"properties": {
+				"NAME": "Alytus",
+				"NAME_EN": "Alytus",
+				"NAME_IT": "Alytus",
+				"NAME_DE": "Alytus",
+				"ADM0NAME": "Lithuania",
+				"ADM1NAME": "",
+				"ADM0CAP": 0,
+				"POP_MAX": 51856,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q450625"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					24.75,
+					56.2
+				]
+			},
+			"properties": {
+				"NAME": "Biržai",
+				"NAME_EN": "Biržai",
+				"NAME_IT": "Biržai",
+				"NAME_DE": "Biržai",
+				"ADM0NAME": "Lithuania",
+				"ADM1NAME": "",
+				"ADM0CAP": 0,
+				"POP_MAX": 10444,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q804035"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					23.9725,
+					54.020555555
+				]
+			},
+			"properties": {
+				"NAME": "Druskininkai",
+				"NAME_EN": "Druskininkai",
+				"NAME_IT": "Druskininkai",
+				"NAME_DE": "Druskininkai",
+				"ADM0NAME": "Lithuania",
+				"ADM1NAME": "",
+				"ADM0CAP": 0,
+				"POP_MAX": 13170,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1261509"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					24.661230555,
+					54.788611111
+				]
+			},
+			"properties": {
+				"NAME": "Elektrėnai",
+				"NAME_EN": "Elektrėnai",
+				"NAME_IT": "Elektrėnai",
+				"NAME_DE": "Elektrėnai",
+				"ADM0NAME": "Lithuania",
+				"ADM1NAME": "",
+				"ADM0CAP": 0,
+				"POP_MAX": 11753,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q286554"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.4,
+					55.7
+				]
+			},
+			"properties": {
+				"NAME": "Gargždai",
+				"NAME_EN": "Gargždai",
+				"NAME_IT": "Gargždai",
+				"NAME_DE": "Gargždai",
+				"ADM0NAME": "Lithuania",
+				"ADM1NAME": "",
+				"ADM0CAP": 0,
+				"POP_MAX": 15932,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q259272"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					23.866666666,
+					54.816666666
+				]
+			},
+			"properties": {
+				"NAME": "Garliava",
+				"NAME_EN": "Garliava",
+				"NAME_IT": "Garliava",
+				"NAME_DE": "Garliava",
+				"ADM0NAME": "Lithuania",
+				"ADM1NAME": "",
+				"ADM0CAP": 0,
+				"POP_MAX": 10110,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1004312"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					24.280555555,
+					55.072222222
+				]
+			},
+			"properties": {
+				"NAME": "Jonava",
+				"NAME_EN": "Jonava",
+				"NAME_IT": "Jonava",
+				"NAME_DE": "Jonava",
+				"ADM0NAME": "Lithuania",
+				"ADM1NAME": "",
+				"ADM0CAP": 0,
+				"POP_MAX": 27134,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q743218"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.766666666,
+					55.083333333
+				]
+			},
+			"properties": {
+				"NAME": "Jurbarkas",
+				"NAME_EN": "Jurbarkas",
+				"NAME_IT": "Jurbarkas",
+				"NAME_DE": "Jurbarkas",
+				"ADM0NAME": "Lithuania",
+				"ADM1NAME": "",
+				"ADM0CAP": 0,
+				"POP_MAX": 10571,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q835838"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					23.933333333,
+					54.9
+				]
+			},
+			"properties": {
+				"NAME": "Kaunas",
+				"NAME_EN": "Kaunas",
+				"NAME_IT": "Kaunas",
+				"NAME_DE": "Kaunas",
+				"ADM0NAME": "Lithuania",
+				"ADM1NAME": "",
+				"ADM0CAP": 0,
+				"POP_MAX": 305120,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q4115712"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					23.966666666,
+					55.283333333
+				]
+			},
+			"properties": {
+				"NAME": "Kėdainiai",
+				"NAME_EN": "Kėdainiai",
+				"NAME_IT": "Kėdainiai",
+				"NAME_DE": "Kėdainiai",
+				"ADM0NAME": "Lithuania",
+				"ADM1NAME": "",
+				"ADM0CAP": 0,
+				"POP_MAX": 23447,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q735138"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.135,
+					55.7125
+				]
+			},
+			"properties": {
+				"NAME": "Klaipėda",
+				"NAME_EN": "Klaipėda",
+				"NAME_IT": "Klaipėda",
+				"NAME_DE": "Klaipėda",
+				"ADM0NAME": "Lithuania",
+				"ADM1NAME": "",
+				"ADM0CAP": 0,
+				"POP_MAX": 158420,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q776965"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.247172222,
+					55.894211111
+				]
+			},
+			"properties": {
+				"NAME": "Kretinga",
+				"NAME_EN": "Kretinga",
+				"NAME_IT": "Kretinga",
+				"NAME_DE": "Kretinga",
+				"ADM0NAME": "Lithuania",
+				"ADM1NAME": "",
+				"ADM0CAP": 0,
+				"POP_MAX": 17207,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1788115"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.933333333,
+					56
+				]
+			},
+			"properties": {
+				"NAME": "Kuršėnai",
+				"NAME_EN": "Kuršėnai",
+				"NAME_IT": "Kuršėnai",
+				"NAME_DE": "Kuršėnai",
+				"ADM0NAME": "Lithuania",
+				"ADM1NAME": "",
+				"ADM0CAP": 0,
+				"POP_MAX": 10651,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q835856"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					23.354444444,
+					54.556666666
+				]
+			},
+			"properties": {
+				"NAME": "Marijampolė",
+				"NAME_EN": "Marijampolė",
+				"NAME_IT": "Marijampolė",
+				"NAME_DE": "Marijampolė",
+				"ADM0NAME": "Lithuania",
+				"ADM1NAME": "",
+				"ADM0CAP": 0,
+				"POP_MAX": 36807,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1351046"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.336111111,
+					56.311111111
+				]
+			},
+			"properties": {
+				"NAME": "Mažeikiai",
+				"NAME_EN": "Mažeikiai",
+				"NAME_IT": "Mažeikiai",
+				"NAME_DE": "Mažeikiai",
+				"ADM0NAME": "Lithuania",
+				"ADM1NAME": "",
+				"ADM0CAP": 0,
+				"POP_MAX": 33249,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q203675"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.066666666,
+					55.916666666
+				]
+			},
+			"properties": {
+				"NAME": "Palanga",
+				"NAME_EN": "Palanga",
+				"NAME_IT": "Palanga",
+				"NAME_DE": "Palanga",
+				"ADM0NAME": "Lithuania",
+				"ADM1NAME": "",
+				"ADM0CAP": 0,
+				"POP_MAX": 18132,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q2047414"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					24.363888888,
+					55.725
+				]
+			},
+			"properties": {
+				"NAME": "Panevėžys",
+				"NAME_EN": "Panevėžys",
+				"NAME_IT": "Panevėžys",
+				"NAME_DE": "Panevėžys",
+				"ADM0NAME": "Lithuania",
+				"ADM1NAME": "",
+				"ADM0CAP": 0,
+				"POP_MAX": 87913,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1719466"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.85,
+					55.916666666
+				]
+			},
+			"properties": {
+				"NAME": "Plungė",
+				"NAME_EN": "Plungė",
+				"NAME_IT": "Plungė",
+				"NAME_DE": "Plungė",
+				"ADM0NAME": "Lithuania",
+				"ADM1NAME": "",
+				"ADM0CAP": 0,
+				"POP_MAX": 17385,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q977255"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					23.55,
+					55.8
+				]
+			},
+			"properties": {
+				"NAME": "Radviliškis",
+				"NAME_EN": "Radviliškis",
+				"NAME_IT": "Radviliškis",
+				"NAME_DE": "Radviliškis",
+				"ADM0NAME": "Lithuania",
+				"ADM1NAME": "",
+				"ADM0CAP": 0,
+				"POP_MAX": 15112,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q318686"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					25.583333333,
+					55.966666666
+				]
+			},
+			"properties": {
+				"NAME": "Rokiškis",
+				"NAME_EN": "Rokiškis",
+				"NAME_IT": "Rokiškis",
+				"NAME_DE": "Rokiškis",
+				"ADM0NAME": "Lithuania",
+				"ADM1NAME": "",
+				"ADM0CAP": 0,
+				"POP_MAX": 11606,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q1693963"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					23.316666666,
+					55.928055555
+				]
+			},
+			"properties": {
+				"NAME": "Šiauliai",
+				"NAME_EN": "Šiauliai",
+				"NAME_IT": "Šiauliai",
+				"NAME_DE": "Šiauliai",
+				"ADM0NAME": "Lithuania",
+				"ADM1NAME": "",
+				"ADM0CAP": 0,
+				"POP_MAX": 104300,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q134712"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.483333333,
+					55.35
+				]
+			},
+			"properties": {
+				"NAME": "Šilutė",
+				"NAME_EN": "Šilutė",
+				"NAME_IT": "Šilutė",
+				"NAME_DE": "Šilutė",
+				"ADM0NAME": "Lithuania",
+				"ADM1NAME": "",
+				"ADM0CAP": 0,
+				"POP_MAX": 16200,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q391626"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.283333333,
+					55.25
+				]
+			},
+			"properties": {
+				"NAME": "Tauragė",
+				"NAME_EN": "Tauragė",
+				"NAME_IT": "Tauragė",
+				"NAME_DE": "Tauragė",
+				"ADM0NAME": "Lithuania",
+				"ADM1NAME": "",
+				"ADM0CAP": 0,
+				"POP_MAX": 21416,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q193787"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.25,
+					55.98333333
+				]
+			},
+			"properties": {
+				"NAME": "Telšiai",
+				"NAME_EN": "Telšiai",
+				"NAME_IT": "Telšiai",
+				"NAME_DE": "Telšiai",
+				"ADM0NAME": "Lithuania",
+				"ADM1NAME": "",
+				"ADM0CAP": 0,
+				"POP_MAX": 22261,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q2222616"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					24.766666666,
+					55.25
+				]
+			},
+			"properties": {
+				"NAME": "Ukmergė",
+				"NAME_EN": "Ukmergė",
+				"NAME_IT": "Ukmergė",
+				"NAME_DE": "Ukmergė",
+				"ADM0NAME": "Lithuania",
+				"ADM1NAME": "",
+				"ADM0CAP": 0,
+				"POP_MAX": 21990,
+				"POP1950": 0,
+				"populationDate": "2024-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q213127"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					25.6,
+					55.5
+				]
+			},
+			"properties": {
+				"NAME": "Utena",
+				"NAME_EN": "Utena",
+				"NAME_IT": "Utena",
+				"NAME_DE": "Utena",
+				"ADM0NAME": "Lithuania",
+				"ADM1NAME": "",
+				"ADM0CAP": 0,
+				"POP_MAX": 25608,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q189157"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					23.033333333,
+					54.666666666
+				]
+			},
+			"properties": {
+				"NAME": "Vilkaviškis",
+				"NAME_EN": "Vilkaviškis",
+				"NAME_IT": "Vilkaviškis",
+				"NAME_DE": "Vilkaviškis",
+				"ADM0NAME": "Lithuania",
+				"ADM1NAME": "",
+				"ADM0CAP": 0,
+				"POP_MAX": 10291,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q852272"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					25.28,
+					54.687222222
+				]
+			},
+			"properties": {
+				"NAME": "Vilnius",
+				"NAME_EN": "Vilnius",
+				"NAME_IT": "Vilnius",
+				"NAME_DE": "Vilnius",
+				"ADM0NAME": "Lithuania",
+				"ADM1NAME": "",
+				"ADM0CAP": 1,
+				"POP_MAX": 619405,
+				"POP1950": 0,
+				"populationDate": "2026-07-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q216"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					26.433333333,
+					55.6
+				]
+			},
+			"properties": {
+				"NAME": "Visaginas",
+				"NAME_EN": "Visaginas",
+				"NAME_IT": "Visaginas",
+				"NAME_DE": "Visaginas",
+				"ADM0NAME": "Lithuania",
+				"ADM1NAME": "",
+				"ADM0CAP": 0,
+				"POP_MAX": 19586,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q203892"
+			}
+		}
+	]
+}
