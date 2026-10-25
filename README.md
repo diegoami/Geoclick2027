@@ -42,7 +42,9 @@ before uninstalling, which clears progress.
 Each release includes SHA256SUMS.txt. Compare its entry with
 certutil -hashfile <file> SHA256 on Windows or sha256sum <file> elsewhere.
 Alpha and beta releases are for testing; the Latest link selects a stable release.
-The apps do not update automatically.
+The apps do not update automatically. Historical v0.7.0 Windows checksum entries
+are stale; its migrated release notes give verified hashes while preserving the
+original files.
 
 ## Quick start (browser)
 

@@ -8,7 +8,7 @@ This plan records work still to land; it is not a claim that 1.0.0 is released.
 
 | Batch | Status | Deliverable |
 | --- | --- | --- |
-| Distribution | In progress | Verified migration of 39 releases into Geoclick2027; links and publisher updated |
+| Distribution | Migration verified; [PR #242](https://github.com/diegoami/Geoclick2027/pull/242) awaiting owner merge | Verified migration of 39 releases into Geoclick2027; links and publisher updated |
 | Boundary and target audit | Pending | Licensed, reproducible sources and suitable map types for 22 countries |
 | Maps | Pending | Administrative maps and towns/urban maps; generated through the existing pipeline |
 | Facts | Pending | Facts for added targets in English, German, and Italian; existing target gaps audited |
@@ -73,6 +73,18 @@ sourced sentences; do not pad a set merely to make its count three.
 Spanish is a later recommendation, not approved scope.
 
 ## Historical release migration
+
+**Completed 2026-10-25:** all 39 historical releases and 138 original assets
+were copied, downloaded again and matched by SHA-256. Final GitHub metadata
+and asset digests match the export; v0.20.0 is Latest. An anonymous public
+download of its checksum file returned HTTP 200 and matched the backup.
+The durable sibling directory Geoclick2027-release-backup/2026-10-25 holds
+original metadata, a Git mirror, issue metadata, every asset, the reviewed
+backup report and final-github-audit.json. Exactly two original v0.7.0 Windows
+checksum entries are stale; copied notes disclose their verified hashes while
+the original manifest and installers remain unchanged. The old repository is
+still intact. Replacement links and publisher changes await PR #242 merge.
+This is migration of historical versions, not publication of v1.0.0.
 
 Run from the implementing worktree after fetching tags:
 
