@@ -5,7 +5,24 @@
 		"populationRank": 15,
 		"region": "Pomurska",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Sobota means Saturday, recalling the town’s traditional market day.",
+				"Its Renaissance castle houses the Pomurje Museum.",
+				"The Expano pavilion first represented Slovenia at Milan’s Expo in 2015."
+			],
+			"it": [
+				"Sobota significa sabato e ricorda il tradizionale giorno di mercato della città.",
+				"Il castello rinascimentale ospita il Museo del Pomurje.",
+				"Il padiglione Expano rappresentò inizialmente la Slovenia all’Expo di Milano nel 2015."
+			],
+			"de": [
+				"Sobota bedeutet Samstag und erinnert an den traditionellen Markttag der Stadt.",
+				"Das Renaissanceschloss beherbergt das Pomurje-Museum.",
+				"Der Expano-Pavillon vertrat Slowenien zunächst auf der Mailänder Expo 2015."
+			]
+		}
 	},
 	"maribor": {
 		"kind": "city",
@@ -16,16 +33,19 @@
 		"position": "north-east",
 		"hooks": {
 			"en": [
-				"A vine on one of its old houses, more than 400 years old, is listed as the oldest in the world.",
-				"It was a European Capital of Culture in 2012."
+				"Its historical German name was Marburg an der Drau.",
+				"Its old vine is recognised as the oldest cultivated grapevine still bearing fruit.",
+				"The city was a European Capital of Culture in 2012."
 			],
 			"it": [
-				"Una vite su una delle sue vecchie case, di oltre 400 anni, è indicata come la più antica del mondo.",
-				"Fu Capitale europea della cultura nel 2012."
+				"Il nome storico tedesco era Marburg an der Drau.",
+				"La sua antica vite è riconosciuta come la più vecchia vite coltivata ancora fruttifera.",
+				"La città fu Capitale europea della cultura nel 2012."
 			],
 			"de": [
-				"Ein Weinstock an einem ihrer alten Häuser, mehr als 400 Jahre alt, gilt als der älteste der Welt.",
-				"Sie war 2012 Europäische Kulturhauptstadt."
+				"Der historische deutsche Name lautete Marburg an der Drau.",
+				"Die Alte Rebe gilt als älteste noch fruchttragende Kulturrebe.",
+				"Die Stadt war 2012 Europäische Kulturhauptstadt."
 			]
 		}
 	},
@@ -35,7 +55,24 @@
 		"populationRank": 9,
 		"region": "Gorenjska",
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Ironworking shaped the town’s growth over several centuries.",
+				"Stara Sava preserves buildings from its industrial past.",
+				"Ice hockey became a distinctive part of the town’s sporting culture."
+			],
+			"it": [
+				"La lavorazione del ferro plasmò la crescita della città per diversi secoli.",
+				"Stara Sava conserva edifici del passato industriale.",
+				"L’hockey su ghiaccio divenne una parte caratteristica della cultura sportiva locale."
+			],
+			"de": [
+				"Die Eisenverarbeitung prägte das Wachstum der Stadt über mehrere Jahrhunderte.",
+				"Stara Sava bewahrt Gebäude aus ihrer industriellen Vergangenheit.",
+				"Eishockey wurde zu einem prägenden Teil der örtlichen Sportkultur."
+			]
+		}
 	},
 	"ptuj": {
 		"kind": "city",
@@ -43,7 +80,24 @@
 		"populationRank": 7,
 		"region": "Podravska",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"The Romans knew the settlement as Poetovio.",
+				"Its castle houses historical museum collections.",
+				"The Kurenti’s masked rounds are a UNESCO-recognised Shrovetide tradition."
+			],
+			"it": [
+				"I romani conoscevano l’insediamento come Poetovio.",
+				"Il castello ospita collezioni museali storiche.",
+				"I giri mascherati dei Kurenti sono una tradizione carnevalesca riconosciuta dall’UNESCO."
+			],
+			"de": [
+				"Die Römer kannten die Siedlung als Poetovio.",
+				"Die Burg beherbergt historische Museumssammlungen.",
+				"Die maskierten Umzüge der Kurenti sind ein von der UNESCO anerkannter Fastnachtsbrauch."
+			]
+		}
 	},
 	"slovenska-bistrica": {
 		"kind": "city",
@@ -51,7 +105,24 @@
 		"populationRank": 19,
 		"region": "Podravska",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"The medieval town grew on the route between Maribor and Celje.",
+				"Its historic castle houses museum collections.",
+				"The nearby Bistrica gorge preserves a Roman marble quarry and traces of old mills."
+			],
+			"it": [
+				"La città medievale crebbe sulla via tra Maribor e Celje.",
+				"Lo storico castello ospita collezioni museali.",
+				"La vicina gola della Bistrica conserva una cava romana di marmo e tracce di antichi mulini."
+			],
+			"de": [
+				"Die mittelalterliche Stadt wuchs am Weg zwischen Maribor und Celje.",
+				"Ihr historisches Schloss beherbergt Museumssammlungen.",
+				"Die nahe Bistrica-Schlucht bewahrt einen römischen Marmorbruch und Spuren alter Mühlen."
+			]
+		}
 	},
 	"velenje": {
 		"kind": "city",
@@ -59,7 +130,24 @@
 		"populationRank": 6,
 		"region": "Savinjska",
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"The modern mining town expanded rapidly in the decades after the Second World War.",
+				"Its medieval castle was remodelled into a Renaissance residence.",
+				"The castle’s museum began with a coal-mining collection in 1957."
+			],
+			"it": [
+				"La moderna città mineraria si ampliò rapidamente nei decenni successivi alla Seconda guerra mondiale.",
+				"Il castello medievale fu trasformato in residenza rinascimentale.",
+				"Il museo del castello iniziò con una collezione sull’estrazione del carbone nel 1957."
+			],
+			"de": [
+				"Die moderne Bergbaustadt wuchs nach dem Zweiten Weltkrieg rasch.",
+				"Ihre mittelalterliche Burg wurde zu einer Renaissanceresidenz umgebaut.",
+				"Das Schlossmuseum begann 1957 mit einer Sammlung zum Kohlebergbau."
+			]
+		}
 	},
 	"kranj": {
 		"kind": "city",
@@ -67,7 +155,24 @@
 		"populationRank": 3,
 		"region": "Gorenjska",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Its name descends from ancient Carnium.",
+				"Poet France Prešeren spent his final years here.",
+				"The Kokra River cuts a steep canyon beside the historic centre."
+			],
+			"it": [
+				"Il nome discende dall’antica Carnium.",
+				"Il poeta France Prešeren vi trascorse gli ultimi anni.",
+				"Il fiume Kokra scava un ripido canyon accanto al centro storico."
+			],
+			"de": [
+				"Der Name geht auf das antike Carnium zurück.",
+				"Der Dichter France Prešeren verbrachte hier seine letzten Jahre.",
+				"Die Kokra schneidet eine steile Schlucht neben der Altstadt ein."
+			]
+		}
 	},
 	"celje": {
 		"kind": "city",
@@ -75,7 +180,24 @@
 		"populationRank": 4,
 		"region": "Savinjska",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"The Roman town was called Celeia.",
+				"The Counts of Celje became a powerful medieval dynasty.",
+				"Their three golden stars inspired the stars on Slovenia’s coat of arms."
+			],
+			"it": [
+				"La città romana si chiamava Celeia.",
+				"I conti di Celje divennero una potente dinastia medievale.",
+				"Le loro tre stelle d’oro ispirarono le stelle sullo stemma sloveno."
+			],
+			"de": [
+				"Die römische Stadt hieß Celeia.",
+				"Die Grafen von Cilli wurden zu einer mächtigen mittelalterlichen Dynastie.",
+				"Ihre drei goldenen Sterne inspirierten die Sterne im slowenischen Staatswappen."
+			]
+		}
 	},
 	"kamnik": {
 		"kind": "city",
@@ -83,7 +205,24 @@
 		"populationRank": 8,
 		"region": "Osrednjeslovenska",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its historic German name was Stein, meaning stone.",
+				"Mali Grad preserves a Romanesque castle chapel.",
+				"General and poet Rudolf Maister was born here in 1874."
+			],
+			"it": [
+				"Il nome storico tedesco era Stein, che significa pietra.",
+				"Mali Grad conserva una cappella castellana romanica.",
+				"Qui nacque nel 1874 il generale e poeta Rudolf Maister."
+			],
+			"de": [
+				"Der historische deutsche Name lautete Stein.",
+				"Mali Grad bewahrt eine romanische Burgkapelle.",
+				"Hier wurde 1874 der General und Dichter Rudolf Maister geboren."
+			]
+		}
 	},
 	"skofja-loka": {
 		"kind": "city",
@@ -91,7 +230,24 @@
 		"populationRank": 13,
 		"region": "Gorenjska",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Its name means bishop’s meadow, recalling the bishops of Freising.",
+				"The Capuchin Bridge is a surviving medieval stone crossing.",
+				"Its processional Passion Play entered UNESCO’s intangible heritage list in 2016."
+			],
+			"it": [
+				"Il nome significa prato del vescovo e ricorda i vescovi di Frisinga.",
+				"Il Ponte dei Cappuccini è un attraversamento medievale in pietra ancora conservato.",
+				"La rappresentazione processionale della Passione entrò nella lista del patrimonio immateriale UNESCO nel 2016."
+			],
+			"de": [
+				"Der Name bedeutet Bischofswiese und erinnert an die Bischöfe von Freising.",
+				"Die Kapuzinerbrücke ist eine erhaltene mittelalterliche Steinbrücke.",
+				"Das Prozessionspassionsspiel wurde 2016 in die UNESCO-Liste des immateriellen Kulturerbes aufgenommen."
+			]
+		}
 	},
 	"trbovlje": {
 		"kind": "city",
@@ -99,7 +255,24 @@
 		"populationRank": 10,
 		"region": "Zasavska",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Its modern history was shaped by coal mining.",
+				"The former power station’s chimney rises 360 metres.",
+				"The industrial music group Laibach originated here."
+			],
+			"it": [
+				"La sua storia moderna fu plasmata dall’estrazione del carbone.",
+				"La ciminiera dell’ex centrale elettrica raggiunge 360 metri.",
+				"Qui nacque il gruppo di musica industriale Laibach."
+			],
+			"de": [
+				"Die moderne Geschichte der Stadt wurde vom Kohlebergbau geprägt.",
+				"Der Schornstein des ehemaligen Kraftwerks ist 360 Meter hoch.",
+				"Die Industrial-Band Laibach entstand hier."
+			]
+		}
 	},
 	"domzale": {
 		"kind": "city",
@@ -107,7 +280,24 @@
 		"populationRank": 11,
 		"region": "Osrednjeslovenska",
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Straw-hat making drove the town’s nineteenth-century industrial growth.",
+				"Local workshops and factories sold hats across Europe and beyond.",
+				"The Straw Hat Museum preserves the craft’s tools and production techniques."
+			],
+			"it": [
+				"La produzione di cappelli di paglia trainò la crescita industriale ottocentesca della città.",
+				"Botteghe e fabbriche locali vendevano cappelli in Europa e oltre.",
+				"Il Museo del cappello di paglia conserva strumenti e tecniche di produzione del mestiere."
+			],
+			"de": [
+				"Die Strohhutherstellung trieb das industrielle Wachstum der Stadt im 19. Jahrhundert an.",
+				"Örtliche Werkstätten und Fabriken verkauften Hüte in Europa und darüber hinaus.",
+				"Das Strohhutmuseum bewahrt Werkzeuge und Herstellungstechniken des Handwerks."
+			]
+		}
 	},
 	"ljubljana": {
 		"kind": "city",
@@ -141,7 +331,24 @@
 		"populationRank": 12,
 		"region": "Goriška",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Its name means New Gorizia.",
+				"Architect Edvard Ravnikar planned the new town after the border changed in 1947.",
+				"It shared the 2025 European Capital of Culture programme with neighbouring Gorizia in Italy."
+			],
+			"it": [
+				"Il nome significa Nuova Gorizia.",
+				"L’architetto Edvard Ravnikar progettò la città nuova dopo il cambiamento del confine nel 1947.",
+				"Condivise il programma di Capitale europea della cultura 2025 con la vicina Gorizia, in Italia."
+			],
+			"de": [
+				"Der Name bedeutet Neu-Görz.",
+				"Architekt Edvard Ravnikar plante die neue Stadt nach der Grenzänderung von 1947.",
+				"Sie teilte das Kulturhauptstadtprogramm 2025 mit dem benachbarten italienischen Gorizia."
+			]
+		}
 	},
 	"vrhnika": {
 		"kind": "city",
@@ -149,7 +356,24 @@
 		"populationRank": 18,
 		"region": "Osrednjeslovenska",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"The Roman settlement here was known as Nauportus.",
+				"Writer Ivan Cankar was born in the town in 1876.",
+				"Nearby karst springs mark the emergence of the Ljubljanica River."
+			],
+			"it": [
+				"L’insediamento romano era noto come Nauportus.",
+				"Lo scrittore Ivan Cankar nacque in città nel 1876.",
+				"Le vicine sorgenti carsiche segnano l’emergere del fiume Ljubljanica."
+			],
+			"de": [
+				"Die römische Siedlung hieß Nauportus.",
+				"Der Schriftsteller Ivan Cankar wurde hier 1876 geboren.",
+				"Nahe Karstquellen markieren den Austritt der Ljubljanica."
+			]
+		}
 	},
 	"logatec": {
 		"kind": "city",
@@ -157,7 +381,24 @@
 		"populationRank": 16,
 		"region": "Osrednjeslovenska",
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"It prospered on the historic transport route towards Trieste.",
+				"Local tradition links its lime-tree avenue with Napoleon’s marriage to Marie-Louise.",
+				"The Logaščica stream disappears into a sinkhole within the town."
+			],
+			"it": [
+				"Prosperò lungo la storica via di trasporto verso Trieste.",
+				"La tradizione locale collega il viale di tigli alle nozze di Napoleone con Maria Luisa.",
+				"Il torrente Logaščica scompare in un inghiottitoio all’interno della città."
+			],
+			"de": [
+				"Die Stadt blühte am historischen Verkehrsweg nach Triest auf.",
+				"Die örtliche Überlieferung verbindet die Lindenallee mit Napoleons Hochzeit mit Marie-Louise.",
+				"Der Bach Logaščica verschwindet im Ort in einer Schwinde."
+			]
+		}
 	},
 	"postojna": {
 		"kind": "city",
@@ -165,7 +406,24 @@
 		"populationRank": 17,
 		"region": "Primorsko-notranjska",
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"The town was historically also known as Adelsberg in German.",
+				"Its famous cave system shelters the cave salamander called the olm.",
+				"Rails for tourist trains were laid in Postojna Cave in 1872."
+			],
+			"it": [
+				"La città era storicamente nota anche come Adelsberg in tedesco.",
+				"Il celebre sistema di grotte ospita la salamandra cavernicola chiamata proteo.",
+				"Nella grotta di Postumia furono posati binari per i treni turistici nel 1872."
+			],
+			"de": [
+				"Die Stadt war auf Deutsch historisch auch als Adelsberg bekannt.",
+				"Ihr berühmtes Höhlensystem beherbergt den Grottenolm.",
+				"In der Höhle von Postojna wurden 1872 Schienen für Besucherzüge verlegt."
+			]
+		}
 	},
 	"kocevje": {
 		"kind": "city",
@@ -173,7 +431,24 @@
 		"populationRank": 20,
 		"region": "Jugovzhodna Slovenija",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Its historical German name was Gottschee.",
+				"German-speaking settlers arrived in the wider area during the fourteenth century.",
+				"Nearby Kočevsko forests preserve the primeval beech woodland of Krokar."
+			],
+			"it": [
+				"Il nome storico tedesco era Gottschee.",
+				"Coloni di lingua tedesca arrivarono nella zona nel Trecento.",
+				"Le vicine foreste del Kočevsko conservano la faggeta primaria di Krokar."
+			],
+			"de": [
+				"Der historische deutsche Name lautete Gottschee.",
+				"Deutschsprachige Siedler kamen im 14. Jahrhundert in die weitere Gegend.",
+				"Die nahen Wälder des Kočevsko bewahren den Buchenurwald Krokar."
+			]
+		}
 	},
 	"koper": {
 		"kind": "city",
@@ -181,7 +456,24 @@
 		"populationRank": 5,
 		"region": "Obalno-kraška",
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Its Italian name Capodistria recalls its historic role in Istria.",
+				"The Praetorian Palace reflects the town’s Venetian heritage.",
+				"The historic centre occupies what was once an island."
+			],
+			"it": [
+				"Il nome italiano Capodistria ricorda il ruolo storico della città in Istria.",
+				"Il Palazzo Pretorio riflette il patrimonio veneziano della città.",
+				"Il centro storico occupa quella che un tempo era un’isola."
+			],
+			"de": [
+				"Der italienische Name Capodistria erinnert an die historische Rolle der Stadt in Istrien.",
+				"Der Prätorenpalast spiegelt das venezianische Erbe der Stadt wider.",
+				"Die Altstadt liegt auf einer ehemaligen Insel."
+			]
+		}
 	},
 	"izola": {
 		"kind": "city",
@@ -189,6 +481,23 @@
 		"populationRank": 14,
 		"region": "Obalno-kraška",
 		"coastal": true,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Its name comes from Italian isola, meaning island.",
+				"The former island was joined to the mainland in the nineteenth century.",
+				"Fishing and shipbuilding became important parts of the town’s identity."
+			],
+			"it": [
+				"Il nome deriva dall’italiano isola.",
+				"L’antica isola fu collegata alla terraferma nell’Ottocento.",
+				"Pesca e cantieristica divennero parti importanti dell’identità cittadina."
+			],
+			"de": [
+				"Der Name stammt vom italienischen isola für Insel.",
+				"Die frühere Insel wurde im 19. Jahrhundert mit dem Festland verbunden.",
+				"Fischerei und Schiffbau wurden zu wichtigen Teilen der städtischen Identität."
+			]
+		}
 	}
 }

@@ -13,7 +13,24 @@
 			"nameIt": "Jaffna",
 			"population": 88138
 		},
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"The province was created during British rule in 1833.",
+				"Jaffna’s Nallur Kandaswamy temple is an important centre of Tamil Hindu worship.",
+				"Mannar preserves a fort built by the Portuguese and later rebuilt by the Dutch."
+			],
+			"it": [
+				"La provincia fu creata durante il dominio britannico nel 1833.",
+				"Il tempio Nallur Kandaswamy di Jaffna è un importante centro di culto induista tamil.",
+				"Mannar conserva una fortezza costruita dai portoghesi e poi ricostruita dagli olandesi."
+			],
+			"de": [
+				"Die Provinz entstand 1833 unter britischer Herrschaft.",
+				"Jaffnas Nallur-Kandaswamy-Tempel ist ein bedeutendes Zentrum tamilischen Hinduismus.",
+				"Mannar bewahrt eine von Portugiesen errichtete und später von Niederländern erneuerte Festung."
+			]
+		}
 	},
 	"north-central": {
 		"kind": "region",
@@ -30,7 +47,24 @@
 			"nameIt": "Anurādhapura",
 			"population": 63208
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"The province was created in 1873.",
+				"Anuradhapura preserves the remains of an ancient Buddhist capital.",
+				"Polonnaruwa’s ruins include palaces, monasteries and monumental Buddha images."
+			],
+			"it": [
+				"La provincia fu creata nel 1873.",
+				"Anuradhapura conserva i resti di un’antica capitale buddhista.",
+				"Le rovine di Polonnaruwa comprendono palazzi, monasteri e immagini monumentali del Buddha."
+			],
+			"de": [
+				"Die Provinz entstand 1873.",
+				"Anuradhapura bewahrt die Reste einer alten buddhistischen Hauptstadt.",
+				"Polonnaruwas Ruinen umfassen Paläste, Klöster und monumentale Buddhadarstellungen."
+			]
+		}
 	},
 	"north-western": {
 		"kind": "region",
@@ -42,7 +76,24 @@
 			"Western"
 		],
 		"coastal": true,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"It was separated from Western Province in 1845.",
+				"Yapahuwa’s rock fortress briefly served as a medieval royal capital.",
+				"Panduwasnuwara preserves twelfth-century palace and monastery ruins."
+			],
+			"it": [
+				"Fu separata dalla Provincia Occidentale nel 1845.",
+				"La fortezza rupestre di Yapahuwa fu per breve tempo una capitale reale medievale.",
+				"Panduwasnuwara conserva rovine di palazzi e monasteri del XII secolo."
+			],
+			"de": [
+				"Sie wurde 1845 von der Westprovinz abgetrennt.",
+				"Die Felsenfestung Yapahuwa war kurzzeitig eine mittelalterliche Königshauptstadt.",
+				"Panduwasnuwara bewahrt Palast- und Klosterruinen aus dem 12. Jahrhundert."
+			]
+		}
 	},
 	"eastern": {
 		"kind": "region",
@@ -60,7 +111,24 @@
 			"nameIt": "Trincomalee",
 			"population": 99135
 		},
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Trincomalee’s natural harbour attracted successive Portuguese, Dutch, French and British rulers.",
+				"The Koneswaram temple is a major Hindu pilgrimage site.",
+				"Fishing and farming have long supported settlements such as Vakarai."
+			],
+			"it": [
+				"Il porto naturale di Trincomalee attirò in successione governanti portoghesi, olandesi, francesi e britannici.",
+				"Il tempio di Koneswaram è un importante luogo di pellegrinaggio induista.",
+				"Pesca e agricoltura sostengono da lungo tempo insediamenti come Vakarai."
+			],
+			"de": [
+				"Trincomalees Naturhafen zog nacheinander portugiesische, niederländische, französische und britische Herrscher an.",
+				"Der Koneswaram-Tempel ist ein bedeutender hinduistischer Wallfahrtsort.",
+				"Fischfang und Landwirtschaft ernähren seit Langem Siedlungen wie Vakarai."
+			]
+		}
 	},
 	"central": {
 		"kind": "region",
@@ -82,7 +150,24 @@
 			"name": "Pidurutalagala",
 			"elevation": 2524
 		},
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"The province was created in 1833.",
+				"Kandy’s Temple of the Tooth preserves a revered Buddhist relic.",
+				"Sigiriya’s rock fortress is surrounded by ancient gardens and waterworks."
+			],
+			"it": [
+				"La provincia fu creata nel 1833.",
+				"Il Tempio del Dente di Kandy conserva una venerata reliquia buddhista.",
+				"La fortezza rupestre di Sigiriya è circondata da antichi giardini e opere idrauliche."
+			],
+			"de": [
+				"Die Provinz entstand 1833.",
+				"Kandys Zahntempel bewahrt eine verehrte buddhistische Reliquie.",
+				"Die Felsenfestung Sigiriya ist von alten Gärten und Wasseranlagen umgeben."
+			]
+		}
 	},
 	"uva": {
 		"kind": "region",
@@ -99,7 +184,24 @@
 			"nameIt": "Badulla",
 			"population": 42923
 		},
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"The province was created in 1886.",
+				"Buduruwagala preserves seven Buddhist figures carved into a rock face.",
+				"Its hill-country railway developed to carry plantation products towards Colombo."
+			],
+			"it": [
+				"La provincia fu creata nel 1886.",
+				"Buduruwagala conserva sette figure buddhiste scolpite in una parete rocciosa.",
+				"La ferrovia montana si sviluppò per trasportare i prodotti delle piantagioni verso Colombo."
+			],
+			"de": [
+				"Die Provinz entstand 1886.",
+				"Buduruwagala bewahrt sieben in eine Felswand gehauene buddhistische Figuren.",
+				"Die Hochlandbahn entstand zum Transport von Plantagenprodukten in Richtung Colombo."
+			]
+		}
 	},
 	"western": {
 		"kind": "region",
@@ -115,7 +217,24 @@
 			"nameIt": "Colombo",
 			"population": 647557
 		},
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"The province was created in 1833 and later divided to form newer provinces.",
+				"Geoffrey Bawa designed the Parliament complex at Kotte.",
+				"Henarathgoda’s botanical garden played a pioneering role in rubber cultivation."
+			],
+			"it": [
+				"La provincia fu creata nel 1833 e poi suddivisa per formare nuove province.",
+				"Geoffrey Bawa progettò il complesso del Parlamento a Kotte.",
+				"L’orto botanico di Henarathgoda ebbe un ruolo pionieristico nella coltivazione della gomma."
+			],
+			"de": [
+				"Die Provinz entstand 1833 und wurde später zur Bildung neuer Provinzen geteilt.",
+				"Geoffrey Bawa entwarf den Parlamentskomplex in Kotte.",
+				"Der botanische Garten Henarathgoda spielte eine Pionierrolle beim Kautschukanbau."
+			]
+		}
 	},
 	"sabaragamuwa": {
 		"kind": "region",
@@ -133,7 +252,24 @@
 			"nameIt": "Kegalle",
 			"population": 17962
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"The province was created in 1889 from parts of Western Province.",
+				"Ratnapura is a traditional centre of sapphire and other gemstone trading.",
+				"Sinharaja preserves an exceptional remnant of tropical rainforest."
+			],
+			"it": [
+				"La provincia fu creata nel 1889 da parti della Provincia Occidentale.",
+				"Ratnapura è un centro tradizionale del commercio di zaffiri e altre gemme.",
+				"Sinharaja conserva un eccezionale lembo di foresta pluviale tropicale."
+			],
+			"de": [
+				"Die Provinz entstand 1889 aus Teilen der Westprovinz.",
+				"Ratnapura ist ein traditionelles Handelszentrum für Saphire und andere Edelsteine.",
+				"Sinharaja bewahrt einen außergewöhnlichen Rest tropischen Regenwalds."
+			]
+		}
 	},
 	"southern": {
 		"kind": "region",
@@ -150,6 +286,23 @@
 			"nameIt": "Galle",
 			"population": 93118
 		},
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"The province was created in 1833.",
+				"Galle’s fortified old town reflects Portuguese and Dutch colonial history.",
+				"Bundala’s wetlands provide habitat for resident and migratory waterbirds."
+			],
+			"it": [
+				"La provincia fu creata nel 1833.",
+				"La città vecchia fortificata di Galle riflette la storia coloniale portoghese e olandese.",
+				"Le zone umide di Bundala ospitano uccelli acquatici stanziali e migratori."
+			],
+			"de": [
+				"Die Provinz entstand 1833.",
+				"Galles befestigte Altstadt spiegelt portugiesische und niederländische Kolonialgeschichte wider.",
+				"Bundalas Feuchtgebiete bieten heimischen und ziehenden Wasservögeln Lebensraum."
+			]
+		}
 	}
 }

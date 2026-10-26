@@ -186,9 +186,9 @@ joined in the catalogue. Singapore has five regions and 55 planning areas,
 rather than a misleading towns map. All 44 new choices were verified in the
 rendered browser catalogue at 1280 × 800 on localhost:5187.
 
-Authored facts are still in progress: 288/735 new targets have three sentences
+Authored facts are still in progress: 368/735 new targets have three sentences
 in each of English, Italian and German. The first six countries, Nepal, UAE,
-Uzbekistan and Latvia are complete; twelve countries remain. The reproducible
+Uzbekistan, Latvia, Sri Lanka, Uganda and Slovenia are complete; nine countries remain. The reproducible
 coverage check is data/scripts/audit-v1-country-facts.ts (--strict fails until
 all remaining targets are complete). Generated hooks are refreshed from the
 authored data/facts files, including shared continent targets.
@@ -395,7 +395,7 @@ Sources/caches there are task-owned and must not be wiped. Windows worktree
 remains canonical. No merge, version bump, tag, deployment or itch.io access.
 
 
-### Full catalogue local verification (2026-10-26)
+### Full catalogue local verification (fda2f03, 2026-10-26)
 
 All four local gates pass after the full 44-map expansion: type checks,
 2792 app tests (zero failures), lint and production web build. The desktop
@@ -406,7 +406,24 @@ was triggered or checked (deploys remain stopped).
 Browser checks at 1280 × 800 confirmed all 44 choices in the rendered start
 screen menus and successful canvases for Nepal, Angola, DR Congo and
 Singapore planning areas, without page errors or failed local asset requests.
-Facts remain 288/735 complete; the strict content audit still intentionally
+Facts remain 368/735 complete; the strict content audit still intentionally
 fails. PR #243 remains draft and needs a fresh external-family review after
 content completion, followed by owner testing/merge approval. Its old reviews
 do not cover this expanded code. No 1.0 bump, tag or publication has happened.
+
+
+### Additional authored facts
+
+Sri Lanka, Uganda and Slovenia now have three authored sentences per target
+in English, Italian and German: 80 newly completed sets, 720 sentences.
+Existing Colombo, Kampala and Ljubljana sets were preserved. Maribor’s two
+sentences were retained in substance and expanded with its historic name.
+Per-target checking references are stored in the authored country files.
+Generated hooks were refreshed for their six maps and the shared Central
+European cities map. The coverage regressions now include all 26 maps of
+the thirteen completed countries; 1380 focused data/fact/translation tests pass.
+
+Remaining authoring: Ghana, Taiwan, DR Congo, Ethiopia, Tanzania, Singapore,
+Israel, Iraq and Angola (367 targets lacking complete EN/IT/DE sets).
+The full-scope strict audit remains a release-readiness check, not a passed
+gate. Fresh external-family review and owner testing follow content completion.

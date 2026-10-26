@@ -89,7 +89,17 @@ describe('v1.0 country expansion data', () => {
 		'nepal-provinces',
 		'nepal-towns-10k',
 		'united-arab-emirates-emirates',
-		'united-arab-emirates-towns-1k'
+		'united-arab-emirates-towns-1k',
+		'uzbekistan-regions',
+		'uzbekistan-towns-10k',
+		'latvia-regions',
+		'latvia-towns-5k',
+		'sri-lanka-provinces',
+		'sri-lanka-towns-10k',
+		'uganda-regions',
+		'uganda-towns-10k',
+		'slovenia-regions',
+		'slovenia-towns-5k'
 	];
 	it.each(maps)('%s has three authored facts per target and language', (id) => {
 		const map = read<MapData>('maps/' + id + '/map.json');

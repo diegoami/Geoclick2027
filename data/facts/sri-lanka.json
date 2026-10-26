@@ -2,7 +2,8 @@
 	"_note": [
 		"Name-facts for Sri Lanka (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences."
+		"of the same id, written later, never shows a town's sentences.",
+		"v1.0 adds region/town facts in English, Italian and German; _sources records checking references by target and kind."
 	],
 	"colombo": {
 		"city": {
@@ -20,6 +21,605 @@
 				"Die Handelshauptstadt Sri Lankas; die amtliche Hauptstadt ist Sri Jayawardenepura Kotte an ihrem Rand.",
 				"Ihr Park am Meer, Galle Face Green, stammt von 1859.",
 				"Arabische Händler kannten ihren Hafen Jahrhunderte, bevor die Portugiesen 1505 eintrafen."
+			]
+		}
+	},
+	"_sources": {
+		"northern:region": [
+			"https://en.wikipedia.org/wiki/Northern_Province,_Sri_Lanka",
+			"https://en.wikipedia.org/wiki/Nallur_Kandaswamy_temple",
+			"https://en.wikipedia.org/wiki/Mannar,_Sri_Lanka"
+		],
+		"north-central:region": [
+			"https://en.wikipedia.org/wiki/North_Central_Province,_Sri_Lanka",
+			"https://whc.unesco.org/en/list/200/",
+			"https://whc.unesco.org/en/list/201/"
+		],
+		"north-western:region": [
+			"https://en.wikipedia.org/wiki/Western_Province,_Sri_Lanka",
+			"https://en.wikipedia.org/wiki/Yapahuwa",
+			"https://en.wikipedia.org/wiki/Panduwasnuwara"
+		],
+		"eastern:region": [
+			"https://www.srilanka.travel/ArrivebyaCruise/trinco-port.php",
+			"https://en.wikipedia.org/wiki/Koneswaram_temple",
+			"https://en.wikipedia.org/wiki/Vakarai_(Sri_Lanka)"
+		],
+		"central:region": [
+			"https://en.wikipedia.org/wiki/Central_Province,_Sri_Lanka",
+			"https://srilanka.travel/cultural_heritage",
+			"https://sltda.gov.lk/en/tourist-attractions"
+		],
+		"uva:region": [
+			"https://en.wikipedia.org/wiki/Uva_Province",
+			"https://www.uniquesrilanka.com/v2/heritage/buduruwagala",
+			"https://en.wikipedia.org/wiki/Badulla"
+		],
+		"western:region": [
+			"https://en.wikipedia.org/wiki/Western_Province,_Sri_Lanka",
+			"https://www.parliament.lk/en/learn/handbook-of-parliament/evolution-of-the-parliamentary-system",
+			"https://botanicgardens.gov.lk/service/henarathgoda-botanic-gardens-gampaha/"
+		],
+		"sabaragamuwa:region": [
+			"https://en.wikipedia.org/wiki/Sabaragamuwa_Province",
+			"https://en.wikipedia.org/wiki/Western_Province,_Sri_Lanka",
+			"https://srilanka.travel/index.php?destination=21&route=attractions%2Fdestination",
+			"https://whc.unesco.org/en/list/405/"
+		],
+		"southern:region": [
+			"https://en.wikipedia.org/wiki/Southern_Province,_Sri_Lanka",
+			"https://srilanka.travel/cultural_heritage",
+			"https://srilanka.travel/attraction?attraction_id=168"
+		],
+		"jaffna:city": [
+			"https://en.wikipedia.org/wiki/Jaffna",
+			"https://en.wikipedia.org/wiki/Nallur_Kandaswamy_temple"
+		],
+		"mullaitivu:city": [
+			"https://en.wikipedia.org/wiki/Mullaitivu"
+		],
+		"mannar:city": [
+			"https://en.wikipedia.org/wiki/Mannar,_Sri_Lanka"
+		],
+		"trincomalee:city": [
+			"https://www.srilanka.travel/ArrivebyaCruise/trinco-port.php"
+		],
+		"anuradhapura:city": [
+			"https://whc.unesco.org/en/list/200/"
+		],
+		"vakarai:city": [
+			"https://en.wikipedia.org/wiki/Vakarai_(Sri_Lanka)"
+		],
+		"matale:city": [
+			"https://en.wikipedia.org/wiki/Matale",
+			"https://en.wikipedia.org/wiki/Aluvihare_Rock_Temple"
+		],
+		"kandy:city": [
+			"https://en.wikipedia.org/wiki/Kandy",
+			"https://whc.unesco.org/en/list/450/"
+		],
+		"kegalle:city": [
+			"https://en.wikipedia.org/wiki/Kegalle"
+		],
+		"negombo:city": [
+			"https://sltda.gov.lk/en/tourist-attractions"
+		],
+		"gampaha:city": [
+			"https://en.wikipedia.org/wiki/Gampaha",
+			"https://botanicgardens.gov.lk/service/henarathgoda-botanic-gardens-gampaha/"
+		],
+		"badulla:city": [
+			"https://en.wikipedia.org/wiki/Badulla"
+		],
+		"nuwara-eliya:city": [
+			"https://sltda.gov.lk/en/tourist-attractions",
+			"https://en.wikipedia.org/wiki/Nuwara_Eliya"
+		],
+		"sri-jayawardenepura-kotte:city": [
+			"https://www.parliament.lk/en/home/parliament-news/view/2548",
+			"https://www.parliament.lk/files/pdf/cpc/nb_20120908.pdf"
+		],
+		"hambantota:city": [
+			"https://en.wikipedia.org/wiki/Hambantota"
+		],
+		"galle:city": [
+			"https://whc.unesco.org/en/list/451/"
+		],
+		"matara:city": [
+			"https://en.wikipedia.org/wiki/Matara,_Sri_Lanka"
+		]
+	},
+	"northern": {
+		"region": {
+			"en": [
+				"The province was created during British rule in 1833.",
+				"Jaffna’s Nallur Kandaswamy temple is an important centre of Tamil Hindu worship.",
+				"Mannar preserves a fort built by the Portuguese and later rebuilt by the Dutch."
+			],
+			"it": [
+				"La provincia fu creata durante il dominio britannico nel 1833.",
+				"Il tempio Nallur Kandaswamy di Jaffna è un importante centro di culto induista tamil.",
+				"Mannar conserva una fortezza costruita dai portoghesi e poi ricostruita dagli olandesi."
+			],
+			"de": [
+				"Die Provinz entstand 1833 unter britischer Herrschaft.",
+				"Jaffnas Nallur-Kandaswamy-Tempel ist ein bedeutendes Zentrum tamilischen Hinduismus.",
+				"Mannar bewahrt eine von Portugiesen errichtete und später von Niederländern erneuerte Festung."
+			]
+		}
+	},
+	"north-central": {
+		"region": {
+			"en": [
+				"The province was created in 1873.",
+				"Anuradhapura preserves the remains of an ancient Buddhist capital.",
+				"Polonnaruwa’s ruins include palaces, monasteries and monumental Buddha images."
+			],
+			"it": [
+				"La provincia fu creata nel 1873.",
+				"Anuradhapura conserva i resti di un’antica capitale buddhista.",
+				"Le rovine di Polonnaruwa comprendono palazzi, monasteri e immagini monumentali del Buddha."
+			],
+			"de": [
+				"Die Provinz entstand 1873.",
+				"Anuradhapura bewahrt die Reste einer alten buddhistischen Hauptstadt.",
+				"Polonnaruwas Ruinen umfassen Paläste, Klöster und monumentale Buddhadarstellungen."
+			]
+		}
+	},
+	"north-western": {
+		"region": {
+			"en": [
+				"It was separated from Western Province in 1845.",
+				"Yapahuwa’s rock fortress briefly served as a medieval royal capital.",
+				"Panduwasnuwara preserves twelfth-century palace and monastery ruins."
+			],
+			"it": [
+				"Fu separata dalla Provincia Occidentale nel 1845.",
+				"La fortezza rupestre di Yapahuwa fu per breve tempo una capitale reale medievale.",
+				"Panduwasnuwara conserva rovine di palazzi e monasteri del XII secolo."
+			],
+			"de": [
+				"Sie wurde 1845 von der Westprovinz abgetrennt.",
+				"Die Felsenfestung Yapahuwa war kurzzeitig eine mittelalterliche Königshauptstadt.",
+				"Panduwasnuwara bewahrt Palast- und Klosterruinen aus dem 12. Jahrhundert."
+			]
+		}
+	},
+	"eastern": {
+		"region": {
+			"en": [
+				"Trincomalee’s natural harbour attracted successive Portuguese, Dutch, French and British rulers.",
+				"The Koneswaram temple is a major Hindu pilgrimage site.",
+				"Fishing and farming have long supported settlements such as Vakarai."
+			],
+			"it": [
+				"Il porto naturale di Trincomalee attirò in successione governanti portoghesi, olandesi, francesi e britannici.",
+				"Il tempio di Koneswaram è un importante luogo di pellegrinaggio induista.",
+				"Pesca e agricoltura sostengono da lungo tempo insediamenti come Vakarai."
+			],
+			"de": [
+				"Trincomalees Naturhafen zog nacheinander portugiesische, niederländische, französische und britische Herrscher an.",
+				"Der Koneswaram-Tempel ist ein bedeutender hinduistischer Wallfahrtsort.",
+				"Fischfang und Landwirtschaft ernähren seit Langem Siedlungen wie Vakarai."
+			]
+		}
+	},
+	"central": {
+		"region": {
+			"en": [
+				"The province was created in 1833.",
+				"Kandy’s Temple of the Tooth preserves a revered Buddhist relic.",
+				"Sigiriya’s rock fortress is surrounded by ancient gardens and waterworks."
+			],
+			"it": [
+				"La provincia fu creata nel 1833.",
+				"Il Tempio del Dente di Kandy conserva una venerata reliquia buddhista.",
+				"La fortezza rupestre di Sigiriya è circondata da antichi giardini e opere idrauliche."
+			],
+			"de": [
+				"Die Provinz entstand 1833.",
+				"Kandys Zahntempel bewahrt eine verehrte buddhistische Reliquie.",
+				"Die Felsenfestung Sigiriya ist von alten Gärten und Wasseranlagen umgeben."
+			]
+		}
+	},
+	"uva": {
+		"region": {
+			"en": [
+				"The province was created in 1886.",
+				"Buduruwagala preserves seven Buddhist figures carved into a rock face.",
+				"Its hill-country railway developed to carry plantation products towards Colombo."
+			],
+			"it": [
+				"La provincia fu creata nel 1886.",
+				"Buduruwagala conserva sette figure buddhiste scolpite in una parete rocciosa.",
+				"La ferrovia montana si sviluppò per trasportare i prodotti delle piantagioni verso Colombo."
+			],
+			"de": [
+				"Die Provinz entstand 1886.",
+				"Buduruwagala bewahrt sieben in eine Felswand gehauene buddhistische Figuren.",
+				"Die Hochlandbahn entstand zum Transport von Plantagenprodukten in Richtung Colombo."
+			]
+		}
+	},
+	"western": {
+		"region": {
+			"en": [
+				"The province was created in 1833 and later divided to form newer provinces.",
+				"Geoffrey Bawa designed the Parliament complex at Kotte.",
+				"Henarathgoda’s botanical garden played a pioneering role in rubber cultivation."
+			],
+			"it": [
+				"La provincia fu creata nel 1833 e poi suddivisa per formare nuove province.",
+				"Geoffrey Bawa progettò il complesso del Parlamento a Kotte.",
+				"L’orto botanico di Henarathgoda ebbe un ruolo pionieristico nella coltivazione della gomma."
+			],
+			"de": [
+				"Die Provinz entstand 1833 und wurde später zur Bildung neuer Provinzen geteilt.",
+				"Geoffrey Bawa entwarf den Parlamentskomplex in Kotte.",
+				"Der botanische Garten Henarathgoda spielte eine Pionierrolle beim Kautschukanbau."
+			]
+		}
+	},
+	"sabaragamuwa": {
+		"region": {
+			"en": [
+				"The province was created in 1889 from parts of Western Province.",
+				"Ratnapura is a traditional centre of sapphire and other gemstone trading.",
+				"Sinharaja preserves an exceptional remnant of tropical rainforest."
+			],
+			"it": [
+				"La provincia fu creata nel 1889 da parti della Provincia Occidentale.",
+				"Ratnapura è un centro tradizionale del commercio di zaffiri e altre gemme.",
+				"Sinharaja conserva un eccezionale lembo di foresta pluviale tropicale."
+			],
+			"de": [
+				"Die Provinz entstand 1889 aus Teilen der Westprovinz.",
+				"Ratnapura ist ein traditionelles Handelszentrum für Saphire und andere Edelsteine.",
+				"Sinharaja bewahrt einen außergewöhnlichen Rest tropischen Regenwalds."
+			]
+		}
+	},
+	"southern": {
+		"region": {
+			"en": [
+				"The province was created in 1833.",
+				"Galle’s fortified old town reflects Portuguese and Dutch colonial history.",
+				"Bundala’s wetlands provide habitat for resident and migratory waterbirds."
+			],
+			"it": [
+				"La provincia fu creata nel 1833.",
+				"La città vecchia fortificata di Galle riflette la storia coloniale portoghese e olandese.",
+				"Le zone umide di Bundala ospitano uccelli acquatici stanziali e migratori."
+			],
+			"de": [
+				"Die Provinz entstand 1833.",
+				"Galles befestigte Altstadt spiegelt portugiesische und niederländische Kolonialgeschichte wider.",
+				"Bundalas Feuchtgebiete bieten heimischen und ziehenden Wasservögeln Lebensraum."
+			]
+		}
+	},
+	"jaffna": {
+		"city": {
+			"en": [
+				"Its historic royal quarter was centred on Nallur.",
+				"Nallur Kandaswamy temple is a major centre of Tamil Hindu culture.",
+				"The coastal fort reflects Portuguese construction and later Dutch rebuilding."
+			],
+			"it": [
+				"Lo storico quartiere reale era incentrato su Nallur.",
+				"Il tempio Nallur Kandaswamy è un importante centro della cultura induista tamil.",
+				"La fortezza costiera riflette la costruzione portoghese e la successiva ricostruzione olandese."
+			],
+			"de": [
+				"Das historische Königsviertel hatte sein Zentrum in Nallur.",
+				"Der Nallur-Kandaswamy-Tempel ist ein bedeutendes Zentrum tamilisch-hinduistischer Kultur.",
+				"Die Küstenfestung zeigt portugiesische Ursprünge und spätere niederländische Umbauten."
+			]
+		}
+	},
+	"mullaitivu": {
+		"city": {
+			"en": [
+				"It grew as an anchorage for small trading vessels in the early twentieth century.",
+				"Fishing has long supported the settlement.",
+				"The town was badly damaged by the 2004 Indian Ocean tsunami."
+			],
+			"it": [
+				"Crebbe come ancoraggio per piccole imbarcazioni commerciali all’inizio del Novecento.",
+				"La pesca sostiene l’insediamento da lungo tempo.",
+				"La città fu gravemente danneggiata dallo tsunami dell’Oceano Indiano del 2004."
+			],
+			"de": [
+				"Der Ort wuchs im frühen 20. Jahrhundert als Ankerplatz kleiner Handelsschiffe.",
+				"Der Fischfang trägt seit Langem zum Lebensunterhalt bei.",
+				"Der Tsunami im Indischen Ozean von 2004 beschädigte die Stadt schwer."
+			]
+		}
+	},
+	"mannar": {
+		"city": {
+			"en": [
+				"The town was historically renowned for pearl fishing.",
+				"Its fort was built by the Portuguese and later rebuilt by the Dutch.",
+				"Old baobab trees are another distinctive local landmark."
+			],
+			"it": [
+				"La città era storicamente rinomata per la pesca delle perle.",
+				"La fortezza fu costruita dai portoghesi e poi ricostruita dagli olandesi.",
+				"Antichi baobab sono un altro caratteristico simbolo locale."
+			],
+			"de": [
+				"Die Stadt war historisch für die Perlenfischerei bekannt.",
+				"Ihre Festung wurde von Portugiesen erbaut und später von Niederländern erneuert.",
+				"Alte Affenbrotbäume sind ein weiteres örtliches Wahrzeichen."
+			]
+		}
+	},
+	"trincomalee": {
+		"city": {
+			"en": [
+				"Fort Frederick began as a Portuguese fort in the seventeenth century.",
+				"The natural harbour drew several European colonial powers.",
+				"Koneswaram temple remains an important Hindu shrine."
+			],
+			"it": [
+				"Fort Frederick nacque come fortezza portoghese nel Seicento.",
+				"Il porto naturale attirò diverse potenze coloniali europee.",
+				"Il tempio di Koneswaram rimane un importante santuario induista."
+			],
+			"de": [
+				"Fort Frederick entstand im 17. Jahrhundert als portugiesische Festung.",
+				"Der Naturhafen zog mehrere europäische Kolonialmächte an.",
+				"Der Koneswaram-Tempel ist weiterhin ein bedeutendes hinduistisches Heiligtum."
+			]
+		}
+	},
+	"anuradhapura": {
+		"city": {
+			"en": [
+				"It flourished for centuries as an ancient political and Buddhist capital.",
+				"Its sacred fig tree is traditionally traced to a cutting brought by Sanghamitta.",
+				"The archaeological site preserves palaces, monasteries and monumental stupas."
+			],
+			"it": [
+				"Prosperò per secoli come antica capitale politica e buddhista.",
+				"Il suo fico sacro è tradizionalmente ricondotto a una talea portata da Sanghamitta.",
+				"Il sito archeologico conserva palazzi, monasteri e stupa monumentali."
+			],
+			"de": [
+				"Die Stadt blühte jahrhundertelang als politische und buddhistische Hauptstadt.",
+				"Ihr heiliger Feigenbaum wird auf einen von Sanghamitta gebrachten Ableger zurückgeführt.",
+				"Die archäologische Stätte bewahrt Paläste, Klöster und monumentale Stupas."
+			]
+		}
+	},
+	"vakarai": {
+		"city": {
+			"en": [
+				"Its name is also written Vaharai.",
+				"The settlement has a predominantly Tamil cultural background.",
+				"Fishing and farming are traditional local livelihoods."
+			],
+			"it": [
+				"Il nome è scritto anche Vaharai.",
+				"L’insediamento ha un contesto culturale prevalentemente tamil.",
+				"Pesca e agricoltura sono attività tradizionali locali."
+			],
+			"de": [
+				"Der Name wird auch Vaharai geschrieben.",
+				"Die Siedlung ist kulturell überwiegend tamilisch geprägt.",
+				"Fischfang und Landwirtschaft sind traditionelle Erwerbsgrundlagen."
+			]
+		}
+	},
+	"matale": {
+		"city": {
+			"en": [
+				"The area was a centre of the anti-colonial rebellion of 1848.",
+				"Nearby Aluvihare is traditionally associated with writing down the Buddhist Pali Canon.",
+				"Spice cultivation has long shaped the surrounding countryside."
+			],
+			"it": [
+				"La zona fu un centro della rivolta anticoloniale del 1848.",
+				"La vicina Aluvihare è tradizionalmente legata alla trascrizione del canone buddhista in pali.",
+				"La coltivazione delle spezie caratterizza da lungo tempo la campagna circostante."
+			],
+			"de": [
+				"Die Gegend war ein Zentrum des antikolonialen Aufstands von 1848.",
+				"Das nahe Aluvihare wird mit der schriftlichen Fixierung des buddhistischen Pali-Kanons verbunden.",
+				"Der Gewürzanbau prägt seit Langem das Umland."
+			]
+		}
+	},
+	"kandy": {
+		"city": {
+			"en": [
+				"Its historic names include Senkadagala and Maha Nuwara.",
+				"The Temple of the Tooth holds a revered relic of the Buddha.",
+				"The city was a royal capital before British rule."
+			],
+			"it": [
+				"Tra i nomi storici vi sono Senkadagala e Maha Nuwara.",
+				"Il Tempio del Dente custodisce una venerata reliquia del Buddha.",
+				"La città fu una capitale reale prima del dominio britannico."
+			],
+			"de": [
+				"Zu den historischen Namen gehören Senkadagala und Maha Nuwara.",
+				"Der Zahntempel bewahrt eine verehrte Reliquie Buddhas.",
+				"Vor der britischen Herrschaft war die Stadt eine Königshauptstadt."
+			]
+		}
+	},
+	"kegalle": {
+		"city": {
+			"en": [
+				"It developed along the historic route between Colombo and Kandy.",
+				"Rubber growing is an important part of its agricultural economy.",
+				"The surrounding district also has graphite and gemstone deposits."
+			],
+			"it": [
+				"Si sviluppò lungo la storica via tra Colombo e Kandy.",
+				"La coltivazione della gomma è una parte importante dell’economia agricola.",
+				"Il distretto circostante possiede anche giacimenti di grafite e pietre preziose."
+			],
+			"de": [
+				"Die Stadt entwickelte sich am historischen Weg zwischen Colombo und Kandy.",
+				"Kautschukanbau ist ein wichtiger Teil ihrer Landwirtschaft.",
+				"Der umliegende Distrikt besitzt auch Graphit- und Edelsteinvorkommen."
+			]
+		}
+	},
+	"negombo": {
+		"city": {
+			"en": [
+				"Its fishing industry has a history stretching back centuries.",
+				"Cinnamon production also contributed to the local economy.",
+				"Traditional crafts include ceramics and brassware."
+			],
+			"it": [
+				"La sua attività peschereccia ha una storia secolare.",
+				"Anche la produzione di cannella contribuì all’economia locale.",
+				"Tra i mestieri tradizionali vi sono la ceramica e la lavorazione dell’ottone."
+			],
+			"de": [
+				"Die Fischerei blickt auf eine jahrhundertealte Geschichte zurück.",
+				"Auch die Zimtproduktion trug zur örtlichen Wirtschaft bei.",
+				"Zu den traditionellen Gewerben gehören Keramik und Messingwaren."
+			]
+		}
+	},
+	"gampaha": {
+		"city": {
+			"en": [
+				"Its Sinhala name means five villages.",
+				"Henarathgoda Botanic Gardens was established in 1876 to introduce rubber cultivation.",
+				"The old Henarathgoda railway station survives as a protected historic building."
+			],
+			"it": [
+				"Il nome singalese significa cinque villaggi.",
+				"L’orto botanico di Henarathgoda fu fondato nel 1876 per introdurre la coltivazione della gomma.",
+				"L’antica stazione ferroviaria di Henarathgoda sopravvive come edificio storico protetto."
+			],
+			"de": [
+				"Der singhalesische Name bedeutet fünf Dörfer.",
+				"Der botanische Garten Henarathgoda entstand 1876 zur Einführung des Kautschukanbaus.",
+				"Der alte Bahnhof Henarathgoda ist als geschütztes historisches Gebäude erhalten."
+			]
+		}
+	},
+	"badulla": {
+		"city": {
+			"en": [
+				"It was once the seat of a local prince under the kings of Kandy.",
+				"The hill-country railway made it a terminus for plantation trade.",
+				"Tea estates became an important feature of the surrounding hills."
+			],
+			"it": [
+				"Fu la sede di un principe locale sotto i re di Kandy.",
+				"La ferrovia montana ne fece un capolinea per il commercio delle piantagioni.",
+				"Le piantagioni di tè divennero un elemento importante delle colline circostanti."
+			],
+			"de": [
+				"Die Stadt war einst Sitz eines örtlichen Fürsten unter den Königen von Kandy.",
+				"Die Hochlandbahn machte sie zum Endpunkt des Plantagenhandels.",
+				"Teeplantagen wurden zu einem prägenden Merkmal der umliegenden Hügel."
+			]
+		}
+	},
+	"nuwara-eliya": {
+		"city": {
+			"en": [
+				"Its name is commonly interpreted as city on the plain or city of light.",
+				"The British developed it as a hill station.",
+				"Tea cultivation became central to its surrounding landscape."
+			],
+			"it": [
+				"Il nome è comunemente interpretato come città della pianura o città della luce.",
+				"I britannici la svilupparono come stazione climatica montana.",
+				"La coltivazione del tè divenne centrale nel paesaggio circostante."
+			],
+			"de": [
+				"Der Name wird meist als Stadt in der Ebene oder Stadt des Lichts gedeutet.",
+				"Die Briten bauten den Ort zu einer Höhenstation aus.",
+				"Teeanbau wurde zum prägenden Merkmal der umgebenden Landschaft."
+			]
+		}
+	},
+	"sri-jayawardenepura-kotte": {
+		"city": {
+			"en": [
+				"Its modern Parliament complex opened in 1982.",
+				"Architect Geoffrey Bawa drew on Sri Lankan building traditions for its design.",
+				"The complex stands on an island in Diyawanna Oya."
+			],
+			"it": [
+				"Il moderno complesso del Parlamento aprì nel 1982.",
+				"L’architetto Geoffrey Bawa si ispirò alle tradizioni edilizie dello Sri Lanka.",
+				"Il complesso sorge su un’isola nel Diyawanna Oya."
+			],
+			"de": [
+				"Der moderne Parlamentskomplex wurde 1982 eröffnet.",
+				"Architekt Geoffrey Bawa griff bei seinem Entwurf auf srilankische Bautraditionen zurück.",
+				"Der Komplex steht auf einer Insel im Diyawanna Oya."
+			]
+		}
+	},
+	"hambantota": {
+		"city": {
+			"en": [
+				"Its name is commonly linked to sampan boats and a word for harbour.",
+				"A British Martello tower recalls its early nineteenth-century coastal defences.",
+				"Writer Leonard Woolf served here as a colonial administrator from 1908 to 1911."
+			],
+			"it": [
+				"Il nome è comunemente collegato alle barche sampan e a una parola per porto.",
+				"Una torre Martello britannica ricorda le difese costiere del primo Ottocento.",
+				"Lo scrittore Leonard Woolf vi lavorò come amministratore coloniale dal 1908 al 1911."
+			],
+			"de": [
+				"Der Name wird meist mit Sampanbooten und einem Wort für Hafen verbunden.",
+				"Ein britischer Martello-Turm erinnert an die Küstenverteidigung des frühen 19. Jahrhunderts.",
+				"Der Schriftsteller Leonard Woolf war hier von 1908 bis 1911 Kolonialbeamter."
+			]
+		}
+	},
+	"galle": {
+		"city": {
+			"en": [
+				"Its fortified town began under Portuguese rule in the sixteenth century.",
+				"Dutch rule shaped much of its street grid and ramparts.",
+				"Verandas and courtyards show how European designs adapted to South Asian traditions."
+			],
+			"it": [
+				"La città fortificata nacque sotto il dominio portoghese nel Cinquecento.",
+				"Il dominio olandese plasmò gran parte della rete stradale e dei bastioni.",
+				"Verande e cortili mostrano l’adattamento dei progetti europei alle tradizioni dell’Asia meridionale."
+			],
+			"de": [
+				"Die befestigte Stadt entstand im 16. Jahrhundert unter portugiesischer Herrschaft.",
+				"Die niederländische Herrschaft prägte große Teile des Straßenrasters und der Wälle.",
+				"Veranden und Innenhöfe zeigen die Anpassung europäischer Entwürfe an südasiatische Traditionen."
+			]
+		}
+	},
+	"matara": {
+		"city": {
+			"en": [
+				"The town became an important fortified centre under Dutch rule.",
+				"Its defences include the distinctive Star Fort.",
+				"A footbridge connects the shore with Parewi Dewa temple on a small island."
+			],
+			"it": [
+				"La città divenne un importante centro fortificato sotto il dominio olandese.",
+				"Le difese comprendono il caratteristico Forte a Stella.",
+				"Una passerella collega la riva al tempio Parewi Dewa su una piccola isola."
+			],
+			"de": [
+				"Die Stadt wurde unter niederländischer Herrschaft zu einem wichtigen Festungsort.",
+				"Zu ihren Befestigungen gehört das markante Sternfort.",
+				"Eine Fußgängerbrücke verbindet das Ufer mit dem Parewi-Dewa-Tempel auf einer kleinen Insel."
 			]
 		}
 	}
