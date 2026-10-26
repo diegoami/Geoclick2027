@@ -2,7 +2,7 @@
 	"id": "denmark-towns-50k",
 	"name": "Denmark — Towns",
 	"country": "Denmark",
-	"attribution": "Wikidata (CC0), https://www.wikidata.org; Natural Earth (public domain), https://www.naturalearthdata.com; Natural Earth (public domain); Natural Earth (public domain), https://www.naturalearthdata.com; Wikidata (CC0), https://www.wikidata.org",
+	"attribution": "Wikidata (CC0), https://www.wikidata.org; Natural Earth (public domain), https://www.naturalearthdata.com; geoBoundaries / Web Vectors Map, CC BY 4.0, https://creativecommons.org/licenses/by/4.0/; Natural Earth (public domain), https://www.naturalearthdata.com; Wikidata (CC0), https://www.wikidata.org",
 	"placesSource": "data/places/denmark.geojson",
 	"regionsMap": "denmark-regions",
 	"tiles": "tiles.pmtiles",
@@ -23,7 +23,7 @@
 				9.916666666,
 				57.05
 			],
-			"colorIndex": 0
+			"colorIndex": 2
 		},
 		{
 			"id": "randers",
@@ -41,7 +41,7 @@
 				10.039166666,
 				56.456944444
 			],
-			"colorIndex": 4
+			"colorIndex": 0
 		},
 		{
 			"id": "viborg",
@@ -59,7 +59,7 @@
 				9.4,
 				56.45
 			],
-			"colorIndex": 3
+			"colorIndex": 4
 		},
 		{
 			"id": "holstebro",
@@ -77,7 +77,7 @@
 				8.6175,
 				56.358055555
 			],
-			"colorIndex": 4
+			"colorIndex": 5
 		},
 		{
 			"id": "silkeborg",
@@ -95,7 +95,7 @@
 				9.55,
 				56.166666666
 			],
-			"colorIndex": 2
+			"colorIndex": 3
 		},
 		{
 			"id": "aarhus",
@@ -113,7 +113,7 @@
 				10.209722222,
 				56.156388888
 			],
-			"colorIndex": 5
+			"colorIndex": 1
 		},
 		{
 			"id": "herning",
@@ -131,7 +131,7 @@
 				8.976666666,
 				56.136111111
 			],
-			"colorIndex": 5
+			"colorIndex": 0
 		},
 		{
 			"id": "helsing-r",
@@ -149,7 +149,7 @@
 				12.6106,
 				56.036
 			],
-			"colorIndex": 0
+			"colorIndex": 4
 		},
 		{
 			"id": "hiller-d",
@@ -167,7 +167,7 @@
 				12.3,
 				55.933333333
 			],
-			"colorIndex": 1
+			"colorIndex": 3
 		},
 		{
 			"id": "horsens",
@@ -185,7 +185,7 @@
 				9.851944444,
 				55.861944444
 			],
-			"colorIndex": 1
+			"colorIndex": 2
 		},
 		{
 			"id": "vejle",
@@ -203,7 +203,7 @@
 				9.533333333,
 				55.708333333
 			],
-			"colorIndex": 4
+			"colorIndex": 0
 		},
 		{
 			"id": "copenhagen",
@@ -221,7 +221,7 @@
 				12.5615399,
 				55.68051
 			],
-			"colorIndex": 3
+			"colorIndex": 2
 		},
 		{
 			"id": "frederiksberg",
@@ -239,7 +239,7 @@
 				12.5327,
 				55.6779
 			],
-			"colorIndex": 2
+			"colorIndex": 1
 		},
 		{
 			"id": "taastrup",
@@ -257,7 +257,7 @@
 				12.3,
 				55.65
 			],
-			"colorIndex": 0
+			"colorIndex": 5
 		},
 		{
 			"id": "roskilde",
@@ -275,7 +275,25 @@
 				12.080833333,
 				55.641666666
 			],
-			"colorIndex": 1
+			"colorIndex": 0
+		},
+		{
+			"id": "fredericia",
+			"name": "Fredericia",
+			"type": "city",
+			"tier": 1,
+			"aliases": [],
+			"centroid": [
+				9.759722222,
+				55.564444444
+			],
+			"bbox": [
+				9.759722222,
+				55.564444444,
+				9.759722222,
+				55.564444444
+			],
+			"colorIndex": 3
 		},
 		{
 			"id": "kolding",
@@ -293,7 +311,7 @@
 				9.472222222,
 				55.490833333
 			],
-			"colorIndex": 0
+			"colorIndex": 1
 		},
 		{
 			"id": "esbjerg",
@@ -311,7 +329,7 @@
 				8.451388888,
 				55.470833333
 			],
-			"colorIndex": 1
+			"colorIndex": 5
 		},
 		{
 			"id": "k-ge",
@@ -329,7 +347,7 @@
 				12.183333333,
 				55.45
 			],
-			"colorIndex": 3
+			"colorIndex": 2
 		},
 		{
 			"id": "odense",
@@ -347,7 +365,7 @@
 				10.383333333,
 				55.4
 			],
-			"colorIndex": 5
+			"colorIndex": 4
 		},
 		{
 			"id": "n-stved",
@@ -365,7 +383,7 @@
 				11.76666667,
 				55.23333333
 			],
-			"colorIndex": 2
+			"colorIndex": 1
 		}
 	],
 	"tourOrder": [
@@ -384,6 +402,7 @@
 		"frederiksberg",
 		"taastrup",
 		"roskilde",
+		"fredericia",
 		"kolding",
 		"esbjerg",
 		"k-ge",

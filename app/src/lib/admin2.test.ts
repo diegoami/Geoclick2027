@@ -19,6 +19,8 @@ describe('germanDistrictName', () => {
 	it('keeps a Landkreis apart from the city it is named after', () => {
 		expect(germanDistrictName('Heilbronn, Landkreis')).toBe('Landkreis Heilbronn');
 		expect(germanDistrictName('Heilbronn, Stadtkreis')).toBe('Heilbronn');
+		expect(germanDistrictName('Leipzig')).toBe('Landkreis Leipzig');
+		expect(germanDistrictName('Leipzig, Kreisfreie Stadt')).toBe('Leipzig');
 	});
 
 	it('leaves a district with a name of its own alone', () => {

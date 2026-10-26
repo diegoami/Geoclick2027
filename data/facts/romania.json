@@ -3,7 +3,8 @@
 		"Name-facts for Romania (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
 		"of the same id, written later, never shows a town's sentences.",
-		"FT-73 added the forty-one counties and Bucharest, each as a \"region\" entry beside the town of the same id; most counties are named for their town or for a river."
+		"FT-73 added the forty-one counties and Bucharest, each as a \"region\" entry beside the town of the same id; most counties are named for their town or for a river.",
+		"v1.0 whole-catalogue completion (#244): sourced EN/IT/DE sets, with references under _sources by ID and kind."
 	],
 	"alba": {
 		"region": {
@@ -27,16 +28,36 @@
 	"arad": {
 		"region": {
 			"en": [
-				"Named for its town, a name of uncertain origin.",
-				"Thirteen generals of the Hungarian revolution were executed at Arad on 6 October 1849, and Hungary still mourns them on that day."
+				"The county’s name has medieval antecedents in the county recorded as Orod beside the Mureș.",
+				"Thirteen commanders of the Hungarian revolutionary army were executed at Arad on 6 October 1849.",
+				"Șiria’s Bohuș mansion houses a memorial collection devoted to the writer Ioan Slavici and the composer Emil Monția."
 			],
 			"it": [
-				"Prende il nome dalla sua città, un nome di origine incerta.",
-				"Tredici generali della rivoluzione ungherese furono giustiziati ad Arad il 6 ottobre 1849, e l’Ungheria li ricorda ancora quel giorno."
+				"Il nome della contea ha precedenti medievali nel comitato attestato come Orod presso il Mureș.",
+				"Tredici comandanti dell’esercito rivoluzionario ungherese furono giustiziati ad Arad il 6 ottobre 1849.",
+				"La residenza Bohuș di Șiria ospita una collezione commemorativa dedicata allo scrittore Ioan Slavici e al compositore Emil Monția."
 			],
 			"de": [
-				"Nach seiner Stadt benannt, deren Name von ungewisser Herkunft ist.",
-				"Dreizehn Generäle der ungarischen Revolution wurden am 6. Oktober 1849 in Arad hingerichtet, und Ungarn trauert an diesem Tag noch immer um sie."
+				"Der Kreisname hat mittelalterliche Vorläufer in der als Orod am Mureș belegten Grafschaft.",
+				"Dreizehn Befehlshaber der ungarischen Revolutionsarmee wurden am 6. Oktober 1849 in Arad hingerichtet.",
+				"Das Herrenhaus Bohuș in Șiria beherbergt eine Gedenksammlung zum Schriftsteller Ioan Slavici und zum Komponisten Emil Monția."
+			]
+		},
+		"city": {
+			"en": [
+				"Arad appears under this name on Lazarus’s map published in 1528.",
+				"Thirteen commanders of the Hungarian revolutionary army were executed at Arad on 6 October 1849.",
+				"Arad’s star-shaped fortress was built between 1763 and 1783 inside a loop of the Mureș."
+			],
+			"it": [
+				"Arad compare con questo nome nella carta di Lazarus pubblicata nel 1528.",
+				"Tredici comandanti dell’esercito rivoluzionario ungherese furono giustiziati ad Arad il 6 ottobre 1849.",
+				"La fortezza a stella di Arad fu costruita tra il 1763 e il 1783 in un’ansa del Mureș."
+			],
+			"de": [
+				"Arad erscheint unter diesem Namen auf der 1528 veröffentlichten Karte des Lazarus.",
+				"Dreizehn Befehlshaber der ungarischen Revolutionsarmee wurden am 6. Oktober 1849 in Arad hingerichtet.",
+				"Arads sternförmige Festung wurde zwischen 1763 und 1783 in einer Schleife des Mureș erbaut."
 			]
 		}
 	},
@@ -62,27 +83,36 @@
 	"bacau": {
 		"region": {
 			"en": [
-				"Named for its town, a name whose origin is disputed.",
-				"The Csángós, Catholics who speak an old form of Hungarian, live in villages around Bacău."
+				"The county takes its name from Bacău, a town attested in a trading charter of 1408.",
+				"Catholic Csángó communities in villages around Bacău preserve distinctive Hungarian dialects.",
+				"At Tescani, George Enescu completed his opera Oedip in the Rosetti-Tescanu family manor."
 			],
 			"it": [
-				"Prende il nome dalla sua città, un nome di origine discussa.",
-				"I Csángó, cattolici che parlano un’antica forma di ungherese, vivono nei villaggi intorno a Bacău."
+				"La contea prende il nome da Bacău, città attestata in un privilegio commerciale del 1408.",
+				"Le comunità cattoliche csángó dei villaggi intorno a Bacău conservano particolari dialetti ungheresi.",
+				"A Tescani George Enescu completò l’opera Oedip nella residenza della famiglia Rosetti-Tescanu."
 			],
 			"de": [
-				"Nach seiner Stadt benannt, deren Name von umstrittener Herkunft ist.",
-				"Die Tschangos, Katholiken, die eine alte Form des Ungarischen sprechen, leben in Dörfern um Bacău."
+				"Der Kreis ist nach Bacău benannt, einer in einer Handelsurkunde von 1408 belegten Stadt.",
+				"Katholische Tschango-Gemeinschaften in Dörfern um Bacău bewahren besondere ungarische Dialekte.",
+				"In Tescani vollendete George Enescu seine Oper Oedip im Herrenhaus der Familie Rosetti-Tescanu."
 			]
 		},
 		"city": {
 			"en": [
-				"The poet George Bacovia was born here in 1881."
+				"Bacău is attested in a trading charter issued for merchants from Lviv in 1408.",
+				"The poet George Bacovia was born here in 1881.",
+				"Its Precista Church was built by Alexandru, the son of Stephen the Great, and completed in 1491."
 			],
 			"it": [
-				"Qui nacque nel 1881 il poeta George Bacovia."
+				"Bacău è attestata in un privilegio commerciale concesso ai mercanti di Leopoli nel 1408.",
+				"Qui nacque nel 1881 il poeta George Bacovia.",
+				"La chiesa Precista fu costruita da Alexandru, figlio di Stefano il Grande, e completata nel 1491."
 			],
 			"de": [
-				"Der Dichter George Bacovia wurde 1881 hier geboren."
+				"Bacău ist in einer Handelsurkunde für Kaufleute aus Lemberg von 1408 belegt.",
+				"Der Dichter George Bacovia wurde 1881 hier geboren.",
+				"Die Precista-Kirche wurde von Alexandru, dem Sohn Stefans des Großen, erbaut und 1491 vollendet."
 			]
 		}
 	},
@@ -141,32 +171,58 @@
 				"Mihai Eminescu, Rumäniens Nationaldichter, wurde 1850 in Botoșani geboren.",
 				"Der Komponist George Enescu wurde 1881 in einem Dorf hier geboren, das heute seinen Namen trägt."
 			]
+		},
+		"city": {
+			"en": [
+				"The name Botoșani appears in a chronicle account of a Tatar raid in 1439.",
+				"Mihai Eminescu, Romania’s national poet, was born here in 1850.",
+				"Stephen the Great founded the Church of St Nicholas at Popăuți in 1496."
+			],
+			"it": [
+				"Il nome Botoșani compare nel racconto di una cronaca di un’incursione tatara del 1439.",
+				"Mihai Eminescu, il poeta nazionale romeno, nacque qui nel 1850.",
+				"Stefano il Grande fondò la chiesa di San Nicola a Popăuți nel 1496."
+			],
+			"de": [
+				"Der Name Botoșani erscheint im Bericht einer Chronik über einen Tatareneinfall von 1439.",
+				"Mihai Eminescu, Rumäniens Nationaldichter, wurde hier 1850 geboren.",
+				"Stefan der Große gründete 1496 die Nikolauskirche in Popăuți."
+			]
 		}
 	},
 	"braila": {
 		"region": {
 			"en": [
-				"Named for its town, a name of uncertain origin.",
-				"The Small Island of Brăila, a stretch of the Danube’s flooded forests and marshes, is a nature park."
+				"The county takes its name from Brăila, known in Ottoman usage as İbrâil.",
+				"The Small Island of Brăila preserves Danube floodplain wetlands and is recognised as a Ramsar site.",
+				"Măxineni Monastery was founded by Matei Basarab in the 1630s as a strategically placed religious foundation."
 			],
 			"it": [
-				"Prende il nome dalla sua città, un nome di origine incerta.",
-				"La Piccola isola di Brăila, un tratto di boschi allagati e paludi del Danubio, è un parco naturale."
+				"La contea prende il nome da Brăila, chiamata İbrâil nell’uso ottomano.",
+				"La Piccola isola di Brăila conserva zone umide della pianura alluvionale del Danubio ed è riconosciuta come sito Ramsar.",
+				"Il monastero di Măxineni fu fondato da Matei Basarab negli anni Trenta del Seicento in una posizione strategica."
 			],
 			"de": [
-				"Nach seiner Stadt benannt, deren Name von ungewisser Herkunft ist.",
-				"Die Kleine Insel von Brăila, ein Abschnitt der Überschwemmungswälder und Sümpfe der Donau, ist ein Naturpark."
+				"Der Kreis ist nach Brăila benannt, das im osmanischen Sprachgebrauch İbrâil hieß.",
+				"Die Kleine Insel von Brăila bewahrt Feuchtgebiete der Donauaue und ist als Ramsar-Gebiet anerkannt.",
+				"Das Kloster Măxineni wurde in den 1630er-Jahren von Matei Basarab an einem strategisch wichtigen Ort gegründet."
 			]
 		},
 		"city": {
 			"en": [
-				"A Danube port; the writer Panait Istrati was born here in 1884."
+				"Brăila was known in Ottoman usage as İbrâil.",
+				"The writer Panait Istrati was born here in 1884.",
+				"Its designation as a free port in 1836 helped the city develop as a centre of grain trading."
 			],
 			"it": [
-				"Un porto sul Danubio; qui nacque nel 1884 lo scrittore Panait Istrati."
+				"Brăila era chiamata İbrâil nell’uso ottomano.",
+				"Qui nacque nel 1884 lo scrittore Panait Istrati.",
+				"La proclamazione del porto franco nel 1836 favorì lo sviluppo della città come centro del commercio dei cereali."
 			],
 			"de": [
-				"Ein Donauhafen; der Schriftsteller Panait Istrati wurde 1884 hier geboren."
+				"Brăila war im osmanischen Sprachgebrauch als İbrâil bekannt.",
+				"Der Schriftsteller Panait Istrati wurde 1884 hier geboren.",
+				"Die Erklärung zum Freihafen 1836 förderte die Entwicklung der Stadt zu einem Zentrum des Getreidehandels."
 			]
 		}
 	},
@@ -190,16 +246,19 @@
 		},
 		"city": {
 			"en": [
-				"Called Kronstadt in German, it was one of the Saxon towns of Transylvania.",
-				"Its Black Church is often called the largest Gothic church between Vienna and Istanbul."
+				"Brașov’s historical names Corona in Latin and Kronstadt in German both refer to a crown.",
+				"Its Black Church is a Gothic monument of the city’s Transylvanian Saxon community.",
+				"The Black Church lost its roof in the fire of 1689, and rebuilding continued for almost a century."
 			],
 			"it": [
-				"Chiamata Kronstadt in tedesco, fu una delle città sassoni della Transilvania.",
-				"La sua Chiesa Nera è spesso definita la più grande chiesa gotica tra Vienna e Istanbul."
+				"I nomi storici di Brașov, Corona in latino e Kronstadt in tedesco, richiamano entrambi una corona.",
+				"La Chiesa Nera è un monumento gotico della comunità sassone transilvana della città.",
+				"La Chiesa Nera perse il tetto nell’incendio del 1689 e la ricostruzione proseguì per quasi un secolo."
 			],
 			"de": [
-				"Auf Deutsch Kronstadt genannt, war sie eine der sächsischen Städte Siebenbürgens.",
-				"Ihre Schwarze Kirche wird oft als die größte gotische Kirche zwischen Wien und Istanbul bezeichnet."
+				"Brașovs historische Namen Corona auf Latein und Kronstadt auf Deutsch beziehen sich beide auf eine Krone.",
+				"Die Schwarze Kirche ist ein gotisches Baudenkmal der siebenbürgisch-sächsischen Gemeinde der Stadt.",
+				"Die Schwarze Kirche verlor 1689 durch einen Brand ihr Dach; der Wiederaufbau dauerte fast ein Jahrhundert."
 			]
 		}
 	},
@@ -256,21 +315,58 @@
 				"Bei Berca blubbern kleine Schlammvulkane aus einer kahlen grauen Landschaft.",
 				"Bernstein wird um Colți gefunden, wo ein Museum ihn zeigt."
 			]
+		},
+		"city": {
+			"en": [
+				"Buzău is named as a market town in a trading privilege granted to Brașov merchants in 1431.",
+				"Buzău’s Communal Palace was inaugurated as the city hall in 1903 in the presence of King Carol I.",
+				"The Marghiloman estate in Buzău includes Villa Albatros, a former residence of politician Alexandru Marghiloman."
+			],
+			"it": [
+				"Buzău è menzionata come borgo mercantile in un privilegio commerciale concesso ai mercanti di Brașov nel 1431.",
+				"Il Palazzo Comunale di Buzău fu inaugurato come municipio nel 1903 alla presenza di re Carlo I.",
+				"La tenuta Marghiloman di Buzău comprende Villa Albatros, già residenza del politico Alexandru Marghiloman."
+			],
+			"de": [
+				"Buzău wird in einem Handelsprivileg für Kaufleute aus Brașov von 1431 als Marktort genannt.",
+				"Buzăus Kommunalpalast wurde 1903 in Anwesenheit König Carols I. als Rathaus eingeweiht.",
+				"Das Anwesen Marghiloman in Buzău umfasst die Villa Albatros, einen früheren Wohnsitz des Politikers Alexandru Marghiloman."
+			]
 		}
 	},
 	"calarasi": {
 		"region": {
 			"en": [
-				"Named for the călărași, mounted messengers who were posted here.",
-				"The Gumelnița culture of the Copper Age is named for a settlement mound near Oltenița."
+				"The county takes its name from Călărași, a town named after mounted couriers once stationed there.",
+				"The Copper Age Gumelnița culture is named after a settlement mound near Oltenița.",
+				"Gumelnița potters made graphite-painted vessels, represented in Oltenița’s museum."
 			],
 			"it": [
-				"Prende il nome dai călărași, messaggeri a cavallo che vi erano di stanza.",
-				"La cultura di Gumelnița, dell’età del rame, prende il nome da un tell vicino a Oltenița."
+				"La contea prende il nome da Călărași, città chiamata così per i corrieri a cavallo un tempo di stanza sul posto.",
+				"La cultura di Gumelnița dell’età del rame prende il nome da un tumulo abitativo vicino a Oltenița.",
+				"I ceramisti della cultura Gumelnița produssero vasi dipinti a grafite, rappresentati nel museo di Oltenița."
 			],
 			"de": [
-				"Benannt nach den călărași, berittenen Boten, die hier stationiert waren.",
-				"Die Gumelnița-Kultur der Kupferzeit ist nach einem Siedlungshügel bei Oltenița benannt."
+				"Der Kreis ist nach Călărași benannt, dessen Name auf einst dort stationierte berittene Boten zurückgeht.",
+				"Die Gumelnița-Kultur der Kupferzeit ist nach einem Siedlungshügel bei Oltenița benannt.",
+				"Die Töpfer der Gumelnița-Kultur stellten graphitbemalte Gefäße her, die im Museum von Oltenița vertreten sind."
+			]
+		},
+		"city": {
+			"en": [
+				"Călărași takes its name from mounted couriers once stationed in the settlement formerly called Lichirești.",
+				"Călărași obtained freedom from its private estate owner in 1852 after its inhabitants raised the purchase money.",
+				"Călărași’s Lower Danube Museum was founded in 1951 and began operating as an archaeological museum in 1954."
+			],
+			"it": [
+				"Călărași prende il nome dai corrieri a cavallo un tempo di stanza nell’insediamento chiamato in precedenza Lichirești.",
+				"Călărași si liberò dal proprietario privato della tenuta nel 1852, dopo che gli abitanti ebbero raccolto il denaro per il riscatto.",
+				"Il Museo del Basso Danubio di Călărași fu fondato nel 1951 e iniziò l’attività come museo archeologico nel 1954."
+			],
+			"de": [
+				"Călărași ist nach berittenen Boten benannt, die einst in der früher Lichirești genannten Siedlung stationiert waren.",
+				"Călărași löste sich 1852 vom privaten Grundherrn, nachdem die Einwohner das Geld für den Freikauf aufgebracht hatten.",
+				"Das Museum der Unteren Donau in Călărași wurde 1951 gegründet und nahm 1954 seine Tätigkeit als archäologisches Museum auf."
 			]
 		}
 	},
@@ -315,16 +411,19 @@
 	"cluj-napoca": {
 		"city": {
 			"en": [
-				"Its Roman name, Napoca, was added in 1974.",
-				"Matthias Corvinus, king of Hungary, was born here in 1443."
+				"Its Roman name, Napoca, was added to Cluj in 1974.",
+				"Matthias Corvinus, king of Hungary, was born here in 1443.",
+				"St Michael’s Church is a medieval Gothic hall church with a nineteenth-century neo-Gothic tower."
 			],
 			"it": [
-				"Il suo nome romano, Napoca, fu aggiunto nel 1974.",
-				"Qui nacque nel 1443 Mattia Corvino, re d’Ungheria."
+				"Il suo nome romano, Napoca, fu aggiunto a Cluj nel 1974.",
+				"Qui nacque nel 1443 Mattia Corvino, re d’Ungheria.",
+				"La chiesa di San Michele è una chiesa medievale a sala in stile gotico con una torre neogotica ottocentesca."
 			],
 			"de": [
-				"Ihr römischer Name, Napoca, wurde 1974 hinzugefügt.",
-				"Matthias Corvinus, König von Ungarn, wurde 1443 hier geboren."
+				"Ihr römischer Name Napoca wurde 1974 dem Namen Cluj hinzugefügt.",
+				"Matthias Corvinus, König von Ungarn, wurde 1443 hier geboren.",
+				"Die Michaelskirche ist eine mittelalterliche gotische Hallenkirche mit einem neugotischen Turm aus dem 19. Jahrhundert."
 			]
 		}
 	},
@@ -348,16 +447,19 @@
 		},
 		"city": {
 			"en": [
-				"Named for Constantia, half-sister of the emperor Constantine; the Greeks called it Tomis.",
-				"The Roman poet Ovid died here in exile, around AD 17."
+				"Constanța was known in antiquity as Tomis, a settlement founded by Greek colonists from Miletus.",
+				"The Roman poet Ovid died here in exile around AD 17 or 18.",
+				"Its Art Nouveau casino was completed in 1910."
 			],
 			"it": [
-				"Prende il nome da Costanza, sorellastra dell’imperatore Costantino; i Greci la chiamavano Tomis.",
-				"Qui morì in esilio il poeta romano Ovidio, intorno al 17 d.C."
+				"Constanța era conosciuta nell’antichità come Tomis, un insediamento fondato da coloni greci di Mileto.",
+				"Qui morì in esilio il poeta romano Ovidio intorno al 17 o 18 d.C.",
+				"Il casinò in stile liberty fu completato nel 1910."
 			],
 			"de": [
-				"Benannt nach Constantia, der Halbschwester des Kaisers Konstantin; die Griechen nannten sie Tomis.",
-				"Der römische Dichter Ovid starb hier im Exil, um 17 n. Chr."
+				"Constanța hieß in der Antike Tomis und wurde von griechischen Siedlern aus Milet gegründet.",
+				"Der römische Dichter Ovid starb hier um 17 oder 18 n. Chr. im Exil.",
+				"Das Jugendstil-Casino wurde 1910 fertiggestellt."
 			]
 		}
 	},
@@ -383,16 +485,19 @@
 	"craiova": {
 		"city": {
 			"en": [
-				"The name probably comes from a Slavic word for king.",
-				"The sculptor Constantin Brâncuși was born in the region and studied here."
+				"The name Craiova is recorded in a document dated 1 June 1475.",
+				"Constantin Brâncuși studied at its School of Arts and Crafts from 1894 to 1898.",
+				"The Jean Mihail Palace has housed the city’s art museum since 1954."
 			],
 			"it": [
-				"Il nome viene probabilmente da una parola slava per re.",
-				"Lo scultore Constantin Brâncuși nacque nella regione e vi studiò."
+				"Il nome Craiova è attestato in un documento del 1º giugno 1475.",
+				"Constantin Brâncuși studiò nella sua Scuola di arti e mestieri dal 1894 al 1898.",
+				"Il Palazzo Jean Mihail ospita il museo d’arte della città dal 1954."
 			],
 			"de": [
-				"Der Name kommt wahrscheinlich von einem slawischen Wort für König.",
-				"Der Bildhauer Constantin Brâncuși wurde in der Gegend geboren und studierte hier."
+				"Der Name Craiova ist in einer Urkunde vom 1. Juni 1475 belegt.",
+				"Constantin Brâncuși besuchte hier von 1894 bis 1898 die Kunstgewerbeschule.",
+				"Der Jean-Mihail-Palast beherbergt seit 1954 das Kunstmuseum der Stadt."
 			]
 		}
 	},
@@ -418,59 +523,91 @@
 	"dolj": {
 		"region": {
 			"en": [
-				"Probably \"the lower Jiu\", from a Slavic word for low, as Gorj is the upper.",
-				"Craiova was for centuries the seat of the Great Ban, who governed Oltenia for the princes of Wallachia."
+				"Dolj means the lower Jiu, a name formed from a Slavic word for lower and the river’s name.",
+				"Craiova was for centuries the seat of the Great Ban, who governed Oltenia for the princes of Wallachia.",
+				"The art museum in Craiova’s Jean Mihail Palace displays sculptures by Constantin Brâncuși."
 			],
 			"it": [
-				"Probabilmente \"il Jiu basso\", da una parola slava per \"basso\", come il Gorj è quello alto.",
-				"Craiova fu per secoli la sede del Gran Bano, che governava l’Oltenia per i principi di Valacchia."
+				"Dolj significa il basso Jiu, nome formato da una parola slava per basso e dal nome del fiume.",
+				"Craiova fu per secoli la sede del Gran Bano, che governava l’Oltenia per i principi di Valacchia.",
+				"Il museo d’arte nel Palazzo Jean Mihail di Craiova espone sculture di Constantin Brâncuși."
 			],
 			"de": [
-				"Wahrscheinlich „der untere Jiu“, von einem slawischen Wort für niedrig, wie Gorj der obere ist.",
-				"Craiova war jahrhundertelang der Sitz des Großban, der Oltenien für die Fürsten der Walachei verwaltete."
+				"Dolj bedeutet unterer Jiu und verbindet ein slawisches Wort für unten mit dem Flussnamen.",
+				"Craiova war jahrhundertelang der Sitz des Großbans, der Oltenien für die Fürsten der Walachei verwaltete.",
+				"Das Kunstmuseum im Jean-Mihail-Palast in Craiova zeigt Skulpturen von Constantin Brâncuși."
 			]
 		}
 	},
 	"galati": {
 		"region": {
 			"en": [
-				"Named for its city, a name of uncertain origin.",
-				"From 1856 the European Commission of the Danube, which ran shipping on the lower river, had its seat at Galați."
+				"The county takes its name from Galați, also historically known in German as Galatz.",
+				"From 1856 the European Commission of the Danube, which regulated navigation on the lower river, had its headquarters at Galați.",
+				"Tecuci’s Teodor Cincu History Museum was founded in 1935."
 			],
 			"it": [
-				"Prende il nome dalla sua città, un nome di origine incerta.",
-				"Dal 1856 la Commissione europea del Danubio, che regolava la navigazione sul basso corso del fiume, ebbe sede a Galați."
+				"La contea prende il nome da Galați, conosciuta storicamente anche con il nome tedesco Galatz.",
+				"Dal 1856 la Commissione europea del Danubio, che regolava la navigazione sul basso corso del fiume, ebbe sede a Galați.",
+				"Il Museo di storia Teodor Cincu di Tecuci fu fondato nel 1935."
 			],
 			"de": [
-				"Nach seiner Stadt benannt, deren Name von ungewisser Herkunft ist.",
-				"Ab 1856 hatte die Europäische Donaukommission, die die Schifffahrt auf dem unteren Fluss regelte, ihren Sitz in Galați."
+				"Der Kreis ist nach Galați benannt, historisch auch unter dem deutschen Namen Galatz bekannt.",
+				"Ab 1856 hatte die Europäische Donaukommission, die die Schifffahrt auf dem unteren Fluss regelte, ihren Sitz in Galați.",
+				"Das Geschichtsmuseum Teodor Cincu in Tecuci wurde 1935 gegründet."
 			]
 		},
 		"city": {
 			"en": [
-				"Romania’s largest port on the Danube, with shipyards and a great steelworks."
+				"Galați has also been known by the German name Galatz.",
+				"The city’s shipyards and steelworks reflect its long industrial connection with Danube trade.",
+				"The fortified Precista Church, completed in 1647, served both worship and defence."
 			],
 			"it": [
-				"Il più grande porto romeno sul Danubio, con cantieri navali e una grande acciaieria."
+				"Galați è stata conosciuta anche con il nome tedesco Galatz.",
+				"I cantieri navali e l’acciaieria testimoniano il suo lungo legame industriale con i commerci sul Danubio.",
+				"La chiesa fortificata Precista, completata nel 1647, serviva sia al culto sia alla difesa."
 			],
 			"de": [
-				"Rumäniens größter Hafen an der Donau, mit Werften und einem großen Stahlwerk."
+				"Galați ist auch unter dem deutschen Namen Galatz bekannt.",
+				"Werften und Stahlwerk zeugen von ihrer langen industriellen Verbindung mit dem Donauhandel.",
+				"Die 1647 fertiggestellte befestigte Precista-Kirche diente sowohl dem Gottesdienst als auch der Verteidigung."
 			]
 		}
 	},
 	"giurgiu": {
 		"region": {
 			"en": [
-				"Named for its town, where Genoese traders are said to have built a fort named after Saint George.",
-				"The first railway of the Romanian state, from Bucharest to Giurgiu on the Danube, opened in 1869."
+				"The county takes its name from Giurgiu, a name recorded in Mircea the Elder’s alliance treaty with Poland in 1403.",
+				"The first railway built within the Romanian state’s borders at the time linked Bucharest with Giurgiu in 1869.",
+				"Comana Monastery was founded by Vlad the Impaler in 1461 on an island surrounded by marshes."
 			],
 			"it": [
-				"Prende il nome dalla sua città, dove si dice che mercanti genovesi avessero costruito un forte dedicato a san Giorgio.",
-				"La prima ferrovia dello stato romeno, da Bucarest a Giurgiu sul Danubio, fu aperta nel 1869."
+				"La contea prende il nome da Giurgiu, nome attestato nel trattato di alleanza concluso da Mircea il Vecchio con la Polonia nel 1403.",
+				"La prima ferrovia costruita entro i confini dello stato romeno dell’epoca collegò Bucarest a Giurgiu nel 1869.",
+				"Il monastero di Comana fu fondato da Vlad l’Impalatore nel 1461 su un’isola circondata da paludi."
 			],
 			"de": [
-				"Nach seiner Stadt benannt, wo genuesische Händler der Überlieferung nach ein nach dem heiligen Georg benanntes Fort errichtet haben sollen.",
-				"Die erste Eisenbahn des rumänischen Staates, von Bukarest nach Giurgiu an der Donau, wurde 1869 eröffnet."
+				"Der Kreis ist nach Giurgiu benannt, einem im Bündnisvertrag Mirceas des Alten mit Polen von 1403 belegten Namen.",
+				"Die erste Eisenbahn innerhalb der damaligen Grenzen des rumänischen Staates verband 1869 Bukarest mit Giurgiu.",
+				"Das Kloster Comana wurde 1461 von Vlad dem Pfähler auf einer von Sümpfen umgebenen Insel gegründet."
+			]
+		},
+		"city": {
+			"en": [
+				"Giurgiu’s name appears in Mircea the Elder’s alliance treaty with Poland in 1403.",
+				"A railway linking Bucharest and Giurgiu opened in 1869, the first built within the Romanian state’s borders of that time.",
+				"The Friendship Bridge linking Giurgiu with Ruse opened in 1954 with separate levels for road and rail traffic."
+			],
+			"it": [
+				"Il nome Giurgiu compare nel trattato di alleanza concluso da Mircea il Vecchio con la Polonia nel 1403.",
+				"La ferrovia tra Bucarest e Giurgiu fu aperta nel 1869 e fu la prima costruita entro i confini dello stato romeno dell’epoca.",
+				"Il Ponte dell’Amicizia tra Giurgiu e Ruse fu aperto nel 1954 con livelli separati per il traffico stradale e ferroviario."
+			],
+			"de": [
+				"Der Name Giurgiu erscheint im Bündnisvertrag Mirceas des Alten mit Polen von 1403.",
+				"Die 1869 eröffnete Eisenbahn zwischen Bukarest und Giurgiu war die erste innerhalb der damaligen Grenzen des rumänischen Staates.",
+				"Die Freundschaftsbrücke zwischen Giurgiu und Ruse wurde 1954 mit getrennten Ebenen für Straßen- und Schienenverkehr eröffnet."
 			]
 		}
 	},
@@ -534,16 +671,19 @@
 	"ialomita": {
 		"region": {
 			"en": [
-				"Named for the river Ialomița, a name of uncertain origin.",
-				"In 1951 the communist regime deported tens of thousands of people from the Banat to the Bărăgan steppe, much of it here."
+				"The county is named after the Ialomița River, whose name is recorded in the older form Ialovnița.",
+				"In 1951 the communist regime deported tens of thousands of people from Romania’s western borderlands to the Bărăgan, including settlements in this county.",
+				"The National Museum of Agriculture at Slobozia preserves the history of farming and rural life."
 			],
 			"it": [
-				"Prende il nome dal fiume Ialomița, un nome di origine incerta.",
-				"Nel 1951 il regime comunista deportò decine di migliaia di persone dal Banato nella steppa del Bărăgan, in gran parte qui."
+				"La contea prende il nome dal fiume Ialomița, il cui nome è attestato nella forma antica Ialovnița.",
+				"Nel 1951 il regime comunista deportò decine di migliaia di persone dalle zone di frontiera occidentali della Romania nel Bărăgan, anche in insediamenti di questa contea.",
+				"Il Museo nazionale dell’agricoltura di Slobozia conserva la storia delle attività agricole e della vita rurale."
 			],
 			"de": [
-				"Benannt nach dem Fluss Ialomița, einem Namen unsicherer Herkunft.",
-				"1951 deportierte das kommunistische Regime Zehntausende Menschen aus dem Banat in die Bărăgan-Steppe, einen großen Teil davon hierher."
+				"Der Kreis ist nach dem Fluss Ialomița benannt, dessen Name in der älteren Form Ialovnița belegt ist.",
+				"1951 deportierte das kommunistische Regime Zehntausende Menschen aus Rumäniens westlichen Grenzgebieten in den Bărăgan, auch in Siedlungen dieses Kreises.",
+				"Das Nationale Landwirtschaftsmuseum in Slobozia bewahrt die Geschichte des Ackerbaus und des ländlichen Lebens."
 			]
 		}
 	},
@@ -567,16 +707,19 @@
 		},
 		"city": {
 			"en": [
-				"The capital of Moldavia from 1564 to 1859.",
-				"Romania’s first university was founded here, in 1860."
+				"Iași is also known by the historical spelling Jassy.",
+				"It served as Moldavia’s capital from the sixteenth century until 1862.",
+				"The modern University of Iași was founded in 1860."
 			],
 			"it": [
-				"La capitale della Moldavia dal 1564 al 1859.",
-				"Qui fu fondata la prima università della Romania, nel 1860."
+				"Iași è conosciuta anche con la grafia storica Jassy.",
+				"Fu la capitale della Moldavia dal Cinquecento fino al 1862.",
+				"La moderna Università di Iași fu fondata nel 1860."
 			],
 			"de": [
-				"Die Hauptstadt der Moldau von 1564 bis 1859.",
-				"Rumäniens erste Universität wurde hier 1860 gegründet."
+				"Iași ist auch unter der historischen Schreibweise Jassy bekannt.",
+				"Die Stadt war vom sechzehnten Jahrhundert bis 1862 Hauptstadt Moldaus.",
+				"Die moderne Universität Iași wurde 1860 gegründet."
 			]
 		}
 	},
@@ -678,42 +821,57 @@
 	"olt": {
 		"region": {
 			"en": [
-				"Named for the river Olt, the Alutus of the Romans.",
-				"Romula, near Reșca, was the largest Roman town in this part of Dacia."
+				"The county is named for the Olt River, known in antiquity as Alutus.",
+				"The Roman town of Romula lies beneath and around today’s village of Reșca, where archaeologists have investigated pottery workshops.",
+				"Constantin Brâncoveanu rebuilt the main church of Brâncoveni Monastery in 1699 as a burial place for his ancestors."
 			],
 			"it": [
-				"Prende il nome dal fiume Olt, l’Alutus dei Romani.",
-				"Romula, vicino a Reșca, era la più grande città romana di questa parte della Dacia."
+				"La contea prende il nome dal fiume Olt, conosciuto nell’antichità come Alutus.",
+				"La città romana di Romula si trova sotto e intorno all’odierno villaggio di Reșca, dove gli archeologi hanno studiato laboratori di ceramica.",
+				"Constantin Brâncoveanu ricostruì nel 1699 la chiesa principale del monastero di Brâncoveni come luogo di sepoltura per i suoi antenati."
 			],
 			"de": [
-				"Benannt nach dem Fluss Olt, dem Alutus der Römer.",
-				"Romula bei Reșca war die größte römische Stadt in diesem Teil Dakiens."
+				"Der Kreis ist nach dem Fluss Olt benannt, der in der Antike Alutus hieß.",
+				"Die römische Stadt Romula liegt unter und um das heutige Dorf Reșca, wo Archäologen Keramikwerkstätten untersucht haben.",
+				"Constantin Brâncoveanu ließ 1699 die Hauptkirche des Klosters Brâncoveni als Grablege für seine Vorfahren neu errichten."
 			]
 		}
 	},
 	"oradea": {
 		"city": {
 			"en": [
-				"Many of its buildings are Art Nouveau, from the years before the First World War."
+				"Oradea is known in Hungarian as Nagyvárad and in German as Großwardein.",
+				"Many of its buildings are Art Nouveau, from the years before the First World War.",
+				"The Black Eagle Palace, completed in 1908, contains a glass-covered passage decorated with eagle stained glass."
 			],
 			"it": [
-				"Molti dei suoi edifici sono in stile liberty, degli anni prima della Prima guerra mondiale."
+				"Oradea è chiamata Nagyvárad in ungherese e Großwardein in tedesco.",
+				"Molti dei suoi edifici sono in stile liberty e risalgono agli anni precedenti la Prima guerra mondiale.",
+				"Il Palazzo dell’Aquila Nera, completato nel 1908, contiene un passaggio coperto di vetro e decorato con vetrate raffiguranti aquile."
 			],
 			"de": [
-				"Viele ihrer Gebäude sind Jugendstil, aus den Jahren vor dem Ersten Weltkrieg."
+				"Oradea heißt auf Ungarisch Nagyvárad und auf Deutsch Großwardein.",
+				"Viele ihrer Gebäude stammen aus den Jahren vor dem Ersten Weltkrieg und sind im Jugendstil erbaut.",
+				"Der 1908 fertiggestellte Palast zum Schwarzen Adler besitzt eine glasüberdachte Passage mit Adlerdarstellungen in den Buntglasfenstern."
 			]
 		}
 	},
 	"ploiesti": {
 		"city": {
 			"en": [
-				"The heart of Romania’s oil industry, which American bombers attacked in 1943."
+				"The name Ploiești appears in a charter issued by Petru cel Tânăr in 1567.",
+				"Its oil refineries were attacked by American bombers during Operation Tidal Wave in 1943.",
+				"The Petroleum Museum opened here in 1961 to preserve the history of Romania’s oil industry."
 			],
 			"it": [
-				"Il cuore dell’industria petrolifera romena, che i bombardieri americani attaccarono nel 1943."
+				"Il nome Ploiești compare in un documento emanato da Petru cel Tânăr nel 1567.",
+				"Le sue raffinerie furono attaccate dai bombardieri americani durante l’operazione Tidal Wave nel 1943.",
+				"Qui fu aperto nel 1961 il Museo del petrolio per conservare la storia dell’industria petrolifera romena."
 			],
 			"de": [
-				"Das Herz der rumänischen Ölindustrie, die amerikanische Bomber 1943 angriffen."
+				"Der Name Ploiești erscheint in einer Urkunde Petru cel Tânărs von 1567.",
+				"Ihre Raffinerien wurden 1943 während der Operation Tidal Wave von amerikanischen Bombern angegriffen.",
+				"Das Erdölmuseum wurde hier 1961 eröffnet, um die Geschichte der rumänischen Erdölindustrie zu bewahren."
 			]
 		}
 	},
@@ -739,32 +897,55 @@
 	"salaj": {
 		"region": {
 			"en": [
-				"Named for the river Sălaj, Szilágy in Hungarian, a name of uncertain meaning.",
-				"Porolissum, near Zalău, was a Roman frontier town on the northern edge of Dacia."
+				"Sălaj is also known by the historical Hungarian name Szilágy.",
+				"Porolissum, near Zalău, was a Roman frontier town on the northern edge of Dacia.",
+				"The Roman fort at Buciumi guarded the natural passage along the Ragului valley."
 			],
 			"it": [
-				"Prende il nome dal fiume Sălaj, Szilágy in ungherese, un nome dal significato incerto.",
-				"Porolissum, vicino a Zalău, era una città di frontiera romana al margine settentrionale della Dacia."
+				"Sălaj è conosciuto anche con il nome storico ungherese Szilágy.",
+				"Porolissum, vicino a Zalău, era una città di frontiera romana al margine settentrionale della Dacia.",
+				"Il forte romano di Buciumi sorvegliava il passaggio naturale lungo la valle del Ragului."
 			],
 			"de": [
-				"Benannt nach dem Fluss Sălaj, ungarisch Szilágy, einem Namen unsicherer Bedeutung.",
-				"Porolissum bei Zalău war eine römische Grenzstadt am nördlichen Rand Dakiens."
+				"Sălaj ist auch unter dem historischen ungarischen Namen Szilágy bekannt.",
+				"Porolissum bei Zalău war eine römische Grenzstadt am nördlichen Rand Dakiens.",
+				"Das römische Kastell von Buciumi bewachte den natürlichen Durchgang durch das Ragului-Tal."
 			]
 		}
 	},
 	"satu-mare": {
 		"region": {
 			"en": [
-				"In Romanian the name reads as \"big village\", probably a reworking of the town’s Hungarian name, Szatmár.",
-				"In the 18th century the Károlyi counts brought in German Catholic settlers, the Satu Mare Swabians."
+				"The county takes its name from Satu Mare, whose medieval fortress was known as Castrum Zotmar.",
+				"In the eighteenth century the Károlyi counts brought German Catholic settlers to the area, the Satu Mare Swabians.",
+				"At Carei, the Károlyi residence began as a fortified house built in 1482."
 			],
 			"it": [
-				"In romeno il nome si legge come \"villaggio grande\", probabilmente un adattamento del nome ungherese della città, Szatmár.",
-				"Nel Settecento i conti Károlyi vi fecero arrivare coloni tedeschi cattolici, gli svevi di Satu Mare."
+				"La contea prende il nome da Satu Mare, la cui fortezza medievale era conosciuta come Castrum Zotmar.",
+				"Nel Settecento i conti Károlyi vi fecero arrivare coloni tedeschi cattolici, gli svevi di Satu Mare.",
+				"A Carei la residenza dei Károlyi ebbe origine da una casa fortificata costruita nel 1482."
 			],
 			"de": [
-				"Auf Rumänisch liest sich der Name als „großes Dorf“, wahrscheinlich eine Umdeutung des ungarischen Stadtnamens Szatmár.",
-				"Im 18. Jahrhundert holten die Grafen Károlyi deutsche katholische Siedler ins Land, die Sathmarer Schwaben."
+				"Der Kreis ist nach Satu Mare benannt, dessen mittelalterliche Festung Castrum Zotmar hieß.",
+				"Im 18. Jahrhundert holten die Grafen Károlyi deutsche katholische Siedler in die Gegend, die Sathmarer Schwaben.",
+				"In Carei entstand die Residenz der Károlyi aus einem 1482 erbauten befestigten Haus."
+			]
+		},
+		"city": {
+			"en": [
+				"Satu Mare’s medieval fortress was known as Castrum Zotmar.",
+				"Satu Mare and the neighbouring town of Mintiu were united as a free royal city by a diploma of Charles VI in 1721.",
+				"The Firemen’s Tower was inaugurated in 1904 to help spot fires across the city."
+			],
+			"it": [
+				"La fortezza medievale di Satu Mare era conosciuta come Castrum Zotmar.",
+				"Satu Mare e la vicina città di Mintiu furono unite come città libera regia da un diploma di Carlo VI nel 1721.",
+				"La Torre dei pompieri fu inaugurata nel 1904 per facilitare l’avvistamento degli incendi in città."
+			],
+			"de": [
+				"Die mittelalterliche Festung von Satu Mare hieß Castrum Zotmar.",
+				"Satu Mare und die Nachbarstadt Mintiu wurden 1721 durch ein Diplom Karls VI. als königliche Freistadt vereinigt.",
+				"Der Feuerwehrturm wurde 1904 eingeweiht, um Brände in der Stadt frühzeitig zu erkennen."
 			]
 		}
 	},
@@ -785,6 +966,23 @@
 				"Das 1817 eröffnete Brukenthal-Museum in Sibiu ist eines der ältesten Museen Europas.",
 				"2007 war die Stadt Europäische Kulturhauptstadt."
 			]
+		},
+		"city": {
+			"en": [
+				"Sibiu’s German name Hermannstadt is attested in a document of 1366.",
+				"The Brukenthal Museum in Sibiu opened to the public in 1817, following its founder’s testamentary wishes.",
+				"Sibiu was a European Capital of Culture in 2007, alongside Luxembourg."
+			],
+			"it": [
+				"Il nome tedesco di Sibiu, Hermannstadt, è attestato in un documento del 1366.",
+				"Il Museo Brukenthal di Sibiu fu aperto al pubblico nel 1817, secondo le disposizioni testamentarie del fondatore.",
+				"Sibiu fu Capitale europea della cultura nel 2007 insieme a Lussemburgo."
+			],
+			"de": [
+				"Sibius deutscher Name Hermannstadt ist in einer Urkunde von 1366 belegt.",
+				"Das Brukenthal-Museum in Sibiu wurde 1817 nach dem testamentarischen Wunsch seines Gründers für die Öffentlichkeit geöffnet.",
+				"Sibiu war 2007 gemeinsam mit Luxemburg Europäische Kulturhauptstadt."
+			]
 		}
 	},
 	"suceava": {
@@ -803,6 +1001,23 @@
 				"Nach seiner Stadt benannt, ein Name, der möglicherweise vom ungarischen szűcs, „Kürschner“, kommt; die Herleitung ist ungewiss.",
 				"Die Stadt war von 1388 bis 1565 die Hauptstadt der Moldau.",
 				"Die bemalten Klöster der Bukowina, außen wie innen mit Fresken bedeckt, sind eine UNESCO-Stätte."
+			]
+		},
+		"city": {
+			"en": [
+				"The name Suceava is securely documented in a charter of 1388 issued by Petru Mușat.",
+				"Suceava served as Moldavia’s capital from 1388 until 1565.",
+				"Suceava’s Church of St George belongs to the UNESCO-listed Churches of Moldavia, known for their painted decoration."
+			],
+			"it": [
+				"Il nome Suceava è attestato con certezza in un documento del 1388 emanato da Petru Mușat.",
+				"Suceava fu capitale della Moldavia dal 1388 al 1565.",
+				"La chiesa di San Giorgio di Suceava fa parte delle Chiese della Moldavia iscritte nella lista UNESCO, note per la decorazione pittorica."
+			],
+			"de": [
+				"Der Name Suceava ist in einer Urkunde Petru Mușats von 1388 sicher belegt.",
+				"Suceava war von 1388 bis 1565 die Hauptstadt der Moldau.",
+				"Die Georgskirche in Suceava gehört zu den UNESCO-geschützten Kirchen der Moldau, die für ihre Wandmalereien bekannt sind."
 			]
 		}
 	},
@@ -847,15 +1062,18 @@
 	"timisoara": {
 		"city": {
 			"en": [
-				"In 1884 it became the first city in continental Europe with electric street lighting.",
+				"Its medieval fortress appears in records as castrum regium Themes.",
+				"An electric street-lighting network began operating here in 1884.",
 				"The revolution of December 1989 that ended Ceaușescu’s rule began here."
 			],
 			"it": [
-				"Nel 1884 fu la prima città dell’Europa continentale con l’illuminazione stradale elettrica.",
+				"La sua fortezza medievale compare nei documenti come castrum regium Themes.",
+				"Una rete di illuminazione stradale elettrica entrò in funzione qui nel 1884.",
 				"Qui cominciò la rivoluzione del dicembre 1989 che pose fine al regime di Ceaușescu."
 			],
 			"de": [
-				"1884 wurde sie zur ersten Stadt auf dem europäischen Festland mit elektrischer Straßenbeleuchtung.",
+				"Ihre mittelalterliche Festung erscheint in Urkunden als castrum regium Themes.",
+				"Ein elektrisches Straßenbeleuchtungsnetz nahm hier 1884 den Betrieb auf.",
 				"Die Revolution vom Dezember 1989, die Ceaușescus Herrschaft beendete, begann hier."
 			]
 		}
@@ -876,6 +1094,23 @@
 				"Die Stadt war das römische Aegyssus; die Herkunft ihres heutigen Namens ist ungewiss.",
 				"Das Donaudelta, das größtenteils hier liegt, ist eine UNESCO-Stätte und eines der größten Schilfgebiete der Welt.",
 				"Die Lipowaner, russische Altgläubige, die im 18. Jahrhundert vor Verfolgung flohen, fischen noch heute im Delta."
+			]
+		},
+		"city": {
+			"en": [
+				"Tulcea appears under the spelling Tulcsa in an Ottoman customs register of 1506.",
+				"The ruins of ancient Aegyssus in Tulcea formed part of the Roman and later Byzantine frontier defences.",
+				"Tulcea’s Independence Monument was officially inaugurated in 1904 in the presence of King Carol I and Queen Elisabeta."
+			],
+			"it": [
+				"Tulcea compare con la grafia Tulcsa in un registro doganale ottomano del 1506.",
+				"Le rovine dell’antica Aegyssus a Tulcea facevano parte delle difese di frontiera romane e poi bizantine.",
+				"Il Monumento all’Indipendenza di Tulcea fu inaugurato ufficialmente nel 1904 alla presenza di re Carlo I e della regina Elisabetta."
+			],
+			"de": [
+				"Tulcea erscheint in einem osmanischen Zollregister von 1506 in der Schreibweise Tulcsa.",
+				"Die Ruinen des antiken Aegyssus in Tulcea gehörten zu den römischen und später byzantinischen Grenzbefestigungen.",
+				"Tulceas Unabhängigkeitsdenkmal wurde 1904 in Anwesenheit König Carols I. und Königin Elisabetas offiziell eingeweiht."
 			]
 		}
 	},
@@ -901,16 +1136,36 @@
 	"vaslui": {
 		"region": {
 			"en": [
-				"Named for its town, a name of uncertain origin.",
-				"At Vaslui in 1475, Stephen the Great of Moldavia defeated a much larger Ottoman army."
+				"The county is named for Vaslui, a town documented in 1375.",
+				"At Podul Înalt in 1475, Stephen the Great of Moldavia defeated a much larger Ottoman army.",
+				"An equestrian statue at Băcăoani was unveiled in 1975 to commemorate that victory."
 			],
 			"it": [
-				"Prende il nome dalla sua città, un nome di origine incerta.",
-				"A Vaslui, nel 1475, Stefano il Grande di Moldavia sconfisse un esercito ottomano molto più numeroso."
+				"La contea prende il nome da Vaslui, città attestata nel 1375.",
+				"A Podul Înalt, nel 1475, Stefano il Grande di Moldavia sconfisse un esercito ottomano molto più numeroso.",
+				"Una statua equestre a Băcăoani fu inaugurata nel 1975 per commemorare quella vittoria."
 			],
 			"de": [
-				"Nach seiner Stadt benannt, deren Name von ungewisser Herkunft ist.",
-				"Bei Vaslui besiegte Stefan der Große von der Moldau 1475 ein weit größeres osmanisches Heer."
+				"Der Kreis ist nach der 1375 urkundlich belegten Stadt Vaslui benannt.",
+				"Bei Podul Înalt besiegte Stefan der Große von der Moldau 1475 ein weit größeres osmanisches Heer.",
+				"Ein Reiterstandbild in Băcăoani wurde 1975 zur Erinnerung an diesen Sieg enthüllt."
+			]
+		},
+		"city": {
+			"en": [
+				"The name Vaslui is documented as early as 1375.",
+				"Stephen the Great founded Vaslui’s princely Church of the Beheading of St John the Baptist in 1490.",
+				"Vaslui’s Nicolae Milescu Spătarul County Library was founded in 1951 and preserves rare religious books and early periodicals."
+			],
+			"it": [
+				"Il nome Vaslui è attestato già nel 1375.",
+				"Stefano il Grande fondò nel 1490 la chiesa principesca della Decollazione di San Giovanni Battista a Vaslui.",
+				"La Biblioteca provinciale Nicolae Milescu Spătarul di Vaslui fu fondata nel 1951 e conserva rari libri religiosi e periodici antichi."
+			],
+			"de": [
+				"Der Name Vaslui ist bereits 1375 belegt.",
+				"Stefan der Große stiftete 1490 in Vaslui die fürstliche Kirche der Enthauptung Johannes des Täufers.",
+				"Die Kreisbibliothek Nicolae Milescu Spătarul in Vaslui wurde 1951 gegründet und bewahrt seltene religiöse Bücher und alte Zeitschriften."
 			]
 		}
 	},
@@ -930,6 +1185,581 @@
 				"Benannt nach dem Vrancea-Gebirge, einem Namen unsicherer Herkunft.",
 				"Tief unter seinen Bergen liegt der Ursprung der stärksten Erdbeben Rumäniens, darunter das von 1977.",
 				"Bei Mărășești hielt die rumänische Armee 1917 den deutschen Vormarsch auf."
+			]
+		}
+	},
+	"_sources": {
+		"iasi:city": [
+			"https://snl.no/Ia%C5%9Fi",
+			"https://www.uaic.ro/iasi/",
+			"https://senat.uaic.ro/en/brief-history/"
+		],
+		"oradea:city": [
+			"https://encyclopedia.yivo.org/article/1416",
+			"https://snl.no/Oradea",
+			"https://www.oradeaheritage.ro/palatul-vulturul-negru/"
+		],
+		"cluj-napoca:city": [
+			"https://storage.primariaclujnapoca.ro/userfiles/files/20150105pug/piese_scrise/MEMORIU%20GENERAL/141218_MEMORIU%20GENERAL_PUGCJ_final.pdf",
+			"https://visitcluj.ro/tourist_spot/casa-matia-corvin/",
+			"https://visitcluj.ro/tourist_spot/biserica-romano-catolica-sfantul-mihail-2/"
+		],
+		"bacau:city": [
+			"https://www.ceeol.com/search/article-detail?id=196189",
+			"https://www.rri.ro/en/features-and-reports/rri-encyclopaedia/the-domestic-universe-of-poet-george-bacovia-id169836.html",
+			"https://bisericaprecistabacau.ro/istorie/"
+		],
+		"timisoara:city": [
+			"https://www.ct.upt.ro/connections/timisoara.htm",
+			"https://mnart.museum/timeline/",
+			"https://romaniatourism.com/timisoara.html"
+		],
+		"brasov:city": [
+			"https://legislatie.just.ro/public/DetaliiDocument/287113",
+			"https://bisericaneagra.ro/povestea-bisericii-negre/"
+		],
+		"galati:city": [
+			"https://enciklopedija.hr/clanak/galati",
+			"https://cartipostale.cimec.ro/Detaliu.php?criteriu=arhitectur%C4%83+bizantin%C4%83&id=11203"
+		],
+		"braila:city": [
+			"https://islamansiklopedisi.org.tr/ibrail",
+			"https://www.muzeulbrailei.ro/memoriale/casa-memoriala-panait-istrati-1/",
+			"https://www.primariabraila.ro/scurt-istoric"
+		],
+		"ploiesti:city": [
+			"https://ploiesti.ro/wp-content/uploads/hcl-pdf/HCL-2019-470-anexa.pdf",
+			"https://muzeulpetrolului.ro/",
+			"https://www.nationalmuseum.af.mil/Visit/Museum-Exhibits/Fact-Sheets/Display/Article/1519651/operation-tidalwave-ploesti-august-1-1943/"
+		],
+		"craiova:city": [
+			"https://primariacraiova.ro/ro/a/278/istoria-ora%C8%99ului-craiova",
+			"https://romaniatourism.com/romania-maps/craiova.html",
+			"https://www.primariacraiova.ro/ro/info/6139fc43bbde0627490065.pdf"
+		],
+		"constanta:city": [
+			"https://romaniatourism.com/constanta.html",
+			"https://www.open.edu/openlearn/history-the-arts/exploring-ovids-big-ideas/content-section-5"
+		],
+		"satu-mare:region": [
+			"https://old.cjsm.ro/activitate-2/turism/prezentare-generala/istoric/",
+			"https://www.municipiulcarei.ro/site/sites/default/files/fisiere/istoricok.pdf",
+			"https://old.cjsm.ro/administratie/carei/"
+		],
+		"salaj:region": [
+			"https://www.ceeol.com/search/book-detail?id=417586",
+			"https://cronica.cimec.ro/Public/Detalii.php?d=Moigrad-Porolissum-Mirsid-Salaj-Moigrad-%E2%80%93-Jac-2015&k=5544",
+			"https://turismzalau.ro/descopera-tara-silvaniei/castrul-roman-de-la-buciumi/"
+		],
+		"vaslui:region": [
+			"https://www.turismvaslui.ro/vaslui/",
+			"https://www.vechi.cjvs.eu/modules.php?name=Content&pa=showpage&pid=5"
+		],
+		"bacau:region": [
+			"https://www.ceeol.com/search/article-detail?id=196189",
+			"https://assembly.coe.int/nw/xml/XRef/X2H-Xref-ViewHTML.asp?FileID=9301&lang=en",
+			"https://www.georgeenescu.ro/sectiile-muzeului_doc_26_sectia-dumitru-si-alice-rosetti-tescanu-george-enescu_pg_0.htm"
+		],
+		"arad:region": [
+			"https://hcl.usr.ro/arad/2008/h236",
+			"https://www.cniptarad.ro/ro/harta-locatie/231-obeliscul-celor-13-generali",
+			"https://ghidulmuzeelor.cimec.ro/id.asp?-muzeul-memorial-ioan-slavici-si-emil-montia-siria-arad=&k=66"
+		],
+		"galati:region": [
+			"https://enciklopedija.hr/clanak/galati",
+			"https://culture.ec.europa.eu/ro/cultural-heritage/initiatives-and-success-stories/european-heritage-label/european-heritage-label-sites/palace-of-the-european-commission-of-the-danube-romania",
+			"https://ghidulmuzeelor.cimec.ro/id.asp?-muzeul-de-istorie-teodor-cincu-tecuci-galati=&k=313"
+		],
+		"braila:region": [
+			"https://islamansiklopedisi.org.tr/ibrail",
+			"https://rsis.ramsar.org/RISapp/files/RISrep/RO1074RIS.pdf",
+			"https://edj.ro/manastirea-nasterea-sfantului-ioan-botezatorul-maxineni/"
+		],
+		"ialomita:region": [
+			"https://biblioteca-digitala.ro/reviste/carte/dl.asp?filename=Stef-Dorin_Dictionar-etimologic-localitatilor-Maramures_2023.pdf",
+			"https://www.primariabarcanesti.ro/z_Informatii%20Publice/Transparenta/2021/Strategia%20de%20dezvoltare%20locala%202021-2027.pdf",
+			"https://www.memorialsighet.ro/sighet-museum-room-47-deportations-to-baragan/",
+			"https://adevarul.ro/stiri-locale/slobozia/patima-rosie-din-baragan-istoria-celor-11-sate-1548834.html",
+			"https://muzeeaerliber.ro/muzee/muzeul-national-al-agriculturii-slobozia/"
+		],
+		"olt:region": [
+			"https://adevarul.ro/stiri-locale/slatina/istoria-prezentului-judetul-olt-a-luat-numele-1399433.html",
+			"https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0006%3Aentry%3Darutela",
+			"https://ran.cimec.ro/sel.asp?descript=resca-dobrosloveni-olt-situl-arheologic-de-la-resca-romula-cod-sit-ran-126754.01&lang=EN",
+			"https://oldcronica.cimec.ro/detaliu.asp?d=Resca-Dobrosloveni-Olt-Malva-2018&k=6212",
+			"https://muzee-religioase-hurezi-brancoveni.ro/en/item/brancoveni-monastery"
+		],
+		"calarasi:region": [
+			"https://primariacalarasi.ro/storage/2020/12/Municipiul-Calarasi-scurt-istoric.pdf",
+			"https://muzeulgumelnita.ro/expozitii-permanente/cultura-gumelnita",
+			"https://primariaoltenita.ro/oltenita/cultura/muzeul-civilizatiei-gumelnita/"
+		],
+		"dolj:region": [
+			"https://discoverdolj.ro/about-dolj-county-en?locale=en",
+			"https://www.aries-oltenia.ro/proiecte/renasterea_patrimoniului_arhitectural/Databases%20with%20the%20historical%20architectural%20buildings%20in%20Dolj%20county.pdf",
+			"https://primariacraiova.ro/ro/a/278/istoria-ora%C8%99ului-craiova",
+			"https://ghidulmuzeelor.cimec.ro/idEN.asp?k=284"
+		],
+		"giurgiu:region": [
+			"https://episcopiagiurgiului.ro/episcopul/intronizare/",
+			"https://cfr.ro/file-de-istorie-feroviara/",
+			"https://episcopiagiurgiului.ro/manastiri/manastirea-comana/"
+		],
+		"satu-mare:city": [
+			"https://old.cjsm.ro/activitate-2/turism/prezentare-generala/istoric/",
+			"https://bibliotecasatumare.ro/detalii-istorie/?ev_id=613",
+			"https://muzeusm.ro/en/scurt-istoric-al-cladirilor/"
+		],
+		"botosani:city": [
+			"https://www.primariabt.ro/pdf/conducere/portariuc/rap_14.pdf",
+			"https://visitbotosani.ro/2015/02/locul-nasterii-poetului-mihai-eminescu/",
+			"https://turismbotosani.ro/index.php/home/jcontent/item/223-biserica-sfantul-nicolae-popauti",
+			"https://www1.primariabt.ro/pr_hot/2022/sed27.01.2022/a1.10_27.01.2022.pdf"
+		],
+		"baia-mare:city": [
+			"https://www.baiamare.ro/ro/Descopera-Baia-Mare/Orasul-Baia-Mare/Istoria-orasului/Istoria-orasului/",
+			"https://enciclopedie.referinte.transindex.adatbank.ro/monument.php?id=178"
+		],
+		"suceava:city": [
+			"https://visitsuceava.ro/istoria-sucevei/",
+			"https://www.primariaipotesti.ro/assets/documente/info_publice/proiecte_strategii/strategie%20Comuna%20Ipotesti%2005.08.2021.pdf",
+			"https://www.cnr-unesco.ro/uploads/media/f826_patrimoniu-material-engl-site.pdf",
+			"https://whc.unesco.org/en/documents/111398"
+		],
+		"zalau:city": [
+			"https://www.zalausj.ro/portal/zalau/portal.nsf/AllByUNID/numele-orasului-00003d36?OpenDocument=",
+			"https://turismzalau.ro/descopera-zalaul/grupul-statuar-wesselenyi/",
+			"https://zalausj.ro/portal/zalau/portal-en.nsf/AllByUNID/monuments-and-architectural-ensembles-00001a46"
+		],
+		"bistrita:city": [
+			"https://primariabistrita.ro/wp-content/uploads/2025/12/1.-MEMORIU-SINTEZA-BISTRITA.pdf",
+			"https://primariabistrita.ro/wp-content/uploads/2025/11/Strategia-de-dezvoltare-locala-a-municipiului-Bistrita-2010-2030-actualizata-2022-1-1.pdf"
+		],
+		"piatra-neamt:city": [
+			"https://www.primariapn.ro/documents/10179/5120058/SIDU_Piatra_Neamt_pn.pdf",
+			"https://ecdpn.muzeu-neamt.ro/istoric.html",
+			"https://maecpn.muzeu-neamt.ro/"
+		],
+		"vaslui:city": [
+			"https://www.turismvaslui.ro/vaslui/",
+			"https://vaslui-turism.cjvs.eu/index.php?ch_lang=EN&pid=168"
+		],
+		"tirgu-mures:city": [
+			"https://bjmures.ro/wp-content/uploads/2022/01/M00103.pdf",
+			"https://visitmures.com/en/targu-mures/built-heritage/museums/cultural-palace-targu-mures",
+			"https://www.telekiteka.ro/76"
+		],
+		"arad:city": [
+			"https://biblioteca-digitala.ro/reviste/Ziridava/22-Zaridava-arad-XXII-2000.pdf",
+			"https://www.cniptarad.ro/ro/harta-locatie/231-obeliscul-celor-13-generali",
+			"https://www.cniptarad.ro/assets/site/catalogs/pdf/CJA-Aradul-Istoric.pdf",
+			"https://www.cniptarad.ro/de/arad/arad"
+		],
+		"alba-lulia:city": [
+			"https://biblioteca-digitala.ro/reviste/revista-muzeelor/revista-muzeelor-06-1968.pdf",
+			"https://turism.apulum.ro/destinations/sala-unirii/",
+			"https://www.apulum.ro/ro/pdf7/SIDU_-_versiune_consolidata_august_2017.pdf"
+		],
+		"deva:city": [
+			"https://www.primariadeva.ro/fisiere/module_fisiere/6917/Memoriu%20General.pdf",
+			"https://www.primariadeva.ro/images/uploads/documente/brosura.pdf",
+			"https://www.cetatea-deva.ro/istoric/"
+		],
+		"sfintu-gheorghe:city": [
+			"https://www.ro.cjcv.ro/ro/sfantu-gheorghe.html",
+			"https://visitcovasna.com/explore-sfantu-gheorghe-and-its-surroundings-en?locale=en"
+		],
+		"sibiu:city": [
+			"https://www.sibiu.ro/sibiu/istoria",
+			"https://www.brukenthalmuseum.ro/mnb/istoric_detaliu_en/1088",
+			"https://culture.ec.europa.eu/pt-pt/luxembourg-and-sibiu"
+		],
+		"focsani:city": [
+			"https://www.focsani.info/fisiere/pagini_fisiere/strategia2014-2023.pdf",
+			"https://muzeulvrancei.ro/24-ianuarie-1859-inceputul-unificarii-teritoriilor-romanesti/"
+		],
+		"resita:city": [
+			"https://mycovenant.eumayors.eu/docs/seap/21127_1482319903.pdf",
+			"https://biblioteca-digitala.ro/reviste/Banatica/31-2-Banatica-muzeul-banatului-montan-2021.pdf",
+			"https://visitcarasseverin.ro/ro/places/furnalul-din-resita",
+			"https://visitcarasseverin.ro/ro/places/steam-locomotive-museum-re-ita",
+			"https://djc.monumenteiasi.ro/pagina.php?v=ghid_resita"
+		],
+		"tulcea:city": [
+			"https://old.cjtulcea.ro/sites/cjtulcea/PrezentareaJudetului/Obiective%20Turistice/Lists/Cetati%20si%20Monumente/Display.aspx?ID=1",
+			"https://www.icemtl.ro/proiectul-parcul-arheologic-aegyssus-ajuns-la-a-sasea-editie/",
+			"https://www.cjtulcea.ro/judetul-tulcea///atractii-turistice/monument"
+		],
+		"buzau:city": [
+			"https://primariabuzau.ro/turism/istoria-orasului-buzau/",
+			"https://primariabuzau.ro/patrimoniu/palatul-comunal-buzau/",
+			"https://bz.prefectura.mai.gov.ro/wp-content/uploads/sites/31/2020/08/2.-Dir.-Cultura-Informare-Colegiu-2020.pdf"
+		],
+		"rimnicu-vilcea:city": [
+			"https://cjvalcea.ro/images/cjvalcea/monitor_oficial_local/2020/hot168_din_31-08-2020.pdf",
+			"https://agerpres.ro/documentare/2023/05/15/fragment-de-istorie-635-de-ani-de-la-prima-mentiune-documentara-a-orasului-ramnicu-valcea-20-mai--1110609",
+			"https://ghidulmuzeelor.cimec.ro/idEN.asp?-casa-memoriala-anton-pann-ramnicu-valcea=&k=645"
+		],
+		"targu-jiu:city": [
+			"https://vechi.utgjiu.ro/admitere/admitere-master/despre-tgjiu/",
+			"https://whc.unesco.org/en/decisions/8615"
+		],
+		"targoviste:city": [
+			"https://www.bjdb.ro/docs/c1_2_03.pdf",
+			"https://muzee-dambovitene.ro/dracula-legenda-si-adevar-istoric/",
+			"https://muzee-dambovitene.ro/patrimoniu-renascut-repere-cronologice-privind-istoria-turnului-chindiei/"
+		],
+		"pitesti:city": [
+			"https://www.primariapitesti.ro/istoricul-primariei-p61",
+			"https://ran.cimec.ro/sel.asp?descript=pitesti-municipiul-pitesti-arges-biserica-domneasca-sf.-gheorghe-din-pitesti-cod-sit-ran-13178.11",
+			"https://pitestiprison.org/tour/ro/index.html"
+		],
+		"drobeta-turnu-severin:city": [
+			"https://primariadrobeta.ro/2022/11/proiectul-repere-arhitecturale-romane/",
+			"https://ran.cimec.ro/sel.asp?Lang=EN&codran=109782.02",
+			"https://www.muzeulregiuniiportilordefier.ro/istoric-muzeu"
+		],
+		"slobozia:city": [
+			"https://municipiulslobozia.ro/wp-content/uploads/documente/2020/organizare/Statut-Primarie.pdf",
+			"https://manastireaslobozia.ro/",
+			"https://muzeeaerliber.ro/muzee/muzeul-national-al-agriculturii-slobozia/"
+		],
+		"slatina:city": [
+			"https://www.primariaslatina.ro/images/dispozitii/h_146_310720.pdf",
+			"https://catalogue.bnf.fr/ark%3A/12148/cb11908252k",
+			"https://ran.cimec.ro/sel.asp?descript=slatina-municipiul-slatina-olt-manastirea-clocociov-de-la-slatina-cod-sit-ran-125356.10"
+		],
+		"calarasi:city": [
+			"https://primariacalarasi.ro/storage/2020/12/Municipiul-Calarasi-scurt-istoric.pdf",
+			"https://primariacalarasi.ro/storage/2020/12/Istorie.pdf",
+			"https://www.calarasi.ro/wp-content/uploads/2020/07/Raport-final-2024-MDJ-CALARASI.pdf"
+		],
+		"giurgiu:city": [
+			"https://episcopiagiurgiului.ro/episcopul/intronizare/",
+			"https://cfr.ro/file-de-istorie-feroviara/",
+			"https://primariagiurgiu.ro/storage/2024/11/SDD_Mun.-Giurgiu_2021-2027-merged.pdf"
+		]
+	},
+	"baia-mare": {
+		"city": {
+			"en": [
+				"Baia Mare appears in medieval records as Rivulus Dominarum, meaning the Ladies’ River.",
+				"The royal privilege of 1347 allowed Baia Mare’s inhabitants to elect a mining judge to oversee the mines.",
+				"Stephen’s Tower is a surviving part of Baia Mare’s medieval Gothic parish church."
+			],
+			"it": [
+				"Baia Mare compare nei documenti medievali come Rivulus Dominarum, cioè il fiume delle signore.",
+				"Il privilegio regio del 1347 consentiva agli abitanti di Baia Mare di eleggere un giudice minerario per sorvegliare le miniere.",
+				"La Torre di Santo Stefano è una parte superstite della chiesa parrocchiale gotica medievale di Baia Mare."
+			],
+			"de": [
+				"Baia Mare erscheint in mittelalterlichen Urkunden als Rivulus Dominarum, Fluss der Damen.",
+				"Das königliche Privileg von 1347 erlaubte den Einwohnern von Baia Mare, einen Bergrichter zur Aufsicht über die Bergwerke zu wählen.",
+				"Der Stephansturm ist ein erhaltener Teil der mittelalterlichen gotischen Pfarrkirche von Baia Mare."
+			]
+		}
+	},
+	"zalau": {
+		"city": {
+			"en": [
+				"Zalău is recorded under the spelling Ziloc in 1220 and Zylah in 1282.",
+				"The Wesselényi monument in Zalău, made by sculptor János Fadrusz, was inaugurated in 1902.",
+				"The poet Endre Ady attended school in Zalău from 1892 to 1896."
+			],
+			"it": [
+				"Zalău è attestata con la grafia Ziloc nel 1220 e Zylah nel 1282.",
+				"Il monumento a Wesselényi di Zalău, opera dello scultore János Fadrusz, fu inaugurato nel 1902.",
+				"Il poeta Endre Ady frequentò la scuola a Zalău dal 1892 al 1896."
+			],
+			"de": [
+				"Zalău ist 1220 in der Schreibweise Ziloc und 1282 als Zylah belegt.",
+				"Das Wesselényi-Denkmal in Zalău wurde vom Bildhauer János Fadrusz geschaffen und 1902 eingeweiht.",
+				"Der Dichter Endre Ady besuchte von 1892 bis 1896 in Zalău die Schule."
+			]
+		}
+	},
+	"bistrita": {
+		"city": {
+			"en": [
+				"Bistrița’s name appears as Bistriche in a document issued by Pope Urban IV in 1264.",
+				"The Sugălete arcade in Bistrița comprises thirteen medieval houses where merchants and craftsmen sold their wares.",
+				"In 1465 Matthias Corvinus allowed Bistrița’s inhabitants to demolish an older hilltop fortress and fortify the town itself."
+			],
+			"it": [
+				"Il nome di Bistrița compare come Bistriche in un documento emanato da papa Urbano IV nel 1264.",
+				"Il complesso porticato Sugălete di Bistrița comprende tredici case medievali dove mercanti e artigiani vendevano i loro prodotti.",
+				"Nel 1465 Mattia Corvino consentì agli abitanti di Bistrița di demolire una precedente fortezza sulla collina e di fortificare la città stessa."
+			],
+			"de": [
+				"Bistrițas Name erscheint 1264 als Bistriche in einer Urkunde Papst Urbans IV.",
+				"Die Arkadenzeile Sugălete in Bistrița umfasst dreizehn mittelalterliche Häuser, in denen Kaufleute und Handwerker ihre Waren verkauften.",
+				"1465 erlaubte Matthias Corvinus den Einwohnern Bistrițas, eine ältere Höhenburg abzutragen und die Stadt selbst zu befestigen."
+			]
+		}
+	},
+	"piatra-neamt": {
+		"city": {
+			"en": [
+				"Piatra Neamț was known in the Middle Ages as Piatra lui Crăciun.",
+				"Stephen the Great’s princely Church of St John in Piatra Neamț was built in 1497–1498.",
+				"Piatra Neamț’s Cucuteni Chalcolithic Art Museum opened in 2005 to display the prehistoric culture’s artistic heritage."
+			],
+			"it": [
+				"Piatra Neamț era conosciuta nel Medioevo come Piatra lui Crăciun.",
+				"La chiesa principesca di San Giovanni a Piatra Neamț fu costruita da Stefano il Grande nel 1497–1498.",
+				"Il Museo d’arte calcolitica Cucuteni di Piatra Neamț fu aperto nel 2005 per esporre il patrimonio artistico di questa cultura preistorica."
+			],
+			"de": [
+				"Piatra Neamț hieß im Mittelalter Piatra lui Crăciun.",
+				"Die von Stefan dem Großen gestiftete fürstliche Johanneskirche in Piatra Neamț wurde 1497–1498 erbaut.",
+				"Das Museum für kupferzeitliche Cucuteni-Kunst in Piatra Neamț wurde 2005 eröffnet, um das künstlerische Erbe dieser vorgeschichtlichen Kultur zu zeigen."
+			]
+		}
+	},
+	"tirgu-mures": {
+		"city": {
+			"en": [
+				"Târgu Mureș appears in medieval records as Novum Forum Siculorum, the New Market of the Székelys.",
+				"The Art Nouveau Palace of Culture in Târgu Mureș was built between 1911 and 1913.",
+				"The Teleki Library in Târgu Mureș opened to the public in 1802."
+			],
+			"it": [
+				"Târgu Mureș compare nei documenti medievali come Novum Forum Siculorum, il nuovo mercato dei Siculi.",
+				"Il Palazzo della Cultura in stile liberty di Târgu Mureș fu costruito tra il 1911 e il 1913.",
+				"La Biblioteca Teleki di Târgu Mureș fu aperta al pubblico nel 1802."
+			],
+			"de": [
+				"Târgu Mureș erscheint in mittelalterlichen Urkunden als Novum Forum Siculorum, Neuer Markt der Szekler.",
+				"Der Jugendstil-Kulturpalast in Târgu Mureș wurde zwischen 1911 und 1913 erbaut.",
+				"Die Teleki-Bibliothek in Târgu Mureș wurde 1802 für die Öffentlichkeit geöffnet."
+			]
+		}
+	},
+	"alba-lulia": {
+		"city": {
+			"en": [
+				"The Roman settlement at Alba Iulia was called Apulum.",
+				"On 1 December 1918, delegates meeting in Alba Iulia’s Union Hall voted for Transylvania’s union with Romania.",
+				"The Habsburg Alba Carolina fortress was built between 1715 and 1738."
+			],
+			"it": [
+				"L’insediamento romano di Alba Iulia si chiamava Apulum.",
+				"Il 1º dicembre 1918 i delegati riuniti nella Sala dell’Unione di Alba Iulia votarono per l’unione della Transilvania con la Romania.",
+				"La fortezza asburgica Alba Carolina fu costruita tra il 1715 e il 1738."
+			],
+			"de": [
+				"Die römische Siedlung in Alba Iulia hieß Apulum.",
+				"Am 1. Dezember 1918 stimmten die Delegierten im Unionssaal von Alba Iulia für die Vereinigung Siebenbürgens mit Rumänien.",
+				"Die habsburgische Festung Alba Carolina wurde zwischen 1715 und 1738 erbaut."
+			]
+		}
+	},
+	"deva": {
+		"city": {
+			"en": [
+				"Deva’s fortress appears in documents of 1269 under the name castrum Deva.",
+				"The Unitarian reformer Ferenc Dávid died imprisoned in Deva’s fortress in 1579.",
+				"An explosion in the powder store devastated Deva’s fortress in August 1849."
+			],
+			"it": [
+				"La fortezza di Deva compare in documenti del 1269 con il nome castrum Deva.",
+				"Il riformatore unitariano Ferenc Dávid morì prigioniero nella fortezza di Deva nel 1579.",
+				"Un’esplosione nel deposito di polvere da sparo devastò la fortezza di Deva nell’agosto 1849."
+			],
+			"de": [
+				"Devas Festung erscheint in Urkunden von 1269 unter dem Namen castrum Deva.",
+				"Der unitarische Reformator Ferenc Dávid starb 1579 als Gefangener in Devas Festung.",
+				"Eine Explosion im Pulvermagazin verwüstete Devas Festung im August 1849."
+			]
+		}
+	},
+	"sfintu-gheorghe": {
+		"city": {
+			"en": [
+				"Sfântu Gheorghe takes its name from St George, the patron of its medieval church.",
+				"The fortified Reformed church in Sfântu Gheorghe took its present form in 1547.",
+				"The Székely National Museum in Sfântu Gheorghe occupies buildings designed by architect Károly Kós."
+			],
+			"it": [
+				"Sfântu Gheorghe prende il nome da san Giorgio, patrono della sua chiesa medievale.",
+				"La chiesa riformata fortificata di Sfântu Gheorghe assunse la forma attuale nel 1547.",
+				"Il Museo nazionale dei Siculi di Sfântu Gheorghe occupa edifici progettati dall’architetto Károly Kós."
+			],
+			"de": [
+				"Sfântu Gheorghe ist nach dem heiligen Georg, dem Schutzpatron seiner mittelalterlichen Kirche, benannt.",
+				"Die befestigte reformierte Kirche in Sfântu Gheorghe erhielt 1547 ihre heutige Gestalt.",
+				"Das Szekler-Nationalmuseum in Sfântu Gheorghe befindet sich in Gebäuden des Architekten Károly Kós."
+			]
+		}
+	},
+	"focsani": {
+		"city": {
+			"en": [
+				"Focșani’s name is traditionally linked to the Focșa family.",
+				"The Moldavian and Wallachian halves of Focșani were united by a decree of Alexandru Ioan Cuza in 1862.",
+				"Focșani hosted the Central Commission that prepared common laws for the united principalities from 1859 to 1862."
+			],
+			"it": [
+				"Il nome Focșani è tradizionalmente collegato alla famiglia Focșa.",
+				"Le due parti di Focșani, quella moldava e quella valacca, furono unite da un decreto di Alexandru Ioan Cuza nel 1862.",
+				"Focșani ospitò dal 1859 al 1862 la Commissione centrale che preparava leggi comuni per i principati uniti."
+			],
+			"de": [
+				"Der Name Focșani wird traditionell mit der Familie Focșa verbunden.",
+				"Der moldauische und der walachische Teil von Focșani wurden 1862 durch ein Dekret Alexandru Ioan Cuzas vereinigt.",
+				"Focșani beherbergte von 1859 bis 1862 die Zentralkommission, die gemeinsame Gesetze für die vereinigten Fürstentümer vorbereitete."
+			]
+		}
+	},
+	"resita": {
+		"city": {
+			"en": [
+				"Reșița is recorded under the name Reszinitza in 1673.",
+				"Reșița’s first two blast furnaces were lit on 3 July 1771, marking the beginning of the city’s ironworks.",
+				"Reșița’s open-air locomotive museum opened in 1972 and preserves the locally built Resicza locomotive of 1872."
+			],
+			"it": [
+				"Reșița è attestata con il nome Reszinitza nel 1673.",
+				"I primi due altiforni di Reșița furono accesi il 3 luglio 1771, segnando l’inizio delle ferriere della città.",
+				"Il museo delle locomotive all’aperto di Reșița fu aperto nel 1972 e conserva la locomotiva Resicza, costruita sul posto nel 1872."
+			],
+			"de": [
+				"Reșița ist 1673 unter dem Namen Reszinitza belegt.",
+				"Reșițas erste beiden Hochöfen wurden am 3. Juli 1771 angeblasen und markierten den Beginn des Eisenwerks der Stadt.",
+				"Reșițas Freilichtmuseum für Lokomotiven wurde 1972 eröffnet und bewahrt die 1872 vor Ort gebaute Lokomotive Resicza."
+			]
+		}
+	},
+	"rimnicu-vilcea": {
+		"city": {
+			"en": [
+				"Râmnicu Vâlcea appears as Râmnic in a charter issued by Mircea the Elder in 1388.",
+				"A public performance of Deșteaptă-te, române!, now Romania’s national anthem, took place at Râmnicu Vâlcea’s Zăvoi on 29 July 1848.",
+				"Râmnicu Vâlcea’s Anton Pann Memorial House was moved 37 metres from its original site during urban redevelopment."
+			],
+			"it": [
+				"Râmnicu Vâlcea compare come Râmnic in un documento emanato da Mircea il Vecchio nel 1388.",
+				"Un’esecuzione pubblica di Deșteaptă-te, române!, oggi inno nazionale romeno, ebbe luogo nello Zăvoi di Râmnicu Vâlcea il 29 luglio 1848.",
+				"La Casa museo Anton Pann di Râmnicu Vâlcea fu spostata di 37 metri dalla posizione originaria durante il riassetto urbanistico."
+			],
+			"de": [
+				"Râmnicu Vâlcea erscheint als Râmnic in einer Urkunde Mirceas des Alten von 1388.",
+				"Eine öffentliche Aufführung von Deșteaptă-te, române!, der heutigen rumänischen Nationalhymne, fand am 29. Juli 1848 im Zăvoi von Râmnicu Vâlcea statt.",
+				"Das Anton-Pann-Gedenkhaus in Râmnicu Vâlcea wurde bei der Umgestaltung der Stadt um 37 Meter von seinem ursprünglichen Standort versetzt."
+			]
+		}
+	},
+	"targu-jiu": {
+		"city": {
+			"en": [
+				"Târgu Jiu appears as Jiul in a document issued by Mircea the Elder in 1406.",
+				"Brâncuși’s monumental ensemble in Târgu Jiu was created in 1937–1938 to commemorate those who died defending the city in the First World War.",
+				"The Endless Column, Gate of the Kiss and Table of Silence form part of Brâncuși’s sculptural axis across Târgu Jiu."
+			],
+			"it": [
+				"Târgu Jiu compare come Jiul in un documento emanato da Mircea il Vecchio nel 1406.",
+				"Il complesso monumentale di Brâncuși a Târgu Jiu fu realizzato nel 1937–1938 per commemorare i caduti nella difesa della città durante la Prima guerra mondiale.",
+				"La Colonna senza fine, la Porta del bacio e la Tavola del silenzio fanno parte dell’asse scultoreo di Brâncuși attraverso Târgu Jiu."
+			],
+			"de": [
+				"Târgu Jiu erscheint als Jiul in einer Urkunde Mirceas des Alten von 1406.",
+				"Brâncușis monumentales Ensemble in Târgu Jiu entstand 1937–1938 zum Gedenken an die bei der Verteidigung der Stadt im Ersten Weltkrieg Gefallenen.",
+				"Die Endlose Säule, das Tor des Kusses und der Tisch des Schweigens gehören zu Brâncușis Skulpturenachse durch Târgu Jiu."
+			]
+		}
+	},
+	"targoviste": {
+		"city": {
+			"en": [
+				"Târgoviște’s name comes from a Slavic term for a marketplace.",
+				"Târgoviște’s Princely Court served as a residence of Wallachian rulers, including Mircea the Elder and Vlad the Impaler.",
+				"The Chindia Tower in Târgoviște was probably built during Vlad the Impaler’s reign in the fifteenth century."
+			],
+			"it": [
+				"Il nome Târgoviște deriva da un termine slavo che indica un luogo di mercato.",
+				"La Corte principesca di Târgoviște fu residenza dei sovrani di Valacchia, tra cui Mircea il Vecchio e Vlad l’Impalatore.",
+				"La Torre Chindia di Târgoviște fu probabilmente costruita durante il regno di Vlad l’Impalatore nel Quattrocento."
+			],
+			"de": [
+				"Der Name Târgoviște stammt von einem slawischen Wort für einen Marktplatz.",
+				"Der Fürstenhof in Târgoviște war eine Residenz walachischer Herrscher, darunter Mircea der Alte und Vlad der Pfähler.",
+				"Der Chindia-Turm in Târgoviște wurde wahrscheinlich im 15. Jahrhundert während der Herrschaft Vlads des Pfählers erbaut."
+			]
+		}
+	},
+	"pitesti": {
+		"city": {
+			"en": [
+				"Pitești is named in a charter of Mircea the Elder dated 20 May 1388.",
+				"Pitești’s princely Church of St George was founded by Constantin Șerban and his wife Bălașa in 1656.",
+				"Pitești’s former prison, now a memorial museum, was the site of a programme of physical and psychological torture in 1949–1951."
+			],
+			"it": [
+				"Pitești è menzionata in un documento di Mircea il Vecchio datato 20 maggio 1388.",
+				"La chiesa principesca di San Giorgio a Pitești fu fondata da Constantin Șerban e da sua moglie Bălașa nel 1656.",
+				"L’ex carcere di Pitești, oggi museo della memoria, fu sede di un programma di tortura fisica e psicologica nel 1949–1951."
+			],
+			"de": [
+				"Pitești wird in einer Urkunde Mirceas des Alten vom 20. Mai 1388 genannt.",
+				"Die fürstliche Georgskirche in Pitești wurde 1656 von Constantin Șerban und seiner Frau Bălașa gestiftet.",
+				"Das ehemalige Gefängnis von Pitești, heute eine Gedenkstätte, war 1949–1951 Schauplatz eines Programms körperlicher und psychischer Folter."
+			]
+		}
+	},
+	"drobeta-turnu-severin": {
+		"city": {
+			"en": [
+				"The modern name Drobeta-Turnu Severin incorporates Drobeta, the name of the Roman settlement on the site.",
+				"The remains of Trajan’s bridge at Drobeta mark a Danube crossing built in AD 103–105 for the Roman campaign in Dacia.",
+				"Drobeta-Turnu Severin’s Iron Gates Region Museum opened its reorganised history and natural-science displays in 1972."
+			],
+			"it": [
+				"Il nome moderno Drobeta-Turnu Severin comprende Drobeta, nome dell’insediamento romano sorto sul posto.",
+				"I resti del ponte di Traiano a Drobeta segnano un attraversamento del Danubio costruito nel 103–105 d.C. per la campagna romana in Dacia.",
+				"Il Museo della regione delle Porte di Ferro di Drobeta-Turnu Severin aprì le esposizioni riorganizzate di storia e scienze naturali nel 1972."
+			],
+			"de": [
+				"Der heutige Name Drobeta-Turnu Severin enthält Drobeta, den Namen der römischen Siedlung an diesem Ort.",
+				"Die Reste der Trajansbrücke bei Drobeta markieren einen Donauübergang, der 103–105 n. Chr. für den römischen Feldzug in Dakien gebaut wurde.",
+				"Das Museum der Region Eisernes Tor in Drobeta-Turnu Severin eröffnete 1972 seine neu geordneten Ausstellungen zu Geschichte und Naturwissenschaften."
+			]
+		}
+	},
+	"slobozia": {
+		"city": {
+			"en": [
+				"Slobozia’s name recalls the tax exemptions granted to settlers in the older village of Vaideei.",
+				"Matei Basarab fortified Slobozia’s Holy Voivodes Monastery with an enclosure and bell tower in the 1630s.",
+				"The National Museum of Agriculture in Slobozia opened to the public in 1996."
+			],
+			"it": [
+				"Il nome Slobozia ricorda le esenzioni fiscali concesse ai coloni del precedente villaggio di Vaideei.",
+				"Matei Basarab fortificò il monastero dei Santi Voivodi di Slobozia con una cinta muraria e un campanile negli anni Trenta del Seicento.",
+				"Il Museo nazionale dell’agricoltura di Slobozia fu aperto al pubblico nel 1996."
+			],
+			"de": [
+				"Der Name Slobozia erinnert an die Steuerbefreiungen für Siedler im älteren Dorf Vaideei.",
+				"Matei Basarab ließ das Kloster der Heiligen Wojewoden in Slobozia in den 1630er-Jahren mit einer Ringmauer und einem Glockenturm befestigen.",
+				"Das Nationale Landwirtschaftsmuseum in Slobozia wurde 1996 für die Öffentlichkeit geöffnet."
+			]
+		}
+	},
+	"slatina": {
+		"city": {
+			"en": [
+				"Slatina’s name is recorded in the trading privilege granted to Brașov merchants by Vladislav Vlaicu in 1368.",
+				"The playwright Eugène Ionesco was born in Slatina in 1909.",
+				"Clocociov Monastery in Slatina was rebuilt in 1645 by the nobleman Diicu Buicescu."
+			],
+			"it": [
+				"Il nome Slatina è attestato nel privilegio commerciale concesso ai mercanti di Brașov da Vladislav Vlaicu nel 1368.",
+				"Il drammaturgo Eugène Ionesco nacque a Slatina nel 1909.",
+				"Il monastero di Clocociov a Slatina fu ricostruito nel 1645 dal nobile Diicu Buicescu."
+			],
+			"de": [
+				"Der Name Slatina ist im Handelsprivileg Vladislav Vlaicus für Kaufleute aus Brașov von 1368 belegt.",
+				"Der Dramatiker Eugène Ionesco wurde 1909 in Slatina geboren.",
+				"Das Kloster Clocociov in Slatina wurde 1645 vom Adligen Diicu Buicescu neu errichtet."
 			]
 		}
 	}

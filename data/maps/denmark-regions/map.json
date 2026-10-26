@@ -2,8 +2,8 @@
 	"id": "denmark-regions",
 	"name": "Denmark — Regions",
 	"country": "Denmark",
-	"attribution": "Natural Earth (public domain); Natural Earth (public domain), https://www.naturalearthdata.com; Wikidata (CC0), https://www.wikidata.org",
-	"boundarySource": "data/boundaries/denmark-regions-natural-earth.geojson",
+	"attribution": "geoBoundaries / Web Vectors Map, CC BY 4.0, https://creativecommons.org/licenses/by/4.0/; Natural Earth (public domain), https://www.naturalearthdata.com; Wikidata (CC0), https://www.wikidata.org",
+	"boundarySource": "data/boundaries/denmark-regions-gb-9469f09.geojson",
 	"placesSource": "data/places/denmark.geojson",
 	"boundaryFacts": true,
 	"tiles": "tiles.pmtiles",
@@ -15,32 +15,32 @@
 			"tier": 1,
 			"aliases": [],
 			"centroid": [
-				9.70635,
-				57.13805
+				9.70265,
+				57.12235
 			],
 			"bbox": [
-				8.2704,
-				56.5591,
-				11.1423,
-				57.717
+				8.2151,
+				56.4955,
+				11.1902,
+				57.7492
 			],
 			"colorIndex": 2,
 			"spine": {
 				"curve": [
 					[
-						9.4817,
-						56.7334
+						9.5255,
+						56.6805
 					],
 					[
-						10.0666,
-						56.9836
+						10.0658,
+						56.9708
 					],
 					[
-						10.2895,
-						57.5001
+						10.2881,
+						57.4998
 					]
 				],
-				"aspect": 1.62
+				"aspect": 1.99
 			}
 		},
 		{
@@ -50,32 +50,32 @@
 			"tier": 1,
 			"aliases": [],
 			"centroid": [
-				9.5353,
-				56.238749999999996
+				9.871500000000001,
+				56.22475
 			],
 			"bbox": [
-				8.1065,
-				55.6745,
-				10.9641,
-				56.803
+				8.1067,
+				55.6308,
+				11.6363,
+				56.8187
 			],
 			"colorIndex": 1,
 			"spine": {
 				"curve": [
 					[
-						8.3701,
-						56.2666
+						8.4482,
+						56.2283
 					],
 					[
-						9.37,
-						56.1688
+						9.3628,
+						56.1119
 					],
 					[
-						10.3433,
-						56.2991
+						10.2541,
+						56.2713
 					]
 				],
-				"aspect": 1.36
+				"aspect": 1.39
 			}
 		},
 		{
@@ -85,32 +85,32 @@
 			"tier": 1,
 			"aliases": [],
 			"centroid": [
-				13.5029,
-				55.56015
+				13.50095,
+				55.56105
 			],
 			"bbox": [
-				11.8544,
-				54.9916,
-				15.1514,
-				56.1287
+				11.8471,
+				54.9962,
+				15.1548,
+				56.1259
 			],
 			"colorIndex": 4,
 			"spine": {
 				"curve": [
 					[
-						12.2501,
-						56.0707
+						12.2001,
+						56.0523
 					],
 					[
-						12.3087,
-						55.8646
+						12.3645,
+						55.8652
 					],
 					[
-						12.3991,
-						55.6611
+						12.4073,
+						55.653
 					]
 				],
-				"aspect": 1.54
+				"aspect": 1.59
 			}
 		},
 		{
@@ -120,32 +120,32 @@
 			"tier": 1,
 			"aliases": [],
 			"centroid": [
-				9.474499999999999,
-				55.34155
+				9.518699999999999,
+				55.324
 			],
 			"bbox": [
-				8.094,
-				54.7448,
-				10.855,
-				55.9383
+				8.0783,
+				54.7355,
+				10.9591,
+				55.9125
 			],
 			"colorIndex": 0,
 			"spine": {
 				"curve": [
 					[
-						8.5033,
-						55.4945
+						8.3405,
+						55.6619
 					],
 					[
-						8.9991,
-						55.2937
+						8.9675,
+						55.5411
 					],
 					[
-						9.4949,
-						55.3634
+						9.4304,
+						55.1313
 					]
 				],
-				"aspect": 0.58
+				"aspect": 1.19
 			}
 		},
 		{
@@ -155,32 +155,32 @@
 			"tier": 1,
 			"aliases": [],
 			"centroid": [
-				11.76175,
-				55.2859
+				11.7168,
+				55.29235
 			],
 			"bbox": [
-				11.0188,
-				54.6284,
-				12.5047,
-				55.9434
+				10.8761,
+				54.5943,
+				12.5575,
+				55.9904
 			],
 			"colorIndex": 3,
 			"spine": {
 				"curve": [
 					[
-						11.4594,
-						55.7583
+						11.2265,
+						55.5498
 					],
 					[
-						11.6825,
-						55.4831
+						11.6736,
+						55.4784
 					],
 					[
-						11.9888,
-						55.2236
+						12.1207,
+						55.398
 					]
 				],
-				"aspect": 1.11
+				"aspect": 0.9
 			}
 		}
 	],

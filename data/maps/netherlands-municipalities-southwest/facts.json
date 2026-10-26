@@ -5,7 +5,7 @@
 			"Lisse",
 			"Noordwijk"
 		],
-		"coastal": true,
+		"coastal": false,
 		"position": "north-east"
 	},
 	"noordwijk": {
@@ -16,7 +16,7 @@
 			"Lisse",
 			"Teylingen"
 		],
-		"coastal": true,
+		"coastal": false,
 		"position": "north"
 	},
 	"lisse": {
@@ -26,7 +26,7 @@
 			"Noordwijk",
 			"Teylingen"
 		],
-		"coastal": true,
+		"coastal": false,
 		"position": "north"
 	},
 	"teylingen": {
@@ -40,7 +40,7 @@
 			"Noordwijk",
 			"Oegstgeest"
 		],
-		"coastal": true,
+		"coastal": false,
 		"position": "north"
 	},
 	"kaag-en-braassem": {
@@ -51,7 +51,7 @@
 			"Nieuwkoop",
 			"Teylingen"
 		],
-		"coastal": true,
+		"coastal": false,
 		"position": "north-east"
 	},
 	"katwijk": {
@@ -63,7 +63,7 @@
 			"Teylingen",
 			"Wassenaar"
 		],
-		"coastal": true,
+		"coastal": false,
 		"position": "north"
 	},
 	"oegstgeest": {
@@ -73,7 +73,7 @@
 			"Leiden",
 			"Teylingen"
 		],
-		"coastal": true,
+		"coastal": false,
 		"position": "north"
 	},
 	"nieuwkoop": {
@@ -95,7 +95,7 @@
 			"Teylingen",
 			"Zoeterwoude"
 		],
-		"coastal": true,
+		"coastal": false,
 		"position": "north"
 	},
 	"leiden": {
@@ -110,7 +110,7 @@
 			"Wassenaar",
 			"Zoeterwoude"
 		],
-		"coastal": true,
+		"coastal": false,
 		"position": "north"
 	},
 	"wassenaar": {
@@ -122,7 +122,7 @@
 			"Leidschendam-Voorburg",
 			"Voorschoten"
 		],
-		"coastal": true,
+		"coastal": false,
 		"position": "north"
 	},
 	"voorschoten": {
@@ -132,7 +132,7 @@
 			"Leidschendam-Voorburg",
 			"Wassenaar"
 		],
-		"coastal": true,
+		"coastal": false,
 		"position": "north"
 	},
 	"zoeterwoude": {
@@ -144,7 +144,7 @@
 			"Leidschendam-Voorburg",
 			"Zoetermeer"
 		],
-		"coastal": true,
+		"coastal": false,
 		"position": "north"
 	},
 	"alphen-aan-den-rijn": {
@@ -160,7 +160,7 @@
 			"Zoeterwoude",
 			"Zuidplas"
 		],
-		"coastal": true,
+		"coastal": false,
 		"position": "north-east"
 	},
 	"leidschendam-voorburg": {
@@ -173,7 +173,7 @@
 			"Zoetermeer",
 			"Zoeterwoude"
 		],
-		"coastal": true,
+		"coastal": false,
 		"position": "north"
 	},
 	"s-gravenhage": {
@@ -187,7 +187,13 @@
 			"Westland",
 			"Zoetermeer"
 		],
-		"coastal": true,
+		"coastal": false,
+		"largestCity": {
+			"name": "The Hague",
+			"nameDe": "Den Haag",
+			"nameIt": "L'Aia",
+			"population": 1406000
+		},
 		"position": "north"
 	},
 	"bodegraven-reeuwijk": {
@@ -212,7 +218,7 @@
 			"Pijnacker-Nootdorp",
 			"Zoeterwoude"
 		],
-		"coastal": true,
+		"coastal": false,
 		"position": "north"
 	},
 	"waddinxveen": {
@@ -223,7 +229,7 @@
 			"Gouda",
 			"Zuidplas"
 		],
-		"coastal": true,
+		"coastal": false,
 		"position": "north-east"
 	},
 	"rijswijk": {
@@ -234,7 +240,7 @@
 			"Midden-Delfland",
 			"Westland"
 		],
-		"coastal": true,
+		"coastal": false,
 		"position": "north"
 	},
 	"gouda": {
@@ -257,7 +263,7 @@
 			"Zoetermeer",
 			"Zuidplas"
 		],
-		"coastal": true,
+		"coastal": false,
 		"position": "north"
 	},
 	"pijnacker-nootdorp": {
@@ -269,7 +275,7 @@
 			"Rotterdam",
 			"Zoetermeer"
 		],
-		"coastal": true,
+		"coastal": false,
 		"position": "north"
 	},
 	"westland": {
@@ -281,7 +287,7 @@
 			"Rijswijk",
 			"Rotterdam"
 		],
-		"coastal": true,
+		"coastal": false,
 		"position": "north"
 	},
 	"zuidplas": {
@@ -295,7 +301,7 @@
 			"Rotterdam",
 			"Waddinxveen"
 		],
-		"coastal": true,
+		"coastal": false,
 		"position": "north-east"
 	},
 	"delft": {
@@ -307,7 +313,7 @@
 			"Rijswijk",
 			"Rotterdam"
 		],
-		"coastal": true,
+		"coastal": false,
 		"position": "north"
 	},
 	"midden-delfland": {
@@ -321,7 +327,7 @@
 			"Vlaardingen",
 			"Westland"
 		],
-		"coastal": true,
+		"coastal": false,
 		"position": "north"
 	},
 	"krimpenerwaard": {
@@ -357,7 +363,7 @@
 			"Rotterdam",
 			"Vlaardingen"
 		],
-		"coastal": true,
+		"coastal": false,
 		"position": "centre"
 	},
 	"vijfheerenlanden": {
@@ -376,7 +382,7 @@
 			"Vlaardingen",
 			"Westland"
 		],
-		"coastal": true,
+		"coastal": false,
 		"position": "centre"
 	},
 	"rotterdam": {
@@ -384,7 +390,6 @@
 		"borders": [
 			"Albrandswaard",
 			"Barendrecht",
-			"Brielle",
 			"Capelle aan den IJssel",
 			"Delft",
 			"Krimpen aan den IJssel",
@@ -397,11 +402,17 @@
 			"Ridderkerk",
 			"Schiedam",
 			"Vlaardingen",
+			"Voorne aan Zee",
 			"Westland",
-			"Westvoorne",
 			"Zuidplas"
 		],
-		"coastal": true,
+		"coastal": false,
+		"largestCity": {
+			"name": "Rotterdam",
+			"nameDe": "Rotterdam",
+			"nameIt": "Rotterdam",
+			"population": 1005000
+		},
 		"position": "centre",
 		"hooks": {
 			"en": [
@@ -429,7 +440,7 @@
 			"Rotterdam",
 			"Schiedam"
 		],
-		"coastal": true,
+		"coastal": false,
 		"position": "centre"
 	},
 	"krimpen-aan-den-ijssel": {
@@ -458,28 +469,6 @@
 		"coastal": false,
 		"position": "east"
 	},
-	"brielle": {
-		"kind": "region",
-		"borders": [
-			"Hellevoetsluis",
-			"Nissewaard",
-			"Rotterdam",
-			"Westvoorne"
-		],
-		"coastal": true,
-		"position": "centre"
-	},
-	"westvoorne": {
-		"kind": "region",
-		"borders": [
-			"Brielle",
-			"Goeree-Overflakkee",
-			"Hellevoetsluis",
-			"Rotterdam"
-		],
-		"coastal": true,
-		"position": "centre"
-	},
 	"ridderkerk": {
 		"kind": "region",
 		"borders": [
@@ -494,6 +483,33 @@
 		],
 		"coastal": false,
 		"position": "east"
+	},
+	"voorne-aan-zee": {
+		"kind": "region",
+		"borders": [
+			"Goeree-Overflakkee",
+			"Nissewaard",
+			"Rotterdam"
+		],
+		"coastal": true,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Voorne aan Zee was formed in 2023 by merging Brielle, Hellevoetsluis and Westvoorne.",
+				"The Sea Beggars captured Brielle on 1 April 1572 during the Dutch Revolt.",
+				"The museum ship Buffel in Hellevoetsluis was built in 1868 as an armoured turret ram for the Dutch navy."
+			],
+			"it": [
+				"Voorne aan Zee nacque nel 2023 dalla fusione di Brielle, Hellevoetsluis e Westvoorne.",
+				"I pezzenti del mare conquistarono Brielle il 1º aprile 1572 durante la rivolta dei Paesi Bassi.",
+				"La nave museo Buffel a Hellevoetsluis fu costruita nel 1868 come ariete corazzato a torre per la marina olandese."
+			],
+			"de": [
+				"Voorne aan Zee entstand 2023 durch den Zusammenschluss von Brielle, Hellevoetsluis und Westvoorne.",
+				"Die Wassergeusen eroberten Brielle am 1. April 1572 während des niederländischen Aufstands.",
+				"Das Museumsschiff Buffel in Hellevoetsluis wurde 1868 als gepanzertes Turm-Rammschiff für die niederländische Marine gebaut."
+			]
+		}
 	},
 	"alblasserdam": {
 		"kind": "region",
@@ -514,7 +530,7 @@
 			"Nissewaard",
 			"Rotterdam"
 		],
-		"coastal": true,
+		"coastal": false,
 		"position": "centre"
 	},
 	"barendrecht": {
@@ -548,17 +564,6 @@
 		],
 		"coastal": false,
 		"position": "east"
-	},
-	"hellevoetsluis": {
-		"kind": "region",
-		"borders": [
-			"Brielle",
-			"Goeree-Overflakkee",
-			"Nissewaard",
-			"Westvoorne"
-		],
-		"coastal": true,
-		"position": "centre"
 	},
 	"papendrecht": {
 		"kind": "region",
@@ -599,13 +604,12 @@
 		"kind": "region",
 		"borders": [
 			"Albrandswaard",
-			"Brielle",
 			"Goeree-Overflakkee",
-			"Hellevoetsluis",
 			"Hoeksche Waard",
-			"Rotterdam"
+			"Rotterdam",
+			"Voorne aan Zee"
 		],
-		"coastal": true,
+		"coastal": false,
 		"position": "centre"
 	},
 	"zwijndrecht": {
@@ -643,18 +647,17 @@
 			"Nissewaard",
 			"Zwijndrecht"
 		],
-		"coastal": true,
+		"coastal": false,
 		"position": "centre"
 	},
 	"goeree-overflakkee": {
 		"kind": "region",
 		"borders": [
-			"Hellevoetsluis",
 			"Hoeksche Waard",
 			"Nissewaard",
 			"Schouwen-Duiveland",
 			"Tholen",
-			"Westvoorne"
+			"Voorne aan Zee"
 		],
 		"coastal": true,
 		"position": "centre"
@@ -703,7 +706,7 @@
 			"Schouwen-Duiveland",
 			"Vlissingen"
 		],
-		"coastal": true,
+		"coastal": false,
 		"position": "south-west"
 	},
 	"goes": {
@@ -714,7 +717,7 @@
 			"Middelburg",
 			"Noord-Beveland"
 		],
-		"coastal": true,
+		"coastal": false,
 		"position": "south-west"
 	},
 	"middelburg": {
@@ -726,7 +729,13 @@
 			"Veere",
 			"Vlissingen"
 		],
-		"coastal": true,
+		"coastal": false,
+		"largestCity": {
+			"name": "Middelburg",
+			"nameDe": "Middelburg",
+			"nameIt": "Middelburg",
+			"population": 46485
+		},
 		"position": "south-west"
 	},
 	"kapelle": {
@@ -794,7 +803,7 @@
 			"Terneuzen",
 			"Vlissingen"
 		],
-		"coastal": true,
+		"coastal": false,
 		"position": "south-west"
 	},
 	"terneuzen": {
@@ -805,7 +814,7 @@
 			"Sluis",
 			"Vlissingen"
 		],
-		"coastal": true,
+		"coastal": false,
 		"position": "south-west"
 	}
 }

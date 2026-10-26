@@ -1,5 +1,14 @@
 {
 	"type": "FeatureCollection",
+	"source": "Statistical Office of the Republic of Serbia, 2022 census urban settlements; GeoNames coordinates, CC BY 4.0",
+	"attribution": "Population: Statistical Office of the Republic of Serbia, 2022 census, https://popis2022.stat.gov.rs; coordinates: GeoNames, CC BY 4.0, https://www.geonames.org",
+	"populationSource": "https://popis2022.stat.gov.rs/media/31319/0_ukupan-broj-stanovnika-naselja.xlsx",
+	"coordinateSource": "https://download.geonames.org/export/dump/RS.zip",
+	"populationSha256": "5b1498923b90ec9930485ac3115cf10ad8f5ccf988840807d87ae70a58f57dc2",
+	"coordinateSha256": "fcb96cc69baa80c27968ad50d2a593a1c64f33e0b620ee527076d81ecd7e937b",
+	"fetchedAt": "2026-10-26T22:09:49.075Z",
+	"populationDate": "2022-10-01",
+	"populationDefinition": "Urban settlements only; Belgrade/Niš parts aggregated; no municipal/city-administration totals",
 	"regionSource": {
 		"provider": "geoBoundaries 9469f09; OpenStreetMap",
 		"url": "https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/9469f09/releaseData/gbOpen/SRB/ADM1/geoBoundaries-SRB-ADM1_simplified.geojson",
@@ -8,59 +17,18 @@
 		"sha256": "886d17adb5d9491d9b464b02a2b3f02ff1a7f2ef71a702840019ab3739f4f562",
 		"attribution": "© OpenStreetMap contributors, ODbL (via geoBoundaries)"
 	},
-	"source": "Wikidata (CC0); regional associations under regionSource licence",
-	"fetchedAt": "2026-10-26T18:37:30.237Z",
-	"query": "SELECT DISTINCT ?item ?coord ?name ?en ?it ?de ?population ?date ?capital ?regionName ?precision ?defaultName WHERE {\n  hint:Query hint:optimizer \"None\" .\n  ?country wdt:P298 \"SRB\"; wdt:P36 ?capitalCity .\n  ?item wdt:P17 ?country .\n  FILTER EXISTS { ?item p:P1082/ps:P1082 ?candidatePopulation . FILTER(?candidatePopulation >= 1000) }\n  ?item wdt:P31 ?kind; p:P625 ?coordinateStatement .\n  ?coordinateStatement ps:P625 ?coord; psv:P625 ?coordinateValue; wikibase:rank ?coordinateRank .\n  FILTER(?coordinateRank != wikibase:DeprecatedRank)\n  ?coordinateValue wikibase:geoPrecision ?precision .\n  VALUES ?base { wd:Q515 wd:Q3957 }\n  ?kind wdt:P279* ?base .\n  FILTER NOT EXISTS { ?item wdt:P576 ?dissolved }\n  ?item p:P1082 ?statement .\n  ?statement ps:P1082 ?population; wikibase:rank ?rank .\n  FILTER(?rank != wikibase:DeprecatedRank)\n  OPTIONAL { ?statement pq:P585 ?date }\n  FILTER(!BOUND(?date) || (?date >= \"2011-01-01T00:00:00Z\"^^xsd:dateTime && ?date <= NOW()))\n  OPTIONAL { ?item rdfs:label ?name FILTER(LANG(?name)=\"en\") }\n  OPTIONAL { ?item rdfs:label ?en FILTER(LANG(?en)=\"en\") }\n  OPTIONAL { ?item rdfs:label ?defaultName FILTER(LANG(?defaultName)=\"mul\") }\n  OPTIONAL { ?item rdfs:label ?it FILTER(LANG(?it)=\"it\") }\n  OPTIONAL { ?item rdfs:label ?de FILTER(LANG(?de)=\"de\") }\n  BIND(?item = ?capitalCity AS ?capital)\n} ORDER BY ?item DESC(?date) DESC(?population) LIMIT 10000",
+	"urbanTotal": 4120782,
+	"urbanSettlements": 167,
 	"excluded": [
 		{
-			"item": "http://www.wikidata.org/entity/Q112657",
-			"name": "Peja",
-			"reason": "Outside or ambiguous within the selected administrative-source footprint"
+			"name": "Petrovac na Mlavi",
+			"population": 6958,
+			"reason": "No exact gazetteer name/alias match"
 		},
 		{
-			"item": "http://www.wikidata.org/entity/Q1574188",
-			"name": "Elez Han",
-			"reason": "Outside or ambiguous within the selected administrative-source footprint"
-		},
-		{
-			"item": "http://www.wikidata.org/entity/Q178168",
-			"name": "Mitrovica",
-			"reason": "Outside or ambiguous within the selected administrative-source footprint"
-		},
-		{
-			"item": "http://www.wikidata.org/entity/Q189419",
-			"name": "Zemun",
-			"reason": "Zemun is a Belgrade borough, not a separate city target"
-		},
-		{
-			"item": "http://www.wikidata.org/entity/Q2074197",
-			"name": "City of Belgrade",
-			"reason": "Overlapping City of Belgrade administrative area, not a separate town"
-		},
-		{
-			"item": "http://www.wikidata.org/entity/Q248378",
-			"name": "Kaçanik",
-			"reason": "Outside or ambiguous within the selected administrative-source footprint"
-		},
-		{
-			"item": "http://www.wikidata.org/entity/Q392505",
-			"name": "Štrpce",
-			"reason": "Outside or ambiguous within the selected administrative-source footprint"
-		},
-		{
-			"item": "http://www.wikidata.org/entity/Q786124",
-			"name": "Kosovo Polje",
-			"reason": "Outside or ambiguous within the selected administrative-source footprint"
-		},
-		{
-			"item": "http://www.wikidata.org/entity/Q994730",
-			"name": "Lipjan",
-			"reason": "Outside or ambiguous within the selected administrative-source footprint"
-		},
-		{
-			"item": "http://www.wikidata.org/entity/Q994737",
-			"name": "Shtime",
-			"reason": "Outside or ambiguous within the selected administrative-source footprint"
+			"name": "Aleksinački Rudnik",
+			"population": 1014,
+			"reason": "No exact gazetteer name/alias match"
 		}
 	],
 	"features": [
@@ -69,23 +37,285 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					19.635,
-					45.808888888
+					20.12583,
+					45.8025
+				]
+			},
+			"properties": {
+				"NAME": "Ada",
+				"NAME_EN": "Ada",
+				"NAME_DE": "Ada",
+				"NAME_IT": "Ada",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 7423,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/793171",
+				"settlementName": "Ada",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "North Banat"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.2131,
+					44.44925
+				]
+			},
+			"properties": {
+				"NAME": "Aleksandrovac",
+				"NAME_EN": "Aleksandrovac",
+				"NAME_DE": "Aleksandrovac",
+				"NAME_IT": "Aleksandrovac",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 5586,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/793141",
+				"settlementName": "Aleksandrovac",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Braničevo"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.70778,
+					43.54167
+				]
+			},
+			"properties": {
+				"NAME": "Aleksinac",
+				"NAME_EN": "Aleksinac",
+				"NAME_DE": "Aleksinac",
+				"NAME_IT": "Aleksinac",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 14593,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/793138",
+				"settlementName": "Aleksinac",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Nišava"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.96583,
+					45.08083
+				]
+			},
+			"properties": {
+				"NAME": "Alibunar",
+				"NAME_EN": "Alibunar",
+				"NAME_DE": "Alibunar",
+				"NAME_IT": "Alibunar",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 2694,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/793134",
+				"settlementName": "Alibunar",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "South Banat"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					18.978,
+					45.6726
+				]
+			},
+			"properties": {
+				"NAME": "Apatin",
+				"NAME_EN": "Apatin",
+				"NAME_DE": "Apatin",
+				"NAME_IT": "Apatin",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 14613,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/3204793",
+				"settlementName": "Apatin",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "West Bačka"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.56,
+					44.30694
+				]
+			},
+			"properties": {
+				"NAME": "Aranđelovac",
+				"NAME_EN": "Aranđelovac",
+				"NAME_DE": "Aranđelovac",
+				"NAME_IT": "Aranđelovac",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 22881,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/793111",
+				"settlementName": "Aranđelovac",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Šumadija"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.09556,
+					43.75306
+				]
+			},
+			"properties": {
+				"NAME": "Arilje",
+				"NAME_EN": "Arilje",
+				"NAME_DE": "Arilje",
+				"NAME_IT": "Arilje",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 6639,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/793093",
+				"settlementName": "Arilje",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Zlatibor"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.41383,
+					43.06412
+				]
+			},
+			"properties": {
+				"NAME": "Babušnica",
+				"NAME_EN": "Babušnica",
+				"NAME_DE": "Babušnica",
+				"NAME_IT": "Babušnica",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 4254,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/793034",
+				"settlementName": "Babušnica",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Pirot"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.23667,
+					45.39194
+				]
+			},
+			"properties": {
+				"NAME": "Bač",
+				"NAME_EN": "Bač",
+				"NAME_DE": "Bač",
+				"NAME_IT": "Bač",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 4405,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/3204692",
+				"settlementName": "Bač",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "South Bačka"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.39664,
+					45.24966
+				]
+			},
+			"properties": {
+				"NAME": "Bačka Palanka",
+				"NAME_EN": "Bačka Palanka",
+				"NAME_DE": "Bačka Palanka",
+				"NAME_IT": "Bačka Palanka",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 25476,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/3204674",
+				"settlementName": "Bačka Palanka",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "South Bačka"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.6318,
+					45.81516
 				]
 			},
 			"properties": {
 				"NAME": "Bačka Topola",
 				"NAME_EN": "Bačka Topola",
-				"NAME_IT": "Bačka Topola",
 				"NAME_DE": "Bačka Topola",
+				"NAME_IT": "Bačka Topola",
 				"ADM0NAME": "Serbia",
-				"ADM1NAME": "North Bačka",
-				"coordinatePrecision": 0.00027777777777778,
 				"ADM0CAP": 0,
 				"POP_MAX": 11930,
 				"POP1950": 0,
-				"populationDate": "2022-01-01T00:00:00Z",
-				"wikidata": "http://www.wikidata.org/entity/Q597513"
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/3204672",
+				"settlementName": "Bačka Topola",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "North Bačka"
 			}
 		},
 		{
@@ -93,23 +323,51 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					19.588333333,
-					45.356388888
+					19.87507,
+					45.36995
+				]
+			},
+			"properties": {
+				"NAME": "Bački Jarak",
+				"NAME_EN": "Bački Jarak",
+				"NAME_DE": "Bački Jarak",
+				"NAME_IT": "Bački Jarak",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 5077,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/3204667",
+				"settlementName": "Bački Jarak",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "South Bačka"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.59167,
+					45.36056
 				]
 			},
 			"properties": {
 				"NAME": "Bački Petrovac",
 				"NAME_EN": "Bački Petrovac",
-				"NAME_IT": "Bački Petrovac",
 				"NAME_DE": "Bački Petrovac",
+				"NAME_IT": "Bački Petrovac",
 				"ADM0NAME": "Serbia",
-				"ADM1NAME": "South Bačka",
-				"coordinatePrecision": 0.00027777777777778,
 				"ADM0CAP": 0,
-				"POP_MAX": 7452,
+				"POP_MAX": 5227,
 				"POP1950": 0,
-				"populationDate": "2011-01-01T00:00:00Z",
-				"wikidata": "http://www.wikidata.org/entity/Q248251"
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/3204665",
+				"settlementName": "Bački Petrovac",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "South Bačka"
 			}
 		},
 		{
@@ -117,23 +375,25 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					19.559722222,
-					43.973055555
+					19.5675,
+					43.97083
 				]
 			},
 			"properties": {
 				"NAME": "Bajina Bašta",
 				"NAME_EN": "Bajina Bašta",
-				"NAME_IT": "Bajina Bašta",
 				"NAME_DE": "Bajina Bašta",
+				"NAME_IT": "Bajina Bašta",
 				"ADM0NAME": "Serbia",
-				"ADM1NAME": "Zlatibor",
-				"coordinatePrecision": 0.00027777777777778,
 				"ADM0CAP": 0,
-				"POP_MAX": 26022,
+				"POP_MAX": 8971,
 				"POP1950": 0,
-				"populationDate": null,
-				"wikidata": "http://www.wikidata.org/entity/Q804149"
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/3204623",
+				"settlementName": "Bajina Bašta",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Zlatibor"
 			}
 		},
 		{
@@ -141,23 +401,181 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					20.456944444,
-					44.817777777
+					20.63534,
+					43.39229
+				]
+			},
+			"properties": {
+				"NAME": "Baljevac",
+				"NAME_EN": "Baljevac",
+				"NAME_DE": "Baljevac",
+				"NAME_IT": "Baljevac",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 1272,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/792964",
+				"settlementName": "Baljevac",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Raška"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.018,
+					45.04987
+				]
+			},
+			"properties": {
+				"NAME": "Banatski Karlovac",
+				"NAME_EN": "Banatski Karlovac",
+				"NAME_DE": "Banatski Karlovac",
+				"NAME_IT": "Banatski Karlovac",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 4428,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/792945",
+				"settlementName": "Banatski Karlovac",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "South Banat"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.15278,
+					44.51464
+				]
+			},
+			"properties": {
+				"NAME": "Banja Koviljača",
+				"NAME_EN": "Banja Koviljača",
+				"NAME_DE": "Banja Koviljača",
+				"NAME_IT": "Banja Koviljača",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 4473,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/3204545",
+				"settlementName": "Banja Koviljača",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Mačva"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.03331,
+					45.61632
+				]
+			},
+			"properties": {
+				"NAME": "Bečej",
+				"NAME_EN": "Bečej",
+				"NAME_DE": "Bečej",
+				"NAME_IT": "Bečej",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 19492,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/792814",
+				"settlementName": "Bečej",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "South Bačka"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.41722,
+					44.8975
+				]
+			},
+			"properties": {
+				"NAME": "Bela Crkva",
+				"NAME_EN": "Bela Crkva",
+				"NAME_DE": "Bela Crkva",
+				"NAME_IT": "Bela Crkva",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 7456,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/792794",
+				"settlementName": "Bela Crkva",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "South Banat"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.31111,
+					43.21833
+				]
+			},
+			"properties": {
+				"NAME": "Bela Palanka",
+				"NAME_EN": "Bela Palanka",
+				"NAME_DE": "Bela Palanka",
+				"NAME_IT": "Bela Palanka",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 7140,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/792784",
+				"settlementName": "Bela Palanka",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Pirot"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.46513,
+					44.80401
 				]
 			},
 			"properties": {
 				"NAME": "Belgrade",
 				"NAME_EN": "Belgrade",
-				"NAME_IT": "Belgrado",
 				"NAME_DE": "Belgrad",
+				"NAME_IT": "Belgrado",
 				"ADM0NAME": "Serbia",
-				"ADM1NAME": "Belgrade",
-				"coordinatePrecision": 0.00027777777777778,
 				"ADM0CAP": 1,
 				"POP_MAX": 1197714,
 				"POP1950": 0,
 				"populationDate": "2022-10-01T00:00:00Z",
-				"wikidata": "http://www.wikidata.org/entity/Q3711"
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/792680",
+				"settlementName": "Beograd",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Belgrade"
 			}
 		},
 		{
@@ -165,23 +583,129 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					22.103611111,
-					44.130277777
+					20.51768,
+					44.70626
+				]
+			},
+			"properties": {
+				"NAME": "Beli Potok",
+				"NAME_EN": "Beli Potok",
+				"NAME_DE": "Beli Potok",
+				"NAME_IT": "Beli Potok",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 3717,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/792732",
+				"settlementName": "Beli Potok",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Belgrade"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.72063,
+					45.20829
+				]
+			},
+			"properties": {
+				"NAME": "Beočin",
+				"NAME_EN": "Beočin",
+				"NAME_DE": "Beočin",
+				"NAME_IT": "Beočin",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 7274,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/3204289",
+				"settlementName": "Beočin",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "South Bačka"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.28583,
+					43.29528
+				]
+			},
+			"properties": {
+				"NAME": "Blace",
+				"NAME_EN": "Blace",
+				"NAME_DE": "Blace",
+				"NAME_IT": "Blace",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 4865,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/792564",
+				"settlementName": "Blace",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Toplica"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.95306,
+					43.83028
+				]
+			},
+			"properties": {
+				"NAME": "Boljevac",
+				"NAME_EN": "Boljevac",
+				"NAME_DE": "Boljevac",
+				"NAME_IT": "Boljevac",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 2894,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/792470",
+				"settlementName": "Boljevac",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Zaječar"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.09591,
+					44.07488
 				]
 			},
 			"properties": {
 				"NAME": "Bor",
 				"NAME_EN": "Bor",
-				"NAME_IT": "Bor",
 				"NAME_DE": "Bor",
+				"NAME_IT": "Bor",
 				"ADM0NAME": "Serbia",
-				"ADM1NAME": "Bor",
-				"coordinatePrecision": 0.00027777777777778,
 				"ADM0CAP": 0,
-				"POP_MAX": 34159,
+				"POP_MAX": 28822,
 				"POP1950": 0,
-				"populationDate": "2011-01-01T00:00:00Z",
-				"wikidata": "http://www.wikidata.org/entity/Q462461"
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/792456",
+				"settlementName": "Bor",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Bor"
 			}
 		},
 		{
@@ -189,23 +713,129 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					20.349722222,
-					43.891388888
+					20.45413,
+					44.86969
+				]
+			},
+			"properties": {
+				"NAME": "Borča",
+				"NAME_EN": "Borča",
+				"NAME_DE": "Borča",
+				"NAME_IT": "Borča",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 51862,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/792453",
+				"settlementName": "Borča",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Belgrade"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.47238,
+					42.5011
+				]
+			},
+			"properties": {
+				"NAME": "Bosilegrad",
+				"NAME_EN": "Bosilegrad",
+				"NAME_DE": "Bosilegrad",
+				"NAME_IT": "Bosilegrad",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 2348,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/792421",
+				"settlementName": "Bosilegrad",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Pčinja"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.02888,
+					43.3846
+				]
+			},
+			"properties": {
+				"NAME": "Brus",
+				"NAME_EN": "Brus",
+				"NAME_DE": "Brus",
+				"NAME_IT": "Brus",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 4183,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/792241",
+				"settlementName": "Brus",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Rasina"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.76667,
+					42.45917
+				]
+			},
+			"properties": {
+				"NAME": "Bujanovac",
+				"NAME_EN": "Bujanovac",
+				"NAME_DE": "Bujanovac",
+				"NAME_IT": "Bujanovac",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 11468,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/792173",
+				"settlementName": "Bujanovac",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Pčinja"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.34972,
+					43.89139
 				]
 			},
 			"properties": {
 				"NAME": "Čačak",
 				"NAME_EN": "Čačak",
-				"NAME_IT": "Čačak",
 				"NAME_DE": "Čačak",
+				"NAME_IT": "Čačak",
 				"ADM0NAME": "Serbia",
-				"ADM1NAME": "Moravica",
-				"coordinatePrecision": 0.00027777777777778,
 				"ADM0CAP": 0,
-				"POP_MAX": 71883,
+				"POP_MAX": 69598,
 				"POP1950": 0,
-				"populationDate": "2018-01-01T00:00:00Z",
-				"wikidata": "http://www.wikidata.org/entity/Q208038"
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/792078",
+				"settlementName": "Čačak",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Moravica"
 			}
 		},
 		{
@@ -213,23 +843,25 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					20.6,
-					45.071111111
+					21.44085,
+					43.71882
 				]
 			},
 			"properties": {
-				"NAME": "Debeljača",
-				"NAME_EN": "Debeljača",
-				"NAME_IT": "Debeljača",
-				"NAME_DE": "Debeljača",
+				"NAME": "Ćićevac",
+				"NAME_EN": "Ćićevac",
+				"NAME_DE": "Ćićevac",
+				"NAME_IT": "Ćićevac",
 				"ADM0NAME": "Serbia",
-				"ADM1NAME": "South Banat",
-				"coordinatePrecision": 0.00027777777777778,
 				"ADM0CAP": 0,
-				"POP_MAX": 3727,
+				"POP_MAX": 3902,
 				"POP1950": 0,
-				"populationDate": "2022-01-01T00:00:00Z",
-				"wikidata": "http://www.wikidata.org/entity/Q543032"
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/791936",
+				"settlementName": "Ćićevac",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Rasina"
 			}
 		},
 		{
@@ -237,23 +869,181 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					22.151666666,
-					44.466388888
+					20.14333,
+					45.9425
+				]
+			},
+			"properties": {
+				"NAME": "Čoka",
+				"NAME_EN": "Čoka",
+				"NAME_DE": "Čoka",
+				"NAME_IT": "Čoka",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 3119,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/791900",
+				"settlementName": "Čoka",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "North Banat"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.45435,
+					45.66098
+				]
+			},
+			"properties": {
+				"NAME": "Crvenka",
+				"NAME_EN": "Crvenka",
+				"NAME_DE": "Crvenka",
+				"NAME_IT": "Crvenka",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 7232,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/3202318",
+				"settlementName": "Crvenka",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "West Bačka"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.37,
+					43.9275
+				]
+			},
+			"properties": {
+				"NAME": "Ćuprija",
+				"NAME_EN": "Ćuprija",
+				"NAME_DE": "Ćuprija",
+				"NAME_IT": "Ćuprija",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 16522,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/791678",
+				"settlementName": "Ćuprija",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Pomoravlje"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.44694,
+					44.0925
+				]
+			},
+			"properties": {
+				"NAME": "Despotovac",
+				"NAME_EN": "Despotovac",
+				"NAME_DE": "Despotovac",
+				"NAME_IT": "Despotovac",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 3595,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/791516",
+				"settlementName": "Despotovac",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Pomoravlje"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.77556,
+					43.01417
+				]
+			},
+			"properties": {
+				"NAME": "Dimitrovgrad",
+				"NAME_EN": "Dimitrovgrad",
+				"NAME_DE": "Dimitrovgrad",
+				"NAME_IT": "Dimitrovgrad",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 5188,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/791487",
+				"settlementName": "Dimitrovgrad",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Pirot"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.22487,
+					44.82631
+				]
+			},
+			"properties": {
+				"NAME": "Dobanovci",
+				"NAME_EN": "Dobanovci",
+				"NAME_DE": "Dobanovci",
+				"NAME_IT": "Dobanovci",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 7705,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/791471",
+				"settlementName": "Dobanovci",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Belgrade"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.1517,
+					44.46593
 				]
 			},
 			"properties": {
 				"NAME": "Donji Milanovac",
 				"NAME_EN": "Donji Milanovac",
-				"NAME_IT": "Donji Milanovac",
 				"NAME_DE": "Donji Milanovac",
+				"NAME_IT": "Donji Milanovac",
 				"ADM0NAME": "Serbia",
-				"ADM1NAME": "Bor",
-				"coordinatePrecision": 0.00027777777777778,
 				"ADM0CAP": 0,
-				"POP_MAX": 2410,
+				"POP_MAX": 1984,
 				"POP1950": 0,
-				"populationDate": null,
-				"wikidata": "http://www.wikidata.org/entity/Q1002286"
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/791175",
+				"settlementName": "Donji Milanovac",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Bor"
 			}
 		},
 		{
@@ -261,23 +1051,155 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					20.079166666,
-					45.049166666
+					19.71416,
+					45.23874
+				]
+			},
+			"properties": {
+				"NAME": "Futog",
+				"NAME_EN": "Futog",
+				"NAME_DE": "Futog",
+				"NAME_IT": "Futog",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 18011,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/3200802",
+				"settlementName": "Futog",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "South Bačka"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.46152,
+					44.02603
+				]
+			},
+			"properties": {
+				"NAME": "Gornji Milanovac",
+				"NAME_EN": "Gornji Milanovac",
+				"NAME_DE": "Gornji Milanovac",
+				"NAME_IT": "Gornji Milanovac",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 23109,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/790367",
+				"settlementName": "Gornji Milanovac",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Moravica"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.07047,
+					42.90157
+				]
+			},
+			"properties": {
+				"NAME": "Grdelica",
+				"NAME_EN": "Grdelica",
+				"NAME_DE": "Grdelica",
+				"NAME_IT": "Grdelica",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 1694,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/790179",
+				"settlementName": "Grdelica",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Jablanica"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.71648,
+					44.67152
+				]
+			},
+			"properties": {
+				"NAME": "Grocka",
+				"NAME_EN": "Grocka",
+				"NAME_DE": "Grocka",
+				"NAME_IT": "Grocka",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 8154,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/790132",
+				"settlementName": "Grocka",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Belgrade"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.22557,
+					43.77895
+				]
+			},
+			"properties": {
+				"NAME": "Guča",
+				"NAME_EN": "Guča",
+				"NAME_DE": "Guča",
+				"NAME_IT": "Guča",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 1491,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/790106",
+				"settlementName": "Guča",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Moravica"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.08165,
+					45.04816
 				]
 			},
 			"properties": {
 				"NAME": "Inđija",
 				"NAME_EN": "Inđija",
-				"NAME_IT": "Inđija",
 				"NAME_DE": "Inđija",
+				"NAME_IT": "Inđija",
 				"ADM0NAME": "Serbia",
-				"ADM1NAME": "Syrmia",
-				"coordinatePrecision": 0.00027777777777778,
 				"ADM0CAP": 0,
 				"POP_MAX": 24450,
 				"POP1950": 0,
-				"populationDate": "2022-01-01T00:00:00Z",
-				"wikidata": "http://www.wikidata.org/entity/Q309341"
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/790015",
+				"settlementName": "Inđija",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Syrmia"
 			}
 		},
 		{
@@ -285,23 +1207,129 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					21.256388888,
-					43.975
+					19.84448,
+					45.0523
+				]
+			},
+			"properties": {
+				"NAME": "Irig",
+				"NAME_EN": "Irig",
+				"NAME_DE": "Irig",
+				"NAME_IT": "Irig",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 3901,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/10346045",
+				"settlementName": "Irig",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Syrmia"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.23111,
+					43.58028
+				]
+			},
+			"properties": {
+				"NAME": "Ivanjica",
+				"NAME_EN": "Ivanjica",
+				"NAME_DE": "Ivanjica",
+				"NAME_IT": "Ivanjica",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 11240,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/789988",
+				"settlementName": "Ivanjica",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Moravica"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.26121,
+					43.97713
 				]
 			},
 			"properties": {
 				"NAME": "Jagodina",
 				"NAME_EN": "Jagodina",
-				"NAME_IT": "Jagodina",
 				"NAME_DE": "Jagodina",
+				"NAME_IT": "Jagodina",
 				"ADM0NAME": "Serbia",
-				"ADM1NAME": "Pomoravlje",
-				"coordinatePrecision": 0.00027777777777778,
 				"ADM0CAP": 0,
 				"POP_MAX": 34892,
 				"POP1950": 0,
 				"populationDate": "2022-10-01T00:00:00Z",
-				"wikidata": "http://www.wikidata.org/entity/Q390358"
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/789923",
+				"settlementName": "Jagodina",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Pomoravlje"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.85546,
+					45.44725
+				]
+			},
+			"properties": {
+				"NAME": "Jaša Tomić",
+				"NAME_EN": "Jaša Tomić",
+				"NAME_DE": "Jaša Tomić",
+				"NAME_IT": "Jaša Tomić",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 1889,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/789875",
+				"settlementName": "Jaša Tomić",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Central Banat"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.69957,
+					44.96721
+				]
+			},
+			"properties": {
+				"NAME": "Kačarevo",
+				"NAME_EN": "Kačarevo",
+				"NAME_DE": "Kačarevo",
+				"NAME_IT": "Kačarevo",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 6346,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/789715",
+				"settlementName": "Kačarevo",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "South Banat"
 			}
 		},
 		{
@@ -310,22 +1338,24 @@
 				"type": "Point",
 				"coordinates": [
 					20.05,
-					46.066666666
+					46.06667
 				]
 			},
 			"properties": {
 				"NAME": "Kanjiža",
 				"NAME_EN": "Kanjiža",
-				"NAME_IT": "Kanjiža",
 				"NAME_DE": "Kanjiža",
+				"NAME_IT": "Kanjiža",
 				"ADM0NAME": "Serbia",
-				"ADM1NAME": "North Banat",
-				"coordinatePrecision": 0.016666666666667,
 				"ADM0CAP": 0,
-				"POP_MAX": 9871,
+				"POP_MAX": 8067,
 				"POP1950": 0,
-				"populationDate": "2011-01-01T00:00:00Z",
-				"wikidata": "http://www.wikidata.org/entity/Q856309"
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/789600",
+				"settlementName": "Kanjiža",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "North Banat"
 			}
 		},
 		{
@@ -333,23 +1363,25 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					20.459166666,
-					45.824444444
+					20.46528,
+					45.82972
 				]
 			},
 			"properties": {
 				"NAME": "Kikinda",
 				"NAME_EN": "Kikinda",
-				"NAME_IT": "Kikinda",
 				"NAME_DE": "Kikinda",
+				"NAME_IT": "Kikinda",
 				"ADM0NAME": "Serbia",
-				"ADM1NAME": "North Banat",
-				"coordinatePrecision": 0.00027777777777778,
 				"ADM0CAP": 0,
-				"POP_MAX": 38065,
+				"POP_MAX": 32084,
 				"POP1950": 0,
-				"populationDate": "2011-01-01T00:00:00Z",
-				"wikidata": "http://www.wikidata.org/entity/Q309355"
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/789518",
+				"settlementName": "Kikinda",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "North Banat"
 			}
 		},
 		{
@@ -357,23 +1389,181 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					20.917222222,
-					44.010111111
+					22.60955,
+					44.61147
+				]
+			},
+			"properties": {
+				"NAME": "Kladovo",
+				"NAME_EN": "Kladovo",
+				"NAME_DE": "Kladovo",
+				"NAME_IT": "Kladovo",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 8171,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/789485",
+				"settlementName": "Kladovo",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Bor"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.25701,
+					43.56634
+				]
+			},
+			"properties": {
+				"NAME": "Knjaževac",
+				"NAME_EN": "Knjaževac",
+				"NAME_DE": "Knjaževac",
+				"NAME_IT": "Knjaževac",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 16350,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/6619277",
+				"settlementName": "Knjaževac",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Zaječar"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.90694,
+					43.99611
+				]
+			},
+			"properties": {
+				"NAME": "Kosjerić",
+				"NAME_EN": "Kosjerić",
+				"NAME_DE": "Kosjerić",
+				"NAME_IT": "Kosjerić",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 3723,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/3197622",
+				"settlementName": "Kosjerić",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Zlatibor"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.16929,
+					44.71356
+				]
+			},
+			"properties": {
+				"NAME": "Kostolac",
+				"NAME_EN": "Kostolac",
+				"NAME_DE": "Kostolac",
+				"NAME_IT": "Kostolac",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 8741,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/789210",
+				"settlementName": "Kostolac",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Braničevo"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.62139,
+					45.11167
+				]
+			},
+			"properties": {
+				"NAME": "Kovačica",
+				"NAME_EN": "Kovačica",
+				"NAME_DE": "Kovačica",
+				"NAME_IT": "Kovačica",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 5398,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/789178",
+				"settlementName": "Kovačica",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "South Banat"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.97611,
+					44.7475
+				]
+			},
+			"properties": {
+				"NAME": "Kovin",
+				"NAME_EN": "Kovin",
+				"NAME_DE": "Kovin",
+				"NAME_IT": "Kovin",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 11623,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/789168",
+				"settlementName": "Kovin",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "South Banat"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.91667,
+					44.01667
 				]
 			},
 			"properties": {
 				"NAME": "Kragujevac",
 				"NAME_EN": "Kragujevac",
-				"NAME_IT": "Kragujevac",
 				"NAME_DE": "Kragujevac",
+				"NAME_IT": "Kragujevac",
 				"ADM0NAME": "Serbia",
-				"ADM1NAME": "Šumadija",
-				"coordinatePrecision": 0.000027777777777778,
 				"ADM0CAP": 0,
-				"POP_MAX": 150623,
+				"POP_MAX": 146315,
 				"POP1950": 0,
-				"populationDate": "2018-01-01T00:00:00Z",
-				"wikidata": "http://www.wikidata.org/entity/Q167394"
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/789128",
+				"settlementName": "Kragujevac",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Šumadija"
 			}
 		},
 		{
@@ -381,23 +1571,25 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					20.686975,
-					43.72342
+					20.68944,
+					43.72583
 				]
 			},
 			"properties": {
 				"NAME": "Kraljevo",
 				"NAME_EN": "Kraljevo",
-				"NAME_IT": "Kraljevo",
 				"NAME_DE": "Kraljevo",
+				"NAME_IT": "Kraljevo",
 				"ADM0NAME": "Serbia",
-				"ADM1NAME": "Raška",
-				"coordinatePrecision": 0.00027777777777778,
 				"ADM0CAP": 0,
-				"POP_MAX": 66688,
+				"POP_MAX": 57432,
 				"POP1950": 0,
-				"populationDate": "2018-01-01T00:00:00Z",
-				"wikidata": "http://www.wikidata.org/entity/Q206317"
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/789107",
+				"settlementName": "Kraljevo",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Raška"
 			}
 		},
 		{
@@ -405,23 +1597,51 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					21.326666666,
-					43.583333333
+					19.36194,
+					44.36556
+				]
+			},
+			"properties": {
+				"NAME": "Krupanj",
+				"NAME_EN": "Krupanj",
+				"NAME_DE": "Krupanj",
+				"NAME_IT": "Krupanj",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 4134,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/3197111",
+				"settlementName": "Krupanj",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Mačva"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.33389,
+					43.58
 				]
 			},
 			"properties": {
 				"NAME": "Kruševac",
 				"NAME_EN": "Kruševac",
-				"NAME_IT": "Kruševac",
 				"NAME_DE": "Kruševac",
+				"NAME_IT": "Kruševac",
 				"ADM0NAME": "Serbia",
-				"ADM1NAME": "Rasina",
-				"coordinatePrecision": 0.00027777777777778,
 				"ADM0CAP": 0,
-				"POP_MAX": 58745,
+				"POP_MAX": 53746,
 				"POP1950": 0,
-				"populationDate": "2011-01-01T00:00:00Z",
-				"wikidata": "http://www.wikidata.org/entity/Q201442"
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/788975",
+				"settlementName": "Kruševac",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Rasina"
 			}
 		},
 		{
@@ -429,23 +1649,181 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					21.1,
-					44.183333333
+					21.67,
+					44.4775
+				]
+			},
+			"properties": {
+				"NAME": "Kučevo",
+				"NAME_EN": "Kučevo",
+				"NAME_DE": "Kučevo",
+				"NAME_IT": "Kučevo",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 3313,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/788937",
+				"settlementName": "Kučevo",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Braničevo"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.37866,
+					44.5117
+				]
+			},
+			"properties": {
+				"NAME": "Kula",
+				"NAME_EN": "Kula",
+				"NAME_DE": "Kula",
+				"NAME_IT": "Kula",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 14873,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/788898",
+				"settlementName": "Kula",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Braničevo"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.27339,
+					43.13826
+				]
+			},
+			"properties": {
+				"NAME": "Kuršumlija",
+				"NAME_EN": "Kuršumlija",
+				"NAME_DE": "Kuršumlija",
+				"NAME_IT": "Kuršumlija",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 11765,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/788852",
+				"settlementName": "Kuršumlija",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Toplica"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.16528,
+					44.36944
+				]
+			},
+			"properties": {
+				"NAME": "Lajkovac",
+				"NAME_EN": "Lajkovac",
+				"NAME_DE": "Lajkovac",
+				"NAME_IT": "Lajkovac",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 3211,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/788812",
+				"settlementName": "Lajkovac",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Kolubara"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.09727,
+					44.18424
 				]
 			},
 			"properties": {
 				"NAME": "Lapovo",
 				"NAME_EN": "Lapovo",
-				"NAME_IT": "Lapovo",
 				"NAME_DE": "Lapovo",
+				"NAME_IT": "Lapovo",
 				"ADM0NAME": "Serbia",
-				"ADM1NAME": "Šumadija",
-				"coordinatePrecision": 0.016666666666667,
 				"ADM0CAP": 0,
-				"POP_MAX": 7143,
+				"POP_MAX": 6057,
 				"POP1950": 0,
-				"populationDate": null,
-				"wikidata": "http://www.wikidata.org/entity/Q2269545"
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/788792",
+				"settlementName": "Lapovo",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Šumadija"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.2557,
+					44.38534
+				]
+			},
+			"properties": {
+				"NAME": "Lazarevac",
+				"NAME_EN": "Lazarevac",
+				"NAME_DE": "Lazarevac",
+				"NAME_IT": "Lazarevac",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 27635,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/788771",
+				"settlementName": "Lazarevac",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Belgrade"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.7375,
+					42.92389
+				]
+			},
+			"properties": {
+				"NAME": "Lebane",
+				"NAME_EN": "Lebane",
+				"NAME_DE": "Lebane",
+				"NAME_IT": "Lebane",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 8025,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/788762",
+				"settlementName": "Lebane",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Jablanica"
 			}
 		},
 		{
@@ -460,16 +1838,18 @@
 			"properties": {
 				"NAME": "Leskovac",
 				"NAME_EN": "Leskovac",
-				"NAME_IT": "Leskovac",
 				"NAME_DE": "Leskovac",
+				"NAME_IT": "Leskovac",
 				"ADM0NAME": "Serbia",
-				"ADM1NAME": "Jablanica",
-				"coordinatePrecision": 0.12282523760862,
 				"ADM0CAP": 0,
-				"POP_MAX": 60288,
+				"POP_MAX": 54091,
 				"POP1950": 0,
-				"populationDate": "2011-01-01T00:00:00Z",
-				"wikidata": "http://www.wikidata.org/entity/Q192606"
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/788709",
+				"settlementName": "Leskovac",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Jablanica"
 			}
 		},
 		{
@@ -477,23 +1857,51 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					19.225833333,
-					44.533333333
+					20.23819,
+					44.23007
+				]
+			},
+			"properties": {
+				"NAME": "Ljig",
+				"NAME_EN": "Ljig",
+				"NAME_DE": "Ljig",
+				"NAME_IT": "Ljig",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 2938,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/788584",
+				"settlementName": "Ljig",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Kolubara"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.24267,
+					44.53118
 				]
 			},
 			"properties": {
 				"NAME": "Loznica",
 				"NAME_EN": "Loznica",
-				"NAME_IT": "Loznica",
 				"NAME_DE": "Loznica",
+				"NAME_IT": "Loznica",
 				"ADM0NAME": "Serbia",
-				"ADM1NAME": "Mačva",
-				"coordinatePrecision": 0.00027777777777778,
 				"ADM0CAP": 0,
 				"POP_MAX": 19515,
 				"POP1950": 0,
-				"populationDate": "2022-01-01T00:00:00Z",
-				"wikidata": "http://www.wikidata.org/entity/Q648489"
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/3196153",
+				"settlementName": "Loznica",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Mačva"
 			}
 		},
 		{
@@ -501,23 +1909,285 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					21.896111111,
-					43.319166666
+					20.13806,
+					43.86083
+				]
+			},
+			"properties": {
+				"NAME": "Lučani",
+				"NAME_EN": "Lučani",
+				"NAME_DE": "Lučani",
+				"NAME_IT": "Lučani",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 2921,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/788452",
+				"settlementName": "Lučani",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Moravica"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.59314,
+					44.96739
+				]
+			},
+			"properties": {
+				"NAME": "Mačvanska Mitrovica",
+				"NAME_EN": "Mačvanska Mitrovica",
+				"NAME_DE": "Mačvanska Mitrovica",
+				"NAME_IT": "Mačvanska Mitrovica",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 3380,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/3195962",
+				"settlementName": "Mačvanska Mitrovica",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Syrmia"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.94596,
+					44.42771
+				]
+			},
+			"properties": {
+				"NAME": "Majdanpek",
+				"NAME_EN": "Majdanpek",
+				"NAME_DE": "Majdanpek",
+				"NAME_IT": "Majdanpek",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 6326,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/788357",
+				"settlementName": "Majdanpek",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Bor"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.10651,
+					44.37344
+				]
+			},
+			"properties": {
+				"NAME": "Mali Zvornik",
+				"NAME_EN": "Mali Zvornik",
+				"NAME_DE": "Mali Zvornik",
+				"NAME_IT": "Mali Zvornik",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 4297,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/3195591",
+				"settlementName": "Mali Zvornik",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Mačva"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.61007,
+					43.68816
+				]
+			},
+			"properties": {
+				"NAME": "Mataruška Banja",
+				"NAME_EN": "Mataruška Banja",
+				"NAME_DE": "Mataruška Banja",
+				"NAME_IT": "Mataruška Banja",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 2432,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/788107",
+				"settlementName": "Mataruška Banja",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Raška"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.07572,
+					43.6307
+				]
+			},
+			"properties": {
+				"NAME": "Medveđa",
+				"NAME_EN": "Medveđa",
+				"NAME_DE": "Medveđa",
+				"NAME_IT": "Medveđa",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 2666,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/788056",
+				"settlementName": "Medveđa",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Rasina"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.08167,
+					44.25194
+				]
+			},
+			"properties": {
+				"NAME": "Mionica",
+				"NAME_EN": "Mionica",
+				"NAME_DE": "Mionica",
+				"NAME_IT": "Mionica",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 1590,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/787935",
+				"settlementName": "Mionica",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Kolubara"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.69917,
+					44.43861
+				]
+			},
+			"properties": {
+				"NAME": "Mladenovac",
+				"NAME_EN": "Mladenovac",
+				"NAME_DE": "Mladenovac",
+				"NAME_IT": "Mladenovac",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 22346,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/787893",
+				"settlementName": "Mladenovac",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Belgrade"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.13286,
+					45.76457
+				]
+			},
+			"properties": {
+				"NAME": "Mol",
+				"NAME_EN": "Mol",
+				"NAME_DE": "Mol",
+				"NAME_IT": "Mol",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 4858,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/787855",
+				"settlementName": "Mol",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "North Banat"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.53083,
+					44.22639
+				]
+			},
+			"properties": {
+				"NAME": "Negotin",
+				"NAME_EN": "Negotin",
+				"NAME_DE": "Negotin",
+				"NAME_IT": "Negotin",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 14647,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/787718",
+				"settlementName": "Negotin",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Bor"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.90333,
+					43.32472
 				]
 			},
 			"properties": {
 				"NAME": "Niš",
 				"NAME_EN": "Niš",
-				"NAME_IT": "Niš",
 				"NAME_DE": "Niš",
+				"NAME_IT": "Niš",
 				"ADM0NAME": "Serbia",
-				"ADM1NAME": "Nišava",
-				"coordinatePrecision": 0.00027777777777778,
 				"ADM0CAP": 0,
-				"POP_MAX": 183164,
+				"POP_MAX": 178976,
 				"POP1950": 0,
-				"populationDate": "2011-01-01T00:00:00Z",
-				"wikidata": "http://www.wikidata.org/entity/Q129259"
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/787657",
+				"settlementName": "Niš",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Nišava"
 			}
 		},
 		{
@@ -525,23 +2195,25 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					20.216666666,
-					44.949972222
+					22.0057,
+					43.29507
 				]
 			},
 			"properties": {
-				"NAME": "Nova Pazova",
-				"NAME_EN": "Nova Pazova",
-				"NAME_IT": "Nova Pazova",
-				"NAME_DE": "Nova Pazova",
+				"NAME": "Niška Banja",
+				"NAME_EN": "Niška Banja",
+				"NAME_DE": "Niška Banja",
+				"NAME_IT": "Niška Banja",
 				"ADM0NAME": "Serbia",
-				"ADM1NAME": "Syrmia",
-				"coordinatePrecision": 0.00027777777777778,
 				"ADM0CAP": 0,
-				"POP_MAX": 17105,
+				"POP_MAX": 3821,
 				"POP1950": 0,
-				"populationDate": null,
-				"wikidata": "http://www.wikidata.org/entity/Q917500"
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/834855",
+				"settlementName": "Niška Banja",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Nišava"
 			}
 		},
 		{
@@ -549,23 +2221,103 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					20.516666666,
-					43.15
+					19.81139,
+					43.46056
+				]
+			},
+			"properties": {
+				"NAME": "Nova Varoš",
+				"NAME_EN": "Nova Varoš",
+				"NAME_DE": "Nova Varoš",
+				"NAME_IT": "Nova Varoš",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 7542,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/3194407",
+				"settlementName": "Nova Varoš",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Zlatibor"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.13556,
+					45.59861
+				]
+			},
+			"properties": {
+				"NAME": "Novi Bečej",
+				"NAME_EN": "Novi Bečej",
+				"NAME_DE": "Novi Bečej",
+				"NAME_IT": "Novi Bečej",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 10967,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/787610",
+				"settlementName": "Novi Bečej",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Central Banat"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.1,
+					46.05
+				]
+			},
+			"properties": {
+				"NAME": "Novi Kneževac",
+				"NAME_EN": "Novi Kneževac",
+				"NAME_DE": "Novi Kneževac",
+				"NAME_IT": "Novi Kneževac",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 5688,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/787600",
+				"settlementName": "Novi Kneževac",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "North Banat"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.51222,
+					43.13667
 				]
 			},
 			"properties": {
 				"NAME": "Novi Pazar",
 				"NAME_EN": "Novi Pazar",
-				"NAME_IT": "Novi Pazar",
 				"NAME_DE": "Novi Pazar",
+				"NAME_IT": "Novi Pazar",
 				"ADM0NAME": "Serbia",
-				"ADM1NAME": "Raška",
-				"coordinatePrecision": 0.016666666666667,
 				"ADM0CAP": 0,
-				"POP_MAX": 66527,
+				"POP_MAX": 71462,
 				"POP1950": 0,
-				"populationDate": "2011-01-01T00:00:00Z",
-				"wikidata": "http://www.wikidata.org/entity/Q202453"
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/787595",
+				"settlementName": "Novi Pazar",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Raška"
 			}
 		},
 		{
@@ -573,23 +2325,25 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					19.831666666,
-					45.264444444
+					19.83694,
+					45.25167
 				]
 			},
 			"properties": {
 				"NAME": "Novi Sad",
 				"NAME_EN": "Novi Sad",
-				"NAME_IT": "Novi Sad",
 				"NAME_DE": "Novi Sad",
+				"NAME_IT": "Novi Sad",
 				"ADM0NAME": "Serbia",
-				"ADM1NAME": "South Bačka",
-				"coordinatePrecision": 0.00027777777777778,
 				"ADM0CAP": 0,
 				"POP_MAX": 260438,
 				"POP1950": 0,
-				"populationDate": "2022-01-01T00:00:00Z",
-				"wikidata": "http://www.wikidata.org/entity/Q55630"
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/3194360",
+				"settlementName": "Novi Sad",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "South Bačka"
 			}
 		},
 		{
@@ -597,23 +2351,181 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					20.651944444,
-					44.873888888
+					20.20017,
+					44.65486
+				]
+			},
+			"properties": {
+				"NAME": "Obrenovac",
+				"NAME_EN": "Obrenovac",
+				"NAME_DE": "Obrenovac",
+				"NAME_IT": "Obrenovac",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 25380,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/787516",
+				"settlementName": "Obrenovac",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Belgrade"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.03602,
+					43.59799
+				]
+			},
+			"properties": {
+				"NAME": "Odžaci",
+				"NAME_EN": "Odžaci",
+				"NAME_DE": "Odžaci",
+				"NAME_IT": "Odžaci",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 7556,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/787499",
+				"settlementName": "Odžaci",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Rasina"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.43028,
+					45.05222
+				]
+			},
+			"properties": {
+				"NAME": "Opovo",
+				"NAME_EN": "Opovo",
+				"NAME_DE": "Opovo",
+				"NAME_IT": "Opovo",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 4147,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/787461",
+				"settlementName": "Opovo",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "South Banat"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.31845,
+					44.72769
+				]
+			},
+			"properties": {
+				"NAME": "Ostružnica",
+				"NAME_EN": "Ostružnica",
+				"NAME_DE": "Ostružnica",
+				"NAME_IT": "Ostružnica",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 4191,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/787306",
+				"settlementName": "Ostružnica",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Belgrade"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.53336,
+					44.88349
+				]
+			},
+			"properties": {
+				"NAME": "Ovča",
+				"NAME_EN": "Ovča",
+				"NAME_DE": "Ovča",
+				"NAME_IT": "Ovča",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 3494,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/787296",
+				"settlementName": "Ovča",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Belgrade"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.75647,
+					46.10646
+				]
+			},
+			"properties": {
+				"NAME": "Palić",
+				"NAME_EN": "Palić",
+				"NAME_DE": "Palić",
+				"NAME_IT": "Palić",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 5476,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/3193678",
+				"settlementName": "Palić",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "North Bačka"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.64167,
+					44.87177
 				]
 			},
 			"properties": {
 				"NAME": "Pančevo",
 				"NAME_EN": "Pančevo",
-				"NAME_IT": "Pančevo",
 				"NAME_DE": "Pančevo",
+				"NAME_IT": "Pančevo",
 				"ADM0NAME": "Serbia",
-				"ADM1NAME": "South Banat",
-				"coordinatePrecision": 0.00027777777777778,
 				"ADM0CAP": 0,
 				"POP_MAX": 73401,
 				"POP1950": 0,
-				"populationDate": "2022-01-01T00:00:00Z",
-				"wikidata": "http://www.wikidata.org/entity/Q205432"
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/787237",
+				"settlementName": "Pančevo",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "South Banat"
 			}
 		},
 		{
@@ -621,23 +2533,207 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					19.651388888,
-					43.543888888
+					21.40778,
+					43.86083
+				]
+			},
+			"properties": {
+				"NAME": "Paraćin",
+				"NAME_EN": "Paraćin",
+				"NAME_DE": "Paraćin",
+				"NAME_IT": "Paraćin",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 22349,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/787215",
+				"settlementName": "Paraćin",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Pomoravlje"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.87944,
+					45.24667
+				]
+			},
+			"properties": {
+				"NAME": "Petrovaradin",
+				"NAME_EN": "Petrovaradin",
+				"NAME_DE": "Petrovaradin",
+				"NAME_IT": "Petrovaradin",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 15621,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/3193406",
+				"settlementName": "Petrovaradin",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "South Bačka"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.48305,
+					44.69543
+				]
+			},
+			"properties": {
+				"NAME": "Pinosava",
+				"NAME_EN": "Pinosava",
+				"NAME_DE": "Pinosava",
+				"NAME_IT": "Pinosava",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 3239,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/787058",
+				"settlementName": "Pinosava",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Belgrade"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.58611,
+					43.15306
+				]
+			},
+			"properties": {
+				"NAME": "Pirot",
+				"NAME_EN": "Pirot",
+				"NAME_DE": "Pirot",
+				"NAME_IT": "Pirot",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 34942,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/787050",
+				"settlementName": "Pirot",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Pirot"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.18782,
+					44.62133
+				]
+			},
+			"properties": {
+				"NAME": "Požarevac",
+				"NAME_EN": "Požarevac",
+				"NAME_DE": "Požarevac",
+				"NAME_IT": "Požarevac",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 42530,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/786827",
+				"settlementName": "Požarevac",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Braničevo"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.03632,
+					43.84889
+				]
+			},
+			"properties": {
+				"NAME": "Požega",
+				"NAME_EN": "Požega",
+				"NAME_DE": "Požega",
+				"NAME_IT": "Požega",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 12362,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/786824",
+				"settlementName": "Požega",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Zlatibor"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.52519,
+					43.58306
+				]
+			},
+			"properties": {
+				"NAME": "Priboj",
+				"NAME_EN": "Priboj",
+				"NAME_DE": "Priboj",
+				"NAME_IT": "Priboj",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 13172,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/3192450",
+				"settlementName": "Priboj",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Zlatibor"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.6487,
+					43.38996
 				]
 			},
 			"properties": {
 				"NAME": "Prijepolje",
 				"NAME_EN": "Prijepolje",
-				"NAME_IT": "Prijepolje",
 				"NAME_DE": "Prijepolje",
+				"NAME_IT": "Prijepolje",
 				"ADM0NAME": "Serbia",
-				"ADM1NAME": "Zlatibor",
-				"coordinatePrecision": 0.00027777777777778,
 				"ADM0CAP": 0,
-				"POP_MAX": 37059,
+				"POP_MAX": 11928,
 				"POP1950": 0,
-				"populationDate": "2011-01-01T00:00:00Z",
-				"wikidata": "http://www.wikidata.org/entity/Q797036"
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/3192404",
+				"settlementName": "Prijepolje",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Zlatibor"
 			}
 		},
 		{
@@ -645,23 +2741,285 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					20,
-					43.266666666
+					21.58806,
+					43.23417
+				]
+			},
+			"properties": {
+				"NAME": "Prokuplje",
+				"NAME_EN": "Prokuplje",
+				"NAME_DE": "Prokuplje",
+				"NAME_IT": "Prokuplje",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 24627,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/786690",
+				"settlementName": "Prokuplje",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Toplica"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.97754,
+					44.22712
+				]
+			},
+			"properties": {
+				"NAME": "Rača",
+				"NAME_EN": "Rača",
+				"NAME_DE": "Rača",
+				"NAME_IT": "Rača",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 2362,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/786624",
+				"settlementName": "Rača",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Šumadija"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.61528,
+					43.28722
+				]
+			},
+			"properties": {
+				"NAME": "Raška",
+				"NAME_EN": "Raška",
+				"NAME_DE": "Raška",
+				"NAME_IT": "Raška",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 6291,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/793790",
+				"settlementName": "Raška",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Raška"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.51738,
+					44.06947
+				]
+			},
+			"properties": {
+				"NAME": "Resavica",
+				"NAME_EN": "Resavica",
+				"NAME_DE": "Resavica",
+				"NAME_IT": "Resavica",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 1568,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/786343",
+				"settlementName": "Resavica",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Pomoravlje"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.68986,
+					43.71319
+				]
+			},
+			"properties": {
+				"NAME": "Ribnica",
+				"NAME_EN": "Ribnica",
+				"NAME_DE": "Ribnica",
+				"NAME_IT": "Ribnica",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 1626,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/786303",
+				"settlementName": "Ribnica",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Raška"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.82222,
+					45.00806
+				]
+			},
+			"properties": {
+				"NAME": "Ruma",
+				"NAME_EN": "Ruma",
+				"NAME_DE": "Ruma",
+				"NAME_IT": "Ruma",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 27747,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/3191429",
+				"settlementName": "Ruma",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Syrmia"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.69,
+					44.74667
+				]
+			},
+			"properties": {
+				"NAME": "Šabac",
+				"NAME_EN": "Šabac",
+				"NAME_DE": "Šabac",
+				"NAME_IT": "Šabac",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 51163,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/3191376",
+				"settlementName": "Šabac",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Mačva"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.07722,
+					45.9275
+				]
+			},
+			"properties": {
+				"NAME": "Senta",
+				"NAME_EN": "Senta",
+				"NAME_DE": "Senta",
+				"NAME_IT": "Senta",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 14452,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/785965",
+				"settlementName": "Senta",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "North Banat"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.91075,
+					43.8496
+				]
+			},
+			"properties": {
+				"NAME": "Sevojno",
+				"NAME_EN": "Sevojno",
+				"NAME_DE": "Sevojno",
+				"NAME_IT": "Sevojno",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 6426,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/3190947",
+				"settlementName": "Sevojno",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Zlatibor"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.22639,
+					45.12833
+				]
+			},
+			"properties": {
+				"NAME": "Šid",
+				"NAME_EN": "Šid",
+				"NAME_DE": "Šid",
+				"NAME_IT": "Šid",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 12618,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/3190922",
+				"settlementName": "Šid",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Syrmia"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.99944,
+					43.27306
 				]
 			},
 			"properties": {
 				"NAME": "Sjenica",
 				"NAME_EN": "Sjenica",
-				"NAME_IT": "Sjenica",
 				"NAME_DE": "Sjenica",
+				"NAME_IT": "Sjenica",
 				"ADM0NAME": "Serbia",
-				"ADM1NAME": "Zlatibor",
-				"coordinatePrecision": 0.016666666666667,
 				"ADM0CAP": 0,
-				"POP_MAX": 14060,
+				"POP_MAX": 12989,
 				"POP1950": 0,
-				"populationDate": "2011-01-01T00:00:00Z",
-				"wikidata": "http://www.wikidata.org/entity/Q994217"
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/3190776",
+				"settlementName": "Sjenica",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Zlatibor"
 			}
 		},
 		{
@@ -669,23 +3027,311 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					19.6653273,
-					46.1002058
+					20.92763,
+					44.66436
+				]
+			},
+			"properties": {
+				"NAME": "Smederevo",
+				"NAME_EN": "Smederevo",
+				"NAME_DE": "Smederevo",
+				"NAME_IT": "Smederevo",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 59261,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/785756",
+				"settlementName": "Smederevo",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Podunavlje"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.95885,
+					44.36548
+				]
+			},
+			"properties": {
+				"NAME": "Smederevska Palanka",
+				"NAME_EN": "Smederevska Palanka",
+				"NAME_DE": "Smederevska Palanka",
+				"NAME_IT": "Smederevska Palanka",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 20345,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/785753",
+				"settlementName": "Smederevska Palanka",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Podunavlje"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.87111,
+					43.64333
+				]
+			},
+			"properties": {
+				"NAME": "Sokobanja",
+				"NAME_EN": "Sokobanja",
+				"NAME_DE": "Sokobanja",
+				"NAME_IT": "Sokobanja",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 7188,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/785704",
+				"settlementName": "Sokobanja",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Zaječar"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.11222,
+					45.77417
+				]
+			},
+			"properties": {
+				"NAME": "Sombor",
+				"NAME_EN": "Sombor",
+				"NAME_DE": "Sombor",
+				"NAME_IT": "Sombor",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 41814,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/3190342",
+				"settlementName": "Sombor",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "West Bačka"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.57361,
+					44.51972
+				]
+			},
+			"properties": {
+				"NAME": "Sopot",
+				"NAME_EN": "Sopot",
+				"NAME_DE": "Sopot",
+				"NAME_IT": "Sopot",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 1956,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/785671",
+				"settlementName": "Sopot",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Belgrade"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.80278,
+					45.55389
+				]
+			},
+			"properties": {
+				"NAME": "Srbobran",
+				"NAME_EN": "Srbobran",
+				"NAME_DE": "Srbobran",
+				"NAME_IT": "Srbobran",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 10496,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/3190169",
+				"settlementName": "Srbobran",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "South Bačka"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.84263,
+					45.22334
+				]
+			},
+			"properties": {
+				"NAME": "Sremska Kamenica",
+				"NAME_EN": "Sremska Kamenica",
+				"NAME_DE": "Sremska Kamenica",
+				"NAME_IT": "Sremska Kamenica",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 12632,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/3190104",
+				"settlementName": "Sremska Kamenica",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "South Bačka"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.61222,
+					44.97639
+				]
+			},
+			"properties": {
+				"NAME": "Sremska Mitrovica",
+				"NAME_EN": "Sremska Mitrovica",
+				"NAME_DE": "Sremska Mitrovica",
+				"NAME_IT": "Sremska Mitrovica",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 36764,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/3190103",
+				"settlementName": "Sremska Mitrovica",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Syrmia"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.93373,
+					45.20285
+				]
+			},
+			"properties": {
+				"NAME": "Sremski Karlovci",
+				"NAME_EN": "Sremski Karlovci",
+				"NAME_DE": "Sremski Karlovci",
+				"NAME_IT": "Sremski Karlovci",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 7872,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/3190101",
+				"settlementName": "Sremski Karlovci",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "South Bačka"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.16083,
+					44.985
+				]
+			},
+			"properties": {
+				"NAME": "Stara Pazova",
+				"NAME_EN": "Stara Pazova",
+				"NAME_DE": "Stara Pazova",
+				"NAME_IT": "Stara Pazova",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 18522,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/785559",
+				"settlementName": "Stara Pazova",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Syrmia"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.70546,
+					44.80729
+				]
+			},
+			"properties": {
+				"NAME": "Starčevo",
+				"NAME_EN": "Starčevo",
+				"NAME_DE": "Starčevo",
+				"NAME_IT": "Starčevo",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 6661,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/785544",
+				"settlementName": "Starčevo",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "South Banat"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.66667,
+					46.1
 				]
 			},
 			"properties": {
 				"NAME": "Subotica",
 				"NAME_EN": "Subotica",
-				"NAME_IT": "Subotica",
 				"NAME_DE": "Subotica",
+				"NAME_IT": "Subotica",
 				"ADM0NAME": "Serbia",
-				"ADM1NAME": "North Bačka",
-				"coordinatePrecision": 0.01,
 				"ADM0CAP": 0,
-				"POP_MAX": 105681,
+				"POP_MAX": 88752,
 				"POP1950": 0,
-				"populationDate": "2011-01-01T00:00:00Z",
-				"wikidata": "http://www.wikidata.org/entity/Q170287"
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/3189595",
+				"settlementName": "Subotica",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "North Bačka"
 			}
 		},
 		{
@@ -693,23 +3339,311 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					19.85,
-					43.85
+					20.28028,
+					44.79306
+				]
+			},
+			"properties": {
+				"NAME": "Surčin",
+				"NAME_EN": "Surčin",
+				"NAME_DE": "Surčin",
+				"NAME_IT": "Surčin",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 20602,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/785288",
+				"settlementName": "Surčin",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Belgrade"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.17083,
+					42.69056
+				]
+			},
+			"properties": {
+				"NAME": "Surdulica",
+				"NAME_EN": "Surdulica",
+				"NAME_DE": "Surdulica",
+				"NAME_IT": "Surdulica",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 9242,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/785285",
+				"settlementName": "Surdulica",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Pčinja"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.1967,
+					44.2337
+				]
+			},
+			"properties": {
+				"NAME": "Svilajnac",
+				"NAME_EN": "Svilajnac",
+				"NAME_DE": "Svilajnac",
+				"NAME_IT": "Svilajnac",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 8593,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/785184",
+				"settlementName": "Svilajnac",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Pomoravlje"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.12111,
+					43.41333
+				]
+			},
+			"properties": {
+				"NAME": "Svrljig",
+				"NAME_EN": "Svrljig",
+				"NAME_DE": "Svrljig",
+				"NAME_IT": "Svrljig",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 6762,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/785164",
+				"settlementName": "Svrljig",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Nišava"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.88917,
+					45.40861
+				]
+			},
+			"properties": {
+				"NAME": "Temerin",
+				"NAME_EN": "Temerin",
+				"NAME_DE": "Temerin",
+				"NAME_IT": "Temerin",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 17998,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/3189166",
+				"settlementName": "Temerin",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "South Bačka"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.29444,
+					45.20611
+				]
+			},
+			"properties": {
+				"NAME": "Titel",
+				"NAME_EN": "Titel",
+				"NAME_DE": "Titel",
+				"NAME_IT": "Titel",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 4522,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/785062",
+				"settlementName": "Titel",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "South Bačka"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.6825,
+					44.25417
+				]
+			},
+			"properties": {
+				"NAME": "Topola",
+				"NAME_EN": "Topola",
+				"NAME_DE": "Topola",
+				"NAME_IT": "Topola",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 4588,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/785013",
+				"settlementName": "Topola",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Šumadija"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.0025,
+					43.61694
+				]
+			},
+			"properties": {
+				"NAME": "Trstenik",
+				"NAME_EN": "Trstenik",
+				"NAME_DE": "Trstenik",
+				"NAME_IT": "Trstenik",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 13476,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/784873",
+				"settlementName": "Trstenik",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Rasina"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.33139,
+					42.99028
+				]
+			},
+			"properties": {
+				"NAME": "Tutin",
+				"NAME_EN": "Tutin",
+				"NAME_DE": "Tutin",
+				"NAME_IT": "Tutin",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 11169,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/784800",
+				"settlementName": "Tutin",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Raška"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.07389,
+					44.45611
+				]
+			},
+			"properties": {
+				"NAME": "Ub",
+				"NAME_EN": "Ub",
+				"NAME_DE": "Ub",
+				"NAME_IT": "Ub",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 6684,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/784795",
+				"settlementName": "Ub",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Kolubara"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.30472,
+					44.67806
+				]
+			},
+			"properties": {
+				"NAME": "Umka",
+				"NAME_EN": "Umka",
+				"NAME_DE": "Umka",
+				"NAME_IT": "Umka",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 4985,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/784764",
+				"settlementName": "Umka",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Belgrade"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.84878,
+					43.85861
 				]
 			},
 			"properties": {
 				"NAME": "Užice",
 				"NAME_EN": "Užice",
-				"NAME_IT": "Užice",
 				"NAME_DE": "Užice",
+				"NAME_IT": "Užice",
 				"ADM0NAME": "Serbia",
-				"ADM1NAME": "Zlatibor",
-				"coordinatePrecision": 0.016666666666667,
 				"ADM0CAP": 0,
-				"POP_MAX": 59747,
+				"POP_MAX": 48539,
 				"POP1950": 0,
-				"populationDate": "2011-01-01T00:00:00Z",
-				"wikidata": "http://www.wikidata.org/entity/Q59473"
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/3188434",
+				"settlementName": "Užice",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Zlatibor"
 			}
 		},
 		{
@@ -717,23 +3651,25 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					19.886627,
-					44.270753
+					19.89821,
+					44.27513
 				]
 			},
 			"properties": {
 				"NAME": "Valjevo",
 				"NAME_EN": "Valjevo",
-				"NAME_IT": "Valjevo",
 				"NAME_DE": "Valjevo",
+				"NAME_IT": "Valjevo",
 				"ADM0NAME": "Serbia",
-				"ADM1NAME": "Kolubara",
-				"coordinatePrecision": 2.7777777777778e-8,
 				"ADM0CAP": 0,
-				"POP_MAX": 90312,
+				"POP_MAX": 56059,
 				"POP1950": 0,
-				"populationDate": "2011-01-01T00:00:00Z",
-				"wikidata": "http://www.wikidata.org/entity/Q208015"
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/3188402",
+				"settlementName": "Valjevo",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Kolubara"
 			}
 		},
 		{
@@ -741,23 +3677,129 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					21.897222222,
-					42.554166666
+					21.07676,
+					44.33389
+				]
+			},
+			"properties": {
+				"NAME": "Velika Plana",
+				"NAME_EN": "Velika Plana",
+				"NAME_DE": "Velika Plana",
+				"NAME_IT": "Velika Plana",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 14609,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/784630",
+				"settlementName": "Velika Plana",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Podunavlje"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.51646,
+					44.76329
+				]
+			},
+			"properties": {
+				"NAME": "Veliko Gradište",
+				"NAME_EN": "Veliko Gradište",
+				"NAME_DE": "Veliko Gradište",
+				"NAME_IT": "Veliko Gradište",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 5518,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/784535",
+				"settlementName": "Veliko Gradište",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Braničevo"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.06333,
+					42.70778
+				]
+			},
+			"properties": {
+				"NAME": "Vladičin Han",
+				"NAME_EN": "Vladičin Han",
+				"NAME_DE": "Vladičin Han",
+				"NAME_IT": "Vladičin Han",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 7343,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/784355",
+				"settlementName": "Vladičin Han",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Pčinja"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.13402,
+					42.96697
+				]
+			},
+			"properties": {
+				"NAME": "Vlasotince",
+				"NAME_EN": "Vlasotince",
+				"NAME_DE": "Vlasotince",
+				"NAME_IT": "Vlasotince",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 14924,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/784318",
+				"settlementName": "Vlasotince",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Jablanica"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.90028,
+					42.55139
 				]
 			},
 			"properties": {
 				"NAME": "Vranje",
 				"NAME_EN": "Vranje",
-				"NAME_IT": "Vranje",
 				"NAME_DE": "Vranje",
+				"NAME_IT": "Vranje",
 				"ADM0NAME": "Serbia",
-				"ADM1NAME": "Pčinja",
-				"coordinatePrecision": 0.00027777777777778,
 				"ADM0CAP": 0,
-				"POP_MAX": 55214,
+				"POP_MAX": 50954,
 				"POP1950": 0,
-				"populationDate": "2022-01-01T00:00:00Z",
-				"wikidata": "http://www.wikidata.org/entity/Q211645"
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/784227",
+				"settlementName": "Vranje",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Pčinja"
 			}
 		},
 		{
@@ -765,23 +3807,103 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					21.298611111,
-					45.120555555
+					21.99222,
+					42.555
+				]
+			},
+			"properties": {
+				"NAME": "Vranjska Banja",
+				"NAME_EN": "Vranjska Banja",
+				"NAME_DE": "Vranjska Banja",
+				"NAME_IT": "Vranjska Banja",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 4260,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/784222",
+				"settlementName": "Vranjska Banja",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Pčinja"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.64083,
+					45.57139
+				]
+			},
+			"properties": {
+				"NAME": "Vrbas",
+				"NAME_EN": "Vrbas",
+				"NAME_DE": "Vrbas",
+				"NAME_IT": "Vrbas",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 20892,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/3187297",
+				"settlementName": "Vrbas",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "South Bačka"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.89634,
+					43.62725
+				]
+			},
+			"properties": {
+				"NAME": "Vrnjačka Banja",
+				"NAME_EN": "Vrnjačka Banja",
+				"NAME_DE": "Vrnjačka Banja",
+				"NAME_IT": "Vrnjačka Banja",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 9252,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/784141",
+				"settlementName": "Vrnjačka Banja",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Raška"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					21.30361,
+					45.11667
 				]
 			},
 			"properties": {
 				"NAME": "Vršac",
 				"NAME_EN": "Vršac",
-				"NAME_IT": "Vršac",
 				"NAME_DE": "Vršac",
+				"NAME_IT": "Vršac",
 				"ADM0NAME": "Serbia",
-				"ADM1NAME": "South Banat",
-				"coordinatePrecision": 0.00027777777777778,
 				"ADM0CAP": 0,
 				"POP_MAX": 31946,
 				"POP1950": 0,
-				"populationDate": "2022-01-01T00:00:00Z",
-				"wikidata": "http://www.wikidata.org/entity/Q209329"
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/784136",
+				"settlementName": "Vršac",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "South Banat"
 			}
 		},
 		{
@@ -789,23 +3911,155 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					20.386111111,
-					45.377777777
+					21.91046,
+					42.86528
+				]
+			},
+			"properties": {
+				"NAME": "Vučje",
+				"NAME_EN": "Vučje",
+				"NAME_DE": "Vučje",
+				"NAME_IT": "Vučje",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 2553,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/784091",
+				"settlementName": "Vučje",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Jablanica"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.06389,
+					45.37222
+				]
+			},
+			"properties": {
+				"NAME": "Žabalj",
+				"NAME_EN": "Žabalj",
+				"NAME_DE": "Žabalj",
+				"NAME_IT": "Žabalj",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 8449,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/784068",
+				"settlementName": "Žabalj",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "South Bačka"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.26405,
+					43.90358
+				]
+			},
+			"properties": {
+				"NAME": "Zaječar",
+				"NAME_EN": "Zaječar",
+				"NAME_DE": "Zaječar",
+				"NAME_IT": "Zaječar",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 32448,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/784024",
+				"settlementName": "Zaječar",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Zaječar"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.54972,
+					45.485
+				]
+			},
+			"properties": {
+				"NAME": "Žitište",
+				"NAME_EN": "Žitište",
+				"NAME_DE": "Žitište",
+				"NAME_IT": "Žitište",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 2550,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/783887",
+				"settlementName": "Žitište",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Central Banat"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					19.70029,
+					43.729
+				]
+			},
+			"properties": {
+				"NAME": "Zlatibor",
+				"NAME_EN": "Zlatibor",
+				"NAME_DE": "Zlatibor",
+				"NAME_IT": "Zlatibor",
+				"ADM0NAME": "Serbia",
+				"ADM0CAP": 0,
+				"POP_MAX": 3702,
+				"POP1950": 0,
+				"populationDate": "2022-10-01T00:00:00Z",
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/3302765",
+				"settlementName": "Zlatibor",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Zlatibor"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					20.38194,
+					45.38361
 				]
 			},
 			"properties": {
 				"NAME": "Zrenjanin",
 				"NAME_EN": "Zrenjanin",
-				"NAME_IT": "Zrenjanin",
 				"NAME_DE": "Zrenjanin",
+				"NAME_IT": "Zrenjanin",
 				"ADM0NAME": "Serbia",
-				"ADM1NAME": "Central Banat",
-				"coordinatePrecision": 0.00027777777777778,
 				"ADM0CAP": 0,
 				"POP_MAX": 67129,
 				"POP1950": 0,
 				"populationDate": "2022-10-01T00:00:00Z",
-				"wikidata": "http://www.wikidata.org/entity/Q201125"
+				"coordinatePrecision": 0,
+				"geonames": "https://www.geonames.org/783814",
+				"settlementName": "Zrenjanin",
+				"populationDefinition": "RZS 2022 urban settlement; municipal parts combined, administrative totals excluded",
+				"ADM1NAME": "Central Banat"
 			}
 		}
 	]

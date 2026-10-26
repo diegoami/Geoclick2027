@@ -2623,8 +2623,11 @@ detailed map (unticking is how those go).
 ### Preserve existing town-map IDs when expanding their selection (2026-10-26)
 
 The Denmark, Norway and Serbia backlog maps keep their *-towns-50k IDs while
-moving to a curated twenty-town selection with a 10k eligibility threshold
-and retained existing targets. Renaming maps merely to match the old suffix
+moving to larger selections with a 10k eligibility threshold and retained
+existing targets: Denmark 21, Norway 20 and Serbia 32. Denmark uses dated
+Wikidata observations; Serbia uses settlement-level 2022 census counts and
+GeoNames coordinates. Norway remains explicitly a curated Natural Earth
+sample, so unsupported county largest-city claims are disabled. Renaming maps merely to match the old suffix
 would break links and isolate saved progress. The suffix is an internal legacy
 identifier; the displayed title is Towns, and MAPS.md documents the real recipe.
 New or split Norwegian counties receive their actual current identities; no

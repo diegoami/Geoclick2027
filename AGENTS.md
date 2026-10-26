@@ -17,6 +17,7 @@ indiscriminately exhausts the context window before any work starts.
 
     app/src/{lib,routes}/       packages/{srs,quiz-engine}/src/
     data/scripts/*.ts           scripts/*.mjs
+    data/scripts/read-serbia-census.py  <- authored standard-library source adapter
     data/facts/*.json           data/styles/base.json      <- AUTHORED, see below
     desktop/src-tauri/src/      mobile/android/app/src/main/{java,res/values}/
     root configs: package.json, netlify.toml, app/vite.config.*, app/eslint.config.js

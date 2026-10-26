@@ -18,6 +18,8 @@
  */
 export function germanDistrictName(raw: string): string {
 	const trimmed = raw.trim();
+	// The pinned BKG source omits the rural suffix only for Leipzig.
+	if (trimmed === 'Leipzig') return 'Landkreis Leipzig';
 	const spelled = (name: string) => SPELLED_OUT[name] ?? name;
 	const city = /^(.+), (?:Stadtkreis|Kreisfreie Stadt|Stadt)$/.exec(trimmed);
 	if (city) return spelled(city[1]);

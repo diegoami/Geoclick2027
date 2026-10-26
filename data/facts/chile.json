@@ -3,7 +3,8 @@
 		"Name-facts for Chile (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
 		"of the same id, written later, never shows a town's sentences.",
-		"FT-73 added the sixteen regions (\"region\") and the towns of chile-towns-100k (\"city\"); Antofagasta, Coquimbo and Valparaíso have both, each with its own sentences."
+		"FT-73 added the sixteen regions (\"region\") and the towns of chile-towns-100k (\"city\"); Antofagasta, Coquimbo and Valparaíso have both, each with its own sentences.",
+		"v1.0 whole-catalogue completion (#244): sourced EN/IT/DE sets, with references under _sources by ID and kind."
 	],
 	"antofagasta": {
 		"region": {
@@ -25,32 +26,38 @@
 		},
 		"city": {
 			"en": [
-				"Founded as a Bolivian port, it was occupied by Chile in February 1879, the start of the War of the Pacific.",
-				"La Portada, a natural arch of rock standing in the sea, is just north of it."
+				"The settlement that became Antofagasta was originally known as La Chimba.",
+				"Chilean troops occupied Antofagasta in February 1879, at the beginning of the War of the Pacific.",
+				"Antofagasta’s regional museum occupies a former customs building constructed in Valparaíso in 1867, first used in Mejillones and later moved to Antofagasta."
 			],
 			"it": [
-				"Fondata come porto boliviano, fu occupata dal Cile nel febbraio 1879, all’inizio della guerra del Pacifico.",
-				"La Portada, un arco naturale di roccia che si alza dal mare, si trova poco a nord."
+				"L’insediamento che divenne Antofagasta era inizialmente conosciuto come La Chimba.",
+				"Le truppe cilene occuparono Antofagasta nel febbraio 1879, all’inizio della guerra del Pacifico.",
+				"Il museo regionale di Antofagasta occupa un ex edificio doganale costruito a Valparaíso nel 1867, utilizzato dapprima a Mejillones e poi trasferito ad Antofagasta."
 			],
 			"de": [
-				"Als bolivianischer Hafen gegründet, wurde sie im Februar 1879 von Chile besetzt – der Beginn des Salpeterkrieges.",
-				"La Portada, ein natürlicher Felsbogen im Meer, liegt unmittelbar nördlich von ihr."
+				"Die Siedlung, aus der Antofagasta entstand, war ursprünglich als La Chimba bekannt.",
+				"Chilenische Truppen besetzten Antofagasta im Februar 1879 zu Beginn des Salpeterkrieges.",
+				"Das Regionalmuseum von Antofagasta befindet sich in einem 1867 in Valparaíso errichteten ehemaligen Zollgebäude, das zunächst in Mejillones genutzt und später nach Antofagasta versetzt wurde."
 			]
 		}
 	},
 	"arica": {
 		"city": {
 			"en": [
-				"It passed to Chile under the Treaty of Lima of 1929, while Tacna went back to Peru.",
-				"Its church of San Marcos, made of iron, is said to have been designed by Gustave Eiffel’s firm."
+				"Arica was known in the colonial period as Villa de San Marcos de Arica.",
+				"The Treaty of Lima of 1929 confirmed Arica as Chilean territory while Tacna returned to Peru.",
+				"Arica’s San Marcos Cathedral, inaugurated in 1876, uses a prefabricated metal structure supplied by workshops associated with Gustave Eiffel."
 			],
 			"it": [
-				"Passò al Cile con il trattato di Lima del 1929, mentre Tacna tornò al Perù.",
-				"Si dice che la sua chiesa di San Marcos, fatta di ferro, sia stata progettata dalla ditta di Gustave Eiffel."
+				"Nel periodo coloniale Arica era conosciuta come Villa de San Marcos de Arica.",
+				"Il trattato di Lima del 1929 confermò Arica come territorio cileno, mentre Tacna tornò al Perù.",
+				"La cattedrale di San Marcos di Arica, inaugurata nel 1876, utilizza una struttura metallica prefabbricata fornita da officine associate a Gustave Eiffel."
 			],
 			"de": [
-				"Sie fiel durch den Vertrag von Lima von 1929 an Chile, während Tacna an Peru zurückging.",
-				"Ihre eiserne Kirche San Marcos soll vom Unternehmen Gustave Eiffels entworfen worden sein."
+				"In der Kolonialzeit war Arica als Villa de San Marcos de Arica bekannt.",
+				"Der Vertrag von Lima von 1929 bestätigte Arica als chilenisches Gebiet, während Tacna an Peru zurückging.",
+				"Die 1876 eingeweihte San-Marcos-Kathedrale in Arica besitzt eine vorgefertigte Metallkonstruktion aus Werkstätten, die mit Gustave Eiffel verbunden waren."
 			]
 		}
 	},
@@ -133,64 +140,76 @@
 	"calama": {
 		"city": {
 			"en": [
-				"An oasis on the Loa, Chile’s longest river, in the Atacama Desert.",
-				"Chuquicamata, one of the largest open-pit mines in the world, is just to its north."
+				"Calama appears under its present name in colonial church records alongside references to a place called Chunchur.",
+				"Families from the nearby mining settlement of Chuquicamata moved to Calama between 2004 and 2007 as the mine expanded.",
+				"Calama’s Natural and Cultural History Museum of the Atacama Desert exhibits minerals, fossils and Andean fauna in Parque El Loa."
 			],
 			"it": [
-				"Un’oasi sul Loa, il fiume più lungo del Cile, nel deserto di Atacama.",
-				"Chuquicamata, una delle più grandi miniere a cielo aperto del mondo, si trova poco a nord."
+				"Calama compare con il nome attuale nei registri ecclesiastici coloniali, accanto a riferimenti a un luogo chiamato Chunchur.",
+				"Le famiglie del vicino insediamento minerario di Chuquicamata si trasferirono a Calama fra il 2004 e il 2007 a causa dell’espansione della miniera.",
+				"Il Museo di storia naturale e culturale del deserto di Atacama di Calama espone minerali, fossili e fauna andina nel Parque El Loa."
 			],
 			"de": [
-				"Eine Oase am Loa, Chiles längstem Fluss, in der Atacama-Wüste.",
-				"Chuquicamata, einer der größten Tagebaue der Welt, liegt unmittelbar nördlich von ihr."
+				"Calama erscheint unter seinem heutigen Namen in kolonialen Kirchenunterlagen neben Hinweisen auf einen Ort namens Chunchur.",
+				"Familien aus der benachbarten Bergbausiedlung Chuquicamata zogen zwischen 2004 und 2007 wegen der Erweiterung der Mine nach Calama.",
+				"Calamas Museum für Natur- und Kulturgeschichte der Atacamawüste zeigt im Parque El Loa Mineralien, Fossilien und Andenfauna."
 			]
 		}
 	},
 	"chillan": {
 		"city": {
 			"en": [
-				"Bernardo O’Higgins was born here in 1778, and the pianist Claudio Arrau in 1903.",
-				"After the earthquake of 1939, Mexico gave it a school, painted with murals by David Alfaro Siqueiros."
+				"Chillán’s original settlement was founded in 1580 as San Bartolomé de Gamboa; the city moved to its present site in 1835.",
+				"The pianist Claudio Arrau was born in Chillán in 1903.",
+				"After the earthquake of 1939, Mexico donated a school to Chillán, where David Alfaro Siqueiros and Xavier Guerrero painted murals."
 			],
 			"it": [
-				"Qui nacquero Bernardo O’Higgins, nel 1778, e il pianista Claudio Arrau, nel 1903.",
-				"Dopo il terremoto del 1939 il Messico le donò una scuola, dipinta con murales di David Alfaro Siqueiros."
+				"L’insediamento originario di Chillán fu fondato nel 1580 come San Bartolomé de Gamboa; la città si trasferì nel sito attuale nel 1835.",
+				"Il pianista Claudio Arrau nacque a Chillán nel 1903.",
+				"Dopo il terremoto del 1939, il Messico donò una scuola a Chillán, dove David Alfaro Siqueiros e Xavier Guerrero dipinsero murales."
 			],
 			"de": [
-				"Bernardo O’Higgins wurde hier 1778 geboren, der Pianist Claudio Arrau 1903.",
-				"Nach dem Erdbeben von 1939 schenkte Mexiko ihr eine Schule, die David Alfaro Siqueiros mit Wandbildern ausmalte."
+				"Die ursprüngliche Siedlung Chillán wurde 1580 als San Bartolomé de Gamboa gegründet; die Stadt zog 1835 an ihren heutigen Standort.",
+				"Der Pianist Claudio Arrau wurde 1903 in Chillán geboren.",
+				"Nach dem Erdbeben von 1939 schenkte Mexiko Chillán eine Schule, in der David Alfaro Siqueiros und Xavier Guerrero Wandbilder schufen."
 			]
 		}
 	},
 	"concepcion": {
 		"city": {
 			"en": [
-				"Founded in 1550 by Pedro de Valdivia at Penco, it was moved to its present site after an earthquake in 1751.",
-				"Chile’s independence was proclaimed here on 1 January 1818."
+				"Concepción was founded at Penco in 1550 as Concepción del Nuevo Extremo, before the settlement was later moved inland.",
+				"Chile’s declaration of independence bears the place and date Concepción, 1 January 1818.",
+				"The University of Concepción’s mural Presencia de América Latina, directed by Mexican artist Jorge González Camarena, was inaugurated in 1965."
 			],
 			"it": [
-				"Fondata nel 1550 da Pedro de Valdivia a Penco, fu spostata dove si trova oggi dopo un terremoto nel 1751.",
-				"Qui fu proclamata l’indipendenza del Cile, il 1º gennaio 1818."
+				"Concepción fu fondata a Penco nel 1550 come Concepción del Nuevo Extremo, prima che l’insediamento fosse trasferito nell’entroterra.",
+				"La dichiarazione d’indipendenza del Cile reca il luogo e la data Concepción, 1º gennaio 1818.",
+				"Il murale Presencia de América Latina dell’Università di Concepción, diretto dall’artista messicano Jorge González Camarena, fu inaugurato nel 1965."
 			],
 			"de": [
-				"1550 von Pedro de Valdivia in Penco gegründet, wurde sie nach einem Erdbeben 1751 an ihren heutigen Standort verlegt.",
-				"Chiles Unabhängigkeit wurde hier am 1. Januar 1818 ausgerufen."
+				"Concepción wurde 1550 in Penco als Concepción del Nuevo Extremo gegründet, bevor die Siedlung später ins Landesinnere verlegt wurde.",
+				"Chiles Unabhängigkeitserklärung trägt die Orts- und Datumsangabe Concepción, 1. Januar 1818.",
+				"Das unter Leitung des mexikanischen Künstlers Jorge González Camarena entstandene Wandbild Presencia de América Latina an der Universität Concepción wurde 1965 eingeweiht."
 			]
 		}
 	},
 	"copiapo": {
 		"city": {
 			"en": [
-				"The silver strike at Chañarcillo, in 1832, made it rich.",
-				"In 2010, 33 miners trapped for 69 days in the San José mine nearby were brought up alive."
+				"Copiapó was formally established under the name San Francisco de la Selva de Copiapó.",
+				"The discovery of silver at Chañarcillo in 1832 helped finance Copiapó’s nineteenth-century growth.",
+				"In 2010, thirty-three miners trapped for sixty-nine days in the San José mine near Copiapó were rescued alive."
 			],
 			"it": [
-				"La scoperta dell’argento a Chañarcillo, nel 1832, la rese ricca.",
-				"Nel 2010, 33 minatori rimasti intrappolati per 69 giorni nella vicina miniera di San José furono riportati in superficie vivi."
+				"Copiapó fu istituita formalmente con il nome San Francisco de la Selva de Copiapó.",
+				"La scoperta dell’argento a Chañarcillo nel 1832 contribuì a finanziare la crescita ottocentesca di Copiapó.",
+				"Nel 2010 trentatré minatori rimasti intrappolati per sessantanove giorni nella miniera di San José vicino a Copiapó furono salvati vivi."
 			],
 			"de": [
-				"Der Silberfund bei Chañarcillo 1832 machte sie reich.",
-				"2010 wurden 33 Bergleute, die 69 Tage lang in der nahen Mine San José eingeschlossen waren, lebend geborgen."
+				"Copiapó wurde unter dem Namen San Francisco de la Selva de Copiapó förmlich gegründet.",
+				"Der Silberfund bei Chañarcillo im Jahr 1832 trug zum Wachstum Copiapós im 19. Jahrhundert bei.",
+				"2010 wurden dreiunddreißig Bergleute lebend gerettet, die neunundsechzig Tage in der Mine San José nahe Copiapó eingeschlossen gewesen waren."
 			]
 		}
 	},
@@ -214,45 +233,57 @@
 		},
 		"city": {
 			"en": [
-				"It has grown together with La Serena into one urban area."
+				"Coquimbo’s name is sometimes interpreted as place of calm waters, but its language and exact derivation are disputed.",
+				"Coquimbo’s Mohammed VI cultural centre, incorporating a Moroccan-style mosque, was inaugurated in 2007.",
+				"Coquimbo’s Cruz del Tercer Milenio monument was built to mark the Catholic Jubilee of the year 2000."
 			],
 			"it": [
-				"È cresciuta insieme a La Serena fino a formare un unico agglomerato urbano."
+				"Il nome Coquimbo è talvolta interpretato come luogo dalle acque tranquille, ma la lingua d’origine e la derivazione esatta sono discusse.",
+				"Il centro culturale Mohammed VI di Coquimbo, che comprende una moschea in stile marocchino, fu inaugurato nel 2007.",
+				"Il monumento Cruz del Tercer Milenio di Coquimbo fu costruito per celebrare il Giubileo cattolico del 2000."
 			],
 			"de": [
-				"Sie ist mit La Serena zu einem Stadtgebiet zusammengewachsen."
+				"Coquimbos Name wird gelegentlich als Ort ruhiger Gewässer gedeutet, doch seine Ursprungssprache und genaue Ableitung sind umstritten.",
+				"Coquimbos Kulturzentrum Mohammed VI. mit einer Moschee im marokkanischen Stil wurde 2007 eingeweiht.",
+				"Das Denkmal Cruz del Tercer Milenio in Coquimbo wurde zum katholischen Jubiläumsjahr 2000 errichtet."
 			]
 		}
 	},
 	"curico": {
 		"city": {
 			"en": [
-				"The name is usually read as Mapuche for \"black water\".",
-				"It was founded in 1743."
+				"Curicó’s name is usually interpreted as black water in Mapudungun.",
+				"Curicó was founded in 1743 as San José de Buena Vista and later moved to its present site.",
+				"Curicó’s San Francisco Church lost its tower and part of its central nave in the earthquake of 2010."
 			],
 			"it": [
-				"Il nome è interpretato di solito come \"acqua nera\" in mapuche.",
-				"Fu fondata nel 1743."
+				"Il nome Curicó è solitamente interpretato come acqua nera in mapudungun.",
+				"Curicó fu fondata nel 1743 come San José de Buena Vista e in seguito trasferita nel sito attuale.",
+				"La chiesa di San Francisco di Curicó perse la torre e parte della navata centrale nel terremoto del 2010."
 			],
 			"de": [
-				"Der Name wird meist als Mapuche für „schwarzes Wasser“ gedeutet.",
-				"Sie wurde 1743 gegründet."
+				"Curicós Name wird gewöhnlich als schwarzes Wasser auf Mapudungun gedeutet.",
+				"Curicó wurde 1743 als San José de Buena Vista gegründet und später an seinen heutigen Standort verlegt.",
+				"Die San-Francisco-Kirche in Curicó verlor beim Erdbeben von 2010 ihren Turm und einen Teil des Mittelschiffs."
 			]
 		}
 	},
 	"iquique": {
 		"city": {
 			"en": [
-				"In the naval battle of Iquique, on 21 May 1879, Captain Arturo Prat died boarding a Peruvian ironclad; the day is Chile’s Navy Day.",
-				"Its free-trade zone, opened in 1975, is one of the largest in South America."
+				"Iquique appears in historical records under earlier forms including Ique-Ique.",
+				"Captain Arturo Prat died boarding the Peruvian ironclad Huáscar during the naval battle of Iquique on 21 May 1879.",
+				"Iquique’s free-trade zone began official operations in 1975."
 			],
 			"it": [
-				"Nella battaglia navale di Iquique, il 21 maggio 1879, il capitano Arturo Prat morì abbordando una corazzata peruviana; quel giorno è la festa della Marina cilena.",
-				"La sua zona franca, aperta nel 1975, è una delle più grandi del Sud America."
+				"Iquique compare nei documenti storici con forme precedenti fra cui Ique-Ique.",
+				"Il capitano Arturo Prat morì abbordando la corazzata peruviana Huáscar durante la battaglia navale di Iquique del 21 maggio 1879.",
+				"La zona franca di Iquique iniziò ufficialmente le proprie attività nel 1975."
 			],
 			"de": [
-				"In der Seeschlacht von Iquique am 21. Mai 1879 fiel Kapitän Arturo Prat beim Entern eines peruanischen Panzerschiffs; der Tag ist Chiles Tag der Marine.",
-				"Ihre 1975 eröffnete Freihandelszone ist eine der größten Südamerikas."
+				"In historischen Unterlagen erscheint Iquique unter älteren Formen wie Ique-Ique.",
+				"Kapitän Arturo Prat fiel am 21. Mai 1879 beim Entern des peruanischen Panzerschiffs Huáscar während der Seeschlacht von Iquique.",
+				"Iquiques Freihandelszone nahm 1975 offiziell ihren Betrieb auf."
 			]
 		}
 	},
@@ -278,29 +309,38 @@
 	"la-serena": {
 		"city": {
 			"en": [
-				"Founded in 1544, it is Chile’s second-oldest city, after Santiago.",
-				"The English buccaneer Bartholomew Sharp sacked it in 1680."
+				"La Serena was founded in 1544 as Villanueva de la Serena, named after Pedro de Valdivia’s home town in Spain.",
+				"The English buccaneer Bartholomew Sharp sacked and burned La Serena in 1680.",
+				"The Plan Serena urban renewal programme transformed La Serena during the presidency of Gabriel González Videla in 1946–1952."
 			],
 			"it": [
-				"Fondata nel 1544, è la seconda città più antica del Cile, dopo Santiago.",
-				"Il bucaniere inglese Bartholomew Sharp la saccheggiò nel 1680."
+				"La Serena fu fondata nel 1544 come Villanueva de la Serena, dal nome della città natale spagnola di Pedro de Valdivia.",
+				"Il bucaniere inglese Bartholomew Sharp saccheggiò e incendiò La Serena nel 1680.",
+				"Il programma di rinnovamento urbano Plan Serena trasformò La Serena durante la presidenza di Gabriel González Videla nel 1946–1952."
 			],
 			"de": [
-				"Sie wurde 1544 gegründet und ist nach Santiago Chiles zweitälteste Stadt.",
-				"Der englische Freibeuter Bartholomew Sharp plünderte sie 1680."
+				"La Serena wurde 1544 als Villanueva de la Serena gegründet, benannt nach Pedro de Valdivias Heimatstadt in Spanien.",
+				"Der englische Freibeuter Bartholomew Sharp plünderte und verbrannte La Serena 1680.",
+				"Das Stadterneuerungsprogramm Plan Serena veränderte La Serena während der Präsidentschaft Gabriel González Videlas von 1946–1952."
 			]
 		}
 	},
 	"los-angeles": {
 		"city": {
 			"en": [
-				"Founded in 1739 as Santa María de los Ángeles, a Spanish frontier town."
+				"Los Ángeles was established in 1739 as the Villa de Los Ángeles.",
+				"Los Ángeles’s Artequin museum opened in 2016 with reproductions of paintings and sculptures for art education.",
+				"The Lepün Kuifi Kimün exhibition in central Los Ángeles opened in 2024 to display Mapuche silverwork from the Raúl Morris collection."
 			],
 			"it": [
-				"Fondata nel 1739 come Santa María de los Ángeles, una cittadina spagnola di frontiera."
+				"Los Ángeles fu istituita nel 1739 come Villa de Los Ángeles.",
+				"Il museo Artequin di Los Ángeles aprì nel 2016 con riproduzioni di dipinti e sculture destinate all’educazione artistica.",
+				"L’esposizione Lepün Kuifi Kimün nel centro di Los Ángeles aprì nel 2024 per presentare l’argenteria mapuche della collezione Raúl Morris."
 			],
 			"de": [
-				"1739 als Santa María de los Ángeles gegründet, eine spanische Grenzstadt."
+				"Los Ángeles wurde 1739 als Villa de Los Ángeles gegründet.",
+				"Das Artequin-Museum in Los Ángeles wurde 2016 mit Reproduktionen von Gemälden und Skulpturen zur Kunstvermittlung eröffnet.",
+				"Die Ausstellung Lepün Kuifi Kimün im Zentrum von Los Ángeles wurde 2024 eröffnet und zeigt Mapuche-Silberarbeiten aus der Sammlung Raúl Morris."
 			]
 		}
 	},
@@ -326,16 +366,19 @@
 	"los-rios": {
 		"region": {
 			"en": [
-				"\"The rivers\": it was split from Los Lagos in 2007.",
-				"After the earthquake of 1960, a landslide dammed Lake Riñihue, and workers dug for weeks to drain it before it could flood Valdivia."
+				"Los Ríos means the rivers in Spanish, and the region was created in 2007.",
+				"After the 1960 earthquake, landslides blocked Lake Riñihue’s outflow, prompting an emergency effort to drain it before floodwaters reached Valdivia.",
+				"Niebla Castle in Los Ríos began as part of a Spanish defensive system established around Valdivia’s estuary in 1645."
 			],
 			"it": [
-				"\"I fiumi\": fu separata da Los Lagos nel 2007.",
-				"Dopo il terremoto del 1960 una frana sbarrò il lago Riñihue, e per settimane gli operai scavarono per svuotarlo prima che inondasse Valdivia."
+				"Los Ríos significa i fiumi in spagnolo e la regione fu creata nel 2007.",
+				"Dopo il terremoto del 1960, alcune frane bloccarono il deflusso del lago Riñihue, avviando un intervento d’emergenza per svuotarlo prima che le acque alluvionali raggiungessero Valdivia.",
+				"Il castello di Niebla, nella regione di Los Ríos, nacque come parte di un sistema difensivo spagnolo istituito intorno all’estuario di Valdivia nel 1645."
 			],
 			"de": [
-				"„Die Flüsse“: Sie wurde 2007 von Los Lagos abgetrennt.",
-				"Nach dem Erdbeben von 1960 staute ein Erdrutsch den Riñihue-See, und Arbeiter gruben wochenlang, um ihn abzulassen, bevor er Valdivia überfluten konnte."
+				"Los Ríos bedeutet auf Spanisch die Flüsse; die Region wurde 2007 geschaffen.",
+				"Nach dem Erdbeben von 1960 blockierten Erdrutsche den Abfluss des Riñihue-Sees, worauf Notarbeiten begannen, um ihn vor einer Überflutung Valdivias zu entwässern.",
+				"Die Burg Niebla in Los Ríos entstand als Teil eines spanischen Verteidigungssystems, das 1645 um die Flussmündung von Valdivia angelegt wurde."
 			]
 		}
 	},
@@ -361,16 +404,19 @@
 	"maule": {
 		"region": {
 			"en": [
-				"Named for the river Maule, which roughly marked the southern edge of the Inca empire.",
-				"The earthquake of 27 February 2010, of magnitude 8.8, hit this region and Biobío hardest."
+				"Maule Region takes its name from the Maule River.",
+				"The magnitude-8.8 Maule earthquake struck on 27 February 2010 and caused widespread destruction in central Chile.",
+				"In Rari, in Maule Region, women weave miniature figures from horsehair using a craft passed down through generations."
 			],
 			"it": [
-				"Prende il nome dal fiume Maule, che segnava più o meno il confine meridionale dell’impero inca.",
-				"Il terremoto del 27 febbraio 2010, di magnitudo 8,8, colpì più duramente questa regione e il Biobío."
+				"La regione del Maule prende il nome dal fiume Maule.",
+				"Il terremoto del Maule di magnitudo 8,8 colpì il 27 febbraio 2010 e causò vaste distruzioni nel Cile centrale.",
+				"A Rari, nella regione del Maule, le donne intrecciano figure in miniatura con crini di cavallo, praticando un mestiere tramandato di generazione in generazione."
 			],
 			"de": [
-				"Nach dem Fluss Maule benannt, der ungefähr die Südgrenze des Inkareiches markierte.",
-				"Das Erdbeben vom 27. Februar 2010 der Stärke 8,8 traf diese Region und Biobío am schwersten."
+				"Die Region Maule ist nach dem Fluss Maule benannt.",
+				"Das Maule-Erdbeben der Stärke 8,8 ereignete sich am 27. Februar 2010 und verursachte großflächige Zerstörungen in Zentralchile.",
+				"In Rari in der Region Maule flechten Frauen Miniaturfiguren aus Pferdehaar nach einer über Generationen weitergegebenen Handwerkstradition."
 			]
 		}
 	},
@@ -396,16 +442,19 @@
 	"nuble": {
 		"region": {
 			"en": [
-				"Named for the river Ñuble; it became Chile’s newest region in 2018, split from Biobío.",
-				"The singer Violeta Parra was born here in 1917, probably at San Carlos."
+				"Ñuble Region is named after the Ñuble River and became a separate region in 2018.",
+				"San Carlos in Ñuble preserves the house officially recognized as the birthplace of Violeta Parra, born in 1917.",
+				"The pottery traditions of Quinchamalí and Santa Cruz de Cuca in Ñuble were added to UNESCO’s urgent safeguarding list in 2022."
 			],
 			"it": [
-				"Prende il nome dal fiume Ñuble; nel 2018 è diventata la regione più giovane del Cile, separata dal Biobío.",
-				"La cantante Violeta Parra nacque qui nel 1917, probabilmente a San Carlos."
+				"La regione di Ñuble prende il nome dal fiume Ñuble e divenne una regione separata nel 2018.",
+				"San Carlos, nel Ñuble, conserva la casa ufficialmente riconosciuta come luogo di nascita di Violeta Parra, nata nel 1917.",
+				"Le tradizioni ceramiche di Quinchamalí e Santa Cruz de Cuca, nel Ñuble, furono inserite nella lista UNESCO di salvaguardia urgente nel 2022."
 			],
 			"de": [
-				"Nach dem Fluss Ñuble benannt; sie wurde 2018 Chiles jüngste Region, von Biobío abgetrennt.",
-				"Die Sängerin Violeta Parra wurde hier 1917 geboren, wahrscheinlich in San Carlos."
+				"Die Region Ñuble ist nach dem Fluss Ñuble benannt und wurde 2018 eine eigenständige Region.",
+				"San Carlos in Ñuble bewahrt das Haus, das offiziell als Geburtshaus der 1917 geborenen Violeta Parra anerkannt ist.",
+				"Die Töpfertraditionen von Quinchamalí und Santa Cruz de Cuca in Ñuble wurden 2022 in die UNESCO-Liste des dringend erhaltungsbedürftigen immateriellen Kulturerbes aufgenommen."
 			]
 		}
 	},
@@ -431,32 +480,38 @@
 	"osorno": {
 		"city": {
 			"en": [
-				"Founded in 1558, it took its name from Osorno in Spain.",
-				"German settlers from the 1850s made it a town of dairy farms and cattle."
+				"Osorno was founded in 1558 as San Mateo de Osorno, honouring the Spanish Count of Osorno.",
+				"German immigrant families were established in Osorno by 1851, becoming part of the town’s commercial and industrial development.",
+				"Spanish authorities completed Fuerte Reina Luisa in Osorno in 1794 to secure the town’s resettlement."
 			],
 			"it": [
-				"Fondata nel 1558, prese il nome da Osorno, in Spagna.",
-				"I coloni tedeschi arrivati dagli anni Cinquanta dell’Ottocento ne fecero una città di caseifici e bestiame."
+				"Osorno fu fondata nel 1558 come San Mateo de Osorno, in onore del conte spagnolo di Osorno.",
+				"Famiglie di immigrati tedeschi erano insediate a Osorno già nel 1851 e contribuirono allo sviluppo commerciale e industriale della città.",
+				"Le autorità spagnole completarono il Fuerte Reina Luisa a Osorno nel 1794 per proteggere il ripopolamento della città."
 			],
 			"de": [
-				"1558 gegründet, erhielt sie ihren Namen nach Osorno in Spanien.",
-				"Deutsche Siedler machten sie ab den 1850er-Jahren zu einer Stadt der Milchwirtschaft und Viehzucht."
+				"Osorno wurde 1558 als San Mateo de Osorno gegründet, zu Ehren des spanischen Grafen von Osorno.",
+				"Deutsche Einwandererfamilien lebten bereits 1851 in Osorno und wurden Teil der wirtschaftlichen und industriellen Entwicklung der Stadt.",
+				"Die spanischen Behörden vollendeten 1794 das Fuerte Reina Luisa in Osorno, um die Wiederbesiedlung der Stadt zu sichern."
 			]
 		}
 	},
 	"puerto-montt": {
 		"city": {
 			"en": [
-				"Named for Manuel Montt, president of Chile when German settlers founded it in 1853.",
-				"The Carretera Austral, the road into Patagonia, begins here."
+				"Puerto Montt was named after President Manuel Montt when Vicente Pérez Rosales founded the town in 1853.",
+				"The Carretera Austral begins at Puerto Montt and continues south to Villa O’Higgins.",
+				"Painter Arturo Pacheco Altamirano depicted the busy commercial life of Puerto Montt’s Angelmó harbour district."
 			],
 			"it": [
-				"Prende il nome da Manuel Montt, presidente del Cile quando i coloni tedeschi la fondarono nel 1853.",
-				"Qui comincia la Carretera Austral, la strada verso la Patagonia."
+				"Puerto Montt prese il nome dal presidente Manuel Montt quando Vicente Pérez Rosales fondò la città nel 1853.",
+				"La Carretera Austral inizia a Puerto Montt e prosegue verso sud fino a Villa O’Higgins.",
+				"Il pittore Arturo Pacheco Altamirano raffigurò l’intensa vita commerciale del quartiere portuale Angelmó di Puerto Montt."
 			],
 			"de": [
-				"Nach Manuel Montt benannt, dem Präsidenten Chiles, als deutsche Siedler sie 1853 gründeten.",
-				"Die Carretera Austral, die Straße nach Patagonien, beginnt hier."
+				"Puerto Montt wurde nach Präsident Manuel Montt benannt, als Vicente Pérez Rosales die Stadt 1853 gründete.",
+				"Die Carretera Austral beginnt in Puerto Montt und führt südwärts nach Villa O’Higgins.",
+				"Der Maler Arturo Pacheco Altamirano stellte das geschäftige Handelsleben im Hafenviertel Angelmó von Puerto Montt dar."
 			]
 		}
 	},
@@ -482,42 +537,57 @@
 	"rancagua": {
 		"city": {
 			"en": [
-				"In the Disaster of Rancagua, in 1814, Spanish royalists defeated the patriots of Bernardo O’Higgins.",
-				"The El Teniente copper mine is in the mountains above it."
+				"Rancagua was founded in 1743 under the name Villa Santa Cruz de Triana.",
+				"In the battle of Rancagua in October 1814, Spanish royalists defeated the patriot forces led by Bernardo O’Higgins.",
+				"Rancagua’s regional museum occupies the eighteenth-century Casa del Ochavo and Casa del Pilar de Esquina, surviving buildings from the colonial town."
 			],
 			"it": [
-				"Nel Disastro di Rancagua, nel 1814, i realisti spagnoli sconfissero i patrioti di Bernardo O’Higgins.",
-				"La miniera di rame di El Teniente si trova sui monti sopra la città."
+				"Rancagua fu fondata nel 1743 con il nome Villa Santa Cruz de Triana.",
+				"Nella battaglia di Rancagua dell’ottobre 1814, i realisti spagnoli sconfissero le forze patriottiche guidate da Bernardo O’Higgins.",
+				"Il museo regionale di Rancagua occupa le settecentesche Casa del Ochavo e Casa del Pilar de Esquina, edifici superstiti della città coloniale."
 			],
 			"de": [
-				"In der Katastrophe von Rancagua 1814 besiegten spanische Royalisten die Patrioten von Bernardo O’Higgins.",
-				"Das Kupferbergwerk El Teniente liegt in den Bergen über ihr."
+				"Rancagua wurde 1743 unter dem Namen Villa Santa Cruz de Triana gegründet.",
+				"In der Schlacht von Rancagua im Oktober 1814 besiegten spanische Royalisten die von Bernardo O’Higgins geführten Patrioten.",
+				"Das Regionalmuseum von Rancagua befindet sich in der Casa del Ochavo und der Casa del Pilar de Esquina aus dem 18. Jahrhundert, erhaltenen Gebäuden der Kolonialstadt."
 			]
 		}
 	},
 	"san-antonio": {
 		"city": {
 			"en": [
-				"It is one of the busiest ports in Chile."
+				"San Antonio was historically known as San Antonio de las Bodegas, a name linked to colonial warehouses.",
+				"San Antonio’s historic Grúa 82 crane was built in Lyon, France, and brought to Chile in 1911 for port construction.",
+				"President Ramón Barros Luco attended the laying of the first stone of San Antonio’s modern port works in 1912."
 			],
 			"it": [
-				"È uno dei porti più trafficati del Cile."
+				"San Antonio era storicamente conosciuta come San Antonio de las Bodegas, un nome legato ai magazzini coloniali.",
+				"La storica gru Grúa 82 di San Antonio fu costruita a Lione, in Francia, e portata in Cile nel 1911 per i lavori del porto.",
+				"Il presidente Ramón Barros Luco partecipò alla posa della prima pietra dei lavori del porto moderno di San Antonio nel 1912."
 			],
 			"de": [
-				"Sie ist einer der verkehrsreichsten Häfen Chiles."
+				"San Antonio war historisch als San Antonio de las Bodegas bekannt, ein Name mit Bezug auf koloniale Lagerhäuser.",
+				"San Antonios historischer Kran Grúa 82 wurde im französischen Lyon gebaut und 1911 für den Hafenbau nach Chile gebracht.",
+				"Präsident Ramón Barros Luco nahm 1912 an der Grundsteinlegung für den Ausbau des modernen Hafens von San Antonio teil."
 			]
 		}
 	},
 	"san-bernardo": {
 		"city": {
 			"en": [
-				"Founded in 1821 under Bernardo O’Higgins, it was named for his patron saint."
+				"San Bernardo was founded in 1821 and named in honour of Bernardo O’Higgins.",
+				"San Bernardo’s Maestranza railway workshop drew hundreds of workers to the city during the early twentieth century.",
+				"San Bernardo’s National Folklore Festival began in 1972."
 			],
 			"it": [
-				"Fondata nel 1821 sotto Bernardo O’Higgins, prese il nome dal suo santo patrono."
+				"San Bernardo fu fondata nel 1821 e chiamata così in onore di Bernardo O’Higgins.",
+				"L’officina ferroviaria Maestranza di San Bernardo attirò in città centinaia di lavoratori all’inizio del Novecento.",
+				"Il Festival nazionale del folclore di San Bernardo iniziò nel 1972."
 			],
 			"de": [
-				"1821 unter Bernardo O’Higgins gegründet, wurde sie nach seinem Namenspatron benannt."
+				"San Bernardo wurde 1821 gegründet und zu Ehren von Bernardo O’Higgins benannt.",
+				"Die Eisenbahnwerkstatt Maestranza in San Bernardo zog Anfang des 20. Jahrhunderts Hunderte Arbeiter in die Stadt.",
+				"Das Nationale Folklorefestival von San Bernardo begann 1972."
 			]
 		}
 	},
@@ -543,29 +613,38 @@
 	"talca": {
 		"city": {
 			"en": [
-				"Founded in 1742, it is where Bernardo O’Higgins is said to have signed Chile’s declaration of independence in 1818."
+				"Talca was refounded in 1742 with the title Villa San Agustín de Talca.",
+				"Bernardo O’Higgins approved Chile’s declaration of independence in Talca in February 1818.",
+				"Talca’s O’Higginiano and Fine Arts Museum opened in a colonial house in 1964, after being established by law in 1945."
 			],
 			"it": [
-				"Fondata nel 1742, è qui che si dice Bernardo O’Higgins abbia firmato la dichiarazione d’indipendenza del Cile nel 1818."
+				"Talca fu rifondata nel 1742 con il titolo Villa San Agustín de Talca.",
+				"Bernardo O’Higgins approvò la dichiarazione d’indipendenza del Cile a Talca nel febbraio 1818.",
+				"Il Museo O’Higginiano e di belle arti di Talca aprì in una casa coloniale nel 1964, dopo essere stato istituito per legge nel 1945."
 			],
 			"de": [
-				"Sie wurde 1742 gegründet; hier soll Bernardo O’Higgins 1818 Chiles Unabhängigkeitserklärung unterzeichnet haben."
+				"Talca wurde 1742 unter dem Titel Villa San Agustín de Talca neu gegründet.",
+				"Bernardo O’Higgins billigte Chiles Unabhängigkeitserklärung im Februar 1818 in Talca.",
+				"Talcas O’Higginiano- und Kunstmuseum wurde nach seiner gesetzlichen Gründung von 1945 im Jahr 1964 in einem Kolonialhaus eröffnet."
 			]
 		}
 	},
 	"talcahuano": {
 		"city": {
 			"en": [
-				"The chief base of the Chilean navy.",
-				"The Huáscar, an ironclad captured from Peru in 1879, is kept here as a museum ship."
+				"Talcahuano’s Mapudungun name is commonly rendered as thundering sky.",
+				"The Huáscar, an ironclad captured from Peru in 1879, is preserved as a museum ship at Talcahuano.",
+				"Talcahuano’s naval dry dock No. 1 was inaugurated in 1896 after construction began in 1888."
 			],
 			"it": [
-				"La principale base della marina cilena.",
-				"Qui è conservata come nave museo la Huáscar, una corazzata catturata al Perù nel 1879."
+				"Il nome mapudungun di Talcahuano è comunemente tradotto come cielo tuonante.",
+				"La Huáscar, una corazzata catturata al Perù nel 1879, è conservata come nave museo a Talcahuano.",
+				"Il bacino di carenaggio navale n. 1 di Talcahuano fu inaugurato nel 1896, dopo l’inizio dei lavori nel 1888."
 			],
 			"de": [
-				"Der wichtigste Stützpunkt der chilenischen Marine.",
-				"Die Huáscar, ein 1879 von Chile erbeutetes peruanisches Panzerschiff, wird hier als Museumsschiff aufbewahrt."
+				"Talcahuanos Name aus dem Mapudungun wird gewöhnlich als donnernder Himmel wiedergegeben.",
+				"Die Huáscar, ein 1879 von Peru erbeutetes Panzerschiff, wird in Talcahuano als Museumsschiff bewahrt.",
+				"Das Marinetrockendock Nr. 1 in Talcahuano wurde 1896 eingeweiht, nachdem der Bau 1888 begonnen hatte."
 			]
 		}
 	},
@@ -665,17 +744,151 @@
 	"vina-del-mar": {
 		"city": {
 			"en": [
-				"\"Vineyard of the sea\", for the colonial estate, with its vineyard, on which it was built.",
-				"Its international song festival, held since 1960, is one of the best known in Latin America."
+				"Viña del Mar means vineyard of the sea and takes its name from a colonial estate with vineyards.",
+				"The first Viña del Mar Song Festival was held in February 1960.",
+				"Viña del Mar’s Vergara Palace was rebuilt after the earthquake of 1906 to a design by Italian architect Ettore Petri."
 			],
 			"it": [
-				"\"Vigna del mare\", per la tenuta coloniale, con il suo vigneto, su cui fu costruita.",
-				"Il suo festival internazionale della canzone, che si tiene dal 1960, è uno dei più noti dell’America Latina."
+				"Viña del Mar significa vigna del mare e prende il nome da una tenuta coloniale con vigneti.",
+				"Il primo Festival della canzone di Viña del Mar si tenne nel febbraio 1960.",
+				"Il palazzo Vergara di Viña del Mar fu ricostruito dopo il terremoto del 1906 su progetto dell’architetto italiano Ettore Petri."
 			],
 			"de": [
-				"„Weinberg am Meer“, nach dem kolonialen Gut mit Weinberg, auf dem sie gebaut wurde.",
-				"Ihr seit 1960 veranstaltetes internationales Liederfestival ist eines der bekanntesten Lateinamerikas."
+				"Viña del Mar bedeutet Weinberg am Meer und ist nach einem Kolonialgut mit Weinbergen benannt.",
+				"Das erste Liederfestival von Viña del Mar fand im Februar 1960 statt.",
+				"Der Vergara-Palast in Viña del Mar wurde nach dem Erdbeben von 1906 nach einem Entwurf des italienischen Architekten Ettore Petri neu errichtet."
 			]
 		}
+	},
+	"_sources": {
+		"maule:region": [
+			"https://www.subturismo.gob.cl/wp-content/uploads/2023/12/tourism-doing-business-investing-in-chile-1-231207-130718.pdf",
+			"https://earthquake.usgs.gov/earthquakes/eventpage/official20100227063411530_30/executive",
+			"https://observatorio.cultura.gob.cl/index.php/2022/08/22/artesanas-de-rari/",
+			"https://www.goremaule.cl/goremauleVII/wp-content/uploads/2023/09/Portafolio-del-Patrimonio-Cultural-del-Maule..pdf"
+		],
+		"nuble:region": [
+			"https://www.scielo.cl/scielo.php?pid=S0718-93032010000200008&script=sci_arttext",
+			"https://www.sigpa.cl/media/upload/comite_asesor/resoluciones/003_SNP_REX_637_Diciembre2017_1.pdf",
+			"https://www.monumentos.gob.cl/monumentos/monumentos-historicos/casa-donde-nacio-violeta-parra",
+			"https://www.dirac.gob.cl/noticias/artesania/alfareria-de-quinchamali-y-santa-cruz-de-cuca-ingresa-a-la-lista-de"
+		],
+		"los-rios:region": [
+			"https://energia.gob.cl/noticias/los-rios/energia-de-la-region-de-los-rios",
+			"https://www.sfgp.gob.cl/sites/www.sfgp.gob.cl/files/2024-09/Cataclismo.%20Memorias%20de%20la%20megacat%C3%A1strofe%20de%201960.pdf",
+			"https://www.castillodeniebla.gob.cl/castillo-de-niebla",
+			"https://pip.cultura.gob.cl/museo-de-sitio-castillo-de-niebla/"
+		],
+		"arica:city": [
+			"https://www.cultura.gob.cl/redcultura/wp-content/uploads/sites/69/2025/12/pmc_arica_2026_2029.pdf",
+			"https://www.memoriachilena.gob.cl/602/w3-article-92277.html",
+			"https://www.bcn.cl/leychile/navegar?idNorma=220134",
+			"https://www.gorecoquimbo.cl/gore/site/docs/20150727/20150727103239/libro_ppvp_02_2014.pdf"
+		],
+		"iquique:city": [
+			"https://www.goretarapaca.gov.cl/nuestra-region/geografica/",
+			"https://www.memoriachilena.gob.cl/archivos2/pdfs/MC0054338.pdf",
+			"https://www.armada.cl/tradicion-e-historia/efemerides-navales/mayo/21-de-mayo-de-1879",
+			"https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=94401889416f94dd9d490f89e97397a5VFdwQmVVMXFRVEpOUkVrd1RtcEZNRTVCUFQwPQ%3D%3D&secuencia=-1&t=1747520160"
+		],
+		"calama:city": [
+			"https://www.bibliotecanacional.gob.cl/sites/www.bibliotecanacional.gob.cl/files/2022-07/De%20idolos%20a%20santos.pdf",
+			"https://eros.usgs.gov/earthshots/moving-town",
+			"https://www.codelco.com/flipbook/reporte_sustentabilidad/2007/pdf/ReporteCodelco2007.pdf",
+			"https://www.muhncal.cl/"
+		],
+		"antofagasta:city": [
+			"https://www.memoriachilena.gob.cl/602/w3-article-3296.html",
+			"https://www.museodeantofagasta.gob.cl/multimedia/sala-no-8-los-origenes-de-la-ciudad-de-antofagasta-y-la-ocupacion-chilena-1866-1891",
+			"https://www.monumentos.gob.cl/monumentos/zonas-tipicas/barrio-historico-de-la-ciudad-de-antofagasta"
+		],
+		"copiapo:city": [
+			"https://www.memoriachilena.gob.cl/602/w3-article-93044.html",
+			"https://www.memoriachilena.gob.cl/602/w3-article-3401.html",
+			"https://spinoff.nasa.gov/Spinoff2011/pdf/Spinoff2011.pdf",
+			"https://www.guinnessworldrecords.com/world-records/longest-time-survived-trapped-underground"
+		],
+		"la-serena:city": [
+			"https://www.bibliotecanacionaldigital.gob.cl/bnd/635/w3-article-709.html",
+			"https://www.memoriachilena.gob.cl/602/w3-article-94648.html",
+			"https://www.memoriachilena.gob.cl/602/w3-article-94326.html",
+			"https://www.monumentos.gob.cl/monumentos/zonas-tipicas/centro-historico-de-la-serena"
+		],
+		"coquimbo:city": [
+			"https://turismoregiondecoquimbo.cl/wp-content/uploads/2024/03/Destino-Coquimbo-2022.pdf",
+			"https://www.centromohammed6.cl/centro/",
+			"https://www.onar.gob.cl/representantes-de-onar-visitan-mezquita-centro-mohamed-vi-de-coquimbo/",
+			"https://www.sernatur.cl/wp-content/uploads/2018/09/IV-REGION-DE-COQUIMBO.pdf"
+		],
+		"vina-del-mar:city": [
+			"https://www.memoriachilena.gob.cl/602/w3-article-7682.html",
+			"https://www.memoriachilena.gob.cl/602/w3-article-96432.html",
+			"https://revistamusicalchilena.uchile.cl/index.php/RMCH/article/view/13025",
+			"https://www.monumentos.gob.cl/monumentos/monumentos-historicos/palacio-y-parque-vergara"
+		],
+		"san-antonio:city": [
+			"https://cuentapublica.sanantonio.cl/estudios-sin-tramitar-ni-aprobados/plan-regulador-comunal-global/item/955-historia-de-la-comuna-de-san-antonio.html",
+			"https://www.bcn.cl/leychile/navegar?idNorma=21298",
+			"https://www.puertosanantonio.com/psa/site/docs/20200804/20200804122024/memoria_2010.pdf"
+		],
+		"san-bernardo:city": [
+			"https://www.bibliotecanacionaldigital.gob.cl/pywb/all/20190909051142mp_/http%3A/www.memoriachilena.gob.cl/602/w3-article-584990.html",
+			"https://www.memoriachilena.gob.cl/602/w3-article-584996.html",
+			"https://www.sanbernardo.cl/web/archivo-historico/05/03-Rescata-Engranajesdelamemoria-2016.pdf"
+		],
+		"rancagua:city": [
+			"https://www.museorancagua.gob.cl/espacios/casa-del-ochavo-y-casa-del-pilar-de-esquina",
+			"https://www.rancagua.cl/upload/pdf/PyT_Monumentos.pdf",
+			"https://www.bcn.cl/historiapolitica/hitos_periodo/detalle_periodo.html?K=1&filtros=1%2C2%2C3%2C4%2C5%2C6&pagina=2&per=1811-1823",
+			"https://www.museorancagua.gob.cl/noticias/sala-rancagua-en-la-independencia"
+		],
+		"curico:city": [
+			"https://www.cultura.gob.cl/redcultura/wp-content/uploads/sites/69/2023/07/1.-plan_de_gestion_ccco_2018-2023.pdf",
+			"https://arquitectura.mop.gob.cl/uploads/sites/6/2026/01/BGI-direccion-de-arquitectura-2017.pdf"
+		],
+		"talca:city": [
+			"https://www.memoriachilena.gob.cl/602/w3-article-92848.html",
+			"https://www.memoriachilena.gob.cl/602/w3-article-804.html",
+			"https://www.museodetalca.gob.cl/sites/www.museodetalca.gob.cl/files/images/articles-85222_archivo_01.pdf",
+			"https://www.academiahistoriamilitar.cl/academia/firma-de-la-independencia-de-chile/",
+			"https://www.museodetalca.gob.cl/quienes-somos"
+		],
+		"chillan:city": [
+			"https://www.memoriachilena.gob.cl/602/w3-article-3334.html",
+			"https://www.archivohistoricoconcepcion.cl/wp-content/uploads/2022/04/elroblechillan.pdf",
+			"https://www.memoriachilena.gob.cl/602/w3-article-3337.html",
+			"https://municipalidadchillan.cl/sitio/menu/municipalidad/murales.php",
+			"https://www.agcid.gob.cl/sala-de-prensa/946-escuela-mexico-legado-muralista-siqueiros-en-chile"
+		],
+		"talcahuano:city": [
+			"https://www.talcahuano.cl/adm/imagenes/ckfinder/files/06%20PLADECO%202024-2027%20%20I_MUNICIPALIDAD%20DE%20TALCAHUANO.pdf",
+			"https://www.subdere.gob.cl/taxonomy/term/1955",
+			"https://www.armada.cl/unidades-navales/superficie/reliquia-historica/rh-huascar",
+			"https://arhisar.infodi.cl/items/show/6210",
+			"https://www.archivohistoricoconcepcion.cl/wp-content/uploads/2022/05/libro_prat.pdf"
+		],
+		"concepcion:city": [
+			"https://www.archivonacional.gob.cl/los-inicios-de-la-ciudad-de-concepcion",
+			"https://www.biobioestuyo.cl/wp-content/uploads/2017/04/GTConcepcion_web.pdf",
+			"https://www.bcn.cl/leychile/Navegar?idNorma=1063880&idVersion=1818-01-01",
+			"https://www.bcn.cl/obtienearchivo?id=documentos%2F10221.1%2F61342%2F1%2FCongreso_Nacional.pdf",
+			"https://www.udec.cl/sobre-la-udec/historia/linea-de-tiempo/"
+		],
+		"los-angeles:city": [
+			"https://www.losangeles.cl/historia/",
+			"https://www.cmpc.com/assets/uploads/2016/04/CMPC-Memoria-2015.pdf",
+			"https://www.museoschile.gob.cl/sites/www.museoschile.gob.cl/files/2026-06/Revista%20Museos%20%2343.pdf"
+		],
+		"osorno:city": [
+			"https://municipalidadosorno.cl/new/ciudad.php",
+			"https://www.cervantesvirtual.com/obra-visor/historia-de-osorno--0/html/ff78c700-82b1-11df-acc7-002185ce6064_4.html",
+			"https://observatorio.cultura.gob.cl/wp-content/uploads/2021/09/La-destruccion-de-Osorno.pdf",
+			"https://www.osornomuseos.cl/webmuseo/fuertereinaluisa.html"
+		],
+		"puerto-montt:city": [
+			"https://www.memoriachilena.gob.cl/602/w3-article-783.html",
+			"https://chile.travel/destinos/carretera-austral/",
+			"https://www.puertomontt.cl/wp-content/uploads/2022/10/Memoria_PLADECO_2016-1.pdf"
+		]
 	}
 }

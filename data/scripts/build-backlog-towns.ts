@@ -13,7 +13,7 @@ export const BACKLOG_TOWNS = [
 		id: 'denmark',
 		country: 'Denmark',
 		regions: 'denmark-regions',
-		retained: ['Aalborg', 'Aarhus', 'Vejle', 'Copenhagen', 'Esbjerg', 'Odense']
+		retained: ['Aalborg', 'Aarhus', 'Vejle', 'Copenhagen', 'Esbjerg', 'Odense', 'Hillerød']
 	},
 	{
 		id: 'norway',
@@ -34,12 +34,34 @@ export const BACKLOG_TOWNS = [
 		id: 'serbia',
 		country: 'Serbia',
 		regions: 'serbia-districts',
-		retained: ['Subotica', 'Zrenjanin', 'Novi Sad', 'Belgrade', 'Kragujevac', 'Čačak', 'Niš']
+		retained: [
+			'Subotica',
+			'Zrenjanin',
+			'Novi Sad',
+			'Belgrade',
+			'Kragujevac',
+			'Čačak',
+			'Niš',
+			'Kikinda',
+			'Pančevo',
+			'Valjevo',
+			'Bor',
+			'Jagodina',
+			'Užice',
+			'Kraljevo',
+			'Kruševac',
+			'Prijepolje',
+			'Novi Pazar',
+			'Leskovac',
+			'Vranje',
+			'Vršac',
+			'Prokuplje'
+		]
 	}
 ];
 for (const spec of BACKLOG_TOWNS.filter((spec) => spec.id !== 'norway')) {
 	const source =
-		spec.id === 'denmark' ? 'denmark-regions-natural-earth.geojson' : 'serbia-districts-gb.geojson';
+		spec.id === 'denmark' ? 'denmark-regions-gb-9469f09.geojson' : 'serbia-districts-gb.geojson';
 	run('build-map.ts', [
 		'--country=' + spec.country,
 		'--type=' + (spec.id === 'denmark' ? 'region' : 'district'),
@@ -52,7 +74,7 @@ for (const spec of BACKLOG_TOWNS.filter((spec) => spec.id !== 'norway')) {
 		'--places-source=data/places/' + spec.id + '.geojson',
 		'--attribution=' +
 			(spec.id === 'denmark'
-				? 'Natural Earth (public domain)'
+				? 'geoBoundaries / Web Vectors Map, CC BY 4.0, https://creativecommons.org/licenses/by/4.0/'
 				: '© OpenStreetMap contributors, ODbL (via geoBoundaries)')
 	]);
 	run('build-terrain.ts', ['--map=' + spec.regions, '--force']);
@@ -64,6 +86,8 @@ run('build-map.ts', [
 	'--out=data/maps/norway-counties',
 	'--name=Norway — Counties',
 	'--source=data/boundaries/norway-counties-2024.geojson',
+	// Natural Earth is a curated place sample, insufficient for county-wide ranks.
+	'--largest-city-facts=false',
 	'--source-name-field=name',
 	'--name-field=name',
 	'--boundary-facts=true',
@@ -79,7 +103,7 @@ for (const spec of BACKLOG_TOWNS) {
 		'--name-field=NAME',
 		'--min-population=10000',
 		'--min-count=20',
-		'--max-count=20',
+		'--max-count=' + (spec.id === 'serbia' ? 30 : 20),
 		'--retain=' + spec.retained.join(','),
 		'--regions-map=' + spec.regions,
 		'--out=data/maps/' + id,

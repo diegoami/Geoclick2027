@@ -1,3 +1,4 @@
+import { placeSourceAttribution } from './placeSourceAttribution.js';
 import { correctPlaces, placeCorrectionAttribution } from './placeCorrections.js';
 import { appendNeutralBoundaryContext } from './neutralBoundaryContext.js';
 // Builds one point-target map package (towns/cities) from Natural Earth's
@@ -150,7 +151,8 @@ async function main() {
 	// before it existed rebuilds identically.
 	const minSpacing = Number(args['min-spacing'] ?? 0);
 	let attribution = placesSource
-		? 'Wikidata (CC0), https://www.wikidata.org; Natural Earth (public domain), https://www.naturalearthdata.com'
+		? placeSourceAttribution(sourcePath) +
+			'; Natural Earth (public domain), https://www.naturalearthdata.com'
 		: 'Natural Earth (public domain), https://www.naturalearthdata.com';
 	// Reuse the administrative map's current polygons and canonical names.
 	const regionsMapId = args['regions-map'];

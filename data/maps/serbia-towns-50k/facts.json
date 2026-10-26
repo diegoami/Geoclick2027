@@ -1,7 +1,7 @@
 {
 	"subotica": {
 		"kind": "city",
-		"population": 105681,
+		"population": 88752,
 		"populationRank": 5,
 		"region": "North Bačka",
 		"coastal": false,
@@ -26,11 +26,11 @@
 	},
 	"kikinda": {
 		"kind": "city",
-		"population": 38065,
-		"populationRank": 16,
+		"population": 32084,
+		"populationRank": 25,
 		"region": "North Banat",
 		"coastal": false,
-		"position": "north-west",
+		"position": "north",
 		"hooks": {
 			"en": [
 				"It was officially called Velika Kikinda, Great Kikinda, until 1947.",
@@ -49,13 +49,38 @@
 			]
 		}
 	},
+	"sombor": {
+		"kind": "city",
+		"population": 41814,
+		"populationRank": 20,
+		"region": "West Bačka",
+		"coastal": false,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Sombor has also been known by the Hungarian name Zombor.",
+				"Sombor’s County Hall displays Ferenc Eisenhut’s Battle of Zenta, painted for the Hungarian millennium celebrations of 1896.",
+				"Sombor’s Milan Konjović Gallery opened in 1966 with a collection donated by the painter to his home town."
+			],
+			"it": [
+				"Sombor è stata conosciuta anche con il nome ungherese Zombor.",
+				"Il palazzo della Contea di Sombor espone La battaglia di Zenta di Ferenc Eisenhut, dipinta per le celebrazioni del millennio ungherese del 1896.",
+				"La Galleria Milan Konjović di Sombor aprì nel 1966 con una collezione donata dal pittore alla città natale."
+			],
+			"de": [
+				"Sombor war auch unter dem ungarischen Namen Zombor bekannt.",
+				"Im Komitatshaus von Sombor hängt Ferenc Eisenhuts Schlacht bei Zenta, gemalt für die ungarischen Millenniumsfeiern von 1896.",
+				"Die Milan-Konjović-Galerie in Sombor wurde 1966 mit einer Sammlung eröffnet, die der Maler seiner Heimatstadt schenkte."
+			]
+		}
+	},
 	"zrenjanin": {
 		"kind": "city",
 		"population": 67129,
 		"populationRank": 9,
 		"region": "Central Banat",
 		"coastal": false,
-		"position": "north-west",
+		"position": "north",
 		"hooks": {
 			"en": [
 				"Formerly Veliki Bečkerek and Petrovgrad, it was renamed after Žarko Zrenjanin.",
@@ -99,13 +124,38 @@
 			]
 		}
 	},
+	"backa-palanka": {
+		"kind": "city",
+		"population": 25476,
+		"populationRank": 30,
+		"region": "South Bačka",
+		"coastal": false,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Bačka Palanka developed on the site of an earlier settlement recorded as Pešt in sixteenth-century sources.",
+				"Bačka Palanka’s Church of the Nativity of Saint John the Baptist was built between 1784 and 1801.",
+				"Bačka Palanka’s Roman Catholic church was built in Baroque style in 1782–1784."
+			],
+			"it": [
+				"Bačka Palanka si sviluppò sul sito di un insediamento precedente indicato come Pešt nelle fonti cinquecentesche.",
+				"La chiesa della Natività di san Giovanni Battista di Bačka Palanka fu costruita fra il 1784 e il 1801.",
+				"La chiesa cattolica di Bačka Palanka fu costruita in stile barocco nel 1782–1784."
+			],
+			"de": [
+				"Bačka Palanka entwickelte sich am Ort einer älteren Siedlung, die in Quellen des 16. Jahrhunderts als Pešt erscheint.",
+				"Die Kirche der Geburt Johannes des Täufers in Bačka Palanka wurde zwischen 1784 und 1801 erbaut.",
+				"Die römisch-katholische Kirche in Bačka Palanka wurde 1782–1784 im Barockstil errichtet."
+			]
+		}
+	},
 	"vrsac": {
 		"kind": "city",
 		"population": 31946,
-		"populationRank": 20,
+		"populationRank": 26,
 		"region": "South Banat",
 		"coastal": false,
-		"position": "north-east",
+		"position": "north",
 		"hooks": {
 			"en": [
 				"Its name is generally linked to the word for a peak.",
@@ -124,10 +174,60 @@
 			]
 		}
 	},
+	"ruma": {
+		"kind": "city",
+		"population": 27747,
+		"populationRank": 28,
+		"region": "Syrmia",
+		"coastal": false,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"The name Ruma is recorded in an Ottoman census of 1546.",
+				"The planned town of New Ruma developed beside the older village in the 1740s under Marko Pejačević.",
+				"Ruma’s local history museum occupies a former school building completed in 1772 with a Pejačević family endowment."
+			],
+			"it": [
+				"Il nome Ruma è attestato in un censimento ottomano del 1546.",
+				"La città pianificata di Nuova Ruma si sviluppò accanto al villaggio più antico negli anni Quaranta del Settecento sotto Marko Pejačević.",
+				"Il museo di storia locale di Ruma occupa un’ex scuola completata nel 1772 grazie a una fondazione della famiglia Pejačević."
+			],
+			"de": [
+				"Der Name Ruma ist in einer osmanischen Zählung von 1546 belegt.",
+				"Die planmäßig angelegte Stadt Neu-Ruma entstand in den 1740er-Jahren unter Marko Pejačević neben dem älteren Dorf.",
+				"Das Heimatmuseum von Ruma befindet sich in einem 1772 fertiggestellten ehemaligen Schulgebäude aus einer Stiftung der Familie Pejačević."
+			]
+		}
+	},
+	"sremska-mitrovica": {
+		"kind": "city",
+		"population": 36764,
+		"populationRank": 21,
+		"region": "Syrmia",
+		"coastal": false,
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Sremska Mitrovica occupies the site of the Roman city of Sirmium.",
+				"Sremska Mitrovica’s imperial palace site preserves Roman floor mosaics and an underfloor heating system.",
+				"The name Mitrovica developed from the medieval dedication of the city to Saint Demetrius."
+			],
+			"it": [
+				"Sremska Mitrovica occupa il sito della città romana di Sirmium.",
+				"Il sito del palazzo imperiale di Sremska Mitrovica conserva mosaici pavimentali romani e un sistema di riscaldamento sotto il pavimento.",
+				"Il nome Mitrovica si sviluppò dalla dedica medievale della città a san Demetrio."
+			],
+			"de": [
+				"Sremska Mitrovica liegt am Ort der römischen Stadt Sirmium.",
+				"Die Ausgrabungsstätte des Kaiserpalasts in Sremska Mitrovica bewahrt römische Bodenmosaike und eine Fußbodenheizung.",
+				"Der Name Mitrovica entwickelte sich aus der mittelalterlichen Benennung der Stadt nach dem heiligen Demetrius."
+			]
+		}
+	},
 	"pancevo": {
 		"kind": "city",
 		"population": 73401,
-		"populationRank": 7,
+		"populationRank": 6,
 		"region": "South Banat",
 		"coastal": false,
 		"position": "centre",
@@ -149,13 +249,38 @@
 			]
 		}
 	},
+	"borca": {
+		"kind": "city",
+		"population": 51862,
+		"populationRank": 15,
+		"region": "Belgrade",
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Borča appears in historical sources under the name Barcsa, although the name’s origin is uncertain.",
+				"Borča’s Saint Nicholas Church was built in 1798 and reconstructed in 1967 after a fire.",
+				"An embankment built in 1933 protected Borča from flooding by the Danube and Tamiš."
+			],
+			"it": [
+				"Borča compare nelle fonti storiche con il nome Barcsa, anche se l’origine del nome è incerta.",
+				"La chiesa di San Nicola di Borča fu costruita nel 1798 e ricostruita nel 1967 dopo un incendio.",
+				"Un argine costruito nel 1933 protesse Borča dalle inondazioni del Danubio e del Tamiš."
+			],
+			"de": [
+				"Borča erscheint in historischen Quellen unter dem Namen Barcsa, dessen Ursprung jedoch ungewiss ist.",
+				"Die Nikolauskirche in Borča wurde 1798 erbaut und nach einem Brand 1967 wiederaufgebaut.",
+				"Ein 1933 errichteter Deich schützte Borča vor Überschwemmungen durch Donau und Tamiš."
+			]
+		}
+	},
 	"belgrade": {
 		"kind": "city",
 		"population": 1197714,
 		"populationRank": 1,
 		"capitalOf": "country",
 		"coastal": false,
-		"position": "west",
+		"position": "centre",
 		"hooks": {
 			"en": [
 				"Beograd, \"white city\".",
@@ -174,10 +299,110 @@
 			]
 		}
 	},
+	"sabac": {
+		"kind": "city",
+		"population": 51163,
+		"populationRank": 16,
+		"region": "Mačva",
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Šabac grew from a medieval settlement known as Zaslon.",
+				"Šabac underwent substantial urban and cultural development under Jevrem Obrenović in 1816–1831.",
+				"Šabac’s grammar school began teaching in 1837."
+			],
+			"it": [
+				"Šabac si sviluppò da un insediamento medievale conosciuto come Zaslon.",
+				"Šabac conobbe un notevole sviluppo urbano e culturale sotto Jevrem Obrenović nel 1816–1831.",
+				"Il ginnasio di Šabac iniziò le lezioni nel 1837."
+			],
+			"de": [
+				"Šabac entwickelte sich aus einer mittelalterlichen Siedlung namens Zaslon.",
+				"Unter Jevrem Obrenović erlebte Šabac 1816–1831 einen bedeutenden städtebaulichen und kulturellen Aufschwung.",
+				"Das Gymnasium von Šabac nahm 1837 den Unterricht auf."
+			]
+		}
+	},
+	"smederevo": {
+		"kind": "city",
+		"population": 59261,
+		"populationRank": 10,
+		"region": "Podunavlje",
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Smederevo was known in Ottoman sources as Semendire.",
+				"The castle forming the core of Smederevo Fortress was built in 1428–1430 as the court of Despot Đurađ Branković.",
+				"An ammunition depot explosion inside Smederevo Fortress severely damaged its towers and walls in 1941."
+			],
+			"it": [
+				"Nelle fonti ottomane Smederevo era conosciuta come Semendire.",
+				"Il castello che costituisce il nucleo della fortezza di Smederevo fu costruito nel 1428–1430 come corte del despota Đurađ Branković.",
+				"L’esplosione di un deposito di munizioni all’interno della fortezza di Smederevo danneggiò gravemente torri e mura nel 1941."
+			],
+			"de": [
+				"In osmanischen Quellen war Smederevo als Semendire bekannt.",
+				"Die Burg im Kern der Festung Smederevo wurde 1428–1430 als Hof des Despoten Đurađ Branković erbaut.",
+				"Die Explosion eines Munitionslagers in der Festung Smederevo beschädigte 1941 ihre Türme und Mauern schwer."
+			]
+		}
+	},
+	"pozarevac": {
+		"kind": "city",
+		"population": 42530,
+		"populationRank": 19,
+		"region": "Braničevo",
+		"coastal": false,
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Požarevac appears in older European accounts under the name Passarowitz.",
+				"The peace negotiations at Požarevac in 1718 brought together representatives of the Habsburg emperor, Ottoman sultan and Venetian Republic.",
+				"Požarevac’s Milena Pavlović Barilli Gallery opened in the artist’s family home in 1962."
+			],
+			"it": [
+				"Nei resoconti europei più antichi Požarevac compare con il nome Passarowitz.",
+				"I negoziati di pace di Požarevac del 1718 riunirono rappresentanti dell’imperatore asburgico, del sultano ottomano e della Repubblica di Venezia.",
+				"La Galleria Milena Pavlović Barilli di Požarevac aprì nella casa di famiglia dell’artista nel 1962."
+			],
+			"de": [
+				"In älteren europäischen Darstellungen erscheint Požarevac unter dem Namen Passarowitz.",
+				"Die Friedensverhandlungen in Požarevac von 1718 brachten Vertreter des Habsburgerkaisers, des osmanischen Sultans und der Republik Venedig zusammen.",
+				"Die Milena-Pavlović-Barilli-Galerie in Požarevac wurde 1962 im Familienhaus der Künstlerin eröffnet."
+			]
+		}
+	},
+	"lazarevac": {
+		"kind": "city",
+		"population": 27635,
+		"populationRank": 29,
+		"region": "Belgrade",
+		"coastal": false,
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Lazarevac received its name in honour of Prince Lazar in 1889.",
+				"Lazarevac’s Saint Demetrius Church houses an ossuary of Serbian and Austro-Hungarian soldiers killed in the Battle of Kolubara in 1914.",
+				"Lazarevac’s Modern Gallery opened in 2002 to preserve and exhibit the art collection donated by Lepa Perović."
+			],
+			"it": [
+				"Lazarevac ricevette il nome in onore del principe Lazar nel 1889.",
+				"La chiesa di San Demetrio di Lazarevac ospita un ossario di soldati serbi e austro-ungarici caduti nella battaglia della Kolubara del 1914.",
+				"La Galleria moderna di Lazarevac aprì nel 2002 per conservare ed esporre la collezione d’arte donata da Lepa Perović."
+			],
+			"de": [
+				"Lazarevac erhielt seinen Namen 1889 zu Ehren von Fürst Lazar.",
+				"Die Demetriuskirche in Lazarevac beherbergt ein Beinhaus für serbische und österreichisch-ungarische Soldaten, die 1914 in der Schlacht an der Kolubara fielen.",
+				"Die Moderne Galerie in Lazarevac wurde 2002 eröffnet, um die von Lepa Perović gestiftete Kunstsammlung zu bewahren und zu zeigen."
+			]
+		}
+	},
 	"valjevo": {
 		"kind": "city",
-		"population": 90312,
-		"populationRank": 6,
+		"population": 56059,
+		"populationRank": 12,
 		"region": "Kolubara",
 		"coastal": false,
 		"position": "west",
@@ -201,31 +426,31 @@
 	},
 	"bor": {
 		"kind": "city",
-		"population": 34159,
-		"populationRank": 19,
+		"population": 28822,
+		"populationRank": 27,
 		"coastal": false,
 		"position": "east",
 		"hooks": {
 			"en": [
-				"Its name is the Serbian word for pine.",
-				"Large-scale copper mining began here in 1903.",
-				"The Museum of Mining and Metallurgy preserves the region’s industrial history."
+				"Bor means pine in Serbian.",
+				"Bor’s copper mine opened in 1903 and drove the settlement’s industrial development.",
+				"Bor’s Museum of Mining and Metallurgy preserves the history of mining and metalworking from prehistory to the modern industrial period."
 			],
 			"it": [
-				"Il nome è la parola serba per pino.",
-				"L’estrazione del rame su larga scala iniziò qui nel 1903.",
-				"Il Museo minerario e metallurgico conserva la storia industriale della regione."
+				"Bor significa pino in serbo.",
+				"La miniera di rame di Bor aprì nel 1903 e determinò lo sviluppo industriale dell’insediamento.",
+				"Il Museo minerario e metallurgico di Bor conserva la storia dell’estrazione e della lavorazione dei metalli dalla preistoria al periodo industriale moderno."
 			],
 			"de": [
-				"Der Name ist das serbische Wort für Kiefer.",
-				"Der Kupferbergbau im großen Maßstab begann hier 1903.",
-				"Das Museum für Bergbau und Metallurgie bewahrt die Industriegeschichte der Region."
+				"Bor bedeutet auf Serbisch Kiefer.",
+				"Bors Kupfermine wurde 1903 eröffnet und trieb die industrielle Entwicklung der Siedlung voran.",
+				"Bors Museum für Bergbau und Metallurgie bewahrt die Geschichte des Bergbaus und der Metallverarbeitung von der Vorgeschichte bis zum modernen Industriezeitalter."
 			]
 		}
 	},
 	"kragujevac": {
 		"kind": "city",
-		"population": 150623,
+		"population": 146315,
 		"populationRank": 4,
 		"region": "Šumadija",
 		"coastal": false,
@@ -251,7 +476,7 @@
 	"jagodina": {
 		"kind": "city",
 		"population": 34892,
-		"populationRank": 18,
+		"populationRank": 23,
 		"region": "Pomoravlje",
 		"coastal": false,
 		"position": "centre",
@@ -273,13 +498,37 @@
 			]
 		}
 	},
+	"zajecar": {
+		"kind": "city",
+		"population": 32448,
+		"populationRank": 24,
+		"coastal": false,
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Zaječar appears by name in an Ottoman population register from 1466.",
+				"Zaječar’s Gitarijada rock festival developed as a competition for emerging bands.",
+				"Zaječar’s National Museum preserves a porphyry portrait head of Emperor Galerius found at nearby Felix Romuliana."
+			],
+			"it": [
+				"Il nome Zaječar compare in un registro della popolazione ottomano del 1466.",
+				"Il festival rock Gitarijada di Zaječar si sviluppò come concorso per gruppi emergenti.",
+				"Il Museo nazionale di Zaječar conserva una testa-ritratto in porfido dell’imperatore Galerio, rinvenuta nella vicina Felix Romuliana."
+			],
+			"de": [
+				"Der Name Zaječar erscheint in einem osmanischen Bevölkerungsregister von 1466.",
+				"Zaječars Rockfestival Gitarijada entwickelte sich als Wettbewerb für Nachwuchsbands.",
+				"Das Nationalmuseum in Zaječar bewahrt einen Porträtkopf von Kaiser Galerius aus Porphyr, der im nahe gelegenen Felix Romuliana gefunden wurde."
+			]
+		}
+	},
 	"cacak": {
 		"kind": "city",
-		"population": 71883,
+		"population": 69598,
 		"populationRank": 8,
 		"region": "Moravica",
 		"coastal": false,
-		"position": "west",
+		"position": "centre",
 		"hooks": {
 			"en": [
 				"Its medieval predecessor was known as Gradac.",
@@ -300,8 +549,8 @@
 	},
 	"uzice": {
 		"kind": "city",
-		"population": 59747,
-		"populationRank": 13,
+		"population": 48539,
+		"populationRank": 18,
 		"region": "Zlatibor",
 		"coastal": false,
 		"position": "west",
@@ -325,8 +574,8 @@
 	},
 	"kraljevo": {
 		"kind": "city",
-		"population": 66688,
-		"populationRank": 10,
+		"population": 57432,
+		"populationRank": 11,
 		"region": "Raška",
 		"coastal": false,
 		"position": "south",
@@ -350,11 +599,11 @@
 	},
 	"krusevac": {
 		"kind": "city",
-		"population": 58745,
+		"population": 53746,
 		"populationRank": 14,
 		"region": "Rasina",
 		"coastal": false,
-		"position": "south-east",
+		"position": "south",
 		"hooks": {
 			"en": [
 				"Local tradition links its name to river stones called krušac.",
@@ -375,8 +624,8 @@
 	},
 	"prijepolje": {
 		"kind": "city",
-		"population": 37059,
-		"populationRank": 17,
+		"population": 11928,
+		"populationRank": 32,
 		"region": "Zlatibor",
 		"coastal": false,
 		"position": "south-west",
@@ -400,7 +649,7 @@
 	},
 	"nis": {
 		"kind": "city",
-		"population": 183164,
+		"population": 178976,
 		"populationRank": 3,
 		"region": "Nišava",
 		"coastal": false,
@@ -423,10 +672,59 @@
 			]
 		}
 	},
+	"prokuplje": {
+		"kind": "city",
+		"population": 24627,
+		"populationRank": 31,
+		"region": "Toplica",
+		"coastal": false,
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Prokuplje takes its name from Saint Procopius, whose name appears in the town’s designation in a charter of 1395.",
+				"Prokuplje’s Church of Saint Procopius has its origins in the ninth–tenth centuries.",
+				"Prokuplje’s Toplica Museum preserves a Roman statue of Hercules from the local archaeological heritage."
+			],
+			"it": [
+				"Prokuplje prende il nome da san Procopio, il cui nome compare nella denominazione cittadina in una carta del 1395.",
+				"La chiesa di San Procopio di Prokuplje ha origini nel IX–X secolo.",
+				"Il Museo della Toplica di Prokuplje conserva una statua romana di Ercole proveniente dal patrimonio archeologico locale."
+			],
+			"de": [
+				"Prokuplje ist nach dem heiligen Prokopius benannt, dessen Name in der Stadtbezeichnung einer Urkunde von 1395 erscheint.",
+				"Die Prokopiuskirche in Prokuplje hat ihre Ursprünge im 9.–10. Jahrhundert.",
+				"Das Toplica-Museum in Prokuplje bewahrt eine römische Herkulesstatue aus dem örtlichen archäologischen Erbe."
+			]
+		}
+	},
+	"pirot": {
+		"kind": "city",
+		"population": 34942,
+		"populationRank": 22,
+		"coastal": false,
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Pirot occupies the site traditionally identified with Turres, a station named in Roman road itineraries.",
+				"Pirot’s kilim-weaving tradition makes patterned woollen rugs on vertical looms and is recorded in Serbia’s national intangible heritage register.",
+				"Pirot’s Museum of Ponišavlje occupies the house of merchant Hrista Jovanović, known as Mali Rista, completed in 1848."
+			],
+			"it": [
+				"Pirot occupa il sito tradizionalmente identificato con Turres, una stazione menzionata negli itinerari stradali romani.",
+				"La tradizione dei kilim di Pirot produce tappeti di lana decorati su telai verticali ed è iscritta nel registro nazionale serbo del patrimonio immateriale.",
+				"Il Museo del Ponišavlje di Pirot occupa la casa del mercante Hrista Jovanović, detto Mali Rista, completata nel 1848."
+			],
+			"de": [
+				"Pirot liegt am Ort, der traditionell mit Turres identifiziert wird, einer in römischen Straßenverzeichnissen genannten Station.",
+				"Pirots Kilimweberei fertigt gemusterte Wollteppiche auf senkrechten Webstühlen und ist in Serbiens nationalem Register des immateriellen Erbes verzeichnet.",
+				"Das Ponišavlje-Museum in Pirot befindet sich im 1848 vollendeten Haus des Kaufmanns Hrista Jovanović, genannt Mali Rista."
+			]
+		}
+	},
 	"novi-pazar": {
 		"kind": "city",
-		"population": 66527,
-		"populationRank": 11,
+		"population": 71462,
+		"populationRank": 7,
 		"region": "Raška",
 		"coastal": false,
 		"position": "south",
@@ -450,8 +748,8 @@
 	},
 	"leskovac": {
 		"kind": "city",
-		"population": 60288,
-		"populationRank": 12,
+		"population": 54091,
+		"populationRank": 13,
 		"region": "Jablanica",
 		"coastal": false,
 		"position": "south-east",
@@ -475,8 +773,8 @@
 	},
 	"vranje": {
 		"kind": "city",
-		"population": 55214,
-		"populationRank": 15,
+		"population": 50954,
+		"populationRank": 17,
 		"region": "Pčinja",
 		"coastal": false,
 		"position": "south-east",

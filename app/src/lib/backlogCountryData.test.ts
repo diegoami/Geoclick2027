@@ -1,11 +1,13 @@
 // Regressions for the v1.0 content backlog (#236/#244).
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
+import { pointInPolygon } from '../../../data/scripts/factGeometry';
 import { authoredResolver, storedHooksFor } from '../../../data/scripts/factsHooks';
 interface MapData {
 	country: string;
 	regionsMap?: string;
 	placesSource?: string;
+	attribution?: string;
 	targets: { id: string; name: string; type: string; centroid: number[] }[];
 }
 interface Fact {
@@ -106,7 +108,7 @@ describe('completed legacy town maps', () => {
 			].sort()
 		);
 		const facts = read<Record<string, Fact>>('maps/norway-counties/facts.json');
-		expect(Object.values(facts).some((f) => f.largestCity?.name === 'Bærum')).toBe(false);
+		expect(Object.values(facts).some((f) => f.largestCity)).toBe(false);
 	});
 	it('excludes Belgrade’s overlapping administrative entity and Zemun borough', () => {
 		const map = read<MapData>('maps/serbia-towns-50k/map.json');
@@ -116,6 +118,53 @@ describe('completed legacy town maps', () => {
 		expect(map.targets.map((t) => t.id)).toContain('vrsac');
 		const facts = read<Record<string, Fact>>('maps/serbia-districts/facts.json');
 		expect(facts.belgrade.largestCity?.name).toBe('Belgrade');
+	});
+	it('retains Denmark’s leading coastal towns using a detailed coastline', () => {
+		const towns = read<MapData>('maps/denmark-towns-50k/map.json');
+		expect(towns.targets.map((t) => t.id)).toEqual(
+			expect.arrayContaining(['fredericia', 'hiller-d'])
+		);
+		const regions = read<{
+			features: {
+				properties: { name: string };
+				geometry: import('../../../data/scripts/factGeometry').AnyGeometry;
+			}[];
+		}>('boundaries/denmark-regions-gb-9469f09.geojson');
+		for (const point of [
+			[9.75257, 55.56568],
+			[9.78917, 54.90896],
+			[10.60677, 55.05982]
+		] as [number, number][])
+			expect(
+				regions.features
+					.filter((f) => pointInPolygon(point, f.geometry))
+					.map((f) => f.properties.name)
+			).toEqual(['Syddanmark']);
+	});
+	it('uses settlement census counts and includes the previously missing Serbian cities', () => {
+		const facts = read<Record<string, Fact & { population?: number }>>(
+			'maps/serbia-towns-50k/facts.json'
+		);
+		expect(facts.prijepolje.population).toBe(11928);
+		expect(facts.valjevo.population).toBe(56059);
+		expect(facts['novi-pazar'].population).toBe(71462);
+		expect(facts.belgrade.population).toBe(1197714);
+		const towns = read<MapData>('maps/serbia-towns-50k/map.json');
+		expect(towns.attribution).toContain('Statistical Office of the Republic of Serbia');
+		expect(towns.attribution).not.toContain('Wikidata');
+		expect(towns.targets.map((t) => t.id)).toEqual(
+			expect.arrayContaining([
+				'sabac',
+				'smederevo',
+				'sombor',
+				'pozarevac',
+				'pirot',
+				'zajecar',
+				'sremska-mitrovica'
+			])
+		);
+		const regions = read<Record<string, Fact>>('maps/serbia-districts/facts.json');
+		expect(regions.raska.largestCity?.name).toBe('Novi Pazar');
 	});
 	it('keeps Copenhagen at the established representative centre with provenance', () => {
 		const map = read<MapData>('maps/denmark-towns-50k/map.json');

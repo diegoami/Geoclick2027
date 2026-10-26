@@ -4,7 +4,8 @@
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
 		"of the same id, written later, never shows a town's sentences.",
 		"v0.19 added the five regions, each as a \"region\" entry (en, it, de).",
-		"v1.0 adds region/town facts in English, Italian and German; _sources records checking references by target and kind."
+		"v1.0 adds region/town facts in English, Italian and German; _sources records checking references by target and kind.",
+		"v1.0 whole-catalogue completion (#244): sourced EN/IT/DE sets, with references under _sources by ID and kind."
 	],
 	"aalborg": {
 		"city": {
@@ -318,6 +319,9 @@
 			"https://en.wikipedia.org/wiki/Næstved",
 			"https://en.wikipedia.org/wiki/Herlufsholm_School",
 			"https://en.wikipedia.org/wiki/Gavnø_Castle"
+		],
+		"fredericia:city": [
+			"https://lex.dk/Fredericia"
 		]
 	},
 	"randers": {
@@ -621,6 +625,25 @@
 				"Der Name verbindet Wörter für eine Landzunge und eine Rodung.",
 				"Die Schule Herlufsholm wurde 1565 in einem früheren Kloster gegründet.",
 				"Das nahe Schloss Gavnø bewahrt eine historische Kunstsammlung."
+			]
+		}
+	},
+	"fredericia": {
+		"city": {
+			"en": [
+				"Fredericia is named after King Frederik III, who founded the fortress town in 1650.",
+				"Fredericia received privileges guaranteeing religious freedom in 1682.",
+				"Danish troops broke the siege of Fredericia with a sortie on 6 July 1849."
+			],
+			"it": [
+				"Fredericia prende il nome dal re Federico III, che fondò la città fortificata nel 1650.",
+				"Fredericia ricevette privilegi che garantivano la libertà religiosa nel 1682.",
+				"Le truppe danesi spezzarono l’assedio di Fredericia con una sortita il 6 luglio 1849."
+			],
+			"de": [
+				"Fredericia ist nach König Frederik III. benannt, der die Festungsstadt 1650 gründete.",
+				"Fredericia erhielt 1682 Privilegien, die Religionsfreiheit garantierten.",
+				"Dänische Truppen durchbrachen die Belagerung von Fredericia mit einem Ausfall am 6. Juli 1849."
 			]
 		}
 	}

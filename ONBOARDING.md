@@ -777,3 +777,10 @@ Use --maps=id,id for a working batch and --strict to verify it. The full
 strict audit is required before 1.0; the 735-target expansion audit alone does
 not cover the older detailed maps. Edit data/facts inputs and refresh hooks,
 never generated map facts by hand. Proposal #244 records the owner's scope.
+
+
+Rebuild the approved known European border changes in Linux with
+`node --import tsx data/scripts/build-known-boundary-updates.ts`;
+`build-backlog-towns.ts` covers Denmark/Norway/Serbia. These recipes preserve
+existing map IDs. See MAPS.md for source licences, pinned editions, the Python
+standard-library census parser and the limits of the curated Norwegian towns.

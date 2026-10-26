@@ -4,7 +4,7 @@ import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 import { existsSync, mkdirSync, readFileSync, writeFileSync, rmSync } from 'node:fs';
 import path from 'node:path';
-import { REPO_ROOT, ADMIN0_SHP, ADMIN1_SHP, slugify } from './mapBuildUtils.js';
+import { REPO_ROOT, ADMIN0_SHP, slugify } from './mapBuildUtils.js';
 import { boundaryFeatureDigest } from './boundaryContentHash.js';
 const cache = path.join(REPO_ROOT, 'data/source/v1-content');
 mkdirSync(cache, { recursive: true });
@@ -95,42 +95,55 @@ writeFileSync(
 		features: norway.features
 	}) + '\n'
 );
-for (const [country, units, file] of [
-	['Denmark', 5, 'denmark-regions-natural-earth.geojson']
-] as const) {
-	const output = path.join(cache, country + '-canonical.geojson');
-	run([
-		output,
-		ADMIN1_SHP,
-		'-where',
-		`admin = '${country}'`,
-		'-select',
-		'name,admin',
-		'-t_srs',
-		'EPSG:4326',
-		'-lco',
-		'COORDINATE_PRECISION=6'
-	]);
-	const collection = JSON.parse(readFileSync(output, 'utf8'));
-	for (const feature of collection.features) {
-		if (feature.properties.name === 'Sjaælland') feature.properties.name = 'Sjælland';
-	}
-	if (collection.features.length !== units)
-		throw new Error(country + ': unexpected division count');
-	writeFileSync(
-		path.join(boundaryDir, file),
-		JSON.stringify({
-			type: 'FeatureCollection',
-			source: {
-				provider: 'Natural Earth',
-				licence: 'Public domain',
-				url: 'https://www.naturalearthdata.com',
-				attribution: 'Natural Earth (public domain)'
-			},
-			features: collection.features
-		}) + '\n'
-	);
+// Detailed coastline avoids dropping Fredericia, Sønderborg and Svendborg.
+const denmarkUrl =
+	'https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/9469f09/releaseData/gbOpen/DNK/ADM1/geoBoundaries-DNK-ADM1.geojson';
+const denmarkRaw = path.join(cache, 'DNK-ADM1-gb-9469f09.geojson');
+if (!existsSync(denmarkRaw)) {
+	const response = await fetch(denmarkUrl);
+	if (!response.ok) throw new Error('Danish source HTTP ' + response.status);
+	writeFileSync(denmarkRaw, Buffer.from(await response.arrayBuffer()));
 }
+const denmarkBytes = readFileSync(denmarkRaw);
+const denmarkSha = '5aedd6ecb225af8b5bbfac416e7024d15255b4bbdb884d1d8e77b8b4a58baca9';
+if (createHash('sha256').update(denmarkBytes).digest('hex') !== denmarkSha)
+	throw new Error('Danish source SHA256 changed');
+const denmark = JSON.parse(denmarkBytes.toString('utf8'));
+const danishNames = new Set([
+	'Nordjylland',
+	'Midtjylland',
+	'Sjælland',
+	'Hovedstaden',
+	'Syddanmark'
+]);
+if (
+	denmark.features.length !== 5 ||
+	new Set(
+		denmark.features.map((f: { properties: { shapeName: string } }) => f.properties.shapeName)
+	).size !== 5
+)
+	throw new Error('Expected five distinct Danish regions');
+for (const feature of denmark.features) {
+	const name = feature.properties.shapeName;
+	if (!danishNames.has(name)) throw new Error('Unrecognized Danish region: ' + name);
+	feature.properties = { name, admin: 'Denmark' };
+}
+writeFileSync(
+	path.join(boundaryDir, 'denmark-regions-gb-9469f09.geojson'),
+	JSON.stringify({
+		type: 'FeatureCollection',
+		source: {
+			provider: 'geoBoundaries 9469f09; Web Vectors Map',
+			url: denmarkUrl,
+			licence: 'CC BY 4.0',
+			licenceUrl: 'https://creativecommons.org/licenses/by/4.0/',
+			sha256: denmarkSha,
+			attribution:
+				'geoBoundaries / Web Vectors Map, CC BY 4.0, https://creativecommons.org/licenses/by/4.0/'
+		},
+		features: denmark.features
+	}) + '\n'
+);
 // Reuse Serbia's existing pinned, licensed 25-district source, not Natural
 // Earth's absent Serbian admin-1 rows. Preserve the names already taught.
 const serbiaSource = path.join(REPO_ROOT, 'data/source/geoboundaries/SRB-ADM1.geojson');

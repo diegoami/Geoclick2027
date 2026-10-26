@@ -1,13 +1,15 @@
 {
 	"type": "FeatureCollection",
 	"regionSource": {
-		"provider": "Natural Earth",
-		"licence": "Public domain",
-		"url": "https://www.naturalearthdata.com",
-		"attribution": "Natural Earth (public domain)"
+		"provider": "geoBoundaries 9469f09; Web Vectors Map",
+		"url": "https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/9469f09/releaseData/gbOpen/DNK/ADM1/geoBoundaries-DNK-ADM1.geojson",
+		"licence": "CC BY 4.0",
+		"licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+		"sha256": "5aedd6ecb225af8b5bbfac416e7024d15255b4bbdb884d1d8e77b8b4a58baca9",
+		"attribution": "geoBoundaries / Web Vectors Map, CC BY 4.0, https://creativecommons.org/licenses/by/4.0/"
 	},
 	"source": "Wikidata (CC0); regional associations under regionSource licence",
-	"fetchedAt": "2026-10-26T18:31:55.641Z",
+	"fetchedAt": "2026-10-26T22:09:34.377Z",
 	"query": "SELECT DISTINCT ?item ?coord ?name ?en ?it ?de ?population ?date ?capital ?regionName ?precision ?defaultName WHERE {\n  hint:Query hint:optimizer \"None\" .\n  ?country wdt:P298 \"DNK\"; wdt:P36 ?capitalCity .\n  ?item wdt:P17 ?country .\n  FILTER EXISTS { ?item p:P1082/ps:P1082 ?candidatePopulation . FILTER(?candidatePopulation >= 1000) }\n  ?item wdt:P31 ?kind; p:P625 ?coordinateStatement .\n  ?coordinateStatement ps:P625 ?coord; psv:P625 ?coordinateValue; wikibase:rank ?coordinateRank .\n  FILTER(?coordinateRank != wikibase:DeprecatedRank)\n  ?coordinateValue wikibase:geoPrecision ?precision .\n  VALUES ?base { wd:Q515 wd:Q3957 }\n  ?kind wdt:P279* ?base .\n  FILTER NOT EXISTS { ?item wdt:P576 ?dissolved }\n  ?item p:P1082 ?statement .\n  ?statement ps:P1082 ?population; wikibase:rank ?rank .\n  FILTER(?rank != wikibase:DeprecatedRank)\n  OPTIONAL { ?statement pq:P585 ?date }\n  FILTER(!BOUND(?date) || (?date >= \"2011-01-01T00:00:00Z\"^^xsd:dateTime && ?date <= NOW()))\n  OPTIONAL { ?item rdfs:label ?name FILTER(LANG(?name)=\"en\") }\n  OPTIONAL { ?item rdfs:label ?en FILTER(LANG(?en)=\"en\") }\n  OPTIONAL { ?item rdfs:label ?defaultName FILTER(LANG(?defaultName)=\"mul\") }\n  OPTIONAL { ?item rdfs:label ?it FILTER(LANG(?it)=\"it\") }\n  OPTIONAL { ?item rdfs:label ?de FILTER(LANG(?de)=\"de\") }\n  BIND(?item = ?capitalCity AS ?capital)\n} ORDER BY ?item DESC(?date) DESC(?population) LIMIT 10000",
 	"coordinateOverrides": {
 		"Q1748": [
@@ -18,23 +20,8 @@
 	"coordinateOverrideSource": "Natural Earth (public domain); same representative centres as the existing maps",
 	"excluded": [
 		{
-			"item": "http://www.wikidata.org/entity/Q643410",
-			"name": "Nexø",
-			"reason": "Outside or ambiguous within the selected administrative-source footprint"
-		},
-		{
-			"item": "http://www.wikidata.org/entity/Q21179",
-			"name": "Sønderborg",
-			"reason": "Outside or ambiguous within the selected administrative-source footprint"
-		},
-		{
-			"item": "http://www.wikidata.org/entity/Q21181",
-			"name": "Fredericia",
-			"reason": "Outside or ambiguous within the selected administrative-source footprint"
-		},
-		{
-			"item": "http://www.wikidata.org/entity/Q28031",
-			"name": "Svendborg",
+			"item": "http://www.wikidata.org/entity/Q2608258",
+			"name": "Vordingborg",
 			"reason": "Outside or ambiguous within the selected administrative-source footprint"
 		}
 	],
@@ -398,6 +385,30 @@
 				"POP1950": 0,
 				"populationDate": "2016-01-01T00:00:00Z",
 				"wikidata": "http://www.wikidata.org/entity/Q3547421"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					9.759722222,
+					55.564444444
+				]
+			},
+			"properties": {
+				"NAME": "Fredericia",
+				"NAME_EN": "Fredericia",
+				"NAME_IT": "Fredericia",
+				"NAME_DE": "Fredericia",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Syddanmark",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 41243,
+				"POP1950": 0,
+				"populationDate": "2023-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q21181"
 			}
 		},
 		{
@@ -1053,6 +1064,30 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
+					15.131944444,
+					55.0625
+				]
+			},
+			"properties": {
+				"NAME": "Nexø",
+				"NAME_EN": "Nexø",
+				"NAME_IT": "Nexø",
+				"NAME_DE": "Nexø",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Hovedstaden",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 3615,
+				"POP1950": 0,
+				"populationDate": "2019-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q643410"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
 					12.50485,
 					55.93405
 				]
@@ -1509,6 +1544,30 @@
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
+					9.786666666,
+					54.911388888
+				]
+			},
+			"properties": {
+				"NAME": "Sønderborg",
+				"NAME_EN": "Sønderborg",
+				"NAME_IT": "Sønderborg",
+				"NAME_DE": "Sonderburg",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Syddanmark",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 27595,
+				"POP1950": 0,
+				"populationDate": "2016-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q21179"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
 					12.0258,
 					54.9964
 				]
@@ -1550,6 +1609,30 @@
 				"POP1950": 0,
 				"populationDate": "2018-01-01T00:00:00Z",
 				"wikidata": "http://www.wikidata.org/entity/Q605001"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					10.61,
+					55.059722222
+				]
+			},
+			"properties": {
+				"NAME": "Svendborg",
+				"NAME_EN": "Svendborg",
+				"NAME_IT": "Svendborg",
+				"NAME_DE": "Svendborg",
+				"ADM0NAME": "Denmark",
+				"ADM1NAME": "Syddanmark",
+				"coordinatePrecision": 0.00027777777777778,
+				"ADM0CAP": 0,
+				"POP_MAX": 27210,
+				"POP1950": 0,
+				"populationDate": "2019-01-01T00:00:00Z",
+				"wikidata": "http://www.wikidata.org/entity/Q28031"
 			}
 		},
 		{
@@ -1766,30 +1849,6 @@
 				"POP1950": 0,
 				"populationDate": "2019-01-01T00:00:00Z",
 				"wikidata": "http://www.wikidata.org/entity/Q1645444"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					11.910277777,
-					55.008333333
-				]
-			},
-			"properties": {
-				"NAME": "Vordingborg",
-				"NAME_EN": "Vordingborg",
-				"NAME_IT": "Vordingborg",
-				"NAME_DE": "Vordingborg",
-				"ADM0NAME": "Denmark",
-				"ADM1NAME": "Sjælland",
-				"coordinatePrecision": 0.00027777777777778,
-				"ADM0CAP": 0,
-				"POP_MAX": 11747,
-				"POP1950": 0,
-				"populationDate": "2014-01-01T00:00:00Z",
-				"wikidata": "http://www.wikidata.org/entity/Q2608258"
 			}
 		}
 	]

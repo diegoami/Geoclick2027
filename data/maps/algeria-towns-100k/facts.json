@@ -4,21 +4,72 @@
 		"population": 503524,
 		"populationRank": 5,
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"The town now called Annaba was known in the Middle Ages as Bouna.",
+				"Augustine served as bishop of Hippo Regius, whose archaeological remains lie beside modern Annaba.",
+				"Annaba’s Sidi Bou Merouane Mosque dates to 1033, during the Zirid period."
+			],
+			"it": [
+				"La città oggi chiamata Annaba era conosciuta nel Medioevo come Bouna.",
+				"Agostino fu vescovo di Ippona, i cui resti archeologici si trovano accanto alla moderna Annaba.",
+				"La moschea Sidi Bou Merouane di Annaba risale al 1033, durante il periodo ziride."
+			],
+			"de": [
+				"Die heute Annaba genannte Stadt hieß im Mittelalter Bouna.",
+				"Augustinus war Bischof von Hippo Regius, dessen archäologische Überreste neben dem heutigen Annaba liegen.",
+				"Die Sidi-Bou-Merouane-Moschee in Annaba stammt aus dem Jahr 1033 und damit aus der Zeit der Ziriden."
+			]
+		}
 	},
 	"skikda": {
 		"kind": "city",
 		"population": 225181,
 		"populationRank": 11,
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Skikda was known in Roman times as Rusicada and in the French colonial period as Philippeville.",
+				"The Roman theatre at Skikda is one of the surviving remnants of the ancient town beneath the modern streets.",
+				"Skikda’s modern regional theatre opened in 1932 after building work begun in 1912 was interrupted by the First World War."
+			],
+			"it": [
+				"Skikda era conosciuta in epoca romana come Rusicada e durante il periodo coloniale francese come Philippeville.",
+				"Il teatro romano di Skikda è uno dei resti superstiti della città antica sotto le strade moderne.",
+				"Il moderno teatro regionale di Skikda aprì nel 1932, dopo che i lavori iniziati nel 1912 erano stati interrotti dalla Prima guerra mondiale."
+			],
+			"de": [
+				"Skikda hieß in römischer Zeit Rusicada und während der französischen Kolonialzeit Philippeville.",
+				"Das römische Theater in Skikda gehört zu den erhaltenen Resten der antiken Stadt unter den modernen Straßen.",
+				"Skikdas modernes Regionaltheater wurde 1932 eröffnet, nachdem der Erste Weltkrieg die 1912 begonnenen Bauarbeiten unterbrochen hatte."
+			]
+		}
 	},
 	"jijel": {
 		"kind": "city",
 		"population": 148000,
 		"populationRank": 21,
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Jijel was known in antiquity as Igilgili and was later written Djidjelli in French.",
+				"The corsair Arudj defended Jijel in 1514, during the struggle for control of the North African coast.",
+				"Earthquakes and a tsunami devastated Jijel in August 1856, forcing extensive rebuilding of the town."
+			],
+			"it": [
+				"Jijel era conosciuta nell’antichità come Igilgili e fu poi scritta Djidjelli in francese.",
+				"Il corsaro Arudj difese Jijel nel 1514, durante la lotta per il controllo della costa nordafricana.",
+				"Terremoti e uno tsunami devastarono Jijel nell’agosto 1856, imponendo un’ampia ricostruzione della città."
+			],
+			"de": [
+				"Jijel hieß in der Antike Igilgili und wurde später auf Französisch Djidjelli geschrieben.",
+				"Der Korsar Arudj verteidigte Jijel 1514 während des Kampfes um die Kontrolle der nordafrikanischen Küste.",
+				"Erdbeben und ein Tsunami verwüsteten Jijel im August 1856 und machten einen umfassenden Wiederaufbau nötig."
+			]
+		}
 	},
 	"algiers": {
 		"kind": "city",
@@ -52,56 +103,192 @@
 		"population": 384937,
 		"populationRank": 7,
 		"coastal": true,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Béjaïa was known to the Romans as Saldae and later in European sources as Bougie.",
+				"Béjaïa became a Hammadid royal centre when al-Nasir began rebuilding the town in 1067.",
+				"The mathematician Fibonacci studied mathematics in Béjaïa while his father represented Pisan merchants there."
+			],
+			"it": [
+				"Béjaïa era conosciuta dai Romani come Saldae e poi nelle fonti europee come Bougie.",
+				"Béjaïa divenne un centro reale hammadide quando al-Nasir iniziò a ricostruire la città nel 1067.",
+				"Il matematico Fibonacci studiò matematica a Béjaïa mentre suo padre vi rappresentava i mercanti pisani."
+			],
+			"de": [
+				"Béjaïa hieß bei den Römern Saldae und später in europäischen Quellen Bougie.",
+				"Béjaïa wurde zu einem königlichen Zentrum der Hammadiden, als al-Nasir 1067 mit dem Wiederaufbau begann.",
+				"Der Mathematiker Fibonacci lernte in Béjaïa Mathematik, während sein Vater dort pisanische Kaufleute vertrat."
+			]
+		}
 	},
 	"tizi-ouzou": {
 		"kind": "city",
 		"population": 144000,
 		"populationRank": 23,
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Tizi Ouzou’s Kabyle name means the pass of the broom shrubs.",
+				"Tizi Ouzou developed around an Ottoman fort that was strengthened in the early eighteenth century.",
+				"The university in Tizi Ouzou grew from a centre opened in 1977–1978 and adopted writer Mouloud Mammeri’s name in 1990."
+			],
+			"it": [
+				"Il nome cabilo Tizi Ouzou significa passo delle ginestre.",
+				"Tizi Ouzou si sviluppò intorno a un forte ottomano rafforzato all’inizio del Settecento.",
+				"L’università di Tizi Ouzou nacque da un centro aperto nel 1977–1978 e assunse il nome dello scrittore Mouloud Mammeri nel 1990."
+			],
+			"de": [
+				"Tizi Ouzous kabylischer Name bedeutet Pass der Ginstersträucher.",
+				"Tizi Ouzou entwickelte sich um ein osmanisches Fort, das im frühen 18. Jahrhundert verstärkt wurde.",
+				"Die Universität in Tizi Ouzou ging aus einem 1977–1978 eröffneten Zentrum hervor und erhielt 1990 den Namen des Schriftstellers Mouloud Mammeri."
+			]
+		}
 	},
 	"guelma": {
 		"kind": "city",
 		"population": 123590,
 		"populationRank": 30,
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Guelma occupies the site of the ancient city of Calama.",
+				"Guelma’s Roman theatre was extensively reconstructed in the early twentieth century and hosted a modern performance in 1908.",
+				"Guelma’s separate Mahmoud Triki Regional Theatre was built in 1880 using reused Roman stones."
+			],
+			"it": [
+				"Guelma occupa il sito dell’antica città di Calama.",
+				"Il teatro romano di Guelma fu ampiamente ricostruito all’inizio del Novecento e ospitò una rappresentazione moderna nel 1908.",
+				"Il distinto Teatro regionale Mahmoud Triki di Guelma fu costruito nel 1880 riutilizzando pietre romane."
+			],
+			"de": [
+				"Guelma liegt an der Stelle der antiken Stadt Calama.",
+				"Guelmas römisches Theater wurde im frühen 20. Jahrhundert weitgehend rekonstruiert und beherbergte 1908 eine moderne Aufführung.",
+				"Das davon getrennte Regionaltheater Mahmoud Triki in Guelma wurde 1880 unter Wiederverwendung römischer Steine erbaut."
+			]
+		}
 	},
 	"blida": {
 		"kind": "city",
 		"population": 511348,
 		"populationRank": 4,
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Blida’s name comes from an Arabic diminutive meaning little town.",
+				"Blida developed in the sixteenth century with the settlement of migrants from Andalusia.",
+				"A destructive earthquake struck Blida on 2 March 1825 and was followed by a series of aftershocks."
+			],
+			"it": [
+				"Il nome Blida deriva da un diminutivo arabo che significa piccola città.",
+				"Blida si sviluppò nel Cinquecento con l’insediamento di immigrati provenienti dall’Andalusia.",
+				"Un terremoto distruttivo colpì Blida il 2 marzo 1825 e fu seguito da una serie di scosse di assestamento."
+			],
+			"de": [
+				"Blidas Name stammt von einer arabischen Verkleinerungsform für kleine Stadt.",
+				"Blida entwickelte sich im 16. Jahrhundert durch die Ansiedlung von Migranten aus Andalusien.",
+				"Ein zerstörerisches Erdbeben traf Blida am 2. März 1825 und wurde von einer Reihe von Nachbeben gefolgt."
+			]
+		}
 	},
 	"bouira": {
 		"kind": "city",
 		"population": 110144,
 		"populationRank": 32,
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Bouira was historically known as Souk Hamza, the market of Hamza.",
+				"Bouira’s Bordj Hamza was an Ottoman garrison that controlled caravan passage and collected taxes.",
+				"The star-shaped Bordj Hamza in Bouira used channels and filters to collect rainwater in an underground cistern."
+			],
+			"it": [
+				"Bouira era storicamente conosciuta come Souk Hamza, il mercato di Hamza.",
+				"Il Bordj Hamza di Bouira era una guarnigione ottomana che controllava il passaggio delle carovane e riscuoteva imposte.",
+				"Il Bordj Hamza a pianta stellare di Bouira usava canali e filtri per raccogliere l’acqua piovana in una cisterna sotterranea."
+			],
+			"de": [
+				"Bouira war historisch als Souk Hamza, Markt des Hamza, bekannt.",
+				"Der Bordj Hamza in Bouira war eine osmanische Garnison, die Karawanenwege kontrollierte und Steuern einzog.",
+				"Der sternförmige Bordj Hamza in Bouira sammelte über Kanäle und Filter Regenwasser in einer unterirdischen Zisterne."
+			]
+		}
 	},
 	"constantine": {
 		"kind": "city",
 		"population": 605179,
 		"populationRank": 3,
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Constantine was ancient Cirta and received its later name in honour of the emperor Constantine, who restored the city in the fourth century.",
+				"Constantine’s Ahmed Bey Palace was completed in 1835, shortly before the French conquest of the city.",
+				"Constantine’s First World War memorial takes the form of a triumphal arch inspired by the Roman arch at Timgad."
+			],
+			"it": [
+				"Costantina era l’antica Cirta e ricevette il nome successivo in onore dell’imperatore Costantino, che restaurò la città nel IV secolo.",
+				"Il Palazzo Ahmed Bey di Costantina fu completato nel 1835, poco prima della conquista francese della città.",
+				"Il monumento ai caduti della Prima guerra mondiale di Costantina ha la forma di un arco di trionfo ispirato all’arco romano di Timgad."
+			],
+			"de": [
+				"Constantine war das antike Cirta und erhielt seinen späteren Namen zu Ehren Kaiser Konstantins, der die Stadt im 4. Jahrhundert wiederherstellte.",
+				"Der Ahmed-Bey-Palast in Constantine wurde 1835 fertiggestellt, kurz vor der französischen Eroberung der Stadt.",
+				"Constantines Denkmal für die Gefallenen des Ersten Weltkriegs hat die Form eines Triumphbogens nach dem Vorbild des römischen Bogens von Timgad."
+			]
+		}
 	},
 	"souk-ahras": {
 		"kind": "city",
 		"population": 134947,
 		"populationRank": 27,
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Souk Ahras occupies the site of ancient Thagaste.",
+				"Augustine was born in Thagaste, today’s Souk Ahras, in AD 354.",
+				"The regional theatre in Souk Ahras was established in 2008."
+			],
+			"it": [
+				"Souk Ahras occupa il sito dell’antica Tagaste.",
+				"Agostino nacque a Tagaste, l’odierna Souk Ahras, nel 354 d.C.",
+				"Il teatro regionale di Souk Ahras fu istituito nel 2008."
+			],
+			"de": [
+				"Souk Ahras liegt an der Stelle des antiken Thagaste.",
+				"Augustinus wurde 354 n. Chr. in Thagaste, dem heutigen Souk Ahras, geboren.",
+				"Das Regionaltheater in Souk Ahras wurde 2008 gegründet."
+			]
+		}
 	},
 	"medea": {
 		"kind": "city",
 		"population": 147707,
 		"populationRank": 22,
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Médéa also appears in historical writing under the name Lemdia.",
+				"Dar El Bey in Médéa, also called Dar El Emir Abdelkader, was classified as a historic monument in 1993.",
+				"Médéa’s National Cultural Festival of Comic Theatre was formally instituted in 2006."
+			],
+			"it": [
+				"Médéa compare nella storiografia anche con il nome Lemdia.",
+				"Il Dar El Bey di Médéa, chiamato anche Dar El Emir Abdelkader, fu classificato come monumento storico nel 1993.",
+				"Il Festival culturale nazionale del teatro comico di Médéa fu formalmente istituito nel 2006."
+			],
+			"de": [
+				"Médéa erscheint in historischen Darstellungen auch unter dem Namen Lemdia.",
+				"Dar El Bey in Médéa, auch Dar El Emir Abdelkader genannt, wurde 1993 als historisches Denkmal eingestuft.",
+				"Médéas Nationales Kulturfestival des komischen Theaters wurde 2006 offiziell eingerichtet."
+			]
+		}
 	},
 	"setif": {
 		"kind": "city",
@@ -109,14 +296,48 @@
 		"populationRank": 9,
 		"region": "SZtif",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Sétif was known in antiquity as Sitifis, a Roman colony founded for army veterans under Emperor Nerva.",
+				"Sétif’s Aïn el Fouara fountain features a sculpture by Francis de Saint-Vidal.",
+				"Sétif’s museum displays a Dionysus mosaic discovered in the ancient town after heavy rain in 1970."
+			],
+			"it": [
+				"Sétif era conosciuta nell’antichità come Sitifis, colonia romana fondata per veterani dell’esercito sotto l’imperatore Nerva.",
+				"La fontana Aïn el Fouara di Sétif presenta una scultura di Francis de Saint-Vidal.",
+				"Il museo di Sétif espone un mosaico di Dioniso scoperto nella città antica dopo forti piogge nel 1970."
+			],
+			"de": [
+				"Sétif hieß in der Antike Sitifis und war eine unter Kaiser Nerva gegründete römische Veteranenkolonie.",
+				"Sétifs Brunnen Aïn el Fouara trägt eine Skulptur von Francis de Saint-Vidal.",
+				"Sétifs Museum zeigt ein Dionysos-Mosaik, das 1970 nach starken Regenfällen in der antiken Stadt entdeckt wurde."
+			]
+		}
 	},
 	"chlef": {
 		"kind": "city",
 		"population": 449167,
 		"populationRank": 6,
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Chlef was previously known as Orléansville and then El Asnam.",
+				"A major earthquake devastated Chlef on 10 October 1980.",
+				"An inscription dates Chlef’s ancient Christian basilica to AD 324; its labyrinth mosaic was later moved to Algiers."
+			],
+			"it": [
+				"Chlef era conosciuta in precedenza come Orléansville e poi El Asnam.",
+				"Un forte terremoto devastò Chlef il 10 ottobre 1980.",
+				"Un’iscrizione data la basilica cristiana antica di Chlef al 324 d.C.; il suo mosaico a labirinto fu poi trasferito ad Algeri."
+			],
+			"de": [
+				"Chlef hieß früher Orléansville und danach El Asnam.",
+				"Ein schweres Erdbeben verwüstete Chlef am 10. Oktober 1980.",
+				"Eine Inschrift datiert Chlefs antike christliche Basilika auf 324 n. Chr.; ihr Labyrinthmosaik wurde später nach Algier gebracht."
+			]
+		}
 	},
 	"bordj-bou-arreridj": {
 		"kind": "city",
@@ -124,14 +345,48 @@
 		"populationRank": 26,
 		"region": "Bordj Bou Arreridj",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Bordj Bou Arréridj takes the first part of its name from bordj, a fort around which the town developed.",
+				"Bordj El Mokrani in Bordj Bou Arréridj was besieged during the uprising of 1871.",
+				"Bordj El Mokrani in Bordj Bou Arréridj was classified as protected cultural heritage in 2010."
+			],
+			"it": [
+				"Bordj Bou Arréridj prende la prima parte del nome da bordj, il forte intorno al quale si sviluppò la città.",
+				"Il Bordj El Mokrani di Bordj Bou Arréridj fu assediato durante l’insurrezione del 1871.",
+				"Il Bordj El Mokrani di Bordj Bou Arréridj fu classificato come patrimonio culturale tutelato nel 2010."
+			],
+			"de": [
+				"Bordj Bou Arréridj erhält den ersten Teil seines Namens von bordj, dem Fort, um das sich die Stadt entwickelte.",
+				"Der Bordj El Mokrani in Bordj Bou Arréridj wurde während des Aufstands von 1871 belagert.",
+				"Der Bordj El Mokrani in Bordj Bou Arréridj wurde 2010 als geschütztes Kulturerbe eingestuft."
+			]
+		}
 	},
 	"mostaganem": {
 		"kind": "city",
 		"population": 188354,
 		"populationRank": 14,
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Mostaganem appears in medieval Arabic geographical writing as Mustaghanim, a name whose origin remains uncertain.",
+				"Mostaganem’s Great Mosque was built under the Marinid dynasty in the fourteenth century.",
+				"The National Cultural Festival of Amateur Theatre in Mostaganem was formally instituted in 2004."
+			],
+			"it": [
+				"Mostaganem compare nella geografia araba medievale come Mustaghanim, nome di origine ancora incerta.",
+				"La Grande Moschea di Mostaganem fu costruita sotto la dinastia merinide nel Trecento.",
+				"Il Festival culturale nazionale del teatro amatoriale di Mostaganem fu formalmente istituito nel 2004."
+			],
+			"de": [
+				"Mostaganem erscheint in mittelalterlichen arabischen geographischen Schriften als Mustaghanim, ein Name weiterhin ungewisser Herkunft.",
+				"Mostaganems Große Moschee wurde im 14. Jahrhundert unter den Meriniden erbaut.",
+				"Das Nationale Kulturfestival des Amateurtheaters in Mostaganem wurde 2004 offiziell eingerichtet."
+			]
+		}
 	},
 	"oum-el-bouaghi": {
 		"kind": "city",
@@ -139,7 +394,24 @@
 		"populationRank": 34,
 		"region": "Oum el Bouaghi",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Oum El Bouaghi was known during French colonial rule as Canrobert, after a French marshal.",
+				"Oum El Bouaghi became a provincial administrative seat in 1974, transforming the earlier small settlement.",
+				"Oum El Bouaghi’s university originated as a teacher-training school in 1983 and received university status in 2009."
+			],
+			"it": [
+				"Oum El Bouaghi era conosciuta durante il dominio coloniale francese come Canrobert, dal nome di un maresciallo francese.",
+				"Oum El Bouaghi divenne sede amministrativa provinciale nel 1974, trasformando il precedente piccolo insediamento.",
+				"L’università di Oum El Bouaghi nacque come scuola di formazione degli insegnanti nel 1983 e ricevette lo status universitario nel 2009."
+			],
+			"de": [
+				"Oum El Bouaghi hieß während der französischen Kolonialherrschaft nach einem französischen Marschall Canrobert.",
+				"Oum El Bouaghi wurde 1974 zum Verwaltungssitz einer Provinz, was die frühere kleine Siedlung veränderte.",
+				"Die Universität in Oum El Bouaghi entstand 1983 als Lehrerbildungsanstalt und erhielt 2009 Universitätsstatus."
+			]
+		}
 	},
 	"oran": {
 		"kind": "city",
@@ -147,21 +419,72 @@
 		"populationRank": 2,
 		"population1950": 269000,
 		"coastal": true,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Oran is known in Arabic as Wahran, a name traditionally associated with lions.",
+				"A national festival established in Oran helped promote raï, Algeria’s popular song tradition.",
+				"Oran’s Santa Cruz Fort formed part of the city’s defensive system during Spanish rule."
+			],
+			"it": [
+				"Orano è conosciuta in arabo come Wahran, nome tradizionalmente associato ai leoni.",
+				"Un festival nazionale istituito a Orano contribuì a promuovere il raï, tradizione canora popolare algerina.",
+				"Il Forte Santa Cruz di Orano faceva parte del sistema difensivo della città durante il dominio spagnolo."
+			],
+			"de": [
+				"Oran heißt auf Arabisch Wahran, ein Name, der traditionell mit Löwen verbunden wird.",
+				"Ein in Oran gegründetes nationales Festival half bei der Förderung des Raï, Algeriens populärer Gesangstradition.",
+				"Orans Fort Santa Cruz gehörte während der spanischen Herrschaft zum Verteidigungssystem der Stadt."
+			]
+		}
 	},
 	"m-sila": {
 		"kind": "city",
 		"population": 150000,
 		"populationRank": 20,
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"The medieval Fatimid settlement at M’Sila was called Mohammedia.",
+				"M’Sila’s Hodna Museum opened on 18 May 1993 to preserve the province’s archaeological heritage.",
+				"The Hodna Museum in M’Sila holds ceramics and carved stucco from the tenth-century Fatimid town of Mohammedia."
+			],
+			"it": [
+				"L’insediamento fatimide medievale di M’Sila si chiamava Mohammedia.",
+				"Il Museo dell’Hodna di M’Sila aprì il 18 maggio 1993 per conservare il patrimonio archeologico della provincia.",
+				"Il Museo dell’Hodna a M’Sila conserva ceramiche e stucchi scolpiti della città fatimide di Mohammedia del X secolo."
+			],
+			"de": [
+				"Die mittelalterliche fatimidische Siedlung bei M’Sila hieß Mohammedia.",
+				"Das Hodna-Museum in M’Sila wurde am 18. Mai 1993 eröffnet, um das archäologische Erbe der Provinz zu bewahren.",
+				"Das Hodna-Museum in M’Sila besitzt Keramik und geschnitzten Stuck aus der fatimidischen Stadt Mohammedia des 10. Jahrhunderts."
+			]
+		}
 	},
 	"batna": {
 		"kind": "city",
 		"population": 280798,
 		"populationRank": 8,
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Batna briefly carried the colonial name Nouvelle Lambèse in 1848–1849.",
+				"Modern Batna grew around a French military camp established in 1844.",
+				"Batna’s theatre was designated a regional theatre in 1985."
+			],
+			"it": [
+				"Batna portò brevemente il nome coloniale Nouvelle Lambèse nel 1848–1849.",
+				"La moderna Batna si sviluppò intorno a un accampamento militare francese fondato nel 1844.",
+				"Il teatro di Batna fu designato teatro regionale nel 1985."
+			],
+			"de": [
+				"Batna trug 1848–1849 kurzzeitig den Kolonialnamen Nouvelle Lambèse.",
+				"Das moderne Batna entwickelte sich um ein 1844 gegründetes französisches Militärlager.",
+				"Batnas Theater wurde 1985 zum Regionaltheater erklärt."
+			]
+		}
 	},
 	"tebessa": {
 		"kind": "city",
@@ -169,63 +492,216 @@
 		"populationRank": 18,
 		"region": "TZbessa",
 		"coastal": false,
-		"position": "north-east"
+		"position": "north-east",
+		"hooks": {
+			"en": [
+				"Tébessa was known in Roman times as Theveste.",
+				"Tébessa’s four-sided Arch of Caracalla was erected in AD 214.",
+				"The Roman temple conventionally called the Temple of Minerva stands within Tébessa’s Byzantine walls."
+			],
+			"it": [
+				"Tébessa era conosciuta in epoca romana come Theveste.",
+				"L’Arco di Caracalla a quattro facce di Tébessa fu eretto nel 214 d.C.",
+				"Il tempio romano convenzionalmente chiamato Tempio di Minerva sorge all’interno delle mura bizantine di Tébessa."
+			],
+			"de": [
+				"Tébessa hieß in römischer Zeit Theveste.",
+				"Tébessas vierseitiger Caracallabogen wurde 214 n. Chr. errichtet.",
+				"Der üblicherweise Minervatempel genannte römische Tempel steht innerhalb von Tébessas byzantinischen Mauern."
+			]
+		}
 	},
 	"mascara": {
 		"kind": "city",
 		"population": 108230,
 		"populationRank": 33,
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Mascara’s name is often linked to Arabic m’asker, a military camp, although its origin is debated.",
+				"Mascara served as Emir Abdelkader’s capital during resistance to the French conquest.",
+				"The building identified as Emir Abdelkader’s tribunal in Mascara was classified as protected heritage in 1999."
+			],
+			"it": [
+				"Il nome Mascara è spesso collegato all’arabo m’asker, accampamento militare, sebbene l’origine sia discussa.",
+				"Mascara fu capitale dell’emiro Abd el-Kader durante la resistenza alla conquista francese.",
+				"L’edificio identificato come tribunale dell’emiro Abd el-Kader a Mascara fu classificato come patrimonio tutelato nel 1999."
+			],
+			"de": [
+				"Mascaras Name wird oft mit dem arabischen m’asker, Militärlager, verbunden, doch seine Herkunft ist umstritten.",
+				"Mascara war während des Widerstands gegen die französische Eroberung die Hauptstadt Emir Abd el-Kaders.",
+				"Das als Gericht Emir Abd el-Kaders identifizierte Gebäude in Mascara wurde 1999 als geschütztes Kulturerbe eingestuft."
+			]
+		}
 	},
 	"tiaret": {
 		"kind": "city",
 		"population": 184195,
 		"populationRank": 15,
 		"coastal": false,
-		"position": "north"
+		"position": "north",
+		"hooks": {
+			"en": [
+				"Tiaret’s name is also recorded in the historical forms Tihert and Tahert.",
+				"The Chaouchaoua stud in Tiaret was founded in 1874 as a horse-breeding centre.",
+				"Tiaret’s Chaouchaoua national stud was classified as a historic monument in 1999."
+			],
+			"it": [
+				"Il nome Tiaret è attestato anche nelle forme storiche Tihert e Tahert.",
+				"L’allevamento Chaouchaoua di Tiaret fu fondato nel 1874 come centro di riproduzione equina.",
+				"L’allevamento nazionale Chaouchaoua di Tiaret fu classificato come monumento storico nel 1999."
+			],
+			"de": [
+				"Der Name Tiaret ist auch in den historischen Formen Tihert und Tahert überliefert.",
+				"Das Gestüt Chaouchaoua in Tiaret wurde 1874 als Pferdezuchtzentrum gegründet.",
+				"Tiarets Nationalgestüt Chaouchaoua wurde 1999 als historisches Denkmal eingestuft."
+			]
+		}
 	},
 	"sidi-bel-abbes": {
 		"kind": "city",
 		"population": 208604,
 		"populationRank": 12,
 		"coastal": false,
-		"position": "north-west"
+		"position": "north-west",
+		"hooks": {
+			"en": [
+				"Sidi Bel Abbès takes its name from a Muslim holy man whose mausoleum preceded the modern town.",
+				"The French Foreign Legion’s headquarters moved from Sidi Bel Abbès to Aubagne in 1962.",
+				"Sidi Bel Abbès was planned in the nineteenth century with a regular street grid and separate civilian and military quarters."
+			],
+			"it": [
+				"Sidi Bel Abbès prende il nome da un santo musulmano il cui mausoleo precedeva la città moderna.",
+				"Il quartier generale della Legione straniera francese fu trasferito da Sidi Bel Abbès ad Aubagne nel 1962.",
+				"Sidi Bel Abbès fu pianificata nell’Ottocento con una griglia regolare di strade e quartieri civili e militari separati."
+			],
+			"de": [
+				"Sidi Bel Abbès ist nach einem muslimischen Heiligen benannt, dessen Mausoleum älter als die moderne Stadt war.",
+				"Das Hauptquartier der französischen Fremdenlegion zog 1962 von Sidi Bel Abbès nach Aubagne um.",
+				"Sidi Bel Abbès wurde im 19. Jahrhundert mit einem regelmäßigen Straßenraster und getrennten zivilen und militärischen Vierteln geplant."
+			]
+		}
 	},
 	"tlemcen": {
 		"kind": "city",
 		"population": 229777,
 		"populationRank": 10,
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Tlemcen’s Agadir quarter occupies the site of the Roman settlement of Pomaria.",
+				"Tlemcen’s Great Mosque was enlarged and richly decorated under the Almoravid ruler Ali ibn Yusuf in 1136.",
+				"Tlemcen’s Mechouar citadel served as the royal residence and council place of the Zayyanid rulers."
+			],
+			"it": [
+				"Il quartiere Agadir di Tlemcen occupa il sito dell’insediamento romano di Pomaria.",
+				"La Grande Moschea di Tlemcen fu ampliata e riccamente decorata sotto il sovrano almoravide Ali ibn Yusuf nel 1136.",
+				"La cittadella Mechouar di Tlemcen servì da residenza reale e luogo di consiglio dei sovrani zayyanidi."
+			],
+			"de": [
+				"Tlemcens Viertel Agadir liegt an der Stelle der römischen Siedlung Pomaria.",
+				"Tlemcens Große Moschee wurde 1136 unter dem Almoravidenherrscher Ali ibn Yusuf erweitert und reich ausgestattet.",
+				"Tlemcens Mechouar-Zitadelle diente den Zayyanidenherrschern als königliche Residenz und Beratungsort."
+			]
+		}
 	},
 	"biskra": {
 		"kind": "city",
 		"population": 202103,
 		"populationRank": 13,
 		"coastal": false,
-		"position": "east"
+		"position": "east",
+		"hooks": {
+			"en": [
+				"Biskra was known in antiquity as Vescera.",
+				"Biskra’s Landon Garden was created by Count Albert Landon de Langeville in 1872.",
+				"André Gide stayed in Biskra from November 1893 to March 1894, during a formative journey to North Africa."
+			],
+			"it": [
+				"Nell’antichità Biskra era conosciuta come Vescera.",
+				"Il giardino Landon di Biskra fu creato dal conte Albert Landon de Langeville nel 1872.",
+				"André Gide soggiornò a Biskra dal novembre 1893 al marzo 1894, durante un viaggio formativo nell’Africa settentrionale."
+			],
+			"de": [
+				"Biskra war in der Antike als Vescera bekannt.",
+				"Der Landon-Garten in Biskra wurde 1872 von Graf Albert Landon de Langeville angelegt.",
+				"André Gide hielt sich von November 1893 bis März 1894 während einer prägenden Nordafrikareise in Biskra auf."
+			]
+		}
 	},
 	"saida": {
 		"kind": "city",
 		"population": 142213,
 		"populationRank": 25,
 		"coastal": false,
-		"position": "west"
+		"position": "west",
+		"hooks": {
+			"en": [
+				"Saïda’s name is commonly interpreted as happy or fortunate in Arabic, although local traditions offer different accounts of its origin.",
+				"Saïda’s El Atik Mosque was built in 1885 with contributions from local Muslim families and leaders.",
+				"The song Saïda Baïda was composed by Cheikh Mohammed Zeroual and later performed by Cheb Mami."
+			],
+			"it": [
+				"Il nome di Saïda viene comunemente interpretato come felice o fortunata in arabo, anche se le tradizioni locali ne raccontano diversamente l’origine.",
+				"La moschea El Atik di Saïda fu costruita nel 1885 con i contributi di famiglie e capi musulmani locali.",
+				"La canzone Saïda Baïda fu composta da Cheikh Mohammed Zeroual e in seguito interpretata da Cheb Mami."
+			],
+			"de": [
+				"Saïdas Name wird im Arabischen gewöhnlich als glücklich oder vom Glück begünstigt gedeutet, doch örtliche Überlieferungen erklären seinen Ursprung unterschiedlich.",
+				"Saïdas El-Atik-Moschee wurde 1885 mit Beiträgen örtlicher muslimischer Familien und Würdenträger erbaut.",
+				"Das Lied Saïda Baïda wurde von Cheikh Mohammed Zeroual komponiert und später von Cheb Mami interpretiert."
+			]
+		}
 	},
 	"djelfa": {
 		"kind": "city",
 		"population": 170901,
 		"populationRank": 19,
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"The name Djelfa appears in the French imperial decree of 10 January 1861 establishing a population centre there.",
+				"The writer Max Aub was imprisoned in the Djelfa internment camp in 1941–1942.",
+				"Max Aub’s poetry collection Diario de Djelfa, drawing on his imprisonment at Djelfa, was first published in Mexico in 1944."
+			],
+			"it": [
+				"Il nome Djelfa compare nel decreto imperiale francese del 10 gennaio 1861 che vi istituiva un centro abitato.",
+				"Lo scrittore Max Aub fu imprigionato nel campo d’internamento di Djelfa nel 1941–1942.",
+				"La raccolta poetica Diario de Djelfa di Max Aub, ispirata alla sua prigionia a Djelfa, fu pubblicata per la prima volta in Messico nel 1944."
+			],
+			"de": [
+				"Der Name Djelfa erscheint im französischen kaiserlichen Dekret vom 10. Januar 1861 zur Gründung eines Siedlungszentrums an diesem Ort.",
+				"Der Schriftsteller Max Aub war 1941–1942 im Internierungslager Djelfa inhaftiert.",
+				"Max Aubs Gedichtsammlung Diario de Djelfa über seine Haft in Djelfa erschien erstmals 1944 in Mexiko."
+			]
+		}
 	},
 	"laghouat": {
 		"kind": "city",
 		"population": 113872,
 		"populationRank": 31,
 		"coastal": false,
-		"position": "centre"
+		"position": "centre",
+		"hooks": {
+			"en": [
+				"Laghouat also appears in older travel writing under the spelling El-aghouat.",
+				"French forces captured Laghouat on 4 December 1852 after a siege.",
+				"Laghouat’s municipal museum occupies a former church in the historic town."
+			],
+			"it": [
+				"Nei resoconti di viaggio più antichi Laghouat compare anche con la grafia El-aghouat.",
+				"Le forze francesi conquistarono Laghouat il 4 dicembre 1852 dopo un assedio.",
+				"Il museo municipale di Laghouat occupa un’ex chiesa nella città storica."
+			],
+			"de": [
+				"In älteren Reiseberichten erscheint Laghouat auch unter der Schreibweise El-aghouat.",
+				"Französische Truppen eroberten Laghouat nach einer Belagerung am 4. Dezember 1852.",
+				"Das Stadtmuseum von Laghouat befindet sich in einer ehemaligen Kirche in der historischen Stadt."
+			]
+		}
 	},
 	"el-oued": {
 		"kind": "city",
@@ -233,7 +709,24 @@
 		"populationRank": 16,
 		"region": "Biskra",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"El Oued takes its name from the Arabic word for a river or watercourse.",
+				"El Oued’s traditional domed roofs gave the town its nickname, the City of a Thousand Domes.",
+				"El Oued’s old El Acheche-Massaâba quarter became a legally protected heritage sector in 2011."
+			],
+			"it": [
+				"El Oued prende il nome dalla parola araba che indica un fiume o corso d’acqua.",
+				"I tradizionali tetti a cupola di El Oued valsero alla città il soprannome di città delle mille cupole.",
+				"L’antico quartiere El Acheche-Massaâba di El Oued divenne un settore tutelato per legge nel 2011."
+			],
+			"de": [
+				"El Oued ist nach dem arabischen Wort für einen Fluss oder Wasserlauf benannt.",
+				"Die traditionellen Kuppeldächer von El Oued brachten der Stadt den Beinamen Stadt der tausend Kuppeln ein.",
+				"Das alte Viertel El Acheche-Massaâba in El Oued wurde 2011 als geschützter Denkmalbereich ausgewiesen."
+			]
+		}
 	},
 	"touggourt": {
 		"kind": "city",
@@ -241,7 +734,24 @@
 		"populationRank": 28,
 		"region": "Ouargla",
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Touggourt appears under the spelling Tougourt in nineteenth-century historical studies of its sultans.",
+				"Touggourt’s Great Mosque was completed in 1805 under Sultan Ibrahim Ben Djellab, according to its commemorative inscription.",
+				"The tombs of the Ben Djellab rulers preserve the memory of Touggourt’s former sultanate."
+			],
+			"it": [
+				"Touggourt compare con la grafia Tougourt negli studi ottocenteschi sulla storia dei suoi sultani.",
+				"La Grande Moschea di Touggourt fu completata nel 1805 sotto il sultano Ibrahim Ben Djellab, secondo l’iscrizione commemorativa.",
+				"Le tombe dei sovrani Ben Djellab conservano la memoria dell’antico sultanato di Touggourt."
+			],
+			"de": [
+				"In historischen Studien des 19. Jahrhunderts über seine Sultane erscheint Touggourt unter der Schreibweise Tougourt.",
+				"Die Große Moschee von Touggourt wurde laut ihrer Gedenkinschrift 1805 unter Sultan Ibrahim Ben Djellab vollendet.",
+				"Die Gräber der Ben-Djellab-Herrscher erinnern an das ehemalige Sultanat von Touggourt."
+			]
+		}
 	},
 	"ghardaia": {
 		"kind": "city",
@@ -249,20 +759,71 @@
 		"populationRank": 29,
 		"region": "Ghardaaa",
 		"coastal": false,
-		"position": "south"
+		"position": "south",
+		"hooks": {
+			"en": [
+				"Ghardaïa is also known by the Amazigh name Taghardaït.",
+				"Ghardaïa’s fortified old town was founded in 1048, according to the M’zab heritage preservation office.",
+				"Ghardaïa’s Great Mosque was the first building of the fortified settlement and occupies its highest point."
+			],
+			"it": [
+				"Ghardaïa è conosciuta anche con il nome amazigh Taghardaït.",
+				"La città antica fortificata di Ghardaïa fu fondata nel 1048, secondo l’ufficio per la tutela del patrimonio dello M’zab.",
+				"La Grande Moschea di Ghardaïa fu il primo edificio dell’insediamento fortificato e ne occupa il punto più alto."
+			],
+			"de": [
+				"Ghardaïa ist auch unter dem Amazigh-Namen Taghardaït bekannt.",
+				"Die befestigte Altstadt von Ghardaïa wurde laut dem Amt für die Erhaltung des M’zab-Erbes 1048 gegründet.",
+				"Die Große Moschee von Ghardaïa war das erste Gebäude der befestigten Siedlung und steht an deren höchstem Punkt."
+			]
+		}
 	},
 	"ouargla": {
 		"kind": "city",
 		"population": 176271,
 		"populationRank": 17,
 		"coastal": false,
-		"position": "south-east"
+		"position": "south-east",
+		"hooks": {
+			"en": [
+				"Ouargla is known in its local Berber language as Wargren.",
+				"Ouargla’s old ksar is divided into the historic quarters of Beni Sissine, Beni Ouaguine and Beni Brahim.",
+				"Ouargla’s Saharan Museum displays archaeological objects and records of everyday life among Saharan communities."
+			],
+			"it": [
+				"Nella lingua berbera locale Ouargla è conosciuta come Wargren.",
+				"L’antico ksar di Ouargla è suddiviso nei quartieri storici di Beni Sissine, Beni Ouaguine e Beni Brahim.",
+				"Il Museo sahariano di Ouargla espone reperti archeologici e testimonianze della vita quotidiana delle comunità sahariane."
+			],
+			"de": [
+				"In der örtlichen Berbersprache ist Ouargla als Wargren bekannt.",
+				"Der alte Ksar von Ouargla gliedert sich in die historischen Viertel Beni Sissine, Beni Ouaguine und Beni Brahim.",
+				"Das Sahara-Museum von Ouargla zeigt archäologische Objekte und Zeugnisse des Alltagslebens saharischer Gemeinschaften."
+			]
+		}
 	},
 	"bechar": {
 		"kind": "city",
 		"population": 143382,
 		"populationRank": 24,
 		"coastal": false,
-		"position": "south-west"
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Béchar was known as Colomb-Béchar during French colonial rule.",
+				"Béchar’s Ennasr stadium has hosted performances of the national Diwan music festival.",
+				"The ensemble Gaâda Diwane de Béchar combines mystical chants and Arab-Berber rhythms with blues influences."
+			],
+			"it": [
+				"Durante il dominio coloniale francese Béchar era conosciuta come Colomb-Béchar.",
+				"Lo stadio Ennasr di Béchar ha ospitato spettacoli del festival nazionale di musica diwan.",
+				"Il gruppo Gaâda Diwane de Béchar unisce canti mistici e ritmi arabo-berberi a influenze blues."
+			],
+			"de": [
+				"Während der französischen Kolonialherrschaft war Béchar als Colomb-Béchar bekannt.",
+				"Im Ennasr-Stadion von Béchar fanden Auftritte des nationalen Diwan-Musikfestivals statt.",
+				"Das Ensemble Gaâda Diwane de Béchar verbindet mystische Gesänge und arabisch-berberische Rhythmen mit Blues-Einflüssen."
+			]
+		}
 	}
 }

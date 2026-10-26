@@ -2,10 +2,15 @@
 // --maps=id,id narrows release scope; --strict fails below --minimum=3.
 import { readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
-import { REPO_ROOT, parseArgs, slugify } from './mapBuildUtils.js';
+import { REPO_ROOT, parseArgs } from './mapBuildUtils.js';
 import { authoredResolver, storedHooksFor, factsFileFor, WORLD } from './factsHooks.js';
 const args = parseArgs(process.argv.slice(2));
 const minimum = Number(args.minimum ?? 3);
+if (Object.hasOwn(args, 'country') && !args.country?.trim())
+	throw new Error('Country selector cannot be empty');
+if (Object.hasOwn(args, 'maps') && !args.maps?.trim())
+	throw new Error('Map selector cannot be empty');
+const wantedFile = args.country ? factsFileFor(args.country) : undefined;
 if (![1, 2, 3].includes(minimum)) throw new Error('Minimum must be 1, 2 or 3');
 const index = JSON.parse(readFileSync(path.join(REPO_ROOT, 'data/maps/index.json'), 'utf8')) as {
 	id: string;
@@ -23,6 +28,7 @@ interface Coverage {
 	counts: Record<string, number>;
 }
 const unique = new Map<string, Coverage>();
+const auditedMaps = new Set<string>();
 for (const id of selected) {
 	const map = JSON.parse(
 		readFileSync(path.join(REPO_ROOT, 'data/maps', id, 'map.json'), 'utf8')
@@ -35,7 +41,8 @@ for (const id of selected) {
 		const country = target.type === 'country' ? WORLD : (target.country ?? map.country);
 		if (!country) throw new Error(id + '/' + target.id + ': missing country');
 		const file = factsFileFor(country);
-		if (args.country && slugify(args.country) !== file.replace(/\.json$/, '')) continue;
+		if (wantedFile && wantedFile !== file) continue;
+		auditedMaps.add(id);
 		const kind = target.type === 'city' ? 'city' : 'region';
 		const key = file + '/' + target.id + '/' + kind;
 		const prior = unique.get(key);
@@ -55,16 +62,18 @@ for (const id of selected) {
 	}
 }
 const rows = [...unique.values()];
+if (rows.length === 0 && (wantedFile || process.argv.includes('--strict')))
+	throw new Error('No playable targets match the selected country/maps');
 const incomplete = rows.filter((row) => Math.min(...Object.values(row.counts)) < minimum);
 const report = {
-	maps: selected.length,
+	maps: auditedMaps.size,
 	minimum,
 	total: rows.length,
 	complete: rows.length - incomplete.length,
 	withoutAuthoredFacts: rows.filter((row) => Math.min(...Object.values(row.counts)) === 0).length,
 	shortSets: rows.filter(
 		(row) =>
-			Math.min(...Object.values(row.counts)) > 0 && Math.min(...Object.values(row.counts)) < 3
+			Math.min(...Object.values(row.counts)) > 0 && Math.min(...Object.values(row.counts)) < minimum
 	).length,
 	incomplete
 };

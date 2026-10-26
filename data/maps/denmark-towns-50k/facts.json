@@ -52,7 +52,7 @@
 	"viborg": {
 		"kind": "city",
 		"population": 41079,
-		"populationRank": 16,
+		"populationRank": 17,
 		"region": "Midtjylland",
 		"coastal": true,
 		"position": "north-west",
@@ -77,7 +77,7 @@
 	"holstebro": {
 		"kind": "city",
 		"population": 37220,
-		"populationRank": 19,
+		"populationRank": 20,
 		"region": "Midtjylland",
 		"coastal": true,
 		"position": "west",
@@ -202,7 +202,7 @@
 	"hiller-d": {
 		"kind": "city",
 		"population": 36043,
-		"populationRank": 20,
+		"populationRank": 21,
 		"region": "Hovedstaden",
 		"coastal": false,
 		"position": "east",
@@ -328,7 +328,7 @@
 	"taastrup": {
 		"kind": "city",
 		"population": 37231,
-		"populationRank": 18,
+		"populationRank": 19,
 		"region": "Hovedstaden",
 		"coastal": true,
 		"position": "south-east",
@@ -372,6 +372,31 @@
 				"Der Name wird traditionell als Roars Quelle gedeutet.",
 				"Viele dänische Herrscher sind im Dom begraben.",
 				"Das Wikingerschiffsmuseum bewahrt die fünf Skuldelev-Schiffe."
+			]
+		}
+	},
+	"fredericia": {
+		"kind": "city",
+		"population": 41243,
+		"populationRank": 16,
+		"region": "Syddanmark",
+		"coastal": true,
+		"position": "south-west",
+		"hooks": {
+			"en": [
+				"Fredericia is named after King Frederik III, who founded the fortress town in 1650.",
+				"Fredericia received privileges guaranteeing religious freedom in 1682.",
+				"Danish troops broke the siege of Fredericia with a sortie on 6 July 1849."
+			],
+			"it": [
+				"Fredericia prende il nome dal re Federico III, che fondò la città fortificata nel 1650.",
+				"Fredericia ricevette privilegi che garantivano la libertà religiosa nel 1682.",
+				"Le truppe danesi spezzarono l’assedio di Fredericia con una sortita il 6 luglio 1849."
+			],
+			"de": [
+				"Fredericia ist nach König Frederik III. benannt, der die Festungsstadt 1650 gründete.",
+				"Fredericia erhielt 1682 Privilegien, die Religionsfreiheit garantierten.",
+				"Dänische Truppen durchbrachen die Belagerung von Fredericia mit einem Ausfall am 6. Juli 1849."
 			]
 		}
 	},
@@ -428,7 +453,7 @@
 	"k-ge": {
 		"kind": "city",
 		"population": 38588,
-		"populationRank": 17,
+		"populationRank": 18,
 		"region": "Sjælland",
 		"coastal": true,
 		"position": "south-east",

@@ -32,24 +32,10 @@ const countries: Country[] = [
 		language: 'en',
 		population: 1000,
 		minimumYear: 2011,
-		boundarySource: 'data/boundaries/denmark-regions-natural-earth.geojson',
+		boundarySource: 'data/boundaries/denmark-regions-gb-9469f09.geojson',
 		clipToBoundary: true,
 		// Natural Earth Copenhagen centre, preserving the existing map's position.
 		coordinateOverrides: { Q1748: [12.5615399, 55.68051] }
-	},
-	{
-		id: 'serbia',
-		name: 'Serbia',
-		iso: 'SRB',
-		language: 'en',
-		population: 1000,
-		minimumYear: 2011,
-		boundarySource: 'data/boundaries/serbia-districts-gb.geojson',
-		clipToBoundary: true,
-		excludedItems: {
-			Q2074197: 'Overlapping City of Belgrade administrative area, not a separate town',
-			Q189419: 'Zemun is a Belgrade borough, not a separate city target'
-		}
 	},
 	{
 		id: 'hungary',
@@ -211,18 +197,25 @@ for (const country of selected) {
 	].join('\n');
 	const url = new URL('https://query.wikidata.org/sparql');
 	url.search = new URLSearchParams({ query, format: 'json' }).toString();
-	const response = await fetch(url, {
-		headers: {
-			Accept: 'application/sparql-results+json',
-			'User-Agent': 'GeoclickMapBuild/1.0 (https://github.com/diegoami/Geoclick2027)'
-		},
-		signal: AbortSignal.timeout(90_000)
-	});
-	if (!response.ok) throw new Error(country.name + ': Wikidata HTTP ' + response.status);
-	const raw = (await response.json()) as { results: { bindings: TownBinding[] } };
+	// --bindings reprocesses an explicitly supplied saved SPARQL response.
 	const rawDir = path.join(REPO_ROOT, 'data/source/v1-town-bindings');
-	mkdirSync(rawDir, { recursive: true });
-	writeFileSync(path.join(rawDir, country.id + '.json'), JSON.stringify(raw));
+	let raw: { results: { bindings: TownBinding[] } };
+	if (args.bindings) {
+		raw = JSON.parse(readFileSync(path.resolve(REPO_ROOT, args.bindings), 'utf8'));
+	} else {
+		const response = await fetch(url, {
+			headers: {
+				Accept: 'application/sparql-results+json',
+				'User-Agent': 'GeoclickMapBuild/1.0 (https://github.com/diegoami/Geoclick2027)'
+			},
+			signal: AbortSignal.timeout(90_000)
+		});
+		if (!response.ok) throw new Error(country.name + ': Wikidata HTTP ' + response.status);
+		raw = (await response.json()) as typeof raw;
+		mkdirSync(rawDir, { recursive: true });
+		writeFileSync(path.join(rawDir, country.id + '.json'), JSON.stringify(raw));
+	}
+	if (!Array.isArray(raw.results?.bindings)) throw new Error('Invalid SPARQL bindings input');
 	if (raw.results.bindings.length === 10000)
 		throw new Error('Query limit reached; refusing partial snapshot');
 	const capitalIds = new Set(

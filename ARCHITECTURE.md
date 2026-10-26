@@ -560,3 +560,13 @@ index and the existing authored resolver. It deduplicates by normalized fact
 filename, target ID and city/region kind; country targets resolve through
 world.json. --maps narrows a working batch; --strict applies the requested
 sentence floor. The separate v1 expansion audit still protects its 735 targets.
+
+
+The v1.0 source adapters are in data/scripts/fetch-serbia-towns.ts (pinned
+RZS census/GeoNames inputs; read-serbia-census.py uses only Python's standard
+library), fetch-backlog-boundaries.ts (current Kartverket counties and detailed
+Danish coastline), and prepare-known-boundary-updates.ts (the approved Dutch
+merger/German split and Leipzig disambiguation). The map builders read each
+snapshot's actual provider attribution through placeSourceAttribution.ts.
+The strict authored audit rejects empty/unknown selectors instead of reporting
+a misleading 0/0 pass; its map count reflects the actual filtered coverage.

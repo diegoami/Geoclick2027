@@ -3,7 +3,8 @@
 		"Name-facts for Belgium (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
 		"of the same id, written later, never shows a town's sentences.",
-		"FT-73 added the eleven provinces (Brussels counted as one), each as a \"region\" entry beside any town of the same id."
+		"FT-73 added the eleven provinces (Brussels counted as one), each as a \"region\" entry beside any town of the same id.",
+		"v1.0 whole-catalogue completion (#244): sourced EN/IT/DE sets, with references under _sources by ID and kind."
 	],
 	"antwerpen": {
 		"region": {
@@ -118,16 +119,19 @@
 	"charleroi": {
 		"city": {
 			"en": [
-				"Named in 1666 for King Charles II of Spain: Charles-Roi.",
-				"The comic magazine Spirou was founded on its edge in 1938."
+				"Charleroi was named in 1666 for King Charles II of Spain.",
+				"The comic magazine Spirou was launched by Jean Dupuis in Marcinelle, now part of Charleroi, in 1938.",
+				"The 1956 fire at Charleroi’s Bois du Cazier coal mine killed 262 miners of twelve nationalities."
 			],
 			"it": [
-				"Prende il nome, dal 1666, dal re Carlo II di Spagna: Charles-Roi.",
-				"La rivista di fumetti Spirou nacque alle sue porte nel 1938."
+				"Charleroi fu chiamata così nel 1666 in onore del re Carlo II di Spagna.",
+				"La rivista di fumetti Spirou fu lanciata da Jean Dupuis nel 1938 a Marcinelle, oggi parte di Charleroi.",
+				"L’incendio del 1956 nella miniera di carbone Bois du Cazier di Charleroi causò la morte di 262 minatori di dodici nazionalità."
 			],
 			"de": [
-				"1666 nach König Karl II. von Spanien benannt: Charles-Roi.",
-				"Das Comicmagazin Spirou wurde 1938 an ihrem Rand gegründet."
+				"Charleroi wurde 1666 nach König Karl II. von Spanien benannt.",
+				"Das Comicmagazin Spirou wurde 1938 von Jean Dupuis in Marcinelle gegründet, das heute zu Charleroi gehört.",
+				"Beim Brand im Kohlebergwerk Bois du Cazier in Charleroi starben 1956 insgesamt 262 Bergleute aus zwölf Nationen."
 			]
 		}
 	},
@@ -189,16 +193,19 @@
 		},
 		"city": {
 			"en": [
-				"For eight centuries the capital of a prince-bishopric, independent until 1795.",
-				"Georges Simenon, the creator of Maigret, was born here in 1903."
+				"Liège appears under the Latin name Leodium on historical city views.",
+				"Liège was the capital of a prince-bishopric founded in 980 that lasted for more than eight centuries.",
+				"Georges Simenon, the creator of Maigret, was born in Liège in 1903."
 			],
 			"it": [
-				"Per otto secoli capitale di un principato vescovile, indipendente fino al 1795.",
-				"Qui nacque nel 1903 Georges Simenon, il creatore di Maigret."
+				"Liège compare con il nome latino Leodium nelle vedute storiche della città.",
+				"Liège fu la capitale di un principato vescovile fondato nel 980 e durato oltre otto secoli.",
+				"Georges Simenon, il creatore di Maigret, nacque a Liège nel 1903."
 			],
 			"de": [
-				"Acht Jahrhunderte lang die Hauptstadt eines Fürstbistums, unabhängig bis 1795.",
-				"Georges Simenon, der Schöpfer von Maigret, wurde hier 1903 geboren."
+				"Liège erscheint auf historischen Stadtansichten unter dem lateinischen Namen Leodium.",
+				"Liège war die Hauptstadt eines 980 gegründeten Fürstbistums, das mehr als acht Jahrhunderte bestand.",
+				"Georges Simenon, der Schöpfer von Maigret, wurde 1903 in Liège geboren."
 			]
 		}
 	},
@@ -243,33 +250,36 @@
 	"namur": {
 		"region": {
 			"en": [
-				"The name comes from Latin Namurcum, probably of Celtic origin; what it meant is not known.",
+				"Namur Province takes its name from its seat, which appears as Namurcum in historical Latin texts.",
 				"Adolphe Sax, who invented the saxophone, was born in Dinant in 1814.",
-				"At Han-sur-Lesse the river Lesse disappears underground, through caves that have drawn visitors since the 19th century."
+				"At Han-sur-Lesse the river Lesse disappears underground, through caves that have drawn visitors since the nineteenth century."
 			],
 			"it": [
-				"Il nome viene dal latino Namurcum, probabilmente di origine celtica; che cosa significasse non si sa.",
+				"La provincia di Namur prende il nome dal capoluogo, che compare come Namurcum nei testi latini storici.",
 				"Adolphe Sax, l’inventore del sassofono, nacque a Dinant nel 1814.",
 				"A Han-sur-Lesse il fiume Lesse scompare sottoterra, attraverso grotte che attirano visitatori dall’Ottocento."
 			],
 			"de": [
-				"Der Name kommt vom lateinischen Namurcum, wahrscheinlich keltischen Ursprungs; was er bedeutete, ist nicht bekannt.",
+				"Die Provinz Namur ist nach ihrem Verwaltungssitz benannt, der in historischen lateinischen Texten als Namurcum erscheint.",
 				"Adolphe Sax, der Erfinder des Saxophons, wurde 1814 in Dinant geboren.",
-				"Bei Han-sur-Lesse verschwindet die Lesse unter der Erde, in Höhlen, die seit dem 19. Jahrhundert Besucher anziehen."
+				"Bei Han-sur-Lesse verschwindet die Lesse unter der Erde in Höhlen, die seit dem 19. Jahrhundert Besucher anziehen."
 			]
 		},
 		"city": {
 			"en": [
-				"Its citadel stands where the Sambre flows into the Meuse.",
-				"The capital of Wallonia."
+				"Namur was also written Namurcum in historical Latin texts.",
+				"Vauban strengthened Namur’s citadel during the French occupation following the siege of 1692.",
+				"Namur’s Félicien Rops Museum presents the artist’s caricatures, prints and connections with the literary world."
 			],
 			"it": [
-				"La sua cittadella sorge dove la Sambre si getta nella Mosa.",
-				"La capitale della Vallonia."
+				"Nei testi latini storici Namur era indicata anche come Namurcum.",
+				"Vauban rafforzò la cittadella di Namur durante l’occupazione francese seguita all’assedio del 1692.",
+				"Il Museo Félicien Rops di Namur presenta le caricature e le stampe dell’artista e i suoi legami con il mondo letterario."
 			],
 			"de": [
-				"Ihre Zitadelle steht dort, wo die Sambre in die Maas mündet.",
-				"Die Hauptstadt Walloniens."
+				"In historischen lateinischen Texten wurde Namur auch Namurcum geschrieben.",
+				"Vauban verstärkte die Zitadelle von Namur während der französischen Besetzung nach der Belagerung von 1692.",
+				"Das Félicien-Rops-Museum in Namur zeigt Karikaturen und Druckgrafiken des Künstlers sowie seine Verbindungen zur Literatur."
 			]
 		}
 	},
@@ -327,6 +337,104 @@
 				"Der Name Flandern gehörte zuerst zu einem kleinen Bezirk um Brügge, dem pagus Flandrensis des frühen Mittelalters.",
 				"Am Menenpoort in Ypern wird seit 1928 fast jeden Abend der Last Post geblasen, für die Soldaten des Ersten Weltkriegs ohne bekanntes Grab.",
 				"1302 schlugen bei Kortrijk flämische Stadtmilizen die Ritter Frankreichs; der 11. Juli, der Tag der Schlacht, ist der flämische Feiertag."
+			]
+		}
+	},
+	"_sources": {
+		"hasselt:city": [
+			"https://inventaris.onroerenderfgoed.be/erfgoedobjecten/140049",
+			"https://inventaris.onroerenderfgoed.be/erfgoedobjecten/134571",
+			"https://www.bja.be/uploads/downloads/tradeflows/2018_3_BJA_Trade_Flows_Cultural_Newsletter_March_2018.pdf",
+			"https://www.jenevermuseum.be/en/collection",
+			"https://www.jenevermuseum.be/en/museum/location"
+		],
+		"liege:city": [
+			"https://lesmuseesdeliege.be/wp-content/uploads/2023/01/Liege-au-Moyen-Age.pdf",
+			"https://www.visitezliege.be/de/page/histoire-de-liege",
+			"https://www.arllfb.be/composition/membres/simenon.html"
+		],
+		"namur:city": [
+			"https://mateo.uni-mannheim.de/camenaref/hofmann/hof3/Hofmann_lexicon_t3_0837_myristica_nvx.html",
+			"https://dipot.ulb.ac.be/dspace/bitstream/2013/274802/4/f6b176bb-7177-4af2-bf31-070c867d793d.txt",
+			"https://citadelle.namur.be/sites/default/files/uploads/dossier_pedagogique_la_citadelle_de_namur.pdf",
+			"https://www.namurtourisme.be/en/musees-culture-patrimoine/musees/musee-felicien-rops/"
+		],
+		"mons:city": [
+			"https://orbi.umons.ac.be/bitstream/20.500.12907/52314/1/2024-25_typo-morphologie_syllabus_MA1_FAU.pdf",
+			"https://www.visitmons.be/en/sites-and-museums/the-belfry-of-mons-791662",
+			"https://paroisse-mons.be/2025-ducasse-amp-doudou/"
+		],
+		"charleroi:city": [
+			"https://connaitrelawallonie.wallonie.be/histoire/timeline/3-septembre-1666-creation-de-charleroi",
+			"https://charleroi-decouverte.be/pages/index.php?id=427",
+			"https://www.charleroi.be/actualites/2026-une-annee-pour-se-souvenir-comprendre-et-partager-au-bois-du-cazier"
+		],
+		"arlon:city": [
+			"https://lupa.at/31736",
+			"https://visitarlon.be/en/activites/activites-culturelles/le-musee-archeologique/",
+			"https://connaitrelawallonie.wallonie.be/culture-et-patrimoine/patrimoine/tour-jupiter"
+		],
+		"namur:region": [
+			"https://dipot.ulb.ac.be/dspace/bitstream/2013/274802/4/f6b176bb-7177-4af2-bf31-070c867d793d.txt",
+			"https://mateo.uni-mannheim.de/camenaref/hofmann/hof3/Hofmann_lexicon_t3_0837_myristica_nvx.html",
+			"https://sax-dinant.be/EN/sax-the-city/house-of-mr-sax",
+			"https://grotte-de-han.be/en/our-pledge/story-cave"
+		]
+	},
+	"hasselt": {
+		"city": {
+			"en": [
+				"Hasselt’s name comes from a word for hazel trees and refers to a place where they grow.",
+				"Hasselt’s Japanese Garden was created through the city’s friendship with Itami in Japan and opened in 1992.",
+				"Hasselt’s Jenever Museum occupies a former distillery and preserves working nineteenth-century distilling equipment."
+			],
+			"it": [
+				"Il nome Hasselt deriva da una parola che indica i noccioli e si riferisce a un luogo in cui crescono.",
+				"Il giardino giapponese di Hasselt nacque dall’amicizia della città con Itami, in Giappone, e aprì nel 1992.",
+				"Il Museo del jenever di Hasselt occupa un’ex distilleria e conserva attrezzature ottocentesche per la distillazione ancora funzionanti."
+			],
+			"de": [
+				"Hasselts Name geht auf ein Wort für Haselsträucher zurück und bezeichnet einen Ort, an dem sie wachsen.",
+				"Der Japanische Garten in Hasselt entstand durch die Freundschaft der Stadt mit Itami in Japan und wurde 1992 eröffnet.",
+				"Das Jenevermuseum in Hasselt befindet sich in einer ehemaligen Brennerei und bewahrt funktionsfähige Destillationsgeräte aus dem 19. Jahrhundert."
+			]
+		}
+	},
+	"mons": {
+		"city": {
+			"en": [
+				"Mons takes its name from the Latin word for a hill.",
+				"Mons’s Baroque belfry was included in the UNESCO World Heritage listing of belfries in 1999.",
+				"Mons’s Doudou festivities include the Lumeçon, a dramatic combat between Saint George and a dragon."
+			],
+			"it": [
+				"Mons prende il nome dalla parola latina che indica una collina.",
+				"Il campanile civico barocco di Mons fu incluso nel patrimonio mondiale UNESCO dei campanili civici nel 1999.",
+				"I festeggiamenti del Doudou di Mons comprendono il Lumeçon, una rappresentazione del combattimento fra san Giorgio e un drago."
+			],
+			"de": [
+				"Mons ist nach dem lateinischen Wort für einen Hügel benannt.",
+				"Der barocke Belfried von Mons wurde 1999 in die UNESCO-Welterbeliste der Belfriede aufgenommen.",
+				"Zu den Doudou-Feierlichkeiten in Mons gehört der Lumeçon, ein inszenierter Kampf zwischen dem heiligen Georg und einem Drachen."
+			]
+		}
+	},
+	"arlon": {
+		"city": {
+			"en": [
+				"Arlon was known in Roman times as Orolaunum.",
+				"Arlon’s Archaeological Museum preserves carved stones from Roman funerary monuments and civic buildings.",
+				"Archaeologists discovered part of Arlon’s Roman defensive wall in 2009 and identified an image of Jupiter in its tower foundations in 2010."
+			],
+			"it": [
+				"In epoca romana Arlon era conosciuta come Orolaunum.",
+				"Il Museo archeologico di Arlon conserva pietre scolpite provenienti da monumenti funerari ed edifici civili romani.",
+				"Nel 2009 gli archeologi scoprirono parte delle mura difensive romane di Arlon e nel 2010 identificarono un’immagine di Giove nelle fondamenta di una torre."
+			],
+			"de": [
+				"In römischer Zeit war Arlon als Orolaunum bekannt.",
+				"Das Archäologische Museum von Arlon bewahrt bearbeitete Steine römischer Grabmäler und öffentlicher Gebäude.",
+				"Archäologen entdeckten 2009 einen Teil der römischen Stadtmauer von Arlon und identifizierten 2010 ein Jupiterbild im Fundament eines Turms."
 			]
 		}
 	}

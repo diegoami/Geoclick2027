@@ -9,10 +9,10 @@ This plan records work still to land; it is not a claim that 1.0.0 is released.
 | Batch | Status | Deliverable |
 | --- | --- | --- |
 | Distribution | Complete; [PR #242](https://github.com/diegoami/Geoclick2027/pull/242) merged | Verified migration of 39 releases into Geoclick2027; links and publisher updated |
-| Boundary and target audit | All 22 new countries complete; Norway updated to 15 current counties | Licensed, reproducible sources and suitable map types for 22 countries |
+| Boundary and target audit | All 22 new countries complete; Norway 15 counties; known Dutch/German corrections implemented | Licensed, reproducible sources and suitable map types for 22 countries |
 | Maps | All 44 expansion maps and six legacy-country packages complete (217 total) | Administrative maps and towns/urban maps; generated through the existing pipeline |
-| Facts | Current whole-catalogue checkpoint: 3922/6196 complete; 1956 missing and 318 short sets block 1.0 ([proposal #244](https://github.com/diegoami/Geoclick2027/issues/244)) | Facts for added targets in English, German, and Italian; existing target gaps audited |
-| Content completion | DE/IT manuals and all three town rebuilds complete; 107/107 playable country slots pass | Deferred thin towns maps and German/Italian manual checked against agreed scope |
+| Facts | Current whole-catalogue checkpoint: 4551/6208 complete; 1408 missing and 249 short sets block 1.0 ([proposal #244](https://github.com/diegoami/Geoclick2027/issues/244)) | Facts for added targets in English, German, and Italian; existing target gaps audited |
+| Content completion | DE/IT manuals and all three town rebuilds complete; 120/120 playable country slots pass | Deferred thin towns maps and German/Italian manual checked against agreed scope |
 | itch.io | Draft covers/copy/previews exported; final packages/screenshots pending; owner handles upload | #240 viewport baseline, ZIP smoke test, screenshots, cover, descriptions, tags and local listing preview |
 | Release preparation | Waits for complete whole-catalogue facts; version remains 0.20.0 | Seven manifests and lockfile entries at 1.0.0; accurate CHANGELOG; gates |
 | Milestone and publication | Pending | Owner-approved merge, milestone review, installers tried, exact tag and publication |
@@ -549,31 +549,46 @@ Both localized manuals cover all 22 topics and are bundled alongside English;
 19 focused build/content/language-race tests pass. Images are shared English
 screenshots, disclosed in each translation. The manual follows the app language.
 
-Denmark and Serbia need dated town snapshots because Natural Earth has only
-12 and 7 towns respectively. Norway has enough existing populated-place records
-for a twenty-town selection; its optional Wikidata query repeatedly timed out,
-so the recipe uses the existing source. Norway's eleven old county shapes are
-being replaced by the fifteen current counties, using pinned Kartverket API
-geometry clipped to Natural Earth's terrestrial outline. The Danish capital's
-Wikidata point lies on a small coastal feature omitted by the map-scale outline;
-its existing Natural Earth representative centre is retained explicitly, with
-provenance, rather than broadening the geographic containment tolerance.
-All three legacy town-map IDs remain stable to retain progress for unchanged
-places. The country expansion, version bump and publication remain separate
-steps; do not tag 1.0 until the enlarged fact scope is complete.
+Denmark now uses a dated Wikidata snapshot and the more detailed, pinned
+geoBoundaries five-region coastline, retaining Fredericia and the existing
+Copenhagen representative centre. Its town selection is 21, including retained
+Hillerød. Serbia uses the official 2022 RZS urban-settlement census workbook
+and GeoNames coordinates, rather than incomplete Wikidata classes or municipal
+population totals. Its 32 towns include the seven large cities missed by the
+first rebuild. Every district has a sourced urban settlement; source credits
+identify the actual providers. Norway keeps a curated Natural Earth twenty-town
+sample, explicitly not a national top-twenty ranking. Unsupported county
+largest-city claims are disabled. The fifteen current counties use pinned
+Kartverket geometry. All three legacy town-map IDs remain stable.
 
-The three backlog country passes are complete: Denmark 27/27, Norway 35/35,
-Serbia 45/45 playable file/ID/kind slots, including continent-map aliases.
-Their six principal maps pass 105/105; the extra two aliases are Danish.
-The rebuild added 46 previously absent slots and retired three old county
-slots, so the catalogue-wide denominator is now 6196. Current coverage:
-3922 complete, 1956 without authored facts, 318 short sets. All older gaps
-remain mandatory before 1.0; no partial batch is a release-readiness claim.
-All six rebuilt packages have valid names and retained target IDs. Fifteen
-Norwegian polygons pass GDAL/GEOS validity, nonempty-area and non-overlap checks.
-A real CLI fixture confirms a missing source-name field fails before map.json
-is published. Local gates pass: 2846 app tests, zero failures, type checks,
-lint and production web build. Deployment tests are not run (deploys stopped).
+The three backlog country passes are complete: Denmark 28/28, Norway 35/35,
+Serbia 57/57 playable file/ID/kind slots, including two Danish continent aliases.
+The whole catalogue currently has 6208 distinct slots, of which 4551 have at
+least three sentences in EN/IT/DE; 1408 are missing and 249 are short. Germany,
+Poland, Romania, Malaysia and other country batches are researched in parallel,
+validated against exact queued IDs/kinds and integrated into authored files.
+All older gaps remain mandatory before 1.0. The complete Romania and Malaysia
+passes have landed in this working branch; no partial total means release-ready.
+
+The owner approved updating known Dutch/German border cases. Voorne aan Zee
+replaces its three predecessor municipalities, giving 342 Dutch targets. Hanau
+is independent using official Hesse June 2026 geometry. Eisenach is merged into
+Wartburgkreis, and a discovered name-cleaning collision between Leipzig city
+and Landkreis Leipzig is fixed. The German total is 401. Only the three
+affected map packages are rebuilt; other geometry retains its pinned edition.
+Prepared collections pass GEOS validity/nonempty checks; Hanau and Main-Kinzig
+share a non-overlapping cut. This is not an audit of every small border change.
+New target facts are complete; existing unchanged IDs retain progress.
+
+PR #245’s first review found incomplete Serbia/Danish town selection and a
+strict-audit false pass for unknown countries. These are addressed; unknown
+or empty filters now fail, and country aliases count only matching maps.
+The stale Norway 11-county build command and inconsistent Bor mining dates are
+corrected too. A fresh independent review is required on the updated head.
+The updated type checks and 2856 app tests pass. An unused source import found
+by lint was removed, and the production web build passes. All four gates run
+again in the pre-push hook. Deployments remain stopped, so there is no
+deployment test.
 
 Actual local browser checks also pass on the isolated http://localhost:5188
 preview: all three manual languages, Unicode section-link navigation, no page
@@ -581,3 +596,11 @@ errors, and rendered Norwegian county geometry at 1280 × 800. All fifteen
 county polygons were visually inspected as well as machine-validated. The
 reviewed expansion preview at 5187 remains available separately. This content
 branch is still a work in progress under #244, not ready for 1.0 publication.
+
+
+Local browser verification after the source/border corrections: actual overview
+pages render all three affected Dutch/German packages (69/68/64 targets) and
+the 21-town Danish/32-town Serbian packages at 1280 × 800, with no page errors
+or failed asset responses. Leipzig city/county separation and the Hanau cut
+also have focused regression coverage. These are local checks; no deployment
+or itch.io navigation was performed.

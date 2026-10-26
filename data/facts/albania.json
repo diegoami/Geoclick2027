@@ -2,7 +2,8 @@
 	"_note": [
 		"Name-facts for Albania (FT-72, docs/PLAN_V0.12.md). See italy.json for the rules.",
 		"Begun with the towns on the continent maps, each as a \"city\" entry so that a region",
-		"of the same id, written later, never shows a town's sentences."
+		"of the same id, written later, never shows a town's sentences.",
+		"v1.0 whole-catalogue completion (#244): sourced EN/IT/DE sets, with references under _sources by ID and kind."
 	],
 	"durres": {
 		"city": {
@@ -26,16 +27,19 @@
 	"elbasan": {
 		"city": {
 			"en": [
-				"It stands on the site of Roman Scampa, a station on the Via Egnatia.",
-				"Its fortress was built by the Ottoman sultan Mehmed II in 1466."
+				"Elbasan stands on the site of Roman Scampa, a station on the Via Egnatia.",
+				"Elbasan’s fortress was rebuilt by the Ottoman sultan Mehmed II in 1466.",
+				"Elbasan celebrates Summer Day on 14 March with ballokume, traditional sweet biscuits."
 			],
 			"it": [
-				"Sorge sul sito della romana Scampa, una stazione della via Egnatia.",
-				"La sua fortezza fu costruita dal sultano ottomano Maometto II nel 1466."
+				"Elbasan sorge sul sito della romana Scampa, una stazione della via Egnatia.",
+				"La fortezza di Elbasan fu ricostruita dal sultano ottomano Maometto II nel 1466.",
+				"Elbasan celebra il Giorno dell’estate il 14 marzo con i ballokume, dolci tradizionali."
 			],
 			"de": [
-				"Sie steht an der Stelle des römischen Scampa, einer Station an der Via Egnatia.",
-				"Ihre Festung wurde 1466 vom osmanischen Sultan Mehmed II. gebaut."
+				"Elbasan steht an der Stelle des römischen Scampa, einer Station an der Via Egnatia.",
+				"Elbasans Festung wurde 1466 vom osmanischen Sultan Mehmed II. wiederaufgebaut.",
+				"Elbasan feiert am 14. März den Sommertag mit Ballokume, einem traditionellen süßen Gebäck."
 			]
 		}
 	},
@@ -76,5 +80,12 @@
 				"Ab 2000 ließ ihr Bürgermeister Edi Rama, ein Maler, ihre grauen kommunistischen Wohnblöcke in leuchtenden Farben anstreichen."
 			]
 		}
+	},
+	"_sources": {
+		"elbasan:city": [
+			"https://elbasani.gov.al/trashegimia-kulturore/",
+			"https://www.akt.gov.al/en/attractions/Elbasan-Castle/",
+			"https://akt.gov.al/en/cities/elbasan/"
+		]
 	}
 }
